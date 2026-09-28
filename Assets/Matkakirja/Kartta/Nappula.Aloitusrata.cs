@@ -55,20 +55,21 @@ namespace Matkakirja
         Material jalkiMateriaali, edessaMateriaali;
         Mesh jalkiMesh, edessaMesh;
 
-        /// <summary>Kynänjälki ja edessä oleva reitti isoympyränä (256 väliä); edellinen pois.</summary>
-        void TeeJalki(double lat0, double lon0, double lat1, double lon1)
+        /// <summary>Kynänjälki ja edessä oleva reitti koneen lentämänä reittinä (AloituslennonRata.LentoReitti: isoympyrä 256 välillä
+        /// ja v3f4:n kaarto tiheästi); edellinen pois.</summary>
+        void TeeJalki(List<(double Lat, double Lon)> pisteet)
         {
             PoistaJalki();
             var s = Resources.Load<Shader>("Varjostimet/Kynaviiva");
-            if (s == null || georeferenssi == null) return;
-            const int N = 256;
+            if (s == null || georeferenssi == null || pisteet == null || pisteet.Count < 2) return;
+            int N = pisteet.Count - 1;
             var u = new Vector3[N + 1];
             var matka = new float[N + 1];
             double kulma = 0;
-            var ed = (lat0, lon0);
+            var ed = pisteet[0];
             for (int i = 0; i <= N; i++)
             {
-                var q = LennonV3.Isoympyralla(lat0, lon0, lat1, lon1, (double)i / N);
+                var q = pisteet[i];
                 if (i > 0) kulma += LennonAikajana.ReittiM(ed.Item1, ed.Item2, q.Lat, q.Lon) / 6371000.0 * 180.0 / Math.PI;
                 ed = (q.Lat, q.Lon);
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(q.Lon, q.Lat, JalkiKorkeusM));

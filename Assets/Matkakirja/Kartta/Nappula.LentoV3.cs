@@ -418,7 +418,7 @@ namespace Matkakirja
             {
                 // v3: horisonttiusvan raja vähintään 250 km radan ajan (ohituksen ja saapumisen lähikuvissa maa näkyy).
                 Aurinko.UsvaVahintaanM = AloituslennonRata.UsvaVahintaanM;
-                TeeJalki(lat0, lon0, lat1, lon1);
+                TeeJalki(rata.LentoReitti());
                 // v3e: siivenkärkien ja pakoputken vanat sekä loppukohtauksen linnut (AloituslennonIlma).
                 aloitusIlma = AloituslennonIlma.Luo(georeferenssi, kamera);
                 var mo = rata.Mitta(AloituslennonRata.OhitusS);
@@ -427,7 +427,8 @@ namespace Matkakirja
                           + $"{napautus.Kallistus:0}° {napautus.Suuntima:0}°, loppu {rata.Loppu.EtaisyysM / 1000:0} km, matkanopeus "
                           + $"{rata.Nopeus1:0.00}/{rata.Nopeus2:0.00} etäisyyttä/s, ohitus {mo.EtaisyysM / 1000:0.0} km α {mo.Alfa:0}° "
                           + $"{mo.Koko:P0}, kosketus {mk.EtaisyysM / 1000:0} km {mk.Koko:P1}, usva vähintään {Aurinko.UsvaVahintaanM / 1000:0} km, "
-                          + $"ohitus reitin kohdassa {rata.Ohitus:0.000}");
+                          + $"ohitus reitin kohdassa {rata.Ohitus:0.000}, bumerangi n {rata.BumerangiEksponentti:0.0}, kaarto "
+                          + $"{AloituslennonRata.KaartoKallistusEnintaan:0}°");
             }
 
             // 3. LENTO 15,0 s.
@@ -471,8 +472,11 @@ namespace Matkakirja
                 }
                 if (lisa != null) lisaPaino += (1.0 - lisaPaino) * (1.0 - math.exp(-dt / 1.5));
                 double u = rata != null ? rata.KoneenOsuus(t) : LennonV3.KoneenOsuus(t);
-                var q = LennonV3.ReitinKohta(reitti, pit, u);
-                double lisaNyt = lisa != null ? LennonV3Kaytava.LisaOsuudessa(lisa, u) * lisaPaino : 0;
+                // v3f4: radalla kone kaarron sivusiirron, suunnan ja kallistuksen kanssa (AloituslennonRata.KoneenPaikka), ja
+                // maastolisä pysyy ohituksen lähikuvassa vakiona (TasainenLisa: v3f3:n "yskähdys ylöspäin").
+                var kpaikka = rata != null ? rata.KoneenPaikka(t) : default;
+                var q = rata != null ? (kpaikka.Lat, kpaikka.Lon, kpaikka.Suunta) : LennonV3.ReitinKohta(reitti, pit, u);
+                double lisaNyt = lisa == null ? 0 : (rata != null ? rata.TasainenLisa(lisa, t) : LennonV3Kaytava.LisaOsuudessa(lisa, u)) * lisaPaino;
                 // Radalla: peruskorkeus + symbolisen koon nosto (AloituslennonRata) + maaston lisä lennon ajan; lasku kohteen maahan.
                 double lisaRata = rata != null ? lisaNyt * AloituslennonRata.LisanPaino(t) : 0;
                 var ra = rata != null ? rata.Kamera(t, lisaRata) : default;
@@ -481,7 +485,7 @@ namespace Matkakirja
                     ? rata.KoneenKorkeus(t) + lisaRata + math.max(0.0, maaKohteessa) * math.saturate((t - 11.0) / (AloituslennonRata.KosketusS - 11.0))
                     : LennonV3Kaytava.KoneenKorkeus(t, lisaNyt, maaKohteessa);
                 double tV3 = rata != null ? AloituslennonRata.V3Aika(t) : t;
-                double kall = rata != null ? 0.0 : LennonV3.Kallistus(reitti, pit, t);
+                double kall = rata != null ? kpaikka.Kallistus : LennonV3.Kallistus(reitti, pit, t);
                 Lat = q.Lat;
                 Lon = q.Lon;
                 AsetaVaihe(tV3 < 5.0 ? LennonVaihe.Nousu : tV3 < 11.0 ? LennonVaihe.Matka : LennonVaihe.Lasku);
