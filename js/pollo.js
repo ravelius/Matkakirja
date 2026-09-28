@@ -1331,12 +1331,51 @@ const NAPUTUS_VOIMA_PUHEEN_ALLA = 0.22;
  */
 const VIRKKEEN_RAJA = /[.!?…]["»)\]]?(\s|$)/g;
 
+/*
+ * ── ENSIMMÄINEN PALA ENNEN VIRKKEEN LOPPUA (Päätoimittaja 28.9.2026,
+ * Natiivi-UI:n mittaus: yhden virkkeen vastaus alkoi kuulua vasta 6,9 s
+ * iPhonella / 14,7 s iPadilla). Kun mitään ei ole vielä luettu, pala saa
+ * lähteä ennen virkkeen loppua — sama sääntö natiivissa (Natiivi-UI
+ * natiivi-ui/pulu-ekapala, luettavaRajaan):
+ *   1. virkkeen raja kuten aina; jos sitä ei vielä ole,
+ *   2. ensimmäinen [,;:] tai " – " / " — ", jota seuraa tyhjä ja jota
+ *      ennen on vähintään ENSIPALAN_SANAT_TAUKO sanaa; jos ei sitäkään,
+ *   3. ENSIPALAN_SANAT:nnen kokonaisen sanan jälkeinen tyhjä (sanan
+ *      perässä tyhjä, ettei puolikas sana lähde).
+ * Sanaksi lasketaan vain kirjaimen tai numeron sisältävä (irrallinen
+ * ajatusviiva ei ole sana). Avoin [[ katkaisee kuten ennen.
+ */
+export const ENSIPALAN_SANAT = 8;
+export const ENSIPALAN_SANAT_TAUKO = 3;
+const SANA = /[\p{L}\p{N}]/u;
+
+/** Ensimmäisen palan raja ennen virkkeen loppua (0 = ei vielä). */
+function ensipalanRaja(varma) {
+  const osat = [...varma.matchAll(/\S+/g)];
+  let sanoja = 0;
+  for (let i = 0; i < osat.length; i += 1) {
+    const osa = osat[i][0];
+    const loppu = osat[i].index + osa.length;
+    const tyhjaPerassa = loppu < varma.length && /\s/.test(varma[loppu]);
+    if (!tyhjaPerassa) break;
+    if (SANA.test(osa)) sanoja += 1;
+    // Ajatusviiva omana sananaan: "sanat – " katkaisee viivan jälkeen.
+    const tauko = /[,;:]["»)\]]?$/.test(osa) || osa === '–' || osa === '—';
+    if (tauko && sanoja >= ENSIPALAN_SANAT_TAUKO) return loppu + 1;
+    if (sanoja >= ENSIPALAN_SANAT) return loppu + 1;
+  }
+  return 0;
+}
+
 /**
  * Kuinka pitkälti teksti on valmista luettavaksi.
  *
+ * @param {string} teksti
+ * @param {{ alku?: boolean }} [valinnat] `alku`: mitään ei ole vielä luettu,
+ *   joten ensimmäinen pala saa lähteä ennen virkkeen loppua (ENSIMMÄINEN PALA)
  * @returns {number} merkkien määrä alusta, tai 0 jos mikään ei ole valmista
  */
-export function luettavaRaja(teksti) {
+export function luettavaRaja(teksti, { alku = false } = {}) {
   const koko = String(teksti ?? '');
   // Avoin merkintä ensin: sen jälkeinen teksti ei ole vielä varmaa.
   const auki = koko.lastIndexOf('[[');
@@ -1345,6 +1384,7 @@ export function luettavaRaja(teksti) {
   let raja = 0;
   VIRKKEEN_RAJA.lastIndex = 0;
   for (const osuma of varma.matchAll(VIRKKEEN_RAJA)) raja = osuma.index + osuma[0].length;
+  if (!raja && alku) raja = ensipalanRaja(varma);
   return raja;
 }
 
@@ -6344,7 +6384,7 @@ export class Pollo {
       }
       if (!this.luentaVirta) return false;
     }
-    const raja = luettavaRaja(kertynyt);
+    const raja = luettavaRaja(kertynyt, { alku: this.luettuun === 0 });
     if (raja > this.luettuun) {
       const pala = poistaKasiteMerkinnat(kertynyt.slice(this.luettuun, raja)).trim();
       this.luettuun = raja;
@@ -6607,6 +6647,8 @@ export class Pollo {
        * kohdalla aloituksen — kumpikin suunta pysyy ehjänä.
        */
       kehys: kehysLaji(kysymys, jatko),
+      // Ääneen luettava vastaus alkaa lyhyellä virkkeellä (worker LUETTAVAN_ALKU).
+      ...(this.luentaPaalla() ? { luetaan: 1 } : {}),
     };
     /*
      * Vastauskupla syntyy vasta ensimmäisestä palasta: siihen asti

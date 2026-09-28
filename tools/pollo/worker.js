@@ -965,6 +965,17 @@ export function pulunKehote({
     + `\n\n${kehysOhje(kehysLaji(kehys))}`;
 }
 
+/*
+ * ÄÄNEEN LUETTAVAN VASTAUKSEN ALKU (Päätoimittaja 28.9.2026, Natiivi-UI:n
+ * mittaus: yhden virkkeen vastaus alkoi kuulua vasta 6,9 s / 14,7 s, koska
+ * luenta odottaa ensimmäisen palan loppua). Asiakas lähettää `luetaan: 1`,
+ * kun vastaus luetaan ääneen (kaiutin tai saneltu kysymys). Ohje on oma
+ * system-lohkonsa välimuistirajan jälkeen (kutsuRajapintaa `lisaohje`).
+ */
+export const LUETTAVAN_ALKU = `TÄMÄ VASTAUS LUETAAN ÄÄNEEN: ensimmäinen virke \
+on lyhyt, enintään kahdeksan sanaa (alustus käy siihen), jotta ääni alkaa heti. \
+Sen jälkeen vastaa kuten aina.`;
+
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
 const EHDOTUSKEHOTE = `Keksi kaksi lyhyttä kysymystä, jotka pelaaja voisi \
 haluta kysyä sinulta juuri nyt. Nojaa alla olevaan tilannekuvaukseen: hyvä \
@@ -1594,7 +1605,7 @@ async function hoidaRealtime(pyynto, env, kors, runko) {
 
 /** Yksi kutsu Anthropicin rajapintaan. `striimi` avaa SSE-vastauksen. */
 async function kutsuRajapintaa(env, {
-  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null,
+  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null, lisaohje = null,
 }) {
   const malli = env.POLLO_MALLI || MALLI_OLETUS;
   return fetch(RAJAPINTA, {
@@ -1615,7 +1626,15 @@ async function kutsuRajapintaa(env, {
        * 0,1 × syötehinnalla — vastaus ≈ 0,025 → ≈ 0,008 $. Pelaajan tilanne
        * ja historia ovat viesteissä, joten etuliite pysyy tavu tavulta samana.
        */
-      system: [{ type: 'text', text: jarjestelma, cache_control: { type: 'ephemeral' } }],
+      /*
+       * `lisaohje` (esim. LUETTAVAN_ALKU) on oma lohkonsa välimuistirajan
+       * JÄLKEEN: välimuistissa oleva etuliite pysyy tavu tavulta samana
+       * kirjoitetulle ja luettavalle vastaukselle.
+       */
+      system: [
+        { type: 'text', text: jarjestelma, cache_control: { type: 'ephemeral' } },
+        ...(lisaohje ? [{ type: 'text', text: lisaohje }] : []),
+      ],
       messages: viestit,
       // Lämpötila annetaan vain kun se on tarkoituksella asetettu:
       // chat-vastaukset saavat mallin oletuksen, tuomiot temperature 0.
@@ -1633,9 +1652,11 @@ async function kutsuRajapintaa(env, {
  * kun taas tuntematon tyhjä ansaitsee yhden uusinnan (ks. rajat.js
  * tyhjanSyy).
  */
-async function kysyMallitiedot(env, { jarjestelma, viestit, maxTokens, lampotila = null }) {
+async function kysyMallitiedot(env, {
+  jarjestelma, viestit, maxTokens, lampotila = null, lisaohje = null,
+}) {
   const vastaus = await kutsuRajapintaa(env, {
-    jarjestelma, viestit, maxTokens, lampotila,
+    jarjestelma, viestit, maxTokens, lampotila, lisaohje,
   });
   if (!vastaus.ok) {
     /*
@@ -1806,10 +1827,22 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
   }
 }
 
-async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
+async function striimaaVastaus(env, kors, {
+  jarjestelma, viestit, maxTokens, lisaohje = null, ajat = null,
+}) {
   const ylavirta = await kutsuRajapintaa(env, {
-    jarjestelma, viestit, maxTokens, striimi: true,
+    jarjestelma, viestit, maxTokens, striimi: true, lisaohje,
   });
+  /*
+   * SERVER-TIMING (Natiivi-UI 28.9.2026): mihin ensimmäisen palan odotus
+   * kuluu tuotannossa — rajat = pyynnön alusta mallikutsuun (KV-luvut),
+   * malli = mallin vastauksen otsakkeisiin. Otsakkeet lähtevät yhdessä
+   * ensimmäisen palan kanssa, joten lukija näkee ne heti.
+   */
+  const ajoitus = ajat
+    ? { 'server-timing': `rajat;dur=${ajat.rajatMs}, malli;dur=${Date.now() - ajat.alkuMs - ajat.rajatMs}`,
+      'access-control-expose-headers': 'server-timing' }
+    : {};
   if (!ylavirta.ok || !ylavirta.body) {
     const virhe = new Error(`rajapinta ${ylavirta.status}`);
     virhe.status = ylavirta.status;
@@ -1889,7 +1922,7 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
          */
         const paikattu = await paikkaaTyhja(
           env,
-          { jarjestelma, viestit, maxTokens },
+          { jarjestelma, viestit, maxTokens, lisaohje },
           { virhe: virtaVirhe, stop },
         );
         await laheta('loppu', paikattu);
@@ -1908,7 +1941,7 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
 
   return new Response(readable, {
     status: 200,
-    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut) },
+    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut), ...ajoitus },
   });
 }
 
@@ -2437,6 +2470,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
 
 export default {
   async fetch(pyynto, env, ctx) {
+    const alkuMs = Date.now();
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -2537,9 +2571,20 @@ export default {
     if (!raja.ok) {
       return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
     }
-    // Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
-    await kasvataLaskuri(kv, pAvain, 60 * 60 * 30);
-    await kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 });
+    /*
+     * Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
+     * KIRJOITUS EI PIDÄTÄ MALLIKUTSUA (Natiivi-UI:n mittaus 28.9.2026:
+     * tuotannossa 1. pala ~3,5 s, paikallisesti samalla koodilla ~1,2 s):
+     * KV:n kirjoitus kulkee waitUntilissa mallikutsun rinnalla. Muistilaskuri
+     * päivittyy silti tässä pyynnössä (kasvataLaskuri).
+     */
+    const kirjoitukset = Promise.all([
+      kasvataLaskuri(kv, pAvain, 60 * 60 * 30),
+      kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 }),
+    ]);
+    if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitukset);
+    else await kirjoitukset;
+    const rajatMs = Date.now() - alkuMs;
 
     // --- kutsu -------------------------------------------------------
     try {
@@ -2584,6 +2629,8 @@ export default {
       const kehote = pulunKehote({
         natiivi, puhetagit: runko?.puhetagit === 1, kehys: runko?.kehys,
       });
+      // Ääneen luettava vastaus alkaa lyhyellä virkkeellä (ks. LUETTAVAN_ALKU).
+      const lisaohje = runko?.luetaan === 1 ? LUETTAVAN_ALKU : null;
       /*
        * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
        * varalle: jos asiakas ei osaa lukea SSE:tä tai virta ei aukea,
@@ -2594,10 +2641,12 @@ export default {
           jarjestelma: kehote,
           viestit,
           maxTokens: MAX_TOKENS,
+          lisaohje,
+          ajat: { alkuMs, rajatMs },
         });
       }
 
-      const kutsu = { jarjestelma: kehote, viestit, maxTokens: MAX_TOKENS };
+      const kutsu = { jarjestelma: kehote, viestit, maxTokens: MAX_TOKENS, lisaohje };
       const kerralla = await kysyMallitiedot(env, kutsu);
       // Erotinrivi puretaan aina täällä: pelaajalle menee vastaus ja
       // erillinen lista, ei koskaan raakaa merkintää.

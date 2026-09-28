@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2369, teksti: 'v2363: Pulun ääni alkaa nopeammin (#3567)' },
   { v: 2368, teksti: 'v2367: Pulun striimiääni ElevenLabs v4 Turbolla (#3572)' },
   { v: 2367, teksti: 'v2354: Matkakirjan ihmeen kulmanauha näkyy taas… (#3532)' },
   { v: 2366, teksti: 'BGR: pitkä-luonnehdinta + pulu kaikille 28 maak… (#3534)' },
