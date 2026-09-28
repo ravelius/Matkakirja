@@ -1,3 +1,4 @@
+using System;
 using Matkakirja.Linssit.Iss;
 
 namespace Matkakirja.Linssit.Testit
@@ -12,6 +13,30 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(null, OmaSijainti.LueMaa("loc=T1\n"), "Tor");
             Oleta.Sama(null, OmaSijainti.LueMaa("colo=RIX\n"));
             Oleta.Sama(null, OmaSijainti.LueMaa(null));
+        }
+
+        // Laitemittaus 28.9.: Suomi (64,50, 26,29) ja Ruotsi (62,83, 16,75) → "ei ylilentoa 48 tunnin sisällä", koska rata ei
+        // ulotu sinne. Haku radan pohjoisimmalle osuudelle samalla pituudella löytää ylilennon (ISS 2008 -TLE kuten YlilentoTestit).
+        [Testi] static void PohjolaSaaYlilennon()
+        {
+            Oleta.Sama(51.0, OmaSijainti.HakuLeveys(64.5));
+            Oleta.Sama(-51.0, OmaSijainti.HakuLeveys(-70));
+            Oleta.Sama(48.2, OmaSijainti.HakuLeveys(48.2), "radan ulottuvilla ennallaan");
+            IssNyt.Nollaa();
+            try
+            {
+                Oleta.Tosi(IssNyt.Aseta(Tle.Jasenna(
+                    "1 25544U 98067A   08264.51782528 -.00002182  00000-0 -11606-4 0  2927",
+                    "2 25544  51.6416 247.4627 0006703 130.5360 325.0288 15.72125391563537")), "aseta");
+                var alku = new DateTime(2008, 9, 20, 13, 0, 0, DateTimeKind.Utc);
+                Oleta.Tosi(!Ylilennot.Seuraava(64.50, 26.29, alku).HasValue, "Suomen keskipiste: ei ylilentoa");
+                foreach (var (lat, lon) in new[] { (64.50, 26.29), (62.83, 16.75) })
+                {
+                    var y = Ylilennot.Seuraava(OmaSijainti.HakuLeveys(lat), lon, alku);
+                    Oleta.Tosi(y.HasValue && (y.Value.Hetki - alku).TotalHours < 24, $"ylilento vuorokauden sisällä ({lat}, {lon})");
+                }
+            }
+            finally { IssNyt.Nollaa(); }
         }
 
         [Testi] static void ValikonRivi()

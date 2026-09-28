@@ -29,6 +29,12 @@ namespace Matkakirja.Linssit.Iss
         public static bool Kelpaa(string koodi) =>
             koodi != null && koodi.Length == 2 && char.IsLetter(koodi[0]) && char.IsLetter(koodi[1]) && koodi != "XX" && koodi != "T1";
 
+        /// <summary>Ylilennon hakuleveys: ISS:n 51,6°:n rata ei ulotu Pohjolan ylle (500 km:n rajalla enintään ~56°), joten sitä
+        /// pohjoisempi (tai eteläisempi) paikka haetaan leveydeltä ±51, jonka yli rata kulkee joka vuorokausi.</summary>
+        public const double RadanLeveys = 51;
+        public static double HakuLeveys(double lat) =>
+            Math.Abs(lat) <= Ylilennot.MaksimiLeveys ? lat : Math.Sign(lat) * RadanLeveys;
+
         /// <summary>Valikon rivi: "Oma sijainti · Suomi" (maa tiedossa) tai "Oma sijainti".</summary>
         public static string Rivi(string maanNimi) => string.IsNullOrEmpty(maanNimi) ? "Oma sijainti" : "Oma sijainti · " + maanNimi;
     }

@@ -348,13 +348,16 @@ namespace Matkakirja.Linssit.Astronautti
         public Iss.Ylilento? LennaPaikkaan(string nimi, double lat, double lon, bool valoisa = false)
         {
             if (!Auki) return null;
-            return Lenna(new Havaintokohde { Tunnus = OmaSijaintiTunnus, Nimi = nimi, Lat = lat, Lon = lon }, valoisa);
+            // Pohjoisempana kuin rata ulottuu (Suomi 64,5°N, laitemittaus 28.9.: "ei ylilentoa 48 tunnin sisällä"): ylilento
+            // radan pohjoisimmalle osuudelle samalla pituudella, kamera kääntyy perillä silti omaan maahan (horisontissa).
+            return Lenna(new Havaintokohde { Tunnus = OmaSijaintiTunnus, Nimi = nimi, Lat = lat, Lon = lon }, valoisa,
+                Iss.OmaSijainti.HakuLeveys(lat));
         }
 
-        Iss.Ylilento? Lenna(Havaintokohde k, bool valoisa)
+        Iss.Ylilento? Lenna(Havaintokohde k, bool valoisa, double? hakuLat = null)
         {
             if (k == null || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko) return null;
-            var yl = Iss.Ylilennot.Seuraava(k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
+            var yl = Iss.Ylilennot.Seuraava(hakuLat ?? k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
             tietoAika = -1;
             if (yl == null) { lento = new Lento { Kohde = k }; return null; }
             if (kyyti.Tila != Iss.KyydinTila.Seuranta) NapautaIss();
