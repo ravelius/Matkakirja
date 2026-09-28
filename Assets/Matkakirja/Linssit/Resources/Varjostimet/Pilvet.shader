@@ -132,7 +132,8 @@ Shader "Matkakirja/Linssit/Pilvet"
                 float a0 = saturate(c.a);
 
                 // Oktaavien häivytys (alle kahden pikselin oktaavi häipyy) ja näkyvä osuus ennen haaraa.
-                float h[5], kaikki = 0.0, nakyva = 0.0, amp = 1.0, taaj = 1.0;
+                float h[5];
+                float kaikki = 0.0, nakyva = 0.0, amp = 1.0, taaj = 1.0;
                 [unroll] for (int k = 0; k < 5; k++)
                 {
                     h[k] = saturate(1.5 - 2.0 * jalki * taaj);
