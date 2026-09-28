@@ -105,6 +105,18 @@ const RAIDAT = {
   'kaupunki-istanbul': { alku: 0.7, loppu: 65.0, sisaan: 0.02, ulos: 0.3 },
   'kaupunki-kairo': { alku: 0, loppu: 69.0, sisaan: 0.02, ulos: 0.3 },
   'kaupunki-pietari': { alku: 0.95, loppu: 68.75, sisaan: 0.02, ulos: 0.3 },
+  /*
+   * Aloituslennon marssi (28.9.2026), v3f-lennon mukaan: 0 s leikkaus, 7,2 s ohitus, 13,5 s kosketus, 15,0 s kortti.
+   * Raaka 62 s; hyppy 80 lyöntiä (20 tahtia), sauma lyönnillä, jossa sointuvärit täsmäävät (chroma 0,9 molemmin puolin).
+   * A 123 BPM: alku ensimmäiseen lyöntiin, tauko+isku 7,6 s → 7,3 s; loppusointu 54,1 s → 15,1 s, soi ulos ~20 s.
+   * B 129 BPM: kadenssi-isku 52,13 s → 14,6 s, viimeinen sointu ~18,5 s, häivyttyy ~22 s.
+   */
+  'aloituslento-marssi-a': {
+    alku: 0.35, loppu: 59.3, sisaan: 0.02, ulos: 0.8, hyppy: { kohta: 12.49, minne: 51.18, ristiin: 0.2 },
+  },
+  'aloituslento-marssi-b': {
+    alku: 0.07, loppu: 59.5, sisaan: 0.02, ulos: 1.5, hyppy: { kohta: 11.84, minne: 49.34, ristiin: 0.2 },
+  },
 };
 
 function ffmpeg(argit) {
@@ -148,8 +160,22 @@ async function viimeistele(nimi) {
   const r = RAIDAT[nimi];
   if (!r) throw new Error(`tuntematon raita ${nimi} (${Object.keys(RAIDAT).join(', ')})`);
   const lahde = await raaka(nimi);
-  const pituus = r.loppu - r.alku;
-  const leikkaus = `atrim=${r.alku}:${r.loppu},asetpts=PTS-STARTPTS,`
+  /*
+   * HYPPY (aloituslennon marssi 28.9.2026): Lyria ei noudata kehotteen
+   * sekuntiaikoja, joten alku ja loppukadenssi otetaan raa'an eri kohdista
+   * ja liitetään tahdin rajalla ristiinhäivytyksellä. hyppy = { kohta,
+   * minne, ristiin }: raaka `minne` soi tuloksessa kohdassa kohta − alku,
+   * ja häivytys on juuri ennen sitä (kohta ja minne samassa tahdin
+   * vaiheessa, joten syke jatkuu).
+   */
+  const h = r.hyppy;
+  const pituus = h ? (h.kohta - r.alku) + (r.loppu - h.minne) : r.loppu - r.alku;
+  const hakemus = h
+    ? `asplit[m1][m2];[m1]atrim=${r.alku}:${h.kohta},asetpts=PTS-STARTPTS[o1];`
+      + `[m2]atrim=${h.minne - h.ristiin}:${r.loppu},asetpts=PTS-STARTPTS[o2];`
+      + `[o1][o2]acrossfade=d=${h.ristiin}:c1=qsin:c2=qsin,`
+    : `atrim=${r.alku}:${r.loppu},asetpts=PTS-STARTPTS,`;
+  const leikkaus = hakemus
     + `afade=t=in:d=${r.sisaan},afade=t=out:st=${(pituus - r.ulos).toFixed(3)}:d=${r.ulos}`;
   const ennen = lueLufs(mittaa(lahde, leikkaus));
   const vahvistus = Math.min(TAVOITE_LUFS - ennen.lufs, HUIPPU_DBFS - ennen.huippu + RAJOITIN_DB);
