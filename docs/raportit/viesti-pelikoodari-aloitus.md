@@ -4,12 +4,10 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260928.md`](viesti-pelikoodari-luovutus-20260928.md) (28.9. klo 09.3x, kontekstin nollaus):
-   junassa #3516/#3517/#3526/#3528 (+ #3532 kuittausta odottaen); selite-erä `pelikoodari-astro-selite` f9bc7c9a6 → PR kun #3526
-   mainissa; KESKEN striimilukijan valikko `pelikoodari-striimilukija` f6df0975b (omistajan sanatarkka toive luovutuksessa):
-   savuke uudelleen, muut luentakohdat kuvina, PR + kuvapari Fablelle. Edellinen: `viesti-pelikoodari-luovutus-20260927-f.md`.
-   - Fable = local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 (session id:llä). Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen.
-     Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
+   [`viesti-pelikoodari-luovutus-20260928-b.md`](viesti-pelikoodari-luovutus-20260928-b.md) (28.9. klo 12.3x): junassa #3517/#3526/#3528/
+   #3532/#3535/#3537/#3540/#3541/#3546/#3547 (#3544 mainissa); selite + ihme-lyhyt + ISS-kyyti odottavat mergejä; ISS-nopeutuserä
+   agentilla. Fable = "Päätoimittaja (Opus, xhigh)" (ref [e6550e]). Edellinen: `viesti-pelikoodari-luovutus-20260928.md`.
+   - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
    - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
