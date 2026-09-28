@@ -2193,7 +2193,7 @@ function malliVastaus(teksti, stop = 'end_turn') {
  *   kertavastaukset (ensimmäinen, sitten uusinta) — tai `kertaVirhe` =
  *   tilakoodi, jolla kertavastaus kaatuu.
  */
-async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} } = {}) {
+async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {}, ctx = {} } = {}) {
   const alkuperainenFetch = globalThis.fetch;
   const alkuperainenLoki = console.log;
   const kutsut = [];
@@ -2217,7 +2217,7 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} 
   };
   console.log = (...osat) => { lokit.push(osat.join(' ')); };
   try {
-    const vastaus = await polloWorker.fetch(chatPyynto(runko), SAHKE_ENV, {});
+    const vastaus = await polloWorker.fetch(chatPyynto(runko), SAHKE_ENV, ctx);
     const teksti = await vastaus.text();
     const sse = /event-stream/.test(vastaus.headers.get('content-type') ?? '');
     return {
@@ -2226,6 +2226,7 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} 
       data: sse ? null : JSON.parse(teksti),
       kutsut,
       lokit,
+      otsakkeet: vastaus.headers,
     };
   } finally {
     globalThis.fetch = alkuperainenFetch;
@@ -2253,6 +2254,25 @@ test('tyhjän syyluokka ratkaisee, yritetäänkö uudelleen', () => {
   for (const teksti of [LIVIA_KIELTAYTYY, LIVIA_EI_TULLUT]) {
     assert.ok(!/en osaa vastata/i.test(teksti), `varateksti valehtelee: ${teksti}`);
   }
+});
+
+test('striimi: Server-Timing kertoo rajat/malli, laskurien KV-kirjoitus waitUntilissa (28.9.2026)', async () => {
+  const taustalla = [];
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [
+      { laji: 'message_start', data: { type: 'message_start' } },
+      { laji: 'content_block_delta', data: { type: 'content_block_delta', delta: { type: 'text_delta', text: 'Tuota niin.' } } },
+      { laji: 'message_stop', data: { type: 'message_stop' } },
+    ],
+    ctx: { waitUntil: (lupaus) => taustalla.push(lupaus) },
+  });
+  assert.equal(ajo.tila, 200);
+  assert.match(ajo.otsakkeet.get('server-timing') ?? '', /^rajat;dur=\d+, malli;dur=\d+$/);
+  assert.match(ajo.otsakkeet.get('access-control-expose-headers') ?? '', /server-timing/);
+  // Laskurit kirjoitetaan mallikutsun rinnalla, eivät ennen sitä.
+  assert.ok(taustalla.length >= 1, 'KV-kirjoitus ei mennyt waitUntiliin');
+  await Promise.all(taustalla);
 });
 
 test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async () => {

@@ -1721,11 +1721,21 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
 }
 
 async function striimaaVastaus(env, kors, {
-  jarjestelma, viestit, maxTokens, lisaohje = null,
+  jarjestelma, viestit, maxTokens, lisaohje = null, ajat = null,
 }) {
   const ylavirta = await kutsuRajapintaa(env, {
     jarjestelma, viestit, maxTokens, striimi: true, lisaohje,
   });
+  /*
+   * SERVER-TIMING (Natiivi-UI 28.9.2026): mihin ensimmäisen palan odotus
+   * kuluu tuotannossa — rajat = pyynnön alusta mallikutsuun (KV-luvut),
+   * malli = mallin vastauksen otsakkeisiin. Otsakkeet lähtevät yhdessä
+   * ensimmäisen palan kanssa, joten lukija näkee ne heti.
+   */
+  const ajoitus = ajat
+    ? { 'server-timing': `rajat;dur=${ajat.rajatMs}, malli;dur=${Date.now() - ajat.alkuMs - ajat.rajatMs}`,
+      'access-control-expose-headers': 'server-timing' }
+    : {};
   if (!ylavirta.ok || !ylavirta.body) {
     const virhe = new Error(`rajapinta ${ylavirta.status}`);
     virhe.status = ylavirta.status;
@@ -1824,7 +1834,7 @@ async function striimaaVastaus(env, kors, {
 
   return new Response(readable, {
     status: 200,
-    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut) },
+    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut), ...ajoitus },
   });
 }
 
@@ -2353,6 +2363,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
 
 export default {
   async fetch(pyynto, env, ctx) {
+    const alkuMs = Date.now();
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -2453,9 +2464,20 @@ export default {
     if (!raja.ok) {
       return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
     }
-    // Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
-    await kasvataLaskuri(kv, pAvain, 60 * 60 * 30);
-    await kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 });
+    /*
+     * Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
+     * KIRJOITUS EI PIDÄTÄ MALLIKUTSUA (Natiivi-UI:n mittaus 28.9.2026:
+     * tuotannossa 1. pala ~3,5 s, paikallisesti samalla koodilla ~1,2 s):
+     * KV:n kirjoitus kulkee waitUntilissa mallikutsun rinnalla. Muistilaskuri
+     * päivittyy silti tässä pyynnössä (kasvataLaskuri).
+     */
+    const kirjoitukset = Promise.all([
+      kasvataLaskuri(kv, pAvain, 60 * 60 * 30),
+      kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 }),
+    ]);
+    if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitukset);
+    else await kirjoitukset;
+    const rajatMs = Date.now() - alkuMs;
 
     // --- kutsu -------------------------------------------------------
     try {
@@ -2513,6 +2535,7 @@ export default {
           viestit,
           maxTokens: MAX_TOKENS,
           lisaohje,
+          ajat: { alkuMs, rajatMs },
         });
       }
 
