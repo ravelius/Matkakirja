@@ -1387,6 +1387,7 @@ namespace Matkakirja.Natiivi
                         // "astro kyyti pois" = ✕, "astro kyyti tila" = tila, kamera ja ISS lokiin.
                         string a = osat.Length > 2 ? osat[2] : "";
                         if (a == "pois") l.PoistuKyydista();
+                        else if (a == "yo" && osat.Length > 3) Yokuori.Pois = osat[3] == "0";   // A/B: astro kyyti yo 0|1
                         else if (a != "tila") l.NapautaIss();
                         var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
                         var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);

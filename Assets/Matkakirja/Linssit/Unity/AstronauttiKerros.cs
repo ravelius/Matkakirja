@@ -55,6 +55,7 @@ namespace Matkakirja.Natiivi
         Tahtitaivas taivas;
         Pilvikuori pilvet;
         Avaruus avaruus;
+        Yokuori yokuori;
         Transform iss;
         Transform issMalli;
         Material issMalliMateriaali;
@@ -119,6 +120,8 @@ namespace Matkakirja.Natiivi
                 pilvet ??= Pilvikuori.Luo(georeferenssi, pilvienOsoite);
             // Tumma avaruus ja ilmakehän hehku (web AVARUUDEN_TAUSTA, ILMAKEHAN_VARI).
             avaruus ??= Avaruus.Luo(georeferenssi, georeferenssi.transform);
+            // Yökuori vain kyydissä (Kyyti), kaukonäkymä kuten webissä.
+            yokuori ??= Yokuori.Luo(georeferenssi);
             if (kohteetPyydetty) return;
             kohteetPyydetty = true;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
@@ -226,6 +229,7 @@ namespace Matkakirja.Natiivi
             if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();
             // Ikkunassa ollaan aseman sisällä: havaintopisteet ja rata eivät kuulu Cupolan näkymään.
             if (rata != null) rata.SetActive(tila != KyydinTila.Ikkuna);
+            if (yokuori != null) yokuori.Nayta(tila != KyydinTila.Kauko);
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
         }
 
@@ -438,6 +442,7 @@ namespace Matkakirja.Natiivi
             if (taivas != null) Destroy(taivas.gameObject);
             if (pilvet != null) Destroy(pilvet.gameObject);
             if (avaruus != null) Destroy(avaruus.gameObject);
+            if (yokuori != null) Destroy(yokuori.gameObject);
             if (rataMesh != null) Destroy(rataMesh);
             Destroy(nelio);
             Destroy(pisteMateriaali);
