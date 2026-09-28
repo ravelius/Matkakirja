@@ -131,6 +131,7 @@ namespace Matkakirja.Natiivi
         public void Nollaa()
         {
             if (maakunnatAuki && !MaakuntaKartta) { maakunnatAuki = false; NaytaValilehti(); if (Auki) Paivita(); }
+            if (MaakuntaKartta) Sulje(); // Uusi peli: maakuntakartta kiinni (sieppaaja ja nostojen esto pois)
             Maakunnat.Nollaa();
         }
 
@@ -214,7 +215,7 @@ namespace Matkakirja.Natiivi
             {
                 Maakunnat.AsetaKarttatila(true);
                 PalloKierto.Sieppaaja = MaakuntaNapautus;
-                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.NaytaSallittu(false);
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.AsetaMaakuntaEsto(true);
             }
             KytkePalvelu();
             Paivita();
@@ -236,7 +237,7 @@ namespace Matkakirja.Natiivi
             {
                 Maakunnat.AsetaKarttatila(false);
                 if (PalloKierto.Sieppaaja == (System.Func<Vector2, bool>)MaakuntaNapautus) PalloKierto.Sieppaaja = null;
-                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.NaytaSallittu(true);
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.AsetaMaakuntaEsto(false);
             }
             AukiMuuttui?.Invoke(false);
         }
