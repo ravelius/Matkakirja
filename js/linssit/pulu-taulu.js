@@ -88,6 +88,8 @@ export const MOODIN_TOIMIA = 4;
 export const TAULUN_RAKO_PX = 8;
 /** Astronautti-Pulun leijunnan korkein nousu (css/satelliitti.css). */
 export const LEIJUNNAN_VARA_PX = 5;
+/** Taulu pysyy näin kaukana ISS-merkistä (osuma-ala 44 px + napautus viereen). */
+export const ISS_VAISTO_PX = 56;
 /** Pulun eleen korkein nousu napin yläreunasta (px, mitattu 28.9.). */
 export const PULUN_ELEEN_VARA_PX = 90;
 /** Auki olevan taulun Pulu-mittauksen väli. */
@@ -299,7 +301,7 @@ export function pulunPaikalla(doc = globalThis.document) {
  */
 export function luoTaulunNakyma({
   doc = globalThis.document, valitse = () => {}, sulje = () => {}, kysy = () => {}, vahennaLiiketta = false,
-  kello = globalThis,
+  kello = globalThis, vaistettavat = () => [],
 } = {}) {
   if (!doc?.createElement || !doc.body) return null;
   const paneeli = doc.createElement('div');
@@ -389,21 +391,51 @@ export function luoTaulunNakyma({
    * Jos tila ei riitä, paneeli ei mene Pulun päälle: sen korkeus rajataan
    * ruudun yläreunaan asti ja rivit vierivät (CSS max-height).
    */
+  /*
+   * KAKSI PAIKKAA, ENSIMMÄINEN VAPAA VOITTAA:
+   *   ylla   Pulun yllä (oikea reuna ruudun reunassa), ks. yllä;
+   *   vieres Pulun vasemmalla puolella, alareuna Pulun alareunan tasolla.
+   * ASEMAA EI PEITETÄ (regressio 28.9.: savuke-iss-kyyti). Avausnäkymä
+   * seuraa ISS:ää ruudun keskellä, ja puhelimella Pulun ylle nouseva taulu
+   * ulottui keskelle — pelaajan napautus asemaan osui tauluun eikä vienyt
+   * kyytiin. Siksi paikka ei saa leikata `vaistettavat()`-alueita (ISS:n
+   * osuma-ala); jos yläpaikka leikkaa, taulu menee Pulun viereen.
+   */
   let ala = 0;
+  let paikka = null;
+  const leikkaa = (a, b) => a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom;
   const sijoita = ({ vainYlos = false } = {}) => {
     try {
       const r = pulunLaatikko(doc);
-      const korkeus = doc.defaultView?.innerHeight ?? 0;
-      if (r && korkeus > 0) {
-        const uusi = Math.max(12, Math.round(korkeus - r.top + TAULUN_RAKO_PX + LEIJUNNAN_VARA_PX));
-        // Auki ollessa taulu väistää vain ylöspäin: leijunta ei saa heiluttaa sitä.
-        if (vainYlos && uusi <= ala) return;
-        ala = uusi;
-        paneeli.style.setProperty('--astro-paneeli-ala', `${ala}px`);
-      } else if (!vainYlos) {
-        ala = 0;
-        paneeli.style.removeProperty('--astro-paneeli-ala');
+      const W = doc.defaultView?.innerWidth ?? 0;
+      const H = doc.defaultView?.innerHeight ?? 0;
+      if (!r || !(H > 0) || !(W > 0)) {
+        if (!vainYlos) { ala = 0; paikka = null; paneeli.style.removeProperty('--astro-paneeli-ala'); paneeli.style.removeProperty('--astro-paneeli-oikea'); }
+        return;
       }
+      const w = paneeli.offsetWidth || 232;
+      const h = paneeli.offsetHeight || 290;
+      // Yläpaikan oikea reuna: CSS:n max(12px, turva-alue) — pystyssä 12 px.
+      const oikeaReuna = 12;
+      let ylaAla = Math.max(12, Math.round(H - r.top + TAULUN_RAKO_PX + LEIJUNNAN_VARA_PX));
+      if (vainYlos && paikka === 'ylla' && ylaAla < ala) ylaAla = ala;
+      const ehdokkaat = [
+        { nimi: 'ylla', ala: ylaAla, oikea: null, rect: { left: W - oikeaReuna - w, right: W - oikeaReuna, top: H - ylaAla - h, bottom: H - ylaAla } },
+      ];
+      const vierOikea = Math.round(W - r.left + TAULUN_RAKO_PX);
+      const vierAla = Math.max(12, Math.round(H - r.bottom));
+      if (W - vierOikea - w >= 8) {
+        ehdokkaat.push({ nimi: 'vieres', ala: vierAla, oikea: vierOikea, rect: { left: W - vierOikea - w, right: W - vierOikea, top: H - vierAla - h, bottom: H - vierAla } });
+      }
+      let vaista = [];
+      try { vaista = vaistettavat() ?? []; } catch { vaista = []; }
+      const valittu = ehdokkaat.find((e) => e.rect.top >= 8 && !vaista.some((v) => leikkaa(e.rect, v))) ?? ehdokkaat[0];
+      paikka = valittu.nimi;
+      ala = valittu.ala;
+      paneeli.dataset.paikka = paikka;
+      paneeli.style.setProperty('--astro-paneeli-ala', `${ala}px`);
+      if (valittu.oikea === null) paneeli.style.removeProperty('--astro-paneeli-oikea');
+      else paneeli.style.setProperty('--astro-paneeli-oikea', `${valittu.oikea}px`);
     } catch { /* oletuspaikka */ }
   };
   /*
@@ -425,9 +457,11 @@ export function luoTaulunNakyma({
     nayta(rivit) {
       kello.clearTimeout?.(piiloKello);
       latoRivit(rivit);
+      // Mitat luetaan näkyvästä (vielä läpinäkyvästä) paneelista.
+      paneeli.hidden = false;
+      paikka = null;
       sijoita();
       seuraa();
-      paneeli.hidden = false;
       // Häivytys alkaa seuraavasta kehyksestä (piilosta näkyviin ei ole siirtymää).
       if (vahennaLiiketta) paneeli.classList.add('astro-paneeli-auki');
       else {
@@ -524,6 +558,13 @@ export function luoAstroTaulu({
   /* ---- näkymä ---------------------------------------------------- */
   const n = nakyma !== undefined ? nakyma : luoTaulunNakyma({
     doc, vahennaLiiketta, kello,
+    // ISS:n osuma-ala (ISS_OSUMA_PX = 44, ja savukkeen "20 px viereen") vapaaksi.
+    vaistettavat: () => {
+      const p = avaruus?.issRuudulla?.();
+      if (!p) return [];
+      const v = ISS_VAISTO_PX;
+      return [{ left: p.x - v, right: p.x + v, top: p.y - v, bottom: p.y + v }];
+    },
     valitse: (tunnus) => valitse(tunnus),
     sulje: () => sulje({ syy: 'sulku' }),
     kysy: () => kysyPululta(),

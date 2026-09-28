@@ -1615,7 +1615,7 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   --astro-paneeli-rivi: 44px;
   --astro-paneeli-kesto: 160ms;
   position: fixed;
-  right: max(12px, env(safe-area-inset-right, 0px));
+  right: var(--astro-paneeli-oikea, max(12px, env(safe-area-inset-right, 0px)));
   bottom: var(--astro-paneeli-ala, calc(128px + env(safe-area-inset-bottom, 0px)));
   z-index: 50;
   width: min(var(--astro-paneeli-leveys), calc(100vw - 32px));

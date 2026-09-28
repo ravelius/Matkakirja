@@ -3322,6 +3322,17 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      */
     /** ISS:n kyyti: napautus (kauko → seuranta → ikkuna → seuranta) ja ✕. */
     napautaIss: () => kyyti?.napauta?.() ?? false,
+    /*
+     * ISS-MERKKI RUUDULLA (ikkunan koordinaatit) tai null. Pulun taulu
+     * (js/linssit/pulu-taulu.js) ei saa peittää asemaa: pelaajan napautus
+     * ISS:ään vie aina kyytiin, oli taulu auki tai ei.
+     */
+    issRuudulla: () => {
+      const iss = kalvo?.tila?.()?.iss;
+      if (!iss?.nakyvissa || iss.x === null || !kotelo) return null;
+      const r = kotelo.getBoundingClientRect();
+      return { x: r.left + iss.x, y: r.top + iss.y };
+    },
     poistuKyydista: () => kyyti?.poistu?.() ?? false,
     asetaNopeus: (k) => kyyti?.asetaNopeus?.(k) ?? false,
     lennaKohteeseen: (tunnus, valinnat) => kyyti?.lennaKohteeseen?.(tunnus, valinnat) ?? null,
