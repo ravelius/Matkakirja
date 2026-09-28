@@ -214,6 +214,7 @@ namespace Matkakirja.Natiivi
             {
                 Maakunnat.AsetaKarttatila(true);
                 PalloKierto.Sieppaaja = MaakuntaNapautus;
+                MaakuntaKerros()?.AsetaTilaRajat(true);
                 if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.NaytaSallittu(false);
             }
             KytkePalvelu();
@@ -235,6 +236,7 @@ namespace Matkakirja.Natiivi
             if (MaakuntaKartta)
             {
                 Maakunnat.AsetaKarttatila(false);
+                MaakuntaKerros()?.AsetaTilaRajat(false);
                 if (PalloKierto.Sieppaaja == (System.Func<Vector2, bool>)MaakuntaNapautus) PalloKierto.Sieppaaja = null;
                 if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.NaytaSallittu(true);
             }
@@ -251,9 +253,13 @@ namespace Matkakirja.Natiivi
             if (mk == null || !mk.RuutuPallolle(ruutu, out double lat, out double lon)) return true;
             string avain = mk.MaaPisteessa(lat, lon);
             Debug.Log($"MATKAKIRJA ui maakuntakartta: napautus {lat:0.00} {lon:0.00} → {avain ?? "ei maakuntaa"}");
+            // Omistaja 28.9. klo 20.3x: saman maakunnan uusi napautus tyhjentää valinnan ja poistuu maakuntatilasta.
+            if (avain != null && avain == Maakunnat.ValittuAvain) { Sulje(); return true; }
             if (avain != null) Maakunnat.Valitse(avain);
             return true;
         }
+
+        static MaaKartta MaakuntaKerros() => KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
 
         /// <summary>Nappi näkyviin tai piiloon (linssi päällä, aloitus).</summary>
         /// <summary>Karttanappi (iPhonella yläpalkin riviin, Ylapalkki.Vieras).</summary>
@@ -336,7 +342,8 @@ namespace Matkakirja.Natiivi
             bool rivissa = nappi.ClassListContains("mk-ylapalkki__vieras");
             nappi.style.top = rivissa ? StyleKeyword.Null : yla;
             nappi.style.right = rivissa ? StyleKeyword.Null : oikea;
-            paneeli.style.top = yla;
+            // Maakuntakartassa kuvausruutu napin alle: kytkin jää näkyviin (omistaja: "ei ole mitään nappia poistua").
+            paneeli.style.top = MaakuntaKartta && !rivissa ? yla + 40 + 6 : yla;
             paneeli.style.right = oikea;
         }
 
