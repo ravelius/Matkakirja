@@ -6,7 +6,7 @@ import test from 'node:test';
 import {
   KAUPUNGIN_SADE_KM, NAHTAVYYDET_NIMIO, TURISTIOPPAAN_NIMIO, etaisyysKm,
   kategoriat, kaupunginNostot, kelattuLiuska, kelauksenAskel, liuskanRivit, nostonOmaPaikka,
-  onKaupunginSisainen, ylaryhmanMaara,
+  luoSisaisyysTesti, onKaupunginSisainen, onMaanNiminenKaupunki, ylaryhmanMaara,
 } from '../js/pallolauta/kaupunkiliuska.js';
 import {
   KOVAN_ESTEEN_PAINO, VIUHKAN_ALAS_ALKU_PX, VIUHKAN_RIVI_PX, VIUHKAN_TIHEIN_VALI_PX,
@@ -72,6 +72,56 @@ test('paikkanimi kaupungin nimenä riittää sisäisyyteen ilman koordinaattia',
     paikkaNimi: "Versailles'n palatsi",
   });
   assert.equal(onKaupunginSisainen(muu, PARIISI), false);
+});
+
+test('maan niminen kaupunki tunnistetaan laudan datasta (kaupunki → maa → maan nimi)', () => {
+  const kartta = MAAILMANKARTTA.map;
+  const maanNimiset = (MAAILMANKARTTA.cities ?? [])
+    .filter((c) => onMaanNiminenKaupunki(c, kartta)).map((c) => c.id).sort();
+  assert.deepEqual(maanNimiset, [
+    'angola', 'guatemala', 'hongkong', 'islanti', 'kamerun', 'kongo', 'kuwait',
+    'luxemburg', 'madagaskar', 'mosambik', 'panama', 'sierraleone', 'singapore',
+  ]);
+  // Tavallinen kaupunki ja alue-"kaupungit" eivät ole maan nimisiä.
+  for (const id of ['pariisi', 'kreeta', 'sisilia', 'alpit', 'lappi']) {
+    const c = MAAILMANKARTTA.cities.find((k) => k.id === id);
+    assert.equal(onMaanNiminenKaupunki(c, kartta), false, id);
+  }
+  assert.equal(onMaanNiminenKaupunki({ id: 'islanti', nimi: 'Islanti' }, null), false);
+});
+
+test('Islanti: koko maan paikkanimi ei tee kaukaisesta nostosta kaupungin sisäistä', () => {
+  const c = MAAILMANKARTTA.cities.find((k) => k.id === 'islanti');
+  const a = laudaltaAsteiksi(PALLO_LAUTA, c.x, c.y);
+  const islanti = {
+    id: 'islanti', nimi: 'Islanti', lat: a.lat, lng: a.lon,
+    maanNimi: onMaanNiminenKaupunki(c, MAAILMANKARTTA.map),
+  };
+  assert.equal(islanti.maanNimi, true);
+  // Geysir 64,3137 N / 20,2995 W (maastokohteet-isl.js), paikkanimi koko maa.
+  const geysir = nosto('Geysir', 64.3137, -20.2995, 'luonto', { paikkaNimi: 'Islanti' });
+  assert.ok(etaisyysKm(geysir, islanti) > KAUPUNGIN_SADE_KM);
+  assert.equal(onKaupunginSisainen(geysir, islanti), false);
+  assert.equal(luoSisaisyysTesti(islanti)(geysir), false);
+  // Ilman lippua vanha nimitesti piilottaisi sen (löydöksen juurisyy).
+  assert.equal(onKaupunginSisainen(geysir, { ...islanti, maanNimi: false }), true);
+  // Etäisyystesti pätee yhä: keskuksen vieressä oleva nosto on sisäinen.
+  const vieressa = nosto('Satama', islanti.lat + 0.02, islanti.lng, 'kauppa', { paikkaNimi: 'Islanti' });
+  assert.equal(onKaupunginSisainen(vieressa, islanti), true);
+});
+
+test('tavallisella kaupungilla nimitesti pätee yhä (Pariisi, maanNimi false)', () => {
+  const kaukana = nosto('Kyyhkyposti', 60, 25, 'kauppa', { paikkaNimi: 'Pariisi' });
+  const c = MAAILMANKARTTA.cities.find((k) => k.id === 'pariisi');
+  const pariisi = { ...PARIISI, id: 'pariisi', maanNimi: onMaanNiminenKaupunki(c, MAAILMANKARTTA.map) };
+  assert.equal(pariisi.maanNimi, false);
+  assert.equal(onKaupunginSisainen(kaukana, pariisi), true);
+});
+
+test('lauta välittää maan nimisen kaupungin lipun nostokerrokselle', () => {
+  const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
+  assert.match(lauta, /onMaanNiminenKaupunki\(c, pack\.map\)/);
+  assert.match(lauta, /maanNimi: maanNimisetKaupungit\.has\(k\.id\)/);
 });
 
 test('laudan Pariisin oma piste kelpaa jäsenyyden keskukseksi', () => {
