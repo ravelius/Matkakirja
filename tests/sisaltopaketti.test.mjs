@@ -1618,7 +1618,9 @@ test('skeema 1.53: maasto koko maasta z10:een, tarkemmat tasot vain kaupunkien y
     assert.equal(m.tavuja.yht, m.tavuja.rasteri + m.tavuja.maasto + m.tavuja.media, `${iso}: yht ilman kaupunkiMaastoa`);
   }
   assert.ok(laattoja > 1000, `kaupunkiMaasto-laattoja ${laattoja}`);
-  assert.ok(o.ryhmat.europe.tavuja.maasto + o.ryhmat.europe.tavuja.kaupunkiMaasto < 200e6, 'Euroopan offline-maasto alle 200 Mt siirtona');
+  // 28.9.2026: maan laattojen oikeilla keskikoilla Euroopan maasto on ~0,8 Gt siirtona (1.53:n ~94 Mt laskettiin
+  // 23b-sarjan Ranska-otoksesta); Fable: maasto pysyy täytenä, natiivi näyttää todellisen koon. Raja vain räjähdykselle.
+  assert.ok(o.ryhmat.europe.tavuja.maasto + o.ryhmat.europe.tavuja.kaupunkiMaasto < 1000e6, 'Euroopan offline-maasto alle 1 Gt siirtona');
 });
 
 test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', async () => {
@@ -1627,7 +1629,9 @@ test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', 
   for (const [iso, m] of Object.entries(o.maat)) {
     const t = m.tavuja;
     assert.ok(t.mediaKuvat <= o.lahteet.mediaKuvat.katto, iso);
-    assert.equal(t.offline, t.rasteri + t.maasto + (t.kaupunkiRasteri ?? 0) + t.kaupunkiMaasto + t.mediaKuvat, `${iso}: offline-summa`);
+    // Skeema 1.56: siirto = 1.54:n offline-summa + kerrokset; offline on levykoko (4 kt:n lohkot), vähintään siirto.
+    assert.equal(t.siirto, t.rasteri + t.maasto + (t.kaupunkiRasteri ?? 0) + t.kaupunkiMaasto + t.mediaKuvat + t.kerrokset, `${iso}: siirto-summa`);
+    assert.ok(t.offline >= t.siirto * 0.95, `${iso}: levykoko ${t.offline} < siirto ${t.siirto}`);
   }
   // Media-listan kuvat mukana mediaKuvissa (pienennettyinä), ei vain lisätiedostot.
   const fra = o.maat.FRA;

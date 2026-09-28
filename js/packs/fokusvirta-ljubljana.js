@@ -49,7 +49,7 @@ export const FOKUSVIRTA_LJUBLJANA = {
     /* KUPLAT: Sonnetin kirjoittamat, ei kaanonia — Livian nykypäivän ääni. */
     kommentti: [
       'Lohikäärme on yhä Ljubljanan tunnus: se on linnan tornissa, vaakunassa ja sillalla, jota isoisäsi ei ehtinyt nähdä.',
-      'Tänään Ljubljana on Slovenian pääkaupunki. Isoisäsi aikana se oli Krainin pääkaupunki, ja saksaksi Laibach.',
+      'Nykyään Ljubljana on Slovenian pääkaupunki. Isoisäsi aikana se oli Krainin pääkaupunki, ja saksaksi Laibach.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {

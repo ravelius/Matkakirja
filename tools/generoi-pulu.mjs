@@ -111,7 +111,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import {
-  LIVIAN_AVAUS, LIVIAN_LEHTIVINKKI, MANNERIVIHJE, livianPaljastus,
+  LIVIAN_AVAUS, LIVIAN_ISS, LIVIAN_LEHTIVINKKI, MANNERIVIHJE, livianPaljastus,
 } from '../js/livia.js';
 import {
   LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
@@ -154,6 +154,11 @@ import { FOKUSVIRTA_EDINBURGH } from '../js/packs/fokusvirta-edinburgh.js';
 import { FOKUSVIRTA_FIRENZE } from '../js/packs/fokusvirta-firenze.js';
 import { FOKUSVIRTA_GRANADA } from '../js/packs/fokusvirta-granada.js';
 import { FOKUSVIRTA_KOBENHAVN } from '../js/packs/fokusvirta-kobenhavn.js';
+import { FOKUSVIRTA_BRYSSEL } from '../js/packs/fokusvirta-bryssel.js';
+import { FOKUSVIRTA_LJUBLJANA } from '../js/packs/fokusvirta-ljubljana.js';
+import { FOKUSVIRTA_KOSICE } from '../js/packs/fokusvirta-kosice.js';
+import { FOKUSVIRTA_LUXEMBURG } from '../js/packs/fokusvirta-luxemburg.js';
+import { FOKUSVIRTA_VALLETTA } from '../js/packs/fokusvirta-valletta.js';
 import { FOKUSVIRTA_LISSABON } from '../js/packs/fokusvirta-lissabon.js';
 import { FOKUSVIRTA_LONTOO } from '../js/packs/fokusvirta-lontoo.js';
 import { FOKUSVIRTA_MADRID } from '../js/packs/fokusvirta-madrid.js';
@@ -203,7 +208,31 @@ const PUHE_OSOITE = `${API}/v1/text-to-speech`;
  * omistaja näkee ElevenLabsin sivulla.
  */
 const VAKAUDET = Object.freeze({ creative: 0, natural: 0.5, robust: 1 });
-export const PULU_MALLI_OLETUS = 'eleven_v3';
+/*
+ * OLETUSMALLI ELEVEN_V4 (omistajan valinta 28.9.2026 Pulun
+ * esigeneroituihin ääniin; kokeet docs/raportit/pulu-v4-koe-20260928.md
+ * ja pulu-efektit-koe-20260928.md). Sama ääni (Flicker), sama vakaus
+ * (Natural 0,5) ja sama ulostulomuoto — vain malli vaihtuu.
+ *
+ * MIKSI VAIHTO ON TURVALLINEN:
+ *   • jo julkaistut äänet eivät muutu: ne ovat muuttumattomissa
+ *     versioiduissa R2-avaimissa (js/liviapuhe.js
+ *     LIVIAN_VERSIOIDUT_AANET), ja uusi ajo saa aina oman erä-avaimensa;
+ *   • maksullinen ajo vaatii yhä 1–10 eksplisiittistä --repliikit-avainta,
+ *     joten oletus ei voi generoida koko repertuaaria vahingossa;
+ *   • v4 ymmärtää samat hakasulkutagit kuin v3, eikä yksikään tagi
+ *     kuulunut kokeissa sanana (whisper-tarkistus 28.9.2026) — TAGIT
+ *     kelpaavat sellaisinaan;
+ *   • kohdistus (tools/kohdista-pulu-eleet.mjs) hyväksyy kummankin
+ *     mallin kuitit (PULU_TAGIMALLIT), joten 14.9. v3-äänten ajamatta
+ *     oleva kohdistus ei kaadu.
+ * Varoitus kokeista: v4 venytti Ateena-3:n kaksinkertaiseksi, kun tageja
+ * oli pinottu (hesitates, whispers, laughs). Pidä tagit maltillisina.
+ * v3 on yhä valittavissa ympäristömuuttujalla PULU_MALLI=eleven_v3.
+ */
+export const PULU_MALLI_OLETUS = 'eleven_v4';
+/** Mallit, joille hakasulkutagit lähetetään (ja joiden kuitit kohdistus hyväksyy). */
+export const PULU_TAGIMALLIT = Object.freeze(['eleven_v3', 'eleven_v4']);
 export const PULU_VAKAUS_OLETUS = 'natural';
 /** "flicker - cheerful fairy & sparkly sweetness" (omistajan valinta 12.9.2026). */
 export const PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt';
@@ -220,13 +249,13 @@ export const PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt';
  */
 export const PULU_ULOSTULOMUOTO = 'mp3_44100_192';
 const MALLI = process.env.PULU_MALLI ?? PULU_MALLI_OLETUS;
-const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
+const TAGIT_KAYTOSSA = PULU_TAGIMALLIT.includes(MALLI);
 const VAKAUS = process.env.PULU_VAKAUS ?? PULU_VAKAUS_OLETUS;
 const STABILITY = VAKAUDET[VAKAUS] ?? Number(VAKAUS);
 const SIMILARITY = 0.75;
-/** Tyylin voimakkuus: v2:lla nolla (omistajan säätö), v3:lla 0,6. */
+/** Tyylin voimakkuus: v2:lla nolla (omistajan säätö), v3/v4:llä 0,6. */
 const STYLE = TAGIT_KAYTOSSA ? 0.6 : 0;
-/** Mallin oma nopeus (vain v2-perhe; v3 jättää kentän huomiotta). */
+/** Mallin oma nopeus (vain v2-perhe; tagimallit eivät saa kenttää). */
 const SPEED = 1.05;
 /**
  * Nopeutus viimeistelyssä. 1,0 = ei nopeutusta: omistaja otti ffmpeg-
@@ -661,6 +690,21 @@ export const TAGIT = {
     ],
   },
   /*
+   * VIISI MYÖHEMMIN LISÄTTYÄ FOKUSVIRTAKAUPUNKIA (28.9.2026, v4-erä):
+   * kommentti oli pelissä, mutta äänite puuttui. Maltilliset tagit kuten
+   * muilla (yksi alku + yksi käänne), ei pinottuja tunteita.
+   */
+  'bryssel-3': { alku: '[amused]', kohdat: [['Nykyään', '[chuckles]']] },
+  'ljubljana-3': { alku: '[proud]', kohdat: [['jota isoisäsi', '[softly]']] },
+  'kosice-3': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[thoughtfully]']] },
+  'luxemburg-3': { alku: '[brightly]', kohdat: [['nykyään', '[amused]']] },
+  'valletta-3': { alku: '[proud]', kohdat: [['ja koko vanhakaupunki', '[warmly]']] },
+  'bryssel-4': { alku: '[mischievously]', kohdat: [['Minä olen nähnyt', '[amused]']] },
+  'ljubljana-4': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[softly]']] },
+  'kosice-4': { alku: '[brightly]', kohdat: [['Sen pääkatu', '[warmly]']] },
+  'luxemburg-4': { alku: '[softly]', kohdat: [['Minä näen', '[proud]']] },
+  'valletta-4': { alku: '[curious]', kohdat: [['Nykyään', '[amused]']] },
+  /*
    * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta). Yksi
    * puhekupla kussakin numerolla 3. Venetsian kuvakaruselli ei lisää
    * puhekuplia. Sama reipas alkutagi kuin muilla kommenteilla;
@@ -760,6 +804,33 @@ export const TAGIT = {
     kohdat: [['Suojasin', '[curious]'], ['Kirje', '[mischievously]']],
   },
   'kobenhavn-3': { alku: '[brightly]', kohdat: [['Orkesterin', '[mischievously]']] },
+  /*
+   * ASTRONAUTIN KAMERA JA ISS-KYYTI (päätoimittajan käsikirjoitus
+   * 28.9.2026, eleven_v4). Tunne- ja tehostetagit käsikirjoituksen
+   * mukaan: v4 tekee [wings flapping], [whoosh] ja [radio static]
+   * -tagista oikean tehosteen eikä lausu sitä (koe 28.9.2026). Quindar-
+   * piippausta malli ei tuota, joten se soitetaan pelissä siniäänenä
+   * (js/linssit/pulu-iss.js) eikä sille ole tagia.
+   */
+  'iss-a-1': { alku: '[wings flapping] [excited]', kohdat: [['Tämä on Astronautin kamera', '[proud]']] },
+  'iss-a-2': { alku: '[whispers]', kohdat: [['Minä en ole koskaan', '[pause]']] },
+  'iss-b-1': { alku: '[curious]' },
+  'iss-b-2': {
+    alku: '[excited]',
+    kohdat: [['Pyöräytän', '[wings flapping]'], ['noin.', '[whoosh]']],
+  },
+  'iss-c-1': {
+    alku: '[tap] [gasp]',
+    kohdat: [['Nokka osui', '[embarrassed]'], ['Painottomuus', '[sigh]']],
+  },
+  'iss-c-2': {
+    alku: '[apologetic]',
+    kohdat: [['Viedään', '[wings flapping]'], ['Kas niin.', '[whoosh]'], ['Lupaan.', '[pause]']],
+  },
+  'iss-d-1': { alku: '[radio static] [excited]' },
+  'iss-d-2': { alku: '[proud]', kohdat: [['Minä en ehtisi', '[laughs]']] },
+  'iss-d-3': { alku: '[whispers]', kohdat: [['Tai Lyon.', '[pause]']] },
+  'iss-d-4': { alku: '[warmly]', loppu: '[wings flapping]' },
 };
 
 /**
@@ -830,12 +901,18 @@ export function ilmanTageja(teksti) {
  * varmistaa lopuksi että tagien poisto palauttaa alkuperäisen tekstin.
  *
  * @param {string} teksti kaanoninen repliikki
- * @param {{alku?:string, kohdat?:Array<[string,string]>}} tagit
+ * @param {{alku?:string, kohdat?:Array<[string,string]>, loppu?:string}} tagit
  * @returns {string} mallille lähtevä teksti
  */
 export function puhemuoto(teksti, tagit = {}) {
   const alkuperainen = String(teksti ?? '').trim();
   let ulos = alkuperainen;
+  /*
+   * LOPPUTAGI (28.9.2026, ISS-käsikirjoitus D4: siivet räpyttävät vasta
+   * lauseen jälkeen). Tehostetagi repliikin perään; tagien poisto
+   * palauttaa silti saman tekstin, koska ilmanTageja poistaa tagin ja
+   * trimmaa lopun.
+   */
   for (const [ankkuri, tagi] of tagit.kohdat ?? []) {
     const osumat = ulos.split(ankkuri).length - 1;
     if (osumat !== 1) {
@@ -845,6 +922,7 @@ export function puhemuoto(teksti, tagit = {}) {
     ulos = ulos.replace(ankkuri, `${tagi} ${ankkuri}`);
   }
   if (tagit.alku) ulos = `${tagit.alku} ${ulos}`;
+  if (tagit.loppu) ulos = `${ulos} ${tagit.loppu}`;
   if (ilmanTageja(ulos) !== alkuperainen) {
     throw new Error(`tagitus muutti repliikin tekstiä: "${alkuperainen.slice(0, 60)}…"`);
   }
@@ -910,6 +988,12 @@ const KAUPUNKIEN_PAKKAUKSET = {
   oslo: FOKUSVIRTA_OSLO,
   bergen: FOKUSVIRTA_BERGEN,
   kobenhavn: FOKUSVIRTA_KOBENHAVN,
+  // Myöhemmin lisätyt viisi (28.9.2026): kommentti oli pelissä ilman äänitettä.
+  bryssel: FOKUSVIRTA_BRYSSEL,
+  ljubljana: FOKUSVIRTA_LJUBLJANA,
+  kosice: FOKUSVIRTA_KOSICE,
+  luxemburg: FOKUSVIRTA_LUXEMBURG,
+  valletta: FOKUSVIRTA_VALLETTA,
 };
 
 /**
@@ -1044,6 +1128,11 @@ export function repliikit() {
     lehtivinkki: [LIVIAN_LEHTIVINKKI],
     ...kaupungit,
     ...linssit,
+    // Astronautin kamera ja ISS-kyyti (js/livia.js LIVIAN_ISS, 28.9.2026).
+    'iss-a': LIVIAN_ISS.a,
+    'iss-b': LIVIAN_ISS.b,
+    'iss-c': LIVIAN_ISS.c,
+    'iss-d': LIVIAN_ISS.d,
   }).map((rivi) => ({
     ...rivi,
     pinoutuu: pinoutuvat.has(rivi.avain),

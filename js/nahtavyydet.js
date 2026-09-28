@@ -2167,8 +2167,10 @@ export function avaaNahtavyys(ui, kohde, numero, {
    *
    *   • KADONNUT kohde: havainnekuva on kuvasarjan ENSIMMÄINEN kuva
    *     nauhoineen, ja sen kuvateksti on havainnekuvan oma lähderivi.
-   *   • YHÄ OLEMASSA oleva: kuvat pysyvät ennallaan (valokuva kertoo,
-   *     mitä paikalla NYT on) ja "Koe ihme" -nappi tulee kuvan alle.
+   *   • YHÄ OLEMASSA oleva (omistaja 27.9.2026 klo 23.4x, "Koe ihme"
+   *     -nappi pois): ihmekuva on samoin ensimmäinen ja iso, ja jutun
+   *     oma ensimmäinen valokuva (mitä paikalla NYT on) kelluu pienenä
+   *     toisen kappaleen kyljessä kuvateksteineen.
    *
    * Ihme haetaan NIMELLÄ fokuskohteista (ui.matkakirjanIhme), joten
    * nähtävyysjuttuihin ei kopioida yhtään kuvaa eikä lähdettä: kun
@@ -2176,7 +2178,8 @@ export function avaaNahtavyys(ui, kohde, numero, {
    */
   const ihme = opas ? null : (ui.matkakirjanIhme?.(kohde.nimi) ?? null);
   const omatKuvat = opas ? [] : (kohde.kuvat ?? []);
-  const kuvat = (ihme?.kadonnut ? [ihme, ...omatKuvat] : omatKuvat).slice(0, 5);
+  const nykykuva = ihme && !ihme.kadonnut ? (omatKuvat[0] ?? null) : null;
+  const kuvat = (ihme ? [ihme, ...(nykykuva ? omatKuvat.slice(1) : omatKuvat)] : omatKuvat).slice(0, 5);
   /*
    * Useampi kuva näytetään KARUSELLINA yhden kehyksen sisällä
    * (omistajan palaute 10.8.2026: peräkkäin ladottuina lisäkuvat
@@ -2199,6 +2202,13 @@ export function avaaNahtavyys(ui, kohde, numero, {
     : (kuvat.length ? nahtavyydenKuva(ui, kuvat[0]) : null);
   // Kappaleindeksi → sen edelle taitettava kelluva kuva.
   const taittokuvat = new Map();
+  // Nykykuva toisen kappaleen kylkeen (iso ihmekuva tulee avauskappaleen
+  // jälkeen); yksikappaleisessa jutussa se päätyy loppuun eikä katoa.
+  if (nykykuva) {
+    const kehys = nahtavyydenKuva(ui, nykykuva);
+    kehys.classList.add('nahtavyys-taittokuva', 'oikea', 'nahtavyys-nykykuva');
+    taittokuvat.set(1, kehys);
+  }
   if (ripoteltu) {
     kuvat.slice(1).forEach((kuva, j, lisat) => {
       const kehys = nahtavyydenKuva(ui, kuva);
@@ -2263,19 +2273,6 @@ export function avaaNahtavyys(ui, kohde, numero, {
   for (const [paikka, kehys] of taittokuvat) {
     if (paikka >= kappaleet.length) sisalto.appendChild(kehys);
   }
-  /*
-   * "KOE IHME" KUVAN ALLE, kuten kortissa (js/fokuskohteet.js
-   * piirraKohdeKuvat): pelaaja näkee ensin sen, mitä paikalla NYT on,
-   * ja nappi lupaa sen viereen loistoajan. Kuvattomassa jutussa nappi
-   * jää tekstin perään — lupaus ei saa kadota siksi, ettei jutussa ole
-   * valokuvaa. Kadonneella kohteella nappia ei ole: sen havainnekuva on
-   * jo kuvasarjan ensimmäisenä.
-   */
-  if (ihme && !ihme.kadonnut) {
-    const nappi = ui.piirraIhmenappi?.(sisalto, ihme);
-    if (nappi && kuvaKehys?.isConnected) kuvaKehys.after(nappi);
-  }
-
   // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
   // koko palstalle, pystynä se pysyy pienenä (omistajan ohje).
   // Oppaassa EI: siellä jokainen jaksokuva on koko palstan levyinen,
@@ -2393,7 +2390,8 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * nappi löytyy eikä kaksosta synny.
    */
   const otsikko = document.getElementById('nahtavyys-otsikko');
-  if (kaiutin && otsikko && kaiutin.parentElement !== otsikko) {
+  // Lukija voi kääriä kaiuttimen valikkonapin pariksi (.lukija-pari) otsikon sisällä.
+  if (kaiutin && otsikko && !otsikko.contains(kaiutin)) {
     otsikko.appendChild(kaiutin);
   }
 }

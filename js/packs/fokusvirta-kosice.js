@@ -48,7 +48,7 @@ export const FOKUSVIRTA_KOSICE = {
     /* KUPLAT: Sonnetin kirjoittamat, ei kaanonia — Livian nykypäivän ääni. */
     kommentti: [
       'Tuo tuomiokirkko on yhä Slovakian suurin kirkko. Isoisäsi aikana se kuului Unkarin kuningaskuntaan, ja kaupunki oli Kassa.',
-      'Košice on nykyään Slovakian toiseksi suurin kaupunki, ja Hlavná-kadun kiviä kuljetaan yhä samaa linssinmuotoista rengasta.',
+      'Košice on nykyään Slovakian toiseksi suurin kaupunki. Sen pääkatu Hlavná levenee yhä linssinmuotoiseksi toriksi.',
     ],
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     kuva: {

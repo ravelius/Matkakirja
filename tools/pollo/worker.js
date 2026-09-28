@@ -29,6 +29,8 @@ import {
   KUVA_PAIVARAJA_OLETUS,
   KUVA_PROMPTIN_KATTO,
   PUHE_TEKSTIN_KATTO,
+  REALTIME_ISTUNTO_MIN_OLETUS,
+  REALTIME_PAIVARAJA_MIN_OLETUS,
   SAHKE_VASTAUKSET,
   ajatteluKentat,
   katkaiseKokonaiseen,
@@ -42,6 +44,7 @@ import {
   poimiSahkeTuomio,
   puheKuukausiAvain,
   puhePaivaAvain,
+  realtimePaivaAvain,
   sahkeKehote,
   sahkeViesti,
   NATIIVIT_OLETUS,
@@ -54,6 +57,7 @@ import {
   suodataPuhetagit,
   tarkistaPuheRajat,
   tarkistaRajat,
+  tarkistaRealtimeRaja,
   tyhjanSyy,
   tyhjanTeksti,
   vertaaSalaisuus,
@@ -124,6 +128,89 @@ const XAI_AANET = ['altair', 'ara', 'atlas', 'aurora', 'carina', 'castor',
   'liora', 'lumen', 'luna', 'lux', 'naksh', 'orion', 'perseus', 'rex',
   'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
 const XAI_AIKARAJA_MS = 8000;
+
+/*
+ * PULUN STRIIMIÄÄNI ELEVENLABS V4 TURBOLLA (omistaja 28.9.2026 klo 18.1x:
+ * "Pulun voi ainakin jo vaihtaa striimi ääneksi", kortilla v4 Turbo).
+ * Vain persoona 'pollo' (Pulun chat ja puhekeskustelu, web ja natiivi):
+ * Pulun oma ääni Flicker (sama kuin esigeneroiduissa repliikeissä,
+ * tools/generoi-pulu.mjs), vakaus 0,5. Mallin tagit (PUHETAGIKEHOTE:
+ * [pause] [long-pause] [sigh] [laugh] <fast>…</fast>) muunnetaan
+ * ElevenLabsin tageiksi maltillisesti (elevenTagit). Kertoja ja lukijat
+ * pysyvät xAI:lla. PULU_PUHE_MOOTTORI = 'xai' palauttaa vanhan;
+ * PULU_PUHE_MALLI = 'eleven_v4' valitsee raskaamman mallin. Avain on
+ * workerin salaisuus ELEVEN_API_KEY (pollo-julkaisu.yml, tilannepalkit).
+ * Hinta 28.9.: v4 Turbo 0,011 $ / 1 000 mrk kampanjana 12.10. asti, sitten
+ * 0,04 $ (docs/raportit/pulu-v4-koe-20260928.md). VARAPOLKU: virhe tai
+ * aikaraja → xAI (ja sen varapolku OpenAI); varapolun pala ei säilöidy.
+ */
+const ELEVEN_PUHE_RAJAPINTA = 'https://api.elevenlabs.io/v1/text-to-speech';
+export const PULU_ELEVEN_AANI = 'piI8Kku0DcvcL6TTSeQt';
+export const PULU_ELEVEN_MALLI_OLETUS = 'eleven_v4_turbo';
+const PULU_ELEVEN_MALLIT = ['eleven_v4_turbo', 'eleven_v4'];
+const ELEVEN_ULOSTULO = 'mp3_44100_128';
+const ELEVEN_AIKARAJA_MS = 8000;
+
+/** Luetaanko tämän persoonan puhe ElevenLabsilla (vain Pulu, avain workerissa). */
+export function puluElevenKaytossa(env, persoonaNimi) {
+  if (persoonaNimi !== 'pollo' || !env?.ELEVEN_API_KEY) return false;
+  return String(env?.PULU_PUHE_MOOTTORI ?? '').trim().toLowerCase() !== 'xai';
+}
+
+/** Pulun ElevenLabs-malli ympäristöstä (tuntematon arvo → oletus Turbo). */
+export function puluElevenMalli(env) {
+  const toive = String(env?.PULU_PUHE_MALLI ?? '').trim();
+  return PULU_ELEVEN_MALLIT.includes(toive) ? toive : PULU_ELEVEN_MALLI_OLETUS;
+}
+
+/**
+ * xAI-puhetagit ElevenLabsin muotoon (suodataPuhetagit on ajettu ensin):
+ * tauot <break>-merkinnöiksi, huokaus ja nauru ElevenLabsin tageiksi ja
+ * <fast>…</fast> muotoon [quickly] …. Maltillinen: yksi tagi per kohta,
+ * ei lisättyjä tunteita (Ateena-3:n v4-koe venyi 2× pinotuista tageista).
+ */
+export function elevenTagit(teksti) {
+  return String(teksti ?? '')
+    .replace(/\[long-pause\]/g, '<break time="0.9s" />')
+    .replace(/\[pause\]/g, '<break time="0.4s" />')
+    .replace(/\[sigh\]/g, '[sighs]')
+    .replace(/\[laugh\]/g, '[laughs]')
+    .replace(/<fast>\s*/g, '[quickly] ')
+    .replace(/\s*<\/fast>/g, '');
+}
+
+async function kutsuElevenPuhetta(env, { teksti, malli, nopeus }) {
+  const ohjain = new AbortController();
+  const ajastin = setTimeout(() => ohjain.abort(), ELEVEN_AIKARAJA_MS);
+  let ylavirta;
+  try {
+    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${PULU_ELEVEN_AANI}/stream?output_format=${ELEVEN_ULOSTULO}`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'xi-api-key': env.ELEVEN_API_KEY },
+      body: JSON.stringify({
+        text: teksti,
+        model_id: malli,
+        voice_settings: {
+          stability: 0.5,
+          ...(nopeus !== 1 ? { speed: Math.min(1.2, Math.max(0.7, nopeus)) } : {}),
+        },
+      }),
+      signal: ohjain.signal,
+    });
+  } catch (virhe) {
+    clearTimeout(ajastin);
+    const v = new Error('eleven puherajapinta ei vastannut');
+    v.status = virhe?.name === 'AbortError' ? 'aikaraja' : 'verkko';
+    throw v;
+  }
+  clearTimeout(ajastin);
+  if (!ylavirta.ok || !ylavirta.body) {
+    const virhe = new Error(`eleven puherajapinta ${ylavirta.status}`);
+    virhe.status = ylavirta.status;
+    throw virhe;
+  }
+  return ylavirta;
+}
 
 /**
  * Kumpi puhemoottori on käytössä: 'xai', 'openai' tai null (ei avaimia).
@@ -829,6 +916,66 @@ Vastaa KEHYSTETTYNÄ: alustus omalla puhekielelläsi, ydinvastaus täysin \
 kirjakielellä, lopuksi yksi lyhyt oma kommentti.`;
 }
 
+/*
+ * PULUN ÄÄNIKESKUSTELU (KOE, omistajan tilaus 28.9.2026: "Saako sille
+ * XAI:n tekoälylle jotenkin syötettyä samat pohjatiedot kuin Sonnetille
+ * on Pulun chatissa syötetty?"). Kyllä: sama JARJESTELMAKEHOTE ja sama
+ * kehysohje kootaan samasta funktiosta (pulunKehote), vain tekstimuodon
+ * merkinnät (avainkäsitteet, JATKOT, PAIKKA, äänitagit) jäävät pois,
+ * koska puhemalli sanoisi ne ääneen. Tämä osio kumoaa ne erikseen, sillä
+ * pohjakehote mainitsee JATKOT-rivit ja avainkäsitteet ohimennen.
+ */
+const AANIKESKUSTELUKEHOTE = `ÄÄNIKESKUSTELU — PUHUT ÄÄNEEN REAALIAJASSA
+Tämä keskustelu käydään puhumalla: pelaaja puhuu sinulle mikrofoniin, ja \
+vastauksesi kuuluu hänen korvissaan heti. Puhu aina suomea, myös jos \
+puheentunnistus kuulee jonkin sanan väärin tai vieraalla kielellä — \
+päättele tarkoitus ja vastaa suomeksi. Pidä vastaukset lyhyinä: alustus \
+on muutama sana, ydinvastaus 2–4 virkettä ja loppukommentti yksi lyhyt \
+virke. Pelaaja voi keskeyttää sinut; silloin lopetat ja kuuntelet. Jos et \
+saanut kysymyksestä selvää, pyydä lyhyesti toistamaan äläkä arvaa.
+Kaikki mitä tuotat, sanotaan ääneen sellaisenaan. Siksi tässä \
+keskustelussa EI ole avainkäsitemerkintöjä, JATKOT-rivejä, PAIKKA-riviä, \
+äänitageja, luetteloita, otsikoita eikä muita merkintöjä, vaikka muualla \
+näissä ohjeissa niihin viitataan. Vuosiluvut ja numerot sanot niin kuin \
+ne luetaan ääneen.`;
+
+/**
+ * PULUN JÄRJESTELMÄKEHOTE — YKSI LÄHDE kahdelle mallille.
+ *
+ *   muoto 'teksti'  Sonnet-chat (vastaus/striimi): täsmälleen sama
+ *                   kokoonpano kuin ennen 28.9.2026.
+ *   muoto 'aani'    Grok Voice Agent -koe (tehtava 'realtime'): sama
+ *                   pohja ja kehysohje, tekstimerkinnät pois, ja pelaajan
+ *                   tilanne (sama lueNakyma-konteksti kuin chatissa)
+ *                   liitetään loppuun, koska äänisessiossa ei ole
+ *                   erillistä "Pelaajan tilanne juuri nyt" -viestiä.
+ */
+export function pulunKehote({
+  muoto = 'teksti', natiivi = false, puhetagit = false, kehys = null, konteksti = '',
+} = {}) {
+  if (muoto === 'aani') {
+    return `${JARJESTELMAKEHOTE}\n\n${AANIKESKUSTELUKEHOTE}`
+      + `\n\n${kehysOhje('aloitus')}`
+      + (konteksti ? `\n\nPELAAJAN TILANNE KESKUSTELUN ALKAESSA\n${konteksti}` : '');
+  }
+  return `${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}`
+    + `\n\n${PAIKKAKEHOTE}`
+    // Äänitagit selaimelle ja tagit siivoavalle natiiville (ks. PUHETAGIKEHOTE).
+    + (!natiivi || puhetagit ? `\n\n${PUHETAGIKEHOTE}` : '')
+    + `\n\n${kehysOhje(kehysLaji(kehys))}`;
+}
+
+/*
+ * ÄÄNEEN LUETTAVAN VASTAUKSEN ALKU (Päätoimittaja 28.9.2026, Natiivi-UI:n
+ * mittaus: yhden virkkeen vastaus alkoi kuulua vasta 6,9 s / 14,7 s, koska
+ * luenta odottaa ensimmäisen palan loppua). Asiakas lähettää `luetaan: 1`,
+ * kun vastaus luetaan ääneen (kaiutin tai saneltu kysymys). Ohje on oma
+ * system-lohkonsa välimuistirajan jälkeen (kutsuRajapintaa `lisaohje`).
+ */
+export const LUETTAVAN_ALKU = `TÄMÄ VASTAUS LUETAAN ÄÄNEEN: ensimmäinen virke \
+on lyhyt, enintään kahdeksan sanaa (alustus käy siihen), jotta ääni alkaa heti. \
+Sen jälkeen vastaa kuten aina.`;
+
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
 const EHDOTUSKEHOTE = `Keksi kaksi lyhyttä kysymystä, jotka pelaaja voisi \
 haluta kysyä sinulta juuri nyt. Nojaa alla olevaan tilannekuvaukseen: hyvä \
@@ -1122,24 +1269,28 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
    * Säilöavain lasketaan tästä suodatetusta tekstistä, joten kielletty
    * tai pariton tagi ei synnytä uutta generointia samasta puheesta.
    */
-  const teksti = suodataPuhetagit(siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO), { sallitut: xai });
+  const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
+  const persoona = PUHE_PERSOONAT[persoonaNimi];
+  const eleven = puluElevenKaytossa(env, persoonaNimi);
+  // xAI-muodon tagit säilyvät myös ElevenLabsille (muunnetaan alla) ja varapolulle.
+  const tekstiTagein = suodataPuhetagit(siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO), { sallitut: xai || eleven });
+  const teksti = eleven ? elevenTagit(tekstiTagein) : tekstiTagein;
   if (!teksti) {
     return vastaa({ virhe: 'kysely', viesti: 'Teksti puuttuu.' }, { status: 400, ...kors });
   }
-  const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
-  const persoona = PUHE_PERSOONAT[persoonaNimi];
-  const malli = xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS);
+  const malli = eleven ? puluElevenMalli(env) : (xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS));
   // Säilöavain sisältää mallin, joten välimuistiosumankin moottori on tiedossa.
-  let moottoriNimi = xai ? 'xai' : 'openai';
+  let moottoriNimi = eleven ? 'eleven' : (xai ? 'xai' : 'openai');
 
   // Ääni ja ohje: persoonan oletukset, joiden yli kehittäjäkoodillinen
   // pyyntö saa kirjoittaa (työhuoneen säätövälilehti, kehittäjävalikon
   // striimiääni). xAI:lla oletus on 'ara' kaikille persoonille eikä
   // ohjetta ole; OpenAI-äänen nimi xAI-pyynnössä (tai päinvastoin)
   // jätetään huomiotta, jotta vanha laitesäätö ei kaada luentaa.
-  const oletusAani = xai ? XAI_AANI_OLETUS : persoona.aani;
-  const oletusOhje = xai ? '' : persoona.ohje;
-  const sallitutAanet = xai ? XAI_AANET : PUHE_AANET;
+  const oletusAani = eleven ? PULU_ELEVEN_AANI : (xai ? XAI_AANI_OLETUS : persoona.aani);
+  const oletusOhje = xai || eleven ? '' : persoona.ohje;
+  // Pulun ElevenLabs-ääni on kiinteä: pelaajan lukijaäänivalinta ei koske Pulua.
+  const sallitutAanet = eleven ? [] : (xai ? XAI_AANET : PUHE_AANET);
   let aani = oletusAani;
   let ohje = oletusOhje;
   let saadetty = false;
@@ -1150,12 +1301,12 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
    * (puheenAvain), joten valittu ääni säilötään omana palanaan eikä
    * ohita säilöä kuten ohje.
    */
-  if (xai && XAI_AANET.includes(runko?.aani)) aani = runko.aani;
+  if (xai && !eleven && XAI_AANET.includes(runko?.aani)) aani = runko.aani;
   if (kehittajaOhitus(pyynto, env)) {
     if (sallitutAanet.includes(runko?.aani)) {
       aani = runko.aani;
     }
-    const omaOhje = xai ? '' : siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
+    const omaOhje = xai || eleven ? '' : siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
     if (omaOhje) ohje = omaOhje;
     saadetty = aani !== oletusAani || ohje !== oletusOhje;
   }
@@ -1245,7 +1396,27 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
 
   try {
     let ylavirta;
-    if (xai) {
+    if (eleven) {
+      try {
+        ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus });
+      } catch (virhe) {
+        // VARAPOLKU: xAI (tai OpenAI) ilman säilöntää, xAI-muodon tageilla.
+        console.log(`puhe: eleven epäonnistui (${virhe?.status ?? 'verkko'}) → ${xai ? 'xai' : 'openai'}`);
+        avain = null;
+        r2Avain = null;
+        if (xai) {
+          moottoriNimi = 'xai';
+          ylavirta = await kutsuXaiPuhetta(env, { teksti: tekstiTagein, aani: XAI_AANI_OLETUS, nopeus });
+        } else {
+          if (!env.OPENAI_API_KEY) throw virhe;
+          moottoriNimi = 'openai';
+          ylavirta = await kutsuOpenaiPuhetta(env, {
+            teksti: suodataPuhetagit(tekstiTagein, { sallitut: false }),
+            aani: persoona.aani, ohje: persoona.ohje, malli: env.PUHE_MALLI || PUHE_MALLI_OLETUS, nopeus,
+          });
+        }
+      }
+    } else if (xai) {
       try {
         ylavirta = await kutsuXaiPuhetta(env, { teksti, aani, nopeus });
       } catch (virhe) {
@@ -1306,9 +1477,135 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   }
 }
 
+/* ------------------------------------------------------------------ */
+/* Pulun äänikeskustelu (KOE): xAI Grok Voice Agent                     */
+/* ------------------------------------------------------------------ */
+
+/*
+ * REAALIAIKAINEN ÄÄNIKESKUSTELU (omistajan tilaus 28.9.2026, koenappi
+ * kehittäjätilassa; Sonnet-chat pysyy pelin oletuksena).
+ *
+ * Rajapinta (docs.x.ai, luettu 28.9.2026):
+ *   - POST https://api.x.ai/v1/realtime/client_secrets
+ *     { expires_after: { seconds } } → { value, expires_at }; enintään
+ *     3600 s. Token ei sido istuntoa: asetukset lähetetään WebSocketiin
+ *     session.update-viestinä, siksi palautamme ne valmiina.
+ *   - wss://api.x.ai/v1/realtime?model=grok-voice-latest; selain
+ *     todentaa aliprotokollalla `xai-client-secret.<token>`.
+ *   - Ääni PCM16 LE, input/output-taajuus 8000–48000 (oletus 24000).
+ *
+ * API-AVAIN EI KOSKAAN LÄHDE WORKERISTA: asiakas saa vain lyhytikäisen
+ * tokenin. Reitti on vain kehittäjäkoodilla (kuten 'kuva' ja 'tila'), ja
+ * päiväkatto on minuutteina koko pelille (rajat.js tarkistaRealtimeRaja)
+ * — kehittäjäkoodi EI ohita sitä, koska katto on koko kokeen kustannusraja.
+ */
+const XAI_REALTIME_TOKEN = 'https://api.x.ai/v1/realtime/client_secrets';
+export const XAI_REALTIME_MALLI = 'grok-voice-latest';
+export const XAI_REALTIME_OSOITE = `wss://api.x.ai/v1/realtime?model=${XAI_REALTIME_MALLI}`;
+export const XAI_REALTIME_TAAJUUDET = Object.freeze([8000, 16000, 22050, 24000, 32000, 44100, 48000]);
+const XAI_REALTIME_ULOS_TAAJUUS = 24000; // = js/puhe.js PUHEPIIRIN_TAAJUUS
+/* Puheen lopun hiljaisuus ennen kuin server VAD päättää vuoron (ms). */
+export const REALTIME_VAD_HILJAISUUS_MS = 600;
+
+/**
+ * session.update-viestin `session`-osa: sama Pulun kehote kuin chatissa
+ * (pulunKehote muoto 'aani'), pelin xAI-ääni ja server VAD. Puhdas
+ * funktio — sama olio kulkee selaimelle ja mittausskriptille
+ * (tools/pollo/realtime-koe.mjs).
+ */
+export function realtimeIstunto({
+  aani = XAI_AANI_OLETUS, konteksti = '', taajuus = 24000, pohdinta = 'none',
+  hiljaisuusMs = REALTIME_VAD_HILJAISUUS_MS,
+} = {}) {
+  return {
+    voice: XAI_AANET.includes(aani) ? aani : XAI_AANI_OLETUS,
+    instructions: pulunKehote({ muoto: 'aani', konteksti }),
+    /*
+     * Pohdinta pois oletuksena: xAI:n oletus 'high' ajattelee ennen
+     * jokaista vastausta, ja reaaliaikaisessa keskustelussa viive on
+     * tärkein mitta (realtime-koe.mjs mittaa molemmat).
+     */
+    reasoning: { effort: pohdinta === 'high' ? 'high' : 'none' },
+    turn_detection: { type: 'server_vad', silence_duration_ms: hiljaisuusMs },
+    audio: {
+      input: {
+        format: {
+          type: 'audio/pcm',
+          rate: XAI_REALTIME_TAAJUUDET.includes(taajuus) ? taajuus : 24000,
+        },
+      },
+      output: { format: { type: 'audio/pcm', rate: XAI_REALTIME_ULOS_TAAJUUS } },
+    },
+  };
+}
+
+async function hoidaRealtime(pyynto, env, kors, runko) {
+  if (!kehittajaOhitus(pyynto, env)) {
+    return vastaa({ virhe: 'koodi', viesti: 'Äänikeskustelun koe on vain kehittäjälle.' }, { status: 403, ...kors });
+  }
+  if (!env.XAI_API_KEY) {
+    return vastaa({ virhe: 'asetus', viesti: 'Äänikeskustelu ei ole käytössä.' }, { status: 503, ...kors });
+  }
+  const kv = env.POLLO_KV ?? null;
+  const avain = realtimePaivaAvain(new Date());
+  const istuntoMin = Math.max(1, lueLuku(env.REALTIME_ISTUNTO_MIN, REALTIME_ISTUNTO_MIN_OLETUS));
+  const paivaraja = lueLuku(env.REALTIME_PAIVARAJA_MIN, REALTIME_PAIVARAJA_MIN_OLETUS);
+  const kaytetty = await lueLaskuri(kv, avain);
+  const raja = tarkistaRealtimeRaja({ kaytetty, varaus: istuntoMin, paivaraja });
+  if (!raja.ok) {
+    return vastaa({ virhe: raja.syy, viesti: raja.viesti, kaytetty, raja: paivaraja }, { status: 429, ...kors });
+  }
+
+  const enintaanS = istuntoMin * 60;
+  let data;
+  try {
+    const vastaus = await fetch(XAI_REALTIME_TOKEN, {
+      method: 'POST',
+      headers: {
+        authorization: `Bearer ${env.XAI_API_KEY}`,
+        'content-type': 'application/json',
+      },
+      // Token elää istunnon verran + minuutin yhteydenottovaran.
+      body: JSON.stringify({ expires_after: { seconds: Math.min(3600, enintaanS + 60) } }),
+      signal: AbortSignal.timeout?.(XAI_AIKARAJA_MS),
+    });
+    if (!vastaus.ok) {
+      const virhe = new Error('xai');
+      virhe.status = vastaus.status;
+      throw virhe;
+    }
+    data = await vastaus.json();
+  } catch (virhe) {
+    // Vain tilakoodi lokiin — ei avainta, ei vastausrunkoa.
+    console.log(`realtime: token epäonnistui (${virhe?.status ?? 'verkko'})`);
+    return vastaa({ virhe: 'palvelin', viesti: 'Pulu ei saanut äänilinjaa auki. Yritä hetken päästä.' }, { status: 502, ...kors });
+  }
+  const token = typeof data?.value === 'string' ? data.value : '';
+  if (!token) {
+    return vastaa({ virhe: 'palvelin', viesti: 'Pulu ei saanut äänilinjaa auki. Yritä hetken päästä.' }, { status: 502, ...kors });
+  }
+  // Varaus kirjataan vasta onnistuneesta tokenista: epäonnistunut ei maksa.
+  const uusi = await kasvataLaskuri(kv, avain, 60 * 60 * 30, istuntoMin);
+  const taajuus = Number(runko?.taajuus);
+  return vastaa({
+    token,
+    vanhenee: Number(data?.expires_at) || null,
+    osoite: XAI_REALTIME_OSOITE,
+    enintaanS,
+    kaytetty: uusi,
+    raja: paivaraja,
+    istunto: realtimeIstunto({
+      aani: runko?.aani,
+      konteksti: siivoaTeksti(runko?.konteksti, KONTEKSTIN_KATTO),
+      taajuus,
+      pohdinta: runko?.pohdinta,
+    }),
+  }, kors);
+}
+
 /** Yksi kutsu Anthropicin rajapintaan. `striimi` avaa SSE-vastauksen. */
 async function kutsuRajapintaa(env, {
-  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null,
+  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null, lisaohje = null,
 }) {
   const malli = env.POLLO_MALLI || MALLI_OLETUS;
   return fetch(RAJAPINTA, {
@@ -1323,7 +1620,21 @@ async function kutsuRajapintaa(env, {
       max_tokens: maxTokens,
       // Ajattelu ei saa kuluttaa lyhyen vastauksen sanarajaa (löydös 67).
       ...ajatteluKentat(malli),
-      system: jarjestelma,
+      /*
+       * KEHOTTEEN VÄLIMUISTI (Fable 28.9.2026): järjestelmäkehote (~8 k
+       * merkkiyksikköä, sama kaikille pelaajille) luetaan välimuistista
+       * 0,1 × syötehinnalla — vastaus ≈ 0,025 → ≈ 0,008 $. Pelaajan tilanne
+       * ja historia ovat viesteissä, joten etuliite pysyy tavu tavulta samana.
+       */
+      /*
+       * `lisaohje` (esim. LUETTAVAN_ALKU) on oma lohkonsa välimuistirajan
+       * JÄLKEEN: välimuistissa oleva etuliite pysyy tavu tavulta samana
+       * kirjoitetulle ja luettavalle vastaukselle.
+       */
+      system: [
+        { type: 'text', text: jarjestelma, cache_control: { type: 'ephemeral' } },
+        ...(lisaohje ? [{ type: 'text', text: lisaohje }] : []),
+      ],
       messages: viestit,
       // Lämpötila annetaan vain kun se on tarkoituksella asetettu:
       // chat-vastaukset saavat mallin oletuksen, tuomiot temperature 0.
@@ -1341,9 +1652,11 @@ async function kutsuRajapintaa(env, {
  * kun taas tuntematon tyhjä ansaitsee yhden uusinnan (ks. rajat.js
  * tyhjanSyy).
  */
-async function kysyMallitiedot(env, { jarjestelma, viestit, maxTokens, lampotila = null }) {
+async function kysyMallitiedot(env, {
+  jarjestelma, viestit, maxTokens, lampotila = null, lisaohje = null,
+}) {
   const vastaus = await kutsuRajapintaa(env, {
-    jarjestelma, viestit, maxTokens, lampotila,
+    jarjestelma, viestit, maxTokens, lampotila, lisaohje,
   });
   if (!vastaus.ok) {
     /*
@@ -1514,10 +1827,22 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
   }
 }
 
-async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
+async function striimaaVastaus(env, kors, {
+  jarjestelma, viestit, maxTokens, lisaohje = null, ajat = null,
+}) {
   const ylavirta = await kutsuRajapintaa(env, {
-    jarjestelma, viestit, maxTokens, striimi: true,
+    jarjestelma, viestit, maxTokens, striimi: true, lisaohje,
   });
+  /*
+   * SERVER-TIMING (Natiivi-UI 28.9.2026): mihin ensimmäisen palan odotus
+   * kuluu tuotannossa — rajat = pyynnön alusta mallikutsuun (KV-luvut),
+   * malli = mallin vastauksen otsakkeisiin. Otsakkeet lähtevät yhdessä
+   * ensimmäisen palan kanssa, joten lukija näkee ne heti.
+   */
+  const ajoitus = ajat
+    ? { 'server-timing': `rajat;dur=${ajat.rajatMs}, malli;dur=${Date.now() - ajat.alkuMs - ajat.rajatMs}`,
+      'access-control-expose-headers': 'server-timing' }
+    : {};
   if (!ylavirta.ok || !ylavirta.body) {
     const virhe = new Error(`rajapinta ${ylavirta.status}`);
     virhe.status = ylavirta.status;
@@ -1597,7 +1922,7 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
          */
         const paikattu = await paikkaaTyhja(
           env,
-          { jarjestelma, viestit, maxTokens },
+          { jarjestelma, viestit, maxTokens, lisaohje },
           { virhe: virtaVirhe, stop },
         );
         await laheta('loppu', paikattu);
@@ -1616,7 +1941,7 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
 
   return new Response(readable, {
     status: 200,
-    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut) },
+    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut), ...ajoitus },
   });
 }
 
@@ -2145,6 +2470,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
 
 export default {
   async fetch(pyynto, env, ctx) {
+    const alkuMs = Date.now();
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -2203,6 +2529,11 @@ export default {
      * asetettu workeriin, haara on kokonaan kiinni — puolivalmis
      * asetus on kiinni, ei auki (sama periaate kuin POLLO_ORIGINIT).
      */
+    // Pulun äänikeskustelun koe: token + valmis istunto (ks. hoidaRealtime).
+    if (runko?.tehtava === 'realtime') {
+      return hoidaRealtime(pyynto, env, kors, runko);
+    }
+
     if (runko?.tehtava === 'tila') {
       if (!kehittajaOhitus(pyynto, env)) {
         return vastaa({ virhe: 'koodi', viesti: 'Vain kehittäjälle.' }, { status: 403, ...kors });
@@ -2240,9 +2571,20 @@ export default {
     if (!raja.ok) {
       return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
     }
-    // Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
-    await kasvataLaskuri(kv, pAvain, 60 * 60 * 30);
-    await kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 });
+    /*
+     * Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
+     * KIRJOITUS EI PIDÄTÄ MALLIKUTSUA (Natiivi-UI:n mittaus 28.9.2026:
+     * tuotannossa 1. pala ~3,5 s, paikallisesti samalla koodilla ~1,2 s):
+     * KV:n kirjoitus kulkee waitUntilissa mallikutsun rinnalla. Muistilaskuri
+     * päivittyy silti tässä pyynnössä (kasvataLaskuri).
+     */
+    const kirjoitukset = Promise.all([
+      kasvataLaskuri(kv, pAvain, 60 * 60 * 30),
+      kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 }),
+    ]);
+    if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitukset);
+    else await kirjoitukset;
+    const rajatMs = Date.now() - alkuMs;
 
     // --- kutsu -------------------------------------------------------
     try {
@@ -2284,11 +2626,11 @@ export default {
        * pelaajan kysymys pysyy pelaajan kysymyksenä, ja ohje pysyy
        * palvelimen omistamana (sama periaate kuin muullakin kehotteella).
        */
-      const kehote = `${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}`
-        + `\n\n${PAIKKAKEHOTE}`
-        // Äänitagit selaimelle ja tagit siivoavalle natiiville (ks. PUHETAGIKEHOTE).
-        + (!natiivi || runko?.puhetagit === 1 ? `\n\n${PUHETAGIKEHOTE}` : '')
-        + `\n\n${kehysOhje(kehysLaji(runko?.kehys))}`;
+      const kehote = pulunKehote({
+        natiivi, puhetagit: runko?.puhetagit === 1, kehys: runko?.kehys,
+      });
+      // Ääneen luettava vastaus alkaa lyhyellä virkkeellä (ks. LUETTAVAN_ALKU).
+      const lisaohje = runko?.luetaan === 1 ? LUETTAVAN_ALKU : null;
       /*
        * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
        * varalle: jos asiakas ei osaa lukea SSE:tä tai virta ei aukea,
@@ -2299,10 +2641,12 @@ export default {
           jarjestelma: kehote,
           viestit,
           maxTokens: MAX_TOKENS,
+          lisaohje,
+          ajat: { alkuMs, rajatMs },
         });
       }
 
-      const kutsu = { jarjestelma: kehote, viestit, maxTokens: MAX_TOKENS };
+      const kutsu = { jarjestelma: kehote, viestit, maxTokens: MAX_TOKENS, lisaohje };
       const kerralla = await kysyMallitiedot(env, kutsu);
       // Erotinrivi puretaan aina täällä: pelaajalle menee vastaus ja
       // erillinen lista, ei koskaan raakaa merkintää.
