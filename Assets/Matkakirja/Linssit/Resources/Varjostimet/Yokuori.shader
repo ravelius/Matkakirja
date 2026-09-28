@@ -152,6 +152,11 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half lisa = (half)(vesi * osuu) * yoKuori * saturate(_YoVesi - a);
                 c += _Vari.rgb * lisa;
                 a += lisa;
+                // Yöllä pilvet yhtä tummiksi kuin vesi (laite cl7 28.9.: valkoiset pilvet jäivät 0,82-peiton läpi maitomaisen
+                // harmaiksi; ISS:n yökuvissa pilvet ovat tummia, ellei kuu valaise).
+                half lisaPilvi = pilvi * (half)osuu * yoKuori * saturate(_YoVesi - a);
+                c += _Vari.rgb * lisaPilvi;
+                a += lisaPilvi;
                 return half4(c, a);
             }
             ENDHLSL
