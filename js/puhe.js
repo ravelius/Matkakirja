@@ -1091,6 +1091,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *     palasta, joka sisältää kohdan (keskeytetyn luennan jatko, onTila.alku)
  *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
  *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
+ *   onAani?: () => void ensimmäisen palan ääni alkaa kuulua (kerran)
  *   yksiPuheenvuoro?: boolean kaikki lisätty teksti on yhtä kappaletta
  *     (Pulun striimivastaus): palojen väliin virkeväli, ei kappaleväliä
  * }} asetukset
@@ -1106,7 +1107,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0, aloitusAlku = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false,
+  aloitusKappale = 0, aloitusAlku = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false, onAani = null,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
@@ -1393,6 +1394,11 @@ export function luoPuheSoitin({
     aloitusajat[indeksi] = { alku: alkuAika, loppu: Infinity };
     if (indeksi === 0 && tila.ekaAani == null && typeof performance !== 'undefined') {
       tila.ekaAani = performance.now() + (alkuAika - piiri.currentTime) * 1000;
+    }
+    // Ensimmäinen kuuluva ääni (Pulun puhekeskustelu: "Mietin" → "Puhun" juuri silloin).
+    if (onAani && !tila.aaniIlmoitettu) {
+      tila.aaniIlmoitettu = true;
+      setTimeout(() => { if (!tila.peruttu) onAani(); }, Math.max(0, (alkuAika - piiri.currentTime) * 1000));
     }
     const soitetut = [];
     let kursori = alkuAika;
