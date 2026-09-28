@@ -37,8 +37,8 @@
  *   5. KYTKENTÄ — kytkeMaakunnatKarttaselitteeseen
  */
 import { html, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus } from './ui-apurit.js';
-import { kohteidenNykyinenIso } from './fokuskohteet.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kohteidenNykyinenIso, suljeKohdeSuurennos } from './fokuskohteet.js';
+import { piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from './packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
 import { MAAKUNNAT_KAIKKI, MAAKUNNAT_KAIKKI_MAAT } from './packs/maakunnat-nimet.js';
@@ -433,7 +433,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
       lisaa.title = 'Lisää alueesta';
       lisaa.setAttribute('aria-label', 'Lisää alueesta');
       lisaa.innerHTML = PLUS_IKONI;
-      lisaa.addEventListener('click', () => avaaMaakuntaKortti(avain, nimi, data));
+      lisaa.addEventListener('click', () => avaaMaakuntaKortti(ui, avain, nimi, data));
       kuvaus.appendChild(lisaa);
     }
   }
@@ -551,15 +551,46 @@ const PULU_IKONI = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden=
 /** Auki oleva kortti (yksi kerrallaan, kuten fokusnosto.js:n ui.fokusnostoKortti). */
 let avoinKortti = null;
 
+/** Kuvan suurennoksen ui-avain (js/fokuskohteet.js avaaKohdeSuurennos): kortin sulku ja Esc kuorivat sen ensin. */
+const MAAKUNTA_ZOOM = 'maakuntaZoom';
+/** Sama tunnus kuin js/fokusnosto.js ja js/elaintaky.js: nostokortin tyylit ladataan enintään kerran. */
+const NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
+
+/** Nostokortin kuvaluokat (css/fokusnosto.css) sivulle, jos yhtään nostoa ei ole vielä avattu. */
+function lataaNostonTyyli() {
+  if (typeof document === 'undefined' || document.getElementById(NOSTO_TYYLIN_TUNNUS)) return;
+  const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
+  // Yhden tiedoston versiossa tyylit ovat jo sivun <style>-lohkossa.
+  if (!peruslinkki) return;
+  const linkki = document.createElement('link');
+  linkki.id = NOSTO_TYYLIN_TUNNUS;
+  linkki.rel = 'stylesheet';
+  linkki.href = new URL('fokusnosto.css', peruslinkki.href).href;
+  document.head.appendChild(linkki);
+}
+
+/**
+ * Maakunnan kuva nostokortin kuvaksi: osoite sellaisenaan (assetOsoite päästää valmiin osoitteen läpi), lähderiviin
+ * lisenssi vain, jos lähde ei jo mainitse sitä (omistajan kaappaus 28.9.: "… (CC BY-SA 4.0) · CC BY-SA 4.0").
+ */
+export function maakunnanNostokuva(kuva) {
+  const lahde = kuva?.lahde ?? '';
+  const lisenssi = kuva?.lisenssi && !lahde.includes(kuva.lisenssi) ? kuva.lisenssi : '';
+  return { ...kuva, lahde: [lahde, lisenssi].filter(Boolean).join(' · ') };
+}
+
 function suljeMaakuntaKortti() {
   const auki = avoinKortti;
   avoinKortti = null;
   auki?.purku?.();
+  // Kuvan suurennos on kortin jatke: se ei saa jäädä yksin kartan päälle.
+  suljeKohdeSuurennos(auki?.ui, MAAKUNTA_ZOOM);
   auki?.kerros?.remove();
 }
 
-function avaaMaakuntaKortti(avain, nimi, data) {
+function avaaMaakuntaKortti(ui, avain, nimi, data) {
   suljeMaakuntaKortti();
+  lataaNostonTyyli();
 
   const kerros = html('div', 'maakunta-kortti-kerros');
   const kortti = html('div', 'maakunta-kortti');
@@ -576,26 +607,23 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   const sisalto = html('div', 'maakunta-kortti-sisalto');
   sisalto.appendChild(html('h2', 'maakunta-kortti-otsikko', nimi));
 
-  // KUVAT (voi puuttua kokonaan erässä 1) — kaksi vierekkäin, useampi
-  // vaakakaruselliin (scroll-snap, ks. css). Ilman kuvia lohko jää pois.
-  const kuvat = maakunnanKuvat(data);
-  if (kuvat.length) {
-    const kuvalohko = html('div', 'maakunta-kuvat');
-    kuvalohko.classList.add(kuvat.length > 2 ? 'maakunta-kuvat-karuselli' : 'maakunta-kuvat-ruudukko');
-    for (const kuva of kuvat) {
-      const kehys = html('figure', 'maakunta-kuva');
-      const img = document.createElement('img');
-      img.loading = 'lazy';
-      img.src = kuva?.osoite ?? '';
-      img.alt = '';
-      kehys.appendChild(img);
-      const lahdeteksti = [kuva?.lahde, kuva?.lisenssi].filter(Boolean).join(' · ');
-      // Lähderivi kulkee talon apurin kautta (tekijakortti.js taytaLahderivi):
-      // Commons- ja lisenssilinkit sekä havainnekuvan selite samoin kuin korteissa.
-      if (lahdeteksti) kehys.appendChild(taytaLahderivi(html('figcaption', 'maakunta-kuva-lahde'), lahdeteksti, kuva));
-      kuvalohko.appendChild(kehys);
-    }
-    sisalto.appendChild(kuvalohko);
+  /*
+   * KUVAT KUTEN MUISSA NOSTOISSA (omistaja 28.9.2026 iPadilla: "Nosto pitää olla saman kokoinen kuin muut nostot ja
+   * kuva pitää pystyä klikkaamaan kokoruudulle"): sama kuvakomponentti kuin nostokortilla (js/fokusnosto.js
+   * piirraNostonKuva / piirraNostonKuvasarja), eli koko kuva näkyy (korkeuskatto 42vh), napautus avaa suurennoksen
+   * samalla kuvaselaimella, ja useampi kuva selataan nuolilla. Ilman kuvia lohko jää pois.
+   */
+  const kuvat = maakunnanKuvat(data).map(maakunnanNostokuva).filter((k) => k.osoite || k.tiedosto);
+  if (kuvat.length === 1) piirraNostonKuva(ui, sisalto, kuvat[0], 'fokusnosto-kuva', undefined, MAAKUNTA_ZOOM);
+  else if (kuvat.length > 1) {
+    piirraNostonKuvasarja(ui, sisalto, kuvat, {
+      otsikko: nimi,
+      kehysLuokka: 'fokusnosto-kuva nostosarja-kuva',
+      nuoliLuokka: 'nostosarja-kuvanuoli',
+      laskuriLuokka: 'nostosarja-kuvalaskuri',
+      leveys: 800,
+      zoomAvain: MAAKUNTA_ZOOM,
+    });
   }
 
   // PITKÄ TEKSTI — jos `pitka` puuttuu (erä 2 ei ole vielä valmis), näytetään `lyhyt`.
@@ -652,12 +680,15 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
+    // Kuvan suurennos sulkeutuu ensin (sama väistö kuin nostokortilla js/fokusnosto.js).
+    if (ui?.[MAAKUNTA_ZOOM]) return;
     tapahtuma.stopPropagation();
     kiinni();
   };
   document.addEventListener('keydown', nappain, true);
 
   avoinKortti = {
+    ui,
     kerros,
     purku: () => {
       document.removeEventListener('keydown', nappain, true);
