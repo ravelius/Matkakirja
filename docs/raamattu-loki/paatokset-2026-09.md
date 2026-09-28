@@ -8839,3 +8839,7 @@ Omistaja 28.9. klo 20.41 sanatarkasti: "Pulun luenta hyppää vieläkin, eikä s
 ## TILA: 1.0.39-PUHEKORJAUKSET PASS, NOSTOKORTIN NAPPI FAIL; PULU 429 VERKOLLE (28.9.2026 klo 20.44)
 
 Natiivi-UI 28.9. klo 20.44 a479a462:n puhekoodilla (ElevenLabs): hyppy PASS nostossa, Pulun pysäytys chatin sulkuun PASS (sulun jälkeen 0 palaa, häivytys 0,2 s). Nostokortin lukijanappi FAIL: LISÄÄ sulki kortin (korjattu 942f37bf), mutta lukijan kaiutin sulkee kortin yhä → korjaus 1.0.39:ään. Pulu-palvelin antaa HTTP 429 (päiväraja) Macin verkolle, myös omistajan laitteille → Pelikoodari selvittää, nollaa tämän päivän IP-laskurin jos mahdollista ja ohjaa roolien mittaukset kehittäjäkoodille.
+
+## PÄÄTÖS: BUILD 39 HETI, KORTTIKORJAUS 1.0.40:EEN (28.9.2026 klo 20.44)
+
+Päätoimittaja 28.9. klo 20.44 (Natiivisepän kysymys): BUILD 39 = 5b7261cc heti TF-vientiin — omistajan kaksi tärkeintä korjausta (Pulun hyppy + pysäytys chatin sulkuun) laitteella PASS. Nostokortin lukijan kaiutinvika on vanha (TF 1.0.37/1.0.38) → Natiivi-UI:n korjaus 1.0.40-junaan, sen jälkeen maakuntatila. Testattavaa tyhjä 1.0.39:stä.
