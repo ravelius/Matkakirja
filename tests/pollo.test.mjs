@@ -683,8 +683,12 @@ test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
     'workerin kehyslajit puuttuvat');
   assert.ok(/KEHYS_LAJIT\.has\(arvo\) \? arvo : 'aloitus'/.test(kehote),
     'tuntematon kehyslaji ei putoa aloitukseen — vanha peli rikkoutuisi');
-  assert.ok(/kehysOhje\(kehysLaji\(runko\?\.kehys\)\)/.test(kehote),
+  // Kehote kootaan pulunKehote-funktiossa (28.9.2026: yhteinen chatille ja
+  // äänikeskustelun kokeelle), ja chat antaa sille pyynnön kehyslajin.
+  assert.ok(/kehysOhje\(kehysLaji\(kehys\)\)/.test(kehote),
     'kehyslajia ei liitetä järjestelmäkehotteeseen');
+  assert.ok(/pulunKehote\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
+    'chat ei välitä kehyslajia kehotteelle');
 });
 
 /*
@@ -2754,7 +2758,7 @@ test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eik
   const pyynto = (runko, o = otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
     method: 'POST', headers: o, body: JSON.stringify(runko),
   }), env, {});
-  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime']);
   assert.equal(natiivilleSallittu(undefined), true, 'puuttuva tehtävä = vastaus');
   for (const tehtava of ['kuva', 'tila']) {
     const v = await pyynto({ tehtava });

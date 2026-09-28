@@ -50,6 +50,45 @@ export const PUHE_KUUKAUSIRAJA_OLETUS = 6000000;
 export const KUVA_PROMPTIN_KATTO = 4000;
 export const KUVA_PAIVARAJA_OLETUS = 60;
 
+/*
+ * PULUN ÄÄNIKESKUSTELU (KOE, omistajan tilaus 28.9.2026) — MINUUTTEJA.
+ *
+ * xAI:n Grok Voice Agent laskutetaan yhteysminuuteista (0,08 $/min
+ * 28.9.2026, docs.x.ai/developers/pricing). Selain puhuu xAI:n kanssa
+ * SUORAAN lyhytikäisellä tokenilla, joten worker ei näe istunnon
+ * todellista pituutta: jokainen token VARAA istunnon enimmäispituuden
+ * (REALTIME_ISTUNTO_MIN_OLETUS) koko pelin yhteisestä päiväkatosta, ja
+ * asiakas sulkee yhteyden viimeistään siinä ajassa. Katto on koko
+ * workerin yhteinen (ei IP-kohtainen): 30 min ≈ 2,40 $/vrk enimmillään.
+ */
+export const REALTIME_PAIVARAJA_MIN_OLETUS = 30;
+export const REALTIME_ISTUNTO_MIN_OLETUS = 3;
+
+/** Äänikeskustelun päivälaskurin avain (koko peli, UTC-vuorokausi). */
+export function realtimePaivaAvain(nyt = new Date()) {
+  return `rt:p:${nyt.toISOString().slice(0, 10)}`;
+}
+
+/**
+ * Mahtuuko uusi istunto päivän kattoon? `kaytetty` ja `varaus` ovat
+ * minuutteja. Katto 0 = ei rajaa (sama käytäntö kuin muissa rajoissa).
+ */
+export function tarkistaRealtimeRaja({
+  kaytetty = 0,
+  varaus = REALTIME_ISTUNTO_MIN_OLETUS,
+  paivaraja = REALTIME_PAIVARAJA_MIN_OLETUS,
+} = {}) {
+  if (paivaraja > 0 && kaytetty + varaus > paivaraja) {
+    return {
+      ok: false,
+      syy: 'paivaraja',
+      viesti: `Pulun äänikeskustelun päiväkatto (${paivaraja} min koko pelille) on käytetty. `
+        + 'Kokeile huomenna uudelleen tai kirjoita kysymys.',
+    };
+  }
+  return { ok: true, syy: null, viesti: null };
+}
+
 /** Kontekstipaketin katto merkkeinä (sama luku kuin pelin puolella). */
 export const KONTEKSTIN_KATTO = 5000;
 
@@ -189,7 +228,8 @@ export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
 export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
 
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
-export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+// 'realtime' (Pulun äänikeskustelun koe, Fable 28.9.2026): natiivikin vain kehittäjäkoodilla (hoidaRealtime).
+export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime']);
 
 /** Saako natiivi tehdä pyynnön tehtävän? */
 export function natiivilleSallittu(tehtava) {

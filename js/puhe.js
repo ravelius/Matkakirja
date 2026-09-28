@@ -609,6 +609,31 @@ export function puheMittari() {
   return vuAnalysaattori;
 }
 
+/**
+ * PULUN ÄÄNIKESKUSTELUN ULOSTULO (koe 28.9.2026, js/pulu-realtime.js):
+ * sama 24 kHz:n piiri ja sama vahvistin + kompressori kuin lukijalla,
+ * jotta pelin äänenvoimakkuus (Lukija-liuku × työhuoneen kerroin) pätee
+ * myös reaaliaikaiseen Puluun. xAI antaa äänen 24 kHz:n PCM:nä, eli
+ * piirin oma taajuus — ei näytteistystä. Kutsutaan käyttäjän eleestä.
+ *
+ * @returns {Promise<{piiri: AudioContext, kohde: AudioNode}|null>}
+ */
+export async function puhePiirinKohde() {
+  if (typeof window === 'undefined') return null;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return null;
+  try {
+    piiri = piiri ?? luoPiiri(AC);
+  } catch {
+    return null;
+  }
+  try {
+    await piiri.resume?.();
+  } catch { /* resume ilman elettä: kytkentä yrittää silti */ }
+  kytkeVahvistin();
+  return { piiri, kohde: vahvistin ?? piiri.destination };
+}
+
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
 function kytkeVahvistin() {
   if (kytketty || typeof window === 'undefined') return;
@@ -1066,6 +1091,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *     palasta, joka sisältää kohdan (keskeytetyn luennan jatko, onTila.alku)
  *   otsikkoKappaleet?: Iterable<number> otsikolla alkavat kappaleet —
  *     niiden edellä pidetään pidempi tauko (OTSIKKOVALI)
+ *   onAani?: () => void ensimmäisen palan ääni alkaa kuulua (kerran)
  *   yksiPuheenvuoro?: boolean kaikki lisätty teksti on yhtä kappaletta
  *     (Pulun striimivastaus): palojen väliin virkeväli, ei kappaleväliä
  * }} asetukset
@@ -1081,7 +1107,7 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  */
 export function luoPuheSoitin({
   persoona = 'kertoja', sailio = null, onLoppu = null, onVirhe = null, onTila = null,
-  aloitusKappale = 0, aloitusAlku = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false,
+  aloitusKappale = 0, aloitusAlku = 0, otsikkoKappaleet = null, yksiPuheenvuoro = false, onAani = null,
 } = {}) {
   if (!puheTuettu()) return null;
   if (typeof window === 'undefined') return null;
@@ -1368,6 +1394,11 @@ export function luoPuheSoitin({
     aloitusajat[indeksi] = { alku: alkuAika, loppu: Infinity };
     if (indeksi === 0 && tila.ekaAani == null && typeof performance !== 'undefined') {
       tila.ekaAani = performance.now() + (alkuAika - piiri.currentTime) * 1000;
+    }
+    // Ensimmäinen kuuluva ääni (Pulun puhekeskustelu: "Mietin" → "Puhun" juuri silloin).
+    if (onAani && !tila.aaniIlmoitettu) {
+      tila.aaniIlmoitettu = true;
+      setTimeout(() => { if (!tila.peruttu) onAani(); }, Math.max(0, (alkuAika - piiri.currentTime) * 1000));
     }
     const soitetut = [];
     let kursori = alkuAika;
