@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2359, teksti: 'BGR: pitkä-luonnehdinta + pulu kaikille 28 maakunnalle' },
   { v: 2358, teksti: 'v2354: Pulu vastaa puheella saneltuun kysymykse… (#3546)' },
   { v: 2357, teksti: 'v2356: Pulun äänikeskustelun koe myös natiiviin (#3553)' },
   { v: 2356, teksti: 'v2350: Ihme kortin ensimmäisenä kuvana, Koe ihm… (#3517)' },
