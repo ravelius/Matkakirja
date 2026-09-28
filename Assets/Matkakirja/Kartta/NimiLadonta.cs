@@ -381,6 +381,24 @@ namespace Matkakirja
 
     public static class NimiLadonta
     {
+        /// <summary>
+        /// LIIKELUKKO (web on malli, Pelikoodarin mittaus proto-3d/lokit/nostoreuna-web/mittaus.md 28.9.2026; omistajan
+        /// välkyntälöydös TF 1.0.34): nimen näkyvyys ja kylki päätetään vain levossa. Liikkeen aikana ruudulla (16 pt
+        /// sisällä) jo ollut nimi pitää edellisen näkyvyytensä; ladonnan tulos koskee vain levossa ja ruudulle vasta tulevia.
+        /// </summary>
+        public const float RuudullaVara = 16f;
+
+        /// <summary>Ruutupiste vähintään <see cref="RuudullaVara"/> pistettä ruudun sisällä (pikseleinä, kerroin = pikseliä/pt).</summary>
+        public static bool Ruudulla(float x, float y, float leveys, float korkeus, float kerroin)
+        {
+            float v = RuudullaVara * kerroin;
+            return x >= v && y >= v && x <= leveys - v && y <= korkeus - v;
+        }
+
+        /// <summary>Näytetäänkö nimi: levossa tai ruudulle tulevalle ladonnan tulos, liikkeessä ruudulla olleelle entinen.</summary>
+        public static bool LukittuNakyvyys(bool levossa, bool oliRuudulla, bool naytettiin, bool ladonta) =>
+            levossa || !oliRuudulla ? ladonta : naytettiin;
+
         /// <summary>Metriä asteelle (R = 6 371 km; tällä aineiston korkeus_m on laskettu).</summary>
         public const double MetriaAsteelle = 111194.93;
         /// <summary>Pyramidin z4: pikseliä asteelle.</summary>
