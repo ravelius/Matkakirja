@@ -47,6 +47,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
 ../Assets/Matkakirja/Kartta/PakettiPaatokset.cs
+../Assets/Matkakirja/Kartta/Pelikello.cs
 ../Assets/Matkakirja/Kartta/Panorointi.cs
 ../Assets/Matkakirja/Kartta/Pohjapallolaskenta.cs
 ../Assets/Matkakirja/Kartta/Reikakorjaus.cs
