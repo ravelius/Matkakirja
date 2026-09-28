@@ -34,9 +34,29 @@ namespace Matkakirja.Linssit.Testit
             return (Math.Asin(v.z / r) / Deg, Math.Atan2(v.y, v.x) / Deg, r - IssKuvakulma.MaanSadeM);
         }
 
+        [Testi] static void HorisonttiIsossaIkkunassa()
+        {
+            // Omistaja 28.9. klo 21.5x: oletuksena katse sivuikkunasta horisonttiin (23°), maan reuna 20,3° alapuolella eli
+            // 2,7° kuvan keskikohdan yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
+            Oleta.Tosi(IssKuvakulma.Horisontti && double.IsNaN(IssKuvakulma.KatseAlasPakotettu), "oletus horisontti");
+            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.HorisontinKatseAlas, "katse 23°");
+            double horisontti = Math.Acos(IssKuvakulma.MaanSadeM / (IssKuvakulma.MaanSadeM + Iss.KorkeusM)) / Deg;
+            double yla = IssKuvakulma.HorisontinKatseAlas - horisontti;
+            Oleta.Tosi(yla > 1 && yla < IssKuvakulma.IkkunanKentta / 2 - 10, $"maan reuna {yla:0.0}° keskikohdan yläpuolella");
+            var k = IssKuvakulma.Ikkuna(Iss);
+            var s = Llh(Silma(k));
+            Oleta.Tosi(Math.Abs(s.h - 420_000) < 500, $"silmän korkeus {s.h:0} m");
+            Oleta.Tosi(IssKuvakulma.Kaari(s.lat, s.lon, Iss.Paikka.Lat, Iss.Paikka.Lon) < 0.01, "silmä ISS:n kohdalla");
+            Oleta.Tosi(Math.Abs(IssKuvakulma.Suunta(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon) - Iss.Suuntima) < 0.01, "radan suuntaan");
+            // Kattoikkuna (A/B horisontti 0) = 1.0.38.
+            IssKuvakulma.Horisontti = false;
+            try { Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "kattoikkuna 55°"); }
+            finally { IssKuvakulma.Horisontti = true; }
+        }
+
         [Testi] static void IkkunanSilmaOnIssissa()
         {
-            var k = IssKuvakulma.Ikkuna(Iss);
+            var k = IssKuvakulma.Ikkuna(Iss, IssKuvakulma.IkkunanKatseAlas);
             Oleta.Tosi(Math.Abs(k.EtaisyysM - 521_000) < 3_000, "etäisyys noin 521 km: " + k);
             Oleta.Tosi(Math.Abs(k.Kallistus - 37.7) < 0.2, "kallistus noin 37,7°: " + k);
             Oleta.Tosi(Math.Abs(IssKuvakulma.Kaari(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon) - 2.69) < 0.05, "kohde 2,69° edellä");

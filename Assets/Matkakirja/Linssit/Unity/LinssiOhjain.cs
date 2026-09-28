@@ -1412,6 +1412,16 @@ namespace Matkakirja.Natiivi
                                  && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double lasi))
                             Matkakirja.Linssit.Iss.IssKuvakulma.LasiZoom = Math.Max(0.5, Math.Min(3.0, lasi));
                         else if (a == "polyt" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Polyt = osat[3] != "0"; // A/B pölyhiukkaset auringonsäteessä
+                        // HORISONTTI (omistaja 28.9. klo 21.5x): iso sivuikkuna horisonttiin, pimeä ohjaamo ja auringonvalo pokissa.
+                        else if (a == "horisontti" && osat.Length > 3) Matkakirja.Linssit.Iss.IssKuvakulma.Horisontti = osat[3] != "0";
+                        else if (a == "katse" && osat.Length > 3)   // katse <astetta vaakatason alapuolelle> | pois (tilan mukaan)
+                            Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = double.TryParse(osat[3].Replace(',', '.'),
+                                System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double katse)
+                                ? Math.Max(0, Math.Min(90, katse)) : double.NaN;
+                        else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),
+                                     System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float tumma))
+                            Matkakirja.Natiivi.IssKyytiNakyma.OhjaamonTummuus = Mathf.Clamp01(tumma);
+                        else if (a == "reunavalo" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Reunavalo = osat[3] != "0";
                         else if (a == "valot" && osat.Length > 3)   // A/B kaupunkien valot: 0 | 1 | osuus 0…1 (esim. 0.8)
                         {
                             Yokuori.ValotPois = osat[3] == "0";

@@ -38,7 +38,10 @@ namespace Matkakirja.Natiivi
         const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
         const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
 
-        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, polyt, turva, pilleri, piste, ohjaimet, peite;
+        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, katto, polyt, turva, pilleri, piste, ohjaimet, peite;
+        /// <summary>Auringon reunavalo pokissa: valon tulosuunta ruudulla oikea, vasen, ylä, ala (HORISONTTI).</summary>
+        readonly VisualElement[] valot = new VisualElement[4];
+        static readonly string[] ValoNimet = { "oikea", "vasen", "yla", "ala" };
         readonly Label live, tieto, ylilento, liveNappi;
         readonly Button[] napit;
         readonly Button valikko;
@@ -63,7 +66,11 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public const string OletusSarja = "pehmea4";
         public static string Sarja = OletusSarja;
-        string haettuSarja;
+        /// <summary>Horisontissa kehys rajataan noin 2-kertaisena yläikkunaan, joten sumennus tuplaantuisi: terävä alkuperäinen.</summary>
+        public const string HorisontinSarja = "";
+        static string KaytettavaSarja => IssKuvakulma.Horisontti ? HorisontinSarja : Sarja;
+        static string KuvaAvain => (IssKuvakulma.Horisontti ? "h:" : "k:") + KaytettavaSarja;
+        string haettuAvain;
         /// <summary>Codexin Cupola 2: null = ei vielä haettu tai latautuu, true = kehys valmis, false = ei saatu (3D varalla).</summary>
         public static bool? Kuva2Tila { get; private set; }
         /// <summary>Piirretäänkö ikkunassa valaistu 3D-kehys (A/B 3d tai Cupola 2:n kehys ei latautunut).</summary>
@@ -79,6 +86,24 @@ namespace Matkakirja.Natiivi
             ulko2 = Rakenne.El("mk-isskyyti__ulko2", juuri, PickingMode.Ignore);
             heijastus2 = Rakenne.El("mk-isskyyti__heijastus2", juuri, PickingMode.Ignore);
             kehys2 = Rakenne.El("mk-isskyyti__kehys2", juuri, PickingMode.Ignore);
+            // HORISONTTI: kuvan yläreunan yläpuolelle jäävä alue on pimeää ohjaamoa (katto), ja auringonvalo elää pokissa neljänä
+            // reunavalokerroksena kehyksen päällä (tyylit tässä, ei USS:ssä: kerrokset näkyvät vain horisontissa).
+            katto = Rakenne.El("mk-isskyyti__katto", juuri, PickingMode.Ignore);
+            katto.style.position = Position.Absolute;
+            katto.style.left = 0; katto.style.right = 0; katto.style.top = 0; katto.style.height = 0;
+            katto.style.backgroundColor = OhjaamonVari;
+            katto.style.display = DisplayStyle.None;
+            for (int i = 0; i < valot.Length; i++)
+            {
+                var v = Rakenne.El("mk-isskyyti__valo2", juuri, PickingMode.Ignore);
+                v.style.position = Position.Absolute;
+                v.style.left = 0; v.style.right = 0; v.style.top = 0; v.style.bottom = 0;
+                v.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover);
+                v.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Center);
+                v.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Center);
+                v.style.display = DisplayStyle.None;
+                valot[i] = v;
+            }
             // Pölyhiukkaset leijuvat kuvun sisällä katsojan ja lasin välissä: kehyksen edessä, käyttöliittymän takana.
             polyt = Rakenne.El("mk-isskyyti__polyt", juuri, PickingMode.Ignore);
             polyt.style.position = Position.Absolute;
@@ -209,13 +234,21 @@ namespace Matkakirja.Natiivi
             // Oletus Codexin Cupola 2 (UI-kerrokset); valaistu 3D-kerros (CupolaKerros) A/B:ssä ja varalla; 1.0.35:n UI-kehys
             // vain A/B:n "ennen"-kuvaan (CupolaKerros.Vanha).
             // A/B pehmeä ↔ terävä: haetaan kerrokset uudelleen (Aseta kutsuu tätä sekunnin välein).
-            if (kuva2Haettu && haettuSarja != Sarja) { kuva2Haettu = false; Kuva2Tila = null; }
+            if (kuva2Haettu && haettuAvain != KuvaAvain) { kuva2Haettu = false; Kuva2Tila = null; }
             bool vanha = ikkuna && !IlmanKehysta && CupolaKerros.Vanha;
             bool uusi = ikkuna && !IlmanKehysta && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva && Kuva2Tila == true;
             if (vanha && !kuvatHaettu) HaeKuvat();
             if (ikkuna && !kuva2Haettu && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva) HaeKuvat2();
             juuri.EnableInClassList("mk-isskyyti--ikkuna", vanha);
             juuri.EnableInClassList("mk-isskyyti--kuva2", uusi);
+            // Horisontti: Canadarm ja paneeli kuuluvat kattoikkunan kuvaan, eivät sivuikkunaan; ohjaamo pimeänä ja reunavalo päälle.
+            horisontti = uusi && IssKuvakulma.Horisontti;
+            ulko2.style.display = horisontti ? DisplayStyle.None : DisplayStyle.Flex;
+            float tumma = horisontti ? OhjaamonTummuus : 1f;
+            kehys2.style.unityBackgroundImageTintColor = new Color(tumma, tumma, tumma * 1.06f, 1f);
+            katto.style.display = horisontti ? DisplayStyle.Flex : DisplayStyle.None;
+            foreach (var v in valot) v.style.display = horisontti && Reunavalo ? DisplayStyle.Flex : DisplayStyle.None;
+            PaivitaReunavalo();
             Heilu(vanha || uusi);
             // Lasin zoom (IssKuvakulma.LasiZoom) myös ilman ajelehdusta (vähennetty liike tai A/B): kerrokset lepoasentoon.
             if (!(heiluu && Ajelehdus)) AjelehdusLepoon();
@@ -249,10 +282,18 @@ namespace Matkakirja.Natiivi
         void HaeKuvat2()
         {
             kuva2Haettu = true;
-            haettuSarja = Sarja;
-            bool ipad = Screen.width > 0.5f * Screen.height;
+            haettuAvain = KuvaAvain;
+            // Horisontissa iPhonen kehys myös iPadilla: vain siinä yläikkuna on pystyssä (iPadin kuvassa kuusikulmio on 30° kierretty).
+            bool ipad = Screen.width > 0.5f * Screen.height && !IssKuvakulma.Horisontti;
             string koko = ipad ? "ipad-1536x2732" : "iphone-1206x2622";
-            string sarja = string.IsNullOrEmpty(Sarja) ? "iss-cupola2-" : "iss-cupola2-" + Sarja + "-";
+            string kaytettava = KaytettavaSarja;
+            string sarja = string.IsNullOrEmpty(kaytettava) ? "iss-cupola2-" : "iss-cupola2-" + kaytettava + "-";
+            if (IssKuvakulma.Horisontti)
+                for (int i = 0; i < valot.Length; i++)
+                {
+                    var v = valot[i];
+                    Kuvat.Hae(Juuri2 + "iss-cupola2-reunavalo-" + ValoNimet[i] + "-iphone-1206x2622.png", t => { if (t != null) v.style.backgroundImage = t; });
+                }
             int odottaa = 3;
             bool kehysOk = false;
             void Valmis(VisualElement e, Texture2D t)
@@ -292,6 +333,7 @@ namespace Matkakirja.Natiivi
                 ulko2.style.translate = new Translate(-1.6f * Mathf.Sin(u), -1f * Mathf.Sin(u * 0.5f));
                 if (Ajelehdus) Ajelehdi(Time.unscaledTime - t0, h);
                 else AjelehdusLepoon();
+                PaivitaReunavalo();
             }).Every(33);
         }
 
@@ -314,20 +356,25 @@ namespace Matkakirja.Natiivi
             float z = Mathf.Sin(tau * t / 37f + 0.4f);
             float kulma = AjelehdusKallistus * Mathf.Sin(tau * t / 29f + 1.1f);
             // Lähellä: kehys ja lasin heijastus (pää liikkuu, lähellä oleva siirtyy vastakkain); heijastuksen oma heilunta päälle.
-            // Pohja on lasin zoom (1,3) tai vähintään KehysPohja, jotta reunat eivät tule näkyviin.
+            // Pohja on lasin zoom (1,3) tai vähintään KehysPohja, jotta reunat eivät tule näkyviin; horisontissa yläikkunan rajaus.
             float pohja = Mathf.Max(LasinZoom, KehysPohja);
-            var lahi = new Scale(Vector3.one * (pohja + AjelehdusSkaala * z));
-            kehys2.style.translate = new Translate(-x, -y);
+            var siirto = Vector2.zero;
+            float skaala = pohja + AjelehdusSkaala * z;
+            if (horisontti && HorisontinRajaus(out siirto, out float rz)) skaala = rz * (1f + AjelehdusSkaala * z);
+            var lahi = new Scale(Vector3.one * skaala);
+            var kierto = new Rotate(-kulma);
+            kehys2.style.translate = new Translate(siirto.x - x, siirto.y - y);
             kehys2.style.scale = lahi;
-            kehys2.style.rotate = new Rotate(-kulma);
-            heijastus2.style.translate = new Translate(heijastuksenOma.x.value - x, heijastuksenOma.y.value - y);
+            kehys2.style.rotate = kierto;
+            heijastus2.style.translate = new Translate(siirto.x + heijastuksenOma.x.value - x, siirto.y + heijastuksenOma.y.value - y);
             heijastus2.style.scale = lahi;
-            heijastus2.style.rotate = new Rotate(-kulma);
+            heijastus2.style.rotate = kierto;
+            AsetaValot(new Translate(siirto.x - x, siirto.y - y), lahi, kierto, siirto.y - y, skaala);
             // Kaukana: ulko-osat kymmenesosan, kallistus sama (pään kierto kääntää kaiken).
             var ulko = ulko2.style.translate.value;
             ulko2.style.translate = new Translate(ulko.x.value - 0.1f * x, ulko.y.value - 0.1f * y);
             ulko2.style.scale = new Scale(Vector3.one * (pohja + 0.1f * AjelehdusSkaala * z));
-            ulko2.style.rotate = new Rotate(-kulma);
+            ulko2.style.rotate = kierto;
         }
 
         /// <summary>Ajelehdus pois (A/B tai vähennetty liike): kerrokset lepoasentoon (skaala = lasin zoom, ei kiertoa).</summary>
@@ -340,6 +387,90 @@ namespace Matkakirja.Natiivi
                 e.style.rotate = StyleKeyword.Null;
             }
             kehys2.style.translate = StyleKeyword.Null;
+            if (horisontti && HorisontinRajaus(out var siirto, out float rz))
+            {
+                var t = new Translate(siirto.x, siirto.y);
+                var s = new Scale(Vector3.one * rz);
+                kehys2.style.translate = heijastus2.style.translate = t;
+                kehys2.style.scale = heijastus2.style.scale = s;
+                AsetaValot(t, s, StyleKeyword.Null, siirto.y, rz);
+            }
+        }
+
+        // ── HORISONTTI (omistaja 28.9. klo 21.5x Päätoimittajan kautta, mainosvideon ISS-ikkuna) ─────────────────────────────
+        // "tuossa elää auringon valo ikkunanpokissa. ainakin tuo että on todella pimeää ohjaamossa tuo tunnelmaa … yksi iso
+        // ikkuna olisi pääosassa ja sivuikkunat näkyisivät vähän": Cupola 2 -kehyksen yläikkuna (iPhonen kuva, pystyssä oleva
+        // trapetsi, alfa-aukko x 376–826, y 96–837) suurennetaan ruudun leveydestä 75 %:iin keskikohta 58 %:n korkeudelle, jolloin
+        // kattoikkuna jää ruudun alle ja sivuikkunoista näkyy reunoilla kaistale. Kamera katsoo horisonttiin (IssKuvakulma
+        // HorisontinKatseAlas 23°), joten maan kaari on ikkunan yläosassa ja avaruus musta. Kuvan yläreunan yläpuolelle jäävä
+        // alue on pimeää ohjaamoa (katto). Kehys tummennetaan 0,22:een, ja auringonvalo elää pokissa: neljä reunavalokuvaa
+        // (valo oikealta, vasemmalta, ylhäältä, alhaalta; laskettu kehyksen alfasta: kehyksen pikseli valaistuu, jos ikkuna on
+        // sen ja auringon välissä) painotetaan auringon suunnalla ruudulla (CupolaKerros.Valo), ja alhaalta tulee lisäksi
+        // sininen maavalo. Codexin Cupola 3 -kerrokset (tilattu 28.9.) korvaavat kuvat, kun ne tulevat.
+        // A/B: astro kyyti horisontti 0|1, katse <astetta>|pois, tumma <0–1>, reunavalo 0|1.
+        public static float OhjaamonTummuus = 0.22f;
+        public static bool Reunavalo = true;
+        const float HorisontinLeveys = 0.746f, HorisontinKeskus = 0.58f;
+        const float KuvaL = 1206f, KuvaK = 2622f, YlaikkunaX = 601f, YlaikkunaY = 466f, YlaikkunaL = 450f;
+        static readonly Color OhjaamonVari = new Color(0.012f, 0.013f, 0.02f, 1f);
+        static readonly Color Lampo = new Color(1f, 0.86f, 0.66f), Sini = new Color(0.45f, 0.66f, 1f);
+        const float ReunavaloVoima = 0.95f, MaavaloVoima = 0.4f;
+        bool horisontti;
+
+        /// <summary>
+        /// Horisontin rajaus: skaala <paramref name="z"/> ja siirto <paramref name="siirto"/> (pt; transform-origin keskellä, eli
+        /// ruutu = c + siirto + z (p − c)), joilla cover-kuvan yläikkuna tulee ruudun keskelle 75 %:n levyisenä. false = asettelu puuttuu.
+        /// </summary>
+        bool HorisontinRajaus(out Vector2 siirto, out float z)
+        {
+            siirto = Vector2.zero; z = 1f;
+            float W = juuri.layout.width, H = juuri.layout.height;
+            if (!(W > 1f) || !(H > 1f)) return false;
+            float s = Mathf.Max(W / KuvaL, H / KuvaK);
+            float ox = (W - KuvaL * s) * 0.5f, oy = (H - KuvaK * s) * 0.5f;
+            float px = ox + YlaikkunaX * s, py = oy + YlaikkunaY * s;
+            z = HorisontinLeveys * W / (YlaikkunaL * s);
+            siirto = new Vector2(W * 0.5f - W * 0.5f - z * (px - W * 0.5f), HorisontinKeskus * H - H * 0.5f - z * (py - H * 0.5f));
+            kuvanYlareuna = oy;
+            return true;
+        }
+
+        float kuvanYlareuna;
+
+        /// <summary>Reunavalokerrokset kehyksen asentoon ja katto kuvan yläreunaan asti (4 pt limittäin, kierto ±0,5°).</summary>
+        void AsetaValot(Translate t, Scale s, StyleRotate r, float siirtoY, float skaala)
+        {
+            foreach (var v in valot) { v.style.translate = t; v.style.scale = s; v.style.rotate = r; }
+            float H = juuri.layout.height;
+            if (H > 1f) katto.style.height = Mathf.Max(0f, H * 0.5f + siirtoY + skaala * (kuvanYlareuna - H * 0.5f) + 4f);
+        }
+
+        /// <summary>
+        /// Auringon reunavalo: aurinko ruudulla (CupolaKerros.Valo, x oikealle, y ylös) painottaa neljää suuntaa; suoraan edessä
+        /// tai takana (xy pieni) valo on laimeampi. Maan varjossa vain sininen maavalo alhaalta (CupolaKerros.MaavaloNyt).
+        /// </summary>
+        void PaivitaReunavalo()
+        {
+            if (!horisontti || !Reunavalo) return;
+            var valo = CupolaKerros.ValoTiedossa ? CupolaKerros.Valo : Vector4.zero;
+            float aurinko = Mathf.Clamp01(valo.w);
+            var s = new Vector2(valo.x, valo.y);
+            float sivu = s.magnitude;
+            if (sivu > 1e-3f) s /= sivu;
+            float voima = ReunavaloVoima * aurinko * Mathf.Lerp(0.45f, 1f, Mathf.Clamp01(sivu * 1.4f));
+            float maa = MaavaloVoima * CupolaKerros.MaavaloNyt;
+            for (int i = 0; i < valot.Length; i++)
+            {
+                float w = i == 0 ? s.x : i == 1 ? -s.x : i == 2 ? s.y : -s.y;
+                float a = voima * Mathf.Max(0f, w);
+                Color c = Lampo;
+                if (i == 3)
+                {
+                    c = a + maa > 1e-4f ? (Lampo * a + Sini * maa) / (a + maa) : Sini;
+                    a = Mathf.Clamp01(a + maa);
+                }
+                valot[i].style.unityBackgroundImageTintColor = new Color(c.r, c.g, c.b, a);
+            }
         }
 
         /// <summary>Cupola-kerrosten suurennos: sama kuin ikkunan kenttäkulman zoom (IssKuvakulma.LasiZoom), vähintään 1.</summary>

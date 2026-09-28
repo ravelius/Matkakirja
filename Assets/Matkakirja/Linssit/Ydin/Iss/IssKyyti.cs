@@ -33,6 +33,18 @@ namespace Matkakirja.Linssit.Iss
         public const double SeurannanEtaisyysM = 1_200_000, SeurannanKallistus = 55;
         /// <summary>Ikkuna: katse radan suuntaan näin monta astetta vaakatason alapuolelle (horisontti 420 km:stä 20,3°).</summary>
         public const double IkkunanKatseAlas = 55;
+        /// <summary>
+        /// HORISONTTI (omistaja 28.9. klo 21.5x Päätoimittajan kautta, mainosvideon ISS-ikkuna: "yksi iso ikkuna olisi pääosassa
+        /// ja sivuikkunat näkyisivät vähän"): katse radan suuntaan 23° vaakatason alapuolelle, jolloin maan kaari ja ilmakehän
+        /// reuna (20,3° alapuolella) ovat ison sivuikkunan yläosassa ja avaruus musta sen yllä. Cupola-kerrokset rajataan
+        /// yläikkunaan (IssKyytiNakyma). Pois (A/B `astro kyyti horisontti 0`): kattoikkuna 55° kuten 1.0.38.
+        /// </summary>
+        public const double HorisontinKatseAlas = 23;
+        public static bool Horisontti = true;
+        /// <summary>Ikkunan katse nyt (A/B `astro kyyti katse &lt;astetta&gt;` ohittaa; NaN = tilan mukaan).</summary>
+        public static double KatseAlasPakotettu = double.NaN;
+        public static double IkkunanKatseNyt => !double.IsNaN(KatseAlasPakotettu) ? KatseAlasPakotettu
+            : Horisontti ? HorisontinKatseAlas : IkkunanKatseAlas;
         /// <summary>Cupolan keskilasin kenttäkulma pystyyn ilman zoomia (lasi 80 cm, silmä 45 cm:n päässä; 1.0.37).</summary>
         public const double IkkunanPerusKentta = 80;
         /// <summary>
@@ -60,7 +72,9 @@ namespace Matkakirja.Linssit.Iss
         /// keskuskulma θ = ζ − η ja etäisyys ρ = R sin θ / sin η (420 km, 55°: θ 2,69°, ρ 521 km, ζ 37,7°). Kallistus on ζ ja
         /// suuntima kohteessa isoympyrän loppusuunta, jolloin silmä osuu ISS:ään.
         /// </summary>
-        public static Kuvakulma Ikkuna(in IssHetki iss, double alas = IkkunanKatseAlas)
+        public static Kuvakulma Ikkuna(in IssHetki iss) => Ikkuna(iss, IkkunanKatseNyt);
+
+        public static Kuvakulma Ikkuna(in IssHetki iss, double alas)
         {
             double r = MaanSadeM, h = Math.Max(1000, iss.KorkeusM);
             // Katseen on osuttava maahan: horisontin alapuolella vähintään 1°.
