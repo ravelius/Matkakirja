@@ -583,6 +583,11 @@ namespace Matkakirja.Natiivi
                 case "chat":
                     if (loput == "ehdota") { ui.Chat.Avaa(); ui.Chat.EhdotaSisaltoa(); return null; }
                     if (loput == "aani") { Kirjaa("ui chat aani: " + (ui.Chat.VaihdaAaniTesti() ? "päällä" : "pois")); return null; }
+                    // Puhekeskustelu (web #3546): saneltu kysymys ilman mikrofonia, tila + viive, mikin napautus.
+                    if (loput.StartsWith("puhe ")) { ui.Chat.Kysy(loput.Substring(5), puhe: true); return null; }
+                    if (loput == "virta pois" || loput == "virta paalle") { PuluChat.Virkevirta = loput == "virta paalle"; Kirjaa("ui chat virta: " + (PuluChat.Virkevirta ? "virkevirta" : "valmiina")); return null; }
+                    if (loput == "puhetila") { Kirjaa("ui chat puhetila: " + ui.Chat.PuheTilaTeksti); return null; }
+                    if (loput == "mikki") { ui.Chat.MikkiTesti(); Kirjaa("ui chat mikki: " + ui.Chat.PuheTilaTeksti); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Tietoja.Avaa(); return null;
