@@ -160,6 +160,7 @@ import { diagNyt, pallodiag } from '../pallodiag.js';
 import { luoMinipulu } from '../minipulu.js';
 import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
+import { PULUN_VAARA_KOHDE, aloitaPulunTervetulo } from './pulu-tervetulo.js';
 
 /*
  * VARTIJAN KELLOT (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34).
@@ -1880,6 +1881,25 @@ function avaa(lauta, tila, ui) {
   }));
   const asetaPisteet = () => lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit);
   vaihe('pisteet', asetaPisteet);
+
+  /*
+   * PULUN TERVETULO (js/linssit/pulu-tervetulo.js, käsikirjoitus
+   * 28.9.2026): vain linssin ensimmäisellä avauksella, kun musta verho on
+   * poissa. C1:n räppäisy avaa väärän kohteen valokuvan SAMALLA
+   * avaaKohde-funktiolla kuin pisteen napautus, ja C2 sulkee sen.
+   * Ei avaruusnäkymää (tasokartta, kaatunut WebGL) → ei tervetuloa.
+   */
+  const tervetulo = avaruus ? vaihe('pulun-tervetulo', () => aloitaPulunTervetulo({
+    ui,
+    avaruus,
+    avaaVaaraKohde: () => {
+      const vaara = kohdeTunnuksella.get(PULUN_VAARA_KOHDE);
+      if (!vaara) return false;
+      avaaKohde(vaara);
+      return Boolean(kortti);
+    },
+    suljeKortti,
+  })) : null;
   /*
    * PISTEET RUUDULLE ASTI (ks. PISTEIDEN_UUSINTAVALI_MS yllä). Vartija
    * kertoo puutteesta; tämä yrittää korjata sen ennen kuin vartija
@@ -2045,6 +2065,8 @@ function avaa(lauta, tila, ui) {
     aanet,
     /** Linssin oman huminan ja musiikin kahva (savukkeet ja vartijat). */
     linssiAani: () => linssiAani,
+    /** Pulun tervetulon kahva (null, jos jakso ei alkanut; savuke). */
+    tervetulo,
     /** Vartijan mittari savukkeille: puutteen nimi tai null. */
     puute: () => nykyinenPuute(),
     /** Kaatuneet avausvaiheet (vartijat ja savukkeet). */
@@ -2057,6 +2079,8 @@ function avaa(lauta, tila, ui) {
       virheKahva?.pura?.();
       virheKahva = null;
       poistaLinssivirhe();
+      // Pulu vaikenee ENNEN kuvan sulkua ja kameran palautusta.
+      tervetulo?.pura?.();
       suljeKortti();
       // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
       // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.

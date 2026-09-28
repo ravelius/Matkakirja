@@ -151,9 +151,23 @@ export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
  * jäävät nulliksi kuten muissakin 14.9. äänissä.
  *
  * MUUT 38 KAUPUNKIA OVAT ENNALLAAN — vain nämä kaksi ajettiin uusiksi.
+ *
+ * ELEVEN_V4 28.9.2026 (omistajan mallivalinta Pulun esigeneroituihin
+ * ääniin): ateena-3, sofia-3 ja pariisi-3 ajettiin uusiksi samalla
+ * tekstillä ja samoilla tageilla (erä pulu-3eaad28481f0aa2ef5a9, lähde-SHA
+ * 5d65b852), ja ISS-repliikit iss-a-1 … iss-d-4 saivat ensimmäiset
+ * äänitteensä (erä pulu-16f2c04e9e19bef41d64). Raaka = final (sama
+ * sha256), ei jälkikäsittelyä. Kolmelle kaupungille on nyt myös
+ * kuittisidottu kohdistus: .eleet.json on versioidun mp3:n vieressä.
+ * Vanhat v3-äänitteet jäävät muuttumattomiin avaimiinsa (ei poistoja);
+ * paluu on näiden kolmen rivin vaihto.
+ *
+ * TASO: putki EI normalisoi (LIVIA_KASITTELY false). v4-tiedostojen
+ * keskitaso on −18,5…−24,8 dB, kun v3-äänet ovat noin −18,5…−19 dB;
+ * kuiskaus- ja huokausrepliikit ovat hiljaisimpia.
  */
 export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
-  'ateena-3': 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265/livia-ateena-3.mp3',
+  'ateena-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/livia-ateena-3.mp3',
   'sarajevo-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-sarajevo-3.mp3',
   'helsinki-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-helsinki-3.mp3',
   'tampere-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-tampere-3.mp3',
@@ -165,13 +179,13 @@ export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
   'tukholma-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-tukholma-3.mp3',
   'lappi-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.mp3',
   'tromssa-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.mp3',
-  'sofia-3': 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265/livia-sofia-3.mp3',
+  'sofia-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/livia-sofia-3.mp3',
   'istanbul-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-istanbul-3.mp3',
   'bukarest-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-bukarest-3.mp3',
   'budapest-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-budapest-3.mp3',
   'wien-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-wien-3.mp3',
   'lontoo-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-lontoo-3.mp3',
-  'pariisi-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-pariisi-3.mp3',
+  'pariisi-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/livia-pariisi-3.mp3',
   'madrid-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-madrid-3.mp3',
   'berliini-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-berliini-3.mp3',
   'rooma-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-rooma-3.mp3',
@@ -198,17 +212,31 @@ export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
   'sisilia-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-sisilia-3.mp3',
   'islanti-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-islanti-3.mp3',
   'alpit-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-alpit-3.mp3',
+  // Astronautin kamera ja ISS-kyyti, eleven_v4 (erä pulu-16f2c04e9e19bef41d64).
+  'iss-a-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-a-1.mp3',
+  'iss-a-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-a-2.mp3',
+  'iss-b-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-b-1.mp3',
+  'iss-b-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-b-2.mp3',
+  'iss-c-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-c-1.mp3',
+  'iss-c-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-c-2.mp3',
+  'iss-d-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-1.mp3',
+  'iss-d-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-2.mp3',
+  'iss-d-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-3.mp3',
+  'iss-d-4': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-4.mp3',
 });
 
-/** Valmiiden city-3-tuotantokuitujen todelliset MP3-kestot sekunteina. */
+/**
+ * Valmiiden tuotantokuittien todelliset MP3-kestot sekunteina (city-3 ja
+ * ISS-repliikit; kesto sisältää mallin 1,0 s:n lopputauon).
+ */
 export const LIVIAN_KESTOT = Object.freeze({
-  'ateena-3': 17.868, 'sarajevo-3': 13.296, 'helsinki-3': 12.669,
+  'ateena-3': 14.88, 'sarajevo-3': 13.296, 'helsinki-3': 12.669,
   'tampere-3': 16.588, 'tallinna-3': 15.517, 'riika-3': 11.912,
   'vilna-3': 17.554, 'marseille-3': 17.789, 'venetsia-3': 19.043,
   'tukholma-3': 23.144, 'lappi-3': 14.864, 'tromssa-3': 15.752,
-  'sofia-3': 12.356, 'istanbul-3': 13.793, 'bukarest-3': 24.503,
+  'sofia-3': 11.36, 'istanbul-3': 13.793, 'bukarest-3': 24.503,
   'budapest-3': 21.394, 'wien-3': 13.035, 'lontoo-3': 13.375,
-  'pariisi-3': 25.731, 'madrid-3': 18.469, 'berliini-3': 20.428,
+  'pariisi-3': 20.4, 'madrid-3': 18.469, 'berliini-3': 20.428,
   'rooma-3': 17.659, 'praha-3': 14.498, 'dublin-3': 16.588,
   'edinburgh-3': 17.554, 'lissabon-3': 17.084, 'barcelona-3': 14.341,
   'sevilla-3': 13.845, 'amsterdam-3': 23.432, 'dubrovnik-3': 26.096,
@@ -217,6 +245,9 @@ export const LIVIAN_KESTOT = Object.freeze({
   'kiova-3': 13.558, 'odessa-3': 16.562, 'kreeta-3': 16.588,
   'granada-3': 17.215, 'firenze-3': 15.073, 'oslo-3': 16.327,
   'sisilia-3': 12.121, 'islanti-3': 12.121, 'alpit-3': 13.662,
+  'iss-a-1': 14.32, 'iss-a-2': 11.44, 'iss-b-1': 8.32, 'iss-b-2': 6.96,
+  'iss-c-1': 10.32, 'iss-c-2': 11.12, 'iss-d-1': 9.76, 'iss-d-2': 7.84,
+  'iss-d-3': 9.36, 'iss-d-4': 5.68,
 });
 
 /**
@@ -757,6 +788,17 @@ export const LIVIAN_AANITETYT = {
   'ihmisen-matka-2': '45dafd6e',
   'ihmisen-matka-3': '77366164',
   'ihmisen-matka-4': 'dbfd92fe',
+  // ISS-repliikit (js/livia.js LIVIAN_ISS), generoitu 28.9.2026 eleven_v4:llä.
+  'iss-a-1': '03b33b1c',
+  'iss-a-2': 'da468e5d',
+  'iss-b-1': 'c64e98ff',
+  'iss-b-2': '3b401ad2',
+  'iss-c-1': 'fd6ef878',
+  'iss-c-2': '548b27cd',
+  'iss-d-1': '2a2b3cbc',
+  'iss-d-2': '9189fdcd',
+  'iss-d-3': 'c2a0e0f3',
+  'iss-d-4': 'ab42b132',
 };
 
 /*

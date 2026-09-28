@@ -30,6 +30,17 @@ import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const argv = process.argv.slice(2);
 const valitsin = (nimi, oletus) => {
   const i = argv.indexOf(`--${nimi}`);
@@ -157,6 +168,7 @@ const leikkaa = (a, b) => a && b && a[0] < b[2] && b[0] < a[2] && a[1] < b[3] &&
 async function ajaNakyma(nimi) {
   const virheet = [];
   const konteksti = await selain.newContext({ ...NAKYMAT[nimi], serviceWorkers: 'block' });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
   await s.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
