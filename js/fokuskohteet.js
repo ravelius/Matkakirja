@@ -164,6 +164,12 @@ import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
 import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
 import { HAHMOTELMA_CHE } from './packs/hahmotelma-che.js';
 import { HAHMOTELMA_BIH } from './packs/hahmotelma-bih.js';
+import { HAHMOTELMA_SRB } from './packs/hahmotelma-srb.js';
+import { HAHMOTELMA_ALB } from './packs/hahmotelma-alb.js';
+import { HAHMOTELMA_MKD } from './packs/hahmotelma-mkd.js';
+import { HAHMOTELMA_MNE } from './packs/hahmotelma-mne.js';
+import { HAHMOTELMA_MDA } from './packs/hahmotelma-mda.js';
+import { HAHMOTELMA_BLR } from './packs/hahmotelma-blr.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -679,6 +685,20 @@ KOHDE_MAAT.CHE = [...(KOHDE_MAAT.CHE ?? []), ...HAHMOTELMA_CHE];
  * haara karttaseppa-bodensee).
  */
 KOHDE_MAAT.BIH = [...(KOHDE_MAAT.BIH ?? []), ...HAHMOTELMA_BIH];
+
+/*
+ * SRB/ALB/MKD/MNE/MDA/BLR ENSIMMÄISET KARTTANOSTOT (Fablen tilaus
+ * 28.9.2026): kullakin maalla ei ollut ennestään yhtään karttanostoa
+ * (VAIN EUROOPPA -karttatyö kesken), joten Matkakirjan ihme -kohde
+ * (js/packs/monumentit-eurooppa.js) on nyt maan ainoa nosto. Loput
+ * kohteet lisätään myöhemmissä erissä.
+ */
+KOHDE_MAAT.SRB = [...(KOHDE_MAAT.SRB ?? []), ...HAHMOTELMA_SRB];
+KOHDE_MAAT.ALB = [...(KOHDE_MAAT.ALB ?? []), ...HAHMOTELMA_ALB];
+KOHDE_MAAT.MKD = [...(KOHDE_MAAT.MKD ?? []), ...HAHMOTELMA_MKD];
+KOHDE_MAAT.MNE = [...(KOHDE_MAAT.MNE ?? []), ...HAHMOTELMA_MNE];
+KOHDE_MAAT.MDA = [...(KOHDE_MAAT.MDA ?? []), ...HAHMOTELMA_MDA];
+KOHDE_MAAT.BLR = [...(KOHDE_MAAT.BLR ?? []), ...HAHMOTELMA_BLR];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
