@@ -308,7 +308,7 @@ namespace Matkakirja
                 rata = new AloituslennonRata(lat0, lon0, lat1, lon1, napautus, loppu, (double)Screen.width / Mathf.Max(1, Screen.height),
                     kamera != null ? kamera.fieldOfView : 50.0, maaKohteessa, AloituslennonRata.OhitusKohteelle(kohdeId));
                 EnnakkoAsentoon(0, rata.Kamera(AloituslennonRata.OhitusS), kamera);
-                EnnakkoAsentoon(1, rata.Kamera(AloituslennonRata.KosketusS), kamera);
+                EnnakkoAsentoon(1, rata.Kamera(AloituslennonRata.SaapuminenS + 0.4), kamera);
             }
 
             // 1. ODOTUS: nykyinen näkymä elää (ei feidiä eikä verhoa), käytävä latautuu, moottori käynnistyy. Kone luodaan ja
@@ -475,13 +475,13 @@ namespace Matkakirja
                     // v3b: kiri ja ylilento karkeammalla laattavalinnalla (latausjono ei täyty ennen saapumista).
                     LiikeLaatat.LentoKarkeaSse = AloituslennonRata.Karkea(t) ? AloituslennonRata.KarkeaSse : 0f;
                     PaivitaJalki(u, ra.EtaisyysM, kamera);
-                    // Ennakkokamerat: [0] ohituksen lähikuva, sen jälkeen saapumisen lähin kohta; [1] kosketus; kosketuksesta pois.
+                    // Ennakkokamerat: [0] ohituksen lähikuva, sen jälkeen kosketus; [1] saapumisen lähin kohta (~200 km, tarkimmat
+                    // laatat; esi-isät kattavat kosketuksen 490 km:n näkymän), sitten kamera itse; kosketuksesta pois.
                     if (t >= AloituslennonRata.KosketusS) EnnakkoPois();
                     else
                     {
-                        EnnakkoAsentoon(0, rata.Kamera(t < AloituslennonRata.OhitusLoppuS ? AloituslennonRata.OhitusS
-                            : Math.Max(t, AloituslennonRata.SaapuminenS + 0.4)), kamera);
-                        EnnakkoAsentoon(1, rata.Kamera(AloituslennonRata.KosketusS), kamera);
+                        EnnakkoAsentoon(0, rata.Kamera(t < AloituslennonRata.OhitusLoppuS ? AloituslennonRata.OhitusS : AloituslennonRata.KosketusS), kamera);
+                        EnnakkoAsentoon(1, rata.Kamera(Math.Max(t, AloituslennonRata.SaapuminenS + 0.4)), kamera);
                     }
                 }
 

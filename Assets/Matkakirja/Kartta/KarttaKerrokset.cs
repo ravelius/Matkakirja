@@ -1456,7 +1456,7 @@ namespace Matkakirja
         /// <summary>Aloituslennon radan laatat (AloituslennonRata.Laatat: lähtökaupungin lähikuva ja matkanäkymä alkuun, kohteen
         /// lasku loppuun) samaan etusijajonoon kuin v3-käytävä.</summary>
         public KaytavaLataus EsilataaAloitusrata(double lat0, double lon0, double lat1, double lon1, double ohitus) =>
-            EsilataaKaytava(AloituslennonRata.Laatat(lat0, lon0, lat1, lon1, ohitus));
+            EsilataaKaytava(AloituslennonRata.Laatat(lat0, lon0, lat1, lon1, ohitus, ymparisto: true));
 
         KaytavaLataus EsilataaKaytava(List<LennonV3Kaytava.Laatta> laatat)
         {

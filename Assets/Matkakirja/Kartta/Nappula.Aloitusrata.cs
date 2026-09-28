@@ -171,9 +171,9 @@ namespace Matkakirja
         /// ENNAKKOKAMERAT (v1-video 27.9.: lähikuva oli tyhjä ~3 s, koska Cesium valitsee laatat vain kameroille). Kaksi
         /// piirtämätöntä kameraa (pois päältä, cullingMask 0) radan asentoihin kaikkien tilesettien
         /// CesiumCameraManager.additionalCamerasiin (native getAllCameras ei vaadi enabled-tilaa, ks. LiikeLaatat):
-        /// [0] odotuksesta ohitukseen asti ohituksen lähikuva, sitten saapumisen lähin kohta; [1] odotuksesta asti kosketus
-        /// (v3: v2:n saapuminen latautui verkosta vasta ohituksen jälkeen, 1 560 laattaa kylmällä välimuistilla). Kosketuksesta
-        /// pois. Pääkamera pysyy valinnassa.
+        /// [0] odotuksesta ohitukseen asti ohituksen lähikuva, sitten kosketus; [1] odotuksesta asti saapumisen lähin kohta
+        /// (~200 km, v3b: v3:n laiteajossa saapumisen laatat tulivat verkosta vasta saapuessa ~85 laattaa/s, ja maa oli
+        /// suttuinen 14 s:iin asti). Kosketuksesta pois. Pääkamera pysyy valinnassa.
         /// </summary>
         void EnnakkoAsentoon(int i, AloituslennonRata.Asento a, Camera paa)
         {

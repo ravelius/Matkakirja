@@ -518,10 +518,13 @@ namespace Matkakirja
 
         /// <summary>
         /// Lennon laatat (LennonV3Kaytava.Laatta): ALKU (odotus odottaa) = koko reitin matkanäkymä Z4–Z5 ±1, lähtömaa Z6 ±1 ja
-        /// ohituksen lähikuva Z7–Z9 ±1 (ohituskohdan ±15 km); LOPUT = kohteen lasku Z7–Z9 ±1 viimeiseltä 80 km:ltä ja
-        /// Z6 ±1 reitin loppukymmenykseltä. Aloitusnäytön esilämmitys ottaa näistä Z8–Z9 (ohitus ja kohde).
+        /// ohituksen lähikuva Z7–Z9 ±1 (ohituskohdan ±15 km); LOPUT = kohteen lasku Z7–Z9 ±1 viimeiseltä 80 km:ltä ja Z6 ±1
+        /// reitin loppukymmenykseltä, lennon käytävässä (<paramref name="ymparisto"/>) lisäksi kohteen ympäristö Z7–Z9 ±2
+        /// (v3b: saapuminen 200–490 km:stä näkee ~400 km:n alueen). Aloitusnäytön esilämmitys ottaa näistä Z8–Z9 (ohitus ja
+        /// kohde) ilman ympäristöä (18 kohdetta × ~100 laattaa olisi liikaa taustalle).
         /// </summary>
-        public static List<LennonV3Kaytava.Laatta> Laatat(double lat0, double lon0, double lat1, double lon1, double ohitus = OhitusOsuus)
+        public static List<LennonV3Kaytava.Laatta> Laatat(double lat0, double lon0, double lat1, double lon1, double ohitus = OhitusOsuus,
+            bool ymparisto = false)
         {
             var tulos = new List<LennonV3Kaytava.Laatta>();
             var nahty = new HashSet<long>();
@@ -536,6 +539,7 @@ namespace Matkakirja
             for (int i = 0; i <= 4; i++) Lisaa(i * 0.02, true, 6);
             for (int i = 0; i <= 10; i++) Lisaa(1 - i * 0.01, false, 6);
             for (int i = 0; i <= 2; i++) Lisaa(1 - i * 40_000.0 / L, false, 7, 8, 9);
+            if (ymparisto) foreach (int z in new[] { 7, 8, 9 }) LennonV3Kaytava.Lisaa(tulos, nahty, lat1, lon1, z, 2, false);
             return tulos;
         }
 
