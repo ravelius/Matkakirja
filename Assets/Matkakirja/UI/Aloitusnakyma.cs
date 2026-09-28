@@ -907,9 +907,11 @@ namespace Matkakirja.Natiivi
             valintaKierto.KaupunkiNapautettu += KaupunkiValittu;
             valintaPisteet.Napautettu += PisteValittu;
             // Suoraan valintanäkymään (web lauta.aloitusnakyma); Lontoo-zoomi poistui 24.9. klo 16.1x.
-            valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            var (vLat, vLon, vKorkeus) = Valintanakyma();
+            Debug.Log($"MATKAKIRJA aloitus: valintanäkymä {vLat:0.00}° N {vLon:0.00}° E {vKorkeus / 1000:0} km (kellon varaus {KellonVarausPx():0} px)");
+            valintaKierto.Aja(vLat, vLon, vKorkeus, 1.6f, null);
             // v3f esikääntö: aloituslento palaa tähän näkymään, jos pelaaja on pyörittänyt palloa (Nappula.Valintanakyma).
-            Nappula.Valintanakyma = new AloituslennonRata.Asento(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 0, 0, 0);
+            Nappula.Valintanakyma = new AloituslennonRata.Asento(vLat, vLon, vKorkeus, 0, 0, 0);
             // Aloituslennon pinta valmiiksi näkymättömänä (Natiiviseppä, löydös 80/84): Cesium lataa sen valintanäkymän
             // laattoihin nyt, joten musta verho vain kytkee sen näkyviin. Vapautus LopetaPallovalinnassa.
             kk.LentoPohjaValmiiksi();
@@ -957,31 +959,47 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Web aloitusvalinnanKorkeus: pallon säde 0,55 ruudun korkeudesta (kameran pystysuora fov), ja
-        /// ankkurikaupungit mahtuvat 78 %:iin ruudun puolikkaasta. Tulos metreinä pinnasta.
+        /// Valintanäkymän kamera (keskus ja korkeus metreinä pinnasta). Web aloitusvalinnanKorkeus: pallon säde 0,55 ruudun
+        /// korkeudesta (kameran pystysuora fov), ja ankkurikaupungit mahtuvat 78 %:iin ruudun puolikkaasta. v3f: oikean
+        /// yläkulman pelikello (Natiivi-UI:n Pelikellonaytto.YlaVaraus) varaa yläreunan, joten keskus siirtyy pohjoiseen niin,
+        /// että näkyvien valittavien nimet jäävät sen alle (Valintarajaus; laiteajo 28.9. klo 14.30: Moskova kellon alla).
         /// </summary>
-        double ValintanakymanKorkeus()
+        (double Lat, double Lon, double Korkeus) Valintanakyma()
         {
             var kamera = valintaKierto.GetComponent<Camera>();
             double fov = kamera != null ? kamera.fieldOfView : 40.0;
             double tan = math.tan(math.radians(fov / 2));
             double suhde = math.max(0.05, Screen.width / (double)math.max(1, Screen.height));
-            double d = 1.0 / math.max(1e-6, math.sin(math.atan(2 * PallonOsuus * tan)));
-            double a0 = math.radians(ValintaLat), b0 = math.radians(ValintaLon);
-            var keskus = new double3(math.cos(a0) * math.cos(b0), math.cos(a0) * math.sin(b0), math.sin(a0));
-            var ita = new double3(-math.sin(b0), math.cos(b0), 0);
-            var pohjoinen = new double3(-math.sin(a0) * math.cos(b0), -math.sin(a0) * math.sin(b0), math.cos(a0));
-            foreach (var id in Ankkurit)
+            var ankkurit = Paikat(Ankkurit);
+            double d = Valintarajaus.AnkkuriEtaisyys(ValintaLat, ValintaLon, tan, suhde, PallonOsuus, AnkkuriVara, ankkurit);
+            double lat = ValintaLat, varaus = KellonVarausPx();
+            if (varaus > 0 && valintaMerkit != null)
+            {
+                double yla = varaus + valintaMerkit.ValintaNimenYlaPt * PalloKierto.Pistekerroin;
+                (lat, d) = Valintarajaus.Sovita(ValintaLat, ValintaLon, d, tan, suhde, 1 - 2 * yla / math.max(1, Screen.height),
+                    -AnkkuriVara, Paikat(valintaIdt), ankkurit);
+            }
+            return (lat, ValintaLon, (d - 1) * CesiumForUnity.CesiumWgs84Ellipsoid.GetMaximumRadius());
+        }
+
+        static List<(double Lat, double Lon)> Paikat(IEnumerable<string> idt)
+        {
+            var p = new List<(double Lat, double Lon)>();
+            foreach (var id in idt)
             {
                 var k = UiSisalto.Kaupunki(id);
-                if (k == null || double.IsNaN(k.Lat)) continue;
-                double a = math.radians(k.Lat), b = math.radians(k.Lon);
-                var v = new double3(math.cos(a) * math.cos(b), math.cos(a) * math.sin(b), math.sin(a));
-                double e = math.dot(v, ita), n = math.dot(v, pohjoinen), u = math.dot(v, keskus);
-                d = math.max(d, math.max(u + math.abs(e) / math.max(1e-6, AnkkuriVara * suhde * tan),
-                                         u + math.abs(n) / math.max(1e-6, AnkkuriVara * tan)));
+                if (k != null && !double.IsNaN(k.Lat)) p.Add((k.Lat, k.Lon));
             }
-            return (d - 1) * CesiumForUnity.CesiumWgs84Ellipsoid.GetMaximumRadius();
+            return p;
+        }
+
+        /// <summary>Pelikellon varaama yläreuna ruudun pikseleinä (0 = ei kelloa); paneelin pisteet paneelin mittakaavalla.</summary>
+        double KellonVarausPx()
+        {
+            float v = Pelikellonaytto.YlaVaraus;
+            if (!(v > 0f)) return 0;
+            float ph = juuri.panel != null ? juuri.panel.visualTree.layout.height : float.NaN;
+            return v * (!float.IsNaN(ph) && ph > 0f ? Screen.height / (double)ph : PalloKierto.Pistekerroin);
         }
 
         // --- periaatteet (web naytaPeriaatteet, sanasta sanaan) ------------------------

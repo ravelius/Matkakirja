@@ -57,6 +57,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/SaapumisLaatat.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs
 ../Assets/Matkakirja/Kartta/Siirtokoreografia.cs
+../Assets/Matkakirja/Kartta/Valintarajaus.cs
 ../Assets/Matkakirja/Kartta/ValmiusEhto.cs
 ../Assets/Matkakirja/Kartta/Valokeilalaskenta.cs
 ../Assets/Matkakirja/Kartta/Vektorisolut.cs
