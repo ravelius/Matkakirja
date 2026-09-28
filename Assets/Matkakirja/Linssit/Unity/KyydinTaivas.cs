@@ -106,9 +106,12 @@ namespace Matkakirja.Natiivi
                 double ra = Convert.ToDouble(r[0]) * Math.PI / 180, dec = Convert.ToDouble(r[1]) * Math.PI / 180;
                 float mag = Convert.ToSingle(r[2]), bv = Convert.ToSingle(r[3]);
                 var suunta = new Vector3((float)(Math.Cos(dec) * Math.Cos(ra)), (float)(Math.Cos(dec) * Math.Sin(ra)), (float)Math.Sin(dec));
-                // Magnitudi → koko (1,1…4,2 px @1×) ja kirkkaus (vuo suhteessa magnitudiin 1, katto 2,5).
+                // Magnitudi → koko (1,1…4,2 px @1×) ja kirkkaus. Laite cl4/cl5 28.9. (Linssiseppä 2): lineaarinen vuo
+                // 10^(−0,4·(m−1)) jätti magnitudin 3–5 tähdet (näkökentän valtaosa) 0,02–0,16:een, joten oikea taivas
+                // näytti tyhjältä satunnaiseen kenttään verrattuna. Nyt havaittu kirkkaus kuten tähtikartoissa:
+                // neliöjuuri vuosta 10^(−0,2·(m−1)) (m 5 → 0,16, m 3 → 0,40, m 1 → 1, Sirius → 2,5), lattia 0,22.
                 float koko = Mathf.Lerp(1.1f, 4.2f, Mathf.Clamp01((4.5f - mag) / 5.5f));
-                float kirkkaus = Mathf.Min(2.5f, Mathf.Pow(10f, -0.4f * (mag - 1f)));
+                float kirkkaus = Kirkkaus(mag);
                 var vari = (Color32)Vari(bv);
                 for (int c = 0; c < 4; c++)
                 {
@@ -131,6 +134,9 @@ namespace Matkakirja.Natiivi
             m.bounds = new Bounds(Vector3.zero, Vector3.one * 1e9f);
             return m;
         }
+
+        /// <summary>Tähden kirkkaus magnitudista (havaittu: neliöjuuri vuosta, lattia 0,22, katto 2,5).</summary>
+        public static float Kirkkaus(float mag) => Mathf.Clamp(Mathf.Pow(10f, -0.2f * (mag - 1f)), 0.22f, 2.5f);
 
         /// <summary>Tähden väri B−V:stä (sininen −0,3 … valkoinen 0 … kellertävä 0,6 … oranssi 1,6).</summary>
         static Color Vari(float bv)
