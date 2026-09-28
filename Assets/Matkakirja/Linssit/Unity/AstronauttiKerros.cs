@@ -196,6 +196,7 @@ namespace Matkakirja.Natiivi
             pilvienPeitto = Mathf.MoveTowards(pilvienPeitto, (float)peitto, Time.unscaledDeltaTime / 0.8f);
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
+            yokuori?.PilvienPeitto(pilvienPeitto);
         }
 
         float pilvienPeitto;

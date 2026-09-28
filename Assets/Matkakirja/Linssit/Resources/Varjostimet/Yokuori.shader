@@ -40,6 +40,7 @@ Shader "Matkakirja/Linssit/Yokuori"
         _YoVesi("Yön peitto vesillä", Range(0, 1)) = 0.96
         _Pilvet("Päivän pilvet (tasakulmainen, alfa = pilvi)", 2D) = "black" {}
         _PilvetOn("Pilvet käytössä (0/1)", Float) = 0
+        _PilviPeitto("Pilvikuoren peitto (0…1)", Float) = 1
     }
     SubShader
     {
@@ -69,7 +70,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float4 _Akseli, _Nolla, _Ita, _EuRaja;
                 float _R, _Litistys, _Valot, _MaaVoima, _Kiilto, _Aalto;
                 half _Varjo, _YoVesi;
-                float _PilvetOn;
+                float _PilvetOn, _PilviPeitto;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; };
@@ -131,7 +132,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
                 half3 savy = lerp(half3(1.0, 0.52, 0.2), half3(1.0, 0.88, 0.7), saturate(l * 1.6h));
                 // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
-                half pilvi = (half)(_PilvetOn * SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a);
+                half pilvi = (half)(_PilvetOn * _PilviPeitto * SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a);
                 half lapi = 1.0h - 0.85h * pilvi;
                 half valo = l * (half)_Valot * Yo(normalize(p)) * (half)osuu * lapi;
                 c += savy * valo;
