@@ -92,6 +92,28 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// Väritason (kerma) laatta, jonka offline-lataus sai 404:n: Laattapalvelin.LataaOffline kirjoittaa siitä nollatavuisen
+        /// merkin offline-kansioon, ja HaeSisalto antaa merkityn laatan heti läpinäkyvänä ilman verkkoa. Ennen merkkiä laatta
+        /// haettiin pelissä verkosta, ja ilman verkkoa haku epäonnistui ja uusittiin (Siirtosepän E2E-offline 28.9.: kerma
+        /// _maailma z3–z5, 87 hakua). Vain kuvalaatat z/x/y.webp|png|jpg kerman kansiossa (<paramref name="kermaKansio"/>,
+        /// Varitaso.Kansio); luettelot ja media eivät saa merkkiä.
+        /// </summary>
+        public static bool KermanPuuttuvaMerkki(string polku, string kermaKansio)
+        {
+            if (string.IsNullOrEmpty(polku) || string.IsNullOrEmpty(kermaKansio)
+                || !polku.StartsWith(kermaKansio, StringComparison.Ordinal)) return false;
+            string p = IlmanKyselya(polku);
+            int piste = p.LastIndexOf('.');
+            if (piste < 0) return false;
+            string paate = p.Substring(piste + 1);
+            if (!paate.Equals("webp", StringComparison.OrdinalIgnoreCase) && !paate.Equals("png", StringComparison.OrdinalIgnoreCase)
+                && !paate.Equals("jpg", StringComparison.OrdinalIgnoreCase)) return false;
+            var osat = p.Substring(0, piste).Split('/');
+            int n = osat.Length;
+            return n >= 4 && int.TryParse(osat[n - 1], out _) && int.TryParse(osat[n - 2], out _) && int.TryParse(osat[n - 3], out _);
+        }
+
+        /// <summary>
         /// Lokirivin luokka: maasto, pohja (<paramref name="pohjaPolku"/>, Laattapalvelin.PohjaPolku), satelliitti,
         /// kuva (.jpg, .png, .webp), json (.json, .geojson) tai muu. Väritason laatat luokittelee Laattapalvelin ("vari").
         /// </summary>
