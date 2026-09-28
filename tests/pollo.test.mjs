@@ -680,8 +680,12 @@ test('worker tuntee kehyslajit ja putoaa tuntemattomalla aloitukseen', () => {
     'workerin kehyslajit puuttuvat');
   assert.ok(/KEHYS_LAJIT\.has\(arvo\) \? arvo : 'aloitus'/.test(kehote),
     'tuntematon kehyslaji ei putoa aloitukseen — vanha peli rikkoutuisi');
-  assert.ok(/kehysOhje\(kehysLaji\(runko\?\.kehys\)\)/.test(kehote),
+  // Kehote kootaan pulunKehote-funktiossa (28.9.2026: yhteinen chatille ja
+  // äänikeskustelun kokeelle), ja chat antaa sille pyynnön kehyslajin.
+  assert.ok(/kehysOhje\(kehysLaji\(kehys\)\)/.test(kehote),
     'kehyslajia ei liitetä järjestelmäkehotteeseen');
+  assert.ok(/pulunKehote\(\{[^}]*kehys: runko\?\.kehys/.test(kehote),
+    'chat ei välitä kehyslajia kehotteelle');
 });
 
 /*

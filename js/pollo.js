@@ -1371,6 +1371,26 @@ function polloKehittajaTila() {
   return polloAsetus(POLLO_KEHITTAJA_TILA_AVAIN) === '1';
 }
 
+/**
+ * PULUN ÄÄNIKESKUSTELUN KOENAPPI (omistaja 28.9.2026, js/pulu-realtime.js)
+ * näkyy VAIN kehittäjätilassa ja vain, kun välityspalvelin on kytketty.
+ * Worker vaatii lisäksi kehittäjäkoodin — nappi ei avaa mitään kenellekään
+ * muulle. Pelaajan Pulu on edelleen Sonnet-chat.
+ */
+export function puluRealtimeKoeNakyvissa({
+  kehittajaTila = polloKehittajaTila(), palvelin = POLLOPALVELIN,
+} = {}) {
+  return Boolean(kehittajaTila) && Boolean(String(palvelin ?? '').trim());
+}
+
+/** Koenapin teksti kussakin tilassa. */
+export const REALTIME_NAPPI_TEKSTIT = Object.freeze({
+  valmis: 'Puhu Pululle (koe)',
+  yhdistaa: 'Yhdistän Puluun…',
+  kuuntelee: 'Kuuntelen — lopeta',
+  puhuu: 'Pulu puhuu — lopeta',
+});
+
 /* ------------------------------------------------------------------ *
  * Livian loki (puhekuplat ja keskustelu laitteen muistissa)
  * ------------------------------------------------------------------ */
@@ -2357,6 +2377,16 @@ export class Pollo {
     this.saneluTila.setAttribute('aria-live', 'polite');
     syote.appendChild(this.saneluTila);
 
+    // Pulun äänikeskustelun koenappi (vain kehittäjätilassa, ks.
+    // puluRealtimeKoeNakyvissa); näkyvyys tarkistetaan myös avatessa.
+    const koe = polloElementti('button', 'pollo-realtime-koe', REALTIME_NAPPI_TEKSTIT.valmis);
+    koe.type = 'button';
+    koe.setAttribute('aria-pressed', 'false');
+    koe.hidden = !puluRealtimeKoeNakyvissa({ palvelin: this.palvelin });
+    koe.addEventListener('click', () => this.vaihdaRealtime());
+    this.realtimeNappi = koe;
+    syote.appendChild(koe);
+
     const lomake = polloElementti('form', 'pollo-rivi');
     this.kentta = polloElementti('input', 'pollo-kentta');
     this.kentta.type = 'text';
@@ -2433,6 +2463,81 @@ export class Pollo {
     this.merkitseKaiutin();
     this.naytaSyote();
     return syote;
+  }
+
+  /* --- äänikeskustelun koe (xAI Grok Voice Agent) ------------------ */
+
+  /**
+   * Koenapin vipu: aloittaa tai lopettaa reaaliaikaisen äänikeskustelun
+   * (js/pulu-realtime.js, ladataan vasta tästä napautuksesta). Sanelu ja
+   * luenta pysähtyvät ensin, jottei kaksi mikkiä tai kaksi ääntä kilpaile.
+   */
+  async vaihdaRealtime() {
+    if (this.realtime) {
+      this.realtime.lopeta();
+      return;
+    }
+    if (this.realtimeLatautuu) return;
+    this.lopetaSanelu();
+    this.peruLuenta();
+    pysaytaLukija();
+    const nappi = this.realtimeNappi;
+    const merkitse = (tila) => {
+      if (!nappi) return;
+      nappi.textContent = REALTIME_NAPPI_TEKSTIT[tila] ?? REALTIME_NAPPI_TEKSTIT.valmis;
+      nappi.setAttribute('aria-pressed', tila === 'valmis' ? 'false' : 'true');
+      nappi.classList.toggle('paalla', tila !== 'valmis');
+    };
+    merkitse('yhdistaa');
+    let moduuli;
+    this.realtimeLatautuu = true;
+    try {
+      moduuli = await import('./pulu-realtime.js');
+    } catch {
+      merkitse('valmis');
+      this.lisaaViesti('virherivi', 'Äänikeskustelun koodi ei latautunut.');
+      return;
+    } finally {
+      this.realtimeLatautuu = false;
+    }
+    let kayttajaKupla = null;
+    let puluKupla = null;
+    const istunto = new moduuli.PuluRealtime({
+      palvelin: this.palvelin,
+      otsakkeet: () => this.otsakkeet(),
+      konteksti: this.konteksti(),
+      onTila: (tila) => {
+        if (tila === 'loppu') {
+          if (this.realtime === istunto) this.realtime = null;
+          merkitse('valmis');
+          return;
+        }
+        merkitse(tila);
+      },
+      onKayttajaAlku: () => {
+        // Kupla paikalleen heti vuoron päättyessä: tekstitys tulee vasta
+        // Pulun vastauksen alettua, ja järjestys pitää silti olla oikea.
+        kayttajaKupla = this.lisaaViesti('kayttaja', '…');
+        puluKupla = null;
+      },
+      onKayttaja: (teksti) => {
+        if (!teksti) return;
+        if (kayttajaKupla) kayttajaKupla.textContent = teksti;
+        else this.lisaaViesti('kayttaja', teksti);
+        kayttajaKupla = null;
+      },
+      onPulu: (pala) => {
+        if (!puluKupla) puluKupla = this.lisaaViesti('pollo', '');
+        puluKupla.textContent += pala;
+        if (this.tyhjaTila === null && this.virta) this.virta.scrollTop = this.virta.scrollHeight;
+      },
+      onPuluValmis: () => {
+        puluKupla = null;
+      },
+      onVirhe: (viesti) => this.lisaaViesti('virherivi', viesti),
+    });
+    this.realtime = istunto;
+    await istunto.aloita();
   }
 
   /* --- kaiutin ---------------------------------------------------- */
@@ -4777,6 +4882,9 @@ export class Pollo {
      */
     this.lataaLokiVirtaan();
     this.paivitaAlkutila();
+    if (this.realtimeNappi) {
+      this.realtimeNappi.hidden = !puluRealtimeKoeNakyvissa({ palvelin: this.palvelin });
+    }
     this.paneeli.hidden = false;
     this.nappi.setAttribute('aria-expanded', 'true');
     this.nappi.classList.add('auki');
@@ -4916,6 +5024,8 @@ export class Pollo {
     // koska ne kaikki kulkevat tämän kautta.
     palautaAmbienssi('pollo');
     this.lopetaSanelu();
+    // Äänikeskustelun koe sulkeutuu chatin mukana (mikki ja linja kiinni).
+    this.realtime?.lopeta();
     this.suljeKuvapopup();
     // Chatin sulkeutuminen hiljentää myös luennan: pöllön ääni ei jää
     // puhumaan tyhjälle kartalle. Vipu jää päälle seuraavaa kertaa
