@@ -195,10 +195,11 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void KarkeatVaiheetNopeimmissaOsissa()
         {
+            // v3e2: nousu täydellä tarkkuudella (v3e-laiteajo: karkean nousun laattaraja 10,8–12,3 s).
             Oleta.Tosi(!AloituslennonRata.Karkea(1.0) && AloituslennonRata.Karkea(4.0) && !AloituslennonRata.Karkea(AloituslennonRata.OhitusS)
-                       && !AloituslennonRata.Karkea(AloituslennonRata.OhitusS + 1.0) && AloituslennonRata.Karkea(11.0)
+                       && !AloituslennonRata.Karkea(AloituslennonRata.OhitusS + 1.0) && !AloituslennonRata.Karkea(11.0)
                        && !AloituslennonRata.Karkea(AloituslennonRata.SaapuminenS + 0.6) && !AloituslennonRata.Karkea(AloituslennonRata.KosketusS),
-                "karkea vain lähestymisen ja nousun nopeimmissa osissa");
+                "karkea vain lähestymisen nopeimmassa osassa");
         }
 
         [Testi]
@@ -253,6 +254,30 @@ namespace Matkakirja.Kartta.Testit
                     double sivu = LennonAikajana.ReittiM(s.Lat, s.Lon, k.Lat, k.Lon);
                     Oleta.Tosi(sivu < 0.25 * r.SilmanKorkeus(t), $"{k.Id} silmä kohteen yllä t={t:F1}: sivussa {sivu / 1000:F0} km");
                 }
+            }
+        }
+
+        [Testi]
+        static void SilmaKaartaaKohteenYlleIlmanKoukkua()
+        {
+            // v3e2 (omistaja 28.9.: "Lentoreitti voisi olla takaisin suoraan Ateenan yläpuolelle ja kamera suoraan ylhäältä alas,
+            // mutta tee kiihdytys ja lentoreitti hieman S-kurvin mukaisesti"): silmän maapiste ei erkanemisessa loittone kohteesta
+            // eikä kierrä sen taakse (v3e: ~270 km kohteen eteläpuolella 13 s:ssa ja takaisin), ja kosketus nähdään suoraan ylhäältä.
+            foreach (var k in Kohteet)
+            {
+                var r = Rata(k);
+                var s0 = r.SilmanMaapiste(AloituslennonRata.OhitusS);
+                double alku = LennonAikajana.ReittiM(s0.Lat, s0.Lon, k.Lat, k.Lon), suurin = 0;
+                for (double t = AloituslennonRata.OhitusS; t <= AloituslennonRata.KestoS; t += 1.0 / 60)
+                {
+                    var s = r.SilmanMaapiste(t);
+                    double et = LennonAikajana.ReittiM(s.Lat, s.Lon, k.Lat, k.Lon);
+                    Oleta.Tosi(et <= alku + 15_000, $"{k.Id} silmä ei loittone kohteesta t={t:F2}: {et / 1000:F0} km (ohituksessa {alku / 1000:F0} km)");
+                    if (t >= AloituslennonRata.SaapuminenS) suurin = Math.Max(suurin, et);
+                }
+                Oleta.Tosi(suurin <= 120_000, $"{k.Id} silmä saapuessa enintään 120 km kohteesta: {suurin / 1000:F0} km");
+                var a = r.Kamera(AloituslennonRata.KosketusS);
+                Oleta.Tosi(a.Kallistus <= 4.0, $"{k.Id} kosketus suoraan ylhäältä: kallistus {a.Kallistus:F1}°");
             }
         }
 

@@ -20,7 +20,7 @@ namespace Matkakirja
     ///   3. Kaukaa kone on pieni; lasku kuvataan kaukaa ja ylhäältä (v3d: "nyt näyttää kun joku pommi iskisi").
     ///   4. Kohteen 3D-maamerkki ei näy lennolla (Nappula); viiva ja lähtöpiste näkyvät alussa.
     ///
-    /// AIKAJANA v3e (s): 0–7,2 LÄHESTYMINEN yhtenä S-käyränä (Beta-ydin, nopeus ∝ τ²(1−τ): kiihtyy pehmeästi levosta, huippu
+    /// AIKAJANA v3e2 (s): 0–7,2 LÄHESTYMINEN yhtenä S-käyränä (Beta-ydin, nopeus ∝ τ²(1−τ): kiihtyy pehmeästi levosta, huippu
     /// ~5 s, hidastuu koneeseen) napautusnäkymästä (~7 600 km, suoraan alas) koneeseen <see cref="OhitusEtaisyysM"/>:iin; KAIKKI
     /// kanavat (etäisyys, kallistus, suunta, koneen ruutupaikka, katseen korkeus) etenevät saman edistymän p(t) funktioina, joten
     /// mikään ei pysähdy välillä (v3d: avaus 0–4 s ja kiri 4–6,5 s olivat erilliset liikkeet ja kiri syöksyi 4 500 → 30 km 2 s:ssa
@@ -31,7 +31,9 @@ namespace Matkakirja
     /// korkeudella (8,1 → 9,4 km 2,2 s:ssa, kone loittonee kohti horisonttia), sitten nousu kiihtyy (huippu 12,5 s) ja hidastuu
     /// saapumisnäkymään pysähtymättä ennen loppua. Koneen alakulma kulkee korkeuden mukana (ln sin ε ∝ (1 − A)^1,8), joten koneen
     /// etäisyys kasvaa koko erkanemisen ajan yhtenä liikkeenä (pakitus luovuttaa nousulle) ja kamera kääntyy suoraan alas kohteen
-    /// ylle · kosketus <see cref="KosketusS"/> nähdään ylhäältä ~1 150 km:stä, kone ruudulla ~1,6 % · 15 s saapumisnäkymä.
+    /// ylle. v3e2: silmän sivumatka koneesta enintään ~110 km ja kapenee ennen kosketusta (<see cref="SivuEnintaanM"/>), joten
+    /// silmä kaartaa loivasti koneen oikealta puolelta kohteen ylle (v3e: koukku ~270 km kohteen eteläpuolelta) · kosketus
+    /// <see cref="KosketusS"/> nähdään suoraan ylhäältä (kallistus ~2°) ~1 150 km:stä, kone ruudulla ~1,6 % · 15 s saapumisnäkymä.
     /// Vanat ja loppukohtauksen linnut: AloituslennonIlma.
     ///
     /// TOTEUTUS: kamera suunnitellaan koneen RUUTUPAIKKANA: joka näytteessä (240 Hz) katsepiste ratkaistaan Newtonilla niin, että
@@ -50,7 +52,7 @@ namespace Matkakirja
         /// <summary>Kesto, avauksen loppu (Lontoo kuvassa), ohituksen liu'un alku (kiri), lähin kohta (ohitus), liu'un loppu,
         /// saapumisen alku (kamera kohteen yllä nousemassa), kosketus ja pysähdys.</summary>
         public const double KestoS = 15.0, AvausS = 2.0, OhitusS = 7.2, OhitusPuoliS = 0.9, KiriS = OhitusS - OhitusPuoliS,
-            OhitusLoppuS = OhitusS + OhitusPuoliS, SaapuminenS = 12.5, KosketusS = 13.8, PysahdysS = 14.4;
+            OhitusLoppuS = OhitusS + OhitusPuoliS, SaapuminenS = 12.6, KosketusS = 13.8, PysahdysS = 14.4;
         /// <summary>Pakitus ohituksen jälkeen (s): kallistus ja koneen ruutupaikka kohti horisonttia, korkeus lähes ennallaan.</summary>
         public const double PakitusS = 3.2;
         /// <summary>Lähin kohta (v3e, omistaja: "asteen lähemmäs"; v3d 23,5 km): etäisyys katsepisteeseen (= koneeseen) ja kallistus.</summary>
@@ -60,6 +62,18 @@ namespace Matkakirja
         /// <summary>Alakulman nousu korkeuden mukana: ln sin ε = ln sin ε_pakitus · (1 − A)^tämä (1 = tasainen, 2 = kamera kääntyy
         /// alas jo nousun alkupuolella; koneen etäisyys kasvaa silti koko ajan, kun tämä on alle 2,8).</summary>
         public const double AlakulmaEksponentti = 1.8;
+        /// <summary>
+        /// SILMÄN SIVUMATKA (v3e2, omistaja 28.9.: "Lentoreitti voisi olla takaisin suoraan Ateenan yläpuolelle ja kamera suoraan
+        /// ylhäältä alas, mutta tee kiihdytys ja lentoreitti hieman S-kurvin mukaisesti"): silmän vaakaetäisyys koneesta on
+        /// erkanemisessa enintään <see cref="SivuEnintaanM"/> (pehmeä minimi alakulman antamaan), ja raja kapenee
+        /// <see cref="SivuLoppuM"/>:iin välillä <see cref="SivuKapeneeS"/>–<see cref="SivuKapeaS"/>, joten kamera kääntyy alas nousun
+        /// mukana ja katsoo kosketusta suoraan ylhäältä. v3e:ssä alakulma jäi nousussa loivaksi, ja silmä kävi ~270 km kohteen
+        /// eteläpuolella ja kaartoi takaisin sen ylle (koukku).
+        /// </summary>
+        public const double SivuEnintaanM = 110_000.0, SivuLoppuM = 15_000.0, SivuKapeneeS = 12.3, SivuKapeaS = 13.6;
+        /// <summary>Suunnan kääntö saapumisnäkymään alkaa nousun edistymästä A = tämä (kamera on jo jyrkästi koneen yllä, joten
+        /// kääntö kiertää karttaa eikä vie silmää sivuun; v3e: kääntö S(A):lla koko nousun ajan).</summary>
+        public const double KaantoAlkaa = 0.30;
         /// <summary>Lähestymisen ja nousun S-käyrät Beta-ytiminä (nopeus ∝ τ^(a−1)(1−τ)^(b−1)).</summary>
         public const double LahestyminenA = 3.0, LahestyminenB = 2.0, NousuA = 5.0, NousuB = 3.0, PakitusA = 2.0, PakitusB = 2.2;
         /// <summary>Koneen ruutupaikka: ennen liukua (vasen), liu'un jälkeen (oikea), pakituksen jälkeen (x kohti keskeä, y ylös
@@ -101,11 +115,12 @@ namespace Matkakirja
 
         /// <summary>
         /// KEVYT LAATTAKYSYNTÄ NOPEISSA VAIHEISSA (v3b, laiteajo 28.9.: Cesiumin latausjonossa koko lennon 1 000–1 400 laattaa):
-        /// lähestymisen ja nousun nopeimmat osat valitsevat laatat näyttövirheellä <see cref="KarkeaSse"/> (LiikeLaatat.LentoKarkeaSse,
-        /// pohja 20); avaus, ohitus, pakitus ja saapuminen täydellä tarkkuudella. Nopeassa liikkeessä karkeampi taso ei erotu.
+        /// lähestymisen nopein osa valitsee laatat näyttövirheellä <see cref="KarkeaSse"/> (LiikeLaatat.LentoKarkeaSse, pohja 20);
+        /// avaus, ohitus ja erkaneminen täydellä tarkkuudella. v3e2: nousu ei enää ole karkea (v3e-laiteajo: 10,8–12,3 s tarkka
+        /// lähimaasto ja karkea kauempi maa erottuivat terävänä laattarajana; nyt kamera katsoo nousussa jyrkästi alas).
         /// </summary>
         public const float KarkeaSse = 40f;
-        public static bool Karkea(double t) => (t >= 2.0 && t < KiriS - 0.4) || (t >= OhitusS + PakitusS && t < 13.0);
+        public static bool Karkea(double t) => t >= 2.0 && t < KiriS - 0.4;
         /// <summary>Katseen suunta koneen kulkusuunnasta ohituksessa: −96° = kamera koneen oikealla, kone liikkuu vasemmalta oikealle.</summary>
         public const double OhitusTheta = -96.0;
         /// <summary>Symbolinen koko: siipiväli maailmassa 5 km (ohituksessa ~60 % leveydestä), mutta ruudulla vähintään
@@ -168,7 +183,6 @@ namespace Matkakirja
         readonly Mittaus[] mittaus = new Mittaus[N + 1];
         // Kanavien päät (ruutupaikat ja suunnat), jotka lasketaan radan alussa.
         double s0x, s0y, sfx, sfy, bOhitus, bMuutosLahestyminen, bMuutosErkaneminen;
-        bool kaantoMyohaan;
 
         /// <param name="alku">Napautusnäkymä (PalloKierto: leveys, pituus, korkeus = etäisyys, KaytettyKallistus, suuntima, katseKorkeus).</param>
         /// <param name="loppu">Saapumisnäkymä, johon peli jatkaa (PalloKierto.SaapumisNakyma ilman maarajausta).</param>
@@ -233,11 +247,6 @@ namespace Matkakirja
             EpsOhitus = (90.0 - OhitusKallistus - Math.Atan(OhitusY * tanV) * 180.0 / Math.PI) * Math.PI / 180.0;
             EtaisyysOhitus = (KorkeusOhitus - PerusKorkeus(OhitusS)) / Math.Sin(EpsOhitus);
             EtaisyysLoppu = (kL.Silma - Ecef(Lat1, Lon1, MaaKohteessa)).Pituus;
-            // Erkanemisen kääntö pohjoiseen siirtäisi kameran koneen taakse (esim. Moskova: kone itäkoilliseen, kamera etelästä):
-            // silloin suunta kääntyy vasta, kun kamera on korkealla koneen yllä (korotus yli 60°).
-            double psiL = SuuntimaReitilla(0.97);
-            double alfaL = Math.Abs(Kulmaero(psiL, Loppu.Suuntima + 180.0));
-            kaantoMyohaan = alfaL > 95.0;
         }
 
         /// <summary>
@@ -254,8 +263,9 @@ namespace Matkakirja
             // Kallistus lähestymisessä etupainotteisesti (suoraan alas → 76°); erkanemisessa johdetaan korkeudesta ja etäisyydestä (alla).
             k = Alku.Kallistus + (OhitusKallistus - Alku.Kallistus) * (1.0 - Math.Pow(1.0 - p, 1.3));
             // Suunta: lähestymisessä etupainotteisesti (kääntö tehdään korkealla, ennen kuin kamera laskeutuu koneen tasalle),
-            // erkanemisessa loppuun S(A):lla tai myöhään (kun kamera on koneen yllä), ettei kone näy takaa.
-            double gb = kaantoMyohaan ? S((a - 0.55) / 0.45) : sa;
+            // erkanemisessa nousun loppuosalla (A ≥ KaantoAlkaa), kun sivumatka on rajattu ja kamera katsoo konetta jo jyrkästi
+            // ylhäältä: kääntö kiertää karttaa eikä vie silmää koneen taakse.
+            double gb = S((a - KaantoAlkaa) / (1.0 - KaantoAlkaa));
             b = Alku.Suuntima + bMuutosLahestyminen * (1.0 - Math.Pow(1.0 - p, 2.5)) + bMuutosErkaneminen * gb;
             // Koneen ruutupaikka: napautusnäkymän Lontoosta vasemmalle, liuku oikealle, pakitus kohti horisonttia, loppu kohteen paikalle.
             double kupu = 12.2 * p * Math.Pow(1.0 - p, 4);
@@ -277,7 +287,12 @@ namespace Matkakirja
             double h = Math.Exp(Math.Log(KorkeusOhitus) + (Math.Log(KorkeusLoppu) - Math.Log(KorkeusOhitus)) * a);
             double ePb = EpsOhitus + (PakitusKulma * Math.PI / 180.0 - EpsOhitus) * pb;
             double sinE = Math.Exp(Math.Log(Math.Sin(ePb)) * Math.Pow(1.0 - a, AlakulmaEksponentti));
-            double kE = 90.0 - Math.Asin(Rajaa(sinE, 0, 1)) * 180.0 / Math.PI - Math.Atan(y * tanV) * 180.0 / Math.PI;
+            // Sivumatka: alakulman antama vaakaetäisyys koneesta pehmeästi enintään rajaan, joka kapenee ennen kosketusta.
+            double dH = Math.Max(1.0, h - koneenKorkeus);
+            double vaakaA = dH / Math.Tan(Math.Max(1e-6, Math.Asin(Rajaa(sinE, 0, 1))));
+            double raja = SivuEnintaanM + (SivuLoppuM - SivuEnintaanM) * S((t - SivuKapeneeS) / (SivuKapeaS - SivuKapeneeS));
+            double vaaka = vaakaA + (PehmeaMin(vaakaA, raja) - vaakaA) * S((t - OhitusS) / PakitusS);
+            double kE = 90.0 - Math.Atan2(dH, vaaka) * 180.0 / Math.PI - Math.Atan(y * tanV) * 180.0 / Math.PI;
             double wL = S((a - 0.88) / 0.12);
             k = kE + (Loppu.Kallistus - kE) * wL;
             d = EtaisyysKorkeudesta(h, k, katse);
@@ -689,6 +704,8 @@ namespace Matkakirja
 
         static double S(double x) { x = x < 0 ? 0 : x > 1 ? 1 : x; return x * x * x * (x * (x * 6 - 15) + 10); }
         static double Rajaa(double x, double a, double b) => x < a ? a : x > b ? b : x;
+        /// <summary>Pehmeä minimi (4-normi): pienempi arvo, rajakohdassa −16 %.</summary>
+        static double PehmeaMin(double a, double b) => 1.0 / Math.Sqrt(Math.Sqrt(1.0 / (a * a * a * a) + 1.0 / (b * b * b * b)));
         static double Normalisoi(double a) { a %= 360.0; return a < 0 ? a + 360.0 : a; }
         static double Normalisoi180(double a) { a = Normalisoi(a + 180.0); return a - 180.0; }
         static double Kulmaero(double a, double b) => LennonV3.Kulmaero(a, b);
