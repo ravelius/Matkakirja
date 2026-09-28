@@ -30,6 +30,7 @@
  * tarkoitettu KATSOTTAVIKSI — mittaukset eivät kerro, näyttääkö kartta
  * hyvältä.
  */
+import { lisaaPolloKehittajakoodi } from './savukkeet/pollo-kehittajakoodi.mjs';
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
@@ -69,6 +70,7 @@ await ctx.addInitScript(() => {
   try { localStorage.setItem('matkakirja-fokusmoodi', '0'); } catch { /* yksityinen tila */ }
 });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
 
@@ -521,6 +523,7 @@ await puhelin.addInitScript(() => {
   try { localStorage.setItem('matkakirja-fokusmoodi', '0'); } catch { /* yksityinen tila */ }
 });
 const psivu = await puhelin.newPage();
+await lisaaPolloKehittajakoodi(puhelin); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 psivu.on('pageerror', (e) => virheet.push(`puhelin: ${e}`));
 const cdp = await puhelin.newCDPSession(psivu);
 const kosketa = async (tyyppi, pisteet) => {

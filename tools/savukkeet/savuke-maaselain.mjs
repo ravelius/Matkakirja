@@ -4,6 +4,7 @@
  *  2. Pilleri näkyy maaselaimessa ja näyttää valitun maan.
  *  3. Valinnan purku ja tilan sulku palauttavat pelaajan maan kylttiin.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -33,6 +34,7 @@ let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const sivu = await (await selain.newContext({ viewport: { width: 834, height: 1194 } })).newPage();
+await lisaaPolloKehittajakoodi(sivu); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 const tulos = await sivu.evaluate(async () => {
