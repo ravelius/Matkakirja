@@ -84,7 +84,7 @@
         "audioId": "ateena-3",
         "visibleText": "Schliemannin talo on nyt rahamuseo. Sen puutarhasta löysin kiiltävän kolikon ja peitin sen jalallani. Sitten lapsi palasi etsimään. Siirsin jalkaa ihan vähän. Hän ilahtui. Niin minäkin.",
         "visibleTextSha256": "c33e5126d8a0723dc73c4b431302409973fb982d8cabd4a0f6afdcc2c791a566",
-        "ttsText": "[curious] Schliemannin talo on nyt rahamuseo. [mischievously] Sen puutarhasta löysin kiiltävän kolikon ja peitin sen jalallani. [softly] Sitten lapsi palasi etsimään. Siirsin jalkaa ihan vähän. [warmly] Hän ilahtui. Niin minäkin.",
+        "ttsText": "[curious] Schliemannin talo on nyt rahamuseo. [mischievously] Sen puutarhasta löysin kiiltävän kolikon ja peitin sen jalallani. [warmly] Sitten lapsi palasi etsimään. Siirsin jalkaa ihan vähän. [warmly] Hän ilahtui. Niin minäkin.",
         "ttsTextSha256": "81d15f302a7dd9584d956d0d173024f871dcd32e63357c91d6e847c81c130024",
         "cues": [
           {
@@ -170,7 +170,7 @@
         "audioId": "sofia-3",
         "visibleText": "Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.",
         "visibleTextSha256": "a2d6d6ffb6ccabd33da64e053acdce5b63479109e4b8de0433ad57671f067f14",
-        "ttsText": "[curious] Sofian lähteeltä haetaan yhä kuumaa vettä. [mischievously] Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. [softly] Arvokkuus palasi vasta seuraavalla räystäällä.",
+        "ttsText": "[curious] Sofian lähteeltä haetaan yhä kuumaa vettä. [mischievously] Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. [amused] Arvokkuus palasi vasta seuraavalla räystäällä.",
         "ttsTextSha256": "6b5a1553221770bc9d6997d6bf39f1d3a2c9b66a76a9f6456fd83573dfc2d0ab",
         "cues": [
           {
@@ -342,7 +342,7 @@
         "audioId": "rooma-3",
         "visibleText": "Pantheoniin ostetaan nyt pääsylippu. Minä kiersin kattoaukkoa juuri, kun sade alkoi. Alhaalla ihmiset siirtyivät kuivaan. Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee.",
         "visibleTextSha256": "720c7925c99a9c9977292a86530a419f73ce372d816df17c78606cfafcdcc6c0",
-        "ttsText": "[curious] Pantheoniin ostetaan nyt pääsylippu. [brightly] Minä kiersin kattoaukkoa juuri, kun sade alkoi. [softly] Alhaalla ihmiset siirtyivät kuivaan. [mischievously] Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee.",
+        "ttsText": "[curious] Pantheoniin ostetaan nyt pääsylippu. [brightly] Minä kiersin kattoaukkoa juuri, kun sade alkoi. [amused] Alhaalla ihmiset siirtyivät kuivaan. [mischievously] Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee.",
         "ttsTextSha256": "e052fc011d040dded575d8c4b59f71d05f761f5e8f786ad38641eaeaae909603",
         "cues": [
           {
@@ -507,7 +507,7 @@
         "audioId": "sarajevo-3",
         "visibleText": "Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!",
         "visibleTextSha256": "145fb8120049fc081ddd36ebe98f44369868e89bac35068d2981a3e14ce6da9d",
-        "ttsText": "[softly] Kuparisepät naputtavat basaarissa yhä. [curious] Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. [mischievously] Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!",
+        "ttsText": "[warmly] Kuparisepät naputtavat basaarissa yhä. [curious] Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. [mischievously] Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!",
         "ttsTextSha256": "d1f5fb31dbe5f92131f9512373ad54d63468bf2bf6bd46e8dcd999e0c66b63dd",
         "cues": [
           {
@@ -772,7 +772,7 @@
         "audioId": "pariisi-3",
         "visibleText": "Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. Valitsin selkänojan auringosta. Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina.",
         "visibleTextSha256": "3b524abb834d06e629bef36e5d672a0c118e71cbee05b7ae24099d0df7171230",
-        "ttsText": "[curious] Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. [brightly] Valitsin selkänojan auringosta. [warmly] Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. [softly] Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina.",
+        "ttsText": "[curious] Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. [brightly] Valitsin selkänojan auringosta. [warmly] Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. [warmly] Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina.",
         "ttsTextSha256": "f2a878d5b1348e271525e66dcb5ebebb94ba9aa5c99d581358196bdade0514b8",
         "cues": [
           {
@@ -965,7 +965,7 @@
         "audioId": "lontoo-3",
         "visibleText": "Nyt metron junat kulkevat sähköllä. Minä pysyttelen mieluummin Thamesin yllä: näen, kuka tulee perässä. Kerran tarkistin saman varjon kolmesti. Omahan se oli.",
         "visibleTextSha256": "2a22c0329b0ccafe38385c0b8a11856666e4acbd7ea928775656a3f7786c5331",
-        "ttsText": "[curious] Nyt metron junat kulkevat sähköllä. [softly] Minä pysyttelen mieluummin Thamesin yllä: näen, kuka tulee perässä. [mischievously] Kerran tarkistin saman varjon kolmesti. Omahan se oli.",
+        "ttsText": "[curious] Nyt metron junat kulkevat sähköllä. [amused] Minä pysyttelen mieluummin Thamesin yllä: näen, kuka tulee perässä. [mischievously] Kerran tarkistin saman varjon kolmesti. Omahan se oli.",
         "ttsTextSha256": "e18349a3c069e84d965ffe0b9afddaf385cb0e06ce1a719701096a03115f1884",
         "cues": [
           {
@@ -1051,7 +1051,7 @@
         "audioId": "budapest-3",
         "visibleText": "Ketjusillan leijonilla ei kuulemma ole kieliä. Lensin katsomaan suuhun: onhan siellä! Alhaalta niitä ei vain näe. Olin juuri lähdössä levittämään tietoa, kun opas kertoi uuden ryhmänsä edessä saman vanhan jutun. Hei! Minulla olisi tästä aivan tuore havainto!",
         "visibleTextSha256": "d6cc78fd2a1fd884d28cf2aa3fe75bd5199d6faf07567b68506e636c4316d0cc",
-        "ttsText": "[curious] Ketjusillan leijonilla ei kuulemma ole kieliä. [brightly] Lensin katsomaan suuhun: onhan siellä! [softly] Alhaalta niitä ei vain näe. [mischievously] Olin juuri lähdössä levittämään tietoa, kun opas kertoi uuden ryhmänsä edessä saman vanhan jutun. [excited] Hei! Minulla olisi tästä aivan tuore havainto!",
+        "ttsText": "[curious] Ketjusillan leijonilla ei kuulemma ole kieliä. [brightly] Lensin katsomaan suuhun: onhan siellä! [amused] Alhaalta niitä ei vain näe. [mischievously] Olin juuri lähdössä levittämään tietoa, kun opas kertoi uuden ryhmänsä edessä saman vanhan jutun. [excited] Hei! Minulla olisi tästä aivan tuore havainto!",
         "ttsTextSha256": "ae92578c5dd3e8422a39d23279bd5a5699e38a8ebd1f6587c55ab6666db85591",
         "cues": [
           {
@@ -1230,7 +1230,7 @@
         "audioId": "praha-3",
         "visibleText": "Kello kokoaa torille väkeä yhä. Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. Kun luuranko liikahti, nostin minäkin.",
         "visibleTextSha256": "ddeeef8a4b8ae574d2872df4f3fbd9c5127a10de0290e90a46d982eaac36bf62",
-        "ttsText": "[curious] Kello kokoaa torille väkeä yhä. [softly] Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. [mischievously] Kun luuranko liikahti, nostin minäkin.",
+        "ttsText": "[curious] Kello kokoaa torille väkeä yhä. [amused] Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. [mischievously] Kun luuranko liikahti, nostin minäkin.",
         "ttsTextSha256": "f0ebe5b094523c5c121ad8d175858bc89ffd7791d6d156945fbc77316c8c7843",
         "cues": [
           {
@@ -1316,7 +1316,7 @@
         "audioId": "tukholma-3",
         "visibleText": "Kuninkaanlinnan vieressä kalastajan vapa taipui niin, että unohdin koko linnan. Kävelin pitkin kaidetta kalan mukana. Se välähti pinnassa, roiskautti vettä rinnuksilleni ja katosi. Kalastaja jäi tuijottamaan tyhjää siimaa. Minä pörhistin märät sulkani. Meillä oli nyt yhteinen puheenaihe.",
         "visibleTextSha256": "5a2b34fec2b51b9916e9dc1d81dacad3b3d892d61f91535aa5f00186987ede22",
-        "ttsText": "[curious] Kuninkaanlinnan vieressä kalastajan vapa taipui niin, että unohdin koko linnan. [brightly] Kävelin pitkin kaidetta kalan mukana. [excited] Se välähti pinnassa, roiskautti vettä rinnuksilleni ja katosi. [softly] Kalastaja jäi tuijottamaan tyhjää siimaa. Minä pörhistin märät sulkani. [warmly] Meillä oli nyt yhteinen puheenaihe.",
+        "ttsText": "[curious] Kuninkaanlinnan vieressä kalastajan vapa taipui niin, että unohdin koko linnan. [brightly] Kävelin pitkin kaidetta kalan mukana. [excited] Se välähti pinnassa, roiskautti vettä rinnuksilleni ja katosi. [amused] Kalastaja jäi tuijottamaan tyhjää siimaa. Minä pörhistin märät sulkani. [warmly] Meillä oli nyt yhteinen puheenaihe.",
         "ttsTextSha256": "051858c76af9a11fc3b2c6426870fd5140f56cc4c7e316810942fb66fdebefeb",
         "cues": [
           {
@@ -1409,7 +1409,7 @@
         "audioId": "kobenhavn-3",
         "visibleText": "Tivolin pantomiimiteatterin esirippu on valtava riikinkukon pyrstö. Se laskeutui, ja näyttämö aukesi! Minä kurkistin sivulta, minne pyrstö oikein meni. Halusin nähdä koneiston. Kun viimein käännyin katsomaan näyttelijöitä, yleisö nauroi jo. Mitä minä nyt menetin?",
         "visibleTextSha256": "02bd604bbf98070922f388083278dbca5b2e52f33c62437e31ec9f69f9214efd",
-        "ttsText": "[curious] Tivolin pantomiimiteatterin esirippu on valtava riikinkukon pyrstö. [excited] Se laskeutui, ja näyttämö aukesi! [mischievously] Minä kurkistin sivulta, minne pyrstö oikein meni. Halusin nähdä koneiston. [softly] Kun viimein käännyin katsomaan näyttelijöitä, yleisö nauroi jo. [mischievously] Mitä minä nyt menetin?",
+        "ttsText": "[curious] Tivolin pantomiimiteatterin esirippu on valtava riikinkukon pyrstö. [excited] Se laskeutui, ja näyttämö aukesi! [mischievously] Minä kurkistin sivulta, minne pyrstö oikein meni. Halusin nähdä koneiston. [amused] Kun viimein käännyin katsomaan näyttelijöitä, yleisö nauroi jo. [mischievously] Mitä minä nyt menetin?",
         "ttsTextSha256": "9c5ed18db4a2114f5e61d158fdf20a8a8b055397180d3c73a138b31514af87d4",
         "cues": [
           {
@@ -1502,7 +1502,7 @@
         "audioId": "helsinki-3",
         "visibleText": "Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija.",
         "visibleTextSha256": "d68ad288732dd8d07d18f6c5af42193b514d27119c021c72a99e69f232d127fd",
-        "ttsText": "[curious] Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. [mischievously] Lokki ehti ensin. [softly] Se katsoi minua kuin olisin ollut harjoittelija.",
+        "ttsText": "[curious] Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. [mischievously] Lokki ehti ensin. [amused] Se katsoi minua kuin olisin ollut harjoittelija.",
         "ttsTextSha256": "328cd7e70e0b2e23abc8fc157b2ea161bf0e9c20791606268cf5f9995e8db893",
         "cues": [
           {
@@ -1588,7 +1588,7 @@
         "audioId": "tallinna-3",
         "visibleText": "Raeapteekki myy marsipaania yhä. Minä odotin portaalla, että joku murentaisi annoksensa. Yksi lapsi jakoi palan ystävälleen. Ehkä isoisän lääkkeessä oli oikea ajatus.",
         "visibleTextSha256": "ac627c3f69360a941f6f97e5e31339da90560c1da3906a5ab8ee97605b9023bf",
-        "ttsText": "[curious] Raeapteekki myy marsipaania yhä. [mischievously] Minä odotin portaalla, että joku murentaisi annoksensa. [warmly] Yksi lapsi jakoi palan ystävälleen. [softly] Ehkä isoisän lääkkeessä oli oikea ajatus.",
+        "ttsText": "[curious] Raeapteekki myy marsipaania yhä. [mischievously] Minä odotin portaalla, että joku murentaisi annoksensa. [warmly] Yksi lapsi jakoi palan ystävälleen. [amused] Ehkä isoisän lääkkeessä oli oikea ajatus.",
         "ttsTextSha256": "ac58735d7ae0bd26f19411581d2e2684c360f07d456f5dacac058cfe169abaf8",
         "cues": [
           {
@@ -1667,7 +1667,7 @@
         "audioId": "sevilla-3",
         "visibleText": "Entinen tupakkatehdas on nyt yliopisto. Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. Ne eivät olleet kirjeitä. Hyvä yritys.",
         "visibleTextSha256": "0fd228327bdfa562bce8aa7c51199dadcd17f0502e34abd7c39a6615bbb97fee",
-        "ttsText": "[curious] Entinen tupakkatehdas on nyt yliopisto. [brightly] Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. [softly] Ne eivät olleet kirjeitä. [mischievously] Hyvä yritys.",
+        "ttsText": "[curious] Entinen tupakkatehdas on nyt yliopisto. [brightly] Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. [amused] Ne eivät olleet kirjeitä. [mischievously] Hyvä yritys.",
         "ttsTextSha256": "056359ffd2dafc96bbef2fb24fd6a4e579f78bf3668aa57dd889e8df8280e0a7",
         "cues": [
           {
@@ -1753,7 +1753,7 @@
         "audioId": "bergen-3",
         "visibleText": "Bergenissä lapsilla ja nuorilla on omat rumpujoukot. Johtajansakin he valitsevat itse! Liityin marssimaan perään rinta pystyssä. Kadunvarren ihmiset kuvasivat meitä. Meitä! Pidin siivet visusti kyljissä. En aikonut pilata muodostelmaa.",
         "visibleTextSha256": "7201aaa2bd48165faf357260db7ed3902e9f6385ca7535b8d70b4083856c43f1",
-        "ttsText": "[curious] Bergenissä lapsilla ja nuorilla on omat rumpujoukot. [excited] Johtajansakin he valitsevat itse! [brightly] Liityin marssimaan perään rinta pystyssä. Kadunvarren ihmiset kuvasivat meitä. [happily] Meitä! [softly] Pidin siivet visusti kyljissä. En aikonut pilata muodostelmaa.",
+        "ttsText": "[curious] Bergenissä lapsilla ja nuorilla on omat rumpujoukot. [excited] Johtajansakin he valitsevat itse! [brightly] Liityin marssimaan perään rinta pystyssä. Kadunvarren ihmiset kuvasivat meitä. [happily] Meitä! [amused] Pidin siivet visusti kyljissä. En aikonut pilata muodostelmaa.",
         "ttsTextSha256": "fc3bce8b6dcb2e3acfe4c2c773ff2330f1c30851cac2acf8e781adfb91c3bf27",
         "cues": [
           {
@@ -1846,7 +1846,7 @@
         "audioId": "amsterdam-3",
         "visibleText": "Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt.",
         "visibleTextSha256": "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378",
-        "ttsText": "[curious] Amsterdamin aseman edessä on pyörähalli veden alla. [excited] Seitsemälletuhannelle pyörälle! [brightly] Kävin kurkistamassa sisään ja palasin rantaan. [softly] Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. [mischievously] Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt.",
+        "ttsText": "[curious] Amsterdamin aseman edessä on pyörähalli veden alla. [excited] Seitsemälletuhannelle pyörälle! [brightly] Kävin kurkistamassa sisään ja palasin rantaan. [amused] Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. [mischievously] Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt.",
         "ttsTextSha256": "51be508c1faecef2b905d654ba0381782f14597d039b789aa9c1d7e095abfd6a",
         "cues": [
           {
@@ -1939,7 +1939,7 @@
         "audioId": "dublin-3",
         "visibleText": "St James’s Gaten panimolle jonotetaan nyt kameroiden kanssa. Asetuin matkalaukun viereen kuvaan ja kohotin leukaa. Kuvaaja tähtäsi harppumerkkiin. Otin askeleen lähemmäs. Ihan vain sommittelun vuoksi.",
         "visibleTextSha256": "35b090c4334a2ed02ef719637ad22bde613a9dbb87251d680b163db36f74dc06",
-        "ttsText": "[curious] St James’s Gaten panimolle jonotetaan nyt kameroiden kanssa. [brightly] Asetuin matkalaukun viereen kuvaan ja kohotin leukaa. [softly] Kuvaaja tähtäsi harppumerkkiin. [mischievously] Otin askeleen lähemmäs. Ihan vain sommittelun vuoksi.",
+        "ttsText": "[curious] St James’s Gaten panimolle jonotetaan nyt kameroiden kanssa. [brightly] Asetuin matkalaukun viereen kuvaan ja kohotin leukaa. [amused] Kuvaaja tähtäsi harppumerkkiin. [mischievously] Otin askeleen lähemmäs. Ihan vain sommittelun vuoksi.",
         "ttsTextSha256": "e8e1e46c1231c358570dd6b80be403109050da1ef06491a41c79f8c73b753104",
         "cues": [
           {
@@ -2032,7 +2032,7 @@
         "audioId": "edinburgh-3",
         "visibleText": "1800-luvun alun lääkäriopiskelijat tutkivat vainajia oppiakseen ihmisen rakennetta. Ruumiita saatiin laillisesti liian vähän, joten varkaille maksettiin. Minä luulin, että hautausmaalla sai olla rauhassa.",
         "visibleTextSha256": "00f398aa358ab3a3b9cdff7e56a98ce805af258e9534d27e095717abbacb9cbd",
-        "ttsText": "[serious] 1800-luvun alun lääkäriopiskelijat tutkivat vainajia oppiakseen ihmisen rakennetta. [softly] Ruumiita saatiin laillisesti liian vähän, joten varkaille maksettiin. [softly] Minä luulin, että hautausmaalla sai olla rauhassa.",
+        "ttsText": "[serious] 1800-luvun alun lääkäriopiskelijat tutkivat vainajia oppiakseen ihmisen rakennetta. Ruumiita saatiin laillisesti liian vähän, joten varkaille maksettiin. [amused] Minä luulin, että hautausmaalla sai olla rauhassa.",
         "ttsTextSha256": "30f069e8513c92aed93885b1fe2b1484c700f50aea05d7cfa5ae445d7941e071",
         "cues": [
           {
@@ -2118,7 +2118,7 @@
         "audioId": "lissabon-3",
         "visibleText": "Lissabonin mäillä talot seisovat kylki kyljessä. Niiden seiniä koristavat värikkäät kaakelit. Lennän punaisten tiilikattojen yli, ja alapuolellani kujat mutkittelevat varjossa. Edessä kimaltaa leveä Tejojoki.",
         "visibleTextSha256": "9782fc69503a840b0330a49eb4625376b2d9f957d238693316b8ca2b06949951",
-        "ttsText": "[curious] Lissabonin mäillä talot seisovat kylki kyljessä. [brightly] Niiden seiniä koristavat värikkäät kaakelit. [warmly] Lennän punaisten tiilikattojen yli, ja alapuolellani kujat mutkittelevat varjossa. [softly] Edessä kimaltaa leveä Tejojoki.",
+        "ttsText": "[curious] Lissabonin mäillä talot seisovat kylki kyljessä. [brightly] Niiden seiniä koristavat värikkäät kaakelit. [warmly] Lennän punaisten tiilikattojen yli, ja alapuolellani kujat mutkittelevat varjossa. [warmly] Edessä kimaltaa leveä Tejojoki.",
         "ttsTextSha256": "7d99e05c783f46e140687de56d6a9e15e7c765b351e6281aef8e6258038bc45c",
         "cues": [
           {
@@ -2211,7 +2211,7 @@
         "audioId": "riika-3",
         "visibleText": "Riian oopperan vieressä majaville tuodaan oksia, jotta puistopuut säästyisivät. Katselin yhden illallista. Minä olen selvästi ollut aivan liian helppo naapuri.",
         "visibleTextSha256": "3561bb8d37ed7db9b0b7ac524247c670177ad00b8a1298d1ed604872aefd93e0",
-        "ttsText": "[curious] Riian oopperan vieressä majaville tuodaan oksia, jotta puistopuut säästyisivät. [softly] Katselin yhden illallista. [mischievously] Minä olen selvästi ollut aivan liian helppo naapuri.",
+        "ttsText": "[curious] Riian oopperan vieressä majaville tuodaan oksia, jotta puistopuut säästyisivät. [amused] Katselin yhden illallista. [mischievously] Minä olen selvästi ollut aivan liian helppo naapuri.",
         "ttsTextSha256": "6adccf5fa99dfc88c31879fa3bf6219db6b684c37fd63f9701d3bf7de4f4f19f",
         "cues": [
           {
@@ -2290,7 +2290,7 @@
         "audioId": "barcelona-3",
         "visibleText": "Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. Niitä voi katsella pesäkamerasta. Minä näin emon palaavan kyyhky kynsissään. Suosittelen kameraa.",
         "visibleTextSha256": "86bcd4a76baf446479e921e67825efb01865c0ce975ce8b701d73673d66a4f31",
-        "ttsText": "[curious] Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. [softly] Niitä voi katsella pesäkamerasta. [serious] Minä näin emon palaavan kyyhky kynsissään. [softly] Suosittelen kameraa.",
+        "ttsText": "[curious] Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. [warmly] Niitä voi katsella pesäkamerasta. [serious] Minä näin emon palaavan kyyhky kynsissään. [amused] Suosittelen kameraa.",
         "ttsTextSha256": "5b564671cd39292db8c839fa5e33e9cbdc039f9b6aacbd001be841aa86d71cee",
         "cues": [
           {
@@ -2369,7 +2369,7 @@
         "audioId": "firenze-3",
         "visibleText": "Firenzessä pääsiäisen ilotulituksen sytyttää kyyhkynmuotoinen raketti. Se kiitää kirkosta vaijeria pitkin! Minä jännitin paluuta. Oli kone tai ei, omia kannustetaan.",
         "visibleTextSha256": "b97b96dadf2d9e86a559720544c1de512d26e216d89d7b2ab3dc9c81de5759a5",
-        "ttsText": "[curious] Firenzessä pääsiäisen ilotulituksen sytyttää kyyhkynmuotoinen raketti. [excited] Se kiitää kirkosta vaijeria pitkin! [softly] Minä jännitin paluuta. [warmly] Oli kone tai ei, omia kannustetaan.",
+        "ttsText": "[curious] Firenzessä pääsiäisen ilotulituksen sytyttää kyyhkynmuotoinen raketti. [excited] Se kiitää kirkosta vaijeria pitkin! [warmly] Minä jännitin paluuta. [warmly] Oli kone tai ei, omia kannustetaan.",
         "ttsTextSha256": "d4e275d05c3317682e0879fb58d9a6c174edb43a05582a345e7bc58e057bbafa",
         "cues": [
           {
@@ -2455,7 +2455,7 @@
         "audioId": "venetsia-3",
         "visibleText": "Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. No, ehkä minä vähän odotin.",
         "visibleTextSha256": "2cbd024d573c4a3aee0900a057d2260ad0056570cbae2f1239cbf44410cf0601",
-        "ttsText": "[curious] Venetsiassa kuljetaan yhä vesibusseilla. [softly] Minä lennän nykyään vähän pidempää reittiä. [warmly] Yhden tutun takia. [excited] Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. [mischievously] No, ehkä minä vähän odotin.",
+        "ttsText": "[curious] Venetsiassa kuljetaan yhä vesibusseilla. [amused] Minä lennän nykyään vähän pidempää reittiä. [warmly] Yhden tutun takia. [excited] Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. [mischievously] No, ehkä minä vähän odotin.",
         "ttsTextSha256": "c0dbf0a471b8f73ca89d134aa37e01b4fa23895ee17ef9beefffe104f2a0914b",
         "cues": [
           {
@@ -2555,7 +2555,7 @@
         "audioId": "marseille-3",
         "visibleText": "Vieux-Portin tunnistan äänestä ja suolasta höyhenissä. Seurasin lokkien kierrosta sataman pöydillä. Yksi nyökkäsi minulle. Työlupa myönnetty, ajattelin — ja pidin silti vähän etäisyyttä sen nokkaan.",
         "visibleTextSha256": "3ad8556ac1e68f70bec57537b64b79afeb8c649660ce65fbb41e11677affd5a3",
-        "ttsText": "[softly] Vieux-Portin tunnistan äänestä ja suolasta höyhenissä. [curious] Seurasin lokkien kierrosta sataman pöydillä. [warmly] Yksi nyökkäsi minulle. [mischievously] Työlupa myönnetty, ajattelin — ja pidin silti vähän etäisyyttä sen nokkaan.",
+        "ttsText": "[warmly] Vieux-Portin tunnistan äänestä ja suolasta höyhenissä. [curious] Seurasin lokkien kierrosta sataman pöydillä. [warmly] Yksi nyökkäsi minulle. [mischievously] Työlupa myönnetty, ajattelin — ja pidin silti vähän etäisyyttä sen nokkaan.",
         "ttsTextSha256": "cc0bc2dfcc7f08f3094b938ac36fa9a2e9cb6e453b88e671323816f5186ebfc8",
         "cues": [
           {
@@ -2734,7 +2734,7 @@
         "audioId": "tampere-3",
         "visibleText": "Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. Minä jäin aidalle kuuntelemaan. Yksi teki lähtöä kolmesti. Minäkin tiesin lopulta hänen putkiremonttinsa hinnan.",
         "visibleTextSha256": "683df4b873f6770c4a87ccd9fe6eaf51ab7befd7a02194873f8ac6e3f2c50367",
-        "ttsText": "[curious] Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. [softly] Minä jäin aidalle kuuntelemaan. [mischievously] Yksi teki lähtöä kolmesti. [warmly] Minäkin tiesin lopulta hänen putkiremonttinsa hinnan.",
+        "ttsText": "[curious] Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. [warmly] Minä jäin aidalle kuuntelemaan. [mischievously] Yksi teki lähtöä kolmesti. [warmly] Minäkin tiesin lopulta hänen putkiremonttinsa hinnan.",
         "ttsTextSha256": "0fa3ac55e6bbaaf5a565405c0520c46bd45401e54437a94a332fbcf4d4c8d6dc",
         "cues": [
           {
@@ -2820,7 +2820,7 @@
         "audioId": "vilna-3",
         "visibleText": "Vilnan Užupisin taiteilijat julistivat kaupunginosansa leikillään tasavallaksi. Sen perustuslaki vapauttaa kissan rakastamasta omistajaansa. Minä etsin lintujen pykälää. Se puuttuu. Minulla olisi lisättävää.",
         "visibleTextSha256": "9bc924a83e9c9aa9f7ce84c5fc1d60aa5ac79771e3a19adb236ea80015c52b7e",
-        "ttsText": "[curious] Vilnan Užupisin taiteilijat julistivat kaupunginosansa leikillään tasavallaksi. [mischievously] Sen perustuslaki vapauttaa kissan rakastamasta omistajaansa. [brightly] Minä etsin lintujen pykälää. [softly] Se puuttuu. [happily] Minulla olisi lisättävää.",
+        "ttsText": "[curious] Vilnan Užupisin taiteilijat julistivat kaupunginosansa leikillään tasavallaksi. [mischievously] Sen perustuslaki vapauttaa kissan rakastamasta omistajaansa. [brightly] Minä etsin lintujen pykälää. [amused] Se puuttuu. [happily] Minulla olisi lisättävää.",
         "ttsTextSha256": "e1c69b572e4c6a851ebd796925483755466b37b8a9ea6264bbec41bddfbe60fc",
         "cues": [
           {
@@ -2913,7 +2913,7 @@
         "audioId": "granada-3",
         "visibleText": "Alhambran puutarhat ovat kukkulalla, mutta vesi ei kiivennyt sinne. Se johdettiin Darrojoesta vielä korkeammalta, yli kuuden kilometrin kanavaa pitkin. Koko matka alamäkeä! Siinä olisi kelvannut lepuuttaa siipiä.",
         "visibleTextSha256": "f3eb2032bfd6b943b42380d5a688f79bd839b9e5676b4874fd8f9b11986b80f9",
-        "ttsText": "[curious] Alhambran puutarhat ovat kukkulalla, mutta vesi ei kiivennyt sinne. [softly] Se johdettiin Darrojoesta vielä korkeammalta, yli kuuden kilometrin kanavaa pitkin. [excited] Koko matka alamäkeä! [warmly] Siinä olisi kelvannut lepuuttaa siipiä.",
+        "ttsText": "[curious] Alhambran puutarhat ovat kukkulalla, mutta vesi ei kiivennyt sinne. [warmly] Se johdettiin Darrojoesta vielä korkeammalta, yli kuuden kilometrin kanavaa pitkin. [excited] Koko matka alamäkeä! [warmly] Siinä olisi kelvannut lepuuttaa siipiä.",
         "ttsTextSha256": "b26e7b7176aba717d1445f5dc56b1303c187000e8b7be92d5b6ccb47718f000a",
         "cues": [
           {
@@ -2999,7 +2999,7 @@
         "audioId": "kiova-3",
         "visibleText": "Kiovan tunnuspuu on hevoskastanja. Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. Minä vein yhden oksanhaaraan risun. Siihen saisi vielä pesän.",
         "visibleTextSha256": "eb7113d19dad7c97283de63e76305bc2435d92661d88c8fb59e8382b4f01b15d",
-        "ttsText": "[curious] Kiovan tunnuspuu on hevoskastanja. [softly] Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. [warmly] Minä vein yhden oksanhaaraan risun. [softly] Siihen saisi vielä pesän.",
+        "ttsText": "[curious] Kiovan tunnuspuu on hevoskastanja. [warmly] Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. [warmly] Minä vein yhden oksanhaaraan risun. [warmly] Siihen saisi vielä pesän.",
         "ttsTextSha256": "47374c4fb116e4fe02ad6f62d32984ed9f469ffb7064226af6871fb6c175bab4",
         "cues": [
           {
@@ -3085,7 +3085,7 @@
         "audioId": "krakova-3",
         "visibleText": "Tuo maapallo on 1500-luvun alusta, jolloin eurooppalaisten tiedot Amerikasta olivat vielä hataria. Krakova on vanha yliopistokaupunki. Minä kuuntelin kahvilan ikkunalla opiskelijoiden väittelyä. Kolme ihmistä, neljä mielipidettä.",
         "visibleTextSha256": "9b2e251741e6b126e01a208f4768fe11196a34921ec8274db3e7b247eaf4223b",
-        "ttsText": "[curious] Tuo maapallo on 1500-luvun alusta, jolloin eurooppalaisten tiedot Amerikasta olivat vielä hataria. [softly] Krakova on vanha yliopistokaupunki. [warmly] Minä kuuntelin kahvilan ikkunalla opiskelijoiden väittelyä. [mischievously] Kolme ihmistä, neljä mielipidettä.",
+        "ttsText": "[curious] Tuo maapallo on 1500-luvun alusta, jolloin eurooppalaisten tiedot Amerikasta olivat vielä hataria. [warmly] Krakova on vanha yliopistokaupunki. [warmly] Minä kuuntelin kahvilan ikkunalla opiskelijoiden väittelyä. [mischievously] Kolme ihmistä, neljä mielipidettä.",
         "ttsTextSha256": "2ff6f7c3b5311c52dd5608da0d381bd02be5b64fa60694bf4c4c387c311c4d98",
         "cues": [
           {
@@ -3171,7 +3171,7 @@
         "audioId": "moskova-3",
         "visibleText": "Moskovan metrossa pronssikoiran kuono on hierottu kiiltäväksi onnen toivossa. Minäkin hipaisin sitä nokallani. En minä muuten, mutta edessä oli pitkä lento.",
         "visibleTextSha256": "b2895f9682e66e68545c2d5711ba96cbdcd8519da16b7f4ff955cbf6bd184921",
-        "ttsText": "[curious] Moskovan metrossa pronssikoiran kuono on hierottu kiiltäväksi onnen toivossa. [mischievously] Minäkin hipaisin sitä nokallani. [softly] En minä muuten, mutta edessä oli pitkä lento.",
+        "ttsText": "[curious] Moskovan metrossa pronssikoiran kuono on hierottu kiiltäväksi onnen toivossa. [mischievously] Minäkin hipaisin sitä nokallani. [amused] En minä muuten, mutta edessä oli pitkä lento.",
         "ttsTextSha256": "971c4c38831964c7a851ecc7c1fd15c536cec0ca6475f78cdf63b577bb614804",
         "cues": [
           {
@@ -3243,7 +3243,7 @@
         "audioId": "odessa-3",
         "visibleText": "Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. Minä tuijotin kirsikoita. Myyjä kysyi, ostanko vai vartioinko. Pörhistin höyheniäni. Vartioin, tietenkin.",
         "visibleTextSha256": "3566a97eceb729b0c15949ddbb4559c71c79250aa44d4d1565f93f6a49630ba7",
-        "ttsText": "[curious] Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. [softly] Minä tuijotin kirsikoita. [mischievously] Myyjä kysyi, ostanko vai vartioinko. [happily] Pörhistin höyheniäni. Vartioin, tietenkin.",
+        "ttsText": "[curious] Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. [amused] Minä tuijotin kirsikoita. [mischievously] Myyjä kysyi, ostanko vai vartioinko. [happily] Pörhistin höyheniäni. Vartioin, tietenkin.",
         "ttsTextSha256": "ecde9f5cccf872577ef3a86b39a6bccc2765c75a1bc684e3b2be8b52473b1aa2",
         "cues": [
           {
@@ -3422,7 +3422,7 @@
         "audioId": "varsova-3",
         "visibleText": "Toisessa maailmansodassa saksalaiset hävittivät Varsovaa talo talolta. Raunioista koottiin tämä kukkula. Nyt täällä kävellään metsäpoluilla, ja puissa pesii lintuja. Kuuntele — tuolla huhuilee sepelkyyhky.",
         "visibleTextSha256": "6107f701ffea15bd593cd6f1ad33568d5e68e7e6da274c85edde186191484de5",
-        "ttsText": "[serious] Toisessa maailmansodassa saksalaiset hävittivät Varsovaa talo talolta. [softly] Raunioista koottiin tämä kukkula. [warmly] Nyt täällä kävellään metsäpoluilla, ja puissa pesii lintuja. [softly] Kuuntele — tuolla huhuilee sepelkyyhky.",
+        "ttsText": "[warmly] Toisessa maailmansodassa saksalaiset hävittivät Varsovaa talo talolta. [warmly] Raunioista koottiin tämä kukkula. [warmly] Nyt täällä kävellään metsäpoluilla, ja puissa pesii lintuja. [warmly] Kuuntele — tuolla huhuilee sepelkyyhky.",
         "ttsTextSha256": "63aef5ecfa8a459c0e2db56e81d75d4a1dc12c88ab3af983a0f5bc22a79eaf78",
         "cues": [
           {
@@ -3501,7 +3501,7 @@
         "audioId": "kreeta-3",
         "visibleText": "Hanian Nikolauksen kirkolla on sekä kellotorni että minareetti, sillä rakennus on ollut välillä moskeija. Aukion kahviloista kantautuu puheensorinaa. Tuon plataanin varjossa voisi viipyä pitkään.",
         "visibleTextSha256": "f0b494c79ae96104d506d79da1e8564efa0de7da9a57ca377c0db7fbae6a10bd",
-        "ttsText": "[curious] Hanian Nikolauksen kirkolla on sekä kellotorni että minareetti, sillä rakennus on ollut välillä moskeija. [warmly] Aukion kahviloista kantautuu puheensorinaa. [softly] Tuon plataanin varjossa voisi viipyä pitkään.",
+        "ttsText": "[curious] Hanian Nikolauksen kirkolla on sekä kellotorni että minareetti, sillä rakennus on ollut välillä moskeija. [warmly] Aukion kahviloista kantautuu puheensorinaa. [warmly] Tuon plataanin varjossa voisi viipyä pitkään.",
         "ttsTextSha256": "4f340a58236501643f3b220908c2f140fbccfaca6caadfc249a63df6bed100a3",
         "cues": [
           {

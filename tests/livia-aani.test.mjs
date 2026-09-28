@@ -47,6 +47,7 @@ import {
   TAGIT, aanitteenTila, ampariKansio, ilmanTageja, kaupunginRepliikit, kokoaManifesti,
   kokoaTuotantokuitti, kirjoitaTuotantokuitti,
   pinoutuvatRepliikit, puhemuoto, repliikit, tauluksi, valitseRepliikit,
+  PULU_KIELLETYT_TAGIT, PULU_EFEKTITAGIT,
 } from '../tools/generoi-pulu.mjs';
 
 /** Ne lähteet, joiden tekstit tulevat js/livia.js:stä. */
@@ -1004,4 +1005,15 @@ test('pulun perustaso on kertojan alapuolella ja yhdessä paikassa', () => {
   assert.ok(LIVIAN_VALIHUOMION_VAIMENNUS < 1);
   const virta = lue('../js/fokusvirta.js');
   assert.match(virta, /const HUUDAHDUKSEN_VAIMENNUS = 0\.7;/);
+});
+
+test('Pulun puhe: ei [softly]/[whispers], enintään yksi tunnetagi per virke (omistaja 28.9.2026)', () => {
+  for (const rivi of repliikit()) {
+    for (const kielletty of PULU_KIELLETYT_TAGIT) assert.ok(!rivi.puhe.includes(kielletty), `${rivi.avain}: ${kielletty}`);
+    for (const virke of rivi.puhe.split(/(?<=[.!?…])\s+(?=\[|[A-ZÅÄÖ])/)) {
+      const tunne = (virke.match(/\[[^\]]+\]/g) ?? []).filter((t) => !PULU_EFEKTITAGIT.includes(t));
+      assert.ok(tunne.length <= 1, `${rivi.avain}: useita tunnetageja virkkeessä "${virke}"`);
+    }
+  }
+  assert.throws(() => puhemuoto('Hei.', { alku: '[softly]' }), /poistettu/);
 });
