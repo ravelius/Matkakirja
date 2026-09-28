@@ -88,12 +88,8 @@ namespace Matkakirja.Natiivi
         {
             kerros = Rakenne.El("mk-himmennys mk-nosto__kerros", ui.Juuri(UiKerros.Valikot));
             kerros.style.display = DisplayStyle.None;
-            kerros.RegisterCallback<PointerDownEvent>(e =>
-            {
-                if (e.target != kerros) return;
-                Debug.Log($"MATKAKIRJA ui nostokortti: sulku himmennyksestä {e.position} (kortti {kortti.worldBound})");
-                Sulje();
-            });
+            // Kohde poimitaan itse (Poimi): vanhentunut kohde kortin kohdalla ei sulje korttia himmennyksestä.
+            kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros && Poimi(e.position, kerros) == kerros) Sulje(); });
             kortti = Rakenne.El("mk-nosto", kerros);
             sisus = new ScrollView(ScrollViewMode.Vertical);
             sisus.AddToClassList("mk-nosto__sisus");
@@ -455,16 +451,23 @@ namespace Matkakirja.Natiivi
             // Painalluksen kohde päätetään alussa: nappi (LISÄÄ, lukijan kaiutin/valikko), kenttä, kuva tai linkki ei sulje korttia,
             // vaikka napin toiminto muuttaa asettelua ja nostosta syntyvä ClickEvent osuu sen jälkeen korttiin (1.0.39-savuke,
             // Laitetestaaja: lukijan napautus sulki kortin; LISÄÄ-napautus sulki kortin FB234D08:lla).
-            alkuValitsee = Valitseva(e.target as VisualElement);
-            // Väliaikainen mittari (1.0.40-lukijabugi): painalluksen kohde ja lukijan tila.
-            {
-                var t = e.target as VisualElement;
-                var j = lukija.Juuri;
-                Debug.Log($"MATKAKIRJA ui nostokortti: painallus {e.position} kohde {t?.GetType().Name} [{string.Join(".", t?.GetClasses() ?? System.Linq.Enumerable.Empty<string>())}] valitsee {alkuValitsee}; "
-                    + $"lukija {j.worldBound} näkyy {j.resolvedStyle.display} {j.resolvedStyle.visibility} poiminta {j.pickingMode} isä {(j.parent == kortti ? "kortti" : j.parent?.GetType().Name)} "
-                    + $"indeksi {kortti.IndexOf(j)}/{kortti.childCount}, sisus {kortti.IndexOf(sisus)}, poimittu {j.panel?.Pick(e.position)?.GetType().Name}");
-            }
+            var kohde = Poimi(e.position, e.target as VisualElement);
+            alkuValitsee = Valitseva(kohde);
+            // 1.0.40 (mitattu FB234D08): UI Toolkit antaa kosketukselle kohteeksi välimuistissa olevan "osoittimen alla" -elementin,
+            // kun kosketus osuu samaan pisteeseen kuin edellinen. Kaiuttimen napautus sai kohteeksi kortin (edellinen kosketus
+            // ennen asettelun muutosta), vaikka pisteessä on nappi: kortti sulkeutui eikä luenta alkanut. Nappi, joka ei saanut
+            // painallusta, painetaan napautuksen lopussa (NapautusKorttiin).
+            ohitettuNappi = null;
+            if (kohde != e.target)
+                for (var v = kohde; v != null && v != kortti; v = v.parent)
+                    if (v is Button b) { if (!(e.target is VisualElement t && (t == b || b.Contains(t)))) ohitettuNappi = b; break; }
         }
+
+        /// <summary>Elementti ruudun kohdassa nyt (paneelin poiminta); ilman paneelia tapahtuman kohde.</summary>
+        VisualElement Poimi(Vector2 paikka, VisualElement varalla) => kortti.panel?.Pick(paikka) ?? varalla;
+
+        /// <summary>Nappi, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
+        Button ohitettuNappi;
 
         bool alkuValitsee;
 
@@ -481,13 +484,20 @@ namespace Matkakirja.Natiivi
         /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
         void NapautusKorttiin(ClickEvent e)
         {
+            var ohitettu = ohitettuNappi;
+            ohitettuNappi = null;
             if (((Vector2)e.position - eleAlku).magnitude >= Napautuskynnys || Time.unscaledTime * 1000f - eleAika > NapautusMs) return;
-            if (alkuValitsee || Valitseva(e.target as VisualElement)) return;
-            var kohde = e.target as VisualElement;
+            var kohde = Poimi(e.position, e.target as VisualElement);
+            if (ohitettu != null && ohitettu.panel != null && (kohde == ohitettu || ohitettu.Contains(kohde)))
+            {
+                Debug.Log($"MATKAKIRJA ui nostokortti: vanhentunut kohde {(e.target as VisualElement)?.GetType().Name}, painetaan {string.Join(".", ohitettu.GetClasses())}");
+                using (var s = NavigationSubmitEvent.GetPooled()) { s.target = ohitettu; ohitettu.SendEvent(s); }
+                return;
+            }
+            if (alkuValitsee || Valitseva(kohde)) return;
             bool pohja = kohde == kortti || kohde == sisus || kohde == sisus.contentContainer || kohde == sisus.contentViewport || kohde is TextElement;
             if (!pohja) return;
             Aanet.PulunTehoste("paper");
-            Debug.Log($"MATKAKIRJA ui nostokortti: sulku napautuksesta kohde {kohde?.GetType().Name} {string.Join(" ", kohde?.GetClasses() ?? System.Linq.Enumerable.Empty<string>())} {e.position}");
             Sulje();
         }
 
