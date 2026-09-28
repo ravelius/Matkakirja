@@ -1076,7 +1076,10 @@ export async function esihaePala(teksti, persoona = 'kertoja', sailio = null) {
  *   tauko(): void,
  *   jatka(): void,
  *   tauolla(): boolean,
+ *   odottaa(): boolean,
  *   siirryKappale(askel: number): void,
+ *   siirryKappaleeseen(kappale: number): void,
+ *   siirryAika(sekunnit: number): void,
  * }|null}
  */
 export function luoPuheSoitin({
@@ -1113,6 +1116,15 @@ export function luoPuheSoitin({
   const palat = []; // { teksti, kappale, alku (merkkikohta kappaleessa) }
   const haut = new Map(); // palaindeksi → Promise<{puskuri, alku, loppu}>
   const aloitusajat = []; // palaindeksi → {alku, loppu} piirin ajassa
+  /*
+   * KELAUS (omistaja 28.9.2026: "-10sek ja +10sek sekä kappale eteen ja
+   * taakse napit kelaukseen"): soitetun palan puheen kesto sekunteina
+   * (palaindeksi → s). Säilyy hyppyjen yli (aloitusajat nollautuu), jotta
+   * −10 s osaa perääntyä edelliseen palaan. `hyppy` on seuraavan
+   * aikataulutettavan palan aloituskohta puheen alusta (s).
+   */
+  const kestot = [];
+  let hyppy = null; // { indeksi, offset }
   const lahteet = new Set(); // aikataulussa olevat source-nodet
   const tila = {
     peruttu: false,
@@ -1355,6 +1367,34 @@ export function luoPuheSoitin({
       ohitus = 0;
     }
     /*
+     * KELAUKSEN ALOITUSKOHTA: ohitetaan `siirto` sekuntia puhetta osien yli
+     * (virran osat odotetaan tarvittaessa). Aikajanan nollakohta siirtyy
+     * saman verran taaksepäin, jolloin soiva kohta on aina nyt − alku.
+     */
+    let siirto = 0;
+    if (hyppy && hyppy.indeksi === indeksi) {
+      siirto = Math.max(0, hyppy.offset);
+      hyppy = null;
+    }
+    let ohitettu = 0;
+    while (siirto - ohitettu > 0.001 && !hiljainen) {
+      if (i >= v.osat.length) {
+        if (v.valmis) break;
+        await odota();
+        if (keskeytyi()) return 'keskeytyi';
+        continue;
+      }
+      const jaljella = v.osat[i].duration - ohitus;
+      if (siirto - ohitettu < jaljella) {
+        ohitus += siirto - ohitettu;
+        ohitettu = siirto;
+        break;
+      }
+      ohitettu += Math.max(0, jaljella);
+      i += 1;
+      ohitus = 0;
+    }
+    /*
      * VIRRAN ALKUVARA: kesken oleva virta aloitetaan hieman myöhemmin kuin
      * valmis pala, jotta seuraavat segmentit ehtivät dekoodautua ennen
      * soittovuoroaan (mitattu 27.9.: ilman varaa kaksi 0,5 s:n katkoa alussa, 0,3 s:llä yksi 0,04–0,27 s:n katko joka toisessa ajossa — xAI:n virta tulee purskeina).
@@ -1365,7 +1405,7 @@ export function luoPuheSoitin({
     verho.gain.linearRampToValueAtTime(1, alkuAika + HAIVYTYS);
     verho.connect(paate());
     verhot.add(verho);
-    aloitusajat[indeksi] = { alku: alkuAika, loppu: Infinity };
+    aloitusajat[indeksi] = { alku: alkuAika - ohitettu, loppu: Infinity };
     if (indeksi === 0 && tila.ekaAani == null && typeof performance !== 'undefined') {
       tila.ekaAani = performance.now() + (alkuAika - piiri.currentTime) * 1000;
     }
@@ -1433,7 +1473,8 @@ export function luoPuheSoitin({
     loppuAika = Math.max(loppuAika, alkuAika + 0.05);
     verho.gain.setValueAtTime(1, Math.max(alkuAika + HAIVYTYS, loppuAika - HAIVYTYS));
     verho.gain.linearRampToValueAtTime(0, loppuAika);
-    aloitusajat[indeksi] = { alku: alkuAika, loppu: loppuAika };
+    aloitusajat[indeksi] = { alku: alkuAika - ohitettu, loppu: loppuAika };
+    kestot[indeksi] = loppuAika - alkuAika + ohitettu;
     return loppuAika;
   };
 
@@ -1567,6 +1608,22 @@ export function luoPuheSoitin({
     else if (!tila.tauolla) aikatauluta();
   };
 
+  /** Hyppy palaan `indeksi`, soitto alkaa `offset` sekuntia puheen alusta. */
+  const hyppaa = (indeksi, offset) => {
+    pysaytaLahteet();
+    aloitusajat.length = 0;
+    vuorossa = indeksi;
+    tila.soiva = -1;
+    seuraavaAlku = 0;
+    hyppy = offset > 0 ? { indeksi, offset } : null;
+    if (tila.tauolla) {
+      tila.tauolla = false;
+      try { piiri.resume?.(); } catch { /* resume epäonnistui */ }
+    }
+    ilmoita();
+    aikatauluta();
+  };
+
   const kaynnista = async () => {
     if (tila.kaynnissa || tila.peruttu) return;
     tila.kaynnissa = true;
@@ -1650,6 +1707,14 @@ export function luoPuheSoitin({
     tauolla() {
       return tila.tauolla;
     },
+    /**
+     * Odottaako luenta ääntä: soittamassa, mutta yhtään palaa ei ole
+     * aikataulussa (ensimmäinen pala tai kelauksen kohde vielä synteesissä).
+     * Lukijan kaiuttimen latausrengas (omistaja 28.9.2026) lukee tämän.
+     */
+    odottaa() {
+      return !tila.peruttu && !tila.tauolla && lahteet.size === 0;
+    },
     /** Progressiivisen soiton mittari: virran myöhästymiset. */
     mittari() {
       /*
@@ -1695,17 +1760,48 @@ export function luoPuheSoitin({
       }
       const indeksi = palat.findIndex((p) => p.kappale === kohde);
       if (indeksi < 0) return; // kohdekappaletta ei (vielä) ole
-      pysaytaLahteet();
-      aloitusajat.length = 0;
-      vuorossa = indeksi;
-      tila.soiva = -1;
-      seuraavaAlku = 0;
-      if (tila.tauolla) {
-        tila.tauolla = false;
-        try { piiri.resume?.(); } catch { /* resume epäonnistui */ }
+      hyppaa(indeksi, 0);
+    },
+    /** Suora hyppy kappaleen alkuun (lukijan valikon kappalelista). */
+    siirryKappaleeseen(kappale) {
+      if (tila.peruttu || !palat.length) return;
+      const indeksi = palat.findIndex((p) => p.kappale === kappale);
+      if (indeksi < 0) return;
+      hyppaa(indeksi, 0);
+    },
+    /**
+     * Kelaus sekunteina (±10 s). Soivan palan kohta on nyt − alku; kohde
+     * voi ylittää palan rajan kumpaankin suuntaan. Taaksepäin käytetään
+     * soitettujen palojen kestoja, eteenpäin valmiiksi saapuneiden palojen
+     * kestoja — tuntematon (vielä saapumaton) pala pysäyttää laskun sen
+     * alkuun ja soitin ohittaa loput sitä mukaa kuin osia tulee.
+     */
+    siirryAika(sekunnit) {
+      if (tila.peruttu || !palat.length || !Number.isFinite(sekunnit)) return;
+      let indeksi = tila.soiva >= 0 ? tila.soiva : Math.min(vuorossa, palat.length - 1);
+      const a = aloitusajat[indeksi];
+      const kohta = a ? Math.max(0, Math.min(piiri.currentTime, a.loppu) - a.alku) : 0;
+      let tavoite = kohta + sekunnit;
+      const kestoNyt = (i) => {
+        if (Number.isFinite(kestot[i])) return kestot[i];
+        const v = haut.get(i);
+        return v?.valmis && v.osat.length ? v.osat.reduce((s, o) => s + o.duration, 0) : null;
+      };
+      while (tavoite < 0 && indeksi > 0) {
+        const k = kestoNyt(indeksi - 1);
+        if (k == null) { tavoite = 0; break; }
+        indeksi -= 1;
+        tavoite += k;
       }
-      ilmoita();
-      aikatauluta();
+      tavoite = Math.max(0, tavoite);
+      for (;;) {
+        const k = kestoNyt(indeksi);
+        if (k == null || tavoite < k - 0.05) break;
+        if (indeksi >= palat.length - 1) { tavoite = Math.max(0, k - 0.3); break; }
+        tavoite -= k;
+        indeksi += 1;
+      }
+      hyppaa(indeksi, tavoite);
     },
   };
 }
