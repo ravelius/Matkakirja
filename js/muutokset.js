@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2360, teksti: 'v2357: Ihmekuvan alla lyhyt kuvateksti, pitkä s… (#3557)' },
   { v: 2359, teksti: 'v2354: Pöllön järjestelmäkehote välimuistiin (#3547)' },
   { v: 2358, teksti: 'v2354: Pulu vastaa puheella saneltuun kysymykse… (#3546)' },
   { v: 2357, teksti: 'v2356: Pulun äänikeskustelun koe myös natiiviin (#3553)' },
