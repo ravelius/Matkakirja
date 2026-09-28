@@ -8983,3 +8983,7 @@ Omistaja 28.9. klo 23.01 webin maakuntatilan kaappauksella (iPad, Keski-Makedoni
 ## PÄÄTÖS: ASTRO-TAULU AINA PULUSTA; MININOSTO NOSTONVÄRISEKSI (28.9.2026 klo 23.03)
 
 28.9. klo 23.03. Omistaja sanatarkasti: "mininosto saisi olla saman värinen kuin nosto ja myös ilman kehystä" → Siirtoseppä samaan maakuntanosto-erään. Pelikoodarin astro-taulu 1ea1b4510 (Minne katsotaan? Maapallo / ISS:n rinnalla / ISS:n sisälle / Astronauttien kuvat; iPhone+iPad) omistajalle. Päätoimittajan päätökset: valokuvanäkymänkin minipulu avaa taulun (omistaja: 'aina esille napauttamalla pulua'), chat pieneksi 'Kysy Pululta' -linkiksi taulun alareunaan; Oma sijainti ISS-paneelissa, ei taulussa; jos Livia ei vielä pelissä, linssin kulmaan pieni 'Näkymät'-nappi. [softly]-koe (Helsinki [deadpan], Ljubljana [wistfully] koko virkkeelle; [softly] 37/75 repliikissä) omistajan valittavana.
+
+## KORJAUS: MAAKUNTANOSTON KAAPPAUS ON NATIIVISTA (28.9.2026 klo 23.09)
+
+Päätoimittaja 28.9. klo 23.09: 23.01-kirjauksen kaappaus (maakuntanosto-isommaksi-web.png) on natiivista (iPad), ei webistä — Siirtoseppä huomasi, että pikkukuvallinen mininosto on vain natiivissa. Nostoikkuna muiden nostojen kokoon, kuva kokoruudulle, mininosto isommaksi + nostonvärinen ilman kehystä → Natiivi-UI:n maakuntatila-erään. Siirtoseppä tekee webiin kohdat 1–2 vain, jos webin maakuntanosto on samalla tavalla pienempi tai kuvaa ei voi suurentaa.
