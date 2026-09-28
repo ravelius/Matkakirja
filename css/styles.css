@@ -13144,6 +13144,32 @@ button.lukija-valikkonappi[aria-expanded="true"] { color: #46331f; }
 
 button.lukija-valikkonappi .viiva-ikoni svg { width: 1.1rem; height: 1.1rem; }
 
+/*
+ * LATAUSRENGAS (omistaja 28.9.2026): kun luenta on pyydetty mutta ääntä vasta
+ * generoidaan, kaiuttimen ympärillä pyörii hento kaari (js/lukija.js
+ * seuraaLatausta, luokka .lataa 250 ms:n viiveellä). Kaari elää kuvakkeen
+ * sisällä, jottei napin omaa asemointia (absoluuttinen/rivissä) muuteta.
+ */
+button.lukija-nappi .icon-glyph { position: relative; }
+button.lukija-nappi .icon-glyph::after {
+  content: '';
+  position: absolute;
+  inset: -0.28rem;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+button.lukija-nappi.lukee .icon-glyph::after { animation: lukija-lataus 0.9s linear infinite; }
+button.lukija-nappi.lataa .icon-glyph::after { opacity: 0.55; }
+@keyframes lukija-lataus { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  button.lukija-nappi.lukee .icon-glyph::after { animation-duration: 2.4s; }
+}
+
 /* Tekstirivin pari (nähtävyysjutun otsikko): kaiutin ja valikkonappi rivittyvät yhdessä. */
 .lukija-pari {
   display: inline-flex;
