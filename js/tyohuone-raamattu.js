@@ -1133,16 +1133,6 @@ export const RAAMATTU = {
         + 'yhtenaisesta tyylikirjastosta ... Mieti kokonaisuus '
         + 'tarkkaan") — toteutus erissä',
       kohdat: [
-        'PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN (omistaja 28.9.2026, '
-          + 'sanatarkasti astrolinssin selitteestä: "pitää pienentää tuo selittelen '
-          + 'palkki kun se on Pienennetty. Tee siitä yleinen tapa. Se on jo '
-          + 'matkakirjassa. Eli animoitu pienennys mahdollisimman tiiviiksi."): '
-          + 'kaikki pienennettävät selitteet, inforuudut, palkit ja paneelit kutistuvat '
-          + 'pienennettäessä pehmeällä animaatiolla sisältönsä kokoisiksi eivätkä jätä '
-          + 'tyhjää tilaa (ei ✕:ään tai avatun leveyteen venyvää palkkia); mallina '
-          + 'Matkakirjan pienennys. Koskee kaikkia linssejä, webiä ja natiivia; '
-          + 'kumoaa astrolinssin säännön "pienennetty inforuutu saman levyinen kuin '
-          + 'avattu".',
         'KAIKKI LIIKE ANIMOIDAAN PEHMEASTI (omistaja 3.9.2026, '
           + 'sanatarkasti: "kaikki kohdat pelissa pyritaan animoimaan ja '
           + 'niissa kaytetaan naita pehmeita kiihdytyksia ja jarrutuksia. '
@@ -2589,8 +2579,8 @@ export const RAAMATTU = {
           + 'kuvan päällä vasemmassa yläkulmassa avautuu pienennettynä otsikkoriviksi '
           + '(kohteen nimi – maa), väkänen laajentaa lisätietoihin (aineisto, aika, '
           + 'paikka, lisenssi, lähde), selite pienenee kun kuvaa napautetaan, '
-          + 'panoroidaan tai zoomataan; pienennetty inforuutu kutistuu animoiden '
-          + 'tekstinsä levyiseksi (Arkkikirjasto: PIENENNETTY = MAHDOLLISIMMAN TIIVIS; avatun katto min(46 %, 560 px)); harmaa pyöreä X oikeassa yläkulmassa; '
+          + 'panoroidaan tai zoomataan; pienennetty inforuutu saman levyinen kuin '
+          + 'avattu (katto min(46 %, 560 px)); harmaa pyöreä X oikeassa yläkulmassa; '
           + 'pienoiskuvat kelluvat vasemmassa alakulmassa. PULU: minipulu ilman '
           + 'ympyrää, astronautin kypärä ja avaruusleijunta (Codexin toimitus 20.9.), '
           + 'teksti tummalla pohjalla, valmiit kysymykset vierittyvät pois, '
