@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2352, teksti: 'v2349: Karttalaatat eivät jää aukoiksi — pallo… (#3516)' },
+  { v: 2351, teksti: 'UKR: pitkä-luonnehdinta + pulu kaikille 25 maak… (#3525)' },
   { v: 2350, teksti: 'CZE+HRV: korjaa pitkä-tekstien ääni Livian nyky… (#3524)' },
   { v: 2349, teksti: 'Poltto: ajo ilman nosto-/nimiöshardeja kantaa ä… (#3521)' },
   { v: 2348, teksti: 'ROU: pitkä-luonnehdinta + pulu kaikille 42 maak… (#3514)' },
