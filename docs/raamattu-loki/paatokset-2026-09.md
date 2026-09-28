@@ -8531,3 +8531,7 @@ Omistaja 28.9. TF 1.0.34 -kuvakaappauksella (Ateena) sanatarkasti: "Nykyisessä 
 ## OMISTAJA: NATIIVIN NOSTOSSA KAIUTIN EI NAY AVATESSA (VIERITYS TARVITAAN) (28.9.2026 klo 09.55)
 
 Omistaja 28.9. TF 1.0.34 (Korintin kanava) sanatarkasti: "Nosto myös aukeaa tähän näkymään, missä ei näy vielä kaiutin kuvaa, vaan käyttäjän pitää vierittää lappua hieman alaspäin, jotta se kaiutin tulee näkyviin. Onko tämä korjaus jo tulossa?" Ei ollut jonossa. Natiivi-UI: luennan napit otsikkoriville (web on malli) striimilukijan kahden napin natiiviversion yhteydessa, tai heti erillisena jos webmalli viivastyy.
+
+## OMISTAJA: STRIIMILUKIJAN KAIUTTIMEEN LATAUSANIMAATIO AANEN GENEROINNIN AJAKSI (28.9.2026 klo 09.56)
+
+Omistaja 28.9. sanatarkasti: "Striimin lukijan kaiuttimeen voisi tehdä animaation siksi ajaksi, kun odotellaan, että ääni saadaan generoitua. Kaiuttimen päällä voisi silloin pyöriä pieni ympyräanimaatio tai vastaava sopiva." Pelikoodari (web) striimilukijan valikkoeraan: hento pyoriva rengas kaiuttimen paalla kunnes aani alkaa (nakyy vasta ~250 ms viiveen jalkeen), vaihtuu VU-mittariin; natiivi Natiivi-UI:lta web mallina.
