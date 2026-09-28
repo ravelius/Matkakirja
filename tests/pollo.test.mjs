@@ -1340,6 +1340,28 @@ test('luennalle annetaan vain valmiit virkkeet', () => {
   assert.equal(luettavaRaja('Valmis virke.'), 'Valmis virke.'.length);
 });
 
+test('ensimmäinen pala lähtee ennen virkkeen loppua: tauko ≥ 3 sanan jälkeen tai 8 sanaa (28.9.2026)', () => {
+  const alku = { alku: true };
+  // Virkkeen raja voittaa aina.
+  assert.equal(luettavaRaja('Tuota niin. Pariisi on', alku), 'Tuota niin. '.length);
+  // Pilkku, jota ennen on ≥ 3 sanaa ja jonka perässä tyhjä.
+  const pilkku = 'Eiffel-torni rakennettiin vuonna 1889, koska Pariisi halusi';
+  assert.equal(pilkku.slice(0, luettavaRaja(pilkku, alku)), 'Eiffel-torni rakennettiin vuonna 1889, ');
+  // Liian aikainen pilkku ei kelpaa; ajatusviiva omana sananaan kelpaa.
+  const viiva = 'No, Pariisi on kaupunki – ja kuinka';
+  assert.equal(viiva.slice(0, luettavaRaja(viiva, alku)), 'No, Pariisi on kaupunki – ');
+  // Kahdeksan kokonaista sanaa; puolikas sana (ei tyhjää perässä) ei lähde.
+  const pitka = 'Pariisi on ollut vuosisatojen ajan taiteilijoiden ja kirjailijoiden koti';
+  assert.equal(pitka.slice(0, luettavaRaja(pitka, alku)), 'Pariisi on ollut vuosisatojen ajan taiteilijoiden ja kirjailijoiden ');
+  assert.equal(luettavaRaja('Pariisi on ollut vuosisatojen ajan taiteilijoiden ja kirjail', alku), 0);
+  // Irrallinen viiva ei ole sana: seitsemän sanaa + viiva ei vielä riitä kahdeksaan.
+  assert.equal(luettavaRaja('yksi kaksi – kolme neljä viisi kuusi seitsemän kah', alku), 0);
+  // Ilman alku-lippua sääntö on ennallaan (vain virkkeet).
+  assert.equal(luettavaRaja(pilkku), 0);
+  // Avoin [[ katkaisee myös ensimmäisen palan.
+  assert.equal(luettavaRaja('Siellä asui [[Wolfgang Amadeus Mozart ja muita', alku), 0);
+});
+
 test('avoin käsitemerkintä pidättää luennan sulkuun asti', () => {
   // "[[Wolfgang Amadeus" voi jatkua seuraavassa palassa: sulkeita ei saa
   // koskaan kuulua, joten koko avoin osa jää odottamaan.
@@ -2915,7 +2937,32 @@ test('lukijaäänen rajat: päivä 400 000 mrk/IP, kuukausi 6 000 000 (27.9.2026
   assert.equal(tarkistaPuheRajat({ paiva: 400000, kuukausi: 0 }).syy, 'paivaraja');
 });
 
-test('järjestelmäkehote välimuistiin: yksi tekstilohko cache_control ephemeral (28.9.2026)', () => {
-  const lahde = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
-  assert.match(lahde, /system: \[\{ type: 'text', text: jarjestelma, cache_control: \{ type: 'ephemeral' \} \}\]/);
+test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimuistirajan jälkeen (28.9.2026)', async () => {
+  const { default: worker, LUETTAVAN_ALKU } = await import('../tools/pollo/worker.js');
+  const env = { ANTHROPIC_API_KEY: 'testiavain', POLLO_ORIGINIT: 'https://matkakirja.app' };
+  const rungot = [];
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async (_osoite, asetukset) => {
+    rungot.push(JSON.parse(asetukset.body));
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Tuota niin. Pariisi on kaupunki.' }] }),
+      { status: 200, headers: { 'content-type': 'application/json' } });
+  };
+  try {
+    for (const runko of [{ kysymys: 'Mikä on Pariisi?' }, { kysymys: 'Mikä on Pariisi?', luetaan: 1 }]) {
+      const v = await worker.fetch(new Request('https://pollo.example/', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7', origin: 'https://matkakirja.app' },
+        body: JSON.stringify(runko),
+      }), env, {});
+      assert.equal(v.status, 200);
+    }
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+  const [kirjoitettu, luettava] = rungot.map((r) => r.system);
+  assert.equal(kirjoitettu.length, 1, 'kirjoitettu: yksi lohko kuten ennen');
+  assert.deepEqual(kirjoitettu[0].cache_control, { type: 'ephemeral' });
+  // Välimuistissa oleva etuliite tavu tavulta sama; alkuohje omana lohkonaan sen jälkeen.
+  assert.deepEqual(luettava[0], kirjoitettu[0]);
+  assert.deepEqual(luettava[1], { type: 'text', text: LUETTAVAN_ALKU });
 });
