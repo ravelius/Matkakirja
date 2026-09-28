@@ -432,7 +432,14 @@ body.satelliitti-kuva-auki .satelliitti-linssikehys { display: none; }
   z-index: 47;
   display: flex;
   flex-direction: column;
-  background: #040907;
+  /*
+   * LÄPIKUULTAVA (kuvaselain, omistaja 27.9.2026 klo 23.5x: *"kuvan
+   * taustalla voisi näkyä himmeällä maapallo siltä kohtaa mistä kuva
+   * on"*). Kamera liukuu kohteen ylle (satelliitti-avaruus.js
+   * katsoKohteeseen), ja pallo hohtaa 0,3:n läpi kuvan ympärillä kuin
+   * ikkunasta. Sama 0,7 kuin natiivin .mk-astrokuva; ennen #040907.
+   */
+  background: rgba(4, 9, 7, 0.7);
   color: #dff6e8;
   font-family: var(--font-luku, system-ui), system-ui, sans-serif;
   /* Alapalkin napit ja nauha piirtyvät kuvan päälle (position: absolute). */
@@ -796,6 +803,57 @@ body.satelliitti-kuva-auki .satelliitti-linssikehys { display: none; }
   touch-action: pan-x;
 }
 .satelliitti-nauha[hidden] { display: none; }
+
+/*
+ * ‹ › ALHAALLA KESKELLÄ (kuvaselain): viereinen kohde kartalla. Samat
+ * pienet lasinapit kuin väkänen (natiivi .mk-astrokuva__kohdenappi,
+ * 38 px); pikkukuvat (vasen ala, enintään 2) ja minipulu (oikea ala)
+ * eivät ulotu keskelle.
+ */
+.satelliitti-kohteet {
+  position: absolute;
+  left: 50%;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 5;
+  display: flex;
+  gap: 14px;
+  transform: translateX(-50%);
+}
+.satelliitti-kohteet[hidden] { display: none; }
+
+.satelliitti-kohdenappi {
+  width: 38px;
+  height: 38px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0 0 3px;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 255, 168, 0.35);
+  background: rgba(6, 13, 10, 0.6);
+  color: #eafff3;
+  font: inherit;
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.satelliitti-kohdenappi:active { background: rgba(93, 255, 168, 0.22); }
+
+/*
+ * NIMI KIRKASTUU KOHTEEN VAIHTUESSA (Fablen hyväksyntä 28.9.2026): kelattu
+ * nimirivi on himmeä (0,7), joten selaimella vaihtunut kohde näkyy nimen
+ * lyhyenä kirkastumisena, joka hiipuu takaisin 1,2 s:ssa
+ * (NIMEN_KIRKASTUS_MS). Ei uutta pintaa eikä tekstiä.
+ */
+.satelliitti-selite.satelliitti-selite-uusi .satelliitti-selite-otsikko {
+  animation: satelliitti-nimi-kirkastuu 1200ms ease-out;
+}
+@keyframes satelliitti-nimi-kirkastuu {
+  from { opacity: 1; text-shadow: 0 0 10px rgba(93, 255, 168, 0.85); }
+}
 
 .satelliitti-pikku {
   flex: 0 0 auto;
@@ -1195,6 +1253,7 @@ button.satelliitti-pulunappi:focus-visible {
   .satelliitti-kuva { transition: none; }
   .satelliitti-selite-runko { transition: none; }
   .satelliitti-vakanen { transition: none; }
+  .satelliitti-selite.satelliitti-selite-uusi .satelliitti-selite-otsikko { animation: none; }
 }
 
 /*

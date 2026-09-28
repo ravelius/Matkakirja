@@ -437,6 +437,8 @@ export const ZOOMIN_KAUIN = 1.3;
 
 /** Avausajon kesto (ms); liikkeenvähennyksellä hyppy. */
 export const AVAUSAJON_MS = 900;
+/** Kameran liuku valokuvan kohteen ylle (ms), natiivi KuvaanAjoS 0,9 s. */
+export const KUVAN_AJON_MS = 900;
 /**
  * Sormiliu'un naulaus sulkiessa (ms). Pallon oma liuku (js/pallo.js
  * asennaPallonEleet) jatkaa kirjoittamista kameraan sormen irrottua,
@@ -3164,6 +3166,30 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     mittaaPinta,
     /** Yksi kehys väkisin (linssi kutsuu, kun pisteet eivät näy). */
     pakotaKehys: () => kehysvahti.pakota(),
+    /*
+     * ── PALLO KUVAN TAKANA (kuvaselain, omistaja 27.9.2026 klo 23.5x) ──
+     *
+     * *"kuvan taustalla voisi näkyä himmeällä maapallo siltä kohtaa mistä
+     * kuva on"*. Valokuvan tausta on läpikuultava, ja kamera liukuu
+     * KUVAN_AJON_MS:ssa kohteen ylle nykyisellä korkeudella, kuitenkin
+     * enintään lepokorkeudella (natiivi AstronauttiLinssi.AvaaKohde:
+     * min(korkeus, avaus · 0,72) = web lepoAlt). Seuranta ja avausajo
+     * päättyvät kuten pelaajan otteesta — muuten ne kirjoittaisivat
+     * kameraa liu'un päälle.
+     */
+    katsoKohteeseen: (lat, lon) => {
+      if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;
+      lopetaSeuranta();
+      paataAvausajo();
+      if (ohjaimet) ohjaimet.autoRotate = false;
+      lauta?.kamera?.pysaytaKameraAjo?.();
+      const nyt = pallo.pointOfView?.()?.altitude ?? lepoAlt;
+      const korkeus = lepoAlt > 0 ? Math.min(nyt, lepoAlt) : nyt;
+      pallo.pointOfView({ lat, lng: lon, altitude: korkeus }, reduced ? 0 : KUVAN_AJON_MS);
+      omaKorkeus = korkeus;
+      lauta?.heraa?.();
+      return true;
+    },
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
     asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),
     /*
