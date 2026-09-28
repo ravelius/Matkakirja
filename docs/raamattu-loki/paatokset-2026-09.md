@@ -8487,3 +8487,7 @@ Omistaja v3d-videosta kortilla 28.9. sanatarkasti: "Muutetaan vielä vähän. En
 ## OMISTAJA: ALOITUSLENNON ERKANEMINEN — ENSIN PAKITUS, KORKEUDELLE OMA S-KAYRA, LAHIKOHTA ASTEEN LAHEMPANA (28.9.2026 klo 09.20)
 
 Omistaja 28.9. sanatarkasti: "Pieni tarkennus. Siinä vaiheessa, kun kamera lähtee erkanemaan lentokoneesta, se voisi ensin pakittaa vain taaksepäin, mutta ei muuttaisi korkeutta, ja sen jälkeen korkeuskin alkaisi muuttumaan. Ja tämä niin, että kun kamera pakittaa taaksepäin, korkeus kyllä muuttuu, mutta todella todella vähän, ja sitten se korkeudenmuutos alkaa kiihtymään, ja loppupisteessä se taas alkaa myös hidastumaan, mutta ei lopu myöskään missään kohdassa. Eli tällä tavalla S-kurvi myös korkeuteen. Ja kamera voisi mennä vielä asteen lähemmäs lentokonetta siinä kohdassa, kun se käy lähellä." Natiivisepalle v3e:hen.
+
+## OMISTAJA: ALOITUSLENTOON SIIPI- JA MOOTTORIVANA SEKA LINNUT (LOPPUKOHTAUS) (28.9.2026 klo 09.20)
+
+Omistaja 28.9. sanatarkasti: "Ja voisiko lentokoneen siivistä lähteä ilma- tai pölyvana ja moottorista myös? Ja onko mahdollista animoida muutamia lintuja näkyviin eri kohtiin, kun kamera lentää sekä lähellä että kaukana? Tai ehkä riittäisi, että siinä loppukohtauksessa, kun kamera on jo aika ylhäällä Atenan päällä, niin silloin muutama lintu lentäisi diakonaalisesti näytön poikki." Natiivisepalle v3e:hen: hento haipyva vana siivenkarjista ja moottorista, suosituksena muutama lintu vinottain ruudun poikki loppukohtauksessa (Linssisepan elavien elementtien lintumalli, jos valmis).
