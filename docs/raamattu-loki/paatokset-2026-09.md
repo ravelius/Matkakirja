@@ -8463,3 +8463,7 @@ Siirtosepan E2E-offline Tanska + Kroatia (BUILD 34, v257): lataus ok; maasto puu
 ## OMISTAJA: PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN — YLEINEN TAPA KAIKKIIN LINSSEIHIN (28.9.2026 klo 08.01)
 
 Omistaja 28.9. aamulla astrolinssin kuvaselaimen kuvaparista sanatarkasti: "Astro Linssissä pitää pienentää tuo selittelen palkki kun se on Pienennetty. Tee siitä yleinen tapa. Se on jo matkakirjassa. Eli animoitu pienennys mahdollisimman tiiviiksi. Saatko kiinni?" Tulkinta: pienennetty selite (esim. 'Istanbul — Turkki') venyy nyt ✕:ään asti; jatkossa se ja kaikki pienennettavat selitteet/inforuudut/palkit kutistuvat pehmealla animaatiolla sisaltonsa kokoisiksi, mallina Matkakirjan pienennys; web ja natiivi. Raamattu: Arkkikirjasto uusi kohta + astrolinssin vanha 'saman levyinen kuin avattu' kumottu. Pelikoodari (web, kaikki linssit, inventaario) → Linssiseppa + Natiivi-UI (natiivi web mallina).
+
+## OMISTAJA: ALOITUSLENNON LOPPULASKEUTUMINEN KUVATAAN YLHAALTA (NYT KUIN POMMI ISKISI) (28.9.2026 klo 08.11)
+
+Omistaja 28.9. aamulla sanatarkasti: "Tuo loppu laskeutuminen kannattaa kuvata ylhäältä, nyt näyttää kun joku pommi iskisi". Yhdessa klo 07.45 palautteiden kanssa (3D pois lennosta, kamera selvasti kauempana, kone pienempi) → Natiivisepan v3d: loppulasku ylhaalta, pehmea liuku perille, ei sivuviistoa syoksya. v3c (98e3f4a3: terava saapuminen, ohitus maan paalla) ei mennyt omistajalle, koska palautteet puuttuivat.
