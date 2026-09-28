@@ -553,11 +553,90 @@ HAMARA_RUNKO = (
     "// Base map tone (owner 27.9.2026 17.2x, Kartta/Pohjasavy.cs): pohjaSavy.x = contrast change around the paper tone 0.78\n"
     "// (0 = as before, -0.3 = softer), pohjaSavy.y = black lift towards white 0..1 ('milky'); in sRGB space.\n"
     "float3 pv = vari.rgb;\n"
-    "if (pohjaSavy.x != 0.0 || pohjaSavy.y != 0.0)\n"
+    "bool savyOn = pohjaSavy.x != 0.0 || pohjaSavy.y != 0.0;\n"
+    "bool patinaOn = pohjaRae.x > 0.0 || pohjaPatina.x > 0.0 || pohjaPatina.y > 0.0 || pohjaPatina.z > 0.0;\n"
+    "if (savyOn || patinaOn)\n"
     "{\n"
     "    float3 sv = pow(max(pv, 1e-6), 0.4545);\n"
-    "    sv = (sv - 0.78) * (1.0 + pohjaSavy.x) + 0.78;   // pivot at the parchment tone: softer darks, paper unchanged\n"
-    "    sv = sv + saturate(pohjaSavy.y) * (1.0 - sv);\n"
+    "    if (savyOn)\n"
+    "    {\n"
+    "        sv = (sv - 0.78) * (1.0 + pohjaSavy.x) + 0.78;   // pivot at the parchment tone: softer darks, paper unchanged\n"
+    "        sv = sv + saturate(pohjaSavy.y) * (1.0 - sv);\n"
+    "    }\n"
+    "    if (patinaOn)\n"
+    "    {\n"
+    "        // GRAIN AND PATINA (owner 27.9.2026 23.4x via Fable, Kartta/Pohjapatina.cs): preview of the burn's paper passes\n"
+    "        // (tools/patina.mjs: r *= k, g *= k (1 - 0.35 l), b *= k (1 - l) in sRGB) on top of the burnt tiles. Static and\n"
+    "        // bound to the map surface (pn = geocentric direction), never animated: resting frames stay identical.\n"
+    "        float3 pn = normalize(pos - keski.xyz);\n"
+    "        float kk = 1.0, ll = 0.0;\n"
+    "        // RAE: per-pixel grain +-0.08 v and a 2.4-pixel nub +-0.06 v (PAPERI rae/raeKarkea), cell = pixel footprint x size\n"
+    "        // (pohjaRae.y px); two power-of-two octaves cross-faded so zooming never slides the grain.\n"
+    "        if (pohjaRae.x > 0.0)\n"
+    "        {\n"
+    "            float jalki = max(max(length(ddx(pn)), length(ddy(pn))), 1e-9);\n"
+    "            float rL = log2(jalki * max(0.5, pohjaRae.y));\n"
+    "            float rB = floor(rL), rT = rL - rB;\n"
+    "            float g[2], nub[2];\n"
+    "            [unroll] for (int o = 0; o < 2; o++)\n"
+    "            {\n"
+    "                float3 q = pn / exp2(rB + o);\n"
+    "                float3 h3 = frac(floor(q) * 0.1031 + 0.37 * o);\n"
+    "                h3 += dot(h3, h3.zyx + 31.32);\n"
+    "                g[o] = frac((h3.x + h3.y) * h3.z) - 0.5;\n"
+    "                float3 qk = q / 2.4, i0 = floor(qk), f = frac(qk), u = f * f * (3.0 - 2.0 * f);\n"
+    "                float vn = 0.0;\n"
+    "                [unroll] for (int c = 0; c < 8; c++)\n"
+    "                {\n"
+    "                    float3 d = float3(c & 1, (c >> 1) & 1, (c >> 2) & 1);\n"
+    "                    float3 p3 = frac((i0 + d) * 0.1031 + 0.71 * o);\n"
+    "                    p3 += dot(p3, p3.zyx + 31.32);\n"
+    "                    float3 w = lerp(1.0 - u, u, d);\n"
+    "                    vn += frac((p3.x + p3.y) * p3.z) * w.x * w.y * w.z;\n"
+    "                }\n"
+    "                nub[o] = vn - 0.5;\n"
+    "            }\n"
+    "            float norm = rsqrt((1.0 - rT) * (1.0 - rT) + rT * rT);   // cross-fade keeps the contrast\n"
+    "            float v = saturate(pohjaRae.x);\n"
+    "            kk += (lerp(g[0], g[1], rT) * 0.08 + lerp(nub[0], nub[1], rT) * 0.06) * norm * v;\n"
+    "        }\n"
+    "        // TAHRAT: aging blotches in world coordinates (IKAANTYMINEN: 3-octave value noise, 7.8 deg = 870 km base cell,\n"
+    "        // darker and warmer where positive), strength 0.15 x slider (burn now 0.055).\n"
+    "        if (pohjaPatina.x > 0.0)\n"
+    "        {\n"
+    "            float fb = 0.0, amp = 1.0, sum = 0.0;\n"
+    "            [unroll] for (int o = 0; o < 3; o++)\n"
+    "            {\n"
+    "                float3 qk = pn / (0.136 * exp2(-o)), i0 = floor(qk), f = frac(qk), u = f * f * (3.0 - 2.0 * f);\n"
+    "                float vn = 0.0;\n"
+    "                [unroll] for (int c = 0; c < 8; c++)\n"
+    "                {\n"
+    "                    float3 d = float3(c & 1, (c >> 1) & 1, (c >> 2) & 1);\n"
+    "                    float3 p3 = frac((i0 + d) * 0.1031 + 0.53 * o + 0.19);\n"
+    "                    p3 += dot(p3, p3.zyx + 31.32);\n"
+    "                    float3 w = lerp(1.0 - u, u, d);\n"
+    "                    vn += frac((p3.x + p3.y) * p3.z) * w.x * w.y * w.z;\n"
+    "                }\n"
+    "                fb += amp * vn; sum += amp; amp *= 0.5;\n"
+    "            }\n"
+    "            float laikku = fb / sum - 0.5, tv = 0.15 * saturate(pohjaPatina.x);\n"
+    "            kk -= tv * laikku;\n"
+    "            ll += tv * 0.40 * max(0.0, laikku);\n"
+    "        }\n"
+    "        // KELLASTUMINEN: yellowing (warmth) and fading towards the parchment white.\n"
+    "        float ke = saturate(pohjaPatina.y);\n"
+    "        sv = lerp(sv, float3(0.98, 0.95, 0.85), 0.25 * ke);\n"
+    "        ll += 0.30 * ke;\n"
+    "        // REUNATUMMENNUS: screen vignette (VINJETTI: exponent 2.4, warmth 0.4), strength 0.35 x slider.\n"
+    "        if (pohjaPatina.z > 0.0)\n"
+    "        {\n"
+    "            float rr = length((ruutu.xy - 0.5) * 2.0) * 0.70710678;\n"
+    "            float vv = pow(saturate(rr), 2.4) * 0.35 * saturate(pohjaPatina.z);\n"
+    "            kk -= vv;\n"
+    "            ll += vv * 0.4;\n"
+    "        }\n"
+    "        sv = float3(sv.r * kk, sv.g * kk * (1.0 - 0.35 * ll), sv.b * kk * (1.0 - ll));\n"
+    "    }\n"
     "    pv = pow(saturate(sv), 2.2);\n"
     "}\n"
     "variOut = pv * (1.0 - saturate(tummuus)); emisOut = emis;\n"
@@ -634,6 +713,10 @@ ham_slotit += [slotti("Vector4MaterialSlot", 15, "keski", 0, v4()), slotti("Vect
                slotti("Vector1MaterialSlot", 21, "keilaHamaryys", 0, 0.0)]
 # Pohjan sävy (27.9.2026): 22 = _pohjaSavy (x kontrastin muutos, y mustan nosto; 0 = ennallaan).
 ham_slotit.append(slotti("Vector4MaterialSlot", 22, "pohjaSavy", 0, v4()))
+# Rae ja patina (28.9.2026): 23 = _pohjaRae (x voimakkuus, y koko px), 24 = _pohjaPatina (x tahrat, y kellastuminen,
+# z reunatummennus), 25 = ruudun paikka (Screen Position, Default 0–1) reunatummennukselle. 0 = ennallaan.
+ham_slotit += [slotti("Vector4MaterialSlot", 23, "pohjaRae", 0, v4()), slotti("Vector4MaterialSlot", 24, "pohjaPatina", 0, v4()),
+               slotti("Vector4MaterialSlot", 25, "ruutu", 0, v4())]
 for s in ham_slotit: s["m_StageCapability"] = 2
 ham_cf = solmupohja("CustomFunctionNode", "RadioHamara (Custom Function)", FX, FY, ham_slotit, m_SGVersion=1,
                     synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="RadioHamara", m_FunctionSource="",
@@ -651,6 +734,8 @@ kvari0_om = vektori_ominaisuus("keila0Vari", "_keila0Vari")
 kvari1_om = vektori_ominaisuus("keila1Vari", "_keila1Vari")
 khamaryys_om = kellu_ominaisuus("keilaHamaryys", "_keilaHamaryys", True); khamaryys_om["m_Value"] = 0.0
 savy_om = vektori_ominaisuus("pohjaSavy", "_pohjaSavy")
+rae_om = vektori_ominaisuus("pohjaRae", "_pohjaRae")
+patina_om = vektori_ominaisuus("pohjaPatina", "_pohjaPatina")
 keski3_solmu, keski3_ulos = vektori_ominaisuussolmu(keski_om, FX - 300.0, FY + 1060.0)
 keila_solmut, keila_ulot = [], []
 for i, om in enumerate((keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om)):
@@ -658,6 +743,11 @@ for i, om in enumerate((keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om)):
     keila_solmut.append(ks); keila_ulot.append(ku)
 khamaryys_solmu, khamaryys_ulos = ominaisuussolmu(khamaryys_om, FX - 300.0, FY + 1420.0)
 savy_solmu, savy_ulos = vektori_ominaisuussolmu(savy_om, FX - 300.0, FY + 1480.0)
+rae_solmu, rae_ulos = vektori_ominaisuussolmu(rae_om, FX - 300.0, FY + 1540.0)
+patina_solmu, patina_ulos = vektori_ominaisuussolmu(patina_om, FX - 300.0, FY + 1600.0)
+ruutu_ulos = slotti("Vector4MaterialSlot", 0, "Out", 1, v4())
+ruutu_solmu = solmupohja("ScreenPositionNode", "Screen Position", FX - 300.0, FY + 1660.0, [ruutu_ulos], m_DismissedVersion=0,
+                         m_ScreenSpaceType=0)
 ham_solmu, ham_ulos = ominaisuussolmu(ham_om, FX - 300.0, FY + 120.0)
 tumma_solmu, tumma_ulos = ominaisuussolmu(tumma_om, FX - 300.0, FY + 1000.0)
 maavalo_solmu, maavalo_ulos = vektori_ominaisuussolmu(maavalo_om, FX - 300.0, FY + 180.0)
@@ -688,22 +778,24 @@ G["m_Edges"] += [reuna(vari_reuna["m_OutputSlot"]["m_Node"]["m_Id"], vari_reuna[
                  reuna(H, 8, emis_reuna["m_InputSlot"]["m_Node"]["m_Id"], emis_reuna["m_InputSlot"]["m_SlotId"])]
 G["m_Edges"] += [reuna(uv_solmut[i]["m_ObjectId"], 0, H, 10 + i) for i in range(4)]
 G["m_Edges"] += [reuna(keski3_solmu["m_ObjectId"], 0, H, 15), reuna(khamaryys_solmu["m_ObjectId"], 0, H, 21),
-                 reuna(savy_solmu["m_ObjectId"], 0, H, 22)]
+                 reuna(savy_solmu["m_ObjectId"], 0, H, 22), reuna(rae_solmu["m_ObjectId"], 0, H, 23),
+                 reuna(patina_solmu["m_ObjectId"], 0, H, 24), reuna(ruutu_solmu["m_ObjectId"], 0, H, 25)]
 G["m_Edges"] += [reuna(keila_solmut[i]["m_ObjectId"], 0, H, 16 + i) for i in range(5)]
 for om in (ham_om, maavalo_om, maavari_om, yon_om, yovalot_om, tumma_om, keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om,
-           khamaryys_om, savy_om):
+           khamaryys_om, savy_om, rae_om, patina_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
 hsolmut = [ham_cf, ham_solmu, tumma_solmu, maavalo_solmu, maavari_solmu, yon_solmu, yovalot_solmu, hpaikka_solmu] + uv_solmut
-hsolmut += [keski3_solmu, khamaryys_solmu, savy_solmu] + keila_solmut
+hsolmut += [keski3_solmu, khamaryys_solmu, savy_solmu, rae_solmu, patina_solmu, ruutu_solmu] + keila_solmut
 for s in hsolmut:
     G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
 lisat += [ham_om, tumma_om, tumma_ulos, maavalo_om, maavari_om, yon_om, yovalot_om, ham_ulos, maavalo_ulos, maavari_ulos, yon_ulos, yovalot_ulos,
           hpaikka_ulos] + uv_ulot + hsolmut + ham_slotit
 lisat += [keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om, khamaryys_om, keski3_ulos, khamaryys_ulos] + keila_ulot
-lisat += [savy_om, savy_ulos]
+lisat += [savy_om, savy_ulos, rae_om, rae_ulos, patina_om, patina_ulos, ruutu_ulos]
 print("fragmentti → RadioHamara (_radioHamara, _radioMaavalo, _radioMaavaloVari, _radioYonValot, _radioYovalot + UV 0–3,"
-      " valokeila _keila0/1, _keilaRajat, _keila0Vari/_keila1Vari, _keilaHamaryys, pohjan sävy _pohjaSavy)")
+      " valokeila _keila0/1, _keilaRajat, _keila0Vari/_keila1Vari, _keilaHamaryys, pohjan sävy _pohjaSavy, rae _pohjaRae,"
+      " patina _pohjaPatina + ruudun paikka)")
 
 kaavio += lisat
 kirjoita(os.path.join(kohde, "MatkakirjaTileset.shadergraph"), kaavio)
