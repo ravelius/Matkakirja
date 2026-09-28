@@ -96,7 +96,7 @@ namespace Matkakirja.Natiivi
                 if (kaupunki != null && kaupunki == uusiKaupunki) aanisoitin?.Tila.UusiKaupunki(kaupunki);
                 uusiKaupunki = null;
             };
-            AloituslentoAlkoi += _ => aanisoitin?.Tila.AloituslentoAlkoi();
+            // Aloituslennon aihe EI käynnisty napautuksesta vaan lennon leikkauksesta (AloitaAloituslento, marssi 28.9.2026).
             if (puhe != null) puhe.Puhuu += koukut.Puhe;
             if (lehtiNakyma != null)
             {

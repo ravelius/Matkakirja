@@ -111,6 +111,9 @@ namespace Matkakirja.Natiivi
                         // Avauslento ei ole siirto: web ei soita sille siirtymäraitaa (doPickStart), vain matkustamon maiseman.
                         IlmoitaLiike(Kulkutapa.Lento, 0, siirtymaraita: false);
                         Lentoaani(true, kesto);
+                        // Aloituslennon marssi (omistaja 28.9.2026) lennon 0 s:sta: v3:ssa tämä on sama kehys kuin
+                        // V3Tapahtuma("leikkaus"), joten isku 7,3 s osuu ohitukseen ja loppusointu 15,1 s korttiin.
+                        aanisoitin?.Tila.AloituslentoAlkoi();
                         AloitaLento(Lentosuunnitelma.Laske("lontoo", kohde, (AloitusLat, AloitusLon), b.Value, kesto,
                             kesto, aloitus: true));
                         var repliikki = luennat.LentoAlkuAvaukseen();
