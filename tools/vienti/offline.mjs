@@ -4,6 +4,7 @@
  *
  *   node tools/vienti/offline.mjs --paivita-koot [--vienti dist/vienti]
  *   node tools/vienti/offline.mjs --paivita-kerrokset [--vienti dist/vienti]   (skeema 1.56, kerrosten koot maittain)
+ *   node tools/vienti/offline.mjs --paivita-maasto [--vienti dist/vienti]      (maan maastotasojen keskikoot maittain)
  *
  * Natiivin Alueet/IOfflineLataus (Natiiviseppä, proto RAJAPINTA.md osa 7)
  * lataa pelaajan valitsemat maat offline-käyttöön. Vienti kirjoittaa
@@ -840,6 +841,7 @@ async function paivitaKoot(vienti, n = 24) {
     }
     maasto[z] = await keskiarvo(otos(laatat, n));
   }
+  const maaMaasto = await maastoMaista(vienti, layer.available);
   const { viitteet } = JSON.parse(readFileSync(join(vienti, 'media.json'), 'utf8'));
   const lajeittain = new Map();
   for (const v of viitteet) {
@@ -855,14 +857,43 @@ async function paivitaKoot(vienti, n = 24) {
     haettu: new Date().toISOString().slice(0, 10), otos: n,
     rasteri: { poltto: R.url.split('/').at(-4), keskitavut: rasteri },
     // purettu (levykoko) mitataan GET-otoksella erikseen (27.9.2026); säilytetään edellisestä.
-    maasto: { poltto: M.layer.split('/').at(-2), available: layer.available, keskitavut: maasto,
-      ...(lueKoot().maasto.purettu ? { purettu: lueKoot().maasto.purettu } : {}) },
+    maasto: { poltto: M.layer.split('/').at(-2), available: layer.available,
+      keskitavut: { ...maasto, ...maaMaasto.keskitavut }, purettu: { ...(lueKoot().maasto.purettu ?? {}), ...maaMaasto.purettu } },
     media,
     // Skeema 1.56: kerrosten mittaus (--paivita-kerrokset) säilyy.
     ...(lueKoot().kerrokset ? { kerrokset: lueKoot().kerrokset } : {}),
   };
   writeFileSync(KOOT_TIEDOSTO, kootTekstina(tulos));
   return tulos;
+}
+
+/**
+ * Maaston keskikoot maittain ladattavista laatoista (tasot globaaliMax+1…): E2E-offline 28.9.2026 näytti, että koko
+ * maailman otos (merta ja autiota) aliarvioi maan laatat viisinkertaisesti (DNK/HRV z10 levyllä 7,3 kt, otos 1,3 kt).
+ * Otos maat.*.maasto-rajauslaatikoista (saatavilla olevat) ja kaupunkiMaasto-väleistä, painotettuna latausmäärällä.
+ * siirto = gzip-vastaus, purettu = identity (natiivi 1.0.32+ tallentaa gzipattuna).
+ */
+async function maastoMaista(vienti, available, n = 64) {
+  const o = JSON.parse(readFileSync(join(vienti, 'offline.json'), 'utf8'));
+  const M = OFFLINE_LAHTEET.maasto; const keskitavut = {}; const purettu = {};
+  const hae = (u, enc) => new Promise((ok) => {
+    https.get(u, { agent: hakuAllas, headers: { 'accept-encoding': enc } }, (v) => { let t = 0; v.on('data', (d) => { t += d.length; }); v.on('end', () => ok(v.statusCode === 200 ? t : null)); })
+      .on('error', () => ok(null));
+  });
+  for (let z = M.globaaliMax + 1; z < available.length; z++) {
+    const on = (x, y) => available[z].some((a) => x >= a.startX && x <= a.endX && y >= a.startY && y <= a.endY);
+    const laatat = [];
+    for (const m of Object.values(o.maat)) {
+      for (const [x0, y0, x1, y1] of [...valiLista(m.maasto?.[z]), ...valiLista(m.kaupunkiMaasto?.[z])]) {
+        for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) if (on(x, y)) laatat.push(M.url.replace('{z}', z).replace('{x}', x).replace('{y}', y));
+      }
+    }
+    const tulos = (await Promise.all(otos(laatat, n).map(async (u) => [await hae(u, 'gzip'), await hae(u, 'identity')]))).filter(([a, b]) => a && b);
+    if (!tulos.length) continue;
+    keskitavut[z] = Math.round(tulos.reduce((s, [a]) => s + a, 0) / tulos.length);
+    purettu[z] = Math.round(tulos.reduce((s, [, b]) => s + b, 0) / tulos.length);
+  }
+  return { keskitavut, purettu };
 }
 
 /** HEAD-koko (0 = puuttuu: läpinäkyvä kerma, meri). Oma yhteysallas: kymmeniätuhansia pyyntöjä. */
@@ -924,6 +955,13 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   if (process.argv.includes('--paivita-koot')) {
     const t = await paivitaKoot(vienti);
     console.log(`offline-koot.json: rasteri ${JSON.stringify(t.rasteri.keskitavut)}, maasto z0–${t.maasto.available.length - 1}, media ${Object.keys(t.media).length} lajia`);
+  } else if (process.argv.includes('--paivita-maasto')) {
+    // Vain maan maastotasojen keskikoot (maastoMaista); muut koot ennallaan.
+    const koot = lueKoot(); const m = await maastoMaista(vienti, koot.maasto.available);
+    koot.maasto.keskitavut = { ...koot.maasto.keskitavut, ...m.keskitavut };
+    koot.maasto.purettu = { ...(koot.maasto.purettu ?? {}), ...m.purettu };
+    writeFileSync(KOOT_TIEDOSTO, kootTekstina(koot));
+    console.log(`offline-koot.json maasto maittain: ${JSON.stringify(m.keskitavut)} (purettu ${JSON.stringify(m.purettu)})`);
   } else if (process.argv.includes('--paivita-kerrokset')) {
     const t = await paivitaKerrokset(vienti);
     console.log(`offline-koot.json kerrokset: ${Object.keys(t.maat).length} maata, kerma-alueita ${Object.keys(t.kermaAlueet).length}, globaali ${JSON.stringify(t.globaali)}`);
