@@ -19,6 +19,7 @@ Proto-haara `linssiseppa/iss-kyyti` 43b37584. Laitekuvat: `/Users/Shared/Claude/
 | 1 Heijastus | 34a5a5d5 + b3186915 | ämpärissä | kiilto ei vielä kuvassa (testikello korjattu 43b37584) | Siirtoseppä |
 | 1 Varjostus | 34a5a5d5 | – | OK cl5 (hämärä, keskikirkkaus −15 %) | Siirtoseppä |
 | 2 Tämän päivän pilvet | f81345f0 | ämpärissä (minimikooste #3555) | latautuu; A/B Euroopan päivällä vielä | Siirtoseppä |
+| 2b Terävät pilvet kyydissä | pilvet-tarkat cc513896 | – | OK cl14 (pari-pilvet-ikkuna.png, -seuranta.png) | Siirtoseppä |
 | 3a Hämärä ja ilmahehku | 4e7f3b1d + d1a3f147 | – | OK cl5 (aamunkoiton kaari, hehku himmeänä) | Siirtoseppä |
 | 3b Revontulet | 497c06b8 + b3186915 | ämpärissä | latautuu; ei näkyvää aktiivisuutta testihetkellä | Siirtoseppä |
 | 4a–c | Linssiseppä 2 | | | Siirtoseppä |
@@ -91,6 +92,32 @@ Proto-haara `linssiseppa/iss-kyyti` 43b37584. Laitekuvat: `/Users/Shared/Claude/
   - `data/pilvet/uusin.json`: `{ "paiva": "YYYY-MM-DD", "lahde": "…", "haettu": "…" }`
   - Kerran päivässä noin klo 06 UTC, samaan tapaan kuin iss-tle.yml.
 - **Natiivi:** Pilvikuori lukee `uusin.png`:n, ja vanha `matkakirja/linssit/pilvet-bluemarble-2048.jpg` jää varalle.
+
+## 2b. Terävät pilvet kyydissä (natiivi linssiseppa/pilvet-tarkat cc513896, Pilvet.shader)
+
+Omistaja 28.9. klo 19.3x Cupolasta: "Vielä liikaa blurrina". Kehyksen sumennus ei ollut ainoa syy. Pilvikuva on 4096 px
+(noin 10 km/px), ja Cupolassa (kenttä 65,7°, ISS 420 km) ruudun pikseli vastaa maassa noin 0,2–0,4 km. Yksi tekseli venyy
+siis 30–50 px:ksi, ja pilven reuna (kuvassa 0 → 1 yhden tekselin matkalla) näkyi 50–100 px:n liukumana.
+
+- **Vain kyydissä** (`_Tarkkuus` 1 seurannassa ja ikkunassa). Kaukonäkymä ja lennon pilvisumu pysyvät ennallaan.
+- **Näyte:** bikuubinen B-splini (Ruijters 2008), neljä bilineaarista näytettä `SampleGrad`-derivaatoilla. Saumassa
+  (pituus ±180°) u:n derivaatta on pienempi arvoista `ddx(u)` ja `ddx(frac(u + 0,5))`. Tulos on sileä pohja-alfa a0.
+- **Kohina f:** 3D-simplex pisteessä q = normalize(kuoren oliopaikka) · 6371 / 35.
+  - 5 oktaavia, taajuus × 2,2 ja amplitudi × 0,5 per oktaavi.
+  - Oktaavin paino h = saturate(1,5 − 2 · j · taajuus), jossa j = max(|ddx q|, |ddy q|). Alle kahden pikselin oktaavit
+    häipyvät.
+  - Normitus f = Σ amp · h · simplex / sqrt(Σ amp² h²) / 0,39.
+  - Gradientit kokonaislukuhajautuksesta, ei sin-hashia.
+- **Reuna:** kynnys t = 0,5 + 0,36 · tanh(0,8 · f) ja terävä alfa = smoothstep(t − 0,08, t + 0,08, a0). Kynnys liikkuu vain
+  välillä 0,14–0,86, joten kirkkaalle alueelle ei tule kohinahiutaleita ja pilvien paikat pysyvät kuvan mukaisina.
+  Esikatselussa peitto muuttui 0,439 → 0,429.
+- **Sekoitus:** alfa = lerp(a0, terävä, sqrt(Σ amp² h² / Σ amp²)). Kaukaa ja horisontissa tulos palaa kuvaan.
+- **Pinta:** kirkkaus × (1 + 0,05 · clamp(f₀₁ / 0,39, ±2,5) · näkyvyys), jossa f₀₁ on kahden alimman oktaavin summa.
+- **A/B:** `astro kyyti tarkat 0|1|<km>` (pohja-aallonpituus).
+- **Kustannus:** pilvipikselissä 4 tekstuurinäytettä ja 5 simplexiä (noin 500 laskutoimitusta); alle 0,06:n alfa ohitetaan.
+  Laitteen kehysaika mitataan TestFlightissä.
+- **Web (Siirtoseppä):** sama kaava three.js:n pilvikuoren fragmenttivarjostimeen. q:ksi kelpaa kuoren paikallinen
+  sijainti normalisoituna, ja derivaatat tulevat `OES_standard_derivatives`- tai WebGL2-funktioista `dFdx`/`dFdy`.
 
 ## 3a. Hämärä ja ilmahehku (natiivi 4e7f3b1d + d1a3f147, Ilmakaari.shader)
 
