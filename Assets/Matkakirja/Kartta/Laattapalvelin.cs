@@ -873,6 +873,13 @@ namespace Matkakirja
             try
             {
                 var tulos = await HaeSisalto(polku, esilataus, lahde, pyydetty);
+                if (esilataus == null && tulos.Item1 == 200 && varakuva != null && VaraVika(polku))
+                {
+                    // Vikakoe (palvelin varavika): kuin haku olisi epäonnistunut, Cesium saa varalaatan.
+                    Interlocked.Increment(ref Varakuvia);
+                    varalla.TryAdd(polku, 0);
+                    tulos = (200, varakuva);
+                }
                 if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
                     SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
                 if (esilataus == null && PyyntoLoki.Paalla)
@@ -1209,6 +1216,25 @@ namespace Matkakirja
         int varaKierros;
         NetworkReachability edYhteys = NetworkReachability.ReachableViaLocalAreaNetwork;
         readonly ConcurrentDictionary<string, int> vara404 = new ConcurrentDictionary<string, int>();
+
+        static double varaVikaOsuus;
+        static long varaVikaLoppuu;
+
+        /// <summary>
+        /// Kehittäjän vikakoe (komento `palvelin varavika &lt;osuus&gt; &lt;s&gt;`): osuus Cesiumin pohjalaatoista (laattakohtainen
+        /// tiiviste, sama laatta joka kerta) saa varalaatan <paramref name="sekuntia"/> ajan, myös uusinnoissa; sen jälkeen
+        /// uusinta korvaa ne. Varalaattojen uusinnan todennukseen simulaattorissa (verkkoa ei voi katkaista).
+        /// </summary>
+        public static void AsetaVaraVika(double osuus, double sekuntia)
+        {
+            varaVikaOsuus = Math.Max(0.0, Math.Min(1.0, osuus));
+            varaVikaLoppuu = System.Diagnostics.Stopwatch.GetTimestamp() + (long)(Math.Max(0.0, sekuntia) * System.Diagnostics.Stopwatch.Frequency);
+            Debug.Log($"MATKAKIRJA laattapalvelin: vikakoe {varaVikaOsuus:P0} pohjalaatoista {sekuntia:0} s");
+        }
+
+        static bool VaraVika(string polku) =>
+            varaVikaOsuus > 0 && System.Diagnostics.Stopwatch.GetTimestamp() < varaVikaLoppuu && PohjaPolku != null
+            && polku.StartsWith(PohjaPolku, StringComparison.Ordinal) && (polku.GetHashCode() & 0x7fffffff) % 1000 < varaVikaOsuus * 1000;
 
         void OnApplicationPause(bool tauolla)
         {

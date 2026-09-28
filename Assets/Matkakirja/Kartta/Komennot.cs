@@ -41,6 +41,7 @@ namespace Matkakirja
     ///   pohjoinen [s]             pohjoinen ylös (PalautaPohjoinen, kuin tuplanapautus tai kompassinappi)
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
+    ///   palvelin varavika <osuus> <s>   vikakoe: osuus pohjalaatoista saa varalaatan s sekuntia (varalaattojen uusinnan testi)
     ///   palvelin                  laattapalvelimen osumat lokiin (paketti / offline / välimuisti / verkko) ja maastoluokan
     ///                             laskurit
     ///   palvelin loki paalle|pois epäonnistuneet haut lokiin: "MATKAKIRJA palvelin virhe luokka polku koodi yritykset ms
@@ -1010,6 +1011,7 @@ namespace Matkakirja
                     // | palvelin yksiportti paalle|pois (löydös 176: PlayerPrefs, vaikuttaa seuraavasta käynnistyksestä)
                     if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
+                    else if (o.Length > 3 && o[1] == "varavika") Laattapalvelin.AsetaVaraVika(D(2), D(3));
                     else if (o.Length > 2 && o[1] == "yksiportti")
                     {
                         PlayerPrefs.SetInt(LaattaPortit.YksiPorttiAvain, o[2] == "paalle" ? 1 : 0);
