@@ -3,6 +3,7 @@
  * OFFLINE-MANIFESTI NATIIVILLE (Siirtoseppä 23.9.2026, skeema 1.9).
  *
  *   node tools/vienti/offline.mjs --paivita-koot [--vienti dist/vienti]
+ *   node tools/vienti/offline.mjs --paivita-kerrokset [--vienti dist/vienti]   (skeema 1.56, kerrosten koot maittain)
  *
  * Natiivin Alueet/IOfflineLataus (Natiiviseppä, proto RAJAPINTA.md osa 7)
  * lataa pelaajan valitsemat maat offline-käyttöön. Vienti kirjoittaa
@@ -29,6 +30,7 @@
  * tavulleen saman offline.json:n.
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import https from 'node:https';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
@@ -75,6 +77,34 @@ export const OFFLINE_LAHTEET = {
      */
     kokoMaaMax: 10,
     kaupunkiMaasto: { tasot: [11, 12], sadeKm: 50 },
+  },
+};
+/*
+ * Skeema 1.56 (Fable 28.9.2026, E2E-offline Tanska + Kroatia docs/raportit/siirtoseppa-e2e-offline-20260928.md:
+ * "ladattu alue näyttää ja toimii ilman verkkoa täsmälleen kuten verkossa"): kartan muut rasterikerrokset offline-
+ * lataukseen. Ajossa ne haettiin verkosta (kerma 534, reliefi 83, yövalot 7 laattaa). Kaikki XYZ, 256 px.
+ *   kerma   (Varitaso): maan oma sarja <ISO>/ sen varitaso.alue-laatikosta (<ISO>/laatat.json) z3–z8 → maat.*.kerma;
+ *           _maailma/ alueen ulkopuolelle: globaalisti z3–z5, maittain rasterin väleillä z6–z8. Puuttuva laatta on
+ *           läpinäkyvä (404), natiivi kirjaa sen 0 tavuna.
+ *   reliefi (Topografia.ReliefiSarja ja astronautin vaimea AstronauttiLinssi.VaimeaSarja): globaalisti z0–z5, maittain
+ *           rasterin väleillä z6–z8.
+ *   yovalot (RadioMastot.YovaloUrl, z0–z6): globaalisti z0–z5, maittain rasterin väleillä z6.
+ * Natiivi muodostaa osoitteet omista sarjoistaan (kuten rasteriPohja ja maastoLayer); url-kentät kertovat, mistä
+ * sarjoista välit ja koot on laskettu. Koot mitataan maittain (HEAD, --paivita-kerrokset) offline-koot.json:iin.
+ */
+export const OFFLINE_KERROKSET = {
+  kerma: {
+    url: 'https://media.matkakirja.app/julisteet/pallo/kerma/2026-09-26-p060/{alue}/{z}/{x}/{y}.webp',
+    maaTasot: [3, 8], maailmaAlue: '_maailma', globaaliTasot: [3, 5], maittainTasot: [6, 8],
+  },
+  reliefi: {
+    url: ['https://media.matkakirja.app/matkakirja/reliefipyramidi/20260924/pallo/{z}/{x}/{y}.jpg',
+      'https://media.matkakirja.app/matkakirja/reliefipyramidi/20260924/pallo-k08/{z}/{x}/{y}.jpg'],
+    globaaliTasot: [0, 5], maittainTasot: [6, 8],
+  },
+  yovalot: {
+    url: 'https://media.matkakirja.app/julisteet/pallo/yovalot/2026-09-25/{z}/{x}/{y}.jpg',
+    globaaliTasot: [0, 5], maittainTasot: [6, 6],
   },
 };
 const MERCATOR_MAX = 85.05112878;
@@ -149,6 +179,10 @@ const MEDIAKUVAT_KUVAUS = {
   katto: MEDIAKUVAT.katto,
   jarjestys: 'karttanostot → miniatyyrit → Livian ja saapumisen puheet → luennat → muut kuvat; yli katon jäävät pois; musiikki, äänimaisemat ja tehosteet eivät offline-latauksessa',
 };
+const KERROKSET_KUVAUS = 'Skeema 1.56: kartan muut rasterikerrokset offline-lataukseen (XYZ, 256 px, osoitteet natiivin omista '
+  + 'sarjoista). Maailma: kerma _maailma z3–z5, reliefi (molemmat sarjat) z0–z5, yövalot z0–z5 koko pallo. Maa: kerma '
+  + '<ISO>/ maat.*.kerma-väleillä, sekä maat.*.rasteri-väleillä kerma _maailma z6–z8, reliefi z6–z8 ja yövalot z6. '
+  + 'Puuttuva laatta (404) on läpinäkyvä. tavuja.kerrokset sisältyy tavuja.offline-summaan.';
 const AANI_TIEDOSTO = /\.(mp3|ogg|oga|opus|m4a|aac|wav)$/i;
 const SUORA_TIEDOSTO = /\.(jpe?g|png|webp|gif|svg|mp3|ogg|m4a|json|glb)$/i;
 /** Skeema 1.52: mediaKuviin kuuluva viite (oma ämpäri, mutta laji kuva-url/aani-url tai kokoelmavaiheen suora osoite). */
@@ -233,6 +267,76 @@ function rasteriLaatat(renkaat, b, z) {
   return { vali: [x0, y0, x1, y1], laattoja };
 }
 
+/* --------------------------------------------------------- 1.56 kerrokset */
+
+const tasoVali = ([a, b]) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
+const valiLista = (v) => (!v ? [] : Array.isArray(v[0]) ? v : [v]);
+
+/** Maan oma kermasarja: varitaso.alue [lon0, lat0, lon1, lat1] → { z: [x0, y0, x1, y1] } tasoille maaTasot. */
+export function kermanValit(alue) {
+  if (!alue) return null;
+  const [lon0, lat0, lon1, lat1] = alue;
+  return Object.fromEntries(tasoVali(OFFLINE_KERROKSET.kerma.maaTasot).map((z) =>
+    [z, [rajaa(xyzX(lon0, z), z), rajaa(xyzY(lat1, z), z), rajaa(xyzX(lon1, z), z), rajaa(xyzY(lat0, z), z)]]));
+}
+
+/**
+ * Offline-kerrosten laattaosoitteet: maa (maat.*.rasteri z6–z8 ja maat.*.kerma) tai globaali (m = null).
+ * Samat säännöt kuin natiivin Alueet (skeema 1.56); käytetään kokojen mittaukseen ja testeissä.
+ */
+export function kerrosOsoitteet(m, iso) {
+  const K = OFFLINE_KERROKSET; const l = { kerma: [], reliefi: [], yovalot: [] };
+  const lisaa = (laji, pohja, z, v) => {
+    for (const [x0, y0, x1, y1] of valiLista(v)) {
+      for (let x = x0; x <= x1; x++) for (let y = y0; y <= y1; y++) l[laji].push(pohja.replace('{z}', z).replace('{x}', x).replace('{y}', y));
+    }
+  };
+  const kermaPohja = (alue) => K.kerma.url.replace('{alue}', alue);
+  if (!m) {
+    for (const z of tasoVali(K.kerma.globaaliTasot)) lisaa('kerma', kermaPohja(K.kerma.maailmaAlue), z, [0, 0, 2 ** z - 1, 2 ** z - 1]);
+    for (const u of K.reliefi.url) for (const z of tasoVali(K.reliefi.globaaliTasot)) lisaa('reliefi', u, z, [0, 0, 2 ** z - 1, 2 ** z - 1]);
+    for (const z of tasoVali(K.yovalot.globaaliTasot)) lisaa('yovalot', K.yovalot.url, z, [0, 0, 2 ** z - 1, 2 ** z - 1]);
+    return l;
+  }
+  for (const [z, v] of Object.entries(m.kerma ?? {})) lisaa('kerma', kermaPohja(iso), z, v);
+  for (const z of tasoVali(K.kerma.maittainTasot)) lisaa('kerma', kermaPohja(K.kerma.maailmaAlue), z, m.rasteri?.[z]);
+  for (const u of K.reliefi.url) for (const z of tasoVali(K.reliefi.maittainTasot)) lisaa('reliefi', u, z, m.rasteri?.[z]);
+  for (const z of tasoVali(K.yovalot.maittainTasot)) lisaa('yovalot', K.yovalot.url, z, m.rasteri?.[z]);
+  return l;
+}
+
+/** Levyllä: tiedosto vie kokonaisia 4 kt:n lohkoja (APFS), puuttuva laatta ei vie mitään. */
+export const LOHKO = 4096;
+export const lohkoina = (t) => (t > 0 ? Math.ceil(t / LOHKO) * LOHKO : 0);
+const valinLaatat = (v) => valiLista(v).reduce((s, [x0, y0, x1, y1]) => s + (x1 - x0 + 1) * (y1 - y0 + 1), 0);
+/** Buildin laattapaketin syvin taso (natiivi LaattapakettiRakennus.PohjaMax/MaastoMax, BUILD 16+). */
+const LAATTAPAKETTI_MAX = 5;
+/**
+ * Keskikoon laatan levyarvio: alle lohkon kokoinen vie lohkon, suurempi keskimäärin puoli lohkoa yli (tasajakauma).
+ * Tarkempi kuin ceil(keskikoko) silloin, kun koot vaihtelevat lohkon molemmin puolin.
+ */
+const lohkoArvio = (keski) => (!keski ? 0 : keski <= LOHKO ? LOHKO : keski + LOHKO / 2);
+
+/** Kerrosten tavut: mitattu (koot.kerrokset.maat[iso] / .globaali) tai laattamäärä × lajin keskikoko. */
+function kerrosTavut(koot, m, iso) {
+  const K = koot.kerrokset;
+  if (!K) return 0;
+  const mitattu = m ? K.maat?.[iso] : K.globaali;
+  if (mitattu) return mitattu.kerma + mitattu.reliefi + mitattu.yovalot;
+  const o = kerrosOsoitteet(m, iso);
+  return Math.round(Object.entries(o).reduce((s, [laji, lista]) => s + lista.length * (K.keskitavut?.[laji] ?? 0), 0));
+}
+
+/** Kerrosten levykoko: mitattu (levy, 4 kt:n lohkot; puuttuva laatta 0) tai laattamäärä × lohkoArvio. */
+function kerrosLevy(koot, m, iso) {
+  const K = koot.kerrokset;
+  if (!K) return 0;
+  const mitattu = m ? K.maat?.[iso] : K.globaali;
+  if (mitattu?.levy != null) return mitattu.levy;
+  const o = kerrosOsoitteet(m, iso);
+  return Math.round(Object.entries(o).reduce((s, [laji, lista]) => s + lista.length * lohkoArvio(K.keskitavut?.[laji]), 0));
+}
+
 /*
  * KAUPUNGIN LAATIKKO (Karttasepän tee-satelliitti.mjs kaupunginLaatikko,
  * sama kaava): leveyssuunnassa säde/R radiaaneina, pituussuunnassa sama
@@ -309,7 +413,11 @@ function maastoLaatat(renkaat, b, z, saatavilla) {
       ax0 = Math.min(ax0, x); ay0 = Math.min(ay0, y); ax1 = Math.max(ax1, x); ay1 = Math.max(ay1, y);
     }
   }
-  return laattoja ? { vali: [ax0, ay0, ax1, ay1], laattoja } : null;
+  if (!laattoja) return null;
+  // Natiivi lataa koko rajauslaatikon: saatavilla olevat laatat vievät levyä, muut ovat 404 (0 tavua).
+  let ladattavat = 0;
+  for (let x = ax0; x <= ax1; x++) for (let y = ay0; y <= ay1; y++) if (onSaatavilla(x, y)) ladattavat++;
+  return { vali: [ax0, ay0, ax1, ay1], laattoja, ladattavat };
 }
 
 /* ------------------------------------------------------------------ media */
@@ -386,15 +494,21 @@ export function lueKoot() {
 }
 
 /**
- * offline-koot.json tekstinä: maasto.available yksi taso per rivi (maailmasarjassa tuhansia välejä, 28.9.2026),
- * muu sisentäen kuten ennen.
+ * offline-koot.json tekstinä: maasto.available yksi taso per rivi (maailmasarjassa tuhansia välejä, 28.9.2026) ja
+ * kerrokset.maat / kerrokset.kermaAlueet yksi maa per rivi (skeema 1.56); muu sisentäen kuten ennen.
  */
 export function kootTekstina(koot) {
-  const tasot = koot.maasto?.available;
-  if (!tasot) return `${JSON.stringify(koot, null, 1)}\n`;
-  const merkki = '"__available__"';
-  const runko = JSON.stringify({ ...koot, maasto: { ...koot.maasto, available: '__available__' } }, null, 1);
-  return `${runko.replace(merkki, `[\n${tasot.map((t) => `   ${JSON.stringify(t)}`).join(',\n')}\n  ]`)}\n`;
+  const paikat = [];
+  const merkitse = (arvo, riveiksi) => { paikat.push(riveiksi(arvo)); return `__paikka${paikat.length - 1}__`; };
+  const lista = (sisennys) => (a) => `[\n${a.map((t) => `${sisennys}${JSON.stringify(t)}`).join(',\n')}\n${sisennys.slice(1)}]`;
+  const olio = (sisennys) => (o) => `{\n${Object.entries(o).map(([k, v]) => `${sisennys}${JSON.stringify(k)}: ${JSON.stringify(v)}`).join(',\n')}\n${sisennys.slice(1)}}`;
+  const k = { ...koot };
+  if (k.maasto?.available) k.maasto = { ...k.maasto, available: merkitse(k.maasto.available, lista('   ')) };
+  if (k.kerrokset) {
+    k.kerrokset = { ...k.kerrokset };
+    for (const avain of ['kermaAlueet', 'maat']) if (k.kerrokset[avain]) k.kerrokset[avain] = merkitse(k.kerrokset[avain], olio('   '));
+  }
+  return `${JSON.stringify(k, null, 1).replace(/"__paikka(\d+)__"/g, (_, i) => paikat[Number(i)])}\n`;
 }
 
 /**
@@ -505,25 +619,31 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
     const b = bbox(renkaat);
     const rasteri = {}; const maasto = {}; const laattoja = { rasteri: 0, maasto: 0 };
     let rTavut = 0; let mTavut = 0; let mLevy = 0;
+    // Skeema 1.56, levykoko (Fable 28.9.): natiivin lataama rajauslaatikko ja 4 kt:n lohkot (lohkoArvio).
+    let levy = 0;
     for (let z = R.globaaliMax + 1; z <= R.maaMax; z++) {
       const t = rasteriLaatat(renkaat, b, z);
       rasteri[z] = t.vali; laattoja.rasteri += t.laattoja; rTavut += t.laattoja * (koot.rasteri.keskitavut[z] ?? 0);
+      levy += valinLaatat(t.vali) * lohkoArvio(koot.rasteri.keskitavut[z]);
     }
     // Kaupunkitaso: päällekkäiset laatat lasketaan tavuihin kerran.
     for (const [z, t] of kaupunkiValit.get(iso) ?? []) {
       rasteri[z] = t.valit; laattoja.rasteri += t.laatat.size;
       rTavut += t.laatat.size * (koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[R.maaMax] ?? 0);
+      levy += t.laatat.size * lohkoArvio(koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[R.maaMax]);
     }
     // Skeema 1.51: Z10 omaan avaimeen (ei rasteri-kenttään eikä yht-summaan, ks. OFFLINE_LAHTEET.rasteri).
     const kaupunkiRasteri = {}; let kTavut = 0;
     for (const [z, t] of syvatValit.get(iso) ?? []) {
       kaupunkiRasteri[z] = t.valit; laattoja.kaupunkiRasteri = (laattoja.kaupunkiRasteri ?? 0) + t.laatat.size;
       kTavut += t.laatat.size * (koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[z - 1] ?? 0);
+      levy += t.laatat.size * lohkoArvio(koot.rasteri.keskitavut[z] ?? koot.rasteri.keskitavut[z - 1]);
     }
     for (let z = M.globaaliMax + 1; z < saatavilla.length && z <= M.kokoMaaMax; z++) {
       const t = maastoLaatat(renkaat, b, z, saatavilla[z]);
       if (!t) continue;
       maasto[z] = t.vali; laattoja.maasto += t.laattoja; mTavut += t.laattoja * (koot.maasto.keskitavut[z] ?? 0);
+      levy += t.ladattavat * lohkoArvio(koot.maasto.keskitavut[z]);
       mLevy += t.laattoja * (koot.maasto.purettu?.[z] ?? koot.maasto.keskitavut[z] ?? 0);
     }
     // Skeema 1.53: tarkemmat maastotasot kaupunkien ympäriltä (± sadeKm), vain available-väleissä olevat laatat.
@@ -552,6 +672,7 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       kaupunkiMaasto[z] = valit;
       laattoja.kaupunkiMaasto = (laattoja.kaupunkiMaasto ?? 0) + nahty.size;
       kmTavut += nahty.size * (koot.maasto.keskitavut[z] ?? 0);
+      levy += nahty.size * lohkoArvio(koot.maasto.keskitavut[z]);
     }
     const kaikkiMedia = [...(jako.get(iso) ?? [])].sort();
     const media = kaikkiMedia.filter((a) => !onLisamedia(arvot.get(a)));
@@ -577,18 +698,23 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
       if (!koko || !(koko[0] > 0)) continue;
       const t = koko[1] ?? koko[0];
       if (kuvaTavut + t > MEDIAKUVAT.katto) continue;
-      kuvaTavut += t;
+      kuvaTavut += t; levy += lohkoina(t);
       mediaKuvat.push(koko[1] != null
         ? { url: u, pieni: OMA_AMPARI + pieniAvain(ampariAvain(u)).replace(/\.jpg$/, `.${koko[2] ?? 'jpg'}`) } : { url: u });
     }
     // Skeema 1.33: maan kaupunkien 3D-maamerkit (tarkka koko kokoelmasta).
     const mallit = (maamerkit.get(iso) ?? []).sort((a, b) => (a.url < b.url ? -1 : 1));
     const medTavut = mediaTavut(media) + mallit.reduce((s, m) => s + m.tavuja, 0);
+    // Skeema 1.56: maan oma kermasarja (varitaso.alue offline-koot.json:sta) ja kerrosten tavut.
+    const kerma = kermanValit(koot.kerrokset?.kermaAlueet?.[iso]);
+    const kerTavut = kerrosTavut(koot, { rasteri, kerma }, iso);
+    levy += kerrosLevy(koot, { rasteri, kerma }, iso);
     maat[iso] = {
       iso2: ISO2[iso] ?? Object.values(MERENTAKAISET).find((a) => a.iso === iso)?.iso2 ?? null, nimi: maa.nimi, rasteri, ...(Object.keys(kaupunkiRasteri).length ? { kaupunkiRasteri } : {}), maasto, laattoja,
       media: [...media.map(url), ...mallit.map((m) => m.url)],
       ...(mediaKuvat.length ? { mediaKuvat } : {}),
       ...(Object.keys(kaupunkiMaasto).length ? { kaupunkiMaasto } : {}),
+      ...(kerma ? { kerma } : {}),
       tavuja: { rasteri: Math.round(rTavut), maasto: Math.round(mTavut), media: Math.round(medTavut),
         yht: Math.round(rTavut + mTavut + medTavut), ...(Z10 ? { kaupunkiRasteri: Math.round(kTavut) } : {}),
         mediaKuvat: kuvaTavut,
@@ -599,17 +725,34 @@ export function kokoaOffline({ tiedostot, manifest, countryShapes, kartta = null
         kaupunkiMaasto: Math.round(kmTavut),
         // Skeema 1.54: natiivin 1.0.32+ offline-lataus siirtona (ei media-listaa): rasteri, maasto, Z10, kaupunkimaasto
         // ja mediaKuvat.
-        offline: Math.round(rTavut + mTavut + kTavut + kmTavut + kuvaTavut) },
+        // Skeema 1.56: kerma, reliefi ja yövalot (siirto).
+        kerrokset: kerTavut,
+        // Skeema 1.56 (Fable 28.9.: näytä pelaajalle todellinen levykoko): siirto = 1.54:n offline-summa + kerrokset;
+        // offline = levyllä (natiivin lataama rajauslaatikko, 4 kt:n lohkot), natiivi 1.0.32+ näyttää tämän.
+        siirto: Math.round(rTavut + mTavut + kTavut + kmTavut + kuvaTavut + kerTavut),
+        offline: Math.round(levy) },
     };
   }
+  const globaaliKerrokset = kerrosTavut(koot, null);
+  // Levyllä: rasteri ja maasto z0–z5 ovat buildin laattapaketissa (natiivi BUILD 16+, LaattapakettiRakennus PohjaMax =
+  // MaastoMax = 5), joten offline-kansioon tulee vain maasto z6 ja kerrokset. Maailman muut pienet tiedostot
+  // (napakalotit, maarajat, vektorit) ovat mukana siirrossa.
+  let globaaliLevy = kerrosLevy(koot, null);
+  for (let z = LAATTAPAKETTI_MAX + 1; z <= M.globaaliMax && z < saatavilla.length; z++) {
+    globaaliLevy += saatavilla[z].reduce((s, a) => s + (a.endX - a.startX + 1) * (a.endY - a.startY + 1), 0) * lohkoArvio(koot.maasto.keskitavut[z]);
+  }
+  for (let z = LAATTAPAKETTI_MAX + 1; z <= R.globaaliMax; z++) globaaliLevy += 4 ** z * lohkoArvio(koot.rasteri.keskitavut[z]);
   const globaaliTavut = { rasteri: Math.round(globaaliRasteriTavut), maasto: Math.round(globaaliMaastoTavut),
     media: 0, yht: Math.round(globaaliRasteriTavut + globaaliMaastoTavut),
-    levy: Math.round(globaaliRasteriTavut + globaaliMaastoLevy) };
+    levy: Math.round(globaaliRasteriTavut + globaaliMaastoLevy),
+    // Skeema 1.56: natiivi näyttää maailman koon tästä (kuten maiden offline).
+    kerrokset: globaaliKerrokset, siirto: Math.round(globaaliRasteriTavut + globaaliMaastoTavut + globaaliKerrokset),
+    offline: Math.round(globaaliLevy) };
   const tulos = {
     $skeema: 'matkakirja-vienti/1/offline',
     arvio: true,
     koot: { haettu: koot.haettu, otos: koot.otos },
-    lahteet: { ...OFFLINE_LAHTEET, mediaKuvat: MEDIAKUVAT_KUVAUS },
+    lahteet: { ...OFFLINE_LAHTEET, mediaKuvat: MEDIAKUVAT_KUVAUS, kerrokset: { ...OFFLINE_KERROKSET, kuvaus: KERROKSET_KUVAUS } },
     globaali: {
       rasteri: globaaliRasteri, maasto: globaaliMaasto, media: [], tavuja: globaaliTavut,
     },
@@ -715,9 +858,64 @@ async function paivitaKoot(vienti, n = 24) {
     maasto: { poltto: M.layer.split('/').at(-2), available: layer.available, keskitavut: maasto,
       ...(lueKoot().maasto.purettu ? { purettu: lueKoot().maasto.purettu } : {}) },
     media,
+    // Skeema 1.56: kerrosten mittaus (--paivita-kerrokset) säilyy.
+    ...(lueKoot().kerrokset ? { kerrokset: lueKoot().kerrokset } : {}),
   };
   writeFileSync(KOOT_TIEDOSTO, kootTekstina(tulos));
   return tulos;
+}
+
+/** HEAD-koko (0 = puuttuu: läpinäkyvä kerma, meri). Oma yhteysallas: kymmeniätuhansia pyyntöjä. */
+const hakuAllas = new https.Agent({ keepAlive: true, maxSockets: 32 });
+const headKoko = (u) => new Promise((ok) => {
+  const r = https.request(u, { method: 'HEAD', agent: hakuAllas }, (v) => { v.resume(); ok(v.statusCode === 200 ? Number(v.headers['content-length']) || 0 : 0); });
+  r.on('error', () => ok(null)); r.setTimeout(20000, () => r.destroy()); r.end();
+});
+async function mittaaKaikki(osoitteet) {
+  let i = 0; let tavut = 0; let levy = 0; let virheet = 0;
+  await Promise.all(Array.from({ length: 32 }, async () => {
+    while (i < osoitteet.length) {
+      const u = osoitteet[i++];
+      let k = await headKoko(u);
+      if (k === null) k = await headKoko(u);
+      if (k === null) virheet++; else { tavut += k; levy += lohkoina(k); }
+    }
+  }));
+  if (virheet) throw new Error(`${virheet} HEAD-pyyntöä epäonnistui kahdesti: aja uudelleen`);
+  return { tavut, levy };
+}
+
+/**
+ * Skeema 1.56: kerrosten koot maittain HEAD-pyynnöin (vienti/offline.json:n rasterivälit; maan oma kerma sen
+ * varitaso.alue-laatikosta, joka tallennetaan kermaAlueet-kenttään). Kaikki maat, noin 10 min.
+ */
+async function paivitaKerrokset(vienti) {
+  const o = JSON.parse(readFileSync(join(vienti, 'offline.json'), 'utf8'));
+  const K = OFFLINE_KERROKSET; const kermaAlueet = {}; const maat = {};
+  const lkm = { kerma: 0, reliefi: 0, yovalot: 0 }; const summa = { kerma: 0, reliefi: 0, yovalot: 0 };
+  const mittaa = async (osoitteet) => {
+    const t = { levy: 0 };
+    for (const [laji, lista] of Object.entries(osoitteet)) {
+      const m = await mittaaKaikki(lista);
+      t[laji] = m.tavut; t.levy += m.levy; lkm[laji] += lista.length; summa[laji] += m.tavut;
+    }
+    return t;
+  };
+  for (const iso of Object.keys(o.maat).sort()) {
+    try {
+      const r = await fetch(K.kerma.url.replace('{alue}', iso).replace('{z}/{x}/{y}.webp', 'laatat.json'));
+      const a = r.ok ? (await r.json()).varitaso?.alue : null;
+      if (a) kermaAlueet[iso] = [a.lon0, a.lat0, a.lon1, a.lat1].map((v) => Math.round(v * 1e5) / 1e5);
+    } catch { /* ei omaa sarjaa */ }
+    maat[iso] = await mittaa(kerrosOsoitteet({ rasteri: o.maat[iso].rasteri, kerma: kermanValit(kermaAlueet[iso]) }, iso));
+    console.error(`${iso}: ${JSON.stringify(maat[iso])}`);
+  }
+  const globaali = await mittaa(kerrosOsoitteet(null));
+  const keskitavut = Object.fromEntries(Object.keys(lkm).map((l) => [l, lkm[l] ? Math.round(summa[l] / lkm[l]) : 0]));
+  const koot = lueKoot();
+  koot.kerrokset = { haettu: new Date().toISOString().slice(0, 10), kermaAlueet, keskitavut, globaali, maat };
+  writeFileSync(KOOT_TIEDOSTO, kootTekstina(koot));
+  return koot.kerrokset;
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
@@ -726,7 +924,10 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   if (process.argv.includes('--paivita-koot')) {
     const t = await paivitaKoot(vienti);
     console.log(`offline-koot.json: rasteri ${JSON.stringify(t.rasteri.keskitavut)}, maasto z0–${t.maasto.available.length - 1}, media ${Object.keys(t.media).length} lajia`);
+  } else if (process.argv.includes('--paivita-kerrokset')) {
+    const t = await paivitaKerrokset(vienti);
+    console.log(`offline-koot.json kerrokset: ${Object.keys(t.maat).length} maata, kerma-alueita ${Object.keys(t.kermaAlueet).length}, globaali ${JSON.stringify(t.globaali)}`);
   } else {
-    console.log('käyttö: node tools/vienti/offline.mjs --paivita-koot [--vienti dist/vienti]');
+    console.log('käyttö: node tools/vienti/offline.mjs --paivita-koot | --paivita-kerrokset [--vienti dist/vienti]');
   }
 }

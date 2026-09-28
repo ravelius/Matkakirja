@@ -1617,7 +1617,9 @@ test('skeema 1.54: mediaKuvat on natiivin koko offline-media 100 Mt:n katolla', 
   for (const [iso, m] of Object.entries(o.maat)) {
     const t = m.tavuja;
     assert.ok(t.mediaKuvat <= o.lahteet.mediaKuvat.katto, iso);
-    assert.equal(t.offline, t.rasteri + t.maasto + (t.kaupunkiRasteri ?? 0) + t.kaupunkiMaasto + t.mediaKuvat, `${iso}: offline-summa`);
+    // Skeema 1.56: siirto = 1.54:n offline-summa + kerrokset; offline on levykoko (4 kt:n lohkot), vähintään siirto.
+    assert.equal(t.siirto, t.rasteri + t.maasto + (t.kaupunkiRasteri ?? 0) + t.kaupunkiMaasto + t.mediaKuvat + t.kerrokset, `${iso}: siirto-summa`);
+    assert.ok(t.offline >= t.siirto * 0.95, `${iso}: levykoko ${t.offline} < siirto ${t.siirto}`);
   }
   // Media-listan kuvat mukana mediaKuvissa (pienennettyinä), ei vain lisätiedostot.
   const fra = o.maat.FRA;
