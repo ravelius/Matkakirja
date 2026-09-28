@@ -447,17 +447,29 @@ namespace Matkakirja.Natiivi
             kuvaEnnen = null;
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
+            // Painalluksen kohde päätetään alussa: nappi (LISÄÄ, lukijan kaiutin/valikko), kenttä, kuva tai linkki ei sulje korttia,
+            // vaikka napin toiminto muuttaa asettelua ja nostosta syntyvä ClickEvent osuu sen jälkeen korttiin (1.0.39-savuke,
+            // Laitetestaaja: lukijan napautus sulki kortin; LISÄÄ-napautus sulki kortin FB234D08:lla).
+            alkuValitsee = Valitseva(e.target as VisualElement);
+        }
+
+        bool alkuValitsee;
+
+        bool Valitseva(VisualElement kohde)
+        {
+            for (var v = kohde; v != null && v != kortti; v = v.parent)
+            {
+                if (v is Button || v is TextField || v.ClassListContains("mk-nosto__kuvakehys") || v.ClassListContains("mk-nosto__lukija")) return true;
+                if (v is TextElement te && te.text != null && te.text.Contains("<link=")) return true;
+            }
+            return false;
         }
 
         /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
         void NapautusKorttiin(ClickEvent e)
         {
             if (((Vector2)e.position - eleAlku).magnitude >= Napautuskynnys || Time.unscaledTime * 1000f - eleAika > NapautusMs) return;
-            for (var v = e.target as VisualElement; v != null && v != kortti; v = v.parent)
-            {
-                if (v is Button || v is TextField || v.ClassListContains("mk-nosto__kuvakehys") || v.ClassListContains("mk-nosto__lukija")) return;
-                if (v is TextElement te && te.text != null && te.text.Contains("<link=")) return;
-            }
+            if (alkuValitsee || Valitseva(e.target as VisualElement)) return;
             var kohde = e.target as VisualElement;
             bool pohja = kohde == kortti || kohde == sisus || kohde == sisus.contentContainer || kohde == sisus.contentViewport || kohde is TextElement;
             if (!pohja) return;
