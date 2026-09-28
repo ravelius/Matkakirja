@@ -60,6 +60,34 @@ namespace Matkakirja.Linssit.Testit
             finally { IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Pyorea; }
         }
 
+        [Testi] static void Cupola3KuvaJaValot()
+        {
+            // Kuva laitteen muodosta: iPhone pysty sellaisenaan ja vaaka käännettynä, iPad vaaka sellaisenaan ja pysty käännettynä.
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(402, 874) == (false, false), "iPhone pysty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(874, 402) == (false, true), "iPhone vaaka käännetty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(1194, 834) == (true, false), "iPad 11 vaaka");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(834, 1194) == (true, true), "iPad 11 pysty käännetty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(1032, 1376) == (true, true), "iPad 13 pysty käännetty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(1290, 2796) == (false, false) && IssKuvakulma.Cupola3Kuva(0, 0) == (false, false), "pikselit ja nolla");
+            // Valot (luode, koillinen, lounas): aurinko kaakossa → luoteen reuna täysin, viereiset himmeästi.
+            var p = new float[3];
+            IssKuvakulma.Cupola3Valot(1, -1, p);
+            Oleta.Tosi(Math.Abs(p[0] - 1) < 1e-4 && p[1] > 0.2 && p[1] < 0.3 && Math.Abs(p[1] - p[2]) < 1e-4, $"kaakko {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            // Aurinko etelässä → yläreunat (luode ja koillinen) yhtä paljon, lounas ei.
+            IssKuvakulma.Cupola3Valot(0, -0.5, p);
+            Oleta.Tosi(p[0] > 0.7 && Math.Abs(p[0] - p[1]) < 1e-4 && p[2] == 0, $"etelä {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            // Aurinko koillisessa → lounas; pohjoisessa → lounas (ainoa alareuna); luoteessa → kaksi viereistä himmeästi.
+            IssKuvakulma.Cupola3Valot(2, 2, p);
+            Oleta.Tosi(Math.Abs(p[2] - 1) < 1e-4 && p[0] < 0.3 && p[1] == 0, $"koillinen {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            IssKuvakulma.Cupola3Valot(0, 1, p);
+            Oleta.Tosi(p[2] > 0.7 && p[0] == 0 && p[1] == 0, $"pohjoinen {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            IssKuvakulma.Cupola3Valot(-1, 1, p);
+            Oleta.Tosi(p[0] == 0 && p[1] > 0.2 && p[1] < 0.3 && Math.Abs(p[1] - p[2]) < 1e-4, $"luode {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            // Suoraan edessä tai takana: ei reunavaloa.
+            IssKuvakulma.Cupola3Valot(0.0002, 0.0001, p);
+            Oleta.Tosi(p[0] == 0 && p[1] == 0 && p[2] == 0, "edessä");
+        }
+
         [Testi] static void IkkunanSilmaOnIssissa()
         {
             var k = IssKuvakulma.Ikkuna(Iss, IssKuvakulma.IkkunanKatseAlas);

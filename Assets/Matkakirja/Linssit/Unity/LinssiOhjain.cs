@@ -1417,6 +1417,13 @@ namespace Matkakirja.Natiivi
                         else if (a == "rajaus" && osat.Length > 3)
                             Matkakirja.Linssit.Iss.IssKuvakulma.Rajaus = osat[3] == "horisontti" ? Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Horisontti
                                 : osat[3] == "katto" ? Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Katto : Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Pyorea;
+                        // CUPOLA 3 (Codexin toimitus 28.9. klo 22.4x): pyöreän rajauksen ohjaamo, 3 = kulma A keskitetty (oletus),
+                        // 3b = hieman vino, 2 = Cupola 2:n suurennettu kattoikkuna (8852e368).
+                        else if (a == "ohjaamo" && osat.Length > 3)
+                        {
+                            Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3 = osat[3] != "2";
+                            Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Kulma = osat[3] == "3b" ? "b" : "a";
+                        }
                         else if (a == "katse" && osat.Length > 3)   // katse <astetta vaakatason alapuolelle> | pois (tilan mukaan)
                             Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = double.TryParse(osat[3].Replace(',', '.'),
                                 System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double katse)
@@ -1472,6 +1479,7 @@ namespace Matkakirja.Natiivi
                                $"laatu {Matkakirja.Linssit.Iss.IssNyt.Laatu(utc)}, kamera ({kierto.leveys:F2}, {kierto.pituus:F2}) " +
                                $"{kierto.korkeus / 1000:F0} km kall {kierto.KaytettyKallistus:F1}° suunt {kierto.suuntima:F0}° fov {kam?.fieldOfView:F0}");
                         Kirjaa("astro kyyti aika: " + KyydinAikaTila(l));
+                        Kirjaa("astro kyyti ohjaamo: " + Matkakirja.Natiivi.IssKyytiNakyma.OhjaamonTila);
                     }
                 }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)

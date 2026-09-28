@@ -50,6 +50,45 @@ namespace Matkakirja.Linssit.Iss
         public enum IkkunanRajaus { Pyorea, Horisontti, Katto }
         public static IkkunanRajaus Rajaus = IkkunanRajaus.Pyorea;
         public static bool Horisontti => Rajaus == IkkunanRajaus.Horisontti;
+
+        /// <summary>
+        /// CUPOLA 3 (Codexin toimitus 28.9. klo 22.4x, posti/codex-fable-iss-ohjaamo-20260928.md; omistajan pyöreä kattoikkuna
+        /// tiiviisti pystyyn ja vaakaan): pyöreän rajauksen ohjaamo on piirretty valmiiksi rajatuksi kahtena kuvana, iPhonen
+        /// pysty 1290 × 2796 (ikkuna 98 % leveydestä) ja iPadin vaaka 2732 × 2048 (ikkuna 85 % korkeudesta). Kuva valitaan
+        /// laitteen muodosta (pitkä / lyhyt sivu alle 1,75 = iPadin kuva) ja käännetään 90°, kun ruutu on eri asennossa kuin
+        /// kuva (iPhone vaaka, iPad pysty): ikkuna pysyy pyöreänä ja täyttää ruudun lyhyemmän sivun.
+        /// </summary>
+        public static (bool ipad, bool kaanna) Cupola3Kuva(double leveys, double korkeus)
+        {
+            double pitka = Math.Max(leveys, korkeus), lyhyt = Math.Min(leveys, korkeus);
+            bool ipad = lyhyt > 0 && pitka / lyhyt < Cupola3IpadRaja;
+            return (ipad, ipad ? korkeus > leveys : leveys > korkeus);
+        }
+        public const double Cupola3IpadRaja = 1.75;
+
+        /// <summary>Cupola 3:n reunavalot Codexin tiedostonimin: kapea valo ikkunan reunassa luoteessa, koillisessa ja lounaassa.</summary>
+        public static readonly string[] Cupola3ValoNimet = { "sun-nw", "sun-ne", "sun-sw" };
+        const double R2 = 0.70710678118654752, Cupola3Keila = 0.35;
+        /// <summary>Reunavalojen puolet kuvassa (x oikealle, y ylös) samassa järjestyksessä.</summary>
+        static readonly (double x, double y)[] Cupola3Reunat = { (-R2, R2), (R2, R2), (-R2, -R2) };
+
+        /// <summary>
+        /// Cupola 3:n reunavalojen painot 0…1, kun aurinko on kuvan suunnassa (<paramref name="x"/>, <paramref name="y"/>; x
+        /// oikealle, y ylös, CupolaKerros.Valo). Valo tulee lasin läpi ja osuu karmin sisäreunaan auringon VASTAKKAISELLA puolella
+        /// (kuten Cupola 2:n reunavaloissa: kehys valaistuu, jos ikkuna on sen ja auringon välissä), eli luoteen reuna loistaa, kun
+        /// aurinko on kaakossa. Pehmeä keila (0,35): suunnalle, jolla ei ole omaa kerrosta (aurinko luoteessa), kaksi viereistä
+        /// himmeästi. Aurinko suoraan edessä tai takana (xy alle 0,001): ei reunavaloa.
+        /// </summary>
+        public static void Cupola3Valot(double x, double y, float[] painot)
+        {
+            double l = Math.Sqrt(x * x + y * y);
+            for (int i = 0; i < Cupola3Reunat.Length; i++)
+            {
+                if (l < 1e-3) { painot[i] = 0; continue; }
+                double vastaan = -(x * Cupola3Reunat[i].x + y * Cupola3Reunat[i].y) / l;
+                painot[i] = (float)Math.Max(0, (vastaan + Cupola3Keila) / (1 + Cupola3Keila));
+            }
+        }
         /// <summary>Ikkunan katse nyt (A/B `astro kyyti katse &lt;astetta&gt;` ohittaa; NaN = rajauksen mukaan).</summary>
         public static double KatseAlasPakotettu = double.NaN;
         public static double IkkunanKatseNyt => !double.IsNaN(KatseAlasPakotettu) ? KatseAlasPakotettu
