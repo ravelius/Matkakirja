@@ -27,8 +27,11 @@ namespace Matkakirja
         public static readonly DateTime MatkanPaiva = new DateTime(2026, 9, 28, 0, 0, 0, DateTimeKind.Utc);
         /// <summary>Päälle ja pois (s).</summary>
         public const float HaivytysS = 1.2f;
-        /// <summary>Yövalojen voimakkuus (RadioMastojen oletus).</summary>
-        public static float Voimakkuus = MastoGeometria.YovalonVoimakkuus;
+        /// <summary>Yövalojen voimakkuus. Varjostin kertoo sen (0,5 + 0,5 × mastokorostus):lla ja korottaa potenssiin 2,2;
+        /// ilman radiomaston lähikorostusta RadioMastojen 0,85 jäi laitteella himmeiksi pisteiksi (v3f-ajo 28.9. klo 14.30),
+        /// joten valomerelle 2,0. Komento `paivanvalo voimakkuus x`.</summary>
+        public const float OletusVoimakkuus = 2.0f;
+        public static float Voimakkuus = OletusVoimakkuus;
         /// <summary>Kehittäjäkomento: true/false pakottaa, null = valinnan ja aloituslennon ajan.</summary>
         public static bool? Pakota;
 
@@ -48,7 +51,7 @@ namespace Matkakirja
         CesiumGeoreference georeferenssi;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; Pakota = null; Voimakkuus = MastoGeometria.YovalonVoimakkuus; }
+        static void Nollaa() { Instanssi = null; Pakota = null; Voimakkuus = OletusVoimakkuus; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()

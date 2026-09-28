@@ -693,6 +693,9 @@ namespace Matkakirja
                     if (o.Length > 1 && (o[1] == "1" || o[1] == "paalle")) Paivanvalo.Pakota = true;
                     else if (o.Length > 1 && (o[1] == "0" || o[1] == "pois")) Paivanvalo.Pakota = false;
                     else if (o.Length > 1 && o[1] == "auto") Paivanvalo.Pakota = null;
+                    // paivanvalo voimakkuus x (yövalot) | paivanvalo alku h (Pelikello.AlkuKelloUtc: lähdön kellonaika, kuvaparit)
+                    else if (o.Length > 2 && o[1] == "voimakkuus") Paivanvalo.Voimakkuus = (float)D(2);
+                    else if (o.Length > 2 && o[1] == "alku") Pelikello.AlkuKelloUtc = D(2);
                     Debug.Log("MATKAKIRJA " + (Paivanvalo.Instanssi != null ? Paivanvalo.Instanssi.Tila : "päivänvalo: ei käynnissä"));
                     break;
                 case "kamerareitti":
