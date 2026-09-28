@@ -27,6 +27,9 @@ namespace Matkakirja.Natiivi
         static string jaetunOsoite;
         static bool lataa;
         Texture2D kuva => jaettu;
+        /// <summary>Jaettu pilvikuva (RGBA, alfa = pilvi, tasakulmainen, rivi 0 etelässä) ja sen osoite; yökuori himmentää sillä valot.</summary>
+        public static Texture2D JaettuKuva => jaettu;
+        public static string JaetunOsoite => jaetunOsoite;
 
         public static Pilvikuori Luo(CesiumGeoreference georeferenssi, string osoite = OletusOsoite)
         {
@@ -116,6 +119,27 @@ namespace Matkakirja.Natiivi
             if (jaettu != null) Destroy(jaettu);
             jaettu = kuva;
             jaetunOsoite = osoite;
+        }
+
+        /// <summary>
+        /// PÄIVÄN PILVET (ISS-realismi 2, omistajan kortti 28.9.): vaihtaa jaetun kuvan toiseen osoitteeseen (Julkaisijan
+        /// ajastettu haku NASA GIBS:stä, data/pilvet/uusin.png). Vanha kuva jää käyttöön, jos uusi ei lataudu. valmis(true) =
+        /// vaihtui.
+        /// </summary>
+        public void VaihdaKuva(string osoite, System.Action<bool> valmis = null) => StartCoroutine(Vaihda(osoite, valmis));
+
+        IEnumerator Vaihda(string osoite, System.Action<bool> valmis)
+        {
+            while (lataa) yield return null;
+            if (jaettu != null && jaetunOsoite == osoite) { materiaali.SetTexture("_MainTex", jaettu); valmis?.Invoke(true); yield break; }
+            var vanha = jaettu;
+            lataa = true;
+            try { yield return LataaKuva(osoite); }
+            finally { lataa = false; }
+            bool ok = jaettu != null && jaetunOsoite == osoite;
+            if (jaettu != null) materiaali.SetTexture("_MainTex", jaettu);
+            Debug.Log($"MATKAKIRJA linssit: pilvikuva {(ok ? "vaihtui: " + osoite : "ei vaihtunut (vanha jää)")}");
+            valmis?.Invoke(ok);
         }
 
         /// <summary>

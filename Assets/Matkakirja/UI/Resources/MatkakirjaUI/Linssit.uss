@@ -3036,3 +3036,109 @@
     text-shadow: 0 1px 2px rgba(20, 12, 4, 0.8);
     white-space: nowrap;
 }
+
+/* --- ISS:n kyyti (Linssisepän suositus docs/raportit/iss-kyyti-suositus-20260928.md) ------------------------ */
+
+.mk-isskyyti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Cupola-kehys ja heijastus koko ruudulle (cover), vain ikkunassa; häivytys 300 ms. */
+.mk-isskyyti__kehys,
+.mk-isskyyti__heijastus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.mk-isskyyti--ikkuna .mk-isskyyti__kehys,
+.mk-isskyyti--ikkuna .mk-isskyyti__heijastus {
+    opacity: 1;
+}
+
+/* Cupola 2 (Codex 28.9.): ulko-osat siluetteina, heijastus ja tumma kehys takaa eteen; cover ja häivytys kuten yllä. */
+.mk-isskyyti__ulko2,
+.mk-isskyyti__heijastus2,
+.mk-isskyyti__kehys2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.mk-isskyyti--kuva2 .mk-isskyyti__ulko2,
+.mk-isskyyti--kuva2 .mk-isskyyti__heijastus2,
+.mk-isskyyti--kuva2 .mk-isskyyti__kehys2 {
+    opacity: 1;
+}
+
+.mk-isskyyti__turva {
+    position: absolute;
+}
+
+/* Tietorivi kuvanäkymän kiinni olevan nimipillerin tyylillä (.mk-astrokuva__selite.mk-kiinni), mutta täysin peittävänä. */
+.mk-isskyyti__tieto {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    padding: 5px 10px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+.mk-isskyyti__teksti {
+    font-size: 13px;
+    white-space: nowrap;
+    color: rgb(93, 255, 168);
+}
+
+/* LIVE (omistaja 28.9.): punainen piste sykkii 0,9 s:n siirtymällä ja lihavoitu LIVE ennen tietoja. */
+.mk-isskyyti__tieto {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-isskyyti__piste {
+    width: 7px;
+    height: 7px;
+    border-radius: 3.5px;
+    margin-right: 6px;
+    background-color: rgb(255, 86, 86);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-in-out;
+}
+
+.mk-isskyyti__piste--himmea {
+    opacity: 0.25;
+}
+
+.mk-isskyyti__live {
+    font-size: 13px;
+    -unity-font-style: bold;
+    white-space: nowrap;
+    margin-right: 5px;
+    color: rgb(93, 255, 168);
+}
