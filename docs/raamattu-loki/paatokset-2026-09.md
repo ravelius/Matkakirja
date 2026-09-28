@@ -8931,3 +8931,7 @@ Päätoimittaja 28.9. klo 22.33 (omistaja kysyi 'mikä yötauko?'): 27.9. yötau
 ## TILA: VANHENTUNUT KUORMARAJALIPPU POISTETTU (28.9.2026 klo 22.35)
 
 Päätoimittaja 28.9. klo 22.35: /tmp/matkakirja-kuormaraja ('Omistajan kuormaraja klo 17 asti … Poista klo 17', luotu 11.30) oli jäänyt päälle ja esti 22.18:n junakäännöksen asennuksen Laitetestaajan laitteisiin 1572C658/3B4CDACB (Natiiviseppä). Poistettu; nice-oletus (11.31) korvasi sen jo aamulla. Julkaisija: aikarajalliset liput poistetaan määräaikana.
+
+## TILA: PULU SONNET 5.5 TUOTANNOSSA (28.9.2026 klo 22.36)
+
+Julkaisija 28.9. klo 22.36: #3580 mergetty (v2377, a6dec6558), pollo-worker julkaistu (36473166370, versio ebabf949) — Pulun chat käyttää nyt claude-sonnet-5-5:tä ajattelu between_tools.
