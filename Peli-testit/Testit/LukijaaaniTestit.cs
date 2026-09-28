@@ -288,5 +288,61 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(palat[0].Length >= Lukijaaani.VirtaEka, "vähintään 140: " + palat[0].Length);
             Oleta.Sama(luenta[0], string.Join(" ", palat), "mitään ei pudoteta");
         }
+
+        [Testi] static void LuennanTagitKappalejakoJaValiotsikko()
+        {
+            // Omistaja 27.9. klo 23.1x: kappalejako → [pause], väliotsikon edelle [long-pause], EI tagia otsikon perään.
+            var (palat, tagit) = Lukijaaani.LuennanPalatJaTagit(new[]
+            {
+                "Akropolis", "Kalliolinna keskellä Ateenaa.", "Toinen kappale kertoo lisää.",
+                "Parthenon", "Aarreholvi eikä kokoontumistila.",
+            });
+            Oleta.Sama(3, palat.Count);
+            Oleta.Sama("Akropolis. Kalliolinna keskellä Ateenaa.", palat[0], "otsikko kappaleen alussa, ei omana palanaan");
+            Oleta.Sama(Lukijaaani.TagiTauko, tagit[0], "kappalejako");
+            Oleta.Sama(Lukijaaani.TagiPitkaTauko, tagit[1], "seuraava alkaa väliotsikolla");
+            Oleta.Sama(null, tagit[2], "viimeinen ilman tagia");
+            foreach (var p in palat) Oleta.Tosi(!p.Contains("["), "teksti puhdas: " + p);
+            Oleta.Sama(string.Join("|", palat), string.Join("|", Lukijaaani.LuennanPalat(new[] { "Akropolis", "Kalliolinna keskellä Ateenaa.", "Toinen kappale kertoo lisää.", "Parthenon", "Aarreholvi eikä kokoontumistila." })), "LuennanPalat ennallaan");
+            // Kattoa pidempi kappale pilkotaan: välipalan perään ei tagia, vasta kappaleen viimeisen.
+            var virke = new string('a', 100) + ".";
+            var pitka = string.Join(" ", System.Linq.Enumerable.Repeat(virke, 30));
+            var (pp, tt) = Lukijaaani.LuennanPalatJaTagit(new[] { pitka, "Loppu." });
+            Oleta.Tosi(pp.Count >= 3, "pilkottu: " + pp.Count);
+            for (int i = 0; i < pp.Count - 2; i++) Oleta.Sama(null, tt[i], "välipala " + i);
+            Oleta.Sama(Lukijaaani.TagiTauko, tt[pp.Count - 2]);
+        }
+
+        [Testi] static void PuhetagitVainPyyntoonJaOmaAvain()
+        {
+            var sailo = new System.Collections.Generic.Dictionary<string, string>();
+            var l = new Lukijaaani(k => sailo.TryGetValue(k, out var v) ? v : null, (k, v) => sailo[k] = v, k => sailo.Remove(k));
+            string teksti = "Akropolis. Akropolis on kalliolinna keskellä Ateenaa, ja sen päällä seisovat Parthenonin ja Erekhtheionin temppelit. "
+                + "Nykyiset rakennukset pystytettiin Perikleen aikana.";
+            var ilman = Lukijaaani.PyyntoPalat(teksti, true, null);
+            var tagilla = Lukijaaani.PyyntoPalat(teksti, true, Lukijaaani.TagiTauko);
+            Oleta.Sama(ilman.Count, tagilla.Count);
+            Oleta.Sama(ilman[ilman.Count - 1] + " [pause]", tagilla[tagilla.Count - 1], "tagi vain viimeisen palan perään");
+            for (int i = 0; i < ilman.Count - 1; i++) Oleta.Sama(ilman[i], tagilla[i]);
+            Oleta.Tosi(l.Valimuistiavain("kertoja", tagilla[tagilla.Count - 1]) != l.Valimuistiavain("kertoja", ilman[ilman.Count - 1]),
+                "tagillisella palalla oma välimuistiavain");
+            Oleta.Sama("kertoja-t1", Lukijaaani.TagiLohko("kertoja", "[pause]"));
+            Oleta.Sama("kertoja", Lukijaaani.TagiLohko("kertoja", null));
+            Oleta.Sama(null, Lukijaaani.TagiLohko(null, "[pause]"), "pöllö: ei säilöä");
+        }
+
+        [Testi] static void PuhetagitEivatNayNaytolla()
+        {
+            Oleta.Sama("Pulu? Minä olen pöllö! Kaarlensilta valmistui 1402. Hei, kysy lisää!",
+                Lukijaaani.PoistaPuhetagit("[sigh] Pulu? Minä olen pöllö! [pause] Kaarlensilta valmistui 1402. <fast>Hei, kysy lisää!</fast>"));
+            Oleta.Sama("Rivi yksi.\nRivi kaksi [[Kaarlensilta]].", Lukijaaani.PoistaPuhetagit("Rivi yksi. [laugh]\n[long-pause] Rivi kaksi [[Kaarlensilta]]."),
+                "käsitelinkki ei ole tagi");
+            Oleta.Sama("5 < 7 ja [1] viite", Lukijaaani.PoistaPuhetagit("5 < 7 ja [1] viite"), "ei-tagit säilyvät");
+            // Striimi: kesken tullut tagi ei vilahda.
+            Oleta.Sama("Pulu?", Lukijaaani.PoistaKeskenTagi("Pulu? [si"));
+            Oleta.Sama("Hei,", Lukijaaani.PoistaKeskenTagi("Hei, <fa"));
+            Oleta.Sama("Hei, kysy", Lukijaaani.PoistaKeskenTagi("Hei, kysy"));
+            Oleta.Sama("Pulu? [[Kaar", Lukijaaani.PoistaKeskenTagi("Pulu? [[Kaar"), "keskeneräinen käsitelinkki hoidetaan muualla");
+        }
     }
 }

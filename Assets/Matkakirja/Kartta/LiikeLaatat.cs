@@ -43,6 +43,13 @@ namespace Matkakirja
         /// <summary>Liikkeen SSE-vastine (0 = pois, aina pääkamera). Komento `maasto liike`.</summary>
         public static float Sse = LiikeLaatatPaatos.OletusSse;
 
+        /// <summary>
+        /// Aloituslennon nopeat vaiheet (AloituslennonRata.Karkea: kiri ja ylilento, v3b): varjo tällä SSE:llä myös
+        /// vakiotarkkuudella ja lennossa, joten Cesiumin latausjono ei täyty ohi kiitävistä laatoista ja saapumisen laatat
+        /// ehtivät. 0 = pois (tavallinen valinta). Nappula asettaa joka kehys lennon ajan ja nollaa perillä ja purussa.
+        /// </summary>
+        public static float LentoKarkeaSse;
+
         public static LiikeLaatat Instanssi { get; private set; }
 
         /// <summary>Tämän kehyksen valinta (KehysMittari).</summary>
@@ -52,7 +59,7 @@ namespace Matkakirja
         public static int Vaihtoja { get; private set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; Sse = LiikeLaatatPaatos.OletusSse; Vaihtoja = 0; }
+        static void Nollaa() { Instanssi = null; Sse = LiikeLaatatPaatos.OletusSse; Vaihtoja = 0; LentoKarkeaSse = 0f; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -116,6 +123,14 @@ namespace Matkakirja
         {
             if (kierto == null || paa == null || Time.frameCount % 30 == 0) Etsi();
             float nyt = Time.unscaledTime;
+            // Aloituslennon nopea vaihe: varjo lennon omalla SSE:llä (ohittaa esteet Pois ja Lento).
+            if (LentoKarkeaSse > 0f && kierto != null && paa != null && paa.isActiveAndEnabled && VarmistaVarjo())
+            {
+                este = Este.Ei;
+                PaivitaVarjo(LentoKarkeaSse);
+                if (valinta != Valinta.Varjo) Vaihda(Valinta.Varjo, "aloituslento");
+                return;
+            }
             este = Esta();
             bool karkea = este == Este.Ei && kierto.KarkeaLiike;
             if (karkea) viimeKarkea = nyt;
@@ -123,7 +138,7 @@ namespace Matkakirja
             if (uusi == Valinta.Varjo)
             {
                 if (!VarmistaVarjo()) uusi = Valinta.Paa;
-                else PaivitaVarjo();
+                else PaivitaVarjo(Sse);
             }
             if (uusi != valinta)
                 Vaihda(uusi, uusi == Valinta.Varjo ? "liike" : este != Este.Ei ? LiikeLaatatPaatos.Nimi(este)
@@ -167,10 +182,10 @@ namespace Matkakirja
         }
 
         /// <summary>Projektio ja koko pääkamerasta joka kehys (FOV, near/far, kuvasuhde; rect × kerroin).</summary>
-        void PaivitaVarjo()
+        void PaivitaVarjo(float sse)
         {
             float pohja = pallo != null ? pallo.maximumScreenSpaceError : 16f;
-            kerroin = LiikeLaatatPaatos.Kerroin(pohja, Sse);
+            kerroin = LiikeLaatatPaatos.Kerroin(pohja, sse);
             var r = paa.rect;
             var uusi = new Rect(r.x, r.y, r.width * kerroin, r.height * kerroin);
             if (varjo.rect != uusi) varjo.rect = uusi;

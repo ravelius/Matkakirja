@@ -78,6 +78,13 @@ namespace Matkakirja
         public static Color UsvaVari = new Color(250f / 255f, 244f / 255f, 214f / 255f);
         /// <summary>Usvan raja × korkeus (webin KALLISTUS_RAJA_KERROIN 0,6; komento "usva raja &lt;k&gt;").</summary>
         public static double UsvaRaja = Horisonttiusva.RajaKerroin;
+        /// <summary>Usvan raja vähintään (m katsepisteestä; 0 = vain webin raja UsvaRaja × korkeus). Aloituslennon rata asettaa
+        /// lennon ajaksi (AloituslennonRata.UsvaVahintaanM, v3): lähikuvassa webin raja hukutti maan sumuun.</summary>
+        public static double UsvaVahintaanM;
+
+        /// <summary>Tämän kehyksen usvan rajakerroin (× korkeus): UsvaRaja, tai suurempi jos UsvaVahintaanM on asetettu.</summary>
+        static double UsvaKerroin(double korkeusM) =>
+            UsvaVahintaanM > 0 && korkeusM > 1 ? Math.Max(UsvaRaja, UsvaVahintaanM / korkeusM) : UsvaRaja;
 
         /// <summary>Editorin pelitila ilman domain reloadia: kokeilut eivät jää edellisestä ajosta.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -90,6 +97,7 @@ namespace Matkakirja
             UsvaSallittu = true;
             UsvaVari = new Color(250f / 255f, 244f / 255f, 214f / 255f);
             UsvaRaja = Horisonttiusva.RajaKerroin;
+            UsvaVahintaanM = 0;
         }
 
         /// <summary>Rinnevalon osuus tässä kehyksessä (0 = kameravalo, 1 = matala aurinko ja täysi tasaus).</summary>
@@ -225,7 +233,7 @@ namespace Matkakirja
             if (Horisonttiusva.RuutuVoima > 0f)
             {
                 double y = Horisonttiusva.RajanRuutuY(kierto.korkeus, kierto.KaytettyKallistus, kameraKomp.fieldOfView * 0.5,
-                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaRaja);
+                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaKerroin(kierto.korkeus));
                 Horisonttiusva.RuutuRajaY = double.IsNaN(y) ? 0f : Mathf.Clamp01((float)((1.0 - y) * 0.5));
             }
             // Sama usva varjostimille (löydös 159, Shaders/Horisonttiusva.hlsl): reitit, kynäviivat, Overlay-nimet.
@@ -246,7 +254,7 @@ namespace Matkakirja
                 double mitta = georeferenssi != null ? georeferenssi.transform.lossyScale.x : 1.0;
                 double puoliFov = kameraKomp.fieldOfView * 0.5;
                 var (alku, loppu) = Horisonttiusva.Sumu(kierto.korkeus, kierto.KaytettyKallistus, puoliFov,
-                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaRaja);
+                    CesiumWgs84Ellipsoid.GetMaximumRadius(), UsvaKerroin(kierto.korkeus));
                 float kauas = (float)(loppu * mitta) * 8f;
                 RenderSettings.fog = true;
                 RenderSettings.fogMode = FogMode.Linear;
@@ -286,7 +294,7 @@ namespace Matkakirja
             return $"rinne {Rinne:0.00} (sallittu {RinnevaloSallittu}, atsimuutti {Atsimuutti:0}°, korkeus {KorkeusAst:0}°, voima {Voima:0.00}), " +
                    $"tasaus {KorkeusKerroin.TasausArvo:0.00}, intensiteetti {valo?.intensity:0.000}, ambientti {RenderSettings.ambientLight}, " +
                    $"ambientProbe[0,0] {RenderSettings.ambientProbe[0, 0]:0.0000}, N·L(kameran akseli) {Vector3.Dot(n0, valo != null ? -valo.transform.forward : n0):0.000}, " +
-                   $"usva {Usva:0.00} (sallittu {UsvaSallittu}, raja {UsvaRaja:0.00}, taustakartta {taustaKartta:0.00}), " +
+                   $"usva {Usva:0.00} (sallittu {UsvaSallittu}, raja {UsvaRaja:0.00}, vähintään {UsvaVahintaanM / 1000.0:0} km, taustakartta {taustaKartta:0.00}), " +
                    $"tausta {(kameraKomp != null ? kameraKomp.backgroundColor.ToString() : "-")} {(kameraKomp != null ? kameraKomp.clearFlags.ToString() : "")}, " +
                    $"sumu {RenderSettings.fog} (lennon sumu {sumu}) " +
                    $"{RenderSettings.fogStartDistance:0}–{RenderSettings.fogEndDistance:0} m, kallistus {kierto?.KaytettyKallistus:0.0}°, " +

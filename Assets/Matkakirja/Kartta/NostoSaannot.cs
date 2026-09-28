@@ -40,13 +40,30 @@ namespace Matkakirja
         /// <summary>Miksi nosto on (tai ei ole) kartalla. Nakyy = portit päästävät (ruutu ja katto erikseen).</summary>
         public enum Syy { Nakyy, KaupunginNimi, KaupunginSade, Meri, Taso3 }
 
-        /// <summary>Kaupungin keskus jäsenyyttä varten: kaupungin oma nimi ja oma piste.</summary>
+        /// <summary>
+        /// Kaupungin keskus jäsenyyttä varten: kaupungin oma nimi ja oma piste. NimiTesti = paikkanimen vertailu sallittu:
+        /// ei maan nimisellä kaupungilla (Pelikoodarin Geysir-löydös 28.9.2026, web #3541: Islanti, Luxemburg, Singapore…
+        /// — maan nimellä täytetty paikka piilotti koko maan nostot), vain etäisyys.
+        /// </summary>
         public struct Keskus
         {
             public string Nimi;
             public double Lat, Lon;
-            public Keskus(string nimi, double lat, double lon) { Nimi = nimi; Lat = lat; Lon = lon; }
+            public bool NimiTesti;
+            public Keskus(string nimi, double lat, double lon, bool nimiTesti = true) { Nimi = nimi; Lat = lat; Lon = lon; NimiTesti = nimiTesti; }
         }
+
+        /// <summary>Kaupunki on maansa niminen (web: NimiAvain(kaupunki) == NimiAvain(countryShapes[maa].nimi)).</summary>
+        public static bool MaanNiminen(string kaupunginNimi, string maanNimi) =>
+            maanNimi != null && NimiAvain(kaupunginNimi).Length > 0 && NimiAvain(kaupunginNimi) == NimiAvain(maanNimi);
+
+        /// <summary>
+        /// Noston paikkanimi vertailuun vain, kun se on datan oma (paikkaLahde "data"; web paikkaNimi). Vienti täyttää
+        /// puuttuvan paikan kaupunkiAvaimen kaupungin tai maan nimellä (paikkaLahde "kaupunki"/"maa"), eikä sellainen kerro,
+        /// että nosto olisi kaupungin sisällä. Kentätön vanha paketti: paikka sellaisenaan.
+        /// </summary>
+        public static string VertailuPaikka(string paikka, string paikkaLahde) =>
+            paikkaLahde == null || paikkaLahde == "data" ? paikka : null;
 
         /// <summary>Kahden asteparin etäisyys kilometreinä (haversine, kaupunkiliuska.js:64 etaisyysKm).</summary>
         public static double EtaisyysKm(double lat1, double lon1, double lat2, double lon2)
@@ -116,7 +133,7 @@ namespace Matkakirja
             {
                 var k = keskukset[i];
                 string nimi = NimiAvain(k.Nimi);
-                if (nimi.Length > 0 && paikkaAvain == nimi) { kaupunki = k.Nimi; return Syy.KaupunginNimi; }
+                if (k.NimiTesti && nimi.Length > 0 && paikkaAvain == nimi) { kaupunki = k.Nimi; return Syy.KaupunginNimi; }
                 if (!paikkaOk || double.IsNaN(k.Lat) || double.IsNaN(k.Lon)) continue;
                 // Karkea laatikko ensin: haversine vain naapureille.
                 if (Math.Abs(omaLat - k.Lat) > latRaja) continue;

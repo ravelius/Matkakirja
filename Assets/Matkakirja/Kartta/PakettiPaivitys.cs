@@ -458,7 +458,21 @@ namespace Matkakirja
         {
             string vanhaPolku = Sisalto.IstunnonPolku;
             int vanha = vanhaPolku != null ? PakettiPaatokset.VersioPolusta(vanhaPolku) : 0;
-            if (vanhaPolku == polku || !PakettiPaatokset.VaihdaKeskenIstunnon(versio, vanha)) return;
+            // SAMA VERSIO (Siirtosepän E2E-offline 28.9.2026): tuore asennus lukee version laiskasti, ja kun taustalataus
+            // valmistui, sen tiedostot olivat varastossa mutta istunto haki puuttuvat yhä verkosta seuraavaan käynnistykseen
+            // asti (ilman verkkoa: tyhjää). Sisältö ja polku ovat samat, joten hakemisto käyttöön hiljaa, ilman tapahtumaa.
+            if (vanhaPolku == polku)
+            {
+                if (kaytossaPolku == polku) return;
+                kaytossaHakemisto = rivit.ToDictionary(r => r.Polku, r => r.Sha256);
+                kaytossaPolku = polku; kaytossaVersio = versio;
+                osittainenHakemisto = null; osittainenPolku = null;
+                try { File.WriteAllText(KaytossaTxt, polku); } catch (Exception) { }
+                Tila = $"v{versio} käytössä (laiska tila valmistui)";
+                Debug.Log("MATKAKIRJA paketti: " + Tila);
+                return;
+            }
+            if (!PakettiPaatokset.VaihdaKeskenIstunnon(versio, vanha)) return;
             List<string> muuttuneet;
             try
             {

@@ -32,6 +32,8 @@ namespace Matkakirja
             /// <summary>Maanosa offline.jsonin maat[].manner-kentästä (skeema 1.23); maailmalla null.</summary>
             public string Manner;
             public long Tavut, Ladattu;
+            /// <summary>Skeema 1.56: levyllä vievä koko (tavuja.offline: rajauslaatikko ja 4 kt:n lohkot); vanha paketti = Tavut.</summary>
+            public long LevyTavut;
             public Tila Tila;
             public string Virhe;
             internal Dictionary<string, object> Tiedot;
@@ -65,6 +67,8 @@ namespace Matkakirja
         static int rasterinMaaMax = int.MaxValue;
         // Skeema 1.54: mediaKuvat korvaa media-listan offline-latauksessa.
         static bool korvaaMedian;
+        // Skeema 1.56: lahteet.kerrokset (kerma, reliefi, yövalot) tai null (vanha paketti: ei ladata).
+        static Dictionary<string, object> kerrokset;
 
         static string Kirjanpito => Path.Combine(Laattapalvelin.OfflineKansio, "_alueet");
         static string Merkki(string id) => Path.Combine(Kirjanpito, id + ".txt");
@@ -86,6 +90,8 @@ namespace Matkakirja
             korvaaMedian = juuri.TryGetValue("lahteet", out var lk) && lk is Dictionary<string, object> lkd &&
                            lkd.TryGetValue("mediaKuvat", out var lmk) && lmk is Dictionary<string, object> lmkd &&
                            lmkd.TryGetValue("korvaaMedian", out var kmv) && kmv is bool kmb && kmb;
+            kerrokset = juuri.TryGetValue("lahteet", out var lk2) && lk2 is Dictionary<string, object> lk2d &&
+                        lk2d.TryGetValue("kerrokset", out var kv) ? kv as Dictionary<string, object> : null;
             if (juuri.TryGetValue("lahteet", out var la) && la is Dictionary<string, object> lahteet &&
                 lahteet.TryGetValue("rasteri", out var lr) && lr is Dictionary<string, object> rasteri &&
                 rasteri.TryGetValue("maaMax", out var mm) && mm is double mmd)
@@ -129,7 +135,10 @@ namespace Matkakirja
                 // Siirtokoko = levykoko: 1.0.32 tallentaa maaston gzipattuna (Laattapalvelin.LataaOffline, Fablen C), joten
                 // tavuja.levy (purettu, vanhoille buildeille) ei koske tätä buildia.
                 // Skeema 1.54: tavuja.offline = rasteri + maasto + kaupunkiRasteri + kaupunkiMaasto + mediaKuvat (siirto) sellaisenaan.
-                if (td.TryGetValue("offline", out var of) && of is double ofd) tavut = (long)ofd;
+                // Skeema 1.56: offline = levykoko (4 kt:n lohkot), siirto = ladattavat tavut. Edistymä (Ladattu/Tavut) laskee
+                // siirtoa, joten Tavut = siirto; levykoko erikseen LevyTavut (Natiiviseppä 28.9.).
+                if (td.TryGetValue("siirto", out var si) && si is double sid) tavut = (long)sid;
+                else if (td.TryGetValue("offline", out var of) && of is double ofd) tavut = (long)ofd;
                 else
                 {
                     if (td.TryGetValue("yht", out var y) && y is double yd) tavut = (long)yd;
@@ -138,7 +147,9 @@ namespace Matkakirja
                     if (td.TryGetValue("mediaKuvat", out var mk) && mk is double mkd) tavut += (long)mkd;
                 }
             }
-            var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
+            long levy = d.TryGetValue("tavuja", out var t2) && t2 is Dictionary<string, object> td2 && td2.ContainsKey("siirto") &&
+                        td2.TryGetValue("offline", out var lv) && lv is double lvd ? (long)lvd : tavut;
+            var a = new Alue { Id = id, Nimi = nimi, Tavut = tavut, LevyTavut = levy, Tiedot = d, Manner = d.TryGetValue("manner", out var mn) ? mn as string : null };
             if (File.Exists(Merkki(id))) { a.Tila = Tila.Valmis; a.Ladattu = tavut; }
             return a;
         }
@@ -240,6 +251,9 @@ namespace Matkakirja
             // tarkat solut rasterin laatikosta.
             if (a.Id == "maailma") polut.AddRange(Vektorikerros.OfflinePolut(true, null));
             else if (RasterinLaatikko(a.Tiedot, out var laatikko)) polut.AddRange(Vektorikerros.OfflinePolut(false, laatikko));
+            // Skeema 1.56 (Fable 28.9.2026, Siirtosepän E2E-offline Tanska + Kroatia: "ladattu alue näyttää ja toimii ilman
+            // verkkoa täsmälleen kuten verkossa"): kerma, reliefi (molemmat sarjat) ja yövalot. Osoitteet omista sarjoista.
+            if (kerrokset != null) KerrosPolut(a, polut, Suhteellinen);
             // Media (sisältö) ja mediaKuvat (Fablen päätös 27.9. klo 17.5x: pienennetyt nostokuvat ja R2:ssa jo olevat puheet,
             // katto 100 Mt/maa; vanhat buildit ohittavat avaimen). Luetaan Mukana.Polun kautta ilman verkkoa.
             // mediaKuvat (skeema 1.52): [{ url, pieni? }] — tiedosto tallennetaan url:n polulle (Kuvat löytää sen alkuperäisellä
@@ -260,6 +274,70 @@ namespace Matkakirja
                         }
                     }
             return polut;
+        }
+
+        /// <summary>
+        /// Skeema 1.56 (lahteet.kerrokset, Siirtoseppä): maailmalle kerma _maailma, reliefi ja yövalot koko pallolta
+        /// globaaliTasot-väliltä; maalle oma kermasarja maat.*.kerma-väleillä sekä _maailma-kerma, reliefi ja yövalot
+        /// maat.*.rasteri-väleillä maittainTasot-väliltä. Puuttuva laatta (404) on läpinäkyvä: LataaOffline kirjaa 0 tavua.
+        /// </summary>
+        static void KerrosPolut(Alue a, List<string> polut, Func<string, string> suhteellinen)
+        {
+            string kerma = Laattapalvelin.Ampari + Varitaso.Kansio + "{alue}/{z}/{x}/{y}.webp";
+            var reliefit = new[] { Matkakirja.Linssit.Topografia.ReliefiSarja, Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VaimeaSarja };
+            string yovalot = RadioMastot.YovaloUrl.Replace("{reverseY}", "{y}");
+            bool maailma = a.Id == "maailma";
+            string avain = maailma ? "globaaliTasot" : "maittainTasot";
+            void Lisaa(string pohja, int z, int x0, int y0, int x1, int y1)
+            {
+                if (string.IsNullOrEmpty(pohja)) return;
+                for (int x = x0; x <= x1; x++)
+                    for (int y = y0; y <= y1; y++)
+                        if (suhteellinen(pohja.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{y}", y.ToString())) is string s)
+                            polut.Add(s);
+            }
+            void Kentasta(string pohja, string kentta, int zMin, int zMax)
+            {
+                if (a.Tiedot == null || !a.Tiedot.TryGetValue(kentta, out var k) || !(k is Dictionary<string, object> tasot)) return;
+                foreach (var t in tasot)
+                {
+                    if (!int.TryParse(t.Key, out int z) || z < zMin || z > zMax || !(t.Value is List<object> l) || l.Count == 0) continue;
+                    var valit = new List<List<object>>();
+                    if (l[0] is List<object>) foreach (var v in l) valit.Add((List<object>)v); else valit.Add(l);
+                    foreach (var v in valit)
+                        if (v.Count >= 4) Lisaa(pohja, z, (int)(double)v[0], (int)(double)v[1], (int)(double)v[2], (int)(double)v[3]);
+                }
+            }
+            void Laji(string laji, Action<int, int> tee)
+            {
+                if (!kerrokset.TryGetValue(laji, out var o) || !(o is Dictionary<string, object> d) ||
+                    !d.TryGetValue(avain, out var tv) || !(tv is List<object> tl) || tl.Count < 2) return;
+                tee((int)(double)tl[0], (int)(double)tl[1]);
+            }
+            Laji("kerma", (z0, z1) =>
+            {
+                string m = kerma.Replace("{alue}", "_maailma");
+                if (maailma) { for (int z = z0; z <= z1; z++) Lisaa(m, z, 0, 0, (1 << z) - 1, (1 << z) - 1); }
+                else
+                {
+                    Kentasta(m, "rasteri", z0, z1);
+                    Kentasta(kerma.Replace("{alue}", a.Id), "kerma", 0, 30);
+                    // Varitaso lukee maan kerma-alueen <ISO>/laatat.json:sta (E2E 2: haettiin verkosta, Natiiviseppä 28.9.).
+                    if (a.Tiedot != null && a.Tiedot.ContainsKey("kerma") &&
+                        suhteellinen(Laattapalvelin.Ampari + Varitaso.Kansio + a.Id + "/laatat.json") is string lj) polut.Add(lj);
+                }
+            });
+            Laji("reliefi", (z0, z1) =>
+            {
+                foreach (var r in reliefit)
+                    if (maailma) { for (int z = z0; z <= z1; z++) Lisaa(r, z, 0, 0, (1 << z) - 1, (1 << z) - 1); }
+                    else Kentasta(r, "rasteri", z0, z1);
+            });
+            Laji("yovalot", (z0, z1) =>
+            {
+                if (maailma) { for (int z = z0; z <= z1; z++) Lisaa(yovalot, z, 0, 0, (1 << z) - 1, (1 << z) - 1); }
+                else Kentasta(yovalot, "rasteri", z0, z1);
+            });
         }
 
         /// <summary>
