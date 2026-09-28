@@ -8851,3 +8851,7 @@ Omistaja 28.9. klo 20.57 kortilla (v3f4-video + kuvaparit 2,0/7,3/9,5 s) sanatar
 ## TILA: TF 1.0.39 SISÄISESSÄ RYHMÄSSÄ, TF-PALAUTE POIS (28.9.2026 klo 21.01)
 
 Julkaisija 28.9. klo 21.00: TF 1.0.39 (202609281745, proto e4c624a9) sisäisessä ryhmässä ilman Testattavaa-tekstiä; sisäisen ryhmän feedbackEnabled True → False (ASC API, #3577). Mukana Pulun hyppykorjaus + puheen pysäytys chatin sulkuun. Omistaja todentaa avauksessa, katoavatko TF:n avaussivut.
+
+## PÄÄTÖS: MUUTOSLOKIRIVI TUOTANTOON ENNEN TF-RYHMÄÄ (28.9.2026 klo 21.12)
+
+Omistaja 28.9. klo 21.12 1.0.39:n avauksesta (Peli päivittyi -lappu varatekstillä 'muutokset päivittyvät tähän pian'): "Päivitykset katosivat myös tästä". Syy: muutoslokirivi #3578 mainiin 21.00, sisältöpaketin vienti d75821ca6 vasta käynnissä kun build tuli ryhmään; ei liity tyhjään Testattavaa-kohtaan. → Julkaisija: muutoslokirivi mainiin + sisältöpaketin vienti valmiiksi ENNEN buildin lisäämistä sisäiseen ryhmään.
