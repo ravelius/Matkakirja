@@ -171,3 +171,120 @@ test('ISS-malli natiivin mittasuhtein: 110 m leveä, neljä paria kullanruskeita
   for (let i = 0; i < varit.length; i += 3) if (Math.abs(varit[i] - 0xb4 / 255) < 1e-6) kulta.push(i);
   assert.equal(kulta.length / 6, 8, 'kahdeksan siipeä (neljä paria)');
 });
+
+test('kohteen yllä: silmä ISS:ssä, katse kohteeseen, kenttäkulma pitkä objektiivi', async () => {
+  const { kohteenKulma, kohteenKentta } = await import('../js/linssit/iss-kyyti.js');
+  const kohdeP = { lat: 48, lon: 13 }; // ~300 km sivussa
+  const k = kohteenKulma(ISS, kohdeP);
+  const s = pisteelta(kameranAsento(k).silma);
+  assert.ok(Math.abs(s.korkeusM - ISS.korkeusM) < 500, `silmä ${s.korkeusM}`);
+  assert.ok(kaari(s.lat, s.lon, ISS.lat, ISS.lon) < 0.01, 'silmä ISS:n kohdalla');
+  assert.equal(k.lat, 48);
+  assert.ok(k.kallistus > 20 && k.kallistus < 70, `vinokuva ${k.kallistus}°`);
+  const f = kohteenKentta(k.etaisyysM);
+  assert.ok(f >= 6 && f <= 14, `kenttäkulma ${f}`);
+  const suoraan = kohteenKulma(ISS, { lat: ISS.lat, lon: ISS.lon });
+  assert.ok(Math.abs(suoraan.kallistus) < 1e-6 && Math.abs(suoraan.etaisyysM - 420000) < 1);
+});
+
+test('tilakone: kohteen ylle ja napautuksella takaisin seurantaan', () => {
+  const k = luoKyyti();
+  k.napauta(kuvakulma(50, 10, 18000000, 0, 0), ISS, 50, 0, true);
+  k.kohteeseen({ lat: 48, lon: 13 }, k.paivita(0, ISS, 50).asento, 50, 1, true);
+  assert.equal(k.tila, TILA.kohde);
+  const p = k.paivita(1, ISS, 50);
+  assert.ok(p.kentta < 20);
+  k.napauta(p.asento, ISS, p.kentta, 2, true);
+  assert.equal(k.tila, TILA.seuranta);
+});
+
+test('tietorivi nopeutettuna: kerroin ilman LIVE-sanaa', async () => {
+  const { nopeudenMerkki, ylilennonTeksti } = await import('../js/linssit/iss-kyyti.js');
+  const r = tietorivi(421, 27560, false, 100);
+  assert.equal(r.live, false);
+  assert.equal(r.merkki, '100×');
+  assert.equal(r.teksti, '· ISS · 421 km · 27 560 km/h');
+  assert.equal(nopeudenMerkki(1), '1×');
+  assert.equal(nopeudenMerkki(873), '870×');
+  assert.equal(nopeudenMerkki(1000), '1 000×');
+  const nyt = new Date(2026, 8, 28, 11, 20).getTime();
+  assert.equal(ylilennonTeksti(nyt + (3 * 60 + 12) * 60e3, nyt), 'Ylilento klo 14.32, 3 h 12 min päästä');
+});
+
+test('ylilennon kohteet: Euroopan NASA-kohteet, ei revontulia', async () => {
+  const { ylilennonKohteet } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  const l = ylilennonKohteet();
+  assert.ok(l.length >= 20 && l.length <= 40, `${l.length} kohdetta`);
+  assert.ok(l.every((k) => k.lat >= 34 && k.lat <= 56 && k.lon >= -25 && k.lon <= 45));
+  assert.ok(l.some((k) => k.tunnus === 'venetsia') && !l.some((k) => k.tunnus === 'aurora-scandinavia'));
+});
+
+test('NASA-koe: kierretty rajauslaatikko ja ikkuna', async () => {
+  const { nasaKoeIkkuna, NASA_KOE } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  assert.equal(Object.keys(NASA_KOE).length, 3);
+  const a = nasaKoeIkkuna({ lat: 45, lon: 12, leveysKm: 15, kierto: 0 }, 1.5);
+  assert.ok(Math.abs(a.leveysKm - 15) < 1e-9 && Math.abs(a.korkeusKm - 10) < 1e-9);
+  assert.ok(Math.abs((a.ikkuna.lat1 - a.ikkuna.lat0) * 111.195 - 10) < 1e-6);
+  const b = nasaKoeIkkuna({ lat: 45, lon: 12, leveysKm: 15, kierto: 90 }, 1.5);
+  assert.ok(Math.abs(b.leveysKm - 10) < 1e-9, 'neljännes kierrettynä leveys ja korkeus vaihtavat paikkaa');
+});
+
+/* ---- koukut: kevyt vale-näyttämö ilman selainta ---- */
+function valeElementti() {
+  const e = {
+    children: [], dataset: {}, style: {}, hidden: false, textContent: '', className: '',
+    classList: { toggle() {}, add() {}, remove() {}, contains: () => false },
+    append(...c) { e.children.push(...c); }, appendChild(c) { e.children.push(c); },
+    setAttribute() {}, addEventListener() {}, remove() {},
+  };
+  return e;
+}
+function valePallo() {
+  const v = (x = 0, y = 0, z = 0) => ({ x, y, z, set(a, b, c) { this.x = a; this.y = b; this.z = c; } });
+  const cam = { position: v(0, 0, 400), up: v(0, 1, 0), fov: 50, lookAt() {}, updateProjectionMatrix() {}, updateMatrixWorld() {} };
+  const ohjaimet = { enabled: true, update() {} };
+  return {
+    camera: () => cam, controls: () => ohjaimet, getGlobeRadius: () => 100,
+    scene: () => ({ traverse() {}, add() {} }),
+    getCoords: (lat, lng, alt = 0) => {
+      const r = 100 * (1 + alt); const p = (lat * Math.PI) / 180; const l = (lng * Math.PI) / 180;
+      return { x: r * Math.cos(p) * Math.sin(l), y: r * Math.sin(p), z: r * Math.cos(p) * Math.cos(l) };
+    },
+    pointOfView: () => ({ lat: 50, lng: 10, altitude: 3 }),
+  };
+}
+
+test('realismikoukut: rakenna kerran, paivita joka kehys simuloidulla ajalla, pura', async () => {
+  const { luoIssKyytiNakyma, YOKUOREN_JARJESTYS } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  const { luoIssNyt, luoSimukello } = await import('../js/linssit/iss-rata.js');
+  assert.ok(Number.isFinite(YOKUOREN_JARJESTYS));
+  const doc = { createElement: () => valeElementti(), body: valeElementti() };
+  let r = Date.UTC(2026, 8, 28, 9);
+  const kello = luoSimukello({ reaali: () => r });
+  const kutsut = { rakenna: 0, paivita: [], pura: 0 };
+  const realismi = {
+    rakenna: (a) => { kutsut.rakenna += 1; assert.ok(a.pallo && a.luokat && a.metri > 0 && a.R === 100); },
+    paivita: (a) => kutsut.paivita.push(a),
+    pura: () => { kutsut.pura += 1; },
+  };
+  const n = luoIssKyytiNakyma({
+    pallo: valePallo(), issNyt: luoIssNyt(), ikkuna: { document: doc, performance: { now: () => r }, innerWidth: 393, innerHeight: 852, location: { search: '' }, Image: class { set src(v) { this.s = v; } } },
+    realismi, kello, reduced: true,
+  });
+  n.paivita(16);
+  assert.equal(kutsut.rakenna, 0, 'ei rakenneta ennen kyytiä');
+  assert.ok(n.napauta());
+  n.paivita(32);
+  assert.equal(kutsut.rakenna, 1);
+  const eka = kutsut.paivita.at(-1);
+  assert.equal(eka.tila, 'seuranta');
+  assert.ok(Array.isArray(eka.silma) && eka.kamera && eka.iss && Number.isFinite(eka.osuus));
+  assert.equal(eka.ms, kello.nyt());
+  n.asetaNopeus(1000);
+  r += 1000;
+  n.paivita(48);
+  assert.ok(kutsut.paivita.at(-1).ms - r > 900_000, 'ms on simuloitu aika');
+  n.pura();
+  assert.equal(kutsut.pura, 1);
+  assert.equal(kello.live, true, 'linssin sulku palauttaa LIVE:n');
+});

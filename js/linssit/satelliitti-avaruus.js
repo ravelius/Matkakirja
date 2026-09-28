@@ -176,7 +176,7 @@ import {
  * kaksi totuutta on pahempi kuin kehä.
  */
 import { luoAstroSumu } from './astro-sumu.js';
-import { ISS_NYT, lataaIssTle, KAAREN_VALI_S } from './iss-rata.js';
+import { ISS_NYT, lataaIssTle, KAAREN_VALI_S, SIMUKELLO } from './iss-rata.js';
 import { luoIssKyytiNakyma } from './iss-kyyti-nakyma.js';
 import { ISS_OSUMA_PX, ISS_SYKE_MS } from './iss-kyyti.js';
 import { luoNimiolimitys } from './satelliitti-nimiot.js';
@@ -1664,7 +1664,8 @@ export function luoAvaruusKalvo({
     const kamera = pallo.camera?.()?.position;
     if (!sade3d || !kamera) return;
     asetaSade(halkaisijaRuudulla(korkeus, { korkeus: kotelo.clientHeight }) / 2);
-    const ms = reduced ? avattuMs : Date.now();
+    // Simuloitu aika (nopeutus ja ylilento, iss-rata.js SIMUKELLO); LIVE = nyt.
+    const ms = reduced ? avattuMs : SIMUKELLO.nyt();
     if (!maajalki || ISS_NYT.versio !== maajaljenVersio || Math.abs(ms - maajalkiMs) >= KAAREN_VALI_S * 1000) {
       maajalki = ISS_NYT.kaari(ms, ISS_KAAREN_PISTEITA);
       maajalkiMs = ms;
@@ -1760,7 +1761,7 @@ export function luoAvaruusKalvo({
       sadePx: +sadePx.toFixed(1),
       varjostus,
       paikallaan,
-      radanLaatu: ISS_NYT.laatu(Date.now()),
+      radanLaatu: ISS_NYT.laatu(SIMUKELLO.nyt()),
     }),
     pura() {
       purettu = true;
@@ -3091,6 +3092,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       lauta?.kamera?.pysaytaKameraAjo?.();
     },
     kyytiPaattyi: (korkeus) => { omaKorkeus = korkeus; },
+    /* Siirtosepän realismimoduuli (js/linssit/iss-realismi.js) kytketään tähän, kun se tulee. */
+    realismi: null,
   });
   kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
 
@@ -3307,6 +3310,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     /** ISS:n kyyti: napautus (kauko → seuranta → ikkuna → seuranta) ja ✕. */
     napautaIss: () => kyyti?.napauta?.() ?? false,
     poistuKyydista: () => kyyti?.poistu?.() ?? false,
+    asetaNopeus: (k) => kyyti?.asetaNopeus?.(k) ?? false,
+    lennaKohteeseen: (tunnus, valinnat) => kyyti?.lennaKohteeseen?.(tunnus, valinnat) ?? null,
+    nasaKoe: (paalla) => kyyti?.nasaKoe?.(paalla) ?? false,
     kyydissa: () => Boolean(kyyti?.kyydissa?.()),
     katsoKohteeseen: (lat, lon) => {
       if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;

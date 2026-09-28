@@ -302,7 +302,92 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
   vaadi(n('ikkunasta napautus palaa seurantaan (kenttäkulma 50°)'),
     takaisin.kyyti.tila === 'seuranta' && Math.abs(takaisin.kamera.fov - 50) < 0.01, `${takaisin.kyyti.tila} ${takaisin.kamera.fov}`);
 
-  // ✕ → kaukonäkymä.
+  /* ---- Nopeutus ja Palaa LIVE (omistaja 28.9. klo 12.1x) --------- */
+  const aika = () => s.evaluate(() => {
+    const t = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila().kyyti;
+    return {
+      ...t.aika, tila: t.tila, ylilento: t.ylilento, kohde: t.kohde, nasaKoe: t.nasaKoe,
+      merkki: document.querySelector('.iss-kyyti-live')?.textContent ?? null,
+      merkkiNakyy: !document.querySelector('.iss-kyyti-live')?.hidden,
+      nopeutettu: document.querySelector('.iss-kyyti-tieto')?.classList.contains('iss-kyyti-tieto-nopeutettu'),
+      ylilentoRivi: document.querySelector('.iss-kyyti-ylilento:not([hidden])')?.textContent ?? null,
+      pilleri: (() => { const e = document.querySelector('.iss-kyyti-tieto'); const c = getComputedStyle(e); return { top: c.top, left: c.left }; })(),
+    };
+  });
+  await s.click('.iss-kyyti-nopeudet button[data-kerroin="100"]');
+  await s.waitForTimeout(2000);
+  const nopea = await aika();
+  vaadi(n('nopeutus 100×: pilleri "● 100× · ISS …" ilman LIVE-sanaa, aika juoksee 100×'),
+    nopea.merkki === '100×' && nopea.nopeutettu && !nopea.live && nopea.eroMs > 150_000 && nopea.eroMs < 260_000,
+    JSON.stringify({ merkki: nopea.merkki, ero: nopea.eroMs, nopeus: nopea.nopeus }));
+  await kuva('5-nopeutus-100x');
+  await s.click('.iss-kyyti-tieto');
+  await s.waitForTimeout(400);
+  const kelaus = await aika();
+  await s.waitForTimeout(3200);
+  const takaisinLive = await aika();
+  vaadi(n('Palaa LIVE (pillerin napautus): kelaa pehmeästi todelliseen hetkeen'),
+    kelaus.kelaa === true && Math.abs(kelaus.eroMs) > 1000 && takaisinLive.live && Math.abs(takaisinLive.eroMs) < 50
+      && takaisinLive.merkki === 'LIVE',
+    `kesken ${kelaus.eroMs} ms, perillä ${takaisinLive.eroMs} ms, ${takaisinLive.merkki}`);
+  vaadi(n('pilleri turva-alueella (10 px + inset ylhäältä, 12 px sivusta)'),
+    takaisinLive.pilleri.top === '10px' && takaisinLive.pilleri.left === '12px', JSON.stringify(takaisinLive.pilleri));
+
+  /* ---- "Lennä kohteen ylle" → seuraava todellinen ylilento --------- */
+  const lenna = async (tunnus, odotaS = 32, valoisa = false) => {
+    // Valikko (pelaajan tie) — NASA-kokeessa sama funktio valoisalle ohitukselle.
+    if (valoisa) await s.evaluate((t) => window.matkakirja.ui.pallolinssi.kahva.avaruus.lennaKohteeseen(t, { valoisa: true }), tunnus);
+    else await s.selectOption('.iss-kyyti-kohteet', tunnus);
+    await s.waitForTimeout(300);
+    const alku = await aika();
+    const loppuu = Date.now() + odotaS * 1000;
+    let t = alku;
+    while (Date.now() < loppuu) {
+      await s.waitForTimeout(500);
+      t = await aika();
+      if (t.tila === 'kohde' && t.ylilento?.perilla) break;
+    }
+    await s.waitForTimeout(1600);
+    const keski = await s.evaluate((k) => {
+      const pallo = window.matkakirja.ui.pallonInstanssi;
+      const p = pallo.getScreenCoords(k.lat, k.lon, 0);
+      return p ? { x: Math.round(p.x), y: Math.round(p.y) } : null;
+    }, t.kohde ?? { lat: 0, lon: 0 });
+    return { alku, perilla: await aika(), keski };
+  };
+  const venetsia = await lenna('venetsia');
+  vaadi(n('valikko: ylilennon kellonaika näkyy ("Ylilento klo 14.32, 3 h 12 min päästä")'),
+    /Ylilento klo \d{1,2}\.\d\d, (\d+ h )?\d+ min päästä/.test(venetsia.alku.ylilentoRivi ?? ''), venetsia.alku.ylilentoRivi);
+  vaadi(n('ylilento: kelaus perille (ei teleporttia), kamera kohteessa, sivuttain ≤ 500 km'),
+    venetsia.alku.kelaa === true && venetsia.perilla.tila === 'kohde' && venetsia.perilla.ylilento?.perilla
+      && Math.abs(venetsia.perilla.simMs - venetsia.perilla.ylilento.ms) < 60_000
+      && venetsia.perilla.ylilento.sivuttainKm <= 500
+      && venetsia.keski && Math.abs(venetsia.keski.x - W / 2) < 40 && Math.abs(venetsia.keski.y - H / 2) < 40,
+    JSON.stringify({ ylilento: venetsia.perilla.ylilento, keski: venetsia.keski, rivi: venetsia.perilla.ylilentoRivi }));
+  await kuva('6-ylilento-venetsia');
+  if (nimi === 'iphone') {
+    /* KOE: NASA-kuva kohteen päälle — kuvapari piirretty | oikea kuva. */
+    for (const tunnus of ['venetsia', 'dardanellit', 'santorini']) {
+      // Valoisa ohitus, jotta kuvapari näyttää maan (yöllä yökuori tummentaa molemmat).
+      await lenna(tunnus, 32, true);
+      const koeKuva = (laji) => s.screenshot({ path: join(ULOS, 'nasa-koe', `nasa-koe-${nimi}-${tunnus}-${laji}.png`), timeout: 90000 });
+      mkdirSync(join(ULOS, 'nasa-koe'), { recursive: true });
+      await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.nasaKoe(false));
+      await s.waitForTimeout(900);
+      await koeKuva('piirretty');
+      await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.nasaKoe(true));
+      await s.waitForTimeout(2500);
+      const koe = await aika();
+      vaadi(n(`NASA-koe ${tunnus}: kuva ladattu ja häivytetty kohteen päälle`),
+        koe.nasaKoe?.tunnus === tunnus && koe.nasaKoe.valmis && koe.nasaKoe.peitto > 0.9, JSON.stringify(koe.nasaKoe));
+      await koeKuva('nasa');
+      const tila2 = await aika();
+      console.log(`    ${tunnus}: ylilento ${new Date(tila2.ylilento?.ms ?? 0).toISOString()}, sivuttain ${tila2.ylilento?.sivuttainKm} km`);
+    }
+    await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.nasaKoe(false));
+  }
+
+  // ✕ → kaukonäkymä (aika palaa LIVE:ksi paluulennon aikana).
   await s.click('.iss-kyyti-sulku');
   await s.waitForTimeout(3000);
   const paluu = await tila(s);
@@ -313,6 +398,8 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
   vaadi(n('kaukonäkymässä rata näkyy ja kamera on lepokorkeudella'),
     Number(paluu.rataOpacity || 1) > 0.95 && paluu.radanPisteita > 10 && paluu.korkeus > 1,
     `rata ${paluu.rataOpacity}, ${paluu.radanPisteita} pistettä, korkeus ${paluu.korkeus}`);
+  const paluuAika = await aika();
+  vaadi(n('✕ palauttaa ajan LIVE:ksi'), paluuAika.live && Math.abs(paluuAika.eroMs) < 50, String(paluuAika.eroMs));
   await kuva('4-kauko-paluu');
   vaadi(n('ei sivuvirheitä'), virheet.length === 0, virheet.slice(0, 2).join(' / '));
   console.log(`    kehysväli seuranta ${JSON.stringify(kehysSeuranta)}, ikkuna ${JSON.stringify(kehysIkkuna)};`

@@ -148,3 +148,73 @@ test('lataus: muisti heti, ämpäri taustalla, uusi TLE muistiin', async () => {
   assert.equal(await lataaIssTle(toinen, { ikkuna, pakota: true }), false);
   assert.equal(toinen.tle?.numero, 25544, 'muistista ilman verkkoa');
 });
+
+test('simuloitu kello: nopeutus, Palaa LIVE pehmeästi ja kelaus hetkeen', async () => {
+  const { luoSimukello, NOPEUDET } = await import('../js/linssit/iss-rata.js');
+  assert.deepEqual([...NOPEUDET], [1, 10, 100, 1000], 'logaritminen porras');
+  let r = 1_000_000;
+  const k = luoSimukello({ reaali: () => r });
+  assert.equal(k.live, true);
+  assert.equal(k.nyt(), r);
+  k.asetaNopeus(100);
+  r += 1000;
+  assert.equal(k.nyt(), 1_000_000 + 100_000, '100× sekunnissa 100 s');
+  assert.equal(k.live, false);
+  assert.equal(k.nopeus(), 100);
+  // Palaa LIVE: ei hyppyä — ensimmäinen askel on lähellä lähtöä, loppu on nyt.
+  const ennen = k.nyt();
+  k.palaaLive();
+  r += 16;
+  const eka = k.nyt();
+  assert.ok(Math.abs(eka - ennen) < 1000, `pehmeä alku: ${eka - ennen} ms`);
+  r += 3000;
+  assert.equal(k.nyt(), r, 'perillä todellinen hetki');
+  assert.equal(k.live, true);
+  // Kelaus hetkeen: 3 h eteenpäin huippu noin 1000×, perillä 1× (ei LIVE).
+  const kohde = r + 3 * 3600e3;
+  let valmis = 0;
+  k.kelaaHetkeen(kohde, { valmis: () => { valmis += 1; } });
+  r += 10_000; // puolivälissä huippunopeus
+  const huippu = k.nopeus();
+  assert.ok(huippu > 800 && huippu < 1200, `huippu ${huippu}×`);
+  r += 15_000;
+  assert.equal(k.nyt(), kohde);
+  assert.equal(valmis, 1);
+  assert.equal(k.live, false);
+  r += 1000;
+  assert.equal(k.nyt(), kohde + 1000, 'perillä 1×');
+  const v = luoSimukello({ reaali: () => r });
+  v.asetaNopeus(1000);
+  r += 5000;
+  v.palaaLive({ vahennetty: true });
+  assert.equal(v.nyt(), r, 'vähennetty liike: heti');
+});
+
+test('seuraava ylilento SGP4:llä tunnetulle TLE:lle', async () => {
+  const { seuraavaYlilento } = await import('../js/linssit/iss-rata.js');
+  const iss = luoIssNyt();
+  iss.aseta(jasennaTle(I1, I2));
+  const ep = Date.UTC(2008, 8, 20, 12, 25, 40);
+  // Kohde suoraan maajäljellä 5 h 7 min epookin jälkeen: löytyy sekunnin tarkkuudella.
+  const T = ep + (5 * 60 + 7) * 60e3;
+  const p = iss.paikka(T);
+  const y = seuraavaYlilento(iss, p.lat, p.lon, ep + 3600e3);
+  assert.ok(y, 'ylilento löytyy');
+  assert.ok(Math.abs(y.ms - T) < 5000, `aika ${(y.ms - T) / 1000} s`);
+  assert.ok(y.sivuttainKm < 2, `sivuttain ${y.sivuttainKm} km`);
+  // Sivussa 200 km: ohitus löytyy, ja sivuttaisetäisyys on noin 200 km.
+  const sivu = seuraavaYlilento(iss, p.lat, p.lon + 200 / (111.195 * Math.cos((p.lat * Math.PI) / 180)), ep + 3600e3);
+  assert.ok(sivu && sivu.sivuttainKm > 100 && sivu.sivuttainKm < 210, JSON.stringify(sivu));
+  // Napa-alue: ISS ei lennä yli.
+  assert.equal(seuraavaYlilento(iss, 80, 0, ep, { hakuH: 24 }), null);
+  // Vain valoisat ohitukset: aurinko kohteessa yli 10°.
+  const { auringonAlihajapiste: aur } = await import('../js/linssit/iss-rata.js');
+  const va = seuraavaYlilento(iss, p.lat, p.lon, ep + 3600e3, { valoisa: true });
+  const sp = aur(jdHetkesta(va.ms));
+  const rr = Math.PI / 180;
+  const korkeus = Math.asin(Math.sin(p.lat * rr) * Math.sin(sp.lat * rr) + Math.cos(p.lat * rr) * Math.cos(sp.lat * rr) * Math.cos((p.lon - sp.lon) * rr)) / rr;
+  assert.ok(korkeus > 10, `aurinko ${korkeus}°`);
+  // "Seuraava": meneillään oleva ohitus ohitetaan.
+  const toinen = seuraavaYlilento(iss, p.lat, p.lon, T + 120e3);
+  assert.ok(toinen && toinen.ms > T + 30 * 60e3, 'seuraava ohitus myöhemmin');
+});
