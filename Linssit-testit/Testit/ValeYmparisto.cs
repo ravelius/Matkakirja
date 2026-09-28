@@ -59,6 +59,13 @@ namespace Matkakirja.Linssit.Testit
         public double KorkeusLeveydelle(double leveysAsteina) => leveysAsteina * 100_000;
         public double Kuvasuhde { get; set; } = 0.46;
         public double Nakokulma { get; set; } = 50;
+        public double Suuntima { get; set; }
+        public Kuvakulma? Kuvaus;
+        public int Kuvauksia;
+        public double? Kentta;
+        public void Kuvaa(Kuvakulma a) { Kuvaus = a; Kuvauksia++; }
+        public void KuvausLoppui() { Loki.Add("kuvaus loppui"); Kuvaus = null; }
+        public void Kenttakulma(double? asteina) { if (Kentta != asteina) Loki.Add("kenttä " + (asteina?.ToString("0") ?? "pois")); Kentta = asteina; }
         public void Pelikerrokset(bool n) { Loki.Add("pelikerrokset " + n); PelikerroksetNakyvissa = n; }
         public void Peite(bool p) { Loki.Add("peite " + p); PeitePaalla = p; }
         public void MusiikkiPitoon(bool p) { Loki.Add("musiikki " + p); Musiikkipito = p; }

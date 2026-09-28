@@ -12,9 +12,11 @@ using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Astronautti;
+using Matkakirja.Linssit.Iss;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.Rendering;
 
 namespace Matkakirja.Natiivi
@@ -28,6 +30,8 @@ namespace Matkakirja.Natiivi
         public static Action<Havaintokohde, int> KuvaKasittelija;
         /// <summary>Avaruussumun harson peitto 0…1.</summary>
         public static Action<double> SumuKasittelija;
+        /// <summary>ISS:n kyyti (tila, korkeus km, nopeus km/h, rata-arvio): Cupola-kehys, tietorivi ja ✕.</summary>
+        public static Action<KyydinTila, double, double, bool> KyytiKasittelija;
 
         const double MaanSade = 6_371_000, Nosto = 5000;
         const float Hehku = 28f, IssMerkki = 8f, Etuna = 0.02f;
@@ -52,7 +56,18 @@ namespace Matkakirja.Natiivi
         Tahtitaivas taivas;
         Pilvikuori pilvet;
         Avaruus avaruus;
+        Yokuori yokuori;
+        KyydinTaivas kyydinTaivas;
+        Revontulet revontulet;
+        CupolaKerros cupola;
         Transform iss;
+        Transform issMalli;
+        Material issMalliMateriaali;
+        Mesh issMesh;
+        KyydinTila kyyti = KyydinTila.Kauko;
+        double issKorkeusM = Astronauttimatikka.IssKorkeus * MaanSade;
+        /// <summary>ISS:n leveys ruudulla seurannassa (pt): liioiteltu pelikokoon kuten erikoismallit.</summary>
+        const float IssMallinLeveysPt = 90f;
         GameObject rata;
         Mesh rataMesh;
         Vector3[] rataPaikat, rataSeuraavat, rataU;
@@ -109,6 +124,8 @@ namespace Matkakirja.Natiivi
                 pilvet ??= Pilvikuori.Luo(georeferenssi, pilvienOsoite);
             // Tumma avaruus ja ilmakehän hehku (web AVARUUDEN_TAUSTA, ILMAKEHAN_VARI).
             avaruus ??= Avaruus.Luo(georeferenssi, georeferenssi.transform);
+            // Yökuori vain kyydissä (Kyyti), kaukonäkymä kuten webissä.
+            yokuori ??= Yokuori.Luo(georeferenssi);
             if (kohteetPyydetty) return;
             kohteetPyydetty = true;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
@@ -169,7 +186,34 @@ namespace Matkakirja.Natiivi
 
         public void Nimet(bool nakyvissa) => nimetNakyvissa = nakyvissa;
 
-        public void Pilvet(double peitto, double kiertoAsteina) => pilvet?.Aseta(peitto, kiertoAsteina);
+        public void Pilvet(double peitto, double kiertoAsteina) =>
+            pilvet?.Aseta(kyyti != KyydinTila.Kauko && PilvetKyydissa == "pois" ? 0 : peitto,
+                // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
+                paivanPilvet ? 0 : kiertoAsteina);
+
+        /// <summary>ISS-realismi 2: päivän pilvet (Julkaisijan ajastettu haku NASA GIBS:stä), haetaan kyydin alkaessa.</summary>
+        public const string PaivanPilvetUrl = "https://media.matkakirja.app/data/pilvet/uusin.png";
+        /// <summary>A/B (`astro kyyti paivanpilvet 0|1`): päivän pilvet pois (satunnainen Blue Marble -kuva).</summary>
+        public static bool PaivanPilvetPois;
+        bool paivanPilvet, paivanPilvetHaettu;
+
+        /// <summary>
+        /// Pilvet kyydissä (laitteen 1. Cupola-kierros 28.9.: 1,01 R:n eli ~64 km:n pilvikuoren reuna nousi ISS:ltä katsottuna maan
+        /// reunan yläpuolelle ja vaalensi koko horisontin): "matala" = kuori ~8 km:iin kuin oikeat pilvet (oletus), "korkea" =
+        /// kaukonäkymän 1,01 R, "pois" = ei pilviä (A/B: astro kyyti pilvet matala|korkea|pois).
+        /// </summary>
+        public static string PilvetKyydissa = "matala";
+        const double PilvetMatalallaM = 8000;
+
+        /// <summary>A/B-komento: pilvien korkeus heti (peitto päivittyy seuraavassa Pilvet-kutsussa).</summary>
+        public void PaivitaPilvet() => AsetaPilvienKorkeus();
+
+        void AsetaPilvienKorkeus()
+        {
+            if (pilvet == null) return;
+            bool matala = kyyti != KyydinTila.Kauko && PilvetKyydissa == "matala";
+            pilvet.Korkeus(matala ? PilvetMatalallaM : (Astronauttimatikka.PilvienSade - 1) * MaanSade);
+        }
 
         public void Sumu(double peitto) => SumuKasittelija?.Invoke(peitto);
 
@@ -189,15 +233,124 @@ namespace Matkakirja.Natiivi
                 m.gameObject.AddComponent<MeshRenderer>().sharedMaterial = issMateriaali;
                 m.localScale = new Vector3(IssMerkki * 2, IssMerkki * 2, 1);
             }
+            // Todellinen korkeus (SGP4, noin 420 km): kyydin kamera katsoo samaa pistettä (IssKuvakulma.Seuranta).
+            var utc = IssNyt.Kello();
+            issKorkeusM = IssNyt.KorkeusKm(utc) * 1000;
             var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
-                new double3(paikka.Lon, paikka.Lat, Astronauttimatikka.IssKorkeus * MaanSade));
+                new double3(paikka.Lon, paikka.Lat, issKorkeusM));
             issPinta = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            // Mallin asento: Z maajäljen suuntaan, Y ylös (ECEF-pinnan normaali).
+            var ylos = CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef);
+            double b = math.radians(IssNyt.Suuntima(utc));
+            double3 pohjoinen = math.normalize(new double3(0, 0, 1) - ylos * ylos.z);
+            double3 ita = math.normalize(math.cross(pohjoinen, ylos));
+            double3 eteen = pohjoinen * math.cos(b) + ita * math.sin(b);
+            issYlos = (float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(ylos);
+            issEteen = (float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(eteen);
             // Rata päivittyy joka kehys (omistajan build 9 -löydös 33: sekunnin välein rakennettu rata
             // nykäisi). Kolmiot tehdään kerran, joka kehys vain kärkipisteet taulukoihin ilman allokointia.
             if (rataMateriaali != null) RakennaRata(kaari);
         }
 
-        Vector3 issPinta;
+        Vector3 issPinta, issYlos = Vector3.up, issEteen = Vector3.forward;
+
+        public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio)
+        {
+            kyyti = tila;
+            if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();
+            // Ikkunassa ollaan aseman sisällä: havaintopisteet eivät kuulu Cupolan näkymään. Rata pois koko kyydin ajaksi: seurannassa
+            // se kulkee kameran suuntaan ja näkyi pystyviivana ISS:n läpi (laiteajo 28.9.).
+            if (rata != null) rata.SetActive(tila == KyydinTila.Kauko);
+            if (yokuori != null) yokuori.Nayta(tila != KyydinTila.Kauko);
+            // Kyydissä ohut ilmakehän kaari ja musta avaruus (omistajan palaute 28.9.), tähdet himmeinä (päivävalo).
+            avaruus?.Kyyti(tila != KyydinTila.Kauko);
+            AsetaPilvienKorkeus();
+            if (tila != KyydinTila.Kauko && !paivanPilvetHaettu && !PaivanPilvetPois && pilvet != null)
+            {
+                paivanPilvetHaettu = true;
+                pilvet.VaihdaKuva(PaivanPilvetUrl, ok => paivanPilvet = ok);
+            }
+            // Kyydissä oikeat tähdet ja Kuu (KyydinTaivas); satunnainen kenttä pois, kun oikeat ovat ladattu (muuten himmeänä 0,3).
+            if (tila != KyydinTila.Kauko && kyydinTaivas == null) kyydinTaivas = KyydinTaivas.Luo(georeferenssi, kamera);
+            kyydinTaivas?.Nayta(tila != KyydinTila.Kauko);
+            if (tila != KyydinTila.Kauko && revontulet == null) revontulet = Revontulet.Luo(georeferenssi);
+            revontulet?.Nayta(tila != KyydinTila.Kauko);
+            tahtienPeitto = tila == KyydinTila.Kauko ? 1f
+                : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
+            if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
+            PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
+            KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
+        }
+
+        /// <summary>
+        /// ISS-realismi 4a: kyydissä kuukauden oikea pinta (NASA Blue Marble Next Generation 2004 -kuukausisarja, PD; Karttasepän
+        /// pyramidi julisteet/pallo/bmng/&lt;kk&gt;/ Z0–Z7, 256 px Web Mercator) reliefin päällä raster-paikassa 2: lumi, kasvillisuus
+        /// ja aavikot kuten sinä kuukautena, ilman lisättyä rinnevarjostusta (kyydin aurinko valaisee pinnan). Kuukausi
+        /// IssNyt.Kellosta (testikello mukana). Jos kuukauden Z0-laatta puuttuu ämpäristä (vientiä ei ole tehty), relief jää.
+        /// A/B `astro kyyti kuukausi 0|1`.
+        /// </summary>
+        public const string KuukaudenPintaJuuri = "https://media.matkakirja.app/julisteet/pallo/bmng/";
+        public const string KuukausiKerros = "astronautti-kuukausi";
+        public const int KuukaudenPintaMaxTaso = 7;
+        public static bool KuukaudenPintaPois;
+        readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
+        int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
+
+        /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
+        void PaivitaKuukaudenPinta(bool kyydissa)
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk == null) return;
+            int kuukausi = kyydissa && !KuukaudenPintaPois ? IssNyt.Kello().Month : -1;
+            if (kuukausi > 0 && !kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
+            {
+                if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));
+                return;
+            }
+            if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
+            if (kuukausi == kuukausiLisatty) return;
+            if (kuukausi < 0)
+            {
+                kk.PoistaRasteri(KuukausiKerros);
+                kuukausiLisatty = -1;
+                return;
+            }
+            kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausi.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
+                CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
+            kuukausiLisatty = kuukausi;
+            Debug.Log($"MATKAKIRJA linssit: kyydin pinta: BMNG {kuukausi:00}");
+        }
+
+        System.Collections.IEnumerator KokeileKuukausi(int kuukausi)
+        {
+            kuukausiKokeillaan = kuukausi;
+            using (var p = UnityWebRequest.Head(KuukaudenPintaJuuri + kuukausi.ToString("00") + "/0/0/0.jpg"))
+            {
+                p.timeout = 10;
+                yield return p.SendWebRequest();
+                kuukausiAmparissa[kuukausi] = p.result == UnityWebRequest.Result.Success && p.responseCode == 200;
+            }
+            kuukausiKokeillaan = -1;
+            if (!kuukausiAmparissa[kuukausi])
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: BMNG {kuukausi:00} puuttuu ämpäristä, relief jää");
+            PaivitaKuukaudenPinta(kyyti != KyydinTila.Kauko);
+        }
+
+        void LuoIssMalli()
+        {
+            var s = Resources.Load<Shader>("Varjostimet/Malli");
+            if (s == null) { Debug.LogWarning("MATKAKIRJA ISS-kyyti: Malli-varjostin puuttuu, ISS jää pisteeksi"); return; }
+            issMesh = IssMalli.Rakenna();
+            issMalliMateriaali = new Material(s) { name = "ISS" };
+            issMalliMateriaali.SetFloat("_Ymparisto", 0.62f);
+            issMalli = new GameObject("ISS-malli").transform;
+            issMalli.SetParent(transform, false);
+            issMalli.gameObject.AddComponent<MeshFilter>().sharedMesh = issMesh;
+            var r = issMalli.gameObject.AddComponent<MeshRenderer>();
+            r.sharedMaterial = issMalliMateriaali;
+            r.shadowCastingMode = ShadowCastingMode.Off;
+            issMalli.gameObject.SetActive(false);
+        }
 
         public void Kuva(Havaintokohde kohde, int indeksi) => KuvaKasittelija?.Invoke(kohde, indeksi);
 
@@ -205,6 +358,8 @@ namespace Matkakirja.Natiivi
 
         public void Pois()
         {
+            if (cupola != null) Destroy(cupola.gameObject);
+            KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false);
             AvausKasittelija?.Invoke(AvauksenVaihe.Pois);
             SumuKasittelija?.Invoke(0);
             Destroy(gameObject);
@@ -226,7 +381,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n; i++)
             {
                 var e = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(
-                    new double3(kaari[i].Lon, kaari[i].Lat, Astronauttimatikka.IssKorkeus * MaanSade));
+                    new double3(kaari[i].Lon, kaari[i].Lat, issKorkeusM));
                 rataU[i] = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(e);
             }
             for (int i = 0; i < n; i++)
@@ -287,7 +442,7 @@ namespace Matkakirja.Natiivi
                 Vector3 paikka = gt.TransformPoint(p.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                bool edessa = Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
+                bool edessa = kyyti != KyydinTila.Ikkuna && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
                 if (p.juuri.gameObject.activeSelf != edessa) p.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
                 float lahella = etaisyys * (1f - Etuna);
@@ -319,13 +474,37 @@ namespace Matkakirja.Natiivi
                 p.nimi.transform.localPosition = new Vector3((float)(l.X + l.W / 2), (float)-(l.Y + l.H / 2), 0);
             }
 
+            if (cupola != null)
+            {
+                cupola.IssYlos = issYlos;
+                cupola.IssKorkeusKm = issKorkeusM / 1000;
+                cupola.Nayta(kyyti == KyydinTila.Ikkuna && !IssKyytiNakyma.IlmanKehysta && IssKyytiNakyma.KolmiulotteinenKehys);
+            }
             if (iss != null)
             {
                 Vector3 paikka = gt.TransformPoint(issPinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                iss.SetPositionAndRotation(paikka, kt.rotation);
-                iss.localScale = Vector3.one * (2f * etaisyys * tanPuoli / pikseleita);
+                // Kyydissä (seuranta tai siirtymä sinne) ISS on 3D-malli, ikkunassa ei kumpikaan (ollaan sisällä).
+                bool malli = kyyti == KyydinTila.Seuranta && issMalli != null;
+                bool piste = kyyti == KyydinTila.Kauko || (kyyti == KyydinTila.Seuranta && issMalli == null);
+                if (iss.gameObject.activeSelf != piste) iss.gameObject.SetActive(piste);
+                if (piste)
+                {
+                    iss.SetPositionAndRotation(paikka, kt.rotation);
+                    iss.localScale = Vector3.one * (2f * etaisyys * tanPuoli / pikseleita);
+                }
+                if (issMalli != null)
+                {
+                    if (issMalli.gameObject.activeSelf != malli) issMalli.gameObject.SetActive(malli);
+                    if (malli)
+                    {
+                        issMalli.SetPositionAndRotation(paikka, Quaternion.LookRotation(gt.TransformDirection(issEteen), gt.TransformDirection(issYlos)));
+                        // Liioittelu: mallin leveys IssMallinLeveysPt ruudun pisteinä tällä etäisyydellä.
+                        float pt = 2f * etaisyys * tanPuoli / pikseleita;
+                        issMalli.localScale = Vector3.one * (IssMallinLeveysPt * pt / IssMalli.Leveys);
+                    }
+                }
             }
         }
 
@@ -333,9 +512,19 @@ namespace Matkakirja.Natiivi
         void Napautus(Vector2 ruutu)
         {
             if (Linssi == null || kamera == null) return;
+            if (Linssi.Kyydissa) { Linssi.NapautaIss(); return; }
             float kerroin = LinssiOhjain.Pistekerroin;
             Piste paras = null;
             float parasEtaisyys = (float)Astronauttimatikka.OsumaSadePx * kerroin;
+            // ISS:n kyyti (suositus 28.9.): ISS-pisteen napautus 44 pt:n säteellä vie kyytiin, jos se on lähempänä kuin
+            // yksikään havaintopiste.
+            bool issLahin = false;
+            if (iss != null && iss.gameObject.activeSelf)
+            {
+                Vector3 si = kamera.WorldToScreenPoint(georeferenssi.transform.TransformPoint(issPinta));
+                float di = Vector2.Distance(ruutu, si);
+                if (si.z > 0 && di < parasEtaisyys) { parasEtaisyys = di; issLahin = true; }
+            }
             foreach (var p in pisteet)
             {
                 if (!p.juuri.gameObject.activeSelf) continue;
@@ -344,6 +533,7 @@ namespace Matkakirja.Natiivi
                 if (d < parasEtaisyys) { parasEtaisyys = d; paras = p; }
             }
             if (paras != null) Linssi.Napauta(paras.kohde.Tunnus);
+            else if (issLahin) Linssi.NapautaIss();
         }
 
         static Mesh Nelio()
@@ -358,14 +548,21 @@ namespace Matkakirja.Natiivi
 
         void OnDestroy()
         {
+            if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
             if (kierto != null) kierto.Napautettu -= Napautus;
             if (taivas != null) Destroy(taivas.gameObject);
             if (pilvet != null) Destroy(pilvet.gameObject);
             if (avaruus != null) Destroy(avaruus.gameObject);
+            if (yokuori != null) Destroy(yokuori.gameObject);
+            if (kyydinTaivas != null) Destroy(kyydinTaivas.gameObject);
+            if (revontulet != null) Destroy(revontulet.gameObject);
+            if (cupola != null) Destroy(cupola.gameObject);
             if (rataMesh != null) Destroy(rataMesh);
             Destroy(nelio);
             Destroy(pisteMateriaali);
             Destroy(issMateriaali);
+            if (issMalliMateriaali != null) Destroy(issMalliMateriaali);
+            if (issMesh != null) Destroy(issMesh);
             if (rataMateriaali != null) Destroy(rataMateriaali);
         }
     }
