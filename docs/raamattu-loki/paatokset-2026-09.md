@@ -9019,3 +9019,7 @@ Natiivi-UI 28.9. klo 23.30: 1.0.40-käännös 60f69fe4 iPhonella — nosto ei en
 ## PÄÄTÖS: VIE 1.0.40 (IPHONE RIITTÄÄ) (28.9.2026 klo 23.33)
 
 Päätoimittaja 28.9. klo 23.33: 1.0.40 (60f69fe4 = master e4c624a9 + juna 8de5b3df) Laitetestaajan lyhyt savuke PASS (kohta 4 epäselvä, ei kaatumisia) + Natiivi-UI:n iPhone-todennus (0 sulkeutumista). Muutosrivi 202609281959 mainissa (#3582). VIE annettu BUILD 40:lle Natiivisepän SHA:lla; ehto: sisältövienti valmis ennen ryhmää, Testattavaa tyhjä. iPad-tarkistus (kuva/kaiutin/mini-hampurilainen 20× kukin) Laitetestaajalla rinnalla; löydökset 1.0.41:een.
+
+## TILA: KOSKETUSVIAN JUURISYY LÖYTYI SONNET-ALI-AGENTILLA (~10 MIN) (28.9.2026 klo 23.42)
+
+Natiivi-UI 28.9. klo 23.42: Sonnet-ali-agentti löysi noin 10 minuutissa (todennettu UnityCsReference 6000.3 Panel.cs): UI Toolkitin Panel.Pick(point, pointerId) palauttaa kosketukselle välimuistin elementin, kun piste osuu samaan pikseliin kuin edellinen kosketus, eikä asettelun muutos mitätöi kosketuspointerien välimuistia (vain hiiren) → selittää kortin sulkeutumisen, kadonneen ensimmäisen napautuksen ja hampurilaisen väärän aloituskohdan. Yleiskorjaus 1.0.41:een (haara natiivi-ui/kosketus-valimuisti): välimuisti tyhjennetään kosketuksen päättyessä kaikissa paneeleissa (ClearCachedElementUnderPointer, heijastusvarapolku), simulaattoritodennus. Maakuntakortti kolmannella ali-agentilla. Ensimmäinen Sonnet-ali-agenttikoe onnistui.
