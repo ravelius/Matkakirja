@@ -1381,6 +1381,21 @@ namespace Matkakirja.Natiivi
                     }
                     else if (osat[1] == "kierros")
                         Kirjaa("astro kierros: " + string.Join(" ", l.KierrosTunnukset()));
+                    else if (osat[1] == "kyyti")
+                    {
+                        // ISS:n kyyti (suositus 28.9.): "astro kyyti" = napautus ISS:ään (kauko → seuranta → ikkuna → seuranta),
+                        // "astro kyyti pois" = ✕, "astro kyyti tila" = tila, kamera ja ISS lokiin.
+                        string a = osat.Length > 2 ? osat[2] : "";
+                        if (a == "pois") l.PoistuKyydista();
+                        else if (a != "tila") l.NapautaIss();
+                        var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+                        var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
+                        var kam = kierto.GetComponent<Camera>();
+                        Kirjaa($"astro kyyti: {l.Kyyti} (kyydissä {l.Kyydissa}), ISS ({p.Lat:F2}, {p.Lon:F2}) " +
+                               $"{Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(utc):F0} km suunta {Matkakirja.Linssit.Iss.IssNyt.Suuntima(utc):F0}°, " +
+                               $"laatu {Matkakirja.Linssit.Iss.IssNyt.Laatu(utc)}, kamera ({kierto.leveys:F2}, {kierto.pituus:F2}) " +
+                               $"{kierto.korkeus / 1000:F0} km kall {kierto.KaytettyKallistus:F1}° suunt {kierto.suuntima:F0}° fov {kam?.fieldOfView:F0}");
+                    }
                 }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
                     Keksinnot(osat[1]);
