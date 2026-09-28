@@ -78,7 +78,7 @@ import {
 import { ehdotusKaytossa, lahetaEhdotus } from './ehdotukset.js';
 import { merkitseLivianOmaDialogi } from './livia-dialogitila.js';
 import { haeKuvallinenArtikkeli, suurennusportaat } from './wiki.js';
-import { lueAaneen, lueVirtana, lukijaTuettu, pysaytaLukija } from './lukija.js';
+import { lueAaneen, lueVirtana, lukijaLukee, lukijaTuettu, pysaytaLukija } from './lukija.js';
 import { poistaPuhetagit } from './puhetagit.js';
 import { sfx } from './sound.js';
 import {
@@ -1616,6 +1616,13 @@ const EI_HEREILLA_LISA = 'Tietokumppani odottaa vielä käyttöönottoa. '
 
 const SANELU_KUUNTELEE = 'Kuuntelen…';
 /*
+ * PUHEKESKUSTELU (omistaja 28.9.2026 Fablen kautta): saneltuun kysymykseen
+ * vastaus tulee AINA myös puheena kaiutinvivusta riippumatta, ja pelaaja
+ * näkee yhdestä paikasta (sanelun tilarivi) missä ollaan: Kuuntelen →
+ * Mietin → Puhun → valmis (tyhjä). Mikki puheen aikana = hiljaa.
+ */
+const PUHE_TILARIVI = Object.freeze({ miettii: 'Mietin…', puhuu: 'Puhun… napauta mikkiä: hiljaa' });
+/*
  * "Kuuntelen…" vasta kun mikrofoni on OIKEASTI auki (omistaja
  * 13.8.2026: "pöllössä lukee kuuntelen vaikka mikki ei vielä päällä").
  * Käynnistys voi kestää sekunteja — lupakysely, äänisession vaihto,
@@ -2488,8 +2495,63 @@ export class Pollo {
    * Uusi vastaus keskeyttää edellisen luennan: lueAaneen pysäyttää
    * käynnissä olevan aina ensin (js/lukija.js).
    */
+  /** Luetaanko vastaus ääneen: kaiutinvipu TAI saneltu kysymys (puhekeskustelu). */
+  luentaPaalla() {
+    return this.aaniPaalla || Boolean(this.puheVuoro);
+  }
+
+  /** Puhevuoron tila sanelun tilariville ja mikille: 'miettii' | 'puhuu' | null. */
+  asetaPuheTila(tila) {
+    this.puheTila = tila;
+    if (this.saneluOsa) {
+      if (tila) this.saneluOsa.dataset.puhetila = tila;
+      else delete this.saneluOsa.dataset.puhetila;
+    }
+    if (this.saneluTila && (tila || Object.values(PUHE_TILARIVI).includes(this.saneluTila.textContent))) {
+      this.saneluTila.textContent = tila ? PUHE_TILARIVI[tila] : '';
+    }
+    if (this.mikki) {
+      const nimi = tila ? 'Hiljennä Pulu' : 'Kysy ääneen';
+      this.mikki.setAttribute('aria-label', nimi);
+      this.mikki.title = nimi;
+      this.mikki.classList.toggle('puhevuoro', Boolean(tila));
+    }
+  }
+
+  /** Ensimmäinen kuuluva ääni: "Mietin" → "Puhun" ja viive talteen (mittari). */
+  puheAlkoi() {
+    const vuoro = this.puheVuoro;
+    if (!vuoro || this.puheTila === 'puhuu') return;
+    vuoro.aaniMs = Math.round((globalThis.performance?.now?.() ?? Date.now()) - vuoro.alku);
+    this.viimeisinPuheViive = vuoro.aaniMs;
+    this.asetaPuheTila('puhuu');
+  }
+
+  /** Puhevuoro loppuu: luenta valmis, virhe, uusi kysymys tai mikki (hiljaa). */
+  lopetaPuheVuoro({ hiljaa = false } = {}) {
+    clearInterval(this.puheVahti);
+    this.puheVahti = null;
+    if (!this.puheVuoro && !this.puheTila) return;
+    this.puheVuoro = null;
+    if (hiljaa) {
+      this.peruLuenta();
+      pysaytaLukija();
+    }
+    this.asetaPuheTila(null);
+  }
+
+  /** Varavahti: vuoro päättyy, kun lukija ei enää lue eikä vastaus ole kesken. */
+  vahdiPuheVuoroa() {
+    if (!this.puheVuoro || this.puheVahti) return;
+    this.puheVahti = setInterval(() => {
+      if (!this.puheVuoro) { this.lopetaPuheVuoro(); return; }
+      if (!this.kesken && !this.luentaVirta && !lukijaLukee()) this.lopetaPuheVuoro();
+    }, 400);
+  }
+
   lueVastaus(teksti) {
-    if (!this.aaniPaalla || !teksti) return;
+    if (!this.luentaPaalla() || !teksti) return;
+    if (this.puheVuoro) this.puheAlkoi();
     try {
       // Pöllö puhuu omalla persoonallaan (js/puhe.js → workerin
       // persoonataulu); laitteen ääni jää varapoluksi lukijan sisällä.
@@ -4923,7 +4985,8 @@ export class Pollo {
     // jonon — pelkkä pysäytys jättäisi jonoon virkkeitä, jotka
     // heräisivät seuraavasta lausumasta.
     this.peruLuenta();
-    if (this.aaniPaalla) pysaytaLukija();
+    if (this.luentaPaalla()) pysaytaLukija();
+    this.lopetaPuheVuoro();
     this.auki = false;
     this.merkitseAuki(false);
     this.paneeli.hidden = true;
@@ -5877,7 +5940,8 @@ export class Pollo {
     this.kesken = kesken;
     this.kentta.disabled = kesken;
     this.laheta.disabled = kesken;
-    this.mikki.disabled = kesken;
+    // Puhevuorossa mikki on hiljennysnappi myös vastauksen virratessa.
+    this.mikki.disabled = kesken && !this.puheVuoro;
     /*
      * Paneelin odotustila on OMA luokkansa (omistaja 13.8.2026:
      * *"saisiko strimitekstin ilman kursiivia"*). Tässä oli aiemmin
@@ -6152,14 +6216,19 @@ export class Pollo {
    * @returns {boolean} kuuluuko puhetta juuri nyt
    */
   syotaLuennalle(kertynyt) {
-    if (!this.aaniPaalla) return false;
+    if (!this.luentaPaalla()) return false;
     if (!this.luentaVirta) {
       // Virtaluenta kulkee ensisijaisesti lukijaäänellä (js/puhe.js),
       // joka toimii myös iOS-kuoressa. Ilman sitä ja ilman selaimen
       // puhesyntetisaattoria (natiivisilta) virtaluentaa ei ole:
       // vastaus luetaan valmiina, kuten ennenkin.
       try {
-        this.luentaVirta = lueVirtana(null, { persoona: 'pollo' });
+        const vuoro = this.puheVuoro;
+        this.luentaVirta = lueVirtana(null, {
+          persoona: 'pollo',
+          onAani: () => { if (vuoro && this.puheVuoro === vuoro) this.puheAlkoi(); },
+          onLoppu: () => { if (vuoro && this.puheVuoro === vuoro) this.lopetaPuheVuoro(); },
+        });
       } catch {
         this.luentaVirta = null;
       }
@@ -6350,7 +6419,7 @@ export class Pollo {
    *   (naytaJatkot). Kaikki muut polut ovat uusi aihe — ks.
    *   kehysLaji ja sen yllä oleva selitys.
    */
-  async kysy(raakaKysymys, { jatko = false } = {}) {
+  async kysy(raakaKysymys, { jatko = false, puhe = false } = {}) {
     const kysymys = String(raakaKysymys ?? '').trim();
     if (!kysymys || this.kesken || !this.palvelin) return;
     // Kesken oleva ehdotushaku mitätöidään: pelaajan kysymys voittaa,
@@ -6360,6 +6429,11 @@ export class Pollo {
     // Tilarivi tyhjenee: kysymys on jo keskustelussa, eikä sanelun
     // väliaikainen teksti saa jäädä vastauksen alle.
     this.saneluTila.textContent = '';
+    this.lopetaPuheVuoro();
+    if (puhe) {
+      this.puheVuoro = { alku: globalThis.performance?.now?.() ?? Date.now(), aaniMs: null };
+      this.asetaPuheTila('miettii');
+    }
     this.ehdotusOdotus = null;
     this.ehdotukset.replaceChildren();
     this.ehdotukset.hidden = true;
@@ -6631,6 +6705,7 @@ export class Pollo {
       // soita kelloa.
       this.lopetaNaputus();
       this.peruLuenta();
+      this.lopetaPuheVuoro();
       odotus.remove();
       // Virheilmoitus on yksi rivi: varaus puretaan, jotta se kelaa
       // pohjaan kuten ennenkin eikä jää tyhjän yläpuolelle.
@@ -6657,6 +6732,9 @@ export class Pollo {
         this.lopetaNaputus();
         this.asetaKesken(false);
       }
+      // Puhevuoro päättyy luennan loppuun (onLoppu); varalla vahti, jos
+      // luentaa ei syntynyt tai se kulki valmiin tekstin polkua.
+      this.vahdiPuheVuoroa();
     }
   }
 
@@ -6730,6 +6808,11 @@ export class Pollo {
 
   /** Mikrofonin napautus: aloita tai lopeta. */
   vaihdaSanelu() {
+    // Puhevuoron aikana mikki hiljentää Pulun (ei aloita uutta sanelua).
+    if (this.puheVuoro) {
+      this.lopetaPuheVuoro({ hiljaa: true });
+      return;
+    }
     if (this.tunnistin || this.natiiviSanelussa) {
       this.lopetaSanelu({ laheta: true });
       return;
@@ -6858,7 +6941,7 @@ export class Pollo {
     kuuntele('sanelu-valmis', (tieto) => {
       const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
       this.paataNatiiviSanelu();
-      if (teksti) this.kysy(teksti);
+      if (teksti) this.kysy(teksti, { puhe: true });
       else {
         this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
         this.virhereaktio('mikrofoni.eikuullut', 0.3);
@@ -6867,7 +6950,7 @@ export class Pollo {
     kuuntele('sanelu-keskeytyi', (tieto) => {
       const teksti = String(tieto?.teksti ?? this.puhuttu).trim();
       this.paataNatiiviSanelu();
-      if (teksti) this.kysy(teksti);
+      if (teksti) this.kysy(teksti, { puhe: true });
       else {
         this.saneluTila.textContent = 'Sanelu keskeytyi. Yritä uudelleen.';
         this.virhereaktio('mikrofoni.eikuullut', 0.3);
@@ -6969,7 +7052,7 @@ export class Pollo {
       this.merkitseMikki(false);
       if (!oliTunnistin) return;
       const teksti = this.puhuttu.trim();
-      if (teksti) this.kysy(teksti);
+      if (teksti) this.kysy(teksti, { puhe: true });
       else if (this.saneluTila.textContent === SANELU_KUUNTELEE
         || this.saneluTila.textContent === SANELU_KAYNNISTYY) {
         this.saneluTila.textContent = 'En kuullut mitään. Yritä uudelleen.';
@@ -7079,12 +7162,12 @@ export class Pollo {
       try {
         Promise.resolve(natiivi?.sanelu?.lopeta?.()).then((tulos) => {
           const teksti = String(tulos?.teksti ?? kesken).trim();
-          if (laheta && teksti) this.kysy(teksti);
+          if (laheta && teksti) this.kysy(teksti, { puhe: true });
         }, () => {
-          if (laheta && kesken) this.kysy(kesken);
+          if (laheta && kesken) this.kysy(kesken, { puhe: true });
         });
       } catch {
-        if (laheta && kesken) this.kysy(kesken);
+        if (laheta && kesken) this.kysy(kesken, { puhe: true });
       }
       return;
     }
@@ -7499,6 +7582,15 @@ export function polloPaivitaNakyvyys(korosta = false) {
  * @param {() => object|null} haeUi getteri nykyiseen UI-olioon.
  * @returns {Pollo|null} olio testejä ja savukkeita varten.
  */
+/** Puhekeskustelun tila ja viimeisin viive (savukkeet ja kehittäjämittari). */
+export function polloPuheTila() {
+  return {
+    tila: nykyinenPollo?.puheTila ?? null,
+    vuoro: Boolean(nykyinenPollo?.puheVuoro),
+    viive: nykyinenPollo?.viimeisinPuheViive ?? null,
+  };
+}
+
 export function asennaPollo(haeUi, asetukset = {}) {
   if (typeof document === 'undefined') return null;
   nykyinenPollo?.tuhoaKuplamuisti?.();
