@@ -8719,3 +8719,7 @@ Omistaja 28.9. klo 17.4x sanatarkasti: "jos erikoissymboli on kohdekaupungissa, 
 ## OMISTAJA: BUGI — STRIIMILUENTA ALKAA KESKELTA, PALAA ALKUUN JA HYPPII (28.9.2026 klo 17.29)
 
 Omistaja 28.9. klo 17.5x sanatarkasti: "Nykyisessä buildissa striimiluenta alkaa kesken lauseen, ja sitten se jossain välissä aloittaa ensimmäisen lauseen alusta ja sitten se saattaa taas hypätä johonkin kohtaan. Onko tätä korjattu jo seuraavaan versioon?" → Natiivi-UI karkeen: toisto seka lehden striimilukijasta etta Pulun virkevirrasta 1.0.36/1.0.37-koodilla, korjaus 1.0.38:aan.
+
+## OMISTAJA: ELEVENLABS V4 — PIENI VERTAILU XAI:HIN (28.9.2026 klo 17.47)
+
+Omistaja 28.9. klo 17.5x: "elevenlabsilta tuli juuri uusi v4 versio". ElevenLabs julkaisi 28.9. v4 ja v4 Turbo (TechCrunch): striimaus LLM-tokeneista, matalampi viive agenteille, 90+ kielta, sav yn hallinta pitkassa tekstissa. Paatoimittaja: Pelikoodari pieni saastava vertailu (3 tekstia: nosto + 2 Pulun vastausta; xAI vs v4 vs v4 Turbo; ensimmainen tavu, kokonaisaika, hinta/1000 mrk; 9 naytetta omistajalle). Ei vaihtoa ennen omistajan kuuntelua.
