@@ -8951,3 +8951,7 @@ Omistaja 28.9. klo 22.40 sanatarkasti: "hyppii vielä v39, ei ala alusta ainakaa
 ## OMISTAJA: STRIIMI SOITTAA ENSIN EDELLISEN NOSTON PUSKURIA (28.9.2026 klo 22.42)
 
 Omistaja 28.9. klo 22.42 sanatarkasti: "ongelma taitaakin olla siinä että striimi lukee vanhaa tekstiä puskurista jonkun matkaa ennenkuin aloittaa alusta oikeasta kohdasta. saattaa siis tulla vanhan noston puhetta alkuun vaikka pitäisi olla luenta ihan toisesta nostosta" → Natiivi-UI kärkeen kaiutinkorjauksen jälkeen: äänipuskurin ja jonon tyhjennys luennan vaihtuessa/pysähtyessä, vanhan pyynnön myöhästyneiden palojen hylkäys (pyyntö-id/sukupolvi); toisto nosto A 5 s → nosto B. Mahdollisesti sama juurisyy kuin isoisän luennan puuttuva alku.
+
+## OMISTAJA: STRIIMI ALKAA VÄÄRÄSTÄ KOHDASTA JA HYPPÄÄ ~15 S JÄLKEEN ALKUUN (28.9.2026 klo 22.44)
+
+Omistaja 28.9. klo 22.44 sanatarkasti (korjaa 22.42-kirjauksen puskurihypoteesin): "eikun kyllä se vain aloittaa väärästä kohdasta ja noin 15sek päästä hyppää alkuun ja aloittaa sieltä uudestaan. kokeilin kokonaan uudella nostolla ja se tosiaan luki siitä uudesta nostosta ensin alkupäästä tekstiä mutta ei alusta ja vasta sitten hyppäsi oikeasti alkuun ja aloitti sieltä luennan uudestaan" → Natiivi-UI: epäillyt kaksi rinnakkaista lähdettä (nopea aloitus/välimuistin pala/esihaku), palojen järjestys, jatkamiskohta tai uusinta ~15 s aikakatkaisun jälkeen; lokita palan indeksi, lähde ja soittohetki; kärki kaiutinkorjauksen jälkeen.
