@@ -308,6 +308,15 @@ namespace Matkakirja.Natiivi
         public const string KuukausiKerros = "astronautti-kuukausi";
         public const int KuukaudenPintaMaxTaso = 7;
         public static bool KuukaudenPintaPois;
+        /// <summary>Testikomento `astro kyyti kuukausi m&lt;1–12&gt;` (m0 = pois): kuukausi pakotettuna kuvapareihin (talvi | kesä
+        /// samasta paikasta ilman testikellon siirtoa, joka muuttaisi myös auringon ja ISS:n paikan).</summary>
+        public static int KuukausiPakotettu;
+        /// <summary>BMNG-kerroksen alfa reliefin päällä (KarttaKerrokset.RasterinAlfa): 1 = pelkkä BMNG; alle 1 päästää reliefin
+        /// rinnevarjostuksen läpi (laite taivas1 28.9.: BMNG ilman varjostusta näytti latteammalta). Testikomento
+        /// `astro kyyti kuukausi a&lt;0–1&gt;`. Oletus 0,75 (Päätoimittaja 28.9. laite taivas2:n kuvaparista: vuoret erottuvat, meri
+        /// sinertävä eikä musta, Alppien tammikuun lumi näkyy yhä; 0,6 heikensi lunta).</summary>
+        public static float KuukaudenAlfa = 0.75f;
+        float kuukausiAlfaAsetettu = -1f;
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
 
@@ -316,14 +325,20 @@ namespace Matkakirja.Natiivi
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
-            int kuukausi = kyydissa && !KuukaudenPintaPois ? IssNyt.Kello().Month : -1;
+            int kuukausi = kyydissa && !KuukaudenPintaPois ? (KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : IssNyt.Kello().Month) : -1;
             if (kuukausi > 0 && !kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
             {
                 if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));
                 return;
             }
             if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
-            if (kuukausi == kuukausiLisatty) return;
+            if (kuukausi == kuukausiLisatty)
+            {
+                if (kuukausi > 0 && kuukausiAlfaAsetettu != KuukaudenAlfa && kk.RasterinAlfa(KuukausiKerros, KuukaudenAlfa) >= 0)
+                    kuukausiAlfaAsetettu = KuukaudenAlfa;
+                return;
+            }
+            kuukausiAlfaAsetettu = -1f;
             if (kuukausi < 0)
             {
                 kk.PoistaRasteri(KuukausiKerros);

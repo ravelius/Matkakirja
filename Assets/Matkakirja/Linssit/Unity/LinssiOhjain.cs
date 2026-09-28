@@ -108,6 +108,7 @@ namespace Matkakirja.Natiivi
         public static Func<bool> VahennettyLiikeKysely;
 
         PalloKierto kierto;
+        MaapallonVuosiSovitin vuosi;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -195,6 +196,8 @@ namespace Matkakirja.Natiivi
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
+            // Maapallon vuosi (Linssiseppä 2, 28.9.2026): hiomassa, vain kehittäjätilassa (ei avauskynnystä).
+            rekisteri.Lisaa(vuosi = new MaapallonVuosiSovitin(this, k));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -1056,7 +1059,7 @@ namespace Matkakirja.Natiivi
         // luodaan käynnistyksessä: KehysPiikit ottaa seurantaan vain aloitushetkellä olemassa olevat merkit.
 
         static readonly string[] MitattavatLinssit =
-            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "ihmisen-matka-2", "vertailu", "maatiedot", "radio", "isoisa-1873" };
+            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "ihmisen-matka-2", "vertailu", "maatiedot", "radio", "isoisa-1873", "maapallon-vuosi" };
         static readonly Dictionary<(string, string), Unity.Profiling.ProfilerMarker> merkit =
             new Dictionary<(string, string), Unity.Profiling.ProfilerMarker>();
         static readonly Unity.Profiling.ProfilerMarker KytkeMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Kerrokset");
@@ -1419,9 +1422,14 @@ namespace Matkakirja.Natiivi
                         else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
                         else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
                         else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
-                        else if (a == "taivas" && osat.Length > 3) KyydinTaivas.Pois = osat[3] == "0";   // A/B oikeat tähdet ja Kuu
+                        else if (a == "taivas" && osat.Length > 3) { KyydinTaivas.Pois = osat[3] == "0"; KyydinTaivas.VarjoPakko = osat[3] == "2"; } // A/B oikeat tähdet ja Kuu; 2 = ISS varjossa
                         else if (a == "paivanpilvet" && osat.Length > 3) AstronauttiKerros.PaivanPilvetPois = osat[3] == "0";
                         else if (a == "revontulet" && osat.Length > 3) Revontulet.Pois = osat[3] == "0";
+                        else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("m") && int.TryParse(osat[3].Substring(1), out int pakko))
+                            AstronauttiKerros.KuukausiPakotettu = pakko;                                   // 4a: m<kk> pakottaa, m0 pois
+                        else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("a") && float.TryParse(osat[3].Substring(1).Replace(',', '.'),
+                            System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float kkAlfa))
+                            AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
                         else if (a == "pilvet" && osat.Length > 3)
@@ -1506,6 +1514,8 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "isoisa" && osat.Length > 1 && osat[1] == "tila")
                     Kirjaa((rekisteri.Auki as IsoisaSovitin)?.Kerros is IsoisaKerros ik
                         ? $"isoisä 1873: näkyvissä {ik.Nakyvia} nimeä, kamera {Kamera}" : "isoisä 1873: linssi ei ole auki");
+                else if (osat[0] == "vuosi")
+                    vuosi.Komento(osat);
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)

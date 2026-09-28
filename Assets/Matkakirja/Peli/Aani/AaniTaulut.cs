@@ -262,7 +262,8 @@ namespace Matkakirja.Peli
             t.VisaOletus = t.MusaPolku("musa-visa-2");
             t.AarreTavallinen = t.MusaPolku("musa-aarre");
             t.AarrePaa = t.MusaPolku("musa-paaaarre");
-            t.AloituslentoAihe = t.MusaPolku("musa-aloituslento");
+            // Omistaja 28.9.2026: vaskimarssi A (web #3535), 20,3 s; käynnistyy lennon leikkauksesta (PeliOhjain.AloitaAloituslento).
+            t.AloituslentoAihe = t.MusaPolku("musa-aloituslento-marssi-a");
             t.LoppuAihe = t.MusaPolku("musa-loppu");
             t.RatkaisuAihe = t.MusaPolku("musa-ratkaisu");
             t.EpaonnistuminenAihe = t.MusaPolku("musa-epaonnistuminen");

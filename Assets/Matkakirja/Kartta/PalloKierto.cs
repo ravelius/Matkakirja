@@ -381,7 +381,14 @@ namespace Matkakirja
         /// noppa pelaajan kohdalta. false = pallon takapuolella tai ruudun ulkopuolella.
         /// korkeus metreinä ellipsoidista (nappula on 5000 m:ssä).
         /// </summary>
-        public bool RuutuPiste(double lat, double lon, out Vector2 ruutu, double korkeus = 0)
+        public bool RuutuPiste(double lat, double lon, out Vector2 ruutu, double korkeus = 0) =>
+            RuutuPiste(lat, lon, out ruutu, korkeus, false);
+
+        /// <summary>
+        /// Kuten yllä; ulos = true palauttaa myös ruudun ulkopuolisen pisteen (pallon etupuolella), jotta liikkeen ajaksi
+        /// lukittu UI (kaupungin kuvakortti, Natiivi-UI 28.9.2026) jatkaa kaupungin mukana reunan yli kuten webissä.
+        /// </summary>
+        public bool RuutuPiste(double lat, double lon, out Vector2 ruutu, double korkeus, bool ulos)
         {
             ruutu = default;
             var kamera = GetComponent<Camera>();
@@ -392,7 +399,7 @@ namespace Matkakirja
             Vector3 keskus = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
             if (Vector3.Dot((p - keskus).normalized, (kamera.transform.position - p).normalized) < 0.02f) return false;
             Vector3 r = kamera.WorldToScreenPoint(p);
-            if (r.z <= 0 || r.x < 0 || r.y < 0 || r.x > Screen.width || r.y > Screen.height) return false;
+            if (r.z <= 0 || (!ulos && (r.x < 0 || r.y < 0 || r.x > Screen.width || r.y > Screen.height))) return false;
             ruutu = r;
             return true;
         }
@@ -403,6 +410,18 @@ namespace Matkakirja
 
         /// <summary>Napautus näytön pikselikoordinaateissa (KaupunkiMerkit etsii osuman).</summary>
         public event Action<Vector2> Napautettu;
+
+        /// <summary>
+        /// Napautuksen sieppaaja (Natiivi-UI:n maakuntakartta, omistaja 28.9.2026 klo 17.1x): palauttaa true, jos se käsitteli
+        /// napautuksen, jolloin kaupungit, karttavalot ja muut Napautettu-kuuntelijat eivät saa sitä.
+        /// </summary>
+        public static Func<Vector2, bool> Sieppaaja;
+
+        void IlmoitaNapautus(Vector2 ruutu)
+        {
+            if (Sieppaaja != null && Sieppaaja(ruutu)) return;
+            Napautettu?.Invoke(ruutu);
+        }
 
         /// <summary>
         /// Pelaajan veto tai nipistys pallolla alkoi (kerran elettä kohden, kun liike ylittää
@@ -417,7 +436,7 @@ namespace Matkakirja
         public void IlmoitaKaupunki(string id) => KaupunkiNapautettu?.Invoke(id);
 
         /// <summary>Synteettinen napautus näytön pikseleinä (testikomento "napauta x y").</summary>
-        public void Napauta(Vector2 ruutu) => Napautettu?.Invoke(ruutu);
+        public void Napauta(Vector2 ruutu) => IlmoitaNapautus(ruutu);
 
         /// <summary>
         /// Kosketusten esto (dialogi, lehti, linssin oma ele): kun tosi, pallo ei lue
@@ -1093,7 +1112,7 @@ namespace Matkakirja
                         {
                             viimeNapautusAika = nyt;
                             viimeNapautus = pt;
-                            Napautettu?.Invoke(edellinenKeski);
+                            IlmoitaNapautus(edellinenKeski);
                         }
                     }
                     liuku = vetoNopeus;

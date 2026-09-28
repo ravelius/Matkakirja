@@ -1079,6 +1079,25 @@
     flex-shrink: 0;
 }
 
+/* Napit näkyvät heti (omistaja 28.9.2026): ylärivillä paikkavaraus [valikko 30,4 + 1 + kaiutin 34] kaiuttimen
+   marginaaleilla, napit kortissa sen kohdalla (Nostokortti.SijoitaLukija); vierittäessä paperipohja alle. */
+.mk-nosto__lukijapaikka {
+    width: 65.4px;
+    height: 34px;
+    margin: -9px -6px -9px auto;
+    flex-shrink: 0;
+}
+
+.mk-nosto__lukija.mk-nosto__lukija--kiinni {
+    position: absolute;
+    margin: 0;
+    border-radius: 17px;
+}
+
+.mk-nosto__lukija.mk-nosto__lukija--irti {
+    background-color: rgba(246, 241, 228, 0.94);
+}
+
 .mk-nosto__ylarivi {
     /* Web .fokuskohde-ylarivi: American Typewriter 10,88 px, harvennus 1,52 px, #7a5514, alla 1,92 px.
        Löydös 133: oikealla ei enää ✕:n varausta (40 px). */
@@ -1570,30 +1589,28 @@
     font-size: 15px;
 }
 
-.mk-nosto__ihmenappi {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    margin: 0 0 11px 0;
-    padding: 6px 12px;
+/* Säilyneen ihmekohteen nykykuva tekstin kyljessä (web .fokuskohde-teksti > .fokuskohde-nykykuva, omistaja
+   27.9.2026; mitattu #3517 Chromiumissa): kuva 10 rem korkea ja rajattu (object-fit cover), napin reunus 1 px
+   rgba(58, 38, 16, 0.22) ja kulmat 8 px; kuvateksti 0,68 rem, riviväli 1,4, marginaali 0,3 0,1 0,4 rem,
+   rgba(33, 29, 24, 0.78). Värit läpinäkymättöminä kortin #f5f0e2:n päällä (sRGB). Leveyden ja paikan asettaa
+   Lehtipalstat (mk-palstat__kylki). */
+.mk-nosto__kuvakehys--nyky {
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.6);
-    border-radius: 4px;
-    background-color: rgba(214, 168, 62, 0.2);
-    color: #6d4d12;
+    border-color: rgb(204, 196, 180);
+    border-radius: 8px;
 }
 
-.mk-nosto__ihmenappi .mk-nappi__teksti {
-    font-size: 13.5px;
-    letter-spacing: 10.37px; /* web 1.4px */
+.mk-nosto__kuvakehys--nyky > .mk-nosto__kuva {
+    -unity-background-scale-mode: scale-and-crop;
+    border-radius: 7px;
 }
 
-.mk-nosto__ihmetahti {
-    width: 24px;
-    height: 24px;
-    margin-right: 7px;
-    color: #b8862b;
+.mk-nosto__nykyteksti {
+    margin: 4.8px 1.6px 6.4px 1.6px;
+    padding: 0;
+    font-size: 10.88px;
+    white-space: normal;
+    color: rgb(80, 75, 68);
 }
 
 .mk-nosto__leikekirja {
@@ -1880,7 +1897,12 @@
 /* Web .nostosym-nimio: --font-atlas (Liberation Serif) kursiivi, rgba(74, 52, 33, 0,92), ei haloa, ei harvennusta;
  * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). Löydös 125: peitto lineaarisena 0,97 ja
  * SDF-reunan vahvistus samalla musteella asetetaan C#:ssa (NostotKartalla.AsetaMuste, NostoKerros.NimionReuna*). */
+/* Nimiö häipyy ja palaa pehmeästi (omistaja 28.9.2026, TF 1.0.34: nostotekstit välkkyivät; web #3540: piilotus,
+   paluu ja kyljen vaihto 220 ms ease-in-out). */
 .mk-nosto-merkki__nimio {
+    transition-property: opacity;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-in-out;
     position: absolute;
     font-size: 8.5px;
     white-space: nowrap;
@@ -1938,6 +1960,15 @@
 .mk-palstat__mittari {
     position: absolute;
     visibility: hidden;
+}
+
+/* Kelluva kylkikuva (Lehtipalstat.LuoKylkikuvalla): left, top ja width koodissa. */
+.mk-palstat__kylki {
+    position: absolute;
+}
+
+.mk-palstat__vieri {
+    flex-shrink: 0;
 }
 
 .mk-palstat--kaksi > .mk-palstat__sisus {
@@ -2069,4 +2100,36 @@
 .mk-nosto-merkki__hehku {
     position: absolute;
     -unity-background-scale-mode: stretch-to-fill;
+}
+
+/* Maakuntakartta (omistaja 28.9. klo 17.1x): paneeli on pelkkä kuvausruutu, hieman isompi kuva ja teksti, silti kevyt. */
+.mk-selite.mk-selite--karttatila {
+    width: 300px;
+    max-width: 86%;
+    padding: 4px;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__luonnehdinta {
+    margin: 0;
+    padding: 8px 8px 6px 8px;
+    border-top-width: 0;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lnimi {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lkuva {
+    width: 96px;
+    height: 72px;
+    margin: 2px 10px 0 0;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lteksti {
+    font-size: 15px;
+}
+
+.mk-maakunnat__ohje {
+    color: rgba(70, 51, 31, 0.7);
 }

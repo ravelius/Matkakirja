@@ -12,8 +12,8 @@
 //              kuvat, teksti, minivisa (+50, Kaupat.Minitehtava(iso, "skandaali:<id>"))
 //   hetki      "paikka · päiväys", kuvat, teksti, minivisa (+50, "hetki:<id>")
 //   eläin      kuva(t), teksti, palkkiorivi (Kaupat.Elaintaky(iso, 20) vaiheessa 2)
-//   kohde      luokka, nimi, kuvat (kadonneen ihmeen kuva ensin, nauha "Unohdettu aarre"),
-//              "Koe ihme" kuvien alla (säilyneen ihmeen kuva suurennokseen), teksti, LUKIJAN KYSYMYS
+//   kohde      luokka, nimi, kuvat (ihmekuva ensin, nauha "Unohdettu aarre"), teksti (säilyneen ihmekohteen
+//              oma valokuva pienenä sen kyljessä, web kohteenNykykuva; "Koe ihme" pois 27.9.2026), LUKIJAN KYSYMYS
 //              (+25, "nosto"/id), "Kysy viisaalta pöllöltä pululta:" (PuluChat.Kysy), kierrokset
 //              (ulkoinen linkki), "Livian leikekirja" (kohteen nimeävä täkynosto, web piirraKohteenNosto)
 //   täkynosto  (web js/fokusnosto.js avaaNostonKortti; myös maalehtinosto, jonka web avaa samalla avaaNosto-
@@ -96,7 +96,9 @@ namespace Matkakirja.Natiivi
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
             // Luennan säätimet (omistaja 27.9. klo 09.3x, web #3388): ratas + kaiutin (tauko/jatko, VU).
-            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija", saatimet: true);
+            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija mk-nosto__lukija--kiinni", saatimet: true, rajaus: () => kortti.worldBound);
+            // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
+            sisus.verticalScroller.valueChanged += _ => SijoitaLukija();
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
             // Kierto tai ikkunan koko: leveys uudelleen (web asemoi resize-kuuntelijassa), vaiheen 2 kortti keskelle.
             kerros.RegisterCallback<GeometryChangedEvent>(e =>
@@ -212,6 +214,7 @@ namespace Matkakirja.Natiivi
                 if (nappi != "lisaa" && kortti.ClassListContains("mk-nosto--esittely")) Vaihe2();
                 // Kaiutin (luennan mittaus): kuin napautus, ei kortin oma nappi.
                 if (nappi == "kaiutin") { lukija.Paina(); tulos?.Invoke(null); return; }
+                if (nappi == "valikko") { lukija.AvaaValikko(); tulos?.Invoke(null); return; }
                 if (napit.TryGetValue(nappi, out var a)) { a(); tulos?.Invoke(null); }
                 else tulos?.Invoke("kortilla ei ole nappia " + nappi + " (on: " + string.Join(", ", napit.Keys) + ")");
             }
@@ -487,6 +490,7 @@ namespace Matkakirja.Natiivi
             sisus.Clear();
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
+            lukijaPaikka = null;
 
             Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
             // 1. Kuva tai sen paikkamerkki (seepiaruutu ja nimi, ei hakua ulkoa).
@@ -530,6 +534,7 @@ namespace Matkakirja.Natiivi
             napit["lisaa"] = Vaihe2;
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
+            lukijaPaikka = null;
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2);
@@ -571,7 +576,13 @@ namespace Matkakirja.Natiivi
                 : "Kuuntele hetki");
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
-            Ylarivi(sisus, n).Add(lukija.Juuri);
+            // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta
+            // se kaiutin tulee näkyviin"): vaiheen 2 kuvan kohdistus (löydös 131) vierittää ylärivin kortin yläreunan taakse.
+            // Ylärivillä on vain paikkavaraus; kaiutin ja valikkonappi ovat kortissa sen kohdalla eivätkä vieri pois.
+            lukijaPaikka = Rakenne.El("mk-nosto__lukijapaikka", Ylarivi(sisus, n), PickingMode.Ignore);
+            lukijaPaikka.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
+            if (lukija.Juuri.parent != kortti) kortti.Add(lukija.Juuri);
+            lukija.Juuri.BringToFront();
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
@@ -594,8 +605,8 @@ namespace Matkakirja.Natiivi
             // Web piirraNostonMedia: äänet otsikon alle, ennen kuvaa.
             if (n.Laji == NostoLaji.Takynosto) Media(sisus, n);
             if (n.Kuvat.Count > 0) Kuvasarja(sisus);
-            // Web piirraKortinIhmenappi: "Koe ihme" ensimmäisen kuvan (sarjan) alle.
-            if (n.Ihme != null) Ihmenappi(sisus, n);
+            // Ihmekuvan suurennos (ui ihme): ihmekuva on sarjan ensimmäinen, nauhallinen kuva.
+            if (n.Kuvat.Count > 0 && n.Kuvat[0].Nauha != null) napit["ihme"] = () => Suurenna(0);
 
             var jaljella = n.Laji == NostoLaji.Kohde ? n.Korostukset.Select(PuraKorostus).Where(x => x.HasValue).Select(x => x.Value).ToList()
                 : new List<(string Perus, string Nakyva)>();
@@ -614,7 +625,11 @@ namespace Matkakirja.Natiivi
             }
             var kappaleet = Kappaleet(n.Teksti).Select(k => Korosta(k, jaljella)).ToList();
             // Web lehtipalstaKotelo: pitkä teksti kahdelle palstalle, kun sen oma leveys ≥ 600 (iPadin kuvakortti).
-            if (Lehtipalstat.OnPitka(n.Teksti, kappaleet.Count))
+            // Säilyneen ihmekohteen nykykuva kelluu tekstin (ensimmäisen palstan) oikealla (web piirraKohdeTeksti).
+            bool pitka = Lehtipalstat.OnPitka(n.Teksti, kappaleet.Count);
+            if (n.Nykykuva != null)
+                Lehtipalstat.Luo(sisus, kappaleet, RiviValiAlku, "mk-nosto__teksti", Kirjasin.Luku, Linkit, Nykykuva(n.Nykykuva), pitka);
+            else if (pitka)
                 Lehtipalstat.Luo(sisus, kappaleet, RiviValiAlku, "mk-nosto__teksti", Kirjasin.Luku, Linkit);
             else
                 foreach (var k in kappaleet) Linkit(Rakenne.Teksti(RiviValiAlku + k, "mk-nosto__teksti", sisus));
@@ -659,6 +674,27 @@ namespace Matkakirja.Natiivi
         /// Generoitu kuva UI/Resources/Symbolit/sym-*.png (web assets/kartat/symbolit/sym-*.webp); hetki ja ihme ovat
         /// webissä koodipiirtäjiä, joten niille ei ole kuvaa (rivi ilman symbolia).
         /// </summary>
+        VisualElement lukijaPaikka;
+
+        /// <summary>
+        /// Lukijan napit ylärivin paikkavarauksen kohdalle kortissa: vierittämättömässä asemassa (vieritys lisätään takaisin),
+        /// joten ne pysyvät kortin yläkulmassa, vaikka sisältö vierii. Vierityksen aikana alla paperipohja (teksti alta).
+        /// </summary>
+        void SijoitaLukija()
+        {
+            var j = lukija.Juuri;
+            if (lukijaPaikka?.panel == null || j.parent != kortti) return;
+            var r = lukijaPaikka.worldBound;
+            var k = kortti.worldBound;
+            if (float.IsNaN(r.y) || r.width <= 0 || float.IsNaN(k.y)) return;
+            float s = sisus.scrollOffset.y;
+            float x = Mathf.Round(r.x - k.x - kortti.resolvedStyle.borderLeftWidth);
+            float y = Mathf.Round(r.y - k.y - kortti.resolvedStyle.borderTopWidth + s);
+            if (j.resolvedStyle.left != x) j.style.left = x;
+            if (j.resolvedStyle.top != y) j.style.top = y;
+            j.EnableInClassList("mk-nosto__lukija--irti", s > 1f);
+        }
+
         static VisualElement Ylarivi(VisualElement isa, Nosto n)
         {
             var rivi = Rakenne.El("mk-nosto__ylarivi mk-nosto__ylarivi--rivi", isa, PickingMode.Ignore);
@@ -787,19 +823,25 @@ namespace Matkakirja.Natiivi
             napit["leikekirja"] = avaa;
         }
 
-        /// <summary>Web piirraIhmenappi: tähti (kadonneiden ihmeiden karttamerkki) ja napin teksti versaalina.</summary>
-        void Ihmenappi(VisualElement isa, Nosto n)
+        /// <summary>
+        /// Web kohteenNykykuva + .fokuskohde-teksti > .fokuskohde-nykykuva (omistaja 27.9.2026, Olympia-kortti):
+        /// yhä olemassa olevan ihmekohteen valokuva pienenä tekstin kyljessä, kuvateksti alla, napautus suurentaa.
+        /// Leveyden ja paikan asettaa Lehtipalstat (min(42 %, 180 pt), float right).
+        /// </summary>
+        VisualElement Nykykuva(NostoKuva k)
         {
-            var k = n.Ihme;
+            var lohko = Rakenne.El("mk-nosto__nykykuva", null, PickingMode.Ignore);
             Action avaa = () => SuurennaYksi(k);
-            var b = Rakenne.Nappi(null, "mk-nosto__ihmenappi", avaa, isa);
-            var tahti = new SvgIkoni(NostoMerkit.Ruusu) { Ruutu = 16, Alku = new Vector2(-8, -8) };
-            tahti.AddToClassList("mk-ikoni--tayta");
-            tahti.AddToClassList("mk-nosto__ihmetahti");
-            b.Add(tahti);
-            Kirjasimet.Aseta(Rakenne.Teksti((n.IhmeNappi ?? "Koe ihme").ToUpperInvariant(), "mk-nappi__teksti", b), Kirjasin.Kone);
-            napit["ihme"] = avaa;
+            var kehys = Kuvakehys(lohko, k, avaa, kiintea: NykykuvaKorkeus);
+            kehys.AddToClassList("mk-nosto__kuvakehys--nyky");
+            if (!string.IsNullOrEmpty(k.Lyhyt))
+                Kirjasimet.Aseta(Rakenne.Teksti("<line-height=1.4em><noparse>" + k.Lyhyt + "</noparse>", "mk-nosto__nykyteksti", lohko), Kirjasin.Luku);
+            napit["nykykuva"] = avaa;
+            return lohko;
         }
+
+        /// <summary>Web .fokuskohde-kuva img height 10rem (object-fit cover) + napin 1 px:n reunus ylhäällä ja alhaalla.</summary>
+        const float NykykuvaKorkeus = 162f;
 
         /// <summary>
         /// Matkakirjan ihmeen kulmanauha (web piirraIhmenauha, PUNA-sävy): vino kaista kuvan vasemmassa
@@ -871,15 +913,17 @@ namespace Matkakirja.Natiivi
         /// kuvaKatto; ennen latausta 3:2 (web oletussuhde). Pysty- ja neliökuva eivät enää kutistu 3:2-kehykseen
         /// (iPhonella pystykuva 225 pt korkea → enintään turva-alue − 150 pt). Katetun kuvan sivuille jää kortin paperi.
         /// </summary>
-        VisualElement Kuvakehys(VisualElement isa, NostoKuva k, Action napautus, Action<Texture2D> ladattuna = null)
+        VisualElement Kuvakehys(VisualElement isa, NostoKuva k, Action napautus, Action<Texture2D> ladattuna = null, float kiintea = 0f)
         {
             var kehys = Rakenne.El("mk-nosto__kuvakehys", isa);
             var kuva = Rakenne.El("mk-nosto__kuva", kehys, PickingMode.Ignore);
             kehys.RegisterCallback<ClickEvent>(_ => napautus?.Invoke());
             kehys.userData = 2f / 3f;
+            // Kiinteä korkeus (nykykuva): kuva täyttää kehyksen ja rajautuu (web object-fit: cover).
+            if (kiintea > 0f) kehys.style.height = kiintea;
             void Korkeus(float w)
             {
-                if (float.IsNaN(w) || w <= 0) return;
+                if (kiintea > 0f || float.IsNaN(w) || w <= 0) return;
                 float h = w * (kehys.userData is float s ? s : 2f / 3f);
                 if (kuvaKatto > 0f) h = Mathf.Min(h, kuvaKatto);
                 h = Mathf.Round(h);
