@@ -8727,3 +8727,7 @@ Omistaja 28.9. klo 17.5x: "elevenlabsilta tuli juuri uusi v4 versio". ElevenLabs
 ## OMISTAJA: ELEVENLABS V4 -VERTAILU PERUTTU (28.9.2026 klo 17.48)
 
 Omistaja 28.9. klo 17.5x sanatarkasti: "älä vertaa". Vertailu peruttu Pelikoodarilta ennen yhtaan API-kutsua; xAI-puhe jatkaa.
+
+## OMISTAJA: PULUN TESTIAANET ELEVENLABS V4:LLA TUNNETAGEIN + STRIIMIHINTA (28.9.2026 klo 17.49)
+
+Omistaja 28.9. klo 17.5x sanatarkasti: "tee muutama testiääni pululle v4:llä käyttäen tunnetageja ja vertaa sitä jo nyt olevaan äänitteeseen pelissä. mutta striimiäänen hinta kiinnostaa, jos se olisi yhtään laskenut" (tarkentaa 'älä vertaa' -viestin: ei laajaa striimivertailua). Pelikoodari: 3 Pulun repliikkia, jolla on esigeneroitu aanite (eleven_v3) → samat v4:lla samalla aanella tunnetagein, 3 paria omistajalle; v4/v4 Turbo striimihinta dokumentaatiosta vs. xAI ja Flash v2.5.
