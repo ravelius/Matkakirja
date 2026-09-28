@@ -51,6 +51,8 @@ export const V4_ERAT = Object.freeze([
   'pulu-06b888b9453946cfbda6', 'pulu-12b15e8a504a9fcb2e3a', 'pulu-4fa1c5cfc51373a11429',
   'pulu-62d4bea1517eaa83e5a4', 'pulu-64d79ec3f9a10726f753', 'pulu-84129c929509d868a32a',
   'pulu-8faeb74edfc3ba66e61a', 'pulu-fa795db119f56b6ef97e',
+  // kosice-4 ja valletta-4 lyhennettyinä (Päätoimittaja 28.9.2026).
+  'pulu-1cb15ada696ec6e61ba5',
 ]);
 const MEDIA = 'https://media.matkakirja.app/';
 
