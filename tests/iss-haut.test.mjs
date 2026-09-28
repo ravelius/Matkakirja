@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { inflateSync } from 'node:zlib';
 import {
   pilviAlfa, laskePilvialfa, luminanssi, kyllaisyys, kattavuus, eilinenUtc, edellinenPaiva,
-  gibsUrl, bmngLahdeUrl, bmngAmpariPolku, pilvetJson, GIBS_KERROKSET, GIBS_PARI, minimiKooste,
+  gibsUrl, bmngLahdeUrl, bmngAmpariPolku, pilvetJson, GIBS_KERROKSET, GIBS_PARI, minimiKooste, pehmennaAlfa,
 } from '../tools/iss-pilvet.mjs';
 import {
   ovationRuudukko, revontuletJson, harmaaPng, crc32, LEVEYS, KORKEUS,
@@ -66,6 +66,25 @@ test('iss-pilvet: minimikooste pudottaa auringon kimalluksen ja täyttää aukot
   assert.deepEqual([...laskePilvialfa({ paiva: a, bmng, leveys: 4, korkeus: 1 }).alfa].slice(0, 2), [255, 255]);
   // Pari on saman radan VIIRS (ensisijaisen kerroksen puolen kierroksen päässä).
   assert.equal(GIBS_PARI[GIBS_KERROKSET[0]], 'VIIRS_SNPP_CorrectedReflectance_TrueColor');
+});
+
+test('iss-pilvet: pehmennys poistaa pilkut, pehmentää reunat, kiertää pituuden yli ja säilyttää tasaisen', () => {
+  // Tasainen 200 pysyy.
+  assert.deepEqual([...pehmennaAlfa(new Uint8Array(12).fill(200), 4, 3)], new Array(12).fill(200));
+  // Yksittäinen 255-pikseli (pinnan pilkku) katoaa mediaanissa.
+  const pilkku = new Uint8Array(25); pilkku[12] = 255;
+  assert.deepEqual([...pehmennaAlfa(pilkku, 5, 5)], new Array(25).fill(0));
+  // 3 × 3 -pilvi 7 × 7:ssä: keskus pysyy korkeana, reuna pehmenee, kaukana nolla.
+  const pilvi = new Uint8Array(49);
+  for (const y of [2, 3, 4]) for (const x of [2, 3, 4]) pilvi[y * 7 + x] = 255;
+  const p = pehmennaAlfa(pilvi, 7, 7, 1);
+  assert.ok(p[3 * 7 + 3] > 100, `keskus ${p[24]}`);
+  assert.ok(p[3 * 7 + 1] > 0 && p[3 * 7 + 1] < 255, 'reuna pehmeä');
+  assert.equal(p[0], 0);
+  // Pituuspiiri kiertää: vasemman reunan pilvi vuotaa oikeaan reunaan.
+  const k = new Uint8Array(15); for (const y of [0, 1, 2]) { k[y * 5] = 255; k[y * 5 + 1] = 255; }
+  assert.ok(pehmennaAlfa(k, 5, 3, 1)[1 * 5 + 4] > 0, 'oikea reuna saa osan vasemmasta');
+  assert.throws(() => pehmennaAlfa(pilkku, 4, 4), /pehmennys/);
 });
 
 test('iss-pilvet: päivät, GIBS- ja BMNG-osoitteet, JSON', () => {
