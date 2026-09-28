@@ -8611,3 +8611,7 @@ Julkaisija 28.9. klo 12.5x: tools/gpu-vapaa.sh (exit 1 kun /tmp/matkakirja-kevyt
 ## OMISTAJA: KONE VAPAA NYT (KEVYT TILA POIS ENNEN KLO 17) (28.9.2026 klo 12.43)
 
 Omistaja 28.9. sanatarkasti: "nyt en tarvitse konetta. sanon taas sitten kun tarvitsen". Kevyen tilan lippu pois heti (Julkaisija), nice-oletus taysilla ytimilla ja GPU vapaa: Karttasepan pallopoltto + laattavienti SIGCONT nyt (nice 15), ohitetut 13 GPU-savukeriviä ajetaan, simulaattorit sallittu (paivalla 1). Seuraava tarve-ikkuna omistajan ilmoituksesta.
+
+## OMISTAJA: PULUN PUHEKESKUSTELUN VIIMEINEN TILA 'NAPAUTA MIKKIA, KUN HALUAT PUHUA' (28.9.2026 klo 12.44)
+
+Omistaja 28.9. klo 12.4x sanatarkasti: "pitäisikö olla pulussa viimeinen vaihtoehto: napauta mikkiä kun haluat puhua". Paatoimittaja: kylla — tilarivi ei tyhjene Pulun puheen jalkeen vaan nayttaa 'Napauta mikkiä, kun haluat puhua', jolloin pelaaja nakee tilan koko ajan (Kuuntelen → Mietin → Puhun → Napauta mikkiä…). Nakyy puhekeskustelun jalkeen ja ennen ensimmaista sanelua, ei kirjoitetun kysymyksen jalkeen. Pelikoodari #3546:een ennen mergea tai heti perään, Natiivi-UI samoin natiiviin.
