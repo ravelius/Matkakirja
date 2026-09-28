@@ -28,7 +28,10 @@ namespace Matkakirja.Natiivi
             {
                 var a = l[i];
                 var m = maat[i];
-                m.Id = a.Id; m.Nimi = a.Nimi; m.Tavut = a.Tavut; m.Ladattu = a.Ladattu; m.Virhe = a.Virhe;
+                // Skeema 1.56 (Fable 28.9.: pelaajalle todellinen levykoko): koko levyllä, edistymä siirrosta samassa suhteessa.
+                long levy = a.LevyTavut > 0 ? a.LevyTavut : a.Tavut;
+                m.Id = a.Id; m.Nimi = a.Nimi; m.Tavut = levy; m.Virhe = a.Virhe;
+                m.Ladattu = a.Tavut > 0 && levy != a.Tavut ? (long)((double)a.Ladattu * levy / a.Tavut) : a.Ladattu;
                 m.Manner = a.Manner; // maailma-rivillä null: UI laskee sen vain "Kaikki"-riviin
 
                 m.Tila = a.Tila switch
