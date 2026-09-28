@@ -41,6 +41,11 @@
  *   Versio tunnistetaan lähteestä (`laattavirheita` js/pallolaatat.js:ssä)
  *   ja mittariolion kentästä; puuttuvat luvut tulostetaan '–'.
  *
+ * TUNNETTU RAJOITUS (28.9.2026): vertailusivu avautuu eri UI-tilaan
+ * (karttaruutu eri korkuinen ja eri mittakaavassa), joten KUVAERO vertaa
+ * eri rajausta — sama 1,18 % ENNEN- ja JÄLKEEN-ajossa. Käytä AUKKOJA-,
+ * laattavirheita- ja uusittu-lukuja; kuvaero vaatii saman asettelun.
+ *
  * KATKAISIJA: pallolaatat.js:n peiliPetti('laatat') katkaisee uudet
  * lataukset 20 s:ksi kolmen verkkovirheen jälkeen. Lopuksi odotetaan
  * 30 s, sitten niin kauan kuin katko on päällä tai näkyviä on kesken
@@ -83,6 +88,14 @@ const JUURI = resolve(valitsin('juuri', process.env.JUURI ?? join(dirname(fileUR
 const LAUTA = valitsin('lauta', 'pallo');
 const SIEMEN = Number(valitsin('siemen', '1873'));
 const OSUUS = Number(valitsin('osuus', '0.25'));
+/*
+ * KATKAISUJA PER ARVOTTU LAATTA (28.9.2026): pallon haku kokeilee kaatuessaan
+ * varapolkua samalla osoitteella, joten pelkän ensimmäisen pyynnön katkaisu ei
+ * pudota kerrosta kummassakaan versiossa (mitattu: ENNEN 0 aukkoa 5 %:lla).
+ * Oletus 2 = haku JA varapolku katkeavat, kuten Safarin taustakatkossa;
+ * kolmas pyyntö (JÄLKEEN-version uusinta) menee läpi.
+ */
+const KATKAISUJA = Number(valitsin('katkaisuja', '2'));
 const TAUSTA_MS = Number(valitsin('tausta-ms', '8000'));
 const KAIKKI_KERROKSET = argv.includes('--kaikki-kerrokset');
 const LOPPUODOTUS_MS = LAUTA === 'pallo' ? 30000 : 12000;
@@ -148,7 +161,7 @@ const arpa = (avain) => {
   h ^= h >>> 16; h = Math.imul(h, 0x85ebca6b) >>> 0; h ^= h >>> 13;
   return (h >>> 0) / 2 ** 32;
 };
-const nahdyt = new Set();
+const nahdyt = new Map(); // laatan avain → pyyntökerrat
 const laskurit = { laattapyyntoja: 0, arvottuKatkaisu: 0, taustaKatkaisu: 0, uusintaPyyntoja: 0, paikkausPyyntoja: 0 };
 let tausta = false;
 
@@ -201,10 +214,10 @@ async function avaaSivu(injektio) {
         laskurit.laattapyyntoja += 1;
         if (/[?&]r=\d+/.test(url)) laskurit.uusintaPyyntoja += 1;
         if (/[?&]p=\d+/.test(url)) laskurit.paikkausPyyntoja += 1;
-        const ensimmainen = !nahdyt.has(avain);
-        nahdyt.add(avain);
+        const kerta = (nahdyt.get(avain) ?? 0) + 1;
+        nahdyt.set(avain, kerta);
         if (tausta) { laskurit.taustaKatkaisu += 1; r.abort('failed'); return; }
-        if (ensimmainen && arpa(avain) < OSUUS) {
+        if (kerta <= KATKAISUJA && arpa(avain) < OSUUS) {
           laskurit.arvottuKatkaisu += 1;
           void ampari(avain); // olemassaolo tiedetään mittausta varten
           r.abort('failed');
@@ -343,12 +356,32 @@ palvelin.close();
 console.log(`${lapi}/${kaikki} OK`);
 process.exit(lapi === kaikki ? 0 : 1);
 
+/** Pelkkä pallon kangas näkyviin (kuvaeroa varten). */
+async function vainPallo(s) {
+  await s.evaluate(() => {
+    const kankaat = [...document.querySelectorAll('canvas')];
+    const pallo = kankaat.sort((a, b) => b.width * b.height - a.width * a.height)[0];
+    document.body.style.visibility = 'hidden';
+    if (pallo) pallo.style.visibility = 'visible';
+  });
+  await s.waitForTimeout(300);
+}
+
 /* ── MITTA: PALLO ──────────────────────────────────────────────────── */
 async function mittaaPallo() {
   const { tila: t, ms } = await odotaAsettuminen(sivu, LISAODOTUS_KATTO_MS);
   const pov = await sivu.evaluate(() => window.matkakirja.ui.pallonInstanssi.pointOfView());
   const kuvaA = join(ULOS, `laattaaukot-${VERSIO}-pallo.png`);
-  const pngA = await sivu.screenshot({ path: kuvaA, timeout: 20000 }).catch(() => null);
+  await sivu.screenshot({ path: kuvaA, timeout: 20000 }).catch(() => null);
+  /*
+   * KUVAERO VAIN PALLOSTA (28.9.2026): kertomuskortti oli vertailuajossa
+   * eri tilassa (auki/kiinni) ja antoi ENNEN-ajoon 5 %:n väärän eron.
+   * Vertailukuvat otetaan siksi pelkästä pallon kankaasta: kaikki muu
+   * piiloon (visibility periytyy, kangas ottaa sen takaisin).
+   */
+  const kuvaAPallo = join(ULOS, `laattaaukot-${VERSIO}-pallo-kangas.png`);
+  await vainPallo(sivu);
+  const pngA = await sivu.screenshot({ path: kuvaAPallo, timeout: 20000 }).catch(() => null);
   const aukkoja = Math.max(0, (t.nakyvia ?? 0) - (t.scenessa ?? 0));
   console.log(`AUKKOJA ${aukkoja} / näkyviä ${luku(t.nakyvia)}, laattavirheita ${luku(t.laattavirheita)}, uusittu ${luku(t.uusittu)}`);
   console.log(`INFO  lisäodotus ${ms} ms; taso ${t.taso}, scenessä ${t.scenessa}, täysin ${t.taysin}, jumissa ${t.jumissa}, jonossa ${t.jonossa}, katkaisija ${t.katkaistu ? 'AUKI' : 'kiinni'} (katkoa jäljellä ${t.katko} ms), peitto ${luku(t.peitto)}`);
@@ -365,6 +398,7 @@ async function mittaaPallo() {
   await vert.sivu.waitForTimeout(8000);
   const v = await odotaAsettuminen(vert.sivu, LISAODOTUS_KATTO_MS);
   const kuvaB = join(ULOS, `laattaaukot-${VERSIO}-pallo-vertailu.png`);
+  await vainPallo(vert.sivu);
   const pngB = await vert.sivu.screenshot({ path: kuvaB, timeout: 20000 }).catch(() => null);
   let ero = null;
   if (pngA && pngB) {
