@@ -44,6 +44,7 @@ export function luoIssRealismi({ aurinko, kerrokset = [], varoita = () => {} } =
   let yhteinen = null;
   let aurinkoMs = -Infinity;
   let suunta = [1, 0, 0];
+  let osuusNyt = 0;
   const virheet = new Map();
   const mittari = { kehyksia: 0, virheita: 0 };
 
@@ -76,6 +77,7 @@ export function luoIssRealismi({ aurinko, kerrokset = [], varoita = () => {} } =
         aurinkoMs = ms;
         suunta = auringonSuunta(yhteinen.pallo, aurinko(ms));
       }
+      osuusNyt = Math.min(1, Math.max(0, osuus || 0));
       const kehys = { osuus, ms, tila, iss, silma, kamera, aurinko: suunta };
       for (const k of kerrokset) eristetty(k, 'paivita', yhteinen, kehys);
     },
@@ -83,7 +85,15 @@ export function luoIssRealismi({ aurinko, kerrokset = [], varoita = () => {} } =
       for (const k of kerrokset) eristetty(k, 'pura', yhteinen);
       yhteinen = null;
       aurinkoMs = -Infinity;
+      osuusNyt = 0;
       virheet.clear();
+    },
+    /**
+     * Satunnaisen tähtikentän kerroin (satelliitti-avaruus.js taivas.paivita): kun oikeat tähdet ovat valmiina
+     * (iss-realismi-taivas.js tahdet.korvaaTahdet), kenttä häipyy kyydissä pois (1 − osuus); muuten 1.
+     */
+    satunnaisetTahdet() {
+      return kerrokset.some((k) => k.korvaaTahdet?.()) ? 1 - osuusNyt : 1;
     },
     /** Savukkeille ja testeille: kerrokset, kehykset, virheet, viimeisin auringon suunta. */
     tila() {
