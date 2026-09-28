@@ -13144,6 +13144,20 @@ button.lukija-valikkonappi[aria-expanded="true"] { color: #46331f; }
 
 button.lukija-valikkonappi .viiva-ikoni svg { width: 1.1rem; height: 1.1rem; }
 
+/* Tekstirivin pari (nähtävyysjutun otsikko): kaiutin ja valikkonappi rivittyvät yhdessä. */
+.lukija-pari {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+#nahtavyys-otsikko .lukija-pari button.lukija-valikkonappi,
+.dialog #nahtavyys-otsikko .lukija-pari button.lukija-valikkonappi {
+  margin-block: -0.5rem;
+  margin-left: 0.1rem;
+  font-size: 1rem;
+}
+
 /* Staattinen koti saa asemoinnin valikon ajaksi (nähtävyysjutun otsikko). */
 .lukija-valikko-koti { position: relative; }
 
@@ -19274,8 +19288,8 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * kaiutinsäännöissä: dialogien yleissääntö maalaa jokaisen napin
  * pergamenttilaatikoksi ja voittaisi muuten tarkkuudessa.
  */
-#nahtavyys-otsikko > button.lukija-nappi,
-.dialog #nahtavyys-otsikko > button.lukija-nappi {
+#nahtavyys-otsikko button.lukija-nappi,
+.dialog #nahtavyys-otsikko button.lukija-nappi {
   position: static;
   transform: none;
   display: inline-grid;
@@ -19315,29 +19329,29 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * katkaisisi em-ketjun otsikkoon (mitattuna kuvake jäi 18 px:iin
  * 21,6 px:n sijaan). Perintä palauttaa ketjun.
  */
-#nahtavyys-otsikko > button.lukija-nappi .icon-glyph,
-.dialog #nahtavyys-otsikko > button.lukija-nappi .icon-glyph {
+#nahtavyys-otsikko button.lukija-nappi .icon-glyph,
+.dialog #nahtavyys-otsikko button.lukija-nappi .icon-glyph {
   font-size: inherit;
 }
 
-#nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg,
-.dialog #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg {
+#nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg,
+.dialog #nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg {
   width: min(1em, 2rem);
   height: min(1em, 2rem);
 }
 
-#nahtavyys-otsikko > button.lukija-nappi:hover:not(:disabled),
-#nahtavyys-otsikko > button.lukija-nappi:focus-visible,
-.dialog #nahtavyys-otsikko > button.lukija-nappi:hover:not(:disabled),
-.dialog #nahtavyys-otsikko > button.lukija-nappi:focus-visible {
+#nahtavyys-otsikko button.lukija-nappi:hover:not(:disabled),
+#nahtavyys-otsikko button.lukija-nappi:focus-visible,
+.dialog #nahtavyys-otsikko button.lukija-nappi:hover:not(:disabled),
+.dialog #nahtavyys-otsikko button.lukija-nappi:focus-visible {
   background: none;
   color: rgba(70, 51, 31, 1);
 }
 
 /* Luennan tila kerrotaan meripihkaisella musteella, ei taustalla —
    sama linjaus kuin muissa kaiuttimissa. */
-#nahtavyys-otsikko > button.lukija-nappi.lukee,
-.dialog #nahtavyys-otsikko > button.lukija-nappi.lukee {
+#nahtavyys-otsikko button.lukija-nappi.lukee,
+.dialog #nahtavyys-otsikko button.lukija-nappi.lukee {
   background: none;
   box-shadow: none;
   color: #a8741a;
@@ -19701,8 +19715,8 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * kaiuttimella. Kumoaa yleisen jutturivisäännön (yllä), joka latoo
  * napin otsikkotekstin perään.
  */
-.opas-arkki #nahtavyys-otsikko > button.lukija-nappi,
-.dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi {
+.opas-arkki #nahtavyys-otsikko button.lukija-nappi,
+.dialog.opas-arkki #nahtavyys-otsikko button.lukija-nappi {
   position: absolute;
   top: 50%;
   right: 1.15rem;
@@ -19712,16 +19726,16 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 @media (min-width: 700px) {
-  .opas-arkki #nahtavyys-otsikko > button.lukija-nappi,
-  .dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi {
+  .opas-arkki #nahtavyys-otsikko button.lukija-nappi,
+  .dialog.opas-arkki #nahtavyys-otsikko button.lukija-nappi {
     right: 2rem;
   }
 }
 
 /* Kaiuttimen kuvake otsikkorivissä lehden kokoa (24 px) — otsikon
    em-koko (jopa 2.9rem) tekisi siitä rivin hallitsevan merkin. */
-.opas-arkki #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg,
-.dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg {
+.opas-arkki #nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg,
+.dialog.opas-arkki #nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg {
   width: 24px;
   height: 24px;
 }
