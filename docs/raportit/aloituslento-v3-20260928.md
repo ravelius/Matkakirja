@@ -1,4 +1,4 @@
-# Aloituslento v3 (Natiiviseppä 28.9.2026 klo 07.3x)
+# Aloituslento v3c (Natiiviseppä 28.9.2026, v3 klo 07.3x, v3c klo 08.0x)
 
 Omistajan palaute v2-videoon (27.9. klo 23.5x, Fablen kautta): "kone pitää näkyä paljon pienempänä kun se kuvataan
 kaukaa. laskeutuessa kamera pitää olla sen verran kauempana että töksö laskeutuminen ei näy kun kone näkyy ihan pienenä."
@@ -41,3 +41,18 @@ usvasäännöllä 56 %. Uudet testit KaukaaPieniJaLaskuKaukaa ja UsvaEiHukutaMaa
    saapumiskortti välähti kesken lennon. Kooste luetaan `-fflags +igndts` (skripti sessio-p/aloituslento-kooste.sh).
 
 Merge 1.0.35-junaan vasta omistajan OK:n jälkeen.
+
+## v3c: havaintojen korjaus (klo 08.0x, suositeltu versio)
+
+- Haara **98e3f4a3** (d2fe17dc → 421ad7f3 → 98e3f4a3), käännös **409b432b** FBBD41D7, 0 poikkeusta. Kartta-testit 347/347,
+  unity-tarkistus 0.
+- Video: `proto-3d/lokit/aloituslento-33/v3c/aloituslento-v3c-tekstit.mp4`; kuvaparit v2 | v3c `v3c/kuvaparit/`
+  (avaus 3,0 s, ohitus 7,5 s, saapuminen 12,3 s, kosketus 13,2 s).
+- **Ohitus maan päällä**: kohdekohtainen ohituskohta (AloituslennonRata.OhitusMaalla, laskettu natiivin maapolygoneista,
+  skripti `v3b/ohitus_maalla.py`): Ateena 0,47 (Veneto; oli Adrianmeri), Moskova 0,60, Kairo 0,55, Tanger 0,535,
+  New York 0,685, San Francisco 0,485, Buenos Aires 0,645, Perth 0,535; muut 0,5. Tasanko on lähikuvassa yhä vaalea ja
+  piirteetön, mutta se on nyt maata, ja Alpit näkyvät taustalla.
+- **Kevyempi laattakysyntä**: kiri ja ylilento SSE 40:llä (LiikeLaatat.LentoKarkeaSse). Ylilennon latauspiikki 1 445 → 521.
+- **Saapumisen esilataus**: ennakkokamera [1] saapumisen lähimpään kohtaan (~200 km) jo odotuksesta ja lennon käytävään
+  kohteen ympäristö Z7–Z9 ±2. Tulos: saapumisessa (12,3 s) ja kosketuksessa (13,2 s) Egeanmeren saaret ja Attika ovat
+  terävinä (v3 ja v3b suttuisia 14 s:iin asti). Ensimmäinen saapumishetki (11,3 s) on vielä osin pehmeä.
