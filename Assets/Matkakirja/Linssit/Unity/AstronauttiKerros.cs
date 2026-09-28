@@ -185,7 +185,15 @@ namespace Matkakirja.Natiivi
         public void Nimet(bool nakyvissa) => nimetNakyvissa = nakyvissa;
 
         public void Pilvet(double peitto, double kiertoAsteina) =>
-            pilvet?.Aseta(kyyti != KyydinTila.Kauko && PilvetKyydissa == "pois" ? 0 : peitto, kiertoAsteina);
+            pilvet?.Aseta(kyyti != KyydinTila.Kauko && PilvetKyydissa == "pois" ? 0 : peitto,
+                // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
+                paivanPilvet ? 0 : kiertoAsteina);
+
+        /// <summary>ISS-realismi 2: päivän pilvet (Julkaisijan ajastettu haku NASA GIBS:stä), haetaan kyydin alkaessa.</summary>
+        public const string PaivanPilvetUrl = "https://media.matkakirja.app/data/pilvet/uusin.png";
+        /// <summary>A/B (`astro kyyti paivanpilvet 0|1`): päivän pilvet pois (satunnainen Blue Marble -kuva).</summary>
+        public static bool PaivanPilvetPois;
+        bool paivanPilvet, paivanPilvetHaettu;
 
         /// <summary>
         /// Pilvet kyydissä (laitteen 1. Cupola-kierros 28.9.: 1,01 R:n eli ~64 km:n pilvikuoren reuna nousi ISS:ltä katsottuna maan
@@ -255,6 +263,11 @@ namespace Matkakirja.Natiivi
             // Kyydissä ohut ilmakehän kaari ja musta avaruus (omistajan palaute 28.9.), tähdet himmeinä (päivävalo).
             avaruus?.Kyyti(tila != KyydinTila.Kauko);
             AsetaPilvienKorkeus();
+            if (tila != KyydinTila.Kauko && !paivanPilvetHaettu && !PaivanPilvetPois && pilvet != null)
+            {
+                paivanPilvetHaettu = true;
+                pilvet.VaihdaKuva(PaivanPilvetUrl, ok => paivanPilvet = ok);
+            }
             // Kyydissä oikeat tähdet ja Kuu (KyydinTaivas); satunnainen kenttä pois, kun oikeat ovat ladattu (muuten himmeänä 0,3).
             if (tila != KyydinTila.Kauko && kyydinTaivas == null) kyydinTaivas = KyydinTaivas.Luo(georeferenssi, kamera);
             kyydinTaivas?.Nayta(tila != KyydinTila.Kauko);
