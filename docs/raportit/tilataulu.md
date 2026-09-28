@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 09:43 EEST — **Kierto normaali, ei hälytyksiä. Effort-tarkistus tehty: kaikki OK. Levy 82 Gi. Juna kääntänyt uuden buildin 21197da1.**
+**Päivitetty:** 2026-09-28 09:55 EEST — **Kierto normaali. Linssiseppä 67% nousee nopeasti, lähestyy 70% kynnystä — ei vielä ilmoitusta. Levy vakaa 82 Gi, julkaisu valmis.**
 
 ## 1) Sessiot
 
-Kaikki kontekstit alle kynnyksen (korkein Linssiseppä 61%).
+**Linssiseppä 67% nousee nopeasti** — vielä alle 70% kynnyksen, seurataan tarkasti seuraavalla kierroksella.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 52% | running |
-| Postivahti (self) | (tämä sessio) | 37% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 19% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 34% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 16% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 35% | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 61% | running |
-| Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 39% | running |
+| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 55% | running |
+| Postivahti (self) | (tämä sessio) | 39% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 20% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 45% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 22% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 44% | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | **67%** | running |
+| Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 42% | running |
 | Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 36% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 41% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 43% | running |
 | Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 25% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
@@ -48,7 +48,7 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
 
-**Juna toimii normaalisti** — käänsi buildin 21197da1 09:32, seuraava (dfca785e) jonossa 09:42. Tauon lippu ei ole palautunut. **Julkaisulippu päällä** (aikaleima 09:35, sallittu).
+**Juna toimii normaalisti** — käänsi buildin 21197da1 09:32, uusia commiteja jonossa (980c176f 09:52). Tauon lippu ei ole palautunut. **Julkaisu valmis** — lippu poistunut.
 
 **Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
@@ -76,15 +76,15 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (09:43)
+## 5) Resurssit (09:55)
 
-- **5 h -kiintiö:** 45 %. **Viikko (kaikki mallit): 12 %.** **Viikko (Fable):** 0 %.
-- **Levy:** 82 Gi vapaana (puskuri ~2 Gi — lähellä 80 Gt rajaa mutta ei alittanut). wt/-worktreet 25 kpl.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 1 (iPad Pro M5) — päiväraja 2, ei ylitystä.
-- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 09:35). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen (korkein Linssiseppä 61%).
+- **5 h -kiintiö:** 47 %. **Viikko (kaikki mallit): 13 %.** **Viikko (Fable):** 0 %.
+- **Levy:** 82 Gi vapaana, vakaa. wt/-worktreet 25 kpl.
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
+- **Liput:** `/tmp/matkakirja-julkaisu` poissa — julkaisu valmis. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** **Linssiseppä 67%, nousee nopeasti — seurataan tiiviisti seuraavalla kierroksella.**
 - **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
-- **Effort-tarkistus (7 Opus-roolia):** tehty 09:43 — Natiiviseppä max, Linssiseppä max (molemmat nimessä oikein), muut high ilman lisäystä paitsi Julkaisija nyt medium (ei effort>high-poikkeama, ei toimenpidettä).
+- **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
 - **Lokisiivouskandidaatteja:** ei tällä kierroksella.
 - **Postilaatikko:** EI UUTTA.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
