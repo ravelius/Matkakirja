@@ -130,7 +130,9 @@ namespace Matkakirja.Natiivi
             var ulos = new List<KaupunkiNosto>();
             if (k == null) return ulos;
             var linkitetyt = LinkitetytValot();
-            string kaupunginNimi = NimiAvain(k.Nimi);
+            // Maan niminen kaupunki (Islanti, Luxemburg, Singapore…): ei nimivertailua, vain 12 km (web #3541).
+            string maanNimi = k.MaaNimi ?? UiSisalto.Maa(k.Maa)?.Nimi;
+            string kaupunginNimi = Matkakirja.NostoSaannot.MaanNiminen(k.Nimi, maanNimi) ? "" : NimiAvain(k.Nimi);
             if (valot != null && !double.IsNaN(k.Lat) && !double.IsNaN(k.Lon))
             {
                 double latRaja = SadeKm / 111.2;

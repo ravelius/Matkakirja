@@ -25,6 +25,7 @@ VIITTEET="$VIITTEET -r:$REF/System.Private.CoreLib.dll -r:$REF/netstandard.dll -
 LAHTEET="
 ../Assets/Matkakirja/Peli/MiniJson.cs
 ../Assets/Matkakirja/Kartta/ArkkityyppiKartoitus.cs
+../Assets/Matkakirja/Kartta/ErikoismallinAlla.cs
 ../Assets/Matkakirja/Kartta/EtusivunLento.cs
 ../Assets/Matkakirja/Kartta/Geojson.cs
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
@@ -39,6 +40,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/LennonKamerareitti.cs
 ../Assets/Matkakirja/Kartta/LennonV3.cs
+../Assets/Matkakirja/Kartta/AloituslennonRata.cs
 ../Assets/Matkakirja/Kartta/LennonV3Kaytava.cs
 ../Assets/Matkakirja/Kartta/LiikeLaatatPaatos.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
@@ -47,6 +49,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
 ../Assets/Matkakirja/Kartta/PakettiPaatokset.cs
+../Assets/Matkakirja/Kartta/Pelikello.cs
 ../Assets/Matkakirja/Kartta/Panorointi.cs
 ../Assets/Matkakirja/Kartta/Pohjapallolaskenta.cs
 ../Assets/Matkakirja/Kartta/Reikakorjaus.cs

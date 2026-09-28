@@ -28,12 +28,14 @@ namespace Matkakirja
         /// <summary>Potkurin säde (1,98 m halkaisija): PotkuriKiekon säde.</summary>
         public const float TigerMothPotkurinSade = 0.99f * TmM;
 
-        // Seepiaväritys (paletti 21.4x): kangas paperia, konepelti ja tuet seepiaa, aukot ja renkaat mustetta; aksentti
-        // punainen (#9a3b2c) vain huivissa ja potkurin kärjissä (noin 4 % pinnasta).
-        static readonly Color TmKangas = Hex(0xefe4cc), TmKangasVarjo = Hex(0xe2d3b0), TmPelti = Hex(0xcdbd98), TmTuki = Hex(0x8a6a44);
-        static readonly Color TmMuste = Hex(0x3b2f22), TmPuu = Hex(0x76603f), TmPunainen = Hex(0x9a3b2c), TmNahka = Hex(0x5e4630);
-        static readonly Color TmLasi = Hex(0xf4efe2), TmPeraSaumat = Hex(0xb8a27a), TmRunko = Hex(0xe6d8b8), TmRaita = Hex(0x6f5638);
-        static readonly Color TmLasit = Hex(0xd9d2bf);
+        // Seepiaväritys RUSKEANA (omistaja 27.9. klo 23.0x aloituslennon v7:stä: "eikö koneen pitänyt olla ruskea?"; ennen
+        // paletti 21.4x: kangas paperia #efe4cc, jolloin valaistu kone luettiin valkoiseksi): kangas ja runko lämmin seepia,
+        // konepelti ja tuet tummempaa seepiaa, aukot ja renkaat mustetta, tuulilasi vaalea kiilto; aksentti punainen (#9a3b2c)
+        // vain huivissa ja potkurin kärjissä. Ruskea erottuu myös pergamenttikartalta pienenä (aloitusrata: kone aina kuvassa).
+        static readonly Color TmKangas = Hex(0xa07c52), TmKangasVarjo = Hex(0x8f6d46), TmPelti = Hex(0x7a5c3b), TmTuki = Hex(0x4e3a25);
+        static readonly Color TmMuste = Hex(0x3b2f22), TmPuu = Hex(0x5a4228), TmPunainen = Hex(0x9a3b2c), TmNahka = Hex(0x4a3624);
+        static readonly Color TmLasi = Hex(0xe8e0cc), TmPeraSaumat = Hex(0x6f5335), TmRunko = Hex(0x9a7650), TmRaita = Hex(0x3f2f1e);
+        static readonly Color TmLasit = Hex(0xcfc5ad);
 
         // ---- Mitat (koneen yksiköissä) ----
         const float TmAlaY = -0.052f;          // alasiiven juuri (rungon alapitkäpuut)

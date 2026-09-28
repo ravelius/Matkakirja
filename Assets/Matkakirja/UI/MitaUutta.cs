@@ -17,6 +17,11 @@
 // näytä vanhempien buildien rivejä uutena: vain asennettua edeltävää versiota uudemmat rivit.
 // Sisältöpaketin päivitys (Siirtoseppä, skeema 1.22) on osoittimessa (sisalto/1/uusin.json:
 // muutos {paiva, teksti}, esim. "Sisältö päivittyi: 3 uutta kaupunkilehteä") ja näytetään listan kärjessä.
+// LAPPU NÄYTTÄÄ OIKEAT MUUTOKSET (omistaja 28.9.2026, TF 1.0.34: "Peli päivittyi" -lapussa oli vain "Sisältöä
+// päivitettiin." ja "muutokset päivittyvät tähän pian"): muutosloki luetaan laitteen sisältöpaketista, joka voi olla
+// päivitystä vanhempi (1.0.34:n rivi tuli pakettiin vasta v257:ssä). Jos asennetun buildin rivi puuttuu, loki haetaan
+// osoittimen nykyisestä paketista verkosta. Pelkkä yleinen "Sisältöä päivitettiin." ei kerro mitään, joten sitä ei
+// näytetä; versio näkyy ilman build-aikaleimaa ("v1.0.34").
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,7 +36,12 @@ namespace Matkakirja.Natiivi
         public struct Rivi { public string Versio, Paiva, Teksti, Otsake; }
 
         const string VersioAvain = "matkakirja-natiivi-versio";
+        /// <summary>Osoittimen muutosrivi, joka ei kerro sisällöstä mitään (vientityökalun oletus).</summary>
+        const string YleinenSisaltomuutos = "Sisältöä päivitettiin.";
         static List<Rivi> loki;
+        /// <summary>Testi (`ui mitauutta paivittyi <versio (build)> [vanha]`): asennettu versio ja vanhan paketin jäljittely.</summary>
+        static string testiVersio;
+        static bool testiVanhaPaketti;
 
         readonly VisualElement himmennys, lista, paivitys, paivitysLista;
         readonly Action avaaKehittaja;
@@ -81,6 +91,13 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(n, Kirjasin.KoneLihava);
         }
 
+        /// <summary>Pelaajalle näkyvä versio ilman build-aikaleimaa: "1.0.34 (202609272058)" → "1.0.34".</summary>
+        static string Nakyva(string versio)
+        {
+            int i = versio?.IndexOf(" (", StringComparison.Ordinal) ?? -1;
+            return i > 0 ? versio.Substring(0, i) : versio;
+        }
+
         static void Tayta(VisualElement lista, IEnumerable<Rivi> rivit, int enintaan = int.MaxValue)
         {
             lista.Clear();
@@ -89,7 +106,7 @@ namespace Matkakirja.Natiivi
             {
                 if (i++ >= enintaan) break;
                 var rivi = Rakenne.El("mk-muutos", lista, PickingMode.Ignore);
-                var v = Rakenne.Teksti(r.Otsake ?? "v" + r.Versio, "mk-muutos__versio", rivi);
+                var v = Rakenne.Teksti(r.Otsake ?? "v" + Nakyva(r.Versio), "mk-muutos__versio", rivi);
                 Kirjasimet.Aseta(v, Kirjasin.KoneLihava);
                 var t = Rakenne.Teksti(string.IsNullOrEmpty(r.Paiva) ? r.Teksti : r.Teksti + " (" + r.Paiva + ")", "mk-muutos__teksti", rivi);
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
@@ -129,7 +146,17 @@ namespace Matkakirja.Natiivi
         {
             string build = null;
             try { build = BuildNumero?.Invoke(); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui build-numero: " + e.Message); }
+            if (testiVersio != null) return testiVersio;
             return Application.version + " (" + (string.IsNullOrEmpty(build) ? Application.buildGUID : build) + ")";
+        }
+
+        /// <summary>Testikomento: asennetuksi versioksi <paramref name="versio"/>; vanha = paikallinen loki ohitetaan.</summary>
+        public void TestaaPaivitys(string versio, bool vanha)
+        {
+            testiVersio = string.IsNullOrEmpty(versio) ? null : versio;
+            testiVanhaPaketti = vanha;
+            loki = null;
+            TarkistaPaivitys(true);
         }
 
         public void TarkistaPaivitys(bool pakota = false)
@@ -178,10 +205,8 @@ namespace Matkakirja.Natiivi
 
         static readonly IReadOnlyList<(string Uusi, string Vanha)> Kentat = Paataso.Samat("versio", "build", "paiva", "teksti");
 
-        static IEnumerator Lue(Action valmis)
+        static List<Rivi> Jasenna(string teksti)
         {
-            string teksti = null;
-            yield return Sisalto.HaeTeksti("muutosloki-natiivi", t => teksti = t, valinnainen: true);
             var rivit = new List<Rivi>();
             try
             {
@@ -198,44 +223,70 @@ namespace Matkakirja.Natiivi
                 }
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui muutosloki: " + e.Message); }
-            // Asennetun buildin rivi aina kärkeen: vanhan buildin teksti ei saa näkyä tämän buildin tietona.
+            return rivit;
+        }
+
+        static IEnumerator HaeVerkosta(string osoite, Action<string> valmis)
+        {
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(osoite))
+            {
+                r.timeout = 8;
+                yield return r.SendWebRequest();
+                valmis(r.result == UnityEngine.Networking.UnityWebRequest.Result.Success ? r.downloadHandler.text : null);
+            }
+        }
+
+        static IEnumerator Lue(Action valmis)
+        {
+            string teksti = null;
+            if (!testiVanhaPaketti) yield return Sisalto.HaeTeksti("muutosloki-natiivi", t => teksti = t, valinnainen: true);
+            var rivit = Jasenna(teksti);
             string nyt = VersioJaBuild();
+
+            // Osoitin: sisältöpäivityksen rivi ja nykyisen paketin polku.
+            Dictionary<string, object> osoitin = null;
+            string osoitinTeksti = null;
+            yield return HaeVerkosta(Sisalto.Osoitin, t => osoitinTeksti = t);
+            try { if (osoitinTeksti != null) osoitin = Rakenne.Olio(MiniJson.Jasenna(osoitinTeksti)); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui muutosloki: osoitin: " + e.Message); }
+
+            // Laitteen paketti voi olla päivitystä vanhempi: asennetun buildin rivi nykyisestä paketista verkosta.
+            string polku = MiniJson.Teksti(osoitin, "polku");
+            if (!rivit.Exists(x => x.Versio == nyt) && !string.IsNullOrEmpty(polku))
+            {
+                string verkosta = null;
+                yield return HaeVerkosta(Sisalto.Juuri + polku + "kokoelmat/muutosloki-natiivi.json", t => verkosta = t);
+                var uudet = Jasenna(verkosta);
+                if (uudet.Exists(x => x.Versio == nyt) || uudet.Count > rivit.Count) rivit = uudet;
+            }
+
+            // Asennetun buildin rivi aina kärkeen: vanhan buildin teksti ei saa näkyä tämän buildin tietona.
             if (rivit.Count == 0 || rivit[0].Versio != nyt)
             {
                 if (rivit.Count > 0)
                     Debug.LogWarning($"MATKAKIRJA ui muutosloki: asennetun buildin {nyt} rivi puuttuu (uusin {rivit[0].Versio}); Julkaisija: tools/vienti/muutosloki-natiivi.mjs");
-                rivit.RemoveAll(x => x.Versio == nyt);
-                rivit.Insert(0, new Rivi
-                {
-                    Versio = nyt,
-                    Teksti = rivit.Count == 0 ? "Ensimmäinen natiiviversio." : "Uusi versio asennettu. Tämän version muutokset päivittyvät tähän pian.",
-                });
+                int oma = rivit.FindIndex(x => x.Versio == nyt);
+                if (oma > 0) { var r = rivit[oma]; rivit.RemoveAt(oma); rivit.Insert(0, r); }
+                else if (oma < 0)
+                    rivit.Insert(0, new Rivi
+                    {
+                        Versio = nyt,
+                        Teksti = rivit.Count == 0 ? "Ensimmäinen natiiviversio." : "Uusi versio asennettu. Tämän version muutokset päivittyvät tähän pian.",
+                    });
             }
 
-            // Sisältöpäivityksen rivi osoittimesta listan kärkeen (versionumero syntyy vasta paketin tiivisteestä).
-            using (var r = UnityEngine.Networking.UnityWebRequest.Get(Sisalto.Osoitin))
+            // Sisältöpäivityksen rivi osoittimesta listan kärkeen (versionumero syntyy vasta paketin tiivisteestä);
+            // yleinen "Sisältöä päivitettiin." ei kerro mitään, joten se jää pois.
+            var m = MiniJson.Kentta(osoitin, "muutos") as Dictionary<string, object>;
+            string mt = MiniJson.Teksti(m, "teksti");
+            if (!string.IsNullOrEmpty(mt) && mt.Trim() != YleinenSisaltomuutos)
             {
-                r.timeout = 8;
-                yield return r.SendWebRequest();
-                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                var nro = MiniJson.Luku(osoitin, "versio");
+                rivit.Insert(0, new Rivi
                 {
-                    try
-                    {
-                        var o = Rakenne.Olio(MiniJson.Jasenna(r.downloadHandler.text));
-                        var m = MiniJson.Kentta(o, "muutos") as Dictionary<string, object>;
-                        string t = MiniJson.Teksti(m, "teksti");
-                        if (!string.IsNullOrEmpty(t))
-                        {
-                            var nro = MiniJson.Luku(o, "versio");
-                            rivit.Insert(0, new Rivi
-                            {
-                                Otsake = nro.HasValue ? "sisältö " + (int)nro.Value : "sisältö",
-                                Paiva = MiniJson.Teksti(m, "paiva"), Teksti = t,
-                            });
-                        }
-                    }
-                    catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui muutosloki: osoitin: " + e.Message); }
-                }
+                    Otsake = nro.HasValue ? "sisältö " + (int)nro.Value : "sisältö",
+                    Paiva = MiniJson.Teksti(m, "paiva"), Teksti = mt,
+                });
             }
             loki = rivit;
             valmis();
