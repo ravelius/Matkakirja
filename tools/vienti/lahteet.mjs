@@ -129,7 +129,7 @@ export const LISAMODUULIT = [
   m('js/linssit/ihmisen-matka-virrat.js', ['IHMISEN_MATKA_VIRRAT', 'IHMISEN_MATKA_RETKI', 'IHMISEN_MATKA_VANHA', 'IHMISEN_MATKA_VANAT'], 'linssi'),
   m('js/linssit/ihmisen-matka.js', ['LINSSI', 'ESITYKSEN_KUVAT', 'ALOITUKSEN_TAUSTAKUVAT'], 'linssi'),
   m('js/linssit/keksinnot.js', ['KEKSINNOT', 'LINSSI'], 'linssi'),
-  m('js/linssit/satelliitti-data.js', ['SATELLIITTI_KOHTEET', 'SATELLIITTI_LAHDE'], 'linssi'),
+  m('js/linssit/satelliitti-data.js', ['SATELLIITTI_KOHTEET', 'SATELLIITTI_LAHDE', 'SATELLIITTI_KIERROS'], 'linssi'),
   m('js/linssit/satelliitti.js', ['LINSSI'], 'linssi'),
   m('js/linssit/pallo.js', ['LINSSI'], 'linssi'),
   m('js/linssit/radio.js', ['LINSSI'], 'linssi'),

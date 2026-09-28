@@ -749,7 +749,7 @@ test('ratkaisu ja epäonnistuminen soivat aihekanavalla katkaisematta', () => {
 
 test('matkan aiheet soivat aarreaiheen paikassa', () => {
   // Kolme kertaraitaa, yksi soitin (soitaAarreMusiikki).
-  assert.match(UI, /aloituslento: musaPolku\('musa-aloituslento'\)/);
+  assert.match(UI, /aloituslento: musaPolku\('musa-aloituslento-marssi-a'\)/);
   assert.match(UI, /loppu: musaPolku\('musa-loppu'\)/);
   assert.match(UI, /this\.soitaAarreMusiikki\(MATKAN_AIHEET\.aloituslento\)/,
     'aloituslento ei soita aihettaan');
