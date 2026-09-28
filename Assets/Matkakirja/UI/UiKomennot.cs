@@ -52,8 +52,9 @@
 //                                             (lisäkaupunki: kohde:nakyva-kaupunki-lyon → lisäkaupungin kortti)
 //   ui nostonappi <nappi>                     painaa auki olevan nostokortin nappia (esim. vastaa0, sitten juliste)
 //                                             (kaiutin = kortin luenta kuin napautus; mittaus: puhe virta)
-//   ui ihme [kohde[@ISO]]                     kohdekortti ja "Koe ihme" -suurennos (oletus akropolis@GRC;
-//                                             kadonnut ihme on kortin ensimmäinen kuva nauhoineen: ui nosto kohde:crystal-palace@GBR)
+//   ui ihme [kohde[@ISO]]                     kohdekortti ja ihmekuvan suurennos (oletus akropolis@GRC; ihmekuva on
+//                                             kortin ensimmäinen kuva nauhoineen, säilyneen oma kuva tekstin kyljessä:
+//                                             ui nosto kohde:olympia@GRC nykykuva)
 //   ui leikekirja [kohde[@ISO]]               kohdekortti ja sen "Livian leikekirja" (oletus troija@TUR; Kreikka:
 //                                             delfoi@GRC, olympos@GRC, antikythera@GRC). Pelissä pooli on pelaajan
 //                                             kaupungin (web nostoPooli), ilman peliä kohteen maan täkynosto
