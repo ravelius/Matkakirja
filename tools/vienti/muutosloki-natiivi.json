@@ -2,7 +2,7 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
-   "versio": "1.0.35 (202609281037)",
+   "versio": "1.0.36 (202609281118)",
    "paiva": "2026-09-28",
    "teksti": "Pulun kanssa voi nyt jutella ääneen – kysy, niin Pulu vastaa puhumalla."
   },
