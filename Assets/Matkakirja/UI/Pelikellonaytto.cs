@@ -33,11 +33,30 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(paiva, Kirjasin.Kone);
             juuri.style.display = DisplayStyle.None;
             kerros.JokaRuutu += Paivita;
+            instanssi = this;
+        }
+
+        /// <summary>
+        /// Kellon varaama yläreuna (pt paneelin yläreunasta: turva-alue + 10 + kellon korkeus + 8), myös ennen kuin kello
+        /// näkyy. Valintanäkymän kamera (v3f, Natiiviseppä) rajaa valittavat kaupungit tämän alapuolelle, ettei kello peitä
+        /// oikean yläkulman kaupunkia (v3f-laiteajo 28.9. 14.30: Moskovan rengas ja nimi kellon alla).
+        /// </summary>
+        public static float YlaVaraus => instanssi == null ? 0f : instanssi.Varaus();
+        static Pelikellonaytto instanssi;
+        /// <summary>Kellon korkeus ennen ensimmäistä asettelua (kello 27 + päivä 12,3 + täyte, iPhone 17 28.9.).</summary>
+        const float OletusKorkeus = 56f, VarausAla = 8f;
+
+        float Varaus()
+        {
+            var t = kerros.Reunat(UiKerros.Traileri);
+            float h = juuri.resolvedStyle.height;
+            if (float.IsNaN(h) || h <= 0f) h = OletusKorkeus;
+            return t.y + Yla + h + VarausAla;
         }
 
         /// <summary>Testikomento (ui pelikello): näkyykö ja mitä.</summary>
         public string Kuvaus => (nakyy ? "näkyy " : "piilossa ") + Pelikello.KelloTeksti + " · " + Pelikello.PaivaTeksti
-            + (Pelikello.Lennossa ? " (lennossa)" : "");
+            + (Pelikello.Lennossa ? " (lennossa)" : "") + $" · yläraja {YlaVaraus:0} pt";
 
         void Paivita()
         {
