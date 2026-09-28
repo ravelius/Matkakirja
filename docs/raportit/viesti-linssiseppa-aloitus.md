@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 00.1x)
+# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 10.1x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
 - Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet (3/3): /Users/Shared/Claude/wt/proto-linssiseppa-era5
-  (mallinseppa/era5), -symbolit (linssiseppa/symbolit-lippu) ja -astro (linssiseppa/astro-selain); luovutus -p kohta 1.
+  (nyt mallinseppa/era6, junassa), -symbolit (linssiseppa/symbolit-lippu) ja -astro (linssiseppa/iss-kyyti); luovutus -q kohta 7.
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
 
 Lue:
@@ -13,14 +13,15 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260928-p.md** (jono, työkalut ja opit; -o.md ja -n.md aiemmat vaiheet)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260928-q.md** (jono, Cupola-erä, lippu, työkalut ja opit; -p.md aiempi)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -p kohta 1 (JONO):** OMISTAJAN TAUKO (27.9. klo 23.58) ja tilinvaihto ensin; sitten erä 5:n käännös ja
-laitekuvat, lippu ja 3D-symbolit (kuvaparit), astronautin kuvaselain (kuvapari + video), seuraavana ISS-kyyti, Kinderdijkin
-A/B ja erä 6:n agenttien uudelleenkäynnistys (harnessit o1–o3, TEHTAVA-yhteinen.txt + TEHTAVA-malli.txt).
+**Järjestys: luovutus -q kohta 1:** tarkista itsenäisen cl-ajon tulokset (käännös iss-kyyti + symbolit-lippu, laiteajo
+$S/ajo-cl.sh), sitten Cupolan usvan diagnoosi ja korjaus, Cupolan kuvapari + video Fablelle, lipun kuvapari Fablelle.
+Junassa jo: erät 5+6, astro-selain, joet. Sen jälkeen Geysir-tarkistus (matala prioriteetti) ja natiivin astroselite
+webin mallin jälkeen.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
@@ -31,15 +32,16 @@ Työtavat:
   - booted-simulaattoreita saa olla alle 2 ennen aloitusta (ajoskriptit odottavat itse)
   - sammutus vain omat UDID:llä, EI `shutdown all`
   - mykistä testit (`komento.txt` → `hiljaa`)
-- **Käännökset:** `proto-3d/tyokalut/linssiseppa-ajot/kaanna-jono.sh <nimi> <haara>` (proto-kaanna.sh, pohja master + haara),
-  yksi kerrallaan, rivi Karttasepälle ennen ja jälkeen (Z10-poltto).
+- **Käännökset:** `S=<S> proto-3d/tyokalut/linssiseppa-ajot/kaanna-jono.sh <nimi> <haara[+haara]>` (proto-kaanna.sh, pohja
+  master + haarat). **Julkaisija jakaa käännösvuorot ja simulaattoripaikat** (28.9.): pyydä vuoro, odota "NYT", ilmoita
+  "käännös valmis" ja sammutus. Päiväsääntö: käännökset yksi kerrallaan, simulaattoreita enintään 2.
 - **Ajoskriptit:** proto-3d/tyokalut/linssiseppa-ajot/ (ajo-mallit.sh, ajo-meri-laatu.sh, ajo-meri-ennen-jalkeen.sh,
   koosta_meri_laatu.py) ja meren harness proto-3d/tyokalut/meri-laatu/ (kaanna.sh, aja.sh, piirra.py, integroi_laatu.py).
   Erikoismallien esikatselu ilman Unityä: proto-3d/tyokalut/mallinseppa-esikatselu-* (m1–m3 valmiina erälle 4).
 - **Kuvat omistajalle:** laitteen ruutuna rajattuna, kulma ja versio (SHA) kuvassa, ennen | jälkeen vierekkäin.
 - **Tiedostojen omistajat:** UI-tiedostot ovat Natiivi-UI:n. Pallo, kamera, laatat ja Symbolimalli-varjostin ovat Natiivisepän.
   Äänipalvelut ovat Pelikoodarin. ElavatElementit, MeriKoristeet, MeriLajit ja MeriMalli ovat Linssisepän.
-- **Viestit Fablelle** (id local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc): vain valmis erä, jumi tai kysymys, enintään 8 riviä.
+- **Viestit Fablelle** (id local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31): vain valmis erä, jumi tai kysymys, enintään 8 riviä.
   Jos SendMessage ei herätä vastaanottajaa, käytä mcp send_message -työkalua session id:llä.
 - **Agentit** vain Opus tai Sonnet. Lokikansioon vain kuvat, videot ja konsoli. Erä-worktreitä enintään 3.
   Mergetyt poistetaan: tools/uusi-worktree.sh --poista, ja proto: git worktree remove.
