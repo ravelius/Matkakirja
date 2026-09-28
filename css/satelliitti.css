@@ -1619,6 +1619,10 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   bottom: var(--astro-paneeli-ala, calc(128px + env(safe-area-inset-bottom, 0px)));
   z-index: 50;
   width: min(var(--astro-paneeli-leveys), calc(100vw - 32px));
+  /* Ei koskaan Pulun päälle: tilan loppuessa rivit vierivät. */
+  max-height: calc(100vh - var(--astro-paneeli-ala, 140px) - 12px - env(safe-area-inset-top, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
   box-sizing: border-box;
   padding: 6px;
   border-radius: var(--astro-paneeli-sade);
@@ -1647,19 +1651,46 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   font-weight: 600;
   color: var(--astro-paneeli-himmea);
 }
+/*
+ * ✕: EHJÄ YMPYRÄ, OSUMA-ALA 44 × 44 px. Pelin yleiset nappisäännöt
+ * (min-height) venyttivät 28 px:n pyörän soikeaksi, joten kaikki mitat
+ * on lukittu ja ympyrä piirretään keskelle omana kerroksenaan; negatiivinen
+ * marginaali pitää otsikkorivin matalana.
+ */
 .astro-sulku {
-  width: 28px;
-  height: 28px;
+  position: relative;
   flex: none;
-  border-radius: 50%;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  margin: -8px -6px -8px 0;
+  padding: 0;
   border: 0;
-  background: rgba(128, 128, 128, 0.28);
+  border-radius: 50%;
+  background: transparent;
   color: rgba(230, 230, 230, 0.9);
   font: inherit;
   font-size: 18px;
-  line-height: 1;
+  line-height: 44px;
+  text-align: center;
   cursor: pointer;
 }
+.astro-sulku::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.28);
+  z-index: -1;
+}
+.astro-sulku { isolation: isolate; }
 .astro-paneeli-rivit { display: flex; flex-direction: column; gap: 2px; }
 .astro-paneeli-rivi.astro-painike {
   display: flex;
