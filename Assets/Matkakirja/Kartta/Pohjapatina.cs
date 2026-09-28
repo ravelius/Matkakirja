@@ -8,7 +8,8 @@ namespace Matkakirja
     /// ilman uudelleenpolttoa, jotta omistaja voi kokeilla tasoja laitteella; hyvät arvot poltetaan myöhemmin laattoihin
     /// (tools/patina.mjs, resepti "kevyt"). Tileset-varjostimen globaalit (Shaders/Cesium/Lahde~/tee_tileset.py,
     /// RadioHamara-funktion alku, sama sRGB-kierros kuin Pohjasavyssä ja polton kaava r·k, g·k(1 − 0,35 l), b·k(1 − l)):
-    ///   _pohjaRae    x = voimakkuus 0–1 (pikselirae ±0,08 ja 2,4 px:n nyppy ±0,06; poltossa nyt 0,027/0,020),
+    ///   _pohjaRae    x = voimakkuus 0–1 (pikselirae ±0,15 ja 2,4 px:n nyppy ±0,11; 0,5 ≈ polton "täysi" 0,072/0,054,
+    ///                poltossa nyt "kevyt" 0,027/0,020),
     ///                y = koko laitepikseleinä 1–6 (rakeen solu = pikselin jalanjälki × koko)
     ///   _pohjaPatina x = tahrat 0–1 (maailmaan sidotut laikut, 3 oktaavia 870 km:stä, voima 0,15; poltossa 0,055),
     ///                y = kellastuminen 0–1 (lämpö + haalistus pergamentin valkoiseen),
