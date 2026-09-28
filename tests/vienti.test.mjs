@@ -357,5 +357,31 @@ test('offline: maasto samasta sarjasta kuin natiivin kohtaus, koot-tiedosto tiiv
   const teksti = kootTekstina(koot);
   assert.deepEqual(JSON.parse(teksti), koot);
   assert.equal(teksti, readFileSync(new URL('../tools/vienti/offline-koot.json', import.meta.url), 'utf8'));
-  assert.ok(teksti.split('\n').length < 100, 'available yksi taso per rivi');
+  assert.ok(teksti.split('\n').length < 400, 'available yksi taso ja kerrokset yksi maa per rivi');
+});
+
+test('offline 1.56: kerma, reliefi ja yövalot sekä levykoko (Fable 28.9.2026, E2E-offline Tanska + Kroatia)', async () => {
+  const { OFFLINE_KERROKSET, kerrosOsoitteet, kermanValit, lueKoot, lohkoina, LOHKO } = await import('../tools/vienti/offline.mjs');
+  // Globaali: kerma _maailma z3–z5, reliefi kahdesta sarjasta z0–z5, yövalot z0–z5 (koko pallo).
+  const g = kerrosOsoitteet(null);
+  const koko = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => 4 ** (a + i)).reduce((s, n) => s + n, 0);
+  assert.equal(g.kerma.length, koko(3, 5));
+  assert.equal(g.reliefi.length, 2 * koko(0, 5));
+  assert.equal(g.yovalot.length, koko(0, 5));
+  assert.ok(g.kerma.every((u) => u.includes('/_maailma/') && u.endsWith('.webp')));
+  // Maa: oma kermasarja maat.*.kerma-väleillä, muut rasterin väleillä z6–z8 (yövalot z6).
+  const m = { rasteri: { 6: [34, 19, 34, 19], 7: [68, 38, 69, 39], 8: [136, 77, 137, 78], 9: [[272, 154, 272, 154]] },
+    kerma: kermanValit([5.2, 52, 15.6, 60.1]) };
+  const o = kerrosOsoitteet(m, 'DNK');
+  assert.equal(o.yovalot.length, 1);
+  assert.equal(o.reliefi.length, 2 * (1 + 4 + 4));
+  assert.ok(o.kerma.some((u) => u.includes('/DNK/3/')) && o.kerma.some((u) => u.includes('/_maailma/8/')));
+  assert.ok(!o.kerma.some((u) => u.includes('/9/')), 'kaupunkitaso z9 ei kerroksiin');
+  assert.deepEqual(Object.keys(m.kerma).map(Number), [3, 4, 5, 6, 7, 8]);
+  assert.equal(OFFLINE_KERROKSET.kerma.maittainTasot[1], 8);
+  // Koot: kaikille mitatuille maille kerrokset ja levy; lohkot 4 kt.
+  const k = lueKoot().kerrokset;
+  assert.ok(k && Object.keys(k.maat).length > 100 && k.globaali.levy > 0);
+  assert.ok(Object.values(k.maat).every((v) => v.levy >= v.kerma + v.reliefi + v.yovalot));
+  assert.equal(lohkoina(1), LOHKO); assert.equal(lohkoina(LOHKO + 1), 2 * LOHKO); assert.equal(lohkoina(0), 0);
 });
