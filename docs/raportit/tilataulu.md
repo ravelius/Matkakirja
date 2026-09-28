@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 08:43 EEST — **KYNNYS YLITTYI: Natiiviseppä 73% ja Sisältökirjuri 72% — ilmoitettu Fablelle 08:43.** Uusi postilaatikkoviesti (Sisältökirjuri→Codex: Nikosia-korjaus peruutus). Levy vakaa 90 Gi.
+**Päivitetty:** 2026-09-28 08:55 EEST — **Sisältökirjuri NOLLAUTUNUT (72%→21%, automaattinen). Natiiviseppä yhä 73%.** Levy taas kaventunut 84 Gi:hin (heilahtelee 84–94 Gi vaihteluvälillä) — uusi julkaisu käynnissä 08:44.
 
 ## 1) Sessiot
 
-Kaikki roolit tilinvaihdon (28.9. 07.0x) session id:llä. **KYNNYS YLITTYI: Natiiviseppä 73% ja Sisältökirjuri 72% — ilmoitettu Fablelle 08:43. Moni rooli nollaa itsensä automaattisesti ylityksen jälkeen.**
+Sisältökirjuri nollautui automaattisesti (72%→21%) tilinvaihdon jälkeisen kynnysylityksen jälkeen — odotettua, ei toimenpidettä. **Natiiviseppä pysyy 73%:ssa, ei ole vielä nollautunut, seurataan.**
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 43% | running |
-| Postivahti (self) | (tämä sessio) | 28% | running |
+| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 44% | running |
+| Postivahti (self) | (tämä sessio) | 30% | running |
 | Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 17% | running |
 | Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | **73%** | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 52% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 57% | running |
 | Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 34% | running |
 | Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 49% | running |
-| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 35% | running |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 35% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | **72%** | running |
+| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 37% | running |
+| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 36% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 21% (nollautunut) | running |
 | Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 25% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
@@ -46,9 +46,9 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). **Postilaatikko 08:43: uusi viesti** — `posti/sisaltokirjuri-kuittaus-historian-hetket-13-20260928.md` (Sisältökirjuri → Codex: Nikosia-korjaus oli virheellinen, peruutus). Ilmoitettu Fablelle.
+Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
 
-**Juna toimii normaalisti**, ei uutta riviä edellisen (08:19) jälkeen. Tauon lippu ei ole palautunut. Julkaisulippu poissa.
+**Juna toimii normaalisti**, ei uutta riviä edellisen (08:19) jälkeen. Tauon lippu ei ole palautunut. **Julkaisulippu päällä** (aikaleima 08:44, uusi julkaisu, sallittu).
 
 **Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
@@ -76,17 +76,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (08:43)
+## 5) Resurssit (08:55)
 
-- **5 h -kiintiö:** 35 %. **Viikko (kaikki mallit): 10 %.** **Viikko (Fable):** 0 %.
-- **Levy:** 90 Gi vapaana, vakaa. wt/-worktreet 29 kpl.
+- **5 h -kiintiö:** 37 %. **Viikko (kaikki mallit): 10 %.** **Viikko (Fable):** 0 %.
+- **Levy:** 84 Gi vapaana (heilahtelee 84–94 Gi:n välillä poltton jälkeen, worktree-siivousten mukana) — ei alle 80 Gt, ei uutta hälytystä.
 - **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
-- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** **KYNNYS YLITTYI — Natiiviseppä 73%, Sisältökirjuri 72%. Ilmoitettu Fablelle 08:43.**
-- **GPU-prosessit (type=gpu-process):** 17 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
+- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 08:44). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** **Sisältökirjuri nollautui (21%). Natiiviseppä pysyy 73%:ssa — seurataan onko lähellä omaa nollausta.**
+- **GPU-prosessit (type=gpu-process):** 11 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
 - **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
 - **Lokisiivouskandidaatteja:** ei tällä kierroksella.
-- **Postilaatikko:** 1 uusi viesti (Sisältökirjuri→Codex: Nikosia-korjauksen peruutus) — ilmoitettu.
+- **Postilaatikko:** EI UUTTA tällä kierroksella.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
