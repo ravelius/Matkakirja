@@ -8963,3 +8963,7 @@ Omistaja 28.9. klo 22.48 (Helsinki-3 'Se katsoi minua kuin olisin ollut harjoitt
 ## OMISTAJA: [SOFTLY] POIS PULULTA — LIIAN SURULLINEN (28.9.2026 klo 22.50)
 
 Omistaja 28.9. klo 22.50 sanatarkasti: "pulu kuulostaa siinä liian surulliselta. tuo softly ei vain toimi, kokeillaan tosiaan muita tageja korvaavaksi" → [softly] poistuu Pulun tagivalikoimasta; Pelikoodari kokeilee korvaajia (tavoite kevyt/kuiva/lämmin, ei surullinen: [dryly], [deadpan], [warmly], [amused], ilman) Helsinki-3:lla ja Ljubljana-3:lla, yksi suositus per lause; omistajan OK:n jälkeen 27 kohtaa uusiksi jatko-PR:nä. Yksi tagi per virke.
+
+## OMISTAJA: STRIIMIVIAN TOISTO HAMPURILAISVALIKOSSA (28.9.2026 klo 22.53)
+
+Omistaja 28.9. klo 22.53 sanatarkasti: "pulun virheellisen striimiluennan voi helposti toistaa hampurilaisessa. ensimmäisellä painalluksella tietystä kohtaa pulu lukee väärästä kohtaa mutta kun samaa kohtaa painaa uudestaan pulu alkaa lukea oikeasta kohdasta. esim. jos klikkaa vaikka ihan ensimmäistä otsikkoa tekstissä, niin vasta toinen klikkaus aloittaa luennan alusta." → Natiivi-UI (kärki kaiutinkorjauksen jälkeen): ensimmäisen napautuksen aloituskohta lasketaan todennäköisesti ennen kuin teksti/asettelu/palakartta on valmis tai edellisestä tilasta.
