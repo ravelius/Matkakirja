@@ -32,7 +32,7 @@ Shader "Matkakirja/Linssit/Yokuori"
         _ValotEu("Eurooppa (Web Mercator, R = valot, G = vesi)", 2D) = "black" {}
         _ValotMaa("Maailma (Web Mercator, R = valot, G = vesi)", 2D) = "black" {}
         _EuRaja("Eurooppa: lon0, lon1, Mercator-rivi 0, 1 (0…1 ylhäältä)", Vector) = (-28.125, 45, 0.203125, 0.40625)
-        _Valot("Valojen voimakkuus (0 = pois)", Float) = 1.6
+        _Valot("Valojen voimakkuus (0 = pois)", Float) = 0.96
         _MaaVoima("Maailmakuvan lisävoima (Z3 on himmeämpi)", Float) = 2.2
         _Kiilto("Auringon heijastuksen voimakkuus (0 = pois)", Float) = 6
         _Aalto("Aallokon kaltevuus σ²", Float) = 0.02
