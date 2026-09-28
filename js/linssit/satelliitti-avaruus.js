@@ -3327,6 +3327,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     lennaKohteeseen: (tunnus, valinnat) => kyyti?.lennaKohteeseen?.(tunnus, valinnat) ?? null,
     nasaKoe: (paalla) => kyyti?.nasaKoe?.(paalla) ?? false,
     kyydissa: () => Boolean(kyyti?.kyydissa?.()),
+    /** Pulun taulu (js/linssit/pulu-taulu.js): { tila, siirtyy } tai null ilman kyytiä. */
+    kyytiMoodi: () => kyyti?.moodi?.() ?? null,
     katsoKohteeseen: (lat, lon, { kestoMs = KUVAN_AJON_MS } = {}) => {
       if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;
       peruPaluu();
