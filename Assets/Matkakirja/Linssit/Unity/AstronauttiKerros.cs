@@ -227,8 +227,9 @@ namespace Matkakirja.Natiivi
         {
             kyyti = tila;
             if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();
-            // Ikkunassa ollaan aseman sisällä: havaintopisteet ja rata eivät kuulu Cupolan näkymään.
-            if (rata != null) rata.SetActive(tila != KyydinTila.Ikkuna);
+            // Ikkunassa ollaan aseman sisällä: havaintopisteet eivät kuulu Cupolan näkymään. Rata pois koko kyydin ajaksi: seurannassa
+            // se kulkee kameran suuntaan ja näkyi pystyviivana ISS:n läpi (laiteajo 28.9.).
+            if (rata != null) rata.SetActive(tila == KyydinTila.Kauko);
             if (yokuori != null) yokuori.Nayta(tila != KyydinTila.Kauko);
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
         }
