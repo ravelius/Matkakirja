@@ -8651,3 +8651,7 @@ Omistaja 28.9. klo 14.1x kortilla: Cupola pehmea + rae (Linssiseppa cl5, poltett
 ## OMISTAJA: TARVITSEE KONEEN (KEVYT TILA PAALLE) (28.9.2026 klo 14.32)
 
 Omistaja 28.9. sanatarkasti: "tarvitsen nyt konetta itse". Kevyt lippu paalle (Julkaisija), GPU-roolit tiedotettu Postivahdin kautta: simulaattorit kiinni, ei GPU-toita, raskaat CPU-tyot taskpolicy -b, kaannokset nice 15; Karttasepan pallopoltto + vienti SIGSTOP. TF 1.0.36 -vienti saa ajaa. Kaynnissa oleva taysi savukesarja 36405304787 (GPU) omistajalle perumiskomentona.
+
+## PAATOIMITTAJA: MAAPALLON VUOSI -LINSSI EI PELAAJAN REKISTERIIN ENNEN VALMISTUMISTA (28.9.2026 klo 14.54)
+
+Linssiseppa 2 28.9. klo 15.0x: webin hiomassa-rivi (manner null) tekee linssista kynnys- ja varalinssin (omistus.js) → pelaaja voisi saada keskeneraisen linssin palkkiona ja kultainen linssijalki muuttuu. Paatoimittaja: ei rivia webin rekisteriin eika C#-Oletusrekisteriin ennen kuin linssi on valmis ja omistaja hyvaksynyt; natiivi kehittajatilan linssirekisterissa (Kesken), web kehityssivulta (maapallon-vuosi.html).
