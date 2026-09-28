@@ -134,6 +134,7 @@ import {
   KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, PISTEIDEN_KATTO, VALON_KORKEUS, VALON_SADE,
   luoNostot, nostonLaatikko, nostonMitta, nostonRaakaMitta,
 } from './nostot.js';
+import { onMaanNiminenKaupunki } from './kaupunkiliuska.js';
 import {
   HELMEN_REUNAN_VARI, HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_HALKAISIJA_PX,
   REITTIHELMEN_KORKEUS, REITTIHELMEN_REUNAN_KORKEUS, REITTIHELMEN_TAYTE_PX, luoReitit,
@@ -2066,6 +2067,13 @@ export async function avaaPallolauta(ui) {
   /** Laudan kaupunki tunnuksella (lähtövalinnan kohteet, ks. aloitusKohteet). */
   const packKaupunki = new Map((pack?.cities ?? []).map((c) => [c.id, c]));
   /*
+   * MAAN NIMISET KAUPUNGIT (Islanti, Luxemburg …) kerran laudan
+   * datasta: niille kaupunkijäsenyys on pelkkä etäisyys, ei nimitesti
+   * (js/pallolauta/kaupunkiliuska.js onMaanNiminenKaupunki).
+   */
+  const maanNimisetKaupungit = new Set((pack?.cities ?? [])
+    .filter((c) => onMaanNiminenKaupunki(c, pack.map)).map((c) => c.id));
+  /*
    * KAUPUNKIEN OMAT PALLOPISTEET käyttöön koko laudan ajaksi (ks.
    * pallonAsteet yllä). `siirtymat` menee reittikerrokselle, joka
    * korjaa polyn päät samaan pisteeseen.
@@ -2284,6 +2292,7 @@ export async function avaaPallolauta(ui) {
     laudanKaupungit: () => kaupungit.map((k) => ({
       // Pallon kaupungin nimikentta on `n` (js/pallo.js pallonKaupungit).
       id: k.id, nimi: k.n, lat: k.lat, lng: k.lon,
+      maanNimi: maanNimisetKaupungit.has(k.id),
     })),
     /*
      * LIUSKAN YLÄRYHMÄ SAA VAIN SEN, MIKÄ AVAUTUU (20.9.2026, Fablen
