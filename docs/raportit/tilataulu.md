@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 10:59 EEST — **OMISTAJAN UUSI SÄÄNTÖ klo 17 asti: puolet koneesta (kuorma1 ≤8, ≤8 ydintä). LOAD1 61,2 — REILUSTI YLI — ILMOITETTU PÄÄTOIMITTAJALLE.** Syylliset: Karttasepän pallo-poltto (3× tee-pallolaatat.mjs rinnakkain), 2× test-sarja (sisaltopaketti.test.mjs, vienti.test.mjs), Unity-batch-build, ~32 Playwright/savuke-chromium-prosessia.
+**Päivitetty:** 2026-09-28 11:25 EEST — **Kuormakriisi ratkeamassa: load1 216→22, juurisyy (vanhan tilan CI-savukeajo) korjattu Julkaisijan toimesta.** Natiivi-UI ylitti 70% kynnyksen. Uusi postilaatikkoviesti (Linssiseppä→Codex, ISS Cupola).
 
 ## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
 
@@ -12,20 +12,20 @@ Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet 
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
-**JUURISYY SELVISI (Julkaisija 11:2x):** Pelikoodarin #3541-pushi (11:15) laukaisi Mac-savukeajon vanhassa tilassa (30 chromiumia rinnakkain). Julkaisija perui ajon 11:2x ja mergesi #3539 (kevyt tila, lippu `/tmp/matkakirja-kevyt`) — uudet savukkeet ajetaan jatkossa 2 rinnakkain taskpolicy -b:llä. **11:20 LOAD1 37,2 (jyrkkä lasku 54→37), chromium-prosesseja runnerilla 0, R/Rs 43→13.** Julkaisija pyysi ilmoitusta jos >6 chromiumia näkyy uudelleen — seurataan.
+**JUURISYY SELVISI (Julkaisija 11:2x):** Pelikoodarin #3541-pushi (11:15) laukaisi Mac-savukeajon vanhassa tilassa (30 chromiumia rinnakkain). Julkaisija perui ajon ja mergesi #3539 (kevyt tila, lippu `/tmp/matkakirja-kevyt` luotu 11:01) — uudet savukkeet 2 rinnakkain taskpolicy -b:llä. **LOAD1: 118→57→37→21,8 (11:25), tasaisesti laskeva, lähellä turvallista tasoa.** 11:25 uusi savuke-sarja käynnistyi (36397192407, `aja-sarja.mjs` 18 testiä jonossa), 10 chromium-prosessia havaittu = 2 rinnakkaista savuketta × ~5 apuprosessia, sopii kevyt-tilan 2-rinnakkaisuuteen. Ilmoitettu Julkaisijalle tarkistettavaksi vastaako se odotettua.
 
 ## 1) Sessiot
 
-Natiiviseppä nollautui automaattisesti (70%→17%). Kaikki kontekstit nyt alle kynnyksen (korkein Päätoimittaja 62%, Natiivi-UI 61%).
+**KYNNYS YLITTYI: Natiivi-UI 72%.** Päätoimittaja nollautui itsenäisesti aiemmin (nyt 9%). Muut kontekstit alle kynnyksen.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 62% | running |
-| Postivahti (self) | (tämä sessio) | 50% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 24% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 17% (nollautunut) | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 36% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 61% | running |
+| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 9% (nollautunut) | running |
+| Postivahti (self) | (tämä sessio) | 59% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 29% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 36% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 44% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | **72%** | running |
 | Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 39% | running |
 | Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 46% | running |
 | Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 36% | running |
@@ -56,13 +56,11 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
+Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). **Postilaatikko 11:25: uusi viesti** — `posti/linssiseppa-codexille-cupola-20260928.md` (Linssiseppä→Codex: ISS Cupola 2, omistajan tilaus 28.9. tumma sisätila + ISS:n ulko-osat siluetteina). Ilmoitettu Päätoimittajalle.
 
-**Juna toimii normaalisti** — käänsi 2 buildia (eaf48a0e 10:37, 53179015 10:42), seuraava käännös menossa (yläraja 10:52). Tauon lippu ei ole palautunut. **Julkaisulippu päällä** (aikaleima 10:49, sallittu).
+**Juna toimii normaalisti** — käänsi buildin 18382165 11:17. Tauon lippu ei ole palautunut. Julkaisulippu poissa. **Kevyt-tilan lippu `/tmp/matkakirja-kevyt` päällä** (savukkeet 2 rinnakkain, luotu 11:01).
 
 **HUOM:** Fablen session nimi on nyt **Päätoimittaja (Opus, xhigh)** (sama id local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31). "Fable" ohjeissa = Päätoimittaja.
-
-**Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
 **Voimassa olevat sitovat säännöt (kooste, vanhat kierrospäivitykset poistettu — täysi historia git-lokissa):**
 - Muistipaine korvasi swap-Gt-rajan: seuraa `kern.memorystatus_vm_pressure_level` (1=normal, 2=warn, 4=critical→ilmoitus).
@@ -88,20 +86,20 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (10:57)
+## 5) Resurssit (11:25)
 
-- **5 h -kiintiö:** 59 %. **Viikko (kaikki mallit): 16 %.** **Viikko (Päätoimittaja):** 0 %. **(5 h -kiintiö nollautuu ~52 min sisällä, ei toimenpidettä.)**
-- **Levy:** 134 Gi vapaana, vakaa. wt/-worktreet 28 kpl.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
-- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 10:49). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** kaikki alle kynnyksen — Natiiviseppä nollautui (17%).
-- **GPU-prosessit (type=gpu-process):** 17 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
+- **5 h -kiintiö:** 67 %. **Viikko (kaikki mallit): 18 %.** **Viikko (Päätoimittaja):** 0 %. (5 h -kiintiö nollautuu ~24 min sisällä, ei toimenpidettä.)
+- **Levy:** 143 Gi vapaana, hyvä puskuri. wt/-worktreet 30 kpl.
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0 (päiväraja nyt 1 uuden puolikone-säännön mukaan).
+- **Liput:** `/tmp/matkakirja-julkaisu` poissa. `/tmp/matkakirja-juna-tauko` ei ole palautunut. `/tmp/matkakirja-kevyt` päällä.
+- **Konteksti (kynnys Päätoimittaja 65%/roolit 70%):** **Natiivi-UI 72% — ilmoitettu.** Päätoimittaja nollautunut (9%).
+- **LOAD1 (uusi omistajan sääntö klo 17 asti, raja 8):** 21,8 (11:25), laskeva trendi jatkuu (216→118→57→37→22). Juurisyy (CI-savukeajo vanhassa tilassa) korjattu.
+- **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
 - **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
 - **Lokisiivouskandidaatteja:** ei tällä kierroksella.
-- **Postilaatikko:** EI UUTTA.
+- **Postilaatikko:** 1 uusi viesti (Linssiseppä→Codex: ISS Cupola) — ilmoitettu.
 - **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
-- **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
   - **Lokit >48h:** 47 kansiota, yhteensä **~11,8 Gt**. Suurimmat: liikkuminen-pariteetti 2,4G, aloituslento-84 478M, pariteetti-b12 361M, loydos74-video-20260925 359M, verkko-odotus-app 306M, valot-kohdemaa-app 306M, loydos51 250M, loydos61-d17-ipad11 124M, etusivulento-112 116M, verho-jalkeen/verho-ennen/b16-verho-kylma ~100M kukin — loput <100M (täysi lista `/tmp/lokisiivous-kandidaatit.txt` Postivahdin scratchpadissa tämän session ajan).
   - **.app-paketit >24h:** 14 kpl, yhteensä **~9,5 Gt** (laatta-esilataus/b23koe.app 359M, esilataaja-5:n 4 pakettia ~346–359M, musiikki-v23/esilataaja-mittari/pohja-26 (2)/musiikki-v1 (2)/loydos155/loydos153/huntu-paljastus-b19 ~333–346M kukin).
