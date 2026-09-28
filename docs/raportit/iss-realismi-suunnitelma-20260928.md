@@ -44,7 +44,8 @@ Proto-haara `linssiseppa/iss-kyyti` 43b37584. Laitekuvat: `/Users/Shared/Claude/
   - l = luminanssi; Eurooppa maailman päälle rajalla 3 %:n liu'ulla; maailman kuvan lisävoima 2,2
   - l' = 0,6 l² + 0,4 l
   - sävy = lerp((1, 0,52, 0,2), (1, 0,88, 0,7), saturate(1,6 l'))
-  - lisätään esikerrottuna: väri + sävy · l' · 1,6 · yö. Yön peitto 0,82 ei himmennä valoja.
+  - lisätään esikerrottuna: väri + sävy · l' · 0,96 · yö (omistaja 28.9.: 60 % entisestä 1,6:sta, laite cl6 100/80/60). Yön peitto 0,82 ei himmennä valoja.
+  - Pilvet himmentävät: valo · (1 − 0,85 · pilven alfa · pilvikuoren peitto); sama heijastukselle.
   - Yöllä vedellä peitto 0,96 (maalla 0,82): reliefin vaalea vesi jäi muuten maata kirkkaammaksi (cl4).
     Lisäys esikerrottuna yön värillä (0,012, 0,02, 0,05): lisä = vesi · yö · max(0, 0,96 − a).
 - **Testit:**
