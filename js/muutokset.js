@@ -13,7 +13,15 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2353, teksti: 'Aloituslennolle mahtipontinen vaskimarssi' },
+  { v: 2361, teksti: 'v2353: Lukijan valikko — kappaleet, kelaus ±10… (#3537)' },
+  { v: 2360, teksti: 'v2357: Ihmekuvan alla lyhyt kuvateksti, pitkä s… (#3557)' },
+  { v: 2359, teksti: 'v2354: Pöllön järjestelmäkehote välimuistiin (#3547)' },
+  { v: 2358, teksti: 'v2354: Pulu vastaa puheella saneltuun kysymykse… (#3546)' },
+  { v: 2357, teksti: 'v2356: Pulun äänikeskustelun koe myös natiiviin (#3553)' },
+  { v: 2356, teksti: 'v2350: Ihme kortin ensimmäisenä kuvana, Koe ihm… (#3517)' },
+  { v: 2355, teksti: 'v2353: Laattojen katkaisija laskee vain peilin… (#3528)' },
+  { v: 2354, teksti: 'v2354: Pulun äänikeskustelu xAI:lla (#3544)' },
+  { v: 2353, teksti: '13 Euroopan historian hetkeä ja 26 havainnekuvaa (#3529)' },
   { v: 2352, teksti: 'v2349: Karttalaatat eivät jää aukoiksi — pallo… (#3516)' },
   { v: 2351, teksti: 'UKR: pitkä-luonnehdinta + pulu kaikille 25 maak… (#3525)' },
   { v: 2350, teksti: 'CZE+HRV: korjaa pitkä-tekstien ääni Livian nyky… (#3524)' },

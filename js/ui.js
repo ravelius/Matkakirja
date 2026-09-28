@@ -383,7 +383,7 @@ import { vuorikuvat } from './packs/vuori-valokuvat.js';
 import { NukkuvaKartta, lataaTasokartta, tasokartanOsat } from './kartta-lataus.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import {
-  matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet, piirraIhmenappi,
+  matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet,
   piirraIhmenauha,
   avaaKohdeSuurennos,
 } from './fokuskohteet.js';
@@ -15679,8 +15679,8 @@ export class UI {
     let nauha = null;
     /*
      * REAKTIORIVI (js/reaktiot.js) sille kuvalle, jolla on oma
-     * tunniste — käytännössä Matkakirjan ihme, joka aukeaa
-     * nähtävyysjutun "Koe ihme" -napista. Rivi seuraa kuvaa kuten
+     * tunniste — käytännössä Matkakirjan ihme, joka on nähtävyysjutun
+     * ensimmäinen kuva. Rivi seuraa kuvaa kuten
      * nauhakin: sarjaa selattaessa se vaihtuu tai katoaa.
      */
     let reaktiot = null;
@@ -16096,12 +16096,6 @@ export class UI {
 
   /** Nimetyn paikan Matkakirjan ihme kuvaoliona, tai null. */
   matkakirjanIhme(nimi) { return matkakirjanIhme(nimi); }
-
-  /** "Koe ihme" -nappi tähtineen; napautus avaa ihmekuvan suurennoksen. */
-  piirraIhmenappi(sisalto, ihme) {
-    return piirraIhmenappi(sisalto, ihme.nappi,
-      () => this.naytaKulttuuriKuva(ihme));
-  }
 
   /** Ihmenauha kuvan vasempaan yläkulmaan; isäntä on kuvan kokoinen. */
   piirraIhmenauha(isanta, teksti) { return piirraIhmenauha(isanta, teksti); }
