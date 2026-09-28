@@ -190,9 +190,9 @@ namespace Matkakirja.Natiivi
         {
             // Kyydissä pilvet näkyvät aina (Siirtosepän löydös 28.9. cl5-kuvista): kaukonäkymän lähihäivytys (PilvienPeitto,
             // nolla alle 0,25 × avauskorkeuden) antoi ISS:n korkeudella peiton 0, joten päivän pilvet eivät näkyneet. Kyydissä
-            // päivän oikeilla pilvillä peitto 1 (alfa on jo kuvassa), satunnaisella kuvalla huippu 0,9; siirtymä 0,8 s.
+            // peitto on huippu 0,9 kuten webissä (web on malli); siirtymä 0,8 s.
             if (kyyti != KyydinTila.Kauko)
-                peitto = PilvetKyydissa == "pois" ? 0 : paivanPilvet ? 1 : Astronauttimatikka.PilvienPeittoHuippu;
+                peitto = PilvetKyydissa == "pois" ? 0 : Astronauttimatikka.PilvienPeittoHuippu;
             pilvienPeitto = Mathf.MoveTowards(pilvienPeitto, (float)peitto, Time.unscaledDeltaTime / 0.8f);
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
