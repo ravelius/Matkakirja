@@ -8703,3 +8703,7 @@ Omistaja 28.9. klo 17.1x kortilla: ISS-kyydin kuukauden pinta + reliefin varjost
 ## OMISTAJA: KOKO MAA NAKYVIIN KERRALLA; 3D-SYMBOLIT POIS, ERIKOISMALLIT JAAVAT (28.9.2026 klo 17.13)
 
 Omistaja 28.9. klo 17.2x sanatarkasti: "Jos maailmatila ei ole päällä, niin vaakamuotoisia valtioita ei näe kerralla kokonaan, tai peli ei anna zoomata tarpeeksi kauas. Se pitää korjata niin, että maan pystyy näkemään kerralla. Ja toinen, otetaan ne kolmiulotteiset symbolit pois. Ne ehkä eivät vain toimi, mutta pidetään ne Erikoiskohteet vielä kolmiulotteisena." → Natiivi-UI: maatilan loitonnusraja niin etta koko maa mahtuu ruutuun (leveys ja korkeus, marginaali), web tarkistetaan mallina. Linssiseppa 1: 3D-kategoriasymbolit pois (2D kuten web, kytkimella), erikoismallit (18 kpl) pysyvat 3D:na. Molemmat 1.0.38:aan.
+
+## OMISTAJA: ERIKOISMALLIT NAKYVIIN MYOS YLHAALTA (28.9.2026 klo 17.22)
+
+Linssiseppa 28.9. klo 17.3x: erikoismallit (18 kpl) piirtyvat vain kun kartta on kallistettu yli 25 astetta ja kerroin vahintaan 1,25 — ylhaalta ne eivat nay, siksi omistaja ei ole nahnyt niita. Omistaja kortilla: 'Kyllä, myös ylhäältä' → mallit nakyvat lahizoomissa aina, ylhaalta hieman liioitellulla perspektiivilla (yhden rivin muutos, Linssiseppa, 1.0.38). 3D-kategoriasymbolit pois: linssiseppa/symbolit-2d 5ac726fd (kytkin symbolit kategoriat3d 0|1).
