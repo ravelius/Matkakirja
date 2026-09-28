@@ -92,6 +92,8 @@ export const LEIJUNNAN_VARA_PX = 5;
 export const ISS_VAISTO_PX = 56;
 /** Pulun eleen korkein nousu napin yläreunasta (px, mitattu 28.9.). */
 export const PULUN_ELEEN_VARA_PX = 90;
+/** Sama ele siirtää hahmoa myös sivuttain (mitattu ~9 px vasemmalle, iPhone). */
+export const PULUN_ELEEN_SIVUVARA_PX = 14;
 /** Auki olevan taulun Pulu-mittauksen väli. */
 export const TAULUN_SEURANTA_MS = 400;
 /** Taulun otsikko (sovelluksen tekstiä, ei Livian repliikki). */
@@ -422,7 +424,8 @@ export function luoTaulunNakyma({
       const ehdokkaat = [
         { nimi: 'ylla', ala: ylaAla, oikea: null, rect: { left: W - oikeaReuna - w, right: W - oikeaReuna, top: H - ylaAla - h, bottom: H - ylaAla } },
       ];
-      const vierOikea = Math.round(W - r.left + TAULUN_RAKO_PX);
+      // Leijunta heiluttaa Pulua myös sivuttain, joten sama vara kuin yläpaikassa.
+      const vierOikea = Math.round(W - r.left + TAULUN_RAKO_PX + LEIJUNNAN_VARA_PX + PULUN_ELEEN_SIVUVARA_PX);
       const vierAla = Math.max(12, Math.round(H - r.bottom));
       if (W - vierOikea - w >= 8) {
         ehdokkaat.push({ nimi: 'vieres', ala: vierAla, oikea: vierOikea, rect: { left: W - vierOikea - w, right: W - vierOikea, top: H - vierAla - h, bottom: H - vierAla } });
