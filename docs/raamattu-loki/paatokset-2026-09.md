@@ -8751,3 +8751,7 @@ Omistaja 28.9. klo 18.4x sanatarkasti: "Avaruuslinssin seuraavaan versioon voisi
 ## OMISTAJA: ISOISAN AANI — VAKAA JA ETAINEN, EI TUNNETAGEJA (28.9.2026 klo 18.10)
 
 Omistaja 28.9. klo 18.5x sanatarkasti: "Tee vielä lisää muita äänivertailuita. Mikään noista ei ollut nykyistä parempi. Nykyisessä äänessä on erityisen hyvä se, että se on todella vakaa, mikä sopii isoisän hieman mysteeriseen ja ei niin persoonalliseen rooliin. Tavallaan, että nykyinen luenta jättää henkilön mukavalla tavalla vähän etäiseksi. Eli tunnetakeja ei välttämättä tarvita ollenkaan." → Pelikoodari: Horatio v4 ilman tageja + 3 muuta vakaata, hieman etaista kertojaa, stability korkea, style 0, voimakkuus pelin tasolle; nykyinen isoisa pysyy kunnes omistaja valitsee paremman.
+
+## OMISTAJA: ISOISAN AANI — F3 (HOLLANTI, JEROEN HAMERLAND) PARAS TAHAN MENNESSA; NELJA UUTTA SAMAAN SUUNTAAN (28.9.2026 klo 18.20)
+
+Omistaja 28.9. klo 18.6x sanatarkasti: "F3 on ollut paras tähän mennessä. Siinä on mielenkiintoinen R-vika lukialla, mutta muuten on todella tasainen ja se R-vika jopa toimii isoisän tapauksessa. Etsi kuitenkin neljä uutta ja etsi kaikki tuon F3 suunnasta ja kaikki ulkomaalaisia." → Pelikoodari G-kierros: 4 ulkomaalaista, vanhempaa, hiljaisen arvovaltaista ja erittain tasaista aanta (v4, vakaus 1,0, style 0, ei tageja).
