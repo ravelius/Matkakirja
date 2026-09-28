@@ -1,0 +1,3190 @@
+{
+ "$kuvaus": "Dioraamamoottorin puhtaan logiikan testivektorit (tools/dioraama/tee-vektorit.mjs, älä muokkaa käsin — aja skripti uudelleen). JS-testi tests/dioraama-logiikka.test.mjs ja C#-testi Linssit-testit/Testit/DioraamaTestit.cs (tämän tiedoston kopio Linssit-testit/kultaiset/dioraama-vektorit.json) ajavat samat vektorit js/dioraama/{kamera,heratys,ohjaaja}.js:n ja Kameraliike/Heratys/Ohjaaja-luokkien kaavojen pariteetin varmistamiseksi (docs/raportit/dioraama-rajapinnat-20260929.md kohta 4).",
+ "tarkkuus": 1e-9,
+ "muoto": {
+  "yleista": "Kaikki liukuluvut pyöristetty 1e-9 tarkkuuteen (toleranssi speksissä 1e-6, tämä on tiukempi). Kulmat asteina, aika sekunteina, vektorit [x,y,z]-taulukkoina (kohta 0: +X itä, +Y ylös, +Z etelä).",
+  "kamera": "kamera[i] = { nimi, p0: ASENTO, p1: ASENTO, kesto: siirtymanKesto(p0,p1) [s, vakio parille], naytteet: [{ t, asento: siirtymaAsento(p0,p1,t), sijainti: asentoSijainti(asento) }] }. naytteet[j].t = j/10, j=0..10.",
+  "heratys": "heratys.rakennus = { tilat:[TILA,...], henkilot, aanet } (koostettu muoto). heratys.aikataulu = kamera-aikataulu [{hetki,kohde,kesto}]. heratys.hetket[k] = { t, tilat: [{ tilaId, taso, alkoi, edellinenTaso, aanenVoimakkuus }] (yksi rivi jokaiselle rak.tilat-alkiolle, myös massa), hahmot: [{ tilaId, hahmoIndeksi, hahmoId, naky, silmukka, ruutu }] (yksi rivi jokaiselle hahmolle jokaisessa tilassa, indeksi hahmon paikka SEN OMAN tilansa hahmot-listassa) }.",
+  "ohjaaja": "ohjaaja.askeleet = ASKEL[8] (= keittio.kasikirjoitus rakennuksessa). ohjaaja.kestot[i] = askeleenKesto(askeleet[i], keittioTila, rak). ohjaaja.napautukset = [4.1, 9.7] (absoluuttisia hetkiä). ohjaaja.hetket[k] = { t, indeksi, alku, paikallinen, valmis } = kasikirjoitusHetkella(askeleet, kestot, napautukset, t).",
+  "pulu": "pulu[i] = { nimi, alku:[x,y,z], loppu:[x,y,z], naytteet: [{ t01, piste: puluLento(alku,loppu,t01) }] }. t01 ∈ {0, 0.25, 0.5, 0.75, 1}."
+ },
+ "tulkinnat": [
+  {
+   "aihe": "kiertoero(180°)",
+   "tulkinta": "Normalisoidaan puoliavoimelle välille (-180, 180]: tasan 180 asteen ero palautuu arvona -180, ei +180."
+  },
+  {
+   "aihe": "askeleenKesto: hahmolla useampi repliikki",
+   "tulkinta": "ASKEL {tee:'repliikki', hahmo} ei yksilöi rivi-indeksiä; käytetään aina hahmo.repliikit[0] (ensimmäinen rivi). 'reaktio' on yksiselitteinen."
+  },
+  {
+   "aihe": "merkit-laskenta",
+   "tulkinta": "merkit = teksti.length (UTF-16-yksiköt), sama kuin C#:n string.Length; ei erillistä graafeemi- tai koodipistelaskentaa."
+  },
+  {
+   "aihe": "fps/2 pyöristys (hahmonTila, taso 1)",
+   "tulkinta": "Ei pyöristetä erikseen: fps/2 pidetään liukulukuna, vain lopullinen ruutuindeksi pyöristetään floor:lla."
+  },
+  {
+   "aihe": "hahmonTila: taso 2 ennen hahmon yksilöllistä heräämistä (t<herääminen)",
+   "tulkinta": "Kohdellaan kuten tasoa 1 (idle, fps/2) siihen asti kun t >= herääminen; speksi ei erikseen määrittele tätä välitilaa."
+  },
+  {
+   "aihe": "naky ei-reittihahmoille",
+   "tulkinta": "Aina true kaikilla tasoilla (0/1/2); speksi rajaa \"näkyy vain tasolla 2\" -säännön nimenomaan reittihahmoon (reitti != null)."
+  },
+  {
+   "aihe": "yleisnäkymän fps-katto (6) soveltamisjärjestys",
+   "tulkinta": "Sovelletaan VIIMEISENÄ, tason oman fps:n tai idle/2-fps:n jälkeen: fps = min(fps, 6)."
+  },
+  {
+   "aihe": "edellinenTaso ensimmäisessä tapahtumassa (hetki 0)",
+   "tulkinta": "Ei edeltäjää -> edellinenTaso = taso: ei liukua, äänenvoimakkuus on heti tavoitteessaan hetkestä 0 alkaen."
+  },
+  {
+   "aihe": "aanenVoimakkuus: mistä edellinenTaso saadaan",
+   "tulkinta": "Speksi ei nimeä tähän julkista hakua (Heratys.AanenVoimakkuus ottaa sen valmiina parametrina). Lisätty heratys.js:ään export tilanTasoJaEdellinen(rak,aikataulu,tilaId,t) -> {taso,alkoi,edellinenTaso}, joka johtaa senkin samasta aikajanasta kuin tilanTaso. C#-puolen on lisättävä vastaava julkinen haku (esim. Heratys.TilanTasoJaEdellinen), koska muuten kolmannelle parametrille ei ole tilatonta lähdettä."
+  },
+  {
+   "aihe": "aikajanan ylilyönti (NOUSUn 0,6*kesto-viive ulottuisi seuraavan tapahtuman ohi)",
+   "tulkinta": "Ei esiinny toimitetussa esimerkkiaikataulussa. Toteutus käsittelee tapahtumat aikataulun järjestyksessä ja pitää voimassa TAULUKON VIIMEISIMMÄN pisteen jonka aika <= t (ks. heratys.js:n aikajana()-kommentti)."
+  },
+  {
+   "aihe": "viimeisinKohde (yleisnäkymän tunnistus fps-katolle)",
+   "tulkinta": "Koko aikataulun (ei tilakohtainen) viimeinen tapahtuma jonka hetki <= t ratkaisee \"yleisnäkymässä\"-ehdon yhtenäisesti kaikille tiloille ja hahmoille samalla t:llä."
+  },
+  {
+   "aihe": "kasikirjoitusHetkella: askeleet-parametri",
+   "tulkinta": "Speksin kohta 4 (JS) listaa parametrin askeleet, mutta kohdan 5 C#-allekirjoitus (Ohjaaja.KasikirjoitusHetkella) ei sisällä sitä (vain kestot, napautukset, t). JS säilyttää askeleet-parametrin nimen rajapintakuvauksen mukaisesti mutta EI käytä sen sisältöä (vain kestot.length ratkaisee askelmäärän) — C# voi jättää sen kokonaan pois samalla tuloksella."
+  },
+  {
+   "aihe": "kasikirjoitusHetkella: useampi napautus saman askeleen luonnollisessa ikkunassa",
+   "tulkinta": "Napautukset kulutetaan aikajärjestyksessä yksi kerrallaan; vain ajallisesti ensimmäinen vaikuttaa kyseiseen askeleeseen, koska askel on jo päättynyt kun seuraava napautus käsitellään."
+  },
+  {
+   "aihe": "puluLento nollamatkalla (alku === loppu)",
+   "tulkinta": "Huippu = alku + (0,1,0): nostotermi 0,3*|loppu-alku|+1 = 0,3*0+1 = 1 ei häviä. Testattu lennolla \"paikallaan\"."
+  },
+  {
+   "aihe": "rak.henkilot / rak.aanet koostettu, ei raaka pankit-lähdedata",
+   "tulkinta": "Heratys- ja Ohjaaja-funktiot olettavat, että niille annettu rak (Rakennus) on jo koostettu: rak.henkilot on id -> {silmukat} ja rak.aanet on id -> {kesto_s,...}, kuten rakennettu rakennus.json (speksin kohta 3) ja C#:n Rakennus.Henkilot-malli (kohta 5) — ei pelkkää js/dioraama/pankit/-lähdedataa sellaisenaan. Tämän tiedoston oma pieni \"rakennus\" koostaa nämä itse."
+  }
+ ],
+ "kamera": [
+  {
+   "nimi": "kierto-350-10",
+   "p0": {
+    "kohde": [
+     0,
+     0,
+     0
+    ],
+    "atsimuutti": 350,
+    "korkeus": 20,
+    "etaisyys": 5,
+    "fov": 45,
+    "aukko": 0.2
+   },
+   "p1": {
+    "kohde": [
+     0,
+     0,
+     0
+    ],
+    "atsimuutti": 10,
+    "korkeus": 20,
+    "etaisyys": 5,
+    "fov": 45,
+    "aukko": 0.2
+   },
+   "kesto": 2,
+   "naytteet": [
+    {
+     "t": 0,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 350,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       -0.815879556,
+       1.710100717,
+       -4.627082892
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.1,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 350.1712,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       -0.802050194,
+       1.710100717,
+       -4.629500084
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.2,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 351.1584,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       -0.722169312,
+       1.710100717,
+       -4.642631476
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.3,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 353.2616,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       -0.551300465,
+       1.710100717,
+       -4.666007216
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.4,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 356.3488,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       -0.299209123,
+       1.710100717,
+       -4.688926257
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.5,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 360,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       0,
+       1.710100717,
+       -4.698463104
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.6,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 363.6512,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       0.299209123,
+       1.710100717,
+       -4.688926257
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.7,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 366.7384,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       0.551300465,
+       1.710100717,
+       -4.666007216
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.8,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 368.8416,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       0.722169312,
+       1.710100717,
+       -4.642631476
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.9,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 369.8288,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       0.802050194,
+       1.710100717,
+       -4.629500084
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 1,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 370,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       0.815879556,
+       1.710100717,
+       -4.627082892
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.2
+     }
+    }
+   ]
+  },
+  {
+   "nimi": "iso-siirtyma",
+   "p0": {
+    "kohde": [
+     0,
+     0,
+     0
+    ],
+    "atsimuutti": 0,
+    "korkeus": 10,
+    "etaisyys": 5,
+    "fov": 45,
+    "aukko": 0.1
+   },
+   "p1": {
+    "kohde": [
+     30,
+     10,
+     20
+    ],
+    "atsimuutti": 300,
+    "korkeus": 40,
+    "etaisyys": 12,
+    "fov": 55,
+    "aukko": 0.5
+   },
+   "kesto": 3.8,
+   "naytteet": [
+    {
+     "t": 0,
+     "asento": {
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "atsimuutti": 0,
+      "korkeus": 10,
+      "etaisyys": 5,
+      "fov": 45,
+      "aukko": 0.1
+     },
+     "sijainti": {
+      "sijainti": [
+       0,
+       0.868240888,
+       -4.924038765
+      ],
+      "kohde": [
+       0,
+       0,
+       0
+      ],
+      "fov": 45,
+      "etaisyys": 5,
+      "aukko": 0.1
+     }
+    },
+    {
+     "t": 0.1,
+     "asento": {
+      "kohde": [
+       0.2568,
+       0.0856,
+       0.1712
+      ],
+      "atsimuutti": -0.5136,
+      "korkeus": 10.2568,
+      "etaisyys": 7.950509299,
+      "fov": 45.0856,
+      "aukko": 0.103424
+     },
+     "sijainti": {
+      "sijainti": [
+       0.186671386,
+       1.50127033,
+       -7.651942438
+      ],
+      "kohde": [
+       0.2568,
+       0.0856,
+       0.1712
+      ],
+      "fov": 45.0856,
+      "etaisyys": 7.950509299,
+      "aukko": 0.103424
+     }
+    },
+    {
+     "t": 0.2,
+     "asento": {
+      "kohde": [
+       1.7376,
+       0.5792,
+       1.1584
+      ],
+      "atsimuutti": -3.4752,
+      "korkeus": 11.7376,
+      "etaisyys": 10.903667578,
+      "fov": 45.5792,
+      "aukko": 0.123168
+     },
+     "sijainti": {
+      "sijainti": [
+       1.090478456,
+       2.797331575,
+       -9.497635504
+      ],
+      "kohde": [
+       1.7376,
+       0.5792,
+       1.1584
+      ],
+      "fov": 45.5792,
+      "etaisyys": 10.903667578,
+      "aukko": 0.123168
+     }
+    },
+    {
+     "t": 0.3,
+     "asento": {
+      "kohde": [
+       4.8924,
+       1.6308,
+       3.2616
+      ],
+      "atsimuutti": -9.7848,
+      "korkeus": 14.8924,
+      "etaisyys": 13.709221033,
+      "fov": 46.6308,
+      "aukko": 0.165232
+     },
+     "sijainti": {
+      "sijainti": [
+       2.640803724,
+       5.154132949,
+       -9.794401703
+      ],
+      "kohde": [
+       4.8924,
+       1.6308,
+       3.2616
+      ],
+      "fov": 46.6308,
+      "etaisyys": 13.709221033,
+      "aukko": 0.165232
+     }
+    },
+    {
+     "t": 0.4,
+     "asento": {
+      "kohde": [
+       9.5232,
+       3.1744,
+       6.3488
+      ],
+      "atsimuutti": -19.0464,
+      "korkeus": 19.5232,
+      "etaisyys": 16.118399099,
+      "fov": 48.1744,
+      "aukko": 0.226976
+     },
+     "sijainti": {
+      "sijainti": [
+       4.565638072,
+       8.560983985,
+       -8.01121679
+      ],
+      "kohde": [
+       9.5232,
+       3.1744,
+       6.3488
+      ],
+      "fov": 48.1744,
+      "etaisyys": 16.118399099,
+      "aukko": 0.226976
+     }
+    },
+    {
+     "t": 0.5,
+     "asento": {
+      "kohde": [
+       15,
+       5,
+       10
+      ],
+      "atsimuutti": -30,
+      "korkeus": 25,
+      "etaisyys": 17.854143467,
+      "fov": 50,
+      "aukko": 0.3
+     },
+     "sijainti": {
+      "sijainti": [
+       6.909325373,
+       12.545487077,
+       -4.013459522
+      ],
+      "kohde": [
+       15,
+       5,
+       10
+      ],
+      "fov": 50,
+      "etaisyys": 17.854143467,
+      "aukko": 0.3
+     }
+    },
+    {
+     "t": 0.6,
+     "asento": {
+      "kohde": [
+       20.4768,
+       6.8256,
+       13.6512
+      ],
+      "atsimuutti": -40.9536,
+      "korkeus": 30.4768,
+      "etaisyys": 18.674239099,
+      "fov": 51.8256,
+      "aukko": 0.373024
+     },
+     "sijainti": {
+      "sijainti": [
+       9.927956839,
+       16.296976751,
+       1.496277692
+      ],
+      "kohde": [
+       20.4768,
+       6.8256,
+       13.6512
+      ],
+      "fov": 51.8256,
+      "etaisyys": 18.674239099,
+      "aukko": 0.373024
+     }
+    },
+    {
+     "t": 0.7,
+     "asento": {
+      "kohde": [
+       25.1076,
+       8.3692,
+       16.7384
+      ],
+      "atsimuutti": -50.2152,
+      "korkeus": 35.1076,
+      "etaisyys": 18.426101033,
+      "fov": 53.3692,
+      "aukko": 0.434768
+     },
+     "sijainti": {
+      "sijainti": [
+       13.524008686,
+       18.96630444,
+       7.09252062
+      ],
+      "kohde": [
+       25.1076,
+       8.3692,
+       16.7384
+      ],
+      "fov": 53.3692,
+      "etaisyys": 18.426101033,
+      "aukko": 0.434768
+     }
+    },
+    {
+     "t": 0.8,
+     "asento": {
+      "kohde": [
+       28.2624,
+       9.4208,
+       18.8416
+      ],
+      "atsimuutti": -56.5248,
+      "korkeus": 38.2624,
+      "etaisyys": 17.092787578,
+      "fov": 54.4208,
+      "aukko": 0.476832
+     },
+     "sijainti": {
+      "sijainti": [
+       17.067642337,
+       20.00574619,
+       11.438917906
+      ],
+      "kohde": [
+       28.2624,
+       9.4208,
+       18.8416
+      ],
+      "fov": 54.4208,
+      "etaisyys": 17.092787578,
+      "aukko": 0.476832
+     }
+    },
+    {
+     "t": 0.9,
+     "asento": {
+      "kohde": [
+       29.7432,
+       9.9144,
+       19.8288
+      ],
+      "atsimuutti": -59.4864,
+      "korkeus": 39.7432,
+      "etaisyys": 14.830669299,
+      "fov": 54.9144,
+      "aukko": 0.496576
+     },
+     "sijainti": {
+      "sijainti": [
+       19.918930484,
+       19.39635504,
+       14.038721506
+      ],
+      "kohde": [
+       29.7432,
+       9.9144,
+       19.8288
+      ],
+      "fov": 54.9144,
+      "etaisyys": 14.830669299,
+      "aukko": 0.496576
+     }
+    },
+    {
+     "t": 1,
+     "asento": {
+      "kohde": [
+       30,
+       10,
+       20
+      ],
+      "atsimuutti": -60,
+      "korkeus": 40,
+      "etaisyys": 12,
+      "fov": 55,
+      "aukko": 0.5
+     },
+     "sijainti": {
+      "sijainti": [
+       22.039032622,
+       17.713451316,
+       15.403733341
+      ],
+      "kohde": [
+       30,
+       10,
+       20
+      ],
+      "fov": 55,
+      "etaisyys": 12,
+      "aukko": 0.5
+     }
+    }
+   ]
+  },
+  {
+   "nimi": "pieni-siirtyma",
+   "p0": {
+    "kohde": [
+     5,
+     1,
+     2
+    ],
+    "atsimuutti": 40,
+    "korkeus": 15,
+    "etaisyys": 6,
+    "fov": 40,
+    "aukko": 0.15
+   },
+   "p1": {
+    "kohde": [
+     5.1,
+     1,
+     2.05
+    ],
+    "atsimuutti": 42,
+    "korkeus": 15.5,
+    "etaisyys": 6.05,
+    "fov": 40,
+    "aukko": 0.15
+   },
+   "kesto": 2,
+   "naytteet": [
+    {
+     "t": 0,
+     "asento": {
+      "kohde": [
+       5,
+       1,
+       2
+      ],
+      "atsimuutti": 40,
+      "korkeus": 15,
+      "etaisyys": 6,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.725310918,
+       2.552914271,
+       -2.43965267
+      ],
+      "kohde": [
+       5,
+       1,
+       2
+      ],
+      "fov": 40,
+      "etaisyys": 6,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.1,
+     "asento": {
+      "kohde": [
+       5.000856,
+       1,
+       2.000428
+      ],
+      "atsimuutti": 40.01712,
+      "korkeus": 15.00428,
+      "etaisyys": 6.009065288,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.733049113,
+       2.555694118,
+       -2.444728466
+      ],
+      "kohde": [
+       5.000856,
+       1,
+       2.000428
+      ],
+      "fov": 40,
+      "etaisyys": 6.009065288,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.2,
+     "asento": {
+      "kohde": [
+       5.005792,
+       1,
+       2.002896
+      ],
+      "atsimuutti": 40.11584,
+      "korkeus": 15.02896,
+      "etaisyys": 6.019325097,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.751591036,
+       2.560854558,
+       -2.442888212
+      ],
+      "kohde": [
+       5.005792,
+       1,
+       2.002896
+      ],
+      "fov": 40,
+      "etaisyys": 6.019325097,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.3,
+     "asento": {
+      "kohde": [
+       5.016308,
+       1,
+       2.008154
+      ],
+      "atsimuutti": 40.32616,
+      "korkeus": 15.08154,
+      "etaisyys": 6.030766712,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.78462198,
+       2.569165886,
+       -2.431178755
+      ],
+      "kohde": [
+       5.016308,
+       1,
+       2.008154
+      ],
+      "fov": 40,
+      "etaisyys": 6.030766712,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.4,
+     "asento": {
+      "kohde": [
+       5.031744,
+       1,
+       2.015872
+      ],
+      "atsimuutti": 40.63488,
+      "korkeus": 15.15872,
+      "etaisyys": 6.042454838,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.829889989,
+       2.580064739,
+       -2.410045186
+      ],
+      "kohde": [
+       5.031744,
+       1,
+       2.015872
+      ],
+      "fov": 40,
+      "etaisyys": 6.042454838,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.5,
+     "asento": {
+      "kohde": [
+       5.05,
+       1,
+       2.025
+      ],
+      "atsimuutti": 41,
+      "korkeus": 15.25,
+      "etaisyys": 6.05295085,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.881260243,
+       2.592115013,
+       -2.382360744
+      ],
+      "kohde": [
+       5.05,
+       1,
+       2.025
+      ],
+      "fov": 40,
+      "etaisyys": 6.05295085,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.6,
+     "asento": {
+      "kohde": [
+       5.068256,
+       1,
+       2.034128
+      ],
+      "atsimuutti": 41.36512,
+      "korkeus": 15.34128,
+      "etaisyys": 6.060710838,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.930788737,
+       2.603469648,
+       -2.352435781
+      ],
+      "kohde": [
+       5.068256,
+       1,
+       2.034128
+      ],
+      "fov": 40,
+      "etaisyys": 6.060710838,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.7,
+     "asento": {
+      "kohde": [
+       5.083692,
+       1,
+       2.041846
+      ],
+      "atsimuutti": 41.67384,
+      "korkeus": 15.41846,
+      "etaisyys": 6.064458712,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.970766738,
+       2.612337767,
+       -2.324923559
+      ],
+      "kohde": [
+       5.083692,
+       1,
+       2.041846
+      ],
+      "fov": 40,
+      "etaisyys": 6.064458712,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.8,
+     "asento": {
+      "kohde": [
+       5.094208,
+       1,
+       2.047104
+      ],
+      "atsimuutti": 41.88416,
+      "korkeus": 15.47104,
+      "etaisyys": 6.063533097,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       8.995700889,
+       2.6174552,
+       -2.303600028
+      ],
+      "kohde": [
+       5.094208,
+       1,
+       2.047104
+      ],
+      "fov": 40,
+      "etaisyys": 6.063533097,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 0.9,
+     "asento": {
+      "kohde": [
+       5.099144,
+       1,
+       2.049572
+      ],
+      "atsimuutti": 41.98288,
+      "korkeus": 15.49572,
+      "etaisyys": 6.058209288,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       9.004229213,
+       2.618549918,
+       -2.290071467
+      ],
+      "kohde": [
+       5.099144,
+       1,
+       2.049572
+      ],
+      "fov": 40,
+      "etaisyys": 6.058209288,
+      "aukko": 0.15
+     }
+    },
+    {
+     "t": 1,
+     "asento": {
+      "kohde": [
+       5.1,
+       1,
+       2.05
+      ],
+      "atsimuutti": 42,
+      "korkeus": 15.5,
+      "etaisyys": 6.05,
+      "fov": 40,
+      "aukko": 0.15
+     },
+     "sijainti": {
+      "sijainti": [
+       9.001007508,
+       2.616792175,
+       -2.282507759
+      ],
+      "kohde": [
+       5.1,
+       1,
+       2.05
+      ],
+      "fov": 40,
+      "etaisyys": 6.05,
+      "aukko": 0.15
+     }
+    }
+   ]
+  },
+  {
+   "nimi": "sama-asento",
+   "p0": {
+    "kohde": [
+     2,
+     0.5,
+     -3
+    ],
+    "atsimuutti": 75,
+    "korkeus": 18,
+    "etaisyys": 7,
+    "fov": 38,
+    "aukko": 0.22
+   },
+   "p1": {
+    "kohde": [
+     2,
+     0.5,
+     -3
+    ],
+    "atsimuutti": 75,
+    "korkeus": 18,
+    "etaisyys": 7,
+    "fov": 38,
+    "aukko": 0.22
+   },
+   "kesto": 2,
+   "naytteet": [
+    {
+     "t": 0,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.1,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.2,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.3,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.4,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.5,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.6,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.7,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.8,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 0.9,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    },
+    {
+     "t": 1,
+     "asento": {
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "atsimuutti": 75,
+      "korkeus": 18,
+      "etaisyys": 7,
+      "fov": 38,
+      "aukko": 0.22
+     },
+     "sijainti": {
+      "sijainti": [
+       8.430550359,
+       2.663118961,
+       -4.723060776
+      ],
+      "kohde": [
+       2,
+       0.5,
+       -3
+      ],
+      "fov": 38,
+      "etaisyys": 7,
+      "aukko": 0.22
+     }
+    }
+   ]
+  },
+  {
+   "nimi": "tyypillinen",
+   "p0": {
+    "kohde": [
+     -3,
+     0.2,
+     4
+    ],
+    "atsimuutti": 200,
+    "korkeus": 22,
+    "etaisyys": 8,
+    "fov": 50,
+    "aukko": 0.35
+   },
+   "p1": {
+    "kohde": [
+     1,
+     1.5,
+     -2
+    ],
+    "atsimuutti": 260,
+    "korkeus": 12,
+    "etaisyys": 5.5,
+    "fov": 30,
+    "aukko": 0.05
+   },
+   "kesto": 2.697200934,
+   "naytteet": [
+    {
+     "t": 0,
+     "asento": {
+      "kohde": [
+       -3,
+       0.2,
+       4
+      ],
+      "atsimuutti": 200,
+      "korkeus": 22,
+      "etaisyys": 8,
+      "fov": 50,
+      "aukko": 0.35
+     },
+     "sijainti": {
+      "sijainti": [
+       -5.536924439,
+       3.196852747,
+       10.97014261
+      ],
+      "kohde": [
+       -3,
+       0.2,
+       4
+      ],
+      "fov": 50,
+      "etaisyys": 8,
+      "aukko": 0.35
+     }
+    },
+    {
+     "t": 0.1,
+     "asento": {
+      "kohde": [
+       -2.96576,
+       0.211128,
+       3.94864
+      ],
+      "atsimuutti": 200.5136,
+      "korkeus": 21.9144,
+      "etaisyys": 8.544668613,
+      "fov": 49.8288,
+      "aukko": 0.347432
+     },
+     "sijainti": {
+      "sijainti": [
+       -5.7437046,
+       3.400177435,
+       11.373217375
+      ],
+      "kohde": [
+       -2.96576,
+       0.211128,
+       3.94864
+      ],
+      "fov": 49.8288,
+      "etaisyys": 8.544668613,
+      "aukko": 0.347432
+     }
+    },
+    {
+     "t": 0.2,
+     "asento": {
+      "kohde": [
+       -2.76832,
+       0.275296,
+       3.65248
+      ],
+      "atsimuutti": 203.4752,
+      "korkeus": 21.4208,
+      "etaisyys": 8.931926485,
+      "fov": 48.8416,
+      "aukko": 0.332624
+     },
+     "sijainti": {
+      "sijainti": [
+       -6.080593098,
+       3.537367388,
+       11.279212454
+      ],
+      "kohde": [
+       -2.76832,
+       0.275296,
+       3.65248
+      ],
+      "fov": 48.8416,
+      "etaisyys": 8.931926485,
+      "aukko": 0.332624
+     }
+    },
+    {
+     "t": 0.3,
+     "asento": {
+      "kohde": [
+       -2.34768,
+       0.412004,
+       3.02152
+      ],
+      "atsimuutti": 209.7848,
+      "korkeus": 20.3692,
+      "etaisyys": 9.074286868,
+      "fov": 46.7384,
+      "aukko": 0.301076
+     },
+     "sijainti": {
+      "sijainti": [
+       -6.57341176,
+       3.570474246,
+       10.40460465
+      ],
+      "kohde": [
+       -2.34768,
+       0.412004,
+       3.02152
+      ],
+      "fov": 46.7384,
+      "etaisyys": 9.074286868,
+      "aukko": 0.301076
+     }
+    },
+    {
+     "t": 0.4,
+     "asento": {
+      "kohde": [
+       -1.73024,
+       0.612672,
+       2.09536
+      ],
+      "atsimuutti": 219.0464,
+      "korkeus": 18.8256,
+      "etaisyys": 8.94858005,
+      "fov": 43.6512,
+      "aukko": 0.254768
+     },
+     "sijainti": {
+      "sijainti": [
+       -7.065835355,
+       3.500277037,
+       8.673372182
+      ],
+      "kohde": [
+       -1.73024,
+       0.612672,
+       2.09536
+      ],
+      "fov": 43.6512,
+      "etaisyys": 8.94858005,
+      "aukko": 0.254768
+     }
+    },
+    {
+     "t": 0.5,
+     "asento": {
+      "kohde": [
+       -1,
+       0.85,
+       1
+      ],
+      "atsimuutti": 230,
+      "korkeus": 17,
+      "etaisyys": 8.58183651,
+      "fov": 40,
+      "aukko": 0.2
+     },
+     "sijainti": {
+      "sijainti": [
+       -7.286812657,
+       3.35908617,
+       6.275262182
+      ],
+      "kohde": [
+       -1,
+       0.85,
+       1
+      ],
+      "fov": 40,
+      "etaisyys": 8.58183651,
+      "aukko": 0.2
+     }
+    },
+    {
+     "t": 0.6,
+     "asento": {
+      "kohde": [
+       -0.26976,
+       1.087328,
+       -0.09536
+      ],
+      "atsimuutti": 240.9536,
+      "korkeus": 15.1744,
+      "etaisyys": 8.03578005,
+      "fov": 36.3488,
+      "aukko": 0.145232
+     },
+     "sijainti": {
+      "sijainti": [
+       -7.049914192,
+       3.190757545,
+       3.670121947
+      ],
+      "kohde": [
+       -0.26976,
+       1.087328,
+       -0.09536
+      ],
+      "fov": 36.3488,
+      "etaisyys": 8.03578005,
+      "aukko": 0.145232
+     }
+    },
+    {
+     "t": 0.7,
+     "asento": {
+      "kohde": [
+       0.34768,
+       1.287996,
+       -1.02152
+      ],
+      "atsimuutti": 250.2152,
+      "korkeus": 13.6308,
+      "etaisyys": 7.389686868,
+      "fov": 33.2616,
+      "aukko": 0.098924
+     },
+     "sijainti": {
+      "sijainti": [
+       -6.409949596,
+       3.029483362,
+       1.409351452
+      ],
+      "kohde": [
+       0.34768,
+       1.287996,
+       -1.02152
+      ],
+      "fov": 33.2616,
+      "etaisyys": 7.389686868,
+      "aukko": 0.098924
+     }
+    },
+    {
+     "t": 0.8,
+     "asento": {
+      "kohde": [
+       0.76832,
+       1.424704,
+       -1.65248
+      ],
+      "atsimuutti": 256.5248,
+      "korkeus": 12.5792,
+      "etaisyys": 6.721526485,
+      "fov": 31.1584,
+      "aukko": 0.067376
+     },
+     "sijainti": {
+      "sijainti": [
+       -5.611266141,
+       2.888578138,
+       -0.123797081
+      ],
+      "kohde": [
+       0.76832,
+       1.424704,
+       -1.65248
+      ],
+      "fov": 31.1584,
+      "etaisyys": 6.721526485,
+      "aukko": 0.067376
+     }
+    },
+    {
+     "t": 0.9,
+     "asento": {
+      "kohde": [
+       0.96576,
+       1.488872,
+       -1.94864
+      ],
+      "atsimuutti": 259.4864,
+      "korkeus": 12.0856,
+      "etaisyys": 6.087468613,
+      "fov": 30.1712,
+      "aukko": 0.052568
+     },
+     "sijainti": {
+      "sijainti": [
+       -4.88685171,
+       2.763422425,
+       -0.862485548
+      ],
+      "kohde": [
+       0.96576,
+       1.488872,
+       -1.94864
+      ],
+      "fov": 30.1712,
+      "etaisyys": 6.087468613,
+      "aukko": 0.052568
+     }
+    },
+    {
+     "t": 1,
+     "asento": {
+      "kohde": [
+       1,
+       1.5,
+       -2
+      ],
+      "atsimuutti": 260,
+      "korkeus": 12,
+      "etaisyys": 5.5,
+      "fov": 30,
+      "aukko": 0.05
+     },
+     "sijainti": {
+      "sijainti": [
+       -4.298080374,
+       2.643514299,
+       -1.065805484
+      ],
+      "kohde": [
+       1,
+       1.5,
+       -2
+      ],
+      "fov": 30,
+      "etaisyys": 5.5,
+      "aukko": 0.05
+     }
+    }
+   ]
+  }
+ ],
+ "heratys": {
+  "rakennus": {
+   "tilat": [
+    {
+     "id": "massa",
+     "nimi": "Massa",
+     "kohdistettava": false,
+     "rajat": {
+      "min": [
+       0,
+       0,
+       -1
+      ],
+      "max": [
+       4,
+       3,
+       1
+      ]
+     },
+     "naapurit": [],
+     "kamera": {
+      "kohde": [
+       2,
+       1,
+       0
+      ],
+      "atsimuutti": 180,
+      "korkeus": 35,
+      "etaisyys": 8,
+      "fov": 50,
+      "aukko": 0.1
+     },
+     "pulu": {
+      "laskeutuminen": [
+       2,
+       0,
+       0
+      ],
+      "taulupuoli": "vasen"
+     },
+     "taulu": {
+      "otsikko": "Testilinna",
+      "tila": "luonnos",
+      "kohdat": [
+       {
+        "teksti": "xxxxxxxxxxxxxxxxxxxx",
+        "lahde": "testi"
+       },
+       {
+        "teksti": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+        "lahde": "testi"
+       },
+       {
+        "teksti": "Kolmas kohta täytteeksi (TAULU vaatii kolme kohdat-alkiota).",
+        "lahde": "testi"
+       }
+      ]
+     },
+     "valot": [],
+     "palikat": [],
+     "hahmot": [],
+     "aanet": [],
+     "kasikirjoitus": []
+    },
+    {
+     "id": "keittio",
+     "nimi": "Keittiö",
+     "kohdistettava": true,
+     "rajat": {
+      "min": [
+       0,
+       0,
+       -1
+      ],
+      "max": [
+       2,
+       2.5,
+       1
+      ]
+     },
+     "naapurit": [
+      "sali"
+     ],
+     "kamera": {
+      "kohde": [
+       1,
+       1,
+       0
+      ],
+      "atsimuutti": 200,
+      "korkeus": 25,
+      "etaisyys": 4,
+      "fov": 45,
+      "aukko": 0.3
+     },
+     "pulu": {
+      "laskeutuminen": [
+       1,
+       0,
+       0.5
+      ],
+      "taulupuoli": "vasen"
+     },
+     "taulu": {
+      "otsikko": "Keittiö",
+      "tila": "luonnos",
+      "kohdat": [
+       {
+        "teksti": "xxxxxxxxxxxxxxxxxxxx",
+        "lahde": "testi"
+       },
+       {
+        "teksti": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+        "lahde": "testi"
+       },
+       {
+        "teksti": "Kolmas kohta täytteeksi (TAULU vaatii kolme kohdat-alkiota).",
+        "lahde": "testi"
+       }
+      ]
+     },
+     "valot": [],
+     "palikat": [],
+     "hahmot": [
+      {
+       "id": "kokki",
+       "henkilo": "kokki-testi",
+       "paikka": [
+        0.5,
+        0,
+        0.3
+       ],
+       "suunta": 90,
+       "peilattu": false,
+       "silmukka": "tyo",
+       "heraa": 1,
+       "reitti": null,
+       "repliikit": [
+        {
+         "id": "kokki-r1",
+         "teksti": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+         "aani": null
+        },
+        {
+         "id": "kokki-r2",
+         "teksti": "Tätä toista riviä ei käytetä (tulkinta: aina repliikit[0]).",
+         "aani": null
+        }
+       ],
+       "reaktio": {
+        "id": "kokki-react",
+        "teksti": "Kokin reaktio, ei käytetä äänellisenä.",
+        "aani": null
+       }
+      },
+      {
+       "id": "apulainen",
+       "henkilo": "apulainen-testi",
+       "paikka": [
+        1.2,
+        0,
+        -0.4
+       ],
+       "suunta": 180,
+       "peilattu": false,
+       "silmukka": "kavely",
+       "heraa": 2,
+       "reitti": {
+        "pisteet": [
+         [
+          1.2,
+          0,
+          -0.4
+         ],
+         [
+          2,
+          0,
+          -0.4
+         ],
+         [
+          2,
+          0,
+          0.6
+         ]
+        ],
+        "nopeus": 0.8,
+        "tauko": 1
+       },
+       "repliikit": [
+        {
+         "id": "apulainen-r1",
+         "teksti": "Apulaisen repliikki, ei tarvita tässä käsikirjoituksessa.",
+         "aani": null
+        }
+       ],
+       "reaktio": {
+        "id": "apulainen-react",
+        "teksti": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+        "aani": "testiaani"
+       }
+      }
+     ],
+     "aanet": [],
+     "kasikirjoitus": [
+      {
+       "tee": "pulu-lenna"
+      },
+      {
+       "tee": "taulu"
+      },
+      {
+       "tee": "kohta",
+       "n": 0
+      },
+      {
+       "tee": "repliikki",
+       "hahmo": "kokki"
+      },
+      {
+       "tee": "odota",
+       "s": 1.5
+      },
+      {
+       "tee": "reaktio",
+       "hahmo": "apulainen"
+      },
+      {
+       "tee": "kohta",
+       "n": 1
+      },
+      {
+       "tee": "taulu"
+      }
+     ]
+    },
+    {
+     "id": "sali",
+     "nimi": "Sali",
+     "kohdistettava": true,
+     "rajat": {
+      "min": [
+       2,
+       0,
+       -1
+      ],
+      "max": [
+       4,
+       3,
+       1
+      ]
+     },
+     "naapurit": [
+      "keittio"
+     ],
+     "kamera": {
+      "kohde": [
+       3,
+       1,
+       0
+      ],
+      "atsimuutti": 160,
+      "korkeus": 20,
+      "etaisyys": 5,
+      "fov": 42,
+      "aukko": 0.25
+     },
+     "pulu": {
+      "laskeutuminen": [
+       3,
+       0,
+       0.5
+      ],
+      "taulupuoli": "oikea"
+     },
+     "taulu": {
+      "otsikko": "Sali",
+      "tila": "luonnos",
+      "kohdat": [
+       {
+        "teksti": "xxxxxxxxxxxxxxxxxxxx",
+        "lahde": "testi"
+       },
+       {
+        "teksti": "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+        "lahde": "testi"
+       },
+       {
+        "teksti": "Kolmas kohta täytteeksi (TAULU vaatii kolme kohdat-alkiota).",
+        "lahde": "testi"
+       }
+      ]
+     },
+     "valot": [],
+     "palikat": [],
+     "hahmot": [
+      {
+       "id": "vieras",
+       "henkilo": "vieras-testi",
+       "paikka": [
+        -1,
+        0,
+        0.2
+       ],
+       "suunta": 0,
+       "peilattu": false,
+       "silmukka": "puhe",
+       "heraa": 1,
+       "reitti": null,
+       "repliikit": [
+        {
+         "id": "vieras-r1",
+         "teksti": "Vieraan oma repliikki.",
+         "aani": null
+        }
+       ],
+       "reaktio": {
+        "id": "vieras-react",
+        "teksti": "Vieraan reaktio.",
+        "aani": null
+       }
+      }
+     ],
+     "aanet": [],
+     "kasikirjoitus": []
+    }
+   ],
+   "henkilot": {
+    "kokki-testi": {
+     "silmukat": {
+      "idle": {
+       "rivi": 0,
+       "ruudut": 4,
+       "fps": 6
+      },
+      "tyo": {
+       "rivi": 1,
+       "ruudut": 8,
+       "fps": 10
+      }
+     }
+    },
+    "apulainen-testi": {
+     "silmukat": {
+      "idle": {
+       "rivi": 0,
+       "ruudut": 4,
+       "fps": 7
+      },
+      "kavely": {
+       "rivi": 3,
+       "ruudut": 6,
+       "fps": 8
+      }
+     }
+    },
+    "vieras-testi": {
+     "silmukat": {
+      "idle": {
+       "rivi": 0,
+       "ruudut": 4,
+       "fps": 6
+      },
+      "puhe": {
+       "rivi": 2,
+       "ruudut": 4,
+       "fps": 8
+      }
+     }
+    }
+   },
+   "aanet": {
+    "testiaani": {
+     "tiedosto": "testi.mp3",
+     "silmukka": false,
+     "voimakkuus": 1,
+     "kesto_s": 2.4,
+     "lisenssi": "testi"
+    }
+   }
+  },
+  "aikataulu": [
+   {
+    "hetki": 0,
+    "kohde": null,
+    "kesto": 0
+   },
+   {
+    "hetki": 2,
+    "kohde": "keittio",
+    "kesto": 3
+   },
+   {
+    "hetki": 9,
+    "kohde": "sali",
+    "kesto": 2.5
+   },
+   {
+    "hetki": 15,
+    "kohde": null,
+    "kesto": 3
+   }
+  ],
+  "hetket": [
+   {
+    "t": 0,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 0
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 3
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 0
+     }
+    ]
+   },
+   {
+    "t": 1,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 3
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 2
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 3
+     }
+    ]
+   },
+   {
+    "t": 2,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 2
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 2
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 2
+     }
+    ]
+   },
+   {
+    "t": 3,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 1
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 1
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 1
+     }
+    ]
+   },
+   {
+    "t": 3.8,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 2,
+      "alkoi": 3.8,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "tyo",
+      "ruutu": 0
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 3
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 3
+     }
+    ]
+   },
+   {
+    "t": 4,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 2,
+      "alkoi": 3.8,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.375
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "tyo",
+      "ruutu": 2
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": true,
+      "silmukka": "kavely",
+      "ruutu": 0
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 0
+     }
+    ]
+   },
+   {
+    "t": 6,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 2,
+      "alkoi": 3.8,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 1
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "tyo",
+      "ruutu": 6
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": true,
+      "silmukka": "kavely",
+      "ruutu": 4
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 2
+     }
+    ]
+   },
+   {
+    "t": 9,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 9,
+      "edellinenTaso": 2,
+      "aanenVoimakkuus": 1
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 0,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 0
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 3
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 3
+     }
+    ]
+   },
+   {
+    "t": 10.5,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 9,
+      "edellinenTaso": 2,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 2,
+      "alkoi": 10.5,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 0
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 0
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "puhe",
+      "ruutu": 0
+     }
+    ]
+   },
+   {
+    "t": 12,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 9,
+      "edellinenTaso": 2,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 2,
+      "alkoi": 10.5,
+      "edellinenTaso": 1,
+      "aanenVoimakkuus": 1
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 1
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 1
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "puhe",
+      "ruutu": 0
+     }
+    ]
+   },
+   {
+    "t": 15,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 9,
+      "edellinenTaso": 2,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 15,
+      "edellinenTaso": 2,
+      "aanenVoimakkuus": 1
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 2
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 0
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 0
+     }
+    ]
+   },
+   {
+    "t": 20,
+    "tilat": [
+     {
+      "tilaId": "massa",
+      "taso": 0,
+      "alkoi": 0,
+      "edellinenTaso": 0,
+      "aanenVoimakkuus": 0
+     },
+     {
+      "tilaId": "keittio",
+      "taso": 1,
+      "alkoi": 9,
+      "edellinenTaso": 2,
+      "aanenVoimakkuus": 0.25
+     },
+     {
+      "tilaId": "sali",
+      "taso": 1,
+      "alkoi": 15,
+      "edellinenTaso": 2,
+      "aanenVoimakkuus": 0.25
+     }
+    ],
+    "hahmot": [
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 0,
+      "hahmoId": "kokki",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 1
+     },
+     {
+      "tilaId": "keittio",
+      "hahmoIndeksi": 1,
+      "hahmoId": "apulainen",
+      "naky": false,
+      "silmukka": "idle",
+      "ruutu": 1
+     },
+     {
+      "tilaId": "sali",
+      "hahmoIndeksi": 0,
+      "hahmoId": "vieras",
+      "naky": true,
+      "silmukka": "idle",
+      "ruutu": 3
+     }
+    ]
+   }
+  ]
+ },
+ "ohjaaja": {
+  "askeleet": [
+   {
+    "tee": "pulu-lenna"
+   },
+   {
+    "tee": "taulu"
+   },
+   {
+    "tee": "kohta",
+    "n": 0
+   },
+   {
+    "tee": "repliikki",
+    "hahmo": "kokki"
+   },
+   {
+    "tee": "odota",
+    "s": 1.5
+   },
+   {
+    "tee": "reaktio",
+    "hahmo": "apulainen"
+   },
+   {
+    "tee": "kohta",
+    "n": 1
+   },
+   {
+    "tee": "taulu"
+   }
+  ],
+  "kestot": [
+   1.8,
+   0.25,
+   3,
+   2.64,
+   1.5,
+   2.4,
+   3.6,
+   0.25
+  ],
+  "napautukset": [
+   4.1,
+   9.7
+  ],
+  "hetket": [
+   {
+    "t": 0,
+    "indeksi": 0,
+    "alku": 0,
+    "paikallinen": 0,
+    "valmis": false
+   },
+   {
+    "t": 0.9,
+    "indeksi": 0,
+    "alku": 0,
+    "paikallinen": 0.9,
+    "valmis": false
+   },
+   {
+    "t": 1.95,
+    "indeksi": 1,
+    "alku": 1.8,
+    "paikallinen": 0.15,
+    "valmis": false
+   },
+   {
+    "t": 4.1,
+    "indeksi": 3,
+    "alku": 4.1,
+    "paikallinen": 0,
+    "valmis": false
+   },
+   {
+    "t": 4.9,
+    "indeksi": 3,
+    "alku": 4.1,
+    "paikallinen": 0.8,
+    "valmis": false
+   },
+   {
+    "t": 7.5,
+    "indeksi": 4,
+    "alku": 6.74,
+    "paikallinen": 0.76,
+    "valmis": false
+   },
+   {
+    "t": 9.7,
+    "indeksi": 6,
+    "alku": 9.7,
+    "paikallinen": 0,
+    "valmis": false
+   },
+   {
+    "t": 11.5,
+    "indeksi": 6,
+    "alku": 9.7,
+    "paikallinen": 1.8,
+    "valmis": false
+   },
+   {
+    "t": 13.4,
+    "indeksi": 7,
+    "alku": 13.3,
+    "paikallinen": 0.1,
+    "valmis": false
+   },
+   {
+    "t": 15,
+    "indeksi": 7,
+    "alku": 13.3,
+    "paikallinen": 1.7,
+    "valmis": true
+   }
+  ]
+ },
+ "pulu": [
+  {
+   "nimi": "paikallaan",
+   "alku": [
+    0,
+    0,
+    0
+   ],
+   "loppu": [
+    0,
+    0,
+    0
+   ],
+   "naytteet": [
+    {
+     "t01": 0,
+     "piste": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "t01": 0.25,
+     "piste": [
+      0,
+      0.185600281,
+      0
+     ]
+    },
+    {
+     "t01": 0.5,
+     "piste": [
+      0,
+      0.5,
+      0
+     ]
+    },
+    {
+     "t01": 0.75,
+     "piste": [
+      0,
+      0.185600281,
+      0
+     ]
+    },
+    {
+     "t01": 1,
+     "piste": [
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "nimi": "pitka",
+   "alku": [
+    -5,
+    0,
+    -3
+   ],
+   "loppu": [
+    6,
+    0,
+    4
+   ],
+   "naytteet": [
+    {
+     "t01": 0,
+     "piste": [
+      -5,
+      0,
+      -3
+     ]
+    },
+    {
+     "t01": 0.25,
+     "piste": [
+      -3.861328125,
+      0.911579759,
+      -2.275390625
+     ]
+    },
+    {
+     "t01": 0.5,
+     "piste": [
+      0.5,
+      2.455760722,
+      0.5
+     ]
+    },
+    {
+     "t01": 0.75,
+     "piste": [
+      4.861328125,
+      0.911579759,
+      3.275390625
+     ]
+    },
+    {
+     "t01": 1,
+     "piste": [
+      6,
+      0,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "nimi": "korkeusero",
+   "alku": [
+    1,
+    0.2,
+    2
+   ],
+   "loppu": [
+    1.5,
+    2.6,
+    -1
+   ],
+   "naytteet": [
+    {
+     "t01": 0,
+     "piste": [
+      1,
+      0.2,
+      2
+     ]
+    },
+    {
+     "t01": 0.25,
+     "piste": [
+      1.051757813,
+      0.84975769,
+      1.689453125
+     ]
+    },
+    {
+     "t01": 0.5,
+     "piste": [
+      1.25,
+      2.481141119,
+      0.5
+     ]
+    },
+    {
+     "t01": 0.75,
+     "piste": [
+      1.448242188,
+      2.75288269,
+      -0.689453125
+     ]
+    },
+    {
+     "t01": 1,
+     "piste": [
+      1.5,
+      2.6,
+      -1
+     ]
+    }
+   ]
+  }
+ ]
+}
