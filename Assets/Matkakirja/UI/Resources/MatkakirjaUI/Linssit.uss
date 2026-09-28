@@ -3048,11 +3048,13 @@
     -unity-text-align: middle-right;
 }
 
-/* Web .mv-valinta: max 48 %, rgba(239,230,210,.1), reunus .25, kulma 8, täyte 5 8. */
+/* Web .mv-valinta: max 48 %, rgba(239,230,210,.1), reunus .25, kulma 8, täyte 5 8. Selaimen select on pisimmän
+ * vaihtoehdon levyinen (kerrosnimet täyttävät 48 %); UITK:n DropdownField mitoittuu ensimmäisestä tekstistä, joten
+ * leveys on suoraan 48 % ja ylipitkä nimi katkeaa ellipsiin (vuosi2 07-ndvi: "Kasvillisuus (N"). */
 .mk-vuosi__valinta {
     flex-grow: 0;
-    flex-shrink: 1;
-    max-width: 48%;
+    flex-shrink: 0;
+    width: 48%;
     margin: 0;
 }
 
@@ -3067,9 +3069,14 @@
 }
 
 .mk-vuosi__valinta .unity-base-popup-field__text {
+    flex-shrink: 1;
+    min-width: 0;
     font-size: 15px;
     letter-spacing: 0;
     color: #efe6d2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .mk-vuosi__valinta .unity-base-popup-field__arrow {
