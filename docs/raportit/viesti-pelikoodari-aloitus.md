@@ -4,7 +4,7 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260928-b.md`](viesti-pelikoodari-luovutus-20260928-b.md) (28.9. klo 12.3x): junassa #3517/#3526/#3528/
+   [`viesti-pelikoodari-luovutus-20260928-b.md`](viesti-pelikoodari-luovutus-20260928-b.md) (28.9. klo 13.1x, nollaus): KÄRKI xAI-nappi natiiviin (osio 0, worker #3553); junassa #3517/#3526/#3528/
    #3532/#3535/#3537/#3540/#3541/#3546/#3547 (#3544 mainissa); selite + ihme-lyhyt + ISS-kyyti odottavat mergejä; ISS-nopeutuserä
    agentilla. Fable = "Päätoimittaja (Opus, xhigh)" (ref [e6550e]). Edellinen: `viesti-pelikoodari-luovutus-20260928.md`.
    - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
