@@ -314,6 +314,7 @@ namespace Matkakirja.Natiivi
         {
             LopetaSanelu();
             // Web sulje: luenta pysähtyy (pysaytaLukija, kun luentaPaalla) ja puhevuoro päättyy.
+            PeruLuenta();
             if (Auki && LuentaPaalla) PysaytaPulunPuhe();
             LopetaPuheVuoro();
             suurennos.Sulje();
@@ -391,6 +392,9 @@ namespace Matkakirja.Natiivi
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki) Avaa();
             LopetaPuheVuoro();
+            luentaHiljennetty = false;
+            luentaVirta = null;
+            luettuun = 0;
             if (puhe)
             {
                 puheVuoro = new PuheVuoro { Alku = Time.realtimeSinceStartupAsDouble };
@@ -417,13 +421,16 @@ namespace Matkakirja.Natiivi
             public bool Katkesi;
             public List<string> Jatkot;
             public Dictionary<string, object> Paikka;
+            /// <summary>Striimin palat yhteensä (web kertyma): virkevirran viimeinen vajaa virke luetaan tästä.</summary>
+            public string Kertynyt;
         }
 
         /// <summary>
         /// Pyyntö workerille paneelin kontekstilla, historialla ja kehyksellä; onnistunut
         /// vastaus menee historiaan. Kutsuja pitää kysyy-lukon (yksi pyyntö kerrallaan).
         /// </summary>
-        IEnumerator Laheta(string kysymys, bool jatko, Action<Tulos> valmis, Action<string> osittain = null)
+        /// <param name="raaka">striimin kertymä sellaisenaan (käsite- ja puhetagit mukana) virkevirran luennalle</param>
+        IEnumerator Laheta(string kysymys, bool jatko, Action<Tulos> valmis, Action<string> osittain = null, Action<string> raaka = null)
         {
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
                 .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti(HaeAineisto(kysymys))))
@@ -442,7 +449,7 @@ namespace Matkakirja.Natiivi
             runko.Append("],\"striimi\":true}");
 
             var t = new Tulos();
-            var sse = new SseKasittelija(osittain);
+            var sse = new SseKasittelija(osittain, raaka);
             using (var r = Pyynto(runko.ToString(), sse, 90))
             {
                 yield return r.SendWebRequest();
@@ -480,6 +487,7 @@ namespace Matkakirja.Natiivi
                     if (syy == null) { historia.Add(("kayttaja", kysymys)); historia.Add(("pollo", Nakyva(t.Vastaus))); }
                 }
                 else t.Virhe = EiSaanut;
+                t.Kertynyt = sse.Kertynyt;
             }
             valmis(t);
         }
@@ -759,14 +767,14 @@ namespace Matkakirja.Natiivi
                     osittainen.enableRichText = false;
                 }
                 else osittainen.text = teksti;
-            });
+            }, SyotaLuennalle);
             pitka.Pause();
             odotus.RemoveFromHierarchy();
             osittainen?.RemoveFromHierarchy();
             kysyy = false;
             if (suku != sukupolvi) { pulu.ChatOdotusLoppui(); yield break; } // Uusi peli välissä (löydös 177)
             // Virhe tai katkos: pulu vain takaisin; muuten (ei striimiä, koko vastaus kerralla) sama paluuketju.
-            if (t.Katkesi || t.Virhe != null) { pulu.ChatOdotusLoppui(); LopetaPuheVuoro(); }
+            if (t.Katkesi || t.Virhe != null) { pulu.ChatOdotusLoppui(); PeruLuenta(); LopetaPuheVuoro(); }
             else pulu.ChatVastausAlkoi();
 
             if (t.Katkesi)
@@ -791,7 +799,11 @@ namespace Matkakirja.Natiivi
             if (!t.Uusittava) Matkakirjalinkit();
             UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
-            LueVastaus(Puhuttava(t.Vastaus));
+            // Virkevirta luki jo alun striimin aikana: loppu perään (web paataLuenta), muuten koko vastaus nyt.
+            // Mikki hiljensi Pulun kesken striimin: ei luentaa tälle vastaukselle (myöskään kaiuttimella).
+            if (luentaHiljennetty) PeruLuenta();
+            else if (!PaataLuenta(t)) LueVastaus(Puhuttava(t.Vastaus));
+            VahdiPuheVuoroa();
             if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
             if (!t.Uusittava) PoimintaRivi(kysymys, nakyva);
             if (t.Uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
@@ -909,7 +921,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         sealed class SseKasittelija : DownloadHandlerScript
         {
-            readonly Action<string> osittain;
+            readonly Action<string> osittain, raaka;
             readonly StringBuilder puskuri = new StringBuilder(), kaikki = new StringBuilder(), kertynyt = new StringBuilder();
             readonly Decoder dekooderi = Encoding.UTF8.GetDecoder();
             public Dictionary<string, object> Loppu;
@@ -917,7 +929,11 @@ namespace Matkakirja.Natiivi
             public string Teksti => kaikki.ToString();
             public string Kertynyt => kertynyt.ToString();
 
-            public SseKasittelija(Action<string> osittain) : base(new byte[4096]) { this.osittain = osittain; }
+            public SseKasittelija(Action<string> osittain, Action<string> raaka = null) : base(new byte[4096])
+            {
+                this.osittain = osittain;
+                this.raaka = raaka;
+            }
 
             protected override bool ReceiveData(byte[] data, int pituus)
             {
@@ -951,6 +967,7 @@ namespace Matkakirja.Natiivi
                     {
                         kertynyt.Append(MiniJson.Teksti(o, "teksti") ?? "");
                         osittain?.Invoke(PoistaKesken(kertynyt.ToString()));
+                        raaka?.Invoke(kertynyt.ToString());
                     }
                     else if (laji == "loppu") Loppu = o;
                     else if (laji == "virhe") Virhe = MiniJson.Teksti(o, "viesti");
@@ -1255,29 +1272,125 @@ namespace Matkakirja.Natiivi
             if (!LuentaPaalla || string.IsNullOrWhiteSpace(teksti)) { LopetaPuheVuoro(); return; }
             var puhe = Puhe.Hae();
             var vuoro = puheVuoro;
-            if (vuoro != null && puhe != null)
-            {
-                vuoro.Kuunneltu = puhe;
-                puhe.Puhuu += PuheMuuttui;
-            }
+            KuunteleVuoroa(puhe);
             // Pulun ääni lukee palavirtana (Puhe.Virta): ensimmäinen lyhyt pala soi ennen kuin koko vastaus on syntetisoitu.
             bool alkoi = puhe != null && puhe.Lue(teksti, "pollo", loppu: () => { if (puheVuoro == vuoro) LopetaPuheVuoro(); });
-            if (vuoro == null) return;
-            if (!alkoi) { LopetaPuheVuoro(); return; }
-            // Varavahti (web vahdiPuheVuoroa 400 ms): vuoro päättyy, kun Pulun puhe ei enää lataa eikä soi
-            // (synteesi petti, luenta korvattiin toisella äänellä tai pysäytettiin muualta). Palan uusinnan tauko
-            // (Puhe.SoitaPalat 1–4 s, ViimeVirhe asetettu) ei vielä lopeta vuoroa, luovutettu pala 5 s:n jälkeen.
+            if (vuoro != null && !alkoi) LopetaPuheVuoro();
+        }
+
+        /// <summary>Puhevuoro kuulee Pulun puheen alun (Puhe.Puhuu) "Mietin" → "Puhun" -vaihtoa ja viivettä varten.</summary>
+        void KuunteleVuoroa(Puhe puhe)
+        {
+            var vuoro = puheVuoro;
+            if (vuoro == null || puhe == null || vuoro.Kuunneltu != null) return;
+            vuoro.Kuunneltu = puhe;
+            puhe.Puhuu += PuheMuuttui;
+        }
+
+        /// <summary>
+        /// Varavahti (web vahdiPuheVuoroa 400 ms): vuoro päättyy, kun Pulun puhe ei enää lataa eikä soi (luentaa ei
+        /// syntynyt, synteesi petti, luenta korvattiin toisella äänellä tai pysäytettiin muualta). Palan uusinnan tauko
+        /// (Puhe.SoitaPalat 1–4 s, ViimeVirhe asetettu) ei vielä lopeta vuoroa, luovutettu pala 5 s:n jälkeen.
+        /// </summary>
+        void VahdiPuheVuoroa()
+        {
+            var vuoro = puheVuoro;
+            if (vuoro == null || vuoro.Vahti != null) return;
             double hiljaaAlkaen = -1;
             vuoro.Vahti = paneeli.schedule.Execute(() =>
             {
                 if (puheVuoro != vuoro) return;
-                var p = vuoro.Kuunneltu;
+                var p = vuoro.Kuunneltu ?? Puhe.Instanssi;
                 bool pulunPuhe = p != null && (p.SoivaUrl?.StartsWith("puhe:pollo:", StringComparison.Ordinal) ?? false);
                 double nyt = Time.realtimeSinceStartupAsDouble;
                 if (pulunPuhe) { hiljaaAlkaen = -1; return; }
                 if (hiljaaAlkaen < 0) hiljaaAlkaen = nyt;
                 if (p?.ViimeVirhe == null || nyt - hiljaaAlkaen >= 5.0) LopetaPuheVuoro();
             }).Every(400).StartingIn(400);
+        }
+
+        // --- virkevirta: luenta striimin rinnalla (web syotaLuennalle, luettavaRaja, paataLuenta, peruLuenta) ---
+
+        /// <summary>
+        /// Virkevirta päällä (oletus, web): luenta alkaa ensimmäisestä valmiista virkkeestä kesken striimin. Pois =
+        /// vastaus luetaan valmiina (vertailumittaus, komento ui chat virta pois|paalle).
+        /// </summary>
+        public static bool Virkevirta = true;
+
+        /// <summary>Web VIRKKEEN_RAJA: välimerkki, valinnainen lainaus- tai sulkumerkki, sitten tyhjä tai loppu.</summary>
+        static readonly Regex VirkkeenRaja = new Regex(@"[.!?…][""»)\]]?(\s|$)");
+
+        Puhe.Virtaluenta luentaVirta;
+        int luettuun;
+        /// <summary>Mikki hiljensi tämän vastauksen: virta ei käynnisty uudelleen kesken striimin (kaiutin päällä).</summary>
+        bool luentaHiljennetty;
+
+        /// <summary>
+        /// Web luettavaRaja: kuinka pitkälti kertymä on varmasti valmista luettavaksi. Avoimen [[:n jälkeinen odottaa
+        /// sulkua, ja raja on viimeisen virkkeen lopussa (kesken lauseen katkaistu lausuma kuulostaisi änkytykseltä).
+        /// </summary>
+        internal static int LuettavaRaja(string teksti)
+        {
+            string koko = teksti ?? "";
+            int auki = koko.LastIndexOf("[[", StringComparison.Ordinal), kiinni = koko.LastIndexOf("]]", StringComparison.Ordinal);
+            string varma = auki > kiinni ? koko.Substring(0, auki) : koko;
+            int raja = 0;
+            foreach (Match m in VirkkeenRaja.Matches(varma)) raja = m.Index + m.Length;
+            return raja;
+        }
+
+        /// <summary>Striimin pala luennalle (web syotaLuennalle): virta käynnistyy laiskasti ensimmäisestä valmiista virkkeestä.</summary>
+        void SyotaLuennalle(string kertynyt)
+        {
+            if (!Virkevirta || !LuentaPaalla || luentaHiljennetty) return;
+            int raja = LuettavaRaja(kertynyt);
+            if (raja <= luettuun) return;
+            if (luentaVirta == null)
+            {
+                var puhe = Puhe.Hae();
+                if (puhe == null) return;
+                var vuoro = puheVuoro;
+                KuunteleVuoroa(puhe);
+                Puhe.Virtaluenta virta = null;
+                virta = puhe.LueVirtana("pollo", () =>
+                {
+                    if (luentaVirta == virta) luentaVirta = null;
+                    if (vuoro != null && puheVuoro == vuoro) LopetaPuheVuoro();
+                });
+                luentaVirta = virta;
+                if (virta == null) return;
+            }
+            // Kaiutin kytketty kesken striimin: luettuun = 0, joten jo saapunut alku luetaan ensin (web).
+            string pala = Puhuttava(kertynyt.Substring(luettuun, raja - luettuun)).Trim();
+            luettuun = raja;
+            if (pala.Length > 0) luentaVirta.Lisaa(pala);
+        }
+
+        /// <summary>Striimin loppu luennalle (web paataLuenta): viimeinen vajaa virke ja päätös. true = virta hoiti vastauksen.</summary>
+        bool PaataLuenta(Tulos t)
+        {
+            var virta = luentaVirta;
+            int mihin = luettuun;
+            luentaVirta = null;
+            luettuun = 0;
+            if (virta == null || !virta.Voimassa) return virta != null;
+            // Loppu-tapahtuman vastaus jatkaa samaa tekstiä (worker jatkaa sanarajaan pysähtyneen); muuten kertymä.
+            string kertynyt = t.Kertynyt ?? "";
+            string lahde = t.Vastaus != null && mihin <= kertynyt.Length && t.Vastaus.Length >= mihin
+                && string.CompareOrdinal(t.Vastaus, 0, kertynyt, 0, mihin) == 0 ? t.Vastaus : kertynyt;
+            string hanta = mihin < lahde.Length ? Puhuttava(lahde.Substring(mihin)).Trim() : "";
+            if (hanta.Length > 0) virta.Lisaa(hanta);
+            virta.Paata();
+            return true;
+        }
+
+        /// <summary>Kesken jäänyt virtaluenta pois (sulku, virhe, mikki): web peruLuenta.</summary>
+        void PeruLuenta()
+        {
+            var virta = luentaVirta;
+            luentaVirta = null;
+            luettuun = 0;
+            if (virta != null && virta.Voimassa) Puhe.Instanssi?.Pysayta(0.2f);
         }
 
         void PuheMuuttui(bool puhuu)
@@ -1301,7 +1414,13 @@ namespace Matkakirja.Natiivi
                 vuoro.Vahti?.Pause();
                 if (vuoro.Kuunneltu != null) vuoro.Kuunneltu.Puhuu -= PuheMuuttui;
             }
-            if (hiljaa) PysaytaPulunPuhe();
+            if (hiljaa)
+            {
+                // Vastaus voi yhä virrata: luenta ei saa käynnistyä uudelleen tämän vastauksen aikana.
+                if (kysyy) luentaHiljennetty = true;
+                PeruLuenta();
+                PysaytaPulunPuhe();
+            }
             AsetaPuheTila(null);
         }
 

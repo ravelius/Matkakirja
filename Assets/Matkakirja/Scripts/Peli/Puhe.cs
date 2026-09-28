@@ -430,6 +430,138 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// VIRKEVIRTA (web js/lukija.js lueVirtana, Pulun striimivastaus; Natiivi-UI 28.9.2026): luenta alkaa ensimmäisestä
+        /// valmiista virkkeestä, kun muu vastaus vielä saapuu. Kutsuja syöttää valmiit virkkeet (Lisaa) ja päättää (Paata).
+        /// Putki: kun mikään ei odota vuoroaan, saapuva teksti sitoutuu heti palaksi ja esihaetaan; muuten se kertyy
+        /// ja sitoutuu seuraavaksi palaksi, kun edellinen alkaa latautua. Näin yksi pala on aina valmiina soivan perässä.
+        /// Puhuu pysyy päällä palojen välissä; loppu kutsutaan, kun päätetty virta on soinut loppuun. Uusi Lue/Soita tai
+        /// Pysayta katkaisee virran (Voimassa = false, Lisaa ei tee mitään).
+        /// </summary>
+        public sealed class Virtaluenta
+        {
+            readonly Puhe puhe;
+            internal readonly int Oma;
+            internal readonly string Persoona, Lohko;
+            internal readonly Queue<string> Jono = new Queue<string>();
+            readonly StringBuilder odottaa = new StringBuilder();
+            internal bool Paatetty;
+
+            internal Virtaluenta(Puhe puhe, int oma, string persoona, string lohko)
+            {
+                this.puhe = puhe;
+                Oma = oma;
+                Persoona = persoona;
+                Lohko = lohko;
+            }
+
+            /// <summary>Virta on yhä soiva puhe (ei korvattu eikä pysäytetty).</summary>
+            public bool Voimassa => puhe != null && puhe.tunnus == Oma;
+
+            /// <summary>Valmis virke tai virkkeet luettavaksi.</summary>
+            public void Lisaa(string teksti)
+            {
+                teksti = Lukijaaani.JsTrim(teksti ?? "");
+                if (teksti.Length == 0 || Paatetty || !Voimassa) return;
+                if (odottaa.Length > 0) odottaa.Append(' ');
+                odottaa.Append(teksti);
+                if (Jono.Count == 0) Sitouta();
+            }
+
+            /// <summary>Ei enempää tekstiä: virta loppuu, kun jono on soitettu.</summary>
+            public void Paata()
+            {
+                if (Paatetty) return;
+                Paatetty = true;
+                if (Jono.Count == 0) Sitouta();
+            }
+
+            /// <summary>Kertynyt teksti seuraavaksi palaksi (enintään TekstinKatto) ja sen esihaku jonon kärkeen.</summary>
+            internal void Sitouta()
+            {
+                if (odottaa.Length == 0 || !Voimassa) return;
+                string kaikki = odottaa.ToString();
+                string pala = Katkaise(kaikki, TekstinKatto);
+                odottaa.Clear().Append(Lukijaaani.JsTrim(kaikki.Substring(pala.Length)));
+                Jono.Enqueue(pala);
+                puhe.EsihaePala(pala, Persoona, Lohko, true);
+            }
+
+            internal bool Tyhja => Jono.Count == 0 && odottaa.Length == 0;
+        }
+
+        /// <summary>
+        /// Aloittaa virkevirran (ks. Virtaluenta): soiva puhe vaihtuu tähän kuten Luessa. null, jos luennat on kytketty pois
+        /// (Pulun puhe soi aina, kuten Luessa).
+        /// </summary>
+        public Virtaluenta LueVirtana(string persoona, Action loppu = null)
+        {
+            persoona ??= "kertoja";
+            if (!Paalla && !PulunPuhe(persoona)) return null;
+            soiPyynnosta = false;
+            AsetaIstunto();
+            PuraTauko();
+            int oma = ++tunnus;
+            if (lataus != null) StopCoroutine(lataus);
+            if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
+            this.loppu = loppu;
+            SoivaUrl = "puhe:" + persoona + ":virta";
+            SoivaPersoona = persoona;
+            ViimeVirhe = null;
+            ekaAlku = Time.unscaledTime;
+            mittaaEka = true;
+            esihakujono.Clear();
+            var v = new Virtaluenta(this, oma, persoona, TagiLohko(Lukijaaani.OletusLohko(persoona), null));
+            lataus = StartCoroutine(SoitaVirta(v));
+            return v;
+        }
+
+        IEnumerator SoitaVirta(Virtaluenta v)
+        {
+            int oma = v.Oma;
+            for (int i = 0; ; i++)
+            {
+                // Odotetaan seuraavaa palaa, kunnes virta päätetään ja kaikki on soitettu.
+                while (oma == tunnus && v.Jono.Count == 0)
+                {
+                    v.Sitouta();
+                    if (v.Jono.Count > 0 || (v.Paatetty && v.Tyhja)) break;
+                    yield return null;
+                }
+                if (oma != tunnus) yield break;
+                if (v.Jono.Count == 0) break;
+                string pala = v.Jono.Dequeue();
+                // Soitettavan palan aikana kertynyt teksti seuraavaksi palaksi ja sen haku heti (putki).
+                if (v.Jono.Count == 0) v.Sitouta();
+                var (runko, koodi) = Saadot.Pyynto(pala, v.Persoona, v.Lohko);
+                string avain = Saadot.Valimuistiavain(v.Persoona, pala);
+                PalaNyt = $"v{i + 1} {pala.Length} mrk";
+                for (int yritys = 0; ; yritys++)
+                {
+                    ViimeVirhe = null;
+                    // viimeinen: false — virran loppu hoidetaan alla (lisää tekstiä voi vielä tulla palan soidessa).
+                    yield return LataaJaSoita(avain, () => SynteesiPyynto(runko, koodi), 0, oma, true, true, false, i > 0);
+                    if (oma != tunnus) yield break;
+                    if (ViimeVirhe == null) break;
+                    bool raja = ViimeVirhe.Contains("429");
+                    if (raja || yritys >= PalanUusinnat)
+                    {
+                        Kirjaa($"pala {PalaNyt} LUOVUTETTU ({yritys} uusintaa): {ViimeVirhe}");
+                        yield break;
+                    }
+                    PalojaUusittu++;
+                    Kirjaa($"pala {PalaNyt} uusitaan ({yritys + 1}/{PalanUusinnat}): {ViimeVirhe}");
+                    yield return new WaitForSecondsRealtime(1 << yritys);
+                    if (oma != tunnus) yield break;
+                }
+            }
+            SoivaUrl = null;
+            AsetaPuhuu(false);
+            var l = loppu;
+            loppu = null;
+            l?.Invoke();
+        }
+
         /// <summary>Epäonnistuneen palan uusinnat (1, 2, 4 s) ennen kuin luenta pysähtyy.</summary>
         public const int PalanUusinnat = 3;
         /// <summary>Soiva pala "i/n mrk" (palaloki).</summary>
