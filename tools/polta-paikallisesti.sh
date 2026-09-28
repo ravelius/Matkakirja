@@ -2959,6 +2959,19 @@ if [ "$LUETTELO" -eq 1 ]; then
   tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json"
   # DELTA TODISTAA ITSENSÄ ENNEN LUETTELOA (kopio + tarkistusotos, ks. DELTA).
   if [ -n "$DELTA" ]; then todenna_delta || exit 1; fi
+  # AJO ILMAN NOSTO- TAI NIMIÖSHARDEJA (--ilman-nostoja, --ilman-nimioita;
+  # yöpoltto 28.9.2026): kokoa-nostotasot ei käynnisty, joten väritasot,
+  # erat, nostotasot ja nimiotaso puuttuivat, ja nostotaso väitti
+  # --nostoversion, jota ei poltettu. Kerros, jota ajo ei polttanut, tulee
+  # ämpärin luettelosta (tools/kanna-luettelokentat.mjs). Eheyden jälkeen,
+  # koska ämpärin kerroksilla ei ole tämän ajon shardeja.
+  if [ "$SARJAT" != "nostot" ] && [ -s "$ULOS/ampari-luettelo.json" ]; then
+    node "$JUURI/tools/kanna-luettelokentat.mjs" \
+      --luettelo "$ULOS/luettelo/pyramidi.json" \
+      --ampari "$ULOS/ampari-luettelo.json" \
+      $(grep -q '^nosto-' "$ULOS/lokit/shardit.txt" 2>/dev/null || echo --nostot-amparista) \
+      $(grep -q '^nimio-' "$ULOS/lokit/shardit.txt" 2>/dev/null || echo --nimiot-amparista) || exit 1
+  fi
   # NOSTOTASOAJO TUNTEE VAIN NOSTOTASON (Fable 18.9.2026 klo 20.00):
   # `--sarjat nostot` vei ämpäriin luettelon, jonka `varitasot` oli
   # null ja `erat` puuttui — kerma katosi pelaajilta puoleksi tunniksi
