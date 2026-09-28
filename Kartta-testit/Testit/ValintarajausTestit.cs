@@ -21,6 +21,15 @@ namespace Matkakirja.Kartta.Testit
             (37.7749, -122.4194), Tanger, Istanbul,
         };
 
+        /// <summary>Aloitusnäkymän rajattu valintanäkymä iPhone 17:ssä (aloitusradan testien napautusnäkymä).</summary>
+        internal static AloituslennonRata.Asento Iphone17Valinta()
+        {
+            double suhde = 402.0 / 874.0;
+            double d0 = Valintarajaus.AnkkuriEtaisyys(Lat0, Lon0, Tan, suhde, PallonOsuus, AnkkuriVara, Ankkurit);
+            var (lat, d) = Valintarajaus.Sovita(Lat0, Lon0, d0, Tan, suhde, 1 - 2 * (133 + NimiYla) / 874, -AnkkuriVara, Valittavat, Ankkurit);
+            return new AloituslennonRata.Asento(lat, Lon0, (d - 1) * 6_378_137.0, 0, 0, 0);
+        }
+
         /// <summary>Pisteen y ruudun yläreunasta (pt).</summary>
         static double YPt(double lat, double d, double suhde, double korkeusPt, (double Lat, double Lon) p)
         {

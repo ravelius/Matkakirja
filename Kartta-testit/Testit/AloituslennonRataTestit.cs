@@ -18,10 +18,13 @@ namespace Matkakirja.Kartta.Testit
         static readonly (string Id, double Lat, double Lon)[] Kohteet =
         {
             ("ateena", 37.98, 23.73), ("rooma", 41.9, 12.5), ("istanbul", 41.01, 28.98), ("lissabon", 38.72, -9.14),
-            ("pariisi", 48.857, 2.352), ("kairo", 30.04, 31.24), ("moskova", 55.75, 37.62),
+            ("pariisi", 48.857, 2.352), ("kairo", 30.04, 31.24), ("moskova", 55.75, 37.62), ("tanger", 35.76, -5.83),
         };
-        /// <summary>Valintanäkymä (Aloitusnakyma: 30° N 17° E, koko pallo, v3–v7-lokit: 7 597 km).</summary>
-        static readonly AloituslennonRata.Asento Napautus = new AloituslennonRata.Asento(30.0, 17.0, 7_597_000, 0, 0, 0);
+        /// <summary>Valintanäkymä iPhone 17:ssä (Aloitusnakyma.Valintanakyma): webin 30° N 17° E ja 7 597 km rajattuna
+        /// pelikellon alle (v3f, Valintarajaus) → 37,06° N.</summary>
+        static readonly AloituslennonRata.Asento Napautus = ValintarajausTestit.Iphone17Valinta();
+        /// <summary>Lontoon nappulan puolikas leveys ruudun puolikkaana (web 32 × 36 px, jalka pisteessä; iPhone 17 402 pt).</summary>
+        const double NappulaPuoliX = 16.0 / 201.0;
 
         static AloituslennonRata Rata(double lat, double lon, string id = null)
         {
@@ -327,8 +330,12 @@ namespace Matkakirja.Kartta.Testit
             foreach (var k in Kohteet)
             {
                 var r = Rata(k);
+                // Lähtöpiste = Lontoon nappula: jalka ruudun korkeudella ja nappula vähintään osin ruudulla (Kairo 1,9 s: x −1,02).
                 for (double t = 0.3; t <= AloituslennonRata.AvausS; t += 0.1)
-                    Oleta.Tosi(r.Ruudussa(t, LontooLat, LontooLon, 0, out _, out _), $"{k.Id} Lontoo kuvassa t={t:F1}");
+                {
+                    r.Ruudussa(t, LontooLat, LontooLon, 0, out double x, out double y);
+                    Oleta.Tosi(Math.Abs(x) <= 1 + NappulaPuoliX && Math.Abs(y) <= 1, $"{k.Id} Lontoon nappula kuvassa t={t:F1} ({x:0.00}, {y:0.00})");
+                }
             }
         }
 
