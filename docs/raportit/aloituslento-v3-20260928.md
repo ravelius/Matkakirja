@@ -149,3 +149,32 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
     valintanäkymään (37,3° N 17,0° E), ja lento Tangeriin päättyi 15,00 s:ssa (`v3f2-esikaanto/`, F = 8,642 s).
   - Suositus: lähtö 01.00 (oletus). Valinnassa on yö koko Euroopassa, aamunkoitto tulee lennon aikana, eikä perillä tule
     hyppyä.
+
+## v3f3: päivä tulee lennolla aiemmin (omistaja 15.3x: "päivä voisi tulla aiemmin")
+
+- Haara aloitus-paivayo **8f38f4e0**, käännös **c9fb354d**:
+  - Lähtö on klo 02.30 (Pelikello.OletusAlkuKelloUtc; ennen 01.00).
+  - Lennon kello on perillä jo saapumisen alussa, 12,6 s (ennen radan lopussa, 15 s).
+  - Kartta-testit 363/363, mukana uusi testi PaivaTuleeEnnenOhitusta.
+- Mallin mukaan päivä tulee katsepisteeseen (aurinko yli 2°) seuraavasti:
+
+  | Kaupunki | Päivä, v3f3 | Päivä, ennen | Aurinko ohituksessa, v3f3 | Ennen |
+  |---|---|---|---|---|
+  | Ateena | 5,4 s | 8,4 s | 21° | −8° |
+  | Istanbul | 5,0 s | 8,0 s | 23° | −4° |
+  | Moskova | 4,5 s | 7,5 s | 20° | 1° |
+  | Kairo | 4,7 s | 7,6 s | 30° | −1° |
+  | Tanger | 7,4 s | 11,5 s | 0° | −29° |
+
+  Valinnassa Moskova on yössä (−8,3°).
+- Hylätyt vaihtoehdot:
+  - Lähtö 03.00: Moskova olisi valinnassa hämärässä (−4°).
+  - Kello sidottuna koneen reittiin: päivä tulisi jo 2,8 s:ssa, ja valonraja pyyhkäisisi hyppymäisesti.
+  - Etupainotteiset Beta-käyrät: niillä aamunkoitto kestäisi vain 0,4–0,5 s.
+- Kuvattu 16.01–16.06: Ateena sekä v3g-lennot Moskovaan, Istanbuliin ja Kairoon, kaikki 15,00 s ja 0 poikkeusta. Kuvaus
+  osui kuitenkin junakäännöksen ja neljän simulaattoriasennuksen päälle:
+  - Ohituksessa oli ladattuna 598 laattaa (v3f2:ssa 1 259), ja valmiusaste oli 16–26 % (v3f2:ssa 36–55 %).
+  - Päiväosuus näytti tasaisen beigeltä ilman kohokuviota.
+  - Päivänvalo ei muuta varjostusta päiväpuolella: hämärän paino lasketaan pallon normaalista, ei rinteestä. Hiljaisena
+    hetkenä kuvatussa v3f2:ssa kohokuvio näkyi myös 23°:n auringolla.
+  - Uusintakuvaus tehdään hiljaisena hetkenä ja ~30 s:n odotuksella valinnassa ennen omistajalle lähettämistä.
