@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2377, teksti: 'Astronautin kamera: Pulun taulu vaihtaa näkymää' },
+  { v: 2378, teksti: 'Astronautin kamera: Pulun taulu vaihtaa näkymää' },
   { v: 2375, teksti: 'ISS:n kyyti Astronautin kameraan' },
   { v: 2374, teksti: 'v2373: Pulu: ISS-tervetulo Astronautin kamerass… (#3575)' },
   { v: 2373, teksti: 'v2354: Nostot ja nimet häipyvät pehmeästi, kaup… (#3540)' },

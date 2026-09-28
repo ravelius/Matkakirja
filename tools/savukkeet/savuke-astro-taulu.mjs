@@ -174,7 +174,8 @@ const taulunTila = async (s) => {
   }, null, { timeout: 3000, polling: 50 }).catch(() => {});
   return taulunTilaNyt(s);
 };
-const taulunTilaNyt = (s) => s.evaluate(() => {
+const taulunTilaNyt = (s) => s.evaluate(async () => {
+  const { pulunLaatikko } = await import('/js/linssit/pulu-taulu.js');
   const kahva = window.matkakirja.ui.pallolinssi?.kahva;
   const p = document.querySelector('.astro-paneeli');
   const b = p?.getBoundingClientRect();
@@ -189,6 +190,14 @@ const taulunTilaNyt = (s) => s.evaluate(() => {
       tunnus: r.dataset.tunnus, valittu: r.classList.contains('astro-valittu'),
     })) : [],
     kesto: p ? getComputedStyle(p).transitionDuration : null,
+    pulu: (() => { const r = pulunLaatikko(document); return r ? [r.left, r.top, r.right, r.bottom].map(Math.round) : null; })(),
+    sulku: (() => {
+      const x = p?.querySelector('.astro-sulku');
+      if (!x) return null;
+      const b = x.getBoundingClientRect();
+      const e = getComputedStyle(x, '::before');
+      return { w: Math.round(b.width), h: Math.round(b.height), ympyraW: e.width, ympyraH: e.height, sade: e.borderRadius };
+    })(),
     opacity: p ? getComputedStyle(p).opacity : null,
     anim: p ? p.getAnimations().map((a) => `${a.playState}:${Math.round(a.currentTime ?? -1)}`) : [],
     luokat: p?.className ?? null,
@@ -204,7 +213,7 @@ const taulunTilaNyt = (s) => s.evaluate(() => {
 });
 
 /** Oikea napautus Pulun nappiin (hiiri sen keskelle, kuten pelaaja). */
-const napautaPulua = async (s) => {
+const napautaPulua = async (s, { vainJosOsuu = false } = {}) => {
   /*
    * Pulun vanhat kuplat häipyvät 220 ms:ssa taulun auetessa (js/pollo.js
    * poistaKuplat), ja pinon kehys voi olla sen hetken napin päällä: odotetaan
@@ -234,6 +243,7 @@ const napautaPulua = async (s) => {
     return { x, y, osuu, ...(osuu ? {} : { paalla: `${paalla?.tagName}.${String(paalla?.className).slice(0, 60)}` }) };
   });
   if (!r) return { ok: false };
+  if (vainJosOsuu && !r.osuu) return { ok: false, osuu: false, paalla: r.paalla };
   await s.mouse.click(r.x, r.y);
   await s.waitForTimeout(350);
   return { ok: true, osuu: r.osuu, ...(r.paalla ? { paalla: r.paalla } : {}) };
@@ -307,6 +317,13 @@ for (const laite of ['iphone', 'ipad']) {
       && t.rivit.find((r) => r.valittu)?.tunnus === 'pallo',
     JSON.stringify({ rivit: t.rivit, opacity: t.opacity, kuplia: t.kuplia, anim: t.anim, luokat: t.luokat, ohita: t.ohita }));
   vaadi(n('1. tervetulon kuplat eivät jää taulun alle'), t.kuplia === 0, `${t.kuplia}`);
+  const leikkaa = (a, b) => Boolean(a && b && a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a[3]);
+  vaadi(n('2. taulu ei peitä Pulua (suorakulmiot eivät leikkaa, rako ≥ 8 px)'),
+    t.pulu && !leikkaa(t.laatikko, t.pulu) && t.pulu[1] - t.laatikko[3] >= 8,
+    `taulu ${JSON.stringify(t.laatikko)} pulu ${JSON.stringify(t.pulu)}`);
+  vaadi(n('2. ✕ on ehjä ympyrä, osuma-ala ≥ 44 px'),
+    t.sulku?.w >= 44 && t.sulku?.h >= 44 && t.sulku.ympyraW === t.sulku.ympyraH && t.sulku.sade === '50%',
+    JSON.stringify(t.sulku));
   vaadi(n('2. peitto ≤ 45 % ruudusta'), t.peitto > 0 && t.peitto <= 0.45, `${(t.peitto * 100).toFixed(1)} % ${JSON.stringify(t.laatikko)}`);
   const kestoMs = parseFloat(t.kesto) * (String(t.kesto).includes('ms') ? 1 : 1000);
   vaadi(n('2. häivytys ≤ 250 ms'), kestoMs > 0 && kestoMs <= 250, t.kesto);
@@ -321,6 +338,8 @@ for (const laite of ['iphone', 'ipad']) {
   t = await taulunTila(s);
   vaadi(n('3. Pulun napautus sulkee ja avaa taulun'), n1.ok && n2.ok && n1.osuu && kiinni && t.nakyy, JSON.stringify({ n1, n2, kiinni, nakyy: t.nakyy }));
   vaadi(n('3. pelin chatti ei aukea linssissä'), !t.chatti);
+  vaadi(n('3. napautuksen jälkeen taulu ei peitä Pulua'), t.pulu && !leikkaa(t.laatikko, t.pulu),
+    `taulu ${JSON.stringify(t.laatikko)} pulu ${JSON.stringify(t.pulu)}`);
   await kuva(s, `astro-taulu-${laite}-2-pulun-napautus`);
 
   /* ISS:n sisälle. */
@@ -341,6 +360,8 @@ for (const laite of ['iphone', 'ipad']) {
   vaadi(n('4. kyydissä Pulun napautus osuu Puluun ja avaa taulun, ISS:n sisälle valittuna'),
     n3.osuu && t.nakyy && t.rivit.find((r) => r.valittu)?.tunnus === 'iss-sisalle' && t.kyyti?.tila === 'ikkuna',
     JSON.stringify({ n3, valittu: t.rivit.find((r) => r.valittu)?.tunnus, kyyti: t.kyyti }));
+  vaadi(n('4. kyydissä taulu ei peitä Pulua'), t.pulu && !leikkaa(t.laatikko, t.pulu),
+    `taulu ${JSON.stringify(t.laatikko)} pulu ${JSON.stringify(t.pulu)}`);
   await kuva(s, `astro-taulu-${laite}-4-taulu-kyydissa`);
 
   /* ISS:n rinnalla → seuranta. */
@@ -421,7 +442,17 @@ if (!VAIN || VAIN === 'puhe') {
   }, null, 30000);
   await s.waitForTimeout(1500);
   const ennen = await taulunTila(s);
-  const napautus = await napautaPulua(s);
+  /*
+   * Pulu voi olla puheen ajan väistynyt oman kuplansa alta piiloon
+   * (js/pulu-paneelin-ylla.js); silloin pelaaja ei voi napauttaa sitä, ja
+   * sama polku ajetaan taulun kahvalla (napautaPulua = dokumentin kuuntelija).
+   */
+  let napautus = await napautaPulua(s, { vainJosOsuu: true });
+  if (!napautus.osuu) {
+    console.log(`INFO  puhe: Pulu piilossa kuplan alla (${napautus.paalla}), napautus kahvalla`);
+    await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.taulu.napautaPulua());
+    napautus = { ok: true, kahvalla: true };
+  }
   const jalkeen = await taulunTila(s);
   vaadi('puhe: tervetulo soi ennen napautusta, taulu kiinni', avaus.tervetulo && alkoi && ennen.liviaAani && !ennen.nakyy,
     JSON.stringify({ tervetulo: ennen.tervetulo, liviaAani: ennen.liviaAani, nakyy: ennen.nakyy }));

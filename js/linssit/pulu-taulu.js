@@ -63,7 +63,7 @@
  */
 
 import { pysaytaLivianAani } from '../liviapuhe.js';
-import { polloKuplatPois } from '../pollo.js';
+import { polloKuplatPois, polloPaneelivahtiNyt } from '../pollo.js';
 import { pulunIssVahennaLiiketta } from './pulu-iss.js';
 
 /** Hengähdys tervetulon lopusta (tai paljastuksesta) taulun avaukseen. */
@@ -80,6 +80,12 @@ export const MOODIN_ASKEL_MS = 120;
 export const MOODIN_KATTO_MS = 15000;
 /** Moodin vaihdon toimia enintään (pelaajan oma napautus ei aja kilpaa). */
 export const MOODIN_TOIMIA = 4;
+/** Rako Pulun yläreunan ja taulun alareunan välissä. */
+export const TAULUN_RAKO_PX = 8;
+/** Astronautti-Pulun leijunnan korkein nousu (css/satelliitti.css). */
+export const LEIJUNNAN_VARA_PX = 5;
+/** Auki olevan taulun Pulu-mittauksen väli. */
+export const TAULUN_SEURANTA_MS = 400;
 /** Taulun otsikko (sovelluksen tekstiä, ei Livian repliikki). */
 export const TAULUN_OTSIKKO = 'Minne katsotaan?';
 
@@ -189,6 +195,42 @@ export function liviaPuhuu(ui, tervetulo = null) {
 }
 
 /**
+ * PULUN NÄKYVÄ LAATIKKO ruudulla: pöllönapin ja piirretyn hahmon
+ * (lentonäyttämön SVG:n osat, joilla on koko) unioni, tai null.
+ * Lentonäyttämö itse on 152 × 304 px:n läpinäkyvä kangas, joten sen
+ * oma laatikko olisi liian iso — mitataan piirretyt osat.
+ */
+export function pulunLaatikko(doc = globalThis.document) {
+  const laatikot = [];
+  const nappi = doc?.querySelector?.(PULUN_NAPPI)?.getBoundingClientRect?.();
+  if (nappi?.width > 0 && nappi?.height > 0) laatikot.push(nappi);
+  /*
+   * HAHMO MYÖS HETKELLISESTI HÄIVYTETTYNÄ: lentonäyttämö voi olla juuri
+   * avaushetkellä läpinäkyvä (ele, kohtaus), ja paikalleen palaava hahmo
+   * jäisi taulun alle (mitattu iPadilla 28.9.). Opacity ei muuta laatikoita,
+   * joten osat mitataan aina — mutta vain napin lähellä olevat, jottei
+   * muualle lentänyt hahmo nosta taulua turhaan.
+   */
+  const lento = doc?.querySelector?.('.livia-lentonayttamo');
+  if (lento && !lento.hidden && nappi?.width > 0) {
+    const alue = { left: nappi.left - 80, top: nappi.top - 120, right: nappi.right + 80, bottom: nappi.bottom + 40 };
+    for (const el of lento.querySelectorAll('svg *')) {
+      const b = el.getBoundingClientRect();
+      if (!(b.width > 0 && b.height > 0)) continue;
+      if (b.right < alue.left || b.left > alue.right || b.bottom < alue.top || b.top > alue.bottom) continue;
+      laatikot.push(b);
+    }
+  }
+  if (!laatikot.length) return null;
+  return {
+    left: Math.min(...laatikot.map((b) => b.left)),
+    top: Math.min(...laatikot.map((b) => b.top)),
+    right: Math.max(...laatikot.map((b) => b.right)),
+    bottom: Math.max(...laatikot.map((b) => b.bottom)),
+  };
+}
+
+/**
  * DOM-NÄKYMÄ: yksi paneeli bodyssä, rivit datasta. Palauttaa
  * { nayta(rivit), piilota(), auki(), elementti, pura() }. Rivin napautus
  * kutsuu `valitse(tunnus)`, sulku `sulje()`.
@@ -249,22 +291,47 @@ export function luoTaulunNakyma({
     }));
   };
   /*
-   * PANEELI PULUN YLLÄ: alareuna mitataan pöllönapista (Pulu on oikeassa
-   * alakulmassa, eri paikassa kyydissä ja lehtien päällä), ja jos nappia
-   * ei löydy, CSS:n oletus pitää paneelin oikeassa alakulmassa.
+   * PANEELI PULUN YLLÄ: alareuna = Pulun yläreuna + TAULUN_RAKO_PX, mitattuna
+   * joka avauksella (Pulu on eri paikassa puhelimella, iPadilla ja kyydissä).
+   * PULU EI OLE PELKKÄ NAPPI: piirretty hahmo (lentonäyttämön SVG) ulottuu
+   * napin yläpuolelle — iPhonella nappi 743 px, hahmon päälaki 705 px
+   * (mitattu savukkeella 28.9.), ja pelkän napin mukaan sijoitettu taulu
+   * peitti Pulun. Siksi mitataan napin ja hahmon näkyvien osien unioni
+   * (pulunLaatikko). Leijunta nostaa hahmoa enintään 5 px (css/satelliitti.css
+   * livia-astronautti-leijuu), joten rakoon lisätään sen verran varaa.
+   * Jos tila ei riitä, paneeli ei mene Pulun päälle: sen korkeus rajataan
+   * ruudun yläreunaan asti ja rivit vierivät (CSS max-height).
    */
-  const sijoita = () => {
+  let ala = 0;
+  const sijoita = ({ vainYlos = false } = {}) => {
     try {
-      const nappi = doc.querySelector(PULUN_NAPPI);
-      const r = nappi?.getBoundingClientRect?.();
+      const r = pulunLaatikko(doc);
       const korkeus = doc.defaultView?.innerHeight ?? 0;
-      if (r && r.height > 0 && korkeus > 0) {
-        const ala = Math.max(12, Math.round(korkeus - r.top + 8));
+      if (r && korkeus > 0) {
+        const uusi = Math.max(12, Math.round(korkeus - r.top + TAULUN_RAKO_PX + LEIJUNNAN_VARA_PX));
+        // Auki ollessa taulu väistää vain ylöspäin: leijunta ei saa heiluttaa sitä.
+        if (vainYlos && uusi <= ala) return;
+        ala = uusi;
         paneeli.style.setProperty('--astro-paneeli-ala', `${ala}px`);
-      } else {
+      } else if (!vainYlos) {
+        ala = 0;
         paneeli.style.removeProperty('--astro-paneeli-ala');
       }
     } catch { /* oletuspaikka */ }
+  };
+  /*
+   * AUKI OLLESSA PULU MITATAAN UUDESTAAN (TAULUN_SEURANTA_MS): hahmo voi
+   * palata paikalleen tai nousta eleeseen vasta avauksen jälkeen.
+   * 43 laatikon luku harvoin ei rasita kehystä.
+   */
+  let seurantaKello = 0;
+  const seuraa = () => {
+    kello.clearTimeout?.(seurantaKello);
+    seurantaKello = kello.setTimeout?.(() => {
+      if (paneeli.hidden || !paneeli.classList.contains('astro-paneeli-auki')) return;
+      sijoita({ vainYlos: true });
+      seuraa();
+    }, TAULUN_SEURANTA_MS) ?? 0;
   };
   return {
     elementti: paneeli,
@@ -272,6 +339,7 @@ export function luoTaulunNakyma({
       kello.clearTimeout?.(piiloKello);
       latoRivit(rivit);
       sijoita();
+      seuraa();
       paneeli.hidden = false;
       // Häivytys alkaa seuraavasta kehyksestä (piilosta näkyviin ei ole siirtymää).
       if (vahennaLiiketta) paneeli.classList.add('astro-paneeli-auki');
@@ -290,6 +358,7 @@ export function luoTaulunNakyma({
     sisaltaa: (el) => Boolean(el && paneeli.contains(el)),
     pura() {
       kello.clearTimeout?.(piiloKello);
+      kello.clearTimeout?.(seurantaKello);
       paneeli.remove();
     },
   };
@@ -326,7 +395,15 @@ export function luoAstroTaulu({
   vahennaLiiketta = pulunIssVahennaLiiketta(ui),
   nakyma = undefined,
   vaikene = (u) => { pysaytaLivianAani(u, { haivyta: false }); polloKuplatPois(); },
-  kuplatPois = polloKuplatPois,
+  kuplatPois = () => {
+    polloKuplatPois();
+    /*
+     * Kuplat häipyvät 220 ms:ssa (js/pollo.js poistaKuplat). Sen jälkeen
+     * Pulun paneelivahti ajetaan heti: jos Pulu oli väistynyt kuplan alta
+     * piiloon, se palaa näkyviin ja napautettavaksi, vaikka pallo liikkuu.
+     */
+    kello.setTimeout?.(() => polloPaneelivahtiNyt(), 260);
+  },
   automaatti = true,
 } = {}) {
   const k = { avaruus, kuvaAuki, kuviaOn };
