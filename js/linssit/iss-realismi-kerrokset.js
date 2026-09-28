@@ -84,10 +84,10 @@ void main() {
 /* ─────────────────────────── YÖKUORI ─────────────────────────── */
 
 const YOKUORI_FRAGMENT = `
-uniform float uOsuus, uPeitto, uR, uValot, uMaaVoima, uKiilto, uAalto, uVarjo, uYoVesi;
+uniform float uOsuus, uPeitto, uR, uValot, uMaaVoima, uKiilto, uAalto, uVarjo, uYoVesi, uPilvetOn;
 uniform vec3 uVari, uAurinko;
 uniform vec4 uEuRaja;
-uniform sampler2D uValotEu, uValotMaa, uVesiEu, uVesiMaa;
+uniform sampler2D uValotEu, uValotMaa, uVesiEu, uVesiMaa, uPilvet;
 varying vec3 vMaailma;
 float yo(vec3 n) { return 1.0 - smoothstep(-0.105, 0.035, dot(n, uAurinko)); }
 void main() {
@@ -120,8 +120,12 @@ void main() {
   float l = mix(texture2D(uValotMaa, uvMaa).r * uMaaVoima, texture2D(uValotEu, uvEu).r, euPaino);
   float vesi = mix(texture2D(uVesiMaa, uvMaa).r, texture2D(uVesiEu, uvEu).r, euPaino);
   l = l * l * 0.6 + l * 0.4;
+  // Päivän pilvet peittävät valot ja heijastuksen (natiivi 2eb8a5d0): pilvikuoren kuva, tasakulmainen, v = 0 etelässä.
+  // Bias −16 = tason 0 näyte kuten natiivin LOD 0: atan-sauma ±180°:ssa ei valitse pienintä mip-tasoa.
+  float pilvi = uPilvetOn * texture2D(uPilvet, vec2(lon / 6.2831853 + 0.5, asin(clamp(ng.y, -1.0, 1.0)) / 3.14159265 + 0.5), -16.0).a;
+  float lapi = 1.0 - 0.85 * pilvi;
   vec3 savy = mix(vec3(1.0, 0.52, 0.2), vec3(1.0, 0.88, 0.7), clamp(l * 1.6, 0.0, 1.0));
-  c += savy * l * uValot * yo(ng) * osuu;
+  c += savy * l * uValot * yo(ng) * osuu * lapi;
 
   // Auringon heijastus vesiltä: Beckmann D · Schlick F / (4 n·v).
   vec3 v = normalize(o - p);
@@ -130,7 +134,7 @@ void main() {
   float nh2 = max(nh * nh, 1e-4);
   float D = exp(-(1.0 - nh2) / (nh2 * uAalto)) / (3.14159265 * uAalto * nh2 * nh2);
   float F = 0.02 + 0.98 * pow(1.0 - clamp(dot(v, hv), 0.0, 1.0), 5.0);
-  float kiilto = vesi * osuu * clamp(nl * 12.0, 0.0, 1.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * uKiilto;
+  float kiilto = vesi * osuu * clamp(nl * 12.0, 0.0, 1.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * uKiilto * lapi;
   vec3 kiiltoVari = mix(vec3(1.0, 0.55, 0.25), vec3(1.0, 0.96, 0.88), clamp(nl * 4.0, 0.0, 1.0));
   c += kiiltoVari * kiilto * (1.0 - a);
   float lisa = vesi * osuu * yoKuori * clamp(uYoVesi - a, 0.0, 1.0);
@@ -283,7 +287,9 @@ const aurinkoUniform = (mat, [x, y, z]) => Object.assign(mat.uniforms.uAurinko.v
  * Yökuori: yö, varjostus, kaupunkien valot, kiilto, vesien yöpeitto. Tekstuurit ladataan rakennettaessa; kuori piirtyy
  * vasta, kun ne ovat valmiit (siihen asti ei mitään, ei mustaa kuorta).
  */
-export function yokuori({ ikkuna = globalThis, lahteet = LAHTEET, arvot = YOKUORI, jarjestys = JARJESTYS.yokuori } = {}) {
+export function yokuori({
+  ikkuna = globalThis, lahteet = LAHTEET, arvot = YOKUORI, jarjestys = JARJESTYS.yokuori, pilvikuva = null,
+} = {}) {
   let mesh = null; let valmis = false; const ab = { valot: 1, kiilto: 1, varjo: 1 };
   return {
     nimi: 'yokuori',
@@ -295,6 +301,7 @@ export function yokuori({ ikkuna = globalThis, lahteet = LAHTEET, arvot = YOKUOR
         uVarjo: { value: arvot.varjo }, uYoVesi: { value: arvot.yoVesi }, uVari: { value: vec3(y, arvot.vari) },
         uAurinko: { value: vec3(y, [1, 0, 0]) }, uEuRaja: { value: null },
         uValotEu: { value: null }, uValotMaa: { value: null }, uVesiEu: { value: null }, uVesiMaa: { value: null },
+        uPilvet: { value: null }, uPilvetOn: { value: 0 },
       };
       const [a, b, c, d] = arvot.euRaja;
       u.uEuRaja.value = { x: a, y: b, z: c, w: d };
@@ -317,6 +324,10 @@ export function yokuori({ ikkuna = globalThis, lahteet = LAHTEET, arvot = YOKUOR
       u.uValot.value = arvot.valot * ab.valot;
       u.uKiilto.value = arvot.kiilto * ab.kiilto;
       u.uVarjo.value = arvot.varjo * ab.varjo;
+      // Pilvikuoren kuva (pilvet-kerros): peittää valot ja heijastuksen vain, kun pilvet näkyvät.
+      const pk = pilvikuva?.();
+      u.uPilvet.value = pk ?? null;
+      u.uPilvetOn.value = pk ? 1 : 0;
       aurinkoUniform(mesh.material, k.aurinko);
     },
     pura() {
@@ -461,12 +472,15 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       mesh.parent?.remove(mesh); mesh.geometry.dispose?.(); mesh.material.dispose?.(); mesh = null; valmis = false; haettu = false;
     },
     tila: () => ({ valmis, nakyy: Boolean(mesh?.visible) }),
+    /** Pilvikuva muille kerroksille (yökuori), kun pilvet näkyvät; muuten null. */
+    kuva: () => (mesh?.visible ? mesh.material.uniforms.uKuva.value : null),
   };
 }
 
 /** Kaikki natiivin kerrokset järjestyksessä: luoIssRealismi({ kerrokset: realismiKerrokset() }). */
 export function realismiKerrokset(asetukset = {}) {
-  return [pilvet(asetukset), yokuori(asetukset), revontulet(asetukset), ilmakaari(asetukset)];
+  const p = pilvet(asetukset);
+  return [p, yokuori({ ...asetukset, pilvikuva: p.kuva }), revontulet(asetukset), ilmakaari(asetukset)];
 }
 
 /** Tunnisteet varjostimista testejä varten (ei käännetä Nodessa). */
