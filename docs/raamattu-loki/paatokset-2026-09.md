@@ -8451,3 +8451,7 @@ Karttasepan vientikortti ajo-20260927y/vientikortti-20260928.md + 6 kuvaparia om
 ## OMISTAJA: ALOITUSLENNOSSA ATEENAN 3D-SYMBOLI POIS (28.9.2026 klo 07.45)
 
 Omistaja 28.9. aamulla v3-kuvapareista sanatarkasti: "Ota Ateenassa tuo 3d pois lennosta. Näyttää oudolta". Natiiviseppa lisaa v3b:hen: lennon aikana kohteen 3D-mallia ei nayteta (punainen piste + rengas riittaa); mallin paluu lennon jalkeen Natiivisepan suosituksena videon viestissa. v3 muuten: kone kaukaa 2,5 % leveydesta (v2 11,7 %), kosketus 490 km:sta; v3b korjaa ohituksen usvan (ohitus maan paalle), saapumisen sumean maan ja koneen erottuvuuden kosketuksessa.
+
+## OMISTAJA: ALOITUSLENNON LASKEUTUMINEN SELVASTI KAUEMPAA JA KONE PIENEMPANA (28.9.2026 klo 07.45)
+
+Omistaja 28.9. aamulla v3-kuvapareista sanatarkasti: "Ja kamera pitää olla selvästi kauempana ja kone pienemmäksi kun laskeutuminen. Näyttää muuten oudolta". v3:n kosketus 490 km / kone 2,9 % ei riita. Natiiviseppa valitsee v3b:hen selvasti kauemman kameran ja pienemman koneen (lasku pienena liikkeena ison kartan paalla), arvot mitattuina kuvapariin.
