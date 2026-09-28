@@ -175,7 +175,7 @@ namespace Matkakirja.Natiivi
             kylki.AddToClassList("mk-palstat__kylki");
             kylki.style.top = KylkiYla;
             kotelo.Add(kylki);
-            float leveys = -1f, kylkiKorkeus = -1f, kuvanAla = 0f;
+            float leveys = -1f, kylkiKorkeus = -1f, kylkiLeveys = -1f, kuvanAla = 0f;
             VisualElement vieri = null;
             var siirretyt = new List<VisualElement>();
             var mitat = new Dictionary<(string, float), float>();
@@ -213,16 +213,18 @@ namespace Matkakirja.Natiivi
                 bool kaksi = palstoita && w >= Raja;
                 float palsta = kaksi ? Mathf.Floor((w - Rako) / 2f) : w;
                 float kw = Mathf.Round(Mathf.Min(KylkiOsuus * palsta, KylkiKatto) * 10f) / 10f;
-                if (Mathf.Abs(kylki.resolvedStyle.width - kw) > 0.05f || float.IsNaN(kylki.resolvedStyle.width))
+                // Verrataan asetettuun arvoon, ei resolvedStyleen: asettelu pyöristää leveyden pikseliruutuun, jolloin
+                // vertailu ei koskaan täsmäisi ja ladonta jäisi odottamaan (f0e77501: Olympian teksti puuttui).
+                if (Mathf.Abs(kylkiLeveys - kw) > 0.05f)
                 {
                     // Kuvan korkeus (kuvatekstin rivitys) selviää vasta tällä leveydellä: odota uutta asettelua.
+                    kylkiLeveys = kw;
                     kylki.style.width = kw;
                     kylki.style.left = palsta - kw;
                     return;
                 }
-                kylki.style.left = palsta - kw;
                 float kh = kylki.layout.height;
-                if (float.IsNaN(kh) || kh <= 0) return;
+                if (float.IsNaN(kh) || kh <= 0 || Mathf.Abs(kylki.layout.width - kw) > 1f) return;
                 if (Mathf.Abs(w - leveys) < 0.5f && Mathf.Abs(kh - kylkiKorkeus) < 0.5f) return;
                 leveys = w;
                 kylkiKorkeus = kh;
