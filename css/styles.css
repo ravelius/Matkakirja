@@ -13097,7 +13097,8 @@ button.lukija-nappi:focus-visible,
  * ovat VU-mittari kuten isoisän luennassa (#fact-kuuntele): luennan aikana
  * himmeinä ja palavat tasosta, muuten täysinä. Vain läpinäkyvyys (iOS-sääntö).
  */
-.lukija-otsikkorivi.lukija-saatimin { padding-right: 3.7rem; }
+/* Ei kortille itselleen (js/lukija.js KORTTI_KOTINA): kortin oma reunus pysyy. */
+.lukija-otsikkorivi.lukija-saatimin:not(.lukija-kortti-kotina) { padding-right: 3.7rem; }
 
 button.lukija-nappi.lukee .kaiutin-kaari { opacity: 0.2; transition: opacity 120ms linear; }
 button.lukija-nappi.lukee .kaiutin-kaari.palaa { opacity: 1; }
