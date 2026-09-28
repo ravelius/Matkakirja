@@ -1597,9 +1597,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Testikello ISS:lle ja auringolle (yökuori, ilmakehän kaari, Cupolan valo): "yo-eurooppa" hyppää seuraavaan hetkeen
-        /// (enintään 72 h), jolloin ISS on Euroopan yllä (lat 35–65, lon −15…45) ja aurinko sen alapisteessä alle −8°
-        /// (kaupunkien valot näkyvät); "+H" siirtää H tuntia; "pois" palauttaa oikean kellon. Kello kulkee siirron jälkeen.
+        /// Testikello ISS:lle ja auringolle (yökuori, ilmakehän kaari, Cupolan valo, taivas): "yo-eurooppa" hyppää seuraavaan
+        /// syvän yön ylitykseen Keski-Euroopan yllä (kaupunkien valot, tähdet ja Kuu), "hamara" iltahämärään kohti yötä
+        /// (varjostus, hämärän kaari, syttyvät valot), "kiilto" auringon heijastukseen vedestä; "+H" siirtää H tuntia; "pois"
+        /// palauttaa oikean kellon. Kello kulkee siirron jälkeen.
         /// </summary>
         static string KyydinKello(string arvo)
         {
@@ -1610,20 +1611,34 @@ namespace Matkakirja.Natiivi
                 siirto = TimeSpan.FromHours(tunnit);
             else if (arvo == "yo-eurooppa")
             {
+                // Syvä yö Keski-Euroopan yllä (lat 40–60, lon −10…35, aurinko alapisteessä alle −20°, jolloin ISS on
+                // yleensä maan varjossa ja tähdet näkyvät täysinä) enintään 24 vrk:n päästä: syys–lokakuun vaihteessa
+                // ISS ylittää Euroopan vain iltahämärässä (laitteen cl3-ajo 28.9.: 36 h:n haku ei löytänyt yötä), joten
+                // testikello hakee seuraavan aamuyön ylityksen (tietorivillä rata-arvio, jos TLE on yli 7 vrk vanha).
+                // Varalla väljempi ehto 72 h:n sisällä (aurinko alle −8°).
                 var nyt = DateTime.UtcNow;
-                DateTime? loyto = null;
-                for (int s = 0; s < 72 * 3600 && loyto == null; s += 20)
+                var loyto = HaeKyydinHetki(nyt, 24 * 24, 30, (t, lat, lon) => lat >= 40 && lat <= 60 && lon >= -10 && lon <= 35
+                                && AurinkoKorkeus(t, lat, lon) < -20)
+                    ?? HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) => lat >= 35 && lat <= 65 && lon >= -15 && lon <= 45
+                                && AurinkoKorkeus(t, lat, lon) < -8);
+                if (loyto == null) return "ei yöylitystä Euroopan yllä 24 vrk:n sisällä";
+                siirto = loyto.Value.AddSeconds(30) - nyt;
+            }
+            else if (arvo == "hamara")
+            {
+                // Iltahämärä Euroopan yllä kohti yötä (alapisteessä aurinko +2…+6° ja laskee): kamera katsoo eteenpäin
+                // yön rajalle, jolloin päiväpuolen varjostus, hämärän kaari ja syttyvät valot näkyvät samassa kuvassa.
+                var nyt = DateTime.UtcNow;
+                var loyto = HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) =>
                 {
-                    var t = nyt.AddSeconds(s);
-                    var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
-                    if (p.Lat < 35 || p.Lat > 65 || p.Lon < -15 || p.Lon > 45) continue;
-                    var aur = Aurinko.AurinkoEcef(t);
-                    double la = p.Lat * Math.PI / 180, lo = p.Lon * Math.PI / 180;
-                    double sinKorkeus = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
-                    if (sinKorkeus < Math.Sin(-8 * Math.PI / 180)) loyto = t;
-                }
-                if (loyto == null) return "ei yöylitystä Euroopan yllä 72 tunnin sisällä";
-                siirto = loyto.Value.AddSeconds(-20) - nyt;
+                    if (lat < 38 || lat > 62 || lon < -15 || lon > 40) return false;
+                    double h = AurinkoKorkeus(t, lat, lon);
+                    if (h < 2 || h > 6) return false;
+                    var q = Matkakirja.Linssit.Iss.IssNyt.Paikka(t.AddSeconds(60));
+                    return AurinkoKorkeus(t.AddSeconds(60), q.Lat, q.Lon) < h;
+                });
+                if (loyto == null) return "ei iltahämärää Euroopan yllä 72 tunnin sisällä";
+                siirto = loyto.Value - nyt;
             }
             else if (arvo == "kiilto")
             {
@@ -1651,11 +1666,33 @@ namespace Matkakirja.Natiivi
                 if (loyto == null) return "ei heijastushetkeä 24 tunnin sisällä";
                 siirto = loyto.Value.AddSeconds(-10) - nyt;
             }
-            else return "käyttö: astro kyyti kello yo-eurooppa|kiilto|+H|pois";
+            else return "käyttö: astro kyyti kello yo-eurooppa|hamara|kiilto|+H|pois";
             Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow + siirto;
             var k = Matkakirja.Linssit.Iss.IssNyt.Kello();
             var paikka = Matkakirja.Linssit.Iss.IssNyt.Paikka(k);
-            return $"{k:yyyy-MM-dd HH:mm:ss} UTC (siirto {siirto.TotalHours:F2} h), ISS ({paikka.Lat:F2}, {paikka.Lon:F2})";
+            return $"{k:yyyy-MM-dd HH:mm:ss} UTC (siirto {siirto.TotalHours:F2} h), ISS ({paikka.Lat:F2}, {paikka.Lon:F2}), " +
+                   $"aurinko alapisteessä {AurinkoKorkeus(k, paikka.Lat, paikka.Lon):F1}°";
+        }
+
+        /// <summary>Ensimmäinen hetki (askel s, enintään tunnit), jolloin ISS:n alapiste täyttää ehdon; null = ei löydy.</summary>
+        static DateTime? HaeKyydinHetki(DateTime alku, double tunnit, int askel, Func<DateTime, double, double, bool> ehto)
+        {
+            for (int s = 0; s < tunnit * 3600; s += askel)
+            {
+                var t = alku.AddSeconds(s);
+                var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
+                if (ehto(t, p.Lat, p.Lon)) return t;
+            }
+            return null;
+        }
+
+        /// <summary>Auringon korkeus (asteina) maan pisteessä lat, lon hetkellä t.</summary>
+        static double AurinkoKorkeus(DateTime t, double lat, double lon)
+        {
+            var aur = Aurinko.AurinkoEcef(t);
+            double la = lat * Math.PI / 180, lo = lon * Math.PI / 180;
+            double s = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
+            return Math.Asin(Math.Max(-1, Math.Min(1, s))) * 180 / Math.PI;
         }
 
         internal void Kirjaa(string teksti)
