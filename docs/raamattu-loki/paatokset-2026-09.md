@@ -8847,3 +8847,7 @@ Päätoimittaja 28.9. klo 20.44 (Natiivisepän kysymys): BUILD 39 = 5b7261cc het
 ## OMISTAJA: ALOITUSLENTO V3F4 TOISTAISEKSI; POLLO-RAJA JA KEHITTÄJÄKOODI (28.9.2026 klo 20.57)
 
 Omistaja 28.9. klo 20.57 kortilla (v3f4-video + kuvaparit 2,0/7,3/9,5 s) sanatarkasti: "Ei ole viel hyvä mutta pidetään tämä toistaiseksi" → v3f4 (aloitus-paivayo, käännös 7d8a0812) 1.0.40-junaan välivaiheena; uusi kierros vasta omistajan suunnalla. Pöllö-raja: chatin laskuri 30/IP/vrk täyttyi (31), Pelikoodari nollasi yhden KV-avaimen; omistaja ei ollut estossa, koska natiivin kehittäjätila pääkoodilla lähettää x-pollo-kehittajan (chat, puhe, realtime). Julkaisija #3579: 15 savuketta saa otsakkeen yhteisestä apufunktiosta (savukkeet-mac-secret, vartiotesti). Kaikki roolit ohjeistettu käyttämään kehittäjäkoodia tuotantokokeissa.
+
+## TILA: TF 1.0.39 SISÄISESSÄ RYHMÄSSÄ, TF-PALAUTE POIS (28.9.2026 klo 21.01)
+
+Julkaisija 28.9. klo 21.00: TF 1.0.39 (202609281745, proto e4c624a9) sisäisessä ryhmässä ilman Testattavaa-tekstiä; sisäisen ryhmän feedbackEnabled True → False (ASC API, #3577). Mukana Pulun hyppykorjaus + puheen pysäytys chatin sulkuun. Omistaja todentaa avauksessa, katoavatko TF:n avaussivut.
