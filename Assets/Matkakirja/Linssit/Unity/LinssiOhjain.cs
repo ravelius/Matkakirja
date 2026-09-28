@@ -1659,9 +1659,11 @@ namespace Matkakirja.Natiivi
                 {
                     var t = nyt.AddSeconds(s);
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
-                    var kk = Matkakirja.Linssit.Iss.IssKuvakulma.Ikkuna(new Matkakirja.Linssit.Iss.IssHetki(p,
-                        Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(t) * 1000, Matkakirja.Linssit.Iss.IssNyt.Suuntima(t)));
+                    var kk = IkkunanKatse(t);
                     if (!Yokuori.OnVesi(kk.Lat, kk.Lon)) continue;
+                    // Laite cl5 28.9.: katsekohde ehti rannikolta maalle ennen ikkunakuvaa, joten vettä vaaditaan minuutin ajan.
+                    var k30 = IkkunanKatse(t.AddSeconds(30)); var k60 = IkkunanKatse(t.AddSeconds(60));
+                    if (!Yokuori.OnVesi(k30.Lat, k30.Lon) || !Yokuori.OnVesi(k60.Lat, k60.Lon)) continue;
                     var aur = Aurinko.AurinkoEcef(t);
                     double la = kk.Lat * Math.PI / 180, lo = kk.Lon * Math.PI / 180;
                     double ylos = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
@@ -1673,14 +1675,31 @@ namespace Matkakirja.Natiivi
                     if (korkeus >= 25 && korkeus <= 70 && ero <= 40) loyto = t;
                 }
                 if (loyto == null) return "ei heijastushetkeä 24 tunnin sisällä";
-                siirto = loyto.Value.AddSeconds(-10) - nyt;
+                siirto = loyto.Value.AddSeconds(-20) - nyt;   // ikkuna on kahden napautuksen (~15 s) päässä
             }
-            else return "käyttö: astro kyyti kello yo-eurooppa|hamara|kiilto|+H|pois";
+            else if (arvo == "paiva-eurooppa")
+            {
+                // Päivä Euroopan yllä (lat 40–60, lon −10…30, aurinko alapisteessä yli 20°): päivän pilvet ja kuukauden pinta.
+                var nyt = DateTime.UtcNow;
+                var loyto = HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) => lat >= 40 && lat <= 60 && lon >= -10 && lon <= 30
+                                && AurinkoKorkeus(t, lat, lon) > 20);
+                if (loyto == null) return "ei päiväylitystä Euroopan yllä 72 tunnin sisällä";
+                siirto = loyto.Value.AddSeconds(30) - nyt;
+            }
+            else return "käyttö: astro kyyti kello yo-eurooppa|hamara|kiilto|paiva-eurooppa|+H|pois";
             Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow + siirto;
             var k = Matkakirja.Linssit.Iss.IssNyt.Kello();
             var paikka = Matkakirja.Linssit.Iss.IssNyt.Paikka(k);
             return $"{k:yyyy-MM-dd HH:mm:ss} UTC (siirto {siirto.TotalHours:F2} h), ISS ({paikka.Lat:F2}, {paikka.Lon:F2}), " +
                    $"aurinko alapisteessä {AurinkoKorkeus(k, paikka.Lat, paikka.Lon):F1}°";
+        }
+
+        /// <summary>Ikkunan katsekohde ISS:n hetkellä t (IssKuvakulma.Ikkuna).</summary>
+        static Matkakirja.Linssit.Kuvakulma IkkunanKatse(DateTime t)
+        {
+            var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
+            return Matkakirja.Linssit.Iss.IssKuvakulma.Ikkuna(new Matkakirja.Linssit.Iss.IssHetki(p,
+                Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(t) * 1000, Matkakirja.Linssit.Iss.IssNyt.Suuntima(t)));
         }
 
         /// <summary>Ensimmäinen hetki (askel s, enintään tunnit), jolloin ISS:n alapiste täyttää ehdon; null = ei löydy.</summary>
