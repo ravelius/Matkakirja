@@ -66,6 +66,26 @@ Aja paikallisesti koko sarja:
 `SAVUKE_RINNAKKAIN=6 node tools/savukkeet/aja-sarja.mjs julkaisu /tmp/savukkeet`
 (tai pelkkä matriisi: `node tools/savukkeet/rakenna-matriisi.mjs julkaisu`).
 
+### GPU-väistö (omistaja 28.9.2026)
+
+`aja-sarja.mjs` ajaa sarjan alussa kerran `tools/gpu-vapaa.sh`:n. Se
+tarkistaa VAIN lipun `/tmp/matkakirja-kevyt` (omistaja luo sen, kun
+tarvitsee konetta): lippu olemassa → exit 1 ja "kevyt tila (omistaja
+tarvitsee konetta)". Kun GPU on varattu:
+
+- Chromium-rivit ajetaan SwiftShaderilla (`SAVUKE_CHROMIUM_LIPUT` +=
+  `--use-gl=angle --use-angle=swiftshader`, ellei rivi valitse GL-taustaa
+  itse);
+- WebKit-rivit (`-webkit`-tunniste, `SAVUKE_MOOTTORI=webkit` tai savuke
+  oletuksena pelkkä WebKit) ja suorituskykyrivit (`SAVUKE_SUORITUSKYKY=1`)
+  ohitetaan: yhteenvedossa `— (OHITETTU: GPU varattu (kevyt tila))`, ei
+  lasketa punaiseksi;
+- toiminnallisia Chromium-rivejä ei ohiteta eikä porttia löysätä.
+
+`SAVUKE_GPU=varattu|vapaa` ohittaa tarkistuksen; `GPU_VAPAA_PAKOTA=1|0`
+pakottaa itse skriptin tuloksen. Kevyessä tilassa työnkulun `taskpolicy -b`
+pysyy ennallaan. Logiikka: `tools/savukkeet/gpu-vaisto.mjs`.
+
 ## Ohituksessa: vanha kartta pois käytöstä (7.9.2026)
 
 Omistaja 7.9.2026 aamu, sanatarkasti: *"Voisiko vanhan kartan ottaa
