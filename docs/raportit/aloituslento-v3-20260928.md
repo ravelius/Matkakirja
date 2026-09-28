@@ -135,3 +135,17 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
   - Kaukolennot rikkovat sääntöjä jo vanhalla alulla. New York: kone takaa 0,05 s:ssa (korotus 57°, alulla 30° N 47°) ja
     kääntö 12,3 s:ssa −91 °/s. Rio: Lontoo ulos 1,9 s:ssa ja kohde ulos 12,6 s:ssa. Sydney: silmä saapuessa 233 km kohteesta.
 - Tanger on valintanäkymässä ruudun vasemman reunan ulkopuolella (x −35 pt), myös ennen rajausta.
+- Päätoimittaja 15.0x: v3g vain Euroopan ja Välimeren aloituskaupungeille (VAIN EUROOPPA). Kaukolennot jäävät avoimiksi, kunnes
+  omistaja avaa muut mantereet. Aloitusradan testit ajetaan nyt todellisesta rajatusta valintanäkymästä (37,06° N), Tanger
+  lisättiin kohteisiin, ja lähtöpiste tarkoittaa Lontoon nappulaa: 9d1d3a50, Kartta-testit 362/362, rata ennallaan.
+- **Kuvattu klo 15.10–15.15** (7c6ca246, FBBD41D7, 0 poikkeusta):
+  - Laitteella keskus 37,33° N ja kellon varaus 408 px (136 pt). Moskovan nimi alkaa heti kellon alta, ja kaupunkien valot
+    ovat kirkkaat (2,0). Kuvapari ennen | jälkeen: `v3f2/kuvapari-rajaus.png`.
+  - Valintakuvat lähtökellonajoilla 01.00, 03.00 ja 22.00: `v3f2/valinnat-01-03-22.png`. Kello 03.00 aamun raja on jo
+    Venäjän yllä ja Moskova hämärässä; 01.00 ja 22.00 ovat yötä koko Euroopassa.
+  - Lento Ateenaan: perillä 15,00 s, F = 6,960 s kehyseroista. Video `v3f2/aloituslento-v3f.mp4` (736 × 1600, 17,8 s,
+    marssi A). Aamunkoitto tulee lennon aikana, perillä on päivä (07.00), ja loppu on sama kuin v3e2:ssa (saapumiskortti).
+  - Esikääntö: pallo pyöritettiin Iberian ylle ja napautettiin Tangeria. Kamera kääntyi 1,2 s:ssa rajattuun
+    valintanäkymään (37,3° N 17,0° E), ja lento Tangeriin päättyi 15,00 s:ssa (`v3f2-esikaanto/`, F = 8,642 s).
+  - Suositus: lähtö 01.00 (oletus). Valinnassa on yö koko Euroopassa, aamunkoitto tulee lennon aikana, eikä perillä tule
+    hyppyä.
