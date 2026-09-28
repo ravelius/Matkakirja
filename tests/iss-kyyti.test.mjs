@@ -157,12 +157,35 @@ test('Cupola: kuvien vaihto on yksi vakio, koko ruudun muodon mukaan', async () 
   const uusi = cupolanOsoitteet(834, 1194, '20260928');
   assert.deepEqual(uusi.map((k) => k.laji), ['ulko', 'heijastus', 'kehys'], 'takaa eteen kuten natiivissa');
   assert.match(uusi[2].osoite, /karttanostot\/20260928\/iss-cupola2-kehys-ipad-1536x2732\.png$/);
-  // Voimassa: pehmeä Cupola 2 (omistaja 28.9.2026 klo 14.1x), sama järjestys, poltettu syväterävyys.
-  assert.equal(CUPOLA_VERSIO, '20260928-pehmea');
-  const pehmea = cupolanOsoitteet(393, 852);
+  // Pehmeä Cupola 2 (omistaja 28.9.2026 klo 14.1x) jää taulukkoon; voimassa Cupola 3 (alla).
+  const pehmea = cupolanOsoitteet(393, 852, '20260928-pehmea');
   assert.deepEqual(pehmea.map((k) => k.laji), ['ulko', 'heijastus', 'kehys']);
   assert.match(pehmea[0].osoite, /karttanostot\/20260928\/iss-cupola2-pehmea-ulkoosat-iphone-1206x2622\.png$/);
   assert.match(pehmea[2].osoite, /karttanostot\/20260928\/iss-cupola2-pehmea-kehys-iphone-1206x2622\.png$/);
+});
+
+test('Cupola 3 natiivin mukaan (c2645317): kuva ja kääntö laitteen muodosta, reunavalot auringon vastapuolella', async () => {
+  const { cupolanOsoitteet, cupola3Kuva, cupola3Valot, cupola3Opasiteetit, aurinkoisuus, CUPOLA_VERSIO, CUPOLA3_YLI } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  assert.equal(CUPOLA_VERSIO, 'cupola3-a');
+  assert.equal(CUPOLA3_YLI, 1.04);
+  assert.deepEqual(cupola3Kuva(393, 852), { ipad: false, kaanna: false });
+  assert.deepEqual(cupola3Kuva(852, 393), { ipad: false, kaanna: true }, 'iPhone vaaka: pystykuva käännetään');
+  assert.deepEqual(cupola3Kuva(1024, 1366), { ipad: true, kaanna: true }, 'iPad pysty: vaakakuva käännetään');
+  assert.deepEqual(cupola3Kuva(1366, 1024), { ipad: true, kaanna: false });
+  const o = cupolanOsoitteet(393, 852);
+  assert.deepEqual(o.map((k) => k.laji), ['heijastus', 'kehys', 'valo-nw', 'valo-ne', 'valo-sw']);
+  assert.match(o[1].osoite, /karttanostot\/20260928\/iss-cupola3-a-cockpit-iphone-1290x2796\.png$/);
+  assert.match(cupolanOsoitteet(1366, 1024)[4].osoite, /iss-cupola3-a-sun-sw-ipad-2732x2048\.png$/);
+  // Aurinko kaakossa → luoteen reuna loistaa (valo lasin läpi vastapuolelle); suoraan edessä ei reunavaloa.
+  const [nw, ne, sw] = cupola3Valot(Math.SQRT1_2, -Math.SQRT1_2);
+  assert.equal(+nw.toFixed(6), 1);
+  assert.ok(ne < 0.3 && sw < 0.3);
+  assert.deepEqual(cupola3Valot(0, 0), [0, 0, 0]);
+  // Voima 0,95 × aurinkoisuus × lerp(0,45; 1; 1,4·|s|); maan varjossa 0.
+  assert.equal(+cupola3Opasiteetit([Math.SQRT1_2, -Math.SQRT1_2], 1, false)[0].toFixed(3), 0.95);
+  assert.deepEqual(cupola3Opasiteetit([1, 0], 0, false), [0, 0, 0]);
+  assert.equal(aurinkoisuus(1, 420), 1);
+  assert.equal(aurinkoisuus(-1, 420), 0);
 });
 
 test('ISS-malli natiivin mittasuhtein: 110 m leveä, neljä paria kullanruskeita siipiä', async () => {
