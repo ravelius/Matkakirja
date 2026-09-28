@@ -98,6 +98,8 @@ export function gibsUrl(kerros, paiva, leveys = LEVEYS, korkeus = KORKEUS) {
 
 /** Ämpärin BMNG-kuukausikuva (kk = '01'…'12'). */
 export const bmngAmpariPolku = (kk) => `data/bmng/${kk}-4096.jpg`;
+/** Ämpärin BMNG-sarjan versio CDN-välimuistin ohitukseen (Karttasepän 21600 px -lähde, 28.9.2026). */
+export const BMNG_VERSIO = '21600';
 
 /** NASA Visible Earthin BMNG 2004 -kuukausikuva (world-sarja, 5400 × 2700, PD). */
 export function bmngLahdeUrl(kk) {
@@ -225,7 +227,8 @@ async function pilvet(argv) {
   if (arvo('--bmng-tiedosto')) {
     bmngTavut = await readFile(arvo('--bmng-tiedosto'));
   } else {
-    const url = `${AMPARI}/${bmngAmpariPolku(kk)}`;
+    // ?v= ohittaa CDN:n immutable-kopiot: Karttaseppä vaihtoi 28.9. BMNG:n 21600 px -lähteeseen.
+    const url = `${AMPARI}/${bmngAmpariPolku(kk)}?v=${BMNG_VERSIO}`;
     const { status, tavut } = await haeTavut(url);
     if (status === 404) {
       console.log(`::notice::BMNG ${kk} puuttuu ämpäristä (${url}) — pilvilaskenta ohitetaan. Aja ensin ISS-BMNG-työnkulku.`);
