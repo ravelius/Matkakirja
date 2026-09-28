@@ -256,7 +256,7 @@ namespace Matkakirja
                 float etaisyys = kohti.magnitude;
                 if (Vector3.Dot(gt.TransformDirection(i.Normaali).normalized, kohti / Mathf.Max(1e-6f, etaisyys)) <= 0.08f) continue;
 
-                float pt = KokoNyt(nk.ZoomKerroin) * (s.Taso == 2 ? Taso2Koko : Taso3Koko)
+                float pt = KokoNyt23(nk.ZoomKerroin) * (s.Taso == 2 ? Taso2Koko : Taso3Koko)
                            * (NostoSaannot.KuvamerkkiPieni(s.Taso, nk.ZoomKerroin) ? NostoSaannot.TyyppimerkinPieniKoko : 1f);
                 // Symbolin laatikko instanssin koosta (leveys pt:stä, korkeussuhde LOD0:sta) leikkaa erikoismallin laatikon.
                 float allaPiilo = AllaSaanto ? Arvioi(s.Id, s.Taso, p, pt * PalloKierto.Pistekerroin, Suhde(MallinVerkko(MalliIndeksi(tieto), 0)),
