@@ -113,8 +113,10 @@ test('nimi johdetaan lähteestä ja indeksistä samalla funktiolla', () => {
   // kaupunkia. Lisäksi neljä js/livia.js:n lähdettä ja linssien
   // välihuomiot (Ihmisen matkan kertomus, 7.9.2026).
   // ISS-lähteet (28.9.2026) ovat viimeisinä: iss-a … iss-d.
+  // 28.9.2026: viisi myöhemmin lisättyä fokusvirtakaupunkia (bryssel, ljubljana,
+  // kosice, luxemburg, valletta) → 50 kaupunkia.
   assert.equal(LIVIAN_AANILAHTEET.length,
-    4 + 45 + Object.keys(LIVIAN_LINSSILAHTEET).length + 4);
+    4 + 50 + Object.keys(LIVIAN_LINSSILAHTEET).length + 4);
   assert.equal(LIVIAN_AANILAHTEET.at(-5), 'ihmisen-matka');
   assert.deepEqual(LIVIAN_AANILAHTEET.slice(-4), ['iss-a', 'iss-b', 'iss-c', 'iss-d']);
   assert.equal(livianAaniNimi('iss-d', 3), 'livia-iss-d-4.mp3');
@@ -528,7 +530,10 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('paljastus-3'), 'ajan tasalla');
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   // Kaikki Euroopan 45 city-3-riviä on nyt sidottu valmistuneisiin kuitteihin.
-  const odotetutMuuttuneet = [];
+  // 28.9.2026: viiden myöhemmin lisätyn kaupungin kaksi kuplaa odottavat
+  // v4-ajoa (peli vaikenee niissä, ks. alla) — lista tyhjenee ajon jälkeen.
+  const odotetutMuuttuneet = ['bryssel', 'kosice', 'ljubljana', 'luxemburg', 'valletta']
+    .flatMap((k) => [`${k}-3`, `${k}-4`]).sort();
   assert.deepEqual(
     rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
     odotetutMuuttuneet,

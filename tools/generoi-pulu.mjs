@@ -154,6 +154,11 @@ import { FOKUSVIRTA_EDINBURGH } from '../js/packs/fokusvirta-edinburgh.js';
 import { FOKUSVIRTA_FIRENZE } from '../js/packs/fokusvirta-firenze.js';
 import { FOKUSVIRTA_GRANADA } from '../js/packs/fokusvirta-granada.js';
 import { FOKUSVIRTA_KOBENHAVN } from '../js/packs/fokusvirta-kobenhavn.js';
+import { FOKUSVIRTA_BRYSSEL } from '../js/packs/fokusvirta-bryssel.js';
+import { FOKUSVIRTA_LJUBLJANA } from '../js/packs/fokusvirta-ljubljana.js';
+import { FOKUSVIRTA_KOSICE } from '../js/packs/fokusvirta-kosice.js';
+import { FOKUSVIRTA_LUXEMBURG } from '../js/packs/fokusvirta-luxemburg.js';
+import { FOKUSVIRTA_VALLETTA } from '../js/packs/fokusvirta-valletta.js';
 import { FOKUSVIRTA_LISSABON } from '../js/packs/fokusvirta-lissabon.js';
 import { FOKUSVIRTA_LONTOO } from '../js/packs/fokusvirta-lontoo.js';
 import { FOKUSVIRTA_MADRID } from '../js/packs/fokusvirta-madrid.js';
@@ -685,6 +690,21 @@ export const TAGIT = {
     ],
   },
   /*
+   * VIISI MYÖHEMMIN LISÄTTYÄ FOKUSVIRTAKAUPUNKIA (28.9.2026, v4-erä):
+   * kommentti oli pelissä, mutta äänite puuttui. Maltilliset tagit kuten
+   * muilla (yksi alku + yksi käänne), ei pinottuja tunteita.
+   */
+  'bryssel-3': { alku: '[amused]', kohdat: [['Nykyään', '[chuckles]']] },
+  'ljubljana-3': { alku: '[proud]', kohdat: [['jota isoisäsi', '[softly]']] },
+  'kosice-3': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[thoughtfully]']] },
+  'luxemburg-3': { alku: '[brightly]', kohdat: [['nykyään', '[amused]']] },
+  'valletta-3': { alku: '[proud]', kohdat: [['mutta linnoitus', '[warmly]']] },
+  'bryssel-4': { alku: '[mischievously]', kohdat: [['Minä olen nähnyt', '[amused]']] },
+  'ljubljana-4': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[softly]']] },
+  'kosice-4': { alku: '[brightly]', kohdat: [['ja Hlavná-kadun', '[warmly]']] },
+  'luxemburg-4': { alku: '[softly]', kohdat: [['Minä näen', '[proud]']] },
+  'valletta-4': { alku: '[curious]', kohdat: [['Nykyään', '[amused]']] },
+  /*
    * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta). Yksi
    * puhekupla kussakin numerolla 3. Venetsian kuvakaruselli ei lisää
    * puhekuplia. Sama reipas alkutagi kuin muilla kommenteilla;
@@ -968,6 +988,12 @@ const KAUPUNKIEN_PAKKAUKSET = {
   oslo: FOKUSVIRTA_OSLO,
   bergen: FOKUSVIRTA_BERGEN,
   kobenhavn: FOKUSVIRTA_KOBENHAVN,
+  // Myöhemmin lisätyt viisi (28.9.2026): kommentti oli pelissä ilman äänitettä.
+  bryssel: FOKUSVIRTA_BRYSSEL,
+  ljubljana: FOKUSVIRTA_LJUBLJANA,
+  kosice: FOKUSVIRTA_KOSICE,
+  luxemburg: FOKUSVIRTA_LUXEMBURG,
+  valletta: FOKUSVIRTA_VALLETTA,
 };
 
 /**
