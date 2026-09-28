@@ -8,7 +8,7 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet (kuorma1 ≤ 8, ≤ 8 ydintä). Käännökset yksi kerrallaan Julkaisijan vuorolla matalalla prioriteetilla, simulaattoreita enintään yksi, ei agenttiparvia rinnakkain (enintään 1 agentti per rooli), ei raskaita paikallisia ajoja. Postivahti seuraa load1:tä joka kierroksella — jos kuorma1 > 10 yli 5 min, ilmoitetaan syyllinen prosessi Päätoimittajalle ja omistavalle roolille.
 
-**10:59 LOAD1 61,2 — REILUSTI YLI RAJAN.** Tunnistetut syylliset: Karttasepän pallo-poltto (3× `tee-pallolaatat.mjs` rinnakkain, wt/karttaseppa-poltto-20260927 tms.), 2× testisarja (`sisaltopaketti.test.mjs`, `vienti.test.mjs`), Unity-batch-build (IosSimulaattori), ~32 Playwright/savuke-chromium-prosessia. Ilmoitettu Päätoimittajalle 10:59. Seurataan jatkuuko yli 5 min.
+**10:59 LOAD1 61,2 → 11:01 LOAD1 216 (NOUSI PALLOPOLTON PYSÄYTYKSESTÄ HUOLIMATTA).** Karttaseppä pysäytti pallo-poltton (SIGSTOP 11:00) mutta kuorma nousi silti. Uusi analyysi 11:01: **109 prosessia R/Rs-tilassa** (macOS load1 laskee näistä) — ei yhtä yksittäistä syyllistä vaan monen roolin yhtäaikainen kuormitus: `mds_stores` (Spotlight-indeksointi) 116 % CPU (todennäköisesti indeksoi pallopolton satojatuhansia uusia laattatiedostoja), ~30 Playwright/savuke-chromium-prosessia, Unity-simulaattoriprosessi, AWS S3 -synkronointi (Karttaseppä, tiilien vienti R2:een), testisarjat. Ilmoitettu Päätoimittajalle + Karttasepälle 11:01.
 
 ## 1) Sessiot
 
