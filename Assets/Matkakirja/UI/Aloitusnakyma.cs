@@ -908,6 +908,8 @@ namespace Matkakirja.Natiivi
             valintaPisteet.Napautettu += PisteValittu;
             // Suoraan valintanäkymään (web lauta.aloitusnakyma); Lontoo-zoomi poistui 24.9. klo 16.1x.
             valintaKierto.Aja(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 1.6f, null);
+            // v3f esikääntö: aloituslento palaa tähän näkymään, jos pelaaja on pyörittänyt palloa (Nappula.Valintanakyma).
+            Nappula.Valintanakyma = new AloituslennonRata.Asento(ValintaLat, ValintaLon, ValintanakymanKorkeus(), 0, 0, 0);
             // Aloituslennon pinta valmiiksi näkymättömänä (Natiiviseppä, löydös 80/84): Cesium lataa sen valintanäkymän
             // laattoihin nyt, joten musta verho vain kytkee sen näkyviin. Vapautus LopetaPallovalinnassa.
             kk.LentoPohjaValmiiksi();

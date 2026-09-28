@@ -29,6 +29,9 @@ namespace Matkakirja
         public static double AlkuKelloUtc = 1.0;
         /// <summary>true lennon ajan (Nappula kirjoittaa Tunnit); false = valinta, kello etenee reaaliajassa.</summary>
         public static bool Lennossa;
+        /// <summary>true aloituskaupungin valinnan ajan (kellonäyttö kirjoittaa joka ruutu); päivän ja yön raja
+        /// (Kartta/Paivanvalo.cs) on päällä valinnassa ja lennossa.</summary>
+        public static bool Valinnassa;
 
         /// <summary>Kellonaika 0–24 h (Lontoo).</summary>
         public static double Kellonaika => ((AlkuKelloUtc + Tunnit) % 24 + 24) % 24;
@@ -82,6 +85,7 @@ namespace Matkakirja
             AlkuKelloUtc = alkuKelloUtc;
             Tunnit = 0;
             Lennossa = false;
+            Valinnassa = false;
         }
     }
 }

@@ -172,6 +172,21 @@ namespace Matkakirja
         /// pallon näkymä ei tasaannu koskaan; v6: 4 s aina katto). Ohituksen laatat ehtivät odotuksen ja avauksen aikana.</summary>
         public const float AloitusrataOdotusKattoS = 1.5f;
 
+        /// <summary>Aloituskaupungin valintanäkymä (UI/Aloitusnakyma.AloitaPallovalinta kirjoittaa): v3f:n esikääntö palaa siihen
+        /// ennen lentoa, jos pelaaja on pyörittänyt tai zoomannut palloa (AloituslennonRata.EsikaannonKesto).</summary>
+        public static AloituslennonRata.Asento? Valintanakyma;
+
+        /// <summary>v3f: pelikello on lennon hallussa (Pelikello.Lennossa asetettu tällä lennolla): purku palauttaa sen.</summary>
+        bool kelloLennossa;
+
+        /// <summary>Pelikello pois lennolta (perillä tai purussa).</summary>
+        void KelloPois()
+        {
+            if (!kelloLennossa) return;
+            kelloLennossa = false;
+            Pelikello.Lennossa = false;
+        }
+
         readonly Camera[] ennakot = new Camera[2];
         readonly List<CesiumCameraManager> ennakkoHallinnat = new List<CesiumCameraManager>();
 

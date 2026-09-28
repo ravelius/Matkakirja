@@ -282,6 +282,46 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
+        static void LennonKelloKiihtyyJaHidastuuPerille()
+        {
+            // v3f: pelikello Tunnit = lähtö + lentoaika · Kello(t): 0 lähdössä, 1 perillä, nopeus kasvaa puoliväliin ja laskee.
+            Oleta.Tosi(AloituslennonRata.Kello(0) == 0 && Math.Abs(AloituslennonRata.Kello(AloituslennonRata.KestoS) - 1) < 1e-12,
+                "kello 0 → 1");
+            double ed = 0, huippu = 0, huippuT = 0;
+            for (double t = 0.1; t <= AloituslennonRata.KestoS + 1e-9; t += 0.1)
+            {
+                double v = (AloituslennonRata.Kello(t) - AloituslennonRata.Kello(t - 0.1)) / 0.1;
+                Oleta.Tosi(AloituslennonRata.Kello(t) >= ed, $"kello ei palaa t={t:F1}");
+                ed = AloituslennonRata.Kello(t);
+                if (v > huippu) { huippu = v; huippuT = t; }
+            }
+            Oleta.Tosi(Math.Abs(huippuT - AloituslennonRata.KestoS / 2) < 0.6, $"kellon nopein kohta {huippuT:F1} s");
+        }
+
+        [Testi]
+        static void EsikaantoValintanakymaan()
+        {
+            // v3f (omistaja 28.9.: pyöritetty pallo "pehmeästi pyörähtää oikeaan paikkaan ja zoomitasoon" ennen lentoa).
+            var valinta = new AloituslennonRata.Asento(30, 17, 7_597_000, 0, 0, 0);
+            Oleta.Tosi(AloituslennonRata.EsikaannonKesto(valinta, valinta) == 0, "sama näkymä: ei esikääntöä");
+            var lahella = new AloituslennonRata.Asento(30.4, 17.3, 7_800_000, 1.0, 1.5, 0);
+            Oleta.Tosi(AloituslennonRata.EsikaannonKesto(lahella, valinta) == 0, "huomaamaton ero: ei esikääntöä");
+            var pyoritetty = new AloituslennonRata.Asento(41, -40, 2_500_000, 20, 350, 0);
+            double k = AloituslennonRata.EsikaannonKesto(pyoritetty, valinta);
+            Oleta.Tosi(k >= 0.8 && k <= 2.0, $"esikääntö 0,8–2 s: {k:F2}");
+            Oleta.Tosi(AloituslennonRata.EsikaannonKesto(new AloituslennonRata.Asento(31.5, 17, 7_597_000, 0, 0, 0), valinta) < k,
+                "pieni kääntö lyhyempi");
+            var a0 = AloituslennonRata.Esikaanto(pyoritetty, valinta, 0);
+            var a1 = AloituslennonRata.Esikaanto(pyoritetty, valinta, 1);
+            Oleta.Tosi(Math.Abs(a0.Lat - 41) < 1e-9 && Math.Abs(a0.EtaisyysM - 2_500_000) < 1 && a0.Kallistus == 20, "alku = napautusnäkymä");
+            Oleta.Tosi(Math.Abs(a1.Lat - 30) < 1e-6 && Math.Abs(a1.Lon - 17) < 1e-6 && Math.Abs(a1.EtaisyysM - 7_597_000) < 1
+                       && Math.Abs(a1.Kallistus) < 1e-9 && Math.Abs(LennonV3.Kulmaero(a1.Suuntima, 0)) < 1e-6, "loppu = valintanäkymä");
+            var am = AloituslennonRata.Esikaanto(pyoritetty, valinta, 0.5);
+            Oleta.Tosi(Math.Abs(am.EtaisyysM - Math.Sqrt(2_500_000.0 * 7_597_000.0)) < 1000, $"etäisyys log-asteikolla: {am.EtaisyysM:F0}");
+            Oleta.Tosi(Math.Abs(LennonV3.Kulmaero(am.Suuntima, 355)) < 1e-6, $"suunta lyhintä tietä: {am.Suuntima:F1}");
+        }
+
+        [Testi]
         static void LahtopisteKuvassaAlussa()
         {
             foreach (var k in Kohteet)

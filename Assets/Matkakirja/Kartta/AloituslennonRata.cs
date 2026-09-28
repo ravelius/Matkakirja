@@ -537,6 +537,39 @@ namespace Matkakirja
                 cKatse[i] + (cKatse[i + 1] - cKatse[i]) * f + lisa * (cKatseW[i] + (cKatseW[i + 1] - cKatseW[i]) * f));
         }
 
+        /// <summary>
+        /// LENNON PELIKELLO (v3f, omistaja 28.9.: kello "etenee" ja valonraja muuttuu sen mukana): osuus lennon pelitunneista
+        /// hetkellä t, pehmeä S (kiihtyy lähdöstä ja hidastuu perille). Nappula kirjoittaa Pelikello.Tunnit = lähtö + tunnit · tämä.
+        /// </summary>
+        public static double Kello(double t) => S(t / KestoS);
+
+        /// <summary>
+        /// ESIKÄÄNTÖ (v3f, omistaja 28.9. klo 09.29: "mikäli karttapallo on pyörinyt eri kohtaan, kuin on suunniteltu, niin se voisi
+        /// alussa pehmeästi pyörähtää oikeaan paikkaan ja zoomitasoon ja sitten varsinainen lentoanimaatio alkaisi"): kesto (s)
+        /// napautusnäkymästä valintanäkymään. 0, kun ero on huomaamaton (katsepiste alle 1°, etäisyys ±5 %, kallistus alle 2°,
+        /// suunta alle 3°); muuten 0,8–2,0 s suurimman eron mukaan (60° kaarta, 1,5 e-kertaa zoomia, 45° kallistusta, 90° suuntaa).
+        /// </summary>
+        public static double EsikaannonKesto(Asento a, Asento b)
+        {
+            double kulma = LennonAikajana.ReittiM(a.Lat, a.Lon, b.Lat, b.Lon) / R * 180.0 / Math.PI;
+            double zoom = Math.Abs(Math.Log(Math.Max(1.0, a.EtaisyysM) / Math.Max(1.0, b.EtaisyysM)));
+            double kall = Math.Abs(a.Kallistus - b.Kallistus), suu = Math.Abs(Kulmaero(a.Suuntima, b.Suuntima));
+            if (kulma < 1.0 && zoom < 0.05 && kall < 2.0 && suu < 3.0) return 0.0;
+            double m = Math.Max(Math.Max(kulma / 60.0, zoom / 1.5), Math.Max(kall / 45.0, suu / 90.0));
+            return 0.8 + 1.2 * Rajaa(m, 0, 1);
+        }
+
+        /// <summary>Esikäännön asento osuudella u (0–1, pehmeä S): katsepiste isoympyrää, etäisyys log-asteikolla, kallistus ja
+        /// katse suoraan, suunta lyhintä tietä.</summary>
+        public static Asento Esikaanto(Asento a, Asento b, double u)
+        {
+            double s = S(u);
+            var q = LennonV3.Isoympyralla(a.Lat, a.Lon, b.Lat, b.Lon, s);
+            double la = Math.Log(Math.Max(1.0, a.EtaisyysM)), lb = Math.Log(Math.Max(1.0, b.EtaisyysM));
+            return new Asento(q.Lat, q.Lon, Math.Exp(la + (lb - la) * s), a.Kallistus + (b.Kallistus - a.Kallistus) * s,
+                Normalisoi(a.Suuntima + Kulmaero(a.Suuntima, b.Suuntima) * s), a.Katse + (b.Katse - a.Katse) * s);
+        }
+
         /// <summary>Silmän korkeus pallon pinnasta (m) hetkellä t (testit ja taulukko: erkanemisen korkeuskäyrä).</summary>
         public double SilmanKorkeus(double t)
         {
