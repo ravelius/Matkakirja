@@ -8599,3 +8599,7 @@ Omistaja valitsi kortilla 28.9. klo 12.3x kaikki nelja kaupunkien valojen jalkee
 ## OMISTAJA: GPU-VAISTO OMISTAJAN ILMOITUKSESTA, EI OHJELMAN TUNNISTUKSESTA (KORVAA 12.2x) (28.9.2026 klo 12.18)
 
 Omistaja 28.9. klo 12.3x sanatarkasti: "pidän ohjelmia aina auki. parempi tapa että sanon tänään milloin tarvitsen konetta ja milloin en." Korvaa klo 12.2x:n ohjelmatunnistuksen (pgrep Capture One tms.). LINJAUS: omistaja kertoo Paatoimittajalle, milloin han tarvitsee konetta (esim. 'tarvitsen konetta klo 17 asti') ja milloin ei. Tarve-ikkunassa kevyen tilan lippu /tmp/matkakirja-kevyt on paalla (Julkaisija asettaa/poistaa Paatoimittajan kaskysta): raskaat CPU-tyot taskpolicy -b, Chromium-savukkeet ohjelmistorenderoinnilla (SwiftShader), EI GPU-toita (WebKit- ja suorituskykysavukkeet, simulaattorit, Unity-renderoinnit, GPU-poltot odottavat). Ikkunan ulkopuolella nice-oletus taysilla ytimilla ja GPU vapaana. tools/gpu-vapaa.sh tarkistaa lipun (ei ohjelmia). Tanaan tarve klo 17 asti.
+
+## PAATOIMITTAJA: PULUN PUHEKESKUSTELU PR #3546 + KEHOTTEEN VALIMUISTI (28.9.2026 klo 12.23)
+
+Pelikoodari 28.9. klo 12.4x: puhekeskustelu PR #3546 junassa (saneltuun kysymykseen vastaus aina puheena, tilarivi Kuuntelen → Mietin → Puhun, mikin napautus hiljentaa). Viive sanelun lopusta aaneen 2,4–3,2 s + laitteen lopputunnistus ~1–1,5 s (xAI-realtime 1,5–2,1 s). Hinta ~0,025–0,03 $/vastaus. Paatoimittaja hyvaksyi Sonnetin kehotteen valimuistin erillisena pienena PR:na (~0,008 $/vastaus) ennen ISS-eraa.
