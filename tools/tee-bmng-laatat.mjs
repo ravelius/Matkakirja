@@ -82,7 +82,7 @@ export async function laskeLaatta(sharp, lahde, z, x, y, laatu = 85) {
   const height = Math.max(1, bot - top);
   // Pysty samassa suhteessa kuin vaaka, vähintään laatan korkeus (interpolointivara).
   const hs = Math.max(LAATTA, Math.round((height * LAATTA) / width));
-  const pala = await sharp(lahde.raw, { raw: { width: lahde.leveys, height: lahde.korkeus, channels: 3 } })
+  const pala = await sharp(lahde.raw, { raw: { width: lahde.leveys, height: lahde.korkeus, channels: 3 }, limitInputPixels: false })
     .extract({ left, top, width, height })
     .resize(LAATTA, hs, { fit: 'fill', kernel: 'lanczos3' })
     .raw().toBuffer();
