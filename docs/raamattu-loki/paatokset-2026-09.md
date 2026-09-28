@@ -8523,3 +8523,7 @@ Omistaja 28.9. kuvakaappauksella (TF 1.0.34, sisalto 261) sanatarkasti: "Päivit
 ## OMISTAJA VALITSI ALOITUSLENNON MUSIIKIKSI MARSSI A (VASKIMARSSI) (28.9.2026 klo 09.51)
 
 Pelikoodarin kaksi Lyria-ehdotusta pelin omalla johtoaiheella (D–G–F–E–D–C–D), ei elokuvan savelmaa: A vaskimarssi 123 BPM 20,3 s (isku 7,3 s ohitus, loppusointu 15,1 s), B jouset + torvet 129 BPM 21,9 s. Omistaja kortilla: A. Raita media.matkakirja.app/audio/musa-aloituslento-marssi-a-lyria.mp3, −11,4 LUFS; Natiiviseppa kytkee v3f:aan.
+
+## OMISTAJA: NATIIVIN NOSTOTEKSTIT EIVAT SAA VALKKYA; KUVAKORTTI JA TEKSTIT HAIPYVAT PEHMEASTI REUNALLA, EI HYPPYJA (28.9.2026 klo 09.54)
+
+Omistaja 28.9. TF 1.0.34 -kuvakaappauksella (Ateena) sanatarkasti: "Nykyisessä versiossa kohdetekstit vielä välkkyvät. Atenan kuvakortti näyttäisi pysyvän paikallaan, mutta sitten kun panoroidaan tarpeeksi reunaan, niin se häviää näkyvistä yhtäkkiä. Se saisi hävitä pehmeästi feidaten pois ja tulla takaisin samalla lailla feidaten. Sama pehmeä fade-out tai mikäli muuten ei onnistu, niin myös liike pitäisi nostojen kohdalla tapahtua pehmeästi, ei yhtäkkiä hyppäämällä. Näin kaikki liike olisi pehmeä eikä tule yhtäkkiä ja yhtäkkisiä hyppäyksiä. Mutta suurimmassa osassa tapauksia paras vaihtoehto on, että nostojen tekstit vain yksinkertaisesti pysyvät paikallaan eivätkä välky." Natiivi-UI: todenna nimet-laskuri 5d79edd9 (1.0.35-junassa), tekstit paikallaan, pehmea haivytys reunalla.
