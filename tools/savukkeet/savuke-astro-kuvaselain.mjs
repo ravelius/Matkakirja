@@ -162,7 +162,11 @@ const leikkaa = (a, b) => a && b && a[0] < b[2] && b[0] < a[2] && a[1] < b[3] &&
 
 async function ajaNakyma(nimi) {
   const virheet = [];
-  const konteksti = await selain.newContext({ ...NAKYMAT[nimi], serviceWorkers: 'block' });
+  // VIDEO=1: selitteen avaus ja pienennys videolle (ULOS/video), muut väitteet ohitetaan.
+  const konteksti = await selain.newContext({
+    ...NAKYMAT[nimi], serviceWorkers: 'block',
+    ...(process.env.VIDEO ? { recordVideo: { dir: join(ULOS, 'video'), size: NAKYMAT[nimi].viewport } } : {}),
+  });
   const s = await konteksti.newPage();
   const luennat = [];
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => {
@@ -198,6 +202,18 @@ async function ajaNakyma(nimi) {
 
   /* --- Etna: kuvapari + perusväitteet ------------------------------ */
   await avaa('etna');
+  if (process.env.VIDEO) {
+    await s.waitForTimeout(2200);
+    for (let i = 0; i < 2; i += 1) {
+      await s.click('.satelliitti-selite-otsikko');
+      await s.waitForTimeout(1500);
+      await s.click('.satelliitti-selite-otsikko');
+      await s.waitForTimeout(1500);
+    }
+    await konteksti.close();
+    console.log(`video: ${await s.video()?.path()}`);
+    return;
+  }
   const etna = await tila(s);
   await kuva('etna');
   if (!JALKEEN) {
