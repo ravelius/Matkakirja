@@ -4,6 +4,24 @@ Luovuttaja on Siirtoseppä (Opus). 27.9. klo 11.3x: tilinvaihto (viikko 93 %), u
 lähestyy. Tämä korvaa luovutuksen `-20260925.md`. Sen opit ja 24.9.-b:n kohdat "Koepaketit" ja "Opetukset" ovat yhä
 voimassa.
 
+## TILA 28.9.2026 klo 10.3x (tilinvaihdon jälkeinen vuoro, Fable local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31)
+
+- **E2E-offline Tanska + Kroatia tehty** (2 ajoa, raportti docs/raportit/siirtoseppa-e2e-offline-20260928.md,
+  kuvat proto-3d/lokit/siirtoseppa-e2e-offline{,2}-20260928/). Peli poistettu F989814A:sta (Fable: levy).
+- **#3523 MERGETTY, tuotannossa v260:** offline-maasto natiivin sarjasta 2026-09-24-maailma (ennen 127/138 maata ilman).
+- **#3530 junassa:** vanhentuneet 1.52:n pienet (1280/80, 22 %) tehdään uudelleen 1024/75:llä (--varmista vertaa kokoa).
+  Viennin jälkeen tarkista: `mediakuvat: N vanhentunutta` CI-lokista ja otos ämpäristä.
+- **#3531 junassa (skeema 1.56, Natiiviseppä kuittasi, Fable hyväksyi):** kerma/reliefi/yövalot offline-lataukseen
+  (lahteet.kerrokset, maat.*.kerma, tavuja.kerrokset; koot offline.mjs --paivita-kerrokset), tavuja.offline = levykoko
+  (rajauslaatikko + 4 kt lohkot), tavuja.siirto; maan maaston keskikoot maittain (--paivita-maasto). Fable: maasto täytenä,
+  Eurooppa ~1,75 Gt siirto #3530:n jälkeen. Natiivi proto siirtoseppa/offline-kerrokset c260d593 + 31da7b02 junassa (juna/b13).
+- **#3538 junassa:** osoittimen kokoelmaSha → muutosrivi nimeää muuttuneet kokoelmat (Natiivi-UI:n päivityslappu).
+- **Proto siirtoseppa/paketti-sama-versio dbc9fd7d** merge-pyyntö Natiivisepälle: laiska sama versio käyttöön heti.
+- Geysir (Fable): vienti kunnossa (lat/lon kaikilla 17 ISL-kohteella); natiivin NostoKerros-portti → Natiiviseppä/Linssiseppä.
+- Natiiviseppä ottaa: kerman 404 offline-tilassa läpinäkyväksi ilman uusintaa.
+- Worktreet: wt/siirtoseppa-{maasto-maailma (mergetty, poista), offline-kerrokset, pienet-uusiksi, muutosrivi},
+  proto: wt/proto-siirtoseppa-{kerrokset, paketti}. Poista mergen jälkeen (uusi-worktree.sh --poista / git worktree remove).
+
 ## Lue ensin
 
 - CLAUDE.md sekä Raamatun Ydinajatus, kohta 2 "TYÖTAPA JA SESSIOT", ja "NATIIVI PELI ETUSIJALLE" (EI WEBISSÄ → KYSY,
