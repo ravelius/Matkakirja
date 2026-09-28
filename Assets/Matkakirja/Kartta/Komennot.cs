@@ -101,6 +101,7 @@ namespace Matkakirja
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
     ///   pohja savy [kontrasti nosto]  pohjakartan kontrasti (0 = ennallaan, −0,5…0,3) ja mustan nosto (0–0,4); säilyy laitteella
+    ///   pohja patina [rae koko tahrat kellastuminen reuna]  paperin rae 0–1 (koko 1–6 px), tahrat, kellastuminen ja reunatummennus 0–1; 0 = ennallaan
     ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke|suunta maailma|ruutu|kamera   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,
     ///                             löydös 154; oletus utu, omistaja 26.9.)
@@ -437,6 +438,12 @@ namespace Matkakirja
                     if (o.Length > 3)
                         Pohjasavy.Aseta(float.Parse(o[2], CultureInfo.InvariantCulture), float.Parse(o[3], CultureInfo.InvariantCulture));
                     Debug.Log("MATKAKIRJA " + Pohjasavy.Kuvaus());
+                    break;
+                case "pohja" when o.Length > 1 && o[1] == "patina":
+                    // pohja patina [rae koko tahrat kellastuminen reuna]: paperin rae ja patina (Pohjapatina; omistaja 27.9. klo 23.4x)
+                    if (o.Length > 6)
+                        Pohjapatina.Aseta((float)D(2), (float)D(3), (float)D(4), (float)D(5), (float)D(6));
+                    Debug.Log("MATKAKIRJA " + Pohjapatina.Kuvaus());
                     break;
                 case "hiljaa":
                 case "aanet":
