@@ -166,8 +166,17 @@ export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
  * keskitaso on −18,5…−24,8 dB, kun v3-äänet ovat noin −18,5…−19 dB;
  * kuiskaus- ja huokausrepliikit ovat hiljaisimpia.
  */
+/*
+ * v4-ÄÄNET TASOITETTUINA (Päätoimittaja 28.9.2026: "Pelaaja ei saa kuulla
+ * hiljaisempaa Pulua"): eleven_v4 tuottaa Livian 0–6 dB hiljaisempana kuin
+ * v3, joten erien pulu-3eaad28481f0aa2ef5a9 ja pulu-16f2c04e9e19bef41d64
+ * äänitteet osoittavat …/tasoitettu/-avaimiin (tools/tasoita-pulu.mjs:
+ * −17,2 LUFS yhdellä lineaarisella vahvistuksella, limitteri 0,97,
+ * 192 kbps; kuitti aanet/pulu/kuitit/tasoitus-2026-09-28T17-07-18-309Z.json).
+ * Alkuperäiset ja raaka/-kopiot ovat ämpärissä ennallaan.
+ */
 export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
-  'ateena-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/livia-ateena-3.mp3',
+  'ateena-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/tasoitettu/livia-ateena-3.mp3',
   'sarajevo-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-sarajevo-3.mp3',
   'helsinki-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-helsinki-3.mp3',
   'tampere-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-tampere-3.mp3',
@@ -179,13 +188,13 @@ export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
   'tukholma-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-tukholma-3.mp3',
   'lappi-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.mp3',
   'tromssa-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.mp3',
-  'sofia-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/livia-sofia-3.mp3',
+  'sofia-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/tasoitettu/livia-sofia-3.mp3',
   'istanbul-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-istanbul-3.mp3',
   'bukarest-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-bukarest-3.mp3',
   'budapest-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-budapest-3.mp3',
   'wien-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-wien-3.mp3',
   'lontoo-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-lontoo-3.mp3',
-  'pariisi-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/livia-pariisi-3.mp3',
+  'pariisi-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/tasoitettu/livia-pariisi-3.mp3',
   'madrid-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-madrid-3.mp3',
   'berliini-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-berliini-3.mp3',
   'rooma-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-rooma-3.mp3',
@@ -213,16 +222,16 @@ export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
   'islanti-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-islanti-3.mp3',
   'alpit-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-alpit-3.mp3',
   // Astronautin kamera ja ISS-kyyti, eleven_v4 (erä pulu-16f2c04e9e19bef41d64).
-  'iss-a-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-a-1.mp3',
-  'iss-a-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-a-2.mp3',
-  'iss-b-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-b-1.mp3',
-  'iss-b-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-b-2.mp3',
-  'iss-c-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-c-1.mp3',
-  'iss-c-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-c-2.mp3',
-  'iss-d-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-1.mp3',
-  'iss-d-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-2.mp3',
-  'iss-d-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-3.mp3',
-  'iss-d-4': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/livia-iss-d-4.mp3',
+  'iss-a-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-a-1.mp3',
+  'iss-a-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-a-2.mp3',
+  'iss-b-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-b-1.mp3',
+  'iss-b-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-b-2.mp3',
+  'iss-c-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-c-1.mp3',
+  'iss-c-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-c-2.mp3',
+  'iss-d-1': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-d-1.mp3',
+  'iss-d-2': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-d-2.mp3',
+  'iss-d-3': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-d-3.mp3',
+  'iss-d-4': 'aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-d-4.mp3',
 });
 
 /**

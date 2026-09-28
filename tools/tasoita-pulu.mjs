@@ -1,0 +1,118 @@
+#!/usr/bin/env node
+/*
+ * PULUN v4-ÄÄNITTEIDEN TASOITUS PELIN PULU-TASOON (Päätoimittaja 28.9.2026:
+ * "Pelaaja ei saa kuulla hiljaisempaa Pulua. Tasoita kaikki pelin
+ * v4-tiedostot Pulu-tasoon (-17,2 LUFS, 192 kbps, limitteri 0,97) samalla
+ * kaavalla kuin koosteessa, ja raakatiedostot talteen.").
+ *
+ * eleven_v4 tuottaa Livian äänen 0–6 dB hiljaisempana kuin eleven_v3, eikä
+ * putki (tools/generoi-pulu.mjs) normalisoi, koska omistaja otti
+ * jälkikäsittelyn pois 13.9.2026. Soitin ei voi korjata (asetaLivianTaso
+ * rajaa tason ≤ 1, perustaso 0,8). Tasoitus tehdään siksi erillisenä,
+ * dokumentoituna vaiheena:
+ *
+ *   1. versioitu v4-äänite haetaan sellaisenaan (se ja raaka/-kopio jäävät
+ *      ämpäriin koskemattomina — ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA);
+ *   2. kokonaisäänekkyys mitataan (loudnorm print_format=json) ja korjataan
+ *      YHDELLÄ lineaarisella vahvistuksella kuten linssiluennoissa
+ *      (tools/generoi-linssiluennat.mjs) — ei dynaamista loudnormia, joka
+ *      tasoittaisi puheen eläväisyyden; huiput rajataan limitterillä 0,97;
+ *   3. tulos koodataan kerran 192 kbps:llä avaimeen …/tasoitettu/<nimi>, ja
+ *      kuittisidottu .eleet.json kopioidaan viereen (ajat eivät muutu:
+ *      vahvistus ei siirrä ääntä ajassa);
+ *   4. kuitti (lähde, sha256:t, mitattu taso, vahvistus, kohde) viedään
+ *      avaimeen aanet/pulu/kuitit/tasoitus-<aikaleima>.json.
+ *
+ * Tämän jälkeen js/liviapuhe.js LIVIAN_VERSIOIDUT_AANET osoitetaan
+ * tasoitettuihin avaimiin (tulostuu ajon lopuksi).
+ *
+ *   zsh -c 'source ~/.matkakirja-avaimet-koodaus.zsh; node tools/tasoita-pulu.mjs [--kuiva] ateena-3 iss-a-1 …'
+ *   (ilman repliikkejä: kaikki eleven_v4-erien äänitteet taulukosta)
+ */
+import { execFileSync, spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { LIVIAN_VERSIOIDUT_AANET } from '../js/liviapuhe.js';
+
+export const PULU_TASO_LUFS = -17.2;
+export const PULU_LIMITTERI = 0.97;
+export const PULU_TASOITUS_BITTIVIRTA = '192k';
+/** eleven_v4-erät (tools/generoi-pulu.mjs, 28.9.2026). */
+export const V4_ERAT = Object.freeze(['pulu-3eaad28481f0aa2ef5a9', 'pulu-16f2c04e9e19bef41d64']);
+const MEDIA = 'https://media.matkakirja.app/';
+
+/** Tasoitetun äänitteen avain: sama kansio, alikansio tasoitettu/. */
+export function tasoitettuAvain(avain) {
+  return String(avain).replace(/\/([^/]+)$/, '/tasoitettu/$1');
+}
+
+const sha = (data) => createHash('sha256').update(data).digest('hex');
+const aja = (komento, argit) => execFileSync(komento, argit, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+
+function mittaaLufs(tiedosto) {
+  const { stderr } = spawnSync('ffmpeg', ['-hide_banner', '-i', tiedosto, '-af',
+    `loudnorm=I=${PULU_TASO_LUFS}:TP=-2:LRA=11:print_format=json`, '-f', 'null', '-'], { encoding: 'utf8' });
+  const i = Number((/"input_i"\s*:\s*"([^"]+)"/.exec(stderr ?? '') || [])[1]);
+  if (!Number.isFinite(i)) throw new Error(`${tiedosto}: tasoa ei voitu mitata`);
+  return i;
+}
+
+function r2(args) {
+  const tili = process.env.R2_ACCOUNT_ID;
+  if (!tili || !process.env.R2_BUCKET) throw new Error('R2_ACCOUNT_ID / R2_BUCKET puuttuu ympäristöstä');
+  return aja('aws', ['s3', ...args, '--endpoint-url', `https://${tili}.r2.cloudflarestorage.com`, '--only-show-errors']);
+}
+
+async function main() {
+  const argv = process.argv.slice(2);
+  const kuiva = argv.includes('--kuiva');
+  const pyydetyt = argv.filter((a) => !a.startsWith('--'));
+  const rivit = Object.entries(LIVIAN_VERSIOIDUT_AANET)
+    .filter(([, avain]) => V4_ERAT.some((era) => avain.includes(`/${era}/`)))
+    .filter(([nimi]) => !pyydetyt.length || pyydetyt.includes(nimi));
+  if (!rivit.length) throw new Error('ei tasoitettavia (onko taulukko jo tasoitettu?)');
+  const kansio = mkdtempSync(join(tmpdir(), 'tasoita-pulu-'));
+  const kuitti = { tehty: new Date().toISOString(), tavoiteLufs: PULU_TASO_LUFS, limitteri: PULU_LIMITTERI, bittivirta: PULU_TASOITUS_BITTIVIRTA, rivit: [] };
+  for (const [nimi, avain] of rivit) {
+    const vastaus = await fetch(MEDIA + avain);
+    if (!vastaus.ok) throw new Error(`${avain}: HTTP ${vastaus.status}`);
+    const data = Buffer.from(await vastaus.arrayBuffer());
+    const lahde = join(kansio, `${nimi}-lahde.mp3`);
+    const kohde = join(kansio, `${nimi}.mp3`);
+    writeFileSync(lahde, data);
+    const ennen = mittaaLufs(lahde);
+    const vahvistus = Math.round((PULU_TASO_LUFS - ennen) * 100) / 100;
+    aja('ffmpeg', ['-y', '-v', 'error', '-i', lahde, '-af', `volume=${vahvistus}dB,alimiter=limit=${PULU_LIMITTERI}`,
+      '-ac', '1', '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', PULU_TASOITUS_BITTIVIRTA, kohde]);
+    const jalkeen = mittaaLufs(kohde);
+    const uusi = tasoitettuAvain(avain);
+    const rivi = { nimi, lahde: avain, lahdeSha256: sha(data), lufsEnnen: ennen, vahvistusDb: vahvistus, lufsJalkeen: jalkeen, kohde: uusi, kohdeSha256: sha(readFileSync(kohde)) };
+    kuitti.rivit.push(rivi);
+    console.log(`${nimi}: ${ennen.toFixed(1)} → ${jalkeen.toFixed(1)} LUFS (${vahvistus >= 0 ? '+' : ''}${vahvistus} dB) → ${uusi}`);
+    if (kuiva) continue;
+    const bucket = process.env.R2_BUCKET;
+    r2(['cp', kohde, `s3://${bucket}/${uusi}`, '--content-type', 'audio/mpeg', '--cache-control', 'public, max-age=2592000']);
+    const eleet = avain.replace(/\.mp3$/, '.eleet.json');
+    if ((await fetch(MEDIA + eleet, { method: 'HEAD' })).ok) {
+      r2(['cp', `s3://${bucket}/${eleet}`, `s3://${bucket}/${uusi.replace(/\.mp3$/, '.eleet.json')}`,
+        '--content-type', 'application/json', '--cache-control', 'public, max-age=2592000']);
+      rivi.eleet = uusi.replace(/\.mp3$/, '.eleet.json');
+    }
+    const tarkistus = await fetch(MEDIA + uusi, { method: 'HEAD' });
+    if (!tarkistus.ok) throw new Error(`${uusi}: vienti ei näy (HTTP ${tarkistus.status})`);
+  }
+  const kuittiNimi = `aanet/pulu/kuitit/tasoitus-${kuitti.tehty.replace(/[:.]/g, '-')}.json`;
+  const kuittiTiedosto = join(kansio, 'kuitti.json');
+  writeFileSync(kuittiTiedosto, JSON.stringify(kuitti, null, 2));
+  if (!kuiva) {
+    r2(['cp', kuittiTiedosto, `s3://${process.env.R2_BUCKET}/${kuittiNimi}`, '--content-type', 'application/json']);
+    console.log(`kuitti: ${kuittiNimi}`);
+  }
+  console.log(JSON.stringify(Object.fromEntries(kuitti.rivit.map((r) => [r.nimi, r.kohde])), null, 2));
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((virhe) => { console.error(virhe.message); process.exit(1); });
+}
