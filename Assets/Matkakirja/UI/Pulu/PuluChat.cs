@@ -16,6 +16,9 @@
 // ei uusintaa. Sijaintikysymys ("missä …") ja vastauksen paikka → kamera lentää
 // paikkaan (webin pulu-paikka) ja "‹ Palaa" vie takaisin.
 // Kaiutin (webin .pollo-kaiutin, pysyvä kytkin) lukee vastaukset Puhe.Lue(…, "pollo").
+// PUHEKESKUSTELU (web #3546, omistaja 28.9.2026 Fablen kautta): saneltu kysymys on puhevuoro, jonka vastaus
+// luetaan aina kaiutinvivusta riippumatta; sanelun tilarivi kertoo Mietin → Puhun → tyhjä, ja mikki on
+// vuoron ajan "Hiljennä Pulu".
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -299,6 +302,7 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(Rakenne.Nappi(otsikko, "mk-chat__valmislinkki", () => Application.OpenURL(u), rivi), Kirjasin.Luku);
                 }
             }
+            LopetaPuheVuoro();
             if (AaniPaalla) Puhe.Hae()?.Lue(v.Vastaus, "pollo");
             historia.Add(("kayttaja", kysymys));
             historia.Add(("pollo", v.Vastaus));
@@ -309,6 +313,9 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             LopetaSanelu();
+            // Web sulje: luenta pysähtyy (pysaytaLukija, kun luentaPaalla) ja puhevuoro päättyy.
+            if (Auki && LuentaPaalla) PysaytaPulunPuhe();
+            LopetaPuheVuoro();
             suurennos.Sulje();
             kuvakortti?.Sulje();
             if (!Auki) return;
@@ -376,12 +383,19 @@ namespace Matkakirja.Natiivi
 
         // --- kysymys ------------------------------------------------------------------
 
-        public void Kysy(string kysymys, bool jatko = false)
+        /// <param name="puhe">saneltu kysymys = puhevuoro (web kysy { puhe: true }): vastaus luetaan aina</param>
+        public void Kysy(string kysymys, bool jatko = false, bool puhe = false)
         {
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki) Avaa();
+            LopetaPuheVuoro();
+            if (puhe)
+            {
+                puheVuoro = new PuheVuoro { Alku = Time.realtimeSinceStartupAsDouble };
+                AsetaPuheTila("miettii");
+            }
             kentta.value = "";
             PoistaSirut();
             ehdotusPoletti++;
@@ -752,7 +766,7 @@ namespace Matkakirja.Natiivi
             kysyy = false;
             if (suku != sukupolvi) { pulu.ChatOdotusLoppui(); yield break; } // Uusi peli välissä (löydös 177)
             // Virhe tai katkos: pulu vain takaisin; muuten (ei striimiä, koko vastaus kerralla) sama paluuketju.
-            if (t.Katkesi || t.Virhe != null) pulu.ChatOdotusLoppui();
+            if (t.Katkesi || t.Virhe != null) { pulu.ChatOdotusLoppui(); LopetaPuheVuoro(); }
             else pulu.ChatVastausAlkoi();
 
             if (t.Katkesi)
@@ -777,7 +791,7 @@ namespace Matkakirja.Natiivi
             if (!t.Uusittava) Matkakirjalinkit();
             UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
-            if (AaniPaalla) Puhe.Hae()?.Lue(Puhuttava(t.Vastaus), "pollo");
+            LueVastaus(Puhuttava(t.Vastaus));
             if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
             if (!t.Uusittava) PoimintaRivi(kysymys, nakyva);
             if (t.Uusittava) Sirut(new[] { "Yritä uudelleen" }, "mk-chat__uusinta", jatko);
@@ -1204,6 +1218,100 @@ namespace Matkakirja.Natiivi
 
         static bool AaniPaalla => PlayerPrefs.GetInt(AaniAvain, 0) == 1;
 
+        // --- puhekeskustelu (web luentaPaalla, asetaPuheTila, puheAlkoi, lopetaPuheVuoro, vahdiPuheVuoroa) ---
+
+        const string PuheMiettii = "Mietin…", PuhePuhuu = "Puhun… napauta mikkiä: hiljaa";
+
+        sealed class PuheVuoro { public double Alku; public Puhe Kuunneltu; public IVisualElementScheduledItem Vahti; }
+
+        PuheVuoro puheVuoro;
+        string puheTila;
+
+        /// <summary>Viimeisimmän puhevuoron viive kysymyksen lähdöstä ensimmäiseen ääneen, ms (-1 = ei vielä; web 2,4–3,2 s).</summary>
+        public static double ViimeisinPuheViive { get; private set; } = -1;
+
+        /// <summary>Testikomento ui chat puhetila: tila (miettii/puhuu/-), vuoro auki, viimeisin viive.</summary>
+        public string PuheTilaTeksti => $"{puheTila ?? "-"} vuoro={(puheVuoro != null ? "auki" : "ei")} viive={(ViimeisinPuheViive < 0 ? "-" : ViimeisinPuheViive.ToString("0") + " ms")}";
+
+        /// <summary>Luetaanko vastaus ääneen: kaiutinvipu TAI saneltu kysymys (puhekeskustelu).</summary>
+        bool LuentaPaalla => AaniPaalla || puheVuoro != null;
+
+        /// <summary>Sanelun tilarivi ja mikki puhevuoron mukaan: "miettii" | "puhuu" | null (web asetaPuheTila).</summary>
+        void AsetaPuheTila(string tila)
+        {
+            string vanha = puheTila;
+            puheTila = tila;
+            // Tilarivi on sanelun: tyhjennetään vain oma puherivi, ei sanelun virhelausetta.
+            if (tila != null || saneluTila.text == PuheMiettii || saneluTila.text == PuhePuhuu)
+                AsetaSaneluTila(tila == "puhuu" ? PuhePuhuu : tila == "miettii" ? PuheMiettii : null);
+            mikki.EnableInClassList("mk-chat__mikki--puhevuoro", tila != null);
+            if (!kuuntelee) mikki.tooltip = tila != null ? "Hiljennä Pulu" : "Kysy ääneen";
+            if (vanha != tila) Debug.Log("MATKAKIRJA pulu: puhetila " + (tila ?? "-"));
+        }
+
+        /// <summary>Vastaus ääneen (kaiutin tai puhevuoro); puhevuorossa ensimmäinen ääni vaihtaa "Mietin" → "Puhun".</summary>
+        void LueVastaus(string teksti)
+        {
+            if (!LuentaPaalla || string.IsNullOrWhiteSpace(teksti)) { LopetaPuheVuoro(); return; }
+            var puhe = Puhe.Hae();
+            var vuoro = puheVuoro;
+            if (vuoro != null && puhe != null)
+            {
+                vuoro.Kuunneltu = puhe;
+                puhe.Puhuu += PuheMuuttui;
+            }
+            // Pulun ääni lukee palavirtana (Puhe.Virta): ensimmäinen lyhyt pala soi ennen kuin koko vastaus on syntetisoitu.
+            bool alkoi = puhe != null && puhe.Lue(teksti, "pollo", loppu: () => { if (puheVuoro == vuoro) LopetaPuheVuoro(); });
+            if (vuoro == null) return;
+            if (!alkoi) { LopetaPuheVuoro(); return; }
+            // Varavahti (web vahdiPuheVuoroa 400 ms): vuoro päättyy, kun Pulun puhe ei enää lataa eikä soi
+            // (synteesi petti, luenta korvattiin toisella äänellä tai pysäytettiin muualta). Palan uusinnan tauko
+            // (Puhe.SoitaPalat 1–4 s, ViimeVirhe asetettu) ei vielä lopeta vuoroa, luovutettu pala 5 s:n jälkeen.
+            double hiljaaAlkaen = -1;
+            vuoro.Vahti = paneeli.schedule.Execute(() =>
+            {
+                if (puheVuoro != vuoro) return;
+                var p = vuoro.Kuunneltu;
+                bool pulunPuhe = p != null && (p.SoivaUrl?.StartsWith("puhe:pollo:", StringComparison.Ordinal) ?? false);
+                double nyt = Time.realtimeSinceStartupAsDouble;
+                if (pulunPuhe) { hiljaaAlkaen = -1; return; }
+                if (hiljaaAlkaen < 0) hiljaaAlkaen = nyt;
+                if (p?.ViimeVirhe == null || nyt - hiljaaAlkaen >= 5.0) LopetaPuheVuoro();
+            }).Every(400).StartingIn(400);
+        }
+
+        void PuheMuuttui(bool puhuu)
+        {
+            // Puhe.Puhuu(true) = ensimmäisen palan klippi käynnistyi (AloitaKlippi → Play): nyt kuuluu ääni.
+            var vuoro = puheVuoro;
+            if (!puhuu || vuoro == null || puheTila == "puhuu") return;
+            ViimeisinPuheViive = (Time.realtimeSinceStartupAsDouble - vuoro.Alku) * 1000.0;
+            Debug.Log($"MATKAKIRJA pulu: puheviive {ViimeisinPuheViive:0} ms (kysymyksen lähdöstä ensimmäiseen ääneen)");
+            AsetaPuheTila("puhuu");
+        }
+
+        /// <summary>Puhevuoro loppuu: luenta valmis, virhe, uusi kysymys, chatin sulku tai mikki (hiljaa).</summary>
+        void LopetaPuheVuoro(bool hiljaa = false)
+        {
+            var vuoro = puheVuoro;
+            if (vuoro == null && puheTila == null) return;
+            puheVuoro = null;
+            if (vuoro != null)
+            {
+                vuoro.Vahti?.Pause();
+                if (vuoro.Kuunneltu != null) vuoro.Kuunneltu.Puhuu -= PuheMuuttui;
+            }
+            if (hiljaa) PysaytaPulunPuhe();
+            AsetaPuheTila(null);
+        }
+
+        /// <summary>Pysäyttää Pulun luennan (latautuva tai soiva), ei muiden persoonien puhetta.</summary>
+        static void PysaytaPulunPuhe()
+        {
+            var p = Puhe.Instanssi;
+            if (p != null && (p.SoivaUrl?.StartsWith("puhe:pollo:", StringComparison.Ordinal) ?? false)) p.Pysayta(0.2f);
+        }
+
         /// <summary>Testikomento (ui chat aani): kaiutinkytkin kuin napautus; palauttaa uuden tilan.</summary>
         public bool VaihdaAaniTesti() { VaihdaAani(); return AaniPaalla; }
 
@@ -1268,9 +1376,14 @@ namespace Matkakirja.Natiivi
             lopetaIkoni.style.display = lopetaTeksti.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
+        /// <summary>Testikomento ui chat mikki: mikin napautus (puhevuorossa hiljentää Pulun).</summary>
+        public void MikkiTesti() => VaihdaSanelu();
+
         /// <summary>Mikkinappi: kuunnellessa lopettaa ja lähettää (Sanelu.Lopeta → valmis), muuten aloittaa.</summary>
         void VaihdaSanelu()
         {
+            // Puhevuoron aikana mikki hiljentää Pulun (web vaihdaSanelu): luenta seis, tilarivi tyhjäksi, vastaus jää.
+            if (puheVuoro != null) { LopetaPuheVuoro(hiljaa: true); return; }
             if (Sanelu.Kaynnissa) { Sanelu.Lopeta(); return; }
             if (!sanelussa) { sanelussa = true; NaytaSyote(); }
             MerkitseMikki(true);
@@ -1283,7 +1396,7 @@ namespace Matkakirja.Natiivi
                     string teksti = (t ?? "").Trim();
                     AsetaSaneluTila(null);
                     // Tyhjä valmis = pelaaja lopetti ennen kuin mitään tunnistettiin (web: ei kysymystä, ei moitetta).
-                    if (teksti.Length > 0) Kysy(teksti);
+                    if (teksti.Length > 0) Kysy(teksti, puhe: true);
                 },
                 virhe: lause =>
                 {
