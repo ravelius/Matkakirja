@@ -58,7 +58,12 @@ export function luoIssRealismi({ aurinko, kerrokset = [], varoita = () => {} } =
     }
   };
 
+  // Korvaa-liput Pelikoodarin näkymälle (aa80fc1ea): kerros, jonka nimi on tässä, korvaa näkymän oman.
+  const nimet = new Set(kerrokset.map((k) => k.nimi));
   return {
+    korvaa: Object.freeze({ yokuori: nimet.has('yokuori'), kaari: nimet.has('ilmakaari'), pilvet: nimet.has('pilvet') }),
+    /** A/B-säätimet kerroksittain (savukkeet ja vertailukuvat): ab('yokuori').valot = 0. */
+    ab: (nimi) => kerrokset.find((k) => k.nimi === nimi)?.ab ?? null,
     rakenna({ pallo, luokat, metri, R } = {}) {
       if (!pallo?.getCoords) return;
       yhteinen = { pallo, luokat: luokat ?? {}, metri, R };
@@ -82,7 +87,8 @@ export function luoIssRealismi({ aurinko, kerrokset = [], varoita = () => {} } =
     },
     /** Savukkeille ja testeille: kerrokset, kehykset, virheet, viimeisin auringon suunta. */
     tila() {
-      return { kerrokset: kerrokset.map((k) => k.nimi), ...mittari, aurinko: [...suunta], rakennettu: Boolean(yhteinen) };
+      return { kerrokset: kerrokset.map((k) => ({ nimi: k.nimi, ...(k.tila?.() ?? {}) })), ...mittari, aurinko: [...suunta],
+        rakennettu: Boolean(yhteinen) };
     },
   };
 }
