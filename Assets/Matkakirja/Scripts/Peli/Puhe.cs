@@ -593,6 +593,9 @@ namespace Matkakirja.Natiivi
             l?.Invoke();
         }
 
+        /// <summary>Palan loppuosa (s), jonka puuttuminen ei ole katkos vaan mp3:n kestoarvion häntä (ks. SOI LOPPUUN ASTI).</summary>
+        public const float HantaVara = 1.5f;
+
         /// <summary>Epäonnistuneen palan uusinnat (1, 2, 4 s) ennen kuin luenta pysähtyy.</summary>
         public const int PalanUusinnat = 3;
         /// <summary>Soiva pala "i/n mrk" (palaloki).</summary>
@@ -885,8 +888,12 @@ namespace Matkakirja.Natiivi
                     yield return null;
                 }
                 if (oma != tunnus) yield break;
-                // Viimeinen ruutu jää usein mittaamatta (~1/60 s): 0,25 s:n vara ei jatka valmista palaa turhaan.
-                if (!synteesi || kesto <= 0f || soi >= kesto - 0.25f || jatkoja >= 3 || lahde.clip != klippi) break;
+                // HÄNTÄ EI OLE KATKOS (omistaja 28.9.2026 klo 17.5x: "striimiluenta alkaa kesken lauseen … hyppää"): xAI-mp3:n
+                // klippi päättyy luonnostaan 0,2–0,5 s ennen clip.lengthiä (mp3:n kestoarvio; laitemittaus FB234D08: 17,4/17,8,
+                // 16,9/17,4, 11,2/11,4, 20,1/20,6 s), ja entinen 0,25 s:n vara kelasi joka palan lopun uudelleen. Pakatun mp3:n
+                // kelaus on epätarkka, joten "jatko" saattoi soittaa kohdan kesken lauseen uudelleen. Katkokseksi tulkitaan vain,
+                // kun palaa on jäljellä yli HantaVara.
+                if (!synteesi || kesto <= 0f || soi >= kesto - HantaVara || jatkoja >= 3 || lahde.clip != klippi) break;
                 PalojaJatkettu++;
                 Kirjaa($"pala {PalaNyt} pysähtyi kesken {soi:0.0}/{kesto:0.0} s: jatketaan");
                 lahde.time = Mathf.Min(soi, Mathf.Max(0f, kesto - 0.05f));
