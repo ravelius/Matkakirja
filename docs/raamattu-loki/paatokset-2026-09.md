@@ -8747,3 +8747,7 @@ Omistaja 28.9. klo 18.2x kortilla: Pulun striimiaani ElevenLabs v4 Turbo (1. tav
 ## OMISTAJA: CUPOLA — NAKYMA LAHEMMAS LASIA, VAHEMMAN PEHMENNYSTA (28.9.2026 klo 18.06)
 
 Omistaja 28.9. klo 18.4x sanatarkasti: "Avaruuslinssin seuraavaan versioon voisi itse asiassa zoomata näkymää vähän lähemmäksi lasia. Nyt näkymä ulos jää vähän liian pieneksi ja samalla pehmennyksen määrää voi hieman vähentää." → Linssiseppa: kamera/rajaus lahemmas lasia (maa isompi, kehys vahemman), pehmennys hieman pienemmaksi, rae ja ajelehdus ennallaan; kuvapari omistajalle.
+
+## OMISTAJA: ISOISAN AANI — VAKAA JA ETAINEN, EI TUNNETAGEJA (28.9.2026 klo 18.10)
+
+Omistaja 28.9. klo 18.5x sanatarkasti: "Tee vielä lisää muita äänivertailuita. Mikään noista ei ollut nykyistä parempi. Nykyisessä äänessä on erityisen hyvä se, että se on todella vakaa, mikä sopii isoisän hieman mysteeriseen ja ei niin persoonalliseen rooliin. Tavallaan, että nykyinen luenta jättää henkilön mukavalla tavalla vähän etäiseksi. Eli tunnetakeja ei välttämättä tarvita ollenkaan." → Pelikoodari: Horatio v4 ilman tageja + 3 muuta vakaata, hieman etaista kertojaa, stability korkea, style 0, voimakkuus pelin tasolle; nykyinen isoisa pysyy kunnes omistaja valitsee paremman.
