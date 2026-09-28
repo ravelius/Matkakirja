@@ -8515,3 +8515,7 @@ Omistaja kortilla 28.9. sanatarkasti: "Zoomatessa lähemmäs se vain katoaa kame
 ## OFFLINE-MAASTO TAYTENA: EUROOPPA ~1,75 GT SIIRTONA / 2,2 GT LEVYLLA (#3530 JALKEEN) (28.9.2026 klo 09.45)
 
 Siirtoseppa: oikeilla laattakoilla Euroopan offline-maasto ~786 Mt (1.53:n arvio ~94 Mt laskettiin vanhan sarjan Ranska-datasta); Eurooppa yhteensa ~1,9 Gt / 2,4 Gt levylla, #3530:n (pienet 1024/75) jalkeen ~1,75 / 2,2 Gt. Fable: maasto taytena (ladattu alue kuin verkossa, natiivi nayttaa todellisen koon), ei z10-rajausta. #3531 (skeema 1.56: kerma, relief, yovalot + todellinen levykoko, E2E 2 PASS) junaan Natiivisepan kuittauksen jalkeen.
+
+## OMISTAJA: NATIIVIN 'PELI PAIVITTYI' -LAPPUUN VARSINAISET MUUTOKSET, JARJESTELMATYYLISET TEKSTILAPUT ALUSTA POIS (28.9.2026 klo 09.48)
+
+Omistaja 28.9. kuvakaappauksella (TF 1.0.34, sisalto 261) sanatarkasti: "Päivitystiedot tulevat jo aiemmassa näkymässä, ja tässä näkymässä tulee tällainen lappu, jossa ei oikein ole sisältöä. Jos päivitystiedot saisi tähän lappuun, niin se olisi visuaalisesti kivempi, jolloin voisi ottaa ne aiemmat käyttöjärjestelmän näköiset tekstilaput alusta pois." Natiivi-UI (karki): lappuun muutosloki-natiivi.json-rivit + sisaltopaivityksen muutokset, selvitys miksi 1.0.34-rivi ei nay; aiemmat tekstilaput pois.
