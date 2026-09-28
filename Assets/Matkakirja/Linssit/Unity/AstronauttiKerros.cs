@@ -56,6 +56,7 @@ namespace Matkakirja.Natiivi
         Pilvikuori pilvet;
         Avaruus avaruus;
         Yokuori yokuori;
+        CupolaKerros cupola;
         Transform iss;
         Transform issMalli;
         Material issMalliMateriaali;
@@ -231,6 +232,10 @@ namespace Matkakirja.Natiivi
             // se kulkee kameran suuntaan ja näkyi pystyviivana ISS:n läpi (laiteajo 28.9.).
             if (rata != null) rata.SetActive(tila == KyydinTila.Kauko);
             if (yokuori != null) yokuori.Nayta(tila != KyydinTila.Kauko);
+            // Kyydissä ohut ilmakehän kaari ja musta avaruus (omistajan palaute 28.9.), tähdet himmeinä (päivävalo).
+            avaruus?.Kyyti(tila != KyydinTila.Kauko);
+            tahtienPeitto = tila == KyydinTila.Kauko ? 1f : 0.3f;
+            if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
         }
 
@@ -256,6 +261,7 @@ namespace Matkakirja.Natiivi
 
         public void Pois()
         {
+            if (cupola != null) Destroy(cupola.gameObject);
             KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false);
             AvausKasittelija?.Invoke(AvauksenVaihe.Pois);
             SumuKasittelija?.Invoke(0);
@@ -371,6 +377,12 @@ namespace Matkakirja.Natiivi
                 p.nimi.transform.localPosition = new Vector3((float)(l.X + l.W / 2), (float)-(l.Y + l.H / 2), 0);
             }
 
+            if (cupola != null)
+            {
+                cupola.IssYlos = issYlos;
+                cupola.IssKorkeusKm = issKorkeusM / 1000;
+                cupola.Nayta(kyyti == KyydinTila.Ikkuna && !IssKyytiNakyma.IlmanKehysta && !CupolaKerros.Vanha);
+            }
             if (iss != null)
             {
                 Vector3 paikka = gt.TransformPoint(issPinta);
@@ -444,6 +456,7 @@ namespace Matkakirja.Natiivi
             if (pilvet != null) Destroy(pilvet.gameObject);
             if (avaruus != null) Destroy(avaruus.gameObject);
             if (yokuori != null) Destroy(yokuori.gameObject);
+            if (cupola != null) Destroy(cupola.gameObject);
             if (rataMesh != null) Destroy(rataMesh);
             Destroy(nelio);
             Destroy(pisteMateriaali);

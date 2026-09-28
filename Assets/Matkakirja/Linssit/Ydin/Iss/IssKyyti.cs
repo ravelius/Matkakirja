@@ -121,6 +121,45 @@ namespace Matkakirja.Linssit.Iss
     }
 
     /// <summary>
+    /// Cupolan valaistus (omistajan palaute 28.9.2026: valonlähteet tuovat luonnolliset valoisuuden muutokset sisäpintaan):
+    /// onko ISS auringossa (sylinterivarjo: maan varjossa, kun aurinko on yli sivukulman verran pinnan alla), maavalo (maa
+    /// alla päiväpuolella kirkas, yöpuolella hämärä) ja aurinko kameran koordinaateissa ruudun valonsuunnaksi.
+    /// </summary>
+    public static class CupolanValo
+    {
+        /// <summary>
+        /// Auringossa, kun dot(ylös, aurinko) &gt; −√(1 − (R / (R + h))²): muuten aurinko on maan takana (420 km: −0,35 eli
+        /// aurinko 20° horisontin alla). Palauttaa 0…1 pehmeällä reunalla (auringonnousu ISS:ltä kestää ~10 s).
+        /// </summary>
+        public static double Aurinkoisuus(double ylosDotAurinko, double korkeusKm)
+        {
+            double r = 6371.0 / (6371.0 + Math.Max(0, korkeusKm));
+            double raja = -Math.Sqrt(Math.Max(0, 1 - r * r));
+            return Pehmea((ylosDotAurinko - raja) / 0.02 + 0.5);
+        }
+
+        /// <summary>Maavalo 0,15…1: maa alla päiväpuolella kirkas, hämärässä himmenee, yöllä kaupunkien ja kuun valo.</summary>
+        public static double Maavalo(double ylosDotAurinko) => 0.15 + 0.85 * Pehmea((ylosDotAurinko + 0.15) / 0.45);
+
+        /// <summary>
+        /// Aurinko kameran koordinaateissa (x oikealle, y ylös, z eteen) → ruudun valonsuunta (x, y) ja syvyys (z, &gt; 0 = edessä).
+        /// Takana oleva aurinko valaisee kehystä sivulta (z rajataan), mutta ei koskaan suoraan edestä ruudun ulkopuolelta.
+        /// </summary>
+        public static (double x, double y, double z) Ruudulle(double x, double y, double z)
+        {
+            double l = Math.Sqrt(x * x + y * y + z * z);
+            if (l < 1e-9) return (0, 1, 0);
+            return (x / l, y / l, z / l);
+        }
+
+        static double Pehmea(double t)
+        {
+            t = t < 0 ? 0 : t > 1 ? 1 : t;
+            return t * t * (3 - 2 * t);
+        }
+    }
+
+    /// <summary>
     /// Kyydin tilakone: napautus vie seuraavaan tilaan, Poistu kaukonäkymään. Paivita antaa joka kehys kameran asennon ja
     /// kenttäkulman (siirtymän aikana sekoitettuna). Kaukonäkymässä kamera on pelaajan, joten asentoa ei anneta.
     /// </summary>

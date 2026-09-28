@@ -1388,6 +1388,14 @@ namespace Matkakirja.Natiivi
                         string a = osat.Length > 2 ? osat[2] : "";
                         if (a == "pois") l.PoistuKyydista();
                         else if (a == "yo" && osat.Length > 3) Yokuori.Pois = osat[3] == "0";   // A/B: astro kyyti yo 0|1
+                        // A/B omistajan Cupola-palautteeseen (28.9.): vanha = 1.0.35:n UI-kehys ja kaukonäkymän hehku.
+                        else if (a == "cupola" && osat.Length > 3) CupolaKerros.Vanha = osat[3] == "vanha";
+                        else if (a == "ilmakeha" && osat.Length > 3)
+                        {
+                            Avaruus.VanhaIlmakeha = osat[3] == "vanha";
+                            FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
+                        }
+                        else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
                         else if (a != "tila") l.NapautaIss();
                         var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
                         var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);

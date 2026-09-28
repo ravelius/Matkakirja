@@ -61,7 +61,7 @@ namespace Matkakirja.Natiivi
                 tieto.text = string.Format(Fi, "ISS · {0:N0} km · {1:N0} km/h{2}", korkeusKm, Math.Round(nopeusKmh / 10) * 10,
                     arvio ? " · rata-arvio" : "");
             bool ikkuna = tila == KyydinTila.Ikkuna;
-            if (ikkuna && !kuvatHaettu) HaeKuvat();
+            if (ikkuna && !kuvatHaettu && CupolaKerros.Vanha) HaeKuvat();
             this.ikkuna = ikkuna;
             PaivitaKehys();
             if (auki != oliAuki) AukiMuuttui?.Invoke(auki);
@@ -72,7 +72,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kehys ja heijastus näkyviin ikkunassa (ellei A/B ilman kehystä).</summary>
         public void PaivitaKehys()
         {
-            bool nakyy = ikkuna && !IlmanKehysta;
+            // Valaistu Cupola on 3D-kerros (CupolaKerros); UI-kehys vain A/B:n "ennen"-kuvaan (CupolaKerros.Vanha).
+            bool nakyy = ikkuna && !IlmanKehysta && CupolaKerros.Vanha;
+            if (nakyy && !kuvatHaettu) HaeKuvat();
             juuri.EnableInClassList("mk-isskyyti--ikkuna", nakyy);
             Heilu(nakyy);
         }

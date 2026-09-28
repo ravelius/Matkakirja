@@ -13,6 +13,12 @@
 //             screen-sekoitus (Havaintopiste) hehkuu vain tummalla pohjalla.
 //
 // Hehku ja tummennus häivytetään sisään linssin avautuessa (0,6 s); kaikki puretaan kerroksen mukana.
+//
+// ISS:N KYYTI (omistajan palaute 28.9.2026: "pitäisikö avaruuden musta näkyä paremmin maapallon horisontissa"):
+// hehkun kuori (1,25 R) ympäröi kameran ISS:n korkeudella, jolloin koko taivas sinersi. Kyydissä hehku häipyy ja tilalle
+// tulee Ilmakaari (kuori R + 120 km, analyyttinen kaari horisontin yllä ja usva maan päällä); musta avaruus yläpuolella.
+// Siirtymä 0,8 s. A/B: VanhaIlmakeha = true pitää kyydissäkin vanhan hehkun (kuvapari).
+using System;
 using CesiumForUnity;
 using Unity.Mathematics;
 using UnityEngine;
@@ -30,9 +36,17 @@ namespace Matkakirja.Natiivi
         static readonly Color Ilmakeha = new Color32(127, 182, 255, 255);
         const int Sektorit = 96, Kehat = 48;
 
-        Material hehku;
-        Mesh kuori;
-        float peitto;
+        Material hehku, kaari;
+        Mesh kuori, kaariKuori;
+        float peitto, kyyti, kyytiTavoite, aurinkoPaivitetty = -10f;
+        CesiumGeoreference g;
+
+        /// <summary>A/B (`astro kyyti ilmakeha vanha|uusi`): kyydissäkin kaukonäkymän hehku.</summary>
+        public static bool VanhaIlmakeha;
+        const float KyytiS = 0.8f, KaarenKorkeus = 120_000f;
+
+        /// <summary>ISS:n kyyti päälle/pois: hehku häipyy ja ilmakehän kaari tulee tilalle (ellei A/B vanha).</summary>
+        public void Kyyti(bool paalla) => kyytiTavoite = paalla && !VanhaIlmakeha ? 1f : 0f;
 
         public static Avaruus Luo(CesiumGeoreference georeferenssi, Transform isanta)
         {
@@ -45,6 +59,7 @@ namespace Matkakirja.Natiivi
 
         void Rakenna(CesiumGeoreference g)
         {
+            this.g = g;
             // Tausta Natiivisepän rajapinnalla (kameran tausta); null palauttaa pelin oman.
             KarttaKerrokset.Instanssi?.Taustavari(Tausta);
 
@@ -90,14 +105,73 @@ namespace Matkakirja.Natiivi
             hehku.SetFloat("_Peitto", 0);
             kr.sharedMaterial = hehku;
             kr.shadowCastingMode = ShadowCastingMode.Off;
+            RakennaKaari(g, keskus, sade, paikat.Length);
+        }
+
+        /// <summary>Ilmakehän kaaren kuori R + 120 km (sama pallokuori kuin hehkulla, vain säde eri).</summary>
+        void RakennaKaari(CesiumGeoreference g, double3 keskus, double sade, int n)
+        {
+            var varjostin = Resources.Load<Shader>("Varjostimet/Ilmakaari");
+            if (varjostin == null) { Debug.LogWarning("MATKAKIRJA linssit: Ilmakaari-varjostin puuttuu"); return; }
+            var k = new GameObject("Ilmakaari");
+            k.transform.SetParent(transform, false);
+            k.transform.localPosition = (Vector3)(float3)keskus;
+            float rk = (float)(sade + KaarenKorkeus);
+            var paikat = new Vector3[n];
+            int i = 0;
+            for (int kk = 0; kk <= Kehat; kk++)
+            {
+                float lat = Mathf.PI * (0.5f - kk / (float)Kehat);
+                for (int s = 0; s <= Sektorit; s++, i++)
+                {
+                    float lon = 2 * Mathf.PI * s / Sektorit;
+                    paikat[i] = new Vector3(Mathf.Cos(lat) * Mathf.Cos(lon), Mathf.Sin(lat), Mathf.Cos(lat) * Mathf.Sin(lon)) * rk;
+                }
+            }
+            kaariKuori = new Mesh { name = "Ilmakaari", indexFormat = IndexFormat.UInt32, vertices = paikat, triangles = kuori.triangles };
+            // Etupinnat (usva) ja takapinnat (kaari): kolmioiden kierto ratkaisee, kumpi passi näkee kumman puolen.
+            kaariKuori.RecalculateBounds();
+            k.AddComponent<MeshFilter>().sharedMesh = kaariKuori;
+            var kr = k.AddComponent<MeshRenderer>();
+            kaari = new Material(varjostin) { name = "Ilmakaari" };
+            kaari.SetFloat("_R", (float)sade);
+            kaari.SetFloat("_Litistys", (float)(sade / CesiumWgs84Ellipsoid.GetMinimumRadius()));
+            kaari.SetFloat("_Korkeus", KaarenKorkeus);
+            kaari.SetFloat("_Peitto", 0);
+            kr.sharedMaterial = kaari;
+            kr.shadowCastingMode = ShadowCastingMode.Off;
+            kr.enabled = false;
         }
 
         void Update()
         {
-            if (peitto >= 1f) return;
+            bool avaus = peitto < 1f, siirtyy = kyyti != kyytiTavoite;
+            if (!avaus && !siirtyy && kyyti <= 0f) return;
             peitto = Mathf.MoveTowards(peitto, 1f, Time.unscaledDeltaTime / HaivytysS);
-            if (hehku != null) hehku.SetFloat("_Peitto", peitto);
-            KarttaKerrokset.PallonSavy(Mathf.Lerp(1f, Savy, peitto));
+            kyyti = Mathf.MoveTowards(kyyti, kyytiTavoite, Time.unscaledDeltaTime / KyytiS);
+            if (hehku != null) hehku.SetFloat("_Peitto", peitto * (1f - kyyti));
+            if (avaus) KarttaKerrokset.PallonSavy(Mathf.Lerp(1f, Savy, peitto));
+            if (kaari == null) return;
+            PaivitaKaari();
+        }
+
+        MeshRenderer kaariPiirto;
+
+        void PaivitaKaari()
+        {
+            kaariPiirto ??= transform.Find("Ilmakaari")?.GetComponent<MeshRenderer>();
+            if (kaariPiirto == null) return;
+            bool nakyy = kyyti > 0.001f;
+            if (kaariPiirto.enabled != nakyy) kaariPiirto.enabled = nakyy;
+            kaari.SetFloat("_Peitto", kyyti);
+            if (!nakyy || Time.unscaledTime - aurinkoPaivitetty < 1f) return;
+            // Keskipiste, napa-akseli ja aurinko maailmassa (georeferenssi voi liikkua); aurinko liikkuu 0,25°/min.
+            aurinkoPaivitetty = Time.unscaledTime;
+            var gt = g.transform;
+            double3 keskus = g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            kaari.SetVector("_Keskus", gt.TransformPoint((Vector3)(float3)keskus));
+            kaari.SetVector("_Akseli", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
+            kaari.SetVector("_Aurinko", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(DateTime.UtcNow))).normalized);
         }
 
         void OnDestroy()
@@ -106,6 +180,8 @@ namespace Matkakirja.Natiivi
             KarttaKerrokset.PallonSavy(null);
             if (hehku != null) Destroy(hehku);
             if (kuori != null) Destroy(kuori);
+            if (kaari != null) Destroy(kaari);
+            if (kaariKuori != null) Destroy(kaariKuori);
         }
     }
 }

@@ -131,6 +131,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(a.EtaisyysM > IssKuvakulma.SeurannanEtaisyysM, "pallon toiselta puolelta lento kestää pidempään");
         }
 
+        [Testi] static void CupolanValoAuringonJaVarjonMukaan()
+        {
+            Oleta.Tosi(CupolanValo.Aurinkoisuus(0.5, 420) > 0.99, "päiväpuoli: auringossa");
+            Oleta.Tosi(CupolanValo.Aurinkoisuus(-0.2, 420) > 0.99, "aurinko 12° horisontin alla: ISS yhä auringossa");
+            Oleta.Tosi(CupolanValo.Aurinkoisuus(-0.5, 420) < 0.01, "syvällä yöpuolella: varjossa");
+            double raja = -Math.Sqrt(1 - Math.Pow(6371.0 / 6791.0, 2));
+            Oleta.Tosi(Math.Abs(CupolanValo.Aurinkoisuus(raja, 420) - 0.5) < 0.01, "varjon reuna puolivälissä");
+            Oleta.Tosi(CupolanValo.Maavalo(1) > 0.99 && CupolanValo.Maavalo(-1) < 0.16, "maavalo päivä 1, yö 0,15");
+            var r = CupolanValo.Ruudulle(0, 3, 4);
+            Oleta.Tosi(Math.Abs(r.y - 0.6) < 1e-9 && Math.Abs(r.z - 0.8) < 1e-9, "yksikkövektori");
+        }
+
         // ---- AstronauttiLinssi ----
 
         sealed class Nakyma : IAstronautinNakyma
