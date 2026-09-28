@@ -580,7 +580,7 @@ namespace Matkakirja.Natiivi
             // välimuistin vanhentuneen kohteen. Omistaja 1.0.39: valikon rivin ensimmäinen napautus ei hypännyt (luenta jatkoi
             // väärästä kohdasta), vasta toinen.
             var kohde = e.target as VisualElement;
-            var poimittu = paneeli.panel?.Pick(e.position) ?? kohde;
+            var poimittu = paneeli.panel?.PickAll(e.position, null) ?? kohde; // tuore, ei välimuistia (ks. Nostokortti.Poimi)
             var puu = paneeli.panel?.visualTree;
             if (Valikossa(poimittu))
             {
@@ -612,7 +612,7 @@ namespace Matkakirja.Natiivi
                 if (u.pointerId != sormi) return;
                 u.StopPropagation();
                 puu.UnregisterCallback(ylos, TrickleDown.TrickleDown);
-                if (nappi?.panel != null && (nappi.panel.Pick(u.position) is VisualElement q) && (q == nappi || nappi.Contains(q)))
+                if (nappi?.panel != null && (nappi.panel.PickAll(u.position, null) is VisualElement q) && (q == nappi || nappi.Contains(q)))
                 {
                     Debug.Log($"MATKAKIRJA ui lukija: vanhentunut kohde, painetaan {string.Join(".", nappi.GetClasses())}");
                     using (var s = NavigationSubmitEvent.GetPooled()) { s.target = nappi; nappi.SendEvent(s); }

@@ -468,8 +468,12 @@ namespace Matkakirja.Natiivi
                     }
         }
 
-        /// <summary>Elementti ruudun kohdassa nyt (paneelin poiminta); ilman paneelia tapahtuman kohde.</summary>
-        VisualElement Poimi(Vector2 paikka, VisualElement varalla) => kortti.panel?.Pick(paikka) ?? varalla;
+        /// <summary>
+        /// Elementti ruudun kohdassa nyt; ilman paneelia tapahtuman kohde. PickAll eikä Pick: Pick(point) lukee hiiren
+        /// välimuistia (Panel.Pick → pointerId hiiri), joka iPad-simulaattorissa on sama vanhentunut kohde (Laitetestaaja
+        /// 1.0.40: kaiutin sulki kortin iPadilla ~6/7); PickAll poimii aina tuoreesti.
+        /// </summary>
+        VisualElement Poimi(Vector2 paikka, VisualElement varalla) => kortti.panel?.PickAll(paikka, null) ?? varalla;
 
         /// <summary>Nappi tai kuvakehys, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
         VisualElement ohitettu;
