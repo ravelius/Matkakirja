@@ -531,13 +531,29 @@ namespace Matkakirja.Natiivi
         }
 
         readonly List<Rect> kalusteRuudut = new List<Rect>();
+        string mallienNimiotLoki;
+        /// <summary>Vain erikoismallien kalustelaatikot (Symbolimallit.LisaaKalusteet) paneelin pisteinä: nostonimiöiden esteet.</summary>
+        readonly List<Rect> malliRuudut = new List<Rect>();
+        static readonly List<Ruutulaatikko> malliLaatikot = new List<Ruutulaatikko>();
 
         /// <summary>KaupunkiMerkit.Kalusteet (ruutupikselit, y ylös) tämän kerroksen paneelin pisteiksi (y alas).</summary>
         void KalusteetPaneeliin()
         {
             kalusteRuudut.Clear();
+            malliRuudut.Clear();
             var lista = KaupunkiMerkit.Kalusteet?.Invoke();
             var paneeli = juuri.panel;
+            if (paneeli != null)
+            {
+                malliLaatikot.Clear();
+                Symbolimallit.LisaaKalusteet(malliLaatikot);
+                foreach (var k in malliLaatikot)
+                {
+                    var a = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(k.X0, Screen.height - k.Y1));
+                    var b = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(k.X1, Screen.height - k.Y0));
+                    malliRuudut.Add(Rect.MinMaxRect(a.x, a.y, b.x, b.y));
+                }
+            }
             if (lista == null || paneeli == null) return;
             foreach (var k in lista)
             {
@@ -607,27 +623,34 @@ namespace Matkakirja.Natiivi
             }
             var varatut = new List<Rect>(jono.Count);
             var uudet = new Dictionary<string, Lukko>(jono.Count);
+            var mallienNimiot = new List<string>();
             LueNimet();
             bool Musteeton(Rect a) { foreach (var e in nimet) if (e.Overlaps(a)) return false; return true; }
             foreach (var m in jono)
             {
                 string loytyi = null;
                 Rect paikka = default;
-                // KALUSTEET ESTEINÄ (Linssiseppä 28.9. klo 19.3x: Visbyn malli Vimmerby-nimiön päällä): nimiö ei mene erikoismallin
-                // tai muun kalusteen (pulu, kartussi, Liiku) alle. Mallinoston oma laatikko ei estä omaa nimiötä: se on laatikko,
-                // jonka alareunalla (jalka) merkin piste on.
-                bool malli = m.Ryhma == null && !m.MallinAlla && m.Id != null && Symbolimallit.OnMalli(m.Id);
+                // ERIKOISMALLIT ESTEINÄ (Linssiseppä 28.9. klo 19.3x: Visbyn malli Vimmerby-nimiön päällä): nimiö ei mene erikoismallin
+                // alle (vain mallit, ei UI-kalusteita: ne piilottivat laitekuvassa cl14 vasemman laidan nimiöt). Mallinoston oma
+                // laatikko (lähin, jonka alueella merkin piste on) ei estä omaa nimiötä. Kategoriasymboleilla ei ole laatikkoa: ennallaan.
                 int oma = -1;
-                if (malli)
-                    for (int k = 0; k < kalusteRuudut.Count; k++)
+                if (m.Ryhma == null && !m.MallinAlla && m.Id != null && Symbolimallit.OnMalli(m.Id))
+                {
+                    float paras = float.MaxValue;
+                    for (int k = 0; k < malliRuudut.Count; k++)
                     {
-                        var r = kalusteRuudut[k];
-                        if (m.Piste.x >= r.xMin - 2f && m.Piste.x <= r.xMax + 2f && m.Piste.y >= r.yMin && m.Piste.y <= r.yMax + 12f) { oma = k; break; }
+                        var r = malliRuudut[k];
+                        if (m.Piste.x < r.xMin - 4f || m.Piste.x > r.xMax + 4f || m.Piste.y < r.yMin - 24f || m.Piste.y > r.yMax + 24f) continue;
+                        float d = Mathf.Abs(m.Piste.x - r.center.x) + Mathf.Abs(m.Piste.y - r.yMax);
+                        if (d < paras) { paras = d; oma = k; }
                     }
-                m.MallinYla = oma >= 0 ? kalusteRuudut[oma].yMin - m.Piste.y : float.NaN;
+                }
+                bool malli = oma >= 0;
+                m.MallinYla = malli ? malliRuudut[oma].yMin - m.Piste.y : float.NaN;
+                if (malli) mallienNimiot.Add(m.Id + "#" + oma);
                 bool Kalusteeton(Rect a)
                 {
-                    for (int k = 0; k < kalusteRuudut.Count; k++) if (k != oma && kalusteRuudut[k].Overlaps(a)) return false;
+                    for (int k = 0; k < malliRuudut.Count; k++) if (k != oma && malliRuudut[k].Overlaps(a)) return false;
                     return true;
                 }
                 bool Vapaa(Rect r, float vara)
@@ -658,6 +681,8 @@ namespace Matkakirja.Natiivi
                         if (vapaa && !m.Kiintea)
                             for (int i = 0; i < n && vapaa; i++) if (merkit[i] != m && ikonit[i].Overlaps(av)) vapaa = false;
                         m.Kylki = lukko.Kylki;
+                        // Mallin nimi ei katoa: tukossa se jää lukittuun kylkeensä (ylä/ala).
+                        if (malli && !vapaa) vapaa = true;
                         vapaa = Vakaa(nimionVaihto, m.Id, lukko.Nakyy, vapaa);
                         m.NimioNakyy = vapaa;
                         if (vapaa) { varatut.Add(a0); AsetaNimio(m); }
@@ -717,6 +742,20 @@ namespace Matkakirja.Natiivi
             // Lukko kantaa seuraavaan lepoon; näkyvistä poistuneiden nostojen lukot vapautuvat (web tulos.asennot).
             lukot.Clear();
             foreach (var kv in uudet) lukot[kv.Key] = kv.Value;
+            // Mittari (Linssisepän laiteajot): mallilaatikot ja niiden nostonimiöt, kun tila muuttuu. Laatikko ilman nostoa =
+            // malli, jonka nosto ei ole tällä kerroksella (esim. piilossa tai ryhmässä).
+            if (malliRuudut.Count > 0 || mallienNimiot.Count > 0)
+            {
+                var sb = new System.Text.StringBuilder($"mallilaatikoita {malliRuudut.Count}:");
+                foreach (var t in mallienNimiot)
+                {
+                    string id = t.Substring(0, t.LastIndexOf('#'));
+                    string tila = uudet.TryGetValue(id, out var l) ? $"{l.Kylki} {(l.Nakyy ? "näkyy" : "piilossa")}" : "?";
+                    sb.Append(' ').Append(t).Append(' ').Append(tila).Append(';');
+                }
+                string rivi = sb.ToString();
+                if (rivi != mallienNimiotLoki) { mallienNimiotLoki = rivi; Debug.Log("MATKAKIRJA nostot: " + rivi); }
+            }
         }
 
         NostoKerros.Nosto LoydaNosto(string id)
