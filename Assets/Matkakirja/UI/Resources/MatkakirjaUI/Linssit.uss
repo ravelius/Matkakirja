@@ -3037,6 +3037,121 @@
     white-space: nowrap;
 }
 
+/* --- Maapallon vuosi (MaapallonVuosiNakyma; web maapallon-vuosi.html .mv-ui, PR #3558) --------------------- */
+.mk-vuosi {
+    position: absolute;
+    align-items: center;
+}
+
+/* Web: width min(560px, 100% − 32px), padding 12 14 10, gap 8, rgba(12,16,26,.72), reunus .18, kulma 14. */
+.mk-vuosi__paneeli {
+    width: 100%;
+    max-width: 560px;
+    padding: 12px 14px 10px 14px;
+    border-width: 1px;
+    border-radius: 14px;
+    border-color: rgba(239, 230, 210, 0.18);
+    background-color: rgba(12, 16, 26, 0.72);
+    color: #efe6d2;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.mk-vuosi__rivi {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Web .mv-toista: 34 × 34, pyöreä, rgba(239,230,210,.12), reunaton. */
+.mk-vuosi__toista {
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    flex-shrink: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 17px;
+    background-color: rgba(239, 230, 210, 0.12);
+}
+
+.mk-vuosi__toista:active {
+    background-color: rgba(239, 230, 210, 0.22);
+}
+
+.mk-vuosi__ikoni {
+    width: 14px;
+    height: 14px;
+    color: #efe6d2;
+}
+
+.mk-vuosi .mk-saadin {
+    margin: -5px 0 -5px 10px;
+}
+
+/* Web .mv-nimi: min-width 6.5em, oikealle, small-caps (isot kirjaimet ~ x-korkeus), letter-spacing .02em. */
+.mk-vuosi__nimi {
+    min-width: 97px;
+    flex-shrink: 0;
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    color: #efe6d2;
+    -unity-text-align: middle-right;
+}
+
+/* Web .mv-valinta: max 48 %, rgba(239,230,210,.1), reunus .25, kulma 8, täyte 5 8. Selaimen select on pisimmän
+ * vaihtoehdon levyinen (kerrosnimet täyttävät 48 %); UITK:n DropdownField mitoittuu ensimmäisestä tekstistä, joten
+ * leveys on suoraan 48 % ja ylipitkä nimi katkeaa ellipsiin (vuosi2 07-ndvi: "Kasvillisuus (N"). */
+.mk-vuosi__valinta {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 48%;
+    margin: 0;
+}
+
+.mk-vuosi__valinta > .unity-base-popup-field__input {
+    min-height: 0;
+    padding: 5px 8px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(239, 230, 210, 0.25);
+    background-color: rgba(239, 230, 210, 0.1);
+    color: #efe6d2;
+}
+
+.mk-vuosi__valinta .unity-base-popup-field__text {
+    flex-shrink: 1;
+    min-width: 0;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #efe6d2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mk-vuosi__valinta .unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: #efe6d2;
+}
+
+.mk-vuosi__peitto:disabled {
+    opacity: 0.35;
+}
+
+/* Web .mv-lahde: 11 px, opasiteetti .6, keskellä. */
+.mk-vuosi__lahde {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    letter-spacing: 0;
+    opacity: 0.6;
+    color: #efe6d2;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
 /* --- ISS:n kyyti (Linssisepän suositus docs/raportit/iss-kyyti-suositus-20260928.md) ------------------------ */
 
 .mk-isskyyti {
@@ -3141,4 +3256,121 @@
     white-space: nowrap;
     margin-right: 5px;
     color: rgb(93, 255, 168);
+}
+
+/* Nopeutettuna (web .iss-kyyti-tieto-nopeutettu): "● 100× · ISS …", piste harmaa eikä syki, napautus = Palaa LIVE. */
+.mk-isskyyti__tieto--nopeutettu .mk-isskyyti__piste {
+    background-color: rgb(150, 170, 160);
+}
+
+/*
+ * Nopeutus (LIVE · 10× · 100× · 1000×) ja "Lennä kohteen ylle" pillerin alla (web .iss-kyyti-ohjaimet, commit 891958e17,
+ * px → pt 1:1): turva-alueen yläreunasta 48 pt, rako 6 pt, teksti 12 pt, napit vähintään 28 pt korkeita.
+ */
+.mk-isskyyti__ohjaimet {
+    position: absolute;
+    left: 12px;
+    top: 48px;
+    right: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mk-isskyyti__nopeudet {
+    flex-direction: row;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+    overflow: hidden;
+}
+
+.mk-nappi.mk-isskyyti__nopeus,
+.mk-nappi.mk-isskyyti__kohde {
+    min-height: 28px;
+    padding: 5px 9px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-nappi.mk-isskyyti__nopeus--jatko {
+    border-left-width: 1px;
+    border-left-color: rgba(93, 255, 168, 0.18);
+}
+
+/* Päätynapit pyöristetään itse (valittu tausta ei ylitä pillerin kulmia, vaikka leikkaus ei pyöristäisi). */
+.mk-nappi.mk-isskyyti__nopeus--eka {
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+.mk-nappi.mk-isskyyti__nopeus--vika {
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.mk-nappi.mk-isskyyti__nopeus--valittu,
+.mk-nappi.mk-isskyyti__nopeus:active,
+.mk-nappi.mk-isskyyti__kohde:active {
+    background-color: rgba(93, 255, 168, 0.14);
+}
+
+.mk-isskyyti__nopeus .mk-nappi__teksti,
+.mk-isskyyti__kohteet .mk-nappi__teksti,
+.mk-isskyyti__kohde .mk-nappi__teksti {
+    font-size: 12px;
+    color: rgba(233, 250, 240, 0.85);
+}
+
+.mk-isskyyti__nopeus--valittu .mk-nappi__teksti {
+    -unity-font-style: bold;
+    color: rgb(93, 255, 168);
+}
+
+.mk-nappi.mk-isskyyti__kohteet {
+    min-height: 28px;
+    margin-top: 6px;
+    padding: 5px 22px 5px 9px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+/* Painettuna sama vihreä kuin valittu porras (pelin ruskea .mk-nappi:active ei kuulu kyydin asuun). */
+.mk-nappi.mk-isskyyti__kohteet:active {
+    background-color: rgba(93, 255, 168, 0.14);
+}
+
+/* Valikon lista (webissä selaimen oma valinta): samat värit, rivit 28 pt, korkeus turva-alueen alareunaan (koodissa). */
+.mk-isskyyti__lista {
+    min-width: 200px;
+    margin-top: 6px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+.mk-nappi.mk-isskyyti__kohde {
+    justify-content: flex-start;
+}
+
+.mk-isskyyti__peite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mk-isskyyti__ylilento {
+    margin-top: 6px;
+    padding: 4px 9px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: normal;
+    background-color: rgba(6, 13, 10, 0.72);
+    color: rgba(233, 250, 240, 0.9);
 }

@@ -131,6 +131,43 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(a.EtaisyysM > IssKuvakulma.SeurannanEtaisyysM, "pallon toiselta puolelta lento kestää pidempään");
         }
 
+        [Testi] static void KohteenYllaSilmaIssissaJaPitkaObjektiivi()
+        {
+            var k = IssKuvakulma.KohteenKulma(Iss, 48, 13);   // noin 300 km sivussa
+            var s = Llh(Silma(k));
+            Oleta.Tosi(Math.Abs(s.h - 420_000) < 500, $"silmän korkeus {s.h:0} m");
+            Oleta.Tosi(IssKuvakulma.Kaari(s.lat, s.lon, Iss.Paikka.Lat, Iss.Paikka.Lon) < 0.01, "silmä ISS:n kohdalla");
+            Oleta.Sama(48.0, k.Lat);
+            Oleta.Tosi(k.Kallistus > 20 && k.Kallistus < 70, $"vinokuva {k.Kallistus:0.0}°");
+            double f = IssKuvakulma.KohteenKentta(k.EtaisyysM);
+            Oleta.Tosi(f >= 6 && f <= 14, $"kenttäkulma {f:0.0}°");
+            var suoraan = IssKuvakulma.KohteenKulma(Iss, Iss.Paikka.Lat, Iss.Paikka.Lon);
+            Oleta.Tosi(Math.Abs(suoraan.Kallistus) < 1e-3 && Math.Abs(suoraan.EtaisyysM - 420_000) < 1, "suoraan alla: " + suoraan);
+            Oleta.Sama(IssKuvakulma.KohteenKenttaMin, IssKuvakulma.KohteenKentta(5_000_000), "kaukana vähintään 6°");
+            Oleta.Sama(IssKuvakulma.KohteenKenttaMax, IssKuvakulma.KohteenKentta(10_000), "lähellä enintään 50°");
+        }
+
+        [Testi] static void TilakoneKohteenYlleJaTakaisinSeurantaan()
+        {
+            var k = new IssKyyti();
+            k.Napauta(new Kuvakulma(50, 10, 18_000_000, 0, 0), Iss, 50, 0, true);
+            k.Paivita(0, Iss, 50, out var a, out _, out _);
+            k.Kohteeseen(new LatLon(48, 13), a, 50, 1, false);
+            Oleta.Sama(KyydinTila.Kohde, k.Tila);
+            Oleta.Tosi(k.Kohde.HasValue && k.Kohde.Value.Lat == 48, "kohde muistissa");
+            k.Paivita(1, Iss, 50, out var alku, out double f0, out _);
+            Oleta.Sama(a.EtaisyysM, alku.EtaisyysM, "siirtymä alkaa seurannasta (ei hyppyä)");
+            Oleta.Sama(50.0, f0);
+            k.Paivita(1 + IssKyyti.KohteeseenS + 0.01, Iss, 50, out var p, out double f, out _);
+            Oleta.Tosi(f < 20, "pitkä objektiivi: " + f);
+            Oleta.Tosi(Math.Abs(p.Lat - 48) < 1e-9 && Math.Abs(p.Lon - 13) < 1e-9, "katse kohteeseen");
+            k.Napauta(p, Iss, f, 3, true);
+            Oleta.Sama(KyydinTila.Seuranta, k.Tila, "napautus palaa seurantaan");
+            k.Paivita(3, Iss, 50, out var q, out f, out _);
+            Oleta.Sama(IssKuvakulma.SeurannanEtaisyysM, q.EtaisyysM);
+            Oleta.Sama(50.0, f, "kenttäkulma palasi");
+        }
+
         [Testi] static void CupolanValoAuringonJaVarjonMukaan()
         {
             Oleta.Tosi(CupolanValo.Aurinkoisuus(0.5, 420) > 0.99, "päiväpuoli: auringossa");
@@ -150,6 +187,7 @@ namespace Matkakirja.Linssit.Testit
             public KyydinTila Tila;
             public double KorkeusKm, NopeusKmh;
             public int Kyyteja;
+            public KyydinAika Aika;
             public void Avaus(AvauksenVaihe v) { }
             public void Kohteet(System.Collections.Generic.IReadOnlyList<Havaintokohde> k) { }
             public void Nimet(bool n) { }
@@ -160,8 +198,8 @@ namespace Matkakirja.Linssit.Testit
             public void Kuva(Havaintokohde k, int i) { }
             public void KuvaPois() { }
             public void Pois() { }
-            public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio)
-            { Tila = tila; KorkeusKm = korkeusKm; NopeusKmh = nopeusKmh; Kyyteja++; }
+            public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
+            { Tila = tila; KorkeusKm = korkeusKm; NopeusKmh = nopeusKmh; Aika = aika; Kyyteja++; }
         }
 
         static (AstronauttiLinssi l, ValeYmparisto y, Nakyma n) Avaa()
@@ -231,6 +269,156 @@ namespace Matkakirja.Linssit.Testit
             Aja(l, y, 0.1);
             Oleta.Sama(0, n.Kyyteja);
             Oleta.Sama(false, l.Kyydissa);
+        }
+
+        [Testi] static void SeurannastaIkkunaanKyydinOmastaAsennosta()
+        {
+            // Web napauta: kyydissä siirtymä lähtee kyydin viimeisimmästä asennosta (pelikameran näkymästä puuttuu katsekorkeus).
+            var (l, y, n) = Avaa();
+            l.NapautaIss();
+            Aja(l, y, 4.5);
+            var ennen = y.Kuvaus.Value;
+            Oleta.Tosi(ennen.KatseKorkeusM > 300_000, "seurannassa katse ISS:ään");
+            l.NapautaIss();
+            Aja(l, y, 1 / 60.0);
+            var eka = y.Kuvaus.Value;
+            Oleta.Tosi(Math.Abs(eka.KatseKorkeusM - ennen.KatseKorkeusM) < 20_000 && IssKuvakulma.Kaari(eka.Lat, eka.Lon, ennen.Lat, ennen.Lon) < 1,
+                $"ei hyppyä: {ennen} → {eka}");
+        }
+
+        // ---- Nopeutus ja "Lennä kohteen ylle" (web iss-kyyti-nakyma.js asetaNopeus ja lennaKohteeseen, commit 891958e17) ----
+
+        const string I1 = "1 25544U 98067A   08264.51782528 -.00002182  00000-0 -11606-4 0  2927";
+        const string I2 = "2 25544  51.6416 247.4627 0006703 130.5360 325.0288 15.72125391563537";
+        static DateTime valeUtc;
+
+        /// <summary>Linssi ISS:n 2008-radalla (SGP4) ja valekellolla: IssNyt.Simu lukee valeUtc:tä, joka kulkee y.Kellon mukana.</summary>
+        static (AstronauttiLinssi l, ValeYmparisto y, Nakyma n) AvaaValekellolla()
+        {
+            IssNyt.Nollaa();
+            Oleta.Tosi(IssNyt.Aseta(Tle.Jasenna(I1, I2)), "TLE");
+            valeUtc = new DateTime(2008, 9, 20, 13, 25, 40, DateTimeKind.Utc);
+            IssNyt.Simu = new Simukello(() => valeUtc);
+            return Avaa();
+        }
+
+        static void AjaUtc(AstronauttiLinssi l, ValeYmparisto y, double s, double askel = 1 / 30.0)
+        {
+            double loppu = y.Kello + s;
+            while (y.Kello < loppu)
+            {
+                y.Kello += askel;
+                valeUtc = valeUtc.AddTicks((long)(askel * TimeSpan.TicksPerSecond));
+                l.Paivita();
+            }
+        }
+
+        static void Palauta()
+        {
+            IssNyt.Simu = new Simukello(() => DateTime.UtcNow);
+            IssNyt.Nollaa();
+        }
+
+        [Testi] static void LennaKohteenYlleKelaaJaKaantaaKameran()
+        {
+            try
+            {
+                var (l, y, n) = AvaaValekellolla();
+                Oleta.Sama("etna gibraltar istanbul italia-yolla zeeland tunis",
+                    string.Join(" ", System.Linq.Enumerable.Select(l.YlilennonKohteet, k => k.Tunnus)), "valikon kohteet");
+                Oleta.Tosi(!l.LennaKohteeseen("etna").HasValue, "vain kyydissä");
+                l.NapautaIss();
+                AjaUtc(l, y, 3.5);
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti);
+                Oleta.Tosi(!l.LennaKohteeseen("revontulet").HasValue && l.ViimeisinLento == null, "tuntematon kohde");
+
+                var alku = IssNyt.Kello();
+                var yl = l.LennaKohteeseen("etna");
+                Oleta.Tosi(yl.HasValue && yl.Value.Hetki > alku && yl.Value.SivuttainKm <= Ylilennot.RajaKm, "ylilento: " + yl);
+                Oleta.Tosi(IssNyt.Simu.Kelaa, "kelaus alkoi");
+                AjaUtc(l, y, 0.1);
+                Oleta.Tosi(n.Aika.Nopeutettu && n.Aika.Kelaa && n.Aika.Valittu == null, "pilleri nopeutettuna, portaassa ei valintaa");
+                Oleta.Tosi(n.Aika.Ylilento != null && n.Aika.Ylilento.StartsWith("Etna · Ylilento klo "), n.Aika.Ylilento ?? "rivi puuttuu");
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti, "kelauksen ajan seuranta");
+
+                // Kelaus kestää enintään 25 s; perillä 1× ja kamera kääntyy kohteeseen 1,2 s:ssa.
+                AjaUtc(l, y, Simukello.KelausMaxS + 0.5);
+                Oleta.Sama(KyydinTila.Kohde, l.Kyyti, "perillä kohteen yllä");
+                var lento = l.ViimeisinLento.Value;
+                Oleta.Tosi(lento.Perilla && lento.Kohde.Tunnus == "etna", "perillä");
+                double ero = (IssNyt.Kello() - yl.Value.Hetki).TotalSeconds;
+                Oleta.Tosi(ero >= 0 && ero < Simukello.KelausMaxS + 1, $"simuloitu aika ylilennon hetkessä (+{ero:0.0} s)");
+                AjaUtc(l, y, IssKyyti.KohteeseenS + 0.2);
+                Oleta.Tosi(Math.Abs(y.Kuvaus.Value.Lat - 37.751) < 1e-6 && y.Kentta < 20, $"katse Etnaan pitkällä objektiivilla: {y.Kuvaus} {y.Kentta:0.0}°");
+                Oleta.Tosi(n.Aika.Nopeutettu && !n.Aika.Kelaa && n.Aika.Valittu == 1, "perillä 1×, ei LIVE");
+                Oleta.Tosi(n.Aika.Ylilento.StartsWith("Etna: ISS ") && n.Aika.Ylilento.EndsWith(" km sivussa"), n.Aika.Ylilento);
+
+                // Palaa LIVE: kelaus todelliseen hetkeen (valekello), ylilento unohtuu; kamera jää kohteeseen kuten webissä.
+                Oleta.Tosi(l.AsetaNopeus(1), "Palaa LIVE");
+                AjaUtc(l, y, Simukello.PaluuMaxS + 0.2);
+                Oleta.Tosi(IssNyt.Simu.Live && !n.Aika.Nopeutettu && n.Aika.Ylilento == null, "LIVE");
+                Oleta.Sama(valeUtc, IssNyt.Kello());
+                l.NapautaIss();
+                AjaUtc(l, y, IssKyyti.IkkunaanS + 0.2);
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti, "napautus kohteen yltä seurantaan");
+            }
+            finally { Palauta(); }
+        }
+
+        [Testi] static void KeskeytettyYlilentoUnohtuu()
+        {
+            try
+            {
+                var (l, y, n) = AvaaValekellolla();
+                l.NapautaIss();
+                AjaUtc(l, y, 3);
+                Oleta.Tosi(l.LennaKohteeseen("etna").HasValue, "ylilento");
+                AjaUtc(l, y, 1);
+                Oleta.Tosi(n.Aika.Ylilento != null, "rivi näkyy");
+                // Testikello (astro kyyti kello) keskeyttää kelauksen: ylilento unohtuu eikä kamera käänny.
+                IssNyt.Simu.AsetaSiirto(TimeSpan.FromHours(1));
+                AjaUtc(l, y, Simukello.KelausMaxS + 1);
+                Oleta.Tosi(l.ViimeisinLento == null && n.Aika.Ylilento == null, "rivi pois");
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti, "ei kohteen ylle");
+                Oleta.Sama(valeUtc.AddHours(1), IssNyt.Kello(), "testikellon LIVE");
+            }
+            finally { Palauta(); }
+        }
+
+        [Testi] static void NopeutusPilleriinJaPoistuPalaaLiveksi()
+        {
+            try
+            {
+                var (l, y, n) = AvaaValekellolla();
+                l.NapautaIss();
+                AjaUtc(l, y, 3);
+                Oleta.Tosi(!n.Aika.Nopeutettu && n.Aika.Valittu == 1 && n.Aika.Ylilento == null, "LIVE");
+                Oleta.Tosi(!l.AsetaNopeus(50), "vain portaan nopeudet");
+                Oleta.Tosi(l.AsetaNopeus(100));
+                var ennen = IssNyt.Kello();
+                AjaUtc(l, y, 1);
+                double kulunut = (IssNyt.Kello() - ennen).TotalSeconds;
+                Oleta.Tosi(Math.Abs(kulunut - 100) < 5, $"100× sekunnissa noin 100 s: {kulunut:0.0}");
+                Oleta.Tosi(n.Aika.Nopeutettu && n.Aika.Valittu == 100 && Math.Abs(n.Aika.Nopeus - 100) < 1e-9, "pilleri 100×");
+                int kyyteja = n.Kyyteja;
+                AjaUtc(l, y, 1);
+                Oleta.Tosi(n.Kyyteja - kyyteja >= 3, $"tietorivi 4 kertaa sekunnissa nopeutettuna ({n.Kyyteja - kyyteja})");
+
+                // ✕: paluulento ja aika LIVE:ksi samassa ajassa.
+                l.PoistuKyydista();
+                AjaUtc(l, y, IssKyyti.KaukoonS + 0.2);
+                Oleta.Sama(false, l.Kyydissa);
+                Oleta.Tosi(IssNyt.Simu.Live, "LIVE paluulennon jälkeen");
+                Oleta.Sama(valeUtc, IssNyt.Kello());
+
+                // Linssin sulku palauttaa LIVE:n heti.
+                l.AsetaNopeus(1000);
+                AjaUtc(l, y, 0.5);
+                Oleta.Tosi(!IssNyt.Simu.Live, "nopeutettu");
+                l.Sulje();
+                Oleta.Tosi(IssNyt.Simu.Live && IssNyt.Kello() == valeUtc, "sulku: LIVE heti");
+            }
+            finally { Palauta(); }
         }
     }
 }

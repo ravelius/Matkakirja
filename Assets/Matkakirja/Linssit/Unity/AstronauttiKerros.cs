@@ -30,8 +30,9 @@ namespace Matkakirja.Natiivi
         public static Action<Havaintokohde, int> KuvaKasittelija;
         /// <summary>Avaruussumun harson peitto 0…1.</summary>
         public static Action<double> SumuKasittelija;
-        /// <summary>ISS:n kyyti (tila, korkeus km, nopeus km/h, rata-arvio): Cupola-kehys, tietorivi ja ✕.</summary>
-        public static Action<KyydinTila, double, double, bool> KyytiKasittelija;
+        /// <summary>ISS:n kyyti (tila, korkeus km, nopeus km/h, rata-arvio, simuloitu aika): Cupola-kehys, tietorivi, nopeutus,
+        /// "Lennä kohteen ylle" ja ✕.</summary>
+        public static Action<KyydinTila, double, double, bool, KyydinAika> KyytiKasittelija;
 
         const double MaanSade = 6_371_000, Nosto = 5000;
         const float Hehku = 28f, IssMerkki = 8f, Etuna = 0.02f;
@@ -264,7 +265,7 @@ namespace Matkakirja.Natiivi
 
         Vector3 issPinta, issYlos = Vector3.up, issEteen = Vector3.forward;
 
-        public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio)
+        public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
         {
             kyyti = tila;
             if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();
@@ -293,7 +294,7 @@ namespace Matkakirja.Natiivi
                 : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
-            KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
+            KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio, aika);
         }
 
         /// <summary>
@@ -307,6 +308,15 @@ namespace Matkakirja.Natiivi
         public const string KuukausiKerros = "astronautti-kuukausi";
         public const int KuukaudenPintaMaxTaso = 7;
         public static bool KuukaudenPintaPois;
+        /// <summary>Testikomento `astro kyyti kuukausi m&lt;1–12&gt;` (m0 = pois): kuukausi pakotettuna kuvapareihin (talvi | kesä
+        /// samasta paikasta ilman testikellon siirtoa, joka muuttaisi myös auringon ja ISS:n paikan).</summary>
+        public static int KuukausiPakotettu;
+        /// <summary>BMNG-kerroksen alfa reliefin päällä (KarttaKerrokset.RasterinAlfa): 1 = pelkkä BMNG; alle 1 päästää reliefin
+        /// rinnevarjostuksen läpi (laite taivas1 28.9.: BMNG ilman varjostusta näytti latteammalta). Testikomento
+        /// `astro kyyti kuukausi a&lt;0–1&gt;`. Oletus 0,75 (Päätoimittaja 28.9. laite taivas2:n kuvaparista: vuoret erottuvat, meri
+        /// sinertävä eikä musta, Alppien tammikuun lumi näkyy yhä; 0,6 heikensi lunta).</summary>
+        public static float KuukaudenAlfa = 0.75f;
+        float kuukausiAlfaAsetettu = -1f;
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
 
@@ -315,14 +325,20 @@ namespace Matkakirja.Natiivi
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
-            int kuukausi = kyydissa && !KuukaudenPintaPois ? IssNyt.Kello().Month : -1;
+            int kuukausi = kyydissa && !KuukaudenPintaPois ? (KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : IssNyt.Kello().Month) : -1;
             if (kuukausi > 0 && !kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
             {
                 if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));
                 return;
             }
             if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
-            if (kuukausi == kuukausiLisatty) return;
+            if (kuukausi == kuukausiLisatty)
+            {
+                if (kuukausi > 0 && kuukausiAlfaAsetettu != KuukaudenAlfa && kk.RasterinAlfa(KuukausiKerros, KuukaudenAlfa) >= 0)
+                    kuukausiAlfaAsetettu = KuukaudenAlfa;
+                return;
+            }
+            kuukausiAlfaAsetettu = -1f;
             if (kuukausi < 0)
             {
                 kk.PoistaRasteri(KuukausiKerros);
@@ -373,7 +389,7 @@ namespace Matkakirja.Natiivi
         public void Pois()
         {
             if (cupola != null) Destroy(cupola.gameObject);
-            KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false);
+            KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false, default);
             AvausKasittelija?.Invoke(AvauksenVaihe.Pois);
             SumuKasittelija?.Invoke(0);
             Destroy(gameObject);
@@ -456,7 +472,9 @@ namespace Matkakirja.Natiivi
                 Vector3 paikka = gt.TransformPoint(p.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                bool edessa = kyyti != KyydinTila.Ikkuna && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
+                // Ikkunassa ja kohteen yllä silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
+                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde
+                    && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
                 if (p.juuri.gameObject.activeSelf != edessa) p.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
                 float lahella = etaisyys * (1f - Etuna);

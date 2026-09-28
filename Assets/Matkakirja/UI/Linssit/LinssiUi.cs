@@ -25,6 +25,7 @@
 using System;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Aikajana;
+using Matkakirja.Linssit.Vuosi;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -49,6 +50,8 @@ namespace Matkakirja.Natiivi
         public readonly MaidenNakyma Maat;
         public readonly AikajanaNakyma Aikajana;
         public readonly RadioNakyma Radio;
+        /// <summary>Maapallon vuosi -linssin paneeli (MaapallonVuosiSovitin.Vaihtui).</summary>
+        public readonly MaapallonVuosiNakyma Vuosi;
         readonly Button sulje;
         Linssirekisteri kuunneltu;
         // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
@@ -76,6 +79,7 @@ namespace Matkakirja.Natiivi
             Maat = new MaidenNakyma(kerros, ui);
             Aikajana = new AikajanaNakyma(kerros, this);
             Radio = new RadioNakyma(kerros);
+            Vuosi = new MaapallonVuosiNakyma(kerros);
 
             // Pieni pilleri oikeassa yläkulmassa, taikalasien vasemmalla puolella.
             var turva = kerros.Turva(SulkuKerros);
@@ -205,6 +209,10 @@ namespace Matkakirja.Natiivi
             // vesistöt, maatiedot ja isoisä pitävät pelikerrokset näkyvissä.
             bool portti = paalla && System.Linq.Enumerable.Contains(Linssirekisteri.PorttiLinssit, id);
             bool vertailu = id == "vertailu", radio = id == "radio";
+            // Maapallon vuosi (web: koko ruudun oma näkymä, maapallon-vuosi.html): pelikerrokset kuten porttilinsseissä,
+            // lisäksi yläpalkki, paikkapilleri ja taikalasit pois (Linssiseppä 2, laitekuva vuosi1 07-pohja.png).
+            bool vuosi = id == MaapallonVuosiLinssi.Id;
+            portti |= vuosi;
             ui.Kartuscha.NaytaSallittu(!portti);
             ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
             ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio));
@@ -216,7 +224,7 @@ namespace Matkakirja.Natiivi
             if (kerros != kerrosPaalla) { kerrosPaalla = kerros; ui.Matkakirja.Linssi(kerros); }
             // Löydös 42: karttaselitteen nappi näkyy linssin aikana kuten webissä; piiloon vain aikajanalinsseissä
             // (web body.aikajana-paalla .karttaselite) ja astronautin kamerassa (body.linssi-satelliitti .karttaselite).
-            bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id);
+            bool selitePiiloon = vuosi || id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id);
             ui.Karttaselite.NaytaNappi(!selitePiiloon);
             if (paalla) ui.Karttaselite.Sulje();
             // Löydös S3 (Laitetestaaja b18): linssin avaus sulkee kartan kortit (nosto, kaupunkikortti, matkakirjan
@@ -234,12 +242,12 @@ namespace Matkakirja.Natiivi
             // Astronautin kamera (Linssisepän kuvaus 23.9.2026): yläpalkki piiloon, vain ✕
             // oikeassa yläkulmassa; Livialle kypärä.
             bool astro = id == AstronauttiId;
-            astroTila = astro;
+            astroTila = astro || vuosi;
             Asettele();
             // Aikajanalinsseillä oma palkki korvaa Matkakirjan yläpalkin (web body.aikajana-palkki-auki .topbar).
             bool aikajana = id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id); // myös Ihmisen matka II
-            ui.Tilarivi.NaytaPalkki(!astro && !aikajana);
-            Valitsin.NaytaNappi(!astro && !aikajana);
+            ui.Tilarivi.NaytaPalkki(!astro && !aikajana && !vuosi);
+            Valitsin.NaytaNappi(!astro && !aikajana && !vuosi);
             Pulu.Hae().Astronautti = astro;
             Astronautti.Vaihtui(astro);
             using (MerkkiAikajana.Auto())
