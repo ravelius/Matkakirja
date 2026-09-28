@@ -100,3 +100,7 @@ test('avaruussumu on piilossa kuvan ajan (ei suorakaidetta läpikuultavan tausta
   assert.match(tyyli, /body\.satelliitti-kuva-auki \.astro-sumu \{ visibility: hidden; \}/);
   assert.match(lahde, /document\.body\.classList\.add\(KUVA_AUKI_LUOKKA\)/);
 });
+
+test('reunavarjo ja valoreuna rajataan ympyrään (neliön reunat eivät näy)', () => {
+  assert.match(avaruus, /clip-path:circle\(50% at 50% 50%\)/);
+});

@@ -1547,8 +1547,16 @@ export function luoAvaruusKalvo({
   for (const [el, tausta, laji] of [[varjo, varjonTausta(), 'varjo'],
     [valoreuna, valoreunanTausta(), 'valo']]) {
     const maski = puolenMaski(laji);
+    /*
+     * RAJAUS YMPYRÄÄN (28.9.2026, #3526-kuvapari): WebKit piirsi neliön
+     * ympyrän ulkopuolisen osan himmeänä, vaikka liu'un viimeinen väri on
+     * läpinäkyvä — neliön vaakareunat näkyivät tähtitaivaalla ja
+     * läpikuultavan valokuvanäkymän läpi suorakaiteena. clip-path ei päästä
+     * mitään ympyrän ulkopuolelle.
+     */
     el.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;'
-      + `background:${tausta};-webkit-mask-image:${maski};mask-image:${maski};`;
+      + `background:${tausta};-webkit-mask-image:${maski};mask-image:${maski};`
+      + '-webkit-clip-path:circle(50% at 50% 50%);clip-path:circle(50% at 50% 50%);';
   }
 
   const rata = doc.createElementNS(SVG, 'svg');
