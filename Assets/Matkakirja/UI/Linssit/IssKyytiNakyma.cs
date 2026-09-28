@@ -263,6 +263,7 @@ namespace Matkakirja.Natiivi
             heiluu = paalla;
             heilunta?.Pause();
             heijastus.style.translate = heijastus2.style.translate = ulko2.style.translate = new Translate(0, 0);
+            AjelehdusLepoon();
             if (!paalla) return;
             float t0 = Time.unscaledTime;
             // Heijastus lasissa ja ulko-osat lasin takana liikkuvat hitaasti vastakkain (katsojan pää liikkuu): syvyys.
@@ -272,7 +273,53 @@ namespace Matkakirja.Natiivi
                 var h = new Translate(3f * Mathf.Sin(u), 2f * Mathf.Sin(u * 0.5f));
                 heijastus.style.translate = heijastus2.style.translate = h;
                 ulko2.style.translate = new Translate(-1.6f * Mathf.Sin(u), -1f * Mathf.Sin(u * 0.5f));
+                if (Ajelehdus) Ajelehdi(Time.unscaledTime - t0, h);
+                else AjelehdusLepoon();
             }).Every(33);
+        }
+
+        /// <summary>
+        /// PAINOTON AJELEHDUS (omistaja 28.9. klo 16.3x Päätoimittajan kautta: "pitäisikö kameran liikkua hieman sisällä (eteen,
+        /// taakse ja sivuille) niin että lasin muoto ja näkymä eläisivät hieman kuin kamera olisi painottomassa tilassa kuvun
+        /// sisällä?"): katsojan pää ajelehtii hitaasti (jaksot 23–47 s, useampi sini, jotta liike ei toistu), joten lähellä oleva
+        /// kehys ja lasin heijastus siirtyvät ja skaalautuvat, ulko-osat (~10 m) vain kymmenesosan, ja maa pysyy (parallaksi).
+        /// Kallistus enintään 0,5°. Kehys on skaalattu 1,08:aan, jotta reunat eivät tule näkyviin siirtymän ja kierron aikana.
+        /// Vähennetty liike: pois (Heilu ei käynnisty). A/B `astro kyyti ajelehdus 0|1`.
+        /// </summary>
+        public static bool Ajelehdus = true;
+        const float AjelehdusX = 8f, AjelehdusY = 7f, AjelehdusSkaala = 0.015f, AjelehdusKallistus = 0.5f, KehysPohja = 1.08f;
+
+        void Ajelehdi(float t, Translate heijastuksenOma)
+        {
+            const float tau = 2f * Mathf.PI;
+            float x = AjelehdusX * (0.6f * Mathf.Sin(tau * t / 31f) + 0.4f * Mathf.Sin(tau * t / 47f + 1.3f));
+            float y = AjelehdusY * (0.6f * Mathf.Sin(tau * t / 23f + 0.7f) + 0.4f * Mathf.Sin(tau * t / 41f + 2.1f));
+            float z = Mathf.Sin(tau * t / 37f + 0.4f);
+            float kulma = AjelehdusKallistus * Mathf.Sin(tau * t / 29f + 1.1f);
+            // Lähellä: kehys ja lasin heijastus (pää liikkuu, lähellä oleva siirtyy vastakkain); heijastuksen oma heilunta päälle.
+            var lahi = new Scale(Vector3.one * (KehysPohja + AjelehdusSkaala * z));
+            kehys2.style.translate = new Translate(-x, -y);
+            kehys2.style.scale = lahi;
+            kehys2.style.rotate = new Rotate(-kulma);
+            heijastus2.style.translate = new Translate(heijastuksenOma.x.value - x, heijastuksenOma.y.value - y);
+            heijastus2.style.scale = lahi;
+            heijastus2.style.rotate = new Rotate(-kulma);
+            // Kaukana: ulko-osat kymmenesosan, kallistus sama (pään kierto kääntää kaiken).
+            var ulko = ulko2.style.translate.value;
+            ulko2.style.translate = new Translate(ulko.x.value - 0.1f * x, ulko.y.value - 0.1f * y);
+            ulko2.style.scale = new Scale(Vector3.one * (KehysPohja + 0.1f * AjelehdusSkaala * z));
+            ulko2.style.rotate = new Rotate(-kulma);
+        }
+
+        /// <summary>Ajelehdus pois (A/B): kerrokset lepoasentoon (skaala 1, ei kiertoa).</summary>
+        void AjelehdusLepoon()
+        {
+            foreach (var e in new[] { kehys2, heijastus2, ulko2 })
+            {
+                e.style.scale = StyleKeyword.Null;
+                e.style.rotate = StyleKeyword.Null;
+            }
+            kehys2.style.translate = StyleKeyword.Null;
         }
 
         /// <summary>Linssi vaihtui tai suljettiin: kyydin UI pois.</summary>

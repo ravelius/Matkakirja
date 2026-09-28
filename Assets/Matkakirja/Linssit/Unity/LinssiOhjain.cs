@@ -1402,6 +1402,7 @@ namespace Matkakirja.Natiivi
                             FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
+                        else if (a == "ajelehdus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Ajelehdus = osat[3] != "0"; // A/B painoton ajelehdus
                         else if (a == "valot" && osat.Length > 3)   // A/B kaupunkien valot: 0 | 1 | osuus 0…1 (esim. 0.8)
                         {
                             Yokuori.ValotPois = osat[3] == "0";
