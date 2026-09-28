@@ -9047,3 +9047,7 @@ Codexin toimitukset (posti/claude/postilaatikko): ISS-säätöpaneelin modulaari
 ## OMISTAJA: PULUN UUDET LUENNAT PELIIN (#3585 OK) (29.9.2026 klo 00.02)
 
 Omistaja 29.9. klo 00.0x sanatarkasti: "lisää pulun uudet luennat peliin" = OK pitkälle koosteelle (48 repliikkiä ilman [softly]/[whispers], yksi tunnetagi per virke). #3585 (pelikoodari-pulu-tagit-2, v2380) luonnos + konflikti mainin kanssa (#3581 v4-äänet mergetty 28.9. klo 23.25) → Pelikoodari rebaseaa ja merkitsee valmiiksi, Julkaisija junan kärkeen, web-tuotanto + natiivin sisältövienti; Julkaisija ilmoittaa Päätoimittajalle, kun uudet luennat ovat pelissä, ja Päätoimittaja kertoo omistajalle.
+
+## PÄÄTÖS: LINSSIKATALOGIN KUVAT ÄMPÄRIIN TYÖNKULUN KAUTTA; MACIN R2-AVAIMET PUUTTUVAT (29.9.2026 klo 00.11)
+
+Sisältökirjuri ja Julkaisija 29.9. klo 00.1x: E11-kuvia (Codexin Olavinlinna-konsepti, 1600 + 480 px) ei voitu viedä ämpäriin, koska koodaus-käyttäjän ~/.zshrc:ssä ei ole R2-avaimia (vain XAI ja POLLO avaintiedostossa) — Raamatun MAC STUDIO -osion avainlista (R2 ~/.zshrc:ssä) on vanhentunut koodaus-käyttäjän osalta. Päätoimittaja 29.9. klo 00.1x: Julkaisija lisää vie-karttanostot-ampariin.yml:ään kohteen 'linssikatalogi' (vain linssikatalogi/-polku, max-age=2592000, ei ylikirjoitusta, kuiva-ajo oletuksena, salaisuudet ennallaan); Macilta ämpäriin viedään jatkossa GitHub Actions -salaisuuksilla työnkulun kautta. Avaimia ei kysytä omistajalta tätä varten.
