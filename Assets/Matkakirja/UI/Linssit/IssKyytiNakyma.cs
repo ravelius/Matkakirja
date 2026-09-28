@@ -15,7 +15,9 @@
 // SYVÄTERÄVYYS (omistaja 28.9. iltapäivällä Fablen kautta: "tuo cupola ei voi näkyä noin terävänä, koska katse on
 // maapallossa"): oletuksena Linssisepän poltettu muunnelma iss-cupola2-pehmea-* (kehys levysumennuksella voimakkaasti
 // epäterävä, ulko-osat vähemmän, heijastus lasin etäisyydeltä, aavistus raetta; ei ajonaikaista sumennusta).
-// A/B: astro kyyti cupola uusi|terava|3d|vanha (terava = Codexin alkuperäinen).
+// A/B: astro kyyti cupola uusi|pehmea|terava|3d|vanha (uusi = pehmea2, pehmea = 1.0.37, terava = Codexin alkuperäinen).
+// LÄHEMMÄS LASIA (omistaja 28.9. klo 18.0x): ikkuna zoomataan 1,3 × (kenttä 80° → 65,7°, Cupola-kerrokset samassa suhteessa) ja
+// sumennusta on vähemmän (pehmea2); A/B astro kyyti lasi 1|1.3.
 // NOPEUTUS JA "LENNÄ KOHTEEN YLLE" (omistaja 28.9. klo 12.1x; web iss-kyyti-nakyma.js ja css/satelliitti.css, commit
 // 891958e17, px → pt 1:1): pillerin alla porras LIVE · 10× · 100× · 1000× (valittu vihreänä ja lihavoituna; nopeutettuna
 // LIVE-nappi on "Palaa LIVE"), sen alla "Lennä kohteen ylle…" ja ylilennon rivi ("Venetsia · Ylilento klo 14.32, 3 h 12 min
@@ -36,7 +38,7 @@ namespace Matkakirja.Natiivi
         const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
         const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
 
-        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, turva, pilleri, piste, ohjaimet, peite;
+        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, polyt, turva, pilleri, piste, ohjaimet, peite;
         readonly Label live, tieto, ylilento, liveNappi;
         readonly Button[] napit;
         readonly Button valikko;
@@ -51,11 +53,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuvapari samasta käännöksestä (`ui linssi kehys 0|1`): ikkuna ilman Cupola-kehystä.</summary>
         public static bool IlmanKehysta;
         /// <summary>
-        /// Cupola 2 syväterävyydellä (oletus): Linssisepän polttamat iss-cupola2-pehmea-* (levysumennus iPhonella kehys r 12 px,
-        /// ulko-osat 3,5 px, heijastus 8 px; iPadilla × 1,27; rae 4/255 kehyksessä). false = Codexin terävä alkuperäinen (A/B).
+        /// Cupola 2:n kuvasarja (A/B `astro kyyti cupola uusi|pehmea|pehmea2|pehmea3|pehmea4|terava`), levysumennus iPhonella
+        /// kehys / ulko-osat / heijastus px (iPadilla × 1,27), rae 4/255 ennallaan ja lasin zoomin (1,3) verran hienompi;
+        /// ruudulla näkyvä sumennus suhteessa 1.0.37:ään zoomin jälkeen:
+        ///  "pehmea"  12 / 3,5 / 8 (1.0.37, 1 ×), "pehmea2" 7 / 2 / 4,6 (cl12, 0,75 ×; omistaja 18.0x "hieman vähemmän"),
+        ///  "pehmea3" 3,7 / 1,08 / 2,46 (0,4 ×) ja "pehmea4" 2,3 / 0,67 / 1,54 (OLETUS, 0,25 ×): omistaja 28.9. klo 19.3x "Vielä
+        ///  liikaa blurrina", laite cl13 0,75 | 0,4 | 0,25 ×, Päätoimittaja hyväksyi 0,25 × klo 20.0x; "" = Codexin terävä
+        ///  alkuperäinen. Työkalu cupola_pehmea.py.
         /// </summary>
-        public static bool Pehmea = true;
-        bool haettuPehmea;
+        public const string OletusSarja = "pehmea4";
+        public static string Sarja = OletusSarja;
+        string haettuSarja;
         /// <summary>Codexin Cupola 2: null = ei vielä haettu tai latautuu, true = kehys valmis, false = ei saatu (3D varalla).</summary>
         public static bool? Kuva2Tila { get; private set; }
         /// <summary>Piirretäänkö ikkunassa valaistu 3D-kehys (A/B 3d tai Cupola 2:n kehys ei latautunut).</summary>
@@ -71,6 +79,12 @@ namespace Matkakirja.Natiivi
             ulko2 = Rakenne.El("mk-isskyyti__ulko2", juuri, PickingMode.Ignore);
             heijastus2 = Rakenne.El("mk-isskyyti__heijastus2", juuri, PickingMode.Ignore);
             kehys2 = Rakenne.El("mk-isskyyti__kehys2", juuri, PickingMode.Ignore);
+            // Pölyhiukkaset leijuvat kuvun sisällä katsojan ja lasin välissä: kehyksen edessä, käyttöliittymän takana.
+            polyt = Rakenne.El("mk-isskyyti__polyt", juuri, PickingMode.Ignore);
+            polyt.style.position = Position.Absolute;
+            polyt.style.left = 0; polyt.style.top = 0; polyt.style.right = 0; polyt.style.bottom = 0;
+            polyt.style.display = DisplayStyle.None;
+            polyt.generateVisualContent += PiirraPolyt;
             kehys = Rakenne.El("mk-isskyyti__kehys", juuri, PickingMode.Ignore);
             heijastus = Rakenne.El("mk-isskyyti__heijastus", juuri, PickingMode.Ignore);
             // Valikon peite: napautus listan ohi sulkee sen eikä vaihda kyydin tilaa (webissä selaimen oma valikko).
@@ -195,7 +209,7 @@ namespace Matkakirja.Natiivi
             // Oletus Codexin Cupola 2 (UI-kerrokset); valaistu 3D-kerros (CupolaKerros) A/B:ssä ja varalla; 1.0.35:n UI-kehys
             // vain A/B:n "ennen"-kuvaan (CupolaKerros.Vanha).
             // A/B pehmeä ↔ terävä: haetaan kerrokset uudelleen (Aseta kutsuu tätä sekunnin välein).
-            if (kuva2Haettu && haettuPehmea != Pehmea) { kuva2Haettu = false; Kuva2Tila = null; }
+            if (kuva2Haettu && haettuSarja != Sarja) { kuva2Haettu = false; Kuva2Tila = null; }
             bool vanha = ikkuna && !IlmanKehysta && CupolaKerros.Vanha;
             bool uusi = ikkuna && !IlmanKehysta && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva && Kuva2Tila == true;
             if (vanha && !kuvatHaettu) HaeKuvat();
@@ -203,6 +217,9 @@ namespace Matkakirja.Natiivi
             juuri.EnableInClassList("mk-isskyyti--ikkuna", vanha);
             juuri.EnableInClassList("mk-isskyyti--kuva2", uusi);
             Heilu(vanha || uusi);
+            // Lasin zoom (IssKuvakulma.LasiZoom) myös ilman ajelehdusta (vähennetty liike tai A/B): kerrokset lepoasentoon.
+            if (!(heiluu && Ajelehdus)) AjelehdusLepoon();
+            PolytPaalle(ikkuna && !IlmanKehysta && (vanha || uusi || KolmiulotteinenKehys));
         }
 
         void HaeKuvat()
@@ -232,10 +249,10 @@ namespace Matkakirja.Natiivi
         void HaeKuvat2()
         {
             kuva2Haettu = true;
-            haettuPehmea = Pehmea;
+            haettuSarja = Sarja;
             bool ipad = Screen.width > 0.5f * Screen.height;
             string koko = ipad ? "ipad-1536x2732" : "iphone-1206x2622";
-            string sarja = Pehmea ? "iss-cupola2-pehmea-" : "iss-cupola2-";
+            string sarja = string.IsNullOrEmpty(Sarja) ? "iss-cupola2-" : "iss-cupola2-" + Sarja + "-";
             int odottaa = 3;
             bool kehysOk = false;
             void Valmis(VisualElement e, Texture2D t)
@@ -297,7 +314,9 @@ namespace Matkakirja.Natiivi
             float z = Mathf.Sin(tau * t / 37f + 0.4f);
             float kulma = AjelehdusKallistus * Mathf.Sin(tau * t / 29f + 1.1f);
             // Lähellä: kehys ja lasin heijastus (pää liikkuu, lähellä oleva siirtyy vastakkain); heijastuksen oma heilunta päälle.
-            var lahi = new Scale(Vector3.one * (KehysPohja + AjelehdusSkaala * z));
+            // Pohja on lasin zoom (1,3) tai vähintään KehysPohja, jotta reunat eivät tule näkyviin.
+            float pohja = Mathf.Max(LasinZoom, KehysPohja);
+            var lahi = new Scale(Vector3.one * (pohja + AjelehdusSkaala * z));
             kehys2.style.translate = new Translate(-x, -y);
             kehys2.style.scale = lahi;
             kehys2.style.rotate = new Rotate(-kulma);
@@ -307,19 +326,148 @@ namespace Matkakirja.Natiivi
             // Kaukana: ulko-osat kymmenesosan, kallistus sama (pään kierto kääntää kaiken).
             var ulko = ulko2.style.translate.value;
             ulko2.style.translate = new Translate(ulko.x.value - 0.1f * x, ulko.y.value - 0.1f * y);
-            ulko2.style.scale = new Scale(Vector3.one * (KehysPohja + 0.1f * AjelehdusSkaala * z));
+            ulko2.style.scale = new Scale(Vector3.one * (pohja + 0.1f * AjelehdusSkaala * z));
             ulko2.style.rotate = new Rotate(-kulma);
         }
 
-        /// <summary>Ajelehdus pois (A/B): kerrokset lepoasentoon (skaala 1, ei kiertoa).</summary>
+        /// <summary>Ajelehdus pois (A/B tai vähennetty liike): kerrokset lepoasentoon (skaala = lasin zoom, ei kiertoa).</summary>
         void AjelehdusLepoon()
         {
+            var zoom = new Scale(Vector3.one * LasinZoom);
             foreach (var e in new[] { kehys2, heijastus2, ulko2 })
             {
-                e.style.scale = StyleKeyword.Null;
+                e.style.scale = zoom;
                 e.style.rotate = StyleKeyword.Null;
             }
             kehys2.style.translate = StyleKeyword.Null;
+        }
+
+        /// <summary>Cupola-kerrosten suurennos: sama kuin ikkunan kenttäkulman zoom (IssKuvakulma.LasiZoom), vähintään 1.</summary>
+        static float LasinZoom => Mathf.Max(1f, (float)IssKuvakulma.LasiZoom);
+
+        /// <summary>
+        /// PÖLYHIUKKASET AURINGONSÄTEESSÄ (Päätoimittajan käsky 28.9. klo 16.3x): 34 pehmeää hiukkasta leijuu kuvun sisällä ja
+        /// näkyy vain vinossa valokeilassa, kun ISS on auringossa (CupolaKerros.Valo.w, maan varjo); yöpuolella ei mitään.
+        /// Keila tulee auringon suunnasta ruudulla (Valo.xy; suoraan edessä tai takana oletusvinous ylävasemmalta), joten se
+        /// kääntyy hitaasti ISS:n kiertäessä. Hiukkanen on pehmeä säteittäinen hehku (PolyKuva, isommat epätarkempia) ja
+        /// välähtää kääntyessään (tuike). Liike 0,6–2 pt/s ja kevyt pyörre; vähennetyllä liikkeellä paikallaan.
+        /// A/B `astro kyyti polyt 0|1`.
+        /// </summary>
+        public static bool Polyt = true;
+        const int PolyMaara = 34;
+        /// <summary>Keilan puolileveys (σ) osuutena ruudun lyhyemmästä sivusta ja hiukkasen suurin peitto.</summary>
+        const float KeilaOsuus = 0.2f, PolyPeitto = 0.65f;
+        /// <summary>Hiukkaset: paikka 0–1 (u, v), säde pt ja tuikkeen vaihe; nopeus pt/s.</summary>
+        readonly Vector4[] poly = new Vector4[PolyMaara];
+        readonly Vector2[] polyNopeus = new Vector2[PolyMaara];
+        bool polytAlustettu, polytPaalla;
+        float polyAika, polyEdellinen;
+        IVisualElementScheduledItem polyAjo;
+
+        void PolytPaalle(bool paalla)
+        {
+            paalla &= Polyt;
+            if (paalla == polytPaalla) return;
+            polytPaalla = paalla;
+            polyAjo?.Pause();
+            polyt.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!paalla) return;
+            if (!polytAlustettu)
+            {
+                polytAlustettu = true;
+                var r = new System.Random(28092026);
+                for (int i = 0; i < PolyMaara; i++)
+                {
+                    // Muutama iso ja epätarkka lähellä katsojaa, loput pieniä.
+                    float sade = i < 5 ? 3f + 1.5f * (float)r.NextDouble() : 1.2f + 1.6f * (float)r.NextDouble();
+                    poly[i] = new Vector4((float)r.NextDouble(), (float)r.NextDouble(), sade, (float)(r.NextDouble() * 6.283));
+                    float suunta = (float)(r.NextDouble() * 6.283), vauhti = 0.6f + 1.4f * (float)r.NextDouble();
+                    polyNopeus[i] = new Vector2(Mathf.Cos(suunta), Mathf.Sin(suunta)) * vauhti;
+                }
+            }
+            polyEdellinen = Time.unscaledTime;
+            // Kuten heilunta: 30 kertaa sekunnissa, vain ikkunassa; valo luetaan joka piirrossa (keila kääntyy ISS:n mukana).
+            polyAjo = polyt.schedule.Execute(() =>
+            {
+                float nyt = Time.unscaledTime, dt = Mathf.Min(0.1f, nyt - polyEdellinen);
+                polyEdellinen = nyt;
+                if (!LinssiUi.VahennettyLiike()) polyAika += dt;
+                polyt.MarkDirtyRepaint();
+            }).Every(33);
+        }
+
+        /// <summary>
+        /// Hiukkasen kuva: pehmeä säteittäinen hehku (kaksi Gaussia, reunalla nolla), 64 × 64 valkoinen alfalla; väri ja kirkkaus
+        /// kärjen sävystä. Painter2D:n sisäkkäiset ympyrät näyttivät laitteella (cl12) renkailta, joten yksi kuvioitu neliö.
+        /// </summary>
+        static Texture2D polyKuva;
+        static Texture2D PolyKuva()
+        {
+            if (polyKuva != null) return polyKuva;
+            const int n = 64;
+            var t = new Texture2D(n, n, TextureFormat.RGBA32, false) { name = "Polyhiukkanen", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
+            var px = new Color32[n * n];
+            for (int y = 0; y < n; y++)
+                for (int x = 0; x < n; x++)
+                {
+                    float dx = (x + 0.5f) / n * 2f - 1f, dy = (y + 0.5f) / n * 2f - 1f, r2 = dx * dx + dy * dy;
+                    float a = r2 >= 1f ? 0f : Mathf.Clamp01(0.8f * Mathf.Exp(-r2 * 22f) + 0.2f * Mathf.Exp(-r2 * 5f)) * (1f - r2);
+                    px[y * n + x] = new Color32(255, 255, 255, (byte)Mathf.RoundToInt(a * 255f));
+                }
+            t.SetPixels32(px);
+            t.Apply(false, true);
+            return polyKuva = t;
+        }
+
+        readonly Vector4[] polyNakyvat = new Vector4[PolyMaara];
+
+        void PiirraPolyt(MeshGenerationContext mgc)
+        {
+            float w = polyt.contentRect.width, h = polyt.contentRect.height;
+            if (!(w > 0) || !(h > 0) || !CupolaKerros.ValoTiedossa) return;
+            var valo = CupolaKerros.Valo;
+            float aurinko = Mathf.Clamp01(valo.w);
+            if (aurinko < 0.01f) return;
+            // Keilan suunta ruudulla (y alas): valo kulkee auringosta poispäin, eli (−x, +y); suoraan edessä tai takana vinosti.
+            var suunta = new Vector2(-valo.x, valo.y);
+            if (suunta.sqrMagnitude < 0.04f) suunta = new Vector2(0.55f, 0.83f);
+            suunta.Normalize();
+            var normaali = new Vector2(-suunta.y, suunta.x);
+            var keski = new Vector2(w * 0.5f, h * 0.45f);
+            float sigma = KeilaOsuus * Mathf.Min(w, h);
+            bool liikkuu = !LinssiUi.VahennettyLiike();
+            int m = 0;
+            for (int i = 0; i < PolyMaara; i++)
+            {
+                var q = poly[i];
+                var v = polyNopeus[i];
+                // Ajelehdus ja pyörre (pieni sini), kiedottuna ruudun ympäri.
+                float x = q.x * w + v.x * polyAika + (liikkuu ? 6f * Mathf.Sin(0.21f * polyAika + q.w) : 0f);
+                float y = q.y * h + v.y * polyAika + (liikkuu ? 5f * Mathf.Cos(0.17f * polyAika + 1.7f * q.w) : 0f);
+                x = Mathf.Repeat(x, w); y = Mathf.Repeat(y, h);
+                float etaisyys = Vector2.Dot(new Vector2(x, y) - keski, normaali) / sigma;
+                float keila = Mathf.Exp(-etaisyys * etaisyys);
+                float tuike = liikkuu ? 0.6f + 0.4f * Mathf.Sin(1.3f * polyAika + 3f * q.w) : 0.8f;
+                float b = PolyPeitto * aurinko * keila * tuike;
+                if (b < 0.01f) continue;
+                polyNakyvat[m++] = new Vector4(x, y, q.z, b);
+            }
+            if (m == 0) return;
+            var md = mgc.Allocate(m * 4, m * 6, PolyKuva());
+            for (int i = 0; i < m; i++)
+            {
+                var p = polyNakyvat[i];
+                // Kuvan neliö on hehkun halkaisija: hiukkasen säde × 2 × 2,4 (ydin noin kolmannes, loput pehmeää hehkua).
+                float puoli = p.z * 2.4f;
+                var tint = (Color32)new Color(1f, 0.96f, 0.88f, Mathf.Clamp01(p.w * 1.25f));
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x - puoli, p.y - puoli, Vertex.nearZ), tint = tint, uv = new Vector2(0, 1) });
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x + puoli, p.y - puoli, Vertex.nearZ), tint = tint, uv = new Vector2(1, 1) });
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x + puoli, p.y + puoli, Vertex.nearZ), tint = tint, uv = new Vector2(1, 0) });
+                md.SetNextVertex(new Vertex { position = new Vector3(p.x - puoli, p.y + puoli, Vertex.nearZ), tint = tint, uv = new Vector2(0, 0) });
+                ushort k = (ushort)(i * 4);
+                md.SetNextIndex(k); md.SetNextIndex((ushort)(k + 1)); md.SetNextIndex((ushort)(k + 2));
+                md.SetNextIndex(k); md.SetNextIndex((ushort)(k + 2)); md.SetNextIndex((ushort)(k + 3));
+            }
         }
 
         /// <summary>Linssi vaihtui tai suljettiin: kyydin UI pois.</summary>

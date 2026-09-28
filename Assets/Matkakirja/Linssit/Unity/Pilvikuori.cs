@@ -168,6 +168,21 @@ namespace Matkakirja.Natiivi
         /// <summary>Maapallon akseli (Aseta-kierron akseli), maailmassa.</summary>
         public Vector3 Akseli => akseli;
 
+        static readonly int IdTarkkuus = Shader.PropertyToID("_Tarkkuus"), IdTarkkuusKm = Shader.PropertyToID("_TarkkuusKm");
+        float tarkkuus = -1f, tarkkuusKm = -1f;
+
+        /// <summary>
+        /// Terävät pilvet kyydissä (omistaja 28.9. "Vielä liikaa blurrina"): 0 = kuva sellaisenaan, 1 = bikuubinen näyte ja
+        /// kohinakynnyksen reuna (Pilvet.shader). pohjaKm = kohinan pohja-aallonpituus maan pinnalla.
+        /// </summary>
+        public void Tarkkuus(float maara, float pohjaKm = 35f)
+        {
+            if (maara == tarkkuus && pohjaKm == tarkkuusKm) return;
+            tarkkuus = maara; tarkkuusKm = pohjaKm;
+            materiaali.SetFloat(IdTarkkuus, Mathf.Clamp01(maara));
+            materiaali.SetFloat(IdTarkkuusKm, Mathf.Max(1f, pohjaKm));
+        }
+
         /// <summary>Peitto 0…1; kuori piiloon, kun peitto on nolla (kuvaa odottaessa näkyvissä mutta läpinäkyvä).</summary>
         public void Peitto(double peitto)
         {

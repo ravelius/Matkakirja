@@ -183,6 +183,7 @@ namespace Matkakirja
             PoistaJalki();
             IlmaPois();
             EnnakkoPois();
+            KelloPois();
             Aurinko.UsvaVahintaanM = 0;
             LiikeLaatat.LentoKarkeaSse = 0f;
             Laattapalvelin.AsetaSaapumistila(TaustaTaukoSyy, false);
@@ -299,10 +300,27 @@ namespace Matkakirja
             // odotuksen alussa, jotta ennakkokamera pyytää lähikuvan laatat odotuksen ja syöksyn aikana.
             AloituslennonRata rata = null;
             var napautus = default(AloituslennonRata.Asento);
+            var napautettu = default(AloituslennonRata.Asento);
+            float esikaantoS = 0f;
+            double kelloAlku = Pelikello.Tunnit, kelloTunnit = 0;
             if (rataPaalla)
             {
-                napautus = new AloituslennonRata.Asento(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus,
+                napautus = napautettu = new AloituslennonRata.Asento(kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus,
                     kierto.suuntima, kierto.katseKorkeus);
+                // v3f ESIKÄÄNTÖ: jos pallo on pyöritetty pois valintanäkymästä, odotus kääntää kameran pehmeästi takaisin, ja
+                // rata alkaa valintanäkymästä (suunta ennallaan: valinta ei käännä suuntaa).
+                if (Valintanakyma.HasValue)
+                {
+                    var v = Valintanakyma.Value;
+                    var suunniteltu = new AloituslennonRata.Asento(v.Lat, v.Lon, v.EtaisyysM, v.Kallistus, napautettu.Suuntima, v.Katse);
+                    esikaantoS = (float)AloituslennonRata.EsikaannonKesto(napautettu, suunniteltu);
+                    if (esikaantoS > 0f) napautus = suunniteltu;
+                }
+                // v3f PELIKELLO: lennon hallussa jo odotuksesta (valinnan reaaliaikakello pysähtyy, päivän ja yön raja pysyy
+                // päällä ilman katkoa); Tunnit kiihtyy lennossa AloituslennonRata.Kellon mukaan ja pysähtyy perillä.
+                kelloAlku = Pelikello.Tunnit;
+                kelloTunnit = Pelikello.LentoTunnit(lat0, lon0, lat1, lon1);
+                Pelikello.Lennossa = kelloLennossa = true;
                 // Loppu = pelin saapumisnäkymä (PeliOhjain.Saavu(maaRajaus: false) → AjaSaapumisnakymaan): kamera päättyy siihen.
                 var sn = kierto.SaapumisNakyma(null, lat1, lon1, maaRajaus: false);
                 var loppu = new AloituslennonRata.Asento(sn.Lat, sn.Lon, sn.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), sn.Kallistus,
@@ -343,19 +361,27 @@ namespace Matkakirja
                 // Aloitusrata: napautusnäkymä pysyy (omistaja: ei siirtymää ennen lentoa). Kaupungin napautus käynnistää myös
                 // KaupunkiMerkit.ValitseKaupunki-ajon kohti kaupunkia heti aloituslennon käynnistyksen jälkeen (v4-video 27.9.:
                 // kamera zoomasi odotuksessa Ateenaan ja syöksy hyppäsi takaisin); Kuvaa katkaisee ajon ja pitää asennon.
+                // v3f: esikäännön aikana asento kulkee napautusnäkymästä valintanäkymään (radan alkuun).
                 if (rata != null)
-                    kierto.Kuvaa(napautus.Lat, napautus.Lon, napautus.EtaisyysM, napautus.Kallistus, napautus.Suuntima, napautus.Katse);
+                {
+                    var a = esikaantoS > 0f ? AloituslennonRata.Esikaanto(napautettu, napautus, math.saturate(kulunut / esikaantoS)) : napautus;
+                    kierto.Kuvaa(a.Lat, a.Lon, a.EtaisyysM, a.Kallistus, a.Suuntima, a.Katse);
+                }
                 syy = LennonV3Kaytava.Leikkaa(kulunut, v3Kaytava != null ? v3Kaytava.Osuus : 1f, v3Kaytava != null ? v3Kaytava.AlkuOsuus : 1f);
                 // Aloitusrata: myös Cesiumin valinta tasaantunut (ennakkokamera mukana: ohituksen lähikuvan laatat piirtoon asti),
                 // enintään AloitusrataOdotusKattoS napautuksesta. Näkymä on koko ajan paikallaan.
                 bool pallo = rata == null || Valmius.Tasaantunut(rataEhto, kerrokset != null ? kerrokset.pallo : null);
                 if (syy != null && !pallo && syy == "valmis" && kulunut < AloitusrataOdotusKattoS) syy = null;
                 else if (syy != null && rata != null) syy += pallo ? ", pallo valmis" : ", pallo kesken";
+                if (syy != null && kulunut < esikaantoS) syy = null; // esikääntö valintanäkymään ensin
                 if (syy != null) break;
                 yield return null;
             }
             float odotusS = Time.unscaledTime - odotusAlku;
             LentoV3Odotus = -1f;
+            if (esikaantoS > 0f)
+                Debug.Log($"MATKAKIRJA aloitusrata: esikääntö {esikaantoS:0.0} s napautusnäkymästä {napautettu.Lat:0.0}° {napautettu.Lon:0.0}° "
+                          + $"{napautettu.EtaisyysM / 1000:0} km valintanäkymään {napautus.Lat:0.0}° {napautus.Lon:0.0}° {napautus.EtaisyysM / 1000:0} km");
             Debug.Log($"MATKAKIRJA lento v3: odotus {odotusS:0.00} s ({syy}), käytävä "
                       + (v3Kaytava != null ? $"{v3Kaytava.Valmis}+{v3Kaytava.Epaonnistui}/{v3Kaytava.Yhteensa} ({v3Kaytava.Osuus:P0}), alku {v3Kaytava.AlkuOsuus:P0}" : "-")
                       + $", {kohdeId ?? "?"} {pituus / 1000:0} km näkyvää, välimuistista {Laattapalvelin.Valimuistista}, verkosta {Laattapalvelin.Verkosta}");
@@ -392,7 +418,7 @@ namespace Matkakirja
             {
                 // v3: horisonttiusvan raja vähintään 250 km radan ajan (ohituksen ja saapumisen lähikuvissa maa näkyy).
                 Aurinko.UsvaVahintaanM = AloituslennonRata.UsvaVahintaanM;
-                TeeJalki(lat0, lon0, lat1, lon1);
+                TeeJalki(rata.LentoReitti());
                 // v3e: siivenkärkien ja pakoputken vanat sekä loppukohtauksen linnut (AloituslennonIlma).
                 aloitusIlma = AloituslennonIlma.Luo(georeferenssi, kamera);
                 var mo = rata.Mitta(AloituslennonRata.OhitusS);
@@ -401,7 +427,8 @@ namespace Matkakirja
                           + $"{napautus.Kallistus:0}° {napautus.Suuntima:0}°, loppu {rata.Loppu.EtaisyysM / 1000:0} km, matkanopeus "
                           + $"{rata.Nopeus1:0.00}/{rata.Nopeus2:0.00} etäisyyttä/s, ohitus {mo.EtaisyysM / 1000:0.0} km α {mo.Alfa:0}° "
                           + $"{mo.Koko:P0}, kosketus {mk.EtaisyysM / 1000:0} km {mk.Koko:P1}, usva vähintään {Aurinko.UsvaVahintaanM / 1000:0} km, "
-                          + $"ohitus reitin kohdassa {rata.Ohitus:0.000}");
+                          + $"ohitus reitin kohdassa {rata.Ohitus:0.000}, bumerangi n {rata.BumerangiEksponentti:0.0}, kaarto "
+                          + $"{AloituslennonRata.KaartoKallistusEnintaan:0}°");
             }
 
             // 3. LENTO 15,0 s.
@@ -418,6 +445,8 @@ namespace Matkakirja
                 float dt = Mathf.Max(1e-4f, nyt - edellinen);
                 edellinen = nyt;
                 double t = math.min(rata != null ? AloituslennonRata.KestoS : LennonV3.KestoS, nyt - alku);
+                // v3f: pelikello kiihtyy lennon mukana (valonraja liikkuu, kellonäyttö juoksee).
+                if (kelloLennossa) Pelikello.Tunnit = kelloAlku + kelloTunnit * AloituslennonRata.Kello(t);
                 // Maaston lisäkorkeus heti, kun Cesiumin kysely valmistuu; pehmeästi 1,5 s:ssa (speksi: pehmennys 1,5 s).
                 if (maastoKysely != null && maastoKysely.IsCompleted)
                 {
@@ -443,8 +472,11 @@ namespace Matkakirja
                 }
                 if (lisa != null) lisaPaino += (1.0 - lisaPaino) * (1.0 - math.exp(-dt / 1.5));
                 double u = rata != null ? rata.KoneenOsuus(t) : LennonV3.KoneenOsuus(t);
-                var q = LennonV3.ReitinKohta(reitti, pit, u);
-                double lisaNyt = lisa != null ? LennonV3Kaytava.LisaOsuudessa(lisa, u) * lisaPaino : 0;
+                // v3f4: radalla kone kaarron sivusiirron, suunnan ja kallistuksen kanssa (AloituslennonRata.KoneenPaikka), ja
+                // maastolisä pysyy ohituksen lähikuvassa vakiona (TasainenLisa: v3f3:n "yskähdys ylöspäin").
+                var kpaikka = rata != null ? rata.KoneenPaikka(t) : default;
+                var q = rata != null ? (kpaikka.Lat, kpaikka.Lon, kpaikka.Suunta) : LennonV3.ReitinKohta(reitti, pit, u);
+                double lisaNyt = lisa == null ? 0 : (rata != null ? rata.TasainenLisa(lisa, t) : LennonV3Kaytava.LisaOsuudessa(lisa, u)) * lisaPaino;
                 // Radalla: peruskorkeus + symbolisen koon nosto (AloituslennonRata) + maaston lisä lennon ajan; lasku kohteen maahan.
                 double lisaRata = rata != null ? lisaNyt * AloituslennonRata.LisanPaino(t) : 0;
                 var ra = rata != null ? rata.Kamera(t, lisaRata) : default;
@@ -453,7 +485,7 @@ namespace Matkakirja
                     ? rata.KoneenKorkeus(t) + lisaRata + math.max(0.0, maaKohteessa) * math.saturate((t - 11.0) / (AloituslennonRata.KosketusS - 11.0))
                     : LennonV3Kaytava.KoneenKorkeus(t, lisaNyt, maaKohteessa);
                 double tV3 = rata != null ? AloituslennonRata.V3Aika(t) : t;
-                double kall = rata != null ? 0.0 : LennonV3.Kallistus(reitti, pit, t);
+                double kall = rata != null ? kpaikka.Kallistus : LennonV3.Kallistus(reitti, pit, t);
                 Lat = q.Lat;
                 Lon = q.Lon;
                 AsetaVaihe(tV3 < 5.0 ? LennonVaihe.Nousu : tV3 < 11.0 ? LennonVaihe.Matka : LennonVaihe.Lasku);
@@ -526,6 +558,9 @@ namespace Matkakirja
             Aurinko.UsvaVahintaanM = 0;
             LiikeLaatat.LentoKarkeaSse = 0f;
             IlmaPois();
+            // v3f: kello perillä lähtö + lentoaika; päivän ja yön raja häivyy (Paivanvalo), kun lento ei enää pidä kelloa.
+            if (kelloLennossa) Pelikello.Tunnit = kelloAlku + kelloTunnit;
+            KelloPois();
             V3Tapahtuma("perilla");
             // Nappula kohteeseen piilossa: esityksen purku näyttää sen perillä (V3Pois).
             if (olio != null) Siirra(lat1, lon1, 0);

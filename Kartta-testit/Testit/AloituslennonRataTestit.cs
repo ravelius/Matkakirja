@@ -4,6 +4,8 @@
 // ylhäältä alas. Ennallaan: kaukaa kone on pieni, kosketus nähdään kaukaa ja ylhäältä, usva ei hukuta maata, kone aina ruudulla,
 // ei koskaan takaa, ohitus vasemmalta oikealle, lähtöpiste kuvassa alussa, kamera liikkuu koko ajan ilman nykäyksiä, alku =
 // napautusnäkymä ja loppu = saapumisnäkymä.
+// v3f4 (omistajan palaute v3f3-videoon 28.9. klo 17.0x): kone ei hidastu lähellä, kallistettu kaarto yskähdyksen tilalle, kamera
+// bumerangina (ei seuraa konetta; koneen takaviisto sallitaan bumerangissa, ei koskaan suoraan takaa) ja päivä heti alussa.
 // ALOITUSRATA_TAULU=1 tulostaa aikajanan 0,5 s välein (kohde ALOITUSRATA_KOHDE, oletus ateena; kaikki = kaikki kohteet;
 // ALOITUSRATA_ASKEL = rivien väli s).
 using System;
@@ -18,10 +20,13 @@ namespace Matkakirja.Kartta.Testit
         static readonly (string Id, double Lat, double Lon)[] Kohteet =
         {
             ("ateena", 37.98, 23.73), ("rooma", 41.9, 12.5), ("istanbul", 41.01, 28.98), ("lissabon", 38.72, -9.14),
-            ("pariisi", 48.857, 2.352), ("kairo", 30.04, 31.24), ("moskova", 55.75, 37.62),
+            ("pariisi", 48.857, 2.352), ("kairo", 30.04, 31.24), ("moskova", 55.75, 37.62), ("tanger", 35.76, -5.83),
         };
-        /// <summary>Valintanäkymä (Aloitusnakyma: 30° N 17° E, koko pallo, v3–v7-lokit: 7 597 km).</summary>
-        static readonly AloituslennonRata.Asento Napautus = new AloituslennonRata.Asento(30.0, 17.0, 7_597_000, 0, 0, 0);
+        /// <summary>Valintanäkymä iPhone 17:ssä (Aloitusnakyma.Valintanakyma): webin 30° N 17° E ja 7 597 km rajattuna
+        /// pelikellon alle (v3f, Valintarajaus) → 37,06° N.</summary>
+        static readonly AloituslennonRata.Asento Napautus = ValintarajausTestit.Iphone17Valinta();
+        /// <summary>Lontoon nappulan puolikas leveys ruudun puolikkaana (web 32 × 36 px, jalka pisteessä; iPhone 17 402 pt).</summary>
+        const double NappulaPuoliX = 16.0 / 201.0;
 
         static AloituslennonRata Rata(double lat, double lon, string id = null)
         {
@@ -43,6 +48,15 @@ namespace Matkakirja.Kartta.Testit
         {
             var a = r.Kamera(Math.Max(0, t - dt)); var b = r.Kamera(Math.Min(AloituslennonRata.KestoS, t + dt));
             return LennonAikajana.ReittiM(a.Lat, a.Lon, b.Lat, b.Lon) / Math.Max(1.0, 0.5 * (a.EtaisyysM + b.EtaisyysM)) / (2 * dt);
+        }
+
+        /// <summary>Silmän maanopeus (m/s) koneen reitin suuntaan (v3f4 bumerangi: kamera ei seuraa konetta).</summary>
+        static double SilmaKoneenSuuntaan(AloituslennonRata r, double t, double dt = 0.02)
+        {
+            var a = r.SilmanMaapiste(t - dt); var b = r.SilmanMaapiste(t + dt);
+            double s = LennonAikajana.ReittiM(a.Lat, a.Lon, b.Lat, b.Lon) / (2 * dt);
+            double suunta = LennonV3.Suuntima(a.Lat, a.Lon, b.Lat, b.Lon), reitti = r.SuuntimaReitilla(r.KoneenOsuus(t));
+            return s * Math.Cos(LennonV3.Kulmaero(reitti, suunta) * Math.PI / 180.0);
         }
 
         [Testi]
@@ -77,7 +91,10 @@ namespace Matkakirja.Kartta.Testit
                     Oleta.Tosi(m.Nakyy && Math.Abs(m.X) <= 0.92 && Math.Abs(m.Y) <= 0.92,
                         $"{k.Id} kone kuvassa t={t:F2}: x {m.X:F2} y {m.Y:F2} näkyy {m.Nakyy}");
                     pieninKoko = Math.Min(pieninKoko, m.Koko);
-                    Oleta.Tosi(m.Korotus >= 60 || m.Alfa <= 100, $"{k.Id} ei takaa t={t:F2}: α {m.Alfa:F0}° korotus {m.Korotus:F0}°");
+                    // v3f4 bumerangi (omistaja: kamera "lähtee saman tein kuin bumerangi takaviistoon takaisinpäin"): kärjen
+                    // jälkeen kone näkyy takaviistosta (α enintään 150°), ei koskaan suoraan takaa; muualla v3:n sääntö.
+                    double alfaRaja = t > AloituslennonRata.OhitusS && t < AloituslennonRata.SaapuminenS ? 150 : 100;
+                    Oleta.Tosi(m.Korotus >= 60 || m.Alfa <= alfaRaja, $"{k.Id} ei takaa t={t:F2}: α {m.Alfa:F0}° korotus {m.Korotus:F0}°");
                     Oleta.Tosi(m.KameraKorkeusM > 1500, $"{k.Id} kamera maan yllä t={t:F2}: {m.KameraKorkeusM:F0} m");
                 }
                 Oleta.Tosi(pieninKoko >= 0.95 * AloituslennonRata.KokoLaskussa, $"{k.Id} kone vähintään 1,4 % leveydestä: {pieninKoko:P1}");
@@ -282,13 +299,211 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
+        static void LennonKelloKiihtyyJaHidastuuPerille()
+        {
+            // v3f2: pelikello Tunnit = lähtö + lentoaika · Kello(t): 0 lähdössä, 1 saapumisen alussa (12,6 s) ja siitä loppuun.
+            // v3f4 (omistaja: kartta vaihtuu yöstä päivään "hyvissä ajoin"): etupainotteinen, nopein alussa korkealla (1–3 s), ja 3,5 s:ssa
+            // kulunut vähintään 70 % lentotunneista.
+            const double T = AloituslennonRata.SaapuminenS;
+            Oleta.Tosi(AloituslennonRata.Kello(0) == 0 && Math.Abs(AloituslennonRata.Kello(T) - 1) < 1e-12
+                       && AloituslennonRata.Kello(AloituslennonRata.KestoS) == 1, "kello 0 → 1 saapumisen alussa");
+            double ed = 0, huippu = 0, huippuT = 0;
+            for (double t = 0.1; t <= AloituslennonRata.KestoS + 1e-9; t += 0.1)
+            {
+                double v = (AloituslennonRata.Kello(t) - AloituslennonRata.Kello(t - 0.1)) / 0.1;
+                Oleta.Tosi(AloituslennonRata.Kello(t) >= ed, $"kello ei palaa t={t:F1}");
+                ed = AloituslennonRata.Kello(t);
+                if (v > huippu) { huippu = v; huippuT = t; }
+            }
+            Oleta.Tosi(huippuT >= 1.0 && huippuT <= 3.0, $"kellon nopein kohta {huippuT:F1} s");
+            Oleta.Tosi(AloituslennonRata.Kello(3.5) >= 0.7 && AloituslennonRata.Kello(0.3) < 0.01, $"kello 3,5 s:ssa {AloituslennonRata.Kello(3.5):P0}");
+        }
+
+        /// <summary>Auringon korkeus (°) paikassa pelikellon hetkellä (sama NOAA-likiarvo kuin Aurinko.AurinkoEcef).</summary>
+        static double AuringonKorkeus(double utcTunnit, double lat, double lon)
+        {
+            var utc = new DateTime(2026, 9, 28, 0, 0, 0, DateTimeKind.Utc).AddHours(utcTunnit);
+            double paiva = utc.DayOfYear - 1 + (utc.Hour - 12 + utc.Minute / 60.0) / 24.0, g = 2 * Math.PI / 365.0 * paiva;
+            double de = 0.006918 - 0.399912 * Math.Cos(g) + 0.070257 * Math.Sin(g) - 0.006758 * Math.Cos(2 * g)
+                + 0.000907 * Math.Sin(2 * g) - 0.002697 * Math.Cos(3 * g) + 0.00148 * Math.Sin(3 * g);
+            double ay = 229.18 * (0.000075 + 0.001868 * Math.Cos(g) - 0.032077 * Math.Sin(g) - 0.014615 * Math.Cos(2 * g)
+                - 0.040849 * Math.Sin(2 * g));
+            double sl = -(utc.Hour * 60 + utc.Minute + utc.Second / 60.0 + ay - 720.0) / 4.0 * Math.PI / 180;
+            double a = lat * Math.PI / 180, b = lon * Math.PI / 180;
+            return Math.Asin(Math.Cos(de) * Math.Cos(sl) * Math.Cos(a) * Math.Cos(b) + Math.Cos(de) * Math.Sin(sl) * Math.Cos(a) * Math.Sin(b)
+                + Math.Sin(de) * Math.Sin(a)) * 180 / Math.PI;
+        }
+
+        [Testi]
+        static void PaivaTuleeEnnenOhitusta()
+        {
+            // Omistaja 28.9. klo 15.3x v3f2-videosta: "päivä voisi tulla aiemmin". Lähtö 02.30: valinnassa Moskova yössä
+            // (hämärä −6…+2°), ja katsepisteeseen tulee päivä (> 2°) ennen ohitusta; Tanger (lännessä) viimeisenä.
+            // v3f4 ("Lento pitäisi siis alkaa vielä paljon aiemmin, että kartta on ehtinyt hyvissä ajoin vaihtua yöstä päivään"):
+            // päivä katsepisteessä jo korkealla (≤ 3,5 s, Tanger ≤ 4,5 s) ja ohituksessa aurinko vähintään 15° (koko lähikuva päivässä).
+            double lahto = Pelikello.OletusAlkuKelloUtc;
+            Oleta.Tosi(AuringonKorkeus(lahto, 55.76, 37.62) < -6, $"valinnassa Moskova yössä ({AuringonKorkeus(lahto, 55.76, 37.62):0.0}°)");
+            foreach (var (id, lat, lon, raja) in new[] { ("ateena", 37.98, 23.73, 3.5), ("istanbul", 41.01, 28.98, 3.5),
+                         ("moskova", 55.75, 37.62, 3.5), ("kairo", 30.04, 31.24, 3.5), ("tanger", 35.76, -5.83, 4.5) })
+            {
+                var r = Rata(lat, lon, id);
+                int h = Pelikello.LentoTunnit(LontooLat, LontooLon, lat, lon);
+                double paiva = -1;
+                for (double t = 0; t <= AloituslennonRata.KestoS && paiva < 0; t += 0.1)
+                {
+                    var k = r.Kamera(t);
+                    if (AuringonKorkeus(lahto + h * AloituslennonRata.Kello(t), k.Lat, k.Lon) > 2) paiva = t;
+                }
+                Oleta.Tosi(paiva >= 0 && paiva <= raja, $"{id}: päivä katsepisteessä {paiva:0.0} s (raja {raja} s)");
+                var q = r.KoneenPaikka(AloituslennonRata.OhitusS);
+                double ohitus = AuringonKorkeus(lahto + h * AloituslennonRata.Kello(AloituslennonRata.OhitusS), q.Lat, q.Lon);
+                Oleta.Tosi(ohitus >= 15, $"{id}: aurinko ohituksessa {ohitus:0}°");
+                Oleta.Tosi(AuringonKorkeus(lahto + h, lat, lon) > 15, $"{id}: perillä päivä");
+            }
+        }
+
+        [Testi]
+        static void KoneEiHidastuLahella()
+        {
+            // v3f4 (omistaja: "en tykkää siitä, että koneen vauhti hidastuu, kun lennetään sen lähelle"): lähikuvassa (kamera alle
+            // 100 km koneesta, 5,6–10 s) kone lentää vähintään 0,9 × ohitusnopeutta (v3f3 5 km/s: kone "leijui" 6–9 s).
+            foreach (var k in Kohteet)
+            {
+                var r = Rata(k);
+                double pienin = 1e9;
+                for (double t = 5.6; t <= 10.0; t += 0.05)
+                    pienin = Math.Min(pienin, (r.KoneenOsuus(t + 0.01) - r.KoneenOsuus(t - 0.01)) / 0.02 * r.ReittiM);
+                Oleta.Tosi(pienin >= 0.9 * AloituslennonRata.OhitusNopeus, $"{k.Id} kone lähikuvassa vähintään {pienin / 1000:F1} km/s");
+            }
+        }
+
+        [Testi]
+        static void BumerangiEiSeuraaKonetta()
+        {
+            // v3f4 (omistaja: kamera "tapaa lentokoneen sen oman elliptisen kiertoradan kärjessä" eikä "jää seuraamaan"): silmän maanopeus
+            // koneen suuntaan on lähikuvassa (6–9 s) pieni (kone 15 km/s), ja kärjen jälkeen etäisyys kasvaa koko ajan.
+            foreach (var k in Kohteet)
+            {
+                var r = Rata(k);
+                for (double t = 6.0; t <= 9.0; t += 0.05)
+                {
+                    // Ennen kärkeä silmä saa tulla koneen edestä (liike taaksepäin); eteenpäin enintään 4 km/s (Moskova ja Kairo: silmä
+                    // tulee koneen takaa ja kvinttinen jarrutus kärkeen ajautuu hetken ~3 km/s), kärjestä alkaen enintään 3 km/s taakse.
+                    double v = SilmaKoneenSuuntaan(r, t);
+                    Oleta.Tosi(v <= 4000 && (t < AloituslennonRata.OhitusS || v >= -3000), $"{k.Id} silmä ei seuraa konetta t={t:F2}: {v / 1000:F1} km/s");
+                }
+                double ed = r.Mitta(AloituslennonRata.OhitusS + 0.3).EtaisyysM;
+                for (double t = AloituslennonRata.OhitusS + 0.35; t <= AloituslennonRata.SaapuminenS; t += 0.05)
+                {
+                    double e = r.Mitta(t).EtaisyysM;
+                    Oleta.Tosi(e > ed, $"{k.Id} kone loittonee kärjen jälkeen t={t:F2}: {ed / 1000:F1} → {e / 1000:F1} km");
+                    ed = e;
+                }
+            }
+        }
+
+        [Testi]
+        static void KaartoKallistuuKameraanPain()
+        {
+            // v3f4 (omistaja: yskähdys ylöspäin → "makeampaan kaartoon jompaan kumpaan suuntaan"): ohituksessa kone kallistuu kameran
+            // puolelle (oikealle, yläpinta näkyy) vähintään 30° ja kääntyy vähintään 15°, oikaisu on loivempi (enintään 20°), ja kone
+            // on perillä täsmälleen kohteessa (sivusiirto nolla).
+            foreach (var k in Kohteet)
+            {
+                var r = Rata(k);
+                double oikea = 0, vasen = 0, kaanto = 0;
+                for (double t = 6.5; t <= 7.8; t += 0.02) oikea = Math.Max(oikea, r.KaartoKallistus(t));
+                for (double t = 7.8; t <= AloituslennonRata.KosketusS; t += 0.02) vasen = Math.Min(vasen, r.KaartoKallistus(t));
+                for (double t = 6.5; t <= 9.0; t += 0.02) kaanto = Math.Max(kaanto, r.Poikkeama(t));
+                Oleta.Tosi(oikea >= 30 && oikea <= AloituslennonRata.KaartoKallistusEnintaan + 1e-9, $"{k.Id} kallistus kameraan päin {oikea:F0}°");
+                Oleta.Tosi(kaanto >= 15, $"{k.Id} kaarto {kaanto:F0}°");
+                Oleta.Tosi(vasen >= -20, $"{k.Id} oikaisu loiva: {vasen:F0}°");
+                Oleta.Tosi(Math.Abs(r.Sivusiirto(AloituslennonRata.KosketusS)) < 50 && r.Sivusiirto(AloituslennonRata.PysahdysS) == 0,
+                    $"{k.Id} perillä reitillä: {r.Sivusiirto(AloituslennonRata.KosketusS):F0} m");
+                var q = r.KoneenPaikka(AloituslennonRata.PysahdysS);
+                Oleta.Tosi(LennonAikajana.ReittiM(q.Lat, q.Lon, k.Lat, k.Lon) < 100, $"{k.Id} kone kohteessa");
+            }
+        }
+
+        [Testi]
+        static void MaastolisaTasainenOhituksessa()
+        {
+            // v3f4: v3f3:n "yskähdys ylöspäin" oli maastolisän kyttyrä lähikuvassa; ikkunassa lisä on vakio (ikkunan suurin), ei
+            // koskaan paikallista pienempi, ja ikkunan ulkopuolella ennallaan.
+            var r = Rata(37.98, 23.73, "ateena");
+            var lisa = new double[64];
+            for (int i = 0; i < lisa.Length; i++) lisa[i] = 800.0 * Math.Exp(-Math.Pow((i / 63.0 - 0.925) / 0.01, 2));
+            double ikkuna = r.TasainenLisa(lisa, AloituslennonRata.LisaIkkunaAlkuS), suurin = 0;
+            for (double t = AloituslennonRata.LisaIkkunaAlkuS; t <= AloituslennonRata.LisaIkkunaLoppuS; t += 0.05)
+            {
+                Oleta.Tosi(Math.Abs(r.TasainenLisa(lisa, t) - ikkuna) < 1e-6, $"lisä vakio ikkunassa t={t:F2}: {r.TasainenLisa(lisa, t):F0} m");
+                suurin = Math.Max(suurin, LennonV3Kaytava.LisaOsuudessa(lisa, r.KoneenOsuus(t)));
+            }
+            Oleta.Tosi(ikkuna >= suurin - 1e-6 && ikkuna > 600, $"ikkunan lisä on sen suurin: {ikkuna:F0} m ({suurin:F0} m)");
+            for (double t = 0; t <= AloituslennonRata.KestoS; t += 0.05)
+                Oleta.Tosi(r.TasainenLisa(lisa, t) >= LennonV3Kaytava.LisaOsuudessa(lisa, r.KoneenOsuus(t)) - 1e-9, $"ei pienempi t={t:F2}");
+            Oleta.Tosi(Math.Abs(r.TasainenLisa(lisa, 2.0) - LennonV3Kaytava.LisaOsuudessa(lisa, r.KoneenOsuus(2.0))) < 1e-9, "ikkunan ulkopuolella ennallaan");
+            Oleta.Tosi(r.TasainenLisa(null, 7.0) == 0, "ilman maastoa 0");
+        }
+
+        [Testi]
+        static void KynanjalkiKulkeeKoneenAlla()
+        {
+            // v3f4: kaarron sivusiirto on myös kynänjäljessä (LentoReitti): lähin jäljen piste on koneen alla koko lennon.
+            var r = Rata(37.98, 23.73, "ateena");
+            var p = r.LentoReitti();
+            for (double t = 1.0; t <= AloituslennonRata.PysahdysS; t += 0.25)
+            {
+                // Etäisyys jäljen murtoviivaan (paikallinen tasokoordinaatisto koneen ympärillä).
+                var q = r.KoneenPaikka(t);
+                double c = Math.Cos(q.Lat * Math.PI / 180), lahin = 1e12;
+                (double X, double Y) T((double Lat, double Lon) x) => ((x.Lon - q.Lon) * c * 111_195, (x.Lat - q.Lat) * 111_195);
+                for (int i = 1; i < p.Count; i++)
+                {
+                    var a = T(p[i - 1]); var b = T(p[i]);
+                    double dx = b.X - a.X, dy = b.Y - a.Y, l2 = dx * dx + dy * dy;
+                    double u = l2 > 0 ? Math.Max(0, Math.Min(1, -(a.X * dx + a.Y * dy) / l2)) : 0;
+                    lahin = Math.Min(lahin, Math.Sqrt(Math.Pow(a.X + u * dx, 2) + Math.Pow(a.Y + u * dy, 2)));
+                }
+                Oleta.Tosi(lahin < 300, $"jälki koneen alla t={t:F2}: {lahin:F0} m (siirto {r.Sivusiirto(t):F0} m)");
+            }
+        }
+
+        [Testi]
+        static void EsikaantoValintanakymaan()
+        {
+            // v3f (omistaja 28.9.: pyöritetty pallo "pehmeästi pyörähtää oikeaan paikkaan ja zoomitasoon" ennen lentoa).
+            var valinta = new AloituslennonRata.Asento(30, 17, 7_597_000, 0, 0, 0);
+            Oleta.Tosi(AloituslennonRata.EsikaannonKesto(valinta, valinta) == 0, "sama näkymä: ei esikääntöä");
+            var lahella = new AloituslennonRata.Asento(30.4, 17.3, 7_800_000, 1.0, 1.5, 0);
+            Oleta.Tosi(AloituslennonRata.EsikaannonKesto(lahella, valinta) == 0, "huomaamaton ero: ei esikääntöä");
+            var pyoritetty = new AloituslennonRata.Asento(41, -40, 2_500_000, 20, 350, 0);
+            double k = AloituslennonRata.EsikaannonKesto(pyoritetty, valinta);
+            Oleta.Tosi(k >= 0.8 && k <= 2.0, $"esikääntö 0,8–2 s: {k:F2}");
+            Oleta.Tosi(AloituslennonRata.EsikaannonKesto(new AloituslennonRata.Asento(31.5, 17, 7_597_000, 0, 0, 0), valinta) < k,
+                "pieni kääntö lyhyempi");
+            var a0 = AloituslennonRata.Esikaanto(pyoritetty, valinta, 0);
+            var a1 = AloituslennonRata.Esikaanto(pyoritetty, valinta, 1);
+            Oleta.Tosi(Math.Abs(a0.Lat - 41) < 1e-9 && Math.Abs(a0.EtaisyysM - 2_500_000) < 1 && a0.Kallistus == 20, "alku = napautusnäkymä");
+            Oleta.Tosi(Math.Abs(a1.Lat - 30) < 1e-6 && Math.Abs(a1.Lon - 17) < 1e-6 && Math.Abs(a1.EtaisyysM - 7_597_000) < 1
+                       && Math.Abs(a1.Kallistus) < 1e-9 && Math.Abs(LennonV3.Kulmaero(a1.Suuntima, 0)) < 1e-6, "loppu = valintanäkymä");
+            var am = AloituslennonRata.Esikaanto(pyoritetty, valinta, 0.5);
+            Oleta.Tosi(Math.Abs(am.EtaisyysM - Math.Sqrt(2_500_000.0 * 7_597_000.0)) < 1000, $"etäisyys log-asteikolla: {am.EtaisyysM:F0}");
+            Oleta.Tosi(Math.Abs(LennonV3.Kulmaero(am.Suuntima, 355)) < 1e-6, $"suunta lyhintä tietä: {am.Suuntima:F1}");
+        }
+
+        [Testi]
         static void LahtopisteKuvassaAlussa()
         {
             foreach (var k in Kohteet)
             {
                 var r = Rata(k);
+                // Lähtöpiste = Lontoon nappula: jalka ruudun korkeudella ja nappula vähintään osin ruudulla (Kairo 1,9 s: x −1,02).
                 for (double t = 0.3; t <= AloituslennonRata.AvausS; t += 0.1)
-                    Oleta.Tosi(r.Ruudussa(t, LontooLat, LontooLon, 0, out _, out _), $"{k.Id} Lontoo kuvassa t={t:F1}");
+                {
+                    r.Ruudussa(t, LontooLat, LontooLon, 0, out double x, out double y);
+                    Oleta.Tosi(Math.Abs(x) <= 1 + NappulaPuoliX && Math.Abs(y) <= 1, $"{k.Id} Lontoon nappula kuvassa t={t:F1} ({x:0.00}, {y:0.00})");
+                }
             }
         }
 
@@ -378,6 +593,27 @@ namespace Matkakirja.Kartta.Testit
                                       + $"| {m.Alfa,4:F0} | {m.Korotus,5:F0} | {m.EtaisyysM / 1000,7:F1} | {r.KoneenOsuus(t) * r.ReittiM / 1000,6:F0} "
                                       + $"| {s.Lat,6:F2} {s.Lon,6:F2} | {r.MaaNakyvissa(t) * 100,3:F0} | Lontoo {lx,5:F2}, {ly,5:F2}{(lnakyy ? "" : " (ei)")}"
                                       + $" | kohde {(r.Ruudussa(t, k.Lat, k.Lon, 0, out double kx, out double ky) ? "" : "(ei) ")}{kx,5:F2}, {ky,5:F2}{(m.Nakyy ? "" : "  EI NÄY")}");
+                }
+                if (Environment.GetEnvironmentVariable("ALOITUSRATA_F") == "1")
+                {
+                    var o = r.Kohta(r.KoneenOsuus(AloituslennonRata.OhitusS));
+                    double psiO = r.SuuntimaReitilla(r.KoneenOsuus(AloituslennonRata.OhitusS));
+                    for (double t = 3.0; t <= 9.01; t += 0.1)
+                    {
+                        var s = r.SilmanMaapiste(t);
+                        double dd = LennonAikajana.ReittiM(o.Lat, o.Lon, s.Lat, s.Lon), az = LennonV3.Suuntima(o.Lat, o.Lon, s.Lat, s.Lon);
+                        double f = dd * Math.Cos((az - psiO) * Math.PI / 180), sr = dd * Math.Sin((az - psiO) * Math.PI / 180);
+                        double fk = (r.KoneenOsuus(t) - r.KoneenOsuus(AloituslennonRata.OhitusS)) * r.ReittiM;
+                        Console.WriteLine($"F {t:F2} silmä f {f / 1000,7:F1} r {sr / 1000,7:F1} kone f {fk / 1000,7:F1}");
+                    }
+                }
+                // v3f4: kone (nopeus, kaarron poikkeama, kallistus, sivusiirto) ja silmän maanopeus koneen suunnassa.
+                Console.WriteLine("   t s | kone km/s | poikkeama ° | kallistus ° | sivusiirto km | silmä koneen suuntaan km/s | etäisyys km");
+                for (double t = 5.0; t <= 13.001; t += askel)
+                {
+                    double v = (r.KoneenOsuus(t + 0.01) - r.KoneenOsuus(t - 0.01)) / 0.02 * r.ReittiM / 1000;
+                    Console.WriteLine($"  {t,5:F2} | {v,6:F1} | {r.Poikkeama(t),6:F1} | {r.KaartoKallistus(t),6:F1} | {r.Sivusiirto(t) / 1000,6:F2} "
+                                      + $"| {SilmaKoneenSuuntaan(r, t) / 1000,6:F2} | {r.Mitta(t).EtaisyysM / 1000,6:F1}");
                 }
             }
         }

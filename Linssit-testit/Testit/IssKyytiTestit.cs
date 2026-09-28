@@ -47,6 +47,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(IssKuvakulma.Suunta(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon) - Iss.Suuntima) < 0.01, "radan suuntaan");
         }
 
+        [Testi] static void LahemmasLasia()
+        {
+            // Omistaja 28.9. klo 18.0x: ikkuna zoomataan 1,3 ×: kenttä 80° → 65,7°, ja kuvan mittakaava kasvaa täsmälleen 1,3 ×.
+            Oleta.Tosi(Math.Abs(IssKuvakulma.KenttaZoomilla(80, 1) - 80) < 1e-9, "zoom 1 = 1.0.37");
+            double k = IssKuvakulma.KenttaZoomilla(80, 1.3);
+            Oleta.Tosi(Math.Abs(k - 65.68) < 0.01, $"1,3 × → {k:0.00}°");
+            double suhde = Math.Tan(40 * Math.PI / 180) / Math.Tan(k * 0.5 * Math.PI / 180);
+            Oleta.Tosi(Math.Abs(suhde - 1.3) < 1e-9, "mittakaava 1,3 ×");
+            Oleta.Tosi(IssKuvakulma.KenttaZoomilla(80, 0) == 80, "virheellinen zoom: ennallaan");
+            Oleta.Tosi(Math.Abs(IssKuvakulma.IkkunanKentta - IssKuvakulma.KenttaZoomilla(80, IssKuvakulma.LasiZoom)) < 1e-9, "oletus");
+        }
+
         [Testi] static void SeurantaOnIssinTakanaJaYlla()
         {
             var k = IssKuvakulma.Seuranta(Iss);
