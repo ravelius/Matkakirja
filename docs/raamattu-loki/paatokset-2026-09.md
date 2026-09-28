@@ -8927,3 +8927,7 @@ Pelikoodari 28.9. klo 22.32: Pulu v4 75/75 generoitu ja tasoitettu -17,2 LUFS (�
 ## PÄÄTÖS: YÖTAUKO EI VOIMASSA 28.–29.9. YÖNÄ (28.9.2026 klo 22.33)
 
 Päätoimittaja 28.9. klo 22.33 (omistaja kysyi 'mikä yötauko?'): 27.9. yötauko (ei käännöksiä/simulaattoreita klo 22.30 → polton loppu) koski Karttasepän yöpolttoa. Pallopoltto valmistui 19.39, ja käynnissä on vain laattavienti (aws s3 sync, kevyt) → yötauko ei ole voimassa tänä yönä. Käännökset ja simulaattorit normaalisti (nice 15, yksi käännös kerrallaan, GPU-väistö). Tavoite: 1.0.40 (1ad1c538 + Natiivi-UI:n kaiutinkorjaus) TF:ään yöllä savukkeen PASS:lla. Jatkossa yötauko vain, kun Karttaseppä ilmoittaa raskaan yöpolton.
+
+## TILA: VANHENTUNUT KUORMARAJALIPPU POISTETTU (28.9.2026 klo 22.35)
+
+Päätoimittaja 28.9. klo 22.35: /tmp/matkakirja-kuormaraja ('Omistajan kuormaraja klo 17 asti … Poista klo 17', luotu 11.30) oli jäänyt päälle ja esti 22.18:n junakäännöksen asennuksen Laitetestaajan laitteisiin 1572C658/3B4CDACB (Natiiviseppä). Poistettu; nice-oletus (11.31) korvasi sen jo aamulla. Julkaisija: aikarajalliset liput poistetaan määräaikana.
