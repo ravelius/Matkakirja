@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { inflateSync } from 'node:zlib';
 import {
   pilviAlfa, laskePilvialfa, luminanssi, kyllaisyys, kattavuus, eilinenUtc, edellinenPaiva,
-  gibsUrl, bmngLahdeUrl, bmngAmpariPolku, pilvetJson, GIBS_KERROKSET,
+  gibsUrl, bmngLahdeUrl, bmngAmpariPolku, pilvetJson, GIBS_KERROKSET, GIBS_PARI, minimiKooste,
 } from '../tools/iss-pilvet.mjs';
 import {
   ovationRuudukko, revontuletJson, harmaaPng, crc32, LEVEYS, KORKEUS,
@@ -49,6 +49,23 @@ test('iss-pilvet: aukot täytetään edellisestä päivästä, muuten alfa 0', (
   assert.deepEqual([...ilman.alfa], [255, 0, 0]);
   assert.throws(() => laskePilvialfa({ paiva, bmng: bmng.subarray(3), leveys: 3, korkeus: 1 }), /bmng/);
   lahella(kattavuus(paiva), 1 / 3);
+});
+
+test('iss-pilvet: minimikooste pudottaa auringon kimalluksen ja täyttää aukot parista', () => {
+  // 4 pikseliä: kimallus a:ssa (b:ssä tumma meri), pilvi kummassakin, aukko a:ssa, aukko kummassakin.
+  const a = Uint8Array.from([180, 190, 200, 250, 250, 250, 0, 0, 0, 0, 0, 0]);
+  const b = Uint8Array.from([10, 20, 50, 245, 245, 245, 30, 40, 60, 1, 1, 1]);
+  const m = minimiKooste(a, b);
+  assert.deepEqual([...m.rgb], [10, 20, 50, 245, 245, 245, 30, 40, 60, 0, 0, 0]);
+  assert.equal(m.toisesta, 3);
+  assert.equal(a[0], 180); // a ennallaan
+  assert.throws(() => minimiKooste(a, b.subarray(3)), /minimikooste/);
+  // Kimallus ei jää pilveksi, pilvi jää.
+  const bmng = Uint8Array.from([10, 20, 50, 10, 20, 50, 10, 20, 50, 10, 20, 50]);
+  assert.deepEqual([...laskePilvialfa({ paiva: m.rgb, bmng, leveys: 4, korkeus: 1 }).alfa], [0, 255, 0, 0]);
+  assert.deepEqual([...laskePilvialfa({ paiva: a, bmng, leveys: 4, korkeus: 1 }).alfa].slice(0, 2), [255, 255]);
+  // Pari on saman radan VIIRS (ensisijaisen kerroksen puolen kierroksen päässä).
+  assert.equal(GIBS_PARI[GIBS_KERROKSET[0]], 'VIIRS_SNPP_CorrectedReflectance_TrueColor');
 });
 
 test('iss-pilvet: päivät, GIBS- ja BMNG-osoitteet, JSON', () => {

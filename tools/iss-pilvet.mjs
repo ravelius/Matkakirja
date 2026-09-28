@@ -10,6 +10,14 @@
  *   Hakee NASA GIBS WMS:stä (PD) eilisen UTC-päivän VIIRS-tosivärikuvan
  *   4096 × 2048 EPSG:4326 (sama kuin WMTS-taso 2, noin 10 km/px) ja vertaa sitä
  *   saman kuukauden pilvettömään Blue Marble NG:hen (ämpäristä data/bmng/<kk>-4096.jpg).
+ *   MINIMIKOOSTE (Linssiseppä 28.9.2026, ensimmäisen ajon kuva): auringon kimallus
+ *   näkyi trooppisilla merillä pilven kaltaisina pystyjuovina joka kaistan keskellä.
+ *   NOAA-20 ja Suomi NPP kiertävät samaa rataa puolen kierroksen päässä toisistaan,
+ *   joten niiden kaistat ovat lomittain ja kimallus osuu eri pituuspiireille: kun
+ *   molemmat kuvat saadaan, pikseli otetaan tummemmasta (minimiKooste), jolloin
+ *   kimallus putoaa pois mutta pilvet (kummassakin) jäävät. Syyskuun merijää, jota
+ *   BMNG:n world-sarjassa ei ole, näkyy pilvenä; se jätetään, koska se on kyydissä
+ *   valkoinen kuten oikeasti.
  *   Pilvi on kirkkaampi ja harmaampi kuin pilvetön pinta, joten lumi ja jää kumoutuvat:
  *
  *     alfa = saturate((L_päivä − L_bmng − 0,08) / 0,25) · saturate((0,35 − S_päivä) / 0,2)
@@ -50,6 +58,10 @@ export const GIBS_KERROKSET = [
   'VIIRS_SNPP_CorrectedReflectance_TrueColor',
   'MODIS_Terra_CorrectedReflectance_TrueColor',
 ];
+/** Minimikoosteen pari ensisijaiselle kerrokselle: sama rata, puolen kierroksen ero (kimallus eri kohdassa). */
+export const GIBS_PARI = {
+  VIIRS_NOAA20_CorrectedReflectance_TrueColor: 'VIIRS_SNPP_CorrectedReflectance_TrueColor',
+};
 /** Kerros hyväksytään, kun vähintään tämä osuus pikseleistä on dataa (ei mustaa aukkoa). */
 export const KATTAVUUS_RAJA = 0.3;
 export const AUKKO_L = 0.02;
@@ -111,6 +123,25 @@ export function kyllaisyys(r, g, b) {
 export function pilviAlfa(r, g, b, rb, gb, bb) {
   return saturate((luminanssi(r, g, b) - luminanssi(rb, gb, bb) - 0.08) / 0.25)
     * saturate((0.35 - kyllaisyys(r, g, b)) / 0.2);
+}
+
+/**
+ * Minimikooste kahdesta saman päivän RGB-raakakuvasta (3 kanavaa): pikseli siitä, jonka luminanssi on
+ * pienempi, joten auringon kimallus putoaa pois (ks. tiedoston alku). Aukko (L < AUKKO_L) otetaan toisesta
+ * kuvasta. Palauttaa { rgb, toisesta } (toisesta = b:stä otetut pikselit); a ja b pysyvät ennallaan.
+ */
+export function minimiKooste(a, b) {
+  if (a.length !== b.length) throw new Error(`minimikooste: ${a.length} ≠ ${b.length} tavua`);
+  const rgb = new Uint8Array(a);
+  let toisesta = 0;
+  for (let j = 0; j < a.length; j += 3) {
+    const la = luminanssi(a[j], a[j + 1], a[j + 2]);
+    const lb = luminanssi(b[j], b[j + 1], b[j + 2]);
+    if (lb < AUKKO_L || (la >= AUKKO_L && la <= lb)) continue;
+    rgb[j] = b[j]; rgb[j + 1] = b[j + 1]; rgb[j + 2] = b[j + 2];
+    toisesta++;
+  }
+  return { rgb, toisesta };
 }
 
 /**
@@ -214,6 +245,16 @@ async function pilvet(argv) {
     console.log(`GIBS ${k} ${paiva}: ohitetaan (${t.syy})`);
   }
   if (!kerros) throw new Error(`GIBS: yksikään kerros ei antanut päivää ${paiva}`);
+  let lahde = kerros;
+  if (GIBS_PARI[kerros]) {
+    const p = await haeGibs(sharp, GIBS_PARI[kerros], paiva);
+    if (p.rgb) {
+      const m = minimiKooste(paivaRgb, p.rgb);
+      paivaRgb = m.rgb;
+      lahde = `${kerros} + ${GIBS_PARI[kerros]} (minimikooste)`;
+      console.log(`GIBS ${GIBS_PARI[kerros]} ${paiva}: minimikooste, ${m.toisesta} px parista`);
+    } else console.log(`GIBS ${GIBS_PARI[kerros]} ${paiva}: ei minimikoostetta (${p.syy})`);
+  }
 
   const eilen = edellinenPaiva(paiva);
   const e = await haeGibs(sharp, kerros, eilen);
@@ -226,7 +267,7 @@ async function pilvet(argv) {
   for (const a of alfa) summa += a;
   mkdirSync(kansio, { recursive: true });
   kirjoitaTurvallisesti(join(kansio, 'uusin.png'), harmaaPng(alfa, LEVEYS, KORKEUS));
-  const meta = pilvetJson({ paiva, kerros, kk, aukotPaivasta: e.rgb ? eilen : null });
+  const meta = pilvetJson({ paiva, kerros: lahde, kk, aukotPaivasta: e.rgb ? eilen : null });
   kirjoitaTurvallisesti(join(kansio, 'uusin.json'), meta);
   console.log(`pilvet → ${kansio}: keskialfa ${(summa / alfa.length / 2.55).toFixed(1)} %, `
     + `täytetty ${taytetty} px, ${meta.trim()}`);
