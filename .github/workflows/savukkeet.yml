@@ -81,6 +81,8 @@ permissions:
   contents: read
   # gh pr diff --name-only (harvan sarjan polkusuodatin).
   pull-requests: read
+  # Suljetun/mergetyn PR:n jonoon jäänyt ajo peruu itsensä (omistaja 28.9.2026).
+  actions: write
 
 # Peruu saman haaran/PR:n vanhan, yhä käynnissä olevan ajon uuden
 # pushin tullessa (omistaja/Fable 17.9.2026, PR #2551:n korjaussilmukka)
@@ -89,6 +91,13 @@ permissions:
 concurrency:
   group: savukkeet-${{ github.ref }}
   cancel-in-progress: true
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527): Mac-ajurin
+# raskaat työt ajetaan nice -n 15:llä, jotta omistajan omat työt (käyttäjä
+# Sami Reivinen) menevät edelle; nice toimii käyttäjien yli. Ubuntulla harmiton.
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
 
 jobs:
   # PÄÄREITTI: koko sarja yhtenä jobina Mac Studion runnerilla.
@@ -102,7 +111,7 @@ jobs:
     # (SamiMacStudio2-testit) ei saa poimia savukkeita, jotta kaksi
     # Chromium-sarjaa ei aja samalla koneella yhtä aikaa.
     runs-on: [self-hosted, macOS, ARM64, savukkeet]
-    timeout-minutes: 20
+    timeout-minutes: 40
     env:
       # Koneen omat polut (ei asennuksia työnkulussa).
       CHROMIUM: /Users/koodaus/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
@@ -122,9 +131,26 @@ jobs:
       # lyhenevät). Paikallinen aja-sarja.mjs:n oletus on 4 (agenttien ja
       # käsiajojen rinnalla). Raportti docs/raportit/
       # viesti-fable-testit-github-20260919.md.
-      SAVUKE_RINNAKKAIN: '6'
+      # 2 rinnakkain (omistaja 28.9.2026, NICE-OLETUS): GPU ja muisti
+      # rajaavat — Mac-savukkeita enintään 2 yhtä aikaa; katto 20 → 40 min.
+      SAVUKE_RINNAKKAIN: '2'
       TULOKSET: /tmp/matkakirja-savukkeet/${{ github.run_id }}
     steps:
+      # VANHENTUNUT PR-AJO POIS (omistaja hyväksyi 28.9.2026): savukerunneri on
+      # yksi, ja mergettyjen/suljettujen PR:ien ajot jonottivat tunteja
+      # TF-viennin edellä. Jos PR ei ole enää auki, ajo peruu itsensä heti.
+      - name: Ohita suljettu PR
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          tila=$(gh pr view "${{ github.event.pull_request.number }}" --repo "${{ github.repository }}" --json state -q .state || echo OPEN)
+          if [ "$tila" != "OPEN" ]; then
+            echo "::notice::PR #${{ github.event.pull_request.number }} on $tila — savukeajo peruu itsensä."
+            gh run cancel "${{ github.run_id }}" --repo "${{ github.repository }}"
+            sleep 120
+          fi
       # CHECKOUT ILMAN docs/-KANSIOTA (Fable/omistaja 18.9.2026, Raamattu
       # AGENTIT VAIN OPUS JA SONNET, TARKENNUS 11 kohta 24 c).
       #
@@ -164,6 +190,12 @@ jobs:
         id: aja
         env:
           GH_TOKEN: ${{ github.token }}
+          # PULUN PÄIVÄRAJA (Julkaisija 28.9.2026): savukkeet, jotka eivät
+          # katkaise pöllöpalvelinta, lähettävät tällä kehittäjäotsakkeen
+          # VAIN pöllön originiin (tools/savukkeet/pollo-kehittajakoodi.mjs),
+          # jotta ajot eivät kuluta omistajan laitteiden IP-rajaa. Tämä job
+          # ei aja fork-PR:itä (if-ehto yllä); fork-reitit eivät saa secretiä.
+          POLLO_KEHITTAJAKOODI: ${{ secrets.POLLO_KEHITTAJAKOODI }}
         run: |
           # launchd-palvelun PATH ei välttämättä sisällä Homebrew'n nodea.
           export PATH="/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:$PATH"
@@ -184,17 +216,15 @@ jobs:
           # on käynnissä, savukkeita enintään 3 rinnakkain (muuten 6).
           kaynnissa=$(xcrun simctl list devices booted 2>/dev/null | grep -c "(Booted)" || true)
           if [ "${kaynnissa:-0}" -gt 0 ]; then
-            export SAVUKE_RINNAKKAIN=3
-            echo "Simulaattoreita käynnissä $kaynnissa → SAVUKE_RINNAKKAIN=3"
+            echo "Simulaattoreita käynnissä $kaynnissa (SAVUKE_RINNAKKAIN=$SAVUKE_RINNAKKAIN)"
           fi
           # KEVYT TILA (omistaja 28.9.2026): kun omistaja käyttää Macia, Julkaisija
           # luo lipun /tmp/matkakirja-kevyt → savukkeita enintään 2 rinnakkain
           # taustaprioriteetilla (taskpolicy -b), jotta Clauden kuorma pysyy ≤ 8 ytimessä.
           ETU=""
           if [ -f /tmp/matkakirja-kevyt ]; then
-            export SAVUKE_RINNAKKAIN=2
             ETU="taskpolicy -b"
-            echo "Kevyt tila (/tmp/matkakirja-kevyt) → SAVUKE_RINNAKKAIN=2, taskpolicy -b"
+            echo "Kevyt tila (/tmp/matkakirja-kevyt) → taskpolicy -b"
           fi
           $ETU node tools/savukkeet/aja-sarja.mjs "${SARJA:-julkaisu}" "$TULOKSET"
       - name: Yhteenveto

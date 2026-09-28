@@ -74,6 +74,8 @@
  */
 
 import { writeFileSync } from 'node:fs';
+import { laskeKierros } from '../js/linssit/astronautin-kierros.js';
+import { kierrosLohko } from './laske-astronautin-kierros.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -3122,7 +3124,8 @@ async function main() {
       katalogi: `${RAJAPINTA}/search?media_type=image`,
       haettu: paiva,
     }, null, 2)};\n\n`
-    + `export const SATELLIITTI_KOHTEET = ${JSON.stringify(kohteet, null, 2)};\n`;
+    + `export const SATELLIITTI_KOHTEET = ${JSON.stringify(kohteet, null, 2)};\n`
+    + kierrosLohko(laskeKierros(kohteet));
   const polku = join(JUURI, 'js/linssit/satelliitti-data.js');
   writeFileSync(polku, sisalto);
   process.stdout.write(`Kirjoitettu ${polku}\n`);

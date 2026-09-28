@@ -748,6 +748,27 @@
   container-type: inline-size;
 }
 
+/*
+ * KORTIN KUVA ON NYKYÄÄN NOSTOKUVA (28.9.2026). Kohdekortti avautuu
+ * kaksivaiheisena nostokuvana (js/nostokuva.js: figure.nostokuva-kehys >
+ * button.nostokuva-nappi), eikä `.fokuskohde-kuva`-paikkaa enää synny.
+ * Nauhan mittamuuttujat ja mittasäiliö olivat vain sillä, joten nauha
+ * jäi 0 × 0 px:n kokoiseksi eikä näkynyt (mitattu WebKitissä: Olympia
+ * ja Rodoksen kolossi, pallolauta). Samat osuudet kuin kortin kuvalla,
+ * mutta kuvan leveydestä `--nauha-kuva` (js/fokuskohteet.js
+ * mitoitaNauhaKuvaan), koska fit-content-nappi ei voi olla mittasäiliö.
+ */
+.nostokuva-kehys.fokuskohde-kuva-nauhalla > .nostokuva-nappi {
+  --nauha-pituus: calc(0.368 * var(--nauha-kuva, 0px));
+  --nauha-korkeus: calc(0.048 * var(--nauha-kuva, 0px));
+  --nauha-teksti: calc(0.0156 * var(--nauha-kuva, 0px));
+  /* Ei pohjustusta: nostokuvan kuvan koko ja paikka ovat lukossa
+     (js/nostokuva.js), joten nauha istuu suoraan kuvan kulmassa. */
+  --nauha-marginaali: 0px;
+  --nauha-kaari: 6px;
+  --nauha-kaari-ulko: 6px;
+}
+
 /* Suurennoksen mitat isännälle, aivan kuten kortissa: korkeus
    2,4rem, ULOS johdettu 1,2rem, PITUUS 18,4rem → näkyvä matka
    15,0rem, teksti (15,2 × 0,78 = 11,86rem) enintään 79 % siitä eli
@@ -777,46 +798,23 @@
 
 
 /*
- * "KOE IHME" -NAPPI ENSIMMÄISEN KUVAN ALLA (omistajan tilaus 27.8.2026
- * ilta: nappi siirtyi otsikon alta siihen kohtaan, jossa poistettu
- * loistoaikarekonstruktio ennen oli). Sama pergamenttinen
- * korostuskieli kuin kierrosnapilla — mutta tähti edessä, sama merkki
- * kuin kadonneiden ihmeiden karttasymbolissa.
+ * NYKYKUVA TEKSTIN KYLJESSÄ (omistaja 27.9.2026 klo 23.4x, Olympia-kortti:
+ * "Koe ihme" -nappi pois). Yhä olemassa olevan ihmekohteen ihmekuva on
+ * kortin ensimmäinen ja iso kuva, ja valokuva siitä, mitä paikalla NYT
+ * on, kelluu pienenä ensimmäisen kappaleen oikealla puolella
+ * kuvateksteineen (js/fokuskohteet.js kohteenNykykuva). Napautus avaa
+ * suurennoksen kuten muillakin kuvilla.
  */
-.fokuskohde-ihmenappi {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  width: 100%;
-  min-height: 44px;
-  /* Hiukan ilmaa kuvatekstin ja napin väliin: nappi seuraa kuvaa,
-     mutta ei saa liimautua sen selitteeseen kiinni. */
-  margin: 0.1rem 0 0.7rem;
-  padding: 0.45rem 0.8rem;
-  border: 1px solid rgba(122, 85, 20, 0.6);
-  border-radius: 4px;
-  background: rgba(214, 168, 62, 0.2);
-  color: #6d4d12;
-  font-family: var(--font-type, inherit);
-  font-size: 0.86rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
+.fokuskohde-teksti > .fokuskohde-nykykuva {
+  float: right;
+  width: min(42%, 180px);
+  margin: 0.2rem 0 0.5rem 0.9rem;
 }
 
-.fokuskohde-ihmenappi:hover,
-.fokuskohde-ihmenappi:focus-visible { background: rgba(214, 168, 62, 0.36); }
-
-.fokuskohde-ihmetahti {
-  flex: none;
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+.fokuskohde-teksti > .fokuskohde-nykykuva .fokuskohde-kuvateksti {
+  font-size: 0.68rem;
 }
+
 
 /* ---------- IHME NÄHTÄVYYSIKKUNASSA (omistaja 27.8.2026 ilta) -------
  *
@@ -873,15 +871,6 @@
   --nauha-marginaali: 0.5rem;
   --nauha-kaari: 0;
   --nauha-kaari-ulko: 0;
-}
-
-/* Nähtävyysjutun "Koe ihme" -nappi seuraa kuvakehystä, jonka leveys on
-   kapea (.nahtavyys-kuvakehys max-width): nappi olisi 100 %:lla yhtä
-   kapea ja katkeaisi kahdelle riville. Se saa siis palstan leveyden ja
-   jää kuvan alle omaksi rivikseen, kuten kortissa. */
-.nahtavyys-kortti .fokuskohde-ihmenappi {
-  clear: both;
-  margin: 0.2rem 0 1rem;
 }
 
 .fokuskohde-kuvateksti {

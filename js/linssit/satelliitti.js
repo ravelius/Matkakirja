@@ -148,9 +148,11 @@ import {
   kaynnistaPohjaMusiikki, pidaMusiikkiKiinni,
 } from '../ambience-stream.js';
 import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
-import { stopDiaryVoice } from '../luenta.js';
-import { pysaytaLukija } from '../lukija.js';
-import { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
+import { stopDiaryVoice, luentaKytkinPaalla } from '../luenta.js';
+import { lueAaneen, pysaytaLukija } from '../lukija.js';
+import { animoiKoko } from '../tiivistys.js';
+import { SATELLIITTI_KIERROS, SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
+import { naapuri } from './astronautin-kierros.js';
 import {
   PUUTTEEN_SELITE, avaaAvaruusnakyma, avauksenPuute,
 } from './satelliitti-avaruus.js';
@@ -159,6 +161,7 @@ import { diagNyt, pallodiag } from '../pallodiag.js';
 import { luoMinipulu } from '../minipulu.js';
 import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
+import { PULUN_VAARA_KOHDE, aloitaPulunTervetulo } from './pulu-tervetulo.js';
 
 /*
  * VARTIJAN KELLOT (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34).
@@ -206,6 +209,54 @@ export const SATELLIITTI_OSA = 'satelliitti';
  * vasta pallonäkymästä. Escape toimii yhä näppäimistöllä.
  */
 export const KUVA_AUKI_LUOKKA = 'satelliitti-kuva-auki';
+
+/*
+ * ── KUVASELAIN (omistaja 27.9.2026 klo 23.5x Fablen kautta) ──────────
+ *
+ * Sanatarkasti: *"saisiko kuvia selattua pyyhkäisemällä tai klikkaamalla
+ * kuvan reunasta seuraava/edellinen. lisäksi voisi olla alhaalla keskellä
+ * napit edellinen/seuraava, mistä voisi selata viereisiä kohteita
+ * kartalla. kuvan taustalla voisi näkyä himmeällä maapallo siltä kohtaa
+ * mistä kuva on."* Linssisepän suositus (docs/raportit/
+ * astronautin-kuvaselain-20260928.md, natiivi proto linssiseppa/
+ * astro-selain c5b073cd) — samat luvut kuin natiivin Kuvanakyma.cs:ssä:
+ *
+ *   • reunan napautus: lavan ulommat REUNAN_OSUUS (22 %) kummaltakin
+ *     puolelta, lyhyt (< 300 ms) ja paikallaan (< 10 px),
+ *   • pyyhkäisy: vaakaveto > 10 px ja 1,3 × pystyveto; päästettäessä
+ *     vaihto, jos matka > PYYHKAISYN_RAJA leveydestä tai vauhti >
+ *     PYYHKAISYN_NOPEUS px/ms, muuten kuva palaa paikalleen,
+ *   • liuku: vanha ulos LIUKU_ULOS_MS, uusi sisään neljänneksen
+ *     matkalta häivyttäen LIUKU_SISAAN_MS (smoothstep); liikkeenvähennys
+ *     vaihtaa suoraan,
+ *   • galleria jatkuu: kohteen viimeisen kuvan jälkeen seuraavan kohteen
+ *     ensimmäinen, ensimmäisen edellä edellisen kohteen viimeinen
+ *     (maailmankierros SATELLIITTI_KIERROS),
+ *   • ‹ › viereisen kohteen oletuskuvaan, ja kohteen nimi kirkastuu
+ *     NIMEN_KIRKASTUS_MS (Fablen hyväksyntä 28.9. klo 00.1x).
+ */
+export const REUNAN_OSUUS = 0.22;
+export const PYYHKAISYN_RAJA = 0.2;
+export const PYYHKAISYN_NOPEUS = 0.6;
+export const LIUKU_ULOS_MS = 140;
+export const LIUKU_SISAAN_MS = 160;
+export const NIMEN_KIRKASTUS_MS = 1200;
+/** Selitteen luentojen pysyvä säilölohko (js/puhe.js, worker `lohko`). */
+export const SELITTEEN_SAILIO = 'astro-selite';
+
+/** Reunavyöhyke lavan x-koordinaatista: −1 vasen, +1 oikea, 0 keskiosa. */
+export function reunalla(x, leveys) {
+  if (!(leveys > 0)) return 0;
+  if (x < leveys * REUNAN_OSUUS) return -1;
+  return x > leveys * (1 - REUNAN_OSUUS) ? 1 : 0;
+}
+
+/** Vaihtaako päästetty pyyhkäisy kuvan (matka tai vauhti)? */
+export function pyyhkaisyVaihtaa(veto, leveys, kestoMs) {
+  const w = Math.max(1, leveys);
+  return Math.abs(veto) > w * PYYHKAISYN_RAJA
+    || Math.abs(veto) / Math.max(1, kestoMs) > PYYHKAISYN_NOPEUS;
+}
 
 /*
  * ── LINSSI VAIENTAA MUUT ÄÄNET (omistaja 12.9.2026) ───────────────
@@ -551,7 +602,9 @@ export function kuvatiedot(kohde, havainto) {
  * pillerissä (`palkki.nimeaKohde`), joka korvaa NASA-rivin kuvan
  * ajan.
  */
-function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
+function avaaHavaintokortti({
+  kohde, valikko, onSuljettu, alkuIndeksi, sisaan = 0, siirry = null, naapuriKohde = null,
+}) {
   lataaSatelliittiTyyli();
   const katselu = html('div', 'satelliitti-katselu');
   katselu.setAttribute('role', 'dialog');
@@ -592,7 +645,7 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
    */
 
   const havainnot = kohde.havainnot ?? [];
-  let indeksi = oletusIndeksi(kohde);
+  let indeksi = Number.isInteger(alkuIndeksi) && havainnot[alkuIndeksi] ? alkuIndeksi : oletusIndeksi(kohde);
   if (!havainnot[indeksi]) return null;
 
   /* ---- kuva ja sen lava (eleet asuvat lavassa) --------------------- */
@@ -712,11 +765,23 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     seutuOsa.textContent = '';
   };
 
-  /** Selite auki/kiinni — vain otsikkorivi jää (korkeussiirtymä CSS:ssä). */
+  /*
+   * Selite auki/kiinni — vain otsikkorivi jää.
+   *
+   * PIENENNETTY ON TIIVIS JA ANIMOITU (omistaja 28.9.2026, Raamattu PR
+   * #3527: *"animoitu pienennys mahdollisimman tiiviiksi"*). Kelattu
+   * laatikko on otsikkorivinsä kokoinen (runko on silloin virran
+   * ulkopuolella, css/satelliitti.css), ja koko liukuu vanhasta uuteen
+   * yleisellä apurilla (js/tiivistys.js animoiKoko). Ennen kelattu
+   * laatikko jäi avatun tekstin levyiseksi palkiksi, koska piilotettu
+   * runko piti leveyttä yllä.
+   */
   const asetaSelite = (kiinni) => {
-    selite.classList.toggle('satelliitti-selite-kiinni', kiinni);
-    selite.setAttribute('aria-expanded', kiinni ? 'false' : 'true');
-    sovitaOtsikko();
+    animoiKoko(selite, () => {
+      selite.classList.toggle('satelliitti-selite-kiinni', kiinni);
+      selite.setAttribute('aria-expanded', kiinni ? 'false' : 'true');
+      sovitaOtsikko();
+    });
   };
   /*
    * ── VINKKIAVAUS: KERRAN KOHDETTA KOHTI ───────────────────────────
@@ -815,6 +880,18 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
 
   /* ---- pikkukuvat kelluvat aina RUUDUN vasemmassa alakulmassa ------ */
   const nauha = html('div', 'satelliitti-nauha');
+
+  /*
+   * ---- ‹ › alhaalla keskellä: viereinen kohde kartalla (KUVASELAIN).
+   * Kaksi pientä lasinappia ilman tekstiä, laskuria tai nimeä (UI kevyt);
+   * pikkukuvat (vasen ala, enintään 2) ja minipulu (oikea ala) eivät
+   * ulotu keskelle.
+   */
+  const kohdenapit = html('div', 'satelliitti-kohteet');
+  const edellinenKohde = nappi('satelliitti-kohdenappi', '‹', 'Edellinen kohde kartalla');
+  const seuraavaKohde = nappi('satelliitti-kohdenappi', '›', 'Seuraava kohde kartalla');
+  kohdenapit.append(edellinenKohde, seuraavaKohde);
+  kohdenapit.hidden = !siirry || !naapuriKohde?.(1);
 
   /*
    * ── MINIPULU RUUDUN OIKEASSA ALAKULMASSA ─────────────────────────
@@ -1120,15 +1197,16 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   pulunSulku.addEventListener('click', (e) => { e.stopPropagation(); naytaPulukortti(false); });
   pulukulma.append(pulukortti, pulunappi);
 
-  katselu.append(lava, selite, kulma, nauha, pulukulma);
+  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma);
   document.body.appendChild(katselu);
   /* Hampurilainen pois kuvan ajaksi (LISÄYS 6, ks. KUVA_AUKI_LUOKKA). */
   document.body.classList.add(KUVA_AUKI_LUOKKA);
   /* ---- sulkeminen -------------------------------------------------- */
   const nappain = (e) => {
     if (e.key === 'Escape') { sulje(); return; }
-    if (e.key === 'ArrowRight') nayta(indeksi + 1);
-    if (e.key === 'ArrowLeft') nayta(indeksi - 1);
+    // Nuolinäppäimet selaavat kuten pyyhkäisy: galleria jatkuu naapuriin.
+    if (e.key === 'ArrowRight') selaa(1);
+    if (e.key === 'ArrowLeft') selaa(-1);
   };
   function sulje() {
     if (!katselu.isConnected) return;
@@ -1143,6 +1221,10 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     minipulu = null;
     /* Vinkkiajastin ei saa herätä suljetun näkymän päälle. */
     lopetaVinkki();
+    lopetaLiuku();
+    // Selitteen luenta loppuu kuvan mukana (ei muiden puhujien luentaa).
+    if (luettu) { try { pysaytaLukija(); } catch { /* ei lukijaa */ } }
+    clearTimeout(kirkastusAjastin);
     globalThis.removeEventListener?.('resize', otsikkoMitataanUudestaan);
     globalThis.removeEventListener?.('orientationchange', otsikkoMitataanUudestaan);
     /*
@@ -1242,6 +1324,7 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   let skaala = 1;
   let tx = 0;
   let ty = 0;
+  let veto = 0;
   const sormet = new Map();
   let ele = null; // { etaisyys, skaala, keskiX, keskiY, tx, ty } | { yksi }
 
@@ -1265,7 +1348,8 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   };
   const piirra = () => {
     rajaa();
-    kuva.style.transform = `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${skaala.toFixed(3)})`;
+    // `veto` on kuvaselaimen vaakasiirto (pyyhkäisy ja liuku), ei zoomin panorointia.
+    kuva.style.transform = `translate(${(tx + veto).toFixed(1)}px, ${ty.toFixed(1)}px) scale(${skaala.toFixed(3)})`;
     katselu.classList.toggle('satelliitti-zoomattu', skaala > 1.01);
   };
   /** Zoom pois — uusi otos aukeaa aina kokonaisena. */
@@ -1290,6 +1374,15 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     /* Kuvan napautus, panorointi ja nipistys kelaavat selitteen (LISÄYS 6). */
     kelaaKuvasta();
     sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (sormet.size === 1) {
+      alku = { x: e.clientX, y: e.clientY, t: nytMs() };
+      viimeinen = { x: e.clientX, y: e.clientY };
+      pyyhkaisy = false;
+    } else if (pyyhkaisy) {
+      // Toinen sormi kesken pyyhkäisyn: nipistys voittaa, kuva palaa paikalleen.
+      pyyhkaisy = false;
+      liu(veto, 0, 120, 1, null);
+    }
     // Kaappaus on hyödyllinen mutta ei pakollinen: synteettinen
     // osoitin (savuke, testi) ei ole selaimen kirjoilla, ja heitetty
     // NotFoundError keskeyttäisi koko eleen alkuunsa.
@@ -1313,6 +1406,17 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     e.stopPropagation();
     e.preventDefault();
     sormet.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    /*
+     * KUVASELAIN: yhden sormen vaakaveto täysikokoisessa kuvassa kuljettaa
+     * kuvaa sormen mukana. Zoomattuna sama veto panoroi kuten ennen.
+     */
+    if (sormet.size === 1) viimeinen = { x: e.clientX, y: e.clientY };
+    if (sormet.size === 1 && skaala <= 1.01 && !liukuu && alku) {
+      const dx = e.clientX - alku.x;
+      const dy = e.clientY - alku.y;
+      if (!pyyhkaisy && Math.abs(dx) > 10 && Math.abs(dx) > 1.3 * Math.abs(dy)) pyyhkaisy = true;
+      if (pyyhkaisy) { veto = dx; piirra(); return; }
+    }
     const p = paikat();
     if (p.length >= 2 && ele && ele.etaisyys) {
       const etaisyys = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
@@ -1331,8 +1435,9 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     }
   });
   const sormiYlos = (e) => {
-    sormet.delete(e.pointerId);
+    if (!sormet.delete(e.pointerId)) return;
     if (sormet.size < 2) ele = sormet.size === 1 ? { yksi: true, x: paikat()[0].x, y: paikat()[0].y, tx, ty } : null;
+    if (sormet.size === 0) paataPyyhkaisy(e.type === 'pointerup');
   };
   lava.addEventListener('pointerup', sormiYlos);
   lava.addEventListener('pointercancel', sormiYlos);
@@ -1347,9 +1452,127 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   lava.addEventListener('dblclick', (e) => {
     e.preventDefault();
     e.stopPropagation();
+    // Reunan napautus selaa, joten kaksoisnapautuksen zoomi vain keskiosassa.
+    if (skaala <= 1.01 && reunaLavalla(e.clientX)) return;
     if (skaala > 1.01) nollaaZoom();
     else zoomaa(Math.min(2.5, kattoSkaala()), e.clientX, e.clientY);
   });
+
+  /* ════════════════ KUVASELAIN (ks. REUNAN_OSUUS) ═══════════════════
+   *
+   * Eleet luetaan samoista lavan pointer-tapahtumista kuin zoom: yksi
+   * sormi ilman zoomia on pyyhkäisy tai reunan napautus, kaksi sormea
+   * nipistys (voittaa kesken alkaneen pyyhkäisyn). Kohteen vaihto
+   * (`siirry`) sulkee tämän näkymän ja avaa naapurin omansa — pulu,
+   * selite ja pikkukuvat kuuluvat kohteelle, ja uusi näkymä liu'uttaa
+   * oman kuvansa sisään (`sisaan`).
+   */
+  let alku = null;
+  let viimeinen = null;
+  let pyyhkaisy = false;
+  let liukuu = false;
+  let liukuKehys = 0;
+  let kirkastusAjastin = 0;
+  const nytMs = () => globalThis.performance?.now?.() ?? Date.now();
+  const reunaLavalla = (clientX) => {
+    const r = lava.getBoundingClientRect();
+    return reunalla(clientX - r.left, r.width);
+  };
+  const lopetaLiuku = () => {
+    if (liukuKehys) globalThis.cancelAnimationFrame?.(liukuKehys);
+    liukuKehys = 0;
+    liukuu = false;
+  };
+  /** Kuvan vaakasiirto mista → mihin (px) ajassa ms; peitto alkuPeitto → 1. */
+  const liu = (mista, mihin, ms, alkuPeitto, valmis) => {
+    lopetaLiuku();
+    const raf = globalThis.requestAnimationFrame;
+    if (!raf) { veto = 0; kuva.style.removeProperty('opacity'); piirra(); valmis?.(); return; }
+    liukuu = true;
+    const t0 = nytMs();
+    const askel = () => {
+      const u = Math.min(1, Math.max(0, (nytMs() - t0) / ms));
+      const pehmea = u * u * (3 - 2 * u);
+      veto = mista + (mihin - mista) * pehmea;
+      kuva.style.opacity = String(alkuPeitto + (1 - alkuPeitto) * pehmea);
+      piirra();
+      if (u < 1) { liukuKehys = raf(askel); return; }
+      liukuKehys = 0;
+      liukuu = false;
+      kuva.style.removeProperty('opacity');
+      valmis?.();
+    };
+    liukuKehys = raf(askel);
+  };
+  /** Naapurikuvat välimuistiin: kohteen viereiset ja naapurikohteiden reunakuvat. */
+  const esiladatut = new Set();
+  const esilataa = () => {
+    const hae = (h) => {
+      const osoite = h?.kuva;
+      if (!osoite || esiladatut.has(osoite) || typeof Image === 'undefined') return;
+      esiladatut.add(osoite);
+      const esi = new Image();
+      esi.decoding = 'async';
+      esi.src = osoite;
+    };
+    hae(havainnot[indeksi + 1]);
+    hae(havainnot[indeksi - 1]);
+    for (const suunta of [1, -1]) {
+      const k = naapuriKohde?.(suunta);
+      const kuvat = k?.havainnot ?? [];
+      hae(kuvat[suunta > 0 ? 0 : kuvat.length - 1]);
+      hae(kuvat[oletusIndeksi(k ?? {})]);
+    }
+  };
+  /*
+   * Vaihto liukuen: vanha ulos suunnan vastaiselle puolelle, vaihto, uusi
+   * sisään. Kun vaihto avaa toisen kohteen, tämä näkymä on jo suljettu ja
+   * uusi hoitaa sisääntulon itse.
+   */
+  const vaihda = (suunta, vaihto) => {
+    if (liikePois) { veto = 0; vaihto(); if (katselu.isConnected) { piirra(); esilataa(); } return; }
+    const w = Math.max(1, lava.clientWidth);
+    liu(veto, -Math.sign(suunta) * w, LIUKU_ULOS_MS, 1, () => {
+      if (!katselu.isConnected) return;
+      kuva.style.opacity = '0';
+      vaihto();
+      if (!katselu.isConnected) return;
+      liu(Math.sign(suunta) * w * 0.25, 0, LIUKU_SISAAN_MS, 0, esilataa);
+    });
+  };
+  /** Galleria: seuraava/edellinen kuva; kohteen lopussa naapurikohteeseen. */
+  function selaa(suunta) {
+    if (!suunta || liukuu) return;
+    const j = indeksi + Math.sign(suunta);
+    if (j >= 0 && j < havainnot.length) { vaihda(suunta, () => nayta(j)); return; }
+    if (siirry && naapuriKohde?.(suunta)) { vaihda(suunta, () => siirry(suunta, true)); return; }
+    if (veto) liu(veto, 0, 120, 1, null);
+  }
+  /** ‹ ›: viereinen kohde kartalla (sen oletuskuva). */
+  const vaihdaKohde = (suunta) => {
+    if (liukuu || !siirry || !naapuriKohde?.(suunta)) return;
+    veto = 0;
+    vaihda(suunta, () => siirry(suunta, false));
+  };
+  /** Sormi nousi: pyyhkäisy ratkeaa (matka tai vauhti) tai reunan napautus selaa. */
+  const paataPyyhkaisy = (nousi) => {
+    const kesto = nytMs() - (alku?.t ?? 0);
+    if (pyyhkaisy) {
+      pyyhkaisy = false;
+      if (nousi && pyyhkaisyVaihtaa(veto, lava.clientWidth, kesto)) selaa(veto < 0 ? 1 : -1);
+      else liu(veto, 0, 120, 1, null);
+      return;
+    }
+    if (!nousi || !alku || !viimeinen || skaala > 1.01 || liukuu || kesto >= 300) return;
+    if (Math.hypot(viimeinen.x - alku.x, viimeinen.y - alku.y) >= 10) return;
+    const reuna = reunaLavalla(alku.x);
+    if (reuna) selaa(reuna);
+  };
+  for (const [b, suunta] of [[edellinenKohde, -1], [seuraavaKohde, 1]]) {
+    b.addEventListener('click', (e) => { e.stopPropagation(); vaihdaKohde(suunta); });
+    // Napin painallus ei ole kuvan ele (ei selitteen kelausta, ei pyyhkäisyä).
+    b.addEventListener('pointerdown', (e) => e.stopPropagation());
+  }
 
   /*
    * ---- gallerian ladonta: hyvin pienet pikkukuvat, ei nuolia eikä
@@ -1377,6 +1600,26 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
       nauha.appendChild(b);
     });
   };
+  /*
+   * ── SELITE LUETAAN ÄÄNEEN (omistaja 28.9.2026: *"Tee selitteelle myös
+   * striinilukija joka automaattisesti päällä"*) ────────────────────
+   *
+   * Kuvan avautuessa ja vaihtuessa selite luetaan striimiluennalla
+   * (js/lukija.js lueAaneen → js/puhe.js palat), kun kertoja on päällä
+   * (sama ääniasetus kuin matkakirjan automaattisella luennalla,
+   * js/luenta.js luentaKytkinPaalla). Uusi kuva keskeyttää edellisen
+   * luennan, ja kuvan sulkeminen lopettaa sen. Luennat säilötään
+   * lohkoon SELITTEEN_SAILIO (laite, reuna ja ämpäri): sama selite
+   * syntetisoidaan kerran, ei joka katselulla.
+   */
+  let luettu = null;
+  function lueSelite(h) {
+    if (!luentaKytkinPaalla()) return;
+    const teksti = `${kohde.nimi}, ${kohde.seutu}. ${h?.teksti ?? kohde.selite ?? ''}`.trim();
+    if (!teksti || teksti === luettu) return;
+    luettu = teksti;
+    try { lueAaneen(teksti, null, { persoona: 'kertoja', sailio: SELITTEEN_SAILIO }); } catch { /* ei ääntä */ }
+  }
   function nayta(uusi) {
     if (!havainnot.length) return;
     const rajattu = Math.max(0, Math.min(havainnot.length - 1, uusi));
@@ -1396,6 +1639,7 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
      * on ainoa paikka, jossa kohde luetaan (LISÄYS 3).
      */
     seliteTeksti.textContent = h.teksti ?? kohde.selite;
+    lueSelite(h);
     if (!lisatiedot.hidden) latoLisatiedot();
     valikko?.nimeaKohde?.(`${kohde.nimi} · ${aikateksti(h.aika)}`);
     latoNauha();
@@ -1406,6 +1650,20 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   kuva.src = havainnot[indeksi].kuva;
   kuva.alt = kuvatiedot(kohde, havainnot[indeksi]).lyhyt;
   nollaaZoom();
+  /*
+   * KOHDE VAIHTUI SELAIMESTA (‹ ›, pyyhkäisy tai reunan napautus): uusi
+   * kuva liukuu sisään samalta puolelta, jolta selattiin, ja kohteen nimi
+   * kirkastuu hetkeksi — kelattu nimirivi on muuten himmeä (0,7), eikä
+   * pelaaja huomaisi kohteen vaihtuneen.
+   */
+  if (sisaan) {
+    selite.classList.add('satelliitti-selite-uusi');
+    kirkastusAjastin = setTimeout(() => selite.classList.remove('satelliitti-selite-uusi'), NIMEN_KIRKASTUS_MS);
+    if (!liikePois) {
+      kuva.style.opacity = '0';
+      liu(Math.sign(sisaan) * lava.clientWidth * 0.25, 0, LIUKU_SISAAN_MS, 0, esilataa);
+    } else esilataa();
+  } else esilataa();
   return katselu;
 }
 
@@ -1608,18 +1866,48 @@ function avaa(lauta, tila, ui) {
    */
   linssiAani = vaihe('linssiaani', () => avaaAstronautinAani());
 
-  const avaaKohde = (kohde) => {
+  /*
+   * MAAILMANKIERROS (kuvaselain): aineiston SATELLIITTI_KIERROS, rajattuna
+   * kohteisiin, joilla on kuvia. Sama järjestys kuin natiivissa.
+   */
+  const kohdeTunnuksella = new Map(kohteet.map((k) => [k.tunnus, k]));
+  const kierros = (SATELLIITTI_KIERROS ?? []).filter((t) => kohdeTunnuksella.has(t));
+  const naapuriKohde = (kohde, suunta) => kohdeTunnuksella.get(naapuri(kierros, kohde.tunnus, suunta)) ?? null;
+
+  /**
+   * @param {object} kohde avattava kohde.
+   * @param {{ indeksi?: number, sisaan?: number }} [selaus] kuvaselaimen
+   *   siirto: aloituskuva ja suunta, josta uusi kuva liukuu sisään.
+   */
+  const avaaKohde = (kohde, { indeksi, sisaan = 0 } = {}) => {
     /*
      * SULKEVA NAPAUTUS EI AVAA UUTTA (v1783:n sääntö). Havaintoikkunan
      * sulku merkitsee hetken, eikä sama painallus avaa seuraavaa.
+     * Kuvaselaimen siirto sulkee edellisen näkymän itse, joten se ohittaa
+     * tämän.
      */
-    if (Date.now() - suljettiin < 350) return;
+    if (!sisaan && Date.now() - suljettiin < 350) return;
     suljeKortti();
     kortti = avaaHavaintokortti({
       kohde,
       valikko,
+      alkuIndeksi: indeksi,
+      sisaan,
+      naapuriKohde: (suunta) => naapuriKohde(kohde, suunta),
+      siirry: (suunta, galleria) => {
+        const k = naapuriKohde(kohde, suunta);
+        if (!k || k === kohde) return;
+        const viimeinen = (k.havainnot ?? []).length - 1;
+        avaaKohde(k, { indeksi: galleria ? (suunta > 0 ? 0 : viimeinen) : undefined, sisaan: suunta });
+      },
       onSuljettu: () => { suljettiin = Date.now(); kortti = null; },
     });
+    /*
+     * PALLO KUVAN TAKANA: kamera liukuu kohteen ylle, ja läpikuultavan
+     * taustan läpi näkyy maapallo juuri kuvan kohdalta
+     * (satelliitti-avaruus.js katsoKohteeseen).
+     */
+    if (kortti) avaruus?.katsoKohteeseen?.(kohde.lat, kohde.lon);
   };
 
   const merkit = kohteet.map((kohde) => ({
@@ -1631,6 +1919,25 @@ function avaa(lauta, tila, ui) {
   }));
   const asetaPisteet = () => lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit);
   vaihe('pisteet', asetaPisteet);
+
+  /*
+   * PULUN TERVETULO (js/linssit/pulu-tervetulo.js, käsikirjoitus
+   * 28.9.2026): vain linssin ensimmäisellä avauksella, kun musta verho on
+   * poissa. C1:n räppäisy avaa väärän kohteen valokuvan SAMALLA
+   * avaaKohde-funktiolla kuin pisteen napautus, ja C2 sulkee sen.
+   * Ei avaruusnäkymää (tasokartta, kaatunut WebGL) → ei tervetuloa.
+   */
+  const tervetulo = avaruus ? vaihe('pulun-tervetulo', () => aloitaPulunTervetulo({
+    ui,
+    avaruus,
+    avaaVaaraKohde: () => {
+      const vaara = kohdeTunnuksella.get(PULUN_VAARA_KOHDE);
+      if (!vaara) return false;
+      avaaKohde(vaara);
+      return Boolean(kortti);
+    },
+    suljeKortti,
+  })) : null;
   /*
    * PISTEET RUUDULLE ASTI (ks. PISTEIDEN_UUSINTAVALI_MS yllä). Vartija
    * kertoo puutteesta; tämä yrittää korjata sen ennen kuin vartija
@@ -1796,6 +2103,8 @@ function avaa(lauta, tila, ui) {
     aanet,
     /** Linssin oman huminan ja musiikin kahva (savukkeet ja vartijat). */
     linssiAani: () => linssiAani,
+    /** Pulun tervetulon kahva (null, jos jakso ei alkanut; savuke). */
+    tervetulo,
     /** Vartijan mittari savukkeille: puutteen nimi tai null. */
     puute: () => nykyinenPuute(),
     /** Kaatuneet avausvaiheet (vartijat ja savukkeet). */
@@ -1808,6 +2117,8 @@ function avaa(lauta, tila, ui) {
       virheKahva?.pura?.();
       virheKahva = null;
       poistaLinssivirhe();
+      // Pulu vaikenee ENNEN kuvan sulkua ja kameran palautusta.
+      tervetulo?.pura?.();
       suljeKortti();
       // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
       // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.

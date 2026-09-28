@@ -257,9 +257,10 @@ test('Kreikan fokuskohteet ovat rakenteeltaan ehjiä', () => {
      * kuva tulee `ihme`-kentästä (js/fokuskohteet.js piirraKohdeKuvat).
      * Kaikilla muilla kuva on pakollinen — ja 27.8.2026 alkaen se on
      * kohteen NYKYISTÄ kuntoa esittävä valokuva, ei havainnekuva
-     * (omistajan täsmennys; generoitu ihmekuva aukeaa vain "Koe ihme"
-     * -napista). `osoite` on yhä sallittu muoto muille repon omille
-     * kuville — sillä ei ole Commons-nimeä.
+     * (omistajan täsmennys; 27.9.2026 alkaen ihmekuva on kortin
+     * ensimmäinen kuva ja valokuva kelluu pienenä tekstissä). `osoite`
+     * on yhä sallittu muoto muille repon omille kuville — sillä ei ole
+     * Commons-nimeä.
      */
     const kuvatonKadonnut = Boolean(kohde.ihme?.kadonnut) && !kohde.kuva;
     if (!kuvatonKadonnut) {
@@ -848,9 +849,8 @@ test('botti ei saa fokusvirran merkintää', () => {
  * asiaa, jotka eivät näkyisi rikkoutuessaan ruudulla mitenkään:
  *
  *   1. LUPAUS ILMAN KUVAA. Väärä polku jättäisi kortista vain tyhjän
- *      paikan (piirraKohdeKuva poistaa kehyksen) tai "Koe ihme"
- *      -napin, joka avaa tyhjän suurennoksen. Siksi tiedosto
- *      tarkistetaan levyltä.
+ *      paikan (piirraKohdeKuva poistaa kehyksen) kortin ensimmäisen
+ *      kuvan kohdalle. Siksi tiedosto tarkistetaan levyltä.
  *   2. HAVAINNEKUVAMERKINTÄ. Kuva näyttää valokuvalta, joten sen on
  *      sanottava itse olevansa havainnekuva. Nauhan piirtää peli;
  *      lähderivin on oltava datassa.
@@ -940,8 +940,9 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
         /*
          * OLEMASSA OLEVAN PÄÄKUVA ON VALOKUVA KOHTEEN NYKYISESTÄ
          * KUNNOSTA (omistajan täsmennys 27.8.2026 ilta) — Commons-nimi,
-         * ei repon oma generoitu kuva. Generoitu ihmekuva aukeaa vain
-         * "Koe ihme" -napista, joka piirtyy tämän kuvan ALLE.
+         * ei repon oma generoitu kuva. Generoitu ihmekuva on 27.9.2026
+         * alkaen kortin ensimmäinen kuva, ja tämä valokuva kelluu pienenä
+         * tekstin kyljessä (js/fokuskohteet.js kohteenNykykuva).
          */
         assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.osoite,
           `${tunnus}: olemassa olevan kohteen pääkuvan on oltava Commons-valokuva`);
@@ -951,14 +952,18 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     }
   }
   /*
-   * KYMMENEN + KOLME + NELJÄTOISTA + KAHDEKSAN. Ensimmäinen erä
-   * (26.–27.8.2026) oli antiikin kadonneet ihmeet, Euroopan erä
-   * (27.8.2026) toi kolme lisää (Forum Romanum, Tuileries, vanha
-   * St Paul), MAAILMAN erä samana päivänä neljätoista viideltä
+   * KYMMENEN + KOLME + NELJÄTOISTA + KAHDEKSAN + KOLMETOISTA.
+   * Ensimmäinen erä (26.–27.8.2026) oli antiikin kadonneet ihmeet,
+   * Euroopan erä (27.8.2026) toi kolme lisää (Forum Romanum, Tuileries,
+   * vanha St Paul), MAAILMAN erä samana päivänä neljätoista viideltä
    * mantereelta ja VÄLIMEREN erä vielä kahdeksan antiikin Välimereltä
-   * ja Mesopotamiasta.
+   * ja Mesopotamiasta. Sisältökirjurin erä (28.9.2026) kytki Codexin
+   * tilaamat 14 loistoaikakuvaa peliin — 6 kadonnutta (AUT, NLD, CHE,
+   * SWE, BLR, BIH) ja 8 rappeutunutta parikuvana (SRB, ALB, MKD, MNE,
+   * CYP, MLT, MDA, BIH); DNK oli jo pelissä (christiansborg), joten
+   * nettolisäys on 13.
    */
-  assert.equal(ihmeita, 104, 'Matkakirjan ihmeitä on sataneljä');
+  assert.equal(ihmeita, 117, 'Matkakirjan ihmeitä on sataseitsemäntoista');
 });
 
 /*

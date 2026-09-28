@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2353';
+const CACHE = 'matkakirja-2026-09-21.2380';
 const SHELL = [
   './',
   './index.html',
@@ -147,6 +147,7 @@ const SHELL = [
   './js/livia-nostotila.js',
   './js/livia-chat-tila.js',
   './js/pulu-paikka.js',
+  './js/pulu-realtime.js',
   './js/liviapuhe.js',
   './js/livia.js',
   './js/puhevirta.js',
@@ -388,8 +389,16 @@ const SHELL = [
   './js/linssit/astronaut-kysymykset.js',
   './js/linssit/satelliitti-aani.js',
   './js/linssit/astro-sumu.js',
+  './js/tiivistys.js',
+  './js/linssit/astronautin-kierros.js',
   './js/linssit/satelliitti-avaruus.js',
   './js/linssit/satelliitti-nimiot.js',
+  // Pulun tervetulo ja ISS-repliikit (28.9.2026).
+  './js/linssit/pulu-tervetulo.js',
+  './js/linssit/pulu-iss.js',
+  './js/linssit/iss-rata.js',
+  './js/linssit/iss-kyyti.js',
+  './js/linssit/iss-kyyti-nakyma.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
   './js/linssit/topografia-tarkennus.js',
@@ -397,6 +406,7 @@ const SHELL = [
   './js/linssit/vertailu.js',
   './js/linssit/maatiedot.js',
   './js/linssit/vesistot.js',
+  './js/linssit/maapallon-vuosi.js',
   './js/packs/viritysaanet.js',
   './css/radio.css',
   './js/packs/valokuvat-paikalliset.js',
@@ -498,6 +508,12 @@ const SHELL = [
   './js/packs/hahmotelma-rus.js',
   './js/packs/hahmotelma-bih.js',
   './js/packs/hahmotelma-ukr.js',
+  './js/packs/hahmotelma-srb.js',
+  './js/packs/hahmotelma-alb.js',
+  './js/packs/hahmotelma-mkd.js',
+  './js/packs/hahmotelma-mne.js',
+  './js/packs/hahmotelma-mda.js',
+  './js/packs/hahmotelma-blr.js',
   './js/packs/maakartat.js',
   './js/packs/maakunnat-luonnehdinnat.js',
   './js/packs/maakunnat-pulu.js',

@@ -4,6 +4,7 @@
  *  2. destroy() poistaa pillerin DOM:ista.
  *  3. Orpo pilleri siivotaan, kun uusi luodaan (varmistushaara).
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -37,6 +38,7 @@ const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; c
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const ctx = await selain.newContext({ viewport: { width: 834, height: 1194 } });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 await sivu.goto(osoite, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
