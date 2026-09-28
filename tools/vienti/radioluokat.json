@@ -1,6 +1,6 @@
 {
  "lahde": "docs/raportit/lisenssi-inventaario-20260923-liite-radiot-hybridi.md",
- "paivitetty": "2026-09-23",
+ "paivitetty": "2026-09-28",
  "luokat": {
   "AFG": {
    "luokka": "epaselva",
@@ -691,6 +691,408 @@
    "sivu": "https://www.starfm.co.zw/#&panel1-9",
    "peruste": "Ei löytynyt lupaa suoralle soitolle eikä nimenomaista linkityskieltoa; tavallinen hyperlinkki asemien julkiselle kotisivulle ei vaadi erillistä lupaa (Svensson v Retriever Sverige, CJEU C-466/12, 2014)",
    "lahde": "https://curia.europa.eu/juris/liste.jsf?num=C-466/12"
+  },
+  "ALB": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "AND": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "ARM": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "ATG": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "AZE": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BDI": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BEN": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BFA": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BGD": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BHR": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BHS": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BLR": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BLZ": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BRB": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "BRN": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "CAF": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "CIV": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "COG": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "CPV": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "CRI": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "DMA": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "DOM": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "ERI": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "GEO": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "GIN": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "GNB": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "GNQ": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "GRD": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "GUY": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "HND": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "HTI": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "ISR": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "JAM": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "KGZ": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "KHM": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "KIR": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "KNA": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "LAO": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "LBN": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "LCA": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "LIE": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MCO": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MDA": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MDV": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MKD": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MNE": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MUS": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MWI": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "MYS": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "NER": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "PLW": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "PRK": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "PRY": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "PSE": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "RWA": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "SLV": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "SMR": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "SRB": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "SUR": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "TGO": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "TON": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "TTO": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "URY": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "VAT": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "VCT": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "XKX": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
+  },
+  "ZMB": {
+   "luokka": "epaselva",
+   "sivu": null,
+   "peruste": "Lisenssiluokkaa ei ole vielä tutkittu maakohtaisesti (radioiden maailmanlaajennus 28.9.2026) -> luokiteltu varovaisuudesta epaselväksi, kunnes asemakohtaiset käyttöehdot on tarkistettu",
+   "lahde": null
   }
  },
  "huom": "Omistajan tarkennus 23.9.2026: sallittu ja epaselva soivat natiivissa, kielletty on linkki. Kielletyt = 16 yleisradiota (inventaario) + DR."
