@@ -8707,3 +8707,7 @@ Omistaja 28.9. klo 17.2x sanatarkasti: "Jos maailmatila ei ole päällä, niin v
 ## OMISTAJA: ERIKOISMALLIT NAKYVIIN MYOS YLHAALTA (28.9.2026 klo 17.22)
 
 Linssiseppa 28.9. klo 17.3x: erikoismallit (18 kpl) piirtyvat vain kun kartta on kallistettu yli 25 astetta ja kerroin vahintaan 1,25 — ylhaalta ne eivat nay, siksi omistaja ei ole nahnyt niita. Omistaja kortilla: 'Kyllä, myös ylhäältä' → mallit nakyvat lahizoomissa aina, ylhaalta hieman liioitellulla perspektiivilla (yhden rivin muutos, Linssiseppa, 1.0.38). 3D-kategoriasymbolit pois: linssiseppa/symbolit-2d 5ac726fd (kytkin symbolit kategoriat3d 0|1).
+
+## OMISTAJA: 3D-SYMBOLIT TAKAISIN ISOMPINA; 3D-MALLIT KASVAVAT LAHESTYTTAESSA (KORVAA 17.2x SYMBOLIT POIS) (28.9.2026 klo 17.24)
+
+Omistaja 28.9. klo 17.4x sanatarkasti: "palauta 3d symbolit vielä mutta tee niistä isompia. nyt kaikki 3d mallit pienenevät kun niitä menee lähemmäksi silloin kun kartta on kallistettuna. pitäisi mennä päinvastoin" → Linssiseppa: 3D-kategoriasymbolit pysyvat (symbolit-2d ei junaan), selvasti isommiksi, kallistetun kartan skaalausbugi korjataan niin etta kaikki 3D-mallit kasvavat lahestyttaessa; erikoismallit myos ylhaalta pysyy. 1.0.38.
