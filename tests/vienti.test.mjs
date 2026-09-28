@@ -347,3 +347,15 @@ test('eheysvartija: laattavälit, yhteenveto ja työnkulku ilman puhetta', async
   assert.match(tyonkulku, /workflows: \['Vie sisältöpaketti ämpäriin'\]/);
   assert.match(tyonkulku, /cron:/);
 });
+
+test('offline: maasto samasta sarjasta kuin natiivin kohtaus, koot-tiedosto tiivis (Siirtoseppä 28.9.2026)', async () => {
+  const { OFFLINE_LAHTEET, lueKoot, kootTekstina } = await import('../tools/vienti/offline.mjs');
+  const koot = lueKoot();
+  // Natiivi lataa laatat kohtauksen maastosarjasta offline.jsonin väleillä: välit on laskettava samasta sarjasta.
+  assert.equal(koot.maasto.poltto, OFFLINE_LAHTEET.maasto.layer.split('/').at(-2));
+  assert.ok(OFFLINE_LAHTEET.maasto.url.includes(`/${koot.maasto.poltto}/`));
+  const teksti = kootTekstina(koot);
+  assert.deepEqual(JSON.parse(teksti), koot);
+  assert.equal(teksti, readFileSync(new URL('../tools/vienti/offline-koot.json', import.meta.url), 'utf8'));
+  assert.ok(teksti.split('\n').length < 100, 'available yksi taso per rivi');
+});

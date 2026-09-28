@@ -4587,6 +4587,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ROU: {
     Alba: {
       lyhyt: 'Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan, ja päivä on yhä maan kansallispäivä.',
+      pitka: `Alba Iulia on Romanian kansallisen yhtenäisyyden symboli: kaupungin 1700-luvulla rakennettu tähtilinnoitus houkuttelee vuosittain satojatuhansia kävijöitä, ja sen suojissa julistettiin 1918 Transilvanian liittyminen Romaniaan. Ennen tätä alue kuului vuosisatoja Unkarin kuningaskuntaan, ja lähellä sijaitseva Blaj tunnettiin "Pienenä Roomana", Transilvanian romanialaisten kreikkalaiskatolisten kirkollisena ja sivistyksellisenä keskuksena. Kaupungin kaduilla risteilevät nykyään barokkiaikaiset muurit ja museokokoelmat, joissa kansallinen historia on läsnä joka käänteessä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-alba-c3cded12.jpg",
@@ -4601,6 +4602,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Arad: {
       lyhyt: 'Aradissa teloitettiin lokakuussa 1849 kolmetoista Unkarin vapaussodan kenraalia, ja heitä muistetaan kaupungissa yhä joka syksy.',
+      pitka: `Aradin keskustaa hallitsee 1700-luvulla rakennettu tähdenmuotoinen linnoitus, joka vartioi yhä Maros-joen ylityspaikkaa ja on osin edelleen armeijan käytössä. Kaupunki oli 1800-luvun lopulla Habsburgien monarkian liikenteellisiä edelläkävijöitä: sen hevosvetoinen raitiotie, avattu 1869, oli yksi koko valtakunnan ensimmäisistä kaupunkiraitioteistä. Nykyään Arad on säilyttänyt asemansa tärkeänä liikenteen risteyskohtana Romanian länsirajalla, ja rautatieyhteydet Budapestiin muistuttavat sen vanhasta roolista alueen kaupallisena solmukohtana.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arad-7acd6593.jpg",
@@ -4615,6 +4617,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Arges: {
       lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli kahden kilometrin korkeuteen, ja tie on auki vain kesäisin.',
+      pitka: `Curtea de Argeșin luostarikirkko on Wallachian ruhtinaiden 1500-luvulla rakennuttama helmi, joka toimii nykyään Romanian kuningassuvun leposijana ja vilkkaana pyhiinvaellus- ja matkailukohteena. Ruhtinas Carol I tilasi kirkolle 1875 perinpohjaisen kunnostuksen ranskalaiselta arkkitehti André Lecomte du Noüyltä, jolloin sisätilat ja freskot uusittiin näyttävän uusbysanttilaisiksi. Piteștin kaupungin liepeillä sijaitseva Dacian autotehdas on nykyään yksi Romanian suurimpia työllistäjiä, ja se muistuttaa maakunnan modernista teollisesta puolesta perinteisen kirkkomaiseman rinnalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arges-03850653.jpg",
@@ -4629,6 +4632,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bacau: {
       lyhyt: 'Oneștin kaupungissa kasvoi ja harjoitteli Nadia Comăneci, joka sai Montrealissa 1976 voimistelun ensimmäisen täyden kympin.',
+      pitka: `Bacăun seutu tunnetaan symbolistirunoilija George Bacovian synkkäsävyisistä runoista, jotka ovat osa Romanian kirjallisuuden kaanonia ja tekevät kaupungista kirjallisen pyhiinvaelluskohteen. Lähellä Moineștiä sijaitsevan Lucăceștin kylän öljylähteet ovat pumpanneet raakaöljyä maan pinnalle 1857 lähtien, ja Romania oli maailman ensimmäinen maa, joka rekisteröi öljyntuotantonsa virallisesti. Vaatimattomista käsityöpajoista kasvoi vuosisadan vaihteeseen tultaessa teollisen mittakaavan öljyteollisuus, jonka juuret näkyvät yhä seudun maisemassa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bacau-58ab250d.jpg",
@@ -4643,6 +4647,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bihor: {
       lyhyt: 'Chișcăun Karhuluola aukesi 1975, kun louhoksen räjäytys puhkaisi sen suuaukon, ja sisältä löytyi 140 luolakarhun luurankoa.',
+      pitka: `Bihorin pääkaupunki Oradea on nykyään yksi Euroopan parhaiten säilyneistä art nouveau -kaupungeista, ja sen kadut ovat täynnä unkarilaisten ja itävaltalaisten arkkitehtien suunnittelemia kukka- ja liekkikoristeisia julkisivuja. Komea keskusta syntyi vasta vuosisadan vaihteessa, kun kaupunki oli vuosisatoja kuulunut Unkarin kuningaskuntaan vaatimattomampana, pääosin barokkityylisenä piispankaupunkina. Bihorin lääni tunnetaan nykyään myös lämpimistä kylpylälähteistään, jotka pysyvät ympäri vuoden lämpiminä ja houkuttelevat kylpijöitä joka vuodenaikana.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bihor-bf04a2b4.jpg",
@@ -4657,6 +4662,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bistrita-Nasaud': {
       lyhyt: 'Bram Stokerin Draculassa Jonathan Harker yöpyy Bistritzissa, ja kreivin linnaan vievä Borgon sola on täkäläinen Tihuțan sola.',
+      pitka: `Bistrița-Năsăudin vuoristoalueet, erityisesti suojellut Rodnan vuoret, houkuttelevat nykyään vaeltajia ja luonnonystäviä ympäri vuoden. Bistrițan kaupungissa kohoaa saksilaisten 1500-luvulla rakentama evankelinen kirkontorni, yksi Transilvanian korkeimmista, muistona alueen saksilaisesta asutushistoriasta. Näsăudin seudun romanialaiskylissä elää yhä vahva muisto Habsburgien rajavartiorykmentistä, joka hallinnoi aluetta sotilaallisesti aina vuoteen 1851 asti ennen siviilihallintoon siirtymistä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bistrita-nasaud-1b52fbeb.jpg",
@@ -4671,6 +4677,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Botosani: {
       lyhyt: 'Kansallisrunoilija Mihai Eminescu vietti lapsuutensa Ipoteștin kylässä, ja hänen kotitalonsa on nykyään muistomuseo.',
+      pitka: `Botoșanin lääni on yksi Romanian maatalousvaltaisimmista alueista, ja sen tasaiset pellot ja joenvarret ovat tärkeitä muuttolintujen pesimäalueita. Läänin Liveni-kylässä syntyi 1881 säveltäjä George Enescu, viulunvirtuoosi ja kapellimestari, jonka musiikki tunnetaan nykyään ympäri maailman ja jonka mukaan on nimetty Bukarestin konserttisali ja kansainvälinen musiikkifestivaali. Kylä on nykyään nimetty hänen mukaansa, ja se on suosittu kohde musiikinystäville.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-botosani-558fbdb4.jpg",
@@ -4685,6 +4692,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Braila: {
       lyhyt: 'Brăilan kohdalla Tonavan ylittää 2023 avattu riippusilta, Romanian pisin – ennen sitä joen yli pääsi täällä vain lautalla.',
+      pitka: `Brăila on Tonavan tärkeä satamakaupunki, jonka vanha kauppiaskeskusta muistuttaa yhä 1800-luvun kansainvälisestä kukoistuskaudesta, kun kaupunki oli vuodesta 1836 lähtien vapaakauppasatama ja yksi Tonavan vilkkaimmista viljansatamista. Nykyaikaiset betonilaiturit ja jättimäiset viljasiilot, jotka hallitsevat rantaviivaa, rakennutti insinööri Anghel Saligny 1880-luvulla käyttäen Romaniassa ensimmäistä kertaa raudoitettua betonia. Kaupunki on säilyttänyt asemansa tärkeänä Tonavan satamana tähän päivään asti.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-braila-bf6d12b4.jpg",
@@ -4699,6 +4707,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Brasov: {
       lyhyt: 'Brașovin Musta kirkko sai nimensä vuoden 1689 suurpalosta, joka nokesi sen muurit, ja goottilainen jättiläinen hallitsee yhä vanhaakaupunkia.',
+      pitka: `Brașov — saksaksi Kronstadt — on yksi Romanian suosituimmista matkailukaupungeista, ja sen liepeillä sijaitseva Poiana Brașov on maan suosituin hiihtokeskus. Vanha kaupunki muureineen ja torneineen on säilynyt hyvin transilvaniansaksalaisten kauppiaiden aikaisesta keskiaikaisesta perinnöstä. Kaupungissa perustettiin 1838 Gazeta de Transilvania, ensimmäinen romaniankielinen sanomalehti Transilvaniassa, joka osaltaan sytytti vuoden 1848 kansallisen herätteen ja ilmestyi vuosikymmenten ajan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-brasov-69d40fd0.jpg",
@@ -4713,6 +4722,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bucharest: {
       lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
+      pitka: `Bukarest on yli kahden miljoonan asukkaan pääkaupunki, jonka Belle Époque -arkkitehtuuri ja hulppea Parlamentin palatsi hallitsevat katukuvaa. Kaupungin päänäyttämö, vuonna 1852 avattu "Teatrul cel Mare", sai 1875 nimensä Kansallisteatteri — nimi, joka on säilynyt siitä lähtien. Cișmigiun puisto on kaupungin vanhin keskustapuisto, ja Romanian Athenaeum-konserttitalo, rakennettu 1880-luvulla, on yksi kaupungin tunnetuimmista maamerkeistä ruhtinas Carol I:n hallituskaudelta periytyvän kaupunkikuvan rinnalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
@@ -4727,6 +4737,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Buzau: {
       lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
+      pitka: `Buzăun läänin kuuluisin aarre, vuonna 1837 löydetty myöhäisantiikin goottilainen kultaesineistö "Cloșca cu puii de aur", on nykyään esillä Bukarestin kansallismuseossa yhtenä Romanian arvokkaimmista muinaisjäännöksistä. Vuonna 1875 sirkusakrobaatti nimeltä Dumitru Pantazescu-Popescu varasti aarteen ja tuhosi osan koruista — vain kaksitoista alkuperäisistä kahdestakymmenestäkahdesta kultaesineestä on säilynyt tähän päivään. Löytäjät itse olivat sulattaneet ja myyneet osan koruista hopeana jo ennen kuin viranomaiset saivat tietää löydöstä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
@@ -4741,6 +4752,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Calarasi: {
       lyhyt: 'Oltenițassa Argeș laskee Tonavaan, ja kaupungin lähellä on Gumelnițan kumpu, jolla asuttiin jo noin 6 000 vuotta sitten.',
+      pitka: `Călărașin lääni on yksi Romanian tärkeimmistä viljanviljelyalueista, ja sen tasaiset pellot ja kastelukanavat tuottavat merkittävän osan maan viljasadosta Baragan-aron laidunmaiden entisillä alueilla, joita Tonavan tulvat muokkasivat vuosittain. Lääninä Călărași on suhteellisen nuori: se syntyi vasta vuonna 1981, kun kommunistihallinto jakoi Ialomițan lääniä kahtia. Kartalla näkyvä raja on siis 1900-luvun lopun hallinnollinen ratkaisu, ei vanha historiallinen rajaviiva.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-calarasi-cc559d16.jpg",
@@ -4755,6 +4767,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Caras-Severin': {
       lyhyt: 'Băile Herculanen kuumia lähteitä käyttivät jo roomalaiset, ja kylpyläkaupungin tunnuksena seisoo Herkuleen patsas.',
+      pitka: `Caraș-Severinin lääni tunnetaan vuoristoluonnostaan ja kansallispuistoistaan, jotka suojelevat Nera-joen kanjoneita ja Semenicin ylänköä. Seudun teollisuusperintö juontuu vuonna 1771 perustetuista Reșițan rautatehtaista, jotka olivat pitkään itävaltalais-ranskalaisen rautatieyhtiön StEG:n omistuksessa ja veturina Banaatin vuoriston teollistumisessa. Nykyisen läänin nimi ja rajat vakiintuivat vasta 1968 kommunistihallinnon läänijaossa — sitä ennen alueella ehti olla useita lyhytikäisiä hallinnollisia yksiköitä, muun muassa Habsburgien Banaatin rajavartiojärjestelmän purkamisen jälkeen 1867.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-caras-severin-02684952.jpg",
@@ -4769,6 +4782,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cluj: {
       lyhyt: 'Turdan vanhaan suolakaivokseen on rakennettu maailmanpyörä, minigolfrata ja soutuvenelampi syvälle maan alle.',
+      pitka: `Cluj-Napoca on Romanian toiseksi suurin kaupunki ja maan johtava yliopisto- ja teknologiakeskus, jota kutsutaan usein Romanian piilaaksoksi runsaan IT-alan yritystoimintansa ansiosta. Kaupungin katukuvassa risteilevät keskiaikainen vanha kaupunki ja vilkas opiskelijaelämä, joka juontuu jo vuodesta 1872, kun kaupunkiin perustettiin nykyisen Babeș-Bolyain edeltäjä Franz Joseph -yliopisto — Unkarin toinen moderni yliopisto Budapestin jälkeen. Yliopisto toimi kaupungissa aina vuoteen 1919, jolloin Transilvanian siirryttyä Romanialle instituutio muutti Szegediin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-cluj-cd50d877.jpg",
@@ -4783,6 +4797,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Constanta: {
       lyhyt: 'Constanțan satama on Mustanmeren suurin, ja 64 kilometrin kanava oikaisee sieltä suoraan Tonavalle.',
+      pitka: `Konstanza on Romanian tärkein satamakaupunki Mustanmeren rannalla, ja sen historia ulottuu kauas roomalaisajan Tomikseen. Kaupunki tunnettiin vielä 1800-luvulla nimellä Küstendje ja kuului Osmanien valtakuntaan osana Tonavan vilajettia; brittiläinen pääoma rakensi sinne rautatien Cernavodăsta 1856–1860. Vasta 1878, Venäjän–Turkin sodan päätyttyä Berliinin sopimukseen, Dobrudža siirtyi Romanialle, ja entinen Küstendje muuttui vähitellen nykyiseksi Konstanzaksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-constanta-6bd4a85d.jpg",
@@ -4797,6 +4812,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Covasna: {
       lyhyt: 'Covasnan kylpylässä sydänpotilaita hoidetaan hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa.',
+      pitka: `Covasna on osa Romaniaa, mutta sekeliläinen identiteetti ja unkarin kieli elävät seudulla yhä vahvoina, sillä alue kuului vuosisatojen ajan sekelien (unkariksi székely) autonomiseen Háromszékin istuimeen Unkarin kuningaskunnan osana. Autonomiset istuimet lakkautettiin Unkarin hallinnon uudistuksessa 1876, ja Romania ulottui näille vuorille vasta 1918. Covasnan kylpylässä sydänpotilaita hoidetaan yhä hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa — vanha parantamisperinne, joka jatkuu nykyaikaisin menetelmin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-covasna-0f30dec1.jpg",
@@ -4811,6 +4827,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dâmbovita': {
       lyhyt: 'Târgoviștessa Nicolae ja Elena Ceaușescu tuomittiin ja ammuttiin joulupäivänä 1989, ja varuskunnan rakennus on nyt museo.',
+      pitka: `Pucioasa on yhä toimiva kylpyläkaupunki Dâmbovițan piirikunnassa, jonka rikkipitoiset "pucioasa"-lähteet — nimi tulee sanasta rikki — houkuttelevat kävijöitä edelleen. Ensimmäinen julkinen kylpylaitos valmistui paikalle 1834, ja lähteiden vedet esiteltiin 1873 Wienin maailmannäyttelyssä, mikä toi kylpyläkeskukselle kansainvälistä huomiota. Piirikunnan nimen antava Dâmbovița-joki virtaa Bucegin vuorilta kohti Bukarestia, ja sen varrella kylpylä on kasvanut vuosikymmenten mittaan yhdeksi Valakian tunnetuimmista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dambovita-b78b949a.jpg",
@@ -4825,6 +4842,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Dolj: {
       lyhyt: 'Craiovan Romanescu-puiston suunnitteli ranskalainen Édouard Redont, ja sen järven yli kaartuu yli sata vuotta vanha riippusilta.',
+      pitka: `Craiova on Oltenian vaurastuva keskus, jonka kauppiassuvut — kuten huomattavan omaisuuden kartuttanut Mihailin perhe — rakensivat 1900-luvun alussa komeita palatseja keskustaan. Yksi niistä, Jean Mihailin palatsi, toimii nykyään Craiovan taidemuseona ja säilyttää kokoelmassaan kuusi Constantin Brâncușin nuoruudenveistosta. Kaupungin suora rautatieyhteys Bukarestiin ja maailmalle avautui 1875, ja siitä lähtien Craiova on ollut alueen tärkeä liikenteellinen solmukohta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dolj-a08748ef.jpg",
@@ -4839,6 +4857,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Galati: {
       lyhyt: 'Galațin terästehdas on Romanian suurin, ja Tonavan rannan telakalla rakennetaan yhä laivoja.',
+      pitka: `Galați on yksi Euroopan vilkkaimmista satamakaupungeista, ja sen vapaasatama-asema, myönnetty 1837, teki siitä aikanaan aidosti kansainvälisen risteysaseman, jonne asettui kymmenien maiden konsulaatteja ja kauppahuoneita. Vuoden 1856 Pariisin rauhansopimus teki kaupungista kansainvälisen Tonavan-komission kotipaikan, ja komissio piti päämajaansa Galațissa peräti vuoteen 1939. Nykyään entinen komissiorakennus toimii museona keskellä kaupunkia, muistona tästä kansainvälisestä kaudesta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-galati-fb570cd4.jpg",
@@ -4853,6 +4872,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Giurgiu: {
       lyhyt: 'Giurgiun ja Rusen välinen Ystävyyden silta valmistui 1954, ja se oli vuoteen 2013 ainoa silta Romaniasta Bulgariaan.',
+      pitka: `Giurgiu on maan tärkein Tonavan satama pääkaupungille, ja kaupungin rautatieyhteys Bukarestiin, valmistunut lokakuussa 1869, oli koko Romanian ensimmäinen rautatie, brittiläisen John Trevor Barkleyn yhtiön rakentama. Yhteys teki radasta aikanaan erityisen tärkeän, koska tavarat ja matkustajat kulkivat laivasta suoraan junaan. Nykyään alkuperäinen rataosuus on sähköistetty ja modernisoitu osana eurooppalaista liikennekäytävää, mutta reitti Bukarestista Giurgiuhun on periaatteessa se sama kuin 1800-luvulla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-giurgiu-4d32bfba.jpg",
@@ -4867,6 +4887,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Gorj: {
       lyhyt: 'Târgu Jiun puistossa kohoaa Constantin Brâncușin Loputon pylväs, lähes 30 metriä päällekkäisiä valurautamoduuleja.',
+      pitka: `Gorjin vuoristoseudun vanhin ja arvostetuin pyhäkkö on Tismanan luostari, perustettu 1370-luvulla Pyhä Nikodemoksen toimesta — Valakian ensimmäinen luostari, joka on toiminut vuosisatojen ajan alueen henkisenä keskuksena, myös Tudor Vladimirescun 1821 kapinan tukikohtana. Gorjin hiili- ja ligniittivarat tekevät alueesta nykyään Romanian energiantuotannon keskuksen. Seudulla syntyi 1876 köyhään paimenperheeseen poika, Constantin Brâncuși, josta tuli 1900-luvun merkittävimpiä kuvanveistäjiä, ja hänen teoksiaan on nähtävillä yhä Târgu Jiun puistossa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-gorj-0a8fc38a.jpg",
@@ -4881,6 +4902,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Harghita: {
       lyhyt: 'Pyhän Annan järvi täyttää sammuneen tulivuoren kraatterin, ja se on Romanian ainoa tulivuorijärvi.',
+      pitka: `Harghita on Romanian tiheimmin unkarinkielinen alue, ja sekeliläinen identiteetti elää seudulla vahvana Székelymaan pohjoisosassa. Alue kuului vuosisatojen ajan Unkarin kuningaskuntaan, jossa sekelit hallitsivat itseään Csíkin ja Udvarhelyn autonomisilla istuimilla perinteisten oikeuksiensa mukaan, kunnes Unkarin hallinto lakkautti ne yhtenäistämisuudistuksessa 1876. Romania ulottui näille vuorille vasta 1918, ensimmäisen maailmansodan päätyttyä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-harghita-780de56c.jpg",
@@ -4895,6 +4917,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Hunedoara: {
       lyhyt: 'Hunedoaran Corvinin linna on yksi Euroopan suurimmista, ja sen portille johtaa pitkä puusilta korkeiden kivipilarien päällä.',
+      pitka: `Hunedoaran suuret rautatehtaat, perustettu 1882, tekivät kaupungista Transilvanian teollisuuskeskuksen ja toivat sinne tuhansia työläisiä ympäröivistä kylistä — perintö, joka juontuu alueen rautamalmiin ja metsiin sekä pieniin masuuneihin kuten 1806 valmistuneeseen Govăjdian masuuniin. Transilvania pysyi osana Unkarin kuningaskuntaa aina vuoteen 1918. Nykyään entiset rautatehtaat ovat suurelta osin sammuneet, ja kaupunki etsii uutta suuntaa vanhan teollisuusperintönsä varjossa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-hunedoara-a617ef42.jpg",
@@ -4909,6 +4932,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ialomita: {
       lyhyt: 'Amaran suolaisen järven pohjamutaa käytetään kylpylässä reuman ja ihotautien hoitoon.',
+      pitka: `Bărăganin tasanko Ialomițassa tunnetaan nykyään Romanian leipomona, vaikka se oli vuosisatoja pääasiassa paimentolaisten laidunmaata, jota Karpaattien paimenet käyttivät lampaidensa vuodenaikaisvaellukseen. Vasta 1800-luvun jälkipuoliskolla laajat laitumet alettiin järjestelmällisesti muokata viljapelloiksi, kun Bărăganin mustan mullan hedelmällisyys huomattiin. Ialomița on yhä harvaan asuttua, tasaista seutua, jonka läpi kulkevat leveät viljapellot hallitsevat maisemaa horisontista horisonttiin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ialomita-c369f0cf.jpg",
@@ -4923,6 +4947,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Iasi: {
       lyhyt: 'Iașin kulttuuripalatsi on neogoottinen jättirakennus, jossa toimii nykyään neljä museota.',
+      pitka: `Iași oli Moldovan ruhtinaskunnan pääkaupunki kolmisen vuosisataa, vuodesta 1564, ja menetti asemansa Bukarestille vasta 1862, kun Moldova ja Valakia yhdistyivät lopullisesti yhdeksi Romaniaksi. Pääkaupunkiaseman menetys jätti kaupunkiin haikean jälkijättöisyyden tunnun, joka näkyy yhä sen lempinimessä "Romanian kulttuuripääkaupunki". Iașin yliopisto, perustettu ruhtinas Alexandru Ioan Cuzan asetuksella 1860, oli Romanian ensimmäinen nykyaikainen yliopisto ja on yhä yksi kaupungin sivistyksellisen ylpeyden lähteitä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-iasi-4a2ec737.jpg",
@@ -4937,6 +4962,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ilfov: {
       lyhyt: 'Snagovinjärven saarella seisoo luostari, jonne perimätiedon mukaan Vlad Seivästäjä on haudattu.',
+      pitka: `Mogoșoaian palatsi Ilfovin piirikunnassa on museo ja suosittu retkikohde Bukarestin lähellä, jonka ruhtinas Constantin Brâncoveanu rakennutti 1698–1702 omaa "brâncovenesk"-tyyliään edustavaksi kesäasunnokseen — italialaisten ja ottomaanien vaikutteiden sekoitukseksi, joka oli 1700-luvun alun Valakian arkkitehtuurin huippukohta. Brâncoveanun teloituksen 1714 jälkeen palatsi ryöstettiin ja muuttui majataloksi, ja se koki uuden ryöstön Venäjän–Turkin sodan 1768–1774 aikana. Prinsessa Marta Bibescu kunnosti palatsin loistoonsa vasta 1900-luvun alussa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ilfov-94013699.jpg",
@@ -4951,6 +4977,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Maramures: {
       lyhyt: 'Săpânțan Iloisella hautausmaalla ristit ovat kirkkaansinisiä, ja niihin on maalattu vainajan elämästä leikillinen kuva ja runo.',
+      pitka: `Seitsemän Maramureșin puukirkkoa on nykyään Unescon maailmanperintölistalla — ainutlaatuinen perinne, joka syntyi, kun Habsburgien viranomaiset kielsivät alueen ortodoksisilta romanialaisilta kivikirkkojen rakentamisen. Paikalliset kirvesmiehet pystyttivät sen sijaan korkeita, suippokattoisia puutapuleita vuosisatojen ajan. Maramureș kuului Unkarin kuningaskuntaan vuodesta 1867 Itävalta-Unkarin monarkian osana eikä liittynyt Romaniaan ennen kuin vasta 1918, ensimmäisen maailmansodan päätyttyä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-maramures-6ea79799.jpg",
@@ -4965,6 +4992,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mehedinti: {
       lyhyt: 'Rautaportin kallioon on hakattu 55 metriä korkeat daakialaiskuningas Decebaluksen kasvot, Euroopan korkein kallioreliefi.',
+      pitka: `Mehedințin Tonava-rannalla, Rautaporttien kohdalla, virtasi ennen keskellä jokea saari nimeltä Ada Kaleh, turkkilaisasukkaiden saari vuodesta 1699, joka säilyi sulttaanin de jure omaisuutena aina 1920-luvulle asti — sen erikoisasema unohdettiin Berliinin 1878 rauhanneuvotteluissa. Nykyään Ada Kaleh on kokonaan veden alla, upotettuna 1970 Rautaporttien padon rakentamisen yhteydessä. Vuonna 1858 poikkeuksellisen kuivuuden laskettua Tonavan vedenpinnan ennätysmatalaksi joen pohjasta paljastui keisari Trajanuksen 1300 vuotta aiemmin rakennetun sillan pilareita, ja ne ovat yhä nähtävissä Drobeta-Turnu Severinin rannalla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mehedinti-a84eee19.jpg",
@@ -4979,6 +5007,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mures: {
       lyhyt: 'Sighișoaran linnoituksen muurien sisällä asutaan yhä, ja kellotornin lähellä on talo, jossa Vlad Seivästäjän kerrotaan syntyneen.',
+      pitka: `Târgu Mureșin keskustaa hallitsee sezessiotyylinen Kulttuuripalatsi, jonka pormestari Bernády György tilasi ja joka valmistui 1911–1913. Rakennuksen katto on katettu Zsolnay-tehtaan värikkäillä keramiikkalaatoilla, ja sen konserttisalissa on soittanut niin Pablo Casals kuin Béla Bartók. Nykyään rakennus toimii kirjastona, museona ja filharmonian kotina — yksi Romanian tunnetuimmista secessio-rakennuksista kaupungissa, joka kuului rakentamisajankohtana yhä Unkarin kuningaskuntaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mures-1112f822.jpg",
@@ -4993,6 +5022,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Neamt: {
       lyhyt: 'Neamțin linnoitus kesti 1476 sulttaani Mehmed II:n piirityksen, ja kunnostettu linna kohoaa yhä Târgu Neamțin yllä.',
+      pitka: `Izvorul Muntelui -tekojärvi Neamțin laaksossa on nykyään suosittu retkeily- ja veneilykohde, jonka rannoilla ei ole enää jälkeäkään sen alle jääneistä kylistä. Bicazin padon valmistuttua 1950–1960 Bistrița-joki hukutti 22 kylää — kaksi niistä, Rapciunița ja Cârnu, katosivat kokonaan veden alle. Insinöörien muuttama maisema on yksi Romanian suurimmista patoaltaista, ja se muutti koko laakson pysyvästi maalaiselämästä moderniksi retkeilyalueeksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-neamt-14aec22a.jpg",
@@ -5007,6 +5037,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Olt: {
       lyhyt: 'Slatinan Alro-tehdas on yksi Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
+      pitka: `Reșcan kylän lähellä lepää maan alla Romula-Malva, muinaisen Rooman Dacia-provinssin eteläisen osan, Dacia Malvensin, pääkaupunki, joka on nykyään ehdotettu Unescon maailmanperintölistalle. Roomalaiskaupunki oli yli 300 hehtaarin laajuinen, ja siellä toimi maakunnan käskynhaltija sekä laaja kylpylä- ja vesijohtoverkosto — mutta ensimmäiset kaivaukset alkoivat vasta 1900-luvun alussa. Arkeologit kartoittavat aluetta yhä geofysikaalisin menetelmin, ja kokonainen kadonnut kaupunki lepää yhä osin tutkimatta hiljaisen maalaismaiseman alla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-olt-b65c6f1c.jpg",
@@ -5021,6 +5052,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Prahova: {
       lyhyt: 'Sinaian Peleșin linna oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa – virran tuotti oma voimala.',
+      pitka: `Ploieștin seutu Prahovassa oli maailman öljyteollisuuden edelläkävijä: kaupungissa toimi vuodesta 1856 lähtien maailman ensimmäinen teollinen öljynjalostamo, jonka Mehedințeanu-veljekset perustivat, ja sen tuottama valopetroli valaisi Bukarestin kadut ensimmäisenä kaupunkina maailmassa. Alue on nykyään yhä Romanian öljynjalostuksen keskus, vaikka suurin osa vanhoista pienjalostamoista on kadonnut suurten teollisuuslaitosten alle. Sinaian Peleșin linna samassa läänissä oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa, oman voimalansa ansiosta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-prahova-96182ca6.jpg",
@@ -5035,6 +5067,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Salaj: {
       lyhyt: 'Moigradin kukkuloilla ovat Porolissumin rauniot, Rooman Dakian maakunnan luoteisrajan suuren linnoituskaupungin jäänteet.',
+      pitka: `Sălajin Jiboun kylässä syntyi 1796 paroni Wesselényi Miklós, joka nousi kansallissankariksi kun hän 1838 souti läpi jäätyneen, tulvivan Pestin kaduista toiseen pelastaen ihmisiä katoilta — häntä alettiin kutsua "tulvan lauttamieheksi". Hänen sankaritekonsa elävät yhä unkarilaisten koululaisten tarinoissa, ja suvun linna kohoaa edelleen Jiboun keskustassa, nykyään yksityisomistuksessa. Linnan viereen on rakennettu Jiboun kasvitieteellinen puutarha, joka on yksi Romanian suurimmista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-salaj-56a973fa.jpg",
@@ -5049,6 +5082,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Satu Mare': {
       lyhyt: 'Satu Maren keskustaa vartioi 1904 rakennettu 47-metrinen palokunnan torni, josta vahdit aikanaan tähyilivät tulipaloja.',
+      pitka: `Satu Maren keskustassa on runsaasti 1800-luvun lopun ja 1900-luvun alun rakennuksia, jotka nousivat kaupungin vaurastuessa rautatien myötä sen ollessa osa Unkarin kuningaskuntaa. Vuonna 1711 Szatmárin — nykyisen Satu Maren — kaduilla allekirjoitettiin rauha, joka päätti Rákóczin kapinan Habsburgeja vastaan ja toi kaupungille pitkän rauhan ajan. Vanha rauhansopimus on unohtunut monilta, mutta se muutti aikanaan koko Transilvanian kohtaloa vuosisadaksi eteenpäin.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-satu-mare-a11090e4.jpg",
@@ -5063,6 +5097,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sibiu: {
       lyhyt: 'Sibiun kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007.',
+      pitka: `Sibiu on yksi Transilvanian suosituimmista matkailukaupungeista, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007. Sen vuosisatoja vanhat erityisoikeudet — Transilvanian saksien, siebenbürgisaksien, keskiaikaisesta itsehallinnosta periytyvä Universitas Saxonum, joka hallinnoi saksien asioita vuodesta 1486 — katosivat lopullisesti 1876, kun Budapest lakkautti järjestön poliittisen vallan ja sulatti Sibiun tavalliseksi unkarilaiseksi lääniksi. Kaupungin kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja tämä yksityiskohta on yksi Sibiun tunnetuimmista kuriositeeteista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-sibiu-230cd6b0.jpg",
@@ -5077,6 +5112,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Suceava: {
       lyhyt: 'Voronețin luostarin ulkoseinät on maalattu täyteen raamatunkertomuksia, ja niiden syvä sävy tunnetaan Voronețin sinisenä.',
+      pitka: `Suceava kuului 1800-luvulla Itävallan keisarikuntaan osana Bukovinan herttuakuntaa, jonka pääkaupunki oli Czernowitz (nykyinen Tšernivtsi Ukrainassa) — Bukovina liittyi Romaniaan vasta 1918. Czernowitziin perustettiin 1875 saksankielinen yliopisto satavuotismuistoksi siitä, kun Bukovina liitettiin Itävaltaan, ja siitä tuli Euroopan itäisin saksankielinen korkeakoulu. Suceava itse on nykyään keskiaikaisen Moldovan vanhan pääkaupungin raunioiden kupeessa sijaitseva piirikunnan kaupunki, jonka historia ulottuu ruhtinaskunnan kulta-aikaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-suceava-1a353ae6.jpg",
@@ -5091,6 +5127,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Teleorman: {
       lyhyt: 'Teleormanin nimi tarkoittaa kumaanien kielellä ”hullua metsää”, ja maakunnan Zimnicea on Romanian eteläisin paikkakunta.',
+      pitka: `Teleormanin pääkaupunki Alexandria on Romanian harvoja täysin suunnitelmallisesti perustettuja kaupunkeja: valtias Alexandru II Ghica määräsi sen rakennettavaksi tyhjälle tasangolle 1834 ja nimesi sen omalla nimellään. Kaupungin suorat, ruudukkomaiset kadut erottuvat yhä selvästi ympäröivien kylien mutkittelevista poluista, ja alkuperäinen ruutukaava näkyy edelleen keskustan kartassa. Muualla Teleormanissa maisema on avointa lakeutta ja hajanaisia kyliä, tyypillistä Valakian maaseutua.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-teleorman-1adcdd08.jpg",
@@ -5105,6 +5142,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Timis: {
       lyhyt: 'Timișoaran kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.',
+      pitka: `Timișoaran leveät bulevardit ja puistokehä kulkevat vanhojen Vauban-tyylisten linnoitusmuurien paikalla, jotka purettiin vaiheittain 1870-luvulta 1890-luvulle asti — kaupungin maistraatti sai purkuluvan 1872, ja linnoitusstatus lakkautettiin virallisesti 1892. Muurit olivat kahlinneet kaupungin kasvua vuosisatojen ajan sen ollessa osa Unkarin kuningaskuntaa Banaatin alueella. Nykyään näkymätön muisto kadonneesta linnoituksesta elää kaupungin katukuvassa, ja Timișoara tunnetaan siitä, että sen kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-timis-6d5dcdaf.jpg",
@@ -5119,6 +5157,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tulcea: {
       lyhyt: 'Tulcean takana Tonava hajoaa suistoksi, jonka kaislikoissa pesii Euroopan suurin pelikaanikanta.',
+      pitka: `Tulcea on Romanian portti Tonavan suistoon, ja sen väestö on yhä poikkeuksellisen monietninen verrattuna muuhun maahan — turkkilaisia, tataareja, kreikkalaisia, bulgarialaisia, armenialaisia ja romanialaisia asuu rinnakkain satamassa, joka johtaa Tonavan suistoon johtavan haaran varrella. Alue kuului 1873 Ottomaanien valtakunnan Tonava-vilajettiin, uudistusmielisen kenraalikuvernööri Midhat-pašan 1864 perustamaan mallihallintoalueeseen, ja siirtyi Romanialle vasta 1878 Venäjän–Turkin sodan päätteeksi solmitussa Berliinin sopimuksessa. Monikulttuurinen perintö on säilynyt kaupungissa tähän päivään.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-tulcea-a692d3f9.jpg",
@@ -5133,6 +5172,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vaslui: {
       lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
+      pitka: `Vasluin seudun Pleșeștin kylässä syntyi 1858 kirjailija Alexandru Vlahuță, jonka pääteos "România pitorească" ("Kuvauksellinen Romania") kuvasi koko maan maisemia matkakertomuksen muodossa ja tekee hänestä yhden Romanian rakastetuimmista kirjailijoista. Vaslui itse on yhä yksi Romanian rauhallisimmista maakuntakeskuksista, syrjäinen Moldovan pikkukaupunki maatalousseudun keskellä. Vlahuțan syntymäseutu muistetaan nykyään kirjallisuushistoriasta, ja hänen nimeään kantavat koulut ja kadut ympäri Moldovaa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
@@ -5147,6 +5187,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vâlcea': {
       lyhyt: 'Horezun luostari on Unescon maailmanperintöä, ja kylän savenvalajat koristavat astiansa yhä kukko- ja spiraalikuvioin.',
+      pitka: `Vâlcean Călimăneștin ja Căciulatan lähteiden mineraalivedet palkittiin 1873 Wienin maailmannäyttelyssä, ja lähteen numero yksi vettä pullotettiin ja lähetettiin postivaunulla Pariisiin, Napoleon III:n hoviin, ranskalaisen lääkärin suosituksella. Varsinainen kylpyläkaupunki syntyi vasta 1890, mutta parantavien vesien maine levisi eurooppalaisiin lehtiin jo aiemmin. Nykyään Călimănești-Căciulata on yhä yksi Romanian suosituimmista kylpyläkohteista, ja sen vedet tunnetaan edelleen reumaattisten ja maksavaivojen hoidossa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-valcea-e4f56c14.jpg",
@@ -5161,6 +5202,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vrancea: {
       lyhyt: 'Vrancean vuorten alla syvällä maankuoressa syntyvät Romanian pahimmat maanjäristykset – vuoden 1977 järistys tuhosi osia Bukarestista.',
+      pitka: `Focșanin kaupunki jakautui vuosisatoja kahtia: Milcov-joki oli Moldovan ja Valakian ruhtinaskuntien raja, ja kaupungin läpi kulki kaksi puoliskoa, moldovalainen ja valakialainen, aina vuoteen 1859 asti, kun ruhtinaskunnat yhdistyivät Alexandru Ioan Cuzan alaisuudessa. Focșanissa toimi 1858–1864 yhteinen keskuskomissio, joka valmisteli ruhtinaskuntien hallinnollista yhdistämistä. Vanhan sisärajan muisto elää yhä kaupungin historiassa, vaikka tullipaalut ja rajakivet ovat kadonneet aikaa sitten.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vrancea-bbd1554c.jpg",

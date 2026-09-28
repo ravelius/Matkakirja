@@ -5040,6 +5040,9 @@ function teeLuettelo() {
     // aineistokansioon): lähde ja lisenssi luetteloon sellaisenaan.
     ...(existsSync(join(dataKansio, 'lahde.json'))
       ? [`Rantaviiva: ${JSON.parse(readFileSync(join(dataKansio, 'lahde.json'), 'utf8')).lahde}`] : []),
+    // Järvet samasta aineistosta (tools/gshhs-jarvet.mjs kirjoittaa lahde-jarvet.json:n).
+    ...(existsSync(join(dataKansio, 'lahde-jarvet.json'))
+      ? [`Järvet: ${JSON.parse(readFileSync(join(dataKansio, 'lahde-jarvet.json'), 'utf8')).lahde}`] : []),
   ],
 };
 }
