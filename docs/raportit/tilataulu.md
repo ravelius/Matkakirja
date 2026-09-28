@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 00:43:** Levy 104 Gi (vakaa). Muisti OK (vapaa 57 %). Kuorma 152/107/86 (piikki, 00.28: 17; ei muistipainetta), sim 1, GPU-chrome 0. /private/tmp 31,9 Gt (vakaa), wt/ 15 kohdetta 12 Gt. Kontekstit: Linssiseppä 65 %, Siirtoseppä 64 %, Karttaseppä 57 %, Natiivi-UI 54 %, Linssiseppä 2 46 %, Pelikoodari 43 %, Laitetestaaja 42 %, Natiiviseppä 41 %, Sisältökirjuri 33 %, Julkaisija 30 %, Linnanrakentaja 25 % (kaikki <70). Juna OK (b13 HEAD 8de5b3df sisältyy käännettyyn 60f69fe4). Posti: ei uutta.
+
 **Päivitetty 00:28:** Levy 104 Gi (siivous: scratchpadit yht. ~18,6 Gt vapautettu, postilaatikko-check/-work5 poistettu; 7 samireivinen-omisteista QA-kopiota ~9 Gt odottaa omistajan rm-komentoa). /private/tmp 47,5 → 32,1 Gt, claude-502 28,3 → 14,7 Gt: ei aktiivista kasvua. Muisti OK (paine 1, vapaa 62 %), load 17, sim 2, GPU-chrome 0. Kontekstit: Siirtoseppä 64 %, Linssiseppä 62 %, Karttaseppä 57 %, Natiivi-UI 52 %, Linnanrakentaja 20 % (muut ei mitattu, edellisellä kierroksella <45 %). Juna OK (60f69fe4 käännetty 23:25). wt/ 15 kohdetta, 12 Gt. Posti: uusi Codex-viesti (radio-uusi, 6bb710954).
 
 **Päivitetty 00:17:** Levy 84 Gi (laskee: 92 → 86 → 84; raja 80; wt/ 15 kohdetta, 12 Gt). Muisti OK (paine 1, vapaa 48 %), load 53, sim 1, GPU-chrome 0. Kontekstit: Siirtoseppä 64 %, Linssiseppä 61 %, Karttaseppä 57 %, Natiivi-UI 51 %, Linssiseppä 2 43 %, Laitetestaaja 42 %, Pelikoodari 41 %, Natiiviseppä 40 %, Sisältökirjuri 32 %, Julkaisija 29 %, Linnanrakentaja 10 % (kaikki <70). Juna OK (60f69fe4 käännetty 23:25).
