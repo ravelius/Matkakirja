@@ -697,9 +697,37 @@ export function peilinKatkoJaljella(laji = 'kuvat') {
   return Math.max(0, (poisAsti[laji] ?? 0) - Date.now());
 }
 
-/** Peili petti: kolmannen virheen jälkeen se laji jätetään hetkeksi väliin. */
+/*
+ * ── KOLME PERÄKKÄISTÄ VIRHETTÄ, EI KOLME KOKO ISTUNNOSSA (28.9.2026) ──
+ *
+ * Laskuri nollautui ennen vain katkon vanhetessa. Kolme hajanaista
+ * verkkovirhettä pitkän pelin aikana — tai yksi Safarin taustakatko —
+ * pysäytti siksi laattojen haun 20 sekunniksi, vaikka peili vastasi
+ * koko ajan. Mitattu WebKit-savukkeella (savuke-laattaaukot, 25 %
+ * katkaistuja hakuja): katkaisija laukesi uudelleen jokaisessa
+ * ikkunassa, ja 62/72 näkyvää laattaa jäi jonoon 70 sekunniksi.
+ *
+ * Nyt onnistunut haku nollaa laskurin (`peiliToimi`), eli katkaisija
+ * laukeaa vain, kun kolme hakua peräkkäin kaatuu ilman yhtään
+ * onnistumista välissä — se on peilin vika, ei yksittäinen yskähdys.
+ *
+ * TAUSTAKATKO EI OLE PEILIN VIKA: Safari katkaisee haut, kun sivu menee
+ * taustalle tai näyttö lukittuu. Piilossa tulleita virheitä ei lasketa,
+ * ja kun sivu palaa näkyviin, laattojen katko puretaan heti — laatat
+ * (js/pallolaatat.js) uusivat virheensä samassa tapahtumassa.
+ */
+/** Peili vastasi: peräkkäisten virheiden laskuri alkaa alusta. */
+export function peiliToimi(laji = 'kuvat') {
+  if (!LAJIT.includes(laji) || poisAsti[laji]) return;
+  virheita[laji] = 0;
+}
+
+const piilossa = () => Boolean(globalThis.document?.hidden);
+
+/** Peili petti: kolmannen peräkkäisen virheen jälkeen se laji jätetään hetkeksi väliin. */
 export function peiliPetti(laji = 'kuvat') {
   if (!LAJIT.includes(laji) || !peiliKaytossa(laji)) return;
+  if (piilossa()) return;
   virheita[laji] += 1;
   if (virheita[laji] < VIRHERAJA) return;
   poisAsti[laji] = Date.now() + (laji === 'laatat' ? KATKAISUN_KESTO_LAATAT_MS : KATKAISUN_KESTO_MS);
@@ -707,6 +735,20 @@ export function peiliPetti(laji = 'kuvat') {
     globalThis.sessionStorage?.setItem(poisAvain(laji), String(poisAsti[laji]));
   } catch { /* ks. yllä */ }
 }
+
+/*
+ * Paluu näkyviin purkaa laattojen katkon. Kuuntelija rekisteröidään
+ * moduulin latautuessa, eli ennen laattakerroksen omaa uusintaa, joka
+ * kuuntelee samaa tapahtumaa.
+ */
+try {
+  globalThis.document?.addEventListener?.('visibilitychange', () => {
+    if (piilossa() || !poisAsti.laatat) return;
+    poisAsti.laatat = 0;
+    virheita.laatat = 0;
+    try { globalThis.sessionStorage?.removeItem(poisAvain('laatat')); } catch { /* ks. yllä */ }
+  });
+} catch { /* ei dokumenttia (testit, worker) */ }
 
 /** Vain testejä varten: nollaa katkaisijan tila. */
 export function nollaaPeili() {

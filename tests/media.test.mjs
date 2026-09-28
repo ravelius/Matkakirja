@@ -15,7 +15,7 @@ import { execFileSync } from 'node:child_process';
 
 import {
   PEILI_JUURI, peiliKuvaPolku, peiliAaniPolku, aaniOsoite, aaniUrl, onPeilista,
-  asetaKuva, peiliPetti, peiliKaytossa, nollaaPeili, peilinLaji, AANI_JUURI,
+  asetaKuva, peiliPetti, peiliToimi, peiliKaytossa, peilinKatkoJaljella, nollaaPeili, peilinLaji, AANI_JUURI,
   KUVAN_YRITYKSET, nollaaKuvajono,
   VERSIOIDUT_HORATIO_AANET,
 } from '../js/media.js';
@@ -728,4 +728,47 @@ test('laattojen katkaisija: oma laji, kolme virhettä sulkee 20 sekunniksi, jäl
   assert.equal(peiliKaytossa('kuvat'), true);
   nollaaPeili();
   assert.equal(peiliKaytossa('laatat'), true);
+});
+
+/* ── Katkaisija laskee PERÄKKÄISET virheet (28.9.2026, laattojen katkot) ── */
+
+test('onnistunut haku nollaa laskurin: hajanaiset virheet eivät laukaise katkaisijaa', () => {
+  nollaaPeili();
+  for (let i = 0; i < 10; i += 1) {
+    peiliPetti('laatat');
+    peiliPetti('laatat');
+    peiliToimi('laatat');
+  }
+  assert.equal(peiliKaytossa('laatat'), true);
+  assert.equal(peilinKatkoJaljella('laatat'), 0);
+  // Kolme peräkkäistä ilman onnistumista laukaisee yhä (peilin oikea vika).
+  peiliPetti('laatat');
+  peiliPetti('laatat');
+  peiliPetti('laatat');
+  assert.equal(peiliKaytossa('laatat'), false);
+  // Katkon aikana onnistuminen ei avaa peiliä etuajassa.
+  peiliToimi('laatat');
+  assert.equal(peiliKaytossa('laatat'), false);
+  nollaaPeili();
+});
+
+test('piilossa (Safarin taustakatko) tulleita virheitä ei lasketa', () => {
+  nollaaPeili();
+  const vanha = globalThis.document;
+  globalThis.document = { hidden: true };
+  try {
+    for (let i = 0; i < 6; i += 1) peiliPetti('laatat');
+    assert.equal(peiliKaytossa('laatat'), true);
+  } finally {
+    globalThis.document = vanha;
+    nollaaPeili();
+  }
+});
+
+test('paluu näkyviin purkaa laattojen katkon (kuuntelija moduulissa)', () => {
+  const lahde = readFileSync(new URL('../js/media.js', import.meta.url), 'utf8');
+  assert.match(lahde, /addEventListener\?\.\('visibilitychange', \(\) => \{\s*if \(piilossa\(\) \|\| !poisAsti\.laatat\) return;\s*poisAsti\.laatat = 0;/);
+  const laatat = readFileSync(new URL('../js/pallolaatat.js', import.meta.url), 'utf8');
+  assert.match(laatat, /if \(!vastaus\.ok\) return null;\s*\/\/[^\n]*\n\s*peiliToimi\('laatat'\);/);
+  assert.match(laatat, /kuva\.onload = \(\) => \{\s*peiliToimi\('laatat'\);/);
 });
