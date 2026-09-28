@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2377, teksti: 'Pulu vastaa Sonnet 5.5:llä, ensimmäinen sana nopeammin' },
+  { v: 2377, teksti: 'Pulu: Sonnet 5.5, ajattelu between_tools (#3580)' },
   { v: 2376, teksti: 'Kronborgin nostoankkuri: koordinaatti linnan ko… (#3520)' },
   { v: 2375, teksti: 'SRB: pitkä-luonnehdinta + pulu kaikille 24 maak… (#3536)' },
   { v: 2374, teksti: 'v2373: Pulu: ISS-tervetulo Astronautin kamerass… (#3575)' },
