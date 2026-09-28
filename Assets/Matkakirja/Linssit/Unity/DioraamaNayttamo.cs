@@ -45,6 +45,15 @@ namespace Matkakirja.Natiivi
         Camera pallonKamera;
 
         public Camera Kamera { get; private set; }
+        /// <summary>
+        /// Näyttämön kuva: kamera piirtää tähän, ja DioraamaTaulu näyttää sen koko ruudun UI-elementtinä kerroksessa
+        /// LinssiUi.MustaKerros (24, Ihmisen matkan musta tausta). Näin kartan UI (nimet, tilarivi, Liiku) jää alle ja
+        /// linssin ✕ ja taulu päälle. Koko = ruutu × KuvaSkaala (Mobile_RPAssetin renderöintiskaala 0,8).
+        /// </summary>
+        public RenderTexture Kuva { get; private set; }
+        public const float KuvaSkaala = 0.8f;
+        public static event System.Action<RenderTexture> KuvaVaihtui;
+        public static RenderTexture NykyinenKuva { get; private set; }
 
         /// <summary>Luo näyttämön juuren ja kameran; asettaa kiinteät globaalit kerran.</summary>
         public static DioraamaNayttamo Luo(Camera pallonKamera)
@@ -82,9 +91,34 @@ namespace Matkakirja.Natiivi
         /// <summary>Kanoninen (metrit, +X itä +Y ylös +Z etelä) → Unity (x, y, −z). Ks. dioraama-rajapinnat kohta 0.</summary>
         public static Vector3 UnityPiste(V3 v) => new Vector3((float)v.X, (float)v.Y, (float)-v.Z);
 
+        /// <summary>Luo tai koon muuttuessa (kierto) luo uudelleen näyttämön kuvan.</summary>
+        void VarmistaKuva()
+        {
+            int w = Mathf.Max(64, Mathf.RoundToInt(Screen.width * KuvaSkaala));
+            int h = Mathf.Max(64, Mathf.RoundToInt(Screen.height * KuvaSkaala));
+            if (Kuva != null && Kuva.width == w && Kuva.height == h) return;
+            VapautaKuva();
+            Kuva = new RenderTexture(w, h, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB)
+            { name = "DioraamaKuva", antiAliasing = 1, useMipMap = false };
+            Kuva.Create();
+            Kamera.targetTexture = Kuva;
+            NykyinenKuva = Kuva;
+            KuvaVaihtui?.Invoke(Kuva);
+        }
+
+        void VapautaKuva()
+        {
+            if (Kuva == null) return;
+            if (Kamera != null) Kamera.targetTexture = null;
+            Kuva.Release();
+            Destroy(Kuva);
+            Kuva = null;
+        }
+
         /// <summary>Kameran asento (Nakyma.Kamera → Kameraliike.AsentoSijainti → Unity) ja lepatuksen päivitys.</summary>
         public void Paivita(Asento kameranAsento, bool vahennettyLiike)
         {
+            VarmistaKuva();
             var (sijainti, kohde) = Kameraliike.AsentoSijainti(kameranAsento);
             Vector3 paikka = UnityPiste(sijainti), kohdeU = UnityPiste(kohde);
             Kamera.transform.position = paikka;
@@ -102,6 +136,9 @@ namespace Matkakirja.Natiivi
 
         public void Tuhoa()
         {
+            VapautaKuva();
+            NykyinenKuva = null;
+            KuvaVaihtui?.Invoke(null);
             if (this != null && gameObject != null) Destroy(gameObject);
         }
     }

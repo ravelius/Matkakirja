@@ -21,13 +21,25 @@ namespace Matkakirja.Natiivi
         static readonly Color Pergamentti = new Color(0.9373f, 0.9020f, 0.8235f, 0.94f);
         static readonly Color Teksti = new Color(0.2039f, 0.1569f, 0.1137f);
 
-        readonly VisualElement juuri, lauta;
+        readonly VisualElement juuri, lauta, nakyma;
         readonly Label otsikko, teksti, lainaus, lahde, laskuri;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
 
+        bool puluPiilotettu;
+
         public DioraamaTaulu(UiKerros kerros)
         {
+            // Näyttämön kuva koko ruudulle kerrokseen MustaKerros (24): peittää kartan UI:n (nimet, tilarivi, Liiku)
+            // ja ottaa kosketukset, jotteivät ne valu alla oleviin nappeihin (DioraamaSyote lukee sormet itse).
+            nakyma = Rakenne.El("mk-dioraama-nakyma", kerros.Juuri(LinssiUi.MustaKerros), PickingMode.Position);
+            nakyma.style.position = Position.Absolute;
+            nakyma.style.left = 0; nakyma.style.right = 0; nakyma.style.top = 0; nakyma.style.bottom = 0;
+            nakyma.style.backgroundColor = DioraamaNayttamo.TaustaVari;
+            nakyma.style.display = DisplayStyle.None;
+            DioraamaNayttamo.KuvaVaihtui += AsetaKuva;
+            AsetaKuva(DioraamaNayttamo.NykyinenKuva);
+
             // Sama kerros kuin MaapallonVuosiNakyma (Pulun 35 päällä); ei uutta LinssiUi-vakiota tässä erässä.
             juuri = Rakenne.El("mk-dioraama", kerros.Juuri(LinssiUi.RadioKerros), PickingMode.Ignore);
             juuri.style.position = Position.Absolute;
@@ -40,7 +52,7 @@ namespace Matkakirja.Natiivi
 
             lauta = Rakenne.El("mk-dioraama__lauta", juuri);
             lauta.style.position = Position.Absolute;
-            lauta.style.maxWidth = Length.Percent(PeittoOsuusPros);
+            lauta.style.minWidth = 220;
             lauta.style.maxHeight = Length.Percent(PeittoOsuusPros);
             lauta.style.backgroundColor = Pergamentti;
             lauta.style.borderTopLeftRadius = 10; lauta.style.borderTopRightRadius = 10;
@@ -55,22 +67,19 @@ namespace Matkakirja.Natiivi
             lauta.style.transitionDuration = new List<TimeValue> { new TimeValue(AnimaatioMs, TimeUnit.Millisecond) };
             lauta.RegisterCallback<PointerDownEvent>(_ => DioraamaSovitin.Linssi?.Napauta(DioraamaSovitin.ViimeisinT));
 
-            var otsikkoRivi = Rakenne.El("mk-dioraama__otsikkorivi", lauta, PickingMode.Ignore);
-            otsikkoRivi.style.flexDirection = FlexDirection.Row;
-            otsikkoRivi.style.justifyContent = Justify.SpaceBetween;
+            // Laskuri omalle rivilleen otsikon yläpuolelle: rivissä rinnakkain rivittyvä otsikko mitattiin yhden rivin
+            // korkuiseksi ja sen toinen rivi peitti tekstin (savuke 29.9.).
+            laskuri = Rakenne.Teksti("", "mk-dioraama__laskuri", lauta);
+            Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
+            laskuri.style.color = new Color(Teksti.r, Teksti.g, Teksti.b, 0.65f);
+            laskuri.style.fontSize = 11;
 
-            otsikko = Rakenne.Teksti("", "mk-dioraama__otsikko", otsikkoRivi);
+            otsikko = Rakenne.Teksti("", "mk-dioraama__otsikko", lauta);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             otsikko.style.color = Teksti;
             otsikko.style.fontSize = 16;
             otsikko.style.whiteSpace = WhiteSpace.Normal;
-            otsikko.style.flexShrink = 1;
-
-            laskuri = Rakenne.Teksti("", "mk-dioraama__laskuri", otsikkoRivi);
-            Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
-            laskuri.style.color = new Color(Teksti.r, Teksti.g, Teksti.b, 0.65f);
-            laskuri.style.fontSize = 11;
-            laskuri.style.marginLeft = 8;
+            otsikko.style.marginTop = 2;
 
             teksti = Rakenne.Teksti("", "mk-dioraama__teksti", lauta);
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
@@ -98,9 +107,19 @@ namespace Matkakirja.Natiivi
             Kytke(DioraamaSovitin.Linssi);
         }
 
+        void AsetaKuva(RenderTexture kuva)
+        {
+            nakyma.style.backgroundImage = kuva != null ? new StyleBackground(Background.FromRenderTexture(kuva)) : new StyleBackground(StyleKeyword.None);
+        }
+
         void Kytke(PoikkileikkausLinssi uusi)
         {
             juuri.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
+            nakyma.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
+            // Kulman Pulu piiloon linssin ajaksi: dioraamassa Pulu liitää näyttämöllä (oma LiviaKuva).
+            var p = Pulu.Hae();
+            if (uusi != null && p.Nakyvissa) { p.Nayta(false); puluPiilotettu = true; }
+            else if (uusi == null && puluPiilotettu) { p.Nayta(true); puluPiilotettu = false; }
             if (uusi != null) Paivita();
         }
 
@@ -144,6 +163,8 @@ namespace Matkakirja.Natiivi
                 // Paneelin mitat (pt), ei Screen-pikseleitä: UI Toolkit skaalaa paneelin.
                 float pw = juuri.layout.width, ph = juuri.layout.height;
                 if (float.IsNaN(pw) || pw <= 0) { pw = Screen.width; ph = Screen.height; }
+                // Leveys: pystyssä 64 % (kapea puhelin), vaakana 36 %; pinta-ala jää alle 45 %:n.
+                lauta.style.width = Mathf.Max(220f, pw * (ph > pw ? 0.64f : 0.36f));
                 bool oikealla = TaulunPuoliOikealla(rakennus, nakyma.KohdeTila);
                 float tauluLeveys = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 260f : lauta.layout.width;
                 float tauluKorkeus = float.IsNaN(lauta.layout.height) || lauta.layout.height <= 0 ? 160f : lauta.layout.height;
