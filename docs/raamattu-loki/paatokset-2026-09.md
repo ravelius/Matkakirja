@@ -8735,3 +8735,7 @@ Omistaja 28.9. klo 17.5x sanatarkasti: "tee muutama testiääni pululle v4:llä 
 ## OMISTAJA: PULUN V4-AANI PALJON PAREMPI; ISOISAN NAYTE (28.9.2026 klo 17.56)
 
 Omistaja 28.9. klo 18.0x sanatarkasti: "Pulun ääneen tuo on ainakin paljon parempi. Anna vielä esimerkki isoisästä. Yksi riittää siitä." → Pelikoodari: yksi isoisan repliikki v4:lla tunnetagein (sama aani), pari omistajalle. Paatos Pulun v4-striimista (Turbo kampanjahinnalla 0,011 $/1000 mrk 12.10. asti, sitten 0,04 $) odottaa omistajaa.
+
+## OMISTAJA: PULUN STRIIMIAANI ELEVENLABS V4:AAN (28.9.2026 klo 17.58)
+
+Omistaja 28.9. klo 18.1x sanatarkasti: "Pulun voi ainakin jo vaihtaa striimi ääneksi." → Pelikoodari: Pulun striimipuhe (chat + puhekeskustelu) xAI → ElevenLabs v4 Pulun omalla aanella (Flicker) tunnetagein; malli workerin asetuksena, oletus v4 Turbo jos yksi vertailunayte kuulostaa samalta (kampanja 0,011 $ / 1000 mrk 12.10. asti, sitten 0,04 $; v4 0,022 $ → 0,08 $), muuten v4. Avain vain workerissa, paivakatto, valimuisti ennallaan. Nostojen ja isoisan luenta ennallaan (isoisan v4-nayte omistajalla).
