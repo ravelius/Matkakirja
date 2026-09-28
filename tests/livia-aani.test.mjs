@@ -49,6 +49,7 @@ import {
   pinoutuvatRepliikit, puhemuoto, repliikit, tauluksi, valitseRepliikit,
   PULU_KIELLETYT_TAGIT, PULU_EFEKTITAGIT,
 } from '../tools/generoi-pulu.mjs';
+import { V4_ERAT } from '../tools/tasoita-pulu.mjs';
 
 /** Ne lähteet, joiden tekstit tulevat js/livia.js:stä. */
 const LIVIA_LAHTEET = ['avaus', 'paljastus', 'mannerivihje', 'lehtivinkki'];
@@ -416,35 +417,24 @@ test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
  * jos kuitin kesto vaihtuu — silloin peli soittaisi taas sitä äänitettä,
  * josta omistaja valitti.
  */
-test('ateena-3, sofia-3 ja pariisi-3 osoittavat eleven_v4-erän tasoitettuihin äänitteisiin', () => {
+test('ateena-3, sofia-3 ja pariisi-3 soivat v4:llä tasoitettuina ilman [softly]-tagia', () => {
   /*
-   * 28.9.2026: omistaja valitsi eleven_v4:n. Kolme kaupunkia ajettiin
-   * uusiksi samalla tekstillä ja tageilla; erä pulu-3eaad28481f0aa2ef5a9
-   * (lähde-SHA 5d65b852) tallentaa mallin mp3:n sellaisenaan kuten
-   * 14.9. v3-erä pulu-c4a91d1229f96eaac265, jonka äänet jäävät ämpäriin.
+   * 28.9.2026: omistaja valitsi eleven_v4:n (erä pulu-3eaad28481f0aa2ef5a9),
+   * ja samana iltana [softly] poistettiin Pulun tageista ("pulu kuulostaa
+   * siinä liian surulliselta"). Kaikissa kolmessa oli [softly]-virke, joten
+   * ne äänitettiin tagikorjauksen erissä uusiksi. Teksti ei muuttunut:
+   * tiivisteet ovat samat kuin ennen uusintoja. Peli soittaa tasoitetun
+   * kopion (tools/tasoita-pulu.mjs, −17,2 LUFS).
    */
-  /*
-   * TASOITETTU (Päätoimittaja 28.9.2026: "Pelaaja ei saa kuulla hiljaisempaa
-   * Pulua"): v4 oli 0–6 dB hiljaisempi, joten peli soittaa tasoitetun kopion
-   * (tools/tasoita-pulu.mjs, yksi 192 kbps koodaus, −17,2 LUFS, limitteri 0,97).
-   * Mallin alkuperäinen mp3 ja raaka/-kopio pysyvät ämpärissä ennallaan.
-   */
-  const ERA = 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/tasoitettu';
-  assert.equal(LIVIAN_VERSIOIDUT_AANET['ateena-3'], `${ERA}/livia-ateena-3.mp3`);
-  assert.equal(LIVIAN_VERSIOIDUT_AANET['sofia-3'], `${ERA}/livia-sofia-3.mp3`);
-  assert.equal(LIVIAN_VERSIOIDUT_AANET['pariisi-3'], `${ERA}/livia-pariisi-3.mp3`);
-  // Kuitin mitatut kestot (kuitti pulu-3eaad28481f0aa2ef5a9.completed.json).
-  assert.equal(LIVIAN_KESTOT['ateena-3'], 14.88);
-  assert.equal(LIVIAN_KESTOT['sofia-3'], 11.36);
-  assert.equal(LIVIAN_KESTOT['pariisi-3'], 20.4);
-  // Teksti ei muuttunut: tiivisteet ovat samat kuin ennen uusintaa.
+  for (const avain of ['ateena-3', 'sofia-3', 'pariisi-3']) {
+    const polku = LIVIAN_VERSIOIDUT_AANET[avain];
+    assert.match(polku, new RegExp(`/tasoitettu/livia-${avain}\\.mp3$`), avain);
+    assert.ok(V4_ERAT.some((era) => polku.includes(`/${era}/`)), `${avain}: v4-erä`);
+    assert.ok(LIVIAN_KESTOT[avain] > 0, `${avain}: kuitin kesto`);
+  }
   assert.equal(LIVIAN_AANITETYT['ateena-3'], '572e0e85');
   assert.equal(LIVIAN_AANITETYT['sofia-3'], '83dd2f15');
   assert.equal(LIVIAN_AANITETYT['pariisi-3'], '3402cfd2');
-  // Muut kaupungit eivät saa vahingossa siirtyä tähän erään.
-  const uudessa = Object.entries(LIVIAN_VERSIOIDUT_AANET)
-    .filter(([, polku]) => polku.startsWith(ERA)).map(([avain]) => avain).sort();
-  assert.deepEqual(uudessa, ['ateena-3', 'pariisi-3', 'sofia-3']);
 });
 
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
