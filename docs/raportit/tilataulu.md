@@ -12,7 +12,7 @@ Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet 
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
-**11:14 LOAD1 57,4 (laskeva jatkuu: 118→57).** Kuorma selvästi laantumassa, ei vielä alle rajan (8-10) mutta trendi vahvasti oikeaan suuntaan.
+**11:14 LOAD1 57,4 → 11:19 LOAD1 54,0 (tasaantunut, ei enää laskussa).** **UUSI SYY LÖYTYI 11:19:** GitHub Actions -runner (`/Users/samireivinen/actions-runner/_work/Matkakirja/`) ajaa savukkeita (`savuke-zoomiraja.mjs`, `savuke-liftaus-ajoitus.mjs`) Playwright-headless-chromiumilla — CI on käynnistynyt tälle samalle Macille (tunnettu riski, ks. muisti "Push laukaisee CI:n samalle Macille"). R/Rs-tilaisia 43. Ilmoitettu Päätoimittajalle + Julkaisijalle — CI-ajo ei ole Claude-roolin suoraan hallittavissa.
 
 ## 1) Sessiot
 
