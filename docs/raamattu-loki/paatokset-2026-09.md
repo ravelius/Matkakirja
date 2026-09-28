@@ -8943,3 +8943,7 @@ Omistaja 28.9. klo 22.36 sanatarkasti: "sano heti kun uudet pulun äänet ovat p
 ## OMISTAJA: ISOISÄN LUENNAN ALKU JA KAUPUNGIN NIMI PUUTTUVAT (NATIIVI 1.0.38–1.0.39) (28.9.2026 klo 22.39)
 
 Omistaja 28.9. klo 22.39 sanatarkasti: "v39 isoisän luennan alusta puuttuu pala sekä myös kaupungin nimet ja sloganin kohdasta puuttuu yleensä kaupungin nimi. tämä oli jo ainakin v38:ssa sama ongelma" → Natiivi-UI kaiutinkorjauksen jälkeen ennen maakuntatilaa: juurisyy (klipin lataus/häivytys/hiljaisuuden leikkaus/aloituskohta; nimi-klippi ennen slogania kuten webissä, paketissa?), mittaus currentTime/timeSamples, laitteella ennen/jälkeen; 1.0.40 jos ehtii, muuten 1.0.41.
+
+## OMISTAJA: STRIIMILUENTA HYPPII YHÄ 1.0.39:SSÄ (28.9.2026 klo 22.40)
+
+Omistaja 28.9. klo 22.40 sanatarkasti: "hyppii vielä v39, ei ala alusta ainakaan. testaan vähän lisää" (kysymykseen: striimiäänen pomppiminen). Hyppykorjaus 9057ea82 oli PASS nostossa, Pulun täysi vastaus mittaamatta (429). → Natiivi-UI: yhteinen selvitys isoisän luennan puuttuvan alun kanssa (ensimmäinen pala / myöhäinen aloitus), laitteella ElevenLabs v4 Turbo, nosto + Pulun pitkä vastaus; juurisyy ennen korjausta.
