@@ -1062,13 +1062,15 @@ export const AARRE_MUSIIKKI = {
  * ja palaavat, kun aihe loppuu. Saapumistunnus asuu maanosittain
  * js/kaupunkimusiikki.js:n SAAPUMISTUNNUKSET-taulussa.
  *
- *   aloituslento     Lontoosta ensimmäiseen kaupunkiin, 26 s (doPickStart)
+ *   aloituslento     Lontoosta ensimmäiseen kaupunkiin, 20 s (doPickStart). Omistaja valitsi
+ *                    28.9.2026 vaskimarssin (ehdotus A): innostunut ja mahtipontinen, pelin oma
+ *                    johtoaihe trumpeteilla; isku 7,3 s ja loppusointu 15,1 s natiivin v3f-lennon mukaan.
  *   loppu            kaikki pääaarteet löydetty, 69 s (ajastaMatkanLoppu)
  *   ratkaisu         kohtaamisen kysymys oikein, 4,3 s (soitaKohtaamisenTulos)
  *   epaonnistuminen  kohtaamisen kysymys väärin tai aika loppui, 4,0 s (sama)
  */
 export const MATKAN_AIHEET = {
-  aloituslento: musaPolku('musa-aloituslento'),
+  aloituslento: musaPolku('musa-aloituslento-marssi-a'),
   loppu: musaPolku('musa-loppu'),
   ratkaisu: musaPolku('musa-ratkaisu'),
   epaonnistuminen: musaPolku('musa-epaonnistuminen'),
@@ -12886,7 +12888,7 @@ export class UI {
       if (!this.reducedMotion) this.aloitaLennonAmbienssi();
       /*
        * ALOITUSLENNON AIHE (musiikkisuunnitelma 26.9.2026, vaihe 1):
-       * johtoaihe täytenä ja nousevana, one-shot 26 s. Alkaa samasta
+       * vaskimarssi johtoaiheella (omistaja 28.9.2026), one-shot 20 s. Alkaa samasta
        * napautuksesta kuin kabiini, ja pohjaraita väistyy sen ajaksi
        * kuten aarteen aiheelle. Liikeherkkyydessä lentoa ei ole, joten
        * ei aihettakaan; radiotilassa radio on ainoa ääni.
