@@ -191,7 +191,13 @@ export const PUHE_PALA_KATTO = 2400;
  * myös silloin, kun soittimella ei ole enää aikataulutettavaa (edellinen
  * pala soi) — hiljaisuutta ei synny odottamalla portaan täyttymistä.
  */
-export const PUHEENVUORON_PORTAAT = [150, 450, 1350];
+/*
+ * ENSIMMÄINEN PORRAS 0 (Päätoimittaja 28.9.2026): ensimmäinen pala lähtee
+ * heti. 150 mrk:n porras piti lyhyen vastauksen puskurissa koko striimin
+ * ajan (yhden virkkeen vastaus alkoi kuulua vasta 6,9 s / 14,7 s), ja
+ * luettavaRaja (js/pollo.js) antaa ensimmäiseksi palaksi jo lyhyen alun.
+ */
+export const PUHEENVUORON_PORTAAT = [0, 450, 1350];
 
 /*
  * Istunnon estolippu: asetusvirhe (503/403) tarkoittaa, ettei puhe ole

@@ -13,7 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2366, teksti: 'Maan nimisten kaupunkien nostot pääkartalle' },
+  { v: 2371, teksti: 'v2366: Astronautin kuvaselaimen selite tiiviinä… (#3568)' },
+  { v: 2370, teksti: 'v2367: Leveän maan saa loitonnettua kokonaan nä… (#3571)' },
+  { v: 2369, teksti: 'v2363: Pulun ääni alkaa nopeammin (#3567)' },
+  { v: 2368, teksti: 'v2367: Pulun striimiääni ElevenLabs v4 Turbolla (#3572)' },
+  { v: 2367, teksti: 'v2354: Matkakirjan ihmeen kulmanauha näkyy taas… (#3532)' },
+  { v: 2366, teksti: 'BGR: pitkä-luonnehdinta + pulu kaikille 28 maak… (#3534)' },
   { v: 2365, teksti: 'Maapallon vuosi -linssin runko (#3558)' },
   { v: 2364, teksti: 'v2362: Nostokortin pystykuva mahtuu taas kortti… (#3565)' },
   { v: 2363, teksti: 'v2351: Astronautin kamera — kuvien selaus, vier… (#3526)' },

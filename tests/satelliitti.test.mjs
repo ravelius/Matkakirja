@@ -555,7 +555,9 @@ test('selitetekstin napautus kelaa tekstin ylös, väkänen avaa lisätiedot', (
    */
   assert.match(lahde, /selite\.classList\.toggle\('satelliitti-selite-kiinni', kiinni\)/);
   assert.match(lahde, /selite\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); kelaaSelite\(\); \}\)/);
-  assert.match(tyyli, /\.satelliitti-selite-runko \{[\s\S]*overflow: hidden;[\s\S]*transition: max-height 250ms/);
+  // Koko liukuu laatikon FLIP-animaationa (js/tiivistys.js, omistaja 28.9.2026); runko häivyttää.
+  assert.match(tyyli, /\.satelliitti-selite-runko \{[\s\S]*overflow: hidden;[\s\S]*transition: opacity 250ms/);
+  assert.match(lahde, /animoiKoko\(selite, \(\) => \{/);
   assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-runko \{[\s\S]*max-height: 0/);
   // Otsikkorivi EI ole rungossa, joten se jää aina näkyviin.
   assert.match(lahde, /selite\.append\(seliteOtsikko, seliteRunko\)/);

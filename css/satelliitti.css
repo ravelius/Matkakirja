@@ -596,11 +596,21 @@ body.satelliitti-kuva-auki .astro-sumu { visibility: hidden; }
   overflow: hidden;
   max-height: 60vh;
   opacity: 1;
-  transition: max-height 250ms ease, opacity 250ms ease, margin-top 250ms ease;
+  /* Koko liukuu laatikon omana FLIP-animaationa (js/tiivistys.js);
+     runko vain häivyttää. max-heightin siirtymä poistui, koska se
+     sotkisi loppumitan, jonka apuri lukee heti luokan vaihdon jälkeen. */
+  transition: opacity 250ms ease;
   margin-top: 4px;
 }
 
+/*
+ * KELATTU RUNKO ON VIRRAN ULKOPUOLELLA (omistaja 28.9.2026, PIENENNETTY =
+ * MAHDOLLISIMMAN TIIVIS): piilotettu teksti ei saa pitää laatikkoa
+ * avatun levyisenä, joten kelattu laatikko on otsikkorivin kokoinen.
+ */
 .satelliitti-selite.satelliitti-selite-kiinni .satelliitti-selite-runko {
+  position: absolute;
+  visibility: hidden;
   max-height: 0;
   opacity: 0;
   margin-top: 0;

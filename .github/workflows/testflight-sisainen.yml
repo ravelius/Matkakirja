@@ -43,7 +43,7 @@ defaults:
 jobs:
   ryhma:
     name: Build sisäiselle ryhmälle
-    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    runs-on: [self-hosted, macOS, ARM64, testit]  # TF-etusija (omistaja 28.9.2026): ei savukejonon takana
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
