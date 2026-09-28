@@ -104,6 +104,9 @@ namespace Matkakirja.Natiivi
         readonly float[] cupola3Painot = new float[3];
         /// <summary>Rajattu Cupola 3:lla (PaivitaKehys).</summary>
         bool cupola3;
+        /// <summary>A/B `astro kyyti kehysmusta 1|0`: läpikuulon kontrollikoe (PaivitaKehys).</summary>
+        public static bool KehysMustana;
+        bool kehysMustanaNyt;
         /// <summary>Ohjaamon tila lokiin (`astro kyyti tila`): kuva, asento ja reunavalojen painot.</summary>
         public static string OhjaamonTila { get; private set; } = "";
         /// <summary>Codexin Cupola 2: null = ei vielä haettu tai latautuu, true = kehys valmis, false = ei saatu (3D varalla).</summary>
@@ -285,6 +288,16 @@ namespace Matkakirja.Natiivi
             // vain A/B:n "ennen"-kuvaan (CupolaKerros.Vanha).
             // A/B pehmeä ↔ terävä: haetaan kerrokset uudelleen (Aseta kutsuu tätä sekunnin välein).
             if (kuva2Haettu && haettuAvain != KuvaAvain) { kuva2Haettu = false; Kuva2Tila = null; }
+            // Läpikuulon kontrollikoe (Natiiviseppä 28.9. klo 23.4x, cl19: tumma 0 -ohjaamon läpi näkyi ~6 % maata ja alempi UI,
+            // vaikka opasiteetti 1,0): kehys ilman kuvaa pelkkänä mustana taustana. Jos alla näkyy yhä, syy on sekoituksessa tai
+            // paneelissa; jos ei, tekstuurin alfassa purun jälkeen. Pois palatessa kuvat haetaan uudelleen (levyvälimuistista).
+            if (KehysMustana != kehysMustanaNyt)
+            {
+                kehysMustanaNyt = KehysMustana;
+                kehys2.style.backgroundColor = KehysMustana ? new StyleColor(Color.black) : new StyleColor(StyleKeyword.Null);
+                if (KehysMustana) kehys2.style.backgroundImage = StyleKeyword.None;
+                else { kuva2Haettu = false; Kuva2Tila = null; }
+            }
             bool vanha = ikkuna && !IlmanKehysta && CupolaKerros.Vanha;
             bool uusi = ikkuna && !IlmanKehysta && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva && Kuva2Tila == true;
             if (vanha && !kuvatHaettu) HaeKuvat();
@@ -363,7 +376,7 @@ namespace Matkakirja.Natiivi
             bool kehysOk = false;
             void Valmis(VisualElement e, Texture2D t)
             {
-                if (t != null) e.style.backgroundImage = t;
+                if (t != null && !(KehysMustana && e == kehys2)) e.style.backgroundImage = t;
                 if (e == kehys2) kehysOk = t != null;
                 if (--odottaa > 0) return;
                 Kuva2Tila = kehysOk;
@@ -392,7 +405,7 @@ namespace Matkakirja.Natiivi
             bool kehysOk = false;
             void Valmis(VisualElement e, Texture2D t)
             {
-                if (t != null) e.style.backgroundImage = t;
+                if (t != null && !(KehysMustana && e == kehys2)) e.style.backgroundImage = t;
                 if (e == kehys2) kehysOk = t != null;
                 if (--odottaa > 0) return;
                 Kuva2Tila = kehysOk;

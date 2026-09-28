@@ -1425,6 +1425,8 @@ namespace Matkakirja.Natiivi
                             Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Kulma = osat[3] == "3b" ? "b" : "a";
                             Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Sarja = osat[3] == "3terava" ? "" : "pehmea";
                         }
+                        // Läpikuulon kontrollikoe (Natiiviseppä 28.9.): kehys pelkkänä mustana taustana ilman kuvaa.
+                        else if (a == "kehysmusta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.KehysMustana = osat[3] != "0";
                         else if (a == "katse" && osat.Length > 3)   // katse <astetta vaakatason alapuolelle> | pois (tilan mukaan)
                             Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = double.TryParse(osat[3].Replace(',', '.'),
                                 System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double katse)
