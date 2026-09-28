@@ -318,7 +318,24 @@ namespace Matkakirja.Linssit.Astronautti
         public Iss.Ylilento? LennaKohteeseen(string tunnus, bool valoisa = false)
         {
             if (!Auki) return null;
-            var k = Ylikohteet.Find(x => x.Tunnus == tunnus);
+            return Lenna(Ylikohteet.Find(x => x.Tunnus == tunnus), valoisa);
+        }
+
+        /// <summary>Oman sijainnin tunnus "Lennä kohteen ylle" -rivillä ja testikomennoissa.</summary>
+        public const string OmaSijaintiTunnus = "oma-sijainti";
+
+        /// <summary>
+        /// "Oma sijainti" (omistaja 28.9. TF 1.0.39: "Lisää myös mahdollisuus mennä käyttäjän sijainnin kohdalle"): kuten
+        /// LennaKohteeseen, mutta paikka annetaan (karkea sijainti ilman lupakyselyä: maan keskipiste, Unity-puolen OmaSijainti).
+        /// </summary>
+        public Iss.Ylilento? LennaPaikkaan(string nimi, double lat, double lon, bool valoisa = false)
+        {
+            if (!Auki) return null;
+            return Lenna(new Havaintokohde { Tunnus = OmaSijaintiTunnus, Nimi = nimi, Lat = lat, Lon = lon }, valoisa);
+        }
+
+        Iss.Ylilento? Lenna(Havaintokohde k, bool valoisa)
+        {
             if (k == null || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko) return null;
             var yl = Iss.Ylilennot.Seuraava(k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
             tietoAika = -1;

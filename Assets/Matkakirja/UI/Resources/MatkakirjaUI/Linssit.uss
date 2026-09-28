@@ -3365,6 +3365,53 @@
     bottom: 0;
 }
 
+/* Kyydin säätimet (Linssiseppä 2, omistaja 28.9. TF 1.0.39: pilvipeitto ja vuodenaika): kevyt pilleri kuten porras,
+   rivi = nimi · liuku · arvo; vihreä täyttö ja kahva (kyydin korostusväri), ei koristeita. */
+.mk-isskyyti__saatimet {
+    margin-top: 6px;
+    padding: 2px 9px;
+    width: 250px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+.mk-isskyyti__saadinrivi {
+    flex-direction: row;
+    align-items: center;
+    min-height: 26px;
+}
+
+.mk-isskyyti__saadinnimi {
+    width: 72px;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: rgba(233, 250, 240, 0.85);
+}
+
+.mk-isskyyti__saadinarvo {
+    width: 78px;
+    flex-shrink: 0;
+    font-size: 12px;
+    -unity-text-align: middle-right;
+    color: rgb(93, 255, 168);
+}
+
+.mk-isskyyti__saadin.mk-saadin {
+    margin: -5px 6px;
+}
+
+.mk-isskyyti__saadin .unity-base-slider__fill,
+.mk-isskyyti__saadin #unity-dragger {
+    background-color: rgb(93, 255, 168);
+}
+
+.mk-isskyyti__saadin #unity-tracker {
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(233, 250, 240, 0.12);
+}
+
 .mk-isskyyti__ylilento {
     margin-top: 6px;
     padding: 4px 9px;

@@ -44,6 +44,13 @@ namespace Matkakirja.Natiivi
         readonly Button valikko;
         readonly ScrollView lista;
         bool nopeutettu, listaTaytetty;
+        // Kyydin säätimet (omistaja 28.9. TF 1.0.39: "Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle sekä
+        // vuodenajalle?") ja "Oma sijainti" -rivi valikon kärjessä.
+        readonly Slider pilviLiuku;
+        readonly SliderInt kuukausiLiuku;
+        readonly Label pilviArvo, kuukausiArvo;
+        Button omaNappi;
+        bool asettaa;
         /// <summary>Valikon rivin korkeus (pt, web min-height 28 px).</summary>
         const float RiviPt = 28;
         bool kuvatHaettu, kuva2Haettu, sykkii;
@@ -126,6 +133,33 @@ namespace Matkakirja.Natiivi
             ylilento.pickingMode = PickingMode.Position;   // web: ohjainten lapset ottavat kosketuksen (ei vaihda tilaa)
             ylilento.style.display = DisplayStyle.None;
 
+            // Säätimet ylilennon rivin alla: sama pilleri kuin portaassa (tumma, vihreä reuna), nimi · liuku · arvo.
+            var saatimet = Rakenne.El("mk-isskyyti__saatimet", ohjaimet);
+            var r1 = Rakenne.El("mk-isskyyti__saadinrivi", saatimet);
+            Rakenne.Teksti("Pilvet", "mk-isskyyti__saadinnimi", r1);
+            pilviLiuku = new Slider(0f, 1f) { pageSize = 0 };
+            pilviLiuku.AddToClassList("mk-saadin");
+            pilviLiuku.AddToClassList("mk-isskyyti__saadin");
+            pilviLiuku.tooltip = "Pilvipeitto: selkeä … nyt";
+            r1.Add(pilviLiuku);
+            pilviArvo = Rakenne.Teksti("", "mk-isskyyti__saadinarvo", r1);
+            pilviLiuku.RegisterValueChangedCallback(e => { if (!asettaa) AstronauttiKerros.PilvienMaara = e.newValue; PaivitaSaatimet(); });
+            var r2 = Rakenne.El("mk-isskyyti__saadinrivi", saatimet);
+            Rakenne.Teksti("Vuodenaika", "mk-isskyyti__saadinnimi", r2);
+            kuukausiLiuku = new SliderInt(1, 12) { pageSize = 0 };
+            kuukausiLiuku.AddToClassList("mk-saadin");
+            kuukausiLiuku.AddToClassList("mk-isskyyti__saadin");
+            kuukausiLiuku.tooltip = "Vuodenaika: maan pinta kuukauden mukaan";
+            r2.Add(kuukausiLiuku);
+            kuukausiArvo = Rakenne.Teksti("", "mk-isskyyti__saadinarvo", r2);
+            kuukausiLiuku.RegisterValueChangedCallback(e =>
+            {
+                // Kuluva kuukausi = ei pakotusta (pinta seuraa taas ISS-kelloa, myös nopeutettuna).
+                if (!asettaa) AstronauttiKerros.KuukausiPakotettu = e.newValue == IssNyt.Kello().Month ? 0 : e.newValue;
+                PaivitaSaatimet();
+            });
+            OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
+
             var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", Poistu, turva);
             sulku.tooltip = "Pois kyydistä";
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
@@ -148,6 +182,8 @@ namespace Matkakirja.Natiivi
                 var kohteet = Linssi()?.YlilennonKohteet;
                 if (kohteet == null || kohteet.Count == 0) return;
                 listaTaytetty = true;
+                // Oma sijainti ensin (karkea: maan keskipiste IP:n maasta, ilman lupakyselyä; OmaSijaintiHaku).
+                omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); LennaOmaan(); }, lista);
                 foreach (var k in kohteet)
                 {
                     string tunnus = k.Tunnus;
@@ -161,6 +197,29 @@ namespace Matkakirja.Natiivi
             lista.scrollOffset = Vector2.zero;
             lista.style.display = DisplayStyle.Flex;
             peite.style.display = DisplayStyle.Flex;
+        }
+
+        /// <summary>"Oma sijainti": lento maan keskipisteen ylle; jos maa ei ole vielä tiedossa, haku ja lento perään.</summary>
+        static void LennaOmaan()
+        {
+            if (OmaSijaintiHaku.Paikka(out var nimi, out var lat, out var lon)) { Linssi()?.LennaPaikkaan($"Oma sijainti ({nimi})", lat, lon); return; }
+            if (OmaSijaintiHaku.Haettu) return;   // maa ei selvinnyt: rivi pysyy "Oma sijainti", ei lentoa
+            void Perassa() { OmaSijaintiHaku.Valmis -= Perassa; LennaOmaan(); }
+            OmaSijaintiHaku.Valmis += Perassa;
+            OmaSijaintiHaku.Aloita();
+        }
+
+        /// <summary>Säätimien arvot ja tekstit tilasta (AstronauttiKerros: pilvien määrä, pakotettu kuukausi).</summary>
+        void PaivitaSaatimet()
+        {
+            asettaa = true;
+            float m = AstronauttiKerros.PilvienMaara;
+            if (!Mathf.Approximately(pilviLiuku.value, m)) pilviLiuku.SetValueWithoutNotify(m);
+            int nyt = IssNyt.Kello().Month, kk = AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12 ? AstronauttiKerros.KuukausiPakotettu : nyt;
+            if (kuukausiLiuku.value != kk) kuukausiLiuku.SetValueWithoutNotify(kk);
+            asettaa = false;
+            pilviArvo.text = m <= 0.01f ? "selkeä" : m >= 0.99f ? "nyt" : $"{Mathf.RoundToInt(m * 100)} %";
+            kuukausiArvo.text = Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1] + (kk == nyt ? " (nyt)" : "");
         }
 
         void SuljeLista()
@@ -192,6 +251,7 @@ namespace Matkakirja.Natiivi
             liveNappi.text = aika.Nopeutettu ? "Palaa LIVE" : "LIVE";
             ylilento.text = aika.Ylilento ?? "";
             ylilento.style.display = auki && aika.Ylilento != null ? DisplayStyle.Flex : DisplayStyle.None;
+            if (auki) PaivitaSaatimet();
             if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;
             if (ikkuna && !kuvatHaettu && CupolaKerros.Vanha) HaeKuvat();
