@@ -8795,3 +8795,7 @@ Karttaseppä 28.9. klo 19.39: pallo valmis 564 647 laattaa (Z0–Z9 349 525 + Z1
 ## TILA: SKEEMA 1.56 TUOTANNOSSA, KERMA-404 E2E PASS (28.9.2026 klo 19.50)
 
 Siirtoseppä 28.9. klo 19.4x: skeema 1.56 tuotannossa (v279→v281), eheysvartija kunnossa; #3530 pienet kuvat 3 503 uusittu, otos 40/40. Natiiviseppä kerma-404 306134ee E2E PASS (z3–z5-kermahaut verkkoon 0, ennen 87; 0 poikkeusta) → 1.0.40-junaan. ISS-realismi web odottaa Pelikoodarin kyytihaaraa.
+
+## PÄÄTÖS: CL13 HYVÄKSYTTY — SYMBOLIT MAALLE, CUPOLA 0,25×; NELJÄ KAUPUNKIA EI KOHTEITA (28.9.2026 klo 19.57)
+
+Päätoimittaja 28.9. klo 20.0x (omistajan kaappaus 'Colosseum meressä, eri väri' ja 'Vielä liikaa blurrina'): Linssisepän cl13 hyväksytty — symbolit-3d-luonnollinen f6740687 (Colosseum 338° maalla 100 % ja kartan värinen, Visby Gotlannilla ei peitä Vimmerbyä) ja Cupola-kehys 0,25× (pehmea4) + pölyt → merge-pyynnöt Natiivisepälle 1.0.40-junaan. Jäljelle jäävä blurri tulee maan pilvikuvasta (4096 px, 30–50 px/tekseli) → pilvet-tarkat cc513896 (bikuubinen + kohinakynnys) cl14:llä, kuvapari ~20.3x. Natiivi-UI:n kysymys: Trondheim, Salzburg, Český Krumlov ja Brugge eivät ole kohdekaupunkeja (webin 266 MAAILMANKARTTA.cities), kaupungit.json ennallaan; natiivi seuraa webiä.
