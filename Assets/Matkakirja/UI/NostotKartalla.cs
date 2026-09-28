@@ -126,6 +126,11 @@ namespace Matkakirja.Natiivi
             public string Kylki;
             public bool NimioNakyy = true;
             public Vector2 NimioKoko;
+            /// <summary>
+            /// Erikoismallin oma kalustelaatikko pisteen suhteen (paneelin y alas): yläreuna (negatiivinen = pisteen yllä),
+            /// NaN = ei mallia. Oma nimiö mallin ylä- tai alapuolelle (Linssiseppä 28.9. klo 19.3x, laitekuvat cl10).
+            /// </summary>
+            public float MallinYla = float.NaN;
             /// <summary>Löydös 125: nimiön asu viimeksi asetettuna (muste, reuna, pohja, harvennus px), jottei tyyli likaannu turhaan.</summary>
             public Color Muste;
             public float Reuna = -1f, ReunaLeveys = -1f, Pohja = -1f, Harvennus;
@@ -563,7 +568,8 @@ namespace Matkakirja.Natiivi
             switch (kylki)
             {
                 case "vasen": vasen = -x - w; perus = sivuPv; break;
-                case "yla": vasen = -w / 2f; perus = ylaPv; break;
+                // Mallinosto: nimiö mallin kalustelaatikon yläpuolelle (kallistettu malli kohoaa ruudun yli ruudun).
+                case "yla": vasen = -w / 2f; perus = float.IsNaN(m.MallinYla) ? ylaPv : m.MallinYla - 0.25f * NimioK * mt; break;
                 case "ala": vasen = -w / 2f; perus = alaPv; break;
                 case "koillinen": vasen = x; perus = -m.Ruutu * mt; break;
                 case "kaakko": vasen = x; perus = alaPv; break;
@@ -607,11 +613,28 @@ namespace Matkakirja.Natiivi
             {
                 string loytyi = null;
                 Rect paikka = default;
+                // KALUSTEET ESTEINÄ (Linssiseppä 28.9. klo 19.3x: Visbyn malli Vimmerby-nimiön päällä): nimiö ei mene erikoismallin
+                // tai muun kalusteen (pulu, kartussi, Liiku) alle. Mallinoston oma laatikko ei estä omaa nimiötä: se on laatikko,
+                // jonka alareunalla (jalka) merkin piste on.
+                bool malli = m.Ryhma == null && !m.MallinAlla && m.Id != null && Symbolimallit.OnMalli(m.Id);
+                int oma = -1;
+                if (malli)
+                    for (int k = 0; k < kalusteRuudut.Count; k++)
+                    {
+                        var r = kalusteRuudut[k];
+                        if (m.Piste.x >= r.xMin - 2f && m.Piste.x <= r.xMax + 2f && m.Piste.y >= r.yMin && m.Piste.y <= r.yMax + 12f) { oma = k; break; }
+                    }
+                m.MallinYla = oma >= 0 ? kalusteRuudut[oma].yMin - m.Piste.y : float.NaN;
+                bool Kalusteeton(Rect a)
+                {
+                    for (int k = 0; k < kalusteRuudut.Count; k++) if (k != oma && kalusteRuudut[k].Overlaps(a)) return false;
+                    return true;
+                }
                 bool Vapaa(Rect r, float vara)
                 {
                     var a = new Rect(r.x + m.Piste.x - vara, r.y + m.Piste.y - vara, r.width + 2f * vara, r.height + 2f * vara);
                     if (a.xMin < 0 || a.yMin < 0 || a.xMax > W || a.yMax > H) return false;
-                    if (!Musteeton(a)) return false;
+                    if (!Musteeton(a) || !Kalusteeton(a)) return false;
                     foreach (var v in varatut) if (v.Overlaps(a)) return false;
                     if (!m.Kiintea)
                         for (int i = 0; i < n; i++)
@@ -622,7 +645,7 @@ namespace Matkakirja.Natiivi
                 // Löydös 106 (web sovittelu.js sääntö 5): lukittu nimiö, jonka laatikko on ruudulla, kokeilee vain
                 // lukittua kylkeään. Reunaa ei koeteta (nimi saa leikkautua); tukossa nimiö häipyy paikallaan ja
                 // palaa samaan kylkeen hystereesillä — ei koskaan merkin toiselle puolelle.
-                if (m.Id != null && lukot.TryGetValue(m.Id, out var lukko))
+                if (m.Id != null && lukot.TryGetValue(m.Id, out var lukko) && (!malli || lukko.Kylki == "yla" || lukko.Kylki == "ala"))
                 {
                     var r0 = NimionLaatikko(m, lukko.Kylki);
                     var a0 = new Rect(r0.x + m.Piste.x, r0.y + m.Piste.y, r0.width, r0.height);
@@ -630,7 +653,7 @@ namespace Matkakirja.Natiivi
                     {
                         float v = lukko.Nakyy ? 0f : Hystereesi;
                         var av = new Rect(a0.x - v, a0.y - v, a0.width + 2f * v, a0.height + 2f * v);
-                        bool vapaa = Musteeton(av);
+                        bool vapaa = Musteeton(av) && Kalusteeton(av);
                         foreach (var e in varatut) if (vapaa && e.Overlaps(av)) vapaa = false;
                         if (vapaa && !m.Kiintea)
                             for (int i = 0; i < n && vapaa; i++) if (merkit[i] != m && ikonit[i].Overlaps(av)) vapaa = false;
@@ -646,12 +669,28 @@ namespace Matkakirja.Natiivi
                 }
                 float vara0 = m.NimioNakyy ? 0f : Hystereesi;
                 var ehdokkaat = new List<string>(10);
-                if (m.NimioNakyy && m.Kylki != null) ehdokkaat.Add(m.Kylki);
-                string datasta = DatanKylki(m.Id != null ? LoydaNosto(m.Id) : null);
-                if (datasta != null && !ehdokkaat.Contains(datasta)) ehdokkaat.Add(datasta);
-                foreach (var ky in Kyljet) if (!ehdokkaat.Contains(ky)) ehdokkaat.Add(ky);
+                if (malli)
+                {
+                    // Mallinoston nimiö vain mallin ylä- tai alapuolelle (kyljissä se jäi tukkoon tai mallin päälle).
+                    ehdokkaat.Add("yla");
+                    ehdokkaat.Add("ala");
+                }
+                else
+                {
+                    if (m.NimioNakyy && m.Kylki != null) ehdokkaat.Add(m.Kylki);
+                    string datasta = DatanKylki(m.Id != null ? LoydaNosto(m.Id) : null);
+                    if (datasta != null && !ehdokkaat.Contains(datasta)) ehdokkaat.Add(datasta);
+                    foreach (var ky in Kyljet) if (!ehdokkaat.Contains(ky)) ehdokkaat.Add(ky);
+                }
                 foreach (var ky in ehdokkaat)
                     if (Vapaa(NimionLaatikko(m, ky), vara0)) { loytyi = ky; break; }
+                // Mallin nimi ei katoa (Český Krumlov ylhäältä): tukossa se jää mallin yläpuolelle, kunhan mahtuu ruudulle.
+                if (loytyi == null && malli)
+                {
+                    var r = NimionLaatikko(m, "yla");
+                    var a = new Rect(r.x + m.Piste.x, r.y + m.Piste.y, r.width, r.height);
+                    if (a.xMin >= 0 && a.yMin >= 0 && a.xMax <= W && a.yMax <= H) { loytyi = "yla"; paikka = a; }
+                }
                 // Taso 1 ei häivy muiden lappujen tieltä (sovittelu.js sääntö 4): ensimmäinen reunan sisällä oleva
                 // nimistä vapaa ehdokas (nykyinen kylki ensin); jos sellaista ei ole, nimiö häipyy ja ikoni jää.
                 if (loytyi == null && m.Taso1)
@@ -659,7 +698,7 @@ namespace Matkakirja.Natiivi
                     {
                         var r = NimionLaatikko(m, ky);
                         var a = new Rect(r.x + m.Piste.x, r.y + m.Piste.y, r.width, r.height);
-                        if (a.xMin < 0 || a.yMin < 0 || a.xMax > W || a.yMax > H || !Musteeton(a)) continue;
+                        if (a.xMin < 0 || a.yMin < 0 || a.xMax > W || a.yMax > H || !Musteeton(a) || !Kalusteeton(a)) continue;
                         loytyi = ky;
                         paikka = default;
                         break;
