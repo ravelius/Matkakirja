@@ -698,10 +698,10 @@ export const TAGIT = {
   'ljubljana-3': { alku: '[proud]', kohdat: [['jota isoisäsi', '[softly]']] },
   'kosice-3': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[thoughtfully]']] },
   'luxemburg-3': { alku: '[brightly]', kohdat: [['nykyään', '[amused]']] },
-  'valletta-3': { alku: '[proud]', kohdat: [['mutta linnoitus', '[warmly]']] },
+  'valletta-3': { alku: '[proud]', kohdat: [['ja koko vanhakaupunki', '[warmly]']] },
   'bryssel-4': { alku: '[mischievously]', kohdat: [['Minä olen nähnyt', '[amused]']] },
   'ljubljana-4': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[softly]']] },
-  'kosice-4': { alku: '[brightly]', kohdat: [['ja Hlavná-kadun', '[warmly]']] },
+  'kosice-4': { alku: '[brightly]', kohdat: [['ja sen pääkatu', '[warmly]']] },
   'luxemburg-4': { alku: '[softly]', kohdat: [['Minä näen', '[proud]']] },
   'valletta-4': { alku: '[curious]', kohdat: [['Nykyään', '[amused]']] },
   /*
