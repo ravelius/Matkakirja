@@ -94,6 +94,8 @@ namespace Matkakirja.Natiivi
                 int kerroin = Simukello.Nopeudet[i];
                 var b = Rakenne.Nappi(kerroin == 1 ? "LIVE" : kerroin + "×", "mk-isskyyti__nopeus", () => Linssi()?.AsetaNopeus(kerroin), porras);
                 if (i > 0) b.AddToClassList("mk-isskyyti__nopeus--jatko");
+                if (i == 0) b.AddToClassList("mk-isskyyti__nopeus--eka");
+                if (i == napit.Length - 1) b.AddToClassList("mk-isskyyti__nopeus--vika");
                 b.userData = kerroin;
                 napit[i] = b;
             }

@@ -3184,6 +3184,17 @@
     border-left-color: rgba(93, 255, 168, 0.18);
 }
 
+/* Päätynapit pyöristetään itse (valittu tausta ei ylitä pillerin kulmia, vaikka leikkaus ei pyöristäisi). */
+.mk-nappi.mk-isskyyti__nopeus--eka {
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+.mk-nappi.mk-isskyyti__nopeus--vika {
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
 .mk-nappi.mk-isskyyti__nopeus--valittu,
 .mk-nappi.mk-isskyyti__nopeus:active,
 .mk-nappi.mk-isskyyti__kohde:active {
