@@ -66,6 +66,33 @@ namespace Matkakirja.Linssit.Iss
         }
         public const double Cupola3IpadRaja = 1.75;
 
+        /// <summary>Codexin kuvan koko pikseleinä: iPadin vaaka tai iPhonen pysty.</summary>
+        public static (double leveys, double korkeus) Cupola3Koko(bool ipad) => ipad ? (2732, 2048) : (1290, 2796);
+
+        /// <summary>
+        /// Pyöreän ikkunan keskipiste Codexin kuvassa osuutena leveydestä ja korkeudesta (mitattu ikkunamaskista 28.9.). iPadin
+        /// kuvissa ikkuna on hieman yläpuolella (y 0,45–0,47), jolloin oranssi lappu leikkautui laitteella (cl18) ruudun reunaan.
+        /// </summary>
+        public static (double x, double y) Cupola3Keskus(bool ipad, string kulma) => kulma == "b"
+            ? (ipad ? (0.498, 0.452) : (0.448, 0.490))
+            : (ipad ? (0.503, 0.465) : (0.498, 0.473));
+
+        /// <summary>
+        /// Rajauksen siirto (pt, x oikealle, y alas) kerrossäiliön omassa koordinaatistossa: kuva cover-asetettuna
+        /// <paramref name="leveys"/> × <paramref name="korkeus"/> -säiliöön ja suurennettuna <paramref name="z"/>-kertaiseksi keskeltä.
+        /// Ikkunan keskipiste siirretään kohti säiliön keskustaa sen verran kuin kuvan ylimääräinen reuna sallii, ja reunaan jää aina
+        /// <paramref name="vara"/> pt ajelehdukselle. iPad vaaka: 32,6 pt alas (ikkuna keskelle); iPhone: 9,5 pt (reuna rajoittaa).
+        /// </summary>
+        public static (double x, double y) Cupola3Siirto(double leveys, double korkeus, bool ipad, string kulma, double z, double vara)
+        {
+            var (kl, kk) = Cupola3Koko(ipad);
+            var (cx, cy) = Cupola3Keskus(ipad, kulma);
+            double s = Math.Max(leveys / kl, korkeus / kk);
+            double px = (leveys - kl * s) * 0.5 + cx * kl * s, py = (korkeus - kk * s) * 0.5 + cy * kk * s;
+            double vx = Math.Max(0, (kl * s * z - leveys) * 0.5 - vara), vy = Math.Max(0, (kk * s * z - korkeus) * 0.5 - vara);
+            return (Math.Clamp(-z * (px - leveys * 0.5), -vx, vx), Math.Clamp(-z * (py - korkeus * 0.5), -vy, vy));
+        }
+
         /// <summary>Cupola 3:n reunavalot Codexin tiedostonimin: kapea valo ikkunan reunassa luoteessa, koillisessa ja lounaassa.</summary>
         public static readonly string[] Cupola3ValoNimet = { "sun-nw", "sun-ne", "sun-sw" };
         const double R2 = 0.70710678118654752, Cupola3Keila = 0.35;

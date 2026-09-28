@@ -70,7 +70,10 @@ namespace Matkakirja.Natiivi
         public const string HorisontinSarja = "";
         static bool RajausPaalla => IssKuvakulma.Rajaus != IssKuvakulma.IkkunanRajaus.Katto;
         static string KaytettavaSarja => RajausPaalla ? HorisontinSarja : Sarja;
-        static string KuvaAvain => Cupola3Kaytossa ? "c3:" + Ohjaamo3Kulma : (RajausPaalla ? "r:" : "k:") + KaytettavaSarja;
+        static string KuvaAvain => Cupola3Kaytossa ? "c3:" + Cupola3Sarja : (RajausPaalla ? "r:" : "k:") + KaytettavaSarja;
+        /// <summary>Cupola 3:n tiedostonimen alku: kulma ja (vain kulmalle A) poltettu sarja, esim. "iss-cupola3-a-pehmea-".</summary>
+        static string Cupola3Sarja => "iss-cupola3-" + Ohjaamo3Kulma + "-"
+            + (Ohjaamo3Kulma == "a" && !string.IsNullOrEmpty(Ohjaamo3Sarja) ? Ohjaamo3Sarja + "-" : "");
         string haettuAvain;
         /// <summary>
         /// CUPOLA 3 (Codexin toimitus 28.9. klo 22.4x pyöreällä kattoikkunalla, ämpäri karttanostot/20260928/iss-cupola3-*):
@@ -81,12 +84,23 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Ohjaamo3 = true;
         public static string Ohjaamo3Kulma = "a";
+        /// <summary>
+        /// Omistaja 28.9. klo 23.1x cl18:n jälkeen ("OK, junaan", kulma A): "tosin tummenna ja pehmennä aavistuksen ohjaamoa".
+        /// Kulman A oletussarja "pehmea" = Linssisepän poltto (c3_pehmea.py): Gaussin sumennus noin 2 näyttöpikseliä
+        /// premultiplied-alfalla ohjaamoon, lasiin ja reunavaloihin, ja valojen alfa vahvistettu takaisin huippuunsa (× 1,3–1,5),
+        /// jotta auringonvalo pokissa säilyy. Tummennus sävytyksellä <see cref="Cupola3Tummuus"/>. "" = Codexin terävä (cl18).
+        /// A/B `astro kyyti ohjaamo 3|3terava` ja `astro kyyti tumma <0–1>`.
+        /// </summary>
+        public static string Ohjaamo3Sarja = "pehmea";
+        public static float Cupola3Tummuus = 0.85f;
         static bool Cupola3Kaytossa => Ohjaamo3 && IssKuvakulma.Rajaus == IssKuvakulma.IkkunanRajaus.Pyorea;
         /// <summary>
         /// Cupola 3 on sommiteltu ruudulle valmiiksi (ikkuna 98 % iPhonen leveydestä), joten sitä suurennetaan vain 1,04 × ja
         /// ajelehdus puolitetaan (4 pt, 0,25°): liike ei paljasta kuvan reunoja, ja ikkuna pysyy pyöreänä.
         /// </summary>
         const float Cupola3Yli = 1.04f, Cupola3Ajelehdus = 0.5f;
+        /// <summary>Kuvan reunan vara (pt) keskitetyssä rajauksessa: ajelehdus 3,5–4 pt + kallistus ja skaala.</summary>
+        const float Cupola3Vara = 8f;
         readonly float[] cupola3Painot = new float[3];
         /// <summary>Rajattu Cupola 3:lla (PaivitaKehys).</summary>
         bool cupola3;
@@ -285,14 +299,16 @@ namespace Matkakirja.Natiivi
             bool horisontti = rajattu && IssKuvakulma.Horisontti;
             ulko2.style.display = horisontti || cupola3 ? DisplayStyle.None : DisplayStyle.Flex;
             float tumma = rajattu ? OhjaamonTummuus : 1f;
-            kehys2.style.unityBackgroundImageTintColor = cupola3 ? Color.white : new Color(tumma, tumma, tumma * 1.06f, 1f);
+            kehys2.style.unityBackgroundImageTintColor = cupola3 ? new Color(Cupola3Tummuus, Cupola3Tummuus, Cupola3Tummuus, 1f)
+                : new Color(tumma, tumma, tumma * 1.06f, 1f);
             katto.style.display = horisontti ? DisplayStyle.Flex : DisplayStyle.None;
             for (int i = 0; i < valot.Length; i++)
                 valot[i].style.display = rajattu && Reunavalo && (!cupola3 || i < IssKuvakulma.Cupola3ValoNimet.Length)
                     ? DisplayStyle.Flex : DisplayStyle.None;
             PaivitaKupu();
             PaivitaReunavalo();
-            OhjaamonTila = (cupola3 ? "cupola3 " + Ohjaamo3Kulma + (IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad ? " ipad" : " iphone")
+            OhjaamonTila = (cupola3 ? Cupola3Sarja + (IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad ? "ipad" : "iphone")
+                    + $" tummuus {Cupola3Tummuus:0.00}"
                     + $" valot {cupola3Painot[0]:0.00}/{cupola3Painot[1]:0.00}/{cupola3Painot[2]:0.00}"
                 : rajattu ? "cupola2 " + IssKuvakulma.Rajaus : uusi ? "kupoli" : "ei kuvaa")
                 + $", kuva {(Kuva2Tila == null ? "-" : Kuva2Tila.Value ? "ok" : "ei")}, käännetty {kupuKaannetty}";
@@ -363,7 +379,7 @@ namespace Matkakirja.Natiivi
         void HaeCupola3()
         {
             string koko = IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad ? "ipad-2732x2048" : "iphone-1290x2796";
-            string sarja = "iss-cupola3-" + Ohjaamo3Kulma + "-";
+            string sarja = Cupola3Sarja;
             ulko2.style.backgroundImage = StyleKeyword.None;
             for (int i = 0; i < valot.Length; i++)
             {
@@ -511,8 +527,15 @@ namespace Matkakirja.Natiivi
             siirto = Vector2.zero; z = 1f;
             float W = kupu.layout.width, H = kupu.layout.height;
             if (!(W > 1f) || !(H > 1f)) return false;
-            // Cupola 3: kuva on jo rajattu ruudulle (cover), pieni suurennos ajelehdusta varten.
-            if (cupola3) { z = Cupola3Yli; kuvanYlareuna = 0f; return true; }
+            // Cupola 3: kuva on jo rajattu ruudulle (cover), pieni suurennos ajelehdusta varten, ja ikkuna kohti keskustaa niin
+            // paljon kuin kuvan reuna sallii (iPadilla lappu leikkautui cl18:ssa reunaan).
+            if (cupola3)
+            {
+                z = Cupola3Yli; kuvanYlareuna = 0f;
+                var d = IssKuvakulma.Cupola3Siirto(W, H, IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad, Ohjaamo3Kulma, z, Cupola3Vara);
+                siirto = new Vector2((float)d.x, (float)d.y);
+                return true;
+            }
             float s = Mathf.Max(W / KuvaL, H / KuvaK);
             float ox = (W - KuvaL * s) * 0.5f, oy = (H - KuvaK * s) * 0.5f;
             kuvanYlareuna = oy;

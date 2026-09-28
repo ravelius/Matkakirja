@@ -86,6 +86,15 @@ namespace Matkakirja.Linssit.Testit
             // Suoraan edessä tai takana: ei reunavaloa.
             IssKuvakulma.Cupola3Valot(0.0002, 0.0001, p);
             Oleta.Tosi(p[0] == 0 && p[1] == 0 && p[2] == 0, "edessä");
+            // Keskitys (cl18: iPadilla lappu leikkautui reunaan): iPad 11 vaaka, ikkuna 0,465 → keskelle 32,6 pt alas, vara jää.
+            var d = IssKuvakulma.Cupola3Siirto(1194, 834, true, "a", 1.04, 8);
+            Oleta.Tosi(d.y > 32 && d.y < 33.2 && Math.Abs(d.x) < 4.5, $"iPad vaaka ({d.x:0.0}, {d.y:0.0})");
+            // iPhone pysty: reuna rajoittaa (ylimääräistä 17,5 pt − vara 8 = 9,5 pt), ikkuna ei mene reunan yli.
+            d = IssKuvakulma.Cupola3Siirto(402, 874, false, "a", 1.04, 8);
+            Oleta.Tosi(Math.Abs(d.y - 9.48) < 0.05 && Math.Abs(d.x) < 0.7, $"iPhone pysty ({d.x:0.00}, {d.y:0.00})");
+            // Ilman ylimääräistä reunaa (z = 1, vara 8) ei siirtoa lainkaan.
+            d = IssKuvakulma.Cupola3Siirto(402, 874, false, "a", 1, 8);
+            Oleta.Tosi(d.x == 0 && d.y == 0, "ei varaa");
         }
 
         [Testi] static void IkkunanSilmaOnIssissa()
