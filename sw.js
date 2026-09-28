@@ -388,6 +388,7 @@ const SHELL = [
   './js/linssit/astronaut-kysymykset.js',
   './js/linssit/satelliitti-aani.js',
   './js/linssit/astro-sumu.js',
+  './js/tiivistys.js',
   './js/linssit/astronautin-kierros.js',
   './js/linssit/satelliitti-avaruus.js',
   './js/linssit/satelliitti-nimiot.js',

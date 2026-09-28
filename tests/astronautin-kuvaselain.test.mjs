@@ -104,3 +104,16 @@ test('avaruussumu on piilossa kuvan ajan (ei suorakaidetta läpikuultavan tausta
 test('reunavarjo ja valoreuna rajataan ympyrään (neliön reunat eivät näy)', () => {
   assert.match(avaruus, /clip-path:circle\(50% at 50% 50%\)/);
 });
+
+test('pienennetty selite on otsikkorivin kokoinen ja koko liukuu (js/tiivistys.js)', () => {
+  assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-runko \{\s*position: absolute;\s*visibility: hidden;/);
+  assert.match(lahde, /import \{ animoiKoko \} from '\.\.\/tiivistys\.js';/);
+});
+
+test('selite luetaan ääneen kertoja-asetuksen mukaan, säilöön, ja luenta loppuu kuvan mukana', () => {
+  assert.match(lahde, /if \(!luentaKytkinPaalla\(\)\) return;/);
+  assert.match(lahde, /lueAaneen\(teksti, null, \{ persoona: 'kertoja', sailio: SELITTEEN_SAILIO \}\)/);
+  assert.match(lahde, /export const SELITTEEN_SAILIO = 'astro-selite';/);
+  assert.match(lahde, /seliteTeksti\.textContent = h\.teksti \?\? kohde\.selite;\s*lueSelite\(h\);/);
+  assert.match(lahde, /if \(luettu\) \{ try \{ pysaytaLukija\(\); \}/);
+});
