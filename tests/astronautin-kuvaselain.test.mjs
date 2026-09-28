@@ -95,3 +95,8 @@ test('kohteen nimi kirkastuu 1,2 s selaimella vaihdettaessa (ei liikkeenvähenny
   assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-uusi \.satelliitti-selite-otsikko \{\s*animation: satelliitti-nimi-kirkastuu 1200ms ease-out;/);
   assert.match(tyyli, /@media \(prefers-reduced-motion: reduce\) \{[\s\S]*satelliitti-selite-uusi \.satelliitti-selite-otsikko \{ animation: none; \}/);
 });
+
+test('avaruussumu on piilossa kuvan ajan (ei suorakaidetta läpikuultavan taustan läpi)', () => {
+  assert.match(tyyli, /body\.satelliitti-kuva-auki \.astro-sumu \{ visibility: hidden; \}/);
+  assert.match(lahde, /document\.body\.classList\.add\(KUVA_AUKI_LUOKKA\)/);
+});

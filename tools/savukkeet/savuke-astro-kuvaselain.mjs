@@ -141,6 +141,7 @@ const tila = (s) => s.evaluate(() => {
     nimi: document.querySelector('.satelliitti-selite-otsikko')?.firstChild?.textContent ?? null,
     kuva: document.querySelector('.satelliitti-kuva')?.getAttribute('src')?.split('/').pop() ?? null,
     tausta: k ? getComputedStyle(k).backgroundColor : null,
+    sumu: [...document.querySelectorAll('.astro-sumu')].map((e) => getComputedStyle(e).visibility).join(',') || null,
     uusi: document.querySelector('.satelliitti-selite')?.classList.contains('satelliitti-selite-uusi') ?? false,
     napit: napit && !napit.hidden ? laatikko(napit) : null,
     nauha: laatikko(document.querySelector('.satelliitti-nauha:not([hidden])')),
@@ -196,6 +197,7 @@ async function ajaNakyma(nimi) {
     return;
   }
   vaadi(n('tausta läpikuultava 0,7'), /rgba\(4, 9, 7, 0\.7/.test(etna.tausta ?? ''), etna.tausta);
+  vaadi(n('avaruussumu piilossa kuvan ajan'), etna.sumu === null || !etna.sumu.includes('visible'), etna.sumu);
   const e = kohde('etna');
   vaadi(n('kamera kohteen yllä'), etna.pov && Math.abs(etna.pov.lat - e.lat) < 1.5 && Math.abs(etna.pov.lng - e.lon) < 1.5,
     JSON.stringify(etna.pov));
