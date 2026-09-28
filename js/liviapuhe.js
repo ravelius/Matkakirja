@@ -479,6 +479,18 @@ export const LIVIAN_LINSSILAHTEET = {
 };
 
 /**
+ * ASTRONAUTIN KAMERAN JA ISS-KYYDIN REPLIIKIT (28.9.2026). Tekstit ovat
+ * kaanonia js/livia.js:n LIVIAN_ISS-taulussa (ryhmät a–d), ja jokainen
+ * ryhmä on oma lähteensä: `iss-a` tervetulo, `iss-b` suositukset,
+ * `iss-c` räppäisy ja anteeksipyyntö, `iss-d` ISS-kyyti. Avain on siis
+ * `iss-a-1` … `iss-d-4` ja tiedosto `livia-iss-a-1.mp3` — sama
+ * nimeämissääntö kuin muilla lähteillä (livianAaniNimi). Kutsupaikka
+ * (js/linssit/pulu-iss.js) antaa aina kuplan tekstin, joten äänite soi
+ * vain, kun teksti vastaa LIVIAN_AANITETYT-tiivistettä.
+ */
+export const LIVIAN_ISS_LAHTEET = Object.freeze(['iss-a', 'iss-b', 'iss-c', 'iss-d']);
+
+/**
  * PULUN PERUSTASO — HIEMAN KERTOJAN ALLE (omistaja 8.9.2026,
  * sanatarkasti: *"Pulun ääni on vähän voimakkaampi kuin kertojan, sitä
  * voisi laskea koko pelissä hieman"*).
@@ -528,6 +540,7 @@ export const LIVIAN_AANILAHTEET = [
   'avaus', 'paljastus', 'mannerivihje', 'lehtivinkki',
   ...Object.keys(LIVIAN_KAUPUNKILAHTEET),
   ...Object.keys(LIVIAN_LINSSILAHTEET),
+  ...LIVIAN_ISS_LAHTEET,
 ];
 
 /**

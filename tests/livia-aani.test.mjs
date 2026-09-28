@@ -79,7 +79,9 @@ test('jokaisella repliikillä on oma tiedostonimi', () => {
   // Viisi avausta, KOLME paljastusta (uusi rytmi 7.9.2026), yksi
   // mannerivihje, yksi lehtivinkki + kaupungit.
   assert.equal(rivit.length,
-    LIVIAN_AVAUS.length + 3 + 1 + 1 + KAUPUNKIREPLIIKKEJA + LINSSIREPLIIKKEJA);
+    LIVIAN_AVAUS.length + 3 + 1 + 1 + KAUPUNKIREPLIIKKEJA + LINSSIREPLIIKKEJA
+    // Astronautin kamera ja ISS-kyyti (28.9.2026): 2 + 2 + 2 + 4.
+    + 10);
   const lahteet = LIVIAN_AANILAHTEET.join('|');
   for (const rivi of rivit) {
     assert.match(rivi.nimi, new RegExp(`^livia-(${lahteet})-\\d+\\.mp3$`),
@@ -109,9 +111,12 @@ test('nimi johdetaan lähteestä ja indeksistä samalla funktiolla', () => {
   // maadoitus korvattiin yhdellä kommenttikuplalla — yhteensä 45
   // kaupunkia. Lisäksi neljä js/livia.js:n lähdettä ja linssien
   // välihuomiot (Ihmisen matkan kertomus, 7.9.2026).
+  // ISS-lähteet (28.9.2026) ovat viimeisinä: iss-a … iss-d.
   assert.equal(LIVIAN_AANILAHTEET.length,
-    4 + 45 + Object.keys(LIVIAN_LINSSILAHTEET).length);
-  assert.equal(LIVIAN_AANILAHTEET.at(-1), 'ihmisen-matka');
+    4 + 45 + Object.keys(LIVIAN_LINSSILAHTEET).length + 4);
+  assert.equal(LIVIAN_AANILAHTEET.at(-5), 'ihmisen-matka');
+  assert.deepEqual(LIVIAN_AANILAHTEET.slice(-4), ['iss-a', 'iss-b', 'iss-c', 'iss-d']);
+  assert.equal(livianAaniNimi('iss-d', 3), 'livia-iss-d-4.mp3');
   assert.equal(livianAaniNimi('ihmisen-matka', 0), 'livia-ihmisen-matka-1.mp3');
 });
 
