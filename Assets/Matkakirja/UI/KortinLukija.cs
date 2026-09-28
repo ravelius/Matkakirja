@@ -13,7 +13,8 @@
 //      kortin vaihe), viimeksi kuultu pala jää talteen ja seuraava napautus jatkaa sen alusta; loppuun luettu alkaa alusta.
 //   2. Keskeytettynä kaiutin vilkkuu kevyesti (vain läpinäkyvyys, USS-transitio; vähennetty liike: ei vilkuntaa).
 //   3. Ratas avaa paneelin: nopeus 0,6–1,6 (Puhe.Nopeus) ja lukijan ääni pelinimellä (Striimiaani.Pelinimet — moottorin
-//      tunnus ei näy pelaajalle). Molemmat kuuluvat seuraavasta palasta. Napautus paneelin ohi sulkee.
+//      tunnus ei näy pelaajalle). Molemmat kuuluvat seuraavasta palasta. Napautus paneelin ohi sulkee vain paneelin
+//      (ei korttia, napautus ei läpäise alempaan kerrokseen).
 //   4. Kaiuttimen kolme kaarta ovat VU-mittari kuten isoisän luennassa (Matkakirjakortti.Mittari): luennan aikana
 //      Puhe.SoivaTaso, muuten täysinä.
 using System;
@@ -318,11 +319,34 @@ namespace Matkakirja.Natiivi
             Juuri.panel?.visualTree.RegisterCallback<PointerDownEvent>(OhiNapautus, TrickleDown.TrickleDown);
         }
 
+        /// <summary>
+        /// Napautus paneelin ohi sulkee VAIN paneelin (omistaja 28.9.2026, TF 1.0.34: äänen vaihdon jälkeen ohinapautus
+        /// sulki myös nostokortin). Sääntö kaikille päällekkäisille kerroksille (Fable): päällimmäinen sulkeutuu, eikä
+        /// sama napautus läpäise alempaan kerrokseen. Kuuntelija on juuressa TrickleDown-vaiheessa, joten
+        /// StopPropagation estää painalluksen pääsyn kortin himmennykseen; saman kosketuksen PointerUp ja Click niellään.
+        /// </summary>
         void OhiNapautus(PointerDownEvent e)
         {
             if (paneeli == null) return;
             if (e.target is VisualElement v && (paneeli.Contains(v) || ratas.Contains(v) || Pudotusvalikossa(v))) return;
+            var puu = paneeli.panel?.visualTree;
             SuljePaneeli();
+            e.StopPropagation();
+            if (puu == null) return;
+            int sormi = e.pointerId;
+            EventCallback<PointerUpEvent> ylos = null;
+            EventCallback<ClickEvent> klikki = null;
+            ylos = u =>
+            {
+                if (u.pointerId != sormi) return;
+                u.StopPropagation();
+                puu.UnregisterCallback(ylos, TrickleDown.TrickleDown);
+                // Click syntyy saman kosketuksen jälkeen; nielaisu vain tämän kehyksen ajan.
+                puu.schedule.Execute(() => puu.UnregisterCallback(klikki, TrickleDown.TrickleDown));
+            };
+            klikki = c => { c.StopPropagation(); puu.UnregisterCallback(klikki, TrickleDown.TrickleDown); };
+            puu.RegisterCallback(ylos, TrickleDown.TrickleDown);
+            puu.RegisterCallback(klikki, TrickleDown.TrickleDown);
         }
 
         /// <summary>
