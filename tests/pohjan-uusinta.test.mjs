@@ -32,7 +32,7 @@ test('aukko paikataan myöhemmin: seuraava päivitys ja paluu näkyviin', () => 
   assert.match(virhepolku, /kuva\.dataset\.virhe = String\(Date\.now\(\)\)/, 'uusintojen jälkeen merkitään aukoksi');
   assert.match(PYRAMIDI, /if \(oli\.dataset\.virhe && Date\.now\(\) - Number\(oli\.dataset\.virhe\) > PAIKKAUSVALI_MS\) paikkaaLaatta\(oli\);/);
   for (const tapahtuma of ['visibilitychange', 'pageshow', 'online']) {
-    assert.match(PYRAMIDI, new RegExp(`addEventListener\\('${tapahtuma}', paikkaaKaikki\\)`), tapahtuma);
+    assert.match(PYRAMIDI, new RegExp(`addEventListener\\?\\.\\('${tapahtuma}', paikkaaKaikki\\)`), tapahtuma);
   }
   assert.match(PYRAMIDI, /const tyhjaTila = \(kerros, alin = false, lapinakyva = false\) => kirjaaTila\(/, 'jokainen kerros rekisterissä');
 });
