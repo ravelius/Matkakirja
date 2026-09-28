@@ -58,7 +58,7 @@ export const JARJESTYS = Object.freeze({ pilvet: 2, yokuori: 2.8, revontulet: 2.
 
 const MAAN_SADE_M = 6378137;
 // three.js-vakiot numeroina (Globe.gl:n oma three; ei omaa kopiota).
-const BLEND = Object.freeze({ normaali: 1, lisaava: 2, oma: 5, yksi: 201, yksiMiinusLahdeAlfa: 205, lisays: 100 });
+export const BLEND = Object.freeze({ normaali: 1, lisaava: 2, oma: 5, yksi: 201, yksiMiinusLahdeAlfa: 205, lisays: 100 });
 const PUOLI = Object.freeze({ etu: 0, taka: 1 });
 
 /** Pallon pisteen (Globe.gl-koordinaatit) leveys ja pituus asteina: sama kaava kuin varjostimissa. */
@@ -267,9 +267,9 @@ function lataaTekstuuri(T, osoite, ikkuna) {
 }
 
 // three.js lukee vec3/vec4-uniformin kentistä x, y, z (w): tavallinen olio riittää, ei omaa Vector-luokkaa.
-function vec3(y, [a, b, c]) { return { x: a, y: b, z: c }; }
+export function vec3(y, [a, b, c]) { return { x: a, y: b, z: c }; }
 
-function kuori(y, { sade, fragment, uniformit, jarjestys, puoli = PUOLI.etu, sekoitus = 'normaali' }) {
+export function kuori(y, { sade, fragment, uniformit, jarjestys, puoli = PUOLI.etu, sekoitus = 'normaali' }) {
   const { luokat, pallo, R } = y;
   const mat = new luokat.Shader({
     uniforms: uniformit, vertexShader: VERTEX, fragmentShader: fragment,
