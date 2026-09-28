@@ -8715,3 +8715,7 @@ Omistaja 28.9. klo 17.4x sanatarkasti: "palauta 3d symbolit vielä mutta tee nii
 ## OMISTAJA: ERIKOISMALLI KOHDEKAUPUNGISSA SIIRRETAAN VIEREEN (28.9.2026 klo 17.27)
 
 Omistaja 28.9. klo 17.4x sanatarkasti: "jos erikoissymboli on kohdekaupungissa, se pitää siirtää hieman sen viereen" → Linssiseppa: erikoismalli kaupunkimerkin viereen niin ettei peita kaupunkia, nuppineulaa eika nimiota. 1.0.38.
+
+## OMISTAJA: BUGI — STRIIMILUENTA ALKAA KESKELTA, PALAA ALKUUN JA HYPPII (28.9.2026 klo 17.29)
+
+Omistaja 28.9. klo 17.5x sanatarkasti: "Nykyisessä buildissa striimiluenta alkaa kesken lauseen, ja sitten se jossain välissä aloittaa ensimmäisen lauseen alusta ja sitten se saattaa taas hypätä johonkin kohtaan. Onko tätä korjattu jo seuraavaan versioon?" → Natiivi-UI karkeen: toisto seka lehden striimilukijasta etta Pulun virkevirrasta 1.0.36/1.0.37-koodilla, korjaus 1.0.38:aan.
