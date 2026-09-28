@@ -44,3 +44,7 @@ Ideat jonossa: Pulu avaruuskävelyllä radiolla + kamera kädessä (myöhemmin, 
 - taskpolicy -b kaataa käännöksiä ja rikkoo mikkiäänen → vain nice 15 niille.
 - Omistajan sanelu voi kääntyä englanniksi ("withdrawals" = nostot, "county" = maakunta).
 - Päivän 5 h -ikkuna 22 %, viikko 38 %.
+
+## 5. Viimeisin (19.3x)
+
+Natiivi-UI: hyppykorjaus (puhe-hanta) + Pulun puheen pysäytys chatin sulussa (häivytys 0,2 s) + loitonnusraja → merge-pyyntö Natiivisepällä 1.0.39:ään, laitteella todennettu; ElevenLabs-Pulu laitteella 3,2 s. Seuraavaksi: BUILD 39 → VIE heti kun Laitetestaaja PASS.
