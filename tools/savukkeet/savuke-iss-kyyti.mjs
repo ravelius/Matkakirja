@@ -238,23 +238,36 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
    * asemasta niin, ettei mikään piste ole lähempänä; ellei sellaista ole,
    * napautetaan merkkiin (tuloste kertoo kumpi).
    */
-  const napautus = await s.evaluate(() => {
-    const kotelo = (window.matkakirja.ui.pallolauta?.kotelo ?? document.querySelector('.pallo-kotelo, .pallo-kuori')).getBoundingClientRect();
+  const vapaa = await s.evaluate(() => {
+    /*
+     * KILPAILUVAPAA NAPAUTUS: kaukonäkymässä pallo pyörii, joten merkki ja
+     * pisteet liikkuvat hiiren napautuksen ja erillisen mittauksen välissä
+     * (Siirtoseppä 28.9. klo 21.0x: suunta oli oikea, osuma silti ohi).
+     * Suunta valitaan ja pointerdown/pointerup lähetetään SAMASSA
+     * synkronisessa ajossa samoista koordinaateista, joilla pelin
+     * issNapautukseen päättää.
+     */
+    const koteloEl = window.matkakirja.ui.pallolauta?.kotelo ?? document.querySelector('.pallo-kotelo, .pallo-kuori');
+    const k = koteloEl.getBoundingClientRect();
     const iss = window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.tila?.()?.kalvo?.iss ?? null;
-    return { kotelo: { x: kotelo.left, y: kotelo.top }, iss,
-      pisteet: [...document.querySelectorAll('.satelliitti-piste:not(.pallolauta-takana) .satelliitti-ydin')]
-        .map((el) => el.getBoundingClientRect()).filter((b) => b.width).map((b) => ({ x: b.left + b.width / 2, y: b.top + b.height / 2 })) };
+    if (!iss?.nakyvissa || iss.x == null) return { d: -1 };
+    const keski = { x: k.left + iss.x, y: k.top + iss.y };
+    const pisteet = [...document.querySelectorAll('.satelliitti-piste:not(.pallolauta-takana) .satelliitti-ydin')]
+      .map((el) => el.getBoundingClientRect()).filter((b) => b.width).map((b) => ({ x: b.left + b.width / 2, y: b.top + b.height / 2 }));
+    const suunnat = [[20, 0], [-20, 0], [0, 20], [0, -20], [14, 14], [-14, 14], [14, -14], [-14, -14]];
+    const valittu = suunnat.map(([dx, dy]) => ({ x: keski.x + dx, y: keski.y + dy, d: Math.hypot(dx, dy), dx, dy }))
+      .find((c) => pisteet.every((p) => Math.hypot(c.x - p.x, c.y - p.y) > c.d + 1))
+      ?? { x: keski.x, y: keski.y, d: 0, dx: 0, dy: 0 };
+    const alle = document.elementFromPoint(valittu.x, valittu.y) ?? koteloEl;
+    const tapahtuma = (tyyppi) => new PointerEvent(tyyppi, { bubbles: true, cancelable: true, clientX: valittu.x, clientY: valittu.y, pointerId: 1, pointerType: 'mouse', isPrimary: true });
+    alle.dispatchEvent(tapahtuma('pointerdown'));
+    alle.dispatchEvent(tapahtuma('pointerup'));
+    return { d: valittu.d, kohta: [valittu.dx, valittu.dy], pisteita: pisteet.length };
   });
-  const iss = napautus.iss?.x != null ? napautus.iss : (kauko.iss ?? { x: 100, y: 100 });
-  const keski = { x: napautus.kotelo.x + iss.x, y: napautus.kotelo.y + iss.y };
-  const suunnat = [[20, 0], [-20, 0], [0, 20], [0, -20], [14, 14], [-14, 14], [14, -14], [-14, -14]];
-  const vapaa = suunnat.map(([dx, dy]) => ({ x: keski.x + dx, y: keski.y + dy, d: Math.hypot(dx, dy) }))
-    .find((k) => napautus.pisteet.every((p) => Math.hypot(k.x - p.x, k.y - p.y) >= k.d)) ?? { ...keski, d: 0 };
-  await s.mouse.click(vapaa.x, vapaa.y);
   await s.waitForTimeout(400);
   const lento = await tila(s);
-  vaadi(n(`napautus ISS:n viereen (${vapaa.d ? '20 px' : 'merkkiin, pisteet vieressä'}) vie kyytiin`), lento.kyyti.tila === 'seuranta' && lento.kyyti.kyydissa,
-    JSON.stringify({ tila: lento.kyyti.tila, siirtyy: lento.kyyti.siirtyy, kohta: [Math.round(vapaa.x - keski.x), Math.round(vapaa.y - keski.y)], pisteita: napautus.pisteet.length }));
+  vaadi(n(`napautus ISS:n viereen (${vapaa.d > 0 ? '20 px' : 'merkkiin, pisteet vieressä'}) vie kyytiin`), lento.kyyti.tila === 'seuranta' && lento.kyyti.kyydissa,
+    JSON.stringify({ tila: lento.kyyti.tila, siirtyy: lento.kyyti.siirtyy, kohta: vapaa.kohta, pisteita: vapaa.pisteita }));
   await s.waitForTimeout(3600);
   const seuranta = await tila(s);
   const et = await issEtaisyys(s);
