@@ -619,7 +619,7 @@ namespace Matkakirja.Natiivi
                         vapaa = Vakaa(nimionVaihto, m.Id, lukko.Nakyy, vapaa);
                         m.NimioNakyy = vapaa;
                         if (vapaa) { varatut.Add(a0); AsetaNimio(m); }
-                        m.Nimio.style.opacity = vapaa ? 1f : 0f;
+                        AsetaNimionPeitto(m, vapaa);
                         AsetaNimionOsuma(m);
                         uudet[m.Id] = new Lukko { Kylki = m.Kylki, Nakyy = vapaa };
                         continue;
@@ -652,7 +652,7 @@ namespace Matkakirja.Natiivi
                     if (paikka.width > 0) varatut.Add(paikka);
                     AsetaNimio(m);
                 }
-                m.Nimio.style.opacity = m.NimioNakyy ? 1f : 0f;
+                AsetaNimionPeitto(m, m.NimioNakyy);
                 AsetaNimionOsuma(m);
                 if (m.Id != null) uudet[m.Id] = new Lukko { Kylki = m.Kylki ?? loytyi ?? "oikea", Nakyy = m.NimioNakyy };
             }
@@ -802,6 +802,18 @@ namespace Matkakirja.Natiivi
         /// osuman ja ClickEvent kuplii merkkiin (Napautus); piilotettu (kylki ei mahtunut, opasiteetti 0) ja linssinimet
         /// eivät ota, jotta näkymätön teksti ei varasta kartan napautuksia.
         /// </summary>
+        /// <summary>
+        /// Nimiön näkyvyys pehmeästi (omistaja 28.9.2026: "saisi hävitä pehmeästi feidaten pois ja tulla takaisin samalla
+        /// lailla"): USS-siirtymä 0,25 s (mk-nosto-merkki__nimio), piirto herätetään siirtymän ajaksi.
+        /// </summary>
+        static void AsetaNimionPeitto(Merkki m, bool nakyy)
+        {
+            float tavoite = nakyy ? 1f : 0f;
+            if (m.Nimio.style.opacity.keyword == StyleKeyword.Undefined && Mathf.Approximately(m.Nimio.style.opacity.value, tavoite)) return;
+            m.Nimio.style.opacity = tavoite;
+            Ruudunpaivitys.Herata(0.35f);
+        }
+
         void AsetaNimionOsuma(Merkki m) =>
             m.Nimio.pickingMode = !vainNimet && m.NimioNakyy ? PickingMode.Position : PickingMode.Ignore;
 
@@ -820,6 +832,13 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(uusi.Nimio, Kirjasin.Atlas);
                 merkit.Add(uusi);
             }
+            // VAKAA IDENTITEETTI (omistaja 28.9.2026, TF 1.0.34: "kohdetekstit vielä välkkyvät"): sama nosto saa saman
+            // elementin kuin edellisellä piirrolla. Ennen i:s merkki meni i:nnelle näytettävälle, ja kun joku nosto ylitti
+            // ruudun reunan, järjestys siirtyi ja elementit vaihtoivat nostoa: nimiö hyppäsi ja sen näkyvyys nollautui.
+            // Vaihto listassa (ei hierarkiassa) pitää käytössä olevat indekseissä 0…n−1 (Sovita, PeitaMallienAlta).
+            if (s.Id != null && merkit[i].Id != s.Id)
+                for (int j = i + 1; j < merkit.Count; j++)
+                    if (merkit[j].Id == s.Id) { (merkit[i], merkit[j]) = (merkit[j], merkit[i]); break; }
             var m = merkit[i];
             m.El.style.display = DisplayStyle.Flex;
             if (m.Id != s.Id)
@@ -835,7 +854,7 @@ namespace Matkakirja.Natiivi
                     if (s.Id != null && lepoKierto != null && !lepoKierto.Levossa)
                         lukot[s.Id] = new Lukko { Kylki = m.Kylki, Nakyy = true, Ele = true };
                 }
-                m.Nimio.style.opacity = m.NimioNakyy ? 1f : 0f;
+                AsetaNimionPeitto(m, m.NimioNakyy);
                 AsetaNimionOsuma(m);
             }
             m.Id = s.Id;

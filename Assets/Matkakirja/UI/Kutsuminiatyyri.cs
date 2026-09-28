@@ -19,6 +19,8 @@
 //
 // Ulkoasu (web): reuna 2 px #f5f0e2, kulma 9, pohja #d9ccb0, kuva cover; nimi alareunassa Luku lihava 10 pt #fff8ec
 // pohjalla rgba(33,29,24,.72), yksi rivi. Esiin 350 ms (scale 0,85 → 1, opacity 0 → 1); vähennetty liike: heti.
+// PEHMEÄ POISTUMINEN (omistaja 28.9.2026, TF 1.0.34: Ateenan kortti "häviää näkyvistä yhtäkkiä" ruudun reunalla):
+// piiloon 250 ms:ssa (opacity → 0, scale → 0,92) nykyisestä tilasta; paluu kesken häivytyksen jatkaa siitä.
 using System.Collections.Generic;
 using Matkakirja.Peli;
 using UnityEngine;
@@ -31,7 +33,7 @@ namespace Matkakirja.Natiivi
         public const float Koko = 64f;
         /// <summary>Web KUTSUN_KERROIN: nostojen karttakerroin, jonka alla kutsu on piilossa.</summary>
         const float Kerroin = 0.95f;
-        const float Reunavara = 4f, EsiinMs = 350f;
+        const float Reunavara = 4f, EsiinMs = 350f, PoisMs = 250f;
         /// <summary>Piilotuksen ja paluun hystereesi: peiton/vapauden kesto (s) ja paluun lisävara (pt).</summary>
         const float PiiloS = 0.4f, Vara = 6f;
         static readonly float[] Renkaat = { 8f, 20f, 36f };
@@ -45,6 +47,8 @@ namespace Matkakirja.Natiivi
         PalloKierto kierto;
         string kaupunki, kuvanTiedosto;
         float esiinAlku = float.NaN;
+        /// <summary>Häivytyksen alku (ms) ja alkupeitto; NaN = ei häivytystä.</summary>
+        float poisAlku = float.NaN, poisPeitto = 1f;
         bool nakyy;
         /// <summary>Lukittu siirto kaupungin pisteestä (vasen yläkulma), tai null = ei vielä valittu tälle kaupungille.</summary>
         Vector2? lukittu;
@@ -74,18 +78,49 @@ namespace Matkakirja.Natiivi
         {
             if (b == nakyy) return;
             nakyy = b;
-            nappi.style.display = b ? DisplayStyle.Flex : DisplayStyle.None;
+            bool liike = !LinssiUi.VahennettyLiike();
             if (b)
             {
-                bool liike = !LinssiUi.VahennettyLiike();
-                esiinAlku = liike ? -1f : float.NaN;
-                nappi.style.opacity = liike ? 0f : 1f;
-                nappi.style.scale = liike ? new Scale(new Vector3(0.85f, 0.85f, 1f)) : (StyleScale)StyleKeyword.Null;
+                nappi.style.display = DisplayStyle.Flex;
+                nappi.pickingMode = PickingMode.Position;
+                // Paluu kesken häivytyksen: esiintulo jatkuu nykyisestä peitosta (ei välähdystä nollaan).
+                float alku = float.IsNaN(poisAlku) ? 0f : nappi.resolvedStyle.opacity;
+                poisAlku = float.NaN;
+                // Käyrän e = 1 − (1 − s)² käänteinen: s, jolla e = alku.
+                esiinAlku = liike ? -1f - (1f - Mathf.Sqrt(1f - Mathf.Clamp01(alku))) * EsiinMs : float.NaN;
+                nappi.style.opacity = liike ? alku : 1f;
+                nappi.style.scale = liike ? new Scale(new Vector3(Mathf.Lerp(0.85f, 1f, alku), Mathf.Lerp(0.85f, 1f, alku), 1f)) : (StyleScale)StyleKeyword.Null;
+                return;
             }
+            esiinAlku = float.NaN;
+            if (!liike || nappi.resolvedStyle.display == DisplayStyle.None) { nappi.style.display = DisplayStyle.None; return; }
+            // Pehmeä poistuminen: nappi ei ota napautusta häivytyksen aikana.
+            poisPeitto = Mathf.Clamp01(nappi.resolvedStyle.opacity);
+            poisAlku = Time.unscaledTime * 1000f;
+            nappi.pickingMode = PickingMode.Ignore;
+            Ruudunpaivitys.Herata(0.1f);
+        }
+
+        /// <summary>Häivytyksen askel joka ruudulla (myös kun Paivita palaa piilotukseen).</summary>
+        void Hiivu()
+        {
+            if (float.IsNaN(poisAlku)) return;
+            float s = Mathf.Clamp01((Time.unscaledTime * 1000f - poisAlku) / PoisMs);
+            float e = s * s;
+            nappi.style.opacity = poisPeitto * (1f - e);
+            float sk = Mathf.Lerp(1f, 0.92f, e);
+            nappi.style.scale = new Scale(new Vector3(sk, sk, 1f));
+            Ruudunpaivitys.Herata(0.1f);
+            if (s < 1f) return;
+            poisAlku = float.NaN;
+            nappi.style.display = DisplayStyle.None;
+            nappi.style.opacity = StyleKeyword.Null;
+            nappi.style.scale = StyleKeyword.Null;
         }
 
         void Paivita()
         {
+            Hiivu();
             var ui = UiNakymat.Hae();
             var o = PeliOhjain.Instanssi;
             string id = o != null && o.Kaytossa && o.Tila == SilmukanTila.Kartta ? o.PelaajanKaupunki : null;
@@ -200,7 +235,7 @@ namespace Matkakirja.Natiivi
         {
             if (float.IsNaN(esiinAlku)) return;
             float nyt = Time.unscaledTime * 1000f;
-            if (esiinAlku < 0f) esiinAlku = nyt;
+            if (esiinAlku < 0f) esiinAlku = nyt + (esiinAlku + 1f); // −1 − alku·EsiinMs: jatko keskeneräisestä peitosta
             float s = Mathf.Clamp01((nyt - esiinAlku) / EsiinMs);
             float e = 1f - (1f - s) * (1f - s);
             nappi.style.opacity = e;
