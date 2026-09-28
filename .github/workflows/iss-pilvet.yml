@@ -1,0 +1,81 @@
+# Tämän päivän pilvet ämpäriin kerran päivässä (Julkaisija 28.9.2026; Linssisepän
+# ISS-realismi, kohta 2, docs/raportit/iss-realismi-suunnitelma-20260928.md).
+#
+# tools/iss-pilvet.mjs hakee NASA GIBS WMS:stä (PD) eilisen UTC-päivän VIIRS-
+# tosivärikuvan 4096 × 2048 ja laskee pilvialfan vertaamalla sitä saman kuukauden
+# Blue Marble NG:hen ämpärissä (data/bmng/<kk>-4096.jpg, viedään iss-bmng.yml:llä).
+# Jos BMNG puuttuu, laskenta ohitetaan siististi eikä mitään viedä. Virhe kaataa
+# ajon ENNEN kirjoitusta, joten ämpäriin jää edellinen versio.
+# Pelaajat hakevat vain ämpäristä: media.matkakirja.app/data/pilvet/uusin.{png,json}.
+# Ajokone on GitHubin ubuntu, ei omistajan Mac.
+
+name: Pilvet ämpäriin
+
+on:
+  schedule:
+    # Klo 06.23 UTC: eilisen päivän VIIRS-kooste on silloin valmis GIBSissä.
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+    inputs:
+      paiva:
+        description: 'UTC-päivä YYYY-MM-DD (tyhjä = eilinen)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: iss-pilvet
+  cancel-in-progress: false
+
+jobs:
+  hae:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Asenna sharp ja laske pilvialfa
+        env:
+          PAIVA: ${{ inputs.paiva }}
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-fund --no-audit sharp
+          node tools/iss-pilvet.mjs --ulos pilvet ${PAIVA:+--paiva "$PAIVA"}
+          ls -la pilvet || true
+
+      # PNG ensin, JSON viimeisenä: JSON kertoo lukijalle, että kuva on valmis.
+      - name: Vie ämpäriin
+        if: hashFiles('pilvet/uusin.png') != ''
+        env:
+          R2_TILI: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_AMPARI: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          E="https://$R2_TILI.r2.cloudflarestorage.com"
+          aws s3 cp pilvet/uusin.png "s3://$R2_AMPARI/data/pilvet/uusin.png" \
+            --endpoint-url "$E" --content-type 'image/png' \
+            --cache-control 'public, max-age=3600' --no-progress
+          aws s3 cp pilvet/uusin.json "s3://$R2_AMPARI/data/pilvet/uusin.json" \
+            --endpoint-url "$E" --content-type 'application/json; charset=utf-8' \
+            --cache-control 'public, max-age=3600' --no-progress
+
+      # Takaisinluku julkisesta osoitteesta (kysely ohittaa välimuistin).
+      - name: Tarkista julkinen osoite
+        if: hashFiles('pilvet/uusin.png') != ''
+        run: |
+          set -euo pipefail
+          curl -fsS "https://media.matkakirja.app/data/pilvet/uusin.json?t=$(date +%s)" -o julkinen.json
+          node -e "const f=require('fs'),a=JSON.parse(f.readFileSync('pilvet/uusin.json','utf8')),b=JSON.parse(f.readFileSync('julkinen.json','utf8'));if(a.haettu!==b.haettu){console.error('julkinen eri kuin viety');process.exit(1)}"
+          cat julkinen.json

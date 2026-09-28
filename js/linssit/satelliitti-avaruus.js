@@ -437,6 +437,8 @@ export const ZOOMIN_KAUIN = 1.3;
 
 /** Avausajon kesto (ms); liikkeenvähennyksellä hyppy. */
 export const AVAUSAJON_MS = 900;
+/** Kameran liuku valokuvan kohteen ylle (ms), natiivi KuvaanAjoS 0,9 s. */
+export const KUVAN_AJON_MS = 900;
 /**
  * Sormiliu'un naulaus sulkiessa (ms). Pallon oma liuku (js/pallo.js
  * asennaPallonEleet) jatkaa kirjoittamista kameraan sormen irrottua,
@@ -1545,8 +1547,16 @@ export function luoAvaruusKalvo({
   for (const [el, tausta, laji] of [[varjo, varjonTausta(), 'varjo'],
     [valoreuna, valoreunanTausta(), 'valo']]) {
     const maski = puolenMaski(laji);
+    /*
+     * RAJAUS YMPYRÄÄN (28.9.2026, #3526-kuvapari): WebKit piirsi neliön
+     * ympyrän ulkopuolisen osan himmeänä, vaikka liu'un viimeinen väri on
+     * läpinäkyvä — neliön vaakareunat näkyivät tähtitaivaalla ja
+     * läpikuultavan valokuvanäkymän läpi suorakaiteena. clip-path ei päästä
+     * mitään ympyrän ulkopuolelle.
+     */
     el.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;'
-      + `background:${tausta};-webkit-mask-image:${maski};mask-image:${maski};`;
+      + `background:${tausta};-webkit-mask-image:${maski};mask-image:${maski};`
+      + '-webkit-clip-path:circle(50% at 50% 50%);clip-path:circle(50% at 50% 50%);';
   }
 
   const rata = doc.createElementNS(SVG, 'svg');
@@ -3164,6 +3174,30 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     mittaaPinta,
     /** Yksi kehys väkisin (linssi kutsuu, kun pisteet eivät näy). */
     pakotaKehys: () => kehysvahti.pakota(),
+    /*
+     * ── PALLO KUVAN TAKANA (kuvaselain, omistaja 27.9.2026 klo 23.5x) ──
+     *
+     * *"kuvan taustalla voisi näkyä himmeällä maapallo siltä kohtaa mistä
+     * kuva on"*. Valokuvan tausta on läpikuultava, ja kamera liukuu
+     * KUVAN_AJON_MS:ssa kohteen ylle nykyisellä korkeudella, kuitenkin
+     * enintään lepokorkeudella (natiivi AstronauttiLinssi.AvaaKohde:
+     * min(korkeus, avaus · 0,72) = web lepoAlt). Seuranta ja avausajo
+     * päättyvät kuten pelaajan otteesta — muuten ne kirjoittaisivat
+     * kameraa liu'un päälle.
+     */
+    katsoKohteeseen: (lat, lon) => {
+      if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;
+      lopetaSeuranta();
+      paataAvausajo();
+      if (ohjaimet) ohjaimet.autoRotate = false;
+      lauta?.kamera?.pysaytaKameraAjo?.();
+      const nyt = pallo.pointOfView?.()?.altitude ?? lepoAlt;
+      const korkeus = lepoAlt > 0 ? Math.min(nyt, lepoAlt) : nyt;
+      pallo.pointOfView({ lat, lng: lon, altitude: korkeus }, reduced ? 0 : KUVAN_AJON_MS);
+      omaKorkeus = korkeus;
+      lauta?.heraa?.();
+      return true;
+    },
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
     asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),
     /*

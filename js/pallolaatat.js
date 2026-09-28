@@ -42,7 +42,7 @@ import {
   ESILATAUS_LEPO_MS, ESILATAUS_LIIKEVARA, ESILATAUS_MAATASOT, esilatausPaalla, laajennaLaatikko,
   laattojenOsoitteet, luoEsilatausjono,
 } from './laattaesilataus.js';
-import { peiliKaytossa, peiliPetti, peilinKatkoJaljella } from './media.js';
+import { peiliKaytossa, peiliPetti, peiliToimi, peilinKatkoJaljella } from './media.js';
 import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
@@ -2713,6 +2713,8 @@ export function luoLaattakerros({
         // Katkaisija (js/media.js 'laatat'): 429 ja 5xx ovat ämpärin vikoja, 404 ei.
         if (vastaus.status === 429 || vastaus.status >= 500) peiliPetti('laatat');
         if (!vastaus.ok) return null;
+        // Peili vastasi: katkaisija laskee vain peräkkäiset virheet (js/media.js peiliToimi).
+        peiliToimi('laatat');
         const blob = await vastaus.blob();
         try {
           return await ikkuna.createImageBitmap(blob, BITTIKARTTA_ASETUKSET);
@@ -2740,7 +2742,10 @@ export function luoLaattakerros({
       kuva.crossOrigin = 'anonymous';
       kuva.decoding = 'async';
       kuva.fetchPriority = 'high';
-      kuva.onload = () => (kuva.decode ? kuva.decode().then(() => ok(kuva), () => ok(kuva)) : ok(kuva));
+      kuva.onload = () => {
+        peiliToimi('laatat');
+        return kuva.decode ? kuva.decode().then(() => ok(kuva), () => ok(kuva)) : ok(kuva);
+      };
       kuva.onerror = () => ok(null);
       kuva.src = url;
     });

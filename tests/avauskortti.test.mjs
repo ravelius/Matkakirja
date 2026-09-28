@@ -60,6 +60,21 @@ test('osiohakemisto: lehden osiot ja nostot, tuplat yhdistetty, oma kuva joka os
   assert.equal(new Set(avaimet).size, avaimet.length);
 });
 
+test('osiohakemisto: pikkukuva vie kuvansa omaan sivuun/nostoon, varakuva kantaa lähteen', () => {
+  const sivut = KULTTUURI_KATEGORIAT.pariisi;
+  const nostot = [
+    { id: 'tuileries', nimi: 'Tuileries', aihe: 'ihmeet', avaa: () => 'tuileries' },
+    { id: 'nosto-pariisin-patonki', nimi: 'Paras patonki', aihe: 'kulttuuri', avaa: () => 'patonki' },
+  ];
+  const osiot = osiohakemisto({ sivut, nostot, iso: 'FRA', cityId: 'pariisi' });
+  for (const o of osiot.filter((x) => x.kuva)) {
+    // Sama kuva on siellä, minne pikkukuva vie — tai se on vara, jonka lähde kulkee mukana.
+    assert.ok(o.kuvanSivu != null || typeof o.kuvanAvaa === 'function' || o.kuvaVara, o.nimi);
+    if (o.kuvaVara) assert.ok(String(o.kuva.lahde ?? '').trim() || o.kuva.suora, `${o.nimi}: varakuvalla lähde`);
+  }
+  assert.equal(osiot.find((o) => o.aihe === 'ihmeet')?.kuvanAvaa?.(), 'tuileries', 'ihmeosion kuva avaa oman nostonsa');
+});
+
 test('noston kuva löytyy hetkelle, ihmeelle ja täkynostolle', () => {
   assert.match(osiohakNostonKuva('hetki-marie-curie-hangaari-1898')?.osoite ?? '', /^https:\/\//);
   assert.match(osiohakNostonKuva('tuileries')?.osoite ?? '', /ihme-tuileries/);
