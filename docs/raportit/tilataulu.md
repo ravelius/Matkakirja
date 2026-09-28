@@ -12,6 +12,8 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 
 **GPU-mittarin tarkennus (Julkaisija 12:5x):** ~10 gpu-process on sovellusten (Claude, Chrome, Spark, Unity Hub, CC, Codex, Aqua Voice) pysyviä — ei hälytysperuste. Hälytä Julkaisijalle jatkossa vain jos **chrome-headless-gpu-prosesseja on >4** (=yli 2 savuketta rinnakkain) TAI `/tmp/matkakirja-kevyt` on päällä ja Metal-chromiumeja näkyy.
 
+**JUNA-MITTARIN KORJAUS (Päätoimittaja 13:0x):** 13:01 juna-hälytys oli VÄÄRÄ. Natiivisepän juna-vahti (launchd `fi.matkakirja.juna-vahti`) poistuu hiljaa kun juna/b13 ei muutu — juna.log pysyy vanhana ilman uusia committeja, tyhjä prosessilista on normaali. **Uusi sääntö: hälytä vain jos juna/b13:ssa on kääntämätön commit yli 30 min** (`git log -1` juna/b13-haaralle vs. juna.log:n viimeksi käännetty SHA) — ei enää pelkän prosessin/login hiljaisuuden perusteella.
+
 ## 1) Sessiot
 
 Ei kynnysylityksiä — kaikki alle 70%. Linssiseppä 73%→22%, Sisältökirjuri 73%→21%, Pelikoodari 71%→9% nollautuivat.
