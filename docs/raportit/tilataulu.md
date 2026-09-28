@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 06:31 EEST — **Postivahti kierto normaali, ei hälytyksiä.**
+**Päivitetty:** 2026-09-28 06:42 EEST — **Postivahti kierto normaali, ei hälytyksiä. Poltto 88%, ~40 min jäljellä.**
 
 ## 1) Sessiot
 
@@ -22,9 +22,9 @@ Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokat
 | Sisältökirjuri | local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3 | ei luettavissa (idle) | — |
 | Laitetestaaja | local_3509b4ba-6000-4dea-869b-ecb22f4e3270 | 40% | running |
 
-## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 06:31)
+## 1a-3) Karttasepän yöpoltto — vaihe 2 käynnissä (tarkistettu 06:42) — LÄHELLÄ LOPPUA
 
-Vahti PID 82063 elossa (5 h 44 min), aja.out ennallaan (ei "2 koodi" -riviä vaiheen 2 alusta — viimeisin 00:51 "2 syvä z9–z10 alkaa"). vahti.out vakaa 10 ytimessä. 2.log etenee hyvin (shardit 417/507, 83%, arvio 04:36 UTC = **~07:36 EEST**, lähestyy loppua — seurataan tiiviisti "2 koodi" -rivin ilmestymistä). Seuraajan tarkistettava tämä joka kierroksella.
+Vahti PID 82063 elossa (5 h 55 min), aja.out ennallaan (ei "2 koodi" -riviä vaiheen 2 alusta — viimeisin 00:51 "2 syvä z9–z10 alkaa"). vahti.out vakaa 10 ytimessä. 2.log etenee hyvin (shardit 444/507, 88%, arvio 04:21 UTC = **~07:21 EEST, n. 40 min jäljellä**). Seuraajan TARKISTETTAVA TIIVIISTI "2 koodi" -rivin ilmestyminen ja ilmoitettava Karttasepälle+Fablelle heti kun se tulee (tarkista ensin 2.log:n eheysrivi).
 
 Koodi 1 klo 00:39 oli **odotettu** — vain luettelon vientivartion ilmoitus, ei virhe. Laatat/eheys kunnossa (119 495/119 495). Vaihe 1 merkitty valmiiksi. **Uusi vahti PID 82063 (v5e)** käynnistää vaiheen 2 (syvä, T7) ~00:52. Karttaseppä odottaa vaiheen 2 päättyvän todennäköisesti riviin "2 koodi 1" samasta vartiosta — **se on OK jos `2.log`:n lopussa on "eheystarkistus: laattojen määrä täsmää luetteloon".** **Seurataan PID 82063:a ja aja.out:ia — herätä Karttaseppä (local_4bd7c316-55bc-423a-9da1-821fdd123cab) JOKA TAPAUKSESSA kun "2 koodi" ilmestyy tai vahti kuolee**, riippumatta koodin arvosta (tarkista 2.log-eheysrivi ennen viestiä).
 
@@ -74,15 +74,15 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (06:31)
+## 5) Resurssit (06:42)
 
 - **5 h -kiintiö:** ~35 %. **Viikko (kaikki mallit): 93 % — kynnys ylittyi, ilmoitettu Fablelle.** **Viikko (Fable):** 76 % (nollautuu ma 28.9. klo 09:59).
-- **Levy:** 93 Gi vapaana (raja 80 Gt, hyvä puskuri). wt/-worktreet 27 kpl.
-- **Muistipaine:** normal (1). **Load average matala: 16.15/16.58/15.57.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
+- **Levy:** 95 Gi vapaana (raja 80 Gt, hyvä puskuri). wt/-worktreet 27 kpl.
+- **Muistipaine:** normal (1). **Load average matala: 17.07/16.77/16.03.** **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
 - **Liput:** `/tmp/matkakirja-julkaisu` EI löydy. `/tmp/matkakirja-juna-tauko` PÄÄLLÄ — tarkoituksellinen, EI hälytystä.
 - **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen.
-- **Juna:** tauolla, poltto käynnissä (vaihe 2, 83%, arvio ~07:36 EEST — lähestyy loppua).
-- **Karttasepän vahti-PID 82063 elossa 06:31, aja.out ei muuttunut (ei "2 koodi"), vahti.out vakaa (10 ydintä).**
+- **Juna:** tauolla, poltto käynnissä (vaihe 2, 88%, arvio ~07:21 EEST — n. 40 min jäljellä).
+- **Karttasepän vahti-PID 82063 elossa 06:42, aja.out ei muuttunut (ei "2 koodi"), vahti.out vakaa (10 ydintä).**
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
