@@ -8491,3 +8491,7 @@ Omistaja 28.9. sanatarkasti: "Pieni tarkennus. Siinä vaiheessa, kun kamera läh
 ## OMISTAJA: ALOITUSLENTOON SIIPI- JA MOOTTORIVANA SEKA LINNUT (LOPPUKOHTAUS) (28.9.2026 klo 09.20)
 
 Omistaja 28.9. sanatarkasti: "Ja voisiko lentokoneen siivistä lähteä ilma- tai pölyvana ja moottorista myös? Ja onko mahdollista animoida muutamia lintuja näkyviin eri kohtiin, kun kamera lentää sekä lähellä että kaukana? Tai ehkä riittäisi, että siinä loppukohtauksessa, kun kamera on jo aika ylhäällä Atenan päällä, niin silloin muutama lintu lentäisi diakonaalisesti näytön poikki." Natiivisepalle v3e:hen: hento haipyva vana siivenkarjista ja moottorista, suosituksena muutama lintu vinottain ruudun poikki loppukohtauksessa (Linssisepan elavien elementtien lintumalli, jos valmis).
+
+## OMISTAJA: ALOITUSLENTOON PAIVAN JA YON RAJA SEKA EUROOPAN KAUPUNKIEN VALOMERI (28.9.2026 klo 09.23)
+
+Omistaja 28.9. sanatarkasti: "Ja voisiko kartalla näkyä myös Auringon tekemä päivän ja yön raja, niin että Lento. Lähtisi yön puolelta ja tulisi sitten auringon puolelle Atenaan saavuttaessa. Kartalla saisi näkyä kaupunkien valomeri. Koko Euroopan alueella." Natiivisepalle: lento alkaa yosta (valomeri), paattyy aamun valoon Ateenassa; yovalot amparissa (z5–6, Black Marble), terminaattorin paikka lennon kulun mukaan. v3e tai erillinen v3f Natiivisepan arvion mukaan.
