@@ -12,7 +12,7 @@ Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet 
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
-**11:14 LOAD1 57,4 → 11:19 LOAD1 54,0 (tasaantunut, ei enää laskussa).** **UUSI SYY LÖYTYI 11:19:** GitHub Actions -runner (`/Users/samireivinen/actions-runner/_work/Matkakirja/`) ajaa savukkeita (`savuke-zoomiraja.mjs`, `savuke-liftaus-ajoitus.mjs`) Playwright-headless-chromiumilla — CI on käynnistynyt tälle samalle Macille (tunnettu riski, ks. muisti "Push laukaisee CI:n samalle Macille"). R/Rs-tilaisia 43. Ilmoitettu Päätoimittajalle + Julkaisijalle — CI-ajo ei ole Claude-roolin suoraan hallittavissa.
+**JUURISYY SELVISI (Julkaisija 11:2x):** Pelikoodarin #3541-pushi (11:15) laukaisi Mac-savukeajon vanhassa tilassa (30 chromiumia rinnakkain). Julkaisija perui ajon 11:2x ja mergesi #3539 (kevyt tila, lippu `/tmp/matkakirja-kevyt`) — uudet savukkeet ajetaan jatkossa 2 rinnakkain taskpolicy -b:llä. **11:20 LOAD1 37,2 (jyrkkä lasku 54→37), chromium-prosesseja runnerilla 0, R/Rs 43→13.** Julkaisija pyysi ilmoitusta jos >6 chromiumia näkyy uudelleen — seurataan.
 
 ## 1) Sessiot
 
