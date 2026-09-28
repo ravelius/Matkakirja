@@ -8,21 +8,25 @@ Fablelle. Lähteet vain PD tai CC.*
 Proto-haara on `linssiseppa/iss-kyyti`. Kaikki kerrokset näkyvät vain kyydissä (seuranta ja ikkuna); kaukonäkymä pysyy
 ennallaan.
 
-## Tila
+## Tila (päivitetty 28.9. klo 14.3x laiteajojen cl4 ja cl5 jälkeen)
 
-| kohta | natiivi | data | web |
-|---|---|---|---|
-| Kaupunkien valot | 8d791254 | ämpärissä | Pelikoodari |
-| 1 Heijastus ja varjostus | 34a5a5d5 | ämpärissä | Siirtoseppä |
-| 2 Tämän päivän pilvet | renderöijä tekeillä | Julkaisijan ajastettu haku (alla) | Siirtoseppä |
-| 3a Hämärä ja ilmahehku | 4e7f3b1d | ei dataa | Siirtoseppä |
-| 3b Revontulet | renderöijä tekeillä | Julkaisijan ajastettu haku (alla) | Siirtoseppä |
-| 4a Kuukauden pinta | Karttasepän poltto | Blue Marble NG (alla) | Siirtoseppä |
-| 4b Kuu | tekeillä | laskenta | Siirtoseppä |
-| 4c Tähdet | tekeillä | Yale Bright Star -luettelo ämpäriin | Siirtoseppä |
+Proto-haara `linssiseppa/iss-kyyti` 43b37584. Laitekuvat: `/Users/Shared/Claude/proto-3d/lokit/linssiseppa-laite-20260928-cl5/`
+(cl4 samalla nimellä -cl4). Kohdan 4 (4a–c) omistaa 28.9. klo 13.3x alkaen Linssiseppä 2.
 
-Laitteella todentamatta ovat vielä kaupunkien valot, kohta 1 ja kohta 3a. Laiteajo on seuraava, kun kevyt tila päättyy
-klo 17.
+| kohta | natiivi | data | laitteella | web |
+|---|---|---|---|---|
+| Kaupunkien valot | 8d791254 + b3186915 | ämpärissä | OK cl5 (valot-pari.png) | Pelikoodari |
+| 1 Heijastus | 34a5a5d5 + b3186915 | ämpärissä | kiilto ei vielä kuvassa (testikello korjattu 43b37584) | Siirtoseppä |
+| 1 Varjostus | 34a5a5d5 | – | OK cl5 (hämärä, keskikirkkaus −15 %) | Siirtoseppä |
+| 2 Tämän päivän pilvet | f81345f0 | ämpärissä (minimikooste #3555) | latautuu; A/B Euroopan päivällä vielä | Siirtoseppä |
+| 3a Hämärä ja ilmahehku | 4e7f3b1d + d1a3f147 | – | OK cl5 (aamunkoiton kaari, hehku himmeänä) | Siirtoseppä |
+| 3b Revontulet | 497c06b8 + b3186915 | ämpärissä | latautuu; ei näkyvää aktiivisuutta testihetkellä | Siirtoseppä |
+| 4a–c | Linssiseppä 2 | | | Siirtoseppä |
+
+**Laitteen löydös cl4 (korjattu b3186915), tärkeä myös webille:** varjostimessa pituus laskettiin
+`atan2(dot(p, cross(z, x)), dot(p, x))`. Unityn maailma on vasenkätinen (Cesium: itä +X, ylös +Y, pohjoinen +Z), joten
+`cross(z, x)` = −Y ja pituus peilautui: valot ja vesimaski näytteistettiin väärältä puolelta. Nyt ECEF Y annetaan C#:sta
+(`_Ita`). Webin three.js on oikeakätinen, mutta tarkista sama kohta, jos pituus lasketaan ristitulosta.
 
 ## Kaupunkien valot (natiivi 8d791254)
 
@@ -41,10 +45,14 @@ klo 17.
   - l' = 0,6 l² + 0,4 l
   - sävy = lerp((1, 0,52, 0,2), (1, 0,88, 0,7), saturate(1,6 l'))
   - lisätään esikerrottuna: väri + sävy · l' · 1,6 · yö. Yön peitto 0,82 ei himmennä valoja.
+  - Yöllä vedellä peitto 0,96 (maalla 0,82): reliefin vaalea vesi jäi muuten maata kirkkaammaksi (cl4).
+    Lisäys esikerrottuna yön värillä (0,012, 0,02, 0,05): lisä = vesi · yö · max(0, 0,96 − a).
 - **Testit:**
   - A/B `astro kyyti valot 0|1`
-  - testikello `astro kyyti kello yo-eurooppa`: seuraava hetki, jolloin ISS on Euroopan yllä (lat 42–60, lon −5…30) ja
-    aurinko sen alapisteessä alle −12°
+  - testikello `astro kyyti kello yo-eurooppa`: seuraava syvän yön ylitys Länsi- ja Keski-Euroopan yllä (lat 43–58,
+    lon −5…20, aurinko alapisteessä alle −18°, enintään 24 vrk; varalla laajemmat rajat). Syys–lokakuun vaihteessa ISS
+    ylittää Euroopan vain iltahämärässä, joten kello hyppää noin 19.10. aamuyöhön (tietorivillä rata-arvio).
+  - `astro kyyti kello hamara`: iltahämärä kohti yötä (alapisteessä aurinko +2…+6° ja laskee)
 
 ## 1. Auringon heijastus ja pinnan valaistus (natiivi 34a5a5d5)
 
@@ -62,14 +70,16 @@ klo 17.
   - Alle 30°:n auringolla pinta tummuu pehmeästi, ja yön kaista jatkaa siitä.
 - **Testit:**
   - A/B `astro kyyti kiilto 0|1` ja `varjo 0|1`
-  - testikello `astro kyyti kello kiilto`: ikkunan katsekohde on vettä, ja aurinko on edessä radan suunnassa ±25°,
-    korkeudella 25–70°
+  - testikello `astro kyyti kello kiilto`: ikkunan katsekohde on vettä minuutin ajan, ja aurinko on edessä radan
+    suunnassa ±40°, korkeudella 25–70° (±25° ei löytänyt yhtään hetkeä vuorokauteen syyskuun lopussa)
 
 ## 2. Tämän päivän pilvet (Julkaisija: ajastettu haku, Linssiseppä: renderöijä)
 
 - **Lähde:** NASA GIBS (PD), `VIIRS_NOAA20_CorrectedReflectance_TrueColor`, eilinen päivä.
   - WMTS EPSG:4326, taso 2 = 4096 × 2048 (noin 10 km/px).
   - Varalla `VIIRS_SNPP_CorrectedReflectance_TrueColor` ja `MODIS_Terra_CorrectedReflectance_TrueColor`.
+- **Minimikooste (#3555):** NOAA-20 ja Suomi NPP ovat samalla radalla puolen kierroksen päässä, joten auringon kimallus
+  on niiden kuvissa eri kohdissa. Pikseli otetaan tummemmasta kuvasta: kimallus putoaa pois, pilvet jäävät.
 - **Pilvialfa:** pilvi on kirkkaampi kuin saman kuukauden pilvetön Blue Marble NG (kohta 4a), joten lumi ja jää kumoutuvat:
   - alfa = saturate((L_päivä − L_bmng − 0,08) / 0,25) · saturate((0,35 − värikylläisyys) / 0,2)
   - L = luminanssi 0…1
