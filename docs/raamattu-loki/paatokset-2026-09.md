@@ -9015,3 +9015,7 @@ Omistaja 28.9. klo 23.30 sanatarkasti: "sonnetteja voisi käyttää nyt enemmän
 ## PÄÄTÖS: 1.0.40 = 60F69FE4 VIENTIIN; KOSKETUKSEN YLEISKORJAUS 1.0.41 (28.9.2026 klo 23.30)
 
 Natiivi-UI 28.9. klo 23.30: 1.0.40-käännös 60f69fe4 iPhonella — nosto ei enää sulkeudu (0), luennan jatko toimii (ei hyppyä alkuun); jäljellä: vanhentunut kosketuskohde kortin ulkopuolella syö ensimmäisen napautuksen (UI Toolkit käyttää välimuistin 'osoittimen alla' -elementtiä, kun piste ei muutu) → paneelitason yleiskorjaus 1.0.41:een Sonnet-ali-agentin selvityksellä. Hampurilaisvalikon ensimmäisen napautuksen väärä aloituskohta = sama juurisyy, korjattu junassa 7247e31a. Päätoimittaja: 1.0.40 = 60f69fe4 savukkeen PASS:lla vientiin.
+
+## PÄÄTÖS: VIE 1.0.40 (IPHONE RIITTÄÄ) (28.9.2026 klo 23.33)
+
+Päätoimittaja 28.9. klo 23.33: 1.0.40 (60f69fe4 = master e4c624a9 + juna 8de5b3df) Laitetestaajan lyhyt savuke PASS (kohta 4 epäselvä, ei kaatumisia) + Natiivi-UI:n iPhone-todennus (0 sulkeutumista). Muutosrivi 202609281959 mainissa (#3582). VIE annettu BUILD 40:lle Natiivisepän SHA:lla; ehto: sisältövienti valmis ennen ryhmää, Testattavaa tyhjä. iPad-tarkistus (kuva/kaiutin/mini-hampurilainen 20× kukin) Laitetestaajalla rinnalla; löydökset 1.0.41:een.
