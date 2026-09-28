@@ -302,7 +302,9 @@ namespace Matkakirja.Natiivi
             if (m.Symboli != null) m.Symboli.style.display = DisplayStyle.Flex;
             float peitto = loydetty ? 1f : LoytamatonPeitto;
             if (!loyto && !Mathf.Approximately(m.El.resolvedStyle.opacity, peitto)) m.El.style.opacity = peitto;
-            bool hehku = loydetty && !ryhma && s.Luokka == NostoKerros.MusteLuokka.Paakohde;
+            // 3D-mallin korvaama merkki ilman hehkua: UI piirtyy mallin päälle, ja merkin laatikko on mallin levyinen, joten hehku
+            // haalensi mallin (Český Krumlov 43329fe5, kun oma malli ei enää peitä merkkiä).
+            bool hehku = loydetty && !ryhma && s.Luokka == NostoKerros.MusteLuokka.Paakohde && !Symbolimallit.OnMalli(s.Id);
             var hehkuTex = hehku ? MusteJaljet.Hehku() : null;
             if (hehkuTex != null)
             {
