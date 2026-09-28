@@ -8551,3 +8551,7 @@ Omistaja 28.9. hyvaksyi: session nimi 'Päätoimittaja (Opus, xhigh)' (id local_
 ## OMISTAJA: STRIIMILUKIJAN KAPPALELISTA YHDEN RIVIN KOHDIN (OTSIKKO, 1, 2 … + ALKUSANAT) (28.9.2026 klo 10.26)
 
 Omistaja 28.9. #3537-kuvaparista sanatarkasti: "Hampurilainen on hyvä, mutta käytä paljon lyhyempiä tekstejä siinä. Tai lajittelu voisi olla paremmin, että otsikko, leipäteksti 1, 2 ja niin edelleen. Tai vielä lyhyempi muoto ja sitten pari sanaa miten se leipäteksti alkaa. Mieluiten niin että jokainen kohta mahtuisi yhdelle riville." Pelikoodari korjaa (+ kelausrivi alimmaksi, 'Lehden osiot' -rivi pois). Levy: simulaattorien iOS-jarjestelmadata (PosterExtension ~5 Gt/laite) → roolit saavat ajaa simctl erase OMALLE simulaattorilleen ajon jalkeen.
+
+## OMISTAJA: MAC OMISTAJAN KAYTOSSA KLO 17 ASTI — CLAUDE ENINTAAN PUOLET KONEESTA (28.9.2026 klo 10.58)
+
+Omistaja 28.9. klo 10.5x: "Tarvitsen nyt konetta kello 17 asti, joten käytän maksimissaan vain puolet koneen resursseista." Tulkinta: Clauden kokonaiskuorma ≤ puolet (≤ 8 ydinta, kuorma1 ≤ 8). Julkaisija jakaa: kaannokset yksi kerrallaan matalalla prioriteetilla (taskpolicy -b / nice, xcodebuild -jobs 4), simulaattoreita 1, PR-CI yksi tyo kerrallaan, suorituskykysavukkeet tauolle; Karttasepan pallopoltto ≤ 2 ydinta matalalla prioriteetilla; ei agenttiparvia; Postivahti valvoo (kuorma1 > 10 yli 5 min → halytys). Klo 17 jalkeen paivasaanto.
