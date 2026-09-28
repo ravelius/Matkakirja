@@ -6,7 +6,14 @@ Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetesta
 sinun docs-muutoksiisi, peruuta merge ja pushaa suoraan omaan haaraasi, ks. luovutuksen kohta
 tästä jos epäselvää).
 
-## Lue ENSIMMÄISENÄ
+## PÄIVITYS 28.9.2026 klo 22.2x — LUE TÄMÄ ENSIN
+- **docs/raportit/viesti-laitetestaaja-luovutus-20260928.md** on uusin luovutus (1.0.39 TF:ssä, 1.0.40-juna
+  tulossa/käännösvika, Thessalia-tarkistus, kehittäjätila Pulu-testeihin, simulaattorien tila). Fablen
+  nykyinen nimi/id: Päätoimittaja (Opus, xhigh) local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31.
+- Simulaattoreita ei bootata ilman Julkaisijan "LAITE NYT" -vuoroa; molemmat omat (1572C658, 3B4CDACB) ovat Shutdown.
+- Alla oleva 27.9. teksti on taustaa; luovutus -20260927-b.md:n keskeneräiset kohdat on jo käsitelty.
+
+## Lue ENSIMMÄISENÄ (27.9. versio, vanhentunut osin)
 - **docs/raportit/viesti-laitetestaaja-luovutus-20260927-b.md** — edellisen session luovutus:
   1.0.29/1.0.30/1.0.31-kierrosten tila, KESKENERÄINEN 10 min muisti/lämpö-seuranta (TARKISTA JA
   VIIMEISTELE ENSIMMÄISENÄ), App Store -laatukierroksen avoimet löydökset, ja TÄRKEÄ UUSI SÄÄNTÖ
