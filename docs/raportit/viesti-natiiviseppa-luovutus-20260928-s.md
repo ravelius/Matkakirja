@@ -81,3 +81,7 @@ aloituslento-33/v3f2/Matkakirja3D.app. Jos kopiota ei ole, käännä uudelleen U
 - **Natiivi-UI:lle kerrottu:** kellopilleri peittää valinnassa Moskovan renkaan, ja ui-komennot eivät toimi komento.txt:n kautta.
 - **Pelikoodarille kerrottu:** realtime-katkon juurisyy (AVAudioEngineConfigurationChange). Korjattu a6edbd06:ssa, joka on BUILD 36:ssa.
 - **Raportit:** docs/raportit/aloituslento-v3-20260928.md (v3e- ja v3e2-osiot) ja tämä luovutus, haara selvittaja-3d-luovutus.
+- **Natiivi-UI 14.4x:** (1) ui-komennot luetaan ui-komento.txt:stä (`k.sh … ui "ui pelikello alku 3"`), eivät kartan
+  komento.txt:stä. (2) Kellopillerin rajaus: natiivi-ui/pelikello-varaus 148e4304 (ristiriidaton v3f:n kanssa) antaa
+  Pelikellonaytto.YlaVaraus (~133 pt iPhone 17). Säädä ValintanakymanKorkeus() ja keskipiste niin, että valittavien renkaat ja
+  nimet jäävät tämän rajan alle. Merge v3f:n kanssa.
