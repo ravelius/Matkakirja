@@ -8991,3 +8991,7 @@ Päätoimittaja 28.9. klo 23.09: 23.01-kirjauksen kaappaus (maakuntanosto-isomma
 ## OMISTAJA: CUPOLA 3 JUNAAN (1.0.41) (28.9.2026 klo 23.11)
 
 Linssiseppä 28.9. klo 23.1x: Codexin Cupola 3 (pyöreä kattoikkuna, pimeä ohjaamo, lappu, kerrokset) kytketty natiiviin, laite cl18 iPhone 17 Pro + iPad Pro 11, 0 poikkeusta; proto linssiseppa/cupola3 c2645317, A/B astro kyyti ohjaamo 3|3b|2, ämpäriin 20 kerrosta; Linssit 395/395. Omistaja klo 23.11 kortilla: 'OK, junaan' → kulma A, iPadin ikkuna keskelle (lappu ei leikkaudu), merge-pyyntö Natiivisepälle 1.0.41:een; web samoilla kuvilla Siirtosepälle (iss-realismi-suunnitelma §5).
+
+## TILA: LEVY 80 GI — WORKTREEPÄT 33/20, KÄÄNNÖSVÄLIMUISTI 40 GT (28.9.2026 klo 23.14)
+
+Päätoimittaja 28.9. klo 23.14: Postivahti 23.11 levy 80 Gi (raja). Suurimmat: proto-3d 46 Gt (käännöspalvelun Xcode CompilationCache ~40 Gt → Julkaisija tyhjentää 1.0.40:n viennin jälkeen), wt/ 33 worktreetä 22 Gt (raja 20) → Postivahti lähettää roolikohtaiset poistolistat (varmat: karttaseppa-pallo-z10 #3393, pelikoodari-iss-kyyti #3576, pelikoodari-pulu-sonnet55 #3580 mergetty; Codexin worktreehen ei kosketa), pyramidi-poltto 15 Gt (ajo-20260927y 9,2 Gt jää kunnes pallon vienti valmis). Omistaja Cupola 3:sta: "tosin tummenna ja pehmennä aavistuksen ohjaamoa" → Linssiseppä ennen merge-pyyntöä.
