@@ -32,6 +32,17 @@ import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
 import { PILVIEN_LEVEYS, PILVIEN_KORKEUS } from '../../js/linssit/astro-sumu.js';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
 if (ULOS) mkdirSync(ULOS, { recursive: true });
@@ -293,6 +304,7 @@ async function ajo(sumuPaalla) {
     serviceWorkers: 'block',
     reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   const virheet = [];
   s.on('pageerror', (e) => virheet.push(String(e)));

@@ -87,7 +87,8 @@ test('liuku: vanha ulos 140 ms, uusi sisään neljänneksen matkalta häivyttäe
 test('pallo kuvan takana: läpikuultava tausta ja kamera kohteen ylle enintään lepokorkeudelle', () => {
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: rgba\(4, 9, 7, 0\.7\)/);
   assert.match(lahde, /if \(kortti\) avaruus\?\.katsoKohteeseen\?\.\(kohde\.lat, kohde\.lon\)/);
-  assert.match(avaruus, /katsoKohteeseen: \(lat, lon\) => \{[\s\S]*lopetaSeuranta\(\);[\s\S]*paataAvausajo\(\);[\s\S]*Math\.min\(nyt, lepoAlt\)[\s\S]*pallo\.pointOfView\(\{ lat, lng: lon, altitude: korkeus \}, reduced \? 0 : KUVAN_AJON_MS\)/);
+  // Oletuskesto on yhä KUVAN_AJON_MS; Pulun pyöräytys (28.9.2026) antaa oman kestonsa.
+  assert.match(avaruus, /katsoKohteeseen: \(lat, lon, \{ kestoMs = KUVAN_AJON_MS \} = \{\}\) => \{[\s\S]*lopetaSeuranta\(\);[\s\S]*paataAvausajo\(\);[\s\S]*Math\.min\(nyt, lepoAlt\)[\s\S]*pallo\.pointOfView\(\{ lat, lng: lon, altitude: korkeus \},\s*reduced \? 0 : Math\.max\(0, Number\(kestoMs\) \|\| 0\)\)/);
 });
 
 test('kohteen nimi kirkastuu 1,2 s selaimella vaihdettaessa (ei liikkeenvähennyksessä)', () => {

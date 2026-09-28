@@ -2871,6 +2871,19 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     kalvo.asetaAikakerroin?.(ISS_SEURANNAN_KERROIN);
     if (ohjaimet) ohjaimet.autoRotate = false;
   }
+  /*
+   * PULUN PALUU ALOITUSNÄKYMÄÄN (palaaAloitukseen alla): seuranta
+   * kytketään takaisin vasta, kun kameran liuku on perillä. Kello
+   * perutaan, jos pelaaja tarttuu palloon sillä välin (otePalloon) tai
+   * linssi suljetaan — muuten seuranta kiskoisi kameraa sormen alta.
+   */
+  let paluuKello = 0;
+  const peruPaluu = () => {
+    if (!paluuKello) return;
+    try { ikkuna.clearTimeout?.(paluuKello); } catch { /* ei kelloa */ }
+    paluuKello = 0;
+    kalvo?.asetaAikakerroin?.(1);
+  };
   const lopetaSeuranta = () => {
     if (!seuranta.paalla) return;
     seuranta.paalla = false;
@@ -2939,6 +2952,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   // Mustan alla pelaaja ei näe palloa: ote ei vielä päätä ajoa.
   const otePalloon = () => {
     if (paljastus.odottaa()) return;
+    peruPaluu();
     lopetaSeuranta();
     paataAvausajo();
   };
@@ -3185,17 +3199,80 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * päättyvät kuten pelaajan otteesta — muuten ne kirjoittaisivat
      * kameraa liu'un päälle.
      */
-    katsoKohteeseen: (lat, lon) => {
+    katsoKohteeseen: (lat, lon, { kestoMs = KUVAN_AJON_MS } = {}) => {
       if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;
+      peruPaluu();
       lopetaSeuranta();
       paataAvausajo();
       if (ohjaimet) ohjaimet.autoRotate = false;
       lauta?.kamera?.pysaytaKameraAjo?.();
       const nyt = pallo.pointOfView?.()?.altitude ?? lepoAlt;
       const korkeus = lepoAlt > 0 ? Math.min(nyt, lepoAlt) : nyt;
-      pallo.pointOfView({ lat, lng: lon, altitude: korkeus }, reduced ? 0 : KUVAN_AJON_MS);
+      // `kestoMs`: Pulun pyöräytys (js/linssit/pulu-tervetulo.js) ajoittaa
+      // liu'un repliikkiin; muut kutsujat saavat entisen KUVAN_AJON_MS:n.
+      pallo.pointOfView({ lat, lng: lon, altitude: korkeus },
+        reduced ? 0 : Math.max(0, Number(kestoMs) || 0));
       omaKorkeus = korkeus;
       lauta?.heraa?.();
+      return true;
+    },
+    /*
+     * ── PULUN TERVETULO (js/linssit/pulu-tervetulo.js, 28.9.2026) ──────
+     *
+     * Pulu aloittaa vasta, kun musta verho on kokonaan poissa
+     * (`paljastettu`), ottaa talteen aloitusnäkymän (`aloitustila`) ja
+     * palauttaa sen lopuksi (`palaaAloitukseen`): kamera liukuu takaisin,
+     * ja jos avaus seurasi asemaa, seuranta jatkuu liu'un jälkeen —
+     * täsmälleen se näkymä, johon linssi avautui.
+     */
+    paljastettu: () => paljastus.tila().vaihe === 'paljastettu',
+    aloitustila: () => {
+      const pov = pallo.pointOfView?.() ?? null;
+      if (!pov || !Number.isFinite(pov.lat)) return null;
+      return {
+        pov: { lat: pov.lat, lng: pov.lng, altitude: pov.altitude },
+        seuranta: seuranta.paalla,
+        pyori: Boolean(ohjaimet?.autoRotate),
+      };
+    },
+    /**
+     * @param {object} tila aloitustila()
+     * @param {{kestoMs?: number, seuraa?: boolean}} [asetukset] `seuraa:
+     *   false` jättää seurannan ja pyörimisen pois (pelaajan napautus
+     *   ohitti Pulun: ote on silloin pelaajan).
+     */
+    palaaAloitukseen: (tila, { kestoMs = KUVAN_AJON_MS, seuraa = true } = {}) => {
+      if (!tila?.pov || purettu) return false;
+      peruPaluu();
+      lopetaSeuranta();
+      paataAvausajo();
+      if (ohjaimet) ohjaimet.autoRotate = false;
+      lauta?.kamera?.pysaytaKameraAjo?.();
+      const kesto = reduced ? 0 : Math.max(0, Number(kestoMs) || 0);
+      let kohde = tila.pov;
+      const iss = kalvo?.tila?.()?.iss;
+      if (seuraa && tila.seuranta && Number.isFinite(iss?.lat) && Number.isFinite(iss?.lng)) {
+        // Asema seisoo liu'un ajan, jotta se on perillä täsmälleen siellä,
+        // mihin kamera tulee (seurannan uusi kehys ei nykäise).
+        kohde = { lat: iss.lat, lng: iss.lng, altitude: tila.pov.altitude };
+        kalvo?.asetaAikakerroin?.(0);
+      }
+      pallo.pointOfView(kohde, kesto);
+      omaKorkeus = tila.pov.altitude;
+      lauta?.heraa?.();
+      if (!seuraa) return true;
+      const jatka = () => {
+        paluuKello = 0;
+        if (purettu) return;
+        if (tila.seuranta && kalvo) {
+          seuranta.paalla = true;
+          kalvo.asetaAikakerroin?.(ISS_SEURANNAN_KERROIN);
+        } else if (ohjaimet && tila.pyori) {
+          ohjaimet.autoRotate = true;
+        }
+      };
+      if (kesto > 0) paluuKello = ikkuna.setTimeout?.(jatka, kesto + 30) ?? 0;
+      else jatka();
       return true;
     },
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
@@ -3213,6 +3290,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      */
     piilotaPilvet: (kylla = true) => Boolean(sumu?.piilotaPilvet?.(kylla)),
     pura() {
+      peruPaluu();
       purettu = true;
       avausajo.kaynnissa = false;
       paljastus.pura();

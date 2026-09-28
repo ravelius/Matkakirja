@@ -393,6 +393,9 @@ const SHELL = [
   './js/linssit/astronautin-kierros.js',
   './js/linssit/satelliitti-avaruus.js',
   './js/linssit/satelliitti-nimiot.js',
+  // Pulun tervetulo ja ISS-repliikit (28.9.2026).
+  './js/linssit/pulu-tervetulo.js',
+  './js/linssit/pulu-iss.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
   './js/linssit/topografia-tarkennus.js',
