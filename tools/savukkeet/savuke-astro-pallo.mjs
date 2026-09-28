@@ -92,6 +92,17 @@ import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
 import { SATELLIITTI_KOHTEET } from '../../js/linssit/satelliitti-data.js';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
 /*
@@ -580,6 +591,7 @@ async function ajaNakyma(nimi) {
   const konteksti = await selain.newContext({
     ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   s.on('pageerror', (e) => virheet.push(String(e)));
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
@@ -2412,6 +2424,7 @@ async function ajaNakyma(nimi) {
   const hidas = await selain.newContext({
     ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'reduce',
   });
+  await hidas.addInitScript(PULUN_TERVETULO_KUULTU);
   const h = await hidas.newPage();
   await h.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
   await h.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
@@ -2460,6 +2473,7 @@ async function ajaNakyma(nimi) {
   const safari = await selain.newContext({
     ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await safari.addInitScript(PULUN_TERVETULO_KUULTU);
   const f = await safari.newPage();
   const safariVirheet = [];
   f.on('pageerror', (e) => safariVirheet.push(String(e)));
@@ -2535,6 +2549,7 @@ async function ajaKirjastoEstetty() {
   const konteksti = await selain.newContext({
     ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const e = await konteksti.newPage();
   const virheet = [];
   e.on('pageerror', (x) => virheet.push(String(x)));
@@ -2611,6 +2626,7 @@ async function ajaPintaEstetty() {
   const konteksti = await selain.newContext({
     ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const e = await konteksti.newPage();
   await e.addInitScript(`(() => {
     const C = window.ImageData;
@@ -2696,6 +2712,7 @@ async function ajaVastakoeIlmanEstoa() {
   const konteksti = await selain.newContext({
     ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const e = await konteksti.newPage();
   await e.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
   await e.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
@@ -2844,6 +2861,7 @@ async function macIkkuna(init = []) {
   const konteksti = await selain.newContext({
     ...MAC_WEBAPP, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   for (const skripti of init) await s.addInitScript(skripti);
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());

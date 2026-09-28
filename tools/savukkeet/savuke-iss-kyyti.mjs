@@ -186,6 +186,10 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
   const virheet = [];
   const nakyma = nimi.replace(/-.*/, '');
   const konteksti = await selain.newContext({ ...NAKYMAT[nakyma], serviceWorkers: 'block' });
+  // Pulun tervetulojakso (js/linssit/pulu-tervetulo.js) kuultu: muuten Livia ohjaisi kameraa kesken mittauksen.
+  await konteksti.addInitScript(() => {
+    try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+  });
   const s = await konteksti.newPage();
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
   await s.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {

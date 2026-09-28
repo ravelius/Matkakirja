@@ -946,6 +946,62 @@ export function merkitseLehtivinkkiNahdyksi() {
 }
 
 /* ------------------------------------------------------------------ *
+ * Astronautin kamera ja ISS-kyyti
+ * ------------------------------------------------------------------ */
+
+/**
+ * LIVIAN ISS-REPLIIKIT — KAANONIA (päätoimittajan käsikirjoitus
+ * 28.9.2026, docs/raportit/pulu-iss-kasikirjoitus-20260928.md; omistaja
+ * klo 19.3x: Pulu toivottaa avaruuslinssiin tervetulleeksi, suosittelee,
+ * pyöräyttää pallon, räppäisee väärän näkymän, pahoittelee ja palaa, kun
+ * pelaaja menee ISS:n kyytiin).
+ *
+ * Neljä ryhmää, ja jokainen repliikki on oma äänitteensä
+ * (js/liviapuhe.js lähteet `iss-a` … `iss-d`, avaimet `iss-a-1` …):
+ *   a  tervetulo, vain Astronautin kameran ensimmäisellä avauksella
+ *   b  suositukset ja pallon pyöräytys Venetsian ylle
+ *   c  räppäisy (väärä näkymä) ja anteeksipyyntö; ohjaus pelaajalle
+ *   d  ISS-kyyti: kyytiin tultaessa, ~20 s myöhemmin, ensimmäisellä
+ *      yöpuolella ja poistuessa (js/linssit/pulu-iss.js)
+ *
+ * TEKSTI ON TAGITONTA: tunne- ja tehostetagit ([wings flapping],
+ * [whoosh], [radio static] …) lisätään vasta generoinnissa ankkureihin
+ * (tools/generoi-pulu.mjs TAGIT), eivätkä ne koskaan näy kuplassa.
+ * Faktat: ISS noin 400 km:n korkeudella, kierros noin 90 minuuttia.
+ * Livia puhuu itsestään Liviana. Hionta Livian äänen mukaan
+ * (päätoimittajan valtuutus 28.9.2026): A1 "Astronautin kamera" isolla
+ * (linssin nimi) ja "valokuvia"; D1:n toinen virke selkeämmäksi.
+ */
+export const LIVIAN_ISS = Object.freeze({
+  a: Object.freeze([
+    'Kas, sinäkin täällä! Tervetuloa avaruuteen, tai no, sen reunalle. Tämä on Astronautin '
+      + 'kamera: oikeita valokuvia, jotka astronautit ovat ottaneet Kansainväliseltä avaruusasemalta.',
+    'Ja kaikki tämä noin neljänsadan kilometrin korkeudelta. Minä en ole koskaan lentänyt niin '
+      + 'korkealle. Setäni väittää lentäneensä, mutta setä väittää paljon.',
+  ]),
+  b: Object.freeze([
+    'Katsotaanko ensin jotain? Minulla on kolme suosikkia: Venetsian laguuni, Alpit ja Santorinin '
+      + 'tulivuoren kaldera.',
+    'Venetsia! Pyöräytän pallon valmiiksi… noin. Haluatko katsoa tuonne?',
+  ]),
+  c: Object.freeze([
+    'Hups. Nokka osui väärään kohtaan. Tuo ei todellakaan ole Venetsia. Painottomuus ei sovi '
+      + 'kyyhkyille.',
+    'Anteeksi, anteeksi! Viedään kaikki takaisin alkuun… Kas niin. Pyöritä sinä, minä en enää '
+      + 'koske mihinkään. Lupaan.',
+  ]),
+  d: Object.freeze([
+    'Hei! Täällä Livia, asemalta! Nyt ollaan oikeasti kyydissä: alla on juuri se kohta, jonka '
+      + 'yllä asema lentää nyt. Elävänä.',
+    'Asema kiertää maapallon noin puolessatoista tunnissa. Minä en ehtisi siinä ajassa '
+      + 'Ateenasta edes Delfoihin.',
+    'Katso, kaupunkien valot. Tuo kirkas täplä voi olla Pariisi. Tai Lyon. Yöllä kaikki '
+      + 'kaupungit näyttävät kultaisilta.',
+    'Hyvää matkaa takaisin maahan. Minä jään vielä hetkeksi tänne kellumaan.',
+  ]),
+});
+
+/* ------------------------------------------------------------------ *
  * Mannerivihje
  * ------------------------------------------------------------------ */
 
