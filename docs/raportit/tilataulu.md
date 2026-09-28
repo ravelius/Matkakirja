@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 11:39 EEST — **Load1 50,3, laahaa perässä huipusta (64,2) mutta rakenteellisesti hyvä: R/Rs-tilaisia vain 10.** mds_stores laskenut 232%→54%. Odotetaan load1:n laskevan seuraavalle kierrokselle mennessä.
+**Päivitetty:** 2026-09-28 11:44 EEST — **UUSI PIIKKI: load1 104,5, R/Rs 34.** Kaksi syytä yhtä aikaa: `mds_stores` (195% CPU, uusi prosessi PID 22085 klo 11:42 — Spotlight käynnistyy jatkuvasti uudelleen) + **Karttasepän Unity `LuoPallo`-ajo (99% CPU, alkoi 11:38)** — tämä rikkoo "ei raskaita paikallisia ajoja" -sääntöä. Ilmoitettu Karttasepälle + Päätoimittajalle 11:44. Kuorma on nyt selvästi toistuva/oskilloiva ongelma 45+ min ajan — todennäköisesti tarvitsee omistajan/Päätoimittajan päätöksen (Spotlight pois pallopolton kansiosta, tai LuoPallo-ajon siirto klo 17 jälkeen).
 
 ## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
 
