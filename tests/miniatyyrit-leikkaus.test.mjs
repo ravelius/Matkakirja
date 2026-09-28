@@ -63,7 +63,6 @@ const TUNNETUT_KOHTAUSKUVAT = new Set([
   'wien-figaro-1786.webp',
   'wien-lipizzanit.webp',
   'wien-taikahuilu.webp',
-  'wien-vuoristovesijohto.webp',
   'wien-yhdeksas-1824.webp',
 ]);
 
