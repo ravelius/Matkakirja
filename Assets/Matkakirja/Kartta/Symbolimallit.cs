@@ -208,6 +208,7 @@ namespace Matkakirja
                     if (o[2] == "laatikko" || o[2] == "jalka") AllaLaatikko = o[2] == "laatikko";
                     else AllaSaanto = o[2] != "0" && o[2] != "pois";
                     return true;
+                case "kategoriat3d": VainErikoismallit = o[2] == "0" || o[2] == "pois"; return true;   // omistaja 28.9. 17.2x: 0 = pois
                 case "kategoriat":
                     // 1|0: kategoriasymbolit (reliefit) vai arkkityypit (A/B); ruutu|pohjoinen: reliefin ylös-suunta.
                     if (o[2] == "ruutu" || o[2] == "pohjoinen") KategoriaRuutuYlos = o[2] == "ruutu";
@@ -230,13 +231,20 @@ namespace Matkakirja
             return kallistettu;
         }
         public static bool Paalla = true;
+        /// <summary>
+        /// Vain erikoismallit 3D:nä (omistaja 28.9. klo 17.2x Päätoimittajan kautta: "otetaan ne kolmiulotteiset symbolit pois.
+        /// Ne ehkä eivät vain toimi, mutta pidetään ne Erikoiskohteet vielä kolmiulotteisena."): tason 1 arkkityypit ja
+        /// kategoriasymbolit sekä tasojen 2–3 instanssit pois, jolloin Natiivi-UI piirtää nostoille webin 2D-merkit (OnMalli
+        /// false); erikoismallit (Mallit-avaimet ja kaupunkien maamerkit) piirtyvät kuten ennen. Paluu: `symbolit kategoriat3d 1`.
+        /// </summary>
+        public static bool VainErikoismallit = true;
         /// <summary>Esikatselu (komento `symbolit loydetty|himmea`): kaikki löydettyinä.</summary>
         public static bool PakotaLoydetty;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
-            KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
+            KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; VainErikoismallit = true; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             Ylhaalta3D = true; PerspektiiviAste = (float)LiioiteltuPerspektiivi.KulmaMax; ReunaPt = 1.2f;
             NollaaTasot23();
             NollaaKategoriat();
@@ -307,7 +315,9 @@ namespace Matkakirja
         {
             if (!Paalla) return false;
             var t = TietoIdlla(nostoId);
-            if (t == null) return Taso1Zoom() && Kallistettu() && (Avain(nostoId) != null || ArkkityyppiKartoitus.Taulussa(nostoId));
+            if (t == null)
+                return Taso1Zoom() && Kallistettu() && (Avain(nostoId) != null || (!VainErikoismallit && ArkkityyppiKartoitus.Taulussa(nostoId)));
+            if (VainErikoismallit && t.Erikois == null) return false;
             return t.Taso == 1 ? Taso1Kaytossa(t) && !(instanssi != null && instanssi.VaistyyKuvamerkiksi(nostoId)) : Taso23Kaytossa(t);
         }
 
@@ -324,7 +334,7 @@ namespace Matkakirja
         public static string Tila()
         {
             if (instanssi == null) return "ei luotu";
-            var sb = new System.Text.StringBuilder($"päällä {Paalla}, koko {KokoPt:0} pt, taso23 {(Taso23 ? 1 : 0)}, ylhaalta {(Ylhaalta3D ? "3d" : "2d")}, " +
+            var sb = new System.Text.StringBuilder($"päällä {Paalla}, vain erikoismallit {(VainErikoismallit ? 1 : 0)}, koko {KokoPt:0} pt, taso23 {(Taso23 ? 1 : 0)}, ylhaalta {(Ylhaalta3D ? "3d" : "2d")}, " +
                 $"perspektiivi {PerspektiiviAste:0.#}°, reuna {ReunaPt:0.##} pt, maasto {(MaastoKorkeudet ? 1 : 0)}, kategoriat {(Kategoriat ? 1 : 0)} " +
                 $"({(KategoriaRuutuYlos ? "ruutu" : "pohjoinen")}), lähi {instanssi.LahiTila()}; taso 1 näkyvissä:");
             int n = 0;
@@ -440,6 +450,7 @@ namespace Matkakirja
                 {
                     if (s.Taso != 1 || s.Id == null || nyt.Contains(s.Id)) continue;
                     var tieto = TietoNostolle(s);
+                    if (VainErikoismallit && tieto.Erikois == null) continue;   // arkkityyppi/kategoriasymboli: 2D-merkki
                     if (!KulmaSallii(tieto)) continue;
                     nyt.Add(s.Id);
                     Paivita(tieto, s);

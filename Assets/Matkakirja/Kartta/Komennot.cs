@@ -102,6 +102,7 @@ namespace Matkakirja
     ///   symbolit perspektiivi <aste>   liioitellun perspektiivin kulma ruudun reunalla (0–80, oletus 55 = Linssisepän
     ///                             LiioiteltuPerspektiivi-käyrä; 0 = pois)
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
+    ///   symbolit kategoriat3d 0|1   0 (oletus, omistaja 28.9. 17.2x) = vain erikoismallit 3D:nä, muut nostot 2D-merkkeinä; 1 = kaikki 3D
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
     ///   symbolit alla 0|1         erikoismalli voittaa (Linssisepän speksi 27.9. klo 21.2x, oletus 1): muiden nostojen symbolit,

@@ -76,7 +76,7 @@ namespace Matkakirja
         /// <summary>Piirretäänkö tason 2–3 nostolle arkkityyppi nyt (OnMalli ja Laske23 käyttävät samaa ehtoa).</summary>
         static bool Taso23Kaytossa(Tieto t)
         {
-            if (!Taso23 || t == null || t.Taso < 2 || instanssi == null || !instanssi.instansointi || !KulmaSallii(t)) return false;
+            if (!Taso23 || VainErikoismallit || t == null || t.Taso < 2 || instanssi == null || !instanssi.instansointi || !KulmaSallii(t)) return false;
             var nk = NostoKerros.Instanssi;
             return nk != null && NostoSaannot.KuvamerkkiKaytossa(t.Taso, nk.ZoomKerroin);
         }
@@ -177,7 +177,7 @@ namespace Matkakirja
                 if (nk != null) nk.Paivittyi += NostotPaivittyivat;
                 nostoVersio++;
             }
-            if (nk == null || !Taso23)
+            if (nk == null || !Taso23 || VainErikoismallit)
             {
                 if (animoi23 || piirtokutsuja > 0 || tasoittain[0] + tasoittain[1] > 0) Tyhjenna23();
                 // Erikoismallin alla -tilat nollaan (instansseja ei piirretä, UI:n reunapisteet pois).
