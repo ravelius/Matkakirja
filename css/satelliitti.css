@@ -1472,53 +1472,6 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   -webkit-tap-highlight-color: transparent;
 }
 
-.iss-kyyti-tieto {
-  position: absolute;
-  /*
-   * TURVA-ALUEEN SISÄLLÄ (Linssiseppä 28.9.): ylhäältä inset + 10 px kuten
-   * natiivissa. Sivulta max(12 px, inset) eikä inset + 12 px: omistaja
-   * kumosi summan saman tyylin selitteeltä (Raamattu LISÄYS 7, vaaka-
-   * asennossa laatikko karkasi 170 px reunasta) — max pitää pillerin
-   * silti lovi- ja kulmamaskin ulkopuolella.
-   */
-  left: max(12px, env(safe-area-inset-left, 0px));
-  top: calc(10px + env(safe-area-inset-top, 0px));
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(93, 255, 168, 0.28);
-  background: rgba(6, 13, 10, 0.72);
-  color: rgb(93, 255, 168);
-  font-size: 13px;
-  line-height: 1.35;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 300ms ease;
-}
-.iss-kyyti-auki .iss-kyyti-tieto { opacity: 1; }
-.iss-kyyti-piste {
-  flex: 0 0 auto;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  margin-right: 6px;
-  background: rgb(255, 86, 86);
-  animation: iss-kyyti-live 0.9s ease-in-out infinite alternate;
-}
-.iss-kyyti-live {
-  font-weight: 700;
-  margin-right: 5px;
-  color: rgb(93, 255, 168);
-}
-.iss-kyyti-piste[hidden],
-.iss-kyyti-live[hidden] { display: none; }
-@keyframes iss-kyyti-live {
-  from { opacity: 1; }
-  to { opacity: 0.25; }
-}
-
 .iss-kyyti-sulku {
   position: absolute;
   top: calc(10px + env(safe-area-inset-top, 0px));
@@ -1530,69 +1483,258 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
 .iss-kyyti-auki .iss-kyyti-sulku { opacity: 1; }
 .iss-kyyti:not(.iss-kyyti-auki) .iss-kyyti-sulku { pointer-events: none; }
 
-/* Nopeutettuna pilleri kertoo kertoimen: piste ei punainen eikä syki, napautus = Palaa LIVE. */
-.iss-kyyti-tieto-nopeutettu { pointer-events: auto; cursor: pointer; }
+/*
+ * ═══════════ SÄÄTÖPANEELI (Codex-elementtisarja 28.9.2026, kytkentä 29.9.2026 — Siirtoseppä) ══════════
+ *
+ * Omistajan asettelumuutos 29.9.2026 (natiivi tehty samalla mallilla): yksi paneeli vasemmassa
+ * yläkulmassa (panel-normal.svg, 9-slice 20 px lähteessä → tässä 12 px reunaksi, kuten Codexin
+ * preview.html). Rivi 1 lento-lukema + kutistusnappi, rivi 2 kolme osiota, rivi 3 valitun osion sisältö.
+ * Leveys 280 px, puhelimella enintään ruudun leveys − 32 px (turva-alueen kera), sisämarginaali 12 px
+ * (paneelin oma padding kehyksen jälkeen), rivien väli 8 px.
+ */
+.iss-kyyti-paneeli {
+  position: absolute;
+  left: max(12px, env(safe-area-inset-left, 0px));
+  top: calc(10px + env(safe-area-inset-top, 0px));
+  width: 280px;
+  max-width: calc(100vw - 32px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border: 12px solid transparent;
+  border-image-source: url(../assets/iss-saatopaneeli/panel-normal.svg);
+  border-image-slice: 20 fill;
+  border-image-width: 12px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  color: rgb(233, 250, 240);
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.iss-kyyti-auki .iss-kyyti-paneeli { opacity: 1; }
+.iss-kyyti-auki .iss-kyyti-paneeli > * { pointer-events: auto; }
+/* Kutistettuna vain rivi 1 (lukema + kutistusnappi) näkyy. */
+.iss-kyyti-paneeli-kiinni .iss-kyyti-osiot,
+.iss-kyyti-paneeli-kiinni .iss-kyyti-nopeudet,
+.iss-kyyti-paneeli-kiinni .iss-kyyti-kohde-lohko,
+.iss-kyyti-paneeli-kiinni .iss-kyyti-olosuhteet { display: none; }
+
+.iss-kyyti-rivi1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Rivi 1: LENTO-lukema (readout-kilpi) — sisältää tietorivin (piste, LIVE-merkki, teksti). */
+.iss-kyyti-tieto {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 8px 0 12px;
+  background: url(../assets/iss-saatopaneeli/readout-normal.svg) center/100% 100% no-repeat;
+  color: rgb(93, 255, 168);
+  font-size: 11px;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.iss-kyyti-piste {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: rgb(255, 86, 86);
+  animation: iss-kyyti-live 0.9s ease-in-out infinite alternate;
+}
+.iss-kyyti-live {
+  flex: 0 0 auto;
+  font-weight: 700;
+  margin-right: 5px;
+  color: rgb(93, 255, 168);
+}
+/*
+ * Pituus vaihtelee (nopeus, kertoimet, korkeus/nopeuslukemat), ja readoutissa kilpaa tilasta 44 px:n
+ * kutistusnappi (rivi 1). Ellipsis on siksi tekstiosalla itsellään (flex: 1 1 auto; min-width: 0), ei koko
+ * rivillä — muuten flex-lapset eivät kutistu eikä "…" tule näkyviin (mitattu iPhone-savukkeen kuvasta 29.9.).
+ */
+.iss-kyyti-teksti {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.iss-kyyti-piste[hidden],
+.iss-kyyti-live[hidden] { display: none; }
+@keyframes iss-kyyti-live {
+  from { opacity: 1; }
+  to { opacity: 0.25; }
+}
+/* Nopeutettuna lukema kertoo kertoimen: piste ei punainen eikä syki, napautus = Palaa LIVE. */
+.iss-kyyti-tieto-nopeutettu { cursor: pointer; }
 .iss-kyyti-tieto-nopeutettu .iss-kyyti-piste {
   background: rgb(150, 170, 160);
   animation: none;
 }
 
-/* Nopeutus (LIVE · 10× · 100× · 1000×) ja "Lennä kohteen ylle" pillerin alla. */
-.iss-kyyti-ohjaimet {
-  position: absolute;
-  left: max(12px, env(safe-area-inset-left, 0px));
-  top: calc(48px + env(safe-area-inset-top, 0px));
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  max-width: calc(100% - 24px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 300ms ease;
-}
-.iss-kyyti-auki .iss-kyyti-ohjaimet { opacity: 1; }
-.iss-kyyti-auki .iss-kyyti-ohjaimet > * { pointer-events: auto; }
-.iss-kyyti-nopeudet {
-  display: flex;
-  border-radius: 10px;
-  border: 1px solid rgba(93, 255, 168, 0.28);
-  background: rgba(6, 13, 10, 0.72);
-  overflow: hidden;
-}
-.iss-kyyti-nopeudet button,
-.iss-kyyti-kohteet {
-  font: inherit;
-  font-size: 12px;
-  color: rgba(233, 250, 240, 0.85);
-  background: transparent;
+/* Kutistusnappi (close-*.svg, 44×44): kutistaa/avaa paneelin, ei liity kyydistä poistumiseen (se on .iss-kyyti-sulku). */
+.iss-kyyti-kutista {
+  flex: none;
+  width: 44px;
+  height: 44px;
   border: 0;
-  padding: 5px 9px;
-  min-height: 28px;
+  background: transparent url(../assets/iss-saatopaneeli/close-normal.svg) center/36px 36px no-repeat;
   cursor: pointer;
 }
-.iss-kyyti-nopeudet button + button { border-left: 1px solid rgba(93, 255, 168, 0.18); }
+.iss-kyyti-kutista:hover,
+.iss-kyyti-kutista:focus-visible { background-image: url(../assets/iss-saatopaneeli/close-active.svg); outline: none; }
+.iss-kyyti-paneeli-kiinni .iss-kyyti-kutista { transform: scaleY(-1); }
+
+/* Rivi 2: osiot Nopeus | Kohde | Olosuhteet (segment-cell × 3). */
+.iss-kyyti-osiot {
+  display: flex;
+  gap: 3px;
+}
+.iss-kyyti-osio {
+  flex: 1;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  background: url(../assets/iss-saatopaneeli/segment-cell-normal.svg) center/100% 100% no-repeat;
+  color: rgba(233, 250, 240, 0.8);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 650;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.iss-kyyti-osio.iss-kyyti-valittu {
+  color: rgb(93, 255, 168);
+  background-image: url(../assets/iss-saatopaneeli/segment-cell-active.svg);
+}
+
+/* Rivi 3, Nopeus: LIVE · 10× · 100× · 1000× (segment-cell × 4). Kelauksen aikana mikään ei ole valittuna. */
+.iss-kyyti-nopeudet {
+  display: flex;
+  gap: 3px;
+}
+.iss-kyyti-nopeudet button {
+  flex: 1;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  background: url(../assets/iss-saatopaneeli/segment-cell-normal.svg) center/100% 100% no-repeat;
+  color: rgba(233, 250, 240, 0.8);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 650;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
 .iss-kyyti-nopeudet button.iss-kyyti-valittu {
   color: rgb(93, 255, 168);
-  background: rgba(93, 255, 168, 0.14);
-  font-weight: 700;
+  background-image: url(../assets/iss-saatopaneeli/segment-cell-active.svg);
+}
+
+/* Rivi 3, Kohde: "Lennä kohteen ylle…" (button-row-kilpi) ja ylilentolukema (readout-kilpi) sen alla. */
+.iss-kyyti-kohde-lohko {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .iss-kyyti-kohteet {
-  border-radius: 10px;
-  border: 1px solid rgba(93, 255, 168, 0.28);
-  background: rgba(6, 13, 10, 0.72);
+  min-height: 44px;
+  border: 0;
+  background: url(../assets/iss-saatopaneeli/button-row-normal.svg) center/100% 100% no-repeat;
+  color: rgba(233, 250, 240, 0.92);
+  font: inherit;
+  font-size: 12px;
+  padding: 0 26px 0 14px;
   -webkit-appearance: none;
   appearance: none;
-  padding-right: 22px;
+  cursor: pointer;
 }
 .iss-kyyti-ylilento {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 14px;
+  background: url(../assets/iss-saatopaneeli/readout-normal.svg) center/100% 100% no-repeat;
+  color: rgba(233, 250, 240, 0.92);
   font-size: 12px;
-  padding: 4px 9px;
-  border-radius: 8px;
-  background: rgba(6, 13, 10, 0.72);
-  color: rgba(233, 250, 240, 0.9);
 }
 .iss-kyyti-ylilento[hidden] { display: none; }
+
+/* Rivi 3, Olosuhteet: pilvipeitto ja vuodenaika (slider-track + slider-thumb, kosketusalue ≥ 44 px). */
+.iss-kyyti-olosuhteet {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.iss-kyyti-olosuhde {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.iss-kyyti-olosuhde-otsikko {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(216, 231, 223, 0.85);
+}
+.iss-kyyti-liuku-rivi {
+  position: relative;
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+.iss-kyyti-liuku {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 46px;
+  margin: 0;
+  background: url(../assets/iss-saatopaneeli/slider-track-normal.svg) center/100% 100% no-repeat;
+  cursor: pointer;
+}
+.iss-kyyti-liuku::-webkit-slider-runnable-track { background: transparent; height: 46px; }
+.iss-kyyti-liuku::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 44px;
+  height: 44px;
+  background: url(../assets/iss-saatopaneeli/slider-thumb-normal.svg) center/contain no-repeat;
+  cursor: pointer;
+}
+.iss-kyyti-liuku::-moz-range-track { background: transparent; height: 46px; }
+.iss-kyyti-liuku::-moz-range-thumb {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 0;
+  background: url(../assets/iss-saatopaneeli/slider-thumb-normal.svg) center/contain no-repeat;
+  cursor: pointer;
+}
+.iss-kyyti-liuku-paat {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: rgba(199, 214, 203, 0.8);
+}
 
 @media (prefers-reduced-motion: reduce) {
   .astro-iss-sykkii .astro-iss-syke,

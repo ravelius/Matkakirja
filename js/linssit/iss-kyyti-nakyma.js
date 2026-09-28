@@ -39,11 +39,13 @@ import {
   luoKyyti, kaukoKulma, kameranAsento, tietorivi, ylilennonTeksti, TILA, MAAN_SADE_M, KAUKOON_S,
   MALLIN_NAKYMISRAJA_M, MALLIN_LEVEYS_PX, KAAREN_KORKEUS_M, KAAREN_ASTEIKKO_M,
   KAAREN_SIIRTYMA_S, KAAREN_VAALEA, KAAREN_SYVA, KAAREN_YO, TAHDET_KYYDISSA,
+  kaari as keskuskulma, // nimiristiriita: näkymän oma `kaari`-muuttuja on ilmakehän kaaren piirtokahva.
 } from './iss-kyyti.js';
 import {
   nopeusKmh, RADAN_LAATU, auringonAlihajapiste, jdHetkesta, SIMUKELLO, NOPEUDET, seuraavaYlilento,
 } from './iss-rata.js';
 import { SATELLIITTI_KOHTEET } from './satelliitti-data.js';
+import { KUUKAUSINIMET } from './maapallon-vuosi.js';
 
 /* ═══════════ CUPOLA ═══════════════════════════════════════════════ */
 
@@ -468,6 +470,120 @@ export function ylilennonKohteet(kohteet = SATELLIITTI_KOHTEET) {
     .sort((a, b) => a.nimi.localeCompare(b.nimi, 'fi'));
 }
 
+/*
+ * ═══════════ ISS-SÄÄTÖPANEELI (Codex-elementtisarja 28.9.2026, kytkentä 29.9.2026) ═══════════
+ *
+ * Omistajan asettelumuutos 29.9.2026 (korvaa Linssisepän suosituksen alkuperäisen kohtien 2–6 asettelun; sovittu
+ * natiivin kanssa, natiivi tehty samalla mallilla): yksi paneeli vasemmassa yläkulmassa, rivi 1 lento-lukema +
+ * kutistusnappi, rivi 2 kolme osiota (Nopeus/Kohde/Olosuhteet), rivi 3 valitun osion sisältö. Codexin paketti:
+ * assets/iss-saatopaneeli/ (21 tekstivapaata SVG:tä, 9-slice panel/button-row/readout, segment-cell, slider-track +
+ * -thumb, close). Kaikki tekstit ovat HTML:ää kuvien päällä.
+ */
+
+/** Paneelin kolme osiota (rivi 2), tässä järjestyksessä; oletus 'nopeus'. */
+export const PANEELIN_OSIOT = Object.freeze(['nopeus', 'kohde', 'olosuhteet']);
+/** sessionStorage-avain paneelin kutistustilalle (säilyy istunnon ajan, ei laitteiden välillä). */
+export const PANEELI_TILA_AVAIN = 'matkakirja-iss-paneeli-kiinni';
+/** Asteen pituus kilometreinä pallon isoympyrällä (sama vakio kuin iss-rata.js maaEtaisyysKm). */
+export const ASTE_KM = 111.195;
+
+/** Kuukausi (1…12) käytössä: pakotettu, tai simuloidun ajan kuukausi (UTC). Sama sääntö kuin iss-realismi-taivas.js
+ * kuukaudenPinta()-kerroksen ab.pakotettu — puhdas kopio testattavuutta ja UI:ta varten. */
+export function kuukausiNyt(pakotettu, ms) {
+  return pakotettu >= 1 && pakotettu <= 12 ? Math.round(pakotettu) : new Date(ms).getUTCMonth() + 1;
+}
+
+/** Kuukauden suomenkielinen nimi (1 = tammikuu … 12 = joulukuu, rajattuna). */
+export function kuukaudenNimi(kk) {
+  const i = Math.max(1, Math.min(12, Math.round(kk))) - 1;
+  return KUUKAUSINIMET[i];
+}
+
+/** Vuodenaika-rivin otsikko: "syyskuu (nyt)" simuloidun kuukauden kohdalla, muuten pelkkä kuukauden nimi. */
+export function vuodenaikaTeksti(pakotettu, ms) {
+  const kk = kuukausiNyt(pakotettu, ms);
+  const simKk = new Date(ms).getUTCMonth() + 1;
+  return kk === simKk ? `${kuukaudenNimi(kk)} (nyt)` : kuukaudenNimi(kk);
+}
+
+/** Pilvipeitto-rivin otsikko: "nyt" 100 %:ssa (oletus), "selkeä" 0 %:ssa, muuten prosenttiluku. */
+export function pilvipeittoTeksti(prosentti) {
+  const p = Math.round(Math.max(0, Math.min(100, prosentti)));
+  if (p >= 100) return 'nyt';
+  if (p <= 0) return 'selkeä';
+  return `${p} %`;
+}
+
+/** Pilvipeitto-liu'un prosentti (0…100) realismin pilvimääräksi (0…1, iss-realismi-kerrokset.js pilvet ab.maara). */
+export function pilvipeittoMaaraksi(prosentti) {
+  return Math.max(0, Math.min(1, prosentti / 100));
+}
+
+/* ── Oma sijainti (Kohde-osio) ──────────────────────────────────────
+ * Maa haetaan mediaämpärin cdn-cgi/trace-riviltä (loc=<ISO 3166-1 alpha-2>), ja keskipisteeksi otetaan maan
+ * pääkaupunki repon omasta maakartta-aineistosta (js/packs/maakartat.js MAAKARTAT[<alpha-3>].kaupungit, paa:true) —
+ * ainoa valmis lat/lon-taulu maittain. Taulu kattaa MAAKARTAT:n 43 maata; tuntematon koodi jättää "Oma sijainti"
+ * -vaihtoehdon pois valikosta (raportoitu Siirtosepän luovutuksessa, ei omaa virheilmoitusta pelaajalle).
+ */
+export const OMA_SIJAINTI_OSOITE = 'https://media.matkakirja.app/cdn-cgi/trace';
+
+/** MAAKARTAT-taulun kattamat maat: ISO 3166-1 alpha-2 (cdn-cgi/trace loc=) → alpha-3. */
+export const OMA_MAA_ALPHA2_ALPHA3 = Object.freeze({
+  EG: 'EGY', GB: 'GBR', DE: 'DEU', IT: 'ITA', ES: 'ESP', SE: 'SWE', FR: 'FRA', NL: 'NLD', CZ: 'CZE', PL: 'POL',
+  AT: 'AUT', CH: 'CHE', NO: 'NOR', DK: 'DNK', LV: 'LVA', LT: 'LTU', FI: 'FIN', EE: 'EST', IS: 'ISL', IE: 'IRL',
+  PT: 'PRT', GR: 'GRC', TR: 'TUR', HU: 'HUN', RO: 'ROU', BG: 'BGR', HR: 'HRV', BA: 'BIH', UA: 'UKR', RU: 'RUS',
+  AE: 'ARE', OM: 'OMN', KW: 'KWT', QA: 'QAT', SA: 'SAU', YE: 'YEM', CY: 'CYP', SY: 'SYR', IQ: 'IRQ', IR: 'IRN',
+  US: 'USA', NZ: 'NZL', BR: 'BRA', AU: 'AUS', AR: 'ARG',
+});
+
+/** cdn-cgi/trace-vastauksen (avain=arvo per rivi) loc-koodi ISO 3166-1 alpha-2:na, tai null. Puhdas. */
+export function jasennaTraceLoc(teksti) {
+  const rivi = String(teksti ?? '').split('\n').find((r) => r.startsWith('loc='));
+  const koodi = rivi?.slice(4).trim().toUpperCase();
+  return koodi && /^[A-Z]{2}$/.test(koodi) ? koodi : null;
+}
+
+/**
+ * ISS:n rata näkee enintään noin ±56° (YLILENNON_MAKSIMILEVEYS, 51,6°:n inklinaatio + 500 km:n raja): jos maan
+ * keskipiste on kauempana, ylilennon haku käyttää leveyttä ±51° samalla pituudella. Puhdas.
+ */
+export function omanSijainninHakupiste(lat, lon) {
+  return Math.abs(lat) > YLILENNON_MAKSIMILEVEYS ? { lat: Math.sign(lat) * 51, lon } : { lat, lon };
+}
+
+/** Maan pääkaupungin sijainti MAAKARTAT-taulusta (js/packs/maakartat.js), tai null. Puhdas. */
+export function omanMaanKeskipiste(alpha3, maakartat) {
+  const paa = maakartat?.[alpha3]?.kaupungit?.find((k) => k.paa);
+  return paa ? { lat: paa.lat, lon: paa.lon, nimi: paa.nimi } : null;
+}
+
+/**
+ * "Oma sijainti" -kohde valikkoon: haku, alpha2 → alpha3 ja pääkaupunki yhdessä.
+ * Palauttaa { tunnus: 'oma', nimi, lat, lon, oikeaLat, oikeaLon, maa } (lat/lon = hakupiste ylilennolle,
+ * oikeaLat/oikeaLon = maan oikea keskipiste etäisyyden näyttöä varten) tai null, jos jokin vaihe epäonnistuu.
+ * `tuoMaakartat` on parametrisoitu testattavuuden vuoksi — moduuli on yli 16 000 riviä eikä sitä ladata turhaan.
+ */
+export async function haeOmaSijainti({
+  ikkuna = globalThis, osoite = OMA_SIJAINTI_OSOITE, tuoMaakartat = () => import('../packs/maakartat.js'),
+} = {}) {
+  try {
+    const f = ikkuna.fetch?.bind(ikkuna);
+    if (!f) return null;
+    const vastaus = await f(osoite, { mode: 'cors', credentials: 'omit' });
+    if (!vastaus?.ok) return null;
+    const koodi2 = jasennaTraceLoc(await vastaus.text());
+    const alpha3 = koodi2 ? OMA_MAA_ALPHA2_ALPHA3[koodi2] : null;
+    if (!alpha3) return null;
+    const { MAAKARTAT } = await tuoMaakartat();
+    const oma = omanMaanKeskipiste(alpha3, MAAKARTAT);
+    if (!oma) return null;
+    const haku = omanSijainninHakupiste(oma.lat, oma.lon);
+    return {
+      tunnus: 'oma', nimi: 'Oma sijainti', lat: haku.lat, lon: haku.lon, oikeaLat: oma.lat, oikeaLon: oma.lon, maa: oma.nimi,
+    };
+  } catch { return null; }
+}
+
 /* ═══════════ NASA-KUVAKOE (omistaja 28.9.2026 klo 12.1x, KOE) ═══════ */
 
 /*
@@ -651,12 +767,54 @@ export function luoIssKyytiNakyma({
     sulku.setAttribute('aria-label', 'Pois kyydistä');
 
     /*
-     * OHJAIMET PILLERIN ALLA (omistaja 28.9. klo 12.1x): nopeutuksen porras
-     * LIVE · 10× · 100× · 1000× (logaritminen) ja "Lennä kohteen ylle"
-     * -valikko. Kevyt: yksi rivi nappeja ja selaimen oma valikko.
+     * SÄÄTÖPANEELI (Codex-elementtisarja, omistajan asettelumuutos 29.9.2026): rivi 1 lento-lukema (nykyinen
+     * `tieto`) + kutistusnappi, rivi 2 kolme osiota (Nopeus/Kohde/Olosuhteet), rivi 3 valitun osion sisältö.
+     * Vain yksi osio kerrallaan auki; kutistettuna vain rivi 1 näkyy. Kutistustila säilyy istunnon ajan
+     * (sessionStorage try/catchissa — yksityinen tila tms. jättää sen oletukseen).
      */
-    const ohjaimet = doc.createElement('div');
-    ohjaimet.className = 'iss-kyyti-ohjaimet';
+    const paneeli = doc.createElement('div');
+    paneeli.className = 'iss-kyyti-paneeli';
+
+    const rivi1 = doc.createElement('div');
+    rivi1.className = 'iss-kyyti-rivi1';
+    const kutista = doc.createElement('button');
+    kutista.type = 'button';
+    kutista.className = 'iss-kyyti-kutista';
+    let kiinni = false;
+    try { kiinni = ikkuna.sessionStorage?.getItem(PANEELI_TILA_AVAIN) === '1'; } catch { kiinni = false; }
+    const asetaKiinni = (k) => {
+      kiinni = k;
+      paneeli.classList.toggle('iss-kyyti-paneeli-kiinni', k);
+      kutista.setAttribute('aria-expanded', String(!k));
+      kutista.setAttribute('aria-label', k ? 'Avaa säätimet' : 'Kutista säätimet');
+      try { ikkuna.sessionStorage?.setItem(PANEELI_TILA_AVAIN, k ? '1' : '0'); } catch { /* yksityinen tila tms. */ }
+    };
+    kutista.addEventListener('click', (e) => { e.stopPropagation(); asetaKiinni(!kiinni); });
+    rivi1.append(tieto, kutista);
+
+    /* Rivi 2: osiot Nopeus | Kohde | Olosuhteet — yksi auki kerrallaan, oletus Nopeus. */
+    const osioRivi = doc.createElement('div');
+    osioRivi.className = 'iss-kyyti-osiot';
+    osioRivi.setAttribute('role', 'tablist');
+    const OSION_NIMI = { nopeus: 'Nopeus', kohde: 'Kohde', olosuhteet: 'Olosuhteet' };
+    let osio = 'nopeus';
+    const osioNapit = PANEELIN_OSIOT.map((tunnus) => {
+      const b = doc.createElement('button');
+      b.type = 'button';
+      b.className = 'iss-kyyti-osio';
+      b.dataset.osio = tunnus;
+      b.textContent = OSION_NIMI[tunnus];
+      b.setAttribute('role', 'tab');
+      b.addEventListener('click', (e) => { e.stopPropagation(); valitseOsio(tunnus); });
+      return b;
+    });
+    osioRivi.append(...osioNapit);
+
+    /*
+     * Rivi 3, Nopeus: nopeutuksen porras LIVE · 10× · 100× · 1000× (omistaja 28.9. klo 12.1x). Kelauksen
+     * aikana mikään ei ole valittuna (paivitaTietorivi), ja nopeutettuna ensimmäinen solu näyttää
+     * "Palaa LIVE" ja palaa liveen.
+     */
     const nopeudet = doc.createElement('div');
     nopeudet.className = 'iss-kyyti-nopeudet';
     nopeudet.setAttribute('role', 'group');
@@ -670,6 +828,10 @@ export function luoIssKyytiNakyma({
       return b;
     });
     nopeudet.append(...napit);
+
+    /* Rivi 3, Kohde: "Lennä kohteen ylle…" -valikko (listan kärjessä "Oma sijainti", kun se on saatavilla) ja ylilentolukema. */
+    const kohdeLohko = doc.createElement('div');
+    kohdeLohko.className = 'iss-kyyti-kohde-lohko';
     const valikko = doc.createElement('select');
     valikko.className = 'iss-kyyti-kohteet';
     valikko.setAttribute('aria-label', 'Lennä kohteen ylle');
@@ -690,8 +852,97 @@ export function luoIssKyytiNakyma({
     const ylilentoRivi = doc.createElement('div');
     ylilentoRivi.className = 'iss-kyyti-ylilento';
     ylilentoRivi.hidden = true;
-    ohjaimet.append(nopeudet, valikko, ylilentoRivi);
-    juuri.append(cupola, kosketus, tieto, ohjaimet, sulku);
+    kohdeLohko.append(valikko, ylilentoRivi);
+    let omaaSijaintiaHaettu = false;
+    const haeOmaaSijaintia = () => {
+      if (omaaSijaintiaHaettu) return;
+      omaaSijaintiaHaettu = true;
+      haeOmaSijainti({ ikkuna }).then((oma) => {
+        if (!oma || purettu || kohteet.some((k) => k.tunnus === 'oma')) return;
+        kohteet.unshift(oma);
+        const o = doc.createElement('option');
+        o.value = oma.tunnus;
+        o.textContent = oma.nimi;
+        // listan kärkeen, tyhjän valinnan jälkeen (reaalissa DOM:issa; testien vale-DOM ei kutsu tätä haaraa).
+        if (valikko.insertBefore) valikko.insertBefore(o, valikko.children[1] ?? null);
+        else valikko.append(o);
+      }).catch(() => {});
+    };
+
+    /* Rivi 3, Olosuhteet: pilvipeitto ja vuodenaika (iss-realismi.js ab-säätimet). */
+    const olosuhteet = doc.createElement('div');
+    olosuhteet.className = 'iss-kyyti-olosuhteet';
+    const teeLiuku = ({ luokka, min, max, arvo, paatNimet }) => {
+      const lohko = doc.createElement('div');
+      lohko.className = 'iss-kyyti-olosuhde';
+      const otsikko = doc.createElement('div');
+      otsikko.className = 'iss-kyyti-olosuhde-otsikko';
+      const liukuRivi = doc.createElement('div');
+      liukuRivi.className = 'iss-kyyti-liuku-rivi';
+      const liuku = doc.createElement('input');
+      liuku.type = 'range';
+      liuku.className = `iss-kyyti-liuku ${luokka}`;
+      liuku.min = String(min);
+      liuku.max = String(max);
+      liuku.step = '1';
+      liuku.value = String(arvo);
+      liuku.addEventListener('click', (e) => e.stopPropagation());
+      liukuRivi.append(liuku);
+      const paat = doc.createElement('div');
+      paat.className = 'iss-kyyti-liuku-paat';
+      const vasen = doc.createElement('span');
+      vasen.textContent = paatNimet[0];
+      const oikea = doc.createElement('span');
+      oikea.textContent = paatNimet[1];
+      paat.append(vasen, oikea);
+      lohko.append(otsikko, liukuRivi, paat);
+      return { lohko, otsikko, liuku };
+    };
+    const pilvipeittoLiuku = teeLiuku({
+      luokka: 'iss-kyyti-liuku-pilvipeitto', min: 0, max: 100, arvo: 100, paatNimet: ['Selkeä', 'Nykyinen'],
+    });
+    const vuodenaikaLiuku = teeLiuku({
+      luokka: 'iss-kyyti-liuku-vuodenaika', min: 1, max: 12, arvo: kuukausiNyt(0, simu.nyt()), paatNimet: ['Tammikuu', 'Joulukuu'],
+    });
+    const paivitaOlosuhdeOtsikot = () => {
+      const abPilvet = realismi?.ab?.('pilvet');
+      const abKuukausi = realismi?.ab?.('kuukausi');
+      const pilviProsentti = Math.round((abPilvet?.maara ?? 1) * 100);
+      pilvipeittoLiuku.otsikko.textContent = `Pilvipeitto · ${pilvipeittoTeksti(pilviProsentti)}`;
+      if (doc.activeElement !== pilvipeittoLiuku.liuku) pilvipeittoLiuku.liuku.value = String(pilviProsentti);
+      const pakotettu = abKuukausi?.pakotettu ?? 0;
+      vuodenaikaLiuku.otsikko.textContent = `Vuodenaika · ${vuodenaikaTeksti(pakotettu, simu.nyt())}`;
+      if (doc.activeElement !== vuodenaikaLiuku.liuku) vuodenaikaLiuku.liuku.value = String(kuukausiNyt(pakotettu, simu.nyt()));
+    };
+    pilvipeittoLiuku.liuku.addEventListener('input', (e) => {
+      e.stopPropagation();
+      const ab = realismi?.ab?.('pilvet');
+      if (ab) ab.maara = pilvipeittoMaaraksi(Number(pilvipeittoLiuku.liuku.value));
+      paivitaOlosuhdeOtsikot();
+    });
+    vuodenaikaLiuku.liuku.addEventListener('input', (e) => {
+      e.stopPropagation();
+      const ab = realismi?.ab?.('kuukausi');
+      if (ab) ab.pakotettu = Number(vuodenaikaLiuku.liuku.value);
+      paivitaOlosuhdeOtsikot();
+    });
+    olosuhteet.append(pilvipeittoLiuku.lohko, vuodenaikaLiuku.lohko);
+    paivitaOlosuhdeOtsikot();
+
+    const valitseOsio = (tunnus) => {
+      osio = tunnus;
+      for (const b of osioNapit) b.classList.toggle('iss-kyyti-valittu', b.dataset.osio === tunnus);
+      nopeudet.hidden = tunnus !== 'nopeus';
+      kohdeLohko.hidden = tunnus !== 'kohde';
+      olosuhteet.hidden = tunnus !== 'olosuhteet';
+      if (tunnus === 'kohde') haeOmaaSijaintia();
+      if (tunnus === 'olosuhteet') paivitaOlosuhdeOtsikot();
+    };
+    valitseOsio(osio);
+    asetaKiinni(kiinni);
+
+    paneeli.append(rivi1, osioRivi, nopeudet, kohdeLohko, olosuhteet);
+    juuri.append(cupola, kosketus, paneeli, sulku);
     doc.body.appendChild(juuri);
 
     /* Pillerin napautus nopeutettuna = "Palaa LIVE". */
@@ -756,6 +1007,8 @@ export function luoIssKyytiNakyma({
     };
     ui = {
       juuri, tieto, piste, live, teksti, sulku, kosketus, cupola, haeKuvat, napit, valikko, ylilentoRivi,
+      paneeli, kutista, osioNapit, pilvipeittoLiuku: pilvipeittoLiuku.liuku, vuodenaikaLiuku: vuodenaikaLiuku.liuku,
+      paivitaOlosuhdeOtsikot,
       kehysOk: () => kehysOk,
       kerrokset: () => [...kerrokset.values()].map((el) => ({
         laji: el.dataset.laji, ladattu: el.dataset.ladattu === '1',
@@ -785,10 +1038,17 @@ export function luoIssKyytiNakyma({
     }
     if (ylilento && ui.ylilentoRivi) {
       ui.ylilentoRivi.hidden = false;
-      ui.ylilentoRivi.textContent = ylilento.perilla
-        ? `${ylilento.nimi}: ISS ${Math.round(ylilento.sivuttainKm)} km sivussa`
-        : `${ylilento.nimi} · ${ylilennonTeksti(ylilento.ms, simu.nyt())}`;
+      if (!ylilento.perilla) {
+        ui.ylilentoRivi.textContent = `${ylilento.nimi} · ${ylilennonTeksti(ylilento.ms, simu.nyt())}`;
+      } else if (ylilento.kohde?.tunnus === 'oma') {
+        // "Oma sijainti": hakupiste voi olla korvattu (±51°), joten rivi näyttää matkan OIKEAAN maahan.
+        const km = keskuskulma(ylilento.lat, ylilento.lon, ylilento.kohde.oikeaLat, ylilento.kohde.oikeaLon) * ASTE_KM;
+        ui.ylilentoRivi.textContent = `${ylilento.kohde.maa ?? ylilento.nimi}: ISS ${Math.round(km)} km omasta maasta`;
+      } else {
+        ui.ylilentoRivi.textContent = `${ylilento.nimi}: ISS ${Math.round(ylilento.sivuttainKm)} km sivussa`;
+      }
     }
+    ui.paivitaOlosuhdeOtsikot?.();
   };
 
   /*
@@ -984,10 +1244,19 @@ export function luoIssKyytiNakyma({
     return true;
   }
 
+  /** Poistuttaessa Olosuhteet-osion säädöt palautuvat: pilvipeitto 1 (= nyt), kuukausi 0 (= ei pakotettu). */
+  const nollaaOlosuhteet = () => {
+    const abPilvet = realismi?.ab?.('pilvet');
+    if (abPilvet) abPilvet.maara = 1;
+    const abKuukausi = realismi?.ab?.('kuukausi');
+    if (abKuukausi) abKuukausi.pakotettu = 0;
+  };
+
   function poistu() {
     if (purettu || !kyyti.kyydissa || kyyti.tila === TILA.kauko) return false;
     ylilento = null;
     if (ui?.ylilentoRivi) ui.ylilentoRivi.hidden = true;
+    nollaaOlosuhteet();
     // Aika palaa todelliseen hetkeen paluulennon aikana (ei hyppyä).
     simu.palaaLive({ kestoS: KAUKOON_S, vahennetty: reduced });
     kyyti.poistu(paluuKorkeus() * MAAN_SADE_M, kello(), reduced);
@@ -1188,6 +1457,7 @@ export function luoIssKyytiNakyma({
       malli?.pura?.();
       koe?.kahva?.pura?.();
       koe = null;
+      nollaaOlosuhteet();
       realismiKutsu('pura');
       ui?.juuri?.remove?.();
       doc.body.classList.remove(KYYTI_LUOKKA);
