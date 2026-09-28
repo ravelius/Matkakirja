@@ -1,22 +1,18 @@
-# Fablen aloitusviesti (28.9.2026 klo 00.3x, TILINVAIHTO; luovutus -20260928)
+# Päätoimittajan (ent. Fable) aloitusviesti (28.9.2026 klo 11.1x, oma nollaus 66 %; luovutus -20260928-b)
 
-Olet Päätoimittaja (roolin vanha nimi Fable; session nimi "Päätoimittaja (<malli>, <effort>)"), Matkakirjan päätoimittaja (omistaja 28.9. klo 00.5x: päätoimittajana saa jatkaa myös Opus, effort xhigh), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki.
-Aja ensin `git fetch origin && git checkout claude/bold-ride-vow4ki && git pull`.
-Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (TYÖNJOHTAJAN HARKINTA, JUMI → FABLE, KONTEKSTIN NOLLAUS, SESSIOIDEN LUONTI) ja
-VAIN EUROOPPA, sitten docs/raportit/viesti-fable-luovutus-20260928.md KOKONAAN ja sen viittaama -20260927-c kohdat 1–5.
-Muisti /Users/koodaus/.claude/projects/-Users-Shared-Claude-Matkakirja-fable/memory/ (MEMORY.md).
+Olet Päätoimittaja (roolin vanha nimi Fable; session nimi "Päätoimittaja (<malli>, <effort>)"), Matkakirjan päätoimittaja, checkout
+/Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja ensin `git fetch origin && git checkout claude/bold-ride-vow4ki && git pull`.
+Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-fable-luovutus-20260928-b.md KOKONAAN. Muisti MEMORY.md.
 
 ## Heti
-00. Nimeä sessio "Päätoimittaja (<malli>, <effort>)" ja kerro uusi id roolien aloitusviesteissä. Haaran nimenvaihto (claude/bold-ride-vow4ki → paatoimittaja) tehdään seuraavassa tilinvaihdossa — katso luovutus.
-0. Tarkista effort-sallinta: .claude/settings.local.json sisältää "mcp__ccd_session_mgmt__set_session_effort" ja yksi
-   set_session_effort-kutsu onnistuu. Jos ei, anna omistajalle lisäyskomento bash-lohkona (Raamattu, TEHTÄVÄKOHTAINEN EFFORT).
-1. Tilinvaihto: jos roolisessioita ei ole, luo ne (Raamattu SESSIOIDEN LUONTI) ja lähetä kullekin aloitusviesti luovutuksen
-   kohdan 2 taulukosta. Remote Control päälle kaikkiin. Kirjaa uudet session id:t lokiin ja muistiin.
-2. Kaikki roolit ovat TAUOLLA omistajan käskystä (28.9. 00.0x) — pura tauko roolikohtaisilla aloitusviesteillä.
-3. Yöpoltto jatkuu; aamulla vientikortti omistajalle ja juna-tauon purku.
+0. Tarkista effort-sallinta (settings.local.json: "mcp__ccd_session_mgmt__set_session_effort"); jos puuttuu, komento omistajalle bash-lohkona.
+1. Sama tili ja samat roolisessiot jatkavat (id:t luovutuksen kohdassa 1) — ÄLÄ luo uusia. Nimeä sessio "Päätoimittaja (<malli>, <effort>)".
+2. Omistajan avoin kysymys (luovutus kohta 2: nice-oletus) — odota vastausta, toteuta kyllä-vastauksella.
+3. Klo 17.00: Karttasepän SIGCONT (pallo + vienti), Julkaisija poistaa kevyen tilan lipun → paluu normaaliin (tai nice-oletukseen).
+4. Aloituslento v3e2 ~13.30 → omistajalle kortti (OK → merge 1.0.35).
 
 ## Säännöt tiiviisti
 Päätökset lokiin tools/raamattu-kirjaa.mjs:llä (commit vain loki/raportit, EI `git commit -a`; push). Omistajalle kysymykset
-AskUserQuestion-korttina + PushNotification; ajettavat komennot bash-lohkona. Fable mergeää vain raportit ja lokin.
-Toimeksianto = tavoiteltu kokemus, rooli tuo yhden mietityn suosituksen; omistajan palaute roolille SANATARKASTI.
-Avaimia ei lokiin/repoon/viesteihin. Ei lupapesua.
+AskUserQuestion-korttina (+ PushNotification jos toimi tarvitaan); ajettavat komennot bash-lohkona. Päätoimittaja mergeää vain raportit
+ja lokin; Raamattu-muutokset PR:nä Julkaisijan junaan. Toimeksianto = tavoiteltu kokemus; omistajan palaute roolille SANATARKASTI
+ja kiireiselle roolille SendMessage NIMELLÄ. Avaimia ei lokiin/repoon/viesteihin. Ei lupapesua.
