@@ -10,6 +10,12 @@
 // Esikerrottu alfa (Blend One OneMinusSrcAlpha): yö tummentaa maan peitolla a ja valot lisätään sen päälle, joten ne eivät
 // tummu 0,82-peittoon. Valot syttyvät samassa hämäräkaistassa pinnan pisteen auringon korkeuden mukaan. Sävy: himmeät
 // natriumin oranssit, kirkkaat ytimet kellanvalkoiset; HDR, joten suurkaupunkien ytimet hehkuvat bloomissa.
+//
+// AURINGON HEIJASTUS JA PINNAN VALAISTUS (ISS-realismi 1, omistajan kortti 28.9.): vesimaski reliefipyramidin vesiväristä
+// (samat rajat ja koot kuin valoilla; kuvat R = valot, G = vesi). Kiilto vesillä Beckmann-jakaumalla (aallokon kaltevuus
+// σ² = _Aalto, Cox–Munk-luokkaa) ja Schlickin Fresnelillä (F0 0,02), matalalla auringolla oranssimpi. Päiväpuolen
+// varjostus auringon korkeuden mukaan: alle 30°:n korkeudella pinta tummuu pehmeästi (0° → 1 − _Varjo), ja yön kaista
+// jatkaa siitä. Kaikki esikerrottuna samaan kuoreen, joten valot ja kiilto lisätään valon päälle, eivät tummu.
 Shader "Matkakirja/Linssit/Yokuori"
 {
     Properties
@@ -22,11 +28,14 @@ Shader "Matkakirja/Linssit/Yokuori"
         _Nolla("Päiväntasaaja 0° (maailma, ECEF X)", Vector) = (1, 0, 0, 0)
         _R("Päiväntasaajan säde (m)", Float) = 6378137
         _Litistys("a / b", Float) = 1.0033640898
-        _ValotEu("Valot, Eurooppa (Web Mercator, R)", 2D) = "black" {}
-        _ValotMaa("Valot, maailma (Web Mercator, R)", 2D) = "black" {}
+        _ValotEu("Eurooppa (Web Mercator, R = valot, G = vesi)", 2D) = "black" {}
+        _ValotMaa("Maailma (Web Mercator, R = valot, G = vesi)", 2D) = "black" {}
         _EuRaja("Eurooppa: lon0, lon1, Mercator-rivi 0, 1 (0…1 ylhäältä)", Vector) = (-28.125, 45, 0.203125, 0.40625)
         _Valot("Valojen voimakkuus (0 = pois)", Float) = 1.6
         _MaaVoima("Maailmakuvan lisävoima (Z3 on himmeämpi)", Float) = 2.2
+        _Kiilto("Auringon heijastuksen voimakkuus (0 = pois)", Float) = 6
+        _Aalto("Aallokon kaltevuus σ²", Float) = 0.02
+        _Varjo("Päiväpuolen varjostus matalalla auringolla (0 = pois)", Range(0, 1)) = 0.55
     }
     SubShader
     {
@@ -53,7 +62,8 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float4 _Aurinko;
                 float4 _Keskus;
                 float4 _Akseli, _Nolla, _EuRaja;
-                float _R, _Litistys, _Valot, _MaaVoima;
+                float _R, _Litistys, _Valot, _MaaVoima, _Kiilto, _Aalto;
+                half _Varjo;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; };
@@ -73,8 +83,15 @@ Shader "Matkakirja/Linssit/Yokuori"
             half4 frag(Vali i) : SV_Target
             {
                 float3 n = normalize(i.maailma - _Keskus.xyz);
-                half a = _Peitto * Yo(n);
+                float3 aur = normalize(_Aurinko.xyz);
+                half yoKuori = Yo(n);
+                half a = _Peitto * yoKuori;
                 half3 c = _Vari.rgb * a;
+                // Päiväpuolen varjostus: sin(korkeus) 0,5 (30°) → 0; 0 → _Varjo; neutraali tumma, ei yön sinistä.
+                half matala = (half)saturate(1.0 - dot(n, aur) / 0.5);
+                half varjo = _Varjo * matala * matala * (1.0h - yoKuori);
+                c += half3(0.02, 0.018, 0.016) * varjo * (1.0h - a);
+                a = a + varjo * (1.0h - a);
 
                 // Katsesäde maan pintaan pallotilassa (napa-akselin suuntainen komponentti × a/b).
                 float3 z = normalize(_Akseli.xyz);
@@ -99,13 +116,25 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float lonAst = degrees(lon);
                 float2 eu = float2((lonAst - _EuRaja.x) / (_EuRaja.y - _EuRaja.x), (m - _EuRaja.z) / (_EuRaja.w - _EuRaja.z));
                 half euPaino = (half)saturate(min(min(eu.x, 1.0 - eu.x), min(eu.y, 1.0 - eu.y)) / 0.03);
-                half lMaa = SAMPLE_TEXTURE2D(_ValotMaa, sampler_ValotMaa, uvMaa).r * (half)_MaaVoima;
-                half lEu = SAMPLE_TEXTURE2D(_ValotEu, sampler_ValotEu, float2(saturate(eu.x), 1.0 - saturate(eu.y))).r;
-                half l = lerp(lMaa, lEu, euPaino);
+                half2 sMaa = SAMPLE_TEXTURE2D(_ValotMaa, sampler_ValotMaa, uvMaa).rg;
+                half2 sEu = SAMPLE_TEXTURE2D(_ValotEu, sampler_ValotEu, float2(saturate(eu.x), 1.0 - saturate(eu.y))).rg;
+                half l = lerp(sMaa.r * (half)_MaaVoima, sEu.r, euPaino);
+                half vesi = lerp(sMaa.g, sEu.g, euPaino);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
                 half3 savy = lerp(half3(1.0, 0.52, 0.2), half3(1.0, 0.88, 0.7), saturate(l * 1.6h));
                 half valo = l * (half)_Valot * Yo(normalize(p)) * (half)osuu;
                 c += savy * valo;
+
+                // Auringon heijastus vesiltä: Beckmann D · Fresnel / (4 n·v), kun aurinko on pinnan yllä.
+                float3 ng = normalize(p), v = normalize(o - p);
+                float3 hv = normalize(v + aur);
+                float nh = saturate(dot(ng, hv)), nl = dot(ng, aur), nv = saturate(dot(ng, v));
+                float nh2 = max(nh * nh, 1e-4);
+                float D = exp(-(1.0 - nh2) / (nh2 * _Aalto)) / (3.14159265 * _Aalto * nh2 * nh2);
+                float F = 0.02 + 0.98 * pow(1.0 - saturate(dot(v, hv)), 5.0);
+                half kiilto = (half)(vesi * osuu * saturate(nl * 12.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto);
+                half3 kiiltoVari = lerp(half3(1.0, 0.55, 0.25), half3(1.0, 0.96, 0.88), (half)saturate(nl * 4.0));
+                c += kiiltoVari * kiilto * (1.0h - a);
                 return half4(c, a);
             }
             ENDHLSL

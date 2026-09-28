@@ -1400,6 +1400,8 @@ namespace Matkakirja.Natiivi
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
                         else if (a == "valot" && osat.Length > 3) Yokuori.ValotPois = osat[3] == "0";   // A/B kaupunkien valot
+                        else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
+                        else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
                         else if (a == "pilvet" && osat.Length > 3)
                         {
@@ -1619,7 +1621,33 @@ namespace Matkakirja.Natiivi
                 if (loyto == null) return "ei yöylitystä Euroopan yllä 36 tunnin sisällä";
                 siirto = loyto.Value.AddSeconds(-20) - nyt;
             }
-            else return "käyttö: astro kyyti kello yo-eurooppa|+H|pois";
+            else if (arvo == "kiilto")
+            {
+                // Seuraava hetki (enintään 24 h), jolloin ikkunan katsekohde on vettä ja aurinko on sen yllä edessä
+                // (atsimuutti ±25° radan suunnasta, korkeus 25–70°): auringon heijastus näkyy Cupolan keskilasissa.
+                var nyt = DateTime.UtcNow;
+                DateTime? loyto = null;
+                for (int s = 0; s < 24 * 3600 && loyto == null; s += 20)
+                {
+                    var t = nyt.AddSeconds(s);
+                    var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
+                    var kk = Matkakirja.Linssit.Iss.IssKuvakulma.Ikkuna(new Matkakirja.Linssit.Iss.IssHetki(p,
+                        Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(t) * 1000, Matkakirja.Linssit.Iss.IssNyt.Suuntima(t)));
+                    if (!Yokuori.OnVesi(kk.Lat, kk.Lon)) continue;
+                    var aur = Aurinko.AurinkoEcef(t);
+                    double la = kk.Lat * Math.PI / 180, lo = kk.Lon * Math.PI / 180;
+                    double ylos = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
+                    double ita = -Math.Sin(lo) * aur.x + Math.Cos(lo) * aur.y;
+                    double pohj = -Math.Sin(la) * Math.Cos(lo) * aur.x - Math.Sin(la) * Math.Sin(lo) * aur.y + Math.Cos(la) * aur.z;
+                    double korkeus = Math.Asin(Math.Max(-1, Math.Min(1, ylos))) * 180 / Math.PI;
+                    double atsimuutti = Math.Atan2(ita, pohj) * 180 / Math.PI;
+                    double ero = Math.Abs(((atsimuutti - kk.Suuntima) % 360 + 540) % 360 - 180);
+                    if (korkeus >= 25 && korkeus <= 70 && ero <= 25) loyto = t;
+                }
+                if (loyto == null) return "ei heijastushetkeä 24 tunnin sisällä";
+                siirto = loyto.Value.AddSeconds(-10) - nyt;
+            }
+            else return "käyttö: astro kyyti kello yo-eurooppa|kiilto|+H|pois";
             Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow + siirto;
             var k = Matkakirja.Linssit.Iss.IssNyt.Kello();
             var paikka = Matkakirja.Linssit.Iss.IssNyt.Paikka(k);

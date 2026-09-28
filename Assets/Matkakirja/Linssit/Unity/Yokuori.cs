@@ -7,6 +7,8 @@
 // mipmapit, 2 × 5,6 Mt); haetaan kuoren luonnissa (linssin avaus: kyyti on yhden napautuksen päässä). Varjostin leikkaa
 // katsesäteen maan pintaan ja lisää valot yön päälle (Yokuori.shader). Aurinko ja ISS samasta kellosta (IssNyt.Kello:
 // testikomento astro kyyti kello). A/B: astro kyyti valot 0|1.
+// AURINGON HEIJASTUS (ISS-realismi 1): vesimaski reliefipyramidin vesiväristä (iss-vesi-2026-09-28/, sama rajaus), valot ja
+// vesi samaan RG16-kuvaan (R = valot, G = vesi, 2 × 8 Mt + mipit). A/B: astro kyyti kiilto 0|1 ja varjo 0|1.
 using System;
 using System.Collections;
 using System.IO;
@@ -25,12 +27,17 @@ namespace Matkakirja.Natiivi
         static readonly int IdAurinko = Shader.PropertyToID("_Aurinko"), IdKeskus = Shader.PropertyToID("_Keskus"),
             IdPeitto = Shader.PropertyToID("_Peitto"), IdAkseli = Shader.PropertyToID("_Akseli"), IdNolla = Shader.PropertyToID("_Nolla"),
             IdR = Shader.PropertyToID("_R"), IdLitistys = Shader.PropertyToID("_Litistys"), IdValot = Shader.PropertyToID("_Valot"),
-            IdValotEu = Shader.PropertyToID("_ValotEu"), IdValotMaa = Shader.PropertyToID("_ValotMaa");
-        const string ValoJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/iss-yovalot-2026-09-28/";
+            IdValotEu = Shader.PropertyToID("_ValotEu"), IdValotMaa = Shader.PropertyToID("_ValotMaa"),
+            IdKiilto = Shader.PropertyToID("_Kiilto"), IdVarjo = Shader.PropertyToID("_Varjo");
+        const string ValoJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/iss-yovalot-2026-09-28/",
+            VesiJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/iss-vesi-2026-09-28/";
         /// <summary>Valojen voimakkuus (HDR: suurkaupunkien ytimet hehkuvat bloomissa).</summary>
         public const float ValojenVoima = 1.6f;
         /// <summary>A/B (`astro kyyti valot 0|1`): kaupunkien valot pois kuvaparia varten.</summary>
         public static bool ValotPois;
+        /// <summary>A/B (`astro kyyti kiilto 0|1`, `astro kyyti varjo 0|1`): heijastus ja päiväpuolen varjostus pois.</summary>
+        public static bool KiiltoPois, VarjoPois;
+        public const float KiillonVoima = 6f, VarjonVoima = 0.55f;
         Texture2D valotEu, valotMaa;
         MeshRenderer piirto;
 
@@ -92,22 +99,67 @@ namespace Matkakirja.Natiivi
 
         IEnumerator HaeValot()
         {
-            yield return Hae("eurooppa-2048.jpg", TextureWrapMode.Clamp, t => valotEu = t);
-            yield return Hae("maailma-2048.jpg", TextureWrapMode.Repeat, t => valotMaa = t);
+            byte[] lEu = null, vEu = null, lMaa = null, vMaa = null;
+            int w = 0, h = 0;
+            yield return Hae(ValoJuuri + "eurooppa-2048.jpg", "iss-yovalot-eurooppa-2048.jpg", (k, kw, kh) => { lEu = k; w = kw; h = kh; });
+            yield return Hae(VesiJuuri + "eurooppa-2048.png", "iss-vesi-eurooppa-2048.png", (k, _, _) => vEu = k);
+            valotEu = Yhdista(lEu, vEu, w, h, TextureWrapMode.Clamp, "eurooppa");
+            yield return Hae(ValoJuuri + "maailma-2048.jpg", "iss-yovalot-maailma-2048.jpg", (k, kw, kh) => { lMaa = k; w = kw; h = kh; });
+            yield return Hae(VesiJuuri + "maailma-2048.png", "iss-vesi-maailma-2048.png", (k, _, _) => vMaa = k);
+            valotMaa = Yhdista(lMaa, vMaa, w, h, TextureWrapMode.Repeat, "maailma");
+            if (vMaa != null && w == 2048 && h == 2048)
+            {
+                // CPU-kopio 1024² (testikomento astro kyyti kello kiilto: onko katsekohde vettä).
+                VesiMaailma = new byte[1024 * 1024];
+                for (int y = 0; y < 1024; y++)
+                    for (int x = 0; x < 1024; x++)
+                        VesiMaailma[y * 1024 + x] = vMaa[(y * 2) * 2048 + x * 2];
+            }
             if (valotEu != null) materiaali.SetTexture(IdValotEu, valotEu);
             if (valotMaa != null) materiaali.SetTexture(IdValotMaa, valotMaa);
-            Debug.Log($"MATKAKIRJA linssit: yövalot eurooppa {(valotEu != null ? "ok" : "puuttuu")}, maailma {(valotMaa != null ? "ok" : "puuttuu")}");
+            Debug.Log($"MATKAKIRJA linssit: yövalot eurooppa {(lEu != null ? "ok" : "puuttuu")}, maailma {(lMaa != null ? "ok" : "puuttuu")}; " +
+                      $"vesi eurooppa {(vEu != null ? "ok" : "puuttuu")}, maailma {(vMaa != null ? "ok" : "puuttuu")}");
         }
 
-        /// <summary>Kuva ämpäristä tai välimuistista yksikanavaiseksi (luminanssi = R) mipmapein; null = ei saatu.</summary>
-        static IEnumerator Hae(string nimi, TextureWrapMode kaarre, Action<Texture2D> valmis)
+        /// <summary>Maailman vesimaski 1024² (Web Mercator, rivi 0 alhaalla kuten Unityssä) tai null; testejä varten.</summary>
+        public static byte[] VesiMaailma;
+
+        /// <summary>Onko piste vettä maailman vesimaskissa (null = maskia ei ole: tosi).</summary>
+        public static bool OnVesi(double lat, double lon)
         {
-            string polku = Path.Combine(Application.persistentDataPath, "kuvat", "iss-yovalot-" + nimi);
+            if (VesiMaailma == null) return true;
+            double la = Math.Max(-85.05, Math.Min(85.05, lat)) * Math.PI / 180;
+            double m = 0.5 - Math.Log(Math.Tan(Math.PI / 4 + la / 2)) / (2 * Math.PI);
+            int x = (int)((lon + 180) / 360 * 1024) & 1023, y = 1023 - Math.Min(1023, Math.Max(0, (int)(m * 1024)));
+            return VesiMaailma[y * 1024 + x] > 128;
+        }
+
+        /// <summary>RG16: R = valojen luminanssi, G = vesi; mipmapit, ei CPU-kopiota. null, jos valot puuttuvat.</summary>
+        static Texture2D Yhdista(byte[] valot, byte[] vesi, int w, int h, TextureWrapMode kaarre, string nimi)
+        {
+            if (valot == null) return null;
+            var t = new Texture2D(w, h, TextureFormat.RG16, true, true)
+                { name = "iss-valot-" + nimi, wrapMode = kaarre, filterMode = FilterMode.Trilinear, anisoLevel = 2 };
+            var kohde = t.GetPixelData<byte>(0);
+            bool vesiOk = vesi != null && vesi.Length == valot.Length;
+            for (int i = 0, n = w * h; i < n; i++)
+            {
+                kohde[2 * i] = valot[i];
+                kohde[2 * i + 1] = vesiOk ? vesi[i] : (byte)0;
+            }
+            t.Apply(true, true);
+            return t;
+        }
+
+        /// <summary>Kuva ämpäristä tai välimuistista luminanssiksi (tavu pikseliä kohden, rivi 0 alhaalla); null = ei saatu.</summary>
+        static IEnumerator Hae(string url, string tiedosto, Action<byte[], int, int> valmis)
+        {
+            string polku = Path.Combine(Application.persistentDataPath, "kuvat", tiedosto);
             byte[] tavut = null;
             if (File.Exists(polku)) tavut = File.ReadAllBytes(polku);
             else
             {
-                using var p = UnityWebRequest.Get(ValoJuuri + nimi);
+                using var p = UnityWebRequest.Get(url);
                 yield return p.SendWebRequest();
                 if (p.result == UnityWebRequest.Result.Success)
                 {
@@ -115,22 +167,17 @@ namespace Matkakirja.Natiivi
                     try { Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, tavut); }
                     catch (Exception e) { Debug.LogWarning("MATKAKIRJA yövalot: välimuisti " + e.Message); }
                 }
-                else Debug.LogWarning($"MATKAKIRJA yövalot: {nimi} {p.error}");
+                else Debug.LogWarning($"MATKAKIRJA yövalot: {tiedosto} {p.error}");
             }
-            if (tavut == null) { valmis(null); yield break; }
-            var rgb = new Texture2D(2, 2, TextureFormat.RGB24, false);
-            if (!rgb.LoadImage(tavut, false)) { Destroy(rgb); valmis(null); yield break; }
-            // Luminanssi R8:aan: kolmasosa muistista (2048² = 4 Mt + mipit), sävy lasketaan varjostimessa.
-            var lahde = rgb.GetPixelData<byte>(0);
-            int n = rgb.width * rgb.height;
-            var r8 = new Texture2D(rgb.width, rgb.height, TextureFormat.R8, true, true)
-                { name = "yovalot-" + nimi, wrapMode = kaarre, filterMode = FilterMode.Trilinear, anisoLevel = 2 };
-            var kohde = r8.GetPixelData<byte>(0);
-            for (int i = 0, j = 0; i < n; i++, j += 3)
-                kohde[i] = (byte)((lahde[j] * 54 + lahde[j + 1] * 183 + lahde[j + 2] * 19) >> 8);
-            Destroy(rgb);
-            r8.Apply(true, true);
-            valmis(r8);
+            if (tavut == null) { valmis(null, 0, 0); yield break; }
+            var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+            if (!kuva.LoadImage(tavut, false)) { Destroy(kuva); valmis(null, 0, 0); yield break; }
+            var px = kuva.GetPixels32();
+            var l = new byte[px.Length];
+            for (int i = 0; i < px.Length; i++) l[i] = (byte)((px[i].r * 54 + px[i].g * 183 + px[i].b * 19) >> 8);
+            int kw = kuva.width, kh = kuva.height;
+            Destroy(kuva);
+            valmis(l, kw, kh);
         }
 
         /// <summary>Näkyviin tai pois (kyydissä näkyvissä, ellei A/B pois).</summary>
@@ -153,6 +200,8 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdAkseli, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
             materiaali.SetVector(IdNolla, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(1, 0, 0))).normalized);
             materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima);
+            materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
+            materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);
         }
 
         void OnDestroy()
