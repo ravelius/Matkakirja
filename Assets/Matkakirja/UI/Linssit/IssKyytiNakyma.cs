@@ -11,7 +11,11 @@
 // CUPOLA 2 (omistajan päätös 28.9. klo 11.0x: "Pyydä Codexilta vain uusi kuva tuosta kupolasta … tummempi … ISS-elementit
 // … melkein vain mustia varjokuvia"): Codexin kolme kerrosta ämpäristä karttanostot/20260928/iss-cupola2-* takaa eteen:
 // ulko-osat (siluetit, pieni vastakkainen heilunta = syvyys), heijastus ja kehys. Haetaan jo seurannassa (ikkuna on yhden
-// napautuksen päässä). Jos kehys ei lataudu, valaistu 3D-kehys (CupolaKerros) on varalla. A/B: astro kyyti cupola uusi|3d|vanha.
+// napautuksen päässä). Jos kehys ei lataudu, valaistu 3D-kehys (CupolaKerros) on varalla.
+// SYVÄTERÄVYYS (omistaja 28.9. iltapäivällä Fablen kautta: "tuo cupola ei voi näkyä noin terävänä, koska katse on
+// maapallossa"): oletuksena Linssisepän poltettu muunnelma iss-cupola2-pehmea-* (kehys levysumennuksella voimakkaasti
+// epäterävä, ulko-osat vähemmän, heijastus lasin etäisyydeltä, aavistus raetta; ei ajonaikaista sumennusta).
+// A/B: astro kyyti cupola uusi|terava|3d|vanha (terava = Codexin alkuperäinen).
 using System;
 using System.Globalization;
 using Matkakirja.Linssit.Iss;
@@ -34,6 +38,12 @@ namespace Matkakirja.Natiivi
         public KyydinTila Tila { get; private set; } = KyydinTila.Kauko;
         /// <summary>Kuvapari samasta käännöksestä (`ui linssi kehys 0|1`): ikkuna ilman Cupola-kehystä.</summary>
         public static bool IlmanKehysta;
+        /// <summary>
+        /// Cupola 2 syväterävyydellä (oletus): Linssisepän polttamat iss-cupola2-pehmea-* (levysumennus iPhonella kehys r 12 px,
+        /// ulko-osat 3,5 px, heijastus 8 px; iPadilla × 1,27; rae 4/255 kehyksessä). false = Codexin terävä alkuperäinen (A/B).
+        /// </summary>
+        public static bool Pehmea = true;
+        bool haettuPehmea;
         /// <summary>Codexin Cupola 2: null = ei vielä haettu tai latautuu, true = kehys valmis, false = ei saatu (3D varalla).</summary>
         public static bool? Kuva2Tila { get; private set; }
         /// <summary>Piirretäänkö ikkunassa valaistu 3D-kehys (A/B 3d tai Cupola 2:n kehys ei latautunut).</summary>
@@ -95,6 +105,8 @@ namespace Matkakirja.Natiivi
         {
             // Oletus Codexin Cupola 2 (UI-kerrokset); valaistu 3D-kerros (CupolaKerros) A/B:ssä ja varalla; 1.0.35:n UI-kehys
             // vain A/B:n "ennen"-kuvaan (CupolaKerros.Vanha).
+            // A/B pehmeä ↔ terävä: haetaan kerrokset uudelleen (Aseta kutsuu tätä sekunnin välein).
+            if (kuva2Haettu && haettuPehmea != Pehmea) { kuva2Haettu = false; Kuva2Tila = null; }
             bool vanha = ikkuna && !IlmanKehysta && CupolaKerros.Vanha;
             bool uusi = ikkuna && !IlmanKehysta && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva && Kuva2Tila == true;
             if (vanha && !kuvatHaettu) HaeKuvat();
@@ -131,8 +143,10 @@ namespace Matkakirja.Natiivi
         void HaeKuvat2()
         {
             kuva2Haettu = true;
+            haettuPehmea = Pehmea;
             bool ipad = Screen.width > 0.5f * Screen.height;
             string koko = ipad ? "ipad-1536x2732" : "iphone-1206x2622";
+            string sarja = Pehmea ? "iss-cupola2-pehmea-" : "iss-cupola2-";
             int odottaa = 3;
             bool kehysOk = false;
             void Valmis(VisualElement e, Texture2D t)
@@ -141,12 +155,12 @@ namespace Matkakirja.Natiivi
                 if (e == kehys2) kehysOk = t != null;
                 if (--odottaa > 0) return;
                 Kuva2Tila = kehysOk;
-                Debug.Log($"MATKAKIRJA linssit: cupola2 {(kehysOk ? "valmis" : "kehys ei latautunut, 3D-kehys varalla")} ({koko})");
+                Debug.Log($"MATKAKIRJA linssit: cupola2 {(kehysOk ? "valmis" : "kehys ei latautunut, 3D-kehys varalla")} ({sarja}{koko})");
                 PaivitaKehys();
             }
-            Kuvat.Hae(Juuri2 + "iss-cupola2-ulkoosat-" + koko + ".png", t => Valmis(ulko2, t));
-            Kuvat.Hae(Juuri2 + "iss-cupola2-heijastus-" + koko + ".png", t => Valmis(heijastus2, t));
-            Kuvat.Hae(Juuri2 + "iss-cupola2-kehys-" + koko + ".png", t => Valmis(kehys2, t));
+            Kuvat.Hae(Juuri2 + sarja + "ulkoosat-" + koko + ".png", t => Valmis(ulko2, t));
+            Kuvat.Hae(Juuri2 + sarja + "heijastus-" + koko + ".png", t => Valmis(heijastus2, t));
+            Kuvat.Hae(Juuri2 + sarja + "kehys-" + koko + ".png", t => Valmis(kehys2, t));
         }
 
         bool heiluu;
