@@ -100,9 +100,11 @@ namespace Matkakirja
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
-    ///   symbolit alla 0|1         erikoismalli voittaa (Linssisepän speksi 27.9. klo 21.2x, oletus 1): muiden nostojen symbolit
-    ///                             erikoismallin kalustelaatikossa piiloon (0,3 s, hystereesi 10 %) ja merkki laatikon reunalle
-    ///                             mustepisteenä; tila-rivillä "piilossa erikoismallin alla: vltava→cesky-krumlov, …"
+    ///   symbolit alla 0|1         erikoismalli voittaa (Linssisepän speksi 27.9. klo 21.2x, oletus 1): muiden nostojen symbolit,
+    ///                             joiden laatikko leikkaa erikoismallin kalustelaatikon, piiloon (0,3 s, hystereesi 10 %) ja merkki
+    ///                             laatikon reunalle (tai noston paikkaan, jos jalka on laatikon ulkopuolella) mustepisteenä;
+    ///                             tila-rivillä "piilossa erikoismallin alla: vltava→cesky-krumlov, …"
+    ///   symbolit alla laatikko|jalka  laatikkoleikkaus (oletus, 28.9.) vai 1.0.33:n jalkapiste laatikossa (A/B)
     ///   pohja savy [kontrasti nosto]  pohjakartan kontrasti (0 = ennallaan, −0,5…0,3) ja mustan nosto (0–0,4); säilyy laitteella
     ///   lipputanko tila|pois|koe [lat lon]|koko <pt>|jatkuva|syke|suunta maailma|ruutu|kamera   kohdemaan lipputanko (Lipputanko, löydös 161; koe = testilippu)
     ///   taivas kartta pois|utu|vaalea|sini|r g b [voima] [kaari]   kallistetun kartan taivas usvan yllä (Karttataivas,

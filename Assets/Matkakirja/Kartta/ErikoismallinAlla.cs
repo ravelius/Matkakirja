@@ -11,10 +11,15 @@ namespace Matkakirja
     ///
     ///  - KALUSTELAATIKKO on sama, jota nimiöt jo väistävät (commit 0bdc3626, Symbolimallit.LisaaKalusteet): mallin leveys
     ///    ruudulla jalan kohdalta ylöspäin mallin korkeussuhteella, + vara (4 pt) joka reunalla. Ruudun pikselit, y ylös.
-    ///  - OSUMA: toisen noston symbolin jalkapiste laatikossa → symboli piiloon. HYSTEREESI 10 %: piilossa oleva palaa vasta,
-    ///    kun jalka on 10 % suuremman laatikon (leveys ja korkeus × 1,1 keskipisteen ympäri) ulkopuolella, jottei zoomaus välkytä.
+    ///  - OSUMA (LAATIKKOLEIKKAUS 28.9.): toisen noston symbolin laatikko (<see cref="SymbolinLaatikko"/>) leikkaa mallin
+    ///    laatikon → symboli piiloon. Ennen ehto oli jalkapiste laatikossa, mutta Linssisepän laiteajossa 27.9. klo 22.0x
+    ///    Kinderdijkin sääntö ei lauennut: Goudan Maljan jalka oli laatikon yläpuolella ja malja myllyjen takarivin päällä.
+    ///    HYSTEREESI 10 %: piilossa oleva palaa vasta, kun symbolin laatikko on 10 % suuremman mallin laatikon (leveys ja
+    ///    korkeus × 1,1 keskipisteen ympäri) ulkopuolella, jottei zoomaus välkytä. Leveys 0 = pelkkä jalkapiste (<see cref="Osuu"/>).
     ///  - REUNAPISTE: suora erikoismallin jalasta noston todelliseen paikkaan leikkaa laatikon reunan; piste on siinä, joten
     ///    suunta on maantieteellisesti oikea. Jalka samassa pisteessä (suunta puuttuu) → suoraan alas jalan alle.
+    ///  - MERKIN PAIKKA (<see cref="MerkinPaikka"/>): jalka laatikossa → reunapiste; jalka laatikon ulkopuolella (vain symboli
+    ///    leikkasi laatikkoa) → noston oma paikka, koska jalka ei jää mallin alle eikä merkkiä siirretä turhaan.
     ///  - HÄIVYTYS 0,3 s kumpaankin suuntaan.
     ///  - REUNAPISTEEN koko enintään 6 pt (tasojen 2–3 minimerkki: musterengas r 3,4 yksikköä mitalla kerrottuna).
     /// </summary>
@@ -34,6 +39,32 @@ namespace Matkakirja
         {
             float h = leveys * suhde;
             return new Ruutulaatikko(jalkaX - leveys * 0.5f - vara, jalkaY - vara, jalkaX + leveys * 0.5f + vara, jalkaY + h + vara);
+        }
+
+        /// <summary>
+        /// Symbolin ruutulaatikko (px, y ylös) jalasta: leveys jalan kohdalta, ylöspäin mallin korkeussuhteella (vähintään puolet
+        /// leveydestä, koska ylhäältä katsottu malli ulottuu jalan ympärille) ja 0,3 × leveys jalan alle. Sama muoto kuin
+        /// symbolien väistössä (Linssisepän speksi 28.9.), jotta kumpikin sääntö näkee symbolin samankokoisena.
+        /// </summary>
+        public static Ruutulaatikko SymbolinLaatikko(float jalkaX, float jalkaY, float leveys, float suhde)
+        {
+            leveys = Math.Max(0f, leveys);
+            float h = Math.Max(0.5f * leveys, leveys * suhde);
+            return new Ruutulaatikko(jalkaX - leveys * 0.5f, jalkaY - 0.3f * leveys, jalkaX + leveys * 0.5f, jalkaY + h);
+        }
+
+        /// <summary>
+        /// Leikkaako symbolin laatikko mallin laatikon (reunat mukaan): <paramref name="joAlla"/> = symboli on jo tämän mallin alla
+        /// piilossa, jolloin mallin laatikko on <see cref="Hystereesi"/>:n verran suurempi (pysyy piilossa). Nollakokoinen symboli
+        /// on sama kuin <see cref="Osuu"/> jalkapisteellä.
+        /// </summary>
+        public static bool Leikkaa(Ruutulaatikko malli, Ruutulaatikko symboli, bool joAlla)
+        {
+            float k = joAlla ? 1f + Hystereesi : 1f;
+            float mx = (malli.X0 + malli.X1) * 0.5f, my = (malli.Y0 + malli.Y1) * 0.5f;
+            float sx = (symboli.X0 + symboli.X1) * 0.5f, sy = (symboli.Y0 + symboli.Y1) * 0.5f;
+            return Math.Abs(sx - mx) <= 0.5f * (malli.Leveys * k + symboli.Leveys)
+                   && Math.Abs(sy - my) <= 0.5f * (malli.Korkeus * k + symboli.Korkeus);
         }
 
         /// <summary>
@@ -66,6 +97,17 @@ namespace Matkakirja
             if (float.IsInfinity(t) || t < 0f) t = 0f;
             x = px + dx * t;
             y = py + dy * t;
+        }
+
+        /// <summary>
+        /// Piilotetun noston merkin paikka: jalka (<paramref name="nx"/>, <paramref name="ny"/>) laatikossa → <see cref="ReunaPiste"/>;
+        /// jalka laatikon ulkopuolella (laatikkoleikkaus: vain symboli ulottui mallin päälle) → jalka itse. Merkki ei hyppää rajalla:
+        /// reunapiste lähestyy jalkaa, kun jalka lähestyy reunaa (mallin jalka laatikon sisällä, vara &gt; 0).
+        /// </summary>
+        public static void MerkinPaikka(Ruutulaatikko l, float jx, float jy, float nx, float ny, out float x, out float y)
+        {
+            if (Osuu(l, nx, ny, false)) ReunaPiste(l, jx, jy, nx, ny, out x, out y);
+            else { x = nx; y = ny; }
         }
 
         /// <summary>Häivytys askeleen <paramref name="dt"/> (s) verran kohti piiloa (1) tai näkyvää (0), <see cref="HaivytysS"/>.</summary>
