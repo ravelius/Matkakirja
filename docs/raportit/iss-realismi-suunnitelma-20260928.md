@@ -91,6 +91,21 @@ Proto-haara `linssiseppa/iss-kyyti` 43b37584. Laitekuvat: `/Users/Shared/Claude/
   - Kerran päivässä noin klo 06 UTC, samaan tapaan kuin iss-tle.yml.
 - **Natiivi:** Pilvikuori lukee `uusin.png`:n, ja vanha `matkakirja/linssit/pilvet-bluemarble-2048.jpg` jää varalle.
 
+## 3a. Hämärä ja ilmahehku (natiivi 4e7f3b1d + d1a3f147, Ilmakaari.shader)
+
+- **Kaari:** kuori R + 120 km. Jokaiselle näkösäteelle lasketaan analyyttisesti lähin korkeus h maan pinnasta
+  (litistys korjattuna: napa-akselin komponentti × a/b).
+  - kirkkaus a = exp(−h / 22 km); sävy lerp((0,12, 0,30, 0,86), (0,72, 0,88, 1), exp(−h / 6 km))
+  - a *= max(aurinko sivuamispisteessä, hämärä · 0,8); a = saturate(a · 1,15)
+- **Hämärä:** s = n · aurinko sivuamispisteessä.
+  - hämärä = exp(−s² / 0,075²) · exp(−h / 9 km); sävy lerp(sävy, (1, 0,42, 0,14), saturate(1,4 · hämärä))
+  - Laitteella cl5 näkyy aamunkoiton oranssinpunaisena vyönä horisontissa, kun rata kulkee kohti aamua.
+- **Ilmahehku yöllä:** yö = 1 − smoothstep(−0,105, 0, s)
+  - hehku = exp(−(h − 95 km)² / (4,5 km)²) · 0,12 · yö, sävy (0,55, 0,95, 0,5)
+  - Koostus: yht = a + hehku − a · hehku; väri = (väri · a + hehkusävy · hehku) / (a + hehku)
+  - cl4:ssä 0,32 ja σ 6 km piirsivät kirkkaan vihreän viivan, joten arvoja pienennettiin.
+- **A/B:** `astro kyyti hehku 0|1` (hämärä ja ilmahehku pois).
+
 ## 3b. Revontulet (Julkaisija: ajastettu haku, Linssiseppä: renderöijä)
 
 - **Lähde:** NOAA SWPC OVATION Prime, `https://services.swpc.noaa.gov/json/ovation_aurora_latest.json` (PD).
