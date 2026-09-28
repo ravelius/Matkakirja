@@ -900,6 +900,16 @@ namespace Matkakirja.Natiivi
                     Ylapalkki.Pakota = loput == "vaaka" ? true : loput == "pysty" ? false : (bool?)null;
                     ui.Tilarivi.Paivita();
                     return null;
+                case "pelikello":
+                {
+                    // ui pelikello [lennossa 0|1 | tunnit <h> | alku <h>]: v3f:n kello (Pelikello) ja näyttö.
+                    var pk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    double luku = pk.Length > 1 && double.TryParse(pk[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var d) ? d : 0;
+                    if (pk.Length > 1 && pk[0] == "lennossa") Matkakirja.Pelikello.Lennossa = pk[1] == "1";
+                    else if (pk.Length > 1 && pk[0] == "tunnit") Matkakirja.Pelikello.Tunnit = luku;
+                    else if (pk.Length > 1 && pk[0] == "alku") Matkakirja.Pelikello.AlkuKelloUtc = luku;
+                    return ui.Kellonaytto.Kuvaus;
+                }
                 case "mitauutta":
                     if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true); else ui.Valikko.MitaUutta.Avaa();
                     return null;
