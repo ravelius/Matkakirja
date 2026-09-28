@@ -873,6 +873,13 @@ namespace Matkakirja
             try
             {
                 var tulos = await HaeSisalto(polku, esilataus, lahde, pyydetty);
+                if (esilataus == null && tulos.Item1 == 200 && varakuva != null && VaraVika(polku))
+                {
+                    // Vikakoe (palvelin varavika): kuin haku olisi epäonnistunut, Cesium saa varalaatan.
+                    Interlocked.Increment(ref Varakuvia);
+                    varalla.TryAdd(polku, 0);
+                    tulos = (200, varakuva);
+                }
                 if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
                     SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
                 if (esilataus == null && PyyntoLoki.Paalla)
@@ -1197,6 +1204,44 @@ namespace Matkakirja
         float seuraavaUusinta;
         bool uusintaKesken;
 
+        // VARALAATTOJEN UUSINTA-AIKATAULU (web #3516, v2349: pallon pergamenttiruudut iPadilla; sama perhe kuin natiivin
+        // ensikäynnistyksen pergamenttivika): Reikakorjaus.VaraUusintaViive, eli 2 s ensimmäisestä varalaatasta, sitten 5 s ja 15 s, sitten 20 s välein.
+        // Kiireinen palvelin ei estä uusintaa pidempään kuin VaraNalkaS (ennen: aina joutilaana, 10 s välein, yksi laatta
+        // kerrallaan). Etualalle paluu ja verkon palaaminen uusivat heti (web: visibilitychange, pageshow, online).
+        const float VaraNalkaS = 20f;
+        const int VaraRinnakkain = 4, Vara404Luovutus = 6;
+        /// <summary>Uusintakierroksia ja oikealla korvattuja varalaattoja käynnistyksestä (loki, `palvelin`).</summary>
+        public static int VaraUusittu, VaraPaikattu;
+        float varaEnsin = -1f, viimeUusinta = -100f;
+        int varaKierros;
+        NetworkReachability edYhteys = NetworkReachability.ReachableViaLocalAreaNetwork;
+        readonly ConcurrentDictionary<string, int> vara404 = new ConcurrentDictionary<string, int>();
+
+        static double varaVikaOsuus;
+        static long varaVikaLoppuu;
+
+        /// <summary>
+        /// Kehittäjän vikakoe (komento `palvelin varavika &lt;osuus&gt; &lt;s&gt;`): osuus Cesiumin pohjalaatoista (laattakohtainen
+        /// tiiviste, sama laatta joka kerta) saa varalaatan <paramref name="sekuntia"/> ajan, myös uusinnoissa; sen jälkeen
+        /// uusinta korvaa ne. Varalaattojen uusinnan todennukseen simulaattorissa (verkkoa ei voi katkaista).
+        /// </summary>
+        public static void AsetaVaraVika(double osuus, double sekuntia)
+        {
+            varaVikaOsuus = Math.Max(0.0, Math.Min(1.0, osuus));
+            varaVikaLoppuu = System.Diagnostics.Stopwatch.GetTimestamp() + (long)(Math.Max(0.0, sekuntia) * System.Diagnostics.Stopwatch.Frequency);
+            Debug.Log($"MATKAKIRJA laattapalvelin: vikakoe {varaVikaOsuus:P0} pohjalaatoista {sekuntia:0} s");
+        }
+
+        static bool VaraVika(string polku) =>
+            varaVikaOsuus > 0 && System.Diagnostics.Stopwatch.GetTimestamp() < varaVikaLoppuu && PohjaPolku != null
+            && polku.StartsWith(PohjaPolku, StringComparison.Ordinal) && (polku.GetHashCode() & 0x7fffffff) % 1000 < varaVikaOsuus * 1000;
+
+        void OnApplicationPause(bool tauolla)
+        {
+            // Palaus etualalle: iOS katkaisee taustalla kesken olevat haut, joista tuli varalaattoja → uusinta heti.
+            if (!tauolla && !varalla.IsEmpty) seuraavaUusinta = 0f;
+        }
+
         void Update()
         {
             SatelliittiLoki.Yhteenveto();
@@ -1259,9 +1304,28 @@ namespace Matkakirja
             }
             // Löydös 171: ei saapumistilassa — pohjan uudelleenlataus irrottaa pohjarasterin jokaisesta laatasta (vaalea kartta),
             // ja kohdemaassa ei ole huntua peittämässä sitä.
-            if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen && !saapumistila)
+            float nyt = Time.unscaledTime;
+            if (varalla.IsEmpty) varaEnsin = -1f;
+            else if (varaEnsin < 0f)
             {
-                seuraavaUusinta = Time.unscaledTime + 10f;
+                varaEnsin = nyt;
+                varaKierros = 0;
+                seuraavaUusinta = Mathf.Max(seuraavaUusinta, nyt + (float)Matkakirja.Reikakorjaus.VaraUusintaViive(0));
+            }
+            var yhteys = Application.internetReachability;
+            if (yhteys != edYhteys)
+            {
+                if (edYhteys == NetworkReachability.NotReachable && yhteys != NetworkReachability.NotReachable && !varalla.IsEmpty)
+                    seuraavaUusinta = 0f;   // verkko palasi
+                edYhteys = yhteys;
+            }
+            bool nalka = nyt - viimeUusinta >= VaraNalkaS;
+            if (!uusintaKesken && !varalla.IsEmpty && nyt >= seuraavaUusinta && (!Kiireinen || nalka) && !saapumistila
+                && yhteys != NetworkReachability.NotReachable)
+            {
+                viimeUusinta = nyt;
+                varaKierros++;
+                seuraavaUusinta = nyt + (float)Matkakirja.Reikakorjaus.VaraUusintaViive(varaKierros);
                 StartCoroutine(UusiVaralaatat());
             }
         }
@@ -1269,28 +1333,48 @@ namespace Matkakirja
         IEnumerator UusiVaralaatat()
         {
             uusintaKesken = true;
-            int onnistui = 0;
-            foreach (var polku in new System.Collections.Generic.List<string>(varalla.Keys))
+            Interlocked.Increment(ref VaraUusittu);
+            int onnistui = 0, kesken = 0;
+            var polut = new System.Collections.Generic.List<string>(varalla.Keys);
+            IEnumerator Uusi(string polku)
             {
                 var h = new Haku { Polku = polku, Luokka = "pohja" };
                 yield return Lataa(h);
                 var (tila, data) = h.Valmis.Task.Result;
-                if (tila != 200 || data == null) continue;
-                try
+                if (tila == 200 && data != null)
                 {
-                    string f = Tiedosto(valimuisti, polku);
-                    Directory.CreateDirectory(Path.GetDirectoryName(f));
-                    File.WriteAllBytes(f, data);
+                    try
+                    {
+                        string f = Tiedosto(valimuisti, polku);
+                        Directory.CreateDirectory(Path.GetDirectoryName(f));
+                        File.WriteAllBytes(f, data);
+                        varalla.TryRemove(polku, out _);
+                        vara404.TryRemove(polku, out _);
+                        onnistui++;
+                    }
+                    catch (Exception) { }
                 }
-                catch (Exception) { continue; }
-                varalla.TryRemove(polku, out _);
-                onnistui++;
+                else if (tila == 404 && vara404.AddOrUpdate(polku, 1, (_, n) => n + 1) >= Vara404Luovutus)
+                {
+                    // Laattaa ei ole ämpärissä (luettelon ulkopuolella): ei uusita loputtomiin.
+                    varalla.TryRemove(polku, out _);
+                    vara404.TryRemove(polku, out _);
+                }
+                kesken--;
+            }
+            // Enintään VaraRinnakkain uusintaa kerrallaan (ennen yksi kerrallaan: 200 varalaattaa kesti minuutteja).
+            for (int i = 0; i < polut.Count || kesken > 0; )
+            {
+                while (kesken < VaraRinnakkain && i < polut.Count) { kesken++; StartCoroutine(Uusi(polut[i++])); }
+                yield return null;
             }
             if (onnistui > 0)
             {
                 var pohja = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pohja : null;
                 if (pohja != null && pohja.enabled) { pohja.RemoveFromTileset(); pohja.AddToTileset(); }
-                Debug.Log($"MATKAKIRJA laattapalvelin: {onnistui} varalaattaa korvattu oikealla, pohja ladattu uudelleen ({varalla.Count} jäljellä)");
+                Interlocked.Add(ref VaraPaikattu, onnistui);
+                Debug.Log($"MATKAKIRJA laattapalvelin: {onnistui} varalaattaa korvattu oikealla, pohja ladattu uudelleen ({varalla.Count} jäljellä, "
+                          + $"uusintakierros {varaKierros})");
             }
             uusintaKesken = false;
         }
