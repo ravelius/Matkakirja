@@ -184,3 +184,37 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
   - F = 8,047 s kehyseroista. Video `v3f3b/aloituslento-v3f3.mp4`, kuvaparit v3f2 | v3f3 lennon hetkillä 5,5 / 7,2 / 9,5 s
     `v3f3b/kuvaparit-5.5-7.2-9.5.png`, valintakuva `v3f3b/valinta-0230-merkitty.png`.
   - Lähetetty Päätoimittajalle 16.5x omistajan OK:ta varten.
+
+## v3f4: omistajan palaute v3f3-videoon (17.0x): päivä alussa, kone ei hidastu, kaarto, kamera bumerangina
+
+- Haara aloitus-paivayo **a7906b8b** ja master-merge **67204c35** (Kartta-testit/kaanna.sh unionina). Kartta-testit 391/391,
+  unity-tarkistus 0. Uudet testit: KoneEiHidastuLahella, BumerangiEiSeuraaKonetta, KaartoKallistuuKameraanPain,
+  MaastolisaTasainenOhituksessa ja KynanjalkiKulkeeKoneenAlla.
+- **Päivä heti alussa korkealla.** Kello = 0,7 · S((t − 0,4) / 3,1) + 0,3 · S(t / 12,6). 70 % lentotunneista kuluu 0,4–3,5 s:ssa,
+  kun kamera on 7 600 → 1 300 km:ssä, joten valonraja pyyhkäisee Euroopan yli korkealta. Päivä tulee katsepisteeseen
+  viimeistään 3,5 s:ssa (Tanger 4,5 s), ja ohituksessa aurinko on vähintään 15°. Valinnassa (02.30) Moskova on yhä yössä.
+- **Kone ei hidastu.** Ohitusnopeus on 15 km/s (v3f3: 5 km/s) välillä 5,6–10 s; ennen sitä matkanopeus laskee siihen kameran
+  mukana ja sen jälkeen nousee taas. Kone kulkee lähikuvassa noin kolme siipiväliä sekunnissa.
+- **Kaarto yskähdyksen tilalle.**
+  - v3f3:n "yskähdys ylöspäin" oli maastolisän kyttyrä lähikuvassa (Othrysin harjanne). Lisä pysyy nyt ikkunassa 5,6–9,6 s
+    vakiona (ikkunan suurin), eikä se ole koskaan paikallista pienempi (AloituslennonRata.TasainenLisa).
+  - Ohituksessa kone kallistuu kameran puolelle 35° (yläpinta näkyy), kääntyy 22° oikealle ja oikaisee loivasti (enintään 15°).
+    Siirtymä on noin 12 km, ja 10,4 s:sta alkaen kone lähestyy kohdetta suoraan (noin 4°, ei näkyvää kallistusta).
+  - Kynänjälki kulkee koneen lentämää reittiä (AloituslennonRata.LentoReitti).
+- **Kamera bumerangina.**
+  - Ensimmäinen kierros lasketaan v3f3:n kanavilla kärkeen asti. Sen jälkeen silmän kohdepiste suunnitellaan kärjen kehyksessä
+    (kone ohituskohdassa, F on lentosuunta ja R oikea).
+  - Lähestymisen sivu- ja korkeuskoordinaatti ovat ennallaan. Pituussuunnassa silmä ei seuraa konetta vaan jarruttaa kärkeen
+    koneen edestä (Ateena, Tanger) tai kvinttisesti (Moskova, Kairo).
+  - Kärjen jälkeen silmä ajautuu enintään 6 km taakse ja loittonee 35 km sivulle, ja korkeus nousee omistajan S-käyränä.
+  - 8,8 s:sta alkaen kohdepiste kulkee 65 %:n vauhdilla koneen mukana, ja suunta kääntyy loppunäkymään 9,6–14,8 s.
+  - Suunta, kallistus ja etäisyys johdetaan silmän kohdepisteestä ja koneesta, joten kone pysyy ruutupaikassaan.
+- **Sääntöristiriita "ei takaa".** Kärjen jälkeen kone näkyy takaviistosta (α enintään 138°, korotus 7–35°), mutta ei koskaan
+  suoraan takaa. Testi sallii bumerangissa α ≤ 150° (v3: ≤ 100°, ellei korotus ole vähintään 60°).
+- **Mitat (Ateena).**
+  - Silmän maanopeus koneen suuntaan on 6–9 s:ssa −2…0 km/s (kone 15 km/s).
+  - Lähin kohta on 19,8 km 7,2 s:ssa, ja kone vie 59 % leveydestä.
+  - Kone loittonee kärjen jälkeen koko ajan (0,55 e/s 8 s:ssa → 0,17 e/s 10,4 s:ssa → nousu).
+  - Suunta: 42° kärjessä → 92° (9,8–10,3 s) → 0° (14,8 s).
+- Reittikuva v3f3 | v3f4 ylhäältä (silmä, kone ja katselinjat 0,25 s:n välein): `v3f4/reitti-v3f3-v3f4.png`. Taulut
+  `v3f4/v3f3-taulu.txt` ja `v3f4/v3f4-taulu.txt` (ALOITUSRATA_TAULU, 0,05 s).
