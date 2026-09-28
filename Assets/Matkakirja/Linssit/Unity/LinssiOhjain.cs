@@ -1394,8 +1394,9 @@ namespace Matkakirja.Natiivi
                         {
                             CupolaKerros.Tyyli = osat[3] == "vanha" ? CupolaKerros.Tyylit.Vanha
                                 : osat[3] == "3d" ? CupolaKerros.Tyylit.Kolmiulotteinen : CupolaKerros.Tyylit.Kuva;
-                            // uusi = pehmea2 (omistaja 28.9. klo 18.0x), pehmea = 1.0.37, terava = Codexin alkuperäinen.
-                            Matkakirja.Natiivi.IssKyytiNakyma.Sarja = osat[3] == "terava" ? "" : osat[3] == "pehmea" ? "pehmea" : "pehmea2";
+                            // uusi = oletussarja (pehmea3), pehmea = 1.0.37, pehmea2–4 = vertailusarjat, terava = Codexin alkuperäinen.
+                            Matkakirja.Natiivi.IssKyytiNakyma.Sarja = osat[3] == "terava" ? ""
+                                : osat[3].StartsWith("pehmea", StringComparison.Ordinal) ? osat[3] : Matkakirja.Natiivi.IssKyytiNakyma.OletusSarja;
                         }
                         else if (a == "ilmakeha" && osat.Length > 3)
                         {

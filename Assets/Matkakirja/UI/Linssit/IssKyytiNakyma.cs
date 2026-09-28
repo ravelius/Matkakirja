@@ -53,12 +53,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuvapari samasta käännöksestä (`ui linssi kehys 0|1`): ikkuna ilman Cupola-kehystä.</summary>
         public static bool IlmanKehysta;
         /// <summary>
-        /// Cupola 2:n kuvasarja (A/B `astro kyyti cupola uusi|pehmea|terava`): "pehmea2" (oletus, omistaja 28.9. klo 18.0x:
-        /// "pehmennyksen määrää voi hieman vähentää"; levysumennus iPhonella kehys r 7 px, ulko-osat 2 px, heijastus 4,6 px,
-        /// iPadilla × 1,27, rae 4/255 ennallaan ja 1/1,3 hienompi, koska lasin zoom suurentaa sen; ruudulla ~0,75 × entinen
-        /// sumennus), "pehmea" (1.0.37: 12 / 3,5 / 8 px) tai "" = Codexin terävä alkuperäinen. Työkalu cupola_pehmea.py.
+        /// Cupola 2:n kuvasarja (A/B `astro kyyti cupola uusi|pehmea|pehmea2|pehmea3|pehmea4|terava`), levysumennus iPhonella
+        /// kehys / ulko-osat / heijastus px (iPadilla × 1,27), rae 4/255 ennallaan ja lasin zoomin (1,3) verran hienompi;
+        /// ruudulla näkyvä sumennus suhteessa 1.0.37:ään zoomin jälkeen:
+        ///  "pehmea"  12 / 3,5 / 8 (1.0.37, 1 ×), "pehmea2" 7 / 2 / 4,6 (cl12, 0,75 ×; omistaja 18.0x "hieman vähemmän"),
+        ///  "pehmea3" 3,7 / 1,08 / 2,46 (OLETUS, 0,4 ×) ja "pehmea4" 2,3 / 0,67 / 1,54 (0,25 ×): omistaja 28.9. klo 19.3x "Vielä
+        ///  liikaa blurrina", vertailuun 0,4 × ja 0,25 ×; "" = Codexin terävä alkuperäinen. Työkalu cupola_pehmea.py.
         /// </summary>
-        public static string Sarja = "pehmea2";
+        public const string OletusSarja = "pehmea3";
+        public static string Sarja = OletusSarja;
         string haettuSarja;
         /// <summary>Codexin Cupola 2: null = ei vielä haettu tai latautuu, true = kehys valmis, false = ei saatu (3D varalla).</summary>
         public static bool? Kuva2Tila { get; private set; }
