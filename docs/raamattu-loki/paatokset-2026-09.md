@@ -8887,3 +8887,7 @@ Omistaja 28.9. klo 21.59 sanatarkasti: "sivuhuomiona, sonnet on päivittynyt ver
 ## TILA: SONNET 5.5 VALIKOSSA, MUTTA SESSIOT YHÄ SONNET 5 (28.9.2026 klo 22.00)
 
 Päätoimittaja 28.9. klo 22.00: omistajan mallivalikossa näkyy Sonnet 5.5, mutta sessioiden hallintatyökalu tarjoaa vain claude-sonnet-5 (claude-sonnet-5-5 = tuntematon), ja Postivahti ilmoittaa itsestään 'Sonnet 5, claude-sonnet-5'. Vaihto tehtävä omistajan valikosta Sonnet-sessioihin (Postivahti, Sisältökirjuri, Laitetestaaja) tai kun työkalun lista päivittyy.
+
+## OMISTAJA: SONNET 5.5 KOLMEEN SONNET-SESSIOON + JULKAISIJA KOKEEKSI (28.9.2026 klo 22.02)
+
+Omistaja 28.9. klo 22.02 kortilla: 'Vaihdan 3 + Julkaisija' — omistaja vaihtaa mallivalikosta Sonnet 5.5:n Postivahdille (effort medium), Sisältökirjurille ja Laitetestaajalle (high) sekä Julkaisijalle kokeeksi (effort high, Päätoimittaja asetti). Päätoimittaja arvioi Julkaisijaa 29.9. illalla (junan läpimeno, virheet, TF-viennit); koodiroolit Opuksella.
