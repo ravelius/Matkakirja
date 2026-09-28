@@ -49,6 +49,7 @@ namespace Matkakirja.Natiivi
         CesiumGeoreference g;
         Material materiaali;
         float paivitetty = -10f;
+        DateTime aurinkoUtc;
 
         /// <summary>A/B (testikomento astro yo 0|1): yökuori pois kuvaparia varten.</summary>
         public static bool Pois;
@@ -195,11 +196,15 @@ namespace Matkakirja.Natiivi
 
         void LateUpdate()
         {
-            // Aurinko liikkuu 0,25°/min: suunta kerran sekunnissa riittää (vain piirrettäessä).
-            if (!piirto.enabled || Time.unscaledTime - paivitetty < 1f) return;
+            // Aurinko liikkuu 0,25°/min: suunta kerran sekunnissa riittää (vain piirrettäessä). Myös sekunnin välein simuloitua
+            // aikaa (web kaari.aseta): nopeutettuna (1000×: 4°/s) päivitys on joka kehys, eikä terminaattori hypi.
+            if (!piirto.enabled) return;
+            var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            if (Time.unscaledTime - paivitetty < 1f && Math.Abs((utc - aurinkoUtc).TotalSeconds) < 1) return;
             paivitetty = Time.unscaledTime;
+            aurinkoUtc = utc;
             var gt = g.transform;
-            var a = (Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()));
+            var a = (Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(utc));
             materiaali.SetVector(IdAurinko, gt.TransformDirection(a).normalized);
             materiaali.SetVector(IdKeskus, transform.position);
             materiaali.SetVector(IdAkseli, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
