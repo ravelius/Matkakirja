@@ -786,21 +786,23 @@
     border-color: rgba(70, 51, 31, 0.24);
 }
 
-/* Omistaja 28.9.2026 (kaappaus maakuntanosto-isommaksi-web.png): "mininosto" isommaksi (~1,4 ×, fontit ja kuva
-   suhteessa), pohjaväri sama kuin nostokortin paperi (mk-nosto), ei kehystä (reunaviiva pois). */
+/* Omistaja 28.9.2026 (kaappaus maakuntanosto-isommaksi-web.png): "mininosto" pohjaväri sama kuin nostokortin
+   paperi (mk-nosto), ei kehystä (reunaviiva pois) — kaikilla laitteilla. Koko (~1,4 ×, fontit ja kuva suhteessa)
+   vain tabletilla (Fablen korjaus 29.9.2026, iPhone-laitekuva: 300 pt:n paneelissa isonnus peitti liikaa karttaa
+   ja rivitti tekstin kapeaksi) — ks. .mk-maakunnat--tabletti alempana; iPhonella koot tässä, aiemman kaltaiset. */
 .mk-maakunnat__luonnehdinta {
     flex-shrink: 0;
     margin: 4px 2px 0 2px;
-    padding: 11px 11px 8px 11px;
+    padding: 8px 8px 4px 8px;
     border-width: 0;
     background-color: #f5f0e2;
 }
 
 .mk-maakunnat__lnimi {
-    font-size: 15px;
-    letter-spacing: 16.25px; /* web 1.3px, sama suhde kuin ennen */
+    font-size: 11px;
+    letter-spacing: 11.82px; /* web 1.3px */
     color: rgba(70, 51, 31, 0.75);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .mk-maakunnat__lrivi {
@@ -808,13 +810,13 @@
     align-items: flex-start;
 }
 
-/* Löydös 115: maakunnan pikkukuva mini-inforuudussa (4:3, rajattu). Isompi ja ilman kehystä (28.9.2026), sama
-   pohjaväri kuin nostokortin paperi (mk-nosto). */
+/* Löydös 115: maakunnan pikkukuva mini-inforuudussa (4:3, rajattu). Ilman kehystä (28.9.2026), sama pohjaväri
+   kuin nostokortin paperi (mk-nosto). */
 .mk-maakunnat__lkuva {
-    width: 88px;
-    height: 66px;
+    width: 64px;
+    height: 48px;
     flex-shrink: 0;
-    margin: 3px 11px 0 0;
+    margin: 2px 8px 0 0;
     border-width: 0;
     border-radius: 2px;
     background-color: #f5f0e2;
@@ -828,8 +830,8 @@
 }
 
 .mk-maakunnat__lpaikka {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     opacity: 0.35;
     color: #46331f;
     --mk-ikoni-viiva: 1.4;
@@ -838,9 +840,36 @@
 .mk-maakunnat__lteksti {
     flex-shrink: 1;
     flex-grow: 1;
-    font-size: 18px;
+    font-size: 13px;
     white-space: normal;
     color: rgba(70, 51, 31, 0.92);
+}
+
+/* Tabletti (omistaja 29.9.2026): ~1,4 × isonnus vain iPadilla (mk-maakunnat--tabletti, Maakunnat.cs
+   UiKerros.Tabletti-ehdolla); iPhonella yllä olevat, aiemman kaltaiset koot. */
+.mk-maakunnat--tabletti .mk-maakunnat__luonnehdinta {
+    padding: 11px 11px 8px 11px;
+}
+
+.mk-maakunnat--tabletti .mk-maakunnat__lnimi {
+    font-size: 15px;
+    letter-spacing: 16.25px; /* web 1.3px, sama suhde kuin ennen */
+    margin-bottom: 5px;
+}
+
+.mk-maakunnat--tabletti .mk-maakunnat__lkuva {
+    width: 88px;
+    height: 66px;
+    margin: 3px 11px 0 0;
+}
+
+.mk-maakunnat--tabletti .mk-maakunnat__lpaikka {
+    width: 28px;
+    height: 28px;
+}
+
+.mk-maakunnat--tabletti .mk-maakunnat__lteksti {
+    font-size: 18px;
 }
 
 .mk-maakunnat__lisaa {
@@ -2102,25 +2131,47 @@
     padding: 4px;
 }
 
-/* Löydös (omistaja 28.9.2026, kaappaus maakuntanosto-isommaksi-web.png): sama ~1,4 × korotus kuin perustilan
-   mininostolla; pohjaväri jo nostokortin paperi (mk-maakunnat__luonnehdinta), ei kehystä. */
+/* Pohjaväri jo nostokortin paperi ja ei kehystä (mk-maakunnat__luonnehdinta, kaikilla laitteilla); käsin piirretty
+   paneelikehys (KarheaKehys) piilotettu maakuntakarttatilassa (Karttaselite.cs) — se näkyi tummana reunana koko
+   pienen kuvausruudun ympärillä (omistaja 29.9.2026, iPhone-laitekuva). */
 .mk-maakunnat--kartta .mk-maakunnat__luonnehdinta {
     margin: 0;
-    padding: 11px 11px 8px 11px;
+    padding: 8px 8px 6px 8px;
 }
 
 .mk-maakunnat--kartta .mk-maakunnat__lnimi {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lkuva {
+    width: 96px;
+    height: 72px;
+    margin: 2px 10px 0 0;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lteksti {
+    font-size: 15px;
+}
+
+/* Tabletti + maakuntakartta (omistaja 29.9.2026): ~1,4 × isonnus vain iPadilla, sama suhde kuin perustilan
+   tablettikoroissa yllä. iPhonella yllä olevat, aiemman kaltaiset koot. */
+.mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__luonnehdinta {
+    padding: 11px 11px 8px 11px;
+}
+
+.mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__lnimi {
     font-size: 17px;
     margin-bottom: 8px;
 }
 
-.mk-maakunnat--kartta .mk-maakunnat__lkuva {
+.mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__lkuva {
     width: 132px;
     height: 99px;
     margin: 3px 14px 0 0;
 }
 
-.mk-maakunnat--kartta .mk-maakunnat__lteksti {
+.mk-maakunnat--tabletti.mk-maakunnat--kartta .mk-maakunnat__lteksti {
     font-size: 21px;
 }
 

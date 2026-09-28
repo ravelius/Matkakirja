@@ -58,7 +58,8 @@ namespace Matkakirja.Natiivi
             paneeli = Rakenne.El("mk-selite", turva);
             paneeli.style.top = Ylapalkki.Varaus + 8;
             paneeli.style.display = DisplayStyle.None;
-            paneeli.Add(new KarheaKehys { Sade = 8, Paksuus = 1.2f });
+            var kehys = new KarheaKehys { Sade = 8, Paksuus = 1.2f };
+            paneeli.Add(kehys);
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
 
             var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
@@ -81,6 +82,10 @@ namespace Matkakirja.Natiivi
             {
                 ylarivi.style.display = DisplayStyle.None; // ei välilehtiä eikä ✕: nappi on kytkin
                 paneeli.AddToClassList("mk-selite--karttatila");
+                // Omistaja 29.9.2026 (iPhone-laitekuva): käsin piirretty kehys (KarheaKehys) näkyi tummana
+                // reunana koko pienen kuvausruudun ympärillä — pois vain maakuntakarttatilassa, pohja jää
+                // silti nostokortin paperin väriseksi (mk-selite background-color).
+                kehys.style.display = DisplayStyle.None;
                 Maakunnat.PiilotaLista();
             }
             NaytaValilehti();

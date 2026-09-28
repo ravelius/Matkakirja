@@ -135,6 +135,9 @@ namespace Matkakirja.Natiivi
         {
             this.kerros = kerros;
             juuri = Rakenne.El("mk-maakunnat", isa, PickingMode.Ignore);
+            // Omistaja 29.9.2026 (iPhone-laitekuva): ~1,4×-isonnus vain tabletilla (mk-maakunnat--tabletti,
+            // Kartta.uss); iPhonella "mininosto" pysyy aiemman kokoisena, vain pohjaväri ja kehyksettömyys jäävät.
+            juuri.EnableInClassList("mk-maakunnat--tabletti", UiKerros.Tabletti);
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-selite__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
