@@ -455,19 +455,24 @@ namespace Matkakirja.Natiivi
             alkuValitsee = Valitseva(kohde);
             // 1.0.40 (mitattu FB234D08): UI Toolkit antaa kosketukselle kohteeksi välimuistissa olevan "osoittimen alla" -elementin,
             // kun kosketus osuu samaan pisteeseen kuin edellinen. Kaiuttimen napautus sai kohteeksi kortin (edellinen kosketus
-            // ennen asettelun muutosta), vaikka pisteessä on nappi: kortti sulkeutui eikä luenta alkanut. Nappi, joka ei saanut
+            // ennen asettelun muutosta), vaikka pisteessä on nappi: kortti sulkeutui eikä luenta alkanut (omistaja iPadilla:
+            // kuvan napautus, kaiutin ja lukijan valikkonappi sulkivat kortin ~joka kolmas kerta). Nappi tai kuva, joka ei saanut
             // painallusta, painetaan napautuksen lopussa (NapautusKorttiin).
-            ohitettuNappi = null;
+            ohitettu = null;
             if (kohde != e.target)
                 for (var v = kohde; v != null && v != kortti; v = v.parent)
-                    if (v is Button b) { if (!(e.target is VisualElement t && (t == b || b.Contains(t)))) ohitettuNappi = b; break; }
+                    if (v is Button || v.ClassListContains("mk-nosto__kuvakehys"))
+                    {
+                        if (!(e.target is VisualElement t && (t == v || v.Contains(t)))) ohitettu = v;
+                        break;
+                    }
         }
 
         /// <summary>Elementti ruudun kohdassa nyt (paneelin poiminta); ilman paneelia tapahtuman kohde.</summary>
         VisualElement Poimi(Vector2 paikka, VisualElement varalla) => kortti.panel?.Pick(paikka) ?? varalla;
 
-        /// <summary>Nappi, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
-        Button ohitettuNappi;
+        /// <summary>Nappi tai kuvakehys, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
+        VisualElement ohitettu;
 
         bool alkuValitsee;
 
@@ -484,14 +489,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
         void NapautusKorttiin(ClickEvent e)
         {
-            var ohitettu = ohitettuNappi;
-            ohitettuNappi = null;
+            var ohi = ohitettu;
+            ohitettu = null;
             if (((Vector2)e.position - eleAlku).magnitude >= Napautuskynnys || Time.unscaledTime * 1000f - eleAika > NapautusMs) return;
             var kohde = Poimi(e.position, e.target as VisualElement);
-            if (ohitettu != null && ohitettu.panel != null && (kohde == ohitettu || ohitettu.Contains(kohde)))
+            if (ohi != null && ohi.panel != null && (kohde == ohi || ohi.Contains(kohde)))
             {
-                Debug.Log($"MATKAKIRJA ui nostokortti: vanhentunut kohde {(e.target as VisualElement)?.GetType().Name}, painetaan {string.Join(".", ohitettu.GetClasses())}");
-                using (var s = NavigationSubmitEvent.GetPooled()) { s.target = ohitettu; ohitettu.SendEvent(s); }
+                Debug.Log($"MATKAKIRJA ui nostokortti: vanhentunut kohde {(e.target as VisualElement)?.GetType().Name}, painetaan {string.Join(".", ohi.GetClasses())}");
+                if (ohi is Button) using (var s = NavigationSubmitEvent.GetPooled()) { s.target = ohi; ohi.SendEvent(s); }
+                else using (var c = ClickEvent.GetPooled()) { c.target = ohi; ohi.SendEvent(c); }
                 return;
             }
             if (alkuValitsee || Valitseva(kohde)) return;
