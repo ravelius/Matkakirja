@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 07:32 EEST — **Kierto normaali, ei hälytyksiä. Julkaisu yhä käynnissä (lippu päällä), juna-tauko ei palautunut. Simulaattoreita boottina 2 (päiväraja).**
+**Päivitetty:** 2026-09-28 07:44 EEST — **Julkaisulippu poistunut — julkaisu valmis. 2 uutta postilaatikkoviestiä Fablelle (Codex ihmeet 14 maata, Sisältökirjuri kuvaputki 13 hetkeä). Levypuskuri kaventunut edelleen (89 Gi).**
 
 ## 1) Sessiot
 
-Kaikki roolit tilinvaihdon (28.9. 07.0x) session id:llä. Kontekstit nousevat normaalisti aktiivisen työn myötä, kaikki yhä alle 70 % kynnyksen (korkein Natiiviseppä 42%).
+Kaikki roolit tilinvaihdon (28.9. 07.0x) session id:llä. Kontekstit nousevat normaalisti aktiivisen työn myötä, kaikki yhä alle 70 % kynnyksen (korkein Natiiviseppä 52%).
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 24% | running |
-| Postivahti (self) | (tämä sessio) | 18% | running |
+| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 26% | running |
+| Postivahti (self) | (tämä sessio) | 19% | running |
 | Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 12% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 42% | running |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 32% | running |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 29% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 52% | running |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 39% | running |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 30% | running |
 | Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 38% | running |
-| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 19% | running |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 31% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 35% | running |
+| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 20% | running |
+| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 32% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 41% | running |
 | Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 10% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
@@ -46,9 +46,9 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). Postilaatikko: EI UUTTA tällä kierroksella.
+Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). **Postilaatikko 07:44: 2 uutta viestiä Fablelle** — `posti/codex-fablelle-ihmeet-14maata-toimitus-20260928.md` (Codex: 14 ihmeen loistoajan kuvaa) ja `posti/sisaltokirjuri-kuvaputki-13-historian-hetkea-era1-20260928.md` (Sisältökirjuri → Kuvaputki: 13 historian hetkeä, erä 1). Ilmoitettu Fablelle 07:44.
 
-**Juna:** tauon lippu ei ole palautunut (tarkistettu 07:32) — poltto valmis. Viimeisin juna.log-rivi yhä 22:43 (27.9.), ei uutta käännöstä — todennäköisesti odottaa julkaisulipun poistumista.
+**Julkaisu VALMIS** — lippu `/tmp/matkakirja-julkaisu` poistunut 07:44 (oli päällä 07:18–~07:4x). **Juna:** tauon lippu ei ole palautunut. Viimeisin juna.log-rivi yhä 22:43 (27.9.), ei uutta käännöstä vielä.
 
 **Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
@@ -76,17 +76,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (07:32)
+## 5) Resurssit (07:44)
 
-- **5 h -kiintiö:** 15 %. **Viikko (kaikki mallit): 4 %.** **Viikko (Fable):** 0 %.
-- **Levy:** 91 Gi vapaana (raja 80 Gt, puskuri ~11 Gi, vakaa). wt/-worktreet 33 kpl.
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, siirtoseppa-iPhone) — päiväraja 2, ei ylitystä.
-- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 07:29, aktiivinen julkaisu). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen (korkein Natiiviseppä 42%).
-- **GPU-prosessit (type=gpu-process):** 12 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta (jo kerran ilmoitettu Julkaisijalle).
+- **5 h -kiintiö:** 19 %. **Viikko (kaikki mallit): 5 %.** **Viikko (Fable):** 0 %.
+- **Levy:** 89 Gi vapaana (raja 80 Gt, puskuri ~9 Gi — kaventunut jatkuvasti, seurataan tiiviisti). wt/-worktreet 33 kpl.
+- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 1 (natiiviseppa-iPhone) — päiväraja 2, ei ylitystä.
+- **Liput:** `/tmp/matkakirja-julkaisu` POISTUNUT 07:44 — julkaisu valmis. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen (korkein Natiiviseppä 52%).
+- **GPU-prosessit (type=gpu-process):** 14 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
 - **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
 - **Lokisiivouskandidaatteja:** ei tällä kierroksella.
-- **Postilaatikko:** EI UUTTA (vain Fablen omia viestejä).
+- **Postilaatikko:** 2 uutta viestiä Fablelle (Codex ihmeet + Sisältökirjuri kuvaputki) — ilmoitettu.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
