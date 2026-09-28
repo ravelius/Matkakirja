@@ -2390,7 +2390,8 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * nappi löytyy eikä kaksosta synny.
    */
   const otsikko = document.getElementById('nahtavyys-otsikko');
-  if (kaiutin && otsikko && kaiutin.parentElement !== otsikko) {
+  // Lukija voi kääriä kaiuttimen valikkonapin pariksi (.lukija-pari) otsikon sisällä.
+  if (kaiutin && otsikko && !otsikko.contains(kaiutin)) {
     otsikko.appendChild(kaiutin);
   }
 }

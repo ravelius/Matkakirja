@@ -10,6 +10,14 @@
  *   Hakee NASA GIBS WMS:stä (PD) eilisen UTC-päivän VIIRS-tosivärikuvan
  *   4096 × 2048 EPSG:4326 (sama kuin WMTS-taso 2, noin 10 km/px) ja vertaa sitä
  *   saman kuukauden pilvettömään Blue Marble NG:hen (ämpäristä data/bmng/<kk>-4096.jpg).
+ *   MINIMIKOOSTE (Linssiseppä 28.9.2026, ensimmäisen ajon kuva): auringon kimallus
+ *   näkyi trooppisilla merillä pilven kaltaisina pystyjuovina joka kaistan keskellä.
+ *   NOAA-20 ja Suomi NPP kiertävät samaa rataa puolen kierroksen päässä toisistaan,
+ *   joten niiden kaistat ovat lomittain ja kimallus osuu eri pituuspiireille: kun
+ *   molemmat kuvat saadaan, pikseli otetaan tummemmasta (minimiKooste), jolloin
+ *   kimallus putoaa pois mutta pilvet (kummassakin) jäävät. Syyskuun merijää, jota
+ *   BMNG:n world-sarjassa ei ole, näkyy pilvenä; se jätetään, koska se on kyydissä
+ *   valkoinen kuten oikeasti.
  *   Pilvi on kirkkaampi ja harmaampi kuin pilvetön pinta, joten lumi ja jää kumoutuvat:
  *
  *     alfa = saturate((L_päivä − L_bmng − 0,08) / 0,25) · saturate((0,35 − S_päivä) / 0,2)
@@ -17,6 +25,8 @@
  *   L = Rec. 709 -luminanssi sRGB-arvoista 0…1 (0,2126 r + 0,7152 g + 0,0722 b),
  *   S = HSV-värikylläisyys (max − min) / max. Kaistojen väliset aukot (L < 0,02)
  *   täytetään edellisen päivän kuvasta; jos sielläkin on aukko, alfa = 0.
+ *
+ *   Alfan reunat pehmennetään (pehmennaAlfa, ≈ Gauss σ 1,15 px), jottei 10 km:n pikseli näy portaina.
  *
  *   Tulos: <kansio>/uusin.png (4096 × 2048, 8-bit harmaa = alfa · 255, lon −180…180
  *   vasemmalta, lat 90…−90 ylhäältä) ja <kansio>/uusin.json.
@@ -50,6 +60,10 @@ export const GIBS_KERROKSET = [
   'VIIRS_SNPP_CorrectedReflectance_TrueColor',
   'MODIS_Terra_CorrectedReflectance_TrueColor',
 ];
+/** Minimikoosteen pari ensisijaiselle kerrokselle: sama rata, puolen kierroksen ero (kimallus eri kohdassa). */
+export const GIBS_PARI = {
+  VIIRS_NOAA20_CorrectedReflectance_TrueColor: 'VIIRS_SNPP_CorrectedReflectance_TrueColor',
+};
 /** Kerros hyväksytään, kun vähintään tämä osuus pikseleistä on dataa (ei mustaa aukkoa). */
 export const KATTAVUUS_RAJA = 0.3;
 export const AUKKO_L = 0.02;
@@ -86,6 +100,8 @@ export function gibsUrl(kerros, paiva, leveys = LEVEYS, korkeus = KORKEUS) {
 
 /** Ämpärin BMNG-kuukausikuva (kk = '01'…'12'). */
 export const bmngAmpariPolku = (kk) => `data/bmng/${kk}-4096.jpg`;
+/** Ämpärin BMNG-sarjan versio CDN-välimuistin ohitukseen (Karttasepän 21600 px -lähde, 28.9.2026). */
+export const BMNG_VERSIO = '21600';
 
 /** NASA Visible Earthin BMNG 2004 -kuukausikuva (world-sarja, 5400 × 2700, PD). */
 export function bmngLahdeUrl(kk) {
@@ -114,6 +130,25 @@ export function pilviAlfa(r, g, b, rb, gb, bb) {
 }
 
 /**
+ * Minimikooste kahdesta saman päivän RGB-raakakuvasta (3 kanavaa): pikseli siitä, jonka luminanssi on
+ * pienempi, joten auringon kimallus putoaa pois (ks. tiedoston alku). Aukko (L < AUKKO_L) otetaan toisesta
+ * kuvasta. Palauttaa { rgb, toisesta } (toisesta = b:stä otetut pikselit); a ja b pysyvät ennallaan.
+ */
+export function minimiKooste(a, b) {
+  if (a.length !== b.length) throw new Error(`minimikooste: ${a.length} ≠ ${b.length} tavua`);
+  const rgb = new Uint8Array(a);
+  let toisesta = 0;
+  for (let j = 0; j < a.length; j += 3) {
+    const la = luminanssi(a[j], a[j + 1], a[j + 2]);
+    const lb = luminanssi(b[j], b[j + 1], b[j + 2]);
+    if (lb < AUKKO_L || (la >= AUKKO_L && la <= lb)) continue;
+    rgb[j] = b[j]; rgb[j + 1] = b[j + 1]; rgb[j + 2] = b[j + 2];
+    toisesta++;
+  }
+  return { rgb, toisesta };
+}
+
+/**
  * Koko kuvan alfa. paiva, edellinen (tai null) ja bmng ovat RGB-raakatavuja
  * (3 kanavaa, leveys × korkeus). Palauttaa Uint8Array(leveys × korkeus) ja
  * täytettyjen aukkojen määrän.
@@ -135,6 +170,47 @@ export function laskePilvialfa({ paiva, edellinen = null, bmng, leveys, korkeus 
     alfa[i] = Math.round(255 * pilviAlfa(lahde[j], lahde[j + 1], lahde[j + 2], bmng[j], bmng[j + 1], bmng[j + 2]));
   }
   return { alfa, taytetty };
+}
+
+/**
+ * Pehmeät reunat (Linssiseppä 28.9.2026, natiivin laitekuva cl7): alfa on lähes kaksiarvoinen, ja ISS:n korkeudelta
+ * katsottuna noin 10 km:n pikselit näkyivät pilvien reunoilla portaina ja maalla pilkkuina (pinnan muutos vs. BMNG).
+ * Ensin 3 × 3 -mediaani poistaa yksittäiset pilkut, sitten kaksi kertaa toistettu 3 × 3 -laatikkosumennus (≈ Gauss σ 1,15 px,
+ * noin 11 km) pehmentää reunat; vaakasuunta kiertää pituuspiirin ±180° yli, pystysuunta leikkautuu napoihin. Palauttaa uuden
+ * Uint8Arrayn.
+ */
+export function pehmennaAlfa(alfa, leveys, korkeus, kierroksia = 2) {
+  if (alfa.length !== leveys * korkeus) throw new Error(`pehmennys: ${alfa.length} ≠ ${leveys} × ${korkeus}`);
+  let a = new Float32Array(alfa.length);
+  const ikkuna = new Uint8Array(9);
+  for (let y = 0; y < korkeus; y++) {
+    for (let x = 0; x < leveys; x++) {
+      let n = 0;
+      for (let dy = -1; dy <= 1; dy++) {
+        const yy = Math.min(korkeus - 1, Math.max(0, y + dy)) * leveys;
+        for (let dx = -1; dx <= 1; dx++) ikkuna[n++] = alfa[yy + ((x + dx + leveys) % leveys)];
+      }
+      ikkuna.sort();
+      a[y * leveys + x] = ikkuna[4];
+    }
+  }
+  const b = new Float32Array(a.length);
+  for (let k = 0; k < kierroksia; k++) {
+    for (let y = 0; y < korkeus; y++) {
+      const r = y * leveys;
+      for (let x = 0; x < leveys; x++) {
+        const v = x === 0 ? leveys - 1 : x - 1, o = x === leveys - 1 ? 0 : x + 1;
+        b[r + x] = (a[r + v] + a[r + x] + a[r + o]) / 3;
+      }
+    }
+    for (let y = 0; y < korkeus; y++) {
+      const ylos = (y === 0 ? 0 : y - 1) * leveys, r = y * leveys, alas = (y === korkeus - 1 ? y : y + 1) * leveys;
+      for (let x = 0; x < leveys; x++) a[r + x] = (b[ylos + x] + b[r + x] + b[alas + x]) / 3;
+    }
+  }
+  const ulos = new Uint8Array(a.length);
+  for (let i = 0; i < a.length; i++) ulos[i] = Math.round(a[i]);
+  return ulos;
 }
 
 /** Osuus pikseleistä, joissa on dataa (L ≥ 0,02). */
@@ -194,7 +270,8 @@ async function pilvet(argv) {
   if (arvo('--bmng-tiedosto')) {
     bmngTavut = await readFile(arvo('--bmng-tiedosto'));
   } else {
-    const url = `${AMPARI}/${bmngAmpariPolku(kk)}`;
+    // ?v= ohittaa CDN:n immutable-kopiot: Karttaseppä vaihtoi 28.9. BMNG:n 21600 px -lähteeseen.
+    const url = `${AMPARI}/${bmngAmpariPolku(kk)}?v=${BMNG_VERSIO}`;
     const { status, tavut } = await haeTavut(url);
     if (status === 404) {
       console.log(`::notice::BMNG ${kk} puuttuu ämpäristä (${url}) — pilvilaskenta ohitetaan. Aja ensin ISS-BMNG-työnkulku.`);
@@ -214,19 +291,31 @@ async function pilvet(argv) {
     console.log(`GIBS ${k} ${paiva}: ohitetaan (${t.syy})`);
   }
   if (!kerros) throw new Error(`GIBS: yksikään kerros ei antanut päivää ${paiva}`);
+  let lahde = kerros;
+  if (GIBS_PARI[kerros]) {
+    const p = await haeGibs(sharp, GIBS_PARI[kerros], paiva);
+    if (p.rgb) {
+      const m = minimiKooste(paivaRgb, p.rgb);
+      paivaRgb = m.rgb;
+      lahde = `${kerros} + ${GIBS_PARI[kerros]} (minimikooste)`;
+      console.log(`GIBS ${GIBS_PARI[kerros]} ${paiva}: minimikooste, ${m.toisesta} px parista`);
+    } else console.log(`GIBS ${GIBS_PARI[kerros]} ${paiva}: ei minimikoostetta (${p.syy})`);
+  }
 
   const eilen = edellinenPaiva(paiva);
   const e = await haeGibs(sharp, kerros, eilen);
   if (!e.rgb) console.log(`GIBS ${kerros} ${eilen}: ei aukkojen täyttöä (${e.syy})`);
 
-  const { alfa, taytetty } = laskePilvialfa({
+  const laskettu = laskePilvialfa({
     paiva: paivaRgb, edellinen: e.rgb ?? null, bmng, leveys: LEVEYS, korkeus: KORKEUS,
   });
+  const { taytetty } = laskettu;
+  const alfa = pehmennaAlfa(laskettu.alfa, LEVEYS, KORKEUS);
   let summa = 0;
   for (const a of alfa) summa += a;
   mkdirSync(kansio, { recursive: true });
   kirjoitaTurvallisesti(join(kansio, 'uusin.png'), harmaaPng(alfa, LEVEYS, KORKEUS));
-  const meta = pilvetJson({ paiva, kerros, kk, aukotPaivasta: e.rgb ? eilen : null });
+  const meta = pilvetJson({ paiva, kerros: lahde, kk, aukotPaivasta: e.rgb ? eilen : null });
   kirjoitaTurvallisesti(join(kansio, 'uusin.json'), meta);
   console.log(`pilvet → ${kansio}: keskialfa ${(summa / alfa.length / 2.55).toFixed(1)} %, `
     + `täytetty ${taytetty} px, ${meta.trim()}`);

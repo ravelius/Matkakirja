@@ -801,7 +801,10 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
      * vanha nappi puretaan ensin, jotta uusi sivu pysäyttää edellisen
      * luennan kuten ennenkin (lisaaLukijanappi vertaa nappia).
      */
-    ylanapit.querySelector('.lukija-nappi')?.remove();
+    const vanhaKaiutin = ylanapit.querySelector('.lukija-nappi');
+    // Valikkonappi lähtee kaiuttimen mukana (js/lukija.js kohdistaValikkonappi).
+    vanhaKaiutin?.__lukijaValikko?.remove();
+    vanhaKaiutin?.remove();
     lisaaLukijanappi(uusi, { otsikko: 'Kuuntele tiedeliite', rivi: ylanapit });
     const vanha = sivu;
     sivu = uusi;

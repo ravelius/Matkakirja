@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { inflateSync } from 'node:zlib';
 import {
   pilviAlfa, laskePilvialfa, luminanssi, kyllaisyys, kattavuus, eilinenUtc, edellinenPaiva,
-  gibsUrl, bmngLahdeUrl, bmngAmpariPolku, pilvetJson, GIBS_KERROKSET,
+  gibsUrl, bmngLahdeUrl, bmngAmpariPolku, pilvetJson, GIBS_KERROKSET, GIBS_PARI, minimiKooste, pehmennaAlfa,
 } from '../tools/iss-pilvet.mjs';
 import {
   ovationRuudukko, revontuletJson, harmaaPng, crc32, LEVEYS, KORKEUS,
@@ -49,6 +49,42 @@ test('iss-pilvet: aukot täytetään edellisestä päivästä, muuten alfa 0', (
   assert.deepEqual([...ilman.alfa], [255, 0, 0]);
   assert.throws(() => laskePilvialfa({ paiva, bmng: bmng.subarray(3), leveys: 3, korkeus: 1 }), /bmng/);
   lahella(kattavuus(paiva), 1 / 3);
+});
+
+test('iss-pilvet: minimikooste pudottaa auringon kimalluksen ja täyttää aukot parista', () => {
+  // 4 pikseliä: kimallus a:ssa (b:ssä tumma meri), pilvi kummassakin, aukko a:ssa, aukko kummassakin.
+  const a = Uint8Array.from([180, 190, 200, 250, 250, 250, 0, 0, 0, 0, 0, 0]);
+  const b = Uint8Array.from([10, 20, 50, 245, 245, 245, 30, 40, 60, 1, 1, 1]);
+  const m = minimiKooste(a, b);
+  assert.deepEqual([...m.rgb], [10, 20, 50, 245, 245, 245, 30, 40, 60, 0, 0, 0]);
+  assert.equal(m.toisesta, 3);
+  assert.equal(a[0], 180); // a ennallaan
+  assert.throws(() => minimiKooste(a, b.subarray(3)), /minimikooste/);
+  // Kimallus ei jää pilveksi, pilvi jää.
+  const bmng = Uint8Array.from([10, 20, 50, 10, 20, 50, 10, 20, 50, 10, 20, 50]);
+  assert.deepEqual([...laskePilvialfa({ paiva: m.rgb, bmng, leveys: 4, korkeus: 1 }).alfa], [0, 255, 0, 0]);
+  assert.deepEqual([...laskePilvialfa({ paiva: a, bmng, leveys: 4, korkeus: 1 }).alfa].slice(0, 2), [255, 255]);
+  // Pari on saman radan VIIRS (ensisijaisen kerroksen puolen kierroksen päässä).
+  assert.equal(GIBS_PARI[GIBS_KERROKSET[0]], 'VIIRS_SNPP_CorrectedReflectance_TrueColor');
+});
+
+test('iss-pilvet: pehmennys poistaa pilkut, pehmentää reunat, kiertää pituuden yli ja säilyttää tasaisen', () => {
+  // Tasainen 200 pysyy.
+  assert.deepEqual([...pehmennaAlfa(new Uint8Array(12).fill(200), 4, 3)], new Array(12).fill(200));
+  // Yksittäinen 255-pikseli (pinnan pilkku) katoaa mediaanissa.
+  const pilkku = new Uint8Array(25); pilkku[12] = 255;
+  assert.deepEqual([...pehmennaAlfa(pilkku, 5, 5)], new Array(25).fill(0));
+  // 3 × 3 -pilvi 7 × 7:ssä: keskus pysyy korkeana, reuna pehmenee, kaukana nolla.
+  const pilvi = new Uint8Array(49);
+  for (const y of [2, 3, 4]) for (const x of [2, 3, 4]) pilvi[y * 7 + x] = 255;
+  const p = pehmennaAlfa(pilvi, 7, 7, 1);
+  assert.ok(p[3 * 7 + 3] > 100, `keskus ${p[24]}`);
+  assert.ok(p[3 * 7 + 1] > 0 && p[3 * 7 + 1] < 255, 'reuna pehmeä');
+  assert.equal(p[0], 0);
+  // Pituuspiiri kiertää: vasemman reunan pilvi vuotaa oikeaan reunaan.
+  const k = new Uint8Array(15); for (const y of [0, 1, 2]) { k[y * 5] = 255; k[y * 5 + 1] = 255; }
+  assert.ok(pehmennaAlfa(k, 5, 3, 1)[1 * 5 + 4] > 0, 'oikea reuna saa osan vasemmasta');
+  assert.throws(() => pehmennaAlfa(pilkku, 4, 4), /pehmennys/);
 });
 
 test('iss-pilvet: päivät, GIBS- ja BMNG-osoitteet, JSON', () => {

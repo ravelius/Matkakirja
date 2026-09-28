@@ -176,6 +176,9 @@ import {
  * kaksi totuutta on pahempi kuin kehä.
  */
 import { luoAstroSumu } from './astro-sumu.js';
+import { ISS_NYT, lataaIssTle, KAAREN_VALI_S, SIMUKELLO } from './iss-rata.js';
+import { luoIssKyytiNakyma } from './iss-kyyti-nakyma.js';
+import { ISS_OSUMA_PX, ISS_SYKE_MS } from './iss-kyyti.js';
 import { luoNimiolimitys } from './satelliitti-nimiot.js';
 
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
@@ -272,12 +275,6 @@ export const PALJASTUKSEN_KEHYKSET = 3;
  * 1,8 s, vaikka pallo valmistuisi aiemmin.
  */
 export const PALJASTUKSEN_MINIMI_MS = 1800;
-/**
- * ISS:n nopeuskerroin avauksen seurannassa (PAATOKSET 53): asema kulkee
- * kymmenesosanopeudella (0,48 °/s), ja kamera seuraa sitä, joten Maa
- * pyörii ruudulla hitaasti aseman alla.
- */
-export const ISS_SEURANNAN_KERROIN = 0.1;
 export const PALJASTUKSEN_LUOKKA = 'astro-paljastus';
 /** Avausajon kesto (ms). Tilaus: 4–6 s. */
 export const AVAUSZOOMIN_KESTO_MS = 5000;
@@ -437,6 +434,8 @@ export const ZOOMIN_KAUIN = 1.3;
 
 /** Avausajon kesto (ms); liikkeenvähennyksellä hyppy. */
 export const AVAUSAJON_MS = 900;
+/** Kameran liuku valokuvan kohteen ylle (ms), natiivi KuvaanAjoS 0,9 s. */
+export const KUVAN_AJON_MS = 900;
 /**
  * Sormiliu'un naulaus sulkiessa (ms). Pallon oma liuku (js/pallo.js
  * asennaPallonEleet) jatkaa kirjoittamista kameraan sormen irrottua,
@@ -1408,7 +1407,18 @@ export function radanPiste(u, solmu = 0, inklinaatio = ISS_INKLINAATIO) {
   return { lat, lng };
 }
 
-/** ISS:n paikka hetkellä t (sekunteina linssin avauksesta). */
+/*
+ * TODELLINEN RATA KORVASI NOPEUTETUN (omistaja 26.9.2026 klo 14.4x: *"ISS:n
+ * vauhti ja rata todelliset, missä ISS juuri nyt"*; ISS-kyydin suositus
+ * 28.9.2026 luku 4). Kalvo piirtää ISS:n SGP4-paikasta (js/linssit/
+ * iss-rata.js ISS_NYT) ja maajäljen puoli kierrosta taakse ja eteen kuten
+ * natiivi. issPaikka ja issKaari jäävät havainnollisen mallin puhtaiksi
+ * funktioiksi (tests/satelliitti-avaruus.test.mjs), mutta kalvo ei enää
+ * käytä niitä. Avauksen ISS-seuranta (PAATOKSET 53) seuraa nyt todellista
+ * asemaa: Maa liukuu sen alla todellisella nopeudella.
+ */
+
+/** ISS:n paikka hetkellä t (sekunteina linssin avauksesta), havainnollinen malli. */
 export function issPaikka(t) {
   const s = Number(t) || 0;
   return radanPiste((360 * s) / ISS_KIERROS_S, (-360 * s) / ISS_SOLMUN_KIERTO_S);
@@ -1545,8 +1555,16 @@ export function luoAvaruusKalvo({
   for (const [el, tausta, laji] of [[varjo, varjonTausta(), 'varjo'],
     [valoreuna, valoreunanTausta(), 'valo']]) {
     const maski = puolenMaski(laji);
+    /*
+     * RAJAUS YMPYRÄÄN (28.9.2026, #3526-kuvapari): WebKit piirsi neliön
+     * ympyrän ulkopuolisen osan himmeänä, vaikka liu'un viimeinen väri on
+     * läpinäkyvä — neliön vaakareunat näkyivät tähtitaivaalla ja
+     * läpikuultavan valokuvanäkymän läpi suorakaiteena. clip-path ei päästä
+     * mitään ympyrän ulkopuolelle.
+     */
     el.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;'
-      + `background:${tausta};-webkit-mask-image:${maski};mask-image:${maski};`;
+      + `background:${tausta};-webkit-mask-image:${maski};mask-image:${maski};`
+      + '-webkit-clip-path:circle(50% at 50% 50%);clip-path:circle(50% at 50% 50%);';
   }
 
   const rata = doc.createElementNS(SVG, 'svg');
@@ -1572,6 +1590,15 @@ export function luoAvaruusKalvo({
     + `margin:${-ISS_PIIRROKSEN_KORKEUS_PX / 2}px 0 0 ${-ISS_PIIRROKSEN_LEVEYS_PX / 2}px;`
     + 'pointer-events:none;';
   iss.innerHTML = ISS_PIIRROS_SVG;
+  /*
+   * SYKE KERRAN LINSSIN AVAUTUESSA (ISS-kyydin suositus 28.9.2026 luku 1):
+   * rengas laajenee ja häipyy ISS_SYKE_MS:ssa, jotta pelaaja huomaa
+   * aseman napautettavaksi. Ei tekstiä eikä nappia.
+   */
+  const syke = doc.createElement('span');
+  syke.className = 'astro-iss-syke';
+  syke.setAttribute('aria-hidden', 'true');
+  iss.appendChild(syke);
 
   kalvo.append(varjo, valoreuna, rata, iss);
 
@@ -1604,10 +1631,15 @@ export function luoAvaruusKalvo({
   let sadePx = 0;
   let issPiste = null;
   let kaarenPisteita = 0;
-  let aika = 0;
-  let edellinenSekunti = null;
-  let aikakerroin = 1;
   let purettu = false;
+  /* Maajälki lasketaan KAAREN_VALI_S:n välein (241 SGP4-pistettä). */
+  let maajalki = null;
+  let maajalkiMs = -Infinity;
+  let maajaljenVersio = -1;
+  /* Liikkeenvähennys: asema jäädytetään avaushetkeen (kuten ennenkin). */
+  const avattuMs = Date.now();
+  /* ISS:n kyyti (iss-kyyti-nakyma.js): 0 = kaukonäkymä, 1 = kyydissä. */
+  let kyyti = { osuus: 0, piste: true };
 
   const asetaSade = (r) => {
     if (Math.abs(r - sadePx) < 0.5) return;
@@ -1632,28 +1664,21 @@ export function luoAvaruusKalvo({
     const kamera = pallo.camera?.()?.position;
     if (!sade3d || !kamera) return;
     asetaSade(halkaisijaRuudulla(korkeus, { korkeus: kotelo.clientHeight }) / 2);
-    /*
-     * AIKA KERTYY KEHYKSISTÄ AIKAKERTOIMELLA (PAATOKSET 53): avauksen
-     * ISS-seurannan ajan asema kulkee hitaammin, jotta Maa pyörii sen
-     * alla rauhallisesti. Ensimmäinen kehys aloittaa kellonajasta kuten
-     * ennenkin; yksittäinen väli katkaistaan 0,25 s:iin.
-     */
-    if (reduced) {
-      aika = 0;
-    } else {
-      const sekunnit = (Number(nyt) || 0) / 1000;
-      if (edellinenSekunti === null) aika = sekunnit;
-      else aika += Math.max(0, Math.min(0.25, sekunnit - edellinenSekunti)) * aikakerroin;
-      edellinenSekunti = sekunnit;
+    // Simuloitu aika (nopeutus ja ylilento, iss-rata.js SIMUKELLO); LIVE = nyt.
+    const ms = reduced ? avattuMs : SIMUKELLO.nyt();
+    if (!maajalki || ISS_NYT.versio !== maajaljenVersio || Math.abs(ms - maajalkiMs) >= KAAREN_VALI_S * 1000) {
+      maajalki = ISS_NYT.kaari(ms, ISS_KAAREN_PISTEITA);
+      maajalkiMs = ms;
+      maajaljenVersio = ISS_NYT.versio;
     }
 
-    /* ratakaari: näkyvä puoli katkoviivattomina jaksoina */
+    /* maajälki: näkyvä puoli katkoviivattomina jaksoina */
     const osat = [];
     let jakso = [];
-    for (const p of issKaari(aika)) {
-      const xyz = pallo.getCoords(p.lat, p.lng, ISS_KORKEUS);
+    for (const p of maajalki) {
+      const xyz = pallo.getCoords(p.lat, p.lon, ISS_KORKEUS);
       if (xyz && radallaEdessa(kamera, xyz, sade3d)) {
-        const s = pallo.getScreenCoords(p.lat, p.lng, ISS_KORKEUS);
+        const s = pallo.getScreenCoords(p.lat, p.lon, ISS_KORKEUS);
         if (s && Number.isFinite(s.x)) { jakso.push(s); continue; }
       }
       if (jakso.length > 1) osat.push(jakso);
@@ -1671,7 +1696,8 @@ export function luoAvaruusKalvo({
      * siitä, ja `nakyvissa` kertoo erikseen, piirretäänkö merkki.
      * Takapuolella elementti on peittävyydeltään nolla.
      */
-    const kohta = issPaikka(aika);
+    const nytPaikka = ISS_NYT.paikka(ms);
+    const kohta = { lat: nytPaikka.lat, lng: nytPaikka.lon };
     const xyz = pallo.getCoords(kohta.lat, kohta.lng, ISS_KORKEUS);
     const ruudulla = pallo.getScreenCoords(kohta.lat, kohta.lng, ISS_KORKEUS);
     /*
@@ -1690,20 +1716,44 @@ export function luoAvaruusKalvo({
     } else {
       issPiste = { x: null, y: null, ...kohta, nakyvissa: false };
     }
-    iss.style.opacity = nakyvissa && issPiste.x !== null ? '1' : '0';
+    /*
+     * KYYDISSÄ (iss-kyyti-nakyma.js): rata ja reunavarjo häipyvät (kamera
+     * ei ole enää pallon keskellä), ja merkki näkyy vain lennon alussa,
+     * kunnes 3D-malli ottaa sen paikan. Kiekkotestiä ei silloin tehdä:
+     * kallistettu kamera näkee aseman horisontin yllä.
+     */
+    const k = kyyti.osuus;
+    rata.style.opacity = k > 0 ? (1 - k).toFixed(3) : '';
+    const kalvonVarjo = varjostus ? (1 - k).toFixed(3) : '0';
+    if (varjo.style.opacity !== kalvonVarjo) {
+      varjo.style.opacity = kalvonVarjo;
+      valoreuna.style.opacity = kalvonVarjo;
+    }
+    const kyydinPiste = k > 0 && kyyti.piste && Boolean(xyz && ruudulla && Number.isFinite(ruudulla.x));
+    const naytetaan = k > 0 ? kyydinPiste : nakyvissa && issPiste.x !== null;
+    iss.style.opacity = naytetaan ? '1' : '0';
   };
 
   return {
     paivita,
     /** Vartion kytkin: varjo ja valoreuna pois/päälle samaan näkymään. */
-    /** ISS:n nopeuskerroin (1 = normaali; PAATOKSET 53 avauksen seuranta). */
-    asetaAikakerroin(k) {
-      aikakerroin = Number.isFinite(k) && k >= 0 ? k : 1;
-    },
     asetaVarjostus(paalla) {
       varjostus = Boolean(paalla);
       varjo.style.opacity = varjostus ? '1' : '0';
       valoreuna.style.opacity = varjostus ? '1' : '0';
+    },
+    /** ISS:n kyyti: osuus 0…1 ja näkyykö merkki (ennen 3D-mallia). */
+    asetaKyyti(osuus, piste = true) {
+      kyyti = { osuus: Math.max(0, Math.min(1, Number(osuus) || 0)), piste: Boolean(piste) };
+    },
+    /** Syke kerran (linssin paljastuessa); liikkeenvähennyksellä ei mitään. */
+    syke() {
+      if (reduced) return false;
+      iss.classList.remove('astro-iss-sykkii');
+      void iss.offsetWidth;
+      iss.classList.add('astro-iss-sykkii');
+      ikkuna.setTimeout?.(() => iss.classList.remove('astro-iss-sykkii'), ISS_SYKE_MS + 100);
+      return true;
     },
     tila: () => ({
       iss: issPiste,
@@ -1711,7 +1761,7 @@ export function luoAvaruusKalvo({
       sadePx: +sadePx.toFixed(1),
       varjostus,
       paikallaan,
-      aika: +aika.toFixed(2),
+      radanLaatu: ISS_NYT.laatu(SIMUKELLO.nyt()),
     }),
     pura() {
       purettu = true;
@@ -2753,6 +2803,13 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   });
   taivas?.paivita?.(0, 1);
   /* ---- 2b. ISS, ratakaari ja auringon sivuvalo (luku 2c) ----------- */
+  /*
+   * TLE ENSIN MUISTISTA, ÄMPÄRI TAUSTALLA (js/linssit/iss-rata.js): ISS on
+   * todellisessa paikassaan heti, jos TLE on jo haettu aiemmin, ja
+   * tuore TLE vaihtuu tilalle kun haku valmistuu. Ilman TLE:tä
+   * havainnollinen rata.
+   */
+  lataaIssTle(ISS_NYT, { ikkuna });
   const kalvo = luoAvaruusKalvo({
     pallo, kotelo, reduced, ikkuna,
   });
@@ -2851,20 +2908,29 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    * pyöriä kunnes pelaaja pysäyttää liikkeen."* Avauksesta alkaen kamera
    * seuraa asemaa joka kehyksellä (kameran suunta = aseman leveys ja
    * pituus), joten ISS pysyy ruudun keskellä ja Maa kiertyy sen alla.
-   * Asema kulkee seurannan ajan ISS_SEURANNAN_KERROIN-nopeudella, jotta
-   * pyöriminen on hidasta. Kirjaston autoRotate on seurannan ajan pois
-   * (kaksi kirjoittajaa kameralle). Pelaajan ensimmäinen ote pysäyttää
-   * seurannan (otePalloon), ja sen jälkeen ohjaus on tavallinen.
+   * Asema kulkee TODELLISELLA nopeudella (omistaja 26.9.2026, ks. luku
+   * 2c), joten Maa liukuu sen alla noin 4° minuutissa. Kirjaston
+   * autoRotate on seurannan ajan pois (kaksi kirjoittajaa kameralle).
+   * Pelaajan ensimmäinen ote pysäyttää seurannan (otePalloon), ja sen
+   * jälkeen ohjaus on tavallinen.
    */
   const seuranta = { paalla: !reduced && Boolean(kalvo) };
-  if (seuranta.paalla) {
-    kalvo.asetaAikakerroin?.(ISS_SEURANNAN_KERROIN);
-    if (ohjaimet) ohjaimet.autoRotate = false;
-  }
+  if (seuranta.paalla && ohjaimet) ohjaimet.autoRotate = false;
+  /*
+   * PULUN PALUU ALOITUSNÄKYMÄÄN (palaaAloitukseen alla): seuranta
+   * kytketään takaisin vasta, kun kameran liuku on perillä. Kello
+   * perutaan, jos pelaaja tarttuu palloon sillä välin (otePalloon) tai
+   * linssi suljetaan — muuten seuranta kiskoisi kameraa sormen alta.
+   */
+  let paluuKello = 0;
+  const peruPaluu = () => {
+    if (!paluuKello) return;
+    try { ikkuna.clearTimeout?.(paluuKello); } catch { /* ei kelloa */ }
+    paluuKello = 0;
+  };
   const lopetaSeuranta = () => {
     if (!seuranta.paalla) return;
     seuranta.paalla = false;
-    kalvo?.asetaAikakerroin?.(1);
   };
   const seuraaAsemaa = () => {
     if (!seuranta.paalla) return;
@@ -2927,12 +2993,50 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    * passiivisia, jottei mikään ele hidastu.
    */
   // Mustan alla pelaaja ei näe palloa: ote ei vielä päätä ajoa.
-  const otePalloon = () => {
+  /*
+   * ── ISS:N NAPAUTUS VIE KYYTIIN (ISS-kyydin suositus 28.9.2026) ─────
+   *
+   * Osuma-ala 44 px merkin keskipisteestä, ja ISS voittaa vain, jos se on
+   * lähempänä kuin yksikään näkyvä havaintopiste (natiivi
+   * AstronauttiKerros.Napautus). Napautus luetaan kotelon
+   * KAAPPAUSVAIHEESSA: jos se osui asemaan, ylösnosto pysäytetään tähän,
+   * jolloin kirjaston oma napautus (säiliön pointerup) ja sen kautta
+   * laudan osumatesti eivät näe sitä lainkaan — havaintopistettä ei
+   * avata saman napautuksen alta.
+   */
+  let napautusAlas = null;
+  const issNapautukseen = (x, y) => {
+    const iss = kalvo?.tila?.()?.iss;
+    if (!iss?.nakyvissa || iss.x === null) return false;
+    const r = kotelo.getBoundingClientRect();
+    const d = Math.hypot(x - r.left - iss.x, y - r.top - iss.y);
+    if (d > ISS_OSUMA_PX) return false;
+    for (const el of ikkuna.document.querySelectorAll('.satelliitti-piste:not(.pallolauta-takana) .satelliitti-ydin')) {
+      const b = el.getBoundingClientRect();
+      if (!b.width) continue;
+      if (Math.hypot(x - (b.left + b.width / 2), y - (b.top + b.height / 2)) < d) return false;
+    }
+    return true;
+  };
+  const otePalloon = (e) => {
     if (paljastus.odottaa()) return;
+    peruPaluu();
     lopetaSeuranta();
     paataAvausajo();
+    if (e?.type === 'pointerdown') napautusAlas = { x: e.clientX, y: e.clientY, t: Date.now() };
+  };
+  const irtiPallosta = (e) => {
+    const a = napautusAlas;
+    napautusAlas = null;
+    if (!a || !kyyti || kyyti.kyydissa() || paljastus.odottaa()) return;
+    if (Date.now() - a.t > 600 || Math.hypot(e.clientX - a.x, e.clientY - a.y) > 10) return;
+    if (ikkuna.document.body.classList.contains('satelliitti-kuva-auki')) return;
+    if (!issNapautukseen(e.clientX, e.clientY)) return;
+    e.stopPropagation();
+    kyyti.napauta();
   };
   kotelo?.addEventListener?.('pointerdown', otePalloon, { capture: true, passive: true });
+  kotelo?.addEventListener?.('pointerup', irtiPallosta, { capture: true });
   kotelo?.addEventListener?.('wheel', otePalloon, { capture: true, passive: true });
 
   const askel = (t) => {
@@ -2954,8 +3058,13 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * seuraa zoomia — molemmat luetaan kameran korkeudesta, joten
      * sama kutsu hoitaa myös nipistyksen ja laitteen kääntämisen.
      */
+    /*
+     * ISS:N KYYTI ENNEN KALVOA: kyyti kirjoittaa kameran tälle kehykselle,
+     * ja kalvo, sumu ja tähdet lukevat sen jälkeen saman asennon.
+     */
+    const kyydissa = kyyti?.paivita?.(t ?? 0) ?? false;
     kalvo?.paivita?.(t ?? 0, kameranKorkeus());
-    seuraaAsemaa();
+    if (!kyydissa) seuraaAsemaa();
     /*
      * SUMU SAMASTA KORKEUDESTA. Kaksi kirjoitusta kehystä kohti
      * (kuoren peitto ja kahden kalvon tyyli) — ei uutta laskentaa,
@@ -2963,11 +3072,42 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      */
     sumu?.paivita?.(t ?? 0, kameranKorkeus());
     paljastus.kehys(valmisPaljastettavaksi());
+    if (!sykeSoi && paljastus.tila?.()?.vaihe === 'paljastettu') {
+      sykeSoi = true;
+      kalvo?.syke?.();
+    }
     if (!taivas) return;
     const dt = reduced || !edellinen ? 0 : (t - edellinen) / 1000;
     edellinen = t;
-    taivas.paivita(dt, 1);
+    taivas.paivita(dt, kyyti?.tahdet?.() ?? 1);
   };
+  let sykeSoi = false;
+  /*
+   * ── ISS:N KYYTI (js/linssit/iss-kyyti-nakyma.js) ──────────────────
+   * Kyyti ottaa kameran haltuunsa seurannan ja ikkunan ajaksi; avausajo
+   * ja avauksen ISS-seuranta päättyvät kuten pelaajan otteesta, ja
+   * paluun jälkeen kameran korkeus on linssin oma lepokorkeus.
+   */
+  const kyyti = luoIssKyytiNakyma({
+    pallo,
+    lauta,
+    kotelo,
+    kalvo,
+    sumu,
+    reduced,
+    ikkuna,
+    issNyt: ISS_NYT,
+    paluuKorkeus: () => lepoAlt,
+    ennenKyytia: () => {
+      lopetaSeuranta();
+      paataAvausajo();
+      if (ohjaimet) ohjaimet.autoRotate = false;
+      lauta?.kamera?.pysaytaKameraAjo?.();
+    },
+    kyytiPaattyi: (korkeus) => { omaKorkeus = korkeus; },
+    /* Siirtosepän realismimoduuli (js/linssit/iss-realismi.js) kytketään tähän, kun se tulee. */
+    realismi: null,
+  });
   kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
 
   /* ---- 3. avausnäkymä ja 4. kapea zoom ------------------------------ */
@@ -3049,6 +3189,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       ajaAvaus(0);
       return;
     }
+    // ISS:n kyydissä kamera on kyydin: koon muutos päivittää vain luvut.
+    if (kyyti?.kyydissa?.()) { omaKorkeus = lepoAlt; return; }
     const tuore = Date.now() - avattu < ASETTUMISEN_IKKUNA_MS;
     const nyt = pallo.pointOfView()?.altitude ?? 0;
     const omassa = tuore || !omaKorkeus || Math.abs(nyt - omaKorkeus) < omaKorkeus * 0.02;
@@ -3085,6 +3227,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       lepokorkeus: +lepoAlt.toFixed(3),
       issSeuranta: seuranta.paalla,
       paljastus: paljastus.tila(),
+      /* ISS:n kyyti: tila, kenttäkulma, tietorivi, kerrokset (savuke). */
+      kyyti: kyyti?.tila?.() ?? null,
+      issSyke: sykeSoi,
       korkeusNyt: +(pallo.pointOfView?.()?.altitude ?? 0).toFixed(3),
       halkaisijaNytPx: Math.round(halkaisijaRuudulla(
         pallo.pointOfView?.()?.altitude ?? alt, { korkeus: mitat.korkeus },
@@ -3164,6 +3309,100 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     mittaaPinta,
     /** Yksi kehys väkisin (linssi kutsuu, kun pisteet eivät näy). */
     pakotaKehys: () => kehysvahti.pakota(),
+    /*
+     * ── PALLO KUVAN TAKANA (kuvaselain, omistaja 27.9.2026 klo 23.5x) ──
+     *
+     * *"kuvan taustalla voisi näkyä himmeällä maapallo siltä kohtaa mistä
+     * kuva on"*. Valokuvan tausta on läpikuultava, ja kamera liukuu
+     * KUVAN_AJON_MS:ssa kohteen ylle nykyisellä korkeudella, kuitenkin
+     * enintään lepokorkeudella (natiivi AstronauttiLinssi.AvaaKohde:
+     * min(korkeus, avaus · 0,72) = web lepoAlt). Seuranta ja avausajo
+     * päättyvät kuten pelaajan otteesta — muuten ne kirjoittaisivat
+     * kameraa liu'un päälle.
+     */
+    /** ISS:n kyyti: napautus (kauko → seuranta → ikkuna → seuranta) ja ✕. */
+    napautaIss: () => kyyti?.napauta?.() ?? false,
+    poistuKyydista: () => kyyti?.poistu?.() ?? false,
+    asetaNopeus: (k) => kyyti?.asetaNopeus?.(k) ?? false,
+    lennaKohteeseen: (tunnus, valinnat) => kyyti?.lennaKohteeseen?.(tunnus, valinnat) ?? null,
+    nasaKoe: (paalla) => kyyti?.nasaKoe?.(paalla) ?? false,
+    kyydissa: () => Boolean(kyyti?.kyydissa?.()),
+    katsoKohteeseen: (lat, lon, { kestoMs = KUVAN_AJON_MS } = {}) => {
+      if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;
+      peruPaluu();
+      lopetaSeuranta();
+      paataAvausajo();
+      if (ohjaimet) ohjaimet.autoRotate = false;
+      lauta?.kamera?.pysaytaKameraAjo?.();
+      const nyt = pallo.pointOfView?.()?.altitude ?? lepoAlt;
+      const korkeus = lepoAlt > 0 ? Math.min(nyt, lepoAlt) : nyt;
+      // `kestoMs`: Pulun pyöräytys (js/linssit/pulu-tervetulo.js) ajoittaa
+      // liu'un repliikkiin; muut kutsujat saavat entisen KUVAN_AJON_MS:n.
+      pallo.pointOfView({ lat, lng: lon, altitude: korkeus },
+        reduced ? 0 : Math.max(0, Number(kestoMs) || 0));
+      omaKorkeus = korkeus;
+      lauta?.heraa?.();
+      return true;
+    },
+    /*
+     * ── PULUN TERVETULO (js/linssit/pulu-tervetulo.js, 28.9.2026) ──────
+     *
+     * Pulu aloittaa vasta, kun musta verho on kokonaan poissa
+     * (`paljastettu`), ottaa talteen aloitusnäkymän (`aloitustila`) ja
+     * palauttaa sen lopuksi (`palaaAloitukseen`): kamera liukuu takaisin,
+     * ja jos avaus seurasi asemaa, seuranta jatkuu liu'un jälkeen —
+     * täsmälleen se näkymä, johon linssi avautui.
+     */
+    paljastettu: () => paljastus.tila().vaihe === 'paljastettu',
+    aloitustila: () => {
+      const pov = pallo.pointOfView?.() ?? null;
+      if (!pov || !Number.isFinite(pov.lat)) return null;
+      return {
+        pov: { lat: pov.lat, lng: pov.lng, altitude: pov.altitude },
+        seuranta: seuranta.paalla,
+        pyori: Boolean(ohjaimet?.autoRotate),
+      };
+    },
+    /**
+     * @param {object} tila aloitustila()
+     * @param {{kestoMs?: number, seuraa?: boolean}} [asetukset] `seuraa:
+     *   false` jättää seurannan ja pyörimisen pois (pelaajan napautus
+     *   ohitti Pulun: ote on silloin pelaajan).
+     */
+    palaaAloitukseen: (tila, { kestoMs = KUVAN_AJON_MS, seuraa = true } = {}) => {
+      if (!tila?.pov || purettu) return false;
+      peruPaluu();
+      lopetaSeuranta();
+      paataAvausajo();
+      if (ohjaimet) ohjaimet.autoRotate = false;
+      lauta?.kamera?.pysaytaKameraAjo?.();
+      const kesto = reduced ? 0 : Math.max(0, Number(kestoMs) || 0);
+      let kohde = tila.pov;
+      const iss = kalvo?.tila?.()?.iss;
+      if (seuraa && tila.seuranta && Number.isFinite(iss?.lat) && Number.isFinite(iss?.lng)) {
+        // Asema seisoo liu'un ajan, jotta se on perillä täsmälleen siellä,
+        // mihin kamera tulee (seurannan uusi kehys ei nykäise).
+        // ISS-kyyti (28.9.2026): asema kulkee simuloidulla kellolla todellisella
+        // nopeudella; liu'un 1–2 s:ssa se liikkuu ~15 km, ei pysäytystä.
+        kohde = { lat: iss.lat, lng: iss.lng, altitude: tila.pov.altitude };
+      }
+      pallo.pointOfView(kohde, kesto);
+      omaKorkeus = tila.pov.altitude;
+      lauta?.heraa?.();
+      if (!seuraa) return true;
+      const jatka = () => {
+        paluuKello = 0;
+        if (purettu) return;
+        if (tila.seuranta && kalvo) {
+          seuranta.paalla = true;
+        } else if (ohjaimet && tila.pyori) {
+          ohjaimet.autoRotate = true;
+        }
+      };
+      if (kesto > 0) paluuKello = ikkuna.setTimeout?.(jatka, kesto + 30) ?? 0;
+      else jatka();
+      return true;
+    },
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
     asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),
     /*
@@ -3179,11 +3418,15 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      */
     piilotaPilvet: (kylla = true) => Boolean(sumu?.piilotaPilvet?.(kylla)),
     pura() {
+      peruPaluu();
       purettu = true;
       avausajo.kaynnissa = false;
       paljastus.pura();
       kotelo?.removeEventListener?.('pointerdown', otePalloon, { capture: true });
+      kotelo?.removeEventListener?.('pointerup', irtiPallosta, { capture: true });
       kotelo?.removeEventListener?.('wheel', otePalloon, { capture: true });
+      /* Kyyti pois ENNEN kameran palautusta: kenttäkulma, ohjaimet ja kerrokset. */
+      kyyti?.pura?.();
       /*
        * PYÖRIMINEN TAKAISIN LÄHTÖARVOONSA ENNEN KAMERAN PALAUTUSTA:
        * jos autoRotate jäisi päälle, naulattu lähtöpaikka valuisi heti

@@ -39,6 +39,15 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026): Astronautin kameran ensimmäinen
+ * avaus aloittaisi Livian A–C-jakson (js/linssit/pulu-tervetulo.js). Tämä
+ * savuke mittaa muuta; jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -98,6 +107,7 @@ const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || u
 /** Avaa pelin Pariisiin; `ohitaKuvat` = painaa Ohita-nappia heti kun se ilmestyy. */
 async function avaa(ohitaKuvat) {
   const ctx = await selain.newContext({ viewport: { width: 2000, height: 1300 }, deviceScaleFactor: 1, serviceWorkers: 'block' });
+  await ctx.addInitScript(PULUN_TERVETULO_KUULTU);
   await ctx.addInitScript((d) => {
     try {
       localStorage.setItem('matkakirja-save-v1', d);

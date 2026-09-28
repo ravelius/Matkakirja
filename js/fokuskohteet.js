@@ -164,6 +164,12 @@ import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
 import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
 import { HAHMOTELMA_CHE } from './packs/hahmotelma-che.js';
 import { HAHMOTELMA_BIH } from './packs/hahmotelma-bih.js';
+import { HAHMOTELMA_SRB } from './packs/hahmotelma-srb.js';
+import { HAHMOTELMA_ALB } from './packs/hahmotelma-alb.js';
+import { HAHMOTELMA_MKD } from './packs/hahmotelma-mkd.js';
+import { HAHMOTELMA_MNE } from './packs/hahmotelma-mne.js';
+import { HAHMOTELMA_MDA } from './packs/hahmotelma-mda.js';
+import { HAHMOTELMA_BLR } from './packs/hahmotelma-blr.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -679,6 +685,20 @@ KOHDE_MAAT.CHE = [...(KOHDE_MAAT.CHE ?? []), ...HAHMOTELMA_CHE];
  * haara karttaseppa-bodensee).
  */
 KOHDE_MAAT.BIH = [...(KOHDE_MAAT.BIH ?? []), ...HAHMOTELMA_BIH];
+
+/*
+ * SRB/ALB/MKD/MNE/MDA/BLR ENSIMMÄISET KARTTANOSTOT (Fablen tilaus
+ * 28.9.2026): kullakin maalla ei ollut ennestään yhtään karttanostoa
+ * (VAIN EUROOPPA -karttatyö kesken), joten Matkakirjan ihme -kohde
+ * (js/packs/monumentit-eurooppa.js) on nyt maan ainoa nosto. Loput
+ * kohteet lisätään myöhemmissä erissä.
+ */
+KOHDE_MAAT.SRB = [...(KOHDE_MAAT.SRB ?? []), ...HAHMOTELMA_SRB];
+KOHDE_MAAT.ALB = [...(KOHDE_MAAT.ALB ?? []), ...HAHMOTELMA_ALB];
+KOHDE_MAAT.MKD = [...(KOHDE_MAAT.MKD ?? []), ...HAHMOTELMA_MKD];
+KOHDE_MAAT.MNE = [...(KOHDE_MAAT.MNE ?? []), ...HAHMOTELMA_MNE];
+KOHDE_MAAT.MDA = [...(KOHDE_MAAT.MDA ?? []), ...HAHMOTELMA_MDA];
+KOHDE_MAAT.BLR = [...(KOHDE_MAAT.BLR ?? []), ...HAHMOTELMA_BLR];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
@@ -5014,6 +5034,12 @@ function kohteenIhmekuva(kohde) {
   return {
     osoite: ihme.osoite,
     selite: ihme.selite ?? '',
+    /*
+     * LYHYT KUVATEKSTI kortin ja nähtävyysjutun kuvan alle (Natiivi-UI:n
+     * löydös 28.9.2026: web näytti koko pitkän selitteen, natiivi lyhyen).
+     * Pitkä selite jää suurennokseen (js/kuvatekstit.js).
+     */
+    ...(ihme.lyhyt ? { lyhyt: ihme.lyhyt } : {}),
     lahde: ihme.lahde ?? '',
     /*
      * FAKTALÄHTEEN OSOITE kulkee kuvan mukana samalla nimellä kuin
@@ -6444,6 +6470,30 @@ function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
  * `avaaFokuskohde`-funktion luettavana.
  */
 
+/*
+ * ── NAUHAN MITTA NOSTOKUVASSA (28.9.2026) ──────────────────────────
+ *
+ * Kortin kuva on kaksivaiheinen nostokuva (js/nostokuva.js), jonka nappi
+ * on kuvan levyinen (fit-content). Nauhan mitat ovat kuvan leveyden
+ * osuuksia (cqw), mutta nappia EI voi tehdä mittasäiliöksi: inline-size-
+ * säiliö nollaa fit-content-leveyden (mitattu: nappi 13 px, nauha 0 × 0).
+ * Kuvan leveys kirjoitetaan siksi muuttujaksi `--nauha-kuva`, ja
+ * css/fokuskohteet.css laskee samat osuudet siitä. ResizeObserver seuraa
+ * vaiheen 2 kutistumista ja ruudun kääntöä.
+ */
+function mitoitaNauhaKuvaan(nappi) {
+  const img = nappi?.querySelector?.('img');
+  if (!img) return;
+  const kirjaa = () => {
+    const leveys = img.clientWidth || img.getBoundingClientRect?.().width || 0;
+    if (leveys > 0) nappi.style.setProperty('--nauha-kuva', `${Math.round(leveys)}px`);
+  };
+  kirjaa();
+  img.addEventListener?.('load', kirjaa);
+  const Vahti = globalThis.ResizeObserver;
+  if (Vahti) new Vahti(kirjaa).observe(img);
+}
+
 export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   if (typeof document === 'undefined' || !kohde) return null;
   /*
@@ -6587,7 +6637,7 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
     ),
     koristele: (nappi, kehys) => {
       if (paakuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
-      piirraIhmenauha(nappi, paakuva.nauha);
+      if (piirraIhmenauha(nappi, paakuva.nauha)) mitoitaNauhaKuvaan(nappi);
     },
     latoNosto: latoKohde,
     // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo

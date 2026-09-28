@@ -19,6 +19,7 @@
  * Kaappaukset: aarrekuva-fin-pieni.png, aarrekuva-dnk-iso.png ja
  * aarrekuva-star-tumma.png.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -67,6 +68,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
 mkdirSync(KAAPPAUKSET, { recursive: true });
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const sivu = await selain.newPage({ viewport: { width: 900, height: 900 } });
+await lisaaPolloKehittajakoodi(sivu); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 /*
  * ÄMPÄRIN OSOITTEET PEILATAAN REPON TIEDOSTOIHIN (2.9.2026, assetit
  * ämpäriin): kontin selain ei pääse oikeaan R2-ämpäriin, joten siirto-

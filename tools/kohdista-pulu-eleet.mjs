@@ -50,7 +50,7 @@ import {
   PAKOTETUN_OSOITE, jaksonJasennys, normalisoiAlignment, sovitaMerkit,
 } from './generoi-linssiluennat.mjs';
 import {
-  PULU_AANI_OLETUS, PULU_MALLI_OLETUS, TAGIT, puhemuoto,
+  PULU_AANI_OLETUS, PULU_TAGIMALLIT, TAGIT, puhemuoto,
 } from './generoi-pulu.mjs';
 
 const TAMA = fileURLToPath(import.meta.url);
@@ -144,6 +144,15 @@ export function kelpaaUlostulomuoto(muoto) {
   return muoto === 'mp3_44100_192' || muoto === 'mp3_44100_128';
 }
 
+/**
+ * KAKSI LUKITTUA MALLIA (28.9.2026): eleven_v3 (14.9. äänet, joiden
+ * kohdistus on yhä ajamatta) ja eleven_v4 (omistajan valinta 28.9.2026,
+ * tools/generoi-pulu.mjs PULU_MALLI_OLETUS). Muu malli hylätään.
+ */
+export function kelpaaMalli(malli) {
+  return PULU_TAGIMALLIT.includes(malli);
+}
+
 /** Hyväksy vain valmistuneen tuotantokuitin muuttumaton, SHA-sidottu city-3-tulos. */
 export async function kuittirivit(data) {
   if (!data || data.schemaVersion !== 1 || data.generationStatus !== 'completed'
@@ -161,7 +170,7 @@ export async function kuittirivit(data) {
     if (!sopimus || rivi.utteranceKey !== sopimus.avain || rivi.visibleTextSha256 !== sopimus.tekstiSha256
       || await tekstinSha256(rivi.visibleText) !== sopimus.tekstiSha256
       || rivi.ttsText !== odotettuPuhe || await tekstinSha256(rivi.ttsText) !== rivi.ttsTextSha256
-      || rivi.voiceId !== PULU_AANI_OLETUS || rivi.model !== PULU_MALLI_OLETUS
+      || rivi.voiceId !== PULU_AANI_OLETUS || !kelpaaMalli(rivi.model)
       || !kelpaaSointiresepti(rivi.settings) || !kelpaaUlostulomuoto(rivi.outputFormat)
       || rivi.generationStatus !== 'generated' || !/^[0-9a-f]{64}$/.test(artefakti?.sha256 ?? '')
       || !Number.isInteger(artefakti?.bytes) || artefakti.bytes <= 0
