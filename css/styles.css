@@ -13250,6 +13250,31 @@ button.lukija-nappi.lataa .icon-glyph::after { opacity: 0.55; }
 
 .lukija-valikko button.lukija-kappale.otsikko { font-weight: 600; }
 
+/* Yksi rivi per kohta: numero + alkusanat, ylivuoto katkaistaan (omistaja 28.9.2026). */
+.lukija-valikko button.lukija-kappale,
+.dialog .lukija-valikko button.lukija-kappale {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.lukija-kappale-nro {
+  flex: 0 0 1.2rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+}
+.lukija-kappale-alku,
+.lukija-valikko button.lukija-kappale.otsikko,
+.dialog .lukija-valikko button.lukija-kappale.otsikko {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lukija-valikko button.lukija-kappale.otsikko,
+.dialog .lukija-valikko button.lukija-kappale.otsikko { display: block; text-align: left; }
+.lukija-kappale-alku { min-width: 0; flex: 1 1 auto; }
+
 .lukija-valikko button.lukija-kappale:hover,
 .lukija-valikko button.lukija-kappale:focus-visible { background: rgba(234, 184, 78, 0.18); }
 

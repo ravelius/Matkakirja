@@ -120,12 +120,13 @@ async function avaaPeli(s) {
 /** Valikon tila: nykyinen kappale, kelauksen käytettävyys, kaiuttimen nimi. */
 const valikonTila = (s) => s.evaluate(() => {
   const v = document.querySelector('.lukija-valikko');
-  const rivit = v ? [...v.querySelectorAll('.lukija-kappale')] : [];
+  // Rivi = kohta (li); otsikollisella kohdalla li:ssä on otsikkorivi + numeroitu leipärivi.
+  const rivit = v ? [...v.querySelectorAll('.lukija-kappaleet > li')] : [];
   const nappi = document.querySelector('#arrival-dialog[open] .lukija-nappi') ?? document.querySelector('.lukija-otsikkorivi .lukija-nappi');
   return {
     auki: Boolean(v),
-    kappaleita: rivit.filter((r) => !r.parentElement.hidden).length,
-    nykyinen: rivit.findIndex((r) => r.classList.contains('nykyinen')),
+    kappaleita: rivit.filter((r) => !r.hidden).length,
+    nykyinen: rivit.findIndex((r) => r.querySelector('.nykyinen')),
     kelaus: v ? [...v.querySelectorAll('.lukija-kelaus-ryhma')].map((g) => g.querySelectorAll('.lukija-kelausnappi').length) : [],
     kelausKaytossa: v ? [...v.querySelectorAll('.lukija-kelausnappi')].every((b) => !b.disabled) : false,
     saadot: v ? Boolean(v.querySelector('select')) && Boolean(v.querySelector('input[type=range]')) : false,
@@ -292,7 +293,28 @@ async function ajaNakyma(nimi) {
     alku.auki && alku.kappaleita >= 3 && alku.kelaus.join() === '2,2' && alku.saadot && !alku.kelausKaytossa, JSON.stringify(alku));
   await kuva('lehti-valikko');
   workerViive = 1500;
-  await s.click('.lukija-valikko .lukija-kappale >> nth=1');
+  // Omistaja 28.9.: jokainen kohta yhdellä rivillä, leipäteksti numerolla; kelausrivi alimpana; hakemisto ei listassa.
+  const asu = await s.evaluate(() => {
+    const v = document.querySelector('.lukija-valikko');
+    const napit = [...v.querySelectorAll('.lukija-kappaleet > li:not([hidden]) .lukija-kappale')];
+    const korkeudet = napit.map((b) => {
+      const lh = parseFloat(getComputedStyle(b).lineHeight) || 20;
+      const pad = parseFloat(getComputedStyle(b).paddingTop) + parseFloat(getComputedStyle(b).paddingBottom);
+      return Math.round(b.getBoundingClientRect().height - pad) <= lh * 1.3;
+    });
+    return {
+      yksirivisia: korkeudet.filter(Boolean).length,
+      riveja: napit.length,
+      numerot: [...v.querySelectorAll('.lukija-kappale-nro')].map((n) => n.textContent).slice(0, 4).join(','),
+      tekstit: napit.slice(0, 5).map((b) => b.textContent.trim()),
+      hakemisto: /Lehden osiot/.test(v.textContent),
+      viimeinen: v.lastElementChild?.className ?? '',
+    };
+  });
+  vaadi(n('kappalelista: jokainen rivi yhdellä rivillä, numerot 1…, ei hakemistoa, kelausrivi alimpana'),
+    asu.riveja >= 3 && asu.yksirivisia === asu.riveja && asu.numerot.startsWith('1,2') && !asu.hakemisto
+      && /lukija-kelaus/.test(asu.viimeinen), JSON.stringify(asu));
+  await s.click('.lukija-valikko .lukija-kappaleet > li >> nth=1 >> .lukija-kappale >> nth=-1');
   const rengas = await s.evaluate(async () => {
     const k = document.querySelector('#arrival-dialog .lukija-nappi');
     const odota = (ms) => new Promise((ok) => setTimeout(ok, ms));
@@ -332,7 +354,9 @@ async function ajaNakyma(nimi) {
   await s.click('.lukija-valikko .lukija-kelausnappi >> nth=2');
   await s.waitForTimeout(1200);
   const plus = await valikonTila(s);
-  vaadi(n('+10 s etenee seuraavaan kappaleeseen'), plus.nykyinen > taakse.nykyinen, JSON.stringify(plus));
+  // Lyhyessä lehdessä (3 kappaletta à 4 s) +10 s voi kelata toiseksi viimeisestä luennan loppuun.
+  vaadi(n('+10 s etenee seuraavaan kappaleeseen'),
+    plus.nykyinen > taakse.nykyinen || (!plus.lukee && taakse.nykyinen >= plus.kappaleita - 2), JSON.stringify({ taakse: taakse.nykyinen, ...plus }));
   await kuva('lehti-luenta');
   await s.mouse.click(20, NAKYMAT[nimi].viewport.height - 30);
   await s.waitForTimeout(400);

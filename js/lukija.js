@@ -1815,7 +1815,9 @@ const VALIKKO_OTSIKKO = 'Luennan valikko — kappaleet, kelaus, nopeus ja ääni
 /** Kelauksen askel sekunteina (omistaja: "-10sek ja +10sek"). */
 export const KELAUS_S = 10;
 /** Kappaleen nimen pituus valikossa (merkkiä). */
-const KAPPALEEN_NIMI = 90;
+const KAPPALEEN_NIMI = 60;
+// Leipätekstin rivillä vain alkusanat; CSS katkaisee rivin, jos sekään ei mahdu.
+const KAPPALEEN_ALKU = 34;
 
 /** Avoin valikko: { elementti, nappi, paivita, pura } tai null. */
 let valikko = null;
@@ -1946,19 +1948,50 @@ function avaaValikko(nappi, valikkonappi) {
   const kohdat = napinKohdat(nappi);
   const lista = doc.createElement('ol');
   lista.className = 'lukija-kappaleet';
-  const rivit = kohdat.map((k, i) => {
-    const li = doc.createElement('li');
+  /*
+   * YKSI RIVI PER KOHTA (omistaja 28.9.2026: "jokainen kohta mahtuisi
+   * yhdelle riville"): väliotsikko omana lyhyenä rivinään, leipäteksti
+   * numerolla ja parilla alkusanalla ("1  Lontoo on Yhdistyneen…").
+   * Otsikollisen kohdan molemmat rivit hyppäävät samaan kohtaan;
+   * nykyisen korostus osuu leipätekstin riviin.
+   */
+  let numero = 0;
+  const rivinappi = (luokka, i, sisalto, nimi) => {
     const b = doc.createElement('button');
     b.type = 'button';
-    b.className = `lukija-kappale${k.otsikko || k.otsikollinen ? ' otsikko' : ''}`;
-    b.textContent = lyhenna(k.teksti, KAPPALEEN_NIMI);
-    b.setAttribute('aria-label', `Kuuntele kappaleesta ${i + 1}: ${lyhenna(k.teksti, 40)}`);
+    b.className = `lukija-kappale${luokka}`;
+    b.append(...sisalto);
+    b.setAttribute('aria-label', nimi);
     b.addEventListener('click', () => hyppaaKappaleeseen(nappi, i));
-    li.appendChild(b);
-    // Koristeriveillä (pisteet, symbolit) ei ole sanoja: rivi piiloon, indeksi säilyy.
-    li.hidden = !/[\p{L}\p{N}]{2}/u.test(k.teksti ?? '');
-    lista.appendChild(li);
     return b;
+  };
+  const rivit = kohdat.map((k, i) => {
+    const li = doc.createElement('li');
+    const teksti = String(k.teksti ?? '');
+    const viimeinen = k.otsikollinen ? k.osat?.at(-1) : null;
+    const otsikko = k.otsikko ? teksti : (viimeinen ? teksti.slice(0, viimeinen.alku) : '');
+    const leipa = k.otsikko ? '' : (viimeinen ? teksti.slice(viimeinen.alku) : teksti);
+    const siisti = (t) => t.replace(/[\s.·:]+$/u, '').trim();
+    let paa = null;
+    if (siisti(otsikko)) {
+      paa = rivinappi(' otsikko', i, [lyhenna(siisti(otsikko), KAPPALEEN_NIMI)], `Kuuntele otsikosta: ${lyhenna(siisti(otsikko), 40)}`);
+      li.appendChild(paa);
+    }
+    if (/[\p{L}\p{N}]{2}/u.test(leipa)) {
+      numero += 1;
+      const nro = doc.createElement('span');
+      nro.className = 'lukija-kappale-nro';
+      nro.textContent = String(numero);
+      const alku = doc.createElement('span');
+      alku.className = 'lukija-kappale-alku';
+      alku.textContent = lyhenna(leipa, KAPPALEEN_ALKU);
+      paa = rivinappi('', i, [nro, alku], `Kuuntele kappaleesta ${numero}: ${lyhenna(leipa, 40)}`);
+      li.appendChild(paa);
+    }
+    // Koristeriveillä (pisteet, symbolit) ei ole sanoja: rivi piiloon, indeksi säilyy.
+    li.hidden = !paa;
+    lista.appendChild(li);
+    return paa ?? rivinappi('', i, [], '');
   });
   lista.hidden = rivit.filter((b) => !b.parentElement.hidden).length < 2;
 
@@ -2015,7 +2048,8 @@ function avaaValikko(nappi, valikkonappi) {
     saadot.appendChild(rivi);
   }
 
-  el.append(lista, kelaus, saadot);
+  // Kelausrivi ALIMPANA peukalon ulottuvilla (omistaja: "alimpana -10sek ja +10sek"; Fable 28.9.).
+  el.append(lista, saadot, kelaus);
   // Asemointiankkuri: staattinen koti saa suhteellisen asemoinnin valikon ajaksi.
   const staattinen = doc.defaultView?.getComputedStyle?.(koti)?.position === 'static';
   if (staattinen) koti.classList.add('lukija-valikko-koti');
