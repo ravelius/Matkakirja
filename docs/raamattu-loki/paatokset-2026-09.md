@@ -8915,3 +8915,7 @@ Omistaja 28.9. klo 22.21 kortilla: Sonnet 5.5 1M -versiota ei löydy valikosta �
 ## OMISTAJA: CUPOLAN PÄÄIKKUNA PYÖREÄ, TIIVIS RAJAUS PYSTY/VAAKA (28.9.2026 klo 22.23)
 
 Omistaja 28.9. klo 22.23 horisonttiluonnoksen nähtyään sanatarkasti: "voisiko ennemmin käyttää sitä pyöreää ikkunaa ja rajata se lähelle? toimisi aika hyvin vähän eri rajauksella pysty ja vaaka muodossa" → korvaa 21.58-kirjauksen ison sivuikkunan: pääkulma on pyöreä kattoikkuna tiiviisti rajattuna (omat rajaukset pysty/vaaka), pimeä ohjaamo, aurinko pyöreässä pokassa, yksityiskohdat ja lappu säilyvät; horisontti e711cf84 A/B:ksi; Lennä kohteen ylle -teleobjektiivi ennallaan. Linssiseppä: luonnos pysty+vaaka, laiteajo aamulla. Codexin tilaus päivitetty (posti/fable-codex-iss-ohjaamo-20260928.md, 0eb761cb8).
+
+## OMISTAJA: AVARUUSKÄVELYN KONSEPTIKUVAT CODEXILTA (28.9.2026 klo 22.25)
+
+Omistaja 28.9. klo 22.25 sanatarkasti: "miltä näyttäisi jos pelaaja pääsisi ISS:n ulkopuolelle mukaan avaruuskävelylle? toisiko se jotain uutta?" Päätoimittajan suositus: lyhyt käsikirjoitettu hetki (1–2 min, Pulun taulun oma tila): ilmalukko → turvaköysi → auringonnousu aseman yli → Pulu radiossa → yksi valokuva, verrataan astronautin NASA-kuvaan; ei vapaata tilaa; Cupola 3:n jälkeen. Omistaja kortilla: 'Tilaa konseptikuvat' → Codexille posti/fable-codex-avaruuskavely-konsepti-20260928.md (pysty 1290×2796 + vaaka 2732×2048, sama hetki, sävy kuten ohjaamotilauksessa). Koodaus vasta omistajan erillisellä luvalla.
