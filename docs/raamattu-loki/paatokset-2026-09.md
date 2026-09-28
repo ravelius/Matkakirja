@@ -8979,3 +8979,7 @@ Omistaja 28.9. klo 22.56 sanatarkasti: "ipadilla myös noston avauduttua pelkkä
 ## OMISTAJA: MAAKUNTANOSTO JA MININOSTO ISOMMIKSI, KUVA KOKORUUDULLE (WEB) (28.9.2026 klo 23.01)
 
 Omistaja 28.9. klo 23.01 webin maakuntatilan kaappauksella (iPad, Keski-Makedonia; docs/raportit/kaappaukset/omistaja-20260928/maakuntanosto-isommaksi-web.png) sanatarkasti: "Nosto ja mininosto saisivat olla isompia. Nosto pitää olla saman kokoinen kuin muut nostot ja kuva pitää pystyä klikkaamaan kokoruudulle" → Siirtoseppä (web): maakunnan nostoikkuna muiden nostojen kokoon/komponenttiin, kuva kokoruudulle samalla kuvaselaimella, mininosto isommaksi; kuvapari ennen PR:ää; natiiviin myöhemmin Natiivi-UI:n maakuntatilan yhteydessä.
+
+## PÄÄTÖS: ASTRO-TAULU AINA PULUSTA; MININOSTO NOSTONVÄRISEKSI (28.9.2026 klo 23.03)
+
+28.9. klo 23.03. Omistaja sanatarkasti: "mininosto saisi olla saman värinen kuin nosto ja myös ilman kehystä" → Siirtoseppä samaan maakuntanosto-erään. Pelikoodarin astro-taulu 1ea1b4510 (Minne katsotaan? Maapallo / ISS:n rinnalla / ISS:n sisälle / Astronauttien kuvat; iPhone+iPad) omistajalle. Päätoimittajan päätökset: valokuvanäkymänkin minipulu avaa taulun (omistaja: 'aina esille napauttamalla pulua'), chat pieneksi 'Kysy Pululta' -linkiksi taulun alareunaan; Oma sijainti ISS-paneelissa, ei taulussa; jos Livia ei vielä pelissä, linssin kulmaan pieni 'Näkymät'-nappi. [softly]-koe (Helsinki [deadpan], Ljubljana [wistfully] koko virkkeelle; [softly] 37/75 repliikissä) omistajan valittavana.
