@@ -66,3 +66,41 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
   kamera nousee ja kääntyy alas: kosketus ~915 km:stä, kallistus 15° (kamera 75° koneen yllä), kone 1,7 % leveydestä
   (vähimmäiskoko 2,5 % → 1,5 % laskussa).
 - Video `v3d/aloituslento-v3d-tekstit.mp4`, kuvaparit v3c | v3d `v3d/kuvaparit/`.
+
+## v3e: omistajan palaute v3d-videoon (klo 09.17–09.38), kuvattu klo 11.03
+
+- Haara **f7333a8f**, käännös **abcc1911** (aloitusrata + varalaatta-uusinta-2 + symbolit-erikoismalli + aloituslento-marssi),
+  FBBD41D7, 0 poikkeusta. Kartta-testit 350/350.
+- Video `v3e/aloituslento-v3e.mp4` (736 × 1600, 17,8 s, marssi A lennon alusta, versionauha, ei kuvatekstejä). Lennon alku
+  videossa F = 14,745 s kehyseroista (loki 14,75).
+- Kuvaparit v3d | v3e `v3e/kuvaparit/` (3,0 / 7,2 / 9,0 / 12,0 / 13,8 / 14,3 s) ja korkeuskäyrä `v3e/korkeuskayra-v3d-v3e.png`.
+- Toteutui: lähestyminen yhtenä S-käyränä, lähin kohta 20,1 km (kone 58 % leveydestä), pakitus 8,1 → 9,4 km, korkeuden
+  S-käyrä pysähtymättä. Vanat näkyvät ohituksessa koneen takana eivätkä piirry sen päälle. Linnut näkyvät pieninä
+  (~3 % leveydestä) vinottain 12,6–14,4 s.
+- Havainnot: 1) silmän maareitti oli koukku: ~270 km Ateenan eteläpuolella 13 s:ssa ja takaisin sen ylle, joten kosketus
+  nähtiin viistosti (kallistus ~10–16°); 2) nousussa 10,8–12,3 s näkyi terävä laattaraja (tarkka lähimaasto ja karkea
+  SSE 40 -vaihe).
+- Jatkotestit samalla käännöksellä: varalaatat PASS (97 + 159 + 45 korvattu oikealla, 0 jäljellä, uusintakierros 1).
+  Kinderdijk jäi testaamatta, koska valmisteluskriptin `timeout 240` katkaisi konsolin ja sovellus kaatui. Korjattu
+  (1800 s).
+
+## v3e2: silmän reitti ilman koukkua ja nousu ilman laattarajaa (klo 11.3x, kääntämättä)
+
+- Haara **57bca5bb** (f7333a8f:n päällä):
+  - Silmän vaakaetäisyys koneesta on erkanemisessa pehmeästi enintään 110 km, ja raja kapenee 15 km:iin välillä
+    12,3–13,6 s (AloituslennonRata.SivuEnintaanM).
+  - Suunta kääntyy nousun loppuosalla (A ≥ 0,30).
+  - Nousu ladataan täydellä laattatarkkuudella (karkea vaihe vain lähestymisessä).
+  - Saapuminen alkaa 12,6 s.
+  - Kartta-testit 351/351, uusi testi SilmaKaartaaKohteenYlleIlmanKoukkua. unity-tarkistus 0.
+- Mallin mitat (Ateena):
+  - Kallistus 61,8° (11,5 s) → 46,5° → 27,0° → 8,4° (13,0 s) → 3,0° (13,5 s). Kosketus nähdään ~2°:n kallistuksella.
+  - Koneen loittoneminen on 0,43–0,52 e/s pakituksesta 11,5 s:iin, sitten 0,77 → 1,41 → 0,23 e/s ilman notkahdusta.
+  - Silmä on enintään ~60 km kohteen sivussa (v3e 270 km).
+  - Suunta kääntyy 40° → 0° välillä 12–14 s.
+  - Vierintä on enintään 0,69 e/s (v3e 0,63).
+- Reittikuva `v3e2/reitti-v3e-v3e2.png`, taulut `v3e2/v3e2-taulu.txt` (kohteet) ja `v3e2/v3e2-taulu-01.txt` (Ateena 0,1 s).
+- Muoto: silmä kaartaa loivasti koneen oikealta puolelta kohteen ylle. Reitin suhteen liike on S: silmä siirtyy reitin
+  oikealta puolelta vasemmalle saapumisnäkymään. Tasossa täysi S vaatisi, että silmä ylittää reitin koneen takaa matalalla
+  (kone näkyisi takaa) tai kiertää koneen edestä (vahva kiertoliike). Siksi suosittelen tätä muotoa.
+- Käännös ja kuvaus odottavat käännöspalvelun vuoroa.
