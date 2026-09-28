@@ -98,3 +98,61 @@ siirtymät ovat häivytyksiä ilman lentoa.
 - Video: kauko → seuranta → ikkuna → ✕.
 - Kehysaika iPhonella: ikkunassa laattoja ladataan jatkuvasti, koska maa liikkuu 7,66 km/s. Tavoite on p95 ≤ 20 ms.
   Mitataan ennen kuvaparia.
+
+## 6. Cupola-erä (omistajan palaute 28.9. klo 09.3x, Fablen päätökset)
+
+Omistaja: Cupola on hyvä, mutta tummemmaksi ja näkyvä valonlähde, jonka valo muuttaa sisäpintaa; horisontissa liikaa
+sinistä (musta avaruus); lasi aidommaksi pienine reunavirheineen; osa asemaa ikkunan taakse kerroksellisuudeksi. Omistaja
+valitsi kehyksen (ei ilman). Natiivi: proto `linssiseppa/iss-kyyti` (SHA ja laitekuvat alla, kun kuvapari on valmis).
+
+**Kehys 3D-kerroksena omalla varjostimella** (UI Toolkit ei valaise kuvaa): koko ruudun neliö kameran edessä
+(CupolaKerros + Cupola.shader), kolme kerrosta takaa eteen:
+1. **Ulkona:** Canadarm2 (olkapuomi, kyynärnivel, kyynärvarsi ja tarttuja; sylinterivarjostus ja eristeen saumat) ja
+   aurinkopaneelin kulma oikeassa yläikkunassa perspektiivissä (reunat suppenevat, kennot tihenevät kauempana,
+   kullanruskea sävy, ohuet raot ja saumat, hopeinen reunus, kiilto auringon suunnasta, harmaa masto). Kun ISS on maan
+   varjossa, vain maavalo alhaalta. Raot ja saumat reunanpehmennetään pikselin leveydestä, jottei ruudukko muutu
+   pistekuvioksi.
+2. **Lasi:** vihertävä sävy (peitto 0,09), heijastuskuva huojuu 0,4 % ruudusta noin 11 s:n jaksolla, reunojen sameus ja
+   valon siroaminen lasin reunassa, tahrat, pöly ja lyhyet hiusviivanaarmut satunnaisissa suunnissa (noin joka viides
+   6 %:n ruutu). Nämä syttyvät vain valossa.
+3. **Kehys:** Codexin kehyskuva tummennettuna (0,42) ja valaistuna:
+   - aurinkotäplä ikkunoista auringon suunnasta (siirtyy radan mukana)
+   - sinertävä maavalo ikkunoiden läheltä, vaihtelee hitaasti kuin pilvet ohittaisivat
+   - kaksi kapeaa lämmintä LED-valonauhaa sivuilla hehkuineen (näkyvä valonlähde; pallomainen hehku ylivalottui)
+   - pinnan kohokuvio kehyskuvan kirkkaus- ja alfagradientista.
+
+**Valo** (CupolanValo, testit): auringon suunta kameraan nähden, ISS:n varjo (sylinteri) ja maavalo.
+
+**Ilmakehä ja taivas kyydissä:**
+- Kaukonäkymän 1,25 R -hehku häipyy (kamera oli sen sisällä, joten koko taivas sinersi).
+- Tilalle ohut analyyttinen kaari R + 120 km: kirkkaus exp(−h/22 km), sävy vaaleasta (0,72; 0,88; 1) syvään siniseen
+  (0,12; 0,30; 0,86), kirkkaus auringon mukaan sivuamispisteessä (yöllä 0,06). Maan päällä hento vaalea usva ilmamatkan
+  mukaan (katto 0,42). Yläpuolella musta avaruus (#04060e). Siirtymä 0,8 s.
+- Tähdet 0,3 (päivävalo), rata piiloon koko kyydin ajaksi ja pilvet noin 8 km:iin (kaukonäkymän 64 km:n kuoren reuna
+  nousi horisontin yläpuolelle ja vaalensi sen).
+
+**Omistajan päätös 28.9. klo 11.0x** (Fablen kautta, sanatarkasti): "Pyydä Codexilta vain uusi kuva tuosta
+kupolasta. Se tulee paremman näköiseksi, kun Codex itse tuottaa oikeanlaisen kuvan valoineen ja varjoineen, ja se saisi
+olla tummempi kuin mikä tuo nykyinen on. Ja pyydä siltä myös nuo kupolan ulkopuolella olevat ISS-elementit, ja ne
+saisivat melkein olla vain mustia varjokuvia. Näin maa hehkuisi paremmin ja kupolan sisätilakin olisi enemmän tumma kuin
+vaalea. Ja lisää noihin vihreällä näkyviin nopeustietoihin sana "live" tai joku vastaava, että käyttäjä tajuaa, että ISS
+on oikeastikin juuri tuolla kohtaa menossa tällä hetkellä."
+
+- **Codex-tilaus** (postilaatikko `posti/linssiseppa-codexille-cupola-20260928.md`, 1ac968bc9):
+  - uusi kehys tummana sisätilana valoineen ja varjoineen (keskikirkkaus 35–55/255, nyt 124–138)
+  - aukot täsmälleen nykyisessä geometriassa ja uusi heijastus
+  - ISS:n ulko-osat lähes mustina siluetteina omana kerroksenaan (parallaksi enintään 1,5 %)
+  - ämpäriin `karttanostot/20260928/iss-cupola2-*`
+- **Natiivi:** kuvat kytketään kolmena kerroksena (ulko-osat, kehys, heijastus) Codexin toimituksen jälkeen. Yllä kuvattu
+  3D-kehys jää varalle.
+- **LIVE** (natiivi 853259ec): "● LIVE · ISS · 436 km · 27 530 km/h".
+  - Punainen piste rgb(255, 86, 86), 7 pt, sykkii: peitto 1 ↔ 0,25, 0,9 s ease-in-out. Vähennetty liike: paikallaan.
+  - LIVE lihavoituna pillerin vihreällä (93, 255, 168), väli 5 pt.
+  - Ilman tuoretta TLE:tä ei LIVE-merkkiä, vaan loppuun "· rata-arvio" kuten ennen.
+
+**Web (Pelikoodari):**
+- Cupola: Codexin uudet kuvat kolmena CSS-kerroksena samassa järjestyksessä kuin natiivissa (ulko-osat, kehys, heijastus;
+  cover). Varjostinta ei tarvita.
+- Ilmakehän kaari: sama analyyttinen kuori (R + 120 km, exp(−h/22 km)); kaukonäkymän hehku häivytetään kyydissä.
+- Tähdet 0,3, rata piiloon ja pilvet matalalle kyydin ajaksi.
+- LIVE-merkki samoin luvuin.
