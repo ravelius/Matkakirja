@@ -1664,32 +1664,33 @@ namespace Matkakirja.Natiivi
             }
             else if (arvo == "kiilto")
             {
-                // Seuraava hetki (enintään 24 h), jolloin ikkunan katsekohde on vettä ja aurinko on sen yllä edessä
-                // (atsimuutti ±40° radan suunnasta eli ikkunan kuvakulman sisällä, korkeus 25–70°): heijastus näkyy ikkunassa.
-                // Laite cl4 28.9.: ±25° ei löytänyt yhtään hetkeä (syyskuun lopussa aamun aurinko on idässä ja rata NE/SE).
+                // Heijastus seurannan kuvan keskellä (laite cl6 28.9.: ikkunan heijastuskohta jäi Cupolan kehyksen taakse tai kuvan
+                // ulkopuolelle): heijastussuunta (auringon atsimuutti, painuma = auringon korkeus alapisteessä) enintään 20° seurannan
+                // kameran akselista (radan suunta, painuma 35°), alla vettä puolen minuutin ajan. Syys–lokakuun vaihteessa tämä
+                // geometria toteutuu vasta lokakuun lopulla (laskettu 28.9.), joten haku ulottuu 35 vrk:een (rata-arvio).
                 var nyt = DateTime.UtcNow;
                 DateTime? loyto = null;
-                for (int s = 0; s < 24 * 3600 && loyto == null; s += 20)
+                double raja = Math.Cos(20 * Math.PI / 180), dp = 35 * Math.PI / 180;
+                for (int s = 0; s < 35 * 86400 && loyto == null; s += 30)
                 {
                     var t = nyt.AddSeconds(s);
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(t);
-                    var kk = IkkunanKatse(t);
-                    if (!Yokuori.OnVesi(kk.Lat, kk.Lon)) continue;
-                    // Laite cl5 28.9.: katsekohde ehti rannikolta maalle ennen ikkunakuvaa, joten vettä vaaditaan minuutin ajan.
-                    var k30 = IkkunanKatse(t.AddSeconds(30)); var k60 = IkkunanKatse(t.AddSeconds(60));
-                    if (!Yokuori.OnVesi(k30.Lat, k30.Lon) || !Yokuori.OnVesi(k60.Lat, k60.Lon)) continue;
                     var aur = Aurinko.AurinkoEcef(t);
-                    double la = kk.Lat * Math.PI / 180, lo = kk.Lon * Math.PI / 180;
+                    double la = p.Lat * Math.PI / 180, lo = p.Lon * Math.PI / 180;
                     double ylos = Math.Cos(la) * Math.Cos(lo) * aur.x + Math.Cos(la) * Math.Sin(lo) * aur.y + Math.Sin(la) * aur.z;
+                    if (ylos < 0.17) continue;   // aurinko alle 10°
                     double ita = -Math.Sin(lo) * aur.x + Math.Cos(lo) * aur.y;
                     double pohj = -Math.Sin(la) * Math.Cos(lo) * aur.x - Math.Sin(la) * Math.Sin(lo) * aur.y + Math.Cos(la) * aur.z;
-                    double korkeus = Math.Asin(Math.Max(-1, Math.Min(1, ylos))) * 180 / Math.PI;
-                    double atsimuutti = Math.Atan2(ita, pohj) * 180 / Math.PI;
-                    double ero = Math.Abs(((atsimuutti - kk.Suuntima) % 360 + 540) % 360 - 180);
-                    if (korkeus >= 25 && korkeus <= 70 && ero <= 40) loyto = t;
+                    double h = Math.Asin(Math.Min(1, ylos)), ero = Math.Atan2(ita, pohj) - Matkakirja.Linssit.Iss.IssNyt.Suuntima(t) * Math.PI / 180;
+                    double pistetulo = Math.Cos(dp) * Math.Cos(h) * Math.Cos(ero) + Math.Sin(dp) * Math.Sin(h);
+                    if (pistetulo < raja) continue;
+                    if (!Yokuori.OnVesi(p.Lat, p.Lon)) continue;
+                    var q = Matkakirja.Linssit.Iss.IssNyt.Paikka(t.AddSeconds(30));
+                    if (!Yokuori.OnVesi(q.Lat, q.Lon)) continue;
+                    loyto = t;
                 }
-                if (loyto == null) return "ei heijastushetkeä 24 tunnin sisällä";
-                siirto = loyto.Value.AddSeconds(-20) - nyt;   // ikkuna on kahden napautuksen (~15 s) päässä
+                if (loyto == null) return "ei heijastushetkeä 35 vrk:n sisällä";
+                siirto = loyto.Value.AddSeconds(-8) - nyt;   // seuranta on yhden napautuksen (~6 s) päässä
             }
             else if (arvo == "paiva-eurooppa")
             {

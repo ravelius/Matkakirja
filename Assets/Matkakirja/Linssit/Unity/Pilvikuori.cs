@@ -27,6 +27,9 @@ namespace Matkakirja.Natiivi
         static string jaetunOsoite;
         static bool lataa;
         Texture2D kuva => jaettu;
+        /// <summary>Jaettu pilvikuva (RGBA, alfa = pilvi, tasakulmainen, rivi 0 etelässä) ja sen osoite; yökuori himmentää sillä valot.</summary>
+        public static Texture2D JaettuKuva => jaettu;
+        public static string JaetunOsoite => jaetunOsoite;
 
         public static Pilvikuori Luo(CesiumGeoreference georeferenssi, string osoite = OletusOsoite)
         {

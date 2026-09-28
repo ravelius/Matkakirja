@@ -187,10 +187,20 @@ namespace Matkakirja.Natiivi
 
         public void Nimet(bool nakyvissa) => nimetNakyvissa = nakyvissa;
 
-        public void Pilvet(double peitto, double kiertoAsteina) =>
-            pilvet?.Aseta(kyyti != KyydinTila.Kauko && PilvetKyydissa == "pois" ? 0 : peitto,
-                // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
-                paivanPilvet ? 0 : kiertoAsteina);
+        public void Pilvet(double peitto, double kiertoAsteina)
+        {
+            // Kyydissä pilvet näkyvät aina (Siirtosepän löydös 28.9. cl5-kuvista): kaukonäkymän lähihäivytys (PilvienPeitto,
+            // nolla alle 0,25 × avauskorkeuden) antoi ISS:n korkeudella peiton 0, joten päivän pilvet eivät näkyneet. Kyydissä
+            // peitto on huippu 0,9 kuten webissä (web on malli); siirtymä 0,8 s.
+            if (kyyti != KyydinTila.Kauko)
+                peitto = PilvetKyydissa == "pois" ? 0 : Astronauttimatikka.PilvienPeittoHuippu;
+            pilvienPeitto = Mathf.MoveTowards(pilvienPeitto, (float)peitto, Time.unscaledDeltaTime / 0.8f);
+            // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
+            pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
+            yokuori?.PilvienPeitto(pilvienPeitto);
+        }
+
+        float pilvienPeitto;
 
         /// <summary>ISS-realismi 2: päivän pilvet (Julkaisijan ajastettu haku NASA GIBS:stä), haetaan kyydin alkaessa.</summary>
         public const string PaivanPilvetUrl = "https://media.matkakirja.app/data/pilvet/uusin.png";
@@ -269,7 +279,11 @@ namespace Matkakirja.Natiivi
             if (tila != KyydinTila.Kauko && !paivanPilvetHaettu && !PaivanPilvetPois && pilvet != null)
             {
                 paivanPilvetHaettu = true;
-                pilvet.VaihdaKuva(PaivanPilvetUrl, ok => paivanPilvet = ok);
+                pilvet.VaihdaKuva(PaivanPilvetUrl, ok =>
+                {
+                    paivanPilvet = ok;
+                    if (ok) yokuori?.Pilvet(Pilvikuori.JaettuKuva);
+                });
             }
             // Kyydissä oikeat tähdet ja Kuu (KyydinTaivas); satunnainen kenttä pois, kun oikeat ovat ladattu (muuten himmeänä 0,3).
             if (tila != KyydinTila.Kauko && kyydinTaivas == null) kyydinTaivas = KyydinTaivas.Luo(georeferenssi, kamera);
