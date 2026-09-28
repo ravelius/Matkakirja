@@ -176,7 +176,9 @@ import {
  * kaksi totuutta on pahempi kuin kehä.
  */
 import { luoAstroSumu } from './astro-sumu.js';
-import { ISS_NYT, lataaIssTle, KAAREN_VALI_S, SIMUKELLO } from './iss-rata.js';
+import { ISS_NYT, lataaIssTle, KAAREN_VALI_S, SIMUKELLO, auringonAlihajapiste, jdHetkesta } from './iss-rata.js';
+import { luoIssRealismi } from './iss-realismi.js';
+import { realismiKerrokset } from './iss-realismi-kerrokset.js';
 import { luoIssKyytiNakyma } from './iss-kyyti-nakyma.js';
 import { ISS_OSUMA_PX, ISS_SYKE_MS } from './iss-kyyti.js';
 import { luoNimiolimitys } from './satelliitti-nimiot.js';
@@ -3092,8 +3094,15 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       lauta?.kamera?.pysaytaKameraAjo?.();
     },
     kyytiPaattyi: (korkeus) => { omaKorkeus = korkeus; },
-    /* Siirtosepän realismimoduuli (js/linssit/iss-realismi.js) kytketään tähän, kun se tulee. */
-    realismi: null,
+    /*
+     * ISS-REALISMI (Siirtoseppä 28.9.2026, natiivin arvoin): päivän pilvet, yö + kaupunkien valot + kiilto + varjostus,
+     * revontulet ja ilmakaari hämärineen ja ilmahehkuineen. Aurinko samasta simuloidusta kellosta kuin kaari.
+     */
+    realismi: luoIssRealismi({
+      aurinko: (ms) => auringonAlihajapiste(jdHetkesta(ms)),
+      kerrokset: realismiKerrokset({ ikkuna }),
+      varoita: (v, e) => { try { console.warn(v, e); } catch { /* ei konsolia */ } },
+    }),
   });
   kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
 
