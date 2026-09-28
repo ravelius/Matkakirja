@@ -8547,3 +8547,7 @@ Natiivi-UI paivityslappu e19b5d97 (kaannos 522ba7cf): lappu hakee muutoslokirivi
 ## OMISTAJA: FABLE-ROOLIN NIMI ON PAATOIMITTAJA; CODEXILLE 'VIESTI CLAUDELLE' (28.9.2026 klo 10.25)
 
 Omistaja 28.9. hyvaksyi: session nimi 'Päätoimittaja (Opus, xhigh)' (id local_8d8ebf72 ennallaan); 'Fable' on roolin vanha nimi ja patee kaikissa ohjeissa (ei uudelleenkirjoitusta); Codexille omistaja sanoo jatkossa 'viesti Claudelle'. Raamattu + CLAUDE.md alias PR #3527:ssa, aloitusviesti paivitetty. Haaran nimenvaihto claude/bold-ride-vow4ki → paatoimittaja seuraavassa tilinvaihdossa (omistajan nelja tilia eivat ole paalla yhtaikaa; tieto siirtyy luovutuksessa).
+
+## OMISTAJA: STRIIMILUKIJAN KAPPALELISTA YHDEN RIVIN KOHDIN (OTSIKKO, 1, 2 … + ALKUSANAT) (28.9.2026 klo 10.26)
+
+Omistaja 28.9. #3537-kuvaparista sanatarkasti: "Hampurilainen on hyvä, mutta käytä paljon lyhyempiä tekstejä siinä. Tai lajittelu voisi olla paremmin, että otsikko, leipäteksti 1, 2 ja niin edelleen. Tai vielä lyhyempi muoto ja sitten pari sanaa miten se leipäteksti alkaa. Mieluiten niin että jokainen kohta mahtuisi yhdelle riville." Pelikoodari korjaa (+ kelausrivi alimmaksi, 'Lehden osiot' -rivi pois). Levy: simulaattorien iOS-jarjestelmadata (PosterExtension ~5 Gt/laite) → roolit saavat ajaa simctl erase OMALLE simulaattorilleen ajon jalkeen.
