@@ -8855,3 +8855,7 @@ Julkaisija 28.9. klo 21.00: TF 1.0.39 (202609281745, proto e4c624a9) sisäisess�
 ## PÄÄTÖS: MUUTOSLOKIRIVI TUOTANTOON ENNEN TF-RYHMÄÄ (28.9.2026 klo 21.12)
 
 Omistaja 28.9. klo 21.12 1.0.39:n avauksesta (Peli päivittyi -lappu varatekstillä 'muutokset päivittyvät tähän pian'): "Päivitykset katosivat myös tästä". Syy: muutoslokirivi #3578 mainiin 21.00, sisältöpaketin vienti d75821ca6 vasta käynnissä kun build tuli ryhmään; ei liity tyhjään Testattavaa-kohtaan. → Julkaisija: muutoslokirivi mainiin + sisältöpaketin vienti valmiiksi ENNEN buildin lisäämistä sisäiseen ryhmään.
+
+## OMISTAJA: ISS-KYYTIIN OMA SIJAINTI, PILVIPEITON JA VUODENAJAN SÄÄTIMET (28.9.2026 klo 21.15)
+
+Omistaja 28.9. klo 21.15 TF 1.0.39:n Cupola-kaappauksella (Dardanellit, pilvet peittävät; docs/raportit/kaappaukset/omistaja-20260928/iss-cupola-sijainti-pilvet-vuodenaika.png) sanatarkasti: "Lisää myös mahdollisuus mennä käyttäjän sijainnin kohdalle. Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle sekä vuodenajalle?" → Linssiseppä 2 (natiivi ISS-kyyti): 1) Lennä kohteen ylle -valikkoon 'Oma sijainti' (karkea sijainti, mieluiten ilman lupakyselyä workerin maa-/kaupunkitiedosta; laitteen sijainti vain jos tarpeen ja vain käytön aikana), 2) pilvipeiton säädin (0 = selkeä … nykyinen), 3) vuodenajan säädin (BMNG-kuukausipinta + Maapallon vuosi -aineisto). Kevyt UI, ei koristeita. Kuvapari omistajalle; webiin Siirtosepän ISS-realismin mukana. Huom: 1.0.39:ssä on vielä vanha sumea pilvikuva, terävät pilvet 1.0.40:ssä.
