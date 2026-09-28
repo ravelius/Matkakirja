@@ -42,7 +42,7 @@ import {
   ESILATAUS_LEPO_MS, ESILATAUS_LIIKEVARA, ESILATAUS_MAATASOT, esilatausPaalla, laajennaLaatikko,
   laattojenOsoitteet, luoEsilatausjono,
 } from './laattaesilataus.js';
-import { peiliKaytossa, peiliPetti, peilinKatkoJaljella } from './media.js';
+import { peiliKaytossa, peiliPetti, peiliToimi, peilinKatkoJaljella } from './media.js';
 import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
@@ -2512,6 +2512,8 @@ export function luoLaattakerros({
   const vahemmanDc = laattakerroksenKokeet().has('vahemmandc');
   const mittarit = {
     tila: 'ei', taso: null, laattoja: 0, valmiita: 0, hapyvia: 0, pyyntoja: 0, pyydettyja: 0,
+    // Laattavirheet ja niiden uusinnat (LAATTA EI JÄÄ AUKOKSI, 27.9.2026).
+    laattavirheita: 0, uusittu: 0,
     syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0, piilotettuja: 0,
     /*
      * NÄKYVÄN ALUEEN PEITTO (heilurimittaus, savuke --vaihe=heiluri).
@@ -2711,6 +2713,8 @@ export function luoLaattakerros({
         // Katkaisija (js/media.js 'laatat'): 429 ja 5xx ovat ämpärin vikoja, 404 ei.
         if (vastaus.status === 429 || vastaus.status >= 500) peiliPetti('laatat');
         if (!vastaus.ok) return null;
+        // Peili vastasi: katkaisija laskee vain peräkkäiset virheet (js/media.js peiliToimi).
+        peiliToimi('laatat');
         const blob = await vastaus.blob();
         try {
           return await ikkuna.createImageBitmap(blob, BITTIKARTTA_ASETUKSET);
@@ -2738,7 +2742,10 @@ export function luoLaattakerros({
       kuva.crossOrigin = 'anonymous';
       kuva.decoding = 'async';
       kuva.fetchPriority = 'high';
-      kuva.onload = () => (kuva.decode ? kuva.decode().then(() => ok(kuva), () => ok(kuva)) : ok(kuva));
+      kuva.onload = () => {
+        peiliToimi('laatat');
+        return kuva.decode ? kuva.decode().then(() => ok(kuva), () => ok(kuva)) : ok(kuva);
+      };
       kuva.onerror = () => ok(null);
       kuva.src = url;
     });
@@ -3042,6 +3049,27 @@ export function luoLaattakerros({
     t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
     t.katkaisin = null;
     if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+    /*
+     * LAATTA EI JÄÄ AUKOKSI (omistaja 27.9.2026 klo 23.5x, iPad web: isoja
+     * tasaisia pergamenttiruutuja ja tarkkoja ja karkeita laattoja
+     * vierekkäin; "karttavirhe palaa, vaikka olisi aluksi näyttänyt kaiken
+     * oikein"). Ennen: jos yhden kerroksen kuva ei tullut (Safari katkaisee
+     * haut taustalle mennessä tai näytön lukittuessa, ohimenevä verkkovirhe),
+     * laatta koottiin ILMAN sitä ja merkittiin valmiiksi — pohjan puuttuessa
+     * ruudulle jäi pysyvästi tasainen pergamentti — eikä sitä haettu enää
+     * koskaan. Nyt kerros, jonka laatta on luettelon mukaan olemassa mutta
+     * jäi tulematta, tekee koko laatasta virheen, ja virhe uusitaan
+     * (uusiVirhe). Relieflaatasto on poikkeus: sen puuttuvalle laatalle on
+     * oma karkeamman tason paikanpitäjä alla (reliefi404).
+     */
+    const pudonnut = kerrostasot.some((k, i) => !k.reliefi && !kuvat[i]
+      && pyramidinLaattaOlemassa(k, t.sarake, t.rivi));
+    if (pudonnut) {
+      for (const k of kuvat) k?.close?.();
+      mittarit.laattavirheita += 1;
+      merkitseVirhe(t);
+      return;
+    }
     /*
      * AVOMERI EI OLE VIRHE, KUN POHJAA EI OLE ALLA.
      *
@@ -3669,6 +3697,38 @@ export function luoLaattakerros({
 
   /* ---------------- latausjono ---------------- */
 
+  /*
+   * VIRHEEN UUSINTA (LAATTA EI JÄÄ AUKOKSI, ks. lataa). Virheeseen jäänyt
+   * laatta palaa jonoon 1,5, 4,5, 13,5 ja sitten 20 s:n välein, kun sitä
+   * yhä katsotaan tai pidetään; näkymätön virhelaatta puretaan, jolloin se
+   * luodaan puhtaana, kun alue tulee taas ruudulle. Paluu näkyviin ja
+   * verkon paluu uusivat heti.
+   */
+  const VIRHEEN_UUSINTA_MS = 1500;
+  const VIRHEEN_UUSINTA_KATTO_MS = 20000;
+  const merkitseVirhe = (t) => {
+    t.tila = 'virhe';
+    t.virheita = (t.virheita ?? 0) + 1;
+    const viive = Math.min(VIRHEEN_UUSINTA_KATTO_MS, VIRHEEN_UUSINTA_MS * 3 ** (t.virheita - 1));
+    ikkuna.setTimeout?.(() => uusiVirhe(t), viive);
+  };
+  const uusiVirhe = (t) => {
+    if (purettu || laatat.get(t.avain) !== t || t.tila !== 'virhe') return;
+    if (!t.nakyva && !t.pito) { poista(t); return; }
+    t.tila = 'ladataan';
+    t.aloitettu = false;
+    mittarit.uusittu += 1;
+    if (!t.jonossa) { t.jonossa = true; jono.push(t); }
+    kaynnista();
+  };
+  const uusiKaikkiVirheet = () => {
+    if (purettu || ikkuna.document?.hidden) return;
+    for (const t of [...laatat.values()]) if (t.tila === 'virhe') uusiVirhe(t);
+  };
+  ikkuna.document?.addEventListener?.('visibilitychange', uusiKaikkiVirheet);
+  ikkuna.addEventListener?.('pageshow', uusiKaikkiVirheet);
+  ikkuna.addEventListener?.('online', uusiKaikkiVirheet);
+
   const kaynnista = () => {
     if (purettu) return;
     /*
@@ -3736,7 +3796,7 @@ export function luoLaattakerros({
       ladattavia += 1;
       aloituksia += 1;
       lataa(t)
-        .catch((syy) => { t.tila = 'virhe'; mittarit.syy = String(syy?.message ?? syy); })
+        .catch((syy) => { merkitseVirhe(t); mittarit.syy = String(syy?.message ?? syy); })
         .then(() => { ladattavia -= 1; kaynnista(); });
     }
     if (tahditettu && aloituksia > 0 && !aloitusRaf) {
@@ -4845,6 +4905,9 @@ export function luoLaattakerros({
     mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt], nakyvissa: mittarit.scenessa > 0 }),
     pura: () => {
       purettu = true;
+      ikkuna.document?.removeEventListener?.('visibilitychange', uusiKaikkiVirheet);
+      ikkuna.removeEventListener?.('pageshow', uusiKaikkiVirheet);
+      ikkuna.removeEventListener?.('online', uusiKaikkiVirheet);
       sukupolvi += 1;
       for (const n of esikaannoksenNaytteet ?? []) n.parent?.remove(n);
       esikaannoksenNaytteet = null;

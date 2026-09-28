@@ -9,10 +9,12 @@
  *
  * Säännöt ovat samat kuin kortissa, ja juuri se tässä mitataan:
  *
- *   1. YHÄ OLEMASSA oleva kohde (Ateenan Antiikin agora): kuvat
- *      pysyvät ennallaan ja "Koe ihme" -nappi tulee KUVAN ALLE,
- *      leipätekstin jatkon eteen. Jutussa itsessään ei ole nauhaa.
- *   2. Nappi avaa suurennoksen NÄHTÄVYYSIKKUNAN SISÄÄN (modaali
+ *   1. YHÄ OLEMASSA oleva kohde (Ateenan Antiikin agora): ihmekuva on
+ *      jutun ENSIMMÄINEN ja iso kuva nauhoineen, ja jutun oma valokuva
+ *      (mitä paikalla NYT on) kelluu pienenä oikealla
+ *      (.nahtavyys-nykykuva). "Koe ihme" -nappia ei ole (omistaja
+ *      27.9.2026 klo 23.4x).
+ *   2. Ihmekuva avaa suurennoksen NÄHTÄVYYSIKKUNAN SISÄÄN (modaali
  *      <dialog> on selaimen ylimmässä kerroksessa: bodyyn liitetty
  *      suurennos jäisi sen taakse), ja suurennoksessa on 45 asteen
  *      kulmanauha sekä havainnekuvan lähderivi.
@@ -20,7 +22,7 @@
  *      havainnekuva on kuvasarjan ENSIMMÄINEN kuva nauhoineen, ilman
  *      välinappia — ja nauha seuraa kuvaa, ei kehystä, joten se katoaa
  *      kun sarjaa selaa eteenpäin.
- *   4. Kohde ilman ihmettä (Lykavittós) ei saa nappia eikä nauhaa.
+ *   4. Kohde ilman ihmettä (Lykavittós) ei saa nauhaa eikä nykykuvaa.
  *   5. Nimivastaavuus: kaupunkikartan "Zeuksen temppeli" on
  *      fokuskartan Olympieion, ja ihme löytyy silti.
  */
@@ -126,11 +128,12 @@ const suljeKohde = async () => {
   await sivu.waitForTimeout(300);
 };
 
-/** Jutun rakenne ihmeen kannalta: nappi, nauha ja niiden järjestys. */
+/** Jutun rakenne ihmeen kannalta: ensimmäinen kuva, nauha ja nykykuva. */
 const juttu = () => sivu.evaluate(() => {
   const dialogi = document.getElementById('nahtavyys-dialog');
   const sisalto = document.getElementById('nahtavyys-sisalto');
-  const kehys = sisalto?.querySelector('.nahtavyys-kuvakehys');
+  const kehys = sisalto?.querySelector('.nahtavyys-kuvakehys:not(.nahtavyys-nykykuva)');
+  const nyky = sisalto?.querySelector('.nahtavyys-nykykuva');
   const nauha = kehys?.querySelector('.fokuskohde-ihmenauha');
   const kaista = nauha?.querySelector('.fokuskohde-ihmekaista');
   const kuva = kehys?.querySelector('img');
@@ -139,8 +142,11 @@ const juttu = () => sivu.evaluate(() => {
     auki: Boolean(dialogi?.open),
     otsikko: document.getElementById('nahtavyys-otsikko')?.textContent ?? '',
     aika: document.getElementById('nahtavyys-aika')?.textContent ?? '',
+    // "Koe ihme" -nappi poistettiin 27.9.2026: vanhaa nappia ei saa olla.
     nappeja: dialogi?.querySelectorAll('.fokuskohde-ihmenappi').length ?? 0,
-    nappiTeksti: dialogi?.querySelector('.fokuskohde-ihmenappi')?.textContent ?? '',
+    nykykuvia: sisalto?.querySelectorAll('.nahtavyys-nykykuva').length ?? 0,
+    nykyKelluu: nyky ? getComputedStyle(nyky).float : '',
+    nykyNauha: Boolean(nyky?.querySelector('.fokuskohde-ihmenauha')),
     nauhoja: sisalto?.querySelectorAll('.fokuskohde-ihmenauha').length ?? 0,
     nauhanKoti: nauha?.parentElement?.className ?? '',
     nauhanTeksti: kaista?.textContent ?? '',
@@ -183,7 +189,7 @@ const vino = (muunnos) => {
   return Math.abs(osat[0] - 0.7071) < 0.02 && Math.abs(osat[1] + 0.7071) < 0.02;
 };
 
-/* --- 1: yhä olemassa oleva kohde — "Koe ihme" kuvan alla --- */
+/* --- 1: yhä olemassa oleva kohde — ihmekuva ensin, nykykuva kelluu --- */
 
 await avaaKaupunki('ateena');
 vaadi('Ateenan kaupunkikartta aukesi nähtävyyskyltteineen',
@@ -192,25 +198,24 @@ let tila = await juttu();
 vaadi('kohdenäkymä aukesi (KOHDE 1 · Antiikin agora)',
   tila.auki && tila.otsikko === 'Antiikin agora' && /^Kohde 1 · /.test(tila.aika),
   JSON.stringify({ otsikko: tila.otsikko, aika: tila.aika }));
-vaadi('olemassa olevalla kohteella on "Koe ihme" -nappi',
-  tila.nappeja === 1 && /Koe ihme/i.test(tila.nappiTeksti),
-  JSON.stringify({ nappeja: tila.nappeja, teksti: tila.nappiTeksti }));
-vaadi('"Koe ihme" on KUVAN ALLA ja ennen jutun jatkoa',
-  tila.jarjestys.indexOf('fokuskohde-ihmenappi')
-    > tila.jarjestys.findIndex((l) => l.includes('nahtavyys-kuvakehys'))
-  && tila.jarjestys.indexOf('fokuskohde-ihmenappi') < tila.jarjestys.length - 1,
-  JSON.stringify(tila.jarjestys));
-vaadi('olemassa olevan jutussa ei ole nauhaa: ihmekuva aukeaa vasta napista',
-  tila.nauhoja === 0, `${tila.nauhoja} nauhaa`);
+vaadi('olemassa olevan kohteen ENSIMMÄINEN kuva on ihmekuva nauhoineen',
+  IHME_KUVA.test(tila.kuvanOsoite) && tila.nauhoja === 1,
+  JSON.stringify({ osoite: tila.kuvanOsoite, nauhoja: tila.nauhoja }));
+vaadi('jutun oma valokuva kelluu pienenä oikealla (.nahtavyys-nykykuva) ilman nauhaa',
+  tila.nykykuvia === 1 && tila.nykyKelluu === 'right' && !tila.nykyNauha
+  && tila.jarjestys.findIndex((l) => l.includes('nahtavyys-nykykuva'))
+    > tila.jarjestys.findIndex((l) => l.includes('nahtavyys-kuvakehys')),
+  JSON.stringify({ nykykuvia: tila.nykykuvia, kelluu: tila.nykyKelluu, jarjestys: tila.jarjestys }));
+vaadi('olemassa olevalla kohteella ei ole "Koe ihme" -nappia',
+  tila.nappeja === 0, `${tila.nappeja} nappia`);
 
-/* --- 2: nappi avaa suurennoksen ikkunan SISÄÄN, nauhoineen --- */
+/* --- 2: ihmekuva avaa suurennoksen ikkunan SISÄÄN, nauhoineen --- */
 
-if (tila.nappeja) {
-  await sivu.locator('#nahtavyys-dialog .fokuskohde-ihmenappi').click();
-  await sivu.waitForTimeout(900);
-}
+await sivu.evaluate(() => document
+  .querySelector('#nahtavyys-sisalto .nahtavyys-kuvakehys:not(.nahtavyys-nykykuva) img')?.click());
+await sivu.waitForTimeout(900);
 let zoom = await suurennos();
-vaadi('"Koe ihme" avaa suurennoksen nähtävyysikkunan sisään (ei sen taakse)',
+vaadi('ihmekuva avaa suurennoksen nähtävyysikkunan sisään (ei sen taakse)',
   zoom.auki === true && IHME_KUVA.test(zoom.osoite),
   JSON.stringify({ auki: zoom.auki, osoite: zoom.osoite }));
 /*
@@ -235,16 +240,17 @@ await suljeKohde();
 vaadi('Zeuksen temppeli aukesi', await avaaKohde('Zeuksen temppeli'));
 tila = await juttu();
 vaadi('nimivastaavuus toimii: Zeuksen temppeli löytää Olympieionin ihmeen',
-  tila.nappeja === 1, JSON.stringify({ otsikko: tila.otsikko, nappeja: tila.nappeja }));
+  IHME_KUVA.test(tila.kuvanOsoite) && tila.nauhoja === 1,
+  JSON.stringify({ otsikko: tila.otsikko, osoite: tila.kuvanOsoite }));
 await suljeKohde();
 
-/* --- 4: kohde ilman ihmettä ei saa nappia eikä nauhaa --- */
+/* --- 4: kohde ilman ihmettä ei saa nauhaa eikä nykykuvaa --- */
 
 vaadi('Lykavittós aukesi', await avaaKohde('Lykavittós'));
 tila = await juttu();
-vaadi('ihmeettömässä jutussa ei ole nappia eikä nauhaa',
-  tila.nappeja === 0 && tila.nauhoja === 0,
-  JSON.stringify({ nappeja: tila.nappeja, nauhoja: tila.nauhoja }));
+vaadi('ihmeettömässä jutussa ei ole nauhaa eikä nykykuvaa',
+  tila.nappeja === 0 && tila.nauhoja === 0 && tila.nykykuvia === 0,
+  JSON.stringify({ nappeja: tila.nappeja, nauhoja: tila.nauhoja, nykykuvia: tila.nykykuvia }));
 await suljeKohde();
 
 /* --- 4a: IHMEEN TÄHTI KOHDEKARTALLA (omistajan tilaus 2.9.2026) ---
@@ -338,8 +344,9 @@ vaadi('kadonneen kohteen nauha on kuvan päällä eikä nappaa napautuksia',
   JSON.stringify({ koti: tila.nauhanKoti, osoitin: tila.osoitin }));
 vaadi('havainnekuvan kuvateksti kantaa oman lähderivinsä',
   /Matkakirjan havainnekuva/.test(tila.lahde), tila.lahde);
-vaadi('kadonneella kohteella ei ole "Koe ihme" -nappia: kuva on jo esillä',
-  tila.nappeja === 0, `${tila.nappeja} nappia`);
+vaadi('kadonneella kohteella ei ole nappia eikä nykykuvaa: kuva on jo esillä',
+  tila.nappeja === 0 && tila.nykykuvia === 0,
+  JSON.stringify({ nappeja: tila.nappeja, nykykuvia: tila.nykykuvia }));
 
 // Nauha seuraa KUVAA eikä kehystä: sarjan toisessa kuvassa sitä ei ole.
 await sivu.evaluate(() => document

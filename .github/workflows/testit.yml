@@ -54,6 +54,13 @@ concurrency:
 permissions:
   contents: read
 
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527): Mac-ajurin
+# raskaat työt ajetaan nice -n 15:llä, jotta omistajan omat työt (käyttäjä
+# Sami Reivinen) menevät edelle; nice toimii käyttäjien yli. Ubuntulla harmiton.
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
+
 jobs:
   # Valitsee ajokoneen. Erillinen jobi, koska `runs-on` ei voi lukea
   # `env`-kontekstia eikä job-tason `if` `env`-muuttujia — ainoa tapa
@@ -91,7 +98,9 @@ jobs:
     needs: reitti
     runs-on: ${{ fromJSON(needs.reitti.outputs.ajaja) }}
     # Ajoaikakatto. HUOM: tämä EI kata jonotusta (ks. tiedoston alku).
-    timeout-minutes: 15
+    # 28.9.2026: 15 → 20 min — sarja kestää ubuntulla nyt 11–14 min, ja
+    # #3517 kaatui 15 min:n katkaisuun ilman omaa vikaa.
+    timeout-minutes: 20
     steps:
       - name: Reitti
         run: 'echo "Ajokone: ${{ needs.reitti.outputs.nimi }}"'

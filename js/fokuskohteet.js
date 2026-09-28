@@ -4934,12 +4934,10 @@ function kysyKohteesta(ui, kysymys) {
  *     Useimmilla kadonneilla se on kortin AINOA kuva — kohteesta ei ole
  *     valokuvaa, koska kohdetta ei ole.
  *   • `kadonnut: false` — kohde on yhä pystyssä. Kartalla on kohteen
- *     tavallinen merkki, ja "Koe ihme" -nappi tulee kortissa
- *     ENSIMMÄISEN KUVAN ALLE (omistajan tilaus 27.8.2026 ilta, Akropolis
- *     iPhonella): pelaaja näkee ensin sen, mitä paikalla NYT on, ja
- *     nappi seisoo juuri siinä kohdassa, jossa vanha rekonstruktiokuva
- *     ennen oli. Ihmekuva ei ole kuvalistassa: kaksi rinnakkaista
- *     näkymää samasta paikasta hukuttaisi yllätyksen.
+ *     tavallinen merkki. Ihmekuva on 27.9.2026 alkaen (omistaja klo
+ *     23.4x, Olympia-kortti: "Koe ihme" -nappi pois) kortin ENSIMMÄINEN
+ *     ja iso kuva kuten kadonneilla, ja valokuva siitä, mitä paikalla NYT
+ *     on, kelluu pienenä tekstin kyljessä (kohteenNykykuva).
  *
  * NAUHAN PIIRTÄÄ PELI, EI KUVATIEDOSTO (Raamattu: *"peli piirtää nauhan
  * kuvan päälle, sitä ei polteta kuvatiedostoon"*). Nauha on DIAGONAALINEN
@@ -4960,9 +4958,8 @@ function kysyKohteesta(ui, kysymys) {
  * KOLMAS IKKUNA 27.8.2026 ILTA (omistaja, kaappaus nähtävyysikkunasta:
  * *"täällä pitäisi olla myöskin se ihme nähtävillä"*). Kaupunkikartan
  * nähtävyysjuttu (js/nahtavyydet.js) näyttää samat kaksi esitystapaa
- * samoilla säännöillä, ja siksi nauha, nappi ja ihmekuvan haku ovat
- * tästä lohkosta VIENTILISTALLA (matkakirjanIhme, piirraIhmenauha,
- * piirraIhmenappi). Ihmettä ei kopioida nähtävyysaineistoon: se pysyy
+ * samoilla säännöillä, ja siksi nauha ja ihmekuvan haku ovat tästä
+ * lohkosta VIENTILISTALLA (matkakirjanIhme, piirraIhmenauha). Ihmettä ei kopioida nähtävyysaineistoon: se pysyy
  * fokuskohteen kenttänä, ja juttu hakee sen nimellä.
  * =================================================================== */
 
@@ -5017,6 +5014,12 @@ function kohteenIhmekuva(kohde) {
   return {
     osoite: ihme.osoite,
     selite: ihme.selite ?? '',
+    /*
+     * LYHYT KUVATEKSTI kortin ja nähtävyysjutun kuvan alle (Natiivi-UI:n
+     * löydös 28.9.2026: web näytti koko pitkän selitteen, natiivi lyhyen).
+     * Pitkä selite jää suurennokseen (js/kuvatekstit.js).
+     */
+    ...(ihme.lyhyt ? { lyhyt: ihme.lyhyt } : {}),
     lahde: ihme.lahde ?? '',
     /*
      * FAKTALÄHTEEN OSOITE kulkee kuvan mukana samalla nimellä kuin
@@ -5089,53 +5092,13 @@ export function piirraIhmenauha(isanta, teksti) {
   return nauha;
 }
 
-/**
- * "Koe ihme" -nappi tähtineen. Nappi kantaa saman tähden kuin
- * kadonneiden kohteiden karttamerkki: sama lupaus, sama merkki.
- *
- * AVAUS TULEE KUTSUJALTA (jako 27.8.2026 ilta, kun ihme vietiin myös
- * nähtävyysikkunaan): kartan tietoruudussa suurennos on kartan päällä
- * oleva `.fokuskohde-zoom`, mutta nähtävyysikkuna on modaali <dialog>
- * eli selaimen ylimmässä kerroksessa — bodyyn liitetty suurennos jäisi
- * sen TAAKSE (js/ui.js suurennosIsanta). Nappi on siis sama komponentti
- * molemmissa, mutta katselin on se, joka kussakin ikkunassa toimii.
- *
- * @param {Element} sisalto mihin nappi liitetään
- * @param {string} teksti napin teksti
- * @param {(nappi: Element) => void} avaa mitä napautus tekee; saa napin
- *   itsensä, jotta suurennos voi kasvaa juuri siitä kohdasta ruutua
- * @returns {Element} nappi, jotta kutsuja voi siirtää sen paikalleen
+/*
+ * "KOE IHME" -NAPPI POISTETTU (omistaja 27.9.2026 klo 23.4x, Olympia-kortti).
+ * Yhä olemassa olevan kohteen ihmekuva on nyt kortin ENSIMMÄINEN ja iso
+ * kuva kuten kadonneilla (kohteenKuvalista), ja valokuva siitä, mitä
+ * paikalla NYT on, kulkee pienenä tekstin kyljessä (kohteenNykykuva,
+ * piirraKohdeTeksti). Sama nähtävyysikkunassa (js/nahtavyydet.js).
  */
-export function piirraIhmenappi(sisalto, teksti, avaa) {
-  lataaKohdeTyyli();
-  const nappi = html('button', 'fokuskohde-ihmenappi');
-  nappi.type = 'button';
-  const tahti = el('svg', {
-    class: 'fokuskohde-ihmetahti',
-    viewBox: '-12 -12 24 24',
-    'aria-hidden': 'true',
-  }, nappi);
-  piirraNostosymboli(el('g', {}, tahti), 'ihme');
-  nappi.appendChild(document.createTextNode(teksti));
-  nappi.addEventListener('click', (tapahtuma) => {
-    tapahtuma.stopPropagation();
-    avaa(nappi);
-  });
-  sisalto.appendChild(nappi);
-  return nappi;
-}
-
-/**
- * Kortin oma "Koe ihme" -nappi, jos kohde on YHÄ OLEMASSA ja sillä on
- * ihmekuva. Paikan valitsee kutsuja (piirraKohdeKuvat: ensimmäisen
- * kuvan alle).
- */
-function piirraKortinIhmenappi(ui, sisalto, kohde) {
-  const kuva = kohteenIhmekuva(kohde);
-  if (!kuva || kohde.ihme.kadonnut) return;
-  piirraIhmenappi(sisalto, kohde.ihme.nappi ?? 'Koe ihme',
-    (nappi) => avaaKohdeSuurennos(ui, kuva, () => nappi));
-}
 
 /* ---------- IHME MYÖS NÄHTÄVYYSIKKUNAAN (omistaja 27.8.2026 ilta) ----
  *
@@ -5191,9 +5154,9 @@ function ihmehaku() {
  * Nimetyn paikan Matkakirjan ihme, tai null jos sillä ei ole sellaista.
  *
  * Palautettu olio on kuvalistan kanssa samaa muotoa (`osoite`, `selite`,
- * `lahde`, `nauha`) ja kertoo lisäksi, kumpi esitystapa kohteelle
- * kuuluu: `kadonnut` (kuva on kuvasarjan ensimmäinen) vai nappi
- * (`nappi`-teksti, kuva odottaa suurennoksessa).
+ * `lahde`, `nauha`) ja kertoo lisäksi `kadonnut`. Esitys on 27.9.2026
+ * alkaen sama molemmille: ihmekuva on kuvasarjan ensimmäinen; yhä
+ * olemassa olevan paikan valokuva kulkee pienenä tekstin kyljessä.
  */
 export function matkakirjanIhme(nimi) {
   const haettu = KOHDE_IHMEEN_NIMET[String(nimi ?? '').trim()] ?? nimi;
@@ -5203,7 +5166,6 @@ export function matkakirjanIhme(nimi) {
   return {
     ...kuva,
     kadonnut: Boolean(kohde.ihme.kadonnut),
-    nappi: kohde.ihme.nappi ?? 'Koe ihme',
   };
 }
 
@@ -5216,16 +5178,33 @@ export function matkakirjanIhme(nimi) {
  */
 export function kohteenKuvalista(kohde) {
   const nahty = new Set();
-  // Kadonneen ihmeen kuva on kortin ENSIMMÄINEN kuva (ks. lohkon alku):
-  // kortti avaa suoraan sen, mitä paikalla ei enää ole.
-  const ihme = kohde?.ihme?.kadonnut ? kohteenIhmekuva(kohde) : null;
-  return [ihme, kohde?.kuva, ...(Array.isArray(kohde?.kuvat) ? kohde.kuvat : [])]
+  /*
+   * IHMEKUVA ON KORTIN ENSIMMÄINEN KUVA — kadonneella ja 27.9.2026 alkaen
+   * myös yhä olemassa olevalla kohteella (omistaja klo 23.4x: "Koe ihme"
+   * -nappi pois, ihme ensimmäisenä ja isona). Olemassa olevan paikan
+   * valokuva (`kuva`) ei ole sarjassa: se kulkee pienenä tekstin
+   * kyljessä (kohteenNykykuva).
+   */
+  const ihme = kohteenIhmekuva(kohde);
+  const nykykuva = kohteenNykykuva(kohde);
+  return [ihme, nykykuva ? null : kohde?.kuva, ...(Array.isArray(kohde?.kuvat) ? kohde.kuvat : [])]
     .filter((kuva) => {
       const tunnus = kuva?.tiedosto ?? kuva?.osoite;
       if (!tunnus || nahty.has(tunnus)) return false;
       nahty.add(tunnus);
       return true;
     });
+}
+
+/**
+ * Yhä olemassa olevan ihmekohteen valokuva siitä, mitä paikalla NYT on:
+ * pieni kuva tekstin kyljessä (float, napautus → suurennos). Muilla
+ * kohteilla null — niiden `kuva` on kuvasarjassa kuten ennen.
+ */
+export function kohteenNykykuva(kohde) {
+  if (!kohteenIhmekuva(kohde) || kohde.ihme.kadonnut) return null;
+  const kuva = kohde?.kuva;
+  return kuva?.tiedosto || kuva?.osoite ? kuva : null;
 }
 
 /**
@@ -5238,22 +5217,13 @@ export function kohteenKuvalista(kohde) {
 function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
   const lista = kohteenKuvalista(kohde);
   /*
-   * "KOE IHME" ENSIMMÄISEN KUVAN ALLE eikä otsikon alle (omistajan
-   * tilaus 27.8.2026 ilta). Nappi asuu siinä kohdassa, jossa poistettu
-   * loistoaikarekonstruktio ennen oli: pelaaja näkee ensin valokuvan
-   * kohteen NYKYISESTÄ kunnosta, ja nappi lupaa sen viereen sen, miltä
-   * paikka näyttäisi ehjänä. Kuvaton kohde saa napin silti — muuten
-   * lupaus katoaisi kokonaan, jos kuva jäisi lataamatta.
-   */
-  /*
    * USEAMPI KUVA ON KARUSELLI, EI PINO (omistaja 20.9.2026, kaappaus
    * nosto-kuvat-paallekkain-v1980.webp: Avignonin paavinpalatsin `kuva`
    * ja `kuvat` latoutuivat kahdeksi kuvaksi allekkain). Sama 1/2-
    * karuselli kuin täky- ja skandaalinostolla (js/kuvasarja.js), kohteen
    * omalla lataajalla ja suurennoksella; ihmenauha kulkee kuvan mukana
-   * (`koristele`). "Koe ihme" -nappi tulee sarjan alle, kuten se tuli
-   * ennen ensimmäisen kuvan alle. Peruttu kuvaesittely (valmisKuva
-   * null) vie vain pääkuvan: loput ladotaan sarjana kuten ennenkin.
+   * (`koristele`). Peruttu kuvaesittely (valmisKuva null) vie vain
+   * pääkuvan: loput ladotaan sarjana kuten ennenkin.
    */
   const kuvat = valmisKuva === null ? lista.slice(1) : lista;
   if (kuvat.length >= 2) {
@@ -5276,7 +5246,6 @@ function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
       kuvatekstiKaare: 'fokuskohde-kuvateksti',
       nappiLuokka: 'fokuskohde-kuvanappi',
     });
-    piirraKortinIhmenappi(ui, sisalto, kohde);
     return;
   }
   lista.forEach((kuva, i) => {
@@ -5285,9 +5254,7 @@ function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
     } else {
       piirraKohdeKuva(ui, sisalto, kuva);
     }
-    if (i === 0) piirraKortinIhmenappi(ui, sisalto, kohde);
   });
-  if (!lista.length) piirraKortinIhmenappi(ui, sisalto, kohde);
 }
 
 /*
@@ -5446,6 +5413,17 @@ function piirraKohdeTeksti(ui, sisalto, kohde) {
       .map(puraKorostus).filter(Boolean),
   );
   const teksti = html('div', 'fokuskohde-teksti');
+  /*
+   * NYKYKUVA TEKSTIN KYLKEEN (omistaja 27.9.2026 klo 23.4x): yhä olemassa
+   * olevan ihmekohteen valokuva kelluu pienenä ensimmäisen kappaleen
+   * oikealla puolella kuvateksteineen, ja napautus avaa sen suurena.
+   * Kehys ennen kappaleita, jotta teksti kiertää sen.
+   */
+  const nykykuva = kohteenNykykuva(kohde);
+  if (nykykuva) {
+    piirraKohdeKuva(ui, teksti, nykykuva);
+    teksti.lastElementChild?.classList.add('fokuskohde-nykykuva');
+  }
   for (const kappale of jaaKappaleiksi(kohde.teksti)) {
     teksti.appendChild(piirraKohdeKappale(ui, kohde, kappale, jaljella));
   }
@@ -6433,8 +6411,7 @@ function piirraKohdeYlarivi(kohde) {
  * täsmälleen entiset ja entisessä järjestyksessä.
  */
 function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
-  // Kuvat ja niiden mukana "Koe ihme" -nappi: nappi piirtyy kortin
-  // ENSIMMÄISEN kuvan alle (piirraKohdeKuvat), ei otsikon alle.
+  // Kuvat (ihmekuva ensimmäisenä, ks. kohteenKuvalista); nykykuva kelluu tekstissä.
   piirraKohdeKuvat(ui, sailio, kohde, valmisKuva);
   piirraKohdeTeksti(ui, sailio, kohde);
   kohdeVisaPiirtaja?.(ui, sailio, kohde);

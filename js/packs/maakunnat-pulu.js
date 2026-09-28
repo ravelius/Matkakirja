@@ -1636,4 +1636,266 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mitä Vrancean vuoristossa Lepșan alueella voi tehdä nykyään?", a: "Lepșa on Vrancean vuoristossa sijaitseva pieni lomakohde, jonne mennään vaeltamaan, hiihtämään ja nauttimaan raikkaasta vuoristoilmasta kaukana kaupungeista." },
     ],
   },
+  UKR: {
+    Cherkasy: [
+  { q: "Miksi Umaniin kerääntyy syksyisin kymmeniätuhansia pyhiinvaeltajia?", a: "Kaupungissa on haudattu rabbi Nachman Breslovilainen, hasidismin perustajan Baal Shem Tovin pojanpojanpoika, joka kuoli Umanissa 1810. Hänen seuraajansa uskovat, että haudalla rukoileminen juuri juutalaisena uutena vuotena tuo hengellistä puhdistumista, ja perinne on jatkunut sodankin aikana kiertoteitse." },
+  { q: "Mistä nimi Cherkasy juontaa juurensa?", a: "Nimi liittyy 1400-luvulla syntyneisiin Keski-Dneprin kasakkayhteisöihin, joita kutsuttiin tšerkasseiksi – termin alkuperästä on useita teorioita, yleisimmin sen arvellaan tulevan turkkilaisperäisestä kansannimestä. Cherkasyn ja Kanivin linnoituksista tuli varhaisten kasakkojen keskuksia." },
+  { q: "Miksi Sofijivkan puisto rakennettiin Umaniin?", a: "Puolalainen kreivi Stanisław Potocki rakennutti sen 1796 lahjaksi vaimolleen Zofialle, jonka mukaan puisto on nimetty. Nykyään se on yksi Ukrainan suosituimmista dendrologisista puistoista vesiputouksineen ja keinotekoisine luolineen." },
+],
+    Chernihiv: [
+  { q: "Miksi Chernihiviä pidetään yhtenä Ukrainan vanhimmista kaupungeista?", a: "Kaupungista on kirjallinen maininta jo vuodelta 907, ja se oli Kiovan Rusin aikana toiseksi tärkein kaupunki heti Kiovan jälkeen. Tuolta ajalta on säilynyt poikkeuksellisen paljon kivikirkkoja, muun muassa 1030-luvulla aloitettu Kirkastumisen katedraali." },
+  { q: "Mikä on Antoniuksen luola?", a: "Munkki Antonius kaivoi luolan 1000-luvulla, ja se laajentui vuosisatojen kuluessa kokonaiseksi maanalaiseksi luostarikompleksiksi käytävineen, kappeleineen ja hautoineen. Osa tutkijoista pitää sitä jopa vanhempana kuin Kiovan luostariluolia." },
+  { q: "Mitä Detynetsin mäellä on nähtävissä nykyään?", a: "Entinen linnanmäki on nykyään puisto, jonka alueella seisoo useita Kiovan Rusin ajan kivirakennuksia sekä myöhempiä pyhäkköjä. Se on kaupungin historiallinen ydin ja suosittu kävelykohde." },
+],
+    Chernivtsi: [
+  { q: "Miksi Tšernivtsiä kutsuttiin joskus 'pikku-Wieniksi'?", a: "Kaupunki oli Itävallan keisarikunnan Bukovinan pääkaupunki 1774–1918, ja sen keskusta rakennettiin keisarikunnan tyyliin. Ennen toista maailmansotaa siellä eli tiiviisti rinnakkain ukrainalaisia, romanialaisia, juutalaisia, saksalaisia ja puolalaisia." },
+  { q: "Kuka oli Paul Celan?", a: "Hän syntyi Tšernivtsissä 1920 ja kirjoitti runonsa saksaksi, vaikka selvisi hengissä natsimiehityksestä juutalaisena, kun hänen vanhempansa eivät selvinneet. Hänestä tuli yksi 1900-luvun merkittävimmistä saksankielisistä runoilijoista, ja hän kuoli Pariisissa 1970." },
+  { q: "Miksi Tšernivtsissä pidettiin tärkeä jiddišin kielen kokous 1908?", a: "Kaupunki oli ennen sotia yksi Itä-Euroopan merkittävistä juutalaisen kulttuurin keskuksista, ja lähes kolmasosa asukkaista oli juutalaisia. Vuoden 1908 konferenssissa keskusteltiin jiddišin asemasta juutalaisten kansallisena kielenä." },
+],
+    "Dnipropetrovs'k": [
+  { q: "Miksi kaupungin nimi vaihtui Dnipropetrovskista Dniproksi?", a: "Ukrainan 2016 dekommunisointilaki vaati poistamaan kaduilta ja kaupunkien nimistä neuvostojohtajien muiston. Dnipropetrovsk oli nimetty bolševikkijohtaja Grigori Petrovskin mukaan, joten kaupunki lyhennettiin yksinkertaisesti joen nimeksi Dnipro." },
+  { q: "Mikä oli Pivdenmaš eli Juzhmaš?", a: "Tehdas perustettiin 1944 ja siirtyi 1951 valmistamaan ballistisia ohjuksia, muun muassa mahtavaa R-36-ohjusta. Neuvostoaikana kaupunki oli tehtaan vuoksi ulkomaalaisilta suljettu alue, ja nykyään tehdas on osittain siviilikäytössä." },
+  { q: "Mikä on Menora-keskus?", a: "Vuonna 2012 avattu kompleksi koostuu seitsemästä eri korkuisesta tornista, jotka symboloivat juutalaista seitsenhaaraista kynttilänjalkaa. Se on maailman suurin juutalaisyhteisön keskus, ja sen rahoittivat paikalliset juutalaiset liikemiehet." },
+],
+    "Donets'k": [
+  { q: "Kuka oli John Hughes ja miksi Donetskia kutsuttiin ennen Juzovkaksi?", a: "Walesilainen teollisuusmies John Hughes perusti kaupungin paikalle rautatehtaan ja hiilikaivoksia 1869, ja hän toi mukanaan satoja työläisiä Etelä-Walesista. Kaupunki nimettiin hänen mukaansa Juzovkaksi (venäjän ääntämys hänen nimestään), ennen kuin se sai myöhemmin nimet Stalino ja lopulta Donetsk." },
+  { q: "Mikä on Slovjanskin suolajärvien tarina?", a: "Slovjanskin järvien rannalla on parannettu ihmisiä mutakylvyillä jo 1830-luvulta lähtien, ja seutu oli aikanaan koko imperiumin tunnettu kylpyläkaupunki. Alueella louhittiin aiemmin myös suolaa, mutta tuotanto lopetettiin jo 1700-luvulla kannattamattomana." },
+  { q: "Miksi Svjatohirskin luostari on rakennettu juuri liitukallion päälle?", a: "Luostari on kaiverrettu Siverskyi Donetsin jyrkkiin liitukallioihin, mikä tarjosi munkeille sekä luonnollisen suojan että eristäytyneen paikan rukoukselle. Perinne muistuttaa Kiovan luostariluolia, ja luostarista on kirjallinen maininta jo vuodelta 1627." },
+],
+    "Ivano-Frankivs'k": [
+  { q: "Mikä on Bukovel ja miksi se on niin suosittu?", a: "Bukovel on Ukrainan ja koko Itä-Euroopan suurimpia hiihtokeskuksia, ja se avattiin vuonna 2000 Karpaattien rinteille lähelle Polianytsjan kylää. Rinteitä on yhteensä noin 68 kilometriä, ja keskusta on kuvattu maailman nopeimmin kasvaneeksi hiihtokohteeksi." },
+  { q: "Keitä hutsuulit ovat?", a: "Hutsuulit ovat Karpaattien vuoristossa asuva kansanryhmä, joka tunnetaan värikkäistä kansanpuvuistaan, puuveistostaan ja paimentolaisperinteestään. Heidän musiikkinsa ja käsityönsä elävät yhä alueen kylissä." },
+  { q: "Miksi seudun puukirkot ovat Unescon suojelemia?", a: "Yhteensä 16 Karpaattien puukirkkoa Ukrainassa ja Puolassa otettiin maailmanperintöluetteloon 2013 ainutlaatuisen paikallisen puurakennusperinteen vuoksi. Osa niistä on hutsuulien, osa boikkien rakentamia, ja perinteisesti ne pystytettiin ilman nauloja." },
+],
+    Kharkiv: [
+  { q: "Miksi Harkovan yliopisto on niin merkittävä?", a: "Se perustettiin 1804 kasvattaja V. N. Karazinin aloitteesta ja on Ukrainan vanhin yhä toimiva yliopisto. Sen yhteydessä toimii myös maan vanhin kasvitieteellinen puutarha vuodelta 1804 ja yksi maailman vanhimmista yliopistomuseoista vuodelta 1807." },
+  { q: "Miksi Harkovasta tuli neuvosto-Ukrainan pääkaupunki eikä Kiovasta?", a: "Bolševikit eivät onnistuneet saamaan jalansijaa Kiovassa vallankumouksen jälkimainingeissa, joten teollinen ja työväenluokkainen Harkova valittiin pääkaupungiksi 1919. Pääkaupunki siirrettiin takaisin Kiovaan vasta 1934." },
+  { q: "Mikä on Deržprom?", a: "Deržprom on konstruktivistinen hallintorakennuskompleksi, joka valmistui 1928 ja jota pidetään ensimmäisenä neuvostoliittolaisena pilvenpiirtäjänä. Se seisoo yhä Vapaudenaukiolla, joka on yksi Euroopan suurimmista kaupunkiaukioista." },
+],
+    Kherson: [
+  { q: "Miksi Herson perustettiin juuri tälle paikalle?", a: "Katariina Suuri antoi 1778 käskyn perustaa Herson uuden Mustanmeren laivaston tukikohdaksi ja telakaksi. Ensimmäinen suuri sotalaiva, 66-tykkinen linjalaiva, laskettiin telakalta vesille jo 1783." },
+  { q: "Miksi Hersonin vesimeloni on niin kuuluisa?", a: "Alueen hiekkainen maaperä, runsas aurinko ja Dneprin alajuoksun lämmin ilmasto sopivat vesimelonin viljelyyn erinomaisesti. Hersonin alueesta on tullut Ukrainan tärkein vesimelonintuotantoalue, ja nimestä on tullut käytännössä oma laatumerkkinsä." },
+  { q: "Miten Euroopan toiseksi suurin aavikko syntyi Ukrainaan?", a: "Oleškin hiekat ovat jääkauden aikaisia hiekkakerrostumia, jotka pysyivät kasvillisuuden peittäminä vuosisatoja. Vasta 1800-luvun liiallinen laiduntaminen ja metsien hakkuu paljastivat hiekan tuulen vietäväksi, ja alueesta muodostui laaja dyynialue, joka suojeltiin kansallispuistoksi 2010." },
+],
+    "Khmel'nyts'kyy": [
+  { q: "Miksi Kamjanets-Podilskyissa järjestetään ilmapallofestivaali?", a: "Kaupungissa nähtiin Itä-Euroopan ensimmäinen kuumailmapallolento jo 1784. Perinnettä juhlitaan nykyään kahdesti vuodessa, touko- ja lokakuussa, kun parikymmentä ilmapalloa kohoaa Smotrytšin kanjonin ja linnan yläpuolelle." },
+  { q: "Mitä Bakotan lahdelle tapahtui?", a: "Keskiaikainen Bakotan kylä, josta on maininta jo vuodelta 1024, jäi tekoaltaan alle vuonna 1981, kun Dnestrille rakennettiin vesivoimala. Ainoa säilynyt jäänne on kalliolle 1000-luvulla kaiverrettu luolaluostari, joka kohoaa yhä lahden yllä." },
+  { q: "Kuka oli Bohdan Hmelnytski?", a: "Hän oli kasakkahetmani, joka johti 1648 suuren kapinan Puolan-Liettuan valtakuntaa vastaan ja perusti kasakkavaltion. Häntä pidetään yhtenä Ukrainan valtiollisuuden perustajahahmoista, ja hänen mukaansa maakunnan keskuskaupunki nimettiin uudelleen 1954." },
+],
+    Kiev: [
+  { q: "Missä Tšornobyl sijaitsee ja miksi se yhä kiinnostaa matkailijoita?", a: "Tšornobyl sijaitsee noin 90 kilometriä Kiovasta pohjoiseen, Kiovan maakunnan alueella lähellä Valko-Venäjän rajaa. Vuoden 1986 ydinonnettomuuden jälkeen alue eristettiin, ja siitä tuli ennen täysimittaista sotaa yksi maailman tunnetuimmista niin sanotun pimeän matkailun kohteista." },
+  { q: "Mikä on Perejaslavin liitto?", a: "Vuonna 1654 kasakkahetmani Bohdan Hmelnytski solmi Perejaslavissa liiton Venäjän tsaarin kanssa, jolla kasakkavaltio asetettiin Venäjän suojelukseen. Sopimuksen tulkinnasta ja seurauksista kiistellään historiantutkimuksessa yhä." },
+  { q: "Mikä on Kiovan meri?", a: "Kiovan tekoallas rakennettiin Dneprille 1960-luvulla pääkaupungista pohjoiseen, ja se on niin laaja, että sitä kutsutaan leikkisästi Kiovan mereksi. Se on suosittu veneily- ja kalastuskohde kiovalaisille." },
+],
+    'Kiev City': [
+  { q: "Miksi kastanja on Kiovan symboli?", a: "Puulaji tuotiin kaupunkiin 1842 keisari Nikolai I:n vierailun kunniaksi, ja se istutettiin ensin nykyiselle Ševtšenkon bulevardille. Kastanjat levisivät sittemmin kaikkialle kaupunkiin, ja niiden valkoinen kukinta toukokuussa on yhä yksi Kiovan tunnetuimmista näyistä." },
+  { q: "Mikä on Pyhän Sofian katedraali?", a: "Se rakennettiin 1000-luvulla ruhtinas Jaroslav Viisaan aikana Konstantinopolin Hagia Sofian innoittamana. Sen alkuperäiset mosaiikit ja freskot ovat säilyneet poikkeuksellisen hyvin, ja se on ollut Unescon maailmanperintöä vuodesta 1990." },
+  { q: "Mitä Maidanilla on tapahtunut 2000-luvulla?", a: "Aukio oli vuoden 2004 oranssin vallankumouksen ja vuosien 2013–2014 Euromaidan-mielenosoitusten näyttämö, jotka molemmat muuttivat Ukrainan politiikan suuntaa. Siitä on tullut maan tärkein paikka suurille kansalaisliikkeille." },
+],
+    Kirovohrad: [
+  { q: "Miksi kaupunki on nimeltään Kropyvnytskyi mutta maakunta Kirovohrad?", a: "Kaupunki nimettiin 2016 dekommunisointilain nojalla uudelleen näytelmäkirjailija Marko Kropyvnytskyin mukaan, kun neuvostojohtaja Sergei Kirovin nimi haluttiin pois kaduilta. Maakunta kantaa yhä vanhaa Kirovohrad-nimeä, koska sen virallinen muuttaminen vaatisi oman erillisen parlamentin päätöksensä." },
+  { q: "Miksi lokakuu 1882 on tärkeä päivä ukrainalaiselle teatterille?", a: "Marko Kropyvnytskyin johtama ryhmä esitti tuolloin Jelisavetgradissa ensimmäisen ammattimaisen ukrainankielisen näytelmän. Tapahtumaa pidetään yhä koko ukrainalaisen ammattiteatterin syntymäpäivänä, ja ryhmä yhdistyi pian toisen näytelmäkirjailijan, Mihailo Staritskyin, ryhmän kanssa." },
+  { q: "Mikä oli kaupungin alkuperäinen nimi ja tehtävä?", a: "Kaupunki perustettiin 1754 nimellä Jelisavetgrad linnoituskaupungiksi suojaamaan aroa tataarien hyökkäyksiltä. Siitä kasvoi vuosisatojen myötä alueen kaupallinen ja kulttuurinen keskus." },
+],
+    "L'viv": [
+  { q: "Miksi Lviv poikkeaa arkkitehtuuriltaan muusta Ukrainasta?", a: "Kaupunki kuului pitkään Puolalle ja vuodesta 1772 Itävalta-Unkarille osana Galitsiaa aina vuoteen 1918 asti, eikä koskaan Venäjän keisarikunnalle. Siksi sen arkkitehtuuri ja kaupunkikuva muistuttavat enemmän Keski-Euroopan kuin Itä-Ukrainan kaupunkeja." },
+  { q: "Mistä legenda Lvivin ja Wienin kahvikulttuurin yhteydestä kertoo?", a: "Legendan mukaan lvivilaissyntyinen Jerzy Franciszek Kulczycki avasi Wienin ensimmäisen kahvilan 1683 käyttäen kahvipapuja, jotka piiritystä paenneet ottomaanit olivat jättäneet jälkeensä. Tarinan historiallisesta paikkansapitävyydestä kiistellään yhä, mutta se elää yhä osana molempien kaupunkien kahvikulttuuria." },
+  { q: "Miksi Lvivin ooppera on rakennettu joen päälle?", a: "Rakennus valmistui 1900 paikalle, jossa aiemmin virtasi Poltva-joki katujen alla. Arkkitehti Zygmunt Gorgolewski ohjasi joen kulkemaan maan alla rakennuksen perustusten läpi ja käytti tuolloin uutuutena teräsbetoniperustaa." },
+],
+    "Luhans'k": [
+  { q: "Miksi Striltsivskyin arolla suojellaan juuri aromurmelia?", a: "Aromurmeli eli bobak oli aikoinaan yleinen koko eteläisellä arovyöhykkeellä, mutta peltojen raivaus hävitti sen elinympäristön lähes kokonaan. Striltsivskyin suojelualue perustettiin 1900-luvulla juuri viimeisen jäljellä olevan aropalan ja sen murmelikannan turvaksi, ja se on yhä yksi harvoista paikoista, jossa koskematon aro on säilynyt." },
+  { q: "Mikä Derkulin hevostila on ja miksi se on tunnettu?", a: "Derkulin hevostila lähellä Danylivkan kylää perustettiin 1765 keisarinna Katariina II:n käskystä kasvattamaan ratsuja armeijalle. Tilalla jalostettiin 1900-luvulla myös oma rotu, ukrainalainen ratsuhevonen, ja tila toimii yhä hevoskasvattamona, vaikka eläinten määrä on vuosien varrella pienentynyt huomattavasti." },
+  { q: "Mistä nimi Donbas oikein tulee?", a: "Donbas on lyhenne sanoista Donetsin kivihiiliallas, ja se viittaa maaperän laajoihin hiilivarantoihin. Alue teollistui voimakkaasti jo 1800-luvun jälkipuoliskolla, kun kaivoksia ja tehtaita nousi sekä nykyiselle Donetskin että Luhanskin alueelle." },
+],
+    Mykolayiv: [
+  { q: "Miksi kaupunki sai nimekseen Mykolajiv eli Nikolajev?", a: "Ruhtinas Potjomkin nimesi uuden telakkakaupungin Pyhän Nikolauksen mukaan muistoksi siitä, että Venäjän joukot valtasivat Otšakivin linnoituksen juuri pyhimyksen nimipäivänä joulukuussa 1788. Nikolaus on myös merenkulkijoiden suojeluspyhimys, mikä sopi hyvin uudelle laivanrakennuskaupungille." },
+  { q: "Mitä Mykolajivin telakoilla on rakennettu vuosien varrella?", a: "Telakat rakensivat 1700-1800-luvuilla purjelaivoja ja myöhemmin höyrylaivoja Venäjän Mustanmeren laivastolle, ja Neuvostoliiton aikana samoilla telakoilla valmistui muun muassa lentotukialuksia. Perinne teki Mykolajivista yhden koko imperiumin ja myöhemmin Neuvostoliiton tärkeimmistä laivanrakennuskeskuksista." },
+  { q: "Mikä Olbia oli ja mitä sille tapahtui?", a: "Olbia oli antiikin kreikkalaisten Miletoksesta perustama kauppasiirtokunta 600-luvulla eaa. Etelä-Bugin suistoon, ja se kävi kauppaa viljalla ja käsitöillä ympäri Mustaamerta. Kaupunki hiipui vähitellen ja autioitui viimeistään 300-luvulla, ja sen rauniot ovat nykyään arkeologinen kohde Parutynen kylän lähellä." },
+],
+    Odessa: [
+  { q: "Kuinka pitkät Odessan katakombit oikein ovat?", a: "Katakombeja on kartoitettu noin 2500 kilometrin verran, mikä tekee niistä maailman pisimmän kaupungin alla kulkevan käytäväverkoston – viisi kertaa pidemmän kuin Pariisin katakombit. Suurin osa käytävistä syntyi, kun kaupungin rakennuskivi eli kalkkikivi louhittiin suoraan maan alta 1800-luvulla." },
+  { q: "Miksi Odessaa kutsutaan huumorin pääkaupungiksi?", a: "Kaupungilla on pitkä perinne terävästä, itseironisesta huumorista, joka syntyi sen monikansallisesta ja vilkkaasta satamakaupunkikulttuurista. Perinnettä juhlitaan joka vuosi huhtikuun alussa Humoryna-karnevaalilla, jolloin kaduilla kulkee klovneja ja koomikkoja." },
+  { q: "Mikä tekee Odessan oopperatalosta erityisen?", a: "Talo valmistui 1887 wieniläisten arkkitehtien suunnitelmien mukaan wieniläisbarokin tyyliin, ja se oli aikanaan ensimmäinen teatteri koko alueella, jossa oli sähkövalot ja keskuslämmitys. Se on säilynyt yhtenä Itä-Euroopan komeimmista teattereista." },
+],
+    Poltava: [
+  { q: "Mikä on Eneida ja miksi se on niin tärkeä?", a: "Poltavassa syntynyt Ivan Kotljarevskyi julkaisi 1798 Eneidan, ensimmäisen kokonaan ukrainankielisellä puhekielellä kirjoitetun kaunokirjallisen teoksen. Hänen poltavalainen murteensa muovasi pitkälti nykyisen ukrainan kirjakielen perustaa, minkä vuoksi häntä pidetään modernin ukrainalaisen kirjallisuuden isänä." },
+  { q: "Mitä Poltavan taistelussa 1709 tapahtui?", a: "Venäjän tsaari Pietari Suuri kukisti taistelussa Ruotsin kuningas Kaarle XII:n joukot, mikä murskasi Ruotsin suurvalta-aseman Itä-Euroopassa lopullisesti. Taistelukentällä toimii nykyään historiallinen museo ja muistomerkkejä molempien osapuolten kaatuneille." },
+  { q: "Miksi Opišnja tunnetaan keramiikasta?", a: "Kylän savimaa sopii erinomaisesti keramiikkaan, ja siellä on valmistettu koristeltuja saviastioita perinteisin menetelmin jo 1800-luvulta lähtien. Nykyään paikkakunnalla toimii Ukrainan kansallinen keramiikkamuseo, ja perinnettä jatkavat yhä paikalliset savenvalajasuvut." },
+],
+    Rivne: [
+  { q: "Miksi Ostrohin akatemiaa pidetään niin merkittävänä?", a: "Akatemia perustettiin 1576, ja sitä pidetään koko itäslaavilaisen maailman ensimmäisenä korkeakouluna. Se ehti taantua jo 1600-luvulla ruhtinassuvun sammuttua, mutta nykyinen Ostrohin kansallinen yliopisto jatkaa sen perintöä samalla paikalla." },
+  { q: "Miten Rivnen basalttipatsaat syntyivät?", a: "Patsaat syntyivät satojen miljoonien vuosien takaisesta laavavirrasta, joka jäähtyi hitaasti ja halkeili säännöllisiksi, kuusikulmaisiksi pylväiksi. Ne löydettiin vasta 1700-luvulla, kun paikallinen talonpoika iski lapionsa kiveen kaivoa kaivaessaan, ja löytöpaikan kylä sai siitä nimekseen Basaltove." },
+  { q: "Mistä Rakkauden tunnelin vihreä holvi on peräisin?", a: "Kyseessä on tavallinen, yhä käytössä oleva teollisuusrata Klevanin lähellä, jonka varrella kasvavat puut ovat vuosikymmenten aikana kasvaneet yhteen vihreäksi holviksi junien yläpuolelle. Paikasta tuli suosittu valokuvauskohde vasta 2000-luvulla, kun kuvat alkoivat levitä verkossa." },
+],
+    Sumy: [
+  { q: "Kuka oli Harytonenko ja miksi hänen sukunsa on Sumyssa niin näkyvä?", a: "Ivan Harytonenko rakensi Sumyhin 1869 suuren sokeritehtaan, josta kasvoi yksi Venäjän keisarikunnan johtavista. Suku vaurastui nopeasti yhdeksi imperiumin rikkaimmista ja rahoitti kaupunkiin kouluja, sairaaloita ja komeita rakennuksia, jotka seisovat yhä keskustassa." },
+  { q: "Mikä teki Hluhivista niin merkittävän 1700-luvulla?", a: "Hluhiv toimi kasakkahetmanaatin pääkaupunkina vuosina 1708–1764, jolloin Ukrainan kasakkavaltion johto istui siellä. Kaupunkiin perustettiin 1730 Venäjän keisarikunnan ensimmäinen laulukoulu, joka koulutti muun muassa hovilaulajia Pietariin." },
+  { q: "Mitä Sumyssa tehdään nykyään elannokseen?", a: "Kaupunki on pitkälti yliopisto- ja teollisuuskaupunki, jossa koneenrakennus, muun muassa pumppujen ja teollisuuslaitteiden valmistus, työllistää yhä paljon ihmisiä. Sumyn valtionyliopisto tuo kaupunkiin joka vuosi tuhansia opiskelijoita ympäri Ukrainaa." },
+],
+    "Ternopil'": [
+  { q: "Miksi Optymistytšna on maailman pisin kipsiluola?", a: "Luola on syntynyt, kun vesi on vuosituhansien aikana liuottanut kalkkikiven alla olevaa kipsikerrostumaa, ja tulokseksi on syntynyt poikkeuksellisen laaja, tiheä käytäväverkosto. Käytäviä on kartoitettu noin 264 kilometriä, mikä tekee siitä maailman pisimmän tunnetun kipsiluolan." },
+  { q: "Mikä on Potšaivin luostari ja miksi se on niin tärkeä?", a: "Potšaivin luostari on yksi ortodoksisen kirkon tärkeimmistä pyhiinvaelluskohteista, ja legendan mukaan sen perustivat 1240-luvulla Kiovan luostarista mongolihyökkäystä paenneet munkit. Sen 65-metrinen kellotorni on yksi Ukrainan korkeimmista, ja luostariin saapuu yhä tuhansia pyhiinvaeltajia joka vuosi." },
+  { q: "Miksi Ternopilin alue tuntuu erilaiselta kuin Itä-Ukraina?", a: "Alue kuului 1800-luvulla Venäjän sijaan Itävalta-Unkarin Galitsiaan, mikä toi mukanaan kreikkalaiskatolisen kirkon ja keskieurooppalaisia rakennustapoja. Vaikka alue on nykyään osa yhtenäistä Ukrainaa, murre ja monet perinteet muistuttavat yhä läntisiä naapureita." },
+],
+    Transcarpathia: [
+  { q: "Miksi Transkarpatiassa asuu niin paljon unkarilaisia?", a: "Alue kuului satoja vuosia Unkarin kuningaskuntaan ja siis myös Itävalta-Unkariin, aina ensimmäisen maailmansodan päättymiseen asti. Vaikka raja siirtyi sodan jälkeen, unkarinkielinen vähemmistö jäi asumaan alueelle, ja sillä on yhä omat koulunsa ja lehtensä." },
+  { q: "Mistä Narsissien laakson kukat tulevat?", a: "Kyseessä on villi narsissilaji, joka on säilynyt alueella erityisen kosteassa niittyilmastossa jääkaudesta lähtien. Laakso rauhoitettiin luonnonsuojelualueeksi, jotta harvinainen kasvusto ei häviäisi niityn kuivumisen tai muokkaamisen myötä." },
+  { q: "Mikä tekee Užhorodin linnasta erityisen?", a: "Linna on rakennettu keskiajalla kukkulalle kaupungin ylle, ja sen ulkoasu on saanut vahvoja vaikutteita Unkarin ja Itävallan arkkitehtuurista vuosisatojen hallinnan aikana. Nykyään linnassa toimii alueellinen historiamuseo." },
+],
+    Vinnytsya: [
+  { q: "Miksi Pirogovin ruumis on säilytetty Vinnytsjan lähellä?", a: "Kirurgi Nikolai Pirogov halusi testamentissaan, että hänen ruumiinsa balsamoidaan hänen kuolemansa jälkeen 1881. Toive toteutettiin, ja ruumis lepää yhä lasikannen alla hänen kotikartanonsa kirkon kryptassa Vinnytsjan liepeillä." },
+  { q: "Mikä tekee Vinnytsjan suihkulähteestä Euroopan suurimman?", a: "Etelä-Bugin rannalla sijaitseva kelluva suihkulähde ampaisee vettä 60 metrin korkeuteen ja levittäytyy 140 metrin matkalle joen pinnalla. Talveksi koko rakennelma lasketaan joen pohjaan suojaan jäätymiseltä ja nostetaan taas keväällä esiin." },
+  { q: "Kuka sävelsi tunnetun joululaulun Carol of the Bells?", a: "Säveltäjä Mykola Leontovytš työskenteli opettajana Tultšynissa, kun hän sovitti 1914 vanhan ukrainalaisen kansanlaulun Štšedrykiksi. Melodia levisi myöhemmin Yhdysvaltoihin, jossa siitä tuli tunnettu joululauluna nimellä Carol of the Bells." },
+],
+    Volyn: [
+  { q: "Miksi Svitjaz-järvi on niin kuuluisa?", a: "Svitjaz on Ukrainan syvin järvi ja yksi kirkasvetisimmistä, sillä sen ravinnepitoisuus on hyvin alhainen. Se on osa Šatskin kansallispuiston yli kolmenkymmenen järven ryhmää, ja kesäisin sen rannoille kerääntyy tuhansia kylpijöitä." },
+  { q: "Miksi Lubartin linna on painettu Ukrainan seteliin?", a: "Lutskin Lubartin linna on yksi maan parhaiten säilyneistä keskiaikaisista linnoista, ja sen 1300-luvulla rakennettu porttitorni on kansallisesti tunnistettava maamerkki. Siksi se valittiin 200 hryvnian setelin kuva-aiheeksi." },
+  { q: "Kuinka paljon lintuja Šatskin järvillä lepää muuttoaikana?", a: "Parhaimpina muuttopäivinä alueen järvillä ja niiden rannoilla voi levätä samanaikaisesti kymmeniätuhansia lintuja. Alueen monipuoliset kosteikot houkuttelevat yli 240 lintulajia, minkä vuoksi se on suosittu lintubongareiden kohde." },
+],
+    Zaporizhzhya: [
+  { q: "Miksi Hortytsjan saaresta tuli kasakoiden tukikohta?", a: "Ennen 1930-lukua Dneprin uomassa oli saaren kohdalla useita koskia ja putouksia, jotka tekivät joesta lähes mahdottoman ylittää vihollisjoukoille. Tämä luonnollinen este teki saaresta turvallisen paikan kasakkojen linnoitukselle, sitšille, joka sijaitsi historian aikana useaan otteeseen juuri täällä." },
+  { q: "Mitä koskille tapahtui, kun ne peitettiin veden alle?", a: "Neuvostoliiton ensimmäisiin suuriin teollisuushankkeisiin kuulunut Dneprogesin voimalapato valmistui 1932, ja sen tekoallas hukutti koko koskijakson pysyvästi. Samalla joesta tuli ensimmäistä kertaa laivaliikenteelle kelpoinen koko matkaltaan." },
+  { q: "Mitä Hortytsjan elävän historian museossa tehdään?", a: "Saarella toimii rekonstruoitu kasakkalinnoitus, jossa oppaat pukeutuvat 1500–1700-lukujen kasakka-asuihin ja esittelevät ajan käsitöitä, aseita ja elämäntapaa. Museo järjestää vuosittain suuria juhlia, kuten pääsiäisjuhlan ja syksyn Pokrova-juhlan, jotka vetävät paikalle tuhansia kävijöitä." },
+],
+    Zhytomyr: [
+  { q: "Miksi Balzac meni naimisiin juuri Berdytšivissä?", a: "Kirjailija Honoré de Balzacin kihlattu, puolalainen kreivitär Ewelina Hańska, asui perheineen lähellä sijaitsevassa Verhivnjan kartanossa. Pariskunta oli kirjeenvaihtanut lähes 18 vuotta ennen kuin he vihittiin 1850 kaupungin Pyhän Barbaran kirkossa." },
+  { q: "Kuka oli Sergei Koroljov ja miksi hän on niin tärkeä?", a: "Koroljov syntyi Žytomyrissa 1907 ja hänestä tuli myöhemmin Neuvostoliiton avaruusohjelman johtava suunnittelija. Hän vastasi muun muassa ensimmäisen satelliitin Sputnikin ja ensimmäisen ihmisen avaruuslennon teknisestä toteutuksesta." },
+  { q: "Kuka oli Vasili Grossman?", a: "Grossman syntyi Berdytšivissä 1905 ja työskenteli myöhemmin sotakirjeenvaihtajana toisessa maailmansodassa. Hänen kirjoituksiaan pidetään yhtenä ajan tärkeimmistä silminnäkijäkuvauksista, ja hänen myöhempi romaaninsa Elämä ja kohtalo on yksi 1900-luvun merkittävimmistä venäjänkielisistä teoksista." },
+],
+  },
+  BGR: {
+    Blagoevgrad: [
+      { q: "Miksi Blagoevgradissa opiskelee niin paljon ulkomaalaisia nuoria?", a: "Kaupungissa toimii Amerikan yliopisto Bulgariassa, joka perustettiin 1991 kommunismin kaatumisen jälkeen ensimmäisenä amerikkalaistyylisenä liberaalien taiteiden yliopistona Itä-Euroopassa. Nykyään siellä opiskelee yli tuhat opiskelijaa yli neljästäkymmenestä maasta ympäri maailmaa." },
+      { q: "Milloin Banskon jazzfestivaalia vietetään ja kuinka pitkään sitä on järjestetty?", a: "Festivaali järjestetään joka elokuu kaupungin torilla, ja se on Bulgarian suurin kesäinen musiikkitapahtuma. Sitä on järjestetty jo lähes 30 vuoden ajan, ja moni ulkoilmakonsertti on ilmainen." },
+      { q: "Miksi Melnikin viiniä pidetään erityisenä?", a: "Melnikin seudulla on viljelty viiniä yli 8000 vuoden ajan, ja alueen oma Shiroka Melnishka -rypäle ei kasva juuri missään muualla. Viini oli suosittua jo eurooppalaisten hovien pöydissä 1700–1800-luvuilla, ja muun muassa Winston Churchill piti siitä." },
+    ],
+    Burgas: [
+      { q: "Milloin Burgasin Merenrantapuisto rakennettiin ja millainen paikka siellä oli aiemmin?", a: "Ensimmäiset puut istutti sotilasrykmentti jo 1889, mutta varsinaisen puiston suunnitteli arkkitehti Georgi Duhtev vuodesta 1910 alkaen. Paikalla oli aiemmin rannan ja kaupungin välinen suoalue, josta hän loi yhden Bulgarian kauneimmista puistoista." },
+      { q: "Mistä hiekkaveistoksiin käytetty hiekka ja veistäjät tulevat?", a: "Veistäjät saapuvat Burgasiin joka kesä eri puolilta maailmaa, ja he työskentelevät Ezero-puistossa vain hiekalla ja vedellä. Festivaali järjestetään heinä-elokuussa, kun sää pitää patsaat parhaiten pystyssä." },
+      { q: "Miksi Burgas haluaa Euroopan kulttuuripääkaupungiksi?", a: "Kaupunki on ehdolla arvonimeen vuonna 2032 ja käyttää muun muassa hiekkaveistosfestivaalia ja muita kesätapahtumia osoittaakseen kulttuurista tarjontaansa. Arvonimi toisi kaupungille näkyvyyttä ja matkailijoita ympäri Eurooppaa." },
+    ],
+    Dobrich: [
+      { q: "Mitä Kaliakran niemellä oikein tapahtui?", a: "Legendan mukaan 1300-luvun lopulla, kun hyökkääjät murtautuivat niemen linnoitukseen, neljäkymmentä bulgarialaista neitoa sitoi hiuksensa yhteen palmikkoon ja hyppäsi mieluummin mereen kuin antautui vangeiksi. Niemen portilla seisoo yhä obeliski heidän muistokseen." },
+      { q: "Miksi Dobrudžaa kutsutaan Bulgarian viljavarastoksi?", a: "Alueen tumma, syvä maaperä ja kuiva ilmasto sopivat erinomaisesti vehnälle, auringonkukalle ja maissille. Dobrudžan maatalousinstituutin kehittämiä vehnälajikkeita on kylvetty jopa yli 80 prosentilla Bulgarian vehnäpelloista." },
+    ],
+    Gabrovo: [
+      { q: "Mitä Etaran ulkoilmamuseossa voi nähdä?", a: "Museo esittelee Gabrovon seudun elämää 1700–1800-lukujen taitteessa: kivetyllä kadulla toimii käsityöläisten verstaita, joissa voi katsoa metallin, nahan, puun ja villan käsittelyä paikan päällä. Museo avattiin 1964 ja sijaitsee noin 9 kilometrin päässä Gabrovon keskustasta." },
+      { q: "Miten Sivek-joki liittyy museon toimintaan?", a: "Joen vesi ohjataan kanavaa pitkin peräkkäin kymmeneen eri laitokseen, kuten vesimyllyihin, huopatehtaaseen ja sahaan. Näin sama vesi pyörittää montaa konetta ennen kuin se palaa jokeen." },
+    ],
+    'Grad Sofiya': [
+      { q: "Miten Sofian roomalaiset rauniot löytyivät?", a: "Ne paljastuivat metrotyömaalla vuosina 2010–2012, kun Serdika-asemaa kaivettiin keskustan alle. Esiin tuli lähes 9000 neliömetrin alue vanhoja katuja, kylpylöitä ja varhaiskristillinen basilika, jotka ovat pääosin 300–600-luvuilta." },
+      { q: "Kuinka lähellä Sofian keskustaa pääsee laskettelemaan?", a: "Vitosha-vuoren hiihtokeskukseen pääsee keskustasta noin puolessa tunnissa autolla tai hissillä Sofian Simeonovon kaupunginosasta. Vuorella on rinteitä sekä aloittelijoille että kokeneille laskijoille, ja osa rinteistä on valaistu iltahiihtoa varten." },
+    ],
+    Haskovo: [
+      { q: "Miksi tupakka oli Haskovolle niin tärkeä elinkeino?", a: "Ottomaanien vallan päätyttyä 1878 alueen ilmasto ja maaperä osoittautuivat erinomaisiksi laatutupakalle, ja Haskovosta tuli 1900-luvun alkuun mennessä Bulgarian johtava tupakanviljelyalue. Tupakkateollisuus työllisti kaupungissa eniten väkeä ja pääomaa vuosikymmenten ajan." },
+      { q: "Onko Haskovossa enää tupakkateollisuutta?", a: "Ei juurikaan – kaupungin suuri tupakkayhtiö Haskovo-BT suljettiin 2005, eikä alueella valmisteta enää savukkeita. Nykyään suurimmat työnantajat toimivat elintarvike-, kone- ja tekstiiliteollisuudessa." },
+      { q: "Mitä Kenanan puistossa voi tehdä?", a: "Puisto on Haskovon suurin, yli 230 hehtaaria, ja siellä on tekojärvi, kävelyreittejä ja pieni eläintarha. Paikalliset käyttävät sitä ulkoiluun, uintiin ja urheiluun – muun muassa tennistähti Grigor Dimitrov aloitti uransa juuri Kenanan kentillä." },
+    ],
+    Yambol: [
+      { q: "Mikä Kabile oikein oli?", a: "Kabile oli traakialaisten kuninkaiden Spartokoksen ja Skostokoksen residenssikaupunki jo ennen ajanlaskun alkua, ja sillä oli oma rahapajansa – harvinaista aikansa kaupungeille. Se oli yksi Traakian tärkeimmistä poliittisista ja uskonnollisista keskuksista 1. vuosituhannella eaa." },
+      { q: "Milloin Kabilesta tuli suojelualue ja mitä siellä voi nähdä nykyään?", a: "Alue rauhoitettiin arkeologiseksi reservaatiksi 1965, ja se kattaa noin 65 neliökilometriä. Paikan museossa on esillä muun muassa lähes 2400 vuotta sitten haudatun traakialaissoturin pronssikypärä ja rautainen suomupanssari." },
+    ],
+    Kardzhali: [
+      { q: "Miksi Paholaisen siltaa kutsutaan juuri niin?", a: "Kansanperinteen mukaan paikalle rakennetut sillat sortuivat kerta toisensa jälkeen ennen kuin mestarirakentaja Dimitar sai lopulta valmiiksi kestävän sillan – uskottiin, että paikkaa vaivasi kirous. Nykyinen kolmikaarinen kivisilta valmistui 1515–1518 sulttaani Selim I:n käskystä, ja se palveli tärkeällä kauppareitillä Egeanmereltä Traakiaan." },
+      { q: "Miksi Kardžali on Bulgarian ainutlaatuinen kunta väestöltään?", a: "Se on maan ainoa maakuntakeskuksen kunta, jossa muslimit muodostavat enemmistön – suuri osa heistä etnisiä turkkilaisia, osa taas bulgariankielisiä muslimeja eli pomakkeja. Kaupungissa moskeijat ja kirkot toimivat rinnakkain, ja alueen politiikkaa hallitsee usein turkkilaisvähemmistön oma puolue." },
+      { q: "Mihin Kardžalin tekojärveä käytetään?", a: "Arda-jokeen 1957–1963 rakennettu pato tuottaa vesivoimaa koko seudulle ja on osa kolmen padon ketjua joella. Tekojärvi on suosittu myös kalastuksesta, veneilystä ja retkeilystä nauttiville." },
+    ],
+    Kyustendil: [
+      { q: "Miksi Kyustendiliä kutsutaan Bulgarian hedelmätarhaksi?", a: "Seudun ilmasto ja maaperä sopivat erinomaisesti hedelmäpuille, erityisesti kirsikoille, ja alueella korjataan vuosittain tuhansia tonneja satoa. Ensimmäinen kansallinen hedelmänviljelynäyttely järjestettiin Kyustendilissä jo 1896, ja kesäkuun kirsikkafestivaali jatkaa perinnettä yhä." },
+      { q: "Mistä Pautalia-nimi tulee ja miksi roomalaiset arvostivat paikkaa?", a: "Pautalia oli kaupungin roomalaisaikainen nimi, ja se tunnettiin kuumista mineraalilähteistään jo antiikin ajalta. Jopa keisarit, kuten Traianus ja Septimius Severus, matkustivat sinne hoitamaan vaivojaan kylpylöiden lähteillä." },
+    ],
+    Lovech: [
+      { q: "Kuka rakensi Lovechin katetun sillan ja miksi?", a: "Rakennusmestari Kolyu Ficheto sai tehtäväkseen rakentaa uuden sillan, kun edellinen tuhoutui tulvassa 1872. Hän rakensi 84 metriä pitkän katetun puusillan vuosina 1874–1876, ja sillalle mahtui 64 kauppakojua." },
+      { q: "Mitä alkuperäiselle sillalle tapahtui?", a: "Silta kesti yllättävän hyvin – se selvisi ehjänä Venäjän–Turkin sodasta 1877–78 ja vuoden 1897 suurtulvasta. Lopulta tulipalo tuhosi rakennuksen elokuussa 1925, ja nykyinen betoninen silta rakennettiin 1927–1931 alkuperäisen näköiseksi." },
+    ],
+    Montana: [
+      { q: "Miksi Montana on vaihtanut nimeään niin monta kertaa?", a: "Kaupungin nimi on seurannut Bulgarian historian käänteitä: se sai nimen Ferdinand ruhtinaan kunniaksi vuonna 1891, sitten kommunistijohtaja Hristo Mihaylovin mukaan Mihaylovgrad vuonna 1945. Kommunismin päätyttyä kaupunki valitsi 1993 nimekseen Montanan roomalaisen linnoituksen Castra ad Montanesium mukaan." },
+      { q: "Mitä Ogosta-järven alta joskus paljastuu?", a: "Kun tekojärven vedenpinta laskee kuivina kausina, veden alle jääneiden kylien raunioita on noussut näkyviin rannalle. Järvi on pinta-alaltaan Bulgarian toiseksi suurin, ja sen pato valmistui 1986 kaksikymmentä vuotta kestäneen rakennustyön jälkeen." },
+    ],
+    Pazardzhik: [
+      { q: "Mitä Batakissa tapahtui vuonna 1876?", a: "Huhtikuun kansannousun kukistuessa osmanien apujoukot surmasivat kaupungissa arvioiden mukaan 3000–5000 asukasta, monet heistä Sveta Nedelja -kirkkoon piiloutuneina. Tapahtuma on yksi tunnetuimmista esimerkeistä kansannousun julmasta tukahduttamisesta." },
+      { q: "Mikä Sveta Nedelja -kirkosta tuli myöhemmin?", a: "Kirkosta, joka rakennettiin alun perin paikallisten voimin jo 1813, on nykyään muistomerkki ja osaruumishuone tapahtumien uhreille. Se on yhä tärkeä käyntikohde, kun bulgarialaiset muistelevat huhtikuun kansannousua." },
+      { q: "Miksi Velingradia kutsutaan Balkanin kylpyläpääkaupungiksi?", a: "Kaupungissa ja sen ympärillä pulppuaa yli 90 mineraalilähdettä Rodopien pohjoisrinteillä. Lähteiden ympärille on rakennettu lukuisia kylpylähotelleja, jotka houkuttelevat vierailijoita eri puolilta Eurooppaa." },
+    ],
+    Pernik: [
+      { q: "Mikä Surva-festivaali on?", a: "Se on kansainvälinen naamiaisperinteiden festivaali, jota on järjestetty Pernikissä vuodesta 1966 ja kansainvälisenä vuodesta 1985. Se on suurin tapahtumansa laatuinen koko Balkanilla ja kokoaa yli 5000 osallistujaa noin 90 ryhmästä." },
+      { q: "Mitä kukeri-naamioilla ja kelloilla tavoitellaan?", a: "Perinteen mukaan suurilla kelloilla ja pelottavilla naamioilla karkotetaan pahat henget ja houkutellaan hyvä sato ja onni tulevalle vuodelle. Tavat juontuvat vanhoista maatalousriiteistä, jotka ovat säilyneet Pernikin seudulla sukupolvien ajan." },
+      { q: "Milloin festivaali järjestetään?", a: "Surva järjestetään joka vuosi tammikuun viimeisenä viikonloppuna, ja sen ydin on kaksipäiväinen naamiaisryhmien paraati ja kilpailu. Mukana on ryhmiä myös Euroopan, Aasian ja Afrikan ulkopuolelta." },
+    ],
+    Pleven: [
+      { q: "Mitä erikoista Kaylakan puiston kallioista löytyy?", a: "Puiston kalkkikivijyrkänteet paljastavat miljoonien vuosien takaisia muinaisten vedeneliöiden fossiileja, jotka näkyvät paljain silmin kallion pinnassa. Kalliot kertovat myös siitä, miten muinaiset merten pinnat ovat vuosituhansien saatossa laskeneet." },
+      { q: "Mikä Storgosia oli?", a: "Storgosia oli roomalaisaikainen linnoitus, jonka rauniot sijaitsevat Kaylakan laaksossa. Se oli osa laajempaa roomalaista puolustusverkostoa alueella, joka tunnettiin myöhemmin Pleveniksi." },
+      { q: "Milloin Kaylakasta tuli puisto?", a: "Alue julistettiin kansanpuistoksi 1946 entisen metsästysalueen, Sokol-puiston, tilalle. Sittemmin puistoa on laajennettu lähes nelinkertaiseksi ja sinne on rakennettu altaita, uimaranta ja muita vapaa-ajan palveluita." },
+    ],
+    Plovdiv: [
+      { q: "Onko totta, että Plovdiv on Euroopan vanhin yhtäjaksoisesti asuttu kaupunki?", a: "Tarkkaa 'vanhin'-titteliä ei voi todistaa, mutta Plovdiv on yksi vahvimmista ehdokkaista: asutusjäljet ulottuvat kuudennelle vuosituhannelle eaa. asti. Myös Kreikan Argos ja Italian Matera kilpailevat samasta tittelistä omilla löydöillään." },
+      { q: "Miten roomalainen teatteri löytyi keskeltä nykyistä kaupunkia?", a: "Teatteri oli vuosisatoja maan alla, kunnes se paljastui arkeologikaivauksissa 1968–1979 kaupungin kukkulan rinteeltä. Keisari Trajanuksen ajalta peräisin oleva teatteri mahtuu nykyään 5 000–7 000 katsojaa, ja siellä järjestetään yhä kesäisin konsertteja." },
+      { q: "Mikä teki Kapanasta niin suositun kaupunginosan?", a: "Kapana oli aikoinaan käsityöläisten ja kauppiaiden mutkitteleva kortteli, joka rappeutui 1900-luvulla. 2010-luvulla se herätettiin henkiin kahviloiden, gallerioiden ja katutaiteen avulla, ja siitä tuli Plovdivin trendikkäin alue etenkin kulttuuripääkaupunkivuonna 2019." },
+    ],
+    Razgrad: [
+      { q: "Mitä erikoista Sveshtarin haudassa on?", a: "Haudan keskikammiossa on kymmenen naishahmoista veistettyä pylvästä, puoliksi ihmisiä ja puoliksi kasveja, jollaisia ei tunneta mistään muualta traakialaisesta taiteesta. Hauta rakennettiin 300-luvun ensimmäisellä neljänneksellä eaa. ja löytyi vasta 1982, minkä jälkeen Unesco otti sen maailmanperintöluetteloonsa 1985." },
+      { q: "Kuka oli Demir Baba, jolle Sboryanovoon rakennettiin pyhäkkö?", a: "Demir Baba oli 1500-luvulla elänyt alevimuslimien pyhä mies, jonka uskotaan haudatun kalliolähteen äärelle. Samaa paikkaa on palvottu pyhänä jo traakialaisajoista lähtien, ja pyhiinvaeltajia käy siellä yhä nykyään." },
+      { q: "Mitä Abrituksen luona tapahtui vuonna 251?", a: "Goottien joukot kukistivat siellä Rooman armeijan, ja keisari Decius kaatui taistelussa – ensimmäinen Rooman keisari, joka kuoli taistelukentällä vihollista vastaan. Raunioalue on nykyään avoinna kävijöille Razgradin liepeillä." },
+    ],
+    Ruse: [
+      { q: "Miksi Rusea kutsutaan pieneksi Wieniksi?", a: "Kaupungin bulevardit ja aukiot rakennettiin 1800-luvun lopulla uusklassiseen ja art nouveau -tyyliin, osin samojen arkkitehtien suunnittelemina kuin Wienissä. Rakennukset erottuivat selvästi muusta tuolloin osmanivallan alaisesta Bulgariasta, ja lempinimi on säilynyt tähän päivään." },
+      { q: "Kuka oli Elias Canetti ja mitä tekemistä hänellä on Rusen kanssa?", a: "Canetti syntyi Rusessa 1905 sefardijuutalaiseen kauppiasperheeseen ja vietti siellä lapsuutensa ensimmäiset vuodet. Hän muutti myöhemmin useisiin Euroopan maihin ja sai Nobelin kirjallisuuspalkinnon 1981, muun muassa Rusen monikielistä lapsuuttaan kuvaavista muistelmistaan." },
+      { q: "Miksi Ystävyyden silta oli niin pitkään ainoa siltayhteys Bulgarian ja Romanian välillä?", a: "Silta valmistui 1954 neuvostoinsinöörien suunnitelmien mukaan ja oli vuosikymmeniä ainoa kiinteä yhteys maiden välillä, vaikka Tonava erottaa ne toisistaan satoja kilometrejä. Toinen silta, Uusi Eurooppa -silta, avattiin vasta 2013 kaukana ylävirtaan Vidinin kohdalla." },
+    ],
+    Silistra: [
+      { q: "Miksi Silistran roomalaishauta on niin erikoinen?", a: "Se on ainoa Bulgariasta löydetty roomalaisajan hauta, jonka kaikki seinät ja katto on maalattu freskoin metsästys- ja perheaiheilla. Hauta löytyi vahingossa 1942 kaupungin laidalta, ja yllättäen se osoittautui tyhjäksi – kukaan ei koskaan haudattu sinne." },
+      { q: "Miksi Srebarnan järvi on niin tärkeä linnuille?", a: "Järvi on yksi harvoista paikoista Euroopassa, joissa kiharapelikaani vielä pesii luonnossa. Suojelualue liitettiin Unescon maailmanperintöluetteloon 1983, ja alueella on havaittu satoja lintulajeja." },
+      { q: "Mikä Durostorum oikein oli?", a: "Durostorum oli roomalaisen XI legioonan tukikohta ja myöhemmin tärkeä kaupunki Alatonavan varrella – nykyisen Silistran suora edeltäjä. Se toimi vuosisatoja Rooman valtakunnan rajavartiona." },
+    ],
+    Sliven: [
+      { q: "Miksi Sliveniä kutsutaan sadan vojvodan kaupungiksi?", a: "Kaupungin yllä kohoavat jyrkät kalliot tarjosivat 1800-luvulla piilopaikkoja osmanivaltaa vastustaneille kapinallisjohtajille eli vojvodoille. Moni heistä käytti aluetta tukikohtanaan ennen hyökkäyksiään, ja lempinimi on säilynyt kaupungin maineessa tähän päivään." },
+      { q: "Kuka oli Hadži Dimitar?", a: "Hän oli yksi tunnetuimmista Bulgarian vapaustaistelijoista, syntynyt Slivenissä 1840. Hän kaatui taistelussa osmanijoukkoja vastaan 1868, ja hänen lapsuudenkotinsa on nykyään museona keskustassa." },
+      { q: "Miksi juuri Sliveniin perustettiin Bulgarian ensimmäinen tehdas?", a: "Dobri Zhelyazkov oli oppinut kutomatekniikkaa Venäjällä ja toi mukanaan koneita, kun hän perusti 1834 Sliveniin villakangastehtaan – koko Osmanivaltakunnan ensimmäisen. Tehdas valmisti kangasta muun muassa armeijalle, ja sen historiaa esittelee nykyään kaupungin tekstiilimuseo." },
+    ],
+    Smolyan: [
+      { q: "Kuinka moni Smoljanin järvistä on enää jäljellä?", a: "Alun perin järviä oli parikymmentä, mutta nykyään niistä on jäljellä enää seitsemän, loput ovat muuttuneet soiksi. Jäljellä olevia kutsutaan Rodopien smaragdisilmiksi niiden kirkkaan vihreän veden vuoksi." },
+      { q: "Onko Smolyan oikeasti Bulgarian korkein kaupunki?", a: "Kyllä, Smolyan on maan korkeimmalla sijaitseva kaupunki, ja se levittäytyy useiden jokilaaksojen ja mäkien päälle Rodopien vuoristossa. Näköalapaikalle Snežanka-huipulle pääsee nykyään tuolihissillä." },
+      { q: "Miksi Pamporovo on suosittu hiihtokeskus?", a: "Pamporovo on Bulgarian eteläisin hiihtokeskus, ja sen rinteet sopivat leppoisaan hiihtoon Rodopien männiköiden keskellä. Se houkuttelee talvisin hiihtäjiä eri puolilta Balkania ja Eurooppaa." },
+    ],
+    Sofia: [
+      { q: "Mikä teki Samokovista niin tärkeän ikonimaalauksen kannalta?", a: "Samokovissa toimi 1700–1800-luvuilla merkittävä ikonimaalauskoulu, joka kasvatti taiteilijoita kuten Zahari Zografin. Koulun perinne vaikutti myöhemmin koko Bulgarian modernin taiteen syntyyn." },
+      { q: "Miten Borovetsista tuli hiihtokeskus?", a: "Ruhtinas Ferdinand rakennutti alueelle kesäasuntonsa ja metsästysmajansa 1896, minkä jälkeen aatelisto seurasi perässä rakentamalla omia huviloitaan. Borovets on siitä lähtien ollut Bulgarian vanhin ja yksi tunnetuimmista hiihtokeskuksista." },
+      { q: "Miksi Pirdopin ja Zlatitsan välissä on niin suuri tehdas?", a: "Alueen kuparinsulatto on Kaakkois-Euroopan suurin, ja se jalostaa kuparimalmia katodikupariksi vientiin ympäri maailmaa. Seutu on ollut kaivos- ja metalliteollisuuden keskus jo vuosisatojen ajan." },
+    ],
+    'Stara Zagora': [
+      { q: "Miksi Stara Zagoran kivikautiset talot ovat niin merkittäviä?", a: "Talot ovat lähes 8 000 vuotta vanhoja ja yksi Euroopan parhaiten säilyneitä kivikautisia asumuksia, sillä tulipalo hiillytti ja säilytti rakenteet. Kaivauksista löytyi yli 1800 esinettä, muun muassa keittiövälineitä ja jyvänjauhinkiviä." },
+      { q: "Miksi Kazanlakin laaksoa kutsutaan ruusulaaksoksi?", a: "Laakson ilmasto ja maaperä sopivat erinomaisesti Bulgarian ruusun viljelyyn, ja suuri osa maailman ruusuöljystä tislataan sieltä. Joka kesäkuun ensimmäisenä viikonloppuna laaksossa juhlitaan Ruusujuhlaa satokauden kunniaksi." },
+      { q: "Mistä Stara Zagora sai lempinimensä lehmusten kaupunki?", a: "Kaupungin leveät puistokadut on istutettu täyteen lehmuspuita, jotka tuoksuvat voimakkaasti kesäkuun kukinta-aikaan. Lempinimi on ollut käytössä jo vuosikymmeniä, ja puut ovat osa kaupungin identiteettiä." },
+    ],
+    Shumen: [
+      { q: "Miksi Tombul-moskeija on niin erityinen?", a: "Se on Bulgarian suurin moskeija ja yksi Balkanin suurimmista, valmistunut 1757. Sen 25 metriä korkea kupoli ja koraanijakeilla koristellut seinät tekevät siitä yhä toimivan rukoushuoneen ja suositun nähtävyyden." },
+      { q: "Mitä Pliska ja Preslav olivat?", a: "Ne olivat ensimmäisen ja toisen Bulgarian valtakunnan pääkaupunkeja Šumenin liepeillä. Pliskassa kristinusko julistettiin valtionuskonnoksi 800-luvulla, ja molempien kaupunkien rauniot ovat nykyään avoinna kävijöille." },
+      { q: "Miksi Šumenin ylängölle rakennettiin niin valtava muistomerkki?", a: "Muistomerkki avattiin 1981 juhlistamaan Bulgarian valtion perustamisen 1300-vuotispäivää vuonna 681. Se on yksi maan suurimmista muistomerkeistä, ja siitä avautuu näkymä kohti muinaisia pääkaupunkeja." },
+    ],
+    Targovishte: [
+      { q: "Mikä Misionis oli?", a: "Misionis oli bysanttilainen linnoitus, jonka keisari Justinianus I perusti 500-luvulla vartioimaan kauppareittiä Mustaltamereltä sisämaahan. Se tunnettiin kauppapaikkana jo 1100-luvulla, ja sen rauniot ovat nykyisen Targovišten suora edeltäjä." },
+      { q: "Mitä Targovišten nimi tarkoittaa?", a: "Nimi juontuu bulgarian sanasta kauppa, ja se viittaa kaupungin pitkään historiaan kauppareittien solmukohtana. Sama rooli näkyy yhä kaupungin nykyisessä lasiteollisuudessa, joka vie tuotteitaan ympäri Eurooppaa." },
+      { q: "Milloin Misionisin linnoitus tuhoutui?", a: "Linnoitus tuhoutui osmanien valloituksessa 1300-luvun lopulla, satoja vuosia sen jälkeen kun se oli rakennettu bysanttilaisajan puolustuslinjaksi. Rauniot ovat nykyään avoinna kävijöille Parkan-alueella lähellä kaupunkia." },
+    ],
+    Varna: [
+      { q: "Mikä tekee Varnan kultalöydöstä maailman vanhimman?", a: "Vuonna 1972 löydetty hautausmaa sisälsi lähes 3 000 kultaesinettä, jotka on ajoitettu noin 4600–4200 eaa. – vanhimmaksi tunnetuksi työstetyksi kullaksi maailmassa. Yksi ainoa hauta sisälsi enemmän kultaa kuin koko muu tunnettu maailma samalta ajalta yhteensä." },
+      { q: "Miten kultahauta löytyi?", a: "Kaivinkoneen kuljettaja törmäsi esineisiin vahingossa tehtaan rakennustyömaalla 1972. Löytö paljasti aiemmin tuntemattoman, kehittyneen kalkoliittisen kulttuurin, joka osasi työstää sekä kuparia että kultaa." },
+      { q: "Miksi Varnaa kutsutaan Bulgarian meripääkaupungiksi?", a: "Varna on maan suurin satamakaupunki Mustallamerellä ja kolmanneksi suurin kaupunki väkiluvultaan. Kesäisin sen rannat ja festivaalit täyttyvät kotimaisista ja ulkomaisista matkailijoista." },
+    ],
+    'Veliko Tarnovo': [
+      { q: "Kuinka kauan Veliko Tarnovo oli Bulgarian pääkaupunki?", a: "Se toimi toisen Bulgarian valtakunnan pääkaupunkina vuosina 1185–1393, yli 200 vuoden ajan. Kaupungin sanottiin aikanaan kilpailevan loistollaan Konstantinopolin kanssa." },
+      { q: "Mitä Samovodskan käsityöläiskadulla myydään?", a: "Kadulla on toiminut käsityöläisten työpajoja yhtäjaksoisesti yli 500 vuoden ajan. Nykyään siellä näkee kuparinseppiä, savenvalajia ja kutojia työssään samoin menetelmin kuin markkinapäivinä satoja vuosia sitten." },
+      { q: "Miksi Tsarevetsin linnoitus valaistaan iltaisin?", a: "Valo- ja äänishow kertoo linnoituksen historiasta väriprojisoinneilla ja musiikilla muurien päällä. Esitys on suosittu tapa kokea kaupungin keskiaikainen menneisyys nykypäivän tekniikalla." },
+    ],
+    Vidin: [
+      { q: "Mitä erikoista Belogradchikin kallioissa on?", a: "Tuuli ja vesi ovat muovanneet punaisesta hiekkakivestä 200 metriä korkeita, oudon näköisiä torneja ja hahmoja miljoonien vuosien aikana. Kalliot olivat 2011 finalistina luonnon seitsemän uuden ihmeen äänestyksessä." },
+      { q: "Miten Kaleton linnoitus hyödyntää kallioita?", a: "Linnoitus rakennettiin suoraan kallioiden lomaan niin, että luonnolliset kivimuodostelmat toimivat osana muureja. Roomalaiset aloittivat rakentamisen, ja bulgarialaiset sekä osmanit laajensivat sitä myöhemmin." },
+      { q: "Miksi Vidiniin rakennettiin uusi silta Romaniaan 2013?", a: "Uusi Eurooppa -silta helpotti liikennettä, sillä aiemmin ainoa Tonavan ylittävä silta Bulgarian ja Romanian välillä oli kaukana etelämpänä Rusen kohdalla. Silta yhdistää Vidinin Romanian puolella sijaitsevaan Calafatiin." },
+    ],
+    Vratsa: [
+      { q: "Miksi Vratsata-solakuru on suosittu kiipeilijöiden keskuudessa?", a: "Kurun pystyt kalkkikivijyrkänteet tarjoavat haastavia kiipeilyreittejä aivan kaupungin kupeessa. Alue on yksi Bulgarian suosituimmista kalliokiipeilykohteista." },
+      { q: "Kuka oli Hristo Botev ja miksi häntä muistetaan Vratsassa?", a: "Botev oli runoilija ja vallankumouksellinen, joka kaatui taistelussa lähellä Vratsaa sijaitsevalla Okolčican huipulla huhtikuun kapinassa 1876. Häntä muistetaan yhä vuosittain kesäkuun alussa, kun tuhannet kokoontuvat vuorelle." },
+      { q: "Milloin Ledenika-luola avattiin yleisölle?", a: "Luola avattiin kävijöille 1961, ja sen tippukivimuodostelmat ja jäätävän kylmät holvit tekivät siitä nopeasti suositun retkikohteen. Infrastruktuuri uudistettiin kokonaan 2005." },
+    ],
+  },
 };

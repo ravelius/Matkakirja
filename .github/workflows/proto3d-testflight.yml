@@ -65,18 +65,26 @@ on:
 permissions:
   contents: read
 
-# Sama Mac ajaa myös savukkeet.yml:n ja Karttasepän polttoja — yksi
-# raskas ajo kerrallaan koko koneella (ks. savukkeet.yml:n koko-repon
-# jono, PR #2926/#2947). Tämä työnkulku käyttää samaa jonoryhmää, jotta
-# Unity-käännös ei ala kesken savukesarjan tai polton.
+# TF-ETUSIJA (omistaja hyväksyi 28.9.2026): vienti ajetaan testit-runnerilla
+# (SamiMacStudio2-testit: sama kone, sama käyttäjä koodaus, sama avainnippu)
+# omassa jonoryhmässään, jotta se ei jonota savukerunnerin PR-savukkeiden
+# takana (28.9. TF 1.0.35 ja 1.0.37 odottivat tunteja). Unity-käännösten
+# vuorot jakaa käännöspalvelun lukko (KAANNOSLUKKO) kuten ennenkin.
 concurrency:
-  group: savukkeet-mac-macilla
+  group: proto3d-testflight
   cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527): Mac-ajurin
+# raskaat työt ajetaan nice -n 15:llä, jotta omistajan omat työt (käyttäjä
+# Sami Reivinen) menevät edelle; nice toimii käyttäjien yli. Ubuntulla harmiton.
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
 
 jobs:
   vienti_ja_lahetys:
     name: Unity-vienti, arkistointi ja TestFlight-lähetys
-    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    runs-on: [self-hosted, macOS, ARM64, testit]
     timeout-minutes: 90
 
     env:
