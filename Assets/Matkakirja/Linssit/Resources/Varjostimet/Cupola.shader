@@ -202,16 +202,18 @@ Shader "Matkakirja/Linssit/Cupola"
                 // Maavalo ikkunoiden läheltä (sinertävä), sisävalo ja kaksi näkyvää LED-valaisinta sivuilla.
                 half maa = maavalo * (0.12h + 0.55h * ikkunat) * (half)saturate(n.z * 0.7 + 0.3 - n.y * 0.3);
                 float2 ledV = float2(-0.205 * _Ruutu / 0.46, 0.505), ledO = float2(0.205 * _Ruutu / 0.46, 0.505);
-                float dv = length((q - ledV) * float2(1, 0.55)), dO = length((q - ledO) * float2(1, 0.55));
-                half led = (half)(exp(-dv * dv / 0.0045) + exp(-dO * dO / 0.0045));
-                half ledValo = (half)(0.55 * exp(-min(dv, dO) / 0.07));
+                // Kapea pystysuora valonauha (~1,2 % × 4 % ruudusta), ei palloa: laitteen 1. kierros oli ylivalottunut (28.9.).
+                float2 nv = (q - ledV) * float2(1, 0.3), no = (q - ledO) * float2(1, 0.3);
+                float dv = length(nv), dO = length(no);
+                half led = (half)(exp(-dot(nv, nv) / 0.00004) + exp(-dot(no, no) / 0.00004));
+                half ledValo = (half)(0.32 * exp(-min(dv, dO) / 0.035));
                 half3 kehysValo = half3(0.11, 0.115, 0.13)                          // ympäristö
                                 + half3(1.0, 0.95, 0.86) * avain * 1.25h               // aurinko
                                 + half3(0.55, 0.64, 0.78) * maa                        // maavalo
                                 + half3(1.0, 0.80, 0.58) * ledValo;                    // LED
                 half3 kehysC = f.rgb * _Tumma * kehysValo * 2.2h;
                 // Valaisimet itse: kirkas lämmin ydin ja hehku (näkyvä valonlähde kuvassa).
-                half3 ledC = half3(1.0, 0.86, 0.66) * saturate(led) * 1.4h;
+                half3 ledC = half3(1.0, 0.88, 0.70) * saturate(led) * 1.2h + half3(1.0, 0.8, 0.55) * (half)(0.18 * exp(-min(dv, dO) / 0.012));
                 kehysC = kehysC + ledC * f.a;
 
                 // --- koostus takaa eteen (esikerrottu) ----------------------------------------------------------------
@@ -222,7 +224,7 @@ Shader "Matkakirja/Linssit/Cupola"
                 c = kehysC * f.a + c * (1 - f.a);
                 a = f.a + a * (1 - f.a);
                 // LED-hehku myös lasin puolelle (siroaa ilmaan).
-                c += half3(1.0, 0.82, 0.6) * (half)(0.08 * exp(-min(dv, dO) / 0.05)) * lasi;
+                c += half3(1.0, 0.82, 0.6) * (half)(0.03 * exp(-min(dv, dO) / 0.02)) * lasi;
                 return half4(c, a) * _Peitto;
             }
             ENDHLSL
