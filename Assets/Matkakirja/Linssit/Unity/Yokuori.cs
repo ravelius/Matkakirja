@@ -32,8 +32,11 @@ namespace Matkakirja.Natiivi
             IdPilvet = Shader.PropertyToID("_Pilvet"), IdPilvetOn = Shader.PropertyToID("_PilvetOn"), IdPilviPeitto = Shader.PropertyToID("_PilviPeitto");
         const string ValoJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/iss-yovalot-2026-09-28/",
             VesiJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/iss-vesi-2026-09-28/";
-        /// <summary>Valojen voimakkuus (HDR: suurkaupunkien ytimet hehkuvat bloomissa).</summary>
-        public const float ValojenVoima = 1.6f;
+        /// <summary>
+        /// Valojen voimakkuus (HDR: suurkaupunkien ytimet hehkuvat bloomissa). Omistaja 28.9. laitekuvasta: "valot palavat puhki"
+        /// → vertailu 100 / 80 / 60 % → 60 %, eli 1,6 × 0,6 = 0,96.
+        /// </summary>
+        public const float ValojenVoima = 0.96f;
         /// <summary>A/B (`astro kyyti valot 0|1`): kaupunkien valot pois kuvaparia varten.</summary>
         public static bool ValotPois;
         /// <summary>

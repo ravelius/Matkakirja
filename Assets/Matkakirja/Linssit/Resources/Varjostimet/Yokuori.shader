@@ -32,7 +32,7 @@ Shader "Matkakirja/Linssit/Yokuori"
         _ValotEu("Eurooppa (Web Mercator, R = valot, G = vesi)", 2D) = "black" {}
         _ValotMaa("Maailma (Web Mercator, R = valot, G = vesi)", 2D) = "black" {}
         _EuRaja("Eurooppa: lon0, lon1, Mercator-rivi 0, 1 (0…1 ylhäältä)", Vector) = (-28.125, 45, 0.203125, 0.40625)
-        _Valot("Valojen voimakkuus (0 = pois)", Float) = 1.6
+        _Valot("Valojen voimakkuus (0 = pois)", Float) = 0.96
         _MaaVoima("Maailmakuvan lisävoima (Z3 on himmeämpi)", Float) = 2.2
         _Kiilto("Auringon heijastuksen voimakkuus (0 = pois)", Float) = 6
         _Aalto("Aallokon kaltevuus σ²", Float) = 0.02
@@ -152,6 +152,11 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half lisa = (half)(vesi * osuu) * yoKuori * saturate(_YoVesi - a);
                 c += _Vari.rgb * lisa;
                 a += lisa;
+                // Yöllä pilvet yhtä tummiksi kuin vesi (laite cl7 28.9.: valkoiset pilvet jäivät 0,82-peiton läpi maitomaisen
+                // harmaiksi; ISS:n yökuvissa pilvet ovat tummia, ellei kuu valaise).
+                half lisaPilvi = pilvi * (half)osuu * yoKuori * saturate(_YoVesi - a);
+                c += _Vari.rgb * lisaPilvi;
+                a += lisaPilvi;
                 return half4(c, a);
             }
             ENDHLSL
