@@ -366,7 +366,8 @@ namespace Matkakirja.Natiivi
                 foreach (var x in testiAsteikko) l.Add(x.Id);
                 return l;
             }
-            return linssi?.Asteikko ?? (IReadOnlyList<string>)System.Array.Empty<string>();
+            // Omistaja 28.9.2026: asteikolla näkymän asemat lännestä itään (ei koko maailman rengasta).
+            return linssi?.NakymanAsteikko() ?? (IReadOnlyList<string>)System.Array.Empty<string>();
         }
 
         string Nimi(string id)
@@ -435,7 +436,11 @@ namespace Matkakirja.Natiivi
             string uusi = LaskeKeskus(idt);
             if (uusi != null) viimeisinKeskus = uusi;
             viisari.style.display = uusi == null ? DisplayStyle.None : DisplayStyle.Flex;
-            if (uusi == keskus && naytetyt.Count == paikat.Count && !mitaLiuku) return;
+            // Näkymän asemat vaihtuvat kameran mukana: naapurit uusiksi, kun joukko muuttuu (ilman liukua).
+            string allekirjoitus = string.Join(",", idt);
+            bool joukkoSama = allekirjoitus == asteikonAllekirjoitus;
+            asteikonAllekirjoitus = allekirjoitus;
+            if (uusi == keskus && naytetyt.Count == paikat.Count && !mitaLiuku && joukkoSama) return;
 
             // Liuun matka: uuden aseman vanha paikka nauhalla (web laskeLiuku).
             float leveys = nauha.layout.width;
@@ -463,10 +468,11 @@ namespace Matkakirja.Natiivi
             vetoJaannos = null;
             keskus = uusi;
 
-            // Naapurit renkaalta; lyhyellä asteikolla ei toistoja (tyhjät paikat reunoille).
+            // Naapurit näkymän asemista: lännessä vasemmalla, idässä oikealla, reunoilla tyhjää (ei kiertoa itäisimmästä
+            // läntisimpään, omistaja 28.9.2026). Testiasteikko kiertää kuten ennen.
             int nIdt = idt.Count, ic = uusi == null ? -1 : IndexOf(idt, uusi);
-            int vasen = ic < 0 ? 0 : System.Math.Min(perPuoli, (nIdt - 1) / 2);
-            int oikea = ic < 0 ? 0 : System.Math.Min(perPuoli, nIdt - 1 - vasen);
+            int vasen = ic < 0 ? 0 : testi ? System.Math.Min(perPuoli, (nIdt - 1) / 2) : System.Math.Min(perPuoli, ic);
+            int oikea = ic < 0 ? 0 : testi ? System.Math.Min(perPuoli, nIdt - 1 - vasen) : System.Math.Min(perPuoli, nIdt - 1 - ic);
             for (int i = 0; i < paikat.Count; i++)
             {
                 int k = i - perPuoli;
@@ -652,9 +658,17 @@ namespace Matkakirja.Natiivi
             nauha.style.translate = new Translate(x, 0);
         }
 
+        string asteikonAllekirjoitus;
+        float asteikkoTarkistettu;
+
         void Tikki()
         {
             if (sovitin != null && !ReferenceEquals(sovitin.Linssi, linssi)) Sido(sovitin.Linssi);
+            if (nakyvissa && !testi && liike == Liike.Ei && Time.unscaledTime - asteikkoTarkistettu > 1f)
+            {
+                asteikkoTarkistettu = Time.unscaledTime;
+                PaivitaAsteikko(false);
+            }
             if (!nakyvissa || liike == Liike.Ei) return;
             if (!LiikeSallittu) { PysaytaLiike(); return; }
             float t = Nyt - liikeAlku;

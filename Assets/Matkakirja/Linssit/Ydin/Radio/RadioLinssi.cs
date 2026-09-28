@@ -443,6 +443,25 @@ namespace Matkakirja.Linssit.Radio
         public IReadOnlyCollection<string> Nakyvat => nakyvat;
         /// <summary>Asteikon asemat (kaupunki-id:t) lännestä itään.</summary>
         public IReadOnlyList<string> Asteikko => asteikko;
+
+        /// <summary>
+        /// Näkymän asemat lännestä itään (omistaja 28.9.2026: "Asteikolla näytetään näkymän asemat länsi → itä"): Asteikko
+        /// rajattuna kameran lähialueeseen (Mastot.LahialueenNakyvyys &gt; 0,3, sama joukko kuin pallolla näkyvät mastot);
+        /// soiva asema on aina mukana. Ilman kameraa koko asteikko.
+        /// </summary>
+        public IReadOnlyList<string> NakymanAsteikko()
+        {
+            if (y?.Kamera is not Nakyma n || !(n.Korkeus > 0)) return asteikko;
+            double km = n.Korkeus / 1000;
+            var o = new List<string>();
+            foreach (var id in asteikko)
+            {
+                var k = aineisto.Kaupunki(id);
+                if (k == null) continue;
+                if (id == soiva || Mastot.LahialueenNakyvyys(Mastot.EtaisyysKm(n.Lat, n.Lon, k.Lat, k.Lon), km) > 0.3) o.Add(id);
+            }
+            return o;
+        }
         public IReadOnlyList<Asema> Asemat => aineisto.Asemat.Values.ToList();
         /// <summary>Maan asema (kartuscha).</summary>
         public Asema MaanAsema(string iso3) => aineisto.MaanAsema(iso3);
