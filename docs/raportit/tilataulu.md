@@ -1,5 +1,8 @@
 # Tilataulu
 
+**Päivitetty 22:16:** LEVY 66 Gi vapaa (<80, ilmoitettu). Kontekstit: Natiivi-UI 90 %, Natiiviseppä 71 %, Linssiseppä 2 70 %, Julkaisija 69 %, Linssiseppä 62 %, Karttaseppä 56 %, itse 51 %, Siirtoseppä 45 %, Päätoimittaja 31 %, Pelikoodari 19 %; Sisältökirjuri/Laitetestaaja >100 % (200k-ikkuna, epäluotettava). Sim 1 auki, kevyt pois, GPU-chrome 0, muisti 57 % vapaa, load 23. Pulu-tarkistus 7ba726d04 (EI) ilmoitettu.
+
+
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
 **Päivitetty:** 2026-09-28 15:10 EEST — **OMISTAJA VAPAUTTI KONEEN, KEVYT TILA POIS.** Ilmoitettu 7 GPU-roolille: GPU vapaa, simulaattori Julkaisijan vuorolla (päivällä 1), nice 15.
