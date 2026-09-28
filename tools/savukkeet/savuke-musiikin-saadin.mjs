@@ -13,6 +13,7 @@
  * polusta /opt/pw-browsers/chromium. Kaappaus kirjoitetaan
  * /tmp/matkakirja-kaappaukset/musiikkisaadin.png.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import { mkdirSync } from 'node:fs';
 
 // Sama kaksoispolku kuin muissa savukkeissa: repon oma asennus tai
@@ -31,6 +32,7 @@ const selain = await chromium.launch({
   args: ['--autoplay-policy=no-user-gesture-required', '--mute-audio'],
 });
 const sivu = await selain.newPage({ viewport: { width: 900, height: 800 } });
+await lisaaPolloKehittajakoodi(sivu); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 
 /*
  * Vakoilu ENNEN sivun koodia: kirjataan jokainen createMediaElementSource

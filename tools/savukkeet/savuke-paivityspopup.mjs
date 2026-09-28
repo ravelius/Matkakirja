@@ -5,6 +5,7 @@
  *     uusin versio ensin; Jatka sulkee.
  *  3. Toinen lataus samalla versiolla → EI popupia.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -38,6 +39,7 @@ const vaadi = (nimi, ehto) => { kaikki += 1; if (ehto) { lapi += 1; console.log(
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const ctx = await selain.newContext({ viewport: { width: 390, height: 844 } });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 
 // 1. Ensikäynti
 await sivu.goto(osoite, { waitUntil: 'load' });
