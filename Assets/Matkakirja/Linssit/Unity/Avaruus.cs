@@ -48,6 +48,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>A/B (`astro kyyti ilmakeha vanha|uusi`): kyydissäkin kaukonäkymän hehku.</summary>
         public static bool VanhaIlmakeha;
+        /// <summary>Yön ilmahehkun voimakkuus (Ilmakaari _Hehku); laite cl4 28.9.: 0,32 oli liian kirkas.</summary>
+        public const float IlmahehkunVoima = 0.12f;
         /// <summary>A/B (`astro kyyti hehku 0|1`): hämärän oranssi ja yön ilmahehku pois (ISS-realismi 3, kuvapari).</summary>
         public static bool HehkuPois;
         const float KyytiS = 0.8f, KaarenKorkeus = 120_000f;
@@ -196,7 +198,9 @@ namespace Matkakirja.Natiivi
             bool nakyy = kyyti > 0.001f;
             if (kaariPiirto.enabled != nakyy) kaariPiirto.enabled = nakyy;
             kaari.SetFloat("_Peitto", kyyti);
-            kaari.SetFloat("_Hehku", HehkuPois ? 0f : 0.32f);
+            // Ilmahehku himmeämmäksi ja ohuemmaksi (laite cl4 28.9.: 0,32 piirsi kirkkaan vihreän viivan; ISS:n yökuvissa se on
+            // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).
+            kaari.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima);
             kaari.SetFloat("_HamaraVoima", HehkuPois ? 0f : 1f);
             if (!nakyy || Time.unscaledTime - aurinkoPaivitetty < 1f) return;
             // Keskipiste, napa-akseli ja aurinko maailmassa (georeferenssi voi liikkua); aurinko liikkuu 0,25°/min.

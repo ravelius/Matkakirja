@@ -27,8 +27,8 @@ Shader "Matkakirja/Linssit/Ilmakaari"
         _Akseli("Napa-akseli (maailma)", Vector) = (0, 1, 0, 0)
         _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
         _Hamara("Hämärän sävy", Color) = (1, 0.42, 0.14, 1)
-        _HehkuVari("Ilmahehkun sävy", Color) = (0.38, 1, 0.5, 1)
-        _Hehku("Ilmahehkun voimakkuus (0 = pois)", Float) = 0.32
+        _HehkuVari("Ilmahehkun sävy", Color) = (0.55, 0.95, 0.5, 1)
+        _Hehku("Ilmahehkun voimakkuus (0 = pois)", Float) = 0.12
         _HamaraVoima("Hämärän sävyn voimakkuus (0 = pois)", Float) = 1
     }
     HLSLINCLUDE
@@ -109,9 +109,9 @@ Shader "Matkakirja/Linssit/Ilmakaari"
                 half hamara = (half)(exp(-(s * s) / (0.075 * 0.075)) * exp(-h / 9000.0)) * _HamaraVoima;
                 vari = lerp(vari, _Hamara.rgb, saturate(hamara * 1.4h));
                 a *= max(Aurinko(n), hamara * 0.8h);
-                // Ilmahehku yöllä: ohut kerros noin 95 km:ssä (σ 6 km), häipyy päivällä.
+                // Ilmahehku yöllä: ohut kerros noin 95 km:ssä (σ 4,5 km; laite cl4: 6 km oli paksu), häipyy päivällä.
                 half yo = 1.0h - (half)smoothstep(-0.105, 0.0, s);
-                half hehku = (half)(exp(-((h - 95000.0) * (h - 95000.0)) / (6000.0 * 6000.0)) * _Hehku) * yo;
+                half hehku = (half)(exp(-((h - 95000.0) * (h - 95000.0)) / (4500.0 * 4500.0)) * _Hehku) * yo;
                 a = saturate(a * 1.15h);
                 half yht = a + hehku - a * hehku;
                 vari = (vari * a + _HehkuVari.rgb * hehku) / max(a + hehku, 1e-3h);
