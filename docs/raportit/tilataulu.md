@@ -2,7 +2,13 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 10:57 EEST — **Natiiviseppä NOLLAUTUNUT (70%→17%).** Levy hyvä (134 Gi), uusi julkaisu käynnissä (10:49). Kaikki kontekstit alle kynnyksen.
+**Päivitetty:** 2026-09-28 10:59 EEST — **OMISTAJAN UUSI SÄÄNTÖ klo 17 asti: puolet koneesta (kuorma1 ≤8, ≤8 ydintä). LOAD1 61,2 — REILUSTI YLI — ILMOITETTU PÄÄTOIMITTAJALLE.** Syylliset: Karttasepän pallo-poltto (3× tee-pallolaatat.mjs rinnakkain), 2× test-sarja (sisaltopaketti.test.mjs, vienti.test.mjs), Unity-batch-build, ~32 Playwright/savuke-chromium-prosessia.
+
+## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
+
+Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet (kuorma1 ≤ 8, ≤ 8 ydintä). Käännökset yksi kerrallaan Julkaisijan vuorolla matalalla prioriteetilla, simulaattoreita enintään yksi, ei agenttiparvia rinnakkain (enintään 1 agentti per rooli), ei raskaita paikallisia ajoja. Postivahti seuraa load1:tä joka kierroksella — jos kuorma1 > 10 yli 5 min, ilmoitetaan syyllinen prosessi Päätoimittajalle ja omistavalle roolille.
+
+**10:59 LOAD1 61,2 — REILUSTI YLI RAJAN.** Tunnistetut syylliset: Karttasepän pallo-poltto (3× `tee-pallolaatat.mjs` rinnakkain, wt/karttaseppa-poltto-20260927 tms.), 2× testisarja (`sisaltopaketti.test.mjs`, `vienti.test.mjs`), Unity-batch-build (IosSimulaattori), ~32 Playwright/savuke-chromium-prosessia. Ilmoitettu Päätoimittajalle 10:59. Seurataan jatkuuko yli 5 min.
 
 ## 1) Sessiot
 
