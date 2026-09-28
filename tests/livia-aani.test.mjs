@@ -359,15 +359,20 @@ test('äänen osoite osoittaa ämpärin pulukansioon', () => {
    * pulun ääneksi Flickerin, ja koko sarja äänitettiin uudelleen.
    * Aiemmin erä oli vain koekuunneltujen repliikkien osoitteissa.
    */
+  // 28.9.2026: koko repertuaari on v4:llä versioiduissa avaimissa, jotka
+  // voittavat kyselyversion (?v=tiiviste-erä).
   assert.equal(livianAaniOsoite('mannerivihje', 0),
-    `${LIVIAN_AANIJUURI}livia-mannerivihje-1.mp3?v=${LIVIAN_AANITETYT['mannerivihje-1']}`
-    + `-${LIVIAN_AANIERAT['mannerivihje-1']}`);
+    `${AANI_JUURI}${LIVIAN_VERSIOIDUT_AANET['mannerivihje-1']}`);
+  assert.match(LIVIAN_VERSIOIDUT_AANET['mannerivihje-1'], /\/tasoitettu\/livia-mannerivihje-1\.mp3$/);
   assert.equal(livianAaniOsoite('kupla', 0), null);
 });
 
-test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotantoavaimia', () => {
-  // 45 kaupunkia + 10 ISS-repliikkiä (28.9.2026, js/livia.js LIVIAN_ISS).
-  assert.equal(Object.keys(LIVIAN_VERSIOIDUT_AANET).length, 45 + 10);
+test('koko repertuaari käyttää muuttumattomia tuotantoavaimia', () => {
+  // 28.9.2026 ilta: 45 city-3-kuplaa + viiden uuden kaupungin 10 kuplaa
+  // + 23 avaus/paljastus/mannerivihje/lehtivinkki/ihmisen-matka/sofia-5…14
+  // + 10 ISS-repliikkiä, kaikki eleven_v4:llä tasoitettuina.
+  assert.equal(Object.keys(LIVIAN_VERSIOIDUT_AANET).length, 45 + 10 + 23 + 10);
+  for (const polku of Object.values(LIVIAN_VERSIOIDUT_AANET)) assert.match(polku, /\/tasoitettu\//);
   assert.deepEqual(Object.keys(LIVIAN_KESTOT).sort(), Object.keys(LIVIAN_VERSIOIDUT_AANET).sort());
   const issRivit = Object.entries(LIVIAN_ISS)
     .flatMap(([ryhma, tekstit]) => tekstit.map((teksti, i) => [`iss-${ryhma}-${i + 1}`, teksti]));
@@ -387,8 +392,12 @@ test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotant
     // v4-erät soivat tasoitettuina (tools/tasoita-pulu.mjs, 28.9.2026): alikansio tasoitettu/.
     assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/(tasoitettu\/)?livia-.+\.mp3$/);
     assert.doesNotMatch(livianAaniOsoite(lahde, indeksi), /\?v=/);
-    assert.equal(LIVIAN_AANITETYT[avain], livianTiiviste(FOKUSVIRRAT[lahde].pollo.kommentti[0]),
-      `${avain}: näkyvän tekstin tiiviste`);
+    // Kaupunkikuplat -3 ja -4 = pakin kommentti[0] ja [1]; muiden tiivisteet
+    // valvoo kuivan ajon testi (kaikki ajan tasalla).
+    if (FOKUSVIRRAT[lahde] && lahde !== 'sofia' && (indeksi === 2 || indeksi === 3)) {
+      assert.equal(LIVIAN_AANITETYT[avain], livianTiiviste(FOKUSVIRRAT[lahde].pollo.kommentti[indeksi - 2]),
+        `${avain}: näkyvän tekstin tiiviste`);
+    }
     assert.ok(Number.isFinite(LIVIAN_KESTOT[avain]) && LIVIAN_KESTOT[avain] > 0,
       `${avain}: kuitin kesto`);
   }
@@ -476,16 +485,16 @@ test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => 
    * soittanut vanhan äänen. Erä tulee tiivisteen perään, joten tekstin
    * tiiviste ja sen vartijat säilyvät koskemattomina.
    */
-  assert.equal(livianAaniOsoite('avaus', 0),
-    `${LIVIAN_AANIJUURI}livia-avaus-1.mp3?v=${LIVIAN_AANITETYT['avaus-1']}-${LIVIAN_AANIERAT['avaus-1']}`);
+  // 28.9.2026: v4-versioitu kuiva tiedosto voittaa kyselyversion.
+  assert.equal(livianAaniOsoite('avaus', 0), `${AANI_JUURI}${LIVIAN_VERSIOIDUT_AANET['avaus-1']}`);
+  assert.doesNotMatch(LIVIAN_VERSIOIDUT_AANET['avaus-1'], /-kaiku\.mp3$/);
   /*
    * SOFIA ON ERÄSSÄ 3 (12.9.2026): omistaja tilasi kolmannen äänen
    * samoihin kohtauksiin sekä Sofiaan ja Krakovaan. Sofian koko ketju
    * äänitettiin, joten myös saapumisrepliikin osoitteessa on erä.
    */
-  assert.equal(livianAaniOsoite('sofia', 12),
-    `${LIVIAN_AANIJUURI}livia-sofia-13.mp3?v=${LIVIAN_AANITETYT['sofia-13']}`
-    + `-${LIVIAN_AANIERAT['sofia-13']}`);
+  assert.equal(livianAaniOsoite('sofia', 12), `${AANI_JUURI}${LIVIAN_VERSIOIDUT_AANET['sofia-13']}`);
+  assert.match(LIVIAN_VERSIOIDUT_AANET['sofia-13'], /\/livia-sofia-13\.mp3$/);
   // City-3 käyttää kuitin muuttumatonta avainta eikä vanhaa kyselyversiota.
   assert.equal(livianAaniOsoite('lontoo', 2),
     `${AANI_JUURI}${LIVIAN_VERSIOIDUT_AANET['lontoo-3']}`);
@@ -529,11 +538,9 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('paljastus-1'), 'ajan tasalla');
   assert.equal(tila('paljastus-3'), 'ajan tasalla');
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
-  // Kaikki Euroopan 45 city-3-riviä on nyt sidottu valmistuneisiin kuitteihin.
-  // 28.9.2026: viiden myöhemmin lisätyn kaupungin kaksi kuplaa odottavat
-  // v4-ajoa (peli vaikenee niissä, ks. alla) — lista tyhjenee ajon jälkeen.
-  const odotetutMuuttuneet = ['bryssel', 'kosice', 'ljubljana', 'luxemburg', 'valletta']
-    .flatMap((k) => [`${k}-3`, `${k}-4`]).sort();
+  // Kaikki repliikit on sidottu valmistuneisiin kuitteihin; viiden uuden
+  // kaupungin kuplat äänitettiin v4-ajossa 28.9.2026 ilta.
+  const odotetutMuuttuneet = [];
   assert.deepEqual(
     rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
     odotetutMuuttuneet,

@@ -45,7 +45,13 @@ export const PULU_TASO_LUFS = -17.2;
 export const PULU_LIMITTERI = 0.97;
 export const PULU_TASOITUS_BITTIVIRTA = '192k';
 /** eleven_v4-erät (tools/generoi-pulu.mjs, 28.9.2026). */
-export const V4_ERAT = Object.freeze(['pulu-3eaad28481f0aa2ef5a9', 'pulu-16f2c04e9e19bef41d64']);
+export const V4_ERAT = Object.freeze([
+  'pulu-3eaad28481f0aa2ef5a9', 'pulu-16f2c04e9e19bef41d64',
+  // Koko repertuaari v4:llä 28.9.2026 ilta (75 repliikkiä, 8 erää à ≤ 10).
+  'pulu-06b888b9453946cfbda6', 'pulu-12b15e8a504a9fcb2e3a', 'pulu-4fa1c5cfc51373a11429',
+  'pulu-62d4bea1517eaa83e5a4', 'pulu-64d79ec3f9a10726f753', 'pulu-84129c929509d868a32a',
+  'pulu-8faeb74edfc3ba66e61a', 'pulu-fa795db119f56b6ef97e',
+]);
 const MEDIA = 'https://media.matkakirja.app/';
 
 /** Tasoitetun äänitteen avain: sama kansio, alikansio tasoitettu/. */
