@@ -1730,3 +1730,56 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
  */
 body.satelliitti-kyyti .pollo-nappi.pollo-kelluu { z-index: 49; }
 body.satelliitti-kyyti.livia-astronautti-paalla .livia-lentonayttamo { z-index: 49; }
+
+/*
+ * "KYSY PULULTA" TAULUN ALAREUNASSA (Päätoimittaja 28.9.): Pulun oma
+ * toiminto, ei moodirivi — pieni tekstilinkki. Osuma-ala 44 px (sama kuin
+ * rivin vähimmäiskorkeus, ei korkeampi).
+ */
+.astro-paneeli-linkki {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  margin: 2px 0 0;
+  padding: 0 10px;
+  border: 0;
+  border-top: 1px solid rgba(233, 250, 240, 0.1);
+  background: transparent;
+  color: var(--astro-paneeli-himmea);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.astro-paneeli-linkki:focus-visible { outline: 2px solid var(--astro-paneeli-korostus); outline-offset: -2px; }
+
+/*
+ * NÄKYMÄT-NAPPI PULUN PAIKALLA, kun Livia ei ole vielä pelissä: sama kulma
+ * ja sama etäisyys reunoista kuin pelin Pulun napilla linssissä
+ * (css/styles.css .pollo-kelluu-kartalla: 3.6rem), osuma-ala 44 px.
+ * Valokuvan (z 47) alla, kyydissä kosketuskerroksen (z 48) päällä.
+ */
+.astro-nakymat-nappi {
+  position: fixed;
+  right: calc(3.6rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.6rem + env(safe-area-inset-bottom, 0px));
+  z-index: 46;
+  box-sizing: border-box;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(93, 255, 168, 0.28);
+  background: rgba(6, 13, 10, 0.72);
+  color: rgba(233, 250, 240, 0.9);
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+.astro-nakymat-nappi[hidden] { display: none; }
+body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }

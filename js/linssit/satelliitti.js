@@ -1238,6 +1238,11 @@ function avaaHavaintokortti({
     onSuljettu?.();
   }
   katselu.satelliittiSulje = sulje;
+  /*
+   * PULUN TAULU (js/linssit/pulu-taulu.js): minipulun napautus avaa nyt
+   * taulun, ja taulun "Kysy Pululta" avaa tämän chatin tällä kahvalla.
+   */
+  katselu.satelliittiChat = (auki = true) => { naytaPulukortti(Boolean(auki)); return true; };
   sulku.addEventListener('click', (e) => { e.stopPropagation(); sulje(); });
   document.addEventListener('keydown', nappain);
 
@@ -1980,6 +1985,8 @@ function avaa(lauta, tila, ui) {
     suljeKuva: suljeKortti,
     avaaKuva: avaaLahinKohde,
     kuviaOn: () => kohteet.length > 0,
+    avaaChat: () => Boolean(kortti?.satelliittiChat?.(true)),
+    suljeChat: () => kortti?.satelliittiChat?.(false),
   })) : null;
   /*
    * PISTEET RUUDULLE ASTI (ks. PISTEIDEN_UUSINTAVALI_MS yllä). Vartija

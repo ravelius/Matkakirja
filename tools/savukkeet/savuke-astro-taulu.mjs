@@ -163,7 +163,7 @@ const avaaLinssi = async (s) => {
 
 /**
  * Taulun tila, paneelin mitat ja peitto sivulta. Ensin odotetaan, että
- * avoimen paneelin häivytys on perillä (enintään 3 s): raskaalla
+ * avoimen paneelin häivytys on perillä (enintään 8 s): raskaalla
  * ohjelmistorenderöinnillä (swiftshader, iPad 2×) CSS-siirtymän kello
  * käynnistyy vasta seuraavasta esitetystä kehyksestä.
  */
@@ -171,7 +171,7 @@ const taulunTila = async (s) => {
   await s.waitForFunction(() => {
     const p = document.querySelector('.astro-paneeli');
     return !p || !p.classList.contains('astro-paneeli-auki') || Number(getComputedStyle(p).opacity) > 0.99;
-  }, null, { timeout: 3000, polling: 50 }).catch(() => {});
+  }, null, { timeout: 8000, polling: 50 }).catch(() => {});
   return taulunTilaNyt(s);
 };
 const taulunTilaNyt = (s) => s.evaluate(async () => {
@@ -190,7 +190,7 @@ const taulunTilaNyt = (s) => s.evaluate(async () => {
       tunnus: r.dataset.tunnus, valittu: r.classList.contains('astro-valittu'),
     })) : [],
     kesto: p ? getComputedStyle(p).transitionDuration : null,
-    pulu: (() => { const r = pulunLaatikko(document); return r ? [r.left, r.top, r.right, r.bottom].map(Math.round) : null; })(),
+    pulu: (() => { const r = pulunLaatikko(document, { eleenVara: false }); return r ? [r.left, r.top, r.right, r.bottom].map(Math.round) : null; })(),
     sulku: (() => {
       const x = p?.querySelector('.astro-sulku');
       if (!x) return null;
@@ -269,7 +269,7 @@ const kuva = async (s, nimi) => {
    * js/fokusvirta.js) syntyy uudelleen linssin alle. Pelaajan polulla
    * saapumiskuva on jo ohi, kun linssi avataan.
    */
-  await s.evaluate(() => { for (const el of document.querySelectorAll('.fokusvirta-ohitanappi')) el.remove(); });
+  await s.evaluate(() => { for (const el of document.querySelectorAll('.fokusvirta-ohitanappi, .fokusvirta-isokuva')) el.remove(); });
   await s.screenshot({ path: join(ULOS, `${nimi}.png`), timeout: 90000 });
 };
 
@@ -347,7 +347,7 @@ for (const laite of ['iphone', 'ipad']) {
   const ikkunaan = await odota(s, () => {
     const m = window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.kyytiMoodi?.();
     return m?.tila === 'ikkuna' && !m.siirtyy;
-  }, null, 12000);
+  }, null, 25000);
   t = await taulunTila(s);
   vaadi(n('4. ISS:n sisälle → Cupola (kyyti ikkunassa)'), ikkunaan && !t.nakyy, JSON.stringify(t.kyyti));
   // Cupolan kuvat latautuvat ämpäristä.
@@ -389,8 +389,44 @@ for (const laite of ['iphone', 'ipad']) {
     if (!b?.width) return 'piilossa';
     return document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2)?.closest?.('.pollo-nappi') ? 'osuu' : 'peitossa';
   });
-  await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.taulu.avaa());
-  await s.waitForTimeout(250);
+  /* 8. Valokuvan minipulu avaa taulun; "Kysy Pululta" → chatti auki, taulu kiinni. */
+  const napautaMinipulua = async () => {
+    const r = await s.evaluate(() => {
+      const b = document.querySelector('.satelliitti-pulunappi')?.getBoundingClientRect();
+      return b?.width ? { x: b.left + b.width / 2, y: b.top + b.height / 2 } : null;
+    });
+    if (r) { await s.mouse.click(r.x, r.y); await s.waitForTimeout(300); }
+    return Boolean(r);
+  };
+  const chattiAuki = () => s.evaluate(() => {
+    const k = document.querySelector('.satelliitti-pulukortti');
+    return Boolean(k && !k.hidden && k.getBoundingClientRect().height > 0);
+  });
+  const m1 = await napautaMinipulua();
+  t = await taulunTila(s);
+  vaadi(n('8. valokuvan minipulu avaa taulun (ei chattia)'), m1 && t.nakyy && t.kuva && !(await chattiAuki()),
+    JSON.stringify({ m1, nakyy: t.nakyy, valittu: t.rivit.find((r) => r.valittu)?.tunnus }));
+  vaadi(n('8. kuvanäkymässä taulu ei peitä minipulua'),
+    t.pulu && !leikkaa(t.laatikko, t.pulu) && t.pulu[1] - t.laatikko[3] >= 8,
+    `taulu ${JSON.stringify(t.laatikko)} minipulu ${JSON.stringify(t.pulu)}`);
+  const linkki = await s.evaluate(() => {
+    const b = document.querySelector('.astro-paneeli-linkki')?.getBoundingClientRect();
+    const rivi = document.querySelector('.astro-paneeli-rivi')?.getBoundingClientRect();
+    return b ? { w: Math.round(b.width), h: Math.round(b.height), rivi: Math.round(rivi?.height ?? 0), teksti: document.querySelector('.astro-paneeli-linkki').textContent } : null;
+  });
+  vaadi(n('8. "Kysy Pululta" -linkki: osuma-ala ≥ 44 px, ei riviä korkeampi'),
+    linkki?.teksti === 'Kysy Pululta' && linkki.h >= 44 && linkki.h <= linkki.rivi, JSON.stringify(linkki));
+  await kuva(s, `astro-taulu-${laite}-6-kuva-minipulu-taulu`);
+  await s.evaluate(() => document.querySelector('.astro-paneeli-linkki')?.scrollIntoView?.({ block: 'nearest' }));
+  const lb = await s.evaluate(() => { const b = document.querySelector('.astro-paneeli-linkki').getBoundingClientRect(); return { x: b.left + 40, y: b.top + b.height / 2 }; });
+  await s.mouse.click(lb.x, lb.y);
+  await s.waitForTimeout(500);
+  t = await taulunTila(s);
+  vaadi(n('8. "Kysy Pululta" → chatti auki ja taulu kiinni'), (await chattiAuki()) && !t.nakyy && t.t?.auki === false,
+    JSON.stringify({ nakyy: t.nakyy, loki: t.t?.loki?.slice(-3) }));
+  const m2 = await napautaMinipulua();
+  t = await taulunTila(s);
+  vaadi(n('8. minipulu chatin päältä: taulu auki, chatti kiinni'), m2 && t.nakyy && !(await chattiAuki()));
   await valitseRivi(s, 'pallo');
   await s.waitForTimeout(600);
   t = await taulunTila(s);
@@ -422,9 +458,44 @@ for (const laite of ['iphone', 'ipad']) {
   vaadi(n('6. toinen avaus: ei tervetuloa, taulu ≤ 2 s paljastuksesta ilman puhetta'),
     toinen.avattu && !toinen.tervetulo && heti.viiveMs !== null && heti.viiveMs <= 2000 && !heti.liviaAani,
     JSON.stringify({ ...toinen, ...heti }));
+  /* 9. Ilman Liviaa: Näkymät-nappi Pulun paikalla avaa taulun; Pulun palatessa nappi katoaa. */
+  vaadi(n('9. Pulun kanssa Näkymät-nappia ei näy'), await s.evaluate(() => {
+    const b = document.querySelector('.astro-nakymat-nappi');
+    return Boolean(b) && (b.hidden || !b.getBoundingClientRect().width);
+  }));
+  await s.evaluate(() => {
+    window.matkakirja.ui.pallolinssi.kahva.taulu.sulje();
+    window.matkakirja.game.polloLoydetty = false;
+    window.matkakirjaPollo?.paivitaNakyvyys?.();
+    // Pakotetun Ateena-saapumisen kuva palaa pelin tilasta: savukkeen artefakti.
+    for (const el of document.querySelectorAll('.fokusvirta-isokuva, .fokusvirta-ohitanappi')) el.remove();
+  });
+  const nakymat = await odota(s, () => {
+    const b = document.querySelector('.astro-nakymat-nappi')?.getBoundingClientRect();
+    return Boolean(b?.width);
+  }, null, 5000);
+  const puluPoissa = await s.evaluate(async () => !(await import('/js/linssit/pulu-taulu.js')).pulunPaikalla(document));
+  const nb = await s.evaluate(() => { const b = document.querySelector('.astro-nakymat-nappi')?.getBoundingClientRect(); return b?.width ? { x: b.left + b.width / 2, y: b.top + b.height / 2, w: Math.round(b.width), h: Math.round(b.height) } : null; });
+  if (nb) await s.mouse.click(nb.x, nb.y);
+  await s.waitForTimeout(300);
+  t = await taulunTila(s);
+  vaadi(n('9. ilman Liviaa Näkymät-nappi avaa taulun (osuma ≥ 44 px)'),
+    nakymat && puluPoissa && t.nakyy && nb?.h >= 44 && nb?.w >= 44, JSON.stringify({ nakymat, puluPoissa, nb, nakyy: t.nakyy }));
+  vaadi(n('9. taulu Näkymät-napin yllä ≥ 8 px'), t.pulu && !leikkaa(t.laatikko, t.pulu) && t.pulu[1] - t.laatikko[3] >= 8,
+    `taulu ${JSON.stringify(t.laatikko)} nappi ${JSON.stringify(t.pulu)}`);
+  await kuva(s, `astro-taulu-${laite}-7-nakymat-nappi`);
+  await s.evaluate(() => {
+    window.matkakirja.game.polloLoydetty = true;
+    window.matkakirjaPollo?.paivitaNakyvyys?.();
+  });
+  const katosi = await odota(s, () => {
+    const b = document.querySelector('.astro-nakymat-nappi');
+    return b && (b.hidden || !b.getBoundingClientRect().width);
+  }, null, 5000);
+  vaadi(n('9. Pulun palatessa Näkymät-nappi katoaa'), katosi);
   await s.evaluate(() => window.matkakirja.ui.valitseLinssi(null));
   await s.waitForTimeout(800);
-  const jaljella = await s.evaluate(() => document.querySelectorAll('.astro-paneeli').length);
+  const jaljella = await s.evaluate(() => document.querySelectorAll('.astro-paneeli, .astro-nakymat-nappi').length);
   vaadi(n('linssin sulku purkaa taulun'), jaljella === 0, `${jaljella}`);
   vaadi(n('7. ei sivuvirheitä'), virheet.length === 0, virheet.slice(0, 3).join(' | '));
   await konteksti.close();
