@@ -8647,3 +8647,7 @@ Omistaja 28.9. klo 13.4x kortilla: 'OK, mergeen' — aloituslento v3e2 (Natiivis
 ## OMISTAJA: CUPOLA PEHMEA + RAE JA LIPPU HYVAKSYTTY; KAUPUNKIEN VALOT 80 % (28.9.2026 klo 14.14)
 
 Omistaja 28.9. klo 14.1x kortilla: Cupola pehmea + rae (Linssiseppa cl5, poltettu itse, ei Codex-tilausta) hyvaksytty; natiivin lippu (saapuessa 1.0.33-koko, ylittaa rajan, zoomissa kasvaa neliojuurella) hyvaksytty. Kaupunkien valot sanatarkasti: "valot palavat puhki. miltä näyttää, jos pidetään esim 80% peitolla?" → Linssiseppa kuvapari 80 % (ja 60 %).
+
+## OMISTAJA: TARVITSEE KONEEN (KEVYT TILA PAALLE) (28.9.2026 klo 14.32)
+
+Omistaja 28.9. sanatarkasti: "tarvitsen nyt konetta itse". Kevyt lippu paalle (Julkaisija), GPU-roolit tiedotettu Postivahdin kautta: simulaattorit kiinni, ei GPU-toita, raskaat CPU-tyot taskpolicy -b, kaannokset nice 15; Karttasepan pallopoltto + vienti SIGSTOP. TF 1.0.36 -vienti saa ajaa. Kaynnissa oleva taysi savukesarja 36405304787 (GPU) omistajalle perumiskomentona.
