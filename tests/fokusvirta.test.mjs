@@ -952,14 +952,18 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
     }
   }
   /*
-   * KYMMENEN + KOLME + NELJÄTOISTA + KAHDEKSAN. Ensimmäinen erä
-   * (26.–27.8.2026) oli antiikin kadonneet ihmeet, Euroopan erä
-   * (27.8.2026) toi kolme lisää (Forum Romanum, Tuileries, vanha
-   * St Paul), MAAILMAN erä samana päivänä neljätoista viideltä
+   * KYMMENEN + KOLME + NELJÄTOISTA + KAHDEKSAN + KOLMETOISTA.
+   * Ensimmäinen erä (26.–27.8.2026) oli antiikin kadonneet ihmeet,
+   * Euroopan erä (27.8.2026) toi kolme lisää (Forum Romanum, Tuileries,
+   * vanha St Paul), MAAILMAN erä samana päivänä neljätoista viideltä
    * mantereelta ja VÄLIMEREN erä vielä kahdeksan antiikin Välimereltä
-   * ja Mesopotamiasta.
+   * ja Mesopotamiasta. Sisältökirjurin erä (28.9.2026) kytki Codexin
+   * tilaamat 14 loistoaikakuvaa peliin — 6 kadonnutta (AUT, NLD, CHE,
+   * SWE, BLR, BIH) ja 8 rappeutunutta parikuvana (SRB, ALB, MKD, MNE,
+   * CYP, MLT, MDA, BIH); DNK oli jo pelissä (christiansborg), joten
+   * nettolisäys on 13.
    */
-  assert.equal(ihmeita, 104, 'Matkakirjan ihmeitä on sataneljä');
+  assert.equal(ihmeita, 117, 'Matkakirjan ihmeitä on sataseitsemäntoista');
 });
 
 /*
