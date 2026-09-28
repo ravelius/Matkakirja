@@ -8539,3 +8539,7 @@ Omistaja 28.9. sanatarkasti: "Striimin lukijan kaiuttimeen voisi tehdä animaati
 ## BUGI (OMISTAJA): AANIVALINNAN ULKOPUOLELLE NAPAUTUS SULKEE KOKO NOSTOKORTIN — SAANTO: ULKOPUOLINEN NAPAUTUS SULKEE VAIN PAALLIMMAISEN KERROKSEN (28.9.2026 klo 09.58)
 
 Omistaja 28.9. (TF 1.0.34) sanatarkasti: "Nyt jos vaihdan striimilukijan ääntä ja klikkaan nostokorttia pois taakseni valintanäkyvän yläreunasta, niin kortti katuaakin ja palaa suoraan karttanäkymään virheellisesti. Nostokortti saisi siis jäädä näkyviin ja pelkästään se lukijan äänivalinta häipyä pois näkyvistä." Natiivi-UI korjaa 1.0.35:een; Pelikoodari varmistaa webin + savukevaite; sama saanto uuteen kaksinappiseen valikkoon.
+
+## PAIVITYSLAPPU NAYTTAA MUUTOKSET; TESTFLIGHTIN TESTATTAVAA YHDEN RIVIN MITTAISEKSI (28.9.2026 klo 10.02)
+
+Natiivi-UI paivityslappu e19b5d97 (kaannos 522ba7cf): lappu hakee muutoslokirivin tarvittaessa verkon uusimmasta paketista (1.0.34-rivi tuli pakettiin vasta v257:ssa), yleinen teksti pois, versio v1.0.34; merge-pyynto 1.0.35. Omistaja vahvisti kortilla: 'aiemmat tekstilaput' = TestFlightin Testattavaa → Julkaisija jattaa sen yhteen riviin; muutosloki-natiivi.json-rivi kirjoitetaan pelaajan kielella ilman 'Build N:' -etuliitetta.
