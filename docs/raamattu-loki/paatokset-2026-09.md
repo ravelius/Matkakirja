@@ -8535,3 +8535,7 @@ Omistaja 28.9. TF 1.0.34 (Korintin kanava) sanatarkasti: "Nosto myös aukeaa tä
 ## OMISTAJA: STRIIMILUKIJAN KAIUTTIMEEN LATAUSANIMAATIO AANEN GENEROINNIN AJAKSI (28.9.2026 klo 09.56)
 
 Omistaja 28.9. sanatarkasti: "Striimin lukijan kaiuttimeen voisi tehdä animaation siksi ajaksi, kun odotellaan, että ääni saadaan generoitua. Kaiuttimen päällä voisi silloin pyöriä pieni ympyräanimaatio tai vastaava sopiva." Pelikoodari (web) striimilukijan valikkoeraan: hento pyoriva rengas kaiuttimen paalla kunnes aani alkaa (nakyy vasta ~250 ms viiveen jalkeen), vaihtuu VU-mittariin; natiivi Natiivi-UI:lta web mallina.
+
+## BUGI (OMISTAJA): AANIVALINNAN ULKOPUOLELLE NAPAUTUS SULKEE KOKO NOSTOKORTIN — SAANTO: ULKOPUOLINEN NAPAUTUS SULKEE VAIN PAALLIMMAISEN KERROKSEN (28.9.2026 klo 09.58)
+
+Omistaja 28.9. (TF 1.0.34) sanatarkasti: "Nyt jos vaihdan striimilukijan ääntä ja klikkaan nostokorttia pois taakseni valintanäkyvän yläreunasta, niin kortti katuaakin ja palaa suoraan karttanäkymään virheellisesti. Nostokortti saisi siis jäädä näkyviin ja pelkästään se lukijan äänivalinta häipyä pois näkyvistä." Natiivi-UI korjaa 1.0.35:een; Pelikoodari varmistaa webin + savukevaite; sama saanto uuteen kaksinappiseen valikkoon.
