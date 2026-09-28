@@ -81,6 +81,26 @@ Shader "Matkakirja/Linssit/Cupola"
                 return length(q) - r;
             }
 
+            // Naarmut (laitteen 2. kierros 28.9.: yhdensuuntaiset alipikseliviivat piirtyivät pisteriveinä): ruudukon soluun
+            // korkeintaan yksi lyhyt hiusviiva satunnaisessa suunnassa, reunanpehmennys pikselin leveydestä (px), päät häipyvät.
+            half Naarmut(float2 q, float px)
+            {
+                const float Solu = 0.06;
+                float2 solu = floor(q / Solu);
+                if (Hash(solu + 17.1) > 0.2) return 0;
+                float2 p = q / Solu - solu;
+                float kulma = Hash(solu + 3.7) * 3.14159;
+                float2 suunta = float2(cos(kulma), sin(kulma));
+                float pituus = 0.35 + 0.45 * Hash(solu + 9.2);
+                float2 keski = 0.3 + 0.4 * float2(Hash(solu + 1.3), Hash(solu + 5.9));
+                float2 a = keski - suunta * pituus * 0.5, ab = suunta * pituus;
+                float t = saturate(dot(p - a, ab) / dot(ab, ab));
+                float d = length(p - a - ab * t) * Solu;
+                float viiva = 1 - smoothstep(px * 0.3, px * 1.1, d);
+                float paat = smoothstep(0, 0.2, t) * smoothstep(1, 0.8, t);
+                return (half)(viiva * paat * (0.45 + 0.55 * Hash(solu + 11.3)));
+            }
+
             // Sylinterin varjostus poikkileikkauksen normaalista (s / r → −1…1) ja valon suunnasta ruututilassa.
             half Sylinteri(float s, float r, float2 akseli, float3 valo)
             {
@@ -119,20 +139,33 @@ Shader "Matkakirja/Linssit/Cupola"
                     // Aurinkopaneelin kulma oikeassa yläikkunassa: kullanruskea kennoverkko, kiilto auringon suunnasta.
                     float2 pa = float2(0.085, 0.735), pu = normalize(float2(1, -0.18)), pv = float2(-pu.y, pu.x);
                     float2 pl = float2(dot(q - pa, pu), dot(q - pa, pv));
-                    float paneeli = step(0, pl.x) * step(0, pl.y) * step(pl.y, 0.15);
+                    // Perspektiivi (laitteen 2. kierros 28.9.: tasainen ruudukko näytti yhä laattalattialta): paneeli loittonee
+                    // oikealle kohti katoamispistettä x = 1 / 3,2, joten reunat suppenevat ja kennot tihenevät kauempana.
+                    float syvyys = max(0.06, 1 - 3.2 * pl.x);
+                    float2 pt = float2(pl.x / syvyys, pl.y / syvyys);   // paneelin tason koordinaatit
+                    float paneeli = step(0, pl.x) * step(0, pt.y) * step(pt.y, 0.15);
+                    // Kennot tason koordinaateissa, raot reunanpehmennettyinä (fwidth ennen haarautumista): lähellä 1 px:n tumma
+                    // rako, kaukana ruudukko häipyy tasaiseksi sävyksi eikä muutu pistekuvioksi. Joka kahdeksas rivi on sauma.
+                    float2 kenno = pt / float2(0.0042, 0.0030);
+                    float2 kfw = max(fwidth(kenno), 1e-4);
+                    float2 kr = abs(frac(kenno - 0.5) - 0.5) / kfw;
+                    half hienous = (half)saturate(1.6 - max(kfw.x, kfw.y) * 2.2);
+                    half rako = (half)(1 - saturate(min(kr.x, kr.y) - 0.35)) * hienous;
+                    float sy = pt.y / 0.024, syfw = max(fwidth(sy), 1e-4);
+                    half sauma = (half)(1 - saturate(abs(frac(sy - 0.5) - 0.5) / syfw - 0.4)) * (half)saturate(1.4 - syfw * 2);
                     if (paneeli > 0)
                     {
-                        // Aurinkopaneeli (laitteen 1. kierros: karkea ruudukko näytti laattalattialta): kullanhohtoiset kennot
-                        // tummin raoin, kennorivien välissä leveämpi tumma sauma, sävyliuku ja kiilto; tangon puolella harmaa masto.
-                        float2 kenno = frac(pl / float2(0.0085, 0.0055));
-                        float2 lohko = frac(pl / float2(0.034, 0.066));
-                        half rako = (half)saturate(step(kenno.x, 0.12) + step(kenno.y, 0.14) + step(lohko.y, 0.05) * 1.0);
-                        half3 kulta = lerp(half3(0.72, 0.50, 0.20), half3(0.52, 0.34, 0.13), (half)saturate(pl.x * 4));
-                        half3 pinta = lerp(kulta, half3(0.07, 0.06, 0.05), rako * 0.85h);
+                        // Kennojen sävy vaihtelee hieman (valmistuserä), kullanruskea tummuu kauemmas.
+                        half vaihtelu = (half)(0.9 + 0.2 * Hash(floor(kenno)));
+                        half3 kulta = lerp(half3(0.60, 0.39, 0.13), half3(0.40, 0.25, 0.08), (half)saturate(pl.x * 3.5)) * vaihtelu;
+                        half3 pinta = lerp(kulta, half3(0.06, 0.05, 0.045), saturate(rako * 0.55h + sauma * 0.4h));
                         half kiilto = (half)pow(saturate(dot(reflect(-aurinko, normalize(float3(0.1, 0.35, 0.93))), float3(0, 0, 1))), 18) * paiva;
-                        half3 c = pinta * (0.22h + 0.95h * voima * (half)saturate(aurinko.z + 0.35)) + kiilto * half3(1, 0.85, 0.55) * (1 - rako * 0.7h);
-                        // Masto (paneelin alareuna, tangon puoleinen sivu) harmaana putkena.
-                        half masto = (half)(1 - smoothstep(0.0035, 0.0055, abs(pl.y - 0.004)));
+                        half3 c = pinta * (0.16h + 0.7h * voima * (half)saturate(aurinko.z + 0.35)) + kiilto * half3(1, 0.85, 0.55) * (1 - rako * 0.7h) * 0.8h;
+                        // Hopeinen kehysreuna ylä- ja alareunassa, alareunassa harmaa masto putkena.
+                        float ry = min(pt.y, 0.15 - pt.y) * syvyys;
+                        half reunus = (half)(1 - smoothstep(px * 0.8, px * 2.2, ry));
+                        c = lerp(c, half3(0.62, 0.63, 0.64) * (0.25h + 0.75h * voima), reunus * 0.8h);
+                        half masto = (half)(1 - smoothstep(0.0035, 0.0055, abs(pt.y - 0.004) * syvyys));
                         c = lerp(c, half3(0.55, 0.56, 0.57) * (0.3h + 0.8h * voima), masto);
                         ulkoC = c; ulkoA = 1;
                     }
@@ -187,8 +220,7 @@ Shader "Matkakirja/Linssit/Cupola"
                 lasiC += h.rgb * h.a * 0.9h;
                 // Tahrat, naarmut ja pöly: näkyvät vain valossa.
                 half tahra = (half)smoothstep(0.62, 0.92, Kohina(q * 14 + 7.3)) * (half)Kohina(q * 55);
-                float naarmuSuunta = dot(q, normalize(float2(0.8, 0.6)));
-                half naarmu = (half)(step(0.9985, frac(naarmuSuunta * 260)) * step(0.75, Kohina(q * 9 + 1.7)));
+                half naarmu = Naarmut(q, fwidth(q.y));
                 half poly = (half)step(0.9965, Hash(floor(q * 900))) * (half)saturate(lahella * 3 + 0.2);
                 half valossa = 0.12h + 0.9h * aurinkoLasiin;
                 lasiC += half3(0.8, 0.85, 0.85) * (tahra * 0.05h + naarmu * 0.22h + poly * 0.35h) * valossa * lasi;

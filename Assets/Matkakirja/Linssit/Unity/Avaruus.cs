@@ -19,10 +19,10 @@
 // tulee Ilmakaari (kuori R + 120 km, analyyttinen kaari horisontin yllä ja usva maan päällä); musta avaruus yläpuolella.
 // Siirtymä 0,8 s. A/B: VanhaIlmakeha = true pitää kyydissäkin vanhan hehkun (kuvapari).
 //
-// TAUSTAN UUDELLEENYRITYS (Cupolan 1. kierros 28.9.: kermanvaalea taivas ja usva koko näkymässä): Taustavari lukee
-// Camera.mainin, joka on null, kun elävä kerros on sammuttanut pääkameran (KERROS-tila). Silloin tausta jäi asettamatta,
-// OmaTausta pysyi epätotena ja Aurinko piti horisonttiusvan (UsvaVari) ja pelin taustan koko linssin ajan. Yritetään
-// joka kehys, kunnes OmaTausta on voimassa (pääkamera palaa, kun kamera liikkuu, esim. avauksen kamera-ajo).
+// TAUSTAN VAHTI (Cupolan 1. kierros 28.9.: kermanvaalea taivas ja usva koko näkymässä, eli OmaTausta oli epätosi ja Aurinko
+// piti horisonttiusvan ja pelin taustan koko linssin ajan): Taustavari lukee Camera.mainin, joka on null, kun pääkamera on
+// pois (elävän kerroksen KERROS-tila tai peitto), jolloin tausta jää asettamatta. Tausta tarkistetaan joka kehys ja
+// asetetaan uudelleen, jos OmaTausta ei ole voimassa, myös jos se palautui kesken linssin. Molemmat tapaukset lokiin.
 using System;
 using CesiumForUnity;
 using Unity.Mathematics;
@@ -62,21 +62,29 @@ namespace Matkakirja.Natiivi
             return a;
         }
 
-        bool taustaAsetettu;
-        int taustaYritykset;
+        bool taustaOli;
+        int taustaYritykset, taustaPalautui;
 
-        /// <summary>Tausta Natiivisepän rajapinnalla (kameran tausta); uudelleen joka kehys, kunnes OmaTausta (ks. alkukommentti).</summary>
+        /// <summary>Tausta Natiivisepän rajapinnalla (kameran tausta), joka kehys, jos OmaTausta ei ole voimassa (ks. alkukommentti).</summary>
         void AsetaTausta()
         {
             var kk = KarttaKerrokset.Instanssi;
-            if (kk == null) return;
+            if (kk == null || kk.OmaTausta) return;
+            if (taustaOli)
+            {
+                if (++taustaPalautui <= 3) Debug.Log("MATKAKIRJA linssit: avaruus: tausta palautui pelin omaksi kesken linssin, asetetaan uudelleen");
+                taustaOli = false;
+                taustaYritykset = 0;
+            }
             kk.Taustavari(Tausta);
             taustaYritykset++;
-            taustaAsetettu = kk.OmaTausta;
-            if (taustaYritykset == 1 && !taustaAsetettu)
-                Debug.Log("MATKAKIRJA linssit: avaruus: tausta ei asettunut (pääkamera pois, elävä kerros?), yritetään joka kehys");
-            else if (taustaAsetettu && taustaYritykset > 1)
-                Debug.Log($"MATKAKIRJA linssit: avaruus: tausta asettui {taustaYritykset}. yrityksellä");
+            if (kk.OmaTausta)
+            {
+                taustaOli = true;
+                if (taustaYritykset > 1) Debug.Log($"MATKAKIRJA linssit: avaruus: tausta asettui {taustaYritykset}. yrityksellä");
+            }
+            else if (taustaYritykset == 1)
+                Debug.Log("MATKAKIRJA linssit: avaruus: tausta ei asettunut (pääkamera pois?), yritetään joka kehys");
         }
 
         void Rakenna(CesiumGeoreference g)
@@ -166,7 +174,7 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
-            if (!taustaAsetettu) AsetaTausta();
+            AsetaTausta();
             bool avaus = peitto < 1f, siirtyy = kyyti != kyytiTavoite;
             if (!avaus && !siirtyy && kyyti <= 0f) return;
             peitto = Mathf.MoveTowards(peitto, 1f, Time.unscaledDeltaTime / HaivytysS);
