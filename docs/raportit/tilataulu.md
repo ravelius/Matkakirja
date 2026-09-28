@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 14:02 EEST — Rutiinikierto, ei poikkeamia. Juna aktiivinen (13:58 uusi käännöskierros, Natiivi-UI 4 haaraa 13:59 mergetty). Natiiviseppä 64% ennallaan, ei ylitystä.
+**Päivitetty:** 2026-09-28 14:14 EEST — Rutiinikierto, ei poikkeamia. Juna käännetty 14:12 (5480b556), aktiivinen. Natiiviseppä 66% — nousussa, seurataan lähelle 70%.
 
 ## 0) Kuorman/GPU:n valvonta (voimassa oleva tila, päivitetty 12:43)
 
@@ -21,16 +21,16 @@ Ei kynnysylityksiä — kaikki alle 70%.
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
 | Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 37% | idle |
-| Postivahti (self) | (tämä sessio) | 23% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 47% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 64% | idle |
+| Postivahti (self) | (tämä sessio) | 25% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 49% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 66% | idle |
 | Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 19% | idle |
 | Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 37% | idle |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 51% | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 56% | running |
 | Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 61% | idle |
-| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 52% | idle |
+| Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 53% | idle |
 | Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 29% | running |
-| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 33% | idle |
+| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 34% | idle |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
 
@@ -86,18 +86,19 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (14:02)
+## 5) Resurssit (14:14)
 
-- **5 h -kiintiö:** 28 %. **Viikko (kaikki mallit): 26 %.** **Viikko (Päätoimittaja):** 0 %.
+- **5 h -kiintiö:** 29 %. **Viikko (kaikki mallit): 27 %.** **Viikko (Päätoimittaja):** 0 %.
 - **Levy:** 130 Gi vapaana (86% käytössä), puskuri hyvä (raja 80 Gt).
-- **Muistipaine:** normal (1). **NAS:** ei tarkistettu erikseen. **Simulaattorit boottina:** 1 (pariteetti-iPhone, päiväraja 1, OK).
+- **Muistipaine:** normal (1). **NAS:** ei tarkistettu erikseen. **Simulaattorit boottina:** 0 (päiväraja 1, OK).
 - **Liput:** `/tmp/matkakirja-kevyt` poissa — kone vapaa, nice-oletus voimassa.
 - **Konteksti (roolit ≥70%):** ei ylityksiä.
-- **GPU (chrome-headless-gpu):** 0 kpl — alle rajan, ei hälytystä.
-- **coreaudiod:** normaali (≤6,9%), ei toimenpidettä.
+- **GPU (chrome-headless-gpu):** 2 kpl — alle rajan (>4), ei hälytystä.
+- **coreaudiod:** normaali (≤5,8%), ei toimenpidettä.
 - **Effort-tarkistus (7 Opus-roolia):** ei poikkeamia.
 - **Lokisiivouskandidaatteja:** ei tarkistettu tällä kierroksella.
 - **Postilaatikko:** EI UUTTA.
+- **Juna:** käännetty 14:12 (5480b556) — aktiivinen, ei jumia.
 - **Juna:** 13:58 uusi käännöskierros (yläraja-laukaisu), 13:59 Natiivi-UI 4 haaraa mergetty 1.0.36-junaan — aktiivinen, ei jumia.
 - **Juna:** käännetty 13:45 (7b7549c1), jono aktiivinen 13:48 — korjattu mittari (osio 0), ei jumia.
 - **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
