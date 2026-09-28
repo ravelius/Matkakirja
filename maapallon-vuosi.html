@@ -15,6 +15,8 @@
     ?luettelo=<url>   kerrosluettelo (oletus ämpärin data/maapallon-vuosi/kerrokset.json); suhteelliset kuvapolut
                       luetaan luettelon kansiosta
     ?pyori=0          ei automaattista pyöritystä (kuvasarjat)
+    ?ampari=<kansio>  paikallinen ämpärin peili (data/bmng/, data/maapallon-vuosi/kerrokset.json): sama luettelo ja
+                      polut kuin tuotannossa (Karttasepän vienti), ennen ämpäriä ja ilman CORS-estettä
     ?pohja=<kansio>   BMNG-pohjien kansio (<kk>-4096.jpg); paikallisessa kehityksessä, koska ämpäri ei anna
                       CORS-lupaa localhostille
 -->
@@ -55,6 +57,13 @@
     peitto: luku('peitto', 0.7),
     pyorita: q.get('pyori') !== '0',
   };
+  const ampari = q.get('ampari');
+  if (ampari) {
+    const juuri = new URL(ampari.endsWith('/') ? ampari : `${ampari}/`, location.href).href;
+    valinnat.luettelo = `${juuri}data/maapallon-vuosi/kerrokset.json`;
+    valinnat.kerrosJuuri = juuri;
+    valinnat.pohja = (kk) => `${juuri}data/bmng/${String(kk).padStart(2, '0')}-4096.jpg`;
+  }
   const pohja = q.get('pohja');
   if (pohja) {
     const juuri = new URL(pohja.endsWith('/') ? pohja : `${pohja}/`, location.href).href;

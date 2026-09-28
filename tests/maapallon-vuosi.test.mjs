@@ -6,7 +6,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  kuukaudenPohja, kerroksenKuva, lueKerrosluettelo, haivytys, piirtojarjestys, KUUKAUSINIMET, LINSSI, HAIVYTYS_MS,
+  kuukaudenPohja, kerroksenKuva, kokoPallonKorkeus, lueKerrosluettelo, haivytys, piirtojarjestys, KUUKAUSINIMET, LINSSI, HAIVYTYS_MS,
 } from '../js/linssit/maapallon-vuosi.js';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 
@@ -58,4 +58,13 @@ test('linssi on rekisterissä hiomassa (ei pelaajille) ja kuvaus täydellinen', 
   assert.equal(rivi.tuo, undefined, 'ei tuontia: moottori ei tarjoa linssiä');
   for (const k of ['tunnus', 'nimi', 'lyhyt', 'ikoni', 'laudat', 'lahde']) assert.ok(LINSSI[k], k);
   assert.equal(LINSSI.tunnus, rivi.tunnus);
+});
+
+test('koko pallo mahtuu ruutuun: kapea ruutu nostaa kameraa', () => {
+  const nelio = kokoPallonKorkeus(900, 900, 50);
+  const pysty = kokoPallonKorkeus(390, 844, 50);
+  const vaaka = kokoPallonKorkeus(1600, 900, 50);
+  assert.ok(Math.abs(nelio - (1.12 / Math.sin((25 * Math.PI) / 180) - 1)) < 1e-9);
+  assert.ok(pysty > nelio * 1.5, `puhelin pystyssä ${pysty}`);
+  assert.equal(vaaka, nelio, 'leveä ruutu: pystysuunta rajaa');
 });

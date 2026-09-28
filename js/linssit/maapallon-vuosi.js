@@ -27,6 +27,17 @@ export const LEVEYS = 4096;
 export const KORKEUS = 2048;
 /** Kuukauden vaihdon ristihäivytys (ms); reduced motion: 0. */
 export const HAIVYTYS_MS = 650;
+/**
+ * Aloitusnäkymän korkeus (Globe.gl altitude, pallon säteinä pinnasta), jolla koko pallo mahtuu ruutuun kapeammankin
+ * sivun suunnassa (Linssiseppä 2, natiivi KokoPallonKorkeus: puhelin pystyssä pallo ei leikkaudu). Pystysuora
+ * näkökenttä fov astetta; vara = pallon halkaisija suhteessa kapeampaan näkökenttään (1,12 = 12 % reunaa).
+ */
+export function kokoPallonKorkeus(leveys, korkeus, fov = 50, vara = 1.12) {
+  const pysty = (fov * Math.PI) / 180;
+  const vaaka = 2 * Math.atan(Math.tan(pysty / 2) * (leveys > 0 && korkeus > 0 ? leveys / korkeus : 1));
+  return vara / Math.sin(Math.min(pysty, vaaka) / 2) - 1;
+}
+
 /** Vuoden toisto: kuukausi näin monta ms (häivytys mukaan lukien). */
 export const TOISTON_KUUKAUSI_MS = 1400;
 
@@ -192,7 +203,7 @@ export async function avaaMaapallonVuosi({ kotelo, kk = new Date().getMonth() + 
     .backgroundColor('#05070d')
     .showAtmosphere(true).atmosphereColor('#8fb4ff').atmosphereAltitude(0.16)
     .globeImageUrl(pohja(kk));
-  pallo.pointOfView({ lat: 30, lng: 15, altitude: 2.3 }, 0);
+  pallo.pointOfView({ lat: 30, lng: 15, altitude: kokoPallonKorkeus(leveys(), korkeus(), pallo.camera()?.fov ?? 50) }, 0);
   const ohjaimet = pallo.controls();
   ohjaimet.autoRotate = pyorita && !reduced;
   ohjaimet.autoRotateSpeed = 0.35;
@@ -220,7 +231,7 @@ export async function avaaMaapallonVuosi({ kotelo, kk = new Date().getMonth() + 
   }
 
   const tila = { kk, kerros: kerrokset.some((k) => k.tunnus === kerros) ? kerros : null, peitto, mista: kk,
-    alku: 0, piirretty: null, piirtoja: 0, tekstuuri: null, purettu: false };
+    alku: 0, vuoro: 0, piirretty: null, piirtoja: 0, tekstuuri: null, purettu: false };
   let toisto = 0;
   let kehys = 0;
 
@@ -268,10 +279,17 @@ export async function avaaMaapallonVuosi({ kotelo, kk = new Date().getMonth() + 
     // Kesken häivytyksen: uusi vaihto alkaa siitä, mikä ruudulla nyt pääosin näkyy.
     tila.mista = tila.piirretty && tila.piirretty.t < 0.5 ? tila.piirretty.a : tila.kk;
     tila.kk = n;
-    tila.alku = ikkuna.performance?.now?.() ?? Date.now();
     ikkuna.cancelAnimationFrame?.(kehys);
     nimet();
-    void piirra();
+    // Häivytys alkaa vasta, kun uuden kuukauden kuvat ovat ladattu (Linssiseppä 2): hitaalla verkolla kello ei saa
+    // kulua latauksen aikana, jolloin t hyppäisi suoraan 1:een. Uudempi valinta ohittaa kesken jääneen.
+    const vuoro = ++tila.vuoro;
+    const k = kerrokset.find((x) => x.tunnus === tila.kerros);
+    void Promise.all([hae(pohja(n)), k ? hae(kerroksenKuva(k, n, kerrosJuuri)) : null]).then(() => {
+      if (vuoro !== tila.vuoro || tila.purettu) return;
+      tila.alku = ikkuna.performance?.now?.() ?? Date.now();
+      void piirra();
+    });
     // Seuraava kuukausi valmiiksi välimuistiin, ettei toisto odota verkkoa.
     void hae(pohja((n % 12) + 1));
   }
