@@ -9,6 +9,14 @@
  * ja tyypin 'meri' nosto pitävät oman pisteensä. Hahmotelmat pysyvät
  * elävinä: maa EI ole LUKITUT_MAAT-listalla (poltto on oma päätöksensä).
  * Raportti docs/raportit/viesti-fable-ankkurilukitus-20260919.md.
+ *
+ * KRONBORG (28.9.2026): linnan todelliset koordinaatit (56.0386, 12.6219)
+ * eivät läpäise ne50.geojson-maamaskia — Helsingørin niemi Öresundin
+ * kapeimmassa kohdassa on liian kapea 1:50M-aineiston yleistykselle, ja
+ * lähin automaattisesti löytyvä maapiste olisi harhauttanut ankkurin
+ * Ruotsin puolelle salmea. Lng siirretty 12.595:een (~1,7 km länteen,
+ * yhä Helsingørin kaupungin sisällä) — tools/maamaski.mjs onMaalla()
+ * palauttaa true vasta lng <= 12.600:sta alkaen tällä leveysasteella.
  */
 export const NOSTOANKKURIT_DNK = {
   'nosto:billund': { lat: 55.734143, lng: 9.116000 },
@@ -17,7 +25,7 @@ export const NOSTOANKKURIT_DNK = {
   'nosto:hetki-viikinkilaiva-roskilde-1040': { lat: 55.754523, lng: 12.017480 },
   'nosto:itameri': { lat: 54.879610, lng: 12.613892 },
   'nosto:jellingin-kivet': { lat: 55.757641, lng: 9.419000 },
-  'nosto:kronborg': { lat: 56.038600, lng: 12.621900 },
+  'nosto:kronborg': { lat: 56.038600, lng: 12.595000 },
   'nosto:lindholm-hoje': { lat: 57.080278, lng: 9.914000 },
   'nosto:mllehj': { lat: 55.977301, lng: 9.827000 },
   'nosto:mons-klint': { lat: 54.992511, lng: 12.445952 },
