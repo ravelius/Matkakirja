@@ -8955,3 +8955,7 @@ Omistaja 28.9. klo 22.42 sanatarkasti: "ongelma taitaakin olla siinä että stri
 ## OMISTAJA: STRIIMI ALKAA VÄÄRÄSTÄ KOHDASTA JA HYPPÄÄ ~15 S JÄLKEEN ALKUUN (28.9.2026 klo 22.44)
 
 Omistaja 28.9. klo 22.44 sanatarkasti (korjaa 22.42-kirjauksen puskurihypoteesin): "eikun kyllä se vain aloittaa väärästä kohdasta ja noin 15sek päästä hyppää alkuun ja aloittaa sieltä uudestaan. kokeilin kokonaan uudella nostolla ja se tosiaan luki siitä uudesta nostosta ensin alkupäästä tekstiä mutta ei alusta ja vasta sitten hyppäsi oikeasti alkuun ja aloitti sieltä luennan uudestaan" → Natiivi-UI: epäillyt kaksi rinnakkaista lähdettä (nopea aloitus/välimuistin pala/esihaku), palojen järjestys, jatkamiskohta tai uusinta ~15 s aikakatkaisun jälkeen; lokita palan indeksi, lähde ja soittohetki; kärki kaiutinkorjauksen jälkeen.
+
+## OMISTAJA: PULUN [SOFTLY]-TAGI TOIMII HUONOSTI (28.9.2026 klo 22.48)
+
+Omistaja 28.9. klo 22.48 (Helsinki-3 'Se katsoi minua kuin olisin ollut harjoittelija' [softly]) sanatarkasti: "tuo softly toimii vähän huonosti, sitä on ilmeiseti useammassakin eri kohdassa?" → [softly] 27 kohdassa (tools/generoi-pulu.mjs). Pulun v4-PR menee silti junaan; Pelikoodari: korvaajakoe Helsinki-3:lla ([dryly]/[deadpan]/[warmly]/ilman), suositus kuivalle loppukevennykselle ja herkälle loppulauseelle, kooste nykyinen | suositus omistajalle; OK:n jälkeen 27 kohtaa uudelleen jatko-PR:nä. Samalla korjataan helsinki-3:n osumaton [brightly]-ankkuri.
