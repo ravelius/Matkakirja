@@ -3218,7 +3218,7 @@
     position: absolute;
     left: 12px;
     top: 10px;
-    width: 280px;
+    width: 320px;
     padding: 12px;
     flex-direction: column;
 }
@@ -3244,10 +3244,18 @@
     flex-grow: 1;
     flex-shrink: 1;
     height: 40px;
-    padding: 0 8px 0 24px;
+    padding: 0 8px 0 28px;
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+}
+
+/* LIVE-piste kilven oman merkkivalon päällä (readout-kuvan valo x 17, y 20; ei kahta pistettä, kuten webissä). */
+.mk-isskyyti__tieto .mk-isskyyti__piste {
+    position: absolute;
+    left: 13.5px;
+    top: 16.5px;
+    margin-right: 0;
 }
 
 .mk-issohjaus__lukema.mk-issnahka--perus {
@@ -3260,6 +3268,9 @@
 .mk-isskyyti__teksti {
     font-size: 13px;
     white-space: nowrap;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: rgb(93, 255, 168);
 }
 
@@ -3462,7 +3473,19 @@
 .mk-issohjaus__nimi {
     flex-grow: 1;
     font-size: 12px;
+    letter-spacing: 1px;
     color: rgba(233, 250, 240, 0.85);
+}
+
+.mk-issohjaus__paat {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.mk-issohjaus__paa {
+    font-size: 11px;
+    color: rgba(233, 250, 240, 0.65);
 }
 
 .mk-issohjaus__arvo {

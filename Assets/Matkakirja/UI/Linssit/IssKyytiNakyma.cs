@@ -188,14 +188,15 @@ namespace Matkakirja.Natiivi
             ylilentoKilpi.style.display = DisplayStyle.None;
 
             // Olosuhteet: pilvipeitto ja vuodenaika (arvo otsikkorivillä).
-            pilviSaadin = IssOhjaus.Liukusaadin(sivut[2], "Pilvipeitto", 0f, 1f, v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); });
+            pilviSaadin = IssOhjaus.Liukusaadin(sivut[2], "Pilvipeitto", 0f, 1f, v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
+                vasen: "Selkeä", oikea: "Nykyinen");
             // Kuluva kuukausi = ei pakotusta (pinta seuraa taas ISS-kelloa, myös nopeutettuna).
             kuukausiSaadin = IssOhjaus.Liukusaadin(sivut[2], "Vuodenaika", 1f, 12f, v =>
             {
                 int kk = Mathf.RoundToInt(v);
                 AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
                 PaivitaSaatimet();
-            }, kokonaisluku: true);
+            }, kokonaisluku: true, vasen: "Tammikuu", oikea: "Joulukuu");
             PaivitaPaneeli();
             OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
 
@@ -205,6 +206,9 @@ namespace Matkakirja.Natiivi
             {
                 var r = kerros.Reunat(LinssiUi.Kerros);
                 turva.style.left = r.x; turva.style.top = r.y; turva.style.right = r.z; turva.style.bottom = r.w;
+                // Paneelin leveys kuten webissä (Siirtoseppä 29.9.): puhelimessa 320, iPadilla 360, enintään ruutu − 24.
+                float leveys = juuri.layout.width - r.x - r.z;
+                if (leveys > 0) ohjaimet.style.width = Mathf.Min(leveys > 700 ? 360f : 320f, leveys - 24f);
             });
         }
 

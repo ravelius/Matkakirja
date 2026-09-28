@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
             var osat = new (Osa Osa, string Tiedosto, int Slice)[]
             {
                 (Osa.Paneeli, "panel", 20), (Osa.Liukusaadin, "slider-track", 0), (Osa.Nuppi, "slider-thumb", 0),
-                (Osa.Segmentti, "segment-cell", 0), (Osa.Valikkorivi, "button-row", 12), (Osa.Lukema, "readout", 10),
+                (Osa.Segmentti, "segment-cell", 10), (Osa.Valikkorivi, "button-row", 12), (Osa.Lukema, "readout", 10),
                 (Osa.Sulku, "close", 0),
             };
             var tilanimet = new (Tila Tila, string Nimi)[] { (Tila.Normaali, "normal"), (Tila.Aktiivinen, "active"), (Tila.Pois, "disabled") };
@@ -169,25 +169,37 @@ namespace Matkakirja.Natiivi
             return Pue(b, Osa.Sulku);
         }
 
-        /// <summary>Liukusäädinrivi: nimi · lukema yläpuolella, ura ja nuppi alla. Arvo 0…1 tai kokonaisluvut (askel 1).</summary>
+        /// <summary>
+        /// Liukusäädin kuten webissä (Siirtoseppä 29.9.): otsikko "PILVIPEITTO · NYT" (nimi ja lukema isoin kirjaimin), ura
+        /// ja nuppi, alla ääripäiden nimet (Selkeä … Nykyinen). Arvo 0…1 tai kokonaisluvut (askel 1).
+        /// </summary>
         public sealed class Saadin
         {
             public readonly Slider Liuku;
             public readonly Label Nimi, Lukema;
             readonly bool kokonais;
+            readonly string nimi;
             bool asettaa;
 
-            internal Saadin(VisualElement paneeli, string nimi, float min, float max, bool kokonaisluku, Action<float> muuttui)
+            internal Saadin(VisualElement paneeli, string nimi, float min, float max, bool kokonaisluku, Action<float> muuttui,
+                string vasen = null, string oikea = null)
             {
                 kokonais = kokonaisluku;
+                this.nimi = nimi;
                 var ylarivi = Rakenne.El("mk-issohjaus__rivi", paneeli);
-                Nimi = Rakenne.Teksti(nimi, "mk-issohjaus__nimi", ylarivi);
-                Lukema = Rakenne.Teksti("", "mk-issohjaus__arvo", ylarivi);
+                Nimi = Rakenne.Teksti(nimi.ToUpperInvariant(), "mk-issohjaus__nimi", ylarivi);
+                Lukema = Nimi;
                 Liuku = new Slider(min, max) { pageSize = 0 };
                 Liuku.AddToClassList("mk-saadin");
                 Liuku.AddToClassList("mk-issohjaus__liuku");
                 Liuku.tooltip = nimi;
                 paneeli.Add(Liuku);
+                if (vasen != null || oikea != null)
+                {
+                    var paat = Rakenne.El("mk-issohjaus__paat", paneeli, PickingMode.Ignore);
+                    Rakenne.Teksti(vasen ?? "", "mk-issohjaus__paa", paat);
+                    Rakenne.Teksti(oikea ?? "", "mk-issohjaus__paa mk-issohjaus__paa--oikea", paat);
+                }
                 // Codexin ura ja nuppi Sliderin omiin osiin (tracker ja dragger).
                 var ura = Liuku.Q(className: "unity-base-slider__tracker");
                 var nuppi = Liuku.Q(className: "unity-base-slider__dragger");
@@ -217,11 +229,12 @@ namespace Matkakirja.Natiivi
             public void Aseta(float arvo, string lukema)
             {
                 if (!Mathf.Approximately(Liuku.value, arvo)) { asettaa = true; Liuku.SetValueWithoutNotify(arvo); asettaa = false; }
-                Lukema.text = lukema;
+                Nimi.text = (string.IsNullOrEmpty(lukema) ? nimi : nimi + " · " + lukema).ToUpperInvariant();
             }
         }
 
-        public static Saadin Liukusaadin(VisualElement paneeli, string nimi, float min, float max, Action<float> muuttui, bool kokonaisluku = false) =>
-            new Saadin(paneeli, nimi, min, max, kokonaisluku, muuttui);
+        public static Saadin Liukusaadin(VisualElement paneeli, string nimi, float min, float max, Action<float> muuttui,
+            bool kokonaisluku = false, string vasen = null, string oikea = null) =>
+            new Saadin(paneeli, nimi, min, max, kokonaisluku, muuttui, vasen, oikea);
     }
 }
