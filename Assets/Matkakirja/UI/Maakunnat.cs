@@ -644,19 +644,27 @@ namespace Matkakirja.Natiivi
     /// </summary>
     public sealed class MaakuntaKortti
     {
+        readonly UiKerros kerros;
         readonly VisualElement himmennys, kortti, kuvat;
         readonly ScrollView sisalto;
         readonly Label otsikko, teksti;
         readonly VisualElement puluLohko;
+        /// <summary>Kuvan kokoruutusuurennos (omistaja 28.9.2026): sama komponentti ja asetukset kuin Nostokortti.</summary>
+        readonly Kuvasuurennos suurennos;
         (Button Nappi, Label Vastaus) avoinVastaus;
         public bool Auki { get; private set; }
 
         public MaakuntaKortti(UiKerros kerros)
         {
+            this.kerros = kerros;
             himmennys = Rakenne.El("mk-himmennys mk-maakuntaKortti__kerros", kerros.Juuri(UiKerros.Valikot));
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
-            kortti = Rakenne.El("mk-maakuntaKortti", himmennys);
+            // Omistaja 28.9.2026: kortti saman kokoinen kuin nostokortti — mk-nosto-luokka + sama leveyskaava
+            // (Nostokortti.LaskeLeveys), ei omaa ulkoasua (mieluummin lisätty nostokortin luokka tähän kuin
+            // muutettu nostokortin tyylejä).
+            himmennys.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
+            kortti = Rakenne.El("mk-maakuntaKortti mk-nosto", himmennys);
             var sulje = Rakenne.Nappi("×", "mk-selite__sulje mk-maakuntaKortti__sulje", Sulje, kortti);
             sulje.tooltip = "Sulje";
             sisalto = new ScrollView(ScrollViewMode.Vertical);
@@ -671,6 +679,24 @@ namespace Matkakirja.Natiivi
             teksti = Rakenne.Teksti("", "mk-maakuntaKortti__teksti", sisalto);
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
             puluLohko = Rakenne.El("mk-maakuntaKortti__pulu", sisalto, PickingMode.Ignore);
+            // Kuvan napautus kokoruudulle (omistaja 28.9.2026): sama Kuvasuurennos-komponentti kuin Nostokortti.
+            suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
+        }
+
+        /// <summary>Sama leveyskaava kuin Nostokortti.Mitoita (Nostokortti.LaskeLeveys): kortit samankokoisia.</summary>
+        void Mitoita()
+        {
+            var pohja = himmennys.panel?.visualTree.layout ?? default;
+            var t = kerros.Reunat(UiKerros.Valikot);
+            float rl = pohja.width - t.x - t.z, rk = pohja.height - t.y - t.w;
+            if (float.IsNaN(rl) || float.IsNaN(rk) || rl <= 0 || rk <= 0)
+            {
+                kortti.style.width = StyleKeyword.Null;
+                kortti.style.maxWidth = StyleKeyword.Null;
+                return;
+            }
+            float leveys = Nostokortti.LaskeLeveys(rl, rk);
+            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
         }
 
         public void Avaa(string nimi, string pitka, IReadOnlyList<Dictionary<string, object>> kuvalista, IReadOnlyList<(string Q, string A)> kysymykset)
@@ -682,6 +708,7 @@ namespace Matkakirja.Natiivi
             sisalto.scrollOffset = Vector2.zero;
             if (Auki) return;
             Auki = true;
+            Mitoita();
             Rakenne.Nayta(himmennys, true, 220);
             SyoteLukko.Esta(this);
         }
@@ -690,6 +717,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             Auki = false;
+            suurennos.Sulje();
             Rakenne.Nayta(himmennys, false, 220);
             SyoteLukko.Vapauta(this);
         }
@@ -699,6 +727,9 @@ namespace Matkakirja.Natiivi
             kuvat.Clear();
             kuvat.style.display = lista.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (lista.Count == 0) return;
+            // Omistaja 28.9.2026: kuvan napautus avaa saman kokoruutusuurennoksen kuin nostokortti (Kuvasuurennos);
+            // koko kuvasarja selattavaksi kuten nostokortissa (Nostokortti.Suurenna).
+            var sarja = lista.Select(MaakuntaLehtikuva).ToList();
             // Kaksi rinnakkain, useampi vaakavieritteeseen (webin karuselli).
             VisualElement isa = kuvat;
             if (lista.Count > 2)
@@ -711,22 +742,38 @@ namespace Matkakirja.Natiivi
                 isa = v.contentContainer;
                 isa.style.flexDirection = FlexDirection.Row;
             }
-            foreach (var k in lista)
+            for (int i = 0; i < lista.Count; i++)
             {
-                var kehys = Rakenne.El("mk-maakuntaKortti__kuva" + (lista.Count > 2 ? " mk-maakuntaKortti__kuva--karuselli" : ""), isa, PickingMode.Ignore);
+                var k = lista[i];
+                int kohta = i;
+                // Kehys napautettavissa (ei PickingMode.Ignorea kuten kuva-alkiolla): napautus avaa suurennoksen.
+                var kehys = Rakenne.El("mk-maakuntaKortti__kuva" + (lista.Count > 2 ? " mk-maakuntaKortti__kuva--karuselli" : ""), isa);
                 var kuva = Rakenne.El("mk-maakuntaKortti__kuvapinta", kehys, PickingMode.Ignore);
                 string osoite = MiniJson.Teksti(k, "osoite");
                 if (!string.IsNullOrEmpty(osoite))
                     Kuvat.Hae(osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
-                string lahde = string.Join(" · ", new[] { MiniJson.Teksti(k, "lahde"), MiniJson.Teksti(k, "lisenssi") }.Where(s => !string.IsNullOrEmpty(s)));
-                // Tekijä ja lisenssi Commonsista, jos puuttuu (web karttatyokalu-maakunnat taytaLahderivi, #3438).
-                lahde = Kuvatekija.Taydenna(lahde, MiniJson.Teksti(k, "tiedosto") ?? osoite) ?? "";
+                kehys.RegisterCallback<ClickEvent>(_ => suurennos.Avaa(sarja, kohta));
+                string lahde = KuvanLahde(k, osoite);
                 if (lahde.Length > 0)
                 {
                     var l = Rakenne.Teksti(lahde, "mk-maakuntaKortti__lahde", kehys);
                     Kirjasimet.Aseta(l, Kirjasin.Kone);
                 }
             }
+        }
+
+        /// <summary>Lähderivi täydennettynä Commonsin tekijällä ja lisenssillä, jos puuttuu (web taytaLahderivi, #3438).</summary>
+        static string KuvanLahde(Dictionary<string, object> k, string osoite)
+        {
+            string lahde = string.Join(" · ", new[] { MiniJson.Teksti(k, "lahde"), MiniJson.Teksti(k, "lisenssi") }.Where(s => !string.IsNullOrEmpty(s)));
+            return Kuvatekija.Taydenna(lahde, MiniJson.Teksti(k, "tiedosto") ?? osoite) ?? "";
+        }
+
+        /// <summary>Maakunnan kuva Kuvasuurennokselle (sama kuvatyyppi kuin nostokortin kuvasarjassa).</summary>
+        static LehtiKuva MaakuntaLehtikuva(Dictionary<string, object> k)
+        {
+            string osoite = MiniJson.Teksti(k, "osoite");
+            return new LehtiKuva { Lahde = osoite, LahdeRivi = KuvanLahde(k, osoite) };
         }
 
         void TaytaPulu(IReadOnlyList<(string Q, string A)> kysymykset)

@@ -320,8 +320,18 @@ namespace Matkakirja.Natiivi
             kuvaKatto = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
             // Fable 26.9. (UI-pariteetti iPad 13): 130/135:n kuvan korkeudesta laskettu leveys enintään LeveysKatto (webin
             // ~34 rem vastine); omistajan löydös koski puhelimen pystykuvaa, ei koko iPadin ruutua. Pystypuhelimella ei vaikuta.
-            float leveys = Mathf.Round(Mathf.Min(Mathf.Min(kuvaKatto * 1.5f + KortinVara, rl - 2f * Sivuvara), LeveysKatto));
+            float leveys = LaskeLeveys(rl, rk);
             if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
+        }
+
+        /// <summary>
+        /// Kortin leveys turva-alueen käytettävästä koosta (sama kaava kuin Mitoita): omistaja 28.9.2026, maakunnan
+        /// kortti "saman kokoinen kuin muut nostot" (MaakuntaKortti.Mitoita) — yksi laskukaava kaikille korteille.
+        /// </summary>
+        public static float LaskeLeveys(float rl, float rk)
+        {
+            float kuvaKattoLaskuun = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
+            return Mathf.Round(Mathf.Min(Mathf.Min(kuvaKattoLaskuun * 1.5f + KortinVara, rl - 2f * Sivuvara), LeveysKatto));
         }
 
         // Web NOSTOKUVA_YLAVARA 88 (omistaja 12.9.): vaiheen 1 kortti ei jää keskitettynä tätä alemmas, jotta vaiheen 2
