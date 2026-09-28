@@ -202,3 +202,53 @@ herääminen (ehdotus era6-ehdotus-20260927.md kohta 2). Tässä on vain hyväks
   Luo-kytkimeen (`"geysir" => new GeysirLiike(id),`).
 - Haara `mallinseppa/<erä>` junan päälle, merge-pyyntö Natiivisepälle ja kuvat kansioon
   proto-3d/lokit/erikoismallit/geysir/.
+
+## 11. Toteutus 28.9.2026 (Opus-agentti, harness proto-3d/tyokalut/mallinseppa-esikatselu-o2)
+- Runko 560 + osat 868 = **LOD0 1 428** (budjetti 1 500), **Lahi 1 522** (2,72 × runko). Runko: Laugarfjall 126, Strokkurin
+  kumpu ja pohja 112, Geysirin kilpi ja vesi 134, Blesi, Konungshver ja Litli Geysir 104, köysi 36 sekä rakennukset ja
+  ikkunat 48. Osat: maa 140, allas 42, kupu 40, patsas 112, roiske 26, hoyry0–4 5 × 16, kuohu 48, suuri 144,
+  suurihoyry0–2 3 × 16, turisti0–8 168 ja valot 10 + 10. Maa 0,967 × 0,796, levossa korkeus 0,096 (Laugarfjall).
+  Luo: `"geysir" => new GeysirLiike(id),`.
+- **Patsaat:** Strokkurin patsas on 0,40 (siemenestä 0,34–0,46 ja joskus 0,50–0,54, huojunnan kanssa enintään 0,57), kun
+  §4:ssä oli 0,30. 30°:n kamera puolittaa korkeudet, ja 0,30 näkyi 40 pt:ssä pienenä möykkynä. Patsas on kapea varsi ja
+  sen ympärillä sivuun vuorottelevia vaahtomöykkyjä, joiden alapuoli on loiva (30°:n kamera ei näe sitä). Aiempi
+  kaksoispyramidien pino näytti helminauhalta. Kruunusta putoaa lyhyt vaahtohelma. Suuren Geysirin patsas (0,80) on
+  epäsäännöllinen möykkypino kukkakaalimaisella kruunulla ilman putoavia kieliä (kielet ja vaakasuorat kerrokset
+  näyttivät kuuselta).
+- **Höyry:** möykyt syntyvät kruunun korkeudelle (0,24–0,34 × korkeus) 0,025 tuulen alapuolelle, ja tuuli vie ne heti
+  hidastuen (vana kruunusta, ei palloa huipulle). Möykyt ovat Strokkurilla 0,044–0,056 ja Suurella Geysirillä
+  0,062–0,072 (speksi 0,035–0,07). Tuuli puhaltaa vain idän, pohjoisen ja lännen välillä (0–180°; speksi −35…215°), joten
+  höyry ei koskaan kulje patsaan tai turistien eteen. Ajautuma rajataan purkauksen alussa suunnan mukaan niin, että möykky
+  säteineen pysyy saarekkeella (reunataulukko 32 suunnassa GeysirLiike.Reuna, testi vertaa GysReunaSadeen). Ilman rajausta
+  Suuren Geysirin höyry ajautui pohjoisessa saarekkeen yli.
+- **Maa:** oliivinen nummi ja sen keskellä vaalea geoterminen kenttä (speksin soranvärinen maa ja vaalea reunakaista
+  näyttivät lautaselta). Maa on hyvin loiva kartio (keskellä 0,0015, reunalla 0), joten reunassa ei ole kynnystä. Saarekkeessa
+  on kaksi loivaa pullistumaa: vasemmassa takakulmassa Laugarfjallille ja oikeassa etukulmassa rakennuksille. Kentällä on
+  punaruskea laikku Strokkurin takana (patsaan tausta 30°:ssa), okranvärinen Laugarfjallin juurella ja Litli Geysirin
+  ympärillä, ja märät valumaviuhkat Strokkurilta ja Geysiriltä.
+- **Laugarfjall** on pienempi ja matalampi (0,27 × 0,33, korkeus 0,096; speksi 0,12) ja hillitympi. Ensimmäinen kupu hallitsi
+  mallia, ja sen ääriviiva näkyi saarekkeen reunan yli tummana kaarena. Nyt kupu on kokonaan saarekkeella.
+- **Paikat:** Blesin altaat siirtyivät hieman itään (−0,098, 0,066 ja −0,122, 0,110) Laugarfjallin juuren tieltä, ja Litli
+  Geysir on kohdassa (−0,200, −0,240). Rakennukset ja tie siirtyivät 0,025 luoteeseen saarekkeen sisään. Seinät ovat
+  korkeampia (0,024 ja 0,022), ja ikkunat ovat leveämpiä (Geysir-keskuksen julkisivussa neljä 0,019:n lasiseinää, hotellissa
+  neljä 0,014:n ikkunaa ja päädyissä 0,013), jotta yövalot erottuvat 30°:ssa.
+- **Turistit** ovat 0,045 korkeita ja hartioista 0,016 leveitä (speksi 0,04), jotta rengas näkyy 40 pt:ssä pisteinä. Suuren
+  Geysirin aikana turistit kääntyvät Geysiriin päin ja nojaavat 5–9° taaksepäin kuin katsoisivat ylös. Etelän puolen
+  turisteilla pelkkä kääntö olisi vain noin 4°, koska Geysir on heidän näkökulmastaan suoraan Strokkurin takana.
+- **Lähitaso:** kummut 21 kulmalla (runko 14). Kohina on kulman mukaan jatkuva, joten lähitason siluetti kulkee rungon
+  kärkien kautta. Kumpujen valkoiset piireunukset, terassireunat, halkeamat ja uomat ovat kummun ääriviivaosan sisällä
+  kummun rajoissa, joten ääriviiva ei muutu. Köydessä on 12 tolppaa. Geysirin suppilon renkaat jätettiin pois, koska ne olisivat
+  välkkyneet vedenpinnassa.
+- **Liikeydin** (testi GysTesti.cs, `./testi.sh`): 24 h päivällä 1 941 purkausta, kaksoisia 19,4 %, Suuren Geysirin
+  luonnollisia heräämisiä 9,0 % purkauksista ja liikkuvia kehyksiä 22,3 %. Höyry pysyi saarekkeella eikä koskaan kulkenut
+  kameran puolelle, ja turistit pysyivät köyden takana (0,131–0,154 Strokkurin keskeltä). Tuloksia: 0 tavua allokaatioita
+  20 000 kehyksessä ja noin 0,3 µs/kehys. Sama tunnus antaa saman aikataulun. Napautus herättää Suuren Geysirin samassa
+  kehyksessä (myös yöllä), mutta enintään kerran 20 s:ssa. Lähestyminen tauolla tuo kuvun näkyviin 0,10 s:ssa. Yöllä
+  Strokkur purkautuu, ja valot syttyvät 1,50 s:ssa ilman välähdystä. Vähennetty liike pysäyttää kaiken, ja tauolla
+  piirretään 0 kehystä.
+- **Integroijalle:** kaikki kohteet ovat maa-osan saarekkeella, joten musteviiva näkyy vain siellä, missä kohde nousee
+  saarekkeen siluetin yli karttaa vasten (Laugarfjallin laki 55°:ssa). Jos osille joskus piirretään ääriviiva, maa-osan
+  suuret kolmiot saavat reunaviivan kuten Nidarosin kirkkomaa. Pidä samat arvot molemmissa tiedostoissa: GysSx/Sz/Gx/Gz =
+  SX/SZ/GX/GZ, GysHoyryY/GysSuuriHoyryY = HoyryY/SuuriHoyryY, GysTuristiKulma/Sade = TuristiKulma/Sade,
+  GysHoyrySade/GysSuuriHoyrySade = HoyrySade/SuuriHoyrySade ja GysReunaSade = Reuna. GysTesti tarkistaa nämä.
+- Kuvat, video ja toteutusmuistio: harnessin kuvat/ ja geysir-toteutus.md.

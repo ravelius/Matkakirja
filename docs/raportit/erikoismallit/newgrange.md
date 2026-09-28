@@ -195,3 +195,37 @@ B:tä ei ole.*
   `Rekisteroi("newgrange", …)`, ja liike (`NewgrangeLiike`, malli/Elava/ErikoisLiikeNewgrange.cs) lisätään ErikoisLiikkeen
   Luo-kytkimeen (`"newgrange" => new NewgrangeLiike(id),`).
 - Haara `mallinseppa/<erä>` junan päälle, merge-pyyntö Natiivisepälle ja kuvat kansioon proto-3d/lokit/erikoismallit/newgrange/.
+
+## 11. Toteutus 28.9.2026 (Opus-agentti, harness proto-3d/tyokalut/mallinseppa-esikatselu-o3)
+
+- Runko 740 + osat 606 = **LOD0 1 346** (budjetti 1 500), **Lahi 2 066** (2,8 × runko). Mitat 1,000 × 0,186 × 0,766.
+  Luo: `"newgrange" => new NewgrangeLiike(id),`. Tila: valmis katselmointiin (malli, lähitaso, liike, testit, kuvat ja video);
+  omistajan katselmointi, integrointi ja laitekuvat puuttuvat.
+- Runko: kumpu 512 (kupu, julkisivu ja kvartsikaista, kuivakivimuuri ja reunakivikaista; sisäänkäynti 26 ja graniittimukulat
+  40), sisäänkäyntikivi K1 20, pystykivet 120, joki 64 ja kaislat 24. Osat: joutsen 6 × 42, vana 6 × 4, lento 6 × 33,
+  pari 2 × 33, sade 12, kattoaukko 12, kaytava 3 × 8 ja kammio 18. Lähitaso: kumpu 1 548 (97 reunakiveä saumoineen 692,
+  graniittimukulat 184 ja sisäänkäynti 40), K1 spiraaleineen 56, pystykivet 192, joki ja väreily 86, kaislat 40, soratie 96 ja
+  puut 48.
+- Poikkeamat:
+  - **Julkisivu** on 0,072 (speksi 0,057) ja kallistuu hieman taakse, ja sen yllä on loiva kvartsikaista 0,085:een. Etelään
+    katsova julkisivu on varjossa, koska valo tulee luoteesta, joten 0,057:n pystymuuri näkyi yhtä tummana kuin nurmi eikä
+    lukenut 40 pt:ssä valkoisena sirppinä eikä näkynyt ylhäältä. Kuvun renkaat ovat (0,74; 0,135), (0,55; 0,168) ja
+    (0,33; 0,182), ja laki on 0,186.
+  - **Reunakivet** ovat vaaleampia (#9a9383, #a39c8b ja #938c7c, yläpinta #aaa392) kuin speksin #8b8474, koska tumma kaista ja
+    ääriviiva tekivät kummun ympärille raskaan tumman renkaan.
+  - **Joki** on 0,058 leveä (speksi noin 0,05), jotta 0,044:n joutsen mahtuu kääntymään joen poikki. Vesi on 32 palana, koska
+    mutkan päissä yksi pala ylitti ääriviivan kynnyksen ja päihin tuli tummat reunat.
+  - **Kammio** on pyöreä kultainen kehä, jonka sisällä on ristinmuotoinen ydin. Pelkkä risti käytävän linjan päässä luki
+    latinalaisena ristinä ja apilapäinen versio heraldisena ristinä, mikä ei sovi 3100 eaa. rakennettuun hautaan.
+  - **Joutsenet** nousevat ja laskeutuvat joen takapuoliskolla, ja lennon sivupoikkeama on vain taaksepäin, jotta siivenkärjet
+    pysyvät mallin jalanjäljellä. Välit ovat vähintään 0,05 (speksi 0,045). Sukeltaessa joutsen painuu 0,0055, jotta kaula ja
+    pää menevät veden alle ja vain perä jää pystyyn. Uiva joutsen on 42 kolmiota (speksi 32) ja lentävä 33.
+  - **Yön pari** lentää 0,1:n välein ja Caer 0,012 edellä, koska lähempänä siivet sulautuivat yhdeksi muodoksi.
+  - Käytävän pätkät syttyvät 1,3–2,3, 2,2–3,1 ja 3,0–4,0 s (muut ajat kuten kohdassa 6).
+- Liikeydin (ngrtesti.sh, kaikki OK): 24 h:n simulaatiossa joutsenten runko pysyi joella (pienin vara rantaan 0,0011), välit
+  olivat vähintään 0,050, ja lentävät pysyivät jalanjäljellä (0 ylitystä). Talvipäivänseisaus tuli 10,9 %:ssa lennoista (47/433).
+  Liikkuvia kehyksiä on 17,6 % (speksin arvio 20–30 %, koska uintijaksossa joutsenet liikkuvat vain osan ajasta), ja levossa
+  piirretään 0 kehystä. Lento kestää noin 17 s, ja kierros on 1,68 yksikköä. Yöllä 6 h:ssa ei ollut uintia eikä lentoja, ja
+  pareja oli 22. Determinismi, napautus (heti, 20 s:n esto ja yöllä pari), lähestyminen (päivällä parvi nousee heti ja yöllä
+  havahtuminen 1,5 s) ja vähennetty liike toimivat. 0 allokaatiota kehyksessä ja 0,4–1,1 µs/kehys koneen kuormasta riippuen.
+- Kuvat, video ja toteutusmuistio: harnessin kuvat/ ja newgrange-toteutus.md.

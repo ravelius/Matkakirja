@@ -191,3 +191,42 @@ pässi" (docs/raportit/erikoismallit/era6-ehdotus-20260927.md kohta 1). Tässä 
   malli/Elava/ErikoisLiikeOlavinlinna.cs) lisätään ErikoisLiikkeen Luo-kytkimeen (`"olavinlinna" => new OlavinlinnaLiike(id),`).
 - Haara `mallinseppa/<erä>` junan päälle, merge-pyyntö Natiivisepälle ja kuvat kansioon
   proto-3d/lokit/erikoismallit/olavinlinna/.
+
+## 11. Toteutus 28.9.2026 (Opus-agentti, harness proto-3d/tyokalut/mallinseppa-esikatselu-o1)
+- Runko 955 + osat 449 = **LOD0 1 404** (budjetti 1 500), **Lahi 2 529** (2,6 × runko). Osat: silta 20, laiva 72, laivavalot 10,
+  vana 8, savu 3 × 16, pilvi 48, pässi 42, pässin pää 44, veneet 3 × 23 ja valot 3 × 16 + 10 + 30. Malli on 1,000 × 0,312 × 0,593
+  (lähitaso 0,356 korkea Kellotornin lipputangon kanssa). Luo: `"olavinlinna" => new OlavinlinnaLiike(id),`.
+- **Mittasuhteet:** tornit ovat §4:ää suurempia (halkaisija noin 1,2–1,3 ×: Kellotorni 0,104, Kirkkotorni 0,09 ja Kijlin torni
+  0,086; räystäät 0,228–0,25 ja huiput 0,272–0,303), ja muurit ovat matalampia (bastionit 0,052–0,055, kehämuurit 0,062–0,08,
+  päälinna 0,096, Paksu bastioni 0,082 ja kallio 0,012). Ensimmäisessä versiossa vaalea muurimassa hallitsi 40 pt:ssä ja
+  kolme kartiota jäivät pieniksi. Tornien korkeuden ja halkaisijan suhde (2,4–2,7) vastaa kuvia, ja Kellotorni on levein kuten
+  ylhäältä otetussa kuvassa. Muurit ovat noin 0,35–0,4 × tornin korkeus (todellisuudessa noin 0,6), jotta tornit näkyvät
+  etelän 30°:n kamerasta. Korkeudet ovat edelleen arvioita kuvista (AVOIN, kuten §4).
+- **Värit:** muurit #c2b69a (varjo #aea286), käytävät #bdb296, tornit vaaleampaa kiveä #d5caae, tiilikruunu #a2735a, kallio
+  #9b9079, pihat #b9aa89, Vesiportin bastionin puukansi #ab977a, Paksun bastionin tasanne #b3a78c ja päälinnan katot harmaa
+  #8c8878. Speksin vaaleat pinnat luettiin 40 pt:ssä vaaleana möykkynä, ja vihreä palatsinkatto kilpaili aksentin kanssa.
+  Kuparinvihreää on 2,4–2,7 % mallin pikseleistä (4,2–5,1 % ilman vettä), mitattuna kuvista.
+- **Vesi:** Linnansalmi on laivan väylä (tikapuurivit ruudukkona), ja muu salmi on kapea rengas (noin 0,04; Paksun bastionin
+  edessä noin 0,07 leveä lahti veneille). Kaikki vesi on pieninä paloina ilman ääriviivaa (196 kolmiota). Väylän itäraja
+  kulkee kallion alla, joten rannan muodon määrää saari, ja ohut musteviiva kiertää vain kalliosaaren.
+- **Silta** kääntyy 55–65° (speksi 68–78°), jotta avattu silta pysyy mallin jalanjäljellä. Pivot on Tallisaaren kärjessä
+  (−0,43; 0,10), ja silta on 0,2 pitkä. Silta sulkeutuu vasta, kun laivan runko on poistunut sillan kääntöalueelta, joten
+  etelään kulkeva laiva ei jää kääntyvän sillan alle.
+- **Laiva** kulkee Bézier-väylää mallin etelälaidalta (−0,43; −0,245) pohjoislaidalle (−0,36; 0,25) tai päinvastoin ja
+  ilmestyy 2 s sillan liikkeen alun jälkeen. Savutuprut jäävät ilmaan lähtöpaikkaansa (tuuli lounaaseen), joten laivan perään
+  jää savuvana.
+- **Pässi** nousee takajaloilleen 68° (speksi 55°), koska 55°:ssa se luettiin nelijalkaisena pöytänä. Takajalat ovat lyhyet
+  ja etujalat huitovat eteen. Sarvet ovat vaaleat kuusikulmiokiekot, joiden keskellä on tumma kierteen silmä, ja ne erottuvat
+  pienessäkin koossa. Pässi katsoo itä-kaakkoon (105–125°) kohti veneitä, joten kamera näkee sen sivulta. Veneet ovat tummaa
+  puuta (sisus #8f7454).
+- **Oopperavalo** on pieni lämmin hehku, valaistu näyttämö ja kaksi lyhtyriviä. Ensimmäinen versio, iso keltainen soikio,
+  luettiin lätäkkönä.
+- **Testi** (OlvTesti.cs, 8 tunnusta × 3 h = 24 h): laivan ja veneiden runko pysyy vedessä (0 virhettä, pienin vara mallin
+  reunaan 0,008), silta ei osu laivaan (pienin väli 0,037), laituriin 0 osumaa ja jalanjäljen ulkopuolella 0. Pässi tulee
+  9,4 %:ssa ohituksista (67/712), liikkuvia kehyksiä on 16,7 % (§6:n arvio 25 %), ja yöllä ohituksia on noin 26 % vähemmän
+  eikä pässi tule itsestään. Napautuksen 20 s:n esto, determinismi, lähestyminen ja vähennetty liike toimivat. Kehyksessä on
+  0 allokaatiota (40 tavua on mittarin Stopwatch), noin 1,5 µs/kehys.
+- **Video** on 20 s (speksi 14 s), ja napautus tulee 8 s:n kohdalla, jotta sillan avautuminen, laivan ohitus ja koko pässi
+  näkyvät.
+- Lähitason lisäykset (puut, lipputanko ja 0,0045:n rintavarustus) muuttavat siluettia vain vähän; ääriviivaosat,
+  värit ja pivotit ovat samat kuin rungossa. Kuvat on katsottu harnessin rasteroijalla, ei laitteella.
