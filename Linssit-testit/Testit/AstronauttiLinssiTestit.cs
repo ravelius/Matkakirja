@@ -27,6 +27,7 @@ namespace Matkakirja.Linssit.Testit
             public void Kuva(Havaintokohde k, int i) => Loki.Add($"kuva {k.Tunnus} {i}");
             public void KuvaPois() => Loki.Add("kuva pois");
             public void Pois() => Loki.Add("pois");
+            public void Kyyti(Matkakirja.Linssit.Iss.KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio) => Loki.Add($"kyyti {tila} {korkeusKm:0} {nopeusKmh:0}{(arvio ? " arvio" : "")}");
         }
 
         static (AstronauttiLinssi l, ValeYmparisto y, ValeNakyma n) Luo()

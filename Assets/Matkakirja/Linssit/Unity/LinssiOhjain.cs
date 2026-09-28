@@ -1115,12 +1115,13 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void OnDisable() => ViimeisteleJalkiajot();
+        void OnDisable() { ViimeisteleJalkiajot(); PalautaKuvaus(); }
 
         void OnDestroy()
         {
             rekisteri?.Sulje();
             ViimeisteleJalkiajot();
+            PalautaKuvaus();
             kerrokset?.Irrota();
             if (Instanssi == this) Instanssi = null;
         }
@@ -1178,6 +1179,50 @@ namespace Matkakirja.Natiivi
                 var kamera = kierto.GetComponent<Camera>();
                 return kamera != null ? kamera.fieldOfView : 50;
             }
+        }
+
+        public double Suuntima => kierto.suuntima;
+
+        // KUVAUS (ISS:n kyyti, Linssiseppä 28.9.2026): kamera kiinni liikkuvaan kohteeseen PalloKierto.Kuvaa-metodilla kuten
+        // ElavaKartta. Kenttäkulma (Natiiviseppä 28.9.): ensimmäinen asetus tallentaa kameran oman arvon, null ja kaikki
+        // poistumistiet (SeurantaLoppui, linssin purku, OnDisable/OnDestroy) palauttavat sen; projektiomatriisiin ei kosketa.
+        float? omaKentta;
+        bool kuvataan;
+
+        public void Kuvaa(Kuvakulma a)
+        {
+            if (kierto == null) return;
+            kuvataan = true;
+            kierto.Kuvaa(a.Lat, a.Lon, a.EtaisyysM, a.Kallistus, a.Suuntima, a.KatseKorkeusM);
+        }
+
+        public void KuvausLoppui()
+        {
+            if (!kuvataan) return;
+            kuvataan = false;
+            if (kierto != null) kierto.SeurantaLoppui();
+        }
+
+        public void Kenttakulma(double? asteina)
+        {
+            var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
+            if (kamera == null) return;
+            if (asteina is double a)
+            {
+                omaKentta ??= kamera.fieldOfView;
+                kamera.fieldOfView = (float)a;
+            }
+            else if (omaKentta is float oma)
+            {
+                kamera.fieldOfView = oma;
+                omaKentta = null;
+            }
+        }
+
+        void PalautaKuvaus()
+        {
+            KuvausLoppui();
+            Kenttakulma(null);
         }
 
         public double Kuvasuhde

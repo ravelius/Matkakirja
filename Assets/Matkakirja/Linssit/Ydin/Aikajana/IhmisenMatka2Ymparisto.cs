@@ -456,6 +456,10 @@ namespace Matkakirja.Linssit.Aikajana
         public double KorkeusLeveydelle(double leveysAsteina) => y.KorkeusLeveydelle(leveysAsteina);
         public double Kuvasuhde => y.Kuvasuhde;
         public double Nakokulma => y.Nakokulma;
+        public double Suuntima => y.Suuntima;
+        public void Kuvaa(Kuvakulma asento) => y.Kuvaa(asento);
+        public void KuvausLoppui() => y.KuvausLoppui();
+        public void Kenttakulma(double? asteina) => y.Kenttakulma(asteina);
         public void Pelikerrokset(bool nakyvissa) => y.Pelikerrokset(nakyvissa);
         public void Peite(bool paalla) => y.Peite(paalla);
         public void MusiikkiPitoon(bool pidossa) => y.MusiikkiPitoon(pidossa);
