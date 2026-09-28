@@ -1,33 +1,30 @@
-# Sisältökirjurin aloitusviesti (27.9.2026 klo ~23.4x, kontekstin nollaus)
+# Sisältökirjurin aloitusviesti (28.9.2026 klo ~08.4x, kontekstin nollaus)
 
 Olet Sisältökirjuri (Sonnet), checkout `/Users/Shared/Claude/Matkakirja-sisaltokirjuri`
 (haara `sisalto-pelikatalogi-20260927`). Ensimmäinen komento:
 `git fetch origin main`. Lue `CLAUDE.md`, `docs/roolitus.md` ja
-`docs/raportit/viesti-sisaltokirjuri-luovutus-20260927-j.md` KOKONAAN
+`docs/raportit/viesti-sisaltokirjuri-luovutus-20260928-k.md` KOKONAAN
 ennen töiden aloitusta.
 
-TILA lyhyesti: 14 kokonaan puuttuvan maan sarja käynnissä (pitkä-
-luonnehdinta + Pulu). ROU (42 aluetta) valmis, PR #3514 avoinna.
-UKR (25 aluetta) kesken — kaksi tutkimusagenttia käynnissä väärällä
-ohjeistuksella, ks. luovutuksen kohta 3.
+TILA lyhyesti: neljä PR:ää junassa/avoinna (#3514 ROU mergetty, #3520
+Kronborg, #3524 CZE+HRV, #3525 UKR). #3529 (Codex, historian hetket)
+junassa, oma osuus (Nikosia-korjaus) tehty. Oma ihmeet-kytkentä-työ
+(14 Matkakirjan ihmettä + 6 uutta maalehteä) on VALMIS worktreessä
+`/Users/Shared/Claude/wt/sisaltokirjuri-ihmeet-14maata-kytkenta` mutta
+odottaa Julkaisijan "#3529 MERGED" -ilmoitusta ennen pushia (ks.
+luovutuksen kohta 2 — TÄRKEIN ENSIMMÄINEN TEHTÄVÄ).
 
-**TÄRKEIN OPPI**: `pitka`-kenttä kirjoitetaan Livian äänellä, NYKY-
-AIKAAN — 1873-kytkös mainitaan yhtenä virkkeenä VAIN kun se on alueen
-identiteetin ydinasia (esim. Transilvania kuului Unkarille), EI koko
-tekstin runkona ("isoisä olisi nähnyt..."). Tämä virhe tehtiin ensin
-CZE/HRV/ROU:lle; ROU korjattiin (PR #3514), CZE/HRV ovat yhä väärällä
-tyylillä mainissa — kysy Fablelta halutaanko korjauskierros.
+**TÄRKEIN OPPI TÄLLE SESSIOLLE**: kaksi eri rataa samoille maille —
+(A) maakuntien pitkä+pulu -jono (UKR ✅ → BGR tutkittu muttei sovellettu
+→ SRB → BIH → ...) ja (B) "Matkakirjan ihme" + maalehden Historia-aihe
+(SRB/BIH/ALB/MKD/MNE/CYP/MLT/MDA/BLR, valmis tässä vuorossa). B ei
+korvaa A:ta — molemmat pitää tehdä. Ks. luovutuksen kohta 8.
 
-JONO: UKR (kesken) → BGR → SRB → BIH → ISL → ALB → MKD → MNE → CYP
-(myös kuva puuttuu) → MLT → LUX → MDA → BLR, sitten loput 21 maata
-(vain Pulu). Menetelmä ja worktree-ohjeet luovutuksen kohdassa 5.
-
-Faktatarkistus: Pariisi/Lontoo/Rooma/Berliini/Wien/Madrid/Ateena/
-Istanbul kaikki valmiit ja mergetty. Fable mainitsi "Wien/Madrid/
-Ateena seuraavaksi" — tämä on todennäköisesti ristiriitainen vanha
-tieto, tarkista Fablelta ennen uudelleentarkistusta (luovutuksen
-kohta 4). Todennäköinen jatko: Tukholma/Bukarest/Pietari/Lissabon/
-Sofia/Helsinki.
+JONO (järjestys): 1) Odota #3529 MERGED → pushaa ihmeet-PR (kohta 2).
+2) Maalehti-Historia-PR samoille 6 maalle Codexin `hetki-*`-olioiden
+viereen (kohta 3, raportit valmiina). 3) Sovella BGR (28 aluetta,
+raportit valmiina, kohta 7). 4) Jatka rataa A: SRB → BIH → ISL → ALB →
+MKD → MNE → CYP → MLT → LUX → MDA → BLR, sitten 21 muuta maata (Pulu).
 
 SITOVAT KÄYTÄNNÖT:
 - JUMI → FABLE: jumissa yksi viesti Fablelle, ei korttia; muu jono jatkuu.
@@ -41,3 +38,9 @@ SITOVAT KÄYTÄNNÖT:
   pushia. `js/muutokset.js`-konfliktit ovat rutiinia (versionumero-
   rivit) — oma rivi ylimmäksi, numero main+1, main.js+sw.js samaan
   lukuun.
+- Uuden maan ENSIMMÄINEN karttanosto vaatii hahmotelma-pakin
+  rekisteröinnin + skeemaversion noston + `--paivita`-ajon (luovutuksen
+  kohta 9) — älä unohda, testit kaatuvat muuten neljästä eri syystä.
+- Worktree pois heti kun PR on avattu (levytila rajallinen).
+- Älä kuittaa Codexin/muiden faktakorjauksia tarkistamatta (luovutuksen
+  kohta 5).
