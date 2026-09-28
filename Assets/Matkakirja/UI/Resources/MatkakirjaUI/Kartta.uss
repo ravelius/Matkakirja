@@ -1880,12 +1880,12 @@
 /* Web .nostosym-nimio: --font-atlas (Liberation Serif) kursiivi, rgba(74, 52, 33, 0,92), ei haloa, ei harvennusta;
  * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). Löydös 125: peitto lineaarisena 0,97 ja
  * SDF-reunan vahvistus samalla musteella asetetaan C#:ssa (NostotKartalla.AsetaMuste, NostoKerros.NimionReuna*). */
-/* Nimiö häipyy ja palaa pehmeästi (omistaja 28.9.2026, TF 1.0.34: nostotekstit välkkyivät; web kyljen vaihdon
-   ristiinhäivytys 180 ms lineaarinen, Pelikoodarin mittaus). */
+/* Nimiö häipyy ja palaa pehmeästi (omistaja 28.9.2026, TF 1.0.34: nostotekstit välkkyivät; web #3540: piilotus,
+   paluu ja kyljen vaihto 220 ms ease-in-out). */
 .mk-nosto-merkki__nimio {
     transition-property: opacity;
-    transition-duration: 0.18s;
-    transition-timing-function: linear;
+    transition-duration: 0.22s;
+    transition-timing-function: ease-in-out;
     position: absolute;
     font-size: 8.5px;
     white-space: nowrap;

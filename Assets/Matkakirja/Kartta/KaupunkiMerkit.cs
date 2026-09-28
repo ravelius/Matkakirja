@@ -487,6 +487,7 @@ namespace Matkakirja
             public bool korostettu; // Korosta: piste 1,5-kertainen
             public Color? korostus; // Korosta-väri
             public float usva = -1f; // horisonttiusvan jälkeen näkyvä osuus 0–1 (löydös 153), −1 = asettamatta
+            public float nimiHaive = -1f; // nimen häivytys 0–1 (tulo ja lähtö 220 ms), −1 = ensi näkymä: heti
             public Transform kohdemerkki; // aloitusvalinnan kohdemerkki renkaan sisällä, luodaan tarvittaessa
             public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
             public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
@@ -819,7 +820,6 @@ namespace Matkakirja
                 if (Mathf.Abs(nak - m.usva) > 0.01f || (nak >= 1f && m.usva < 1f))
                 {
                     m.usva = nak;
-                    m.nimio.alpha = nak;
                     AsetaPisteenVari(m);
                 }
                 var ala = NimenAla(m, ruutu, kerroin);
@@ -864,10 +864,25 @@ namespace Matkakirja
                     m.lukittu = true;
                     AsetaNimenPaikka(m, nimenPaikat[i], kerroin);
                 }
-                if (m.nimio.enabled != mahtuu) m.nimio.enabled = mahtuu;
+                // PEHMEÄ TULO JA LÄHTÖ (omistaja 28.9.2026; web #3540: paikannimien tulo ja lähtö 220 ms ease-in-out):
+                // nimi häipyy paikallaan ja palaa nollasta; ensi näkymällä tila heti.
+                float tavoite = mahtuu ? 1f : 0f;
+                if (m.nimiHaive < 0f) m.nimiHaive = tavoite;
+                else if (m.nimiHaive != tavoite)
+                {
+                    m.nimiHaive = Mathf.MoveTowards(m.nimiHaive, tavoite, Time.unscaledDeltaTime / NimenHaiveS);
+                    Ruudunpaivitys.Herata(0.1f);
+                }
+                bool paalla = m.nimiHaive > 0.001f;
+                if (m.nimio.enabled != paalla) m.nimio.enabled = paalla;
+                float h = m.nimiHaive, alfa = m.usva * h * h * (3f - 2f * h);
+                if (Mathf.Abs(m.nimio.alpha - alfa) > 0.004f) m.nimio.alpha = alfa;
             }
             Naytetty = naytetty;
         }
+
+        /// <summary>Nimen tulon ja lähdön kesto (web #3540, 220 ms smoothstep).</summary>
+        const float NimenHaiveS = 0.22f;
 
         /// <summary>Onko ruutupiste jonkin <see cref="Kalusteet"/>-laatikon sisällä (kameran takana ei).</summary>
         static bool KalusteenAlla(IReadOnlyList<Ruutulaatikko> kalusteet, Vector3 ruutu)
