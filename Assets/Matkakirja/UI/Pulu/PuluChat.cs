@@ -241,7 +241,11 @@ namespace Matkakirja.Natiivi
 
         public void Vaihda() { if (Auki) Sulje(); else Avaa(); }
 
-        public void Avaa()
+        public void Avaa() => Avaa(true);
+
+        /// <param name="ehdotukset">false = avaus kysymyksen takia (Kysy): ei rinnakkaista ehdotushakua, joka hidasti
+        /// vastausta (iPad 28.9.: ensimmäinen virke 12 s, kun chat avattiin kysymyksellä; iPhone auki olleena 5 s)</param>
+        void Avaa(bool ehdotukset)
         {
             if (Auki) return;
             Auki = true;
@@ -257,7 +261,7 @@ namespace Matkakirja.Natiivi
             Alku(historia.Count == 0);
             Asettele(); // lehti auki → pienempi pulu (web pieniPulu)
             // Linssin valmiit kysymykset tervehdyksen tilalla (web naytaValmiit → naytaLinssinValmiit).
-            if (!NaytaLinssinValmiit()) HaeEhdotukset();
+            if (!NaytaLinssinValmiit() && ehdotukset) HaeEhdotukset();
         }
 
         // --- linssin valmiit kysymykset (web naytaLinssinValmiit, vastaaLinssinValmiilla) ------------
@@ -396,7 +400,7 @@ namespace Matkakirja.Natiivi
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
-            if (!Auki) Avaa();
+            if (!Auki) Avaa(false);
             LopetaPuheVuoro();
             luentaHiljennetty = false;
             luentaVirta = null;
@@ -444,6 +448,9 @@ namespace Matkakirja.Natiivi
                 // Äänitagit (omistaja 27.9. klo 23.1x): tämä versio siivoaa ne näytöltä (Nakyva), joten worker saa liittää
                 // kehotteeseen tagisäännön; vanhat versiot eivät lähetä kenttää eivätkä saa tageja (web PR #3513).
                 .Append(",\"puhetagit\":1")
+                // Vastaus luetaan ääneen (kaiutin tai saneltu kysymys): worker lisää ohjeen "aloita lyhyellä virkkeellä"
+                // välimuistirajan jälkeen (Pelikoodari 28.9.), jotta ensimmäinen luentapala valmistuu nopeasti.
+                .Append(LuentaPaalla ? ",\"luetaan\":1" : "")
                 .Append(",\"historia\":[");
             int alku = Mathf.Max(0, historia.Count - HistoriaKatto);
             for (int i = alku; i < historia.Count; i++)
@@ -767,12 +774,15 @@ namespace Matkakirja.Natiivi
 
             Tulos t = null;
             Label osittainen = null;
+            double lahti = Time.realtimeSinceStartupAsDouble;
             yield return Laheta(kysymys, jatko, x => t = x, teksti =>
             {
                 // Ensimmäinen pala korvaa mietintärivin kuplalla, joka kasvaa paloittain (web striimikupla).
                 if (string.IsNullOrEmpty(teksti)) return;
                 if (osittainen == null)
                 {
+                    // Mittari: tekstin viive erikseen puheen viiveestä (puheviive = tämä + luettava raja + synteesi).
+                    Debug.Log($"MATKAKIRJA pulu: ensimmäinen tekstipala {(Time.realtimeSinceStartupAsDouble - lahti) * 1000:0} ms");
                     pulu.ChatVastausAlkoi(); // web ilmoitaVastaus → waitingAnswer: dashBack → dustOff → bookStudy
                     pitka.Pause();
                     odotus.style.display = DisplayStyle.None;
@@ -1342,21 +1352,41 @@ namespace Matkakirja.Natiivi
         /// Web luettavaRaja: kuinka pitkälti kertymä on varmasti valmista luettavaksi. Avoimen [[:n jälkeinen odottaa
         /// sulkua, ja raja on viimeisen virkkeen lopussa (kesken lauseen katkaistu lausuma kuulostaisi änkytykseltä).
         /// </summary>
-        internal static int LuettavaRaja(string teksti)
+        /// <param name="alku">
+        /// ENSIMMÄINEN PALA (Päätoimittaja 28.9.: yhden virkkeen vastaus odotti koko virkkeen, iPhone 6,9 s / iPad 14,7 s;
+        /// sama sääntö webiin, Pelikoodari): kun mitään ei ole vielä luettu eikä virkettä ole valmiina, raja on
+        /// ensimmäinen lauseke-ero [,;:] tai " – "/" — " vähintään 3 sanan jälkeen, muuten 8. kokonaisen sanan jälkeinen tyhjä.
+        /// </param>
+        internal static int LuettavaRaja(string teksti, bool alku = false)
         {
             string koko = teksti ?? "";
             int auki = koko.LastIndexOf("[[", StringComparison.Ordinal), kiinni = koko.LastIndexOf("]]", StringComparison.Ordinal);
             string varma = auki > kiinni ? koko.Substring(0, auki) : koko;
             int raja = 0;
             foreach (Match m in VirkkeenRaja.Matches(varma)) raja = m.Index + m.Length;
-            return raja;
+            if (raja > 0 || !alku) return raja;
+            foreach (Match m in LausekeRaja.Matches(varma))
+                if (Sanoja(varma.Substring(0, m.Index)) >= EkapalanLausekeSanat) return m.Index + m.Length;
+            int sanoja = 0;
+            foreach (Match m in KokonainenSana.Matches(varma))
+                if (++sanoja == EkapalanSanat) return m.Index + m.Length;
+            return 0;
         }
+
+        const int EkapalanLausekeSanat = 3, EkapalanSanat = 8;
+        /// <summary>Lauseke-ero: [,;:] tai ajatusviiva välilyöntien välissä, perässä tyhjä (luku "1,5" ei katkaise).</summary>
+        static readonly Regex LausekeRaja = new Regex(@"(?:[,;:]|\s[–—])\s");
+        /// <summary>Sana, jonka perässä on tyhjä (puolikas sana striimin lopussa ei kelpaa).</summary>
+        static readonly Regex KokonainenSana = new Regex(@"\S*[\p{L}\p{N}]\S*\s+");
+
+        /// <summary>Sanat, joissa on kirjain tai numero (irrallinen ajatusviiva ei ole sana).</summary>
+        static int Sanoja(string t) => Regex.Matches(t, @"\S*[\p{L}\p{N}]\S*").Count;
 
         /// <summary>Striimin pala luennalle (web syotaLuennalle): virta käynnistyy laiskasti ensimmäisestä valmiista virkkeestä.</summary>
         void SyotaLuennalle(string kertynyt)
         {
             if (!Virkevirta || !LuentaPaalla || luentaHiljennetty) return;
-            int raja = LuettavaRaja(kertynyt);
+            int raja = LuettavaRaja(kertynyt, luettuun == 0);
             if (raja <= luettuun) return;
             if (luentaVirta == null)
             {
