@@ -25,6 +25,8 @@ namespace Matkakirja.Natiivi
         IVisualElementScheduledItem heilunta;
 
         public KyydinTila Tila { get; private set; } = KyydinTila.Kauko;
+        /// <summary>Kuvapari samasta käännöksestä (`ui linssi kehys 0|1`): ikkuna ilman Cupola-kehystä.</summary>
+        public static bool IlmanKehysta;
         /// <summary>Kyyti alkoi tai päättyi (LinssiUi piilottaa linssin sulkunapin kyydin ajaksi).</summary>
         public event Action<bool> AukiMuuttui;
 
@@ -60,9 +62,19 @@ namespace Matkakirja.Natiivi
                     arvio ? " · rata-arvio" : "");
             bool ikkuna = tila == KyydinTila.Ikkuna;
             if (ikkuna && !kuvatHaettu) HaeKuvat();
-            juuri.EnableInClassList("mk-isskyyti--ikkuna", ikkuna);
-            Heilu(ikkuna);
+            this.ikkuna = ikkuna;
+            PaivitaKehys();
             if (auki != oliAuki) AukiMuuttui?.Invoke(auki);
+        }
+
+        bool ikkuna;
+
+        /// <summary>Kehys ja heijastus näkyviin ikkunassa (ellei A/B ilman kehystä).</summary>
+        public void PaivitaKehys()
+        {
+            bool nakyy = ikkuna && !IlmanKehysta;
+            juuri.EnableInClassList("mk-isskyyti--ikkuna", nakyy);
+            Heilu(nakyy);
         }
 
         void HaeKuvat()
