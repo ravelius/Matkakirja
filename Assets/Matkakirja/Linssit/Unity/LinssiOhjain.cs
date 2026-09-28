@@ -1417,13 +1417,13 @@ namespace Matkakirja.Natiivi
                         else if (a == "rajaus" && osat.Length > 3)
                             Matkakirja.Linssit.Iss.IssKuvakulma.Rajaus = osat[3] == "horisontti" ? Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Horisontti
                                 : osat[3] == "katto" ? Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Katto : Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Pyorea;
-                        // CUPOLA 3 (Codexin toimitus 28.9. klo 22.4x): pyöreän rajauksen ohjaamo, 3 = kulma A keskitetty ja pehmeä
-                        // (oletus, omistaja 23.1x), 3terava = A terävänä (cl18), 3b = hieman vino, 2 = Cupola 2:n kattoikkuna (8852e368).
+                        // CUPOLA 3 (Codexin toimitus 28.9. klo 22.4x): pyöreän rajauksen ohjaamo, 3 = kulma A keskitetty, pehmeä ja umpinainen
+                        // (oletus, omistaja 23.1x + alfakorjaus 29.9.), 3pehmea = cl19–cl20, 3terava = Codexin terävä (cl18), 3b = hieman vino, 2 = Cupola 2.
                         else if (a == "ohjaamo" && osat.Length > 3)
                         {
                             Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3 = osat[3] != "2";
                             Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Kulma = osat[3] == "3b" ? "b" : "a";
-                            Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Sarja = osat[3] == "3terava" ? "" : "pehmea";
+                            Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Sarja = osat[3] == "3terava" ? "" : osat[3] == "3pehmea" ? "pehmea" : "pehmea-umpi";
                         }
                         // Läpikuulon kontrollikoe (Natiiviseppä 28.9.): kehys pelkkänä mustana taustana ilman kuvaa.
                         else if (a == "kehysmusta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.KehysMustana = osat[3] != "0";
@@ -1434,7 +1434,7 @@ namespace Matkakirja.Natiivi
                         else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),
                                      System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float tumma))
                         {
-                            // Pyöreässä rajauksessa Cupola 3:n tummuus (oletus 0,85), muuten Cupola 2 -kehyksen (0,22).
+                            // Pyöreässä rajauksessa Cupola 3:n tummuus (oletus 1), muuten Cupola 2 -kehyksen (0,22).
                             if (Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3 && Matkakirja.Linssit.Iss.IssKuvakulma.Rajaus == Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Pyorea)
                                 Matkakirja.Natiivi.IssKyytiNakyma.Cupola3Tummuus = Mathf.Clamp01(tumma);
                             else Matkakirja.Natiivi.IssKyytiNakyma.OhjaamonTummuus = Mathf.Clamp01(tumma);

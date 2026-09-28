@@ -86,13 +86,16 @@ namespace Matkakirja.Natiivi
         public static string Ohjaamo3Kulma = "a";
         /// <summary>
         /// Omistaja 28.9. klo 23.1x cl18:n jälkeen ("OK, junaan", kulma A): "tosin tummenna ja pehmennä aavistuksen ohjaamoa".
-        /// Kulman A oletussarja "pehmea" = Linssisepän poltto (c3_pehmea.py): Gaussin sumennus noin 2 näyttöpikseliä
+        /// Kulman A oletussarja "pehmea-umpi" = Linssisepän poltto (c3_pehmea.py): Gaussin sumennus noin 2 näyttöpikseliä
         /// premultiplied-alfalla ohjaamoon, lasiin ja reunavaloihin, ja valojen alfa vahvistettu takaisin huippuunsa (× 1,3–1,5),
-        /// jotta auringonvalo pokissa säilyy. Tummennus sävytyksellä <see cref="Cupola3Tummuus"/>. "" = Codexin terävä (cl18).
-        /// A/B `astro kyyti ohjaamo 3|3terava` ja `astro kyyti tumma <0–1>`.
+        /// jotta auringonvalo pokissa säilyy. UMPI (Natiiviseppä 29.9. klo 00.0x, cl20:n kontrollikoe): Codexin ohjaamon metalli oli
+        /// alfa 245–254, ja maan pilvet kuultivat sen läpi (musta 2 → 22); ohjaamon alfa ≥ 240 → 255 ennen sumennusta. Koska
+        /// huntu poistuu, ohjaamo tummenee jo tästä, joten sävy <see cref="Cupola3Tummuus"/> on 1 (0,85 A/B:nä).
+        /// Sarjat: "pehmea-umpi" (oletus), "pehmea" (cl19–cl20), "" = Codexin terävä (cl18).
+        /// A/B `astro kyyti ohjaamo 3|3pehmea|3terava` ja `astro kyyti tumma <0–1>`.
         /// </summary>
-        public static string Ohjaamo3Sarja = "pehmea";
-        public static float Cupola3Tummuus = 0.85f;
+        public static string Ohjaamo3Sarja = "pehmea-umpi";
+        public static float Cupola3Tummuus = 1f;
         static bool Cupola3Kaytossa => Ohjaamo3 && IssKuvakulma.Rajaus == IssKuvakulma.IkkunanRajaus.Pyorea;
         /// <summary>
         /// Cupola 3 on sommiteltu ruudulle valmiiksi (ikkuna 98 % iPhonen leveydestä), joten sitä suurennetaan vain 1,04 × ja
