@@ -141,6 +141,10 @@ namespace Matkakirja.Natiivi
             var kartuscha = ui.Kartuscha?.AukiKortti;
             if (kartuscha != null && kartuscha.panel != null && kartuscha.worldBound.height > 0)
                 korkein = Mathf.Max(korkein, kartuscha.panel.visualTree.layout.height - kartuscha.worldBound.yMin + 8f);
+            // Maapallon vuosi -linssin paneeli alareunassa: sama hyppy sen yläpuolelle.
+            var vuosi = ui.Linssit?.Vuosi?.Paneeli;
+            if (vuosi != null && vuosi.panel != null && ui.Linssit.Vuosi.Nakyvissa && vuosi.worldBound.height > 0)
+                korkein = Mathf.Max(korkein, vuosi.panel.visualTree.layout.height - vuosi.worldBound.yMin + 6f);
             return Mathf.Max(perus, korkein);
         }
 

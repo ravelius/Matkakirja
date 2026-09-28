@@ -13,6 +13,12 @@
 // Välilehdet NOSTOT | MAAKUNNAT (webin karttaselite-valilehti; valinta muistetaan:
 // PlayerPrefs matkakirja-karttaselite-valilehti). Maakunnat-välilehden sisältö on
 // Maakunnat.cs:ssä ja rakentuu, kun välilehti avataan ensi kerran.
+//
+// MAAKUNTAKARTTA (omistaja 28.9.2026 klo 17.1x, Päätoimittajan kautta; MaakuntaKartta = true "toistaiseksi"): Nostot-
+// välilehti ja -lista pois pelistä (kartan nostot jäävät), nappi on kytkin maakuntakartta päälle/pois, maakuntalista pois
+// kokonaan. Päällä: rajat ilman täyttöä, kartan napautus valitsee maakunnan (vain se värjätty, MaaKartta.VainKorostetut)
+// eikä avaa kaupunkeja tai valoja (PalloKierto.Sieppaaja); nostomerkit piilossa tilan ajan; paneeli on vain isompi
+// kuvausruutu (nimi, kuva, lyhyt teksti, Lue lisää → kortti). Vanha välilehtipolku jää koodiin palautusta varten.
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -36,13 +42,16 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
 
+        /// <summary>Maakuntakartta-kytkin Nostot|Maakunnat-paneelin tilalla (omistaja 28.9. klo 17.1x).</summary>
+        public const bool MaakuntaKartta = true;
+
         public Karttaselite(UiKerros kerros)
         {
             this.kerros = kerros;
             var turva = kerros.Turva(UiKerros.Tilarivi);
 
             nappi = Rakenne.Nappi(null, "mk-seliteNappi", Vaihda, turva, NostoMerkit.SeliteNappi);
-            nappi.tooltip = "Karttaselitteet";
+            nappi.tooltip = MaakuntaKartta ? "Maakuntakartta" : "Karttaselitteet";
             nappi.style.top = Ylapalkki.Varaus + 8;
             Aloitusnakyma.AukiMuuttui += _ => PaivitaNappi();
 
@@ -67,7 +76,13 @@ namespace Matkakirja.Natiivi
             paneeliNostot.Add(vieritys);
             paneeliMaakunnat = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);
             Maakunnat = new Maakunnat(kerros, paneeliMaakunnat);
-            maakunnatAuki = PlayerPrefs.GetString(ValilehtiAvain, "") == "maakunnat";
+            maakunnatAuki = MaakuntaKartta || PlayerPrefs.GetString(ValilehtiAvain, "") == "maakunnat";
+            if (MaakuntaKartta)
+            {
+                ylarivi.style.display = DisplayStyle.None; // ei välilehtiä eikä ✕: nappi on kytkin
+                paneeli.AddToClassList("mk-selite--karttatila");
+                Maakunnat.PiilotaLista();
+            }
             NaytaValilehti();
             lista = Rakenne.El("mk-selite__lista", vieritys);
 
@@ -103,6 +118,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Välilehti vaihtuu (web vaihdaValilehti); valinta muistetaan laitteella.</summary>
         public void VaihdaValilehti(bool maakunnat)
         {
+            if (MaakuntaKartta) maakunnat = true; // Nostot-välilehti pois pelistä
             if (maakunnat == maakunnatAuki) return;
             maakunnatAuki = maakunnat;
             PlayerPrefs.SetString(ValilehtiAvain, maakunnat ? "maakunnat" : "nostot");
@@ -114,7 +130,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Löydös 177 (Uusi peli): välilehti oletukseen (nostot) ja maakuntien valinta pois, kuten webin uudelleenlatauksessa.</summary>
         public void Nollaa()
         {
-            if (maakunnatAuki) { maakunnatAuki = false; NaytaValilehti(); if (Auki) Paivita(); }
+            if (maakunnatAuki && !MaakuntaKartta) { maakunnatAuki = false; NaytaValilehti(); if (Auki) Paivita(); }
             Maakunnat.Nollaa();
         }
 
@@ -194,6 +210,12 @@ namespace Matkakirja.Natiivi
         {
             if (Auki) return;
             Auki = true;
+            if (MaakuntaKartta)
+            {
+                Maakunnat.AsetaKarttatila(true);
+                PalloKierto.Sieppaaja = MaakuntaNapautus;
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.NaytaSallittu(false);
+            }
             KytkePalvelu();
             Paivita();
             if (maakunnatAuki) Maakunnat.Avautui();
@@ -210,7 +232,27 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(paneeli, false, 220);
             nappi.RemoveFromClassList("mk-valittu");
             Maakunnat.AsetaNakyvissa(false); // löydös 165: kartan korostus pois, valinta säilyy listassa
+            if (MaakuntaKartta)
+            {
+                Maakunnat.AsetaKarttatila(false);
+                if (PalloKierto.Sieppaaja == (System.Func<Vector2, bool>)MaakuntaNapautus) PalloKierto.Sieppaaja = null;
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.NaytaSallittu(true);
+            }
             AukiMuuttui?.Invoke(false);
+        }
+
+        /// <summary>
+        /// Maakuntakartan napautus (PalloKierto.Sieppaaja): pelaajan maan maakunta pisteessä valitaan (MaaKartta.MaaPisteessa,
+        /// sama osumatesti kuin maiden napautuksessa). Napautus niellään aina tilan aikana, ettei kaupunki tai valo aukea.
+        /// </summary>
+        bool MaakuntaNapautus(Vector2 ruutu)
+        {
+            var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
+            if (mk == null || !mk.RuutuPallolle(ruutu, out double lat, out double lon)) return true;
+            string avain = mk.MaaPisteessa(lat, lon);
+            Debug.Log($"MATKAKIRJA ui maakuntakartta: napautus {lat:0.00} {lon:0.00} → {avain ?? "ei maakuntaa"}");
+            if (avain != null) Maakunnat.Valitse(avain);
+            return true;
         }
 
         /// <summary>Nappi näkyviin tai piiloon (linssi päällä, aloitus).</summary>
@@ -300,7 +342,7 @@ namespace Matkakirja.Natiivi
 
         void TarkistaOhiNapautus()
         {
-            if (!Auki || Maakunnat.KorttiAuki) return;
+            if (!Auki || Maakunnat.KorttiAuki || MaakuntaKartta) return; // maakuntakartta: napautus kartalla valitsee
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;
             var ruutu = osoitin.position.ReadValue();

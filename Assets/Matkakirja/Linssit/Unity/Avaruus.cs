@@ -44,6 +44,7 @@ namespace Matkakirja.Natiivi
         Material hehku, kaari;
         Mesh kuori, kaariKuori;
         float peitto, kyyti, kyytiTavoite, aurinkoPaivitetty = -10f;
+        DateTime aurinkoUtc;
         CesiumGeoreference g;
 
         /// <summary>A/B (`astro kyyti ilmakeha vanha|uusi`): kyydissäkin kaukonäkymän hehku.</summary>
@@ -202,14 +203,18 @@ namespace Matkakirja.Natiivi
             // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).
             kaari.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima);
             kaari.SetFloat("_HamaraVoima", HehkuPois ? 0f : 1f);
-            if (!nakyy || Time.unscaledTime - aurinkoPaivitetty < 1f) return;
+            if (!nakyy) return;
+            // Kerran sekunnissa ja sekunnin välein simuloitua aikaa (web kaari.aseta): nopeutettuna joka kehys.
+            var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            if (Time.unscaledTime - aurinkoPaivitetty < 1f && Math.Abs((utc - aurinkoUtc).TotalSeconds) < 1) return;
             // Keskipiste, napa-akseli ja aurinko maailmassa (georeferenssi voi liikkua); aurinko liikkuu 0,25°/min.
             aurinkoPaivitetty = Time.unscaledTime;
+            aurinkoUtc = utc;
             var gt = g.transform;
             double3 keskus = g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             kaari.SetVector("_Keskus", gt.TransformPoint((Vector3)(float3)keskus));
             kaari.SetVector("_Akseli", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
-            kaari.SetVector("_Aurinko", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized);
+            kaari.SetVector("_Aurinko", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(utc))).normalized);
         }
 
         void OnDestroy()

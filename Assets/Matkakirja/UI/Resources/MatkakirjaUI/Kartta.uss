@@ -2101,3 +2101,35 @@
     position: absolute;
     -unity-background-scale-mode: stretch-to-fill;
 }
+
+/* Maakuntakartta (omistaja 28.9. klo 17.1x): paneeli on pelkkä kuvausruutu, hieman isompi kuva ja teksti, silti kevyt. */
+.mk-selite.mk-selite--karttatila {
+    width: 300px;
+    max-width: 86%;
+    padding: 4px;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__luonnehdinta {
+    margin: 0;
+    padding: 8px 8px 6px 8px;
+    border-top-width: 0;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lnimi {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lkuva {
+    width: 96px;
+    height: 72px;
+    margin: 2px 10px 0 0;
+}
+
+.mk-maakunnat--kartta .mk-maakunnat__lteksti {
+    font-size: 15px;
+}
+
+.mk-maakunnat__ohje {
+    color: rgba(70, 51, 31, 0.7);
+}

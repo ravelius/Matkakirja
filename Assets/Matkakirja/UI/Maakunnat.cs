@@ -79,6 +79,39 @@ namespace Matkakirja.Natiivi
             rivi.parent != null && rivi.parent.ClassListContains(ValinnatLuokka) ? rivi.parent.parent : rivi.parent;
         public static bool OnKaikki(string avain) => avain != null && avain.EndsWith(KaikkiTunnus, StringComparison.Ordinal);
 
+        /// <summary>
+        /// MAAKUNTAKARTTA (omistaja 28.9.2026 klo 17.1x): lista pois kokonaan, maakunta valitaan napauttamalla karttaa
+        /// (Karttaselite.MaakuntaKartta). Tosi, kun tila on auki: kartta näyttää rajat ilman täyttöä, kunnes jotain napautetaan
+        /// (MaakunnatSilta), ja luonnehdinta on isompi kuvausruutu.
+        /// </summary>
+        public static bool Karttatila { get; private set; }
+        bool listaPiilossa;
+
+        /// <summary>Lista piiloon pysyvästi (maakuntakartta): vain kuvausruutu jää.</summary>
+        public void PiilotaLista()
+        {
+            listaPiilossa = true;
+            vieritys.style.display = DisplayStyle.None;
+            juuri.AddToClassList("mk-maakunnat--kartta");
+            PaivitaLuonnehdinta();
+        }
+
+        /// <summary>Maakuntakartta auki/kiinni: auetessa valinta tyhjenee (ei tallennettua valintaa kartalle), Pois pois.</summary>
+        public void AsetaKarttatila(bool auki)
+        {
+            if (Karttatila == auki) return;
+            Karttatila = auki;
+            if (!auki) return;
+            if (ValittuAvain != null && rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
+            bool oliPois = Pois;
+            ValittuAvain = null;
+            Pois = false;
+            try { PlayerPrefs.DeleteKey(TallennusAvain); PlayerPrefs.SetInt(PoisAvain, 0); PlayerPrefs.Save(); } catch (Exception) { }
+            PaivitaLuonnehdinta();
+            Valittu?.Invoke(null);
+            if (oliPois) PoisMuuttui?.Invoke(false);
+        }
+
         sealed class Maa { public string Iso, Nimi; public List<(string Tunnus, string Nimi)> Alueet = new List<(string, string)>(); }
         sealed class Luonnehdinta { public string Lyhyt, Pitka, Pikkukuva; public List<Dictionary<string, object>> Kuvat = new List<Dictionary<string, object>>(); }
 
@@ -532,6 +565,13 @@ namespace Matkakirja.Natiivi
         void PaivitaLuonnehdinta()
         {
             kuvaus.Clear();
+            if (ValittuAvain == null && listaPiilossa)
+            {
+                // Maakuntakartta ilman valintaa: ohje, mistä valitaan.
+                kuvaus.style.display = DisplayStyle.Flex;
+                Kirjasimet.Aseta(Rakenne.Teksti("Napauta maakuntaa kartalla.", "mk-maakunnat__lteksti mk-maakunnat__ohje", kuvaus), Kirjasin.Luku);
+                return;
+            }
             if (ValittuAvain == null) { kuvaus.style.display = DisplayStyle.None; return; }
             string avain = ValittuAvain, nimi = Nimi(avain);
             var data = HaeLuonnehdinta(avain);

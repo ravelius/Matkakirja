@@ -108,6 +108,7 @@ namespace Matkakirja.Natiivi
         public static Func<bool> VahennettyLiikeKysely;
 
         PalloKierto kierto;
+        MaapallonVuosiSovitin vuosi;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -195,6 +196,8 @@ namespace Matkakirja.Natiivi
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
+            // Maapallon vuosi (Linssiseppä 2, 28.9.2026): hiomassa, vain kehittäjätilassa (ei avauskynnystä).
+            rekisteri.Lisaa(vuosi = new MaapallonVuosiSovitin(this, k));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -1056,7 +1059,7 @@ namespace Matkakirja.Natiivi
         // luodaan käynnistyksessä: KehysPiikit ottaa seurantaan vain aloitushetkellä olemassa olevat merkit.
 
         static readonly string[] MitattavatLinssit =
-            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "ihmisen-matka-2", "vertailu", "maatiedot", "radio", "isoisa-1873" };
+            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "ihmisen-matka-2", "vertailu", "maatiedot", "radio", "isoisa-1873", "maapallon-vuosi" };
         static readonly Dictionary<(string, string), Unity.Profiling.ProfilerMarker> merkit =
             new Dictionary<(string, string), Unity.Profiling.ProfilerMarker>();
         static readonly Unity.Profiling.ProfilerMarker KytkeMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Kerrokset");
@@ -1402,6 +1405,7 @@ namespace Matkakirja.Natiivi
                             FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
+                        else if (a == "ajelehdus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Ajelehdus = osat[3] != "0"; // A/B painoton ajelehdus
                         else if (a == "valot" && osat.Length > 3)   // A/B kaupunkien valot: 0 | 1 | osuus 0…1 (esim. 0.8)
                         {
                             Yokuori.ValotPois = osat[3] == "0";
@@ -1412,9 +1416,14 @@ namespace Matkakirja.Natiivi
                         else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
                         else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
                         else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
-                        else if (a == "taivas" && osat.Length > 3) KyydinTaivas.Pois = osat[3] == "0";   // A/B oikeat tähdet ja Kuu
+                        else if (a == "taivas" && osat.Length > 3) { KyydinTaivas.Pois = osat[3] == "0"; KyydinTaivas.VarjoPakko = osat[3] == "2"; } // A/B oikeat tähdet ja Kuu; 2 = ISS varjossa
                         else if (a == "paivanpilvet" && osat.Length > 3) AstronauttiKerros.PaivanPilvetPois = osat[3] == "0";
                         else if (a == "revontulet" && osat.Length > 3) Revontulet.Pois = osat[3] == "0";
+                        else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("m") && int.TryParse(osat[3].Substring(1), out int pakko))
+                            AstronauttiKerros.KuukausiPakotettu = pakko;                                   // 4a: m<kk> pakottaa, m0 pois
+                        else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("a") && float.TryParse(osat[3].Substring(1).Replace(',', '.'),
+                            System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float kkAlfa))
+                            AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
                         else if (a == "pilvet" && osat.Length > 3)
@@ -1422,6 +1431,12 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.PilvetKyydissa = osat[3];
                             FindAnyObjectByType<AstronauttiKerros>()?.PaivitaPilvet();
                         }
+                        // Nopeutus ja "Lennä kohteen ylle" (web 891958e17): nopeus 1|10|100|1000, live (= Palaa LIVE),
+                        // kohde <tunnus> [valoisa] (seuraava ylilento, kelaus ja katse kohteeseen), kohteet (valikon järjestys).
+                        else if (a == "nopeus" && osat.Length > 3) Kirjaa("astro kyyti nopeus: " + KyydinNopeus(l, osat[3]));
+                        else if (a == "live") Kirjaa("astro kyyti live: " + KyydinNopeus(l, "1"));
+                        else if (a == "kohde" && osat.Length > 3) Kirjaa("astro kyyti kohde: " + KyydinKohde(l, osat[3], osat.Length > 4 && osat[4] == "valoisa"));
+                        else if (a == "kohteet") Kirjaa("astro kyyti kohteet: " + string.Join(" ", l.YlilennonKohteet.Select(x => x.Tunnus)));
                         else if (a != "tila") l.NapautaIss();
                         var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
                         var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
@@ -1430,6 +1445,7 @@ namespace Matkakirja.Natiivi
                                $"{Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(utc):F0} km suunta {Matkakirja.Linssit.Iss.IssNyt.Suuntima(utc):F0}°, " +
                                $"laatu {Matkakirja.Linssit.Iss.IssNyt.Laatu(utc)}, kamera ({kierto.leveys:F2}, {kierto.pituus:F2}) " +
                                $"{kierto.korkeus / 1000:F0} km kall {kierto.KaytettyKallistus:F1}° suunt {kierto.suuntima:F0}° fov {kam?.fieldOfView:F0}");
+                        Kirjaa("astro kyyti aika: " + KyydinAikaTila(l));
                     }
                 }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
@@ -1492,6 +1508,8 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "isoisa" && osat.Length > 1 && osat[1] == "tila")
                     Kirjaa((rekisteri.Auki as IsoisaSovitin)?.Kerros is IsoisaKerros ik
                         ? $"isoisä 1873: näkyvissä {ik.Nakyvia} nimeä, kamera {Kamera}" : "isoisä 1873: linssi ei ole auki");
+                else if (osat[0] == "vuosi")
+                    vuosi.Komento(osat);
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)
@@ -1610,11 +1628,12 @@ namespace Matkakirja.Natiivi
         /// Testikello ISS:lle ja auringolle (yökuori, ilmakehän kaari, Cupolan valo, taivas): "yo-eurooppa" hyppää seuraavaan
         /// syvän yön ylitykseen Keski-Euroopan yllä (kaupunkien valot, tähdet ja Kuu), "hamara" iltahämärään kohti yötä
         /// (varjostus, hämärän kaari, syttyvät valot), "kiilto" auringon heijastukseen vedestä; "+H" siirtää H tuntia; "pois"
-        /// palauttaa oikean kellon. Kello kulkee siirron jälkeen.
+        /// palauttaa oikean kellon. Kello kulkee siirron jälkeen. Siirto asettaa simuloidun kellon LIVE-hetken (IssNyt.Simu):
+        /// kello hyppää hetkeen LIVE:nä, nopeutus (astro kyyti nopeus) juoksee siitä ja Palaa LIVE palaa siihen.
         /// </summary>
         static string KyydinKello(string arvo)
         {
-            if (arvo == "pois") { Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow; return "oikea aika"; }
+            if (arvo == "pois") { Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(TimeSpan.Zero); return "oikea aika"; }
             TimeSpan siirto;
             if (arvo.StartsWith("+") && double.TryParse(arvo.Substring(1), System.Globalization.NumberStyles.Float,
                     System.Globalization.CultureInfo.InvariantCulture, out double tunnit))
@@ -1694,11 +1713,38 @@ namespace Matkakirja.Natiivi
                 siirto = loyto.Value.AddSeconds(30) - nyt;
             }
             else return "käyttö: astro kyyti kello yo-eurooppa|hamara|kiilto|paiva-eurooppa|+H|pois";
-            Matkakirja.Linssit.Iss.IssNyt.Kello = () => DateTime.UtcNow + siirto;
+            Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(siirto);
             var k = Matkakirja.Linssit.Iss.IssNyt.Kello();
             var paikka = Matkakirja.Linssit.Iss.IssNyt.Paikka(k);
             return $"{k:yyyy-MM-dd HH:mm:ss} UTC (siirto {siirto.TotalHours:F2} h), ISS ({paikka.Lat:F2}, {paikka.Lon:F2}), " +
                    $"aurinko alapisteessä {AurinkoKorkeus(k, paikka.Lat, paikka.Lon):F1}°";
+        }
+
+        /// <summary>Testikomento astro kyyti nopeus: porras 1 (Palaa LIVE, pehmeä kelaus), 10, 100 tai 1000.</summary>
+        static string KyydinNopeus(Matkakirja.Linssit.Astronautti.AstronauttiLinssi l, string arvo) =>
+            int.TryParse(arvo, out int k) && l.AsetaNopeus(k) ? (k == 1 ? "Palaa LIVE" : k + "×") : "käyttö: astro kyyti nopeus 1|10|100|1000";
+
+        /// <summary>
+        /// Testikomento astro kyyti kohde &lt;tunnus&gt; [valoisa] (webin "Lennä kohteen ylle"): seuraava ylilento SGP4:llä
+        /// (valoisa: aurinko kohteessa yli 10°), kelaus sinne noin 1000×:llä ja perillä katse kohteeseen. Vain kyydissä.
+        /// </summary>
+        static string KyydinKohde(Matkakirja.Linssit.Astronautti.AstronauttiLinssi l, string tunnus, bool valoisa)
+        {
+            if (!l.Kyydissa) return "ei kyydissä (ensin astro kyyti)";
+            if (l.YlilennonKohteet.All(x => x.Tunnus != tunnus))
+                return $"tuntematon kohde {tunnus}; kohteet: " + string.Join(" ", l.YlilennonKohteet.Select(x => x.Tunnus));
+            var y = l.LennaKohteeseen(tunnus, valoisa);
+            return y.HasValue ? $"{tunnus}{(valoisa ? " (valoisa)" : "")}: {y.Value}; {l.YlilennonRivi()}" : l.YlilennonRivi() ?? "ei ylilentoa";
+        }
+
+        /// <summary>Kyydin simuloitu aika ja ylilento (astro kyyti tila): kello, nopeus, kohde ja pillerin alla näkyvä rivi.</summary>
+        static string KyydinAikaTila(Matkakirja.Linssit.Astronautti.AstronauttiLinssi l)
+        {
+            var lento = l.ViimeisinLento;
+            string kohde = lento == null ? "ei kohdetta"
+                : $"kohde {lento.Value.Kohde.Tunnus}" + (lento.Value.Hetki.HasValue ? $", ylilento {lento.Value.Hetki.Value}" : ", ei ylilentoa")
+                  + (lento.Value.Perilla ? ", perillä" : "");
+            return $"{Matkakirja.Linssit.Iss.IssNyt.Simu}; {kohde}; rivi: {l.YlilennonRivi() ?? "-"}";
         }
 
         /// <summary>Ikkunan katsekohde ISS:n hetkellä t (IssKuvakulma.Ikkuna).</summary>

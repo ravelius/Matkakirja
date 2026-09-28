@@ -412,6 +412,18 @@ namespace Matkakirja
         public event Action<Vector2> Napautettu;
 
         /// <summary>
+        /// Napautuksen sieppaaja (Natiivi-UI:n maakuntakartta, omistaja 28.9.2026 klo 17.1x): palauttaa true, jos se käsitteli
+        /// napautuksen, jolloin kaupungit, karttavalot ja muut Napautettu-kuuntelijat eivät saa sitä.
+        /// </summary>
+        public static Func<Vector2, bool> Sieppaaja;
+
+        void IlmoitaNapautus(Vector2 ruutu)
+        {
+            if (Sieppaaja != null && Sieppaaja(ruutu)) return;
+            Napautettu?.Invoke(ruutu);
+        }
+
+        /// <summary>
         /// Pelaajan veto tai nipistys pallolla alkoi (kerran elettä kohden, kun liike ylittää
         /// napautuksen rajan tai sormia on kaksi). Kamera-ajo ei herätä tätä (web kutistaKortinLiikkeesta).
         /// </summary>
@@ -424,7 +436,7 @@ namespace Matkakirja
         public void IlmoitaKaupunki(string id) => KaupunkiNapautettu?.Invoke(id);
 
         /// <summary>Synteettinen napautus näytön pikseleinä (testikomento "napauta x y").</summary>
-        public void Napauta(Vector2 ruutu) => Napautettu?.Invoke(ruutu);
+        public void Napauta(Vector2 ruutu) => IlmoitaNapautus(ruutu);
 
         /// <summary>
         /// Kosketusten esto (dialogi, lehti, linssin oma ele): kun tosi, pallo ei lue
@@ -1100,7 +1112,7 @@ namespace Matkakirja
                         {
                             viimeNapautusAika = nyt;
                             viimeNapautus = pt;
-                            Napautettu?.Invoke(edellinenKeski);
+                            IlmoitaNapautus(edellinenKeski);
                         }
                     }
                     liuku = vetoNopeus;
