@@ -6473,6 +6473,30 @@ function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
  * `avaaFokuskohde`-funktion luettavana.
  */
 
+/*
+ * ── NAUHAN MITTA NOSTOKUVASSA (28.9.2026) ──────────────────────────
+ *
+ * Kortin kuva on kaksivaiheinen nostokuva (js/nostokuva.js), jonka nappi
+ * on kuvan levyinen (fit-content). Nauhan mitat ovat kuvan leveyden
+ * osuuksia (cqw), mutta nappia EI voi tehdä mittasäiliöksi: inline-size-
+ * säiliö nollaa fit-content-leveyden (mitattu: nappi 13 px, nauha 0 × 0).
+ * Kuvan leveys kirjoitetaan siksi muuttujaksi `--nauha-kuva`, ja
+ * css/fokuskohteet.css laskee samat osuudet siitä. ResizeObserver seuraa
+ * vaiheen 2 kutistumista ja ruudun kääntöä.
+ */
+function mitoitaNauhaKuvaan(nappi) {
+  const img = nappi?.querySelector?.('img');
+  if (!img) return;
+  const kirjaa = () => {
+    const leveys = img.clientWidth || img.getBoundingClientRect?.().width || 0;
+    if (leveys > 0) nappi.style.setProperty('--nauha-kuva', `${Math.round(leveys)}px`);
+  };
+  kirjaa();
+  img.addEventListener?.('load', kirjaa);
+  const Vahti = globalThis.ResizeObserver;
+  if (Vahti) new Vahti(kirjaa).observe(img);
+}
+
 export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   if (typeof document === 'undefined' || !kohde) return null;
   /*
@@ -6616,7 +6640,7 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
     ),
     koristele: (nappi, kehys) => {
       if (paakuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
-      piirraIhmenauha(nappi, paakuva.nauha);
+      if (piirraIhmenauha(nappi, paakuva.nauha)) mitoitaNauhaKuvaan(nappi);
     },
     latoNosto: latoKohde,
     // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
