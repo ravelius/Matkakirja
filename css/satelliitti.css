@@ -1368,18 +1368,82 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
 .iss-kyyti-ikkuna .iss-kyyti-cupola > div[data-ladattu="1"] { opacity: 1; }
 /*
  * SYVYYS: ulko-osat (lasin takana) ja heijastus (lasissa) liikkuvat hitaasti
- * vastakkain kuin katsojan pää liikkuisi; parallaksi ≤ 1,5 % ruudusta,
- * heijastuksen huojunta 0,4 % ~11 s:n jaksolla (natiivi Cupola 2).
+ * vastakkain kuin katsojan pää liikkuisi — täsmälleen kuten natiivin
+ * IssKyytiNakyma.Heilu (Linssiseppä 28.9.2026): u = 2π·t/8 s, heijastus
+ * (3·sin u, 2·sin u/2) pt, ulko-osat (−1,6·sin u, −1·sin u/2) pt; koko sykli
+ * 16 s, 32 lineaarista välipistettä.
  */
-.iss-kyyti-ikkuna .iss-kyyti-ulko { animation: iss-kyyti-ulko 11s ease-in-out infinite alternate; }
-.iss-kyyti-ikkuna .iss-kyyti-heijastus { animation: iss-kyyti-heijastus 11s ease-in-out infinite alternate; }
+.iss-kyyti-ikkuna .iss-kyyti-ulko { animation: iss-kyyti-ulko 16s linear infinite; }
+.iss-kyyti-ikkuna .iss-kyyti-heijastus { animation: iss-kyyti-heijastus 16s linear infinite; }
 @keyframes iss-kyyti-ulko {
-  from { transform: translate(0.6%, 0.3%); }
-  to { transform: translate(-0.6%, -0.3%); }
+  0% { transform: translate(0px, 0px); }
+  3.125% { transform: translate(-0.61px, -0.2px); }
+  6.25% { transform: translate(-1.13px, -0.38px); }
+  9.375% { transform: translate(-1.48px, -0.56px); }
+  12.5% { transform: translate(-1.6px, -0.71px); }
+  15.625% { transform: translate(-1.48px, -0.83px); }
+  18.75% { transform: translate(-1.13px, -0.92px); }
+  21.875% { transform: translate(-0.61px, -0.98px); }
+  25% { transform: translate(0px, -1px); }
+  28.125% { transform: translate(0.61px, -0.98px); }
+  31.25% { transform: translate(1.13px, -0.92px); }
+  34.375% { transform: translate(1.48px, -0.83px); }
+  37.5% { transform: translate(1.6px, -0.71px); }
+  40.625% { transform: translate(1.48px, -0.56px); }
+  43.75% { transform: translate(1.13px, -0.38px); }
+  46.875% { transform: translate(0.61px, -0.2px); }
+  50% { transform: translate(0px, 0px); }
+  53.125% { transform: translate(-0.61px, 0.2px); }
+  56.25% { transform: translate(-1.13px, 0.38px); }
+  59.375% { transform: translate(-1.48px, 0.56px); }
+  62.5% { transform: translate(-1.6px, 0.71px); }
+  65.625% { transform: translate(-1.48px, 0.83px); }
+  68.75% { transform: translate(-1.13px, 0.92px); }
+  71.875% { transform: translate(-0.61px, 0.98px); }
+  75% { transform: translate(0px, 1px); }
+  78.125% { transform: translate(0.61px, 0.98px); }
+  81.25% { transform: translate(1.13px, 0.92px); }
+  84.375% { transform: translate(1.48px, 0.83px); }
+  87.5% { transform: translate(1.6px, 0.71px); }
+  90.625% { transform: translate(1.48px, 0.56px); }
+  93.75% { transform: translate(1.13px, 0.38px); }
+  96.875% { transform: translate(0.61px, 0.2px); }
+  100% { transform: translate(0px, 0px); }
 }
 @keyframes iss-kyyti-heijastus {
-  from { transform: translate(-0.4%, -0.2%); }
-  to { transform: translate(0.4%, 0.2%); }
+  0% { transform: translate(0px, 0px); }
+  3.125% { transform: translate(1.15px, 0.39px); }
+  6.25% { transform: translate(2.12px, 0.77px); }
+  9.375% { transform: translate(2.77px, 1.11px); }
+  12.5% { transform: translate(3px, 1.41px); }
+  15.625% { transform: translate(2.77px, 1.66px); }
+  18.75% { transform: translate(2.12px, 1.85px); }
+  21.875% { transform: translate(1.15px, 1.96px); }
+  25% { transform: translate(0px, 2px); }
+  28.125% { transform: translate(-1.15px, 1.96px); }
+  31.25% { transform: translate(-2.12px, 1.85px); }
+  34.375% { transform: translate(-2.77px, 1.66px); }
+  37.5% { transform: translate(-3px, 1.41px); }
+  40.625% { transform: translate(-2.77px, 1.11px); }
+  43.75% { transform: translate(-2.12px, 0.77px); }
+  46.875% { transform: translate(-1.15px, 0.39px); }
+  50% { transform: translate(0px, 0px); }
+  53.125% { transform: translate(1.15px, -0.39px); }
+  56.25% { transform: translate(2.12px, -0.77px); }
+  59.375% { transform: translate(2.77px, -1.11px); }
+  62.5% { transform: translate(3px, -1.41px); }
+  65.625% { transform: translate(2.77px, -1.66px); }
+  68.75% { transform: translate(2.12px, -1.85px); }
+  71.875% { transform: translate(1.15px, -1.96px); }
+  75% { transform: translate(0px, -2px); }
+  78.125% { transform: translate(-1.15px, -1.96px); }
+  81.25% { transform: translate(-2.12px, -1.85px); }
+  84.375% { transform: translate(-2.77px, -1.66px); }
+  87.5% { transform: translate(-3px, -1.41px); }
+  90.625% { transform: translate(-2.77px, -1.11px); }
+  93.75% { transform: translate(-2.12px, -0.77px); }
+  96.875% { transform: translate(-1.15px, -0.39px); }
+  100% { transform: translate(0px, 0px); }
 }
 
 /* Läpinäkyvä kosketuskerros: napautus vaihtaa tilaa, eleet nielaistaan. */

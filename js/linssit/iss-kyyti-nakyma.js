@@ -50,13 +50,20 @@ import { SATELLIITTI_KOHTEET } from './satelliitti-data.js';
 /**
  * CUPOLAN KUVAT ÄMPÄRISTÄ. Codexin uusi tumma kehys ja ISS:n ulko-osat
  * siluetteina (omistajan päätös 28.9.2026 klo 11.0x) tulevat polkuun
- * karttanostot/20260928/iss-cupola2-*; kun ne ovat ämpärissä, vaihto on
- * YKSI VAKIO: CUPOLA_VERSIO = '20260928'. Siihen asti 26.9. kehys ja
- * heijastus (natiivin 1.0.35:n kuvat). Järjestys takaa eteen kuten
+ * karttanostot/20260928/iss-cupola2-*; vaihto on YKSI VAKIO (CUPOLA_VERSIO).
+ * Voimassa pehmeä versio (omistaja 28.9.2026 klo 14.1x, Linssiseppä):
+ * kupola epäterävä, ISS-osat hillitympiä, rae — kaikki poltettu kuviin.
+ * 26.9. kehys ja heijastus jäävät taulukkoon. Järjestys takaa eteen kuten
  * natiivissa: ulko-osat, heijastus, kehys (Cupola 2) — vanhassa
  * heijastus on kehyksen päällä, koska se kuvaa lasia kehyksen yllä.
  */
 export const CUPOLA_KUVAT = Object.freeze({
+  // Pehmeä Cupola 2 (omistaja hyväksyi 28.9.2026 klo 14.1x): syväterävyys ja rae poltettu kuviin, sama
+  // alfamaski ja kerrosjärjestys kuin terävässä; ei ajonaikaista sumennusta.
+  '20260928-pehmea': {
+    juuri: 'https://media.matkakirja.app/karttanostot/20260928/',
+    kerrokset: [['ulko', 'iss-cupola2-pehmea-ulkoosat-'], ['heijastus', 'iss-cupola2-pehmea-heijastus-'], ['kehys', 'iss-cupola2-pehmea-kehys-']],
+  },
   20260928: {
     juuri: 'https://media.matkakirja.app/karttanostot/20260928/',
     kerrokset: [['ulko', 'iss-cupola2-ulkoosat-'], ['heijastus', 'iss-cupola2-heijastus-'], ['kehys', 'iss-cupola2-kehys-']],
@@ -66,7 +73,7 @@ export const CUPOLA_KUVAT = Object.freeze({
     kerrokset: [['kehys', 'iss-cupola-kokonainen-'], ['heijastus', 'iss-cupola-heijastus-']],
   },
 });
-export const CUPOLA_VERSIO = '20260926';
+export const CUPOLA_VERSIO = '20260928-pehmea';
 
 /** Kuvan koko: iPad-kehys leveämmälle ruudulle (natiivi: leveys > 0,5 × korkeus). */
 export function cupolanKoko(leveys, korkeus) {
