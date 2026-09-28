@@ -51,6 +51,7 @@
  *   5. ZOOM 2,5 → 0,05: tasonvalinta (lod), solut, janat ja leveys
  *      neljällä kiinteällä korkeudella.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
@@ -122,6 +123,7 @@ const dpr = nakyma.deviceScaleFactor;
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const ctx = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
 sivu.on('console', (m) => { if (m.type() === 'error') virheet.push(m.text().slice(0, 200)); });

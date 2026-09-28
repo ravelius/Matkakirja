@@ -48,6 +48,7 @@
  *
  * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-pallolaatat-offline.mjs [kuvakansio]
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -211,6 +212,7 @@ await ctx.addInitScript((data) => {
   } catch { /* yksityinen tila */ }
 }, tallenne);
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
 sivu.on('console', (m) => { if (m.type() === 'error') virheet.push(m.text()); });

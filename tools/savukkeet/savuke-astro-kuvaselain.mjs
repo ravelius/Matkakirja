@@ -30,6 +30,17 @@ import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const argv = process.argv.slice(2);
 const valitsin = (nimi, oletus) => {
   const i = argv.indexOf(`--${nimi}`);
@@ -142,6 +153,12 @@ const tila = (s) => s.evaluate(() => {
     kuva: document.querySelector('.satelliitti-kuva')?.getAttribute('src')?.split('/').pop() ?? null,
     tausta: k ? getComputedStyle(k).backgroundColor : null,
     sumu: [...document.querySelectorAll('.astro-sumu')].map((e) => getComputedStyle(e).visibility).join(',') || null,
+    selite: (() => {
+      const e = document.querySelector('.satelliitti-selite');
+      const o = document.querySelector('.satelliitti-selite-otsikko');
+      if (!e || !o) return null;
+      return { leveys: Math.round(e.getBoundingClientRect().width), otsikko: Math.round(o.scrollWidth), kiinni: e.classList.contains('satelliitti-selite-kiinni') };
+    })(),
     uusi: document.querySelector('.satelliitti-selite')?.classList.contains('satelliitti-selite-uusi') ?? false,
     napit: napit && !napit.hidden ? laatikko(napit) : null,
     nauha: laatikko(document.querySelector('.satelliitti-nauha:not([hidden])')),
@@ -156,9 +173,20 @@ const leikkaa = (a, b) => a && b && a[0] < b[2] && b[0] < a[2] && a[1] < b[3] &&
 
 async function ajaNakyma(nimi) {
   const virheet = [];
-  const konteksti = await selain.newContext({ ...NAKYMAT[nimi], serviceWorkers: 'block' });
+  // VIDEO=1: selitteen avaus ja pienennys videolle (ULOS/video), muut väitteet ohitetaan.
+  const konteksti = await selain.newContext({
+    ...NAKYMAT[nimi], serviceWorkers: 'block',
+    ...(process.env.VIDEO ? { recordVideo: { dir: join(ULOS, 'video'), size: NAKYMAT[nimi].viewport } } : {}),
+  });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
-  await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+  const luennat = [];
+  await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => {
+    // Selitteen luentapyyntö (lohko astro-selite) kirjataan; verkko pysyy poikki.
+    const runko = route.request().postData() ?? '';
+    if (runko.includes('astro-selite')) luennat.push(runko.slice(0, 200));
+    route.abort();
+  });
   await s.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
     const v = await ulkohaku(route.request().url());
     if (!v) { route.abort(); return; }
@@ -186,6 +214,18 @@ async function ajaNakyma(nimi) {
 
   /* --- Etna: kuvapari + perusväitteet ------------------------------ */
   await avaa('etna');
+  if (process.env.VIDEO) {
+    await s.waitForTimeout(2200);
+    for (let i = 0; i < 2; i += 1) {
+      await s.click('.satelliitti-selite-otsikko');
+      await s.waitForTimeout(1500);
+      await s.click('.satelliitti-selite-otsikko');
+      await s.waitForTimeout(1500);
+    }
+    await konteksti.close();
+    console.log(`video: ${await s.video()?.path()}`);
+    return;
+  }
   const etna = await tila(s);
   await kuva('etna');
   if (!JALKEEN) {
@@ -197,6 +237,11 @@ async function ajaNakyma(nimi) {
     return;
   }
   vaadi(n('tausta läpikuultava 0,7'), /rgba\(4, 9, 7, 0\.7/.test(etna.tausta ?? ''), etna.tausta);
+  if (JALKEEN && etna.selite?.kiinni) {
+    vaadi(n('pienennetty selite on otsikkorivin kokoinen'), etna.selite.leveys <= etna.selite.otsikko + 32,
+      JSON.stringify(etna.selite));
+  }
+  vaadi(n('selite luetaan ääneen (lohko astro-selite)'), luennat.length > 0, `${luennat.length} pyyntöä ${luennat[0] ?? ''}`);
   vaadi(n('avaruussumu piilossa kuvan ajan'), etna.sumu === null || !etna.sumu.includes('visible'), etna.sumu);
   const e = kohde('etna');
   vaadi(n('kamera kohteen yllä'), etna.pov && Math.abs(etna.pov.lat - e.lat) < 1.5 && Math.abs(etna.pov.lng - e.lon) < 1.5,

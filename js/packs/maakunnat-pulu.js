@@ -1898,4 +1898,102 @@ export const MAAKUNTIEN_PULU = {
       { q: "Milloin Ledenika-luola avattiin yleisölle?", a: "Luola avattiin kävijöille 1961, ja sen tippukivimuodostelmat ja jäätävän kylmät holvit tekivät siitä nopeasti suositun retkikohteen. Infrastruktuuri uudistettiin kokonaan 2005." },
     ],
   },
+  SRB: {
+    'Grad Beograd': [
+      { q: "Miksi Nikola Tesla haudattiin juuri Belgradiin eikä esimerkiksi New Yorkiin, missä hän teki suurimman osan työstään?", a: "Tesla kuoli New Yorkissa 1943, mutta hänen tuhkansa tuotiin Serbiaan, koska hän oli syntyperältään serbi ja hänen kotimaahansa haluttiin perustaa museo; uurna on nykyään esillä Tesla-museossa Belgradissa." },
+      { q: "Mitä Skadarlijan kadulla tapahtuu nykyään?", a: "Kujan kivetyillä raiteilla toimii yhä perinteisiä kafana-ravintoloita, joissa soi elävä musiikki; se on Kalemegdanin jälkeen Belgradin toiseksi suosituin nähtävyys." },
+    ],
+    Borski: [
+      { q: "Miksi ranskalaiset viininvalmistajat matkasivat aikanaan juuri Rajaciin asti?", a: "Kun tuhohyönteinen tuhosi suuren osan Euroopan viinitarhoista 1800-luvun lopulla, Negotinin seutu jäi vahingoittumatta, ja ulkomaiset ostajat tulivat hakemaan sieltä viiniä jopa kultarahalla maksaen." },
+      { q: "Mikä tekee Rajacin kellareista erikoisia?", a: "Yli 270 kivistä pivnica-kellaria on louhittu kylän rinteeseen: alaosa on kaivettu maan sisään viinin kypsyttämistä varten, yläkerta toimi majapaikkana sadonkorjuun aikaan." },
+    ],
+    Branicevski: [
+      { q: "Miksi Golubacin linnoituksesta taisteltiin niin kauan?", a: "Linnoitus hallitsi Tonavan kapeinta kohtaa Rautaportin solan suulla, joten se antoi haltijalleen vallan sekä joki- että maareiteille; Unkari, Serbia ja Osmanit vaihtoivat sen omistajaa vuosisatojen ajan." },
+      { q: "Missä kunnossa linnoitus on nykyään?", a: "Euroopan unioni rahoitti vuosina 2014–2019 laajan restauroinnin, ja kymmenen torneineen linnoitus on nyt turvallinen ja suosittu käyntikohde Đerdapin kansallispuiston portilla." },
+    ],
+    'Južno-Backi': [
+      { q: "Mikä yhdistää Sremski Karlovcin kansainväliseen diplomatiaan?", a: "Vuoden 1699 rauhanneuvotteluissa käytettiin ensimmäistä kertaa pyöreää pöytää, jotta yksikään osapuoli ei istuisi toista arvokkaammalla paikalla; sopimus tunnetaan Karlovcin rauhana." },
+      { q: "Kuinka pitkä viininviljelyn historia kaupungissa on?", a: "Perimätiedon mukaan viiniköynnökset tuotiin seudulle jo antiikin Rooman aikaan keisari Probuksen toimesta, ja nykyään kaupungin ytimessä toimii noin viisitoista viinitilaa." },
+    ],
+    Jablanicki: [
+      { q: "Miksi keisari Justinianus rakennutti kaupungin juuri tänne?", a: "Justinianus I syntyi tällä seudulla, ja hän halusi pystyttää synnyinseudulleen kaupungin, joka kantaisi hänen nimeään ja toimisi arkkihiippakunnan keskuksena." },
+      { q: "Kuinka kauan Justiniana Prima oli olemassa?", a: "Kaupunki eli vain noin 80 vuotta: se rakennettiin 530-luvulla ja tuhoutui avaarien ja slaavien hyökkäyksissä 600-luvun alussa, minkä jälkeen se hylättiin lopullisesti." },
+    ],
+    'Srednje-Banatski': [
+      { q: "Kuka soitti pianoa Kaštel Ečkan avajaisissa?", a: "Vuonna 1820 avajaisjuhlassa esiintyi yhdeksänvuotias pianonero, josta kasvoi myöhemmin yksi 1800-luvun kuuluisimmista säveltäjistä ja pianisteista, Franz Liszt." },
+      { q: "Miksi kartano rakennettiin juuri tänne Begej-joen varrelle?", a: "Alue ostettiin huutokaupassa 1781, ja uusi omistajasuku perusti tänne asutuksen ja kartanon; joen läheisyys ja metsäinen maasto tekivät paikasta suositun aateliston kesänvietto- ja metsästyskohteen." },
+    ],
+    Kolubarski: [
+      { q: "Miten lukumäärältään alivoimainen Serbian armeija pystyi voittamaan Kolubaran taistelussa?", a: "Serbialla oli vain noin 250 000 sotilasta itävalta-unkarilaisten 450 000 vastaan, mutta tuttu maasto, puolustusasemat ja päättäväinen vastahyökkäys joulukuussa 1914 ajoivat hyökkääjän takaisin rajan yli." },
+      { q: "Millä alueella taistelu käytiin?", a: "Taistelu levisi laajalle Kolubara-joen varrelle, Valjevon, Ub:n ja Lajkovacin kunnista aina Belgradin liepeille asti, ja se sai nimensä juuri tästä joesta, joka antaa nimen koko piirille." },
+    ],
+    'Zapadno-Backi': [
+      { q: "Kuinka vanha Apatinin panimo on?", a: "Panimo perustettiin vuonna 1756 keisarillisena laitoksena, mikä tekee siitä yhden Serbian vanhimmista yhä toimivista panimoista — lähes kolmen vuosisadan takaa." },
+      { q: "Kuinka paljon panimon tuotanto on kasvanut sen historian aikana?", a: "1700-luvulla vuosituotanto oli noin 12 000 hehtolitraa; nykyään panimon kapasiteetti on noin neljä miljoonaa hehtolitraa vuodessa, ja olutta viedään useisiin Euroopan maihin." },
+    ],
+    Macvanski: [
+      { q: "Miksi Cerin taistelua pidetään historiallisesti niin merkittävänä?", a: "Se oli elokuussa 1914 liittoutuneiden ensimmäinen voitto koko ensimmäisessä maailmansodassa: alivoimainen Serbian armeija löi itävalta-unkarilaiset takaisin Drina-joen taakse." },
+      { q: "Mitä ainutlaatuista taistelussa tapahtui ilmassa?", a: "Cerin taistelun aikana käytiin sodan ensimmäinen kahden lentokoneen välinen ilmataistelu, mikä teki siitä myös ilmasodankäynnin historian virstanpylvään." },
+    ],
+    Moravicki: [
+      { q: "Miksi Ovčar-Kablarin rotkoa kutsutaan Serbian Athosvuoreksi?", a: "Rotkoon on rakennettu yli 30 ortodoksista luostaria 1300-luvulta lähtien, mikä tekee siitä poikkeuksellisen tiheän hengellisen keskittymän — vertaus kreikkalaiseen Athosvuoreen on siitä peräisin." },
+      { q: "Montako luostaria rotkossa toimii vielä nykyään?", a: "Alkuperäisistä yli 30 luostarista on säilynyt noin kymmenen, muun muassa Blagoveštenje ja Sretenje, sekä yksi luolakirkko." },
+    ],
+    'Nišavski': [
+      { q: "Miksi komentaja Sinđelić räjäytti itsensä taistelun lopussa?", a: "Vuoden 1809 Čegarin taistelussa hän valitsi kuoleman mieluummin kuin joutuisi turkkilaisten vangiksi ja teloitetuksi seivästämällä; hän ampui pistoolilla ruutivarastoon ja tappoi itsensä ja ympärillään olleet." },
+      { q: "Miten torni sai nimensä ja mitä sille tapahtui myöhemmin?", a: "Torniin muurattiin lähes tuhat kaatuneen kalloa pelotteeksi. Kun serbit valtasivat Nišin 1878, torni katettiin kunnioituksesta ja ympärille rakennettiin kappeli; noin 60 kalloa on yhä näkyvissä." },
+    ],
+    'Severno-Banatski': [
+      { q: "Mistä ja miten mammutin luuranko löytyi?", a: "Kika löytyi joulukuussa 1996 tiilitehtaan savenottokuopasta noin 20 metrin syvyydestä rutiininomaisten kaivutöiden yhteydessä; luusto osoittautui poikkeuksellisen hyvin säilyneeksi." },
+      { q: "Miksi Kika-mammuttia pidetään erityisen arvokkaana löytönä?", a: "Noin 90 prosenttia sen luista on säilynyt, mikä tekee siitä yhden parhaiten säilyneistä mammuttilöydöistä Euroopassa; se on nyt nähtävillä Kikindan luonnontieteellisessä museossa." },
+    ],
+    Pcinjski: [
+      { q: "Miksi Vranjen asukkaat suuttuivat omalle kuuluisimmalle kirjailijalleen?", a: "Bora Stanković kuvasi 1900-luvun alun romaaneissaan ja näytelmissään kaupungin asukkaiden intohimoja, avioliittoja ja skandaaleja niin suoraan, että moni tunnisti itsensä tai sukulaisensa tarinoista — eikä pitänyt siitä." },
+      { q: "Miksi Vranje on Unescon musiikkikaupunki?", a: "Kaupungissa elää vahva romanimusiikin perinne, erityisesti puhaltajaorkesterit, jotka soittavat häissä ja juhlissa yhä samalla tavalla kuin sata vuotta sitten." },
+    ],
+    Pirotski: [
+      { q: "Kuinka korkea Midžor on, ja miksi se on erityinen?", a: "Midžor kohoaa 2169 metriin ja on Serbian korkein huippu alueilla, joista ei käydä kiistaa — huipulla kulkee myös valtakunnanraja Bulgariaan." },
+      { q: "Mitä huipulla näkee?", a: "Betonipylväs merkitsee tarkan rajapisteen, ja selkeällä säällä näköala ulottuu kauas yli Stara Planinan rotkojen ja laaksojen." },
+    ],
+    Podunavski: [
+      { q: "Mitä Radovanjski lugissa tapahtui vuonna 1817?", a: "Serbian ensimmäisen kansannousun johtaja Karađorđe Petrović murhattiin siellä poliittisen vastustajansa käskystä, ja hänen päänsä lähetettiin lahjaksi Istanbuliin osoituksena uskollisuudesta sulttaanille." },
+      { q: "Mitä paikalla voi nähdä nykyään?", a: "Muistomerkkialueella on kirkko, Karađorđen ensimmäinen hautapaikka ja museo, jossa on aseita, asiakirjoja sekä suurikokoinen muotokuva kansallissankarista." },
+    ],
+    'Severno-Backi': [
+      { q: "Miksi Subotican synagoga on ainutlaatuinen koko maailmassa?", a: "Se on ainoa jäljellä oleva unkarilaista Art Nouveau -tyyliä edustava juutalainen temppeli maailmassa, suunniteltu 1900-luvun alussa Jakabin ja Komorin toimesta." },
+      { q: "Missä kunnossa rakennus on tänään?", a: "Se oli 2000-luvun alussa maailman uhanalaisimpien monumenttien listalla, mutta on sittemmin restauroitu perusteellisesti ja toimii nyt konsertti- ja kulttuuritilana." },
+    ],
+    Pomoravski: [
+      { q: "Mitä Horreum Margi tarkoittaa ja mikä sen tehtävä oli?", a: "Nimi tarkoittaa Margi-joen (nykyisen Velika Moravan) viljavarastoa; paikka oli roomalainen varuskuntakaupunki, aseiden valmistuskeskus ja koko alueen viljan säilytyspaikka." },
+      { q: "Miksi paikka oli strategisesti tärkeä?", a: "Se sijaitsi Via Militariksella, Rooman ja Konstantinopolin välisellä pääväylällä, ja toimi hetken jopa Ylä-Mesian provinssin pääkaupunkina sekä seitsemännen legioonan tukikohtana." },
+    ],
+    'Raški': [
+      { q: "Miksi Pešterin ylänkö tunnetaan Sandžakin Siperiana?", a: "Yli tuhannen metrin korkeudessa sijaitseva tasanko kokee poikkeuksellisen ankaria talvia, ja lämpötilat voivat pudota rajusti — nimitys kuvaa juuri tätä äärimmäistä ilmastoa." },
+      { q: "Mikä tekee Sjenican juustosta erikoisen?", a: "Se on perinteinen lampaanmaidosta suolavedessä kypsytetty juusto, jota valmistetaan yhä paimentolaisperinteen mukaisesti — ehdolla Unescon aineettoman kulttuuriperinnön listalle." },
+    ],
+    'Južno-Banatski': [
+      { q: "Kuinka laaja Vršacin viinialue on?", a: "Pelkästään Vršacin rinteillä kasvaa yli 1700 hehtaaria viiniköynnöksiä, koko alueella noin 2100 hehtaaria — Serbian suurin yhtenäinen viinitarha-alue." },
+      { q: "Mikä rypälelaji on alueella yleisin?", a: "Italialainen riesling kattaa yli puolet viljelystä; muita lajikkeita ovat muun muassa chardonnay, traminer ja muskottiotoneli." },
+    ],
+    Sremski: [
+      { q: "Miksi Sirmium oli niin merkittävä Rooman valtakunnalle?", a: "Se oli yksi valtakunnan neljästä pääkaupungista keisari Diocletianuksen tetrarkia-järjestelmässä 290-luvulta lähtien, ja sieltä oli kotoisin useita Rooman keisareita." },
+      { q: "Mitä Sirmiumista on säilynyt nykypäivään?", a: "Sremska Mitrovican alla ja keskustassa on kaivettu esiin keisarillisen palatsin, kylpylöiden ja foorumin raunioita, jotka ovat nähtävillä osana kaupunkia ja paikallista museota." },
+    ],
+    'Šumadijski': [
+      { q: "Mitä Kragujevacissa tapahtui lokakuussa 1941?", a: "Saksalaiset miehitysjoukot teloittivat kahden päivän aikana arviolta noin 2800 kaupungin ja lähialueen siviiliä, myös koululaisia, kostoksi partisaanien hyökkäyksestä saksalaisjoukkoja vastaan." },
+      { q: "Mitä Šumaricen puistossa on nähtävillä nykyään?", a: "Alueella on 30 joukkohautaa ja kymmenen taiteellista muistomerkkiä 352 hehtaarin puistossa, joka on pystytetty uhrien muistoksi vuodesta 1953 alkaen." },
+    ],
+    Toplicki: [
+      { q: "Mikä löytö Pločnikista teki siitä maailmanlaajuisesti merkittävän?", a: "Vuonna 2007 sieltä löytyi maailman toiseksi vanhin todiste kuparinsulatuksesta, noin 5500–5000 eaa., mikä siirsi koko kuparikauden alkua satoja vuosia aiemmaksi." },
+      { q: "Mitä muuta erikoista Pločnikista on löytynyt?", a: "Paikalta kaivettiin esiin myös maailman vanhin tunnettu tinapronssiesine, noin 4650 eaa. valmistettu foliopala, sekä kehittyneitä savupiipuilla varustettuja sulatusuuneja." },
+    ],
+    Zajecarski: [
+      { q: "Kuinka monta viinikellaria Rajacin kylässä on ja miksi ne on rakennettu osittain maan alle?", a: "Kellareita on noin 270, ja ne on kaivettu osittain maan sisään, jotta lämpötila pysyisi tasaisena vuodenajasta riippumatta — ihanteellinen olosuhde viinin kypsyttämiseen." },
+      { q: "Mikä on Rajacin ja Rogljevon kellareiden asema nykyään?", a: "Noin kuusikymmentä kellaria on yhä aktiivisessa käytössä, ja koko kellarikylien kokonaisuus on ehdolla Unescon maailmanperintölistalle." },
+    ],
+    Zlatiborski: [
+      { q: "Miten Drina-joen talo syntyi ja miksi se on tuhoutunut niin monta kertaa?", a: "Ryhmä nuoria uimareita rakensi sen käsin vuonna 1968 rantautumissuojaksi kalliolle; tulvavesi on tuhonnut sen seitsemän kertaa vuoteen 2019 mennessä, mutta se on aina rakennettu uudelleen." },
+      { q: "Miten talolle pääsee?", a: "Ainoa keino on uida tai soutaa Drina-joen virran yli — siltaa ei ole koskaan rakennettu, mikä tekee talosta entistä salaperäisemmän nähtävyyden." },
+    ],
+  },
 };

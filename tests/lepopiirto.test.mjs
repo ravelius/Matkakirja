@@ -139,7 +139,9 @@ test('kytkennät: lauta asentaa, häiveet ja nimiöt ilmoittavat, savuke pakotta
   assert.match(gl, /const likaa = \(\) => \{ likainen = true; pallo\?\.__piirto\?\.tarvitaan\(\); \};/);
   assert.doesNotMatch(gl.replace('let likainen = true;', '').replace('likainen = true; pallo', ''), /(?<![\w.])likainen = true;/, 'kaikki likaukset kulkevat likaa():n kautta');
   const sovitin = lue('../js/pallolauta/glnimiot-sovitin.js');
-  assert.equal((sovitin.match(/ilmoitaHaivytys\(\);/g) ?? []).length, 4);
+  // 4 alkuperäistä + 4 pehmeän häivytyksen alkua (#3540: uusi, vanhan nimen ja nimiön kopio,
+  // nimiön vaihto) — jokainen häiveen alku herättää lepopiirron, muuten askel ei näy.
+  assert.equal((sovitin.match(/ilmoitaHaivytys\(\);/g) ?? []).length, 8);
   assert.match(sovitin, /sykkii\(\) \{/);
   assert.match(lue('../tools/savukkeet/savuke-laattaohjelmat.mjs'), /pallo\.__piirto\?\.pakota\?\.\(\); r\.render\(scene, kam\);/);
 });

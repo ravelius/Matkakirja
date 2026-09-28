@@ -129,6 +129,89 @@ const XAI_AANET = ['altair', 'ara', 'atlas', 'aurora', 'carina', 'castor',
   'rigel', 'sal', 'sirius', 'ursa', 'zagan', 'zenith'];
 const XAI_AIKARAJA_MS = 8000;
 
+/*
+ * PULUN STRIIMIÄÄNI ELEVENLABS V4 TURBOLLA (omistaja 28.9.2026 klo 18.1x:
+ * "Pulun voi ainakin jo vaihtaa striimi ääneksi", kortilla v4 Turbo).
+ * Vain persoona 'pollo' (Pulun chat ja puhekeskustelu, web ja natiivi):
+ * Pulun oma ääni Flicker (sama kuin esigeneroiduissa repliikeissä,
+ * tools/generoi-pulu.mjs), vakaus 0,5. Mallin tagit (PUHETAGIKEHOTE:
+ * [pause] [long-pause] [sigh] [laugh] <fast>…</fast>) muunnetaan
+ * ElevenLabsin tageiksi maltillisesti (elevenTagit). Kertoja ja lukijat
+ * pysyvät xAI:lla. PULU_PUHE_MOOTTORI = 'xai' palauttaa vanhan;
+ * PULU_PUHE_MALLI = 'eleven_v4' valitsee raskaamman mallin. Avain on
+ * workerin salaisuus ELEVEN_API_KEY (pollo-julkaisu.yml, tilannepalkit).
+ * Hinta 28.9.: v4 Turbo 0,011 $ / 1 000 mrk kampanjana 12.10. asti, sitten
+ * 0,04 $ (docs/raportit/pulu-v4-koe-20260928.md). VARAPOLKU: virhe tai
+ * aikaraja → xAI (ja sen varapolku OpenAI); varapolun pala ei säilöidy.
+ */
+const ELEVEN_PUHE_RAJAPINTA = 'https://api.elevenlabs.io/v1/text-to-speech';
+export const PULU_ELEVEN_AANI = 'piI8Kku0DcvcL6TTSeQt';
+export const PULU_ELEVEN_MALLI_OLETUS = 'eleven_v4_turbo';
+const PULU_ELEVEN_MALLIT = ['eleven_v4_turbo', 'eleven_v4'];
+const ELEVEN_ULOSTULO = 'mp3_44100_128';
+const ELEVEN_AIKARAJA_MS = 8000;
+
+/** Luetaanko tämän persoonan puhe ElevenLabsilla (vain Pulu, avain workerissa). */
+export function puluElevenKaytossa(env, persoonaNimi) {
+  if (persoonaNimi !== 'pollo' || !env?.ELEVEN_API_KEY) return false;
+  return String(env?.PULU_PUHE_MOOTTORI ?? '').trim().toLowerCase() !== 'xai';
+}
+
+/** Pulun ElevenLabs-malli ympäristöstä (tuntematon arvo → oletus Turbo). */
+export function puluElevenMalli(env) {
+  const toive = String(env?.PULU_PUHE_MALLI ?? '').trim();
+  return PULU_ELEVEN_MALLIT.includes(toive) ? toive : PULU_ELEVEN_MALLI_OLETUS;
+}
+
+/**
+ * xAI-puhetagit ElevenLabsin muotoon (suodataPuhetagit on ajettu ensin):
+ * tauot <break>-merkinnöiksi, huokaus ja nauru ElevenLabsin tageiksi ja
+ * <fast>…</fast> muotoon [quickly] …. Maltillinen: yksi tagi per kohta,
+ * ei lisättyjä tunteita (Ateena-3:n v4-koe venyi 2× pinotuista tageista).
+ */
+export function elevenTagit(teksti) {
+  return String(teksti ?? '')
+    .replace(/\[long-pause\]/g, '<break time="0.9s" />')
+    .replace(/\[pause\]/g, '<break time="0.4s" />')
+    .replace(/\[sigh\]/g, '[sighs]')
+    .replace(/\[laugh\]/g, '[laughs]')
+    .replace(/<fast>\s*/g, '[quickly] ')
+    .replace(/\s*<\/fast>/g, '');
+}
+
+async function kutsuElevenPuhetta(env, { teksti, malli, nopeus }) {
+  const ohjain = new AbortController();
+  const ajastin = setTimeout(() => ohjain.abort(), ELEVEN_AIKARAJA_MS);
+  let ylavirta;
+  try {
+    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${PULU_ELEVEN_AANI}/stream?output_format=${ELEVEN_ULOSTULO}`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'xi-api-key': env.ELEVEN_API_KEY },
+      body: JSON.stringify({
+        text: teksti,
+        model_id: malli,
+        voice_settings: {
+          stability: 0.5,
+          ...(nopeus !== 1 ? { speed: Math.min(1.2, Math.max(0.7, nopeus)) } : {}),
+        },
+      }),
+      signal: ohjain.signal,
+    });
+  } catch (virhe) {
+    clearTimeout(ajastin);
+    const v = new Error('eleven puherajapinta ei vastannut');
+    v.status = virhe?.name === 'AbortError' ? 'aikaraja' : 'verkko';
+    throw v;
+  }
+  clearTimeout(ajastin);
+  if (!ylavirta.ok || !ylavirta.body) {
+    const virhe = new Error(`eleven puherajapinta ${ylavirta.status}`);
+    virhe.status = ylavirta.status;
+    throw virhe;
+  }
+  return ylavirta;
+}
+
 /**
  * Kumpi puhemoottori on käytössä: 'xai', 'openai' tai null (ei avaimia).
  * Puhdas funktio ympäristöstä, jotta se on testattavissa ilman workeria.
@@ -882,6 +965,17 @@ export function pulunKehote({
     + `\n\n${kehysOhje(kehysLaji(kehys))}`;
 }
 
+/*
+ * ÄÄNEEN LUETTAVAN VASTAUKSEN ALKU (Päätoimittaja 28.9.2026, Natiivi-UI:n
+ * mittaus: yhden virkkeen vastaus alkoi kuulua vasta 6,9 s / 14,7 s, koska
+ * luenta odottaa ensimmäisen palan loppua). Asiakas lähettää `luetaan: 1`,
+ * kun vastaus luetaan ääneen (kaiutin tai saneltu kysymys). Ohje on oma
+ * system-lohkonsa välimuistirajan jälkeen (kutsuRajapintaa `lisaohje`).
+ */
+export const LUETTAVAN_ALKU = `TÄMÄ VASTAUS LUETAAN ÄÄNEEN: ensimmäinen virke \
+on lyhyt, enintään kahdeksan sanaa (alustus käy siihen), jotta ääni alkaa heti. \
+Sen jälkeen vastaa kuten aina.`;
+
 /** Ehdotuskehote: erillinen, koska tehtävä on aivan toinen. */
 const EHDOTUSKEHOTE = `Keksi kaksi lyhyttä kysymystä, jotka pelaaja voisi \
 haluta kysyä sinulta juuri nyt. Nojaa alla olevaan tilannekuvaukseen: hyvä \
@@ -1175,24 +1269,28 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
    * Säilöavain lasketaan tästä suodatetusta tekstistä, joten kielletty
    * tai pariton tagi ei synnytä uutta generointia samasta puheesta.
    */
-  const teksti = suodataPuhetagit(siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO), { sallitut: xai });
+  const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
+  const persoona = PUHE_PERSOONAT[persoonaNimi];
+  const eleven = puluElevenKaytossa(env, persoonaNimi);
+  // xAI-muodon tagit säilyvät myös ElevenLabsille (muunnetaan alla) ja varapolulle.
+  const tekstiTagein = suodataPuhetagit(siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO), { sallitut: xai || eleven });
+  const teksti = eleven ? elevenTagit(tekstiTagein) : tekstiTagein;
   if (!teksti) {
     return vastaa({ virhe: 'kysely', viesti: 'Teksti puuttuu.' }, { status: 400, ...kors });
   }
-  const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
-  const persoona = PUHE_PERSOONAT[persoonaNimi];
-  const malli = xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS);
+  const malli = eleven ? puluElevenMalli(env) : (xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS));
   // Säilöavain sisältää mallin, joten välimuistiosumankin moottori on tiedossa.
-  let moottoriNimi = xai ? 'xai' : 'openai';
+  let moottoriNimi = eleven ? 'eleven' : (xai ? 'xai' : 'openai');
 
   // Ääni ja ohje: persoonan oletukset, joiden yli kehittäjäkoodillinen
   // pyyntö saa kirjoittaa (työhuoneen säätövälilehti, kehittäjävalikon
   // striimiääni). xAI:lla oletus on 'ara' kaikille persoonille eikä
   // ohjetta ole; OpenAI-äänen nimi xAI-pyynnössä (tai päinvastoin)
   // jätetään huomiotta, jotta vanha laitesäätö ei kaada luentaa.
-  const oletusAani = xai ? XAI_AANI_OLETUS : persoona.aani;
-  const oletusOhje = xai ? '' : persoona.ohje;
-  const sallitutAanet = xai ? XAI_AANET : PUHE_AANET;
+  const oletusAani = eleven ? PULU_ELEVEN_AANI : (xai ? XAI_AANI_OLETUS : persoona.aani);
+  const oletusOhje = xai || eleven ? '' : persoona.ohje;
+  // Pulun ElevenLabs-ääni on kiinteä: pelaajan lukijaäänivalinta ei koske Pulua.
+  const sallitutAanet = eleven ? [] : (xai ? XAI_AANET : PUHE_AANET);
   let aani = oletusAani;
   let ohje = oletusOhje;
   let saadetty = false;
@@ -1203,12 +1301,12 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
    * (puheenAvain), joten valittu ääni säilötään omana palanaan eikä
    * ohita säilöä kuten ohje.
    */
-  if (xai && XAI_AANET.includes(runko?.aani)) aani = runko.aani;
+  if (xai && !eleven && XAI_AANET.includes(runko?.aani)) aani = runko.aani;
   if (kehittajaOhitus(pyynto, env)) {
     if (sallitutAanet.includes(runko?.aani)) {
       aani = runko.aani;
     }
-    const omaOhje = xai ? '' : siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
+    const omaOhje = xai || eleven ? '' : siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
     if (omaOhje) ohje = omaOhje;
     saadetty = aani !== oletusAani || ohje !== oletusOhje;
   }
@@ -1298,7 +1396,27 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
 
   try {
     let ylavirta;
-    if (xai) {
+    if (eleven) {
+      try {
+        ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus });
+      } catch (virhe) {
+        // VARAPOLKU: xAI (tai OpenAI) ilman säilöntää, xAI-muodon tageilla.
+        console.log(`puhe: eleven epäonnistui (${virhe?.status ?? 'verkko'}) → ${xai ? 'xai' : 'openai'}`);
+        avain = null;
+        r2Avain = null;
+        if (xai) {
+          moottoriNimi = 'xai';
+          ylavirta = await kutsuXaiPuhetta(env, { teksti: tekstiTagein, aani: XAI_AANI_OLETUS, nopeus });
+        } else {
+          if (!env.OPENAI_API_KEY) throw virhe;
+          moottoriNimi = 'openai';
+          ylavirta = await kutsuOpenaiPuhetta(env, {
+            teksti: suodataPuhetagit(tekstiTagein, { sallitut: false }),
+            aani: persoona.aani, ohje: persoona.ohje, malli: env.PUHE_MALLI || PUHE_MALLI_OLETUS, nopeus,
+          });
+        }
+      }
+    } else if (xai) {
       try {
         ylavirta = await kutsuXaiPuhetta(env, { teksti, aani, nopeus });
       } catch (virhe) {
@@ -1487,7 +1605,7 @@ async function hoidaRealtime(pyynto, env, kors, runko) {
 
 /** Yksi kutsu Anthropicin rajapintaan. `striimi` avaa SSE-vastauksen. */
 async function kutsuRajapintaa(env, {
-  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null,
+  jarjestelma, viestit, maxTokens, striimi = false, lampotila = null, lisaohje = null,
 }) {
   const malli = env.POLLO_MALLI || MALLI_OLETUS;
   return fetch(RAJAPINTA, {
@@ -1508,7 +1626,15 @@ async function kutsuRajapintaa(env, {
        * 0,1 × syötehinnalla — vastaus ≈ 0,025 → ≈ 0,008 $. Pelaajan tilanne
        * ja historia ovat viesteissä, joten etuliite pysyy tavu tavulta samana.
        */
-      system: [{ type: 'text', text: jarjestelma, cache_control: { type: 'ephemeral' } }],
+      /*
+       * `lisaohje` (esim. LUETTAVAN_ALKU) on oma lohkonsa välimuistirajan
+       * JÄLKEEN: välimuistissa oleva etuliite pysyy tavu tavulta samana
+       * kirjoitetulle ja luettavalle vastaukselle.
+       */
+      system: [
+        { type: 'text', text: jarjestelma, cache_control: { type: 'ephemeral' } },
+        ...(lisaohje ? [{ type: 'text', text: lisaohje }] : []),
+      ],
       messages: viestit,
       // Lämpötila annetaan vain kun se on tarkoituksella asetettu:
       // chat-vastaukset saavat mallin oletuksen, tuomiot temperature 0.
@@ -1526,9 +1652,11 @@ async function kutsuRajapintaa(env, {
  * kun taas tuntematon tyhjä ansaitsee yhden uusinnan (ks. rajat.js
  * tyhjanSyy).
  */
-async function kysyMallitiedot(env, { jarjestelma, viestit, maxTokens, lampotila = null }) {
+async function kysyMallitiedot(env, {
+  jarjestelma, viestit, maxTokens, lampotila = null, lisaohje = null,
+}) {
   const vastaus = await kutsuRajapintaa(env, {
-    jarjestelma, viestit, maxTokens, lampotila,
+    jarjestelma, viestit, maxTokens, lampotila, lisaohje,
   });
   if (!vastaus.ok) {
     /*
@@ -1699,10 +1827,22 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
   }
 }
 
-async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
+async function striimaaVastaus(env, kors, {
+  jarjestelma, viestit, maxTokens, lisaohje = null, ajat = null,
+}) {
   const ylavirta = await kutsuRajapintaa(env, {
-    jarjestelma, viestit, maxTokens, striimi: true,
+    jarjestelma, viestit, maxTokens, striimi: true, lisaohje,
   });
+  /*
+   * SERVER-TIMING (Natiivi-UI 28.9.2026): mihin ensimmäisen palan odotus
+   * kuluu tuotannossa — rajat = pyynnön alusta mallikutsuun (KV-luvut),
+   * malli = mallin vastauksen otsakkeisiin. Otsakkeet lähtevät yhdessä
+   * ensimmäisen palan kanssa, joten lukija näkee ne heti.
+   */
+  const ajoitus = ajat
+    ? { 'server-timing': `rajat;dur=${ajat.rajatMs}, malli;dur=${Date.now() - ajat.alkuMs - ajat.rajatMs}`,
+      'access-control-expose-headers': 'server-timing' }
+    : {};
   if (!ylavirta.ok || !ylavirta.body) {
     const virhe = new Error(`rajapinta ${ylavirta.status}`);
     virhe.status = ylavirta.status;
@@ -1782,7 +1922,7 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
          */
         const paikattu = await paikkaaTyhja(
           env,
-          { jarjestelma, viestit, maxTokens },
+          { jarjestelma, viestit, maxTokens, lisaohje },
           { virhe: virtaVirhe, stop },
         );
         await laheta('loppu', paikattu);
@@ -1801,7 +1941,7 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
 
   return new Response(readable, {
     status: 200,
-    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut) },
+    headers: { ...SSE_OTSAKKEET, ...korsOtsakkeet(kors.origin, kors.sallitut), ...ajoitus },
   });
 }
 
@@ -2330,6 +2470,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
 
 export default {
   async fetch(pyynto, env, ctx) {
+    const alkuMs = Date.now();
     const sallitut = lueLista(env.POLLO_ORIGINIT);
     const origin = pyynto.headers.get('origin');
     const kors = { origin, sallitut };
@@ -2430,9 +2571,20 @@ export default {
     if (!raja.ok) {
       return vastaa({ virhe: raja.syy, viesti: raja.viesti }, { status: 429, ...kors });
     }
-    // Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
-    await kasvataLaskuri(kv, pAvain, 60 * 60 * 30);
-    await kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 });
+    /*
+     * Laskurit kasvavat ennen kutsua: keskeytynytkin kutsu on maksanut.
+     * KIRJOITUS EI PIDÄTÄ MALLIKUTSUA (Natiivi-UI:n mittaus 28.9.2026:
+     * tuotannossa 1. pala ~3,5 s, paikallisesti samalla koodilla ~1,2 s):
+     * KV:n kirjoitus kulkee waitUntilissa mallikutsun rinnalla. Muistilaskuri
+     * päivittyy silti tässä pyynnössä (kasvataLaskuri).
+     */
+    const kirjoitukset = Promise.all([
+      kasvataLaskuri(kv, pAvain, 60 * 60 * 30),
+      kasvataHarvaLaskuri(kv, kAvain, 60 * 60 * 24 * 40, 1, { kynnys: 20 }),
+    ]);
+    if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitukset);
+    else await kirjoitukset;
+    const rajatMs = Date.now() - alkuMs;
 
     // --- kutsu -------------------------------------------------------
     try {
@@ -2477,6 +2629,8 @@ export default {
       const kehote = pulunKehote({
         natiivi, puhetagit: runko?.puhetagit === 1, kehys: runko?.kehys,
       });
+      // Ääneen luettava vastaus alkaa lyhyellä virkkeellä (ks. LUETTAVAN_ALKU).
+      const lisaohje = runko?.luetaan === 1 ? LUETTAVAN_ALKU : null;
       /*
        * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
        * varalle: jos asiakas ei osaa lukea SSE:tä tai virta ei aukea,
@@ -2487,10 +2641,12 @@ export default {
           jarjestelma: kehote,
           viestit,
           maxTokens: MAX_TOKENS,
+          lisaohje,
+          ajat: { alkuMs, rajatMs },
         });
       }
 
-      const kutsu = { jarjestelma: kehote, viestit, maxTokens: MAX_TOKENS };
+      const kutsu = { jarjestelma: kehote, viestit, maxTokens: MAX_TOKENS, lisaohje };
       const kerralla = await kysyMallitiedot(env, kutsu);
       // Erotinrivi puretaan aina täällä: pelaajalle menee vastaus ja
       // erillinen lista, ei koskaan raakaa merkintää.
