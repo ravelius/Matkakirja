@@ -3,10 +3,9 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createRequire } from 'node:module';
 import { mercLat, osanAlue, osanLaatat, laskeLaatta, OSAT } from '../tools/tee-bmng-laatat.mjs';
 
-const sharp = createRequire(import.meta.url)('sharp');
+const sharp = await import('sharp').then((m) => m.default).catch(() => null);
 
 test('Mercator: päiväntasaaja on laattaraja ja reuna 85,05°', () => {
   assert.equal(mercLat(3, 4), 0);
@@ -23,7 +22,7 @@ test('osat kattavat tasot 4–7 tasan ilman päällekkäisyyttä', () => {
   assert.deepEqual(osanLaatat('A1', 2), [[0, 0], [0, 1]]);
 });
 
-test('laatta ottaa rivinsä leveysasteen mukaan (Mercator), ei tasavälein', async () => {
+test('laatta ottaa rivinsä leveysasteen mukaan (Mercator), ei tasavälein', { skip: sharp ? false : 'sharp puuttuu' }, async () => {
   // Lähde: koko maailma 720 × 360 (0,5°/px); punainen = leveysaste + 90 (0…180).
   const w = 720; const h = 360; const raw = Buffer.alloc(w * h * 3);
   for (let r = 0; r < h; r += 1) for (let c = 0; c < w; c += 1) raw[(r * w + c) * 3] = Math.round(90 - (r + 0.5) / 2 + 90);
