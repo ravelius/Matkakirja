@@ -27,6 +27,10 @@ import { extname, join } from 'node:path';
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
 
+// LUKIJAN VALIKKO (omistaja 28.9.2026) poisti ohjauspaneelin (.lukija-paneeli):
+// kohdat 4, 5 ja 7 viittaavat siihen. Kappalehypyt, kelaus ja pysäytys
+// valvotaan nyt savukkeissa savuke-lukijan-valikko(-kohdat).mjs; jos tämä
+// savuke herätetään pallolaudalle, paneelivalitsimet vaihdetaan valikkoon.
 ohitaVanhanKartanSavuke(import.meta.url);
 
 const paketti = await import('playwright')
