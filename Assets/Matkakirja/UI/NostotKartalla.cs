@@ -535,6 +535,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Vain erikoismallien kalustelaatikot (Symbolimallit.LisaaKalusteet) paneelin pisteinä: nostonimiöiden esteet.</summary>
         readonly List<Rect> malliRuudut = new List<Rect>();
         static readonly List<Ruutulaatikko> malliLaatikot = new List<Ruutulaatikko>();
+        /// <summary>malliRuutujen nostot (Symbolimallit.LisaaKalusteet, sama indeksi): mallinoston oma laatikko.</summary>
+        readonly List<string> malliAvaimet = new List<string>();
 
         /// <summary>KaupunkiMerkit.Kalusteet (ruutupikselit, y ylös) tämän kerroksen paneelin pisteiksi (y alas).</summary>
         void KalusteetPaneeliin()
@@ -546,7 +548,8 @@ namespace Matkakirja.Natiivi
             if (paneeli != null)
             {
                 malliLaatikot.Clear();
-                Symbolimallit.LisaaKalusteet(malliLaatikot);
+                malliAvaimet.Clear();
+                Symbolimallit.LisaaKalusteet(malliLaatikot, malliAvaimet);
                 foreach (var k in malliLaatikot)
                 {
                     var a = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(k.X0, Screen.height - k.Y1));
@@ -632,19 +635,9 @@ namespace Matkakirja.Natiivi
                 Rect paikka = default;
                 // ERIKOISMALLIT ESTEINÄ (Linssiseppä 28.9. klo 19.3x: Visbyn malli Vimmerby-nimiön päällä): nimiö ei mene erikoismallin
                 // alle (vain mallit, ei UI-kalusteita: ne piilottivat laitekuvassa cl14 vasemman laidan nimiöt). Mallinoston oma
-                // laatikko (lähin, jonka alueella merkin piste on) ei estä omaa nimiötä. Kategoriasymboleilla ei ole laatikkoa: ennallaan.
-                int oma = -1;
-                if (m.Ryhma == null && !m.MallinAlla && m.Id != null && Symbolimallit.OnMalli(m.Id))
-                {
-                    float paras = float.MaxValue;
-                    for (int k = 0; k < malliRuudut.Count; k++)
-                    {
-                        var r = malliRuudut[k];
-                        if (m.Piste.x < r.xMin - 4f || m.Piste.x > r.xMax + 4f || m.Piste.y < r.yMin - 24f || m.Piste.y > r.yMax + 24f) continue;
-                        float d = Mathf.Abs(m.Piste.x - r.center.x) + Mathf.Abs(m.Piste.y - r.yMax);
-                        if (d < paras) { paras = d; oma = k; }
-                    }
-                }
+                // laatikko (noston id:llä, ei geometrisesti: cl16:ssa Spillingsin kätkö nappasi Visbyn siirretyn mallin laatikon) ei
+                // estä omaa nimiötä. Kategoriasymboleilla ei ole laatikkoa: ennallaan.
+                int oma = m.Ryhma == null && !m.MallinAlla && m.Id != null && Symbolimallit.OnMalli(m.Id) ? malliAvaimet.IndexOf(m.Id) : -1;
                 bool malli = oma >= 0;
                 m.MallinYla = malli ? malliRuudut[oma].yMin - m.Piste.y : float.NaN;
                 if (malli) mallienNimiot.Add(m.Id + "#" + oma);
