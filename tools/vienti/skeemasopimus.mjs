@@ -65,6 +65,10 @@ export const VAATIMUKSET = {
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
+  // Fable 28.9.2026: SRB/ALB/MKD/MNE/MDA/BLR saivat ensimmäiset karttanostonsa ja hahmotelmamoduulinsa.
+  '1.57': ['moduuli:js/packs/hahmotelma-srb.js', 'moduuli:js/packs/hahmotelma-alb.js',
+    'moduuli:js/packs/hahmotelma-mkd.js', 'moduuli:js/packs/hahmotelma-mne.js',
+    'moduuli:js/packs/hahmotelma-mda.js', 'moduuli:js/packs/hahmotelma-blr.js'],
   // Omistaja 27.9.2026 klo 20.0x: ei salaisuuksia maakuntiin (Kreikan salaisuudet hahmotelmanostoina, web #3475).
   // Fable 28.9.2026: kerma, reliefi ja yövalot offline-lataukseen (E2E-offline Tanska + Kroatia).
   '1.56': ['offline.lahteet.kerrokset', 'offline.globaali.tavuja.kerrokset'],

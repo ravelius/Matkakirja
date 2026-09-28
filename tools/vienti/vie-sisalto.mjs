@@ -232,8 +232,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        maat.*.kerma (maan oma kermasarja), tavuja.kerrokset maille ja globaalille, globaali.tavuja.offline — Fable
  *        28.9.2026 E2E-offline Tanska + Kroatia ("ladattu alue kuten verkossa"), Eurooppa +122 Mt (9,2 %) ja maailma
  *        +24,7 Mt. Vanhat buildit ohittavat uudet avaimet; tavuja.offline kasvaa kerrosten verran.
+ *   1.57 SRB/ALB/MKD/MNE/MDA/BLR saivat ensimmäisen karttanostonsa (Matkakirjan ihme,
+ *        js/packs/monumentit-eurooppa.js) ja siten ensimmäiset hahmotelmamoduulinsa
+ *        (js/packs/hahmotelma-{srb,alb,mkd,mne,mda,blr}.js) — kuusi uutta moduulia
+ *        manifestissa (Fable 28.9.2026, VAIN EUROOPPA -karttatyö).
  */
-export const SKEEMAVERSIO_TARKKA = '1.56';
+export const SKEEMAVERSIO_TARKKA = '1.57';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
