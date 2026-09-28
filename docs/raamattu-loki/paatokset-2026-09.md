@@ -8823,3 +8823,7 @@ Omistaja 28.9. klo 20.36 sanatarkasti: "Pyydä kodeksia tarkistamaan, onko kaikk
 ## OMISTAJA: MAAKUNTATILASSA RAJAT NÄKYVIIN, TOINEN NAPAUTUS POISTAA VALINNAN (NATIIVI) (28.9.2026 klo 20.38)
 
 Omistaja 28.9. klo 20.38 kaappauksella (TF, Peloponnesos valittuna, rajat tuskin näkyvät; docs/raportit/kaappaukset/omistaja-20260928/maakuntatila-rajat-ja-poisvalinta-2037.png) sanatarkasti: "Kun valitsee maakunta tila on päällä, niin silloin maakuntien rajat pitäisi näkyä. Ja mikäli pelaaja painaa uudestaan samaa maakuntaa, niin silloin valinta pitäisi tyhjentyä. Ja pelin palata takaisin oletusnäkymään." → Natiivi-UI (0daf557e:n jatko): maakuntatilassa kaikkien maakuntien rajat selvästi näkyviin (ei ohuina), saman maakunnan uusi napautus tyhjentää valinnan (väri ja kuvausruutu pois) ja palauttaa tilan valinnattomaan perusnäkymään; kytkin ennallaan. Kuvapari omistajalle, sitten 1.0.40/1.0.41.
+
+## OMISTAJA: TESTFLIGHTIN AVAUSSIVUT POIS (MITÄ TESTATA + LÄHETÄ PALAUTETTA) (28.9.2026 klo 20.38)
+
+Omistaja 28.9. klo 20.38 TF 1.0.38:n Kehittäjältä-sivun kaappauksella sanatarkasti: "Saakotete ja tästä seuraavaa lähetä palautetta sivua pois pelin käynnistyksestä?" Sivut ovat TestFlightin omia (näkyvät vain uuden buildin ensimmäisellä avauksella). → Julkaisija 1.0.39:stä: Testattavaa tyhjäksi (kumoaa 28.9. yhden rivin säännön; muutoslokirivi ja pelin Peli päivittyi -lappu ennallaan) ja sisäisen ryhmän TF-palaute pois (ASC betaGroups feedbackEnabled=false). Omistaja todentaa 1.0.39:n avauksessa; palaute kulkee jatkossa kaappauksina chattiin.
