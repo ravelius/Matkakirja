@@ -20,8 +20,12 @@
  * EI TAULUUN (omistajan tarkennus): Lennä kohteen ylle, ajan nopeutus,
  * NASA-koe ja muut kyydin säätimet kuuluvat ISS:n omaan säätöpaneeliin
  * (js/linssit/iss-kyyti-nakyma.js ohjaimet). "Oma sijainti" -toimintoa ei
- * ole linssissä. Pulun chatti ei ole moodi: pallonäkymässä Pulun napautus
- * avaa nyt taulun, ja valokuvan oma minipulu pitää kohdekohtaisen chatin.
+ * ole linssissä (Päätoimittaja 28.9.: kuuluu ISS-säätöpaneeliin).
+ *
+ * PULU AVAA AINA TAULUN (Päätoimittaja 28.9.): pelin Pulu, valokuvan
+ * minipulu ja — jos Livia ei ole vielä pelissä — Pulun paikalla oleva
+ * Näkymät-nappi. Chatti ei ole moodi: se on taulun alareunan pieni
+ * "Kysy Pululta" -linkki, joka avaa valokuvan Pulun chatin (ks. kysyPululta).
  *
  * NYKYINEN MOODI ON VALITTUNA. Valinta vie moodista toiseen samoilla
  * kahvoilla kuin pelaajan omat eleet (ISS:n napautus, kyydin ✕, pisteen
@@ -84,6 +88,8 @@ export const MOODIN_TOIMIA = 4;
 export const TAULUN_RAKO_PX = 8;
 /** Astronautti-Pulun leijunnan korkein nousu (css/satelliitti.css). */
 export const LEIJUNNAN_VARA_PX = 5;
+/** Pulun eleen korkein nousu napin yläreunasta (px, mitattu 28.9.). */
+export const PULUN_ELEEN_VARA_PX = 90;
 /** Auki olevan taulun Pulu-mittauksen väli. */
 export const TAULUN_SEURANTA_MS = 400;
 /** Taulun otsikko (sovelluksen tekstiä, ei Livian repliikki). */
@@ -91,6 +97,20 @@ export const TAULUN_OTSIKKO = 'Minne katsotaan?';
 
 /** Pulun napin valitsin: pelin oma pöllönappi linssin päällä. */
 export const PULUN_NAPPI = '.pollo-nappi';
+/** Valokuvanäkymän minipulu (js/linssit/satelliitti.js avaaHavaintokortti). */
+export const MINIPULU = '.satelliitti-pulunappi';
+/** Näkymät-nappi Pulun paikalla, kun Livia ei ole vielä pelissä. */
+export const NAKYMAT_NAPPI = '.astro-nakymat-nappi';
+/**
+ * KAIKKI TAULUN AVAAJAT (Päätoimittaja 28.9. omistajan "aina esille
+ * napauttamalla pulua" -linjan mukaan): pelin Pulu, valokuvan minipulu ja
+ * Näkymät-nappi. Napautus mihin tahansa niistä avaa tai sulkee taulun.
+ */
+export const TAULUN_AVAAJAT = `${PULUN_NAPPI}, ${MINIPULU}, ${NAKYMAT_NAPPI}`;
+/** Pulun oma toiminto taulun alareunassa (ei moodirivi). */
+export const KYSY_PULULTA = 'Kysy Pululta';
+/** Kuinka usein katsotaan, onko Pulu paikalla (Näkymät-nappi näkyviin / pois). */
+export const PULUN_PAIKKA_MS = 700;
 
 /**
  * NYKYINEN MOODI kahvoista: valokuva auki → 'kuvat'; kyydin tila →
@@ -199,8 +219,27 @@ export function liviaPuhuu(ui, tervetulo = null) {
  * (lentonäyttämön SVG:n osat, joilla on koko) unioni, tai null.
  * Lentonäyttämö itse on 152 × 304 px:n läpinäkyvä kangas, joten sen
  * oma laatikko olisi liian iso — mitataan piirretyt osat.
+ * `eleenVara: false` antaa hahmon todellisen laatikon (savuke).
  */
-export function pulunLaatikko(doc = globalThis.document) {
+export function pulunLaatikko(doc = globalThis.document, { eleenVara = true } = {}) {
+  /*
+   * KUKA ON PULUN PAIKALLA: valokuvan ollessa auki minipulu (kuva peittää
+   * pelin Pulun), muuten pelin Pulu, ja jos Livia ei ole pelissä,
+   * Näkymät-nappi. Ankkuri, jonka laatikko on nolla, ohitetaan.
+   */
+  const laatikko = (v) => {
+    const el = doc?.querySelector?.(v);
+    const b = el && !el.hidden ? el.getBoundingClientRect?.() : null;
+    return b?.width > 0 && b?.height > 0 ? b : null;
+  };
+  if (doc?.body?.classList?.contains?.('satelliitti-kuva-auki')) {
+    const mini = laatikko(MINIPULU);
+    if (mini) return { left: mini.left, top: mini.top, right: mini.right, bottom: mini.bottom };
+  }
+  if (!pulunPaikalla(doc)) {
+    const n = laatikko(NAKYMAT_NAPPI);
+    return n ? { left: n.left, top: n.top, right: n.right, bottom: n.bottom } : null;
+  }
   const laatikot = [];
   const nappi = doc?.querySelector?.(PULUN_NAPPI)?.getBoundingClientRect?.();
   if (nappi?.width > 0 && nappi?.height > 0) laatikot.push(nappi);
@@ -222,12 +261,35 @@ export function pulunLaatikko(doc = globalThis.document) {
     }
   }
   if (!laatikot.length) return null;
+  /*
+   * ELEEN VARA: Pulu reagoi napautukseen eleellä, joka nostaa hahmoa hetkeksi
+   * (mitattu iPhonella 28.9.: päälaki napin yläreunasta 38 px levossa, 83 px
+   * eleessä). Taulu ei saa jäädä eleen alle sinä aikana, kun sijainti
+   * mitataan uudelleen, joten napin yläpuolelle varataan aina eleen korkeus.
+   */
+  const vara = eleenVara && nappi?.width > 0 ? [{ top: nappi.top - PULUN_ELEEN_VARA_PX }] : [];
   return {
     left: Math.min(...laatikot.map((b) => b.left)),
-    top: Math.min(...laatikot.map((b) => b.top)),
+    top: Math.min(...laatikot.map((b) => b.top), ...vara.map((b) => b.top)),
     right: Math.max(...laatikot.map((b) => b.right)),
     bottom: Math.max(...laatikot.map((b) => b.bottom)),
   };
+}
+
+/**
+ * ONKO PULU PAIKALLA LINSSISSÄ: pelin pöllönappi on DOMissa eikä piilossa
+ * (Livia on pelissä, game.polloLoydetty). Paneelivahdin hetkellinen
+ * väistö (pulu-paneelin-alla-piilossa) ei tarkoita poissaoloa.
+ */
+export function pulunPaikalla(doc = globalThis.document) {
+  const el = doc?.querySelector?.(PULUN_NAPPI);
+  if (!el || el.hidden) return false;
+  try {
+    return (doc.defaultView?.getComputedStyle?.(el)?.display ?? 'block') !== 'none'
+      && el.getBoundingClientRect().width > 0;
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -236,7 +298,7 @@ export function pulunLaatikko(doc = globalThis.document) {
  * kutsuu `valitse(tunnus)`, sulku `sulje()`.
  */
 export function luoTaulunNakyma({
-  doc = globalThis.document, valitse = () => {}, sulje = () => {}, vahennaLiiketta = false,
+  doc = globalThis.document, valitse = () => {}, sulje = () => {}, kysy = () => {}, vahennaLiiketta = false,
   kello = globalThis,
 } = {}) {
   if (!doc?.createElement || !doc.body) return null;
@@ -261,8 +323,33 @@ export function luoTaulunNakyma({
   const lista = doc.createElement('div');
   lista.className = 'astro-paneeli-rivit';
   lista.setAttribute('role', 'menu');
-  paneeli.append(ylarivi, lista);
+  /*
+   * "KYSY PULULTA" ALAREUNASSA: Pulun oma toiminto eikä moodi, joten se on
+   * pieni tekstilinkki rivien alla eikä rivi. Osuma-ala 44 px, ei riviä
+   * korkeampi.
+   */
+  const linkki = doc.createElement('button');
+  linkki.type = 'button';
+  linkki.className = 'astro-paneeli-linkki';
+  linkki.textContent = KYSY_PULULTA;
+  linkki.setAttribute('aria-label', 'Kysy Pululta — avaa keskustelu');
+  linkki.addEventListener('click', (e) => { e.stopPropagation(); kysy(); });
+  paneeli.append(ylarivi, lista, linkki);
   doc.body.appendChild(paneeli);
+
+  /*
+   * NÄKYMÄT-NAPPI (Päätoimittaja 28.9.): jos Livia ei ole vielä pelissä,
+   * linssissä ei ole Pulua, jota napauttaa. Silloin Pulun paikalla on pieni
+   * tekstinappi, joka avaa ja sulkee taulun (dokumentin kuuntelija,
+   * TAULUN_AVAAJAT). Nappi katoaa, kun Pulu on paikalla.
+   */
+  const nakymat = doc.createElement('button');
+  nakymat.type = 'button';
+  nakymat.className = 'astro-nakymat-nappi';
+  nakymat.textContent = 'Näkymät';
+  nakymat.setAttribute('aria-label', 'Näkymät — avaa linssin näkymät');
+  nakymat.hidden = true;
+  doc.body.appendChild(nakymat);
 
   sulku.addEventListener('click', (e) => { e.stopPropagation(); sulje(); });
   // Taulun eleet eivät kuulu pallolle eivätkä kyydin kosketuskerrokselle.
@@ -356,10 +443,16 @@ export function luoTaulunNakyma({
     },
     auki: () => paneeli.classList.contains('astro-paneeli-auki'),
     sisaltaa: (el) => Boolean(el && paneeli.contains(el)),
+    /** Näkymät-nappi näkyviin (true) tai pois. */
+    nakymatNappi(nakyvissa) {
+      if (nakymat.hidden === !nakyvissa) return;
+      nakymat.hidden = !nakyvissa;
+    },
     pura() {
       kello.clearTimeout?.(piiloKello);
       kello.clearTimeout?.(seurantaKello);
       paneeli.remove();
+      nakymat.remove();
     },
   };
 }
@@ -381,6 +474,9 @@ export function luoTaulunNakyma({
  * @param {object|null} [p.nakyma] testien tynkänäkymä (oletus: DOM)
  * @param {Function} [p.vaikene] kesken olevan puheen pysäytys
  * @param {boolean} [p.automaatti] avataanko taulu linssin alussa itse
+ * @param {() => boolean} [p.avaaChat] "Kysy Pululta": avaa valokuvan
+ *   Pulun chatin (kutsutaan kuvamoodissa)
+ * @param {(doc) => boolean} [p.pulunPaikalla] onko Pulu linssissä (testit)
  */
 export function luoAstroTaulu({
   ui = null,
@@ -405,6 +501,9 @@ export function luoAstroTaulu({
     kello.setTimeout?.(() => polloPaneelivahtiNyt(), 260);
   },
   automaatti = true,
+  avaaChat = () => false,
+  suljeChat = () => {},
+  pulunPaikalla: paikalla = pulunPaikalla,
 } = {}) {
   const k = { avaruus, kuvaAuki, kuviaOn };
   let purettu = false;
@@ -427,6 +526,7 @@ export function luoAstroTaulu({
     doc, vahennaLiiketta, kello,
     valitse: (tunnus) => valitse(tunnus),
     sulje: () => sulje({ syy: 'sulku' }),
+    kysy: () => kysyPululta(),
   });
 
   function avaa({ syy = 'napautus' } = {}) {
@@ -444,6 +544,8 @@ export function luoAstroTaulu({
      * joten taulu on Pulun ainoa puheenvuoro ruudulla.
      */
     try { kuplatPois(); } catch { /* ei kuplia */ }
+    // Valokuvan chatti ja taulu ovat samassa kulmassa: taulu tulee tilalle.
+    if (kuvaAuki()) { try { suljeChat(); } catch { /* ei chattia */ } }
     auki = true;
     avauksia += 1;
     loki.push(`avaa:${syy}`);
@@ -473,7 +575,7 @@ export function luoAstroTaulu({
     } catch { /* toimi epäonnistui: seuraava kierros tai katto ratkaisee */ }
   };
 
-  function siirryMoodiin(tavoite) {
+  function siirryMoodiin(tavoite, { perilla = null } = {}) {
     if (vaihto) { peru(vaihto.ajastin); vaihto = null; }
     const oma = { tavoite, toimia: 0, alku: kello.nyt?.() ?? Date.now(), ajastin: 0, tulos: 'kesken' };
     vaihto = oma;
@@ -485,6 +587,7 @@ export function luoAstroTaulu({
         oma.tulos = askel === 'perilla' ? 'perilla' : 'ei';
         loki.push(`moodi:${tavoite}:${oma.tulos}`);
         vaihto = null;
+        if (oma.tulos === 'perilla') { try { perilla?.(); } catch { /* jatko ei kaada */ } }
         return;
       }
       if (kulunut > MOODIN_KATTO_MS || (askel !== 'odota' && oma.toimia >= MOODIN_TOIMIA)) {
@@ -513,6 +616,42 @@ export function luoAstroTaulu({
     siirryMoodiin(rivi.moodi);
     return true;
   }
+
+  /*
+   * ---- "KYSY PULULTA" --------------------------------------------------
+   *
+   * LINSSIN AINOA CHATTI ON VALOKUVAN PULULLA. Pelin oma chatti ei aukea
+   * linssin aikana (js/pollo.js avaa → linssiEstaaChatin, omistaja
+   * 4.9.2026), joten pallonäkymän Pulu ei ennen tätäkään avannut chattia.
+   * Keskustelu on kohteen oma (kaksi valmista kysymystä + vapaa kenttä,
+   * js/linssit/satelliitti.js), joten linkki vie kuvamoodiin (lähimmän
+   * kohteen kuva, kyydistä ensin pois) ja avaa siellä chatin. Taulu
+   * sulkeutuu heti.
+   */
+  function kysyPululta() {
+    if (purettu) return false;
+    loki.push('kysy');
+    sulje({ syy: 'kysy' });
+    const chatti = () => { try { avaaChat(); } catch { /* ei kuvaa */ } };
+    if (nykyinenMoodi(k) === 'kuvat') chatti();
+    else siirryMoodiin('kuvat', { perilla: chatti });
+    return true;
+  }
+
+  /* ---- Näkymät-nappi, kun Pulua ei ole ------------------------------ */
+  let pulu = null;
+  const paikkaKierros = () => {
+    if (purettu) return;
+    let nyt = true;
+    try { nyt = Boolean(paikalla(doc)); } catch { nyt = true; }
+    if (nyt !== pulu) {
+      pulu = nyt;
+      loki.push(nyt ? 'pulu:paikalla' : 'pulu:poissa');
+      try { n?.nakymatNappi?.(!nyt); } catch { /* ei nappia */ }
+    }
+    ajasta(paikkaKierros, PULUN_PAIKKA_MS);
+  };
+  paikkaKierros();
 
   /* ---- automaattinen avaus linssin alussa ------------------------ */
   const alkoi = kello.nyt?.() ?? Date.now();
@@ -543,14 +682,15 @@ export function luoAstroTaulu({
 
   /* ---- Pulun napautus -------------------------------------------- */
   /*
-   * KAAPPAUSVAIHEESSA ENNEN PULUN OMAA KUUNTELIJAA: pöllönapin oma click
-   * avaisi chatin (js/pollo.js vaihdaTila). Linssin ajan napautus avaa
-   * taulun — vain tässä linssissä, koska kuuntelija on olemassa vain
-   * linssin elinkaaren ajan. Muualla pelissä Pulu avaa chatin kuten ennen.
+   * KAAPPAUSVAIHEESSA ENNEN AVAAJIEN OMIA KUUNTELIJOITA: pöllönapin oma
+   * click kutsuisi chattia (js/pollo.js vaihdaTila, joka linssissä ei
+   * aukea) ja minipulun oma click valokuvan chattia. Linssin ajan napautus
+   * avaa taulun — vain tässä linssissä, koska kuuntelija on olemassa vain
+   * linssin elinkaaren ajan. Muualla pelissä Pulu toimii kuten ennen.
    */
   const pulunNapautus = (e) => {
     const kohde = e?.target;
-    if (!kohde?.closest?.(PULUN_NAPPI)) return;
+    if (!kohde?.closest?.(TAULUN_AVAAJAT)) return;
     e.preventDefault?.();
     e.stopImmediatePropagation?.();
     e.stopPropagation?.();
@@ -560,7 +700,7 @@ export function luoAstroTaulu({
   const ulkoNapautus = (e) => {
     if (!auki) return;
     const kohde = e?.target;
-    if (n?.sisaltaa?.(kohde) || kohde?.closest?.(PULUN_NAPPI)) return;
+    if (n?.sisaltaa?.(kohde) || kohde?.closest?.(TAULUN_AVAAJAT)) return;
     sulje({ syy: 'ulkopuoli' });
   };
   const nappain = (e) => { if (auki && e?.key === 'Escape') { e.stopPropagation?.(); sulje({ syy: 'esc' }); } };
@@ -577,6 +717,7 @@ export function luoAstroTaulu({
     napautaPulua: () => vaihda(),
     valitse,
     siirryMoodiin,
+    kysyPululta,
     /** Linssi suljettiin. */
     pura() {
       if (purettu) return;
@@ -598,6 +739,7 @@ export function luoAstroTaulu({
       avauksia,
       automaatti: automaattiTila,
       moodi: nykyinenMoodi(k),
+      pulu,
       rivit: taulunRivit(k),
       vaihto: vaihto ? { tavoite: vaihto.tavoite, toimia: vaihto.toimia } : null,
       loki: loki.slice(),

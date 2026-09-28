@@ -44,8 +44,9 @@ function luoKello() {
 }
 
 function luoNakyma() {
-  const n = { naytetyt: [], piilotuksia: 0, purettu: false, auki: false };
+  const n = { naytetyt: [], piilotuksia: 0, purettu: false, auki: false, nakymat: null };
   return Object.assign(n, {
+    nakymatNappi(v) { n.nakymat = v; },
     nayta(rivit) { n.naytetyt.push(rivit); n.auki = true; },
     piilota() { n.piilotuksia += 1; n.auki = false; },
     sisaltaa: (el) => el?.paneelissa === true,
@@ -93,9 +94,9 @@ function luoDokumentti() {
 }
 
 /** Pulun napin tapahtuma: closest('.pollo-nappi') osuu. */
-const pulunTapahtuma = () => {
+const pulunTapahtuma = (luokka = '.pollo-nappi') => {
   const e = { estetty: false, pysaytetty: false };
-  e.target = { closest: (v) => (v === '.pollo-nappi' ? {} : null) };
+  e.target = { closest: (v) => (v.split(',').map((x) => x.trim()).includes(luokka) ? {} : null) };
   e.preventDefault = () => { e.estetty = true; };
   e.stopImmediatePropagation = () => { e.pysaytetty = true; };
   e.stopPropagation = () => {};
@@ -105,13 +106,14 @@ const ulkoTapahtuma = () => ({ target: { closest: () => null } });
 
 function luoTaulu({
   kello = luoKello(), pallo = luoPallo(kello), tervetulo = null, ui = {}, automaatti = true,
-  kuva = { auki: false }, kuviaOn = true,
+  kuva = { auki: false }, kuviaOn = true, paikalla = { pulu: true },
 } = {}) {
   const nakyma = luoNakyma();
   const doc = luoDokumentti();
   const vaiennukset = [];
   const kuvaToimet = [];
   const kuplaPoistot = [];
+  const chatit = [];
   const taulu = luoAstroTaulu({
     ui,
     avaruus: pallo,
@@ -127,8 +129,11 @@ function luoTaulu({
     kuviaOn: () => kuviaOn,
     vaikene: () => { vaiennukset.push(kello.nyt()); if (ui.liviaAani) ui.liviaAani = null; },
     kuplatPois: () => { kuplaPoistot.push(kello.nyt()); },
+    avaaChat: () => { chatit.push('auki'); return true; },
+    suljeChat: () => { chatit.push('kiinni'); },
+    pulunPaikalla: () => paikalla.pulu,
   });
-  return { taulu, kello, pallo, nakyma, doc, vaiennukset, kuvaToimet, kuva, ui, kuplaPoistot };
+  return { taulu, kello, pallo, nakyma, doc, vaiennukset, kuvaToimet, kuva, ui, kuplaPoistot, chatit, paikalla };
 }
 
 const soitin = () => ({ paused: false, ended: false });
@@ -416,4 +421,50 @@ test('lähin kohde isoympyrää pitkin (kuvat avautuvat siitä, mitä kamera kat
   // Päivämäärärajan yli: 179° ja −179° ovat vierekkäin.
   assert.equal(lahinKohde([{ tunnus: 'x', lat: 0, lon: 179 }, { tunnus: 'y', lat: 0, lon: 100 }], 0, -179)?.tunnus, 'x');
   assert.equal(lahinKohde(kohteet, NaN, 0), null);
+});
+
+/* ---------- minipulu, Kysy Pululta ja Näkymät-nappi (Päätoimittaja 28.9.) ---------- */
+
+test('valokuvan minipulu avaa taulun eikä chattia; auki oleva kuvan chatti sulkeutuu', () => {
+  const { taulu, doc, chatit } = luoTaulu({ automaatti: false, kuva: { auki: true } });
+  const e = pulunTapahtuma('.satelliitti-pulunappi');
+  doc.laukaise('click', e);
+  assert.equal(e.pysaytetty, true, 'minipulun oma chatti-kuuntelija ei saa napautusta');
+  assert.equal(taulu.tila().auki, true);
+  assert.deepEqual(chatit, ['kiinni']);
+  doc.laukaise('click', pulunTapahtuma('.satelliitti-pulunappi'));
+  assert.equal(taulu.tila().auki, false);
+});
+
+test('Kysy Pululta kuvamoodissa: taulu kiinni ja kuvan chatti auki heti', () => {
+  const { taulu, chatit } = luoTaulu({ automaatti: false, kuva: { auki: true } });
+  taulu.avaa();
+  taulu.kysyPululta();
+  assert.equal(taulu.tila().auki, false);
+  assert.deepEqual(chatit, ['kiinni', 'auki']);
+});
+
+test('Kysy Pululta kyydistä: ensin kuvamoodiin (pois kyydistä, kuva auki), sitten chatti', () => {
+  const { taulu, kello, pallo, chatit, kuvaToimet } = luoTaulu({ automaatti: false });
+  pallo.asetaTila('ikkuna');
+  taulu.avaa();
+  taulu.kysyPululta();
+  assert.equal(taulu.tila().auki, false);
+  assert.deepEqual(chatit, []);
+  kello.kulje(2000);
+  assert.deepEqual(kuvaToimet, ['avaa']);
+  assert.deepEqual(chatit, ['auki']);
+});
+
+test('Näkymät-nappi näkyy vain, kun Pulua ei ole; napautus avaa ja sulkee taulun', () => {
+  const { taulu, kello, doc, nakyma, paikalla } = luoTaulu({ automaatti: false, paikalla: { pulu: false } });
+  assert.equal(nakyma.nakymat, true);
+  doc.laukaise('click', pulunTapahtuma('.astro-nakymat-nappi'));
+  assert.equal(taulu.tila().auki, true);
+  doc.laukaise('click', pulunTapahtuma('.astro-nakymat-nappi'));
+  assert.equal(taulu.tila().auki, false);
+  paikalla.pulu = true;
+  kello.kulje(1000);
+  assert.equal(nakyma.nakymat, false, 'Pulu paikalla: nappi pois');
+  assert.ok(taulu.tila().loki.includes('pulu:paikalla'));
 });
