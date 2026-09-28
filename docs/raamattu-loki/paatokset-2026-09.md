@@ -8867,3 +8867,7 @@ Omistaja 28.9. klo 21.16 sanatarkasti: "Ja siirtymä paikkojen välillä ei saa 
 ## OMISTAJA: ISS-SÄÄTÖPANEELI MODULAARISISTA ELEMENTEISTÄ — CODEXILTA (28.9.2026 klo 21.18)
 
 Omistaja 28.9. klo 21.18 sanatarkasti: "Säätimet voisi olla ISS säätöpaneelissa. Tilaa codexilta. Voisi olla muutama modulaarinen elementti mitä voidaan yhdistellä ja monistaa tarpeen mukaan" → Codexille posti/fable-codex-iss-saatopaneeli-20260928.md (292279232): 9-slice-paneeli, liukusäädin, segmenttinappi, valikkorivi, lukemakilpi, sulkunappi (tilat perus/aktiivinen/pois), ISS-paneelien henki nykyisellä vihreällä korostuksella, kevyt (≤ 45 % ruudusta, piilotettava), SVG+PNG @2x/@3x + HTML-esikatselu; vastaus codex-fable-iss-saatopaneeli-20260928.md. Linssiseppä 2 tekee toiminnot nyt vaihdettavan nahan varaan; web Siirtoseppä.
+
+## OMISTAJA: PULUN VALINTATAULU ASTRONAUTIN KAMERAN ALKUUN (28.9.2026 klo 21.21)
+
+Omistaja 28.9. klo 21.21 sanatarkasti: "Pulu voisi esitellä taulun linssin alussa jossa eri vaihtoehdot esim. Meno ISS:n sisälle sekä muut ja sen taulun saisi aina esille napauttamalla pulua" → Pelikoodari (web ensin): linssin alussa Pulu esittelee valintataulun (ISS:n sisälle / kyyti-Cupola, astronauttien kuvat, Lennä kohteen ylle, Oma sijainti, muut linssin toiminnot); Pulun napautus avaa taulun aina; sovitus ISS-tervetulorepliikkeihin (#3575); kevyt, myöhemmin Codexin ISS-paneelielementteihin puettava; kuvat Päätoimittajalle ennen PR:ää, sitten natiiviohje Linssisepälle.
