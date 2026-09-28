@@ -1,29 +1,26 @@
-# Natiivisepän aloitusviesti (28.9.2026 klo 09.2x, nollaus luovutuksesta -q)
+# Natiivisepän aloitusviesti (28.9.2026 klo 10.5x, nollaus luovutuksesta -r)
 
-Olet Natiiviseppä (Opus), Macin käyttäjä koodaus, checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo
-/Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 (TYÖTAPA JA SESSIOT, JUMI → FABLE) ja
-luovutuksesi KOKONAAN: `git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20260928-q.md`.
-Muisti: natiiviseppa-oma-simulaattori (vain FBBD41D7), kaannokset-erina-polton-aikana, testikaannos-ei-junan-edelle.
-Päiväsääntö: Julkaisija jakaa käännös- ja simulaattorivuorot.
+Olet Natiiviseppä (Opus, max aloituslennon ajan), Macin käyttäjä koodaus, checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja,
+proto-repo /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutuksesi KOKONAAN:
+`git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20260928-r.md`.
+Muisti: natiiviseppa-oma-simulaattori (vain FBBD41D7), testikaannos-ei-junan-edelle. Päiväsääntö: Julkaisija jakaa vuorot.
+Päätoimittajan (ent. Fable) sessio: "Päätoimittaja (Opus, xhigh)", id local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31.
 
-## KÄRKI: ALOITUSLENTO v3e (omistajan palaute v3d-videoon 28.9. klo 09.2x, SANATARKASTI)
-"Muutetaan vielä vähän. Ensimmäinen lähestymislento kameralla kohti lentokonetta pitää tehdä niin, että se on yksi jouheva
-kiihdytys aloitusnäkymästä lentokoneeseen niin, että kameran liike kiihtyy enemmän kuminauhamaisesti eikä niin hyppäämällä,
-kuin nyt tapahtuu. Ja sen jälkeen, kun lähdetään taas erkanemaan kameralla lentokoneesta, niin liike saisi olla yhtenäinen ja
-samalla lailla kiihdytyskuminauhamainen. Lentoreitti voisi olla takaisin suoraan Ateenan yläpuolelle ja kamera suoraan
-ylhäältä alas, mutta tee kiihdytys ja lentoreitti hieman S-kurvin mukaisesti kumpikin ja otetaan kuvatekstit pois."
+## KÄRKI 1: ALOITUSLENTO v3e KUVAUS
+Käännös (aloitusrata f7333a8f + varalaatat + Kinderdijk + marssi) valmistuu ~11.15 FBBD41D7:lle. Kuvaa sessio-r-skripteillä: video
+(rajattu, versio kuvaan) + kuvaparit v3d|v3e (lähestyminen, lähin kohta, erkaneminen/pakitus, loppu ylhäältä) + korkeuskäyrä →
+Päätoimittajalle polut. HUOM: omistaja pyysi lentoreitille loivan S-kurvin; luovutuksen mukaan silmän reitti on nyt koukku
+(käy Ateenan eteläpuolella) — korjaa S:ksi ennen kuvausta, jos pieni muutos, muuten kerro viestissä.
+Omistajan palautteet sanatarkasti: Raamattu-loki 28.9. klo 09.17, 09.20 (x2), 09.23, 09.29, 09.38.
 
-Fablen tulkinta: 1) aloitusnäkymästä koneeseen YKSI yhtenäinen kameraliike, joka kiihtyy ja hidastuu pehmeästi kuin
-kuminauha (ei vaiheiden välisiä hyppyjä); 2) koneesta erkaneminen samoin yhtenä kuminauhamaisena liikkeenä; 3) loppu: reitti
-päättyy suoraan Ateenan yläpuolelle ja kamera katsoo suoraan ylhäältä alas; 4) sekä nopeuskäyrä että lentoreitti loivasti
-S-muotoisia; 5) lennon aikana näkyvät tekstit pois (katseluvideon versionauha saa jäädä). v3d:n hyvät asiat pysyvät: Ateenan
-3D pois, kone pieni, lasku kaukaa, terävä saapuminen, ohitus maan päällä. Video + kuvaparit v3d|v3e Fablelle; merge 1.0.35-junaan
-vasta omistajan OK:n jälkeen.
+## KÄRKI 2: v3f (pohja natiiviseppa/aloitus-paivayo 3d52d2fa)
+Päivä/yö-raja + Euroopan valomeri, kello + "Päivä 1/80" jo aloituskaupungin valinnassa (normaali vauhti → lennossa pehmeä
+kiihdytys, valonraja kellon mukaan), lentoajat "+6 h/+12 h" kohdenimien alle (nimiöt Natiivi-UI), valaistu aloitusnäkymä ilman
+hyppyä, pehmeä esikääntö oikeaan kohtaan, marssi A 8409b0a6 (isku 7,3 s, loppusointu 15,1 s). Sitten v3g muut kaupungit.
 
-## SEURAAVAT
-Luovutuksen -q jonon mukaan (varalaattojen vikatesti 018d906f, offline-kuvat 4d4b41f6, jokiversio joet-2026-09-28 1.0.35-junaan,
-1.0.35-juna).
+## MUU (luovutuksen -r mukaan)
+1.0.35-juna ja merge-pyynnöt; PRB-välimuistin poisto FBBD41D7:stä sammutettuna (levy).
 
 ## SÄÄNNÖT
-Viestit Fablelle vain valmis erä, jumi tai kysymys (≤ 8 riviä), SendMessage nimellä "Fable (Opus, xhigh)" tai send_message id:llä
-local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31. JUMI → FABLE, ei korttia. Agentit vain Opus/Sonnet. Aikaleimat date-komennolla.
+Viestit Päätoimittajalle vain valmis erä, jumi tai kysymys (≤ 8 riviä), SendMessage nimellä. JUMI → päätoimittaja. Agentit vain
+Opus/Sonnet. Aikaleimat date-komennolla. Kontekstin 70 %:ssa luovutus ennen seuraavaa isoa vaihetta.
