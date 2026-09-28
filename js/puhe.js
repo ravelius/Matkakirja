@@ -609,6 +609,31 @@ export function puheMittari() {
   return vuAnalysaattori;
 }
 
+/**
+ * PULUN ÄÄNIKESKUSTELUN ULOSTULO (koe 28.9.2026, js/pulu-realtime.js):
+ * sama 24 kHz:n piiri ja sama vahvistin + kompressori kuin lukijalla,
+ * jotta pelin äänenvoimakkuus (Lukija-liuku × työhuoneen kerroin) pätee
+ * myös reaaliaikaiseen Puluun. xAI antaa äänen 24 kHz:n PCM:nä, eli
+ * piirin oma taajuus — ei näytteistystä. Kutsutaan käyttäjän eleestä.
+ *
+ * @returns {Promise<{piiri: AudioContext, kohde: AudioNode}|null>}
+ */
+export async function puhePiirinKohde() {
+  if (typeof window === 'undefined') return null;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if (!AC) return null;
+  try {
+    piiri = piiri ?? luoPiiri(AC);
+  } catch {
+    return null;
+  }
+  try {
+    await piiri.resume?.();
+  } catch { /* resume ilman elettä: kytkentä yrittää silti */ }
+  kytkeVahvistin();
+  return { piiri, kohde: vahvistin ?? piiri.destination };
+}
+
 /** Kytkee vahvistimen, kun äänipiiri saadaan käyntiin (ele vaaditaan). */
 function kytkeVahvistin() {
   if (kytketty || typeof window === 'undefined') return;
