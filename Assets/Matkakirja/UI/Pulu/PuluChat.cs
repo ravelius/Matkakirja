@@ -444,7 +444,7 @@ namespace Matkakirja.Natiivi
                 .Append(",\"puhetagit\":1")
                 // Vastaus luetaan ääneen (kaiutin tai saneltu kysymys): worker lisää ohjeen "aloita lyhyellä virkkeellä"
                 // välimuistirajan jälkeen (Pelikoodari 28.9.), jotta ensimmäinen luentapala valmistuu nopeasti.
-                .Append(LuentaPaalla ? ",\"aani\":1" : "")
+                .Append(LuentaPaalla ? ",\"luetaan\":1" : "")
                 .Append(",\"historia\":[");
             int alku = Mathf.Max(0, historia.Count - HistoriaKatto);
             for (int i = alku; i < historia.Count; i++)
