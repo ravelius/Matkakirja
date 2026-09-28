@@ -96,7 +96,9 @@ namespace Matkakirja.Natiivi
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
             // Luennan säätimet (omistaja 27.9. klo 09.3x, web #3388): ratas + kaiutin (tauko/jatko, VU).
-            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija", saatimet: true);
+            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija mk-nosto__lukija--kiinni", saatimet: true, rajaus: () => kortti.worldBound);
+            // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
+            sisus.verticalScroller.valueChanged += _ => SijoitaLukija();
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
             // Kierto tai ikkunan koko: leveys uudelleen (web asemoi resize-kuuntelijassa), vaiheen 2 kortti keskelle.
             kerros.RegisterCallback<GeometryChangedEvent>(e =>
@@ -487,6 +489,7 @@ namespace Matkakirja.Natiivi
             sisus.Clear();
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
+            lukijaPaikka = null;
 
             Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
             // 1. Kuva tai sen paikkamerkki (seepiaruutu ja nimi, ei hakua ulkoa).
@@ -530,6 +533,7 @@ namespace Matkakirja.Natiivi
             napit["lisaa"] = Vaihe2;
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
+            lukijaPaikka = null;
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2);
@@ -571,7 +575,13 @@ namespace Matkakirja.Natiivi
                 : "Kuuntele hetki");
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
-            Ylarivi(sisus, n).Add(lukija.Juuri);
+            // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta
+            // se kaiutin tulee näkyviin"): vaiheen 2 kuvan kohdistus (löydös 131) vierittää ylärivin kortin yläreunan taakse.
+            // Ylärivillä on vain paikkavaraus; kaiutin ja valikkonappi ovat kortissa sen kohdalla eivätkä vieri pois.
+            lukijaPaikka = Rakenne.El("mk-nosto__lukijapaikka", Ylarivi(sisus, n), PickingMode.Ignore);
+            lukijaPaikka.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
+            if (lukija.Juuri.parent != kortti) kortti.Add(lukija.Juuri);
+            lukija.Juuri.BringToFront();
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
@@ -659,6 +669,27 @@ namespace Matkakirja.Natiivi
         /// Generoitu kuva UI/Resources/Symbolit/sym-*.png (web assets/kartat/symbolit/sym-*.webp); hetki ja ihme ovat
         /// webissä koodipiirtäjiä, joten niille ei ole kuvaa (rivi ilman symbolia).
         /// </summary>
+        VisualElement lukijaPaikka;
+
+        /// <summary>
+        /// Lukijan napit ylärivin paikkavarauksen kohdalle kortissa: vierittämättömässä asemassa (vieritys lisätään takaisin),
+        /// joten ne pysyvät kortin yläkulmassa, vaikka sisältö vierii. Vierityksen aikana alla paperipohja (teksti alta).
+        /// </summary>
+        void SijoitaLukija()
+        {
+            var j = lukija.Juuri;
+            if (lukijaPaikka?.panel == null || j.parent != kortti) return;
+            var r = lukijaPaikka.worldBound;
+            var k = kortti.worldBound;
+            if (float.IsNaN(r.y) || r.width <= 0 || float.IsNaN(k.y)) return;
+            float s = sisus.scrollOffset.y;
+            float x = Mathf.Round(r.x - k.x - kortti.resolvedStyle.borderLeftWidth);
+            float y = Mathf.Round(r.y - k.y - kortti.resolvedStyle.borderTopWidth + s);
+            if (j.resolvedStyle.left != x) j.style.left = x;
+            if (j.resolvedStyle.top != y) j.style.top = y;
+            j.EnableInClassList("mk-nosto__lukija--irti", s > 1f);
+        }
+
         static VisualElement Ylarivi(VisualElement isa, Nosto n)
         {
             var rivi = Rakenne.El("mk-nosto__ylarivi mk-nosto__ylarivi--rivi", isa, PickingMode.Ignore);
