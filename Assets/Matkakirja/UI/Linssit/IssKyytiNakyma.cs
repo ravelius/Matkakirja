@@ -1,5 +1,5 @@
 // ISS:N KYYTI (Linssisepän suositus docs/raportit/iss-kyyti-suositus-20260928.md; Natiivi-UI katselmoi):
-// AstronauttiKerros.KyytiKasittelija. Kyydissä (seuranta ja ikkuna):
+// AstronauttiKerros.KyytiKasittelija. Kyydissä (seuranta, ikkuna ja kohteen yllä):
 //   vasen ylä    tietorivi "● LIVE · ISS · 418 km · 27 580 km/h" kuvanäkymän nimipillerin tyylillä; punainen piste sykkii
 //                (0,9 s, vähennetty liike: paikallaan), jotta pelaaja ymmärtää ISS:n olevan juuri nyt tuossa kohdassa (omistaja
 //                28.9.). Ilman tuoretta TLE:tä ei LIVE-merkkiä vaan loppuun "rata-arvio".
@@ -16,7 +16,15 @@
 // maapallossa"): oletuksena Linssisepän poltettu muunnelma iss-cupola2-pehmea-* (kehys levysumennuksella voimakkaasti
 // epäterävä, ulko-osat vähemmän, heijastus lasin etäisyydeltä, aavistus raetta; ei ajonaikaista sumennusta).
 // A/B: astro kyyti cupola uusi|terava|3d|vanha (terava = Codexin alkuperäinen).
+// NOPEUTUS JA "LENNÄ KOHTEEN YLLE" (omistaja 28.9. klo 12.1x; web iss-kyyti-nakyma.js ja css/satelliitti.css, commit
+// 891958e17, px → pt 1:1): pillerin alla porras LIVE · 10× · 100× · 1000× (valittu vihreänä ja lihavoituna; nopeutettuna
+// LIVE-nappi on "Palaa LIVE"), sen alla "Lennä kohteen ylle…" ja ylilennon rivi ("Venetsia · Ylilento klo 14.32, 3 h 12 min
+// päästä" → perillä "Venetsia: ISS 123 km sivussa"). Nopeutettuna pilleri on "● 100× · ISS …" ilman LIVE-sanaa, piste
+// harmaa, ja pillerin napautus = Palaa LIVE. Valikko: webissä selaimen oma valinta; natiivissa lista napin alla (Euroopan
+// NASA-kohteet samassa järjestyksessä, AstronauttiLinssi.YlilennonKohteet), napautus listan ohi sulkee sen vaihtamatta
+// kyydin tilaa.
 using System;
+using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -28,8 +36,14 @@ namespace Matkakirja.Natiivi
         const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
         const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
 
-        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, turva, pilleri, piste;
-        readonly Label live, tieto;
+        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, turva, pilleri, piste, ohjaimet, peite;
+        readonly Label live, tieto, ylilento, liveNappi;
+        readonly Button[] napit;
+        readonly Button valikko;
+        readonly ScrollView lista;
+        bool nopeutettu, listaTaytetty;
+        /// <summary>Valikon rivin korkeus (pt, web min-height 28 px).</summary>
+        const float RiviPt = 28;
         bool kuvatHaettu, kuva2Haettu, sykkii;
         IVisualElementScheduledItem heilunta, syke;
 
@@ -59,11 +73,43 @@ namespace Matkakirja.Natiivi
             kehys2 = Rakenne.El("mk-isskyyti__kehys2", juuri, PickingMode.Ignore);
             kehys = Rakenne.El("mk-isskyyti__kehys", juuri, PickingMode.Ignore);
             heijastus = Rakenne.El("mk-isskyyti__heijastus", juuri, PickingMode.Ignore);
+            // Valikon peite: napautus listan ohi sulkee sen eikä vaihda kyydin tilaa (webissä selaimen oma valikko).
+            peite = Rakenne.El("mk-isskyyti__peite", juuri);
+            peite.style.display = DisplayStyle.None;
+            peite.RegisterCallback<PointerDownEvent>(_ => SuljeLista());
             turva = Rakenne.El("mk-isskyyti__turva", juuri, PickingMode.Ignore);
             pilleri = Rakenne.El("mk-isskyyti__tieto", turva, PickingMode.Ignore);
             piste = Rakenne.El("mk-isskyyti__piste", pilleri, PickingMode.Ignore);
             live = Rakenne.Teksti("LIVE", "mk-isskyyti__live", pilleri);
             tieto = Rakenne.Teksti("", "mk-isskyyti__teksti", pilleri);
+            // Pillerin napautus nopeutettuna = Palaa LIVE (poimittava vain nopeutettuna).
+            pilleri.AddManipulator(new Clickable(() => { if (nopeutettu) Linssi()?.AsetaNopeus(1); }));
+
+            // Ohjaimet pillerin alla (web .iss-kyyti-ohjaimet): porras, valikko ja ylilennon rivi.
+            ohjaimet = Rakenne.El("mk-isskyyti__ohjaimet", turva, PickingMode.Ignore);
+            var porras = Rakenne.El("mk-isskyyti__nopeudet", ohjaimet);
+            napit = new Button[Simukello.Nopeudet.Length];
+            for (int i = 0; i < napit.Length; i++)
+            {
+                int kerroin = Simukello.Nopeudet[i];
+                var b = Rakenne.Nappi(kerroin == 1 ? "LIVE" : kerroin + "×", "mk-isskyyti__nopeus", () => Linssi()?.AsetaNopeus(kerroin), porras);
+                if (i > 0) b.AddToClassList("mk-isskyyti__nopeus--jatko");
+                b.userData = kerroin;
+                napit[i] = b;
+            }
+            liveNappi = napit[0].Q<Label>(className: "mk-nappi__teksti");
+            valikko = Rakenne.Nappi("Lennä kohteen ylle…", "mk-isskyyti__kohteet", VaihdaLista, ohjaimet);
+            valikko.tooltip = "Lennä kohteen ylle";
+            lista = new ScrollView(ScrollViewMode.Vertical);
+            lista.AddToClassList("mk-isskyyti__lista");
+            lista.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            lista.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+            lista.style.display = DisplayStyle.None;
+            ohjaimet.Add(lista);
+            ylilento = Rakenne.Teksti("", "mk-isskyyti__ylilento", ohjaimet);
+            ylilento.pickingMode = PickingMode.Position;   // web: ohjainten lapset ottavat kosketuksen (ei vaihda tilaa)
+            ylilento.style.display = DisplayStyle.None;
+
             var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", Poistu, turva);
             sulku.tooltip = "Pois kyydistä";
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
@@ -73,7 +119,39 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        static void Poistu() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi?.PoistuKyydista();
+        static AstronauttiLinssi Linssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
+
+        static void Poistu() => Linssi()?.PoistuKyydista();
+
+        /// <summary>"Lennä kohteen ylle…": lista auki tai kiinni (täytetään ensimmäisellä avauksella linssin kohteista).</summary>
+        void VaihdaLista()
+        {
+            if (lista.style.display == DisplayStyle.Flex) { SuljeLista(); return; }
+            if (!listaTaytetty)
+            {
+                var kohteet = Linssi()?.YlilennonKohteet;
+                if (kohteet == null || kohteet.Count == 0) return;
+                listaTaytetty = true;
+                foreach (var k in kohteet)
+                {
+                    string tunnus = k.Tunnus;
+                    Rakenne.Nappi(k.Nimi, "mk-isskyyti__kohde", () => { SuljeLista(); Linssi()?.LennaKohteeseen(tunnus); }, lista);
+                }
+            }
+            // Korkeus: rivit (28 pt) turva-alueen alareunaan asti (12 pt:n marginaali), vähintään neljä riviä; loput vierittäen.
+            float tarve = lista.contentContainer.childCount * RiviPt + 2;
+            float tila = turva.layout.height - (ohjaimet.layout.y + valikko.layout.yMax + 6) - 12;
+            lista.style.height = float.IsNaN(tila) ? tarve : Mathf.Min(tarve, Mathf.Max(4 * RiviPt, tila));
+            lista.scrollOffset = Vector2.zero;
+            lista.style.display = DisplayStyle.Flex;
+            peite.style.display = DisplayStyle.Flex;
+        }
+
+        void SuljeLista()
+        {
+            lista.style.display = DisplayStyle.None;
+            peite.style.display = DisplayStyle.None;
+        }
 
         /// <summary>AstronauttiKerros.KyytiKasittelija.</summary>
         public void Aseta(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
@@ -87,8 +165,18 @@ namespace Matkakirja.Natiivi
             if (auki) { tieto.text = rivi.Teksti; live.text = rivi.Merkki ?? ""; }
             var merkkiNakyy = auki && rivi.Merkki != null ? DisplayStyle.Flex : DisplayStyle.None;
             piste.style.display = merkkiNakyy; live.style.display = merkkiNakyy;
-            pilleri.EnableInClassList("mk-isskyyti__tieto--nopeutettu", auki && aika.Nopeutettu);
+            nopeutettu = auki && aika.Nopeutettu;
+            pilleri.EnableInClassList("mk-isskyyti__tieto--nopeutettu", nopeutettu);
+            pilleri.pickingMode = nopeutettu ? PickingMode.Position : PickingMode.Ignore;
+            pilleri.tooltip = nopeutettu ? "Palaa LIVE" : null;
             Syke(auki && rivi.Live);
+            // Porras: valittu kerroin (kelauksessa ei mitään), nopeutettuna LIVE-nappi on "Palaa LIVE"; ylilennon rivi.
+            var valittu = aika.Valittu;
+            foreach (var b in napit) b.EnableInClassList("mk-isskyyti__nopeus--valittu", valittu.HasValue && (int)b.userData == valittu.Value);
+            liveNappi.text = aika.Nopeutettu ? "Palaa LIVE" : "LIVE";
+            ylilento.text = aika.Ylilento ?? "";
+            ylilento.style.display = auki && aika.Ylilento != null ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;
             if (ikkuna && !kuvatHaettu && CupolaKerros.Vanha) HaeKuvat();
             if (auki && !kuva2Haettu && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva) HaeKuvat2();

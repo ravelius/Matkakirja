@@ -3147,3 +3147,104 @@
 .mk-isskyyti__tieto--nopeutettu .mk-isskyyti__piste {
     background-color: rgb(150, 170, 160);
 }
+
+/*
+ * Nopeutus (LIVE · 10× · 100× · 1000×) ja "Lennä kohteen ylle" pillerin alla (web .iss-kyyti-ohjaimet, commit 891958e17,
+ * px → pt 1:1): turva-alueen yläreunasta 48 pt, rako 6 pt, teksti 12 pt, napit vähintään 28 pt korkeita.
+ */
+.mk-isskyyti__ohjaimet {
+    position: absolute;
+    left: 12px;
+    top: 48px;
+    right: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mk-isskyyti__nopeudet {
+    flex-direction: row;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+    overflow: hidden;
+}
+
+.mk-nappi.mk-isskyyti__nopeus,
+.mk-nappi.mk-isskyyti__kohde {
+    min-height: 28px;
+    padding: 5px 9px;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-nappi.mk-isskyyti__nopeus--jatko {
+    border-left-width: 1px;
+    border-left-color: rgba(93, 255, 168, 0.18);
+}
+
+.mk-nappi.mk-isskyyti__nopeus--valittu,
+.mk-nappi.mk-isskyyti__nopeus:active,
+.mk-nappi.mk-isskyyti__kohde:active {
+    background-color: rgba(93, 255, 168, 0.14);
+}
+
+.mk-isskyyti__nopeus .mk-nappi__teksti,
+.mk-isskyyti__kohteet .mk-nappi__teksti,
+.mk-isskyyti__kohde .mk-nappi__teksti {
+    font-size: 12px;
+    color: rgba(233, 250, 240, 0.85);
+}
+
+.mk-isskyyti__nopeus--valittu .mk-nappi__teksti {
+    -unity-font-style: bold;
+    color: rgb(93, 255, 168);
+}
+
+.mk-nappi.mk-isskyyti__kohteet {
+    min-height: 28px;
+    margin-top: 6px;
+    padding: 5px 22px 5px 9px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+/* Painettuna sama vihreä kuin valittu porras (pelin ruskea .mk-nappi:active ei kuulu kyydin asuun). */
+.mk-nappi.mk-isskyyti__kohteet:active {
+    background-color: rgba(93, 255, 168, 0.14);
+}
+
+/* Valikon lista (webissä selaimen oma valinta): samat värit, rivit 28 pt, korkeus turva-alueen alareunaan (koodissa). */
+.mk-isskyyti__lista {
+    min-width: 200px;
+    margin-top: 6px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+.mk-nappi.mk-isskyyti__kohde {
+    justify-content: flex-start;
+}
+
+.mk-isskyyti__peite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mk-isskyyti__ylilento {
+    margin-top: 6px;
+    padding: 4px 9px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: normal;
+    background-color: rgba(6, 13, 10, 0.72);
+    color: rgba(233, 250, 240, 0.9);
+}
