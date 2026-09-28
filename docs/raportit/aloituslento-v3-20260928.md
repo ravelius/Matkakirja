@@ -103,4 +103,13 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
 - Muoto: silmä kaartaa loivasti koneen oikealta puolelta kohteen ylle. Reitin suhteen liike on S: silmä siirtyy reitin
   oikealta puolelta vasemmalle saapumisnäkymään. Tasossa täysi S vaatisi, että silmä ylittää reitin koneen takaa matalalla
   (kone näkyisi takaa) tai kiertää koneen edestä (vahva kiertoliike). Siksi suosittelen tätä muotoa.
-- Käännös ja kuvaus odottavat käännöspalvelun vuoroa.
+- Kuvattu klo 13.25: käännös **02bf1c9f** (aloitusrata 57bca5bb + varalaatta-uusinta-2 + symbolit-erikoismalli +
+  aloituslento-marssi), FBBD41D7, 0 poikkeusta. Lennon alku videossa F = 12,883 s kehyseroista.
+- Video `v3e2/aloituslento-v3e2.mp4` (736 × 1600, 17,8 s, marssi A) ja kuvaparit v3e | v3e2 `v3e2/kuvaparit/`
+  (9,0 / 11,5 / 12,5 / 13,0 / 13,8 / 14,3 s).
+- Laitteella: nousussa ei näy enää laattarajaa. Kallistus on 12,5 s:ssa 27° (v3e 48°) ja 13 s:ssa 8° (v3e 35°), ja
+  kosketus nähdään suoraan ylhäältä.
+- Jatkotestit samalla käännöksellä (konsoli kiinni koko ajan):
+  - Varalaatat PASS: varavika 0,5 → 321 varalaattaa, 293 paikattu 20 s:ssa, tausta ja paluu +45, 0 jäljellä.
+  - Kinderdijk PASS: jalka ja laatikko, peli30 / peli55 / lähi45.
+  - Molemmat mergetty junaan (juna/b13 0cd85ecc) samaan TF:ään Pulun puhekeskustelun ja xAI-napin kanssa.
