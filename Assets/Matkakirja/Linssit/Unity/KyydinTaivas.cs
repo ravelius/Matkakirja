@@ -32,6 +32,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>A/B (`astro kyyti taivas 0|1`): oikeat tähdet ja Kuu pois (kuvapari).</summary>
         public static bool Pois;
+        /// <summary>A/B (`astro kyyti taivas 2`): ISS maan varjossa pakotettuna (tähdet täysinä), kuvapariin, kun testikello osuu
+        /// hetkeen, jolloin alapisteessä on yö mutta ISS vielä auringossa (laite taivas1 28.9.: aurinko −19,4° → tähdet 0,3).</summary>
+        public static bool VarjoPakko;
         /// <summary>Tähdet ladattu (AstronauttiKerros himmentää satunnaisen kentän kyydissä vain silloin).</summary>
         public bool TahdetValmiit { get; private set; }
 
@@ -182,7 +185,7 @@ namespace Matkakirja.Natiivi
             if (tahtiMesh != null)
             {
                 tahtiMat.SetMatrix(IdKierto, kierto);
-                tahtiMat.SetFloat(IdPeitto, varjossa ? 1f : 0.3f);
+                tahtiMat.SetFloat(IdPeitto, varjossa || VarjoPakko ? 1f : 0.3f);
                 Graphics.DrawMesh(tahtiMesh, Matrix4x4.identity, tahtiMat, 0, kamera);
             }
 
