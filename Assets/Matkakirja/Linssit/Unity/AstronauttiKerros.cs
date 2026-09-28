@@ -56,6 +56,7 @@ namespace Matkakirja.Natiivi
         Pilvikuori pilvet;
         Avaruus avaruus;
         Yokuori yokuori;
+        KyydinTaivas kyydinTaivas;
         CupolaKerros cupola;
         Transform iss;
         Transform issMalli;
@@ -254,7 +255,11 @@ namespace Matkakirja.Natiivi
             // Kyydissä ohut ilmakehän kaari ja musta avaruus (omistajan palaute 28.9.), tähdet himmeinä (päivävalo).
             avaruus?.Kyyti(tila != KyydinTila.Kauko);
             AsetaPilvienKorkeus();
-            tahtienPeitto = tila == KyydinTila.Kauko ? 1f : 0.3f;
+            // Kyydissä oikeat tähdet ja Kuu (KyydinTaivas); satunnainen kenttä pois, kun oikeat ovat ladattu (muuten himmeänä 0,3).
+            if (tila != KyydinTila.Kauko && kyydinTaivas == null) kyydinTaivas = KyydinTaivas.Luo(georeferenssi, kamera);
+            kyydinTaivas?.Nayta(tila != KyydinTila.Kauko);
+            tahtienPeitto = tila == KyydinTila.Kauko ? 1f
+                : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio);
         }
@@ -476,6 +481,7 @@ namespace Matkakirja.Natiivi
             if (pilvet != null) Destroy(pilvet.gameObject);
             if (avaruus != null) Destroy(avaruus.gameObject);
             if (yokuori != null) Destroy(yokuori.gameObject);
+            if (kyydinTaivas != null) Destroy(kyydinTaivas.gameObject);
             if (cupola != null) Destroy(cupola.gameObject);
             if (rataMesh != null) Destroy(rataMesh);
             Destroy(nelio);
