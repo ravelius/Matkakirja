@@ -40,6 +40,8 @@
 //   pulu realtime paalle|pois|tila   Pulun äänikeskustelun koe (PuluRealtime.cs) kuin chatin koenappi: paalle aloittaa
 //                             (vaatii pöllön kehittäjäkoodin), pois lopettaa, tila = tila, kanava, lupa, aika, virhe
 //   pulu realtime toisto unity|natiivi   vastausäänen toisto seuraavasta aloituksesta (oletus natiivi: kaiunpoisto)
+//   pulu realtime kanava paalle|pois|tila   pelkkä natiivikanava ilman WebSocketia/koodia (savuke: kokoonpanon
+//                             muutos ei katkaise); tila = natiivitila + mikistä luetut tavut edellisestä tilasta
 //   saapumisluenta [tila]     löydös 162: PeliOhjain.SaapumisluentaKesken (kaupunki, luento jonossa/soi, traileri,
 //                             lykätty) ja viimeisin päättyminen "kaupunki (syy)" peli-lokiin
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
@@ -368,10 +370,11 @@ namespace Matkakirja.Natiivi
                             return "=" + rt.Kuvaus;
                         case "pois": rt.Lopeta(); return "=" + rt.Kuvaus;
                         case "tila": return "=" + rt.Kuvaus;
+                        case "kanava": return rt.KanavaKoe(A(3));
                         case "toisto" when A(3) == "unity" || A(3) == "natiivi":
                             PuluRealtime.UnityToisto = A(3) == "unity";
                             return "=toisto " + A(3) + " (seuraavasta aloituksesta)";
-                        default: return "käyttö: pulu realtime paalle|pois|tila|toisto unity|natiivi";
+                        default: return "käyttö: pulu realtime paalle|pois|tila|kanava paalle|pois|tila|toisto unity|natiivi";
                     }
                 }
                 case "saapumisluenta":
