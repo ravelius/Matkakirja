@@ -2,24 +2,24 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 08:24 EEST — **Kierto normaali. Uusi postilaatikkoviesti Fablelle (Codex: 13 historian hetkeä + PR). Natiiviseppä 64% ja Sisältökirjuri 67% yhä alle 70%, lähellä — ei vielä ilmoitusta. Juna kääntänyt uuden buildin 6a5462f8.**
+**Päivitetty:** 2026-09-28 08:34 EEST — **Natiiviseppä 69% ja Sisältökirjuri 68% — juuri alle 70% kynnyksen, tarkkaillaan seuraavaa kierrosta tiiviisti. Uusi postilaatikkoviesti (Sisältökirjuri→Codex kuittaus). Julkaisu valmis, levy vakaa 89 Gi.**
 
 ## 1) Sessiot
 
-Kaikki roolit tilinvaihdon (28.9. 07.0x) session id:llä. **Sisältökirjuri 67% ja Natiiviseppä 64% lähellä 70% kynnystä — vielä ei ylitystä, tarkistetaan seuraavalla kierroksella tiiviisti.**
+Kaikki roolit tilinvaihdon (28.9. 07.0x) session id:llä. **Natiiviseppä 69% ja Sisältökirjuri 68% — juuri alle 70% kynnyksen, ilmoitetaan Fablelle heti kun jompikumpi ylittää.**
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 34% | running |
-| Postivahti (self) | (tämä sessio) | 25% | running |
+| Fable | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 37% | running |
+| Postivahti (self) | (tämä sessio) | 27% | running |
 | Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 15% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 64% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 69% | running |
 | Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 50% | running |
 | Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 34% | running |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 48% | running |
-| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 34% | running |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 49% | running |
+| Siirtoseppä (xhigh) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 35% | running |
 | Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 35% | running |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 67% | running |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 68% | running |
 | Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 25% | running |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
@@ -46,9 +46,9 @@ Eheysvartija (PR #3441, **ei vielä mergetty**, tiedostoa `proto-3d/lokit/eheysv
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
-Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). **Postilaatikko 08:24: uusi viesti Fablelle** — `posti/codex-fablelle-13-historian-hetkea-kuvat-ja-pr-20260928.md` (Codex: 13 historian hetkeä, 26 kuvaa, pelikytkentä-PR). Ilmoitettu Fablelle.
+Ei avoimia jumeja eikä kortteja omistajalle. Varmuuskopio-VIKA.txt pysyy ratkaistuna (2 riviä, ei kasvua). **Postilaatikko 08:34: uusi viesti** — `posti/sisaltokirjuri-kuittaus-historian-hetket-13-20260928.md` (Sisältökirjuri → Codex: vastaanoton kuittaus). Ilmoitettu Fablelle.
 
-**Juna toimii normaalisti** — käänsi buildin 6a5462f8 08:19. Tauon lippu ei ole palautunut. Julkaisulippu yhä päällä (aikaleima 08:17).
+**Juna toimii normaalisti**, ei uutta riviä edellisen (08:19) jälkeen. Tauon lippu ei ole palautunut. **Julkaisulippu poistunut** — julkaisu valmis.
 
 **Julkaisulippu:** `/tmp/matkakirja-julkaisu` yhä päällä 07:32 (aikaleima päivittynyt 07:29, siis aktiivinen) — julkaisu käynnissä, sallittu.
 
@@ -76,17 +76,17 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (08:24)
+## 5) Resurssit (08:34)
 
-- **5 h -kiintiö:** 32 %. **Viikko (kaikki mallit): 9 %.** **Viikko (Fable):** 0 %.
-- **Levy:** 91 Gi vapaana, vakaa (94→91). wt/-worktreet 29 kpl.
+- **5 h -kiintiö:** 33 %. **Viikko (kaikki mallit): 9 %.** **Viikko (Fable):** 0 %.
+- **Levy:** 89 Gi vapaana, vakaa (91→89). wt/-worktreet 29 kpl.
 - **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0.
-- **Liput:** `/tmp/matkakirja-julkaisu` PÄÄLLÄ (aikaleima 08:17). `/tmp/matkakirja-juna-tauko` ei ole palautunut.
-- **Konteksti (kynnys Fable 65%/roolit 70%):** kaikki alle kynnyksen — **Sisältökirjuri 67% ja Natiiviseppä 64% lähellä, seurataan tarkasti seuraavalla kierroksella**.
-- **GPU-prosessit (type=gpu-process):** 12 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
+- **Liput:** `/tmp/matkakirja-julkaisu` poissa — julkaisu valmis. `/tmp/matkakirja-juna-tauko` ei ole palautunut.
+- **Konteksti (kynnys Fable 65%/roolit 70%):** **Natiiviseppä 69% ja Sisältökirjuri 68% — juuri alle 70%, seurataan tiiviisti seuraavalla kierroksella.**
+- **GPU-prosessit (type=gpu-process):** 15 kpl, yhä yli rajan (>4) — ei uutta ilmoitusta.
 - **Effort-tarkistus (7 Opus-roolia):** ei muutosta.
 - **Lokisiivouskandidaatteja:** ei tällä kierroksella.
-- **Postilaatikko:** 1 uusi viesti Fablelle (Codex: historian hetket + PR) — ilmoitettu.
+- **Postilaatikko:** 1 uusi viesti (Sisältökirjuri→Codex kuittaus) — ilmoitettu.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Postilaatikko:** EI UUTTA. **Avoimia PR:iä:** ei tarkistettu tällä kierroksella.
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
