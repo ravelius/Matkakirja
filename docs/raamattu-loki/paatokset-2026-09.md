@@ -8831,3 +8831,7 @@ Omistaja 28.9. klo 20.38 TF 1.0.38:n Kehittäjältä-sivun kaappauksella sanatar
 ## OMISTAJA: MAAKUNTATILA — TOINEN NAPAUTUS POISTUU TILASTA (28.9.2026 klo 20.39)
 
 Omistaja 28.9. klo 20.39 sanatarkasti: "Silloin poistutaan koko maakuntatilasta. Nyt ei nimittäin ole mitään nappia poistua siitä tilasta." → tarkentaa 20.38-kirjausta: saman maakunnan uusi napautus tyhjentää valinnan ja poistuu koko maakuntatilasta tavalliseen karttanäkymään. Natiivi-UI tarkistaa myös valikkonapin kytkimen tilan aikana (omistajan mukaan poistumisnappia ei ole).
+
+## OMISTAJA: PULUN LUENTA HYPPÄÄ JA JATKUU CHATIN SULUN JÄLKEEN (1.0.38, UUSI ÄÄNI) (28.9.2026 klo 20.41)
+
+Omistaja 28.9. klo 20.41 sanatarkasti: "Pulun luenta hyppää vieläkin, eikä se lopeta luentaa, vaikka chat-ikkunan sulkee. Pitäisikö korjaus tulla jo seuraavassa versiossa? Käytössä oli se uusi ääni." Molemmat korjaukset (hyppy 9057ea82, pysäytys 29b1a83a) ovat 1.0.39-junassa a479a462, eivät 1.0.38:ssa. 1.0.39-savuke oli EI PASS nostokortin napin takia. → Natiivi-UI todentaa a479a462:n laitteella uudella äänellä (ElevenLabs v4 Turbo -striimi) + nostokortin napin; 1.0.39 ulos heti kun PASS.
