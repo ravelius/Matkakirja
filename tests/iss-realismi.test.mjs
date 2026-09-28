@@ -74,3 +74,68 @@ test('kerroksen virhe ei kaada muita, kolmas virhe sammuttaa kerroksen', () => {
 test('aurinko(ms) on pakollinen', () => {
   assert.throws(() => luoIssRealismi({}), /aurinko/);
 });
+
+/* ── Kerrokset (js/linssit/iss-realismi-kerrokset.js): natiivin varjostimet webiin ── */
+import {
+  leveysPituus, mercatorRivi, realismiKerrokset, VARJOSTIMET, YOKUORI, ILMAKAARI, JARJESTYS,
+} from '../js/linssit/iss-realismi-kerrokset.js';
+
+test('pituus ja leveys samasta kaavasta kuin varjostimissa: itä on itä (ei natiivin cl4-peilausta)', () => {
+  for (const [lat, lon] of [[0, 0], [60, 25], [-33.9, 151.2], [45, -73.6], [0, 180], [0, -90]]) {
+    const p = pallo.getCoords(lat, lon);
+    const r = leveysPituus([p.x, p.y, p.z]);
+    assert.ok(Math.abs(r.lat - lat) < 1e-9, `lat ${lat}`);
+    const dl = ((r.lon - lon + 540) % 360) - 180;
+    assert.ok(Math.abs(dl) < 1e-9, `lon ${lon} → ${r.lon}`);
+  }
+  // Varjostin käyttää samaa atan(x, z) ja asin(y):tä.
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /atan\(ng\.x, ng\.z\)/);
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /asin\(clamp\(ng\.y/);
+  assert.match(VARJOSTIMET.REVONTULET_FRAGMENT, /atan\(n\.x, n\.z\)/);
+  assert.ok(!/cross\(/.test(Object.values(VARJOSTIMET).join('')), 'ei ristituloa');
+});
+
+test('Eurooppa-kuvan rajat: Web Mercator -rivit 13/64 … 26/64', () => {
+  const [lon0, lon1, m0, m1] = YOKUORI.euRaja;
+  assert.equal(lon0, -28.125); assert.equal(lon1, 45);
+  assert.equal(m0, 13 / 64); assert.equal(m1, 26 / 64);
+  // Helsinki (60,17 N) ja Rooma (41,9 N) ovat Eurooppa-kuvan sisällä.
+  for (const lat of [60.17, 41.9]) { const m = mercatorRivi(lat); assert.ok(m > m0 && m < m1, `${lat}: ${m}`); }
+  assert.equal(mercatorRivi(0), 0.5);
+});
+
+test('natiivin vakiot varjostimissa (ilmahehku 0,12 σ 4,5 km, yön vesi 0,96, kiilto σ² 0,02)', () => {
+  assert.equal(ILMAKAARI.hehku, 0.12); assert.equal(ILMAKAARI.hehkuSigma, 4500); assert.equal(ILMAKAARI.hehkuKorkeus, 95000);
+  assert.equal(YOKUORI.yoVesi, 0.96); assert.equal(YOKUORI.peitto, 0.82); assert.equal(YOKUORI.aalto, 0.02);
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /smoothstep\(-0\.105, 0\.035/);
+  assert.match(VARJOSTIMET.KAARI_FRAGMENT, /0\.075 \* 0\.075/);
+  assert.match(VARJOSTIMET.REVONTULET_FRAGMENT, /smoothstep\(-0\.26, -0\.18/);
+  assert.ok(JARJESTYS.pilvet < JARJESTYS.yokuori && JARJESTYS.yokuori < JARJESTYS.revontulet && JARJESTYS.revontulet < JARJESTYS.kaari);
+});
+
+test('kerrokset rakentuvat Globe.gl:n luokilla, korvaavat näkymän omat ja purkautuvat', () => {
+  const lisatyt = [];
+  class Shader { constructor(o) { Object.assign(this, o); } dispose() { this.purettu = true; } }
+  class Sphere { constructor(r) { this.r = r; } dispose() {} }
+  class Mesh { constructor(g, m) { this.geometry = g; this.material = m; } }
+  const nayttamo = { add: (m) => { lisatyt.push(m); m.parent = { remove: (x) => lisatyt.splice(lisatyt.indexOf(x), 1) }; }, traverse() {} };
+  const koePallo = { ...pallo, scene: () => nayttamo };
+  const r = luoIssRealismi({ aurinko: () => ({ lat: 10, lon: 20 }), kerrokset: realismiKerrokset({ ikkuna: {} }) });
+  assert.deepEqual({ ...r.korvaa }, { yokuori: true, kaari: true, pilvet: true });
+  r.rakenna({ pallo: koePallo, luokat: { Shader, Sphere, Mesh }, metri: 100 / 6378137, R: 100 });
+  // pilvet + yökuori + revontulet + kaari ja usva = 5 kuorta.
+  assert.equal(lisatyt.length, 5);
+  assert.ok(lisatyt.every((m) => m.visible === false), 'piilossa, kunnes tekstuurit ja kyyti');
+  r.paivita({ osuus: 1, ms: 1e12 });
+  const kaari = lisatyt.filter((m) => m.renderOrder === JARJESTYS.kaari);
+  assert.equal(kaari.length, 2);
+  assert.ok(kaari.every((m) => m.visible), 'ilmakaari ei tarvitse tekstuuria');
+  assert.ok(Math.abs(kaari[0].material.uniforms.uHehkuKorkeus.value - 95000 * 100 / 6378137) < 1e-12);
+  const s = kaari[0].material.uniforms.uAurinko.value;
+  assert.ok(Math.abs(Math.hypot(s.x, s.y, s.z) - 1) < 1e-9);
+  r.ab('yokuori').valot = 0;
+  assert.equal(r.ab('yokuori').valot, 0);
+  r.pura();
+  assert.equal(lisatyt.length, 0);
+  assert.equal(r.tila().virheita, 0);
+});
