@@ -147,6 +147,7 @@ const SHELL = [
   './js/livia-nostotila.js',
   './js/livia-chat-tila.js',
   './js/pulu-paikka.js',
+  './js/pulu-realtime.js',
   './js/liviapuhe.js',
   './js/livia.js',
   './js/puhevirta.js',
