@@ -8935,3 +8935,7 @@ Päätoimittaja 28.9. klo 22.35: /tmp/matkakirja-kuormaraja ('Omistajan kuormara
 ## TILA: PULU SONNET 5.5 TUOTANNOSSA (28.9.2026 klo 22.36)
 
 Julkaisija 28.9. klo 22.36: #3580 mergetty (v2377, a6dec6558), pollo-worker julkaistu (36473166370, versio ebabf949) — Pulun chat käyttää nyt claude-sonnet-5-5:tä ajattelu between_tools.
+
+## OMISTAJA: PULUN V4-ÄÄNET PELIIN HETI (28.9.2026 klo 22.36)
+
+Omistaja 28.9. klo 22.36 sanatarkasti: "sano heti kun uudet pulun äänet ovat pelissä" → koosteen kuuntelua ei odoteta: Pelikoodari avaa PR:n pelikoodari-pulu-v4-kaikki-2 (75 v4-luentaa, 2 lyhennettyä kuplaa, Vallettan isoisän rungot mustiksi) Julkaisijan junan kärkeen; Julkaisija ilmoittaa tuotannosta; Päätoimittaja kertoo omistajalle heti.
