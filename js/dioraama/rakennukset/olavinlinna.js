@@ -126,7 +126,7 @@ const TILA_MASSA = {
 // on merkitty leikkaus-roolilla (oikea = u:n + päädyn, kohti avointa sivua).
 const KEITTIO_HAHMOT = [
   {
-    id: 'kokki', henkilo: 'kokki-1500', paikka: [12.6, 0, 5.0], suunta: 90, peilattu: false,
+    id: 'kokki', henkilo: 'kokki-1500', paikka: [13.1, 0, 6.1], suunta: 0, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
       { id: 'kokki-1', teksti: 'Malta mielesi, ei tuo pata omin päin kiehu valmiiksi.', aani: null },
@@ -161,9 +161,9 @@ const TILA_KEITTIO = {
   kohdistettava: true,
   rajat: { min: [8, 0, 4], max: [20, 4, 11] },
   naapurit: ['massa'],
-  kamera: { kohde: [14, 1.4, 7.5], atsimuutti: 172, korkeus: 18, etaisyys: 15, fov: 38, aukko: 0.8 },
+  kamera: { kohde: [14, 1.5, 7.4], atsimuutti: 172, korkeus: 13, etaisyys: 16, fov: 38, aukko: 0.8 },
   // Pystynäyttö (iPhone ~0,46): vaakakenttä ~21° → kauempaa, jotta tulisija, kokki ja pöytä mahtuvat; sali näkyy yllä.
-  kameraPysty: { kohde: [13.5, 1.8, 7.2], atsimuutti: 174, korkeus: 20, etaisyys: 26, fov: 44, aukko: 0.8 },
+  kameraPysty: { kohde: [13.8, 1.4, 7.2], atsimuutti: 174, korkeus: 12, etaisyys: 25, fov: 44, aukko: 0.8 },
   pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea' },
   taulu: TAULU_KEITTIO,
   valot: [
@@ -238,7 +238,7 @@ export const RAKENNUS = {
   geoAnkkuri: { lat: 61.8639, lon: 28.9011, suuntima: 0 },
   aikakerros: { id: 'n1500', nimi: '1500-luvun alku (tulkinta)' },
   yleiskamera: {
-    vaaka: { kohde: [0, 0, 0], atsimuutti: 165, korkeus: 30, etaisyys: 120, fov: 32, aukko: 0.3 },
+    vaaka: { kohde: [0, 2, 0], atsimuutti: 165, korkeus: 30, etaisyys: 150, fov: 32, aukko: 0.3 },
     pysty: { kohde: [0, 0, 2], atsimuutti: 160, korkeus: 38, etaisyys: 300, fov: 40, aukko: 0.3 },
   },
   pulu: { laskeutuminen: [2, 0, -2] },
