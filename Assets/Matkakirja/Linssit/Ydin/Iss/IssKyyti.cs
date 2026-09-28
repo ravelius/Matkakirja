@@ -38,11 +38,19 @@ namespace Matkakirja.Linssit.Iss
         /// ja sivuikkunat näkyisivät vähän"): katse radan suuntaan 36° vaakatason alapuolelle, jolloin maan kaari ja ilmakehän
         /// reuna (20,3° alapuolella, 15,7° kuvan keskikohdan yläpuolella) ovat ison sivuikkunan ylimmässä kolmanneksessa ja
         /// avaruus musta sen yllä. Cupola-kerrokset rajataan yläikkunaan niin, että kehys täyttää ruudun (IssKyytiNakyma).
-        /// Pois (A/B `astro kyyti horisontti 0`): kattoikkuna 55° kuten 1.0.38.
+        /// A/B `astro kyyti rajaus horisontti`.
         /// </summary>
         public const double HorisontinKatseAlas = 36;
-        public static bool Horisontti = true;
-        /// <summary>Ikkunan katse nyt (A/B `astro kyyti katse &lt;astetta&gt;` ohittaa; NaN = tilan mukaan).</summary>
+        /// <summary>
+        /// Ikkunan rajaus: PYÖREÄ (oletus, omistaja 28.9. klo 22.5x horisonttiluonnoksen jälkeen: "voisiko ennemmin käyttää sitä
+        /// pyöreää ikkunaa ja rajata se lähelle? toimisi aika hyvin vähän eri rajauksella pysty ja vaaka muodossa") = pyöreä
+        /// kattoikkuna täyttää ruudun lyhyemmän sivun ja karmi näkyy reunoilla, katse 55°; HORISONTTI = iso sivuikkuna, katse 36°;
+        /// KATTO = 1.0.40:n koko kupoli lasin zoomilla 1,3, katse 55°. A/B `astro kyyti rajaus pyorea|horisontti|katto`.
+        /// </summary>
+        public enum IkkunanRajaus { Pyorea, Horisontti, Katto }
+        public static IkkunanRajaus Rajaus = IkkunanRajaus.Pyorea;
+        public static bool Horisontti => Rajaus == IkkunanRajaus.Horisontti;
+        /// <summary>Ikkunan katse nyt (A/B `astro kyyti katse &lt;astetta&gt;` ohittaa; NaN = rajauksen mukaan).</summary>
         public static double KatseAlasPakotettu = double.NaN;
         public static double IkkunanKatseNyt => !double.IsNaN(KatseAlasPakotettu) ? KatseAlasPakotettu
             : Horisontti ? HorisontinKatseAlas : IkkunanKatseAlas;

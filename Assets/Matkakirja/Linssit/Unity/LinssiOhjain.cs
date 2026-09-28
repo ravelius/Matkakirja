@@ -1412,8 +1412,11 @@ namespace Matkakirja.Natiivi
                                  && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double lasi))
                             Matkakirja.Linssit.Iss.IssKuvakulma.LasiZoom = Math.Max(0.5, Math.Min(3.0, lasi));
                         else if (a == "polyt" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Polyt = osat[3] != "0"; // A/B pölyhiukkaset auringonsäteessä
-                        // HORISONTTI (omistaja 28.9. klo 21.5x): iso sivuikkuna horisonttiin, pimeä ohjaamo ja auringonvalo pokissa.
-                        else if (a == "horisontti" && osat.Length > 3) Matkakirja.Linssit.Iss.IssKuvakulma.Horisontti = osat[3] != "0";
+                        // IKKUNAN RAJAUS (omistaja 28.9. klo 21.5x ja 22.5x): pyöreä kattoikkuna tiiviisti (oletus), iso sivuikkuna
+                        // horisonttiin tai 1.0.40:n koko kupoli; pimeä ohjaamo ja auringonvalo pokissa kahdessa ensimmäisessä.
+                        else if (a == "rajaus" && osat.Length > 3)
+                            Matkakirja.Linssit.Iss.IssKuvakulma.Rajaus = osat[3] == "horisontti" ? Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Horisontti
+                                : osat[3] == "katto" ? Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Katto : Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanRajaus.Pyorea;
                         else if (a == "katse" && osat.Length > 3)   // katse <astetta vaakatason alapuolelle> | pois (tilan mukaan)
                             Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = double.TryParse(osat[3].Replace(',', '.'),
                                 System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double katse)

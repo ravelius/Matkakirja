@@ -34,24 +34,30 @@ namespace Matkakirja.Linssit.Testit
             return (Math.Asin(v.z / r) / Deg, Math.Atan2(v.y, v.x) / Deg, r - IssKuvakulma.MaanSadeM);
         }
 
-        [Testi] static void HorisonttiIsossaIkkunassa()
+        [Testi] static void IkkunanRajaukset()
         {
-            // Omistaja 28.9. klo 21.5x: oletuksena katse sivuikkunasta horisonttiin (36°), maan reuna 20,3° alapuolella eli
-            // 15,7° kuvan keskikohdan yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
-            Oleta.Tosi(IssKuvakulma.Horisontti && double.IsNaN(IssKuvakulma.KatseAlasPakotettu), "oletus horisontti");
-            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.HorisontinKatseAlas, "katse 36°");
-            double horisontti = Math.Acos(IssKuvakulma.MaanSadeM / (IssKuvakulma.MaanSadeM + Iss.KorkeusM)) / Deg;
-            double yla = IssKuvakulma.HorisontinKatseAlas - horisontti;
-            Oleta.Tosi(yla > 1 && yla < IssKuvakulma.IkkunanKentta / 2 - 10, $"maan reuna {yla:0.0}° keskikohdan yläpuolella");
-            var k = IssKuvakulma.Ikkuna(Iss);
-            var s = Llh(Silma(k));
-            Oleta.Tosi(Math.Abs(s.h - 420_000) < 500, $"silmän korkeus {s.h:0} m");
-            Oleta.Tosi(IssKuvakulma.Kaari(s.lat, s.lon, Iss.Paikka.Lat, Iss.Paikka.Lon) < 0.01, "silmä ISS:n kohdalla");
-            Oleta.Tosi(Math.Abs(IssKuvakulma.Suunta(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon) - Iss.Suuntima) < 0.01, "radan suuntaan");
-            // Kattoikkuna (A/B horisontti 0) = 1.0.38.
-            IssKuvakulma.Horisontti = false;
-            try { Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "kattoikkuna 55°"); }
-            finally { IssKuvakulma.Horisontti = true; }
+            // Omistaja 28.9. klo 22.5x: oletuksena pyöreä kattoikkuna tiiviisti rajattuna, katse 55° kuten ennen.
+            Oleta.Tosi(IssKuvakulma.Rajaus == IssKuvakulma.IkkunanRajaus.Pyorea && double.IsNaN(IssKuvakulma.KatseAlasPakotettu), "oletus pyöreä");
+            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "pyöreä 55°");
+            // Horisontti (A/B, omistaja 21.5x): katse sivuikkunasta 36°, maan reuna 20,3° alapuolella eli 15,7° kuvan keskikohdan
+            // yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
+            IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Horisontti;
+            try
+            {
+                Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.HorisontinKatseAlas, "horisontti 36°");
+                double horisontti = Math.Acos(IssKuvakulma.MaanSadeM / (IssKuvakulma.MaanSadeM + Iss.KorkeusM)) / Deg;
+                double yla = IssKuvakulma.HorisontinKatseAlas - horisontti;
+                Oleta.Tosi(yla > 1 && yla < IssKuvakulma.IkkunanKentta / 2 - 10, $"maan reuna {yla:0.0}° keskikohdan yläpuolella");
+                var k = IssKuvakulma.Ikkuna(Iss);
+                var s = Llh(Silma(k));
+                Oleta.Tosi(Math.Abs(s.h - 420_000) < 500, $"silmän korkeus {s.h:0} m");
+                Oleta.Tosi(IssKuvakulma.Kaari(s.lat, s.lon, Iss.Paikka.Lat, Iss.Paikka.Lon) < 0.01, "silmä ISS:n kohdalla");
+                Oleta.Tosi(Math.Abs(IssKuvakulma.Suunta(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon) - Iss.Suuntima) < 0.01, "radan suuntaan");
+                // Katto (A/B) = 1.0.40.
+                IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Katto;
+                Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "katto 55°");
+            }
+            finally { IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Pyorea; }
         }
 
         [Testi] static void IkkunanSilmaOnIssissa()
