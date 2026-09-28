@@ -8947,3 +8947,7 @@ Omistaja 28.9. klo 22.39 sanatarkasti: "v39 isoisän luennan alusta puuttuu pala
 ## OMISTAJA: STRIIMILUENTA HYPPII YHÄ 1.0.39:SSÄ (28.9.2026 klo 22.40)
 
 Omistaja 28.9. klo 22.40 sanatarkasti: "hyppii vielä v39, ei ala alusta ainakaan. testaan vähän lisää" (kysymykseen: striimiäänen pomppiminen). Hyppykorjaus 9057ea82 oli PASS nostossa, Pulun täysi vastaus mittaamatta (429). → Natiivi-UI: yhteinen selvitys isoisän luennan puuttuvan alun kanssa (ensimmäinen pala / myöhäinen aloitus), laitteella ElevenLabs v4 Turbo, nosto + Pulun pitkä vastaus; juurisyy ennen korjausta.
+
+## OMISTAJA: STRIIMI SOITTAA ENSIN EDELLISEN NOSTON PUSKURIA (28.9.2026 klo 22.42)
+
+Omistaja 28.9. klo 22.42 sanatarkasti: "ongelma taitaakin olla siinä että striimi lukee vanhaa tekstiä puskurista jonkun matkaa ennenkuin aloittaa alusta oikeasta kohdasta. saattaa siis tulla vanhan noston puhetta alkuun vaikka pitäisi olla luenta ihan toisesta nostosta" → Natiivi-UI kärkeen kaiutinkorjauksen jälkeen: äänipuskurin ja jonon tyhjennys luennan vaihtuessa/pysähtyessä, vanhan pyynnön myöhästyneiden palojen hylkäys (pyyntö-id/sukupolvi); toisto nosto A 5 s → nosto B. Mahdollisesti sama juurisyy kuin isoisän luennan puuttuva alku.
