@@ -109,6 +109,7 @@ namespace Matkakirja.Natiivi
 
         PalloKierto kierto;
         MaapallonVuosiSovitin vuosi;
+        DioraamaSovitin poikki;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -198,6 +199,7 @@ namespace Matkakirja.Natiivi
             rekisteri.Lisaa(new Topografia());
             // Maapallon vuosi (Linssiseppä 2, 28.9.2026): hiomassa, vain kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(vuosi = new MaapallonVuosiSovitin(this, k));
+            rekisteri.Lisaa(poikki = new DioraamaSovitin(this, k));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -1523,6 +1525,8 @@ namespace Matkakirja.Natiivi
                         ? $"isoisä 1873: näkyvissä {ik.Nakyvia} nimeä, kamera {Kamera}" : "isoisä 1873: linssi ei ole auki");
                 else if (osat[0] == "vuosi")
                     vuosi.Komento(osat);
+                else if (osat[0] == "poikki")
+                    poikki.Komento(osat);
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)
