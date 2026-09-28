@@ -8643,3 +8643,7 @@ Omistaja 28.9. klo 13.3x: "Voit luoda toisen Linssi-sepän nykyisen rinnalle." P
 ## OMISTAJA: ALOITUSLENTO V3E2 HYVAKSYTTY (1.0.35) (28.9.2026 klo 13.34)
 
 Omistaja 28.9. klo 13.4x kortilla: 'OK, mergeen' — aloituslento v3e2 (Natiiviseppa 02bf1c9f: loiva kaarto Ateenan ylle ilman 270 km:n koukkua, kamera kaantyy alas nousun mukana, kosketus ylhaalta ~2 astetta, nousun laattaraja pois) 1.0.35-junaan; Pulu-TF:aa ei viivasteta, v3e2 seuraavaan buildiin jos Pulu-kaannos jo kaynnissa. Seuraavaksi v3f (koodattu c904d2c2).
+
+## OMISTAJA: CUPOLA PEHMEA + RAE JA LIPPU HYVAKSYTTY; KAUPUNKIEN VALOT 80 % (28.9.2026 klo 14.14)
+
+Omistaja 28.9. klo 14.1x kortilla: Cupola pehmea + rae (Linssiseppa cl5, poltettu itse, ei Codex-tilausta) hyvaksytty; natiivin lippu (saapuessa 1.0.33-koko, ylittaa rajan, zoomissa kasvaa neliojuurella) hyvaksytty. Kaupunkien valot sanatarkasti: "valot palavat puhki. miltä näyttää, jos pidetään esim 80% peitolla?" → Linssiseppa kuvapari 80 % (ja 60 %).
