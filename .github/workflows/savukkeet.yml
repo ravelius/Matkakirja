@@ -187,7 +187,16 @@ jobs:
             export SAVUKE_RINNAKKAIN=3
             echo "Simulaattoreita käynnissä $kaynnissa → SAVUKE_RINNAKKAIN=3"
           fi
-          node tools/savukkeet/aja-sarja.mjs "${SARJA:-julkaisu}" "$TULOKSET"
+          # KEVYT TILA (omistaja 28.9.2026): kun omistaja käyttää Macia, Julkaisija
+          # luo lipun /tmp/matkakirja-kevyt → savukkeita enintään 2 rinnakkain
+          # taustaprioriteetilla (taskpolicy -b), jotta Clauden kuorma pysyy ≤ 8 ytimessä.
+          ETU=""
+          if [ -f /tmp/matkakirja-kevyt ]; then
+            export SAVUKE_RINNAKKAIN=2
+            ETU="taskpolicy -b"
+            echo "Kevyt tila (/tmp/matkakirja-kevyt) → SAVUKE_RINNAKKAIN=2, taskpolicy -b"
+          fi
+          $ETU node tools/savukkeet/aja-sarja.mjs "${SARJA:-julkaisu}" "$TULOKSET"
       - name: Yhteenveto
         if: always()
         run: |
