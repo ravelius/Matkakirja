@@ -1,5 +1,8 @@
 # Tilataulu
 
+**Päivitetty 23:11:** LEVY 80 Gi = raja (ilmoitettu). Muisti OK (paine 0, vapaa 62 %), load 18, sim 1, GPU-chrome 0. Kontekstit <=56 %. Juna: b13 HEAD 8de5b3df 23:02 kääntämättä (<30 min).
+
+
 **Päivitetty 23:00:** levy 83 Gi (laskee, raja 80), muisti WARN (2) vapaa 42 %, load-piikki 351. Sim 1, GPU-chrome 0. Kontekstit <=44 % tarkistetuista (Karttaseppä 56 % edellinen). Juna 1ad1c538 käännetty 22:18. Ilmoitettu Päätoimittajalle.
 
 
