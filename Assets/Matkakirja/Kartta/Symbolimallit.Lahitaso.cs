@@ -34,6 +34,7 @@ namespace Matkakirja
             if (m == null || m.Lahi == null) return null;
             if (lahiVerkot.TryGetValue(avain, out var v)) return v;
             v = m.Lahi();
+            if (t.Erikois != null) Seepiaksi(v);
             int n = v != null ? v.triangles.Length / 3 : 0;
             if (n > LahiKatto) Debug.LogWarning($"MATKAKIRJA symbolimallit: lähitaso {avain} {n} kolmiota yli budjetin {LahiKatto}");
             return lahiVerkot[avain] = v;

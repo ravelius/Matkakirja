@@ -1050,7 +1050,24 @@ namespace Matkakirja
                 }
             }
             string f = Tiedosto(offline, polku);
-            if (File.Exists(f))
+            // Offline-latauksessa puuttunut kermalaatta (404, nollatavuinen merkki, Reikakorjaus.KermanPuuttuvaMerkki): heti
+            // läpinäkyvä ilman verkkoa ja uusintaa. Muu nollatavuinen tiedosto ohitetaan kuten ennen puuttuva.
+            var offlineTiedosto = new FileInfo(f);
+            bool offlineLaatta = offlineTiedosto.Exists;
+            if (offlineLaatta && offlineTiedosto.Length == 0)
+            {
+                offlineLaatta = false;
+                if (tyhjakuva != null && Reikakorjaus.KermanPuuttuvaMerkki(polku, Varitaso.Kansio))
+                {
+                    if (esi) return (200, null);
+                    Interlocked.Increment(ref Offline);
+                    lahde.Nimi = "offline-tyhja";
+                    VerkkoOdotus.Osuma("laatta", true);
+                    LaattaOsumat.Levylta(polku, false);
+                    return (200, tyhjakuva);
+                }
+            }
+            if (offlineLaatta)
             {
                 if (esi) return (200, null);
                 var sisalto = Pura(File.ReadAllBytes(f));
@@ -1549,7 +1566,15 @@ namespace Matkakirja
             using var r = UnityWebRequest.Get(Ampari + (lahde ?? polku));
             r.timeout = 30;
             yield return r.SendWebRequest();
-            if (r.result != UnityWebRequest.Result.Success) { valmis(r.responseCode == 404 ? 0 : -1); yield break; }
+            if (r.result != UnityWebRequest.Result.Success)
+            {
+                // Puuttuva kermalaatta: nollatavuinen merkki, jotta peli ei hae sitä verkosta ilman yhteyttä (HaeSisalto).
+                if (r.responseCode == 404 && lahde == null && Reikakorjaus.KermanPuuttuvaMerkki(polku, Varitaso.Kansio))
+                    try { Directory.CreateDirectory(Path.GetDirectoryName(f)); File.WriteAllBytes(f, Array.Empty<byte>()); }
+                    catch (Exception) { /* merkki on valinnainen */ }
+                valmis(r.responseCode == 404 ? 0 : -1);
+                yield break;
+            }
             Directory.CreateDirectory(Path.GetDirectoryName(f));
             // Maasto gzipattuna levylle (Fablen C 27.9.): iOS purkaa Content-Encoding: gzip -siirron, joten pakataan uudelleen
             // (~3× pienempi); luku purkaa (Pura). Muut tiedostot sellaisenaan.
