@@ -309,6 +309,7 @@ namespace Matkakirja.Natiivi
             rajattu = uusi && RajausPaalla;
             // Cupola 3: ohjaamo on jo pimeä (metallin keskiarvo ~25/255), joten ei tummennusta; ulko-osia ei ole, valoja kolme.
             cupola3 = rajattu && Cupola3Kaytossa;
+            if (!cupola3) AsetaKuvanAsema(null);   // Cupola 2 -kerrokset keskeltä (Cupola 3 asettaa Rajaa-kutsussa)
             bool horisontti = rajattu && IssKuvakulma.Horisontti;
             ulko2.style.display = horisontti || cupola3 ? DisplayStyle.None : DisplayStyle.Flex;
             float tumma = rajattu ? OhjaamonTummuus : 1f;
@@ -535,17 +536,38 @@ namespace Matkakirja.Natiivi
         /// Rajaus: skaala <paramref name="z"/> ja siirto <paramref name="siirto"/> (pt kuvun omassa koordinaatistossa; transform-origin
         /// keskellä, eli piste = c + siirto + z (p − c)), joilla cover-kuvan ikkuna tulee paikalleen. false = asettelu puuttuu.
         /// </summary>
+        Vector2? kuvanAsema;
+
+        /// <summary>
+        /// Taustakuvan vasemman yläkulman paikka laatikossa (pt; negatiivinen, kun cover-kuva on laatikkoa suurempi, kuten
+        /// AikajanaNakyma) kaikille Cupola-kuvakerroksille; null = keskellä (USS center).
+        /// </summary>
+        void AsetaKuvanAsema(Vector2? kulma)
+        {
+            if (kulma == kuvanAsema) return;
+            kuvanAsema = kulma;
+            var x = kulma.HasValue ? new BackgroundPosition(BackgroundPositionKeyword.Left, new Length(kulma.Value.x)) : new BackgroundPosition(BackgroundPositionKeyword.Center);
+            var y = kulma.HasValue ? new BackgroundPosition(BackgroundPositionKeyword.Top, new Length(kulma.Value.y)) : new BackgroundPosition(BackgroundPositionKeyword.Center);
+            kehys2.style.backgroundPositionX = x; kehys2.style.backgroundPositionY = y;
+            heijastus2.style.backgroundPositionX = x; heijastus2.style.backgroundPositionY = y;
+            foreach (var v in valot) { v.style.backgroundPositionX = x; v.style.backgroundPositionY = y; }
+        }
+
         bool Rajaa(out Vector2 siirto, out float z)
         {
             siirto = Vector2.zero; z = 1f;
             float W = kupu.layout.width, H = kupu.layout.height;
             if (!(W > 1f) || !(H > 1f)) return false;
-            // Cupola 3: kuva on jo rajattu ruudulle (cover), pieni suurennos ajelehdusta varten, ja ikkuna kohti keskustaa niin
-            // paljon kuin kuvan reuna sallii (iPadilla lappu leikkautui cl18:ssa reunaan).
+            // Cupola 3: kuva on jo rajattu ruudulle (cover), pieni suurennos ajelehdusta varten, ja ikkuna kohti keskustaa: kuva
+            // siirtyy laatikon sisällä cover-ylijäämän verran (taustakuva leikataan laatikkoon, cl19) ja loput laatikon siirtona.
             if (cupola3)
             {
                 z = Cupola3Yli; kuvanYlareuna = 0f;
-                var d = IssKuvakulma.Cupola3Siirto(W, H, IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad, Ohjaamo3Kulma, z, Cupola3Vara);
+                bool ipad = IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad;
+                var d = IssKuvakulma.Cupola3Rajaus(W, H, ipad, Ohjaamo3Kulma, z, Cupola3Vara);
+                var (kl, kk) = IssKuvakulma.Cupola3Koko(ipad);
+                float s3 = Mathf.Max(W / (float)kl, H / (float)kk);
+                AsetaKuvanAsema(new Vector2((W - (float)kl * s3) * (float)d.asemaX, (H - (float)kk * s3) * (float)d.asemaY));
                 siirto = new Vector2((float)d.x, (float)d.y);
                 return true;
             }

@@ -78,19 +78,25 @@ namespace Matkakirja.Linssit.Iss
             : (ipad ? (0.503, 0.465) : (0.498, 0.473));
 
         /// <summary>
-        /// Rajauksen siirto (pt, x oikealle, y alas) kerrossäiliön omassa koordinaatistossa: kuva cover-asetettuna
-        /// <paramref name="leveys"/> × <paramref name="korkeus"/> -säiliöön ja suurennettuna <paramref name="z"/>-kertaiseksi keskeltä.
-        /// Ikkunan keskipiste siirretään kohti säiliön keskustaa sen verran kuin kuvan ylimääräinen reuna sallii, ja reunaan jää aina
-        /// <paramref name="vara"/> pt ajelehdukselle. iPad vaaka: 32,6 pt alas (ikkuna keskelle); iPhone: 9,5 pt (reuna rajoittaa).
+        /// Rajaus kerrossäiliön omassa koordinaatistossa (pt, x oikealle, y alas): kuva cover-asetettuna <paramref name="leveys"/> ×
+        /// <paramref name="korkeus"/> -laatikkoon ja laatikko suurennettuna <paramref name="z"/>-kertaiseksi keskeltä. Ikkunan
+        /// keskipiste siirretään kohti ruudun keskustaa kahdessa osassa:
+        ///  1) kuvaa siirretään laatikon sisällä (background-position 0–1, 0,5 = keskellä) cover-ylijäämän verran; UI Toolkit leikkaa
+        ///     taustakuvan laatikkoon, joten pelkkä laatikon siirto paljasti cl19:ssä iPadin yläreunaan 16 pt:n aukon;
+        ///  2) loput laatikon siirtona (translate) suurennoksen varan sisällä, reunaan <paramref name="vara"/> pt ajelehdukselle.
+        /// iPad vaaka: asema y 0,065 (kuva 31,8 pt alas laatikossa, ikkuna keskelle), siirto 0; iPhone: ei cover-ylijäämää, siirto 9,5 pt.
         /// </summary>
-        public static (double x, double y) Cupola3Siirto(double leveys, double korkeus, bool ipad, string kulma, double z, double vara)
+        public static (double asemaX, double asemaY, double x, double y) Cupola3Rajaus(double leveys, double korkeus, bool ipad, string kulma, double z, double vara)
         {
             var (kl, kk) = Cupola3Koko(ipad);
             var (cx, cy) = Cupola3Keskus(ipad, kulma);
             double s = Math.Max(leveys / kl, korkeus / kk);
-            double px = (leveys - kl * s) * 0.5 + cx * kl * s, py = (korkeus - kk * s) * 0.5 + cy * kk * s;
-            double vx = Math.Max(0, (kl * s * z - leveys) * 0.5 - vara), vy = Math.Max(0, (kk * s * z - korkeus) * 0.5 - vara);
-            return (Math.Clamp(-z * (px - leveys * 0.5), -vx, vx), Math.Clamp(-z * (py - korkeus * 0.5), -vy, vy));
+            double lx = (kl * s - leveys) * 0.5, ly = (kk * s - korkeus) * 0.5;
+            double dx = -z * ((leveys - kl * s) * 0.5 + cx * kl * s - leveys * 0.5), dy = -z * ((korkeus - kk * s) * 0.5 + cy * kk * s - korkeus * 0.5);
+            double bx = Math.Clamp(dx / z, -lx, lx), by = Math.Clamp(dy / z, -ly, ly);
+            double ax = lx > 1e-6 ? 0.5 - bx / (2 * lx) : 0.5, ay = ly > 1e-6 ? 0.5 - by / (2 * ly) : 0.5;
+            double vx = Math.Max(0, (z - 1) * leveys * 0.5 - vara), vy = Math.Max(0, (z - 1) * korkeus * 0.5 - vara);
+            return (ax, ay, Math.Clamp(dx - bx * z, -vx, vx), Math.Clamp(dy - by * z, -vy, vy));
         }
 
         /// <summary>Cupola 3:n reunavalot Codexin tiedostonimin: kapea valo ikkunan reunassa luoteessa, koillisessa ja lounaassa.</summary>

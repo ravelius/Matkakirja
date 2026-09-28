@@ -86,14 +86,19 @@ namespace Matkakirja.Linssit.Testit
             // Suoraan edessä tai takana: ei reunavaloa.
             IssKuvakulma.Cupola3Valot(0.0002, 0.0001, p);
             Oleta.Tosi(p[0] == 0 && p[1] == 0 && p[2] == 0, "edessä");
-            // Keskitys (cl18: iPadilla lappu leikkautui reunaan): iPad 11 vaaka, ikkuna 0,465 → keskelle 32,6 pt alas, vara jää.
-            var d = IssKuvakulma.Cupola3Siirto(1194, 834, true, "a", 1.04, 8);
-            Oleta.Tosi(d.y > 32 && d.y < 33.2 && Math.Abs(d.x) < 4.5, $"iPad vaaka ({d.x:0.0}, {d.y:0.0})");
-            // iPhone pysty: reuna rajoittaa (ylimääräistä 17,5 pt − vara 8 = 9,5 pt), ikkuna ei mene reunan yli.
-            d = IssKuvakulma.Cupola3Siirto(402, 874, false, "a", 1.04, 8);
-            Oleta.Tosi(Math.Abs(d.y - 9.48) < 0.05 && Math.Abs(d.x) < 0.7, $"iPhone pysty ({d.x:0.00}, {d.y:0.00})");
-            // Ilman ylimääräistä reunaa (z = 1, vara 8) ei siirtoa lainkaan.
-            d = IssKuvakulma.Cupola3Siirto(402, 874, false, "a", 1, 8);
+            // Keskitys (cl18: iPadilla lappu leikkautui reunaan; cl19: laatikon siirto paljasti 16 pt:n aukon, koska taustakuva
+            // leikataan laatikkoon): iPad Pro 11 vaaka 1210 × 834, ikkuna y 0,465 → kuva siirtyy laatikossa (asema y 0,065 eli 31,8 pt
+            // alas) ja laatikko pysyy paikallaan (y 0), vaaka pieni siirto laatikon varan sisällä.
+            var d = IssKuvakulma.Cupola3Rajaus(1210, 834, true, "a", 1.04, 8);
+            Oleta.Tosi(Math.Abs(d.asemaY - 0.065) < 0.005 && Math.Abs(d.y) < 0.01 && d.asemaX == 0.5 && d.x < -3 && d.x > -4.5,
+                $"iPad vaaka asema ({d.asemaX:0.000}, {d.asemaY:0.000}) siirto ({d.x:0.0}, {d.y:0.0})");
+            // Laatikko peittää ruudun: siirto enintään (z − 1) · korkeus / 2 − vara.
+            Oleta.Tosi(Math.Abs(d.y) <= 0.04 * 417 - 8 && Math.Abs(d.x) <= 0.04 * 605 - 8, "iPad laatikon vara");
+            // iPhone pysty: ei cover-ylijäämää pystyyn, joten siirto laatikkona varan verran (17,5 − 8 = 9,5 pt).
+            d = IssKuvakulma.Cupola3Rajaus(402, 874, false, "a", 1.04, 8);
+            Oleta.Tosi(Math.Abs(d.y - 9.48) < 0.05 && d.asemaY == 0.5 && Math.Abs(d.x) < 0.1, $"iPhone pysty ({d.asemaX:0.00}, {d.x:0.00}, {d.y:0.00})");
+            // Ilman suurennosta (z = 1) laatikkoa ei siirretä lainkaan.
+            d = IssKuvakulma.Cupola3Rajaus(402, 874, false, "a", 1, 8);
             Oleta.Tosi(d.x == 0 && d.y == 0, "ei varaa");
         }
 
