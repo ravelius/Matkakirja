@@ -9,7 +9,8 @@ web ja Pulu, URP-renderöinti, datamalli ja glTF, web-polku, Codexin tarvelista)
 1. Linssin nimi on **Poikkileikkaus** (id `poikkileikkaus`, katalogin E11) ja moottori **dioraama**. Nimi "Elävä" on jo
    Elävän kartan käytössä (`Linssit/Ydin/Elava/`). Olavinlinnan näkymän otsikko on "Olavinlinna – elävä linna".
 2. Kirjaa poikkeus Raamatun sääntöön UUSIA LINSSEJÄ EI ALOITETA ENNEN PARITEETTIA (omistajan aloitus 29.9. klo 00.0x).
-3. Codex-tilauksen osa 1 (kohta 8.1) on valmis lähetettäväksi nyt. Osa 2 lähtee erän 1 jälkeen harmaan keittiön kuvien kanssa.
+3. Codex-tilauksen osa 1 on valmis lähetettäväksi nyt (luonnos `linnanrakentaja-codex-tilaus-osa1-luonnos-20260929.md`).
+   Osa 2 lähtee erän 1 jälkeen harmaan keittiön kuvien kanssa.
 4. Välitä nämä: Natiiviseppä, näyttämörajapinta (8.4). Pelikoodari, äänet, repliikit ja äänisilmukat (8.2).
    Sisältökirjuri, faktat (8.3).
 5. Pulu esiintyy nykyisenä Puluna, jotta hahmo pysyy tunnistettavana. Maalattu Pulu tilataan vain, jos erä 2 näyttää tyyliristiriidan.
@@ -197,8 +198,10 @@ joten laitemittaus tehdään erässä 2 Laitetestaajan tai Natiivisepän laitevu
   - Kiinteä 3/4-kuvakulma edestä ylhäältä (korkeuskulma 30°), yksi suunta, peilaus sallittu.
   - Ruutu 256×384 px (iPad; iPhone skaalataan puoleen), pivot jaloissa, alfa, 2048²-atlas.
   - Silmukat: idle 8, työ 12 ja puhe 6 ruutua, 10 fps. Lisäksi henkilökortti, 512² rintakuva.
-- **Opetustaulun kehys:** kevyt 9-slice (ohut maalattu puukehys tai liuskekivi), tekstialue tyhjä, ei koristeita,
-  @2x/@3x ja 9-slice-rajat merkittyinä.
+- **Opetustaululle ei tilata kehystä.** Taulu tehdään talon kevyellä UI-tyylillä (pergamenttikortti ilman koristeita),
+  koska omistaja on hylännyt koristekehykset.
+- Valmis tilausluonnos: `docs/raportit/linnanrakentaja-codex-tilaus-osa1-luonnos-20260929.md`. Siinä on myös mittakaava
+  196 px/m ja ruutu 256×384.
 - **Hehkukortit:** tulisijan liekki, kynttilä ja soihtu, 4–8 ruudun silmukka additiiviseen piirtoon.
 - Toimitus: `~/Documents/Codex/<pvm>/dioraama-osa1/`, jossa `final/`, `previews/` ja `manifest.json` (sha256) kuten
   konseptitoimituksessa. Kaikki on omaa kuvitusta. Konsepti on tyylireferenssi, ei kopioitava malli.
