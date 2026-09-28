@@ -8659,3 +8659,7 @@ Linssiseppa 2 28.9. klo 15.0x: webin hiomassa-rivi (manner null) tekee linssista
 ## OMISTAJA: KONE VAPAA (KEVYT TILA POIS) (28.9.2026 klo 15.09)
 
 Omistaja 28.9. sanatarkasti: "en tarvitse enää konetta". Kevyt lippu pois (Julkaisija), nice-oletus + GPU vapaa, Karttasepan pallopoltto + vienti SIGCONT, taysi savukesarja mainilla uudelleen, simulaattorivuorot Natiiviseppa (v3f2-kuvaus) → Linssiseppa → Linssiseppa 2 → Natiivi-UI.
+
+## OMISTAJA: ALOITUSLENTO V3F2 — PAIVA AIEMMIN; PAATOIMITTAJA: KAUPUNKILEHDEN PIKKUKUVAT (28.9.2026 klo 15.23)
+
+Omistaja 28.9. klo 15.3x kortilla v3f2:sta sanatarkasti: "päivä voisi tulla aiemmin" → Natiiviseppa uusi versio (paivanvalo lennolla aiemmin), junaan vasta omistajan OK:n jalkeen. Paatoimittaja (Pelikoodarin kysymys, kuvalahteet-savuke Pariisi): kaupunkilehden osiohakemiston pikkukuvat pysyvat navigointina osioon, mutta jokainen pikkukuvan kuva nakyy osiossa lahderiveineen (puuttuvat lahteet korjataan); muuten lahde pikkukuvan kuvaukseen. #3565 (nostokortin oma regressio #3388 + kohdevalinnan savuke #3364:n mukaan) Julkaisijalla.
