@@ -382,7 +382,8 @@ test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotant
     const lahde = avain.slice(0, erotin);
     const indeksi = Number(avain.slice(erotin + 1)) - 1;
     assert.equal(livianAaniOsoite(lahde, indeksi), `${AANI_JUURI}${polku}`, avain);
-    assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/livia-.+\.mp3$/);
+    // v4-erät soivat tasoitettuina (tools/tasoita-pulu.mjs, 28.9.2026): alikansio tasoitettu/.
+    assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/(tasoitettu\/)?livia-.+\.mp3$/);
     assert.doesNotMatch(livianAaniOsoite(lahde, indeksi), /\?v=/);
     assert.equal(LIVIAN_AANITETYT[avain], livianTiiviste(FOKUSVIRRAT[lahde].pollo.kommentti[0]),
       `${avain}: näkyvän tekstin tiiviste`);
@@ -403,14 +404,20 @@ test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotant
  * jos kuitin kesto vaihtuu — silloin peli soittaisi taas sitä äänitettä,
  * josta omistaja valitti.
  */
-test('ateena-3, sofia-3 ja pariisi-3 osoittavat eleven_v4-erään (ei uudelleenkoodausta)', () => {
+test('ateena-3, sofia-3 ja pariisi-3 osoittavat eleven_v4-erän tasoitettuihin äänitteisiin', () => {
   /*
    * 28.9.2026: omistaja valitsi eleven_v4:n. Kolme kaupunkia ajettiin
    * uusiksi samalla tekstillä ja tageilla; erä pulu-3eaad28481f0aa2ef5a9
    * (lähde-SHA 5d65b852) tallentaa mallin mp3:n sellaisenaan kuten
    * 14.9. v3-erä pulu-c4a91d1229f96eaac265, jonka äänet jäävät ämpäriin.
    */
-  const ERA = 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9';
+  /*
+   * TASOITETTU (Päätoimittaja 28.9.2026: "Pelaaja ei saa kuulla hiljaisempaa
+   * Pulua"): v4 oli 0–6 dB hiljaisempi, joten peli soittaa tasoitetun kopion
+   * (tools/tasoita-pulu.mjs, yksi 192 kbps koodaus, −17,2 LUFS, limitteri 0,97).
+   * Mallin alkuperäinen mp3 ja raaka/-kopio pysyvät ämpärissä ennallaan.
+   */
+  const ERA = 'aanet/pulu/versiot/5d65b85250a9/pulu-3eaad28481f0aa2ef5a9/tasoitettu';
   assert.equal(LIVIAN_VERSIOIDUT_AANET['ateena-3'], `${ERA}/livia-ateena-3.mp3`);
   assert.equal(LIVIAN_VERSIOIDUT_AANET['sofia-3'], `${ERA}/livia-sofia-3.mp3`);
   assert.equal(LIVIAN_VERSIOIDUT_AANET['pariisi-3'], `${ERA}/livia-pariisi-3.mp3`);

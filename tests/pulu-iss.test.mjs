@@ -138,7 +138,7 @@ test('ISS-repliikeillä on kaanoninen teksti, versioitu äänite ja kesto', () =
       assert.equal(r.teksti, teksti);
       assert.equal(r.avain, `iss-${ryhma}-${i + 1}`);
       assert.equal(r.kestoMs, Math.round(LIVIAN_KESTOT[r.avain] * 1000));
-      assert.match(LIVIAN_VERSIOIDUT_AANET[r.avain], /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/livia-iss-/);
+      assert.match(LIVIAN_VERSIOIDUT_AANET[r.avain], /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/tasoitettu\/livia-iss-/);
       // Tagit eivät kuulu kaanoniin eivätkä kuplaan.
       assert.doesNotMatch(teksti, /\[/);
       avaimet.push(r.avain);
