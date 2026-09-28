@@ -57,10 +57,11 @@ namespace Matkakirja.Natiivi
         /// kehys / ulko-osat / heijastus px (iPadilla × 1,27), rae 4/255 ennallaan ja lasin zoomin (1,3) verran hienompi;
         /// ruudulla näkyvä sumennus suhteessa 1.0.37:ään zoomin jälkeen:
         ///  "pehmea"  12 / 3,5 / 8 (1.0.37, 1 ×), "pehmea2" 7 / 2 / 4,6 (cl12, 0,75 ×; omistaja 18.0x "hieman vähemmän"),
-        ///  "pehmea3" 3,7 / 1,08 / 2,46 (OLETUS, 0,4 ×) ja "pehmea4" 2,3 / 0,67 / 1,54 (0,25 ×): omistaja 28.9. klo 19.3x "Vielä
-        ///  liikaa blurrina", vertailuun 0,4 × ja 0,25 ×; "" = Codexin terävä alkuperäinen. Työkalu cupola_pehmea.py.
+        ///  "pehmea3" 3,7 / 1,08 / 2,46 (0,4 ×) ja "pehmea4" 2,3 / 0,67 / 1,54 (OLETUS, 0,25 ×): omistaja 28.9. klo 19.3x "Vielä
+        ///  liikaa blurrina", laite cl13 0,75 | 0,4 | 0,25 ×, Päätoimittaja hyväksyi 0,25 × klo 20.0x; "" = Codexin terävä
+        ///  alkuperäinen. Työkalu cupola_pehmea.py.
         /// </summary>
-        public const string OletusSarja = "pehmea3";
+        public const string OletusSarja = "pehmea4";
         public static string Sarja = OletusSarja;
         string haettuSarja;
         /// <summary>Codexin Cupola 2: null = ei vielä haettu tai latautuu, true = kehys valmis, false = ei saatu (3D varalla).</summary>

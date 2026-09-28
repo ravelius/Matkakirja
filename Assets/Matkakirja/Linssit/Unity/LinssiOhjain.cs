@@ -1397,7 +1397,7 @@ namespace Matkakirja.Natiivi
                         {
                             CupolaKerros.Tyyli = osat[3] == "vanha" ? CupolaKerros.Tyylit.Vanha
                                 : osat[3] == "3d" ? CupolaKerros.Tyylit.Kolmiulotteinen : CupolaKerros.Tyylit.Kuva;
-                            // uusi = oletussarja (pehmea3), pehmea = 1.0.37, pehmea2–4 = vertailusarjat, terava = Codexin alkuperäinen.
+                            // uusi = oletussarja (pehmea4), pehmea = 1.0.37, pehmea2–4 = vertailusarjat, terava = Codexin alkuperäinen.
                             Matkakirja.Natiivi.IssKyytiNakyma.Sarja = osat[3] == "terava" ? ""
                                 : osat[3].StartsWith("pehmea", StringComparison.Ordinal) ? osat[3] : Matkakirja.Natiivi.IssKyytiNakyma.OletusSarja;
                         }
