@@ -8679,3 +8679,7 @@ Omistaja 28.9. klo 16.2x sanatarkasti: "pulu voisi leijua siellä ISS:n sisäll�
 ## OMISTAJA: PULU AVARUUSKAVELYLLE KAMERA KADESSA; CUPOLAN KUVAKULMA AJELEHTII PAINOTTOMASTI (28.9.2026 klo 16.29)
 
 Omistaja 28.9. klo 16.3x sanatarkasti: "joo tehdään noin, kiva tuo merkkiääni ja radiosuodatin. voisiko pululla olla se kamera kädessä? ja pitäisikö kameran liikkua hieman sisällä (eteen, taakse ja sivuille) niin että lasin muoto ja näkymä eläisivät hieman kuin kamera olisi painottomassa tilassa kuvun sisällä? varmaan aika pieni liike riittäisi ajamaan efektin. mitä mieltä?" Paatoimittaja: 1) Pulun avaruuskavely (jonossa, myohemmin) + kamera Pulun kadessa; chatissa Pulu voi 'ottaa kuvan' alla olevasta kohteesta → oikea NASA-kuva. Leijuva kamera pois Cupolan sisalta. 2) Linssiseppa 1:n Cupola-kokeeseen nyt: kuvakulman painoton ajelehtiminen (jakso ~20–40 s, pieni amplitudi, kallistus ≤ 0,5 astetta, parallaksi kehys vs. maa), Vahenna liiketta -asetus kytkee pois. Omistaja ohitti Maapallon vuosi -natiivikortin → ei junaan, odottaa omistajan ohjetta.
+
+## OMISTAJA: MAAPALLON VUOSI -LINSSI HYVAKSYTTY KEHITTAJATILAAN (28.9.2026 klo 16.29)
+
+Omistaja 28.9. klo 16.4x sanatarkasti: "tee vain maapallolinssi, näyttää hyvältä". Natiivi (Linssiseppa 2 0a5ca59e + Natiivi-UI 867b57a0) 1.0.38:aan kehittajatilassa, web #3558 (Siirtoseppa) junaan; pelaajan rekisteririvi vasta kun linssi on valmis.
