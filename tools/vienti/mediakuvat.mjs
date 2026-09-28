@@ -29,6 +29,8 @@ const JUURI = resolve(TAMA, '../..');
 export const TIEDOSTO = join(TAMA, 'mediakuvat.json');
 const OMA = 'https://media.matkakirja.app/';
 const KUVA = /\.(jpe?g|png|webp|gif)$/i;
+/** Ämpärin pieni on vanhentunut, jos se on yli tämän kertaa kirjattu koko (Pillow-versioiden ero jää alle). */
+export const VANHENTUNUT = 1.2;
 const aja = promisify(execFile);
 
 const PIENENNA_PY = `
@@ -157,20 +159,29 @@ export async function paivita({ ehdokkaat, ulos, varmista = false, rinnakkain = 
     const tarkistettavat = pienella.filter((a) => !paikalla(a));
     const paat = await pool(tarkistettavat, rinnakkain * 2,
       (a) => paa(OMA + encodeURI(pieniAvain(a).replace(/\.jpg$/, `.${t[a][2] ?? 'jpg'}`))));
-    const puuttuvat = tarkistettavat.filter((_, k) => paat[k][0] !== 200);
+    // Vanhentunut pieni (Siirtoseppä 28.9.2026, E2E-offline): 1.52:n pienet (1280 px, JPEG 80) jäivät ämpäriin, kun
+    // 1.54 vaihtoi asetukseksi 1024/75, koska tarkistus katsoi vain olemassaolon. Tanskan offline-media oli levyllä
+    // 45 Mt arvion 34 Mt sijaan. Ämpärin pieni, joka on yli VANHENTUNUT × kirjattu koko, tehdään uudelleen samaan
+    // polkuun (aws s3 sync korvaa sen, max-age 1 vrk).
+    const vanhentuneet = new Set(tarkistettavat.filter((a, k) => paat[k][0] === 200 && paat[k][1] > t[a][1] * VANHENTUNUT));
+    const puuttuvat = tarkistettavat.filter((a, k) => paat[k][0] !== 200 || vanhentuneet.has(a));
     varmistettu = tarkistettavat.length - puuttuvat.length;
+    const ampariKoko = new Map(tarkistettavat.map((a, k) => [a, paat[k][1]]));
     // Erissä aikarajaan asti (CI:n työllä on aikaraja; työnkulku vie valmiit pienet ämpäriin minuutin välein).
     // Ehtimättömät saavat tässä ajossa pieni = null (alkuperäinen url); seuraava ajo jatkaa niistä.
     let ehtimatta = 0;
     for (let i = 0; i < puuttuvat.length; i += 200) {
       const era = puuttuvat.slice(i, i + 200);
-      if (Date.now() > loppu) { for (const a of era) t[a] = [t[a][0], null]; ehtimatta += era.length; continue; }
+      // Ehtimätön vanhentunut pysyy pienenä (ämpärin koko kirjataan), puuttuva osoittaa alkuperäiseen.
+      const ehtimaton = (a) => { t[a] = vanhentuneet.has(a) ? [t[a][0], ampariKoko.get(a), ...t[a].slice(2)] : [t[a][0], null]; };
+      if (Date.now() > loppu) { for (const a of era) ehtimaton(a); ehtimatta += era.length; continue; }
       const uudet = await pienenna(era, ulos, rinnakkain);
       for (const a of era) {
-        if (uudet.get(a)) { t[a][1] = uudet.get(a)[0]; tehty++; } else { t[a] = [t[a][0], null]; }
+        if (uudet.get(a)) { t[a][1] = uudet.get(a)[0]; tehty++; } else ehtimaton(a);
       }
     }
     if (ehtimatta) console.log(`mediakuvat: aikaraja ${aikaraja} s — ${ehtimatta} pientä jäi seuraavaan ajoon`);
+    if (vanhentuneet.size) console.log(`mediakuvat: ${vanhentuneet.size} vanhentunutta pientä (yli ${VANHENTUNUT} × kirjattu) tehdään uudelleen`);
   }
   const jarjestetty = Object.fromEntries(Object.entries(t).sort(([a], [b]) => (a < b ? -1 : 1)));
   writeFileSync(tiedosto, `${JSON.stringify({
