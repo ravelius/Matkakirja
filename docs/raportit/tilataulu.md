@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 13:38 EEST — Rutiinikierto, ei poikkeamia. Juna aktiivinen: kolme käsinmergeä (13:21/13:26/13:29 Natiiviseppä, sama TF-erä) käännetty 13:36 (f834599a) — ei jumia.
+**Päivitetty:** 2026-09-28 13:50 EEST — Rutiinikierto, ei poikkeamia. Juna aktiivinen (käännetty 13:45, 7b7549c1), ei jumia. Kontekstit nousussa (Natiiviseppä 64%, Siirtoseppä 61%) mutta alle 70% kynnyksen — seurataan.
 
 ## 0) Kuorman/GPU:n valvonta (voimassa oleva tila, päivitetty 12:43)
 
@@ -20,17 +20,17 @@ Ei kynnysylityksiä — kaikki alle 70%.
 
 | Rooli | Session id | Konteksti | Tila |
 |---|---|---|---|
-| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 36% | idle |
-| Postivahti (self) | (tämä sessio) | 20% | running |
-| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 45% | running |
-| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 62% | idle |
-| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 14% | idle |
-| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 35% | idle |
-| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 46% | running |
-| Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 60% | idle |
+| Päätoimittaja (ent. Fable) | local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 | 37% | idle |
+| Postivahti (self) | (tämä sessio) | 22% | running |
+| Julkaisija | local_24e63224-112c-449a-b6a3-e10e4ed43f4b | 46% | running |
+| Natiiviseppä (max) | local_fcc10552-5810-49bf-b0cf-188456f1231c | 64% | idle |
+| Pelikoodari | local_11aca9cd-eda6-4db9-9019-8a153c8b8795 | 18% | idle |
+| Natiivi-UI | local_c6d63773-0270-4873-96f8-63c66cf52794 | 36% | idle |
+| Linssiseppä (max) | local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 | 51% | running |
+| Siirtoseppä (high) | local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 | 61% | idle |
 | Karttaseppä | local_16f80454-5b30-4180-ae9b-8c6d1edb6779 | 52% | idle |
-| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 26% | running |
-| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 29% | idle |
+| Sisältökirjuri | local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 | 28% | running |
+| Laitetestaaja | local_36a45147-8407-4cfb-bbdb-c20d5f684735 | 33% | idle |
 
 ## 1a-3) Karttasepän yöpoltto — VALMIS 07:17
 
@@ -86,19 +86,19 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 - Viimeisin build: **16** (1.0.16, proto bf70290d / juna 1aa7c558, ajo 36172168911, laskuri 16) — TestFlightissa klo 21:22. Natiiviseppä vahvisti 09:04: proto/master nyt BUILD 28 (7788b629). (Ei vahvistettu tuoreempaa buildia TF:ssä tällä kierroksella — ks. Fablen luovutus: TF 1.0.27 ulkona, 1.0.28 Laitetestaajalla.)
 - Käännöspalvelu käytössä: `proto-3d/tyokalut/proto-kaanna.sh <haara>[+<haara>] [UDID…]`. Juna yhä tauolla (Karttasepän Z10-poltto), viimeisin lokirivi 10:00 (tauko).
 
-## 5) Resurssit (13:38)
+## 5) Resurssit (13:50)
 
-- **5 h -kiintiö:** 25 %. **Viikko (kaikki mallit): 26 %.** **Viikko (Päätoimittaja):** 0 %.
-- **Levy:** 131 Gi vapaana (86% käytössä), puskuri hyvä (raja 80 Gt).
-- **Muistipaine:** normal (1). **NAS:** 5,6 Ti vapaana. **Simulaattorit boottina:** 0 (päiväraja 1, OK).
+- **5 h -kiintiö:** 27 %. **Viikko (kaikki mallit): 26 %.** **Viikko (Päätoimittaja):** 0 %.
+- **Levy:** 130 Gi vapaana (86% käytössä), puskuri hyvä (raja 80 Gt).
+- **Muistipaine:** normal (1). **NAS:** ei tarkistettu erikseen, ei muutosmerkkejä. **Simulaattorit boottina:** 1 (iPhone 17, päiväraja 1, OK).
 - **Liput:** `/tmp/matkakirja-kevyt` poissa — kone vapaa, nice-oletus voimassa.
 - **Konteksti (roolit ≥70%):** ei ylityksiä.
 - **GPU (chrome-headless-gpu):** 2 kpl — alle rajan (>4), ei hälytystä.
-- **coreaudiod:** normaali (≤6,4%), ei toimenpidettä.
+- **coreaudiod:** normaali (≤5,6%), ei toimenpidettä.
 - **Effort-tarkistus (7 Opus-roolia):** ei poikkeamia.
-- **Lokisiivouskandidaatteja:** ei tällä kierroksella.
+- **Lokisiivouskandidaatteja:** ei tarkistettu tällä kierroksella.
 - **Postilaatikko:** EI UUTTA.
-- **Juna:** kolme käsinmergeä (13:21/13:26/13:29, Natiiviseppä, sama TF-kiire-erä) käännetty 13:36 (f834599a) — korjattu mittari (osio 0), ei jumia.
+- **Juna:** käännetty 13:45 (7b7549c1), jono aktiivinen 13:48 — korjattu mittari (osio 0), ei jumia.
 - **Fablen session nimi: Päätoimittaja (Opus, xhigh)**, sama id.
 - **PR #3441 (eheysvartija):** VIKA.txt tyhjä, ennallaan "Kunnossa".
 - **Lokisiivous-kandidaatit (korjattu 18:0x, oikea komento `find -mmin +2880`/`+1440`, aiempi `-mtime +2` antoi väärän 0-tuloksen):**
