@@ -17,7 +17,7 @@
  * Kerros on { nimi, rakenna(y), paivita(y, k), pura() } (iss-realismi.js). Kaikki näkyvät vain kyydissä: peitto × osuus.
  */
 
-import { pilvikuvanAlfa, PILVIEN_PEITTO } from './astro-sumu.js';
+import { pilvikuvanAlfa, PILVIEN_PEITTO, PILVIEN_KUVAN_KYNNYS } from './astro-sumu.js';
 
 export const AMPARI = 'https://media.matkakirja.app/';
 /** Natiivin datat ämpärissä (Linssiseppä/Karttaseppä 28.9.2026). */
@@ -32,11 +32,11 @@ export const LAHTEET = Object.freeze({
 /**
  * Päivän pilvet (natiivi f81345f0 + AstronauttiKerros PilvetMatalallaM): kuori 8 km:ssä kyydin ajan, ei kiertoa (oikea
  * päivä, ei ajelehdi), alfa samalla kirkkaussäännöllä kuin astro-sumun kuva (natiivi Pilvikuva.Alfa = web pilvikuvanAlfa).
- * Kangas 2048 × 1024 (noin 20 km/px; lähde 4096 × 2048 pienennetään selaimessa, kevyempi puhelimelle).
+ * Kangas 4096 × 2048 (noin 10 km/px, kuten natiivi) yksikanavaisena R8-tekstuurina (8 Mt; Linssiseppä 28.9.).
  */
 // Peitto 0,9 molemmissa (Päätoimittaja 28.9. klo 15.2x: web on malli, natiivi e793a2a5). Jos peitto on null, se luetaan
 // käyttöhetkellä (astro-sumu.js PILVIEN_PEITTO): moduulit tuovat toisiaan syklisesti, joten vakiota ei lueta latausvaiheessa.
-export const PILVET = Object.freeze({ korkeus: 8000, leveys: 2048, korkeusPx: 1024, peitto: 0.9, yo: 0.04, tarkkuusKm: 35 });
+export const PILVET = Object.freeze({ korkeus: 8000, leveys: 4096, korkeusPx: 2048, peitto: 0.9, yo: 0.04, tarkkuusKm: 35 });
 
 /** Natiivin Yokuori.shader-oletukset (411b0bc7; valot 60 % = 0,96, omistaja 28.9., natiivi 1e773968). */
 export const YOKUORI = Object.freeze({
@@ -60,6 +60,7 @@ const MAAN_SADE_M = 6378137;
 // three.js-vakiot numeroina (Globe.gl:n oma three; ei omaa kopiota).
 export const BLEND = Object.freeze({ normaali: 1, lisaava: 2, oma: 5, yksi: 201, yksiMiinusLahdeAlfa: 205, lisays: 100 });
 const PUOLI = Object.freeze({ etu: 0, taka: 1 });
+const RED_FORMAT = 1028; // THREE.RedFormat (WebGL2 RED / R8)
 
 /** Pallon pisteen (Globe.gl-koordinaatit) leveys ja pituus asteina: sama kaava kuin varjostimissa. */
 export function leveysPituus([x, y, z]) {
@@ -123,7 +124,7 @@ void main() {
   // Päivän pilvet peittävät valot ja heijastuksen (natiivi 2eb8a5d0): pilvikuoren kuva, tasakulmainen, v = 0 etelässä.
   // Himmennys seuraa pilvikuoren nykyistä peittoa (natiivi e6e0ef61): pilvet pois → valot ilman himmennystä.
   // Bias −16 = tason 0 näyte kuten natiivin LOD 0: atan-sauma ±180°:ssa ei valitse pienintä mip-tasoa.
-  float pilvi = uPilvetOn * uPilviPeitto * texture2D(uPilvet, vec2(lon / 6.2831853 + 0.5, asin(clamp(ng.y, -1.0, 1.0)) / 3.14159265 + 0.5), -16.0).a;
+  float pilvi = uPilvetOn * uPilviPeitto * texture2D(uPilvet, vec2(lon / 6.2831853 + 0.5, asin(clamp(ng.y, -1.0, 1.0)) / 3.14159265 + 0.5), -16.0).r;
   float lapi = 1.0 - 0.85 * pilvi;
   vec3 savy = mix(vec3(1.0, 0.52, 0.2), vec3(1.0, 0.88, 0.7), clamp(l * 1.6, 0.0, 1.0));
   c += savy * l * uValot * yo(ng) * osuu * lapi;
@@ -240,7 +241,7 @@ void main() {
 // alle kahden pikselin oktaavit häipyvät), t = 0,5 + 0,36 tanh(0,8 f), smoothstep ±0,08, sekoitus näkyvän osuuden mukaan
 // ja kirkkaus × (1 + 0,05 · kahden alimman oktaavin vaihtelu). Kokonaislukuhajautus (WebGL2), ei sin-hashia.
 const PILVET_FRAGMENT = `
-uniform float uOsuus, uPeitto, uYo, uTarkkuus, uTarkkuusKm;
+uniform float uOsuus, uPeitto, uYo, uTarkkuus, uTarkkuusKm, uKynnys;
 uniform vec3 uAurinko;
 uniform vec4 uTekseli;
 uniform sampler2D uKuva;
@@ -271,7 +272,7 @@ float simplex(vec3 p) {
   return 42.0 * dot(m, d);
 }
 
-vec4 tarkatPilvet(vec3 n, vec2 uv, out float vaihtelu) {
+float tarkatPilvet(vec3 n, vec2 uv, out float vaihtelu) {
   vec2 dx = dFdx(uv), dy = dFdy(uv);
   float u2 = fract(uv.x + 0.5);
   float u2x = dFdx(u2), u2y = dFdy(u2);
@@ -288,7 +289,7 @@ vec4 tarkatPilvet(vec3 n, vec2 uv, out float vaihtelu) {
   vec2 t0 = (ix - 0.5 + w1 / g0) * uTekseli.xy, t1 = (ix + 1.5 + w3 / g1) * uTekseli.xy;
   vec4 c = g0.y * (g0.x * textureGrad(uKuva, vec2(t0.x, t0.y), dx, dy) + g1.x * textureGrad(uKuva, vec2(t1.x, t0.y), dx, dy))
          + g1.y * (g0.x * textureGrad(uKuva, vec2(t0.x, t1.y), dx, dy) + g1.x * textureGrad(uKuva, vec2(t1.x, t1.y), dx, dy));
-  float a0 = clamp(c.a, 0.0, 1.0);
+  float a0 = clamp(c.r, 0.0, 1.0);
 
   float h[5];
   float kaikki = 0.0, nakyva = 0.0, amp = 1.0, taaj = 1.0;
@@ -314,15 +315,18 @@ vec4 tarkatPilvet(vec3 n, vec2 uv, out float vaihtelu) {
     aTarkka = smoothstep(t - 0.08, t + 0.08, a0);
     vaihtelu = 0.05 * clamp(ala / Sigma, -2.5, 2.5) * nak;
   }
-  c.a = mix(a0, aTarkka, nak);
-  return c;
+  return mix(a0, aTarkka, nak);
 }
 
 void main() {
   vec3 n = normalize(vMaailma);
   vec2 uv = vec2(atan(n.x, n.z) / 6.2831853 + 0.5, asin(clamp(n.y, -1.0, 1.0)) / 3.14159265 + 0.5);
   float vaihtelu = 0.0;
-  vec4 c = uTarkkuus > 0.0 ? tarkatPilvet(n, uv, vaihtelu) : texture2D(uKuva, uv);
+  float a = uTarkkuus > 0.0 ? tarkatPilvet(n, uv, vaihtelu) : texture2D(uKuva, uv).r;
+  // Yksikanavainen kuva (R = alfa): sävy natiivin Pilvikuva.Alfan kaavalla 226 + 29 · lum, lum alfasta takaisin.
+  float lum = uKynnys + (1.0 - uKynnys) * pow(a, 1.0 / 0.85);
+  float savy = (226.0 + 29.0 * lum) / 255.0;
+  vec4 c = vec4(savy, savy, min(1.0, savy + 6.0 / 255.0), a);
   c.rgb *= 1.0 + vaihtelu;
   float valo = mix(uYo, 1.0, smoothstep(-0.105, 0.035, dot(n, uAurinko)));
   gl_FragColor = vec4(c.rgb * valo, c.a * uPeitto * uOsuus);
@@ -532,8 +536,14 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       ctx.drawImage(img, 0, 0, arvot.leveys, arvot.korkeusPx);
       const kuva = ctx.getImageData(0, 0, arvot.leveys, arvot.korkeusPx);
       pilvikuvanAlfa(kuva.data, arvot.leveys, arvot.korkeusPx);
+      // Yksikanavainen (Linssiseppä 28.9.): alfa R-kanavaan ja peittävä A, jotta kankaan esikerronta ei hävitä arvoja;
+      // tekstuuri R8 (RedFormat), 4096 × 2048 = 8 Mt GPU:lla kuten ennen 2048 RGBA. Sävy varjostimessa.
+      const d = kuva.data;
+      for (let i = 0; i < d.length; i += 4) { d[i] = d[i + 3]; d[i + 1] = 0; d[i + 2] = 0; d[i + 3] = 255; }
       ctx.putImageData(kuva, 0, 0);
-      const t = new T(kangas); t.needsUpdate = true;
+      const t = new T(kangas); t.format = RED_FORMAT; t.needsUpdate = true;
+      // Lähetyksen jälkeen kangas (32 Mt RGBA) pois muistista.
+      t.onUpdate = () => { kangas.width = 1; kangas.height = 1; };
       mesh.material.uniforms.uKuva.value = t;
       valmis = true;
     };
@@ -545,7 +555,7 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
     rakenna(y) {
       const u = { uOsuus: { value: 0 }, uPeitto: { value: arvot.peitto ?? PILVIEN_PEITTO }, uKuva: { value: null },
         uYo: { value: arvot.yo ?? 0.04 }, uAurinko: { value: vec3(y, [1, 0, 0]) },
-        uTarkkuus: { value: 1 }, uTarkkuusKm: { value: arvot.tarkkuusKm },
+        uTarkkuus: { value: 1 }, uTarkkuusKm: { value: arvot.tarkkuusKm }, uKynnys: { value: PILVIEN_KUVAN_KYNNYS },
         uTekseli: { value: { x: 1 / arvot.leveys, y: 1 / arvot.korkeusPx, z: arvot.leveys, w: arvot.korkeusPx } } };
       mesh = kuori(y, { sade: 1 + arvot.korkeus / MAAN_SADE_M, fragment: PILVET_FRAGMENT, uniformit: u, jarjestys });
       T = tekstuuriLuokka(y.pallo);
