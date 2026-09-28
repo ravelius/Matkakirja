@@ -2,11 +2,11 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 14:26 EEST — Rutiinikierto, ei poikkeamia. BUILD 36 valmis 14:20 (Natiiviseppä), juna aktiivinen (14:22 uusi käännöskierros). Natiiviseppä 67% — vielä alle 70%, seurataan.
+**Päivitetty:** 2026-09-28 14:32 EEST — **OMISTAJA TARVITSEE KONEEN NYT — KEVYT TILA PÄÄLLE.** Ilmoitettu 7 GPU-roolille (Natiiviseppä, Natiivi-UI, Linssiseppä, Linssiseppä 2, Laitetestaaja, Karttaseppä, Siirtoseppä): ei GPU-töitä, simulaattorit kiinni, taskpolicy -b, käännökset nice 15. Simulaattoritarkistus: vain Natiivisepän FBBD41D7 boottina (hyväksytty poikkeus, sammumassa), ei Metal-chromiumeja — ei rikettä.
 
 ## 0) Kuorman/GPU:n valvonta (voimassa oleva tila, päivitetty 12:43)
 
-**Nyt voimassa:** raskaat työt nice 15 -prioriteetilla täysillä ytimillä sallittuja. Valvotaan vain: **simulaattoreita ≤ 1 booted päivällä**, **Mac-savukkeita ≤ 2 rinnakkain**. Jos `/tmp/matkakirja-kevyt` palaa päälle (omistaja tarvitsee konetta uudelleen), palataan tiukempaan valvontaan (simulaattorit 0, ei GPU-raskaita prosesseja). Load1 ei ole luotettava mittari (sisältää omistajan oman käytön + I/O-odotuksen) — käytetään tarvittaessa `koodaus`-käyttäjän CPU-summaa vain karkeana lisätietona, ei ensisijaisena hälytysperusteena.
+**14:32 KEVYT TILA PÄÄLLE (Julkaisija):** omistaja tarvitsee koneen nyt. Tiukempi valvonta voimassa: simulaattorit 0 (poikkeus: Natiivisepän FBBD41D7, sammumassa), ei GPU-raskaita prosesseja, raskaat CPU-työt taskpolicy -b, käännökset nice 15. Hälytä jos simulaattoreita booted >0 (muu kuin FBBD41D7) tai Metal-chromiumeja näkyy. Load1 ei ole luotettava mittari (sisältää omistajan oman käytön + I/O-odotuksen) — käytetään tarvittaessa `koodaus`-käyttäjän CPU-summaa vain karkeana lisätietona, ei ensisijaisena hälytysperusteena.
 
 **11:10 Päätoimittajan konteksti 66% — ylitti 65% kynnyksen.** Ilmoitettu. **11:1x Päätoimittaja nollautui itsenäisesti (9%), resume-viestiä ei enää tarvittu.**
 
