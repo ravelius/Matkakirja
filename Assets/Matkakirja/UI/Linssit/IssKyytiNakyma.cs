@@ -149,11 +149,18 @@ namespace Matkakirja.Natiivi
             Kuvat.Hae(Juuri2 + "iss-cupola2-kehys-" + koko + ".png", t => Valmis(kehys2, t));
         }
 
+        bool heiluu;
+
+        /// <summary>Heilunta päälle tai pois vain tilan vaihtuessa: Aseta kutsuu tätä joka sekunti (tietorivi), ja uudelleenkäynnistys
+        /// palautti heijastuksen alkuun sekunnin välein (2 pt:n nykäys).</summary>
         void Heilu(bool paalla)
         {
+            paalla &= !LinssiUi.VahennettyLiike();
+            if (paalla == heiluu) return;
+            heiluu = paalla;
             heilunta?.Pause();
             heijastus.style.translate = heijastus2.style.translate = ulko2.style.translate = new Translate(0, 0);
-            if (!paalla || LinssiUi.VahennettyLiike()) return;
+            if (!paalla) return;
             float t0 = Time.unscaledTime;
             // Heijastus lasissa ja ulko-osat lasin takana liikkuvat hitaasti vastakkain (katsojan pää liikkuu): syvyys.
             heilunta = heijastus.schedule.Execute(() =>
