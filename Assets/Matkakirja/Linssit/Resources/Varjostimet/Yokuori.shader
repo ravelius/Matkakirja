@@ -38,6 +38,8 @@ Shader "Matkakirja/Linssit/Yokuori"
         _Aalto("Aallokon kaltevuus σ²", Float) = 0.02
         _Varjo("Päiväpuolen varjostus matalalla auringolla (0 = pois)", Range(0, 1)) = 0.55
         _YoVesi("Yön peitto vesillä", Range(0, 1)) = 0.96
+        _Pilvet("Päivän pilvet (tasakulmainen, alfa = pilvi)", 2D) = "black" {}
+        _PilvetOn("Pilvet käytössä (0/1)", Float) = 0
     }
     SubShader
     {
@@ -58,6 +60,7 @@ Shader "Matkakirja/Linssit/Yokuori"
 
             TEXTURE2D(_ValotEu); SAMPLER(sampler_ValotEu);
             TEXTURE2D(_ValotMaa); SAMPLER(sampler_ValotMaa);
+            TEXTURE2D(_Pilvet); SAMPLER(sampler_Pilvet);
             CBUFFER_START(UnityPerMaterial)
                 half _Peitto;
                 half4 _Vari;
@@ -66,6 +69,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float4 _Akseli, _Nolla, _Ita, _EuRaja;
                 float _R, _Litistys, _Valot, _MaaVoima, _Kiilto, _Aalto;
                 half _Varjo, _YoVesi;
+                float _PilvetOn;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; };
@@ -126,7 +130,10 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half vesi = lerp(sMaa.g, sEu.g, euPaino);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
                 half3 savy = lerp(half3(1.0, 0.52, 0.2), half3(1.0, 0.88, 0.7), saturate(l * 1.6h));
-                half valo = l * (half)_Valot * Yo(normalize(p)) * (half)osuu;
+                // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
+                half pilvi = (half)(_PilvetOn * SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a);
+                half lapi = 1.0h - 0.85h * pilvi;
+                half valo = l * (half)_Valot * Yo(normalize(p)) * (half)osuu * lapi;
                 c += savy * valo;
 
                 // Auringon heijastus vesiltä: Beckmann D · Fresnel / (4 n·v), kun aurinko on pinnan yllä.
@@ -136,7 +143,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float nh2 = max(nh * nh, 1e-4);
                 float D = exp(-(1.0 - nh2) / (nh2 * _Aalto)) / (3.14159265 * _Aalto * nh2 * nh2);
                 float F = 0.02 + 0.98 * pow(1.0 - saturate(dot(v, hv)), 5.0);
-                half kiilto = (half)(vesi * osuu * saturate(nl * 12.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto);
+                half kiilto = (half)(vesi * osuu * saturate(nl * 12.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto) * lapi;
                 half3 kiiltoVari = lerp(half3(1.0, 0.55, 0.25), half3(1.0, 0.96, 0.88), (half)saturate(nl * 4.0));
                 c += kiiltoVari * kiilto * (1.0h - a);
                 // Yöllä vesi tummemmaksi kuin maa (laite cl4: reliefin vaalea vesi jäi 0,82-peiton läpi maata kirkkaammaksi):
