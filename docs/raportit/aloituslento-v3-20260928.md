@@ -113,3 +113,25 @@ kone pienemmäksi kun laskeutuminen", "loppu laskeutuminen kannattaa kuvata ylh�
   - Varalaatat PASS: varavika 0,5 → 321 varalaattaa, 293 paikattu 20 s:ssa, tausta ja paluu +45, 0 jäljellä.
   - Kinderdijk PASS: jalka ja laatikko, peli30 / peli55 / lähi45.
   - Molemmat mergetty junaan (juna/b13 0cd85ecc) samaan TF:ään Pulun puhekeskustelun ja xAI-napin kanssa.
+
+## v3f: päivän ja yön raja, pelikello ja esikääntö; valintanäkymä kellon alle (klo 14.3x–15.0x)
+
+- Sisältö haarassa natiiviseppa/aloitus-paivayo: c904d2c2 (Paivanvalo.cs, lennon pelikello, esikääntö) ja 2965ba2b (yövalot
+  2,0). Laiteajo ce9c9b70 klo 14.30 (`v3f/`): valinnassa yö ja kello "01.00 / PÄIVÄ 1/80", lennossa aamunkoitto Thessaliaan
+  7,2–9 s, perillä päivä ilman hyppyä. Löydökset: kaupunkien valot himmeinä pisteinä (korjattu 2965ba2b) ja kello Moskovan
+  renkaan ja nimen päällä.
+- **Rajaus kellon alle, 1cb64a19** (merge natiivi-ui/pelikello-varaus 148e4304 + Valintarajaus):
+  - Valintanäkymän keskus siirtyy pohjoiseen juuri niin paljon, että näkyvien valittavien nimet (52 pt pisteen yllä) jäävät
+    Pelikellonaytto.YlaVarauksen alle. Zoomi pysyy webin mukaisena; matala vaakaruutu loitontaa tarvittaessa.
+  - Pallomalli vastaa v3f-laitekuvaa ±12 pt. iPhone 17: keskus 30° → 37,1° N ja Moskova 116 → 185 pt (nimi alkaa 133 pt:stä),
+    Ateena 327 → 422 pt. Vaakapuhelin: 44,8° N. iPad pysty ja vaaka: ennallaan.
+  - Esikääntö palaa rajattuun näkymään. Konsoliin rivi "aloitus: valintanäkymä … (kellon varaus … px)".
+  - Kartta-testit 362/362 (ValintarajausTestit 6), unity-tarkistus 0.
+- **Käännös v3f2 = 7c6ca246** (master b8bf6550 + aloitus-paivayo 1cb64a19) klo 14.55 ilman asennusta (kevyt tila),
+  .app `v3f2/Matkakirja3D.app`.
+- **v3g-esiselvitys** (AloituslennonRata-testit kaikille 14 valittavalle, alku 37,06° N; suluissa alku 30° N):
+  - Eurooppa ja Välimeri (Ateena, Istanbul, Moskova, Tanger, Kairo) läpäisevät kaikki säännöt paitsi yhden: Kairon lennolla
+    Lontoo poistuu vasemmasta reunasta ~0,1 s ennen avauksen loppua (x −1,02 hetkellä 1,9 s; alulla 30° N −0,99).
+  - Kaukolennot rikkovat sääntöjä jo vanhalla alulla. New York: kone takaa 0,05 s:ssa (korotus 57°, alulla 30° N 47°) ja
+    kääntö 12,3 s:ssa −91 °/s. Rio: Lontoo ulos 1,9 s:ssa ja kohde ulos 12,6 s:ssa. Sydney: silmä saapuessa 233 km kohteesta.
+- Tanger on valintanäkymässä ruudun vasemman reunan ulkopuolella (x −35 pt), myös ennen rajausta.
