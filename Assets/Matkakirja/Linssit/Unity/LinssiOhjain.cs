@@ -1621,7 +1621,11 @@ namespace Matkakirja.Natiivi
                 // testikello hakee seuraavan aamuyön ylityksen (tietorivillä rata-arvio, jos TLE on yli 7 vrk vanha).
                 // Varalla väljempi ehto 72 h:n sisällä (aurinko alle −8°).
                 var nyt = DateTime.UtcNow;
-                var loyto = HaeKyydinHetki(nyt, 24 * 24, 30, (t, lat, lon) => lat >= 40 && lat <= 60 && lon >= -10 && lon <= 35
+                // Ensin Länsi- ja Keski-Eurooppa (lat 43–58, lon −5…20, alle −18°: laite cl4 osui 40–60/−10…35-rajauksella Turkin ja
+                // Mustanmeren ylle, jossa kamera katsoo Kaukasiaan), sitten laajempi, lopuksi väljä 72 h.
+                var loyto = HaeKyydinHetki(nyt, 24 * 24, 30, (t, lat, lon) => lat >= 43 && lat <= 58 && lon >= -5 && lon <= 20
+                                && AurinkoKorkeus(t, lat, lon) < -18)
+                    ?? HaeKyydinHetki(nyt, 24 * 24, 30, (t, lat, lon) => lat >= 40 && lat <= 60 && lon >= -10 && lon <= 35
                                 && AurinkoKorkeus(t, lat, lon) < -20)
                     ?? HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) => lat >= 35 && lat <= 65 && lon >= -15 && lon <= 45
                                 && AurinkoKorkeus(t, lat, lon) < -8);
@@ -1647,7 +1651,8 @@ namespace Matkakirja.Natiivi
             else if (arvo == "kiilto")
             {
                 // Seuraava hetki (enintään 24 h), jolloin ikkunan katsekohde on vettä ja aurinko on sen yllä edessä
-                // (atsimuutti ±25° radan suunnasta, korkeus 25–70°): auringon heijastus näkyy Cupolan keskilasissa.
+                // (atsimuutti ±40° radan suunnasta eli ikkunan kuvakulman sisällä, korkeus 25–70°): heijastus näkyy ikkunassa.
+                // Laite cl4 28.9.: ±25° ei löytänyt yhtään hetkeä (syyskuun lopussa aamun aurinko on idässä ja rata NE/SE).
                 var nyt = DateTime.UtcNow;
                 DateTime? loyto = null;
                 for (int s = 0; s < 24 * 3600 && loyto == null; s += 20)
@@ -1665,7 +1670,7 @@ namespace Matkakirja.Natiivi
                     double korkeus = Math.Asin(Math.Max(-1, Math.Min(1, ylos))) * 180 / Math.PI;
                     double atsimuutti = Math.Atan2(ita, pohj) * 180 / Math.PI;
                     double ero = Math.Abs(((atsimuutti - kk.Suuntima) % 360 + 540) % 360 - 180);
-                    if (korkeus >= 25 && korkeus <= 70 && ero <= 25) loyto = t;
+                    if (korkeus >= 25 && korkeus <= 70 && ero <= 40) loyto = t;
                 }
                 if (loyto == null) return "ei heijastushetkeä 24 tunnin sisällä";
                 siirto = loyto.Value.AddSeconds(-10) - nyt;

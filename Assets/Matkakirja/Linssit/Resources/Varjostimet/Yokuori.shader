@@ -26,6 +26,7 @@ Shader "Matkakirja/Linssit/Yokuori"
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
         _Akseli("Napa-akseli (maailma, ECEF Z)", Vector) = (0, 1, 0, 0)
         _Nolla("Päiväntasaaja 0° (maailma, ECEF X)", Vector) = (1, 0, 0, 0)
+        _Ita("Päiväntasaaja 90° itään (maailma, ECEF Y)", Vector) = (0, 0, 1, 0)
         _R("Päiväntasaajan säde (m)", Float) = 6378137
         _Litistys("a / b", Float) = 1.0033640898
         _ValotEu("Eurooppa (Web Mercator, R = valot, G = vesi)", 2D) = "black" {}
@@ -36,6 +37,7 @@ Shader "Matkakirja/Linssit/Yokuori"
         _Kiilto("Auringon heijastuksen voimakkuus (0 = pois)", Float) = 6
         _Aalto("Aallokon kaltevuus σ²", Float) = 0.02
         _Varjo("Päiväpuolen varjostus matalalla auringolla (0 = pois)", Range(0, 1)) = 0.55
+        _YoVesi("Yön peitto vesillä", Range(0, 1)) = 0.96
     }
     SubShader
     {
@@ -61,9 +63,9 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half4 _Vari;
                 float4 _Aurinko;
                 float4 _Keskus;
-                float4 _Akseli, _Nolla, _EuRaja;
+                float4 _Akseli, _Nolla, _Ita, _EuRaja;
                 float _R, _Litistys, _Valot, _MaaVoima, _Kiilto, _Aalto;
-                half _Varjo;
+                half _Varjo, _YoVesi;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; };
@@ -103,7 +105,9 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float osuu = step(0.0, h) * step(0.0, t);
                 float3 p = o + d * t;                                    // pallotilassa
                 float3 pe = p + z * dot(p, z) * (1.0 / _Litistys - 1.0); // takaisin ellipsoidille
-                float3 x = normalize(_Nolla.xyz), y = cross(z, x);
+                // ECEF Y suoraan C#:sta: Unityn maailma on vasenkätinen (Cesium: itä +X, ylös +Y, pohjoinen +Z), joten
+                // cross(z, x) antoi −Y ja peilasi pituuden (laite cl4 28.9.: valot ja vesimaski väärällä pallonpuoliskolla).
+                float3 x = normalize(_Nolla.xyz), y = normalize(_Ita.xyz);
                 float ex = dot(pe, x), ey = dot(pe, y), ez = dot(pe, z);
                 float lon = atan2(ey, ex);
                 float e2 = 1.0 - 1.0 / (_Litistys * _Litistys);
@@ -135,6 +139,11 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half kiilto = (half)(vesi * osuu * saturate(nl * 12.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto);
                 half3 kiiltoVari = lerp(half3(1.0, 0.55, 0.25), half3(1.0, 0.96, 0.88), (half)saturate(nl * 4.0));
                 c += kiiltoVari * kiilto * (1.0h - a);
+                // Yöllä vesi tummemmaksi kuin maa (laite cl4: reliefin vaalea vesi jäi 0,82-peiton läpi maata kirkkaammaksi):
+                // vedellä peitto _YoVesi, joten rannat erottuvat kuin kuutamossa. Lisäys esikerrottuna (väri yön väristä).
+                half lisa = (half)(vesi * osuu) * yoKuori * saturate(_YoVesi - a);
+                c += _Vari.rgb * lisa;
+                a += lisa;
                 return half4(c, a);
             }
             ENDHLSL

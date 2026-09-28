@@ -12,6 +12,7 @@ Shader "Matkakirja/Linssit/Revontulet"
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
         _Akseli("Napa-akseli (maailma, ECEF Z)", Vector) = (0, 1, 0, 0)
         _Nolla("Päiväntasaaja 0° (maailma, ECEF X)", Vector) = (1, 0, 0, 0)
+        _Ita("Päiväntasaaja 90° itään (maailma, ECEF Y)", Vector) = (0, 0, 1, 0)
         _Voima("Voimakkuus (0 = pois)", Float) = 1.4
         _Aika("Aika (s)", Float) = 0
     }
@@ -34,7 +35,7 @@ Shader "Matkakirja/Linssit/Revontulet"
 
             TEXTURE2D(_Todennakoisyys); SAMPLER(sampler_Todennakoisyys);
             CBUFFER_START(UnityPerMaterial)
-                float4 _Aurinko, _Keskus, _Akseli, _Nolla;
+                float4 _Aurinko, _Keskus, _Akseli, _Nolla, _Ita;
                 float _Voima, _Aika;
             CBUFFER_END
 
@@ -61,7 +62,8 @@ Shader "Matkakirja/Linssit/Revontulet"
             {
                 float3 n = normalize(i.maailma - _Keskus.xyz);
                 float yo = 1.0 - smoothstep(-0.26, -0.18, dot(n, normalize(_Aurinko.xyz)));   // aurinko alle −12° … −15°
-                float3 z = normalize(_Akseli.xyz), x = normalize(_Nolla.xyz), y = cross(z, x);
+                // ECEF Y C#:sta (Unityn maailma on vasenkätinen: cross(z, x) = −Y peilasi pituuden).
+                float3 z = normalize(_Akseli.xyz), x = normalize(_Nolla.xyz), y = normalize(_Ita.xyz);
                 float lat = asin(clamp(dot(n, z), -1.0, 1.0)), lon = atan2(dot(n, y), dot(n, x));
                 float lonAst = degrees(lon), latAst = degrees(lat);
                 float2 uv = float2(frac((lonAst + 360.0) / 360.0 + 0.5 / 360.0), (latAst + 90.0) / 181.0 + 0.5 / 181.0);

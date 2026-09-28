@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         const double MaanSade = 6_371_000, Sade = 1.012;
         const int Sarakkeet = 96, Rivit = 48;
         static readonly int IdAurinko = Shader.PropertyToID("_Aurinko"), IdKeskus = Shader.PropertyToID("_Keskus"),
-            IdPeitto = Shader.PropertyToID("_Peitto"), IdAkseli = Shader.PropertyToID("_Akseli"), IdNolla = Shader.PropertyToID("_Nolla"),
+            IdPeitto = Shader.PropertyToID("_Peitto"), IdAkseli = Shader.PropertyToID("_Akseli"), IdNolla = Shader.PropertyToID("_Nolla"), IdIta = Shader.PropertyToID("_Ita"),
             IdR = Shader.PropertyToID("_R"), IdLitistys = Shader.PropertyToID("_Litistys"), IdValot = Shader.PropertyToID("_Valot"),
             IdValotEu = Shader.PropertyToID("_ValotEu"), IdValotMaa = Shader.PropertyToID("_ValotMaa"),
             IdKiilto = Shader.PropertyToID("_Kiilto"), IdVarjo = Shader.PropertyToID("_Varjo");
@@ -199,6 +199,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdKeskus, transform.position);
             materiaali.SetVector(IdAkseli, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
             materiaali.SetVector(IdNolla, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(1, 0, 0))).normalized);
+            materiaali.SetVector(IdIta, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 1, 0))).normalized);
             materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima);
             materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
             materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);

@@ -19,7 +19,7 @@ namespace Matkakirja.Natiivi
         const int Sarakkeet = 128, Rivit = 64;
         const float PaivitysS = 1800f;
         static readonly int IdTod = Shader.PropertyToID("_Todennakoisyys"), IdAurinko = Shader.PropertyToID("_Aurinko"),
-            IdKeskus = Shader.PropertyToID("_Keskus"), IdAkseli = Shader.PropertyToID("_Akseli"), IdNolla = Shader.PropertyToID("_Nolla"),
+            IdKeskus = Shader.PropertyToID("_Keskus"), IdAkseli = Shader.PropertyToID("_Akseli"), IdNolla = Shader.PropertyToID("_Nolla"), IdIta = Shader.PropertyToID("_Ita"),
             IdAika = Shader.PropertyToID("_Aika"), IdVoima = Shader.PropertyToID("_Voima");
 
         /// <summary>A/B (`astro kyyti revontulet 0|1`).</summary>
@@ -111,6 +111,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdKeskus, transform.position);
             materiaali.SetVector(IdAkseli, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
             materiaali.SetVector(IdNolla, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(1, 0, 0))).normalized);
+            materiaali.SetVector(IdIta, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 1, 0))).normalized);
             materiaali.SetFloat(IdAika, Time.unscaledTime);
             materiaali.SetFloat(IdVoima, 1.4f);
         }
