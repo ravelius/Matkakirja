@@ -9,7 +9,8 @@
 //                vihreällä, teksti, ⌄-väkänen avaa lisätiedot (aineisto,
 //                kuvausaika, paikka, kuvaustapa, kuvatunnus, lisenssi, lähde).
 //                Selitteen napautus kelaa rungon kiinni/auki (otsikko jää); kohteen
-//                ensimmäisellä avauksella selite on auki 1,5 s ja kelautuu sitten.
+//                ensimmäisellä avauksella selite on auki 1,5 s ja kelautuu sitten; kun selaus vie
+//                jo nähtyyn kohteeseen, nimipilleri kirkastuu täyteen peittoon 1,2 s:ksi.
 //   oikea ylä    ✕ sulkee kuvan (linssi jää auki; AstronauttiLinssi.SuljeKuva).
 //   vasen ala    pikkukuvat (38 × 26), jos kohteella on useampi havainto.
 //   oikea ala    minipulu astronauttina (LiviaKuva mini, leijuu itsestään);
@@ -171,6 +172,7 @@ namespace Matkakirja.Natiivi
         {
             if (k == null) { Sulje(false); return; }
             bool uusi = !ReferenceEquals(k, kohde);
+            bool selaus = uusi && Auki && kohde != null;   // kohde vaihtui kuvaselaimessa (pyyhkäisy, reuna tai ‹ ›)
             kohde = k;
             if (!Auki)
             {
@@ -188,6 +190,7 @@ namespace Matkakirja.Natiivi
                 AsetaKiinni(!ensiKerta);
                 kelaus?.Pause();
                 if (ensiKerta) kelaus = selite.schedule.Execute(() => { if (!lisatiedotAuki) KelaaRiveittain(); }).StartingIn(1500);
+                else if (selaus && !Vanha) Korosta();
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
             }
@@ -207,6 +210,8 @@ namespace Matkakirja.Natiivi
             }
             if (!Auki) return;
             Auki = false;
+            korostus?.Pause();
+            selite.RemoveFromClassList("mk-korostus");
             liuku?.Pause();
             liukuu = pyyhkaisy = false;
             kuva.style.opacity = StyleKeyword.Null;
@@ -305,6 +310,20 @@ namespace Matkakirja.Natiivi
                 riveittain?.Pause();
                 if (!kiinni) AsetaKiinni(true);
             }).Every(45);
+        }
+
+        IVisualElementScheduledItem korostus;
+
+        /// <summary>
+        /// Kuvaselain (Fable hyväksyi 28.9. klo 00.0x): kun selaus vie jo nähtyyn kohteeseen, kiinni oleva nimipilleri
+        /// kirkastuu täyteen peittoon 1,2 s:ksi (häivytys 150 ms, Linssit.uss mk-korostus), jotta kohteen vaihto huomataan
+        /// aina. Ensimmäisellä käynnillä selite avautuu kokonaan 1,5 s:ksi, joten korostusta ei tarvita.
+        /// </summary>
+        void Korosta()
+        {
+            korostus?.Pause();
+            selite.AddToClassList("mk-korostus");
+            korostus = selite.schedule.Execute(() => selite.RemoveFromClassList("mk-korostus")).StartingIn(1200);
         }
 
         void AsetaKiinni(bool k)

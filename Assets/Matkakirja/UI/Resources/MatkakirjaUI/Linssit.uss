@@ -427,6 +427,14 @@
     padding: 5px 10px;
     background-color: rgba(6, 13, 10, 0.25);
     border-color: rgba(93, 255, 168, 0.12);
+    transition-property: background-color, border-color;
+    transition-duration: 0.15s;
+}
+
+/* Kuvaselain: kohde vaihtui jo nähtyyn kohteeseen, nimipilleri täyteen peittoon 1,2 s:ksi (Kuvanakyma.Korosta). */
+.mk-astrokuva__selite.mk-kiinni.mk-korostus {
+    background-color: rgba(6, 13, 10, 0.72);
+    border-color: rgba(93, 255, 168, 0.28);
 }
 
 .mk-astrokuva__otsikko {
@@ -441,6 +449,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     opacity: 0.7;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+}
+
+.mk-astrokuva__selite.mk-kiinni.mk-korostus .mk-astrokuva__otsikko {
+    opacity: 1;
 }
 
 .mk-astrokuva__runko {
