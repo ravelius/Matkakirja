@@ -8907,3 +8907,7 @@ Omistaja 28.9. klo 22.11: Julkaisija vaihdettu valikosta Sonnet 5.5:een (effort 
 ## TILA: LEVYSIIVOUS 67 → 85 GT; NOLLAUKSET; SONNET 5.5 = 200 K KONTEKSTI (28.9.2026 klo 22.19)
 
 Päätoimittaja 28.9. klo 22.19: Postivahti 22.16 levy 66 Gi (raja 80) → poistettu proto-3d/lokit 111 kansiota, joissa ei yhtään yli 48 h tuoreempaa tiedostoa (11,4 Gt), ja 22 yli 24 h vanhaa .app-kopiota (7,6 Gt); levy 85 Gi vapaana. HUOM: BSD find ei ymmärrä -newermt '-48 hours' (koeajo merkitsi tuoreetkin) → käytä -mmin. Nollaukset: Natiivi-UI 90 %, Natiiviseppä 71 %, Linssiseppä 2 70 %, Sisältökirjuri ja Laitetestaaja (yli 100 % 200 k:sta). Havainto: valikon Sonnet 5.5:llä on 200 k:n konteksti (Julkaisija 69 % heti nollauksen jälkeen, pohjakuorma ~85 k: työkalut, MCP, kehote, muisti) → kysytään omistajalta 1M-versiota.
+
+## OMISTAJA: JULKAISIJA TAKAISIN OPUKSELLE; CUPOLA-HORISONTTILUONNOS (28.9.2026 klo 22.21)
+
+Omistaja 28.9. klo 22.21 kortilla: Sonnet 5.5 1M -versiota ei löydy valikosta → 'Julkaisija takaisin Opukselle' (claude-opus-5-5, effort high, nimi 'Julkaisija (Opus)'); Postivahti, Sisältökirjuri ja Laitetestaaja pysyvät 200 k:n Sonnet 5.5:llä ja nollataan useammin (raja 70 % 200 k:sta). Linssiseppä: Cupola-horisontti e711cf84 (kamera radan suuntaan 23° alas, ohjaamo ×0,22, neljä reunavalokerrosta auringon suunnan mukaan + sininen maavalo) luonnoksena omistajalle; Lennä kohteen ylle teleobjektiivilla ilman kehystä, kattoikkuna A/B; korjaus: yläosan tyhjä musta kaista täytetään; laitepari aamulla.
