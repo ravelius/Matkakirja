@@ -298,8 +298,9 @@ namespace Matkakirja.Natiivi
         public static int KuukausiPakotettu;
         /// <summary>BMNG-kerroksen alfa reliefin päällä (KarttaKerrokset.RasterinAlfa): 1 = pelkkä BMNG; alle 1 päästää reliefin
         /// rinnevarjostuksen läpi (laite taivas1 28.9.: BMNG ilman varjostusta näytti latteammalta). Testikomento
-        /// `astro kyyti kuukausi a&lt;0–1&gt;`; oletus 1, kunnes omistaja valitsee kuvaparista.</summary>
-        public static float KuukaudenAlfa = 1f;
+        /// `astro kyyti kuukausi a&lt;0–1&gt;`. Oletus 0,75 (Päätoimittaja 28.9. laite taivas2:n kuvaparista: vuoret erottuvat, meri
+        /// sinertävä eikä musta, Alppien tammikuun lumi näkyy yhä; 0,6 heikensi lunta).</summary>
+        public static float KuukaudenAlfa = 0.75f;
         float kuukausiAlfaAsetettu = -1f;
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;

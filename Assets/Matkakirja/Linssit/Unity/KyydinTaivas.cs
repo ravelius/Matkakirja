@@ -27,7 +27,8 @@ namespace Matkakirja.Natiivi
     {
         const string TahtiUrl = "https://media.matkakirja.app/linssit/astronautin-kamera/tahdet-bsc5-2026-09-28.json";
         const float KuunKulma = 0.52f;
-        static readonly int IdKierto = Shader.PropertyToID("_Kierto"), IdPeitto = Shader.PropertyToID("_Peitto"),
+        static readonly int IdKiertoX = Shader.PropertyToID("_KiertoX"), IdKiertoY = Shader.PropertyToID("_KiertoY"),
+            IdKiertoZ = Shader.PropertyToID("_KiertoZ"), IdPeitto = Shader.PropertyToID("_Peitto"),
             IdSuunta = Shader.PropertyToID("_Suunta"), IdAurinko = Shader.PropertyToID("_Aurinko"), IdKoko = Shader.PropertyToID("_Koko");
 
         /// <summary>A/B (`astro kyyti taivas 0|1`): oikeat tähdet ja Kuu pois (kuvapari).</summary>
@@ -173,7 +174,6 @@ namespace Matkakirja.Natiivi
             float c = (float)Math.Cos(gm), s = (float)Math.Sin(gm);
             // ECI x-akseli ECEF:ssä = (cos g, −sin g, 0), y = (sin g, cos g, 0), z = z.
             Vector3 ex = X * c - Y * s, ey = X * s + Y * c;
-            var kierto = new Matrix4x4(ex, ey, Z, new Vector4(0, 0, 0, 1));
 
             // Aurinko ja ISS:n varjo (kamera ~ ISS): sylinterivarjo ECEF:ssä.
             var aur = Aurinko.AurinkoEcef(utc);
@@ -184,7 +184,9 @@ namespace Matkakirja.Natiivi
 
             if (tahtiMesh != null)
             {
-                tahtiMat.SetMatrix(IdKierto, kierto);
+                tahtiMat.SetVector(IdKiertoX, ex);
+                tahtiMat.SetVector(IdKiertoY, ey);
+                tahtiMat.SetVector(IdKiertoZ, Z);
                 tahtiMat.SetFloat(IdPeitto, varjossa || VarjoPakko ? 1f : 0.3f);
                 Graphics.DrawMesh(tahtiMesh, Matrix4x4.identity, tahtiMat, 0, kamera);
             }
