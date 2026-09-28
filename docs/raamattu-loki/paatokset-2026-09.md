@@ -8835,3 +8835,7 @@ Omistaja 28.9. klo 20.39 sanatarkasti: "Silloin poistutaan koko maakuntatilasta.
 ## OMISTAJA: PULUN LUENTA HYPPÄÄ JA JATKUU CHATIN SULUN JÄLKEEN (1.0.38, UUSI ÄÄNI) (28.9.2026 klo 20.41)
 
 Omistaja 28.9. klo 20.41 sanatarkasti: "Pulun luenta hyppää vieläkin, eikä se lopeta luentaa, vaikka chat-ikkunan sulkee. Pitäisikö korjaus tulla jo seuraavassa versiossa? Käytössä oli se uusi ääni." Molemmat korjaukset (hyppy 9057ea82, pysäytys 29b1a83a) ovat 1.0.39-junassa a479a462, eivät 1.0.38:ssa. 1.0.39-savuke oli EI PASS nostokortin napin takia. → Natiivi-UI todentaa a479a462:n laitteella uudella äänellä (ElevenLabs v4 Turbo -striimi) + nostokortin napin; 1.0.39 ulos heti kun PASS.
+
+## TILA: 1.0.39-PUHEKORJAUKSET PASS, NOSTOKORTIN NAPPI FAIL; PULU 429 VERKOLLE (28.9.2026 klo 20.44)
+
+Natiivi-UI 28.9. klo 20.44 a479a462:n puhekoodilla (ElevenLabs): hyppy PASS nostossa, Pulun pysäytys chatin sulkuun PASS (sulun jälkeen 0 palaa, häivytys 0,2 s). Nostokortin lukijanappi FAIL: LISÄÄ sulki kortin (korjattu 942f37bf), mutta lukijan kaiutin sulkee kortin yhä → korjaus 1.0.39:ään. Pulu-palvelin antaa HTTP 429 (päiväraja) Macin verkolle, myös omistajan laitteille → Pelikoodari selvittää, nollaa tämän päivän IP-laskurin jos mahdollista ja ohjaa roolien mittaukset kehittäjäkoodille.
