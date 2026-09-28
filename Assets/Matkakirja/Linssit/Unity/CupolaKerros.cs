@@ -84,8 +84,19 @@ namespace Matkakirja.Natiivi
             if (nakyvissa && !haettu) { haettu = true; StartCoroutine(HaeKuvat()); }
         }
 
+        /// <summary>
+        /// Viimeisin valo (IssKyytiNakyma: pölyhiukkaset auringonsäteessä): aurinko kameran suunnissa (x oikealle, y ylös,
+        /// z eteen) ja w = ISS auringossa 0…1 (maan varjo). Lasketaan ikkunassa aina, vaikka 3D-kehys ei näy (Cupola 2 on UI-kuvina).
+        /// </summary>
+        public static Vector4 Valo { get; private set; }
+        /// <summary>Valo on laskettu tällä kyydillä (Cupola-kerros olemassa); false = ei tietoa, pölyt pois.</summary>
+        public static bool ValoTiedossa { get; private set; }
+
         void Update()
         {
+            // Neljästi sekunnissa ja nopeutettuna sekunnin välein simuloitua aikaa (1000×: ISS kiertää 65°/s); myös kehyksen
+            // ollessa piilossa, koska pölyhiukkaset (IssKyytiNakyma) lukevat valon Cupola 2 -kuvien kanssa.
+            if (Time.unscaledTime - aurinkoAika >= 0.25f || Math.Abs((IssNyt.Kello() - aurinkoUtc).TotalSeconds) >= 1) PaivitaValo();
             bool valmis = kehys != null;
             float nopeus = LinssiOhjain.Instanssi != null && LinssiOhjain.Instanssi.VahennettyLiike ? 1000f : 1f / HaivytysS;
             peitto = Mathf.MoveTowards(peitto, valmis ? tavoite : 0f, Time.unscaledDeltaTime * nopeus);
@@ -95,8 +106,6 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat(IdPeitto, peitto);
             materiaali.SetFloat(IdAika, Time.unscaledTime);
             materiaali.SetFloat(IdVarsi, Varsi ? 1f : 0f);
-            // Neljästi sekunnissa ja nopeutettuna sekunnin välein simuloitua aikaa (1000×: ISS kiertää 65°/s).
-            if (Time.unscaledTime - aurinkoAika >= 0.25f || Math.Abs((IssNyt.Kello() - aurinkoUtc).TotalSeconds) >= 1) PaivitaValo();
             materiaali.SetVector(IdAurinko, aurinko);
             materiaali.SetFloat(IdMaavalo, maavalo);
         }
@@ -114,6 +123,8 @@ namespace Matkakirja.Natiivi
             var r = CupolanValo.Ruudulle(k.x, k.y, k.z);
             aurinko = new Vector4((float)r.x, (float)r.y, (float)r.z, (float)CupolanValo.Aurinkoisuus(ylos, IssKorkeusKm));
             maavalo = (float)CupolanValo.Maavalo(ylos);
+            Valo = aurinko;
+            ValoTiedossa = true;
         }
 
         /// <summary>Neliö kameran eteen juuri ennen piirtoa: lähitaso ja kenttäkulma ovat tämän kehyksen arvot.</summary>
@@ -178,6 +189,7 @@ namespace Matkakirja.Natiivi
 
         void OnDestroy()
         {
+            ValoTiedossa = false;
             RenderPipelineManager.beginCameraRendering -= EnnenPiirtoa;
             if (TryGetComponent<MeshFilter>(out var f)) Destroy(f.sharedMesh);
             if (materiaali != null) Destroy(materiaali);

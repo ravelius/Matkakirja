@@ -36,7 +36,7 @@ namespace Matkakirja.Natiivi
         const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
         const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
 
-        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, turva, pilleri, piste, ohjaimet, peite;
+        readonly VisualElement juuri, kehys, heijastus, ulko2, heijastus2, kehys2, polyt, turva, pilleri, piste, ohjaimet, peite;
         readonly Label live, tieto, ylilento, liveNappi;
         readonly Button[] napit;
         readonly Button valikko;
@@ -71,6 +71,12 @@ namespace Matkakirja.Natiivi
             ulko2 = Rakenne.El("mk-isskyyti__ulko2", juuri, PickingMode.Ignore);
             heijastus2 = Rakenne.El("mk-isskyyti__heijastus2", juuri, PickingMode.Ignore);
             kehys2 = Rakenne.El("mk-isskyyti__kehys2", juuri, PickingMode.Ignore);
+            // Pölyhiukkaset leijuvat kuvun sisällä katsojan ja lasin välissä: kehyksen edessä, käyttöliittymän takana.
+            polyt = Rakenne.El("mk-isskyyti__polyt", juuri, PickingMode.Ignore);
+            polyt.style.position = Position.Absolute;
+            polyt.style.left = 0; polyt.style.top = 0; polyt.style.right = 0; polyt.style.bottom = 0;
+            polyt.style.display = DisplayStyle.None;
+            polyt.generateVisualContent += PiirraPolyt;
             kehys = Rakenne.El("mk-isskyyti__kehys", juuri, PickingMode.Ignore);
             heijastus = Rakenne.El("mk-isskyyti__heijastus", juuri, PickingMode.Ignore);
             // Valikon peite: napautus listan ohi sulkee sen eikä vaihda kyydin tilaa (webissä selaimen oma valikko).
@@ -203,6 +209,7 @@ namespace Matkakirja.Natiivi
             juuri.EnableInClassList("mk-isskyyti--ikkuna", vanha);
             juuri.EnableInClassList("mk-isskyyti--kuva2", uusi);
             Heilu(vanha || uusi);
+            PolytPaalle(ikkuna && !IlmanKehysta && (vanha || uusi || KolmiulotteinenKehys));
         }
 
         void HaeKuvat()
@@ -320,6 +327,99 @@ namespace Matkakirja.Natiivi
                 e.style.rotate = StyleKeyword.Null;
             }
             kehys2.style.translate = StyleKeyword.Null;
+        }
+
+        /// <summary>
+        /// PÖLYHIUKKASET AURINGONSÄTEESSÄ (Päätoimittajan käsky 28.9. klo 16.3x): 34 pehmeää hiukkasta leijuu kuvun sisällä ja
+        /// näkyy vain vinossa valokeilassa, kun ISS on auringossa (CupolaKerros.Valo.w, maan varjo); yöpuolella ei mitään.
+        /// Keila tulee auringon suunnasta ruudulla (Valo.xy; suoraan edessä tai takana oletusvinous ylävasemmalta), joten se
+        /// kääntyy hitaasti ISS:n kiertäessä. Hiukkanen on kolme sisäkkäistä ympyrää (pehmeä reuna, isommat epätarkempia) ja
+        /// välähtää kääntyessään (tuike). Liike 0,6–2 pt/s ja kevyt pyörre; vähennetyllä liikkeellä paikallaan.
+        /// A/B `astro kyyti polyt 0|1`.
+        /// </summary>
+        public static bool Polyt = true;
+        const int PolyMaara = 34;
+        /// <summary>Keilan puolileveys (σ) osuutena ruudun lyhyemmästä sivusta ja hiukkasen suurin peitto.</summary>
+        const float KeilaOsuus = 0.2f, PolyPeitto = 0.65f;
+        /// <summary>Hiukkaset: paikka 0–1 (u, v), säde pt ja tuikkeen vaihe; nopeus pt/s.</summary>
+        readonly Vector4[] poly = new Vector4[PolyMaara];
+        readonly Vector2[] polyNopeus = new Vector2[PolyMaara];
+        bool polytAlustettu, polytPaalla;
+        float polyAika, polyEdellinen;
+        IVisualElementScheduledItem polyAjo;
+
+        void PolytPaalle(bool paalla)
+        {
+            paalla &= Polyt;
+            if (paalla == polytPaalla) return;
+            polytPaalla = paalla;
+            polyAjo?.Pause();
+            polyt.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!paalla) return;
+            if (!polytAlustettu)
+            {
+                polytAlustettu = true;
+                var r = new System.Random(28092026);
+                for (int i = 0; i < PolyMaara; i++)
+                {
+                    // Muutama iso ja epätarkka lähellä katsojaa, loput pieniä.
+                    float sade = i < 5 ? 3f + 1.5f * (float)r.NextDouble() : 1.2f + 1.6f * (float)r.NextDouble();
+                    poly[i] = new Vector4((float)r.NextDouble(), (float)r.NextDouble(), sade, (float)(r.NextDouble() * 6.283));
+                    float suunta = (float)(r.NextDouble() * 6.283), vauhti = 0.6f + 1.4f * (float)r.NextDouble();
+                    polyNopeus[i] = new Vector2(Mathf.Cos(suunta), Mathf.Sin(suunta)) * vauhti;
+                }
+            }
+            polyEdellinen = Time.unscaledTime;
+            // Kuten heilunta: 30 kertaa sekunnissa, vain ikkunassa; valo luetaan joka piirrossa (keila kääntyy ISS:n mukana).
+            polyAjo = polyt.schedule.Execute(() =>
+            {
+                float nyt = Time.unscaledTime, dt = Mathf.Min(0.1f, nyt - polyEdellinen);
+                polyEdellinen = nyt;
+                if (!LinssiUi.VahennettyLiike()) polyAika += dt;
+                polyt.MarkDirtyRepaint();
+            }).Every(33);
+        }
+
+        void PiirraPolyt(MeshGenerationContext mgc)
+        {
+            float w = polyt.contentRect.width, h = polyt.contentRect.height;
+            if (!(w > 0) || !(h > 0) || !CupolaKerros.ValoTiedossa) return;
+            var valo = CupolaKerros.Valo;
+            float aurinko = Mathf.Clamp01(valo.w);
+            if (aurinko < 0.01f) return;
+            // Keilan suunta ruudulla (y alas): valo kulkee auringosta poispäin, eli (−x, +y); suoraan edessä tai takana vinosti.
+            var suunta = new Vector2(-valo.x, valo.y);
+            if (suunta.sqrMagnitude < 0.04f) suunta = new Vector2(0.55f, 0.83f);
+            suunta.Normalize();
+            var normaali = new Vector2(-suunta.y, suunta.x);
+            var keski = new Vector2(w * 0.5f, h * 0.45f);
+            float sigma = KeilaOsuus * Mathf.Min(w, h);
+            var p = mgc.painter2D;
+            bool liikkuu = !LinssiUi.VahennettyLiike();
+            for (int i = 0; i < PolyMaara; i++)
+            {
+                var q = poly[i];
+                var v = polyNopeus[i];
+                // Ajelehdus ja pyörre (pieni sini), kiedottuna ruudun ympäri.
+                float x = q.x * w + v.x * polyAika + (liikkuu ? 6f * Mathf.Sin(0.21f * polyAika + q.w) : 0f);
+                float y = q.y * h + v.y * polyAika + (liikkuu ? 5f * Mathf.Cos(0.17f * polyAika + 1.7f * q.w) : 0f);
+                x = Mathf.Repeat(x, w); y = Mathf.Repeat(y, h);
+                float etaisyys = Vector2.Dot(new Vector2(x, y) - keski, normaali) / sigma;
+                float keila = Mathf.Exp(-etaisyys * etaisyys);
+                float tuike = liikkuu ? 0.6f + 0.4f * Mathf.Sin(1.3f * polyAika + 3f * q.w) : 0.8f;
+                float b = PolyPeitto * aurinko * keila * tuike;
+                if (b < 0.01f) continue;
+                var c = new Vector2(x, y);
+                for (int k = 0; k < 3; k++)
+                {
+                    float sade = q.z * (k == 0 ? 1.8f : k == 1 ? 1.1f : 0.55f);
+                    float a = b * (k == 0 ? 0.18f : k == 1 ? 0.35f : 0.8f);
+                    p.fillColor = new Color(1f, 0.96f, 0.88f, a);
+                    p.BeginPath();
+                    p.Arc(c, sade, Angle.Degrees(0f), Angle.Degrees(360f));
+                    p.Fill();
+                }
+            }
         }
 
         /// <summary>Linssi vaihtui tai suljettiin: kyydin UI pois.</summary>
