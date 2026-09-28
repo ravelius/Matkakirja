@@ -10,6 +10,13 @@
 // Anfangi vain palstoissa (web .lehtipalsta p:first-of-type::first-letter: American Typewriter 700, 3,1 em,
 // line-height 0,82, oikealla 0,12 em, rgba(70, 51, 31, 0.9)); UITK ei kelluta, joten anfangin viereiset rivit
 // ladotaan kapeampaan palstaan kuten lehden AnfangiKappale.
+//
+// KYLKIKUVA (web .fokuskohde-teksti > .fokuskohde-nykykuva, omistaja 27.9.2026): säilyneen ihmekohteen nykykuva
+// kelluu tekstin (palstoissa ensimmäisen palstan) oikealla: leveys min(42 %, 180 pt), marginaali 3,2 0 8 14,4 pt.
+// Rivi asettuu kuvan viereen, jos sen yläreuna on kuvan alamarginaalin yläpuolella (CSS float), ja jatkuu sitten
+// täysleveänä. Palstoissa korkeus tasataan hakemalla matalin palstakorkeus, johon teksti mahtuu (column-fill
+// balance). Jos teksti loppuu kuvan viereen (lyhyt teksti iPadilla), kortin seuraavat osat siirtyvät kuvan
+// viereen niin kauan kuin ne alkavat kuvan alareunan yläpuolelta, kuten webissä.
 
 using System;
 using System.Collections.Generic;
@@ -41,8 +48,9 @@ namespace Matkakirja.Natiivi
         /// varusta = jokaiselle luodulle kappaleelle (linkkien kuuntelu).
         /// </summary>
         public static VisualElement Luo(VisualElement isa, IReadOnlyList<string> kappaleet, string alku, string luokka,
-            Kirjasin kirjasin, Action<Label> varusta)
+            Kirjasin kirjasin, Action<Label> varusta, VisualElement kylki = null, bool palstoita = true)
         {
+            if (kylki != null) return LuoKylkikuvalla(isa, kappaleet, alku, luokka, kirjasin, varusta, kylki, palstoita);
             var kotelo = Rakenne.El("mk-palstat", isa, PickingMode.Ignore);
             // Mittari kantaa kappaleen tyylin (koko, fontti, kappaleväli) ja pysyy piilossa.
             var mittari = Rakenne.Teksti("", luokka, kotelo);
@@ -136,6 +144,230 @@ namespace Matkakirja.Natiivi
             }
 
             kotelo.RegisterCallback<GeometryChangedEvent>(_ => Lado());
+            return kotelo;
+        }
+
+        /// <summary>Web .fokuskohde-nykykuva width min(42 %, 180 px), margin 0,2rem 0 0,5rem 0,9rem.</summary>
+        const float KylkiOsuus = 0.42f, KylkiKatto = 180f, KylkiYla = 3.2f, KylkiAla = 8f, KylkiVali = 14.4f;
+
+        /// <summary>Kappaleen osa alueessa: teksti, jatkuuko edellisestä alueesta, anfangi.</summary>
+        struct Pala
+        {
+            public string Teksti;
+            public bool Jatko, Anfangi;
+        }
+
+        /// <summary>
+        /// Teksti ja kelluva kylkikuva (ks. tiedoston alku). palstoita = teksti on pitkä (OnPitka): leveydellä ≥ 600
+        /// kaksi palstaa ja anfangi, kuva ensimmäisen palstan oikeassa yläkulmassa; muuten yksi palsta ilman anfangia.
+        /// </summary>
+        static VisualElement LuoKylkikuvalla(VisualElement isa, IReadOnlyList<string> kappaleet, string alku, string luokka,
+            Kirjasin kirjasin, Action<Label> varusta, VisualElement kylki, bool palstoita)
+        {
+            var kotelo = Rakenne.El("mk-palstat mk-palstat--kylki", isa, PickingMode.Ignore);
+            var mittari = Rakenne.Teksti("", luokka, kotelo);
+            Kirjasimet.Aseta(mittari, kirjasin);
+            mittari.AddToClassList("mk-palstat__mittari");
+            var sisus = Rakenne.El("mk-palstat__sisus", kotelo, PickingMode.Ignore);
+            var kirjainMittari = Rakenne.Teksti("", "mk-palstat__anfangi mk-palstat__mittari", kotelo);
+            kirjainMittari.enableRichText = false;
+            Kirjasimet.Aseta(kirjainMittari, Kirjasin.KoneBold);
+            kylki.AddToClassList("mk-palstat__kylki");
+            kylki.style.top = KylkiYla;
+            kotelo.Add(kylki);
+            float leveys = -1f, kylkiKorkeus = -1f, kuvanAla = 0f;
+            VisualElement vieri = null;
+            var siirretyt = new List<VisualElement>();
+            var mitat = new Dictionary<(string, float), float>();
+
+            Label Kappale(VisualElement p, string t)
+            {
+                var l = Rakenne.Teksti(alku + t, luokka, p);
+                Kirjasimet.Aseta(l, kirjasin);
+                varusta?.Invoke(l);
+                return l;
+            }
+
+            float Korkeus(string t, float lev)
+            {
+                if (mitat.TryGetValue((t, lev), out var h)) return h;
+                h = mittari.MeasureTextSize(alku + t, lev, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y;
+                mitat[(t, lev)] = h;
+                return h;
+            }
+
+            // Kortin seuraavat osat takaisin kotelon perään ennen uutta ladontaa.
+            void Palauta()
+            {
+                var p = kotelo.parent;
+                if (p == null) { siirretyt.Clear(); return; }
+                int i = p.IndexOf(kotelo) + 1;
+                foreach (var e in siirretyt) p.Insert(i++, e);
+                siirretyt.Clear();
+            }
+
+            void Lado()
+            {
+                float w = kotelo.contentRect.width;
+                if (w <= 0 || float.IsNaN(w)) return;
+                bool kaksi = palstoita && w >= Raja;
+                float palsta = kaksi ? Mathf.Floor((w - Rako) / 2f) : w;
+                float kw = Mathf.Round(Mathf.Min(KylkiOsuus * palsta, KylkiKatto) * 10f) / 10f;
+                if (Mathf.Abs(kylki.resolvedStyle.width - kw) > 0.05f || float.IsNaN(kylki.resolvedStyle.width))
+                {
+                    // Kuvan korkeus (kuvatekstin rivitys) selviää vasta tällä leveydellä: odota uutta asettelua.
+                    kylki.style.width = kw;
+                    kylki.style.left = palsta - kw;
+                    return;
+                }
+                kylki.style.left = palsta - kw;
+                float kh = kylki.layout.height;
+                if (float.IsNaN(kh) || kh <= 0) return;
+                if (Mathf.Abs(w - leveys) < 0.5f && Mathf.Abs(kh - kylkiKorkeus) < 0.5f) return;
+                leveys = w;
+                kylkiKorkeus = kh;
+                Palauta();
+                sisus.Clear();
+                vieri = null;
+                kotelo.EnableInClassList("mk-palstat--kaksi", kaksi);
+                kuvanAla = KylkiYla + kh + KylkiAla;
+                float vieriLeveys = Mathf.Max(1f, palsta - kw - KylkiVali);
+                float vali = mittari.resolvedStyle.marginBottom;
+                float h1 = Korkeus("A", palsta);
+                float rivi = Korkeus("A\nA", palsta) - h1;
+                float koko = mittari.resolvedStyle.fontSize > 0 ? mittari.resolvedStyle.fontSize : 15.5f;
+                var anf = kaksi ? Anfangi.Mitoita(kappaleet[0], koko, rivi, kirjainMittari, Korkeus, vieriLeveys) : null;
+
+                // Alueet: 0 = kuvan vieressä, 1 = kuvan alla (sama palsta), 2 = oikea palsta.
+                // Raja on palstan omissa koordinaateissa; kuvan vieressä rivin yläreuna ratkaisee (+ h1).
+                float[] alueLeveys = { vieriLeveys, palsta, palsta };
+                int[] alueenPalsta = { 0, 0, 1 };
+                List<Pala>[] Virtaa(float palstaKorkeus, out float[] palstaKorkeudet)
+                {
+                    float[] raja = { kuvanAla + h1 - 0.5f, kaksi ? palstaKorkeus : float.PositiveInfinity, float.PositiveInfinity };
+                    var palat = new[] { new List<Pala>(), new List<Pala>(), new List<Pala>() };
+                    var kertyma = new float[2];
+                    var tyhja = new[] { true, true };
+                    int a = 0;
+                    int alueita = kaksi ? 3 : 2;
+                    for (int j = 0; j < kappaleet.Count; j++)
+                    {
+                        string loput = kappaleet[j];
+                        bool jatko = false;
+                        while (loput.Length > 0 && a < alueita)
+                        {
+                            int p = alueenPalsta[a];
+                            bool anfangi = anf != null && j == 0 && !jatko && a == 0;
+                            float Mitta(string t) => anfangi ? anf.Korkeus(t) : Korkeus(t, alueLeveys[a]);
+                            // Jatko samassa palstassa: rivinväli; uusi kappale: kappaleväli; palstan alussa ei väliä.
+                            float g = tyhja[p] ? 0f : jatko ? Mathf.Max(0f, rivi - h1) : vali;
+                            if (kertyma[p] + g + Mitta(loput) <= raja[a])
+                            {
+                                palat[a].Add(new Pala { Teksti = loput, Jatko = jatko, Anfangi = anfangi });
+                                kertyma[p] += g + Mitta(loput);
+                                tyhja[p] = false;
+                                loput = "";
+                                break;
+                            }
+                            // Rajalle osuva kappale jaetaan sanojen välistä.
+                            var sanat = Sanat(loput);
+                            int ala = 0, yla = sanat.Count - 1;
+                            while (ala < yla)
+                            {
+                                int keski = (ala + yla + 1) / 2;
+                                if (kertyma[p] + g + Mitta(string.Join(" ", sanat.GetRange(0, keski))) <= raja[a]) ala = keski; else yla = keski - 1;
+                            }
+                            if (ala > 0)
+                            {
+                                string osa = string.Join(" ", sanat.GetRange(0, ala));
+                                palat[a].Add(new Pala { Teksti = osa, Jatko = jatko, Anfangi = anfangi });
+                                kertyma[p] += g + Mitta(osa);
+                                tyhja[p] = false;
+                                loput = string.Join(" ", sanat.GetRange(ala, sanat.Count - ala));
+                                jatko = true;
+                            }
+                            a++;
+                        }
+                        if (loput.Length > 0) palat[alueita - 1].Add(new Pala { Teksti = loput, Jatko = jatko });
+                    }
+                    palstaKorkeudet = kertyma;
+                    return palat;
+                }
+
+                List<Pala>[] tulos;
+                if (kaksi)
+                {
+                    // Matalin palstakorkeus, jolla oikea palsta ei ylitä sitä (web column-fill: balance).
+                    float yht = 0f;
+                    foreach (var k in kappaleet) yht += Korkeus(k, palsta) + vali;
+                    // Kuva kuuluu vasempaan palstaan: palsta on vähintään kuvan alareunan korkuinen.
+                    float ala = kuvanAla, yla = Mathf.Max(kuvanAla, yht) + kuvanAla;
+                    for (int i = 0; i < 16 && yla - ala > 0.5f; i++)
+                    {
+                        float keski = (ala + yla) / 2f;
+                        Virtaa(keski, out var kk);
+                        if (kk[1] <= keski) yla = keski; else ala = keski;
+                    }
+                    tulos = Virtaa(yla, out _);
+                }
+                else tulos = Virtaa(0f, out _);
+
+                VisualElement pv = sisus, po = null;
+                if (kaksi)
+                {
+                    pv = Rakenne.El("mk-palstat__palsta", sisus, PickingMode.Ignore);
+                    po = Rakenne.El("mk-palstat__palsta mk-palstat__palsta--oikea", sisus, PickingMode.Ignore);
+                }
+                // Kelluva kuva varaa korkeutensa, vaikka teksti loppuisi sen vierelle.
+                pv.style.minHeight = kuvanAla;
+                vieri = Rakenne.El("mk-palstat__vieri", pv, PickingMode.Ignore);
+                vieri.style.width = vieriLeveys;
+                // Vieri kasvaa siirroista, vaikka palsta (minHeight) ei: kuunnellaan vieriä itseään.
+                vieri.RegisterCallback<GeometryChangedEvent>(_ => Siirra());
+                VisualElement[] isannat = { vieri, pv, po };
+                VisualElement edellinen = null;
+                for (int a = 0; a < tulos.Length; a++)
+                {
+                    if (isannat[a] == null) continue;
+                    if (a == 2)
+                    {
+                        // Palstan viimeinen kappale ilman väliä (web p:last-child / palstan vaihto kesken kappaleen).
+                        if (edellinen != null) edellinen.style.marginBottom = 0;
+                        edellinen = null;
+                    }
+                    foreach (var pala in tulos[a])
+                    {
+                        if (edellinen != null && pala.Jatko) edellinen.style.marginBottom = 0;
+                        var e = pala.Anfangi ? anf.Luo(isannat[a], pala.Teksti, Kappale) : Kappale(isannat[a], pala.Teksti);
+                        if (pala.Anfangi) e.style.marginBottom = vali;
+                        if (pala.Jatko && a == 1 && edellinen != null) e.style.marginTop = Mathf.Max(0f, rivi - h1);
+                        edellinen = e;
+                    }
+                }
+                if (edellinen != null) edellinen.style.marginBottom = 0;
+                if (vieri.childCount == 0) vieri.style.display = DisplayStyle.None;
+            }
+
+            // Lyhyt teksti yhdellä palstalla: kortin seuraavat osat kuvan viereen, kun ne alkavat sen alareunan yläpuolelta.
+            void Siirra()
+            {
+                if (vieri == null || kotelo.ClassListContains("mk-palstat--kaksi") || vieri.childCount == 0) return;
+                var p = kotelo.parent;
+                if (p == null || sisus.childCount > 1) return; // teksti jatkui kuvan alle
+                float h = vieri.layout.height;
+                if (float.IsNaN(h) || h >= kuvanAla - 0.5f) return;
+                int i = p.IndexOf(kotelo) + 1;
+                if (i >= p.childCount) return;
+                var seuraava = p[i];
+                if (seuraava.resolvedStyle.display == DisplayStyle.None || seuraava.resolvedStyle.position == Position.Absolute) return;
+                if (h + seuraava.resolvedStyle.marginTop >= kuvanAla) return;
+                vieri.Add(seuraava);
+                siirretyt.Add(seuraava);
+            }
+
+            kotelo.RegisterCallback<GeometryChangedEvent>(_ => Lado());
+            kylki.RegisterCallback<GeometryChangedEvent>(_ => Lado());
+            kotelo.RegisterCallback<DetachFromPanelEvent>(_ => siirretyt.Clear());
             return kotelo;
         }
 
