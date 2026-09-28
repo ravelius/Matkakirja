@@ -18,6 +18,11 @@
 // hehkun kuori (1,25 R) ympäröi kameran ISS:n korkeudella, jolloin koko taivas sinersi. Kyydissä hehku häipyy ja tilalle
 // tulee Ilmakaari (kuori R + 120 km, analyyttinen kaari horisontin yllä ja usva maan päällä); musta avaruus yläpuolella.
 // Siirtymä 0,8 s. A/B: VanhaIlmakeha = true pitää kyydissäkin vanhan hehkun (kuvapari).
+//
+// TAUSTAN UUDELLEENYRITYS (Cupolan 1. kierros 28.9.: kermanvaalea taivas ja usva koko näkymässä): Taustavari lukee
+// Camera.mainin, joka on null, kun elävä kerros on sammuttanut pääkameran (KERROS-tila). Silloin tausta jäi asettamatta,
+// OmaTausta pysyi epätotena ja Aurinko piti horisonttiusvan (UsvaVari) ja pelin taustan koko linssin ajan. Yritetään
+// joka kehys, kunnes OmaTausta on voimassa (pääkamera palaa, kun kamera liikkuu, esim. avauksen kamera-ajo).
 using System;
 using CesiumForUnity;
 using Unity.Mathematics;
@@ -57,11 +62,27 @@ namespace Matkakirja.Natiivi
             return a;
         }
 
+        bool taustaAsetettu;
+        int taustaYritykset;
+
+        /// <summary>Tausta Natiivisepän rajapinnalla (kameran tausta); uudelleen joka kehys, kunnes OmaTausta (ks. alkukommentti).</summary>
+        void AsetaTausta()
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk == null) return;
+            kk.Taustavari(Tausta);
+            taustaYritykset++;
+            taustaAsetettu = kk.OmaTausta;
+            if (taustaYritykset == 1 && !taustaAsetettu)
+                Debug.Log("MATKAKIRJA linssit: avaruus: tausta ei asettunut (pääkamera pois, elävä kerros?), yritetään joka kehys");
+            else if (taustaAsetettu && taustaYritykset > 1)
+                Debug.Log($"MATKAKIRJA linssit: avaruus: tausta asettui {taustaYritykset}. yrityksellä");
+        }
+
         void Rakenna(CesiumGeoreference g)
         {
             this.g = g;
-            // Tausta Natiivisepän rajapinnalla (kameran tausta); null palauttaa pelin oman.
-            KarttaKerrokset.Instanssi?.Taustavari(Tausta);
+            AsetaTausta();
 
             var hehkuVarjostin = Resources.Load<Shader>("Varjostimet/Ilmakeha");
             if (hehkuVarjostin == null) { Debug.LogWarning("MATKAKIRJA linssit: Ilmakeha-varjostin puuttuu"); return; }
@@ -145,6 +166,7 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
+            if (!taustaAsetettu) AsetaTausta();
             bool avaus = peitto < 1f, siirtyy = kyyti != kyytiTavoite;
             if (!avaus && !siirtyy && kyyti <= 0f) return;
             peitto = Mathf.MoveTowards(peitto, 1f, Time.unscaledDeltaTime / HaivytysS);
