@@ -1237,7 +1237,7 @@ namespace Matkakirja.Natiivi
 
         // --- puhekeskustelu (web luentaPaalla, asetaPuheTila, puheAlkoi, lopetaPuheVuoro, vahdiPuheVuoroa) ---
 
-        const string PuheMiettii = "Mietin…", PuhePuhuu = "Puhun… napauta mikkiä: hiljaa";
+        const string PuheMiettii = "Mietin…", PuhePuhuu = "Puhun… napauta mikkiä, jos haluat keskeyttää";
 
         sealed class PuheVuoro { public double Alku; public Puhe Kuunneltu; public IVisualElementScheduledItem Vahti; }
 
