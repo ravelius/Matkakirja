@@ -8511,3 +8511,7 @@ Omistaja 28.9. sanatarkasti: "Se kello ja päivämäärä saisi muuten näkyä j
 ## OMISTAJA: NATIIVIN LIPPU — EI KOKOKATTOA, TANKO MATALAMMAKSI ETTEI KATOA KAMERAN TAAKSE, LIPPU VAARA (28.9.2026 klo 09.42)
 
 Omistaja kortilla 28.9. sanatarkasti: "Zoomatessa lähemmäs se vain katoaa kameran taakse koska lipputanko on niin korkea. Ei tehdä koko kattoa. Tuo ei muuten ole ruotsin lippu". Linssisepalle (symbolit-lippu 720513da). Geysir/ISL-kohteet: europe-koordinaattia ei voi antaa (lauta paattyy -11E), natiivin kaytettava maailmakoordinaattia → Siirtoseppa (vienti).
+
+## OFFLINE-MAASTO TAYTENA: EUROOPPA ~1,75 GT SIIRTONA / 2,2 GT LEVYLLA (#3530 JALKEEN) (28.9.2026 klo 09.45)
+
+Siirtoseppa: oikeilla laattakoilla Euroopan offline-maasto ~786 Mt (1.53:n arvio ~94 Mt laskettiin vanhan sarjan Ranska-datasta); Eurooppa yhteensa ~1,9 Gt / 2,4 Gt levylla, #3530:n (pienet 1024/75) jalkeen ~1,75 / 2,2 Gt. Fable: maasto taytena (ladattu alue kuin verkossa, natiivi nayttaa todellisen koon), ei z10-rajausta. #3531 (skeema 1.56: kerma, relief, yovalot + todellinen levykoko, E2E 2 PASS) junaan Natiivisepan kuittauksen jalkeen.
