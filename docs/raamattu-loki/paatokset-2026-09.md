@@ -8711,3 +8711,7 @@ Linssiseppa 28.9. klo 17.3x: erikoismallit (18 kpl) piirtyvat vain kun kartta on
 ## OMISTAJA: 3D-SYMBOLIT TAKAISIN ISOMPINA; 3D-MALLIT KASVAVAT LAHESTYTTAESSA (KORVAA 17.2x SYMBOLIT POIS) (28.9.2026 klo 17.24)
 
 Omistaja 28.9. klo 17.4x sanatarkasti: "palauta 3d symbolit vielä mutta tee niistä isompia. nyt kaikki 3d mallit pienenevät kun niitä menee lähemmäksi silloin kun kartta on kallistettuna. pitäisi mennä päinvastoin" → Linssiseppa: 3D-kategoriasymbolit pysyvat (symbolit-2d ei junaan), selvasti isommiksi, kallistetun kartan skaalausbugi korjataan niin etta kaikki 3D-mallit kasvavat lahestyttaessa; erikoismallit myos ylhaalta pysyy. 1.0.38.
+
+## OMISTAJA: ERIKOISMALLI KOHDEKAUPUNGISSA SIIRRETAAN VIEREEN (28.9.2026 klo 17.27)
+
+Omistaja 28.9. klo 17.4x sanatarkasti: "jos erikoissymboli on kohdekaupungissa, se pitää siirtää hieman sen viereen" → Linssiseppa: erikoismalli kaupunkimerkin viereen niin ettei peita kaupunkia, nuppineulaa eika nimiota. 1.0.38.
