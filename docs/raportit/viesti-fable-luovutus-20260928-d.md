@@ -46,6 +46,12 @@ Mallivaihto: set_session_model tuntee vain claude-sonnet-5 (vanha); Sonnet 5.5 v
 - **Pyramidi 2026-09-27:** pallon vienti yöllä → aamulla kortti osoittimen vaihdosta.
 - **Radiolinssi:** ks. loki 23.47 (Linssiseppä 2 + Codex-radio ccb70fab9 + Pelikoodarin äänet); linssit koko maailmaan.
 
+- **ELÄVÄ LINNA (poikkileikkauslinssi 3D:nä, loki 23.53):** omistaja haluaa "jumalattoman hienon näköisen ja
+  monistettavan konseptin". Päätoimittajan suositus annettu (dioraama + maalatut hahmot, Pulu ja opetustaulut, henkilöiden
+  repliikit, äänet, etsintä, aikaliukusäädin nykyiseen oopperalinnaan, henkilökortit; pystyleike KEITTIÖSTÄ ensin; uusi
+  oma rooli Opus + Sonnet-ali-agentit). SEURAAVAKSI: kortti omistajalle aloitusluvasta ja uuden roolisession luonnista
+  (muistio sessioiden-luonti-appia-ohjaamalla.md).
+
 ## 4. Codex-tilaukset (posti/, vastaukset codex-fable-*)
 
 ISS-säätöpaneeli 292279232 (odottaa) · Cupola 3 (TOIMITETTU, kytketty) · avaruuskävely-konsepti f83a45e01 (odottaa)
