@@ -8655,3 +8655,7 @@ Omistaja 28.9. sanatarkasti: "tarvitsen nyt konetta itse". Kevyt lippu paalle (J
 ## PAATOIMITTAJA: MAAPALLON VUOSI -LINSSI EI PELAAJAN REKISTERIIN ENNEN VALMISTUMISTA (28.9.2026 klo 14.54)
 
 Linssiseppa 2 28.9. klo 15.0x: webin hiomassa-rivi (manner null) tekee linssista kynnys- ja varalinssin (omistus.js) → pelaaja voisi saada keskeneraisen linssin palkkiona ja kultainen linssijalki muuttuu. Paatoimittaja: ei rivia webin rekisteriin eika C#-Oletusrekisteriin ennen kuin linssi on valmis ja omistaja hyvaksynyt; natiivi kehittajatilan linssirekisterissa (Kesken), web kehityssivulta (maapallon-vuosi.html).
+
+## OMISTAJA: KONE VAPAA (KEVYT TILA POIS) (28.9.2026 klo 15.09)
+
+Omistaja 28.9. sanatarkasti: "en tarvitse enää konetta". Kevyt lippu pois (Julkaisija), nice-oletus + GPU vapaa, Karttasepan pallopoltto + vienti SIGCONT, taysi savukesarja mainilla uudelleen, simulaattorivuorot Natiiviseppa (v3f2-kuvaus) → Linssiseppa → Linssiseppa 2 → Natiivi-UI.
