@@ -57,6 +57,7 @@ namespace Matkakirja.Natiivi
         Avaruus avaruus;
         Yokuori yokuori;
         KyydinTaivas kyydinTaivas;
+        Revontulet revontulet;
         CupolaKerros cupola;
         Transform iss;
         Transform issMalli;
@@ -271,6 +272,8 @@ namespace Matkakirja.Natiivi
             // Kyydissä oikeat tähdet ja Kuu (KyydinTaivas); satunnainen kenttä pois, kun oikeat ovat ladattu (muuten himmeänä 0,3).
             if (tila != KyydinTila.Kauko && kyydinTaivas == null) kyydinTaivas = KyydinTaivas.Luo(georeferenssi, kamera);
             kyydinTaivas?.Nayta(tila != KyydinTila.Kauko);
+            if (tila != KyydinTila.Kauko && revontulet == null) revontulet = Revontulet.Luo(georeferenssi);
+            revontulet?.Nayta(tila != KyydinTila.Kauko);
             tahtienPeitto = tila == KyydinTila.Kauko ? 1f
                 : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
@@ -495,6 +498,7 @@ namespace Matkakirja.Natiivi
             if (avaruus != null) Destroy(avaruus.gameObject);
             if (yokuori != null) Destroy(yokuori.gameObject);
             if (kyydinTaivas != null) Destroy(kyydinTaivas.gameObject);
+            if (revontulet != null) Destroy(revontulet.gameObject);
             if (cupola != null) Destroy(cupola.gameObject);
             if (rataMesh != null) Destroy(rataMesh);
             Destroy(nelio);
