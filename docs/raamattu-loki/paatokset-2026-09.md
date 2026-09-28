@@ -8639,3 +8639,7 @@ Omistaja 28.9. klo 13.3x: "Tuon pallon kehittelyn voisi kyllä laittaa jo työn 
 ## OMISTAJA: TOINEN LINSSISEPPA (LINSSISEPPA 2) LUOTU (28.9.2026 klo 13.32)
 
 Omistaja 28.9. klo 13.3x: "Voit luoda toisen Linssi-sepän nykyisen rinnalle." Paatoimittaja loi 13.3x session local_e675f86d-210c-416b-8d83-926194307a44 'Linssiseppä 2 (Opus, high)', checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2 (git worktree, haara linssiseppa2-tyo-20260928), aloitusviesti docs/raportit/viesti-linssiseppa2-aloitus.md. Tyonjako: Linssiseppa 2 = Maapallon vuosi -linssi natiiviin + ISS-realismi kohta 4 (BMNG-vuodenaika, Kuu, tahdet); Linssiseppa 1 = Cupola, lippu, kaupunkien valot, ISS-realismi 1–3. Siirtoseppa tekee Maapallon vuosi -web-rungon PR:n pohjakuvilla (tila hiomassa); kerrosten vienti odottaa omistajan lupaa Karttasepan sessiossa.
+
+## OMISTAJA: ALOITUSLENTO V3E2 HYVAKSYTTY (1.0.35) (28.9.2026 klo 13.34)
+
+Omistaja 28.9. klo 13.4x kortilla: 'OK, mergeen' — aloituslento v3e2 (Natiiviseppa 02bf1c9f: loiva kaarto Ateenan ylle ilman 270 km:n koukkua, kamera kaantyy alas nousun mukana, kosketus ylhaalta ~2 astetta, nousun laattaraja pois) 1.0.35-junaan; Pulu-TF:aa ei viivasteta, v3e2 seuraavaan buildiin jos Pulu-kaannos jo kaynnissa. Seuraavaksi v3f (koodattu c904d2c2).
