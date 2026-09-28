@@ -76,6 +76,9 @@ namespace Matkakirja.Linssit.Elava
             "nidaros" => new NidarosLiike(id),
             "kronborg" => new KronborgLiike(id),
             "visby" => new VisbyLiike(id),
+            "olavinlinna" => new OlavinlinnaLiike(id),
+            "geysir" => new GeysirLiike(id),
+            "newgrange" => new NewgrangeLiike(id),
             _ => null,
         };
 
