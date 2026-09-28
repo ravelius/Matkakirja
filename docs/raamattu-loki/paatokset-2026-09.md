@@ -8791,3 +8791,7 @@ Julkaisija 28.9. klo 19.35: TF 1.0.38 (202609281624) sisäisessä ryhmässä, BU
 ## TILA: PALLOPOLTTO VALMIS, VIENTI YÖLLÄ (28.9.2026 klo 19.40)
 
 Karttaseppä 28.9. klo 19.39: pallo valmis 564 647 laattaa (Z0–Z9 349 525 + Z10 215 122). Osa 1/64 pyöri 9 h ikuisessa silmukassa (tee-pallolaatat.mjs --lahdelaatat-suodatin, viimeinen sarake) — korjaus PR #3574 testin kanssa, Julkaisijan junaan. Pohjan laattavienti z10-shardissa 309/338 (~30 min), sitten koeluettelo koe/2026-09-27; pallon vienti (omistajan hyväksymä vaihe 2) alkoi 19.39, arvio 5–8 h. Sen jälkeen ?pyramidi=2026-09-27 katsottavissa; osoittimen vaihto on omistajan erillinen päätös (kortti aamulla).
+
+## TILA: SKEEMA 1.56 TUOTANNOSSA, KERMA-404 E2E PASS (28.9.2026 klo 19.50)
+
+Siirtoseppä 28.9. klo 19.4x: skeema 1.56 tuotannossa (v279→v281), eheysvartija kunnossa; #3530 pienet kuvat 3 503 uusittu, otos 40/40. Natiiviseppä kerma-404 306134ee E2E PASS (z3–z5-kermahaut verkkoon 0, ennen 87; 0 poikkeusta) → 1.0.40-junaan. ISS-realismi web odottaa Pelikoodarin kyytihaaraa.
