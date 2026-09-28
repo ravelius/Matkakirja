@@ -2983,3 +2983,111 @@
     text-shadow: 0 1px 2px rgba(20, 12, 4, 0.8);
     white-space: nowrap;
 }
+
+/* --- Maapallon vuosi (MaapallonVuosiNakyma; web maapallon-vuosi.html .mv-ui, PR #3558) --------------------- */
+.mk-vuosi {
+    position: absolute;
+    align-items: center;
+}
+
+/* Web: width min(560px, 100% − 32px), padding 12 14 10, gap 8, rgba(12,16,26,.72), reunus .18, kulma 14. */
+.mk-vuosi__paneeli {
+    width: 100%;
+    max-width: 560px;
+    padding: 12px 14px 10px 14px;
+    border-width: 1px;
+    border-radius: 14px;
+    border-color: rgba(239, 230, 210, 0.18);
+    background-color: rgba(12, 16, 26, 0.72);
+    color: #efe6d2;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+.mk-vuosi__rivi {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* Web .mv-toista: 34 × 34, pyöreä, rgba(239,230,210,.12), reunaton. */
+.mk-vuosi__toista {
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    flex-shrink: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 17px;
+    background-color: rgba(239, 230, 210, 0.12);
+}
+
+.mk-vuosi__toista:active {
+    background-color: rgba(239, 230, 210, 0.22);
+}
+
+.mk-vuosi__ikoni {
+    width: 14px;
+    height: 14px;
+    color: #efe6d2;
+}
+
+.mk-vuosi .mk-saadin {
+    margin: -5px 0 -5px 10px;
+}
+
+/* Web .mv-nimi: min-width 6.5em, oikealle, small-caps (isot kirjaimet ~ x-korkeus), letter-spacing .02em. */
+.mk-vuosi__nimi {
+    min-width: 97px;
+    flex-shrink: 0;
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    color: #efe6d2;
+    -unity-text-align: middle-right;
+}
+
+/* Web .mv-valinta: max 48 %, rgba(239,230,210,.1), reunus .25, kulma 8, täyte 5 8. */
+.mk-vuosi__valinta {
+    flex-grow: 0;
+    flex-shrink: 1;
+    max-width: 48%;
+    margin: 0;
+}
+
+.mk-vuosi__valinta > .unity-base-popup-field__input {
+    min-height: 0;
+    padding: 5px 8px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(239, 230, 210, 0.25);
+    background-color: rgba(239, 230, 210, 0.1);
+    color: #efe6d2;
+}
+
+.mk-vuosi__valinta .unity-base-popup-field__text {
+    font-size: 15px;
+    letter-spacing: 0;
+    color: #efe6d2;
+}
+
+.mk-vuosi__valinta .unity-base-popup-field__arrow {
+    -unity-background-image-tint-color: #efe6d2;
+}
+
+.mk-vuosi__peitto:disabled {
+    opacity: 0.35;
+}
+
+/* Web .mv-lahde: 11 px, opasiteetti .6, keskellä. */
+.mk-vuosi__lahde {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    letter-spacing: 0;
+    opacity: 0.6;
+    color: #efe6d2;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
