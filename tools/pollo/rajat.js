@@ -228,7 +228,8 @@ export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
 export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
 
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
-export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+// 'realtime' (Pulun äänikeskustelun koe, Fable 28.9.2026): natiivikin vain kehittäjäkoodilla (hoidaRealtime).
+export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime']);
 
 /** Saako natiivi tehdä pyynnön tehtävän? */
 export function natiivilleSallittu(tehtava) {
