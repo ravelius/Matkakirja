@@ -1,10 +1,10 @@
-# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 19.3x)
+# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 22.3x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet (3/3): /Users/Shared/Claude/wt/proto-linssiseppa-symbolit2d
-  (linssiseppa/symbolit-3d-luonnollinen), -nopeutus (linssiseppa/iss-nopeutus, junassa) ja -polyt (linssiseppa/cupola-polyt); luovutus -t.
-- master kuuluu Natiivisepälle, integraatiohaara on juna/b13.
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet: /Users/Shared/Claude/wt/proto-linssiseppa-horisontti
+  (linssiseppa/cupola-horisontti, työn alla) ja -pilvet (linssiseppa/pilvet-tarkat, mergetty juna-1040:een, poistettavissa); luovutus -u.
+- master kuuluu Natiivisepälle, integraatiohaara on juna/b13 ja 1.0.40:n sivuhaara natiiviseppa/juna-1040.
 
 Lue:
 - CLAUDE.md
@@ -13,20 +13,21 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260928-t.md** (cl13-laiteajo käynnissä itsestään: erikoismalli maalle + seepia,
-  Cupolan sumennuskolmikko ja pölyt → kuvat Päätoimittajalle → merge-pyynnöt; -s.md aiempi)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260928-u.md** (Cupolan pyöreä kattoikkuna tiiviisti pysty/vaaka = omistajan uusi
+  suunta, horisontti A/B:nä; laiteajo cl17 aamulla; 1.0.40-merge-pyynnöt juna-1040:ssä; Natiivi-UI:n nimiöt v2; -t.md aiempi)
 - docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)
 - docs/raportit/iss-realismi-suunnitelma-20260928.md (ISS-realismin kaavat, vakiot, datalähteet ja tila)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -t kohta 1:**
-1. cl13 valmis → koosta_cl13.py → laite-nyt pois ja sammutusilmoitus Julkaisijalle → kuvat Päätoimittajalle.
-2. Hyväksynnän jälkeen merge-pyynnöt Natiivisepälle: symbolit-3d-luonnollinen f6740687 ja cupola-polyt (878b87ae tai valittu sarja),
-   web-arvot Pelikoodarille Päätoimittajan kautta.
-3. Natiivi-UI:n vastaukset (nimiöt 3D-mallien kanssa, puuttuvat kaupunkimerkit) seuraavaan erään.
-4. Natiivin astroselite webin mallin jälkeen. Kohta 4 (BMNG, Kuu, tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
+**Järjestys: luovutus -u kohta 1:**
+1. Laiteajo cl17 aamulla, kun Julkaisija (Sonnet) antaa vuoron: S/kaynnista-cl17.sh → koosta_cl17.py → kuvaparit (pysty + vaaka,
+   nyt | pyöreä) Päätoimittajalle → laite-nyt pois ja "sammutettu" Julkaisijalle.
+2. Hyväksynnän jälkeen merge-pyyntö Natiivisepälle: linssiseppa/cupola-horisontti. Codexin Cupola 3 -kerrokset korvaavat kehyksen
+   ja reunavalot, kun ne tulevat (posti/fable-codex-iss-ohjaamo-20260928.md, pääikkuna pyöreä 0eb761cb8).
+3. Natiivi-UI:n nimiökorjaus (laatikon omistaja avaimella) laitteelle cl16-kaavalla.
+4. Natiivin astroselite webin mallin jälkeen (PR #3527). Kohta 4 (BMNG, Kuu, tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
@@ -39,7 +40,9 @@ Työtavat:
   - mykistä testit (`komento.txt` → `hiljaa`)
 - **Käännökset:** `S=<S> proto-3d/tyokalut/linssiseppa-ajot/kaanna-jono.sh <nimi> <haara[+haara]>` (proto-kaanna.sh, pohja
   master + haarat). **Julkaisija jakaa käännösvuorot ja simulaattoripaikat** (28.9.): pyydä vuoro, odota "NYT", ilmoita
-  "käännös valmis" ja sammutus. Päiväsääntö: käännökset yksi kerrallaan, simulaattoreita enintään 2.
+  "käännös valmis" ja sammutus. Päiväsääntö: käännökset yksi kerrallaan, simulaattoreita enintään 2. Yötauko klo 22.30 → ei
+  käännöksiä eikä simulaattoreita (muistio kaannokset-erina-polton-aikana).
+- **Ämpäri:** `source ~/.zshrc` (AWS_*, PAATE, AMPARI) ja `aws s3 cp … s3://$AMPARI/<polku> --endpoint-url $PAATE`.
 - **Ajoskriptit:** proto-3d/tyokalut/linssiseppa-ajot/ (ajo-mallit.sh, ajo-meri-laatu.sh, ajo-meri-ennen-jalkeen.sh,
   koosta_meri_laatu.py) ja meren harness proto-3d/tyokalut/meri-laatu/ (kaanna.sh, aja.sh, piirra.py, integroi_laatu.py).
   Erikoismallien esikatselu ilman Unityä: proto-3d/tyokalut/mallinseppa-esikatselu-* (m1–m3 valmiina erälle 4).
