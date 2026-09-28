@@ -8899,3 +8899,7 @@ Codex 28.9. (posti/codex-fable-pulu-tekstit-tarkistus-20260928.md, 7ba726d04): K
 ## TILA: PULU SONNET 5.5:LLÄ (#3580), VASTAUS 2,3× NOPEAMPI (28.9.2026 klo 22.07)
 
 Pelikoodari 28.9. klo 22.07: Pulun malli claude-sonnet-5-5 (/v1/models, luotu 28.9.). Ajattelu 'disabled' = 400 → 'between_tools' (API:n pienin tila, Pululla ei työkaluja); effort low hylätty (5,4 s, 1/5 tyhjä). Paikallinen worker, 5 kysymystä: 1. pala mediaani 2,8 s (0,9–4,8) → 1,2 s (0,95–1,33), koko vastaus 13,9 → 7,3 s, laatu samaa tasoa. PR #3580 (v2377) Julkaisijan junan kärkeen + pollo-workerin julkaisu.
+
+## TILA: JULKAISIJA SONNET 5.5 HIGH (KOE) (28.9.2026 klo 22.11)
+
+Omistaja 28.9. klo 22.11: Julkaisija vaihdettu valikosta Sonnet 5.5:een (effort high), nollattu 22.04 (luovutus julkaisija-luovutus-20260928 939761106). Päätoimittaja arvioi 29.9. illalla: junan läpimeno, virheet, TF-viennit; jos heikompi, takaisin Opukselle.
