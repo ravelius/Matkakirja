@@ -78,11 +78,16 @@ export const CUPOLA_KUVAT = Object.freeze({
    * valmiiksi rajattu tumma ohjaamo pyöreällä kattoikkunalla, sen alla hyvin heikko lasi ja päällä kolme kapeaa
    * reunavaloa (luode, koillinen, lounas). Ulko-osia ei ole. a = keskitetty (oletus), b = hieman vino.
    */
+  /*
+   * Linssisepän jälkikäsittely natiivin kanssa samaksi (29.9.2026, "pehmea-umpi"): ohjaamon alfa ≥ 240 → 255 (maa
+   * kuulsi 245–254-alfaisen metallin läpi; Natiivisepän juurisyy), kevyt sumennus ~2 näyttö-px, reunavalot huippuunsa.
+   */
   'cupola3-a': {
     juuri: 'https://media.matkakirja.app/karttanostot/20260928/',
     malli: 3,
-    kerrokset: [['heijastus', 'iss-cupola3-a-glass-'], ['kehys', 'iss-cupola3-a-cockpit-'],
-      ['valo-nw', 'iss-cupola3-a-sun-nw-'], ['valo-ne', 'iss-cupola3-a-sun-ne-'], ['valo-sw', 'iss-cupola3-a-sun-sw-']],
+    kerrokset: [['heijastus', 'iss-cupola3-a-pehmea-umpi-glass-'], ['kehys', 'iss-cupola3-a-pehmea-umpi-cockpit-'],
+      ['valo-nw', 'iss-cupola3-a-pehmea-umpi-sun-nw-'], ['valo-ne', 'iss-cupola3-a-pehmea-umpi-sun-ne-'],
+      ['valo-sw', 'iss-cupola3-a-pehmea-umpi-sun-sw-']],
   },
   'cupola3-b': {
     juuri: 'https://media.matkakirja.app/karttanostot/20260928/',
@@ -731,6 +736,7 @@ export function luoIssKyytiNakyma({
       kuvatHaettu = true;
       const osoitteet = cupolanOsoitteet(ikkuna.innerWidth ?? 390, ikkuna.innerHeight ?? 844);
       cupola.dataset.malli = String(CUPOLA_KUVAT[CUPOLA_VERSIO]?.malli ?? 2);
+      cupola.dataset.koko = cupolanKoko(ikkuna.innerWidth ?? 390, ikkuna.innerHeight ?? 844, CUPOLA_KUVAT[CUPOLA_VERSIO]?.malli ?? 2);
       for (const { laji, osoite } of osoitteet) {
         const el = doc.createElement('div');
         el.className = `iss-kyyti-${laji}${laji.startsWith('valo-') ? ' iss-kyyti-valo' : ''}`;

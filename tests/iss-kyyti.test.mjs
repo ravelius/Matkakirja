@@ -174,8 +174,8 @@ test('Cupola 3 natiivin mukaan (c2645317): kuva ja kääntö laitteen muodosta, 
   assert.deepEqual(cupola3Kuva(1366, 1024), { ipad: true, kaanna: false });
   const o = cupolanOsoitteet(393, 852);
   assert.deepEqual(o.map((k) => k.laji), ['heijastus', 'kehys', 'valo-nw', 'valo-ne', 'valo-sw']);
-  assert.match(o[1].osoite, /karttanostot\/20260928\/iss-cupola3-a-cockpit-iphone-1290x2796\.png$/);
-  assert.match(cupolanOsoitteet(1366, 1024)[4].osoite, /iss-cupola3-a-sun-sw-ipad-2732x2048\.png$/);
+  assert.match(o[1].osoite, /karttanostot\/20260928\/iss-cupola3-a-pehmea-umpi-cockpit-iphone-1290x2796\.png$/);
+  assert.match(cupolanOsoitteet(1366, 1024)[4].osoite, /iss-cupola3-a-pehmea-umpi-sun-sw-ipad-2732x2048\.png$/);
   // Aurinko kaakossa → luoteen reuna loistaa (valo lasin läpi vastapuolelle); suoraan edessä ei reunavaloa.
   const [nw, ne, sw] = cupola3Valot(Math.SQRT1_2, -Math.SQRT1_2);
   assert.equal(+nw.toFixed(6), 1);
