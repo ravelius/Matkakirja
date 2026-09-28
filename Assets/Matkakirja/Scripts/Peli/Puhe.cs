@@ -886,6 +886,15 @@ namespace Matkakirja.Natiivi
                 {
                     if (lahde.isPlaying && lahde.clip == klippi) soi = Mathf.Max(soi, lahde.time);
                     yield return null;
+                    // OHIMENEVÄ PYSÄHDYS (omistaja 1.0.39: "noin 15 s päästä hyppää alkuun ja aloittaa uudestaan"; mitattu
+                    // FB234D08 alkumittarilla): pakatun mp3-klipin isPlaying on välillä yhden ruudun epätosi kesken soiton,
+                    // soittokohta tallessa. Se ei ole loppu eikä katkos: odotetaan, jatkuuko soitto itsestään (≤ 0,25 s).
+                    if (oma == tunnus && !lahde.isPlaying && !tauolla && lahde.clip == klippi && lahde.time > 0f)
+                    {
+                        float odotus = Time.unscaledTime;
+                        while (oma == tunnus && !lahde.isPlaying && !tauolla && Time.unscaledTime - odotus < 0.25f) yield return null;
+                        if (lahde.isPlaying) Kirjaa($"pala {PalaNyt} ohimenevä pysähdys {soi:0.0} s ({(Time.unscaledTime - odotus) * 1000:0} ms), soitto jatkui");
+                    }
                 }
                 if (oma != tunnus) yield break;
                 // HÄNTÄ EI OLE KATKOS (omistaja 28.9.2026 klo 17.5x: "striimiluenta alkaa kesken lauseen … hyppää"): xAI-mp3:n
@@ -896,8 +905,10 @@ namespace Matkakirja.Natiivi
                 if (!synteesi || kesto <= 0f || soi >= kesto - HantaVara || jatkoja >= 3 || lahde.clip != klippi) break;
                 PalojaJatkettu++;
                 Kirjaa($"pala {PalaNyt} pysähtyi kesken {soi:0.0}/{kesto:0.0} s: jatketaan");
-                lahde.time = Mathf.Min(soi, Mathf.Max(0f, kesto - 0.05f));
+                // Kohta asetetaan Play():n JÄLKEEN: Play() aloittaa klipin alusta, joten ennen sitä asetettu time hukkui ja
+                // "jatko" soitti palan alusta uudelleen (mitattu: 0,3/7,8 s → 0,000).
                 lahde.Play();
+                lahde.time = Mathf.Min(soi, Mathf.Max(0f, kesto - 0.05f));
                 yield return null;
             }
             if (synteesi)
