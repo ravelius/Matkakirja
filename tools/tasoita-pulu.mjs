@@ -26,8 +26,13 @@
  * Tämän jälkeen js/liviapuhe.js LIVIAN_VERSIOIDUT_AANET osoitetaan
  * tasoitettuihin avaimiin (tulostuu ajon lopuksi).
  *
- *   zsh -c 'source ~/.matkakirja-avaimet-koodaus.zsh; node tools/tasoita-pulu.mjs [--kuiva] ateena-3 iss-a-1 …'
+ *   zsh -c 'source ~/.matkakirja-avaimet-koodaus.zsh; source ~/.zshrc; node tools/tasoita-pulu.mjs [--kuiva] ateena-3 iss-a-1 …'
  *   (ilman repliikkejä: kaikki eleven_v4-erien äänitteet taulukosta)
+ *   … node tools/tasoita-pulu.mjs [--kuiva] --era pulu-<20 hex>
+ *   (uuden erän KAIKKI eleven_v4-äänitteet sen valmiista kuitista
+ *   aanet/pulu/kuitit/<erä>.completed.json — ajetaan heti generoi-pulu.mjs:n
+ *   jälkeen, ennen kuin taulukkoon kirjoitetaan mitään; tuloste on
+ *   LIVIAN_VERSIOIDUT_AANET-rivit tasoitettuihin avaimiin)
  */
 import { execFileSync, spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -40,7 +45,18 @@ export const PULU_TASO_LUFS = -17.2;
 export const PULU_LIMITTERI = 0.97;
 export const PULU_TASOITUS_BITTIVIRTA = '192k';
 /** eleven_v4-erät (tools/generoi-pulu.mjs, 28.9.2026). */
-export const V4_ERAT = Object.freeze(['pulu-3eaad28481f0aa2ef5a9', 'pulu-16f2c04e9e19bef41d64']);
+export const V4_ERAT = Object.freeze([
+  'pulu-3eaad28481f0aa2ef5a9', 'pulu-16f2c04e9e19bef41d64',
+  // Koko repertuaari v4:llä 28.9.2026 ilta (75 repliikkiä, 8 erää à ≤ 10).
+  'pulu-06b888b9453946cfbda6', 'pulu-12b15e8a504a9fcb2e3a', 'pulu-4fa1c5cfc51373a11429',
+  'pulu-62d4bea1517eaa83e5a4', 'pulu-64d79ec3f9a10726f753', 'pulu-84129c929509d868a32a',
+  'pulu-8faeb74edfc3ba66e61a', 'pulu-fa795db119f56b6ef97e',
+  // kosice-4 ja valletta-4 lyhennettyinä (Päätoimittaja 28.9.2026).
+  'pulu-1cb15ada696ec6e61ba5',
+  // [softly]/[whispers] pois, yksi tunnetagi per virke (omistaja 28.9.2026 ilta, 50 repliikkiä).
+  'pulu-74911d15fbaeffbff815', 'pulu-9a4fc6e2a4f7df10af43', 'pulu-a1229abe9152f1744b40',
+  'pulu-ad4d6fcc55d7dd86e8ac', 'pulu-c1c766718b577665ab22',
+]);
 const MEDIA = 'https://media.matkakirja.app/';
 
 /** Tasoitetun äänitteen avain: sama kansio, alikansio tasoitettu/. */
@@ -68,10 +84,25 @@ function r2(args) {
 async function main() {
   const argv = process.argv.slice(2);
   const kuiva = argv.includes('--kuiva');
-  const pyydetyt = argv.filter((a) => !a.startsWith('--'));
-  const rivit = Object.entries(LIVIAN_VERSIOIDUT_AANET)
-    .filter(([, avain]) => V4_ERAT.some((era) => avain.includes(`/${era}/`)))
-    .filter(([nimi]) => !pyydetyt.length || pyydetyt.includes(nimi));
+  const eraIndeksi = argv.indexOf('--era');
+  const era = eraIndeksi >= 0 ? argv[eraIndeksi + 1] : null;
+  const pyydetyt = argv.filter((a, i) => !a.startsWith('--') && i !== eraIndeksi + 1);
+  let rivit;
+  if (era) {
+    if (!/^pulu-[0-9a-f]{20}$/.test(era)) throw new Error(`--era: odotettiin pulu-<20 hex>, saatiin ${era}`);
+    const kuitti = await fetch(`${MEDIA}aanet/pulu/kuitit/${era}.completed.json`);
+    if (!kuitti.ok) throw new Error(`${era}: valmista kuittia ei löydy (HTTP ${kuitti.status})`);
+    const { utterances = [] } = await kuitti.json();
+    // Vain eleven_v4: v3-äänet ovat jo pelin tasossa, eikä niitä kosketa.
+    rivit = utterances.filter((u) => u.model === 'eleven_v4' && u.finalObjectKey)
+      .map((u) => [u.utteranceKey, u.finalObjectKey])
+      .filter(([nimi]) => !pyydetyt.length || pyydetyt.includes(nimi));
+  } else {
+    rivit = Object.entries(LIVIAN_VERSIOIDUT_AANET)
+      .filter(([, avain]) => V4_ERAT.some((e) => avain.includes(`/${e}/`)))
+      .filter(([, avain]) => !avain.includes('/tasoitettu/'))
+      .filter(([nimi]) => !pyydetyt.length || pyydetyt.includes(nimi));
+  }
   if (!rivit.length) throw new Error('ei tasoitettavia (onko taulukko jo tasoitettu?)');
   const kansio = mkdtempSync(join(tmpdir(), 'tasoita-pulu-'));
   const kuitti = { tehty: new Date().toISOString(), tavoiteLufs: PULU_TASO_LUFS, limitteri: PULU_LIMITTERI, bittivirta: PULU_TASOITUS_BITTIVIRTA, rivit: [] };
@@ -110,7 +141,8 @@ async function main() {
     r2(['cp', kuittiTiedosto, `s3://${process.env.R2_BUCKET}/${kuittiNimi}`, '--content-type', 'application/json']);
     console.log(`kuitti: ${kuittiNimi}`);
   }
-  console.log(JSON.stringify(Object.fromEntries(kuitti.rivit.map((r) => [r.nimi, r.kohde])), null, 2));
+  // Suoraan LIVIAN_VERSIOIDUT_AANET-tauluun liitettävät rivit.
+  for (const r of kuitti.rivit) console.log(`  '${r.nimi}': '${r.kohde}',`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

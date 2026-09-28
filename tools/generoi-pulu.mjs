@@ -154,6 +154,11 @@ import { FOKUSVIRTA_EDINBURGH } from '../js/packs/fokusvirta-edinburgh.js';
 import { FOKUSVIRTA_FIRENZE } from '../js/packs/fokusvirta-firenze.js';
 import { FOKUSVIRTA_GRANADA } from '../js/packs/fokusvirta-granada.js';
 import { FOKUSVIRTA_KOBENHAVN } from '../js/packs/fokusvirta-kobenhavn.js';
+import { FOKUSVIRTA_BRYSSEL } from '../js/packs/fokusvirta-bryssel.js';
+import { FOKUSVIRTA_LJUBLJANA } from '../js/packs/fokusvirta-ljubljana.js';
+import { FOKUSVIRTA_KOSICE } from '../js/packs/fokusvirta-kosice.js';
+import { FOKUSVIRTA_LUXEMBURG } from '../js/packs/fokusvirta-luxemburg.js';
+import { FOKUSVIRTA_VALLETTA } from '../js/packs/fokusvirta-valletta.js';
 import { FOKUSVIRTA_LISSABON } from '../js/packs/fokusvirta-lissabon.js';
 import { FOKUSVIRTA_LONTOO } from '../js/packs/fokusvirta-lontoo.js';
 import { FOKUSVIRTA_MADRID } from '../js/packs/fokusvirta-madrid.js';
@@ -505,14 +510,8 @@ export const TAGIT = {
     alku: '[proud]',
     kohdat: [['Pöllö luki', '[quickly]']],
   },
-  'avaus-3': {
-    alku: '[warmly]',
-    kohdat: [['vaikka se maanosa', '[excited]']],
-  },
-  'avaus-4': {
-    alku: '[sheepish]',
-    kohdat: [['Ateenasta', '[brightly]']],
-  },
+  'avaus-3': { alku: '[warmly]' },
+  'avaus-4': { alku: '[warmly]', kohdat: [['Ateenasta se alkaa.', '[brightly]']] },
   'avaus-5': { alku: '[reassuring]', kohdat: [['Minä olen vain', '[modestly]']] },
   /*
    * UUSI RYTMI ATEENASSA (omistaja 7.9.2026). Kolme kuplaa: hätääntynyt
@@ -521,23 +520,14 @@ export const TAGIT = {
    * noudattavat PULU PUHUU -ohjetta: elävä ja nopea, ei kaikua alussa —
    * kaiku on kokonaan pois (js/liviapuhe.js LIVIAN_KAIKU).
    */
-  'paljastus-1': {
-    alku: '[squawks]',
-    kohdat: [['Pöllö on matkoilla', '[breathless]'], ['tuuraan häntä', '[reassuring]']],
-  },
+  'paljastus-1': { alku: '[squawks]', kohdat: [['Pöllö on matkoilla, mutta ei hätää, tuuraan häntä sen aikaa.', '[breathless]']] },
   'paljastus-2': {
     alku: '[warmly]',
     kohdat: [['Kuunnellaan', '[curious]']],
   },
-  'paljastus-3': {
-    alku: '[brightly]',
-    kohdat: [['jos meinaat', '[quickly]']],
-  },
-  'mannerivihje-1': {
-    alku: '[casually]',
-    kohdat: [['kerää rahaa', '[helpfully]']],
-  },
-  'lehtivinkki-1': { alku: '[helpfully]', kohdat: [['aarrekysymys', '[excited]']] },
+  'paljastus-3': { alku: '[brightly]' },
+  'mannerivihje-1': { alku: '[casually]' },
+  'lehtivinkki-1': { alku: '[helpfully]' },
   /*
    * EUROOPAN KAUPUNKIREPLIIKIT (omistajan hyväksymät tekstit 7.9.2026,
    * erät 1 ja 2). Yksi rivi per KUPLA, koska jokainen kupla on oma
@@ -551,80 +541,6 @@ export const TAGIT = {
    * pois."*). Numero on varattu (js/liviapuhe.js LIVIAN_VARATTU) eikä
    * sillä ole enää tekstiä, joten sillä ei ole tagejakaan.
    */
-  'sofia-3': {
-    alku: '[brightly]',
-    kohdat: [['Kurkistin', '[curious]'], ['Arvokkuus', '[mischievously]']],
-  },
-  'istanbul-3': {
-    alku: '[brightly]',
-    kohdat: [['Minä', '[mischievously]'], ['Kokeneen', '[warmly]']],
-  },
-  'bukarest-3': {
-    alku: '[brightly]',
-    kohdat: [['Etsin', '[curious]'], ['Muruset', '[mischievously]']],
-  },
-  'sarajevo-3': {
-    alku: '[softly]',
-    kohdat: [
-      ['Minun piti vain piipahtaa', '[curious]'],
-      ['Yritin naputtaa nokalla', '[mischievously]'],
-    ],
-  },
-  'budapest-3': {
-    alku: '[brightly]',
-    kohdat: [['Höyry', '[curious]'], ['Odotin', '[mischievously]']],
-  },
-  'wien-3': {
-    alku: '[softly]',
-    kohdat: [['Pujottelin', '[brightly]'], ['Isoisä', '[warmly]']],
-  },
-  'praha-3': {
-    alku: '[curious]',
-    kohdat: [['Minä', '[brightly]'], ['Kun', '[mischievously]']],
-  },
-  'krakova-3': { alku: '[curious]', kohdat: [['Kirjekyyhky', '[brightly]']] },
-  'varsova-3': { alku: '[curious]', kohdat: [['Kaupunki', '[warmly]']] },
-  'pietari-3': { alku: '[curious]', kohdat: [['kirjekyyhky', '[mischievously]']] },
-  'moskova-3': { alku: '[curious]', kohdat: [['kuuluisuus', '[mischievously]']] },
-  'kiova-3': { alku: '[curious]', kohdat: [['Reittiinsä', '[softly]']] },
-  'odessa-3': { alku: '[softly]' },
-  'helsinki-3': {
-    alku: '[curious]',
-    kohdat: [
-      ['Minä kokeilin apostolien näköalaa', '[brightly]'],
-      ['Lokki ehti ensin', '[mischievously]'],
-      ['Se katsoi minua', '[softly]'],
-    ],
-  },
-  'tampere-3': {
-    alku: '[brightly]',
-    kohdat: [
-      ['Seurasin leipäkoria', '[curious]'],
-      ['Kori kääntyi', '[mischievously]'],
-    ],
-  },
-  'tallinna-3': {
-    alku: '[curious]',
-    kohdat: [
-      ['Minä odotin portaalla', '[mischievously]'],
-      ['Yksi lapsi jakoi', '[warmly]'],
-      ['Ehkä isoisän lääkkeessä', '[softly]'],
-    ],
-  },
-  'riika-3': {
-    alku: '[softly]',
-    kohdat: [
-      ['Laskeuduin hetkeksi', '[curious]'],
-      ['Kun kuoro aloitti', '[softly]'],
-    ],
-  },
-  'vilna-3': {
-    alku: '[curious]',
-    kohdat: [
-      ['Nousin ikkunan korkeudelle', '[brightly]'],
-      ['Tähtitieteilijät lähtivät', '[softly]'],
-    ],
-  },
   // Teksti muuttui 8.9.2026: alusta poistui toistuva "Kääk.", joten
   // korostus on nyt lauseen lopussa eikä sen alussa.
   'sofia-5': { alku: '[helpfully]' },
@@ -645,45 +561,21 @@ export const TAGIT = {
    * ensimmäistä paikkaa ovat varattuja), ja se on luennan jälkeinen
    * reipas huomio — sama alkutagi kuin muiden kaupunkien kommenteilla.
    */
-  'ateena-3': {
-    alku: '[curious]',
-    kohdat: [
-      ['Etsin puutarhasta varjoa', '[mischievously]'],
-      ['Siinä unohtui varjo hetkeksi', '[brightly]'],
-    ],
-  },
-  'kreeta-3': {
-    alku: '[brightly]',
-    kohdat: [['Väitin', '[mischievously]'], ['helpotuksesta', '[warmly]']],
-  },
-  'sisilia-3': {
-    alku: '[curious]',
-    kohdat: [['Kiersin', '[brightly]'], ['Katon', '[softly]']],
-  },
-  'islanti-3': {
-    alku: '[brightly]',
-    kohdat: [['Löysin', '[softly]'], ['Hetkeä', '[mischievously]']],
-  },
-  'alpit-3': {
-    alku: '[softly]',
-    kohdat: [['Lensin', '[curious]'], ['En', '[softly]']],
-  },
-  'lappi-3': {
-    alku: '[brightly]',
-    kohdat: [
-      ['Seurasin Ounasjokea', '[curious]'],
-      ['Lähempänä ne olivat heijastuksia', '[mischievously]'],
-      ['Hyvä etten yrittänyt', '[softly]'],
-    ],
-  },
-  'tromssa-3': {
-    alku: '[curious]',
-    kohdat: [
-      ['Löysin laiturilta simpukankuoren', '[brightly]'],
-      ['Tyhjä.', '[whispers]'],
-      ['Hetken mietin', '[softly]'],
-    ],
-  },
+  /*
+   * VIISI MYÖHEMMIN LISÄTTYÄ FOKUSVIRTAKAUPUNKIA (28.9.2026, v4-erä):
+   * kommentti oli pelissä, mutta äänite puuttui. Maltilliset tagit kuten
+   * muilla (yksi alku + yksi käänne), ei pinottuja tunteita.
+   */
+  'bryssel-3': { alku: '[amused]', kohdat: [['Nykyään', '[chuckles]']] },
+  'ljubljana-3': { alku: '[proud]' },
+  'kosice-3': { alku: '[curious]', kohdat: [['Isoisäsi aikana', '[thoughtfully]']] },
+  'luxemburg-3': { alku: '[brightly]' },
+  'valletta-3': { alku: '[proud]' },
+  'bryssel-4': { alku: '[mischievously]', kohdat: [['Minä olen nähnyt', '[amused]']] },
+  'ljubljana-4': { alku: '[curious]', kohdat: [['Isoisäsi aikana se oli Krainin pääkaupunki, ja saksaksi Laibach.', '[warmly]']] },
+  'kosice-4': { alku: '[brightly]', kohdat: [['Sen pääkatu', '[warmly]']] },
+  'luxemburg-4': { alku: '[warmly]', kohdat: [['Minä näen kansallissymbolin, jota kukaan ei enää halua purkaa mistään hinnasta.', '[proud]']] },
+  'valletta-4': { alku: '[curious]', kohdat: [['Nykyään', '[amused]']] },
   /*
    * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta). Yksi
    * puhekupla kussakin numerolla 3. Venetsian kuvakaruselli ei lisää
@@ -695,95 +587,6 @@ export const TAGIT = {
    * numerolla 4, ja nyt jokaisella on yksi kupla kuten muillakin. Numero
    * 4 ei siis ole enää yhdelläkään näistä kaupungeista.
    */
-  'lontoo-3': {
-    alku: '[curious]',
-    kohdat: [['Lensin', '[brightly]'], ['Ihmiset', '[softly]']],
-  },
-  'dublin-3': {
-    alku: '[curious]',
-    kohdat: [['Nousin', '[brightly]'], ['Minun', '[mischievously]']],
-  },
-  'edinburgh-3': {
-    alku: '[curious]',
-    kohdat: [['Lensin', '[brightly]'], ['Täällä', '[mischievously]']],
-  },
-  'pariisi-3': {
-    alku: '[curious]',
-    kohdat: [['Minä', '[brightly]'], ['Sisälläkin', '[mischievously]']],
-  },
-  'marseille-3': {
-    alku: '[curious]',
-    kohdat: [
-      ['Minä erotan Vieux-Portin', '[warmly]'],
-      ['Lokit tuntevat jokaisen pöydän', '[mischievously]'],
-      ['Minä vasta harjoittelen', '[softly]'],
-    ],
-  },
-  'lissabon-3': {
-    alku: '[brightly]',
-    kohdat: [['Seurasin', '[curious]'], ['Kun', '[mischievously]']],
-  },
-  'madrid-3': {
-    alku: '[curious]',
-    kohdat: [['Minä', '[warmly]'], ['Se', '[mischievously]'], ['Velázquez', '[softly]']],
-  },
-  'barcelona-3': {
-    alku: '[curious]',
-    kohdat: [['Laskeuduin', '[brightly]'], ['Minulle', '[mischievously]'], ['Hyvin', '[softly]']],
-  },
-  'granada-3': {
-    alku: '[curious]',
-    kohdat: [['Laskeuduin', '[softly]'], ['Kerrankin', '[mischievously]']],
-  },
-  'sevilla-3': {
-    alku: '[curious]',
-    kohdat: [['Näin', '[brightly]'], ['Ne', '[softly]']],
-  },
-  'amsterdam-3': {
-    alku: '[curious]',
-    kohdat: [['Saavuin', '[brightly]'], ['En', '[mischievously]']],
-  },
-  'berliini-3': {
-    alku: '[curious]',
-    kohdat: [['Nousin', '[brightly]'], ['Alhaalla', '[softly]']],
-  },
-  'venetsia-3': {
-    alku: '[brightly]',
-    kohdat: [
-      ['Minä lennän nykyään', '[warmly]'],
-      ['Yhden tutun takia', '[whispers]'],
-      ['Hän vain sattui', '[mischievously]'],
-      ['No, ehkä minä vähän odotin', '[softly]'],
-    ],
-  },
-  'firenze-3': {
-    alku: '[curious]',
-    kohdat: [['Kiersin', '[brightly]'], ['Se', '[mischievously]'], ['Minä', '[softly]']],
-  },
-  'rooma-3': {
-    alku: '[curious]',
-    kohdat: [['Minä', '[brightly]'], ['Ihmiset', '[mischievously]']],
-  },
-  'dubrovnik-3': {
-    alku: '[brightly]',
-    kohdat: [['Kun', '[curious]'], ['Sitten', '[mischievously]']],
-  },
-  'tukholma-3': {
-    alku: '[curious]',
-    kohdat: [
-      ['Minä nousin Monteliusvägenin', '[brightly]'],
-      ['Neljäntoista laskeminen', '[mischievously]'],
-    ],
-  },
-  'oslo-3': {
-    alku: '[brightly]',
-    kohdat: [['Hämmästyin,', '[surprised]'], ['Kerrankin', '[warmly]']],
-  },
-  'bergen-3': {
-    alku: '[brightly]',
-    kohdat: [['Suojasin', '[curious]'], ['Kirje', '[mischievously]']],
-  },
-  'kobenhavn-3': { alku: '[brightly]', kohdat: [['Orkesterin', '[mischievously]']] },
   /*
    * ASTRONAUTIN KAMERA JA ISS-KYYTI (päätoimittajan käsikirjoitus
    * 28.9.2026, eleven_v4). Tunne- ja tehostetagit käsikirjoituksen
@@ -793,7 +596,7 @@ export const TAGIT = {
    * (js/linssit/pulu-iss.js) eikä sille ole tagia.
    */
   'iss-a-1': { alku: '[wings flapping] [excited]', kohdat: [['Tämä on Astronautin kamera', '[proud]']] },
-  'iss-a-2': { alku: '[whispers]', kohdat: [['Minä en ole koskaan', '[pause]']] },
+  'iss-a-2': { alku: '[mischievously]', kohdat: [['Minä en ole koskaan lentänyt niin korkealle. Setäni väittää lentäneensä, mutta setä väittää paljon.', '[pause]']] },
   'iss-b-1': { alku: '[curious]' },
   'iss-b-2': {
     alku: '[excited]',
@@ -809,7 +612,7 @@ export const TAGIT = {
   },
   'iss-d-1': { alku: '[radio static] [excited]' },
   'iss-d-2': { alku: '[proud]', kohdat: [['Minä en ehtisi', '[laughs]']] },
-  'iss-d-3': { alku: '[whispers]', kohdat: [['Tai Lyon.', '[pause]']] },
+  'iss-d-3': { alku: '[mischievously]', kohdat: [['Tai Lyon. Yöllä kaikki kaupungit näyttävät kultaisilta.', '[pause]']] },
   'iss-d-4': { alku: '[warmly]', loppu: '[wings flapping]' },
 };
 
@@ -884,6 +687,19 @@ export function ilmanTageja(teksti) {
  * @param {{alku?:string, kohdat?:Array<[string,string]>, loppu?:string}} tagit
  * @returns {string} mallille lähtevä teksti
  */
+/*
+ * KIELLETYT TAGIT (omistaja 28.9.2026 Päätoimittajan kautta: "pulu
+ * kuulostaa siinä liian surulliselta. tuo softly ei vain toimi"). v4
+ * laskee [softly]-virkkeen tasoa 4–9 dB ja säveltä 2–5 sävelaskelta, joten
+ * Pulu kuulosti alakuloiselta; [whispers] vie saman suunnan. Korvaavat:
+ * [warmly] herkkiin ja lämpimiin kohtiin, [amused] kevennyksiin,
+ * [mischievously] kuiskauksen tilalle. Samalla sääntö: yksi tunnetagi per
+ * virke (ääniefektit kuten [pause] ja [wings flapping] eivät ole tunnetageja).
+ */
+export const PULU_KIELLETYT_TAGIT = Object.freeze(['[softly]', '[whispers]']);
+export const PULU_EFEKTITAGIT = Object.freeze(['[wings flapping]', '[pause]', '[long-pause]', '[whoosh]', '[tap]',
+  '[radio static]', '[sigh]', '[gasp]', '[laughs]', '[chuckles]', '[squawks]']);
+
 export function puhemuoto(teksti, tagit = {}) {
   const alkuperainen = String(teksti ?? '').trim();
   let ulos = alkuperainen;
@@ -905,6 +721,9 @@ export function puhemuoto(teksti, tagit = {}) {
   if (tagit.loppu) ulos = `${ulos} ${tagit.loppu}`;
   if (ilmanTageja(ulos) !== alkuperainen) {
     throw new Error(`tagitus muutti repliikin tekstiä: "${alkuperainen.slice(0, 60)}…"`);
+  }
+  for (const kielletty of PULU_KIELLETYT_TAGIT) {
+    if (ulos.includes(kielletty)) throw new Error(`${kielletty} on poistettu Pulun tageista: "${alkuperainen.slice(0, 60)}…"`);
   }
   return ulos;
 }
@@ -968,6 +787,12 @@ const KAUPUNKIEN_PAKKAUKSET = {
   oslo: FOKUSVIRTA_OSLO,
   bergen: FOKUSVIRTA_BERGEN,
   kobenhavn: FOKUSVIRTA_KOBENHAVN,
+  // Myöhemmin lisätyt viisi (28.9.2026): kommentti oli pelissä ilman äänitettä.
+  bryssel: FOKUSVIRTA_BRYSSEL,
+  ljubljana: FOKUSVIRTA_LJUBLJANA,
+  kosice: FOKUSVIRTA_KOSICE,
+  luxemburg: FOKUSVIRTA_LUXEMBURG,
+  valletta: FOKUSVIRTA_VALLETTA,
 };
 
 /**

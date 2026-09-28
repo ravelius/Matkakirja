@@ -7211,6 +7211,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BIH: {
     'Banja Luka': {
       lyhyt: 'Banja Lukan keskustan halki virtaa Vrbas-joki, jonka rannalla seisoo Kastelin linnoitus ja jonka koskissa lasketaan kumiveneillä.',
+      pitka: `Banja Luka kätkee sydämeensä 1500-luvun arkkitehtuurin helmen: Ferhadija-moskeijan, jonka rakennutti Gazi Ferhad-paša Sokolović vuonna 1579. Suunnittelun uskotaan syntyneen legendaarisen arkkitehti Mimar Sinanin oppilaiden käsissä, ja 43 metriä kohoava minareetti hallitsee yhä kaupunkikuvaa geometrisine koristeineen. Pihapiiriin kuuluu turkkilaisbarokkia henkivä suihkulähde eli šadrvan sekä kolme perhehautakammiota, turbea. Aikanaan kompleksin ylläpitoon käytettiin yli 30 kylän tuloja, mikä teki siitä paljon muutakin kuin rukoushuoneen: torin, hammamin ja koko yhteisön kohtaamispaikan. Tänään moskeija seisoo yhä keskellä kaupunkia avoinna kaikille, jotka haluavat nähdä ottomaanikauden käsityötaidon huipentuman.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-banja-luka-2dea50c9.jpg",
@@ -7225,6 +7226,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bijeljina: {
       lyhyt: 'Bijeljinan laitaan on koottu Stanišićin etnokylä, jonne on tuotu vanhoja puutaloja ja myllyjä eri puolilta entistä Jugoslaviaa.',
+      pitka: `Bijeljinan ympärillä leviää Semberijan tasanko, yksi koko alueen tuottavimmista maatalousmaisemista. Peltoaukeat tuottavat vuosittain kymmeniätuhansia tonneja paprikaa, tomaattia ja erityisesti kaalia, jolle seutu on tunnettu ilmaston ja hedelmällisen maaperän ansiosta. Viljasiilot käsittelevät vuosittain yli 300 000 tonnia viljaa ja öljykasveja, ja maidontuotantokin lasketaan kymmenissä miljoonissa litroissa. Tasanko kattaa merkittävän osan koko alueen viljelysmaasta, ja se näkyy myös maisemassa: loputtomilta tuntuvat peltoaukeat ulottuvat horisonttiin asti. Syksyisin sadonkorjuu värittää koko Semberijan kultaisen ruskeaksi.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bijeljina-025edb80.jpg",
@@ -7239,6 +7241,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bosnian Podrinje': {
       lyhyt: 'Goražden lähellä toimi 1519–1523 nykyisen Bosnia ja Hertsegovinan ensimmäinen kirjapaino, jossa painettiin kirkkoslaavinkielisiä kirjoja.',
+      pitka: `Goraždeen halkoo Drina-joki, jonka ympärille koko Podrinjen seutu on rakentunut – nimikin tarkoittaa suoraan 'Drinan vartta'. Joen kirkas vesi virtaa syvien vuorten välistä, ja rannoilla harrastetaan koskimelontaa, kalastusta, pyöräilyä ja vaellusta ympäri vuoden. Kanjonin jyrkät rinteet tarjoavat näköalapaikkoja, joista joen mutkittelua voi seurata kilometrien päähän. Osa Drinan alkuvedestä syntyy kauempana etelässä kahden vuoristojoen yhtyessä, mikä tekee koko vesistöstä yhden alueen vaikuttavimmista luontokohteista. Goraždessa luonto ja hidas jokielämä kohtaavat sopivassa tahdissa retkeilijälle.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bosnian-podrinje-5b46aaf7.jpg",
@@ -7253,6 +7256,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Brčko Distrikt': {
       lyhyt: 'Brčko on Sava-joen satamakaupunki, ja piirillä on oma pormestarinsa, parlamenttinsa ja hallintonsa.',
+      pitka: `Brčkon satamakaupungin katukuva syntyi pitkälti Itävalta-Unkarin hallintokaudella 1878-1918, jolloin kaupunkiin rakennettiin osa Bosnian vaikuttavimmasta arkkitehtuurista. Kaupungintalo vuodelta 1892, arkkitehti Ćiril Metod Ivekovićin suunnittelema, yhdistelee mauriaishenkisiä koristeaiheita keskieurooppalaiseen rakennustapaan. Trg Mladih, kaupungin keskusaukio, on reunustettu 1800-luvun lopun rakennuksilla, jotka kertovat ajan vaurastumisesta. Sava-joen satama teki Brčkosta jo 1400-luvulta lähtien merkittävän luumujen ja lihan vientipaikan, ja kaupunki tunnettiinkin pitkään erityisesti kuivattujen luumujen kaupasta. Brčkossa ottomaani- ja keskieurooppalaiset vaikutteet limittyvät kadunkulmissa tavalla, joka ei toistu missään muualla maassa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-brcko-distrikt-bf4e5af3.jpg",
@@ -7267,6 +7271,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Central Bosnia': {
       lyhyt: 'Jajcen keskustassa Pliva-joki syöksyy vesiputouksena Vrbakseen, ja putouksen yllä kohoaa vanhan linnoituksen muuri.',
+      pitka: `Travnikin vanhan kaupungin sydämessä kumpuaa Plava Voda, karstilähde, joka pulppuaa esiin suoraan kalliorotkosta linnan juurelta. Lähteestä syntyy lyhyt mutta kirkasvetinen joki, joka on kaupungin tärkein juomavesilähde vielä tänäänkin ja jonka ympäristö on nimetty kansallismuistomerkiksi. Ylempänä kohoaa Vlašićin tunturi, lähes 2000 metriin nouseva vuoristo, joka tunnetaan sekä talvihiihdosta että perinteisestä lampaanmaidosta valmistetusta suolajuustosta. Juustoa on valmistettu tunturin laidunmailla sukupolvien ajan, ja sen maku kertoo karusta mutta anteliaasta ylängöstä. Travnikissa vesi ja vuoristo kohtaavat tavalla, joka tekee kaupungista yhden Keski-Bosnian kiinnostavimmista pysähdyspaikoista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-central-bosnia-0640cb43.jpg",
@@ -7281,6 +7286,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Doboj: {
       lyhyt: 'Dobojn linnoitus valvoo mäeltä Bosna-joen laaksoa, ja kaupunki on maan rautateiden tärkeä risteysasema.',
+      pitka: `Vain parinkymmenen kilometrin päässä Dobojista, Teslićin kylpylässä Banja Vrućicassa, on kylpenyt väkeä jo antiikin roomalaisista lähtien. Lähteiden hiilihapollinen, lievästi hapan vesi pulppuaa maasta noin 32-asteisena, ja sitä on perinteisesti käytetty sydän- ja verisuonivaivojen sekä reuman hoitoon. Kylpylä sijaitsee Usora-joen laaksossa, Borjan ja Vučja planinan vuorten lehti- ja havumetsien keskellä, mikä tekee ympäristöstä rauhoittavan riippumatta siitä hakeeko hoitoa vai vain lepoa. Nykyään alueella toimii neljän hotellin kokonaisuus yli tuhannella vuodepaikalla, mikä tekee siitä koko maan suurimman lämminvesikylpylän. Doboj tunnetaan linnoituksestaan, mutta aivan sen kupeessa lymyää tämä vuosisatainen hyvinvoinnin keidas.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-doboj-81d21bee.jpg",
@@ -7295,6 +7301,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Foča': {
       lyhyt: 'Sutjeskan kansallispuistossa kasvaa Perućican aarniometsä, ja sen reunalla kohoaa Maglić, Bosnia ja Hertsegovinan korkein huippu.',
+      pitka: `Fočan liepeillä Tara-joki on kaivertanut yhden Euroopan syvimmistä kanjoneista, paikan, jota kutsutaan usein 'Euroopan kyyneleeksi' sen kirkkaan, juomakelpoisen veden vuoksi. Jyrkät kalliot kohoavat yli 1300 metrin korkeuteen joen yllä, ja koskimelojat kokevat matkalla noin 50 koskea vaikeusasteiden 2-4 välillä. Kaupungissa itsessään seisoo Aladža-moskeija vuodelta 1549, ensimmäinen puhtaasti klassista ottomaanityyliä edustava moskeija koko Bosniassa, rakennettu Mimar Sinanin lähipiirin toimesta. Sen värikäs sisäkoristelu on antanut sille lempinimen 'kirjava moskeija', ja se lasketaan yhdeksi maan arvokkaimmista ottomaaniajan rakennusmuistomerkeistä. Fočassa villi luonto ja vuosisatainen käsityötaito kohtaavat samalla kaupunkiseudulla.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-foca-e31fb6a7.jpg",
@@ -7309,6 +7316,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Herzegovina-Neretva': {
       lyhyt: 'Blagajssa Buna-joki pulppuaa kallion alta yhtenä Euroopan suurimmista lähteistä, ja sen partaalla seisoo 1500-luvun dervissitalo.',
+      pitka: `Hertsegovinan viinimaisema keskittyy Čitlukin ympärille kohoavalle Brotnjon karstiylängölle, jota kutsutaan koko Bosnia ja Hertsegovinan viininviljelyn kehdoksi. Kuiva, kalkkikivinen maaperä ja Mostaria ympäröivien vuorten suojaama, pitkiä ja kuumia kesiä suosiva ilmasto ovat tehneet alueesta ihanteellisen viinitarhoille jo yli 2000 vuoden ajan, illyyrien ajoista lähtien. Lähes jokaisella Brotnjon perheellä on oma pieni viinitarha ja kellari, ja perinne on joissakin suvuissa jatkunut yli 300 vuotta polvesta toiseen. Alueen omat rypäleet, valkoinen Žilavka ja punainen Blatina, kasvavat parhaiten juuri tässä punaisessa, hyvin vettä läpäisevässä maaperässä. Viiniä tarjoillaan perinteisesti kotileivän, kuivatun lihan, juuston ja oliivien kanssa, Hertsegovinan omalla pöydällä.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-herzegovina-neretva-3216829f.jpg",
@@ -7323,6 +7331,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Posavina: {
       lyhyt: 'Posavina on maan pienin kantoni, vain 331 neliökilometriä, ja sen pohjoisrajana virtaa Sava-joki.',
+      pitka: `Posavina on pinta-alaltaan koko alueen pienin kantoni, mutta sen tasainen, Saava-joen kerrostama maaperä on poikkeuksellisen hedelmällistä. Joki on vuosituhansien saatossa jättänyt rantamaille paksuja tulva-alueen kerrostumia, joiden ansiosta seutu on tunnettu viljavana maatalousalueena. Pääkaupunki Orašje ja alueen suurin kaupunki Odžak sijaitsevat molemmat aivan Saavan varrella, Kroatian rajan tuntumassa. Talous nojaa edelleen vahvasti maatalouteen sekä pieniin ja keskisuuriin yrityksiin, ja peltoaukeat vuorottelevat joen mutkien kanssa koko kantonin matkalta. Pienestä koostaan huolimatta Posavina tarjoaa tiiviin läpileikkauksen Bosnian pohjoisen jokimaiseman elämään.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-posavina-10f13696.jpg",
@@ -7337,6 +7346,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Sarajevo: {
       lyhyt: 'Sarajevon Baščaršijan puinen Sebilj-kaivo on vanhankaupungin tunnus, ja tarun mukaan siitä juonut palaa kaupunkiin.',
+      pitka: `Sarajevon laidalla, Ilidžan kaupunginosassa, Bosna-joki syntyy yhtäkkiä tyhjästä: kymmenet lähteet pulppuavat esiin Igman-vuoren juurelta ja muodostavat Vrelo Bosnen puiston saarineen ja joutsenlampineen. Kolmen ja puolen kilometrin pituinen puistokuja Velika Aleja istutettiin jo vuonna 1892, ja sen kastanja- ja plataanirivistöjä kuljetaan yhä fiakerilla – avonaisella hevosvaunulla, samanlaisella kuin aikoinaan Wienin ja Budapestin kaduilla. Paikalliset tulevat tänne kävelemään, pyöräilemään ja katsomaan lintuja iltaisin, kaukana kaupungin vilskeestä. 603 hehtaarin suojeltu luonnonmuistomerkki on yksi Sarajevon rakastetuimmista pakopaikoista.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-9e774c97.jpg",
@@ -7351,6 +7361,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sarajevo-romanija': {
       lyhyt: 'Jahorina on Bosnia ja Hertsegovinan suurin laskettelukeskus, ja sen korkein huippu Ogorjelica nousee 1 916 metriin.',
+      pitka: `Romanijan ylängöllä, muutaman kilometrin päässä Mokron kylästä, kalkkikivimassiivin sisältä pulppuaa esiin Mokranjska Miljacka – maanalainen joki, joka virtaa esiin Bosnia ja Hertsegovinan pisimmästä tunnetusta luolastosta. Kartoitettua käytävää on jo yli seitsemän kilometriä, ja sen kylmässä pimeydessä sukeltajat ovat löytäneet tieteelle täysin tuntemattomia lajeja. Veden lämpötila pysyy vain noin viidessä asteessa ympäri vuoden, ja luola on suojeltu luonnonmuistomerkkinä. Italialais-bosnialainen sukellusryhmä on tutkinut käytäviä vuodesta 2007 lähtien, eikä luolan loppua ole vieläkään löydetty.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-romanija-09ac959b.jpg",
@@ -7365,6 +7376,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Trebinje: {
       lyhyt: 'Trebinjen vanhaa toria varjostavat yli satavuotiaat plataanit, ja kaupungin halki virtaa kirkas Trebišnjica-joki.',
+      pitka: `Muutaman kilometrin päässä Trebinjestä, Trebišnjica-joen rannalla, seisoo Tvrdošin luostari, joka perustettiin 1200-luvun lopulla vanhan roomalaisen kirkon paikalle. Munkit ovat viljelleet viinitarhoja jo 1400-luvulta asti, ja luostarin 1500-luvulla louhittu kivikellari on ollut käytössä katkeamatta vuosisatojen ajan. Sen holveissa kypsyy Vranac- ja Žilavka-viiniä satavuotiaissa tammitynnyreissä, kun taas aivan viereen on noussut moderni painovoimaan perustuva viinitehdas. Tvrdoš tunnetaan nykyään kansainvälisesti viineistään, joissa yhdistyvät viiden vuosisadan kokemus ja uusin tekniikka.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-trebinje-ee7e42d0.jpg",
@@ -7379,6 +7391,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tuzla: {
       lyhyt: 'Tuzla seisoo suolakerrosten päällä, ja keskustaan on kaivettu suolavetisiä uimajärviä – nimikin tarkoittaa turkiksi suolakaivosta.',
+      pitka: `Tuzlan vanhassa kaupungissa seisoo Šarena džamija, Kirjava moskeija – kaupungin vanhin, alun perin 1500-luvun alusta. Se on saanut lempinimensä koristeellisista, väriä uhkuvista sisä- ja ulkomaalauksistaan, jotka erottavat sen muista alueen moskeijoista. Tulipalo tuhosi rakennusta pahoin, ja se rakennettiin uudelleen vuonna 1888 Itävalta-Unkarin aikana – samalla vuosikymmenellä, jolloin kaupunkiin nousi myös eurooppalaistyylistä secession-arkkitehtuuria. Moskeijan edessä sijaitsevan Behram-begin medresan mukaan koko rakennus tunnetaan myös nimellä Atik Behram-begin moskeija.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-tuzla-cf59887f.jpg",
@@ -7393,6 +7406,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Una-Sana': {
       lyhyt: 'Una-joen Štrbački buk syöksyy 25 metrin korkeudelta Kroatian rajalla, ja se on Unan kansallispuiston korkein vesiputous.',
+      pitka: `Unan joen rannalla, noin 14 kilometriä Bihaćista koilliseen, kohoaa Ostrožacin linna – sen vanhin osa mainitaan asiakirjoissa jo vuonna 1286. Linnaa on rakennettu ja laajennettu vuosisatojen ajan, mutta sen nykyinen uusgoottilainen ilme syntyi vasta 1900-luvun taitteessa, kun linnan viimeinen omistaja myi sen itävaltalaiselle kreiville, joka rakennutti sen uudelleen vuosina 1900–1902. Vuodesta 1967 lähtien linnaa ympäröivä kuvanveistäjien kolonia on tuonut paikalle taiteilijoita ympäri maailmaa veistämään paikallista bihacit-kiveä. Alueella seisoo nykyään yli 130 monumentaalista kiviveistosta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-una-sana-61888a28.jpg",
@@ -7407,6 +7421,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vlasenica: {
       lyhyt: 'Vlasenican seutu on metsäistä ylänköä, joka laskeutuu idässä Drinan laaksoon – joki on raja Serbian kanssa.',
+      pitka: `Vlasenican seudulla, Sošarin kylässä, lepää yksi Bosnian lukuisista keskiaikaisista kivihautausmaista: alueella on tähän mennessä laskettu 71 nekropolia ja peräti 1595 stećak-hautakiveä, joista 65:ssä on kaiverrettu koriste ja yhdessä kirjoitus. Kivet on veistetty kalkkikivestä 1100–1500-luvuilla, ja niiden pintaan on kaiverrettu tanssi- ja metsästyskohtauksia, geometrisia kuvioita sekä kyrillisiä kirjoituksia. Koko ilmiö – stećci – on Unescon maailmanperintökohde, ja sen levinneisyysalue ulottuu nykyisen Bosnian lisäksi Serbiaan, Montenegroon ja Kroatiaan.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-vlasenica-a7c9c67d.jpg",
@@ -7421,6 +7436,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'West Bosnia': {
       lyhyt: 'Livnon juustoa tehdään yhä gruyèren tapaan, samalla menetelmällä, jonka sveitsiläiset juustomestarit opettivat seudulle 1886.',
+      pitka: `Livnon ja Tomislavgradin kuntien rajalla lepää Buško jezero, Euroopan suurin tekojärvi: sen pinta-ala on lähes 56 neliökilometriä ja tilavuus yli 780 miljoonaa kuutiometriä. Järvi syntyi vuonna 1974, kun karstipoljea eli kalkkikivilaaksoa patoava vesivoimalaitos otettiin käyttöön ja alueen katoveet alkoivat kertyä sen taakse. Vesi virtaa alun perin Länsi-Bosnian ja Länsi-Hertsegovinan poljen alaisista karstilähteistä, joten järvi kokoaa yhteen koko seudun sadevedet ja lumensulamisvedet. Kesäisin tyyni vuoristojärvi houkuttelee kalastajia ja uimareita 716 metrin korkeudessa merenpinnasta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-bosnia-4f73f657.jpg",
@@ -7435,6 +7451,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'West Herzegovina': {
       lyhyt: 'Trebižat-joen Kravican vesiputous valuu leveänä kaarena altaaseen, jossa kesäisin uidaan.',
+      pitka: `Ljubuškin ympäristön aurinkoisilla rinteillä kasvaa žilavka, valkoviinirypäle, jota on viljelty samoilla poljilla jo 1300-luvulta lähtien. Rypäle antaa raikkaan, hapokkaan viinin, joka on ollut vuosisatoja Hertsegovinan tärkein valkoviini Blatina-punaviinin rinnalla. Vasta vuonna 1970 žilavka sai virallisen alkuperänimityksensä, ja seuraavana vuonna sen parhaalle laadulle myönnettiin oma suojattu asemansa – yksi entisen Jugoslavian ensimmäisistä nimisuojatuista viineistä. Nykyään lasillinen kylmää žilavkaa kalliolla lounasta syödessä on monelle matkailijalle tiivistetty kuva koko Länsi-Hertsegovinasta.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-herzegovina-d4cc1e00.jpg",
@@ -7449,6 +7466,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Zenica-Doboj': {
       lyhyt: 'Zenicassa on tehty terästä vuodesta 1892, ja terästehtaan piiput näkyvät yhä Bosna-joen laakson yli.',
+      pitka: `Kaknjin lähellä, kylässä nimeltä Kraljeva Sutjeska eli 'Kuninkaan kanjoni', sijaitsi keskiaikaisen Bosnian kuningaskunnan hovi. Bosnian banuksi kutsuttu Stjepan II Kotromanić perusti hovin tänne 1300-luvulla, ja lähistöllä kohoavalla Grgurevon kummulla ovat yhä näkyvissä kuninkaanlinnan rauniot vuodelta 1330. Paikalle 1300-luvulla perustettu fransiskaaniluostari toimii yhä, ja sen kirjastossa säilytetään noin 11 000 teosta, joukossa 31 inkunaabelia sekä bosniankielistä kyrillistä käsikirjoitusperinnettä. Kansallismonumentiksi julistettu luostari on yksi harvoista paikoista, joissa keskiajan Bosnian kuninkaallinen historia on edelleen käsin kosketeltavissa.`,
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-zenica-doboj-e9880795.jpg",
