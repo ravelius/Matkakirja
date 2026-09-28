@@ -1409,6 +1409,8 @@ namespace Matkakirja.Natiivi
                         else if (a == "taivas" && osat.Length > 3) KyydinTaivas.Pois = osat[3] == "0";   // A/B oikeat tähdet ja Kuu
                         else if (a == "paivanpilvet" && osat.Length > 3) AstronauttiKerros.PaivanPilvetPois = osat[3] == "0";
                         else if (a == "revontulet" && osat.Length > 3) Revontulet.Pois = osat[3] == "0";
+                        else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("m") && int.TryParse(osat[3].Substring(1), out int pakko))
+                            AstronauttiKerros.KuukausiPakotettu = pakko;                                   // 4a: m<kk> pakottaa, m0 pois
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
                         else if (a == "pilvet" && osat.Length > 3)

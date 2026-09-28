@@ -293,6 +293,9 @@ namespace Matkakirja.Natiivi
         public const string KuukausiKerros = "astronautti-kuukausi";
         public const int KuukaudenPintaMaxTaso = 7;
         public static bool KuukaudenPintaPois;
+        /// <summary>Testikomento `astro kyyti kuukausi m&lt;1–12&gt;` (m0 = pois): kuukausi pakotettuna kuvapareihin (talvi | kesä
+        /// samasta paikasta ilman testikellon siirtoa, joka muuttaisi myös auringon ja ISS:n paikan).</summary>
+        public static int KuukausiPakotettu;
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
 
@@ -301,7 +304,7 @@ namespace Matkakirja.Natiivi
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
-            int kuukausi = kyydissa && !KuukaudenPintaPois ? IssNyt.Kello().Month : -1;
+            int kuukausi = kyydissa && !KuukaudenPintaPois ? (KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : IssNyt.Kello().Month) : -1;
             if (kuukausi > 0 && !kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
             {
                 if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));
