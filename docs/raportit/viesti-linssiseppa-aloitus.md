@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 28.9.2026 klo 22.3x)
+# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 01.4x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omat worktreet: /Users/Shared/Claude/wt/proto-linssiseppa-horisontti
-  (linssiseppa/cupola-horisontti, työn alla) ja -pilvet (linssiseppa/pilvet-tarkat, mergetty juna-1040:een, poistettavissa); luovutus -u.
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omia worktreitä ei ole (cupola3 poistettu merge-pyynnön jälkeen,
+  haara linssiseppa/cupola3 6da6664c Natiivisepällä 1.0.41:tä varten); luovutus -20260929.
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13 ja 1.0.40:n sivuhaara natiiviseppa/juna-1040.
 
 Lue:
@@ -13,21 +13,20 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260928-u.md** (Cupolan pyöreä kattoikkuna tiiviisti pysty/vaaka = omistajan uusi
-  suunta, horisontti A/B:nä; laiteajo cl17 aamulla; 1.0.40-merge-pyynnöt juna-1040:ssä; Natiivi-UI:n nimiöt v2; -t.md aiempi)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260929.md** (Cupola 3 pyöreä kattoikkuna: omistajan OK, umpinainen alfa
+  läpikuulon juurisyynä, iPad-keskitys background-positionilla, merge-pyyntö 1.0.41; nimiöt v2b JUMI Päätoimittajalla;
+  -20260928-u.md aiempi)
 - docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)
 - docs/raportit/iss-realismi-suunnitelma-20260928.md (ISS-realismin kaavat, vakiot, datalähteet ja tila)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -u kohta 1:**
-1. Laiteajo cl17 tänään: vahti S/odota-cl17.sh käynnistää käännöksen Natiivi-UI:n perään; kun S/kaanna-cl17.out = KÄÄNNETTY →
-   "cl17 käännös valmis" Julkaisijalle → ajo jatkuu laite-nyt-tiedostosta → koosta_cl17.py → kuvaparit (pysty + vaaka, nyt | pyöreä)
-   Päätoimittajalle → laite-nyt pois ja "sammutettu" Julkaisijalle.
-2. Hyväksynnän jälkeen merge-pyyntö Natiivisepälle: linssiseppa/cupola-horisontti. Codexin Cupola 3 -kerrokset korvaavat kehyksen
-   ja reunavalot, kun ne tulevat (posti/fable-codex-iss-ohjaamo-20260928.md, pääikkuna pyöreä 0eb761cb8).
-3. Natiivi-UI:n nimiökorjaus (laatikon omistaja avaimella) laitteelle cl16-kaavalla.
+**Järjestys: luovutus -20260929 kohta 1:**
+1. Cupola 3:n merge-pyyntö (linssiseppa/cupola3 6da6664c) on Natiivisepällä 1.0.41:tä varten: vastaa korjauspyyntöihin
+   (worktree uudelleen luovutuksen komennolla) ja seuraa mergeä. Web-pari: Siirtosepän #3587 samoilla kuvilla.
+2. JUMI: Natiivi-UI:n nimiöt v2b (7f799271) laitetarkistus odottaa Päätoimittajan päätöstä (luokitin esti minulta).
+3. Cupola 2 -kuvien sama alfa 252–254 (katto- ja horisontti-A/B): korjaa cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön.
 4. Natiivin astroselite webin mallin jälkeen (PR #3527). Kohta 4 (BMNG, Kuu, tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
