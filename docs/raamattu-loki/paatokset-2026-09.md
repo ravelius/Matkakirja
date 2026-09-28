@@ -8883,3 +8883,7 @@ Omistaja 28.9. klo 21.58 (3 ruutua mainosvideon avaruusasemaikkunasta sävyrefer
 ## OMISTAJA: SONNET 5.5 ROOLEILLE JA PULULLE (28.9.2026 klo 21.59)
 
 Omistaja 28.9. klo 21.59 sanatarkasti: "sivuhuomiona, sonnet on päivittynyt versioon 5.5. ja sen päivitetyn mallin voisi ottaa sonneteille käyttöön ja samalla miettiä että riittäisikö tämä uusi sonnet malli myös jonkun opuksen korvaajaksi sekä miettiä että millä effort tasolla kannattaa ajaa." ja "ja pulu pitää päivittää tähän myös. mikä effort pululla on nyt?" Tila: sovelluksen mallivalikossa ei vielä Sonnet 5.5:tä (vain claude-sonnet-5) → vaihto kun valikossa. Päätoimittajan ehdotus: Postivahti medium, Sisältökirjuri ja Laitetestaaja high 5.5:llä heti; Julkaisija kokeeksi Sonnet 5.5 high yhden päivän; koodiroolit Opuksella. Pulu nyt claude-sonnet-5 ajattelu pois (ei effortia; realtime xAI pohdinta none) → Pelikoodari: Sonnet 5.5 API-id, ajattelu pois tai effort low, viivevertailu, POLLO_MALLI-PR.
+
+## TILA: SONNET 5.5 VALIKOSSA, MUTTA SESSIOT YHÄ SONNET 5 (28.9.2026 klo 22.00)
+
+Päätoimittaja 28.9. klo 22.00: omistajan mallivalikossa näkyy Sonnet 5.5, mutta sessioiden hallintatyökalu tarjoaa vain claude-sonnet-5 (claude-sonnet-5-5 = tuntematon), ja Postivahti ilmoittaa itsestään 'Sonnet 5, claude-sonnet-5'. Vaihto tehtävä omistajan valikosta Sonnet-sessioihin (Postivahti, Sisältökirjuri, Laitetestaaja) tai kun työkalun lista päivittyy.
