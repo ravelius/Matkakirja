@@ -140,6 +140,9 @@ export function osiohakemisto({ sivut = [], nostot = [], iso = null, cityId = nu
 export function piirraOsiohakemisto(ui, kohde, { osiot, avaaSivu }) {
   if (!osiot?.length) return null;
   const lohko = html('section', 'lehti-osiohakemisto');
+  // Hakemisto on navigointia, ei luettavaa: lukija ohittaa sen (Fable 28.9.2026: "Lehden osiot. ·."
+  // päätyi lukijan valikon kappalelistaan ja luentaan).
+  lohko.setAttribute('data-lukija', 'ei');
   lohko.appendChild(html('h3', 'lehti-osiohakemisto-otsikko', OSIOHAKEMISTON_OTSIKKO));
   for (const o of osiot) {
     const rivi = html('div', 'lehti-osio');

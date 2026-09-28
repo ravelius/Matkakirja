@@ -13,7 +13,20 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2351, teksti: 'Astronautin kamera: kuvien selaus ja viereiset kohteet' },
+  { v: 2362, teksti: 'v2353: Aloituslennolle mahtipontinen vaskimarssi (#3535)' },
+  { v: 2361, teksti: 'v2353: Lukijan valikko — kappaleet, kelaus ±10… (#3537)' },
+  { v: 2360, teksti: 'v2357: Ihmekuvan alla lyhyt kuvateksti, pitkä s… (#3557)' },
+  { v: 2359, teksti: 'v2354: Pöllön järjestelmäkehote välimuistiin (#3547)' },
+  { v: 2358, teksti: 'v2354: Pulu vastaa puheella saneltuun kysymykse… (#3546)' },
+  { v: 2357, teksti: 'v2356: Pulun äänikeskustelun koe myös natiiviin (#3553)' },
+  { v: 2356, teksti: 'v2350: Ihme kortin ensimmäisenä kuvana, Koe ihm… (#3517)' },
+  { v: 2355, teksti: 'v2353: Laattojen katkaisija laskee vain peilin… (#3528)' },
+  { v: 2354, teksti: 'v2354: Pulun äänikeskustelu xAI:lla (#3544)' },
+  { v: 2353, teksti: '13 Euroopan historian hetkeä ja 26 havainnekuvaa (#3529)' },
+  { v: 2352, teksti: 'v2349: Karttalaatat eivät jää aukoiksi — pallo… (#3516)' },
+  { v: 2351, teksti: 'UKR: pitkä-luonnehdinta + pulu kaikille 25 maak… (#3525)' },
+  { v: 2350, teksti: 'CZE+HRV: korjaa pitkä-tekstien ääni Livian nyky… (#3524)' },
+  { v: 2349, teksti: 'Poltto: ajo ilman nosto-/nimiöshardeja kantaa ä… (#3521)' },
   { v: 2348, teksti: 'ROU: pitkä-luonnehdinta + pulu kaikille 42 maak… (#3514)' },
   { v: 2347, teksti: 'Pulun äänitagit: huokaus, nauru, innostus (#3513)' },
   { v: 2346, teksti: 'Viisi Euroopan historian hetkeä kuvineen' },
