@@ -102,6 +102,7 @@ namespace Matkakirja
     ///   symbolit perspektiivi <aste>   liioitellun perspektiivin kulma ruudun reunalla (0–80, oletus 55 = Linssisepän
     ///                             LiioiteltuPerspektiivi-käyrä; 0 = pois)
     ///   symbolit reuna <pt>       mallien ääriviivan leveys ruudulla (0–4 pt, oletus 1,2; 0 = pois)
+    ///   symbolit kategoriat3d 0|1   0 (oletus, omistaja 28.9. 17.2x) = vain erikoismallit 3D:nä, muut nostot 2D-merkkeinä; 1 = kaikki 3D
     ///   symbolit kategoriat 1|0   kategoriasymbolit reliefeinä (oletus 1; tämä erä Kaari = historia ja Vuori) vai arkkityypit (A/B)
     ///   symbolit kategoriat ruutu|pohjoinen   reliefin ylös-suunta: ruudun ylös (oletus, kuten 2D-merkki) vai pohjoinen
     ///   symbolit alla 0|1         erikoismalli voittaa (Linssisepän speksi 27.9. klo 21.2x, oletus 1): muiden nostojen symbolit,
@@ -693,6 +694,16 @@ namespace Matkakirja
                     // lento v3 ilma 0|1 (v3e: siivenkärkien ja pakoputken vanat ja loppukohtauksen linnut; A/B, ei muisteta)
                     else if (o.Length > 3 && o[2] == "ilma") AloituslennonIlma.Paalla = o[3] == "1" || o[3] == "paalle";
                     Debug.Log(Nappula.LentoV3Kuvaus() + $", aloitusrata {(Nappula.Aloitusrata ? 1 : 0)}, ilma {(AloituslennonIlma.Paalla ? 1 : 0)}");
+                    break;
+                case "paivanvalo":
+                    // paivanvalo 0|1|auto|tila (v3f: päivän ja yön raja ja yövalot; 1 = päällä myös valinnan ja lennon ulkopuolella)
+                    if (o.Length > 1 && (o[1] == "1" || o[1] == "paalle")) Paivanvalo.Pakota = true;
+                    else if (o.Length > 1 && (o[1] == "0" || o[1] == "pois")) Paivanvalo.Pakota = false;
+                    else if (o.Length > 1 && o[1] == "auto") Paivanvalo.Pakota = null;
+                    // paivanvalo voimakkuus x (yövalot) | paivanvalo alku h (Pelikello.AlkuKelloUtc: lähdön kellonaika, kuvaparit)
+                    else if (o.Length > 2 && o[1] == "voimakkuus") Paivanvalo.Voimakkuus = (float)D(2);
+                    else if (o.Length > 2 && o[1] == "alku") Pelikello.AlkuKelloUtc = D(2);
+                    Debug.Log("MATKAKIRJA " + (Paivanvalo.Instanssi != null ? Paivanvalo.Instanssi.Tila : "päivänvalo: ei käynnissä"));
                     break;
                 case "kamerareitti":
                     Nappula.KamerareittiLoki = o.Length < 2 || o[1] != "pois";

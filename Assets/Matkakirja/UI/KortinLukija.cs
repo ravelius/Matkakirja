@@ -571,15 +571,40 @@ namespace Matkakirja.Natiivi
         /// sama napautus läpäise alempaan kerrokseen. Kuuntelija on juuressa TrickleDown-vaiheessa, joten
         /// StopPropagation estää painalluksen pääsyn kortin himmennykseen; saman kosketuksen PointerUp ja Click niellään.
         /// </summary>
+        bool Valikossa(VisualElement v) => v != null && (v == paneeli || paneeli.Contains(v) || ratas.Contains(v) || Pudotusvalikossa(v));
+
         void OhiNapautus(PointerDownEvent e)
         {
             if (paneeli == null) return;
-            if (e.target is VisualElement v && (paneeli.Contains(v) || ratas.Contains(v) || Pudotusvalikossa(v))) return;
+            // Kohde poimitaan itse (1.0.40, Nostokortti.EleAlkoi): UI Toolkit antaa samaan pisteeseen osuneelle kosketukselle
+            // välimuistin vanhentuneen kohteen. Omistaja 1.0.39: valikon rivin ensimmäinen napautus ei hypännyt (luenta jatkoi
+            // väärästä kohdasta), vasta toinen.
+            var kohde = e.target as VisualElement;
+            var poimittu = paneeli.panel?.Pick(e.position) ?? kohde;
             var puu = paneeli.panel?.visualTree;
+            if (Valikossa(poimittu))
+            {
+                var nappi = NappiAlta(poimittu);
+                if (Valikossa(kohde) && NappiAlta(kohde) == nappi) return;
+                // Rivi tai nappi valikossa, mutta tapahtuma meni vanhentuneelle kohteelle: nielaistaan ja painetaan nappi itse.
+                e.StopPropagation();
+                if (puu != null) Niele(puu, e.pointerId, nappi);
+                return;
+            }
             SuljePaneeli();
             e.StopPropagation();
-            if (puu == null) return;
-            int sormi = e.pointerId;
+            if (puu != null) Niele(puu, e.pointerId, null);
+        }
+
+        static Button NappiAlta(VisualElement v)
+        {
+            for (; v != null; v = v.hierarchy.parent) if (v is Button b) return b;
+            return null;
+        }
+
+        /// <summary>Saman kosketuksen irrotus ja Click nielaistaan; nappi (vanhentuneen kohteen ohi) painetaan irrotuksessa.</summary>
+        void Niele(VisualElement puu, int sormi, Button nappi)
+        {
             EventCallback<PointerUpEvent> ylos = null;
             EventCallback<ClickEvent> klikki = null;
             ylos = u =>
@@ -587,6 +612,11 @@ namespace Matkakirja.Natiivi
                 if (u.pointerId != sormi) return;
                 u.StopPropagation();
                 puu.UnregisterCallback(ylos, TrickleDown.TrickleDown);
+                if (nappi?.panel != null && (nappi.panel.Pick(u.position) is VisualElement q) && (q == nappi || nappi.Contains(q)))
+                {
+                    Debug.Log($"MATKAKIRJA ui lukija: vanhentunut kohde, painetaan {string.Join(".", nappi.GetClasses())}");
+                    using (var s = NavigationSubmitEvent.GetPooled()) { s.target = nappi; nappi.SendEvent(s); }
+                }
                 // Click syntyy saman kosketuksen jälkeen; nielaisu vain tämän kehyksen ajan.
                 puu.schedule.Execute(() => puu.UnregisterCallback(klikki, TrickleDown.TrickleDown));
             };

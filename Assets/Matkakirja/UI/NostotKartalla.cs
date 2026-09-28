@@ -265,6 +265,19 @@ namespace Matkakirja.Natiivi
             Paivita();
         }
 
+        /// <summary>
+        /// Maakuntakartta auki (Karttaselite.MaakuntaKartta): nostomerkit piiloon. OMA LIPPU, ei NaytaSallittu: linssin avaus sulkee
+        /// maakuntakartan, ja sen sulku palautti ennen NaytaSallittu(true):n linssin jo asettaman piilon päälle (BUILD 38 -savuke,
+        /// Maapallon vuosi: nostomerkit ja hehku kuoren päällä Thessalian valinnan jälkeen).
+        /// </summary>
+        public void AsetaMaakuntaEsto(bool esto)
+        {
+            if (maakuntaEsto == esto) return;
+            maakuntaEsto = esto;
+            Paivita();
+        }
+        bool maakuntaEsto;
+
         // ELÄVÄ KARTTA, KOHTA 2 (build 20): kokoluokka ja löydetty-tila tulevat NostoKerros.Nosto-kentistä (Natiiviseppä), joihin
         // Linssisepän ElavaHerays kytkee Pelikoodarin musteen; jäljet, hehku ja löydön käyrä MusteJaljetista (Linssiseppä).
         /// <summary>Kokoluokan kerroin suhteessa kohteeseen (pääkohde 1,0 : kohde 0,67 : pieni 0,44; kohde = nykyinen koko).</summary>
@@ -405,7 +418,7 @@ namespace Matkakirja.Natiivi
             // Linssin aikana merkit näkyvät, kun Natiivisepän linssinimet on päällä (web: linssikartan nimet),
             // mutta ilman napautusta ja viuhkaa: kerros päästää kosketukset kartalle.
             bool linssinimet = !sallittu && k != null && k.LinssiNimet;
-            bool nakyy = (sallittu || linssinimet) && k != null && k.Nakyvissa && juuri.panel != null;
+            bool nakyy = (sallittu || linssinimet) && !maakuntaEsto && k != null && k.Nakyvissa && juuri.panel != null;
             juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (linssinimet != vainNimet)
             {
@@ -427,6 +440,8 @@ namespace Matkakirja.Natiivi
                 // mallin jalasta noston paikkaan), napautus ja nimiö seuraavat sitä.
                 var r = lista[i].Ruutu;
                 if (Symbolimallit.ReunaPiste(lista[i].Id, out var rp)) { r = rp; reunat[i] = true; }
+                // Kaupungin viereen siirretty erikoismalli (omistaja 28.9. klo 17.4x, Linssiseppä): merkki mallin jalkaan.
+                else if (Symbolimallit.SiirrettyPiste(lista[i].Id, out var sp)) r = sp;
                 pisteet[i] = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(r.x, Screen.height - r.y));
             }
             int n = 0;
@@ -486,10 +501,9 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n; i++)
             {
                 var m = merkit[i];
-                // Löydös 160: tasojen 2–3 arkkityypit 0,6 × ja 0,45 × tason 1 koko (Symbolimallit.Tasot23).
+                // Mallin oma leveys nyt (omistaja 28.9. klo 17.4x: kallistetussa kartassa lähempänä isompi; Symbolimallit.LeveysPt).
                 if (m.Ryhma == null && !m.MallinAlla && Symbolimallit.OnMalli(m.Id))
-                    mallienPisteet.Add((m.Piste, m.Taso1 ? Symbolimallit.Taso1LeveysPt   // symbolin koko nyt (omistaja 27.9. klo 23.2x: isommiksi)
-                        : Symbolimallit.KokoPt * (m.Taso >= 3 ? 0.45f : 0.6f)));
+                    mallienPisteet.Add((m.Piste, Symbolimallit.LeveysPt(m.Id)));
             }
             for (int i = 0; i < n; i++)
             {
@@ -907,7 +921,7 @@ namespace Matkakirja.Natiivi
             // 3D-symboli (omistaja 27.9. klo 23.2x: isommiksi, Linssisepän speksi): merkin ruutu kattaa symbolin leveyden, jotta oma
             // nimiö sijoittuu symbolin viereen eikä sen päälle, muiden nimiöt väistävät sitä ja napautusala on symbolin kokoinen.
             if (m.Taso1 && !ryhma && !reuna && Symbolimallit.OnMalli(s.Id))
-                m.Ruutu = Mathf.Max(m.Ruutu, 0.5f * Symbolimallit.Taso1LeveysPt / Mathf.Max(1e-4f, m.Mitta));
+                m.Ruutu = Mathf.Max(m.Ruutu, 0.5f * Symbolimallit.LeveysPt(s.Id) / Mathf.Max(1e-4f, m.Mitta));
             m.Kiintea = kaupunki || m.Taso1;
             // Symboli vaihdetaan, kun aihe, kuvamerkki tai minimerkki (luonnossa vuori vai aalto) vaihtuu.
             string tyyppi = ryhma ? "ryhma|" + s.Aihe : reuna ? "reunapiste" : (s.Aihe ?? "") + "|" + (kuvamerkki ? Kuva(s) : s.Minimerkki);

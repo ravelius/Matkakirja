@@ -33,8 +33,21 @@ namespace Matkakirja.Linssit.Iss
         public const double SeurannanEtaisyysM = 1_200_000, SeurannanKallistus = 55;
         /// <summary>Ikkuna: katse radan suuntaan näin monta astetta vaakatason alapuolelle (horisontti 420 km:stä 20,3°).</summary>
         public const double IkkunanKatseAlas = 55;
-        /// <summary>Cupolan keskilasin kenttäkulma pystyyn (lasi 80 cm, silmä 45 cm:n päässä).</summary>
-        public const double IkkunanKentta = 80;
+        /// <summary>Cupolan keskilasin kenttäkulma pystyyn ilman zoomia (lasi 80 cm, silmä 45 cm:n päässä; 1.0.37).</summary>
+        public const double IkkunanPerusKentta = 80;
+        /// <summary>
+        /// Lähemmäs lasia (omistaja 28.9. klo 18.0x Päätoimittajan kautta: "zoomata näkymää vähän lähemmäksi lasia. Nyt näkymä
+        /// ulos jää vähän liian pieneksi"): ikkunanäkymä zoomataan tällä kertoimella, eli maa ja Cupola-kerrokset
+        /// (IssKyytiNakyma, CupolaKerros) suurenevat samassa suhteessa ja kehys täyttää ruudusta vähemmän. 1 = 1.0.37.
+        /// A/B `astro kyyti lasi <kerroin>`.
+        /// </summary>
+        public static double LasiZoom = 1.3;
+        /// <summary>Ikkunan kenttäkulma pystyyn zoomin jälkeen: tan(k / 2) = tan(80° / 2) / LasiZoom (1,3 → 65,7°).</summary>
+        public static double IkkunanKentta => KenttaZoomilla(IkkunanPerusKentta, LasiZoom);
+
+        /// <summary>Kenttäkulma (°) <paramref name="zoom"/>-kertaisella suurennoksella (kuvan keskeltä, kuten objektiivin zoom).</summary>
+        public static double KenttaZoomilla(double kentta, double zoom) =>
+            zoom > 0 ? 2 * Math.Atan(Math.Tan(kentta * 0.5 * Deg) / zoom) / Deg : kentta;
 
         const double Deg = Math.PI / 180;
 

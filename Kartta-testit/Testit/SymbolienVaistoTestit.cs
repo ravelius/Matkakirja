@@ -119,5 +119,137 @@ namespace Matkakirja.Kartta.Testit
             var (reunalla, _, _) = LiioiteltuPerspektiivi.Kallistus(w, h * 0.5, w, h, 0, 0.5);
             Oleta.Tosi(Lahella(reunalla, 55), "reunalla rajattu 55°:een");
         }
+
+        // ---- Kohta 5: koko kallistetussa kartassa (omistaja 28.9.2026 klo 17.4x: "nyt kaikki 3d mallit pienenevät kun niitä
+        // menee lähemmäksi silloin kun kartta on kallistettuna. pitäisi mennä päinvastoin") ----
+
+        [Testi]
+        static void KallistuksenPaino()
+        {
+            Oleta.Tosi(SymbolienVaisto.KallistusPaino(0) == 0 && SymbolienVaisto.KallistusPaino(-5) == 0, "ylhäältä 0");
+            Oleta.Tosi(SymbolienVaisto.KallistusPaino(double.NaN) == 0, "NaN 0");
+            Oleta.Tosi(SymbolienVaisto.KallistusPaino(25) == 1 && SymbolienVaisto.KallistusPaino(60) == 1, "25° ja yli: 1");
+            Oleta.Tosi(Lahella(SymbolienVaisto.KallistusPaino(12.5), 0.5), "puolivälissä 0,5 (smootherstep)");
+            double ed = -1;
+            for (int a = 0; a <= 30; a++)
+            {
+                double p = SymbolienVaisto.KallistusPaino(a);
+                Oleta.Tosi(p >= ed, $"kasvaa {a}°");
+                ed = p;
+            }
+        }
+
+        [Testi]
+        static void YlhaaltaEnnallaan()
+        {
+            // Paino 0 (pystysuora kamera): vakioruutu kuten 1.0.37, etäisyydestä ja kertoimesta riippumatta.
+            foreach (double d in new[] { 0.5, 1.0, 3.0 })
+                Oleta.Tosi(SymbolienVaisto.RuutuKoko(54f, 6.0, 1.25, 1.0, d, 0, 0.45, 117f) == 54f, $"paino 0, etäisyys {d}");
+            Oleta.Tosi(SymbolienVaisto.RuutuKoko(0f, 3, 1.25, 1, 1, 1, 0.45, 117f) == 0f, "nolla pysyy nollana");
+            Oleta.Tosi(SymbolienVaisto.RuutuKoko(54f, 3, 1.25, 1, 1, double.NaN, 0.45, 117f) == 54f, "NaN-paino = ylhäältä");
+        }
+
+        [Testi]
+        static void KallistettunaOikeaPerspektiivi()
+        {
+            // Paino 1, katsepisteessä ja kynnyksellä: perus. Lähempänä isompi ja kauempana pienempi niin, että koko maailmassa
+            // (pt × etäisyys) on sama: malli on esine, ei ruudun tarra.
+            Oleta.Tosi(Lahella(SymbolienVaisto.RuutuKoko(40f, 1.25, 1.25, 1000, 1000, 1, 0.45, 500f), 40), "katsepisteessä perus");
+            float lahi = SymbolienVaisto.RuutuKoko(40f, 1.25, 1.25, 1000, 700, 1, 0.45, 500f);
+            float kauko = SymbolienVaisto.RuutuKoko(40f, 1.25, 1.25, 1000, 1600, 1, 0.45, 500f);
+            Oleta.Tosi(lahi > 40f && kauko < 40f, $"lähi {lahi:0.0}, kauko {kauko:0.0}");
+            Oleta.Tosi(Lahella(lahi * 700, 40 * 1000, 1) && Lahella(kauko * 1600, 40 * 1000, 1), "sama koko maailmassa");
+            // Rajat: horisontissa enintään 0,4 × (ei pisteeksi), edessä enintään 2 ×.
+            Oleta.Tosi(Lahella(SymbolienVaisto.RuutuKoko(40f, 1.25, 1.25, 1000, 10000, 1, 0.45, 500f), 16), "ala 0,4");
+            Oleta.Tosi(Lahella(SymbolienVaisto.RuutuKoko(40f, 1.25, 1.25, 1000, 100, 1, 0.45, 500f), 80), "ylä 2");
+            // Puolikas paino: puolet perspektiivistä (geometrinen).
+            Oleta.Tosi(Lahella(SymbolienVaisto.RuutuKoko(40f, 1.25, 1.25, 1000, 250, 0.5, 0.45, 500f), 40 * Math.Sqrt(2), 1e-2), "paino 0,5");
+        }
+
+        [Testi]
+        static void LahestyttaessaKasvaa()
+        {
+            // Kallistettu kamera lähestyy katsepisteessä olevaa mallia: kerroin 1,25 → 6 (etäisyys = 1000 / kerroin). Ylhäältä-käyrä
+            // on 30 → 54 pt; kallistettuna malli kasvaa ruudulla selvästi nopeammin ja pienenee maailmassa hitaammin kuin ennen.
+            double ed = 0, edMaailma = double.MaxValue;
+            for (double k = 1.25; k <= 6.0001; k *= 1.1)
+            {
+                double d = 1000 / k;
+                float perus = SymbolienVaisto.Koko(k, 1.25, 6.0, 30f, 54f);
+                float pt = SymbolienVaisto.RuutuKoko(perus, k, 1.25, d, d, 1, SymbolienVaisto.LisaKasvu, 1000f);
+                Oleta.Tosi(pt > ed, $"kasvaa ruudulla kertoimella {k:0.00}: {pt:0.0} pt");
+                Oleta.Tosi(pt * d <= edMaailma + 1e-3, $"ei kasva maailmassa: {k:0.00}");
+                ed = pt; edMaailma = pt * d;
+            }
+            float taysi = SymbolienVaisto.RuutuKoko(54f, 6.0, 1.25, 1, 1, 1, SymbolienVaisto.LisaKasvu, 1000f);
+            double eksponentti = Math.Log(taysi / 30.0) / Math.Log(6.0 / 1.25);
+            Oleta.Tosi(eksponentti > 0.75 && eksponentti < 0.9, $"kasvu kertoimen potenssina {eksponentti:0.00} (ylhäältä ~0,37, esine 1)");
+            // Ohi kulkeva malli (sama kerroin): lähestyessä kasvaa koko matkan.
+            ed = 0;
+            for (double d = 3000; d >= 400; d *= 0.8)
+            {
+                float pt = SymbolienVaisto.RuutuKoko(40f, 2.5, 1.25, 1000, d, 1, SymbolienVaisto.LisaKasvu, 1000f);
+                Oleta.Tosi(pt >= ed, $"ohi kulkeva kasvaa, etäisyys {d:0}");
+                ed = pt;
+            }
+        }
+
+        [Testi]
+        static void KattoEiPienennaYlhaaltaKokoa()
+        {
+            Oleta.Tosi(Lahella(SymbolienVaisto.RuutuKoko(54f, 6.0, 1.25, 1000, 400, 1, 0.45, 117f), 117), "katto 117 pt (iPhone 0,3 × 390)");
+            Oleta.Tosi(SymbolienVaisto.RuutuKoko(54f, 6.0, 1.25, 1000, 1000, 0, 0.45, 40f) == 54f, "katto ei pienennä ylhäältä-kokoa");
+            Oleta.Tosi(SymbolienVaisto.RuutuKoko(54f, 6.0, 1.25, 1000, 1000, 1, 0.45, 0f) > 54f, "katto 0 = ei kattoa");
+        }
+
+        [Testi]
+        static void SivuSiirtoKaupunginViereen()
+        {
+            // Siirto suoraan länteen (mallin −X): X-puolileveys × koko + väli pisteinä.
+            Oleta.Tosi(Lahella(SymbolienVaisto.SivuSiirto(-1f, 0f, 0.6f, 0.4f, 10f, 0.5f), 0.6 * 10 + 12 * 0.5), "länteen");
+            // Kierretty kartta: suunta mallin X–Z-tasossa vinossa, ulottuma molemmista puolileveyksistä.
+            float vino = SymbolienVaisto.SivuSiirto(0.6f, 0.8f, 0.6f, 0.4f, 10f, 0.5f);
+            Oleta.Tosi(Lahella(vino, (0.6 * 0.6 + 0.8 * 0.4) * 10 + 6), $"vino {vino:0.00}");
+            Oleta.Tosi(SymbolienVaisto.SivuSiirto(1f, 0f, 0.5f, 0.5f, 10f, 0.5f) > 0.5f * 10f, "reuna ei koskaan kaupunkipisteessä");
+            Oleta.Tosi(SymbolienVaisto.SivuSadeKm >= 1.0 && SymbolienVaisto.SivuSadeKm <= 5.0, "säde kaupungin sisällä (Colosseum 0,8 km, Stonehenge 13 km ei)");
+        }
+
+        // ---- Kohta 7: kaupungin vieressä aina maalla (omistaja 28.9. klo 19.1x: Colosseum "puoleksi meressä") ----
+
+        static readonly SymbolienVaisto.MaallaTaso[] RoomanTasot =
+        {
+            new SymbolienVaisto.MaallaTaso(100, 2.5),   // kaukaa: malli ~100 km leveä, 2,5 km/pt
+            new SymbolienVaisto.MaallaTaso(40, 0.4),    // läheltä kallistettuna
+        };
+
+        [Testi]
+        static void MaallaMeriLannessa()
+        {
+            // Rooma: meri ~25 km länteen (pituusaste 12,2), maata itään. Valinta itäpuolelle ja koko pohja maalla.
+            bool Maata(double lat, double lon) => lon > 12.2;
+            var (a, osuus) = SymbolienVaisto.ValitseMaallaSuunta(Maata, 41.89, 12.49, 0.55f, 0.45f, RoomanTasot);
+            Oleta.Tosi(a > 22 && a < 158, $"itään päin: {a}°");
+            Oleta.Tosi(osuus > 0.99f, $"koko pohja maalla: {osuus:0.00}");
+            Oleta.Tosi(SymbolienVaisto.MaaOsuus(Maata, 41.89, 12.49, 270, 0.55f, 0.45f, RoomanTasot) <= 0.2f, "länsi olisi meressä (kaukaa kokonaan, läheltä 3/5)");
+        }
+
+        [Testi]
+        static void MaallaKaikkiMaataLansiEnsin()
+        {
+            // Sisämaa: kaikki suunnat yhtä hyviä → länsi (kaupungin nimiö on oletuksena idässä).
+            var (a, osuus) = SymbolienVaisto.ValitseMaallaSuunta((la, lo) => true, 48.2, 16.37, 0.5f, 0.5f, RoomanTasot);
+            Oleta.Tosi(a == 270f && osuus == 1f, $"länsi: {a}°, {osuus}");
+        }
+
+        [Testi]
+        static void MaallaPieniSaariParasOsuus()
+        {
+            // Visby: saari 25 km:n säteellä kaupungin kaakossa; malli ei mahdu kokonaan, mutta paras osuus valitaan.
+            double la0 = 57.64 - 0.1, lo0 = 18.29 + 0.2;
+            bool Maata(double lat, double lon) => Math.Pow((lat - la0) * 111.2, 2) + Math.Pow((lon - lo0) * 111.2 * 0.535, 2) < 25 * 25;
+            var (a, osuus) = SymbolienVaisto.ValitseMaallaSuunta(Maata, 57.64, 18.29, 0.6f, 0.3f, RoomanTasot);
+            float lansi = SymbolienVaisto.MaaOsuus(Maata, 57.64, 18.29, 270, 0.6f, 0.3f, RoomanTasot);
+            Oleta.Tosi(osuus > lansi && a >= 90 && a <= 180, $"kaakon puolelle kohti saarta: {a}°, {osuus:0.00} (länsi {lansi:0.00})");
+        }
     }
 }

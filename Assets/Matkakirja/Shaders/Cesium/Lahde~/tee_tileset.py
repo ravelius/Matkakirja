@@ -18,6 +18,9 @@
 # peitolla — pikselin suunta n = normalize(pos − _maaKeski.xyz), jänne c = |n − k| (k = _paljastus.xyz, kuten
 # valokeilassa), kohinalla rikottu reuna; peitto = smoothstep(r − w/2, r + w/2, c + kohina). _paljastusReuna.w = 0 →
 # ennallaan (paljastus pois). Vain paikka 2 kytketään; muilla syötteet ovat oletusarvossa 0.
+# Päivä ja yö (aloituslento v3f, 28.9.2026): _aurinko = (auringon suunta maailmassa, voimakkuus); yöpuoli (porvarillinen
+# hämärä, auringon korkeus −6…+2° pikselissä) tummuu kuten radion hämärä ja yövalot palavat painolla max(hämärä, yö)
+# (Kartta/Paivanvalo.cs). w = 0 → ennallaan.
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
 import json, sys, uuid, os
 
@@ -661,6 +664,19 @@ HAMARA_RUNKO = (
     "    float3 ham = variOut * float3(0.18, 0.17, 0.24) + float3(0.006, 0.006, 0.016);\n"
     "    variOut = lerp(variOut, ham, h);\n"
     "}\n"
+    "// Day and night (opening flight v3f, owner 28.9.2026; Kartta/Paivanvalo.cs): aurinko.xyz = sun direction in world space,\n"
+    "// aurinko.w = strength 0..1 (0 = off). yo = night weight over the civil twilight band (sun elevation -6..+2 deg at the\n"
+    "// pixel; n = normalize(pos - keski.xyz) as in the spotlight). The night side darkens like the radio dusk (base colour\n"
+    "// only, coastlines stay faintly readable) and the night lights below glow with weight max(h, yo).\n"
+    "float yo = 0.0;\n"
+    "if (aurinko.w > 0.0)\n"
+    "{\n"
+    "    float3 an = normalize(pos - keski.xyz);\n"
+    "    yo = (1.0 - smoothstep(-0.105, 0.035, dot(an, aurinko.xyz))) * saturate(aurinko.w);\n"
+    "    float3 yv = variOut * float3(0.22, 0.22, 0.32) + float3(0.008, 0.010, 0.026);\n"
+    "    variOut = lerp(variOut, yv, yo);\n"
+    "}\n"
+    "float hv = max(h, yo);\n"
     "// Ground glow around the selected mast (b12d: was too faint): bright core 1.3 f^2 plus a long linear tail 0.45 f,\n"
     "// lighting the unshaded paper (coastlines and relief stay readable) with a floor so dark sea glows too.\n"
     "if (maavalo.w > 0.0)\n"
@@ -680,7 +696,7 @@ HAMARA_RUNKO = (
     "float2 yuv = ytc[clamp(yi, 0, 3)] * yts.zw + yts.xy;\n"
     "yuv.y = 1.0 - yuv.y;\n"
     "float2 ydx = ddx(yuv), ydy = ddy(yuv);\n"
-    "if ((yp == 1 || yp == 2) && yovalot.y > 0.0 && h > 0.0)\n"
+    "if ((yp == 1 || yp == 2) && yovalot.y > 0.0 && hv > 0.0)\n"
     "{\n"
     "    float4 yn;\n"
     "    if (yp == 2) yn = SAMPLE_TEXTURE2D_GRAD(_overlayTexture_2, sampler_overlayTexture_2, yuv, ydx, ydy);\n"
@@ -691,7 +707,7 @@ HAMARA_RUNKO = (
     "    yw *= yn.a;   // tile not loaded yet: Cesium's default black (0,0,0,0)\n"
     "    float ylahi = (1.0 - smoothstep(60000.0, 230000.0, length(pos - yonValot.xyz))) * saturate(yonValot.w);\n"
     "    float3 yvalo = yw * yovalot.y * (0.5 + 0.5 * ylahi) * float3(1.05, 0.82, 0.52);\n"
-    "    emisOut += pow(max(yvalo, 1e-6), 2.2) * h;\n"
+    "    emisOut += pow(max(yvalo, 1e-6), 2.2) * hv;\n"
     "}\n")
 flohko = {byid[b["m_Id"]]["m_SerializedDescriptor"]: b["m_Id"] for b in G["m_FragmentContext"]["m_Blocks"]}
 def sisaan(lohko_id):
@@ -718,6 +734,8 @@ ham_slotit.append(slotti("Vector4MaterialSlot", 22, "pohjaSavy", 0, v4()))
 # z reunatummennus), 25 = ruudun paikka (Screen Position, Default 0–1) reunatummennukselle. 0 = ennallaan.
 ham_slotit += [slotti("Vector4MaterialSlot", 23, "pohjaRae", 0, v4()), slotti("Vector4MaterialSlot", 24, "pohjaPatina", 0, v4()),
                slotti("Vector4MaterialSlot", 25, "ruutu", 0, v4())]
+# Päivä ja yö (aloituslento v3f, 28.9.2026): 26 = _aurinko (xyz auringon suunta maailmassa, w voimakkuus; 0 = ennallaan).
+ham_slotit.append(slotti("Vector4MaterialSlot", 26, "aurinko", 0, v4()))
 for s in ham_slotit: s["m_StageCapability"] = 2
 ham_cf = solmupohja("CustomFunctionNode", "RadioHamara (Custom Function)", FX, FY, ham_slotit, m_SGVersion=1,
                     synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="RadioHamara", m_FunctionSource="",
@@ -737,6 +755,7 @@ khamaryys_om = kellu_ominaisuus("keilaHamaryys", "_keilaHamaryys", True); khamar
 savy_om = vektori_ominaisuus("pohjaSavy", "_pohjaSavy")
 rae_om = vektori_ominaisuus("pohjaRae", "_pohjaRae")
 patina_om = vektori_ominaisuus("pohjaPatina", "_pohjaPatina")
+aurinko_om = vektori_ominaisuus("aurinko", "_aurinko")
 keski3_solmu, keski3_ulos = vektori_ominaisuussolmu(keski_om, FX - 300.0, FY + 1060.0)
 keila_solmut, keila_ulot = [], []
 for i, om in enumerate((keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om)):
@@ -746,6 +765,7 @@ khamaryys_solmu, khamaryys_ulos = ominaisuussolmu(khamaryys_om, FX - 300.0, FY +
 savy_solmu, savy_ulos = vektori_ominaisuussolmu(savy_om, FX - 300.0, FY + 1480.0)
 rae_solmu, rae_ulos = vektori_ominaisuussolmu(rae_om, FX - 300.0, FY + 1540.0)
 patina_solmu, patina_ulos = vektori_ominaisuussolmu(patina_om, FX - 300.0, FY + 1600.0)
+aurinko_solmu, aurinko_ulos = vektori_ominaisuussolmu(aurinko_om, FX - 300.0, FY + 1720.0)
 ruutu_ulos = slotti("Vector4MaterialSlot", 0, "Out", 1, v4())
 ruutu_solmu = solmupohja("ScreenPositionNode", "Screen Position", FX - 300.0, FY + 1660.0, [ruutu_ulos], m_DismissedVersion=0,
                          m_ScreenSpaceType=0)
@@ -780,23 +800,24 @@ G["m_Edges"] += [reuna(vari_reuna["m_OutputSlot"]["m_Node"]["m_Id"], vari_reuna[
 G["m_Edges"] += [reuna(uv_solmut[i]["m_ObjectId"], 0, H, 10 + i) for i in range(4)]
 G["m_Edges"] += [reuna(keski3_solmu["m_ObjectId"], 0, H, 15), reuna(khamaryys_solmu["m_ObjectId"], 0, H, 21),
                  reuna(savy_solmu["m_ObjectId"], 0, H, 22), reuna(rae_solmu["m_ObjectId"], 0, H, 23),
-                 reuna(patina_solmu["m_ObjectId"], 0, H, 24), reuna(ruutu_solmu["m_ObjectId"], 0, H, 25)]
+                 reuna(patina_solmu["m_ObjectId"], 0, H, 24), reuna(ruutu_solmu["m_ObjectId"], 0, H, 25),
+                 reuna(aurinko_solmu["m_ObjectId"], 0, H, 26)]
 G["m_Edges"] += [reuna(keila_solmut[i]["m_ObjectId"], 0, H, 16 + i) for i in range(5)]
 for om in (ham_om, maavalo_om, maavari_om, yon_om, yovalot_om, tumma_om, keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om,
-           khamaryys_om, savy_om, rae_om, patina_om):
+           khamaryys_om, savy_om, rae_om, patina_om, aurinko_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
 hsolmut = [ham_cf, ham_solmu, tumma_solmu, maavalo_solmu, maavari_solmu, yon_solmu, yovalot_solmu, hpaikka_solmu] + uv_solmut
-hsolmut += [keski3_solmu, khamaryys_solmu, savy_solmu, rae_solmu, patina_solmu, ruutu_solmu] + keila_solmut
+hsolmut += [keski3_solmu, khamaryys_solmu, savy_solmu, rae_solmu, patina_solmu, ruutu_solmu, aurinko_solmu] + keila_solmut
 for s in hsolmut:
     G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
 lisat += [ham_om, tumma_om, tumma_ulos, maavalo_om, maavari_om, yon_om, yovalot_om, ham_ulos, maavalo_ulos, maavari_ulos, yon_ulos, yovalot_ulos,
           hpaikka_ulos] + uv_ulot + hsolmut + ham_slotit
 lisat += [keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om, khamaryys_om, keski3_ulos, khamaryys_ulos] + keila_ulot
-lisat += [savy_om, savy_ulos, rae_om, rae_ulos, patina_om, patina_ulos, ruutu_ulos]
+lisat += [savy_om, savy_ulos, rae_om, rae_ulos, patina_om, patina_ulos, ruutu_ulos, aurinko_om, aurinko_ulos]
 print("fragmentti → RadioHamara (_radioHamara, _radioMaavalo, _radioMaavaloVari, _radioYonValot, _radioYovalot + UV 0–3,"
       " valokeila _keila0/1, _keilaRajat, _keila0Vari/_keila1Vari, _keilaHamaryys, pohjan sävy _pohjaSavy, rae _pohjaRae,"
-      " patina _pohjaPatina + ruudun paikka)")
+      " patina _pohjaPatina + ruudun paikka, päivä ja yö _aurinko)")
 
 kaavio += lisat
 kirjoita(os.path.join(kohde, "MatkakirjaTileset.shadergraph"), kaavio)

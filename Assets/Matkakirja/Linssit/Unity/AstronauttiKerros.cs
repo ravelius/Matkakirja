@@ -197,10 +197,18 @@ namespace Matkakirja.Natiivi
             pilvienPeitto = Mathf.MoveTowards(pilvienPeitto, (float)peitto, Time.unscaledDeltaTime / 0.8f);
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
+            pilvet?.Tarkkuus(kyyti != KyydinTila.Kauko && !TarkatPilvetPois ? 1f : 0f, TarkkojenPilvienKm);
             yokuori?.PilvienPeitto(pilvienPeitto);
         }
 
         float pilvienPeitto;
+
+        /// <summary>
+        /// Terävät pilvet kyydissä (omistaja 28.9. "Vielä liikaa blurrina"; Cupolasta 4096 px:n pilvikuvan tekseli on ruudulla
+        /// 30–50 px): bikuubinen näyte ja kohinakynnyksen reuna, pohja 35 km. A/B `astro kyyti tarkat 0|1|&lt;km&gt;`.
+        /// </summary>
+        public static bool TarkatPilvetPois;
+        public static float TarkkojenPilvienKm = 35f;
 
         /// <summary>ISS-realismi 2: päivän pilvet (Julkaisijan ajastettu haku NASA GIBS:stä), haetaan kyydin alkaessa.</summary>
         public const string PaivanPilvetUrl = "https://media.matkakirja.app/data/pilvet/uusin.png";
