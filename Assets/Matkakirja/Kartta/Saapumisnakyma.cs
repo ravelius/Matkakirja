@@ -126,6 +126,13 @@ namespace Matkakirja
             /// raportoivat); <see cref="Laske"/> antaa samat kuin Lat, Lon ja Korkeus.
             /// </summary>
             public double WebLat, WebLon, WebKorkeus;
+            /// <summary>
+            /// KOKO MAA KERRALLA (omistaja 28.9.2026 klo 17.2x): korkeus pallonsäteinä, jolla laatikko mahtuu ruutuun sekä
+            /// leveydeltä että korkeudelta (sama kaava kuin <see cref="Tapa.Molempiin"/>). Kapealla ruudulla saapuminen
+            /// sovitetaan korkeuteen, jolloin vaakamuotoinen maa ei mahdu; loitonnuksen katto on tämän ja saapumisen suurempi.
+            /// 0 kaupunkinäkymässä.
+            /// </summary>
+            public double KokoMaa;
             public double KorkeusMetreina => Korkeus * Sade;
         }
 
@@ -507,8 +514,9 @@ namespace Matkakirja
         public static double? Uloszoomauskatto(Tulos saapuminen)
         {
             if (saapuminen.Tapa == Tapa.Kaupunkinakyma || !saapuminen.Laatikko.HasValue) return null;
-            if (!(saapuminen.WebKorkeus > saapuminen.KorkeusMin)) return null;
-            return saapuminen.Korkeus;
+            if (!(saapuminen.WebKorkeus > saapuminen.KorkeusMin) && !(saapuminen.KokoMaa > saapuminen.Korkeus)) return null;
+            // Omistaja 28.9. klo 17.2x: "maan pystyy näkemään kerralla" — katto vähintään koko maan sovitus.
+            return Math.Max(saapuminen.Korkeus, saapuminen.KokoMaa);
         }
 
         public struct Panoraja
@@ -603,6 +611,10 @@ namespace Matkakirja
                         pyydetty = KorkeusLeveydesta(Math.Max(l.W * vara, l.H * vara * A), A, fov, min);
                 }
                 tulos.Korkeus = Math.Min(KorkeusMax, Math.Max(min, pyydetty));
+                // Koko maa molempiin suuntiin (loitonnuksen katto, ei saapumisnäkymä).
+                double koko = tulos.Tapa == Tapa.Molempiin ? pyydetty : PallonKorkeus(l, vara, A, fov);
+                if (double.IsNaN(koko)) koko = KorkeusLeveydesta(Math.Max(l.W * vara, l.H * vara * A), A, fov, min);
+                tulos.KokoMaa = Math.Min(KorkeusMax, Math.Max(min, koko));
                 tulos.Lat = Math.Max(-89.5, Math.Min(89.5, lat));
                 tulos.Lon = lon;
                 tulos.Laatikko = l;
@@ -662,6 +674,7 @@ namespace Matkakirja
             t.WebLat = web.Lat; t.WebLon = web.Lon; t.WebKorkeus = web.Korkeus;
             t.Korkeus = web.Korkeus * kerroin;
             t.KorkeusMin = web.KorkeusMin * kerroin;
+            t.KokoMaa = web.KokoMaa * kerroin;
             t.NakyvaLeveys = LeveysKorkeudesta(t.Korkeus, Kuvasuhde(leveysPt, korkeusPt), fov);
             double dx = kotelo.X + kotelo.W / 2.0 - leveysPt / 2.0, dy = kotelo.Y + kotelo.H / 2.0 - korkeusPt / 2.0;
             double r = Math.Sqrt(dx * dx + dy * dy);

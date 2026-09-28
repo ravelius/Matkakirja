@@ -322,9 +322,12 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             LopetaSanelu();
-            // Web sulje: luenta pysähtyy (pysaytaLukija, kun luentaPaalla) ja puhevuoro päättyy.
+            // Web sulje: luenta pysähtyy ja puhevuoro päättyy. PUHE LOPPUU CHATIN MUKANA (omistaja TF 1.0.37: "se ei lopettanut
+            // puhumista, vaikka lähdin pois pulun chatista"): kesken oleva vastaus ei aloita eikä jatka luentaa suljetussa
+            // chatissa (luentaHiljennetty), ja Pulun puhe (myös latautuva pala) pysähtyy riippumatta kaiutinvivusta.
+            if (kysyy) luentaHiljennetty = true;
             PeruLuenta();
-            if (Auki && LuentaPaalla) PysaytaPulunPuhe();
+            if (Auki) PysaytaPulunPuhe();
             LopetaPuheVuoro();
             suurennos.Sulje();
             kuvakortti?.Sulje();
@@ -823,8 +826,8 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
             // Virkevirta luki jo alun striimin aikana: loppu perään (web paataLuenta), muuten koko vastaus nyt.
-            // Mikki hiljensi Pulun kesken striimin: ei luentaa tälle vastaukselle (myöskään kaiuttimella).
-            if (luentaHiljennetty) PeruLuenta();
+            // Mikki hiljensi tai chat suljettiin kesken vastauksen: ei luentaa tälle vastaukselle.
+            if (luentaHiljennetty || !Auki) PeruLuenta();
             else if (!PaataLuenta(t)) LueVastaus(Puhuttava(t.Vastaus));
             VahdiPuheVuoroa();
             if (paikkakysymys && !joLennetty && t.Paikka != null) LennaPaikkaan(t.Paikka);
@@ -1385,7 +1388,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Striimin pala luennalle (web syotaLuennalle): virta käynnistyy laiskasti ensimmäisestä valmiista virkkeestä.</summary>
         void SyotaLuennalle(string kertynyt)
         {
-            if (!Virkevirta || !LuentaPaalla || luentaHiljennetty) return;
+            if (!Virkevirta || !LuentaPaalla || luentaHiljennetty || !Auki) return;
             int raja = LuettavaRaja(kertynyt, luettuun == 0);
             if (raja <= luettuun) return;
             if (luentaVirta == null)
