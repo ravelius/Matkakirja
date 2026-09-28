@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2382, teksti: 'Astronautin kamera: Pulun taulu vaihtaa näkymää' },
   { v: 2381, teksti: 'Poltto: nice 15 oletuksena, kevyt tila taskpoli… (#3550)' },
   { v: 2380, teksti: 'Ihmeet-tilaus kytketty peliin: 14 kohdetta (#3548)' },
   { v: 2379, teksti: 'Pulu: koko repertuaari eleven_v4:llä tasoitettu… (#3581)' },
