@@ -441,6 +441,19 @@ namespace Matkakirja
             PaivitaPaletti();
         }
 
+        /// <summary>
+        /// Täyttö vain korostetuille alueille (omistaja 28.9.2026 klo 16.5x: "Vain yksi maakunta pitäisi olla värjättynä
+        /// kerrallaan, ellei ole valittu kaikki"): yksittäinen maakunnan valinta värjää vain sen, "Kaikki" kaikki.
+        /// </summary>
+        public bool VainKorostetut { get; private set; }
+
+        public void AsetaVainKorostetut(bool vain)
+        {
+            if (VainKorostetut == vain) return;
+            VainKorostetut = vain;
+            PaivitaPaletti();
+        }
+
         float seuraavaOletus;
 
         /// <summary>
@@ -692,7 +705,7 @@ namespace Matkakirja
                         : Maakuntajako.Taytto(vari, false, lineaarinen);
                     // Oletusrajat (löydös 113): ilman valintaa vain rajat, täyttö läpinäkyvä.
                     double peitto = t.A;
-                    bool nakyy = TayttoNakyy;
+                    bool nakyy = TayttoNakyy && (korostettu || !VainKorostetut);
                     px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), nakyy ? B(peitto) : (byte)0);
                 }
                 else px[p.Value] = C(s.Taytto);

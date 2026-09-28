@@ -43,13 +43,15 @@ namespace Matkakirja.Natiivi
             if (mk == null) return;
             mk.OletusPois ??= () => Maakunnat.Pois;
             // Pois: korostus, täyttö ja rajat pois (oletusrajat eivät palaa, koska Maakunnat.Pois on tosi).
-            if (string.IsNullOrEmpty(avain)) { mk.KorostusPois(null); mk.Taytto(false); mk.MaaTila(false); return; }
+            if (string.IsNullOrEmpty(avain)) { mk.AsetaVainKorostetut(false); mk.KorostusPois(null); mk.Taytto(false); mk.MaaTila(false); return; }
             // Löydös 165: välilehti kiinni (esim. tallennettu valinta käynnistyksessä) → ei korostusta kartalle.
             if (!Maakunnat.Nakyvissa) { Palauta(mk); return; }
             mk.MaaPerussavy(Perus);
             mk.KorostusPois(null);
             // Löydös 169: Kaikki = koko maan täyttö ilman yksittäistä korostusta.
-            if (Maakunnat.OnKaikki(avain)) { mk.Taytto(true); mk.MaaTila(true); return; }
+            if (Maakunnat.OnKaikki(avain)) { mk.AsetaVainKorostetut(false); mk.Taytto(true); mk.MaaTila(true); return; }
+            // Omistaja 28.9. klo 16.5x: yksittäinen valinta värjää vain valitun maakunnan (muut vain rajoina).
+            mk.AsetaVainKorostetut(true);
             mk.Korosta(avain, Valittu);
             mk.Taytto(true);
             mk.MaaTila(true);
@@ -67,6 +69,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Oletustila: korostus ja täyttö pois; kerros jää päälle rajoiksi (113), Pois sammuttaa sen (PaivitaOletus).</summary>
         static void Palauta(MaaKartta mk)
         {
+            mk.AsetaVainKorostetut(false);
             mk.KorostusPois(null);
             mk.Taytto(false);
             mk.MaaPerussavy(Oletus);
