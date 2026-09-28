@@ -16,12 +16,13 @@ namespace Matkakirja.Natiivi
     public sealed class DioraamaTaulu
     {
         const float PeittoOsuusPros = 45f;
-        const float PuluMinPt = 64f, PuluMaxPt = 110f, PuluEtaisyysvertailuM = 3f;
+        // Minipulu (lintu rajattuna, 58 × 70): kokopulun kuvassa lintu jäi 64 pt:n laatikossa liian pieneksi (savuke 29.9.).
+        const float PuluMinPt = 56f, PuluMaxPt = 96f, PuluEtaisyysvertailuM = 14f;
         const int AnimaatioMs = 220;
         static readonly Color Pergamentti = new Color(0.9373f, 0.9020f, 0.8235f, 0.94f);
         static readonly Color Teksti = new Color(0.2039f, 0.1569f, 0.1137f);
 
-        readonly VisualElement juuri, lauta, nakyma;
+        readonly VisualElement juuri, lauta, nakyma, lappuKerros;
         readonly Label otsikko, teksti, lainaus, lahde, laskuri;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
@@ -46,7 +47,10 @@ namespace Matkakirja.Natiivi
             juuri.style.left = 0; juuri.style.right = 0; juuri.style.top = 0; juuri.style.bottom = 0;
             juuri.style.display = DisplayStyle.None;
 
-            pulu = new LiviaKuva();
+            pulu = new LiviaKuva(mini: true);
+            lappuKerros = Rakenne.El("mk-dioraama__laput", juuri, PickingMode.Ignore);
+            lappuKerros.style.position = Position.Absolute;
+            lappuKerros.style.left = 0; lappuKerros.style.right = 0; lappuKerros.style.top = 0; lappuKerros.style.bottom = 0;
             pulu.style.position = Position.Absolute;
             juuri.Add(pulu);
 
@@ -154,9 +158,8 @@ namespace Matkakirja.Natiivi
                 var paneeliste = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
                 // Koko syvyyden mukaan (etäämpänä pienempi), rajattuna 64–110 pt:iin (tarkka käyrä jää laitetestiin).
                 float koko = Mathf.Clamp(PuluMaxPt * (PuluEtaisyysvertailuM / Mathf.Max(0.5f, ruutu.z)), PuluMinPt, PuluMaxPt);
-                float puluLeveys = koko * (152f / 304f);
-                pulu.style.height = koko;
-                pulu.style.width = puluLeveys;
+                float puluLeveys = koko * (58f / 70f);
+                pulu.MiniKorkeus(koko);
                 pulu.style.left = paneeliste.x - puluLeveys * 0.5f;
                 pulu.style.top = paneeliste.y - koko;
 
@@ -170,8 +173,15 @@ namespace Matkakirja.Natiivi
                 float tauluKorkeus = float.IsNaN(lauta.layout.height) || lauta.layout.height <= 0 ? 160f : lauta.layout.height;
                 float x = oikealla ? paneeliste.x + 24f : paneeliste.x - 24f - tauluLeveys;
                 x = Mathf.Clamp(x, 8f, Mathf.Max(8f, pw - tauluLeveys - 8f));
+                float y = Mathf.Clamp(paneeliste.y - koko - 8f, 8f, Mathf.Max(8f, ph - tauluKorkeus - 8f));
+                if (nakyma.KohdeTila == null)
+                {
+                    // Yleisnäkymä: taulu ruudun alaosaan keskelle, ettei se peitä linnaa (savuke 29.9.).
+                    x = (pw - tauluLeveys) * 0.5f;
+                    y = ph - tauluKorkeus - Mathf.Max(24f, ph * 0.06f);
+                }
                 lauta.style.left = x;
-                lauta.style.top = Mathf.Clamp(paneeliste.y - koko - 8f, 8f, Mathf.Max(8f, ph - tauluKorkeus - 8f));
+                lauta.style.top = y;
             }
             else pulu.style.display = DisplayStyle.None;
 
@@ -238,7 +248,7 @@ namespace Matkakirja.Natiivi
                     if (r.z <= 0f) continue;
                     if (n == laput.Count)
                     {
-                        var uusi = Rakenne.Teksti("", "mk-dioraama__lappu", juuri);
+                        var uusi = Rakenne.Teksti("", "mk-dioraama__lappu", lappuKerros);
                         uusi.pickingMode = PickingMode.Ignore;
                         Kirjasimet.Aseta(uusi, Kirjasin.Kone);
                         uusi.style.position = Position.Absolute;
