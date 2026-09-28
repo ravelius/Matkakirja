@@ -265,6 +265,19 @@ namespace Matkakirja.Natiivi
             Paivita();
         }
 
+        /// <summary>
+        /// Maakuntakartta auki (Karttaselite.MaakuntaKartta): nostomerkit piiloon. OMA LIPPU, ei NaytaSallittu: linssin avaus sulkee
+        /// maakuntakartan, ja sen sulku palautti ennen NaytaSallittu(true):n linssin jo asettaman piilon päälle (BUILD 38 -savuke,
+        /// Maapallon vuosi: nostomerkit ja hehku kuoren päällä Thessalian valinnan jälkeen).
+        /// </summary>
+        public void AsetaMaakuntaEsto(bool esto)
+        {
+            if (maakuntaEsto == esto) return;
+            maakuntaEsto = esto;
+            Paivita();
+        }
+        bool maakuntaEsto;
+
         // ELÄVÄ KARTTA, KOHTA 2 (build 20): kokoluokka ja löydetty-tila tulevat NostoKerros.Nosto-kentistä (Natiiviseppä), joihin
         // Linssisepän ElavaHerays kytkee Pelikoodarin musteen; jäljet, hehku ja löydön käyrä MusteJaljetista (Linssiseppä).
         /// <summary>Kokoluokan kerroin suhteessa kohteeseen (pääkohde 1,0 : kohde 0,67 : pieni 0,44; kohde = nykyinen koko).</summary>
@@ -405,7 +418,7 @@ namespace Matkakirja.Natiivi
             // Linssin aikana merkit näkyvät, kun Natiivisepän linssinimet on päällä (web: linssikartan nimet),
             // mutta ilman napautusta ja viuhkaa: kerros päästää kosketukset kartalle.
             bool linssinimet = !sallittu && k != null && k.LinssiNimet;
-            bool nakyy = (sallittu || linssinimet) && k != null && k.Nakyvissa && juuri.panel != null;
+            bool nakyy = (sallittu || linssinimet) && !maakuntaEsto && k != null && k.Nakyvissa && juuri.panel != null;
             juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (linssinimet != vainNimet)
             {
