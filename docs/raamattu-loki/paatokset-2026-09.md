@@ -8455,3 +8455,7 @@ Omistaja 28.9. aamulla v3-kuvapareista sanatarkasti: "Ota Ateenassa tuo 3d pois 
 ## OMISTAJA: ALOITUSLENNON LASKEUTUMINEN SELVASTI KAUEMPAA JA KONE PIENEMPANA (28.9.2026 klo 07.45)
 
 Omistaja 28.9. aamulla v3-kuvapareista sanatarkasti: "Ja kamera pitää olla selvästi kauempana ja kone pienemmäksi kun laskeutuminen. Näyttää muuten oudolta". v3:n kosketus 490 km / kone 2,9 % ei riita. Natiiviseppa valitsee v3b:hen selvasti kauemman kameran ja pienemman koneen (lasku pienena liikkeena ison kartan paalla), arvot mitattuina kuvapariin.
+
+## OFFLINE: LADATTU ALUE NAYTTAA SAMALTA KUIN VERKOSSA — MODUULIT 1.56, RELIEFI+YOVALOT, KERMA KOKO ALUEELLE, TODELLINEN LEVYKOKO (28.9.2026 klo 07.46)
+
+Siirtosepan E2E-offline Tanska + Kroatia (BUILD 34, v257): lataus ok; maasto puuttui 127/138 maalta (vanha sarja 23b) → #3523 junassa; natiivi ei lue offline-JPG/WebP-kuvia → Natiivisepalle. Fable: 1) maat.*.moduulit skeemaan 1.56, 2) reliefi ja yovalot aina mukaan, 3) kermavaritaso kaikille ladatun alueen maille (ei vain kotimaa); jos lisays yli ~10 % paketista, Siirtoseppa tuo suosituksen, 4) pelaajalle naytetaan todellinen levykoko (rajauslaatikko + 4 kt lohkot). Raportti origin/siirtoseppa-luovutus:docs/raportit/siirtoseppa-e2e-offline-20260928.md.
