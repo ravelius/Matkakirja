@@ -2848,6 +2848,10 @@ export const RAAMATTU = {
       otsikko: 'Äänet ja luennat',
       tila: 'luonnos',
       kohdat: [
+        'STRIIMILUKIJAN KAKSI NAPPIA (omistaja 28.9.2026, sitova, web ja natiivi): kaikissa luentakohdissa näkyy vain '
+          + 'kaiutin (toisto/tauko + VU) ja mini-hampurilainen; hammaspyörä-nappi poistuu. Hampurilainen avaa tiiviin valikon: '
+          + 'tekstin kappaleet listana (napautus hyppää kappaleeseen, nykyinen korostettuna), alimpana kelausrivi — vasemmalla '
+          + 'vierekkäin kappale taakse ja −10 s, oikealla +10 s ja kappale eteen — sekä entisen hammaspyörän ääniasetukset.',
         'EI AANITIEDOSTOJA REPOSSA, KAIKKI VAIN AMPARISSA (omistaja '
           + '11.9.2026 klo 11.05, sanatarkasti: "repossa ei saa olla '
           + 'aanitiedostoja, kaikki vain amparissa"): assets/audio-kansion '
