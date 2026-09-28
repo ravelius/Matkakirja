@@ -26,6 +26,8 @@
  *   S = HSV-värikylläisyys (max − min) / max. Kaistojen väliset aukot (L < 0,02)
  *   täytetään edellisen päivän kuvasta; jos sielläkin on aukko, alfa = 0.
  *
+ *   Alfan reunat pehmennetään (pehmennaAlfa, ≈ Gauss σ 1,15 px), jottei 10 km:n pikseli näy portaina.
+ *
  *   Tulos: <kansio>/uusin.png (4096 × 2048, 8-bit harmaa = alfa · 255, lon −180…180
  *   vasemmalta, lat 90…−90 ylhäältä) ja <kansio>/uusin.json.
  *   Jos kuukauden BMNG puuttuu ämpäristä, ajo ohitetaan siististi: ei tiedostoja,
@@ -170,6 +172,47 @@ export function laskePilvialfa({ paiva, edellinen = null, bmng, leveys, korkeus 
   return { alfa, taytetty };
 }
 
+/**
+ * Pehmeät reunat (Linssiseppä 28.9.2026, natiivin laitekuva cl7): alfa on lähes kaksiarvoinen, ja ISS:n korkeudelta
+ * katsottuna noin 10 km:n pikselit näkyivät pilvien reunoilla portaina ja maalla pilkkuina (pinnan muutos vs. BMNG).
+ * Ensin 3 × 3 -mediaani poistaa yksittäiset pilkut, sitten kaksi kertaa toistettu 3 × 3 -laatikkosumennus (≈ Gauss σ 1,15 px,
+ * noin 11 km) pehmentää reunat; vaakasuunta kiertää pituuspiirin ±180° yli, pystysuunta leikkautuu napoihin. Palauttaa uuden
+ * Uint8Arrayn.
+ */
+export function pehmennaAlfa(alfa, leveys, korkeus, kierroksia = 2) {
+  if (alfa.length !== leveys * korkeus) throw new Error(`pehmennys: ${alfa.length} ≠ ${leveys} × ${korkeus}`);
+  let a = new Float32Array(alfa.length);
+  const ikkuna = new Uint8Array(9);
+  for (let y = 0; y < korkeus; y++) {
+    for (let x = 0; x < leveys; x++) {
+      let n = 0;
+      for (let dy = -1; dy <= 1; dy++) {
+        const yy = Math.min(korkeus - 1, Math.max(0, y + dy)) * leveys;
+        for (let dx = -1; dx <= 1; dx++) ikkuna[n++] = alfa[yy + ((x + dx + leveys) % leveys)];
+      }
+      ikkuna.sort();
+      a[y * leveys + x] = ikkuna[4];
+    }
+  }
+  const b = new Float32Array(a.length);
+  for (let k = 0; k < kierroksia; k++) {
+    for (let y = 0; y < korkeus; y++) {
+      const r = y * leveys;
+      for (let x = 0; x < leveys; x++) {
+        const v = x === 0 ? leveys - 1 : x - 1, o = x === leveys - 1 ? 0 : x + 1;
+        b[r + x] = (a[r + v] + a[r + x] + a[r + o]) / 3;
+      }
+    }
+    for (let y = 0; y < korkeus; y++) {
+      const ylos = (y === 0 ? 0 : y - 1) * leveys, r = y * leveys, alas = (y === korkeus - 1 ? y : y + 1) * leveys;
+      for (let x = 0; x < leveys; x++) a[r + x] = (b[ylos + x] + b[r + x] + b[alas + x]) / 3;
+    }
+  }
+  const ulos = new Uint8Array(a.length);
+  for (let i = 0; i < a.length; i++) ulos[i] = Math.round(a[i]);
+  return ulos;
+}
+
 /** Osuus pikseleistä, joissa on dataa (L ≥ 0,02). */
 export function kattavuus(rgb) {
   let ok = 0;
@@ -263,9 +306,11 @@ async function pilvet(argv) {
   const e = await haeGibs(sharp, kerros, eilen);
   if (!e.rgb) console.log(`GIBS ${kerros} ${eilen}: ei aukkojen täyttöä (${e.syy})`);
 
-  const { alfa, taytetty } = laskePilvialfa({
+  const laskettu = laskePilvialfa({
     paiva: paivaRgb, edellinen: e.rgb ?? null, bmng, leveys: LEVEYS, korkeus: KORKEUS,
   });
+  const { taytetty } = laskettu;
+  const alfa = pehmennaAlfa(laskettu.alfa, LEVEYS, KORKEUS);
   let summa = 0;
   for (const a of alfa) summa += a;
   mkdirSync(kansio, { recursive: true });
