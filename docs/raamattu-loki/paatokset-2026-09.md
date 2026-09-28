@@ -8467,3 +8467,7 @@ Omistaja 28.9. aamulla astrolinssin kuvaselaimen kuvaparista sanatarkasti: "Astr
 ## OMISTAJA: ALOITUSLENNON LOPPULASKEUTUMINEN KUVATAAN YLHAALTA (NYT KUIN POMMI ISKISI) (28.9.2026 klo 08.11)
 
 Omistaja 28.9. aamulla sanatarkasti: "Tuo loppu laskeutuminen kannattaa kuvata ylhäältä, nyt näyttää kun joku pommi iskisi". Yhdessa klo 07.45 palautteiden kanssa (3D pois lennosta, kamera selvasti kauempana, kone pienempi) → Natiivisepan v3d: loppulasku ylhaalta, pehmea liuku perille, ei sivuviistoa syoksya. v3c (98e3f4a3: terava saapuminen, ohitus maan paalla) ei mennyt omistajalle, koska palautteet puuttuivat.
+
+## OMISTAJA HYVAKSYI NATIIVIN JOKIEN VIENNIN JOET-2026-09-28 (EUROOPAN 39 MAATA KORJATTU) (28.9.2026 klo 08.28)
+
+Karttasepan jokikortti pyramidi-poltto/joet-2026-09-28/jokikortti-20260928.md + kuvaparit (ITA, ROU, FIN) omistajalle. Omistaja hyvaksyi Karttasepan sessioon 08.25; joet-2026-09-28 ampärissa (128 tiedostoa). Hypyt 164 588 → 17 618 (FIN 4 009 → 603, ITA 1 694 → 158); muut 88 maata 26b:sta ennallaan (VAIN EUROOPPA). Natiiviseppa vaihtaa versionimen 1.0.35-junassa; Linssiseppa kayttaa jokia.
