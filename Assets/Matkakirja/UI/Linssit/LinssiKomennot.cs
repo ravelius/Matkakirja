@@ -95,6 +95,7 @@ namespace Matkakirja.Natiivi
                     return l.Astronautti.Kuva.Kohde?.Tunnus;
                 case "kuvaselain":
                     Kuvanakyma.Vanha = a1 == "0";
+                    if (l.Astronautti.Kuva.Auki) l.Astronautti.Kuva.PaivitaVanha();
                     return Kuvanakyma.Vanha ? "1.0.33" : "kuvaselain";
                 case "kohde":
                     l.Astronautti.Kuva.VaihdaKohde(a1 == "-1" ? -1 : 1);

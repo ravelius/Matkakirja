@@ -196,9 +196,7 @@ namespace Matkakirja.Natiivi
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
             }
-            juuri.EnableInClassList("mk-astrokuva--vanha", Vanha);
-            kohdeNapit.style.display = !Vanha && Linssi()?.KatsoNaapuri(1) != null ? DisplayStyle.Flex : DisplayStyle.None;
-            RajaaNauha();
+            PaivitaVanha();
             Valitse(Mathf.Clamp(i, 0, Math.Max(0, k.Havainnot.Count - 1)));
             Esilataa();
         }
@@ -544,6 +542,14 @@ namespace Matkakirja.Natiivi
         }
 
         // --- kuvaselain ---------------------------------------------------------------
+
+        /// <summary>A/B-tila (Vanha) näkyviin heti, myös jo auki olevaan kuvaan (`ui linssi kuvaselain 0|1` kesken kuvan).</summary>
+        public void PaivitaVanha()
+        {
+            juuri.EnableInClassList("mk-astrokuva--vanha", Vanha);
+            kohdeNapit.style.display = !Vanha && Linssi()?.KatsoNaapuri(1) != null ? DisplayStyle.Flex : DisplayStyle.None;
+            RajaaNauha();
+        }
 
         float turvaLeveys = float.NaN;
 
