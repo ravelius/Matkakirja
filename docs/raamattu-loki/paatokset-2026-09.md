@@ -8987,3 +8987,7 @@ Omistaja 28.9. klo 23.01 webin maakuntatilan kaappauksella (iPad, Keski-Makedoni
 ## KORJAUS: MAAKUNTANOSTON KAAPPAUS ON NATIIVISTA (28.9.2026 klo 23.09)
 
 Päätoimittaja 28.9. klo 23.09: 23.01-kirjauksen kaappaus (maakuntanosto-isommaksi-web.png) on natiivista (iPad), ei webistä — Siirtoseppä huomasi, että pikkukuvallinen mininosto on vain natiivissa. Nostoikkuna muiden nostojen kokoon, kuva kokoruudulle, mininosto isommaksi + nostonvärinen ilman kehystä → Natiivi-UI:n maakuntatila-erään. Siirtoseppä tekee webiin kohdat 1–2 vain, jos webin maakuntanosto on samalla tavalla pienempi tai kuvaa ei voi suurentaa.
+
+## OMISTAJA: CUPOLA 3 JUNAAN (1.0.41) (28.9.2026 klo 23.11)
+
+Linssiseppä 28.9. klo 23.1x: Codexin Cupola 3 (pyöreä kattoikkuna, pimeä ohjaamo, lappu, kerrokset) kytketty natiiviin, laite cl18 iPhone 17 Pro + iPad Pro 11, 0 poikkeusta; proto linssiseppa/cupola3 c2645317, A/B astro kyyti ohjaamo 3|3b|2, ämpäriin 20 kerrosta; Linssit 395/395. Omistaja klo 23.11 kortilla: 'OK, junaan' → kulma A, iPadin ikkuna keskelle (lappu ei leikkaudu), merge-pyyntö Natiivisepälle 1.0.41:een; web samoilla kuvilla Siirtosepälle (iss-realismi-suunnitelma §5).
