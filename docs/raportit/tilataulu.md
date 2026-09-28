@@ -2,11 +2,13 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-28 11:44 EEST — **UUSI PIIKKI: load1 104,5, R/Rs 34.** Kaksi syytä yhtä aikaa: `mds_stores` (195% CPU, uusi prosessi PID 22085 klo 11:42 — Spotlight käynnistyy jatkuvasti uudelleen) + **Karttasepän Unity `LuoPallo`-ajo (99% CPU, alkoi 11:38)** — tämä rikkoo "ei raskaita paikallisia ajoja" -sääntöä. Ilmoitettu Karttasepälle + Päätoimittajalle 11:44. Kuorma on nyt selvästi toistuva/oskilloiva ongelma 45+ min ajan — todennäköisesti tarvitsee omistajan/Päätoimittajan päätöksen (Spotlight pois pallopolton kansiosta, tai LuoPallo-ajon siirto klo 17 jälkeen).
+**Päivitetty:** 2026-09-28 11:44 EEST — **KORJAUS Päätoimittajalta: load1 EI mittaa vain Claudea** (sisältää omistajan oman käytön ~404% ja I/O-odotuksen). Oikea mittari jatkossa: `koodaus`-käyttäjän CPU-osuus yhteensä (`ps -Ao user,%cpu`), raja 800% yli 5 min. Nyt: **koodaus-osuus vain 147%** — reilusti alle rajan, ei hälytystä. LuoPallo-ajo (Unity, juna) on nice 20 = sallittu matala prioriteetti. mds_stores laski 4%:iin. Omistaja lisää itse Spotlight-poikkeuksen Järjestelmäasetuksista — ei Postivahdin toimenpide. Aiemmat load1-pohjaiset hälytykset (61→216→...→104) olivat harhaanjohtavia mittarin osalta, mutta juurisyy (CI-savukeajon peruminen) oli silti oikea ja hyödyllinen korjaus.
 
 ## 0) OMISTAJAN UUSI SÄÄNTÖ (Päätoimittaja 10:5x, sitova klo 17 asti)
 
-Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet (kuorma1 ≤ 8, ≤ 8 ydintä). Käännökset yksi kerrallaan Julkaisijan vuorolla matalalla prioriteetilla, simulaattoreita enintään yksi, ei agenttiparvia rinnakkain (enintään 1 agentti per rooli), ei raskaita paikallisia ajoja. Postivahti seuraa load1:tä joka kierroksella — jos kuorma1 > 10 yli 5 min, ilmoitetaan syyllinen prosessi Päätoimittajalle ja omistavalle roolille.
+Omistaja käyttää Macia klo 17 asti — Clauden koko kuorma enintään puolet. Käännökset yksi kerrallaan Julkaisijan vuorolla matalalla prioriteetilla, simulaattoreita enintään yksi, ei agenttiparvia rinnakkain (enintään 1 agentti per rooli), ei raskaita paikallisia ajoja.
+
+**KORJAUS 11:44 (Päätoimittaja):** load1 EI ole oikea mittari — se sisältää omistajan oman koneenkäytön ja I/O-odotuksen, ei pelkkää Clauden kuormaa. **Oikea seuranta: `ps -Ao user,%cpu | awk '$1=="koodaus"{sum+=$2} END{print sum}'`** (koodaus-käyttäjän CPU-osuus yhteensä) — jos summa > 800% yli 5 min, ilmoitetaan syyllinen prosessi Päätoimittajalle ja omistavalle roolille. Spotlight-poikkeuksen (mds_stores) hoitaa omistaja itse Järjestelmäasetuksista.
 
 **KLO 17 JÄLKEEN (omistaja hyväksyi "nice-oletuksen" 11:31, tuleva sääntö):** kuorma1 > 10 -hälytys poistuu. Sen sijaan valvotaan, että raskaat prosessit (poltot, xcodebuild, chromium-savukkeet, `node --test` -sarjat) ajavat `nice ≥ 10` (`ps -o nice,comm`) — jos raskas prosessi nice 0 yli 5 min, yksi rivi omistavalle roolille. GPU-sääntö jää voimaan: Mac-savukkeita ≤ 2, simulaattoreita ≤ 1 päivällä. Ennen klo 17 nykyinen puolikas-kuorma-valvonta (tämä osio) on voimassa.
 
