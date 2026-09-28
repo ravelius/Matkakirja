@@ -213,5 +213,43 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(SymbolienVaisto.SivuSiirto(1f, 0f, 0.5f, 0.5f, 10f, 0.5f) > 0.5f * 10f, "reuna ei koskaan kaupunkipisteessä");
             Oleta.Tosi(SymbolienVaisto.SivuSadeKm >= 1.0 && SymbolienVaisto.SivuSadeKm <= 5.0, "säde kaupungin sisällä (Colosseum 0,8 km, Stonehenge 13 km ei)");
         }
+
+        // ---- Kohta 7: kaupungin vieressä aina maalla (omistaja 28.9. klo 19.1x: Colosseum "puoleksi meressä") ----
+
+        static readonly SymbolienVaisto.MaallaTaso[] RoomanTasot =
+        {
+            new SymbolienVaisto.MaallaTaso(100, 2.5),   // kaukaa: malli ~100 km leveä, 2,5 km/pt
+            new SymbolienVaisto.MaallaTaso(40, 0.4),    // läheltä kallistettuna
+        };
+
+        [Testi]
+        static void MaallaMeriLannessa()
+        {
+            // Rooma: meri ~25 km länteen (pituusaste 12,2), maata itään. Valinta itäpuolelle ja koko pohja maalla.
+            bool Maata(double lat, double lon) => lon > 12.2;
+            var (a, osuus) = SymbolienVaisto.ValitseMaallaSuunta(Maata, 41.89, 12.49, 0.55f, 0.45f, RoomanTasot);
+            Oleta.Tosi(a > 22 && a < 158, $"itään päin: {a}°");
+            Oleta.Tosi(osuus > 0.99f, $"koko pohja maalla: {osuus:0.00}");
+            Oleta.Tosi(SymbolienVaisto.MaaOsuus(Maata, 41.89, 12.49, 270, 0.55f, 0.45f, RoomanTasot) <= 0.2f, "länsi olisi meressä (kaukaa kokonaan, läheltä 3/5)");
+        }
+
+        [Testi]
+        static void MaallaKaikkiMaataLansiEnsin()
+        {
+            // Sisämaa: kaikki suunnat yhtä hyviä → länsi (kaupungin nimiö on oletuksena idässä).
+            var (a, osuus) = SymbolienVaisto.ValitseMaallaSuunta((la, lo) => true, 48.2, 16.37, 0.5f, 0.5f, RoomanTasot);
+            Oleta.Tosi(a == 270f && osuus == 1f, $"länsi: {a}°, {osuus}");
+        }
+
+        [Testi]
+        static void MaallaPieniSaariParasOsuus()
+        {
+            // Visby: saari 25 km:n säteellä kaupungin kaakossa; malli ei mahdu kokonaan, mutta paras osuus valitaan.
+            double la0 = 57.64 - 0.1, lo0 = 18.29 + 0.2;
+            bool Maata(double lat, double lon) => Math.Pow((lat - la0) * 111.2, 2) + Math.Pow((lon - lo0) * 111.2 * 0.535, 2) < 25 * 25;
+            var (a, osuus) = SymbolienVaisto.ValitseMaallaSuunta(Maata, 57.64, 18.29, 0.6f, 0.3f, RoomanTasot);
+            float lansi = SymbolienVaisto.MaaOsuus(Maata, 57.64, 18.29, 270, 0.6f, 0.3f, RoomanTasot);
+            Oleta.Tosi(osuus > lansi && a >= 90 && a <= 180, $"kaakon puolelle kohti saarta: {a}°, {osuus:0.00} (länsi {lansi:0.00})");
+        }
     }
 }

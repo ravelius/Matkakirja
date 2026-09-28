@@ -159,7 +159,7 @@ namespace Matkakirja
         /// (<paramref name="puoli"/>, mallin paikalliset puolileveydet X ja Z) verran suuntaan d kertaa sin k.
         /// </summary>
         Quaternion PerspektiiviKierto(Vector3 paikka, Vector3 normaali, Quaternion asento, Vector2 puoli, out float nosto,
-            bool eiOikealle = false)
+            Vector3 kohtiKaupunkia = default)
         {
             nosto = 0f;
             if (!Ylhaalta3D || PerspektiiviAste <= 0f || kierto == null) return Quaternion.identity;
@@ -173,12 +173,13 @@ namespace Matkakirja
             Vector3 oikeaT = Vector3.ProjectOnPlane(gt.InverseTransformDirection(kamera.transform.right), normaali).normalized;
             Vector3 ylosT = Vector3.ProjectOnPlane(gt.InverseTransformDirection(kamera.transform.up), normaali).normalized;
             Vector3 d = oikeaT * (float)dx + ylosT * (float)dy;
-            // Kaupungin vieressä (malli pisteen vasemmalla): ei kallistusta oikealle, ettei yläpää kaadu kaupungin päälle; kulma
-            // pienenee samassa suhteessa kuin suunta lyhenee, joten suunta ei hyppää (puhdas oikealle = ei kallistusta).
-            if (eiOikealle)
+            // Kaupungin vieressä: ei kallistusta kaupunkia kohti, ettei yläpää kaadu kaupungin päälle; kulma pienenee samassa
+            // suhteessa kuin suunta lyhenee, joten suunta ei hyppää (puhdas kaupunkia kohti = ei kallistusta).
+            if (kohtiKaupunkia != Vector3.zero)
             {
-                float o = Vector3.Dot(d, oikeaT), ennen = d.magnitude;
-                if (o > 0f) { d -= oikeaT * o; kulma *= d.magnitude / Mathf.Max(1e-6f, ennen); }
+                Vector3 kk = Vector3.ProjectOnPlane(kohtiKaupunkia, normaali).normalized;
+                float o = Vector3.Dot(d, kk), ennen = d.magnitude;
+                if (o > 0f) { d -= kk * o; kulma *= d.magnitude / Mathf.Max(1e-6f, ennen); }
                 if (kulma <= 0.01f) return Quaternion.identity;
             }
             if (d.sqrMagnitude < 1e-10f) return Quaternion.identity;
@@ -236,6 +237,8 @@ namespace Matkakirja
                 case "kategoriat3d": VainErikoismallit = o[2] == "0" || o[2] == "pois"; return true;   // omistaja 28.9. 17.4x: oletus 1
                 case "erikoisylhaalta": ErikoisYlhaalta = o[2] != "0" && o[2] != "pois"; return true;
                 case "sivuun": SivuunSaanto = o[2] != "0" && o[2] != "pois"; return true;
+                case "maalla": MaallaSaanto = o[2] != "0" && o[2] != "pois"; return true;   // 0 = ruudun vasen (0ff66cfc)
+                case "seepia": instanssi?.AsetaSeepia(o[2] != "0" && o[2] != "pois"); if (instanssi == null) ErikoisSeepia = o[2] != "0"; return true;
                 case "kategoriat":
                     // 1|0: kategoriasymbolit (reliefit) vai arkkityypit (A/B); ruutu|pohjoinen: reliefin ylös-suunta.
                     if (o[2] == "ruutu" || o[2] == "pohjoinen") KategoriaRuutuYlos = o[2] == "ruutu";
@@ -302,6 +305,7 @@ namespace Matkakirja
         {
             KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; VainErikoismallit = false; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             Ylhaalta3D = true; PerspektiiviAste = (float)LiioiteltuPerspektiivi.KulmaMax; ReunaPt = 1.2f; ErikoisYlhaalta = true; SivuunSaanto = true;
+            MaallaSaanto = true; ErikoisSeepia = true;
             NollaaTasot23();
             NollaaKategoriat();
             NollaaLiikkuvat();
@@ -342,6 +346,8 @@ namespace Matkakirja
             /// kaupunkipisteen (SivuLat, SivuLon) vieressä.</summary>
             public int Sivu;
             public double SivuLat, SivuLon;
+            /// <summary>Kaupungin maa (ISO3) maamaskia varten (kaupungin viereen maalle, Symbolimallit.Erikoismallit.cs).</summary>
+            public string SivuMaa;
         }
         static readonly Dictionary<string, Tieto> tiedot = new Dictionary<string, Tieto>(StringComparer.Ordinal);
 
@@ -584,7 +590,7 @@ namespace Matkakirja
                 Mesh verkko;
                 if (tieto.Erikois != null)
                 {
-                    if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Mallit[tieto.Erikois].Runko();
+                    if (!verkot.TryGetValue(tieto.Erikois, out verkko)) verkot[tieto.Erikois] = verkko = Seepiaksi(Mallit[tieto.Erikois].Runko());
                 }
                 else verkko = MallinVerkko(MalliIndeksi(tieto), 0);
                 var go = new GameObject("Symbolimalli-" + (tieto.Erikois ?? tieto.Tyyppi.ToString()) + "-" + s.Id);
@@ -642,6 +648,19 @@ namespace Matkakirja
                 k.Koko = -1f;
             }
             double paikkaLat = sivuun ? tieto.SivuLat : s.OmaLat, paikkaLon = sivuun ? tieto.SivuLon : s.OmaLon;
+            // Maalle (omistaja 28.9. klo 19.1x): suunta lasketaan kerran maamaskista; sillä välin malli odottaa piilossa.
+            MaallaSuunta maalla = null;
+            if (sivuun && MaallaSaanto)
+            {
+                maalla = MaallaSuuntaNostolle(s.Id, tieto, k);
+                if (!maalla.Valmis)
+                {
+                    if (k.R.enabled) { Nayta(k, false); PallonLepo.Muuttui("symbolimallit"); }
+                    PaivitaOsat(osat, false, default);
+                    k.Etaisyys = float.PositiveInfinity;
+                    return;
+                }
+            }
             if (!k.KorkeusOk && PinnanKorkeus(sivuun ? s.Id + "@kaupunki" : s.Id, paikkaLat, paikkaLon, out double hPinta))
             {
                 // Maaston pinnalle (Mallinseppä 27.9.: vuori Olympoksella jäi liioitellun maaston sisään).
@@ -674,13 +693,16 @@ namespace Matkakirja
             }
             // Kaupungin vieressä: jalka kaupunkipisteen vasemmalle ruudulla (Symbolimallit.Erikoismallit.cs). Ilman sääntöä
             // (1.0.37) maamerkki pisteen vasemmalle: mallin puolikas + väli pisteinä, itä = asennon +X.
-            var jalka = k.SivuunNyt ? SivuunJalka(k, koko, pt)
-                : k.Maamerkki ? k.Paikka - (k.Asento * Vector3.right) * (koko / Mathf.Max(1e-3f, pt) * (pt * 0.5f + MaamerkkiValiPt)) : k.Paikka;
+            Vector3 kohtiKaupunkia = Vector3.zero;
+            var jalka = !k.SivuunNyt
+                ? (k.Maamerkki ? k.Paikka - (k.Asento * Vector3.right) * (koko / Mathf.Max(1e-3f, pt) * (pt * 0.5f + MaamerkkiValiPt)) : k.Paikka)
+                : maalla != null ? SivuunJalkaSuuntaan(k, koko, pt, maalla.Atsimuutti, out kohtiKaupunkia)
+                : SivuunJalka(k, koko, pt, out kohtiKaupunkia);
             var pohjaNyt = jalka + k.Asento * (PohjaSiirto * koko);
             if ((k.Pohja.transform.localPosition - pohjaNyt).sqrMagnitude > 1e-8f * koko * koko) k.Pohja.transform.localPosition = pohjaNyt;
             // Liioiteltu perspektiivi (kokeilu): lasketaan joka kehys, koska kulma seuraa ruutupistettä; asetetaan vain muuttuessa.
             var perus = PerusAsento(tieto, k.Normaali, k.Asento);
-            var pk = PerspektiiviKierto(jalka, k.Normaali, perus, k.Puoli, out float nosto, k.SivuunNyt);
+            var pk = PerspektiiviKierto(jalka, k.Normaali, perus, k.Puoli, out float nosto, kohtiKaupunkia);
             var asentoNyt = pk * perus;
             var paikkaNyt = jalka + k.Normaali * (nosto * koko);
             k.JalkaMaailma = gt.TransformPoint(paikkaNyt);

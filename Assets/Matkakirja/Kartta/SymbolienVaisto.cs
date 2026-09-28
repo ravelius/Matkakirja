@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Matkakirja
 {
@@ -179,5 +180,76 @@ namespace Matkakirja
         public static float SivuSiirto(float dx, float dz, float puoliX, float puoliZ, float koko, float yksikkoaPisteessa,
             float valiPt = SivuValiPt) =>
             (Math.Abs(dx) * puoliX + Math.Abs(dz) * puoliZ) * koko + valiPt * yksikkoaPisteessa;
+
+        // ---- 7. KAUPUNGIN VIERESSÄ AINA MAALLA (omistaja 28.9. klo 19.1x Päätoimittajan kautta, Colosseum Rooman vieressä:
+        // "Tuo esimerkki tosin näyttää oudolta kun on puoleksi meressä"): suunta valitaan kerran kaupungin maamaskista
+        // 16 ilmansuunnasta niin, että koko mallin pohja on maalla sekä kaukaa (kynnyskerroin, suurin koko maailmassa) että
+        // läheltä kallistettuna. Suunta on kiinteä maailmassa, joten malli ei hypi zoomatessa eikä karttaa kääntäessä. ----
+
+        /// <summary>Tarkistettavat ilmansuunnat (atsimuutti 0 = pohjoinen, 90 = itä).</summary>
+        public const int SuuntiaMaalla = 16;
+        /// <summary>Tasapelin raja: tätä pienempi ero maaosuudessa ratkaistaan ilmansuunnan etusijalla (länsi ensin).</summary>
+        public const float MaallaTasapeli = 0.02f;
+
+        /// <summary>Maalletarkistuksen zoomtaso: mallin yksikkö kilometreinä (mallin leveys pt × km/pt) ja km yhdessä pisteessä.</summary>
+        public readonly struct MaallaTaso
+        {
+            public readonly double YksikkoKm, KmPisteessa;
+            public MaallaTaso(double yksikkoKm, double kmPisteessa) { YksikkoKm = yksikkoKm; KmPisteessa = kmPisteessa; }
+        }
+
+        /// <summary>
+        /// Maaosuus (0–1), kun mallin jalka on atsimuutin <paramref name="atsimuutti"/> suunnassa SivuSiirto-matkan päässä
+        /// kaupunkipisteestä: pohjan suorakulmio (itä ±puoliX, pohjoinen ±puoliZ mallin yksikköinä), 5 × 5 näytettä, jokaisen
+        /// tason keskiarvo.
+        /// </summary>
+        public static float MaaOsuus(Func<double, double, bool> onMaata, double lat, double lon, double atsimuutti,
+            float puoliX, float puoliZ, IReadOnlyList<MaallaTaso> tasot)
+        {
+            if (onMaata == null || tasot == null || tasot.Count == 0) return 0f;
+            double kos = Math.Max(0.01, Math.Cos(lat * Math.PI / 180)), ar = atsimuutti * Math.PI / 180;
+            float dx = (float)Math.Sin(ar), dz = (float)Math.Cos(ar);
+            double summa = 0;
+            for (int t = 0; t < tasot.Count; t++)
+            {
+                var taso = tasot[t];
+                double siirto = SivuSiirto(dx, dz, puoliX, puoliZ, (float)taso.YksikkoKm, (float)taso.KmPisteessa);
+                int maata = 0;
+                for (int i = 0; i < 5; i++)
+                    for (int j = 0; j < 5; j++)
+                    {
+                        double ita = dx * siirto + (i / 2.0 - 1) * puoliX * taso.YksikkoKm;
+                        double poh = dz * siirto + (j / 2.0 - 1) * puoliZ * taso.YksikkoKm;
+                        if (onMaata(lat + poh / 111.2, lon + ita / (111.2 * kos))) maata++;
+                    }
+                summa += maata / 25.0;
+            }
+            return (float)(summa / tasot.Count);
+        }
+
+        /// <summary>
+        /// Suunta, jossa malli on eniten maalla (<see cref="MaaOsuus"/>); lähes yhtä hyvistä (ero alle <see cref="MaallaTasapeli"/>)
+        /// lännen puoleisin, koska kaupungin nimiö on oletuksena idässä. Palauttaa atsimuutin ja sen maaosuuden.
+        /// </summary>
+        public static (float atsimuutti, float maalla) ValitseMaallaSuunta(Func<double, double, bool> onMaata, double lat, double lon,
+            float puoliX, float puoliZ, IReadOnlyList<MaallaTaso> tasot)
+        {
+            var osuudet = new float[SuuntiaMaalla];
+            float paras = -1f;
+            for (int s = 0; s < SuuntiaMaalla; s++)
+            {
+                osuudet[s] = MaaOsuus(onMaata, lat, lon, s * 360.0 / SuuntiaMaalla, puoliX, puoliZ, tasot);
+                paras = Math.Max(paras, osuudet[s]);
+            }
+            int valittu = 0;
+            double etusija = double.NegativeInfinity;
+            for (int s = 0; s < SuuntiaMaalla; s++)
+            {
+                if (osuudet[s] < paras - MaallaTasapeli) continue;
+                double e = Math.Cos((s * 360.0 / SuuntiaMaalla - 270) * Math.PI / 180);   // länsi 1, itä −1
+                if (e > etusija + 1e-9) { etusija = e; valittu = s; }
+            }
+            return ((float)(valittu * 360.0 / SuuntiaMaalla), Math.Max(0f, osuudet[valittu]));
+        }
     }
 }

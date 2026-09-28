@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -147,7 +148,8 @@ namespace Matkakirja
                 if (!maamerkit.TryGetValue(id, out var s))
                 {
                     if (!nk.merkit.Paikka(kaupunki, out var la, out var lo)) continue;
-                    s = new NostoKerros.Nosto { Id = id, Tunnus = avain, Nimi = avain, Taso = 1, OmaLat = la, OmaLon = lo, Lat = la, Lon = lo, Loydetty = true };
+                    s = new NostoKerros.Nosto { Id = id, Tunnus = avain, Nimi = avain, Taso = 1, OmaLat = la, OmaLon = lo, Lat = la, Lon = lo, Loydetty = true,
+                                                Maa = nk.merkit.KaupunginMaa(kaupunki) };
                     maamerkit[id] = s;
                 }
                 var tieto = TietoNostolle(s);
@@ -178,19 +180,19 @@ namespace Matkakirja
         {
             if (t == null || t.Erikois == null) return false;
             if (t.Sivu != 0) return t.Sivu == 2;
-            if (OnMaamerkki(s.Id)) return AsetaSivu(t, s.OmaLat, s.OmaLon);
-            if (t.KaupunkiNosto) return AsetaSivu(t, s.Lat, s.Lon);   // kaupunkimerkin piirtopiste
+            if (OnMaamerkki(s.Id)) return AsetaSivu(t, s.OmaLat, s.OmaLon, s.Maa);
+            if (t.KaupunkiNosto) return AsetaSivu(t, s.Lat, s.Lon, s.Maa);   // kaupunkimerkin piirtopiste
             var merkit = NostoKerros.Instanssi != null ? NostoKerros.Instanssi.merkit : null;
             if (merkit == null || !KaupungitLadattu(merkit)) return false;
             string id = merkit.LahinId(s.OmaLat, s.OmaLon, SymbolienVaisto.SivuSadeKm / 111.2);
-            if (id != null && merkit.Paikka(id, out double la, out double lo)) return AsetaSivu(t, la, lo);
+            if (id != null && merkit.Paikka(id, out double la, out double lo)) return AsetaSivu(t, la, lo, merkit.KaupunginMaa(id) ?? s.Maa);
             t.Sivu = 1;
             return false;
         }
 
-        static bool AsetaSivu(Tieto t, double lat, double lon)
+        static bool AsetaSivu(Tieto t, double lat, double lon, string maa)
         {
-            t.SivuLat = lat; t.SivuLon = lon; t.Sivu = 2;
+            t.SivuLat = lat; t.SivuLon = lon; t.SivuMaa = maa; t.Sivu = 2;
             return true;
         }
 
@@ -201,17 +203,143 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Jalka kaupunkipisteen (k.Paikka) vasemmalle ruudulla: kameran oikea projisoituna pinnan tasoon, siirto = mallin
-        /// ulottuma siihen suuntaan + väli pisteinä (koko / pt = paikallisia yksiköitä ruudun pisteessä mallin etäisyydellä).
-        /// Kartan kierto ja kallistus pitävät mallin aina pisteen vasemmalla puolella kuten nimiöt.
+        /// Jalka kaupunkipisteen (k.Paikka) vasemmalle ruudulla (A/B `symbolit maalla 0`, 0ff66cfc): kameran oikea projisoituna
+        /// pinnan tasoon, siirto = mallin ulottuma siihen suuntaan + väli pisteinä (koko / pt = paikallisia yksiköitä ruudun
+        /// pisteessä mallin etäisyydellä). <paramref name="kohtiKaupunkia"/> = suunta jalasta kaupunkiin (perspektiivin kallistus).
         /// </summary>
-        Vector3 SivuunJalka(Kappale k, float koko, float pt)
+        Vector3 SivuunJalka(Kappale k, float koko, float pt, out Vector3 kohtiKaupunkia)
         {
             Vector3 oikea = Vector3.ProjectOnPlane(georeferenssi.transform.InverseTransformDirection(kamera.transform.right), k.Normaali);
             if (oikea.sqrMagnitude < 1e-10f) oikea = k.Asento * Vector3.right;   // rappeutunut: itä
             Vector3 vasen = -oikea.normalized;
+            kohtiKaupunkia = -vasen;
             Vector3 dl = Quaternion.Inverse(k.Asento) * vasen;
             return k.Paikka + vasen * SymbolienVaisto.SivuSiirto(dl.x, dl.z, k.Puoli.x, k.Puoli.y, koko, koko / Mathf.Max(1e-3f, pt));
+        }
+
+        // ---- Kaupungin vieressä AINA MAALLA (omistaja 28.9. klo 19.1x: Colosseum oli "puoleksi meressä") ----
+
+        /// <summary>
+        /// Maalle: suunta kaupunkipisteestä valitaan kerran kaupungin maamaskista (Maamaski, Karttasepän GSHHG-polygonit) 16
+        /// ilmansuunnasta niin, että mallin pohja on maalla kaukaa (tason 1 kynnys, suurin koko maailmassa) ja läheltä
+        /// kallistettuna (SymbolienVaisto kohta 7); lähes yhtä hyvistä lännen puoleisin. Suunta on kiinteä maailmassa, joten malli
+        /// ei hypi. Pienellä saarella (Visby) paras mahdollinen osuus. Ilman maskia (verkko) länsi. `symbolit maalla 0|1`.
+        /// </summary>
+        public static bool MaallaSaanto = true;
+
+        sealed class MaallaSuunta
+        {
+            public bool Valmis, Aloitettu;
+            public float Atsimuutti = 270f, Maalla = -1f;
+        }
+        readonly Dictionary<string, MaallaSuunta> maallaSuunnat = new Dictionary<string, MaallaSuunta>(StringComparer.Ordinal);
+
+        /// <summary>Noston suunta maalle; ensimmäinen kutsu käynnistää laskennan (maski + taustasäie), Valmis kertoo tuloksen.</summary>
+        MaallaSuunta MaallaSuuntaNostolle(string id, Tieto t, Kappale k)
+        {
+            if (!maallaSuunnat.TryGetValue(id, out var m)) maallaSuunnat[id] = m = new MaallaSuunta();
+            if (m.Valmis || m.Aloitettu) return m;
+            var nk = NostoKerros.Instanssi;
+            if (nk == null || !(nk.SaapumisKorkeusM > 0) || kamera == null) return m;   // mittakaava ei vielä tiedossa
+            m.Aloitettu = true;
+            StartCoroutine(LaskeMaalla(id, t, k.Puoli, m));
+            return m;
+        }
+
+        IEnumerator LaskeMaalla(string id, Tieto t, Vector2 puoli, MaallaSuunta tulos)
+        {
+            Maamaski.Lahde lahde = null;
+            if (!string.IsNullOrEmpty(t.SivuMaa)) yield return Maamaski.Hae(t.SivuMaa, x => lahde = x);
+            if (lahde == null)
+            {
+                Debug.LogWarning($"MATKAKIRJA symbolimallit: {id}: maamaski puuttuu ({t.SivuMaa ?? "maa tuntematon"}), kaupungin viereen länteen");
+                tulos.Valmis = true;
+                yield break;
+            }
+            // Mittakaava pääsäikeessä: km yhdessä ruudun pisteessä kertoimella k (katsepisteen etäisyys saapuminen / k, FOV).
+            var nk = NostoKerros.Instanssi;
+            double saapuminen = nk != null ? nk.SaapumisKorkeusM : 0, tan = Math.Tan(kamera.fieldOfView * 0.5 * Math.PI / 180);
+            double korkeusPt = Math.Max(1.0, Screen.height / Math.Max(1e-3, (double)PalloKierto.Pistekerroin));
+            double KmPisteessa(double kerroin) => 2.0 * saapuminen / Math.Max(1e-6, kerroin) * tan / korkeusPt / 1000.0;
+            float kk = t.Erikois != null && Mallit.TryGetValue(t.Erikois, out var em) ? em.KokoKerroin : 1f;
+            var (k0, k1) = KokoValit();
+            float pt0 = KokoNyt(k0) * kk * Iso;
+            float pt1 = SymbolienVaisto.RuutuKoko(KokoNyt(k1) * kk * Iso, k1, k0, 1, 1, Luonnollinen ? 1 : 0, LisaKasvu, kattoPtNyt);
+            var tasot = new[]
+            {
+                new SymbolienVaisto.MaallaTaso(pt0 * KmPisteessa(k0), KmPisteessa(k0)),
+                new SymbolienVaisto.MaallaTaso(pt1 * KmPisteessa(k1), KmPisteessa(k1)),
+            };
+            double lat = t.SivuLat, lon = t.SivuLon;
+            (float a, float osuus) tulokset = (270f, -1f);
+            var tehtava = System.Threading.Tasks.Task.Run(() =>
+            {
+                // Rasteri kaupungin ympärille: suurin siirto + pohjan ulottuma, 256 × 256 (maa 255, järvet ja meri 0).
+                double r = 0;
+                foreach (var ta in tasot)
+                    r = Math.Max(r, SymbolienVaisto.SivuSiirto(1f, 1f, puoli.x, puoli.y, (float)ta.YksikkoKm, (float)ta.KmPisteessa)
+                                    + 1.5 * Math.Max(puoli.x, puoli.y) * ta.YksikkoKm);
+                double dLat = Math.Min(8.0, r / 111.2 + 0.05), dLon = Math.Min(12.0, dLat / Math.Max(0.05, Math.Cos(lat * Math.PI / 180)));
+                const int n = 256;
+                var kartta = Maamaski.Rasteroi(lahde, n, n, lon - dLon, lat + dLat, 2 * dLon, 2 * dLat);
+                bool OnMaata(double la, double lo)
+                {
+                    int x = (int)Math.Floor((lo - (lon - dLon)) / (2 * dLon) * n), y = (int)Math.Floor((lat + dLat - la) / (2 * dLat) * n);
+                    return x >= 0 && y >= 0 && x < n && y < n && kartta[y * n + x] > 127;
+                }
+                tulokset = SymbolienVaisto.ValitseMaallaSuunta(OnMaata, lat, lon, puoli.x, puoli.y, tasot);
+            });
+            while (!tehtava.IsCompleted) yield return null;
+            if (tehtava.IsFaulted) Debug.LogWarning($"MATKAKIRJA symbolimallit: {id}: maalle-laskenta kaatui: {tehtava.Exception?.GetBaseException().Message}");
+            else { tulos.Atsimuutti = tulokset.a; tulos.Maalla = tulokset.osuus; }
+            tulos.Valmis = true;
+            Debug.Log($"MATKAKIRJA symbolimallit: {id} kaupungin viereen suuntaan {tulos.Atsimuutti:0}° (maalla {Math.Max(0, tulos.Maalla):P0})");
+            PallonLepo.Muuttui("symbolimallit: maalle");
+        }
+
+        /// <summary>
+        /// Jalka kaupunkipisteestä ilmansuuntaan <paramref name="atsimuutti"/> (0 = pohjoinen, 90 = itä; mallin +Z pohjoinen, +X itä):
+        /// siirto = mallin ulottuma siihen suuntaan + väli pisteinä kuten SivuunJalka.
+        /// </summary>
+        Vector3 SivuunJalkaSuuntaan(Kappale k, float koko, float pt, float atsimuutti, out Vector3 kohtiKaupunkia)
+        {
+            float a = atsimuutti * Mathf.Deg2Rad;
+            var paikallinen = new Vector3(Mathf.Sin(a), 0f, Mathf.Cos(a));
+            Vector3 suunta = k.Asento * paikallinen;
+            kohtiKaupunkia = -suunta;
+            return k.Paikka + suunta * SymbolienVaisto.SivuSiirto(paikallinen.x, paikallinen.z, k.Puoli.x, k.Puoli.y, koko, koko / Mathf.Max(1e-3f, pt));
+        }
+
+        // ---- Erikoismallit kartan paletissa (omistaja 28.9. klo 19.1x: "kokonaan erivärinen kuin mikään ympärillä oleva") ----
+
+        /// <summary>
+        /// Erikoismallit seepiarampilla kuten kategoriasymbolit ja 2D-merkit (Symbolimalli-varjostimen kohta 8: kärjen alfa 0 →
+        /// valoisuus muste #3b2f22 → seepia #8a6a44 → paperi #efe4cc, kiinteä valo vasemmalta ylhäältä; ei harmaata eikä
+        /// sinistä). Koskee runkoa, lähitasoa ja liikkuvia osia, kaikkia 18 mallia. `symbolit seepia 0|1` (0 = 0ff66cfc:n värit).
+        /// </summary>
+        public static bool ErikoisSeepia = true;
+
+        /// <summary>Kärkivärien alfa seepiaramppiin (0) tai tavalliseen valaistukseen (1); palauttaa saman verkon.</summary>
+        static Mesh Seepiaksi(Mesh m, bool? seepia = null)
+        {
+            if (m == null) return null;
+            var c = new List<Color>();
+            m.GetColors(c);
+            if (c.Count == 0) return m;
+            float a = (seepia ?? ErikoisSeepia) ? 0f : 1f;
+            for (int i = 0; i < c.Count; i++) { var v = c[i]; v.a = a; c[i] = v; }
+            m.SetColors(c);
+            return m;
+        }
+
+        /// <summary>A/B: seepia päälle tai pois jo rakennetuille erikoismallien verkoille (runko, lähitaso, osat).</summary>
+        void AsetaSeepia(bool paalla)
+        {
+            ErikoisSeepia = paalla;
+            foreach (var v in verkot.Values) Seepiaksi(v, paalla);
+            foreach (var p in lahiVerkot) if (p.Key.StartsWith("e:", StringComparison.Ordinal)) Seepiaksi(p.Value, paalla);
+            foreach (var v in osaVerkot.Values) Seepiaksi(v, paalla);
+            PallonLepo.Muuttui("symbolimallit: seepia");
         }
 
         /// <summary>
@@ -242,6 +370,8 @@ namespace Matkakirja
                 sb.Append(n++ == 0 ? " (vieressä: " : ", ");
                 int i = p.Key.LastIndexOf(':');
                 sb.Append(OnMaamerkki(p.Key) || i < 0 ? p.Key : p.Key.Substring(i + 1));
+                if (MaallaSaanto && maallaSuunnat.TryGetValue(p.Key, out var m) && m.Valmis)
+                    sb.Append($" {m.Atsimuutti:0}° maalla {Math.Max(0f, m.Maalla):P0}");
             }
             if (n > 0) sb.Append(')');
             return sb.ToString();
@@ -284,7 +414,7 @@ namespace Matkakirja
             {
                 var d = maaritykset[i];
                 string vk = avain + "/" + d.Nimi;
-                if (!osaVerkot.TryGetValue(vk, out var verkko)) osaVerkot[vk] = verkko = d.Verkko != null ? d.Verkko() : null;
+                if (!osaVerkot.TryGetValue(vk, out var verkko)) osaVerkot[vk] = verkko = d.Verkko != null ? Seepiaksi(d.Verkko()) : null;
                 var go = new GameObject("Osa-" + d.Nimi);
                 if (layer >= 0) go.layer = layer;
                 go.transform.SetParent(juuri, false);
