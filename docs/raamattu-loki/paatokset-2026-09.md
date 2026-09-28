@@ -8859,3 +8859,7 @@ Omistaja 28.9. klo 21.12 1.0.39:n avauksesta (Peli päivittyi -lappu varatekstil
 ## OMISTAJA: ISS-KYYTIIN OMA SIJAINTI, PILVIPEITON JA VUODENAJAN SÄÄTIMET (28.9.2026 klo 21.15)
 
 Omistaja 28.9. klo 21.15 TF 1.0.39:n Cupola-kaappauksella (Dardanellit, pilvet peittävät; docs/raportit/kaappaukset/omistaja-20260928/iss-cupola-sijainti-pilvet-vuodenaika.png) sanatarkasti: "Lisää myös mahdollisuus mennä käyttäjän sijainnin kohdalle. Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle sekä vuodenajalle?" → Linssiseppä 2 (natiivi ISS-kyyti): 1) Lennä kohteen ylle -valikkoon 'Oma sijainti' (karkea sijainti, mieluiten ilman lupakyselyä workerin maa-/kaupunkitiedosta; laitteen sijainti vain jos tarpeen ja vain käytön aikana), 2) pilvipeiton säädin (0 = selkeä … nykyinen), 3) vuodenajan säädin (BMNG-kuukausipinta + Maapallon vuosi -aineisto). Kevyt UI, ei koristeita. Kuvapari omistajalle; webiin Siirtosepän ISS-realismin mukana. Huom: 1.0.39:ssä on vielä vanha sumea pilvikuva, terävät pilvet 1.0.40:ssä.
+
+## OMISTAJA: ISS-SIIRTYMÄ PAIKKOJEN VÄLILLÄ ENINTÄÄN 5 S (28.9.2026 klo 21.16)
+
+Omistaja 28.9. klo 21.16 sanatarkasti: "Ja siirtymä paikkojen välillä ei saa kestää yli 5sek pidempään" → Linssiseppä 2: jokainen Lennä kohteen ylle -siirtymä (myös Oma sijainti ja paluu LIVEen) ≤ 5 s etäisyydestä riippumatta; pisin mitataan laitteella. Sama raja webin ISS-kyytiin (Siirtoseppä).
