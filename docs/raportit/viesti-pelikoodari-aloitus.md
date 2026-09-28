@@ -4,13 +4,13 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260927-f.md`](viesti-pelikoodari-luovutus-20260927-f.md) (27.9. klo 23.58, tilinvaihto):
-   omistaja: VAIN striimiluenta (puhetagit) julkaisuun — web #3513 (web ensin, sitten worker), natiivi luentakorjaus
-   `pelikoodari/esihaku-jarjestys` fb67281f ja puhetagit `pelikoodari/puhetagit` 9fac9748 Natiivisepälle. Tauolla: #3516 karttalaatat
-   (juurisyy pallolla, todiste puuttuu), #3517 Olympia (kuvapari puuttuu). Edellinen: `viesti-pelikoodari-luovutus-20260927-e.md`.
-   - Simulaattoriajo vain Julkaisijan "nyt"-kuittauksella ja kun booted < 2. Viestit roolisessioille NIMELLÄ
-     (`Julkaisija (Opus)`, `Natiiviseppä (Opus)`, `Natiivi-UI (Opus)`); Fablelle session id:llä (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc),
-     ja kun raja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
+   [`viesti-pelikoodari-luovutus-20260928.md`](viesti-pelikoodari-luovutus-20260928.md) (28.9. klo 09.3x, kontekstin nollaus):
+   junassa #3516/#3517/#3526/#3528 (+ #3532 kuittausta odottaen); selite-erä `pelikoodari-astro-selite` f9bc7c9a6 → PR kun #3526
+   mainissa; KESKEN striimilukijan valikko `pelikoodari-striimilukija` f6df0975b (omistajan sanatarkka toive luovutuksessa):
+   savuke uudelleen, muut luentakohdat kuvina, PR + kuvapari Fablelle. Edellinen: `viesti-pelikoodari-luovutus-20260927-f.md`.
+   - Fable = local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 (session id:llä). Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen.
+     Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
+   - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
 
