@@ -32329,19 +32329,19 @@ export const KULTTUURI_KATEGORIAT = {
         ],
         oikea: 0,
         fakta: 'Britannian ja Osmanien valtakunnan Kyproksen sopimus solmittiin '
-          + 'kesäkuussa 1878; Nikosian kaupungin mukaan hallinto siirtyi ja lippu '
-          + 'nostettiin 5.7.1878.',
+          + 'kesäkuussa 1878; hallinto siirtyi virallisesti Nikosiassa '
+          + 'vara-amiraali Lord John Haylle 12.7.1878.',
       },
       nostot: [
         {
           otsikko: 'Nikosia 1878 — puolikuu laskee, risti nousee',
-          aika: '5.7.1878',
+          aika: '12.7.1878',
           leveys: 'taysi',
           osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-britannian-lippu-nikosiassa-1878-lahi-photo-v4.jpg',
           teksti: 'Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy '
-            + 'katsomaan uutta lippua Nikosiassa. On 5. heinäkuuta 1878: saaren '
+            + 'katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren '
             + 'hallinto siirtyy Britannialle, ja Union Jack nostetaan '
-            + 'vara-amiraali Lord John Grayn läsnä ollessa. Hänen laivastostaan '
+            + 'vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan '
             + 'kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi '
             + 'hallinto on vasta alkutekijöissään. Britannia ja Osmanien '
             + 'valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa '

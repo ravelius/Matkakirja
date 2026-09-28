@@ -5364,12 +5364,12 @@ export const HISTORIAN_HETKET = [
     id: "britannian-lippu-nikosiassa-1878",
     otsikko: "Nikosia 1878 — puolikuu laskee, risti nousee",
     nimio: "Nikosia 1878",
-    paivays: "5.7.1878",
+    paivays: "12.7.1878",
     paikka: "Nikosia, Kypros",
     iso: "CYP",
     lat: 35.1768, lon: 33.3573,
     kuvaversio: 4,
-    teksti: "Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 5. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Grayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaalle tämä päivä ei vielä kerro, mitä vuosikymmenet tuovat: hänen edessään muuttuvat ensin sotilaat ja lippu, vasta sitten lait.",
+    teksti: "Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaalle tämä päivä ei vielä kerro, mitä vuosikymmenet tuovat: hänen edessään muuttuvat ensin sotilaat ja lippu, vasta sitten lait.",
     kuvat: [
       {
         rooli: "lahi",
@@ -5397,7 +5397,7 @@ export const HISTORIAN_HETKET = [
       kysymys: "Miksi Britannia sai Kyproksen hallinnon 1878?",
       vaihtoehdot: ["Vastineeksi tuesta Osmanien valtakunnalle Venäjää vastaan", "Sotilaallisella valloituksella", "Ostamalla saaren kullalla", "Kreikan välityksellä"],
       oikea: 0,
-      fakta: "Britannian ja Osmanien valtakunnan Kyproksen sopimus solmittiin kesäkuussa 1878; Nikosian kaupungin mukaan hallinto siirtyi ja lippu nostettiin 5.7.1878.",
+      fakta: "Britannian ja Osmanien valtakunnan Kyproksen sopimus solmittiin kesäkuussa 1878; hallinto siirtyi virallisesti Nikosiassa vara-amiraali Lord John Haylle 12.7.1878.",
     },
   },
   /* pyhan-elmon-linnake-1565 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
