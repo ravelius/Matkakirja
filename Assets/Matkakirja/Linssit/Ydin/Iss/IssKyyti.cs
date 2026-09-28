@@ -35,11 +35,12 @@ namespace Matkakirja.Linssit.Iss
         public const double IkkunanKatseAlas = 55;
         /// <summary>
         /// HORISONTTI (omistaja 28.9. klo 21.5x Päätoimittajan kautta, mainosvideon ISS-ikkuna: "yksi iso ikkuna olisi pääosassa
-        /// ja sivuikkunat näkyisivät vähän"): katse radan suuntaan 23° vaakatason alapuolelle, jolloin maan kaari ja ilmakehän
-        /// reuna (20,3° alapuolella) ovat ison sivuikkunan yläosassa ja avaruus musta sen yllä. Cupola-kerrokset rajataan
-        /// yläikkunaan (IssKyytiNakyma). Pois (A/B `astro kyyti horisontti 0`): kattoikkuna 55° kuten 1.0.38.
+        /// ja sivuikkunat näkyisivät vähän"): katse radan suuntaan 36° vaakatason alapuolelle, jolloin maan kaari ja ilmakehän
+        /// reuna (20,3° alapuolella, 15,7° kuvan keskikohdan yläpuolella) ovat ison sivuikkunan ylimmässä kolmanneksessa ja
+        /// avaruus musta sen yllä. Cupola-kerrokset rajataan yläikkunaan niin, että kehys täyttää ruudun (IssKyytiNakyma).
+        /// Pois (A/B `astro kyyti horisontti 0`): kattoikkuna 55° kuten 1.0.38.
         /// </summary>
-        public const double HorisontinKatseAlas = 23;
+        public const double HorisontinKatseAlas = 36;
         public static bool Horisontti = true;
         /// <summary>Ikkunan katse nyt (A/B `astro kyyti katse &lt;astetta&gt;` ohittaa; NaN = tilan mukaan).</summary>
         public static double KatseAlasPakotettu = double.NaN;

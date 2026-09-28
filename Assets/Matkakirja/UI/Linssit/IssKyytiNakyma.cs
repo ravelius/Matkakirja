@@ -409,17 +409,18 @@ namespace Matkakirja.Natiivi
         // ── HORISONTTI (omistaja 28.9. klo 21.5x Päätoimittajan kautta, mainosvideon ISS-ikkuna) ─────────────────────────────
         // "tuossa elää auringon valo ikkunanpokissa. ainakin tuo että on todella pimeää ohjaamossa tuo tunnelmaa … yksi iso
         // ikkuna olisi pääosassa ja sivuikkunat näkyisivät vähän": Cupola 2 -kehyksen yläikkuna (iPhonen kuva, pystyssä oleva
-        // trapetsi, alfa-aukko x 376–826, y 96–837) suurennetaan ruudun leveydestä 75 %:iin keskikohta 58 %:n korkeudelle, jolloin
-        // kattoikkuna jää ruudun alle ja sivuikkunoista näkyy reunoilla kaistale. Kamera katsoo horisonttiin (IssKuvakulma
-        // HorisontinKatseAlas 23°), joten maan kaari on ikkunan yläosassa ja avaruus musta. Kuvan yläreunan yläpuolelle jäävä
-        // alue on pimeää ohjaamoa (katto). Kehys tummennetaan 0,22:een, ja auringonvalo elää pokissa: neljä reunavalokuvaa
+        // trapetsi, alfa-aukko x 376–826, y 96–837) suurennetaan 2,3-kertaiseksi (86 % ruudun leveydestä) keskikohta 39 %:n
+        // korkeudelle, jolloin kehys täyttää ruudun yläreunaan asti (Päätoimittaja 28.9. klo 22.4x: ei tyhjää kaistaa), alareunassa
+        // näkyy pala kattoikkunaa ja sivuikkunoista kaistale. Kamera katsoo horisonttiin (IssKuvakulma.HorisontinKatseAlas 36°),
+        // joten maan kaari on ikkunan ylimmässä kolmanneksessa ja avaruus musta. Ajelehduksen avaama rako kuvan yläreunassa
+        // peittyy pimeällä katolla. Kehys tummennetaan 0,22:een, ja auringonvalo elää pokissa: neljä reunavalokuvaa
         // (valo oikealta, vasemmalta, ylhäältä, alhaalta; laskettu kehyksen alfasta: kehyksen pikseli valaistuu, jos ikkuna on
         // sen ja auringon välissä) painotetaan auringon suunnalla ruudulla (CupolaKerros.Valo), ja alhaalta tulee lisäksi
         // sininen maavalo. Codexin Cupola 3 -kerrokset (tilattu 28.9.) korvaavat kuvat, kun ne tulevat.
         // A/B: astro kyyti horisontti 0|1, katse <astetta>|pois, tumma <0–1>, reunavalo 0|1.
         public static float OhjaamonTummuus = 0.22f;
         public static bool Reunavalo = true;
-        const float HorisontinLeveys = 0.746f, HorisontinKeskus = 0.58f;
+        const float HorisontinLeveys = 0.858f, HorisontinKeskus = 0.39f;
         const float KuvaL = 1206f, KuvaK = 2622f, YlaikkunaX = 601f, YlaikkunaY = 466f, YlaikkunaL = 450f;
         static readonly Color OhjaamonVari = new Color(0.012f, 0.013f, 0.02f, 1f);
         static readonly Color Lampo = new Color(1f, 0.86f, 0.66f), Sini = new Color(0.45f, 0.66f, 1f);
@@ -428,7 +429,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Horisontin rajaus: skaala <paramref name="z"/> ja siirto <paramref name="siirto"/> (pt; transform-origin keskellä, eli
-        /// ruutu = c + siirto + z (p − c)), joilla cover-kuvan yläikkuna tulee ruudun keskelle 75 %:n levyisenä. false = asettelu puuttuu.
+        /// ruutu = c + siirto + z (p − c)), joilla cover-kuvan yläikkuna tulee 86 %:n levyisenä 39 %:n korkeudelle. false = asettelu puuttuu.
         /// </summary>
         bool HorisontinRajaus(out Vector2 siirto, out float z)
         {

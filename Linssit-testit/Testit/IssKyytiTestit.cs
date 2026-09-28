@@ -36,10 +36,10 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void HorisonttiIsossaIkkunassa()
         {
-            // Omistaja 28.9. klo 21.5x: oletuksena katse sivuikkunasta horisonttiin (23°), maan reuna 20,3° alapuolella eli
-            // 2,7° kuvan keskikohdan yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
+            // Omistaja 28.9. klo 21.5x: oletuksena katse sivuikkunasta horisonttiin (36°), maan reuna 20,3° alapuolella eli
+            // 15,7° kuvan keskikohdan yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
             Oleta.Tosi(IssKuvakulma.Horisontti && double.IsNaN(IssKuvakulma.KatseAlasPakotettu), "oletus horisontti");
-            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.HorisontinKatseAlas, "katse 23°");
+            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.HorisontinKatseAlas, "katse 36°");
             double horisontti = Math.Acos(IssKuvakulma.MaanSadeM / (IssKuvakulma.MaanSadeM + Iss.KorkeusM)) / Deg;
             double yla = IssKuvakulma.HorisontinKatseAlas - horisontti;
             Oleta.Tosi(yla > 1 && yla < IssKuvakulma.IkkunanKentta / 2 - 10, $"maan reuna {yla:0.0}° keskikohdan yläpuolella");
