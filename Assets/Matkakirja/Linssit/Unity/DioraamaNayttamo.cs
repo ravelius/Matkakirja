@@ -36,6 +36,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Näyttämön taustaväri (myös sumun väri): #cfd6d6.</summary>
         public static readonly Color TaustaVari = new Color(0.8118f, 0.8392f, 0.8392f, 1f);
+        /// <summary>Hehkun (Bloom) lämmin sävy, erä 2: #ffd9a8.</summary>
+        static readonly Color HehkuSavy = new Color(1f, 0.851f, 0.6588f);
         const float SumuAlkuKerroin = 1.6f, SumuLoppuKerroin = 6f;
 
         static readonly int IdValo = Shader.PropertyToID("_DioraamaValo"), IdLepatus = Shader.PropertyToID("_DioraamaLepatus"),
@@ -46,6 +48,15 @@ namespace Matkakirja.Natiivi
         /// <summary>QA-kytkin ("poikki dof 0|1", DioraamaSovitin.Komento). Pois päältä: volume.enabled ja
         /// kameran renderPostProcessing menevät epätodeksi joka ruudussa (PaivitaDofTila) -- 0 kustannusta.</summary>
         public static bool DofPaalla = true;
+        /// <summary>QA-kytkin hehkulle (Bloom, "poikki hehku 0|1", DioraamaSovitin.Komento). Instanssikohtainen
+        /// (ei staattinen kuten DofPaalla: Bloom asuu samassa Volumessa kuin DoF eikä sillä ole vastaavaa tarvetta
+        /// säilyä ennen linssin avausta) -- pois päältä = hehkuBloom.active false, DoF:n jälkikäsittely jatkuu
+        /// ennallaan (PaivitaDofTila yhdistää molempien tilan).</summary>
+        public bool Hehku
+        {
+            get => hehku;
+            set { hehku = value; PaivitaDofTila(); }
+        }
         const float VolyymiPrioriteetti = 100f;
 
         Camera pallonKamera;
@@ -53,8 +64,14 @@ namespace Matkakirja.Natiivi
         Volume volyymi;
         VolumeProfile profiili;
         DepthOfField syvyys;
+        Bloom hehkuBloom;
+        bool hehku = true;
 
         public Camera Kamera { get; private set; }
+        /// <summary>Liekkinäkymä (tulisijat/kynttilät/soihdut, erä 2): omistus ja elinkaari täällä (Luo/Tuhoa),
+        /// samalla kerroksella kuin muu dioraama. DioraamaSovitin kutsuu tätä viittausta LisaaTila/AsetaAtlas-
+        /// kutsuihin (Hahmot-malli), kun rakennus.json:n liekkidata on ladattu.</summary>
+        public DioraamaLiekit Liekit { get; private set; }
         /// <summary>
         /// Näyttämön kuva: kamera piirtää tähän, ja DioraamaTaulu näyttää sen koko ruudun UI-elementtinä kerroksessa
         /// LinssiUi.MustaKerros (24, Ihmisen matkan musta tausta). Näin kartan UI (nimet, tilarivi, Liiku) jää alle ja
@@ -72,6 +89,7 @@ namespace Matkakirja.Natiivi
             var n = go.AddComponent<DioraamaNayttamo>();
             n.pallonKamera = pallonKamera;
             n.LuoKamera();
+            n.Liekit = new DioraamaLiekit(n.transform);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
             Shader.SetGlobalColor(IdSumuVari, TaustaVari); // sama muunnos kuin kameran taustavärillä
             Shader.SetGlobalVector(IdSumu, new Vector4(1000f, 4000f, 0, 0));
@@ -90,6 +108,13 @@ namespace Matkakirja.Natiivi
             Kamera.nearClipPlane = 0.3f;
             Kamera.farClipPlane = 2000f;
             Kamera.depth = (pallonKamera != null ? pallonKamera.depth : 0f) + 1f;
+            // HDR: Bloomin kynnys (0,9) ja lämpötermin ylivalotus (COLOR_0.G · _Lampo > 1, DioraamaMaalattu.shader)
+            // tarvitsevat HDR-värikohteen. Mobile_RPAsset/PC_RPAsset sallivat HDR:n jo projektinlaajuisesti halvalla
+            // 32-bittisellä R11G11B10-puskurilla (m_HDRColorBufferPrecision 0) -- tämä ei lisää kaistaa/muistia
+            // mihinkään muualle. Kuva (RenderTexture, alla) pysyy ARGB32/sRGB:nä: URP:n viimeinen jälkikäsittely-
+            // vaihe (tonemapping) pakkaa HDR-värin 0..1-välille ENNEN kirjoitusta target-tekstuuriin, joten itse
+            // tulostekstuuria ei tarvitse muuttaa HDR-muotoon (ei lisäkustannusta, ei alfan menetystä).
+            Kamera.allowHDR = true;
             kameraData = Kamera.GetUniversalAdditionalCameraData();
             kameraData.renderType = CameraRenderType.Base;
             kameraData.renderPostProcessing = DofPaalla;
@@ -125,9 +150,19 @@ namespace Matkakirja.Natiivi
             syvyys = profiili.Add<DepthOfField>(true);
             syvyys.mode.Override(DepthOfFieldMode.Gaussian);
             syvyys.highQualitySampling.Override(false);
-            syvyys.active = DofPaalla;
+
+            // Hehku (Bloom, erä 2, dioraama-rajapinnat-era2-20260929.md kohta 3): lämmin sävy korostaa tulisijaa ja
+            // muita hehkuvia pintoja (COLOR_0.G, ks. DioraamaMaalattu.shader). Sama Volume/profiili kuin DoF:lla --
+            // Filmipino.asset käyttää jo Bloomia (luettu: active 1), joten variantti on säilytetty samalla perusteella
+            // kuin yllä DoF:lle (riski kirjattu erän raporttiin).
+            hehkuBloom = profiili.Add<Bloom>(true);
+            hehkuBloom.threshold.Override(0.9f);
+            hehkuBloom.intensity.Override(0.7f);
+            hehkuBloom.scatter.Override(0.6f);
+            hehkuBloom.tint.Override(HehkuSavy);
+
             volyymi.profile = profiili;
-            volyymi.enabled = DofPaalla;
+            PaivitaDofTila(); // alkutila: volyymi.enabled, renderPostProcessing, syvyys.active, hehkuBloom.active
         }
 
         /// <summary>Kanoninen (metrit, +X itä +Y ylös +Z etelä) → Unity (x, y, −z). Ks. dioraama-rajapinnat kohta 0.</summary>
@@ -157,8 +192,11 @@ namespace Matkakirja.Natiivi
             Kuva = null;
         }
 
-        /// <summary>Kameran asento (Nakyma.Kamera → Kameraliike.AsentoSijainti → Unity) ja lepatuksen päivitys.</summary>
-        public void Paivita(Asento kameranAsento, bool vahennettyLiike)
+        /// <summary>Kameran asento (Nakyma.Kamera → Kameraliike.AsentoSijainti → Unity) ja lepatuksen päivitys.
+        /// t (oletus 0): liekkien ruutu ajasta (DioraamaLiekit.Paivita) -- DioraamaSovitin voi jatkossa antaa
+        /// tähän Ydin-ajan (pysaytettyT ?? y.Aika), jotta "poikki aika" pysäyttää liekkienkin ruudun kuten hahmot;
+        /// oletuksella 0 liekit näkyvät paikallaan (billboard-kääntö toimii silti), poikkeama raportoitu.</summary>
+        public void Paivita(Asento kameranAsento, bool vahennettyLiike, double t = 0)
         {
             VarmistaKuva();
             PaivitaDofTila();
@@ -183,19 +221,26 @@ namespace Matkakirja.Natiivi
 
             float kohina = Mathf.PerlinNoise((float)(Time.unscaledTimeAsDouble * 0.35), 17.3f);
             Shader.SetGlobalFloat(IdLepatus, vahennettyLiike ? 1f : Mathf.Lerp(0.85f, 1f, kohina));
+
+            // Liekkien billboard-kääntö ja ruutu (ks. Paivita-parametrin t-kommentti yllä).
+            Liekit?.Paivita(null, default, Kamera, t);
         }
 
-        /// <summary>"poikki dof 0|1" voi vaihtaa DofPaalla-arvon milloin tahansa; synkronoi näyttämön volumen ja
-        /// kameran tilan siihen joka ruutu (pois päältä = 0 kustannusta: ei jälkikäsittelyä tällä kameralla).</summary>
+        /// <summary>"poikki dof 0|1" ja Hehku-ominaisuus ("poikki hehku 0|1") voivat vaihtaa tilaa milloin tahansa;
+        /// synkronoi näyttämön volumen (jaettu DoF:n ja Bloomin kesken) ja kameran tilan joka ruutu. Molemmat pois
+        /// päältä = 0 kustannusta (ei jälkikäsittelyä eikä syvyysajoa tällä kameralla).</summary>
         void PaivitaDofTila()
         {
-            bool paalla = DofPaalla;
-            if (volyymi != null) volyymi.enabled = paalla;
+            bool dofPaalla = DofPaalla;
+            bool jokinPaalla = dofPaalla || hehku;
+            if (syvyys != null) syvyys.active = dofPaalla;
+            if (hehkuBloom != null) hehkuBloom.active = hehku;
+            if (volyymi != null) volyymi.enabled = jokinPaalla;
             if (kameraData != null)
             {
-                kameraData.renderPostProcessing = paalla;
-                // Syvyysajo vain DoF:n tarpeeseen: pois päältä ei jäännöskustannusta.
-                kameraData.requiresDepthTexture = paalla;
+                kameraData.renderPostProcessing = jokinPaalla;
+                // Syvyysajo vain DoF:n tarpeeseen: Bloom ei tarvitse syvyystekstuuria.
+                kameraData.requiresDepthTexture = dofPaalla;
             }
         }
 
@@ -204,9 +249,12 @@ namespace Matkakirja.Natiivi
             VapautaKuva();
             NykyinenKuva = null;
             KuvaVaihtui?.Invoke(null);
+            Liekit?.Tyhjenna();
+            Liekit = null;
             if (profiili != null) Destroy(profiili);
             profiili = null;
             syvyys = null;
+            hehkuBloom = null;
             volyymi = null;
             kameraData = null;
             if (this != null && gameObject != null) Destroy(gameObject);

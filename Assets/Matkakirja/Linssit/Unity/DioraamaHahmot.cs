@@ -93,8 +93,19 @@ namespace Matkakirja.Natiivi
                     kirjaa?.Invoke($"poikki: {tila.Id}/{hahmo.Id} henkilö '{hahmo.HenkiloId}' puuttuu");
                     continue;
                 }
-                float korkeus = Mathf.Max(0.1f, (float)henkilo.KorkeusM);
-                float leveys = henkilo.RuutuK > 0 ? korkeus * henkilo.RuutuL / (float)henkilo.RuutuK : korkeus * 0.6f;
+                // Maalattu atlas (erä 2, PxPerM > 0): quad suoraan ruudun pikselikoosta ja atlaksen mittakaavasta
+                // metreinä (RuutuL/K / PxPerM) -- korkeus_m ei enää määrää kokoa. Paikkamerkki (PxPerM = 0): ennallaan.
+                float korkeus, leveys;
+                if (henkilo.PxPerM > 0)
+                {
+                    leveys = Mathf.Max(0.001f, (float)(henkilo.RuutuL / henkilo.PxPerM));
+                    korkeus = Mathf.Max(0.001f, (float)(henkilo.RuutuK / henkilo.PxPerM));
+                }
+                else
+                {
+                    korkeus = Mathf.Max(0.1f, (float)henkilo.KorkeusM);
+                    leveys = henkilo.RuutuK > 0 ? korkeus * henkilo.RuutuL / (float)henkilo.RuutuK : korkeus * 0.6f;
+                }
                 var go = new GameObject("Hahmo:" + tila.Id + "/" + hahmo.Id) { layer = DioraamaNayttamo.Kerros };
                 go.transform.SetParent(juuri, false);
                 var mesh = LuoNelio(leveys, korkeus);
@@ -174,17 +185,32 @@ namespace Matkakirja.Natiivi
                 }
 
                 int rivi = 0, sarake = 0;
-                if (e.Henkilo.Silmukat != null && hn.Silmukka != null && e.Henkilo.Silmukat.TryGetValue(hn.Silmukka, out var silmukka))
+                Silmukka silmukka = null;
+                if (e.Henkilo.Silmukat != null)
                 {
-                    rivi = silmukka.Rivi;
-                    sarake = silmukka.Ruudut > 0 ? ((hn.Ruutu % silmukka.Ruudut) + silmukka.Ruudut) % silmukka.Ruudut : 0;
+                    // Puuttuva silmukka (esim. 'kavely' maalatussa atlaksessa, jossa on vain idle/tyo/puhe) -> idle.
+                    // Vain tässä Unity-kerroksessa: Ydin-kansion Heratys.cs ei muutu (JS-pariteetti).
+                    if (hn.Silmukka == null || !e.Henkilo.Silmukat.TryGetValue(hn.Silmukka, out silmukka))
+                        e.Henkilo.Silmukat.TryGetValue("idle", out silmukka);
                 }
+                if (silmukka != null) (rivi, sarake) = RuutuRiveittain(silmukka, hn.Ruutu, e.Henkilo.Sarakkeet);
                 if (rivi != e.ViimeRivi || sarake != e.ViimeSarake)
                 {
                     e.ViimeRivi = rivi; e.ViimeSarake = sarake;
                     AsetaRuutu(e.Mesh, e.Henkilo, atlasKuvat.TryGetValue(e.AtlasAvain ?? "", out var kuva) ? kuva : null, rivi, sarake, e.Hahmo.Peilattu);
                 }
             }
+        }
+
+        /// <summary>Silmukan ruutu i (0-pohjainen) -> absoluuttinen ruutu k = rivi · sarakkeet + i -> (k / sarakkeet,
+        /// k % sarakkeet): silmukka jatkuu seuraavalle riville, jos sen ruutumäärä ylittää atlaksen sarakkeet
+        /// (esim. tyo: rivi 1, 12 ruutua, atlas 8 saraketta -> rivit 1 ja 2).</summary>
+        static (int rivi, int sarake) RuutuRiveittain(Silmukka silmukka, int ruutuIndeksi, int sarakkeet)
+        {
+            if (sarakkeet <= 0 || silmukka.Ruudut <= 0) return (silmukka.Rivi, 0);
+            int i = ((ruutuIndeksi % silmukka.Ruudut) + silmukka.Ruudut) % silmukka.Ruudut;
+            int k = silmukka.Rivi * sarakkeet + i;
+            return (k / sarakkeet, k % sarakkeet);
         }
 
         static void AsetaRuutu(Mesh mesh, Henkilo henkilo, Texture2D atlas, int rivi, int sarake, bool peilattu)

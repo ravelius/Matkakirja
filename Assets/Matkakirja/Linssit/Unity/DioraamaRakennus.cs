@@ -12,13 +12,21 @@ namespace Matkakirja.Natiivi
 {
     public sealed class DioraamaRakennus
     {
-        static readonly int IdVari = Shader.PropertyToID("_Vari"), IdLampo = Shader.PropertyToID("_Lampo");
+        static readonly int IdVari = Shader.PropertyToID("_Vari"), IdLampo = Shader.PropertyToID("_Lampo"),
+            IdPohjaKuva = Shader.PropertyToID("_PohjaKuva"), IdVirtaus = Shader.PropertyToID("_Virtaus");
         static readonly Color OletusVari = new Color(0.72f, 0.68f, 0.61f), OletusLampo = new Color(1f, 0.6902f, 0.3765f);
 
         readonly Transform juuri;
         readonly Shader varjostin;
         readonly Dictionary<string, Material> materiaalit = new Dictionary<string, Material>();
         readonly Dictionary<string, GameObject> tilat = new Dictionary<string, GameObject>();
+        // AsetaPinta (Codexin maalattu pohjakuva, erä 2) voi saapua ennen kuin pintaa käyttävä tila on latautunut
+        // eikä materiaalia siis vielä ole: kuva jää tähän odottamaan, ja MateriaaliPinnalle asettaa sen heti kun
+        // materiaali syntyy. viimeisinRakennus muistaa Pinnat-taulukon AsetaPinta-kutsua varten (sillä ei ole omaa
+        // Rakennus-parametria, ks. dioraama-rajapinnat-era2-20260929.md kohta 3): MateriaaliPinnalle päivittää sen
+        // aina kun materiaalia haetaan/luodaan, joten se on tuore aina kun materiaali kyseiselle pinnalle on olemassa.
+        readonly Dictionary<string, Texture2D> odottavatPohjakuvat = new Dictionary<string, Texture2D>();
+        Rakennus viimeisinRakennus;
 
         public DioraamaRakennus(Transform juuri)
         {
@@ -34,6 +42,31 @@ namespace Matkakirja.Natiivi
         public int Renderereita { get; private set; }
 
         public bool SisaltaaTilan(string id) => tilat.ContainsKey(id);
+
+        /// <summary>Kokin maalattu pohjakuva pinnalle (Codexin JPG, erä 2, dioraama-rajapinnat-era2-20260929.md
+        /// kohta 3): jaettuun pinnan materiaaliin _PohjaKuva, _Vari valkoiseksi (väri tulee nyt kuvasta, ei enää
+        /// tasaväristä) ja _Virtaus = (VirtausU/ToistoU, VirtausV/ToistoV) UV/s (vain vesi virtaa). Jos materiaalia
+        /// ei vielä ole (pintaa käyttävä tila ei ole vielä latautunut), kuva jää odottamaan MateriaaliPinnalle-
+        /// kutsuun asti.</summary>
+        public void AsetaPinta(string pintaId, Texture2D kuva)
+        {
+            if (string.IsNullOrEmpty(pintaId) || kuva == null) return;
+            odottavatPohjakuvat[pintaId] = kuva;
+            if (materiaalit.TryGetValue(pintaId, out var m)) AsetaPohjakuvaMateriaaliin(m, pintaId, kuva, viimeisinRakennus);
+        }
+
+        void AsetaPohjakuvaMateriaaliin(Material m, string pintaId, Texture2D kuva, Rakennus rakennus)
+        {
+            m.SetTexture(IdPohjaKuva, kuva);
+            m.SetColor(IdVari, Color.white);
+            double virtausU = 0, virtausV = 0;
+            if (rakennus?.Pinnat != null && rakennus.Pinnat.TryGetValue(pintaId, out var pinta))
+            {
+                if (pinta.ToistoU != 0) virtausU = pinta.VirtausU / pinta.ToistoU;
+                if (pinta.ToistoV != 0) virtausV = pinta.VirtausV / pinta.ToistoV;
+            }
+            m.SetVector(IdVirtaus, new Vector4((float)virtausU, (float)virtausV, 0, 0));
+        }
 
         /// <summary>Rakentaa yhden tilan glb-tavuista. Palauttaa false (ja kirjaa syyn), jos glb ei kelvannut —
         /// linssi ei kaadu, tila jää vain puuttumaan (dioraama-rajapinnat-20260929.md kohta 6).</summary>
@@ -106,6 +139,7 @@ namespace Matkakirja.Natiivi
 
         Material MateriaaliPinnalle(Rakennus rakennus, string pintaId)
         {
+            viimeisinRakennus = rakennus;
             string avain = pintaId ?? "?";
             if (materiaalit.TryGetValue(avain, out var m)) return m;
             Color vari = OletusVari;
@@ -121,6 +155,8 @@ namespace Matkakirja.Natiivi
             Color lampo = hehku > 0 ? Color.Lerp(OletusLampo, new Color(1f, 0.35f, 0.08f), Mathf.Clamp01((float)hehku)) : OletusLampo;
             m.SetColor(IdLampo, lampo);
             materiaalit[avain] = m;
+            // Pohjakuva voi olla ladattu jo ennen tätä tilaa (toinen tila käytti samaa pintaa aiemmin): aseta heti.
+            if (odottavatPohjakuvat.TryGetValue(avain, out var kuva)) AsetaPohjakuvaMateriaaliin(m, avain, kuva, rakennus);
             return m;
         }
 
@@ -136,6 +172,8 @@ namespace Matkakirja.Natiivi
             tilat.Clear();
             foreach (var m in materiaalit.Values) if (m != null) UnityEngine.Object.Destroy(m);
             materiaalit.Clear();
+            odottavatPohjakuvat.Clear();
+            viimeisinRakennus = null;
             Kolmiot = 0; Karjet = 0; Renderereita = 0;
         }
     }

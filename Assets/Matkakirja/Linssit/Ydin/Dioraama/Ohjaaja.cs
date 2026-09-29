@@ -22,12 +22,15 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>
         /// AskeleenKesto(askel, tila, rak) → sekuntia. pulu-lenna 1,8; taulu 0,25; kohta = max(3, 0,06·merkit)
         /// tilan taulun Kohdat[N]:n tekstistä; repliikki/reaktio = max(2, 0,06·merkit) hahmon tekstistä; odota =
-        /// askel.S. Kun rivillä on ääni (Aani ei tyhjä), kesto tulee äänestä: rak.Aanet[Aani].KestoS korvaa
-        /// tekstipohjaisen arvion kokonaan.
+        /// askel.S. Kun repliikki-/reaktioriviLLÄ on ääni (Aani ei tyhjä), kesto tulee äänestä: rak.Aanet[Aani].KestoS
+        /// korvaa tekstipohjaisen arvion KOKONAAN. 'kohta'-askeleella (era2 kohta 2 "AANET", koordinaattorin lisäys
+        /// 29.9.) ääni EI korvaa kokonaan vaan LISÄÄ 0,6 s taukoa perään (rak.Aanet[Kohta.Aani].KestoS + 0,6) — ero
+        /// repliikkiin nähden, koska taulun kohta jää muuten näkyviin ilman omaa "lue seuraava" -taukoa.
         ///
-        /// TULKINTA (merkkien lähde 'repliikki'-askeleessa, vahvistettu tests/fixtures/dioraama/vektorit.json
-        /// "tulkinnat"): Askel yksilöi vain hahmon, ei rivi-indeksiä, vaikka hahmolla voi olla useampi repliikki.
-        /// Käytetään AINA hahmo.Repliikit[0] (ensimmäinen rivi). 'reaktio' on yksiselitteinen (Hahmo.Reaktio).
+        /// TULKINTA (merkkien lähde 'repliikki'-askeleessa, PÄIVITETTY era2 kohta 2 "AANET", vahvistettu
+        /// tests/fixtures/dioraama/vektorit.json "tulkinnat"): Askel yksilöi hahmon JA valinnaisen rivi-indeksin
+        /// (Askel.N) — hahmo.Repliikit[askel.N] (N=0 oletuksena, kuten ennen N:n käyttöönottoa). 'reaktio' on
+        /// yksiselitteinen (Hahmo.Reaktio, N:ää ei käytetä).
         /// TULKINTA (merkit = Teksti.Length, UTF-16-yksiköt, sama kuin JS:n teksti.length).
         /// </summary>
         public static double AskeleenKesto(Askel askel, Tila tila, Rakennus rak)
@@ -41,13 +44,14 @@ namespace Matkakirja.Linssit.Dioraama
                 case "kohta":
                 {
                     var kohta = tila.Taulu.Kohdat[askel.N];
+                    if (!string.IsNullOrEmpty(kohta.Aani) && rak.Aanet.TryGetValue(kohta.Aani, out var kohtaAani)) return kohtaAani.KestoS + 0.6;
                     return Math.Max(3, 0.06 * kohta.Teksti.Length);
                 }
                 case "repliikki":
                 case "reaktio":
                 {
                     var hahmo = tila.Hahmot.FirstOrDefault(h => h.Id == askel.HahmoId);
-                    var rivi = askel.Tee == "reaktio" ? hahmo.Reaktio : hahmo.Repliikit[0];
+                    var rivi = askel.Tee == "reaktio" ? hahmo.Reaktio : hahmo.Repliikit[askel.N];
                     if (!string.IsNullOrEmpty(rivi.Aani) && rak.Aanet.TryGetValue(rivi.Aani, out var aani)) return aani.KestoS;
                     return Math.Max(2, 0.06 * rivi.Teksti.Length);
                 }

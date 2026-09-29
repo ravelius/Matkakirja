@@ -18,6 +18,7 @@ using Matkakirja.Linssit;
 using Matkakirja.Linssit.Dioraama;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.Profiling;
 // "Nakyma" on kahdessa nimiavaruudessa (Matkakirja.Linssit.Nakyma = pallon lat/lon-asento,
 // Matkakirja.Linssit.Dioraama.Nakyma = dioraaman NakymaHetkella-tulos): alias poistaa CS0104-ristiriidan.
 using DioraamaNakyma = Matkakirja.Linssit.Dioraama.Nakyma;
@@ -55,11 +56,23 @@ namespace Matkakirja.Natiivi
         DioraamaRakennus rakennus3D;
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
+        // ERA 2 (dioraama-aanirajapinta-ehdotus.md): PYSYVÄ kenttä (ei nollata Sulje:ssa, ks. DioraamaAanet.cs:n
+        // alkukommentti) -- klippivälimuisti säilyy sulkemisen ja uudelleenavaamisen yli, kuten ladatutPinnat.
+        DioraamaAanet aanet;
 
         Rakennus rakennus;
         bool avoinna, latausKaynnissa;
         readonly HashSet<string> tilatJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
         readonly HashSet<string> atlaksetJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
+        // ERA 2 (dioraama-rajapinnat-era2-20260929.md kohta 3): pintojen tekstuurit ja liekkien atlakset ovat
+        // rakennustason (ei tilakohtaista) dataa, jo rakennuskoneen esisuodattamia "käytettyjä" (kohta 2) --
+        // siksi ei tarvita DioraamaHahmot.TarvittavatAtlakset-tyylistä tila-suodatusta, ks. TaydennaPinnatJaLiekit.
+        readonly HashSet<string> pinnatJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
+        readonly HashSet<string> liekkiatlaksetJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
+        /// <summary>Sovittimen itse lataamat pinta-/liekkitekstuurit ("poikki mittaus" -muistiraportti); avain on
+        /// pinnan/liekin id, ei tiedostopolku (toisin kuin hahmoatlaksissa, joissa monta henkilöä voisi jakaa polun).</summary>
+        readonly Dictionary<string, Texture2D> ladatutPinnat = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
+        readonly Dictionary<string, Texture2D> ladatutLiekkiAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
         string peiliKuvaus = "pois (ämpäri)";
         Func<string, string> peili = s => s;
         /// <summary>Paketin juuri: AmpariJuuri + uusin.json:n polku, tai AmpariJuuri (kehityspeili).</summary>
@@ -95,6 +108,10 @@ namespace Matkakirja.Natiivi
 
             ymparisto.Pelikerrokset(false);
             ymparisto.MusiikkiPitoon(true);
+            // ERA 2: dioraama väistää maiseman taustaäänen (Maisema väistyy) -- omat silmukat (DioraamaAanet)
+            // korvaavat sen. Palautus (jos tarvitaan) Sulje:ssa; kukaan muu ei aseta Taustaaania linssin auki
+            // ollessa, koska tunnus on yksinomaan avoinna olevan linssin oma (ks. ILinssiYmparisto.Taustaaani).
+            ymparisto.Taustaaani(null);
             ymparisto.Peite(true);
             o.StartCoroutine(PeiteHetkeksi(0.3f));
 
@@ -103,6 +120,8 @@ namespace Matkakirja.Natiivi
             if (rakennus3D == null) rakennus3D = new DioraamaRakennus(nayttamo.transform);
             if (hahmot3D == null) hahmot3D = new DioraamaHahmot(nayttamo.transform);
             if (syote == null) syote = new DioraamaSyote(this, nayttamo);
+            if (aanet == null) aanet = new DioraamaAanet(o, this);
+            aanet.Avaa(ymparisto, rakennus, nayttamo.transform);
 
             Linssi = linssi;
             Vaihtui?.Invoke(linssi);
@@ -115,6 +134,7 @@ namespace Matkakirja.Natiivi
             {
                 linssi.Avaa(rakennus, ymparisto.Aika);
                 TaydennaLataamattomat();
+                TaydennaPinnatJaLiekit();
             }
             o.Kirjaa(Tilaraportti());
         }
@@ -131,9 +151,12 @@ namespace Matkakirja.Natiivi
             ViimeisinT = t;
 
             var kameraAsento = syote.Sovita(nakyma.Kamera);
-            nayttamo.Paivita(kameraAsento, y.VahennettyLiike);
+            // t mukaan (era 2): DioraamaNayttamo.Paivita antaa sen liekkinäkymälle (DioraamaLiekit.Paivita, ruutu
+            // ajasta) -- nayttamo-kentän kommentti kutsui juuri tätä ("Sovitin voi jatkossa antaa Ydin-ajan tähän").
+            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
             syote.Paivita(rakennus, t);
+            aanet?.Paivita(rakennus, nakyma, t);
         }
 
         public void Sulje()
@@ -144,10 +167,12 @@ namespace Matkakirja.Natiivi
             nayttamo?.Tuhoa(); nayttamo = null;
             AktiivinenKamera = null;
             syote = null;
+            aanet?.Sulje(); // kahvat kiinni ja puhuja pois; aanet ITSE säilyy (klippivälimuisti), ks. kentän kommentti.
             SyoteLukko.PoistaNakymaPeitto(nakymaPeitto);
             if (kierto != null) SyoteLukko.Vapauta(this);
             y?.Pelikerrokset(true);
             y?.MusiikkiPitoon(false);
+            y?.Taustaaani(null); // palautus (ks. Avaa): ei jätetä muuta arvoa roikkumaan, vaikka aanet ei sitä asettanutkaan.
             avoinna = false;
             pysaytettyT = null;
             pakotettuTila = null;
@@ -166,6 +191,12 @@ namespace Matkakirja.Natiivi
         }
 
         public void Yleisnakymaan(double t) => Kohdista(null, t);
+
+        /// <summary>Äänen URL (era 2, DioraamaAanet.cs): sama juuri ja peili kuin muu paketti (rakennus.json, glb,
+        /// atlakset) -- Rakennus.Aanet[id].Tiedosto on suhteessa rakennuksen juureen (dioraama-rajapinnat-
+        /// era2-20260929.md kohta 2 "AANET").</summary>
+        public string AaniUrl(string tiedostoRelPolku) =>
+            string.IsNullOrEmpty(tiedostoRelPolku) ? null : peili(paketinJuuri + tiedostoRelPolku);
 
         IEnumerator PeiteHetkeksi(float sekuntia)
         {
@@ -201,7 +232,9 @@ namespace Matkakirja.Natiivi
             if (avoinna)
             {
                 linssi.Avaa(rakennus, y.Aika);
+                aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
                 TaydennaLataamattomat();
+                TaydennaPinnatJaLiekit();
             }
         }
 
@@ -214,6 +247,17 @@ namespace Matkakirja.Natiivi
                 tilatJonossaTaiValmiit.Add(tila.Id);
                 o.StartCoroutine(LataaTila(tila));
                 hahmot3D.LisaaTila(rakennus, tila, o.Kirjaa);
+                aanet?.TilaValmis(tila); // esilataa tilan tehosteet ja puheäänet (era 2).
+                // ERA 2 -LISÄYS (ei ollut kirjaimellisesti tehtävänannon tiedostokohdan listalla, mutta välttämätön):
+                // DioraamaLiekit on rakennettu DioraamaHahmot-mallilla -- LisaaTila luo liekkien GameObjectit
+                // paikka/koko-tiedosta, eikä mikään muu kutsu sitä. Ilman tätä liekit eivät koskaan ilmesty
+                // näyttämölle, vaikka atlas latautuisi. HUOM (raportoitu, ei tämän erän tiedosto): DioraamaLiekit.
+                // TarvittavatAtlakset/AtlasMateriaali käyttävät liekki.Atlas (polku) avaimena atlasKuvat/
+                // atlasMateriaalit-sanakirjoihin, mutta AsetaAtlas(liekkiId, …) kirjoittaa liekkiId:llä -- nämä eivät
+                // täsmää. Siksi tässä ei käytetä TarvittavatAtlakset-reittiä, vaan rakennustason latausta (alla,
+                // TaydennaPinnatJaLiekit), joka on itsenäisesti johdonmukainen dokumentoidun AsetaAtlas-signatuurin
+                // kanssa.
+                nayttamo.Liekit?.LisaaTila(rakennus, tila, o.Kirjaa);
                 var atlakset = new List<string>();
                 hahmot3D.TarvittavatAtlakset(rakennus, tila, atlakset);
                 foreach (var atlas in atlakset)
@@ -222,6 +266,25 @@ namespace Matkakirja.Natiivi
                     atlaksetJonossaTaiValmiit.Add(atlas);
                     o.StartCoroutine(LataaAtlas(atlas));
                 }
+            }
+        }
+
+        /// <summary>Jonottaa rakennustason pintatekstuurit (Rakennus.Pinnat) ja liekkiatlakset (Rakennus.Liekit) --
+        /// era 2, ei tilakohtaista suodatusta (ks. kenttien alkukommentti). Kutsutaan aina TaydennaLataamattomat-
+        /// kutsun rinnalla; HashSetit estävät saman pinnan/liekin lataamisen kahdesti.</summary>
+        void TaydennaPinnatJaLiekit()
+        {
+            foreach (var pinta in rakennus.Pinnat.Values)
+            {
+                if (string.IsNullOrEmpty(pinta.Tekstuuri) || pinnatJonossaTaiValmiit.Contains(pinta.Id)) continue;
+                pinnatJonossaTaiValmiit.Add(pinta.Id);
+                o.StartCoroutine(LataaPinta(pinta.Id, pinta.Tekstuuri));
+            }
+            foreach (var liekki in rakennus.Liekit.Values)
+            {
+                if (string.IsNullOrEmpty(liekki.Atlas) || liekkiatlaksetJonossaTaiValmiit.Contains(liekki.Id)) continue;
+                liekkiatlaksetJonossaTaiValmiit.Add(liekki.Id);
+                o.StartCoroutine(LataaLiekkiAtlas(liekki.Id, liekki.Atlas));
             }
         }
 
@@ -243,6 +306,39 @@ namespace Matkakirja.Natiivi
             if (!kuva.LoadImage(tavut, false)) { o.Kirjaa($"poikki: atlas {atlasPolku} ei jäsentynyt (hahmo harmaana)"); UnityEngine.Object.Destroy(kuva); yield break; }
             hahmot3D.AsetaAtlas(atlasPolku, kuva);
             o.Kirjaa($"poikki: atlas {atlasPolku} valmis ({kuva.width}x{kuva.height})");
+        }
+
+        /// <summary>Pinnan Tekstuuri (era 2 kohta 3): mipmapattu, ei-lineaarinen (sRGB-lähde), toistuva ja
+        /// anisotrooppinen -- kutsuu rakennusnäkymän (Sovittimen rakennus3D-kenttä, sama reitti kuin LataaTila)
+        /// AsetaPinta-metodia (agentti D:n lisäys DioraamaRakennus.cs:ään).</summary>
+        IEnumerator LataaPinta(string pintaId, string tekstuuriPolku)
+        {
+            byte[] tavut = null;
+            yield return HaeTavut(peili(paketinJuuri + tekstuuriPolku), t => tavut = t);
+            if (tavut == null) { o.Kirjaa($"poikki: pinta {pintaId} ei latautunut (paikkaväri)"); yield break; }
+            var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
+            { name = "Pinta:" + pintaId, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Repeat, anisoLevel = 4 };
+            if (!kuva.LoadImage(tavut, false)) { o.Kirjaa($"poikki: pinta {pintaId} ei jäsentynyt (paikkaväri)"); UnityEngine.Object.Destroy(kuva); yield break; }
+            ladatutPinnat[pintaId] = kuva;
+            rakennus3D.AsetaPinta(pintaId, kuva);
+            o.Kirjaa($"poikki: pinta {pintaId} tekstuuri valmis ({kuva.width}x{kuva.height})");
+        }
+
+        /// <summary>Liekkipankin (Rakennus.Liekit) atlas (era 2 kohta 3): kuten hahmoatlas (Clamp/Bilinear) --
+        /// kutsuu näyttämön Liekit-näkymän (agentti E:n DioraamaNayttamo.Liekit-kenttä/-ominaisuus, uusi
+        /// DioraamaLiekit-luokka) AsetaAtlas-metodia. OLETUS (kirjattu raporttiin): nimi "Liekit" on tehtävän-
+        /// annon esimerkki, ei vahvistettu -- jos agentti E päätyy toiseen nimeen, tämä rivi ei käänny.</summary>
+        IEnumerator LataaLiekkiAtlas(string liekkiId, string atlasPolku)
+        {
+            byte[] tavut = null;
+            yield return HaeTavut(peili(paketinJuuri + atlasPolku), t => tavut = t);
+            if (tavut == null) { o.Kirjaa($"poikki: liekki {liekkiId} atlas ei latautunut (näkymättä)"); yield break; }
+            var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true)
+            { name = "Liekki:" + liekkiId, filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp };
+            if (!kuva.LoadImage(tavut, false)) { o.Kirjaa($"poikki: liekki {liekkiId} atlas ei jäsentynyt (näkymättä)"); UnityEngine.Object.Destroy(kuva); yield break; }
+            ladatutLiekkiAtlakset[liekkiId] = kuva;
+            nayttamo?.Liekit?.AsetaAtlas(atlasPolku, kuva);
+            o.Kirjaa($"poikki: liekki {liekkiId} atlas valmis ({kuva.width}x{kuva.height})");
         }
 
         static IEnumerator HaeTeksti(string url, Action<string> valmis)
@@ -283,6 +379,11 @@ namespace Matkakirja.Natiivi
             {
                 rakennus = null; latausKaynnissa = false;
                 tilatJonossaTaiValmiit.Clear(); atlaksetJonossaTaiValmiit.Clear();
+                pinnatJonossaTaiValmiit.Clear(); liekkiatlaksetJonossaTaiValmiit.Clear();
+                foreach (var vanhaKuva in ladatutPinnat.Values) if (vanhaKuva != null) UnityEngine.Object.Destroy(vanhaKuva);
+                ladatutPinnat.Clear();
+                foreach (var vanhaKuva in ladatutLiekkiAtlakset.Values) if (vanhaKuva != null) UnityEngine.Object.Destroy(vanhaKuva);
+                ladatutLiekkiAtlakset.Clear();
                 rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna();
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
@@ -292,6 +393,26 @@ namespace Matkakirja.Natiivi
             {
                 DioraamaNayttamo.DofPaalla = arvo == "1";
                 o.Kirjaa("poikki: dof " + (DioraamaNayttamo.DofPaalla ? "päällä" : "pois"));
+                return;
+            }
+            if (mita == "hehku")
+            {
+                // Hehku (Bloom, erä 2) on nayttamo-instanssin ominaisuus (ei staattinen kuten DofPaalla): jos
+                // linssi on kiinni (nayttamo == null), kytkin ei säily seuraavaan avaukseen -- poikkeama raportoitu.
+                if (nayttamo != null) nayttamo.Hehku = arvo == "1";
+                o.Kirjaa("poikki: hehku " + (arvo == "1" ? "päällä" : "pois"));
+                return;
+            }
+            if (mita == "aanet")
+            {
+                // A/B-kehityskytkin (era 2) + tilaraportti ("poikki aanet"): ladatut klipit, silmukat, puhuja.
+                if (aanet == null) { o.Kirjaa("poikki: äänet eivät ole valmiit (linssiä ei ole avattu kertaakaan)"); return; }
+                if (arvo == "0" || arvo == "1")
+                {
+                    aanet.Paalla = arvo == "1";
+                    o.Kirjaa("poikki: äänet " + (arvo == "1" ? "päällä" : "pois"));
+                }
+                else o.Kirjaa(aanet.Tilaraportti());
                 return;
             }
             if (!avoinna) { o.Kirjaa("poikki: linssi ei ole auki (linssi poikkileikkaus)"); return; }
@@ -330,10 +451,20 @@ namespace Matkakirja.Natiivi
             string asento = kamera != null
                 ? $"paikka ({kamera.transform.position.x:F1}, {kamera.transform.position.y:F1}, {kamera.transform.position.z:F1}), fov {kamera.fieldOfView:F0}°"
                 : "-";
-            double tekstuuriMt = (hahmot3D?.TekstuuriTavuja() ?? 0) / (1024.0 * 1024.0);
+            // ERA 2: pintojen ja liekkien tekstuurimuisti lisätään hahmoatlaksien arvioon (Profiler antaa todellisen
+            // GPU-koon mipmapit mukaan lukien; hahmoatlas ei tässä sovittimessa ole omistuksessamme, joten sen oma
+            // TekstuuriTavuja()-arvio pysyy ennallaan w·h·4-approksimaationa).
+            long uusienTavuja = 0;
+            foreach (var t in ladatutPinnat.Values) uusienTavuja += TekstuuriTavuja(t);
+            foreach (var t in ladatutLiekkiAtlakset.Values) uusienTavuja += TekstuuriTavuja(t);
+            double tekstuuriMt = ((hahmot3D?.TekstuuriTavuja() ?? 0) + uusienTavuja) / (1024.0 * 1024.0);
             return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {rakennus3D?.Kolmiot ?? 0}, " +
                    $"kärkiä {rakennus3D?.Karjet ?? 0}, rendereitä {(rakennus3D?.Renderereita ?? 0) + (hahmot3D?.Maara ?? 0)}, " +
                    $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, kamera {asento}";
         }
+
+        /// <summary>GPU-tekstuurimuisti (Profiler antaa todellisen koon mipmapit/pakkaus mukaan lukien; era 2 kohta 3
+        /// mainitsee tämän tai käsinlasketun w·h·4·1,33-arvion -- Profiler on tarkempi kun se on saatavilla).</summary>
+        static long TekstuuriTavuja(Texture2D t) => t != null ? Profiler.GetRuntimeMemorySizeLong(t) : 0;
     }
 }

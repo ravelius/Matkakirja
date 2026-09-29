@@ -187,10 +187,125 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(2.4, r.Aanet["testiaani"].KestoS);
             Oleta.Sama("testi.mp3", r.Aanet["testiaani"].Tiedosto);
             Oleta.Tosi(!r.Aanet["testiaani"].Silmukka, "aani ei silmukoi");
+            Oleta.Sama("testiaani", r.Aanet["testiaani"].Id);
+
+            // ERA 2 (dioraama-rajapinnat-era2-20260929.md kohta 3): vanha muoto ilman uusia kenttiä jäsentyy
+            // ennallaan, uudet kentät jäävät oletusarvoihinsa (0 / tyhjä lista / null).
+            Oleta.Sama(2.0, r.Pinnat["kivi"].ToistoU, "numero-toisto: ToistoU = vanha ToistoM");
+            Oleta.Sama(2.0, r.Pinnat["kivi"].ToistoV, "numero-toisto: ToistoV = ToistoU");
+            Oleta.Tosi(r.Pinnat["kivi"].Tekstuuri == null, "vanhassa muodossa ei tekstuuria");
+            Oleta.Sama(0.0, r.Pinnat["kivi"].VirtausU);
+            Oleta.Sama(0.0, r.Pinnat["kivi"].VirtausV);
+            Oleta.Sama(0.0, h.PxPerM, "maalaamaton henkilö: px_per_m puuttuu lähteestä → 0");
+            Oleta.Sama(0, r.Liekit.Count, "vanhassa rakennuksessa ei liekkipankkia");
+            Oleta.Sama(0, keittio.Liekit.Count, "vanhassa tilassa ei liekkisijoituksia");
+            Oleta.Sama(0, keittio.Aanet.Count, "vanhassa tilassa ei aanet-sijoituksia");
+            Oleta.Tosi(r.Taulu.Kohdat[0].Aani == null, "vanhassa kohdassa ei ääntä");
         }
 
         // ═══════════════════════════════════════════════════════════════════
-        // 1b) DioraamaGlb: pieni käsin rakennettu glb (1 kolmio, COLOR_0 UBYTE normalized, indeksit uint32)
+        // 1b) DioraamaData ERA 2: pinnan numero-/[u,v]-toisto + tekstuuri + virtaus, maalatun henkilön px_per_m,
+        //     liekkipankki + tilan liekkisijoitukset, äänipankki (Id) + tilan äänisijoitukset, kohdan ääni.
+        // ═══════════════════════════════════════════════════════════════════
+
+        const string UusienKenttienFixture = @"{
+          ""taulu"": {""otsikko"":""Linna"",""tila"":""luonnos"",""kohdat"":[{""teksti"":""Ensimmäinen"",""lahde"":""l""}]},
+          ""tilat"": [
+            {
+              ""id"":""tulisali"",""nimi"":""Tulisali"",""kohdistettava"":true,
+              ""rajat"":{""min"":[0,0,0],""max"":[1,1,1]},
+              ""taulu"":{""otsikko"":""Tulisali"",""tila"":""luonnos"",
+                ""kohdat"":[{""teksti"":""Liekki palaa"",""lahde"":""l"",""aani"":""kerronta-1""}]},
+              ""hahmot"":[
+                {""id"":""kokki"",""henkilo"":""kokki-maalattu"",""paikka"":[0,0,0],""suunta"":0,
+                  ""repliikit"":[{""id"":""r1"",""teksti"":""Kuuma!"",""aani"":""kokki-aani-1""}],
+                  ""reaktio"":{""id"":""react"",""teksti"":""Au!"",""aani"":""kokki-react-aani""}}
+              ],
+              ""liekit"":[{""liekki"":""tulisija"",""paikka"":[0.5,0,0.5],""koko"":1.2,""vaihe"":0.25}],
+              ""aanet"":[{""aani"":""tulen-rasina"",""voimakkuus"":0.6}]
+            }
+          ],
+          ""henkilot"": {
+            ""kokki-maalattu"": {""nimi"":""Kokki"",""atlas"":""hahmot/kokki.png"",""ruutu"":[256,384],""sarakkeet"":8,
+              ""pivot"":[0.5,0.039],""korkeus_m"":1.72,""px_per_m"":196,
+              ""silmukat"":{""idle"":{""rivi"":0,""ruudut"":8,""fps"":10}}}
+          },
+          ""pinnat"": {
+            ""kivi"": {""vari"":""#b8ad9c"",""toisto_m"":2.0,""tekstuuri"":""pinnat/kivi.jpg""},
+            ""leikkaus"": {""vari"":""#d9ceb8"",""toisto_m"":[4.0,1.0]},
+            ""vesi"": {""vari"":""#465e68"",""toisto_m"":8.0,""virtaus"":[0.04,0.015]}
+          },
+          ""liekit"": {
+            ""tulisija"": {""ruutu"":[256,256],""sarakkeet"":4,""ruudut"":8,""fps"":12,""koko_m"":[1.1,1.1],
+              ""pivot"":[0.5,0.06],""atlas"":""liekit/tulisija.png""}
+          },
+          ""aanet"": {
+            ""tulen-rasina"": {""tiedosto"":""aanet/tulen-rasina.mp3"",""silmukka"":true,""voimakkuus"":0.8,""kesto_s"":12.0},
+            ""kokki-aani-1"": {""tiedosto"":""aanet/kokki-1.mp3"",""silmukka"":false,""voimakkuus"":1,""kesto_s"":1.5}
+          }
+        }";
+
+        [Testi] static void UusienKenttienJasennys()
+        {
+            var r = DioraamaData.Lue(UusienKenttienFixture);
+
+            // PINNAT: numero- ja [u,v]-toisto (ToistoM säilyy = ToistoU), tekstuuri, virtaus (vain vedellä).
+            Oleta.Sama(2.0, r.Pinnat["kivi"].ToistoU);
+            Oleta.Sama(2.0, r.Pinnat["kivi"].ToistoV);
+            Oleta.Sama(2.0, r.Pinnat["kivi"].ToistoM, "ToistoM säilyy = ToistoU");
+            Oleta.Sama("pinnat/kivi.jpg", r.Pinnat["kivi"].Tekstuuri);
+            Oleta.Sama(4.0, r.Pinnat["leikkaus"].ToistoU);
+            Oleta.Sama(1.0, r.Pinnat["leikkaus"].ToistoV);
+            Oleta.Sama(4.0, r.Pinnat["leikkaus"].ToistoM, "ToistoM = ToistoU myös [u,v]-muodossa");
+            Oleta.Tosi(r.Pinnat["leikkaus"].Tekstuuri == null, "leikkauksella ei tekstuuria");
+            Oleta.Sama(0.04, r.Pinnat["vesi"].VirtausU);
+            Oleta.Sama(0.015, r.Pinnat["vesi"].VirtausV);
+
+            // HENKILOT: maalattu px_per_m.
+            Oleta.Sama(196.0, r.Henkilot["kokki-maalattu"].PxPerM);
+
+            var tila = r.Tila("tulisali");
+
+            // LIEKIT: pankki (Rakennus.Liekit) + tilan sijoitukset (Tila.Liekit).
+            Oleta.Sama(1, r.Liekit.Count);
+            var liekki = r.Liekit["tulisija"];
+            Oleta.Sama("tulisija", liekki.Id);
+            Oleta.Sama("liekit/tulisija.png", liekki.Atlas);
+            Oleta.Sama(256, liekki.RuutuL);
+            Oleta.Sama(256, liekki.RuutuK);
+            Oleta.Sama(4, liekki.Sarakkeet);
+            Oleta.Sama(8, liekki.Ruudut);
+            Oleta.Sama(12, liekki.Fps);
+            Oleta.Sama(1.1, liekki.KokoL);
+            Oleta.Sama(1.1, liekki.KokoK);
+            Oleta.Sama(0.5, liekki.PivotX);
+            Oleta.Sama(0.06, liekki.PivotY);
+
+            Oleta.Sama(1, tila.Liekit.Count);
+            Oleta.Sama("tulisija", tila.Liekit[0].LiekkiId);
+            SamaV3(new V3(0.5, 0, 0.5), tila.Liekit[0].Paikka, "liekki.Paikka");
+            Oleta.Sama(1.2, tila.Liekit[0].Koko);
+            Oleta.Sama(0.25, tila.Liekit[0].Vaihe);
+
+            // AANET: pankki (Id-kenttä + uudelleennimetty Aani-luokka), tilan sijoitukset, repliikki/reaktio/
+            // kohta-viittaukset (Repliikki.Aani oli jo olemassa; Kohta.Aani on era 2 -lisäys).
+            Oleta.Sama("tulen-rasina", r.Aanet["tulen-rasina"].Id);
+            Oleta.Sama("aanet/tulen-rasina.mp3", r.Aanet["tulen-rasina"].Tiedosto);
+            Oleta.Tosi(r.Aanet["tulen-rasina"].Silmukka, "tulen rasina silmukoi");
+            Oleta.Sama(0.8, r.Aanet["tulen-rasina"].Voimakkuus);
+            Oleta.Sama(12.0, r.Aanet["tulen-rasina"].KestoS);
+
+            Oleta.Sama(1, tila.Aanet.Count);
+            Oleta.Sama("tulen-rasina", tila.Aanet[0].AaniId);
+            Oleta.Sama(0.6, tila.Aanet[0].Voimakkuus);
+
+            Oleta.Sama("kerronta-1", tila.Taulu.Kohdat[0].Aani);
+            Oleta.Sama("kokki-aani-1", tila.Hahmot[0].Repliikit[0].Aani);
+            Oleta.Sama("kokki-react-aani", tila.Hahmot[0].Reaktio.Aani);
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
+        // 1c) DioraamaGlb: pieni käsin rakennettu glb (1 kolmio, COLOR_0 UBYTE normalized, indeksit uint32)
         // ═══════════════════════════════════════════════════════════════════
 
         static byte[] TeeGlbTavut(string json, byte[] bin)
@@ -441,7 +556,7 @@ namespace Matkakirja.Linssit.Testit
             };
             var taulu = new Taulu { Kohdat = new List<Kohta> { new Kohta { Teksti = new string('z', 10) } } }; // 0,06*10=0,6 -> max(3,·)=3
             var tila = new Tila { Id = "t", Taulu = taulu, Hahmot = new List<Hahmo> { hahmo } };
-            var rak = new Rakennus { Tilat = new List<Tila> { tila }, Aanet = new Dictionary<string, AaniTieto> { ["ääni1"] = new AaniTieto { KestoS = 5.0 } } };
+            var rak = new Rakennus { Tilat = new List<Tila> { tila }, Aanet = new Dictionary<string, Aani> { ["ääni1"] = new Aani { KestoS = 5.0 } } };
 
             Oleta.Sama(1.8, Ohjaaja.AskeleenKesto(new Askel { Tee = "pulu-lenna" }, tila, rak));
             Oleta.Sama(0.25, Ohjaaja.AskeleenKesto(new Askel { Tee = "taulu" }, tila, rak));
@@ -452,6 +567,72 @@ namespace Matkakirja.Linssit.Testit
 
             hahmo.Reaktio = new Repliikki { Teksti = new string('y', 10), Aani = "ääni1" };
             Oleta.Sama(5.0, Ohjaaja.AskeleenKesto(new Askel { Tee = "reaktio", HahmoId = "h" }, tila, rak), "ääni korvaa tekstipohjaisen keston");
+        }
+
+        // era2 (dioraama-rajapinnat-era2-20260929.md kohta 2 "AANET", koordinaattorin lisäys 29.9.):
+        // kohta.Aani LISÄÄ tauon (ei korvaa kokonaan, toisin kuin repliikki/reaktio), ja repliikki.N valitsee rivin.
+        [Testi] static void AskeleenKestoKohtaAaniLisaaTaukoaEikaKorvaaKokonaan()
+        {
+            var taulu = new Taulu { Kohdat = new List<Kohta> { new Kohta { Teksti = new string('x', 10), Aani = "k1" } } };
+            var tila = new Tila { Id = "t", Taulu = taulu, Hahmot = new List<Hahmo>() };
+            var rak = new Rakennus { Tilat = new List<Tila> { tila }, Aanet = new Dictionary<string, Aani> { ["k1"] = new Aani { KestoS = 4.0 } } };
+            Oleta.Sama(4.6, Ohjaaja.AskeleenKesto(new Askel { Tee = "kohta", N = 0 }, tila, rak), "kesto_s (4) + 0,6 s tauko");
+
+            // Sama kohta ilman Aania palaa tekstipohjaiseen kaavaan (regressio: ei riko vanhaa muotoa).
+            var tauluEiAania = new Taulu { Kohdat = new List<Kohta> { new Kohta { Teksti = new string('x', 10) } } };
+            var tilaEiAania = new Tila { Id = "t2", Taulu = tauluEiAania, Hahmot = new List<Hahmo>() };
+            Oleta.Sama(3.0, Ohjaaja.AskeleenKesto(new Askel { Tee = "kohta", N = 0 }, tilaEiAania, rak), "ei aania -> tekstipohjainen (regressio)");
+        }
+
+        [Testi] static void AskeleenKestoRepliikkiNValitseeRivin()
+        {
+            var hahmo = new Hahmo
+            {
+                Id = "h", HenkiloId = "h",
+                Repliikit = new List<Repliikki>
+                {
+                    new Repliikki { Teksti = new string('x', 10) },  // 0,06*10=0,6 -> max(2,·)=2
+                    new Repliikki { Teksti = new string('y', 100) }, // 0,06*100=6
+                },
+                Reaktio = new Repliikki { Teksti = "z" },
+            };
+            var tila = new Tila { Id = "t", Taulu = new Taulu { Kohdat = new List<Kohta>() }, Hahmot = new List<Hahmo> { hahmo } };
+            var rak = new Rakennus { Tilat = new List<Tila> { tila }, Aanet = new Dictionary<string, Aani>() };
+
+            Oleta.Sama(2.0, Ohjaaja.AskeleenKesto(new Askel { Tee = "repliikki", HahmoId = "h" }, tila, rak), "N puuttuu (oletus 0) -> ennallaan");
+            Oleta.Sama(2.0, Ohjaaja.AskeleenKesto(new Askel { Tee = "repliikki", HahmoId = "h", N = 0 }, tila, rak), "N=0 eksplisiittisenä");
+            Oleta.Sama(6.0, Ohjaaja.AskeleenKesto(new Askel { Tee = "repliikki", HahmoId = "h", N = 1 }, tila, rak), "N=1 -> toinen repliikki");
+        }
+
+        [Testi] static void TehosteJaksotJasentyvatJaPuuttuvaOnTyhjaLista()
+        {
+            const string json = @"{
+              ""tilat"": [
+                {
+                  ""id"":""keittio"",""kohdistettava"":true,""rajat"":{""min"":[0,0,0],""max"":[1,1,1]},
+                  ""tehosteet"":[
+                    {""aanet"":[""pilkkominen-1"",""pilkkominen-2""],""valit_s"":[4,9]},
+                    {""aanet"":[""askel-puu""],""valit_s"":[12,25],""voimakkuus"":0.7}
+                  ]
+                },
+                {""id"":""massa"",""kohdistettava"":false,""rajat"":{""min"":[0,0,0],""max"":[1,1,1]}}
+              ]
+            }";
+            var r = DioraamaData.Lue(json);
+            var keittio = r.Tila("keittio");
+            Oleta.Sama(2, keittio.Tehosteet.Count);
+            Oleta.Sama(2, keittio.Tehosteet[0].AaniIdt.Count);
+            Oleta.Sama("pilkkominen-1", keittio.Tehosteet[0].AaniIdt[0]);
+            Oleta.Sama("pilkkominen-2", keittio.Tehosteet[0].AaniIdt[1]);
+            Oleta.Sama(4.0, keittio.Tehosteet[0].ValiMin);
+            Oleta.Sama(9.0, keittio.Tehosteet[0].ValiMax);
+            Oleta.Sama(1.0, keittio.Tehosteet[0].Voimakkuus, "voimakkuus puuttuu -> oletus 1");
+            Oleta.Sama(1, keittio.Tehosteet[1].AaniIdt.Count);
+            Oleta.Sama("askel-puu", keittio.Tehosteet[1].AaniIdt[0]);
+            Oleta.Sama(0.7, keittio.Tehosteet[1].Voimakkuus);
+
+            var massa = r.Tila("massa");
+            Oleta.Sama(0, massa.Tehosteet.Count, "tehosteet puuttuu JSON:sta -> tyhjä lista");
         }
 
         [Testi] static void KasikirjoitusHetkellaEteneeJaNapautusKatkaisee()
@@ -719,6 +900,91 @@ namespace Matkakirja.Linssit.Testit
                     var piste = Ohjaaja.PuluLento(alku, loppu, t01);
                     LahellaV3(LueV3Json(nayte.GetProperty("piste")), piste, $"{nimi} t01={t01}");
                 }
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
+        // 5) Aanimaisema (erä 2, dioraama-aanirajapinta-ehdotus.md): tilan silmukoiden tavoitetaso
+        //    (Heratys.AanenVoimakkuus-liuku), "massa"-yleisnäkymämallin erikoissääntö ja tehosteajastimen
+        //    determinismi/ajoitus.
+        // ═══════════════════════════════════════════════════════════════════
+
+        [Testi] static void AanimaisemaSilmukanTavoitetasoLiukuu()
+        {
+            var am = new Aanimaisema();
+            Oleta.Sama(0.0, am.SilmukanTavoitetaso("huone", 0, null, 0.0), "alkutaso 0, ei liu'ussa (ensimmäinen kutsu)");
+            Oleta.Sama(0.0, am.SilmukanTavoitetaso("huone", 2, null, 1.0), "taso vaihtui juuri nyt: liuku ei ole vielä edennyt");
+            Lahella(0.5, am.SilmukanTavoitetaso("huone", 2, null, 1.6), "puolivälissä 1,2 s liukua (0,6 s kulunut)");
+            Oleta.Sama(1.0, am.SilmukanTavoitetaso("huone", 2, null, 2.2), "liuku valmis 1,2 s kohdalla");
+            Oleta.Sama(1.0, am.SilmukanTavoitetaso("huone", 2, null, 5.0), "pysyy tasossa 1 kunnes taso vaihtuu uudelleen");
+            // Lasku (taso 2 → 0): Heratys.cs:n Aikajana-kommentti ("LASKU tapahtuu heti tapahtuman hetkellä") koskee
+            // vain SITÄ HETKEÄ, jolloin liuku alkaa (alkoi = t, ei viivettä) — itse äänenvoimakkuus liukuu tästä
+            // hetkestä vanhasta arvosta (1,0) uuteen (0,0) samalla 1,2 s käyrällä kuin nousu, ei hypähdä heti.
+            Oleta.Sama(1.0, am.SilmukanTavoitetaso("huone", 0, null, 5.0), "taso vaihtui juuri nyt (lasku): liuku lähtee vanhasta arvosta 1,0");
+            Lahella(0.75, am.SilmukanTavoitetaso("huone", 0, null, 5.3), "lasku etenee samalla 1,2 s käyrällä (0,3/1,2 s kohti 0:aa)");
+        }
+
+        [Testi] static void AanimaisemaMassaYleisnakymassaJaKohdistettuna()
+        {
+            var am = new Aanimaisema();
+            // Massalle nykyinenTaso-parametri ei vaikuta mitään (0 kelpaa aina testiarvoksi): kohdeTila ratkaisee.
+            Oleta.Sama(1.0, am.SilmukanTavoitetaso(Aanimaisema.MassaTilaId, 0, null, 0.0), "massa yleisnäkymässä: 1");
+            Oleta.Sama(0.35, am.SilmukanTavoitetaso(Aanimaisema.MassaTilaId, 0, "keittio", 1.0), "massa kun tila kohdistettu: 0,35");
+            Oleta.Sama(1.0, am.SilmukanTavoitetaso(Aanimaisema.MassaTilaId, 2, null, 2.0), "takaisin yleisnäkymään: 1 (ei liu'u itse)");
+        }
+
+        [Testi] static void AanimaisemaTehosteAjastinEiSoiHetiJaValiOsuu()
+        {
+            // ValiMin = ValiMax = 1: väli on aina täsmälleen 1 s riippumatta arvotusta murto-osasta (ennustettavaa).
+            var jakso = new DioraamaData_TehosteJaksoTestiapuri().Uusi(1, 1, "ainoa");
+            var am = new Aanimaisema();
+            Oleta.Tosi(am.TehosteenLaukaisu("h", 0, jakso, 0.0) == null, "ei laukaisua heti avattaessa (odottaa ensin)");
+            Oleta.Tosi(am.TehosteenLaukaisu("h", 0, jakso, 0.5) == null, "ei vielä 0,5 s kohdalla");
+            Oleta.Sama("ainoa", am.TehosteenLaukaisu("h", 0, jakso, 1.0), "laukeaa 1 s kohdalla");
+            Oleta.Tosi(am.TehosteenLaukaisu("h", 0, jakso, 1.0) == null, "ei laukea kahdesti samalla hetkellä");
+            Oleta.Tosi(am.TehosteenLaukaisu("h", 0, jakso, 1.9) == null, "ei vielä toista laukaisua (2,0 s)");
+            Oleta.Sama("ainoa", am.TehosteenLaukaisu("h", 0, jakso, 2.0), "toinen laukaisu 2,0 s kohdalla (1,0 + 1,0)");
+        }
+
+        [Testi] static void AanimaisemaTehosteAjastinDeterministinenJaValinValissa()
+        {
+            var jakso = new DioraamaData_TehosteJaksoTestiapuri().Uusi(2, 4, "lintu", "tuuli");
+            var am1 = new Aanimaisema();
+            var am2 = new Aanimaisema();
+            var t1 = new List<(double T, string Id)>();
+            var t2 = new List<(double T, string Id)>();
+            for (double t = 0; t <= 30; t += 0.25)
+            {
+                var id1 = am1.TehosteenLaukaisu("keittio", 0, jakso, t);
+                if (id1 != null) t1.Add((t, id1));
+                var id2 = am2.TehosteenLaukaisu("keittio", 0, jakso, t);
+                if (id2 != null) t2.Add((t, id2));
+            }
+            Oleta.Tosi(t1.Count >= 3, $"ainakin 3 laukaisua 30 s:ssa 2..4 s väleillä (saatiin {t1.Count})");
+            Oleta.Sama(t1.Count, t2.Count, "eri Aanimaisema-instanssi, sama tila+jakso: sama laukaisumäärä");
+            for (int i = 0; i < t1.Count; i++)
+            {
+                Oleta.Sama(t1[i].T, t2[i].T, $"laukaisu {i}: samaan aikaan molemmissa instansseissa");
+                Oleta.Sama(t1[i].Id, t2[i].Id, $"laukaisu {i}: sama äänen id molemmissa instansseissa");
+                Oleta.Tosi(jakso.AaniIdt.Contains(t1[i].Id), $"laukaisu {i}: id ({t1[i].Id}) on jakson AaniIdt-listalta");
+            }
+            for (int i = 1; i < t1.Count; i++)
+            {
+                double vali = t1[i].T - t1[i - 1].T;
+                // ±0,26 s testin 0,25 s:n näytteistysaskeleen pyöristysvaraa varten.
+                Oleta.Tosi(vali >= 2.0 - 0.26 && vali <= 4.0 + 0.26, $"väli {vali:F2} s on lähellä 2..4 s ikkunaa");
+            }
+        }
+
+        /// <summary>Pieni apuri TehosteJakson kokoamiseen testeissä (DioraamaData.TehosteJakso-kentät ovat julkisia,
+        /// mutta oliolauseke pysyy siistimpänä nimettynä metodina toistuvassa käytössä).</summary>
+        sealed class DioraamaData_TehosteJaksoTestiapuri
+        {
+            public TehosteJakso Uusi(double valiMin, double valiMax, params string[] aaniIdt)
+            {
+                var j = new TehosteJakso { ValiMin = valiMin, ValiMax = valiMax };
+                j.AaniIdt.AddRange(aaniIdt);
+                return j;
             }
         }
     }
