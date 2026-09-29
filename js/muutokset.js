@@ -13,6 +13,16 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2390, teksti: 'Astronautin kamera: Pulun taulu vaihtaa näkymää (#3590)' },
+  { v: 2389, teksti: 'Linssikatalogi: E11 Poikkileikkaus, linna aukil… (#3584)' },
+  { v: 2388, teksti: 'ISS-kyyti: Cupola 3 (#3587)' },
+  { v: 2387, teksti: 'ISS-realismi webiin natiivin arvoin (#3586)' },
+  { v: 2386, teksti: 'ISS-realismi 4a: Blue Marble NG -kuukausipinta… (#3551)' },
+  { v: 2385, teksti: 'Maalehti: Historia-aihe SRB/ALB/MKD/MNE/MDA/BLR… (#3556)' },
+  { v: 2384, teksti: 'BIH: pitkä-luonnehdinta + pulu kaikille 18 maak… (#3549)' },
+  { v: 2383, teksti: 'Raamattu: pienennys, tehtäväkohtainen effort, s… (#3527)' },
+  { v: 2382, teksti: 'Pulu: [softly] ja [whispers] pois, yksi tunneta… (#3585)' },
+  { v: 2381, teksti: 'Poltto: nice 15 oletuksena, kevyt tila taskpoli… (#3550)' },
   { v: 2380, teksti: 'Ihmeet-tilaus kytketty peliin: 14 kohdetta (#3548)' },
   { v: 2379, teksti: 'Pulu: koko repertuaari eleven_v4:llä tasoitettu… (#3581)' },
   { v: 2378, teksti: 'ISS:n kyyti Astronautin kameraan (#3576)' },

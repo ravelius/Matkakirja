@@ -7672,6 +7672,17 @@ export function polloLinssikupla(osat, asetukset = {}) {
 }
 
 /**
+ * PULUN PANEELIVAHTI AJETAAN NYT (js/pulu-paneelin-ylla.js paivita).
+ * Vahti lepää kartan liikkeen ajan, ja Astronautin kamerassa pallo liikkuu
+ * lähes aina (aseman seuranta), joten poistuneen kuplan alta väistynyt Pulu
+ * voisi jäädä piiloon pitkäksi aikaa. Pulun taulu (js/linssit/pulu-taulu.js)
+ * kutsuu tätä, kun se on vienyt vanhat kuplat pois.
+ */
+export function polloPaneelivahtiNyt() {
+  try { nykyinenPollo?.paneelinYlla?.paivita?.(); } catch { /* ei vahtia */ }
+}
+
+/**
  * OHJEKUPLAT pois (js/ui.js peruValintavihje). Livian puheenvuorot
  * jäävät pinoon — ne eivät ole ohjeita (ks. piilotaVihje).
  */

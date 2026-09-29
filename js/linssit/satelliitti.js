@@ -162,6 +162,7 @@ import { luoMinipulu } from '../minipulu.js';
 import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
 import { PULUN_VAARA_KOHDE, aloitaPulunTervetulo } from './pulu-tervetulo.js';
+import { luoAstroTaulu } from './pulu-taulu.js';
 
 /*
  * VARTIJAN KELLOT (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34).
@@ -1237,6 +1238,11 @@ function avaaHavaintokortti({
     onSuljettu?.();
   }
   katselu.satelliittiSulje = sulje;
+  /*
+   * PULUN TAULU (js/linssit/pulu-taulu.js): minipulun napautus avaa nyt
+   * taulun, ja taulun "Kysy Pululta" avaa tämän chatin tällä kahvalla.
+   */
+  katselu.satelliittiChat = (auki = true) => { naytaPulukortti(Boolean(auki)); return true; };
   sulku.addEventListener('click', (e) => { e.stopPropagation(); sulje(); });
   document.addEventListener('keydown', nappain);
 
@@ -1780,6 +1786,23 @@ export function rakennaLinssikehys({ ui, onSulje, doc = document }) {
 }
 
 /**
+ * Kohde, joka on lähimpänä pistettä (lat, lon) isoympyrää pitkin, tai
+ * null. Pulun taulun "Astronauttien kuvat" avaa sen, mitä kamera katsoo.
+ */
+export function lahinKohde(kohteet, lat, lon) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  const r = Math.PI / 180;
+  let paras = null;
+  let parasKos = -2;
+  for (const k of kohteet ?? []) {
+    const kos = Math.sin(lat * r) * Math.sin(k.lat * r)
+      + Math.cos(lat * r) * Math.cos(k.lat * r) * Math.cos((lon - k.lon) * r);
+    if (kos > parasKos) { parasKos = kos; paras = k; }
+  }
+  return paras;
+}
+
+/**
  * Linssi pallolle. `ui` tulee kolmantena js/ui.js:n sytytaLinssistä.
  */
 function avaa(lauta, tila, ui) {
@@ -1937,6 +1960,33 @@ function avaa(lauta, tila, ui) {
       return Boolean(kortti);
     },
     suljeKortti,
+  })) : null;
+
+  /*
+   * PULUN TAULU (js/linssit/pulu-taulu.js, omistaja 28.9.2026): linssin
+   * moodit (Maapallo, ISS:n rinnalla, ISS:n sisälle, Astronauttien kuvat).
+   * Tulee itse tervetulon jälkeen (tai heti, jos tervetulo on kuultu), ja
+   * Pulun napautus avaa sen aina uudelleen. Kuvat avautuvat SAMALLA
+   * avaaKohde-funktiolla kuin pisteen napautus: kohde on se, joka on
+   * lähimpänä kameran katsetta, joten pelaaja saa kuvat siitä, mitä katsoo.
+   */
+  const avaaLahinKohde = () => {
+    const pov = avaruus?.aloitustila?.()?.pov;
+    const lahin = lahinKohde(kohteet, pov?.lat, pov?.lng) ?? kohteet[0];
+    if (!lahin) return false;
+    avaaKohde(lahin);
+    return Boolean(kortti);
+  };
+  const taulu = avaruus ? vaihe('pulun-taulu', () => luoAstroTaulu({
+    ui,
+    avaruus,
+    tervetulo,
+    kuvaAuki: () => Boolean(kortti),
+    suljeKuva: suljeKortti,
+    avaaKuva: avaaLahinKohde,
+    kuviaOn: () => kohteet.length > 0,
+    avaaChat: () => Boolean(kortti?.satelliittiChat?.(true)),
+    suljeChat: () => kortti?.satelliittiChat?.(false),
   })) : null;
   /*
    * PISTEET RUUDULLE ASTI (ks. PISTEIDEN_UUSINTAVALI_MS yllä). Vartija
@@ -2105,6 +2155,8 @@ function avaa(lauta, tila, ui) {
     linssiAani: () => linssiAani,
     /** Pulun tervetulon kahva (null, jos jakso ei alkanut; savuke). */
     tervetulo,
+    /** Pulun taulun kahva (null ilman avaruusnäkymää; savuke). */
+    taulu,
     /** Vartijan mittari savukkeille: puutteen nimi tai null. */
     puute: () => nykyinenPuute(),
     /** Kaatuneet avausvaiheet (vartijat ja savukkeet). */
@@ -2117,7 +2169,8 @@ function avaa(lauta, tila, ui) {
       virheKahva?.pura?.();
       virheKahva = null;
       poistaLinssivirhe();
-      // Pulu vaikenee ENNEN kuvan sulkua ja kameran palautusta.
+      // Taulu ja Pulu vaikenevat ENNEN kuvan sulkua ja kameran palautusta.
+      taulu?.pura?.();
       tervetulo?.pura?.();
       suljeKortti();
       // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
