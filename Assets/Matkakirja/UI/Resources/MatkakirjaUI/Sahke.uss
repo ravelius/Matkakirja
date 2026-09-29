@@ -293,7 +293,9 @@
     border-width: 1px;
     border-color: var(--line);
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.25);
+    /* Rivin tausta muuttujasta (ei kiinteä musta 25 %): Retkikunta on 1.0.55:stä pergamentilla, jossa tumma pohja
+       ja tumma muste eivät erotu (Natiivi-UI 29.9.2026); tummalla paneelilla --rivi-tausta on sama tumma sävy. */
+    background-color: var(--rivi-tausta);
     color: var(--ink-light);
 }
 
