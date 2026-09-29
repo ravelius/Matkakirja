@@ -161,7 +161,7 @@ import { diagNyt, pallodiag } from '../pallodiag.js';
 import { luoMinipulu } from '../minipulu.js';
 import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
-import { PULUN_VAARA_KOHDE, aloitaPulunTervetulo } from './pulu-tervetulo.js';
+import { PULUN_TERVETULO_KAYTOSSA, aloitaPulunTervetulo } from './pulu-tervetulo.js';
 import { luoAstroTaulu } from './pulu-taulu.js';
 
 /*
@@ -1624,12 +1624,12 @@ function avaaHavaintokortti({
     if (!luentaKytkinPaalla()) return;
     /*
      * PULUN TERVETULO VÄISTÄÄ (löydös: Linssiseppä 1 / Päätoimittaja
-     * 29.9.2026, PR #3575): C1 avaa väärän kohteen kuvan tervetulon
-     * OMALLA avaaKohde-kutsulla, ja tämä automaattinen luenta alkaisi
-     * silloin sen päälle. soitaLivianAani ei ala kertojan päälle
-     * (js/liviapuhe.js), joten C2:n Livian ääni jäisi kokonaan soimatta.
-     * Tervetulon aikana vain sen OMA puhe saa kuulua; kuvan avaaminen
-     * pelaajan omasta tahdosta (ei tervetulon aikana) luetaan normaalisti.
+     * 29.9.2026, PR #3575): kuva, joka aukeaa tervetulon ollessa kesken
+     * (myös paljastuksen ja A1:n välissä), ei käynnistä automaattista
+     * luentaa. soitaLivianAani ei ala kertojan päälle (js/liviapuhe.js),
+     * joten Livian ääni jäisi muuten kokonaan soimatta. Tervetulon aikana
+     * vain sen OMA puhe saa kuulua; kuvan avaaminen tervetulon jälkeen (tai
+     * napautuksella, joka ohittaa sen) luetaan normaalisti.
      */
     if (!automaattiluentaSallittu()) return;
     const teksti = `${kohde.nimi}, ${kohde.seutu}. ${h?.teksti ?? kohde.selite ?? ''}`.trim();
@@ -1957,21 +1957,16 @@ function avaa(lauta, tila, ui) {
 
   /*
    * PULUN TERVETULO (js/linssit/pulu-tervetulo.js, käsikirjoitus
-   * 28.9.2026): vain linssin ensimmäisellä avauksella, kun musta verho on
-   * poissa. C1:n räppäisy avaa väärän kohteen valokuvan SAMALLA
-   * avaaKohde-funktiolla kuin pisteen napautus, ja C2 sulkee sen.
+   * 28.9.2026, lyhennetty omistajan palautteella 29.9.2026): vain linssin
+   * ensimmäisellä avauksella, kun musta verho on poissa. Pulu puhuu
+   * Pulun taulun aikana ilman kuplaa, eikä kamera liiku.
    * Ei avaruusnäkymää (tasokartta, kaatunut WebGL) → ei tervetuloa.
+   * OMISTAJA 29.9.2026: Pulun ääni toistaiseksi kokonaan pois
+   * ISS-kohtauksesta (PULUN_TERVETULO_KAYTOSSA = false).
    */
-  const tervetulo = avaruus ? vaihe('pulun-tervetulo', () => aloitaPulunTervetulo({
+  const tervetulo = avaruus && PULUN_TERVETULO_KAYTOSSA ? vaihe('pulun-tervetulo', () => aloitaPulunTervetulo({
     ui,
     avaruus,
-    avaaVaaraKohde: () => {
-      const vaara = kohdeTunnuksella.get(PULUN_VAARA_KOHDE);
-      if (!vaara) return false;
-      avaaKohde(vaara);
-      return Boolean(kortti);
-    },
-    suljeKortti,
   })) : null;
   /*
    * ONKO TERVETULO KESKEN (löydös: Linssiseppä 1 / Päätoimittaja
@@ -1990,8 +1985,8 @@ function avaa(lauta, tila, ui) {
   /*
    * PULUN TAULU (js/linssit/pulu-taulu.js, omistaja 28.9.2026): linssin
    * moodit (Maapallo, ISS:n rinnalla, ISS:n sisälle, Astronauttien kuvat).
-   * Tulee itse tervetulon jälkeen (tai heti, jos tervetulo on kuultu), ja
-   * Pulun napautus avaa sen aina uudelleen. Kuvat avautuvat SAMALLA
+   * Tulee itse heti, kun musta verho on poissa (omistaja 29.9.2026:
+   * myös tervetulon aikana), ja Pulun napautus avaa sen aina uudelleen. Kuvat avautuvat SAMALLA
    * avaaKohde-funktiolla kuin pisteen napautus: kohde on se, joka on
    * lähimpänä kameran katsetta, joten pelaaja saa kuvat siitä, mitä katsoo.
    */

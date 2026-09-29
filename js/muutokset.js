@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2416, teksti: 'ALB: pitkä-luonnehdinta + pulu kaikille 12 maak… (#3632)' },
+  { v: 2415, teksti: 'Astronautin kamera: Pulu hiljaa, taulu heti auki (#3631)' },
+  { v: 2414, teksti: 'Pallo: lähdelaattasuodattimen sarakekierto päät… (#3574)' },
   { v: 2413, teksti: 'Joet: rajajokien ja paketin jokien päällekkäisy… (#3614)' },
   { v: 2412, teksti: 'ISL: pitkä-luonnehdinta + pulu kaikille 9 maaku… (#3560)' },
   { v: 2411, teksti: 'Natiivin muutosloki: 1.0.51 (#3629)' },
