@@ -132,6 +132,7 @@
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui chat aani                              kaiutinkytkin (vastausten luenta) kuin napautus; tila lokiin
+//   ui chat lukija [valikko]                  ylärivin lukija: kaiuttimen napautus tai valikko auki (29.9.2026)
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
 //   ui saapumiskortti [RIVI]                  saapumisen välikortti (oletus ATEENA · PÄIVÄ 1/80, löydös 52)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
@@ -590,6 +591,7 @@ namespace Matkakirja.Natiivi
                 case "chat":
                     if (loput == "ehdota") { ui.Chat.Avaa(); ui.Chat.EhdotaSisaltoa(); return null; }
                     if (loput == "aani") { Kirjaa("ui chat aani: " + (ui.Chat.VaihdaAaniTesti() ? "päällä" : "pois")); return null; }
+                    if (loput == "lukija" || loput == "lukija valikko") { ui.Chat.Avaa(); Kirjaa("ui chat lukija: " + ui.Chat.LukijaTesti(loput == "lukija valikko")); return null; }
                     // Puhekeskustelu (web #3546): saneltu kysymys ilman mikrofonia, tila + viive, mikin napautus.
                     if (loput.StartsWith("puhe ")) { ui.Chat.Kysy(loput.Substring(5), puhe: true); return null; }
                     if (loput == "virta pois" || loput == "virta paalle") { PuluChat.Virkevirta = loput == "virta paalle"; Kirjaa("ui chat virta: " + (PuluChat.Virkevirta ? "virkevirta" : "valmiina")); return null; }
