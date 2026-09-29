@@ -582,6 +582,7 @@ export function teePaikkamerkkiAtlas(henkilo, id) {
 
 export {
   RUUTU, SARAKKEET, RIVIT, LEVEYS, KORKEUS, PIVOT, PIVOT_Y,
+  kirjoitaRgbaPng, // erä 2: liekki-paikkamerkit.mjs käyttää samaa PNG-kirjoitinta
 };
 
 /* ==================== CLI ==================== */

@@ -18,6 +18,10 @@ const RAD = Math.PI / 180;
  * (r, ylös, f) on vasenkätinen, joten kiertosuunta vaihdetaan (b ↔ c) ja normaalit kuvataan samalla
  * lineaarikuvauksella (ortogonaalinen, joten normaalimatriisi = sama). Rooli → pinta: instanssi.pinnat[rooli] ??
  * OLETUSPINNAT[resepti][rooli] ?? rooli.
+ *
+ * uv_m (erä 2, speksin kohta "UV"): kopioidaan SELLAISENAAN (vain kärkijärjestys vaihtuu b ↔ c:n
+ * mukana, kuten n:llä) — kaarenpituus ja korkeus (a, b) eivät muutu jäykässä siirrossa/kierrossa,
+ * joten resepti (torni, kartiokatto) on jo laskenut oikeat arvot paikallisessa kehyksessä.
  */
 export function sijoita(instanssi) {
   const resepti = RESEPTIT[instanssi.resepti];
@@ -33,6 +37,7 @@ export function sijoita(instanssi) {
   for (const k of resepti(instanssi)) {
     const t = { p: [kuvaa(k.p[0]), kuvaa(k.p[2]), kuvaa(k.p[1])], rooli: k.rooli };
     if (k.n) t.n = [suunta(k.n[0]), suunta(k.n[2]), suunta(k.n[1])];
+    if (k.uv_m) t.uv_m = [k.uv_m[0], k.uv_m[2], k.uv_m[1]];
     t.pinta = ohitus[k.rooli] ?? oletus[k.rooli] ?? k.rooli;
     tulos.push(t);
   }

@@ -1,5 +1,7 @@
 // OLAVINLINNA — dioraaman lähdedata, erä 1 (karkea linnan massa + yksityiskohtainen
-// keittiö). Speksi: docs/raportit/dioraama-rajapinnat-20260929.md (kohdat 0, 1, 2).
+// keittiö). Speksi: docs/raportit/dioraama-rajapinnat-20260929.md (kohdat 0, 1, 2);
+// erä 2:n äänet (repliikit, reaktiot, taulujen kohdat, tilojen ambienssit ja
+// tehosteet): docs/raportit/dioraama-rajapinnat-era2-20260929.md kohta 2 "AANET".
 // Konsepti: Codexin luonnos (sommittelu ja tyyli), todelliset mittasuhteet viitteenä
 // proto-3d:n Olavinlinna.cs:n alkukommentista (linna 168 × 98 m, kolme pyöreää tornia
 // pohjoislaidalla rivissä) — tämä dioraama tiivistää mittasuhteet konseptin mukaan.
@@ -17,9 +19,9 @@ const TAULU_LINNA = {
   otsikko: 'Olavinlinna',
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Olavinlinna rakennettiin 1475 kalliosaarelle vartioimaan valtakunnan itärajaa.', lahde: 'Kansallismuseo: Olavinlinnan historiaa' },
-    { teksti: 'Keskiaikaista kivilinnaa on korjattu ja laajennettu vuosisatojen kuluessa moneen otteeseen.', lahde: 'Kansallismuseo: Olavinlinnan historiaa' },
-    { teksti: 'Nykyään linnassa on museo, ja kesäisin sen pihat toimivat oopperajuhlien näyttämönä.', lahde: 'Kansallismuseo: Olavinlinnan historiaa' },
+    { teksti: 'Olavinlinna rakennettiin 1475 kalliosaarelle vartioimaan valtakunnan itärajaa.', lahde: 'Kansallismuseo: Olavinlinnan historiaa', aani: 'linna-kohta-0' },
+    { teksti: 'Keskiaikaista kivilinnaa on korjattu ja laajennettu vuosisatojen kuluessa moneen otteeseen.', lahde: 'Kansallismuseo: Olavinlinnan historiaa', aani: 'linna-kohta-1' },
+    { teksti: 'Nykyään linnassa on museo, ja kesäisin sen pihat toimivat oopperajuhlien näyttämönä.', lahde: 'Kansallismuseo: Olavinlinnan historiaa', aani: 'linna-kohta-2' },
   ],
 };
 
@@ -28,9 +30,9 @@ const TAULU_KEITTIO = {
   otsikko: 'Linnan keittiö',
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä' },
-    { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä' },
-    { teksti: 'Keittiö ruokki koko linnaväen: vartijat, palvelusväen ja isännän pöytään kutsutut vieraat.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä' },
+    { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-0' },
+    { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-1' },
+    { teksti: 'Keittiö ruokki koko linnaväen: vartijat, palvelusväen ja isännän pöytään kutsutut vieraat.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-2' },
   ],
 };
 
@@ -48,7 +50,13 @@ const TILA_MASSA = {
   rajat: { min: [-58, -10, -48], max: [58, 42, 36] },
   naapurit: ['keittio'],
   hahmot: [],
-  aanet: [],
+  // Massan äänisilmukat: tuuli linnan muureilla + järven laineet rannassa (era2 kohta 2 "AANET").
+  aanet: [{ aani: 'linna-tuuli' }, { aani: 'jarvi-laineet' }],
+  // Satunnaiset kertaäänet (era2 kohta 2 "AANET"): lokit ja kaukaiset kellot, harvakseltaan.
+  tehosteet: [
+    { aanet: ['lokit'], valit_s: [15, 30] },
+    { aanet: ['kellot-kaukaa'], valit_s: [40, 80] },
+  ],
   kasikirjoitus: [],
   palikat: [
     // --- Perusta ---
@@ -129,29 +137,29 @@ const KEITTIO_HAHMOT = [
     id: 'kokki', henkilo: 'kokki-1500', paikka: [13.1, 0, 6.1], suunta: 0, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'kokki-1', teksti: 'Malta mielesi, ei tuo pata omin päin kiehu valmiiksi.', aani: null },
-      { id: 'kokki-2', teksti: 'Isännän pöytään ei kelpaa puuro liian suolaisena eikä liian laihana.', aani: null },
+      { id: 'kokki-1', teksti: 'Malta mielesi, ei tuo pata omin päin kiehu valmiiksi.', aani: 'kokki-1' },
+      { id: 'kokki-2', teksti: 'Isännän pöytään ei kelpaa puuro liian suolaisena eikä liian laihana.', aani: 'kokki-2' },
     ],
-    reaktio: { id: 'pulu-kokki-r1', teksti: 'Kuulitteko? Tässä linnassa padallakin on oma tahto.', aani: null },
+    reaktio: { id: 'pulu-kokki-r1', teksti: 'Kuulitteko? Tässä linnassa padallakin on oma tahto.', aani: 'pulu-kokki-r1' },
   },
   {
     id: 'apulainen', henkilo: 'apulainen-1500', paikka: [10.5, 0, 8.3], suunta: 180, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'apulainen-1', teksti: 'Leipätaikina lepää vielä hetken, ennen kuin se uuniin kelpaa.', aani: null },
-      { id: 'apulainen-2', teksti: 'Jauhosäkki painaa aina enemmän kuin luulisi — eikä se ole minun syytäni.', aani: null },
+      { id: 'apulainen-1', teksti: 'Leipätaikina lepää vielä hetken, ennen kuin se uuniin kelpaa.', aani: 'apulainen-1' },
+      { id: 'apulainen-2', teksti: 'Jauhosäkki painaa aina enemmän kuin luulisi — eikä se ole minun syytäni.', aani: 'apulainen-2' },
     ],
-    reaktio: { id: 'pulu-apulainen-r1', teksti: 'Säkki painaa, leipä palkitsee. Minä lupaan hoitaa murut.', aani: null },
+    reaktio: { id: 'pulu-apulainen-r1', teksti: 'Säkki painaa, leipä palkitsee. Minä lupaan hoitaa murut.', aani: 'pulu-apulainen-r1' },
   },
   {
     id: 'vesipoika', henkilo: 'vesipoika-1500', paikka: [19.5, 0, 9.5], suunta: 304, peilattu: false,
     silmukka: 'kavely', heraa: 2,
     reitti: { pisteet: [[19.5, 0, 9.5], [13.8, 0, 5.6], [19.5, 0, 9.5]], nopeus: 1.0, tauko: 1.5 },
     repliikit: [
-      { id: 'vesipoika-1', teksti: 'Järvestä tänne ja takaisin, jalat tuntevat jo polun ulkoa.', aani: null },
-      { id: 'vesipoika-2', teksti: 'Yksi sanko kokille, toinen padalle — kolmannen taidan juoda itse.', aani: null },
+      { id: 'vesipoika-1', teksti: 'Järvestä tänne ja takaisin, jalat tuntevat jo polun ulkoa.', aani: 'vesipoika-1' },
+      { id: 'vesipoika-2', teksti: 'Yksi sanko kokille, toinen padalle — kolmannen taidan juoda itse.', aani: 'vesipoika-2' },
     ],
-    reaktio: { id: 'pulu-vesipoika-r1', teksti: 'Kymmeniä sankoja päivässä! Vesijohtoa hän ei ehtinyt nähdä.', aani: null },
+    reaktio: { id: 'pulu-vesipoika-r1', teksti: 'Kymmeniä sankoja päivässä! Vesijohtoa hän ei ehtinyt nähdä.', aani: 'pulu-vesipoika-r1' },
   },
 ];
 
@@ -161,9 +169,10 @@ const TILA_KEITTIO = {
   kohdistettava: true,
   rajat: { min: [8, 0, 4], max: [20, 4, 11] },
   naapurit: ['massa'],
-  kamera: { kohde: [14, 1.5, 7.4], atsimuutti: 172, korkeus: 13, etaisyys: 16, fov: 38, aukko: 0.8 },
-  // Pystynäyttö (iPhone ~0,46): vaakakenttä ~21° → kauempaa, jotta tulisija, kokki ja pöytä mahtuvat; sali näkyy yllä.
-  kameraPysty: { kohde: [13.8, 1.4, 7.2], atsimuutti: 174, korkeus: 12, etaisyys: 25, fov: 44, aukko: 0.8 },
+  kamera: { kohde: [14, 1.2, 7.2], atsimuutti: 172, korkeus: 22, etaisyys: 16, fov: 38, aukko: 0.8 },
+  // Kamerat ~22–24° vaakatason yläpuolella (Codexin hahmot on piirretty ~25° kulmasta). Pystynäytössä taulu
+  // peittää alimman 45 %, joten huone rajataan lähelle ja nostetaan näkyvän yläosan keskelle.
+  kameraPysty: { kohde: [13.8, -0.8, 7.0], atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea' },
   taulu: TAULU_KEITTIO,
   valot: [
@@ -171,9 +180,10 @@ const TILA_KEITTIO = {
     { paikka: [10.5, 0.8, 9], sade: 2.5, voima: 0.4 },
   ],
   palikat: [
-    // Lattia ja katto (katto = salin lattia yläpuolella, leikkausreuna näkyy sivu-roolista).
+    // Lattia ja katto (katto = salin lattia yläpuolella, leikkausreuna näkyy sivu-roolista). Katto on
+    // porrastettu taaemmas (z 4–7,2) kuten poikkileikkauskuvituksissa, jotta keittiö näkyy yläviistosta.
     { resepti: 'laatta', paikka: [14, 0, 7.5], suunta: 0, leveys: 12, syvyys: 7, paksuus: 0.3 },
-    { resepti: 'laatta', paikka: [14, 4, 7.5], suunta: 0, leveys: 12, syvyys: 7, paksuus: 0.4 },
+    { resepti: 'laatta', paikka: [14, 4, 5.6], suunta: 0, leveys: 12, syvyys: 3.2, paksuus: 0.4 },
     // Takaseinä (pohjoinen, z 4) ampumarakoineen.
     {
       resepti: 'seina', paikka: [14, 0, 4], suunta: 0, pituus: 12, korkeus: 4, paksuus: 0.6,
@@ -215,7 +225,25 @@ const TILA_KEITTIO = {
     { resepti: 'hylly', paikka: [8.5, 0, 9.5], suunta: 90, leveys: 3, korkeus: 2.0, syvyys: 0.4, hyllyt: 3 },
   ],
   hahmot: KEITTIO_HAHMOT,
-  aanet: [],
+  // Keittiön äänisilmukat: ambienssi + tulisija + pata + vaivaaminen, kaikki päällekkäin (era2 kohta 2 "AANET").
+  aanet: [
+    { aani: 'keittio-ambienssi' },
+    { aani: 'tulisija-ratina' },
+    { aani: 'pata-poreilu' },
+    { aani: 'vaivaaminen' },
+  ],
+  // Satunnaiset kertaäänet (era2 kohta 2 "AANET"): pilkkominen tiheämmin, askeleet/ovi harvemmin.
+  tehosteet: [
+    { aanet: ['pilkkominen-1', 'pilkkominen-2', 'pilkkominen-3', 'pilkkominen-4'], valit_s: [4, 9] },
+    { aanet: ['askel-puu', 'askel-kivi', 'vesisanko', 'ovi-puu'], valit_s: [12, 25] },
+  ],
+  // Tulisijan liekki hiilloksen päällä (erä 2, dioraama-rajapinnat-era2 kohta 2 "LIEKIT").
+  // Hiilloskansi on tulisijan korkeudella, keskellä palikkaa (reseptit-kalusteet.mjs:n
+  // tulisija-resepti: hiillos-laatikko u,w-keskitetty riippumatta suunnasta) — paikka =
+  // palikan paikka [14, 0, 4.9] + korkeus 0.9 pystyyn = [14, 0.9, 4.9].
+  liekit: [
+    { liekki: 'tulisija', paikka: [14, 0.9, 4.9], koko: 1, vaihe: 0 },
+  ],
   kasikirjoitus: [
     { tee: 'pulu-lenna' },
     { tee: 'taulu' },
