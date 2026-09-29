@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.49 (202609291132)",
+   "paiva": "2026-09-29",
+   "teksti": "Uusi yläpalkki: pilleriä napauttamalla avautuu valikko."
+  },
+  {
    "versio": "1.0.48 (202609291001)",
    "paiva": "2026-09-29",
    "teksti": "Uusi avaruuskävely: astu ISS:n ulkopuolelle Pulun kanssa ja ota kuva maapallosta. Pulu toivottaa tervetulleeksi ensimmäisellä ISS-kyydillä ja kuuluu Kertoja-asetuksen mukaan. Kartuscha avautuu ja sulkeutuu pehmeästi."
