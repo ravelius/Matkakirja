@@ -9095,3 +9095,7 @@ Natiiviseppä 29.9. klo 07.3x: BUILD 42 = proto master c7c5b8e7 (käännös 44fa
 ## OMISTAJA: MAAKUNTALAPPU YLEMMÄS AVAUSNAPIN PÄÄLLE + PIENI X (29.9.2026 klo 07.34)
 
 Omistaja 29.9. klo 07.4x (iPhone-kaappaus docs/raportit/kaappaukset/omistaja-20260929/maakuntalappu-paikka.jpg: Länsi-Makedonia, Kastorian luonnehdinta + Lue lisää) sanatarkasti: "Tuo maakunta lappu saisi olla ylempänä ja peittää sen avanneen painikkeet. Lisää pieni x sen oik yläkulmaan sulkemista varten". → Natiivi-UI (natiivi, kärkeen ennen luennan alkukatkoa): maakuntatilan lappu nostetaan ylemmäs niin, että se peittää sen avanneen painikkeen (oikean yläkulman listanappi), ja lapun oikeaan yläkulmaan pieni sulkeva x (osuma-ala ≥ 44 pt, ei koristeita); Siirtoseppä sama webiin pariteetiksi.
+
+## OMISTAJA: MAAKUNTAKORTIN KOKO EI SAA MUUTTUA KYSYMYSTÄ AVATESSA (29.9.2026 klo 07.36)
+
+Omistaja 29.9. klo 07.4x (iPhone-kaappaukset docs/raportit/kaappaukset/omistaja-20260929/maakuntakortti-kiinni.jpg ja -kysymys-auki.jpg: Keski-Kreikka, kortti kasvaa ylöspäin ja pitenee, kun 'Miksi Khalkiksen salmessa virta vaihtaa suuntaa?' avataan) sanatarkasti: "Ikkunan koko ei saa muuttua kun noita klikkaa auki". → Natiivi-UI (natiivi) + Siirtoseppä (web): maakuntakortin koko ja paikka pysyvät kiinteinä, kun kysymysrivejä avataan; vastaus avautuu kortin sisällä, joka vierittyy (avattu vastaus vieritetään näkyviin). Samaan erään maakuntalapun paikka + x (loki 07.34).
