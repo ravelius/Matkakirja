@@ -60,6 +60,8 @@ namespace Matkakirja.Natiivi
             return DioraamaSovitin.Linssi != null ? DioraamaSovitin.Linssi.RajaaPelaajanAsento(perus, pelaajan) : pelaajan;
         }
 
+        float aloitusAika;
+
         public void NollaaPoikkeama() { kokonaisDa = 0; kokonaisDk = 0; kokonaisZoom = 1; kaksiKaynnissa = false; }
 
         public void Paivita(Rakennus rakennus, double t)
@@ -73,6 +75,13 @@ namespace Matkakirja.Natiivi
             if (n == 0)
             {
                 if (edellisetSormet == 1 && !tamaEleEstetty && liikeSitenAlusta < NapautusKynnysPx) Napauta(rakennus, aloitusKohta, t);
+                // Elävä linna (käsikirjoitus kohta 3): nopea pyyhkäisy alas tilassa → takaisin yleisnäkymään.
+                else if (edellisetSormet == 1 && !tamaEleEstetty && rakennus?.Saapuminen != null && DioraamaSovitin.ViimeisinNakyma?.KohdeTila != null)
+                {
+                    Vector2 d = edellinenYhdenSormenKohta - aloitusKohta;
+                    if (-d.y > Screen.height * 0.12f && Mathf.Abs(d.x) < -d.y * 0.6f && Time.unscaledTime - aloitusAika < 0.45f)
+                        sovitin.Yleisnakymaan(t);
+                }
                 edellisetSormet = 0;
                 kaksiKaynnissa = false;
                 return;
@@ -81,6 +90,7 @@ namespace Matkakirja.Natiivi
             if (edellisetSormet == 0 && n >= 1)
             {
                 aloitusKohta = edellinenYhdenSormenKohta = sormet[0].screenPosition;
+                aloitusAika = Time.unscaledTime;
                 liikeSitenAlusta = 0f;
                 tamaEleEstetty = DioraamaSovitin.PeittaaRuutu != null && DioraamaSovitin.PeittaaRuutu(aloitusKohta);
             }

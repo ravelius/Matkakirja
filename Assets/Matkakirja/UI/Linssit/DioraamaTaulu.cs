@@ -29,7 +29,7 @@ namespace Matkakirja.Natiivi
         readonly List<(Label Lappu, Rect Rect)> sijoitukset = new List<(Label, Rect)>();
 
         bool puluPiilotettu;
-        readonly Button kuoriNappi;
+        readonly Button kuoriNappi, paluuNappi;
 
         public DioraamaTaulu(UiKerros kerros)
         {
@@ -137,6 +137,18 @@ namespace Matkakirja.Natiivi
                 if (l != null) l.text = DioraamaUlkokuori.ValintaTeksti(); else if (kuoriNappi != null) kuoriNappi.text = DioraamaUlkokuori.ValintaTeksti();
             };
 
+            // Elävä linna (käsikirjoitus kohta 3): ‹-nappi vasempaan yläkulmaan tilassa → takaisin yleisnäkymään.
+            paluuNappi = Rakenne.Nappi("‹", "mk-dioraama__paluu", DioraamaSovitin.PyydaPaluu, juuri);
+            paluuNappi.style.position = Position.Absolute;
+            paluuNappi.style.left = 14; paluuNappi.style.top = 58;
+            paluuNappi.style.width = 44; paluuNappi.style.height = 44;
+            paluuNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.9f);
+            paluuNappi.style.borderTopLeftRadius = 22; paluuNappi.style.borderTopRightRadius = 22;
+            paluuNappi.style.borderBottomLeftRadius = 22; paluuNappi.style.borderBottomRightRadius = 22;
+            var paluuTeksti = paluuNappi.Q<Label>();
+            if (paluuTeksti != null) { paluuTeksti.style.fontSize = 24; paluuTeksti.style.color = Teksti; paluuTeksti.style.unityTextAlign = TextAnchor.MiddleCenter; }
+            paluuNappi.style.display = DisplayStyle.None;
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -178,6 +190,10 @@ namespace Matkakirja.Natiivi
         /// <summary>PalloKierto.UiPeittaa-mallilla: napautus lautaan ei saa myös osua 3D-näkymän AABB-testiin.</summary>
         bool OsuukoPaneeliin(Vector2 ruutu)
         {
+            // ‹-nappi ei saa välittää napautusta dioraamalle (muuten sama napautus voisi kohdistaa tilan uudelleen).
+            if (paluuNappi != null && paluuNappi.resolvedStyle.display != DisplayStyle.None && paluuNappi.panel != null
+                && paluuNappi.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(paluuNappi.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
+                return true;
             if (juuri.style.display == DisplayStyle.None || lauta.resolvedStyle.display == DisplayStyle.None) return false;
             var paneelipiste = RuntimePanelUtils.ScreenToPanel(lauta.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
             return lauta.worldBound.Contains(paneelipiste);
@@ -189,6 +205,8 @@ namespace Matkakirja.Natiivi
             var rakennus = linssi?.Rakennus;
             var kamera = DioraamaSovitin.AktiivinenKamera;
             var nakymaTaiEi = DioraamaSovitin.ViimeisinNakyma;
+            if (paluuNappi != null)
+                paluuNappi.style.display = rakennus?.Saapuminen != null && nakymaTaiEi?.KohdeTila != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (linssi == null || rakennus == null || kamera == null || nakymaTaiEi == null)
             {
                 lauta.style.display = DisplayStyle.None;

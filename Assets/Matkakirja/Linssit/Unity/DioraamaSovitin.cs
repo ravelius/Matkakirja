@@ -171,6 +171,7 @@ namespace Matkakirja.Natiivi
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
             bool pysty = y.Kuvasuhde < 1.0;
+            if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             var nakyma = linssi.NakymaHetkella(t, pysty);
             // Elävä linna: saapumiskaaren eteneminen → soihtujen syttyminen; kaari nähty → seuraavalla kerralla lyhyt.
             if (rakennus.Saapuminen != null)
@@ -235,6 +236,10 @@ namespace Matkakirja.Natiivi
         }
 
         public void Yleisnakymaan(double t) => Kohdista(null, t);
+
+        /// <summary>Elävä linna: UI:n ‹-nappi (DioraamaTaulu) pyytää paluuta yleisnäkymään; toteutetaan seuraavassa Paivitassa.</summary>
+        public static void PyydaPaluu() => paluuPyydetty = true;
+        static bool paluuPyydetty;
 
         /// <summary>Äänen URL (era 2, DioraamaAanet.cs): Rakennus.Aanet[id].Tiedosto on suhteessa RAKENNUKSEN
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
