@@ -354,7 +354,13 @@ namespace Matkakirja.Natiivi
                         }
                         case "pois": Asetukset.AsetaKehittaja(null); return "=kehittäjätila pois";
                         case "tila": return $"=kehittäjätila {(Asetukset.Kehittaja ? "päällä" : "pois")}, pöllön koodi {(Asetukset.PolloKoodi != null ? "on" : "ei")}";
-                        default: return "käyttö: kehittaja koodi|pois|tila";
+                        // Maailmatila ja pelaajan näkymä (omistaja 29.9.2026): kuvapari ja testit ilman päävalikkoa.
+                        case "maailma": Matkakirja.Natiivi.Paavalikko.AsetaMaailma(A(2) != "0"); goto case "nakyma";
+                        case "pelaaja": Matkakirja.Natiivi.Paavalikko.AsetaPelaajanNakyma(A(2) != "0"); goto case "nakyma";
+                        case "nakyma":
+                            return $"=maailmatila {(Matkakirja.Natiivi.Paavalikko.Maailma ? "päällä" : "pois")}, pelaajan näkymä "
+                                + (Matkakirja.Natiivi.Paavalikko.PelaajanNakyma ? "päällä" : "pois");
+                        default: return "käyttö: kehittaja koodi|pois|tila|maailma 0|1|pelaaja 0|1|nakyma";
                     }
                 case "pulu" when A(1) == "realtime":
                 {

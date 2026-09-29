@@ -2157,7 +2157,8 @@ namespace Matkakirja.Natiivi
             PaivitaLento();
             // Maan rajat pois maailmatilassa (Natiivisepän PalloKierto.MaailmaTila, pariteetti D7/D8/D11; setteri ei tee
             // mitään samalla arvolla, sammutus puristaa kameran heti maan rajaan).
-            if (kierto != null) kierto.MaailmaTila = Paavalikko.Maailma;
+            // Pelaajan näkymä (omistaja 29.9.2026): maailmatilassa rajat kuten pelaajalla.
+            if (kierto != null) kierto.MaailmaTila = Paavalikko.MaailmaNakyma;
             PaivitaAutomaattiheitto();
             if (matka != null) { PaivitaSiirtoKohteet(); PaivitaValintavihje(); }
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.

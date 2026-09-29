@@ -291,6 +291,27 @@ namespace Matkakirja.Natiivi
         /// <summary>Kehittäjän maailmanäkymä päällä (säilyy kuten webin kehittajaMaailmaPaalla); vain kehittäjätilassa.</summary>
         public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1;
 
+        /// <summary>
+        /// PELAAJAN NÄKYMÄ (omistaja 29.9.2026 klo 08.5x: "Maailmatilaan voisi tehdä apunapin, joka näyttäisi kartan samalla
+        /// lailla, kuin että maailmatila ei olisi päällä. Ainoastaan kohdekaupungit näkyisivät himmeänä ja pystyisin edelleen
+        /// klikkaamalla siirtymään myös niihin"; web on malli, Siirtoseppä: localStorage matkakirja-kehittaja-pelaajanakyma).
+        /// Päällä: kartta, rajat, zoomi, huntu ja kaupunkirajaus kuten pelaajalla, muut pelin kaupungit himmeinä (40 %,
+        /// ilman nimeä) ja niiden napautus on maailmahyppy. Vain maailmatilassa.
+        /// </summary>
+        public static bool PelaajanNakyma => Maailma && PlayerPrefs.GetInt(PelaajanNakymaAvain, 0) == 1;
+
+        /// <summary>Maailmatilan näkymä (rajat pois, kaikki kaupungit, ei huntua): maailmatila ilman pelaajan näkymää.</summary>
+        public static bool MaailmaNakyma => Maailma && PlayerPrefs.GetInt(PelaajanNakymaAvain, 0) != 1;
+
+        const string PelaajanNakymaAvain = "matkakirja-kehittaja-pelaajanakyma";
+
+        public static void AsetaPelaajanNakyma(bool paalla)
+        {
+            PlayerPrefs.SetInt(PelaajanNakymaAvain, paalla ? 1 : 0);
+            PlayerPrefs.Save();
+            VarmistaMaailma();
+        }
+
         public static void AsetaMaailma(bool paalla)
         {
             PlayerPrefs.SetInt(MaailmaAvain, paalla ? 1 : 0);
@@ -302,8 +323,8 @@ namespace Matkakirja.Natiivi
         public static void VarmistaMaailma()
         {
             var v = UnityEngine.Object.FindAnyObjectByType<Varitaso>();
-            if (v == null || v.huntu == !Maailma) return;
-            v.huntu = !Maailma;
+            if (v == null || v.huntu == !MaailmaNakyma) return;
+            v.huntu = !MaailmaNakyma;
             v.Uudelleen();
         }
 
