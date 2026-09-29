@@ -13,7 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2404, teksti: 'Yläpalkki uudistui: logo, pilleri, linssit ja aarteet' },
+  { v: 2406, teksti: 'Pariteetti web: saapumiskuva ilman kehystä, yks… (#3622)' },
+  { v: 2405, teksti: 'Korjaa puuttuva paivitaPelaajanakymaNappi-tuonti (#3623)' },
+  { v: 2404, teksti: 'Dioraama erä 2b: vapaa 3D-keittiö – valot, Code… (#3621)' },
   { v: 2403, teksti: 'Avaus ja sulku animoiden: pelin dialogit (#3616)' },
   { v: 2402, teksti: 'Maakuntakortti: kiinteä koko ja avaus/sulku ani… (#3610)' },
   { v: 2401, teksti: 'ISS-tervetulo: kuvan selite ei vaienna Pulun C2… (#3609)' },

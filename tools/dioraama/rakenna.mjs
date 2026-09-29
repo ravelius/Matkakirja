@@ -11,11 +11,12 @@
  * PUTKI per tila (speksin kohta 3b): palikat.flatMap(sijoita) [reseptit.mjs, B2]
  *   → ryhmittely pinnan mukaan → kärkien yhdistys (hitsaus) → maailmatason UV
  *   normaalin pääakselin mukaan / toisto_m → AO peittäjinä oma tila + naapurit +
- *   'massa' [ao.mjs] → lämpö + pinnan hehku [ao.mjs] → COLOR_0 (R=AO, G=lämpö)
- *   → kirjoitaGlb [glb.mjs, B1].
+ *   'massa' [ao.mjs] → lämpö + pinnan hehku [ao.mjs] → COLOR_0 (R=AO, G=lämpö,
+ *   B=osan satunnaisluku, era2b kohta 1) → kirjoitaGlb [glb.mjs, B1].
  *
  * Tuotokset (kohta 3 + era2 kohdat 1–2, media.mjs): tilat/<tila>.glb, rakennus.json
- * (lähdedata + glb-kentät + käytetyt pinnat/henkilot/liekit/aanet), pinnat/<id>.jpg
+ * (lähdedata + glb-kentät + käytetyt pinnat/henkilot/liekit/aanet + liikkeet [era2b kohta 4,
+ * vain jos ≥1 3D-hahmo]), pinnat/<id>.jpg
  * (kuvallisille pinnoille), hahmot/<id>.png (maalattu tai paikkamerkki),
  * liekit/<id>.png (maalattu tai paikkamerkki), aanet/v<versio>/<id>.mp3 (vain --aanet,
  * versio AANET-pankista — natiivin URL-välimuisti),
@@ -33,8 +34,10 @@ import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
 import { performance } from 'node:perf_hooks';
 
-import { kirjoitaGlb } from './glb.mjs';
+import { kirjoitaGlb, kirjoitaMonisolmuGlb } from './glb.mjs';
+import { teeHahmo3d } from './hahmot3d.mjs';
 import { sijoita } from './reseptit.mjs';
+import { mulberry32 } from './reseptit-apu.mjs';
 import { luoBvh, leivoAO, lampo } from './ao.mjs';
 import {
   OLETUS_ASSETS_JUURI, kopioiPinnanKuva, teeHenkilonAtlas, teeLiekinAtlas, kopioiAanet,
@@ -43,10 +46,15 @@ import { PINNAT } from '../../js/dioraama/pankit/pinnat.js';
 import { HENKILOT } from '../../js/dioraama/pankit/henkilot.js';
 import { LIEKIT } from '../../js/dioraama/pankit/liekit.js';
 import { AANET } from '../../js/dioraama/pankit/aanet.js';
+import { LIIKKEET } from '../../js/dioraama/pankit/liikkeet.js';
 
 const AO_MAX_M = 3; // speksin kohta 3: AO enintään 3 m kantama
 const HITSAUS_PAIKKA = 1e-4; // kärkien yhdistys: paikkatoleranssi (m)
 const HITSAUS_NORMAALI = 1e-3; // kärkien yhdistys: normaalitoleranssi
+// COLOR_0.B (era2b kohta 1): kiinteä siemen, jotta sama `osa`-merkkijono antaa AINA saman
+// satunnaisluvun riippumatta ajojärjestyksestä tai muista osista (osanSatunnaisluku on puhdas
+// funktio siitä — ks. alla).
+const OSAN_B_SIEMEN = 0x5eed0b17;
 
 /* ==================== Pieni vektorimatematiikka (maailmakoordinaatit) ==================== */
 
@@ -64,6 +72,26 @@ function laskeTasonNormaali(p0, p1, p2) {
   const nz = e1x * e2y - e1y * e2x;
   const l = Math.hypot(nx, ny, nz) || 1;
   return [nx / l, ny / l, nz / l];
+}
+
+/** Merkkijonon hajautus 32-bittiseksi kokonaisluvuksi (FNV-1a, deterministinen). */
+function hajautaMerkkijono(s) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
+/**
+ * Osan (koko palikka, tai reseptin oma pienempi osa — esim. yksittäinen lattialaatta, ks.
+ * reseptit-lattiat.mjs) deterministinen satunnaisluku 0…1 COLOR_0.B:hen (era2b kohta 1): sama
+ * `osa`-merkkijono → sama luku aina, ajojärjestyksestä ja muista osista riippumatta (puhdas
+ * funktio: mulberry32 alustettuna osan hajautuksella XOR kiinteä siemen).
+ */
+function osanSatunnaisluku(osa) {
+  return mulberry32((hajautaMerkkijono(osa) ^ OSAN_B_SIEMEN) >>> 0)();
 }
 
 /**
@@ -128,7 +156,7 @@ function ryhmitteleJaHitsaa(rawKolmiot) {
     let ryhma = ryhmat.get(k.pinta);
     if (!ryhma) {
       ryhma = {
-        positions: [], normals: [], uvs: [], indices: [], vertexMap: new Map(),
+        positions: [], normals: [], uvs: [], osaTunnisteet: [], indices: [], vertexMap: new Map(),
       };
       ryhmat.set(k.pinta, ryhma);
     }
@@ -155,6 +183,7 @@ function ryhmitteleJaHitsaa(rawKolmiot) {
         ryhma.normals.push(n[0], n[1], n[2]);
         const uv = laskeUv(p, n, pintaTieto.toisto_m, uvM);
         ryhma.uvs.push(uv[0], uv[1]);
+        ryhma.osaTunnisteet.push(k.osa ?? 'osa'); // COLOR_0.B (era2b kohta 1): ks. osanSatunnaisluku
         ryhma.vertexMap.set(avain, vi);
       }
       idx3[v] = vi;
@@ -259,6 +288,7 @@ export async function rakennaData(rakennus, {
   const kansio = join(ulos, rakennus.id);
   mkdirSync(join(kansio, 'tilat'), { recursive: true });
   mkdirSync(join(kansio, 'hahmot'), { recursive: true });
+  mkdirSync(join(kansio, 'hahmot3d'), { recursive: true }); // era2b kohta 4: 3D-pienoisfiguurit
 
   // VAIHE A: jokaisen tilan raaka kolmiosoppa (sijoita, EI ryhmittelyä/hitsausta).
   // Tarvitaan KAIKILTA tiloilta etukäteen, koska AO:n peittäjät (kohta 3b: "oma
@@ -266,13 +296,33 @@ export async function rakennaData(rakennus, {
   // vielä olisi käsitelty.
   const rawPerTila = new Map(); // id -> Kolmio[]
   const flatPerTila = new Map(); // id -> Float32Array (samat kolmiot, litteänä BVH:ta varten)
+  const valotPerTila = new Map(); // id -> rekvisiitan valot (era2b kohta 3: kynttilänjalka/öljylamppu)
   for (const tila of rakennus.tilat) {
     // Tihennys: kärkikohtainen AO ja lämpö tarvitsevat kärkiä myös isojen pintojen keskelle (12 × 7 m:n lattiassa
     // oli vain nurkat, eikä tulisijan hehku näkynyt). Kohdistettava tila 0,5 m, massa 2 m, kallio 4 m, vesi ei lainkaan.
-    const raw = tila.palikat.flatMap((palikka) => tihenna(sijoita(palikka), tihennysraja(palikka, tila)));
+    const valotTassaTilassa = [];
+    const raw = tila.palikat.flatMap((palikka, i) => {
+      const sijoitettu = sijoita(palikka);
+      // Rekvisiitan valot (era2b kohta 3): .valo ei ole Kolmio-alkio, joten se pitää ottaa talteen
+      // TÄSSÄ — tihenna() rakentaa uuden taulukon ja flatMap litistää, molemmat pudottaisivat
+      // ei-indeksoidun ominaisuuden. lepatus resepti-nimen mukaan (koordinaattorin ohje: kynttilä
+      // 0,2, lamppu 0,1).
+      if (sijoitettu.valo) {
+        const lepatus = palikka.resepti === 'kynttilanjalka' ? 0.2 : 0.1;
+        valotTassaTilassa.push({ ...sijoitettu.valo, lahde: 'rekvisiitta', lepatus });
+      }
+      const kolmiot = tihenna(sijoitettu, tihennysraja(palikka, tila));
+      // COLOR_0.B (era2b kohta 1): oletus `osa` = koko palikka kerrallaan, JOS resepti ei ole itse
+      // merkinnyt kärkiä pienemmillä osilla (esim. lattioiden yksittäiset laatat/lankut, ks.
+      // reseptit-lattiat.mjs) — sijoita() on jo kopioinut sellaisen k.osa:ksi jos resepti antoi sen.
+      const osaOletus = `${tila.id}#${i}`;
+      for (const k of kolmiot) if (k.osa === undefined) k.osa = osaOletus;
+      return kolmiot;
+    });
     if (raw.length === 0) throw new Error(`rakenna: tilalla '${tila.id}' ei ole yhtään kolmiota (tyhjä palikat?)`);
     rawPerTila.set(tila.id, raw);
     flatPerTila.set(tila.id, litistaKolmiot(raw));
+    valotPerTila.set(tila.id, valotTassaTilassa);
   }
   const tilaIdt = new Set(rakennus.tilat.map((t) => t.id));
 
@@ -299,6 +349,13 @@ export async function rakennaData(rakennus, {
 
     const aoAlku = performance.now();
     const bvh = luoBvh(peittajaFlat);
+    // Lämmön valot: tilan omat (esim. tulisija) + rekvisiitan kynttilät/lamput (era2b kohta 3) —
+    // rekvisiitan valot leivotaan lämpöön SAMALLA kaavalla kuin tilan muutkaan valot (ks. yllä).
+    // tyyppi 'keila' (era2b, ikkunan aurinko, omistajan valo-päätös 29.9.) OHITETAAN tästä: auringonvalo
+    // ei ole lämpöä, vain reaaliaikainen valo natiivissa/esikatselussa. Suodatus ei mutatoi `tila.valot`-
+    // taulukkoa (spread + filter palauttavat uudet taulukot) — rakennus.json (t.valot alempana) vie siis
+    // keila-valon SELLAISENAAN, filter vaikuttaa vain tähän paikalliseen lämpölaskuun.
+    const valotLampoon = [...(tila.valot ?? []), ...valotPerTila.get(tila.id)].filter((v) => v.tyyppi !== 'keila');
     const osat = [];
     let kolmioYht = 0; let karkiYht = 0;
     for (const pinta of [...ryhmat.keys()].sort()) {
@@ -309,19 +366,22 @@ export async function rakennaData(rakennus, {
       const uv = Float32Array.from(ryhma.uvs);
       const kolmiot = Uint32Array.from(ryhma.indices);
       const karkia = paikat.length / 3;
+      const osaTunnisteet = ryhma.osaTunnisteet; // rinnakkain paikat/normaalit/uv:n kanssa
 
       const ao = leivoAO(bvh, paikat, normaalit, { saateita, max: AO_MAX_M });
-      const lampoArvot = lampo(paikat, tila.valot ?? []);
+      const lampoArvot = lampo(paikat, valotLampoon);
       const hehku = PINNAT[pinta]?.hehku ?? 0;
 
-      // COLOR_0: R = AO (1 = avoin), G = lämpö + pinnan hehku (rajattu [0,1]), B = 0, A = 255.
+      // COLOR_0: R = AO (1 = avoin), G = lämpö + pinnan hehku (rajattu [0,1]),
+      // B = osan satunnaisluku (era2b kohta 1, ks. osanSatunnaisluku), A = 255.
       const varit = new Uint8Array(karkia * 4);
       for (let i = 0; i < karkia; i++) {
         const aoArvo = Math.min(1, Math.max(0, ao[i]));
         const lampoArvo = Math.min(1, Math.max(0, lampoArvot[i] + hehku));
+        const bArvo = osanSatunnaisluku(osaTunnisteet[i]);
         varit[i * 4] = Math.round(aoArvo * 255);
         varit[i * 4 + 1] = Math.round(lampoArvo * 255);
-        varit[i * 4 + 2] = 0;
+        varit[i * 4 + 2] = Math.round(bArvo * 255);
         varit[i * 4 + 3] = 255;
       }
 
@@ -400,6 +460,24 @@ export async function rakennaData(rakennus, {
     hahmoTulokset.push({ id, polku: tulos.polku, sha256: tulos.sha256, tavuja: tulos.tavuja });
   }
 
+  // 3D-pienoisfiguurit (era2b kohta 4 "3D-HAHMOT", ali-agentti P4a): jokaiselle
+  // käytetylle henkilölle, jolla on malli3d, teeHahmo3d [hahmot3d.mjs] + kirjoita-
+  // MonisolmuGlb [glb.mjs] -> hahmot3d/<id>.glb. Henkilöllä ei ole malli3d:tä EI
+  // ole virhe (ei tapahdu nykyisellä pankilla, mutta rakennuskone ei pakota 3D-mallia).
+  const hahmo3dTulokset = [];
+  const hahmo3dPolku = new Map(); // id -> 'hahmot3d/<id>.glb'
+  for (const id of [...kaytetytHenkilot].sort()) {
+    const henkilo = HENKILOT[id];
+    if (!henkilo?.malli3d) continue;
+    const hahmo3d = teeHahmo3d(id, henkilo);
+    const glbBuffer3d = kirjoitaMonisolmuGlb({ nimi: id, solmut: hahmo3d.solmut });
+    const tiedostoSuhteellinen3d = `hahmot3d/${id}.glb`;
+    writeFileSync(join(kansio, 'hahmot3d', `${id}.glb`), glbBuffer3d);
+    const sha3d = createHash('sha256').update(glbBuffer3d).digest('hex');
+    hahmo3dPolku.set(id, tiedostoSuhteellinen3d);
+    hahmo3dTulokset.push({ id, polku: tiedostoSuhteellinen3d, sha256: sha3d, tavuja: glbBuffer3d.length });
+  }
+
   // Liekkiatlaat: lähde (jos löytyy) tai proseduraalinen paikkamerkki (media.mjs, kohta 2 "LIEKIT").
   // Liekillä on aina jotain piirrettävää, joten atlas syntyy aina käytetylle liekille.
   const liekkiTulokset = [];
@@ -429,13 +507,20 @@ export async function rakennaData(rakennus, {
     t.glb = {
       tiedosto: tulos.tiedosto, sha256: tulos.sha256, kolmiot: tulos.kolmiot, karkia: tulos.karkia,
     };
+    // Rekvisiitan valot (era2b kohta 3) tilan OMAN valot-listan jatkoksi — sama muoto
+    // (paikka, sade, voima, vari), lisänä lahde: 'rekvisiitta' ja lepatus (ks. valotPerTila yllä).
+    t.valot = [...(t.valot ?? []), ...valotPerTila.get(t.id)];
   }
   rakennusJson.pinnat = {};
   for (const id of [...kaytetytPinnat].sort()) {
     // `lahde` ei tulostu — `tekstuuri` korvaa sen vain jos lähde todella kopioitui (era2 kohta 2 "PINNAT").
     const { lahde, ...muu } = PINNAT[id];
     const atlas = pintaAtlas.get(id);
-    rakennusJson.pinnat[id] = atlas ? { ...muu, tekstuuri: atlas.polku } : muu;
+    // tekstuuri_puoli (era 2b, tekstuurimuisti): mukana vain jos kopioiPinnanKuva löysi puolikkaan
+    // (ks. media.mjs) -- natiivi (DioraamaData.Pinta.TekstuuriPuoli) käyttää täyttä, jos kenttä puuttuu.
+    rakennusJson.pinnat[id] = atlas
+      ? { ...muu, tekstuuri: atlas.polku, ...(atlas.puoli ? { tekstuuri_puoli: atlas.puoli.polku } : {}) }
+      : muu;
   }
   rakennusJson.henkilot = {};
   for (const id of [...kaytetytHenkilot].sort()) {
@@ -454,6 +539,11 @@ export async function rakennaData(rakennus, {
       const { maalattu, ...muu } = henkilo;
       rakennusJson.henkilot[id] = atlas ? { ...muu, atlas: atlas.polku } : muu;
     }
+    // era2b kohta 4: malli3d.glb korvaa lähdedatan malli3d-oliossa (sama tapa kuin
+    // atlas edellä) — vain jos hahmot3d/<id>.glb todella syntyi tälle henkilölle.
+    if (hahmo3dPolku.has(id)) {
+      rakennusJson.henkilot[id].malli3d = { ...henkilo.malli3d, glb: hahmo3dPolku.get(id) };
+    }
   }
   rakennusJson.liekit = {};
   for (const id of [...kaytetytLiekit].sort()) {
@@ -469,6 +559,12 @@ export async function rakennaData(rakennus, {
     // v<versio>-alikansio: ks. aanetVersiot yllä (natiivin URL-välimuisti).
     rakennusJson.aanet[id] = { tiedosto: `aanet/v${versio ?? 1}/${id}.mp3`, silmukka, voimakkuus, kesto_s: kestoS };
   }
+  // era2b kohta 4 (3D-hahmot, ali-agentti P4b): liikesilmukkapankki LIIKKEET rakennus.json:iin SELLAISENAAN
+  // (sama muoto kuin js/dioraama/pankit/liikkeet.js — ei rakennuskohtaista suodatusta, koska mikä silmukka
+  // milloin soi, päättää Heratys.HahmonTilan ajonaikaisesti, ei rakennuskone). Vain jos rakennuksella on
+  // vähintään yksi 3D-hahmo (hahmo3dTulokset) — muuten kenttä jää kokonaan pois (DioraamaData.Rakennus.Liikkeet
+  // pysyy tyhjänä, kuten Liekit/Aanet vanhassa muodossa).
+  if (hahmo3dTulokset.length > 0) rakennusJson.liikkeet = LIIKKEET;
 
   const rakennusJsonBuf = Buffer.from(`${JSON.stringify(rakennusJson, null, 2)}\n`, 'utf8');
   const rakennusJsonPolku = 'rakennus.json';
@@ -478,8 +574,14 @@ export async function rakennaData(rakennus, {
   // manifest.json: aakkosjärjestyksessä, EI aikaleimoja — sama syöte = sama tavujono.
   const tiedostot = [
     ...tilaTulokset.map((t) => ({ polku: t.tiedosto, sha256: t.sha256, tavuja: t.tavuja })),
-    ...pintaTulokset.map((p) => ({ polku: p.polku, sha256: p.sha256, tavuja: p.tavuja })),
+    // Puolikas (p.puoli, ks. media.mjs kopioiPinnanKuva) on OMA fyysinen tiedosto pakettikansiossa --
+    // pitää listata manifestissa niin kuin täysikin, tai paketin sisältö ei täsmää manifestiin.
+    ...pintaTulokset.flatMap((p) => [
+      { polku: p.polku, sha256: p.sha256, tavuja: p.tavuja },
+      ...(p.puoli ? [{ polku: p.puoli.polku, sha256: p.puoli.sha256, tavuja: p.puoli.tavuja }] : []),
+    ]),
     ...hahmoTulokset.map((h) => ({ polku: h.polku, sha256: h.sha256, tavuja: h.tavuja })),
+    ...hahmo3dTulokset.map((h) => ({ polku: h.polku, sha256: h.sha256, tavuja: h.tavuja })),
     ...liekkiTulokset.map((l) => ({ polku: l.polku, sha256: l.sha256, tavuja: l.tavuja })),
     ...aanetTulokset.map((a) => ({ polku: a.polku, sha256: a.sha256, tavuja: a.tavuja })),
     { polku: rakennusJsonPolku, sha256: rakennusJsonSha, tavuja: rakennusJsonBuf.length },
@@ -498,6 +600,7 @@ export async function rakennaData(rakennus, {
     tilat: tilaTulokset,
     pinnat: pintaTulokset,
     hahmot: hahmoTulokset,
+    hahmot3d: hahmo3dTulokset,
     liekit: liekkiTulokset,
     aanet: aanetTulokset,
     rakennusJson: { polku: rakennusJsonPolku, sha256: rakennusJsonSha, tavuja: rakennusJsonBuf.length },
@@ -562,6 +665,9 @@ async function main() {
   }
   if (tulos.hahmot.length > 0) {
     console.log(`\n  hahmot: ${tulos.hahmot.length} atlasta (${tulos.hahmot.map((h) => h.id).join(', ')})`);
+  }
+  if (tulos.hahmot3d.length > 0) {
+    console.log(`  hahmot3d: ${tulos.hahmot3d.length} mallia (${tulos.hahmot3d.map((h) => h.id).join(', ')})`);
   }
   if (tulos.liekit.length > 0) {
     console.log(`\n  liekit: ${tulos.liekit.length} atlasta (${tulos.liekit.map((l) => l.id).join(', ')})`);
