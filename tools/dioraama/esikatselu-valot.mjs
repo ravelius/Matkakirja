@@ -15,7 +15,7 @@ export const OLETUS_AURINKO = { atsimuutti: 215, korkeus: 38, vari: '#fff0d8', v
 export const OLETUS_TAIVAS = { yla: '#b9cddd', ala: '#5d4c3c', voima: 0.55 };
 
 const VARI_LAMPPU_OLETUS = '#ffb070';
-const VOIMAKERROIN = 1.4; // era2b kohta 1: "intensiteetti = voima · 1,4" (tonemappauksen kanssa, 29.9.)
+const VOIMAKERROIN = 1.0; // era2b kohta 1: "intensiteetti = voima · 1,0" (natiivin tonemappauksen kanssa, 29.9.)
 const LIEKKI_ETAISYYS_M = 1.0; // valo luetaan "tuleksi" jos alle tämän matkan päässä liekkipaikasta (kohta 3, oletus)
 
 function etaisyys3(a, b) {

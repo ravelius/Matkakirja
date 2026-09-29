@@ -346,8 +346,8 @@ export const RAKENNUS = {
   // Valaistus (erä 2b, speksi dioraama-rajapinnat-era2b-20260929.md kohta 1): iltapäivän aurinko lounaasta,
   // taivaan ambienssi lämpimästä harmaasta taivaansiniseen. Sumu varalla (ei vielä käytössä).
   valaistus: {
-    aurinko: { atsimuutti: 215, korkeus: 38, vari: '#fff0d8', voima: 0.95 },
-    taivas: { yla: '#b9cddd', ala: '#5d4c3c', voima: 0.45 },
+    aurinko: { atsimuutti: 215, korkeus: 38, vari: '#fff0d8', voima: 0.85 },
+    taivas: { yla: '#b9cddd', ala: '#5d4c3c', voima: 0.35 },
     sumu: null,
   },
   yleiskamera: {
