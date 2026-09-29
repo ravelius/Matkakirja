@@ -641,7 +641,10 @@ namespace Matkakirja.Natiivi
         {
             if (paneeli == null) return;
             paneeli.panel?.visualTree.UnregisterCallback<PointerDownEvent>(OhiNapautus, TrickleDown.TrickleDown);
-            paneeli.RemoveFromHierarchy();
+            // Sulku animoiden kuten avaus (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot).
+            var p = paneeli;
+            p.pickingMode = PickingMode.Ignore;
+            Ponnahdus.Sulje(p, () => p.RemoveFromHierarchy());
             paneeli = null;
             valikkoLista = null;
             valikkoRivit.Clear();

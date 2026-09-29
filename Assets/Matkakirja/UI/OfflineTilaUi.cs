@@ -106,7 +106,8 @@ namespace Matkakirja.Natiivi
                 rivi = "Ei verkkoa · " + (n == 0 ? "ei ladattuja maita" : n == 1 ? maat.First(m => m.Tila == OfflineTila.Valmis).Nimi + " laitteella" : n + " maata laitteella");
             }
             bool nakyy = rivi != null && sallittu;
-            pilleri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            // Avaus ja sulku animoiden (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot); vain tilan vaihtuessa.
+            if (nakyy != pilleriKaytossa) { if (nakyy) Ponnahdus.Avaa(pilleri); else Ponnahdus.Sulje(pilleri); }
             pilleriKaytossa = nakyy;
             Vuorottele();
             if (!nakyy) return;
