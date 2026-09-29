@@ -1602,6 +1602,7 @@ namespace Matkakirja.Natiivi
                                  && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double lasi))
                             Matkakirja.Linssit.Iss.IssKuvakulma.LasiZoom = Math.Max(0.5, Math.Min(3.0, lasi));
                         else if (a == "polyt" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Polyt = osat[3] != "0"; // A/B pölyhiukkaset auringonsäteessä
+                        else if (a == "valot1" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.ValotYhdessa = osat[3] != "0"; // A/B Cupola 3:n reunavalot yhtenä kerroksena (30.9. laitemittaus)
                         // IKKUNAN RAJAUS (omistaja 28.9. klo 21.5x ja 22.5x): pyöreä kattoikkuna tiiviisti (oletus), iso sivuikkuna
                         // horisonttiin tai 1.0.40:n koko kupoli; pimeä ohjaamo ja auringonvalo pokissa kahdessa ensimmäisessä.
                         else if (a == "rajaus" && osat.Length > 3)

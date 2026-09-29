@@ -57,6 +57,21 @@ namespace Matkakirja.Natiivi
         readonly Button kutistus;
         /// <summary>Auringon reunavalo pokissa: valon tulosuunta kehyskuvassa oikea, vasen, ylä, ala (PYÖREÄ ja HORISONTTI).</summary>
         readonly VisualElement[] valot = new VisualElement[4];
+        /// <summary>
+        /// CUPOLA 3:N REUNAVALOT YHTENÄ KERROKSENA (Linssiseppä 30.9.2026, ISS-laitemittaus docs/raportit/iss-laitemittaus-20260930.md):
+        /// kolme koko ruudun valokuvaa (2732 × 2048, näkyviä pikseleitä 2–3 %) maksoivat iPad Pro 12.9:llä noin 8 ms kehyksessä
+        /// (Cupola 24,8 ms ↔ reunavalo pois 16,8 ms, seuranta 16,7 ms). Varjostin Linssit/Resources/Varjostimet/CupolaValot
+        /// yhdistää ne painoineen puolikokoiseen RT:hen vain painojen muuttuessa (aurinko liikkuu ~4°/min), ja UI piirtää
+        /// yhden kerroksen. Ulkonäkö sama ("over" samassa järjestyksessä); A/B `astro kyyti valot1 0|1` (0 = kolme kerrosta).
+        /// </summary>
+        public static bool ValotYhdessa = true;
+        VisualElement valoYhdessa;
+        readonly Texture2D[] valoKuvat = new Texture2D[3];
+        readonly float[] valoPiirretty = { -1f, -1f, -1f };
+        RenderTexture valoRt;
+        Material valoMat;
+        static readonly int IdValo0 = Shader.PropertyToID("_Valo0"), IdValo1 = Shader.PropertyToID("_Valo1"),
+            IdValo2 = Shader.PropertyToID("_Valo2"), IdPainot = Shader.PropertyToID("_Painot");
         static readonly string[] ValoNimet = { "oikea", "vasen", "yla", "ala" };
         readonly Label live, tieto, ylilento, liveNappi;
         readonly Button[] napit;
@@ -212,6 +227,13 @@ namespace Matkakirja.Natiivi
                 v.style.display = DisplayStyle.None;
                 valot[i] = v;
             }
+            valoYhdessa = Rakenne.El("mk-isskyyti__valo2 mk-isskyyti__valo2--yhdessa", kupu, PickingMode.Ignore);
+            valoYhdessa.style.position = Position.Absolute;
+            valoYhdessa.style.left = 0; valoYhdessa.style.right = 0; valoYhdessa.style.top = 0; valoYhdessa.style.bottom = 0;
+            valoYhdessa.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover);
+            valoYhdessa.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Center);
+            valoYhdessa.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Center);
+            valoYhdessa.style.display = DisplayStyle.None;
             // Pölyhiukkaset leijuvat kuvun sisällä katsojan ja lasin välissä: kehyksen edessä, käyttöliittymän takana.
             polyt = Rakenne.El("mk-isskyyti__polyt", juuri, PickingMode.Ignore);
             polyt.style.position = Position.Absolute;
@@ -495,9 +517,12 @@ namespace Matkakirja.Natiivi
             kehys2.style.unityBackgroundImageTintColor = cupola3 ? new Color(Cupola3Tummuus, Cupola3Tummuus, Cupola3Tummuus, 1f)
                 : new Color(tumma, tumma, tumma * 1.06f, 1f);
             katto.style.display = horisontti ? DisplayStyle.Flex : DisplayStyle.None;
+            bool yhdessa = cupola3 && ValotYhdessa;
             for (int i = 0; i < valot.Length; i++)
-                valot[i].style.display = rajattu && Reunavalo && (!cupola3 || i < IssKuvakulma.Cupola3ValoNimet.Length)
+                valot[i].style.display = rajattu && Reunavalo && !yhdessa && (!cupola3 || i < IssKuvakulma.Cupola3ValoNimet.Length)
                     ? DisplayStyle.Flex : DisplayStyle.None;
+            valoYhdessa.style.display = rajattu && Reunavalo && yhdessa ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!yhdessa) VapautaValoRt();
             PaivitaKupu();
             PaivitaReunavalo();
             OhjaamonTila = (cupola3 ? Cupola3Sarja + (IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad ? "ipad" : "iphone")
@@ -579,7 +604,18 @@ namespace Matkakirja.Natiivi
                 var v = valot[i];
                 v.style.backgroundImage = StyleKeyword.None;
                 if (i < IssKuvakulma.Cupola3ValoNimet.Length)
-                    Kuvat.Hae(Juuri2 + sarja + IssKuvakulma.Cupola3ValoNimet[i] + "-" + koko + ".png", t => { if (t != null) v.style.backgroundImage = t; });
+                {
+                    int n = i;
+                    valoKuvat[n] = null;
+                    Kuvat.Hae(Juuri2 + sarja + IssKuvakulma.Cupola3ValoNimet[i] + "-" + koko + ".png", t =>
+                    {
+                        if (t == null) return;
+                        v.style.backgroundImage = t;
+                        valoKuvat[n] = t;
+                        valoPiirretty[0] = -1f;   // uusi kuva: yhdistetty kerros piirretään uudelleen
+                        PaivitaReunavalo();
+                    });
+                }
             }
             int odottaa = 2;
             bool kehysOk = false;
@@ -807,6 +843,7 @@ namespace Matkakirja.Natiivi
         void AsetaValot(Translate t, Scale s, StyleRotate r, float siirtoY, float skaala)
         {
             foreach (var v in valot) { v.style.translate = t; v.style.scale = s; v.style.rotate = r; }
+            if (valoYhdessa != null) { valoYhdessa.style.translate = t; valoYhdessa.style.scale = s; valoYhdessa.style.rotate = r; }
             float H = kupu.layout.height;
             if (H > 1f) katto.style.height = Mathf.Max(0f, H * 0.5f + siirtoY + skaala * (kuvanYlareuna - H * 0.5f) + 4f) + KattoLiukuPt;
         }
@@ -836,6 +873,48 @@ namespace Matkakirja.Natiivi
         /// Auringon reunavalo: aurinko kehyskuvassa (CupolaKerros.Valo, x oikealle, y ylös) painottaa neljää suuntaa; suoraan edessä
         /// tai takana (xy pieni) valo on laimeampi. Maan varjossa vain sininen maavalo alhaalta (CupolaKerros.MaavaloNyt).
         /// </summary>
+        /// <summary>Kolme Cupola 3 -reunavaloa painoineen yhteen RT:hen; piirto vain, kun jokin paino muuttuu yli 0,01.</summary>
+        void PiirraValotYhdessa(float voima)
+        {
+            bool muuttui = false;
+            for (int i = 0; i < 3; i++)
+                if (Mathf.Abs(Mathf.Clamp01(voima * cupola3Painot[i]) - valoPiirretty[i]) > 0.01f) muuttui = true;
+            if (!muuttui || valoKuvat[0] == null || valoKuvat[1] == null || valoKuvat[2] == null) return;
+            if (valoMat == null)
+            {
+                var sh = Resources.Load<Shader>("Varjostimet/CupolaValot");
+                if (sh == null) { Debug.LogWarning("MATKAKIRJA linssit: CupolaValot-varjostin puuttuu, kolme kerrosta"); ValotYhdessa = false; PaivitaKehys(); return; }
+                valoMat = new Material(sh) { name = "CupolaValot", hideFlags = HideFlags.HideAndDontSave };
+            }
+            int w = Mathf.Max(64, valoKuvat[0].width / 2), h = Mathf.Max(64, valoKuvat[0].height / 2);
+            if (valoRt == null || valoRt.width != w || valoRt.height != h)
+            {
+                VapautaValoRt();
+                valoRt = new RenderTexture(new RenderTextureDescriptor(w, h, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 0)
+                    { useMipMap = false, autoGenerateMips = false, msaaSamples = 1 })
+                    { name = "CupolaValot", filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, hideFlags = HideFlags.HideAndDontSave };
+                valoRt.Create();
+                valoYhdessa.style.backgroundImage = new StyleBackground(Background.FromRenderTexture(valoRt));
+            }
+            for (int i = 0; i < 3; i++) valoPiirretty[i] = Mathf.Clamp01(voima * cupola3Painot[i]);
+            valoMat.SetTexture(IdValo0, valoKuvat[0]);
+            valoMat.SetTexture(IdValo1, valoKuvat[1]);
+            valoMat.SetTexture(IdValo2, valoKuvat[2]);
+            valoMat.SetVector(IdPainot, new Vector4(valoPiirretty[0], valoPiirretty[1], valoPiirretty[2], 0f));
+            Graphics.Blit(null, valoRt, valoMat);
+            valoYhdessa.MarkDirtyRepaint();
+        }
+
+        void VapautaValoRt()
+        {
+            if (valoRt == null) return;
+            if (valoYhdessa != null) valoYhdessa.style.backgroundImage = StyleKeyword.None;
+            valoRt.Release();
+            UnityEngine.Object.Destroy(valoRt);
+            valoRt = null;
+            valoPiirretty[0] = -1f;
+        }
+
         void PaivitaReunavalo()
         {
             if (!rajattu || !Reunavalo) return;
@@ -850,6 +929,7 @@ namespace Matkakirja.Natiivi
             {
                 // Codexin kerroksissa on jo oma sävy (luode ja lounas lämmin, koillinen viileä), joten vain alfa; ei maavaloa.
                 IssKuvakulma.Cupola3Valot(s.x, s.y, cupola3Painot);
+                if (ValotYhdessa) { PiirraValotYhdessa(voima); return; }
                 for (int i = 0; i < cupola3Painot.Length; i++)
                     valot[i].style.unityBackgroundImageTintColor = new Color(1f, 1f, 1f, Mathf.Clamp01(voima * cupola3Painot[i]));
                 return;
