@@ -44,6 +44,10 @@ namespace Matkakirja.Natiivi
         // Käynnissä oleva löytöanimaatio.
         EsineGo avautuva, nouseva;
         float loytoAlku = -1f;
+        // Löytö: pelin matkamuistokortti (koko ruudun) vasta kun kansi on auki ja sinetti noussut (1.0.59 V11: kortti
+        // peitti arkun heti napautuksesta). Oma etsintäkortti näytetään samalla hetkellä vain, jos pelirajapinta puuttuu
+        // tai vaiheessa on Pulun kommentti.
+        string loytoId, loytoOtsikko, loytoTeksti;
 
         public DioraamaEtsinta(Transform juuri)
         {
@@ -267,15 +271,25 @@ namespace Matkakirja.Natiivi
                 avautuva = Hae(aktiivinenTila.Id, aktiivinen.Kansi);
                 nouseva = Hae(aktiivinenTila.Id, aktiivinen.Esine);
                 loytoAlku = Time.unscaledTime;
-                var tulos = Kutsu("LoydaMatkamuisto", e.Id);
-                if (tulos == null) Debug.LogWarning("MATKAKIRJA etsintä: PeliOhjain.LoydaMatkamuisto puuttuu (pelipuolen haara ei tässä käännöksessä)");
+                loytoId = e.Id;
             }
             // Pulun kommentti (Päätoimittajan teksti datassa) kortin loppuun; paikkamerkkejä ei näytetä.
             if (!string.IsNullOrEmpty(aktiivinen.Pulu) && !aktiivinen.Pulu.StartsWith("PAIKKAMERKKI", StringComparison.Ordinal))
                 teksti = (string.IsNullOrEmpty(teksti) ? "" : teksti + "\n\n") + "Pulu: " + aktiivinen.Pulu;
             Debug.Log($"MATKAKIRJA linssit: poikki: etsintä {e.Id} vaihe {aktiivinen.Vaihe}/{e.Vaiheet.Count} ({aktiivinen.Tyyppi})");
-            Nayta?.Invoke(otsikko, teksti);
+            if (loytoId != null) { loytoOtsikko = otsikko; loytoTeksti = teksti; if (avautuva == null && nouseva == null) PaataLoyto(); }
+            else Nayta?.Invoke(otsikko, teksti);
             return true;
+        }
+
+        void PaataLoyto()
+        {
+            string id = loytoId; loytoId = null;
+            if (id == null) return;
+            var tulos = Kutsu("LoydaMatkamuisto", id);
+            if (tulos == null) Debug.LogWarning("MATKAKIRJA etsintä: PeliOhjain.LoydaMatkamuisto puuttuu (pelipuolen haara ei tässä käännöksessä)");
+            if (tulos == null || (loytoTeksti != null && loytoTeksti.Contains("Pulu: "))) Nayta?.Invoke(loytoOtsikko, loytoTeksti);
+            loytoOtsikko = loytoTeksti = null;
         }
 
         static string Isolla(string s) => string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);
@@ -295,11 +309,12 @@ namespace Matkakirja.Natiivi
                 nouseva.Go.transform.position = Vector3.up * (0.3f * Mathf.SmoothStep(0f, 1f, u));
                 if (u >= 1f) nouseva.Go.SetActive(false);
             }
-            if (kulunut > KansiS * 0.6f + SinettiS + 0.1f) { loytoAlku = -1f; avautuva = null; nouseva = null; }
+            if (kulunut > KansiS * 0.6f + SinettiS + 0.1f) { loytoAlku = -1f; avautuva = null; nouseva = null; PaataLoyto(); }
         }
 
         public void Tyhjenna()
         {
+            PaataLoyto(); // linssi suljettiin kesken arkun avautumisen: löytö kirjataan silti peliin
             foreach (var e in esineet.Values)
             {
                 if (e.Go != null)

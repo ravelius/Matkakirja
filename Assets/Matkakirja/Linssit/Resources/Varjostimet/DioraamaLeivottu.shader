@@ -60,8 +60,8 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             bool Leikkauksessa(float3 p)
             {
                 float3 lo = _DioraamaLeikkausMin.xyz, hi = _DioraamaLeikkausMax.xyz;
-                if (p.y < lo.y || p.y > hi.y) return false;
-                if (all(p.xz >= lo.xz) && all(p.xz <= hi.xz)) return true;
+                if (p.y < lo.y) return false;
+                if (p.y <= hi.y && all(p.xz >= lo.xz) && all(p.xz <= hi.xz)) return true;
                 if (_DioraamaLeikkausMax.w < 0.5) return false;
                 float2 keski = (lo.xz + hi.xz) * 0.5;
                 float2 kohti = _DioraamaLeikkausKamera.xz - keski;
@@ -72,7 +72,12 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 float2 t0 = (lo.xz - p.xz) * inv, t1 = (hi.xz - p.xz) * inv;
                 float2 tmin = min(t0, t1), tmax = max(t0, t1);
                 float sisaan = max(tmin.x, tmin.y), ulos = min(tmax.x, tmax.y);
-                return sisaan <= ulos && ulos >= 0 && sisaan <= L;
+                // Katto nousee kameraa kohti (1.0.59 V10: pystykamera 19° / 28 m oli laatikon yläpuolella, ja kuori
+                // laatikon yläreunan ja kameran välissä peitti tilan). Katto = yläreuna + (kamera.y − yläreuna) · s / Lreuna,
+                // s = p:n matka laatikkoon, Lreuna = kameran matka laatikon reunaan (alakanttiin: L − puolilävistäjä).
+                float Lreuna = max(L - 0.5 * length(hi.xz - lo.xz), 1.0);
+                float katto = hi.y + max(0.0, _DioraamaLeikkausKamera.y - hi.y) * saturate(max(sisaan, 0.0) / Lreuna);
+                return sisaan <= ulos && ulos >= 0 && sisaan <= L && p.y <= katto;
             }
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; };
