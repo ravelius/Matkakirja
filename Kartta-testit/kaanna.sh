@@ -25,6 +25,8 @@ VIITTEET="$VIITTEET -r:$REF/System.Private.CoreLib.dll -r:$REF/netstandard.dll -
 LAHTEET="
 ../Assets/Matkakirja/Peli/MiniJson.cs
 ../Assets/Matkakirja/Kartta/ArkkityyppiKartoitus.cs
+../Assets/Matkakirja/Kartta/DeltaRekisteri.cs
+../Assets/Matkakirja/Kartta/Deltasarja.cs
 ../Assets/Matkakirja/Kartta/ErikoismallinAlla.cs
 ../Assets/Matkakirja/Kartta/EtusivunLento.cs
 ../Assets/Matkakirja/Kartta/Geojson.cs
