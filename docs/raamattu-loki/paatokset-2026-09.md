@@ -9203,3 +9203,7 @@ Omistaja 29.9.2026 klo 17.1x–17.2x: 1) sessioiden nimien perään suluissa mal
 ## OMISTAJA: KOHDEKAUPUNGIT VÄHEMMÄN MUSTIKSI (29.9.2026 klo 17.15)
 
 Omistaja 29.9.2026: kohdekaupunkien pisteet ja nimiteksti vähemmän mustiksi. Linja: sama ruskea sepiamuste kuin rantaviivoissa ja rajoissa, hieman läpikuultava; pelaajan kaupunki ja pelikaupungit ennallaan, luettavuus säilyy. Karttaseppä web, Natiivi-UI natiivi, sama arvo molemmissa.
+
+## OMISTAJA: NOSTOT NÄKYVÄT MAAKUNTATILASSA, NAHKAPALKKI IPADILLE (29.9.2026 klo 17.17)
+
+Omistaja 29.9.2026 klo 17.4x: 1) kun maakuntavalitsin on päällä, kaikki nostot näkyvät edelleen kartalla (Natiivi-UI natiivi, Pelikoodari tarkistaa webin). 2) "Lisää uusi nahkainen yläpalkki myös iPadille." — iPhone-palkki nähty pelissä, iPad-tilaus Codexille 38d00ac51 (posti/fable-codex-ylapalkki-ipad-20260929.md): pysty 2048×260 ja vaaka 2732×260, ei saaren keskitummennusta, logo ja pilleri kulmasäteen + marginaalin päähän reunasta.
