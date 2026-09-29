@@ -26,6 +26,7 @@ namespace Matkakirja.Natiivi
     {
         const float TilaVarjoEtaisyys = 30f, YleisVarjoEtaisyys = 160f;
         const int VarjokarttaResoluutio = 2048;
+        const float SisallaSiirtymaS = 1f; // era2b, omistajan valo-päätös 29.9.: "liukuvat Sisalla-kertoimiin ~1 s:ssa"
         static readonly Color LampunOletusVari = new Color(1f, 0.7647f, 0.4118f); // #ffc26a
         static readonly Color AurinkoOletusVari = new Color(1f, 0.9412f, 0.8471f); // #fff0d8
         static readonly Color TaivasYlaOletus = new Color(0.7255f, 0.8039f, 0.8667f); // #b9cddd
@@ -48,6 +49,13 @@ namespace Matkakirja.Natiivi
         Light aurinkoValo;
         Rakennus viimeisinRakennus;
         string viimeisinKohdeTila = "##ei-asetettu##"; // sentinel: eroaa aina ensimmäisellä Paivita-kutsulla (null == yleisnäkymä on kelvollinen arvo)
+
+        // Sisalla-liukuma (era2b, ikkunan aurinko, omistajan valo-päätös 29.9.): aurinko/taivas himmenevät
+        // Sisalla-kertoimiin kohdistetussa tilassa ja kirkastuvat takaisin yleisnäkymässä, ~1 s liu'ussa.
+        float aurinkoPerusVoima = 1.15f, taivasPerusVoima = 0.55f;
+        Color taivasYlaVari = TaivasYlaOletus, taivasAlaVari = TaivasAlaOletus;
+        double sisallaAurinkoKerroin = 1, sisallaTaivasKerroin = 1;
+        float sisallaTaso; // 0 = yleisnäkymä (ulkona), 1 = kohdistettu tila (sisällä) — MoveTowards Paivita()ssa
 
         UniversalRenderPipelineAsset urpAsetus;
         bool alkuperaisetTallennettu;
@@ -104,6 +112,17 @@ namespace Matkakirja.Natiivi
                 if (urpAsetus != null) urpAsetus.shadowDistance = kohdeTila != null ? TilaVarjoEtaisyys : YleisVarjoEtaisyys;
             }
 
+            if (viimeisinRakennus != null)
+            {
+                // Sisalla-liukuma: MoveTowards ~1 s:ssa kohti tavoitetta (0 = yleisnäkymä, 1 = kohdistettu
+                // tila) — sama kaava kuin muualla natiivissa (Avaruus.cs, ElavatElementit.cs).
+                float tavoite = kohdeTila != null ? 1f : 0f;
+                sisallaTaso = Mathf.MoveTowards(sisallaTaso, tavoite, Time.unscaledDeltaTime / SisallaSiirtymaS);
+                if (aurinkoValo != null)
+                    aurinkoValo.intensity = aurinkoPerusVoima * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
+                PaivitaTaivasVoima();
+            }
+
             foreach (var p in pisteValot)
             {
                 if (p.Light == null || p.Lepatus <= 0) continue;
@@ -143,6 +162,10 @@ namespace Matkakirja.Natiivi
             pisteValot.Clear();
 
             var valaistus = rakennus.Valaistus;
+            // Sisalla ei ole koskaan null DioraamaData.Valaistuksessa (oletus 1/1) -- ?. tässä varautuu
+            // vain siihen, että koko Valaistus itse on null (vanha rakennus.json, ei valaistus-kenttää).
+            sisallaAurinkoKerroin = valaistus?.Sisalla?.Aurinko ?? 1;
+            sisallaTaivasKerroin = valaistus?.Sisalla?.Taivas ?? 1;
             LuoAurinko(valaistus?.Aurinko);
             AsetaTaivas(valaistus?.Taivas);
             foreach (var tila in rakennus.Tilat)
@@ -171,24 +194,38 @@ namespace Matkakirja.Natiivi
             double k = korkeus * Math.PI / 180, a = atsimuutti * Math.PI / 180, ck = Math.Cos(k);
             Vector3 suuntaKohtiAurinkoa = DioraamaNayttamo.UnityPiste(new V3(ck * Math.Sin(a), Math.Sin(k), -ck * Math.Cos(a)));
             aurinkoValo.transform.rotation = Quaternion.LookRotation(-suuntaKohtiAurinkoa, Vector3.up);
-            aurinkoValo.intensity = (float)(aurinko?.Voima ?? 1.15);
+            aurinkoPerusVoima = (float)(aurinko?.Voima ?? 1.15);
+            // sisallaTaso: 0 tällä hetkellä (Valmistele nollaa/pysyy vanhassa arvossa vain kesken latauksen
+            // uudelleenlataus-tapauksessa) -- Paivita() päivittää tämän joka ruutu Sisalla-kertoimella.
+            aurinkoValo.intensity = aurinkoPerusVoima * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
             aurinkoValo.color = TaivasVari(aurinko?.Vari, AurinkoOletusVari);
             aurinkoValo.enabled = aurinkoPaalla;
         }
 
-        /// <summary>Taivaan gradientti globaaleina (DioraamaValaistu.shader: _DioraamaTaivasYla/Ala) + likiarvo
-        /// RenderSettings.ambient*-kentille (kohta 2 "RenderSettings.ambient* = taivas") muille materiaaleille.</summary>
+        /// <summary>Taivaan väri + peruskirkkaus talteen (era2b: Sisalla-liukuma skaalaa voimaa jatkuvasti,
+        /// ks. PaivitaTaivasVoima) ja sovellus heti.</summary>
         void AsetaTaivas(Matkakirja.Linssit.Dioraama.Taivas taivas)
         {
-            Color yla = TaivasVari(taivas?.Yla, TaivasYlaOletus), ala = TaivasVari(taivas?.Ala, TaivasAlaOletus);
-            float voima = (float)(taivas?.Voima ?? 0.55);
-            Shader.SetGlobalVector(IdTaivasYla, new Vector4(yla.r, yla.g, yla.b, voima));
-            Shader.SetGlobalVector(IdTaivasAla, new Vector4(ala.r, ala.g, ala.b, 1f));
+            taivasYlaVari = TaivasVari(taivas?.Yla, TaivasYlaOletus);
+            taivasAlaVari = TaivasVari(taivas?.Ala, TaivasAlaOletus);
+            taivasPerusVoima = (float)(taivas?.Voima ?? 0.55);
+            PaivitaTaivasVoima();
+        }
+
+        /// <summary>Soveltaa taivaan NYKYISEN (Sisalla-kertoimella skaalatun) voiman shader-globaaleihin ja
+        /// RenderSettings.ambientiin (kohta 2 "RenderSettings.ambient* = taivas"). Kutsutaan asetuksen
+        /// vaihtuessa (AsetaTaivas) JA joka ruutu (Paivita), koska Sisalla-liuku muuttaa voimaa jatkuvasti
+        /// kohdistetun tilan ja yleisnäkymän välillä (era2b, omistajan valo-päätös 29.9.).</summary>
+        void PaivitaTaivasVoima()
+        {
+            float voima = taivasPerusVoima * Mathf.Lerp(1f, (float)sisallaTaivasKerroin, sisallaTaso);
+            Shader.SetGlobalVector(IdTaivasYla, new Vector4(taivasYlaVari.r, taivasYlaVari.g, taivasYlaVari.b, voima));
+            Shader.SetGlobalVector(IdTaivasAla, new Vector4(taivasAlaVari.r, taivasAlaVari.g, taivasAlaVari.b, 1f));
 
             RenderSettings.ambientMode = AmbientMode.Trilight;
-            RenderSettings.ambientSkyColor = yla * voima;
-            RenderSettings.ambientEquatorColor = Color.Lerp(ala, yla, 0.5f) * voima;
-            RenderSettings.ambientGroundColor = ala * voima;
+            RenderSettings.ambientSkyColor = taivasYlaVari * voima;
+            RenderSettings.ambientEquatorColor = Color.Lerp(taivasAlaVari, taivasYlaVari, 0.5f) * voima;
+            RenderSettings.ambientGroundColor = taivasAlaVari * voima;
             RenderSettings.ambientIntensity = 1f;
         }
 
@@ -197,22 +234,36 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Yksi tilan pistevalo (era 2b kohta 1 "TILA.valot"): range = Sade, intensity = Voima · 1,0 (tonemappauksen kanssa; oli 2,2 → 1,4 → 1,0).
         /// Lepatus &gt; 0 luokitellaan "Tuli"-kytkimeen (tulisija), muuten "Lamput"-kytkimeen (öljylamppu/kynttilä)
-        /// -- data ei erottele näitä nimellä, vain Lepatuksella (POIKKEAMA/tulkinta, kirjattu raporttiin).</summary>
+        /// -- data ei erottele näitä nimellä, vain Lepatuksella (POIKKEAMA/tulkinta, kirjattu raporttiin).
+        /// Tyyppi "keila" (era2b, ikkunan aurinko, omistajan valo-päätös 29.9.): LightType.Spot Kohti-pisteeseen
+        /// suunnattuna, spotAngle = Kulma, EI varjoja (kuten muutkaan lisävalot) EIKÄ lepatusta.</summary>
         void LuoPisteValo(string tilaId, Valo valo)
         {
             var go = new GameObject("Valo:" + tilaId) { layer = DioraamaNayttamo.Kerros };
             go.transform.SetParent(juuri, false);
             go.transform.position = DioraamaNayttamo.UnityPiste(valo.Paikka);
+            bool onKeila = valo.Tyyppi == "keila";
             var l = go.AddComponent<Light>();
-            l.type = LightType.Point;
+            l.type = onKeila ? LightType.Spot : LightType.Point;
             l.range = Mathf.Max(0.05f, (float)valo.Sade);
             l.intensity = (float)(valo.Voima * 1.0);
             l.color = TaivasVari(valo.Vari, LampunOletusVari);
-            l.shadows = LightShadows.None; // ei lisävalojen varjoja (Mobile_RPAsset m_AdditionalLightShadowsSupported 0)
+            l.shadows = LightShadows.None; // ei lisävalojen varjoja (Mobile_RPAsset m_AdditionalLightShadowsSupported 0) -- koskee myös keilaa
             l.cullingMask = 1 << DioraamaNayttamo.Kerros;
-            bool onTuli = valo.Lepatus > 0;
+            if (onKeila)
+            {
+                l.spotAngle = Mathf.Clamp((float)valo.Kulma, 1f, 179f); // Unityn Light.spotAngle-raja
+                if (valo.Kohti.HasValue)
+                {
+                    Vector3 suunta = DioraamaNayttamo.UnityPiste(valo.Kohti.Value) - go.transform.position;
+                    if (suunta.sqrMagnitude > 1e-8f) go.transform.rotation = Quaternion.LookRotation(suunta, Vector3.up);
+                }
+            }
+            // "ei lepatusta" (era2b: ikkunan aurinko ei ole tuli/lamppu) -- keila ohittaa datan Lepatuksen.
+            double lepatus = onKeila ? 0 : valo.Lepatus;
+            bool onTuli = lepatus > 0;
             l.enabled = onTuli ? tuliPaalla : lamputPaalla;
-            pisteValot.Add(new PisteValo { Go = go, Light = l, Lepatus = valo.Lepatus, PerusVoimakkuus = l.intensity,
+            pisteValot.Add(new PisteValo { Go = go, Light = l, Lepatus = lepatus, PerusVoimakkuus = l.intensity,
                 VaiheSiemen = UnityEngine.Random.value * 1000f, OnTuli = onTuli });
         }
 
@@ -228,6 +279,7 @@ namespace Matkakirja.Natiivi
             aurinkoValo = null;
             viimeisinRakennus = null;
             viimeisinKohdeTila = "##ei-asetettu##";
+            sisallaTaso = 0f;
 
             if (alkuperaisetTallennettu)
             {

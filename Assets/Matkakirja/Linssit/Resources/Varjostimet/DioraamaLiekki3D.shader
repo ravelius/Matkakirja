@@ -184,7 +184,12 @@ Shader "Matkakirja/Linssit/DioraamaLiekki3D"
                 float3 oikea = UNITY_MATRIX_I_V._11_21_31; // kameran maailman-oikea (billboard, ei CPU-kääntöä)
                 float3 yla = UNITY_MATRIX_I_V._12_22_32;
                 half sammuminen = (half)(saturate(1.0 - vaihe) * saturate(vaihe * 6.0)); // pehmeä syttymä+sammuma
-                float koko = lerp(0.012, 0.02, h3);
+                // KORJAUS 29.9.2026 (omistaja, "kipinät pienemmät"): 0,007-0,012 (oli 0,012-0,02, ~40 % pienempi) --
+                // liekki itse pieneni samalla (DioraamaLiekit.LuoLiekkiMesh), ja tämä koko on maailmatilassa
+                // kiinteä (lisätään keski-pisteeseen VASTA TransformObjectToWorldin jälkeen, ei skaalaudu
+                // liekin koko_m:n mukana), joten se pitää pienentää erikseen tai kipinät näyttäisivät
+                // suhteessa entistä suuremmilta pienemmän liekin päällä.
+                float koko = lerp(0.007, 0.012, h3);
                 float3 maailma = keski + (oikea * kulma.x + yla * kulma.y) * koko;
 
                 o.paikka = TransformWorldToHClip(maailma);

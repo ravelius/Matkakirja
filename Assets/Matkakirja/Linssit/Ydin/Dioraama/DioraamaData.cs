@@ -25,6 +25,10 @@
 // varjostinparametrit, oletus Tyyppi "tasainen"), Asento.Kierto (+ Kierto: kameran kiertorajat, staattiset
 // oletukset Kierto.OletusTila/OletusYleis), Henkilo.Malli3d (+ Malli3d, Mittasuhteet, Vaatteet: 3D-pienoisfiguurin
 // kuvaus). Kaikki valinnaisia: vanha rakennus.json (ilman näitä kenttiä) jäsentyy ennallaan.
+//
+// ERA 2B, IKKUNAN AURINKO (omistajan valo-päätös 29.9.2026): Valo.Tyyppi/Kohti/Kulma ("keila"-tyyppinen
+// valo — DioraamaValot.cs tekee siitä LightType.Spot) + Valaistus.Sisalla (aurinko/taivas-kertoimet, kun
+// kamera on kohdistettu tilaan). Sisalla ei ole koskaan null (oletus 1/1); Valo.Tyyppi oletus "piste".
 using System;
 using System.Collections.Generic;
 using Matkakirja.Peli;
@@ -124,6 +128,11 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class Pinta
     {
         public string Id, Vari, Tekstuuri;
+        /// <summary>Puolikkaan resoluution tekstuuri (era 2b, tekstuurimuisti 29.9.2026): tools/dioraama/
+        /// tuo-codex.mjs + media.mjs tuottavat/kopioivat tämän Tekstuurin rinnalle (sips --resampleWidth,
+        /// leveys/korkeus puolet). Null, jos pinnalla ei ole tekstuuria TAI paketti on rakennettu ennen tätä
+        /// ominaisuutta -- DioraamaSovitin.LataaPinta käyttää silloin Tekstuuria kaikilla laitteilla.</summary>
+        public string TekstuuriPuoli;
         public double Hehku;
         /// <summary>Vanha yksiarvoinen toisto (era 1); säilyy aina samana kuin ToistoU (era 2 kohta 3).</summary>
         public double ToistoM;
@@ -192,6 +201,16 @@ namespace Matkakirja.Linssit.Dioraama
         public double Sade, Voima;
         public string Vari;
         public double Lepatus;
+        /// <summary>Valon tyyppi (era 2b, ikkunan aurinko, omistajan valo-päätös 29.9.): "piste" (oletus, vanha
+        /// pistevalo) tai "keila" (kartiovalo — DioraamaValot.cs tekee siitä LightType.Spot, ei lepatusta, ja
+        /// rakenna.mjs ohittaa sen G-lämpöleivonnasta, koska auringonvalo ei ole lämpöä).</summary>
+        public string Tyyppi = "piste";
+        /// <summary>Keila-valon kohdepiste maailmassa (era 2b); null tyypille "piste" tai jos lähteessä ei ole
+        /// kohti-kenttää.</summary>
+        public V3? Kohti;
+        /// <summary>Keila-valon koko kartiokulma asteina (era 2b) — DioraamaValot.cs asettaa tämän suoraan
+        /// Unityn Light.spotAngle-kenttään (sama merkitys, ei puolikulma).</summary>
+        public double Kulma;
     }
 
     /// <summary>Yksi tilan satunnaisten kertaäänien tehostejakso (era 2 kohta 2 "AANET": TILA.tehosteet-lista,
@@ -295,6 +314,16 @@ namespace Matkakirja.Linssit.Dioraama
         public double Voima;
     }
 
+    /// <summary>Aurinko/taivas-kertoimet kamera kohdistettuna tilaan (era 2b, omistajan valo-päätös 29.9.:
+    /// "korkea lounaisaurinko tulvii avoimesta etelälaidasta ja vaalentaa sisätilan") — DioraamaValot.cs
+    /// liukuu näihin ~1 s:ssa kun näkymän KohdeTila ≠ null, ja takaisin kertoimeen 1 yleisnäkymässä.
+    /// Puuttuessa lähteestä (vanha rakennus.json TAI lähteessä ei sisalla-oliota) molemmat 1 = ei
+    /// vaimennusta — Valaistus.Sisalla ei itse ole koskaan null (ks. alla).</summary>
+    public sealed class Sisalla
+    {
+        public double Aurinko = 1, Taivas = 1;
+    }
+
     /// <summary>Rakennuksen valaistus (era 2b, kohta 1 "RAKENNUS.valaistus"); null vanhassa rakennus.jsonissa
     /// (ei valaistus-kenttää lähteessä) — natiivi käyttää silloin omia oletuksiaan. Spekissä on myös valinnainen
     /// sumu-kenttä (aina null nykydatalla); sitä ei jäsennetä tässä erässä, ei ole tarvetta ennen toteutusta.</summary>
@@ -302,6 +331,9 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public Aurinko Aurinko;
         public Taivas Taivas;
+        /// <summary>Ei koskaan null (era 2b) — LueValaistus asettaa aina joko lähteen sisalla-olion tai
+        /// Sisalla:n omat oletusarvot (1, 1).</summary>
+        public Sisalla Sisalla = new Sisalla();
     }
 
     /// <summary>Koko rakennus (kohta 1: RAKENNUS + rakennuskoneen lisäykset, kohta 3).</summary>
@@ -373,7 +405,8 @@ namespace Matkakirja.Linssit.Dioraama
                 double vv = virtaus.Count > 1 && virtaus[1] is double vvd ? vvd : 0;
                 r.Pinnat[pari.Key] = new Pinta { Id = pari.Key, Vari = MiniJson.Teksti(o, "vari"),
                     ToistoM = tu, ToistoU = tu, ToistoV = tv, Hehku = MiniJson.Luku(o, "hehku") ?? 0,
-                    Tekstuuri = MiniJson.Teksti(o, "tekstuuri"), VirtausU = vu, VirtausV = vv, Kuvio = LueKuvio(o) };
+                    Tekstuuri = MiniJson.Teksti(o, "tekstuuri"), TekstuuriPuoli = MiniJson.Teksti(o, "tekstuuri_puoli"),
+                    VirtausU = vu, VirtausV = vv, Kuvio = LueKuvio(o) };
             }
             foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "liekit")) ?? new Dictionary<string, object>())
             {
@@ -461,6 +494,9 @@ namespace Matkakirja.Linssit.Dioraama
             var taivas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "taivas"));
             if (taivas != null) v.Taivas = new Taivas { Yla = MiniJson.Teksti(taivas, "yla"),
                 Ala = MiniJson.Teksti(taivas, "ala"), Voima = MiniJson.Luku(taivas, "voima") ?? 0 };
+            var sisalla = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "sisalla"));
+            if (sisalla != null) v.Sisalla = new Sisalla { Aurinko = MiniJson.Luku(sisalla, "aurinko") ?? 1,
+                Taivas = MiniJson.Luku(sisalla, "taivas") ?? 1 };
             return v;
         }
 
@@ -586,7 +622,11 @@ namespace Matkakirja.Linssit.Dioraama
                 var v = MiniJson.ObjektiTaiNull(rivi);
                 if (v != null) t.Valot.Add(new Valo { Paikka = LueV3(MiniJson.Kentta(v, "paikka")),
                     Sade = MiniJson.Luku(v, "sade") ?? 0, Voima = MiniJson.Luku(v, "voima") ?? 0,
-                    Vari = MiniJson.Teksti(v, "vari"), Lepatus = MiniJson.Luku(v, "lepatus") ?? 0 });
+                    Vari = MiniJson.Teksti(v, "vari"), Lepatus = MiniJson.Luku(v, "lepatus") ?? 0,
+                    Tyyppi = MiniJson.Teksti(v, "tyyppi") ?? "piste",
+                    // era 2b, ikkunan aurinko: kohti puuttuu "piste"-tyypin valoilta -> Kohti pysyy nullina.
+                    Kohti = MiniJson.Kentta(v, "kohti") is List<object> kohtiLista ? LueV3(kohtiLista) : (V3?)null,
+                    Kulma = MiniJson.Luku(v, "kulma") ?? 0 });
             }
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "tehosteet")))
             {

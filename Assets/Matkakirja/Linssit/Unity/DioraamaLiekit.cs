@@ -237,7 +237,13 @@ namespace Matkakirja.Natiivi
 
         /// <summary>3D-liekin jaettu pisaramesh (era 2b kohta 6): venytetty pallo 16x10, kaksi sisäkkäistä
         /// kerrosta (vaippa+ydin) eri vaiheella niin että niiden verteksivääntö ei mene synkkaan. Yksikkökokoon
-        /// rakennettu -- todellinen leveys/korkeus tulee GameObjectin transform.localScalesta (LisaaTila).</summary>
+        /// rakennettu -- todellinen leveys/korkeus tulee GameObjectin transform.localScalesta (LisaaTila).
+        /// KORJAUS 29.9.2026 (omistaja: "keltainen hehkupallo tulisijan päällä peittää hupun"): säde 0,45/0,25
+        /// (oli 1/0,55, suhde 0,55 säilyy kerrosten välillä) -- noin 45 % entisestä, KAPEAMPI kuin yleinen
+        /// ~60 % kokopienennys (LisaaPisaraKerros), koska pyöreä "pallo" oli ongelma, ei vain koko. Vaipan
+        /// kirkkaus 0,6 -> 0,5 (omistajan pyytämä "_Voima vaipalle ~0,5" -- ydin pysyy 1,35:ssä, siis kirkkaana
+        /// vaippaan nähden). Ydin (kirkkaus 1,35, vaihe 2,1) on edelleen kirkkaampi ja hieman lyhyempi/kapeampi
+        /// kuin vaippa, kuten ennenkin.</summary>
         static Mesh LuoLiekkiMesh()
         {
             var verts = new List<Vector3>();
@@ -245,8 +251,8 @@ namespace Matkakirja.Natiivi
             var uv0 = new List<Vector2>();
             var uv1 = new List<Vector2>();
             var tris = new List<int>();
-            LisaaPisaraKerros(verts, normit, uv0, uv1, tris, sade: 1f, korkeusKerroin: 1f, vaihe: 0f, kirkkaus: 0.6f);
-            LisaaPisaraKerros(verts, normit, uv0, uv1, tris, sade: 0.55f, korkeusKerroin: 0.82f, vaihe: 2.1f, kirkkaus: 1.35f);
+            LisaaPisaraKerros(verts, normit, uv0, uv1, tris, sade: 0.45f, korkeusKerroin: 1f, vaihe: 0f, kirkkaus: 0.5f);
+            LisaaPisaraKerros(verts, normit, uv0, uv1, tris, sade: 0.25f, korkeusKerroin: 0.82f, vaihe: 2.1f, kirkkaus: 1.35f);
             var mesh = new Mesh { name = "DioraamaLiekki3D" };
             mesh.SetVertices(verts);
             mesh.SetNormals(normit);
@@ -255,8 +261,9 @@ namespace Matkakirja.Natiivi
             mesh.SetTriangles(tris, 0);
             mesh.RecalculateBounds();
             // Verteksivääntö siirtää kärkiä hieman rajojen ulkopuolelle -- turvamarginaali, ettei renderer
-            // katoa näkymästä väärän kulman/etäisyyden frustum-leikkauksessa.
-            var b = mesh.bounds; b.Expand(0.35f); mesh.bounds = b;
+            // katoa näkymästä väärän kulman/etäisyyden frustum-leikkauksessa. 0,2 (oli 0,35): mesh pieneni
+            // KORJAUS 29.9.2026:ssa, entinen marginaali olisi suhteessa ylisuuri (vääntö on suhteellinen).
+            var b = mesh.bounds; b.Expand(0.2f); mesh.bounds = b;
             return mesh;
         }
 
@@ -276,7 +283,10 @@ namespace Matkakirja.Natiivi
                 // terävään pisteeseen kärjessä (v01=1) -- EI kahta napaa (sin(theta) kapenisi väärin molemmista
                 // päistä, kokeiltu ja hylätty katselmoinnissa).
                 float r = sade * Mathf.Cos(v01 * Mathf.PI * 0.5f);
-                float y = v01 * korkeusKerroin * 1.6f;
+                // KORJAUS 29.9.2026 (omistaja: liekki peitti hupun): 0,96 = noin 60 % entisestä 1,6:sta --
+                // yhdessä LuoLiekkiMeshin pienemmän saiteen kanssa tulisija (koko_m [0,42,0,52] liekit.js:ssä)
+                // päätyy noin 0,5 m korkeaksi (0,52 × 0,96 ≈ 0,5) sen sijaan että peittäisi hupun.
+                float y = v01 * korkeusKerroin * 0.96f;
                 for (int sarake = 0; sarake <= SARAKKEET; sarake++)
                 {
                     float u = sarake / (float)SARAKKEET;

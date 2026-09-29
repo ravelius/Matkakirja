@@ -348,7 +348,10 @@ namespace Matkakirja.Natiivi
             {
                 if (string.IsNullOrEmpty(pinta.Tekstuuri) || pinnatJonossaTaiValmiit.Contains(pinta.Id)) continue;
                 pinnatJonossaTaiValmiit.Add(pinta.Id);
-                o.StartCoroutine(LataaPinta(pinta.Id, pinta.Tekstuuri));
+                // Puolikas pienelle laitteelle (era 2b, tekstuurimuisti 29.9.2026, ks. PieniLaite) --
+                // vanha paketti ilman TekstuuriPuolia putoaa aina täyteen (ei virhe, ks. Pinta-kommentti).
+                bool puoli = PieniLaite() && !string.IsNullOrEmpty(pinta.TekstuuriPuoli);
+                o.StartCoroutine(LataaPinta(pinta.Id, puoli ? pinta.TekstuuriPuoli : pinta.Tekstuuri, puoli));
             }
             foreach (var liekki in rakennus.Liekit.Values)
             {
@@ -405,10 +408,12 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: hahmo3d {glbPolku} valmis ({malli.Solmut.Count} solmua)");
         }
 
-        /// <summary>Pinnan Tekstuuri (era 2 kohta 3): mipmapattu, ei-lineaarinen (sRGB-lähde), toistuva ja
-        /// anisotrooppinen -- kutsuu rakennusnäkymän (Sovittimen rakennus3D-kenttä, sama reitti kuin LataaTila)
-        /// AsetaPinta-metodia (agentti D:n lisäys DioraamaRakennus.cs:ään).</summary>
-        IEnumerator LataaPinta(string pintaId, string tekstuuriPolku)
+        /// <summary>Pinnan Tekstuuri/TekstuuriPuoli (era 2 kohta 3, puolikas era 2b): mipmapattu, ei-lineaarinen
+        /// (sRGB-lähde), toistuva ja anisotrooppinen -- kutsuu rakennusnäkymän (Sovittimen rakennus3D-kenttä,
+        /// sama reitti kuin LataaTila) AsetaPinta-metodia (agentti D:n lisäys DioraamaRakennus.cs:ään).
+        /// Compress(false) pakkaa GPU-muotoon (iOS: ETC/EAC-perhe, Unityn dokumentaatio) latauksen jälkeen --
+        /// pienentää tekstuurimuistia edelleen RGBA32:sta, highQuality-parametri ei vaikuta ETC:hen.</summary>
+        IEnumerator LataaPinta(string pintaId, string tekstuuriPolku, bool puoli)
         {
             int kerta = avauskerta;
             byte[] tavut = null;
@@ -417,10 +422,11 @@ namespace Matkakirja.Natiivi
             var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
             { name = "Pinta:" + pintaId, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Repeat, anisoLevel = 4 };
             if (!kuva.LoadImage(tavut, false)) { o.Kirjaa($"poikki: pinta {pintaId} ei jäsentynyt (paikkaväri)"); UnityEngine.Object.Destroy(kuva); yield break; }
+            kuva.Compress(false);
             if (kerta != avauskerta || rakennus3D == null) { UnityEngine.Object.Destroy(kuva); yield break; } // ks. LataaTila-kommentti
             ladatutPinnat[pintaId] = kuva;
             rakennus3D.AsetaPinta(pintaId, kuva);
-            o.Kirjaa($"poikki: pinta {pintaId} tekstuuri valmis ({kuva.width}x{kuva.height})");
+            o.Kirjaa($"poikki: pinta {pintaId} tekstuuri valmis ({kuva.width}x{kuva.height}{(puoli ? ", puolikas" : "")})");
         }
 
         /// <summary>Liekkipankin (Rakennus.Liekit) atlas (era 2 kohta 3): kuten hahmoatlas (Clamp/Bilinear) --
@@ -589,6 +595,14 @@ namespace Matkakirja.Natiivi
 
         static double Luku(string s) => double.Parse(s.Replace(',', '.'), CultureInfo.InvariantCulture);
 
+        /// <summary>Puolikas pintatekstuuri, jos laite on pieni (era 2b, tekstuurimuisti 29.9.2026, omistaja:
+        /// natiivissa 89 Mt Codexin pinnoilla, liikaa iPhonelle): fyysinen pikselimäärä (Screen.width×
+        /// Screen.height -- EI riipu suunnasta/kierrosta, kertolasku on symmetrinen) alle 4 000 000 TAI
+        /// SystemInfo.systemMemorySize (Mt) alle 6000. Kumpi tahansa riittää: pieninäyttöinen laite voi olla
+        /// muistiltaan iso (silti täysi näyttö turhaa), ja iso näyttö voi olla muistiltaan pieni (silti
+        /// vanhempi/halvempi laite). "poikki mittaus" (Mittausraportti) näyttää kumman tämän laite valitsi.</summary>
+        static bool PieniLaite() => (long)Screen.width * Screen.height < 4_000_000L || SystemInfo.systemMemorySize < 6000;
+
         string Tilaraportti()
         {
             if (!avoinna) return "poikki: kiinni";
@@ -615,9 +629,14 @@ namespace Matkakirja.Natiivi
             // era 2b (kohta 4, ali-agentti P4b): 3D-hahmojen kolmiot lasketaan JAETUSTA geometriasta (kerran
             // per henkilö, ei per instanssi -- ks. DioraamaHahmot3D.KolmiotJaetussaGeometriassa-kommentti).
             int hahmo3dKolmiot = nayttamo?.Hahmot3D?.KolmiotJaetussaGeometriassa() ?? 0;
+            // Era 2b (tekstuurimuisti): kertoo kumman pintakoon PieniLaite valitsi ja MIKSI (näyttöpikselit,
+            // muisti) -- omistajan pyyntö "kertoo kumpi ja muistin".
+            long naytonPikselit = (long)Screen.width * Screen.height;
+            string pintakoko = PieniLaite() ? "puolikas" : "täysi";
             return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {(rakennus3D?.Kolmiot ?? 0) + hahmo3dKolmiot} (3d-hahmot {hahmo3dKolmiot}), " +
                    $"kärkiä {rakennus3D?.Karjet ?? 0}, rendereitä {(rakennus3D?.Renderereita ?? 0) + (hahmot3D?.Maara ?? 0)}, " +
-                   $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, kamera {asento}";
+                   $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, " +
+                   $"pinnat {pintakoko} (näyttö {naytonPikselit} px, laitemuisti {SystemInfo.systemMemorySize} Mt), kamera {asento}";
         }
 
         /// <summary>GPU-tekstuurimuisti (Profiler antaa todellisen koon mipmapit/pakkaus mukaan lukien; era 2 kohta 3
