@@ -139,7 +139,10 @@ namespace Matkakirja.Linssit.Dioraama
             double herasi = alkoi + 0.2 * hahmoIndeksi;
             bool ylanakymassa = ViimeisinKohde(aikataulu, t) == null;
 
-            bool naky = hahmo.Reitti != null ? taso == 2 : true;
+            // Elävä linna (rakennuksella saapuminen): reittihahmot (vartija, soutaja) kulkevat aina, myös yleisnäkymässä.
+            bool naky = hahmo.Reitti != null ? taso == 2 || rak.Saapuminen != null : true;
+            // Saman henkilön paikallaan seisova hahmo piiloon yleisnäkymässä, kun elävä reittihahmo kulkee (ei tuplaa).
+            if (naky && hahmo.Reitti == null && ylanakymassa && rak.Saapuminen != null && tila.Elava?.Reitti?.Henkilo == hahmo.HenkiloId) naky = false;
 
             string silmukkaNimi;
             Silmukka silmukka;

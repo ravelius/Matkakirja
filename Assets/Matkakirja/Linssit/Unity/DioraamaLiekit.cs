@@ -50,6 +50,9 @@ namespace Matkakirja.Natiivi
             /// <summary>Tosi = 3D-liekki (jaettu mesh/materiaali, ei per-ruutu CPU-työtä, ks. Paivita).
             /// Epätosi = atlas-billboard (alla olevat Renderer/Mesh/AtlasAvain/ViimeRuutu käytössä).</summary>
             public bool Kolme;
+            /// <summary>Elävä linna: täysi koko (syttyminen skaalaa 0 → Perus) ja syttymiskynnys kaaren osuutena (−1 = ei laskettu).</summary>
+            public Vector3 Perus;
+            public float Kynnys = -1f;
             public MeshRenderer Renderer;
             public Mesh Mesh;
             public string AtlasAvain;
@@ -370,7 +373,54 @@ namespace Matkakirja.Natiivi
             kipinaRend.sharedMaterial = kipinaMateriaali;
             kipinaRend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             kipinaRend.receiveShadows = false;
-            esiintymat.Add(new Esiintyma { TilaId = tilaId, Paikka = new LiekkiPaikka { LiekkiId = "tyhja:" + tyhja.Id, Koko = korkeus }, Go = go, Kolme = true });
+            esiintymat.Add(new Esiintyma { TilaId = tilaId, Paikka = new LiekkiPaikka { LiekkiId = "tyhja:" + tyhja.Id, Koko = korkeus }, Go = go, Kolme = true,
+                Perus = go.transform.localScale });
+            kynnyksetLaskettu = false;
+        }
+
+        bool kynnyksetLaskettu, kaikkiSyttyneet;
+
+        /// <summary>Elävä linna: lyhdyn pieni 3D-liekki (6 cm) hahmon lapseksi, jaettu pisaramesh ja materiaali; ei kipinöitä.</summary>
+        public GameObject LuoLyhty(Transform isa)
+        {
+            VarmistaJaetutResurssit(null);
+            if (liekkiMesh == null || isa == null) return null;
+            var go = new GameObject("Lyhty") { layer = DioraamaNayttamo.Kerros };
+            go.transform.SetParent(isa, false);
+            go.transform.localScale = new Vector3(0.04f, 0.07f, 0.04f);
+            go.AddComponent<MeshFilter>().sharedMesh = liekkiMesh;
+            var r = go.AddComponent<MeshRenderer>();
+            r.sharedMaterial = liekkiMateriaali;
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            r.receiveShadows = false;
+            return go;
+        }
+
+        /// <summary>
+        /// Elävä linna, soihtujen syttyminen (käsikirjoitus 29.9. kohta 1: "soihdut syttyvät muureilla yksi kerrallaan"):
+        /// tyhjistä tehdyt liekit syttyvät kaaren edetessä lähimmästä (kaaren loppukohde) kauimpaan, kynnykset
+        /// 0,15…0,85 kaaren osuudesta, kasvu 0,06 osuuden aikana. osuus 1 = kaikki palavat (myös myöhemmin ladatut).
+        /// </summary>
+        public void Syttyminen(double osuus, Vector3 loppu)
+        {
+            if (osuus >= 1 && kaikkiSyttyneet) return;
+            if (!kynnyksetLaskettu)
+            {
+                var tyhjat = esiintymat.FindAll(e => e.Kolme && e.Go != null && e.Paikka?.LiekkiId != null && e.Paikka.LiekkiId.StartsWith("tyhja:"));
+                tyhjat.Sort((a, b) => (a.Go.transform.position - loppu).sqrMagnitude.CompareTo((b.Go.transform.position - loppu).sqrMagnitude));
+                for (int i = 0; i < tyhjat.Count; i++) tyhjat[i].Kynnys = 0.15f + 0.7f * i / Mathf.Max(1, tyhjat.Count - 1);
+                kynnyksetLaskettu = true;
+            }
+            bool kaikki = true;
+            foreach (var e in esiintymat)
+            {
+                if (e.Kynnys < 0 || e.Go == null) continue;
+                float k = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(((float)osuus - e.Kynnys) / 0.06f));
+                if (k < 1f) kaikki = false;
+                e.Go.transform.localScale = e.Perus * Mathf.Max(0.0001f, k);
+                e.Go.SetActive(k > 0.001f);
+            }
+            kaikkiSyttyneet = kaikki && osuus >= 1;
         }
 
         public void Paivita(Rakennus rakennus, Nakyma nakyma, Camera kamera, double t)
@@ -424,6 +474,7 @@ namespace Matkakirja.Natiivi
 
         public void Tyhjenna()
         {
+            kynnyksetLaskettu = false; kaikkiSyttyneet = false;
             foreach (var e in esiintymat)
                 if (e.Go != null)
                 {

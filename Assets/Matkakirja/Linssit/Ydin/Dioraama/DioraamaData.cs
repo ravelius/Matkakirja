@@ -265,6 +265,8 @@ namespace Matkakirja.Linssit.Dioraama
         public bool Peilattu;
         public string Silmukka;
         public int Heraa;
+        /// <summary>Elävä linna: hahmo kantaa lyhtyä (`lyhty`: true; vartija, soutaja) — pieni liekki käden kohdalle.</summary>
+        public bool Lyhty;
         public Reitti Reitti;
         public List<Repliikki> Repliikit = new List<Repliikki>();
         public Repliikki Reaktio;
@@ -303,6 +305,8 @@ namespace Matkakirja.Linssit.Dioraama
         public double LeikkausLaajennus = 1.0;
         public bool LeikkausKameraan = true;
         public V3? LeikkausMin, LeikkausMax;
+        /// <summary>Elävä kohde (`elava`); null = vanha AABB-napautus.</summary>
+        public Elava Elava;
         /// <summary>Tilaan sijoitetut liekki-instanssit (era 2); tyhjä vanhassa muodossa.</summary>
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
         /// <summary>Tilaan sijoitetut äänilähteet (era 2); tyhjä vanhassa muodossa.</summary>
@@ -354,6 +358,34 @@ namespace Matkakirja.Linssit.Dioraama
     }
 
     /// <summary>Koko rakennus (kohta 1: RAKENNUS + rakennuskoneen lisäykset, kohta 3).</summary>
+    /// <summary>ELÄVÄ LINNA, saapuminen (käsikirjoitus 29.9. kohta 1): kaari alkuasennosta yleiskameraan.
+    /// `saapuminen: { alku: { atsimuutti, etaisyys, korkeus, kohde?, fov? }, kesto 18, lyhyt 6 }`.</summary>
+    public sealed class Saapuminen
+    {
+        public double Atsimuutti = 200, Etaisyys = 600, Korkeus = 8;
+        public V3? Kohde;
+        public double? Fov;
+        public double Kesto = 18, Lyhyt = 6;
+    }
+
+    /// <summary>ELÄVÄ LINNA, tilan elävä kohde (kohta 2): napautuspiste yleisnäkymässä, sykkivä vihje ja kävelyreitti.</summary>
+    public sealed class Elava
+    {
+        public V3 Kohde;
+        public double Sade = 6;
+        public bool Vihje;
+        public ElavaReitti Reitti;
+    }
+
+    /// <summary>Hahmon kävelyreitti (vartija, soutaja): pisteet järjestyksessä, nopeus m/s, edestakaisin vai kierros.</summary>
+    public sealed class ElavaReitti
+    {
+        public string Henkilo;
+        public List<V3> Pisteet = new List<V3>();
+        public double Nopeus = 0.8;
+        public bool Edestakaisin = true, Lyhty;
+    }
+
     /// <summary>Ulkokuoren glb-polut laatutasoittain (puuttuva taso = seuraava kevyempi käytössä).</summary>
     public sealed class Ulkokuori
     {
@@ -385,6 +417,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Yleisnäkymän nimilaput (`nimilaput`, oletus true). Elävän linnan käsikirjoitus 29.9.: ei nimilappuja —
         /// tilat tunnistetaan siitä, mitä niissä tapahtuu.</summary>
         public bool Nimilaput = true;
+        /// <summary>Saapumiskaari (elävä linna); null = vanha avaus ilman lentoa.</summary>
+        public Saapuminen Saapuminen;
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
@@ -420,6 +454,18 @@ namespace Matkakirja.Linssit.Dioraama
             };
             r.Tunnelma = MiniJson.Teksti(juuri, "tunnelma");
             r.Nimilaput = MiniJson.Totuus(juuri, "nimilaput", true);
+            var saap = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "saapuminen"));
+            if (saap != null)
+            {
+                var alku = MiniJson.ObjektiTaiNull(MiniJson.Kentta(saap, "alku"));
+                r.Saapuminen = new Saapuminen
+                {
+                    Atsimuutti = MiniJson.Luku(alku, "atsimuutti") ?? 200, Etaisyys = MiniJson.Luku(alku, "etaisyys") ?? 600,
+                    Korkeus = MiniJson.Luku(alku, "korkeus") ?? 8, Fov = MiniJson.Luku(alku, "fov"),
+                    Kohde = MiniJson.Kentta(alku, "kohde") != null ? LueV3(MiniJson.Kentta(alku, "kohde")) : (V3?)null,
+                    Kesto = MiniJson.Luku(saap, "kesto") ?? 18, Lyhyt = MiniJson.Luku(saap, "lyhyt") ?? 6,
+                };
+            }
             var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));
             if (kuori != null)
                 r.Ulkokuori = new Ulkokuori
@@ -495,6 +541,8 @@ namespace Matkakirja.Linssit.Dioraama
                 var o = MiniJson.ObjektiTaiNull(pari.Value);
                 if (o != null) r.Liikkeet[pari.Key] = LueLiike(o);
             }
+            // Elävät reittihahmot vasta nyt, kun henkilöt tunnetaan (tuntematon henkilö ohitetaan, ei kaatumista).
+            foreach (var tila in r.Tilat) ElavaReittiHahmoksi(tila, r);
             return r;
         }
 
@@ -590,6 +638,22 @@ namespace Matkakirja.Linssit.Dioraama
             return l;
         }
 
+        /// <summary>
+        /// Elävä linna: tila.elava.reitti (vartija muurinharjalla, soutaja laiturilla) tilan hahmoksi, jolla on Reitti ja
+        /// lyhty. Ensimmäinen piste on lähtöpaikka; tauko 0. Id "elava-&lt;henkilö&gt;".
+        /// </summary>
+        static void ElavaReittiHahmoksi(Tila t, Rakennus rak)
+        {
+            var r = t.Elava?.Reitti;
+            if (r == null || string.IsNullOrEmpty(r.Henkilo) || r.Pisteet.Count < 2) return;
+            if (rak.Henkilot == null || !rak.Henkilot.ContainsKey(r.Henkilo)) return;
+            t.Hahmot.Add(new Hahmo
+            {
+                Id = "elava-" + r.Henkilo, HenkiloId = r.Henkilo, Paikka = r.Pisteet[0], Lyhty = r.Lyhty,
+                Reitti = new Reitti { Pisteet = new List<V3>(r.Pisteet), Nopeus = r.Nopeus, Tauko = 0 },
+            });
+        }
+
         static V3 LueV3(object arvo)
         {
             var l = MiniJson.TaulukkoTaiTyhja(arvo);
@@ -673,6 +737,27 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var glb = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "glb"));
             t.GlbTiedosto = MiniJson.Teksti(glb, "tiedosto");
+            var elava = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "elava"));
+            if (elava != null)
+            {
+                t.Elava = new Elava
+                {
+                    Kohde = LueV3(MiniJson.Kentta(elava, "kohde")), Sade = MiniJson.Luku(elava, "sade") ?? 6,
+                    Vihje = MiniJson.Totuus(elava, "vihje"),
+                };
+                var reitti = MiniJson.ObjektiTaiNull(MiniJson.Kentta(elava, "reitti"));
+                if (reitti != null)
+                {
+                    t.Elava.Reitti = new ElavaReitti
+                    {
+                        Henkilo = MiniJson.Teksti(reitti, "henkilo"), Nopeus = MiniJson.Luku(reitti, "nopeus") ?? 0.8,
+                        Edestakaisin = MiniJson.Totuus(reitti, "edestakaisin", true), Lyhty = MiniJson.Totuus(reitti, "lyhty"),
+                    };
+                    foreach (var piste in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(reitti, "pisteet"))) t.Elava.Reitti.Pisteet.Add(LueV3(piste));
+                }
+                // Elävä reitti hahmoksi (sama kävelylogiikka kuin Hahmo.Reitti: edestakaisin, kasvot kulkusuuntaan);
+                // lisätään tilan hahmoihin, kun Hahmot on luettu (alla, ElavaReittiHahmoksi).
+            }
             var leikkaus = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "leikkaus"));
             if (leikkaus != null)
             {
@@ -789,6 +874,7 @@ namespace Matkakirja.Linssit.Dioraama
                 Peilattu = MiniJson.Totuus(o, "peilattu"),
                 Silmukka = MiniJson.Teksti(o, "silmukka"),
                 Heraa = (int)(MiniJson.Luku(o, "heraa") ?? 0),
+                Lyhty = MiniJson.Totuus(o, "lyhty"),
             };
             var reitti = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "reitti"));
             if (reitti != null)

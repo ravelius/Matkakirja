@@ -898,6 +898,48 @@ namespace Matkakirja.Linssit.Testit
         // 3) PoikkileikkausLinssi: saapuminen, käsikirjoitus, pulu, napautus, toistettavuus
         // ═══════════════════════════════════════════════════════════════════
 
+        // Elävä linna (Siirtoseppä 29.9.): saapumiskaari, ohitus napautuksella, lyhyt toinen käynti, lyhyt tilalento, elava-kenttä.
+        [Testi] static void ElavaLinnaSaapuminenJaElava()
+        {
+            string json = KeittioFixture.Replace("\"yleiskamera\": {",
+                "\"saapuminen\": {\"alku\": {\"atsimuutti\": 200, \"etaisyys\": 600, \"korkeus\": 8}, \"kesto\": 18, \"lyhyt\": 6},\n  \"yleiskamera\": {");
+            var rak = DioraamaData.Lue(json);
+            Oleta.Tosi(rak.Saapuminen != null, "saapuminen luettu");
+            var linssi = new PoikkileikkausLinssi();
+            linssi.Avaa(rak, 0, false);
+            var n0 = linssi.NakymaHetkella(0, pysty: false);
+            Lahella(200, n0.Kamera.Atsimuutti, "kaari alkaa alkuatsimuutista");
+            Lahella(600, n0.Kamera.Etaisyys, "kaari alkaa kaukaa");
+            Lahella(0.5, linssi.SaapuminenOsuus(9), "puolivälissä");
+            Oleta.Tosi(linssi.SaapuminenKaynnissa(9), "kesken");
+            var nLoppu = linssi.NakymaHetkella(18.01, pysty: false);
+            Lahella(rak.YleisVaaka.Etaisyys, nLoppu.Kamera.Etaisyys, "kaaren lopussa yleiskamera");
+            Oleta.Tosi(!nLoppu.TauluAuki, "käsikirjoitus alkaa vasta kaaren + AvausViiveen jälkeen");
+            // Ohitus: napautus 9 s kohdalla → valmis 1 s myöhemmin.
+            linssi.Napauta(9);
+            Lahella(1.0, linssi.SaapuminenOsuus(10.01), "ohitus 1 s:ssa");
+            Oleta.Tosi(!linssi.SaapuminenKaynnissa(10.01), "ohitettu");
+            // Toinen käynti: lyhyt.
+            var l2 = new PoikkileikkausLinssi();
+            l2.Avaa(rak, 0, true);
+            Lahella(0.5, l2.SaapuminenOsuus(3), "lyhyt kaari 6 s");
+            // Tilalento 0,8–1,2 s uudessa kokemuksessa.
+            l2.Kohdista("keittio", 10);
+            var tLento = l2.NakymaHetkella(10 + 1.25, pysty: false);
+            Lahella(rak.Tila("keittio").Kamera.Etaisyys, tLento.Kamera.Etaisyys, "tilalento valmis ≤ 1,2 s:ssa");
+            // Ilman saapumista: vanha käytös (ei kaarta).
+            var l3 = new PoikkileikkausLinssi();
+            l3.Avaa(DioraamaData.Lue(KeittioFixture), 0);
+            Lahella(1.0, l3.SaapuminenOsuus(0), "vanhassa ei kaarta");
+
+            string elavaJson = KeittioFixture.Replace("\"id\":\"keittio\",",
+                "\"id\":\"keittio\", \"elava\": {\"kohde\": [1, 2, 3], \"sade\": 5, \"vihje\": true, \"reitti\": {\"henkilo\": \"vartija\", \"pisteet\": [[0,0,0],[4,0,0]], \"nopeus\": 0.7, \"lyhty\": true}},");
+            var re = DioraamaData.Lue(elavaJson).Tila("keittio").Elava;
+            Oleta.Tosi(re != null && re.Vihje && re.Reitti.Lyhty, "elava luettu");
+            Lahella(5, re.Sade, "sade");
+            Oleta.Sama(2, re.Reitti.Pisteet.Count);
+        }
+
         [Testi] static void PoikkileikkausAvausJaKohdistaminen()
         {
             var rak = DioraamaData.Lue(KeittioFixture);
