@@ -37,6 +37,7 @@ import { performance } from 'node:perf_hooks';
 import { kirjoitaGlb, kirjoitaMonisolmuGlb } from './glb.mjs';
 import { teeHahmo3d } from './hahmot3d.mjs';
 import { sijoita } from './reseptit.mjs';
+import { sijoitaTila } from './sijoitus.mjs';
 import { mulberry32 } from './reseptit-apu.mjs';
 import { luoBvh, leivoAO, lampo } from './ao.mjs';
 import {
@@ -306,6 +307,9 @@ export async function rakennaData(rakennus, {
   if (!Array.isArray(rakennus.tilat) || rakennus.tilat.length === 0) {
     throw new Error(`rakennaData: rakennuksella '${rakennus.id}' ei ole yhtään tilaa`);
   }
+  // Tilakohtainen sijoitus (sijoitus.mjs, speksi rajapinnat-blender kohta 2): muunnetaan ENNEN kaikkea muuta, jolloin
+  // glb:t, AO ja rakennus.json (JSON-kopio alempana) saavat sijoitetut arvot. Ei muuta alkuperäistä.
+  rakennus = { ...rakennus, tilat: rakennus.tilat.map(sijoitaTila) };
   const aikaAlku = performance.now();
   const kansio = join(ulos, rakennus.id);
   mkdirSync(join(kansio, 'tilat'), { recursive: true });
