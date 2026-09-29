@@ -6,8 +6,11 @@
 // kehys käännetään vain neulaelementtiä (style.rotate, UsageHints.DynamicTransform), mikä on pelkkä
 // muunnosmatriisi eikä uusi tessellointi; kun neula on levossa tai kulma ei muutu, mitään ei aseteta.
 //
-// Mitat ja värit webin poistetusta mittarista (radiosoitin.js MITTARIN_KUVA 112 × 80, napa 56/76,
-// kaari 54, neula 58, kulma ±48°; css/radio.css v267: kermanvärinen levy, tumma kehys, punainen nollasta ylös).
+// YKSINKERTAINEN JA TERÄVÄ (omistaja 29.9.2026: "VU-mittari ei ole paras mahdollinen"; Päätoimittajan katselmus):
+// mittari täyttää emonsa, akseli on piilossa mittarin alapuolella, jolloin asteikkokaari on leveä ja täyttää leveyden
+// (ennen kaari oli pieni vasemmassa yläkulmassa); kermanvärinen taulu lämpimällä taustavalolla (vaaleampi keskeltä),
+// luvut −20 … +3, punainen alue nollasta ylös, pieni "VU"-teksti, ohut musta neula ja hillitty lasiheijastus.
+// Kaikki piirretään UI:lla (ei kuvia); mitat lasketaan elementin koosta.
 using System;
 using System.Linq;
 using Matkakirja.Linssit.Radio;
@@ -18,15 +21,17 @@ namespace Matkakirja.Natiivi
 {
     public sealed class VuMittariNakyma : VisualElement
     {
-        const float KuvaL = 112, KuvaK = 80, NapaX = 56, NapaY = 76, Kaari = 54, Neula = 58;
-        static readonly Color Levy = new Color32(0xe5, 0xd7, 0xb2, 0xff);
-        static readonly Color Kehys = new Color32(24, 15, 6, 217);
-        static readonly Color Muste = new Color32(0x3b, 0x2a, 0x17, 0xff);
-        static readonly Color Puna = new Color32(0xa8, 0x32, 0x1f, 0xff);
-        static readonly Color NeulanVari = new Color32(0x1f, 0x14, 0x0a, 0xff);
+        static readonly Color Taulu = new Color32(0xf4, 0xe6, 0xc2, 0xff), TauluReuna = new Color32(0xe2, 0xc9, 0x93, 0xff);
+        static readonly Color Muste = new Color32(0x2e, 0x21, 0x12, 0xff);
+        static readonly Color Puna = new Color32(0xb2, 0x2e, 0x1c, 0xff);
+        static readonly Color NeulanVari = new Color32(0x14, 0x0e, 0x08, 0xff);
+        /// <summary>Luvut asteikon kohdissa (VuMittari.Jaot: 0,28 = −10 ja 0,46 = −5).</summary>
+        static readonly (double Osuus, string Teksti, bool Punainen)[] Luvut =
+            { (0, "-20", false), (0.28, "-10", false), (0.46, "-5", false), (VuMittari.Punainen, "0", true), (1, "+3", true) };
 
         readonly Func<VuMittari> lahde;
-        readonly VisualElement neula;
+        readonly VisualElement neula, heijastus;
+        readonly Label vuTeksti;
         float piirrettyKulma = float.NaN;
 
         /// <summary>Uusi mittari; lahde palauttaa auki olevan radion mittarin (null = lepo).</summary>
@@ -37,110 +42,111 @@ namespace Matkakirja.Natiivi
             this.lahde = lahde;
             name = "vu-mittari";
             AddToClassList("mk-vu-mittari");
-            style.width = KuvaL;
-            style.height = KuvaK;
+            style.flexGrow = 1;
             style.overflow = Overflow.Hidden;
+            style.borderTopLeftRadius = style.borderTopRightRadius = style.borderBottomLeftRadius = style.borderBottomRightRadius = 3;
+            // Lämmin taustavalo: vaaleampi keskeltä ylhäältä, reunoilta kellertävämpi.
+            style.backgroundImage = new StyleBackground(Kuviot.Pysty("vu-taulu", Taulu, TauluReuna));
             generateVisualContent += Piirra;
             RegisterCallback<GeometryChangedEvent>(_ => { AsetaLuvut(); MarkDirtyRepaint(); });
 
+            vuTeksti = new Label("VU") { pickingMode = PickingMode.Ignore };
+            vuTeksti.style.position = Position.Absolute;
+            vuTeksti.style.unityTextAlign = TextAnchor.MiddleCenter;
+            vuTeksti.style.color = Muste;
+            vuTeksti.style.unityFontStyleAndWeight = FontStyle.Bold;
+            vuTeksti.style.paddingLeft = vuTeksti.style.paddingRight = vuTeksti.style.paddingTop = vuTeksti.style.paddingBottom = 0;
+            vuTeksti.style.marginLeft = vuTeksti.style.marginRight = vuTeksti.style.marginTop = vuTeksti.style.marginBottom = 0;
+            Add(vuTeksti);
+
             neula = new VisualElement { name = "vu-neula", pickingMode = PickingMode.Ignore, usageHints = UsageHints.DynamicTransform };
             neula.style.position = Position.Absolute;
-            neula.style.width = 2;
             neula.style.backgroundColor = NeulanVari;
             neula.style.transformOrigin = new TransformOrigin(Length.Percent(50), Length.Percent(100));
             Add(neula);
+
+            // Hillitty lasiheijastus yläosassa (vaalea liukuma läpinäkyvään).
+            heijastus = new VisualElement { pickingMode = PickingMode.Ignore };
+            heijastus.style.position = Position.Absolute;
+            heijastus.style.left = 0; heijastus.style.right = 0; heijastus.style.top = 0;
+            heijastus.style.height = Length.Percent(42);
+            heijastus.style.backgroundImage = new StyleBackground(Kuviot.Pysty("vu-lasi", new Color(1, 1, 1, 0.22f), new Color(1, 1, 1, 0)));
+            Add(heijastus);
             pickingMode = PickingMode.Ignore;
             schedule.Execute(Paivita).Every(16);
         }
 
-        bool levyKuvana;
+        /// <summary>Entinen kuvaputken levy: ei enää käytössä (mittari piirretään), kutsu jätetään yhteensopivuuden vuoksi.</summary>
+        public void KaytaLevya(Texture2D levy) { }
 
-        /// <summary>
-        /// Radiouudistus (build 12): levy kuvaputken paperina (Resources/Radio/radio-vu-levy) piirretyn värin tilalle;
-        /// mittari täyttää emonsa (koko USS:stä). null = entinen piirretty levy.
-        /// </summary>
-        public void KaytaLevya(Texture2D levy)
-        {
-            if (levy == null) return;
-            levyKuvana = true;
-            style.backgroundImage = new StyleBackground(levy);
-            style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
-            style.flexGrow = 1;
-            MarkDirtyRepaint();
-        }
+        // Geometria elementin koosta: kaari täyttää ~88 % leveydestä, kaaren huippu ~34 % korkeudesta, akseli alareunan alla.
+        float L => float.IsNaN(resolvedStyle.width) ? 0 : resolvedStyle.width;
+        float K => float.IsNaN(resolvedStyle.height) ? 0 : resolvedStyle.height;
+        float Sade => 0.44f * L / Mathf.Sin((float)VuMittari.Kulma * Mathf.Deg2Rad);
+        Vector2 Napa => new Vector2(L / 2f, 0.36f * K + Sade);
 
-        float Mittakaava => resolvedStyle.width > 0 && !float.IsNaN(resolvedStyle.width) ? resolvedStyle.width / KuvaL : 1;
-
-        static Vector2 Piste(float osuus, float r, float s)
+        Vector2 Piste(float osuus, float r)
         {
             float a = (2 * osuus - 1) * (float)VuMittari.Kulma * Mathf.Deg2Rad;
-            return new Vector2((NapaX + r * Mathf.Sin(a)) * s, (NapaY - r * Mathf.Cos(a)) * s);
+            var n = Napa;
+            return new Vector2(n.x + r * Mathf.Sin(a), n.y - r * Mathf.Cos(a));
         }
 
         void Piirra(MeshGenerationContext mgc)
         {
-            float s = Mittakaava;
+            if (L <= 1 || K <= 1) return;
             var p = mgc.painter2D;
-            // Levy ja kehys (kuvana piirretty levy ja messinkikehys tulevat radion paneelilta).
-            if (!levyKuvana)
-            {
-                p.fillColor = Levy;
-                p.BeginPath();
-                p.MoveTo(Vector2.zero); p.LineTo(new Vector2(KuvaL * s, 0)); p.LineTo(new Vector2(KuvaL * s, KuvaK * s)); p.LineTo(new Vector2(0, KuvaK * s));
-                p.ClosePath();
-                p.Fill();
-                p.strokeColor = Kehys;
-                p.lineWidth = 2 * s;
-                p.Stroke();
-            }
-            // Asteikkokaari: musta nollaan asti, punainen siitä ylös.
+            float R = Sade, v = Mathf.Max(0.8f, K / 48f);
+            // Asteikkokaari: musta nollaan asti, punainen (leveämpi) siitä ylös.
             float alku = -90 - (float)VuMittari.Kulma, loppu = -90 + (float)VuMittari.Kulma;
             float punainen = alku + (loppu - alku) * (float)VuMittari.Punainen;
-            var napa = new Vector2(NapaX * s, NapaY * s);
-            p.lineWidth = 1.2f * s;
+            p.lineWidth = 1.1f * v;
             p.strokeColor = Muste;
-            p.BeginPath(); p.Arc(napa, Kaari * s, alku, punainen); p.Stroke();
+            p.BeginPath(); p.Arc(Napa, R, alku, punainen); p.Stroke();
             p.strokeColor = Puna;
-            p.lineWidth = 2.4f * s;
-            p.BeginPath(); p.Arc(napa, Kaari * s, punainen, loppu); p.Stroke();
-            // Jaot.
+            p.lineWidth = 3.2f * v;
+            p.BeginPath(); p.Arc(Napa, R + 1.1f * v, punainen, loppu); p.Stroke();
+            // Jaot kaaren sisäpuolelle.
             foreach (var j in VuMittari.Jaot)
             {
                 p.strokeColor = j.Punainen ? Puna : Muste;
-                p.lineWidth = (j.Pitka ? 1.2f : 0.8f) * s;
+                p.lineWidth = (j.Pitka ? 1.2f : 0.8f) * v;
                 p.BeginPath();
-                p.MoveTo(Piste((float)j.Osuus, Kaari - (j.Pitka ? 7 : 4), s));
-                p.LineTo(Piste((float)j.Osuus, Kaari, s));
+                p.MoveTo(Piste((float)j.Osuus, R - (j.Pitka ? 6.5f : 3.8f) * v));
+                p.LineTo(Piste((float)j.Osuus, R));
                 p.Stroke();
             }
-            // Napa.
-            p.fillColor = NeulanVari;
-            p.BeginPath(); p.Arc(napa, 3.2f * s, 0, 360); p.Fill();
         }
 
         void AsetaLuvut()
         {
-            float s = Mittakaava;
-            foreach (var l in Children().OfType<Label>().ToArray()) l.RemoveFromHierarchy();
-            foreach (var j in VuMittari.Jaot)
+            if (L <= 1 || K <= 1) return;
+            foreach (var l in Children().OfType<Label>().Where(l => l != vuTeksti).ToArray()) l.RemoveFromHierarchy();
+            float v = Mathf.Max(0.8f, K / 48f), fontti = Mathf.Clamp(7.5f * v, 7f, 11f);
+            foreach (var (osuus, teksti, punainen) in Luvut)
             {
-                if (j.Teksti == null) continue;
-                var paikka = Piste((float)j.Osuus, Kaari + 9, s);
-                var l = new Label(j.Teksti) { pickingMode = PickingMode.Ignore };
+                var paikka = Piste((float)osuus, Sade + 6.5f * v);
+                var l = new Label(teksti) { pickingMode = PickingMode.Ignore };
                 l.style.position = Position.Absolute;
-                l.style.left = paikka.x - 12 * s;
-                l.style.top = paikka.y - 6 * s;
-                l.style.width = 24 * s;
+                l.style.left = paikka.x - 12;
+                l.style.top = paikka.y - fontti * 0.7f;
+                l.style.width = 24;
                 l.style.unityTextAlign = TextAnchor.MiddleCenter;
-                l.style.fontSize = 8 * s;
-                l.style.color = j.Punainen ? Puna : Muste;
+                l.style.fontSize = fontti;
+                l.style.color = punainen ? Puna : Muste;
                 l.style.paddingLeft = l.style.paddingRight = l.style.paddingTop = l.style.paddingBottom = 0;
                 l.style.marginLeft = l.style.marginRight = l.style.marginTop = l.style.marginBottom = 0;
                 Insert(0, l);
             }
-            neula.style.left = NapaX * s - 1;
-            neula.style.top = (NapaY - Neula) * s;
-            neula.style.height = Neula * s;
+            vuTeksti.style.fontSize = fontti;
+            vuTeksti.style.left = 0; vuTeksti.style.right = 0;
+            vuTeksti.style.top = 0.66f * K;
+            // Neula akselilta kaaren yli; näkyvä osa alkaa alareunasta (akseli piilossa).
+            float pituus = Sade + 2f * v;
+            neula.style.width = Mathf.Max(1.2f, 1.3f * v);
+            neula.style.left = Napa.x - neula.style.width.value.value / 2f;
+            neula.style.top = Napa.y - pituus;
+            neula.style.height = pituus;
             piirrettyKulma = float.NaN;
         }
 

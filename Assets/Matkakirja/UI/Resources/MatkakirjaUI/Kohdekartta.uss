@@ -32,7 +32,7 @@
 .mk-nahtavyydet__otsikko {
     flex-grow: 1;
     font-size: 19.2px;
-    letter-spacing: 10px;
+    letter-spacing: 52.08px; /* web 10px */
     -unity-text-align: middle-center;
     color: #16130f;
     margin: 0 36px;

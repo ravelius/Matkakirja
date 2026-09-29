@@ -71,7 +71,8 @@ namespace Matkakirja.Natiivi
 
         readonly UiKerros kerros;
         readonly VisualElement juuri, kotelo, lasi, asteikko, nauha, viisari, linkkiRivi;
-        readonly Pistenaytto naytto;
+        /// <summary>Näytön rivit (Päätoimittajan katselmus 29.9.): 1. rivi aseman nimi, 2. rivi kaupunki · maa pienempänä.</summary>
+        readonly Pistenaytto naytto, naytto2;
         readonly RadioLamppu lamppu;
         readonly VisualElement keskio;
         readonly VuMittariNakyma vu;
@@ -95,11 +96,9 @@ namespace Matkakirja.Natiivi
         bool tauolla;
 
         /// <summary>Radion kotelo ja onko se näkyvissä (Pulu hyppää kotelon yläpuolelle, omistaja 28.9.2026).</summary>
-        public VisualElement Kotelo => codex != null && codex.resolvedStyle.display == DisplayStyle.Flex ? codex : kotelo;
+        public VisualElement Kotelo => kotelo;
 
         static RadioNakyma instanssi;
-        /// <summary>A/B: Codexin uusi radio (true) tai vanha kotelo (komento radio kuori uusi|vanha).</summary>
-        public static void Kuori(bool uusi) { CodexSallittu = uusi; instanssi?.MitoitaCodex(); }
         public bool Nakyvissa => nakyvissa;
 
         /// <summary>Virtakytkin: sulkee radiolinssin (LinssiUi asettaa SuljeLinssi).</summary>
@@ -155,9 +154,15 @@ namespace Matkakirja.Natiivi
             Rakenne.Tausta(lasi, Kuviot.Pysty("radio-lasi",
                 new Color(1, 1, 1, Pistenaytto.Peitto(0.10f, Color.white, lasiVari)),
                 new Color(0, 0, 0, Pistenaytto.Peitto(0.22f, Color.black, new Color32(0x6e, 0x5a, 0x40, 255)))));
-            naytto = new Pistenaytto(16, 2) { LiikeSallittu = () => !LinssiUi.VahennettyLiike() };
-            naytto.AddToClassList("mk-radio__pisteet");
-            lasi.Add(naytto);
+            // Kaksi riviä tasaisin sisämarginaalein: 16 merkin rivi täyttää leveyden isompana, 22 merkin rivi samalla
+            // leveydellä pienempänä (Pistenaytto sovittaa ruudukon laatikkoonsa kuvasuhde säilyen, vasen reuna tasattu).
+            var rivit = Rakenne.El("mk-radio__pisteet mk-radio__rivit", lasi, PickingMode.Ignore);
+            naytto = new Pistenaytto(16, 1) { LiikeSallittu = () => !LinssiUi.VahennettyLiike(), VasenTasaus = true };
+            naytto.AddToClassList("mk-radio__rivi1");
+            rivit.Add(naytto);
+            naytto2 = new Pistenaytto(22, 1) { LiikeSallittu = () => !LinssiUi.VahennettyLiike(), VasenTasaus = true };
+            naytto2.AddToClassList("mk-radio__rivi2");
+            rivit.Add(naytto2);
             Rakenne.El("mk-radio__lasikehys", lasi, PickingMode.Ignore);
             RadioPinnat.Lasi(Rakenne.El("mk-radio__lasipinta", lcdKehys, PickingMode.Ignore));
             var lamppualue = Rakenne.El("mk-radio__lamppualue", rivi, PickingMode.Ignore);
@@ -165,6 +170,10 @@ namespace Matkakirja.Natiivi
             lamppu.AddToClassList("mk-radio__lamppu");
             lamppu.tooltip = "Sulje radio";
             lamppualue.Add(lamppu);
+            // Pieni nimiö virtanapin alle (Päätoimittajan katselmus 29.9.: nappi ei kellu yksin).
+            var virta = Rakenne.Teksti("VIRTA", "mk-radio__virta", lamppualue);
+            virta.pickingMode = PickingMode.Ignore;
+            Kirjasimet.Aseta(virta, Kirjasin.KoneLihava);
 
             // Asteikko: paperi, viivat (Asteikkoviivat), nimirivi ja viisari.
             var asteikkoKehys = Rakenne.El("mk-radio__kehys mk-radio__asteikkokehys", keskio, PickingMode.Ignore);
@@ -189,10 +198,8 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(avaaSivu, Kirjasin.KoneLihava);
             avaaSivu.tooltip = "Avaa aseman oma sivu selaimessa";
 
-            RakennaCodex();
-            juuri.RegisterCallback<GeometryChangedEvent>(e => { Mitoita(e.newRect.width); MitoitaCodex(); });
+            juuri.RegisterCallback<GeometryChangedEvent>(e => Mitoita(e.newRect.width));
             kerros.TurvaMuuttui += Asettele;
-            kerros.TurvaMuuttui += MitoitaCodex;
             Asettele();
             RakennaPaikat();
             juuri.schedule.Execute(Tikki).Every(16);
@@ -264,6 +271,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             naytto.Pysayta();
+            naytto2.Pysayta();
             PysaytaLiike();
             if (juuri.resolvedStyle.display == DisplayStyle.None) { Sido(null); return; }
             // Käsiajo: USS-siirtymä pois, jottei se viivästä joka kehyksen arvoja.
@@ -290,22 +298,23 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             float ala = kerros.Reunat(LinssiUi.Kerros).w;
-            // Puhelimessa kotelo on alalaidassa kiinni ja puu jatkuu kotipalkin alle;
-            // leveällä ruudulla kotelo kelluu turva-alueen yläpuolella (web --turva-ala).
-            juuri.style.paddingBottom = levea ? ala : 0;
-            kotelo.style.paddingBottom = pinnat ? (levea ? 14f : 12f + ala) : levea ? 8f : 7.2f + ala;
+            // Paneeli turva-alueen sisällä kaikilla laitteilla (Päätoimittajan katselmus 29.9.: ennen puhelimessa puu jatkui
+            // kotipalkin alle tyhjänä): kelluu 8 pt turva-alueen yläpuolella, tasaiset 12 pt:n raot.
+            juuri.style.paddingBottom = ala + 8f;
+            kotelo.style.paddingBottom = pinnat ? (levea ? 14f : 12f) : 8f;
         }
 
         void Mitoita(float w)
         {
             if (float.IsNaN(w) || w <= 0) return;
             bool uusiLevea = w > 700;
-            int uusiPuoli = w > 700 ? 4 : w > 520 ? 3 : 2;
+            // Viritetty ±3 asemaa (puhelimessa ±2, jotta nimet mahtuvat isompina).
+            int uusiPuoli = w > 520 ? 3 : 2;
             if (uusiLevea != levea)
             {
                 levea = uusiLevea;
                 juuri.EnableInClassList("mk-radio--levea", levea);
-                lamppu.Halkaisija = levea ? 30f : 20f;
+                lamppu.Halkaisija = levea ? 20f : 15f;
                 Asettele();
             }
             if (uusiPuoli != perPuoli)
@@ -338,9 +347,10 @@ namespace Matkakirja.Natiivi
 
             foreach (RadioVaihe v in System.Enum.GetValues(typeof(RadioVaihe)))
                 juuri.EnableInClassList("mk-radio--" + v.ToString().ToLowerInvariant(), v == vaihe);
-            naytto.Himmea = vaihe == RadioVaihe.Hiljaa;
-            naytto.Lasi = vaihe == RadioVaihe.Virhe ? new Color32(0x3a, 0x14, 0x08, 255) : new Color32(0x22, 0x12, 0x04, 255);
-            naytto.NaytaTeksti(t.Rivi1 ?? "", t.Rivi2 ?? "");
+            naytto.Himmea = naytto2.Himmea = vaihe == RadioVaihe.Hiljaa;
+            naytto.Lasi = naytto2.Lasi = vaihe == RadioVaihe.Virhe ? new Color32(0x3a, 0x14, 0x08, 255) : new Color32(0x22, 0x12, 0x04, 255);
+            naytto.NaytaTeksti(t.Rivi1 ?? "");
+            naytto2.NaytaTeksti(t.Rivi2 ?? "");
             lamppu.Vaihe = vaihe;
             lamppu.tooltip = tauolla ? "Jatka lähetystä" : "Keskeytä lähetys";
 
@@ -670,7 +680,6 @@ namespace Matkakirja.Natiivi
 
         void Tikki()
         {
-            PaivitaCodex();
             if (sovitin != null && !ReferenceEquals(sovitin.Linssi, linssi)) Sido(sovitin.Linssi);
             if (nakyvissa && !testi && liike == Liike.Ei && Time.unscaledTime - asteikkoTarkistettu > 1f)
             {
@@ -1066,8 +1075,9 @@ namespace Matkakirja.Natiivi
                     p.strokeColor = new Color(Viiva.r, Viiva.g, Viiva.b, alfa);
                     p.Stroke();
                 }
-                Viivat(8f, 8f, 0.5f);
-                Viivat(40f, 15f, 0.85f);
+                // Kevyemmät jakoviivat (Päätoimittajan katselmus 29.9.): nimet ja viisari erottuvat.
+                Viivat(8f, 6f, 0.28f);
+                Viivat(40f, 11f, 0.5f);
                 p.BeginPath();
                 p.MoveTo(new Vector2(r.xMin, r.yMax - 0.5f));
                 p.LineTo(new Vector2(r.xMax, r.yMax - 0.5f));
