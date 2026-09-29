@@ -218,7 +218,8 @@ for (const ruutu of RUUDUT) {
       harmaa,
       nimi: tiedot?.querySelector('.kokoelma-esikatselu-nimi')?.textContent ?? '',
       selite: tiedot?.querySelector('.kokoelma-esikatselu-selite')?.textContent ?? '',
-      toimintoTeksti: tiedot?.querySelector('.linssi-aktivoi')?.textContent ?? '',
+      // Kortissa ei ole enää Aktivoi-nappia (29.9.2026): toiminto on napautettu rivi.
+      toimintoTeksti: document.querySelector('#linssi-valikko .kokoelma-rivi.esikatselu')?.textContent.trim() ?? '',
       valmiillaRivilla: Boolean(document.querySelector('#linssi-valikko button[data-linssi="testilinssi"]')),
     };
   });
@@ -281,7 +282,7 @@ for (const ruutu of RUUDUT) {
     return {
       ladattu: Boolean(linssi), ennen, valmiillaRivilla: Boolean(nappi), merkki, hiomassaRivi,
       jalkeen: valmistuneet(game),
-      aktivoi: Boolean(document.querySelector('.linssi-tiedot .linssi-aktivoi')),
+      aktivoi: /Aktivoi/.test(document.querySelector('#linssi-valikko .kokoelma-rivi.esikatselu')?.textContent ?? ''),
     };
   });
   tieto(`${ruutu.nimi} · valmis`, JSON.stringify(valmis));
