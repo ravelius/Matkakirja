@@ -1,23 +1,23 @@
-# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 14.1x: omistaja hyväksyi, merge-pyyntö Natiivisepällä)
+# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 ilta: erä 3 "linna auki" työn alla)
 
 Olet **Linnanrakentaja (Opus, max)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
-moottori "dioraama", tila hiomassa. Päätoimittaja (local_8d8ebf72…) johtaa.
+moottori "dioraama", tila hiomassa. Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
 
 Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakentaja-tyo-20260929`.
 
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-c.md`** (uusin tila ja seuraavat askeleet) ja
-   `…-20260929-b.md` (erät 2 ja 2b, käytännöt).
-3. Tarvittaessa pelin repon (`/Users/Shared/Claude/wt/linnanrakentaja-keittio`, haara `linnanrakentaja-keittio-2b`) speksit
-   `docs/raportit/dioraama-rajapinnat-era2b-20260929.md` ja `…-era2-20260929.md`.
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-d.md`** (uusin tila: erä 3) ja
+   `…-20260929-c.md` / `…-b.md` (keittiö, käytännöt).
+3. Erä 3:n speksi pelin repon worktreessä `/Users/Shared/Claude/wt/linnanrakentaja-linna-3` (haara
+   `linnanrakentaja-linna-3`): `docs/raportit/dioraama-rajapinnat-era3-20260929.md`.
 
-## Kärki (katso luovutuksen -c osio "TILA")
+## Kärki (katso luovutuksen -d osio "Seuraavaksi")
 
-1. **Merge-pyyntö on Natiivisepällä:** proto `linnanrakentaja/keittio` 573ccecc. Korjaa löydökset tähän haaraan.
-2. #3621 ämpärissä → simulaattoriajo `PEILI=pois` (Julkaisijan NYT), ja tulos Natiivisepälle.
-3. Erä 3: linna auki (8 tilaa, yleisnäkymän yksityiskohdat, tilojen nimet luovutuksessa -c).
+1. Erä 3: tila-agenttien tulokset kokoon, käännös (Julkaisijan NYT) ja simulaattorikuvat `ajo-linna.sh`:lla.
+2. Kuvat Päätoimittajalle omistajaa varten (omistaja katsoo ennen ääniä; äänitilaus pidossa).
+3. Keittiö on BUILD 51:ssä (valmis).
 
 ## Säännöt, jotka opittiin
 
