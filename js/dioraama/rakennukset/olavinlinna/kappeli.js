@@ -139,7 +139,8 @@ export const TILA = {
     kohde: [0, 9.8, -20], atsimuutti: 165, korkeus: 18, etaisyys: 28, fov: 38, aukko: 0.8,
   },
   kierto: { atsimuutti: [-40, 40], korkeus: [8, 45], etaisyys: [0.7, 1.4] },
-  pulu: { laskeutuminen: [-1.6, 10.35, -20.2], taulupuoli: 'oikea' }, // penkin selkänojan päälle
+  // Pulu pulpetin yläreunalle (30.9.): penkin selkänojalla se peitti vihjeen 2 kaiverruksen pystykuvassa (x 0,33 vs 0,30).
+  pulu: { laskeutuminen: [PULPETTI[0], LATTIA + 1.12, PULPETTI[2] + 0.05], taulupuoli: 'oikea' },
   taulu: TAULU,
   // Elävä linna (29.9.): Kirkkotornin kylki kappelin kerroksessa kameran puolella (kynttilänvalo ikkunoissa).
   elava: { kohde: [1.9, 11.5, -12.8], sade: 6 },
