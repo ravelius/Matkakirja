@@ -689,7 +689,9 @@ namespace Matkakirja.Natiivi
         static Texture2D Tekstuuri(byte[] rgba, int leveys, int korkeus)
         {
             var t = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, true) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear };
-            t.LoadRawTextureData(rgba);
+            // Vain pohjataso annetaan (w·h·4 tavua): LoadRawTextureData vaatisi koko mip-ketjun (Laitetestaaja 1.0.53:
+            // "not enough data provided"). SetPixelData täyttää tason 0 ja Apply(true) laskee mipit.
+            t.SetPixelData(rgba, 0);
             t.Apply(true, true);
             return t;
         }
