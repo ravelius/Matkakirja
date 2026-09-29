@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 10.2x)
+# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 16.1x, tilinvaihto)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omia worktreitä ei ole (tervetulo poistettu merge-pyynnön jälkeen;
-  haara linssiseppa/pulun-tervetulo 5b3acd53 Natiivisepällä 1.0.45:tä varten).
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omia worktreitä ei ole, ja kaikki erät ovat masterissa (cbf78690,
+  BUILD 50).
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13 ja 1.0.40:n sivuhaara natiiviseppa/juna-1040.
 
 Lue:
@@ -13,40 +13,17 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260929-b.md**: astroselite on juna/b13:ssa. Pulun taulu ja LISÄYS 6 ovat
-  haarassa linssiseppa/pulun-taulu 9750340f, ja niiden uusintakierros ja merge-pyyntö ovat kesken. LisaaRivi on
-  Linssiseppä 2:n avaruuskävelylle. Aiemmat luovutukset: -20260929.md (Cupola 3) ja -20260928-u.md.
+- **docs/raportit/viesti-linssiseppa-luovutus-20260929-c.md** (UUSIN): kärki, haarat ja SHA:t, avoimet ja työkalut.
+  Aiemmat: -20260929-b.md (taulu), -20260929.md (Cupola 3).
 - docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)
 - docs/raportit/iss-realismi-suunnitelma-20260928.md (ISS-realismin kaavat, vakiot, datalähteet ja tila)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys (tila 29.9. klo 10.2x):**
-0. Pulun ISS-tervetulo (web #3575) on MERGE-PYYNNÖSSÄ Natiivisepällä 1.0.45:een: proto linssiseppa/pulun-tervetulo 5b3acd53.
-   Se vaatii natiivi-ui/avaukset 3621d00d:n (Ponnahdus). Raportti, mitat ja poikkeamat ovat tiedostossa
-   docs/raportit/pulu-tervetulo-natiivi-20260929.md. Laitekierros 9/9 PASS iPhonella ja iPadilla, ja kuvaparit ovat kansiossa
-   proto-3d/lokit/linssiseppa-laite-20260929-tervetulo/. Seuraa mergeä ja vastaa korjauspyyntöihin.
-   Ajo: tyokalut/linssiseppa-ajot/ajo-tervetulo.sh, ajo-tervetulo-web.mjs ja koosta_tervetulo.py. Testikomento on
-   `ui linssi tervetulo [tila|aloita|ohita|pura|nollaa]`. Laiteajossa kertoja on oltava päällä (`puhe paalle`), muuten tervetulo
-   on mykistetty.
-   Natiivi-UI:n haara natiivi-ui/ponnahdus-herata 6c3df126 tekee Ponnahduksesta itseherättävän ja jättää Pulun kuplat
-   kuvan taakse; se yhdistyy ilman konfliktia. Kun se on masterissa, omat Ruudunpaivitys.Herata-kutsut PulunTauluNakymasta
-   ja Kuvanakymasta voi poistaa (ne eivät haittaa).
-   TILA 29.9. klo 11.0x: tervetulo ja linssiesittelyt ovat BUILD 45:ssä (master 6dc1b7cc), ja Laitetestaajan savuke on PASS.
-   Laitetestaajan löydös: tervetulo ei lähtenyt Äänimaisema pois -tilassa. Syy oli se, että natiivin Aanet mykisti Pulun
-   puheen Äänimaiseman mukana (web ei mykistä). Korjaus proto linssiseppa/pulu-aani-kertoja 4fb54bba (Aanet.Taso(Puhe) = Kertoja +
-   Pulun liuku, tervetulon mykistysehto sama; sovittu Natiivi-UI:n kanssa) on MERGE-PYYNNÖSSÄ seuraavaan junaan.
-1. Pulun taulu ja LISÄYS 6 ovat MASTERISSA (9750340f, master 634be415).
-2. Taulun SHA on kerrottu Linssiseppä 2:lle 29.9. klo 10.2x.
-2b. LINSSIEN ESITTELYT (Päätoimittajan erä "Linssit- ja Aarteet-näkymät", omistaja 29.9. loki 09.12/09.14) on MERGE-PYYNNÖSSÄ:
-   proto linssiseppa/linssi-esittelyt 3ef58ac6 (d42d11d5 + Kartta-testien lähdelista). Siinä ovat LinssiTiedot.Esittely ja Havainnekuva (moduulin JSON ensin, sitten
-   LinssiEsittelyt-taulu) sekä kultainen linssi-esittelyt.json webin #3611:stä. Näkymät tekee Natiivi-UI (natiivi-ui/pillerivalikko,
-   Linssivalitsin.Pilleri.cs), sovittu Natiivi-UI:n ja Päätoimittajan kanssa. Esikatselu lukee Esittely ?? Lyhyt ja
-   Havainnekuva ?? varustekuva. KESKEN: iPhonen web | natiivi -kuvapari, kun Pelikoodarin webmalli on pushattu (nyt committoimatta
-   wt/pelikoodari-pillerivalikko). Jos #3611:n teksti muuttuu, tee kultainen uudelleen (tee-linssi-esittelyt.mjs).
-3. Cupola 2 -kuvien alfa 252–254 korjataan cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön. Kohta 4 (BMNG, Kuu,
-   tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
+**Järjestys:** luovutus -20260929-c. Kaikki 29.9. erät (tervetulo, linssiesittelyt, pulu-aani-kertoja ja taulu) ovat
+masterissa. Merge-pyyntöjä tai ajoja ei ole auki. Avoimet ovat pieniä (#3611:n teksti, turhat Herata-kutsut ja kysymys
+kuvaparista Natiivi-UI:lle). Seuraava erä tulee Päätoimittajalta.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
