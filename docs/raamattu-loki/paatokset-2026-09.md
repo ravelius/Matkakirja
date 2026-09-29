@@ -9247,3 +9247,7 @@ Omistaja 29.9.2026: 1) "isoisän matkakirjaluenta ei kuulu" — juurisyy Natiivi
 ## OMISTAJA: JOET RAUHALLISEMMIKSI, OHUEMMIKSI, EI JÄRVIEN PÄÄLLE (29.9.2026 klo 19.06)
 
 Omistaja 29.9.2026 jokipolton vientikuvista: "liian hektisesti piirretyiltä sekä liian paksuilta. Ja yhdessä kuvassa joki menee järven päältä... Voisiko nuo tarkemmat jokikuvat piirtää vain omalle tasolleen. Voi olla vaara, että ne hyppäävät liikaa." Linja: jokien yleistys ja pehmennys zoomin mukaan, ohuempi viiva (pääjoki hieman vahvempi), jokiviivat leikataan järvipolygoneilla, tarkemmat sivujoet vain syville tasoille, sama pääjoki samassa kohdassa kaikilla tasoilla (ei hyppimistä). Koepoltto ja kuvaparit (myös tasosiirtymä) omistajalle ennen täyttä polttoa ja vientiä. Isoisän luenta toimi — omistajan äänenvoimakkuus oli nollissa.
+
+## OMISTAJA: PULUN ÄÄNI POIS ISS-KOHTAUKSESTA (29.9.2026 klo 19.07)
+
+Omistaja 29.9.2026: "Ota pulun ääni toistaiseksi kokonaan pois ISS-kohtauksesta." Astronautin kameran tervetulo ja ISS-kyyti ilman Pulun puhetta (web + natiivi); Pulu näkyy ulkona avaruuskävelyllä mutta ei puhu. Tervetulon lyhennetty tekstivedos (A1/A2) jää hyllyyn, ääntä ei generoida.
