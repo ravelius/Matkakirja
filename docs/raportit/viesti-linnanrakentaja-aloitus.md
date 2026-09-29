@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 10, erät 2 ja 2b tehty, A|B-vertailu kesken)
+# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 13.4x: omistaja valitsi B + tummemman valon)
 
 Olet **Linnanrakentaja (Opus, max)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama", tila hiomassa. Päätoimittaja (local_8d8ebf72…) johtaa.
@@ -8,19 +8,18 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-b.md`** — omistajan linjaus (vapaa 3D, A|B, 3D-hahmot),
-   haarat, tila, avoimet asiat ja käytännöt.
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-c.md`** (uusin tila ja seuraavat askeleet) ja
+   `…-20260929-b.md` (erät 2 ja 2b, käytännöt).
 3. Tarvittaessa pelin repon (`/Users/Shared/Claude/wt/linnanrakentaja-keittio`, haara `linnanrakentaja-keittio-2b`) speksit
    `docs/raportit/dioraama-rajapinnat-era2b-20260929.md` ja `…-era2-20260929.md`.
 
 ## Kärki
 
-1. **Kolmas käännös- ja simulaattoriajo** (Julkaisijan NYT): proto `linnanrakentaja/keittio` kärki.
-   - Ajo iPadilla ja iPhonella.
-   - **Omistajan A|B-kuvapari** (kuvat `9-pinnat-a/b` samasta hetkestä) Päätoimittajalle.
-2. Varmista samalla natiivista: valot ja varjot, 3D-hahmojen nivelet, 3D-liekki ja kaarilento. Pienennä tekstuurimuisti (98 Mt).
-3. Kun #3601 on mainissa: rebase `linnanrakentaja-keittio-2b` (`--onto origin/main 486727b20`) ja uusi PR.
-   Protoon merge-pyyntö Natiivisepälle vasta ämpärin ja omistajan vertailun jälkeen.
+1. **Seitsemäs käännös ja ajo** (Julkaisijan NYT): proto `linnanrakentaja/keittio` 573ccecc (päävalokorjaus).
+   - Tarkista, että keittiö on tumma ja tunnelmallinen ja ikkunan läikkä näkyy.
+   - Sitten kuvapari Päätoimittajalle.
+2. Päätoimittajan OK:n jälkeen **merge-pyyntö Natiivisepälle** (sisältö luovutuksessa -c).
+3. Erä 3: linna auki (8 tilaa, yleisnäkymän yksityiskohdat).
 
 ## Säännöt, jotka opittiin
 
