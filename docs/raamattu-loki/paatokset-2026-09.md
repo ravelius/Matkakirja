@@ -9195,3 +9195,7 @@ Uuden tilin Päätoimittaja local_593b89a1-2514-4d74-b956-2a73db862382 (Opus xhi
 ## OMISTAJA: MATKALAUKKU JA ASETUKSET UUSIKSI, YLÄPALKIN KULMAT (29.9.2026 klo 17.11)
 
 Omistaja 29.9.2026 (1.0.50 iPhonella): 1) MATKAKIRJA-logo ja pilleri jäivät pyöristettyjen kulmien taakse → keskemmälle (turva-alue + kulmasäde). 2) Matkalaukun etusivulta pois äänenvoimakkuussäätimet, Pieni liike, Kuljettu reitti ja Ehdota; ne ja Offline Asetuksiin. 3) Retkikunta Uusi peli -napin viereen. 4) Linssit ja Aarteet vierekkäin. 5) Asetuksiin Kehittäjä-nappi (avaa nykyisen salasanalukon, ei avointa kytkintä). 6) Näytä huntu -nappi Asetukset-napin taakse. 7) Asetukset leveämmäksi äänitasojen säätöä varten, Äänet-napit pois (liukusäätimet jäävät). Reititys: Natiivi-UI (natiivi) ja Pelikoodari (web) rinnakkain, sama asettelu.
+
+## OMISTAJA: MAX-EFFORT VAIN TARPEESEEN, SESSIONIMISSÄ MALLI JA EFFORT, IPADIN MAAILMA-NAPPI POIS (29.9.2026 klo 17.13)
+
+Omistaja 29.9.2026 klo 17.1x–17.2x: 1) sessioiden nimien perään suluissa malli ja effort (esim. Natiiviseppä (Opus, high)); 2) Opuksilla max-effort vain kun oikeasti tarpeen — kaikki Opus-roolit high oletuksena, max vain yksittäiseen vaikeaan juurisyyhyn ja heti takaisin (Natiiviseppä, Linssiseppä ja Linnanrakentaja laskettu max → high); 3) iPadilta pois Maailma-nappi kartan päältä (Natiivi-UI natiiviin, Pelikoodari webin iPad-asetteluun, jos sama nappi).
