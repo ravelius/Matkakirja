@@ -994,7 +994,6 @@ const MODULES = [
   'js/packs/maakunnat-luonnehdinnat.js',
   'js/packs/maakunnat-pulu.js',
   'js/packs/maakunnat-nimet.js',
-  'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
    * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,
@@ -1008,6 +1007,9 @@ const MODULES = [
    * listalla vasta tässä.
    */
   'js/fokusnosto.js',
+  // Maakunnat-välilehden moduuli (data yllä) vasta nostokortin jälkeen:
+  // maakunnan kortti käyttää nostokortin kuvia ja tyyliä (#3583).
+  'js/karttatyokalu-maakunnat.js',
   /*
    * Syvennystarinat kartalle (yhtenäinen kohdemalli): data ensin,
    * kerroskytkentä perässä. js/syvennys.js tuo fokusvirran,
