@@ -122,6 +122,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-pikkuseloste__teksti", laatikko), Kirjasin.Luku);
             Rakenne.Nappi("×", "mk-pikkuseloste__sulje", Sulje, laatikko);
             laatikko.style.opacity = 0;
+            asemoitu = false;
             laatikko.RegisterCallback<GeometryChangedEvent>(Asemoi);
             // Sulkija vasta seuraavalla kierroksella: avaava napautus ei saa sulkea heti.
             var l = laatikko;
@@ -152,15 +153,19 @@ namespace Matkakirja.Natiivi
             float vasen = Mathf.Clamp(alku.x + a.width / 2f - w / 2f, marginaali, Mathf.Max(marginaali, W - w - marginaali));
             laatikko.style.top = yla;
             laatikko.style.left = vasen;
-            laatikko.style.opacity = 1;
+            // Avaus ankkurin suunnasta ensimmäisessä asettelussa (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot).
+            if (!asemoitu) { asemoitu = true; Ponnahdus.Avaa(laatikko, a.center); }
         }
+
+        static bool asemoitu;
 
         public static void Sulje()
         {
             if (ohi != null) juuri?.panel?.visualTree.UnregisterCallback(ohi, TrickleDown.TrickleDown);
             ohi = null;
             ankkuri?.RemoveFromClassList("mk-auki");
-            laatikko?.RemoveFromHierarchy();
+            var l = laatikko;
+            if (l != null) { l.UnregisterCallback<GeometryChangedEvent>(Asemoi); Ponnahdus.Sulje(l, () => l.RemoveFromHierarchy()); }
             laatikko = ankkuri = null;
         }
     }

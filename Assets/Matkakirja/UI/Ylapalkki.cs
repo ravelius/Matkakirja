@@ -197,24 +197,36 @@ namespace Matkakirja.Natiivi
 
         void VaihdaElamaSelite()
         {
-            bool auki = elamaSelite.style.display != DisplayStyle.Flex;
-            elamaSelite.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            bool auki = !elamaSeliteAuki;
             elamaSeliteAjastin?.Pause();
-            if (!auki) return;
+            if (!auki) { SuljeElamaSelite(); return; }
+            elamaSeliteAuki = true;
             elamaSelite.BringToFront();
             AsetteleElama();
-            elamaSeliteAjastin = elamaSelite.schedule.Execute(() => elamaSelite.style.display = DisplayStyle.None).StartingIn(7000);
+            // Avaus ja sulku animoiden palkin suunnasta (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot).
+            Ponnahdus.Avaa(elamaSelite, elama.worldBound.center);
+            elamaSeliteAjastin = elamaSelite.schedule.Execute(SuljeElamaSelite).StartingIn(7000);
+        }
+
+        bool elamaSeliteAuki;
+
+        void SuljeElamaSelite()
+        {
+            if (!elamaSeliteAuki) return;
+            elamaSeliteAuki = false;
+            elamaSeliteAjastin?.Pause();
+            Ponnahdus.Sulje(elamaSelite);
         }
 
         /// <summary>Web: miniselite sulkeutuu napautuksella mihin tahansa (palkin oma napautus hoitaa itsensä).</summary>
         void TarkistaElamaSelite()
         {
-            if (elamaSelite.style.display != DisplayStyle.Flex || elama.panel == null) return;
+            if (!elamaSeliteAuki || elama.panel == null) return;
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;
             var ruutu = osoitin.position.ReadValue();
             var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            if (!elama.worldBound.Contains(pp)) { elamaSelite.style.display = DisplayStyle.None; elamaSeliteAjastin?.Pause(); }
+            if (!elama.worldBound.Contains(pp)) SuljeElamaSelite();
         }
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
 
@@ -709,7 +721,7 @@ namespace Matkakirja.Natiivi
         {
             bool naytetaan = rahatonVuoroja != null && !matkaPaattyi && nakyy;
             elama.style.display = naytetaan ? DisplayStyle.Flex : DisplayStyle.None;
-            if (!naytetaan) { elamaAjastin.Pause(); elamaSelite.style.display = DisplayStyle.None; return; }
+            if (!naytetaan) { elamaAjastin.Pause(); elamaSeliteAuki = false; Ponnahdus.Lopeta(elamaSelite); elamaSelite.style.display = DisplayStyle.None; return; }
             elamaAjastin.Resume();
             int n = Mathf.Clamp(rahatonVuoroja.Value, 0, ElamaLohkoja);
             for (int i = 0; i < elamaLohkot.childCount; i++)
