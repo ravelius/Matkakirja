@@ -8,6 +8,7 @@
 //   _Mitat    x = kalotin kulmasäde (rad), y = kalotin säde maan keskipisteestä (m), z = pikseliä pisteelle,
 //             w = kuuluvuussäteen kulma (rad)
 //   _Renkaat0, _Renkaat1  enintään 8 renkaan osuudet 0…1 (< 0 = ei rengasta)
+//   _Voimat0, _Voimat1    renkaiden voimat 0…1 (Mastot.VuRenkaat: äänen isku, omistaja 28.9.), kertoo alfan
 // Horisontin takana (pinnan normaali poispäin kamerasta) ei piirretä; ZTest Always, jottei liioiteltu maasto peitä.
 Shader "Matkakirja/Radiorengas"
 {
@@ -34,7 +35,7 @@ Shader "Matkakirja/Radiorengas"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _BaseColor;
-                float4 _Keskus, _Pohja, _Ita, _Pohjoinen, _Mitat, _Renkaat0, _Renkaat1;
+                float4 _Keskus, _Pohja, _Ita, _Pohjoinen, _Mitat, _Renkaat0, _Renkaat1, _Voimat0, _Voimat1;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -50,13 +51,13 @@ Shader "Matkakirja/Radiorengas"
                 return o;
             }
 
-            half Rengas(float th, float fw, float osuus, float px)
+            half Rengas(float th, float fw, float osuus, float voima, float px)
             {
                 if (osuus < 0.0) return 0.0;
                 float d = abs(th - osuus * _Mitat.w) / fw;               // pikseleinä
                 half viiva = saturate(1.0 * px + 0.5 - d);                // 2 pt: puolikas 1 pt
                 half hehku = 0.18 * saturate(3.0 * px + 0.5 - d);         // 6 pt tasaisella 18 %:lla: puolikas 3 pt
-                return max(viiva, hehku) * 0.55 * (1.0 - osuus);
+                return max(viiva, hehku) * 0.55 * saturate(voima) * (1.0 - osuus);
             }
 
             half4 frag(Vali i) : SV_Target
@@ -70,14 +71,14 @@ Shader "Matkakirja/Radiorengas"
                 if (dot(n, normalize(_WorldSpaceCameraPos - i.maailma)) < 0.0) discard;
                 float px = _Mitat.z;
                 half p = 1.0;
-                p *= 1.0 - Rengas(th, fw, _Renkaat0.x, px);
-                p *= 1.0 - Rengas(th, fw, _Renkaat0.y, px);
-                p *= 1.0 - Rengas(th, fw, _Renkaat0.z, px);
-                p *= 1.0 - Rengas(th, fw, _Renkaat0.w, px);
-                p *= 1.0 - Rengas(th, fw, _Renkaat1.x, px);
-                p *= 1.0 - Rengas(th, fw, _Renkaat1.y, px);
-                p *= 1.0 - Rengas(th, fw, _Renkaat1.z, px);
-                p *= 1.0 - Rengas(th, fw, _Renkaat1.w, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat0.x, _Voimat0.x, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat0.y, _Voimat0.y, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat0.z, _Voimat0.z, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat0.w, _Voimat0.w, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat1.x, _Voimat1.x, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat1.y, _Voimat1.y, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat1.z, _Voimat1.z, px);
+                p *= 1.0 - Rengas(th, fw, _Renkaat1.w, _Voimat1.w, px);
                 half a = 1.0 - p;
                 if (a < 0.002) discard;
                 return half4(_BaseColor.rgb * a, a);

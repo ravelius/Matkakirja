@@ -76,7 +76,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(k.GetProperty("ajat").GetProperty("siirtyma").GetDouble(), RadioLinssi.SiirtymaMs);
             Oleta.Sama(k.GetProperty("ajat").GetProperty("lukittuminen").GetDouble(), RadioLinssi.LukittuminenMs);
             Oleta.Sama(k.GetProperty("ristihaivytys").GetDouble(), RadioLinssi.RistihaivytysS);
-            Oleta.Sama(k.GetProperty("lukitus").GetDouble(), RadioLinssi.LukituksenHaivytysS);
+            // Lukitus poikkeaa webistä (0,9 s) omistajan päätöksellä 28.9.2026 ("asema selkiytyy vähitellen"): 2,2 s;
+            // webin vastine Siirtosepälle.
+            Oleta.Sama(0.9, k.GetProperty("lukitus").GetDouble(), "web");
+            Oleta.Sama(2.2, RadioLinssi.LukituksenHaivytysS, "natiivi");
             Oleta.Sama(k.GetProperty("aikakatkaisu").GetDouble(), RadioLinssi.AikakatkaisuMs);
             Oleta.Sama(k.GetProperty("fontti").GetString(), RadioAineisto.PistefontinMerkit, "pistefontti");
             for (double x = 0; x <= 1; x += 0.1)
@@ -100,6 +103,28 @@ namespace Matkakirja.Linssit.Testit
             "{\"id\":\"SWE\",\"iso3\":\"SWE\",\"nimi\":\"P1\",\"url\":\"https://sr/p1\",\"sivu\":\"https://sverigesradio.se/p1\",\"luokka\":\"kielletty\"}," +
             "{\"id\":\"NOR\",\"iso3\":\"NOR\",\"nimi\":\"NRK P1\",\"url\":\"https://nrk/p1\",\"luokka\":\"kielletty\"}]}"),
             Paketti("radiot.json"), Paketti("kaupungit-radio.json"));
+
+        // KAIKKI MAAILMAN MAAT (omistaja 28.9.2026): aseman oma kaupunki (kaupunki, lat, lon) korvaa laudan aluesolmun,
+        // mutta lähellä oleva laudan kaupunki (≤ 60 km) ja pelaajan oma kaupunki säilyvät; laudaton maa saa aseman kaupungin.
+        [Testi] static void AsemanKaupunkiKorvaaAluenimen()
+        {
+            var a = RadioAineisto.Lue(MiniJson.Jasenna("{\"alkiot\":[" +
+                "{\"id\":\"COD\",\"iso3\":\"COD\",\"nimi\":\"RTNC\",\"url\":\"https://rtnc/live\",\"luokka\":\"epaselva\",\"kaupunki\":\"Kinshasa\",\"lat\":-4.32,\"lon\":15.31}," +
+                "{\"id\":\"ITA\",\"iso3\":\"ITA\",\"nimi\":\"Rai Radio 1\",\"url\":\"https://rai/r1\",\"luokka\":\"sallittu\",\"kaupunki\":\"Rooma\",\"lat\":41.9,\"lon\":12.5}," +
+                "{\"id\":\"MNG\",\"iso3\":\"MNG\",\"nimi\":\"Mongolian Radio\",\"url\":\"https://mnb/r1\",\"luokka\":\"epaselva\",\"kaupunki\":\"Ulan Bator\",\"lat\":47.92,\"lon\":106.92}]}"),
+                null, MiniJson.Jasenna("{\"alkiot\":[" +
+                "{\"id\":\"kongo\",\"nimi\":\"Kongo\",\"maa\":\"COD\",\"lat\":-1.5,\"lon\":23.0}," +
+                "{\"id\":\"rooma\",\"nimi\":\"Rooma\",\"maa\":\"ITA\",\"lat\":41.89,\"lon\":12.49}," +
+                "{\"id\":\"venetsia\",\"nimi\":\"Venetsia\",\"maa\":\"ITA\",\"lat\":45.44,\"lon\":12.33,\"aloitus\":true}]}"));
+            var n = a.RadionKaupungit();
+            Oleta.Tosi(n.Contains("radio:COD") && !n.Contains("kongo"), "Kongo → Kinshasa: " + string.Join(",", n));
+            Oleta.Tosi(n.Contains("rooma") && !n.Contains("radio:ITA") && !n.Contains("venetsia"), "Rooman laudan kaupunki (alle 60 km)");
+            Oleta.Tosi(n.Contains("radio:MNG"), "laudaton maa mukaan");
+            Oleta.Sama("Kinshasa", a.Kaupunki("radio:COD").Nimi);
+            Oleta.Sama(MastoKoko.Keski, Mastot.Koko(a.Kaupunki("radio:MNG")), "aseman kaupunki keskikokoisena");
+            var oma = a.RadionKaupungit("venetsia");
+            Oleta.Tosi(oma.Contains("venetsia") && !oma.Contains("rooma"), "pelaajan oma kaupunki säilyy");
+        }
 
         [Testi] static void KokoelmaEnsisijainenJaLuokat()
         {
@@ -338,8 +363,42 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
             Oleta.Sama(l.Tila.Naytto.ToUpperInvariant(), l.Tila.Rivi1);
             Oleta.Sama("HELSINKI · SUOMI", l.Tila.Rivi2, "soidessa [asema, KAUPUNKI · MAA]");
-            Aja(l, y, 1);
+            Aja(l, y, RadioLinssi.LukituksenHaivytysS);
             Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi voimakkuus: " + v.V);
+        }
+
+        sealed class ValeEfektit : IRadioEfektit
+        {
+            public readonly List<RadioEfekti> Soitetut = new List<RadioEfekti>();
+            public float K;
+            public void Soita(RadioEfekti e, float v) => Soitetut.Add(e);
+            public float Kohina { set => K = value; }
+        }
+
+        // Pelikoodarin äänet (29.9.2026): kytkin ja lämpeneminen avatessa, lukittuminen asemalle, kohina vedon välissä, kytkin pois.
+        [Testi] static void TehosteetKytkimestaLukitukseen()
+        {
+            var y = new ValeYmparisto();
+            var v = new ValeVirta();
+            var k = new ValeRadioKartta();
+            var e = new ValeEfektit();
+            var l = new RadioLinssi(S(), v, new ValeViritin(), k, Fontti()) { Efektit = e };
+            l.Avaa(y);
+            Oleta.Tosi(e.Soitetut.SequenceEqual(new[] { RadioEfekti.KytkinPaalle, RadioEfekti.Lampeneminen }), "avaus: " + string.Join(",", e.Soitetut));
+            k.Napauta("helsinki");
+            v.Kuuluu = true;
+            Aja(l, y, 3.5);
+            Oleta.Sama(1, e.Soitetut.Count(x => x == RadioEfekti.Lukittuminen), "lukittuminen kerran");
+            l.VetoAlkaa();
+            l.Veto(0.25);
+            Oleta.Tosi(e.K > 0.5f, "asemien välissä kohina: " + e.K);
+            l.Veto(0);
+            Oleta.Tosi(e.K < 1e-4f, "asemalla ei kohinaa");
+            l.Veto(0.2);
+            l.VetoLoppuu("helsinki");
+            Oleta.Sama(0f, e.K, "irrotus hiljentää kohinan");
+            l.Sulje();
+            Oleta.Sama(RadioEfekti.KytkinPois, e.Soitetut[e.Soitetut.Count - 1], "sulku");
         }
 
         [Testi] static void ViivaimenVetoRahinallaJaLukitus()
@@ -366,7 +425,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!w.Soi, "rahina väistyy");
             Aja(l, y, 1 / 60.0);
             Oleta.Tosi(Math.Abs(v.V - kesken) < 0.05, $"ei hyppyä: {kesken} → {v.V}");
-            Aja(l, y, 1);
+            Aja(l, y, RadioLinssi.LukituksenHaivytysS);
             Oleta.Tosi(Math.Abs(v.V - RadioLinssi.OletusAani) < 1e-4, "täysi taas");
             // Irrotus toiselle asemalle: tavallinen viritys, rahina jatkuu.
             l.VetoAlkaa();

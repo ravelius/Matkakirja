@@ -45,6 +45,13 @@ namespace Matkakirja.Linssit.Radio
         public string Sivu;
         /// <summary>Vanha äänite (kielletty tai lähetyksen varareitti), null jos ei ole.</summary>
         public string VaraUrl;
+        /// <summary>
+        /// Aseman kaupunki (kokoelmat/radiot.json kaupunki, lat, lon; KAIKKI MAAILMAN MAAT, omistaja 28.9.2026): yhtiön
+        /// kotipaikka tai pääkaupunki. null = ei tietoa (vanha paketti) → laudan kaupunki kuten ennen.
+        /// </summary>
+        public string Kaupunki;
+        public double Lat = double.NaN, Lon = double.NaN;
+        public bool OnPaikka => Kaupunki != null && !double.IsNaN(Lat) && !double.IsNaN(Lon);
     }
 
     public sealed class RadioKaupunki
@@ -58,6 +65,8 @@ namespace Matkakirja.Linssit.Radio
         public bool AsukkaatAlue;
         /// <summary>Onko sisältöpaketin skeemassa asukkaat-kenttä (1.38+); vanhassa paketissa masto on Keski.</summary>
         public bool AsukkaatSkeemassa;
+        /// <summary>Aseman oma kaupunki (Asema.Kaupunki), ei laudan kaupunki: tunnus "radio:ISO3".</summary>
+        public bool Radiopaikka;
     }
 
     public sealed class RadioAineisto
@@ -133,6 +142,8 @@ namespace Matkakirja.Linssit.Radio
                         Toimii = MiniJson.Kentta(r, "toimii") is bool t ? t : (bool?)null,
                         Sivu = MiniJson.Teksti(r, "sivu"),
                         VaraUrl = MiniJson.Teksti(Ob(MiniJson.Kentta(r, "varaAani")), "url"),
+                        Kaupunki = MiniJson.Teksti(r, "kaupunki"),
+                        Lat = MiniJson.Luku(r, "lat") ?? double.NaN, Lon = MiniJson.Luku(r, "lon") ?? double.NaN,
                     };
                     // Kanava = toimiva rivi pienimmällä järjestyksellä (tasapelissä ensimmäinen); toimimaton
                     // (toimii false) väistyy toimivan tieltä. Muut rivit vaihtoehdoiksi.
@@ -166,6 +177,17 @@ namespace Matkakirja.Linssit.Radio
                     AsukkaatAlue = MiniJson.Totuus(k, "asukkaatAlue"),
                     AsukkaatSkeemassa = k.ContainsKey("asukkaat"),
                 });
+
+            // Aseman omat kaupungit (omistaja 28.9.2026: kaikki maailman maat, aluenimet kuten Sahara ja Kongo pois):
+            // jokaiselle kanavalle, jolla on paikka, radiokaupunki "radio:ISO3". Laudan kaupunki kelpaa sen sijaan, jos se on
+            // alle LaudanSade km:n päässä (sama paikka, pelaajan tuttu tunnus).
+            foreach (var asema in a.Asemat.Values)
+                if (asema.OnPaikka)
+                    a.Kaupungit.Add(new RadioKaupunki
+                    {
+                        Id = RadiopaikanTunnus(asema.Iso3), Nimi = asema.Kaupunki, Iso3 = asema.Iso3,
+                        Lat = asema.Lat, Lon = asema.Lon, Radiopaikka = true,
+                    });
 
             foreach (var m in (Lista(MiniJson.Kentta(Ob(maat), "alkiot")) ?? new List<object>()).Select(Ob).Where(m => m != null))
                 if (MiniJson.Teksti(m, "id") is string id) a.Maat[id] = MiniJson.Teksti(m, "nimi");
@@ -209,16 +231,39 @@ namespace Matkakirja.Linssit.Radio
             var nakyvat = new HashSet<string>(StringComparer.Ordinal);
             var maittain = new Dictionary<string, List<RadioKaupunki>>(StringComparer.Ordinal);
             var jarjestys = new List<string>();
+            var radiopaikat = new Dictionary<string, RadioKaupunki>(StringComparer.Ordinal);
+            foreach (var k in Kaupungit)
+                if (k.Radiopaikka && k.Iso3 != null) radiopaikat[k.Iso3] = k;
             foreach (var k in Kaupungit)
             {
-                if (k.Id == null) continue;
+                if (k.Id == null || k.Radiopaikka) continue;
                 if (string.IsNullOrEmpty(k.Iso3)) { nakyvat.Add(k.Id); continue; }
                 if (!maittain.TryGetValue(k.Iso3, out var l)) { maittain[k.Iso3] = l = new List<RadioKaupunki>(); jarjestys.Add(k.Iso3); }
                 l.Add(k);
             }
-            foreach (var iso in jarjestys) nakyvat.Add(MaanKaupunki(iso, maittain[iso], sijainti));
+            foreach (var iso in jarjestys)
+            {
+                var valittu = MaanKaupunki(iso, maittain[iso], sijainti);
+                // Aseman kaupunki voittaa laudan solmun (Sahara, Kongo…), paitsi pelaajan oma kaupunki ja lähellä oleva
+                // laudan kaupunki (sama paikka).
+                if (radiopaikat.TryGetValue(iso, out var rp) && valittu != sijainti)
+                {
+                    var lahin = maittain[iso].Where(k => !double.IsNaN(k.Lat))
+                        .OrderBy(k => Mastot.EtaisyysKm(k.Lat, k.Lon, rp.Lat, rp.Lon)).FirstOrDefault();
+                    valittu = lahin != null && Mastot.EtaisyysKm(lahin.Lat, lahin.Lon, rp.Lat, rp.Lon) <= LaudanSade ? lahin.Id : rp.Id;
+                }
+                nakyvat.Add(valittu);
+            }
+            // Maat, joilla ei ole laudan kaupunkia lainkaan: aseman kaupunki.
+            foreach (var (iso, rp) in radiopaikat)
+                if (!maittain.ContainsKey(iso)) nakyvat.Add(rp.Id);
             return nakyvat;
         }
+
+        /// <summary>Laudan kaupunki korvaa aseman kaupungin, jos se on näin lähellä (km).</summary>
+        public const double LaudanSade = 60;
+
+        public static string RadiopaikanTunnus(string iso3) => "radio:" + iso3;
 
         string MaanKaupunki(string iso, List<RadioKaupunki> lista, string sijainti)
         {
