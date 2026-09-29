@@ -43,7 +43,7 @@ namespace Matkakirja
         public float osumaSade = 44f;
         [Tooltip("Merkin nosto pinnasta (m), kuten kaupunkimerkeissä.")]
         public double nosto = 5000.0;
-        public Color musteenVari = new Color(0.20f, 0.15f, 0.10f);
+        public Color musteenVari = KaupunkiMerkit.ValintaSepia; // sepia (Päätoimittaja 29.9.2026)
 
         /// <summary>Reitin varren pisteen napautus: kohteen avain.</summary>
         public event Action<string> Napautettu;
@@ -256,7 +256,7 @@ namespace Matkakirja
         }
 
         /// <summary>Häivytysaskel (lineaarinen kuten CSS-siirtymä 250 ms); tosi, kun poistuva on kokonaan poissa.</summary>
-        static bool Haivyta(Merkki m, float nyt)
+        bool Haivyta(Merkki m, float nyt)
         {
             float t = Mathf.Clamp01((nyt - m.alku) / SiirtymaS);
             float a = m.poistuu ? Mathf.Lerp(m.alkuAlfa, 0f, t) : Mathf.Lerp(m.alkuAlfa, 1f, t);
@@ -265,7 +265,7 @@ namespace Matkakirja
                 m.alfa = a;
                 m.lohko.SetFloat("_Alfa", a);
                 m.rengas.SetPropertyBlock(m.lohko);
-                if (m.nimi != null) m.nimi.alpha = a;
+                if (m.nimi != null) m.nimi.alpha = a * musteenVari.a;
             }
             return m.poistuu && t >= 1f;
         }
