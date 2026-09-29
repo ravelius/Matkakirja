@@ -19,6 +19,7 @@
 //    ulospäin SIIRTO° ja pehmennetään (Chaikin). Siirto kapenee nollaan
 //    jakson päissä, jotta kehä liittyy maarajaan saumatta.
 //
+//   node tools/tee-maakehat.mjs --manner assets/data/maapolygonit.json <ulos.geojson>   (omistajan linja 29.9.)
 //   node tools/tee-maakehat.mjs assets/data/maapolygonit.json \
 //     <ne_10m_admin_0_countries.geojson> <ne_10m_ocean.geojson> <ulos.geojson> [--maat FIN,ITA,…]
 //
@@ -238,6 +239,34 @@ export function maanKeha(renkaat, maski, rannat, asetukset = {}) {
   return keha;
 }
 
+/*
+ * MANNER TARKKANA (omistaja 29.9.2026, A ja B hylätty "aivan surkea", liian
+ * pyöristetty): *"Pitää olla siis aivan samanlainen raja kuin tähänkin asti,
+ * mutta lisätään sen piirto myös siihen mantereella olevaan merirajaan."*
+ * Kehä on maan SUURIMMAN renkaan (manner, laatikosta) kärjet sellaisinaan:
+ * maa–maa-osuus on täsmälleen natiivin nykyinen maamaa-viiva (samat kärjet,
+ * tarkistettu FIN/ITA/DNK/GRC/NOR/FRA), ja siihen liittyy mantereen
+ * rantaviiva samasta aineistosta samalla tarkkuudella. Ei yleistystä, ei
+ * siirtoa merelle, ei pehmennystä; saarten rantoja ei piirretä.
+ */
+export function mannerKehat(maapolygonit, maat = null) {
+  const features = [];
+  for (const { iso, renkaat } of maapolygonitLonLat(maapolygonit)) {
+    if (maat && !maat.has(iso)) continue;
+    if (!renkaat.length) continue;
+    let manner = renkaat[0]; let suurin = laatikkoAla(manner);
+    for (const r of renkaat) { const a = laatikkoAla(r); if (a > suurin) { suurin = a; manner = r; } }
+    const suljettu = manner[0][0] === manner[manner.length - 1][0] && manner[0][1] === manner[manner.length - 1][1]
+      ? manner : [...manner, manner[0]];
+    features.push({
+      type: 'Feature',
+      properties: { iso, saaria: renkaat.length - 1 },
+      geometry: { type: 'MultiLineString', coordinates: [suljettu] },
+    });
+  }
+  return features;
+}
+
 export function maakehat(maapolygonit, ne, meri, maat = null) {
   const maski = maamaski(ne);
   const rannat = meri ? meriviivat(meri) : null;
@@ -255,7 +284,21 @@ export function maakehat(maapolygonit, ne, meri, maat = null) {
   return features;
 }
 
-if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === `file://${process.argv[1]}` && process.argv.includes('--manner')) {
+  // node tools/tee-maakehat.mjs --manner <maapolygonit.json> <ulos.geojson> [--maat FIN,ITA]
+  const [lahde, ulos] = process.argv.slice(2).filter((a, i, k) => a !== '--manner' && a !== '--maat' && k[i - 1] !== '--maat');
+  const mi = process.argv.indexOf('--maat');
+  const maat = mi >= 0 ? new Set(process.argv[mi + 1].split(',')) : null;
+  const j = JSON.parse(readFileSync(lahde, 'utf8'));
+  const features = mannerKehat(j, maat);
+  writeFileSync(ulos, JSON.stringify({
+    type: 'FeatureCollection',
+    lahde: `${j.lahde}; maan suurin rengas (manner) sellaisenaan, samat kärjet kuin maamaa.geojson`,
+    kuvaus: 'Mantereen koko rengas maata kohti: maarajat kuten maamaa.geojson + mantereen rantaviiva samasta aineistosta. Ei saaria.',
+    features,
+  }));
+  console.log(`${features.length} maata, ${features.reduce((s, f) => s + f.geometry.coordinates[0].length, 0)} pistettä`);
+} else if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
   const [,, lahde, nePolku, meriPolku, ulos] = process.argv;
   if (!lahde || !nePolku || !meriPolku || !ulos) {
     console.error('Käyttö: node tools/tee-maakehat.mjs <maapolygonit.json> <ne_10m_admin_0_countries.geojson> <ne_10m_ocean.geojson> <ulos.geojson> [--maat FIN,ITA]');
