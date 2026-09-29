@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2418, teksti: 'MKD, MNE, CYP: pitkä-luonnehdinta + pulu (34 aluetta)' },
+  { v: 2418, teksti: 'MKD, MNE, CYP: pitkä-luonnehdinta + pulu, 34 al… (#3638)' },
   { v: 2417, teksti: 'Playwright-työkalut: yhteinen tools/selain.mjs,… (#3636)' },
   { v: 2416, teksti: 'ALB: pitkä-luonnehdinta + pulu kaikille 12 maak… (#3632)' },
   { v: 2415, teksti: 'Astronautin kamera: Pulu hiljaa, taulu heti auki (#3631)' },
