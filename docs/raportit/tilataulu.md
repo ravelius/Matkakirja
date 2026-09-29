@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 18:12:** Levy 81 Gi (hälytysraja 50), muisti taso 2 mutta 34 % vapaa (yli 25 %, ei hälytystä), kuorma 93/81/122, sim 0. Viikko 8 % (5 h 30 %). Konteksti: Linnanrakentaja 49 %, Natiivi-UI 41 %, oma 15 % (70 %:n vahti ei lauennut). GPU-chrome: vain ms-playwright type=gpu-process yli 30 min = 0 (Julkaisijan ohje: sovellusten omat gpu-processit ohitetaan). Juna: b13 ee2fbedd (1.0.52) ennallaan. Posti: ei uutta.
+
 **Päivitetty 18:01:** Levy 83 Gi (palautui 76→80→83 worktree-siivouksella; hälytysraja 50), muisti taso 1, 63 % vapaa, kuorma 81/162/188, sim 0. Viikko 7 % (5 h 27 %). Konteksti: Natiivi-UI 41 %, Linnanrakentaja 40 %, Siirtoseppä 33 %, Laitetestaaja 32 %, Natiiviseppä 23 %, oma 14 %. GPU-chrome type=gpu-process 16 (>4) → ilmoitettu Julkaisijalle. Juna: 1.0.52-juna avattu 17.54 (b13 ee2fbedd). Worktree-siivous: Siirtoseppä poisti 3, Julkaisija pr3614 + muutos-1051 (pr3611 junan käytössä), Karttaseppä vertailu (sepia jää, aktiivinen erä). Posti: Codexin radio v4 -viesti (fcf571f38) ilmoitettu Päätoimittajalle.
 
 **Päivitetty 17:51:** Levy 76 Gi (vakaa 75→76; hälytysraja nyt 50 Gi, kova 30), muisti taso 1, 51 % vapaa, kuorma 122/159/184, sim 0. Viikko 7 % (5 h 25 %). Konteksti: Natiivi-UI 38 %, oma 13 %. Siirtoseppä poisti 3 worktreetä (avausanimaatiot, maakuntanosto, pelaajanakyma); jäljellä pariteetti (#3628) + proto-pariteetti2. Jumivahti tappoi jumiutuneen käännöksen linssiseppa2/linssilista 17.49, lukko vapaa. Posti: Codexin iPad-yläpalkkiviesti (8c957f228) ilmoitettu Päätoimittajalle.
