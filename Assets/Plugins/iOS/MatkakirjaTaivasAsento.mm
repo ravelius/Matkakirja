@@ -2,7 +2,7 @@
 // laiteliike magneettisen pohjoisen kehyksessä (CMAttitudeReferenceFrameXMagneticNorthZVertical: X magneettinen pohjoinen,
 // Z ylös): magnetometri ja gyro yhdessä, ei vaadi sijaintilupaa eikä Info.plist-avainta. Deklinaatio (todellinen pohjoinen)
 // lasketaan C#:ssa kartalla katsotusta paikasta (Linssit/Ydin/Taivas/Wmm.cs). Linssit/Unity/TaivasNayttamo.cs lukee nämä.
-#import <CoreMotion/CoreMotion.h>
+#import <CoreMotion/CoreMotion.h>   // kehys linkitetään .metan FrameworkDependencies: CoreMotion -asetuksella
 
 static CMMotionManager *mkTaivasLiike = nil;
 
