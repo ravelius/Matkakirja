@@ -130,7 +130,14 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * nostot null, ranta null, versio = pyramidin versio (lepokerroksen
  * versiovahti, js/pallolaatat.js lepokerroksenKerrokset).
  */
-export const PALLO_LAATTAVERSIO = '2026-09-26-pohja';
+/*
+ * PERUSKARTTA 2026-09-27 (omistaja 29.9.2026 klo 05.0x kortilla: "Katsoin,
+ * vaihda"): GSHHG-järvet ja matalan veden viileys (0,5), pintatasoitus ja
+ * merireittien maaosuus maareitin tyylillä (PR #3436). Sama resepti muuten
+ * kuin 2026-09-26: sarja ILMAN viivatasoa, rantaa tai nostoja — levossa
+ * rajat, joet ja nostot tulevat pyramidin lepokerroksesta kuten ennen.
+ */
+export const PALLO_LAATTAVERSIO = '2026-09-27-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -200,7 +207,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-26-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260926';
+export const PALLO_LAATTATUNNISTE = '20260927';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
