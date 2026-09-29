@@ -1459,16 +1459,24 @@ namespace Matkakirja.Natiivi
                 }
                 else if (osat[0] == "taivas")
                 {
-                    // Tähtitaivas: "taivas" = tila, "taivas katso <atsimuutti> <korkeus> [kenttä]", "taivas kelaa <k>".
+                    // Tähtitaivas: "taivas" = tila, "taivas katso <atsimuutti> <korkeus> [kenttä]", "taivas kelaa <k>",
+                    // "taivas gyro 0|1|kaanteinen" (kaanteinen: A/B-kvaternio kääntäen laitetestiin).
                     var ts = rekisteri?.Hae("tahdet") as TahtitaivasSovitin;
                     var n = ts?.Nayttamo;
                     if (n != null && osat.Length > 3 && osat[1] == "katso")
                         n.Katso((float)Luku(osat[2]), (float)Luku(osat[3]), osat.Length > 4 ? (float)Luku(osat[4]) : (float?)null);
                     if (osat.Length > 2 && osat[1] == "kelaa") ts?.Linssi?.Kelaa(Luku(osat[2]));
+                    if (n != null && osat.Length > 2 && osat[1] == "gyro")
+                    {
+                        if (osat[2] == "kaanteinen") TaivasNayttamo.Kaanteinen = !TaivasNayttamo.Kaanteinen;
+                        else { TaivasNayttamo.GyroSallittu = osat[2] != "0"; n.AsetaGyro(TaivasNayttamo.GyroSallittu); }
+                    }
                     Kirjaa(n == null ? "taivas: linssi ei auki (linssi tahdet)"
                         : $"taivas: paikka {ts.Linssi.Lat:F2}, {ts.Linssi.Lon:F2}, kello {Matkakirja.Linssit.Iss.IssNyt.Simu} "
                         + $"({Matkakirja.Linssit.Iss.IssNyt.Kello():HH:mm} UTC), aurinko {n.AurinkoKorkeus:F1}°, Kuu {n.KuuKorkeus:F1}° / {n.KuuAtsimuutti:F0}°, "
-                        + $"tähtiä {(n.TahdetValmiit ? "ladattu" : "ei vielä")} näkyvyys {n.Nakyvyys:F2}, katse {n.Atsimuutti:F0}° / {n.Korkeus:F0}°, kenttä {n.Kentta:F0}°");
+                        + $"tähtiä {(n.TahdetValmiit ? "ladattu" : "ei vielä")} näkyvyys {n.Nakyvyys:F2}, katse {n.Atsimuutti:F0}° / {n.Korkeus:F0}°, kenttä {n.Kentta:F0}°, "
+                        + $"gyro {(n.Pohjoinen ? "pohjoinen (magneettinen kehys)" : n.Gyro ? "suhteellinen" : UnityEngine.InputSystem.AttitudeSensor.current == null ? "ei anturia" : "pois")}, "
+                        + $"deklinaatio {n.Deklinaatio:F1}°, kalibrointi {n.Tarkkuus}{(TaivasNayttamo.Kaanteinen ? ", kääntäen" : "")}");
                 }
                 else if (osat[0] == "yokartta")
                 {

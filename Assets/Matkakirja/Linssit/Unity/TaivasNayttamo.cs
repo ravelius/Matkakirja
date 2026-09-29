@@ -9,6 +9,16 @@
 //   Kuu       KyydinKuu (vaihe auringon suunnasta, 0,52°)
 //   suunnat   P, I, E, L horisontissa (kartan fontti)
 //   ohjaus    veto kääntää katsetta (atsimuutti ja korkeus −5…90°), nipistys tai rulla zoomaa (näkökenttä 25…100°)
+//   GYRO      (erä 2) puhelin osoittaa taivaalle: Input Systemin AttitudeSensor (CoreMotion). Kallistus ja korkeus ovat
+//             todellisia (painovoima), mutta suunta on suhteellinen: iOS:n asentoanturin kiertokulma on mielivaltainen, eikä
+//             Input System tarjoa iOS:llä kompassia. Siksi avaushetken katse (Kuu tai etelä) sidotaan puhelimen sen hetkiseen
+//             suuntaan, ja vaakaveto säätää sitä (pelaaja voi kääntää P:n oikeaan pohjoiseen). Pystyveto ei vaikuta gyrossa.
+//             Anturi ei vaadi lupaa. Ruudun kierto korjataan (pysty, vaaka vasen/oikea). Ilman anturia (simulaattori, editori)
+//             ohjaus on vedolla kuten erässä 1. Testikomento taivas gyro 0|1.
+//   POHJOINEN (Päätoimittajan tilaus 29.9.): iOS:llä ensisijaisesti CoreMotion magneettisen pohjoisen kehyksessä
+//             (Plugins/iOS/MatkakirjaTaivasAsento.mm, ei sijaintilupaa) + WMM2025-deklinaatio kartalla katsotusta paikasta
+//             (Ydin/Taivas/Wmm.cs), joten P osoittaa todelliseen pohjoiseen; vaakaveto jää hienosäädöksi. AttitudeSensor (yllä)
+//             on varapolku laitteille, joilla magneettista kehystä ei ole. A/B `taivas gyro kaanteinen` (kvaternio kääntäen).
 using System.Collections.Generic;
 using Matkakirja.Linssit.Taivas;
 using TMPro;
@@ -144,12 +154,15 @@ namespace Matkakirja.Natiivi
             this.lat = lat;
             this.lon = lon;
             auki = true;
+            Deklinaatio = Wmm.Deklinaatio(lat, lon, Wmm.Vuosi(System.DateTime.UtcNow));
             foreach (var o in oliot) o.SetActive(true);
             kamera.enabled = true;
             kamera.fieldOfView = KuvanKentta;
             SyoteLukko.LisaaNakymaPeitto(peitto);
             SyoteLukko.Esta(this);
             alkuKatse = true;
+            gyroTasattu = Quaternion.identity;
+            AsetaGyro(true);
         }
 
         bool alkuKatse;
@@ -193,6 +206,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            AsetaGyro(false);
             auki = false;
             if (kamera != null) kamera.enabled = false;
             foreach (var o in oliot) if (o != null) o.SetActive(false);
@@ -204,6 +218,112 @@ namespace Matkakirja.Natiivi
 
         Vector2? edellinen;
         float? edellinenVali;
+
+        /// <summary>Gyro-ohjaus päällä (AttitudeSensor on käytössä); testikomento taivas gyro 0|1.</summary>
+        public bool Gyro { get; private set; }
+        /// <summary>Gyro sallittu (A/B-kytkin).</summary>
+        public static bool GyroSallittu = true;
+        float? gyroSiirto;
+        Quaternion gyroTasattu = Quaternion.identity;
+        /// <summary>Magneettinen kehys käytössä (natiivi CoreMotion); deklinaatio asteina itään; hienosäätö vaakavedosta.</summary>
+        public bool Pohjoinen { get; private set; }
+        public double Deklinaatio { get; private set; }
+        public static bool Kaanteinen;
+        float hienosaato;
+        public int Tarkkuus => Pohjoinen ? MatkakirjaTaivas_Tarkkuus() : -2;
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern bool MatkakirjaTaivas_Aloita();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaTaivas_Lopeta();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern bool MatkakirjaTaivas_Asento(float[] q);
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern int MatkakirjaTaivas_Tarkkuus();
+#else
+        static bool MatkakirjaTaivas_Aloita() => false;
+        static void MatkakirjaTaivas_Lopeta() { }
+        static bool MatkakirjaTaivas_Asento(float[] q) => false;
+        static int MatkakirjaTaivas_Tarkkuus() => -2;
+#endif
+        readonly float[] asento = new float[4];
+
+        static Matkakirja.Linssit.Taivas.Ruutu RuudunAsento() => Screen.orientation switch
+        {
+            ScreenOrientation.LandscapeLeft => Matkakirja.Linssit.Taivas.Ruutu.VaakaVasen,
+            ScreenOrientation.LandscapeRight => Matkakirja.Linssit.Taivas.Ruutu.VaakaOikea,
+            ScreenOrientation.PortraitUpsideDown => Matkakirja.Linssit.Taivas.Ruutu.Ylosalaisin,
+            _ => Matkakirja.Linssit.Taivas.Ruutu.Pysty,
+        };
+
+        /// <summary>Natiivin magneettikehyksen kehys: katse todellisessa horisontissa; false = ei näytettä.</summary>
+        bool PohjoinenKehys(float vetoX, float asteitaPx)
+        {
+            if (!Pohjoinen || !MatkakirjaTaivas_Asento(asento)) return false;
+            if (!(asento[0] * asento[0] + asento[1] * asento[1] + asento[2] * asento[2] + asento[3] * asento[3] > 0.5f)) return false;
+            hienosaato -= vetoX * asteitaPx;
+            var (katse, ylos) = Gyromatikka.Kamera(asento[0], asento[1], asento[2], asento[3], RuudunAsento(), Deklinaatio + hienosaato, Kaanteinen);
+            var tavoite = Quaternion.LookRotation(new Vector3((float)katse.Ita, (float)katse.Ylos, (float)katse.Pohjoinen),
+                new Vector3((float)ylos.Ita, (float)ylos.Ylos, (float)ylos.Pohjoinen));
+            gyroTasattu = gyroTasattu == Quaternion.identity ? tavoite : Quaternion.Slerp(gyroTasattu, tavoite, 1f - Mathf.Exp(-Time.unscaledDeltaTime / 0.06f));
+            kamera.transform.localRotation = gyroTasattu;
+            Atsimuutti = (float)katse.Atsimuutti;
+            Korkeus = (float)katse.Korkeus;
+            return true;
+        }
+
+        /// <summary>Gyro päälle tai pois (anturi otetaan käyttöön vasta tarvittaessa ja vapautetaan sulkiessa).</summary>
+        public void AsetaGyro(bool paalla)
+        {
+            // Ensisijaisesti magneettinen kehys (todellinen pohjoinen), muuten AttitudeSensor (suhteellinen suunta).
+            bool pohjoinen = paalla && GyroSallittu && MatkakirjaTaivas_Aloita();
+            if (!pohjoinen && Pohjoinen) MatkakirjaTaivas_Lopeta();
+            Pohjoinen = pohjoinen;
+            hienosaato = 0f;
+            if (pohjoinen) paalla = false;   // AttitudeSensoria ei tarvita
+            var anturi = AttitudeSensor.current;
+            bool voi = paalla && GyroSallittu && anturi != null;
+            if (voi && !anturi.enabled) InputSystem.EnableDevice(anturi);
+            if (!voi && anturi != null && anturi.enabled && Gyro) InputSystem.DisableDevice(anturi);
+            Gyro = voi || pohjoinen;
+            gyroSiirto = null;
+        }
+
+        /// <summary>Laitteen asento Unityn kameran kierroksi (iOS: CoreMotion x oikealle, y ylös, z ruudusta ulos) ja ruudun kierto.</summary>
+        static Quaternion Laitteesta(Quaternion q)
+        {
+            var r = Quaternion.Euler(90f, 0f, 0f) * new Quaternion(q.x, q.y, -q.z, -q.w);
+            float kierto = Screen.orientation switch
+            {
+                ScreenOrientation.LandscapeLeft => 90f,
+                ScreenOrientation.LandscapeRight => -90f,
+                ScreenOrientation.PortraitUpsideDown => 180f,
+                _ => 0f,
+            };
+            return r * Quaternion.Euler(0f, 0f, kierto);
+        }
+
+        /// <summary>Gyron kehys: katse laitteen asennosta, suunta sidottu avaushetken katseeseen (gyroSiirto).</summary>
+        bool GyroKehys(float vetoX, float asteitaPx)
+        {
+            if (Pohjoinen) return PohjoinenKehys(vetoX, asteitaPx);
+            var anturi = AttitudeSensor.current;
+            if (!Gyro || anturi == null) return false;
+            var raaka = anturi.attitude.ReadValue();
+            // Ennen ensimmäistä näytettä anturi antaa nollan (tai NaN): ohjaus vedolla siihen asti.
+            float pituus = raaka.x * raaka.x + raaka.y * raaka.y + raaka.z * raaka.z + raaka.w * raaka.w;
+            if (!(pituus > 0.5f)) return false;
+            var laite = Laitteesta(raaka);
+            float laiteSuunta = laite.eulerAngles.y;
+            gyroSiirto ??= Atsimuutti - laiteSuunta;
+            // Vaakaveto säätää pohjoista (sormen alla oleva taivas seuraa sormea).
+            gyroSiirto -= vetoX * asteitaPx;
+            var tavoite = Quaternion.Euler(0f, gyroSiirto.Value, 0f) * laite;
+            // Pehmennys: anturin värinä ei näy tähdissä (noin 60 ms:n aikavakio).
+            gyroTasattu = gyroTasattu == Quaternion.identity ? tavoite : Quaternion.Slerp(gyroTasattu, tavoite, 1f - Mathf.Exp(-Time.unscaledDeltaTime / 0.06f));
+            kamera.transform.localRotation = gyroTasattu;
+            var e = gyroTasattu.eulerAngles;
+            Atsimuutti = Mathf.Repeat(e.y, 360f);
+            Korkeus = Mathf.Clamp(-(e.x > 180f ? e.x - 360f : e.x), -90f, 90f);
+            return true;
+        }
 
         void LateUpdate()
         {
@@ -230,7 +350,8 @@ namespace Matkakirja.Natiivi
                 edellinenVali = vali;
                 edellinen = null;
             }
-            else
+            float vetoX = 0f;
+            if (sormia < 2)
             {
                 edellinenVali = null;
                 if (sormia == 1)
@@ -238,14 +359,19 @@ namespace Matkakirja.Natiivi
                     if (edellinen.HasValue)
                     {
                         var d = p0 - edellinen.Value;
-                        Atsimuutti = Mathf.Repeat(Atsimuutti - d.x * asteitaPx, 360f);
-                        Korkeus = Mathf.Clamp(Korkeus - d.y * asteitaPx, KorkeusMin, KorkeusMax);
+                        vetoX = d.x;
+                        if (!Gyro)
+                        {
+                            Atsimuutti = Mathf.Repeat(Atsimuutti - d.x * asteitaPx, 360f);
+                            Korkeus = Mathf.Clamp(Korkeus - d.y * asteitaPx, KorkeusMin, KorkeusMax);
+                        }
                     }
                     edellinen = p0;
                 }
                 else edellinen = null;
             }
-            kamera.transform.localRotation = Quaternion.Euler(-Korkeus, Atsimuutti, 0f);
+            if (!GyroKehys(vetoX, asteitaPx))
+                kamera.transform.localRotation = Quaternion.Euler(-Korkeus, Atsimuutti, 0f);
             // Kuun kulmasäde todellisena (0,26°); tähtivarjostin laskee koon ruudun pikseleinä.
             kuuMat.SetFloat(IdKoko, Mathf.Tan(0.26f * Mathf.Deg2Rad));
         }
@@ -257,6 +383,7 @@ namespace Matkakirja.Natiivi
             Korkeus = Mathf.Clamp(korkeus, KorkeusMin, KorkeusMax);
             if (kentta.HasValue && kamera != null) kamera.fieldOfView = Mathf.Clamp(kentta.Value, KenttaMin, KenttaMax);
             alkuKatse = false;
+            gyroSiirto = null;
         }
 
         static Mesh Pallo()
