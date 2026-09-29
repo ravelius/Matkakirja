@@ -1252,7 +1252,22 @@ tila_kirjoita () {
 # monitavuisen merkin (ä, →), ja UTF-8-lokaalissa tr lopetti siihen
 # ("tr: Illegal byte sequence", syvä Z10 -ajo 26.–27.9.) — edistys jäi
 # lukematta. Tavuvertailu löytää "laattaa →" -rivin yhtä hyvin.
+#
+# EI KAADU SULJETTUUN PUTKEEN (koodi 1 ilman kaatunutta shardia, Z10-ketju
+# osa 2, 29.9.2026). Kutsuja on aina `$(lue_edistys …)`, ja tila_vahti
+# (ks. alla) kutsuu tätä taustalla: kun `kill` osuu juuri tähän kutsuun,
+# lukijan puoli (komentosubstituution putki) voi hävitä kesken lopun
+# `echo`-rivin kirjoituksen. `set -euo pipefail` + oletusarvoinen SIGPIPE
+# tappaisi tämän funktion suorittavan alikuoren HETI (koodi 141) tai —
+# jos SIGPIPE on jätetty ohitetuksi perityn asetuksen takia — `echo`
+# palauttaisi koodin 1 pelkän EPIPE:n takia. Kumpikaan ei liity yhdenkään
+# shardin oikeaan onnistumiseen, joten SIGPIPE ohitetaan TÄSSÄ funktiossa
+# (`trap '' PIPE`, koskee vain sen alikuorta) ja lopun echo on suojattu
+# `|| true`:lla, jotta pelkkä katkennut putki ei koskaan ole funktion
+# paluuarvo. Muut virheet (esim. rikkinäinen loki) eivät muutu: awk/tail
+# palauttavat edelleen tyhjän/oletusarvon eivätkä tätä ohitusta käytetä.
 lue_edistys () {
+  trap '' PIPE
   local loki="$1" kansio="${2:-}" pate="${3:-}"
   local parit="0 0" tehty kaikki n
   if [ -s "$loki" ]; then
@@ -1270,7 +1285,7 @@ lue_edistys () {
     n="$(find "$kansio" -name "$pate" 2>/dev/null | wc -l | tr -d ' ')"
     [ "$n" -gt "$tehty" ] && tehty="$n"
   fi
-  echo "$tehty $kaikki"
+  echo "$tehty $kaikki" || true
 }
 
 # Kaatuneen shardin luettavin loki: uusinnan loki, jos uusinta ehti
@@ -1320,11 +1335,14 @@ tila_vahti () {
   trap - EXIT
   # VAHDIN VIRHEET HILJAA (27.9.2026). Kun shardi valmistuu, `kill` osuu
   # vahtiin usein kesken `$(lue_edistys …)`-kutsun: orvoksi jäänyt
-  # alikuori kirjoittaa suljettuun putkeen. Polttovahdin python-kääre
-  # (os.execvp) jättää SIGPIPE:n ohitetuksi, joten bash tulosti joka
-  # kerta "echo: write error: Broken pipe" (12 kertaa syvässä ajossa).
-  # Vaaraton mutta harhaanjohtava: se luettiin ajon koodin 1 syyksi.
-  # Funktio ajetaan aina taustalla (&), joten exec koskee vain vahtia.
+  # alikuori saattoi kirjoittaa suljettuun putkeen ja tulostaa "echo:
+  # write error: Broken pipe" (12–13 kertaa syvissä Z10-ajoissa). Tämä
+  # `exec 2>/dev/null` vaimensi viestin, muttei itse EPIPE:tä — juurisyy
+  # (lue_edistys palautti koodin 1 tai kuoli SIGPIPE:hen) on korjattu
+  # lue_edistys-funktiossa 29.9.2026 (trap '' PIPE + `|| true` viimeiseen
+  # echoon), joten viestiäkään ei enää pitäisi syntyä. Rivi on jätetty
+  # yleiseksi suojaksi muulle vahdin taustakohinalle. Funktio ajetaan
+  # aina taustalla (&), joten exec koskee vain vahtia.
   exec 2>/dev/null
   while :; do
     sleep "$TILAVALI"
@@ -2572,11 +2590,12 @@ EOF
     $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
     < "$lista" || virhe=1
   echo "· nostotaso: $(( $(date +%s) - alkoi )) s"
-  if [ "$virhe" -ne 0 ]; then
-    echo "VIRHE: nostotason shardi kaatui — luetteloa EI viety, ämpäri ennallaan." >&2
-    while read -r nimi; do
-      [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))" >&2
-    done < "$lista"
+  # XARGSIN KOODI VS. VALMIS-MERKIT: sama vahti kuin muissa xargs-ajoissa
+  # (ks. tarkista_kesken) — tämä polku ei käyttänyt sitä ennen 29.9.2026,
+  # joten ohimenevä xargs-lapsen virhe (esim. rikkinäinen putki) vietiin
+  # tässä aina kaatumiseksi, vaikka kaikki shardit olisivat valmiita.
+  if [ "$virhe" -ne 0 ] && ! tarkista_kesken "$lista" \
+      "VIRHE: nostotason shardi kaatui — luetteloa EI viety, ämpäri ennallaan. Kesken jääneet:"; then
     return 1
   fi
 
