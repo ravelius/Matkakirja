@@ -22,16 +22,16 @@ sallii 3 käynnissä olevaa simulaattoria), hehku_maski.py. Lokit proto-3d/lokit
 - **Radio aina päällä** proto linssiseppa2/radio-virta **b68dcdd3** (pohja 9ee9136e): ei-asemaa-teksti "EI ASEMAA / VALITSE
   KAUPUNKI" (ei "RADIO POIS"); kytkin sulkee linssin (jo 28.9.). Samassa juna-1048:ssa.
 
-## 2. KÄRKI: Codexin puuradio v2 (odottaa)
+## 2. KÄRKI: Codexin puuradio v3 (tilattu, odottaa omistajan OK:ta)
 
-- Omistaja 29.9. hylkäsi kuunvaloradion ("ihan kamala … sininen"): uusi tilaus posti/fable-codex-radio-yksikuva-20260929.md —
+- Omistaja 29.9. hylkäsi kuunvaloradion ("ihan kamala … sininen"): tilaukset posti/fable-codex-radio-yksikuva-20260929.md (v2) ja NYT posti/fable-codex-radio-yksikuva-v3-20260929.md (v3, voimassa) —
   alkuperäinen puuradio YHTENÄ kuvana (iso osa varjossa, omat lamput valaisevat pintoja, ohut sinertävä reunavalo), vain
   VU-neula erillisenä (sama akseli) ja näytön teksti tyhjänä; asemanimet piirtää peli. Ei kerroksia, hehkuja eikä pois-tilaa.
 - Kun toimitus tulee (Julkaisija hakee ~/Documents/Codex/2026-09-29/…): uusi haara pohjasta linssiseppa2/radio-virta b68dcdd3,
   vaihda RadioNakyma.Codex.cs yhteen kuvaan + neulaan (poista cValot/hehkut/power-on|off), Resources/RadioUusi, alfa ≥ 240 → 255
   peittävissä (muisti ui-kuvien-alfa-255), kuvapari (iPhone pysty + iPad vaaka, Rooma; ennen = kavely3/ipad-radio-rooma.png).
   OMISTAJA HYVÄKSYY KUVAN ENSIN: ei merge-pyyntöä ennen Päätoimittajan välittämää OK:ta.
-- Hylätty haara linssiseppa2/radio-kuunvalo e26ab11e: EI mergeä (käyttökelpoista: tyokalut/radio_hehku_maski.py,
+- Hyllyssä haara linssiseppa2/radio-kuunvalo e26ab11e: EI mergeä (käyttökelpoista: tyokalut/radio_hehku_maski.py,
   Pistenaytto.PisteVari).
 
 ## 3. MUUT

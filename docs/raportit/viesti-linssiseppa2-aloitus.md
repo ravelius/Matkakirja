@@ -13,7 +13,7 @@ docs/raportit/viesti-linssiseppa2-luovutus-20260929.md** (merge-pyynnöt, puurad
 ## Tehtävä nyt
 1. Tarkista, ovatko avaruuskavely bdea89bf ja radio-virta b68dcdd3 masterissa (Natiivisepän juna-1048 → 1.0.48); jos ovat
    eikä radiotyö ole kesken, poista proto-worktree ja kerro Postivahdille.
-2. Odota Codexin puuradio v2:ta (yksi kuva + VU-neula): kytke testiksi pohjasta radio-virta, kuvapari Päätoimittajalle,
+2. Odota Codexin puuradio v3:a (posti/fable-codex-radio-yksikuva-v3-20260929.md) (yksi kuva + VU-neula): kytke omistajan OK:n jälkeen pohjasta radio-virta, kuvapari Päätoimittajalle,
    merge-pyyntö vasta omistajan OK:n jälkeen.
 
 ## Säännöt
