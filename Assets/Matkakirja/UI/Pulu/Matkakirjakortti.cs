@@ -123,9 +123,10 @@ namespace Matkakirja.Natiivi
 
             kortti = Rakenne.El("mk-matkakirja", turva);
             kortti.style.display = DisplayStyle.None;
-            // linear-gradient(180deg, rgba(217,161,59,.07), transparent) paneelin päällä.
-            var paneeli = Kuviot.Vari("#2a1f16");
-            Rakenne.Tausta(kortti, Kuviot.Pysty("matkakirja", Color.Lerp(paneeli, Kuviot.Vari("#d9a13b"), 0.07f), paneeli));
+            // Avattu matkakirja paperina (omistaja 29.9.2026: "pohja on natiivissa yksivärinen, pitää olla paperin värinen ja
+            // kuvioinen kuten webissä"): pergamentti (säteittäinen paperinsävy ja rae, sama kuin dialogeissa); pieni lappu
+            // pysyy tasaisena (.mk-matkakirja--pieni peittää kuvan).
+            Rakenne.Tausta(kortti, Kuviot.Pergamentti);
             Kirjasimet.Aseta(kortti, Kirjasin.Kone);
             kortti.RegisterCallback<PointerDownEvent>(_ => { if (pieni) AsetaPieni(false); });
 

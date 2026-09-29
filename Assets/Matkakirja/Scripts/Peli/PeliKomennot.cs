@@ -325,6 +325,10 @@ namespace Matkakirja.Natiivi
                         case "alku":
                             if (A(2) == "vanha") Puhe.VanhaAlku = true; else if (A(2) == "uusi") Puhe.VanhaAlku = false;
                             return $"=alku {(Puhe.VanhaAlku ? "vanha (häivytys nollasta)" : "uusi (kohdetasolla)")}";
+                        // Bluetooth-esilämmitys ilman oikeaa reittiä (simulaattori): "puhe bt 1|0".
+                        case "bt":
+                            AaniIstunto.BluetoothTesti = A(2) == "1";
+                            return $"=bt-testi {(AaniIstunto.BluetoothTesti ? "päällä" : "pois")}, esilämmitys {Puhe.Esilammitys:0.0} s";
                         case "jumi":
                             Puhe.JumiMs = int.TryParse(A(2), out int jumi) ? Mathf.Clamp(jumi, 0, 3000) : 0;
                             return $"=jumi {Puhe.JumiMs} ms ensimmäisessä soivassa ruudussa";
