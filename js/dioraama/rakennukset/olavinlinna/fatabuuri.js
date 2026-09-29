@@ -35,17 +35,16 @@ const TAULU = {
 };
 
 // Hahmot (erä 2, 29.9.): aitan hoitaja kirjaa tavaraa pulpetilla (kirjuri-1500, Päätoimittaja), renki kantaa
-// kangaspakkoja arkuilta itäseinän pinoihin. Repliikit luonnos (Päätoimittaja tarkistaa); Pulun reaktiot paikkamerkkejä.
-const PULU_PAIKKAMERKKI = 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)';
+// kangaspakkoja arkuilta itäseinän pinoihin. Repliikit ja Pulun reaktiot: Päätoimittaja 29.9.
 const HAHMOT = [
   {
     id: 'hoitaja', henkilo: 'kirjuri-1500', paikka: pol(312, 3.95), suunta: 312, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'hoitaja-1', teksti: 'Kolme viittaa, kaksi villapaitaa, tusina tinakannuja. Kaikki kirjaan, muuten vouti kysyy.' },
+      { id: 'hoitaja-1', teksti: 'Kolme viittaa, kaksi verkaröijyä, tusina tinakannuja. Kaikki kirjaan, muuten vouti kysyy.' },
       { id: 'hoitaja-2', teksti: 'Arkkuihin ei kosketa ilman lupaa – täällä on linnan arvokkain tavara.' },
     ],
-    reaktio: { id: 'pulu-hoitaja-r1', teksti: PULU_PAIKKAMERKKI },
+    reaktio: { id: 'pulu-hoitaja-r1', teksti: 'Kaikki kirjassa, tinakannuja myöten. Murujakin varmaan laskettiin.' },
   },
   {
     id: 'renki', henkilo: 'renki-1500', paikka: pol(262, 2.4), suunta: 80, peilattu: false,
@@ -55,7 +54,7 @@ const HAHMOT = [
       { id: 'renki-1', teksti: 'Kangaspakka painaa enemmän kuin näyttää. Kutojat eivät säästäneet lankaa.' },
       { id: 'renki-2', teksti: 'Vaatteet kuivina ja koit poissa – siinä on aitan koko salaisuus.' },
     ],
-    reaktio: { id: 'pulu-renki-r1', teksti: PULU_PAIKKAMERKKI },
+    reaktio: { id: 'pulu-renki-r1', teksti: 'Koit ovat aitan pahin vihollinen. Minä en syö villaa, lupaan sen.' },
   },
 ];
 
@@ -226,7 +225,7 @@ export const TILA = {
   // Voudin sinetin etsintä, vaihe 3 (löytö): napautus arkkuun avaa kannen ja nostaa sormuksen → PeliOhjain.LoydaMatkamuisto.
   etsinta: [
     { etsinta: 'voudin-sinetti', vaihe: 3, tyyppi: 'loyto', kohde: [P_SORMUS[0], SINETTI_Y + 0.05, P_SORMUS[2]], sade: 0.8,
-      kansi: 'arkun-kansi', esine: 'sinetti', pulu: PULU_PAIKKAMERKKI },
+      kansi: 'arkun-kansi', esine: 'sinetti', pulu: 'Tässä se on, kankaiden välissä! Vouti vaihtoi viitan iltamessun jälkeen, ja sormus luiskahti mukaan.' },
   ],
   hahmot: HAHMOT,
   aanet: [],

@@ -217,11 +217,11 @@ export const TILA = {
     { resepti: 'vesisanko', paikka: [9.9, 0, 8.05], suunta: 40, sade: 0.14, korkeus: 0.2 },
   ],
   // Voudin sinetin etsintä, vaihe 1 (käsikirjoitus kohta 4): kokki mainitsee voudin käynnin. Repliikki kuuluu vain
-  // etsintään (luonnos, Päätoimittaja tarkistaa); kohde kokin pään yllä.
+  // etsintään (Päätoimittaja hyväksyi 29.9.); kohde kokin pään yllä.
   etsinta: [
     { etsinta: 'voudin-sinetti', vaihe: 1, tyyppi: 'repliikki', hahmo: 'kokki', kohde: [13.1, 1.8, 6.1], sade: 1.2,
       repliikki: { id: 'kokki-sinetti', teksti: 'Vouti kävi maistamassa keittoa ja kiirehti sitten kappeliin ennen iltamessua.' },
-      pulu: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
+      pulu: 'Keitto ja iltamessu – vouti hoiti sekä vatsan että sielun. Kappeliin siis!' },
   ],
   hahmot: KEITTIO_HAHMOT,
   // Keittiön äänisilmukat: ambienssi + tulisija + pata + vaivaaminen, kaikki päällekkäin (era2 kohta 2 "AANET").

@@ -187,8 +187,8 @@ export const TILA = {
   // Voudin sinetin etsintä, vaihe 2: napautus penkin kaiverrukseen (kynttilän valossa naarmu ja fatabuurin avaimen kuva).
   etsinta: [
     { etsinta: 'voudin-sinetti', vaihe: 2, tyyppi: 'vihje', kohde: [-1.68, 10.24, -19.4], sade: 0.6,
-      teksti: 'Penkin selkänojassa on tuore naarmu, ja sen vieressä on kuva avaimesta – fatabuurin avaimesta.',
-      pulu: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
+      teksti: 'Penkin selkänojassa on tuore naarmu: raskas avainnippu on raapaissut puuta. Painaumasta erottuu ison avaimen parta – fatabuurin avaimen.',
+      pulu: 'Ensin rukous, sitten aittaan. Vouti oli järjestelmällinen mies – paitsi sormuksensa kanssa.' },
   ],
   hahmot: KAPPELI_HAHMOT,
   aanet: [], // kappelin äänet (kaiku, kynttilän rätinä, kaukainen laulu) tulevat Pelikoodarin tilauksesta

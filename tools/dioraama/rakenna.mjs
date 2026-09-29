@@ -28,7 +28,7 @@
  * ei muokata tästä — vain käytetään niiden dokumentoitua rajapintaa.
  */
 
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -476,7 +476,7 @@ export async function rakennaData(rakennus, {
       const buf = kirjoitaGlb({ nimi: `${tila.id}-${e.id}`, osat });
       const tiedosto = `esineet/${tila.id}-${e.id}.glb`;
       writeFileSync(join(kansio, tiedosto), buf);
-      const tulos = { tiedosto, sha256: createHash('sha256').update(buf).digest('hex') };
+      const tulos = { tiedosto, sha256: createHash('sha256').update(buf).digest('hex'), tavuja: buf.length };
       if (Array.isArray(e.sarana)) {
         const s = (e.suunta || 0) * Math.PI / 180, r = [Math.cos(s), 0, Math.sin(s)], f = [Math.sin(s), 0, -Math.cos(s)];
         const [u, y, w] = e.sarana, [px, py, pz] = e.paikka;
@@ -635,6 +635,19 @@ export async function rakennaData(rakennus, {
   // pysyy tyhjänä, kuten Liekit/Aanet vanhassa muodossa).
   if (hahmo3dTulokset.length > 0) rakennusJson.liikkeet = LIIKKEET;
 
+  // Matkamuistojen kuvat (voudin sinetti 29.9., Pelikoodarin löytökortti): <assets>/<rakennus>/matkamuistot/<etsinta.id>.jpg
+  // pakettiin samaan polkuun, etsintään kenttä `kuva` ja manifestiin. Puuttuva kuva ei ole virhe (kortti ilman kuvaa).
+  const matkamuistoTulokset = [];
+  for (const e of rakennusJson.etsinnat ?? []) {
+    const polku = `matkamuistot/${e.id}.jpg`, lahde = join(assetsJuuri, rakennus.id, polku);
+    if (!existsSync(lahde)) { console.log(`  ei lähdettä: ${lahde}`); continue; }
+    mkdirSync(join(kansio, 'matkamuistot'), { recursive: true });
+    copyFileSync(lahde, join(kansio, polku));
+    const buf = readFileSync(lahde);
+    matkamuistoTulokset.push({ polku, sha256: createHash('sha256').update(buf).digest('hex'), tavuja: buf.length });
+    e.kuva = polku;
+  }
+
   const rakennusJsonBuf = Buffer.from(`${JSON.stringify(rakennusJson, null, 2)}\n`, 'utf8');
   const rakennusJsonPolku = 'rakennus.json';
   writeFileSync(join(kansio, rakennusJsonPolku), rakennusJsonBuf);
@@ -653,6 +666,8 @@ export async function rakennaData(rakennus, {
     ...hahmo3dTulokset.map((h) => ({ polku: h.polku, sha256: h.sha256, tavuja: h.tavuja })),
     ...liekkiTulokset.map((l) => ({ polku: l.polku, sha256: l.sha256, tavuja: l.tavuja })),
     ...aanetTulokset.map((a) => ({ polku: a.polku, sha256: a.sha256, tavuja: a.tavuja })),
+    ...[...esineTulokset.values()].flat().map((e) => ({ polku: e.tiedosto, sha256: e.sha256, tavuja: e.tavuja })),
+    ...matkamuistoTulokset,
     { polku: rakennusJsonPolku, sha256: rakennusJsonSha, tavuja: rakennusJsonBuf.length },
   ].sort((a, b) => (a.polku < b.polku ? -1 : (a.polku > b.polku ? 1 : 0)));
 
