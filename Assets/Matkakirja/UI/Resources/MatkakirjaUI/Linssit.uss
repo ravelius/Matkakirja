@@ -3110,7 +3110,7 @@
     justify-content: center;
     min-height: 48px;
     margin: 0 6px;
-    padding: 0 8px;
+    padding: 0 6px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.3);
     border-radius: 10px;
@@ -3123,15 +3123,16 @@
 }
 
 .mk-valikkonappi__ikoni {
-    width: 18px;
-    height: 18px;
-    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
     flex-shrink: 0;
     --mk-ikoni-viiva: 1.6;
 }
 
 .mk-valikkonappi__nimi {
-    font-size: 12.5px;
+    /* 3 nappia rivissä 367 pt:n paneelissa (~109 pt): "Äänimaisema" mahtuu kuvakkeen kanssa (1.0.55-laitekuva). */
+    font-size: 11.5px;
     color: #3a2812;
     white-space: nowrap;
     overflow: hidden;
@@ -3161,7 +3162,7 @@
 }
 
 .mk-valikkonappi--toiminto .mk-valikkonappi__nimi {
-    font-size: 11.5px;
+    font-size: 11px;
 }
 
 /* NAVIGOINTI: kuvake + nimi + › (avaa näkymän). */
