@@ -39,10 +39,10 @@ namespace Matkakirja.Peli
             {
                 Id = "voudin-sinetti",
                 Nimi = "Voudin sinetti",
-                // Sisältökirjurin tarkistamat yleiset faktat (Kansallisarkisto: Arkistojen Portti; Wikipedia: Sinetti). Olavinlinnan
-                // voudin omasta sinetistä ei ole lähdettä, joten sitä ei väitetä (Linnanrakentaja 29.9.2026).
-                Selite = "Keskiajalla kirjeeseen ei kirjoitettu nimeä: aitouden takasi vahaan painettu sinetti. "
-                    + "Sinettisormus oli suosittu 1100-luvulta keskiajan loppuun, ja siinä oli usein oman suvun vaakuna.",
+                // Päätoimittajan teksti 30.9.2026 (aiemmat "ei kirjoitettu nimeä" ja "suosittu 1100-luvulta" liian ehdottomia).
+                // Olavinlinnan voudin omasta sinetistä ei ole lähdettä, joten sitä ei väitetä.
+                Selite = "Keskiajalla asiakirjan aitouden takasi allekirjoituksen sijaan vahaan painettu sinetti. "
+                    + "Sinettisormusta kannettiin sormessa, jotta sinetti oli aina mukana – siksi sen katoaminen oli vakava asia.",
                 KuvaPolku = "matkamuistot/voudin-sinetti.jpg",
                 Pisteet = EtsinnanPisteet,
             },
