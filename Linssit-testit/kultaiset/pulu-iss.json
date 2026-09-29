@@ -6,9 +6,7 @@
    "indeksi": 0,
    "teksti": "Kas, sinäkin täällä! Tervetuloa avaruuteen, tai no, sen reunalle. Tämä on Astronautin kamera: oikeita valokuvia, jotka astronautit ovat ottaneet Kansainväliseltä avaruusasemalta.",
    "kestoMs": 14320,
-   "aani": "aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-a-1.mp3",
-   "liikettaVaativa": false,
-   "toimet": []
+   "aani": "aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-a-1.mp3"
   },
   {
    "avain": "iss-a-2",
@@ -16,67 +14,7 @@
    "indeksi": 1,
    "teksti": "Ja kaikki tämä noin neljänsadan kilometrin korkeudelta. Minä en ole koskaan lentänyt niin korkealle. Setäni väittää lentäneensä, mutta setä väittää paljon.",
    "kestoMs": 12160,
-   "aani": "aanet/pulu/versiot/ca095f4d3132/pulu-ad4d6fcc55d7dd86e8ac/tasoitettu/livia-iss-a-2.mp3",
-   "liikettaVaativa": false,
-   "toimet": []
-  },
-  {
-   "avain": "iss-b-1",
-   "lahde": "iss-b",
-   "indeksi": 0,
-   "teksti": "Katsotaanko ensin jotain? Minulla on kolme suosikkia: Venetsian laguuni, Alpit ja Santorinin tulivuoren kaldera.",
-   "kestoMs": 8320,
-   "aani": "aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-b-1.mp3",
-   "liikettaVaativa": true,
-   "toimet": []
-  },
-  {
-   "avain": "iss-b-2",
-   "lahde": "iss-b",
-   "indeksi": 1,
-   "teksti": "Venetsia! Pyöräytän pallon valmiiksi… noin. Haluatko katsoa tuonne?",
-   "kestoMs": 6960,
-   "aani": "aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-b-2.mp3",
-   "liikettaVaativa": true,
-   "toimet": [
-    {
-     "ms": 2000,
-     "toimi": "pyorayta",
-     "kestoMs": 2600
-    }
-   ]
-  },
-  {
-   "avain": "iss-c-1",
-   "lahde": "iss-c",
-   "indeksi": 0,
-   "teksti": "Hups. Nokka osui väärään kohtaan. Tuo ei todellakaan ole Venetsia. Painottomuus ei sovi kyyhkyille.",
-   "kestoMs": 10320,
-   "aani": "aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-c-1.mp3",
-   "liikettaVaativa": true,
-   "toimet": [
-    {
-     "ms": 250,
-     "toimi": "rappaise",
-     "kestoMs": 0
-    }
-   ]
-  },
-  {
-   "avain": "iss-c-2",
-   "lahde": "iss-c",
-   "indeksi": 1,
-   "teksti": "Anteeksi, anteeksi! Viedään kaikki takaisin alkuun… Kas niin. Pyöritä sinä, minä en enää koske mihinkään. Lupaan.",
-   "kestoMs": 11120,
-   "aani": "aanet/pulu/versiot/5d65b85250a9/pulu-16f2c04e9e19bef41d64/tasoitettu/livia-iss-c-2.mp3",
-   "liikettaVaativa": true,
-   "toimet": [
-    {
-     "ms": 3080,
-     "toimi": "palaa",
-     "kestoMs": 2780
-    }
-   ]
+   "aani": "aanet/pulu/versiot/ca095f4d3132/pulu-ad4d6fcc55d7dd86e8ac/tasoitettu/livia-iss-a-2.mp3"
   }
  ],
  "vakiot": {
@@ -84,19 +22,7 @@
   "viiveMs": 900,
   "kyselyMs": 250,
   "kattoMs": 20000,
-  "vaaraKohde": "richat",
-  "suosikki": {
-   "tunnus": "venetsia",
-   "lat": 45.44,
-   "lon": 12.332
-  },
-  "toimienVaraMs": 1500,
-  "ohituksenPaluuMs": 700,
   "hengahdysMs": 400,
   "varaMs": 2000
- },
- "vahennetty": [
-  "iss-a-1",
-  "iss-a-2"
- ]
+ }
 }

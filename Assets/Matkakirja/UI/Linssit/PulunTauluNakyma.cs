@@ -12,9 +12,9 @@
 // Leveys min(232, ruutu − 32) pt, tumma lasi rgba(6,13,10,0.8), vihreä reuna 0,28, kulmat 12 pt, ei varjoa.
 // AVAAJAT: Pulun napautus linssissä (UiNakymat, Pulu.NapautusEstetty), valokuvan minipulu (Kuvanakyma) ja "Näkymät"-nappi
 // Pulun paikalla, kun Pulu ei ole näkyvissä. Napautuksella avattaessa puhuva Pulu vaikenee ja tervetulo ohittuu; automaattinen
-// avaus ei koskaan vaienna. AVAUS KERRAN ITSESTÄÄN Pulun tervetulon jälkeen (PulunTervetuloNakyma, web #3575), tai linssin
-// paljastuksen jälkeen, jos tervetuloa ei ole (kuultu tai mykistetty): Pulu hiljaa, 600 ms hengähdys, katto 90 s, ei jos
-// pelaaja jo valitsi.
+// avaus ei koskaan vaienna. AVAUS KERRAN ITSESTÄÄN linssin paljastuksen jälkeen (600 ms hengähdys, katto 90 s, ei jos pelaaja
+// jo valitsi), myös Pulun tervetulon aikana: tervetulo puhuu taulun aikana ilman kuplaa (omistaja 29.9.2026, web
+// pulu-taulu.js). Vain muu Pulun puhe siirtää avausta.
 // SULKEVAT: ✕, rivin valinta, Kysy Pululta, uusi napautus avaajaan, napautus muualle (ei niele: ISS:n napautus vie silti
 // kyytiin), linssin sulku. PAIKKA (PulunTaulu.Sijoita): Pulun yllä tai vasemmalla, ei koskaan Pulun eikä ISS-merkin
 // päällä; auki ollessa mitataan 400 ms:n välein. AVAUS JA SULKU (Raamattu PR #3602, omistaja 29.9.2026): taulu kasvaa ja
@@ -130,7 +130,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             linssiAlkoi = Time.unscaledTime;
-            // Tervetulo ensin (kerran per laite), taulu itsestään sen jälkeen (web satelliitti.js: tervetulo → taulu).
+            // Tervetulo (kerran per laite) ja taulu itsestään heti paljastuksen jälkeen (omistaja 29.9.2026).
             Tervetulo.Aloita();
             automaatti = Automaatti.Odottaa;
             automaattiAjo?.Pause();
@@ -179,6 +179,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Soiko Livia juuri nyt: puhekanava tai tervetulon oma repliikki (web liviaPuhuu).</summary>
         bool LiviaPuhuu => Aanet.PuluPuhuu || Tervetulo.Puhuu;
+        /// <summary>Muu kuin tervetulon puhe (web muuPuhe): tervetulon aikana puhekanavalla soi tervetulo, jonka aikana taulu on auki.</summary>
+        bool MuuPuhe => !Tervetulo.Kesken && Aanet.PuluPuhuu;
 
         public bool Avaa(string syy)
         {
@@ -356,15 +358,14 @@ namespace Matkakirja.Natiivi
         {
             if (!linssiAuki || automaatti != Automaatti.Odottaa) return;
             if ((Time.unscaledTime - linssiAlkoi) * 1000f > PulunTaulu.AutomaattiKattoMs) { automaatti = Automaatti.Katto; return; }
-            // Tervetulo ensin: taulu odottaa, kun se odottaa verhoa tai puhuu (web tervetulo.tila().vaihe). Ilman tervetuloa linssin
-            // oma paljastus (musta → otsikko → pallo) ohi: web avaruus.paljastettu().
-            bool valmis = Tervetulo.Jakso != null ? !Tervetulo.Kesken : Linssi()?.Vaihe == AvauksenVaihe.Pois;
-            if (!valmis || LiviaPuhuu) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
+            // Linssin oma paljastus (musta → otsikko → pallo) ohi: web avaruus.paljastettu(). Tervetuloa ei odoteta.
+            bool valmis = Linssi()?.Vaihe == AvauksenVaihe.Pois;
+            if (!valmis || MuuPuhe) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
             automaattiAjo = paneeli.schedule.Execute(() =>
             {
                 if (!linssiAuki || automaatti != Automaatti.Odottaa) return;
-                // Välissä alkanut puhe (esim. kupla) odotetaan vielä loppuun.
-                if (LiviaPuhuu) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
+                // Välissä alkanut muu puhe (esim. kupla) odotetaan vielä loppuun.
+                if (MuuPuhe) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
                 // Pelaaja ehti jo valita (valokuva tai kyyti): taulua ei tuoda päälle.
                 var l = Linssi();
                 if (astro.Kuva.Auki || (l != null && l.Kyydissa)) { automaatti = Automaatti.Valittu; loki.Add("automaatti:valittu"); return; }
