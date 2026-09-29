@@ -253,12 +253,12 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void VirtaPalatKasvavatVirkerajoiltaEikaTekstiaPudoteta()
         {
-            // Palavirta: 1. pala ≥ 140 mrk virkerajalta (140–200), seuraavat ≥ edellinen ja ≤ 3 × edellinen kattoon asti.
+            // Palavirta: 1. pala ≥ VirtaEka (70) mrk virkerajalta (enintään 200), seuraavat ≥ edellinen ja ≤ 3 × edellinen kattoon asti.
             var virke = "Tämä on kahdeksankymmentä merkkiä pitkä virke, jolla palojen kasvua voi mitata tarkasti."; // 88 mrk
             var teksti = string.Join(" ", System.Linq.Enumerable.Repeat(virke, 30));
             var palat = Lukijaaani.VirtaPalat(teksti);
             Oleta.Sama(teksti, string.Join(" ", palat), "mitään ei pudoteta");
-            Oleta.Tosi(palat[0].Length >= Lukijaaani.VirtaEka && palat[0].Length <= 200, "ensimmäinen pala 140–200: " + palat[0].Length);
+            Oleta.Tosi(palat[0].Length >= Lukijaaani.VirtaEka && palat[0].Length <= 200, "ensimmäinen pala 70–200: " + palat[0].Length);
             Oleta.Tosi(palat.Count >= 3, "useita paloja: " + palat.Count);
             for (int i = 1; i < palat.Count - 1; i++)
             {
@@ -277,7 +277,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void VirtaPalatOtsikkoEiJaaYksin()
         {
             // Omistaja 27.9. klo 22.0x (TF 1.0.32): "otsikko on aina lyhyt, ja sen jälkeen tulee tauko". LuennanPalat liittää
-            // otsikon kappaleen alkuun pisteellä; 1. palaan tulee otsikon lisäksi leipätekstin alkua vähintään 140 merkkiin.
+            // otsikon kappaleen alkuun pisteellä; 1. palaan tulee otsikon lisäksi ainakin ensimmäinen virke (≥ VirtaEka).
             var kappale = "Ateenan kukkulalla seisova linnoitus rakennettiin viidennellä vuosisadalla ennen ajanlaskun alkua, "
                 + "ja sen temppeleistä tunnetuin on Parthenon, jumalatar Athenelle omistettu marmorirakennus. "
                 + "Kukkulalle noustaan länsipuolen porttirakennuksen kautta.";
@@ -285,7 +285,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(1, luenta.Count);
             var palat = Lukijaaani.VirtaPalat(luenta[0]);
             Oleta.Tosi(palat[0].StartsWith("Akropolis. Ateenan"), "otsikko + leipätekstin alku: " + palat[0]);
-            Oleta.Tosi(palat[0].Length >= Lukijaaani.VirtaEka, "vähintään 140: " + palat[0].Length);
+            Oleta.Tosi(palat[0].Length >= Lukijaaani.VirtaEka, "vähintään VirtaEka: " + palat[0].Length);
             Oleta.Sama(luenta[0], string.Join(" ", palat), "mitään ei pudoteta");
         }
 
