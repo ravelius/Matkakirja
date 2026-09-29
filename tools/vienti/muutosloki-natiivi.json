@@ -2,6 +2,16 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.44 (202609290609)",
+   "paiva": "2026-09-29",
+   "teksti": "Maakunnan kysymyskortti pysyy saman kokoisena ja sulkeutuu ✕:stä. Astronautin kuvissa näkyy nyt vain pieni Pulu."
+  },
+  {
+   "versio": "1.0.43 (202609290510)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartalla näkyvät nyt järvet ja pienet saaret, ja rannikko on tarkempi. Astronautin kamerassa Pulun napautus avaa taulun, josta vaihdat näkymää, ja kuvan napautus pienentää selitteen."
+  },
+  {
    "versio": "1.0.42 (202609290319)",
    "paiva": "2026-09-29",
    "teksti": "Radio uudistui: uusi radiolaite, hohtavat mastot ja asemat kaikista maailman maista. ISS-kyydissä on uusi ohjauspaneeli, josta valitaan nopeus, kohde ja olosuhteet. Astronautin kuvan selite avautuu pehmeästi, ja kertoja lukee sen ääneen."

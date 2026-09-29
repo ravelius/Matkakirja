@@ -171,10 +171,50 @@ test('repliikeissä ja reaktioissa ei ole [softly]/[whispers]-tageja', () => {
         for (const tagi of KIELLETYT_TAGIT) {
           assert.ok(!tagi.test(r.teksti), `${tila.id}/${h.id}/${r.id}: kielletty tagi ${tagi} tekstissä "${r.teksti}"`);
         }
-        // Tässä erässä kaikki äänet ovat null (ks. pankit/aanet.js-kommentti); jos joskus
-        // asetetaan tiedosto, sen pitää löytyä AANET-pankista.
+        // aani on valinnainen (era2 kohta 2 "AANET"); jos asetettu, sen pitää löytyä AANET-pankista.
         if (r.aani != null) assert.ok(Object.hasOwn(AANET, r.aani), `${tila.id}/${h.id}/${r.id}: aani '${r.aani}' ei ole AANET-pankissa`);
       }
+    }
+  }
+});
+
+test('taulujen kohdat[].aani (tila- ja rakennustaso) löytyvät AANET-pankista', () => {
+  const taulut = [
+    ['RAKENNUS.taulu', RAKENNUS.taulu],
+    ...RAKENNUS.tilat.filter((t) => t.taulu).map((t) => [`${t.id}.taulu`, t.taulu]),
+  ];
+  for (const [nimi, taulu] of taulut) {
+    for (const [i, kohta] of taulu.kohdat.entries()) {
+      if (kohta.aani == null) continue; // valinnainen (era2 kohta 2 "AANET")
+      assert.ok(Object.hasOwn(AANET, kohta.aani), `${nimi}.kohdat[${i}]: aani '${kohta.aani}' ei ole AANET-pankissa`);
+    }
+  }
+});
+
+test('tilan aanet[]-silmukat viittaavat olemassa oleviin, silmukoiviin ääniin', () => {
+  for (const tila of RAKENNUS.tilat) {
+    for (const [i, a] of (tila.aanet ?? []).entries()) {
+      assert.equal(typeof a.aani, 'string', `${tila.id}.aanet[${i}]: aani puuttuu tai ei ole merkkijono`);
+      assert.ok(Object.hasOwn(AANET, a.aani), `${tila.id}.aanet[${i}]: aani '${a.aani}' ei ole AANET-pankissa`);
+      assert.ok(AANET[a.aani].silmukka, `${tila.id}.aanet[${i}]: '${a.aani}' ei silmukoi (tilan aanet-lista on ambienssia varten)`);
+      if (a.voimakkuus != null) assert.ok(a.voimakkuus >= 0 && a.voimakkuus <= 1, `${tila.id}.aanet[${i}]: voimakkuus ei ole 0–1`);
+    }
+  }
+});
+
+test('tilan tehosteet[] ovat oikeamuotoiset ja viittaavat olemassa oleviin, kerta-ääniin', () => {
+  for (const tila of RAKENNUS.tilat) {
+    for (const [i, t] of (tila.tehosteet ?? []).entries()) {
+      const nimi = `${tila.id}.tehosteet[${i}]`;
+      assert.ok(Array.isArray(t.aanet) && t.aanet.length >= 1, `${nimi}: aanet puuttuu tai on tyhjä`);
+      for (const id of t.aanet) {
+        assert.ok(Object.hasOwn(AANET, id), `${nimi}: aani '${id}' ei ole AANET-pankissa`);
+        assert.ok(!AANET[id].silmukka, `${nimi}: '${id}' silmukoi (tehosteet on satunnaisia KERTA-ääniä varten)`);
+      }
+      assert.equal(t.valit_s?.length, 2, `${nimi}: valit_s ei ole [min, max]`);
+      const [min, max] = t.valit_s;
+      assert.ok(min > 0 && min < max, `${nimi}: valit_s [${min}, ${max}] ei ole järkevä (0 < min < max)`);
+      if (t.voimakkuus != null) assert.ok(t.voimakkuus >= 0 && t.voimakkuus <= 1, `${nimi}: voimakkuus ei ole 0–1`);
     }
   }
 });
@@ -218,9 +258,19 @@ test('pulun laskeutumispisteet ovat tilansa rajojen sisällä (tilakohtaiset) ta
 test('PINNAT- ja AANET-pankit ovat oikeamuotoiset', () => {
   for (const [id, p] of Object.entries(PINNAT)) {
     assert.match(p.vari, /^#[0-9a-f]{6}$/i, `pinta '${id}': vari ei ole hex-väri`);
-    assert.equal(typeof p.toisto_m, 'number', `pinta '${id}': toisto_m puuttuu`);
+    // toisto_m: number (tu = tv) TAI [tu, tv] (erä 2 -speksi, esim. leikkaus/tiili [4, 1]).
+    const toistoOk = typeof p.toisto_m === 'number'
+      || (Array.isArray(p.toisto_m) && p.toisto_m.length === 2 && p.toisto_m.every((x) => typeof x === 'number'));
+    assert.ok(toistoOk, `pinta '${id}': toisto_m ei ole number eikä [tu, tv]`);
   }
-  assert.equal(typeof AANET, 'object');
+  // AANET (era2 kohta 2 "AANET"): { silmukka: bool, voimakkuus: 0–1, kesto_s > 0, lisenssi: string, versio: kokonaisluku ≥ 1 }.
+  for (const [id, a] of Object.entries(AANET)) {
+    assert.equal(typeof a.silmukka, 'boolean', `aani '${id}': silmukka puuttuu`);
+    assert.ok(a.voimakkuus >= 0 && a.voimakkuus <= 1, `aani '${id}': voimakkuus ei ole 0–1`);
+    assert.ok(typeof a.kesto_s === 'number' && a.kesto_s > 0, `aani '${id}': kesto_s ei ole positiivinen luku`);
+    assert.equal(typeof a.lisenssi, 'string', `aani '${id}': lisenssi puuttuu`);
+    assert.ok(Number.isInteger(a.versio) && a.versio >= 1, `aani '${id}': versio ei ole kokonaisluku ≥ 1`);
+  }
 });
 
 test('HENKILOT-pankin merkinnät ovat oikeamuotoiset', () => {
