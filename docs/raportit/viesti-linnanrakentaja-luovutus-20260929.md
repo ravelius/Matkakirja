@@ -83,6 +83,10 @@ Poikkileikkaus-linssi (id `poikkileikkaus`, moottori "dioraama"). Lue ensin
     torneille tulee nimet.
   - Tarkistetut taulukohdat on välitetty Pelikoodarille ääneksi.
 - **Äänirajapinta** (Pelikoodarin linja A: `ISilmukka Silmukka(tunnus)`) sovitaan Natiivisepän kanssa, kun äänet ovat valmiit.
+- **Pelikoodarin äänitoimitus:** `/Users/Shared/Claude/proto-3d/lokit/linna-keittio-aanet/dioraama/olavinlinna/aanet/<id>.mp3`
+  + `kestot.json`. Hän ilmoittaa, kun valmis.
+  Sitten: kestot `js/dioraama/pankit/aanet.js`:ään, repliikkien ja kohtien `aani`-kentät dataan ja mp3:t pakettiin
+  (rakenna.mjs kopioi `aanet/` – LISÄTTÄVÄ).
 
 1. **Julkaisija vie paketin ämpäriin.** `dist/dioraama/olavinlinna/` → `media.matkakirja.app/dioraama/olavinlinna/`.
    Sen jälkeen oletuspeili pois, uusi käännös, simulaattorisavuke ja merge-pyyntö Natiivisepälle (haara, commit,
