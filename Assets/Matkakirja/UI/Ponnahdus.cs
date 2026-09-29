@@ -42,10 +42,10 @@ namespace Matkakirja.Natiivi
             AsetaOrigo(e, origoPaneelissa, origo);
             var (a0, s0) = nyt.TryGetValue(e, out var n) ? n : (0f, Mittakaava);
             Aseta(e, a0, s0);
-            float t0 = Time.unscaledTime;
+            var kello = new Kello();
             ajot[e] = e.schedule.Execute(() =>
             {
-                float t = Time.unscaledTime - t0;
+                float t = kello.Askel();
                 float a = Mathf.Lerp(a0, 1f, Kaari(0f, 0f, 0.2f, 1f, t / AukiLapinakyvyysS));
                 float s = Mathf.Lerp(s0, 1f, Kaari(0.22f, 0.9f, 0.24f, 1f, t / AukiS));
                 Aseta(e, a, s);
@@ -65,10 +65,10 @@ namespace Matkakirja.Natiivi
             if (LinssiUi.VahennettyLiike() || e.panel == null || e.resolvedStyle.display == DisplayStyle.None) { Loppu(); return; }
             var (a0, s0) = nyt.TryGetValue(e, out var n) ? n : (1f, 1f);
             e.style.transitionDuration = Nolla;
-            float t0 = Time.unscaledTime;
+            var kello = new Kello();
             ajot[e] = e.schedule.Execute(() =>
             {
-                float t = Time.unscaledTime - t0;
+                float t = kello.Askel();
                 float k = Kaari(0.4f, 0f, 1f, 1f, t / KiinniS);
                 Aseta(e, Mathf.Lerp(a0, 0f, k), Mathf.Lerp(s0, Mittakaava, k));
                 if (t < KiinniS + PoistoViiveS) return;
@@ -90,6 +90,22 @@ namespace Matkakirja.Natiivi
             e.style.opacity = StyleKeyword.Null;
             e.style.scale = StyleKeyword.Null;
             e.style.transitionDuration = StyleKeyword.Null;
+        }
+
+        /// <summary>
+        /// Liikkeen kello: kulkee ruuduittain ja yksi askel on enintään 50 ms. Raskas ruutu (linssin lataus, saapuminen)
+        /// hidastaa liikettä eikä hyppää sen yli (laite cl1 29.9.: 0,5 s:n jumin jälkeen valikko oli jo valmis).
+        /// </summary>
+        sealed class Kello
+        {
+            float edellinen = -1f, kulunut;
+            public float Askel()
+            {
+                float nyt = Time.unscaledTime;
+                if (edellinen >= 0f) kulunut += Mathf.Min(nyt - edellinen, 0.05f);
+                edellinen = nyt;
+                return kulunut;
+            }
         }
 
         static readonly StyleList<TimeValue> Nolla = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(0f) });
