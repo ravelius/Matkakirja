@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 21:52:** Levy 75 Gi, muisti 68 % vapaa, kuorma 15/37/91, sim 0, ei kevyttä tilaa. Viikko 21 % (5 h nollautui 21.50 → 0 %). Konteksti: Linnanrakentaja 58 %, Natiivi-UI 14 %, oma 26 %. Juna: 1.0.55-juna täydennetty 21.50 (b13 90d64a85, +radio-kartta f7bb9545, Codex-puuradio pois). Posti: ei uutta.
+
 **Päivitetty 21:41:** Levy 78 Gi, muisti 81 % vapaa, kuorma 20/59/144, sim 0, ei kevyttä tilaa. Viikko 20 % (5 h 74 %, nollautuu 21.50). Konteksti: Natiivi-UI nollautunut 70 %→14 % (vahdit uudelleen 70 %/85 %), Linnanrakentaja 54 %, oma 26 %. Juna: 1.0.55-juna täydennetty 21.36 (b13 2ebbd407: paavalikko-siivous, linna-valo, iss-minipulu). Posti: ei uutta.
 
 **Päivitetty 21:30:** Levy 77 Gi, muisti 74 % vapaa, kuorma 228/324/280, sim 2, ei kevyttä tilaa. Viikko 19 % (5 h 72 %, nollautuu 21.50). Konteksti: NATIIVI-UI 70 % → ilmoitettu Päätoimittajalle 21.29 (seuraava raja 85 %), Linnanrakentaja 48 %, oma 25 %. Juna: vahti käänsi 21.29 (yläraja, vanhin 3717 s). Posti: ei uutta.
