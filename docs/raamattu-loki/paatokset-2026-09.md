@@ -9323,3 +9323,7 @@ Karttaseppä 29.9.2026: syyskuussa noin 4,9 M R2-PUT-pyyntöä (≈ 17,6 $ Class
 ## OMISTAJA: ELÄVÄ LINNA A + C, RADIO LÄHIKUVA, JOKIPOLTTO DELTANA (29.9.2026 klo 22.28)
 
 Omistaja 29.9.2026 klo 22.28 kortilla (luonnokset A–D, docs: Linnanrakentaja A/B/C Blender, Siirtoseppä D natiivi 1.0.55): 1) elävä linna rakennetaan A:n tunnelmalla (hämärä, lämpimät ikkunat, heijastus) ja C:n sisätilat eläviksi; B:n muurinharja vasta kun vasemman reunan fotogrammetriarepeämä on siivottu. Linnanrakentaja + Siirtoseppä aloittavat käsikirjoituksen vaiheet (saapumiskaari, soihdut, elävät kohteet, lento leikkausikkunan läpi). 2) Radio avautuu pelaajan kaupungin lähikuvana, koko pallon voi loitontaa (1.0.55 ennallaan). 3) Jokipoltto päästetään pidosta: yöllä nice 15:llä, vienti deltana kun #3641 on mainissa.
+
+## OMISTAJA: JÄRVIEN RANTAVIIVA KEVYEMMÄKSI KAUKAA (29.9.2026 klo 22.30)
+
+Omistaja 29.9.2026 klo 22.30: "Kartassa järvet esim. Suomessa ovat turhan paksulla viivalla kaukaa katsoessa." Syy: tools/fokuskartta/maailmapiirto.js osio 5 JÄRVET, kynä 1,0·P ja kostea reuna 2,2·P ovat paperivakioita, joten kaukotasoilla pieni järvi on pelkkää reunaa (natiivin maan kehä ei piirrä järviä, maapolygonit ilman reikiä). Päätoimittaja → Karttaseppä: tasoramppi järvien vedoille (≤ z5 ohuempi ja vaaleampi kynä ilman kosteaa reunaa, ≥ z8 ennallaan) tämän yön jokipolttoon, kuvapari ennen polttoa, vienti deltana.
