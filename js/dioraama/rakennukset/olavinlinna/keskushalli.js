@@ -10,11 +10,12 @@
 
 const TAULU = {
   otsikko: 'Keskushalli ja väentupa',
-  tila: 'luonnos',
+  // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). H1–H3
+  tila: 'tarkistettu',
   kohdat: [
     { teksti: 'Keskushallin alakerrassa oli väentupa, sotaväen ruokasali; toisessa kerroksessa voudin asunto.', lahde: 'Kansallismuseo: Keskushalli' },
-    { teksti: 'Vouti ja seurue söivät ylhäällä Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa.', lahde: 'Yle: Olavinlinnan keittiöhistoria' },
-    { teksti: 'Linnaa lämmitettiin avotakoin; keittiön lämmin ilma nousi hormia pitkin Kuninkaan saliin.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Yle' },
+    { teksti: 'Linnaa lämmitettiin avotakoin, ja lämpö johdettiin hormien kautta.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6' },
+    { teksti: 'Linnassa asui 1500-luvun tilikirjojen mukaan 150–200 henkeä: sotilaita, virkamiehiä, käsityöläisiä.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Yle Tiede' },
   ],
 };
 
@@ -36,13 +37,23 @@ const HAHMOT = [
     reaktio: { id: 'pulu-apulainen-r1', teksti: 'Kolme vatia yhdellä kädellä! Nykyajan ravintolassa hän saisi vakituisen paikan.' },
   },
   {
-    id: 'vartija', henkilo: 'vartija-1500', paikka: [-11.95, 0, -13.1], suunta: 130, peilattu: false,
-    silmukka: 'idle', heraa: 1, reitti: null,
+    // Erä 3 (elävä linna, käsikirjoitus kohta 2–3): vartijat noppapelissä pelilaudan ääressä (pöydän B eteläpään edessä kasvot pohjoiseen; penkit ovat pöydän kyljillä).
+    id: 'vartija', henkilo: 'vartija-1500', paikka: [-11.05, 0, -11.0], suunta: 15, peilattu: false,
+    silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
       { id: 'vartija-1', teksti: 'Vouti syö ylhäällä, me täällä alhaalla. Sopii minulle, tuli on lähempänä.' },
       { id: 'vartija-2', teksti: 'Vuoro vaihtuu aamuhämärässä. Juo nyt, kun kannu vielä on täysi.' },
     ],
-    reaktio: { id: 'pulu-vartija-r1', teksti: 'Turun linnassa aseväelle laskettiin 3,3 litraa olutta päivässä. Minä nokin vain pisaran.' },
+    reaktio: { id: 'pulu-vartija-r1', teksti: 'Noin viisi litraa olutta päivässä kuului vartijan muonaan. Minulle riittäisi pisara – ja murunen leipää.' },
+  },
+  {
+    id: 'vartija2', henkilo: 'vartija-1500', paikka: [-10.15, 0, -11.0], suunta: 345, peilattu: true,
+    silmukka: 'tyo', heraa: 2, reitti: null,
+    repliikit: [
+      { id: 'vartija2-1', teksti: 'Kolme kuutosta! Onni suosii rohkeaa. Maksa, kun vielä kehtaat.' },
+      { id: 'vartija2-2', teksti: 'Yksi heitto vielä ennen vuoroa. Voudin ei tarvitse tietää, mistä pelataan.' },
+    ],
+    reaktio: { id: 'pulu-vartija2-r1', teksti: 'Noppapeli linnassa, ja vouti ylhäällä. Minä en kerro, jos te ette kerro.' },
   },
   {
     id: 'talonpoika', henkilo: 'talonpoika-1500', paikka: [-17.65, 0, -12.6], suunta: 235, peilattu: false,
@@ -268,8 +279,11 @@ export const TILA = {
   ],
   palikat: PALIKAT,
   hahmot: HAHMOT,
-  aanet: [],
-  tehosteet: [],
+  aanet: [{ aani: 'tulisija-ratina' }],
+  tehosteet: [
+    { aanet: ['askel-puu', 'askel-kivi'], valit_s: [8, 18] },
+    { aanet: ['ovi-puu'], valit_s: [25, 50] },
+  ],
   liekit: [
     // Avotakan hiillos (korkeus 0,9), kolme liekkiä vierekkäin.
     { liekki: 'tulisija', paikka: [-14.75, 0.9, -17.9], koko: 1.2, vaihe: 0 },

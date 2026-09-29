@@ -193,7 +193,9 @@ export const TILA = {
   ],
   hahmot: KAPPELI_HAHMOT,
   aanet: [], // kappelin äänet (kaiku, kynttilän rätinä, kaukainen laulu) tulevat Pelikoodarin tilauksesta
-  tehosteet: [],
+  tehosteet: [
+    { aanet: ['kellot-kaukaa'], valit_s: [40, 80] },
+  ],
   liekit: LIEKIT,
   kasikirjoitus: [
     { tee: 'pulu-lenna' },

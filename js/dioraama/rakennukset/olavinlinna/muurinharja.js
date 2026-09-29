@@ -12,11 +12,12 @@
 
 const TAULU = {
   otsikko: 'Muurinharja',
-  tila: 'luonnos',
+  // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). M1–M3
+  tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Tornin neljännessä kerroksessa oli avoin puolustuskäytävä, ylhäällä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
-    { teksti: 'Ennen tuliaseita linnaa puolustettiin nuolilta, kivenheitolta ja piiritysportailta – harja ratkaisi.', lahde: 'Tiedetuubi: Linnarakennustekninen balladi Olavinlinnasta' },
-    { teksti: 'Vuonna 1495 vouti Kylliäinen torjui hyökkäyksen 150 miehen ja talonpojan voimin.', lahde: 'Wikipedia: Olavinlinna; Pietari Niilonpoika Kylliäinen' },
+    { teksti: 'Päätornin neljännessä kerroksessa oli avoin puolustuskäytävä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { teksti: 'Muurin harjalta torjuttiin nuolet, kivet ja piiritysportaat.', lahde: 'Tiedetuubi: Linnarakennustekninen balladi Olavinlinnasta' },
+    { teksti: 'Vuonna 1495 Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikaisen nostoväen turvin.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen, Vanha viha' },
   ],
 };
 
@@ -55,7 +56,7 @@ const HAHMOT = [
     reitti: { pisteet: [[-21.0, KY, -19.75], [-9.0, KY, -19.75], [-21.0, KY, -19.75]], nopeus: 0.8, tauko: 2 },
     repliikit: [
       { id: 'vartija-1', teksti: 'Vahtivuoro on pitkä, mutta rajalta ei saa silmää siirtää hetkeksikään.' },
-      { id: 'vartija-2', teksti: 'Venäjän raja on vain päivämarssin päässä – siksi harjalla ei nukuta.' },
+      { id: 'vartija-2', teksti: 'Itäraja on lähellä, ja sieltä on tultu ennenkin. Siksi harjalla ei nukuta.' },
     ],
     reaktio: { id: 'pulu-vartija-r1', teksti: 'Yötäkö tässä tuulessa? Minä kaipaisin jo kolmen minuutin jälkeen katon alle.' },
   },
