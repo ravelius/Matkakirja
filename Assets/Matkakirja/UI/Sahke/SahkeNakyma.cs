@@ -296,7 +296,7 @@ namespace Matkakirja.Natiivi
                     huomio.text = rivi ?? "";
                 });
                 try { toiminnot.Perusta(valittu, valmis); }
-                catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut."); }
+                catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut: " + SahkeVakiot.EiVastaa); } // web sahkePiirraLiittyminen: `Ei onnistunut: ${syy.message}`
             }, s);
             Rakenne.Tausta(perusta, Kuviot.Kulta);
             Kirjasimet.Aseta(perusta, Kirjasin.KoneLihava);
@@ -331,7 +331,7 @@ namespace Matkakirja.Natiivi
                     huomio.text = rivi ?? "";
                 });
                 try { toiminnot.Liity(arvo, valittu, valmis); }
-                catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut."); }
+                catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut: " + SahkeVakiot.EiVastaa); } // web sahkePiirraLiittyminen: `Ei onnistunut: ${syy.message}`
             }, s);
             Kirjasimet.Aseta(liity, Kirjasin.KoneLihava);
 
@@ -390,7 +390,7 @@ namespace Matkakirja.Natiivi
                             Valitse(pohjarivi, null);
                         });
                         try { toiminnot.Laheta(pohja.Id, p.PaikkaId, valmis); }
-                        catch (Exception e) { Debug.LogException(e); valmis(false, "Ei onnistunut."); }
+                        catch (Exception e) { Debug.LogException(e); valmis(false, "Ei onnistunut: " + SahkeVakiot.EiVastaa); } // web sahkePiirraJasen: sama muoto
                     });
                 }
             }
