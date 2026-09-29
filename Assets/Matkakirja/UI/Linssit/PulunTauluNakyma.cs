@@ -209,7 +209,12 @@ namespace Matkakirja.Natiivi
             Ponnahdus.Avaa(paneeli, avaajanPiste);
             Sijoita(false);
             seuranta?.Pause();
-            seuranta = paneeli.schedule.Execute(() => Sijoita(true)).Every((long)PulunTaulu.SeurantaMs);
+            seuranta = paneeli.schedule.Execute(() =>
+            {
+                // Moodi vaihtui taulun ollessa auki (esim. ISS:n napautus kyytiin): nykyinen rivi vihreäksi (laitekuva 1.0.54).
+                if (Auki && rakennettu != Nykyinen(Linssi())) Rakenna();
+                Sijoita(true);
+            }).Every((long)PulunTaulu.SeurantaMs);
             return true;
         }
 
@@ -233,11 +238,14 @@ namespace Matkakirja.Natiivi
             paneeli.style.transformOrigin = new TransformOrigin(Mathf.Clamp(p.x - r.x, 0f, r.width), Mathf.Clamp(p.y - r.y, 0f, r.height), 0f);
         }
 
+        AstroMoodi? rakennettu;
+
         void Rakenna()
         {
             rivit.Clear();
             var l = Linssi();
             var nyt = Nykyinen(l);
+            rakennettu = nyt;
             bool kyytiOn = l != null && l.Auki;
             // Käynnissä oleva lisärivi (esim. avaruuskävely) on valittu; silloin moodirivi ei ole.
             var lisaAktiivinen = kyytiOn ? lisarivit.Find(x => Kysy(x.Aktiivinen)) : null;
@@ -256,7 +264,8 @@ namespace Matkakirja.Natiivi
             var b = Rakenne.Nappi(null, "mk-astroTaulu__rivi" + (valittu ? " mk-valittu" : ""), () => { if (Auki) valinta(); }, rivit);
             b.tooltip = otsikko;
             Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-astroTaulu__riviOtsikko", b), Kirjasin.LukuLihava);
-            Rakenne.Teksti(selite, "mk-astroTaulu__riviSelite", b);
+            // Pitkä selite (esim. avaruuskävely) rivittyy eikä leikkaudu taulun reunaan (laitekuva 1.0.54).
+            Rakenne.Teksti(selite, "mk-astroTaulu__riviSelite", b).style.whiteSpace = WhiteSpace.Normal;
         }
 
         static bool Kysy(Func<bool> f) { try { return f != null && f(); } catch { return false; } }
@@ -322,7 +331,9 @@ namespace Matkakirja.Natiivi
             var l = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>();
             if (l != null && l.IssRuudulla(out var px) && Screen.width > 0 && Screen.height > 0)
                 vaista.Add(PulunTaulu.IssAlue(px.x * W / Screen.width, (Screen.height - px.y) * H / Screen.height));
-            var valittu = PulunTaulu.Sijoita(pulu.Value, W, H, w, h, vaista, vainYlos ? paikka : null, ala);
+            // Ylin sallittu yläreuna: turva-alue ja kyydissä lukemarivi (LIVE · ISS …, noin 44 pt) sen alla.
+            float ylaMin = kerros.Reunat(LinssiUi.Kerros).y + (Linssi()?.Kyydissa == true ? 52f : PulunTaulu.YlaMin);
+            var valittu = PulunTaulu.Sijoita(pulu.Value, W, H, w, h, vaista, vainYlos ? paikka : null, ala, ylaMin);
             paikka = valittu.Nimi;
             ala = valittu.Ala;
             paneeli.style.bottom = valittu.Ala;
