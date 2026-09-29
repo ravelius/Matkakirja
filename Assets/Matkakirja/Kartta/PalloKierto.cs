@@ -901,14 +901,16 @@ namespace Matkakirja
         /// <summary>
         /// LINSSIN ZOOMIRAJAT (Linssiseppä 29.9.2026, Natiivisepän rajapinta; web lauta.zoomirajat): lattia nostaa lähimmän
         /// korkeuden (MinKorkeus = max(oma, lattia)), katto korvaa ylärajan (MaxKorkeus, EleKatto; maan rajat eivät ole silloin
-        /// voimassa). Metreinä; null = pelin oma sääntö. Nykyinen korkeus rajataan heti uuteen kaistaan. LinssiOhjain palauttaa
+        /// voimassa). Metreinä; null = pelin oma sääntö. Asetettu kaista rajaa nykyisen korkeuden heti; vapautus ei. LinssiOhjain palauttaa
         /// (null, null) linssin jokaisella sulkupolulla.
         /// </summary>
         public void LinssinRajat(double? lattiaM, double? kattoM)
         {
             linssinLattia = lattiaM > 0 ? lattiaM : null;
             linssinKatto = kattoM > 0 ? kattoM : null;
-            if (korkeus > 0) korkeus = math.clamp(korkeus, MinKorkeus(), MaxKorkeus());
+            // Vain asetettu kaista rajaa heti. Vapautus (null, null) ei hyppää koko pallon korkeuteen: linssin oma paluuajo
+            // (esim. AstronauttiLinssi.Sulje, 1,6 s) tuo kameran alas, ja seuraava ele rajataan pelin säännöllä.
+            if (korkeus > 0 && (linssinLattia.HasValue || linssinKatto.HasValue)) korkeus = math.clamp(korkeus, MinKorkeus(), MaxKorkeus());
         }
 
         /// <summary>
