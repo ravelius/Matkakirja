@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 10:13:** Levy 105,30 Gi (vakaa), /private/tmp 22,9 Gt, muisti 56 % vapaa, kuorma 90/70/69, sim 1, GPU-chrome 0, wt/ 18 kohdetta 12 Gt. Roolit: vain Linssiseppä käynnissä (konteksti ei tarkistettu, edellinen ei ≥70 %), muut levossa. Juna OK: käännetty cd78a365 10:04 (b13 HEAD 385c39e1 09:43). Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
+
 **Päivitetty 10:04:** Levy 104,48 Gi (vakaa), /private/tmp 22,8 Gt, muisti 61 % vapaa, kuorma 132/61/68 (piikki, ei hälytysrajalla), sim 1, GPU-chrome 0, wt/ 19 kohdetta 13 Gt. Roolit: kaikki levossa (ilmoitettu Päätoimittajalle); ei ≥70 %. Juna OK: käännetty a2887ec5 08:59. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
 
 **Päivitetty 09:55:** Levy 104,57 Gi (vakaa), /private/tmp 22,8 Gt, muisti 59 % vapaa, kuorma 41/74/89 (laskussa), sim 0, GPU-chrome 0, wt/ 19 kohdetta 13 Gt (Julkaisijaa pyydetty poistamaan julkaisija-pr3606 kun #3606 mainissa). Roolit: vain Linnanrakentaja käynnissä (49 % 09:46), muut levossa. Juna OK: käännetty a2887ec5 08:59. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
