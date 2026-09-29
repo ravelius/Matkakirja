@@ -102,8 +102,15 @@ namespace Matkakirja.Natiivi
             bool oli = Auki;
             Auki = true;
             if (kokoruutu && PalloKierto.Pysaytyskuva != null) AsetaPysaytys(PalloKierto.Pysaytyskuva);
+            kerros.style.transitionDuration = StyleKeyword.Null;
             Rakenne.Nayta(kerros, true, 220);
-            if (!oli) AukiMuuttui?.Invoke(true);
+            if (!oli)
+            {
+                // Web SUURENNOS_MS / KOHDE_ZOOM_MS 320 (Raamatun poikkeus): kehys kasvaa napautetusta pikkukuvasta.
+                lahto = Pikkukuva();
+                if (lahto.HasValue) Ponnahdus.Lenna(kehys, lahto.Value, true);
+                AukiMuuttui?.Invoke(true);
+            }
         }
 
         public void Sulje()
@@ -112,8 +119,31 @@ namespace Matkakirja.Natiivi
             Auki = false;
             versio++;
             NollaaZoom();
-            Rakenne.Nayta(kerros, false, 180);
+            if (lahto.HasValue)
+            {
+                // Kutistuu takaisin pikkukuvaan; tausta häivyttää lennon ajan (web: poisto 60 ms lennon jälkeen).
+                Ponnahdus.Lenna(kehys, lahto.Value, false);
+                kerros.style.transitionDuration = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(Ponnahdus.SuurennosS) });
+                Rakenne.Nayta(kerros, false, Mathf.RoundToInt(Ponnahdus.SuurennosS * 1000f) + 60);
+            }
+            else Rakenne.Nayta(kerros, false, 220);
             AukiMuuttui?.Invoke(false);
+        }
+
+        Rect? lahto;
+
+        /// <summary>
+        /// Napautettu pikkukuva (Ponnahdus.TuoreKohde), jos se on selvästi suurennosta pienempi eikä suurennoksen oma osa;
+        /// muuten ei lentoa (web ankkuriMuunnos palauttaa null ilman ankkuria: pelkkä taustan häivytys).
+        /// </summary>
+        Rect? Pikkukuva()
+        {
+            var r = Ponnahdus.TuoreKohde;
+            var ruutu = kerros.panel?.visualTree.worldBound;
+            if (!r.HasValue || !ruutu.HasValue || r.Value.width < 24f || r.Value.height < 24f) return null;
+            if (r.Value.width * r.Value.height > 0.4f * ruutu.Value.width * ruutu.Value.height) return null;
+            if (kerros.worldBound.width > 0f && kerros.worldBound.Overlaps(r.Value) && kerros.resolvedStyle.opacity > 0.5f) return null;
+            return r;
         }
 
         /// <summary>Täyttötila: kuvan koko contain-periaatteella; kehyksen muu tila (paperi, teksti) vähennetään varasta.</summary>

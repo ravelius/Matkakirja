@@ -795,10 +795,20 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Elämäpalkki: täysi lohko jokaista jäljellä olevaa 6 h vuoroa kohden; näkyy vain rahattomana.</summary>
+        bool elamaNakyy;
+
         void NaytaElama()
         {
             bool naytetaan = rahatonVuoroja != null && !matkaPaattyi && nakyy;
-            elama.style.display = naytetaan ? DisplayStyle.Flex : DisplayStyle.None;
+            // Lappu ilmestyy ja poistuu animoiden (omistaja 29.9.2026, Ponnahdus); vain tilan vaihtuessa, ei joka päivityksellä.
+            // Palkin piilotus lehden ajaksi (nakyy) on heti, kuten koko yläpalkki.
+            if (naytetaan != elamaNakyy)
+            {
+                elamaNakyy = naytetaan;
+                if (naytetaan) Ponnahdus.Avaa(elama, origo: new TransformOrigin(Length.Percent(50), Length.Percent(0)));
+                else if (nakyy) Ponnahdus.Sulje(elama);
+                else { Ponnahdus.Lopeta(elama); elama.style.display = DisplayStyle.None; }
+            }
             if (!naytetaan) { elamaAjastin.Pause(); elamaSeliteAuki = false; Ponnahdus.Lopeta(elamaSelite); elamaSelite.style.display = DisplayStyle.None; return; }
             elamaAjastin.Resume();
             int n = Mathf.Clamp(rahatonVuoroja.Value, 0, ElamaLohkoja);

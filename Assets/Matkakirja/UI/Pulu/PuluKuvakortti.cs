@@ -82,6 +82,8 @@ namespace Matkakirja.Natiivi
             {
                 Auki = true;
                 Rakenne.Nayta(tausta, true, 200);
+                // Kortti kasvaa napautetun kuvan kohdalta (Raamattu: avaus ja sulku aina animoiden, Ponnahdus).
+                Ponnahdus.Avaa(kortti);
                 SyoteLukko.Esta(this);
             }
             Mitoita();
@@ -93,7 +95,8 @@ namespace Matkakirja.Natiivi
             Auki = false;
             versio++;
             avaaJuttu = null;
-            Rakenne.Nayta(tausta, false, 180);
+            Rakenne.Nayta(tausta, false, Mathf.RoundToInt((Ponnahdus.KiinniS + Ponnahdus.PoistoViiveS) * 1000f));
+            Ponnahdus.Sulje(kortti, () => { });
             SyoteLukko.Vapauta(this);
         }
 

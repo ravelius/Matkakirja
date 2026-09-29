@@ -6,7 +6,7 @@
 // USS:ssä ei box-shadowta, joten alle tumma, pehmeäreunainen levy) ja toinen,
 // hieman kierretty katkoviivareuna (.dialog-card::before: inset −6, dashed,
 // rgba(70,51,31,.32), rotate −0,45°), joka piirretään Painter2D:llä.
-// Sisääntulo: card-in 0,32 s (nousee 16 pt, kiertyy −1,2° → 0, skaalautuu 0,97 → 1).
+// Avaus ja sulku: Ponnahdus (Rakenne.Nayta himmennykselle), webin 220/200 ms; vanha card-in 0,32 s poistui 29.9.2026.
 using UnityEngine;
 using UnityEngine.UIElements;
 

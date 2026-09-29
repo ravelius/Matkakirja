@@ -208,7 +208,9 @@ namespace Matkakirja.Natiivi
             Pikkuseloste.Sulje();
             opas = onOpas;
             arkki.EnableInClassList("mk-nahtavyys--opas", onOpas);
+            Ponnahdus.Lopeta(valikko);
             valikko.style.display = DisplayStyle.None;
+            valikkoAuki = false;
             PaivitaSelaus();
             aika.text = (aikarivi ?? "").ToUpperInvariant();
             aika.style.display = string.IsNullOrEmpty(aikarivi) ? DisplayStyle.None : DisplayStyle.Flex;
@@ -276,9 +278,20 @@ namespace Matkakirja.Natiivi
             AvaaKohde(kartta, k);
         }
 
+        bool valikkoAuki;
+
+        /// <summary>Kohdevalikko avautuu ja sulkeutuu animoiden valikkonapin kohdalta (omistaja 29.9.2026, Ponnahdus).</summary>
+        void SuljeValikko()
+        {
+            if (!valikkoAuki) return;
+            valikkoAuki = false;
+            Ponnahdus.Sulje(valikko);
+        }
+
         void VaihdaValikko()
         {
-            if (valikko.style.display == DisplayStyle.Flex) { valikko.style.display = DisplayStyle.None; return; }
+            if (valikkoAuki) { SuljeValikko(); return; }
+            valikkoAuki = true;
             valikko.Clear();
             var v = new ScrollView(ScrollViewMode.Vertical);
             v.AddToClassList("mk-nahtavyys__valikkovieritys");
@@ -287,12 +300,12 @@ namespace Matkakirja.Natiivi
             foreach (var k in kartta?.Kohteet.Where(x => x.Avattava) ?? Enumerable.Empty<KohdekarttaKohde>())
             {
                 var kohde = k;
-                var rivi = Rakenne.Nappi(null, "mk-nahtavyys__valikkorivi", () => { valikko.style.display = DisplayStyle.None; AvaaKohde(kartta, kohde); }, v);
+                var rivi = Rakenne.Nappi(null, "mk-nahtavyys__valikkorivi", () => { SuljeValikko(); AvaaKohde(kartta, kohde); }, v);
                 rivi.EnableInClassList("mk-valittu", k == nykyinen);
                 Kirjasimet.Aseta(Rakenne.Teksti(k.Numero.ToString(), "mk-nahtavyys__valikkonumero", rivi), Kirjasin.KoneLihava);
                 Kirjasimet.Aseta(Rakenne.Teksti(k.Nimi, "mk-nahtavyys__valikkonimi", rivi), k == nykyinen ? Kirjasin.LukuLihava : Kirjasin.Luku);
             }
-            valikko.style.display = DisplayStyle.Flex;
+            Ponnahdus.Avaa(valikko, valikkoNappi.worldBound.center);
         }
 
         // --- nähtävyysjuttu -------------------------------------------------------------------------

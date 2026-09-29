@@ -28,9 +28,31 @@ namespace Matkakirja.Natiivi
         /// <summary>Kesken olevien liikkeiden määrä (testit).</summary>
         public static int Kesken => ajot.Count;
 
+        // AVAUSKOHTA ILMAN NAPPIA (web js/avausanimaatio.js): viimeisin napautus alle 1,5 s sitten, muuten keskusta.
+        // UiKerros kirjaa jokaisen painalluksen kaikista kerroksista (paneelin koordinaatit, kerrokset samassa mittakaavassa).
+        const float NapautusTuoreS = 1.5f;
+        static Vector2 napautus;
+        static Rect napautusKohde;
+        static float napautusAika = -10f;
+
+        /// <summary>Painallus paneelin koordinaateissa ja painettu elementti (UiKerros, TrickleDown).</summary>
+        public static void Napautettu(Vector2 paneelissa, VisualElement kohde)
+        {
+            napautus = paneelissa;
+            napautusKohde = kohde != null ? kohde.worldBound : default;
+            napautusAika = Time.unscaledTime;
+        }
+
+        /// <summary>Viimeisin napautus, jos alle 1,5 s sitten.</summary>
+        public static Vector2? TuoreNapautus => Time.unscaledTime - napautusAika < NapautusTuoreS ? napautus : (Vector2?)null;
+
+        /// <summary>Viimeksi painetun elementin laatikko (esim. pikkukuva, josta suurennos lentää), jos alle 1,5 s sitten.</summary>
+        public static Rect? TuoreKohde => Time.unscaledTime - napautusAika < NapautusTuoreS && napautusKohde.width > 0f ? napautusKohde : (Rect?)null;
+
         /// <summary>
         /// Avaa elementin: näkyviin (display flex) ja kasvu 0,92 → 1 häivyttäen; lopuksi läpinäkyvyys ja mittakaava USS:lle. origoPaneelissa = avaajan kohta paneelin
-        /// koordinaateissa (napautus, nappi); ilman sitä origo-parametri (esim. oikea yläkulma) tai keskusta.
+        /// koordinaateissa (napautus, nappi); ilman sitä origo-parametri (esim. oikea yläkulma), tuore napautus (alle 1,5 s,
+        /// kuten web) tai keskusta.
         /// </summary>
         public static void Avaa(VisualElement e, Vector2? origoPaneelissa = null, TransformOrigin? origo = null)
         {
@@ -41,7 +63,7 @@ namespace Matkakirja.Natiivi
             e.style.transitionDuration = Nolla; // USS-siirtymä ei saa pehmentää ruuduittaisia arvoja
             // Levossa ruudunpäivitys on 30 fps: liikkeen ajaksi täysi taajuus (Linssisepän huomio 29.9.).
             Ruudunpaivitys.Herata(AukiS + 0.1f);
-            AsetaOrigo(e, origoPaneelissa, origo);
+            AsetaOrigo(e, origoPaneelissa ?? (origo == null ? TuoreNapautus : null), origo);
             var (a0, s0) = nyt.TryGetValue(e, out var n) ? n : (0f, Mittakaava);
             Aseta(e, a0, s0);
             var kello = new Kello();
@@ -78,6 +100,65 @@ namespace Matkakirja.Natiivi
                 Lopeta(e);
                 Loppu();
             }).Every(0);
+        }
+
+        // KUVAN SUURENNOS (Raamattu: poikkeus omilla arvoillaan 320 ms; web js/fokusvirta.js SUURENNOS_MS ja
+        // js/fokuskohteet.js KOHDE_ZOOM_MS): kehys asettuu heti lopulliseen kokoonsa ja lentää pikkukuvan laatikosta
+        // paikalleen (translate + scale, origo vasen yläkulma), sulku samaa reittiä takaisin; kaari
+        // cubic-bezier(0.22, 0.9, 0.24, 1) molempiin suuntiin.
+        public const float SuurennosS = 0.32f;
+        static readonly Dictionary<VisualElement, float> lennot = new Dictionary<VisualElement, float>();
+
+        /// <summary>
+        /// Lento pikkukuvan laatikosta (paneelin koordinaatit) lopulliseen paikkaan (auki) tai takaisin (kiinni). Lopullinen
+        /// laatikko luetaan asettelusta joka ruudulla, joten kuvan latautuminen kesken lennon ei hyppää. Kesken oleva lento
+        /// kääntyy nykyisestä kohdasta.
+        /// </summary>
+        public static void Lenna(VisualElement e, Rect lahto, bool auki, Action valmis = null)
+        {
+            if (e == null) return;
+            Lopeta(e);
+            if (LinssiUi.VahennettyLiike() || lahto.width < 1f || lahto.height < 1f) { VapautaLento(e); valmis?.Invoke(); return; }
+            float p0 = lennot.TryGetValue(e, out var p) ? p : (auki ? 0f : 1f);
+            e.style.transitionDuration = Nolla;
+            e.style.transformOrigin = new TransformOrigin(0f, 0f, 0f);
+            Ruudunpaivitys.Herata(SuurennosS + 0.1f);
+            AsetaLento(e, lahto, p0);
+            var kello = new Kello();
+            ajot[e] = e.schedule.Execute(() =>
+            {
+                float t = kello.Askel();
+                float k = Kaari(0.22f, 0.9f, 0.24f, 1f, t / SuurennosS);
+                AsetaLento(e, lahto, Mathf.Lerp(p0, auki ? 1f : 0f, k));
+                if (t < SuurennosS) return;
+                Lopeta(e);
+                VapautaLento(e);
+                valmis?.Invoke();
+            }).Every(0);
+        }
+
+        static void AsetaLento(VisualElement e, Rect lahto, float p)
+        {
+            lennot[e] = p;
+            // Skaalaamaton laatikko kuten AsetaOrigo; ennen ensimmäistä asettelua kehys odottaa näkymättömänä.
+            var koko = e.layout.size;
+            if (float.IsNaN(koko.x) || koko.x < 1f || koko.y < 1f) { e.style.opacity = 0f; return; }
+            e.style.opacity = StyleKeyword.Null;
+            var paikka = e.parent != null ? e.parent.worldBound.position + e.layout.position : e.layout.position;
+            var siirto = (lahto.position - paikka) * (1f - p);
+            var mittakaava = Vector2.Lerp(new Vector2(lahto.width / koko.x, lahto.height / koko.y), Vector2.one, p);
+            e.style.translate = new Translate(siirto.x, siirto.y);
+            e.style.scale = new Scale(mittakaava);
+        }
+
+        static void VapautaLento(VisualElement e)
+        {
+            lennot.Remove(e);
+            e.style.opacity = StyleKeyword.Null;
+            e.style.translate = StyleKeyword.Null;
+            e.style.scale = StyleKeyword.Null;
+            e.style.transformOrigin = StyleKeyword.Null;
+            e.style.transitionDuration = StyleKeyword.Null;
         }
 
         /// <summary>Kesken oleva liike seis nykyiseen arvoon.</summary>
