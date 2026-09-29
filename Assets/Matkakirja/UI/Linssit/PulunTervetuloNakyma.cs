@@ -11,8 +11,8 @@
 //             ui napauta). Napautusta ei niele, joten pallo, ✕ ja kuva saavat sen silti (webin kaappausvaiheen passiivinen
 //             kuuntelija). Pulun napautus ohittaa myös taulun kautta (PulunTauluNakyma.Avaa, webin tervetulo.ohita).
 //   muisti    PlayerPrefs "matkakirja-pulu-astro-tervetulo" (webin localStorage-avain).
-//   mykistys  Kertoja-kytkin pois tai Pulun taso 0 (Aanet.Taso(Puhe): Pulun liuku ja Äänimaisema): ei aloiteta eikä muistia
-//             kuluteta, joten tervetulo tulee ensimmäisellä avauksella, jonka pelaaja kuulee.
+//   mykistys  Kertoja-kytkin pois tai Pulun liuku 0 (web pulunIssMykistetty; Äänimaisema ei vaikuta Pulun puheeseen, Aanet.Taso):
+//             ei aloiteta eikä muistia kuluteta, joten tervetulo tulee ensimmäisellä avauksella, jonka pelaaja kuulee.
 //   luenta    väärän kuvan selitettä ei lueta Pulun puheen päälle (Kuvanakyma.LuentaEste). Omistaja 8.9.2026: pulun ja
 //             kertojan äänet eivät saa mennä päällekkäin; webissä C1:n kuva käynnistää selitteen luennan, joka estää C2:n äänen.
 //   esilataus seuraava äänite haetaan muistiin edellisen aikana (ensimmäinen jo odotusvaiheessa), jotta toimet osuvat sanoihin.
@@ -158,7 +158,7 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
-        bool ITervetulonYmparisto.Mykistetty() => !Asetukset.Paalla(Kytkin.Kertoja) || !(Aanet.Taso(AaniKanava.Puhe) > 0f);
+        bool ITervetulonYmparisto.Mykistetty() => !Asetukset.Paalla(Kytkin.Kertoja) || !(Asetukset.Taso(Voima.Pulu) > 0f);
 
         void ITervetulonYmparisto.Vaikene()
         {
