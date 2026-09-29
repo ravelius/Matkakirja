@@ -3865,3 +3865,16 @@
     white-space: normal;
     color: rgba(70, 51, 31, 0.92);
 }
+
+/* Esikatseltu rivi muuttuu samassa kohdassa toimintonapiksi (web: "rivi muuttuu Aktivoi-napiksi"; laite cl2: teksti päällekkäin). */
+.mk-linssirivi.mk-esikatseltu .mk-linssirivi__nimi {
+    display: none;
+}
+
+.mk-linssirivi.mk-esikatseltu .mk-linssirivi__tila {
+    flex-grow: 1;
+    font-size: 14px;
+    letter-spacing: 0;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}
