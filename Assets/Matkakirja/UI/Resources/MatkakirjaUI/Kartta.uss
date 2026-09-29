@@ -2151,11 +2151,12 @@
 }
 
 /* Lapun ✕ (omistaja 29.9.2026, mitat sovittu webin kanssa): sama ohut risti kuin karttaselitteen ✕ (ikoni 20, viiva 1,3,
-   muste 70 %), ei taustaa eikä kehystä; keskipiste 16 pt lapun ylä- ja oikeasta reunasta, osuma-ala 44 × 44. */
+   muste 70 %), ei taustaa eikä kehystä; keskipiste 20 pt yläreunasta ja 22 pt oikeasta reunasta (webin mitta, Siirtoseppä
+   29.9.), osuma-ala 44 × 44. */
 .mk-selite__sulje.mk-selite__lappusulje {
     position: absolute;
-    top: -6px;
-    right: -6px;
+    top: -2px;
+    right: 0;
     width: 44px;
     height: 44px;
     min-height: 44px;
