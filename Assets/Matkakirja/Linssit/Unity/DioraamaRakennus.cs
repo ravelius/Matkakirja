@@ -228,6 +228,10 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>Olavinlinna: jaetun pinnan materiaali muille näkymille (kuoren alla oleva järvi käyttää pintaa "vesi").</summary>
+        public Material PinnanMateriaali(Rakennus rakennus, string pintaId) =>
+            rakennus != null && NykyinenVarjostin() != null ? MateriaaliPinnalle(rakennus, pintaId) : null;
+
         Material MateriaaliPinnalle(Rakennus rakennus, string pintaId)
         {
             viimeisinRakennus = rakennus;

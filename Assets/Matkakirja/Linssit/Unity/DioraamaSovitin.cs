@@ -295,6 +295,9 @@ namespace Matkakirja.Natiivi
         {
             if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
             o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa));
+            // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).
+            double toisto = rakennus.Pinnat != null && rakennus.Pinnat.TryGetValue("vesi", out var vp) && vp.ToistoU > 0 ? vp.ToistoU : 8;
+            nayttamo.Ulkokuori.LisaaVesi(rakennus3D?.PinnanMateriaali(rakennus, "vesi"), (float)rakennus.Ulkokuori.VesiY, (float)toisto);
         }
 
         /// <summary>Kevyt Tila-kopio, jonka Hahmot-lista suodattaa POIS henkilöt, joilla ON malli3d.glb JA
@@ -417,6 +420,23 @@ namespace Matkakirja.Natiivi
             int kerta = avauskerta;
             bool puoli = PieniLaite() && !string.IsNullOrEmpty(tila.ValoAtlasPuoli);
             string polku = puoli ? tila.ValoAtlasPuoli : tila.ValoAtlas;
+            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli), JPEG varalla.
+            string astcPolku = puoli ? tila.ValoAtlasAstcPuoli : tila.ValoAtlasAstc;
+            if (!string.IsNullOrEmpty(astcPolku))
+            {
+                byte[] astcTavut = null;
+                yield return HaeTavut(peili(paketinJuuri + astcPolku), t => astcTavut = t);
+                var astc = DioraamaAstc.Lue(astcTavut, "Valoatlas:" + tila.Id + ":astc");
+                if (kerta != avauskerta || rakennus3D == null) { if (astc != null) UnityEngine.Object.Destroy(astc); yield break; }
+                if (astc != null)
+                {
+                    ladatutValoAtlakset[tila.Id] = astc;
+                    rakennus3D.AsetaValoAtlas(tila.Id, astc);
+                    o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({astc.width}x{astc.height} {astc.format}{(puoli ? ", puolikas" : "")})");
+                    yield break;
+                }
+                o.Kirjaa($"poikki: valoatlas {tila.Id} ASTC ei käytössä, JPEG varalla");
+            }
             byte[] tavut = null;
             yield return HaeTavut(peili(paketinJuuri + polku), t => tavut = t);
             if (tavut == null) { o.Kirjaa($"poikki: valoatlas {polku} ei latautunut (tila harmaana)"); yield break; }
