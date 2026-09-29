@@ -248,7 +248,7 @@ namespace Matkakirja.Natiivi
         }
 
         bool Avaajassa(Vector2 p) =>
-            (Pulu.Hae().Nakyvissa && Pulu.Hae().Laatikko.Contains(p)) || astro.Kuva.MinipulunLaatikko.Contains(p)
+            (Pulu.Hae().Nakyvissa && Pulu.Hae().Lintu.Contains(p)) || astro.Kuva.MinipulunLaatikko.Contains(p)
             || (nakymat.resolvedStyle.display == DisplayStyle.Flex && nakymat.worldBound.Contains(p));
 
         // --- sijoitus -------------------------------------------------------------------
@@ -285,7 +285,7 @@ namespace Matkakirja.Natiivi
             Rect r;
             bool ele = false;
             if (astro.Kuva.Auki && astro.Kuva.MinipulunLaatikko.width > 0) r = astro.Kuva.MinipulunLaatikko;
-            else if (Pulu.Hae().Nakyvissa && Pulu.Hae().Laatikko.width > 0) { r = Pulu.Hae().Laatikko; ele = true; }
+            else if (Pulu.Hae().Nakyvissa && Pulu.Hae().Lintu.width > 0) { r = Pulu.Hae().Lintu; ele = true; }
             else if (nakymat.resolvedStyle.display == DisplayStyle.Flex && nakymat.worldBound.width > 0) r = nakymat.worldBound;
             else return null;
             // Pulu reagoi napautukseen eleellä, joka nostaa hahmoa (mitattu 28.9.: 90 pt napin yläreunasta).
@@ -397,9 +397,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Testikomento `ui linssi taulu [auki|kiinni|pulu|valitse <tunnus>|kysy|tila]`: auki/kiinni suoraan, pulu = Pulun
-        /// napautuksen polku (vaientaa puheen), valitse = rivin napautus (pallo|iss-rinnalla|iss-sisalle|kuvat), kysy = Kysy
-        /// Pululta. Palauttaa tilan (paikka, alue, Pulun laatikko, moodi, loki).
+        /// Testikomento `ui linssi taulu [auki|kiinni|pulu|valitse <tunnus>|kysy|ilman-pulua|pulu-takaisin|tila]`: auki/kiinni
+        /// suoraan, pulu = Pulun napautuksen polku (vaientaa puheen), valitse = rivin napautus (pallo|iss-rinnalla|iss-sisalle|
+        /// kuvat), kysy = Kysy Pululta, ilman-pulua = Näkymät-nappi. Palauttaa tilan (paikka, alue, Pulun laatikko, moodi, loki).
         /// </summary>
         public string Testaa(string a1, string a2)
         {
@@ -410,6 +410,9 @@ namespace Matkakirja.Natiivi
                 case "pulu": PulunNapautus(); break;
                 case "valitse": Valitse(a2); break;
                 case "kysy": KysyPululta(); break;
+                // Pulu pois näkyvistä ja takaisin: Näkymät-nappi Pulun paikalla (webin mallikuva 7).
+                case "ilman-pulua": Pulu.Hae().Nayta(false); PaikkaKierros(); break;
+                case "pulu-takaisin": Pulu.Hae().Nayta(true); PaikkaKierros(); break;
             }
             return Tila();
         }
