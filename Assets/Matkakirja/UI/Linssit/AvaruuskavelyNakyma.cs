@@ -223,13 +223,19 @@ namespace Matkakirja.Natiivi
 
         // ---- vaiheet ----
 
+        /// <summary>
+        /// Pulun repliikit (kupla ja kypäräradio) avaruuskävelyllä. Omistaja 29.9.2026: "Ota pulun ääni toistaiseksi kokonaan pois
+        /// ISS-kohtauksesta." Pulu näkyy, mutta ei puhu; vaiheiden ajoitus ennallaan. A/B `astro kavely pulu 1`.
+        /// </summary>
+        public static bool PuluPuhuu;
+
         void Aseta(KavelynVaihe uusi, AstronauttiLinssi l)
         {
             var k = l?.Kavely;
             ohje.text = k?.Ohje ?? "";
             ohje.style.display = string.IsNullOrEmpty(ohje.text) ? DisplayStyle.None : DisplayStyle.Flex;
             // Repliikki kerran vaiheen alussa (sama repliikki köydellä ei toistu).
-            var rep = k?.Repliikki;
+            var rep = PuluPuhuu ? k?.Repliikki : null;
             if (rep.HasValue && rep.Value.Tunnus != sanottu)
             {
                 sanottu = rep.Value.Tunnus;

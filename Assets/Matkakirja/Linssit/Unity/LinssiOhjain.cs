@@ -1401,7 +1401,9 @@ namespace Matkakirja.Natiivi
                         else if (a == "alas" && osat.Length > 3)   // A/B katse alas ulkona (°): 45 = oletus, Codexin horisontti ~45 %
                             Matkakirja.Linssit.Iss.IssKuvakulma.UlkonaKatseAlas = Math.Max(22, Math.Min(70, Luku(osat[3])));
                         else if (a == "suunta" && osat.Length > 3) Matkakirja.Linssit.Iss.Avaruuskavely.KohtiAurinkoa = osat[3] != "sivu";
-                        else if (a != "tila" && a != "alas" && a != "suunta")
+                        // A/B Pulun repliikit kävelyllä (omistaja 29.9.: pois toistaiseksi): astro kavely pulu 0|1
+                        else if (a == "pulu" && osat.Length > 3) Matkakirja.Natiivi.AvaruuskavelyNakyma.PuluPuhuu = osat[3] != "0";
+                        else if (a != "tila" && a != "alas" && a != "suunta" && a != "pulu")
                         {
                             if (!l.Kyydissa) l.NapautaIss();
                             if (!l.AloitaKavely()) Kirjaa("astro kavely: ei alkanut (kyyti, kuva tai avaus kesken)");
