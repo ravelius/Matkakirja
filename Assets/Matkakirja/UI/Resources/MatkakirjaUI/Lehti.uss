@@ -379,6 +379,13 @@
     -unity-background-scale-mode: scale-and-crop;
 }
 
+/* Pariteetti 2 rivi 8: etusivun pääkuva ilman kehystä, kulma 4 (web .lehti-paakuva img.nahtavyys-kuva: border 0,
+   border-radius 4px, mitattu v2408). Muiden lehtikuvien vaalea kehys ennallaan. */
+.mk-lehti__kuvakehys.mk-lehti__paakuva {
+    border-width: 0;
+    border-radius: 4px;
+}
+
 .mk-lehti__kuvateksti {
     font-size: 13px;
     white-space: normal;
@@ -743,12 +750,25 @@
 
 /* --- alapalkki ja sisällys ------------------------------------------------------------ */
 
+/* Pariteetti 2 rivi 7: alanapit sivun lopussa kuten web .dialog.lehti .arrival-card .dialog-actions (margin-top 1,5 rem,
+   padding-top 1 rem, border-top 3px double rgba(70, 51, 31, 0.55)); sivut reunat tulevat sisällön täytteestä. */
 .mk-lehti__alapalkki {
     flex-direction: column;
     flex-shrink: 0;
-    padding: 8px 14px 14px 14px;
+    margin-top: 24px;
+    padding: 16px 0 0 0;
     border-top-width: 1px;
-    border-top-color: rgba(70, 51, 31, 0.25);
+    border-top-color: rgba(70, 51, 31, 0.55);
+}
+
+/* Kaksoisviivan jälkimmäinen viiva: 1 px väli, 1 px viiva (CSS 3px double). */
+.mk-lehti__alapalkkiviiva {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: rgba(70, 51, 31, 0.55);
 }
 
 /* Poistu vasemmalla, eteenpäin vievä oikealla (omistaja 8.8.2026). */

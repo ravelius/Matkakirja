@@ -703,3 +703,41 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* Pariteetti 2 rivi 9: Matkakirjan ihmeen tähti (web .kohde-ihmetahti ja .nostosym-tahti, css/styles.css): 15 × 15
+   merkin 40 × 40 -laatikon yläreunaan (top −6, right −3); täyttö --sym-ihme, ääriviiva --sym-muste 1,2 (viewBox 24),
+   varjo drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3)) siirrettynä täyttökerroksena. */
+.mk-kohdekartta__ihmetahti {
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    width: 15px;
+    height: 15px;
+    overflow: visible;
+}
+
+.mk-kohdekartta__ihmetahti > .mk-ikoni {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.mk-kohdekartta__ihmetahti-varjo {
+    color: rgba(0, 0, 0, 0.3);
+    translate: 0 1px;
+}
+
+.mk-kohdekartta__ihmetahti-kulta {
+    color: #b8862b;
+}
+
+.mk-kohdekartta__ihmetahti-muste {
+    color: #4b3a1c;
+    --mk-ikoni-viiva: 1.2;
+}
+
+.mk-kohdekartta__piirros--valittu > .mk-kohdekartta__ihmetahti {
+    display: none;
+}
