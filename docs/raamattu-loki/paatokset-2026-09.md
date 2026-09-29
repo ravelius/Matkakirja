@@ -9199,3 +9199,7 @@ Omistaja 29.9.2026 (1.0.50 iPhonella): 1) MATKAKIRJA-logo ja pilleri jäivät py
 ## OMISTAJA: MAX-EFFORT VAIN TARPEESEEN, SESSIONIMISSÄ MALLI JA EFFORT, IPADIN MAAILMA-NAPPI POIS (29.9.2026 klo 17.13)
 
 Omistaja 29.9.2026 klo 17.1x–17.2x: 1) sessioiden nimien perään suluissa malli ja effort (esim. Natiiviseppä (Opus, high)); 2) Opuksilla max-effort vain kun oikeasti tarpeen — kaikki Opus-roolit high oletuksena, max vain yksittäiseen vaikeaan juurisyyhyn ja heti takaisin (Natiiviseppä, Linssiseppä ja Linnanrakentaja laskettu max → high); 3) iPadilta pois Maailma-nappi kartan päältä (Natiivi-UI natiiviin, Pelikoodari webin iPad-asetteluun, jos sama nappi).
+
+## OMISTAJA: KOHDEKAUPUNGIT VÄHEMMÄN MUSTIKSI (29.9.2026 klo 17.15)
+
+Omistaja 29.9.2026: kohdekaupunkien pisteet ja nimiteksti vähemmän mustiksi. Linja: sama ruskea sepiamuste kuin rantaviivoissa ja rajoissa, hieman läpikuultava; pelaajan kaupunki ja pelikaupungit ennallaan, luettavuus säilyy. Karttaseppä web, Natiivi-UI natiivi, sama arvo molemmissa.
