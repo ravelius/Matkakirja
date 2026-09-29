@@ -10,9 +10,10 @@
 //   ui linssi kuva [tunnus] [pulu]        astronautin kuvanäkymä: aineiston kohde (oletus ensimmäinen);
 //                                         pulu = minipulun kysymyskortti auki
 //                                         tai Commonsin esimerkkikuvat, jos aineisto ei lataudu
-//   ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|tila]  kuvanäkymän selite: napautus (animoitu pienennys ja
-//                                         avaus, kokomittari lokiin "MATKAKIRJA kuvaselite koko"), vinkin automaattinen
-//                                         kelaus heti; palauttaa koon ja luennan tilan (astro-selite)
+//   ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|mittaa|tila]  kuvanäkymän selite: napautus (animoitu pienennys
+//                                         ja avaus, kokomittari lokiin "MATKAKIRJA kuvaselite koko"), vinkin automaattinen
+//                                         kelaus heti, mittaa = pelkkä kokomittari (ennen ui napauta x y kuvaan);
+//                                         palauttaa koon ja luennan tilan (astro-selite)
 //   ui linssi selaa 1|-1                  kuvaselain: seuraava/edellinen kuva (galleria, kohteen lopussa naapuriin)
 //   ui linssi kohde 1|-1                  kuvaselain: viereinen kohde kartalla (alanapit ‹ ›)
 //   ui linssi kuvaselain 0|1              kuvapari: 0 = 1.0.33 (läpinäkymätön tausta, ei ‹ ›), 1 = kuvaselain
