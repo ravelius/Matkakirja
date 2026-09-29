@@ -40,12 +40,15 @@ export const RAAMATTU = {
           + 'Kumoaa 1.9.2026 kohdan poikkeuksen "todella vaikeaan ongelmaan '
           + 'kysyen".',
         'VAIN EUROOPPA, KUNNES OMISTAJA TOTEAA SEN VALMIIKSI (omistaja 27.9.2026 klo 13.5x, '
-          + 'sitova, kaikki roolit): sisältöä, nostoja, lehtiä, kuvia, malleja, linssien kohteita ja '
+          + 'sitova, kaikki roolit): sisältöä, nostoja, lehtiä, kuvia, malleja ja '
           + 'karttatyötä tehdään nyt vain Euroopan kaupunkeihin ja maihin. Muihin maanosiin ei tehdä '
           + 'mitään uutta (ei aloituksia, ei pilotteja, ei suunnitelmia), ennen kuin omistaja on '
           + 'todennut Euroopan omasta mielestään valmiiksi; siirtymä muihin maanosiin vain omistajan '
           + 'erillisellä päätöksellä. Olemassa oleva maailmanlaajuinen sisältö ja pelin maailmanlaajuiset '
-          + 'perustoiminnot (pallo, kartta, lennot) pysyvät ja niiden vikoja korjataan.',
+          + 'perustoiminnot (pallo, kartta, lennot) pysyvät ja niiden vikoja korjataan. LINSSIT EIVÄT KUULU '
+          + 'RAJAUKSEEN (omistaja 28.9.2026 klo 23.4x: "eurooppa linjaus on vain kartan ja sisällön suhteen mutta ei '
+          + 'koske linssejä"): linssit (radio, ISS ja astronautin kamera, datalinssit, aikajanat, alue- ja virtalinssit) '
+          + 'kattavat koko maailman, esim. radiolinssiin kaikki maailman maat.',
         'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
           + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
           + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '
@@ -90,6 +93,7 @@ export const RAAMATTU = {
           + 'kolmiot, vain lähellä), kategoriasymbolit seepiarampilla (vuori lumihuipulla), '
           + 'meren koristeet 10 lajia. 5) VIIKKOKIINTIÖ 97 % → Fable pysäyttää kaikki sessiot '
           + 'ja kirjoittaa siirtopromptin tilinvaihtoa varten.',
+        'PÄÄTOIMITTAJA = FABLE (omistaja 28.9.2026): päätoimittajan rooli on nimeltään PÄÄTOIMITTAJA, koska se ei ole sidottu Fable-malliin (nyt Opus xhigh); session nimi "Päätoimittaja (<malli>, <effort>)". "Fable" on roolin vanha nimi ja pätee edelleen kaikissa ohjeissa, lokissa ja luovutuksissa (JUMI → FABLE, viestit Fablelle ym. = päätoimittajalle); vanhoja viittauksia ei kirjoiteta uudelleen. Codexille omistaja puhuu "viesti Claudelle" (postilaatikko → Julkaisija → päätoimittaja). Päätoimittajan haara on toistaiseksi claude/bold-ride-vow4ki (sovelluksen antama nimi); nimenvaihto tehdään tilinvaihdossa luovutuksen mukana.',
         'TYÖTAPA JA SESSIOT — NOPEUS JA TOKENITEHOKKUUS (omistaja 20.09.2026 klo 20.40, SITOVA, '
           + 'koskee kaikkia sessioita nyt ja jatkossa; muutokset vain omistajan kortilla). '
           + 'A) ROOLIT (kuusi sessiota, omistaja avaa, Fable nimeää "Rooli (malli)"): '
@@ -217,7 +221,13 @@ export const RAAMATTU = {
           + 'omistaja hereillä vai nukkumassa, mitä muuta on kesken), eikä sovella sääntöä tai aiempaa suunnitelmaa sokeasti; jos '
           + 'tilanne on aidosti epäselvä tai valinta kuuluu omistajalle, Fable kysyy omistajalta kortilla vaihtoehtoineen ja '
           + 'suosituksineen. Esimerkki 25.9.: poltto käskettiin neljällä ytimellä päiväsäännön mukaan, vaikka kello oli 04.30 ja kone '
-          + 'vapaa — oikea vastaus oli täydet ytimet heti. JUMI → FABLE (omistaja 25.9.2026 klo 04.4x, sitova, kaikki sessiot; KORVAA 24.9. klo 21.2x:n JUMI → KORTTI): jos sessio jää '
+          + 'vapaa — oikea vastaus oli täydet ytimet heti. NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, sitova, kaikki sessiot; KORVAA '
+          + 'päivän 4 ytimen säännön): kaikki raskaat työt (poltot, käännökset, testisarjat, savukkeet, agenttiajot, Mac-ajurin CI) '
+          + 'ajetaan oletuksena nice -n 15 — ne käyttävät kaikkia ytimiä, mutta omistajan ohjelmat menevät aina edelle. Nice ja '
+          + 'taskpolicy ovat ytimen prioriteetteja käyttäjien yli (omistaja työskentelee käyttäjällä Sami Reivinen, Claude käyttäjällä '
+          + 'koodaus), joten väistäminen ei vaadi omistajan havaitsemista. GPU ja muisti eivät väistä: Mac-savukkeita enintään 2 '
+          + 'rinnakkain ja simulaattoreita 1 päivällä. Kun omistaja ilmoittaa tarvitsevansa konetta: raskaat prosessit taskpolicy -b '
+          + '(myös I/O kuristuu), savukkeet kevyessä tilassa, GPU-raskaat tauolle. JUMI → FABLE (omistaja 25.9.2026 klo 04.4x, sitova, kaikki sessiot; KORVAA 24.9. klo 21.2x:n JUMI → KORTTI): jos sessio jää '
           + 'jumiin — päätös puuttuu, työ ei etene tai luokitin estää toimen — se ei kysy omistajalta eikä jää odottamaan häntä, vaan '
           + 'lähettää Fablelle yhden viestin (tilanne, vaihtoehdot, oma suositus) ja jatkaa muuta työtä. Fable päättää Raamatun sisällä '
           + 'itse; vain aidosti omistajalle kuuluvan valinnan Fable vie omistajalle AskUserQuestion-korttina OMASSA sessiossaan ja kutsuu '
@@ -245,7 +255,7 @@ export const RAAMATTU = {
           + 'sessiosta); 7) aloitusviesti kenttään yhdellä rivillä — "Olet <rooli> (<malli>), checkout <polku>, aja ensin '
           + 'git fetch origin && git checkout <haara> && git pull, lue docs/raportit/viesti-<rooli>-aloitus.md kokonaan ja '
           + 'toimi sen mukaan, Fablen session id <id>, kuittaa Fablelle yhdellä rivillä" — ja Return; 8) list_sessions → id, '
-          + 'set_session_title roolinimeksi, id:t lokiin ja Postivahdille tilatauluun. EFFORT NIMESSÄ (omistaja 26.9.2026 klo 09.5x, sitova): jos Opus-session effort nostetaan korkeammaksi kuin high (xhigh tai max), session nimeen lisätään effort näkyviin — esim. "Linssiseppä (max)" — niin pitkäksi aikaa kuin se on käytössä; palautus highiin poistaa lisäyksen. Nostaja (Fable set_session_effortilla tai omistaja appista) nimeää samalla, Postivahti valvoo kierroksellaan. Opit 25.9.: Radix-valikkojen kohteet '
+          + 'set_session_title roolinimeksi, id:t lokiin ja Postivahdille tilatauluun. EFFORT NIMESSÄ (omistaja 26.9.2026 klo 09.5x, sitova): jos Opus-session effort nostetaan korkeammaksi kuin high (xhigh tai max), session nimeen lisätään effort näkyviin — esim. "Linssiseppä (max)" — niin pitkäksi aikaa kuin se on käytössä; palautus highiin poistaa lisäyksen. Nostaja (Fable set_session_effortilla tai omistaja appista) nimeää samalla, Postivahti valvoo kierroksellaan. TEHTÄVÄKOHTAINEN EFFORT (omistaja 28.9.2026, kortti; ei erillisiä max-sessioita): Fable vaihtaa roolin effortin tehtävää antaessaan (vaihto tulee voimaan seuraavasta vuorosta): max vain pelin keskeisiin hetkiin (aloituslento, uudet elämykset) ja juurisyihin, joihin yksi yritys ei riittänyt, ja palautus highiin heti tehtävän jälkeen; high koodaavien roolien oletus; medium Julkaisijalle (high CI-vian ajaksi), Postivahdille ja Karttasepälle pelkän polttovalvonnan ajaksi. Sallinta mcp__ccd_session_mgmt__set_session_effort on Fablen .claude/settings.local.json:ssa. SONNET RAJATTUIHIN TEHTÄVIIN (omistaja 28.9.2026 klo 23.3x, kortti, sitova): Sonnet 5.5 on rajatuissa tehtävissä käytännössä Opuksen tasoinen; ero on konteksti-ikkuna (200 k, roolin pohjakuorma ~85 k) ja pitkäkestoisuus. Siksi roolisessiot pysyvät Opuksella pitkinä linjoina (1M), ja jokainen rajattu tehtävä — myös haastava bugiselvitys, juurisyy koodista, testien korjaus, aineistoerä, tekstitarkistus — annetaan Agent-työkalulla Sonnet-ali-agentille (model sonnet; effort high, vaikeimmissa max, jos asetettavissa); rooli antaa tehtävänannon polkuineen, ali-agentti palauttaa tuloksen ja diffin, ja rooli todentaa laitteella tai testeillä ja julkaisee. Ali-agentti ei käytä simulaattoreita, käännöspalvelua eikä tuotannon workeria. Kevyet roolisessiot (Postivahti, Sisältökirjuri, Laitetestaaja) ajavat Sonnet 5.5:llä ja nollataan 70 %:ssa 200 k:sta; Julkaisija palasi Opukselle (kokeilu 28.9.). UUSI TILI TARKISTAA (omistaja 28.9.2026; omistajalla neljä tiliä): kun Fable aloittaa uudella tilillä tai uudessa sessiossa, se tarkistaa ensimmäisenä, että sallinta on voimassa (settings.local.json sisältää rivin ja yksi set_session_effort-kutsu onnistuu luokittimen estämättä); jos ei, Fable antaa omistajalle bash-lohkona komennon, joka lisää rivin, ennen roolisessioiden luontia. Opit 25.9.: Radix-valikkojen kohteet '
           + '(Open folder…, Opus 5.5) eivät reagoi System Eventsin click at -klikkiin, näppäimet toimivat; modifier-näppäimiä '
           + '(⌘⇧G) ei käytetä, ne hyppäsivät Chromeen; koordinaatit 2560×1440-näytöllä Avaa {1746,1312}, mallichippi '
           + '{1702,1421}, kirjoituskenttä {1300,1385}, muulla resoluutiolla kuvakaappauksesta. Omistajaa ei tarvita; '
@@ -1180,6 +1190,18 @@ export const RAAMATTU = {
         + 'yhtenaisesta tyylikirjastosta ... Mieti kokonaisuus '
         + 'tarkkaan") — toteutus erissä',
       kohdat: [
+        'PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN (omistaja 28.9.2026, '
+          + 'sanatarkasti astrolinssin selitteestä: "pitää pienentää tuo selittelen '
+          + 'palkki kun se on Pienennetty. Tee siitä yleinen tapa. Se on jo '
+          + 'matkakirjassa. Eli animoitu pienennys mahdollisimman tiiviiksi."): '
+          + 'kaikki pienennettävät selitteet, inforuudut, palkit ja paneelit kutistuvat '
+          + 'pienennettäessä pehmeällä animaatiolla sisältönsä kokoisiksi eivätkä jätä '
+          + 'tyhjää tilaa (ei ✕:ään tai avatun leveyteen venyvää palkkia); mallina '
+          + 'Matkakirjan pienennys. Koskee kaikkia linssejä, webiä ja natiivia; '
+          + 'kumoaa astrolinssin säännön "pienennetty inforuutu saman levyinen kuin '
+          + 'avattu". Astrolinssin selite luetaan lisäksi ääneen striimiluennalla, '
+          + 'automaattisesti päällä (omistaja 28.9.2026: "Tee selitteelle myös '
+          + 'striinilukija joka automaattisesti päällä").',
         'KAIKKI LIIKE ANIMOIDAAN PEHMEASTI (omistaja 3.9.2026, '
           + 'sanatarkasti: "kaikki kohdat pelissa pyritaan animoimaan ja '
           + 'niissa kaytetaan naita pehmeita kiihdytyksia ja jarrutuksia. '
@@ -1195,7 +1217,21 @@ export const RAAMATTU = {
           + 'Fable tekee tallaiset animaatiot OMA-ALOITTEISESTI aina kun '
           + 'jokin ruudulla muuttuu, vaikka omistaja ei niita pyytaisi. '
           + 'Poikkeus pysyy: kartan siirtymissa elavat animaatiot on '
-          + 'kytketty pois suorituskyvyn takia (ks. Fokusmoodi).',
+          + 'kytketty pois suorituskyvyn takia (ks. Fokusmoodi). '
+          + 'AVAUS JA SULKU AINA ANIMOIDEN (omistaja 29.9.2026, maakuntalapusta, '
+          + 'sanatarkasti: "Voiko lapun aukeamisen ja sulkeutumisen animoida? Ja '
+          + 'jatkossa myös kaikki vastaavat. Kirjaa raamattuun"): jokainen lappu, '
+          + 'kortti, paneeli, selite ja pop-up avautuu kasvaen ja häivyttyen esiin '
+          + 'sen avanneen napin tai kohdan suunnasta ja sulkeutuu samaa reittiä '
+          + 'takaisin (myös ✕:llä, ohinapautuksella ja uuden avautuessa), '
+          + 'yhteinen apuri 220 ms auki / 200 ms kiinni, pehmeä jarrutus sisään ja '
+          + 'kevyt kiihdytys ulos; webissä ja natiivissa samat kestot (web on malli). '
+          + 'Animaatio alkaa samalla ruudunpäivityksellä kuin napautus — ei viivettä '
+          + 'ennen avausta (nosto aukeaa yhä välittömästi, löydös 134). Poikkeukset '
+          + 'omilla arvoillaan: kuvan suurennos koko ruutuun 320 ms ja kaupungin '
+          + 'avauskortti 280 ms (omistaja: 250–300 ms). Koko ja paikka pysyvät '
+          + 'avattuna kiinteinä (omistaja 29.9.2026: "Ikkunan koko ei saa muuttua kun '
+          + 'noita klikkaa auki") — sisältö vierittyy kortin sisällä.',
         'YKSI SANASTO KAIKILLE KELLUVILLE PINNOILLE: pop-up kootaan '
           + 'aina samoista paloista — ylärivi (pikkuotsake, esim. '
           + 'KOHTAAMINEN tai symboli+luokka), otsikko, leipä, '
@@ -2627,8 +2663,8 @@ export const RAAMATTU = {
           + 'kuvan päällä vasemmassa yläkulmassa avautuu pienennettynä otsikkoriviksi '
           + '(kohteen nimi – maa), väkänen laajentaa lisätietoihin (aineisto, aika, '
           + 'paikka, lisenssi, lähde), selite pienenee kun kuvaa napautetaan, '
-          + 'panoroidaan tai zoomataan; pienennetty inforuutu saman levyinen kuin '
-          + 'avattu (katto min(46 %, 560 px)); harmaa pyöreä X oikeassa yläkulmassa; '
+          + 'panoroidaan tai zoomataan; pienennetty inforuutu kutistuu animoiden '
+          + 'tekstinsä levyiseksi (Arkkikirjasto: PIENENNETTY = MAHDOLLISIMMAN TIIVIS; avatun katto min(46 %, 560 px)); harmaa pyöreä X oikeassa yläkulmassa; '
           + 'pienoiskuvat kelluvat vasemmassa alakulmassa. PULU: minipulu ilman '
           + 'ympyrää, astronautin kypärä ja avaruusleijunta (Codexin toimitus 20.9.), '
           + 'teksti tummalla pohjalla, valmiit kysymykset vierittyvät pois, '
@@ -2836,6 +2872,10 @@ export const RAAMATTU = {
       otsikko: 'Äänet ja luennat',
       tila: 'luonnos',
       kohdat: [
+        'STRIIMILUKIJAN KAKSI NAPPIA (omistaja 28.9.2026, sitova, web ja natiivi): kaikissa luentakohdissa näkyy vain '
+          + 'kaiutin (toisto/tauko + VU) ja mini-hampurilainen; hammaspyörä-nappi poistuu. Hampurilainen avaa tiiviin valikon: '
+          + 'tekstin kappaleet listana (napautus hyppää kappaleeseen, nykyinen korostettuna), alimpana kelausrivi — vasemmalla '
+          + 'vierekkäin kappale taakse ja −10 s, oikealla +10 s ja kappale eteen — sekä entisen hammaspyörän ääniasetukset.',
         'EI AANITIEDOSTOJA REPOSSA, KAIKKI VAIN AMPARISSA (omistaja '
           + '11.9.2026 klo 11.05, sanatarkasti: "repossa ei saa olla '
           + 'aanitiedostoja, kaikki vain amparissa"): assets/audio-kansion '

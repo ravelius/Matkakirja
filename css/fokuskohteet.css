@@ -183,7 +183,7 @@
      sisällä pystyvieritys on saatava takaisin. */
   touch-action: pan-y;
   overflow: hidden;
-  animation: fokuskohde-esiin 0.2s ease-out;
+  /* Avaus ja sulku: js/avausanimaatio.js (omistaja 29.9.2026), ei CSS-animaatiota (fokuskohde-esiin pois). */
 }
 
 @keyframes fokuskohde-esiin {

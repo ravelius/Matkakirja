@@ -28,6 +28,7 @@
  *
  * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-geo.mjs
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -121,6 +122,7 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
 /** Sivu, jolle ämpärin vendor-polku reititetään Noden kautta (tai estetään). */
 async function avaaSivu({ ampari }) {
   const sivu = await selain.newPage();
+  await lisaaPolloKehittajakoodi(sivu); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
   sivu.on('pageerror', (e) => console.log('VIRHE', e.message));
   // Varapolun ajossa estetty pyyntö on juuri se, mitä mitataan — sitä ei
   // raportoida vikana.

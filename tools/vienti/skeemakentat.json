@@ -34,10 +34,12 @@
   "1.53": "aa44f1467fd52867",
   "1.54": "aa44f1467fd52867",
   "1.55": "f05f6f25a4435881",
-  "1.56": "f05f6f25a4435881"
+  "1.56": "f05f6f25a4435881",
+  "1.57": "1e8ff1cd389b1f53",
+  "1.58": "aee33ab3c2cba5aa"
  },
  "uusin": {
-  "skeemaversio": "1.56",
+  "skeemaversio": "1.58",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -513,6 +515,7 @@
     "data",
     "id",
     "ihme",
+    "kuva",
     "kysymykset",
     "lahde",
     "lahi",
@@ -592,6 +595,8 @@
     "kaupunki",
     "kuvaus",
     "lahde",
+    "lat",
+    "lon",
     "luokka",
     "nimi",
     "peruste",

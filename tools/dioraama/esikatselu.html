@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dioraaman vuorovaikutteinen esikatselu (kehittäjätyökalu)</title>
+<!--
+  DIORAAMAN VUOROVAIKUTTEINEN ESIKATSELU (Linnanrakentaja, ali-agentti P7,
+  erä 2b, 29.9.2026). Kehittäjätyökalu, jolla näkee valaistuksen, varjot ja
+  kameroiden rajauksen (vaaka/pysty) ILMAN iOS-simulaattoria, ja voi kiertää
+  vapaasti + lentää kaarella tilasta toiseen. EI pelaajille, EI service
+  workeriin, ei linkkiä pelin puolelta. Piirtologiikka: esikatselu.mjs +
+  esikatselu-{pinnat,valot,hahmot,paneeli}.mjs (rajapinta ja kaavat: docs/
+  raportit/dioraama-rajapinnat-era2b-20260929.md, kohdat 1, 2, 5, 7 — ja
+  aiemmat -20260929.md / -era2-20260929.md -speksit).
+
+  URL-parametrit:
+    paketti          polku dioraamapakettiin (oletus ../../dist/dioraama/olavinlinna/)
+    tila             tilan id (esim. keittio) tai tyhjä = yleisnäkymä
+    suunta           vaaka | pysty (oletus vaaka)
+    koko             canvasin CSS-koko "LEVEYSxKORKEUS" (esim. 393x852), oletus 393x852
+    taulu            1 = piirrä taulun peittämä alue puoliläpinäkyvänä
+    paneeli          0 = ei kelluvaa kytkinpaneelia (kuvakaappauksia varten)
+    korkeus          ylikirjoittaa alkukameran korkeuskulman (astetta, absoluuttinen)
+    atsimuuttilisa   lisätään alkukameran atsimuuttiin (astetta) — "pahvitarkistus"-kulmat
+
+  Esimerkki: esikatselu.html?tila=keittio&suunta=pysty&koko=393x852&taulu=1
+  Pahvitarkistus ylhäältä: esikatselu.html?tila=keittio&koko=1366x1024&korkeus=65&paneeli=0
+-->
+<style>
+  html, body { margin: 0; padding: 0; background: #cfd6d6; overflow: hidden; }
+  canvas { display: block; cursor: grab; touch-action: none; }
+  canvas:active { cursor: grabbing; }
+  /* Taulun peittämä alue (ks. esikatselu.mjs: TAULU_PYSTY_OSUUS/TAULU_VAAKA_OSUUS). */
+  #taulu-peite {
+    position: fixed; left: 0; top: 0; pointer-events: none; z-index: 10;
+    background: rgba(18, 22, 24, 0.5);
+    border: 0 solid rgba(255, 255, 255, 0.55);
+    box-sizing: border-box;
+  }
+  #taulu-peite[hidden] { display: none; }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="taulu-peite" hidden></div>
+<script type="module" src="./esikatselu.mjs"></script>
+</body>
+</html>

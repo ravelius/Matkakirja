@@ -128,6 +128,39 @@ const nostonNimiAvain = (nosto) => {
 const ASTE_KM = 111.2;
 
 /**
+ * MAAN NIMINEN KAUPUNKI (Linssisepän löydös 28.9.2026, Fable hyväksyi).
+ *
+ * Laudalla on "kaupunkeja", joiden nimi on koko maan nimi: Islanti
+ * (js/packs/europe.js `{ id: 'islanti', name: 'Islanti' }`),
+ * Luxemburg, Singapore, Kuwait … Niillä nimitesti (noston paikkanimi
+ * === kaupungin nimi) ei kerro, että nosto on KAUPUNGISSA: paikkanimi
+ * "Islanti" tarkoittaa koko saarta, ja Geysir 60 km:n päässä
+ * luokittuisi kaupungin sisäiseksi ja katoaisi pääkartalta (natiivissa
+ * 28/34 Islannin nostoa, koska vienti täyttää puuttuvan paikan maan
+ * nimellä). Niille pätee siksi vain etäisyystesti (KAUPUNGIN_SADE_KM).
+ *
+ * TUNNISTUS DATASTA, YHDESTÄ LÄHTEESTÄ: laudan oma kaupunki → maa
+ * -taulu ja maan suomenkielinen nimi (js/packs/maailmankartta.js
+ * `map.cityCountry` ja `map.countryShapes[iso].nimi`). Kaupunki on
+ * maan niminen, kun sen nimi on OMAN maansa nimi. Mitattu 28.9.2026:
+ * 13 kaupunkia (Islanti, Luxemburg, Sierra Leone, Kamerun, Kongo,
+ * Angola, Mosambik, Madagaskar, Kuwait, Hongkong, Singapore,
+ * Guatemala, Panama). Alue-"kaupungit" (Kreeta, Sisilia, Alpit,
+ * Lappi = Rovaniemi) eivät ole maan nimisiä, eikä yksikään web-noston
+ * paikkanimi ole niiden nimi — sääntö ei koske niitä.
+ *
+ * Puhdas funktio (tests/kaupunkiliuska.test.mjs); `kartta` on laudan
+ * `pack.map`.
+ */
+export function onMaanNiminenKaupunki(kaupunki, kartta) {
+  const iso = kartta?.cityCountry?.[kaupunki?.id];
+  const maanNimi = iso ? kartta?.countryShapes?.[iso]?.nimi : null;
+  if (!maanNimi) return false;
+  const nimi = nimiAvain(kaupunki.nimi ?? kaupunki.name);
+  return nimi !== '' && nimi === nimiAvain(maanNimi);
+}
+
+/**
  * Yhden kaupungin jäsenyystesti valmiiksi laskettuna: palauttaa
  * funktion (nosto) → boolean, joka vastaa `onKaupunginSisainen`ia
  * täsmälleen mutta ei laske kaupungin nimeä eikä keskusta uudestaan.
@@ -135,7 +168,9 @@ const ASTE_KM = 111.2;
  */
 export function luoSisaisyysTesti(kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
   if (!kaupunki) return () => false;
-  const kaupunginNimi = nimiAvain(kaupunki.nimi ?? kaupunki.name);
+  // Maan nimisellä kaupungilla (`maanNimi`, ks. onMaanNiminenKaupunki)
+  // nimitestiä ei ole: vain etäisyys ratkaisee.
+  const kaupunginNimi = kaupunki.maanNimi ? '' : nimiAvain(kaupunki.nimi ?? kaupunki.name);
   const keskus = Number.isFinite(kaupunki.lat) && Number.isFinite(kaupunki.lng)
     ? { lat: kaupunki.lat, lng: kaupunki.lng } : null;
   const latRaja = sadeKm / ASTE_KM;
@@ -166,7 +201,9 @@ export function luoSisaisyysTesti(kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
  * TOINEN, DATAN OMA POLKU: jos noston paikkanimi ON kaupungin nimi
  * (pakkojen `paikka`-kenttä, esim. *"Pariisi"*), nosto on sisäinen
  * ilman mittausta — silloin data itse sanoo sen olevan kaupungissa
- * eikä arvioitu koordinaatti voi kiistää sitä.
+ * eikä arvioitu koordinaatti voi kiistää sitä. POIKKEUS: maan
+ * nimisellä kaupungilla (`kaupunki.maanNimi`, onMaanNiminenKaupunki)
+ * nimi tarkoittaa koko maata, joten sille pätee vain etäisyys.
  */
 export function onKaupunginSisainen(nosto, kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
   if (!nosto || !kaupunki) return false;

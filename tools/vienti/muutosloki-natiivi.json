@@ -2,6 +2,61 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.52 (202609291625)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartan kaupungit ja niiden nimet nyt ruskealla sepiamusteella."
+  },
+  {
+   "versio": "1.0.51 (202609291446)",
+   "paiva": "2026-09-29",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.0.50 (202609291251)",
+   "paiva": "2026-09-29",
+   "teksti": "Puhelimen yläpalkki on nyt nahkainen kuin vanha matkalaukku."
+  },
+  {
+   "versio": "1.0.49 (202609291132)",
+   "paiva": "2026-09-29",
+   "teksti": "Uusi yläpalkki: pilleriä napauttamalla avautuu valikko."
+  },
+  {
+   "versio": "1.0.48 (202609291001)",
+   "paiva": "2026-09-29",
+   "teksti": "Uusi avaruuskävely: astu ISS:n ulkopuolelle Pulun kanssa ja ota kuva maapallosta. Pulu toivottaa tervetulleeksi ensimmäisellä ISS-kyydillä ja kuuluu Kertoja-asetuksen mukaan. Kartuscha avautuu ja sulkeutuu pehmeästi."
+  },
+  {
+   "versio": "1.0.44 (202609290609)",
+   "paiva": "2026-09-29",
+   "teksti": "Laput, kortit ja valikot avautuvat ja sulkeutuvat pehmeästi, ja maakunnan kysymyskortti sulkeutuu ✕:stä. Luennan ja kaupungin nimen alku kuuluu nyt kokonaan. Astronautin kuvissa näkyy vain pieni Pulu."
+  },
+  {
+   "versio": "1.0.43 (202609290510)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartalla näkyvät nyt järvet ja pienet saaret, ja rannikko on tarkempi. Astronautin kamerassa Pulun napautus avaa taulun, josta vaihdat näkymää, ja kuvan napautus pienentää selitteen."
+  },
+  {
+   "versio": "1.0.42 (202609290319)",
+   "paiva": "2026-09-29",
+   "teksti": "Radio uudistui: uusi radiolaite, hohtavat mastot ja asemat kaikista maailman maista. ISS-kyydissä on uusi ohjauspaneeli, josta valitaan nopeus, kohde ja olosuhteet. Astronautin kuvan selite avautuu pehmeästi, ja kertoja lukee sen ääneen."
+  },
+  {
+   "versio": "1.0.41 (202609282344)",
+   "paiva": "2026-09-29",
+   "teksti": "ISS:n Cupola-ikkuna uudistui: ohjaamo on pyöreä, eikä maa enää kuulla metallin läpi. Maakuntakortti on nostokortin kokoinen ja kuva aukeaa koko ruutuun. Mallien nimiöt näkyvät nyt myös Visbyssä ja Krumlovissa."
+  },
+  {
+   "versio": "1.0.40 (202609281959)",
+   "paiva": "2026-09-28",
+   "teksti": "Luenta jatkuu oikeasta kohdasta, eikä nostokortin kaiutin tai kuva enää sulje korttia. ISS-kyydin pilvet ovat terävät, Cupolassa on vähemmän sumennusta ja nostomerkit eivät jää linssin päälle. Offline-kartta ei hae laattoja verkosta, ja aloituslento alkaa päivänvalossa."
+  },
+  {
+   "versio": "1.0.39 (202609281745)",
+   "paiva": "2026-09-28",
+   "teksti": "Nostojen luenta ei enää pysähdy kesken, ja Pulu vaikenee, kun chat suljetaan."
+  },
+  {
    "versio": "1.0.38 (202609281624)",
    "paiva": "2026-09-28",
    "teksti": "Maakuntakartta: valitse maakunta kartalta. Avaruuskyydissä nopeutus ja oikeat tähdet."

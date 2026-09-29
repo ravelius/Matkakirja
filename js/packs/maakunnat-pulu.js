@@ -1898,4 +1898,240 @@ export const MAAKUNTIEN_PULU = {
       { q: "Milloin Ledenika-luola avattiin yleisölle?", a: "Luola avattiin kävijöille 1961, ja sen tippukivimuodostelmat ja jäätävän kylmät holvit tekivät siitä nopeasti suositun retkikohteen. Infrastruktuuri uudistettiin kokonaan 2005." },
     ],
   },
+  SRB: {
+    'Grad Beograd': [
+      { q: "Miksi Nikola Tesla haudattiin juuri Belgradiin eikä esimerkiksi New Yorkiin, missä hän teki suurimman osan työstään?", a: "Tesla kuoli New Yorkissa 1943, mutta hänen tuhkansa tuotiin Serbiaan, koska hän oli syntyperältään serbi ja hänen kotimaahansa haluttiin perustaa museo; uurna on nykyään esillä Tesla-museossa Belgradissa." },
+      { q: "Mitä Skadarlijan kadulla tapahtuu nykyään?", a: "Kujan kivetyillä raiteilla toimii yhä perinteisiä kafana-ravintoloita, joissa soi elävä musiikki; se on Kalemegdanin jälkeen Belgradin toiseksi suosituin nähtävyys." },
+    ],
+    Borski: [
+      { q: "Miksi ranskalaiset viininvalmistajat matkasivat aikanaan juuri Rajaciin asti?", a: "Kun tuhohyönteinen tuhosi suuren osan Euroopan viinitarhoista 1800-luvun lopulla, Negotinin seutu jäi vahingoittumatta, ja ulkomaiset ostajat tulivat hakemaan sieltä viiniä jopa kultarahalla maksaen." },
+      { q: "Mikä tekee Rajacin kellareista erikoisia?", a: "Yli 270 kivistä pivnica-kellaria on louhittu kylän rinteeseen: alaosa on kaivettu maan sisään viinin kypsyttämistä varten, yläkerta toimi majapaikkana sadonkorjuun aikaan." },
+    ],
+    Branicevski: [
+      { q: "Miksi Golubacin linnoituksesta taisteltiin niin kauan?", a: "Linnoitus hallitsi Tonavan kapeinta kohtaa Rautaportin solan suulla, joten se antoi haltijalleen vallan sekä joki- että maareiteille; Unkari, Serbia ja Osmanit vaihtoivat sen omistajaa vuosisatojen ajan." },
+      { q: "Missä kunnossa linnoitus on nykyään?", a: "Euroopan unioni rahoitti vuosina 2014–2019 laajan restauroinnin, ja kymmenen torneineen linnoitus on nyt turvallinen ja suosittu käyntikohde Đerdapin kansallispuiston portilla." },
+    ],
+    'Južno-Backi': [
+      { q: "Mikä yhdistää Sremski Karlovcin kansainväliseen diplomatiaan?", a: "Vuoden 1699 rauhanneuvotteluissa käytettiin ensimmäistä kertaa pyöreää pöytää, jotta yksikään osapuoli ei istuisi toista arvokkaammalla paikalla; sopimus tunnetaan Karlovcin rauhana." },
+      { q: "Kuinka pitkä viininviljelyn historia kaupungissa on?", a: "Perimätiedon mukaan viiniköynnökset tuotiin seudulle jo antiikin Rooman aikaan keisari Probuksen toimesta, ja nykyään kaupungin ytimessä toimii noin viisitoista viinitilaa." },
+    ],
+    Jablanicki: [
+      { q: "Miksi keisari Justinianus rakennutti kaupungin juuri tänne?", a: "Justinianus I syntyi tällä seudulla, ja hän halusi pystyttää synnyinseudulleen kaupungin, joka kantaisi hänen nimeään ja toimisi arkkihiippakunnan keskuksena." },
+      { q: "Kuinka kauan Justiniana Prima oli olemassa?", a: "Kaupunki eli vain noin 80 vuotta: se rakennettiin 530-luvulla ja tuhoutui avaarien ja slaavien hyökkäyksissä 600-luvun alussa, minkä jälkeen se hylättiin lopullisesti." },
+    ],
+    'Srednje-Banatski': [
+      { q: "Kuka soitti pianoa Kaštel Ečkan avajaisissa?", a: "Vuonna 1820 avajaisjuhlassa esiintyi yhdeksänvuotias pianonero, josta kasvoi myöhemmin yksi 1800-luvun kuuluisimmista säveltäjistä ja pianisteista, Franz Liszt." },
+      { q: "Miksi kartano rakennettiin juuri tänne Begej-joen varrelle?", a: "Alue ostettiin huutokaupassa 1781, ja uusi omistajasuku perusti tänne asutuksen ja kartanon; joen läheisyys ja metsäinen maasto tekivät paikasta suositun aateliston kesänvietto- ja metsästyskohteen." },
+    ],
+    Kolubarski: [
+      { q: "Miten lukumäärältään alivoimainen Serbian armeija pystyi voittamaan Kolubaran taistelussa?", a: "Serbialla oli vain noin 250 000 sotilasta itävalta-unkarilaisten 450 000 vastaan, mutta tuttu maasto, puolustusasemat ja päättäväinen vastahyökkäys joulukuussa 1914 ajoivat hyökkääjän takaisin rajan yli." },
+      { q: "Millä alueella taistelu käytiin?", a: "Taistelu levisi laajalle Kolubara-joen varrelle, Valjevon, Ub:n ja Lajkovacin kunnista aina Belgradin liepeille asti, ja se sai nimensä juuri tästä joesta, joka antaa nimen koko piirille." },
+    ],
+    'Zapadno-Backi': [
+      { q: "Kuinka vanha Apatinin panimo on?", a: "Panimo perustettiin vuonna 1756 keisarillisena laitoksena, mikä tekee siitä yhden Serbian vanhimmista yhä toimivista panimoista — lähes kolmen vuosisadan takaa." },
+      { q: "Kuinka paljon panimon tuotanto on kasvanut sen historian aikana?", a: "1700-luvulla vuosituotanto oli noin 12 000 hehtolitraa; nykyään panimon kapasiteetti on noin neljä miljoonaa hehtolitraa vuodessa, ja olutta viedään useisiin Euroopan maihin." },
+    ],
+    Macvanski: [
+      { q: "Miksi Cerin taistelua pidetään historiallisesti niin merkittävänä?", a: "Se oli elokuussa 1914 liittoutuneiden ensimmäinen voitto koko ensimmäisessä maailmansodassa: alivoimainen Serbian armeija löi itävalta-unkarilaiset takaisin Drina-joen taakse." },
+      { q: "Mitä ainutlaatuista taistelussa tapahtui ilmassa?", a: "Cerin taistelun aikana käytiin sodan ensimmäinen kahden lentokoneen välinen ilmataistelu, mikä teki siitä myös ilmasodankäynnin historian virstanpylvään." },
+    ],
+    Moravicki: [
+      { q: "Miksi Ovčar-Kablarin rotkoa kutsutaan Serbian Athosvuoreksi?", a: "Rotkoon on rakennettu yli 30 ortodoksista luostaria 1300-luvulta lähtien, mikä tekee siitä poikkeuksellisen tiheän hengellisen keskittymän — vertaus kreikkalaiseen Athosvuoreen on siitä peräisin." },
+      { q: "Montako luostaria rotkossa toimii vielä nykyään?", a: "Alkuperäisistä yli 30 luostarista on säilynyt noin kymmenen, muun muassa Blagoveštenje ja Sretenje, sekä yksi luolakirkko." },
+    ],
+    'Nišavski': [
+      { q: "Miksi komentaja Sinđelić räjäytti itsensä taistelun lopussa?", a: "Vuoden 1809 Čegarin taistelussa hän valitsi kuoleman mieluummin kuin joutuisi turkkilaisten vangiksi ja teloitetuksi seivästämällä; hän ampui pistoolilla ruutivarastoon ja tappoi itsensä ja ympärillään olleet." },
+      { q: "Miten torni sai nimensä ja mitä sille tapahtui myöhemmin?", a: "Torniin muurattiin lähes tuhat kaatuneen kalloa pelotteeksi. Kun serbit valtasivat Nišin 1878, torni katettiin kunnioituksesta ja ympärille rakennettiin kappeli; noin 60 kalloa on yhä näkyvissä." },
+    ],
+    'Severno-Banatski': [
+      { q: "Mistä ja miten mammutin luuranko löytyi?", a: "Kika löytyi joulukuussa 1996 tiilitehtaan savenottokuopasta noin 20 metrin syvyydestä rutiininomaisten kaivutöiden yhteydessä; luusto osoittautui poikkeuksellisen hyvin säilyneeksi." },
+      { q: "Miksi Kika-mammuttia pidetään erityisen arvokkaana löytönä?", a: "Noin 90 prosenttia sen luista on säilynyt, mikä tekee siitä yhden parhaiten säilyneistä mammuttilöydöistä Euroopassa; se on nyt nähtävillä Kikindan luonnontieteellisessä museossa." },
+    ],
+    Pcinjski: [
+      { q: "Miksi Vranjen asukkaat suuttuivat omalle kuuluisimmalle kirjailijalleen?", a: "Bora Stanković kuvasi 1900-luvun alun romaaneissaan ja näytelmissään kaupungin asukkaiden intohimoja, avioliittoja ja skandaaleja niin suoraan, että moni tunnisti itsensä tai sukulaisensa tarinoista — eikä pitänyt siitä." },
+      { q: "Miksi Vranje on Unescon musiikkikaupunki?", a: "Kaupungissa elää vahva romanimusiikin perinne, erityisesti puhaltajaorkesterit, jotka soittavat häissä ja juhlissa yhä samalla tavalla kuin sata vuotta sitten." },
+    ],
+    Pirotski: [
+      { q: "Kuinka korkea Midžor on, ja miksi se on erityinen?", a: "Midžor kohoaa 2169 metriin ja on Serbian korkein huippu alueilla, joista ei käydä kiistaa — huipulla kulkee myös valtakunnanraja Bulgariaan." },
+      { q: "Mitä huipulla näkee?", a: "Betonipylväs merkitsee tarkan rajapisteen, ja selkeällä säällä näköala ulottuu kauas yli Stara Planinan rotkojen ja laaksojen." },
+    ],
+    Podunavski: [
+      { q: "Mitä Radovanjski lugissa tapahtui vuonna 1817?", a: "Serbian ensimmäisen kansannousun johtaja Karađorđe Petrović murhattiin siellä poliittisen vastustajansa käskystä, ja hänen päänsä lähetettiin lahjaksi Istanbuliin osoituksena uskollisuudesta sulttaanille." },
+      { q: "Mitä paikalla voi nähdä nykyään?", a: "Muistomerkkialueella on kirkko, Karađorđen ensimmäinen hautapaikka ja museo, jossa on aseita, asiakirjoja sekä suurikokoinen muotokuva kansallissankarista." },
+    ],
+    'Severno-Backi': [
+      { q: "Miksi Subotican synagoga on ainutlaatuinen koko maailmassa?", a: "Se on ainoa jäljellä oleva unkarilaista Art Nouveau -tyyliä edustava juutalainen temppeli maailmassa, suunniteltu 1900-luvun alussa Jakabin ja Komorin toimesta." },
+      { q: "Missä kunnossa rakennus on tänään?", a: "Se oli 2000-luvun alussa maailman uhanalaisimpien monumenttien listalla, mutta on sittemmin restauroitu perusteellisesti ja toimii nyt konsertti- ja kulttuuritilana." },
+    ],
+    Pomoravski: [
+      { q: "Mitä Horreum Margi tarkoittaa ja mikä sen tehtävä oli?", a: "Nimi tarkoittaa Margi-joen (nykyisen Velika Moravan) viljavarastoa; paikka oli roomalainen varuskuntakaupunki, aseiden valmistuskeskus ja koko alueen viljan säilytyspaikka." },
+      { q: "Miksi paikka oli strategisesti tärkeä?", a: "Se sijaitsi Via Militariksella, Rooman ja Konstantinopolin välisellä pääväylällä, ja toimi hetken jopa Ylä-Mesian provinssin pääkaupunkina sekä seitsemännen legioonan tukikohtana." },
+    ],
+    'Raški': [
+      { q: "Miksi Pešterin ylänkö tunnetaan Sandžakin Siperiana?", a: "Yli tuhannen metrin korkeudessa sijaitseva tasanko kokee poikkeuksellisen ankaria talvia, ja lämpötilat voivat pudota rajusti — nimitys kuvaa juuri tätä äärimmäistä ilmastoa." },
+      { q: "Mikä tekee Sjenican juustosta erikoisen?", a: "Se on perinteinen lampaanmaidosta suolavedessä kypsytetty juusto, jota valmistetaan yhä paimentolaisperinteen mukaisesti — ehdolla Unescon aineettoman kulttuuriperinnön listalle." },
+    ],
+    'Južno-Banatski': [
+      { q: "Kuinka laaja Vršacin viinialue on?", a: "Pelkästään Vršacin rinteillä kasvaa yli 1700 hehtaaria viiniköynnöksiä, koko alueella noin 2100 hehtaaria — Serbian suurin yhtenäinen viinitarha-alue." },
+      { q: "Mikä rypälelaji on alueella yleisin?", a: "Italialainen riesling kattaa yli puolet viljelystä; muita lajikkeita ovat muun muassa chardonnay, traminer ja muskottiotoneli." },
+    ],
+    Sremski: [
+      { q: "Miksi Sirmium oli niin merkittävä Rooman valtakunnalle?", a: "Se oli yksi valtakunnan neljästä pääkaupungista keisari Diocletianuksen tetrarkia-järjestelmässä 290-luvulta lähtien, ja sieltä oli kotoisin useita Rooman keisareita." },
+      { q: "Mitä Sirmiumista on säilynyt nykypäivään?", a: "Sremska Mitrovican alla ja keskustassa on kaivettu esiin keisarillisen palatsin, kylpylöiden ja foorumin raunioita, jotka ovat nähtävillä osana kaupunkia ja paikallista museota." },
+    ],
+    'Šumadijski': [
+      { q: "Mitä Kragujevacissa tapahtui lokakuussa 1941?", a: "Saksalaiset miehitysjoukot teloittivat kahden päivän aikana arviolta noin 2800 kaupungin ja lähialueen siviiliä, myös koululaisia, kostoksi partisaanien hyökkäyksestä saksalaisjoukkoja vastaan." },
+      { q: "Mitä Šumaricen puistossa on nähtävillä nykyään?", a: "Alueella on 30 joukkohautaa ja kymmenen taiteellista muistomerkkiä 352 hehtaarin puistossa, joka on pystytetty uhrien muistoksi vuodesta 1953 alkaen." },
+    ],
+    Toplicki: [
+      { q: "Mikä löytö Pločnikista teki siitä maailmanlaajuisesti merkittävän?", a: "Vuonna 2007 sieltä löytyi maailman toiseksi vanhin todiste kuparinsulatuksesta, noin 5500–5000 eaa., mikä siirsi koko kuparikauden alkua satoja vuosia aiemmaksi." },
+      { q: "Mitä muuta erikoista Pločnikista on löytynyt?", a: "Paikalta kaivettiin esiin myös maailman vanhin tunnettu tinapronssiesine, noin 4650 eaa. valmistettu foliopala, sekä kehittyneitä savupiipuilla varustettuja sulatusuuneja." },
+    ],
+    Zajecarski: [
+      { q: "Kuinka monta viinikellaria Rajacin kylässä on ja miksi ne on rakennettu osittain maan alle?", a: "Kellareita on noin 270, ja ne on kaivettu osittain maan sisään, jotta lämpötila pysyisi tasaisena vuodenajasta riippumatta — ihanteellinen olosuhde viinin kypsyttämiseen." },
+      { q: "Mikä on Rajacin ja Rogljevon kellareiden asema nykyään?", a: "Noin kuusikymmentä kellaria on yhä aktiivisessa käytössä, ja koko kellarikylien kokonaisuus on ehdolla Unescon maailmanperintölistalle." },
+    ],
+    Zlatiborski: [
+      { q: "Miten Drina-joen talo syntyi ja miksi se on tuhoutunut niin monta kertaa?", a: "Ryhmä nuoria uimareita rakensi sen käsin vuonna 1968 rantautumissuojaksi kalliolle; tulvavesi on tuhonnut sen seitsemän kertaa vuoteen 2019 mennessä, mutta se on aina rakennettu uudelleen." },
+      { q: "Miten talolle pääsee?", a: "Ainoa keino on uida tai soutaa Drina-joen virran yli — siltaa ei ole koskaan rakennettu, mikä tekee talosta entistä salaperäisemmän nähtävyyden." },
+    ],
+  },
+  BIH: {
+    'Banja Luka': [
+      { q: "Kuka rakennutti Ferhadija-moskeijan ja milloin?", a: "Moskeijan rakennutti Gazi Ferhad-paša Sokolović vuonna 1579. Suunnittelun taustalla arvellaan olleen legendaarisen arkkitehti Mimar Sinanin oppilaita, ja rakennus edustaa 1500-luvun ottomaaniarkkitehtuurin huippua Balkanilla." },
+      { q: "Mikä moskeijan minareetissa on erikoista?", a: "Minareetti kohoaa 43 metrin korkeuteen ja sen sisällä kiertyy kierreporras huipulle. Ulkopintaa koristavat geometriset kuvioinnit, jotka ovat tyypillisiä ajan ottomaanikäsityölle." },
+      { q: "Mitä muuta moskeijan pihapiiriin kuului?", a: "Pihalla on turkkilaisbarokkia henkivä šadrvan-suihkulähde ja kolme perheen turbea eli hautakammiota. Koko kompleksia ylläpidettiin yli 30 kylän tuloilla, joten se toimi myös torin ja hammamin tapaan yhteisön keskuksena." },
+    ],
+    Bijeljina: [
+      { q: "Mikä on Semberija ja miksi se on tärkeä?", a: "Semberija on Bijeljinan ympärillä levittäytyvä tasainen, hedelmällinen tasanko, alueen tuottavin maatalousalue. Sen pellot tuottavat vuosittain kymmeniätuhansia tonneja vihanneksia, erityisesti kaalia, sekä satoja tuhansia tonneja viljaa." },
+      { q: "Kuinka paljon Semberija tuottaa viljaa vuodessa?", a: "Alueen viljasiilot käsittelevät yli 320 000 tonnia viljaa ja öljykasveja vuosittain. Lisäksi karjatalous tuottaa noin 45 miljoonaa litraa maitoa jalostukseen joka vuosi." },
+      { q: "Mille vihannekselle Semberija on erityisen tunnettu?", a: "Alue tunnetaan etenkin kaalinviljelystä, jolle ilmasto ja hedelmällinen maaperä sopivat erinomaisesti. Pellot tuottavat myös laajasti paprikaa ja tomaattia." },
+    ],
+    'Bosnian Podrinje': [
+      { q: "Mistä nimi Podrinje tulee?", a: "Podrinje tarkoittaa slaavilaisittain 'Drinan vartta' ja viittaa koko joen valuma-alueeseen. Goražde on tämän Bosnian puoleisen Drina-laakson keskus." },
+      { q: "Mitä ulkoiluaktiviteetteja Goraždessa voi harrastaa?", a: "Drina-joella ja sen ympäristössä voi melvoida koskia, kalastaa, pyöräillä ja vaeltaa. Joen kanjonimainen laakso tarjoaa näköalapaikkoja ja rauhallisia reittejä ympäri vuoden." },
+      { q: "Mistä Drina-joki saa alkunsa?", a: "Drina syntyy, kun kaksi vuoristojokea yhtyy kauempana etelässä alueen vuoristossa. Yhdessä ne muodostavat yhden Balkanin vaikuttavimmista jokilaaksoista, jota Goraždekin osaltaan edustaa." },
+    ],
+    'Brčko Distrikt': [
+      { q: "Mikä rakennuskausi muovasi Brčkon katukuvaa eniten?", a: "Itävalta-Unkarin hallintokausi 1878-1918 toi kaupunkiin merkittävää arkkitehtuuria. Muun muassa vuoden 1892 kaupungintalo edustaa tätä ajan pseudomauriaista tyyliä." },
+      { q: "Mistä kaupasta Brčko tunnettiin historiallisesti?", a: "Sava-joen satamakaupunkina Brčko oli jo 1400-luvulta lähtien merkittävä luumujen ja lihan vientipaikka. Kaupunki tunnettiin pitkään erityisesti kuivattujen luumujen kaupasta." },
+      { q: "Mikä on Trg Mladih?", a: "Trg Mladih on Brčkon keskusaukio, jota reunustavat 1800-luvun lopun Itävalta-Unkarin ajan rakennukset. Aukio on edelleen kaupungin sosiaalinen keskus." },
+    ],
+    'Central Bosnia': [
+      { q: "Mikä on Plava Voda?", a: "Plava Voda on Travnikin vanhassa kaupungissa sijaitseva karstilähde, joka pulppuaa esiin linnan juurelta. Se on kaupungin tärkein juomavesilähde, ja sen ympäristö on suojeltu kansallismuistomerkkinä." },
+      { q: "Mistä Vlašićin juusto on peräisin?", a: "Vlašićin juusto on suolattu lampaanmaitojuusto, joka on saanut nimensä Travnikin yläpuolella kohoavasta Vlašić-tunturista. Tunturin laidunmailla juustoa on valmistettu perinteisin menetelmin sukupolvien ajan." },
+      { q: "Mitä muuta Vlašićin tunturilla voi tehdä?", a: "Lähes 2000 metriin kohoava Vlašić on suosittu talvihiihtokohde ja retkeilyalue. Kesäisin sen ylängöt toimivat lampaiden ja lehmien laidunmaina." },
+    ],
+    Doboj: [
+      { q: "Kuinka kauan Banja Vrućican lähteitä on käytetty?", a: "Lähteiden parantavia ominaisuuksia on hyödynnetty jo antiikin Rooman ajoista lähtien, ja myöhemmin myös ottomaanikaudella niitä arvostettiin suuresti. Vesi on koko ajan pulssunut samasta paikasta Usoran laaksossa." },
+      { q: "Millaista Banja Vrućican vesi on?", a: "Vesi on hiilihapollista ja lievästi hapanta, lämpötilaltaan noin 32 astetta. Sitä käytetään perinteisesti sydän- ja verisuonivaivojen sekä reumaattisten oireiden hoidossa." },
+      { q: "Kuinka suuri kylpylä nykyään on?", a: "Banja Vrućicassa toimii neljän hotellin kokonaisuus, jossa on yli tuhat vuodepaikkaa. Se on tällä hetkellä maan suurin lämminvesikylpyläkeskus." },
+    ],
+    'Foča': [
+      { q: "Miksi Tara-jokea kutsutaan Euroopan kyyneleeksi?", a: "Nimitys viittaa joen poikkeuksellisen kirkkaaseen, jopa juomakelpoiseen veteen. Joki virtaa yli 1300 metriä syvässä kanjonissa, joka on yksi Euroopan syvimmistä." },
+      { q: "Mitä koskimelonnassa Taralla kohtaa?", a: "Reitillä on noin 50 koskea, joiden vaikeusaste vaihtelee luokkien 2 ja 4 välillä. Reitit sopivat sekä perheille että kokeneemmille melojille vedenkorkeuden mukaan." },
+      { q: "Mikä tekee Aladža-moskeijasta erityisen?", a: "Se rakennettiin vuonna 1549 ensimmäisenä puhtaasti klassista ottomaanityyliä edustavana moskeijana Bosniassa. Sen värikäs, koristeellinen sisustus antoi sille lempinimen 'kirjava moskeija'." },
+    ],
+    'Herzegovina-Neretva': [
+      { q: "Missä Hertsegovinan viinialueen sydän sijaitsee?", a: "Viinialueen keskus on Čitlukin ympärille kohoava Brotnjon karstiylänkö, jota kutsutaan koko maan viininviljelyn kehdoksi. Kuiva kalkkikivimaaperä ja aurinkoinen ilmasto tekevät siitä ihanteellisen viinitarhoille." },
+      { q: "Kuinka pitkään alueella on viljelty viiniä?", a: "Viininviljelyn juuret ulottuvat yli 2000 vuoden taakse, aina illyyrien aikaan asti. Monissa Brotnjon suvuissa viininvalmistusperinne on jatkunut yhtäjaksoisesti yli 300 vuotta." },
+      { q: "Mitkä rypäleet ovat alueen omia lajikkeita?", a: "Alueen omat lajikkeet ovat valkoinen Žilavka ja punainen Blatina, jotka kasvavat parhaiten Brotnjon punaisessa, hyvin vettä läpäisevässä maaperässä. Lähes jokaisella perheellä on oma pieni viinitarha ja kellari." },
+    ],
+    Posavina: [
+      { q: "Miksi Posavinan maaperä on niin hedelmällistä?", a: "Saava-joki on vuosituhansien aikana jättänyt rantamaille paksuja hienojakoisia tulvamaakerroksia. Nämä alluviaalikerrostumat tekevät kantonin peltomaasta poikkeuksellisen viljavaa." },
+      { q: "Missä Posavinan kaupungit sijaitsevat?", a: "Kantonin pääkaupunki Orašje ja suurin kaupunki Odžak sijaitsevat molemmat Saava-joen varrella, aivan Kroatian rajan tuntumassa. Joki muodostaa luontaisen rajan ja samalla elinehdon koko alueen maataloudelle." },
+    ],
+    Sarajevo: [
+      { q: "Mikä Vrelo Bosne on?", a: "Ilidžan kaupunginosassa sijaitseva 603 hehtaarin puisto ja luonnonmuistomerkki, jossa Bosna-joki syntyy kymmenistä lähteistä Igman-vuoren juurella. Alueella on lampia, saaria ja rikas kasvi- ja eläinlajisto." },
+      { q: "Mikä on fiaker?", a: "Avonainen hevosvaunu, jolla vieraat kuljetetaan pitkin 3,5 kilometrin pituista Velika Aleja -puistokujaa. Samanlaiset vaunut palvelivat aikanaan myös Wienin ja Budapestin katukuvassa." },
+      { q: "Milloin puistokuja istutettiin?", a: "Velika Aleja, kastanja- ja plataanipuiden reunustama kuja, istutettiin vuonna 1892 Itävalta-Unkarin aikana. Se on säilynyt Sarajevon suosituimpana kävelyreittinä tähän päivään asti." },
+    ],
+    'Sarajevo-romanija': [
+      { q: "Mikä Mokranjska Miljacka on?", a: "Bosnia ja Hertsegovinan pisimmäksi tunnettu luola Romanijan ylängöllä lähellä Mokron kylää. Sen suulta purkautuu maanalainen joki, joka on saanut luolalta nimensä." },
+      { q: "Kuinka pitkä luola on?", a: "Kartoitettua käytävää on yli seitsemän kilometriä, eikä luolan koko laajuutta tunneta vieläkään. Sukeltajat ovat tutkineet sitä vuodesta 2007 lähtien italialais-bosnialaisessa yhteistyössä." },
+      { q: "Mitä luolasta on löytynyt?", a: "Tutkijat ovat löytäneet luolan kylmästä vedestä ja pimeistä käytävistä tieteelle täysin uusia eliölajeja. Veden lämpötila pysyttelee ympäri vuoden vain noin viidessä asteessa." },
+    ],
+    Trebinje: [
+      { q: "Mikä Tvrdošin luostari on?", a: "Ortodoksiluostari Trebišnjica-joen rannalla lähellä Trebinjeä, perustettu 1200-luvun lopulla vanhan roomalaisen kirkon paikalle. Se tunnetaan erityisesti pitkästä viininviljelyperinteestään." },
+      { q: "Kuinka vanha luostarin viinikellari on?", a: "Kivikellari louhittiin 1500-luvulla, ja se on ollut yhtäjaksoisesti käytössä siitä lähtien. Sen holveissa viini kypsyy yhä satavuotiaissa tammitynnyreissä." },
+      { q: "Mitä viinejä luostarissa tehdään?", a: "Munkit valmistavat muun muassa Vranac- ja Žilavka-viinejä sekä kansainvälisiä lajikkeita kuten chardonnayta. Perinteinen kellari ja moderni painovoimatehdas toimivat aivan vierekkäin." },
+    ],
+    Tuzla: [
+      { q: "Mikä Šarena džamija on?", a: "Tuzlan vanhin moskeija, alun perin 1500-luvun alusta, joka tunnetaan koristeellisista väriseinistään – nimi tarkoittaa suomeksi suunnilleen 'kirjava moskeija'." },
+      { q: "Miksi sitä kutsutaan myös Atik Behram-begin moskeijaksi?", a: "Sen edessä sijaitsi Behram-begin perustama medresa eli koraanikoulu, jonka mukaan koko rakennus sai nimensä. Molemmat rakennukset kuuluivat samaan vakifiin eli uskonnolliseen säätiöön." },
+      { q: "Milloin moskeija rakennettiin uudelleen?", a: "Tulipalo tuhosi rakennusta, ja se kunnostettiin vuonna 1888 Itävalta-Unkarin hallintokaudella. Samaan aikaan kaupunkiin nousi myös uutta eurooppalaistyylistä arkkitehtuuria." },
+    ],
+    'Una-Sana': [
+      { q: "Mikä Ostrožacin linna on?", a: "Unan joen rannalla Bihaćin lähellä sijaitseva linna, jonka vanhin osa mainitaan jo vuonna 1286. Se sai nykyisen uusgoottilaisen ilmeensä 1900-luvun alun laajassa uudisrakennuksessa." },
+      { q: "Mikä on bihacit?", a: "Alueelta louhittava kivilaji, josta kuvanveistäjät ovat vuodesta 1967 asti veistäneet monumentaalisia teoksia Ostrožacin taiteilijakoloniassa. Alueella on nykyään yli 130 valmista veistosta." },
+      { q: "Miksi linna rakennettiin uudelleen 1900-luvun alussa?", a: "Linnan viimeinen ottomaanikapteeni myi sen vuonna 1896 itävaltalaiselle kreiville, Bihaćin silloiselle pormestarille, joka rakennutti tilalle uusgoottilaisen linnan vuosina 1900–1902." },
+    ],
+    Vlasenica: [
+      { q: "Mitä stećci ovat?", a: "Keskiaikaisia, 1100–1500-luvuilla veistettyjä kalkkikivisiä hautakiviä, joita on Bosnian ja Hertsegovinan lisäksi Serbiassa, Montenegrossa ja Kroatiassa. Ne on merkitty Unescon maailmanperintöluetteloon." },
+      { q: "Kuinka paljon hautakiviä on löydetty Vlasenican seudulta?", a: "Sošarin kylän alueelta on laskettu 71 nekropolia ja 1595 hautakiveä, joista 65:ssä on koristekaiverrus. Yksi kivistä sisältää myös kirjoituksen." },
+      { q: "Mitä hautakivien pintaan on kaiverrettu?", a: "Kivissä nähdään muun muassa tanssi- ja metsästyskohtauksia, geometrisia kuvioita ja kyrillisiä kirjoituksia. Kuvakieli yhdistää yleiseurooppalaisia aiheita paikallisiin perinteisiin." },
+    ],
+    'West Bosnia': [
+      { q: "Mikä Buško jezero on?", a: "Livnon ja Tomislavgradin kuntien alueella sijaitseva tekojärvi, joka on pinta-alaltaan Euroopan suurin: lähes 56 neliökilometriä ja yli 780 miljoonaa kuutiometriä vettä." },
+      { q: "Miten järvi syntyi?", a: "Järvi patoutui vuonna 1974, kun alueelle rakennettiin vesivoimalaitos hyödyntämään karstipoljen keräämiä sade- ja sulamisvesiä. Ennen patoamista alue oli kausittain tulviva kalkkikivilaakso." },
+      { q: "Kuinka korkealla järvi sijaitsee?", a: "Buško jezero lepää 716 metrin korkeudessa merenpinnasta, Dinaarien vuoriston karstiylängöllä. Korkeus ja tyyni vesi tekevät siitä suositun kalastus- ja uimapaikan kesäisin." },
+    ],
+    'West Herzegovina': [
+      { q: "Mikä žilavka on?", a: "Länsi-Hertsegovinassa, erityisesti Ljubuškin seudulla, viljelty valkoviinirypäle, jota on kasvatettu samoilla poljilla jo 1300-luvulta lähtien. Se antaa raikkaan ja hapokkaan viinin." },
+      { q: "Milloin žilavka sai virallisen suojan?", a: "Rypäleen nimi suojattiin vuonna 1970, ja vuonna 1973 sen paras laatu sai oman erityisaseman. Se oli yksi entisen Jugoslavian ensimmäisistä nimisuojatuista viineistä." },
+      { q: "Mikä on žilavkan pari Hertsegovinan viinikartalla?", a: "Punaviinilajike Blatina on žilavkan perinteinen vastinpari – yhdessä ne ovat olleet seudun kaksi tärkeintä viiniä vuosisatojen ajan." },
+    ],
+    'Zenica-Doboj': [
+      { q: "Mikä Kraljeva Sutjeska on?", a: "Kaknjin lähellä sijaitseva kylä, jonka nimi tarkoittaa 'kuninkaan kanjonia'. Täällä sijaitsi keskiaikaisen Bosnian kuningaskunnan hovi 1300-luvulta lähtien." },
+      { q: "Mitä Grgurevon kummulla on?", a: "Kummulla ovat näkyvissä keskiaikaisen kuninkaanlinnan rauniot vuodelta 1330, aivan fransiskaaniluostarin vieressä. Paikka on Bosnian kansallismonumentti." },
+      { q: "Mitä luostarin kirjastossa säilytetään?", a: "Kirjastossa on noin 11 000 teosta, joiden joukossa 31 inkunaabelia eli 1400-luvun painettua kirjaa sekä bosniankielisiä kyrillisiä käsikirjoituksia." },
+    ],
+  },
+  ISL: {
+    Austurland: [
+      { q: "Miksi Stuðlagilin kanjoni näkyy vasta nyt, vaikka basalttipylväät ovat tuhansia vuosia vanhoja?", a: "Kanjoni oli aiemmin piilossa Jöklan joen alla. Kun Kárahnjúkarin voimalaitos valjastettiin 2006–2009, suurin osa vedestä ohjattiin patoaltaaseen ja joen pinta laski 7–8 metriä – silloin tiiviit basalttipylväät paljastuivat ensi kertaa ihmisten nähtäväksi." },
+      { q: "Mistä Islannin villit peurat oikein tulivat?", a: "Norjalaisia peuroja tuotiin saarelle neljässä erässä 1770–80-luvuilla eri puolille maata. Vain Vopnafjörðuriin Austurlandille päästetty lauma selvisi hengissä, ja kaikki nykyiset noin 6 000–7 000 villipeuraa polveutuvat siitä." },
+      { q: "Miksi Petra alkoi kerätä kiviä?", a: "Petra Sveinsdóttir aloitti kivien keräämisen jo seitsemänvuotiaana ja jatkoi sitä koko elämänsä ajan patikoiden syrjäisilläkin seuduilla. Vuonna 1974 hän avasi kotinsa yleisölle, ja kokoelma on nykyään yksi maailman suurimmista yksityisistä kivikokoelmista." },
+    ],
+    'Höfuðborgarsvæði': [
+      { q: "Miksi Hafnarfjörðuria kutsutaan Islannin haltiapääkaupungiksi?", a: "Kaupungin keskustan laavakedot ja varsinkin 1923 avattu Hellisgerðin puisto tunnetaan kansanperinteessä piilokansan – haltioiden ja peikkojen – asuinsijoina. Kyselyjen mukaan yli puolet hafnarfjörðurilaisista pitää haltioita ainakin mahdollisina, ja aiheesta järjestetään nykyään opastettuja kierroksia." },
+      { q: "Kuinka suuri osa islantilaisista asuu pääkaupunkiseudulla?", a: "Nykyään lähes kaksi kolmasosaa koko maan reilusta 380 000 asukkaasta asuu pääkaupunkiseudun kunnissa. Loppu maa on sitäkin harvemmin asuttua, mikä tekee alueesta ylivoimaisesti tiheimmin asutun osan Islantia." },
+      { q: "Kuka Bessastaðirissa asui ennen kuin siitä tuli presidentin virka-asunto?", a: "1200-luvulla paikan omisti valtiomies ja saagakirjailija Snorri Sturluson, yksi Islannin historian vaikutusvaltaisimmista hahmoista. Presidentin virka-asunnoksi Bessastaðir vakiintui vasta 1941, ja sitä ennen se toimi muun muassa kuninkaan käskynhaltijan residenssinä." },
+    ],
+    'Vestfirðir': [
+      { q: "Miksi Ísafjörðurin yläpuolelle rakennettiin isot betoniset vallit?", a: "1990-luvulla lumivyöryt tappoivat kymmeniä ihmisiä Vestfirðirin kylissä, muun muassa Flateyrissa 1995. Onnettomuuksien jälkeen useisiin kaupunkeihin, myös Ísafjörðuriin, rakennettiin suuria ohjausvalleja, jotka pakottavat vyöryt kääntymään pois asutuksen kohdalta." },
+      { q: "Miksi juuri Vestfirðir sai maineen noituuden keskuksena?", a: "1600-luvun \"poltettujen vuosisadalla\" Strandirin alueella tuomittiin ja poltettiin roviolla 21 ihmistä noituudesta – enemmän kuin missään muualla Islannissa. Hólmavíkin Strandagaldur-museo kertoo nykyään tästä historiasta ja ajan taikamerkeistä." },
+      { q: "Mistä Dynjandin nimi tulee?", a: "Dynjandi tarkoittaa suomeksi suunnilleen \"jylisevää\" tai \"kumisevaa\", ja nimi viittaa putouksen voimakkaaseen ääneen. Se on Vestfirðirin suurin putous, ja sen leveys kasvaa yläosan 30 metristä alaosan 60 metriin." },
+    ],
+    'Norðurland eystra': [
+      { q: "Miksi Akureyrin liikennevaloissa on sydämiä?", a: "Sydämenmuotoiset valot ilmestyivät kaupungin liikennevaloihin 2008, vain kuukausia ennen kuin Islannin pankkijärjestelmä romahti finanssikriisissä. Kriisin jälkeen sydämistä tuli symboli positiiviselle ajattelulle ja yhteisöllisyydelle, ja ne ovat säilyneet kaupungissa siitä lähtien." },
+      { q: "Miksi juuri Húsavíkin edustalla nähdään niin paljon valaita?", a: "Skjálfandin lahden ravinteikkaat, matalat vedet houkuttelevat useita valaslajeja ruokailemaan lähelle rannikkoa lähes ympäri vuoden. Kaupungista on tullut sen ansiosta Islannin tunnetuin valaidenkatselukohde." },
+      { q: "Mikä tekee Akureyrin kasvitieteellisestä puutarhasta erikoisen?", a: "Se on yksi maailman pohjoisimmista kasvitieteellisistä puutarhoista, vain noin 50 kilometrin päässä napapiiristä. Silti siellä kasvaa nykyään yli 7 000 kasvilajia, joista suurin osa on tuotu muualta maailmasta." },
+    ],
+    'Norðurland vestra': [
+      { q: "Mitä Glaumbæjrin turvetaloissa oikein näkee?", a: "Kompleksi koostuu kolmestatoista toisiinsa käytävillä yhdistetystä pienestä rakennuksesta – muun muassa keittiöstä, ruokavarastosta ja pajasta – jotka on rakennettu turpeesta ja kivestä puurungon varaan. Taloissa asuttiin aina vuoteen 1947 asti, jolloin kansallismuseo hankki paikan museoksi." },
+      { q: "Kuka oli Grettir ja miksi hän liittyy Drangeyn saareen?", a: "Grettir Ásmundarson on Islannin tunnetuimpia saagasankareita, lainsuojaton mies, joka joutui pakenemaan vuosikausiksi asumattomille seuduille. Grettis sagan mukaan hän vietti viimeiset vuotensa piilossa Drangeyn jyrkällä saarella ennen kuin vihamiehet lopulta löysivät hänet." },
+      { q: "Miksi juuri Skagafjörður tunnetaan hevoskasvatuksesta?", a: "Alueen laajat, ravinteikkaat laaksoniityt ja pitkä kasvatusperinne ovat tehneet siitä yhden Islannin tärkeimmistä islanninhevosten kasvatusalueista. Hevosnäyttelyjä ja -kilpailuja järjestetään seudulla nykyään säännöllisesti ympäri vuoden." },
+    ],
+    'Reykjavík': [
+      { q: "Mitä Hallgrímskirkjan torni matkii?", a: "Arkkitehti Guðjón Samúelsson suunnitteli kirkon 1930-luvulla niin, että sen harjakatto ja pylväsmäiset seinät muistuttavat Islannin luonnossa esiintyviä basalttipatsaita. Kirkko valmistui lopulta vasta 1986, yli 40 vuotta suunnittelun aloittamisen jälkeen." },
+      { q: "Mitä Sólfar-veistos oikeastaan esittää?", a: "Teos on tekijänsä Jón Gunnar Árnasonin mukaan \"unelmalaiva\" ja auringon ja toivon symboli, ei historiallinen viikinkilaiva. Teräksinen veistos paljastettiin 1990 Reykjavíkin 200-vuotisjuhlan kunniaksi." },
+      { q: "Miksi Harpa rakennettiin juuri satamaan?", a: "Konserttitalon rakentaminen aloitettiin ennen vuoden 2008 finanssikriisiä osana laajempaa satama-alueen uudistusta. Hanke jäi kriisin myötä hetkeksi kesken, mutta valtio ja kaupunki päättivät rahoittaa sen loppuun, ja Harpa avattiin 2011." },
+    ],
+    'Suðurland': [
+      { q: "Mitä Reynisfjaralle tapahtui helmikuussa 2026?", a: "Viikkoja jatkuneet voimakkaat aallot ja itätuulet kuluttivat rantaa niin pahasti, että osa rannan kuuluisista basalttipylväsmuureista sortui mereen. Tapaus muistutti, miten altis eroosiolle tämä Atlantin avomerelle avautuva ranta on." },
+      { q: "Miksi Eyjafjallajökullin purkaus 2010 pysäytti lentoliikenteen kaukana Euroopassa?", a: "Purkaus tapahtui jäätikön alla, ja jää suli äkillisesti kuumaan laavaan koskettaessaan, mikä hienonsi tuhkan poikkeuksellisen pieneksi ja nosti sen korkealle ilmakehään. Hieno tuhka ajautui tuulten mukana laajalle Euroopan ylle ja pysäytti yli 100 000 lentoa noin viikossa." },
+      { q: "Miksi Seljalandsfossin putouksen takaa voi kävellä?", a: "Putous putoaa entiseltä merenrantajyrkänteeltä, jonka juurelle on ajan mittaan syntynyt onkalo putouksen taakse. Kallioseinämän ja vesiverhon väliin jää juuri sen verran tilaa, että sieltä pääsee kulkemaan ympäri, joskin täysin kastuen." },
+    ],
+    'Suðurnes': [
+      { q: "Miten Sininen lagúuni oikeastaan syntyi?", a: "Se ei ole luonnollinen allas, vaan Svartsengin geotermisen voimalan käytetyn veden kertymä, joka alkoi muodostua 1976. Veden korkea piidioksidipitoisuus tiivisti altaan pohjan vedenpitäväksi, ja vasta myöhemmin ihmiset huomasivat, että kylpeminen vedessä tuntui miellyttävältä iholle." },
+      { q: "Mitä Grindavíkissa tapahtui vuodesta 2023 alkaen?", a: "Reykjanesin niemimaan uusi purkaussarja alkoi uhata kaupunkia, ja sen noin 3 800 asukasta evakuoitiin marraskuussa 2023. Useita purkauksia on tapahtunut sen jälkeen, ja kaupunkia suojaamaan on rakennettu kilometrien pituisia laavavalleja." },
+      { q: "Miksi Reykjanesviti on Islannin vanhin majakka?", a: "Ensimmäinen majakka paikalla valmistui jo 1878, mutta maanjäristys vaurioitti sen pahoin vain kahdeksan vuotta myöhemmin. Nykyinen, yhä käytössä oleva betonimajakka rakennettiin 1907–1908 ja on säilynyt siitä lähtien lähes alkuperäisenä." },
+    ],
+    Vesturland: [
+      { q: "Miksi Deildartunguhverin vesi riittää lämmittämään kokonaisia kaupunkeja?", a: "Lähde pulppuaa 180 litraa lähes kiehuvaa vettä sekunnissa, mikä tekee siitä Euroopan voimakkaimman kuuman lähteen. Vesi johdetaan putkia pitkin muun muassa Borgarnesiin ja 64 kilometrin päähän Akranesiin, mikä on Islannin pisin kaukolämpöputki." },
+      { q: "Miksi Hraunfossarin vesi näyttää tulevan tyhjästä?", a: "Vesi ei virtaa maanpäällisestä joesta, vaan on suodattunut hitaasti läheisen laavakentän huokoisen kiven läpi. Se purkautuu lukemattomina pieninä putouksina suoraan kivien raoista Hvítá-jokeen usean sadan metrin matkalla." },
+      { q: "Mitä hákarl oikein on?", a: "Se on perinteinen islantilaisherkku, joka valmistetaan mätättämällä ja kuivattamalla jäämerihain lihaa useiden kuukausien ajan – tuore liha on myrkyllistä ilman tätä käsittelyä. Bjarnarhöfnin tilan museo Vesturlannissa esittelee valmistusprosessin ja tarjoaa maistiaisia." },
+    ],
+  },
 };

@@ -10,6 +10,14 @@
 # tiedostoa EI ylikirjoiteta (ämpärissä jo olevat ohitetaan); vain .jpg-kuvat,
 # content-type image/jpeg ja muuttumaton välimuisti (nimessä SHA-8).
 # Yhteenvetoon lukumäärät ja sha256-lista.
+#
+# Kohde "linssikatalogi" (Fablen lupa 29.9.2026: Macin sessioilla ei ole
+# R2-avaimia): kirjoittaa vain linssikatalogi/-juureen, max-age=2592000
+# (kuten tools/tee-pienet-kuvat.mjs), samat säännöt muuten; pvm ohitetaan.
+#
+# Kohde "dioraama-aanet" (omistajan hyväksyntä 29.9.2026): vain .mp3
+# polkuun dioraama/<rakennus>/aanet/v<versio>/, audio/mpeg, immutable.
+# Muuttunut ääni menee uuteen versioon (natiivi välimuistittaa URL:n mukaan).
 
 name: Vie karttanostot ämpäriin
 
@@ -20,10 +28,26 @@ on:
         description: 'Lähdekansio Macilla, vain /Users/Shared/Claude/siirto-sisaltokirjuri/ alta (esim. /Users/Shared/Claude/siirto-sisaltokirjuri/karttanostot-20260921)'
         type: string
         required: true
-      pvm:
-        description: 'Kohde karttanostot/<pvm>/ (esim. 20260921)'
+      kohde:
+        description: 'karttanostot = karttanostot/<pvm>/, linssikatalogi = linssikatalogi/, dioraama-aanet = dioraama/<rakennus>/aanet/v<versio>/'
+        type: choice
+        options: [karttanostot, linssikatalogi, dioraama-aanet]
+        default: karttanostot
+      rakennus:
+        description: 'dioraama-aanet: rakennus (esim. olavinlinna)'
         type: string
-        required: true
+        required: false
+        default: ''
+      versio:
+        description: 'dioraama-aanet: äänien versio (numero, esim. 1)'
+        type: string
+        required: false
+        default: ''
+      pvm:
+        description: 'Kohde karttanostot/<pvm>/ (esim. 20260921); linssikatalogille tyhjä'
+        type: string
+        required: false
+        default: ''
       kuiva:
         description: 'Kuiva-ajo: vain listaus, ei kirjoitusta ämpäriin'
         type: boolean
@@ -54,34 +78,52 @@ jobs:
       AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
       KANSIO: ${{ inputs.kansio }}
       PVM: ${{ inputs.pvm }}
+      KOHDE: ${{ inputs.kohde }}
+      RAKENNUS: ${{ inputs.rakennus }}
+      VERSIO: ${{ inputs.versio }}
       KUIVA: ${{ inputs.kuiva }}
     steps:
       - name: Vie puuttuvat kuvat
         run: |
           set -euo pipefail
           PATH="/opt/homebrew/bin:$PATH"
-          case "$PVM" in *[!0-9]*|'') echo "::error::pvm saa sisältää vain numeroita"; exit 1 ;; esac
+          paate=jpg; tyyppi=image/jpeg
+          case "$KOHDE" in
+            linssikatalogi)
+              kohde="linssikatalogi"
+              valimuisti='public, max-age=2592000' ;;
+            dioraama-aanet)
+              case "$RAKENNUS" in *[!a-z0-9-]*|'') echo "::error::rakennus: vain a-z, 0-9, -"; exit 1 ;; esac
+              case "$VERSIO" in *[!0-9]*|'') echo "::error::versio on numero"; exit 1 ;; esac
+              kohde="dioraama/$RAKENNUS/aanet/v$VERSIO"
+              paate=mp3; tyyppi=audio/mpeg
+              valimuisti='public, max-age=31536000, immutable' ;;
+            karttanostot)
+              case "$PVM" in *[!0-9]*|'') echo "::error::pvm saa sisältää vain numeroita"; exit 1 ;; esac
+              kohde="karttanostot/$PVM"
+              valimuisti='public, max-age=31536000, immutable' ;;
+            *) echo "::error::tuntematon kohde $KOHDE"; exit 1 ;;
+          esac
           juuri=/Users/Shared/Claude/siirto-sisaltokirjuri
           k=$(cd "$KANSIO" 2>/dev/null && pwd -P) || { echo "::error::kansiota ei ole: $KANSIO"; exit 1; }
           case "$k/" in "$(cd $juuri && pwd -P)/"*) ;; *) echo "::error::kansio ei ole $juuri alla"; exit 1 ;; esac
-          kohde="karttanostot/$PVM"
           # Ämpärissä jo olevat nimet (ei ylikirjoitusta).
           aws s3 ls "s3://$AMPARI/$kohde/" --endpoint-url "$PAATE" | awk '{print $4}' | sort > olemassa.txt || true
           : > viety.txt; : > ohitettu.txt
-          for f in "$k"/*.jpg; do
+          for f in "$k"/*."$paate"; do
             [ -e "$f" ] || continue
             n=$(basename "$f")
             case "$n" in *[!A-Za-z0-9._-]*) echo "::warning::ohitettu nimi $n"; continue ;; esac
             if grep -qxF "$n" olemassa.txt; then echo "$n" >> ohitettu.txt; continue; fi
-            echo "$(shasum -a 256 "$f" | cut -d' ' -f1)  $n" >> viety.txt
+            echo "$(shasum -a 256 "$f" | cut -d' ' -f1)  $kohde/$n" >> viety.txt
             if [ "$KUIVA" != "true" ]; then
               aws s3 cp "$f" "s3://$AMPARI/$kohde/$n" --endpoint-url "$PAATE" \
-                --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable' \
+                --content-type "$tyyppi" --cache-control "$valimuisti" \
                 --no-progress >/dev/null
             fi
           done
           {
-            echo "## Karttanostot → $kohde"
+            echo "## $KOHDE → $kohde"
             echo
             [ "$KUIVA" = "true" ] && echo "**KUIVA-AJO** — mitään ei kirjoitettu."
             echo "- Lähde: \`$k\`"

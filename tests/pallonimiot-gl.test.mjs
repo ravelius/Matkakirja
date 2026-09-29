@@ -148,7 +148,7 @@ test('häivytys GPU:lla: attribuutti kerran, varjostin laskee peiton kellosta', 
   const mat = lapset[0].material;
   const vs = mat.a[0].vertexShader;
   assert.match(vs, /attribute vec4 haivytys;/);
-  assert.match(vs, /mix\(haivytys\.z, haivytys\.w, clamp\(\(haivytysAika - haivytys\.x\) \/ max\(haivytys\.y/);
+  assert.match(vs, /mix\(haivytys\.z, haivytys\.w, smoothstep\(0\.0, 1\.0, clamp\(\(haivytysAika - haivytys\.x\) \/ max\(haivytys\.y/);
   assert.ok('haivytysAika' in mat.uniforms);
   const h = lapset[0].geometry.attributes.haivytys.a[0];
   // a: ei häivytystä (alku −1), b: alku 0,5 s, kesto 0,18 s, 0 → 1 (neljä kulmaa kumpikin).

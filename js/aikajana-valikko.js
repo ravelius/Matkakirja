@@ -51,6 +51,7 @@ import { asetaLuentaKytkin, luentaKytkinPaalla } from './luenta.js';
 import { asetaMusiikkiPaalla, musiikkiPaalla } from './musiikkivalitsin.js';
 import { pysaytaLinssiluenta } from './linssipuhe.js';
 import { vaiennaAanikytkimella } from './lukija.js';
+import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
 
 /** Pudotusvalikon tunnus (aria-controls, js/ui-apurit.js VALIKKOKERROKSET). */
 export const VALIKON_TUNNUS = 'aikajana-valikko';
@@ -118,6 +119,7 @@ export function luoLinssivalikko({
   const auki = () => !valikko.hidden;
   const sulje = () => {
     if (!auki()) return false;
+    haamuSulku(valikko, nappi);
     valikko.hidden = true;
     nappi.setAttribute('aria-expanded', 'false');
     return true;
@@ -198,6 +200,7 @@ export function luoLinssivalikko({
   const avaa = () => {
     paivita();
     valikko.hidden = false;
+    animoiAvaus(valikko, nappi);
     nappi.setAttribute('aria-expanded', 'true');
   };
   const vaihda = () => { if (auki()) sulje(); else avaa(); };

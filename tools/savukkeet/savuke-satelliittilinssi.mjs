@@ -75,6 +75,17 @@ import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
 mkdirSync(ULOS, { recursive: true });
@@ -140,6 +151,7 @@ const vaadi = (nimi, ok, lisa = '') => {
 
 async function avaaSivu(nakyma, virheet) {
   const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const sivu = await konteksti.newPage();
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
   // Ämpäri ja NASAn kuva-ämpäri Noden kautta; muu verkko katki.
@@ -360,8 +372,8 @@ async function ajaNakyma(nakymanNimi) {
       // Molemmat kuvat latautuvat verkosta — odotetaan, että kumpikin
       // on purettu (naturalWidth > 0), ei vain liitetty DOMiin.
       for (let i = 0; i < 40; i += 1) {
-        const sat = document.querySelector('.linssi-liuskat button[data-linssi="satelliitti"] img');
-        const muu = document.querySelector('.linssi-liuskat button[data-linssi="ihmisen-matka"] img');
+        const sat = document.querySelector('#linssi-valikko button[data-linssi="satelliitti"] img');
+        const muu = document.querySelector('#linssi-valikko button[data-linssi="ihmisen-matka"] img');
         if (sat && muu && sat.naturalWidth > 0 && muu.naturalWidth > 0) break;
         // eslint-disable-next-line no-await-in-loop
         await new Promise((r) => setTimeout(r, 50));
@@ -371,8 +383,8 @@ async function ajaNakyma(nakymanNimi) {
         const r = kuva?.getBoundingClientRect();
         return r ? { w: Math.round(r.width), h: Math.round(r.height) } : null;
       };
-      const satNappi = document.querySelector('.linssi-liuskat button[data-linssi="satelliitti"]');
-      const muuNappi = document.querySelector('.linssi-liuskat button[data-linssi="ihmisen-matka"]');
+      const satNappi = document.querySelector('#linssi-valikko button[data-linssi="satelliitti"]');
+      const muuNappi = document.querySelector('#linssi-valikko button[data-linssi="ihmisen-matka"]');
       const satKuva = satNappi?.querySelector('img');
       // Kuvatiedosto on oikeasti olemassa palvelimella (HEAD 200), ei
       // vain osoitteena — varasolu-SVG ilmestyisi vasta virheestä.

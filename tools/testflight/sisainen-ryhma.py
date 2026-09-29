@@ -10,7 +10,9 @@ Ympäristö: ASC_KEY_ID, ASC_ISSUER_ID, ASC_AVAIN_POLKU (.p8-tiedosto),
 TESTAAJA (sähköposti, valinnainen; oletus tilin omistaja). Argumentit: --bundle-id, --build
 (CFBundleVersion), --odota-min (käsittelyn aikaraja), --testattavaa (TestFlightin
 "What to test" -teksti buildin kaikille kielille; tyhjä = ei muuteta), --vanhenna
-(build vanhennetaan TestFlightissa eikä liitetä ryhmään; vikainen build pois testaajilta).
+(build vanhennetaan TestFlightissa eikä liitetä ryhmään; vikainen build pois testaajilta),
+--palaute-pois (sisäisen ryhmän feedbackEnabled=false; omistaja 28.9.2026: TestFlightin
+"Lähetä palautetta" -sivu pois pelin avauksesta; ei muuta ryhmästä muuta).
 Kaikki virheet näkyvät ::error-rivinä ja lopettavat nollasta poikkeavasti.
 """
 import argparse
@@ -36,6 +38,7 @@ def main():
     p.add_argument('--odota-min', type=int, default=45)
     p.add_argument('--testattavaa', default='')
     p.add_argument('--vanhenna', action='store_true')
+    p.add_argument('--palaute-pois', action='store_true')
     a = p.parse_args()
 
     kid = os.environ['ASC_KEY_ID']
@@ -74,6 +77,18 @@ def main():
     ryhma_id = ryhma['id']
     kaikki_buildit = bool(ryhma['attributes'].get('hasAccessToAllBuilds'))
     print(f"Sisäinen ryhmä: {ryhma['attributes'].get('name')} (kaikki buildit automaattisesti: {kaikki_buildit})")
+
+    if a.palaute_pois:
+        # Omistaja 28.9.2026: TestFlightin palautesivu pois avauksesta. Vain
+        # feedbackEnabled muutetaan (ASC API BetaGroupUpdateRequest).
+        ennen = ryhma['attributes'].get('feedbackEnabled')
+        tila, d = kutsu('PATCH', f'/v1/betaGroups/{ryhma_id}', {'data': {
+            'type': 'betaGroups', 'id': ryhma_id, 'attributes': {'feedbackEnabled': False}}})
+        if tila != 200:
+            virhe('Palautteen poisto epäonnistui', f'{tila}: {d}')
+        jalkeen = d.get('data', {}).get('attributes', {}).get('feedbackEnabled')
+        print(f'Sisäisen ryhmän palaute: {ennen} → {jalkeen}.')
+        return
 
     if not testaaja:
         # Oletustestaaja on tilin omistaja (ACCOUNT_HOLDER) — osoitetta ei

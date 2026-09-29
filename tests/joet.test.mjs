@@ -1,7 +1,9 @@
 // Jokiviivat (tools/tee-joet.mjs): GeoPackage-WKB-luku, pääuomaketjut ja maan osat.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { gpkgViivat, ketjuta, maanOsat } from '../tools/tee-joet.mjs';
+import {
+  gpkgViivat, ketjuta, maanOsat, yhdistaOsat,
+} from '../tools/tee-joet.mjs';
 
 function gpkg(viivat) {
   const osat = viivat.map((v) => { const b = Buffer.alloc(9 + v.length * 16); b[0] = 1; b.writeUInt32LE(2, 1); b.writeUInt32LE(v.length, 5); v.forEach(([x, y], i) => { b.writeDoubleLE(x, 9 + i * 16); b.writeDoubleLE(y, 17 + i * 16); }); return b; });
@@ -36,6 +38,27 @@ test('GEOGLOWS-pätkät on digitoitu ylävirtaan: ketju ei hypi (tuplaviiva, eu-
   ]);
   assert.equal(ketjut.length, 1);
   assert.deepEqual(ketjut[0].pisteet, [[0, 4], [0, 3], [1, 2], [2, 1.5], [1, 1], [1, 0]]);
+});
+
+test('yhdistaOsat: moniosainen geometria ketjutetaan lähimmän päätepisteen mukaan, ei tallennusjärjestyksessä (Tiberin silmukka)', () => {
+  // Sama muoto kuin oikea löydös (Rooma 28.9.2026): pääosa alkaa kaukana ja
+  // päättyy pisteeseen, josta lyhyt jatke jatkaa eteenpäin. GeoPackage
+  // tallensi jatkeen ENSIN — .flat() olisi tuottanut hypyn jatkeen päästä
+  // pääosan alkuun ja silmukan.
+  const paaosa = [[0, 0], [1, 1], [2, 0], [3, 1]];
+  const jatke = [[3, 1], [4, 2]];
+  assert.deepEqual(yhdistaOsat([jatke, paaosa]), [[0, 0], [1, 1], [2, 0], [3, 1], [4, 2]]);
+  assert.deepEqual(yhdistaOsat([paaosa, jatke]), [[0, 0], [1, 1], [2, 0], [3, 1], [4, 2]]);
+});
+
+test('yhdistaOsat: käänteinen jatke liitetään oikein päin', () => {
+  const paaosa = [[0, 0], [1, 1], [2, 0]];
+  const jatkeKaanteinen = [[5, 5], [2, 0]]; // päättyy pääosan alkuun, väärinpäin
+  assert.deepEqual(yhdistaOsat([jatkeKaanteinen, paaosa]), [[5, 5], [2, 0], [1, 1], [0, 0]].reverse());
+});
+
+test('yhdistaOsat: yksiosainen viiva palautuu sellaisenaan', () => {
+  assert.deepEqual(yhdistaOsat([[[0, 0], [1, 1]]]), [[0, 0], [1, 1]]);
 });
 
 test('maan osat: toleranssi pitää rajajoen ja suun mukana', () => {

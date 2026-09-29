@@ -23,6 +23,7 @@
  *
  * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-valikon-sulku.mjs
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -77,6 +78,7 @@ async function avaaLauta({ kehittaja, nakyma }) {
     });
   }
   const sivu = await ctx.newPage();
+  await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
   // Laattaluettelo ja laatat ämpäristä Noden kautta; wikimedia pois.
   await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
     const vastaus = await ampariHaku(route.request().url());

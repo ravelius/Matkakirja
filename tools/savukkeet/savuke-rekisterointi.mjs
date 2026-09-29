@@ -24,6 +24,7 @@
  *
  *   node tools/savukkeet/savuke-rekisterointi.mjs
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import net from 'node:net';
 import { readFileSync, existsSync, statSync } from 'node:fs';
@@ -80,6 +81,7 @@ async function aja({ terve = false, odotaMs = 20000 } = {}) {
       (route) => route.fulfill({ status: 404, body: '' }).catch(() => {}));
   }
   const sivu = await ctx.newPage();
+  await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
   await sivu.addInitScript(() => {
     window.__m = { alku: Date.now(), mk: 0, load: 0, rek: 0 };
     const a = window.__m.alku; let arvo;

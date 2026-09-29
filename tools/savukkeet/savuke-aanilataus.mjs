@@ -39,6 +39,7 @@
  *
  * Kuvat: docs/raportit/kuvat/aanilataus-<nimio>-*.png
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import net from 'node:net';
 import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync } from 'node:fs';
@@ -95,6 +96,7 @@ await konteksti.route(
 );
 
 const sivu = await konteksti.newPage();
+await lisaaPolloKehittajakoodi(konteksti); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 await sivu.addInitScript(() => {
   window.__mitta = { alku: Date.now(), mk: 0, ruutu: 0 };
   const alku = window.__mitta.alku;

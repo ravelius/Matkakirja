@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2370';
+const CACHE = 'matkakirja-2026-09-21.2413';
 const SHELL = [
   './',
   './index.html',
@@ -24,6 +24,7 @@ const SHELL = [
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
+  './js/pelaajanakyma.js',
   './js/siirtokoreografia.js',
   /*
    * TASOKARTTA POIS ESILATAUKSESTA (omistaja 7.9.2026, sanatarkasti:
@@ -52,6 +53,7 @@ const SHELL = [
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
+  './js/avausanimaatio.js',
   // Viisaan pöllön arvonimet (nimilappuvitsi, Raamattu VIISAAN POLLON ARVONIMET).
   './js/packs/pollon-arvonimet.js',
   './js/liput.js',
@@ -113,6 +115,8 @@ const SHELL = [
   './js/karttatyokalu-maakunnat.js',
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',
+  './js/kokoelmanakyma.js',
+  './js/pilleri-animaatio.js',
   './js/fokusnosto.js',
   './js/kuvasarja.js',
   './js/syvennys.js',
@@ -389,9 +393,20 @@ const SHELL = [
   './js/linssit/astronaut-kysymykset.js',
   './js/linssit/satelliitti-aani.js',
   './js/linssit/astro-sumu.js',
+  './js/tiivistys.js',
   './js/linssit/astronautin-kierros.js',
   './js/linssit/satelliitti-avaruus.js',
   './js/linssit/satelliitti-nimiot.js',
+  // Pulun tervetulo ja ISS-repliikit (28.9.2026).
+  './js/linssit/pulu-tervetulo.js',
+  './js/linssit/pulu-iss.js',
+  './js/linssit/pulu-taulu.js',
+  './js/linssit/iss-rata.js',
+  './js/linssit/iss-kyyti.js',
+  './js/linssit/iss-kyyti-nakyma.js',
+  './js/linssit/iss-realismi.js',
+  './js/linssit/iss-realismi-kerrokset.js',
+  './js/linssit/iss-realismi-taivas.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
   './js/linssit/topografia-tarkennus.js',
@@ -501,6 +516,12 @@ const SHELL = [
   './js/packs/hahmotelma-rus.js',
   './js/packs/hahmotelma-bih.js',
   './js/packs/hahmotelma-ukr.js',
+  './js/packs/hahmotelma-srb.js',
+  './js/packs/hahmotelma-alb.js',
+  './js/packs/hahmotelma-mkd.js',
+  './js/packs/hahmotelma-mne.js',
+  './js/packs/hahmotelma-mda.js',
+  './js/packs/hahmotelma-blr.js',
   './js/packs/maakartat.js',
   './js/packs/maakunnat-luonnehdinnat.js',
   './js/packs/maakunnat-pulu.js',
@@ -2105,9 +2126,9 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-26-pohja-20260926';
+const LAATTAKANSIO = '2026-09-27-pohja-20260927';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
-const LAATTAKANSIO_SYVA = '2026-09-26-pohja';
+const LAATTAKANSIO_SYVA = '2026-09-27-pohja';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;

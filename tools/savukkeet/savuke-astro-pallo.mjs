@@ -92,6 +92,17 @@ import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
 import { SATELLIITTI_KOHTEET } from '../../js/linssit/satelliitti-data.js';
 
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
+
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
 /*
@@ -501,11 +512,15 @@ async function avaaPeli(s) {
 /*
  * LINSSI AUKI PELAAJAN OMILLA ELEILLÄ (ks. tiedoston alku, kohta A).
  *
- * Kolme napautusta, samat kuin pelaajalla:
- *   1. #turn-pill avaa matkalaukun (js/ui.js, index.html),
- *   2. button[data-linssi="satelliitti"] valitsee ruudun laukussa
- *      (js/ui.js linssiLiuska) — tämä EI vielä sytytä linssiä,
- *   3. .linssi-aktivoi sytyttää sen ja sulkee laukun (aktivoiLinssi).
+ * Neljä napautusta, samat kuin pelaajalla (pillerivalikkouudistus,
+ * omistaja 29.9.2026: matkalaukku korvautui pillerivalikolla, jonka
+ * päänäkymästä pitää ERIKSEEN avata Linssit-alanäkymä ennen kuin
+ * linssirivit näkyvät — ks. js/ui.js naytaPilleriNakyma):
+ *   1. #turn-pill avaa pillerivalikon (js/ui.js avaaPilleriValikko),
+ *   2. #pilleri-linssit-btn vaihtaa näkymän Linssit-alanäkymään,
+ *   3. button[data-linssi="satelliitti"] valitsee ruudun (js/ui.js
+ *      esikatseleLinssi) — tämä EI vielä sytytä linssiä,
+ *   4. .linssi-aktivoi sytyttää sen ja sulkee valikon (aktivoiLinssi).
  *
  * Jos jokin näistä puuttuu, savuke kaatuu tähän — ja juuri se on
  * tarkoitus: silloin pelaaja ei pääse linssiin lainkaan, eikä muilla
@@ -522,7 +537,10 @@ async function avaaLinssiEleella(s, odota = 4500, ennenAktivointia = null) {
    */
   await s.click('#turn-pill', { timeout: 20000 })
     .catch(() => s.evaluate(() => document.getElementById('turn-pill')?.click()));
-  await s.waitForTimeout(1200);
+  await s.waitForTimeout(600);
+  await s.click('#pilleri-linssit-btn', { timeout: 20000 })
+    .catch(() => s.evaluate(() => document.getElementById('pilleri-linssit-btn')?.click()));
+  await s.waitForTimeout(600);
   const ruutu = s.locator('button[data-linssi="satelliitti"]');
   await ruutu.waitFor({ timeout: 15000 });
   await ruutu.scrollIntoViewIfNeeded();
@@ -539,7 +557,10 @@ async function avaaLinssiEleella(s, odota = 4500, ennenAktivointia = null) {
   await s.waitForTimeout(odota);
   return s.evaluate(() => ({
     linssi: window.matkakirja.ui.linssiValittu,
-    laukku: Boolean(document.getElementById('passport-dialog')?.open),
+    // #passport-dialog korvautui pillerivalikolla (omistaja 29.9.2026):
+    // "auki" on nyt #paavalikko ilman hidden-attribuuttia.
+    laukku: document.getElementById('paavalikko')
+      ? !document.getElementById('paavalikko').hidden : false,
   }));
 }
 
@@ -580,6 +601,7 @@ async function ajaNakyma(nimi) {
   const konteksti = await selain.newContext({
     ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   s.on('pageerror', (e) => virheet.push(String(e)));
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
@@ -695,7 +717,9 @@ async function ajaNakyma(nimi) {
   });
   vaadi(t('53b: ennen kosketusta ISS pysyy ruudun keskellä ja Maa pyörii sen alla'),
     issKeskella.seuranta === true && issKeskella.naytteet.length >= 4
-      && issKeskella.naytteet.every((d) => d <= 6) && issKeskella.liike > 0.2,
+      // Todellinen rata (28.9.2026, js/linssit/iss-rata.js): asema kulkee
+      // ~0,064 °/s, joten 2,4 s:ssa kamera siirtyy ~0,15° (ennen 0,1 × 4,8 °/s).
+      && issKeskella.naytteet.every((d) => d <= 6) && issKeskella.liike > 0.03,
     JSON.stringify(issKeskella));
   vaadi(t('avausajo on käynnissä ja pallo näkyy ensin kokonaan'),
     alku?.avausajo?.kaynnissa === true && alku.avausajo.osuus < 0.6
@@ -816,7 +840,8 @@ async function ajaNakyma(nimi) {
    * Pysähtyminen otteeseen on seuraavan väitteen asia.
    */
   vaadi(t('pallo pyörii ajon jälkeen (ISS-seuranta tai autoRotate)'),
-    loppu.pyorii === true && nopeus > 0.05 && nopeus < 1.5,
+    // Todellisella radalla seuranta kiertää ~0,02–0,1 °/s pituusasteessa.
+    loppu.pyorii === true && nopeus > 0.01 && nopeus < 1.5,
     `${a1.toFixed(3)}° → ${a2.toFixed(3)}° = ${nopeus.toFixed(3)} °/s`
     + ` (seuranta ${loppu.issSeuranta}; kirjaston autoRotateSpeed ${loppu.pyorimisenNopeus})`);
   /*
@@ -2409,6 +2434,7 @@ async function ajaNakyma(nimi) {
   const hidas = await selain.newContext({
     ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'reduce',
   });
+  await hidas.addInitScript(PULUN_TERVETULO_KUULTU);
   const h = await hidas.newPage();
   await h.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
   await h.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
@@ -2457,6 +2483,7 @@ async function ajaNakyma(nimi) {
   const safari = await selain.newContext({
     ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await safari.addInitScript(PULUN_TERVETULO_KUULTU);
   const f = await safari.newPage();
   const safariVirheet = [];
   f.on('pageerror', (e) => safariVirheet.push(String(e)));
@@ -2532,6 +2559,7 @@ async function ajaKirjastoEstetty() {
   const konteksti = await selain.newContext({
     ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const e = await konteksti.newPage();
   const virheet = [];
   e.on('pageerror', (x) => virheet.push(String(x)));
@@ -2608,6 +2636,7 @@ async function ajaPintaEstetty() {
   const konteksti = await selain.newContext({
     ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const e = await konteksti.newPage();
   await e.addInitScript(`(() => {
     const C = window.ImageData;
@@ -2693,6 +2722,7 @@ async function ajaVastakoeIlmanEstoa() {
   const konteksti = await selain.newContext({
     ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const e = await konteksti.newPage();
   await e.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
   await e.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
@@ -2841,6 +2871,7 @@ async function macIkkuna(init = []) {
   const konteksti = await selain.newContext({
     ...MAC_WEBAPP, serviceWorkers: 'block', reducedMotion: 'no-preference',
   });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   for (const skripti of init) await s.addInitScript(skripti);
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());

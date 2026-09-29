@@ -148,8 +148,9 @@ import {
   kaynnistaPohjaMusiikki, pidaMusiikkiKiinni,
 } from '../ambience-stream.js';
 import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
-import { stopDiaryVoice } from '../luenta.js';
-import { pysaytaLukija } from '../lukija.js';
+import { stopDiaryVoice, luentaKytkinPaalla } from '../luenta.js';
+import { lueAaneen, pysaytaLukija } from '../lukija.js';
+import { animoiKoko } from '../tiivistys.js';
 import { SATELLIITTI_KIERROS, SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
 import { naapuri } from './astronautin-kierros.js';
 import {
@@ -160,6 +161,8 @@ import { diagNyt, pallodiag } from '../pallodiag.js';
 import { luoMinipulu } from '../minipulu.js';
 import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
+import { PULUN_VAARA_KOHDE, aloitaPulunTervetulo } from './pulu-tervetulo.js';
+import { luoAstroTaulu } from './pulu-taulu.js';
 
 /*
  * VARTIJAN KELLOT (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34).
@@ -239,6 +242,8 @@ export const PYYHKAISYN_NOPEUS = 0.6;
 export const LIUKU_ULOS_MS = 140;
 export const LIUKU_SISAAN_MS = 160;
 export const NIMEN_KIRKASTUS_MS = 1200;
+/** Selitteen luentojen pysyvä säilölohko (js/puhe.js, worker `lohko`). */
+export const SELITTEEN_SAILIO = 'astro-selite';
 
 /** Reunavyöhyke lavan x-koordinaatista: −1 vasen, +1 oikea, 0 keskiosa. */
 export function reunalla(x, leveys) {
@@ -600,6 +605,7 @@ export function kuvatiedot(kohde, havainto) {
  */
 function avaaHavaintokortti({
   kohde, valikko, onSuljettu, alkuIndeksi, sisaan = 0, siirry = null, naapuriKohde = null,
+  automaattiluentaSallittu = () => true,
 }) {
   lataaSatelliittiTyyli();
   const katselu = html('div', 'satelliitti-katselu');
@@ -761,11 +767,23 @@ function avaaHavaintokortti({
     seutuOsa.textContent = '';
   };
 
-  /** Selite auki/kiinni — vain otsikkorivi jää (korkeussiirtymä CSS:ssä). */
+  /*
+   * Selite auki/kiinni — vain otsikkorivi jää.
+   *
+   * PIENENNETTY ON TIIVIS JA ANIMOITU (omistaja 28.9.2026, Raamattu PR
+   * #3527: *"animoitu pienennys mahdollisimman tiiviiksi"*). Kelattu
+   * laatikko on otsikkorivinsä kokoinen (runko on silloin virran
+   * ulkopuolella, css/satelliitti.css), ja koko liukuu vanhasta uuteen
+   * yleisellä apurilla (js/tiivistys.js animoiKoko). Ennen kelattu
+   * laatikko jäi avatun tekstin levyiseksi palkiksi, koska piilotettu
+   * runko piti leveyttä yllä.
+   */
   const asetaSelite = (kiinni) => {
-    selite.classList.toggle('satelliitti-selite-kiinni', kiinni);
-    selite.setAttribute('aria-expanded', kiinni ? 'false' : 'true');
-    sovitaOtsikko();
+    animoiKoko(selite, () => {
+      selite.classList.toggle('satelliitti-selite-kiinni', kiinni);
+      selite.setAttribute('aria-expanded', kiinni ? 'false' : 'true');
+      sovitaOtsikko();
+    });
   };
   /*
    * ── VINKKIAVAUS: KERRAN KOHDETTA KOHTI ───────────────────────────
@@ -1206,6 +1224,8 @@ function avaaHavaintokortti({
     /* Vinkkiajastin ei saa herätä suljetun näkymän päälle. */
     lopetaVinkki();
     lopetaLiuku();
+    // Selitteen luenta loppuu kuvan mukana (ei muiden puhujien luentaa).
+    if (luettu) { try { pysaytaLukija(); } catch { /* ei lukijaa */ } }
     clearTimeout(kirkastusAjastin);
     globalThis.removeEventListener?.('resize', otsikkoMitataanUudestaan);
     globalThis.removeEventListener?.('orientationchange', otsikkoMitataanUudestaan);
@@ -1219,6 +1239,11 @@ function avaaHavaintokortti({
     onSuljettu?.();
   }
   katselu.satelliittiSulje = sulje;
+  /*
+   * PULUN TAULU (js/linssit/pulu-taulu.js): minipulun napautus avaa nyt
+   * taulun, ja taulun "Kysy Pululta" avaa tämän chatin tällä kahvalla.
+   */
+  katselu.satelliittiChat = (auki = true) => { naytaPulukortti(Boolean(auki)); return true; };
   sulku.addEventListener('click', (e) => { e.stopPropagation(); sulje(); });
   document.addEventListener('keydown', nappain);
 
@@ -1582,6 +1607,36 @@ function avaaHavaintokortti({
       nauha.appendChild(b);
     });
   };
+  /*
+   * ── SELITE LUETAAN ÄÄNEEN (omistaja 28.9.2026: *"Tee selitteelle myös
+   * striinilukija joka automaattisesti päällä"*) ────────────────────
+   *
+   * Kuvan avautuessa ja vaihtuessa selite luetaan striimiluennalla
+   * (js/lukija.js lueAaneen → js/puhe.js palat), kun kertoja on päällä
+   * (sama ääniasetus kuin matkakirjan automaattisella luennalla,
+   * js/luenta.js luentaKytkinPaalla). Uusi kuva keskeyttää edellisen
+   * luennan, ja kuvan sulkeminen lopettaa sen. Luennat säilötään
+   * lohkoon SELITTEEN_SAILIO (laite, reuna ja ämpäri): sama selite
+   * syntetisoidaan kerran, ei joka katselulla.
+   */
+  let luettu = null;
+  function lueSelite(h) {
+    if (!luentaKytkinPaalla()) return;
+    /*
+     * PULUN TERVETULO VÄISTÄÄ (löydös: Linssiseppä 1 / Päätoimittaja
+     * 29.9.2026, PR #3575): C1 avaa väärän kohteen kuvan tervetulon
+     * OMALLA avaaKohde-kutsulla, ja tämä automaattinen luenta alkaisi
+     * silloin sen päälle. soitaLivianAani ei ala kertojan päälle
+     * (js/liviapuhe.js), joten C2:n Livian ääni jäisi kokonaan soimatta.
+     * Tervetulon aikana vain sen OMA puhe saa kuulua; kuvan avaaminen
+     * pelaajan omasta tahdosta (ei tervetulon aikana) luetaan normaalisti.
+     */
+    if (!automaattiluentaSallittu()) return;
+    const teksti = `${kohde.nimi}, ${kohde.seutu}. ${h?.teksti ?? kohde.selite ?? ''}`.trim();
+    if (!teksti || teksti === luettu) return;
+    luettu = teksti;
+    try { lueAaneen(teksti, null, { persoona: 'kertoja', sailio: SELITTEEN_SAILIO }); } catch { /* ei ääntä */ }
+  }
   function nayta(uusi) {
     if (!havainnot.length) return;
     const rajattu = Math.max(0, Math.min(havainnot.length - 1, uusi));
@@ -1601,6 +1656,7 @@ function avaaHavaintokortti({
      * on ainoa paikka, jossa kohde luetaan (LISÄYS 3).
      */
     seliteTeksti.textContent = h.teksti ?? kohde.selite;
+    lueSelite(h);
     if (!lisatiedot.hidden) latoLisatiedot();
     valikko?.nimeaKohde?.(`${kohde.nimi} · ${aikateksti(h.aika)}`);
     latoNauha();
@@ -1741,6 +1797,23 @@ export function rakennaLinssikehys({ ui, onSulje, doc = document }) {
 }
 
 /**
+ * Kohde, joka on lähimpänä pistettä (lat, lon) isoympyrää pitkin, tai
+ * null. Pulun taulun "Astronauttien kuvat" avaa sen, mitä kamera katsoo.
+ */
+export function lahinKohde(kohteet, lat, lon) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  const r = Math.PI / 180;
+  let paras = null;
+  let parasKos = -2;
+  for (const k of kohteet ?? []) {
+    const kos = Math.sin(lat * r) * Math.sin(k.lat * r)
+      + Math.cos(lat * r) * Math.cos(k.lat * r) * Math.cos((lon - k.lon) * r);
+    if (kos > parasKos) { parasKos = kos; paras = k; }
+  }
+  return paras;
+}
+
+/**
  * Linssi pallolle. `ui` tulee kolmantena js/ui.js:n sytytaLinssistä.
  */
 function avaa(lauta, tila, ui) {
@@ -1862,6 +1935,7 @@ function avaa(lauta, tila, ui) {
         avaaKohde(k, { indeksi: galleria ? (suunta > 0 ? 0 : viimeinen) : undefined, sisaan: suunta });
       },
       onSuljettu: () => { suljettiin = Date.now(); kortti = null; },
+      automaattiluentaSallittu: () => !tervetuloKesken(),
     });
     /*
      * PALLO KUVAN TAKANA: kamera liukuu kohteen ylle, ja läpikuultavan
@@ -1880,6 +1954,65 @@ function avaa(lauta, tila, ui) {
   }));
   const asetaPisteet = () => lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit);
   vaihe('pisteet', asetaPisteet);
+
+  /*
+   * PULUN TERVETULO (js/linssit/pulu-tervetulo.js, käsikirjoitus
+   * 28.9.2026): vain linssin ensimmäisellä avauksella, kun musta verho on
+   * poissa. C1:n räppäisy avaa väärän kohteen valokuvan SAMALLA
+   * avaaKohde-funktiolla kuin pisteen napautus, ja C2 sulkee sen.
+   * Ei avaruusnäkymää (tasokartta, kaatunut WebGL) → ei tervetuloa.
+   */
+  const tervetulo = avaruus ? vaihe('pulun-tervetulo', () => aloitaPulunTervetulo({
+    ui,
+    avaruus,
+    avaaVaaraKohde: () => {
+      const vaara = kohdeTunnuksella.get(PULUN_VAARA_KOHDE);
+      if (!vaara) return false;
+      avaaKohde(vaara);
+      return Boolean(kortti);
+    },
+    suljeKortti,
+  })) : null;
+  /*
+   * ONKO TERVETULO KESKEN (löydös: Linssiseppä 1 / Päätoimittaja
+   * 29.9.2026, PR #3575, ks. avaaKohde → avaaHavaintokortti
+   * automaattiluentaSallittu): sama vaihe-tarkistus kuin pulu-taulu.js:n
+   * automaattiKierros — 'odottaa' ja 'puhuu' ovat jakson kesken olevat
+   * vaiheet, muut (valmis/ohitettu/pois/purettu) ovat päättyneitä.
+   */
+  const tervetuloKesken = () => {
+    if (!tervetulo) return false;
+    let vaihe = null;
+    try { vaihe = tervetulo.tila?.()?.vaihe ?? null; } catch { vaihe = null; }
+    return ['odottaa', 'puhuu'].includes(vaihe);
+  };
+
+  /*
+   * PULUN TAULU (js/linssit/pulu-taulu.js, omistaja 28.9.2026): linssin
+   * moodit (Maapallo, ISS:n rinnalla, ISS:n sisälle, Astronauttien kuvat).
+   * Tulee itse tervetulon jälkeen (tai heti, jos tervetulo on kuultu), ja
+   * Pulun napautus avaa sen aina uudelleen. Kuvat avautuvat SAMALLA
+   * avaaKohde-funktiolla kuin pisteen napautus: kohde on se, joka on
+   * lähimpänä kameran katsetta, joten pelaaja saa kuvat siitä, mitä katsoo.
+   */
+  const avaaLahinKohde = () => {
+    const pov = avaruus?.aloitustila?.()?.pov;
+    const lahin = lahinKohde(kohteet, pov?.lat, pov?.lng) ?? kohteet[0];
+    if (!lahin) return false;
+    avaaKohde(lahin);
+    return Boolean(kortti);
+  };
+  const taulu = avaruus ? vaihe('pulun-taulu', () => luoAstroTaulu({
+    ui,
+    avaruus,
+    tervetulo,
+    kuvaAuki: () => Boolean(kortti),
+    suljeKuva: suljeKortti,
+    avaaKuva: avaaLahinKohde,
+    kuviaOn: () => kohteet.length > 0,
+    avaaChat: () => Boolean(kortti?.satelliittiChat?.(true)),
+    suljeChat: () => kortti?.satelliittiChat?.(false),
+  })) : null;
   /*
    * PISTEET RUUDULLE ASTI (ks. PISTEIDEN_UUSINTAVALI_MS yllä). Vartija
    * kertoo puutteesta; tämä yrittää korjata sen ennen kuin vartija
@@ -2045,6 +2178,10 @@ function avaa(lauta, tila, ui) {
     aanet,
     /** Linssin oman huminan ja musiikin kahva (savukkeet ja vartijat). */
     linssiAani: () => linssiAani,
+    /** Pulun tervetulon kahva (null, jos jakso ei alkanut; savuke). */
+    tervetulo,
+    /** Pulun taulun kahva (null ilman avaruusnäkymää; savuke). */
+    taulu,
     /** Vartijan mittari savukkeille: puutteen nimi tai null. */
     puute: () => nykyinenPuute(),
     /** Kaatuneet avausvaiheet (vartijat ja savukkeet). */
@@ -2057,6 +2194,9 @@ function avaa(lauta, tila, ui) {
       virheKahva?.pura?.();
       virheKahva = null;
       poistaLinssivirhe();
+      // Taulu ja Pulu vaikenevat ENNEN kuvan sulkua ja kameran palautusta.
+      taulu?.pura?.();
+      tervetulo?.pura?.();
       suljeKortti();
       // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
       // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.
@@ -2101,6 +2241,7 @@ export const LINSSI = {
   kerros: false,
   nimi: 'Astronautin kamera',
   lyhyt: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
+  esittely: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
   /*
    * NIMI VAIHTUI 12.9.2026: "Satelliittilinssi" → "Astronautin kamera"
    * (omistaja, sanatarkasti: *"muuta linssin nimeksi astronautin kamera

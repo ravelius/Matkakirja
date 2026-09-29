@@ -164,6 +164,12 @@ import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
 import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
 import { HAHMOTELMA_CHE } from './packs/hahmotelma-che.js';
 import { HAHMOTELMA_BIH } from './packs/hahmotelma-bih.js';
+import { HAHMOTELMA_SRB } from './packs/hahmotelma-srb.js';
+import { HAHMOTELMA_ALB } from './packs/hahmotelma-alb.js';
+import { HAHMOTELMA_MKD } from './packs/hahmotelma-mkd.js';
+import { HAHMOTELMA_MNE } from './packs/hahmotelma-mne.js';
+import { HAHMOTELMA_MDA } from './packs/hahmotelma-mda.js';
+import { HAHMOTELMA_BLR } from './packs/hahmotelma-blr.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -206,6 +212,7 @@ import { asetaAkustiikka } from './tehosteketju.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { KUVASARJA_PYYHKAISY_PX, piirraKuvasarja } from './kuvasarja.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
+import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -679,6 +686,20 @@ KOHDE_MAAT.CHE = [...(KOHDE_MAAT.CHE ?? []), ...HAHMOTELMA_CHE];
  * haara karttaseppa-bodensee).
  */
 KOHDE_MAAT.BIH = [...(KOHDE_MAAT.BIH ?? []), ...HAHMOTELMA_BIH];
+
+/*
+ * SRB/ALB/MKD/MNE/MDA/BLR ENSIMMÄISET KARTTANOSTOT (Fablen tilaus
+ * 28.9.2026): kullakin maalla ei ollut ennestään yhtään karttanostoa
+ * (VAIN EUROOPPA -karttatyö kesken), joten Matkakirjan ihme -kohde
+ * (js/packs/monumentit-eurooppa.js) on nyt maan ainoa nosto. Loput
+ * kohteet lisätään myöhemmissä erissä.
+ */
+KOHDE_MAAT.SRB = [...(KOHDE_MAAT.SRB ?? []), ...HAHMOTELMA_SRB];
+KOHDE_MAAT.ALB = [...(KOHDE_MAAT.ALB ?? []), ...HAHMOTELMA_ALB];
+KOHDE_MAAT.MKD = [...(KOHDE_MAAT.MKD ?? []), ...HAHMOTELMA_MKD];
+KOHDE_MAAT.MNE = [...(KOHDE_MAAT.MNE ?? []), ...HAHMOTELMA_MNE];
+KOHDE_MAAT.MDA = [...(KOHDE_MAAT.MDA ?? []), ...HAHMOTELMA_MDA];
+KOHDE_MAAT.BLR = [...(KOHDE_MAAT.BLR ?? []), ...HAHMOTELMA_BLR];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
@@ -4695,6 +4716,8 @@ export function suljeFokuskohde(ui) {
   auki.merkki?.classList.remove('auki');
   // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
   auki.popup?.nostokuvaPurku?.();
+  // Sulkeutuu samaa reittiä merkkiin (haamu; kortti itse lähtee heti).
+  haamuSulku(auki.popup, auki.merkki ?? auki.ankkuri);
   auki.popup?.remove();
   if (auki.purku) auki.purku();
 }
@@ -6668,6 +6691,8 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.
   globalThis.requestAnimationFrame?.(() => asetaKohteenPaikka(ui));
   setTimeout(() => asetaKohteenPaikka(ui), 200);
+  // Kasvaa ja häivyttyy esiin napautetun merkin kohdalta (omistaja 29.9.2026, js/avausanimaatio.js).
+  animoiAvaus(popup, merkki ?? ankkuri);
   // Avausääni soi jo funktion alussa (ks. sfx.play('popup') ylhäällä).
   return popup;
 }

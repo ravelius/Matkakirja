@@ -87,7 +87,8 @@ test('liuku: vanha ulos 140 ms, uusi sisään neljänneksen matkalta häivyttäe
 test('pallo kuvan takana: läpikuultava tausta ja kamera kohteen ylle enintään lepokorkeudelle', () => {
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: rgba\(4, 9, 7, 0\.7\)/);
   assert.match(lahde, /if \(kortti\) avaruus\?\.katsoKohteeseen\?\.\(kohde\.lat, kohde\.lon\)/);
-  assert.match(avaruus, /katsoKohteeseen: \(lat, lon\) => \{[\s\S]*lopetaSeuranta\(\);[\s\S]*paataAvausajo\(\);[\s\S]*Math\.min\(nyt, lepoAlt\)[\s\S]*pallo\.pointOfView\(\{ lat, lng: lon, altitude: korkeus \}, reduced \? 0 : KUVAN_AJON_MS\)/);
+  // Oletuskesto on yhä KUVAN_AJON_MS; Pulun pyöräytys (28.9.2026) antaa oman kestonsa.
+  assert.match(avaruus, /katsoKohteeseen: \(lat, lon, \{ kestoMs = KUVAN_AJON_MS \} = \{\}\) => \{[\s\S]*lopetaSeuranta\(\);[\s\S]*paataAvausajo\(\);[\s\S]*Math\.min\(nyt, lepoAlt\)[\s\S]*pallo\.pointOfView\(\{ lat, lng: lon, altitude: korkeus \},\s*reduced \? 0 : Math\.max\(0, Number\(kestoMs\) \|\| 0\)\)/);
 });
 
 test('kohteen nimi kirkastuu 1,2 s selaimella vaihdettaessa (ei liikkeenvähennyksessä)', () => {
@@ -103,4 +104,17 @@ test('avaruussumu on piilossa kuvan ajan (ei suorakaidetta läpikuultavan tausta
 
 test('reunavarjo ja valoreuna rajataan ympyrään (neliön reunat eivät näy)', () => {
   assert.match(avaruus, /clip-path:circle\(50% at 50% 50%\)/);
+});
+
+test('pienennetty selite on otsikkorivin kokoinen ja koko liukuu (js/tiivistys.js)', () => {
+  assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-runko \{\s*position: absolute;\s*visibility: hidden;/);
+  assert.match(lahde, /import \{ animoiKoko \} from '\.\.\/tiivistys\.js';/);
+});
+
+test('selite luetaan ääneen kertoja-asetuksen mukaan, säilöön, ja luenta loppuu kuvan mukana', () => {
+  assert.match(lahde, /if \(!luentaKytkinPaalla\(\)\) return;/);
+  assert.match(lahde, /lueAaneen\(teksti, null, \{ persoona: 'kertoja', sailio: SELITTEEN_SAILIO \}\)/);
+  assert.match(lahde, /export const SELITTEEN_SAILIO = 'astro-selite';/);
+  assert.match(lahde, /seliteTeksti\.textContent = h\.teksti \?\? kohde\.selite;\s*lueSelite\(h\);/);
+  assert.match(lahde, /if \(luettu\) \{ try \{ pysaytaLukija\(\); \}/);
 });

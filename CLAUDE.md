@@ -11,6 +11,9 @@ Solia, Terraa ja Lunaa (kevyemmät agenttimallit); molemmat pääsessiot delegoi
 rajatut tehtävät kevyimmälle riittävän kyvykkäälle mallille (Raamattu,
 Ydinajatus: CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN).
 
+PÄÄTOIMITTAJA = FABLE (omistaja 28.9.2026): päätoimittajan rooli on nimeltään Päätoimittaja (malli vaihtelee);
+"Fable" on sama rooli vanhalla nimellä kaikissa ohjeissa. Raamattu, Ydinajatus.
+
 # Matkakirja ja unohdettu aarre
 
 Suomenkielinen seikkailupeli, jossa samalla oppii (kohderyhmä

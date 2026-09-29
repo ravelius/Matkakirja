@@ -37,8 +37,8 @@
  *   5. KYTKENTÄ — kytkeMaakunnatKarttaselitteeseen
  */
 import { html, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus } from './ui-apurit.js';
-import { kohteidenNykyinenIso } from './fokuskohteet.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kohteidenNykyinenIso, suljeKohdeSuurennos } from './fokuskohteet.js';
+import { nostoLataaTyyli, piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from './packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
 import { MAAKUNNAT_KAIKKI, MAAKUNNAT_KAIKKI_MAAT } from './packs/maakunnat-nimet.js';
@@ -433,7 +433,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
       lisaa.title = 'Lisää alueesta';
       lisaa.setAttribute('aria-label', 'Lisää alueesta');
       lisaa.innerHTML = PLUS_IKONI;
-      lisaa.addEventListener('click', () => avaaMaakuntaKortti(avain, nimi, data));
+      lisaa.addEventListener('click', () => avaaMaakuntaKortti(ui, avain, nimi, data, lisaa));
       kuvaus.appendChild(lisaa);
     }
   }
@@ -548,18 +548,46 @@ const PULU_IKONI = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden=
   + '<circle cx="9.5" cy="10" r="0.9" fill="currentColor" stroke="none"/>'
   + '<circle cx="14.5" cy="10" r="0.9" fill="currentColor" stroke="none"/></svg>';
 
+/** Käyttäjä on pyytänyt vähemmän liikettä: vieritys ilman animaatiota. */
+const liikettaVahennetty = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /** Auki oleva kortti (yksi kerrallaan, kuten fokusnosto.js:n ui.fokusnostoKortti). */
 let avoinKortti = null;
+
+/** Kuvan suurennoksen ui-avain (js/fokuskohteet.js avaaKohdeSuurennos): kortin sulku ja Esc kuorivat sen ensin. */
+const MAAKUNTA_ZOOM = 'maakuntaZoom';
+
+/**
+ * Maakunnan kuva nostokortin kuvaksi: osoite sellaisenaan (assetOsoite päästää valmiin osoitteen läpi), lähderiviin
+ * lisenssi vain, jos lähde ei jo mainitse sitä (omistajan kaappaus 28.9.: "… (CC BY-SA 4.0) · CC BY-SA 4.0").
+ */
+export function maakunnanNostokuva(kuva) {
+  const lahde = kuva?.lahde ?? '';
+  const lisenssi = kuva?.lisenssi && !lahde.includes(kuva.lisenssi) ? kuva.lisenssi : '';
+  return { ...kuva, lahde: [lahde, lisenssi].filter(Boolean).join(' · ') };
+}
+
+/** Sulkuanimaation kesto (css/styles.css .maakunta-kortti) ja varmistus, jos transitionend jää tulematta. */
+const KORTIN_SULKU_MS = 200;
 
 function suljeMaakuntaKortti() {
   const auki = avoinKortti;
   avoinKortti = null;
   auki?.purku?.();
-  auki?.kerros?.remove();
+  // Kuvan suurennos on kortin jatke: se ei saa jäädä yksin kartan päälle.
+  suljeKohdeSuurennos(auki?.ui, MAAKUNTA_ZOOM);
+  const kerros = auki?.kerros;
+  if (!kerros) return;
+  // Sulku samaa reittiä takaisin avanneeseen nappiin (omistaja 29.9.2026); ilman liikettä heti pois.
+  if (liikettaVahennetty()) { kerros.remove(); return; }
+  kerros.classList.add('maakunta-kortti-sulkeutuu');
+  kerros.classList.remove('maakunta-kortti-auki');
+  setTimeout(() => kerros.remove(), KORTIN_SULKU_MS + 40);
 }
 
-function avaaMaakuntaKortti(avain, nimi, data) {
+function avaaMaakuntaKortti(ui, avain, nimi, data, avaaja = null) {
   suljeMaakuntaKortti();
+  nostoLataaTyyli();
 
   const kerros = html('div', 'maakunta-kortti-kerros');
   const kortti = html('div', 'maakunta-kortti');
@@ -576,26 +604,23 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   const sisalto = html('div', 'maakunta-kortti-sisalto');
   sisalto.appendChild(html('h2', 'maakunta-kortti-otsikko', nimi));
 
-  // KUVAT (voi puuttua kokonaan erässä 1) — kaksi vierekkäin, useampi
-  // vaakakaruselliin (scroll-snap, ks. css). Ilman kuvia lohko jää pois.
-  const kuvat = maakunnanKuvat(data);
-  if (kuvat.length) {
-    const kuvalohko = html('div', 'maakunta-kuvat');
-    kuvalohko.classList.add(kuvat.length > 2 ? 'maakunta-kuvat-karuselli' : 'maakunta-kuvat-ruudukko');
-    for (const kuva of kuvat) {
-      const kehys = html('figure', 'maakunta-kuva');
-      const img = document.createElement('img');
-      img.loading = 'lazy';
-      img.src = kuva?.osoite ?? '';
-      img.alt = '';
-      kehys.appendChild(img);
-      const lahdeteksti = [kuva?.lahde, kuva?.lisenssi].filter(Boolean).join(' · ');
-      // Lähderivi kulkee talon apurin kautta (tekijakortti.js taytaLahderivi):
-      // Commons- ja lisenssilinkit sekä havainnekuvan selite samoin kuin korteissa.
-      if (lahdeteksti) kehys.appendChild(taytaLahderivi(html('figcaption', 'maakunta-kuva-lahde'), lahdeteksti, kuva));
-      kuvalohko.appendChild(kehys);
-    }
-    sisalto.appendChild(kuvalohko);
+  /*
+   * KUVAT KUTEN MUISSA NOSTOISSA (omistaja 28.9.2026 iPadilla: "Nosto pitää olla saman kokoinen kuin muut nostot ja
+   * kuva pitää pystyä klikkaamaan kokoruudulle"): sama kuvakomponentti kuin nostokortilla (js/fokusnosto.js
+   * piirraNostonKuva / piirraNostonKuvasarja), eli koko kuva näkyy (korkeuskatto 42vh), napautus avaa suurennoksen
+   * samalla kuvaselaimella, ja useampi kuva selataan nuolilla. Ilman kuvia lohko jää pois.
+   */
+  const kuvat = maakunnanKuvat(data).map(maakunnanNostokuva).filter((k) => k.osoite || k.tiedosto);
+  if (kuvat.length === 1) piirraNostonKuva(ui, sisalto, kuvat[0], 'fokusnosto-kuva', undefined, MAAKUNTA_ZOOM);
+  else if (kuvat.length > 1) {
+    piirraNostonKuvasarja(ui, sisalto, kuvat, {
+      otsikko: nimi,
+      kehysLuokka: 'fokusnosto-kuva nostosarja-kuva',
+      nuoliLuokka: 'nostosarja-kuvanuoli',
+      laskuriLuokka: 'nostosarja-kuvalaskuri',
+      leveys: 800,
+      zoomAvain: MAAKUNTA_ZOOM,
+    });
   }
 
   // PITKÄ TEKSTI — jos `pitka` puuttuu (erä 2 ei ole vielä valmis), näytetään `lyhyt`.
@@ -606,6 +631,14 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   if (kysymykset.length) {
     const pulu = html('div', 'maakunta-pulu');
     let avoinVastaus = null;
+    /*
+     * KORTIN KOKO EI MUUTU (omistaja 29.9.2026: "Ikkunan koko ei saa muuttua kun noita klikkaa auki"): korkeus
+     * lukitaan ensimmäisellä napautuksella siihen, mikä se on (kuvat ovat jo ehtineet latautua; katto on
+     * max-height), ja vastaus avautuu kortin sisällä vieritettävänä. Sulkeminen ei kutista korttia.
+     */
+    const lukitseKorkeus = () => {
+      if (!kortti.style.height) kortti.style.height = `${kortti.getBoundingClientRect().height}px`;
+    };
     for (const { q, a } of kysymykset) {
       const nappi = html('button', 'maakunta-pulu-kysymys');
       nappi.type = 'button';
@@ -626,10 +659,12 @@ function avaaMaakuntaKortti(avain, nimi, data) {
           avoinVastaus.vastaus.remove();
           avoinVastaus.nappi.setAttribute('aria-expanded', 'false');
         }
+        lukitseKorkeus();
         const vastaus = html('p', 'maakunta-pulu-vastaus', a);
         nappi.insertAdjacentElement('afterend', vastaus);
         nappi.setAttribute('aria-expanded', 'true');
         avoinVastaus = { nappi, vastaus };
+        vastaus.scrollIntoView?.({ block: 'nearest', behavior: liikettaVahennetty() ? 'auto' : 'smooth' });
       });
       pulu.appendChild(nappi);
     }
@@ -652,18 +687,30 @@ function avaaMaakuntaKortti(avain, nimi, data) {
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
+    // Kuvan suurennos sulkeutuu ensin (sama väistö kuin nostokortilla js/fokusnosto.js).
+    if (ui?.[MAAKUNTA_ZOOM]) return;
     tapahtuma.stopPropagation();
     kiinni();
   };
   document.addEventListener('keydown', nappain, true);
 
   avoinKortti = {
+    ui,
     kerros,
     purku: () => {
       document.removeEventListener('keydown', nappain, true);
       puraNapautus();
     },
   };
+  // Kortti kasvaa avanneen napin kohdalta: origo napin keskelle kortin omissa koordinaateissa (ennen skaalausta).
+  const napista = avaaja?.getBoundingClientRect?.();
+  if (napista?.width) {
+    const kortinLaatikko = { vasen: kortti.offsetLeft, yla: kortti.offsetTop };
+    const kerroksenLaatikko = kerros.getBoundingClientRect();
+    const x = napista.left + napista.width / 2 - kerroksenLaatikko.left - kortinLaatikko.vasen;
+    const y = napista.top + napista.height / 2 - kerroksenLaatikko.top - kortinLaatikko.yla;
+    kortti.style.transformOrigin = `${Math.round(x)}px ${Math.round(y)}px`;
+  }
   void kerros.offsetWidth;
   kerros.classList.add('maakunta-kortti-auki');
 }

@@ -190,6 +190,12 @@ jobs:
         id: aja
         env:
           GH_TOKEN: ${{ github.token }}
+          # PULUN PÄIVÄRAJA (Julkaisija 28.9.2026): savukkeet, jotka eivät
+          # katkaise pöllöpalvelinta, lähettävät tällä kehittäjäotsakkeen
+          # VAIN pöllön originiin (tools/savukkeet/pollo-kehittajakoodi.mjs),
+          # jotta ajot eivät kuluta omistajan laitteiden IP-rajaa. Tämä job
+          # ei aja fork-PR:itä (if-ehto yllä); fork-reitit eivät saa secretiä.
+          POLLO_KEHITTAJAKOODI: ${{ secrets.POLLO_KEHITTAJAKOODI }}
         run: |
           # launchd-palvelun PATH ei välttämättä sisällä Homebrew'n nodea.
           export PATH="/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:$PATH"

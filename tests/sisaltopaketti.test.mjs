@@ -669,9 +669,19 @@ test('skeema 1.22: muutosrivi osoittimeen ja muutosloki-natiivi', async () => {
   assert.equal(muutosRivi({ kaupunkilehdet: 5, nahtavyydet: 10 }, { kaupunkilehdet: 8, nahtavyydet: 10 }, '2026-09-24T00:00:00Z').teksti,
     'Sisältö päivittyi: 3 uutta kaupunkilehteä.');
   assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-24T00:00:00Z').teksti, 'Sisältöä päivitettiin.');
+  // 28.9.2026 (Natiivi-UI): muuttuneet kokoelmat nimetään tiivisteistä; kasvanut ei toistu, tuntematon ei nouse riville.
+  const ed = { kaupunkilehdet: 'a'.repeat(12), nahtavyydet: 'b'.repeat(12), offline: 'c'.repeat(12), saannot: 'd'.repeat(12) };
+  const ny = { kaupunkilehdet: 'e'.repeat(12), nahtavyydet: 'f'.repeat(12), offline: '0'.repeat(12), saannot: '1'.repeat(12) };
+  assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-28T00:00:00Z', ed, ny).teksti,
+    'Päivitetty: kaupunkilehdet, nähtävyydet ja offline-kartat.');
+  assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 7 }, '2026-09-28T00:00:00Z', ed, ny).teksti,
+    'Sisältö päivittyi: 2 uutta kaupunkilehteä. Päivitetty: nähtävyydet ja offline-kartat.');
+  assert.equal(muutosRivi({ kaupunkilehdet: 5 }, { kaupunkilehdet: 5 }, '2026-09-28T00:00:00Z', ed, ed).teksti, 'Sisältöä päivitettiin.');
   const j = kokoaJulkaisu({ tiedostot, edellinen: null, suurin: 0, commit: 'abcdef1', julkaistu: '2026-09-23T20:00:00.000Z' });
   assert.deepEqual(j.virheet, []);
   assert.equal(j.osoitin.kokoelmaLkm.kaupungit, 266);
+  assert.match(j.osoitin.kokoelmaSha.kaupungit, /^[0-9a-f]{12}$/);
+  assert.match(j.osoitin.kokoelmaSha.offline, /^[0-9a-f]{12}$/);
   assert.ok(Array.isArray(JSON.parse(tiedostot.get('kokoelmat/muutosloki-natiivi.json')).alkiot));
 });
 
@@ -1350,7 +1360,7 @@ test('skeema 1.40: kartan nimiöt mahtuvat 18 merkkiin, monumentit.nimio (Sisäl
 test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympärillä (Natiiviseppä, build 13)', () => {
   const o = JSON.parse(tiedostot.get('offline.json'));
   const R = o.lahteet.rasteri;
-  assert.match(R.url, /\/2026-09-26-pohja-20260926\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
+  assert.match(R.url, /\/2026-09-27-pohja-20260927\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
   assert.equal(R.maxzoom, 9, '1.51: Z10 omassa avaimessa kaupunkiRasteri, ei maxzoomissa');
   assert.deepEqual(R.kaupunkitaso.tasot, [9]);
   const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((c) => c.tyyppi === 'kaupunki');
