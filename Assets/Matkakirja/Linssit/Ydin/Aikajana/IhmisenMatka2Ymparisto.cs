@@ -443,7 +443,7 @@ namespace Matkakirja.Linssit.Aikajana
             return Math.Abs(a.Lat - b.Lat) < 1.0 && dLon < 1.0 && Math.Abs(a.Korkeus - b.Korkeus) <= 0.1 * Math.Max(1.0, b.Korkeus);
         }
 
-        public void ZoomiKatto(double? maxKorkeus) => y.ZoomiKatto(maxKorkeus);
+        public void ZoomiKatto(double? maxKorkeus, double? minKorkeus = null) => y.ZoomiKatto(maxKorkeus, minKorkeus);
         public void KameraAvaruuteen(double lat, double lon, double pallonSateita)
         {
             // Uusi esitys: kamera hyppää avaruuteen mustan alla, joten mikään edellinen ajo ei jatku.

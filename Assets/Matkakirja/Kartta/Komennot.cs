@@ -601,7 +601,7 @@ namespace Matkakirja
                     Debug.Log(Pohjapallo.Kuvaus());
                     break;
                 case "pallo":
-                    kierto.Aja(kierto.leveys, kierto.pituus, kierto.MaxKorkeus(), 1.4f, null);
+                    kierto.Aja(kierto.leveys, kierto.pituus, kierto.KokoPallonKorkeus(), 1.4f, null);
                     break;
                 case "veto":
                     kierto.AloitaEle(new PalloKierto.Ele

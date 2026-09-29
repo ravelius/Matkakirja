@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
 {
     public class KyydinTaivas : MonoBehaviour
     {
-        const string TahtiUrl = "https://media.matkakirja.app/linssit/astronautin-kamera/tahdet-bsc5-2026-09-28.json";
+        public const string TahtiUrl = "https://media.matkakirja.app/linssit/astronautin-kamera/tahdet-bsc5-2026-09-28.json";
         const float KuunKulma = 0.52f;
         static readonly int IdKiertoX = Shader.PropertyToID("_KiertoX"), IdKiertoY = Shader.PropertyToID("_KiertoY"),
             IdKiertoZ = Shader.PropertyToID("_KiertoZ"), IdPeitto = Shader.PropertyToID("_Peitto"),
@@ -91,6 +91,18 @@ namespace Matkakirja.Natiivi
 
         IEnumerator HaeTahdet()
         {
+            List<object> lista = null;
+            yield return HaeTahtiLista(l => lista = l);
+            if (lista == null) yield break;
+            tahtiMesh = RakennaTahdet(lista, out tahtiSuunnat, out tahtiMag);
+            TahdetValmiit = tahtiMesh != null;
+            if (tahtiMesh != null) tahtiPiirto = Piirtaja(transform, "KyydinTahdet", tahtiMesh, tahtiMat);
+            Debug.Log($"MATKAKIRJA kyydin taivas: {lista.Count} tähteä (BSC5)");
+        }
+
+        /// <summary>BSC5-tähtilista ämpäristä välimuistin kautta (myös Tähtitaivas-linssi, TaivasNayttamo); null = ei saatu.</summary>
+        public static IEnumerator HaeTahtiLista(Action<List<object>> valmis)
+        {
             string polku = Path.Combine(Application.persistentDataPath, "kuvat", "tahdet-bsc5-2026-09-28.json");
             string teksti = null;
             if (File.Exists(polku)) teksti = File.ReadAllText(polku);
@@ -106,17 +118,14 @@ namespace Matkakirja.Natiivi
                 }
                 else Debug.LogWarning("MATKAKIRJA kyydin taivas: tähdet " + p.error);
             }
-            if (teksti == null) yield break;
+            if (teksti == null) { valmis(null); yield break; }
             if (!(Matkakirja.Peli.MiniJson.Jasenna(teksti) is Dictionary<string, object> juuri)
-                || !(juuri.TryGetValue("tahdet", out var o) && o is List<object> lista)) yield break;
-            tahtiMesh = RakennaTahdet(lista, out tahtiSuunnat, out tahtiMag);
-            TahdetValmiit = tahtiMesh != null;
-            if (tahtiMesh != null) tahtiPiirto = Piirtaja(transform, "KyydinTahdet", tahtiMesh, tahtiMat);
-            Debug.Log($"MATKAKIRJA kyydin taivas: {lista.Count} tähteä (BSC5)");
+                || !(juuri.TryGetValue("tahdet", out var o) && o is List<object> lista)) { valmis(null); yield break; }
+            valmis(lista);
         }
 
         /// <summary>Neljä kärkeä tähteä kohden: paikka = ECI-yksikkövektori, uv = kulma (±1), uv2 = (koko px, kirkkaus), väri B−V:stä.</summary>
-        static Mesh RakennaTahdet(List<object> lista, out Vector3[] suunnat, out float[] magnitudit)
+        public static Mesh RakennaTahdet(List<object> lista, out Vector3[] suunnat, out float[] magnitudit)
         {
             int n = lista.Count;
             var sl = new List<Vector3>(n);

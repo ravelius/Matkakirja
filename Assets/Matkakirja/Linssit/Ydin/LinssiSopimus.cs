@@ -157,8 +157,11 @@ namespace Matkakirja.Linssit
         /// tähän; null = pelaajan kallistus säilyy (kohde.Kallistus ei vaikuta, kuten ennen radiouudistusta).
         /// </summary>
         void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null, double? kallistukseen = null);
-        /// <summary>Loitonnuksen katto metreinä; null = pelin oma raja.</summary>
-        void ZoomiKatto(double? maxKorkeus);
+        /// <summary>
+        /// Linssin zoomikaista metreinä (web lauta.zoomirajat): katto loitonnukselle (saa ylittää koko pallon, maan rajat eivät
+        /// silloin ole voimassa) ja valinnainen lattia lähimmälle korkeudelle; null = pelin oma raja.
+        /// </summary>
+        void ZoomiKatto(double? maxKorkeus, double? minKorkeus = null);
         /// <summary>
         /// Kamera heti avaruuteen keskuksen yläpuolelle, korkeus pallon säteinä, kallistus 0 (web ihmisen
         /// matkan avaaKaukaisuus: AVARUUDEN_KORKEUS 300, katto levennetty hetkeksi). Seuraava AjaKamera lähtee

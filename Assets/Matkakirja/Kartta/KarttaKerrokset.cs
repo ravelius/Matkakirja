@@ -1625,7 +1625,7 @@ namespace Matkakirja
             List<string> reliefi = null;
             if (linssi)
                 reliefi = Matkakirja.Linssit.Laattalista.Polut(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
-                    new Matkakirja.Linssit.Nakyma(Math.Max(-55.0, Math.Min(55.0, t.Lat)), t.Lon, kierto.MaxKorkeus()), fov, kuvasuhde,
+                    new Matkakirja.Linssit.Nakyma(Math.Max(-55.0, Math.Min(55.0, t.Lat)), t.Lon, kierto.KokoPallonKorkeus()), fov, kuvasuhde,
                     Screen.height, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, Laattapalvelin.Ampari, SaapumisLinssiKatto);
             var e = new Laattapalvelin.Esilataus { Tausta = !kiire, Saapuminen = kiire };
             float alku = Time.realtimeSinceStartup;

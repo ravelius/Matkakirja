@@ -189,7 +189,6 @@ namespace Matkakirja.Natiivi
             {
                 Auki = true;
                 // Kasvaa esiin kohteen pisteestä (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; Ponnahdus = webin arvot).
-                Ruudunpaivitys.Herata(Ponnahdus.AukiS + 0.1f);
                 Ponnahdus.Avaa(juuri, Origo(k));
                 SyoteLukko.Esta(this);
                 AukiMuuttui?.Invoke(true);
@@ -237,7 +236,6 @@ namespace Matkakirja.Natiivi
             liukuu = pyyhkaisy = false;
             kuva.style.opacity = StyleKeyword.Null;
             // Sulkeutuu samaa reittiä avauksen pisteeseen (Ponnahdus, 200 ms); linssi ja pallo saavat syötteen heti.
-            Ruudunpaivitys.Herata(Ponnahdus.KiinniS + Ponnahdus.PoistoViiveS + 0.1f);
             Ponnahdus.Sulje(juuri);
             pulukortti.Sulje();
             sormet.Clear();

@@ -58,9 +58,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(AvauksenVaihe.Musta, l.Vaihe, "ennen 1800 ms:a musta pysyy");
             Aja(l, y, 0.9);
             Oleta.Sama(AvauksenVaihe.OtsikkoPois, l.Vaihe);
-            Oleta.Sama(y.KokoPallonKorkeus * 0.72, y.Ajo.Value.Korkeus, "zoomi lepokorkeuteen");
-            Oleta.Sama(5f, y.AjonKesto);
-            Oleta.Tosi(Math.Abs(y.AjonPehmennys(0.3) - Astronauttimatikka.AvausPehmennys(0.3)) < 1e-12, "kuutiollinen ease-in-out");
+            // ISS-seurannassa zoomi lasketaan joka kehys (kuutiollinen ease-in-out 5 s), suunta aseman alapisteestä.
+            Oleta.Tosi(l.IssSeuranta);
+            Oleta.Sama(0f, y.AjonKesto, "seuranta asettaa kameran joka kehys");
             Aja(l, y, 0.75);
             Oleta.Sama(AvauksenVaihe.MustaPois, l.Vaihe);
             Aja(l, y, 1.2);
@@ -113,33 +113,77 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("kuva pois", n.Loki.Last());
         }
 
-        [Testi] static void TervetulonKameraAloitustilastaJaTakaisin()
+        [Testi] static void IssSeurantaAvauksestaKunnesPelaajaKoskee()
         {
+            // Web satelliitti-avaruus.js seuranta (Raamattu PAATOKSET 53): ISS keskellä, Maa pyörii sen alla.
             var (l, y, _) = Luo();
-            Oleta.Tosi(l.Aloitustila() == null, "linssi kiinni");
             l.Avaa(y);
-            Oleta.Tosi(!l.KatsoKohteeseen(45.44, 12.332, 2.6f), "mustan aikana ei pyöräytystä");
+            Oleta.Tosi(l.IssSeuranta, "seuranta alkaa avauksesta");
+            var iss = Iss.IssNyt.Paikka(Iss.IssNyt.Kello());
+            Oleta.Tosi(Iss.Ylilennot.MaaEtaisyysKm(y.Ajo.Value.Lat, y.Ajo.Value.Lon, iss.Lat, iss.Lon) < 50, "pimeässä jo aseman yllä");
+            Oleta.Sama(y.KokoPallonKorkeus, y.Ajo.Value.Korkeus);
+            // Mustan aikana ote ei vielä päätä seurantaa.
+            l.PelaajanEle();
+            Oleta.Tosi(l.IssSeuranta);
             y.Vale.Tilat[AstronauttiLinssi.Kerros] = KerrosTila.Luovutti;
             Aja(l, y, 0.1);
-            // Laskeutumisen aikana aloitusnäkymä on sen päätepiste (lepokorkeus), ei välikorkeus.
-            var a = l.Aloitustila().Value;
-            Oleta.Sama(y.KokoPallonKorkeus * Astronauttimatikka.AvausajonLoppu, a.Korkeus);
-            Oleta.Sama(y.Asento.Lat, a.Lat);
-            Aja(l, y, 5.1);
-            Oleta.Sama(y.Asento.Korkeus, l.Aloitustila().Value.Korkeus, "laskeutumisen jälkeen kameran oma näkymä");
-            Oleta.Tosi(l.KatsoKohteeseen(45.44, 12.332, 2.6f));
-            Oleta.Sama(45.44, y.Ajo.Value.Lat);
-            Oleta.Sama(12.332, y.Ajo.Value.Lon);
-            Oleta.Sama(Math.Min(y.Asento.Korkeus, y.KokoPallonKorkeus * AstronauttiLinssi.KuvanKorkeus), y.Ajo.Value.Korkeus);
-            Oleta.Sama(2.6f, y.AjonKesto);
-            Oleta.Tosi(l.PalaaAloitukseen(a, 2.78f));
-            Oleta.Sama(a.Korkeus, y.Ajo.Value.Korkeus);
-            Oleta.Sama(2.78f, y.AjonKesto);
-            y.Vahennetty = true;
-            l.KatsoKohteeseen(10, 20, 2.6f);
-            Oleta.Sama(0f, y.AjonKesto, "vähennetty liike: hyppy");
+            Oleta.Tosi(l.Vaihe != AvauksenVaihe.Musta, "paljastettu");
+            // Avauszoomi puolivälissä: korkeus kuutiollisella käyrällä, suunta yhä asemaan.
+            Aja(l, y, 2.5);
+            double avaus = y.KokoPallonKorkeus, lepo = avaus * Astronauttimatikka.AvausajonLoppu;
+            // Zoomi alkoi paljastuksen kehyksestä (ensimmäinen Paivita, kello 1/60 s).
+            double odotettu = avaus + (lepo - avaus) * Astronauttimatikka.AvausPehmennys((y.Kello - 1 / 60.0) / 5.0);
+            Oleta.Tosi(Math.Abs(y.Ajo.Value.Korkeus - odotettu) < avaus * 0.005, $"zoomi käyrällä: {y.Ajo.Value.Korkeus:0} ≈ {odotettu:0}");
+            iss = Iss.IssNyt.Paikka(Iss.IssNyt.Kello());
+            Oleta.Tosi(Iss.Ylilennot.MaaEtaisyysKm(y.Ajo.Value.Lat, y.Ajo.Value.Lon, iss.Lat, iss.Lon) < 50, "kamera seuraa asemaa");
+            Aja(l, y, 3);
+            Oleta.Sama(lepo, y.Ajo.Value.Korkeus, "zoomi perillä lepokorkeudella");
+            // Pelaajan ote: seuranta päättyy, eikä kameraa enää kirjoiteta.
+            l.PelaajanEle();
+            Oleta.Tosi(!l.IssSeuranta);
+            int ajoja = y.Loki.Count(x => x == "ajo");
+            Aja(l, y, 1);
+            Oleta.Sama(ajoja, y.Loki.Count(x => x == "ajo"), "ote: ei enää kamera-ajoja");
+        }
+
+        [Testi] static void ZoomikaistaKutenWebissa()
+        {
+            // Web zoomirajat: säteinä max(0,1; 0,084 × avaus) … 1,3 × avaus.
+            var (l, y, _) = Luo();
+            l.Avaa(y);
+            double avaus = y.KokoPallonKorkeus, R = AstronauttiLinssi.MaanSade;
+            Oleta.Tosi(Math.Abs(y.Katto.Value - avaus * 1.3) < 1, $"katto {y.Katto}");
+            Oleta.Tosi(Math.Abs(y.Lattia.Value - Math.Max(0.1 * R, 0.084 * avaus)) < 1, $"lattia {y.Lattia}");
             l.Sulje();
-            Oleta.Tosi(!l.PalaaAloitukseen(a, 1f), "suljettu linssi ei aja kameraa");
+            Oleta.Tosi(y.Katto == null && y.Lattia == null, "sulku palauttaa pelin rajat");
+        }
+
+        [Testi] static void IssSeurantaPaattyyKuvaanJaKyytiin()
+        {
+            var (l, y, _) = Luo();
+            l.Avaa(y);
+            y.Vale.Tilat[AstronauttiLinssi.Kerros] = KerrosTila.Luovutti;
+            Aja(l, y, 0.2);
+            l.Napauta("etna");
+            Oleta.Tosi(!l.IssSeuranta, "kuva: kamera liukuu kohteen ylle");
+            Oleta.Sama(AstronauttiLinssi.KuvaanAjoS, y.AjonKesto);
+            l.SuljeKuva();
+            // Toinen avaus: kyyti päättää seurannan.
+            l.Sulje();
+            l.Avaa(y);
+            Aja(l, y, 0.2);
+            Oleta.Tosi(l.IssSeuranta, "uusi avaus seuraa taas");
+            l.NapautaIss();
+            Oleta.Tosi(!l.IssSeuranta, "kyyti ottaa kameran");
+            l.Sulje();
+            // Vähennetty liike: ei seurantaa, zoomi kamera-ajona (hyppy).
+            y.Vahennetty = true;
+            l.Avaa(y);
+            Oleta.Tosi(!l.IssSeuranta);
+            Aja(l, y, 0.2);
+            Oleta.Sama(y.KokoPallonKorkeus * Astronauttimatikka.AvausajonLoppu, y.Ajo.Value.Korkeus);
+            Oleta.Sama(0f, y.AjonKesto);
+            l.Sulje();
         }
 
         [Testi] static void SulkeminenPalauttaaPallon()
