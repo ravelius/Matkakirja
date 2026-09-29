@@ -65,7 +65,11 @@ const odota = async () => {
 };
 
 // --- rekisterit -------------------------------------------------------------------
-const riviJalkeen = (r) => ({ tunnus: r.tunnus, manner: r.manner ?? null, hiomassa: r.tila === 'hiomassa', nimi: r.nimi ?? null });
+const riviJalkeen = (r) => ({
+  tunnus: r.tunnus, manner: r.manner ?? null, hiomassa: r.tila === 'hiomassa', nimi: r.nimi ?? null,
+  // Tarinan lahja (Isoisän linssi 1873, 29.9.2026): ei kaupungista eikä kynnyksellä.
+  ...(r.jakelu ? { jakelu: r.jakelu } : {}),
+});
 const rekisteri = LINSSIT.map(riviJalkeen);
 const nimet = {};
 for (const r of LINSSIT) {
@@ -82,7 +86,7 @@ const koerekisteri = LINSSIT.map(riviJalkeen);
 function nollaaRekisteri() {
   LINSSIT.length = 0;
   for (const r of koerekisteri) {
-    const rivi = { tunnus: r.tunnus, manner: r.manner };
+    const rivi = { tunnus: r.tunnus, manner: r.manner, ...(r.jakelu ? { jakelu: r.jakelu } : {}) };
     if (r.hiomassa) Object.assign(rivi, { tila: 'hiomassa', nimi: r.nimi });
     else rivi.tuo = () => tuo(`linssit/${r.tunnus}.js`);
     LINSSIT.push(rivi);

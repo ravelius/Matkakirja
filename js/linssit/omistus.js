@@ -96,6 +96,10 @@ function passissa(avain) {
  */
 function ensimmainenOmistamaton(omat, ehto) {
   for (const r of LINSSIT) {
+    // Tarinan lahja (rekisterin `jakelu`, esim. Isoisän linssi 1873) ei
+    // ole löydettävissä kaupungista eikä kynnyksellä — se jaetaan omalla
+    // hetkellään (natiivissa sama: Linssirekisteri.Saatavilla).
+    if (r.jakelu) continue;
     if (ehto(r) && !omat.has(r.tunnus)) return r.tunnus;
   }
   return null;
