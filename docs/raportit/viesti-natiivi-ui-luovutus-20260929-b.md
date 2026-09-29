@@ -27,6 +27,12 @@ Worktreet: vain `wt/proto-natiivi-ui-pulu-karttavaisto-codex` (samireivisen omis
 
 ## SEURAAVAT (odottavat muita)
 
+- KÄRKI (Päätoimittaja 16.2x): iPadin yläpalkki odottaa Codexin iPad-versiota; avausanimaatioiden loput pinnat.
+  Inventaarion (docs/raportit/natiivi-ui-hyppyavaukset-20260929.md) 11 pinnasta tehty: nostokortti, linssivalikko, viuhka,
+  elämäselite, matkakirjan lappu, pikkuseloste, verkoton-pilleri, lukijan valikon sulku, kartuscha; kuvanäkymä Linssisepällä
+  (linssiseppa/pulun-tervetulo); nopan hätäsulku tarkoituksella heti. Uudet ponnahdukset: käytä Ponnahdus.Avaa/Sulje ja
+  tarkista kerran grepillä `style.display = .*DisplayStyle.None` UI-kansiosta, ettei uusia hyppyjä ole tullut.
+
 - iPadin yläpalkin nahka: kun Codexin iPad-versio tulee (paketti ~/Documents/Codex/<pvm>/ylapalkki-matkalaukku, käyttäjä
   samireivinen). iPhonen toteutus: Ylapalkki.PueNahka + Matkakirja.uss .mk-ylapalkki--nahka.
 - Pelikoodarin webin pillerivalikko PR #3624: jos mitat muuttuvat, vertaa proto-3d/lokit/pillerivalikko/mitat.md.
