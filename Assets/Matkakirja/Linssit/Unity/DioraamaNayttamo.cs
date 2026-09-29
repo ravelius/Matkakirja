@@ -93,6 +93,8 @@ namespace Matkakirja.Natiivi
         public DioraamaLokit Lokit { get; private set; }
         /// <summary>Sykkivä vihje ensimmäisellä käynnillä (elävä linna).</summary>
         public DioraamaSyke Syke { get; private set; }
+        /// <summary>Etsintä (voudin sinetti): kimallukset, irtoesineet, löytö.</summary>
+        public DioraamaEtsinta Etsinta { get; private set; }
 
         /// <summary>Tunnelma (DioraamaTunnelma): tausta ja sumu, auringon ja taivaan kerroin, lintujen valo.</summary>
         public void AsetaTunnelma(bool hamara)
@@ -129,6 +131,7 @@ namespace Matkakirja.Natiivi
             n.Ulkokuori = new DioraamaUlkokuori(n.transform);
             n.Lokit = new DioraamaLokit(n.transform);
             n.Syke = new DioraamaSyke(n.transform);
+            n.Etsinta = new DioraamaEtsinta(n.transform);
             var liekit = n.Liekit;
             DioraamaHahmot3D.LyhdynLuoja = isa => liekit?.LuoLyhty(isa);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
@@ -318,6 +321,8 @@ namespace Matkakirja.Natiivi
             Lokit = null;
             Syke?.Tyhjenna();
             Syke = null;
+            Etsinta?.Tyhjenna();
+            Etsinta = null;
             AsetaTunnelma(false); // globaalit takaisin päiväksi (muut linssit)
             if (profiili != null) Destroy(profiili);
             profiili = null;

@@ -60,6 +60,8 @@ namespace Matkakirja.Natiivi
             return DioraamaSovitin.Linssi != null ? DioraamaSovitin.Linssi.RajaaPelaajanAsento(perus, pelaajan) : pelaajan;
         }
 
+        float aloitusAika;
+
         public void NollaaPoikkeama() { kokonaisDa = 0; kokonaisDk = 0; kokonaisZoom = 1; kaksiKaynnissa = false; }
 
         public void Paivita(Rakennus rakennus, double t)
@@ -73,6 +75,13 @@ namespace Matkakirja.Natiivi
             if (n == 0)
             {
                 if (edellisetSormet == 1 && !tamaEleEstetty && liikeSitenAlusta < NapautusKynnysPx) Napauta(rakennus, aloitusKohta, t);
+                // Elävä linna (käsikirjoitus kohta 3): nopea pyyhkäisy alas tilassa → takaisin yleisnäkymään.
+                else if (edellisetSormet == 1 && !tamaEleEstetty && rakennus?.Saapuminen != null && DioraamaSovitin.ViimeisinNakyma?.KohdeTila != null)
+                {
+                    Vector2 d = edellinenYhdenSormenKohta - aloitusKohta;
+                    if (-d.y > Screen.height * 0.12f && Mathf.Abs(d.x) < -d.y * 0.6f && Time.unscaledTime - aloitusAika < 0.45f)
+                        sovitin.Yleisnakymaan(t);
+                }
                 edellisetSormet = 0;
                 kaksiKaynnissa = false;
                 return;
@@ -81,6 +90,7 @@ namespace Matkakirja.Natiivi
             if (edellisetSormet == 0 && n >= 1)
             {
                 aloitusKohta = edellinenYhdenSormenKohta = sormet[0].screenPosition;
+                aloitusAika = Time.unscaledTime;
                 liikeSitenAlusta = 0f;
                 tamaEleEstetty = DioraamaSovitin.PeittaaRuutu != null && DioraamaSovitin.PeittaaRuutu(aloitusKohta);
             }
@@ -128,6 +138,8 @@ namespace Matkakirja.Natiivi
             // Elävä linna: saapumiskaaren aikana napautus ohittaa kaaren (loppuun 1 s:ssa), ei kohdista.
             var linssi = DioraamaSovitin.Linssi;
             if (linssi != null && linssi.SaapuminenKaynnissa(t)) { linssi.Napauta(t); return; }
+            // Etsintä (voudin sinetti): aktiivisen vaiheen kimallus ensin.
+            if (nayttamo?.Etsinta != null && nayttamo.Etsinta.Napauta(rakennus, ruutu, kamera)) return;
             // Elävä kohde (tila.elava): lähin kohde ruudulla, kun napautus osuu sen säteen (metreinä, ruudulle
             // projisoituna, vähintään 28 pt) sisään. Nimilappuja ei ole, joten kohde on se, mitä tilassa tapahtuu.
             string elava = null;

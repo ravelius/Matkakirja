@@ -307,6 +307,8 @@ namespace Matkakirja.Linssit.Dioraama
         public V3? LeikkausMin, LeikkausMax;
         /// <summary>Elävä kohde (`elava`); null = vanha AABB-napautus.</summary>
         public Elava Elava;
+        public List<EtsintaVaihe> Etsinta = new List<EtsintaVaihe>();
+        public List<Esine> Esineet = new List<Esine>();
         /// <summary>Tilaan sijoitetut liekki-instanssit (era 2); tyhjä vanhassa muodossa.</summary>
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
         /// <summary>Tilaan sijoitetut äänilähteet (era 2); tyhjä vanhassa muodossa.</summary>
@@ -386,6 +388,31 @@ namespace Matkakirja.Linssit.Dioraama
         public bool Edestakaisin = true, Lyhty;
     }
 
+    /// <summary>ELÄVÄ LINNA, etsintä (käsikirjoitus kohta 4: voudin sinetti): RAKENNUS.etsinnat[].</summary>
+    public sealed class Etsinta
+    {
+        public string Id, Nimi, Kuvaus;
+        public List<string> Vaiheet = new List<string>();
+        public List<(string Teksti, string Lahde)> Kortti = new List<(string, string)>();
+    }
+
+    /// <summary>Tilan etsintävaihe (tila.etsinta[]): repliikki (hahmo kertoo), vihje (esine/kaiverrus) tai löytö (kansi + esine).</summary>
+    public sealed class EtsintaVaihe
+    {
+        public string Etsinta, Tyyppi, Teksti, Hahmo, Kansi, Esine, Pulu;
+        public int Vaihe;
+        public V3 Kohde;
+        public double Sade = 0.8;
+    }
+
+    /// <summary>Irtoesine omana glb:nä (tila.esineet[]): maailmakoordinaatit; kannella sarana, akseli ja avautumiskulma.</summary>
+    public sealed class Esine
+    {
+        public string Id, Tiedosto;
+        public V3? Sarana, Akseli;
+        public double Avaa;
+    }
+
     /// <summary>Ulkokuoren glb-polut laatutasoittain (puuttuva taso = seuraava kevyempi käytössä).</summary>
     public sealed class Ulkokuori
     {
@@ -419,6 +446,7 @@ namespace Matkakirja.Linssit.Dioraama
         public bool Nimilaput = true;
         /// <summary>Saapumiskaari (elävä linna); null = vanha avaus ilman lentoa.</summary>
         public Saapuminen Saapuminen;
+        public List<Etsinta> Etsinnat = new List<Etsinta>();
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
@@ -454,6 +482,19 @@ namespace Matkakirja.Linssit.Dioraama
             };
             r.Tunnelma = MiniJson.Teksti(juuri, "tunnelma");
             r.Nimilaput = MiniJson.Totuus(juuri, "nimilaput", true);
+            foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "etsinnat")))
+            {
+                var e = MiniJson.ObjektiTaiNull(eo);
+                if (e == null) continue;
+                var et = new Etsinta { Id = MiniJson.Teksti(e, "id"), Nimi = MiniJson.Teksti(e, "nimi"), Kuvaus = MiniJson.Teksti(e, "kuvaus") };
+                foreach (var v in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(e, "vaiheet"))) if (v is string vs) et.Vaiheet.Add(vs);
+                foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Kentta(e, "kortti")), "kohdat")))
+                {
+                    var k = MiniJson.ObjektiTaiNull(ko);
+                    if (k != null) et.Kortti.Add((MiniJson.Teksti(k, "teksti"), MiniJson.Teksti(k, "lahde")));
+                }
+                if (et.Id != null) r.Etsinnat.Add(et);
+            }
             var saap = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "saapuminen"));
             if (saap != null)
             {
@@ -737,6 +778,30 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var glb = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "glb"));
             t.GlbTiedosto = MiniJson.Teksti(glb, "tiedosto");
+            foreach (var vo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "etsinta")))
+            {
+                var v = MiniJson.ObjektiTaiNull(vo);
+                if (v == null) continue;
+                t.Etsinta.Add(new EtsintaVaihe
+                {
+                    Etsinta = MiniJson.Teksti(v, "etsinta"), Vaihe = (int)(MiniJson.Luku(v, "vaihe") ?? 0), Tyyppi = MiniJson.Teksti(v, "tyyppi"),
+                    Kohde = LueV3(MiniJson.Kentta(v, "kohde")), Sade = MiniJson.Luku(v, "sade") ?? 0.8,
+                    Teksti = MiniJson.Teksti(v, "teksti") ?? MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "repliikki")), "teksti"),
+                    Hahmo = MiniJson.Teksti(v, "hahmo"), Kansi = MiniJson.Teksti(v, "kansi"), Esine = MiniJson.Teksti(v, "esine"),
+                    Pulu = MiniJson.Teksti(v, "pulu"),
+                });
+            }
+            foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "esineet")))
+            {
+                var e = MiniJson.ObjektiTaiNull(eo);
+                if (e == null) continue;
+                t.Esineet.Add(new Esine
+                {
+                    Id = MiniJson.Teksti(e, "id"), Tiedosto = MiniJson.Teksti(e, "tiedosto"), Avaa = MiniJson.Luku(e, "avaa") ?? 0,
+                    Sarana = MiniJson.Kentta(e, "sarana") != null ? LueV3(MiniJson.Kentta(e, "sarana")) : (V3?)null,
+                    Akseli = MiniJson.Kentta(e, "akseli") != null ? LueV3(MiniJson.Kentta(e, "akseli")) : (V3?)null,
+                });
+            }
             var elava = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "elava"));
             if (elava != null)
             {
