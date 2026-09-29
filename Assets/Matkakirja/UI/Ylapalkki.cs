@@ -108,6 +108,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Saaririvin korkeus ja reunavara pisteinä (näytön pyöristetty kulma).</summary>
         /// <summary>SaariReuna: löydös 68 (omistaja 25.9.) pilleri ja ☰ sisemmäs reunoista (14 → 20 pt), löydös 88 (build 13) 26 pt.</summary>
         const float SaariRivi = 36f, SaariReuna = 26f, SaariVali = 6f;
+        /// <summary>Leveimmän Dynamic Islandin leveys (Pro Max, noin 126 pt, pyöristetty) ja keskivyöhykkeen marginaali (pt).</summary>
+        const float LeveinSaari = 130f, SaarenMarginaali = 12f;
 
         /// <summary>
         /// Löydös 44 (omistaja 24.9. klo 19.4x, Raamattu NATIIVIN YLÄPALKKI, TARKENNUS): iPhonen pystyasennossa palkki
@@ -474,13 +476,20 @@ namespace Matkakirja.Natiivi
             pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
             if (PilleriOikealla)
             {
-                // Pilleri saaren oikealle puolelle, logo vasemmalle (korkeus = pillerin korkeus, Pelikoodari 29.9.).
+                // Omistaja 29.9.2026: "logo näyttää olevan liian lähellä dynamic islandin reunaa … pitää varmaan miettiä pillerin
+                // ja logon sijainti leveimmän saaren mukaan ja sitten vain keskelle jää tyhjää." Keskelle kiinteä vyöhyke
+                // leveimmän saaren (Pro Max) verran + marginaali, sama kaikilla malleilla; lovellisella laitteella leveämpi lovi
+                // voittaa. Logo vasempaan reunaan, pilleri oikeaan reunaan vyöhykkeen ulkopuolelle.
+                float keski = P(Screen.width / pp / 2f, 0f).x;
+                float oma = saari.width > 0 ? (alakulma.x - ylakulma.x) / 2f : 0f;
+                float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + SaarenMarginaali * yksikko;
+                float vasenReuna = r.x + SaariReuna * yksikko;
                 float oikeaReuna = P(Screen.width / pp, 0f).x - r.z - SaariReuna * yksikko;
-                float vasen = saari.width > 0 ? alakulma.x + SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
-                pilleriMax = Mathf.Max(60f, oikeaReuna - vasen);
-                float lk = matala ? rivi : 24f * yksikko;
+                pilleriMax = Mathf.Max(60f, oikeaReuna - (keski + puoli));
+                float logoTila = Mathf.Max(40f, (keski - puoli) - vasenReuna);
+                float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / 4f);
                 logo.style.height = lk;
-                logo.style.width = Mathf.Min(lk * 4f, Mathf.Max(40f, oikea - r.x - SaariReuna * yksikko));
+                logo.style.width = lk * 4f;
             }
             pilleri.style.maxWidth = pilleriMax;
             // Varaus turva-alueen yläreunasta: se osa palkista, joka jää turva-alueen alle.
