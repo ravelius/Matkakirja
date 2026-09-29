@@ -409,9 +409,8 @@ namespace Matkakirja.Natiivi
             // ☰ avaa linssivalikon koko pelin valikkona (löydös 20 iPhone, löydös 65 kaikki laitteet).
             Tilarivi.Valikko.clicked += () =>
             {
-                Aanentasot.Sulje(); Matkalaukku.Sulje();
-                if (Linssivalitsin.Valikkona) { Valikko.Sulje(); Linssit.Valitsin.Vaihda(); }
-                else Valikko.Vaihda();
+                Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Sulje();
+                Linssit.Valitsin.Vaihda();
             };
             Linssit.Valitsin.AukiMuuttui += auki => { if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki); };
             RakennaPuhelinvalikko();
