@@ -205,6 +205,8 @@ namespace Matkakirja.Natiivi
             rekisteri.Lisaa(new Topografia());
             // Yökartta (Linssiseppä 29.9.2026, omistaja NATIIVI ENSIN): vain natiivi, kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(new YokarttaSovitin(this));
+            // Tähtitaivas (Linssiseppä 29.9.2026, NATIIVI ENSIN erä 1): vain natiivi, kehittäjätilassa.
+            rekisteri.Lisaa(new TahtitaivasSovitin(this));
             // Maapallon vuosi (Linssiseppä 2, 28.9.2026): hiomassa, vain kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(vuosi = new MaapallonVuosiSovitin(this, k));
             rekisteri.Lisaa(poikki = new DioraamaSovitin(this, k));
@@ -1059,6 +1061,32 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Tähtitaivas: linssi (Ydin) ja oma näyttämö (TaivasNayttamo) linssin ajaksi.</summary>
+        public sealed class TahtitaivasSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            Matkakirja.Linssit.Taivas.TahtitaivasLinssi linssi;
+            TaivasNayttamo nayttamo;
+            public TahtitaivasSovitin(LinssiOhjain o) { this.o = o; }
+            public LinssiTiedot Tiedot => Matkakirja.Linssit.Taivas.TahtitaivasLinssi.TahtitaivasTiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            public Matkakirja.Linssit.Taivas.TahtitaivasLinssi Linssi => linssi;
+            public TaivasNayttamo Nayttamo => nayttamo;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                nayttamo = TaivasNayttamo.Luo(o.kierto != null ? o.kierto.GetComponent<Camera>() : null);
+                linssi = new Matkakirja.Linssit.Taivas.TahtitaivasLinssi(nayttamo);
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje()
+            {
+                linssi?.Sulje();
+                if (nayttamo != null) Destroy(nayttamo.gameObject);
+                linssi = null; nayttamo = null;
+            }
+        }
+
         public sealed class AstronauttiSovitin : ILinssi
         {
             readonly LinssiOhjain o;
@@ -1428,6 +1456,19 @@ namespace Matkakirja.Natiivi
                     var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
                     Kirjaa($"iss: {IssTleLataaja.Tila()}, alapiste {p.Lat:F2}, {p.Lon:F2} ({utc:HH:mm:ss} UTC)");
+                }
+                else if (osat[0] == "taivas")
+                {
+                    // Tähtitaivas: "taivas" = tila, "taivas katso <atsimuutti> <korkeus> [kenttä]", "taivas kelaa <k>".
+                    var ts = rekisteri?.Hae("tahdet") as TahtitaivasSovitin;
+                    var n = ts?.Nayttamo;
+                    if (n != null && osat.Length > 3 && osat[1] == "katso")
+                        n.Katso((float)Luku(osat[2]), (float)Luku(osat[3]), osat.Length > 4 ? (float)Luku(osat[4]) : (float?)null);
+                    if (osat.Length > 2 && osat[1] == "kelaa") ts?.Linssi?.Kelaa(Luku(osat[2]));
+                    Kirjaa(n == null ? "taivas: linssi ei auki (linssi tahdet)"
+                        : $"taivas: paikka {ts.Linssi.Lat:F2}, {ts.Linssi.Lon:F2}, kello {Matkakirja.Linssit.Iss.IssNyt.Simu} "
+                        + $"({Matkakirja.Linssit.Iss.IssNyt.Kello():HH:mm} UTC), aurinko {n.AurinkoKorkeus:F1}°, Kuu {n.KuuKorkeus:F1}° / {n.KuuAtsimuutti:F0}°, "
+                        + $"tähtiä {(n.TahdetValmiit ? "ladattu" : "ei vielä")} näkyvyys {n.Nakyvyys:F2}, katse {n.Atsimuutti:F0}° / {n.Korkeus:F0}°, kenttä {n.Kentta:F0}°");
                 }
                 else if (osat[0] == "yokartta")
                 {
