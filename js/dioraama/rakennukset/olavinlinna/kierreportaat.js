@@ -103,6 +103,7 @@ export const TILA = {
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
   sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
   rajat: { min: [-35.5, 4.5, -25.5], max: [-24.5, 18, -14.5] },
+  leikkaus: { laajennus: 1.0, kameraan: true, min: [-38.5, 4.5, -28.5], max: [-21.5, 18, -11.5] },
   naapurit: ['massa', 'fatabuuri', 'muurinharja'],
   // Tornin pystysuora leikkaus: korkea kapea tila; kamera hieman ylempää kuin kuilun pohja, jotta portaiden
   // etukaari, välitasanteet ja kuilun pohja näkyvät. Pystynäytössä taulu peittää alimman 45 %.

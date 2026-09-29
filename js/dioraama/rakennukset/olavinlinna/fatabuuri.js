@@ -173,6 +173,8 @@ export const TILA = {
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
   sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
   rajat: { min: [-35.5, 0, -25.5], max: [-24.5, 4.5, -14.5] },
+  // Leikkaus kuoren Kellotornin säteelle (≈ 7,7): kapeammalla ulkoseinä peitti puolet (Siirtoseppä 1.0.55).
+  leikkaus: { laajennus: 1.0, kameraan: true, min: [-38.5, 0, -28.5], max: [-21.5, 4.5, -11.5] },
   naapurit: ['massa', 'laituri', 'kierreportaat', 'keskushalli'],
   // Vaaka: kohde siirretty oikealle (taulu peittää oikean 40 %), jotta huone jää näkyvälle 60 %:lle.
   kamera: { kohde: [-27.0, 1.3, -20.4], atsimuutti: 172, korkeus: 17, etaisyys: 15.5, fov: 38, aukko: 0.8 },

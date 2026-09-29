@@ -128,6 +128,8 @@ export const TILA = {
   // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella; torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.
   sijoitus: { ankkuri: [0, 0, -20], paikka: [-15.4, -3.0, -14.6], suunta: 0 },
   rajat: { min: [-5, 9, -25], max: [5, 13.5, -15] },
+  // Leikkaus kuoren tornin säteelle (≈ 7,5) ja kartiokaton huipun (32,3 → lähteessä 35,3) yli (Siirtoseppä 1.0.55).
+  leikkaus: { laajennus: 1.0, kameraan: true, min: [-8, 9, -28], max: [8, 35.8, -12] },
   naapurit: ['massa', 'muurinharja', 'keskushalli'],
   kamera: {
     kohde: [0, 10.8, -20], atsimuutti: 165, korkeus: 17, etaisyys: 17.5, fov: 38, aukko: 0.8,
