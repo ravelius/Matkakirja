@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 21:00:** Levy 78 Gi (vakaa), muisti 77 % vapaa, kuorma 17/25/50, sim 0, ei kevyttä tilaa. Viikko 17 % (5 h 64 %, nollautuu 21.50). Konteksti: Natiivi-UI 67 % (ei liikettä), Linnanrakentaja 39 %, oma 23 %. Juna ennallaan (20.26). Posti: ei uutta.
+
 **Päivitetty 20:49:** Levy 78 Gi (vakaa), muisti 79 % vapaa, kuorma 10/17/72, sim 0, ei kevyttä tilaa. Viikko 17 % (5 h 62 %). Konteksti: Natiivi-UI 67 % (pysähtynyt, 70 % ei vielä), Linnanrakentaja 34 %, oma 23 %. Juna ennallaan (20.26). Posti: ei uutta.
 
 **Päivitetty 20:40:** Levy 78 Gi (81→78, seurataan; raja 50), muisti 77 % vapaa, kuorma 14/45/124, sim 0, ei kevyttä tilaa. Viikko 16 % (5 h 61 %). Konteksti: Natiivi-UI 67 % (70 % lähestyy), Linnanrakentaja 27 %, oma 22 %. Juna ennallaan (20.26), varmuuskopio ok 20.22. Posti: ei uutta.
