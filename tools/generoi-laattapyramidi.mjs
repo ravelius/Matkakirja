@@ -1743,8 +1743,13 @@ if (valitsin('joet-lisa', null)) {
   const { korvaaEuroopanJoet } = await import('./fokuskartta/joet-lisa.mjs');
   const { merenPistetesti } = await import('./fokuskartta/merireitit.mjs');
   const rr = meriRenkaat(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  // Järvet samasta lähteestä kuin pohjan järvet (GSHHG --data), pienimmätkin:
+  // joki katkaistaan järven kohdalta (joet-lisa.mjs, JOKI EI KULJE JÄRVEN PÄÄLLÄ).
+  const { jarvet: lueJarvet } = await import('./fokuskartta/maailma.mjs');
+  const jarviRenkaat = lueJarvet(dataKansio, { vahinKoko: 0, harvennus: 0.001 }).flatMap((j) => j.renkaat);
   const k = korvaaEuroopanJoet(lautaSisalto.joet ?? [], resolve(valitsin('joet-lisa', null)), kaava, {
     onMeri: merenPistetesti(Array.isArray(rr) ? rr : rr.renkaat),
+    onJarvi: jarviRenkaat.length ? merenPistetesti(jarviRenkaat) : null,
   });
   lautaSisalto.joet = k.joet;
   console.log(`  joet-lisa       Euroopassa ${k.poistettu} paketin jokea korvattu ${k.lisatty} GEOGLOWS-uomalla `
