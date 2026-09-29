@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 00:28:** Levy 60 Gi (raja 50), muisti 80 % vapaa, kuorma 116/72/71, sim 2 yöllä (siirtoseppa-iPhone F989814A, iPad Pro 503000D1; yöllä sallittu, tarkistetaan aamulla ≤1), ei kevyttä tilaa. Viikko 29 % (5 h 33 %). Konteksti: Linnanrakentaja 49 %, Natiivi-UI 33 %, Päätoimittaja 34 %, oma ~38 %. Jokipoltto ajo-20260930 käynnissä. Juna: 1.0.59 käännetty c673af0d 00.21; Natiiviseppä palautti b13 8e77c475→4629e0ad 00.26 (vahinko korjattu). Posti: ei uutta.
+
 **Päivitetty 30.9. 00:17:** Levy 63 Gi (vakaa), muisti 82 % vapaa, kuorma 51/44/67, sim 0, ei kevyttä tilaa. Viikko 29 % (5 h 32 %). Konteksti: Linnanrakentaja 49 %, Natiivi-UI 33 %, Päätoimittaja 33 %, oma ~37 %; roolit hiljaisia. Jokipoltto pyramidi-poltto/ajo-20260930: polttovahti-v5f + ketju.sh + aja.sh käynnissä. Juna: vahti käänsi 00.15 (yläraja, vanhin 2849 s). Posti: ei uutta.
 
 **Päivitetty 30.9. 00:06:** Levy 61 Gi (raja 50; laskee hitaasti 62→61), muisti 79 % vapaa, kuorma 43/60/98, sim 1 (linssiseppa-iPhone D0D2CD1E; normaali raja ≤1 voimassa 30.9. klo 00 alkaen, ok), ei kevyttä tilaa. Viikko 29 % (5 h 31 %). Konteksti: Linnanrakentaja 49 %, Natiivi-UI 33 %, Päätoimittaja 33 %, oma ~36 %. Juna: BUILD 58 = master 3b4f2e33 (juna 27291efd, käännös f50f5e23; Laitetestaaja 1b6de1f32 PASS), varmuuskopio ok 00.00. Posti: ei uutta.
