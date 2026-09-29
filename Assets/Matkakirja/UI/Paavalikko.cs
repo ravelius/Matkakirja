@@ -234,8 +234,9 @@ namespace Matkakirja.Natiivi
         /// PELAAJAN NÄKYMÄ (omistaja 29.9.2026 klo 08.5x: "Maailmatilaan voisi tehdä apunapin, joka näyttäisi kartan samalla
         /// lailla, kuin että maailmatila ei olisi päällä. Ainoastaan kohdekaupungit näkyisivät himmeänä ja pystyisin edelleen
         /// klikkaamalla siirtymään myös niihin"; web on malli, Siirtoseppä: localStorage matkakirja-kehittaja-pelaajanakyma).
-        /// Päällä: kartta, rajat, zoomi, huntu ja kaupunkirajaus kuten pelaajalla, muut pelin kaupungit himmeinä (40 %,
-        /// ilman nimeä) ja niiden napautus on maailmahyppy. Vain maailmatilassa.
+        /// Päällä: kartta, huntu ja kaupunkirajaus kuten pelaajalla, muut pelin kaupungit himmeinä (40 %, ilman nimeä) ja
+        /// niiden napautus on maailmahyppy. Vain maailmatilassa. Liike ja zoomi vapaat koko pallolla myös hunnun kanssa
+        /// (omistaja 29.9.2026 klo 23.1x; PeliOhjain asettaa PalloKierto.MaailmaTila = Maailma).
         /// </summary>
         public static bool PelaajanNakyma => Maailma && PlayerPrefs.GetInt(PelaajanNakymaAvain, 0) == 1;
 
