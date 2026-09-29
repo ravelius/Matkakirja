@@ -5466,6 +5466,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   LUX: {
     Diekirch: {
       lyhyt: 'Viandenin linna kohoaa Our-joen laakson yllä, ja joen varrella on talo, jossa Victor Hugo asui maanpaossa 1871.',
+      pitka: "Diekirch on Sauer-joen varrella oleva noin 7 300 asukkaan pikkukaupunki, joka on pohjoisten Ardennien arkinen keskus. Sen museossa on esillä roomalaisen huvilan mosaiikkia: huvila hylättiin 400-luvun alussa. Vanhan panimon tiloissa toimii kansallinen sotahistoriamuseo, jossa Ardennien taistelun tapahtumat on rakennettu eläväkokoisiksi dioraamoiksi. Naapurikaupungissa Ettelbruckissa on kenraali Pattonin muistomuseo, ja siellä laulettiin ensimmäisen kerran julkisesti kansallislaulu Ons Heemecht vuonna 1864. Pohjoisempana Clervaux'n kylässä on linna ja luostari, ja joulukuussa 1944 kylän ympärillä käytiin ankaria taisteluja.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-diekirch-e55c720f.jpg",
@@ -5480,6 +5481,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Grevenmacher: {
       lyhyt: 'Schengenin viinikylän edustalla allekirjoitettiin 1985 rajasopimus laivalla Mosel-joella, jossa Luxemburg, Saksa ja Ranska kohtaavat.',
+      pitka: "Grevenmacher on noin 5 300 asukkaan kaupunki Moselin vasemmalla rannalla, ja sen ympärillä rinteet on istutettu viiniköynnöksellä. Luxemburgin viinialue ulottuu joen varrella noin 40 kilometrin matkalle Schengenistä Wasserbilligiin, ja Grevenmacherissa on Vinsmoselle-osuuskunnan tuotantolaitos sekä Bernard-Massardin kuohuviinikellarit. Etelämpänä Remich on pinta-alaltaan maan pienin kunta. Alueen pohjoisosassa Echternachissa on luostari, jonka Willibrord perusti 698 maalahjoituksen turvin. Luostarikirkko sai paavilta basilikan arvon 1939, ja Willibrordin hauta on sen alla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-grevenmacher-1c3c5dfb.jpg",
@@ -5494,6 +5496,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Luxembourg: {
       lyhyt: 'Luxemburgissa bussit, junat ja raitiovaunut ovat olleet maksuttomia koko maassa helmikuusta 2020 lähtien.',
+      pitka: "Luxemburgin kaupungissa asuu noin 138 000 ihmistä, ja noin 70 prosenttia heistä on ulkomaalaisia, joten kadulla kuulee harvoin vain yhtä kieltä. Alzette ja Pétrusse ovat kaivaneet kallioon syvät rotkot, joita ylittävät sillat. Pont Adolphe valmistui 1903, ja sen 84,65 metrin kaari oli sen aikaan maailman suurin kivikaari. Vanhakaupunki ja linnoitukset ovat Unescon maailmanperintökohde vuodesta 1994, ja Bock-kallion alla kulkee noin 17 kilometriä kasemattikäytäviä, joiden rakentaminen alkoi espanjalaisten aikana 1644. Kirchbergin tasangolla Philharmonie avattiin 2005 ja Mudam 2006 entisen Fort Thüngenin paikalle I. M. Pein suunnittelemana. Kaupunki oli Euroopan kulttuuripääkaupunki 1995 ja 2007.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-luxembourg-6f0ca08c.jpg",
@@ -5524,6 +5527,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MLT: {
     'Southern Harbour': {
       lyhyt: 'Vallettan Upper Barrakka -puutarhan alla Saluting Battery laukaisee tykin joka päivä keskipäivällä Suuren sataman yli.',
+      pitka: "Suuren sataman ympärillä sykkii Maltan historiallinen ydin. Vallettan peruskivi muurattiin 28. maaliskuuta 1566, pian Suuren piirityksen jälkeen, ja kaupungin nimi tulee suurmestari Jean de Valettesta; koko kaupunki on ollut Unescon maailmanperintökohde vuodesta 1980. Vuonna 2012 avattu 58-metrinen Barrakka-hissi nostaa kävijät satamasta ylös kaupungin keskustaan, ja vuonna 2018 Valletta oli Euroopan kulttuuripääkaupunki. Paolan katujen alta löytyy vielä vanhempaa: vuonna 1902 vahingossa löydetty Ħal Saflieni -hypogeum on kolmikerroksinen esihistoriallinen hautakammio, jota käytettiin noin 3600 eaa. alkaen.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-southern-harbour-e9f048ea.jpg",
@@ -5538,6 +5542,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Northern Harbour': {
       lyhyt: 'Maltalla kulki 1883–1931 rautatie Vallettasta Mdinaan, ja sen Birkirkaran asemarakennus on nyt rautatiemuseo.',
+      pitka: "Suuren sataman pohjoispuolella Sliemasta St Julian'siin ja Msidaan ulottuu Maltan tiheimmin asuttu ja vilkkain kaupunkiseutu. Sliemasta pääsee lautalla Vallettaan Marsamxettin sataman yli, ja rantakatu täyttyy iltaisin kävelijöistä. Gżiran edustalla Manoelin saarella seisoo Fort Manoel, tähtilinnake, jonka rakennuttaminen aloitettiin 1723 ja joka valmistui 1733. St Julian'sin pienessä Spinolan lahdessa veneet keinuvat värikkäiden talojen edessä, ja aivan vieressä Paceville on saaren yöelämän keskus. Msidan kampuksella toimii Maltan yliopisto.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-harbour-1864cedc.jpg",
@@ -5552,6 +5557,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'South Eastern': {
       lyhyt: 'Marsaxlokkin satamassa keinuvat kirjavat luzzu-kalastusveneet, joiden keulaan on maalattu suojeleva silmä.',
+      pitka: "Saaren kaakkoisosassa muinaisuus ja moderni maailmankauppa ovat naapureita. Birżebbuġan Għar Dalamin luolasta on löytynyt jääkauden eläinten luita sekä merkkejä noin 7 400 vuotta sitten alkaneesta ihmisasutuksesta, ja kaupungin satama-alueella toimii vuonna 1988 perustettu Malta Freeport, Välimeren ensimmäinen konttien jälleenlaivauskeskus. Qrendin lähellä kallioiden reunalla seisovat Ħaġar Qimin ja Mnajdran temppelit, jotka rakennettiin noin 3600–3200 eaa. Marsaxlokkin satamassa pidetään sunnuntaisin kalatori, ja Delimaran niemen kärjessä on kallioon muodostunut St Peter's Pool -uimapaikka.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-south-eastern-32366c7b.jpg",
@@ -5566,6 +5572,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Western: {
       lyhyt: 'Muurien ympäröimää Mdinaa kutsutaan Hiljaiseksi kaupungiksi, sillä sen kapeille kujille saavat ajaa vain asukkaiden autot.',
+      pitka: "Maltan länsiosassa kohoaa saaren korkein maasto. Dingli Cliffsin jyrkänteillä sijaitseva Ta' Dmejrek on Maltan korkein kohta, 253 metriä merenpinnan yläpuolella. Mdinan kukkulalla on kaupunkia ollut foinikialaisista lähtien, ja kaupunki toimi saaren pääkaupunkina aina siihen asti, kun ritarikunta saapui 1530. Naapurikaupungin Rabatin alta löytyvät St Paulin katakombit, roomalaisia hautakammioita, jotka olivat käytössä 300-luvulle jKr. asti ja joiden pinta-ala on noin 2 000 neliömetriä. Ne ovat Maltan varhaisin ja laajin todiste kristinuskon leviämisestä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-western-b688f8c2.jpg",
@@ -5580,6 +5587,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Northern: {
       lyhyt: 'Mostan kirkon kupolin läpi putosi huhtikuussa 1942 saksalainen pommi, joka ei räjähtänyt – sen kopio on esillä kirkossa.',
+      pitka: "Maltan pohjoisosassa historia ja rantaelämä kulkevat rinnakkain. Mostan Rotundan kupolin sisähalkaisija on 39,6 metriä, ja sitä on pitkään pidetty maailman kolmanneksi suurimpana tukemattomana kupolina; kirkko on mallinnettu Rooman Pantheonin mukaan. Mellieħassa ritarikunnan rakennuttama Punainen torni valmistui 1649, ja kallioon louhittu ilmasuojatunneli muistuttaa sota-ajasta. Kaupungin liepeillä Għadiran luonnonsuojelualue on vain seitsemän hehtaarin kokoinen suolakosteikko, jolla käy muuttolintuja. Ċirkewwan satamasta lähtee lautta Gozolle, ja matka Mġarrin satamaan kestää noin 25 minuuttia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-c455ab1c.jpg",
@@ -5594,6 +5602,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Gozo and Comino': {
       lyhyt: 'Gozon kuuluisa Azure Window -kivikaari romahti mereen myrskyssä maaliskuussa 2017, ja sen paikalla on nyt vain avomerta.',
+      pitka: "Gozolla asuu noin 39 000 ihmistä (2021). Rabatin eli Victorian keskustan yllä kohoaa Cittadella, jonka linnoituksen ritarit uudistivat noin 1599–1622 ja jonka barokkikatedraali rakennettiin 1697–1711. Għarbin peltojen keskellä seisova Ta' Pinun basilika on kansallinen pyhiinvaelluskohde: Karmni Grima kertoi kuulleensa kappelin luona äänen kesäkuussa 1883, ja nykyinen kirkko vihittiin 1932. Xwejnin suola-altaat pohjoisrannikolla ovat noin 350 vuotta vanhat. Comino, Gozon ja Maltan välinen pieni saari, on saanut nimensä kuminasta, ja siellä asuu vakituisesti vain muutama ihminen; sen Pyhän Marian torni valmistui 1618.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-gozo-and-comino-37224a77.jpg",
@@ -7951,6 +7960,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MDA: {
     'Anenii Noi': {
       lyhyt: 'Varnițan kylässä Benderin pohjoispuolella leireili Ruotsin kuningas Kaarle XII vuosina 1711–1713, kunnes osmanien joukot hyökkäsivät leiriin.',
+      pitka: "Anenii Noi on noin 40 kilometrin päässä Chișinăusta kaakkoon, ja kaupungissa asuu runsaat 10 000 ihmistä. Vuoden 2014 väestönlaskennassa moldovalaisia oli 6 756, ukrainalaisia 1 894 ja venäläisiä 1 427. Keskustan maamerkkejä ovat Pyhän Dumitrun kirkko ja Stefan Suuren muistomerkki, mutta tunnetuin kohde on lähellä Bulboacan kylässä: Castel Mimi. Ranskalaisen mallin mukaan rakennetun viinilinnan betonirakenne oli aikanaan uutuus, ja sen kellariin mahtui noin 300 000 litraa viiniä. Rakennuttaja Constantin Mimi oli opiskellut viininviljelyä Montpellier'ssa. Nykyisin linnassa on museo, hotelli, kylpylä ja ravintola.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-anenii-noi-8b1e0b46.jpg",
@@ -7965,6 +7975,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bălţi': {
       lyhyt: 'Bălți tarkoittaa romaniaksi lätäköitä – kaupunki sai nimensä kosteikoista mäen juurella, jossa Răuțel-puro laskee Răut-jokeen.',
+      pitka: "Bălți on Moldovan kolmanneksi suurin kaupunki, noin 127 kilometriä Chișinăusta pohjoiseen Răut-joen varrella. Se on rakentunut kolmelle kukkulalle ja kahteen pieneen laaksoon, ja ympäristön maaperä on hedelmällistä mustaa multaa. Vuoden 2024 väestönlaskennassa kaupungissa oli 94 546 asukasta, kun huippulukema vuonna 1989 oli lähes 161 500. Elinkeinoelämän ytimessä ovat elintarvike- ja jauhoteollisuus, sokeri, maatalouskoneet ja huonekalut. Alecu Russon valtionyliopisto on toiminut vuodesta 1945, ja sen opetus on pääosin romaniankielistä. Keskustan Itsenäisyydenaukion ja kaupungintalon symmetriset julkisivut ovat tyypillistä 1950-luvun arkkitehtuuria.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-balti-518257be.jpg",
@@ -7979,6 +7990,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Basarabeasca: {
       lyhyt: 'Basarabeasca sai alkunsa 1846 juutalaisesta maanviljelyssiirtokunnasta nimeltä Romanovka, ja nykyisen nimensä kaupunki sai vasta 1957.',
+      pitka: "Basarabeasca on noin 94 kilometriä Chișinăusta etelään aivan Ukrainan rajalla, ja Cogâlnic-joki virtaa sen piirin läpi. Kaupungissa oli vuoden 2014 väestönlaskennassa 8 471 asukasta, kymmenen vuotta aiemmin 11 192. Suurin ryhmä olivat moldovalaiset ja romanialaiset (39,8 %), sitten gagauzit (17,3 %) ja venäläiset (16,3 %). Rautatiesolmuna kaupunki sai uutta virtaa, kun Berezynen ja Basarabeascan välinen rata avattiin elokuussa 2022 uudelleen ja rajanylityspaikka 25. maaliskuuta 2023. Radalla ukrainalaista rahtia kuljetetaan Tonavan satamiin Reniin, Giurgiulești'iin ja Galațiin.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-basarabeasca-f3a84a5a.jpg",
@@ -7993,6 +8005,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bender: {
       lyhyt: 'Benderin linnoituksen Dnestrin rannalla rakennutti uudelleen sulttaani Süleyman Suuri 1500-luvulla, ja sen muureissa on kymmenen bastionia.',
+      pitka: "Bender on Dnestrin oikealla rannalla vain noin kymmenen kilometrin päässä Tiraspolista. Kansainvälisesti kaupunki katsotaan Moldovan osaksi, mutta vuodesta 1992 sitä on tosiasiassa hallinnut Transnistrian hallinto. Kaupunki mainitaan asiakirjoissa ensi kerran 1408 tullipaikkana. Ottomaanit valtasivat linnoituksen 1538, ja arkkitehti Mimar Sinanin suunnitelman mukaan kivilinnoitus valmistui 1541. Linnoitus entisöitiin vuosina 2008–2012, ja nykyään sen alueella on museo, jonka gallerioissa kerrotaan linnoituksen sotahistoriasta. Aivan vieressä on Aleksanteri Nevskin kirkko.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-bender-98d42d40.jpg",
@@ -8007,6 +8020,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Briceni: {
       lyhyt: 'Crivan kylän kipsilouhoksesta avautui 1959 Emil Racovițăn luola, jonka maanalaisia käytäviä on kartoitettu noin 90 kilometriä.',
+      pitka: "Briceni on Moldovan luoteiskulmassa, piirin pohjoispuolella on Ukraina ja Prut-joen takana lännessä Romania. Kaupungissa asui vuoden 2014 väestönlaskennassa 7 314 ihmistä ja koko 814 neliökilometrin piirissä 46 894 vuonna 2024. Talous nojaa maatalouteen: sokerijuurikasta ja tupakkaa viljellään viljan rinnalla, ja tarhoissa kasvaa omenoita, kirsikoita ja luumuja. Lopatnic-joen valuma-alueella on geologisesti ja paleontologisesti merkittäviä muodostumia. Ilmasto on lauhkean mannermainen, ja piirin sademäärä kuuluu Moldovan korkeimpiin.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-briceni-e9e8115d.jpg",
@@ -8021,6 +8035,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cahul: {
       lyhyt: 'Giurgiuleștissa Moldova ulottuu Tonavalle vain noin 480 metrin matkalta, ja siihen on mahtunut maan ainoa Tonavan satama.',
+      pitka: "Cahul on Etelä-Moldovan keskus lähellä Romanian rajaa. Vuoden 2024 väestönlaskennassa siellä oli 22 223 asukasta, kymmenessä vuodessa reilut 7 800 vähemmän kuin vuonna 2014, ja kaupunki on maan kahdeksanneksi suurin. Paikka mainitaan asiakirjoissa ensi kerran vuonna 1502 nimellä Scheia. Nykyään teitä johtaa Oanceaan Romaniaan ja Reniin Ukrainaan. Bogdan Petriceicu Hasdeun yliopisto avattiin 1999. Vuonna 1958 perustetussa historiamuseossa on kymmeniä tuhansia esineitä, ja alueen kivennäisvedet sisältävät bromia ja jodia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cahul-d58fefdf.jpg",
@@ -8035,6 +8050,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Călărași': {
       lyhyt: 'Hîrjaucan luostari Codrun metsissä perustettiin 1740, kun sinne asettui kaksi munkkia Romanian puolella sijaitsevasta Neamțin luostarista.',
+      pitka: "Călărași on noin 10 800 asukkaan kaupunki Moldovan keskiosassa, Codrin kumpuilevien metsämaiden alueella; vuonna 2004 asukkaita oli vielä 14 660. Koko piirin pinta-ala on 753,5 neliökilometriä, ja noin 31 prosenttia siitä on metsää, jossa kasvaa valkopyökkiä, pyökkiä, saarnia, jalavia ja tammia. Piirin maatalousmaata on 25 801 hehtaaria, ja siitä viinitarhoja on 6 020 hehtaaria. Alueella tuotetaan punaviiniä, valkoviiniä ja konjakkia. Piirin luostarit ovat osa Codrun metsäisten kukkuloiden pyhiinvaellusmaisemaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-calarasi-14a0c098.jpg",
@@ -8049,6 +8065,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Camenca: {
       lyhyt: 'Camencan Dnestr-parantolassa joen rannalla hoidetaan vieraita ampeloterapialla eli rypälemehulla ja viinillä.',
+      pitka: "Camenca on pikkukaupunki Dnestrin rannalla Transnistrian pohjoisimmassa piirissä. Kansainvälisesti alue katsotaan Moldovan osaksi, mutta käytännössä sitä hallinnoi Transnistrian hallinto. Asutus mainitaan ensi kerran 1600-luvun alussa. Kaupungin asukasluku oli vuonna 2019 noin 8 700, kun se vuonna 1989 oli 13 689. Ympäröivä Camencan piiri on pinta-alaltaan 434,5 neliökilometriä, ja siihen kuuluvat kaupungin lisäksi 12 kuntaa ja 23 asuinpaikkaa. Ilmasto on lauhkean mannermainen, ja kesät ovat kuumia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-camenca-ee7bb0e5.jpg",
@@ -8063,6 +8080,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cantemir: {
       lyhyt: 'Cantemirin kaupunki sai nimensä 1973 ruhtinas Dimitrie Cantemirin 300-vuotispäivänä – hän oli Moldovan hallitsija ja oppinut kirjailija.',
+      pitka: "Cantemir on pieni piirikaupunki Moldovan lounaiskulmassa, noin 120 kilometrin päässä Chișinăusta. Sen länsipuolella virtaa Prut, jonka takana alkaa Romania. Vuoden 2014 väestölaskennassa kaupungissa oli 3 429 asukasta, kun luku oli vuonna 1989 vielä 5 320. Ympäröivä piiri on huomattavasti suurempi: siellä on noin 33 000 asukasta 51 paikkakunnassa, ja yli 90 prosenttia heistä asuu maaseudulla. Maisema on kumpuilevaa tasankoa. Yli puolet maasta on viljelyksessä, ja viinitarhoja on noin 5 660 hehtaaria. Väestö on enimmäkseen moldovalaista, mutta mukana on myös romanialaisia ja noin neljä prosenttia bulgarialaisia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cantemir-bb635cce.jpg",
@@ -8077,6 +8095,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Causeni: {
       lyhyt: 'Căușenin 1600-luvun Neitsyt Marian kirkon lattia on yli 90 senttiä maanpinnan alapuolella, ja seinillä on Moldovan ainoa keskiaikainen fresko.',
+      pitka: "Căușeni on Botna-joen varrella Etelä-Moldovassa, vuoden 2024 väestölaskennan mukaan noin 13 500 asukkaan kaupunki. Ottomaanien aikana se oli tärkeä paikallinen keskus. Nykyään kaupunki on ympäristönsä hallintokeskus: Căușenin piirissä asuu noin 57 000 ihmistä 1 185 neliökilometrin alueella. Maatalous on pääelinkeino, ja piirissä on noin 5 200 hehtaaria viinitarhoja ja 4 300 hehtaaria hedelmätarhoja. Kaupungin tunnetuin nähtävyys, Neitsyt Marian kuolonuneen kirkko, kunnostettiin vuosina 2017–2023 kansainvälisellä tuella, ja se avattiin uudelleen vierailijoille vuonna 2024.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-causeni-61162f0f.jpg",
@@ -8091,6 +8110,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Chişinău': {
       lyhyt: 'Chișinăun pohjoislaidalla Cricovan viinikellareissa kulkee noin 120 kilometriä maanalaisia teitä entisissä kalkkikivilouhoksissa.',
+      pitka: "Chișinău on Moldovan pääkaupunki ja selvästi maan suurin kaupunki: vuoden 2024 väestölaskennan mukaan kaupunkikunnassa asuu 720 128 ihmistä, ja suuri osa maan taloudesta syntyy täällä. Ensimmäinen kirjallinen maininta on päivätty 14. lokakuuta 1436, jolloin paikka oli luostarikylä. Vuonna 1940 voimakas maanjäristys iski kaupunkiin. Keskustassa sijaitseva Ștefan cel Mare -puisto on noin seitsemän hehtaarin kokoinen ja sitä pidetään Moldovan vanhimpana puistona. Sitä kutsutaan myös rakastavaisten puistoksi, koska pariskunnat tapaavat siellä. Joka lokakuu kaupungissa juhlitaan kansallista viinifestivaalia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-chisinau-a8e27317.jpg",
@@ -8105,6 +8125,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Cimişlia': {
       lyhyt: 'Cimișlian rotkoista on kaivettu 1929 lähtien yli 40 selkärankaislajin fossiileja 6–8 miljoonan vuoden takaa, muun muassa mastodontteja.',
+      pitka: "Cimișlia on Etelä-Moldovan kaupunki Cogâlnic-joen varrella, noin 70 kilometrin päässä Chișinăusta ja pääkaupungin ja Gagauzian välissä. Vanhin kirjallinen maininta on päivätty 4. heinäkuuta 1620, ja kaupunkioikeudet se sai 1995. Koko Cimișlian piirissä asuu noin 31 000 ihmistä 924 neliökilometrin alueella, ja väestö on pääosin maaseudulla. Pohjoisosassa Keski-Moldovan ylänkö kohoaa noin 250 metriin, ja viinitarhoja on noin 6 400 hehtaaria, joten viininviljely on seudun tärkeimpiä elinkeinoja. Kaupungista on kotoisin muun muassa Iurie Leancă, joka toimi Moldovan pääministerinä 2010-luvulla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cimislia-6f47cc96.jpg",
@@ -8119,6 +8140,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Comrat: {
       lyhyt: 'Comrat on Gagauzian pääkaupunki, ja gagauusit puhuvat turkkilaista kieltä mutta ovat valtaosin ortodoksikristittyjä.',
+      pitka: "Comrat on Gagauzian pääkaupunki, ja vuoden 2024 väestölaskennan mukaan siellä asuu 19 120 ihmistä. Autonomian perustava laki hyväksyttiin vuonna 1994 ja se tuli voimaan 14. tammikuuta 1995, ja alue koostuu useasta erillisestä osasta. Gagauzeja on kaupungin asukkaista noin kolme neljännestä (73,5 prosenttia vuoden 2014 laskennassa). Comratin yliopisto perustettiin vuonna 1991 Gagauzian kansalliseksi yliopistoksi, ja valtion yliopistoksi se muuttui vuonna 2002. Kaupunki on Moldovan eteläisellä viinialueella, ja täällä tuotetaan punaviiniä ja muskottiviiniä. Vuonna 1906 kaupunki julisti viiden päivän ajaksi oman tasavaltansa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-comrat-cf169ffe.jpg",
@@ -8133,6 +8155,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Criuleni: {
       lyhyt: 'Criulenin lähellä Dnestrin rantametsässä on Yllätysten luola, 1 700 metriä pitkä kalkkikiviluola ja Moldovan toiseksi pisin.',
+      pitka: "Criuleni sijaitsee Dnestrin oikealla rannalla, noin 40 kilometrin päässä Chișinăusta. Kaupungissa on vuoden 2024 laskennan mukaan noin 5 800 asukasta, ja kaupunkistatuksen se sai 1995. Koko Criulenin piirissä asuu 52 926 ihmistä 688 neliökilometrin alueella, ja siihen kuuluu 43 paikkakuntaa. Piiri on maatalousvaltainen, sillä 63 prosenttia pinta-alasta on maatalouskäytössä ja pääkasveja ovat peltokasvit, hedelmät ja viinirypäleet. Alueella on kalkkikivi- sekä hiekka- ja soralouhoksia, ja Dnestrin rantametsissä on luolia ja luonnonsuojelualueita.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-criuleni-867237a0.jpg",
@@ -8147,6 +8170,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Donduseni: {
       lyhyt: 'Țaulin kylässä vain viiden kilometrin päässä Dondușenista on puisto, jota pidetään Moldovan suurimpana.',
+      pitka: "Dondușeni kasvoi rautatien ympärille: vielä vuoden 1930 väestölaskennassa paikan nimi oli Dondoșani-Gară, eli Dondoșanin asema, ja siellä asui vain 953 ihmistä. Vuoteen 1959 mennessä asukkaita oli 5 129 ja vuoden 2014 laskennassa 7 101. Aseman punatiili- ja graniittirakennukset sekä linnamainen vesitorni ovat yli sadan vuoden takaa ja lasketaan historiallisiksi rakennusmuistomerkeiksi. Kaupunkioikeudet paikka sai vuonna 1957. Piirissä asuu noin 28 000 ihmistä 644 neliökilometrin alueella; siitä 532 neliökilometriä on maatalousmaata, jossa kasvaa muun muassa vehnää, ohraa, maissia, sokerijuurikasta, auringonkukkaa ja rypsiä. Piiri rajoittuu koillisessa Ukrainaan.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-donduseni-a217853c.jpg",
@@ -8161,6 +8185,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Drochia: {
       lyhyt: 'Drochiassa toimii Moldovan suurin sokeritehdas, ja piirin maaperästä noin 80 prosenttia on hedelmällistä mustaamultaa.',
+      pitka: "Drochia on pohjoismoldovalainen kaupunki, noin 174 kilometrin päässä Chișinăusta ja noin 67 kilometrin päässä Romanian Iașista. Nimi tulee paikallisesta linnusta, isotrapista, jota paikallisella kielellä kutsutaan sanalla dropie. Ensimmäinen maininta on vuodelta 1777, ja kaupunkioikeudet paikka sai 1973. Väkiluku oli huipussaan vuonna 1989, 21 298 asukasta, ja on sittemmin laskenut noin 12 900:aan vuoden 2024 laskennassa. Kaupungin katedraali, Neitsyt Marian kuolonuneen kirkko, aloitettiin vuonna 1988, ja sen on maalannut romanialainen taiteilija Petre Achițenie. Lyseon lähellä on Mihai Eminescun patsas.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-drochia-eced1f01.jpg",
@@ -8175,6 +8200,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Edineţ': {
       lyhyt: 'Edinețin toltry-kukkulat ovat 15–20 miljoonaa vuotta vanhoja muinaisen meren riuttoja, ja Brînzenin kallioihin on syöpynyt luolia.',
+      pitka: "Edineţ on Pohjois-Moldovan viljelyseudun keskus, noin 200 kilometrin päässä pääkaupungista. Vuoden 2024 väestönlaskennassa kaupungissa asui 12 369 ihmistä, kun kymmenen vuotta aiemmin heitä oli 15 520. Keskustassa seisoo Tapani Suuren patsas, ja kaupungissa toimivat sekä seudun museo että käsityöläisten museo. Ennen toista maailmansotaa kaupunki oli merkittävä kauppapaikka, jonka asukkaista suuri osa oli juutalaisia. Koko piirissä asuu noin 50 000 ihmistä 933 neliökilometrin alueella, ja väkiluku on laskenut selvästi viime vuosikymmeninä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-edinet-e8f069c5.jpg",
@@ -8189,6 +8215,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Făleşti': {
       lyhyt: 'Făleștin piiristä lähtöisin oleva taiteilija Gheorghe Vrabie piirsi Moldovan vaakunan, ja häntä kutsutaan Moldovan leun isäksi.',
+      pitka: "Făleşti on Prut-joen tuntumassa sijaitseva piirikeskus, jossa asui vuoden 2024 laskennassa 11 946 ihmistä. Nykyään se on ennen kaikkea maatalouden ja elintarviketeollisuuden kaupunki. Kaupungin oma museo, Lazăr Dubinovschin nimeä kantava historia- ja etnografiamuseo, avattiin 1979 uusromanialaistyylisessä entisessä tyttökoulussa, ja siinä on tuhansia etnografisia esineitä. Ennen toista maailmansotaa merkittävä osa asukkaista oli juutalaisia. Koko piirissä asuu 56 039 ihmistä 1 073 neliökilometrin alueella, ja sen länsirajana virtaa Prut.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-falesti-da911cad.jpg",
@@ -8203,6 +8230,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Floreşti': {
       lyhyt: 'Dnestrin rannalla seisova Japcan luostari oli Bessarabian ainoa luostari, jota neuvostovalta ei koskaan sulkenut.',
+      pitka: "Floreşti sijaitsee Răut-joen varrella noin 130 kilometrin päässä Chişinăusta. Väkiluku oli huipussaan 1989, 18 228 asukasta, mutta vuoden 2024 laskennassa heitä oli enää 10 925. Kaupungin tunnetuin teollisuuslaitos oli lasitehdas Cristal-Flor. Kaupungin piiristä ovat kotoisin kaksi Moldovan itsenäisyyden ajan presidenttiä. Ympäröivässä piirissä asuu 53 264 ihmistä 1 108 neliökilometrin alueella. Piirin maisema on Dnestrin ylätasangon pirstaloitua kumpumaata, ja Dnestr virtaa sen itärajalla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-floresti-cc48a8b2.jpg",
@@ -8217,6 +8245,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Glodeni: {
       lyhyt: 'Pădurea Domneascăn suojelualueelle tuotiin 2006 Puolasta visenttejä, ja sen metsissä on yli 3 500 arvoituksellista muinaista kumpua.',
+      pitka: "Glodeni on noin 170 kilometrin päässä Chişinăusta pohjoisessa, ja sen ensimmäinen asiakirjamaininta on vuodelta 1668. Kaupunki sai kaupunkioikeudet 1995, ja tuoreimman laskennan mukaan siellä asuu 7 284 ihmistä, kun vuonna 2004 heitä oli vielä 10 785. Elinkeinoelämä nojaa maatalouden jalostukseen. Kaupungin suojelupyhimys on arkkienkeli Mikael, jonka mukaan pääkirkko on nimetty. Ystävyyskaupunkeja on Romaniassa, Ukrainassa ja Puolassa. Koko piirissä asuu 35 829 ihmistä 754 neliökilometrin alueella, ja sen länsirajana virtaa Prut.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-glodeni-0400c990.jpg",
@@ -8231,6 +8260,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Grigoriopol: {
       lyhyt: 'Grigoriopol perustettiin 1792 armenialaisten siirtokunnaksi Dnestrin vasemmalle rannalle.',
+      pitka: "Grigoriopol sijaitsee Dnestrin vasemmalla rannalla, Ciorna-puron yhtymäkohdassa, ja siellä asuu noin 11 000 ihmistä. Kansainvälisesti alue katsotaan Moldovan osaksi, mutta käytännössä sitä hallinnoivat Transnistrian viranomaiset. Kaupungin talous nojaa maatalouteen, säilyketehtaaseen ja soranottoon, ja keskustan rakennukset ovat pääosin kolme–nelikerroksisia. Koillispuolella on Valea Seacă Tamaşlîc -maisemansuojelualue. Piirin pinta-ala on 822 neliökilometriä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-grigoriopol-10fde0a0.jpg",
@@ -8245,6 +8275,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Hîncesti': {
       lyhyt: 'Hînceștin tiluksille vetäytyi elämänsä lopulla armenialainen kauppias ja diplomaatti Manuc Bei, ja hänen poikansa rakennutti sinne palatsin.',
+      pitka: "Hînceşti on Cogâlnic-joen laaksossa noin 35 kilometrin päässä Chişinăusta lounaaseen, ja sen 11 391 asukasta tekevät siitä piirin keskuksen. Nimi juontuu todennäköisesti Hâncu-bojaarisuvusta. Neuvostoaikana kaupunkia kutsuttiin Kotovskiksi, ja nykyinen nimi palautettiin 1990. Kaupungissa on kenkä- ja viinitehtaita, ja piirin tuotteisiin kuuluvat viini, leipomotuotteet ja hedelmät. Piiri on suurimpia: 1 472 neliökilometriä ja 69 462 asukasta, ja sen maisema jakautuu Codru-metsäkukkuloihin, metsäaroon ja avoaroon Prutin rajajoen lähellä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-hincesti-6422161e.jpg",
@@ -8259,6 +8290,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ialoveni: {
       lyhyt: 'Mileștii Micin viinikellareissa on lähes kaksi miljoonaa pulloa – Guinness kirjasi sen 2005 maailman suurimmaksi viinikokoelmaksi.',
+      pitka: "Ialoveni on vain noin 10 kilometrin päässä Chişinăusta, ja se on sekä piirin että Moldovan keskisen kehitysalueen hallintokeskus. Kaupungin väkiluku kasvoi vuosien 2014 ja 2024 välillä 12 515:stä 14 665:een, vaikka monessa muussa pikkukaupungissa luvut ovat laskeneet. Kaupungissa toimii viinintuottaja Vinuri-Ialoveni sekä jäätelö-, leipomo- ja tekstiiliyrityksiä. Piirissä asuu 74 458 ihmistä 783,5 neliökilometrin alueella, ja noin 80 prosenttia heistä asuu maaseudulla. Piirin maasta 42,7 prosenttia on peltoa ja 10,2 prosenttia viinitarhoja.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ialoveni-679b7234.jpg",
@@ -8273,6 +8305,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Leova: {
       lyhyt: 'Leovan seudun halki kulkee Traianuksen valliksi kutsuttu muinainen maavalli, ja piirin länsilaitaa seuraa Romanian rajajoki Prut.',
+      pitka: "Leova sijaitsee Prutin varrella, Romanian rajan tuntumassa noin sadan kilometrin päässä Chişinăusta lounaaseen. Väkiluku on laskenut: vuoden 2014 laskennassa asukkaita oli 7 443, ja 2024 noin 6 400. Kaupungin pääyritys on viinintuottaja Leovin. Luonnon helmiä ovat 30 hehtaarin Lebăda albă eli Valkoinen joutsen -vesiekosysteemialue sekä kirjaston takana kasvava yli kaksisataavuotias tammi, joka on suojeltu luonnonmuistomerkkinä. Pyhän Paraskevan kirkko on vuodelta 1818. Piirissä asuu 28 835 ihmistä 764,6 neliökilometrin alueella. Piirin toinen kaupunki on Iargara.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-leova-aa11a759.jpg",
@@ -8287,6 +8320,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Nisporeni: {
       lyhyt: 'Nisporenin piirissä kohoava Bălăneștin kukkula on noin 430 metrin korkeudellaan Moldovan korkein kohta.',
+      pitka: "Nisporenin kaupungissa asuu noin 10 000 ihmistä (2014), ja 629 neliökilometrin piirissä on 39 asutusta ja runsaat 36 000 asukasta (2024). Piiri kuuluu Codrun, Moldovan keskiylängön metsävyöhykkeeseen: noin kolmannes maasta on tammi-, pyökki-, valkopyökki- ja vaahterametsää, ja viljelmiin kuuluu myös noin 3 900 hehtaaria hedelmätarhoja, joissa kasvaa persikoita, omenoita ja luumuja. Zghihaian kukkulalla Vărzărești'n kylän lähellä kohoaa vuonna 2011 vihitty noin 35 metrin risti, jota pidetään Moldovan suurimpana ja joka on valaistu yöllä LED-valoin. Sen vierellä ovat kappeli ja kellotorni sekä sankarihautausmaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-nisporeni-83be8503.jpg",
@@ -8301,6 +8335,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ocniţa': {
       lyhyt: 'Naslavcean kylä Dnestrin rannalla on Moldovan pohjoisin kohta, ja sen kalkkikivirinteiltä avautuu näkymä joen mutkiin.',
+      pitka: "Ocnița on Moldovan pohjoisen piirin keskus: kaupungissa asui 2014 noin 7 300 ihmistä ja 599 neliökilometrin piirissä 2024 noin 31 600. Dnestrin rannalla oleva Otaci on vastarannan ukrainalaisen Mohyliv-Podilskyin naapuri. Lipnicin kylässä muistetaan Tapani Suuren joukkojen voittoa tataarijoukoista 1400-luvulla, ja paikan Cadânein lähde on valtion suojelema muistomerkki. Kirjailija Constantin Stamati (1786–1869) kuoli Ocnițassa, ja hänen talomuseonsa avattiin 1988. Piirin pohjoisimmassa osassa Naslavcean lähellä Chisărău-joen laaksossa on maisemansuojelualue, jossa on vanhojen vesimyllyjen kahlaamoita.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ocnita-1e087f73.jpg",
@@ -8315,6 +8350,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Orhei: {
       lyhyt: 'Răut-joen mutkassa Orheiul Vechin kalkkikivikallioon on kaiverrettu luolaluostari, jossa asuu yhä kourallinen munkkeja.',
+      pitka: "Orheissa asuu 22 183 ihmistä (2024), ja se on Moldovan yhdeksänneksi suurin kaupunki, noin 40 kilometriä Chișinăusta pohjoiseen. Piiri kattaa 1 228 neliökilometriä, 75 asutusta ja noin 79 000 asukasta; kaksi kolmasosaa maasta on viljelyksessä, ja alue tunnetaan viinistä sekä vanhasta tupakkateollisuudesta. Orheiul Vechin ympärille perustettiin vuonna 2013 noin 338 neliökilometrin kansallispuisto, ensimmäinen Moldovassa. Kohde on ollut UNESCOn maailmanperintöehdokkaana. Kaupungin jalkapalloseura Milsami voitti Moldovan mestaruuden 2015.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-orhei-21c2c9f0.jpg",
@@ -8329,6 +8365,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Rezina: {
       lyhyt: 'Saharnan luostari on Moldovan suurimpia pyhiinvaelluspaikkoja, ja tarun mukaan sen yllä kohoavalla kalliolla on Neitsyt Marian jalanjälki.',
+      pitka: "Rezina levittäytyy Dnestrin oikealle rannalle kolmelle terassille noin 100 kilometrin päähän Chișinăusta. Kaupungissa oli 2014 noin 11 000 asukasta ja 622 neliökilometrin piirissä 2024 noin 30 200. Kaupungin lähettyviltä löydettiin 1946 getodakialaisten asuinpaikka 300- tai 200-luvulta eaa. Piirin kalkkikivinen ylänkö on rosoista, ja siellä on kaksi luonnonsuojelualuetta, Saharna (noin 670 hehtaaria) ja Țipova. Saharnajoen rotkossa on kaksikymmentä vesiputousta.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-rezina-0eb6cc45.jpg",
@@ -8343,6 +8380,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Rîşcani': {
       lyhyt: 'Prutille Costeștiin valmistui 1978 yhdessä Romanian kanssa rakennettu pato ja vesivoimala, jonka tekojärvessä on noin 1,3 miljardia kuutiota vettä.',
+      pitka: "Rîșcanin piiri kattaa 936 neliökilometriä Romanian rajan tuntumassa. Asukkaita on 2024 laskennan mukaan noin 43 700, ja piirissä on 55 asutusta, joista kaupunkeja ovat Rîșcani ja Costești. Rîșcanin kaupungin väkiluku oli huipussaan 1989 (17 650) ja 2014 enää 9 259. Yli 80 prosenttia maasta on viljelyksessä: viljaa, auringonkukkaa ja tupakkaa. Piirissä on rotko- ja luonnonsuojelualueita, kuten Pociumbeni ja Șaptebani. Duruitoarea Veche -luolan ympärille rakennettiin 2016–2017 museokokonaisuus, johon kuuluvat myös luolamuistomerkki ja Duruitoarean rotkon suojelualue.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-riscani-6b8458c4.jpg",
@@ -8357,6 +8395,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sîngerei': {
       lyhyt: 'Sîngerein piirin halki virtaa Răut, pisin kokonaan Moldovan rajojen sisällä virtaava joki, matkallaan kohti Dnestriä.',
+      pitka: "Sîngereissä asui 2024 noin 9 950 ihmistä, kun väkiluku oli huipussaan 1989 noin 15 000. Koko piirissä on noin 55 900 asukasta 1 034 neliökilometrin alueella ja 70 asutusta. Maisema on Bălțin aroa, pehmeästi kumpuilevaa tasankoa, jonka korkeimmat kohdat ovat 190–240 metrissä. Yli puolet maasta on viljelyksessä: viljaa, vihanneksia, tupakkaa ja auringonkukkaa. Metsää on vain noin 11 prosenttia, ja eläimistöön kuuluvat jänikset, ketut, villisiat ja haikarat.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-singerei-00cf0ad5.jpg",
@@ -8371,6 +8410,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Şoldăneşti': {
       lyhyt: 'Șoldăneștin piiristä lähes viidennes on tammi-, saarni- ja lehmusmetsää, jonka kätköissä elää susia ja villisikoja.',
+      pitka: "Șoldănești on noin 5 900 asukkaan (2014) kaupunki 145 metrin korkeudessa Ciorna-joen laaksossa; 598 neliökilometrin piirissä on noin 25 400 asukasta (2024) ja 33 asutusta. Alueen korkein kohta, Zahornan kukkula, kohoaa 338 metriin, ja maaperästä löytyy kalkkikiveä, soraa, savea ja hiekkaa. Dnestrin oikealla rannalla Vadul-Rașcovin kylässä on runoilija ja näytelmäkirjailija Dumitru Matcovschin (1939–2013) talomuseo. Lähellä sijaitsevassa Climăuții de Josin kylässä on maisemansuojelualue, jonka punertavat kukkulat rajaavat Dnestrin rantaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soldanesti-e585f35b.jpg",
@@ -8385,6 +8425,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Soroca: {
       lyhyt: 'Sorocan linnoitus Dnestrin rannalla on täydellinen ympyrä, jossa on viisi tasavälein sijoitettua bastionia; kivisenä se valmistui 1540-luvulla.',
+      pitka: "Soroca on Dnestrin rannalla noin 160 kilometriä Chișinăusta pohjoiseen, ja siellä asui 2024 laskennan mukaan 21 135 ihmistä; koko piirissä 58 600. Nykyisen kivilinnoituksen edeltäjä oli puinen linnake, jonka Tapani Suuren kerrotaan perustaneen 1499 suojaamaan joen kahlaamoa. Dnestrin osuus piirin itärajasta on 93 kilometriä. Kaupunkia kutsutaan usein Moldovan romanien pääkaupungiksi, sillä romaneja on noin neljä prosenttia asukkaista. Cosăuțin kylän lähellä kaksi geologista luonnonmuistomerkkiä ovat Dnestrin kosket sekä hiekkakiven ja graniitin paljastumat, ja kylä tunnetaan kivenveistäjien työpajoistaan.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soroca-259df16b.jpg",
@@ -8399,6 +8440,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ștefan Vodă': {
       lyhyt: 'Purcarin viinitila sai 1827 keisarin asetuksella Bessarabian ensimmäisen erikoistuneen viinitilan aseman, ja siellä tehdään tummaa Negru de Purcaria.',
+      pitka: "Ștefan Vodă on Moldovan kaakkoiskulmassa, noin sadan kilometrin päässä sekä Chișinăusta että Odesasta. Piirissä asuu noin 42 000 ihmistä, lähes yhdeksän kymmenestä maaseudulla, ja maisemaa hallitsevat viljelmät: viinitarhoja on lähes 5 000 hehtaaria ja hedelmätarhoja yli 3 000. Crocmazin kylässä viinitilan naapurina on etnografinen museo, joka perustettiin 1986 ja jonka kokoelmissa on tuhansia esineitä paikallisista perinteistä ja tavoista. Cioburciun kylän ympäröimät metsät kuuluvat Moldovan kauneimpiin: siellä soudetaan, onkitaan ja opitaan punomaan pajusta. Nistrun rannalla Palancan kylä on tullut tunnetuksi rajastaan, sillä kansainvälinen rajanylityspaikka sijaitsee Ukrainan puolella.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stefan-voda-22545d5c.jpg",
@@ -8413,6 +8455,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Stîngă Nistrului': {
       lyhyt: 'Dnestrin itärannalla Dubăsarin pato ja vesivoimala valmistuivat 1954, ja padon taakse syntyi Dubăsarin tekojärvi.',
+      pitka: "Nistrun vasemmalla rannalla Moldovan hallintojaossa on Dubăsarin piiri, jonka keskus on Cocieri ja joka perustettiin 2023. Sen 309 neliökilometrillä asuu runsaat 21 000 ihmistä 11 kunnassa, joihin kuuluu yhteensä 15 asutusta. Piirin halki virtaava Nistru on padottu Dubăsarin tekojärveksi, joka on noin 128 kilometriä pitkä ja pinta-alaltaan noin 67,5 neliökilometriä; sen vesivoimalan teho on 48 megawattia. Rannoilla kohoaa paikoin jyrkkää kalkkikiveä ja tiheää metsää, ja tyyni vesi houkuttelee veneilijöitä ja onkijoita. Kylien arki kulkee peltojen ja veden ehdoilla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stinga-nistrului-8c382a9d.jpg",
@@ -8427,6 +8470,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Străşeni': {
       lyhyt: 'Lozovan lähellä Codrun luonnonsuojelualueella on suojeltu vuodesta 1971 yli 5 000 hehtaaria tiheää tammi- ja pyökkimetsää.',
+      pitka: "Străşeni on Moldovan keskiosassa Chișinăun länsipuolella. Piirin noin 61 000 asukkaan maisema on kukkulaista, ja noin 37 prosenttia pinta-alasta on metsää. Keskuskaupungissa asuu vajaat 14 500 ihmistä. Căprianan luostari, jonka ensimmäinen kirjallinen maininta on vuodelta 1429, on yksi Moldovan vanhimpia; sen Neitsyt Marian kuolonuinumisen kirkko rakennettiin 1491–1496 kivestä. Dolnan kylässä seisoo varakkaan kreikkalaissyntyisen Zamfirache Rallin (1769–1831) kartano, jossa runoilija Aleksandr Pushkin vieraili karkotuksensa aikana; siitä tehtiin museo, joka avattiin yleisölle 6. kesäkuuta 1949, ja kartanolla vietetään Pushkin-juhlaa kesäkuun ensimmäisenä sunnuntaina.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-strasani-8f1af1e0.jpg",
@@ -8441,6 +8485,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Taraclia: {
       lyhyt: 'Taraclian asukkaista yli kolme neljäsosaa on bulgarialaisia, ja kaupungin yliopistossa opetetaan bulgariaksi ja romaniaksi.',
+      pitka: "Taraclia on Moldovan eteläosan pieni kaupunki, jossa asuu noin 10 000 ihmistä ja jota pidetään Bessarabian bulgarialaisten keskuksena. Yli kaksisataavuotias asutus näkyy arjessa: kaupungissa toimii bulgarialainen teatteri, ja piirin kouluissa opiskellaan bulgariaa. Kaupungin viinitehdas perustettiin 1955. Etno Fest Taraclia -festivaali on järjestetty jo 25 kertaa: sillä nähdään kymmeniä esiintyjäryhmiä ja perinnekäsityöläisiä, ja vieraita saapuu Bulgariasta, Romaniasta ja Ukrainasta. Piiri koostuu kahdesta erillisestä osasta, ja toisessa niistä sijaitsee Tvardița, jossa on noin 3 100 asukasta ja lähes 90 prosenttia heistä on bulgarialaisia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-taraclia-b4edd728.jpg",
@@ -8455,6 +8500,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Teleneşti': {
       lyhyt: 'Teleneștissä syntyi 1898 Nachum Gutman, josta tuli tunnettu israelilainen taidemaalari – hänen taidemuseonsa on Tel Avivissa.',
+      pitka: "Telenești on Moldovan keskiosassa noin 90 kilometriä Chișinăusta pohjoiseen. Piirin noin 850 neliökilometristä peltoa on lähes kolme neljäsosaa, ja väkiluku oli 2024 väestönlaskennassa 41 452, runsaat neljännes vähemmän kuin kymmenen vuotta aiemmin. Piirin läpi virtaavat Răut ja Ciuluc. Kaupungissa kohoaa uusi Pyhän Eliaan katedraali, jonka rakennus alkoi 2006, ja Eminescun patsas on ollut paikallaan vuodesta 1989. Vanhimmat kirjalliset maininnat seudun kylistä ulottuvat 1400-luvulle.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-telenesti-f193ec0e.jpg",
@@ -8469,6 +8515,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Transnistria: {
       lyhyt: 'Dnestrin itärannalla olevan Dubăsarin nimi tulee vanhasta sanasta dubăsar, joka tarkoitti veneentekijää tai lauttamiestä.',
+      pitka: "Transnistria on kapea, noin 4 160 neliökilometrin alue Nistrun itärannalla Moldovan ja Ukrainan välissä, ja siellä asuu arviolta noin 370 000 ihmistä. Kansainvälisesti alue katsotaan osaksi Moldovaa, mutta käytännössä sitä hallinnoivat omat viranomaiset Tiraspolista käsin. Tiraspol on alueen suurin kaupunki, noin 126 000 asukasta; sen perusti 1792 Aleksandr Suvorov, ja Suvorovin patsas seisoo edelleen keskusaukiolla. Länsirannalla Benderissä kohoaa Tighinan linnoitus, jonka osmanit rakennuttivat kiveksi vuosina 1538–1541 arkkitehti Sinanin suunnitelmien mukaan ja jonka entisöinti kesti 2008–2012. Chițcanin kylän Noul Neamț -luostari suljettiin 1962 ja muutettiin sairaalaksi, mutta sen kirkko avattiin uudelleen 1989.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-transnistria-4e1fa202.jpg",
@@ -8483,6 +8530,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ungheni: {
       lyhyt: 'Unghenin rautatiesilta Prutin yli tunnetaan Eiffelin siltana; se avattiin 1877, ja sitä pitkin kulkevat yhä junat Romaniaan.',
+      pitka: "Ungheni on Moldovan länsiportti: Prut virtaa kaupungin kohdalla noin kahdeksan kilometriä, ja toisella rannalla alkaa Romania. Kaupunki mainitaan asiakirjoissa ensi kerran 20. elokuuta 1462, ja nykyään siellä asuu noin 27 000 ihmistä. Rajalla vaihtuu myös raideleveys: Neuvostoliitosta peritty leveä 1 520 millimetriä kohtaa Euroopan normaalin 1 435 millimetriä. Historian ja etnografian museo, perustettu 1967, säilyttää yli 10 000 esinettä, joista vanhimmat ovat noin 100 000 vuoden takaa. Kaupungin katuja ja puistoja koristaa noin 33 veistosta kolmelta kuvanveistäjäleiriltä, ja kastanjakuja kulkee noin neljä kilometriä. Vuonna 2014 avattiin kaasuputki Unghenin ja Romanian Iașin välille.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ungheni-a7821b69.jpg",
