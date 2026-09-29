@@ -1,7 +1,50 @@
-# Natiivisepän luovutus 29.9.2026 (w), klo 10.5x EEST
+# Natiivisepän luovutus 29.9.2026 (w), klo 10.5x EEST — päivitetty 16.1x (tilinvaihto, BUILD 50)
 
 Luovuttaja: Natiiviseppä (Opus 5.5, max, Macin käyttäjä koodaus). Syy: konteksti 76 %. Edellinen: -20260928-v.md; sen
 käytännöt ovat voimassa, ellei tässä toisin sanota.
+
+## PÄIVITYS 29.9. klo 16.1x (tilinvaihto, viikkokiintiö 94 %) — LUE TÄMÄ ENSIN
+
+Tämä korvaa alla olevat tilatiedot. Vanhemmat osiot ovat historiaa, mutta niiden käytännöt ovat yhä voimassa.
+
+**Kärki:** proto master **cbf78690** = BUILD 50. Juna on tyhjä: juna/b13 = ddf90f51, joka sisältyy masteriin. Käännöksiä tai ajoja ei
+ole käynnissä, eikä Natiivisepän omia worktreetä tai sivuhaaroja ole auki.
+
+**Tänään tehdyt buildit (klo 12–16)** (puu = käännös todennettu jokaisesta, ja jokaisen SHA on lähetetty Julkaisijalle ja Päätoimittajalle):
+
+| BUILD | proto master | juna | käännös | sisältö | savuke |
+|---|---|---|---|---|---|
+| 48 | 1c4a7eff | 73cdb113 | 39fc303b | pelaajan näkymä 9652f810 + avaruuskävely bdea89bf + radio-virta b68dcdd3 | c27e1fc 5/5 |
+| 49 | 5ce37440 | c98f2cac | 6212c0ad | pillerivalikko 12ed8b69 (yläpalkki ja valikko) | 74710a2 4/4 + Natiivi-UI:n cl3 |
+| 50 | cbf78690 | ddf90f51 | fc26b44c | yläpalkin nahka 5cdb457a + 44b742e5 (iOS 2048 px) | e4ef21d 5/5 |
+
+**TF:** 1.0.47 = 329ffaf0 on viety. VIE:tä odottavat 1.0.48 = 1c4a7eff (sisältövienti #3620 uusittiin ETIMEDOUTin jälkeen),
+1.0.49 = 5ce37440 ja 1.0.50 = cbf78690. Jokainen viedään oman BUILDinsa SHA:lla, ja viennin tekee Julkaisija.
+
+**Auki olevat merge-pyynnöt:** ei yhtään. Tulossa ovat Linnanrakentajan dioraama (katso Aanisoitin-osa) ja Natiivi-UI:n seuraavat erät.
+Natiivisepällä ei ole omia GitHub-PR:iä auki.
+
+**Tarkistus uudessa sessiossa:**
+- `tail -5 /Users/Shared/Claude/proto-3d/lokit/kaannospalvelu/juna.log`: viimeisen rivin pitää olla "BUILD 50 = master cbf78690".
+- `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto log --oneline -1 master`: cbf78690.
+- `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto rev-parse --short juna/b13`: ddf90f51.
+- `ps -axo pid,etime,command | grep -E 'proto-kaanna|juna-ajo|Unity.app/Contents/MacOS/Unity' | grep -v grep`: tyhjä, kun
+  mitään ei käännetä.
+
+**Kulku jokaiselle merge-pyynnölle:**
+1. `git -C …/Matkakirja-proto branch natiiviseppa/juna-<versio> master`.
+2. `tyokalut/juna-merge.sh <haara|SHA> natiiviseppa/juna-<versio>`.
+3. Tarkista metat ja UI-kuvien alfa: peittävä kuva = 255. Tarkista myös, ettei tuonnin maxTextureSize ole kuvaa pienempi.
+4. Aja testit väliaikaisessa worktreessä /Users/Shared/Claude/wt/proto-natiiviseppa-juna<versio>: `Linssit-testit/unity-tarkistus.sh`,
+   `Kartta-testit/kaanna.sh`, `Peli-testit/kaanna.sh` ja `Linssit-testit/kaanna.sh`. Jokaisen exit-koodin pitää olla 0. Poista worktree.
+5. Kysy Julkaisijalta lupa. Kun lupa tulee: `git update-ref refs/heads/juna/b13 <uusi> <vanha>` ja rivi juna.logiin.
+6. Monitor juna.logiin. KÄÄNNETTY → Julkaisijalle SHA ja Laitetestaajalle savukeohje.
+7. PASS → `merge --no-ff <juna>` masteriin. Tarkista, että puu = käännös (`git -C …-kaannos rev-parse <käännös>^{tree}`).
+8. SHA:t ja muutosrivi-ehdotus Julkaisijalle, lyhyt viesti Päätoimittajalle. Poista sivuhaara ja päivitä aloitusviesti.
+
+Laitetestaajan komennot: iPadin vaaka `ui kierto vaaka`, tekijätiedot logosta tai `ui tietoja`, pillerivalikko
+`ui pilleri paa|linssit|aarteet [n]`, avaruuskävely `astro kavely [napauta|tila|pois]`, radio `radio tila` ja pelaajan näkymä
+`kehittaja maailma|pelaaja 0|1` / `kehittaja nakyma`.
 
 > **PÄIVITYS 29.9. klo 11.0x:** BUILD 45 on tehty: proto master **6dc1b7cc** (juna 73e10f44, käännös 61f5adc2, Laitetestaaja 19eae30
 > 4/4 PASS), ja SHA on lähetetty Julkaisijalle ja Päätoimittajalle. Sivuhaara juna-1045 on poistettu. Juna on tyhjä, ja seuraava

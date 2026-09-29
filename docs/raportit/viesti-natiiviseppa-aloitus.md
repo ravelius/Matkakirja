@@ -1,7 +1,7 @@
-# Natiivisepän aloitusviesti (29.9.2026 klo 15.5x, BUILD 50; nollaus luovutuksesta -20260929)
+# Natiivisepän aloitusviesti (29.9.2026 klo 16.1x, BUILD 50, tilinvaihto; nollaus luovutuksesta -20260929)
 
 Olet Natiiviseppä (Opus, max), Macin käyttäjä koodaus. Checkout on /Users/Shared/Claude/Matkakirja-3d-selvittaja ja proto-repo
-/Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutuksesi KOKONAAN:
+/Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutuksesi (ensin PÄIVITYS 16.1x -osio, sitten muu):
 `git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20260929.md`.
 Muisti: natiiviseppa-tila-20260928-v, juna-avaus-julkaisijan-kuittauksella, burst-linkkeri-ohimeneva, jaettu-kaannospalvelu-luokitin,
 ui-kuvan-alfa-lineaarinen-vuoto, natiiviseppa-oma-simulaattori (vain FBBD41D7).
