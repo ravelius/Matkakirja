@@ -3766,3 +3766,144 @@
     margin-bottom: 6px;
     justify-content: center;
 }
+
+/* PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07; web malli, Pelikoodarin rakenne): alinäkymät Linssit ja Aarteet samassa
+   paneelissa, esikatselu paneelin sisällä vasempana sarakkeena (web mitat.md). Nahka myöhemmin (Codex). */
+/* Web (Pelikoodari mitat.md 29.9.): paneeli kiinteä 367 pt kaikissa näkymissä, rivi 44 pt, kuvake 30, nimi 13,76 kahdelle
+   riville; esikatselu paneelin sisällä vasempana sarakkeena (42 %, vähintään 120 pt), lista oikealla. */
+.mk-linssivalitsin.mk-linssivalitsin--valikko {
+    width: 367px;
+    max-width: 94%;
+}
+
+.mk-linssivalitsin__runko {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-linssivalitsin__oikea {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.mk-linssivalitsin__runko .mk-linssirivi {
+    min-height: 44px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.mk-linssivalitsin__runko .mk-linssirivi__ikoni {
+    width: 30px;
+    height: 30px;
+}
+
+.mk-linssivalitsin__runko .mk-linssirivi__nimi {
+    font-size: 13.76px;
+    white-space: normal;
+}
+
+/* Äänitasot pergamentilla (laite cl1: tumman paneelin vaaleat nimet eivät erottuneet). */
+.mk-linssivalitsin__saatimet .mk-saadinrivi__nimi,
+.mk-linssivalitsin__saatimet .mk-saadinrivi__arvo {
+    color: rgba(70, 51, 31, 0.85);
+}
+
+.mk-linssirivi.mk-esikatseltu {
+    background-color: rgba(122, 85, 20, 0.12);
+}
+
+.mk-linssivalitsin__alinakyma {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-linssivalitsin__vakanen {
+    margin-left: auto;
+    font-size: 18px;
+    color: var(--accent-dark);
+}
+
+.mk-linssivalitsin__saatimet {
+    margin: 0 4px 6px 4px;
+}
+
+.mk-linssivalitsin__tiedot {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top-width: 1px;
+    border-color: rgba(70, 51, 31, 0.2);
+}
+
+.mk-linssivalitsin__aarreosio {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.mk-linssivalitsin__aarreluku {
+    margin-right: 5.6px;
+    font-size: 11px;
+    color: var(--accent-dark);
+}
+
+.mk-linssivalitsin__aarrerivi .mk-linssirivi__nimirivi {
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mk-linssivalitsin__esikatselu {
+    width: 42%;
+    min-width: 120px;
+    flex-shrink: 0;
+    margin: 4px 8px 4px 0;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(122, 85, 20, 0.08);
+}
+
+.mk-linssivalitsin__esinappi {
+    -unity-text-align: middle-center;
+    min-height: 44px;
+    margin: 8px 0 0 0;
+    font-size: 13px;
+    border-radius: 8px;
+    color: #211d18;
+    background-color: rgba(217, 161, 59, 0.9);
+}
+
+.mk-linssivalitsin__esikuva {
+    height: 125px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-linssivalitsin__esiotsikko {
+    font-size: 15px;
+    white-space: normal;
+    color: #211d18;
+}
+
+.mk-linssivalitsin__esiteksti {
+    margin-top: 4px;
+    font-size: 13px;
+    white-space: normal;
+    color: rgba(70, 51, 31, 0.92);
+}
+
+/* Esikatseltu rivi muuttuu samassa kohdassa toimintonapiksi (web: "rivi muuttuu Aktivoi-napiksi"; laite cl2: teksti päällekkäin). */
+.mk-linssirivi.mk-esikatseltu .mk-linssirivi__nimi {
+    display: none;
+}
+
+.mk-linssirivi.mk-esikatseltu .mk-linssirivi__tila {
+    flex-grow: 1;
+    font-size: 14px;
+    letter-spacing: 0;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}

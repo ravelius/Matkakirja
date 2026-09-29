@@ -105,6 +105,7 @@
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
 //   ui lippu [ISO3]                           lipun tarina (oletus FIN; skeema 1.15 maat.lipputarina)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
+//   ui pilleri [paa|linssit|aarteet] [n]      pillerivalikko auki, näkymä ja n:s rivi kerran (esikatselu), kahdesti = toiminto
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui maakunnat sulje                        auki oleva maakuntakortti tai lappu kiinni (sulkuanimaatio)
 //   ui maakunnat kysymys [n]                  auki olevan kortin n:s kysymys auki/kiinni; kortin reunat ja vieritys 300 ms päästä
@@ -1010,6 +1011,14 @@ namespace Matkakirja.Natiivi
                     // Kortin kysymys auki/kiinni (omistaja 29.9.: koko ei saa muuttua): kortin reunat ja vieritys lokiin.
                     int n = int.TryParse(loput.Substring(7).Trim(), out int kn) ? kn : 0;
                     return "=" + ui.Karttaselite.Maakunnat.TestiKysymys(n);
+                }
+                case "pilleri":
+                {
+                    // Pillerivalikko (omistaja 29.9.2026): ui pilleri [paa|linssit|aarteet] [n] = näkymä ja n:s rivi napautettuna.
+                    var o = loput.Split(' ');
+                    string nk = o.Length > 0 && o[0].Length > 0 ? o[0] : "paa";
+                    int n = o.Length > 1 && int.TryParse(o[1], out int nn) ? nn : -1;
+                    return "=" + ui.Linssit.Valitsin.TestaaNakyma(nk, n);
                 }
                 case "maakunnat":
                 {
