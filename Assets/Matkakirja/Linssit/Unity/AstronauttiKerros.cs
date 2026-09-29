@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
         public static Action<KyydinTila, double, double, bool, KyydinAika> KyytiKasittelija;
 
         const double MaanSade = 6_371_000, Nosto = 5000;
-        const float Hehku = 28f, IssMerkki = 8f, Etuna = 0.02f;
+        const float Hehku = 28f, Etuna = 0.02f;
 
         sealed class Piste
         {
@@ -62,6 +62,12 @@ namespace Matkakirja.Natiivi
         Revontulet revontulet;
         CupolaKerros cupola;
         Transform iss;
+        /// <summary>ISS:n piirros ja kertasyke (web .astro-iss-syke): syke alkaa, kun linssi on paljastettu.</summary>
+        Transform syke;
+        Material sykeMateriaali;
+        Texture2D issTekstuuri, sykeTekstuuri;
+        float sykeAlkoi = -1f;
+        bool sykeSoi;
         Transform issMalli;
         Material issMalliMateriaali;
         Mesh issMesh;
@@ -93,10 +99,13 @@ namespace Matkakirja.Natiivi
             k.fontti = merkit != null ? merkit.fontti : null;
             var varjostin = Resources.Load<Shader>("Varjostimet/Havaintopiste");
             k.pisteMateriaali = new Material(varjostin);
-            k.issMateriaali = new Material(varjostin);
-            k.issMateriaali.SetColor("_Vari", new Color32(0xf2, 0xf8, 0xff, 0xff));
-            k.issMateriaali.SetColor("_Ydinvalo", Color.white);
-            k.issMateriaali.SetFloat("_YtimenOsuus", 0.5f);
+            // ISS itsensä näköisenä (web ISS_PIIRROS_SVG, PAATOKSET 52): piirros tekstuuriksi kerran, 4 px per piste.
+            var merkki = Resources.Load<Shader>("Varjostimet/IssMerkki");
+            k.issMateriaali = new Material(merkki);
+            k.issMateriaali.mainTexture = k.issTekstuuri = Tekstuuri(IssPiirros.Rasteroi(4, out int iw, out int ih), iw, ih);
+            k.sykeMateriaali = new Material(merkki);
+            k.sykeMateriaali.mainTexture = k.sykeTekstuuri = Tekstuuri(IssPiirros.Rengas(176), 176, 176);
+            k.sykeMateriaali.SetFloat("_Peitto", 0f);
             var reitit = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.reitit : null;
             if (reitit != null && reitit.maa != null)
             {
@@ -115,7 +124,12 @@ namespace Matkakirja.Natiivi
 
         // ── IAstronautinNakyma ────────────────────────────────────────────
 
-        public void Avaus(AvauksenVaihe vaihe) => AvausKasittelija?.Invoke(vaihe);
+        public void Avaus(AvauksenVaihe vaihe)
+        {
+            // Kertasyke paljastuksen jälkeen (web: paljastus 'paljastettu' → kalvo.syke()), vain kerran avausta kohden.
+            if (vaihe == AvauksenVaihe.Pois && !sykeSoi) { sykeSoi = true; sykeAlkoi = Time.unscaledTime; }
+            AvausKasittelija?.Invoke(vaihe);
+        }
 
         public void Kohteet(IReadOnlyList<Havaintokohde> kohteet)
         {
@@ -261,7 +275,12 @@ namespace Matkakirja.Natiivi
                 m.SetParent(iss, false);
                 m.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
                 m.gameObject.AddComponent<MeshRenderer>().sharedMaterial = issMateriaali;
-                m.localScale = new Vector3(IssMerkki * 2, IssMerkki * 2, 1);
+                m.localScale = new Vector3(IssPiirros.LeveysPt, IssPiirros.KorkeusPt, 1);
+                syke = new GameObject("Syke").transform;
+                syke.SetParent(iss, false);
+                syke.gameObject.AddComponent<MeshFilter>().sharedMesh = nelio;
+                syke.gameObject.AddComponent<MeshRenderer>().sharedMaterial = sykeMateriaali;
+                syke.localScale = Vector3.zero;
             }
             // Todellinen korkeus (SGP4, noin 420 km): kyydin kamera katsoo samaa pistettä (IssKuvakulma.Seuranta).
             var utc = IssNyt.Kello();
@@ -542,11 +561,15 @@ namespace Matkakirja.Natiivi
                 // Kyydissä (seuranta tai siirtymä sinne) ISS on 3D-malli, ikkunassa ei kumpikaan (ollaan sisällä).
                 bool malli = kyyti == KyydinTila.Seuranta && issMalli != null;
                 bool piste = kyyti == KyydinTila.Kauko || (kyyti == KyydinTila.Seuranta && issMalli == null);
+                // Kaukonäkymässä merkki näkyy vain pallon kiekon sisällä (web issKiekonSisalla): reunan takana horisontin yllä
+                // oleva asema projisoituisi kiekon ulkopuolelle.
+                if (piste && kyyti == KyydinTila.Kauko) piste = KiekonSisalla(paikka, kerroin);
                 if (iss.gameObject.activeSelf != piste) iss.gameObject.SetActive(piste);
                 if (piste)
                 {
                     iss.SetPositionAndRotation(paikka, kt.rotation);
                     iss.localScale = Vector3.one * (2f * etaisyys * tanPuoli / pikseleita);
+                    PaivitaSyke();
                 }
                 if (issMalli != null)
                 {
@@ -631,6 +654,46 @@ namespace Matkakirja.Natiivi
             else if (issLahin) Linssi.NapautaIss();
         }
 
+        /// <summary>Onko ISS:n ruutupiste pallon kiekon sisällä (IssPiirros.KiekonSisalla, ruudun pisteinä).</summary>
+        bool KiekonSisalla(Vector3 paikka, float kerroin)
+        {
+            Vector3 keskus = georeferenssi.transform.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
+            Vector3 kohti = keskus - kamera.transform.position;
+            float d = kohti.magnitude;
+            float r = (float)CesiumWgs84Ellipsoid.GetMaximumRadius() * georeferenssi.transform.lossyScale.x;
+            if (d <= r) return true;
+            // Kiekon säde ruudulla: tangenttisäteen kulma asin(r/d) projisoituna kuten kamera (pystykenttä).
+            float kulma = Mathf.Asin(r / d);
+            float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            float sadePx = Mathf.Tan(kulma) / tanPuoli * (Screen.height * 0.5f);
+            Vector3 k = kamera.WorldToScreenPoint(keskus), s = kamera.WorldToScreenPoint(paikka);
+            if (s.z <= 0) return false;
+            return IssPiirros.KiekonSisalla(s.x / kerroin, s.y / kerroin, k.x / kerroin, k.y / kerroin, sadePx / kerroin);
+        }
+
+        /// <summary>Kertasyke: rengas kasvaa 0,3 → 1 ja häipyy 600 ms:ssa (web @keyframes astro-iss-syke).</summary>
+        void PaivitaSyke()
+        {
+            if (syke == null) return;
+            if (sykeAlkoi < 0 || LinssiOhjain.Instanssi?.VahennettyLiike == true)
+            {
+                if (syke.localScale != Vector3.zero) syke.localScale = Vector3.zero;
+                return;
+            }
+            var (mittakaava, peitto) = IssPiirros.Syke(Time.unscaledTime - sykeAlkoi);
+            syke.localScale = new Vector3(IssPiirros.SykeHalkaisijaPt * mittakaava, IssPiirros.SykeHalkaisijaPt * mittakaava, 1);
+            sykeMateriaali.SetFloat("_Peitto", peitto);
+            if (peitto <= 0f) sykeAlkoi = -1f;
+        }
+
+        static Texture2D Tekstuuri(byte[] rgba, int leveys, int korkeus)
+        {
+            var t = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, true) { wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear };
+            t.LoadRawTextureData(rgba);
+            t.Apply(true, true);
+            return t;
+        }
+
         static Mesh Nelio()
         {
             var m = new Mesh { name = "Havaintopiste" };
@@ -656,6 +719,9 @@ namespace Matkakirja.Natiivi
             Destroy(nelio);
             Destroy(pisteMateriaali);
             Destroy(issMateriaali);
+            Destroy(sykeMateriaali);
+            Destroy(issTekstuuri);
+            Destroy(sykeTekstuuri);
             if (issMalliMateriaali != null) Destroy(issMalliMateriaali);
             if (issMesh != null) Destroy(issMesh);
             if (rataMateriaali != null) Destroy(rataMateriaali);
