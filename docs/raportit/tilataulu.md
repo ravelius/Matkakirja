@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 15:00:** Levy 94,22 Gi (/private/tmp 23,6 Gt, wt/ 12 Gt), muisti 65 % vapaa, kuorma 15/18/27, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: vain Päätoimittaja käynnissä (62 %); muut levossa (Natiivi-UI 79 % ilmoitettu, Pelikoodari 68 %, Linnanrakentaja 67 %). Viikkolimit 92 % (5 h 13 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD c98f2cac käännetty (BUILD 49). Posti: ei uutta.
+
 **Päivitetty 14:51:** Levy 94,88 Gi (/private/tmp 23,5 Gt, wt/ 12 Gt), muisti 63 % vapaa, kuorma 10/18/34, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: vain Päätoimittaja käynnissä (62 %); muut levossa (Natiivi-UI 79 % ilmoitettu, Pelikoodari 68 %, Linnanrakentaja 67 %). Viikkolimit 92 % (5 h 13 %, ikkuna nollautuu 17:50); 94/97 %-valvonta käynnissä. Juna: b13 HEAD c98f2cac käännetty (BUILD 49). Posti: ei uutta.
 
 **Päivitetty 14:41:** Levy 94,47 Gi (/private/tmp 23,5 Gt, wt/ 12 Gt), muisti 48 % vapaa, kuorma 30/33/49, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: vain Päätoimittaja käynnissä (62 %); muut levossa (Natiivi-UI 79 % ilmoitettu, Pelikoodari 68 %, Linnanrakentaja 67 %). Viikkolimit 92 % (5 h 13 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD c98f2cac (14:09) sisältyy käännettyyn 6212c0ad; BUILD 49 = master 5ce37440 (Natiiviseppä 14:32). Posti: ei uutta.
