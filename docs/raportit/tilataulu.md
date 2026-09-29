@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 08:54:** Levy 91,34 Gi (+0,9 Gi/14 min, trendi tasaantunut; raja 82; Devices 70,0 Gt, /private/tmp 39,6 Gt), muisti 62 % vapaa, kuorma 35/55/104 (laskussa), sim 0, GPU-chrome 0, wt/ 16 kohdetta 9,5 Gt. Roolit: ajossa vain Linnanrakentaja (44 %); ei ≥70 %. Juna OK: b13 HEAD a10c40fb, käännetty 420a04de 08:09. Postilaatikko: ei uutta (radio-yksikuva ei vielä tullut).
+
 **Päivitetty 08:40:** Levy 93,10 Gi (−2,3 Gi/11 min; raja 82; Devices 70,0 Gt +1,45, /private/tmp 39,2 Gt +0,5), muisti 55 % vapaa, kuorma 139/223/187 (erittäin korkea: Chrome/Playwright 20 prosessia ~220 %, Unity 14 prosessia, Evoto 98 %, fseventsd 80 %; omistaja ei tarvitse konetta tänään, ei sääntörikkomusta), sim 1 (raja ≤3), GPU-chrome 0, wt/ 15 kohdetta 8,3 Gt. Roolit: ajossa Linssiseppä 54 %, Linnanrakentaja 44 %, Siirtoseppä 41 %; ei ≥70 %. Juna OK: b13 HEAD a10c40fb, käännetty 420a04de 08:09. Postilaatikko: ei uutta.
 
 **Päivitetty 08:29:** Levy 95,40 Gi (−1,3 Gi/11 min; raja 82; /private/tmp +0,4 Gt, Devices +0,7 Gt → 68,5 Gt, wt/ 15 kohdetta 8,2 Gt), muisti 51 % vapaa (laskenut 58→51), kuorma 83/122/103 (Unity-käännökset 3 prosessia + Playwright-chromium), sim 1 (raja ≤3), GPU-chrome 0. Roolit: ajossa Linssiseppä, Natiivi-UI 46 %, Siirtoseppä; ei ≥70 %. Juna OK: b13 HEAD a10c40fb (1.0.43-juna avattu 08:02) sisältyy käännökseen 420a04de 08:09, BUILD 43 = master 476e251f, Laitetestaaja 5/5 PASS. Postilaatikko: Codexin dioraama osa 1 (bdde47eaa) välitetty Päätoimittajalle.
