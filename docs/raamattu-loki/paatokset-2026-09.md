@@ -9211,3 +9211,7 @@ Omistaja 29.9.2026 klo 17.4x: 1) kun maakuntavalitsin on päällä, kaikki nosto
 ## OMISTAJA: IPHONEN NAHKAPALKKI KORKEAMMAKSI (29.9.2026 klo 17.18)
 
 Omistaja 29.9.2026 klo 17.5x: iPhonen nahkapalkki hieman korkeammaksi niin, että Dynamic Islandin ylä- ja alapuolelle jää yhtä paljon nahkaa, ja sen alla on vielä tikkaus. Mitoitus laitteen saaren mukaan (Natiivi-UI natiivi, Pelikoodari web env(safe-area-inset-top)); Codexilta erillinen tikkauskaista vain, jos palat eivät veny siististi. Puuradio v3 saapui ja näytettiin omistajalle; kytkentä OK:n jälkeen (Linssiseppä 2, 3753cd9f pohjana).
+
+## OMISTAJA: RADIO V4 AIDOMMAKSI, LINSSILISTA OIKEAAN REUNAAN, PARITEETTI 2 (29.9.2026 klo 17.21)
+
+Omistaja 29.9.2026 klo 17.5x: 1) puuradio v3 parempi mutta "näyttää liikaa piirretylle" → Codexille v4 (283821fb7): valokuvamaiset materiaalit, sama valaistus, samat ankkurit, näytön kontrasti tummalle musteelle (#3a1e06, Linssiseppä 2 2cd27b8c) ≥ 4,5. 2) Pillerivalikon Linssit: lista heti oikeassa reunassa (ei hyppyä), valittu rivi muuttuu oranssiksi Aktivoi-napiksi linssin nimen kohdalla, vasemman puolen erillinen Aktivoi-nappi pois (Natiivi-UI + Pelikoodari; Aarteet ennallaan). Pariteetti 2 (#3628): rivi 10 natiivin karttaselitteen Nostot-välilehden poisto = omistajan 28.9. päätös Natiivi-UI:n maakuntatila v2:ssa, sallittu poikkeus; rivit 7–9 Siirtoseppä, 11 Natiiviseppä, 12 Linssiseppä 2 (web on oletus).
