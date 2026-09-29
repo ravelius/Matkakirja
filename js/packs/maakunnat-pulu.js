@@ -2637,4 +2637,212 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mikä on Demänovan Vapauden luola?", a: "Demänovská jaskyňa slobody Matalan Tatran alla on yli 8 400 metrin mittainen luolaverkosto, joka on osa laajaa karstijärjestelmää. Sen naapurissa on Demänovan jääluola." },
     ],
   },
+  EST: {
+    "Harju": [
+      { q: "Miksi Tallinnan raatihuoneentorilla seisoo joulukuusi jo yli puoli vuosituhatta?", a: "Kaupungin arkistossa on vuodelta 1441 asiakirja, jonka mukaan neuvosto maksoi soittajille, jotka esiintyivät torin joulukuusen luona. Siksi Tallinna esittää olevansa Euroopan ensimmäinen julkisen joulukuusen paikka. Kuusen pystyttäjänä pidetään Mustapäiden veljeskuntaa." },
+      { q: "Mikä on Viron leveä vesiputous, ja miksi se näyttää erilaiselta eri vuodenaikoina?", a: "Jägalan putous on noin 8 metriä korkea mutta yli 50 metriä leveä, ja sitä sanotaan Viron leveimmäksi luonnonputoukseksi. Kevättulvan aikaan virtaama voi nousta hyvin suureksi. Talvella putouksesta tulee jäätyneiden jääpuikkojen seinä." },
+      { q: "Mikä nykyaikainen keksintö sai alkunsa Tallinnassa vuonna 2003?", a: "Skype. Sen loivat virolaiset ohjelmoijat Ahti Heinla, Priit Kasesalu ja Jaan Tallinn yhdessä ruotsalaisen Niklas Zennströmin ja tanskalaisen Janus Friisin kanssa, ja palvelu avattiin elokuussa 2003." },
+    ],
+    "Hiiu": [
+      { q: "Miksi Kärdlan asukkaat elävät kraatterin päällä?", a: "Kärdlan kaupunki sijaitsee noin 455 miljoonaa vuotta sitten syntyneen, noin neljän kilometrin levyisen meteoriittikraatterin alueella. Kraatteri peittyi sedimentteihin jo muutamassa miljoonassa vuodessa, joten sen tunnistaa nykyään lähinnä maanpinnan alle piilotetuista rakenteista." },
+      { q: "Mikä on Tahkunan majakka, ja miksi se näyttää erilaiselta kuin Kõpu?", a: "Tahkuna on noin 42,6 metrin korkuinen valurautainen majakka, jonka osat valmistettiin Ranskassa 1873 ja koottiin paikan päällä vuoteen 1875 mennessä. Se on Viron korkein tämäntyyppinen rakennelma." },
+    ],
+    "Ida-Viru": [
+      { q: "Missä Viron korkein vesiputous putoaa, ja miksi se on niin erikoinen?", a: "Valaste putoaa Ontikan kalkkikivijyrkänteeltä Suomenlahteen 30,5 metrin matkan. Se on Viron korkein vesiputous, ja pohjoistuulen kantamat roiskeet muuttavat rinteen puut talvella jääveistoksiksi." },
+      { q: "Mikä on Kuremäen luostari, ja mitä siinä on Virossa ainutlaatuista?", a: "Pühtitsan eli Kuremäen luostari perustettiin 1891, ja se on Viron ainoa toimiva venäläisortodoksinen nunnaluostari. Paikalla on pyhänä pidetty lähde, ja legenda kertoo paimenen nähneen siellä ilmestyksen." },
+      { q: "Miksi Sillamäe ei ollut vuosikymmeniin kartalla?", a: "Sillamäe oli vuodesta 1947 Neuvostoliiton suljettu kaupunki, jonka tehdas jalosti uraania eikä sitä merkitty karttoihin. Keskustan pylväsjulkisivut ovat stalinistista arkkitehtuuria. Kaupunki avautui 1991." },
+    ],
+    "Jõgeva": [
+      { q: "Miksi Peipsin rannalla asuu vanhauskoisia ja mistä sipulitie on saanut nimensä?", a: "Vanhauskoiset pakenivat Venäjältä 1600-luvun kirkkouudistuksen jälkeen ja asettuivat Peipsin rannoille. Hiekkamaalla menestyi lähinnä sipuli, ja Mustveesta Varnjaan johtavaa reittiä kutsutaan Sipulitieksi." },
+      { q: "Mikä oli ensimmäinen virolainen aikakauslehti, ja missä se painettiin?", a: "Lühhike öppetus ilmestyi 1766 Põltsamaassa Kuningamäen kirjapainossa, joka oli Liivinmaan ensimmäinen yksityinen kirjapaino. Lehteä pidetään ensimmäisenä virolaiskielisenä aikakauslehtenä." },
+      { q: "Miten Põltsamaa liittyy Viron lipun syntyyn?", a: "Sini-musta-valkoisen lipun kerrotaan ommellun 1884 Põltsamaassa Emilie Beermannin toimesta. Lippu vihittiin Otepäällä 4. kesäkuuta 1884 Viron ylioppilasseuran lipuksi." },
+    ],
+    "Järva": [
+      { q: "Mikä on Vargamäki, ja miksi virolaiset tuntevat sen paremmin kuin monen kaupungin?", a: "Vargamäe on A. H. Tammsaaren viisiosaisen romaanin Tõde ja õigus (1926–1933) näyttämö. Kirjailija syntyi vuonna 1878 Vetepere-kylässä, ja museo toimii hänen lapsuudenkodissaan." },
+      { q: "Miksi Väätsassa on polkupyörämuseo?", a: "Viron polkupyörämuseo toimii Väätsan vanhassa kunnantalossa. Esillä on kymmeniä vanhoja polkupyöriä, ja huoneet on sisustettu 1920–30-lukujen tyyliin." },
+    ],
+    "Lääne-Viru": [
+      { q: "Miksi Käsmua kutsutaan kapteenien kyläksi?", a: "Käsmussa toimi merikoulu vuosina 1884–1931, ja lähes jokaisessa perheessä oli kapteeni tai perämies. Suomen kieltolain aikana kylän merimiehet kuljettivat myös alkoholia Suomenlahden yli. Aikaa esittelee Käsmun merimuseo." },
+      { q: "Mikä on Kunda, ja miksi arkeologit tuntevat sen kaikkialla?", a: "Kunda-kulttuuri oli mesoliittisten metsästäjä-keräilijöiden kulttuuri, joka ulottui noin 8500–5000 eaa. Baltian metsävyöhykkeeltä Pohjois-Venäjälle. Se on nimetty Kundan mukaan." },
+    ],
+    "Lääne": [
+      { q: "Miksi Haapsalun pitsihuivi mahtuu sormuksen läpi?", a: "Haapsalun huivi kudotaan hienosta karitsanvillalangasta ja se on niin ohut, että sen voi vetää vihkisormuksen läpi. Kylpyvieraat, myös Romanovit, ostivat huiveja matkamuistoksi." },
+      { q: "Miksi Matsalun lahti kiinnostaa lintuharrastajia kaikkialla Euroopassa?", a: "Kevään muuton aikaan Matsalun kansallispuiston läpi lentää miljoonia vesilintuja, ja suuri osa on alleja. Puisto perustettiin luonnonsuojelualueena 1957 ja kansallispuistona 2004. Matsalun lahti on keskimäärin vain 1,5 metriä syvä." },
+    ],
+    "Põlva": [
+      { q: "Mikä on Viron pisin joki, joka virtaa kokonaan Viron sisällä?", a: "Võhandu, jonka pituudeksi ilmoitetaan runsaat 160 kilometriä. Se saa alkunsa Põlvan maakunnasta Savernan kylän lähistöltä ja laskee Peipsin Lämmijärveen." },
+      { q: "Mikä Viron järvistä on kirkkain?", a: "Nohipalun Valgejärv Meenikunnon suoalueella on Viron ravinneköyhin ja kirkkain järvi. Se on vain noin seitsemän hehtaarin kokoinen mutta jopa 12,5 metriä syvä, ja pohja on lähes kokonaan hiekkaa." },
+      { q: "Missä Võhandu-joella soudetaan noin 100 kilometrin maraton?", a: "Võhandu Marathon alkaa Võrusta Tamulan järveltä ja päättyy Võõpsun venesatamaan Põlvan maakunnassa. Se järjestettiin ensimmäisen kerran 2006, ja mukana on tuhansia melojia." },
+    ],
+    "Pärnu": [
+      { q: "Miksi Pärnua kutsutaan tasavallan syntykaupungiksi?", a: "Viron itsenäisyysmanifesti luettiin julkisesti ensimmäisen kerran Pärnussa 23. helmikuuta 1918 illalla Endla-teatterin parvekkeelta. Päivää myöhemmin se julkistettiin Tallinnassa, ja siksi Pärnu on ottanut lisänimen \"tasavallan syntykaupunki\"." },
+      { q: "Mikä Kihnu on, ja miksi sen naiset ovat tunnettuja?", a: "Kihnu on Pärnun maakuntaan kuuluva saari, jolla asuu noin 500 ihmistä. Miesten ollessa pitkiä aikoja merellä naiset pitivät arjen käynnissä ja vaalivat käsitöitä, tansseja ja musiikkia. Unesco nimesi saaren kulttuuritilan aineettomaksi perinnöksi 2003." },
+    ],
+    "Rapla": [
+      { q: "Mikä on Varbolan Jaanilinna ja miksi se oli aikoinaan niin suuri?", a: "Raplamaan Varbolassa on Viron suurin ympyränmuotoinen muinaislinna ja kauppakeskus, joka rakennettiin 1000–1100-luvuilla. Kalkkikivimuuria on säilynyt noin 580 metriä pitkänä ja jopa 8–10 metriä korkeana." },
+      { q: "Miksi Märjamaan niityille ilmestyy keväisin lampia, jotka sitten katoavat?", a: "Märjamaan seutu on karstialuetta: keväällä sulamis- ja pohjavedet täyttävät painanteita väliaikaisiksi lammiksi, joita kutsutaan nimellä järtas. Vesi valuu myöhemmin kalkkikiven rakoihin." },
+    ],
+    "Saare": [
+      { q: "Mitä erikoista Kuressaaren piispanlinnassa on, vaikka se on yli 600 vuotta vanha?", a: "Linnan rakennus alkoi 1380-luvulla Saare-Läänen piispoille, ja se on yksi Viron parhaiten säilyneistä keskiaikaisista linnoista. Muurien ympärillä on bastioneja, ja nykyään linnassa toimii Saaremaan museo." },
+      { q: "Mikä on Ruhnu ja mitä sillä on vanhaa?", a: "Ruhnu on Riianlahden pieni saari, jolla asuu vain noin 140 ihmistä, ja se kuuluu Saaren maakuntaan. Siellä seisoo Viron vanhin tunnettu edelleen pystyssä oleva puurakennus, Pyhän Magdalenan kirkko, jonka rakentaminen alkoi 1640-luvulla. Ennen 1944 saarella asui ruotsalaisia." },
+      { q: "Miksi Saarenmaa on yhä hiukan suurempi kuin ennen?", a: "Jääkauden jään paino painoi maankuoren alas, ja se kohoaa yhä takaisin. Nousu on millimetrien luokkaa vuodessa, joten saaren ranta siirtyy hitaasti merta kohti." },
+    ],
+    "Tartu": [
+      { q: "Missä pidettiin ensimmäinen Viron laulujuhla?", a: "Tartossa kesäkuussa 1869: kolmipäiväiseen juhlaan osallistui noin 800 laulajaa ja soittajaa. Sen käynnisti kustantaja Johann Voldemar Jannsen, ja juhlaperinne on jatkunut Virossa siitä lähtien." },
+      { q: "Mitä Tarton observatorio liittyy maapallon mittaamiseen?", a: "Tähtitieteilijä Friedrich von Struve johti Tarton observatoriota 1820–1839 ja teki siellä työtä maapallon muodon selvittämiseksi. Struven kolmiomittausketju, yli 2 800 kilometriä ja kymmenen maata, sai Unescon maailmanperintöstatuksen 2005." },
+      { q: "Miksi Tarton Kaldus maja on vinossa?", a: "Talo rakennettiin 1793 keskiaikaisen kaupunginmuurin reunalle: joen puoleinen sivu lepää muurin kivijalalla, toinen pehmeällä maalla, ja siksi rakennus kallistuu silmin nähden. Nykyään siinä toimii Tarton taidemuseo." },
+    ],
+    "Valga": [
+      { q: "Kuka veti rajan Valgan ja Valkan väliin vuonna 1920?", a: "Viro ja Latvia kiistelivät kaupungista, eikä kansainvälinen komissio päässyt sopuun, joten ratkaisun teki välimiesoikeuden puheenjohtaja, brittiläinen eversti Tallents. Raja vedettiin Konnaoja-puron mukaan, ja päärakennuskanta jäi Viron puolelle." },
+      { q: "Miksi Sangasten linnassa on 99 huonetta?", a: "Kreivi Friedrich Berg rakennutti 1879–1881 englantilaistyylisen tiililinnan Sangasteen. Huoneita oli 99, tarkoituksella alle sata: kerrotaan, ettei yksityisrakennuksessa saanut olla enempää." },
+      { q: "Mikä Sangaste-ruis on ja miksi kreivi Berg on siitä tunnettu?", a: "Berg risteytti 1875 alkaen saksalaista siementä paikalliseen ruiskantaan ja sai kylmänkestävän, tähkältään raskaan lajikkeen. Se voitti palkintoja kansainvälisissä näyttelyissä ja oli Viron viljellyin ruislajike aina 1960-luvulle." },
+    ],
+    "Viljandi": [
+      { q: "Mikä on Viljandin riippusilta ja mistä se on tullut?", a: "Noin 50 metriä pitkän teräsriippusillan osat valmisti riikalainen yhtiö 1879, ja nykyiselle paikalleen se pystytettiin 1931. Se ylittää rotkon linnanmäkien vieressä." },
+      { q: "Miksi mansikka on Viljandin Kondas-keskuksen tunnus?", a: "Keskus esittelee naivisti Paul Kondasin (1900–1985) töitä, ja mansikka on peräisin hänen tunnetuimmasta maalauksestaan \"Mansikansyöjät\" (1965). Museo avattiin 2003 vuonna 1895 valmistuneessa entisessä pappilassa." },
+      { q: "Mikä peruna-ohrapuuro on Unescon aineettoman perinnön listalla?", a: "Mulgipuder, jota keitetään Mulgimaalla, johon Viljandin maakunta kuuluu: perunat ja liotetut ohrasuurimot keitetään pehmeiksi ja muusataan. Sen valmistus ja syöminen hyväksyttiin Unescon listalle 2024." },
+    ],
+    "Võru": [
+      { q: "Mikä on Viron syvin järvi ja missä se on?", a: "Rõugen Suurjärv Võrumaalla on Viron syvin järvi, suurimmillaan 38 metriä syvä. Vaikka se on vain noin 15 hehtaarin kokoinen ja alle kilometrin pituinen, sen syvät rinteet piilottavat paljon vettä." },
+      { q: "Miksi Võrussa on Kreutzwaldin muistomuseo?", a: "Kirjailija ja lääkäri Friedrich Reinhold Kreutzwald asui Võrussa 44 vuotta ja kirjoitti siellä kansalliseepos Kalevipojan. Hänen kotinsa, yksi kaupungin vanhimmista säilyneistä taloista vuodelta 1793, avattiin museona 1941." },
+      { q: "Miksi Võrumaalla puhutaan eri kieltä kuin muualla Virossa?", a: "Võro on eteläviron kieli, jota usein pidetään omana kielenään ja jota puhuu arvioiden mukaan kymmeniä tuhansia ihmisiä. Sitä vaalii Võro-instituutti (perustettu 1995), ja päiväkodeissa on kielipesäryhmiä, joissa lapsille puhutaan vain võroa." },
+    ],
+  },
+  LVA: {
+    "Kurzeme": [
+      { q: "Miksi meri näyttää kiehuvan Kolkan niemen kärjessä?", a: "Kolkasrags on Kurzemen niemimaan kärki, jossa Itämeren avoin vesi ja Riianlahti törmäävät toisiinsa. Myrskyssä aallot voivat nousta korkeiksi. Syksyllä niemen yli muuttaa suuria määriä lintuja, jotka kerääntyvät kärkeen ennen lahden ylitystä." },
+      { q: "Mikä on Liepājan tuuli, ja miksi konserttitalo nojaa siihen?", a: "Liepājaa kutsutaan kaupungiksi, jossa tuuli syntyy, ja nimi tulee tunnetusta laulusta Liepājas vējš. Meripihkan värinen Lielais Dzintars -konserttitalo avattiin 2015, ja sen suunnittelussa tuulen kerrotaan olleen innoituksena." },
+      { q: "Mikä on Kuldīgan vanha tiilisilta, ja miksi sitä ihaillaan?", a: "Ventan yli kulkeva tiilisilta on 164 metriä pitkä ja seitsemän tiiliholvin varassa. Se valmistui 1874 ja on yhä käytössä. Sitä kutsutaan usein yhdeksi Euroopan pisimmistä tämäntyyppisistä tiilisilloista." },
+    ],
+    "Latgale": [
+      { q: "Miksi Daugavpilsissa on taidekeskus amerikkalaiselle taiteilijalle?", a: "Abstraktin ekspressionismin klassikko Mark Rothko syntyi 25.9.1903 Dvinskissa, nykyisessä Daugavpilsissa. Perhe muutti Yhdysvaltoihin, kun hän oli kymmenvuotias. Kotikaupungin Rothko-taidekeskus avattiin 2013 linnoituksen entiseen tykistöarsenaaliin." },
+      { q: "Mikä on Latgalen meri?", a: "Rāzna-järvi on noin 57,6 neliökilometrin kokoinen ja Latvian toiseksi suurin. Sen hiekkarantojen vuoksi sitä sanotaan Latgalen mereksi. Ympärillä on Rāznan kansallispuisto, joka perustettiin 2007 ja on maan nuorin kansallispuisto." },
+    ],
+    "Riga": [
+      { q: "Miksi Riian keskustori toimii entisissä zeppeliinihalleissa?", a: "Keskustorin viisi paviljonkia rakennettiin 1920-luvulla uudelleenkäyttämällä ensimmäisen maailmansodan aikaisten saksalaisten ilmalaivahallien osia. Tori avattiin 1930, ja se kuuluu Unescon maailmanperintökohteeseen vanhankaupungin mukana." },
+      { q: "Miksi Riikaa kutsutaan joulukuusen syntysijaksi?", a: "Riika väittää, että maailman ensimmäinen koristeltu julkinen joulukuusi pystytettiin täällä 1510. Mustapäiden veljeskunnan miehet koristivat sen keinotekoisilla ruusuilla, tanssivat sen ympärillä ja polttivat sen. Raatihuoneentorin kivetyksessä on siitä muistolaatta kahdeksalla kielellä, mutta Tallinna kiistää tittelin." },
+    ],
+    "Vidzeme": [
+      { q: "Mikä on Baltian suurin luola?", a: "Siguldan Gūtmaņa-luola Gaujan rannalla on noin 19 metriä syvä, 12 leveä ja 10 korkea. Sulamisvedet ja lähde kaivoivat sen hiekkakiveen jääkauden jälkeen. Seinille on veistetty nimiä ja vaakunoita 1600-luvulta lähtien." },
+      { q: "Mikä on Bānītis, ja miksi sillä ajaa yhä hitaasti?", a: "Bānītis on Gulbenen ja Alūksnen välinen 33 kilometrin kapearaiteinen rautatie, joka avattiin 1903. Raideleveys on 750 millimetriä, ja rata on ollut kansallinen muistomerkki vuodesta 1998." },
+    ],
+    "Zemgale": [
+      { q: "Missä kaksi jokea sulautuu Lielupeksi?", a: "Bauskassa Mūsa ja Mēmele kohtaavat kapean niemen kärjessä ja jatkavat yhtenä Lielupena. Samalla niemellä seisoo Bauskan linna. Sen vanhempi osa on Liivinmaan ritarikunnan 1400-luvun linnan rauniot, ja uudempi on Kuurinmaan herttuan 1500-luvun lopun asuinrakennus." },
+      { q: "Miksi Ranskan tuleva kuningas asui Jelgavassa?", a: "Ludvig XVIII pakeni Ranskan vallankumousta ja piti maanpaossa hoviaan Jelgavan palatsissa 1798–1800 sekä uudelleen 1804–1807. Siellä vietettiin vuonna 1799 myös hänen veljentyttärensä Marie Thérèsen häät. Nykyään palatsissa toimii yliopisto." },
+    ],
+  },
+  LTU: {
+    "Alytaus": [
+      { q: "Miksi Liettuan suurinta suota ei voi vain kävellä läpi?", a: "Čepkeliain suojelualue on suurelta osin suljettu, ja sen turvekerros on paikoin 5–6 metriä paksu. Yleisölle on vain näkötorni ja opastettu polku Marcinkonysin kylän lähellä, ja kurjet ja merikotkat saavat elää rauhassa." },
+      { q: "Miksi pienessä Druskininkain kylpyläkaupungissa voi laskea alas rinnettä keskellä kesää?", a: "Kaupungissa on Snow Arena, sisähiihtohalli, jonka rinne on 460 metriä pitkä ja 50 metriä leveä. Hallissa pidetään ympäri vuoden pakkasta, ja lumi tehdään vedestä ja ilmasta ilman lisäaineita. Halli avattiin elokuussa 2011." },
+      { q: "Mikä yhdistää Druskininkain maalauksiin ja sävellyksiin?", a: "Säveltäjä ja taidemaalari M. K. Čiurlionis syntyi Varėnassa 1875 ja kasvoi Druskininkaissa, jonne hänen isänsä muutti kaupunginurkuriksi. Hän ehti 35-vuotiaana säveltää satoja teoksia ja maalata noin 300. Monet maalaukset on nimetty sonaateiksi ja preludeiksi." },
+    ],
+    "Kauno": [
+      { q: "Miksi japanilainen diplomaatti Chiune Sugihara muistetaan Kaunasissa?", a: "Sugihara kirjoitti kesällä 1940 Kaunasissa noin 2 100 kauttakulkuviisumia, joiden avulla arviolta noin 6 000 juutalaista pakolaista pääsi Neuvostoliiton kautta Japaniin. Hän jatkoi noin kuusi viikkoa, kunnes hänet kutsuttiin pois 4. syyskuuta 1940. Talo on nykyään museo." },
+      { q: "Mikä on Liettuan vanhin funikulaari, ja kulkeeko se vielä?", a: "Kaunasin Žaliakalnisin funikulaari avattiin 5.8.1931, ja se on yhä liikenteessä. Matka on vain 142 metriä ja kestää alle kaksi minuuttia." },
+      { q: "Miksi Kaunasissa on museo, jossa on yli 3 000 pirua?", a: "Taidemaalari Antanas Žmuidzinavičius alkoi kerätä piruhahmoja, ja museossa niitä oli 260, kun se perustettiin 1966. Kävijät toivat lisää lahjoiksi, ja nyt kokoelmassa on yli 3 000 pirua puusta, keramiikasta ja paperista. Osa on käyttöesineitä, kuten piippuja ja pähkinänsärkijöitä." },
+    ],
+    "Klaipedos": [
+      { q: "Kuka on Klaipėdan teatteriaukion suihkulähteen paljasjalkainen tyttö?", a: "Tyttö on Ännchen von Tharau, rakkauslaulun sankaritar. Laulun sanat liitetään Klaipėdassa (Memel) syntyneeseen runoilijaan Simon Dachiin (1605–1659). Suihkulähde pystytettiin aukiolle 1912, ja laulua lauletaan yhä Saksassa, Sveitsissä ja Itävallassa." },
+      { q: "Miksi Nemunasin suistossa rengastetaan lintuja?", a: "Ventės Ragasin niemellä toimii lintujen rengastusasema, joka perustettiin 1929 ja on yksi Euroopan vanhimmista. Siellä rengastetaan vuosittain kymmeniä tuhansia lintuja muuttotutkimusta varten. Niemen majakka on vuodelta 1863." },
+      { q: "Mitä Palangan kreivin palatsissa säilytetään?", a: "Tiškevičiuksen uusrenessanssipalatsissa on toiminut Meripihkamuseo vuodesta 1963. Kokoelmassa on kymmeniätuhansia meripihkakappaleita, ja monessa on kiinni hyönteinen, hämähäkki tai kasvi." },
+    ],
+    "Marijampoles": [
+      { q: "Kuka kirjoitti Liettuan kansallislaulun, ja missä hän kuoli?", a: "Vincas Kudirka, Sūduvassa syntynyt lääkäri, julkaisi 'Tautiška giesmėn' sanat ja sävelen Varpas-lehdessä syyskuussa 1898, kun Liettua oli vielä tsaarin vallan alla. Hän kuoli tuberkuloosiin 1899 Naumiestisin kaupungissa, joka on nykyään nimeltään Kudirkos Naumiestis." },
+      { q: "Missä kohtaavat Liettuan, Puolan ja Venäjän rajat?", a: "Vištytis-järven rannalla Vilkaviškisin seudulla. Järvi on 17,8 km² ja jopa 54 metriä syvä, ja Kaliningradin alueen raja kulkee sen halki. Kolmen maan rajapiste on noin kolme kilometriä etelään Puolan puolella, ja sen graniittiobeliskissa on kaikkien kolmen maan vaakunat." },
+      { q: "Miksi Puolan rajan lähellä Mockavassa on tärkeä rautatieasema?", a: "Puolassa raideleveys on 1435 mm, mutta Liettuassa venäläistyyppinen 1520 mm. Kaksi raideleveyttä kohtaavat Mockavan asemalla kuuden kilometrin päässä rajasta." },
+    ],
+    "Panevezio": [
+      { q: "Miksi Biržain linna seisoo järven ja vesivallihautojen ympäröimänä?", a: "Krzysztof Radziwiłł rakennutti 1586–1589 Liettuan ensimmäisen italialaistyyppisen bastionilinnan. Sitä varten padottiin jo 1575 kaksi jokea, ja syntynyt tekojärvi ja vesivallihaudat suojasivat linnaa. Nyt siellä on museo, kirjasto ja ravintola." },
+      { q: "Miksi Panevėžysin panimolla oli aluksi saksalainen nimi?", a: "Panimo aloitti 1902 saksalaisen maanomistajan perustamana nimellä Bergschlösschen, 'pieni linna mäellä', korkean Nevėžis-joen rantatörmän mukaan. Nimi muutettiin Kalnapilikseksi 1935." },
+      { q: "Millainen kreivi täytti Rokiškin kartanon linnuilla ja trooppisilla kasveilla?", a: "Konstanty Tyzenhauz oli upseeri ja innokas ornitologi. Hän perusti kartanoon laboratorion ja istutti orangeriaan trooppisia kasveja, ja hänellä oli suuri lintukokoelma." },
+    ],
+    "Šiauliai": [
+      { q: "Miksi Šiauliain taivaalla käy vuoroin eri maiden hävittäjiä?", a: "Baltian maiden omat ilmavoimat eivät ylläpidä hävittäjiä, joten Nato-maat vuorottelevat Šiauliain lentotukikohdassa. Ensimmäiset koneet, belgialaiset F-16:t, saapuivat tänne maaliskuussa 2004." },
+      { q: "Mikä ihme on Šiauliain kissamuseo?", a: "Vanda Kavaliauskienė perusti sen vuonna 1990, kun hänen kissa-aiheinen kokoelmansa ei enää mahtunut kotiin. Nyt siellä on tuhansia kissapatsaita, -kuvia, -postikortteja ja -leluja eri puolilta maailmaa." },
+      { q: "Miksi Šiauliaissa on polkupyörämuseo?", a: "Museo syntyi vuonna 1980 kaupungin Vairas-pyörä- ja mopotehtaan yhteyteen ja siirtyi 1993 Aušra-museon alaisuuteen. Kokoelmassa on kymmeniä pyöriä, muun muassa esipyörän jäljennös ja käsin taottuja kotitekoisia menopelejä." },
+    ],
+    "Taurages": [
+      { q: "Miksi Tauragėn ”linna” on oikeastaan vanha tullitalo?", a: "Tiilirakennus valmistui vuonna 1847 tulliasemaksi Venäjän ja Preussin rajalle. Sen tiloissa oli myös rajavankila, jonne joutuivat salakuljettajat ja kirjojen salakuljettajat. Nykyään talossa toimii Tauragėn seutumuseo." },
+      { q: "Mikä torni kohoaa Nemunasin rannalla Raudonėssa?", a: "Raudonėn linnan lieriömäinen torni on noin 33 metriä korkea, ja sen huipulta avautuu näkymä Nemunasille. Linnaa on muokattu vuosisatojen kuluessa uusgoottilaiseen tyyliin." },
+      { q: "Mitä Pagramantisin aluepuistosta löytää?", a: "Tauragėn ja Šilalėn välissä Jūra- ja Akmena-jokien laaksoissa on muinaisia linnavuoria, noin 30 metriä korkea Pagramantisin jokitörmä ja Plynojin keidassuo, jonka poikki kulkee opastettu polku." },
+    ],
+    "Telšiai": [
+      { q: "Mikä on Baltian maiden ainoa öljynjalostamo?", a: "ORLEN Lietuvan jalostamo Mažeikiaissa. Se aloitti toimintansa vuonna 1980, ja sen kapasiteetti on noin 10 miljoonaa tonnia raakaöljyä vuodessa. Raakaöljy tulee pääosin Būtingėn merilaiturin kautta." },
+      { q: "Mikä on Plateliain järvi?", a: "Plateliai on Žemaitijan suurin järvi, noin 12 neliökilometriä ja Liettuan yhdeksänneksi suurin. Järven Linnansaarella on ollut linna, ja järvi kuuluu Žemaitijan kansallispuistoon." },
+      { q: "Miksi pieni Žemaičių Kalvarija vetää pyhiinvaeltajia?", a: "Alle tuhannen asukkaan kylässä on 21 ristintien asemaa, joista suuri osa on puukappeleita mäkien päällä. Ne jäljittelevät Jeesuksen tietä, ja suuri kirkkojuhla vetää kesällä väkeä myös ulkomailta." },
+    ],
+    "Utenos": [
+      { q: "Miksi Visaginas on niin erikoinen kaupunki?", a: "Se rakennettiin nimenomaan Ignalinan ydinvoimalan työntekijöille. Voimalan kaksi RBMK-1500-reaktoria sammutettiin vuosina 2004 ja 2009, ja paikka toimi vuonna 2018 kuvauspaikkana HBO:n Tšernobyl-sarjassa." },
+      { q: "Mistä Anykščain Puntukas-kivi on tullut?", a: "Puntukas on Liettuan toiseksi suurin siirtolohkare, rapakivigraniittia, jonka jäätikkö kuljetti luultavasti Suomesta viimeisen jääkauden aikana. Kiveen on veistetty myös reliefi lentäjille Darius ja Girėnas." },
+      { q: "Mikä on Liettuan vanhin kansallispuisto?", a: "Aukštaitijan kansallispuisto perustettiin 1974, ja se on maan viidestä kansallispuistosta vanhin. Stripeikiain lähellä on muinaisen mehiläishoidon museo, jossa on esillä puunrungoista tehtyjä pesiä." },
+    ],
+    "Vilniaus": [
+      { q: "Miksi Euroopan keskipiste on Vilnan lähellä?", a: "Ranskan kansallinen maantieteellinen instituutti laski vuonna 1989 mantereen maantieteelliseksi keskipisteeksi paikan noin 17 km Vilnasta yhden laskutavan mukaan. Sen ympärille syntyi Europos Parkas, 50 hehtaarin taidepuisto, jossa on yli 90 teosta 27 maasta." },
+      { q: "Mikä paikka Kernavė on?", a: "Noin 35 km Vilnasta Nerisin laaksossa on Kernavėn arkeologinen alue, UNESCOn maailmanperintökohde vuodesta 2004. Alueella on viisi linnavuorta, ja paikka oli 1200-luvulla yksi Liettuan suuriruhtinaskunnan keskuksista, kunnes ritarikunta poltti kaupungin 1390." },
+      { q: "Miksi Vilnan yliopiston kirjasto on yliopistoa vanhempi?", a: "Jesuiitat perustivat kirjaston vuonna 1570, yhdeksän vuotta ennen yliopistoa. Nyt sillä on miljoonia asiakirjoja, ja harvinaisissa kokoelmissa on satoja inkunaabeleja eli varhaisia painokirjoja." },
+    ],
+  },
+  SVN: {
+    "Gorenjska": [
+      { q: "Miksi Gorenjskan mehiläispesien etulaudat on maalattu kuvilla?", a: "Slovenian alppialueella pesän etulauta, panjska končnica, koristeltiin pyhimyksillä, sananlaskuilla ja arjen kohtauksilla. Kuvien sanotaan auttaneen tarhaajaa erottamaan pesät toisistaan. Radovljican mehiläismuseossa vanhin tunnettu taulu on vuodelta 1758." },
+      { q: "Mitä Planicassa tapahtui vuonna 1936, ja miksi se muutti mäkihyppyä?", a: "Itävaltalainen Sepp Bradl lensi 15. maaliskuuta 1936 Planican Bloudkovan jättiläismäessä 101,5 metriä, ensimmäisenä ihmisenä yli sadan metrin. Hyppy synnytti mäkilennon idean." },
+      { q: "Mikä on Škofja Lokan passio, ja miksi se on niin erityinen?", a: "Passio on kulkue, jossa kaupungin kaduilla esitetään Kristuksen kärsimys useiden kohtausten sarjana. Pohjana on kapusiinipater Romualdin käsikirjoitus vuodelta 1721, vanhin säilynyt sloveenikielinen näytelmäteksti. UNESCO otti perinteen aineettoman kulttuuriperinnön luetteloonsa vuonna 2016." },
+    ],
+    "Goriška": [
+      { q: "Mikä Solkanin rautatiesillassa on niin erikoista?", a: "Sočan yli kaartuva Solkanin silta on 85 metrin jännemitallaan maailman pisin kivinen rautatiesillan kaari. Se kuuluu Bohinjin radan siltojen sarjaan, joka rakennettiin vuosina 1900–1906." },
+      { q: "Miksi Sočan kalastajat puhuvat marmoritaimenesta?", a: "Marmoritaimen on Adrianmeren valuma-alueen oma kala, ja sen harmaalla pinnalla kulkee marmoria muistuttava kuvio. Se on taimenlajeista suurin: parhaimmillaan yli metrin mittainen ja yli 20-kiloinen." },
+      { q: "Mikä tekee Idrijasta UNESCO-kaupungin, ja mitä siellä nypläillään?", a: "Idrijan elohopeakaivos kuuluu UNESCOn maailmanperintöön vuodesta 2012, ja yhdessä espanjalaisen Almadénin kanssa se oli maailman suurimpia elohopeantuottajia. Toinen kaupungin ylpeys on käsin nypläävä pitsi: Idrijan pitsikoulu on toiminut keskeytyksettä vuodesta 1876." },
+    ],
+    "Jugovzhodna Slovenija": [
+      { q: "Mitä tarkoittaa Ribnican \"suha roba\" eli kuivatavara?", a: "Se ei ole ruokaa vaan puutavaraa: puulusikoita, seuloja ja muita käsin tehtyjä keittiötarvikkeita, joita Ribnican laakson väki on kaupannut jo keskiajalta. Nimi \"Ribniška suha roba\" sai maantieteellisen suojan vuonna 2004." },
+      { q: "Miksi Kočevjen metsissä on niin paljon karhuja?", a: "Kočevjen laajat pyökkimetsät ovat Slovenian karhualueen ydintä, ja pyökinpähkinät ovat ruskeakarhun ruokavalion perusta. Kočevski Rogin Krokarin aarniometsä, jota ei ole koskaan hakattu, kuuluu UNESCOn Euroopan pyökkimetsien perintökohteeseen vuodesta 2017." },
+      { q: "Kuka on Vihreä Yrjö, jonka Črnomeljissa puetaan koivunoksiin?", a: "Jurjevanjessa 24. huhtikuuta Bela krajinassa puetaan koivunoksiin Vihreä Yrjö, myyttinen paimen, joka tuo kevään tullessaan. Hänet saatetaan kaupungin keskustaan, lehdet riisutaan ja vihreä nippu heitetään Dobličica-jokeen." },
+    ],
+    "Koroška": [
+      { q: "Missä on Slovenian korkeimmalla sijaitseva kirkko?", a: "Uršlja goran huipulla 1 699 metrissä, Slovenj Gradecin ja Črnan välissä. Goottilaisen Pyhän Ursulan kirkon rakennus alkoi vuonna 1570 ja valmistui noin 1602. Huipulta näkee yli koko Koroškan." },
+      { q: "Mikä kuuluisa säveltäjä syntyi Slovenj Gradecissa?", a: "Romanttisen taidelaulun mestari Hugo Wolf syntyi Slovenj Gradecissa 13. maaliskuuta 1860, kun kaupunki tunnettiin saksalaisella nimellä Windischgraz. Syntymäkodissa toimii nykyään Hugo Wolf -museo." },
+      { q: "Mitä Mežican vanhoille kaivoskäytäville on tapahtunut?", a: "Kaivostoiminta lopetettiin asteittain 1988 alkaen ja päättyi vuoden 2004 lopussa. Käytävistä tehtiin Podzemlje Pece -kaivosmuseo, jossa ajetaan kaivosjunalla ja kuljetaan jalan tai pyörällä." },
+    ],
+    "Notranjsko-kraška": [
+      { q: "Mikä on Postojnan luolan \"lohikäärmeenpoikanen\"?", a: "Olmi eli luolasalamanteri on sokea ja valkoinen, voi elää jopa satavuotiaaksi ja pärjää vuosia ilman ruokaa. Vuonna 2016 Postojnan luolassa nähtiin, kuinka olmi muni ja munista kuoriutui parikymmentä poikasta." },
+      { q: "Miksi Predjaman linna on rakennettu kallion seinämään?", a: "Linna on kiilattu luolan suulle korkean kalliojyrkänteen keskelle, ja sitä pidetään maailman suurimpana luolalinnana. Nimi Predjama tarkoittaa \"luolan edessä\". Tarun mukaan kapinallinen ritari Erazem, Slovenian Robin Hood, käytti luolan salakäytäviä." },
+      { q: "Miksi Križna jaman luolassa kuljetaan veneellä?", a: "Luola on täynnä maanalaisia järviä, joista monet voi ylittää veneellä. Padot ovat kalkkisaostumaa, joka kasvaa vain noin 0,1 millimetriä vuodessa." },
+    ],
+    "Obalno-kraška": [
+      { q: "Mikä on petola, ja miksi Sečovljen suola kerätään yhä käsin?", a: "Sečovljen suola-altaissa suola haravoidaan puukaapimilla keskiaikaiseen tapaan. Altaan pohjalla oleva levän, kipsin ja mineraalien kerros, petola, estää mutaa sekoittumasta suolaan." },
+      { q: "Miksi Škocjanin luolia kutsutaan maanalaiseksi kanjoniksi?", a: "Reka-joki on uurtanut kalkkikiveen noin kaksi kilometriä pitkän kanjonin, joka on paikoin 150 metriä korkea. Luolat pääsivät UNESCOn maailmanperintöluetteloon jo vuonna 1986." },
+      { q: "Mitä Piranin syntyperäinen Giuseppe Tartini väitti nähneensä unessa?", a: "Viulisti-säveltäjä Tartini, jonka patsas seisoo Piranin pääaukiolla, syntyi kaupungissa vuonna 1692. Hän kertoi nähneensä unessa paholaisen soittavan viululla, ja unesta syntyi kuuluisa Paholaisen trilleri -sonaatti." },
+    ],
+    "Osrednjeslovenska": [
+      { q: "Miksi Ljubljanan kansalliskirjaston portaat ovat mustat?", a: "Arkkitehti Jože Plečnik suunnitteli ne kuvaamaan matkaa tietämättömyyden hämärästä tiedon valoon: mustat kalkkikivipilarit johtavat valoisaan lukusaliin. Kirjasto valmistui 1941, ja se kuuluu Plečnikin töihin, jotka Unesco hyväksyi maailmanperintölistalle 2021." },
+      { q: "Miksi Ljubljanan keskustassa ei kuule autojen ääntä?", a: "Vanhankaupungin keskusta on ollut suljettu moottoriliikenteeltä vuodesta 2007, ja jalankulkualue on sen jälkeen laajentunut. Kaupunki sai työstään Euroopan vihreä pääkaupunki -tittelin vuonna 2016." },
+      { q: "Mikä on trnič ja miksi Velika planinan paimenet tekivät sitä?", a: "Trnič on pieni, kuivatettu juusto, jota Kamnikin Velika planinan paimenet valmistivat kesälaitumella rahkasta, kermasta ja suolasta. Se muotoiltiin ja kuvioitiin puisilla leimasimilla, ja perinteisesti sitä annettiin rakastetulle rakkauden merkiksi." },
+    ],
+    "Podravska": [
+      { q: "Mikä on Ptujin Orfeus-muistomerkki ja miksi se on niin erikoinen?", a: "Lähes viiden metrin korkuinen vaalea Pohorjen marmoripilari on peräisin 100-luvulta ja pystytettiin roomalaisen Poetovion korkean virkamiehen muistoksi. Kohokuvassa Orfeus soittaa lyyraa eläinten kuunnellessa, ja se on Slovenian vanhin alkuperäisellä paikallaan säilynyt julkinen muistomerkki." },
+      { q: "Miksi Ptujin viinikellarissa lepää yli sata vuotta vanhaa viiniä?", a: "Ptujska kletin arkistossa säilytetään Zlata trtaa vuodelta 1917, jota pidetään Slovenian vanhimpana viininä. Kellarin juuret ulottuvat vuoteen 1239, jolloin minoriittiveljet rakensivat sen luostarinsa alle." },
+      { q: "Mikä on Zlata lisica, ja miksi Maribor tunnetaan siitä?", a: "Zlata lisica eli Kultainen kettu oli naisten alppihiihdon maailmancupin kisa, joka ajettiin Mariborin Pohorjen rinteillä vuodesta 1964 lähes kuusi vuosikymmentä. Pujottelut ja suurpujottelut laskettiin lumistadionille." },
+    ],
+    "Pomurska": [
+      { q: "Miksi Moravske Toplicen kylpylä syntyi öljynporauksesta?", a: "Vuonna 1960 seudulla etsittiin öljyä, mutta reiästä nousikin syvyydestä lähes 72-asteista vettä. Ihmiset alkoivat kylpeä siinä, ja kylä sai 1984 nimekseen Moravske Toplice, kylpyläkylä." },
+      { q: "Miksi Prekmurjen kurpitsansiemenöljy on niin erikoista?", a: "Öljykurpitsalla (Cucurbita pepo var. styriaca) on luonnollinen mutaatio, jonka siemenistä puuttuu kova kuori, joten ne voi paahtaa ja puristaa sellaisenaan. Štajersko-prekmursko bučno olje on EU:ssa suojattu maantieteellinen merkintä." },
+      { q: "Mikä on Mura–Drava–Tonava ja miksi sitä sanotaan Euroopan Amazoniksi?", a: "Unesco julisti Muran, Draavan ja Tonavan jokialueen biosfäärialueeksi syyskuussa 2021: se on maailman ensimmäinen viiden maan biosfäärialue ja kattaa noin 700 kilometriä jokia." },
+    ],
+    "Savinjska": [
+      { q: "Miksi Žalecissa voi ottaa olutta suihkulähteestä?", a: "Žalec on Savinjan alaosan humalanviljelyn keskus, ja kaupunkipuistossa avattiin syyskuussa 2016 Vihreä kulta -olutsuihkulähde. Sieltä voi maistaa useita slovenialaisella humalalla valmistettuja oluita, kun ostaa erikoismukin." },
+      { q: "Miksi Logarska dolina on niin leveä ja tasainen?", a: "Jääkausi muovasi sen: noin seitsemän kilometrin pituista laaksoa täytti aikanaan jäätikkö, ja jäljelle jäi leveä vihreä pohja ja jyrkät kallioseinät. Laakson päässä Rinka-putous syöksyy noin sadan metrin korkeudelta." },
+      { q: "Mitä Mg tarkoittaa Donat-kivennäisveden nimessä?", a: "Mg on magnesiumin kemiallinen merkki. Rogaška Slatinan veden nimeen se lisättiin 1976, koska vettä pidetään EU:n luonnollisista kivennäisvesistä magnesiumpitoisimpana. Lähteen vesi analysoitiin ensimmäisen kerran jo 1572." },
+    ],
+    "Spodnjeposavska": [
+      { q: "Miksi Kostanjevica na Krki on täynnä tammiveistoksia?", a: "Joensaarelle rakennetussa pikkukaupungissa on vuodesta 1961 järjestetty Forma Viva -kuvanveistäjäsymposiumi. Yli sata tammipuuveistosta koristaa kaupunkia ja sen ympäristöä." },
+      { q: "Miksi Bizeljskon viinikellarit ovat hiekkaan kaivettuja tunneleita?", a: "Repnicat kaivettiin käsin kvartsihiekkaan alun perin nauristen ja rehun viilentämiseen. Nykyään niissä säilytetään viiniä: lämpö pysyy viileänä ja ilmankosteus korkeana." },
+      { q: "Mikä on Brežicen linnan Ritarisali?", a: "Linnan 35 metriä pitkä sali on maalattu vuosina 1699–1703 Ovidiuksen Metamorfoosien kuvilla. Nykyään linnassa toimii Posavjen museo." },
+    ],
+    "Zasavska": [
+      { q: "Miksi Kum-vuorta sanotaan Zasavjen Triglaviksi?", a: "Se on Zasavjen kukkuloiden korkein huippu, 1 220 metriä, eli alueen oma katto. Huipulla on 1600-luvun Pyhän Agnesin kirkko ja lähetinmasto, ja retkipolut nousevat sinne muun muassa Trbovljesta." },
+      { q: "Mikä Hrastnikin lasitehtaassa on erikoista?", a: "Hrastnikin lasitehdas perustettiin 1860, ja se valmistaa yhä erikoislasia ja premium-pulloja vientiin kymmeniin maihin." },
+      { q: "Miten hiilikaupungista on tullut teknologiakaupunki?", a: "Trbovljessa toimii vuonna 2000 perustettu mittaustekniikkayhtiö Dewesoft, joka avasi 2016 Katapult-yrityskiihdyttämön entiseen tehdasrakennukseen." },
+    ],
+  },
 };
