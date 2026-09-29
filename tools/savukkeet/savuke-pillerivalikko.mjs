@@ -517,6 +517,28 @@ await testaaAsetteluJaAvaus('iPhone 393×852', 393, 852, { hampurilainenNakyy: f
 await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: true, onNahka: false });
 await testaaAsetteluJaAvaus('Kapein 360×740', 360, 740, { hampurilainenNakyy: false, onNahka: true });
 
+/*
+ * NAHKA SAAREN TAKANA (omistaja 29.9.2026 klo 17.5x). Chromium ei tunne
+ * iPhonen turva-aluetta, joten --turva-yla asetetaan käsin saarellisen
+ * iPhonen arvoon (59 px): palkki kasvaa täsmälleen sen verran, rivi
+ * (logo, pilleri) alkaa turva-alueen alta ja nahka alkaa ruudun yläreunasta.
+ */
+{
+  const { ctx, sivu } = await avaaPeli(393, 852);
+  const ilman = await mitat(sivu, '.topbar');
+  await sivu.addStyleTag({ content: ':root { --turva-yla: 59px !important; }' });
+  await sivu.waitForTimeout(200);
+  const kanssa = await mitat(sivu, '.topbar');
+  const logo = await mitat(sivu, '#brand-btn');
+  const pilleri = await mitat(sivu, '#turn-pill');
+  vaadi('Turva 59 px: palkki alkaa ruudun yläreunasta', Math.abs(kanssa.y) <= 1, JSON.stringify(kanssa));
+  vaadi('Turva 59 px: palkki kasvaa turva-alueen verran', Math.abs(kanssa.h - ilman.h - 59) <= 1,
+    `ilman ${ilman.h}, kanssa ${kanssa.h}`);
+  vaadi('Turva 59 px: logo ja pilleri turva-alueen alapuolella', logo.y >= 59 && pilleri.y >= 59,
+    `logo ${logo.y}, pilleri ${pilleri.y}`);
+  await ctx.close();
+}
+
 /* ══════════════════════════════════════════════════════════════════ */
 /* 3: LINSSIT — KAKSIVAIHEINEN NAPAUTUS                                */
 /* ══════════════════════════════════════════════════════════════════ */
