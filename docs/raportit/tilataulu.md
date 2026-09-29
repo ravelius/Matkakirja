@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 06:17:** Levy 82,75 Gi (86→83, hälytysraja 82; vain 0,75 Gi varaa). Muisti vapaana 39 % (57→39). Kuorma 127/127/106 (Evoto-camera-link 87 %, iOS-simulaattoriruntime mount 74 %), sim 1. CoreSimulator/Devices 79 Gt (isoimmat D0D2CD1E 11,3, FB234D08 8,6, 1572C658 7,4, FBBD41D7 7,3 Gt) = todennäköinen levyn kasvaja. Muut kasvajakansiot vakaat (DerivedData 5,63, Library 6,34, build 10,61 Gt). /private/tmp 36,0 Gt, wt/ 18 kohdetta 15 Gt (raja 20). Roolit: Linssiseppä, Laitetestaaja, Siirtoseppä, Linnanrakentaja käynnissä; kontekstit ennallaan, ei yli 70 %. Juna OK (46ffc622 käännetty 06:14, sisältää b13 75db27d3).
+
 **Päivitetty 06:06:** Levy 86 Gi (89→86, hälytysraja 82). Muisti 57 % vapaana (65→57). Kuorma 63/70/74, Unity käynnistyy 150 %, Evoto-camera-link 89 %. Sim 1 käynnissä. Kasvajakansiot vakaat (DerivedData 5,63, Library 6,35, build 10,62 Gt). /private/tmp 35,9 Gt (+1,2), wt/ 16 kohdetta 13 Gt. Kontekstit: Linssiseppä 2 58 %, Natiiviseppä 51 %, Linnanrakentaja 26 %; ei yli 70 %. Juna OK (b13 75db27d3 sisältyy e434161d).
 
 **Päivitetty 05:54:** Levy 89 Gi (88→89). Muisti OK (65 %). Kuorma laskee 18,8/36,8/69,9 (piikki 05.43 ohi; Evoto-camera-link 93 %, Xcode-käännös), sim 0, GPU-chrome 0. /private/tmp 34,7 Gt, wt/ 16 kohdetta 13 Gt. Kasvajakansiot vakaat (DerivedData 5,63, Library 6,35, build 10,58 Gt). Roolit: Natiivi-UI käynnissä, muut levossa. Kontekstit: Linnanrakentaja 25 %, Pelikoodari 50 %, Julkaisija 40 %, Natiivi-UI ~11 %; ei yli 70 %. Juna OK (b13 75db27d3 käännetty e434161d).
