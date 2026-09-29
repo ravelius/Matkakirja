@@ -630,7 +630,7 @@ const NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
  * työvaiheen hallussa. Yhden tiedoston versiossa erillistä linkkiä ei
  * ole, koska tyylit ovat jo sivun <style>-lohkossa.
  */
-function nostoLataaTyyli() {
+export function nostoLataaTyyli() {
   if (typeof document === 'undefined') return;
   if (document.getElementById(NOSTO_TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
