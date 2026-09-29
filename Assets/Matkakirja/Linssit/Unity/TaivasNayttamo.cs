@@ -7,7 +7,7 @@
 //   tähdet    BSC5 samalla meshillä ja varjostimella kuin ISS:n kyydissä (KyydinTaivas.RakennaTahdet, KyydinTahdet):
 //             sarakekierto ECI → horisontti paikallisesta tähtiajasta; näkyvyys auringon korkeudesta
 //   Kuu       KyydinKuu (vaihe auringon suunnasta, 0,52°)
-//   suunnat   P, I, E, L horisontissa (kartan fontti)
+//   suunnat   P, I, E, L horisontissa (kartan fontti), oletuksena pois (omistaja 29.9.2026, SuunnatNakyvissa)
 //   ERÄ 3     planeetat Merkurius–Saturnus (Ydin/Taivas/Planeetat, JPL) kirkkaina pisteinä nimineen (näkyvät jo hämärässä).
 //   WEBIN TÄHTITAIVAS (pelikoodari-tahtitaivas d9a9438a, Päätoimittaja 29.9.): aineisto Resources/Taivas/tahtitaivas.json
 //             (1 656 tähteä HR-numeroin, 88 tähdistöä ConstellationLines CC BY 4.0, suomenkieliset nimet). NYT / 1873: valosaaste
@@ -144,7 +144,7 @@ namespace Matkakirja.Natiivi
             viivaOlio = Olio("Kuviot", null, viivaMat, 1f);
             kuvionNimi = Nimio("", new Color(0.94f, 0.89f, 0.76f, 0.95f), 40);
             Debug.Log($"MATKAKIRJA tähtitaivas: {aineisto.Tahdet.Count} tähteä, {aineisto.Tahdistot.Count} tähdistöä");
-            Suunnat();
+            if (SuunnatNakyvissa) Suunnat();
             foreach (var o in oliot) o.SetActive(false);
         }
 
@@ -376,6 +376,13 @@ namespace Matkakirja.Natiivi
             t.transform.localRotation = Quaternion.LookRotation(d);
             var c = t.color; c.a = peitto; t.color = c;
         }
+
+        /// <summary>
+        /// Ilmansuuntien kirjaimet P, I, E, L horisontissa. POIS (omistaja 29.9.2026 klo 23.3x, iPad Rooma 1.0.57: "Poista linssiin
+        /// kuulumattomat", listassa "yksittäinen I vasemmassa reunassa"): näkymässä on kerrallaan yleensä yksi kirjain, joka näyttää
+        /// irralliselta. Näkyviin jäävät tähdet, planeetat nimineen, linssin napit ja tilarivi.
+        /// </summary>
+        public static bool SuunnatNakyvissa = false;
 
         void Suunnat()
         {

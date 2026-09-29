@@ -154,7 +154,14 @@ namespace Matkakirja.Natiivi
         void Kytke()
         {
             var r = Rekisteri;
-            if (ReferenceEquals(r, kuunneltu)) { Valitsin.PaivitaNappi(r); return; }
+            if (ReferenceEquals(r, kuunneltu))
+            {
+                Valitsin.PaivitaNappi(r);
+                // Epäonnistunut pelielementtien asetus (poikkeus kesken ketjun) toistetaan, kunnes se menee läpi.
+                var (p, v, ra, pa) = pelielementit;
+                if (pelielementitAsetettu != (p | kyytiPelkkaKartta, v, ra, pa)) PaivitaPelielementit();
+                return;
+            }
             if (kuunneltu != null) kuunneltu.Vaihtui -= Vaihtui;
             kuunneltu = r;
             if (r != null) r.Vaihtui += Vaihtui;
@@ -215,17 +222,32 @@ namespace Matkakirja.Natiivi
         /// <summary>ISS-kyyti Cupolassa tai avaruuskävelyllä: pelkkä kartta (IssKyytiNakyma.TilaMuuttui).</summary>
         bool kyytiPelkkaKartta;
 
+        /// <summary>
+        /// Viimeksi onnistuneesti asetetut pelielementit (Kytke tarkistaa 0,5 s välein). TÄHTITAIVAS 1.0.57 (omistaja 29.9.2026
+        /// klo 23.3x, iPad Rooma: "Poista linssiin kuulumattomat"): kartussi, nostot, kaupunkien nimet, Liiku ja päiväkirjan
+        /// pilleri jäivät taivaan päälle, vaikka linssi on porttilinssi. Ketju pysähtyy ensimmäiseen poikkeukseen (kartussi
+        /// ensin), joten jokainen elementti asetetaan erikseen, poikkeus kirjataan ja asetus toistetaan, kunnes kaikki onnistuvat.
+        /// </summary>
+        (bool portti, bool vertailu, bool radio, bool paalla)? pelielementitAsetettu;
+
         void PaivitaPelielementit()
         {
             var (portti, vertailu, radio, paalla) = pelielementit;
             portti |= kyytiPelkkaKartta;
+            bool ok = true;
+            void Aseta(string nimi, Action a)
+            {
+                try { a(); }
+                catch (Exception e) { ok = false; Debug.LogWarning($"MATKAKIRJA ui linssit: pelielementti {nimi}: {e.GetType().Name}: {e.Message}"); }
+            }
             // Radio: maan nimi piiloon linssin ajaksi (omistaja 28.9.2026: KREIKKA näkyi arktisellakin radion vieressä).
-            ui.Kartuscha.NaytaSallittu(!(portti || radio));
-            ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
-            ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio));
-            ui.OfflineTila.NaytaSallittu(!paalla);
-            ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
-            ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
+            Aseta("kartuscha", () => ui.Kartuscha.NaytaSallittu(!(portti || radio)));
+            Aseta("nostot", () => ui.Nostot.NaytaSallittu(!(portti || vertailu || radio)));
+            Aseta("maakuntanimet", () => ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio)));
+            Aseta("offline", () => ui.OfflineTila.NaytaSallittu(!paalla));
+            Aseta("matkavalinta", () => ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio)));
+            Aseta("matkakirja", () => ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio)));
+            pelielementitAsetettu = ok ? (portti, vertailu, radio, paalla) : ((bool, bool, bool, bool)?)null;
         }
 
         void Vaihtui(ILinssi linssi)
