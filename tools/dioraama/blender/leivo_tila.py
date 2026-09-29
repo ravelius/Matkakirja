@@ -151,7 +151,13 @@ def pbr(nimi, vari, karheus=0.8, metalli=0.0, kuvio='kohina', mittakaava=4.0, ku
     nt.links.new(arvo, kb.inputs['Height'])
     nt.links.new(kb.outputs['Normal'], b.inputs['Normal'])
     if hehku > 0:
-        b.inputs['Emission Color'].default_value = (1.0, 0.35, 0.08, 1)
+        # Hiillos: tuhkan seassa hehkuvia pisteitä (tasainen hehku paloi AgX:ssä valkoiseksi laataksi).
+        hk = solmu(nt, 'ShaderNodeTexNoise', -600, -400); hk.inputs['Scale'].default_value = mittakaava * 1.5
+        hk.inputs['Detail'].default_value = 6; nt.links.new(koord.outputs['Object'], hk.inputs['Vector'])
+        hr = solmu(nt, 'ShaderNodeValToRGB', -300, -400)
+        hr.color_ramp.elements[0].position = 0.56; hr.color_ramp.elements[0].color = (0, 0, 0, 1)
+        hr.color_ramp.elements[1].position = 0.8; hr.color_ramp.elements[1].color = (1.0, 0.16, 0.02, 1)
+        nt.links.new(hk.outputs['Fac'], hr.inputs['Fac']); nt.links.new(hr.outputs['Color'], b.inputs['Emission Color'])
         b.inputs['Emission Strength'].default_value = hehku
     return m
 
@@ -177,7 +183,7 @@ MATERIAALIT = {
     'kala': dict(vari=srgb('#9a9a8e'), karheus=0.4, mittakaava=20),
     'vihannes': dict(vari=srgb('#b98a4a'), karheus=0.6, mittakaava=15),
     'vaha': dict(vari=srgb('#e8dcc0'), karheus=0.5, mittakaava=10),
-    'hiillos': dict(vari=srgb('#3a1a0a'), karheus=1.0, hehku=1.5, mittakaava=8),
+    'hiillos': dict(vari=srgb('#2a2522'), karheus=1.0, hehku=2.5, mittakaava=8, vaihtelu=0.4),
     'katto': dict(vari=srgb('#5c5652'), kuvio='kivi', mittakaava=4, kumpu=0.2),
     'tiili': dict(vari=srgb('#8c5a45'), kuvio='kivi', mittakaava=6, kumpu=0.2),
     'kallio': dict(vari=srgb('#6d6458'), kuvio='kivi', mittakaava=0.6, kumpu=0.5),
