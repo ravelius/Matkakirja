@@ -9163,3 +9163,7 @@ Omistaja 29.9. klo 12.1x sanatarkasti: "kun viikkolimit 97%, lopeta sessiot ja k
 ## OMISTAJA: KEITTIÖ B + TUMMEMPI VALO; PARITEETTIPÄÄTÖKSET (29.9.2026 klo 12.20)
 
 (1) Linnanrakentajan keittiö v1 A|B (simulaattori a57ce34e: aurinko ja varjot, tulen valo, 3D-pienoisfiguurit, 3D-liekki, 70 esinettä, kaarilennot, äänet). Omistaja kortilla 29.9. klo 12.3x: 'B + tummempi valo' → jatketaan Codexin maalatuilla pinnoilla, valaistus referenssikeittiön tapaan (tummempi yleisvalo, tuli/kynttilät/ikkunan aurinko tekevät tunnelman, syvät varjot), liekin hehkua pienennetään. (2) Pariteetti: pilleri molemmilla 'rahat · Päivä N, vuorokaudenaika', N/80 pois natiivista (omistaja poisti webistä 16.8.); saapumisen valokuvakortti webissä natiivin mukaan ilman polaroid-kehystä ja kuvatekstiä (omistajan löydös 138, build 16); ratas ei ero (kehittäjätila).
+
+## OMISTAJA: JOKIEN TÄYSI POLTTO 2026-09-30-POHJA (29.9.2026 klo 12.25)
+
+Karttasepän jokikoe (GEOGLOWS-joet --joet-lisa, #3614: Wienissä yksi Tonava, Tiberin silmukka korjattu, Moskva ja Kemijoki uusina; kuvaparit pyramidi-poltto/joet-koe-20260929/kuvaparit/) näytetty omistajalle. Omistaja kortilla 29.9. klo 12.2x: 'Aloita poltto' → täysi poltto 2026-09-30-pohja (+viivat, joet molempiin kerroksiin, ei --piirit) + pallo, nice 15, yön yli; vienti ja osoitin erillisellä luvalla aamulla. Poltto saa jatkua myös viikkokiintiön 97 %:n pysäytyksen yli (tilinvaihto).
