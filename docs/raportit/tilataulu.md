@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 17:21:** Levy 87 Gi (laskussa 97→93→87 Gi 17:00→17:20, seurataan; raja 80), muisti 59 % vapaa (taso 1), kuorma 38/147/202, sim 0, NAS ok. Viikko 4 % (5 h 14 %). Konteksti: Natiivi-UI 32 %, Linnanrakentaja 26 %, Laitetestaaja 22 %, Siirtoseppä 20 %, muut 10–19 %. Kaikki 12 roolia käynnissä. Juna: b13 ddf90f51 ennallaan. Posti: Codexin puuradio v3 -viesti ilmoitettu Päätoimittajalle.
+
 **Valvontalinjaus 29.9. (Päätoimittaja, omistajan linjaus 06.53 "KONE KOKONAAN ROOLEILLA"):** päivällä enintään 3 simulaattoria, hälytys vasta kun vapaa muisti < 25 %. Normaalit rajat (≤1 sim) palaavat 30.9. klo 00.
 
 **Päivitetty 17:10:** Levy 93 Gi, muisti taso 2 (warn, ilmoitettu Päätoimittajalle), kuorma 54/270/213 (käynnistyspiikki), sim 2 booted (ilmoitettu), GPU-chrome 0, NAS ok. Viikko 2 % (5 h 7 %). Konteksti: Natiivi-UI 22 %, muut 9–16 %. Kaikki 12 roolia käynnissä uusilla id:illä (ks. 17:00-rivi). Juna: b13 ddf90f51 ennallaan. Posti: ei uutta.
