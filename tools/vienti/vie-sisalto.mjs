@@ -237,7 +237,7 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        (js/packs/hahmotelma-{srb,alb,mkd,mne,mda,blr}.js) — kuusi uutta moduulia
  *        manifestissa (Fable 28.9.2026, VAIN EUROOPPA -karttatyö).
  */
-export const SKEEMAVERSIO_TARKKA = '1.57';
+export const SKEEMAVERSIO_TARKKA = '1.58';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
