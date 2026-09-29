@@ -515,9 +515,12 @@ namespace Matkakirja.Natiivi
         {
             if (auki || iso == null) return;
             auki = true;
+            float h0 = kortti.layout.height;
+            Liike?.Pause(); Vapauta();
             kortti.AddToClassList("mk-auki");
             sisus.style.display = DisplayStyle.Flex;
             Asettele();
+            Avausliike(h0);
             AnimoiVertailut();
             if (aalto != null) kortti.schedule.Execute(() => { if (aalto != null) aalto.Nakyy = Rakenne.Naytetaan(lippu); }); // löydös 144
             NollaaNimenSovitus(); // löydös 143b: avatun koko eri, sovitus uudelleen
@@ -560,10 +563,82 @@ namespace Matkakirja.Natiivi
             NollaaNimenSovitus(); // löydös 143b
             sijatAuki = false;
             tilastot.RemoveFromClassList("mk-sijat-auki");
-            kortti.RemoveFromClassList("mk-auki");
-            sisus.style.display = DisplayStyle.None;
-            Asettele();
+            // Sulku samaa reittiä: pieni muoto asetetaan vasta liikkeen lopussa (web kartuschanLiike).
+            Sulkuliike(() =>
+            {
+                kortti.RemoveFromClassList("mk-auki");
+                sisus.style.display = DisplayStyle.None;
+                Asettele();
+            });
             AukiMuuttui?.Invoke(false);
+        }
+
+        // AVAUS JA SULKU ANIMOIDEN (omistaja 29.9.2026, Raamattu PR #3602; web js/pallolauta/maapaneeli.js kartuschanLiike,
+        // Siirtoseppä PR #3605): kartuscha kasvaa nimilaatasta ilman mittakaavaa (teksti ei veny). Webissä paperi paljastuu
+        // clip-pathilla pienestä laatikosta isoon; UI Toolkitissa ei ole clip-pathia, joten kortti rajaa (overflow hidden) ja
+        // sen korkeus liukuu nimilaatasta täyteen, sisältö asettuu jo lopulliseen leveyteensä. Avaus 220 ms
+        // cubic-bezier(0.22, 0.9, 0.24, 1), uudet osat (sisus) läpinäkyvyys 0 → 1 180 ms (0, 0, 0.2, 1); sulku 200 ms
+        // (0.4, 0, 1, 1) osat 1 → 0. Uusi napautus kesken liikkeen perii sen. Pieni liike: heti.
+        IVisualElementScheduledItem Liike;
+
+        void Avausliike(float h0)
+        {
+            if (LinssiUi.VahennettyLiike() || h0 <= 0f || float.IsNaN(h0)) return;
+            kortti.style.overflow = Overflow.Hidden;
+            kortti.style.height = h0;
+            sisus.style.flexShrink = 0;
+            sisus.style.opacity = 0f;
+            EventCallback<GeometryChangedEvent> kerran = null;
+            kerran = _ =>
+            {
+                sisus.UnregisterCallback(kerran);
+                if (!auki) return;
+                float h1 = sisus.layout.yMax + kortti.resolvedStyle.paddingBottom + kortti.resolvedStyle.borderBottomWidth;
+                Aja(h0, h1, Ponnahdus.AukiS, 0f, 1f, Ponnahdus.AukiLapinakyvyysS, true, null);
+            };
+            sisus.RegisterCallback(kerran);
+        }
+
+        void Sulkuliike(Action lopuksi)
+        {
+            float h1 = kortti.layout.height;
+            if (LinssiUi.VahennettyLiike() || h1 <= 0f || float.IsNaN(h1) || sisus.resolvedStyle.display == DisplayStyle.None)
+            {
+                Liike?.Pause(); Vapauta(); lopuksi(); return;
+            }
+            // Kohde: nimilaatan alareuna (sisuksen yläreuna), jonka jälkeen pieni muoto asetetaan.
+            float h0 = Mathf.Max(0f, sisus.layout.yMin);
+            kortti.style.overflow = Overflow.Hidden;
+            sisus.style.flexShrink = 0;
+            Aja(h1, h0, Ponnahdus.KiinniS, sisus.resolvedStyle.opacity, 0f, Ponnahdus.KiinniS, false, lopuksi);
+        }
+
+        void Aja(float h0, float h1, float kesto, float a0, float a1, float haiveKesto, bool avaus, Action lopuksi)
+        {
+            Liike?.Pause();
+            float t = 0f, edellinen = Time.unscaledTime;
+            Liike = kortti.schedule.Execute(() =>
+            {
+                float nyt = Time.unscaledTime;
+                t += Mathf.Min(nyt - edellinen, 0.05f); // raskas ruutu hidastaa, ei hyppää (Ponnahdus)
+                edellinen = nyt;
+                float k = avaus ? Ponnahdus.Kaari(0.22f, 0.9f, 0.24f, 1f, t / kesto) : Ponnahdus.Kaari(0.4f, 0f, 1f, 1f, t / kesto);
+                float kh = avaus ? Ponnahdus.Kaari(0f, 0f, 0.2f, 1f, t / haiveKesto) : Ponnahdus.Kaari(0.4f, 0f, 1f, 1f, t / haiveKesto);
+                kortti.style.height = Mathf.Lerp(h0, h1, k);
+                sisus.style.opacity = Mathf.Lerp(a0, a1, kh);
+                if (t < Mathf.Max(kesto, haiveKesto)) return;
+                Liike.Pause();
+                Vapauta();
+                lopuksi?.Invoke();
+            }).Every(0);
+        }
+
+        void Vapauta()
+        {
+            kortti.style.height = StyleKeyword.Null;
+            kortti.style.overflow = StyleKeyword.Null;
+            sisus.style.flexShrink = StyleKeyword.Null;
+            sisus.style.opacity = StyleKeyword.Null;
         }
 
         /// <summary>Web: kartan kosketus sulkee avatun kartuschan.</summary>
