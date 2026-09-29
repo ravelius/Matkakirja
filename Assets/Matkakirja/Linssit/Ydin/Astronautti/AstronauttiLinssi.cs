@@ -177,7 +177,10 @@ namespace Matkakirja.Linssit.Astronautti
                 y.AjaKamera(new Nakyma(iss.Lat, iss.Lon, avaus), 0f);
             }
             else y.AjaKamera(new Nakyma(Math.Max(-55, Math.Min(55, talteen.Lat)), talteen.Lon, avaus), 0f);
-            y.ZoomiKatto(avaus * Astronauttimatikka.ZoominKauin);
+            // Zoomikaista (web zoomirajat: säteinä max(0,1; 0,084 × avaus) … 1,3 × avaus): lähin noin 820–2 200 km, kaukaisin koko
+            // pallon taakse.
+            var kaista = Astronauttimatikka.Zoomirajat(avaus / MaanSade);
+            y.ZoomiKatto(kaista.max * MaanSade, kaista.min * MaanSade);
             nakyma.Kohteet(aineisto.Kohteet);
             nakyma.Tahdet(1);
         }

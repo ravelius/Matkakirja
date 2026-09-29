@@ -146,6 +146,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(ajoja, y.Loki.Count(x => x == "ajo"), "ote: ei enää kamera-ajoja");
         }
 
+        [Testi] static void ZoomikaistaKutenWebissa()
+        {
+            // Web zoomirajat: säteinä max(0,1; 0,084 × avaus) … 1,3 × avaus.
+            var (l, y, _) = Luo();
+            l.Avaa(y);
+            double avaus = y.KokoPallonKorkeus, R = AstronauttiLinssi.MaanSade;
+            Oleta.Tosi(Math.Abs(y.Katto.Value - avaus * 1.3) < 1, $"katto {y.Katto}");
+            Oleta.Tosi(Math.Abs(y.Lattia.Value - Math.Max(0.1 * R, 0.084 * avaus)) < 1, $"lattia {y.Lattia}");
+            l.Sulje();
+            Oleta.Tosi(y.Katto == null && y.Lattia == null, "sulku palauttaa pelin rajat");
+        }
+
         [Testi] static void IssSeurantaPaattyyKuvaanJaKyytiin()
         {
             var (l, y, _) = Luo();

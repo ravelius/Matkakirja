@@ -550,7 +550,7 @@ namespace Matkakirja
                 PorttiAika = 0;
                 PorttiKierto(0);
             }
-            if (korkeus <= 0.0) korkeus = MaxKorkeus();
+            if (korkeus <= 0.0) korkeus = KokoPallonKorkeus();
             if (Application.isPlaying)
             {
                 PaivitaPortti(Time.unscaledDeltaTime);
@@ -887,10 +887,28 @@ namespace Matkakirja
         }
 
         /// <summary>Korkeus, jolla koko pallo mahtuu kuvan kapeampaan suuntaan.</summary>
-        public double MaxKorkeus()
+        public double KokoPallonKorkeus()
         {
             double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
             return r / math.sin(PuoliKulma() * taytto) - r;
+        }
+
+        /// <summary>Loitonnuksen yläraja: linssin katto (LinssinRajat, saa ylittää koko pallon), muuten koko pallo.</summary>
+        public double MaxKorkeus() => linssinKatto ?? KokoPallonKorkeus();
+
+        double? linssinLattia, linssinKatto;
+
+        /// <summary>
+        /// LINSSIN ZOOMIRAJAT (Linssiseppä 29.9.2026, Natiivisepän rajapinta; web lauta.zoomirajat): lattia nostaa lähimmän
+        /// korkeuden (MinKorkeus = max(oma, lattia)), katto korvaa ylärajan (MaxKorkeus, EleKatto; maan rajat eivät ole silloin
+        /// voimassa). Metreinä; null = pelin oma sääntö. Nykyinen korkeus rajataan heti uuteen kaistaan. LinssiOhjain palauttaa
+        /// (null, null) linssin jokaisella sulkupolulla.
+        /// </summary>
+        public void LinssinRajat(double? lattiaM, double? kattoM)
+        {
+            linssinLattia = lattiaM > 0 ? lattiaM : null;
+            linssinKatto = kattoM > 0 ? kattoM : null;
+            if (korkeus > 0) korkeus = math.clamp(korkeus, MinKorkeus(), MaxKorkeus());
         }
 
         /// <summary>
@@ -905,7 +923,9 @@ namespace Matkakirja
             double kuvasuhde = kamera != null ? kamera.aspect : 1.0;
             bool puhelin = Screen.width / (double)Kerroin <= puhelimenRuutuPt && Kerroin >= 2f;
             double asteet = lahinLeveys * 360.0 / 12000.0 / (puhelin ? math.max(1.0, puhelimenLahizoomi) : 1.0);
-            return math.radians(asteet) * r / (2.0 * tanPysty * math.max(0.01, kuvasuhde));
+            double oma = math.radians(asteet) * r / (2.0 * tanPysty * math.max(0.01, kuvasuhde));
+            // Linssin lattia (LinssinRajat) nostaa lähintä korkeutta, ei koskaan katon yli.
+            return linssinLattia.HasValue ? math.min(math.max(oma, linssinLattia.Value), MaxKorkeus() * 0.95) : oma;
         }
 
         /// <summary>Korkeus, jolla kapeampi suunta näyttää annetun kaaren (asteina).</summary>
@@ -1200,7 +1220,7 @@ namespace Matkakirja
         }
 
         /// <summary>Eleen loitonnuksen katto metreinä: maan katto, jos rajat ovat voimassa, muuten koko pallo.</summary>
-        double EleKatto() => RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
+        double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
 
         /// <summary>Asettaa maan rajat saapumisnäkymästä (AjaSaapumisnakymaan) tai poistaa ne (laatikoton saapuminen).</summary>
         void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng)
@@ -1409,7 +1429,7 @@ namespace Matkakirja
             }
             kosketettu = true;
             liuku = 0;
-            if (korkeus <= 0.0) korkeus = MaxKorkeus();
+            if (korkeus <= 0.0) korkeus = KokoPallonKorkeus();
             double suunt = pohjoiseen ? 0.0 : suuntima;
             double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, 0.0));
             Panorointi.Projektio f = (double p, double l, out double x, out double y) =>
@@ -1725,7 +1745,7 @@ namespace Matkakirja
                 liuku = 0;
             }
             else viimeKelvollinen = (leveys, pituus, korkeus, kallistus, suuntima, katseKorkeus);
-            if (korkeus <= 0.0) korkeus = MaxKorkeus();
+            if (korkeus <= 0.0) korkeus = KokoPallonKorkeus();
             var a = LaskeAsento(pituus, leveys, suuntima);
             double kaytetty = a.kaytetty, etaisyys = a.etaisyys, maasto = a.maasto;
             KaytettyKallistus = kaytetty;

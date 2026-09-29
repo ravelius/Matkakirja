@@ -209,6 +209,8 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
+            // Zoomikaista pois aina, kun mikään linssi ei ole auki (linssin oma Sulje palauttaa sen myös vaihdossa).
+            rekisteri.Vaihtui += l => { if (l == null) kierto?.LinssinRajat(null, null); };
             // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.
             LinssienEsilataaja.Kytke(this, rekisteri);
             // Syntetisoidut tehosteet (ESILATAUSPOLITIIKKA kohta 1: efektiäänet ilman verkkoa) taustasäikeessä heti.
@@ -1137,7 +1139,7 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void OnDisable() { ViimeisteleJalkiajot(); PalautaKuvaus(); }
+        void OnDisable() { ViimeisteleJalkiajot(); PalautaKuvaus(); kierto?.LinssinRajat(null, null); }
 
         void OnDestroy()
         {
@@ -1172,7 +1174,8 @@ namespace Matkakirja.Natiivi
         /// joten topografian pyyntö ei muuta mitään. Tiukempi katto tarvitaan
         /// vasta, jos jokin linssi rajaa loitonnusta; silloin PalloKierto saa asettimen.
         /// </summary>
-        public void ZoomiKatto(double? maxKorkeus) { }
+        /// <summary>Linssin zoomikaista PalloKierrolle (LinssinRajat, Natiivisepän rajapinta 29.9.2026); null = pelin oma sääntö.</summary>
+        public void ZoomiKatto(double? maxKorkeus, double? minKorkeus = null) => kierto?.LinssinRajat(minKorkeus, maxKorkeus);
 
         public void KameraAvaruuteen(double lat, double lon, double pallonSateita)
         {
@@ -1180,7 +1183,7 @@ namespace Matkakirja.Natiivi
             kierto.AsetaKaukaa(lat, lon, pallonSateita * CesiumWgs84Ellipsoid.GetMaximumRadius());
         }
 
-        public double KokoPallonKorkeus => kierto.MaxKorkeus();
+        public double KokoPallonKorkeus => kierto.KokoPallonKorkeus();
 
         /// <summary>
         /// PalloKierto.KorkeusKaarelle mittaa kapeamman suunnan kaaren. Pystyruudulla
@@ -1397,6 +1400,13 @@ namespace Matkakirja.Natiivi
                     var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
                     Kirjaa($"iss: {IssTleLataaja.Tila()}, alapiste {p.Lat:F2}, {p.Lon:F2} ({utc:HH:mm:ss} UTC)");
+                }
+                else if (osat[0] == "kaista")
+                {
+                    // Zoomikaista (LinssinRajat): "kaista" kertoo pallon lähimmän ja kaukaisimman korkeuden sekä koko pallon.
+                    Kirjaa(kierto == null ? "kaista: ei palloa"
+                        : $"kaista: {kierto.MinKorkeus() / 1000:F0}–{kierto.MaxKorkeus() / 1000:F0} km, koko pallo {kierto.KokoPallonKorkeus() / 1000:F0} km, "
+                        + $"nyt {kierto.korkeus / 1000:F0} km, linssi {rekisteri?.Auki?.Tiedot.Id ?? "-"}");
                 }
                 else if (osat[0] == "astro" && osat.Length > 1)
                 {
