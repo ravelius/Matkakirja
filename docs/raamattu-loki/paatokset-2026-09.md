@@ -9271,3 +9271,7 @@ Omistaja 29.9.2026 kuittasi jokikokeen d kuvaparit ("ok"): viivataso px, leveys 
 ## KORJAUS: JOKIKOE D EI VIELÄ HYVÄKSYTTY; CC0 JA CC BY HYVÄKSYTTY (29.9.2026 klo 19.32)
 
 Omistaja 29.9.2026: "ei kun ok oli aiempaan kysymykseesi johon pyysit ok." Edellinen kirjaus (JOKIKOE D HYVÄKSYTTY) oli Päätoimittajan virhetulkinta: jokikoe d odottaa yhä omistajan arviota, täyttä polttoa ei käynnistetä. Omistajan OK koski lisenssejä: Poly Havenin CC0-tekstuurit ja -mallit sekä Senaatti-kiinteistöjen fotogrammetriamalli (Sketchfab, CC BY 4.0) hyväksytty Olavinlinnaan, lähde ja lisenssi kirjataan jokaisesta tiedostosta.
+
+## OMISTAJA: JOKIEN POLTOT ODOTTAMAAN (29.9.2026 klo 19.32)
+
+Omistaja 29.9.2026: "jätä jokien poltot odottamaan." Kaikki jokipoltot pidossa (täysi 2026-09-30-pohja ja koepoltot); jokikoe d:n koodi talteen haarassa karttaseppa-joet-rauha. Tuotannossa pysyy 27-pohja. Karttaseppä siirtyy maan raja mereen ilman saaria -tehtävään.
