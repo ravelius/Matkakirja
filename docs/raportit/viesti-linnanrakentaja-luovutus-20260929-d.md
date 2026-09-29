@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 29.9.2026 ilta (-d): erä 3 "linna auki" työn alla
+# Linnanrakentajan luovutus 29.9.2026 ilta (-d): Olavinlinna UUDELLA TAVALLA (Blender + fotogrammetria)
 
 Rooli: **Linnanrakentaja (Opus, max)**, Poikkileikkaus-linssi (id `poikkileikkaus`, moottori dioraama, hiomassa).
 Päätoimittaja johtaa (tilinvaihdon jälkeen session nimi "Päätoimittaja (Opus, xhigh)"; vertaisille viesti NIMELLÄ,
@@ -47,3 +47,27 @@ haara `linnanrakentaja/linna-3` = f5877128 (74e0cd0e + master f3d7b408), natiivi
 3. Omistajan palaute → korjaukset → äänitilauksen vapautus (Pelikoodari) → PR pelin repoon (Julkaisijan juna) →
    merge-pyyntö Natiivisepälle (linnanrakentaja/linna-3).
 4. Erä 3b: linna aukeaa (kannet), ympäristön elämä, puheäänet, Codexin uudet pinnat, liikkeet.
+
+## SUUNNANMUUTOS 29.9. klo 19.2x (omistaja Päätoimittajan kautta) — LUE TÄMÄ ENSIN
+
+- Linna tehdään VAIN natiiviin (ei web/three.js-pääputkea). Uusi tapa: ULKOKUORI = Senaatin fotogrammetria
+  (CC BY 4.0, lähde `/Users/Shared/Claude/proto-3d/_lahteet/olavinlinna-senaatti/`, tekijämaininta tekijätietoihin),
+  SISÄTILAT Blenderissä PBR:llä ja Cycles-leivotulla valolla, Unity: Siirtoseppä (haara siirtoseppa/linna-valo:
+  leivottu varjostin, liekit+savu liekki:-tyhjistä, ikkunakeilat, kuoren lataus + laatutasot + kehittäjävalitsin).
+- Laatutasot (omistaja 19.4x): HUIPPU 1,35 M + 4k (A17 Pro+, M-iPadit, ämpäristä), NORMAALI 400 k + 4k, KEVYT 150 k + 2k.
+- Assetit: `/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-blender/` (LUEMINUT.md): leivottu keittio.glb +
+  valot/keittio(.jpg, -2k.jpg), ulkokuori_{huippu,normaali,kevyt}.glb.
+- Skriptit pelin repossa `tools/dioraama/blender/` (haara linnanrakentaja-linna-3): leivo_tila.py (--renderoi,
+  --leivo, --tarkista), ulkokuori.py, kuori_kuva.py. Ajo: `nice -n 15 /Applications/Blender.app/Contents/MacOS/Blender -b -P …`.
+- Tekstuurit: Poly Haven CC0 (Päätoimittaja hyväksyi), `/Users/Shared/Claude/proto-3d/_lahteet/polyhaven/` + manifest.json.
+- Kuvapari omistajalle: `docs/raportit/kuvat/linnanrakentaja-era3/kuvapari-nyt-vs-huippu.jpg` ja keittio-blender-leivottu.jpg.
+- KUORMA: enintään 2 selain-/rakennus-/Blender-ajoa kerrallaan, nice 15; esikatselu Metal-GPU:lla; kevyt tila = tauko.
+- Erä 3:n proseduraaliset 7 tilaa (cde916e74) jäävät varalle; speksit, faktat ja tekstit käytetään uudelleen.
+- Äänitilaus PERUTTU (omistaja), uusi tilaus vasta kun omistaja on nähnyt linnan.
+
+## Seuraavaksi (uusi tapa)
+1. Sisätilojen TODELLISET paikat kuoren sisällä (yläkuva: päälinna lännessä, Kello- ja Kirkkotorni pohjoisessa,
+   Eerikin tornin raunio keskellä; itäisin katettu torni = Kijlin torni 1604) + leikkausikkuna kuoreen (Unity-varjostin,
+   speksi Siirtosepälle) → tilat uudelleen Blenderissä oikeaan paikkaan.
+2. Siivoa kuoresta 2021-restauroinnin nosturi/telineet/kontit.
+3. Laitekuvapari HUIPPU vs nykyinen, kun Siirtosepän kuori latautuu natiivissa.
