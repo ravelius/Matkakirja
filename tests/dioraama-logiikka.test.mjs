@@ -21,7 +21,7 @@ import { readFileSync } from 'node:fs';
 
 import {
   smootherstep, asentoSijainti, siirtymanKesto, siirtymaAsento, pelaajanAsento,
-  rajaaKierto, leijunta, OLETUS_KIERTO_TILA, OLETUS_KIERTO_YLEIS,
+  rajaaKierto, kiertoRajat, leijunta, OLETUS_KIERTO_TILA, OLETUS_KIERTO_YLEIS,
 } from '../js/dioraama/kamera.js';
 import { tilanTaso, tilanTasoJaEdellinen, hahmonTila, aanenVoimakkuus } from '../js/dioraama/heratys.js';
 import { askeleenKesto, kasikirjoitusHetkella, puluLento, seuraavaKiertueella } from '../js/dioraama/ohjaaja.js';
@@ -445,4 +445,18 @@ test('seuraavaKiertueella: null/massa → ensimmäinen; kiertueella → seuraava
   assert.equal(seuraavaKiertueella(r, 'b'), 'c');
   assert.equal(seuraavaKiertueella(r, 'c'), null);
   assert.equal(seuraavaKiertueella(r, 'ei-kiertueella'), 'a');
+});
+
+test('kiertoRajat: datamuoto { atsimuutti: [a, b], korkeus, etaisyys } → sisäinen muoto; null = vapaa; puuttuva → oletus', () => {
+  assert.deepEqual(kiertoRajat({ atsimuutti: [-40, 40], korkeus: [10, 50], etaisyys: [0.6, 1.4] }, OLETUS_KIERTO_TILA), {
+    atsimuuttiMin: -40, atsimuuttiMax: 40, korkeusMin: 10, korkeusMax: 50, etaisyysMin: 0.6, etaisyysMax: 1.4,
+  });
+  const vapaa = kiertoRajat({ atsimuutti: null }, OLETUS_KIERTO_TILA);
+  assert.equal(vapaa.atsimuuttiMin, null);
+  assert.equal(vapaa.korkeusMin, OLETUS_KIERTO_TILA.korkeusMin);
+  assert.deepEqual(kiertoRajat(undefined, OLETUS_KIERTO_YLEIS), OLETUS_KIERTO_YLEIS);
+  assert.equal(kiertoRajat({ atsimuutti: [-30, 30] }, OLETUS_KIERTO_TILA).etaisyysMax, OLETUS_KIERTO_TILA.etaisyysMax);
+  // rajaaKierto käyttää datamuotoa: ±40° raja atsimuutille.
+  const perus = { kohde: [0, 0, 0], atsimuutti: 160, korkeus: 20, etaisyys: 10, fov: 38, aukko: 0.8, kierto: { atsimuutti: [-40, 40] } };
+  assert.equal(rajaaKierto(perus, { ...perus, atsimuutti: 260 }).atsimuutti, 200);
 });

@@ -153,6 +153,23 @@ export function pelaajanAsento(p, { da, dk, zoom }) {
 }
 
 /**
+ * kiertoRajat(kierto, oletus): lähdedatan kierto-kenttä (era2b kohta 1: `{ atsimuutti: [a, b] | null, korkeus:
+ * [min, max], etaisyys: [kmin, kmax] }`) sisäiseen muotoon `{ atsimuuttiMin/Max, korkeusMin/Max,
+ * etaisyysMin/Max }`. Hyväksyy myös valmiin sisäisen muodon sellaisenaan (C#:n DioraamaData jäsentää saman
+ * datamuodon). Puuttuva kierto tai puuttuva kenttä → oletus; `atsimuutti: null` = vapaa 360° kierto.
+ */
+export function kiertoRajat(kierto, oletus) {
+  if (!kierto) return oletus;
+  if ('atsimuuttiMin' in kierto || 'korkeusMin' in kierto) return { ...oletus, ...kierto };
+  const pari = (v, a, b) => (Array.isArray(v) ? [v[0], v[1]] : [a, b]);
+  const [atsimuuttiMin, atsimuuttiMax] = kierto.atsimuutti === null
+    ? [null, null] : pari(kierto.atsimuutti, oletus.atsimuuttiMin, oletus.atsimuuttiMax);
+  const [korkeusMin, korkeusMax] = pari(kierto.korkeus, oletus.korkeusMin, oletus.korkeusMax);
+  const [etaisyysMin, etaisyysMax] = pari(kierto.etaisyys, oletus.etaisyysMin, oletus.etaisyysMax);
+  return { atsimuuttiMin, atsimuuttiMax, korkeusMin, korkeusMax, etaisyysMin, etaisyysMax };
+}
+
+/**
  * rajaaKierto(perus, asento, yleisnakyma = false): rajaa PELAAJAN asennon (esim. pelaajanAsento-funktion
  * tulos) perusasentoon suhteutettuihin kierto-rajoihin (kohta 1). Rajat luetaan perus.kierto-kentästä; jos
  * sitä ei ole (asennolla ei ole kierto-kenttää lähteessä), käytetään speksin oletusta — OLETUS_KIERTO_YLEIS
@@ -161,7 +178,7 @@ export function pelaajanAsento(p, { da, dk, zoom }) {
  * korkeus rajataan absoluuttisena, etaisyys perusasennon etäisyyden kertoimena (kerroinMin/Max · perus.etaisyys).
  */
 export function rajaaKierto(perus, asento, yleisnakyma = false) {
-  const k = perus.kierto || (yleisnakyma ? OLETUS_KIERTO_YLEIS : OLETUS_KIERTO_TILA);
+  const k = kiertoRajat(perus.kierto, yleisnakyma ? OLETUS_KIERTO_YLEIS : OLETUS_KIERTO_TILA);
   let atsimuutti = asento.atsimuutti;
   if (k.atsimuuttiMin != null && k.atsimuuttiMax != null) {
     const ero = rajaa(kiertoero(perus.atsimuutti, asento.atsimuutti), k.atsimuuttiMin, k.atsimuuttiMax);
