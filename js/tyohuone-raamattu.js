@@ -1217,7 +1217,17 @@ export const RAAMATTU = {
           + 'Fable tekee tallaiset animaatiot OMA-ALOITTEISESTI aina kun '
           + 'jokin ruudulla muuttuu, vaikka omistaja ei niita pyytaisi. '
           + 'Poikkeus pysyy: kartan siirtymissa elavat animaatiot on '
-          + 'kytketty pois suorituskyvyn takia (ks. Fokusmoodi).',
+          + 'kytketty pois suorituskyvyn takia (ks. Fokusmoodi). '
+          + 'AVAUS JA SULKU AINA ANIMOIDEN (omistaja 29.9.2026, maakuntalapusta, '
+          + 'sanatarkasti: "Voiko lapun aukeamisen ja sulkeutumisen animoida? Ja '
+          + 'jatkossa myös kaikki vastaavat. Kirjaa raamattuun"): jokainen lappu, '
+          + 'kortti, paneeli, selite ja pop-up avautuu kasvaen ja häivyttyen esiin '
+          + 'sen avanneen napin tai kohdan suunnasta ja sulkeutuu samaa reittiä '
+          + 'takaisin (myös ✕:llä, ohinapautuksella ja uuden avautuessa), '
+          + '200–250 ms, pehmeä jarrutus sisään ja kevyt kiihdytys ulos; webissä '
+          + 'ja natiivissa samat kestot (web on malli). Koko ja paikka pysyvät '
+          + 'avattuna kiinteinä (omistaja 29.9.2026: "Ikkunan koko ei saa muuttua kun '
+          + 'noita klikkaa auki") — sisältö vierittyy kortin sisällä.',
         'YKSI SANASTO KAIKILLE KELLUVILLE PINNOILLE: pop-up kootaan '
           + 'aina samoista paloista — ylärivi (pikkuotsake, esim. '
           + 'KOHTAAMINEN tai symboli+luokka), otsikko, leipä, '
