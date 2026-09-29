@@ -171,7 +171,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2406';
+const APP_VERSION = '2026-09-21.2407';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1196,51 +1196,120 @@ naytaLauta();
 
 const menuBtn = document.getElementById('menu-btn');
 const paavalikko = document.getElementById('paavalikko');
+const turnPillNappi = document.getElementById('turn-pill');
 
-// Avaus ja sulku animoiden napin kulmasta (omistaja 29.9.2026, js/avausanimaatio.js).
-const suljeValikko = () => {
-  if (paavalikko.hidden) return;
-  haamuSulku(paavalikko, menuBtn);
-  paavalikko.hidden = true;
-  menuBtn.setAttribute('aria-expanded', 'false');
+/*
+ * AVAUS JA SULKU ANIMOIDEN NAPIN KULMASTA (omistaja 29.9.2026,
+ * js/avausanimaatio.js, PR #3605). Kaksi nappia voi avata paneelin
+ * (hampurilainen ja pilleri, ks. pillerivalikkouudistus alla) —
+ * `lahdeNappi` on siis se nappi, jota OIKEASTI napautettiin, ei aina
+ * `menuBtn`, jotta liike lähtee kartalla oikeasta kulmasta kummallakin
+ * napilla.
+ */
+const avaaPaavalikko = (lahdeNappi = menuBtn) => {
+  if (!paavalikko.hidden) return;
+  paavalikko.hidden = false;
+  animoiAvaus(paavalikko, lahdeNappi);
+  menuBtn.setAttribute('aria-expanded', 'true');
+  turnPillNappi.setAttribute('aria-expanded', 'true');
+  ui?.avaaPilleriValikko();
 };
 
-menuBtn.addEventListener('click', () => {
-  if (!paavalikko.hidden) haamuSulku(paavalikko, menuBtn);
-  paavalikko.hidden = !paavalikko.hidden;
-  if (!paavalikko.hidden) animoiAvaus(paavalikko, menuBtn);
-  menuBtn.setAttribute('aria-expanded', String(!paavalikko.hidden));
+const suljeValikko = (lahdeNappi = menuBtn) => {
+  if (paavalikko.hidden) return;
+  haamuSulku(paavalikko, lahdeNappi);
+  paavalikko.hidden = true;
+  menuBtn.setAttribute('aria-expanded', 'false');
+  turnPillNappi.setAttribute('aria-expanded', 'false');
+  ui?.suljePilleriValikko();
+};
+
+/*
+ * PILLERIVALIKKOUUDISTUS (omistaja 29.9.2026): sama paneeli avautuu nyt
+ * sekä hampurilaisesta että ylärivin pilleristä (#turn-pill) — "kun
+ * pilleriä klikkaa, niin siihen avautuisi nykyiset napit, mitkä ovat
+ * jo nyt hampurilaisessa". Avaus ja sulku kutsuvat myös ui.js:n
+ * avaaPilleriValikko/suljePilleriValikko-metodeja (matkan tiedot,
+ * musiikkitila, Livian tunnereaktio) — ne olivat ennen isoisän
+ * matkalaukun openPassport/close-kuuntelijan työtä.
+ */
+const vaihdaValikko = (tapahtuma) => {
+  const lahdeNappi = tapahtuma?.currentTarget ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahdeNappi); else suljeValikko(lahdeNappi);
   // Kiintiöpalkit (R2, repo, ElevenLabs, pöllö) EIVÄT enää täyty
   // täällä: ne siirtyivät Tilastot-lehden Kiintiöt-sivulle
   // (omistajan tilaus 21.8.2026), ja haku lähtee sen avauksesta —
   // js/tyohuone-tilastot.js osio KIINTIÖT.
-});
+};
+
+menuBtn.addEventListener('click', vaihdaValikko);
 
 /*
  * Valinta sulkee valikon. Kuuntelija on valikossa itsessään, joten
  * nappien omat toiminnot pysyvät siellä missä ne on määritelty.
  *
- * POIKKEUS: äänet ovat säätimiä eivätkä komentoja. Niitä napautetaan
- * usein peräkkäin — äänitilan kokeilu — ja jos valikko sulkeutuisi joka
- * kerta, se pitäisi avata uudelleen jokaista säätöä varten. Uusi peli
- * ja ehdotuskanava sen sijaan vievät pois valikosta, joten ne sulkevat
- * sen.
+ * POIKKEUKSET, JOTKA EIVÄT SULJE:
+ *   .kertoja-kotelo   äänet ja kartan pieni liike ovat säätimiä eivätkä
+ *                     komentoja; niitä napautetaan usein peräkkäin.
+ *   .pilleri-pikanapit Linssit›/Aarteet›-napit VAIHTAVAT näkymää, eivät
+ *                     sulje paneelia (omistaja: sama pilleri, eri kasvot).
+ *   .pilleri-alanakyma Linssit- ja Aarteet-näkymien omat rivit ja
+ *                     ‹ Takaisin -nappi: kaksivaiheinen napautus
+ *                     (esikatselu → aktivoi) sulkeutuisi ensimmäisestä
+ *                     napautuksesta, jos tämä yleiskuuntelija sulkisi
+ *                     paneelin. Aktivointi sulkee itse (aktivoiLinssi),
+ *                     ja Aarteet-näkymän "Näytä" avaa oman katselimensa
+ *                     paneelin pysyessä auki sen takana.
  *
- * Varusteet olivat tässä samasta syystä, mutta linssivalitsin muutti
- * matkalaukkuun 18.8.2026 — se ei ole enää valikossa lainkaan.
+ * Uusi peli ja ehdotuskanava VIEVÄT pois valikosta, joten ne sulkevat sen.
+ *
+ * KAAPPAUSVAIHEESSA, EI KUPLINNASSA (korjaus mitatusta viasta
+ * 29.9.2026): Linssit-/Aarteet-rivin oma click-kuuntelija (js/
+ * kokoelmanakyma.js) piirtää koko listan UUDELLEEN saman tapahtuman
+ * KÄSITTELYN AIKANA (replaceChildren). Jos tämä kuuntelija olisi
+ * kuplintavaiheessa (oletus), `event.target` olisi jo ehtinyt irrota
+ * puusta ennen kuin tänne tullaan, jolloin `nappi.closest('.pilleri-
+ * alanakyma')` EI löytäisi esiä enää — poikkeus ei toimisi, ja paneeli
+ * sulkeutuisi jo ensimmäisestä esikatselunapautuksesta (mitattu: rivi
+ * esikatseli itsensä ja paneeli sulkeutui SAMALLA napautuksella).
+ * Kaappausvaihe ratkaisee tämän: se ajetaan ENNEN kuin rivin oma
+ * kuuntelija ehtii piirtää mitään uudelleen.
  */
 paavalikko.addEventListener('click', (event) => {
   const nappi = event.target.closest('button');
   if (!nappi) return;
-  // Lautarivi (.lauta-kotelo on myös .kertoja-kotelo) on säädin kuten
-  // äänet: se ei vie pois valikosta, ja "Vaihdetaan lautaa…" jää
-  // näkyviin latauksen ajaksi.
-  if (nappi.closest('.kertoja-kotelo')) return;
+  if (nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma')) return;
   suljeValikko();
-});
+}, true);
 
+/*
+ * #TURN-PILL JA #PAAVALIKKO KUULUVAT "SISÄPUOLELLE" (omistaja
+ * 29.9.2026, pillerivalikkouudistus, korjaus mitatusta viasta):
+ *
+ *   #turn-pill   paneelin toinen avausnappi, ei paneelin ulkopuolinen
+ *                kohde — ilman tätä poikkeusta pilleriä napauttaessa
+ *                pointerdown sulkisi paneelin juuri ennen kuin
+ *                click-tapahtuma ehtisi avata sen uudelleen kiinni
+ *                olevana, tai sulkisi sen heti uudelleen auki olevana.
+ *
+ *   #paavalikko  ITSE PANEELI. Ennen #paavalikko asui .valikko-kotelon
+ *                (hampurilaiskotelon) SISÄLLÄ, joten sen omat napit
+ *                (Linssit›, Aarteet›, kokoelmarivit, ‹ Takaisin, ...)
+ *                olivat jo .valikko-kotelon jälkeläisiä eikä erillistä
+ *                poikkeusta tarvittu. Kun paneeli nostettiin
+ *                .topbar-actionsin lapseksi (puhelimen hampurilaisen
+ *                piilotus, ks. .topbar-actions position: relative
+ *                css/styles.css:ssä), sen omat napit EIVÄT enää olleet
+ *                .valikko-kotelon jälkeläisiä — pointerdown sulki
+ *                paneelin JOKAISESTA napautuksesta sen SISÄLLÄ ennen
+ *                kuin napin oma click-kuuntelija ehti reagoida
+ *                (mitattu: Linssit›-napin napautus ei koskaan
+ *                vaihtanut näkymää oikealla hiiritapahtumasarjalla,
+ *                vain synteettisellä .click()-kutsulla, joka ei
+ *                laukaise pointerdownia).
+ */
 document.addEventListener('pointerdown', (event) => {
-  if (!event.target.closest?.('.valikko-kotelo')) suljeValikko();
+  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko')) suljeValikko();
 });
 
 document.addEventListener('keydown', (event) => {
@@ -1520,8 +1589,11 @@ document.getElementById('nollaa-ok').addEventListener('click', () => {
 });
 // Passi kuuluu pelaajalle eikä yksittäiselle pelille, joten nappi kytketään
 // kerran täällä eikä käyttöliittymän mukana joka uudessa pelissä.
-// Kukkaropilleri on samalla matkalaukun nappi (omistajan toive).
-document.getElementById('turn-pill').addEventListener('click', () => ui?.openPassport());
+// PILLERI AVAA SAMAN VALIKON KUIN HAMPURILAINEN (omistaja 29.9.2026,
+// pillerivalikkouudistus, ks. avaaPaavalikko/suljeValikko "--- päävalikko
+// ---" -osiossa yllä): pilleri EI enää avaa isoisän matkalaukkua
+// suoraan, vaan "nykyiset napit, mitkä ovat jo nyt hampurilaisessa".
+turnPillNappi.addEventListener('click', vaihdaValikko);
 // Alakulman huutomerkki: palaute juuri siitä kohdasta peliä, jossa
 // pelaaja on. Kytketään kerran, koska nappi elää pelin ulkopuolella.
 document.getElementById('palaute-kulma').addEventListener('click', () => ui?.naytaPalauteKulmasta());
@@ -2202,10 +2274,13 @@ function merkitseKytkin(nappi, paalla) {
 
 function paivitaKehittajaValikko() {
   /*
-   * Ratas itse on pelaajan valikko (Äänentasot), joten kotelo ei enää
-   * katoa kehittäjätilan mukana — vain kehittäjän omat ryhmät katoavat.
+   * RATAS ON TAAS PELKKÄ KEHITTÄJÄN VALIKKO (omistaja 29.9.2026,
+   * pillerivalikkouudistus): Äänentasot-ryhmä siirtyi pillerivalikon
+   * Äänet-osioon (index.html #aanivoimat), joten rattaan alla ei ole
+   * enää mitään pelaajalle aina näkyvää — koko kotelo piiloutuu taas
+   * kehittäjätilan mukana, kuten ennen 11.9.2026.
    */
-  if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = false;
+  if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = !kehittajaTilaPaalla();
   for (const ryhma of kehittajaRyhmat) ryhma.hidden = !kehittajaTilaPaalla();
   const maailma = kehittajaMaailmaValittu();
   merkitseKytkin(maailmaNappi, maailma);

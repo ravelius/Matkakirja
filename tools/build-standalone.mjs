@@ -1095,6 +1095,8 @@ const MODULES = [
   // Kehittäjän Pelaajan näkymä -apunappi (29.9.2026) ennen ui.js:ää ja main.js:ää, jotka tuovat sen; tuo vain
   // ui-apurit.js:n.
   'js/pelaajanakyma.js',
+  'js/kokoelmanakyma.js',
+  'js/pilleri-animaatio.js',
   'js/ui.js',
 
   'js/muutokset.js',

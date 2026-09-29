@@ -127,11 +127,25 @@
         title="Tekijätiedot ja lähteet"><img
         class="brand-kuva" src="assets/logo.png" width="720" height="176"
         alt="" aria-hidden="true" decoding="async"></button></h1>
-      <!-- Kukkaro, päivämäärä ja matkalaukku ovat sama nappi (omistajan
-           toive): rahat ja tavarat ovat samassa laukussa, joten pilleriä
-           napauttamalla se aukeaa. -->
+      <!--
+        PILLERI ON YLÄRIVIN AINOA VALIKKONAPPI PUHELIMELLA (omistaja
+        29.9.2026, sanatarkasti: *"poistetaan tuo hampurilaiskuvake
+        kokonaan niin, että siirretään pilleri oikealle puolelle ...
+        kun pilleriä klikkaa, niin siihen avautuisi nykyiset napit,
+        mitkä ovat jo nyt hampurilaisessa"*).
+
+        Pilleri avasi ennen suoraan isoisän matkalaukun
+        (#passport-dialog); nyt se avaa saman #paavalikko-paneelin kuin
+        hampurilainen (js/main.js vaihdaValikko), ja laukun tiedot ovat
+        paneelin sisällä (ks. #pilleri-tiedot alempana). CSS siirtää
+        pillerin ylärivin oikeaan laitaan ja piilottaa hampurilaisen
+        kapealla ruudulla (css/styles.css: .turn-pill puhelimella); iPadin
+        leveämmällä ruudulla asettelu on ennallaan ja MOLEMMAT napit
+        avaavat saman paneelin.
+      -->
       <button id="turn-pill" class="turn-pill" type="button"
-              title="Isoisän matkalaukku (mattolaukku): passi, leimat ja tavarat"></button>
+              aria-haspopup="true" aria-expanded="false" aria-controls="paavalikko"
+              title="Valikko: äänet, kartta, linssit, aarteet ja matkan tiedot"></button>
       <div class="topbar-actions">
         <!--
           KEHITTÄJÄN HAMMASRATASVALIKKO (omistajan tilaus 29.8.2026).
@@ -175,64 +189,18 @@
           <div id="kehittaja-valikko" class="paavalikko kehittaja-valikko" hidden>
             <!-- KEHITTÄJÄN RYHMÄT (Työhuone ja Kehittäjä) NÄKYVÄT VAIN
                  KEHITTÄJÄTILASSA; äänentasot näkyvät aina. -->
-            <!-- ÄÄNENTASOT RATTAASEEN (omistaja 11.9.2026 klo 14.35,
-                 sanatarkasti: *"kaikki äänentason säätimet kuuluvat
-                 hammasrattaan alle"*). Kolme voimakkuusliukua olivat
-                 11.9.2026 aamupäivän hampurilaisen Äänet-osiossa; sinne
-                 jäivät vain päälle/pois-kytkimet (Kertoja, Musiikki,
-                 Äänimaisema). Taustamusiikin liuku tuli samaan ryhmään
-                 viereisestä kehittäjälohkosta — se on äänentaso siinä
-                 missä muutkin, eikä sillä ole kehittäjäehtoa.
-
-                 RYHMÄ NÄKYY AINA, MYÖS ILMAN KEHITTÄJÄTILAA: juuri siksi
-                 ratas itse on nyt pelaajan valikko (js/main.js
-                 paivitaKehittajaValikko piilottaa vain .kehittaja-ryhmät).
-                 Tunnisteet ja kytkennät ovat entiset (js/main.js
-                 AANIVOIMAT ja musiikkiliuku), joten tallennus ei muutu. -->
-            <p class="valikko-otsikko">Äänentasot</p>
-            <div id="aanivoimat" class="aanivoimat">
-              <div class="aanivoima">
-                <label class="aanivoima-nimi" for="voima-tehosteet">Äänitehosteet</label>
-                <input id="voima-tehosteet" class="aanivoima-liuku" type="range"
-                       min="0" max="100" step="1" value="100" />
-                <b id="voima-tehosteet-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-              </div>
-              <div class="aanivoima">
-                <label class="aanivoima-nimi" for="voima-pulu">Pulun ääni</label>
-                <input id="voima-pulu" class="aanivoima-liuku" type="range"
-                       min="0" max="100" step="1" value="100" />
-                <b id="voima-pulu-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-              </div>
-              <div class="aanivoima">
-                <label class="aanivoima-nimi" for="voima-lukija">Lukija</label>
-                <input id="voima-lukija" class="aanivoima-liuku" type="range"
-                       min="0" max="100" step="1" value="90" />
-                <b id="voima-lukija-arvo" class="aanivoima-arvo" aria-live="polite">90 %</b>
-              </div>
-              <!-- TAUSTAMUSIIKKI JA TAUSTAÄÄNET SAMASSA LISTASSA MUIDEN
-                   KANSSA (omistaja 11.9.2026: *"taustaääni on oudosti
-                   erillään muista äänisäätimistä"*). Molemmat olivat
-                   omina rivityyleinään liu'un alapuolella: musiikilla oli
-                   `35 · −23 dB` -lukema ja taustaäänellä kehittäjän
-                   +/- kerroinaskellin. Nyt kaikki viisi ovat samaa
-                   .aanivoima-riviä ja lukema on prosentti; musiikin
-                   käyrä (js/musiikkivalitsin.js) ja taustaäänen kerroin
-                   (js/kehittajan-voimat.js) ovat ennallaan pinnan alla. -->
-              <div class="aanivoima" data-liuku="musiikki">
-                <label class="aanivoima-nimi" for="kehittaja-musiikki-liuku">Taustamusiikki</label>
-                <input id="kehittaja-musiikki-liuku" class="aanivoima-liuku" type="range"
-                       min="0" max="100" step="1" value="35"
-                       aria-label="Taustamusiikin voimakkuus" />
-                <b id="kehittaja-musiikki-arvo" class="aanivoima-arvo" aria-live="polite">35 %</b>
-              </div>
-              <div class="aanivoima" data-liuku="tausta">
-                <label class="aanivoima-nimi" for="voima-tausta">Taustaäänet</label>
-                <input id="voima-tausta" class="aanivoima-liuku" type="range"
-                       min="0" max="100" step="1" value="100"
-                       aria-label="Kaupungin äänimaiseman voimakkuus" />
-                <b id="voima-tausta-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-              </div>
-            </div>
+            <!-- ÄÄNENTASOT SIIRTYIVÄT PILLERIVALIKKOON (omistaja
+                 29.9.2026, pillerivalikkouudistus): viisi voimakkuusliukua
+                 (Äänitehosteet, Pulun ääni, Lukija, Taustamusiikki,
+                 Taustaäänet) olivat tässä 11.9.–29.9.2026. Ratas on nyt
+                 taas pelkkä kehittäjän valikko (js/main.js
+                 paivitaKehittajaValikko piilottaa koko kotelon ilman
+                 kehittäjätilaa), joten äänentasot — pelaajalle aina
+                 näkyvät — asuvat index.html:n #paavalikko-osiossa
+                 (#aanivoimat, .kertoja-kotelo "Äänet"). Tunnisteet ja
+                 kytkennät (js/main.js AANIVOIMAT, musiikkiliuku) ovat
+                 entiset; vain paikka DOMissa vaihtui, joten tallennus ei
+                 muutu. -->
             <div id="kehittaja-vivut" class="kehittaja-ryhma" hidden>
               <p class="valikko-otsikko">Kehittäjä</p>
               <button id="kehittaja-maailma-btn" class="ghost kehittaja-kytkin"
@@ -386,38 +354,94 @@
                yläpalkissa, joten se näkyy vain silloin kun palkkikin
                näkyy. Kaksi kuvaketta samassa napissa vaatisi ajastimen
                tai oman ruudunmittauksen — kumpaakaan ei tarvita.
+
+               PUHELIMELLA HAMPURILAINEN ON KOKONAAN POIS (omistaja
+               29.9.2026: *"poistetaan tuo hampurilaiskuvake kokonaan
+               niin, että siirretään pilleri oikealle puolelle"*) —
+               #turn-pill on kapealla ruudulla ainoa valikkonappi ja
+               avaa saman #paavalikon (css/styles.css piilottaa
+               .valikko-kotelon kapealla ruudulla). iPadin leveämmällä
+               asettelulla molemmat napit ovat yhä näkyvissä ja avaavat
+               saman paneelin.
             -->
             <span class="viiva-ikoni"><svg viewBox="0 0 24 24"><path d="M4.5 7h15M4.5 12h15M4.5 17h15"/></svg></span>
           </button>
-          <!--
-            PÄÄVALIKKO ON PELIN YMPÄRYKSIÄ, EI PELISISÄLTÖÄ (omistajan
-            päätös 18.8.2026): ylhäältä alas äänet, kaksi leveää
-            tekstinappia, kehittäjän työhuone ja pohjarivi. Kaikki muu
-            pelisisältö on poistettu.
+        </div>
+        <!--
+          PILLERIVALIKKO (omistaja 29.9.2026, korvaa hampurilaisen ja
+          isoisän matkalaukun #passport-dialogin yhdellä paneelilla):
+          "kun pilleriä klikkaa, niin siihen avautuisi nykyiset napit,
+          mitkä ovat jo nyt hampurilaisessa ... linssit eivät näkyisi
+          suoraan, vaan niille olisi alareunassa oma nappi ... linssinapin
+          alapuolella olisi sitten niitä tietoja, mitä tällä näkyy, jos
+          painaa pilleriä ... linssinapin alapuolella ennen niitä
+          tietoja voisi olla oma aarteet-nappi".
 
-            VARUSTEET SIIRTYIVÄT MATKALAUKKUUN. Linssivalitsin
-            (#linssi-kotelo) oli tässä 5.8.2026 alkaen, mutta laukku on
-            paikka, jossa matkan tavarat ovat — ja kaksi paikkaa samalle
-            kytkimelle on yksi liikaa. Kotelo asuu nyt
-            #passport-dialogissa; tunnisteet ovat entiset, joten
-            js/ui.js kytkee sen kuten ennenkin.
+          PANEELI ON #TOPBAR-ACTIONSIN LAPSI, EI HAMPURILAISKOTELON.
+          Ennen #paavalikko asui .valikko-kotelon sisällä ja ankkuroitui
+          siihen (position:absolute; right:0). Puhelimella hampurilainen
+          (.valikko-kotelo) piiloutuu kokonaan, ja lapsi olisi piiloutunut
+          mukana — siksi paneeli nostettiin .topbar-actionsin omaksi
+          lapseksi (position:relative siirtyi sinne, css/styles.css).
+          Oikea reuna pysyy samana pikselinä kuin ennen, koska
+          .valikko-kotelo oli aina .topbar-actionsin viimeinen ja siis
+          oikeanpuoleisin lapsi.
 
-            Kotelo (.kertoja-kotelo) jäi, koska muu koodi tuntee sen —
-            mutta siinä ei ole enää avausnappia, vaan rivit ovat auki
-            valmiiksi otsikkonsa alla.
-          -->
-          <div id="paavalikko" class="paavalikko" hidden>
+          KOLME "KASVOA" SAMASSA PANEELISSA (yksi .paavalikko-pudotus,
+          ei kolme): #pilleri-paanakyma on oletus, ja Linssit-/
+          Aarteet-napit vaihtavat näkyviin #pilleri-linssit-nakyman tai
+          #pilleri-aarteet-nakyman (js/ui.js naytaPilleriNakyma).
+          Vaihto ei sulje paneelia eikä lataa mitään uudelleen — sama
+          .paavalikko pysyy auki koko ajan.
+        -->
+        <div id="paavalikko" class="paavalikko" hidden>
+          <div id="pilleri-paanakyma">
             <!-- Kertojan äänet: mykistys / ei kertojaa / lyhyt / pitkä.
                  Rivit rakennetaan js/main.js:ssä.
 
-                 VAIN PÄÄLLE/POIS-KYTKIMET (omistaja 11.9.2026 klo 14.35:
-                 *"kaikki äänentason säätimet kuuluvat hammasrattaan
-                 alle"*). Kolme voimakkuusliukua muuttivat samana päivänä
-                 hammasratasvalikon Äänentasot-ryhmään; tänne jäi se, mikä
-                 on kytkin eikä taso. -->
+                 ÄÄNENTASOT TÄSSÄ SAMASSA OSIOSSA (omistaja 29.9.2026:
+                 hammasrattaan aina näkyvä Äänentasot-ryhmä — viisi
+                 voimakkuusliukua — siirtyi pillerivalikon Äänet-osioon;
+                 ratas jäi kehittäjän omaksi valikoksi). Tunnisteet ja
+                 kytkennät (js/main.js AANIVOIMAT, musiikkiliuku) ovat
+                 entiset. -->
             <div class="kertoja-kotelo">
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
+              <div id="aanivoimat" class="aanivoimat">
+                <div class="aanivoima">
+                  <label class="aanivoima-nimi" for="voima-tehosteet">Äänitehosteet</label>
+                  <input id="voima-tehosteet" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="100" />
+                  <b id="voima-tehosteet-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+                </div>
+                <div class="aanivoima">
+                  <label class="aanivoima-nimi" for="voima-pulu">Pulun ääni</label>
+                  <input id="voima-pulu" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="100" />
+                  <b id="voima-pulu-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+                </div>
+                <div class="aanivoima">
+                  <label class="aanivoima-nimi" for="voima-lukija">Lukija</label>
+                  <input id="voima-lukija" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="90" />
+                  <b id="voima-lukija-arvo" class="aanivoima-arvo" aria-live="polite">90 %</b>
+                </div>
+                <div class="aanivoima" data-liuku="musiikki">
+                  <label class="aanivoima-nimi" for="kehittaja-musiikki-liuku">Taustamusiikki</label>
+                  <input id="kehittaja-musiikki-liuku" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="35"
+                         aria-label="Taustamusiikin voimakkuus" />
+                  <b id="kehittaja-musiikki-arvo" class="aanivoima-arvo" aria-live="polite">35 %</b>
+                </div>
+                <div class="aanivoima" data-liuku="tausta">
+                  <label class="aanivoima-nimi" for="voima-tausta">Taustaäänet</label>
+                  <input id="voima-tausta" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="100"
+                         aria-label="Kaupungin äänimaiseman voimakkuus" />
+                  <b id="voima-tausta-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+                </div>
+              </div>
             </div>
             <!-- KARTTA: PIENI LIIKE (Fable 21.9.2026): pulu lentää harvoin
                  kartan yli, pilven varjo liukuu reliefin päällä ja kellonaika
@@ -477,6 +501,54 @@
                       aria-label="Ehdota sisältöä tai lähetä palautetta tästä kohdasta"
                       title="Ehdota sisältöä tai lähetä palautetta tästä kohdasta">ehdota sisältöä</button>
             </div>
+            <!--
+              LINSSIT JA AARTEET (omistaja 29.9.2026): kaksi omaa
+              näkymää alareunan nappien takana — "linssinapin alapuolella
+              ennen niitä tietoja voisi olla oma aarteet-nappi". Napit
+              ovat tässä järjestyksessä ennen pillerin tietoja, kuten
+              omistaja kuvasi (Linssit ensin, sitten Aarteet, sitten
+              matkan tiedot). js/ui.js naytaPilleriNakyma vaihtaa saman
+              paneelin sisällön; nappi piilotetaan, jos näkymässä ei ole
+              vielä mitään näytettävää (ks. paivitaLinssit).
+            -->
+            <div class="valikko-alarivi pilleri-pikanapit">
+              <button id="pilleri-linssit-btn" class="ghost valikko-tekstinappi" type="button"
+                      aria-haspopup="true" aria-controls="pilleri-linssit-nakyma"
+                      title="Linssit: vaihda kartan näkymää" hidden>Linssit ›</button>
+              <button id="pilleri-aarteet-btn" class="ghost valikko-tekstinappi" type="button"
+                      aria-haspopup="true" aria-controls="pilleri-aarteet-nakyma"
+                      title="Aarteet: kerätyt aarteet, tavarat ja julisteet">Aarteet ›</button>
+            </div>
+            <!--
+              PILLERIN TIEDOT (omistaja 29.9.2026: "linssinapin
+              alapuolella olisi sitten niitä tietoja, mitä tällä näkyy,
+              jos painaa pilleriä" — eli entisen matkalaukun
+              #passport-dialogin Sijainti/Kukkaro/tietäjätaso ja Matkan
+              tilastot). Aarnin luettelo, Tavarat ja Julisteet EIVÄT ole
+              enää tässä lohkossa — ne siirtyivät Aarteet-näkymään, ja
+              "Matkan tilastot" jäi neljäksi lukuriviksi (Avatut aarteet,
+              Käydyt kaupungit, Käydyt maat, Tieto tästä laudasta).
+              Tunnisteet ja rakentaja (js/ui.js renderProgress) ovat
+              entiset; vain sijainti DOMissa ja lohkon ympäröivä
+              #passport-dialog vaihtuivat.
+            -->
+            <div id="pilleri-tiedot" class="pilleri-tiedot">
+              <p class="passport-count">Matka</p>
+              <div id="passport-progress" class="passport-finds"></div>
+              <div class="laukku-lohko">
+                <button type="button" class="laukku-lohko-otsikko" id="laukku-tilastot-nappi"
+                        aria-expanded="false" aria-controls="laukku-tilastot">
+                  <span class="passport-count">Matkan tilastot</span>
+                  <svg class="laukku-vakanen" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M9 5.5 15.5 12 9 18.5" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <div class="laukku-lohko-sisus" id="laukku-tilastot">
+                  <div id="passport-tilastot" class="passport-finds"></div>
+                </div>
+              </div>
+            </div>
             <!-- TYÖHUONEEN NAPIT SIIRTYIVÄT HAMMASRATASVALIKKOON
                  (omistaja 11.9.2026, sanatarkasti: "samalla raamatun ja
                  kehittäjälehden voisi siirtää hammasratas valikon alle. näin
@@ -520,6 +592,51 @@
                       aria-haspopup="dialog" title="Mitä uutta?"
                       aria-label="Mitä uutta, päivitys ja kehittäjätila"></button>
             </div>
+          </div>
+          <!--
+            LINSSIT-NÄKYMÄ (omistaja 29.9.2026): "Linssit voisivat olla
+            listana ilman selitetekstiä ... kun linssiä klikkaa, niin
+            vasemmalle puolelle tulee havainnekuva linssistä sekä
+            selite ... klikattu linssirivi muuttuukin Aktivoi napiksi".
+
+            TUNNISTEET OVAT ENTISET (#linssi-kotelo, #linssi-valikko):
+            tämä on SAMA elementti, joka oli 18.8.–29.9.2026
+            #passport-dialogissa (Varusteet-osasto) — vain sijainti
+            DOMissa ja sisäinen piirrin vaihtuivat (js/ui.js
+            rakennaLinssivalikko piirtää nyt js/kokoelmanakyma.js:n
+            kautta, samat tiedot ja sama kaksivaiheinen napautus kuin
+            ennen). js/ui.js kytkee sisällön kuten ennenkin.
+          -->
+          <div id="pilleri-linssit-nakyma" class="pilleri-alanakyma" hidden>
+            <div class="pilleri-alanakyma-otsikko">
+              <button type="button" class="pilleri-takaisin" data-pilleri-takaisin
+                      aria-label="Takaisin valikkoon">‹ Takaisin</button>
+              <h2>Linssit</h2>
+            </div>
+            <div id="linssi-kotelo" class="linssi-kotelo" hidden>
+              <div id="linssi-valikko" class="linssi-valikko"></div>
+            </div>
+          </div>
+          <!--
+            AARTEET-NÄKYMÄ (omistaja 29.9.2026): "aarteet ovat otsikoittain
+            listana, eli myös julisteet toisena otsikkona ... klikkaamalla
+            avautuu samalla lailla isompi kuva vasemmalle sivulle, ja
+            kohde muuttuu ... Näytä-tekstiksi, ja vielä uudestaan
+            klikkaamalla Juliste tai aarre aukeaa koko sivulle näkyviin."
+
+            Kolme otsikkoa (Aarnin luettelo, Tavarat, Julisteet) samalla
+            js/kokoelmanakyma.js-piirtimellä kuin Linssit-näkymä; data
+            tulee samoista paikoista kuin ennen matkalaukun laukku-
+            lohkossa (aarreLuettelo/finds/julisteVoitot), joten mikään
+            luku ei voi mennä eri tahtiin pelin kanssa.
+          -->
+          <div id="pilleri-aarteet-nakyma" class="pilleri-alanakyma" hidden>
+            <div class="pilleri-alanakyma-otsikko">
+              <button type="button" class="pilleri-takaisin" data-pilleri-takaisin
+                      aria-label="Takaisin valikkoon">‹ Takaisin</button>
+              <h2>Aarteet</h2>
+            </div>
+            <div id="pilleri-aarteet-lista"></div>
           </div>
         </div>
       </div>
@@ -967,150 +1084,30 @@
    </div>
   </dialog>
 
-  <!-- Isoisän matkalaukku: sisällä passi leimoineen ja matkan tavarat -->
-  <dialog id="passport-dialog" class="dialog" aria-label="Isoisän matkalaukku">
-   <div class="dialog-card passport-card" tabindex="-1" autofocus>
-    <!--
-      OTSIKKO JA ALKUTEKSTI POISTETTU (omistajan tilaus 18.8.2026,
-      kuvakaappaus iPhonen pystyasennosta): laukku avautuu ylärivin
-      pillerin alta kiinni palkkiin, joten kukaan ei ole epätietoinen
-      siitä, mikä ikkuna on auki — ja johdantokappale toisti sen, minkä
-      osastojen otsikot kertovat. Vapautunut tila menee matkan uusille
-      riveille (tietäjänimike ja kolme laskuria).
+  <!--
+    ISOISÄN MATKALAUKKU (#passport-dialog) ON POISTETTU (omistaja
+    29.9.2026, pillerivalikkouudistus). Sisältö EI kadonnut, vaan
+    siirtyi kolmeen paikkaan samoin tunnistein:
 
-      Saavutettava nimi ei kadonnut: dialogin avaava nappi
-      (#turn-pill) kertoo aria-labelissaan, että se avaa isoisän
-      matkalaukun.
-    -->
-    <!--
-      LAUKKU VIERII SISUKSESTAAN, EI KORTISTA (omistaja 6.9.2026:
-      "Laukku pitää olla skrollattava myös").
+      Sijainti, Kukkaro, tietäjätaso + pisteet ja Matkan tilastot
+        → #paavalikko / #pilleri-tiedot (#passport-progress,
+          #passport-tilastot, #laukku-tilastot-nappi/#laukku-tilastot)
+      Varusteet eli linssivalitsin
+        → #pilleri-linssit-nakyma (#linssi-kotelo, #linssi-valikko)
+      Aarnin luettelo, Tavarat, Julisteet
+        → #pilleri-aarteet-nakyma (#pilleri-aarteet-lista,
+          js/kokoelmanakyma.js)
 
-      Kortti itse on nahkakehys: sillä on `overflow: hidden`, koska
-      messinkiset kulmavahvikkeet (.passport-card::after) ja pyöristetyt
-      alakulmat vaativat sen — ja juuri se esti vierityksen, kun sisältö
-      kasvoi ruutua pidemmäksi. Nyt kehys pysyy paikallaan ja VAIN tämä
-      sisus vierii: kulmat, ommel ja nahkareunus eivät liiku mukana,
-      eikä ylärivin MATKAKIRJA-palkki (dialogin ulkopuolella) sitäkään
-      suuremmalla syyllä.
-    -->
-    <div class="laukku-sisus" id="laukku-sisus">
-    <p class="passport-count">Matka</p>
-    <div id="passport-progress" class="passport-finds"></div>
-    <!--
-      MATKAN TILASTOT VÄKÄSEN ALLE (omistaja 6.9.2026: "Piilota nuo
-      tiedot väkäsen alle").
-
-      Laukun kärki on Sijainti, Kukkaro ja tietäjätaso — ne kertovat
-      missä ollaan ja mihin on varaa. Laskurit, Aarnin luettelo, tavarat
-      ja julisteet ovat matkan kirjanpitoa: kiinnostavaa mutta ei joka
-      avauksella, ja yhdessä ne työnsivät Varusteet ruudun alle. Lohko
-      on siksi OLETUKSENA KIINNI, ja tila muistetaan laitteeseen
-      (js/ui.js: LAUKKU_TILASTOT_AVAIN) kuten muutkin laukun asetukset.
-
-      Otsikkorivi on nappi ja väkänen SVG-viiva (ei emoji), jotta se
-      seuraa laukun muuta messinkiviivastoa.
-    -->
-    <div class="laukku-lohko">
-      <button type="button" class="laukku-lohko-otsikko" id="laukku-tilastot-nappi"
-              aria-expanded="false" aria-controls="laukku-tilastot">
-        <span class="passport-count">Matkan tilastot</span>
-        <svg class="laukku-vakanen" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M9 5.5 15.5 12 9 18.5" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <div class="laukku-lohko-sisus" id="laukku-tilastot">
-       <div id="passport-tilastot" class="passport-finds"></div>
-    <!--
-      VIHREÄ PASSI POISTETTU (omistajan toive 5.8.2026: "itse asiassa koko
-      vihreän passin voi poistaa, tehdään sen tilalle pääaarteista oma
-      osio"). Leimat kertoivat vain missä on käyty, minkä matkarivi
-      kertoo jo. Tilalle tuli Aarnin luettelo: mitä ollaan etsimässä.
-
-      Passin leimat SÄILYVÄT tallennuksessa (js/passport.js) — linssien
-      omistus lepää niiden päällä. Vain näyttö laukussa lähti.
-    -->
-    <!--
-      i-nappi otsikon perään: lyhyt seloste siitä, mikä Aarnin luettelo
-      on ja mitä Kateissa-luku tarkoittaa. Nappi luodaan js/ui.js:ssä
-      (pikkuselosteNappi), jotta sama komponentti on liitettävissä mihin
-      tahansa otsikkoon ilman että jokaiselle kirjoitetaan omaa merkkausta.
-    -->
-       <p class="passport-count" id="aarni-otsikko">Aarnin luettelo</p>
-       <div id="passport-aarteet" class="laukku-aarteet"></div>
-       <p class="passport-count">Tavarat</p>
-       <div id="passport-finds" class="passport-finds"></div>
-    <!--
-      JULISTERIVI (omistajan tilaus 22.8.2026: "Julisteet voisi olla
-      oma rivi laukussa mutta kuvakkeet todella pieniä, sama korkeus
-      kuin tekstillä ja näkyisi vain kolme viimeisintä. Perässä olisi
-      numeromäärä ja >> merkki. Riviä klikkaamalla aukeaisi oma juliste
-      popup galleria...").
-
-      Tilaus KUMOAA 21.8.2026 aloitetun ruudukon, jossa laukussa oli
-      otsikkorivi, kaikki voitetut pikkuvedokset ja loput himmeinä
-      ?-paikkoina: sama tieto on nyt gallerian sisällä, ja laukkuun jää
-      yksi rivi. Rivi on kokonaan yksi nappi.
-
-      Rivi on piilossa, kunnes ensimmäinen juliste on voitettu — sama
-      sääntö kuin Varusteet-osastolla, ks. js/ui.js renderJulisteet.
-      Sisältö rakennetaan siellä taulusta js/packs/julisteet.js.
-    -->
-       <div id="juliste-kotelo" class="juliste-kotelo" hidden>
-         <button type="button" id="passport-julisteet" class="laukku-julisterivi"></button>
-       </div>
-      </div>
-    </div>
-    <!--
-      VARUSTEET ELI LINSSIVALITSIN (omistajan päätös 18.8.2026:
-      "matkalaukku on jatkossa AINOA paikka, josta linssit kytketään
-      päälle ja pois").
-
-      Kotelo oli 5.8.2026 alkaen hampurilaisvalikossa. Valikko on pelin
-      ympäryksiä — versio, äänet, uusi peli — ja linssi on matkan
-      tavara: se löytyy laatan alta ja se kannetaan laukussa. Nyt
-      kytkin on samassa paikassa kuin esine.
-
-      TUNNISTEET OVAT ENTISET (#linssi-kotelo, #linssi-valikko), joten
-      js/ui.js rakentaa ja tahdistaa valitsimen täsmälleen kuten ennen:
-      pyöreiden varustekuvien ruudukko (18.8.2026, viivakuvakkeiden
-      tilalle — samat kuvat, jotka ennen toistuivat Tavarat-listassa),
-      valitun linssin nimi ja yhden rivin kuvaus alla — ja
-      linssittömänä "Kartta sellaisena kuin isoisä sen piirsi."
-
-      Kotelo on piilossa, kunnes pelaaja löytää ensimmäisen varusteen:
-      löytämätöntä ei näytetä edes harmaana, tai laukku kertoisi mitä
-      on vielä hakematta.
-
-      NAPAUTUS SELITTÄÄ, "Aktivoi" KYTKEE (omistaja 5.9.2026,
-      docs/moduulit/linssit.md): ruudun napautus vaihtaa vain alla
-      olevan selitteen, ja sen alle tulee Aktivoi-nappi, jota
-      painamalla linssi menee päälle ja laukku sulkeutuu. Nappi oli
-      6.9.2026 asti tekstilinkki selitteen perässä; omistaja: "Tee
-      aktivoi tekstistä nappi."
-    -->
-    <div id="linssi-kotelo" class="linssi-kotelo" hidden>
-      <p class="passport-count">Varusteet</p>
-      <div id="linssi-valikko" class="linssi-valikko"></div>
-    </div>
-    </div>
-    <!-- Nimikilpi siirtyi laukusta ylärivin logoon (omistajan toive
-         5.8.2026): logoa napauttamalla se avautuu isompana, ja saman
-         ikkunan alla ovat tekijätiedot ja lähdeluettelo. -->
-    <!-- SULJE-NAPPI POISTETTU (omistajan toive 5.8.2026: "se on turha kun
-         voi klikata vain karttaa"). Laukku ei enää tummenna karttaa, joten
-         napautus sen ulkopuolelle on luonteva sulkuele — sama kuin
-         muissakin kartan päälle avautuvissa korteissa. Esc sulkee yhä,
-         koska <dialog> hoitaa sen itse. -->
-   </div>
-   <!-- Kahva poistettu v291:ssa (omistaja: "on siistimpi niin").
-        Nahkareunus, ommel ja messinkikulmat kertovat laukun jo. -->
-  </dialog>
+    js/ui.js openPassport() on säilytetty YHTEENSOPIVUUSKUTSUNA (mm.
+    tools/savukkeet/savuke-hiomassa-linssi.mjs ja
+    tools/pariteettikuvat-nakymat.mjs kutsuvat sitä suoraan): se avaa
+    nyt #paavalikon ja siirtää sen Linssit-näkymään, koska ohjelmalliset
+    kutsujat tarvitsivat ennen kaikkea juuri linssivalitsinta.
+  -->
 
   <!-- Pelin nimikilpi: tekijänoikeus, tekijätiedot ja luettelo kaikista
-       aineistoista, joista peli on koottu. Aukeaa matkalaukun alalaidan
-       linkistä; sisältö tulee js/lahteet.js:stä. -->
+       aineistoista, joista peli on koottu. Aukeaa ylärivin logosta;
+       sisältö tulee js/lahteet.js:stä. -->
   <!--
     Vertailunäkymä (v321): karttanäkymässä valitut maat rinnakkain.
     Sisältö rakennetaan js/ui.js:ssä ja graafit js/maakayrat.js:ssä —
@@ -1129,6 +1126,16 @@
 
   <dialog id="lahteet-dialog" class="dialog">
    <div class="dialog-card lahteet-card" tabindex="-1" autofocus>
+    <!--
+      TILANNESIVUNAPPI YLÄREUNASSA (omistaja 29.9.2026, sanatarkasti:
+      "matkakirjan logoa painavalla avautuisi ne tekijä- ja
+      lisenssitiedot, ja niiden tietojen yläreunassa olisi nappi, mistä
+      pääsisi pelin tilannesivulle"). Sivu on projekti.html, sama
+      tilannekatsaus jota Fable ja roolisessiot käyttävät; se avautuu
+      uuteen välilehteen, jottei lähdeikkuna sulkeudu sen alta.
+    -->
+    <a id="lahteet-tilannesivu" class="lahteet-tilannesivu" href="projekti.html"
+       target="_blank" rel="noopener">Pelin tilannesivu ›</a>
     <!-- Otsikko on sama logo isompana: pelaaja napautti sitä ylärivillä,
          ja ikkuna avautuu siitä mitä hän napautti. Kuvassa on jo pelin
          nimi, joten otsikkoteksti on saavutettavuutta varten alt:issa. -->

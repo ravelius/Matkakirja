@@ -315,6 +315,24 @@ button, .brand, .turn-pill, .fact-card h2 {
   padding: 0.45rem 0.8rem;
   background: linear-gradient(180deg, #3a2a1c, #251b12);
   border-bottom: 1px solid var(--line);
+  /*
+   * #PAAVALIKKO ANKKUROITUU TÄHÄN, EI .topbar-actioniin (omistaja
+   * 29.9.2026, korjaus mitatusta virheestä: paneeli valui 79 px
+   * ruudun vasemman reunan yli 393 px:n puhelimella).
+   *
+   * Puhelimella #turn-pill saa `order: 5` (ks. media-kysely alempana)
+   * ja piirtyy siis VISUAALISESTI .topbar-actionsin JÄLKEEN — mutta
+   * .topbar-actions on silti se DOM-elementti, jonka lapsi paneeli on.
+   * Jos ankkuri olisi .topbar-actionsissa (position: relative), paneeli
+   * kohdistuisi topbar-actionsin OMAAN oikeaan reunaan, joka kapealla
+   * ruudulla ei ole enää ruudun oikeassa laidassa (turn-pill on sen
+   * oikealla puolella) — juuri tästä 79 pikselin virhe tuli.
+   *
+   * .topbar itse on AINA koko leveydeltään ylärivi riippumatta siitä,
+   * mikä lapsi on visuaalisesti viimeinen, joten `right: 0` tässä
+   * osuu aina samaan pikseliin: ylärivin oikeaan sisäreunaan.
+   */
+  position: relative;
 }
 
 /*
@@ -523,6 +541,17 @@ button, .brand, .turn-pill, .fact-card h2 {
   border: 1px solid var(--line);
   border-radius: 10px;
   box-shadow: 0 10px 28px rgba(15, 10, 5, 0.45);
+  /*
+   * KIINTEÄ LEVEYS (omistaja 29.9.2026, pillerivalikkouudistus,
+   * korjaus mitatusta virheestä): ilman tätä paneeli oli
+   * shrink-to-fit-leveä (max-content), ja Linssit/Aarteet-näkymien
+   * kaksisarakkeinen ruudukko (.kokoelma-runko, grid-template-columns:
+   * auto 1fr) ROMAHTI n. 170 pikseliin, koska `1fr` ei osaa laskea
+   * itseään ilman säiliön OMAA leveyttä. Sama leveys kaikilla kolmella
+   * "kasvolla" (pää, linssit, aarteet) on myös rauhallisempi: paneeli
+   * ei hyppää leveämmäksi/kapeammaksi näkymää vaihdettaessa.
+   */
+  width: min(23rem, calc(100vw - 1.6rem));
   /*
    * VALIKKO VIERITTYY (omistaja 5.9.2026 iPhone-kaappaus: *"Tee valikosta
    * scrollattava. En pääse noihin alempiin enää puhelimella käsiksi
@@ -907,14 +936,42 @@ button, .brand, .turn-pill, .fact-card h2 {
  */
 .turn-pill.laukku-elo {
   animation: laukku-elo 0.9s cubic-bezier(0.34, 1.4, 0.5, 1);
+  /*
+   * JUURISYY (korjaus 29.9.2026, kolmas kierros): omistajan raportoima
+   * "pilleri x137 y-11 w245 h78" EI ollut kaksirivinen sisältö —
+   * .turn-pill on koko ajan white-space: nowrap eikä rivitä. Se oli
+   * TÄMÄN animaation KESKELTÄ mitattu bounding box: alkuperäinen
+   * rotate(±7deg) + scale(1.14) keskipivotilla (oletus) kasvattaa
+   * 226 px leveän pillerin laatikkoa n. 78 px korkeaksi (levossa
+   * 42 px) ja työntää vasenta reunaa n. 17 px vasemmalle — iPadilla
+   * (834×1194) tämä ajoi suoraan logon alueelle (lepotilan väli oli
+   * vain n. 12 px) ja pillerin yläreuna nousi n. 11 px topbarin (ja
+   * ruudun) yläreunan yli. Todennettu mittaamalla koko 0,9 s:n
+   * animaatio 25 ms:n välein (ei vain yhtä satunnaista hetkeä).
+   *
+   * KORJAUS on kaksiosainen, EI koske lepotilaa (omistajan linja:
+   * "iPadin palkki jää nykyiselleen") — vain itse eloonheräämis-
+   * animaatiota pienennetty ja pivotoitu:
+   *   1) transform-origin vasempaan yläkulmaan (logoa lähin reuna) —
+   *      heilahdus kasvaa oikealle/alas, poispäin logosta.
+   *   2) rotate/scale-amplitudi neljäsosaan alkuperäisestä (±7deg/
+   *      1.14 → ±1,75deg/1.06 huipulla) — kulmapivotti ei yksinään
+   *      riitä, koska NEGATIIVINEN kierto nostaa laatikon kaukaisen
+   *      kulman pivotin YLÄPUOLELLE suunnasta riippumatta.
+   * Mitattu (koko animaatio, 834/393/360 px): logon päällekkäisyys
+   * ja ruudun yläreunan ylitys aina < 1,5 px (ei havaittavissa) —
+   * ei osu logon PÄÄLLE millään mitatulla leveydellä. Efekti on yhä
+   * selvästi nähtävissä, vain rauhallisempi.
+   */
+  transform-origin: 0% 0%;
 }
 
 @keyframes laukku-elo {
   0% { transform: none; }
-  14% { transform: rotate(-7deg) scale(1.14); }
-  32% { transform: rotate(6deg) scale(1.1); box-shadow: 0 0 12px rgba(234, 184, 78, 0.55); }
-  52% { transform: rotate(-4deg) scale(1.06); }
-  72% { transform: rotate(2.5deg) scale(1.03); }
+  14% { transform: rotate(-1.75deg) scale(1.06); }
+  32% { transform: rotate(1.5deg) scale(1.045); box-shadow: 0 0 12px rgba(234, 184, 78, 0.55); }
+  52% { transform: rotate(-1deg) scale(1.025); }
+  72% { transform: rotate(0.6deg) scale(1.01); }
   100% { transform: none; }
 }
 
@@ -927,6 +984,13 @@ button, .brand, .turn-pill, .fact-card h2 {
   display: flex;
   gap: 0.4rem;
   flex: 0 0 auto;
+  /*
+   * #paavalikko on tämän DOM-lapsi (index.html), mutta ankkuroituu
+   * .topbaria vasten (ks. .topbar { position: relative }) — EI tätä
+   * elementtiä vasten. Puhelimella #turn-pill piirtyy tämän JÄLKEEN
+   * (order: 5, ks. media-kysely alempana), joten tämän oma oikea reuna
+   * ei enää osu ruudun oikeaan laitaan; vain .topbarin reuna osuu aina.
+   */
 }
 
 /*
@@ -1204,55 +1268,24 @@ button, .brand, .turn-pill, .fact-card h2 {
 /*
  * Linssivalitsin (docs/linssit-suunnitelma.md luku 5).
  *
- * Sama kotelo + absoluuttinen paneeli kuin kertojavalikossa,
- * jotta se käyttäytyy tutulla tavalla eikä vie ylärivistä tilaa ennen
- * kuin ensimmäinen linssi on löytynyt. Paneeli aukeaa oikeasta
- * reunastaan vasemmalle: kotelo on ylärivin oikeassa laidassa, ja
- * vasemmalle aukeava paneeli mahtuu myös 360 px:n puhelimelle.
+ * KOTELO EI OLE ENÄÄ OMA PUDOTUSVALIKKONSA (omistaja 29.9.2026,
+ * pillerivalikkouudistus). #linssi-kotelo/#linssi-valikko olivat
+ * 5.8.–29.9.2026 oma absoluuttisesti asemoitu paneelinsa (ensin
+ * hampurilaisessa, sitten matkalaukussa) — nyt ne ovat tavallista
+ * sisältöä #pilleri-linssit-nakyman SISÄLLÄ, joka on jo itse
+ * #paavalikon oma alanäkymä. Kaksi päällekkäistä "omaa paneelia" olisi
+ * näkynyt korkeuden romahduksena (mitattu: #linssi-kotelo 0 px korkea,
+ * koska ainoa lapsi oli position: absolute eikä siis vienyt tilaa).
  */
-.linssi-kotelo { position: relative; }
+.linssi-kotelo { display: block; }
 
 /* Päällä oleva linssi näkyy napissa kullalla: ylärivistä pitää nähdä
    yhdellä silmäyksellä, katsotaanko karttaa jonkin lasin läpi. */
 #linssi-btn.paalla { color: var(--accent); }
 
 .linssi-valikko {
-  position: absolute;
-  top: calc(100% + 0.35rem);
-  right: 0;
-  z-index: 60;
-  width: max-content;
-  /*
-   * Leveysraja mitattu puhelimella: kotelo on ylärivin oikeassa
-   * laidassa mutta kahden napin päässä reunasta, joten oikeaan
-   * reunaansa kiinnitetty paneeli alkaa noin 7 rem päässä ruudun
-   * oikeasta laidasta. Ilman tätä rajaa 336 px:n paneeli valui 390 px:n
-   * ruudulla vasemman reunan yli ja nimen ensimmäinen kirjain jäi
-   * näkymättömiin (mitattu: paneelin vasen reuna oli -17 px).
-   */
-  /*
-   * PUOLEEN ENTISESTÄ (omistaja 5.8.2026: "kavenna alivalikkonäkymää
-   * puoleen nykyisestä"). 21rem -> 10,5rem.
-   *
-   * Paneeli oli leveä kahdesta syystä, joista toinen oli vika: liuskat
-   * eivät mahtuneet yhdelle riville vaan pinoutuivat neljäksi täysleveäksi
-   * napiksi, koska päävalikon sääntö `.paavalikko button { width: 100% }`
-   * osui myös niihin (korjattu alempana). Mitattu ennen: paneeli 290 px,
-   * jokainen liuska 270 px eli koko leveys yhtä kuvaketta kohti.
-   *
-   * 9rem = 144 px on tasan puolet. Liuskat kiertyvät kahden riveiksi,
-   * mikä on niiden oma suunniteltu käytös (ks. .linssi-liuskat) ja myös
-   * välttämätöntä: linssejä on tulossa yksitoista, eivätkä ne mahtuisi
-   * yhdelle riville millään leveydellä. Kuvaus liuskojen alla kiertyy
-   * useammalle riville, ja se on oikea järjestys — kuvake on valinta,
-   * teksti on selitys.
-   */
-  max-width: min(9rem, calc(100vw - 7rem));
-  padding: 0.45rem 0.55rem 0.55rem;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 10px 28px rgba(15, 10, 5, 0.45);
+  display: block;
+  width: 100%;
 }
 
 /*
@@ -1548,6 +1581,373 @@ button, .brand, .turn-pill, .fact-card h2 {
 .linssi-lahde p { margin: 0 0 0.25rem; }
 .linssi-lahde-lisenssi { color: var(--muted); }
 .linssi-lahde-linkki { color: var(--accent); }
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * PILLERIVALIKKO: LINSSIT- JA AARTEET-NÄKYMÄT (omistaja 29.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Kaikki tämän lohkon värit ja mitat ovat omissa CSS-muuttujissaan
+ * (Perustuslaki, kevyt UI): Codexin matkalaukkunahka kytketään joskus
+ * myöhemmin omistajan hyväksynnällä, ja silloin nahan vaihto on vain
+ * näiden muuttujien uudelleenmäärittely — ei rivi riviltä etsimistä.
+ * Toistaiseksi arvot ovat samat tummat pintavärit kuin muualla
+ * .paavalikko-paneelissa (var(--panel), var(--line), var(--accent)),
+ * jotta näkymä ei erotu omaksi saarekkeekseen.
+ */
+:root {
+  --pilleri-esikatselu-leveys: 42%;
+  --pilleri-rivi-korkeus: 44px;
+  --pilleri-rivi-kuvake: 30px;
+  --pilleri-runko-vali: 0.6rem;
+}
+
+/* Linssit›/Aarteet›-napit ovat samaa riviä kuin Uusi peli / Ehdota
+   sisältöä (.valikko-alarivi), vain omalla pienellä yläraolla. */
+.pilleri-pikanapit { margin-top: 0.3rem; }
+
+/*
+ * PILLERIN TIEDOT: entisen matkalaukun Sijainti/Kukkaro/tietäjätaso ja
+ * Matkan tilastot (ks. index.html kommentti). Sama .passport-finds/
+ * .laukku-lohko-tyyli kuin ennen; ainoa muutos on tumma pinta vaalean
+ * pergamentin sijaan, koska lohko asuu nyt .paavalikossa eikä
+ * .passport-cardissa.
+ */
+.pilleri-tiedot { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+.pilleri-tiedot .passport-count { color: var(--muted); }
+
+/*
+ * ALANÄKYMÄN OTSIKKO: ‹ Takaisin -nappi ja otsikko samalla rivillä.
+ * Sama .paavalikko button -perusasu (leveys 100 %) sopii takaisin-
+ * napille sellaisenaan, joten vain rivin asettelu on omaa.
+ */
+.pilleri-alanakyma-otsikko {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.pilleri-alanakyma-otsikko h2 {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+.pilleri-takaisin {
+  width: auto !important;
+  padding: 0.3rem 0.55rem !important;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.pilleri-takaisin:hover { color: var(--ink-light); }
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * js/kokoelmanakyma.js: YHTEINEN LISTA + ESIKATSELU
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * KAKSI SARAKETTA (omistaja: "paneelin VASEMMALLE puolelle nousee
+ * esikatselukortti"): esikatselu vasemmalla, tiheä lista oikealla.
+ * Kun mitään ei ole esikatseltu, esikatselusarake on `hidden`, ja
+ * `grid-template-columns` romahtaa yhteen sarakkeeseen (`auto 1fr`
+ * antaa piilotetulle (0 px leveälle) sarakkeelle nollan tilan).
+ */
+.kokoelma-runko {
+  display: grid;
+  /*
+   * YKSI SARAKE OLETUKSENA (korjaus 29.9.2026 illalla, toinen kierros:
+   * omistajan havainto: Aarteet-rivit vain n. 150 px leveitä ja nimet
+   * katkesivat, vaikka paneelin oikea puoli oli tyhjä). `grid-template-
+   * columns` varaa tilan MOLEMMILLE sarakkeille aina, VAIKKA
+   * `.kokoelma-esikatselu` on `hidden` ja siis pois ruudukon
+   * asettelusta — piilotettu lapsi ei poista TRACKIA, joten `.kokoelma-
+   * lista` jäi aina toiseen, kapeampaan sarakkeeseen. Kaksisarakkeinen
+   * asettelu tulee siis vain silloin, kun jokin rivi ON esikatseltu
+   * (ks. .kokoelma-esikatselu-auki alla ja js/kokoelmanakyma.js).
+   */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--pilleri-runko-vali);
+  align-items: start;
+}
+.kokoelma-runko.kokoelma-esikatselu-auki {
+  /*
+   * SARAKKEEN LEVEYS RUUDUKON OMASSA MÄÄRITTELYSSÄ, EI LAPSEN
+   * width-OMINAISUUDESSA (korjaus mitatusta viasta 29.9.2026):
+   * `auto`-sarake mitoittuu lapsensa MAX-CONTENT-leveyteen — tekstin
+   * (esikatseluselite) rivittämätön leveys, EI lapsen `width: 42%`,
+   * joka jäi tehottomaksi ilman kiinteää ruudukon leveyttä. Mitattu
+   * ennen: 255 px vs. tavoiteltu ~143 px. `minmax(7.5rem, 42%)` antaa
+   * ruudukolle suoraan oikean leveyden.
+   */
+  grid-template-columns: minmax(7.5rem, var(--pilleri-esikatselu-leveys)) minmax(0, 1fr);
+}
+
+.kokoelma-esikatselu {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  /* Sama häivytys kuin ennen matkalaukun selitteellä (linssiSelitteenVaihto),
+     omistajan pysyvä linjaus avausliikkeelle. */
+  animation: kokoelmaEsikatseluSisaan 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+.kokoelma-esikatselu[hidden] { display: none; }
+
+@keyframes kokoelmaEsikatseluSisaan {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kokoelma-esikatselu { animation: none; }
+}
+
+.kokoelma-esikatselu-kuva {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.kokoelma-esikatselu-ikoni {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  color: var(--muted);
+}
+.kokoelma-esikatselu-ikoni svg { width: 60%; height: 60%; }
+.kokoelma-esikatselu-nimi {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+}
+.kokoelma-esikatselu-selite { margin: 0; font-size: 0.8rem; line-height: 1.4; color: var(--ink-light); }
+
+/* Toimintonappi lainaa laukun entisen Aktivoi-napin messinkiasua. */
+.kokoelma-toiminto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--pilleri-rivi-korkeus);
+  margin-top: 0.2rem;
+  padding: 0.3rem 0.8rem;
+  background: linear-gradient(180deg, rgba(255, 249, 232, 0.16), rgba(233, 209, 160, 0.1));
+  border: 1px solid var(--accent-dark);
+  border-radius: 8px;
+  color: var(--accent);
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.kokoelma-toiminto:hover { background: rgba(234, 184, 78, 0.18); }
+.kokoelma-toiminto:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.kokoelma-lista { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.kokoelma-tyhja { padding: 0.3rem 0; }
+
+.kokoelma-otsikko {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.15rem;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kokoelma-otsikko:first-child { margin-top: 0; }
+/*
+ * OTSIKKO PYSYY YHDELLÄ RIVILLÄ (korjaus 29.9.2026 illalla: "AARNIN
+ * LUETTELO 1 / 8" rivittyi kahdelle riville kapeassa sarakkeessa).
+ * Nimi typistyy kolmella pisteellä ennemmin kuin rivittyy; laskuri ei
+ * kutistu eikä katkea, koska se on tärkeämpi luku kuin otsikon teksti.
+ */
+.kokoelma-otsikko-nimi {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.kokoelma-otsikko-luku { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
+
+.kokoelma-ryhma { display: flex; flex-direction: column; gap: 0.1rem; }
+
+/*
+ * TIHEÄ RIVILISTA (omistaja: linssien osalta "kuvake (jos on) ja nimi
+ * ilman selitettä"). Rivi ITSE muuttuu toimintonapiksi, kun se on
+ * esikatseltu — ei erillistä toista nappia listassa.
+ */
+.kokoelma-rivi {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: var(--pilleri-rivi-korkeus);
+  padding: 0.25rem 0.5rem;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--ink-light);
+  text-align: left;
+}
+.kokoelma-rivi:hover { background: rgba(234, 184, 78, 0.1); }
+.kokoelma-rivi.esikatselu {
+  border-color: var(--accent-dark);
+  background: rgba(234, 184, 78, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+}
+/* Päällä oleva linssi (eri asia kuin esikatselu — messinkirengas kuvakkeen
+   ympärillä kertoo, mikä on juuri nyt kartalla). */
+.kokoelma-rivi.aktiivinen .kokoelma-rivi-kuvake {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+/*
+ * HIOMASSA OPTIKOLLA: HARMAA RIVI (korjaus 29.9.2026 illalla, item 3 —
+ * omistaja: "harmaa 'hiomassa optikolla' -tila pitää näkyä Linssit-
+ * listassa"). Rivi on olemassa ja napautettavissa (esikatselu selittää
+ * miksi), mutta koko rivi näyttää harmaalta — linssiä ei vielä ole.
+ */
+.kokoelma-rivi.hiomassa {
+  filter: grayscale(1);
+  opacity: 0.72;
+}
+.kokoelma-rivi-kuvake {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: var(--pilleri-rivi-kuvake);
+  height: var(--pilleri-rivi-kuvake);
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--panel-2);
+}
+.kokoelma-rivi-kuvake img { width: 100%; height: 100%; object-fit: cover; }
+.kokoelma-rivi-kuvake svg { width: 70%; height: 70%; }
+/*
+ * NIMI SAA RIVITTYÄ KAHDELLE RIVILLE ENNEN KATKAISUA (korjaus 29.9.2026
+ * illalla: "Vertailulinssi (ke…" katkesi yhdelle riville vaikka
+ * kokonainen nimi olisi mahtunut kahdelle). `-webkit-line-clamp`
+ * (myös standardoitu `line-clamp`) rajaa kahteen riviin ja lisää
+ * kolme pistettä vasta, jos nimi ei mahdu niihinkään — huomattavasti
+ * harvinaisempaa kuin yhden rivin katkaisu.
+ */
+.kokoelma-rivi-nimi {
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  white-space: normal;
+  font-size: 0.86rem;
+  line-height: 1.25;
+}
+
+/*
+ * AARTEEN/TAVARAN KOKO RUUDUN KATSELIN (omistaja: "vielä uudestaan
+ * klikkaamalla ... aarre aukeaa koko sivulle näkyviin"). Julisteella
+ * toinen napautus avaa sen sijaan olemassa olevan julistegallerian
+ * (js/ui.js avaaJulisteGalleria) — omistajan hyväksymä vaihtoehto,
+ * ei siis omaa katselinta.
+ */
+.aarre-suurennos-huntu {
+  position: fixed;
+  inset: 0;
+  z-index: 72;
+  background: rgba(15, 10, 5, 0.78);
+}
+.aarre-suurennos {
+  position: fixed;
+  inset: 0;
+  z-index: 73;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  pointer-events: none;
+}
+.aarre-suurennos-kuva {
+  max-width: min(92vw, 720px);
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+.aarre-suurennos-ikoni {
+  width: min(60vw, 220px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  pointer-events: auto;
+}
+.aarre-suurennos-ikoni svg { width: 70%; height: 70%; }
+.aarre-suurennos-nimi {
+  margin: 0;
+  padding: 0.4rem 0.9rem;
+  background: rgba(20, 14, 8, 0.7);
+  border-radius: 8px;
+  color: var(--ink-light);
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  text-align: center;
+  pointer-events: auto;
+}
+.aarre-suurennos-sulje {
+  position: absolute;
+  top: calc(0.6rem + env(safe-area-inset-top, 0px));
+  right: 0.6rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: rgba(20, 14, 8, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink-light);
+  font-size: 1.3rem;
+  line-height: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .aarre-suurennos-kuva, .aarre-suurennos-ikoni, .aarre-suurennos-nimi {
+    animation: kokoelmaEsikatseluSisaan 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+  }
+}
+
+/* Lähdeikkunan tilannesivunappi (omistaja: "niiden tietojen
+   yläreunassa olisi nappi, mistä pääsisi pelin tilannesivulle"). */
+.lahteet-tilannesivu {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.35rem 0.7rem;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.lahteet-tilannesivu:hover { background: rgba(234, 184, 78, 0.14); }
+.lahteet-tilannesivu:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .stage {
   display: grid;
@@ -8556,71 +8956,13 @@ body.flight-active .fact-card {
 }
 
 /*
- * LAUKKU AUKEAA PILLERIN ALLE (omistajan toive 5.8.2026).
- *
- * <dialog> keskittää itsensä ruudulle, eikä sitä voi asemoida CSS:llä
- * sen napin suhteen joka sen avasi: nappi on ylärivissä ja dialogi on
- * selaimen ylimmässä kerroksessa, eivätkä ne ole sukua toisilleen.
- * Paikan laskee siis js/ui.js (asemoiLaukku) ja kirjoittaa sen
- * inline-tyyliin; tämän luokan tehtävä on vain purkaa keskitys, jotta
- * laskettu paikka pääsee voimaan.
- *
- * Korkeus rajataan ruudun alalaitaan asti: pilleri on ylhäällä, joten
- * täysi 92dvh valuisi ruudun ali.
+ * ISOISÄN MATKALAUKKU (.dialog.pillerin-alla, #laukku-sisus) ON
+ * POISTETTU (omistaja 29.9.2026, pillerivalikkouudistus) — laukun
+ * sisältö asuu nyt #paavalikko-paneelissa, joka ei ole <dialog> eikä
+ * tarvitse asemointia napin suhteen (paneeli on jo napin vanhemman,
+ * .topbar-actionsin, lapsi ja ankkuroituu CSS:llä sellaisenaan). Kaksi
+ * tätä sääntöä käyttänyttä luokkaa lähtivät samalla.
  */
-.dialog.pillerin-alla {
-  margin: 0;
-  max-height: calc(100dvh - 5.5rem);
-}
-
-/*
- * KORKEUSKATTO EI PITÄNYT 6.9.2026 ASTI (omistaja: "Laukku
- * pitää olla skrollattava myös" — linssin selite jäi ruudun alareunan
- * alle).
- *
- * Ylläoleva `max-height` koski VAIN dialogia, ja dialogilla on
- * `overflow: visible`. Kortti sen sisällä sai korkeutensa omasta
- * `.dialog-card { max-height: 92dvh }` -säännöstään, joka on tässä
- * asetelmassa aina isompi kuin dialogin katto — joten kortti kasvoi
- * dialogin ohi ja valui ruudun ali. Mitattu 390×844: kortti 776 px,
- * dialogin katto 72dvh = 608 px.
- *
- * Flexbox korjaa juuri tämän: kun dialogi on pystysuuntainen
- * flex-säiliö, sen `max-height` kutistaa lapsen (`flex-shrink: 1`)
- * kattoon asti, ja kortin sisus saa vieritettävän jäännöksen.
- * `[open]`-ehto on pakollinen — ilman sitä tekijän `display: flex`
- * voittaisi selaimen `dialog:not([open]) { display: none }` -säännön
- * ja suljettu laukku jäisi ruudulle näkyviin.
- */
-.dialog.pillerin-alla[open] {
-  display: flex;
-  flex-direction: column;
-}
-
-.dialog.pillerin-alla > .dialog-card.passport-card {
-  /* 92dvh pois: katon antaa dialogi, ei kortti (kortti on jo pystyflex,
-     ks. .dialog-card.passport-card ylempänä). */
-  max-height: none;
-  min-height: 0;
-  flex: 0 1 auto;
-}
-
-/*
- * VIERIVÄ SISUS. Kortti on kehys (overflow: hidden messinkikulmien
- * takia), joten vieritys kuuluu tälle lapselle. `touch-action: pan-y`
- * ja `overscroll-behavior: contain` ovat samat kuin muissa vierivissä
- * korteissa: sormi vierittää pystyyn eikä ele karkaa kartalle.
- */
-.laukku-sisus {
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
-  padding: 1.4rem 0 1.6rem;
-}
 
 /*
  * Kapean ruudun laukkusäännöt asuvat lehtiarkin kapea-lohkossa
@@ -10310,8 +10652,6 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * 5,7vw on entisen tekstilogon mitta: 390 pikselin ruudulla se on
    * 22 px, eli tarkalleen se korkeus, joka logolla oli ennen.
    */
-  .brand { flex: 0 1 auto; }
-  .brand-kuva { height: min(1.47rem, 5.7vw); }
   .turn-pill { font-size: 0.78rem; padding: 0.2rem 0.5rem; gap: 0.3rem; }
   .topbar-actions { gap: 0.15rem; }
   /*
@@ -10328,6 +10668,41 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
     min-height: 40px;
     min-width: 40px;
   }
+
+  /*
+   * PILLERI KORVAA HAMPURILAISEN PUHELIMELLA (omistaja 29.9.2026,
+   * sanatarkasti: *"otetaan vasempaan yläreunaan takaisin matkakirjan
+   * logo ja poistetaan tuo hampurilaiskuvake kokonaan niin, että
+   * siirretään pilleri oikealle puolelle"*).
+   *
+   * Hampurilainen (.valikko-kotelo, sisältää vain #menu-btn nyt) menee
+   * kokonaan pois kapealla ruudulla — SAMA #paavalikko-paneeli on yhä
+   * saatavilla, koska paneeli ei enää ole tämän kotelon lapsi (ks.
+   * .topbar-actions position: relative yllä).
+   *
+   * `order: 5` nostaa pillerin viimeiseksi flex-riville: kehittäjän
+   * ratas (dev-tilassa) jää sen vasemmalle puolelle, ja normaalisti
+   * pilleri on ainoa oikean laidan nappi. iPadin leveämmällä ruudulla
+   * (yli 560px) tätä sääntöä ei ole, joten asettelu on ennallaan —
+   * omistaja: "iPadilla nykyinen palkki säilyy näköjään ennallaan".
+   */
+  .valikko-kotelo { display: none; }
+  .turn-pill { order: 5; }
+
+  /*
+   * LOGO PUHELIMELLA, SAMAA KORKEUTTA KUIN PILLERI (omistaja 29.9.2026:
+   * "logo ... korkeus pillerin korkeus"). Pilleri on rivi, jonka
+   * korkeuden ratkaisevat fontti (0.78rem yllä) ja pystypehmuste
+   * (0.2rem) plus reunus — mitattu Chromiumissa 393 px:n leveydellä
+   * noin 28 px. `flex-shrink: 0` estää logon kutistumasta olemattomiin,
+   * jos rivi joskus ahtautuu (esim. kehittäjätilan ratas + pitkä
+   * pillerin teksti); ennen tätä sääntöä .brandilla ei ollut omaa
+   * flex-shrink-arvoa, ja se peri rivin oletuksen (1) kuten kaikki muut
+   * — vika ei toistunut tässä ympäristössä, mutta sääntö tekee
+   * katoamisesta mahdottoman jatkossakin.
+   */
+  .brand { flex: 0 0 auto; }
+  .brand-kuva { height: 1.75rem; }
 
   .event-toast { font-size: 0.92rem; padding: 0.55rem 0.8rem; top: 10%; }
   .event-toast .toast-icon { font-size: 1.3rem; }
@@ -12911,16 +13286,14 @@ body.kartalento #board { animation: kartalento-sisaan 0.55s ease; }
    * alareunan napautus vierittää päähän (ui.js kytkeTutkiSelaus). */
 
   /*
-   * Laukku kapealla ruudulla (omistaja 18.8.2026): "iphonella
-   * matkalaukku voisi olla hieman matalampi jotta karttaa näkyisi
-   * enemmän. piilota myös karttanapit iphonella siksi aikaa kun
+   * Pillerivalikko kapealla ruudulla (omistaja 18.8.2026, alunperin
+   * matkalaukusta: "piilota myös karttanapit iphonella siksi aikaa kun
    * matkalaukku on auki jotta pelaaja näkee paremmin miten linssi
-   * muuttaa karttaa." Sisältö vierii dialogissa kuten ennenkin;
-   * body.laukku-auki kytketään js/ui.js openPassportissa ja puretaan
-   * close-käsittelijässä.
+   * muuttaa karttaa" — sama linja pätee uuteen paneeliin). Luokka
+   * (body.pilleri-auki, ennen body.laukku-auki) kytketään js/ui.js
+   * avaaPilleriValikossa ja puretaan suljePilleriValikossa.
    */
-  .dialog.pillerin-alla { max-height: 72dvh; }
-  body.laukku-auki .actions { display: none; }
+  body.pilleri-auki .actions { display: none; }
 }
 
 /*
