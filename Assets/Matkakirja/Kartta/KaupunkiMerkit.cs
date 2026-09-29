@@ -111,6 +111,7 @@ namespace Matkakirja
             // TMP:n characterSpacing on em/100.
             n.characterSpacing = l ? linssiValistysEm * 100f : 0f;
             n.color = l ? linssiMuste : musteenVari;
+            m.nimiPeitto = l ? 1f : musteenVari.a; // LateUpdate kertoo häivytyksen tällä (sepia, palaute 3)
             m.usva = -1f;   // väri nollautui: horisonttiusvan peitto uudelleen (LateUpdate)
             if (m.valintamerkki && !l)
             {
@@ -119,6 +120,7 @@ namespace Matkakirja
                 n.fontSize = valintaKirjain;
                 n.fontStyle = FontStyles.Bold;
                 n.color = valintaMuste;
+                m.nimiPeitto = 1f;
                 n.alignment = TextAlignmentOptions.Bottom;
                 n.rectTransform.pivot = new Vector2(0.5f, 0f);
                 n.transform.localPosition = new Vector3(0, ValintaNimenY, 0);
@@ -520,7 +522,17 @@ namespace Matkakirja
         public int rakennusKehys = 24;
         public Material pisteMateriaali;
         public TMP_FontAsset fontti;
-        public Color musteenVari = new Color(0.20f, 0.15f, 0.10f);
+        /// <summary>
+        /// KOHDEKAUPUNKIEN SEPIA (omistajan palaute 3, 29.9.2026): pisteet ja nimet rantaviivan musteella (web RANTA_MUSTE
+        /// #5a4330) ja hieman läpikuultavina (web peitto <see cref="KaupunkiPeitto"/>). Natiivin alfa lineaarisesta
+        /// sekoituksesta kuten Rannikko.PeittoNatiivi. Korostukset, valinnan nimet ja linssinimet ennallaan.
+        /// </summary>
+        public const float KaupunkiPeitto = 0.75f;
+        public static readonly float KaupunkiPeittoNatiivi =
+            (float)Vektorisolut.LineaarinenPeitto(Vektorisolut.RantaMuste, KaupunkiPeitto);
+        public static readonly Color KaupunkiMuste = new Color(
+            Rannikko.RantaMuste.r, Rannikko.RantaMuste.g, Rannikko.RantaMuste.b, KaupunkiPeittoNatiivi);
+        public Color musteenVari = KaupunkiMuste;
 
         [Header("Koot näytön pisteinä (iOS point, 1/163 tuumaa)")]
         public float piste = 9f;
@@ -555,6 +567,7 @@ namespace Matkakirja
             public bool korostettu; // Korosta: piste 1,5-kertainen
             public Color? korostus; // Korosta-väri
             public float usva = -1f; // horisonttiusvan jälkeen näkyvä osuus 0–1 (löydös 153), −1 = asettamatta
+            public float nimiPeitto = 1f; // nimen perusalfa (Tyyli): kohdekaupungit KaupunkiPeittoNatiivi, muut 1
             public float nimiHaive = -1f; // nimen häivytys 0–1 (tulo ja lähtö 220 ms), −1 = ensi näkymä: heti
             public bool ruudulla, oliRuudulla, naytettiin; // liikelukko (NimiLadonta.LukittuNakyvyys)
             public Transform kohdemerkki; // aloitusvalinnan kohdemerkki renkaan sisällä, luodaan tarvittaessa
@@ -951,7 +964,7 @@ namespace Matkakirja
                 }
                 bool paalla = m.nimiHaive > 0.001f;
                 if (m.nimio.enabled != paalla) m.nimio.enabled = paalla;
-                float h = m.nimiHaive, alfa = m.usva * h * h * (3f - 2f * h);
+                float h = m.nimiHaive, alfa = m.nimiPeitto * m.usva * h * h * (3f - 2f * h);
                 if (Mathf.Abs(m.nimio.alpha - alfa) > 0.004f) m.nimio.alpha = alfa;
             }
             Naytetty = naytetty;
