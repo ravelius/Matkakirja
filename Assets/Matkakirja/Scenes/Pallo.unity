@@ -792,7 +792,7 @@ MonoBehaviour:
   kohdemerkkiPx: 24
   valintaKirjain: 13
   valintaNimiRako: 8
-  valintaMuste: {r: 0.27450982, g: 0.2, b: 0.12156863, a: 1}
+  valintaMuste: {r: 0.3529412, g: 0.2627451, b: 0.1882353, a: 0.97804734}
   rengasMateriaali: {fileID: 2100000, guid: c742752be49c64c498a702850a66d25b, type: 2}
   rengasSade: 27
   rengasPaksuus: 2.6
@@ -926,7 +926,7 @@ MonoBehaviour:
   nimiRako: 8
   osumaSade: 44
   nosto: 5000
-  musteenVari: {r: 0.2, g: 0.15, b: 0.1, a: 1}
+  musteenVari: {r: 0.3529412, g: 0.2627451, b: 0.1882353, a: 0.97804734}
 --- !u!114 &2116600900
 MonoBehaviour:
   m_ObjectHideFlags: 0
