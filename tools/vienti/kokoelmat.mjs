@@ -491,7 +491,12 @@ function radioKokoelma(hae) {
     const alkuperainen = {
       iso3: iso, nimi: r.asema, url: r.url, tyyppi: radioTyyppi(r.url), yleisradio: Boolean(r.virallinen),
       lahde: 'radio-browser', sivu: l.sivu ?? null, luokka: l.luokka ?? 'epaselva', peruste: l.peruste ?? null,
-      perusteLahde: l.lahde ?? null, varaAani: null, ...tila(r.url),
+      perusteLahde: l.lahde ?? null, varaAani: null,
+      // Skeema (radioiden maailmanlaajennus 28.9.2026): aseman kaupunki
+      // (yhtiön kotipaikka tai maan pääkaupunki) ja koordinaatit,
+      // tools/radiot.json:sta. Ei enää aluenimeä (Sahara, Kamerun…)
+      // aseman paikkana kartalla.
+      kaupunki: r.kaupunki ?? null, lat: r.lat ?? null, lon: r.lon ?? null, ...tila(r.url),
     };
     const k = korvaavat[iso];
     if (!k) { rivit.push({ id: iso, jarjestys: 1, ...alkuperainen }); continue; }
@@ -501,7 +506,10 @@ function radioKokoelma(hae) {
     rivit.push({
       id: iso, jarjestys: 1, iso3: iso, nimi: k.nimi, url: k.url, tyyppi: radioTyyppi(k.url), yleisradio: false,
       lahde: 'korvaava', sivu: k.sivu, luokka: k.luokka, peruste: k.peruste, perusteLahde: k.lahde, varaAani: null,
-      kaupunki: k.kaupunki, kuvaus: k.kuvaus, ...tila(k.url),
+      // korvaavan oma kaupunki (teksti) säilyy; lat/lon tulevat silti
+      // maan asemasta (tools/radiot.json), koska korvaava-tiedostolla
+      // ei ole koordinaatteja.
+      kaupunki: k.kaupunki, lat: r.lat ?? null, lon: r.lon ?? null, kuvaus: k.kuvaus, ...tila(k.url),
     });
   }
   return taulukko('js/packs/radiot.js#RADIOT + tools/vienti/radioluokat.json + tools/vienti/radiokorvaavat.json',
@@ -510,8 +518,15 @@ function radioKokoelma(hae) {
       + 'Yksi soiva asema per maa (jarjestys 1); 17 maassa kielletyn yleisradion tilalla on korvaava asema (lahde '
       + 'korvaava). Kielletyt asemat eivät ole paketissa (docs/raportit/lisenssi-inventaario-20260923.md). sivu voi olla null. '
       + 'Logoja ei näytetä ilman aseman lupaa. tyyppi päätelty osoitteesta (mp3 | aac | hls | null). toimii = iOS ATS '
-      + '-kättely onnistui (TLS 1.3 tai TLS 1.2 + ECDHE; false = älä soita, null = tarkistamatta), tarkistus = { pvm, virhe, versio }.',
-    { iso3: 'maat' }, rivit);
+      + '-kättely onnistui (TLS 1.3 tai TLS 1.2 + ECDHE; false = älä soita, null = tarkistamatta), tarkistus = { pvm, virhe, versio }. '
+      + 'Skeema (28.9.2026, radioiden maailmanlaajennus omistajan päätöksellä koko maailmaan): kaupunki (suomeksi), '
+      + 'lat/lon = aseman kotipaikka tai maan pääkaupunki asteina (Wikidata P625), tai null jos ei tiedossa. '
+      + 'Natiivin RadioAineisto.cs lukee nämä kartan merkin sijaintina aluenimen (Sahara, Kamerun, Kongo…) sijasta. '
+      + 'iso3 EI enää ole osajoukko kokoelmasta "maat": omistajan linjaus 28.9.2026 "haluan että on kaikki maailman '
+      + 'maat mukana... eurooppa linjaus on vain kartan ja sisällön suhteen mutta ei koske linssejä" -> radiot kattaa '
+      + 'kaikki YK:n jäsenmaat + Vatikaani, Palestiina, Kosovo, Taiwan riippumatta siitä onko maalla laudalla omaa '
+      + 'countryShapes-hahmoa (VAIN EUROOPPA -rajaus koskee vain karttageometrian lisäämistä, ei tätä listaa).',
+    {}, rivit);
 }
 
 function maisemakorit(P, hae) {

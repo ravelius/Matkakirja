@@ -13,7 +13,10 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2388, teksti: 'Maakunnan nostokortti nostojen kokoiseksi, kuva… (#3583)' },
+  { v: 2391, teksti: 'Radiot koko maailmaan: 182 maata, aseman kaupun… (#3589)' },
+  { v: 2390, teksti: 'Astronautin kamera: Pulun taulu vaihtaa näkymää (#3590)' },
+  { v: 2389, teksti: 'Linssikatalogi: E11 Poikkileikkaus, linna aukil… (#3584)' },
+  { v: 2388, teksti: 'ISS-kyyti: Cupola 3 (#3587)' },
   { v: 2387, teksti: 'ISS-realismi webiin natiivin arvoin (#3586)' },
   { v: 2386, teksti: 'ISS-realismi 4a: Blue Marble NG -kuukausipinta… (#3551)' },
   { v: 2385, teksti: 'Maalehti: Historia-aihe SRB/ALB/MKD/MNE/MDA/BLR… (#3556)' },
