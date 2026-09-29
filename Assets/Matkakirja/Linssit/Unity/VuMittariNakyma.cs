@@ -82,8 +82,8 @@ namespace Matkakirja.Natiivi
         // Geometria elementin koosta: kaari täyttää ~88 % leveydestä, kaaren huippu ~34 % korkeudesta, akseli alareunan alla.
         float L => float.IsNaN(resolvedStyle.width) ? 0 : resolvedStyle.width;
         float K => float.IsNaN(resolvedStyle.height) ? 0 : resolvedStyle.height;
-        float Sade => 0.44f * L / Mathf.Sin((float)VuMittari.Kulma * Mathf.Deg2Rad);
-        Vector2 Napa => new Vector2(L / 2f, 0.36f * K + Sade);
+        float Sade => 0.42f * L / Mathf.Sin((float)VuMittari.Kulma * Mathf.Deg2Rad);
+        Vector2 Napa => new Vector2(L / 2f, 0.2f * K + Sade);
 
         Vector2 Piste(float osuus, float r)
         {
@@ -123,9 +123,12 @@ namespace Matkakirja.Natiivi
             if (L <= 1 || K <= 1) return;
             foreach (var l in Children().OfType<Label>().Where(l => l != vuTeksti).ToArray()) l.RemoveFromHierarchy();
             float v = Mathf.Max(0.8f, K / 48f), fontti = Mathf.Clamp(7.5f * v, 7f, 11f);
+            // Luvut kaaren sisäpuolelle (laite rk1: kaaren yläpuolella ne leikkautuivat reunoilta); kapealla vain −20, 0 ja +3.
+            bool kapea = L < 96;
             foreach (var (osuus, teksti, punainen) in Luvut)
             {
-                var paikka = Piste((float)osuus, Sade + 6.5f * v);
+                if (kapea && (teksti == "-10" || teksti == "-5")) continue;
+                var paikka = Piste((float)osuus, Sade - 6.5f * v - fontti * 0.9f);
                 var l = new Label(teksti) { pickingMode = PickingMode.Ignore };
                 l.style.position = Position.Absolute;
                 l.style.left = paikka.x - 12;
@@ -140,7 +143,7 @@ namespace Matkakirja.Natiivi
             }
             vuTeksti.style.fontSize = fontti;
             vuTeksti.style.left = 0; vuTeksti.style.right = 0;
-            vuTeksti.style.top = 0.66f * K;
+            vuTeksti.style.top = 0.62f * K;
             // Neula akselilta kaaren yli; näkyvä osa alkaa alareunasta (akseli piilossa).
             float pituus = Sade + 2f * v;
             neula.style.width = Mathf.Max(1.2f, 1.3f * v);

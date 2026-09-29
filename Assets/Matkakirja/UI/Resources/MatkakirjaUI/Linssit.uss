@@ -2142,7 +2142,7 @@
     -unity-text-align: upper-center;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: clip;
+    text-overflow: ellipsis;
     color: rgba(34, 22, 8, 0.92);
     text-shadow: 0 1px 0 rgba(255, 246, 220, 0.45);
     border-radius: 3px;

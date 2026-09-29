@@ -98,6 +98,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Radion kotelo ja onko se näkyvissä (Pulu hyppää kotelon yläpuolelle, omistaja 28.9.2026).</summary>
         public VisualElement Kotelo => kotelo;
 
+        /// <summary>Radiopaneelin yläreuna (pt; kartan merkit eivät piirry sen alle), ∞ kun radio ei näy.</summary>
+        public static float PaneelinYla => instanssi != null && instanssi.nakyvissa && instanssi.kotelo.worldBound.height > 0
+            ? instanssi.kotelo.worldBound.yMin : float.MaxValue;
+
         static RadioNakyma instanssi;
         public bool Nakyvissa => nakyvissa;
 
@@ -1435,11 +1439,13 @@ namespace Matkakirja.Natiivi
         {
             PaivitaNimi();
             if (napit.Count == 0 || juuri.panel == null) return;
+            // Yksinkertaisessa kartassa merkit vain yläpalkin ja radiopaneelin välissä (laite rk1: nimet palkin päällä).
+            float yla = Yksinkertainen ? Ylapalkki.Varaus + 6f : float.MinValue, ala = Yksinkertainen ? RadioNakyma.PaneelinYla - 6f : float.MaxValue;
             foreach (var n in napit.Values)
             {
                 var piste = LinssiOhjain.Ruutupiste(n.Tieto.Lat, n.Tieto.Lon);
-                if (!piste.HasValue) { if (n.style.visibility.value != Visibility.Hidden) n.style.visibility = Visibility.Hidden; continue; }
-                var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(piste.Value.x, Screen.height - piste.Value.y));
+                var p = piste.HasValue ? RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(piste.Value.x, Screen.height - piste.Value.y)) : Vector2.zero;
+                if (!piste.HasValue || p.y < yla || p.y > ala) { if (n.style.visibility.value != Visibility.Hidden) n.style.visibility = Visibility.Hidden; continue; }
                 n.style.left = p.x - Laatikko / 2f;
                 n.style.top = p.y - Laatikko / 2f;
                 if (n.style.visibility.value != Visibility.Visible) n.style.visibility = Visibility.Visible;
