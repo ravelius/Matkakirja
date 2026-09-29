@@ -1,0 +1,119 @@
+# Rakentaa elävän rakennuksen (dioraama) paketin ja vie sen ämpäriin.
+#
+# Päätoimittajan erä 29.9.2026 (Linnanrakentajan ehdotus): CI rakentaa
+# paketin tools/dioraama/rakenna.mjs:llä (pelkkä Node, deterministinen) ja vie
+# sen hash-kansioon dioraama/<rakennus>/<hash>/, jonka jälkeen osoitin
+# dioraama/<rakennus>/uusin.json vaihdetaan. Natiivi lukee osoittimen ja hakee
+# paketin sen polusta, joten puolikas vienti ei koskaan näy.
+#
+# hash = sha256(manifest.json) 16 ensimmäistä heksamerkkiä; manifest listaa
+# jokaisen tiedoston sha256:n, joten hash kattaa koko paketin.
+# Hash-kansiota ei ylikirjoiteta: jos se on jo ämpärissä, vain osoitin
+# tarkistetaan. Välimuisti: hash-kansio immutable, uusin.json max-age=60.
+
+name: Vie dioraama ämpäriin
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'js/dioraama/**'
+      - 'tools/dioraama/**'
+      - '.github/workflows/vie-dioraama.yml'
+  workflow_dispatch:
+    inputs:
+      rakennus:
+        description: 'Rakennus (js/dioraama/rakennukset/<nimi>.js); tyhjä = kaikki'
+        type: string
+        required: false
+        default: ''
+      kuiva:
+        description: 'Kuiva-ajo: rakenna ja listaa, ei kirjoitusta ämpäriin'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-dioraama
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      AWS_MAX_ATTEMPTS: '10'
+      AWS_RETRY_MODE: adaptive
+      AMPARI: ${{ secrets.R2_BUCKET }}
+      PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      JULKINEN: https://media.matkakirja.app
+      RAKENNUS: ${{ inputs.rakennus }}
+      # Push-ajo vie aina; käsiajo on oletuksena kuiva.
+      KUIVA: ${{ github.event_name == 'workflow_dispatch' && inputs.kuiva || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          TILI: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$TILI" ]                  || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "$AWS_ACCESS_KEY_ID" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "$AWS_SECRET_ACCESS_KEY" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$AMPARI" ]                || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then echo "::error::Näitä salaisuuksia ei löydy:$puuttuu"; exit 1; fi
+
+      - name: Rakenna ja vie
+        run: |
+          set -euo pipefail
+          if [ -n "$RAKENNUS" ]; then
+            lista="$RAKENNUS"
+          else
+            lista=$(ls js/dioraama/rakennukset/*.js | xargs -n1 basename | sed 's/\.js$//')
+          fi
+          echo "## Dioraama → ämpäri" >> "$GITHUB_STEP_SUMMARY"
+          [ "$KUIVA" = "true" ] && echo "**KUIVA-AJO** — mitään ei kirjoitettu." >> "$GITHUB_STEP_SUMMARY"
+          for r in $lista; do
+            case "$r" in *[!a-z0-9-]*|'') echo "::error::rakennuksen nimi: $r"; exit 1 ;; esac
+            [ -f "js/dioraama/rakennukset/$r.js" ] || { echo "::error::ei rakennusta $r"; exit 1; }
+            node tools/dioraama/rakenna.mjs "$r" --ulos dist/dioraama
+            d="dist/dioraama/$r"
+            [ -f "$d/manifest.json" ] || { echo "::error::$d/manifest.json puuttuu"; exit 1; }
+            hash=$(sha256sum "$d/manifest.json" | cut -c1-16)
+            kohde="dioraama/$r/$hash"
+            printf '{"rakennus":"%s","hash":"%s","polku":"%s/"}\n' "$r" "$hash" "$hash" > "uusin-$r.json"
+            olemassa=$(aws s3 ls "s3://$AMPARI/$kohde/manifest.json" --endpoint-url "$PAATE" >/dev/null 2>&1 && echo kylla || echo ei)
+            {
+              echo "- **$r** → \`$kohde/\` (jo ämpärissä: $olemassa), $(find "$d" -type f | wc -l | tr -d ' ') tiedostoa, $(du -sh "$d" | cut -f1)"
+            } >> "$GITHUB_STEP_SUMMARY"
+            [ "$KUIVA" = "true" ] && continue
+            if [ "$olemassa" = "ei" ]; then
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.json' \
+                --content-type application/json --cache-control 'public, max-age=31536000, immutable'
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.glb' \
+                --content-type model/gltf-binary --cache-control 'public, max-age=31536000, immutable'
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.png' \
+                --content-type image/png --cache-control 'public, max-age=31536000, immutable'
+            fi
+            koodi=$(curl -s -o /dev/null -w '%{http_code}' "$JULKINEN/$kohde/rakennus.json")
+            [ "$koodi" = "200" ] || { echo "::error::$JULKINEN/$kohde/rakennus.json vastasi $koodi, osoitinta ei vaihdettu"; exit 1; }
+            aws s3 cp "uusin-$r.json" "s3://$AMPARI/dioraama/$r/uusin.json" --endpoint-url "$PAATE" \
+              --content-type application/json --cache-control 'public, max-age=60'
+            echo "  - osoitin dioraama/$r/uusin.json → $hash/" >> "$GITHUB_STEP_SUMMARY"
+          done
