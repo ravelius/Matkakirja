@@ -2134,4 +2134,63 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mitä hákarl oikein on?", a: "Se on perinteinen islantilaisherkku, joka valmistetaan mätättämällä ja kuivattamalla jäämerihain lihaa useiden kuukausien ajan – tuore liha on myrkyllistä ilman tätä käsittelyä. Bjarnarhöfnin tilan museo Vesturlannissa esittelee valmistusprosessin ja tarjoaa maistiaisia." },
     ],
   },
+  ALB: {
+    "Berat": [
+      { q: "Mikä Onufrin punainen oikein on?", a: "Onufri maalasi Beratissa 1500-luvulla, ja hänen tunnusmerkkinsä on hehkuva punainen, jota kutsutaan hänen mukaansa. Hän varmisti signeerauksensa vuoden 1547 kirjoituksella: Olen Onufri, Beratin kaupungista." },
+      { q: "Miksi Osumin kanjoni on niin kapea?", a: "Kanjonissa on kuusi ahdasta kohtaa, joissa seinät ovat joen pohjalla vain 1,5 metrin päässä toisistaan. Tutkijat arvelevat, että maanalaisen joen katto romahti ja paljasti rotkon 2–3 miljoonaa vuotta sitten." },
+      { q: "Mitä Beratista on Albanian kolikoissa?", a: "Linnoituksen kuva on 10 lekin kolikossa. Linnan alueella oli aikanaan noin 20 kirkkoa mutta vain yksi moskeija, joka rakennettiin turkkilaiselle varuskunnalle." },
+    ],
+    "Dibër": [
+      { q: "Miksi Peshkopin lähteillä ei saa pitää koruja?", a: "Vesi on niin rikkipitoista, että se tummentaa ja syövyttää useimmat metallit. Kerrotaan, että vain kulta kestää. Rikki tulee Korabin kipsikerrostumista, ja lähteet tuottavat noin 14 litraa sekunnissa." },
+      { q: "Mistä Peshkopi on saanut nimensä?", a: "Nimi tulee sanasta piispa. Alue liitettiin Ohridin arkkipiispakuntaan 1019, ja vuotta myöhemmin siitä tuli oma piispakunta. Ottomaanien aikaan paikkaa kutsuttiin nimellä Debre-i Zir eli Ala-Debre." },
+    ],
+    "Durrës": [
+      { q: "Miksi Durrës oli kerran Albanian pääkaupunki?", a: "Vuosina 1914–1920 Durrës toimi maan pääkaupunkina Vlorën jälkeen, ennen kuin Tirana sai aseman." },
+      { q: "Miksi kaupungin vanha nimi on Dyrrhachium?", a: "Kreikkalaiset perustivat kaupungin nimellä Epidamnos. Roomalaiset antoivat sille nimen Dyrrhachium sen jälkeen, kun heistä tuli alueen isäntiä 229 eaa." },
+      { q: "Onko Durrësissa ottomaanien jälkiä?", a: "On. Ottomaanit valtasivat kaupungin 1501, ja Fatih-moskeija rakennettiin jo 1502. Nykyinen Suuri moskeija on vuodelta 1931 ja seisoo aiemman ottomaanimoskeijan paikalla." },
+    ],
+    "Elbasan": [
+      { q: "Mitä Elbasan-nimi tarkoittaa?", a: "Nimen arvellaan tarkoittavan albaniaksi tasaista linnoitusta tai turkiksi tasaista maakuntaa. Tasainen viittaa Shkumbinin laaksoon Skanderbegin vuorten ja Myzeqen tasangon välissä." },
+      { q: "Mikä oli Puolueen teräs?", a: "Se oli 1970-luvulla kiinalaisten avulla rakennettu valtava metallurginen kombinaatti. Sen pohjalta toimii nyt Kurumin terästehdas, joka kattaa noin 85 prosenttia Albanian rautatuotteiden markkinoista. Alue on myös yksi Balkanin saastuneimmista." },
+      { q: "Onko Elbasanissa pelattu maajoukkueen otteluita?", a: "On. Vuonna 2014 kunnostettu Elbasan Arena nousi Albanian jalkapallomaajoukkueen kotikentäksi, joten kansallisen tason otteluita nähtiin kaupungissa eikä vain pääkaupungissa." },
+    ],
+    "Fier": [
+      { q: "Miksi Apolloniassa ei ole enää satamaa?", a: "Maanjäristys 200-luvulla jKr. muutti Vjosan uomaa, satama liettyi umpeen ja ympäristö muuttui malariasuoksi. Kaupunki autioitui vähitellen." },
+      { q: "Miksi Karavastan laguunilla käy lintuharrastajia?", a: "Laguunilla pesii harvinainen kiharapelikaani, jopa 300 paria. Se on noin 5 prosenttia koko maailman kannasta, ja siksi kansallispuisto on kansainvälisesti tärkeä lintualue." },
+      { q: "Miksi Ardenican luostari on tunnettu Skanderbegistä?", a: "Kansallissankari Skanderbeg vihittiin siellä 21. huhtikuuta 1451 Andronika Arianitin kanssa, ja häihin osallistuivat Lezhën liiton ruhtinaat." },
+    ],
+    "Gjirokastër": [
+      { q: "Miksi talot on rakennettu kuin pienet linnat?", a: "Sukujen välinen verikosto, rosvot ja levottomat ajat tekivät kotien linnoittamisesta järkevää. Paksut kiviseinät, pienet alaikkunat ja talon oma vesihuolto pitivät perheen turvassa." },
+      { q: "Miksi linnoituksessa on ollut vankila?", a: "Vankilatiloja laajennettiin 1932 kuningas Zogin aikaan, ja myöhemmin siellä pidettiin poliittisia vankeja. Nykyään linnoitus on museo ja yksi kaupungin suosituimmista nähtävyyksistä." },
+      { q: "Miksi linnan pihalla on lentokone?", a: "Siellä on esillä vangittu Yhdysvaltain ilmavoimien lentokone, joka muistuttaa hallinnon kylmän sodan ajan kannasta. Linnassa on viisi tornia, ja sen länsipään laajennus on Ali Pashan käsialaa vuoden 1812 jälkeen." },
+    ],
+    "Korçë": [
+      { q: "Mikä on Mirahorin moskeija ja miksi se on niin vanha?", a: "Sen rakennutti 1494–95 sulttaani Bayezid II:n tallimestari Iljaz bej Mirahori, ja se on yksi Albanian vanhimmista säilyneistä ottomaanirakennuksista. Moskeijan ympärille kasvoi kaupungin alkuperäinen ydin." },
+      { q: "Miksi Birra Korça maistuu Korçëlta?", a: "Panimo perustettiin 1928, ja vetensä se ottaa Moravan vuoren lähteistä. Olut on yksi Albanian tunnetuimmista tuotemerkeistä." },
+      { q: "Miksi Korçën ortodoksinen katedraali on vasta 1990-luvulta?", a: "Edellinen Pyhän Yrjön katedraali purettiin 1968. Nykyinen Kristuksen ylösnousemuksen katedraali rakennettiin uudelleen ja valmistui 1992, ja se on kaupungin pääkirkko." },
+    ],
+    "Kukës": [
+      { q: "Miksi Kukësia ehdotettiin Nobelin rauhanpalkinnon saajaksi?", a: "Kosovon sodan aikana 1999 noin 16 000 asukkaan kaupunki otti vastaan satojatuhansia pakolaisia telttoihin ja koteihin. Kaupunkia ehdotettiin rauhanpalkinnon saajaksi vuonna 2000." },
+      { q: "Miksi Valbonan solan yli kävellään yhä vanhaa muulipolkua Thethiin?", a: "Reitti Valbonasta Thethiin nousee noin 1 800 metriin ja on vanha muulipolku, jota pitkin kylien väki kulki markkinoille ja sukulaisten luo ennen teitä. Nyt sen kävelee moni retkeilijä yhdessä päivässä kesäkuukausina, punavalkoisten merkkien opastamana." },
+      { q: "Mikä on flija, ja miksi sen valmistus vie tuntikausia?", a: "Flija on pohjois-Albanian ja Kosovon ruoka, jossa ohutta taikinaa levitetään kerros kerrokselta kuumalle rautaiselle saç-kannelle hiillosten päällä ja voidellaan. Kukësissa sen paistoon voi mennä useita tunteja, ja alueella järjestetään flija-festivaaleja." },
+    ],
+    "Lezhë": [
+      { q: "Kuka perusti Lezhën antiikin Lissoksen?", a: "Diodoroksen mukaan Syrakusan hallitsija Dionysios I perusti Lissoksen 385 eaa. turvaamaan kauppareittejä Adrianmerellä. Linnoitus rakennettiin kukkulalle, joka kohoaa yhä kaupungin päällä." },
+      { q: "Miksi Lezhëä sanotaan myös Alessioksi?", a: "Se on kaupungin italialainen nimi, jonka Venetsian 1400-luvun hallinto jätti historiakirjoihin. Nimi elää yhä vanhoissa kartoissa ja historiakirjoissa." },
+    ],
+    "Shkodër": [
+      { q: "Miksi Shkodërin sanotaan pyöräkaupungiksi?", a: "Kaupunki on tasainen, ja pyöräily on ollut arkea vuosikymmeniä. Vuokrapyörällä pääsee kaupungista Rozafan linnalle, Mesin sillalle ja järven rantaan, esimerkiksi Shirokan kylään." },
+      { q: "Mitä lintuja Shkodërjärvellä näkee?", a: "Järvellä on noin 270 lintulajia, muun muassa kiharapelikaaneja, joita on Euroopassa enää harvassa. Noin 35 prosenttia järvestä kuuluu Albanialle ja loput Montenegrolle." },
+      { q: "Mitä Komanin järven lautalla näkee?", a: "Lautta kulkee Komanista Fierzaan noin kaksi ja puoli tuntia kapeissa rotkoissa, joiden jyrkät seinämät nousevat suoraan vedestä. Pienemmät veneet kuljettavat ihmisiä ja tavaraa kyliin, joihin ei pääse tietä pitkin." },
+    ],
+    "Tiranë": [
+      { q: "Miksi Tiranan pyramidi on nyt portaikko?", a: "Pyramidi avattiin 1988 museona, ja sitä käytettiin myöhemmin muun muassa konferenssikeskuksena. Hollantilainen MVRDV muutti sen 2023 nuorten teknologiakeskus TUMOksi, ja katolle johtavat portaat saavat kiipeämään sinne kuten paikalliset ennenkin." },
+      { q: "Kuinka nopeasti pääsee vuorelle Tiranasta?", a: "Dajti Ekspres -köysirata nousee 15 minuutissa noin 1 613 metrin korkeuteen Dajtin parvekkeelle. Se valmistui 2005, ja ylhäältä näkee koko Tiranan tasangon." },
+    ],
+    "Vlorë": [
+      { q: "Miksi Muradien moskeija on tärkeä?", a: "Se rakennettiin 1537–1542 ja sen suunnitteli Mimar Sinan, joka teki myös Süleymaniyen moskeijan Istanbulissa. Moskeija on Albanian kulttuurimonumentti ja edelleen käytössä." },
+      { q: "Miksi Narta-laguuni on niin matala?", a: "Sen keskisyvyys on vain noin 0,7 metriä, koska Vjosa-joki on kasannut siihen sedimenttiä tuhansien vuosien ajan. Matala vesi on kuin suunniteltu suolalammikoille ja lintujen ruokapaikaksi." },
+      { q: "Kuinka suuri Sazanin saari on?", a: "Sazan on Albanian suurin saari, noin 4,8 kilometriä pitkä ja 2,7 leveä. Se kuuluu Karaburun-Sazanin meripuistoon, jonka vesillä uivat delfiinit ja sukeltajien löytämät hylyt." },
+    ],
+  },
 };
