@@ -382,6 +382,9 @@ namespace Matkakirja.Linssit.Dioraama
         public Ulkokuori Ulkokuori;
         /// <summary>Oletustunnelma (`tunnelma`: "paiva" | "hamara"); puuttuva = päivä.</summary>
         public string Tunnelma;
+        /// <summary>Yleisnäkymän nimilaput (`nimilaput`, oletus true). Elävän linnan käsikirjoitus 29.9.: ei nimilappuja —
+        /// tilat tunnistetaan siitä, mitä niissä tapahtuu.</summary>
+        public bool Nimilaput = true;
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
@@ -416,6 +419,7 @@ namespace Matkakirja.Linssit.Dioraama
                 Versio = (int)(MiniJson.Luku(juuri, "versio") ?? 0),
             };
             r.Tunnelma = MiniJson.Teksti(juuri, "tunnelma");
+            r.Nimilaput = MiniJson.Totuus(juuri, "nimilaput", true);
             var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));
             if (kuori != null)
                 r.Ulkokuori = new Ulkokuori

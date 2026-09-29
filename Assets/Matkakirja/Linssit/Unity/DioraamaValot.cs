@@ -93,6 +93,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Tunnelman kertoimet (DioraamaTunnelma, Olavinlinna hämärä): aurinko ja taivas; 1 = päivä.</summary>
         public static float TunnelmaAurinko = 1f, TunnelmaTaivas = 1f;
+        /// <summary>Samanaikaisesti päällä olevien pistevalojen katto (kameraa lähimmät).</summary>
+        public const int ElaviaEnintaan = 6;
+        readonly List<PisteValo> lajittelu = new List<PisteValo>();
+        float seuraavaLajittelu;
 
         public DioraamaValot(Transform juuri) { this.juuri = juuri; }
 
@@ -137,6 +141,25 @@ namespace Matkakirja.Natiivi
                 if (aurinkoValo != null)
                     aurinkoValo.intensity = aurinkoPerusVoima * TunnelmaAurinko * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
                 PaivitaTaivasVoima();
+            }
+
+            // Elävät valot (linnan käsikirjoitus 29.9. kohta 6: "eläviä liekkejä enintään noin 6 näkyvissä kerralla, muu valo
+            // leivottu"): kytkimen sallimista pistevaloista vain ElaviaEnintaan kameraa lähintä päällä, lajittelu 0,25 s välein.
+            if (kamera != null && pisteValot.Count > ElaviaEnintaan && Time.unscaledTime >= seuraavaLajittelu)
+            {
+                seuraavaLajittelu = Time.unscaledTime + 0.25f;
+                Vector3 k = kamera.transform.position;
+                lajittelu.Clear(); lajittelu.AddRange(pisteValot);
+                lajittelu.Sort((a, b) => a.Go == null || b.Go == null ? 0
+                    : (a.Go.transform.position - k).sqrMagnitude.CompareTo((b.Go.transform.position - k).sqrMagnitude));
+                int paalla = 0;
+                foreach (var p in lajittelu)
+                {
+                    if (p.Light == null) continue;
+                    bool sallittu = p.OnTuli ? tuliPaalla : lamputPaalla;
+                    p.Light.enabled = sallittu && paalla < ElaviaEnintaan;
+                    if (p.Light.enabled) paalla++;
+                }
             }
 
             foreach (var p in pisteValot)
