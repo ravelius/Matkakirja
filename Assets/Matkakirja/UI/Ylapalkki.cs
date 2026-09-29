@@ -593,7 +593,7 @@ namespace Matkakirja.Natiivi
             palkki.pickingMode = k ? PickingMode.Ignore : PickingMode.Position;
             logo.style.display = k || (matalaNyt == true && !PilleriOikealla) ? DisplayStyle.None : DisplayStyle.Flex;
             if (k) palkki.style.backgroundImage = StyleKeyword.None;
-            else Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
+            else if (!palkki.ClassListContains("mk-ylapalkki--nahka")) Rakenne.Tausta(palkki, Kuviot.Ylapalkki); // nahka pysyy
             // Pillerin muoto vaihtuu: sama rivi uudelleen.
             string r = rivi;
             rivi = null;
