@@ -708,6 +708,29 @@ namespace Matkakirja.Natiivi
                 EsihaePala(pala, persoona, lohko);
         }
 
+        /// <summary>
+        /// Luennan ENSIMMÄINEN pala valmiiksi (omistaja 29.9.2026: "voitaisiinko ensimmäinen lause tai pelkkä otsikkokin
+        /// esiladata heti kun nosto latautuu"): vain palavirran 1. pala (otsikko + 1. virke) jonon kärkeen, samalla avaimella
+        /// kuin Lue sen hakee, joten kaiuttimen napautus soi välimuistista. Palauttaa avaimen (PeruEsihaku), null = ei haettu.
+        /// </summary>
+        public string EsihaeAlku(string teksti, string persoona = "kertoja", string loppuTagi = null)
+        {
+            if (string.IsNullOrWhiteSpace(teksti)) return null;
+            persoona ??= "kertoja";
+            teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
+            string lohko = TagiLohko(Lukijaaani.OletusLohko(persoona), loppuTagi);
+            var palat = PyyntoPalat(teksti, true, loppuTagi);
+            if (palat.Count == 0) return null;
+            EsihaePala(palat[0], persoona, lohko, true);
+            return Saadot.Valimuistiavain(persoona, palat[0]);
+        }
+
+        /// <summary>Jonottava esihaku pois (kortti suljettiin ennen kuin haku alkoi); käynnissä oleva valmistuu.</summary>
+        public void PeruEsihaku(string avain)
+        {
+            if (avain != null && PoistaJonosta(avain)) Debug.Log("MATKAKIRJA puhe: esihaku peruttu (kortti suljettiin)");
+        }
+
         /// <summary>Katkaisee tekstin viimeiseen virkkeen loppuun ennen kattoa (tai kattoon).</summary>
         public static string Katkaise(string teksti, int katto)
         {
