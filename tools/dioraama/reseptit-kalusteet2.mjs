@@ -312,6 +312,30 @@ export function seinasoihtu({ pituus = 0.5 } = {}) {
 }
 
 /**
+ * Lyhty tolpassa (tunnelma 29.9.): puutolppa y 0…korkeus, rautavarsi w+-suuntaan, varren päässä riippuva lyhty
+ * (rautakehikko 0,2 × 0,28 m, avoimet sivut, kynttilä ja liekki). `.valo` = liekin kohta.
+ */
+export function lyhty({ korkeus = 2.2, varsi = 0.45 } = {}) {
+  const k = [];
+  k.push(...putki([0, 0, 0], [0, korkeus, 0], 0.07, 0.055, 8, 'puu'));
+  const yv = korkeus - 0.12;
+  k.push(...putki([0, yv, 0.04], [0, yv, varsi], 0.018, 0.018, 6, 'rauta'));
+  const y1 = yv - 0.06, y0 = y1 - 0.28, w = varsi;
+  const kaikki = { etu: 'rauta', taka: 'rauta', yla: 'rauta', ala: 'rauta', vasen: 'rauta', oikea: 'rauta' };
+  k.push(...L(-0.1, 0.1, y0, y0 + 0.02, w - 0.1, w + 0.1, kaikki));
+  k.push(...L(-0.1, 0.1, y1 - 0.02, y1, w - 0.1, w + 0.1, kaikki));
+  for (const [du, dw] of [[-0.09, -0.09], [0.09, -0.09], [-0.09, 0.09], [0.09, 0.09]]) {
+    k.push(...putki([du, y0, w + dw], [du, y1, w + dw], 0.008, 0.008, 4, 'rauta'));
+  }
+  k.push(...putki([0, y1, w], [0, y1 + 0.1, w], 0.13, 0, 4, 'rauta'));
+  k.push(...putki([0, y1 + 0.1, w], [0, yv, w], 0.006, 0.006, 4, 'rauta'));
+  k.push(...putki([0, y0 + 0.02, w], [0, y0 + 0.12, w], 0.02, 0.02, 8, 'kynttila'));
+  k.push(...putki([0, y0 + 0.12, w], [0, y0 + 0.17, w], 0.012, 0, 6, 'liekki'));
+  k.valo = { paikka_paikallinen: [0, y0 + 0.15, w], sade: 6, voima: 0.8, vari: '#ffb060' };
+  return k;
+}
+
+/**
  * Arkku: puuarkku rautahelat. Mitat (m): leveys (u) 0,9, syvyys (w) 0,5, korkeus 0,55 (kansi mukana).
  * Origo: pohjan keskipiste lattialla; etupuoli (w+) = lukkopuoli. Kolme vannetta kiertää arkun,
  * lukkolevy edessä. Roolit: puu, kansi, rauta.
@@ -642,7 +666,7 @@ export function nuolitynnyri({ sade = 0.2, korkeus = 0.45, nuolia = 12, siemen =
 }
 
 export const RESEPTIT = {
-  alttari, vihkimisristi, kirkonpenkki, kynttilakruunu, seinasoihtu, arkku, keihasteline, kilpi, hakapyssy,
+  alttari, vihkimisristi, kirkonpenkki, kynttilakruunu, seinasoihtu, lyhty, arkku, keihasteline, kilpi, hakapyssy,
   ruutitynnyri, pelilauta, pulpetti, kirja, koysikieppi, airot, verkko, kello, jalkajousi, nuolitynnyri,
 };
 
@@ -652,6 +676,7 @@ export const OLETUSPINNAT = {
   kirkonpenkki: { puu: 'puu', lankku: 'lankku' },
   kynttilakruunu: { rauta: 'rauta', kynttila: 'vaha' },
   seinasoihtu: { rauta: 'rauta', puu: 'puu', kaare: 'kangas', liekki: 'hiillos' },
+  lyhty: { puu: 'puu', rauta: 'rauta', kynttila: 'vaha', liekki: 'hiillos' },
   arkku: { puu: 'puu', kansi: 'lankku', rauta: 'rauta' },
   keihasteline: { puu: 'puu', varsi: 'esine-puu', karki: 'esine-metalli' },
   kilpi: { puu: 'lankku', metalli: 'metalli' },

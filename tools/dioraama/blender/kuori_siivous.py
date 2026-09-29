@@ -36,6 +36,7 @@ RES = 0.03       # ortokuvan ruutu (m)
 MARG = 18.0      # ortokuvan reunus alueen ympärillä (m): kloonauslähteet
 LAAJENNUS = 3    # UV-saumavara pikseleinä (vain vapaisiin pikseleihin)
 PUHDAS_VALI = 1.0  # puhtaan maan etäisyys mistä tahansa alueesta (m)
+PAINUMA = 0.05  # painetun romun etäisyys maanpinnan alla (m)
 ALAVARA = 0.6   # näin paljon maanpinnan alapuolella olevat (urat romun alla) nostetaan maahan
 VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jäi yli tämän maasta
 # Venyneiden kolmioiden käsittely ryhmittäin: 'poista' (vapaa piha) tai 'jata' (muurin vieri: takana ei ole pintaa).
@@ -103,6 +104,8 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             tas = alue & (co[:, 2] < gk + korkeus) & (co[:, 2] > gk - ALAVARA)
             siirr = tas & (co[:, 2] > gk + DZ)
             zv = co[:, 2].copy(); co[tas, 2] = gk[tas]
+            # Painettu romu 5 cm maanpinnan alle: päällekkäiset pinnat eivät varjosta toisiaan leivonnassa (hämärä 29.9.).
+            co[siirr, 2] = gk[siirr] - PAINUMA
             ylhaalla = np.zeros(len(co), bool); ylhaalla[lahi] = ~tas[lahi] & (co[lahi, 2] - gk[lahi] > VENYMA)
             ven = ((zv - co[:, 2])[tv] > VENYMA).any(1) & ylhaalla[tv].any(1)
             if tapa == 'poista': poista |= ven

@@ -23,6 +23,7 @@ import { TILA as TILA_MUURINHARJA } from './olavinlinna/muurinharja.js';
 import { TILA as TILA_KAPPELI } from './olavinlinna/kappeli.js';
 import { TILA as TILA_KESKUSHALLI } from './olavinlinna/keskushalli.js';
 import { TILA as TILA_KEITTIO } from './olavinlinna/keittio.js';
+import { TILA as TILA_TUNNELMA } from './olavinlinna/tunnelma.js';
 
 // ---------------------------------------------------------------------------
 // Linnan taulu (RAKENNUS-tason opetustaulu, 3 ydinasiaa). Sisältökirjuri tarkisti 29.9. (Kansallismuseo, Museovirasto, Finna):
@@ -67,6 +68,6 @@ export const RAKENNUS = {
   kiertue: ['laituri', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli', 'keittio'],
   tilat: [
     TILA_MASSA, TILA_LAITURI, TILA_FATABUURI, TILA_KIERREPORTAAT, TILA_MUURINHARJA,
-    TILA_KAPPELI, TILA_KESKUSHALLI, TILA_KEITTIO,
+    TILA_KAPPELI, TILA_KESKUSHALLI, TILA_KEITTIO, TILA_TUNNELMA,
   ],
 };

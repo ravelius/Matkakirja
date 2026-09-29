@@ -212,6 +212,10 @@ v = rak.get('valaistus', {})
 tausta.inputs['Color'].default_value = (*srgb(v.get('taivas', {}).get('yla', '#8fa3bc')), 1)
 tausta.inputs['Strength'].default_value = 0.3
 a = v.get('aurinko', {})
+HAMARA = '--hamara' in argv  # iltahämärä (tunnelma 29.9.): matala oranssi aurinko, tumma sininen taivas, soihdut päävalona
+if HAMARA:
+    tausta.inputs['Color'].default_value = (*srgb('#34466e'), 1); tausta.inputs['Strength'].default_value = 0.45
+    a = dict(a, voima=0.3, vari='#ff9a5c', korkeus=4)
 aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 2.2 * a.get('voima', 1.5)
 aur.color = srgb(a.get('vari', '#ffd29a')); aur.angle = math.radians(1.5)
 ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
@@ -243,7 +247,7 @@ for i, lv in enumerate(tila.get('valot', [])):
     o.location = bl(p)
 
 # --- Kamera tilan kamera-asennosta (sama kaava kuin speksin asentoSijainti) ---
-k = tila['kamera']
+k = tila.get('kamera') or dict(rak.get('yleiskamera', {}).get('vaaka', {}), **{})
 kk, ka = math.radians(k['korkeus']), math.radians(k['atsimuutti'])
 kohde = k['kohde']
 sij = (kohde[0] + k['etaisyys'] * math.cos(kk) * math.sin(ka), kohde[1] + k['etaisyys'] * math.sin(kk),
@@ -323,6 +327,12 @@ if '--leivo' in argv:
         k0, savu0, kork0, _ = LIEKKIKOOT.get(l.get('liekki'), (0.3, 0.2, 1.0, 3))
         tyhja(f"liekki:{j:02d}-{l.get('liekki', 'liekki')}", l['paikka'], koko=round(k0 * l.get('koko', 1), 3),
               savu=savu0, korkeus=kork0, sade=2.5)
+    # Tunnelma (Siirtosepän sopimus 29.9.): savu:NN {leveys, korkeus, voima, vari}, lokit:NN {maara, sade, korkeus}.
+    for j, sv in enumerate(tila.get('savut', [])):
+        tyhja(f'savu:{j:02d}', sv['paikka'], leveys=sv.get('leveys', 0.5), korkeus=sv.get('korkeus', 5.0),
+              voima=sv.get('voima', 0.5), vari=sv.get('vari', '#8a8580'))
+    for j, lk in enumerate(tila.get('lokit', [])):
+        tyhja(f'lokit:{j:02d}', lk['paikka'], maara=lk.get('maara', 5), sade=lk.get('sade', 10.0), korkeus=lk.get('korkeus', 5.0))
     for j, lv in enumerate(tila.get('valot', [])):
         if lv.get('tyyppi') == 'keila':
             # Siirtosepän sopimus (f5938d7c): keila kulkee tyhjän Blender-Z:n suuntaan huoneeseen; leveys = X, korkeus = Y.
@@ -334,6 +344,25 @@ if '--leivo' in argv:
             tyhja(f'valo:{j}', lv['paikka'], sade=min(4.0, lv.get('sade', 4)), voima=lv.get('voima', 1),
                   vari=lv.get('vari', '#ffc26a'), lepatus=lv.get('lepatus', 0.0))
     bpy.ops.object.select_all(action='DESELECT')
+    # Liput (Siirtosepän sopimus 29.9.): UV0.u = 0 tangon kohdalla → 1 kärjessä heilumisvarjostinta varten. Lippu
+    # osoittaa +x:ään (tunnelma.js suunta 90); u = (x − saaren min x) / saaren leveys.
+    for o in omat:
+        li = [i for i, s_ in enumerate(o.material_slots) if s_.material and 'lippu' in s_.material.name]
+        if not li:
+            continue
+        bm = bmesh.new(); bm.from_mesh(o.data); uv0 = bm.loops.layers.uv[0]; bm.faces.ensure_lookup_table()
+        jaljella = {f for f in bm.faces if f.material_index in li}
+        while jaljella:
+            saari, pino = set(), [jaljella.pop()]
+            while pino:
+                f = pino.pop(); saari.add(f)
+                for e_ in f.edges:
+                    for g_ in e_.link_faces:
+                        if g_ in jaljella: jaljella.discard(g_); pino.append(g_)
+            xs = [v_.co.x for f in saari for v_ in f.verts]; x0, x1 = min(xs), max(xs)
+            for f in saari:
+                for l_ in f.loops: l_[uv0].uv = ((l_.vert.co.x - x0) / max(x1 - x0, 1e-4), l_[uv0].uv[1])
+        bm.to_mesh(o.data); bm.free()
     for o in omat + tyhjat: o.select_set(True)
     os.makedirs(os.path.join(ULOS, 'tilat'), exist_ok=True)
     bpy.ops.export_scene.gltf(filepath=os.path.join(ULOS, 'tilat', f'{TILA}.glb'), use_selection=True,
