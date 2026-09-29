@@ -31,6 +31,8 @@ const RESEPTIT = new Set([
   'alttari', 'vihkimisristi', 'kirkonpenkki', 'kynttilakruunu', 'seinasoihtu', 'arkku', 'keihasteline', 'kilpi',
   'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
   'jalkajousi', 'nuolitynnyri',
+  // Tunnelma 29.9. (tunnelma.js): lyhty tolpassa.
+  'lyhty',
 ]);
 
 const KIELLETYT_TAGIT = [/\[softly\]/i, /\[whispers\]/i];

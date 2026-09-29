@@ -10,7 +10,7 @@ import { PINNAT } from '../js/dioraama/pankit/pinnat.js';
 const ODOTETUT = [
   'alttari', 'vihkimisristi', 'kirkonpenkki', 'kynttilakruunu', 'seinasoihtu', 'arkku', 'keihasteline', 'kilpi',
   'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
-  'jalkajousi', 'nuolitynnyri',
+  'jalkajousi', 'nuolitynnyri', 'lyhty',
 ].sort();
 const NIMET = Object.keys(RESEPTIT).sort();
 // Seinään kiinnitettävät: origo seinän pinnalla, y molempiin suuntiin, w ≥ 0. Roikkuva: y ≤ 0 (origo katossa).
@@ -25,8 +25,8 @@ function geom(t) {
   return { l, n: l > 0 ? n.map((x) => x / l) : [0, 0, 0] };
 }
 
-test('RESEPTIT sisältää kaikki 19 nimeä sekä kalusteet2:ssa että reseptit.mjs:n kootussa taulussa', () => {
-  assert.equal(ODOTETUT.length, 19);
+test('RESEPTIT sisältää kaikki 20 nimeä sekä kalusteet2:ssa että reseptit.mjs:n kootussa taulussa', () => {
+  assert.equal(ODOTETUT.length, 20);
   assert.deepEqual(NIMET, ODOTETUT);
   assert.deepEqual(Object.keys(OLETUSPINNAT).sort(), ODOTETUT);
   for (const nimi of ODOTETUT) assert.equal(typeof KAIKKI[nimi], 'function', `${nimi} puuttuu reseptit.mjs:n RESEPTIT:stä`);
@@ -96,9 +96,9 @@ test('deterministinen: sama syöte antaa saman tuloksen; siemenelliset reagoivat
   }
 });
 
-test('muut kuin kynttilakruunu ja seinasoihtu eivät palauta .valoa', () => {
+test('muut kuin kynttilakruunu, seinasoihtu ja lyhty eivät palauta .valoa', () => {
   for (const nimi of NIMET) {
-    if (nimi === 'kynttilakruunu' || nimi === 'seinasoihtu') continue;
+    if (nimi === 'kynttilakruunu' || nimi === 'seinasoihtu' || nimi === 'lyhty') continue;
     assert.equal(RESEPTIT[nimi]({}).valo, undefined, `${nimi}: odottamaton .valo`);
   }
 });
@@ -143,7 +143,7 @@ test('keihasteline: 3–4 keihästä, jalkajousi: 1–2 jousta', () => {
   assert.equal(RESEPTIT.jalkajousi({ kpl: 2 }).filter((t) => t.rooli === 'lapa').length, 2 * RESEPTIT.jalkajousi({ kpl: 1 }).filter((t) => t.rooli === 'lapa').length);
 });
 
-test('sijoita() toimii kaikille 19 reseptille: äärelliset maailmankärjet ja pinta asetettu', () => {
+test('sijoita() toimii kaikille 20 reseptille: äärelliset maailmankärjet ja pinta asetettu', () => {
   for (const nimi of NIMET) {
     const m = sijoita({ resepti: nimi, paikka: [3, 1, -2], suunta: 63 });
     assert.equal(m.length, RESEPTIT[nimi]({}).length, `${nimi}: kolmiomäärä muuttui`);
