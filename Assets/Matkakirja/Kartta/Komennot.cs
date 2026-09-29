@@ -893,12 +893,14 @@ namespace Matkakirja
                     else if (o.Length > 1) { Maaraja.Sallittu = o[1] != "pois"; Maaraja.Pakota = o[1] == "paalle"; }
                     Debug.Log($"MATKAKIRJA maaraja: sallittu {Maaraja.Sallittu}, pakotettu {Maaraja.Pakota}, " +
                               $"rannikko piirtyy {(Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy)}, " +
-                              $"{(Maaraja.KokoRengas ? "koko rengas" : "maa–maa-rajat")}, paino {Maaraja.Paino} " +
-                              $"(peitto {Viivaleveys.KehaPeitto(Maaraja.Paino).ToString("0.##", CultureInfo.InvariantCulture)} web, " +
-                              $"{Viivaleveys.KehaPeittoNatiivi(Maaraja.Paino).ToString("0.###", CultureInfo.InvariantCulture)} natiivi), paksuus " +
-                              (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt.ToString("0.##", CultureInfo.InvariantCulture) + " pt"
-                                  : Viivaleveys.KehaPt(0, double.NaN, Maaraja.Paino).ToString("0.##", CultureInfo.InvariantCulture) + "–" +
-                                    Viivaleveys.KehaPt(1e9, double.NaN, Maaraja.Paino).ToString("0.##", CultureInfo.InvariantCulture) + " pt") +
+                              $"{(Maaraja.KokoRengas ? "koko rengas" : "maa–maa-rajat")} " +
+                              $"(paino {Maaraja.Paino} ei vaikuta), raja " +
+                              (Maaraja.PaksuusPt > 0 ? Maaraja.PaksuusPt : Maaraja.RajaPt).ToString("0.##", CultureInfo.InvariantCulture) +
+                              $" pt peitto {Maaraja.RajaPeitto.ToString("0.##", CultureInfo.InvariantCulture)} " +
+                              $"({Maaraja.RajaPeittoNatiivi.ToString("0.###", CultureInfo.InvariantCulture)} natiivi), rannat " +
+                              $"{Maaraja.RantaPt.ToString("0.##", CultureInfo.InvariantCulture)} pt peitto " +
+                              $"{Maaraja.RantaPeitto.ToString("0.##", CultureInfo.InvariantCulture)} " +
+                              $"({Maaraja.RantaPeittoNatiivi.ToString("0.###", CultureInfo.InvariantCulture)} natiivi)" +
                               $" × pistekerroin {PalloKierto.Pistekerroin}");
                     break;
                 case "vektorit":
