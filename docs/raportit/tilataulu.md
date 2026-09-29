@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 12:52:** Levy 94,59 Gi (laskenut ~1 Gi / 5 min; /private/tmp 24,6 Gt, wt/ 13 Gt), muisti 44 % vapaa, kuorma 303/238/141 (2. peräkkäinen >200: Playwright-chromiumit + Laitetestaajan sim; hälytys jos 3. kerta), sim 2, GPU-chrome 0, wt/ 14 kohdetta. Roolit: vain Laitetestaaja käynnissä (65 % / 1 M); muut levossa. Viikkolimit 89 % (5 h nollautui 12.50 → 0 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD af53ba8c; KÄÄNNETTY 39fc303b 12:44 (asennettu, b13-käännös). Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
+
 **Päivitetty 12:42:** Levy 96,84 Gi (/private/tmp 24,6 Gt, wt/ 13 Gt), muisti 51 % vapaa, kuorma 36/37/32 (ei >200), sim 0, GPU-chrome 0, wt/ 14 kohdetta. Roolit: kaikki levossa (Karttaseppä 70 % ilmoitettu 12:33, Natiivi-UI 71 %, Linssiseppä 69 %). Viikkolimit 88 % (5 h 64 %, nollautuu 12.50); 94/97 %-valvonta käynnissä. Juna: b13 HEAD af53ba8c käännetty (f4580638 12:01). Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
 
 **Päivitetty 12:33:** Levy 97,94 Gi (/private/tmp 24,6 Gt, wt/ 12 Gt), muisti 63 % vapaa, kuorma 21/15/24, sim 0, GPU-chrome 0, wt/ 13 kohdetta. Roolit: vain Karttaseppä käynnissä, konteksti 70 % (ilmoitettu Päätoimittajalle); muut levossa. Viikkolimit 88 % (5 h 63 %, nollautuu 12.50); 94/97 %-valvonta käynnissä. Juna: b13 HEAD af53ba8c käännetty (f4580638 12:01). Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
