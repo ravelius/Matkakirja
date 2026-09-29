@@ -167,6 +167,16 @@
 #
 set -euo pipefail
 
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.31, Raamattu #3527): poltto ajaa
+# täysillä ytimillä nice 15:llä, jolloin omistajan ja käännösten työ menee
+# edelle. Lapset (shardit, node, selain) perivät tason. Kevyt tila
+# /tmp/matkakirja-kevyt (omistaja tarvitsee konetta) lisää Darwinin
+# taustaprioriteetin (taskpolicy -b). Linuxin CI-ajurilla taskpolicya ei ole.
+renice -n 15 -p $$ >/dev/null 2>&1 || true
+if [ -f /tmp/matkakirja-kevyt ] && command -v taskpolicy >/dev/null 2>&1; then
+  taskpolicy -b -p $$ >/dev/null 2>&1 || true
+fi
+
 JUURI="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 # Oma absoluuttinen polku: xargs käynnistää tämän saman skriptin
 # lapsiprosesseina, eikä suhteellinen $0 kelpaa siihen.
