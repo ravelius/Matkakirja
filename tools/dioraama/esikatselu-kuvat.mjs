@@ -123,7 +123,11 @@ const selain = await chromium.launch({
   // CLAUDE.md: /opt/pw-browsers/chromium pätee konttiympäristössä — Mac Studiolla
   // (tämä sessio) Playwright löytää oman lataamansa selaimen itse (CHROMIUM ohittaa).
   executablePath: process.env.CHROMIUM || undefined,
-  args: ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'],
+  // GPU oletuksena (Päätoimittaja 29.9. klo 19: SwiftShader vei ~500 % CPU:ta per ajo ja jumitti koneen);
+  // ESIKATSELU_SWIFTSHADER=1 palauttaa ohjelmistorenderöinnin, jos Metal-kuva on musta.
+  args: process.env.ESIKATSELU_SWIFTSHADER
+    ? ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist']
+    : ['--use-angle=metal', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 
 // ── Kuvat: peruskuvat + pahvitarkistus (ks. kuvat-listan rakennus yllä) ─────

@@ -40,6 +40,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi
     },
     lisenssi: 'oma paikkamerkki',
     maalattu: {
@@ -68,6 +69,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -84,6 +86,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -100,6 +103,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -116,6 +120,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -132,6 +137,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -148,6 +154,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -164,6 +171,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -180,6 +188,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -196,6 +205,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -212,6 +222,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -228,6 +239,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {
@@ -244,6 +256,7 @@ export const HENKILOT = {
     silmukat: {
       idle: { rivi: 0, ruudut: 4, fps: 6 }, tyo: { rivi: 1, ruudut: 8, fps: 10 },
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
+      kanto: { rivi: 3, ruudut: 8, fps: 10 }, // erä 3: atlasvarassa kävelyrivi (3D-hahmo käyttää liikepankin kantoa)
     },
     lisenssi: 'oma paikkamerkki',
     malli3d: {

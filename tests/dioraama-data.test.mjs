@@ -363,3 +363,13 @@ test('tilojen valot[] ovat oikeamuotoiset (erä 2b kohta 1: paikka, sade, voima,
   assert.equal(keittio.valot[0].lepatus, 0.35, 'keittiön tulisijan valo: lepatus 0,35');
   assert.ok(keittio.valot[0].vari, 'keittiön tulisijan valo: vari puuttuu');
 });
+
+test('tilojen kamerakierron etäisyys on kerroin (0,2–3), ei metrejä (erä 3: kappeli/muurinharja lensivät 280 m päähän)', () => {
+  for (const tila of RAKENNUS.tilat) {
+    for (const nimi of ['kamera', 'kameraPysty']) {
+      const e = tila[nimi]?.kierto?.etaisyys ?? tila.kierto?.etaisyys;
+      if (!e) continue;
+      assert.ok(e[0] >= 0.2 && e[1] <= 3 && e[0] < e[1], `${tila.id}.${nimi}: kierto.etaisyys ${e} ei ole kerroinväli`);
+    }
+  }
+});
