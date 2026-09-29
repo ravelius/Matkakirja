@@ -12,6 +12,7 @@ Shader "Matkakirja/Linssit/TaivaanKupu"
         _Hehku("Auringon hehku", Float) = 0
         _Maa("Maa (0 = taivas, 1 = maa)", Float) = 0
         _MaanVari("Maan väri", Color) = (0.02, 0.022, 0.02, 1)
+        _Kajo("Kaupungin kajo (valosaaste)", Color) = (0, 0, 0, 0)
         [Enum(Off, 0, On, 1)] _ZWrite("ZWrite", Float) = 0
     }
     SubShader
@@ -31,7 +32,7 @@ Shader "Matkakirja/Linssit/TaivaanKupu"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
-                half4 _Zeniitti, _Horisontti, _MaanVari;
+                half4 _Zeniitti, _Horisontti, _MaanVari, _Kajo;
                 float4 _Aurinko;
                 half _Hehku, _Maa;
             CBUFFER_END
@@ -66,6 +67,8 @@ Shader "Matkakirja/Linssit/TaivaanKupu"
                 half kaari = (half)(pow(kohti, 6.0) * exp(-y * 5.0));
                 half kiekko = (half)pow(saturate(dot(d, a)), 400.0);
                 c += _Horisontti.rgb * kaari * _Hehku + half3(1.0, 0.95, 0.85) * kiekko * saturate(_Hehku * 4);
+                // Valosaaste: kaupungin oranssi kajo horisontissa (nykyajan yö; 1873 nolla).
+                c += _Kajo.rgb * (half)exp(-y * 6.0);
                 return half4(c, 1);
             }
             ENDHLSL
