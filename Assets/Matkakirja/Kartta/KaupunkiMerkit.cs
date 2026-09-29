@@ -527,7 +527,7 @@ namespace Matkakirja
         /// #5a4330) ja hieman läpikuultavina (web peitto <see cref="KaupunkiPeitto"/>). Natiivin alfa lineaarisesta
         /// sekoituksesta kuten Rannikko.PeittoNatiivi. Korostukset, valinnan nimet ja linssinimet ennallaan.
         /// </summary>
-        public const float KaupunkiPeitto = 0.85f;
+        public const float KaupunkiPeitto = 0.75f;
         public static readonly float KaupunkiPeittoNatiivi =
             (float)Vektorisolut.LineaarinenPeitto(Vektorisolut.RantaMuste, KaupunkiPeitto);
         public static readonly Color KaupunkiMuste = new Color(
