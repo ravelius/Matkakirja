@@ -248,6 +248,86 @@ test('ylilennon kohteet: Euroopan NASA-kohteet, ei revontulia', async () => {
   assert.ok(l.some((k) => k.tunnus === 'venetsia') && !l.some((k) => k.tunnus === 'aurora-scandinavia'));
 });
 
+/*
+ * ISS-SÄÄTÖPANEELI (Codex-elementtisarja, kytketty 29.9.2026): puhtaat apurit otsikkoriveille
+ * (kuukauden nimi, pilvipeiton prosenttiteksti) ja "Oma sijainti" -haulle (cdn-cgi/trace, MAAKARTAT-
+ * pääkaupunki, ISS:n radan 56° leveysraja).
+ */
+test('paneeli: kuukauden nimi ja vuodenaika-otsikko ("(nyt)" simuloidun kuukauden kohdalla)', async () => {
+  const { kuukausiNyt, kuukaudenNimi, vuodenaikaTeksti } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  const ms = Date.UTC(2026, 8, 15); // syyskuu (UTC-kuukausi 8 = syyskuu, 1-indeksissä 9)
+  assert.equal(kuukausiNyt(0, ms), 9, 'pakottamaton = simuloitu kuukausi');
+  assert.equal(kuukausiNyt(3, ms), 3, 'pakotettu voittaa');
+  assert.equal(kuukaudenNimi(1), 'tammikuu');
+  assert.equal(kuukaudenNimi(9), 'syyskuu');
+  assert.equal(kuukaudenNimi(12), 'joulukuu');
+  assert.equal(vuodenaikaTeksti(0, ms), 'syyskuu (nyt)');
+  assert.equal(vuodenaikaTeksti(9, ms), 'syyskuu (nyt)', 'pakotettu sama kuin nykyinen näyttää silti (nyt)');
+  assert.equal(vuodenaikaTeksti(3, ms), 'maaliskuu');
+});
+
+test('paneeli: pilvipeiton otsikko ja liu\'un prosentti realismin pilvimääräksi', async () => {
+  const { pilvipeittoTeksti, pilvipeittoMaaraksi } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  assert.equal(pilvipeittoTeksti(100), 'nyt', 'oletus 100 % = nyt');
+  assert.equal(pilvipeittoTeksti(0), 'selkeä');
+  assert.equal(pilvipeittoTeksti(40), '40 %');
+  assert.equal(pilvipeittoTeksti(37.6), '38 %', 'pyöristyy');
+  assert.equal(pilvipeittoMaaraksi(100), 1);
+  assert.equal(pilvipeittoMaaraksi(0), 0);
+  assert.ok(Math.abs(pilvipeittoMaaraksi(40) - 0.4) < 1e-9);
+  assert.equal(pilvipeittoMaaraksi(150), 1, 'rajattu 0…1');
+  assert.equal(pilvipeittoMaaraksi(-10), 0);
+});
+
+test('Oma sijainti: cdn-cgi/trace-rivin jäsennys ja ISS:n 56° leveysraja hakupisteessä', async () => {
+  const { jasennaTraceLoc, omanSijainninHakupiste, omanMaanKeskipiste } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  assert.equal(jasennaTraceLoc('fl=1\nip=1.2.3.4\nloc=FI\ncolo=HEL\n'), 'FI');
+  assert.equal(jasennaTraceLoc('loc=de\n'), 'DE', 'suuraakkosiksi');
+  assert.equal(jasennaTraceLoc('ip=1.2.3.4\n'), null, 'ei loc-riviä');
+  assert.equal(jasennaTraceLoc(''), null);
+  // Rooma (41,9° N) on alle 56°: hakupiste sama kuin oikea sijainti.
+  assert.deepEqual(omanSijainninHakupiste(41.9, 12.5), { lat: 41.9, lon: 12.5 });
+  // Fiktiivinen 70° N -piste korvataan 51° N:llä (ISS:n radan yläraja), sama pituus.
+  assert.deepEqual(omanSijainninHakupiste(70, 24.94), { lat: 51, lon: 24.94 });
+  assert.deepEqual(omanSijainninHakupiste(-70, 24.94), { lat: -51, lon: 24.94 });
+  const maakartat = { ITA: { kaupungit: [{ nimi: 'Milano', lat: 45.46, lon: 9.19 }, { nimi: 'Rooma', lat: 41.9, lon: 12.5, paa: true }] } };
+  assert.deepEqual(omanMaanKeskipiste('ITA', maakartat), { lat: 41.9, lon: 12.5, nimi: 'Rooma' });
+  assert.equal(omanMaanKeskipiste('XYZ', maakartat), null, 'tuntematon maa');
+  assert.equal(omanMaanKeskipiste('ITA', null), null);
+});
+
+test('Oma sijainti: haeOmaSijainti hakee, kääntää alpha2→alpha3 ja hakee pääkaupungin; epäonnistuu siististi', async () => {
+  const { haeOmaSijainti } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  // Rooma (41,9° N) on ISS:n 56°-rajan sisällä: hakupiste = oikea pääkaupunki, ei korvausta.
+  const maakartat = { ITA: { kaupungit: [{ nimi: 'Rooma', lat: 41.9, lon: 12.5, paa: true }] } };
+  const tuoMaakartat = async () => ({ MAAKARTAT: maakartat });
+  const ikkunaOk = { fetch: async () => ({ ok: true, text: async () => 'ip=1.2.3.4\nloc=IT\n' }) };
+  const oma = await haeOmaSijainti({ ikkuna: ikkunaOk, tuoMaakartat });
+  assert.deepEqual(oma, {
+    tunnus: 'oma', nimi: 'Oma sijainti · Italia', lat: 41.9, lon: 12.5, oikeaLat: 41.9, oikeaLon: 12.5, maa: 'Italia',
+  });
+  // Ei fetch-funktiota (esim. hyvin vanha ympäristö tai testi-ikkuna).
+  assert.equal(await haeOmaSijainti({ ikkuna: {}, tuoMaakartat }), null);
+  // Verkkovirhe.
+  const virheIkkuna = { fetch: async () => { throw new Error('verkko poikki'); } };
+  assert.equal(await haeOmaSijainti({ ikkuna: virheIkkuna, tuoMaakartat }), null);
+  // Ei-ok vastaus.
+  const ei404 = { fetch: async () => ({ ok: false }) };
+  assert.equal(await haeOmaSijainti({ ikkuna: ei404, tuoMaakartat }), null);
+  // Tuntematon maakoodi (ei MAAKARTAT-taulussa).
+  const muuMaa = { fetch: async () => ({ ok: true, text: async () => 'loc=JP\n' }) };
+  assert.equal(await haeOmaSijainti({ ikkuna: muuMaa, tuoMaakartat }), null);
+  // Leveys yli 56°: hakupiste korvattu, mutta oikeaLat/oikeaLon ennallaan (matka omaan maahan näytölle).
+  const pohjoinenMaakartat = { NOR: { kaupungit: [{ nimi: 'Tromssa', lat: 69.65, lon: 18.96, paa: true }] } };
+  const pohjoinen = await haeOmaSijainti({
+    ikkuna: { fetch: async () => ({ ok: true, text: async () => 'loc=NO\n' }) },
+    tuoMaakartat: async () => ({ MAAKARTAT: pohjoinenMaakartat }),
+  });
+  assert.deepEqual(pohjoinen, {
+    tunnus: 'oma', nimi: 'Oma sijainti · Norja', lat: 51, lon: 18.96, oikeaLat: 69.65, oikeaLon: 18.96, maa: 'Norja',
+  });
+});
+
 test('NASA-koe: kierretty rajauslaatikko ja ikkuna', async () => {
   const { nasaKoeIkkuna, NASA_KOE } = await import('../js/linssit/iss-kyyti-nakyma.js');
   assert.equal(Object.keys(NASA_KOE).length, 3);
