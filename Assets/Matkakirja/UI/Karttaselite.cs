@@ -243,7 +243,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             Auki = false;
-            Rakenne.Nayta(paneeli, false, 220);
+            Rakenne.Nayta(paneeli, false, LinssiUi.VahennettyLiike() ? 0 : 240); // webin sulku 200 ms + 40 ms (omistaja 29.9.2026)
             nappi.RemoveFromClassList("mk-valittu");
             Maakunnat.AsetaNakyvissa(false); // löydös 165: kartan korostus pois, valinta säilyy listassa
             if (MaakuntaKartta)
