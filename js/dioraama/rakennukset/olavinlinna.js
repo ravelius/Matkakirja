@@ -175,14 +175,18 @@ const TILA_KEITTIO = {
   kameraPysty: { kohde: [13.8, -0.8, 7.0], atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea' },
   taulu: TAULU_KEITTIO,
+  // Tulisijan valo on lämmin ja lepattaa (erä 2b, kohta 1: "Tulisijalla lepatus 0,35"); pöydän täytevalo
+  // pysyy tasaisena ja värittömänä (ei liekkiä, ei lepatusta).
   valot: [
-    { paikka: [14, 0.5, 4.9], sade: 7, voima: 1 },
+    { paikka: [14, 0.5, 4.9], sade: 7, voima: 1, vari: '#ffb070', lepatus: 0.35 },
     { paikka: [10.5, 0.8, 9], sade: 2.5, voima: 0.4 },
   ],
   palikat: [
     // Lattia ja katto (katto = salin lattia yläpuolella, leikkausreuna näkyy sivu-roolista). Katto on
     // porrastettu taaemmas (z 4–7,2) kuten poikkileikkauskuvituksissa, jotta keittiö näkyy yläviistosta.
-    { resepti: 'laatta', paikka: [14, 0, 7.5], suunta: 0, leveys: 12, syvyys: 7, paksuus: 0.3 },
+    // Kivilattia (erä 2b, kohta 3): proseduraaliset laatat oletuskoolla (0,4-0,7 m), siemen
+    // kiinnitetty näkyviin (eri lattiapalikoiden pitää saada eri siemen, ettei arvonta toistu).
+    { resepti: 'kivilattia', paikka: [14, 0, 7.5], suunta: 0, leveys: 12, syvyys: 7, paksuus: 0.3, siemen: 1873 },
     { resepti: 'laatta', paikka: [14, 4, 5.6], suunta: 0, leveys: 12, syvyys: 3.2, paksuus: 0.4 },
     // Takaseinä (pohjoinen, z 4) ampumarakoineen.
     {
@@ -223,6 +227,80 @@ const TILA_KEITTIO = {
     { resepti: 'sakki', paikka: [19.2, 0, 8.6], suunta: 0, sade: 0.3, korkeus: 0.6, siemen: 12 },
     { resepti: 'sakki', paikka: [19.0, 0, 9.6], suunta: 0, sade: 0.3, korkeus: 0.6, siemen: 13 },
     { resepti: 'hylly', paikka: [8.5, 0, 9.5], suunta: 90, leveys: 3, korkeus: 2.0, syvyys: 0.4, hyllyt: 3 },
+
+    // --- P3 (erä 2b, rekvisiitta): tulisijan ympärys, katosta roikkuvat, katetut pöydät, täysi hylly
+    // ja lattian astiat (docs/raportit/dioraama-rajapinnat-era2b-20260929.md kohta 3). Pysyy tilan
+    // rajoissa [8,0,4]…[20,4,11], ei peitä liekkiä [14,0.9,4.9] eikä KEITTIO_HAHMOT-reittejä. ---
+    // Tulisijan ympärys (vältetään liekki, 2 olemassa olevaa pataa ja huuvan runko x 12,5–15,5).
+    { resepti: 'puukasa', paikka: [12.25, 0, 5.4], suunta: 20, pituus: 0.4, halkoja: 6, siemen: 401 },
+    { resepti: 'hiillospihdit', paikka: [12.3, 0, 4.6], suunta: 100, pituus: 0.4 },
+    { resepti: 'kattila', paikka: [15.65, 0, 5.1], suunta: -30, sade: 0.2, korkeus: 0.22 },
+    {
+      resepti: 'riippupata', paikka: [15.9, 2.0, 4.75], suunta: 0, ripustinKorkeus: 0.6, sade: 0.16, patakorkeus: 0.22,
+    },
+    { resepti: 'ruukku', paikka: [12.35, 0, 4.5], suunta: 0, sade: 0.1, korkeus: 0.18 },
+    { resepti: 'ruukku', paikka: [15.65, 0, 4.45], suunta: 10, sade: 0.1, korkeus: 0.18 },
+
+    // Orsi + yrttiniput katosta (z 4–7,2 kattopalikan alla) — orsi länsipuolella pöydän yllä, yrttiniput
+    // hajautettu huuvan kapenevan rungon (x ~13,2–14,8 korkealla) ohi. HUOM: laatta-reseptin y-alue on
+    // −paksuus…0 paikan y:stä, joten kattopalikan [14,4,5.6] paksuus 0.4 ALAPINTA on y = 3,6 (ei 4) —
+    // kiinnityspisteet pidetty ≤ 3,5, jotta roikkuvat esineet jäävät katon ALLE eivätkä upoa siihen.
+    { resepti: 'orsileivat', paikka: [10.0, 3.5, 4.5], suunta: 0, pituus: 1.4, leipia: 5, siemen: 301 },
+    { resepti: 'yrttinippu', paikka: [9.4, 3.5, 4.55], suunta: -5, korkeus: 0.26 },
+    { resepti: 'yrttinippu', paikka: [12.2, 3.5, 4.6], suunta: 0, korkeus: 0.32 },
+    { resepti: 'yrttinippu', paikka: [15.7, 3.5, 4.65], suunta: 15, korkeus: 0.28 },
+    { resepti: 'yrttinippu', paikka: [16.6, 3.45, 5.6], suunta: -10, korkeus: 0.3 },
+    { resepti: 'yrttinippu', paikka: [11.3, 3.45, 6.4], suunta: 5, korkeus: 0.3 },
+
+    // Länsipöytä katettuna (leipää, kala, veitsi, leikkuulauta, vati, ruukku, pullo, kynttilä).
+    { resepti: 'leipa', paikka: [9.8, 0.8, 8.75], suunta: 10, sade: 0.1, korkeus: 0.08 },
+    { resepti: 'leikkuulauta', paikka: [10.6, 0.8, 8.7], suunta: 15 },
+    { resepti: 'veitsi', paikka: [10.75, 0.8, 8.85], suunta: 100 },
+    { resepti: 'kala', paikka: [10.2, 0.8, 9.15], suunta: 200, pituus: 0.3 },
+    { resepti: 'vati', paikka: [11.1, 0.8, 9.05], suunta: 0, sade: 0.15 },
+    { resepti: 'ruukku', paikka: [9.55, 0.8, 9.25], suunta: 0, sade: 0.12, korkeus: 0.2 },
+    { resepti: 'pullo', paikka: [11.3, 0.8, 8.75], suunta: 0, sade: 0.05, korkeus: 0.18 },
+    { resepti: 'kynttilanjalka', paikka: [10.35, 0.8, 9.3], suunta: 0, korkeus: 0.17 },
+
+    // Itäpöytä katettuna.
+    { resepti: 'leipa', paikka: [16.2, 0.8, 8.3], suunta: -15, sade: 0.1, korkeus: 0.08 },
+    { resepti: 'leikkuulauta', paikka: [17.0, 0.8, 8.25], suunta: -10 },
+    { resepti: 'veitsi', paikka: [17.15, 0.8, 8.4], suunta: -80 },
+    { resepti: 'kala', paikka: [16.6, 0.8, 8.65], suunta: 160, pituus: 0.28 },
+    { resepti: 'vati', paikka: [17.7, 0.8, 8.5], suunta: 0, sade: 0.15 },
+    { resepti: 'suolalaatikko', paikka: [15.95, 0.8, 8.75], suunta: 5 },
+    { resepti: 'pullo', paikka: [17.9, 0.8, 8.15], suunta: 0, sade: 0.05, korkeus: 0.18 },
+    { resepti: 'ruukku', paikka: [15.95, 0.8, 8.35], suunta: 0, sade: 0.12, korkeus: 0.2 },
+    { resepti: 'leipa', paikka: [17.4, 0.8, 8.75], suunta: 200, sade: 0.09, korkeus: 0.075 },
+    { resepti: 'kynttilanjalka', paikka: [18.05, 0.8, 8.85], suunta: 0, korkeus: 0.17 },
+
+    // Hylly täynnä (3 tasoa, ks. hylly yllä: y ≈ 0,12 / 1,05 / 1,97; syvyys x 8,3–8,9).
+    { resepti: 'ruukku', paikka: [8.65, 0.12, 8.4], suunta: 0, sade: 0.11, korkeus: 0.18 },
+    { resepti: 'ruukku', paikka: [8.65, 0.12, 9.3], suunta: 0, sade: 0.1, korkeus: 0.2 },
+    { resepti: 'pullo', paikka: [8.65, 0.12, 10.1], suunta: 0, sade: 0.05, korkeus: 0.18 },
+    { resepti: 'vati', paikka: [8.65, 1.045, 8.35], suunta: 0, sade: 0.14 },
+    { resepti: 'ruukku', paikka: [8.65, 1.045, 9.15], suunta: 0, sade: 0.11, korkeus: 0.19 },
+    { resepti: 'pullo', paikka: [8.65, 1.045, 9.9], suunta: 0, sade: 0.055, korkeus: 0.2 },
+    { resepti: 'suolalaatikko', paikka: [8.65, 1.045, 10.6], suunta: 0 },
+    { resepti: 'ruukku', paikka: [8.65, 1.97, 8.5], suunta: 0, sade: 0.1, korkeus: 0.17 },
+    { resepti: 'pullo', paikka: [8.65, 1.97, 9.3], suunta: 0, sade: 0.05, korkeus: 0.16 },
+    { resepti: 'oljylamppu', paikka: [8.65, 1.97, 10.1], suunta: 0, sade: 0.06, korkeus: 0.09 },
+
+    // Lattian astiat (etäällä vesipoikan reitistä [19.5,9.5]→[13.8,5.6] ja pöydistä/tynnyreistä).
+    { resepti: 'saavi', paikka: [11.6, 0, 10.45], suunta: 0, sade: 0.4, korkeus: 0.45 },
+    { resepti: 'vesisanko', paikka: [12.3, 0, 6.2], suunta: 40, sade: 0.15, korkeus: 0.22 },
+    { resepti: 'kirnu', paikka: [18.0, 0, 10.6], suunta: 0, sade: 0.13, korkeus: 0.55 },
+    {
+      resepti: 'nauriskori', paikka: [15.6, 0, 10.7], suunta: 0, sade: 0.2, korkeus: 0.2, nauriita: 5, siemen: 501,
+    },
+    {
+      resepti: 'nauriskori', paikka: [10.9, 0, 10.75], suunta: 30, sade: 0.18, korkeus: 0.18, nauriita: 4, siemen: 502,
+    },
+    { resepti: 'vesisanko', paikka: [19.3, 0, 7.2], suunta: -60, sade: 0.15, korkeus: 0.22 },
+    { resepti: 'puukasa', paikka: [18.6, 0, 6.6], suunta: -20, pituus: 0.35, halkoja: 5, siemen: 402 },
+    { resepti: 'huhmar', paikka: [8.6, 0, 6.9], suunta: 0, sade: 0.1, korkeus: 0.12 },
+    { resepti: 'luuta', paikka: [19.5, 0, 9.3], suunta: -100, korkeus: 0.8 },
+    { resepti: 'vesisanko', paikka: [9.9, 0, 8.05], suunta: 40, sade: 0.14, korkeus: 0.2 },
   ],
   hahmot: KEITTIO_HAHMOT,
   // Keittiön äänisilmukat: ambienssi + tulisija + pata + vaivaaminen, kaikki päällekkäin (era2 kohta 2 "AANET").
@@ -265,6 +343,13 @@ export const RAKENNUS = {
   lahteet: [{ nimi: 'Kansallismuseo: Olavinlinnan historiaa', osoite: 'https://www.kansallismuseo.fi/fi/olavinlinna/historiaa' }],
   geoAnkkuri: { lat: 61.8639, lon: 28.9011, suuntima: 0 },
   aikakerros: { id: 'n1500', nimi: '1500-luvun alku (tulkinta)' },
+  // Valaistus (erä 2b, speksi dioraama-rajapinnat-era2b-20260929.md kohta 1): iltapäivän aurinko lounaasta,
+  // taivaan ambienssi lämpimästä harmaasta taivaansiniseen. Sumu varalla (ei vielä käytössä).
+  valaistus: {
+    aurinko: { atsimuutti: 215, korkeus: 38, vari: '#fff0d8', voima: 1.15 },
+    taivas: { yla: '#b9cddd', ala: '#5d4c3c', voima: 0.55 },
+    sumu: null,
+  },
   yleiskamera: {
     vaaka: { kohde: [0, 2, 0], atsimuutti: 165, korkeus: 30, etaisyys: 150, fov: 32, aukko: 0.3 },
     pysty: { kohde: [0, 0, 2], atsimuutti: 160, korkeus: 38, etaisyys: 300, fov: 40, aukko: 0.3 },
