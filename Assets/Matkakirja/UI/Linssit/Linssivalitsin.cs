@@ -222,6 +222,24 @@ namespace Matkakirja.Natiivi
             b.Add(kuva);
             var t = Rakenne.Teksti(nimi, "mk-valikkonappi__nimi", b);
             Kirjasimet.Aseta(t, Kirjasin.KoneLihava);
+            // Nimi aina kokonaan (1.0.55-laitekuvat: "Äänimai…" 12,5 px:llä ja "Äänimaise…" vielä 11,5 px:llä): vapaa tila luetaan
+            // asettelusta ja fonttia pienennetään vain tarvittaessa 0,25 px:n portain (vähintään 9,5 px), kuten RadioNakyma.SovitaNimi.
+            float perus = 0f;
+            b.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                if (perus <= 0f) perus = t.resolvedStyle.fontSize;
+                if (perus <= 0f || string.IsNullOrEmpty(t.text)) return;
+                float muut = t.resolvedStyle.marginLeft + t.resolvedStyle.marginRight;
+                foreach (var c in b.Children())
+                    if (c != t && c.resolvedStyle.display != DisplayStyle.None)
+                        muut += c.layout.width + c.resolvedStyle.marginLeft + c.resolvedStyle.marginRight;
+                float tila = (b.contentRect.width - muut) * 0.97f;
+                if (float.IsNaN(tila) || tila <= 0f) return;
+                float nyt = t.resolvedStyle.fontSize > 0f ? t.resolvedStyle.fontSize : perus;
+                float leveys = t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * perus / nyt;
+                float koko = leveys > tila ? Mathf.Max(9.5f, Mathf.Floor(perus * tila / leveys * 4f) / 4f) : perus;
+                if (Mathf.Abs(nyt - koko) > 0.01f) t.style.fontSize = koko;
+            });
             return b;
         }
 
