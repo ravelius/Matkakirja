@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 18:45:** Kevyt tila edelleen päällä (18.17), sim 0, ei GPU-raskaita prosesseja. Levy 89 Gi, muisti 86 % vapaa, kuorma 30/31/48. Viikko 9 % (5 h 32 %, resetoituu 18.50). Konteksti ennallaan: Linnanrakentaja 51 %, Natiivi-UI 42 %, oma 17 % (roolit hiljaisia). Juna b13 f10f978b, 1.0.52 odottaa lupaa. Posti: ei uutta.
+
 **Päivitetty 18:34:** KEVYT TILA PÄÄLLÄ (/tmp/matkakirja-kevyt 18.17, omistaja etäyhteys, Päätoimittaja): sim 0 ja ei GPU-raskaita prosesseja (chrome-headless metal, Unity ilman -nographics, xcodebuild) — tarkistettu, ei poikkeamia; tiukempi valvonta voimassa. Levy 89 Gi, muisti taso 1, 86 % vapaa, kuorma 28/31/69. Viikko 9 % (5 h 32 %). Konteksti: Linnanrakentaja 51 %, Natiivi-UI 42 %, oma 16 %. Korjaus: linssiseppa-tervetulo-palaute EI ole mainissa (3 pushaamatonta committia, pushataan kun kevyt tila päättyy) — aiempi "MERGATTU" oli virhe. Karttaseppä: kohdekaupungit-sepia jää (aktiivinen erä). Juna: 1.0.52 keskeytetty 18.18, b13 f10f978b. Posti: ei uutta.
 
 **Päivitetty 18:23:** Levy 88 Gi, muisti taso 1, 85 % vapaa, kuorma 24/97/123 (laskenut), sim 0. Viikko 9 % (5 h 32 %). Konteksti: Linnanrakentaja 51 %, Natiivi-UI 42 %, oma 15 %. Juna: 1.0.52-käännös keskeytetty 18.18 Päätoimittajan kiireellisestä pyynnöstä (kuorma 270, omistaja ei pääse etäyhteyteen); juna/b13 palautettu f10f978b:hen, 1.0.52 = ee2fbedd (sivuhaara natiiviseppa/juna-1052) avataan uudelleen luvalla. Posti: ei uutta.
