@@ -8819,7 +8819,11 @@ body.flight-active .fact-card {
  * pidetään pienenä: nimi on merkintä kartalla, ei otsikko.
  */
 .target-nimi {
-  fill: var(--map-ink);
+  /* Rannan muste peitolla 0,95 (omistaja 29.9.2026 "vähemmän musta"):
+     sama muste kuin kaupungin nimellä, hieman vahvempana, jotta valinta
+     erottuu yhä taustan nimistä (Päätoimittaja: hierarkia säilyy).
+     Natiivissa sama arvo. */
+  fill: rgba(var(--kohdekaupunkimuste), 0.95);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   font-weight: 600;
   letter-spacing: 0.03em;

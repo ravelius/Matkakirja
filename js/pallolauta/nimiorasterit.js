@@ -261,7 +261,7 @@ export function lueKohteenAsu(kotelo, doc = globalThis.document, far = false) {
 export function lueKohteenNimenAsu(kotelo, doc = globalThis.document) {
   const vara = {
     kirjasin: '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif',
-    muste: 'rgba(60, 48, 38, 1)', halo: 'rgba(247, 237, 216, 0.92)', haloLeveys: 3, tyyli: 'normal',
+    muste: 'rgba(90, 67, 48, 0.95)', halo: 'rgba(247, 237, 216, 0.92)', haloLeveys: 3, tyyli: 'normal',
   };
   if (!doc?.createElementNS || !kotelo?.appendChild) return vara;
   try {
