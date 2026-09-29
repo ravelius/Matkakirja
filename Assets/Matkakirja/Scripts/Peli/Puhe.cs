@@ -1093,6 +1093,9 @@ namespace Matkakirja.Natiivi
             l?.Invoke();
         }
 
+        /// <summary>Hiljainen esilämmitys ennen uutta klippiä Bluetooth-reitillä (s).</summary>
+        public const float Esilammitys = 0.5f;
+
         /// <summary>Vaihtaa soivan klipin (vanha tuhotaan), käynnistää sen ja häivyttää sisään; Puhuu-tapahtuma uudelleen.</summary>
         void AloitaKlippi(AudioClip klippi, bool synteesi, bool jatko = false)
         {
@@ -1111,7 +1114,11 @@ namespace Matkakirja.Natiivi
             this.synteesi = synteesi;
             PaivitaVahvistus();
             vahvistin.Nollaa();
-            lahde.Play();
+            // BLUETOOTH-ESILÄMMITYS (omistaja 29.9.2026: AirPodseilla luennan alku jäi kuulematta): uusi klippi alkaa
+            // Esilammitys-viiveellä, jotta hiljaisuuden jälkeen heräävä Bluetooth-linkki ehtii auki ennen ensimmäistä tavua.
+            bool esilammitys = !jatko && AaniIstunto.Bluetooth();
+            if (esilammitys) { lahde.PlayDelayed(Esilammitys); Debug.Log($"MATKAKIRJA puhe: Bluetooth-esilämmitys {Esilammitys:0.0} s {klippi?.name}"); }
+            else lahde.Play();
             // LUENTA ALUSTA (omistaja 29.9.2026, laitteella: uusi luenta alkoi ensimmäisen virkkeen keskeltä edellisen
             // keskeytetyn jälkeen): uusi klippi soi aina näytteestä 0; palan jatko (jatko) kelaa itse.
             if (!jatko) lahde.timeSamples = 0;
@@ -1138,7 +1145,7 @@ namespace Matkakirja.Natiivi
         {
             float t0 = Time.unscaledTime, edellinen = 0f, hiljaa = 0f, v = lahde.volume, jumi = 0f, ekaKohta = -1f;
             int ruutuja = 0;
-            while (lahde.clip == klippi && Time.unscaledTime - t0 < 1f)
+            while (lahde.clip == klippi && Time.unscaledTime - t0 < 1f + Esilammitys)
             {
                 yield return null;
                 if (lahde.clip != klippi) yield break;

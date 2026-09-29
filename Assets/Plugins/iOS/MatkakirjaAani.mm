@@ -36,6 +36,16 @@ extern "C" void MatkakirjaAani_Toisto(void)
         NSLog(@"MATKAKIRJA puhe: setActive epäonnistui: %@", virhe);
 }
 
+// Bluetooth-reitti (omistaja 29.9.2026: luennan alku jäi kuulematta AirPodseilla): Puhe esilämmittää linkin lyhyellä
+// hiljaisella viiveellä ennen uutta klippiä, kun jokin ulostulo on Bluetooth (A2DP, LE tai HFP).
+extern "C" bool MatkakirjaAani_Bluetooth(void)
+{
+    for (AVAudioSessionPortDescription* p in [AVAudioSession sharedInstance].currentRoute.outputs)
+        if ([p.portType isEqualToString:AVAudioSessionPortBluetoothA2DP] || [p.portType isEqualToString:AVAudioSessionPortBluetoothLE]
+            || [p.portType isEqualToString:AVAudioSessionPortBluetoothHFP]) return true;
+    return false;
+}
+
 // Istunnon tila mittaukseen (peli-komento "aani mittaa"): luokka, tila, valinnat, laitteen äänenvoimakkuus,
 // muiden äänten vaimennusvihje ja reitti. Palauttaa malloc-merkkijonon (Unityn marshal vapauttaa sen).
 extern "C" char* MatkakirjaAani_Tila(void)
