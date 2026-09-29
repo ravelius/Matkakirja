@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 10:22:** Levy 103,92 Gi (laskussa hieman), /private/tmp 23,6 Gt (+0,7 Gt), muisti 47 % vapaa, kuorma 573/372/211 (2. kierros >200; syynä ffmpeg 253 % + simulaattorin Matkakirja3D + Evoto; hälytys jos 3. kierros), sim 1, GPU-chrome 0, wt/ 18 kohdetta 12 Gt. Roolit: Linssiseppä ja Päätoimittaja käynnissä, muut levossa; ei ≥70 % (Linssiseppä 59 % 10:13). Juna OK: käännetty cd78a365 10:04. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
+
 **Päivitetty 10:13:** Levy 105,30 Gi (vakaa), /private/tmp 22,9 Gt, muisti 56 % vapaa, kuorma 90/70/69, sim 1, GPU-chrome 0, wt/ 18 kohdetta 12 Gt. Roolit: vain Linssiseppä käynnissä (konteksti ei tarkistettu, edellinen ei ≥70 %), muut levossa. Juna OK: käännetty cd78a365 10:04 (b13 HEAD 385c39e1 09:43). Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
 
 **Päivitetty 10:04:** Levy 104,48 Gi (vakaa), /private/tmp 22,8 Gt, muisti 61 % vapaa, kuorma 132/61/68 (piikki, ei hälytysrajalla), sim 1, GPU-chrome 0, wt/ 19 kohdetta 13 Gt. Roolit: kaikki levossa (ilmoitettu Päätoimittajalle); ei ≥70 %. Juna OK: käännetty a2887ec5 08:59. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
