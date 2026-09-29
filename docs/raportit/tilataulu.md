@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 18:23:** Levy 88 Gi, muisti taso 1, 85 % vapaa, kuorma 24/97/123 (laskenut), sim 0. Viikko 9 % (5 h 32 %). Konteksti: Linnanrakentaja 51 %, Natiivi-UI 42 %, oma 15 %. Juna: 1.0.52-käännös keskeytetty 18.18 Päätoimittajan kiireellisestä pyynnöstä (kuorma 270, omistaja ei pääse etäyhteyteen); juna/b13 palautettu f10f978b:hen, 1.0.52 = ee2fbedd (sivuhaara natiiviseppa/juna-1052) avataan uudelleen luvalla. Posti: ei uutta.
+
 **Päivitetty 18:12:** Levy 81 Gi (hälytysraja 50), muisti taso 2 mutta 34 % vapaa (yli 25 %, ei hälytystä), kuorma 93/81/122, sim 0. Viikko 8 % (5 h 30 %). Konteksti: Linnanrakentaja 49 %, Natiivi-UI 41 %, oma 15 % (70 %:n vahti ei lauennut). GPU-chrome: vain ms-playwright type=gpu-process yli 30 min = 0 (Julkaisijan ohje: sovellusten omat gpu-processit ohitetaan). Juna: b13 ee2fbedd (1.0.52) ennallaan. Posti: ei uutta.
 
 **Päivitetty 18:01:** Levy 83 Gi (palautui 76→80→83 worktree-siivouksella; hälytysraja 50), muisti taso 1, 63 % vapaa, kuorma 81/162/188, sim 0. Viikko 7 % (5 h 27 %). Konteksti: Natiivi-UI 41 %, Linnanrakentaja 40 %, Siirtoseppä 33 %, Laitetestaaja 32 %, Natiiviseppä 23 %, oma 14 %. GPU-chrome type=gpu-process 16 (>4) → ilmoitettu Julkaisijalle. Juna: 1.0.52-juna avattu 17.54 (b13 ee2fbedd). Worktree-siivous: Siirtoseppä poisti 3, Julkaisija pr3614 + muutos-1051 (pr3611 junan käytössä), Karttaseppä vertailu (sepia jää, aktiivinen erä). Posti: Codexin radio v4 -viesti (fcf571f38) ilmoitettu Päätoimittajalle.
