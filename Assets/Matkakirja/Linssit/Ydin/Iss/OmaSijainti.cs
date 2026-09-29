@@ -35,6 +35,28 @@ namespace Matkakirja.Linssit.Iss
         public static double HakuLeveys(double lat) =>
             Math.Abs(lat) <= Ylilennot.MaksimiLeveys ? lat : Math.Sign(lat) * RadanLeveys;
 
+        /// <summary>Katseen enimmäismatka ISS:n alapisteestä (km): kauempana maa näkyy vain utuna horisontissa.</summary>
+        public const double KatseKm = 700;
+
+        /// <summary>
+        /// Minne kamera kääntyy perillä (laite 28.9. saatimet4: Suomi 1 520 km:n päässä näkyi pelkkänä harmaana utuna, kun katse
+        /// osui horisonttiin): kohde itse, jos se on enintään KatseKm päässä ISS:n alapisteestä, muuten isoympyrän piste
+        /// KatseKm kohteen suuntaan — maa näkyy, ja oma maa on horisontissa katseen jatkeella.
+        /// </summary>
+        public static (double lat, double lon) Katsepiste(double issLat, double issLon, double lat, double lon)
+        {
+            double d = Ylilennot.MaaEtaisyysKm(issLat, issLon, lat, lon);
+            if (!(d > KatseKm)) return (lat, lon);
+            const double r = Math.PI / 180;
+            double f1 = issLat * r, l1 = issLon * r, f2 = lat * r, l2 = lon * r;
+            double kulma = d / 6371.0, u = KatseKm / d;
+            double a = Math.Sin((1 - u) * kulma) / Math.Sin(kulma), b = Math.Sin(u * kulma) / Math.Sin(kulma);
+            double x = a * Math.Cos(f1) * Math.Cos(l1) + b * Math.Cos(f2) * Math.Cos(l2);
+            double y = a * Math.Cos(f1) * Math.Sin(l1) + b * Math.Cos(f2) * Math.Sin(l2);
+            double z = a * Math.Sin(f1) + b * Math.Sin(f2);
+            return (Math.Atan2(z, Math.Sqrt(x * x + y * y)) / r, Math.Atan2(y, x) / r);
+        }
+
         /// <summary>Valikon rivi: "Oma sijainti · Suomi" (maa tiedossa) tai "Oma sijainti".</summary>
         public static string Rivi(string maanNimi) => string.IsNullOrEmpty(maanNimi) ? "Oma sijainti" : "Oma sijainti · " + maanNimi;
     }
