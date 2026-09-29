@@ -130,6 +130,18 @@ namespace Matkakirja.Linssit
     }
 
     /// <summary>
+    /// Nimetty äänisilmukka (Linnanrakentaja erä 2, dioraama): oma AudioSource poolista, ei jaa
+    /// Aanisoittimen 5 kiinteää kanavaa. <see cref="ILinssiYmparisto.Silmukka"/> palauttaa tämän.
+    /// </summary>
+    public interface ISilmukka
+    {
+        /// <summary>Taso 0…1, liu'utus liukuS sekunnissa (0 = heti); kutsutaan joka ruutu kameran mukaan.</summary>
+        void Voimakkuus(float taso, float liukuS);
+        /// <summary>Häivytys nollaan ja vapautus; turvallinen kutsua useaan kertaan (myös Lopeta-jälkeen).</summary>
+        void Lopeta(float haiveS = 0.35f);
+    }
+
+    /// <summary>
     /// Kaikki, mitä linssi saa pelistä. Toteutus: Linssit/Unity/ (sovitin) ja
     /// testeissä vale-ympäristö.
     /// </summary>
@@ -209,6 +221,22 @@ namespace Matkakirja.Linssit
         /// Silmukka ristihäivytetään, ettei mp3:n sauma kuulu (Linssisepän huomio).
         /// </summary>
         void Taustaaani(string tunnus);
+        /// <summary>
+        /// Nimetty taustasilmukka (Linnanrakentaja erä 2, dioraama): oma kahva poolista, ei jaa Taustaaanin
+        /// paikkaa eikä 5 kanavaa, ja monta voi olla auki yhtä aikaa (toisin kuin Taustaaani). Tunnus on valmis
+        /// URL (sovitin laskee sen, esim. AmpariJuuri + Aanet[id].Tiedosto), jotta Mukana.Polku ja levyvälimuisti
+        /// löytävät sen samalla putkella kuin kanavat. Puuttuva tai virheellinen ääni: kahva palautuu silti
+        /// (ei koskaan null), ei soi, yksi loki.
+        /// </summary>
+        ISilmukka Silmukka(string tunnus);
+        /// <summary>
+        /// Dioraaman repliikki (kertaluonteinen puhe) alkoi/loppui: merkitään AaniTilan puhujaksi samalla
+        /// reunarajapinnalla kuin Kertojan ja Pulun puhe (Aanisoitin.PuluPuhuu; oma tunnus "dioraama-repliikki"
+        /// Aanisoittimen puolella), joten pelin 5 äänikanavaa väistyvät repliikin ajan kuten muullakin esitetyllä
+        /// puheella. Sovitin soittaa itse äänen tämän rajapinnan ulkopuolella (EsityksenAani-malli); tämä vain
+        /// merkitsee puhujan. Tuplakutsu samalla arvolla on turvallinen (vain reuna vaikuttaa).
+        /// </summary>
+        void Repliikki(bool puhuu);
 
         /// <summary>Käyttäjä on pyytänyt vähennettyä liikettä.</summary>
         bool VahennettyLiike { get; }

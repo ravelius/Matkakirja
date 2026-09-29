@@ -466,6 +466,8 @@ namespace Matkakirja.Linssit.Aikajana
         public void LinssiMusiikki(string laji) => y.LinssiMusiikki(laji);
         public void Tehoste(string nimi, float voima = 1f) => y.Tehoste(nimi, voima);
         public void Taustaaani(string tunnus) => y.Taustaaani(tunnus);
+        public ISilmukka Silmukka(string tunnus) => y.Silmukka(tunnus);
+        public void Repliikki(bool puhuu) => y.Repliikki(puhuu);
         public void LinssiMusiikkiHimmennys(double taso) => y.LinssiMusiikkiHimmennys(taso);
         public bool VahennettyLiike => y.VahennettyLiike;
         public double Aika => y.Aika;

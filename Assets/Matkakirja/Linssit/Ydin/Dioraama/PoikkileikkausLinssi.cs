@@ -1,0 +1,337 @@
+// POIKKILEIKKAUS-LINSSI: Olavinlinna aukileikattuna, dioraamamoottorin koostaja (speksi docs/raportit/
+// dioraama-rajapinnat-20260929.md kohta 5). Ei ILinssi itse (Unity-puolen DioraamaSovitin toteuttaa ILinssin
+// ja kääntyy tämän kautta, kohta 6) — puhdas C#-koostaja, joka johtaa KAIKEN ajasta ja tallennetuista
+// tapahtumista (ElavaKohtaus-malli): sama t antaa saman näkymän (pysäytyskuvat).
+//
+// TULKINNAT (ei JS-viitettä eikä testivektoreita tälle luokalle — vain speksin kohta 5 + tehtävänannon
+// täsmennys "käsikirjoitus alkaa kun kamera on saapunut kohdetilaan; pulu lentää edellisestä
+// laskeutumispisteestä tilan laskeutumispisteeseen pulu-lenna-askeleen aikana". Kirjattu myös raporttiin):
+//  - Kohdista(tilaId, t) tallentaa Kameratapahtuman heti (Kesto = SiirtymanKesto), mutta Kohdista ei saa
+//    pysty-lippua (se tulee vasta NakymaHetkella-kyselyssä). Yleisnäkymän (kohde null) ASENTO kestolaskuun
+//    otetaan aina vaakasuunnasta (YleisVaaka): kesto riippuu vain kohteen/etäisyyden erosta, ja vaaka/pysty
+//    yleisnäkymillä on sama kohde, joten valinta ei vaikuta itse interpolaatioon (SiirtymaAsento hakee aina
+//    ajantasaisen pysty-lipun mukaisen asennon uudestaan kyselyhetkellä).
+//  - Käsikirjoituksen paikallinen kello alkaa vasta, kun kamerasiirtymä KOHTEESEEN on valmis (Hetki + Kesto),
+//    ei Kohdista-kutsun hetkestä. Ennen saapumista (paikallinen aika &lt; 0) mikään käsikirjoituksen askel ei
+//    ole vielä näkyvissä: Pulu istuu edellisellä laskeutumispisteellä, PuluLentaa = false, TauluAuki = false,
+//    Kohta = -1.
+//  - Pulu lentää ensimmäisen 'pulu-lenna'-askeleen ajan tilan omalle laskeutumispisteelle edellisen VIERAILLUN
+//    (ei-null) tilan laskeutumispisteeltä, tai Rakennus.PuluLaskeutumiselta jos mitään tilaa ei ole vielä
+//    vierailtu (linnan oma piste). Ennen pulu-lenna-askelta se on lähtöpisteessä, sen jälkeen kohteessa.
+//  - Kohta (taulun aktiivinen kohta) on viimeisimmän saavutetun 'kohta'-askeleen N kuluvassa käsikirjoituksessa
+//    (pysyy näkyvissä myöhempien askelten ajan). TauluAuki on tosi ensimmäisestä 'taulu'-askeleesta alkaen
+//    käsikirjoituksen loppuun ja sen jälkeenkin, kunnes kamera lähtee tilasta (Linnanrakentaja 29.9.: taulu ei
+//    välähdä 0,25 s:ssa kiinni). Puhuja ja Repliikki kertovat kuluvan puheaskeleen: 'kohta' = pulu + kohdan teksti,
+//    'repliikki' = hahmo + Repliikit[askel.N] (KORJATTU 29.9.2026, katselmointi: ei aina Repliikit[0]), 'reaktio' =
+//    pulu + hahmon Reaktio; muuten null. Askel + AskeleenAani kertovat saman askeleen indeksin ja äänipankin id:n
+//    (DioraamaAanet.cs käyttää näitä, ei tekstiä, tunnistaakseen askeleen vaihtumisen ja soittaakseen äänen).
+//  - Pystynäytössä tilan kamera on KameraPysty, jos data antaa sen (muuten Kamera).
+//  - LEIJUNTA JA KIERRON RAJAUS (era 2b, dioraama-rajapinnat-era2b-20260929.md kohta 5, agentti P5): Leijunta-
+//    ominaisuus (oletus pois, "poikki drift 0|1" DioraamaSovitin.cs:ssä) lisää Kameraliike.Leijunta-ajelehduksen
+//    NakymaHetkellän palauttamaan kameraan VAIN kun kamera on levossa (ei kesken siirtymää) EIKÄ pelaaja vedä/
+//    nipistä (VetoKaynnissa-ominaisuus; Unity-puolen DioraamaSyote asettaa tämän joka kehys kosketusten määrän
+//    mukaan). RajaaPelaajanAsento on Unity-puolen (DioraamaSyote.Sovita) kutsupiste Kameraliike.RajaaKierrolle:
+//    "perus" saa tässä olla NakymaHetkellän palauttama (mahdollisesti leijunnan siirtämä) kamera-asento sellaisenaan
+//    — leijunnan ±3°/±1,5°-poikkeama perusasennossa on mitätön kierron rajoihin nähden (±55° tms.), joten erillistä
+//    "puhdasta" perusasentoa ei tarvita rajauksen vertailukohdaksi. yleisnakyma-tieto RajaaKierrolle tulee
+//    viimeisimmän Kohdista-kutsun kohteesta (null = yleisnäkymä), ei erillisenä parametrina kutsujalta.
+//  - AVAUS (Linnanrakentaja 29.9.): ensimmäisessä yleisnäkymässä (tapahtuma 0) ajetaan linnan oma käsikirjoitus
+//    AvausViive s avauksen jälkeen: Pulu liitää taivaalta (TaivasPiste) linnan laskeutumispisteeseen, ja taulu
+//    esittää linnan 3 ydinasiaa (pulu-lenna, taulu, kohta 0–2). Myöhemmät paluut yleisnäkymään eivät toista sitä.
+//  - Napauta(t) tallentaa napautushetken; NakymaHetkella rajaa sen käsikirjoituksen OMAAN "istuntoon" (saapumisen
+//    ja seuraavan Kohdista-kutsun välille) ja siirtää sen paikalliselle kellolle ennen Ohjaaja.KasikirjoitusHetkellaa,
+//    jotta sama napautus ei vuoda toisen tilan käsikirjoitukseen.
+using System;
+using System.Collections.Generic;
+using Matkakirja.Linssit;
+
+namespace Matkakirja.Linssit.Dioraama
+{
+    /// <summary>Yhden hahmon näkyvä tila Nakyma-koosteessa (tila + hahmo yksilöity).</summary>
+    public readonly struct HahmoNakyma
+    {
+        public readonly string TilaId, HahmoId;
+        public readonly bool Naky;
+        public readonly string Silmukka;
+        public readonly int Ruutu;
+        public HahmoNakyma(string tilaId, string hahmoId, bool naky, string silmukka, int ruutu)
+        { TilaId = tilaId; HahmoId = hahmoId; Naky = naky; Silmukka = silmukka; Ruutu = ruutu; }
+    }
+
+    /// <summary>Koko dioraaman näkyvä tila hetkellä t (PoikkileikkausLinssi.NakymaHetkella-metodin paluuarvo).</summary>
+    public readonly struct Nakyma
+    {
+        public readonly Asento Kamera;
+        public readonly Dictionary<string, int> Tasot;
+        public readonly List<HahmoNakyma> Hahmot;
+        public readonly V3 Pulu;
+        public readonly bool PuluLentaa;
+        public readonly bool TauluAuki;
+        public readonly int Kohta;
+        public readonly string KohdeTila;
+        /// <summary>Kuluvan puheaskeleen puhuja ("pulu" tai hahmon id) ja teksti; null kun kukaan ei puhu.</summary>
+        public readonly string Puhuja, Repliikki;
+        /// <summary>Kuluvan käsikirjoitusaskeleen indeksi tilan (tai avauksessa linnan) Kasikirjoitus-listassa;
+        /// -1 = ei käynnissä olevaa puheaskelta. DioraamaAanet tunnistaa askeleen VAIHTUMISEN parilla
+        /// (KohdeTila, Askel), ei tekstillä (korjattu 29.9.2026, katselmointi: teksti on hauras avain).</summary>
+        public readonly int Askel;
+        /// <summary>Kuluvan askeleen äänipankin id (repliikki[N].Aani, reaktion Aani tai taulun kohdan Aani);
+        /// null kun ei puhetta tai askeleella ei ole ääntä.</summary>
+        public readonly string AskeleenAani;
+
+        public Nakyma(Asento kamera, Dictionary<string, int> tasot, List<HahmoNakyma> hahmot, V3 pulu,
+            bool puluLentaa, bool tauluAuki, int kohta, string kohdeTila, string puhuja = null, string repliikki = null,
+            int askel = -1, string askeleenAani = null)
+        {
+            Kamera = kamera; Tasot = tasot; Hahmot = hahmot; Pulu = pulu;
+            PuluLentaa = puluLentaa; TauluAuki = tauluAuki; Kohta = kohta; KohdeTila = kohdeTila;
+            Puhuja = puhuja; Repliikki = repliikki; Askel = askel; AskeleenAani = askeleenAani;
+        }
+    }
+
+    public sealed class PoikkileikkausLinssi
+    {
+        public static readonly LinssiTiedot PoikkiTiedot = new LinssiTiedot
+        {
+            Id = "poikkileikkaus",
+            Nimi = "Poikkileikkaus",
+            Lyhyt = "Olavinlinna aukileikattuna",
+            Jarjestys = 250,
+            Kesken = true,
+            // 24×24: kevyt porrastettu torni + vino leikkausviiva (ei svg-kuorta).
+            Ikoni = "<path d=\"M8 21V13H7V10H9V7H11V5H13V7H15V10H17V13H16V21Z\"/>"
+                + "<path d=\"M8 16H16\"/>"
+                + "<path d=\"M4 20L19 4\" stroke-dasharray=\"1.6 2.2\"/>",
+        };
+
+        public LinssiTiedot Tiedot => PoikkiTiedot;
+        public Rakennus Rakennus { get; private set; }
+        public bool Auki { get; private set; }
+        /// <summary>Ajelehtiminen levossa (era 2b, "poikki drift 0|1"); oletus pois. Ks. tiedoston alkukommentti.</summary>
+        public bool Leijunta { get; set; }
+        /// <summary>Unity-puoli (DioraamaSyote) asettaa tämän joka kehys: tosi kun sormi/sormet ovat ruudulla
+        /// ja ele vaikuttaa kameraan (ei UI:n peittämä). Leijunta ei etene tämän ollessa tosi.</summary>
+        public bool VetoKaynnissa { get; set; }
+
+        readonly List<Kameratapahtuma> tapahtumat = new List<Kameratapahtuma>();
+        readonly List<double> napautukset = new List<double>();
+        /// <summary>Linnan oma "tila" avauksen käsikirjoitukselle (taulu = linnan 3 ydinasiaa).</summary>
+        Tila linnaTila;
+
+        /// <summary>Avauksen käsikirjoitus alkaa näin monta sekuntia avauksen jälkeen (näkymä ehtii asettua).</summary>
+        public const double AvausViive = 0.8;
+        /// <summary>Pulun lähtöpiste avauksessa: taivaalta linnan laskeutumispisteen länsi-lounaan yläpuolelta.</summary>
+        public static readonly V3 TaivasSiirtyma = new V3(-30, 25, 20);
+
+        Asento AsentoFor(string kohde, bool pysty)
+        {
+            if (kohde == null) return pysty ? Rakennus.YleisPysty : Rakennus.YleisVaaka;
+            var tila = Rakennus.Tila(kohde);
+            return pysty && tila.KameraPysty.HasValue ? tila.KameraPysty.Value : tila.Kamera;
+        }
+
+        /// <summary>Avaa dioraaman hetkellä t: kamera yleisnäkymässä, ei tapahtumia eikä napautuksia vielä.</summary>
+        public void Avaa(Rakennus rakennus, double t)
+        {
+            Rakennus = rakennus ?? throw new ArgumentNullException(nameof(rakennus));
+            Auki = true;
+            linnaTila = new Tila
+            {
+                Id = null, Nimi = rakennus.Nimi, Taulu = rakennus.Taulu, PuluLaskeutuminen = rakennus.PuluLaskeutuminen,
+                Kasikirjoitus = new List<Askel> { new Askel { Tee = "pulu-lenna" }, new Askel { Tee = "taulu" } },
+            };
+            int kohtia = rakennus.Taulu?.Kohdat?.Count ?? 0;
+            for (int k = 0; k < Math.Min(3, kohtia); k++) linnaTila.Kasikirjoitus.Add(new Askel { Tee = "kohta", N = k });
+            tapahtumat.Clear();
+            tapahtumat.Add(new Kameratapahtuma(t, null, 0));
+            napautukset.Clear();
+        }
+
+        public void Sulje()
+        {
+            Auki = false;
+        }
+
+        /// <summary>Kohdistaa kameran tilaan (null = yleisnäkymä) hetkellä t; lisää Kameratapahtuman jonka
+        /// kesto on Kameraliike.SiirtymanKesto edellisestä kohteesta.</summary>
+        public void Kohdista(string tilaId, double t)
+        {
+            string edellinen = tapahtumat.Count > 0 ? tapahtumat[tapahtumat.Count - 1].Kohde : null;
+            var p0 = AsentoFor(edellinen, false);
+            var p1 = AsentoFor(tilaId, false);
+            tapahtumat.Add(new Kameratapahtuma(t, tilaId, Kameraliike.SiirtymanKesto(p0, p1)));
+        }
+
+        /// <summary>Napautus hetkellä t: päättää meneillään olevan käsikirjoitusaskeleen (Ohjaaja.KasikirjoitusHetkella).</summary>
+        public void Napauta(double t)
+        {
+            napautukset.Add(t);
+        }
+
+        /// <summary>
+        /// Rajaa pelaajan vedon/nipistyksen tuottaman asennon (Kameraliike.PelaajanAsento-tulos) kierron rajoihin
+        /// (era 2b, kohta 1/5). Unity-puoli (DioraamaSyote.Sovita) kutsuu tätä sen sijaan, että soveltaisi
+        /// Kameraliike.RajaaKierrolle itse — tämä metodi tietää, onko viimeisin kohdistus tila vai yleisnäkymä
+        /// (yleisnakyma-parametri Kameraliike.RajaaKierrolle), Unity-puolen ei tarvitse tuntea tapahtumat-listaa.
+        /// </summary>
+        public Asento RajaaPelaajanAsento(Asento perus, Asento pelaajanAsento)
+        {
+            bool yleisnakyma = tapahtumat.Count == 0 || tapahtumat[tapahtumat.Count - 1].Kohde == null;
+            return Kameraliike.RajaaKierto(perus, pelaajanAsento, yleisnakyma);
+        }
+
+        /// <summary>Viimeisen tapahtuman indeksi jonka Hetki ≤ t (sama malli kuin Heratys.ViimeisinKohde).</summary>
+        int ViimeisinIndeksi(double t)
+        {
+            int i = 0;
+            for (int k = 0; k < tapahtumat.Count; k++) if (tapahtumat[k].Hetki <= t) i = k;
+            return i;
+        }
+
+        /// <summary>Viimeisin laskeutumispiste ENNEN annettua tapahtumaindeksiä (skannaa taaksepäin ensimmäiseen
+        /// ei-null-kohteeseen); linnan oma piste jos mitään tilaa ei ole vielä vierailtu.</summary>
+        V3 EdellinenLaskeutuminen(int ennenIndeksia)
+        {
+            for (int k = ennenIndeksia - 1; k >= 0; k--)
+            {
+                var kohde = tapahtumat[k].Kohde;
+                if (kohde == null) continue;
+                var tila = Rakennus.Tila(kohde);
+                if (tila != null) return tila.PuluLaskeutuminen;
+            }
+            return Rakennus.PuluLaskeutuminen;
+        }
+
+        /// <summary>
+        /// Koko näkyvä tila hetkellä t. Kaikki johdetaan ajasta ja tallennetuista tapahtumista (Kohdista,
+        /// Napauta): sama t antaa aina saman näkymän. pysty valitsee yleisnäkymän kameran (vaaka/pysty).
+        /// </summary>
+        public Nakyma NakymaHetkella(double t, bool pysty)
+        {
+            int i = ViimeisinIndeksi(t);
+            var tapahtuma = tapahtumat[i];
+            string kohdeTila = tapahtuma.Kohde;
+            var p1 = AsentoFor(kohdeTila, pysty);
+
+            Asento kamera;
+            if (i == 0 || tapahtuma.Kesto <= 0 || t >= tapahtuma.Hetki + tapahtuma.Kesto)
+            {
+                // Levossa (ei kesken siirtymää): leijunta saa ajelehtia VAIN tässä haarassa, ei kaarilennon aikana,
+                // ja vain kun pelaaja ei vedä/nipistä (VetoKaynnissa) — ks. tiedoston alkukommentti.
+                kamera = Leijunta && !VetoKaynnissa ? Kameraliike.Leijunta(p1, t) : p1;
+            }
+            else
+            {
+                var p0 = AsentoFor(tapahtumat[i - 1].Kohde, pysty);
+                double paikallinenT = (t - tapahtuma.Hetki) / tapahtuma.Kesto;
+                kamera = Kameraliike.SiirtymaAsento(p0, p1, paikallinenT);
+            }
+
+            var tasot = new Dictionary<string, int>();
+            var hahmot = new List<HahmoNakyma>();
+            foreach (var tila in Rakennus.Tilat)
+            {
+                var (taso, _) = Heratys.TilanTaso(Rakennus, tapahtumat, tila.Id, t);
+                tasot[tila.Id] = taso;
+                for (int hi = 0; hi < tila.Hahmot.Count; hi++)
+                {
+                    var ht = Heratys.HahmonTila(Rakennus, tapahtumat, tila.Id, hi, t);
+                    hahmot.Add(new HahmoNakyma(tila.Id, tila.Hahmot[hi].Id, ht.Naky, ht.Silmukka, ht.Ruutu));
+                }
+            }
+
+            V3 pulu;
+            bool puluLentaa = false, tauluAuki = false;
+            int kohta = -1;
+            string puhuja = null, repliikki = null;
+            int askel = -1;
+            string askeleenAani = null;
+
+            bool avaus = kohdeTila == null && i == 0 && Rakennus.Taulu?.Kohdat != null && Rakennus.Taulu.Kohdat.Count > 0;
+            if (kohdeTila == null && !avaus)
+            {
+                pulu = EdellinenLaskeutuminen(i + 1);
+            }
+            else
+            {
+                var tila = avaus ? linnaTila : Rakennus.Tila(kohdeTila);
+                double kasikirjoitusAlku = tapahtuma.Hetki + tapahtuma.Kesto + (avaus ? AvausViive : 0);
+                double paikallinenAika = t - kasikirjoitusAlku;
+                var kestot = new List<double>(tila.Kasikirjoitus.Count);
+                foreach (var a in tila.Kasikirjoitus) kestot.Add(Ohjaaja.AskeleenKesto(a, tila, Rakennus));
+
+                double sessionLoppu = i + 1 < tapahtumat.Count ? tapahtumat[i + 1].Hetki : double.PositiveInfinity;
+                var napitLokaali = new List<double>();
+                foreach (var nap in napautukset)
+                    if (nap >= kasikirjoitusAlku && nap < sessionLoppu) napitLokaali.Add(nap - kasikirjoitusAlku);
+
+                var edellinenLaskeutuminen = avaus ? Rakennus.PuluLaskeutuminen + TaivasSiirtyma : EdellinenLaskeutuminen(i);
+                var tamanLaskeutuminen = tila.PuluLaskeutuminen;
+
+                if (paikallinenAika < 0 || tila.Kasikirjoitus.Count == 0)
+                {
+                    pulu = edellinenLaskeutuminen;
+                }
+                else
+                {
+                    var kt = Ohjaaja.KasikirjoitusHetkella(kestot, napitLokaali, paikallinenAika);
+                    int idx = kt.Indeksi;
+                    int puluIdx = -1;
+                    for (int qi = 0; qi < tila.Kasikirjoitus.Count; qi++)
+                        if (tila.Kasikirjoitus[qi].Tee == "pulu-lenna") { puluIdx = qi; break; }
+
+                    if (puluIdx < 0 || idx < puluIdx) pulu = edellinenLaskeutuminen;
+                    else if (idx == puluIdx)
+                    {
+                        double t01 = kestot[puluIdx] > 0 ? kt.Paikallinen / kestot[puluIdx] : 1;
+                        pulu = Ohjaaja.PuluLento(edellinenLaskeutuminen, tamanLaskeutuminen, t01);
+                        puluLentaa = true;
+                    }
+                    else pulu = tamanLaskeutuminen;
+
+                    if (idx >= 0 && idx < tila.Kasikirjoitus.Count)
+                    {
+                        for (int qi = idx; qi >= 0; qi--)
+                            if (tila.Kasikirjoitus[qi].Tee == "taulu") { tauluAuki = true; break; }
+                        for (int qi = idx; qi >= 0; qi--)
+                            if (tila.Kasikirjoitus[qi].Tee == "kohta") { kohta = tila.Kasikirjoitus[qi].N; break; }
+                        if (!kt.Valmis)
+                        {
+                            askel = idx;
+                            (puhuja, repliikki, askeleenAani) = Puhe(tila, tila.Kasikirjoitus[idx]);
+                        }
+                    }
+                }
+            }
+
+            return new Nakyma(kamera, tasot, hahmot, pulu, puluLentaa, tauluAuki, kohta, kohdeTila, puhuja, repliikki,
+                askel, askeleenAani);
+        }
+
+        /// <summary>Puheaskeleen puhuja, teksti ja äänipankin id (kohta, repliikki, reaktio); muut askeleet
+        /// (null, null, null). KORJATTU (29.9.2026, katselmointi): repliikki-askel käyttää askel.N:ää eikä aina
+        /// Repliikit[0]:aa (askel.N valitsee rivin, kuten Ohjaaja.AskeleenKesto tekee jo). Äänen id tulee suoraan
+        /// askeleesta, ei DioraamaAanet.cs:n aiemmasta tekstitäsmäytyksestä (EtsiAskeleenAani, poistettu).</summary>
+        static (string Puhuja, string Repliikki, string Aani) Puhe(Tila tila, Askel askel)
+        {
+            switch (askel.Tee)
+            {
+                case "kohta":
+                    var kohdat = tila.Taulu?.Kohdat;
+                    return kohdat != null && askel.N >= 0 && askel.N < kohdat.Count
+                        ? ("pulu", kohdat[askel.N].Teksti, kohdat[askel.N].Aani) : (null, null, null);
+                case "repliikki":
+                case "reaktio":
+                    Hahmo h = null;
+                    foreach (var x in tila.Hahmot) if (x.Id == askel.HahmoId) { h = x; break; }
+                    if (h == null) return (null, null, null);
+                    if (askel.Tee == "reaktio")
+                        return h.Reaktio != null ? ("pulu", h.Reaktio.Teksti, h.Reaktio.Aani) : (null, null, null);
+                    return askel.N >= 0 && askel.N < h.Repliikit.Count
+                        ? (h.Id, h.Repliikit[askel.N].Teksti, h.Repliikit[askel.N].Aani) : (null, null, null);
+                default:
+                    return (null, null, null);
+            }
+        }
+    }
+}

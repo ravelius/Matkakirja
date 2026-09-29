@@ -45,6 +45,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using Matkakirja.Linssit;
 using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -156,6 +157,39 @@ namespace Matkakirja.Natiivi
         /// <summary>Linssin raidan himmennys (kellon pysäytys 0,5; jatko 1).</summary>
         public static void LinssiHimmennys(double kerroin) => Instanssi?.Tila.Himmennys(kerroin);
 
+        static bool dioraamaRepliikkiPuhuu;
+
+        /// <summary>
+        /// Dioraaman repliikki soi (ILinssiYmparisto.Repliikki, sama reunarajapinta kuin PuluPuhuu, oma tunnus
+        /// "dioraama-repliikki"): kuuluu samaan puhujien laskuriin kuin Kertoja ja Pulu, joten 5 kanavaa
+        /// väistyvät repliikin ajan. Tuplakutsu samalla arvolla on harmiton (vain reuna vaikuttaa).
+        /// </summary>
+        public static void DioraamaRepliikki(bool puhuu)
+        {
+            var s = Instanssi;
+            if (s == null || puhuu == dioraamaRepliikkiPuhuu) return;
+            dioraamaRepliikkiPuhuu = puhuu;
+            s.Tila.Puhe(puhuu);
+        }
+
+        /// <summary>
+        /// Uusi nimetty taustasilmukka poolista (ILinssiYmparisto.Silmukka): tunnus on valmis URL. Kahva
+        /// palautuu aina (ei koskaan null), vaikka Aanisoitin ei olisi käynnistynyt tai lataus epäonnistuisi;
+        /// se ei silloin vain soi. Nimi LinssiSilmukka (ei Silmukka): Matkakirja.Peli.Silmukka on tässä
+        /// tiedostossa käytössä oleva staattinen apuluokka (maiseman ristihäivytyksen ajoitus).
+        /// </summary>
+        public static ISilmukka LinssiSilmukka(string tunnus)
+        {
+            var s = Instanssi;
+            var l = new PooliAani { Url = tunnus };
+            var kahva = new SilmukkaKahva(s, l);
+            if (s == null || string.IsNullOrEmpty(tunnus)) return kahva;
+            s.pooliElossa.Add(l);
+            s.TaytaTarvittaessa(l);
+            s.StartCoroutine(s.HaePooli(l, l.Vuoro));
+            return kahva;
+        }
+
         // =====================================================================
         // SOITTIMET JA KLIPIT
         // =====================================================================
@@ -189,6 +223,37 @@ namespace Matkakirja.Natiivi
         }
 
         sealed class Latausvirhe { public long Http; public bool Verkko, Aika, Purku; }
+
+        // --- silmukkapooli (Linnanrakentaja erä 2, dioraama; ISilmukka) --------
+
+        /// <summary>Yksi poolin silmukka: oma AudioSource, ei jaa kanavien 5×2 lähdettä eikä Toive-järjestelmää.</summary>
+        sealed class PooliAani
+        {
+            public string Url;
+            public AudioSource A;
+            public Klippi K;
+            /// <summary>Kutsujan pyytämä taso (ISilmukka.Voimakkuus), rampattuna liukuS:ssä.</summary>
+            public readonly Tasoramppi Taso = new Tasoramppi(0);
+            public bool Ladattu, Kaynnistetty, Lopetettu, Vapautettu, VaroitettuKerran;
+            public int Vuoro;
+        }
+
+        /// <summary>ISilmukka-kahva: turvallinen kutsua vapautuksen jälkeenkin (L.Vapautettu ohittaa hiljaa).</summary>
+        sealed class SilmukkaKahva : ISilmukka
+        {
+            readonly Aanisoitin s;
+            internal readonly PooliAani L;
+            public SilmukkaKahva(Aanisoitin s, PooliAani l) { this.s = s; L = l; }
+            public void Voimakkuus(float taso, float liukuS) => s?.PooliVoimakkuus(L, taso, liukuS);
+            public void Lopeta(float haiveS = 0.35f) => s?.PooliLopeta(L, haiveS);
+        }
+
+        /// <summary>Enintään näin monta samanaikaista poolisilmukkaa; ylite lopettaa hiljaisimman (loki kerran).</summary>
+        public const int SilmukkaKatto = 6;
+        readonly List<PooliAani> pooliElossa = new List<PooliAani>();
+        /// <summary>AaniTilan globaali väistö (Voimassa, esim. Pulun puhe) rampattuna poolille samalla 650 ms:llä
+        /// kuin muu puheväistö (AaniVakiot.VaistoLiukuMs).</summary>
+        readonly Tasoramppi pooliVaisto = new Tasoramppi(1);
 
         readonly AudioSource[,] lahteet = new AudioSource[Kanavia, LahteitaKanavalla];
         readonly MaisemaKompressori[,] kompressorit = new MaisemaKompressori[Kanavia, LahteitaKanavalla];
@@ -253,6 +318,7 @@ namespace Matkakirja.Natiivi
             Sanelu.Alkoi -= SaneluAlkoi;
             Sanelu.Loppui -= SaneluLoppui;
             foreach (var l in elavat.ToArray()) Vapauta(l);
+            foreach (var l in pooliElossa.ToArray()) PooliVapauta(l);
             foreach (var k in new List<Klippi>(klipit.Values)) Tuhoa(k);
             if (Instanssi == this) Instanssi = null;
         }
@@ -322,6 +388,8 @@ namespace Matkakirja.Natiivi
             try { for (int k = 0; k < Kanavia; k++) Sovella((Kanava)k, t.Toive((Kanava)k)); }
             catch (Exception e) { Debug.LogException(e); }
             finally { sovelletaan = false; }
+            // Silmukkapoolin globaali väistö (esim. Pulun puhe): samalla rampilla kuin muu puheväistö.
+            if (t.Voimassa != pooliVaisto.Kohde) pooliVaisto.Aloita(t.Voimassa, AaniVakiot.VaistoLiukuMs);
             if (jalkeen.Count == 0) return;
             var teot = jalkeen.ToArray();
             jalkeen.Clear();
@@ -505,6 +573,7 @@ namespace Matkakirja.Natiivi
             float nyt = Time.unscaledTime;
             List<Action> teot = null;
             void Tee(Action a) => (teot ??= new List<Action>()).Add(a);
+            PaivitaPooli(dt);
 
             // Takaperin ilman kopiota (ei roskaa joka ruudussa): Vapauta poistaa vain käsiteltävän.
             for (int i = elavat.Count - 1; i >= 0; i--)
@@ -728,6 +797,154 @@ namespace Matkakirja.Natiivi
                 case ".wav": return AudioType.WAV;
                 case ".m4a": case ".aac": return AudioType.AUDIOQUEUE;
                 default: return AudioType.MPEG;
+            }
+        }
+
+        // --- silmukkapooli: toteutus (Silmukka-kahvan takana) --------------------
+
+        /// <summary>Uusi silmukka ylitti katon: hiljaisin (pienin nykyinen taso) niistä, jotka eivät ole uusi
+        /// itse eivätkä jo lopettamassa, lopetetaan heti (ei häivytystä: pooli on ylikuormassa).</summary>
+        void TaytaTarvittaessa(PooliAani uusi)
+        {
+            if (pooliElossa.Count <= SilmukkaKatto) return;
+            PooliAani uhri = null;
+            foreach (var p in pooliElossa)
+                if (p != uusi && !p.Vapautettu && !p.Lopetettu && (uhri == null || p.Taso.Arvo < uhri.Taso.Arvo)) uhri = p;
+            if (uhri == null) return;
+            Debug.Log($"MATKAKIRJA ääni: silmukkapooli täynnä ({SilmukkaKatto}), hiljaisin lopetettu: {uhri.Url}");
+            PooliLopeta(uhri, 0f);
+        }
+
+        void PooliVoimakkuus(PooliAani l, float taso, float liukuS)
+        {
+            if (l == null || l.Vapautettu || l.Lopetettu) return;
+            l.Taso.Aloita(Mathf.Clamp01(taso), Math.Max(0f, liukuS) * 1000.0);
+            if (l.Ladattu && !l.Kaynnistetty) PooliKaynnista(l);
+        }
+
+        void PooliLopeta(PooliAani l, float haiveS)
+        {
+            if (l == null || l.Vapautettu || l.Lopetettu) return;
+            l.Lopetettu = true;
+            if (haiveS <= 0f || !l.Kaynnistetty) { PooliVapauta(l); return; }
+            l.Taso.Aloita(0, haiveS * 1000.0);
+        }
+
+        void PooliVapauta(PooliAani l)
+        {
+            if (l.Vapautettu) return;
+            l.Vapautettu = true;
+            l.Vuoro++;
+            if (l.A != null) { Destroy(l.A.gameObject); l.A = null; }
+            VapautaPooliKlippi(l);
+            pooliElossa.Remove(l);
+        }
+
+        void VapautaPooliKlippi(PooliAani l)
+        {
+            var k = l.K;
+            l.K = null;
+            if (k == null) return;
+            k.Viitteet--;
+            if (k.Viitteet <= 0) Tuhoa(k);
+        }
+
+        /// <summary>Oma AudioSource per silmukka: spatialBlend 0, priority 128 (kanavien 64/96 ja puheen
+        /// voittavat RealVoiceCount-rajalla), silmukoi aina, ei A/B-ristihäivytystä.</summary>
+        void PooliKaynnista(PooliAani l)
+        {
+            AsetaIstunto();
+            var go = new GameObject("Silmukka");
+            go.transform.SetParent(transform, false);
+            var a = go.AddComponent<AudioSource>();
+            a.playOnAwake = false;
+            a.spatialBlend = 0f;
+            a.priority = 128;
+            a.loop = true;
+            a.volume = 0f;
+            a.clip = l.K.Clip;
+            a.Play();
+            l.A = a;
+            l.Kaynnistetty = true;
+        }
+
+        static bool PooliVoimassa(PooliAani l, int vuoro) => !l.Vapautettu && l.Vuoro == vuoro;
+
+        /// <summary>Sama lataus/välimuistiputki kuin kanavilla (LevyPolku, Levylle, Pura, striimi > 3 Mt,
+        /// jaettu klipit-välimuisti); vain yksi yritys, ei uusintaa (Puuttuva/virheellinen: kahva ei koskaan soi).</summary>
+        IEnumerator HaePooli(PooliAani l, int vuoro)
+        {
+            yield return null;
+            if (!PooliVoimassa(l, vuoro)) yield break;
+            string url = l.Url;
+            string levy = LevyPolku(url);
+            if (!File.Exists(levy))
+            {
+                if (ladataan.Contains(url)) { while (ladataan.Contains(url)) yield return null; }
+                else yield return Levylle(url, levy);
+                if (!File.Exists(levy))
+                {
+                    if (PooliVoimassa(l, vuoro)) PooliEpaonnistui(l, "levylle ei saatu");
+                    yield break;
+                }
+            }
+            if (!PooliVoimassa(l, vuoro)) yield break;
+
+            long koko = 0;
+            try { koko = new FileInfo(levy).Length; } catch (Exception) { }
+            bool striimi = Aanilataus.Striimataan(koko);
+            Klippi k;
+            while (true)
+            {
+                if (!striimi && klipit.TryGetValue(url, out var jaettu) && !jaettu.Tuhottu)
+                {
+                    while (!jaettu.Valmis && !jaettu.Virhe && !jaettu.Tuhottu) yield return null;
+                    if (jaettu.Tuhottu) continue;
+                    if (jaettu.Virhe) { if (PooliVoimassa(l, vuoro)) PooliEpaonnistui(l, "purkuvirhe"); yield break; }
+                    k = jaettu;
+                    break;
+                }
+                k = new Klippi { Url = url, Striimi = striimi };
+                if (!striimi) klipit[url] = k;
+                yield return Pura(k, levy);
+                if (k.Virhe)
+                {
+                    if (klipit.TryGetValue(url, out var x) && x == k) klipit.Remove(url);
+                    if (PooliVoimassa(l, vuoro)) PooliEpaonnistui(l, "purkuvirhe");
+                    yield break;
+                }
+                break;
+            }
+            if (!PooliVoimassa(l, vuoro)) { if (k.Viitteet <= 0) Tuhoa(k); yield break; }
+            k.Viitteet++;
+            l.K = k;
+            l.Ladattu = true;
+            PooliKaynnista(l);
+        }
+
+        void PooliEpaonnistui(PooliAani l, string syy)
+        {
+            if (l.VaroitettuKerran) return;
+            l.VaroitettuKerran = true;
+            Debug.LogWarning($"MATKAKIRJA ääni: silmukka {l.Url} ei soi ({syy})");
+        }
+
+        /// <summary>
+        /// Poolin rampit ja äänekkyys joka ruutu: kutsujan pyytämä taso (Voimakkuus) kertaa Äänimaisema-kytkimen,
+        /// Tausta-voiman (TaustanKerroin) ja AaniTilan globaalin väistön (pooliVaisto, esim. Pulun puhe).
+        /// </summary>
+        void PaivitaPooli(double dt)
+        {
+            pooliVaisto.Askel(dt);
+            double kerroin = (Tila.Aanimaisema ? 1.0 : 0.0) * Tila.TaustanKerroin * pooliVaisto.Arvo;
+            for (int i = pooliElossa.Count - 1; i >= 0; i--)
+            {
+                if (i >= pooliElossa.Count) continue;
+                var l = pooliElossa[i];
+                if (l.Vapautettu) continue;
+                l.Taso.Askel(dt);
+                if (l.Kaynnistetty && l.A != null) l.A.volume = (float)Math.Min(1.0, l.Taso.Arvo * kerroin);
+                if (l.Lopetettu && !l.Taso.Kaynnissa) PooliVapauta(l);
             }
         }
 
