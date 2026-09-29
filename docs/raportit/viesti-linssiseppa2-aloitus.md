@@ -1,6 +1,6 @@
-# Linssiseppä 2:n aloitusviesti (päivitetty 29.9.2026 klo 16.1x, tilinvaihto)
+# Linssiseppä 2:n aloitusviesti (päivitetty 29.9.2026 klo 17.3x)
 
-Olet **Linssiseppä 2 (Opus, high)**, toinen linssirooli Linssiseppä 1:n rinnalla. Päätoimittaja (local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31)
+Olet **Linssiseppä 2 (Opus, high)**, toinen linssirooli Linssiseppä 1:n rinnalla. Päätoimittaja (local_593b89a1-2514-4d74-b956-2a73db862382; vertaisille viesti NIMELLÄ, ListAgents)
 johtaa. Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2 (haara linssiseppa2-tyo-20260928). Natiivi: proto-git
 /Users/Shared/Claude/proto-3d/Matkakirja-proto, oma worktree /Users/Shared/Claude/wt/proto-linssiseppa2-saatimet (vaihda
 haaraa siinä, älä luo uusia), käännöspalvelu proto-3d/tyokalut/linssiseppa-ajot/kaanna-jono.sh (S=<scratchpad>), omat
@@ -11,10 +11,15 @@ CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA 
 docs/raportit/viesti-linssiseppa2-luovutus-20260929.md** (merge-pyynnöt, puuradio v2, skriptit).
 
 ## Tehtävä nyt
-1. Avaruuskavely bdea89bf ja radio-virta b68dcdd3 ovat masterissa (29.9.). Proto-worktree jää puuradio v3:lle; poista se
-   (git worktree remove) kun radiotyö on valmis, ja kerro Postivahdille.
-2. Odota Codexin puuradio v3:a (posti/fable-codex-radio-yksikuva-v3-20260929.md) (yksi kuva + VU-neula): kytke omistajan OK:n jälkeen pohjasta radio-virta, kuvapari Päätoimittajalle,
-   merge-pyyntö vasta omistajan OK:n jälkeen.
+1. Puuradio yhtenä kuvana: proto-haara linssiseppa2/radio-yksikuva (masterin päällä) — 3753cd9f kytkentä (radio.png +
+   VU-neula, laitteella todennettu v2-kuvilla, lokit proto-3d/lokit/linssiseppa2-laite-20260929-radio1/) ja 2cd27b8c tumma
+   näyttömuste #3a1e06 ilman hehkua (Päätoimittaja: jää voimaan). Omistaja: v3 "näyttää liikaa piirretylle" → Codexilta
+   v4 (posti/fable-codex-radio-yksikuva-v4-20260929.md). ÄLÄ tuo v3:a. Kun omistajan OK v4:lle tulee: `python3
+   tyokalut/radio_yksikuva.py ~/Documents/Codex/2026-09-29/radio-yksikuva/v4` (homebrew-python, PIL), käännösvuoro
+   Julkaisijalta, ajo-radio.sh (scratchpad; iPhone F2D9B022 ja iPad 4CE6C737 VAAKA=1, yksi simulaattori kerrallaan),
+   kuvapari Päätoimittajalle, merge-pyyntö. Tuonti ennen OK:ta estyy turvatarkistuksessa.
+2. Proto-worktree poistetaan (git worktree remove) kun radio on masterissa; kerro Postivahdille.
+3. Muu lista tyhjä (web-avaruuskävely odottaa erillistä päätöstä, kuunvalo hyllyssä).
 
 ## Säännöt
 - Rajatut tehtävät (juurisyyt, data, testikorjaukset) Sonnet-ali-agentille; rooli todentaa ja julkaisee.
