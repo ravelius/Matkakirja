@@ -507,6 +507,9 @@ namespace Matkakirja
             if (!tauolla) return;
             liuku = 0;
             vetoNopeus = 0;
+            // Kesken jäänyt kosketus ei paluussa laukaise irrotusta (liuku tai napautus): uusi ele alkaa puhtaalta.
+            edellinenSormia = 0;
+            lukko = Elelukko.Ei;
         }
         double2 vetoNopeus;   // sama suodatettuna vedon aikana
         float2 edellinenKeski;
