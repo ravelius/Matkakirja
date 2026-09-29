@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2397, teksti: 'ISS-tervetulo: kuvan selite ei enää vaienna Pulua' },
   { v: 2396, teksti: 'Dioraama erä 2: maalattujen pintojen, atlaksen,… (#3601)' },
   { v: 2395, teksti: 'Natiivin offline-pohja ja kerma sarjaan 2026-09… (#3599)' },
   { v: 2394, teksti: 'ISS-kyyti: Codexin säätöpaneeli (#3595)' },
