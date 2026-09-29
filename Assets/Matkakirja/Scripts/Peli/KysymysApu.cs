@@ -106,6 +106,12 @@ namespace Matkakirja.Natiivi
         // --- tulos ---
         /// <summary>Löydön näyttönimi, fakta ja kuva (manner- ja maakohtainen, web aarreTyyppi), tai null.</summary>
         public string LoytoNimi, LoytoFakta, LoytoKuvaUrl;
+        /// <summary>
+        /// Paljastuksen alarivi rahan ("+N puntaa") tilalle, esim. matkamuiston "+25 tp", tai null. Matkamuisto näytetään
+        /// pergamenttimallilla (LoytoPergamentti) kuten paikallisaarre (Pelikoodari 29.9.2026).
+        /// </summary>
+        public string LoytoRivi;
+        public bool LoytoPergamentti;
         /// <summary>Kätkökuva kaaren aarretekstin yhteydessä (web kohtaaminen-katko.jpg), tai null.</summary>
         public string KatkoKuvaUrl;
         /// <summary>

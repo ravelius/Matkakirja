@@ -266,6 +266,12 @@ namespace Matkakirja.Natiivi
             Osio("Tavarat", d.Tavarat.Count, -1);
             foreach (var t in d.Tavarat)
                 AarreRivi("tavara:" + t.Id, t.Teksti, t.KuvaUrl, null, () => Suurenna(t.KuvaUrl, t.Nimi));
+            // MATKAMUISTOT (Pelikoodari 29.9.2026, elävän linnan etsinnät; Natiivi-UI:n kuittaus): vain kun jotain on löytynyt.
+            if (d.Matkamuistot?.Count > 0)
+            {
+                Osio("Matkamuistot", d.Matkamuistot.Count, -1);
+                foreach (var m in d.Matkamuistot) AarreRivi("muisto:" + m.Id, m.Nimi, m.KuvaUrl, m.Selite, () => Suurenna(m.KuvaUrl, m.Nimi));
+            }
             Osio("Julisteet", d.Julisteet.Count, d.JulisteitaKaikkiaan);
             var avaimet = d.Julisteet.Select(j => j.Avain).ToList();
             foreach (var j in d.Julisteet)

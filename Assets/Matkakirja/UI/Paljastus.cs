@@ -139,7 +139,7 @@ namespace Matkakirja.Natiivi
             bool paa = tyyppi == "star";
             aarreNyt = Aarre(tyyppi);
             // Web: maan oma paikallisaarrekuva → vinjetointimalli; kaikki muut tummassa.
-            bool paikallis = !pollo && d.LoytoKuvaUrl != null && d.LoytoKuvaUrl.Contains("/aarteet/paikallis/");
+            bool paikallis = !pollo && (d.LoytoPergamentti || d.LoytoKuvaUrl != null && d.LoytoKuvaUrl.Contains("/aarteet/paikallis/"));
             kerros.EnableInClassList("mk-paljastus--paikallis", paikallis);
             paikallisNyt = paikallis;
             // Web: paikallismallin reuna on suorakaiteen höyhen, tummien säteittäinen vinjetti.
@@ -157,7 +157,7 @@ namespace Matkakirja.Natiivi
             nimi.enableRichText = pollo;
             nimi.text = pollo ? "<s>Viisas Pöllö</s> Pulu" : d.LoytoNimi ?? NimiRivista(d.Loyto) ?? "";
             // Alarivi: web REVEAL_SUB[type] ?? "+N puntaa" (löytöhetken arvo).
-            string rivi = pollo ? PolloSelite : paa ? PaaaarreRivi : Puntaa(d.Loyto);
+            string rivi = pollo ? PolloSelite : paa ? PaaaarreRivi : d.LoytoRivi ?? Puntaa(d.Loyto);
             Nakyy(palkkio, rivi);
             Nakyy(fakta, pollo ? null : d.LoytoFakta, true);
             Nakyy(isoisa, pollo ? PolloEsittely : KaarenAarre(d), true);

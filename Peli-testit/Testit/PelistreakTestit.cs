@@ -110,7 +110,7 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void Versio6NouseeVersioon7IlmanPutkea()
         {
-            Oleta.Sama(7, Pelitila.TallennusVersio);
+            Oleta.Tosi(Pelitila.TallennusVersio >= 7, "streak kuuluu versioon 7");
             var m = Uusi();
             var json = m.Tallenna();
             // Ilman kirjausta kenttää ei kirjoiteta (web JSON: p.streak puuttuu) — kultaiset eivät muutu.

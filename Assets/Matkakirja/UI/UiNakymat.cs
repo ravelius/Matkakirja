@@ -108,6 +108,13 @@ namespace Matkakirja.Natiivi
             PeliNakymat.Lehti = _ => Hae().Lehti;
             // Aloitusnäkymä: silmukka odottaa tilassa Aloitus (Jatka / Uusi matka).
             PeliOhjain.AloitusNakyma = true;
+            // Matkamuiston löytöhetki (Pelikoodari 29.9.2026, elävän linnan etsinnät): Paljastus pergamenttimallilla, nimi,
+            // selite faktarivinä ja "+N tp" rahan paikalla.
+            PeliOhjain.NaytaMatkamuisto = m => UiKerros.PaaSaikeessa(() => Hae().Paljastus.Nayta(new KysymysNaytto
+            {
+                Oikein = true, LoytoTyyppi = "matkamuisto", LoytoNimi = m.Nimi, LoytoFakta = m.Selite, LoytoKuvaUrl = m.KuvaUrl,
+                LoytoRivi = "+" + m.Pisteet + " " + global::Matkakirja.Peli.Kokemus.Lyhenne, LoytoPergamentti = true,
+            }));
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]

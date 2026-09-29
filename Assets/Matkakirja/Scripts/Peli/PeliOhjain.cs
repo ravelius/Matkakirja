@@ -270,6 +270,32 @@ namespace Matkakirja.Natiivi
         public LaukkuNaytto Laukku(bool linssejaOmistetaan = false) =>
             matka == null ? null : Natiivi.Laukku.Rakenna(matka, aarrenimet, kauppasisalto, linssejaOmistetaan);
 
+        // --- matkamuistot (elävän linnan etsinnät; Peli/Matkamuistot.cs) -------------------------------------------------
+
+        /// <summary>UI:n löytöhetki (UiNakymat asettaa: Paljastus-kortti). Null = ei korttia (testit).</summary>
+        public static Action<Matkamuisto> NaytaMatkamuisto;
+        /// <summary>Uusi matkamuisto löytyi (tunnus); dioraama voi esim. poistaa sinetin tynnyristä.</summary>
+        public event Action<string> MatkamuistoLoytyi;
+
+        /// <summary>
+        /// Dioraaman etsinnän löytö (esim. "voudin-sinetti" fatabuurin tynnyristä): kirjaa pelitilaan, antaa tietäjäpisteet,
+        /// tallentaa ja näyttää löytöhetken. true = uusi löytö; false = tuntematon, jo löydetty tai peli ei käynnissä.
+        /// </summary>
+        public bool LoydaMatkamuisto(string id)
+        {
+            if (matka == null) return false;
+            var m = Matkamuistot.Loyda(matka.Tila.Pelaaja, matka.Kokemus, id);
+            if (m == null) return false;
+            Debug.Log($"MATKAKIRJA peli: matkamuisto {id} löytyi, +{m.Pisteet} tp");
+            Tallenna();
+            try { MatkamuistoLoytyi?.Invoke(id); } catch (Exception e) { Debug.LogException(e); }
+            try { NaytaMatkamuisto?.Invoke(m); } catch (Exception e) { Debug.LogException(e); }
+            return true;
+        }
+
+        /// <summary>Matkamuisto on jo löydetty tällä matkalla.</summary>
+        public bool OnMatkamuisto(string id) => matka != null && Matkamuistot.Loydetty(matka.Tila.Pelaaja, id);
+
         List<MatkaVaihtoehto> vaihtoehdot = new List<MatkaVaihtoehto>();
         readonly List<string> tapahtumat = new List<string>();
         string saapumisKaupunki;
