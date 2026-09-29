@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 19:18:** Levy 90 Gi, muisti 80 % vapaa, kuorma 113/116/130, sim 0, ei kevyttä tilaa. Viikko 10 % (5 h 38 %). Konteksti: Linnanrakentaja 54 %, Natiivi-UI 45 %, oma 18 %. Juna ennallaan (viimeisin lokirivi 18.58). Posti: ei uutta.
+
 **Päivitetty 19:07:** Levy 89 Gi, muisti 78 % vapaa, kuorma 158/185/133 (juna-käännös käynnissä 18.58→), sim 0, ei kevyttä tilaa. Viikko 10 % (5 h 36 %). Konteksti: Linnanrakentaja 52 %, Natiivi-UI 44 %, oma 18 %. Juna: vahti käänsi 18.58 (ylärajakäännös, vanhin kääntämätön 4271 s). Posti: ei uutta.
 
 **Päivitetty 18:56:** Kevyt tila PÄÄTTYNYT (/tmp/matkakirja-kevyt poistettu ennen 18.55); normaali valvonta (max 3 sim, hälytys vasta muisti <25 % vapaa). Levy 92 Gi, muisti 81 % vapaa, kuorma 104/108/79 (uuden junakäännöksen alku), sim 0. Viikko 9 % (5 h 34 %). Konteksti: Linnanrakentaja 52 %, Natiivi-UI 42 %, Siirtoseppä 34 %, Laitetestaaja 32 %, oma 17 %. Juna: 1.0.52-juna avattu uudelleen 18.53 (b13 a45c4a24, BUILD 51 f3d7b408 + sepia b841286e). Linssiseppä voi nyt pushata tervetulo-palaute-haaran. Posti: ei uutta.
