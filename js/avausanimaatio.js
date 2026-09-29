@@ -215,3 +215,154 @@ export function piilotaAnimoiden(elementti, lahde, valmis) {
   liike.addEventListener?.('finish', loppu);
   setTimeout(loppu, SULKU_MS + 80);
 }
+
+/*
+ * DIALOGIT (erä B). Pelin natiivit <dialog>-laput (.dialog, .muutokset-dialog: säännöt, laukku, visa, saapuminen,
+ * muutokset, …) avautuvat ja sulkeutuvat samoin arvoin. Kytkentä on prototyypissä, jotta jokainen showModal- ja
+ * close-kutsu (ui.js:ssä kymmeniä) kulkee saman reitin.
+ *
+ * SULKU ON NATIIVISTI HETI: close() suljetaan oikeasti samalla hetkellä kuin ennenkin, joten [open], .open,
+ * close-tapahtuma ja returnValue käyttäytyvät täsmälleen kuten ennen (pelin `dialog[open]`-vahdit, `if
+ * (!X.open) X.showModal()` -ketjut ja savukkeet). Vain KUVA jää: dialogi pidetään sulun ajan näkyvissä samassa
+ * paikassa kiinteänä, kosketuksia ottamattomana elementtinä, ja sen kortti pienenee ja häivyttyy; taustan himmennys
+ * häivyttyy erillisenä haamuna. Uusi showModal kesken sulun purkaa kuvan heti.
+ *
+ * Esc (cancel) ja <form method="dialog"> ohjataan samaan sulkuun vain, jos mikään pelin oma käsittelijä ei ole
+ * estänyt oletusta (visan, tapahtuman ja lehden omat peruutukset kutsuvat close():a itse).
+ *
+ * Tiivis lehtiarkki (.tiivis-lehtiarkki) mitataan avauksen jälkeen (css/styles.css TIIVIS LEHTIARKKI EI LIU'U
+ * ESIIN), joten sen kortti vain häivyttyy eikä skaalaudu. Dialogi, jolla on data-oma-sulku, hoitaa liikkeensä itse
+ * (js/tekijakortti.js).
+ */
+const DIALOGIVALITSIN = '.dialog, .muutokset-dialog';
+
+function animoitavaDialogi(dialogi) {
+  return Boolean(dialogi?.matches?.(DIALOGIVALITSIN)) && !dialogi.hasAttribute('data-oma-sulku');
+}
+
+function dialoginKortti(dialogi) {
+  return dialogi.querySelector(':scope > .dialog-card') ?? dialogi;
+}
+
+function vainHaive(dialogi) {
+  return dialogi.matches('.tiivis-lehtiarkki');
+}
+
+function taustanVari(dialogi) {
+  try { return getComputedStyle(dialogi, '::backdrop').backgroundColor || 'transparent'; } catch { return 'transparent'; }
+}
+
+/** Kesken oleva sulkukuva pois heti (uusi avaus tai toinen sulku). */
+function puraSulkukuva(dialogi) {
+  dialogi.avausSulkukuva?.();
+}
+
+function dialogiAuki(dialogi, lahde) {
+  const kortti = dialoginKortti(dialogi);
+  if (!animoidaanko(kortti)) return;
+  if (vainHaive(dialogi)) {
+    kortti.animate([{ opacity: 0 }, { opacity: 1 }], { duration: AVAUS_HAIVE_MS, easing: AVAUS_HAIVE_KAARI });
+  } else {
+    animoiAvaus(kortti, lahde);
+  }
+  try {
+    dialogi.animate([{ opacity: 0 }, { opacity: 1 }],
+      { duration: AVAUS_MS, easing: AVAUS_HAIVE_KAARI, pseudoElement: '::backdrop' });
+  } catch { /* selain ei animoi ::backdropia: himmennys ilmestyy heti */ }
+}
+
+function dialogiKiinni(dialogi, natiiviSulku) {
+  const kortti = dialoginKortti(dialogi);
+  if (!animoidaanko(kortti)) { natiiviSulku(); return; }
+  const r = dialogi.getBoundingClientRect();
+  const tyyli = getComputedStyle(dialogi);
+  const tausta = taustanVari(dialogi);
+  const vanhaTyyli = dialogi.getAttribute('style');
+  const vanhaInert = dialogi.inert;
+  natiiviSulku();
+  // close-tapahtuman käsittelijä voi avata saman dialogin heti uudelleen tai poistaa sen: silloin kuvaa ei jätetä.
+  if (dialogi.open || !dialogi.isConnected || !r.width || !r.height) return;
+  // Kuva paikalleen: sama laatikko kiinteänä, kaiken päällä, ei kosketuksia.
+  Object.assign(dialogi.style, {
+    display: tyyli.display === 'none' ? 'block' : tyyli.display, position: 'fixed', inset: 'auto',
+    left: `${r.left}px`, top: `${r.top}px`, width: `${r.width}px`, height: `${r.height}px`, margin: '0',
+    maxWidth: 'none', maxHeight: 'none', zIndex: '2147483000', pointerEvents: 'none',
+  });
+  dialogi.inert = true;
+  const verho = document.createElement('div');
+  verho.setAttribute('aria-hidden', 'true');
+  Object.assign(verho.style, {
+    position: 'fixed', inset: '0', background: tausta, zIndex: '2147482999', pointerEvents: 'none',
+  });
+  dialogi.before(verho);
+  const vaihe = { duration: SULKU_MS, easing: SULKU_KAARI, fill: 'forwards' };
+  const liikkeet = [verho.animate([{ opacity: 1 }, { opacity: 0 }], vaihe)];
+  if (vainHaive(dialogi)) liikkeet.push(kortti.animate([{ opacity: 1 }, { opacity: 0 }], vaihe));
+  else {
+    const oma = omaMuunnos(kortti);
+    kortti.style.transformOrigin = origo(kortti, avauskohta(null));
+    liikkeet.push(kortti.animate(
+      [{ transform: oma || 'none', opacity: 1 }, { transform: `${oma} scale(${MITTAKAAVA})`.trim(), opacity: 0 }],
+      vaihe,
+    ));
+  }
+  let ohi = false;
+  const pura = () => {
+    if (ohi) return;
+    ohi = true;
+    for (const l of liikkeet) l.cancel();
+    verho.remove();
+    if (vanhaTyyli === null) dialogi.removeAttribute('style'); else dialogi.setAttribute('style', vanhaTyyli);
+    dialogi.inert = vanhaInert;
+    if (kortti !== dialogi) kortti.style.transformOrigin = '';
+    if (dialogi.avausSulkukuva === pura) dialogi.avausSulkukuva = null;
+  };
+  dialogi.avausSulkukuva = pura;
+  liikkeet[liikkeet.length - 1].addEventListener?.('finish', pura);
+  setTimeout(pura, SULKU_MS + 80);
+}
+
+let dialogitAsennettu = false;
+
+/** Kytkee dialogien avaus- ja sulkuliikkeen (kerran, js/main.js käynnistyksessä). */
+export function asennaDialogianimaatiot() {
+  if (dialogitAsennettu || typeof HTMLDialogElement === 'undefined' || typeof document === 'undefined') return;
+  dialogitAsennettu = true;
+  const proto = HTMLDialogElement.prototype;
+  const natiiviAvaus = proto.showModal;
+  const natiiviSulku = proto.close;
+  proto.showModal = function showModal(...argumentit) {
+    if (!animoitavaDialogi(this)) return natiiviAvaus.apply(this, argumentit);
+    puraSulkukuva(this);
+    const oliAuki = this.open;
+    const tulos = natiiviAvaus.apply(this, argumentit);
+    if (!oliAuki) dialogiAuki(this, null);
+    return tulos;
+  };
+  proto.close = function close(...argumentit) {
+    if (!animoitavaDialogi(this) || !this.open) return natiiviSulku.apply(this, argumentit);
+    puraSulkukuva(this);
+    dialogiKiinni(this, () => natiiviSulku.apply(this, argumentit));
+    return undefined;
+  };
+  // Esc: pelin omat käsittelijät ensin; vasta jos kukaan ei estänyt, sulku kulkee animoiden.
+  document.addEventListener('cancel', (tapahtuma) => {
+    const dialogi = tapahtuma.target;
+    if (!(dialogi instanceof HTMLDialogElement) || !animoitavaDialogi(dialogi)) return;
+    dialogi.addEventListener('cancel', (e) => {
+      if (e.defaultPrevented || !dialogi.open) return;
+      e.preventDefault();
+      dialogi.close();
+    }, { once: true });
+  }, true);
+  document.addEventListener('submit', (tapahtuma) => {
+    const lomake = tapahtuma.target;
+    if (tapahtuma.defaultPrevented || lomake?.method !== 'dialog') return;
+    const dialogi = lomake.closest('dialog');
+    if (!animoitavaDialogi(dialogi) || !dialogi.open) return;
+    tapahtuma.preventDefault();
+    // Natiivisti returnValue saa lähettäjän arvon vain, jos napilla on value (muuten ennallaan).
+    const lahettaja = tapahtuma.submitter;
+    dialogi.close(lahettaja?.hasAttribute?.('value') ? lahettaja.value : undefined);
+  });
+}

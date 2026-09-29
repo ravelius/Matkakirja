@@ -95,7 +95,10 @@ import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
  * kartan ja kohdekerroksen, eikä pöllö saa tuoda niitä perässään.
  */
 import { kytkePulunPaikannus } from './pulu-paikka.js';
-import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
+import { animoiAvaus, asennaDialogianimaatiot, haamuSulku } from './avausanimaatio.js';
+
+// Dialogien avaus ja sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js erä B).
+asennaDialogianimaatiot();
 
 /*
  * Valikosta poistettujen mittausvipujen (Vedon seuranta, Tarkkuus
@@ -176,7 +179,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2403';
+const APP_VERSION = '2026-09-21.2404';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
