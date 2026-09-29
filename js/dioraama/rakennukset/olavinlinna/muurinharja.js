@@ -87,7 +87,8 @@ export const TILA = {
   leikkaus: { laajennus: 0.3, kameraan: false, min: [-21.3, 13, -21.3], max: [-8.3, 16.5, -18.6] },
   naapurit: ['massa', 'kierreportaat', 'kappeli', 'keskushalli'],
   kamera: { kohde: [-12.5, 13.7, -20], atsimuutti: 165, korkeus: 27, etaisyys: 19.5, fov: 38, aukko: 0.8 },
-  kameraPysty: { kohde: [-15, 8.8, -20], atsimuutti: 165, korkeus: 28, etaisyys: 40, fov: 38, aukko: 0.8 },
+  kameraPysty: { kohde: [-16.21, 8.8, -19.68], // pysty 30.9.: vartijan reitin pää ei reunaan
+     atsimuutti: 165, korkeus: 28, etaisyys: 40, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-35, 35], korkeus: [14, 45], etaisyys: [0.7, 1.4] },
   pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea' },
   taulu: TAULU,

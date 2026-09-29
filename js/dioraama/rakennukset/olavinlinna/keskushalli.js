@@ -265,7 +265,8 @@ export const TILA = {
   leikkaus: { laajennus: 1.0, kameraan: true, min: [-22, 0, -18.5], max: [-7.5, 11.5, -9] },
   naapurit: ['massa', 'fatabuuri', 'muurinharja', 'kappeli', 'keittio'],
   kamera: { kohde: [-14.75, 1.6, -13.8], atsimuutti: 170, korkeus: 22, etaisyys: 17, fov: 38, aukko: 0.8 },
-  kameraPysty: { kohde: [-14.75, -4, -13.8], atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
+  kameraPysty: { kohde: [-13.02, -4, -14.04], // pysty 30.9.: noppapeli ja apulainen näkyviin (x 0,63–0,86)
+     atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea' },
   taulu: TAULU,
   // Elävä linna (29.9.): pohjoissiiven pihajulkisivu (ikkunoista valo ja sorina).

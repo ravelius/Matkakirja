@@ -198,9 +198,12 @@ export const TILA = {
   naapurit: ['massa', 'laituri', 'kierreportaat', 'keskushalli'],
   // Vaaka: kohde siirretty oikealle (taulu peittää oikean 40 %), jotta huone jää näkyvälle 60 %:lle.
   kamera: { kohde: [-27.0, 1.3, -20.4], atsimuutti: 172, korkeus: 17, etaisyys: 15.5, fov: 38, aukko: 0.8 },
-  kameraPysty: { kohde: [-29.0, -1.2, -17.2], atsimuutti: 160, korkeus: 19, etaisyys: 28, fov: 38, aukko: 0.8 },
+  // Pysty (Siirtosepän 1.0.60-löydös): kohde 3,3 m vasemmalle, jotta sinettiarkku on keskellä vapaalla alueella
+  // (ruudulla x 0,51, y 0,38) eikä Pulun ja taulukortin takana vasemmassa reunassa.
+  kameraPysty: { kohde: [-32.05, -1.2, -16.09], atsimuutti: 160, korkeus: 19, etaisyys: 28, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-40, 40], korkeus: [10, 40], etaisyys: [0.8, 1.3] },
-  pulu: { laskeutuminen: lok(P_ARKKU, 298 + 180, 0.0, Y + 0.6, 0), taulupuoli: 'oikea' },
+  // Pulu pohjoisen hyllyn päälle (pysty x 0,80 / vaaka x 0,36): ei peitä sinettiarkkua kummassakaan asennossa.
+  pulu: { laskeutuminen: pol(340, 5.05, Y + 2.02), taulupuoli: 'oikea' },
   taulu: TAULU,
   // Elävä linna (29.9.): Kellotornin juuri kameran puolella (ovi raollaan, viileä hämärä).
   elava: { kohde: [-28.2, 1.5, -13.2], sade: 6 },
