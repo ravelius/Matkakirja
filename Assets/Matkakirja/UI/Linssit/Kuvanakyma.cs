@@ -406,7 +406,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public string TestaaSelite(string komento)
         {
-            if (!Auki) return "kuva ei ole auki";
+            // Suljetun kuvan jälkeen tila kertoo, soiko puhe vielä (sulku lopettaa selitteen luennan).
+            if (!Auki) return $"kuva ei ole auki, puhe {(Puhe.Instanssi != null && Puhe.Instanssi.Soi ? "soi" : "hiljaa")}";
             switch (komento)
             {
                 case "kelaa": MittaaKoko(0.8f); Kelaa(); break;
