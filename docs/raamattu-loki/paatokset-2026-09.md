@@ -9067,3 +9067,7 @@ Omistaja kortilla 29.9. klo 05.0x: (1) TF-vienti — luokitin esti Julkaisijan T
 ## TILA: TF 1.0.40 JA 1.0.41 SISÄISESSÄ RYHMÄSSÄ (29.9.2026 klo 05.23)
 
 Julkaisija 29.9.: 1.0.40 (build 202609281959, proto 23983305) sisäisessä ryhmässä klo 05.13; 1.0.41 (build 202609282344, proto 11b5a815, TF-ajo 36511597994) klo 05.23. Testattavaa tyhjä molemmissa. Omistajalle ilmoitettu (push + chat). Laitetestaajan 1.0.41-kierros (Cupola 3, maakuntatila iPadilla, nimiöt) jonossa.
+
+## OMISTAJA: GEMINI 3.8 FLASH TTS -KOE JA HINNAT (29.9.2026 klo 05.25)
+
+Omistaja 29.9. klo 05.3x kysyi "Onko tätä kokeiltu Gemini 3.8 Flash TTS" (vastaus: ei; aiempi Gemini-puhe hylättiin 26.9. striimivertailussa, koska ei striimannut, ensiääni 5–16 s) ja sanatarkasti: "Tee Testi ja anna hinnat". → Pelikoodari (Sonnet-ali-agentti): ≤ 5 lyhyttä Pulun repliikkiä, striimaus, ensiäänen viive (5 ajoa, mediaani), suomen ääntäminen, viralliset hinnat (Gemini 3.8 Flash TTS vs ElevenLabs v4 ja Flash v2.5, per 1 000 merkkiä ja per ~300 merkin Pulun vastaus) + kooste mp3 omistajalle. Poikkeus 28.9. 'älä vertaa' -linjaukseen omistajan omalla pyynnöllä.
