@@ -125,6 +125,26 @@ namespace Matkakirja.Natiivi
         {
             var kamera = nayttamo != null ? nayttamo.Kamera : null;
             if (kamera == null || rakennus?.Tilat == null) return;
+            // Elävä linna: saapumiskaaren aikana napautus ohittaa kaaren (loppuun 1 s:ssa), ei kohdista.
+            var linssi = DioraamaSovitin.Linssi;
+            if (linssi != null && linssi.SaapuminenKaynnissa(t)) { linssi.Napauta(t); return; }
+            // Elävä kohde (tila.elava): lähin kohde ruudulla, kun napautus osuu sen säteen (metreinä, ruudulle
+            // projisoituna, vähintään 28 pt) sisään. Nimilappuja ei ole, joten kohde on se, mitä tilassa tapahtuu.
+            string elava = null;
+            float elavaLahin = float.PositiveInfinity;
+            foreach (var tila in rakennus.Tilat)
+            {
+                if (!tila.Kohdistettava || tila.Elava == null) continue;
+                var k = DioraamaNayttamo.UnityPiste(tila.Elava.Kohde);
+                var r = kamera.WorldToScreenPoint(k);
+                if (r.z <= 0f) continue;
+                var reuna = kamera.WorldToScreenPoint(k + kamera.transform.right * (float)tila.Elava.Sade);
+                float sadePx = Mathf.Max(28f * (Screen.dpi > 0 ? Screen.dpi / 163f : 2f), Vector2.Distance(r, reuna));
+                float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
+                if (d <= sadePx && d < elavaLahin) { elavaLahin = d; elava = tila.Id; }
+            }
+            if (elava != null) { sovitin.Kohdista(elava, t); return; }
+
             var sade = kamera.ScreenPointToRay(new Vector3(ruutu.x, ruutu.y, 0));
             string osuma = null;
             float lahin = float.PositiveInfinity;

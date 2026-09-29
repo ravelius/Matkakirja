@@ -85,7 +85,11 @@ namespace Matkakirja
         public int valimuistiMt = 600;
 
         TcpListener[] kuuntelijat;
+        /// <summary>Kuuntelijoiden luokat (portti-indeksi laskureille), samassa järjestyksessä kuin <see cref="kuuntelijat"/>.</summary>
+        int[] kuuntelijaLuokat;
         CancellationTokenSource lopetus;
+        /// <summary>Kuuntelija kaatui (esim. iOS otti soketin takaisin taustalla): avataan uudelleen Updatessa.</summary>
+        volatile bool kuuntelijaKaatui;
 
         // ---- Löydös 176: varmistuslaskurit (Palvele) ----
         /// <summary>Avoimet asiakasyhteydet (Cesium ja UnityWebRequest → palvelin) yhteensä ja porteittain.</summary>
@@ -474,7 +478,14 @@ namespace Matkakirja
         /// tiles-pohja) ja laattapaketissa (<see cref="Laattapaketti.Avain"/>).
         /// </summary>
         public static string Tiedosto(string juuri, string polku) =>
-            Path.Combine(juuri, Laattapaketti.Avain(polku).Replace('/', Path.DirectorySeparatorChar));
+            Path.Combine(juuri, Avain(polku).Replace('/', Path.DirectorySeparatorChar));
+
+        /// <summary>
+        /// Laatan avain paketissa ja levyllä: <see cref="Laattapaketti.Avain"/> DELTASARJAN SISÄLTÖPOLUSTA
+        /// (<see cref="DeltaRekisteri.Ohjaa"/>): muuttumaton laatta on perussarjan avaimella, sama kuin webissä.
+        /// Ilman deltaa sama kuin Laattapaketti.Avain.
+        /// </summary>
+        public static string Avain(string polku) => Laattapaketti.Avain(DeltaRekisteri.Ohjaa(polku));
 
         /// <summary>
         /// Paketin polku: StreamingAssets (iOS: Data/Raw/, Rakennus kopioi paketin Xcode-projektiin); editorissa
@@ -511,7 +522,36 @@ namespace Matkakirja
                 Kansio(KarttaKerrokset.SatelliittiJuuri + KarttaKerrokset.SatelliittiVersio + "/" + KarttaKerrokset.SatelliittiMeri + "/");
             s.Add(Vektorikerros.Juuri);
             foreach (var k in NapaKannet.OfflinePolut()) s.Add(k.Substring(0, k.LastIndexOf('/') + 1));
+            // DELTASARJA: perussarjan kansio (paketin muuttumattomat laatat) on käytössä, kun pohjan delta on tiedossa.
+            foreach (var k in DeltaRekisteri.PerusKansiot()) s.Add(k);
             return s;
+        }
+
+        /// <summary>
+        /// DELTASARJA: pohjan laatat.json paketista (tyokalut/laattapaketti.mjs kirjoittaa sen pohjasarjaan), jolloin delta on
+        /// tiedossa jo ensimmäistä laattaa haettaessa eikä verkkoa tarvita. Puuttuva tai deltaton luettelo ei aseta mitään
+        /// (silloin <see cref="DeltaValmis"/> lukee sen välimuistista tai verkosta).
+        /// </summary>
+        static void LueDeltaPaketista(Laattapaketti p)
+        {
+            var kansiot = new List<string>();
+            string malli = KarttaKerrokset.SileaUrl;
+            if (malli.StartsWith(Ampari, StringComparison.Ordinal)) malli = malli.Substring(Ampari.Length);
+            int z = malli.IndexOf("{z}", StringComparison.Ordinal);
+            if (z > 0) kansiot.Add(malli.Substring(0, z));
+            if (PohjaPolku != null && !kansiot.Contains(PohjaPolku)) kansiot.Add(PohjaPolku);
+            foreach (var kansio in kansiot)
+            {
+                var b = p.Hae(Laattapaketti.Avain(kansio + "laatat.json"));
+                if (b == null) continue;
+                try
+                {
+                    var d = Deltasarja.Lue(Encoding.UTF8.GetString(b));
+                    DeltaRekisteri.Aseta(kansio, d);
+                    Debug.Log("MATKAKIRJA laattapalvelin: " + kansio + (d != null ? " delta paketista, perus " + d.Perus : " täysi sarja (paketti)"));
+                }
+                catch (Exception) { /* rikkinäinen luettelo: haetaan verkosta */ }
+            }
         }
 
         static void AvaaPaketti()
@@ -534,6 +574,7 @@ namespace Matkakirja
                 Debug.Log($"MATKAKIRJA laattapalvelin: ei pakettia ({virhe}): {polku}");
                 return;
             }
+            LueDeltaPaketista(p);
             var pois = p.Rajaa(KaytossaOlevatSarjat());
             var sb = new StringBuilder();
             long tavut = 0;
@@ -605,13 +646,14 @@ namespace Matkakirja
                     lista.Add((k, i));
                 }
                 kuuntelijat = new TcpListener[lista.Count];
-                for (int i = 0; i < lista.Count; i++) kuuntelijat[i] = lista[i].k;
+                kuuntelijaLuokat = new int[lista.Count];
+                for (int i = 0; i < lista.Count; i++) { kuuntelijat[i] = lista[i].k; kuuntelijaLuokat[i] = lista[i].luokka; }
                 Juuret = juuret;
                 Portteja = lista.Count;
                 lopetus = new CancellationTokenSource();
                 var peru = lopetus.Token;
                 // Laskureiden portti-indeksi = luokka; luokka, jonka lisäportti ei auennut, näkyy ensimmäisen portin (pohja) alla.
-                foreach (var (k, luokka) in lista) _ = Task.Run(() => Kuuntele(k, luokka, peru));
+                for (int i = 0; i < lista.Count; i++) { int n = i; _ = Task.Run(() => Kuuntele(n, kuuntelijat[n], peru)); }
                 var kuvaus = new StringBuilder();
                 for (int i = 0; i < juuret.Length; i++) kuvaus.Append(i == 0 ? "" : ", ").Append(LaattaPortit.Nimet[i]).Append(' ').Append(juuret[i]);
                 Debug.Log($"MATKAKIRJA laattapalvelin: {Juuri} (löydös 176: {Portteja} porttia{(YksiPortti ? ", yksi-portti-lippu" : "")}: {kuvaus})");
@@ -724,15 +766,77 @@ namespace Matkakirja
             Portteja = 0;
         }
 
-        async Task Kuuntele(TcpListener kuuntelija, int portti, CancellationToken peru)
+        async Task Kuuntele(int indeksi, TcpListener kuuntelija, CancellationToken peru)
         {
+            int portti = kuuntelijaLuokat[indeksi];
             while (!peru.IsCancellationRequested)
             {
                 TcpClient asiakas;
                 try { asiakas = await kuuntelija.AcceptTcpClientAsync(); }
-                catch { if (peru.IsCancellationRequested) return; continue; }
+                catch (Exception e)
+                {
+                    // TAUSTALTA PALUU (omistajan löydös 29.9.2026 klo 22.4x, iPad: "pallo katoaa, kun käyn toisessa ohjelmassa
+                    // tai laite kiinni"): iOS ottaa keskeytetyn sovelluksen kuuntelevat soketit takaisin (Apple TN2277), jolloin
+                    // AcceptTcpClientAsync heittää heti uudestaan. Ennen silmukka jatkoi (continue) pyörien eikä Cesium saanut
+                    // yhtään laattaa. Nyt: kuuntelija merkitään kaatuneeksi ja avataan Updatessa uudelleen SAMAAN porttiin.
+                    if (peru.IsCancellationRequested || kuuntelijat == null || kuuntelijat[indeksi] != kuuntelija) return;
+                    Debug.LogWarning($"MATKAKIRJA laattapalvelin: kuuntelija {indeksi} kaatui ({e.GetType().Name}: {e.Message}), avataan uudelleen");
+                    kuuntelijaKaatui = true;
+                    return;
+                }
                 _ = Task.Run(() => Palvele(asiakas, portti));
             }
+        }
+
+        /// <summary>
+        /// Avaa kuuntelijat uudelleen samoihin portteihin (Cesiumin osoitteet ovat kiinteät: <see cref="Juuret"/>). Kutsutaan
+        /// palattaessa etualalle (TN2277: taustalla reclaimed-soketti on suljettava ja avattava uudelleen) ja kun kuuntelija
+        /// kaatui. Vanha suljetaan ensin; uusi ReuseAddress-lipulla, jotta sama portti aukeaa heti. Epäonnistunut yritetään
+        /// uudelleen seuraavassa Updatessa (enintään kerran sekunnissa).
+        /// </summary>
+        public void AvaaKuuntelijatUudelleen(string syy)
+        {
+            if (kuuntelijat == null || lopetus == null || lopetus.IsCancellationRequested) return;
+            kuuntelijaKaatui = false;
+            var peru = lopetus.Token;
+            int avattu = 0, virheita = 0;
+            for (int i = 0; i < kuuntelijat.Length; i++)
+            {
+                var vanha = kuuntelijat[i];
+                int p = vanha != null ? ((IPEndPoint)vanha.LocalEndpoint).Port : 0;
+                if (p == 0) continue;
+                kuuntelijat[i] = null;   // vanha silmukka päättyy (ei ole enää nykyinen)
+                try { vanha.Stop(); } catch { }
+                TcpListener uusi = null;
+                try
+                {
+                    uusi = new TcpListener(IPAddress.Loopback, p);
+                    uusi.Server.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                    uusi.Start(64);
+                    kuuntelijat[i] = uusi;
+                    int n = i;
+                    _ = Task.Run(() => Kuuntele(n, uusi, peru));
+                    avattu++;
+                }
+                catch (Exception e)
+                {
+                    try { uusi?.Stop(); } catch { }
+                    kuuntelijat[i] = vanha;   // säilytetään portti seuraavaa yritystä varten
+                    virheita++;
+                    Debug.LogWarning($"MATKAKIRJA laattapalvelin: portti {p} ei auennut uudelleen ({syy}): {e.Message}");
+                }
+            }
+            if (virheita > 0) { kuuntelijaKaatui = true; seuraavaAvaus = Time.realtimeSinceStartup + 1f; }
+            Debug.Log($"MATKAKIRJA laattapalvelin: kuuntelijat avattu uudelleen ({syy}): {avattu}/{kuuntelijat.Length}");
+        }
+        float seuraavaAvaus;
+
+        /// <summary>Kehittäjän vikakoe (komento `palvelin tapa`): sulkee kuuntelijat kuin iOS taustalla (TN2277); korjaus avaa ne.</summary>
+        public void TapaKuuntelijat()
+        {
+            if (kuuntelijat == null) return;
+            foreach (var k in kuuntelijat) { try { k?.Stop(); } catch { } }
+            Debug.Log("MATKAKIRJA laattapalvelin: vikakoe, kuuntelijat suljettu");
         }
 
         async Task Palvele(TcpClient asiakas, int portti)
@@ -1017,6 +1121,8 @@ namespace Matkakirja
                 KirjaaVirhe(Reikakorjaus.Luokka(polku, PohjaPolku), polku, 404, 0, alku, "cesiumille");
                 return (404, null);
             }
+            // DELTASARJA: pohjan laatat.json (delta) tunnetuksi ennen kuin laatan sisältöpolku (Avain, Tiedosto, Haku) päätellään.
+            await DeltaValmis(polku);
             polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
             if (tyhja && tyhjakuva != null) { lahde.Nimi = "tyhja"; return (200, tyhjakuva); }
             if (KattavuusOhjaus(polku, out bool kattavuusTyhja))
@@ -1035,7 +1141,7 @@ namespace Matkakirja
             var paketti = Paketti;
             if (paketti != null)
             {
-                string avain = Laattapaketti.Avain(polku);
+                string avain = Avain(polku);
                 if (esi) { if (paketti.Onko(avain)) return (200, null); }
                 else
                 {
@@ -1255,12 +1361,16 @@ namespace Matkakirja
 
         void OnApplicationPause(bool tauolla)
         {
-            // Palaus etualalle: iOS katkaisee taustalla kesken olevat haut, joista tuli varalaattoja → uusinta heti.
-            if (!tauolla && !varalla.IsEmpty) seuraavaUusinta = 0f;
+            if (tauolla) return;
+            // Palaus etualalle: kuuntelevat soketit uudelleen (TN2277, ks. Kuuntele) ennen kuin Cesium pyytää laattoja.
+            AvaaKuuntelijatUudelleen("etualalle");
+            // iOS katkaisee taustalla kesken olevat haut, joista tuli varalaattoja → uusinta heti.
+            if (!varalla.IsEmpty) seuraavaUusinta = 0f;
         }
 
         void Update()
         {
+            if (kuuntelijaKaatui && Time.realtimeSinceStartup >= seuraavaAvaus) AvaaKuuntelijatUudelleen("kaatui");
             SatelliittiLoki.Yhteenveto();
             Suurenna(6);
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
@@ -1454,7 +1564,7 @@ namespace Matkakirja
             for (int yritys = 0; yritys < kerralla; yritys++)
             {
                 if (yritys > 0) yield return new WaitForSecondsRealtime(0.6f * yritys * yritys);
-                using var r = UnityWebRequest.Get(Ampari + h.Polku);
+                using var r = UnityWebRequest.Get(Ampari + DeltaRekisteri.Ohjaa(h.Polku));   // deltasarja: muuttumaton laatta perussarjasta
                 r.timeout = 15;
                 float hakuAlku = Time.realtimeSinceStartup;
                 yield return r.SendWebRequest();
@@ -1547,12 +1657,83 @@ namespace Matkakirja
             catch (Exception) { return data; }
         }
 
+        // ---- DELTASARJA (Karttaseppä 29.9.2026; Deltasarja.cs, DeltaRekisteri.cs) ----
+
+        /// <summary>
+        /// Pallon pohjan laattakansiot (ämpärin polku, "/"-loppuinen), joiden laatat.json (delta) luetaan: sileä pohja
+        /// (KarttaKerrokset.SileaUrl) ja kohtauksen pohjakerros (<see cref="PohjaPolku"/>). Muut sarjat (linssit, satelliitti,
+        /// kerma) eivät käytä deltaa, eikä niiden kansiosta haeta laatat.json:ia.
+        /// </summary>
+        static bool OnDeltaKansio(string kansio)
+        {
+            if (kansio == null) return false;
+            if (PohjaPolku != null && kansio == PohjaPolku) return true;
+            string malli = KarttaKerrokset.SileaUrl;
+            if (malli.StartsWith(Ampari, StringComparison.Ordinal)) malli = malli.Substring(Ampari.Length);
+            int z = malli.IndexOf("{z}", StringComparison.Ordinal);
+            return z > 0 && kansio == malli.Substring(0, z);
+        }
+
+        static readonly ConcurrentDictionary<string, Task> deltaHaut = new ConcurrentDictionary<string, Task>();
+        static readonly ConcurrentDictionary<string, long> deltaEpaonnistui = new ConcurrentDictionary<string, long>();
+        /// <summary>Epäonnistuneen laatat.json-haun jälkeen seuraava yritys aikaisintaan näin monen sekunnin päästä.</summary>
+        public const int DeltaUusintaS = 30;
+
+        /// <summary>
+        /// Valmis, kun polun kansion delta (laatat.json) on selvitetty: laatta ei odota, jos kansio ei ole pohja, delta on jo
+        /// tiedossa tai edellinen haku epäonnistui vasta (silloin uusi kansio kuten ennen deltaa). Kansion laatat.json haetaan
+        /// yhdellä pyynnöllä (paketti → offline → välimuisti → verkko), jonka kaikki kansion laatat jakavat.
+        /// </summary>
+        public static Task DeltaValmis(string polku)
+        {
+            if (!DeltaRekisteri.Jasenna(polku, out string kansio, out _, out _, out _, out _)) return Task.CompletedTask;
+            if (DeltaRekisteri.Tunnettu(kansio) || !OnDeltaKansio(kansio)) return Task.CompletedTask;
+            var p = Instanssi;
+            if (p == null) return Task.CompletedTask;
+            long nyt = System.Diagnostics.Stopwatch.GetTimestamp();
+            if (deltaEpaonnistui.TryGetValue(kansio, out long milloin)
+                && (nyt - milloin) / (double)System.Diagnostics.Stopwatch.Frequency < DeltaUusintaS) return Task.CompletedTask;
+            var haku = deltaHaut.GetOrAdd(kansio, k => p.LataaDelta(k));
+            // Valmis haku (onnistui tai epäonnistui) ei jää taulukkoon: seuraava kutsu päättelee rekisteristä ja epäonnistumisajasta.
+            if (haku.IsCompleted) deltaHaut.TryRemove(kansio, out _);
+            return haku;
+        }
+
+        /// <summary>
+        /// Lukee kansion laatat.json:n ja asettaa deltan rekisteriin (delta-kentätön luettelo = täysi sarja = ei deltaa).
+        /// Puuttuva luettelo (404) = ei deltaa. Verkkovirhe tai muu kuin JSON (Haku antaa pohjan virheestä varakuvan) ei aseta
+        /// mitään: laatat haetaan uudesta kansiosta kuten ennen, ja uusi yritys aikaisintaan DeltaUusintaS:n päästä.
+        /// </summary>
+        async Task LataaDelta(string kansio)
+        {
+            try
+            {
+                var (tila, data) = await HaeSisalto(kansio + "laatat.json", null, new Lahde(), null);
+                string teksti = tila == 200 && data != null ? Encoding.UTF8.GetString(data) : null;
+                if (teksti != null && teksti.TrimStart().StartsWith("{", StringComparison.Ordinal))
+                {
+                    var d = Deltasarja.Lue(teksti);
+                    DeltaRekisteri.Aseta(kansio, d);
+                    Debug.Log("MATKAKIRJA laattapalvelin: " + kansio + (d != null ? " delta, perus " + d.Perus : " täysi sarja"));
+                }
+                else if (tila == 404 || tila == 403) DeltaRekisteri.Aseta(kansio, null);
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA laattapalvelin: laatat.json (delta) epäonnistui: " + e.Message); }
+            finally
+            {
+                if (!DeltaRekisteri.Tunnettu(kansio)) deltaEpaonnistui[kansio] = System.Diagnostics.Stopwatch.GetTimestamp();
+            }
+        }
+
         public static IEnumerator LataaOffline(string polku, Action<long> valmis, string lahde = null)
         {
+            // DELTASARJA: odota pohjan delta, jotta muuttumaton laatta ladataan (ja tallennetaan) perussarjan polulla.
+            var deltaOdotus = DeltaValmis(polku);
+            while (!deltaOdotus.IsCompleted) yield return null;
             string f = Tiedosto(OfflineKansio, polku);
             if (File.Exists(f)) { valmis(new FileInfo(f).Length); yield break; }
             // Buildin paketissa: offline-kansioon ei tarvitse kopiota (paketti on aina mukana).
-            if (Paketti != null && Paketti.Onko(Laattapaketti.Avain(polku))) { valmis(0); yield break; }
+            if (Paketti != null && Paketti.Onko(Avain(polku))) { valmis(0); yield break; }
             string v = Tiedosto(ValimuistiKansio, polku);
             // Pienennetty lähde (mediaKuvat.pieni): ei kopioida välimuistin isoa alkuperäistä (maan media ≤ 100 Mt).
             if (lahde == null && File.Exists(v))
@@ -1563,7 +1744,7 @@ namespace Matkakirja
                 valmis(new FileInfo(f).Length);
                 yield break;
             }
-            using var r = UnityWebRequest.Get(Ampari + (lahde ?? polku));
+            using var r = UnityWebRequest.Get(Ampari + (lahde ?? DeltaRekisteri.Ohjaa(polku)));
             r.timeout = 30;
             yield return r.SendWebRequest();
             if (r.result != UnityWebRequest.Result.Success)

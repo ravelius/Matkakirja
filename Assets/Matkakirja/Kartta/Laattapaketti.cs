@@ -277,6 +277,24 @@ namespace Matkakirja
             }
         }
 
+        /// <summary>
+        /// DELTASARJAN pallosarjan laatat (Web Mercator, tasot zMin–zMax) kahteen listaan: muuttuneet (bitti 1, tai ei deltaa)
+        /// uuden sarjan kansiosta (<paramref name="uusiKansio"/>, "/"-loppuinen) ja muuttumattomat (bitti 0) perussarjan
+        /// kansiosta (<see cref="Deltasarja.PerusKansio"/>). Paketti kirjoittaa perussarjan laatat omana sarjanaan perus-
+        /// etuliitteellä, jolloin ajossa Laattapalvelin.Avain (DeltaRekisteri.Ohjaa) löytää ne. Polku = kansio + z/x/y + päätettä.
+        /// Ilman deltaa (null) kaikki ovat uuden sarjan listassa.
+        /// </summary>
+        public static void DeltaPolut(Deltasarja delta, string uusiKansio, string paate, int zMin, int zMax,
+                                      List<string> uudet, List<string> perus)
+        {
+            foreach (var (z, x, y) in Mercator(zMin, zMax))
+            {
+                string tunnus = z + "/" + x + "/" + y + paate;
+                if (delta == null || delta.Muuttunut(z, x, y, 1 << z)) uudet.Add(uusiKansio + tunnus);
+                else perus.Add(delta.PerusKansio + tunnus);
+            }
+        }
+
         /// <summary>URL-mallin ({z} {x} {y} tai {reverseY} = slippy-rivi, kuten Cesiumin pohjassa) täyttö.</summary>
         public static string Tayta(string malli, int z, int x, int y) =>
             malli.Replace("{z}", z.ToString()).Replace("{x}", x.ToString())

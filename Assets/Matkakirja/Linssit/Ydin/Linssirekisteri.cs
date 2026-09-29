@@ -105,10 +105,14 @@ namespace Matkakirja.Linssit
         /// "pitää kaikki muu blokata varmuuden vuoksi kun linssi alkaa"): näiden linssien ajan Liiku ja
         /// Matkusta ovat harmaana, kaupungin napautus ei liikuta eikä avaa lehteä. Webissä luokan
         /// body.aikajana-paalla asettavat aikajana (ihmisen matka, keksinnöt), topografia ja satelliitti;
-        /// radio, vertailu, maatiedot, vesistöt ja isoisä eivät.
+        /// radio, vertailu, maatiedot, vesistöt ja isoisä eivät. Natiivissa myös tähtitaivas ja yökartta.
         /// </summary>
         public static readonly IReadOnlyCollection<string> PorttiLinssit =
-            new HashSet<string>(StringComparer.Ordinal) { "ihmisen-matka", "ihmisen-matka-2", "keksinnot", "topografia", "satelliitti" };
+            new HashSet<string>(StringComparer.Ordinal) { "ihmisen-matka", "ihmisen-matka-2", "keksinnot", "topografia", "satelliitti",
+                // Natiivin omat koko ruudun linssit (Linssiseppä 29.9.2026): Tähtitaivas omalla näyttämöllä ja Yökartta
+                // reliefipohjalla; nostomerkit ja muut pelielementit piiloon kuten Astronautin kamerassa (Laitetestaaja 1.0.56:
+                // Meteoran ja Olymposin nimiöt taivaan päällä).
+                "tahdet", "yokartta" };
 
         /// <summary>Estääkö auki oleva linssi pelin kartan (Liiku, siirrot, lehdet).</summary>
         public bool EstaaKartan => Auki != null && PorttiLinssit.Contains(Auki.Tiedot.Id);

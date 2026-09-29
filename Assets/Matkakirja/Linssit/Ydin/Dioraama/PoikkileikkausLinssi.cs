@@ -127,6 +127,31 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Pulun lähtöpiste avauksessa: taivaalta linnan laskeutumispisteen länsi-lounaan yläpuolelta.</summary>
         public static readonly V3 TaivasSiirtyma = new V3(-30, 25, 20);
 
+        // --- ELÄVÄ LINNA: saapumiskaari (käsikirjoitus 29.9. kohta 1; Siirtoseppä) -------------------------------------
+        double saapumisKesto, ohitusT = -1, ohitusU;
+        /// <summary>Napautus kaaren aikana kiihdyttää loppuun tässä ajassa (s).</summary>
+        public const double SaapumisOhitusS = 1.0;
+
+        /// <summary>Kaaren alkuasento: yleisnäkymän kohde (tai saapuminen.alku.kohde), alku-atsimuutti/etäisyys/korkeus.</summary>
+        Asento SaapumisAsento(bool pysty)
+        {
+            var yleis = AsentoFor(null, pysty);
+            var s = Rakennus.Saapuminen;
+            return new Asento(s.Kohde ?? yleis.Kohde, s.Atsimuutti, s.Korkeus, s.Etaisyys, s.Fov ?? yleis.Fov, yleis.Aukko, yleis.Kierto);
+        }
+
+        /// <summary>Kaaren eteneminen 0…1 hetkellä t (ohituksen jälkeen jatkuu tasaisesti loppuun SaapumisOhitusS:ssa).</summary>
+        public double SaapuminenOsuus(double t)
+        {
+            if (!Auki || Rakennus?.Saapuminen == null || saapumisKesto <= 0 || tapahtumat.Count == 0) return 1;
+            double alku = tapahtumat[0].Hetki;
+            if (ohitusT >= 0) return Math.Min(1, ohitusU + (1 - ohitusU) * Math.Max(0, (t - ohitusT) / SaapumisOhitusS));
+            return Math.Max(0, Math.Min(1, (t - alku) / saapumisKesto));
+        }
+
+        /// <summary>Onko saapumiskaari kesken (napautus ohittaa eikä kohdista).</summary>
+        public bool SaapuminenKaynnissa(double t) => SaapuminenOsuus(t) < 1 && tapahtumat.Count == 1;
+
         Asento AsentoFor(string kohde, bool pysty)
         {
             if (kohde == null) return pysty ? Rakennus.YleisPysty : Rakennus.YleisVaaka;
@@ -135,7 +160,10 @@ namespace Matkakirja.Linssit.Dioraama
         }
 
         /// <summary>Avaa dioraaman hetkellä t: kamera yleisnäkymässä, ei tapahtumia eikä napautuksia vielä.</summary>
-        public void Avaa(Rakennus rakennus, double t)
+        public void Avaa(Rakennus rakennus, double t) => Avaa(rakennus, t, false);
+
+        /// <summary>Kuten yllä; lyhyt = toinen käynti (saapumiskaari Saapuminen.Lyhyt sekuntia, elävä linna).</summary>
+        public void Avaa(Rakennus rakennus, double t, bool lyhyt)
         {
             Rakennus = rakennus ?? throw new ArgumentNullException(nameof(rakennus));
             Auki = true;
@@ -147,7 +175,11 @@ namespace Matkakirja.Linssit.Dioraama
             int kohtia = rakennus.Taulu?.Kohdat?.Count ?? 0;
             for (int k = 0; k < Math.Min(3, kohtia); k++) linnaTila.Kasikirjoitus.Add(new Askel { Tee = "kohta", N = k });
             tapahtumat.Clear();
-            tapahtumat.Add(new Kameratapahtuma(t, null, 0));
+            // ELÄVÄ LINNA, saapuminen (Siirtoseppä 29.9.): avaustapahtuman kesto = kaaren kesto; käsikirjoitus alkaa
+            // vasta kaaren jälkeen (sama Hetki + Kesto -sääntö kuin tiloissa).
+            saapumisKesto = rakennus.Saapuminen != null ? Math.Max(0, lyhyt ? rakennus.Saapuminen.Lyhyt : rakennus.Saapuminen.Kesto) : 0;
+            ohitusT = -1; ohitusU = 0;
+            tapahtumat.Add(new Kameratapahtuma(t, null, saapumisKesto));
             napautukset.Clear();
         }
 
@@ -163,7 +195,9 @@ namespace Matkakirja.Linssit.Dioraama
             string edellinen = tapahtumat.Count > 0 ? tapahtumat[tapahtumat.Count - 1].Kohde : null;
             var p0 = AsentoFor(edellinen, false);
             var p1 = AsentoFor(tilaId, false);
-            tapahtumat.Add(new Kameratapahtuma(t, tilaId, Kameraliike.SiirtymanKesto(p0, p1)));
+            // Elävä linna: lento leikkausikkunan kautta 0,8–1,2 s (käsikirjoitus kohta 2); vanha kokemus ennallaan.
+            double kesto = Rakennus?.Saapuminen != null ? Kameraliike.LeikkausLennonKesto(p0, p1) : Kameraliike.SiirtymanKesto(p0, p1);
+            tapahtumat.Add(new Kameratapahtuma(t, tilaId, kesto));
         }
 
         /// <summary>Napautus hetkellä t: päättää meneillään olevan käsikirjoitusaskeleen (Ohjaaja.KasikirjoitusHetkella).
@@ -172,6 +206,15 @@ namespace Matkakirja.Linssit.Dioraama
         /// Yleisnäkymässä (linnan avaustaulu lopussa) napautus vie kiertueen ensimmäiseen tilaan. Muuten kuten ennen.</summary>
         public void Napauta(double t)
         {
+            // Saapumiskaaren aikana napautus kiihdyttää kaaren loppuun (käsikirjoitus: "ohitettavissa napautuksella").
+            if (SaapuminenKaynnissa(t) && ohitusT < 0)
+            {
+                ohitusU = SaapuminenOsuus(t);
+                ohitusT = t;
+                var e0 = tapahtumat[0];
+                tapahtumat[0] = new Kameratapahtuma(e0.Hetki, null, t + SaapumisOhitusS - e0.Hetki);
+                return;
+            }
             var nyt = Auki && Rakennus != null && tapahtumat.Count > 0 ? NakymaHetkella(t, false) : default(Nakyma);
             if (nyt.KasikirjoitusLopussa)
             {
@@ -250,7 +293,9 @@ namespace Matkakirja.Linssit.Dioraama
             var p1 = AsentoFor(kohdeTila, pysty);
 
             Asento kamera;
-            if (i == 0 || tapahtuma.Kesto <= 0 || t >= tapahtuma.Hetki + tapahtuma.Kesto)
+            if (i == 0 && Rakennus.Saapuminen != null && tapahtuma.Kesto > 0 && t < tapahtuma.Hetki + tapahtuma.Kesto)
+                kamera = Kameraliike.SiirtymaAsento(SaapumisAsento(pysty), p1, SaapuminenOsuus(t));
+            else if (i == 0 || tapahtuma.Kesto <= 0 || t >= tapahtuma.Hetki + tapahtuma.Kesto)
             {
                 // Levossa (ei kesken siirtymää): leijunta saa ajelehtia VAIN tässä haarassa, ei kaarilennon aikana,
                 // ja vain kun pelaaja ei vedä/nipistä (VetoKaynnissa) — ks. tiedoston alkukommentti.

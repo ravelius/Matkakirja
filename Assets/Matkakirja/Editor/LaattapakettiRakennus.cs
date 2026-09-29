@@ -110,7 +110,8 @@ namespace Matkakirja.Editori
                 // Tasojen muutos (esim. BmngMax 4 → 5) ei näy etuliitteissä: syvimmän bmng-tason laatta on oltava mukana.
                 bool tasot = odotetut.Count > 2 && p.Onko(Laattapaketti.Avain(odotetut[2] + BmngMax + "/0/0.jpg"));
                 p.Dispose();
-                if (olevat.SequenceEqual(odotetut) && tasot)
+                // Deltasarjan perussarja (pohja-perus) on lisäsarja odotettujen perässä: etuliitteet vertaillaan vain odotettuihin asti.
+                if (olevat.Take(odotetut.Count).SequenceEqual(odotetut) && tasot)
                 {
                     Debug.Log($"MATKAKIRJA laattapaketti: ajan tasalla {polku}");
                     return;
@@ -150,12 +151,27 @@ namespace Matkakirja.Editori
             var et = Etuliitteet();
             var sarjat = new List<Sarja>();
 
-            // pohja
+            // pohja (deltasarjan perussarja lisätään listan perään: Varmista vertaa etuliitteitä odotettuihin asti)
+            Sarja perusSarja = null;
             {
-                string malli = Pois(Rakennus.LaattaUrl);
                 var s = new Sarja { Nimi = et[0].nimi, Etuliite = et[0].etuliite };
-                foreach (var (z, x, y) in Laattapaketti.Mercator(0, PohjaMax)) s.Polut.Add(Laattapaketti.Tayta(malli, z, x, y));
+                // DELTASARJA: pohjan laatat.json kantaa delta-kentän, kun uusi sarja vie vain muuttuneet laatat. Muuttuneet
+                // haetaan uudesta kansiosta ja muuttumattomat (bitti 0) perussarjan kansiosta omana sarjanaan, jotta paketti
+                // vastaa Laattapalvelin.Avain-ohjausta. Luettelo itse mukaan (ajossa delta on tiedossa ilman verkkoa).
+                var luettelo = await Hae(http, s.Etuliite + "laatat.json");
+                var delta = luettelo != null ? Deltasarja.Lue(System.Text.Encoding.UTF8.GetString(luettelo)) : null;
+                var uudet = new List<string>();
+                var perus = new List<string>();
+                Laattapaketti.DeltaPolut(delta, s.Etuliite, ".jpg", 0, PohjaMax, uudet, perus);
+                s.Polut.AddRange(uudet);
+                if (luettelo != null) s.Polut.Add(s.Etuliite + "laatat.json");
                 sarjat.Add(s);
+                if (delta != null)
+                {
+                    Debug.Log($"MATKAKIRJA laattapaketti: pohjan delta, perus {delta.Perus}: {uudet.Count} uutta, {perus.Count} perussarjasta");
+                    perusSarja = new Sarja { Nimi = "pohja-perus", Etuliite = delta.PerusKansio };
+                    perusSarja.Polut.AddRange(perus);
+                }
             }
             // maasto: layer.jsonin tiles-malli ja available-alueet
             {
@@ -208,6 +224,7 @@ namespace Matkakirja.Editori
                 s.Polut.Add(Maaraja.MaamaaPolku);
                 sarjat.Add(s);
             }
+            if (perusSarja != null) sarjat.Add(perusSarja);
 
             var rivit = new List<Laattapaketti.Rivi>();
             long kaikki = 0;

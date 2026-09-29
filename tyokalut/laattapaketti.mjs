@@ -5,7 +5,8 @@
 // Sama sisältö kuin editorin työkalulla (Assets/Matkakirja/Editor/LaattapakettiRakennus.cs, -executeMethod
 // Matkakirja.Editori.LaattapakettiRakennus.Luo). Sarjojen versiot luetaan pelin lähdekoodista, jotta paketti vastaa
 // käännettävää peliä:
-//   pohja        Rakennus.LaattaUrl                        Z0–Z5   (Web Mercator, jpg)
+//   pohja        Rakennus.LaattaUrl                        Z0–Z5   (Web Mercator, jpg) + laatat.json
+//   pohja-perus  DELTASARJA: pohjan laatat.json:n delta.perus  bitti 0 -laatat perussarjan kansiosta (vain jos delta)
 //   maasto       Rakennus.MaastoUrl (layer.json)           Z0–Z5   (quantized-mesh, layer.jsonin available-alueet)
 //   bmng         KarttaKerrokset.SatelliittiVersio/Meri    Z0–Z5   (lennon Blue Marble: valintanäkymä ja musta verho)
 //   vektorit     Vektorikerros.OletusVersio                luettelo + l0–l2 (rannikko, rajat)
@@ -97,15 +98,62 @@ async function haeKaikki(polut) {
   return tulos;
 }
 
+// ---- Deltasarja (Assets/Matkakirja/Kartta/Deltasarja.cs, web js/deltasarja.js) ----
+// laatat.json:n "delta": { perus, muuttuneet: { taso: base64 | null } }. Bitti i = rivi * sarakkeita + sarake (pallossa
+// sarakkeita = 2^taso), tavu i >> 3, bitti i & 7. Bitti 1 = uuden sarjan kansio; bitti 0 tai indeksi kartan yli = perussarjan
+// kansio (julisteet/pallo/laatat/<perus>/). Taso null tai puuttuu = koko taso uudessa. Ilman deltaa kaikki uudessa.
+function lueDelta(teksti) {
+  let j;
+  try { j = JSON.parse(teksti); } catch { return null; }
+  const d = j?.delta ?? (j && typeof j === 'object' && 'muuttuneet' in j ? j : null);
+  if (!d || typeof d.perus !== 'string' || !d.perus.trim()) return null;
+  const perus = d.perus.trim();
+  const bitit = new Map();
+  for (const [t, b64] of Object.entries(d.muuttuneet ?? {})) {
+    const taso = Number(t);
+    if (!Number.isInteger(taso)) continue;
+    let b = null;
+    if (typeof b64 === 'string') {
+      const raaka = Buffer.from(b64, 'base64');
+      // Buffer.from ei heitä rikkinäisestä base64:stä; tyhjä tulos merkkijonosta = rikkinäinen (kuten C#:n FormatException).
+      b = raaka.length > 0 || b64 === '' ? raaka : null;
+    }
+    bitit.set(taso, b);
+  }
+  const perusKansio = perus.startsWith('julisteet/') ? perus.replace(/\/+$/, '') + '/' : `julisteet/pallo/laatat/${perus}/`;
+  const muuttunut = (taso, x, y, sarakkeita) => {
+    const b = bitit.get(taso);
+    if (!b) return true;
+    const i = y * sarakkeita + x;
+    const t = b[i >> 3];
+    return t !== undefined && ((t >> (i & 7)) & 1) === 1;
+  };
+  return { perus, perusKansio, muuttunut };
+}
+
 // ---- Sarjat ----
 const sarjat = [];
 function sarja(nimi, etuliite, polut) { sarjat.push({ nimi, etuliite, polut }); }
+let perusSarja = null;
 
 {
-  const m = pohjaMalli, p = [];
+  const m = pohjaMalli, p = [], perusPolut = [];
+  const et = kansio(m);
+  // Luettelo (laatat.json) mukaan: ajossa delta on tiedossa ilman verkkoa. Puuttuva luettelo = ei deltaa.
+  const luettelo = await hae(et + 'laatat.json');
+  const delta = luettelo ? lueDelta(luettelo.toString('utf8')) : null;
   for (let z = TASOT.pohja[0]; z <= TASOT.pohja[1]; z++)
-    for (let x = 0; x < 1 << z; x++) for (let y = 0; y < 1 << z; y++) p.push(tayta(m, z, x, y));
-  sarja('pohja', kansio(m), p);
+    for (let x = 0; x < 1 << z; x++) for (let y = 0; y < 1 << z; y++) {
+      if (!delta || delta.muuttunut(z, x, y, 1 << z)) p.push(tayta(m, z, x, y));
+      else perusPolut.push(tayta(m, z, x, y).replace(et, delta.perusKansio));
+    }
+  if (luettelo) p.push(et + 'laatat.json');
+  sarja('pohja', et, p);
+  if (delta) {
+    console.log(`pohjan delta, perus ${delta.perus}: ${p.length - 1} uutta, ${perusPolut.length} perussarjasta`);
+    // Lisätään listan perään (Editorin Varmista vertaa etuliitteitä odotettuihin asti).
+    perusSarja = { nimi: 'pohja-perus', etuliite: delta.perusKansio, polut: perusPolut };
+  }
 }
 {
   const et = maastoLayer.slice(0, maastoLayer.lastIndexOf('/') + 1);
@@ -138,6 +186,7 @@ function sarja(nimi, etuliite, polut) { sarjat.push({ nimi, etuliite, polut }); 
 }
 // maa–maa-rajat (build 19, kohta 1; LaattapakettiRakennus sama järjestys)
 sarja('maarajat', maamaaPolku.slice(0, maamaaPolku.lastIndexOf('/') + 1), [maamaaPolku]);
+if (perusSarja) sarjat.push(perusSarja);
 
 // ---- Ajo ----
 const rivit = [];
