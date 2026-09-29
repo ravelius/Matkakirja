@@ -32,6 +32,11 @@
 //   rivi 3  Nopeus: LIVE · 10× · 100× · 1000× (nopeutettuna ensimmäinen "Palaa LIVE"); Kohde: "Lennä kohteen ylle…"
 //           (lista, kärjessä Oma sijainti) ja ylilennon lukema; Olosuhteet: pilvipeitto ja vuodenaika (arvo otsikkorivillä)
 // Kutistettuna vain rivi 1. Välilehti ja kutistus säilyvät istunnon ajan. Peitto puhelimella ≤ 45 % (omistaja).
+// OHJAUSPÖYTÄ ALAREUNAAN (omistaja 29.9.2026 Päätoimittajan kautta: "vasemman yläreunan säätönapit siirtyisivät alareunaan"):
+// paneeli on alareunan kapea pöytä (leveys ruutu − 24, enintään 560 pt, keskellä): rivi 1 välilehdet ja kutistus, rivi 2
+// valitun välilehden sisältö (puhelimella ~120 pt ≈ 14 % ruudusta); lukema jää vasempaan yläkulmaan omana kilpenään ja
+// kohdelista aukeaa pöydän yläpuolelle. Kutistettuna pöydästä jää vain kutistusnappi. Codexin kytkinmoduulit
+// (posti/fable-codex-iss-kytkimet-20260929.md) vaihdetaan osiin, kun toimitus on omistajan näkemä.
 using System;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
@@ -221,9 +226,10 @@ namespace Matkakirja.Natiivi
             peite.RegisterCallback<PointerDownEvent>(_ => SuljeLista());
             turva = Rakenne.El("mk-isskyyti__turva", juuri, PickingMode.Ignore);
             // Säätöpaneeli (IssOhjaus-osat Codexin nahalla).
+            // Lukema vasemmassa yläkulmassa omana kilpenään, ohjauspöytä alareunassa.
+            var ylarivi = Rakenne.El("mk-isskyyti__ylarivi mk-isskyyti__lukemarivi", turva);
             ohjaimet = IssOhjaus.Paneeli(turva);
             ohjaimet.AddToClassList("mk-isskyyti__ohjaimet");
-            var ylarivi = Rakenne.El("mk-isskyyti__ylarivi", ohjaimet);
             pilleri = IssOhjaus.Lukema(ylarivi);
             pilleri.AddToClassList("mk-isskyyti__tieto");
             piste = Rakenne.El("mk-isskyyti__piste", pilleri, PickingMode.Ignore);
@@ -232,10 +238,9 @@ namespace Matkakirja.Natiivi
             live.pickingMode = PickingMode.Ignore; tieto.pickingMode = PickingMode.Ignore;
             // Lukeman napautus nopeutettuna = Palaa LIVE (poimittava vain nopeutettuna).
             pilleri.AddManipulator(new Clickable(() => { if (nopeutettu) Linssi()?.AsetaNopeus(1); }));
-            kutistus = IssOhjaus.Sulku(ylarivi, () => { Kutistettu = !Kutistettu; PaivitaPaneeli(); }, "Pienennä paneeli");
 
+            var valit = Rakenne.El("mk-isskyyti__valilehdet", ohjaimet);
             runko = Rakenne.El("mk-isskyyti__runko", ohjaimet);
-            var valit = Rakenne.El("mk-isskyyti__valilehdet", runko);
             string[] nimet = { "Nopeus", "Kohde", "Olosuhteet" };
             valilehdet = new Button[nimet.Length];
             sivut = new VisualElement[nimet.Length];
@@ -245,6 +250,7 @@ namespace Matkakirja.Natiivi
                 valilehdet[i] = IssOhjaus.Segmentti(valit, nimet[i], () => { Valilehti = n; SuljeLista(); PaivitaPaneeli(); });
                 sivut[i] = Rakenne.El("mk-isskyyti__sivu", runko);
             }
+            kutistus = IssOhjaus.Sulku(valit, () => { Kutistettu = !Kutistettu; PaivitaPaneeli(); }, "Pienennä paneeli");
 
             // Nopeus: porras LIVE · 10× · 100× · 1000× (web .iss-kyyti-ohjaimet).
             var porras = Rakenne.El("mk-isskyyti__nopeudet", sivut[0]);
@@ -294,11 +300,43 @@ namespace Matkakirja.Natiivi
             {
                 var r = kerros.Reunat(LinssiUi.Kerros);
                 turva.style.left = r.x; turva.style.top = r.y; turva.style.right = r.z; turva.style.bottom = r.w;
-                // Paneelin leveys kuten webissä (Siirtoseppä 29.9.): puhelimessa 320, iPadilla 360, enintään ruutu − 24.
-                float leveys = juuri.layout.width - r.x - r.z;
-                if (leveys > 0) ohjaimet.style.width = Mathf.Min(leveys > 700 ? 360f : 320f, leveys - 24f);
+                // Ohjauspöydän leveys: ruutu − 24, enintään 560 pt, keskellä (kutistettuna vain nappi vasemmalla).
+                poytaLeveys = juuri.layout.width - r.x - r.z;
+                AsetteleOhjaimet();
                 PaivitaKupu();   // ruutu kääntyi: pyöreän rajauksen kupu vaakaan tai pystyyn heti
+                PaivitaPulu();
             });
+        }
+
+        float poytaLeveys;
+        const float PoytaEnintaan = 560f;
+
+        void AsetteleOhjaimet()
+        {
+            if (!(poytaLeveys > 0)) return;
+            if (Kutistettu) { ohjaimet.style.width = StyleKeyword.Auto; ohjaimet.style.left = 12f; return; }
+            float w = Mathf.Min(PoytaEnintaan, poytaLeveys - 24f);
+            ohjaimet.style.width = w;
+            ohjaimet.style.left = (poytaLeveys - w) * 0.5f;
+        }
+
+        /// <summary>
+        /// Pulu kyydissä (omistaja 29.9.2026): Cupolassa ulkona avaruuskävelyllä ikkunan aukossa (alue oikealle alas keskeltä,
+        /// kerros kehyksen alla, AstronautinNakyma), muissa tiloissa ohjauspöydän yläpuolella.
+        /// </summary>
+        void PaivitaPulu()
+        {
+            if (!UiNakymat.Olemassa) return;
+            var p = Pulu.Hae();
+            if (p == null) return;
+            float W = juuri.layout.width, H = juuri.layout.height;
+            bool ikkunassa = Tila == KyydinTila.Ikkuna && W > 1f && H > 1f;
+            // Pyöreä ikkuna täyttää ~94 % lyhyemmästä sivusta keskellä; linnun keskipiste (0,25 R, 0,3 R) keskeltä, jolloin se
+            // mahtuu aukkoon myös puhelimella. Alueen oikea alakulma on linnun keskipisteestä noin (66, 55) pt (Pulu.Oikea).
+            float R = 0.46f * Mathf.Min(W, H);
+            p.IkkunanTakana = ikkunassa ? new Vector2(W * 0.5f + 0.25f * R + 66f, H * 0.5f + 0.3f * R + 55f) : (Vector2?)null;
+            bool poyta = Tila != KyydinTila.Kauko && ohjaimet.resolvedStyle.display != DisplayStyle.None && ohjaimet.worldBound.height > 0;
+            p.AlaVara = poyta && !ikkunassa ? H - ohjaimet.worldBound.yMin + 6f : 0f;
         }
 
         static AstronauttiLinssi Linssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
@@ -323,9 +361,9 @@ namespace Matkakirja.Natiivi
                     Rakenne.Nappi(k.Nimi, "mk-isskyyti__kohde", () => { SuljeLista(); Linssi()?.LennaKohteeseen(tunnus); }, lista);
                 }
             }
-            // Korkeus: rivit (28 pt) turva-alueen alareunaan asti (12 pt:n marginaali), vähintään neljä riviä; loput vierittäen.
+            // Korkeus: pöydän yläpuolelle turva-alueen yläreunaan asti (12 pt:n marginaali, lukeman alle), vähintään neljä riviä.
             float tarve = lista.contentContainer.childCount * RiviPt + 2;
-            float tila = turva.worldBound.yMax - (valikko.worldBound.yMax + 6) - 12;
+            float tila = sivut[1].worldBound.yMin - 6 - (turva.worldBound.yMin + 64);
             lista.style.height = float.IsNaN(tila) ? tarve : Mathf.Min(tarve, Mathf.Max(4 * RiviPt, tila));
             lista.scrollOffset = Vector2.zero;
             lista.style.display = DisplayStyle.Flex;
@@ -356,6 +394,8 @@ namespace Matkakirja.Natiivi
         {
             Valilehti = Mathf.Clamp(Valilehti, 0, sivut.Length - 1);
             runko.style.display = Kutistettu ? DisplayStyle.None : DisplayStyle.Flex;
+            foreach (var v in valilehdet) v.style.display = Kutistettu ? DisplayStyle.None : DisplayStyle.Flex;
+            AsetteleOhjaimet();
             ohjaimet.EnableInClassList("mk-isskyyti__ohjaimet--kutistettu", Kutistettu);
             kutistus.tooltip = Kutistettu ? "Avaa paneeli" : "Pienennä paneeli";
             for (int i = 0; i < sivut.Length; i++)
@@ -409,8 +449,14 @@ namespace Matkakirja.Natiivi
             if (auki && !kuva2Haettu && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva) HaeKuvat2();
             this.ikkuna = ikkuna;
             PaivitaKehys();
+            PaivitaPulu();
+            if (tila != edellinenTila) { edellinenTila = tila; TilaMuuttui?.Invoke(tila); }
             if (auki != oliAuki) AukiMuuttui?.Invoke(auki);
         }
+
+        KyydinTila edellinenTila = KyydinTila.Kauko;
+        /// <summary>Kyydin tila vaihtui (AstronautinNakyma: Pulun kerros Cupolassa kehyksen alle, pelielementit pois).</summary>
+        public event Action<KyydinTila> TilaMuuttui;
 
         bool ikkuna;
 
@@ -586,6 +632,12 @@ namespace Matkakirja.Natiivi
         /// Vähennetty liike: pois (Heilu ei käynnisty). A/B `astro kyyti ajelehdus 0|1`.
         /// </summary>
         public static bool Ajelehdus = true;
+        /// <summary>
+        /// Kellunta (omistaja 29.9.2026: "Cupola heijaa ihan vähän: hidas, pieni kellunta (muutama pt / alle asteen, jakso useita
+        /// sekunteja)"): jaksot 23–47 s lyhennetään tällä kertoimella 6,6–13 s:iin, jotta leijunta tuntuu; laajuus ennallaan.
+        /// A/B `astro kyyti kellunta <kerroin>` (1 = 28.9.).
+        /// </summary>
+        public static float Kellunta = 3.5f;
         const float AjelehdusX = 8f, AjelehdusY = 7f, AjelehdusSkaala = 0.015f, AjelehdusKallistus = 0.5f, KehysPohja = 1.08f;
 
         void Ajelehdi(float t, Translate heijastuksenOma)
@@ -593,6 +645,7 @@ namespace Matkakirja.Natiivi
             const float tau = 2f * Mathf.PI;
             // Cupola 3:ssa liike puolitettuna (kuva on sommiteltu ruudulle, ylimääräistä reunaa vain 1,04 ×).
             float k = cupola3 ? Cupola3Ajelehdus : 1f;
+            t *= Kellunta;
             float x = k * AjelehdusX * (0.6f * Mathf.Sin(tau * t / 31f) + 0.4f * Mathf.Sin(tau * t / 47f + 1.3f));
             float y = k * AjelehdusY * (0.6f * Mathf.Sin(tau * t / 23f + 0.7f) + 0.4f * Mathf.Sin(tau * t / 41f + 2.1f));
             float z = k * Mathf.Sin(tau * t / 37f + 0.4f);

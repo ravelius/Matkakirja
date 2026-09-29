@@ -116,6 +116,15 @@ namespace Matkakirja.Natiivi
             Valitsin.Valittu += Valitse;
             Valitsin.Suljettava += SuljeLinssi;
             Astronautti.KuvaAuki += auki => { kuvaPeittaa = auki; PaivitaSulku(); };
+            // Cupola ja avaruuskävely (omistaja 29.9.2026): "ei mitään peliin liittyviä elementtejä: ei 3D-nostoja, ei merkkejä,
+            // nimiöitä tms. — pelkkä kartta efekteineen (pilvet, valo, yö)".
+            Astronautti.Kyyti.TilaMuuttui += tila =>
+            {
+                bool ulkona = tila == Matkakirja.Linssit.Iss.KyydinTila.Ikkuna || tila == Matkakirja.Linssit.Iss.KyydinTila.Ulkona;
+                if (ulkona == kyytiPelkkaKartta) return;
+                kyytiPelkkaKartta = ulkona;
+                PaivitaPelielementit();
+            };
             Maat.ArkkiMuuttui += auki => { arkkiPeittaa = auki; PaivitaSulku(); };
             Aikajana.ValikkoKaytettavissa += kaytossa => { valikkoKorvaa = kaytossa; PaivitaSulku(); };
 
@@ -199,6 +208,22 @@ namespace Matkakirja.Natiivi
         static readonly Unity.Profiling.ProfilerMarker MerkkiRadio = new Unity.Profiling.ProfilerMarker("UI.Linssi.Radio");
 
         bool kerrosPaalla;
+        (bool portti, bool vertailu, bool radio, bool paalla) pelielementit;
+        /// <summary>ISS-kyyti Cupolassa tai avaruuskävelyllä: pelkkä kartta (IssKyytiNakyma.TilaMuuttui).</summary>
+        bool kyytiPelkkaKartta;
+
+        void PaivitaPelielementit()
+        {
+            var (portti, vertailu, radio, paalla) = pelielementit;
+            portti |= kyytiPelkkaKartta;
+            // Radio: maan nimi piiloon linssin ajaksi (omistaja 28.9.2026: KREIKKA näkyi arktisellakin radion vieressä).
+            ui.Kartuscha.NaytaSallittu(!(portti || radio));
+            ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
+            ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio));
+            ui.OfflineTila.NaytaSallittu(!paalla);
+            ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
+            ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
+        }
 
         void Vaihtui(ILinssi linssi)
         {
@@ -217,13 +242,8 @@ namespace Matkakirja.Natiivi
             // lisäksi yläpalkki, paikkapilleri ja taikalasit pois (Linssiseppä 2, laitekuva vuosi1 07-pohja.png).
             bool vuosi = id == MaapallonVuosiLinssi.Id;
             portti |= vuosi;
-            // Radio: maan nimi piiloon linssin ajaksi (omistaja 28.9.2026: KREIKKA näkyi arktisellakin radion vieressä).
-            ui.Kartuscha.NaytaSallittu(!(portti || radio));
-            ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
-            ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio));
-            ui.OfflineTila.NaytaSallittu(!paalla);
-            ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
-            ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
+            pelielementit = (portti, vertailu, radio, paalla);
+            PaivitaPelielementit();
             // Web piirraLinssiSelite: kerroksellinen linssi (radio on kerrokseton) kutistaa päiväkirjan lapuksi.
             bool kerros = paalla && !radio;
             if (kerros != kerrosPaalla) { kerrosPaalla = kerros; ui.Matkakirja.Linssi(kerros); }

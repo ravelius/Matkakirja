@@ -3377,10 +3377,19 @@
 .mk-isskyyti__ohjaimet {
     position: absolute;
     left: 12px;
-    top: 10px;
+    bottom: 10px;
     width: 320px;
     padding: 12px;
     flex-direction: column;
+}
+
+/* Ohjauspöytä alareunassa (omistaja 29.9.2026): lukema jää vasempaan yläkulmaan omana kilpenään. */
+.mk-isskyyti__lukemarivi {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 300px;
+    max-width: 78%;
 }
 
 .mk-isskyyti__ohjaimet--kutistettu {
@@ -3495,7 +3504,11 @@
 }
 
 /* Rivi 2 (välilehdet) ja nopeusporras: segmenttisolut tasaleveinä, väli 6. */
-.mk-isskyyti__valilehdet,
+.mk-isskyyti__valilehdet {
+    flex-direction: row;
+    align-items: center;
+}
+
 .mk-isskyyti__nopeudet {
     flex-direction: row;
     margin-top: 8px;
@@ -3576,7 +3589,11 @@
 
 /* Kohdelista (webissä selaimen oma valinta): rivit 28 pt, korkeus turva-alueen alareunaan (koodissa). */
 .mk-isskyyti__lista {
-    margin-top: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 6px;
     border-width: 1px;
     border-radius: 10px;
     border-color: rgba(93, 255, 168, 0.28);
