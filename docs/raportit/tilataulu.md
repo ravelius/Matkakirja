@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 04:48:** Levy 93 Gi (vakaa). Muisti OK (68 %). Kuorma 7,0/7,7/7,6, sim 0, GPU-chrome 0. /private/tmp 33,3 Gt, wt/ 14 kohdetta 12 Gt. Roolit: 10 levossa, ennallaan. Päätoimittaja isRunning=true, lastActivityAt 04.26 ennallaan (22 min; seuraava raja 05.00). Juna OK (b13 75db27d3 käännetty e434161d).
+
 **Päivitetty 04:37:** Levy 93 Gi (vakaa). Muisti OK (67 %). Kuorma 6,8/8,8/7,9, sim 0, GPU-chrome 0. /private/tmp 33,2 Gt, wt/ 14 kohdetta 12 Gt. Roolit: 10 levossa, ennallaan. Päätoimittajan aktiivisuus jatkui 04.26 (viestit purkautuivat) → jumi-epäily poistui. Juna OK (b13 75db27d3 käännetty e434161d).
 
 **Päivitetty 04:25:** Levy 93 Gi (vakaa). Muisti OK (66 %). Kuorma 8,0/7,7/7,4, sim 0, GPU-chrome 0. /private/tmp 33,4 Gt, wt/ 14 kohdetta 12 Gt. Roolit: kaikki 10 isRunning=false, ennallaan. Päätoimittaja isRunning=true, mutta list_events: viimeinen tapahtuma on Postivahdin 03.52-viesti, ei aktiivisuutta sen jälkeen (33 min) → mahdollinen hiljainen jumi. Juna OK (b13 75db27d3 käännetty e434161d).
