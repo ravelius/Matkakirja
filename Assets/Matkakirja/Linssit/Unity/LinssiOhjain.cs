@@ -203,6 +203,8 @@ namespace Matkakirja.Natiivi
                     Merkki(id, v);
             rekisteri = new Linssirekisteri(this);
             rekisteri.Lisaa(new Topografia());
+            // Yökartta (Linssiseppä 29.9.2026, omistaja NATIIVI ENSIN): vain natiivi, kehittäjätilassa (ei avauskynnystä).
+            rekisteri.Lisaa(new YokarttaSovitin(this));
             // Maapallon vuosi (Linssiseppä 2, 28.9.2026): hiomassa, vain kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(vuosi = new MaapallonVuosiSovitin(this, k));
             rekisteri.Lisaa(poikki = new DioraamaSovitin(this, k));
@@ -1031,6 +1033,32 @@ namespace Matkakirja.Natiivi
         /// Astronautin kamera Unityssä: luo 3D-kerroksen avatessa ja purkaa sen
         /// sulkiessa; logiikka on puhtaassa AstronauttiLinssissä.
         /// </summary>
+        /// <summary>Yökartta: linssi (Ydin) ja yökuori (YokarttaKerros) linssin ajaksi.</summary>
+        public sealed class YokarttaSovitin : ILinssi
+        {
+            readonly LinssiOhjain o;
+            Matkakirja.Linssit.Yokartta.YokarttaLinssi linssi;
+            YokarttaKerros kerros;
+            public YokarttaSovitin(LinssiOhjain o) { this.o = o; }
+            public LinssiTiedot Tiedot => Matkakirja.Linssit.Yokartta.YokarttaLinssi.YokarttaTiedot;
+            public bool Auki => linssi?.Auki ?? false;
+            /// <summary>Auki oleva linssi (testikomento yokartta), muuten null.</summary>
+            public Matkakirja.Linssit.Yokartta.YokarttaLinssi Linssi => linssi;
+            public void Avaa(ILinssiYmparisto y)
+            {
+                kerros = YokarttaKerros.Luo(o.kierto != null ? o.kierto.georeferenssi : null);
+                linssi = new Matkakirja.Linssit.Yokartta.YokarttaLinssi(kerros);
+                linssi.Avaa(y);
+            }
+            public void Paivita() => linssi?.Paivita();
+            public void Sulje()
+            {
+                linssi?.Sulje();
+                if (kerros != null) Destroy(kerros.gameObject);
+                linssi = null; kerros = null;
+            }
+        }
+
         public sealed class AstronauttiSovitin : ILinssi
         {
             readonly LinssiOhjain o;
@@ -1400,6 +1428,20 @@ namespace Matkakirja.Natiivi
                     var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
                     Kirjaa($"iss: {IssTleLataaja.Tila()}, alapiste {p.Lat:F2}, {p.Lon:F2} ({utc:HH:mm:ss} UTC)");
+                }
+                else if (osat[0] == "yokartta")
+                {
+                    // Yökartta: "yokartta" = tila (auringon alihajapiste ja iltaraja), "yokartta kelaa <k>" = aika k-kertaisena
+                    // (1 = todellinen), "yokartta valot <0…1>" = valojen osuus (A/B kuten astro kyyti valot).
+                    var s = rekisteri?.Hae("yokartta") as YokarttaSovitin;
+                    var l = s?.Linssi;
+                    if (osat.Length > 2 && osat[1] == "kelaa") l?.Kelaa(Luku(osat[2]));
+                    if (osat.Length > 2 && osat[1] == "valot") Yokuori.ValojenOsuus = Mathf.Clamp01((float)Luku(osat[2]));
+                    var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+                    Matkakirja.Linssit.Iss.Aurinko.Alihajapiste(Matkakirja.Linssit.Iss.Aika.Jd(utc), out double sl, out double so);
+                    var r = Matkakirja.Linssit.Yokartta.YokarttaLinssi.Iltaraja(utc, kierto != null ? kierto.leveys : 0);
+                    Kirjaa($"yokartta: {(l != null ? "auki" : "kiinni")}, kello {Matkakirja.Linssit.Iss.IssNyt.Simu} ({utc:HH:mm} UTC), "
+                        + $"aurinko zeniitissä {sl:F1}, {so:F1}, iltaraja {r.Lat:F1}, {r.Lon:F1}, valot {Yokuori.ValojenOsuus:0.##}");
                 }
                 else if (osat[0] == "kaista")
                 {
