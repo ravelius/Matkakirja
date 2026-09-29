@@ -29,7 +29,7 @@ Vapaasti pyöriteltävä ja zoomattava. Nimilappuja ei ole. Seitsemän tilaa nä
 | Kappeli | kynttilänvalo ikkunoissa, hiljainen laulu kaukaa |
 | Muurinharja | vartija kulkee lyhdyn kanssa edestakaisin |
 | Kierreportaat | lyhty vilkkuu ampumaraoissa ylös ja alas |
-| Fatabuuri | ovi raollaan, tynnyreitä, viileä hämärä |
+| Fatabuuri (vaate- ja tavara-aitta, ei ruokavarasto) | ovi raollaan, arkkuja ja kangaspakkoja, hoitaja kirjanpidon ääressä |
 | Keskushalli ja väentupa | ikkunoista valo ja sorina, vartijat noppapelissä |
 | Laituri | soutaja, veneet, lyhty paalussa |
 
@@ -48,7 +48,7 @@ hyväksynnän jälkeen). Paluu yleisnäkymään alaspäin pyyhkäisyllä tai ‹
 Vouti on hukannut sinettisormuksensa. Vihjeet ovat kolmessa huoneessa:
 1. Keittiö: kokki mainitsee, että vouti kävi kappelissa ennen iltamessua.
 2. Kappeli: kynttilän valossa penkin selkänojassa näkyy tuore naarmu ja fatabuurin avaimen kuva.
-3. Fatabuuri: sinetti löytyy suolakalatynnyrin kannen alta.
+3. Fatabuuri: sinetti löytyy vaatearkun kannen alta kankaiden välistä (Sisältökirjurin korjaus 29.9.: fatabuuri on vaate- ja tavara-aitta; sinetistä ei ole Olavinlinna-lähdettä, löytökortissa yleinen keskiajan sinettifakta).
 
 Löytö menee Aarteisiin matkamuistona ("Voudin sinetti") ja antaa tietäjäpisteitä. Se ei ole Aarnin luettelon aarre,
 eikä se muuta tarinan kaanonia. Etsintä on vapaaehtoinen, ja vihjeet näkyvät vasta, kun huone on avattu.
