@@ -623,18 +623,10 @@ namespace Matkakirja.Editori
             }
         }
 
-        static void AsetaIl2Cpp(Il2CppCompilerConfiguration c) =>
-            PlayerSettings.SetIl2CppCompilerConfiguration(UnityEditor.Build.NamedBuildTarget.iOS, c);
-
         /// <summary>Xcode-projekti simulaattorille: Build/iOS-sim.</summary>
         public static void IosSimulaattori()
         {
             AsetaIos(iOSSdkVersion.SimulatorSDK);
-            // NOPEUTUS (omistaja 29.9.2026 "natiivi ensin", Päätoimittaja): simulaattorin IL2CPP-C++ Debug-tasolla, noin
-            // 3× nopeampi C++-käännös junassa (Release: 400 s / 26 cpp:tä). Simulaattorin fps ei vastaa laitetta muutenkaan;
-            // suorituskyky mitataan laitteella ja TF:llä. MATKAKIRJA_IL2CPP=Release palauttaa Releasen tähän käännökseen.
-            AsetaIl2Cpp(Environment.GetEnvironmentVariable("MATKAKIRJA_IL2CPP") == "Release"
-                ? Il2CppCompilerConfiguration.Release : Il2CppCompilerConfiguration.Debug);
             // MATKAKIRJA_KEHITYS=1: Development-käännös (Profilerin skriptimerkit CpuMittarille), kuten laitteelle.
             bool kehitys = Environment.GetEnvironmentVariable("MATKAKIRJA_KEHITYS") == "1";
             Kaanna("Build/iOS-sim", kehitys ? BuildOptions.Development : BuildOptions.None);
@@ -651,7 +643,6 @@ namespace Matkakirja.Editori
             // TestFlightin fi.matkakirja.peli -version rinnalla. app.matkakirja.proto3d kuuluu Personal Teamille eikä
             // rekisteröidy maksulliseen tiimiin; simulaattorikäännökset (ei allekirjoitusta) pitävät sen.
             PlayerSettings.SetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS, LaiteBundleId);
-            AsetaIl2Cpp(Il2CppCompilerConfiguration.Release); // laite ja TF aina Release (simulaattori Debug, ks. IosSimulaattori)
             bool kehitys = Environment.GetEnvironmentVariable("MATKAKIRJA_KEHITYS") == "1";
             Kaanna("Build/laite", kehitys ? BuildOptions.Development : BuildOptions.None);
         }
