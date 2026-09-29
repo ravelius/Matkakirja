@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 02:42:** Levy 53 Gi (vakaa; hälytys < 45), swap 18,2/19,5 Gt, muisti 81 % vapaa, kuorma 6/10/19, sim 0, ei kevyttä tilaa. Viikko 33 % (5 h 49 %, nollautuu 02.50 EEST). Konteksti ennallaan: Linnanrakentaja 61 %, Natiivi-UI 34 %, Päätoimittaja 41 %, oma ~49 %; roolit hiljaisia. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: BUILD 61 = master f44da597 (juna 5e7e6ff4, käännös 7220790e; Laitetestaaja 27f89df2b 4/5 PASS). Posti: ei uutta.
+
 **Päivitetty 30.9. 02:26:** Levy 54 Gi (56→54; hälytys < 45), swap 18,3/19,5 Gt, muisti 78 % vapaa, kuorma 14/37/31, sim 1 (iPhone 18 Pro 1572C658, yöllä ok), ei kevyttä tilaa. Viikko 33 % (5 h 48 %). Konteksti: Linnanrakentaja 61 %, Natiivi-UI 34 %, Päätoimittaja 41 %, oma ~48 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: 7220790e käännetty ja asennettu 02.19. Posti: ei uutta.
 
 **Päivitetty 30.9. 02:10:** Levy 56 Gi (vakaa), swap 18,5/19,5 Gt (hitaasti laskussa), muisti 80 % vapaa, kuorma 14/15/17, sim 0, ei kevyttä tilaa. Viikko 33 % (5 h 46 %, nollautuu 02.50 EEST). Konteksti: Linnanrakentaja 59 %, Natiivi-UI 34 %, Päätoimittaja 40 %, oma ~47 %; roolit hiljaisia. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: BUILD 60 ennallaan. Posti: ei uutta.
