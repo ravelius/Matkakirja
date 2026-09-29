@@ -1736,6 +1736,8 @@ namespace Matkakirja.Natiivi
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
                     // A/B Codexin uusi radio (29.9.) ↔ vanha kotelo kuvapariin.
                     else if (osat[1] == "kuori" && osat.Length > 2) { RadioNakyma.Kuori(osat[2] != "vanha"); Kirjaa($"radio: kuori {osat[2]}"); }
+                    // A/B kartta (omistaja 29.9.): yksinkertainen (oletus) ↔ 3D-mastot; voimaan seuraavasta avauksesta.
+                    else if (osat[1] == "kartta" && osat.Length > 2) { Matkakirja.Linssit.Radio.RadioLinssi.Yksinkertainen = osat[2] != "mastot"; Kirjaa($"radio: kartta {osat[2]} (avaa linssi uudelleen)"); }
                     else r.Viritä(osat[1].ToUpperInvariant());
                 }
                 else if (osat[0] == "isoisa" && osat.Length > 1 && osat[1] == "tila")

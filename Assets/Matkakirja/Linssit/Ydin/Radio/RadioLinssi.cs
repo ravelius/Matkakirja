@@ -132,7 +132,7 @@ namespace Matkakirja.Linssit.Radio
         readonly ISet<char> fontti;
         ILinssiYmparisto y;
         HashSet<string> nakyvat = new HashSet<string>();
-        List<string> asteikko = new List<string>();   // kanavalliset kaupungit lännestä itään
+        List<string> asteikko = new List<string>();   // kanavalliset kaupungit maantieteellisessä järjestyksessä
 
         string soiva;            // kaupunki
         double alkoi, lukittuHetki;
@@ -192,6 +192,72 @@ namespace Matkakirja.Linssit.Radio
         /// </summary>
         public bool OmatNapit;
 
+        /// <summary>
+        /// YKSINKERTAINEN KARTTA (omistaja 29.9.2026 klo 20.1x: "voisitko katsoa sitä karttaa radiossa, miten sen saisi
+        /// järkevämmäksi?"; Päätoimittajan suositus): 3D-ristikkomastot, suuret punaiset renkaat ja yövalot pois (UI piirtää
+        /// asteikon asemat pieninä merkkeinä nimineen, viritetty korostettuna yhdellä hillityllä sykkivällä renkaalla),
+        /// hämärä ja reliefi jäävät, kamera loivasti kallistettuna (<see cref="KartanKallistus"/>) ja viritetty asema
+        /// radion yläpuolella (<see cref="KohteenPohjoissiirto"/>). A/B `radio kartta mastot|yksinkertainen`.
+        /// </summary>
+        public static bool Yksinkertainen = true;
+        /// <summary>Kameran kallistus radiossa: yksinkertaisessa kartassa loiva 20°, mastokartassa 40°.</summary>
+        public static double KartanKallistus => Yksinkertainen ? 20 : Mastot.RadionKallistus;
+        /// <summary>
+        /// Viritetty asema näkyy radion yläpuolella: kameran keskipiste siirretään etelään tämän osuuden verran näkyvästä
+        /// korkeudesta (asema ~20 % keskeltä ylöspäin, radio vie alalaidan ~22 %).
+        /// </summary>
+        public const double KohteenYlos = 0.2;
+
+        /// <summary>Kameran keskipisteen leveysaste, jolla asema (lat) näkyy <see cref="KohteenYlos"/> ruudun keskeltä ylöspäin.</summary>
+        public static double KohteenPohjoissiirto(double lat, double korkeusM)
+        {
+            if (!Yksinkertainen || !(korkeusM > 0)) return lat;
+            // Näkyvä pystykorkeus ~ 2 h tan(25°) (kenttä 50°); pallon kaarevuus rajataan pois yläpäässä.
+            double kmNakyva = 2 * korkeusM / 1000 * Math.Tan(25 * Math.PI / 180);
+            double siirtoAste = Math.Min(20, KohteenYlos * kmNakyva / 111.2);
+            return Math.Max(-85, lat - siirtoAste);
+        }
+
+        /// <summary>
+        /// MAANTIETEELLINEN ASTEIKKO (omistaja 29.9.2026 Päätoimittajan kautta: virittäessä kartta liukuu naapuriin eikä hypi;
+        /// ennen lännestä itään pituusasteen mukaan, jolloin esim. Sahara, Kamerun, Karthago, Oslo, Rooma olivat vierekkäin):
+        /// avoin reitti läntisimmästä, jossa vierekkäiset asemat ovat maantieteellisiä naapureita (lähin naapuri + 2-opt
+        /// isoympyräetäisyyksillä). Deterministinen: sama joukko antaa aina saman järjestyksen.
+        /// </summary>
+        public static List<string> MaantieteellinenJarjestys(IEnumerable<(string id, double lat, double lon)> pisteet)
+        {
+            var p = pisteet.OrderBy(x => x.lon).ThenBy(x => x.id, StringComparer.Ordinal).ToList();
+            int n = p.Count;
+            if (n < 3) return p.Select(x => x.id).ToList();
+            double D(int a, int b) => Mastot.EtaisyysKm(p[a].lat, p[a].lon, p[b].lat, p[b].lon);
+            var reitti = new List<int> { 0 };
+            var kaytetty = new bool[n];
+            kaytetty[0] = true;
+            for (int i = 1; i < n; i++)
+            {
+                int viim = reitti[reitti.Count - 1], paras = -1;
+                double pd = double.MaxValue;
+                for (int j = 0; j < n; j++)
+                    if (!kaytetty[j]) { double d = D(viim, j); if (d < pd) { pd = d; paras = j; } }
+                reitti.Add(paras);
+                kaytetty[paras] = true;
+            }
+            // 2-opt avoimelle reitille: käännä väli [i, j], jos reunat lyhenevät (loppupää vapaa).
+            // Kierrokset rajattu (n ~ 100: parannus loppuu muutamassa kierroksessa).
+            for (int kierros = 0, muutoksia = 1; muutoksia > 0 && kierros < 50; kierros++)
+            {
+                muutoksia = 0;
+                for (int i = 1; i < n - 1; i++)
+                    for (int j = i + 1; j < n; j++)
+                    {
+                        double ennen = D(reitti[i - 1], reitti[i]) + (j + 1 < n ? D(reitti[j], reitti[j + 1]) : 0);
+                        double jalkeen = D(reitti[i - 1], reitti[j]) + (j + 1 < n ? D(reitti[i], reitti[j + 1]) : 0);
+                        if (jalkeen < ennen - 1e-6) { reitti.Reverse(i, j - i + 1); muutoksia++; }
+                    }
+            }
+            return reitti.Select(i => p[i].id).ToList();
+        }
+
         // ---- Mastot, hämärä, renkaat ja kamera-ajo (radiouudistus build 12, suunnitelma luvut 3–6) ----
 
         /// <summary>Mastojen piirto (Natiiviseppä); null = ei mastoja (vanha käännös, testit ilman piirtoa).</summary>
@@ -206,6 +272,8 @@ namespace Matkakirja.Linssit.Radio
         readonly VuRenkaat vuRenkaat = new VuRenkaat();
         double avausHetki = double.NaN, soiAlku = double.NaN, edellinenKello = double.NaN;
         double? kallistusEnnen;
+        /// <summary>Kamera ennen radiota: sulku palaa siihen, jolloin kartta on taas pelin omassa rajauksessa.</summary>
+        Nakyma? kameraEnnen;
         // Kaareva kamera-ajo uudelle mastolle (Mastot.KameraAjonKesto, Kuminauha 0,25).
         double ajoAlku = double.NaN, ajoKesto, ajoLat0, ajoLon0, ajoLat1, ajoLon1, ajoKorkeus, ajoKorotus;
 
@@ -269,17 +337,18 @@ namespace Matkakirja.Linssit.Radio
             vuRenkaat.Nollaa();
             if (Mastot3D != null)
             {
-                Mastot3D.Mastot(mastot);
+                Mastot3D.Mastot(Yksinkertainen ? Array.Empty<Masto>() : mastot);
                 Mastot3D.Hamara(0);
                 VaihdaPohja();
             }
-            // Kallistus 40° (Fable 24.9.: mastot näkyvät vain kallistetussa kamerassa); pelaaja saa muuttaa.
+            // Kallistus 40° (Fable 24.9.: mastot näkyvät vain kallistetussa kamerassa), yksinkertaisessa kartassa 20°; pelaaja
+            // saa muuttaa.
             if (y != null && Mastot3D != null)
             {
                 var n0 = y.Kamera;
                 kallistusEnnen = n0.Kallistus;
-                y.AjaKamera(new Nakyma(n0.Lat, n0.Lon, n0.Korkeus, Mastot.RadionKallistus), y.VahennettyLiike ? 0f : (float)Mastot.AvausS,
-                    Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea), Mastot.RadionKallistus);
+                y.AjaKamera(new Nakyma(n0.Lat, n0.Lon, n0.Korkeus, KartanKallistus), y.VahennettyLiike ? 0f : (float)Mastot.AvausS,
+                    Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea), KartanKallistus);
             }
         }
 
@@ -340,11 +409,13 @@ namespace Matkakirja.Linssit.Radio
             else PalautaPohja();
             if (y != null && Mastot3D != null && kallistusEnnen is double k)
             {
-                var n0 = y.Kamera;
+                // Yksinkertaisessa kartassa takaisin radiota edeltävään näkymään (pelin oma rajaus), muuten paikallaan.
+                var n0 = Yksinkertainen && kameraEnnen is Nakyma e && e.Korkeus > 0 ? e : y.Kamera;
                 y.AjaKamera(new Nakyma(n0.Lat, n0.Lon, n0.Korkeus, k), y.VahennettyLiike ? 0f : (float)Mastot.SulkuS,
                     Kamera.Kamerakayrat.Funktio(Kamera.Kayra.Pehmea), k);
             }
             kallistusEnnen = null;
+            kameraEnnen = null;
             if (Mastot3D == null) mastot.Clear();
             ajoAlku = avausHetki = soiAlku = double.NaN;
         }
@@ -354,14 +425,15 @@ namespace Matkakirja.Linssit.Radio
             if (y == null || Mastot3D == null || k == null) return;
             var n = y.Kamera;
             double d = Mastot.EtaisyysKm(n.Lat, n.Lon, k.Lat, k.Lon);
+            double kohdeLat = KohteenPohjoissiirto(k.Lat, n.Korkeus);
             if (y.VahennettyLiike)
             {
-                y.AjaKamera(new Nakyma(k.Lat, k.Lon, n.Korkeus, Mastot.RadionKallistus), 0f, null, Mastot.RadionKallistus);
+                y.AjaKamera(new Nakyma(kohdeLat, k.Lon, n.Korkeus, KartanKallistus), 0f, null, KartanKallistus);
                 return;
             }
             ajoAlku = Nyt;
             ajoKesto = Mastot.KameraAjonKesto(d);
-            (ajoLat0, ajoLon0, ajoLat1, ajoLon1) = (n.Lat, n.Lon, k.Lat, k.Lon);
+            (ajoLat0, ajoLon0, ajoLat1, ajoLon1) = (n.Lat, n.Lon, kohdeLat, k.Lon);
             ajoKorkeus = n.Korkeus;
             ajoKorotus = Mastot.KaarenKorotus(d);
         }
@@ -387,6 +459,8 @@ namespace Matkakirja.Linssit.Radio
             double s = (nyt - avausHetki) / 1000;
             bool vahennetty = y?.VahennettyLiike ?? false;
             Mastot3D.Hamara((float)(vahennetty ? 1 : Kamera.Kamerakayrat.Pehmea(Math.Clamp(s / Mastot.AvausS, 0, 1))));
+            // Yksinkertainen kartta: vain hämärä, reliefi ja kamera-ajo (UI piirtää merkit ja viritetyn renkaan).
+            if (Yksinkertainen) { PaivitaAjo(nyt); return; }
             if (s <= Mastot.NousunPorras + Mastot.NousuS + 0.1)
                 foreach (var m in mastot)
                 {
@@ -424,13 +498,18 @@ namespace Matkakirja.Linssit.Radio
                 Mastot3D.Renkaat(0, 0, 0, Array.Empty<double>());
             }
 
+            PaivitaAjo(nyt);
+        }
+
+        void PaivitaAjo(double nyt)
+        {
             if (!double.IsNaN(ajoAlku) && y != null)
             {
                 double t = Math.Clamp((nyt - ajoAlku) / 1000 / ajoKesto, 0, 1);
                 double u = Kamera.Kamerakayrat.Arvo(Kamera.Kayra.Kuminauha, t, 0.25);
                 var (lat, lon) = Mastot.Isoympyra(ajoLat0, ajoLon0, ajoLat1, ajoLon1, u);
                 double korkeus = ajoKorkeus * (1 + (ajoKorotus - 1) * Math.Sin(Math.PI * t));
-                y.AjaKamera(new Nakyma(lat, lon, korkeus, Mastot.RadionKallistus), 0f, null, Mastot.RadionKallistus);
+                y.AjaKamera(new Nakyma(lat, lon, korkeus, KartanKallistus), 0f, null, KartanKallistus);
                 if (t >= 1) ajoAlku = double.NaN;
             }
         }
@@ -456,7 +535,7 @@ namespace Matkakirja.Linssit.Radio
 
         /// <summary>Radiotilassa näkyvät kaupungit (yksi per maa).</summary>
         public IReadOnlyCollection<string> Nakyvat => nakyvat;
-        /// <summary>Asteikon asemat (kaupunki-id:t) lännestä itään.</summary>
+        /// <summary>Asteikon asemat (kaupunki-id:t) maantieteellisessä järjestyksessä (MaantieteellinenJarjestys).</summary>
         public IReadOnlyList<string> Asteikko => asteikko;
 
         /// <summary>
@@ -528,8 +607,14 @@ namespace Matkakirja.Linssit.Radio
             y = ymparisto;
             LuentaSallittu = false;
             nakyvat = aineisto.RadionKaupungit(Sijainti?.Invoke());
-            asteikko = nakyvat.Where(id => ToimintoAsemalle(aineisto.MaanAsema(aineisto.Kaupunki(id)?.Iso3)) != Toiminto.Ei)
-                .OrderBy(id => aineisto.Kaupunki(id).Lon).ThenBy(id => id, StringComparer.Ordinal).ToList();
+            asteikko = MaantieteellinenJarjestys(nakyvat
+                .Where(id => ToimintoAsemalle(aineisto.MaanAsema(aineisto.Kaupunki(id)?.Iso3)) != Toiminto.Ei)
+                .Select(id => (id, k: aineisto.Kaupunki(id))).Where(x => x.k != null)
+                .Select(x => (x.id, x.k.Lat, x.k.Lon)));
+            // Koko maapallo aina radiossa (omistaja 29.9.2026: "radiossa pitäisi aina olla koko maapallo käytössä, riippumatta
+            // onko kehittäjä vai ei"): loitonnuksen katto koko pallo, maan rajat eivät ole voimassa; sulku palauttaa.
+            kameraEnnen = y?.Kamera;
+            y?.ZoomiKatto(y.KokoPallonKorkeus);
             y?.MusiikkiPitoon(true);
             if (OmatNapit) y?.Pelikerrokset(false);
             if (kartta != null)
@@ -564,6 +649,7 @@ namespace Matkakirja.Linssit.Radio
                 kartta.NaytaVain(null);
             }
             if (OmatNapit) y?.Pelikerrokset(true);
+            y?.ZoomiKatto(null);
             NapitMuuttuivat?.Invoke();
             y?.MusiikkiPitoon(false);
             AsetaHiljaa();
