@@ -113,6 +113,35 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("kuva pois", n.Loki.Last());
         }
 
+        [Testi] static void TervetulonKameraAloitustilastaJaTakaisin()
+        {
+            var (l, y, _) = Luo();
+            Oleta.Tosi(l.Aloitustila() == null, "linssi kiinni");
+            l.Avaa(y);
+            Oleta.Tosi(!l.KatsoKohteeseen(45.44, 12.332, 2.6f), "mustan aikana ei pyöräytystä");
+            y.Vale.Tilat[AstronauttiLinssi.Kerros] = KerrosTila.Luovutti;
+            Aja(l, y, 0.1);
+            // Laskeutumisen aikana aloitusnäkymä on sen päätepiste (lepokorkeus), ei välikorkeus.
+            var a = l.Aloitustila().Value;
+            Oleta.Sama(y.KokoPallonKorkeus * Astronauttimatikka.AvausajonLoppu, a.Korkeus);
+            Oleta.Sama(y.Asento.Lat, a.Lat);
+            Aja(l, y, 5.1);
+            Oleta.Sama(y.Asento.Korkeus, l.Aloitustila().Value.Korkeus, "laskeutumisen jälkeen kameran oma näkymä");
+            Oleta.Tosi(l.KatsoKohteeseen(45.44, 12.332, 2.6f));
+            Oleta.Sama(45.44, y.Ajo.Value.Lat);
+            Oleta.Sama(12.332, y.Ajo.Value.Lon);
+            Oleta.Sama(Math.Min(y.Asento.Korkeus, y.KokoPallonKorkeus * AstronauttiLinssi.KuvanKorkeus), y.Ajo.Value.Korkeus);
+            Oleta.Sama(2.6f, y.AjonKesto);
+            Oleta.Tosi(l.PalaaAloitukseen(a, 2.78f));
+            Oleta.Sama(a.Korkeus, y.Ajo.Value.Korkeus);
+            Oleta.Sama(2.78f, y.AjonKesto);
+            y.Vahennetty = true;
+            l.KatsoKohteeseen(10, 20, 2.6f);
+            Oleta.Sama(0f, y.AjonKesto, "vähennetty liike: hyppy");
+            l.Sulje();
+            Oleta.Tosi(!l.PalaaAloitukseen(a, 1f), "suljettu linssi ei aja kameraa");
+        }
+
         [Testi] static void SulkeminenPalauttaaPallon()
         {
             var (l, y, n) = Luo();

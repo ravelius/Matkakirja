@@ -102,6 +102,9 @@ namespace Matkakirja.Linssit.Astronautti
         double avattu, vaiheAlkoi, avaus;
         int valmiitaKehyksia;
         bool zoomi, nimet;
+        /// <summary>Avauksen laskeutumisen päätepiste ja loppuhetki (ms): Pulun tervetulon aloitusnäkymä (Aloitustila).</summary>
+        Nakyma? avausajonKohde;
+        double avausajoPaattyy;
 
         public AvauksenVaihe Vaihe { get; private set; }
         public Havaintokohde AvoinKuva { get; private set; }
@@ -132,6 +135,7 @@ namespace Matkakirja.Linssit.Astronautti
             zoomi = false;
             nimet = false;
             AvoinKuva = null;
+            avausajonKohde = null;
             avaus = y.KokoPallonKorkeus;
 
             Vaihe = AvauksenVaihe.Musta;
@@ -382,11 +386,12 @@ namespace Matkakirja.Linssit.Astronautti
             Siirry(y.VahennettyLiike ? AvauksenVaihe.Pois : AvauksenVaihe.OtsikkoPois, nyt);
             if (zoomi) return;
             zoomi = true;
-            // Avauszoomi alkaa paljastuksesta (web: ei kulje, kun paljastus odottaa).
+            // Avauszoomi alkaa paljastuksesta (web: ei kulje, kun paljastus odottaa). Päätepiste talteen Pulun tervetulolle.
             var k = y.Kamera;
-            y.AjaKamera(new Nakyma(k.Lat, k.Lon, avaus * Astronauttimatikka.AvausajonLoppu),
-                y.VahennettyLiike ? 0f : (float)(Astronauttimatikka.AvauszoominKestoMs / 1000),
-                Astronauttimatikka.AvausPehmennys);
+            float kesto = y.VahennettyLiike ? 0f : (float)(Astronauttimatikka.AvauszoominKestoMs / 1000);
+            avausajonKohde = new Nakyma(k.Lat, k.Lon, avaus * Astronauttimatikka.AvausajonLoppu);
+            avausajoPaattyy = nyt + kesto * 1000;
+            y.AjaKamera(avausajonKohde.Value, kesto, Astronauttimatikka.AvausPehmennys);
         }
 
         void Siirry(AvauksenVaihe v, double nyt)
@@ -466,6 +471,40 @@ namespace Matkakirja.Linssit.Astronautti
             if (AvoinKuva == null) return;
             AvoinKuva = null;
             nakyma.KuvaPois();
+        }
+
+        // ---- Pulun tervetulo (PulunTervetulo; web satelliitti-avaruus.js aloitustila, katsoKohteeseen, palaaAloitukseen) ----
+
+        /// <summary>
+        /// Aloitusnäkymä talteen (web aloitustila): kameran nykyinen näkymä, avauksen laskeutumisen aikana sen päätepiste
+        /// (lepokorkeus), jottei paluu jää laskeutumisen välikorkeuteen. null = linssi kiinni.
+        /// </summary>
+        public Nakyma? Aloitustila()
+        {
+            if (!Auki) return null;
+            if (avausajonKohde.HasValue && Nyt < avausajoPaattyy) return avausajonKohde;
+            return y.Kamera;
+        }
+
+        /// <summary>
+        /// Kamera kohteen ylle nykyisellä korkeudella, kuitenkin enintään lepokorkeudella (web katsoKohteeseen, Pulun pyöräytys
+        /// Venetsian ylle repliikin tahdissa). Ei avauksen mustan aikana eikä kyydissä.
+        /// </summary>
+        public bool KatsoKohteeseen(double lat, double lon, float kestoS)
+        {
+            if (!Auki || Vaihe == AvauksenVaihe.Musta || kyyti.Kyydissa || double.IsNaN(lat) || double.IsNaN(lon)) return false;
+            double h = Math.Min(y.Kamera.Korkeus, avaus * KuvanKorkeus);
+            y.AjaKamera(new Nakyma(lat, lon, h), y.VahennettyLiike ? 0f : Math.Max(0f, kestoS), Matkakirja.Linssit.Kamera.Kamerakayrat.Pehmea);
+            return true;
+        }
+
+        /// <summary>Paluu aloitusnäkymään (web palaaAloitukseen) samalla kuminauhalla kuin linssin sulun paluu; vähennetyllä liikkeellä hyppy.</summary>
+        public bool PalaaAloitukseen(Nakyma tila, float kestoS)
+        {
+            if (!Auki || kyyti.Kyydissa) return false;
+            y.AjaKamera(tila, y.VahennettyLiike ? 0f : Math.Max(0f, kestoS),
+                Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));
+            return true;
         }
 
         public void Sulje()
