@@ -49,6 +49,9 @@ namespace Matkakirja.Linssit.Aikajana
                 Lyhyt = MiniJson.Teksti(linssi, "lyhyt"),
                 Jarjestys = (int)(MiniJson.Luku(linssi, "jarjestys") ?? 25),
                 Ikoni = MiniJson.Teksti(linssi, "ikoni"),
+                // Pillerivalikon esikatselu (web LINSSI.esittely #3611 ja havainnekuva); puuttuessa LinssiEsittelyt-taulusta.
+                Esittely = MiniJson.Teksti(linssi, "esittely"),
+                Havainnekuva = MiniJson.Teksti(linssi, "havainnekuva"),
                 Valokuva = MiniJson.Totuus(linssi, "valokuva"),
                 Lahde = lahde == null ? null : new Lahde
                 {
