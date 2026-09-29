@@ -256,11 +256,13 @@ namespace Matkakirja.Natiivi
             {
                 if (perus <= 0f) perus = t.resolvedStyle.fontSize;
                 if (perus <= 0f || string.IsNullOrEmpty(t.text)) return;
-                float muut = t.resolvedStyle.marginLeft + t.resolvedStyle.marginRight;
+                // Labelin oma reunus ja sisäreunus mukaan (1.0.56-palautteen laitekuva: ilman niitä "Äänimaise…" 300 pt:n valikossa).
+                var ts = t.resolvedStyle;
+                float muut = ts.marginLeft + ts.marginRight + ts.paddingLeft + ts.paddingRight + ts.borderLeftWidth + ts.borderRightWidth;
                 foreach (var c in b.Children())
                     if (c != t && c.resolvedStyle.display != DisplayStyle.None)
                         muut += c.layout.width + c.resolvedStyle.marginLeft + c.resolvedStyle.marginRight;
-                float tila = (b.contentRect.width - muut) * 0.97f;
+                float tila = (b.contentRect.width - muut) * 0.95f;
                 if (float.IsNaN(tila) || tila <= 0f) return;
                 float nyt = t.resolvedStyle.fontSize > 0f ? t.resolvedStyle.fontSize : perus;
                 float leveys = t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * perus / nyt;
