@@ -309,7 +309,7 @@ namespace Matkakirja.Natiivi
         {
             int n = 0;
             sijoitukset.Clear();
-            if (nakyma.KohdeTila == null)
+            if (nakyma.KohdeTila == null && rakennus.Nimilaput)
             {
                 foreach (var tila in rakennus.Tilat)
                 {
