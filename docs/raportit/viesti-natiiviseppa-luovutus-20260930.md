@@ -2,7 +2,21 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, max, Macin käyttäjä koodaus). Edellinen: -20260929.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI
+## PÄIVITYS 30.9. klo 00.3x — LUE TÄMÄ ENSIN
+
+- **1.0.59 KÄÄNNETTY 00.21 = käännös c673af0d, juna/b13 4629e0ad** (BUILD 58 + 3d-pois 384218a1, linna-valo 13600240, matkamuisto 6ef574bc,
+  luenta-alku cee14dc6 (iPad 49/49)). Asennettu Laitetestaajan 4 laitteeseen + F989814A (Siirtoseppä). Laitetestaajalla savukeohje.
+  PASS → BUILD 59 = `merge --no-ff 4629e0ad` masteriin 3b4f2e33:n päälle, puu = c673af0d; SHA + muutosrivi Julkaisijalle ja Päätoimittajalle.
+  .app talteen: proto-3d/lokit/juna-1059-4629e0ad/ (md5 UF 6568a22d…).
+- **1.0.60 = sivuhaara natiiviseppa/juna-1060 8e77c475** = 4629e0ad + linssiseppa/linssi-pelielementit 28316eef (testit 0/410/362/517).
+  Avaa BUILD 59:n jälkeen; Linssiseppä haluaa .appin kansioon proto-3d/lokit/juna-1060-8e77c475/.
+- **VIRHEET, joista opittiin (00.2x):** (1) siirsin kärjen jo käännetyn junan päälle — ehto tarkisti vain käynnissä olevan käännöksen.
+  Palautettu minuutissa (juna.log). EHTO JATKOSSA: kääntämätön = `juna-viimeisin.txt` ≠ juna/b13-kärki. (2) Kopioin .appin
+  kaannos-kopion Build/dd-sim:stä, jonka Natiivi-UI:n testikäännös oli jo ylikirjoittanut → F989814A sai väärän käännöksen 00.26,
+  korjattu 00.27. OTA JUNAN .app AINA Laitetestaajan laitteen asennuksesta
+  (~/Library/Developer/CoreSimulator/Devices/1572C658-…/data/Containers/Bundle/Application/*/Matkakirja3D.app).
+
+## TILA HETI (00.0x, osin vanhentunut — ks. päivitys)
 
 - **proto master 3b4f2e33 = BUILD 58** (juna 27291efd, käännös f50f5e23, Laitetestaaja 1b6de1f32). SHA Julkaisijalle ja Päätoimittajalle
   lähetetty. TF 1.0.58 saa lähteä (iPad-laite valmis).
