@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2424, teksti: 'Olavinlinna: elävä linna kohta 3 – keskushalli,… (#3651)' },
   { v: 2423, teksti: 'BLR + SVK: pitkä + pulu, 15 aluetta (#3647)' },
   { v: 2422, teksti: 'Olavinlinna: elävä linna vaiheet 1–2 – elävät k… (#3648)' },
   { v: 2421, teksti: 'Lippuankkurit maan oikeaan yläkulmaan (#3646)' },
