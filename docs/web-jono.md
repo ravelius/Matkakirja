@@ -11,3 +11,4 @@ webiin, jos ne on tehty natiivissa paremmin.
 | 29.9. | Matkalaukku: säätimet, Pieni liike, Kuljettu reitti, Ehdota ja Offline Asetuksiin; Retkikunta Uusi peli -napin viereen; Kehittäjä-nappi Asetuksiin; Näytä huntu Asetuksiin; Asetukset leveämmäksi, Äänet-napit pois | OMISTAJA: MATKALAUKKU JA ASETUKSET UUSIKSI | natiivi-ui/palaute-1050 | pelikoodari-valikko-asetukset |
 | 29.9. | Linssit ja Aarteet: lista oikeaan reunaan, valittu rivi oranssiksi Aktivoi/Näytä-napiksi | OMISTAJA: AARTEET SAMOIN KUIN LINSSIT | natiivi-ui/palaute-1050 0b1f838d | pelikoodari-linssit-oikealle |
 | 29.9. | iPadin Maailma-nappi pois kartalta, nostot näkyvät maakuntatilassa, iPadin nahkapalkki 89 pt | OMISTAJA: NOSTOT NÄKYVÄT MAAKUNTATILASSA | natiivi-ui/ipad-nahka | — |
+| 29.9. | Pulun chat: nostojen äänikontrollit ja asetussäädöt chat-ikkunan yläreunaan; Näytä puhekuplat ja Ehdota sisältöä ikoneiksi | OMISTAJA: PULUN CHATIN YLÄREUNAAN ÄÄNIKONTROLLIT | Pelikoodari (tulossa) | — |
