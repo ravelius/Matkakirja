@@ -84,10 +84,20 @@ namespace Matkakirja.Natiivi
         /// <summary>Soiva (tai viimeksi kuultu) pala; katkennut luenta jatkaa tästä (web __lukijaKohta).</summary>
         int kohta, jatkoKohta = -1;
 
+        /// <summary>Luennan persoona (Puhe.Lue): kortit kertojalla, Pulun chat "pollo" (Pelikoodari 29.9.2026).</summary>
+        readonly string persoona;
+        /// <summary>
+        /// Valikon ääni-valitsimen tilalle rakennettava rivi (Pulun chat: "Lue vastaukset automaattisesti", koska Pululla on
+        /// yksi ääni). Null = kertojan ääni-valitsin kuten ennen.
+        /// </summary>
+        readonly Action<VisualElement> korvaavaAaniRivi;
+
         public KortinLukija(VisualElement isa, string otsikko = "Kuuntele kortti", string luokka = null, bool saatimet = false,
-            Func<Rect> rajaus = null)
+            Func<Rect> rajaus = null, string persoona = "kertoja", Action<VisualElement> aaniRivi = null)
         {
             this.otsikko = otsikko;
+            this.persoona = persoona;
+            korvaavaAaniRivi = aaniRivi;
             this.saatimet = saatimet;
             this.rajaus = rajaus;
             if (!saatimet)
@@ -214,9 +224,9 @@ namespace Matkakirja.Natiivi
                 if (i >= palat.Count) { jatkoKohta = -1; kohta = palat.Count; Pysayta(false); return; } // luettu loppuun: alusta
                 kohta = i;
                 latausAlku = Time.unscaledTime * 1000f;
-                if (!puhe.Lue(palat[i], "kertoja", 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true, loppuTagi: tagit[i])) { Pysayta(); return; }
+                if (!puhe.Lue(palat[i], persoona, 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true, loppuTagi: tagit[i])) { Pysayta(); return; }
                 i++;
-                Esihae(puhe, palat, i, tagit: tagit);
+                Esihae(puhe, palat, i, persoona, tagit);
                 PaivitaValikko();
             }
             Seuraava();
@@ -244,6 +254,9 @@ namespace Matkakirja.Natiivi
         public void AvaaValikko() { if (saatimet) VaihdaPaneeli(); }
 
         public void Pysayta() => Pysayta(true);
+
+        /// <summary>Tämä lukija lukee (myös tauolla); Pulun chat erottaa sillä oman automaattisen luentansa.</summary>
+        public bool Lukee => luetaan;
 
         /// <summary>Luenta seis; sulje = false jättää valikon auki (luettu loppuun).</summary>
         void Pysayta(bool sulje)
@@ -419,23 +432,8 @@ namespace Matkakirja.Natiivi
                 arvo.text = NopeusTeksti(Puhe.Nopeus);
             });
 
-            var aaniRivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("Ääni", "mk-lukija-saadot__nimi", aaniRivi), Kirjasin.Luku);
-            // Pelinimet: näytössä nimi, pyynnössä tunnus (web AANTEN_PELINIMET). Oletus ensin "Aino (oletus)".
-            var nimet = new List<string> { Striimiaani.Pelinimet[0].Nimi + " (oletus)" };
-            for (int i = 1; i < Striimiaani.Pelinimet.Count; i++) nimet.Add(Striimiaani.Pelinimet[i].Nimi);
-            string valittu = Striimiaani.Valittu;
-            int indeksi = 0;
-            for (int i = 1; i < Striimiaani.Pelinimet.Count; i++) if (Striimiaani.Pelinimet[i].Tunnus == valittu) indeksi = i;
-            var valinta = new DropdownField(nimet, indeksi);
-            valinta.AddToClassList("mk-lukija-saadot__valinta");
-            Kirjasimet.Aseta(valinta, Kirjasin.Luku);
-            aaniRivi.Add(valinta);
-            valinta.RegisterValueChangedCallback(_ =>
-            {
-                int k = valinta.index;
-                Striimiaani.Aseta(k > 0 ? Striimiaani.Pelinimet[k].Tunnus : null);
-            });
+            if (korvaavaAaniRivi != null) korvaavaAaniRivi(saadot);
+            else RakennaAaniValinta(saadot);
 
             // 3. kelaus ALIMPANA (omistaja: "alimpana -10sek ja +10sek"): taaksepäin vasemmalla, eteenpäin oikealla.
             kelausnapit.Clear();
@@ -464,6 +462,28 @@ namespace Matkakirja.Natiivi
             Ruudunpaivitys.Herata(0.4f);
             // Napautus valikon ohi sulkee vain valikon (web kerran-kuuntelija). Valikon ponnahduslista on omassa paneelissaan.
             Juuri.panel?.visualTree.RegisterCallback<PointerDownEvent>(OhiNapautus, TrickleDown.TrickleDown);
+        }
+
+        /// <summary>Kertojan ääni-valitsin valikkoon (pelinimet; oletus ensin).</summary>
+        static void RakennaAaniValinta(VisualElement saadot)
+        {
+            var aaniRivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti("Ääni", "mk-lukija-saadot__nimi", aaniRivi), Kirjasin.Luku);
+            // Pelinimet: näytössä nimi, pyynnössä tunnus (web AANTEN_PELINIMET). Oletus ensin "Aino (oletus)".
+            var nimet = new List<string> { Striimiaani.Pelinimet[0].Nimi + " (oletus)" };
+            for (int i = 1; i < Striimiaani.Pelinimet.Count; i++) nimet.Add(Striimiaani.Pelinimet[i].Nimi);
+            string valittu = Striimiaani.Valittu;
+            int indeksi = 0;
+            for (int i = 1; i < Striimiaani.Pelinimet.Count; i++) if (Striimiaani.Pelinimet[i].Tunnus == valittu) indeksi = i;
+            var valinta = new DropdownField(nimet, indeksi);
+            valinta.AddToClassList("mk-lukija-saadot__valinta");
+            Kirjasimet.Aseta(valinta, Kirjasin.Luku);
+            aaniRivi.Add(valinta);
+            valinta.RegisterValueChangedCallback(_ =>
+            {
+                int k = valinta.index;
+                Striimiaani.Aseta(k > 0 ? Striimiaani.Pelinimet[k].Tunnus : null);
+            });
         }
 
         int nykyinenRivi = -1;
