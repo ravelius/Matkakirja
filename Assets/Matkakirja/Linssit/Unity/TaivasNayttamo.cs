@@ -8,9 +8,13 @@
 //             sarakekierto ECI → horisontti paikallisesta tähtiajasta; näkyvyys auringon korkeudesta
 //   Kuu       KyydinKuu (vaihe auringon suunnasta, 0,52°)
 //   suunnat   P, I, E, L horisontissa (kartan fontti)
-//   ERÄ 3     tähtikuviot (Ydin/Taivas/Tahtikuviot: 16 kuviota, napsautettu BSC5-tähtiin) hentoina viivoina ja nimet,
-//             planeetat Merkurius–Saturnus (Ydin/Taivas/Planeetat, JPL) kirkkaina pisteinä nimineen; kaikki häipyvät
-//             päivänvalossa kuten tähdet (planeetat näkyvät jo hämärässä).
+//   ERÄ 3     planeetat Merkurius–Saturnus (Ydin/Taivas/Planeetat, JPL) kirkkaina pisteinä nimineen (näkyvät jo hämärässä).
+//   WEBIN TÄHTITAIVAS (pelikoodari-tahtitaivas d9a9438a, Päätoimittaja 29.9.): aineisto Resources/Taivas/tahtitaivas.json
+//             (1 656 tähteä HR-numeroin, 88 tähdistöä ConstellationLines CC BY 4.0, suomenkieliset nimet). NYT / 1873: valosaaste
+//             (suurkaupunki mag 2,5, muut 3,5 ↔ 1873 kaikki 4,5; nyt horisontissa kaupungin kajo), Horation kortti 1873:n
+//             ensimmäisellä valinnalla. Napautus sytyttää lähimmän tähdistön (viivat kultaisina, nimi taivaalle, huomio korttiin),
+//             seuraava napautus sammuttaa. Livia kysyy: sytyttää tähdistön ja tarjoaa neljä nimeä; oikea +20 tp
+//             (PisteetAnnettu → Matka.Kokemus.Anna). Säännöt Ydin/Taivas/TaivaanSaannot.cs, paneeli TaivasPaneeli.cs.
 //   ohjaus    veto kääntää katsetta (atsimuutti ja korkeus −5…90°), nipistys tai rulla zoomaa (näkökenttä 25…100°)
 //   GYRO      (erä 2) puhelin osoittaa taivaalle: Input Systemin AttitudeSensor (CoreMotion). Kallistus ja korkeus ovat
 //             todellisia (painovoima), mutta suunta on suhteellinen: iOS:n asentoanturin kiertokulma on mielivaltainen, eikä
@@ -46,7 +50,26 @@ namespace Matkakirja.Natiivi
         Camera kamera, pallonKamera;
         Material taivasMat, maaMat, tahtiMat, kuuMat, viivaMat, planeettaMat;
         Mesh viivaMesh, planeettaMesh;
-        readonly List<(TextMeshPro teksti, Vector3 eci)> nimiot = new List<(TextMeshPro, Vector3)>();
+        TaivasAineisto aineisto;
+        GameObject tahtiOlio, viivaOlio;
+        TextMeshPro kuvionNimi;
+        TaivasPaneeli paneeli;
+        Tahdisto sytytetty, liviaKuvio;
+        Kysymys kysymys;
+        readonly HashSet<string> kysytyt = new HashSet<string>();
+        int kysymyksia;
+        bool horatioNaytetty;
+        double viimeJd = double.NaN, magRaja = 3.5;
+        float tilaPaivitetty = -10f;
+        int nakyviaTahtia;
+        readonly System.Random arpa = new System.Random();
+        static readonly int IdKajo = Shader.PropertyToID("_Kajo");
+        /// <summary>1873 (valosaasteeton taivas) vai nyt; pelaajan kaupunki (web: suurkaupungin raja); pisteet oikeasta vastauksesta.</summary>
+        public bool Vuosi1873 { get; private set; }
+        public string Kaupunki;
+        public System.Action<int> PisteetAnnettu;
+        public double MagRaja => magRaja;
+        public string Sytytetty => sytytetty?.Suomi ?? liviaKuvio?.Suomi;
         readonly List<TextMeshPro> planeettaNimet = new List<TextMeshPro>();
         double planeetatLaskettu = double.NaN;
         Mesh kupuMesh, kuuMesh, tahtiMesh;
@@ -108,18 +131,17 @@ namespace Matkakirja.Natiivi
             kuuMesh = Nelio();
             Olio("Kuu", kuuMesh, kuuMat, 1f);
             viivaMat = new Material(Resources.Load<Shader>("Varjostimet/TaivaanViivat")) { name = "TaivaanViivat" };
+            viivaMat.SetColor("_Vari", new Color(0.94f, 0.89f, 0.76f, 1f));   // web rgba(240, 226, 194, 0.85)
             planeettaMat = new Material(Resources.Load<Shader>("Varjostimet/KyydinTahdet")) { name = "TaivaanPlaneetat" };
             planeettaMesh = Planeettamesh();
             Olio("Planeetat", planeettaMesh, planeettaMat, 1f);
             foreach (var p in Planeetat.Kaikki) planeettaNimet.Add(Nimio(p.Nimi, new Color(1f, 0.93f, 0.78f, 0.95f), 34));
-            StartCoroutine(KyydinTaivas.HaeTahtiLista(lista =>
-            {
-                if (lista == null || this == null) return;
-                tahtiMesh = KyydinTaivas.RakennaTahdet(lista, out _, out _);
-                if (tahtiMesh != null) Olio("Tahdet", tahtiMesh, tahtiMat, 1f).SetActive(auki);
-                RakennaKuviot(lista);
-                Debug.Log($"MATKAKIRJA tähtitaivas: {lista.Count} tähteä (BSC5), {Tahtikuviot.Kaikki.Length} tähtikuviota");
-            }));
+            var ta = Resources.Load<TextAsset>("Taivas/tahtitaivas");
+            aineisto = ta != null ? TaivasAineisto.Lue(Matkakirja.Peli.MiniJson.Jasenna(ta.text)) : new TaivasAineisto();
+            tahtiOlio = Olio("Tahdet", null, tahtiMat, 1f);
+            viivaOlio = Olio("Kuviot", null, viivaMat, 1f);
+            kuvionNimi = Nimio("", new Color(0.94f, 0.89f, 0.76f, 0.95f), 40);
+            Debug.Log($"MATKAKIRJA tähtitaivas: {aineisto.Tahdet.Count} tähteä, {aineisto.Tahdistot.Count} tähdistöä");
             Suunnat();
             foreach (var o in oliot) o.SetActive(false);
         }
@@ -154,30 +176,119 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
-        /// <summary>Tähtikuvioiden viivat yhdeksi viivameshiksi (kärjet ECI-suuntia) ja nimet kuvion keskelle.</summary>
-        void RakennaKuviot(List<object> lista)
+        /// <summary>Tähdet kirkkausrajaan asti (web: valosaaste karsii himmeät) samaksi meshiksi kuin kyydissä.</summary>
+        void RakennaTahdet()
         {
-            var luettelo = new List<(double, double)>(lista.Count);
-            foreach (var o in lista)
-                if (o is List<object> r && r.Count >= 2) luettelo.Add((System.Convert.ToDouble(r[0]), System.Convert.ToDouble(r[1])));
-            var napsautetut = Tahtikuviot.Napsauta(luettelo);
+            var lista = new List<object>();
+            foreach (var t in aineisto.Tahdet)
+                if (t.Mag <= magRaja) lista.Add(new List<object> { t.Ra, t.Dec, t.Mag, t.Bv });
+            if (tahtiMesh != null) Destroy(tahtiMesh);
+            tahtiMesh = lista.Count > 0 ? KyydinTaivas.RakennaTahdet(lista, out _, out _) : null;
+            tahtiOlio.GetComponent<MeshFilter>().sharedMesh = tahtiMesh;
+        }
+
+        /// <summary>Sytytetyn ja Livian tähdistön viivat (web: vain ne, ei muita): viivajonon peräkkäiset tähdet pareittain.</summary>
+        void PaivitaViivat()
+        {
             var karjet = new List<Vector3>();
-            var indeksit = new List<int>();
-            for (int k = 0; k < napsautetut.Count; k++)
+            foreach (var k in new[] { sytytetty, liviaKuvio })
             {
-                var t = napsautetut[k];
-                foreach (var (a, b) in Tahtikuviot.Kaikki[k].Viivat)
-                {
-                    indeksit.Add(karjet.Count); karjet.Add(V(t[a]));
-                    indeksit.Add(karjet.Count); karjet.Add(V(t[b]));
-                }
-                nimiot.Add((Nimio(Tahtikuviot.Kaikki[k].Nimi, new Color(0.62f, 0.74f, 0.95f, 0.8f), 30), V(Tahtikuviot.Keskipiste(t))));
+                if (k == null) continue;
+                foreach (var jono in k.Viivat)
+                    for (int i = 0; i + 1 < jono.Length; i++)
+                        if (aineisto.Hr.TryGetValue(jono[i], out var a) && aineisto.Hr.TryGetValue(jono[i + 1], out var b))
+                        { karjet.Add(V(a.Eci)); karjet.Add(V(b.Eci)); }
             }
-            viivaMesh = new Mesh { name = "TaivaanViivat" };
+            if (viivaMesh == null) viivaMesh = new Mesh { name = "TaivaanViivat" };
+            viivaMesh.Clear();
             viivaMesh.SetVertices(karjet);
-            viivaMesh.SetIndices(indeksit, MeshTopology.Lines, 0);
+            var ind = new int[karjet.Count];
+            for (int i = 0; i < ind.Length; i++) ind[i] = i;
+            viivaMesh.SetIndices(ind, MeshTopology.Lines, 0);
             viivaMesh.bounds = new Bounds(Vector3.zero, Vector3.one * 1e9f);
-            Olio("Kuviot", viivaMesh, viivaMat, 1f).SetActive(auki);
+            viivaOlio.GetComponent<MeshFilter>().sharedMesh = viivaMesh;
+            var k2 = sytytetty ?? liviaKuvio;
+            kuvionNimi.text = k2 == null ? "" : liviaKuvio != null && sytytetty == null ? "?" : $"{k2.Suomi}\n<size=70%><i>{k2.Latina}</i></size>";
+        }
+
+        // --- NYT / 1873, napautus ja Livian kysymys (web tahtitaivas.js) ----------------------------------------------------------
+
+        /// <summary>Valitsee taivaan: 1873 (raja 4,5) tai nyt (valosaaste); 1873:n ensimmäinen valinta näyttää Horation kortin.</summary>
+        public void AsetaVuosi(bool v1873)
+        {
+            Vuosi1873 = v1873;
+            magRaja = aineisto.Kirkkausraja(v1873, Kaupunki);
+            RakennaTahdet();
+            if (sytytetty != null && !Nakyvat().Exists(n => n.Tahdisto == sytytetty)) Sammuta();
+            if (v1873 && !horatioNaytetty && kysymys == null)
+            {
+                horatioNaytetty = true;
+                paneeli?.Nayta("Horatio, Marseille 1873", aineisto.Kortti);
+            }
+            tilaPaivitetty = -10f;
+        }
+
+        List<NakyvaTahdisto> Nakyvat() => double.IsNaN(viimeJd) ? new List<NakyvaTahdisto>() : aineisto.NakyvatTahdistot(lat, lon, viimeJd, magRaja);
+
+        /// <summary>Pallon napautus (ruutupiste, y ylös): lähin näkyvä viivatähti 26 pt:n säteellä sytyttää tähdistön, muuten sammuttaa.</summary>
+        public void Napautus(Vector2 ruutu)
+        {
+            if (kysymys != null) return;
+            float sade = 26f * LinssiOhjain.Pistekerroin;
+            Tahdisto paras = null;
+            float parasD = sade;
+            foreach (var n in Nakyvat())
+                foreach (var (_, suunta) in n.Pisteet)
+                {
+                    if (suunta.Korkeus < 0) continue;
+                    var sp = kamera.WorldToScreenPoint(transform.TransformPoint(new Vector3((float)suunta.Ita, (float)suunta.Ylos, (float)suunta.Pohjoinen) * 300f));
+                    if (sp.z <= 0) continue;
+                    float d = Vector2.Distance(ruutu, sp);
+                    if (d < parasD) { parasD = d; paras = n.Tahdisto; }
+                }
+            if (paras == null || paras == sytytetty) { Sammuta(); return; }
+            sytytetty = paras;
+            liviaKuvio = null;
+            PaivitaViivat();
+            if (!string.IsNullOrEmpty(paras.Huomio)) paneeli?.Nayta(paras.Suomi, paras.Huomio, paras.Latina);
+            else paneeli?.Piilota();
+        }
+
+        void Sammuta()
+        {
+            sytytetty = null;
+            liviaKuvio = null;
+            PaivitaViivat();
+            if (kysymys == null) paneeli?.Piilota();
+        }
+
+        /// <summary>Livia kysyy (web arvoKysymys): tähdistö syttyy ilman nimeä, neljä vaihtoehtoa.</summary>
+        public void Kysy()
+        {
+            var k = aineisto.ArvoKysymys(Nakyvat(), kysytyt, kysymyksia, arpa);
+            if (k == null) { paneeli?.Nayta("Livia", "Nyt näkyy liian vähän tähdistöjä. Kokeile vuotta 1873, silloin taivas oli täynnä."); return; }
+            kysymys = k;
+            kysymyksia++;
+            sytytetty = null;
+            liviaKuvio = k.Oikea.Tahdisto;
+            PaivitaViivat();
+            paneeli?.Nayta("Livia", k.Teksti, null, k.Vaihtoehdot.ConvertAll(v => v.Suomi));
+        }
+
+        public void Vastaa(int i)
+        {
+            if (kysymys == null || i < 0 || i >= kysymys.Vaihtoehdot.Count) return;
+            var k = kysymys;
+            bool oikein = k.Vaihtoehdot[i] == k.Oikea.Tahdisto;
+            kysytyt.Add(k.Oikea.Tahdisto.Lyhenne);
+            string teksti = aineisto.Palaute(oikein, k.Oikea.Tahdisto) + (oikein ? $" +{aineisto.ArvauksenTp} tp" : "");
+            paneeli?.Vastaus(i, k.Vaihtoehdot.IndexOf(k.Oikea.Tahdisto), teksti, oikein);
+            if (oikein) PisteetAnnettu?.Invoke(aineisto.ArvauksenTp);
+            // Vastauksen jälkeen tähdistö saa nimensä taivaalle.
+            sytytetty = k.Oikea.Tahdisto;
+            liviaKuvio = null;
+            kysymys = null;
+            PaivitaViivat();
         }
 
         static Vector3 V((double x, double y, double z) s) => new Vector3((float)s.x, (float)s.y, (float)s.z);
@@ -231,7 +342,20 @@ namespace Matkakirja.Natiivi
         /// <summary>Nimiöt horisonttiin nykyisellä kierrolla: näkyvissä vain horisontin yllä, kasvot kameraan päin.</summary>
         void PaivitaNimiot(Vector3 kx, Vector3 ky, Vector3 kz, float kuviot, float planeetat)
         {
-            foreach (var (t, eci) in nimiot) Aseta(t, kx * eci.x + ky * eci.y + kz * eci.z, kuviot, -1f);
+            var k = sytytetty ?? liviaKuvio;
+            if (k == null) Aseta(kuvionNimi, Vector3.down, 0f, 0f);
+            else
+            {
+                // Nimi tähdistön horisontin yllä olevien tähtien keskelle.
+                Vector3 summa = Vector3.zero;
+                foreach (var hr in k.Hrt)
+                    if (aineisto.Hr.TryGetValue(hr, out var t))
+                    {
+                        var d = kx * (float)t.Eci.x + ky * (float)t.Eci.y + kz * (float)t.Eci.z;
+                        if (d.y > 0) summa += d;
+                    }
+                Aseta(kuvionNimi, summa.sqrMagnitude > 0 ? summa.normalized : Vector3.down, kuviot, -18f);
+            }
             for (int i = 0; i < planeettaNimet.Count; i++)
             {
                 var s = planeettaSuunnat[i];
@@ -289,6 +413,12 @@ namespace Matkakirja.Natiivi
             alkuKatse = true;
             gyroTasattu = Quaternion.identity;
             AsetaGyro(true);
+            paneeli = new TaivasPaneeli();
+            paneeli.TilaValittu += AsetaVuosi;
+            paneeli.KysyPainettu += Kysy;
+            paneeli.VastausValittu += Vastaa;
+            paneeli.KorttiSuljettu += () => { if (kysymys != null) { kysymys = null; liviaKuvio = null; PaivitaViivat(); } };
+            AsetaVuosi(false);
         }
 
         bool alkuKatse;
@@ -324,12 +454,17 @@ namespace Matkakirja.Natiivi
             float h = (float)a.Korkeus;
             taivasMat.SetFloat(IdHehku, Mathf.Clamp01(1f - Mathf.Abs(h + 1f) / 7f));
             tahtiMat.SetFloat(IdPeitto, (float)Nakyvyys);
-            // Kuviot hentoina, planeetat näkyvät jo hämärässä (kirkkaat kappaleet ennen tähtiä).
-            float kuviot = (float)Nakyvyys * 0.35f;
+            // Sytytetyn tähdistön viivat ja nimi näkyvät myös hämärässä; planeetat näkyvät jo hämärässä (ennen tähtiä).
+            float kuviot = Mathf.Max(0.35f, (float)Nakyvyys) * 0.85f;
+            viimeJd = jd;
+            // Kaupungin kajo horisontissa (valosaaste) nykyajan yössä; 1873 ei kajoa.
+            float kajo = Vuosi1873 ? 0f : (float)Nakyvyys * (magRaja <= aineisto.RajaSuurkaupunki ? 1f : 0.55f);
+            taivasMat.SetColor(IdKajo, new Color(0.26f, 0.15f, 0.07f) * kajo);
+            if (Time.unscaledTime - tilaPaivitetty > 2f) PaivitaTila(jd);
             float planeetat = Mathf.Clamp01((float)Taivaslaskenta.TahtienNakyvyys(a.Korkeus + 5));
             viivaMat.SetFloat(IdPeitto, kuviot);
             planeettaMat.SetFloat(IdPeitto, planeetat);
-            PaivitaNimiot(kx, ky, kz, kuviot * 2.2f, planeetat);
+            PaivitaNimiot(kx, ky, kz, kuviot, planeetat);
             kuuMat.SetVector(IdSuunta, new Vector3((float)k.Ita, (float)k.Ylos, (float)k.Pohjoinen));
             kuuMat.SetVector(IdAurinko, aurinko);
             // Ensimmäinen katse: Kuuhun, jos se on taivaalla, muuten etelään.
@@ -341,8 +476,28 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        void PaivitaTila(double jd)
+        {
+            tilaPaivitetty = Time.unscaledTime;
+            double lst = Taivaslaskenta.Lst(jd, lon);
+            int n = 0;
+            foreach (var t in aineisto.Tahdet)
+                if (t.Mag <= magRaja && Taivaslaskenta.Horisonttiin(t.Eci, lat, lst).Korkeus >= aineisto.HorisontinVara) n++;
+            nakyviaTahtia = n;
+            var kello = Matkakirja.Linssit.Iss.IssNyt.Kello().AddHours(lon / 15.0);   // paikallinen aurinkoaika (web: kaupungin oma aika)
+            string paikka = !string.IsNullOrEmpty(Kaupunki) ? char.ToUpper(Kaupunki[0]) + Kaupunki.Substring(1)
+                : $"{System.Math.Abs(lat):0.0}° {(lat >= 0 ? "P" : "E")}";
+            paneeli?.Tila($"{paikka} · {(Vuosi1873 ? "1873" : "nyt")} · {kello:HH.mm} · {n} tähteä", Vuosi1873);
+        }
+
+        public int NakyviaTahtia => nakyviaTahtia;
+
         public void Sulje()
         {
+            paneeli?.Poista();
+            paneeli = null;
+            kysymys = null;
+            sytytetty = liviaKuvio = null;
             AsetaGyro(false);
             auki = false;
             if (kamera != null) kamera.enabled = false;
@@ -355,6 +510,9 @@ namespace Matkakirja.Natiivi
 
         Vector2? edellinen;
         float? edellinenVali;
+        bool kosketusAlkoi, kosketusUi, liikkui, nipistys;
+        Vector2 alkuPiste, viimePiste;
+        float alkuAika;
 
         /// <summary>Gyro-ohjaus päällä (AttitudeSensor on käytössä); testikomento taivas gyro 0|1.</summary>
         public bool Gyro { get; private set; }
@@ -478,6 +636,26 @@ namespace Matkakirja.Natiivi
             if (sormia == 0 && hiiri != null && hiiri.leftButton.isPressed) { sormia = 1; p0 = hiiri.position.ReadValue(); }
             if (hiiri != null && Mathf.Abs(hiiri.scroll.ReadValue().y) > 0.01f)
                 kamera.fieldOfView = Mathf.Clamp(kentta * (1f - Mathf.Sign(hiiri.scroll.ReadValue().y) * 0.08f), KenttaMin, KenttaMax);
+
+            // NAPAUTUS (web: napautus sytyttää tähdistön): lyhyt kosketus ilman liikettä. Kosketus, joka alkaa UI:n päältä
+            // (paneeli, vivut, ✕), ei käännä taivasta eikä ole napautus.
+            if (sormia > 0 && !kosketusAlkoi)
+            {
+                kosketusAlkoi = true; kosketusUi = SyoteLukko.Peittaa(p0); alkuPiste = p0; alkuAika = Time.unscaledTime;
+                liikkui = false; nipistys = false;
+            }
+            if (sormia > 0)
+            {
+                viimePiste = p0;
+                if (Vector2.Distance(p0, alkuPiste) > 10f * LinssiOhjain.Pistekerroin) liikkui = true;
+                if (sormia >= 2) nipistys = true;
+            }
+            else if (kosketusAlkoi)
+            {
+                kosketusAlkoi = false;
+                if (!kosketusUi && !liikkui && !nipistys && Time.unscaledTime - alkuAika < 0.5f) Napautus(viimePiste);
+            }
+            if (kosketusUi) sormia = 0;
 
             if (sormia >= 2)
             {

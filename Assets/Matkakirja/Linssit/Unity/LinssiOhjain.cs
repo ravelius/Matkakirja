@@ -1075,6 +1075,15 @@ namespace Matkakirja.Natiivi
             public void Avaa(ILinssiYmparisto y)
             {
                 nayttamo = TaivasNayttamo.Luo(o.kierto != null ? o.kierto.GetComponent<Camera>() : null);
+                // Pelaajan kaupunki (web: suurkaupungin valosaaste) ja pisteet oikeasta tähdistöstä (web vastaaTahtitaivaaseen).
+                nayttamo.Kaupunki = PeliOhjain.Instanssi?.PelaajanKaupunki;
+                nayttamo.PisteetAnnettu = tp =>
+                {
+                    var m = PeliOhjain.Instanssi?.Matka;
+                    if (m == null) return;
+                    m.Kokemus.Anna(m.Tila.Pelaaja, tp);
+                    o.Kirjaa($"taivas: tähdistö tunnistettu +{tp} tp");
+                };
                 linssi = new Matkakirja.Linssit.Taivas.TahtitaivasLinssi(nayttamo);
                 linssi.Avaa(y);
             }
@@ -1460,12 +1469,17 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "taivas")
                 {
                     // Tähtitaivas: "taivas" = tila, "taivas katso <atsimuutti> <korkeus> [kenttä]", "taivas kelaa <k>",
-                    // "taivas gyro 0|1|kaanteinen" (kaanteinen: A/B-kvaternio kääntäen laitetestiin).
+                    // "taivas gyro 0|1|kaanteinen" (kaanteinen: A/B-kvaternio kääntäen laitetestiin), "taivas 1873|nyt",
+                    // "taivas napauta <x> <y>" (ruutupikselit, y ylös), "taivas kysy", "taivas vastaa <0-3>".
                     var ts = rekisteri?.Hae("tahdet") as TahtitaivasSovitin;
                     var n = ts?.Nayttamo;
                     if (n != null && osat.Length > 3 && osat[1] == "katso")
                         n.Katso((float)Luku(osat[2]), (float)Luku(osat[3]), osat.Length > 4 ? (float)Luku(osat[4]) : (float?)null);
                     if (osat.Length > 2 && osat[1] == "kelaa") ts?.Linssi?.Kelaa(Luku(osat[2]));
+                    if (n != null && osat.Length > 1 && (osat[1] == "1873" || osat[1] == "nyt")) n.AsetaVuosi(osat[1] == "1873");
+                    if (n != null && osat.Length > 3 && osat[1] == "napauta") n.Napautus(new Vector2((float)Luku(osat[2]), (float)Luku(osat[3])));
+                    if (n != null && osat.Length > 1 && osat[1] == "kysy") n.Kysy();
+                    if (n != null && osat.Length > 2 && osat[1] == "vastaa") n.Vastaa((int)Luku(osat[2]));
                     if (n != null && osat.Length > 2 && osat[1] == "gyro")
                     {
                         if (osat[2] == "kaanteinen") TaivasNayttamo.Kaanteinen = !TaivasNayttamo.Kaanteinen;
@@ -1476,7 +1490,8 @@ namespace Matkakirja.Natiivi
                         + $"({Matkakirja.Linssit.Iss.IssNyt.Kello():HH:mm} UTC), aurinko {n.AurinkoKorkeus:F1}°, Kuu {n.KuuKorkeus:F1}° / {n.KuuAtsimuutti:F0}°, "
                         + $"tähtiä {(n.TahdetValmiit ? "ladattu" : "ei vielä")} näkyvyys {n.Nakyvyys:F2}, katse {n.Atsimuutti:F0}° / {n.Korkeus:F0}°, kenttä {n.Kentta:F0}°, "
                         + $"gyro {(n.Pohjoinen ? "pohjoinen (magneettinen kehys)" : n.Gyro ? "suhteellinen" : UnityEngine.InputSystem.AttitudeSensor.current == null ? "ei anturia" : "pois")}, "
-                        + $"deklinaatio {n.Deklinaatio:F1}°, kalibrointi {n.Tarkkuus}{(TaivasNayttamo.Kaanteinen ? ", kääntäen" : "")}");
+                        + $"deklinaatio {n.Deklinaatio:F1}°, kalibrointi {n.Tarkkuus}{(TaivasNayttamo.Kaanteinen ? ", kääntäen" : "")}, "
+                        + $"{(n.Vuosi1873 ? "1873" : "nyt")} raja {n.MagRaja:0.0} ({n.NakyviaTahtia} tähteä), kaupunki {n.Kaupunki ?? "-"}, sytytetty {n.Sytytetty ?? "-"}");
                 }
                 else if (osat[0] == "yokartta")
                 {
