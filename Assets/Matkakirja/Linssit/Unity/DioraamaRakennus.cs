@@ -77,8 +77,14 @@ namespace Matkakirja.Natiivi
         /// pysyvä tila -- seuraava AsetaPinta-kutsu palauttaa kyseisen pinnan B:hen normaalisti).</summary>
         public void PakotaTilaKaikille(bool b)
         {
-            foreach (var m in materiaalit.Values) if (m != null) m.SetFloat(IdTila, b ? 1f : 0f);
+            // B koskee vain pintoja, joilla on Codexin kuva (muut pysyvät A:na); pakotus muistetaan myöhemmin
+            // latautuville kuville (katselmointi 29.9.: A/B-kuva ei saa sekoittua kesken latauksen).
+            pakotettuTila = b ? 1 : 0;
+            foreach (var m in materiaalit.Values) if (m != null) m.SetFloat(IdTila, b && kuvalliset.Contains(m) ? 1f : 0f);
         }
+
+        int pakotettuTila = -1; // -1 = ei pakotusta, 0 = A, 1 = B
+        readonly HashSet<Material> kuvalliset = new HashSet<Material>();
 
         public bool SisaltaaTilan(string id) => tilat.ContainsKey(id);
 
@@ -98,7 +104,8 @@ namespace Matkakirja.Natiivi
         {
             m.SetTexture(IdPohjaKuva, kuva);
             m.SetColor(IdVari, Color.white);
-            m.SetFloat(IdTila, 1f); // era 2b: B (Codexin maalattu) vain kun tekstuuri on ladattu, ks. Valaistus-ominaisuus
+            kuvalliset.Add(m);
+            m.SetFloat(IdTila, pakotettuTila == 0 ? 0f : 1f); // era 2b: B vain kun tekstuuri on ladattu (ellei A pakotettu)
             double virtausU = 0, virtausV = 0;
             if (rakennus?.Pinnat != null && rakennus.Pinnat.TryGetValue(pintaId, out var pinta))
             {
@@ -223,7 +230,7 @@ namespace Matkakirja.Natiivi
             }
             tilat.Clear();
             foreach (var m in materiaalit.Values) if (m != null) UnityEngine.Object.Destroy(m);
-            materiaalit.Clear();
+            materiaalit.Clear(); kuvalliset.Clear();
             odottavatPohjakuvat.Clear();
             viimeisinRakennus = null;
             Kolmiot = 0; Karjet = 0; Renderereita = 0;

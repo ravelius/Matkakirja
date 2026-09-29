@@ -479,7 +479,7 @@ namespace Matkakirja.Natiivi
             {
                 rakennus = null; latausKaynnissa = false;
                 NollaaNakymanLataukset();
-                rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna();
+                rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
