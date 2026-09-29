@@ -22,15 +22,17 @@ namespace Matkakirja.Peli
         public const int EtsinnanPisteet = Kokemus.Pulma;
         const string Juuri = "https://media.matkakirja.app/dioraama/olavinlinna/matkamuistot/";
 
-        /// <summary>Kaikki matkamuistot tunnuksen mukaan. Selite korvataan Sisältökirjurin tarkistamalla tekstillä.</summary>
+        /// <summary>Kaikki matkamuistot tunnuksen mukaan.</summary>
         public static readonly IReadOnlyDictionary<string, Matkamuisto> Kaikki = new Dictionary<string, Matkamuisto>
         {
             ["voudin-sinetti"] = new Matkamuisto
             {
                 Id = "voudin-sinetti",
                 Nimi = "Voudin sinetti",
-                Selite = "Olavinlinnan voudin sinettisormus. Sillä vouti vahvisti linnan kirjeet ja tilit; nyt se löytyi "
-                    + "fatabuurin suolakalatynnyrin kannen alta.",
+                // Sisältökirjurin tarkistamat yleiset faktat (Kansallisarkisto: Arkistojen Portti; Wikipedia: Sinetti). Olavinlinnan
+                // voudin omasta sinetistä ei ole lähdettä, joten sitä ei väitetä (Linnanrakentaja 29.9.2026).
+                Selite = "Keskiajalla kirjeeseen ei kirjoitettu nimeä: aitouden takasi vahaan painettu sinetti. "
+                    + "Sinettisormus oli suosittu 1100-luvulta keskiajan loppuun, ja siinä oli usein oman suvun vaakuna.",
                 KuvaUrl = Juuri + "voudin-sinetti.jpg",
                 Pisteet = EtsinnanPisteet,
             },
