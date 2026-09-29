@@ -630,6 +630,9 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  // Avaus- ja sulkuanimaatioiden apuri (omistaja 29.9.2026) ennen kortteja, popupeja ja valikoita,
+  // jotka tuovat sen; moduuli itse ei tuo mitään.
+  'js/avausanimaatio.js',
   // Saapumisasento ennen fokusvirtaa (fokusvirta ja kartta tuovat sen);
   // moduuli itse ei tuo mitään.
   'js/saapumisasento.js',
@@ -1081,6 +1084,9 @@ const MODULES = [
    */
   'js/pallodiag.js',
   'js/linssivirhe.js',
+  // Kehittäjän Pelaajan näkymä -apunappi (29.9.2026) ennen ui.js:ää ja main.js:ää, jotka tuovat sen; tuo vain
+  // ui-apurit.js:n.
+  'js/pelaajanakyma.js',
   'js/ui.js',
 
   'js/muutokset.js',

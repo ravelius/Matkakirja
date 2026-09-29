@@ -65,6 +65,7 @@ import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 
 /** Kortin kuvan leveys (sama kuin syvennystarinalla). */
 const SKANDAALI_KUVA_PX = 800;
@@ -275,6 +276,7 @@ export function avaaSkandaali(ui, iso, skandaali) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('skandaali-auki');
+  animoiAvaus(kortti);
 }
 
 /**
@@ -478,7 +480,7 @@ export function suljeSkandaali(ui) {
   for (const vanha of document.querySelectorAll('.skandaali-kerros')) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
     vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
-    vanha.remove();
+    suljeKerrosAnimoiden(vanha, '.skandaali-kortti', ['skandaali-kerros', 'skandaali-auki']);
   }
 }
 

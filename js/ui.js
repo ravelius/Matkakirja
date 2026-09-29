@@ -466,6 +466,7 @@ import { aaniLisenssiSallittu } from './lisenssi.js';
 import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
 import { taytaPohja } from './tekstipohja.js';
 import { INTRO_PAIKKA, INTRO_TEXT, INTRO_VALINTA, PERIAATTEET } from './ui-tekstit.js';
+import { paivitaPelaajanakymaNappi } from './pelaajanakyma.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -3389,6 +3390,8 @@ export class UI {
      * palavat heti ensimmäisessä piirrossa.
      */
     kaynnistaKarttaselite(this);
+    // Kehittäjän Pelaajan näkymä -apunappi selitenapin alle (js/pelaajanakyma.js).
+    paivitaPelaajanakymaNappi(this);
     // Maakunnat-välilehden runko (js/karttatyokalu-maakunnat.js) heti
     // perässä: se vain rekisteröi rakentajan, ei piirrä mitään ennen
     // kuin pelaaja avaa välilehden.
@@ -8313,6 +8316,7 @@ export class UI {
      * kehittäjän kytkin ei ole se hetki, jossa lauta syntyy.
      */
     this.pallolauta?.paivita();
+    paivitaPelaajanakymaNappi(this);
   }
 
   /* --- MERKKIKERROSTEN NÄKYMÄRAJAUS (mitattu 29.8.2026) ------------- */

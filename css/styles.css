@@ -26164,6 +26164,34 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 .karttaselite-nappi svg { display: block; }
 
 /*
+ * PELAAJAN NÄKYMÄ -APUNAPPI (kehittäjän maailmatila, omistaja 29.9.2026; js/pelaajanakyma.js): sama laatta kuin
+ * selitenappi, sen alla 8 px:n välillä. Päällä ollessaan tumma (sama kieli kuin kehittäjävalikon kytkimillä).
+ */
+.pelaajanakyma-nappi {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  min-width: 40px;
+  min-height: 40px;
+  margin-top: 8px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(239, 220, 180, 0.9);
+  color: var(--map-ink);
+  cursor: pointer;
+}
+.pelaajanakyma-nappi[hidden] { display: none; }
+.pelaajanakyma-nappi:hover:not(:disabled) { background: rgba(239, 220, 180, 1); color: var(--map-ink); }
+.pelaajanakyma-nappi svg { display: block; }
+.pelaajanakyma-nappi[aria-pressed='true'],
+.pelaajanakyma-nappi[aria-pressed='true']:hover:not(:disabled) {
+  background: var(--map-ink);
+  color: #f3e6c8;
+}
+
+/*
  * HOVER-SÄÄNNÖT TARVITSEVAT `:not(:disabled)`-LISÄN, eivät koristeeksi
  * vaan painoksi: pelin oma yleissääntö on `button:hover:not(:disabled)
  * { background: #43331f; }` (tumma muste), ja sen painoarvo on kaksi
