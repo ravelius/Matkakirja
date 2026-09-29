@@ -450,6 +450,14 @@ export function poimiTiedostot(manifesti) {
       : Array.isArray(manifesti?.tiedostot) ? manifesti.tiedostot
         : null;
   if (lista) return lista.map(normalisoiRivi);
+  // Codexin dioraama-toimitus (osa 1, 29.9.2026): surfaces[] / flames[] / characters[],
+  // rivillä `file` (polku final/...), `bytes`, `sha256`, `size` [w, h].
+  const lajit = ['surfaces', 'flames', 'characters', 'cards'].filter((k) => Array.isArray(manifesti?.[k]));
+  if (lajit.length > 0) {
+    return lajit.flatMap((k) => manifesti[k]).map((r) => normalisoiRivi({
+      ...r, filename: String(r.file ?? r.filename ?? '').split('/').pop(), size: r.bytes ?? r.size,
+    }));
+  }
   if (manifesti && typeof manifesti === 'object') {
     const avaimet = Object.keys(manifesti).filter((k) => /\.(png|jpe?g)$/i.test(k));
     if (avaimet.length > 0) {
