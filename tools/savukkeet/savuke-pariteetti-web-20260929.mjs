@@ -21,12 +21,29 @@
  *       avaaNostonKortista). Vartio avaa ensin maakortin valikon ja
  *       kaupunkipopupin, sitten valokuvakortin, ja mittaa että vain
  *       yksi lappu jää auki.
- *   (c) LIIKU-NAPILLA ON NÄKYVÄ POHJA IPADILLA (rivi 6). Liiku hukkui
- *       Kreetanmeren nimiön alle 834 × 1194 -ruudulla, koska napilla
- *       ei ollut mitään taustaa. Vartio: napin laskettu tausta ei ole
- *       läpinäkyvä (alpha > 0) EIKÄ `none`/`transparent`, ja napin
- *       keskipisteestä `elementFromPoint` osuu NAPPIIN — ei minkään
- *       muun elementin (esim. karttanimiön) läpi.
+ *   (c) LIIKU PYSYY LÄPINÄKYVÄNÄ, MUTTA SIIRTYY IPADILLA (rivi 6,
+ *       KORJATTU 29.9.2026 Päätoimittajan päätöksellä). Liiku hukkui
+ *       Kreetanmeren nimiön alle 834 × 1194 -ruudulla, koska nappi oli
+ *       ruudun keskilinjalla, jolle useimman maan oletusnäkymä
+ *       keskittää rantaviivan ja siten myös meren nimiön. Pergamentti-
+ *       pohja PALAUTETTIIN LÄPINÄKYVÄKSI (PÄÄTÖKSET 28 kohta 3 pätee
+ *       taas sanatarkasti) ja nappi SIIRRETTIIN pois keskilinjalta
+ *       Pulun pystyreunaan (css/styles.css, `@media (min-width: 768px)
+ *       and (orientation: portrait)`). Vartio: napin laskettu tausta
+ *       ON läpinäkyvä (alpha 0 TAI `none`/`transparent`), napin
+ *       suorakulmio ei leikkaa yhdenkään todellisen kartan nimiön
+ *       (`text.karttanimi`, pallolaudan CSS2D-nimikerros, pakotettu
+ *       DOMiin `?glnimiot=0`:lla) suorakulmiota, ja napin
+ *       keskipisteestä `elementFromPoint` osuu NAPPIIN itseensä.
+ *       Mitattu Kreikan lisäksi kahdessa muussa maassa (Ranska,
+ *       Italia). HUOM: osa luonnonkohteiden nimiöistä (meret, vuoret)
+ *       piirtyy oletuksena GL-tekstuuriin eikä DOM-solmuksi edes
+ *       `glnimiot=0`:lla, jos ladonta ei priorisoi niitä näkyviin
+ *       juuri sillä kehyksellä — vartio kattaa siis kaikki DOMiin
+ *       ASTUVAT nimiöt (mm. kaupunkien nimet), ei väitä kattavansa
+ *       jokaista mahdollista GL-tekstuurinimeä. Siksi pääpuolustus on
+ *       SIJAINTI: nappi ei ole enää sillä ruudun keskilinjalla, jolla
+ *       Kreetanmeri mitattiin.
  *
  * Sama offline-runko kuin tools/savukkeet/savuke-luentakuvat.mjs:
  * paikallinen http-palvelin, Chromiumille korvatut kuva/ääni-pyynnöt
@@ -277,48 +294,163 @@ for (const ruutu of RUUDUT_A) {
 }
 
 /* ==================================================================
- * (c) LIIKU-NAPILLA ON NÄKYVÄ POHJA IPADILLA
+ * (c) LIIKU ON LÄPINÄKYVÄ EIKÄ OSU KARTAN NIMIÖIHIN IPADILLA
+ *
+ * Oikea pallolauta (ei sijaiskuvia) reaalisella ämpärihaulla — sama
+ * malli kuin tools/savukkeet/savuke-nimiot-sulavat.mjs. Jos ämpäri ei
+ * vastaa, tämä osio ohitetaan siististi (sama sopimus kuin muillakin
+ * pallosavukkeilla) eivätkä (a)/(b) kärsi siitä.
  * ================================================================== */
 
-{
-  const { ctx, sivu } = await avaaSivu({ width: 834, height: 1194, deviceScaleFactor: 2 });
-  await sivu.evaluate((id) => {
-    const { ui, game } = window.matkakirja;
-    game.player.pos = { type: 'city', city: id };
-    game.world.visited.add(id);
-    ui.render();
-  }, KAUPUNKI);
-  await sivu.waitForSelector('.toimintorivi .monitoimi-nappi', { timeout: 30000 });
-  await sivu.waitForTimeout(1000);
-  const liiku = await sivu.evaluate(() => {
+const AMPARI = 'https://media.matkakirja.app/';
+const ampariValimuisti = new Map();
+async function ampariHaku(url) {
+  if (ampariValimuisti.has(url)) return ampariValimuisti.get(url);
+  const lupaus = fetch(url).then(async (v) => (v.ok
+    ? { status: 200, body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
+    : { status: v.status, body: Buffer.alloc(0), tyyppi: 'text/plain' }))
+    .catch(() => null);
+  ampariValimuisti.set(url, lupaus);
+  return lupaus;
+}
+
+const kirjasto = await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`);
+if (kirjasto?.status !== 200) {
+  console.log('OHITUS  (c): ämpäri ei vastaa — palloa ei voi avata, nimiövartiot ohitetaan');
+} else {
+  /** Avaa pallolaudan oikeasti (ei sijaiskuvia) annetussa kaupungissa. */
+  async function avaaPalloSivu(viewport, kaupunkiId) {
+    const peliC = new Game({
+      players: [{ name: 'Fogg', color: '#c9a227', start: kaupunkiId }],
+      pack: packById('maailmankartta'),
+      seed: 5,
+    });
+    peliC.phase = 'action';
+    peliC.tokens.delete(kaupunkiId);
+    const tallenneC = JSON.stringify(peliC.toJSON());
+    const ctx = await selain.newContext({ ...viewport, serviceWorkers: 'block' });
+    await ctx.addInitScript((data) => {
+      try {
+        localStorage.setItem('matkakirja-save-v1', data);
+        localStorage.removeItem('matkakirja-lauta');
+        localStorage.setItem('matkakirja-kehittaja', '1');
+      } catch { /* yksityinen tila */ }
+    }, tallenneC);
+    const sivu = await ctx.newPage();
+    sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
+    await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
+    await sivu.route(/wikimedia\.org/, (r) => r.abort());
+    await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
+      const v = await ampariHaku(route.request().url());
+      if (!v || v.status !== 200) { route.abort(); return; }
+      route.fulfill({
+        status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+        headers: { 'access-control-allow-origin': '*' },
+      });
+    });
+    await sivu.goto(`${osoite.replace(/\?.*$/, '')}?lauta=pallo&glnimiot=0`,
+      { waitUntil: 'domcontentloaded', timeout: 60000 });
+    const auki = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null,
+      { timeout: 90000 }).then(() => true).catch(() => false);
+    if (!auki) return { ctx, sivu, auki: false };
+    await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      clearTimeout(ui.automaattiheittoAjastin);
+      ui.automaattiheittoAjastin = null;
+      const { suljeFokusvirta } = await import('/js/fokusvirta.js');
+      suljeFokusvirta(ui);
+      await ui.pallolauta.saavu({ kesto: 0 });
+      await new Promise((v) => setTimeout(v, 1600));
+      for (const el of document.querySelectorAll(
+        '.saapumistraileri, .fokusvirta-isokuva, .fokuskohde-popup, .fokusnosto-kerros',
+      )) el.remove();
+      /*
+       * SAAPUMISPUHE VAIENNETAAN (ei vain kytkin pois — se ei pysäytä jo
+       * soivaa ääntä): muuten body.luenta-aanessa pitää Liikun
+       * display:none-tilassa eikä sitä voi mitata (sama juurisyy kuin
+       * savuke-iphone-tekstit.mjs:n luentavartioilla).
+       */
+      const L = await import('/js/luenta.js');
+      L.asetaLuentaKytkin(false);
+      L.pysaytaSaapumispuhe?.(ui);
+      L.stopDiaryVoice?.(ui);
+      L.stopIntroVoice?.(ui);
+    });
+    await sivu.waitForTimeout(4000);
+    await sivu.waitForFunction(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      return l?.nostot?.sovittelunTulos?.()?.lukossa === false;
+    }, null, { timeout: 15000, polling: 200 }).catch(() => {});
+    await sivu.waitForTimeout(1000);
+    return { ctx, sivu, auki: true };
+  }
+
+  /** Napin laatikko, tausta, reunus ja karttanimiöiden laatikot. */
+  const mittaaLiikuJaNimiot = () => document.body && (() => {
+    const rectOf = (el) => {
+      const r = el.getBoundingClientRect();
+      return {
+        x: r.x, y: r.y, w: r.width, h: r.height,
+        top: r.top, bottom: r.bottom, left: r.left, right: r.right,
+      };
+    };
     const nappi = document.querySelector('.toimintorivi .monitoimi-nappi');
     if (!nappi) return null;
-    const r = nappi.getBoundingClientRect();
+    const r = rectOf(nappi);
     const tyyli = getComputedStyle(nappi);
-    const cx = r.x + r.width / 2;
-    const cy = r.y + r.height / 2;
+    const cx = r.x + r.w / 2;
+    const cy = r.y + r.h / 2;
     const paalla = document.elementFromPoint(cx, cy);
+    const nimiot = [...document.querySelectorAll('text.karttanimi')].map((n) => ({
+      teksti: n.textContent?.trim(), laatikko: rectOf(n),
+    }));
+    const leikkaa = (a, b) => a.left < b.right && b.left < a.right && a.top < b.bottom && b.top < a.bottom;
+    const osuneetNimiot = nimiot.filter((n) => leikkaa(r, n.laatikko)).map((n) => n.teksti);
     return {
-      laatikko: { w: Math.round(r.width), h: Math.round(r.height) },
+      laatikko: { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.w), h: Math.round(r.h) },
       tausta: tyyli.backgroundImage === 'none' ? tyyli.backgroundColor : tyyli.backgroundImage,
-      reunus: tyyli.borderTopWidth,
       paallaOnNappiItse: Boolean(paalla === nappi || nappi.contains(paalla)),
       paallaTagi: paalla ? `${paalla.tagName}.${[...paalla.classList].join('.')}` : null,
+      nimioidenMaara: nimiot.length,
+      nimiot: nimiot.map((n) => n.teksti),
+      osuneetNimiot,
     };
-  });
-  tieto('(c) Liiku iPadilla', JSON.stringify(liiku));
+  })();
+
   const lapinakyva = (arvo) => /rgba\([^)]*,\s*0\)/.test(String(arvo))
     || String(arvo) === 'transparent' || String(arvo) === 'none';
-  vaadi('(c) Liiku-napilla on näkyvä (ei-läpinäkyvä) pohja iPadilla',
-    Boolean(liiku) && !lapinakyva(liiku.tausta), JSON.stringify(liiku));
-  vaadi('(c) Liiku-napilla on näkyvä reunus (ei enää 0px)',
-    Boolean(liiku) && liiku.reunus !== '0px', JSON.stringify(liiku));
-  vaadi('(c) Liiku-napin keskipisteestä osutaan nappiin itseensä, ei nimiön läpi',
-    Boolean(liiku) && liiku.paallaOnNappiItse === true, JSON.stringify(liiku));
-  if (KUVAKANSIO) {
-    await sivu.screenshot({ path: join(KUVAKANSIO, 'c-liiku-ipad-pohja.png') });
+
+  const MAAT_C = [
+    { nimi: 'Kreikka (Ateena, Kreetanmeri)', kaupunki: 'ateena' },
+    { nimi: 'Ranska (Pariisi)', kaupunki: 'pariisi' },
+    { nimi: 'Italia (Rooma)', kaupunki: 'rooma' },
+  ];
+
+  for (const maa of MAAT_C) {
+    const { ctx, sivu, auki } = await avaaPalloSivu(
+      { viewport: { width: 834, height: 1194 }, deviceScaleFactor: 2 }, maa.kaupunki,
+    );
+    if (!auki) {
+      console.log(`OHITUS  (c) ${maa.nimi}: pallolauta ei ehtinyt avautua`);
+      await ctx.close();
+      continue;
+    }
+    const liiku = await sivu.evaluate(mittaaLiikuJaNimiot);
+    tieto(`(c) Liiku iPadilla — ${maa.nimi}`, JSON.stringify(liiku));
+    vaadi(`(c) ${maa.nimi}: Liiku-napin tausta on läpinäkyvä (alpha 0)`,
+      Boolean(liiku) && lapinakyva(liiku.tausta), JSON.stringify(liiku?.tausta));
+    vaadi(`(c) ${maa.nimi}: Liiku-napin suorakulmio ei leikkaa yhdenkään kartan nimiön suorakulmiota`,
+      Boolean(liiku) && liiku.osuneetNimiot.length === 0, JSON.stringify(liiku));
+    vaadi(`(c) ${maa.nimi}: Liiku-napin keskipisteestä osutaan nappiin itseensä`,
+      Boolean(liiku) && liiku.paallaOnNappiItse === true, JSON.stringify(liiku));
+    if (KUVAKANSIO) {
+      await sivu.screenshot({
+        path: join(KUVAKANSIO, `c-liiku-ipad-${maa.kaupunki}.png`),
+        timeout: 10000,
+      }).catch(() => {});
+    }
+    await ctx.close();
   }
-  await ctx.close();
 }
 
 if (virheet.length) {

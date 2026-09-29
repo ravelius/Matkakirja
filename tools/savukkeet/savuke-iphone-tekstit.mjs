@@ -374,19 +374,9 @@ const mittaa = () => {
     perus.liiku?.keskipoikkeama != null && perus.liiku.keskipoikkeama <= 8
     && perus.liiku.laatikko.y > perus.ikkuna.h * 0.85,
     JSON.stringify({ poikkeama: perus.liiku?.keskipoikkeama, laatikko: perus.liiku?.laatikko }));
-  /*
-   * NÄKYVÄ POHJA PALASI 29.9.2026 (Siirtosepän pariteettikatsaus, rivi
-   * 6: Liiku katosi iPadilla Kreetanmeren nimiön alle, koska napilla ei
-   * ollut mitään taustaa erottamassa sitä toisesta tekstistä — pelkkä
-   * halo ei riitä nimiön päällä. Ks. css/styles.css
-   * .toimintorivi.rivi-yksi .monitoimi-nappi). Vartio kääntyi ympäri:
-   * ennen vaadittiin alpha 0 (täysin läpinäkyvä), nyt vaaditaan näkyvä,
-   * ei-läpinäkyvä tausta ja reunus.
-   */
-  vaadi('puhelin pysty: napilla on näkyvä (ei-läpinäkyvä) tausta',
-    !/rgba\([^)]*,\s*0\)/.test(String(perus.liiku?.tausta))
-    && perus.liiku?.tausta !== 'none' && perus.liiku?.tausta !== 'transparent'
-    && perus.liiku?.reunus !== '0px',
+  vaadi('puhelin pysty: napin tausta on täysin läpinäkyvä, ei reunusta eikä varjoa',
+    /rgba\([^)]*,\s*0\)/.test(String(perus.liiku?.tausta))
+    && perus.liiku?.reunus === '0px' && perus.liiku?.varjo === 'none',
     JSON.stringify({ tausta: perus.liiku?.tausta, reunus: perus.liiku?.reunus, varjo: perus.liiku?.varjo }));
   vaadi('puhelin pysty: symboli on piilossa ja sana "Liiku" näkyy kuultavana (0,5…0,8)',
     perus.liiku?.ikoni === 'none' && perus.liiku?.sana !== 'none'
