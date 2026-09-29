@@ -30,6 +30,9 @@ namespace Matkakirja.Natiivi
 
         bool puluPiilotettu;
         readonly Button kuoriNappi, paluuNappi;
+        readonly VisualElement etsintaKortti;
+        readonly Label etsintaOtsikko, etsintaTeksti;
+        float etsintaLoppuu;
 
         public DioraamaTaulu(UiKerros kerros)
         {
@@ -149,6 +152,34 @@ namespace Matkakirja.Natiivi
             if (paluuTeksti != null) { paluuTeksti.style.fontSize = 24; paluuTeksti.style.color = Teksti; paluuTeksti.style.unityTextAlign = TextAnchor.MiddleCenter; }
             paluuNappi.style.display = DisplayStyle.None;
 
+            // Etsintäkortti (voudin sinetti, DioraamaEtsinta.Nayta): pergamenttilappu yläosaan 7 s, napautus sulkee.
+            etsintaKortti = Rakenne.El("mk-dioraama__etsinta", juuri);
+            etsintaKortti.style.position = Position.Absolute;
+            etsintaKortti.style.left = Length.Percent(8); etsintaKortti.style.right = Length.Percent(8); etsintaKortti.style.top = 110;
+            etsintaKortti.style.backgroundColor = Pergamentti;
+            etsintaKortti.style.paddingTop = 12; etsintaKortti.style.paddingBottom = 12; etsintaKortti.style.paddingLeft = 16; etsintaKortti.style.paddingRight = 16;
+            etsintaKortti.style.borderTopLeftRadius = 10; etsintaKortti.style.borderTopRightRadius = 10;
+            etsintaKortti.style.borderBottomLeftRadius = 10; etsintaKortti.style.borderBottomRightRadius = 10;
+            etsintaKortti.style.transitionProperty = new List<StylePropertyName> { new StylePropertyName("opacity") };
+            etsintaKortti.style.transitionDuration = new List<TimeValue> { new TimeValue(AnimaatioMs, TimeUnit.Millisecond) };
+            etsintaOtsikko = Rakenne.Teksti("", "mk-dioraama__etsintaotsikko", etsintaKortti);
+            Kirjasimet.Aseta(etsintaOtsikko, Kirjasin.LukuLihava);
+            etsintaOtsikko.style.color = Teksti; etsintaOtsikko.style.fontSize = 15;
+            etsintaTeksti = Rakenne.Teksti("", "mk-dioraama__etsintateksti", etsintaKortti);
+            Kirjasimet.Aseta(etsintaTeksti, Kirjasin.LukuKursiivi);
+            etsintaTeksti.style.color = Teksti; etsintaTeksti.style.fontSize = 14; etsintaTeksti.style.whiteSpace = WhiteSpace.Normal;
+            etsintaTeksti.style.marginTop = 4;
+            etsintaKortti.style.display = DisplayStyle.None;
+            etsintaKortti.RegisterCallback<PointerDownEvent>(_ => etsintaLoppuu = 0f);
+            DioraamaEtsinta.Nayta += (otsikko, teksti) =>
+            {
+                etsintaOtsikko.text = otsikko ?? "";
+                etsintaTeksti.text = teksti ?? "";
+                etsintaKortti.style.display = DisplayStyle.Flex;
+                etsintaKortti.style.opacity = 1f;
+                etsintaLoppuu = Time.unscaledTime + 7f;
+            };
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -190,6 +221,9 @@ namespace Matkakirja.Natiivi
         /// <summary>PalloKierto.UiPeittaa-mallilla: napautus lautaan ei saa myös osua 3D-näkymän AABB-testiin.</summary>
         bool OsuukoPaneeliin(Vector2 ruutu)
         {
+            if (etsintaKortti != null && etsintaKortti.resolvedStyle.display != DisplayStyle.None && etsintaKortti.panel != null
+                && etsintaKortti.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(etsintaKortti.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
+                return true;
             // ‹-nappi ei saa välittää napautusta dioraamalle (muuten sama napautus voisi kohdistaa tilan uudelleen).
             if (paluuNappi != null && paluuNappi.resolvedStyle.display != DisplayStyle.None && paluuNappi.panel != null
                 && paluuNappi.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(paluuNappi.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
@@ -205,6 +239,8 @@ namespace Matkakirja.Natiivi
             var rakennus = linssi?.Rakennus;
             var kamera = DioraamaSovitin.AktiivinenKamera;
             var nakymaTaiEi = DioraamaSovitin.ViimeisinNakyma;
+            if (etsintaKortti != null && etsintaKortti.style.display == DisplayStyle.Flex && Time.unscaledTime > etsintaLoppuu)
+                etsintaKortti.style.display = DisplayStyle.None;
             if (paluuNappi != null)
                 paluuNappi.style.display = rakennus?.Saapuminen != null && nakymaTaiEi?.KohdeTila != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (linssi == null || rakennus == null || kamera == null || nakymaTaiEi == null)
