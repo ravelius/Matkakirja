@@ -9171,3 +9171,7 @@ Karttasepän jokikoe (GEOGLOWS-joet --joet-lisa, #3614: Wienissä yksi Tonava, T
 ## PÄÄTÖS: VIE 1.0.48 (AVARUUSKÄVELY) (29.9.2026 klo 13.01)
 
 Natiiviseppä 29.9. klo 13.0x: BUILD 48 = proto master 1c4a7eff (käännös 39fc303b): Linssiseppä 2:n avaruuskävely bdea89bf (omistaja hyväksyi) + radio-virta b68dcdd3 (ei-asemaa-teksti, kytkin sulkee linssin) + Natiivi-UI:n pelaajan näkymä 9652f810; Laitetestaaja 5/5 PASS (iPad pysty; vaaka todennettu 8affab73:ssa). Päätoimittaja: VIE 1.0.48; jos 1.0.47:n vienti ei ole alkanut, se ohitetaan (1.0.48 sisältää kaiken); muutosrivit yhdistetään.
+
+## OMISTAJA: YLÄPALKIN LOGO JA PILLERI LEVEIMMÄN DYNAMIC ISLANDIN MUKAAN, NAHKA TUMMEMPI KESKELTÄ (29.9.2026 klo 13.12)
+
+Omistaja 29.9. klo 13.1x (natiivin pillerivalikon kuvat) sanatarkasti: "matkakirja logo näyttää olevan liian lähellä dynamic islandin reunaa. ja tuo onkin nyt vähän haastava juttu, koska eri puhelinmalleissa on eri levyiset saaret. pitää varmaan miettiä pillerin ja logon sijainti leveimmän saaren mukaan ja sitten vain keskelle jää tyhjää. matkalaukun voisi valaista niin että se olisi tummempi keskeltä, jolloin dynamic island ei mustana hyppää niin pahasti." → Natiivi-UI: logo vasemmalle ja pilleri oikealle leveimmän saaren (Pro Max) + marginaalin ulkopuolelle, keskellä tyhjä vyöhyke kaikilla malleilla (myös lovelliset); Codexille lisäys (fable-codex-ylapalkki-lisays-saari-20260929.md): nahka tummuu pehmeästi keskeltä, keskivyöhyke ~40 % leveydestä tyhjä, keskitummennus erillisenä kerroksena keski-varjo.png.
