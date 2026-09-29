@@ -3915,6 +3915,14 @@
     background-color: #d9a13b; /* web --accent */
 }
 
+/* Aarteet (palaute 7): rivillä ei ikonia eikä tekstikehystä, joten nappi on nimirivi. */
+.mk-linssirivi--aktivoi.mk-esikatseltu > .mk-linssirivi__nimirivi {
+    justify-content: center;
+    min-height: 36px;
+    border-radius: 8px;
+    background-color: #d9a13b; /* web --accent */
+}
+
 .mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tila {
     color: #211d18;
 }
