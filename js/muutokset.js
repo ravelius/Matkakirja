@@ -13,7 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2395, teksti: 'Maakunnan nostokortti nostojen kokoiseksi, kuva… (#3583)' },
+  { v: 2397, teksti: 'Maakunnan nostokortti nostojen kokoiseksi, kuva… (#3583)' },
+  { v: 2396, teksti: 'Dioraama erä 2: maalattujen pintojen, atlaksen,… (#3601)' },
+  { v: 2395, teksti: 'Natiivin offline-pohja ja kerma sarjaan 2026-09… (#3599)' },
   { v: 2394, teksti: 'ISS-kyyti: Codexin säätöpaneeli (#3595)' },
   { v: 2393, teksti: 'Peruskartta 2026-09-27 webin palloon (#3597)' },
   { v: 2392, teksti: 'Dioraamamoottori: Olavinlinnan data, rakennusko… (#3594)' },
