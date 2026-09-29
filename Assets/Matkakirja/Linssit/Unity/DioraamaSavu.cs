@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             {
                 if (t.Laji != "liekki") continue;
                 Vector3 maailma = tilanJuuri != null ? tilanJuuri.TransformPoint(t.Paikka) : t.Paikka;
-                if (liekkipisteet.Count < LiekkipisteitaEnintaan) liekkipisteet.Add(new Vector4(maailma.x, maailma.y, maailma.z, t.Luku("sade", 2.5f)));
+                liekkipisteet.Add(new Vector4(maailma.x, maailma.y, maailma.z, t.Luku("sade", 2.5f)));
                 float savu = Mathf.Clamp01(t.Luku("savu", 1f));
                 if (savu <= 0f) continue;
                 if (varjostin == null) { kirjaa?.Invoke("poikki: DioraamaSavu-varjostin puuttuu"); continue; }
@@ -126,8 +126,15 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Dioraaman aika t (sama kuin liekeillä); vähennetty liike jäädyttää savun.</summary>
-        public void Paivita(double t, bool vahennettyLiike)
+        public void Paivita(double t, bool vahennettyLiike, Camera kamera = null)
         {
+            // Yli 8 liekkiä (tunnelman soihdut, kappelin kynttilät): varjostimelle 8 kameraa lähintä joka ruutu.
+            if (kamera != null && liekkipisteet.Count > LiekkipisteitaEnintaan)
+            {
+                Vector3 k = kamera.transform.position;
+                liekkipisteet.Sort((a, b) => ((Vector3)a - k).sqrMagnitude.CompareTo(((Vector3)b - k).sqrMagnitude));
+                PaivitaLiekkipisteet();
+            }
             float aika = vahennettyLiike ? 2.5f : (float)(t % 3600.0);
             foreach (var (_, m) in emitterit) if (m != null) m.SetFloat(IdAika, aika);
         }
@@ -136,7 +143,7 @@ namespace Matkakirja.Natiivi
         {
             for (int i = 0; i < pistePuskuri.Length; i++) pistePuskuri[i] = i < liekkipisteet.Count ? liekkipisteet[i] : Vector4.zero;
             Shader.SetGlobalVectorArray(IdPisteet, pistePuskuri);
-            Shader.SetGlobalFloat(IdMaara, liekkipisteet.Count);
+            Shader.SetGlobalFloat(IdMaara, Mathf.Min(liekkipisteet.Count, LiekkipisteitaEnintaan));
         }
 
         void VarmistaMesh()

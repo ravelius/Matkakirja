@@ -426,7 +426,7 @@ namespace Matkakirja.Natiivi
             {
                 byte[] astcTavut = null;
                 yield return HaeTavut(peili(paketinJuuri + astcPolku), t => astcTavut = t);
-                var astc = DioraamaAstc.Lue(astcTavut, "Valoatlas:" + tila.Id + ":astc");
+                var astc = DioraamaAstc.Lue(astcTavut, "Valoatlas:" + tila.Id + ":astc", out string astcSyy);
                 if (kerta != avauskerta || rakennus3D == null) { if (astc != null) UnityEngine.Object.Destroy(astc); yield break; }
                 if (astc != null)
                 {
@@ -435,7 +435,7 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({astc.width}x{astc.height} {astc.format}{(puoli ? ", puolikas" : "")})");
                     yield break;
                 }
-                o.Kirjaa($"poikki: valoatlas {tila.Id} ASTC ei käytössä, JPEG varalla");
+                o.Kirjaa($"poikki: valoatlas {tila.Id} ASTC ei käytössä ({astcSyy ?? "ei latautunut"}), JPEG varalla");
             }
             byte[] tavut = null;
             yield return HaeTavut(peili(paketinJuuri + polku), t => tavut = t);

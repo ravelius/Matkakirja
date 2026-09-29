@@ -149,8 +149,8 @@ namespace Matkakirja.Natiivi
                         if (p.result == UnityWebRequest.Result.Success) astcTavut = p.downloadHandler.data;
                     }
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
-                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc");
-                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : "laite/tiedosto")}), JPEG varalla");
+                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
+                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
                 }
                 if (kuva == null && koottu.Kuva != null)
                 {
@@ -184,7 +184,8 @@ namespace Matkakirja.Natiivi
             var a = DioraamaNayttamo.UnityPiste(t.LeikkausMin ?? t.RajaMin);
             var b = DioraamaNayttamo.UnityPiste(t.LeikkausMax ?? t.RajaMax);
             float laajennus = (float)t.LeikkausLaajennus, osuus = Mathf.Clamp01((float)leikkaus.osuus);
-            Vector3 lo = Vector3.Min(a, b) - Vector3.one * laajennus, hi = Vector3.Max(a, b) + Vector3.one * laajennus;
+            // Alaspäin vain 0,2 m (1.0.55-kuvat): täysi laajennus kaivoi kallion lattian alta ja järvi näkyi tilan alla.
+            Vector3 lo = Vector3.Min(a, b) - new Vector3(laajennus, Mathf.Min(laajennus, 0.2f), laajennus), hi = Vector3.Max(a, b) + Vector3.one * laajennus;
             Vector3 keski = (lo + hi) * 0.5f, puoli = (hi - lo) * 0.5f * osuus;
             lo = keski - puoli; hi = keski + puoli;
             Shader.SetGlobalVector(IdLeikkausMin, new Vector4(lo.x, lo.y, lo.z, osuus));

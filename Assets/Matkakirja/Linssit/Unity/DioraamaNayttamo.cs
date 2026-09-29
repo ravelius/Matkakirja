@@ -250,7 +250,7 @@ namespace Matkakirja.Natiivi
 
             // Liekkien billboard-kääntö ja ruutu (ks. Paivita-parametrin t-kommentti yllä).
             Liekit?.Paivita(null, default, Kamera, t);
-            Savu?.Paivita(t, vahennettyLiike);
+            Savu?.Paivita(t, vahennettyLiike, Kamera);
             Ikkunat?.Paivita(t, vahennettyLiike);
             // Aurinko/pistevalojen lepatus + kohdetilan mukainen varjoetäisyys (era 2b, DioraamaValot.cs).
             Valot?.Paivita(t, vahennettyLiike, Kamera);
