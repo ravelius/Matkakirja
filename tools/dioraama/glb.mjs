@@ -504,3 +504,217 @@ export function lueGlb(buffer) {
 
   return { nimi, osat };
 }
+
+/* ==================== kirjoitaMonisolmuGlb (erä 2b: 3D-hahmot) ==================== */
+/*
+ * Monisolmuinen GLB (Linnanrakentaja, erä 2b, ali-agentti P4a, 29.9.2026). Speksi:
+ * docs/raportit/dioraama-rajapinnat-era2b-20260929.md kohta 4 "3D-HAHMOT". VANHA
+ * kirjoitaGlb YLLÄ ON ENNALLAAN (yhden solmun tilat/rakennusosat) - tämä on ERI,
+ * itsenäinen funktio pienoisfiguurien nivelhierarkialle. Osittainen koodin
+ * kertyminen kirjoitaGlb:n kanssa on tarkoituksellista (ei jaettua tilaa/apuria
+ * kahden funktion välillä), jottei vanhan funktion tavuja voi vahingossa muuttaa.
+ *
+ * kirjoitaMonisolmuGlb({ nimi, solmut }) -> Buffer
+ *   solmut = [{ nimi, vanhempi (toisen solmun nimi tai null=juuri), paikka:
+ *     [x,y,z] (translation SUHTEESSA VANHEMPAAN), osat: [{ pinta, vari, paikat,
+ *     normaalit, kolmiot }] }]
+ *   -> yksi glTF-solmu + (jos osat.length>0) yksi mesh per solmu, yksi primitiivi
+ *   per osa. TEXCOORD_0 synteesoidaan AINA (0,0):ksi (pienoisfiguuri on yksivärinen
+ *   maalattu osa, ei tekstuuria). COLOR_0 synteesoidaan: R=255 (AO=1, täysi valo),
+ *   G=0 (lämpö=0), B=osan deterministinen satunnaisluku (siemen = "solmu:pinta",
+ *   FNV-1a-tyyppinen hajautus - EI Math.random:ia, sama syöte = samat tavut aina),
+ *   A=255. Sama väri->lineaarinen-muunnos ja GLB-kehys kuin kirjoitaGlb:ssä.
+ */
+
+/** Deterministinen [0,1)-luku merkkijonosta (FNV-1a-tyyppinen hajautus, ei satunnaisuutta). */
+function osanSatunnaisluku(avain) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < avain.length; i++) {
+    h ^= avain.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return (h >>> 0) / 4294967296;
+}
+
+/** Tarkistaa yhden hahmo-osan kentät (kevyempi kuin tarkistaOsa: ei uv/varit). */
+function tarkistaHahmoOsa(osa, solmunNimi, i) {
+  const { pinta, vari } = osa ?? {};
+  const ctx = `solmu '${solmunNimi}' osat[${i}]`;
+  if (typeof pinta !== 'string' || pinta.length === 0) {
+    throw new Error(`kirjoitaMonisolmuGlb: ${ctx}.pinta puuttuu tai ei ole merkkijono`);
+  }
+  if (typeof vari !== 'string' || !/^#[0-9a-fA-F]{6}$/.test(vari)) {
+    throw new Error(`kirjoitaMonisolmuGlb: ${ctx} (${pinta}).vari ei ole muotoa #rrggbb: ${JSON.stringify(vari)}`);
+  }
+  const { paikat, normaalit, kolmiot } = osa;
+  if (!(paikat instanceof Float32Array) || !(normaalit instanceof Float32Array) || !(kolmiot instanceof Uint32Array)) {
+    throw new Error(`kirjoitaMonisolmuGlb: ${ctx} (${pinta}): paikat/normaalit pitää olla Float32Array, kolmiot Uint32Array`);
+  }
+  if (kolmiot.length === 0) throw new Error(`kirjoitaMonisolmuGlb: ${ctx} (${pinta}).kolmiot on tyhjä`);
+  if (paikat.length === 0 || paikat.length % 3 !== 0) {
+    throw new Error(`kirjoitaMonisolmuGlb: ${ctx} (${pinta}).paikat pituus ${paikat.length} ei ole 3:lla jaollinen`);
+  }
+  const karjet = paikat.length / 3;
+  if (normaalit.length !== karjet * 3) {
+    throw new Error(`kirjoitaMonisolmuGlb: ${ctx} (${pinta}).normaalit pituus ${normaalit.length}, odotettiin ${karjet * 3}`);
+  }
+  if (kolmiot.length % 3 !== 0) {
+    throw new Error(`kirjoitaMonisolmuGlb: ${ctx} (${pinta}).kolmiot pituus ${kolmiot.length} ei ole 3:lla jaollinen`);
+  }
+  for (let k = 0; k < kolmiot.length; k++) {
+    if (kolmiot[k] >= karjet) {
+      throw new Error(`kirjoitaMonisolmuGlb: ${ctx} (${pinta}).kolmiot viittaa kärkeen ${kolmiot[k]}, kärkiä vain ${karjet}`);
+    }
+  }
+  return karjet;
+}
+
+/**
+ * Kirjoittaa nivelhierarkisen pienoisfiguurin glTF 2.0 -binäärinä (GLB). Ks.
+ * tiedoston kohdan alun kommentti muodolle. Deterministinen (ks. osanSatunnaisluku).
+ */
+export function kirjoitaMonisolmuGlb({ nimi, solmut }) {
+  if (typeof nimi !== 'string' || nimi.length === 0) {
+    throw new Error('kirjoitaMonisolmuGlb: "nimi" puuttuu tai ei ole merkkijono');
+  }
+  if (!Array.isArray(solmut) || solmut.length === 0) {
+    throw new Error('kirjoitaMonisolmuGlb: "solmut" puuttuu tai on tyhjä taulukko');
+  }
+
+  // Ensimmäinen kierros: nimi -> indeksi, tarkista kaksoisnimet.
+  const nimiIndeksi = new Map();
+  solmut.forEach((s, i) => {
+    if (typeof s?.nimi !== 'string' || s.nimi.length === 0) {
+      throw new Error(`kirjoitaMonisolmuGlb: solmut[${i}].nimi puuttuu tai ei ole merkkijono`);
+    }
+    if (nimiIndeksi.has(s.nimi)) throw new Error(`kirjoitaMonisolmuGlb: solmun nimi '${s.nimi}' esiintyy kahdesti`);
+    nimiIndeksi.set(s.nimi, i);
+  });
+
+  // Toinen kierros: vanhempi-lapsi-suhteet (ei riipu taulukon järjestyksestä).
+  const lapset = solmut.map(() => []);
+  const juuret = [];
+  solmut.forEach((s, i) => {
+    if (s.vanhempi == null) { juuret.push(i); return; }
+    const pi = nimiIndeksi.get(s.vanhempi);
+    if (pi === undefined) {
+      throw new Error(`kirjoitaMonisolmuGlb: solmun '${s.nimi}' vanhempi '${s.vanhempi}' ei löydy solmut-taulukosta`);
+    }
+    lapset[pi].push(i);
+  });
+  if (juuret.length === 0) throw new Error('kirjoitaMonisolmuGlb: yhtään juurisolmua (vanhempi=null) ei löytynyt');
+
+  const palat = []; let offset = 0;
+  const bufferViews = []; const accessors = []; const materials = [];
+  const meshes = []; const nodes = [];
+
+  function lisaaBufferView(buf, target) {
+    const byteOffset = offset;
+    palat.push(buf); offset += buf.length;
+    const yli = offset % 4;
+    if (yli !== 0) { const tayte = Buffer.alloc(4 - yli); palat.push(tayte); offset += tayte.length; }
+    const view = { buffer: 0, byteOffset, byteLength: buf.length };
+    if (target !== undefined) view.target = target;
+    bufferViews.push(view);
+    return bufferViews.length - 1;
+  }
+
+  solmut.forEach((s, si) => {
+    const primitives = [];
+    (s.osat ?? []).forEach((osa, oi) => {
+      const karjet = tarkistaHahmoOsa(osa, s.nimi, oi);
+      const { pinta, vari, paikat, normaalit, kolmiot } = osa;
+
+      const posView = lisaaBufferView(tavuina(paikat), ARRAY_BUFFER);
+      const { min, max } = minMax3(paikat);
+      accessors.push({ bufferView: posView, componentType: FLOAT, count: karjet, type: 'VEC3', min, max });
+      const posAcc = accessors.length - 1;
+
+      const normView = lisaaBufferView(tavuina(normaalit), ARRAY_BUFFER);
+      accessors.push({ bufferView: normView, componentType: FLOAT, count: karjet, type: 'VEC3' });
+      const normAcc = accessors.length - 1;
+
+      // TEXCOORD_0: aina (0,0) - ei tekstuuria (yksivärinen maalattu pienoisfiguuri).
+      const uv = new Float32Array(karjet * 2);
+      const uvView = lisaaBufferView(tavuina(uv), ARRAY_BUFFER);
+      accessors.push({ bufferView: uvView, componentType: FLOAT, count: karjet, type: 'VEC2' });
+      const uvAcc = accessors.length - 1;
+
+      // COLOR_0: R=AO=255, G=lämpö=0, B=osan satunnaisluku (siemen "solmu:pinta"), A=255.
+      const bTavu = Math.round(osanSatunnaisluku(`${s.nimi}:${pinta}`) * 255);
+      const varit = new Uint8Array(karjet * 4);
+      for (let i = 0; i < karjet; i++) {
+        varit[i * 4] = 255; varit[i * 4 + 1] = 0; varit[i * 4 + 2] = bTavu; varit[i * 4 + 3] = 255;
+      }
+      const variView = lisaaBufferView(tavuina(varit), ARRAY_BUFFER);
+      accessors.push({
+        bufferView: variView, componentType: UNSIGNED_BYTE, count: karjet, type: 'VEC4', normalized: true,
+      });
+      const variAcc = accessors.length - 1;
+
+      const idxView = lisaaBufferView(tavuina(kolmiot), ELEMENT_ARRAY_BUFFER);
+      accessors.push({ bufferView: idxView, componentType: UNSIGNED_INT, count: kolmiot.length, type: 'SCALAR' });
+      const idxAcc = accessors.length - 1;
+
+      materials.push({
+        name: pinta,
+        extras: { pinta },
+        pbrMetallicRoughness: { baseColorFactor: variLineaariseksi(vari), metallicFactor: 0, roughnessFactor: 1 },
+      });
+      primitives.push({
+        attributes: { POSITION: posAcc, NORMAL: normAcc, TEXCOORD_0: uvAcc, COLOR_0: variAcc },
+        indices: idxAcc,
+        material: materials.length - 1,
+        mode: 4,
+      });
+    });
+
+    const node = { name: s.nimi, translation: [...(s.paikka ?? [0, 0, 0])] };
+    if (primitives.length > 0) {
+      meshes.push({ name: s.nimi, primitives });
+      node.mesh = meshes.length - 1;
+    }
+    if (lapset[si].length > 0) node.children = lapset[si];
+    nodes.push(node);
+  });
+
+  const json = {
+    asset: { version: '2.0', generator: 'Matkakirja dioraama-rakennuskone (hahmo)' },
+    scene: 0,
+    scenes: [{ nodes: juuret }],
+    nodes,
+    meshes,
+    materials,
+    accessors,
+    bufferViews,
+    buffers: [{ byteLength: offset }],
+  };
+
+  let jsonBuf = Buffer.from(JSON.stringify(json), 'utf8');
+  const jsonYli = jsonBuf.length % 4;
+  if (jsonYli !== 0) jsonBuf = Buffer.concat([jsonBuf, Buffer.alloc(4 - jsonYli, 0x20)]);
+
+  const binRaaka = Buffer.concat(palat);
+  if (binRaaka.length !== offset) {
+    throw new Error(`kirjoitaMonisolmuGlb: sisäinen virhe, puskurin pituus ${binRaaka.length} ≠ laskettu ${offset}`);
+  }
+  let binBuf = binRaaka;
+  const binYli = binBuf.length % 4;
+  if (binYli !== 0) binBuf = Buffer.concat([binBuf, Buffer.alloc(4 - binYli, 0)]);
+
+  const kokonaispituus = OTSIKON_TAVUT + LOHKO_OTSIKON_TAVUT + jsonBuf.length + LOHKO_OTSIKON_TAVUT + binBuf.length;
+  const otsikko = Buffer.alloc(OTSIKON_TAVUT);
+  otsikko.writeUInt32LE(GLB_MAGIC, 0);
+  otsikko.writeUInt32LE(GLB_VERSIO, 4);
+  otsikko.writeUInt32LE(kokonaispituus, 8);
+
+  const jsonOtsikko = Buffer.alloc(LOHKO_OTSIKON_TAVUT);
+  jsonOtsikko.writeUInt32LE(jsonBuf.length, 0);
+  jsonOtsikko.writeUInt32LE(CHUNK_JSON, 4);
+
+  const binOtsikko = Buffer.alloc(LOHKO_OTSIKON_TAVUT);
+  binOtsikko.writeUInt32LE(binBuf.length, 0);
+  binOtsikko.writeUInt32LE(CHUNK_BIN, 4);
+
+  return Buffer.concat([otsikko, jsonOtsikko, jsonBuf, binOtsikko, binBuf]);
+}

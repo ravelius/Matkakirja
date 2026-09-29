@@ -19,7 +19,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-import { smootherstep, asentoSijainti, siirtymanKesto, siirtymaAsento, pelaajanAsento } from '../js/dioraama/kamera.js';
+import {
+  smootherstep, asentoSijainti, siirtymanKesto, siirtymaAsento, pelaajanAsento,
+  rajaaKierto, leijunta, OLETUS_KIERTO_TILA, OLETUS_KIERTO_YLEIS,
+} from '../js/dioraama/kamera.js';
 import { tilanTaso, tilanTasoJaEdellinen, hahmonTila, aanenVoimakkuus } from '../js/dioraama/heratys.js';
 import { askeleenKesto, kasikirjoitusHetkella, puluLento } from '../js/dioraama/ohjaaja.js';
 
@@ -96,14 +99,21 @@ test('siirtymaAsento: t=0 ja t=1 ovat tarkat päätepisteet, nosto 0 molemmissa 
   assertAsentoLahella(a1, p1, 't=1');
 });
 
-test('siirtymaAsento: nosto on 0 molemmissa päissä, nollasta poikkeava keskellä (0,25·|Δkohde|·sin(πt))', () => {
+test('siirtymaAsento (era 2b, kaarilento): korkeuden nousu ja etäisyyden pullistuma 0 molemmissa päissä, matka01:n mukaisia keskellä', () => {
   const p0 = { kohde: [0, 0, 0], atsimuutti: 0, korkeus: 0, etaisyys: 5, fov: 45, aukko: 0 };
-  const p1 = { kohde: [10, 0, 0], atsimuutti: 0, korkeus: 0, etaisyys: 5, fov: 45, aukko: 0 };
-  assert.ok(lahella(siirtymaAsento(p0, p1, 0).etaisyys, 5), 't=0: ei nostoa');
-  assert.ok(lahella(siirtymaAsento(p0, p1, 1).etaisyys, 5), 't=1: ei nostoa');
+  const p1 = { kohde: [10, 0, 0], atsimuutti: 0, korkeus: 0, etaisyys: 5, fov: 45, aukko: 0 }; // |Δkohde|=10
+  assert.ok(lahella(siirtymaAsento(p0, p1, 0).etaisyys, 5) && lahella(siirtymaAsento(p0, p1, 0).korkeus, 0), 't=0: ei kaarta');
+  assert.ok(lahella(siirtymaAsento(p0, p1, 1).etaisyys, 5) && lahella(siirtymaAsento(p0, p1, 1).korkeus, 0), 't=1: ei kaarta');
+  const matka01 = 10 / 60; // ei kyllästy (< 1)
   const keski = siirtymaAsento(p0, p1, 0.5);
-  const odotettuNosto = 0.25 * 10 * Math.sin(Math.PI * 0.5); // = 2,5
-  assert.ok(lahella(keski.etaisyys, 5 + odotettuNosto), `keski.etaisyys=${keski.etaisyys}`);
+  assert.ok(lahella(keski.korkeus, 12 * matka01), `keski.korkeus=${keski.korkeus} (odotettu 12°·matka01)`);
+  assert.ok(lahella(keski.etaisyys, 5 * (1 + 0.35 * matka01)), `keski.etaisyys=${keski.etaisyys}`);
+
+  // |Δkohde|=100m > 60m-jakaja -> matka01 kyllästyy 1:een: huippu saa täyden 12°/0,35-vaikutuksen.
+  const p1Kauas = { kohde: [100, 0, 0], atsimuutti: 0, korkeus: 0, etaisyys: 5, fov: 45, aukko: 0 };
+  const kaukoKeski = siirtymaAsento(p0, p1Kauas, 0.5);
+  assert.ok(lahella(kaukoKeski.korkeus, 12), `kaukoKeski.korkeus=${kaukoKeski.korkeus} (matka01=1 -> täysi 12°)`);
+  assert.ok(lahella(kaukoKeski.etaisyys, 5 * 1.35), `kaukoKeski.etaisyys=${kaukoKeski.etaisyys}`);
 });
 
 test('siirtymaAsento: kiertoero valitsee lyhimmän reitin (350° -> 10° on +20°, ei -340°)', () => {
@@ -122,6 +132,69 @@ test('pelaajanAsento: da/dk/zoom rajataan (±20, ±10, 0,75–1,3)', () => {
   const ali = pelaajanAsento(p, { da: -999, dk: 999, zoom: -5 });
   assert.ok(lahella(ali.atsimuutti, 80) && lahella(ali.korkeus, 15) && lahella(ali.etaisyys, 8 * 0.75));
   assert.ok(lahella(yli.fov, p.fov) && lahella(yli.aukko, p.aukko), 'fov/aukko kulkevat läpi muuttumattomina');
+});
+
+test('rajaus: vektorit toistuvat (regressio)', () => {
+  assert.ok(V.rajaus.length >= 5, 'vähintään 5 rajaustapausta');
+  for (const tapaus of V.rajaus) {
+    const tulos = rajaaKierto(tapaus.perus, tapaus.asento, tapaus.yleisnakyma);
+    assertAsentoLahella(tulos, tapaus.tulos, tapaus.nimi);
+  }
+});
+
+test('leijunta: vektorit toistuvat (regressio)', () => {
+  assert.ok(V.leijunta.naytteet.length >= 5, 'vähintään 5 leijuntanäytettä');
+  for (const nayte of V.leijunta.naytteet) {
+    assertAsentoLahella(leijunta(V.leijunta.asento, nayte.t), nayte.tulos, `leijunta t=${nayte.t}`);
+  }
+});
+
+test('rajaaKierto: ei kierto-kenttää -> tila-oletus (±55° atsimuutti suhteessa perukseen, korkeus 6–65, etaisyys 0,55–1,6·perus)', () => {
+  const perus = { kohde: [0, 0, 0], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3 };
+  const sisalla = rajaaKierto(perus, { ...perus, atsimuutti: 220, korkeus: 30, etaisyys: 4.5 });
+  assert.ok(lahella(sisalla.atsimuutti, 220) && lahella(sisalla.korkeus, 30) && lahella(sisalla.etaisyys, 4.5), 'rajojen sisällä: läpi muuttumattomana');
+  const ylitys = rajaaKierto(perus, { ...perus, atsimuutti: 350, korkeus: 90, etaisyys: 20 });
+  assert.ok(lahella(ylitys.atsimuutti, perus.atsimuutti + OLETUS_KIERTO_TILA.atsimuuttiMax), `atsimuutti ${ylitys.atsimuutti}`);
+  assert.ok(lahella(ylitys.korkeus, OLETUS_KIERTO_TILA.korkeusMax), `korkeus ${ylitys.korkeus}`);
+  assert.ok(lahella(ylitys.etaisyys, perus.etaisyys * OLETUS_KIERTO_TILA.etaisyysMax), `etaisyys ${ylitys.etaisyys}`);
+});
+
+test('rajaaKierto: yleisnakyma=true -> atsimuutti VAPAA (ei rajaa), korkeus/etaisyys yleisnäkymän oletukseen', () => {
+  const perus = { kohde: [0, 0, 0], atsimuutti: 180, korkeus: 35, etaisyys: 8, fov: 50, aukko: 0.1 };
+  const kauas = rajaaKierto(perus, { ...perus, atsimuutti: 340, korkeus: 90, etaisyys: 20 }, true);
+  assert.ok(lahella(kauas.atsimuutti, 340), `atsimuutti ${kauas.atsimuutti} pitäisi kulkea läpi rajaamattomana (vapaa 360°)`);
+  assert.ok(lahella(kauas.korkeus, OLETUS_KIERTO_YLEIS.korkeusMax));
+  assert.ok(lahella(kauas.etaisyys, perus.etaisyys * OLETUS_KIERTO_YLEIS.etaisyysMax));
+});
+
+test('rajaaKierto: perus.kierto (oma) voittaa OLETUS_KIERTO_YLEISin vaikka yleisnakyma=true', () => {
+  const perus = {
+    kohde: [0, 0, 0], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3,
+    kierto: { atsimuuttiMin: -10, atsimuuttiMax: 10, korkeusMin: 20, korkeusMax: 30, etaisyysMin: 0.9, etaisyysMax: 1.1 },
+  };
+  const tulos = rajaaKierto(perus, { ...perus, atsimuutti: 230, korkeus: 5, etaisyys: 10 }, true);
+  assert.ok(lahella(tulos.atsimuutti, 210), `atsimuutti ${tulos.atsimuutti} (200+10, oman kierron mukaan, ei yleisen 360°)`);
+  assert.ok(lahella(tulos.korkeus, 20));
+  assert.ok(lahella(tulos.etaisyys, 4 * 1.1));
+});
+
+test('rajaaKierto: atsimuutti ei normalisoidu 0..360-välille (350+55=405, kiertoero-logiikka wrapin yli)', () => {
+  const perus = { kohde: [0, 0, 0], atsimuutti: 350, korkeus: 20, etaisyys: 5, fov: 45, aukko: 0.2 };
+  const tulos = rajaaKierto(perus, { ...perus, atsimuutti: 430 }); // 430≡70°, lyhin ero perukseen on +80° -> leikkautuu +55:een
+  assert.ok(lahella(tulos.atsimuutti, 405), `atsimuutti ${tulos.atsimuutti} (odotettu 405, ei 45)`);
+});
+
+test('leijunta: jaksollinen (atsimuutti ±3°/24s, korkeus ±1,5°/31s), muut kentät läpi muuttumattomina', () => {
+  const p = { kohde: [1, 2, 3], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3 };
+  const t0 = leijunta(p, 0);
+  assertAsentoLahella(t0, p, 't=0: nollapoikkeama');
+  const t6 = leijunta(p, 6); // neljännesjakso atsimuutille (24/4=6) -> sin(π/2)=1 -> +3°
+  assert.ok(lahella(t6.atsimuutti, 203), `atsimuutti ${t6.atsimuutti}`);
+  const t24 = leijunta(p, 24); // täysi jakso atsimuutille -> takaisin 0:aan
+  assert.ok(lahella(t24.atsimuutti, 200), `atsimuutti ${t24.atsimuutti}`);
+  const t31 = leijunta(p, 31); // täysi jakso korkeudelle -> takaisin 0:aan
+  assert.ok(lahella(t31.korkeus, 25), `korkeus ${t31.korkeus}`);
+  assert.ok(vekLahella(t6.kohde, p.kohde) && lahella(t6.etaisyys, p.etaisyys) && lahella(t6.fov, p.fov) && lahella(t6.aukko, p.aukko), 'muut kentät koskemattomina');
 });
 
 /* ================================================================
