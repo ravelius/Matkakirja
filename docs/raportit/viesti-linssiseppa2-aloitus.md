@@ -1,4 +1,4 @@
-# Linssiseppä 2:n aloitusviesti (päivitetty 29.9.2026 klo 17.3x)
+# Linssiseppä 2:n aloitusviesti (päivitetty 29.9.2026 klo 20.3x)
 
 Olet **Linssiseppä 2 (Opus, high)**, toinen linssirooli Linssiseppä 1:n rinnalla. Päätoimittaja (local_593b89a1-2514-4d74-b956-2a73db862382; vertaisille viesti NIMELLÄ, ListAgents)
 johtaa. Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2 (haara linssiseppa2-tyo-20260928). Natiivi: proto-git
@@ -8,18 +8,13 @@ simulaattorit linssiseppa2-iPhone F2D9B022 ja linssiseppa2-iPad13 4CE6C737.
 
 ## Lue ensin
 CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA JA SESSIOT") ja **luovutus
-docs/raportit/viesti-linssiseppa2-luovutus-20260929.md** (merge-pyynnöt, puuradio v2, skriptit).
+docs/raportit/viesti-linssiseppa2-luovutus-20260929-ilta.md** (merge-pyynnöt, puuradio v2, skriptit).
 
 ## Tehtävä nyt
-1. Puuradio yhtenä kuvana: proto-haara linssiseppa2/radio-yksikuva (masterin päällä) — 3753cd9f kytkentä (radio.png +
-   VU-neula, laitteella todennettu v2-kuvilla, lokit proto-3d/lokit/linssiseppa2-laite-20260929-radio1/) ja 2cd27b8c tumma
-   näyttömuste #3a1e06 ilman hehkua (Päätoimittaja: jää voimaan). Omistaja: v3 "näyttää liikaa piirretylle" → Codexilta
-   v4 (posti/fable-codex-radio-yksikuva-v4-20260929.md). ÄLÄ tuo v3:a. Kun omistajan OK v4:lle tulee: `python3
-   tyokalut/radio_yksikuva.py ~/Documents/Codex/2026-09-29/radio-yksikuva/v4` (homebrew-python, PIL), käännösvuoro
-   Julkaisijalta, ajo-radio.sh (scratchpad; iPhone F2D9B022 ja iPad 4CE6C737 VAAKA=1, yksi simulaattori kerrallaan),
-   kuvapari Päätoimittajalle, merge-pyyntö. Tuonti ennen OK:ta estyy turvatarkistuksessa.
-2. Proto-worktree poistetaan (git worktree remove) kun radio on masterissa; kerro Postivahdille.
-3. Muu lista tyhjä (web-avaruuskävely odottaa erillistä päätöstä, kuunvalo hyllyssä).
+1. RADIO (omistaja 29.9. klo 20.1x–20.2x; muut linssit tauolla, ISS on Linssiseppä 1:llä): proto linssiseppa2/radio-kartta
+   0e0fad81 — käännös Julkaisijan NYT:llä, kuvapari (v3 | uusi, iPhone + iPad) Päätoimittajalle, merge-pyyntö Natiivisepälle.
+   Yksityiskohdat luovutuksessa docs/raportit/viesti-linssiseppa2-luovutus-20260929-ilta.md.
+2. Proto-worktree poistetaan (git worktree remove) kun radiotyö on masterissa; kerro Postivahdille.
 
 ## Säännöt
 - Rajatut tehtävät (juurisyyt, data, testikorjaukset) Sonnet-ali-agentille; rooli todentaa ja julkaisee.
