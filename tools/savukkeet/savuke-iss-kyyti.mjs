@@ -143,6 +143,17 @@ const tila = (s) => s.evaluate(() => {
     korkeus: +(cam.position.length() / pallo.getGlobeRadius() - 1).toFixed(4),
     ohjaimet: pallo.controls().enabled,
     tieto: tieto ? { teksti: document.querySelector('.iss-kyyti-teksti')?.textContent ?? '', opacity: getComputedStyle(tieto).opacity, laatikko: (() => { const b = tieto.getBoundingClientRect(); return [b.left, b.top, b.right, b.bottom].map(Math.round); })() } : null,
+    /*
+     * SÄÄTÖPANEELI (Siirtoseppä 29.9.2026): tietorivi (.iss-kyyti-tieto) on nyt paneelin rivissä 1 eikä enää
+     * itse absoluuttisesti sijoitettu — paneeli (.iss-kyyti-paneeli) on. Turva-alueväitteet katsotaan siitä.
+     */
+    paneeli: (() => {
+      const p = document.querySelector('.iss-kyyti-paneeli');
+      if (!p) return null;
+      const b = p.getBoundingClientRect();
+      const c = getComputedStyle(p);
+      return { laatikko: [b.left, b.top, b.right, b.bottom].map(Math.round), ala: b.width * b.height, top: c.top, left: c.left };
+    })(),
     uiNakyy: Boolean(document.querySelector('.iss-kyyti:not([hidden])')),
     body: document.body.classList.contains('satelliitti-kyyti'),
     linssisulku: (() => { const e = document.querySelector('.satelliitti-linssikehys'); return e ? getComputedStyle(e).display : null; })(),
@@ -284,8 +295,13 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
   }
   vaadi(n('seuranta: LIVE-pilleri vasemmassa yläkulmassa'),
     /^· ISS · \d{3} km · 2[\d\s]+ km\/h$/.test(seuranta.tieto?.teksti ?? '') && seuranta.kyyti.live === true
-      && Number(seuranta.tieto.opacity) > 0.9 && seuranta.tieto.laatikko[0] <= 16,
+      && Number(seuranta.tieto.opacity) > 0.9
+      // Tietorivi on nyt säätöpaneelin rivissä 1 (Siirtoseppä 29.9.2026): paneelin, ei enää tietorivin, vasen
+      // reuna on turva-alueella ≤ 16 px.
+      && seuranta.paneeli?.laatikko[0] <= 16,
     JSON.stringify(seuranta.tieto));
+  // Paneelin (auki, oletusosio Nopeus) osuus näytöstä: kirjattu raporttiin, ei omaa väitettä (mittaus, ei kynnys).
+  console.log(`    paneeli auki (Nopeus): ${(100 * seuranta.paneeli.ala / (seuranta.leveys * seuranta.korkeusPx)).toFixed(1)} % näytöstä`);
   const realismiKaari = Boolean(seuranta.realismi?.kerrokset?.some((k) => k.nimi === 'ilmakaari' && k.nakyy));
   vaadi(n('seuranta: kaari (oma tai realismin ilmakaari), malli, ohjaimet kiinni, kenttäkulma 50°'),
     (seuranta.kyyti.kaari || realismiKaari) && seuranta.kyyti.malli && seuranta.kyyti.osuus === 1 && seuranta.ohjaimet === false
@@ -346,7 +362,8 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
       merkkiNakyy: !document.querySelector('.iss-kyyti-live')?.hidden,
       nopeutettu: document.querySelector('.iss-kyyti-tieto')?.classList.contains('iss-kyyti-tieto-nopeutettu'),
       ylilentoRivi: document.querySelector('.iss-kyyti-ylilento:not([hidden])')?.textContent ?? null,
-      pilleri: (() => { const e = document.querySelector('.iss-kyyti-tieto'); const c = getComputedStyle(e); return { top: c.top, left: c.left }; })(),
+      // Tietorivi ei ole enää itse asemoitu (rivi paneelin sisällä) — paneelin oma top/left on turva-alueella.
+      pilleri: (() => { const e = document.querySelector('.iss-kyyti-paneeli'); const c = getComputedStyle(e); return { top: c.top, left: c.left }; })(),
     };
   });
   await s.click('.iss-kyyti-nopeudet button[data-kerroin="100"]');
@@ -365,14 +382,43 @@ async function ajaNakyma(nimi, { ilmanTle = false } = {}) {
     kelaus.kelaa === true && Math.abs(kelaus.eroMs) > 1000 && takaisinLive.live && Math.abs(takaisinLive.eroMs) < 50
       && takaisinLive.merkki === 'LIVE',
     `kesken ${kelaus.eroMs} ms, perillä ${takaisinLive.eroMs} ms, ${takaisinLive.merkki}`);
-  vaadi(n('pilleri turva-alueella (10 px + inset ylhäältä, 12 px sivusta)'),
+  vaadi(n('paneeli turva-alueella (10 px + inset ylhäältä, 12 px sivusta)'),
     takaisinLive.pilleri.top === '10px' && takaisinLive.pilleri.left === '12px', JSON.stringify(takaisinLive.pilleri));
+
+  /*
+   * PANEELIN OSIOT (Siirtoseppä 29.9.2026, omistajan asettelumuutos): vain valitun osion rivi 3 näkyy, joten
+   * "Kohde"-välilehti on avattava ennen valikon kanssa toimimista (select on olemassa DOM:issa mutta
+   * näkymätön/ei-osuttava kohdeLohko-säiliön hidden-attribuutin takia, kun "Nopeus" on auki).
+   * Samalla mitataan paneelin peitto puhelin-/iPad-näytöstä eri osioissa: kutistettu, Nopeus (oletus, mitattu
+   * jo edellä), Olosuhteet (laajin, kaksi liukua).
+   */
+  const peitto = async () => s.evaluate(() => {
+    const p = document.querySelector('.iss-kyyti-paneeli');
+    const b = p.getBoundingClientRect();
+    return +(100 * b.width * b.height / (innerWidth * innerHeight)).toFixed(1);
+  });
+  await s.click('.iss-kyyti-osio[data-osio="olosuhteet"]');
+  await s.waitForTimeout(200);
+  const peittoOlosuhteet = await peitto();
+  await kuva('7-olosuhteet');
+  await s.click('.iss-kyyti-kutista');
+  await s.waitForTimeout(400);
+  const peittoKiinni = await peitto();
+  await s.click('.iss-kyyti-kutista');
+  await s.waitForTimeout(200);
+  await s.click('.iss-kyyti-osio[data-osio="kohde"]');
+  await s.waitForTimeout(200);
+  console.log(`    paneelin peitto: kutistettu ${peittoKiinni} %, Olosuhteet auki ${peittoOlosuhteet} %`);
 
   /* ---- "Lennä kohteen ylle" → seuraava todellinen ylilento --------- */
   const lenna = async (tunnus, odotaS = 32, valoisa = false) => {
     // Valikko (pelaajan tie) — NASA-kokeessa sama funktio valoisalle ohitukselle.
     if (valoisa) await s.evaluate((t) => window.matkakirja.ui.pallolinssi.kahva.avaruus.lennaKohteeseen(t, { valoisa: true }), tunnus);
-    else await s.selectOption('.iss-kyyti-kohteet', tunnus);
+    else {
+      await s.click('.iss-kyyti-osio[data-osio="kohde"]');
+      await s.waitForTimeout(150);
+      await s.selectOption('.iss-kyyti-kohteet', tunnus);
+    }
     await s.waitForTimeout(300);
     const alku = await aika();
     const loppuu = Date.now() + odotaS * 1000;
