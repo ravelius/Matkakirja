@@ -433,7 +433,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
       lisaa.title = 'Lisää alueesta';
       lisaa.setAttribute('aria-label', 'Lisää alueesta');
       lisaa.innerHTML = PLUS_IKONI;
-      lisaa.addEventListener('click', () => avaaMaakuntaKortti(ui, avain, nimi, data));
+      lisaa.addEventListener('click', () => avaaMaakuntaKortti(ui, avain, nimi, data, lisaa));
       kuvaus.appendChild(lisaa);
     }
   }
@@ -567,16 +567,25 @@ export function maakunnanNostokuva(kuva) {
   return { ...kuva, lahde: [lahde, lisenssi].filter(Boolean).join(' · ') };
 }
 
+/** Sulkuanimaation kesto (css/styles.css .maakunta-kortti) ja varmistus, jos transitionend jää tulematta. */
+const KORTIN_SULKU_MS = 200;
+
 function suljeMaakuntaKortti() {
   const auki = avoinKortti;
   avoinKortti = null;
   auki?.purku?.();
   // Kuvan suurennos on kortin jatke: se ei saa jäädä yksin kartan päälle.
   suljeKohdeSuurennos(auki?.ui, MAAKUNTA_ZOOM);
-  auki?.kerros?.remove();
+  const kerros = auki?.kerros;
+  if (!kerros) return;
+  // Sulku samaa reittiä takaisin avanneeseen nappiin (omistaja 29.9.2026); ilman liikettä heti pois.
+  if (liikettaVahennetty()) { kerros.remove(); return; }
+  kerros.classList.add('maakunta-kortti-sulkeutuu');
+  kerros.classList.remove('maakunta-kortti-auki');
+  setTimeout(() => kerros.remove(), KORTIN_SULKU_MS + 40);
 }
 
-function avaaMaakuntaKortti(ui, avain, nimi, data) {
+function avaaMaakuntaKortti(ui, avain, nimi, data, avaaja = null) {
   suljeMaakuntaKortti();
   nostoLataaTyyli();
 
@@ -693,6 +702,15 @@ function avaaMaakuntaKortti(ui, avain, nimi, data) {
       puraNapautus();
     },
   };
+  // Kortti kasvaa avanneen napin kohdalta: origo napin keskelle kortin omissa koordinaateissa (ennen skaalausta).
+  const napista = avaaja?.getBoundingClientRect?.();
+  if (napista?.width) {
+    const kortinLaatikko = { vasen: kortti.offsetLeft, yla: kortti.offsetTop };
+    const kerroksenLaatikko = kerros.getBoundingClientRect();
+    const x = napista.left + napista.width / 2 - kerroksenLaatikko.left - kortinLaatikko.vasen;
+    const y = napista.top + napista.height / 2 - kerroksenLaatikko.top - kortinLaatikko.yla;
+    kortti.style.transformOrigin = `${Math.round(x)}px ${Math.round(y)}px`;
+  }
   void kerros.offsetWidth;
   kerros.classList.add('maakunta-kortti-auki');
 }
