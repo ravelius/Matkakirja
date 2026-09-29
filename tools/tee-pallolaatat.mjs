@@ -1362,7 +1362,7 @@ async function paa() {
         const r = laatanReunat(Z, X, Y);
         const x0 = Math.floor(lautaX(r.lansi) / T9); const x1 = Math.floor(lautaX(r.ita - 1e-9) / T9);
         const y0 = Math.floor((lautaY(r.pohjoinen) - Y0) / T9); const y1 = Math.floor((lautaY(r.etela) - Y0) / T9);
-        for (let x = x0; x !== x1 + 1; x = (x + 1) % 675) for (let y = y0; y <= y1; y += 1) if (!olemassa.has(`${x}:${y}`)) return false;
+        for (let x = x0 % 675; x !== (x1 + 1) % 675; x = (x + 1) % 675) for (let y = y0; y <= y1; y += 1) if (!olemassa.has(`${x}:${y}`)) return false;
         return true;
       });
       console.log(`  lähdelaatat: ${lista.length}/${ennen} laatan alla koko z9 poltettuna`);
@@ -1373,7 +1373,7 @@ async function paa() {
           const r = laatanReunat(Z, X, Y);
           const x0 = Math.floor(lautaX(r.lansi) / T10); const x1 = Math.floor(lautaX(r.ita - 1e-9) / T10);
           const y0 = Math.floor((lautaY(r.pohjoinen) - Y0) / T10); const y1 = Math.floor((lautaY(r.etela) - Y0) / T10);
-          for (let x = x0; x !== x1 + 1; x = (x + 1) % 1350) for (let y = y0; y <= y1; y += 1) if (!olemassa10.has(`${x}:${y}`)) return false;
+          for (let x = x0 % 1350; x !== (x1 + 1) % 1350; x = (x + 1) % 1350) for (let y = y0; y <= y1; y += 1) if (!olemassa10.has(`${x}:${y}`)) return false;
           return true;
         }).map(([Z, X, Y]) => `${Z}/${X}/${Y}`));
         console.log(`  z10-lähde: ${z10Lahde.size}/${lista.length} laatan alla koko z10 poltettuna (muut z9:stä)`);
