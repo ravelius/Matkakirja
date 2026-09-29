@@ -24,7 +24,7 @@ import {
   rajaaKierto, leijunta, OLETUS_KIERTO_TILA, OLETUS_KIERTO_YLEIS,
 } from '../js/dioraama/kamera.js';
 import { tilanTaso, tilanTasoJaEdellinen, hahmonTila, aanenVoimakkuus } from '../js/dioraama/heratys.js';
-import { askeleenKesto, kasikirjoitusHetkella, puluLento } from '../js/dioraama/ohjaaja.js';
+import { askeleenKesto, kasikirjoitusHetkella, puluLento, seuraavaKiertueella } from '../js/dioraama/ohjaaja.js';
 
 const V = JSON.parse(readFileSync(new URL('./fixtures/dioraama/vektorit.json', import.meta.url), 'utf8'));
 const TOL = 1e-6;
@@ -429,4 +429,20 @@ test('puluLento: nollamatka nostaa silti pystyyn (vakiotermi +1 ei häviä)', ()
   assert.ok(piste[1] > y0, `piste.y=${piste[1]} pitäisi olla korkeampi kuin alku/loppu (${y0})`);
   // huippu.y = y0 + 0,3*0 + 1 = y0+1 = 1,5; alku=loppu=y0, joten käyrän y keskellä on (y0+huippu.y)/2 = 1,0.
   assert.ok(lahella(piste[1], (y0 + (y0 + 1)) / 2), `piste.y=${piste[1]} (odotettu 1,0)`);
+});
+
+test('seuraavaKiertueella: tyhjä/puuttuva kiertue → null', () => {
+  assert.equal(seuraavaKiertueella({ kiertue: [] }, 'a'), null);
+  assert.equal(seuraavaKiertueella({}, null), null);
+  assert.equal(seuraavaKiertueella({ kiertue: [] }, 'massa'), null);
+});
+
+test('seuraavaKiertueella: null/massa → ensimmäinen; kiertueella → seuraava; viimeinen → null; vieras → ensimmäinen', () => {
+  const r = { kiertue: ['a', 'b', 'c'] };
+  assert.equal(seuraavaKiertueella(r, null), 'a');
+  assert.equal(seuraavaKiertueella(r, 'massa'), 'a');
+  assert.equal(seuraavaKiertueella(r, 'a'), 'b');
+  assert.equal(seuraavaKiertueella(r, 'b'), 'c');
+  assert.equal(seuraavaKiertueella(r, 'c'), null);
+  assert.equal(seuraavaKiertueella(r, 'ei-kiertueella'), 'a');
 });

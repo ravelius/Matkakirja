@@ -19,7 +19,9 @@ const NIVELNIMET = [
   'olka_v', 'kyynar_v', 'kasi_v', 'olka_o', 'kyynar_o', 'kasi_o',
   'lonkka_v', 'polvi_v', 'nilkka_v', 'lonkka_o', 'polvi_o', 'nilkka_o',
 ];
-const HENKILO_IDT = ['kokki-1500', 'apulainen-1500', 'vesipoika-1500'];
+// Erä 3: kaikki HENKILOT-pankin henkilöt (kolme alkuperäistä + kymmenen uutta).
+const HENKILO_IDT = Object.keys(HENKILOT);
+const ERA1_IDT = ['kokki-1500', 'apulainen-1500', 'vesipoika-1500'];
 
 /* ==================== Pieni GLB->JSON-lukija (vain tätä testiä varten) ==================== */
 
@@ -60,11 +62,11 @@ test('teeHahmo3d: 16 niveltä, oikeat nimet, yksi juuri ("lantio"), vanhemmat l�
 
 /* ==================== Kolmioraja ==================== */
 
-test('teeHahmo3d: kolmioita > 500 ja <= 3000 per hahmo', () => {
+test('teeHahmo3d: kolmioita > 500 ja <= 3000 per hahmo (erän 3 henkilöt <= 2500)', () => {
   for (const id of HENKILO_IDT) {
     const n = laskeKolmiot(teeHahmo3d(id, HENKILOT[id]));
     assert.ok(n > 500, `${id}: kolmioita riittävästi (${n})`);
-    assert.ok(n <= 3000, `${id}: kolmioita enintään 3000 (${n})`);
+    assert.ok(n <= (ERA1_IDT.includes(id) ? 3000 : 2500), `${id}: kolmioita enintään budjetti (${n})`);
   }
 });
 
@@ -227,4 +229,159 @@ test('liikkeet: juuriNousu on 0 silmukalla, jolla ei ole juuri-kenttää; >0 kes
 test('liikkeet: tuntematon silmukka heittää selkeän virheen', () => {
   assert.throws(() => nivelKulmat('joku', 0.5), /tuntematon silmukka/);
   assert.throws(() => juuriNousu('joku', 0.5), /tuntematon silmukka/);
+});
+
+/* ==================== Erä 3: uudet päähineet, kaapu ja esineet ==================== */
+
+/** Solmun pinnan kolmiomäärä (0 jos solmua/pintaa ei ole). */
+function pintaKolmiot(hahmo, solmu, pinta) {
+  const o = hahmo.solmut.find((s) => s.nimi === solmu)?.osat.find((x) => x.pinta === pinta);
+  return o ? o.kolmiot.length / 3 : 0;
+}
+
+/** Kaikkien kolmioiden korkein y kasi_o-solmun paikallisessa kehyksessä. */
+function korkeinY(hahmo, solmu, pinta) {
+  const o = hahmo.solmut.find((s) => s.nimi === solmu)?.osat.find((x) => x.pinta === pinta);
+  let max = -Infinity;
+  for (let i = 1; i < o.paikat.length; i += 3) max = Math.max(max, o.paikat[i]);
+  return max;
+}
+
+/** Solmun origon maailmankorkeus lepoasennossa (paikat summattuna vanhempia pitkin). */
+function solmunMaailmanY(hahmo, nimi) {
+  let y = 0;
+  for (let s = hahmo.solmut.find((x) => x.nimi === nimi); s; s = hahmo.solmut.find((x) => x.nimi === s.vanhempi)) {
+    y += s.paikka[1];
+  }
+  return y;
+}
+
+/** Väliaikainen henkilö: perusvaatteet + annetut lisät (pohjana vartija-1500:n mitat). */
+function testiHenkilo(vaatteet, esine, varit = {}) {
+  return {
+    nimi: 'Testi',
+    malli3d: {
+      mittasuhteet: { pituus_m: 1.75, hartiat_m: 0.43, lantio_m: 0.35, paa_m: 0.236 },
+      vaatteet: { paita: true, housut: true, ...vaatteet },
+      varit: { vaate: '#7a3b2e', vaate2: '#5c2c22', ...varit },
+      esine: esine ?? null,
+    },
+  };
+}
+
+test('erä 3: päähineet tuottavat kolmioita paa-solmun oikeaan pintaan', () => {
+  const odotus = { kypara: 'esine-metalli', hattu: 'vaate2', huppu: 'vaate', lakki: 'vaate2' };
+  const perus = laskeKolmiot(teeHahmo3d('t', testiHenkilo({ paahine: null })));
+  for (const [paahine, pinta] of Object.entries(odotus)) {
+    const h = teeHahmo3d('t', testiHenkilo({ paahine }));
+    assert.ok(pintaKolmiot(h, 'paa', pinta) >= 30, `${paahine}: paa-solmun '${pinta}'-pinnalla kolmioita`);
+    // Hiukset-pallovyöhyke korvautuu päähineellä (samalla pinta-kolmiomäärällä ei jää hiuksia).
+    assert.strictEqual(pintaKolmiot(h, 'paa', 'hiukset'), 0, `${paahine}: ei hiuksia päähineen alla`);
+    assert.notStrictEqual(laskeKolmiot(h), perus, `${paahine}: kolmiomäärä eroaa paljaasta päästä`);
+    // Päähine on pään päällä: pinnan alin kolmio ei ole kasvojen silmälinjalla (y < headR).
+    const o = h.solmut.find((s) => s.nimi === 'paa').osat.find((x) => x.pinta === pinta);
+    let ylin = -Infinity;
+    for (let i = 1; i < o.paikat.length; i += 3) ylin = Math.max(ylin, o.paikat[i]);
+    assert.ok(ylin > 0.19, `${paahine}: ulottuu pään yläpuolelle (${ylin.toFixed(3)})`);
+  }
+});
+
+test('erä 3: kattilakypärän lieri on kupua leveämpi ja hatun lieri ulottuu pään ulkopuolelle', () => {
+  const leveys = (h, solmu, pinta) => {
+    const o = h.solmut.find((s) => s.nimi === solmu).osat.find((x) => x.pinta === pinta);
+    let max = 0;
+    for (let i = 0; i < o.paikat.length; i += 3) max = Math.max(max, Math.hypot(o.paikat[i], o.paikat[i + 2]));
+    return max;
+  };
+  const headR = 0.236 * 0.58;
+  for (const paahine of ['kypara', 'hattu']) {
+    const h = teeHahmo3d('t', testiHenkilo({ paahine }));
+    const pinta = paahine === 'kypara' ? 'esine-metalli' : 'vaate2';
+    assert.ok(leveys(h, 'paa', pinta) > headR * 1.6, `${paahine}: leveä lieri (${leveys(h, 'paa', pinta).toFixed(3)})`);
+  }
+});
+
+test('erä 3: kaapu = nilkkaan ulottuva vaate-pinta lantio-solmussa + hihat, ei hametta/tunikaa', () => {
+  const kaapu = teeHahmo3d('t', testiHenkilo({ kaapu: true, paahine: null }));
+  const housut = teeHahmo3d('t', testiHenkilo({ paahine: null }));
+  assert.ok(pintaKolmiot(kaapu, 'lantio', 'vaate') >= 50, 'kaapu: lantio-solmun vaate-pinta');
+  assert.ok(pintaKolmiot(kaapu, 'kyynar_v', 'vaate') > 0, 'kaapu: vasen hiha');
+  assert.ok(pintaKolmiot(kaapu, 'kyynar_o', 'vaate') > 0, 'kaapu: oikea hiha');
+  assert.strictEqual(pintaKolmiot(housut, 'kyynar_v', 'vaate'), 0, 'ilman kaapua ei hihaa kyynärvarressa');
+  const alin = (h) => {
+    const o = h.solmut.find((s) => s.nimi === 'lantio').osat.find((x) => x.pinta === 'vaate');
+    let min = Infinity;
+    for (let i = 1; i < o.paikat.length; i += 3) min = Math.min(min, o.paikat[i]);
+    return min;
+  };
+  // Kaapu ulottuu nilkkoihin asti (lantion maailmankorkeus + alin y <= n. 0,1 x pituus).
+  const lantioY = solmunMaailmanY(kaapu, 'lantio');
+  assert.ok(lantioY + alin(kaapu) < 0.1 * 1.75, `kaapun helma nilkkojen korkeudella (${(lantioY + alin(kaapu)).toFixed(3)})`);
+  // Kaapu ei ole hame: hameen ja kaavun samalle henkilölle ei tule kahta helmaa.
+  assert.strictEqual(pintaKolmiot(kaapu, 'lantio', 'vaate2') > 0, true, 'lantion vyö/lanne säilyy (vaate2)');
+});
+
+test('erä 3: jokainen uusi esine tuottaa kolmioita kasi_o-solmuun oikeisiin pintoihin', () => {
+  const odotus = {
+    keihas: ['esine-puu', 'esine-metalli'],
+    kirja: ['esine-puu', 'esiliina'],
+    airo: ['esine-puu'],
+    avaimet: ['esine-metalli'],
+    lyhty: ['esine-metalli', 'hiillos'],
+  };
+  for (const [esine, pinnat] of Object.entries(odotus)) {
+    const h = teeHahmo3d('t', testiHenkilo({ paahine: null }, esine));
+    for (const pinta of pinnat) {
+      assert.ok(pintaKolmiot(h, 'kasi_o', pinta) >= 12, `${esine}: kasi_o/'${pinta}' (${pintaKolmiot(h, 'kasi_o', pinta)})`);
+    }
+    // Esine on oikeassa kädessä: vasemman käden solmussa ei esinepintoja.
+    for (const pinta of ['esine-puu', 'esine-metalli', 'hiillos']) {
+      assert.strictEqual(pintaKolmiot(h, 'kasi_v', pinta), 0, `${esine}: vasen käsi ei pitele mitään ('${pinta}')`);
+    }
+    assert.ok(laskeKolmiot(h) <= 2500, `${esine}: alle 2500 kolmiota (${laskeKolmiot(h)})`);
+  }
+});
+
+test('erä 3: keihään kärki yli 2 m korkeudella seisovalla hahmolla, varsi maasta asti, airo pystyssä', () => {
+  const h = teeHahmo3d('t', testiHenkilo({ paahine: null }, 'keihas'));
+  const kasiY = solmunMaailmanY(h, 'kasi_o');
+  const karki = kasiY + korkeinY(h, 'kasi_o', 'esine-metalli');
+  assert.ok(karki > 2.0, `keihään kärki > 2 m (${karki.toFixed(3)})`);
+  const varsiYla = kasiY + korkeinY(h, 'kasi_o', 'esine-puu');
+  assert.ok(varsiYla > 2.0 && varsiYla < karki, `varsi päättyy kärjen alle (${varsiYla.toFixed(3)})`);
+  const o = h.solmut.find((s) => s.nimi === 'kasi_o').osat.find((x) => x.pinta === 'esine-puu');
+  let alin = Infinity;
+  for (let i = 1; i < o.paikat.length; i += 3) alin = Math.min(alin, o.paikat[i]);
+  assert.ok(kasiY + alin >= 0 && kasiY + alin < 0.06, `varren alapää heti maan yläpuolella (${(kasiY + alin).toFixed(3)})`);
+  const airo = teeHahmo3d('t', testiHenkilo({ paahine: null }, 'airo'));
+  const airoYla = solmunMaailmanY(airo, 'kasi_o') + korkeinY(airo, 'kasi_o', 'esine-puu');
+  assert.ok(airoYla > 1.7 && airoYla < 2.3, `airo ulottuu pään yläpuolelle (${airoYla.toFixed(3)})`);
+});
+
+test('erä 3: deterministisyys - uudet päähineet/kaapu/esineet tuottavat samat tavut kahdesti', () => {
+  const yhdistelmat = [];
+  for (const paahine of ['kypara', 'hattu', 'huppu', 'lakki']) yhdistelmat.push(testiHenkilo({ paahine }));
+  yhdistelmat.push(testiHenkilo({ kaapu: true, paahine: 'lakki' }));
+  for (const esine of ['keihas', 'kirja', 'airo', 'avaimet', 'lyhty']) yhdistelmat.push(testiHenkilo({ paahine: null }, esine));
+  for (const henkilo of yhdistelmat) {
+    const a = kirjoitaMonisolmuGlb({ nimi: 't', solmut: teeHahmo3d('t', henkilo).solmut });
+    const b = kirjoitaMonisolmuGlb({ nimi: 't', solmut: teeHahmo3d('t', henkilo).solmut });
+    assert.ok(a.equals(b), 'sama syöte -> samat tavut');
+  }
+});
+
+test('erä 3: kaikki HENKILOT-henkilöt rakentuvat virheettä, 16 niveltä, <= 2500 kolmiota, kaikilla pinnoilla väri', () => {
+  assert.ok(HENKILO_IDT.length >= 13, `HENKILOT sisältää 13 henkilöä (${HENKILO_IDT.length})`);
+  for (const id of HENKILO_IDT) {
+    const h = teeHahmo3d(id, HENKILOT[id]);
+    assert.strictEqual(h.solmut.length, 16, `${id}: 16 niveltä`);
+    const n = laskeKolmiot(h);
+    assert.ok(n <= 2500, `${id}: ${n} kolmiota <= 2500`);
+    for (const s of h.solmut) {
+      for (const o of s.osat) assert.match(o.vari, /^#[0-9a-f]{6}$/i, `${id}/${s.nimi}/${o.pinta}: väri`);
+    }
+    const mitatt = HENKILOT[id].malli3d.mittasuhteet;
+    assert.strictEqual(mitatt.pituus_m, HENKILOT[id].korkeus_m, `${id}: pituus_m == korkeus_m`);
+    if (!ERA1_IDT.includes(id)) assert.strictEqual(HENKILOT[id].maalattu, undefined, `${id}: ei maalattu-kenttää (erän 3 henkilöt)`);
+  }
 });

@@ -250,6 +250,12 @@ export function tihenna(kolmiot, maxReuna) {
     const s = [d2(a, b), d2(b, c), d2(c, a)];
     const i = s[0] >= s[1] && s[0] >= s[2] ? 0 : s[1] >= s[2] ? 1 : 2;
     if (s[i] <= raja) { tulos.push(t); continue; }
+    // Erä 3 (kolmiobudjetti): kapeita kaistaleita (korkeus pisintä sivua vasten < KAISTALE_M, esim. lattian
+    // 1 cm:n viisteet ja lankkujen sivut) ja alaspäin osoittavia pintoja (pohjat) ei tihennetä — niiden AO:n
+    // vaihtelu ei näy, mutta pitkinä ne tuottivat kymmeniätuhansia kolmioita (keskushallin lattia 187 k).
+    if (maxReuna < KAISTALE_TIHENNYS_RAJA && (kaistale(a, b, c, s[i]) || alaspain(t, a, b, c))) {
+      tulos.push(t); continue;
+    }
     // Kierrä niin, että puolitettava sivu on p0–p1.
     const j = [i, (i + 1) % 3, (i + 2) % 3];
     const P = j.map((k) => t.p[k]), N = t.n ? j.map((k) => t.n[k]) : null;
@@ -266,6 +272,22 @@ export function tihenna(kolmiot, maxReuna) {
     pino.push(uusi([m, P[1], P[2]], N ? [nm, N[1], N[2]] : null, uvM ? [uvM, UV[1], UV[2]] : null));
   }
   return tulos;
+}
+
+const KAISTALE_M = 0.15; // tihennetään vain, jos kolmion korkeus pisintä sivua vasten on ≥ tämä
+const KAISTALE_TIHENNYS_RAJA = 1; // sääntö koskee hienoa tihennystä (kohdistettavat tilat, 0,5 m)
+/** Kolmion korkeus pisintä sivua vasten (2 · ala / pisin sivu) < KAISTALE_M. */
+function kaistale(a, b, c, pisin2) {
+  const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]], v = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
+  const x = u[1] * v[2] - u[2] * v[1], y = u[2] * v[0] - u[0] * v[2], z = u[0] * v[1] - u[1] * v[0];
+  return Math.hypot(x, y, z) / Math.sqrt(pisin2) < KAISTALE_M;
+}
+/** Pinta osoittaa alas (normaalin y < −0,7): pohjat eivät näy dioraaman kameroista. */
+function alaspain(t, a, b, c) {
+  if (t.n) return (t.n[0][1] + t.n[1][1] + t.n[2][1]) / 3 < -0.7;
+  const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]], v = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
+  const x = u[1] * v[2] - u[2] * v[1], y = u[2] * v[0] - u[0] * v[2], z = u[0] * v[1] - u[1] * v[0];
+  return y / (Math.hypot(x, y, z) || 1) < -0.7;
 }
 
 /** Tihennyksen sivuraja palikalle (m): vesi ei tarvitse AO:ta, kallio on iso ja karkea. */
