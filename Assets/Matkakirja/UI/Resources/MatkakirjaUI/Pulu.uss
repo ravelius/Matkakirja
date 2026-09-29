@@ -257,7 +257,7 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.32);
     border-radius: 12px;
-    background-color: rgba(244, 231, 202, 0.94);
+    background-color: rgba(0, 0, 0, 0);
     overflow: hidden;
     /* Löydös 139 (omistaja, build 16): avattu matkakirja samalla vaalealla pohjalla kuin pienennetty lappu
      * (.mk-matkakirja--pieni rgba(244, 231, 202)), ei tummana nahkapaneelina. Teeman muuttujat määritellään kortin
@@ -267,7 +267,9 @@
     --ink-light: #2b2218;
     --muted: #6b5a44;
     --accent: #7a5514;
-    -unity-background-image-tint-color: rgba(0, 0, 0, 0);
+    /* Pergamentti (Matkakirjakortti: Kuviot.Pergamentti), hieman läpikuultava kuten ennen (0,94). */
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.96);
+    -unity-background-scale-mode: stretch-to-fill;
 }
 
 /* Offline-pillerin vuoro samassa kulmassa: lappu häipyy (ristihäivytys, OfflineTilaUi.Vuorottele). */
