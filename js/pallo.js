@@ -39,6 +39,7 @@
  * docs/moduulit/karttapallo.md.
  */
 
+import { laattaMuuttunut } from './deltasarja.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { koepyramidinPallokansio, pyramidiKoe } from './media.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
@@ -248,9 +249,28 @@ export const PALLO_LAATTATASO_MAX = 8;
  * ilman koodimuutosta.
  */
 export const PALLO_LAATAT_SYVA = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERSIO}/`;
+/**
+ * Deltasarjan perussarjan kansio (js/deltasarja.js): sama arvo kuin
+ * tuotannon laatat.json:n `delta.perus`, ja sw.js:n LAATTAKANSIO_PERUS
+ * kaksoiskappaleena (activate ei siivoa perussarjan laattoja). null =
+ * tuotantosarja on täysi sarja.
+ */
+export const PALLO_LAATTAPERUS = null;
 export const PALLO_SYVA_TASO = 0;
-/** Laatan osoite laattamoottorille (slippy map -koordinaatit). */
-export const pallonLaatta = (x, y, l) => `${PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO ? PALLO_LAATAT_SYVA : PALLO_LAATAT}${l}/${x}/${y}.jpg`;
+/**
+ * Laatan osoite laattamoottorille (slippy map -koordinaatit).
+ *
+ * DELTASARJA (js/deltasarja.js, 29.9.2026): kun laatat.json kantaa
+ * `delta`-kentän, muuttumaton laatta haetaan perussarjan kansiosta —
+ * sama osoite kuin ennen, joten selaimen ja palvelutyöntekijän kori
+ * pysyy lämpimänä versionvaihdon yli.
+ */
+export const pallonLaatta = (x, y, l) => {
+  if (PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO) return `${PALLO_LAATAT_SYVA}${l}/${x}/${y}.jpg`;
+  const d = laattaluettelo?.delta;
+  const kansio = d && !laattaMuuttunut(d, l, x, y, 2 ** l) ? `${R2}julisteet/pallo/laatat/${d.perus}/` : PALLO_LAATAT;
+  return `${kansio}${l}/${x}/${y}.jpg`;
+};
 
 let laatatLupaus = null;
 /** Pallon laattaluettelo (laatat.json), kun se on saatu; muuten null. */
