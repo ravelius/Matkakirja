@@ -169,9 +169,10 @@ const TILA_KEITTIO = {
   kohdistettava: true,
   rajat: { min: [8, 0, 4], max: [20, 4, 11] },
   naapurit: ['massa'],
-  kamera: { kohde: [14, 1.5, 7.4], atsimuutti: 172, korkeus: 13, etaisyys: 16, fov: 38, aukko: 0.8 },
-  // Pystynäyttö (iPhone ~0,46): vaakakenttä ~21° → kauempaa, jotta tulisija, kokki ja pöytä mahtuvat; sali näkyy yllä.
-  kameraPysty: { kohde: [13.8, 1.4, 7.2], atsimuutti: 174, korkeus: 12, etaisyys: 25, fov: 44, aukko: 0.8 },
+  kamera: { kohde: [14, 1.2, 7.2], atsimuutti: 172, korkeus: 22, etaisyys: 16, fov: 38, aukko: 0.8 },
+  // Kamerat ~22–24° vaakatason yläpuolella (Codexin hahmot on piirretty ~25° kulmasta). Pystynäytössä taulu
+  // peittää alimman 45 %, joten huone rajataan lähelle ja nostetaan näkyvän yläosan keskelle.
+  kameraPysty: { kohde: [13.8, -0.8, 7.0], atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea' },
   taulu: TAULU_KEITTIO,
   valot: [
@@ -179,9 +180,10 @@ const TILA_KEITTIO = {
     { paikka: [10.5, 0.8, 9], sade: 2.5, voima: 0.4 },
   ],
   palikat: [
-    // Lattia ja katto (katto = salin lattia yläpuolella, leikkausreuna näkyy sivu-roolista).
+    // Lattia ja katto (katto = salin lattia yläpuolella, leikkausreuna näkyy sivu-roolista). Katto on
+    // porrastettu taaemmas (z 4–7,2) kuten poikkileikkauskuvituksissa, jotta keittiö näkyy yläviistosta.
     { resepti: 'laatta', paikka: [14, 0, 7.5], suunta: 0, leveys: 12, syvyys: 7, paksuus: 0.3 },
-    { resepti: 'laatta', paikka: [14, 4, 7.5], suunta: 0, leveys: 12, syvyys: 7, paksuus: 0.4 },
+    { resepti: 'laatta', paikka: [14, 4, 5.6], suunta: 0, leveys: 12, syvyys: 3.2, paksuus: 0.4 },
     // Takaseinä (pohjoinen, z 4) ampumarakoineen.
     {
       resepti: 'seina', paikka: [14, 0, 4], suunta: 0, pituus: 12, korkeus: 4, paksuus: 0.6,
