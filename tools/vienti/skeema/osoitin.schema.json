@@ -116,6 +116,14 @@
       },
       "description": "kokoelmien alkiomäärät; seuraava versio laskee muutosrivin näistä (skeema 1.22)"
     },
+    "kokoelmaSha": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{12}$"
+      },
+      "description": "kokoelmien ja offline.jsonin sha256-tiivisteen alku (12 merkkiä); seuraava versio nimeää muutosrivillä muuttuneet (28.9.2026)"
+    },
     "muutos": {
       "type": "object",
       "required": [

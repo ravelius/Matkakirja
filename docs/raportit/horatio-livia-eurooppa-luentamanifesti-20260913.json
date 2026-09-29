@@ -3170,8 +3170,8 @@
         "audioId": "sisilia-3",
         "visibleText": "Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin kuvassa, sillä sisälle en lentänyt.",
         "visibleTextSha256": "ac331a83b4fcc669811a2f1c0ef75edbb32769cf76081771e675eb968783cd52",
-        "ttsText": "[curious] Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. [brightly] Kiersin pihan yllä, nokka kohti ikkunoita. [softly] Katon näin kuvassa, sillä sisälle en lentänyt.",
-        "ttsTextSha256": "002d538c86c8a40d897f997fcaad8f476420a8929d314512bcdcf7c09ff6ce38",
+        "ttsText": "[curious] Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. [brightly] Kiersin pihan yllä, nokka kohti ikkunoita. [amused] Katon näin kuvassa, sillä sisälle en lentänyt.",
+        "ttsTextSha256": "f1f3c0f320d2e047713d9179278ec19ed85ca32ea25eab207b579ad164a8aa9d",
         "cues": [
           {
             "cueId": "sisilia.livia.c1",
@@ -3249,8 +3249,8 @@
         "audioId": "islanti-3",
         "visibleText": "Reykjavíkin talot lämpenevät yhä maan voimalla. Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. Hetkeä myöhemmin olin jo ilmassa.",
         "visibleTextSha256": "edd43d46ddaa90ae568f83eb023e0e33679a03ee709c09de8fd6b146610ce336",
-        "ttsText": "[brightly] Reykjavíkin talot lämpenevät yhä maan voimalla. [softly] Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. [mischievously] Hetkeä myöhemmin olin jo ilmassa.",
-        "ttsTextSha256": "c08c252c228fe0fab821d691433f1ceab5d7d79c6f51aa24e007354a74009217",
+        "ttsText": "[brightly] Reykjavíkin talot lämpenevät yhä maan voimalla. [warmly] Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. [mischievously] Hetkeä myöhemmin olin jo ilmassa.",
+        "ttsTextSha256": "5e8b2f581c7ff4312d807c972496a5c2f2ca3534d625df8c6263516a23d9a85b",
         "cues": [
           {
             "cueId": "islanti.livia.c1",
@@ -3335,8 +3335,8 @@
         "audioId": "alpit-3",
         "visibleText": "Jäätikkö on vetäytynyt kauas isoisän päivistä. Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. En väitä löytäneeni oikeaa.",
         "visibleTextSha256": "5c15ee5104983529668e0cc23184ee38474e767e21e2bc61726f3acbf102b513",
-        "ttsText": "[softly] Jäätikkö on vetäytynyt kauas isoisän päivistä. [curious] Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. [softly] En väitä löytäneeni oikeaa.",
-        "ttsTextSha256": "a09801e9fcfb023eadddebf4951bb7986a28108b0cffe65f89945706c5956d9a",
+        "ttsText": "[warmly] Jäätikkö on vetäytynyt kauas isoisän päivistä. [curious] Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. [amused] En väitä löytäneeni oikeaa.",
+        "ttsTextSha256": "209896b1419fbd9c98e62fdd93201c7f3a5afc5b8339e32315174e944e058d3b",
         "cues": [
           {
             "cueId": "alpit.livia.c1",
@@ -3413,8 +3413,8 @@
       "livia": {
         "visibleText": "Rovaniemelle lennetään joulupukkiakin katsomaan. Seurasin Ounasjokea ilmasta ja luulin valojen jatkuvan veteen. Lähempänä ne olivat heijastuksia. Hyvä etten yrittänyt laskeutua niiden väliin.",
         "visibleTextSha256": "d4169d3f922d8e34e53b0e95ace9c87ee09b6b5b2327d3ecfb9a26079bde770b",
-        "ttsText": "[brightly] Rovaniemelle lennetään joulupukkiakin katsomaan. [curious] Seurasin Ounasjokea ilmasta ja luulin valojen jatkuvan veteen. [mischievously] Lähempänä ne olivat heijastuksia. [softly] Hyvä etten yrittänyt laskeutua niiden väliin.",
-        "ttsTextSha256": "4a38825136a4c4b1c71e806904b1645d844053b1db8942b783b3f20598202198",
+        "ttsText": "[brightly] Rovaniemelle lennetään joulupukkiakin katsomaan. [curious] Seurasin Ounasjokea ilmasta ja luulin valojen jatkuvan veteen. [mischievously] Lähempänä ne olivat heijastuksia. [amused] Hyvä etten yrittänyt laskeutua niiden väliin.",
+        "ttsTextSha256": "c2e8b805ece9a8affdd4cc9e7ba6ffce61f5ec8a8cee5cb0233b8c420e30e209",
         "cues": [
           {
             "cueId": "lappi.livia.c1",
@@ -3499,8 +3499,8 @@
       "livia": {
         "visibleText": "Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. Löysin laiturilta simpukankuoren ja kurkistin sisään. Tyhjä. Hetken mietin, kuka oli lähtenyt ja minne.",
         "visibleTextSha256": "c17f172e0270f1272e2fc001bf0742fef5ee88b1c104b03a4d03a78e59e08b22",
-        "ttsText": "[curious] Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. [brightly] Löysin laiturilta simpukankuoren ja kurkistin sisään. [whispers] Tyhjä. [softly] Hetken mietin, kuka oli lähtenyt ja minne.",
-        "ttsTextSha256": "0caa3020abba164cb49fff3baebec2aa025823a708b618fbee331211d3d4cbe2",
+        "ttsText": "[curious] Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. [brightly] Löysin laiturilta simpukankuoren ja kurkistin sisään. [mischievously] Tyhjä. [warmly] Hetken mietin, kuka oli lähtenyt ja minne.",
+        "ttsTextSha256": "519c4e4185954a4cfbd2e6437aad2279afa408633d8187d8cdf7046d6de1e234",
         "cues": [
           {
             "cueId": "tromssa.livia.c1",
