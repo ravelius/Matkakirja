@@ -16,14 +16,16 @@ namespace Matkakirja
     public static class Kermasarja
     {
         /// <summary>
-        /// Oletussarja: OMISTAJAN VALINTA p060 (26.9. klo 05.0x, Fablen kautta), Karttasepän poltto 26-pohjasta
-        /// (2026-09-26-pohja-20260926, peitto 0,60). Ennen 2026-09-25-p080 (build 14:n pohjasta, löydös 22). 26-pohjasta on
-        /// poltettu vain p060, joten lyhyet nimet p080/p045 eivät nyt löydy; vertailuun koko nimi (vari sarja 2026-09-25-p080).
+        /// Oletussarja: Karttasepän poltto 27-pohjasta (2026-09-27-pohja-20260927, peitto 0,60) — uusi poltto, koska
+        /// 27-pohjassa ovat GSHHG-järvet, pienet saaret ja korjattu rannikko (vanha 26-pohjan sarja, 2026-09-26-p060,
+        /// olisi levittänyt kerman uusien järvien päälle). Peitto 0,60 on sama OMISTAJAN VALINTA kuin ennen (26.9. klo
+        /// 05.0x, Fablen kautta); sitä ennen 2026-09-25-p080 (build 14:n pohjasta, löydös 22). 27-pohjasta on poltettu
+        /// vain p060, joten lyhyet nimet p080/p045 eivät nyt löydy; vertailuun koko nimi (vari sarja 2026-09-25-p080).
         /// </summary>
-        public const string Oletus = "2026-09-26-p060";
+        public const string Oletus = "2026-09-27-p060";
         /// <summary>
         /// Lyhyen nimen ("p060") etuliite: saman pohjan sarjat, oletussarjan nimestä ennen "-pNNN"-päätettä. Kun kerma
-        /// poltetaan uudelleen uudesta pohjasta (Karttaseppä: 2026-09-26-pohja-20260926 ja valittu peitto), vaihdetaan vain
+        /// poltetaan uudelleen uudesta pohjasta (Karttaseppä: 2026-09-27-pohja-20260927 ja valittu peitto), vaihdetaan vain
         /// <see cref="Oletus"/>, ja lyhyet nimet osoittavat uuden pohjan sarjoihin.
         /// </summary>
         public static string Etuliite => Oletus.LastIndexOf("-p", System.StringComparison.Ordinal) is int i && i >= 0
