@@ -292,6 +292,35 @@ namespace Matkakirja.Natiivi
                 VaiheSiemen = UnityEngine.Random.value * 1000f, OnTuli = onTuli });
         }
 
+        /// <summary>
+        /// Olavinlinna (Siirtoseppä 29.9.2026): Blenderin valo:-tyhjä pistevaloksi. Leivotussa tilassa valo on jo
+        /// atlaksessa, joten tämä valaisee vain reaaliaikaiset kohteet (3D-pienoisfiguurit) — ne istuvat samaan valoon
+        /// kuin huone. extras: vari ("#ffc26a"), sade (m, 4), voima (1), lepatus (0–1, 0). paikka on maailmassa.
+        /// </summary>
+        public void LisaaTyhja(string tilaId, DioraamaTyhja tyhja, Vector3 paikka)
+        {
+            // Valmistele tyhjentää pistevalot rakennuksen vaihtuessa: aja se ensin, ettei tyhjän valo katoa perään.
+            var rakennus = DioraamaSovitin.Linssi?.Rakennus;
+            if (rakennus != null && rakennus != viimeisinRakennus) Valmistele(rakennus);
+            var go = new GameObject("Valo:" + tilaId + "/" + tyhja.Id) { layer = DioraamaNayttamo.Kerros };
+            go.transform.SetParent(juuri, false);
+            go.transform.position = paikka;
+            var l = go.AddComponent<Light>();
+            l.type = LightType.Point;
+            l.range = Mathf.Max(0.05f, tyhja.Luku("sade", 4f));
+            l.intensity = Mathf.Max(0f, tyhja.Luku("voima", 1f));
+            Color vari = LampunOletusVari;
+            if (tyhja.Extras != null && tyhja.Extras.TryGetValue("vari", out var v) && v is string hex) ColorUtility.TryParseHtmlString(hex, out vari);
+            l.color = vari;
+            l.shadows = LightShadows.None;
+            l.cullingMask = 1 << DioraamaNayttamo.Kerros;
+            double lepatus = Mathf.Clamp01(tyhja.Luku("lepatus", 0f));
+            bool onTuli = lepatus > 0;
+            l.enabled = onTuli ? tuliPaalla : lamputPaalla;
+            pisteValot.Add(new PisteValo { Go = go, Light = l, Lepatus = lepatus, PerusVoimakkuus = l.intensity,
+                VaiheSiemen = UnityEngine.Random.value * 1000f, OnTuli = onTuli });
+        }
+
         /// <summary>Sulkiessa (DioraamaNayttamo.Tuhoa): valot pois ja KAIKKI alkuperäiset URP/RenderSettings-arvot
         /// takaisin -- myös kesken latauksen (alkuperaisetTallennettu on tosi jo ensimmäisestä Paivita-kutsusta,
         /// ennen kuin Rakennus on koskaan latautunut).</summary>

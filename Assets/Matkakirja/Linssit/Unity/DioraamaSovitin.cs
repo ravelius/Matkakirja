@@ -388,6 +388,9 @@ namespace Matkakirja.Natiivi
                 foreach (var t in tyhjat)
                     if (t.Laji == "liekki") nayttamo?.Liekit?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka), o.Kirjaa);
                 nayttamo?.Savu?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
+                nayttamo?.Ikkunat?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
+                foreach (var t in tyhjat)
+                    if (t.Laji == "valo") nayttamo?.Valot?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka));
             }
             if (!string.IsNullOrEmpty(tila.ValoAtlas)) yield return LataaValoAtlas(tila);
         }
