@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2392, teksti: 'Uusi peruskartta: järvet, sileämpi maa, meritiet maalla' },
+  { v: 2392, teksti: 'Dioraamamoottori: Olavinlinnan data, rakennusko… (#3594)' },
   { v: 2391, teksti: 'Radiot koko maailmaan: 182 maata, aseman kaupun… (#3589)' },
   { v: 2390, teksti: 'Astronautin kamera: Pulun taulu vaihtaa näkymää (#3590)' },
   { v: 2389, teksti: 'Linssikatalogi: E11 Poikkileikkaus, linna aukil… (#3584)' },
