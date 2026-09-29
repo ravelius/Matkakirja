@@ -25,6 +25,12 @@ Aiempi luovutus (erät 2 ja 2b, käytännöt): `viesti-linnanrakentaja-luovutus-
 - **Omistaja hyväksyi 14.1x ("saa mennä").** Merge-pyyntö lähetetty Natiivisepälle klo 14.1x:
   - haara `linnanrakentaja/keittio` 573ccecc, myös natiivi-backupissa
   - linssi hiomassa (Kesken = true)
+- **Natiiviseppä 14.2x:** merge-pyyntö 573ccecc vastaanotettu, seuraava juna (sivuhaara natiiviseppa/juna-1051
+  d49a3a7f, testit vihreät). Aanisoitin-katselmoinnin kysymyksiin on vastattu viestillä:
+  - (a) SaneluAlkoi-tauon pitää koskea myös poolin silmukoita. Korjaus junassa tai tähän haaraan Natiivisepän pyynnöstä.
+  - (b) Repliikki(false) kutsutaan aina Sulje-polussa (✕ ja toinen linssi).
+  - (c) static dioraamaRepliikkiPuhuu nollataan Awake/OnDestroyssa tai siitä tehdään instanssikenttä.
+  - Natiivisepän savukkeessa testataan renderöintitilan palautus kolmella sulkutavalla (✕, toinen linssi, taustalle).
 - **Kärki:**
   1. Seuraa Natiivisepän vastausta ja korjaa löydökset tähän haaraan.
   2. Kun #3621 on mergetty ja paketti ämpärissä (Julkaisija ilmoittaa; tarkista uusin.json:n hash): lyhyt simulaattoriajo
