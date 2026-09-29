@@ -175,10 +175,11 @@ namespace Matkakirja.Natiivi
             var toiminnot2 = v.LisaNappirivi();
             v.LisaNappi(toiminnot2, "Offline", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
             v.LisaNappi(toiminnot2, "Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
-            v.LisaNappi(toiminnot2, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
+            var toiminnot3 = v.LisaNappirivi();
+            v.LisaNappi(toiminnot3, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
                 () => Valikko.RetkikuntaSaatavilla);
 #if !MATKAKIRJA_APPSTORE
-            v.LisaNappi(toiminnot2, "Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
+            v.LisaNappi(toiminnot3, "Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
 #endif
             v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0);
             v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet);

@@ -4332,6 +4332,11 @@
     margin-left: 0;
 }
 
+/* Tyhjä nappikontti (☰ pois) ei saa jakaa vapaata tilaa pillerin kanssa (laite cl1: pilleri jäi keskelle). */
+.mk-ylapalkki--pilleri-oikealla .mk-ylapalkki__napit {
+    margin-left: 0;
+}
+
 .mk-tietoja__tilanne {
     align-self: center;
     margin: 6px 0 4px 0;

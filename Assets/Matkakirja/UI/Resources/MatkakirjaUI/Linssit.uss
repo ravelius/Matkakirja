@@ -3770,7 +3770,22 @@
 /* PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07; web malli, Pelikoodarin rakenne): alinäkymät Linssit ja Aarteet samassa
    paneelissa, tiheä lista kapeassa paneelissa, esikatselu paneelin vasemmalla puolella. Nahka myöhemmin (Codex). */
 .mk-linssivalitsin--valikko.mk-linssivalitsin--kapea {
-    width: 184px;
+    width: 224px;
+}
+
+.mk-linssivalitsin--kapea .mk-linssirivi__nimi {
+    font-size: 14px;
+    white-space: normal;
+}
+
+.mk-linssivalitsin--kapea .mk-selite__otsikko {
+    font-size: 11px;
+}
+
+/* Äänitasot pergamentilla (laite cl1: tumman paneelin vaaleat nimet eivät erottuneet). */
+.mk-linssivalitsin__saatimet .mk-saadinrivi__nimi,
+.mk-linssivalitsin__saatimet .mk-saadinrivi__arvo {
+    color: rgba(70, 51, 31, 0.85);
 }
 
 .mk-linssivalitsin--kapea .mk-linssirivi {
