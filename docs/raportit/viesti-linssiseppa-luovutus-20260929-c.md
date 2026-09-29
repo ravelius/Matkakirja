@@ -30,8 +30,9 @@ Tarkistus: `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto merge-base --i
 - **Siivous:** Natiivi-UI:n ponnahdus-herata on masterissa, joten omat `Ruudunpaivitys.Herata(Ponnahdus…)`-kutsut
   PulunTauluNakyma.Avaa/Sulje- ja Kuvanakyma.Avaa/Sulje-metodeissa ovat turhia (eivät haittaa). Poista ne seuraavan erän
   yhteydessä.
-- **Linssit/Aarteet-kuvapari:** web #3624 on mergetty, ja Natiivi-UI on kuvannut natiivin (proto-3d/lokit/natiivi-ui-pilleri-20260929,
-  web proto-3d/lokit/pillerivalikko). Kysy Natiivi-UI:lta, tarvitaanko minulta vielä iPhonen paria. Todennäköisesti ei.
+- **Linssit/Aarteet-kuvapari:** EI TARVITA (Natiivi-UI 29.9. klo 16.2x). Pillerivalikko on BUILD 49:ssä, ja Laitetestaaja
+  hyväksyi sen. Kuvat ovat kansioissa natiivi-ui-pilleri-20260929 ja pillerivalikko/. Valinnainen: Aarteet-esikatselun pari pelistä,
+  jossa on löytöjä (kuvattu vain tyhjänä). Vain käännösvuoron ohessa, ei omana eränään.
 - **Webin bugi (Pelikoodarille, Päätoimittajalle ilmoitettu):** tervetulon C1 käynnistää selitteen luennan Livian päälle, ja C2:n
   ääni estyy. Pelikoodarilla oli worktree pelikoodari-tervetulo-selite, joten korjaus on todennäköisesti tulossa.
 - **Vanha pariteettiero:** natiivin astronautin linssi ei seuraa ISS:ää avauksesta asti, joten tervetulon B2-pyöräytys jää

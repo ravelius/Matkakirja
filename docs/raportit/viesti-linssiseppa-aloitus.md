@@ -22,8 +22,8 @@ Lue:
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
 **Järjestys:** luovutus -20260929-c. Kaikki 29.9. erät (tervetulo, linssiesittelyt, pulu-aani-kertoja ja taulu) ovat
-masterissa. Merge-pyyntöjä tai ajoja ei ole auki. Avoimet ovat pieniä (#3611:n teksti, turhat Herata-kutsut ja kysymys
-kuvaparista Natiivi-UI:lle). Seuraava erä tulee Päätoimittajalta.
+masterissa. Merge-pyyntöjä tai ajoja ei ole auki. Avoimet ovat pieniä (#3611:n teksti ja turhat Herata-kutsut; kuvapari
+ei tarvita). Seuraava erä tulee Päätoimittajalta.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
