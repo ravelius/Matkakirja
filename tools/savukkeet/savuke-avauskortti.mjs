@@ -38,6 +38,10 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
+/* Kortin kasvun kesto pelin vakiosta (js/kaupunkinosto.js); luetaan tekstinä, ettei DOM-moduulia tuoda Nodeen. */
+const AVAUSKORTIN_KASVU_MS = Number(readFileSync(new URL('../../js/kaupunkinosto.js', import.meta.url), 'utf8')
+  .match(/export const AVAUSKORTIN_KASVU_MS = (\d+);/)?.[1]);
+
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -180,7 +184,19 @@ for (const ruutu of RUUDUT) {
       if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `avauskortti-${kaupunki}-${ruutu.w}-0-kutsu.png`) });
       // 2. Kutsun napautus kasvattaa kortin.
       await sivu.mouse.click((kutsu.r.x0 + kutsu.r.x1) / 2, (kutsu.r.y0 + kutsu.r.y1) / 2);
+      // 2b. Kasvu miniatyyristä: Web Animations -liike, kesto AVAUSKORTIN_KASVU_MS (280 ms).
+      const kasvu = await sivu.evaluate(async () => {
+        for (let i = 0; i < 20; i++) {
+          const p = document.querySelector('.kaupunkipopup-avaus');
+          const a = p?.getAnimations?.()[0];
+          if (a) return { kesto: a.effect?.getTiming?.().duration ?? null };
+          await new Promise((v) => setTimeout(v, 10));
+        }
+        return { kesto: null, vahennetty: matchMedia('(prefers-reduced-motion: reduce)').matches };
+      });
       await sivu.waitForTimeout(1500);
+      vaadi(`2b. ${nimi}: kortti kasvaa kutsusta ${AVAUSKORTIN_KASVU_MS} ms:n liikkeellä`,
+        kasvu.kesto === AVAUSKORTIN_KASVU_MS, JSON.stringify(kasvu));
       vaadi(`2. ${nimi}: kutsun napautus avaa avauskortin`,
         Boolean(await sivu.$('.kaupunkipopup-avaus')), 'korttia ei ole');
     } else {
@@ -261,6 +277,25 @@ for (const ruutu of RUUDUT) {
     }, kaupunki);
     vaadi(`6. ${nimi}: kaupungin merkin napautus avaa avauskortin eikä liuskaa`,
       merkista.kortti && !merkista.liuska, JSON.stringify(merkista));
+
+    // 6b. ✕ sulkee kortin samalla 280 ms:n liikkeellä takaperin, ja kortti poistuu.
+    const sulku = await sivu.evaluate(async () => {
+      const p = document.querySelector('.kaupunkipopup-avaus');
+      const x = p?.querySelector('.kaupunkipopup-sulje');
+      if (!x) return { virhe: 'ei ✕-nappia' };
+      x.click();
+      const kesto = p.getAnimations?.()[0]?.effect?.getTiming?.().duration ?? null;
+      await new Promise((v) => setTimeout(v, 700));
+      return { kesto, poistui: !document.querySelector('.kaupunkipopup-avaus'), kiinni: !window.matkakirja.ui.kaupunkipopupAuki };
+    });
+    vaadi(`6b. ${nimi}: ✕ sulkee kortin ${AVAUSKORTIN_KASVU_MS} ms:n liikkeellä, ja kortti poistuu`,
+      sulku.poistui && sulku.kiinni && (sulku.kesto === AVAUSKORTIN_KASVU_MS || sulku.kesto === null),
+      JSON.stringify(sulku));
+    // Kortti takaisin kohtaa 7 varten.
+    await sivu.evaluate(async (id) => {
+      window.matkakirja.ui.pallolauta.napautaKaupunki?.(id);
+      await new Promise((v) => setTimeout(v, 1200));
+    }, kaupunki);
 
     // 7. Lehti kortin linkistä: etusivun osiohakemisto, ei radioriviä.
     const peittaja = await sivu.evaluate(() => {
