@@ -24,6 +24,13 @@ namespace Matkakirja.Linssit.Astronautti
         public List<Havainto> Havainnot = new List<Havainto>();
         public IReadOnlyList<string> Kysymykset = Array.Empty<string>();
 
+        /// <summary>
+        /// Selitteen luettava teksti (web satelliitti.js lueSelite): "Nimi, seutu. kuvateksti", jossa kuvateksti on
+        /// havainnon oma teksti, muuten kohteen selite. Sama merkkijono kuin webissä, jotta luennan säilöavain
+        /// (persoona|ääni|ohje|nopeus|teksti) osuu webin säilömään ääneen.
+        /// </summary>
+        public string Luettava(Havainto h) => $"{Nimi}, {Seutu}. {h?.Teksti ?? Selite ?? ""}".Trim();
+
         /// <summary>Oletuskuvan indeksi: nimetty oletus, muuten uusin aika (web oletusIndeksi).</summary>
         public int OletusIndeksi
         {
