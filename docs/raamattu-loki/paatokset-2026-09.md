@@ -9191,3 +9191,7 @@ Omistaja 29.9. klo 16.3x: "sen jälkeen voisit lopettaa muut sessiot ja tehdä s
 ## TILA 29.9.2026 klo 17.0x: tilinvaihto tehty (29.9.2026 klo 17.02)
 
 Uuden tilin Päätoimittaja local_593b89a1-2514-4d74-b956-2a73db862382 (Opus xhigh). Tilillä oli valmiina 10 tyhjää roolisessiota oikeissa kansioissa (luotu 25.9.), joten ne käytettiin uudelleen aloitusviesteillä; Linssiseppä 2 (local_fc4fcc54-9fa1-4ba2-9de2-97a8ee884e10) ja Linnanrakentaja (local_08e82dfc-ac27-4a27-a62b-b0ff862022ae) luotiin appia ohjaamalla. Remote Control päällä kaikissa. TF 1.0.50 (iPhonen nahkayläpalkki) sisäisessä ryhmässä, #3627 mergetty. Uudet erät: Linssiseppä = suurin puuttuva web-linssi natiiviin, Siirtoseppä = pariteettikatsaus 2 BUILD 50:stä. Natiivisepän 1.0.51-juna (keittiö) odottaa omistajan lupaa luokitinesteen vuoksi.
+
+## OMISTAJA: MATKALAUKKU JA ASETUKSET UUSIKSI, YLÄPALKIN KULMAT (29.9.2026 klo 17.11)
+
+Omistaja 29.9.2026 (1.0.50 iPhonella): 1) MATKAKIRJA-logo ja pilleri jäivät pyöristettyjen kulmien taakse → keskemmälle (turva-alue + kulmasäde). 2) Matkalaukun etusivulta pois äänenvoimakkuussäätimet, Pieni liike, Kuljettu reitti ja Ehdota; ne ja Offline Asetuksiin. 3) Retkikunta Uusi peli -napin viereen. 4) Linssit ja Aarteet vierekkäin. 5) Asetuksiin Kehittäjä-nappi (avaa nykyisen salasanalukon, ei avointa kytkintä). 6) Näytä huntu -nappi Asetukset-napin taakse. 7) Asetukset leveämmäksi äänitasojen säätöä varten, Äänet-napit pois (liukusäätimet jäävät). Reititys: Natiivi-UI (natiivi) ja Pelikoodari (web) rinnakkain, sama asettelu.
