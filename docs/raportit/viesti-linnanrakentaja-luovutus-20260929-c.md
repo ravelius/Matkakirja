@@ -24,8 +24,8 @@ Aiempi luovutus (erät 2 ja 2b, käytännöt): `viesti-linnanrakentaja-luovutus-
     (hash vaihtuu mergen jälkeen; nyt f8db6536de6715ec = erä 2).
 - **Kärki:**
   1. Odota Päätoimittajan OK kuvapariin.
-  2. Kun #3621 on ämpärissä: lyhyt simulaattoriajo ILMAN peiliä (Julkaisijan NYT; ajo-poikki.sh:lle `PEILI=` tyhjä →
-     skripti antaa `poikki peili` ilman arvoa = pois), ja tarkista että paketti tulee ämpäristä, 3D-hahmot ja valot näkyvät.
+  2. Kun #3621 on ämpärissä: lyhyt simulaattoriajo ILMAN peiliä (Julkaisijan NYT; `PEILI=pois ajo-poikki.sh` → skripti
+     antaa `poikki peili pois`, jolloin paketti luetaan ämpärin uusin.json:sta), ja tarkista että paketti tulee ämpäristä, 3D-hahmot ja valot näkyvät.
   3. **Merge-pyyntö Natiivisepälle** (SendMessage "Natiiviseppä (max)"):
      - haara `linnanrakentaja/keittio`, kärki SHA, 16 committia, 62 tiedostoa
      - jaetut tiedostot: Aanisoitin +217, LinssiSopimus +28, LinssiOhjain +23, PeliOhjain.Aanet +3,
