@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2422, teksti: 'BLR + SVK: pitkä + pulu (15 aluetta)' },
+  { v: 2422, teksti: 'Olavinlinna: elävä linna vaiheet 1–2 – elävät k… (#3648)' },
   { v: 2421, teksti: 'Lippuankkurit maan oikeaan yläkulmaan (#3646)' },
   { v: 2420, teksti: 'MLT, LUX, MDA: pitkä-luonnehdinta + pulu, 48 al… (#3643)' },
   { v: 2419, teksti: 'Deltasarja: vain muuttuneet laatat ämpäriin (#3641)' },

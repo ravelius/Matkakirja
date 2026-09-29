@@ -99,4 +99,10 @@ export const PINNAT = {
   // rakennaKasvot) - ERI pinta kuin "iho", jotta yksivärimaalattu figuuri (ei
   // tekstuuria/verteksiväriä) voi silti näyttää posket ihoa lämpimämpänä omana osanaan.
   iho2: { vari: '#dd9c78', toisto_m: 1.0, kuvio: { tyyppi: 'tasainen' } },
+  // Erä 3 (docs/raportit/dioraama-rajapinnat-era3-20260929.md kohta 2, tools/dioraama/reseptit-kalusteet2.mjs):
+  // linnan tilojen kalusteiden ja rekvisiitan pinnat. 'olki' (kuvio 'olki') on jo erän 2b rekvisiitasta.
+  punamulta: { vari: '#8a2e20', toisto_m: 0.6, kuvio: { tyyppi: 'rappaus', koko_m: [0.4, 0.4], vaihtelu: 0.3 } },
+  kulta: { vari: '#b8923a', toisto_m: 0.4, kuvio: { tyyppi: 'metalli', koko_m: [0.3, 0.3], vaihtelu: 0.2 } },
+  aukko: { vari: '#1c1611', toisto_m: 1.0, kuvio: { tyyppi: 'tasainen' } },
+  lippu: { vari: '#8a2e20', toisto_m: 0.5, kuvio: { tyyppi: 'kangas', koko_m: [0.05, 0.05], vaihtelu: 0.2 } },
 };

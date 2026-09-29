@@ -246,12 +246,12 @@ test('torni ja kartiokatto: uv_m on deterministinen (sama syöte = sama tulos)',
 
 /* ==================== Koko putki: sijoita → tihenna → rakenna → glb (Olavinlinna) ==================== */
 
-// Länsitorni (js/dioraama/rakennukset/olavinlinna.js, tila 'massa'): paikka [-34, 0, -6],
-// sade 7.5, korkeus 28. Ulkovaippa on pinnassa 'kivi' (OLETUSPINNAT.torni.ulko), samassa
+// Pyhän Eerikin torni (js/dioraama/rakennukset/olavinlinna/massa.js, erä 3: ainoa umpinainen torni,
+// Kello- ja Kirkkotorni ovat auki): paikka [32, 0, -4], sade 7.5, korkeus 28. Ulkovaippa on pinnassa 'kivi' (OLETUSPINNAT.torni.ulko), samassa
 // glb-ryhmässä tavallisten seinien 'etu'-pintojen kanssa — kärjet rajataan sylinteripinnalle
 // (r ≈ sade) ja pois huipulta (y < korkeus), jotta mukaan ei tule seinien tasoprojisoituja
 // kärkiä eikä tornin litteää yläreunan rengasta (ei uv_m:ää, ks. yllä).
-const TORNI = { cx: -34, cz: -6, sade: 7.5, korkeus: 28, pinta: 'kivi' };
+const TORNI = { cx: 32, cz: -4, sade: 7.5, korkeus: 28, pinta: 'kivi' };
 
 function rakennaMassaTmp(saateita) {
   const tmp = mkdtempSync(join(tmpdir(), 'dioraama-uv-'));
@@ -273,7 +273,7 @@ function tornikarjet(glb) {
     const r = Math.hypot(dx, dz);
     if (Math.abs(r - TORNI.sade) >= 0.01 || y <= 0.01 || y >= TORNI.korkeus - 0.01) continue;
     // Pinta 'kivi' on myös tavallisten seinien 'etu'-pinta, ja Länsitornin lähellä kulkee seinä
-    // (paikka [-34,0,-3]) jonka litteä pinta ylittää sattumalta sädeympyrän r ≈ sade kahdessa
+    // (itämuuri x = 32) jonka litteä pinta ylittää sattumalta sädeympyrän r ≈ sade kahdessa
     // kohdassa — SUODATA pois normaalin avulla: aidon tornin vaipan normaali osoittaa säteittäin
     // ulos keskipisteestä (dot ≈ 1), litteän seinän normaali on kiinteä eikä osu yhteen.
     const nx = kivi.normaalit[i * 3]; const nz = kivi.normaalit[i * 3 + 2];
