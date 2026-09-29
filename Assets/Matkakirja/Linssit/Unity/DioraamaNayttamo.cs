@@ -82,6 +82,9 @@ namespace Matkakirja.Natiivi
         /// vastaanota: DioraamaSovitin kutsuu nayttamo.Hahmot3D.Paivita(...):a suoraan omasta Paivita-metodistaan,
         /// SAMAAN kohtaan kuin vanhaa 2D-hahmot3D-kenttää (ks. DioraamaSovitin.cs).</summary>
         public DioraamaHahmot3D Hahmot3D { get; private set; }
+        /// <summary>Savu liekki:-tyhjien yllä ja leivotun valon liekkipisteet (Olavinlinna, Siirtoseppä 29.9.2026):
+        /// omistus ja elinkaari täällä kuten Liekit; DioraamaSovitin syöttää tilan tyhjät (LisaaTila).</summary>
+        public DioraamaSavu Savu { get; private set; }
         /// <summary>
         /// Näyttämön kuva: kamera piirtää tähän, ja DioraamaTaulu näyttää sen koko ruudun UI-elementtinä kerroksessa
         /// LinssiUi.MustaKerros (24, Ihmisen matkan musta tausta). Näin kartan UI (nimet, tilarivi, Liiku) jää alle ja
@@ -102,6 +105,7 @@ namespace Matkakirja.Natiivi
             n.Liekit = new DioraamaLiekit(n.transform);
             n.Valot = new DioraamaValot(n.transform);
             n.Hahmot3D = new DioraamaHahmot3D(n.transform);
+            n.Savu = new DioraamaSavu(n.transform);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
             Shader.SetGlobalColor(IdSumuVari, TaustaVari); // sama muunnos kuin kameran taustavärillä
             Shader.SetGlobalVector(IdSumu, new Vector4(1000f, 4000f, 0, 0));
@@ -240,6 +244,7 @@ namespace Matkakirja.Natiivi
 
             // Liekkien billboard-kääntö ja ruutu (ks. Paivita-parametrin t-kommentti yllä).
             Liekit?.Paivita(null, default, Kamera, t);
+            Savu?.Paivita(t, vahennettyLiike);
             // Aurinko/pistevalojen lepatus + kohdetilan mukainen varjoetäisyys (era 2b, DioraamaValot.cs).
             Valot?.Paivita(t, vahennettyLiike, Kamera);
         }
@@ -273,6 +278,8 @@ namespace Matkakirja.Natiivi
             Valot = null;
             Hahmot3D?.Tyhjenna();
             Hahmot3D = null;
+            Savu?.Tyhjenna();
+            Savu = null;
             if (profiili != null) Destroy(profiili);
             profiili = null;
             syvyys = null;

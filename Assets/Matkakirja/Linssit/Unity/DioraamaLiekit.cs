@@ -344,6 +344,35 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka ruutu: sylinteribillboard kameraa kohti ja atlaksen ruutu ajasta t. Rakennus/Nakyma-
         /// parametrit ovat mukana vain DioraamaHahmot.Paivita-signatuuriyhteensopivuuden vuoksi (ei käytetä, kuten
         /// Hahmotkaan ei käytä rakennus-parametriaan) -- liekillä ei ole Ytimen ohjaamaa näkyvyyttä/silmukkaa.</summary>
+        /// <summary>
+        /// Olavinlinna (Siirtoseppä 29.9.2026): 3D-liekki Blenderin liekki:-tyhjästä (DioraamaTyhja, extras koko =
+        /// liekin korkeus m, oletus 0,45; leveys 0,6 × korkeus). Sama jaettu pisaramesh ja kipinät kuin LisaaTila:n
+        /// 3D-tilassa; ei liekkipankkia eikä atlasta. paikka on maailmassa.
+        /// </summary>
+        public void LisaaTyhja(string tilaId, DioraamaTyhja tyhja, Vector3 paikka, Action<string> kirjaa)
+        {
+            VarmistaJaetutResurssit(kirjaa);
+            if (liekkiMesh == null || kipinaMesh == null) { kirjaa?.Invoke($"poikki: {tilaId} liekki:{tyhja.Id} ilman 3D-liekkiä"); return; }
+            float korkeus = Mathf.Max(0.05f, tyhja.Luku("koko", 0.45f)), leveys = korkeus * 0.6f;
+            var go = new GameObject("Liekki:" + tilaId + "/" + tyhja.Id) { layer = DioraamaNayttamo.Kerros };
+            go.transform.SetParent(juuri, false);
+            go.transform.position = paikka;
+            go.transform.localScale = new Vector3(leveys, korkeus, leveys);
+            go.AddComponent<MeshFilter>().sharedMesh = liekkiMesh;
+            var runko = go.AddComponent<MeshRenderer>();
+            runko.sharedMaterial = liekkiMateriaali;
+            runko.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            runko.receiveShadows = false;
+            var kipinaGo = new GameObject("Kipinat") { layer = DioraamaNayttamo.Kerros };
+            kipinaGo.transform.SetParent(go.transform, false);
+            kipinaGo.AddComponent<MeshFilter>().sharedMesh = kipinaMesh;
+            var kipinaRend = kipinaGo.AddComponent<MeshRenderer>();
+            kipinaRend.sharedMaterial = kipinaMateriaali;
+            kipinaRend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            kipinaRend.receiveShadows = false;
+            esiintymat.Add(new Esiintyma { TilaId = tilaId, Paikka = new LiekkiPaikka { LiekkiId = "tyhja:" + tyhja.Id, Koko = korkeus }, Go = go, Kolme = true });
+        }
+
         public void Paivita(Rakennus rakennus, Nakyma nakyma, Camera kamera, double t)
         {
             // Globaali (ei per-esiintymä): DioraamaLiekki3D.shader lukee tämän _DioraamaAika-uniformista sekä

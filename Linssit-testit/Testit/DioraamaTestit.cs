@@ -442,6 +442,48 @@ namespace Matkakirja.Linssit.Testit
             return TeeGlbTavut(json, bin.ToArray());
         }
 
+        // 1e) Olavinlinna (Siirtoseppä 29.9.2026): Blenderin glb — TEXCOORD_1 (leivotun valon atlas-UV) ja
+        // mesh-tön tyhjä "liekki:tulisija" extrasineen (custom properties).
+        [Testi] static void GlbUv1JaTyhjanExtras()
+        {
+            float[] pos = { 0, 0, 2, 1, 0, 2, 0, 1, 5 };
+            float[] uv1 = { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f };
+            uint[] idx = { 0, 1, 2 };
+            var bin = new List<byte>();
+            foreach (var f in pos) bin.AddRange(BitConverter.GetBytes(f));
+            foreach (var f in uv1) bin.AddRange(BitConverter.GetBytes(f));
+            foreach (var ix in idx) bin.AddRange(BitConverter.GetBytes(ix));
+            string json = @"{
+              ""asset"": {""version"":""2.0""},
+              ""nodes"": [
+                {""name"":""keittio"",""mesh"":0,""children"":[1]},
+                {""name"":""liekki:tulisija"",""translation"":[0.5,0.2,-1],""extras"":{""koko"":0.5,""savu"":0.8}}
+              ],
+              ""meshes"": [{""primitives"":[{""attributes"":{""POSITION"":0,""TEXCOORD_1"":1},""indices"":2}]}],
+              ""accessors"": [
+                {""bufferView"":0,""componentType"":5126,""count"":3,""type"":""VEC3""},
+                {""bufferView"":1,""componentType"":5126,""count"":3,""type"":""VEC2""},
+                {""bufferView"":2,""componentType"":5125,""count"":3,""type"":""SCALAR""}
+              ],
+              ""bufferViews"": [
+                {""buffer"":0,""byteOffset"":0,""byteLength"":36},
+                {""buffer"":0,""byteOffset"":36,""byteLength"":24},
+                {""buffer"":0,""byteOffset"":60,""byteLength"":12}
+              ],
+              ""buffers"": [{""byteLength"":72}]
+            }";
+            var malli = DioraamaGlb.Lue(TeeGlbTavut(json, bin.ToArray()), unityyn: true);
+            Oleta.Sama(6, malli.Osat[0].Uv1.Length);
+            Oleta.Sama(0.6f, malli.Osat[0].Uv1[5]);
+            Oleta.Sama(2, malli.Solmut.Count);
+            var tyhja = malli.Solmut[1];
+            Oleta.Sama("liekki:tulisija", tyhja.Nimi);
+            Oleta.Sama(0, tyhja.Vanhempi);
+            Oleta.Sama(0, tyhja.Osat.Count);
+            Oleta.Sama(1f, (float)tyhja.Translation[2]); // unityyn: z negatoitu
+            Oleta.Sama(0.5, (double)tyhja.Extras["koko"]);
+        }
+
         [Testi] static void MonisolmuGlbHierarkiaJaTrsKanoninen()
         {
             var malli = DioraamaGlb.Lue(TestiMonisolmuGlb(), unityyn: false);

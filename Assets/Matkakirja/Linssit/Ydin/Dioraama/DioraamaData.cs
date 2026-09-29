@@ -289,6 +289,10 @@ namespace Matkakirja.Linssit.Dioraama
         public List<Hahmo> Hahmot = new List<Hahmo>();
         public List<Askel> Kasikirjoitus = new List<Askel>();
         public string GlbTiedosto, GlbSha256;
+        /// <summary>LINNA (Siirtoseppä 29.9.2026): Blenderin Cyclesillä leivottu valoatlas (albedo × valo, AO, kuluma)
+        /// tilan glb:n UV1:lle; `valoatlas: { tiedosto, puoli }` (4k iPad, 2k iPhone). null = rakennuskoneen tila
+        /// (maalattu/valaistu varjostin kuten ennen).</summary>
+        public string ValoAtlas, ValoAtlasPuoli;
         /// <summary>Tilaan sijoitetut liekki-instanssit (era 2); tyhjä vanhassa muodossa.</summary>
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
         /// <summary>Tilaan sijoitetut äänilähteet (era 2); tyhjä vanhassa muodossa.</summary>
@@ -614,6 +618,9 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var glb = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "glb"));
             t.GlbTiedosto = MiniJson.Teksti(glb, "tiedosto");
+            var valoatlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas"));
+            t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
+            t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
             t.GlbSha256 = MiniJson.Teksti(glb, "sha256");
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "liekit")))
             {

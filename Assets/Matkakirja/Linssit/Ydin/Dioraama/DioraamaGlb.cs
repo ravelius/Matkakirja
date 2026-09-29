@@ -40,6 +40,9 @@ namespace Matkakirja.Linssit.Dioraama
         public float[] Paikat;
         public float[] Normaalit;
         public float[] Uv;
+        /// <summary>LINNA (Siirtoseppä 29.9.2026, Blender → Unity): TEXCOORD_1 = leivotun valon atlas-UV (float VEC2,
+        /// ei käännetä kuten ei UV0:kaan); null, jos primitiivillä ei ole toista UV-karttaa (rakennuskoneen glb).</summary>
+        public float[] Uv1;
         /// <summary>COLOR_0 raakoina tavuina RGBA (R = AO, G = lämpö, B = 0, A = 255; kohta 3).</summary>
         public byte[] Varit;
         /// <summary>ERÄ 2B: materiaalin pbrMetallicRoughness.baseColorFactor [r,g,b,a] (LINEAARINEN, glTF-spec) —
@@ -66,6 +69,9 @@ namespace Matkakirja.Linssit.Dioraama
         public float[] Scale = { 1f, 1f, 1f };
         /// <summary>Tämän solmun mesh pinnoittain — tyhjä lista, jos solmulla ei ole meshiä (puhdas nivel).</summary>
         public List<GlbOsa> Osat = new List<GlbOsa>();
+        /// <summary>LINNA: solmun extras (Blenderin custom properties, esim. valo:/liekki:/ikkuna:-tyhjien väri, säde,
+        /// voima, koko); null, jos kenttää ei ole.</summary>
+        public Dictionary<string, object> Extras;
     }
 
     /// <summary>Tilan koko glb: yksi mesh (solmun nimi), primitiivi per käytetty pinta. Nimi/Osat = ENSIMMÄINEN
@@ -164,6 +170,7 @@ namespace Matkakirja.Linssit.Dioraama
                     var pos = FloatVec(a, "POSITION", 3) ?? throw new DioraamaGlbVirhe("POSITION puuttuu");
                     var nor = FloatVec(a, "NORMAL", 3);
                     var tex = FloatVec(a, "TEXCOORD_0", 2);
+                    var tex1 = FloatVec(a, "TEXCOORD_1", 2);
                     var vari = ColorVec(a, "COLOR_0");
                     int k = pos.Length / 3;
 
@@ -207,7 +214,7 @@ namespace Matkakirja.Linssit.Dioraama
                     if (pinta == null && materiaaliObj != null) pinta = MiniJson.Teksti(materiaaliObj, "name");
                     float[] materiaaliVari = materiaaliObj != null ? LueBaseColor(materiaaliObj) : null;
 
-                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Varit = vari, Kolmiot = kolmiot });
+                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Varit = vari, Kolmiot = kolmiot });
                 }
                 return osat;
             }
@@ -240,6 +247,7 @@ namespace Matkakirja.Linssit.Dioraama
                         Translation = LueTranslation(s),
                         Rotation = LueRotation(s),
                         Scale = LueVec(MiniJson.Kentta(s, "scale"), new[] { 1f, 1f, 1f }),
+                        Extras = MiniJson.ObjektiTaiNull(MiniJson.Kentta(s, "extras")),
                     };
                     var meshIn = MiniJson.Luku(s, "mesh");
                     g.Osat = meshIn.HasValue ? LueMeshinOsat((int)meshIn.Value) : new List<GlbOsa>();
