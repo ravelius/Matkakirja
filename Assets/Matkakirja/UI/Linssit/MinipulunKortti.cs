@@ -87,7 +87,8 @@ namespace Matkakirja.Natiivi
             if (k?.Tunnus != tunnus) Tyhjenna(k);
             if (Auki) return;
             Auki = true;
-            kortti.style.display = DisplayStyle.Flex;
+            // Kasvaa esiin minipulun kulmasta (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; Natiivi-UI:n huomio).
+            Ponnahdus.Avaa(kortti, null, new TransformOrigin(Length.Percent(100), Length.Percent(100), 0));
             AukiMuuttui?.Invoke(true);
         }
 
@@ -96,7 +97,8 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             kentta.Blur();
-            kortti.style.display = DisplayStyle.None;
+            // Sulkeutuu samaa reittiä (Ponnahdus, 200 ms).
+            Ponnahdus.Sulje(kortti);
             AukiMuuttui?.Invoke(false);
         }
 
