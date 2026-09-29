@@ -649,7 +649,7 @@ namespace Matkakirja.Linssit.Dioraama
             if (rak.Henkilot == null || !rak.Henkilot.ContainsKey(r.Henkilo)) return;
             t.Hahmot.Add(new Hahmo
             {
-                Id = "elava-" + r.Henkilo, HenkiloId = r.Henkilo, Paikka = r.Pisteet[0], Lyhty = r.Lyhty,
+                Id = "elava-" + r.Henkilo, HenkiloId = r.Henkilo, Paikka = r.Pisteet[0], Lyhty = r.Lyhty, Silmukka = "idle",
                 Reitti = new Reitti { Pisteet = new List<V3>(r.Pisteet), Nopeus = r.Nopeus, Tauko = 0 },
             });
         }

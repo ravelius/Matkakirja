@@ -81,7 +81,9 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
                 if (_DioraamaLeikkausMin.w > 0.001)
                 {
                     if (Leikkauksessa(i.paikkaW, 0)) discard;
-                    if (Leikkauksessa(i.paikkaW, 0.12)) vari = lerp(vari, half3(0.80h, 0.76h, 0.68h), 0.85h);
+                    // Reuna kuoren omasta väristä hieman vaaleampana (1.0.57: kiinteä vaalea sävy näkyi hämärässä valkoisena
+                    // viivana); leikattu kivi erottuu, mutta seuraa päivän/hämärän kirkkautta.
+                    if (Leikkauksessa(i.paikkaW, 0.12)) vari = vari * 1.45h + half3(0.02h, 0.018h, 0.015h);
                 }
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
