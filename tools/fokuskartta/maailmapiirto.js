@@ -1675,6 +1675,17 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * monotoninen kuutiokäyrä (piirto.js SYVYYS), eikä tämä erä muuta
    * siitä tavuakaan.
    */
+  /*
+   * === JÄRVEN RANTA KEVENEE KAUKOTASOILLA (omistaja 29.9.2026 klo 22.3x:
+   * *"järvet esim. Suomessa ovat turhan paksulla viivalla kaukaa
+   * katsoessa"*). Kynä (1,0·P) ja kostea reuna (2,2·P) ovat
+   * paperivakioita, joten kaukotasolla pieni järvi oli pelkkää tummaa
+   * reunaa eikä lukenut vetenä. Ramppi tason tiheydestä (px / laudan
+   * yksikkö): t = 0 z5:llä ja kauempana, t = 1 z8:lla ja lähempänä.
+   * Kaukana kynä on puolet ohuempi ja vaalea (peitto 0,35) eikä kosteaa
+   * reunaa ole; lähitasoilla (≥ z8) vedot ovat täsmälleen entiset.
+   */
+  const jarviT = JARVIEN_RAMPPI(px);
   ctx.save();
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
@@ -1689,11 +1700,13 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     // (piirto.js MATALA_SIIRTO, puolikas peitolla 0,5); oletuksena 0.
     ctx.fillStyle = `rgb(${Math.round(206 + MATALA_SIIRTO[0] * 0.5)},${Math.round(201 + MATALA_SIIRTO[1] * 0.5)},${Math.round(181 + MATALA_SIIRTO[2] * 0.5)})`;
     ctx.fill('evenodd');
-    ctx.strokeStyle = 'rgba(74,52,33,0.18)';
-    ctx.lineWidth = 2.2 * P;
-    ctx.stroke();
-    ctx.strokeStyle = 'rgba(58,40,25,0.8)';
-    ctx.lineWidth = 1.0 * P;
+    if (jarviT > 0) {
+      ctx.strokeStyle = `rgba(74,52,33,${(0.18 * jarviT).toFixed(3)})`;
+      ctx.lineWidth = 2.2 * P;
+      ctx.stroke();
+    }
+    ctx.strokeStyle = `rgba(58,40,25,${(0.35 + 0.45 * jarviT).toFixed(3)})`;
+    ctx.lineWidth = (0.5 + 0.5 * jarviT) * P;
     ctx.stroke();
   }
   ctx.restore();
@@ -3367,6 +3380,9 @@ export const JOKITYYLI = Object.freeze({
  *    lähellä enemmän, mutta sahalaitaa (alle pikselin siksak GEOGLOWSin
  *    tiheästä pisteketjusta) ei synny millään tasolla.
  */
+/** Järvien rantavetojen ramppi: 0 kaukotasoilla (px ≤ 1,8 eli z5), 1 lähitasoilla (px ≥ 14,4 eli z8). */
+export const JARVIEN_RAMPPI = (px) => (px > 0 ? Math.min(1, Math.max(0, Math.log2(px / 1.8) / 3)) : 1);
+
 export const GEOGLOWS_JOKI = Object.freeze({
   vahin: 0.55, suurin: 1.7, kasvu: 0.12, yleistysPx: 1.3, perusPx: 1.8,
 });
