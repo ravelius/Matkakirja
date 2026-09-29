@@ -6,7 +6,14 @@ Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetesta
 sinun docs-muutoksiisi, peruuta merge ja pushaa suoraan omaan haaraasi, ks. luovutuksen kohta
 tästä jos epäselvää).
 
-## PÄIVITYS 28.9.2026 klo 22.2x — LUE TÄMÄ ENSIN
+## PÄIVITYS 29.9.2026 klo 06.5x — LUE TÄMÄ ENSIN
+- **docs/raportit/viesti-laitetestaaja-luovutus-20260929.md** on uusin luovutus. Kärki: 1.0.42-
+  yhdistelmän (25c7c971) radiolinssi — UI/mastot/renkaat/viritys täysin oikein, mutta `aani
+  mittaa` näyttää rms=0 koko ajan (ei todellista ääntä), vaikka nostokortin kaiutin toimii
+  normaalisti samassa sessiossa. Ei vielä omaa raporttitiedostoa, ei testattu iPadilla.
+- Molemmat omat simulaattorit (1572C658, 3B4CDACB) ovat Shutdown.
+
+## PÄIVITYS 28.9.2026 klo 22.2x
 - **docs/raportit/viesti-laitetestaaja-luovutus-20260928.md** on uusin luovutus (1.0.39 TF:ssä, 1.0.40-juna
   tulossa/käännösvika, Thessalia-tarkistus, kehittäjätila Pulu-testeihin, simulaattorien tila). Fablen
   nykyinen nimi/id: Päätoimittaja (Opus, xhigh) local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31.
