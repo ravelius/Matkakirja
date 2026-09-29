@@ -9187,3 +9187,7 @@ Omistaja 29.9. klo 16.2x (nähtyään v2:n, 2580997f7) sanatarkasti: "radiossa n
 ## TILINVAIHTO 29.9. KLO 16.4X: ROOLIT PYSÄYTETTY, SIIRTOPROMPTI (29.9.2026 klo 16.38)
 
 Omistaja 29.9. klo 16.3x: "sen jälkeen voisit lopettaa muut sessiot ja tehdä siirtopromptin" (viikko 94–95 %). Kaikki 12 roolia pushasivat luovutuksen ja aloitusviestin (SHA:t siirtopromptissa). Käynnissä jää: jokipoltto ajo-20260930 (vahti, nice 15) ja TF 1.0.50 -ajo 36576368826 GitHubissa. Siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20260929.md; Päätoimittajan aloitusviesti osoittaa siihen. Codexin puuradio v3 odottaa; iPad-yläpalkki tilataan vasta omistajan nähtyä iPhonen nahkapalkin pelissä.
+
+## TILA 29.9.2026 klo 17.0x: tilinvaihto tehty (29.9.2026 klo 17.02)
+
+Uuden tilin Päätoimittaja local_593b89a1-2514-4d74-b956-2a73db862382 (Opus xhigh). Tilillä oli valmiina 10 tyhjää roolisessiota oikeissa kansioissa (luotu 25.9.), joten ne käytettiin uudelleen aloitusviesteillä; Linssiseppä 2 (local_fc4fcc54-9fa1-4ba2-9de2-97a8ee884e10) ja Linnanrakentaja (local_08e82dfc-ac27-4a27-a62b-b0ff862022ae) luotiin appia ohjaamalla. Remote Control päällä kaikissa. TF 1.0.50 (iPhonen nahkayläpalkki) sisäisessä ryhmässä, #3627 mergetty. Uudet erät: Linssiseppä = suurin puuttuva web-linssi natiiviin, Siirtoseppä = pariteettikatsaus 2 BUILD 50:stä. Natiivisepän 1.0.51-juna (keittiö) odottaa omistajan lupaa luokitinesteen vuoksi.
