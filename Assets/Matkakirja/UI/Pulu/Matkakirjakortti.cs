@@ -680,15 +680,23 @@ namespace Matkakirja.Natiivi
                 kortit.Add(kortti);
             }
             Jarjesta();
+            // Avaus ja sulku animoiden (omistaja 29.9.2026): pino kasvaa napautetun pikkukuvan kohdalta (Ponnahdus).
+            Ponnahdus.Avaa(pinoEl);
         }
 
         public static bool Auki => verho != null;
 
         public static void Sulje()
         {
-            verho?.RemoveFromHierarchy();
+            if (verho == null) return;
+            var vanha = verho;
             verho = null;
             kortit.Clear();
+            // Sulkeutuva pino ei ota napautuksia; se poistuu, kun liike on valmis (uusi pino voi jo avautua päälle).
+            vanha.UnregisterCallback<PointerDownEvent>(Napautus);
+            vanha.pickingMode = PickingMode.Ignore;
+            if (vanha.childCount == 0) { vanha.RemoveFromHierarchy(); return; }
+            Ponnahdus.Sulje(vanha[0], vanha.RemoveFromHierarchy);
         }
 
         /// <summary>Päällimmäinen ilman alla-luokkaa ja muiden päälle; muut sen alle pinoon.</summary>
