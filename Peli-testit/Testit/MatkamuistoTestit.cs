@@ -52,7 +52,7 @@ namespace Matkakirja.Peli.Testit
             Matkamuistot.Loyda(m.Tila.Pelaaja, m.Kokemus, "voudin-sinetti");
             var d = Laukku.Rakenna(m, null);
             Oleta.Sama("Voudin sinetti", d.Matkamuistot.Single().Nimi);
-            Oleta.Tosi(d.Matkamuistot.Single().KuvaUrl.EndsWith("voudin-sinetti.jpg"), "kuva");
+            Oleta.Tosi(d.Matkamuistot.Single().KuvaUrl.EndsWith("/matkamuistot/voudin-sinetti.jpg"), "kuva paketista");
         }
     }
 }

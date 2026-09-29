@@ -992,6 +992,18 @@ namespace Matkakirja.Natiivi
             Media(() => Natiivi.Kuvat.Hae(media != null && media.TryGetValue(lahde, out var url) ? url : lahde, valmis));
         }
 
+        /// <summary>
+        /// Kuva levyvälimuistiin ilman piirtoa (web ui.esipuskuroiKuvat): sama osoitteen ratkaisu kuin HaeKuvassa (https
+        /// suoraan, paketin tiedostot media.json:sta, muut Commonsista), jotta myöhempi HaeKuva osuu levyyn. Kuvat.Esilataa
+        /// ohittaa jo muistissa, levyllä tai haussa olevat, joten kaksoislatausta ei synny.
+        /// </summary>
+        public static void EsilataaKuva(string lahde, Taso taso = Taso.SeuraavaRuutu)
+        {
+            if (string.IsNullOrEmpty(lahde)) return;
+            if (lahde.StartsWith("http")) { Natiivi.Kuvat.Esilataa(lahde, taso); return; }
+            Media(() => Natiivi.Kuvat.Esilataa(media != null && media.TryGetValue(lahde, out var url) ? url : lahde, taso));
+        }
+
         /// <summary>Kuva pienennettynä leveys × korkeus -ruutuun (peittäen, keskeltä), esim. sisällyksen pikkukuvat.</summary>
         public static void HaeKuvaPienena(string lahde, int leveys, int korkeus, Action<Texture2D> valmis)
         {

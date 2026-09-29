@@ -404,6 +404,8 @@ namespace Matkakirja.Natiivi
                 }
             }
             PaivitaAlapalkki();
+            // Web lehti.js naytaTutkiSivu → esilataaViereisetSivut: näkyvä sivu piirretty, vasta sitten naapurit taustalle.
+            EsilataaViereiset(i);
             if (lehti.Laji == LehtiLaji.Kehittaja) return; // liite ei ole pelin lehti: ei sivutapahtumia
             SivuNakyi?.Invoke(lehti.Omistaja, s.Aihe?.Id, i);
             // Livian lehtireaktio (web reagoiLivianLehtisivuun): aiheen ele tunnetagilla, geneeriset sivut hiljaa.
@@ -413,6 +415,64 @@ namespace Matkakirja.Natiivi
                 Laji = LehtiTekoLaji.SivuNakyi, Omistaja = lehti.Omistaja, Aihe = s.Aihe?.Id, Sivu = i, Kaupunki = avausKaupunki,
                 SivunLaji = s.Laji == LehtiSivuLaji.Etusivu ? "etusivu" : lehti.Laji == LehtiLaji.Maa ? "maa" : "aihe",
             });
+        }
+
+        // --- viereisten sivujen kuvien esilataus (web lehti.js esilataaViereisetSivut) ---------------------------------
+
+        /// <summary>
+        /// Web esilataaViereisetSivut(ui, sivu): edellisen ja seuraavan sivun kuvat levyvälimuistiin taustatasolla (ei
+        /// piirtoa). Sisällysvalikosta voi hypätä keskelle lehteä, joten molemmat naapurit haetaan; lehden päät jäävät pois.
+        /// Kuvat.Esilataa ohittaa jo haetut, joten sama kuva ei lähde kahdesti (web esipuskuroiKuvat).
+        /// </summary>
+        void EsilataaViereiset(int i)
+        {
+            if (lehti == null || lehti.Laji == LehtiLaji.Kehittaja) return;
+            var haetut = new HashSet<string>();
+            int kpl = 0;
+            for (int j = i - 1; j <= i + 1; j += 2)
+            {
+                if (j < 0 || j >= lehti.Sivut.Count) continue;
+                foreach (var lahde in SivunKuvalahteet(lehti.Sivut[j]))
+                {
+                    if (string.IsNullOrEmpty(lahde) || !haetut.Add(lahde)) continue;
+                    NostoSisalto.EsilataaKuva(lahde);
+                    kpl++;
+                }
+            }
+            if (kpl > 0) Debug.Log($"MATKAKIRJA ui lehti: esilataus sivu {i}: {kpl} kuvaa viereisiltä sivuilta");
+        }
+
+        /// <summary>
+        /// Web lehdenSivunKuvat / kaupunkilehdenEtusivunKuvat: sivun piirron kuvalähteet (nostot ja niiden galleria, listojen
+        /// kuvat, etusivun pää- ja rivikuvat, maan kartta). Tilastosivu piirtyy datasta eikä hae kuvia.
+        /// </summary>
+        IEnumerable<string> SivunKuvalahteet(LehtiSivu s)
+        {
+            var a = s?.Aihe;
+            if (s == null || a == null) yield break;
+            switch (s.Laji)
+            {
+                case LehtiSivuLaji.Numeroina: yield break;
+                case LehtiSivuLaji.MaaEtusivu:
+                    if (UiSisalto.Maa(lehti.Maa)?.KarttaUrl is string kartta) yield return kartta;
+                    yield break;
+                case LehtiSivuLaji.Etusivu:
+                {
+                    // Sama valinta kuin Etusivu(): pääkuvat + kuvarivi.
+                    var paakuvat = a.Avauskuvat.Count > 0 ? a.Avauskuvat : a.Kansikuvat.Take(1).ToList();
+                    var rivi = a.EnnenNyt.Count >= 2 ? a.EnnenNyt.Take(2)
+                        : (a.Avauskuvat.Count > 0 ? a.Kansikuvat.Take(2) : a.Kansikuvat.Skip(1).Take(2));
+                    foreach (var k in paakuvat.Concat(rivi)) yield return k?.Lahde;
+                    yield break;
+                }
+            }
+            foreach (var n in a.Nostot)
+            {
+                if (n.Galleria.Count > 0) { foreach (var k in n.Galleria) yield return k?.Lahde; }
+                else yield return n.Kuva?.Lahde;
+            }
+            foreach (var (_, kohteet) in a.Lista)
+                foreach (var k in kohteet) yield return k.Kuva?.Lahde;
         }
 
         // --- sivun porrastus (UI-piikit 24.9.: maalehden avaus 82 ms, TextJob 28 + asettelu 25 + repaint 22) -----
