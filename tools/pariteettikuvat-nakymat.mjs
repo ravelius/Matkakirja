@@ -166,6 +166,7 @@ const avaaKohtaaminen = async (p) => {
  */
 const LINSSIT = {
   'ihmisen-matka': {},
+  'isoisa-1873': { kamera: [47, 18, 3500] },
   keksinnot: {},
   pallo: {},
   radio: { kamera: [50, 10, 6000] },
@@ -880,6 +881,15 @@ const LINSSIEHDOT = {
       if (!document.body.classList.contains('maatiedot-tila')) return 'body.maatiedot-tila puuttuu';
       if (p.maa && ui.maatiedotValittu !== p.maa) return `maatiedoissa valittuna ${ui.maatiedotValittu ?? '–'}, odotettiin ${p.maa}`;
       return ui.pallolauta?.linssit?.paalla?.('maatiedot') ? null : 'maatietojen kerros ei pallolla';
+    },
+  },
+  'isoisa-1873': {
+    ehto2: () => {
+      const n = [...document.querySelectorAll('.pallolauta-isoisa-nimi:not(.piilossa)')].filter((e) => {
+        const b = e.getBoundingClientRect();
+        return b.width > 2 && b.right > 0 && b.bottom > 0 && b.left < innerWidth && b.top < innerHeight;
+      }).length;
+      return n >= 3 ? null : `isoisän 1873-nimiä ruudulla vain ${n}`;
     },
   },
   vesistot: {

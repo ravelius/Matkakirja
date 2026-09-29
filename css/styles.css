@@ -28668,6 +28668,46 @@ button.maapaneeli-aihe:active:not(:disabled) {
 }
 
 /*
+ * ISOISÄN LINSSIN NIMET PALLOLLA (js/linssit/isoisa-1873.js, erä 1).
+ *
+ * Vanhan atlaksen tapaan: harvennetut kapiteelit, muste rajan sävyä
+ * (kirjasin ja ääriviiva natiivin IsoisaKerroksen mukaan, 29.9.2026).
+ * Kolme kokoluokkaa (suuri valtakunta, keskikokoinen valtio, pieni)
+ * ja maakunta; vasalli kursiivilla, alusmaa vaaleammalla musteella.
+ * Näkyvyys kameran korkeuden mukaan luokalla `piilossa` (linssi
+ * asettaa sen datumeille; display: none, ei opacity — piilossa oleva
+ * nimi ei saa jäädä ruudulle mittaan eikä sormen alle).
+ */
+.pallolauta-isoisa-nimi {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  /* Natiivi on malli (IsoisaKerros.cs:71, 118-119): kaupunkinimien
+     serif, kunnes atlasantiikva tulee, ja KIINTEÄ paperinvärinen
+     ääriviiva eikä hehku — neljä 1 px:n varjoa + kapea sumu on HTML-
+     tekstin lähin vastine TextMeshPron outlinelle. */
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: rgba(58, 40, 24, 0.92);
+  text-shadow:
+    1px 0 0 rgba(247, 241, 226, 0.95), -1px 0 0 rgba(247, 241, 226, 0.95),
+    0 1px 0 rgba(247, 241, 226, 0.95), 0 -1px 0 rgba(247, 241, 226, 0.95),
+    0 0 1.5px rgba(247, 241, 226, 0.95);
+}
+.pallolauta-isoisa-nimi--suuri { font-size: 15px; letter-spacing: 0.34em; }
+.pallolauta-isoisa-nimi--keski { font-size: 13px; letter-spacing: 0.26em; }
+.pallolauta-isoisa-nimi--pieni { font-size: 11px; letter-spacing: 0.18em; }
+.pallolauta-isoisa-nimi--maakunta {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(96, 72, 48, 0.85);
+}
+.pallolauta-isoisa-nimi--vasalli { font-style: italic; }
+.pallolauta-isoisa-nimi--alusmaa { color: rgba(96, 74, 52, 0.8); }
+.pallolauta-isoisa-nimi.piilossa { display: none; }
+
+/*
  * MAAN NIMI PALLOLLA (vertailutila, js/vertailu.js aalto 1C). Sama
  * käsiala ja muste kuin tasokartan .vertailu-maa-nimi, mutta koko on
  * ruutuvakio: CSS2D-elementti ei skaalaudu pallon mukana, joten

@@ -252,6 +252,10 @@ const NIPUTTAMATTOMAT = new Set([
   // Maakunnat-runko) — molemmat paketit ovat siis MODULES-listalla
   // (tools/build-standalone.mjs) eikä enää tässä. Rivit jätetty tähän
   // muistiksi listan historiasta.
+  // Isoisän linssi 1873 (21.9.2026): linssimoduuli ja sen nimipaketti ovat
+  // laiskan tuonnin takana kuten muutkin linssit.
+  'js/linssit/isoisa-1873.js',
+  'js/packs/valtiot-1873.js',
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',
