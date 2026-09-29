@@ -100,6 +100,21 @@ namespace Matkakirja.Linssit.Dioraama
         }
 
         /// <summary>
+        /// SeuraavaKiertueella(r, tilaId) → tilaId tai null (era 3 kohta 5, Pulun kiertue). JS-pari: seuraavaKiertueella.
+        /// Tyhjä kiertue → null; tilaId null tai "massa" → ensimmäinen; tilaId kiertueella → seuraava, viimeinen → null
+        /// (= yleisnäkymä); tilaId ei kiertueella → ensimmäinen.
+        /// </summary>
+        public static string SeuraavaKiertueella(Rakennus r, string tilaId)
+        {
+            var kiertue = r?.Kiertue;
+            if (kiertue == null || kiertue.Count == 0) return null;
+            if (tilaId == null || tilaId == "massa") return kiertue[0];
+            int i = kiertue.IndexOf(tilaId);
+            if (i < 0) return kiertue[0];
+            return i + 1 < kiertue.Count ? kiertue[i + 1] : null;
+        }
+
+        /// <summary>
         /// PuluLento(alku, loppu, t01) → piste. Toisen asteen Bézier: P0 = alku, P1 = keskipiste + (0, 0,3·|Δ| + 1, 0)
         /// (huippu), P2 = loppu, parametri s = Smootherstep(t01). TULKINTA (nollamatka): jos alku == loppu, |Δ| = 0
         /// ja huippu on silti keskipiste + (0,1,0) — nostotermin vakio-osa +1 ei koskaan häviä.

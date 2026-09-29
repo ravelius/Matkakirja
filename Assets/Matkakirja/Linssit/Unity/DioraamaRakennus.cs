@@ -43,6 +43,31 @@ namespace Matkakirja.Natiivi
             this.juuri = juuri;
             varjostinValaistu = Resources.Load<Shader>("Varjostimet/DioraamaValaistu");
             varjostinMaalattu = Resources.Load<Shader>("Varjostimet/DioraamaMaalattu");
+            varjostinLeivottu = Resources.Load<Shader>("Varjostimet/DioraamaLeivottu");
+        }
+
+        // --- LEIVOTTU VALO (Olavinlinna uudella tavalla, Siirtoseppä 29.9.2026) ---------------------------------
+        // Tila, jolla on valoatlas (Tila.ValoAtlas) ja jonka KAIKILLA primitiiveillä on UV1 (Blenderin toinen UV-kartta),
+        // piirretään DioraamaLeivottu-varjostimella: yksi materiaali per tila (atlas on tilakohtainen), ei reaaliaikaisia
+        // varjoja. Muut tilat kuten ennen (pintakohtainen maalattu/valaistu materiaali).
+        readonly Shader varjostinLeivottu;
+        static readonly int IdValoAtlas = Shader.PropertyToID("_ValoAtlas");
+        readonly Dictionary<string, Material> leivotut = new Dictionary<string, Material>();
+        readonly Dictionary<string, Texture2D> odottavatValoAtlakset = new Dictionary<string, Texture2D>();
+        readonly Dictionary<string, List<DioraamaTyhja>> tyhjat = new Dictionary<string, List<DioraamaTyhja>>();
+
+        /// <summary>Tilan Blender-tyhjät (valo:/liekki:/ikkuna:) tilan GameObjectin avaruudessa; tyhjä lista, jos ei ole.</summary>
+        public List<DioraamaTyhja> Tyhjat(string tilaId) => tyhjat.TryGetValue(tilaId ?? "", out var l) ? l : new List<DioraamaTyhja>();
+
+        /// <summary>Leivottujen tilojen määrä (testikysely "poikki tila").</summary>
+        public int Leivottuja => leivotut.Count;
+
+        /// <summary>Tilan leivottu valoatlas (DioraamaSovitin.LataaValoAtlas). Voi saapua ennen tilan glb:tä.</summary>
+        public void AsetaValoAtlas(string tilaId, Texture2D kuva)
+        {
+            if (string.IsNullOrEmpty(tilaId) || kuva == null) return;
+            odottavatValoAtlakset[tilaId] = kuva;
+            if (leivotut.TryGetValue(tilaId, out var m) && m != null) m.SetTexture(IdValoAtlas, kuva);
         }
 
         public int TilojaLadattu => tilat.Count;
@@ -130,6 +155,18 @@ namespace Matkakirja.Natiivi
 
             int kaikkiKarjet = 0;
             foreach (var osa in malli.Osat) kaikkiKarjet += (osa.Paikat?.Length ?? 0) / 3;
+            tyhjat[tila.Id] = DioraamaTyhja.Lue(malli);
+            bool leivottu = !string.IsNullOrEmpty(tila.ValoAtlas) && varjostinLeivottu != null;
+            if (leivottu) foreach (var osa in malli.Osat) if (osa.Uv1 == null || osa.Uv1.Length < (osa.Paikat?.Length ?? 0) / 3 * 2) leivottu = false;
+            if (!string.IsNullOrEmpty(tila.ValoAtlas) && !leivottu) kirjaa?.Invoke($"poikki: {tila.Id} valoatlas ilman UV1:tä tai varjostinta (maalattu varalla)");
+            var uv1t = leivottu ? new Vector2[kaikkiKarjet] : null;
+            Material leivottuMateriaali = null;
+            if (leivottu)
+            {
+                leivottuMateriaali = new Material(varjostinLeivottu) { name = "Dioraama/Leivottu:" + tila.Id };
+                if (odottavatValoAtlakset.TryGetValue(tila.Id, out var atlas)) leivottuMateriaali.SetTexture(IdValoAtlas, atlas);
+                leivotut[tila.Id] = leivottuMateriaali;
+            }
             var paikat = new Vector3[kaikkiKarjet];
             var normaalit = new Vector3[kaikkiKarjet];
             var uvt = new Vector2[kaikkiKarjet];
@@ -147,6 +184,8 @@ namespace Matkakirja.Natiivi
                     normaalit[kv + i] = osa.Normaalit != null && osa.Normaalit.Length >= (i + 1) * 3
                         ? new Vector3(osa.Normaalit[i * 3], osa.Normaalit[i * 3 + 1], osa.Normaalit[i * 3 + 2]) : Vector3.up;
                     uvt[kv + i] = osa.Uv != null && osa.Uv.Length >= (i + 1) * 2 ? new Vector2(osa.Uv[i * 2], osa.Uv[i * 2 + 1]) : Vector2.zero;
+                    // glTF:n UV:n origo on vasen yläkulma, Unityn tekstuurin vasen alakulma: atlas-UV käännetään (v → 1 − v).
+                    if (uv1t != null) uv1t[kv + i] = new Vector2(osa.Uv1[i * 2], 1f - osa.Uv1[i * 2 + 1]);
                     varit[kv + i] = osa.Varit != null && osa.Varit.Length >= (i + 1) * 4
                         ? new Color32(osa.Varit[i * 4], osa.Varit[i * 4 + 1], osa.Varit[i * 4 + 2], osa.Varit[i * 4 + 3])
                         : new Color32(255, 0, 0, 255);
@@ -156,7 +195,7 @@ namespace Matkakirja.Natiivi
                 for (int i = 0; i < lahde.Length; i++) kolmiot[i] = lahde[i] + kv;
                 kolmiotOsittain[oi] = kolmiot;
                 kolmioita += kolmiot.Length / 3;
-                materiaalitJarjestyksessa[oi] = MateriaaliPinnalle(rakennus, osa.Pinta);
+                materiaalitJarjestyksessa[oi] = leivottu ? leivottuMateriaali : MateriaaliPinnalle(rakennus, osa.Pinta);
                 kv += n;
             }
 
@@ -164,6 +203,7 @@ namespace Matkakirja.Natiivi
             mesh.SetVertices(paikat);
             mesh.SetNormals(normaalit);
             mesh.SetUVs(0, uvt);
+            if (uv1t != null) mesh.SetUVs(1, uv1t);
             mesh.SetColors(varit);
             mesh.subMeshCount = malli.Osat.Count;
             for (int oi = 0; oi < malli.Osat.Count; oi++) mesh.SetTriangles(kolmiotOsittain[oi], oi);
@@ -177,8 +217,9 @@ namespace Matkakirja.Natiivi
             // era 2b (kohta 2): aurinko+lamput+tuli heittävät ja vastaanottavat varjoja. Ei haittaa Valaistus=false
             // -tilassa (DioraamaMaalattu ei kirjoita ShadowCaster-passia eikä lue varjokarttaa -- renderer-liput
             // jäävät silloin vaikutuksettomiksi).
-            renderer.shadowCastingMode = ShadowCastingMode.On;
-            renderer.receiveShadows = true;
+            // Leivottu tila: valo ja varjot ovat jo atlaksessa (ei varjokarttaa, halvempi iPhonella).
+            renderer.shadowCastingMode = leivottu ? ShadowCastingMode.Off : ShadowCastingMode.On;
+            renderer.receiveShadows = !leivottu;
 
             tilat[tila.Id] = go;
             Kolmiot += kolmioita;
@@ -231,6 +272,9 @@ namespace Matkakirja.Natiivi
             tilat.Clear();
             foreach (var m in materiaalit.Values) if (m != null) UnityEngine.Object.Destroy(m);
             materiaalit.Clear(); kuvalliset.Clear();
+            foreach (var m in leivotut.Values) if (m != null) UnityEngine.Object.Destroy(m);
+            leivotut.Clear(); tyhjat.Clear();
+            odottavatValoAtlakset.Clear(); // tekstuurit omistaa DioraamaSovitin (ladatutValoAtlakset)
             odottavatPohjakuvat.Clear();
             viimeisinRakennus = null;
             Kolmiot = 0; Karjet = 0; Renderereita = 0;

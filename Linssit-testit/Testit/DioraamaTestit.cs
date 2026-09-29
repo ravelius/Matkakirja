@@ -47,6 +47,7 @@ namespace Matkakirja.Linssit.Testit
             ""vaaka"": {""kohde"":[1,0,1],""atsimuutti"":0,""korkeus"":40,""etaisyys"":10,""fov"":50,""aukko"":0.1},
             ""pysty"": {""kohde"":[1,0,1],""atsimuutti"":0,""korkeus"":50,""etaisyys"":14,""fov"":55,""aukko"":0.1}
           },
+          ""kiertue"": [""keittio"", ""kellari""],
           ""pulu"": {""laskeutuminen"":[0,0,0]},
           ""taulu"": {""otsikko"":""Linna"",""tila"":""luonnos"",""kohdat"":[{""teksti"":""Ensimmäinen"",""lahde"":""lahde1""}]},
           ""tilat"": [
@@ -439,6 +440,48 @@ namespace Matkakirja.Linssit.Testit
               ""buffers"": [{""byteLength"":60}]
             }";
             return TeeGlbTavut(json, bin.ToArray());
+        }
+
+        // 1e) Olavinlinna (Siirtoseppä 29.9.2026): Blenderin glb — TEXCOORD_1 (leivotun valon atlas-UV) ja
+        // mesh-tön tyhjä "liekki:tulisija" extrasineen (custom properties).
+        [Testi] static void GlbUv1JaTyhjanExtras()
+        {
+            float[] pos = { 0, 0, 2, 1, 0, 2, 0, 1, 5 };
+            float[] uv1 = { 0.1f, 0.2f, 0.3f, 0.4f, 0.5f, 0.6f };
+            uint[] idx = { 0, 1, 2 };
+            var bin = new List<byte>();
+            foreach (var f in pos) bin.AddRange(BitConverter.GetBytes(f));
+            foreach (var f in uv1) bin.AddRange(BitConverter.GetBytes(f));
+            foreach (var ix in idx) bin.AddRange(BitConverter.GetBytes(ix));
+            string json = @"{
+              ""asset"": {""version"":""2.0""},
+              ""nodes"": [
+                {""name"":""keittio"",""mesh"":0,""children"":[1]},
+                {""name"":""liekki:tulisija"",""translation"":[0.5,0.2,-1],""extras"":{""koko"":0.5,""savu"":0.8}}
+              ],
+              ""meshes"": [{""primitives"":[{""attributes"":{""POSITION"":0,""TEXCOORD_1"":1},""indices"":2}]}],
+              ""accessors"": [
+                {""bufferView"":0,""componentType"":5126,""count"":3,""type"":""VEC3""},
+                {""bufferView"":1,""componentType"":5126,""count"":3,""type"":""VEC2""},
+                {""bufferView"":2,""componentType"":5125,""count"":3,""type"":""SCALAR""}
+              ],
+              ""bufferViews"": [
+                {""buffer"":0,""byteOffset"":0,""byteLength"":36},
+                {""buffer"":0,""byteOffset"":36,""byteLength"":24},
+                {""buffer"":0,""byteOffset"":60,""byteLength"":12}
+              ],
+              ""buffers"": [{""byteLength"":72}]
+            }";
+            var malli = DioraamaGlb.Lue(TeeGlbTavut(json, bin.ToArray()), unityyn: true);
+            Oleta.Sama(6, malli.Osat[0].Uv1.Length);
+            Oleta.Sama(0.6f, malli.Osat[0].Uv1[5]);
+            Oleta.Sama(2, malli.Solmut.Count);
+            var tyhja = malli.Solmut[1];
+            Oleta.Sama("liekki:tulisija", tyhja.Nimi);
+            Oleta.Sama(0, tyhja.Vanhempi);
+            Oleta.Sama(0, tyhja.Osat.Count);
+            Oleta.Sama(1f, (float)tyhja.Translation[2]); // unityyn: z negatoitu
+            Oleta.Sama(0.5, (double)tyhja.Extras["koko"]);
         }
 
         [Testi] static void MonisolmuGlbHierarkiaJaTrsKanoninen()
@@ -918,6 +961,83 @@ namespace Matkakirja.Linssit.Testit
             var nNapautuksenJalkeen = linssi.NakymaHetkella(kohtaAlku + 1.5, pysty: false);
             Oleta.Sama(0, nNapautuksenJalkeen.Kohta, "kohta pysyy näkyvissä (viimeisin saavutettu)");
             Oleta.Tosi(nNapautuksenJalkeen.TauluAuki, "taulu pysyy auki repliikin ajan");
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
+        // KIERTUE (era 3 kohta 5): jäsennys, SeuraavaKiertueella, napautus käsikirjoituksen lopussa
+        // ═══════════════════════════════════════════════════════════════════
+
+        [Testi] static void KiertueJasentyyJaPuuttuvaOnTyhjaLista()
+        {
+            var rak = DioraamaData.Lue(KeittioFixture);
+            Oleta.Sama(2, rak.Kiertue.Count);
+            Oleta.Sama("keittio", rak.Kiertue[0]);
+            Oleta.Sama("kellari", rak.Kiertue[1]);
+            var ilman = DioraamaData.Lue(KeittioFixture.Replace("\"kiertue\": [\"keittio\", \"kellari\"],", ""));
+            Oleta.Tosi(ilman.Kiertue != null && ilman.Kiertue.Count == 0, "puuttuva kiertue = tyhjä lista");
+        }
+
+        // Samat tapaukset kuin JS:n tests/dioraama-logiikka.test.mjs (seuraavaKiertueella).
+        [Testi] static void SeuraavaKiertueellaSaannot()
+        {
+            var tyhja = new Rakennus();
+            Oleta.Tosi(Ohjaaja.SeuraavaKiertueella(tyhja, "a") == null, "tyhjä kiertue, tila");
+            Oleta.Tosi(Ohjaaja.SeuraavaKiertueella(tyhja, null) == null, "tyhjä kiertue, null");
+            Oleta.Tosi(Ohjaaja.SeuraavaKiertueella(tyhja, "massa") == null, "tyhjä kiertue, massa");
+            var r = new Rakennus { Kiertue = new List<string> { "a", "b", "c" } };
+            Oleta.Sama("a", Ohjaaja.SeuraavaKiertueella(r, null));
+            Oleta.Sama("a", Ohjaaja.SeuraavaKiertueella(r, "massa"));
+            Oleta.Sama("b", Ohjaaja.SeuraavaKiertueella(r, "a"));
+            Oleta.Sama("c", Ohjaaja.SeuraavaKiertueella(r, "b"));
+            Oleta.Tosi(Ohjaaja.SeuraavaKiertueella(r, "c") == null, "viimeinen -> null");
+            Oleta.Sama("a", Ohjaaja.SeuraavaKiertueella(r, "ei-kiertueella"));
+        }
+
+        [Testi] static void NapautusKasikirjoituksenLopussaSiirtaaKiertueella()
+        {
+            var rak = DioraamaData.Lue(KeittioFixture);
+            // Kellarille oma lyhyt käsikirjoitus, jotta kiertueen viimeinen tila voi päättyä.
+            rak.Tila("kellari").Kasikirjoitus.Add(new Askel { Tee = "odota", S = 0.5 });
+            var linssi = new PoikkileikkausLinssi();
+            linssi.Avaa(rak, 0);
+
+            // Yleisnäkymä, avaustaulu kesken (lento 1,8 + taulu 0,25 + kohta 3,0 alkaa AvausViiveen jälkeen): napautus
+            // vain päättää askeleen, kamera ei liiku.
+            double avausLoppu = PoikkileikkausLinssi.AvausViive + 1.8 + 0.25 + 3.0;
+            Oleta.Tosi(!linssi.NakymaHetkella(avausLoppu - 0.5, false).KasikirjoitusLopussa, "avaus kesken");
+            linssi.Napauta(PoikkileikkausLinssi.AvausViive + 1.0);
+            Oleta.Tosi(linssi.NakymaHetkella(PoikkileikkausLinssi.AvausViive + 1.1, false).KohdeTila == null, "kesken: ei siirtymää");
+
+            // Avaus lopussa: napautus -> kiertueen ensimmäinen tila (keittio). Ensimmäinen napautus lyhensi lentoaskeleen
+            // 1,0 s:iin, joten katsotaan riittävän myöhäistä hetkeä.
+            double t1 = avausLoppu + 1.0;
+            Oleta.Tosi(linssi.NakymaHetkella(t1, false).KasikirjoitusLopussa, "avaus lopussa");
+            linssi.Napauta(t1);
+            var nKeittio = linssi.NakymaHetkella(t1 + 0.001, false);
+            Oleta.Sama("keittio", nKeittio.KohdeTila);
+
+            // Keittiö: saapuminen + käsikirjoitus (1,8 + 0,25 + 3,0 + 2,0 + 0,5 = 7,55 s). Kesken napautus ei siirrä.
+            double kesto = Kameraliike.SiirtymanKesto(rak.YleisVaaka, rak.Tila("keittio").Kamera);
+            double alku = t1 + kesto;
+            linssi.Napauta(alku + 2.5);   // kesken kohta-askeleen: päättää askeleen, ei kohdistusta
+            Oleta.Sama("keittio", linssi.NakymaHetkella(alku + 2.6, false).KohdeTila);
+            double t2 = alku + 20;
+            var nLoppu = linssi.NakymaHetkella(t2, false);
+            Oleta.Tosi(nLoppu.KasikirjoitusLopussa, "keittiön käsikirjoitus lopussa");
+            Oleta.Tosi(nLoppu.TauluAuki, "taulu jää näkyviin");
+            linssi.Napauta(t2);
+            Oleta.Sama("kellari", linssi.NakymaHetkella(t2 + 0.001, false).KohdeTila);
+
+            // Kiertueen viimeinen tila: napautus lopussa -> yleisnäkymä (KohdeTila null), ei uutta kiertoa heti.
+            double kesto2 = Kameraliike.SiirtymanKesto(rak.Tila("keittio").Kamera, rak.Tila("kellari").Kamera);
+            double t3 = t2 + kesto2 + 20;
+            Oleta.Tosi(linssi.NakymaHetkella(t3, false).KasikirjoitusLopussa, "kellarin käsikirjoitus lopussa");
+            linssi.Napauta(t3);
+            var nYleis = linssi.NakymaHetkella(t3 + 0.001, false);
+            Oleta.Tosi(nYleis.KohdeTila == null, "kiertueen lopussa yleisnäkymään");
+            // Yleisnäkymässä paluun jälkeen ei ole linnan käsikirjoitusta: napautus ei siirrä mihinkään.
+            linssi.Napauta(t3 + 30);
+            Oleta.Tosi(linssi.NakymaHetkella(t3 + 31, false).KohdeTila == null, "yleisnäkymä pysyy");
         }
 
         // REGRESSIO (löydös, katselmointi 29.9.2026): Puhe() käytti Repliikit[0]:aa askel.N:stä riippumatta, ja

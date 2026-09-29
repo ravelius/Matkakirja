@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
         readonly Button sulje;
         Linssirekisteri kuunneltu;
         // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
-        bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa, avausPeittaa;
+        bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa, avausPeittaa, valitsinAuki;
 
         /// <summary>Aikajanan aloituslaatikko auki (web: .aikajana-avaus peittää ✕:n): sulkupilleri piiloon.</summary>
         public void AvausPeittaa(bool peittaa)
@@ -127,6 +127,9 @@ namespace Matkakirja.Natiivi
             };
             Maat.ArkkiMuuttui += auki => { arkkiPeittaa = auki; PaivitaSulku(); };
             Aikajana.ValikkoKaytettavissa += kaytossa => { valikkoKorvaa = kaytossa; PaivitaSulku(); };
+            // Laitetestaaja 29.9. (savukierros 1051): Linssivalitsin (kerros 25) aukeaa auki olevan linssin päälle, mutta
+            // ✕ (38) ja dioraaman taulu/laput (36) piirtyivät sen päälle ja siirsivät Aktivoi-napin. Valitsimen ajaksi pois.
+            Valitsin.AukiMuuttui += auki => { valitsinAuki = auki; PaivitaSulku(); Dioraama.Peitetty = auki; };
 
             kerros.Juuri(Kerros).schedule.Execute(Kytke).Every(500);
             Kytke();
@@ -302,7 +305,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PaivitaSulku()
         {
-            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa;
+            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki;
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy && !sulkuNakyi) Kutista();
             else if (!nakyy) { kutistus?.Pause(); kutistus = null; }

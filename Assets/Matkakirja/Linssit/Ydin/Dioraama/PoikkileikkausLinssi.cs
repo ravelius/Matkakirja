@@ -78,11 +78,15 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Kuluvan askeleen äänipankin id (repliikki[N].Aani, reaktion Aani tai taulun kohdan Aani);
         /// null kun ei puhetta tai askeleella ei ole ääntä.</summary>
         public readonly string AskeleenAani;
+        /// <summary>Kuluvan tilan (tai avauksessa linnan) käsikirjoitus on kokonaan läpi ja taulu jää näkyviin
+        /// (era 3 kohta 5, Kiertue): seuraava napautus siirtää kiertueella eteenpäin.</summary>
+        public readonly bool KasikirjoitusLopussa;
 
         public Nakyma(Asento kamera, Dictionary<string, int> tasot, List<HahmoNakyma> hahmot, V3 pulu,
             bool puluLentaa, bool tauluAuki, int kohta, string kohdeTila, string puhuja = null, string repliikki = null,
-            int askel = -1, string askeleenAani = null)
+            int askel = -1, string askeleenAani = null, bool kasikirjoitusLopussa = false)
         {
+            KasikirjoitusLopussa = kasikirjoitusLopussa;
             Kamera = kamera; Tasot = tasot; Hahmot = hahmot; Pulu = pulu;
             PuluLentaa = puluLentaa; TauluAuki = tauluAuki; Kohta = kohta; KohdeTila = kohdeTila;
             Puhuja = puhuja; Repliikki = repliikki; Askel = askel; AskeleenAani = askeleenAani;
@@ -162,9 +166,23 @@ namespace Matkakirja.Linssit.Dioraama
             tapahtumat.Add(new Kameratapahtuma(t, tilaId, Kameraliike.SiirtymanKesto(p0, p1)));
         }
 
-        /// <summary>Napautus hetkellä t: päättää meneillään olevan käsikirjoitusaskeleen (Ohjaaja.KasikirjoitusHetkella).</summary>
+        /// <summary>Napautus hetkellä t: päättää meneillään olevan käsikirjoitusaskeleen (Ohjaaja.KasikirjoitusHetkella).
+        /// KIERTUE (era 3 kohta 5): jos käsikirjoitus on jo lopussa (taulu jää näkyviin), napautus siirtää
+        /// kiertueella eteenpäin: Kohdista(SeuraavaKiertueella(nykyinen)), tai yleisnäkymään kun seuraavaa ei ole.
+        /// Yleisnäkymässä (linnan avaustaulu lopussa) napautus vie kiertueen ensimmäiseen tilaan. Muuten kuten ennen.</summary>
         public void Napauta(double t)
         {
+            var nyt = Auki && Rakennus != null && tapahtumat.Count > 0 ? NakymaHetkella(t, false) : default(Nakyma);
+            if (nyt.KasikirjoitusLopussa)
+            {
+                string nykyinen = nyt.KohdeTila;
+                // Yleisnäkymässä ilman kiertuetta ei ole minne siirtyä: napautus jää tavalliseksi napautukseksi.
+                if (nykyinen != null || Rakennus.Kiertue.Count > 0)
+                {
+                    Kohdista(Ohjaaja.SeuraavaKiertueella(Rakennus, nykyinen), t);
+                    return;
+                }
+            }
             napautukset.Add(t);
         }
 
@@ -246,6 +264,7 @@ namespace Matkakirja.Linssit.Dioraama
             string puhuja = null, repliikki = null;
             int askel = -1;
             string askeleenAani = null;
+            bool lopussa = false;
 
             bool avaus = kohdeTila == null && i == 0 && Rakennus.Taulu?.Kohdat != null && Rakennus.Taulu.Kohdat.Count > 0;
             if (kohdeTila == null && !avaus)
@@ -276,6 +295,7 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     var kt = Ohjaaja.KasikirjoitusHetkella(kestot, napitLokaali, paikallinenAika);
                     int idx = kt.Indeksi;
+                    lopussa = kt.Valmis;
                     int puluIdx = -1;
                     for (int qi = 0; qi < tila.Kasikirjoitus.Count; qi++)
                         if (tila.Kasikirjoitus[qi].Tee == "pulu-lenna") { puluIdx = qi; break; }
@@ -305,7 +325,7 @@ namespace Matkakirja.Linssit.Dioraama
             }
 
             return new Nakyma(kamera, tasot, hahmot, pulu, puluLentaa, tauluAuki, kohta, kohdeTila, puhuja, repliikki,
-                askel, askeleenAani);
+                askel, askeleenAani, lopussa);
         }
 
         /// <summary>Puheaskeleen puhuja, teksti ja äänipankin id (kohta, repliikki, reaktio); muut askeleet
