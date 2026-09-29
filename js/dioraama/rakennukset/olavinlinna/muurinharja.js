@@ -49,8 +49,10 @@ function kivikasa(x, z, siemen, kerrat = [5, 3, 1]) {
 const HAHMOT = [
   {
     id: 'vartija', henkilo: 'vartija-1500', paikka: [-20, KY, -19.8], suunta: 90, peilattu: false,
-    silmukka: 'kavely', heraa: 2,
-    reitti: { pisteet: [[-20, KY, -19.8], [-9, KY, -19.8], [-20, KY, -19.8]], nopeus: 0.9, tauko: 2 },
+    // Elävä linna (29.9.): lyhty käteen ja reitti kannen päästä päähän; natiivi 1.0.57 lukee lyhdyn hahmolta (Siirtoseppä:
+    // erillinen elava.reitti kaatoi vanhan natiivin, joten kävelijä on tavallinen hahmo ja näkyy aina elävässä linnassa).
+    silmukka: 'kavely', heraa: 2, lyhty: true,
+    reitti: { pisteet: [[-21.0, KY, -19.75], [-9.0, KY, -19.75], [-21.0, KY, -19.75]], nopeus: 0.8, tauko: 2 },
     repliikit: [
       { id: 'vartija-1', teksti: 'Vahtivuoro on pitkä, mutta rajalta ei saa silmää siirtää hetkeksikään.' },
       { id: 'vartija-2', teksti: 'Venäjän raja on vain päivämarssin päässä – siksi harjalla ei nukuta.' },
@@ -88,12 +90,8 @@ export const TILA = {
   kierto: { atsimuutti: [-35, 35], korkeus: [14, 45], etaisyys: [0.7, 1.4] },
   pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea' },
   taulu: TAULU,
-  // Elävä linna (29.9.): vartija kulkee lyhdyn kanssa kannen päästä päähän (Kellotornin puolelta Kirkkotornille)
-  // kivikasojen välistä; sijoitettuna y ≈ 16.
-  elava: {
-    kohde: [-14.75, 14.2, -19.75], sade: 6,
-    reitti: { henkilo: 'vartija-1500', pisteet: [[-21.0, KY, -19.75], [-9.0, KY, -19.75]], nopeus: 0.8, edestakaisin: true, lyhty: true },
-  },
+  // Elävä linna (29.9.): napautuskohde kannen keskellä; lyhdyllinen vartija on hahmot[]-listassa (reitti kannen päästä päähän).
+  elava: { kohde: [-14.75, 14.2, -19.75], sade: 6 },
   // Ulkona aurinko valaisee; tulikori tekee lämpimän päävalon, seinäsoihtu (.valo) pienemmän.
   valot: [
     { paikka: [-16.2, 14.1, -20.4], sade: 8, voima: 1.5, vari: '#ff9a4a', lepatus: 0.3 },

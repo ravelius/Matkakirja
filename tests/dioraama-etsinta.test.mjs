@@ -71,3 +71,11 @@ test('fatabuuri on vaate- ja tavara-aitta: ei tynnyreitä, säkkejä eikä suola
   }
   for (const vaadittu of ['arkku', 'kangaspakka', 'vaatepino', 'vaateorsi']) assert.ok(reseptit.has(vaadittu), vaadittu);
 });
+
+test('yhteensopivuus natiivi 1.0.57: ei elava.reittiä; elävän linnan kävelijät ovat hahmoja lyhtyineen (Siirtoseppä 29.9.)', () => {
+  for (const t of RAKENNUS.tilat) assert.ok(!t.elava?.reitti, `${t.id}: elava.reitti kaataa natiivin 1.0.57 (käytä hahmot[] + lyhty)`);
+  for (const [tid, hid] of [['muurinharja', 'vartija'], ['laituri', 'renki']]) {
+    const h = tila(tid).hahmot.find((x) => x.id === hid);
+    assert.ok(h?.lyhty === true && h.reitti?.pisteet?.length >= 2 && h.silmukka, `${tid}/${hid}: kävelijä lyhdyn kanssa`);
+  }
+});
