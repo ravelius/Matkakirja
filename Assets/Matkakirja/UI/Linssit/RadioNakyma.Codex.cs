@@ -1,6 +1,6 @@
 // CODEXIN PUURADIO YHTENÄ KUVANA (omistaja 29.9.2026: "Radio on aina päällä, joten ei tarvitse kikkailla tasojen kanssa,
 // vaan Codex voi suoraan tehdä yhden kuvan. Ainut, mikä jätetään tyhjäksi, on VU-mittarin neula, joka animoidaan, sekä
-// näytön teksti."; Codexin toimitus ~/Documents/Codex/2026-09-29/radio-yksikuva/<versio>, manifest.json, tuonti
+// näytön teksti."; Codexin toimitus ~/Documents/Codex/2026-09-29/radio-yksikuva/v3, manifest.json, tuonti
 // tyokalut/radio_yksikuva.py): iPad 1400 × 520 ja iPhone 1100 × 600, valaistu radio.png (lamput valaisevat puuta, runko
 // varjossa, ohut sinertävä reunavalo) ja VU-neula 160 × 160 -rajauksena (akseli rajauksen keskellä = vu_needle_pivot).
 // Pelin omat osat kuvan päällä: pistenäyttö display_text_safe_boundsiin (kuvan pistepohja korvaa sammuneet pisteet),
