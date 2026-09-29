@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2418';
+const CACHE = 'matkakirja-2026-09-21.2419';
 const SHELL = [
   './',
   './index.html',
@@ -48,6 +48,7 @@ const SHELL = [
   './js/kartta-lataus.js',
   './js/karttamittari.js',
   './js/fokusmitat.js',
+  './js/deltasarja.js',
   './js/laattapyramidi.js',
   './js/karttanimet.js',
   './js/packs/fokus-grc.js',
@@ -2129,7 +2130,13 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
 const LAATTAKANSIO = '2026-09-27-pohja-20260927';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
 const LAATTAKANSIO_SYVA = '2026-09-27-pohja';
-const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
+/**
+ * DELTASARJAN PERUSSARJA (js/pallo.js PALLO_LAATTAPERUS, js/deltasarja.js):
+ * muuttumattomat laatat haetaan perussarjan kansiosta, joten activate ei
+ * saa siivota niitä. null = tuotantosarja ei ole delta.
+ */
+const LAATTAKANSIO_PERUS = null;
+const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA, ...(LAATTAKANSIO_PERUS ? [LAATTAKANSIO_PERUS] : [])];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;
 /** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */
