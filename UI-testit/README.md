@@ -543,3 +543,48 @@ ui liike
 odota 1
 kuva pieni-liike-pulu
 ```
+
+### Poikkileikkaus (Olavinlinna): elävä linna
+
+Dioraaman kehittäjäkomennot `Documents/linssi-komento.txt`:hen (`DioraamaSovitin.Komento`). Avaa ensin
+`kehittaja 1` ja `linssi poikkileikkaus`, ja odota lokiriviä `poikki: … ladattu`. Tilan komennot
+(`poikki etsinta alusta`, `poikki tila …`) toimivat vasta latauksen jälkeen: ennen sitä loki sanoo
+`etsintä ei etsintöjä` eikä mitään nollaudu.
+
+- `poikki peili file:///…/` + `poikki lataa` — paketti paikallisesta peilistä (rakennus on välimuistissa,
+  joten ilman `lataa`-komentoa näkyy vanha).
+- `poikki saapuminen alusta` / `poikki vihje alusta` — saapumiskaari ja sykkivä vihje kuin ensikäynnillä.
+- `poikki napauta` — napautus (ohittaa saapumiskaaren); `poikki yleis`, `poikki tila <id>` — kohdistus.
+- `poikki kuori [huippu|normaali|kevyt|auto]`, `poikki tunnelma [hamara|paiva]` — kuoren taso, tunnelma.
+- `poikki etsinta alusta|seuraava` — voudin sinetin etsintä alusta / avatun tilan aktiivinen vaihe
+  suoritetaan kuin napautuksella (keittiö → kappeli → fatabuuri); pelkkä `poikki etsinta` kirjaa tilan.
+
+Löytökortti arkun avauduttua (1.0.60): kortti tulee vasta kun kansi on auki ja sinetti noussut
+(~1,8 s). Pystykameran leikkauskatto (1.0.60): fatabuurin kuori ei peitä huonetta pystyssä
+(1.0.59:ssä tornin kuori peitti vasemman puolen). Sarja: rivit `linssi-komento.txt`:hen yksi kerrallaan,
+`odota` = tauko ja `kuva` = `xcrun simctl io <UDID> screenshot` (valmis ajoskripti: Siirtosepän ajo-vaihe3.sh).
+
+```
+kehittaja 1
+linssi poikkileikkaus
+odota 20
+poikki etsinta alusta
+poikki tila keittio
+odota 4
+poikki etsinta seuraava
+poikki tila kappeli
+odota 4
+poikki etsinta seuraava
+odota 8
+poikki tila fatabuuri
+odota 4
+kuva fatabuuri-pysty-leikkauskatto
+poikki etsinta seuraava
+odota 0.5
+kuva arkku-avautuu-ei-korttia
+odota 2
+kuva loytokortti
+```
+
+Odotettu loki: `etsintä voudin-sinetti vaihe 3/3 (loyto)` ja `peli: matkamuisto voudin-sinetti löytyi, +25 tp`.
+Kuvassa `arkku-avautuu-ei-korttia` ei ole vielä matkamuistokorttia; `loytokortti` näyttää sen.
