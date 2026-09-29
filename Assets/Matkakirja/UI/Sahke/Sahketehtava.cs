@@ -805,12 +805,20 @@ namespace Matkakirja.Natiivi
             Tayta();
             hakemistoPaivittyi.Add(() => { if (valitsin == tausta) Tayta(); });
             Tehoste("pulu.sahke");
+            // Avaus ja sulku animoiden (omistaja 29.9.2026): tausta häivyttää, laatikko kasvaa KOHDE-napin kohdalta.
+            Rakenne.Nayta(tausta, true, 220);
+            Ponnahdus.Avaa(laatikko);
         }
 
         void SuljeValitsin()
         {
-            valitsin?.RemoveFromHierarchy();
+            if (valitsin == null) return;
+            var tausta = valitsin;
             valitsin = null;
+            tausta.Query<VisualElement>().ForEach(x => x.pickingMode = PickingMode.Ignore); // sulkeutuva ei ota napautuksia
+            Rakenne.Nayta(tausta, false, Mathf.RoundToInt((Ponnahdus.KiinniS + Ponnahdus.PoistoViiveS) * 1000f));
+            if (tausta.childCount > 0) Ponnahdus.Sulje(tausta[0], tausta.RemoveFromHierarchy);
+            else tausta.RemoveFromHierarchy();
         }
 
         // =====================================================================

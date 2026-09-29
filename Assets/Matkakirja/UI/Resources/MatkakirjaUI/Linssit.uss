@@ -3377,10 +3377,19 @@
 .mk-isskyyti__ohjaimet {
     position: absolute;
     left: 12px;
-    top: 10px;
+    bottom: 10px;
     width: 320px;
     padding: 12px;
     flex-direction: column;
+}
+
+/* Ohjauspöytä alareunassa (omistaja 29.9.2026): lukema jää vasempaan yläkulmaan omana kilpenään. */
+.mk-isskyyti__lukemarivi {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 300px;
+    max-width: 78%;
 }
 
 .mk-isskyyti__ohjaimet--kutistettu {
@@ -3495,7 +3504,11 @@
 }
 
 /* Rivi 2 (välilehdet) ja nopeusporras: segmenttisolut tasaleveinä, väli 6. */
-.mk-isskyyti__valilehdet,
+.mk-isskyyti__valilehdet {
+    flex-direction: row;
+    align-items: center;
+}
+
 .mk-isskyyti__nopeudet {
     flex-direction: row;
     margin-top: 8px;
@@ -3576,7 +3589,11 @@
 
 /* Kohdelista (webissä selaimen oma valinta): rivit 28 pt, korkeus turva-alueen alareunaan (koodissa). */
 .mk-isskyyti__lista {
-    margin-top: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 6px;
     border-width: 1px;
     border-radius: 10px;
     border-color: rgba(93, 255, 168, 0.28);
@@ -3716,8 +3733,8 @@
     background-color: rgb(93, 255, 168);
 }
 
-/* CODEXIN UUSI RADIO (radiolinssin uudistus 29.9.2026, RadioNakyma.Codex.cs): kohdistetut kerrokset koko kankaan
-   kokoisina, pelin osat (pistenäyttö, asteikon nimet, virtakytkin, linkkirivi) kerrosten päällä. */
+/* CODEXIN PUURADIO (29.9.2026, RadioNakyma.Codex.cs): yksi valaistu kuva koko kankaan kokoisena ja VU-neula rajauksena,
+   pelin osat (pistenäyttö, asteikon nimet, virtakytkin, linkkirivi) kuvan päällä. */
 .mk-radio__codex {
     align-self: flex-end;
     flex-shrink: 0;
@@ -3729,6 +3746,10 @@
     top: 0;
     right: 0;
     bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-radio__codex-neula {
     -unity-background-scale-mode: stretch-to-fill;
 }
 
@@ -3798,6 +3819,18 @@
     height: 30px;
 }
 
+/* Web (pariteetti-2 rivi 12): rivikuvakkeena havainnekuva pyöreänä, viivapiirros varana kunnes kuva latautuu. */
+.mk-linssirivi__kuva {
+    padding: 0;
+    overflow: hidden;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-linssirivi__varaikoni {
+    flex-grow: 1;
+    margin: 5px;
+}
+
 .mk-linssivalitsin__runko .mk-linssirivi__nimi {
     font-size: 13.76px;
     white-space: normal;
@@ -3816,6 +3849,13 @@
 .mk-linssivalitsin__alinakyma {
     flex-direction: row;
     align-items: center;
+}
+
+/* Linssit ja Aarteet vierekkäin (omistaja 29.9.2026, 1.0.50): puolikkaat samassa rivissä. */
+.mk-linssivalitsin__alinakyma--puoli {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 2px 1.5px;
 }
 
 .mk-linssivalitsin__vakanen {
@@ -3893,6 +3933,31 @@
     font-size: 13px;
     white-space: normal;
     color: rgba(70, 51, 31, 0.92);
+}
+
+/* Linssit (omistaja 29.9.2026, 1.0.50 palaute 6): linssin nimen kohta muuttuu oranssiksi Aktivoi-napiksi (sama kulta kuin
+ * entinen esikatselun nappi, joka poistui Linsseistä); ikoni jää vasemmalle. */
+.mk-linssirivi--aktivoi.mk-esikatseltu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tekstit {
+    justify-content: center;
+    min-height: 36px;
+    border-radius: 8px;
+    background-color: #d9a13b; /* web --accent */
+}
+
+/* Aarteet (palaute 7): rivillä ei ikonia eikä tekstikehystä, joten nappi on nimirivi. */
+.mk-linssirivi--aktivoi.mk-esikatseltu > .mk-linssirivi__nimirivi {
+    justify-content: center;
+    min-height: 36px;
+    border-radius: 8px;
+    background-color: #d9a13b; /* web --accent */
+}
+
+.mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tila {
+    color: #211d18;
 }
 
 /* Esikatseltu rivi muuttuu samassa kohdassa toimintonapiksi (web: "rivi muuttuu Aktivoi-napiksi"; laite cl2: teksti päällekkäin). */

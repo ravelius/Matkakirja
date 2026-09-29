@@ -127,8 +127,15 @@ namespace Matkakirja.Natiivi
             // Versiolaskuri: vain viimeisimmän kutsun viivästetty askel saa toimia
             // (näytä + piilota samassa ruudussa ei jätä elementtiä näkyviin).
             var versio = new NayttoVersio();
+            bool oliAuki = e.resolvedStyle.display != DisplayStyle.None && e.ClassListContains("mk-auki");
             e.userData = versio;
             bool Voimassa() => ReferenceEquals(e.userData, versio);
+            // DIALOGIN KORTTI (web .dialog-card, js/avausanimaatio.js asennaDialogianimaatiot; omistaja 29.9.2026 "avaus ja
+            // sulku aina animoiden"): himmennys häivyttää USS:llä, pergamenttikortti kasvaa 0,92 → 1 napautuksen kohdalta ja
+            // sulkeutuu samaa reittiä. Kortin sulun lopussa himmennys on jo läpinäkyvä, joten arvot palaavat USS:lle.
+            if (auki != oliAuki && e.ClassListContains("mk-himmennys"))
+                foreach (var lapsi in e.Children())
+                    if (lapsi is Kortti kortti) { if (auki) Ponnahdus.Avaa(kortti); else Ponnahdus.Sulje(kortti, () => { }); }
             if (auki)
             {
                 e.style.display = DisplayStyle.Flex;

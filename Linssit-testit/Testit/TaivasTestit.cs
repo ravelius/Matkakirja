@@ -50,6 +50,51 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(prev < 0.06, "yö on tumma");
         }
 
+        [Testi] static void PlaneetatTunnetuissaPaikoissa()
+        {
+            // Saturnuksen oppositio 21.9.2025 Kaloissa: RA noin 0 h 05 min (1,3°), Dec noin −3,5°.
+            var sat = Planeetat.Paikka(Array.Find(Planeetat.Kaikki, x => x.Nimi == "Saturnus"),
+                Iss.Aika.Jd(new DateTime(2025, 9, 21, 0, 0, 0, DateTimeKind.Utc)));
+            var (ra, dec) = Planeetat.RaDec(sat.Suunta);
+            double dra = ((ra - 1.3) + 540) % 360 - 180;
+            Oleta.Tosi(Math.Abs(dra) < 2 && Math.Abs(dec + 3.5) < 2, $"Saturnus {ra:F1}° {dec:F1}°");
+            Oleta.Tosi(Math.Abs(sat.Au - 8.4) < 0.3, $"Saturnus {sat.Au:F2} au");
+            // Marsin oppositio 16.1.2025 Kaksosissa: RA noin 7 h 55 min (118,7°), Dec noin +25°.
+            var mars = Planeetat.Paikka(Array.Find(Planeetat.Kaikki, x => x.Nimi == "Mars"),
+                Iss.Aika.Jd(new DateTime(2025, 1, 16, 0, 0, 0, DateTimeKind.Utc)));
+            var (mra, mdec) = Planeetat.RaDec(mars.Suunta);
+            Oleta.Tosi(Math.Abs(mra - 118.7) < 3 && Math.Abs(mdec - 25) < 3, $"Mars {mra:F1}° {mdec:F1}°");
+            Oleta.Tosi(Math.Abs(mars.Au - 0.64) < 0.05, $"Mars {mars.Au:F2} au");
+        }
+
+        [Testi] static void TahtikuviotOsuvatBsc5Tahtiin()
+        {
+            // Jokainen kuvion tähti löytää BSC5-parinsa 0,8°:n säteellä (kuvion paikat ovat oikein), ja pari on kirkas (mag < 5).
+            string polku = System.IO.Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "tahdet-bsc5.json");
+            var juuri = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(System.IO.File.ReadAllText(polku));
+            var luettelo = new List<(double, double)>();
+            var magnitudit = new List<double>();
+            foreach (var o in (List<object>)juuri["tahdet"])
+            {
+                var r = (List<object>)o;
+                luettelo.Add((Convert.ToDouble(r[0]), Convert.ToDouble(r[1])));
+                magnitudit.Add(Convert.ToDouble(r[2]));
+            }
+            var napsautetut = Tahtikuviot.Napsauta(luettelo);
+            Oleta.Sama(Tahtikuviot.Kaikki.Length, napsautetut.Count);
+            int puuttuu = 0;
+            for (int k = 0; k < napsautetut.Count; k++)
+                for (int j = 0; j < napsautetut[k].Length; j++)
+                {
+                    var t = napsautetut[k][j];
+                    int i = luettelo.FindIndex(l => { var e = Taivaslaskenta.Eci(l.Item1, l.Item2); return Math.Abs(e.x - t.x) + Math.Abs(e.y - t.y) + Math.Abs(e.z - t.z) < 1e-12; });
+                    if (i < 0 || magnitudit[i] >= 5) { puuttuu++; Console.WriteLine($"      {Tahtikuviot.Kaikki[k].Nimi} tähti {j}: ei BSC5-paria"); }
+                }
+            Oleta.Sama(0, puuttuu, "kuvioiden tähdet ilman BSC5-paria");
+            foreach (var k in Tahtikuviot.Kaikki)
+                foreach (var (a, b) in k.Viivat) Oleta.Tosi(a < k.Tahdet.Length && b < k.Tahdet.Length, k.Nimi);
+        }
+
         sealed class ValeNakyma : ITaivaanNakyma
         {
             public readonly List<string> Loki = new List<string>();

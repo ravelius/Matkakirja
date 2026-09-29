@@ -84,10 +84,10 @@ namespace Matkakirja.Natiivi
         readonly VisualElement sulkija, paneeli;
         readonly ScrollView virta;
         readonly TextField kentta;
-        readonly Button kaiutin, palaa;
-        readonly VisualElement kaiutinPaalla, kaiutinPois;
-        /// <summary>Web POLLO_KAIUTIN_IKONI pois-tilassa: kaiuttimen runko ja vinoviiva (.pollo-kaiutin-vino), ei aaltoja.</summary>
-        const string KaiutinPoisIkoni = "<path d=\"M4.2 9.3h3.2l4.4-3.6v12.6l-4.4-3.6H4.2z\"/><path d=\"M3.4 3.4l17.2 17.2\"/>";
+        readonly Button palaa;
+        /// <summary>Ylärivin lukija (KortinLukija, Pulun ääni) ja sen valikon auto-luennan kytkimen tilateksti.</summary>
+        readonly KortinLukija lukija;
+        Label autolukuTila;
         readonly List<(string Rooli, string Teksti)> historia = new List<(string, string)>();
         readonly System.Random arpa = new System.Random();
         bool tervehditty, kysyy;
@@ -118,15 +118,30 @@ namespace Matkakirja.Natiivi
             // Löydös 91 (web .pollo-paneeli: --pollo-paperi + --paper-noise multiply): paperikohina kuten lippukortissa.
             Kuviot.AsetaArkki(paneeli);
             paneeli.style.display = DisplayStyle.None;
-            // Ylärivi (web .pollo-ylarivi): "Näytä puhekuplat" tuo ohi menneen repliikin takaisin.
+            // Ylärivi (omistaja 29.9.2026: "pulun chattiin pitää saada samat äänikontrollit ja asetusten säädöt kuin
+            // nostoissa ... chat ikkunan yläreunaan ... näytä puhekuplat sekä ehdota sisältöä napit ikoneiksi").
+            // Vasemmalla kuvakkeet (teksti saavutettavuusnimenä), oikealla nostokortin lukijarivi [valikko][kaiutin].
             var ylarivi = Rakenne.El("mk-chat__ylarivi", paneeli, PickingMode.Ignore);
-            naytaKuplat = Rakenne.Nappi("Näytä puhekuplat", "mk-chat__pilleri", () => { Sulje(); pulu.NaytaViimeisinKupla(); }, ylarivi);
-            naytaKuplat.tooltip = "Tuo ohi menneet puhekuplat takaisin näkyviin";
-            Kirjasimet.Aseta(naytaKuplat, Kirjasin.Luku);
+            naytaKuplat = Rakenne.Nappi(null, "mk-chat__ikoninappi", () => { Sulje(); pulu.NaytaViimeisinKupla(); }, ylarivi, Ikonit.Puhekupla);
+            naytaKuplat.tooltip = "Näytä puhekuplat";
             // "Ehdota sisältöä" (web .pollo-ehdota): chat väistyy ja ehdotuslomake aukeaa tilanteen kanssa.
-            var ehdota = Rakenne.Nappi("Ehdota sisältöä", "mk-chat__pilleri", EhdotaSisaltoa, ylarivi);
-            ehdota.tooltip = "Ehdota sisältöä tähän kohtaan peliä";
-            Kirjasimet.Aseta(ehdota, Kirjasin.Luku);
+            var ehdota = Rakenne.Nappi(null, "mk-chat__ikoninappi", EhdotaSisaltoa, ylarivi, Ikonit.Kyna);
+            ehdota.tooltip = "Ehdota sisältöä";
+            Rakenne.El("mk-chat__ylarivi-vali", ylarivi, PickingMode.Ignore);
+            // Nostokortin lukija Pulun äänellä: kaiutin lukee viimeisimmän vastauksen (keskeytys, jatko, VU), valikossa
+            // kappaleet, kelaus ja nopeus. Ääni-valitsimen paikalla auto-luennan kytkin (entinen alarivin kaiutinvipu).
+            lukija = new KortinLukija(ylarivi, "Kuuntele Pulun vastaus", "mk-chat__lukija", saatimet: true,
+                rajaus: () => paneeli.worldBound, persoona: "pollo", aaniRivi: RakennaAutoluku);
+            lukija.Juuri.style.display = DisplayStyle.Flex;
+            // Pulu lukee jo vastausta automaattisesti (virkevirta): kaiutin keskeyttää ja jatkaa sitä eikä aloita alusta.
+            lukija.Nappi.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (!OmaLuentaKaynnissa) return;
+                var p = Puhe.Instanssi;
+                if (p.Tauolla) p.Jatka(); else p.Tauko();
+                lukija.Nappi.EnableInClassList("mk-lukija--keskeytetty", p.Tauolla);
+                e.StopImmediatePropagation();
+            }, TrickleDown.TrickleDown);
             virta = new ScrollView(ScrollViewMode.Vertical);
             virta.AddToClassList("mk-chat__virta");
             virta.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -134,7 +149,7 @@ namespace Matkakirja.Natiivi
             paneeli.Add(virta);
 
             // Syöte (web rakennaSyote): sanelun tilarivi, kirjoitusrivi (kenttä + →) ja matala nappirivi
-            // (näppäimistö 1, kaiutin 1, mikrofoni 2). Sanelutilassa kirjoitusrivi on piilossa.
+            // (näppäimistö 1, mikrofoni 2; kaiutin siirtyi ylärivin lukijaan 29.9.2026). Sanelutilassa kirjoitusrivi on piilossa.
             var syote = Rakenne.El("mk-chat__syote", paneeli, PickingMode.Ignore);
             saneluTila = Rakenne.Teksti("", "mk-chat__sanelutila", syote);
             realtime = new PuluRealtimeNappi(syote, Viesti, () => Konteksti(), LopetaSanelu);
@@ -150,17 +165,11 @@ namespace Matkakirja.Natiivi
             var nappirivi = Rakenne.El("mk-chat__nappirivi", syote, PickingMode.Ignore);
             var kirjoita = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__kirjoita", () => VaihdaTilaan(false, kohdista: true), nappirivi, NappaimistoIkoni);
             kirjoita.tooltip = "Kirjoita kysymys";
-            // Kaiutinvivun tila näkyy kuvakkeessa (web PR #3366, omistaja 27.9.): päällä aallot, pois vinoviiva.
-            kaiutin = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__kaiutin", VaihdaAani, nappirivi);
-            kaiutinPaalla = Rakenne.Ikoni(Ikonit.Viiva["kaiutin"], "mk-chat__kaiutin-paalla", kaiutin);
-            kaiutinPois = Rakenne.Ikoni(KaiutinPoisIkoni, "mk-chat__kaiutin-pois", kaiutin);
-            kaiutin.tooltip = "Lue vastaukset ääneen";
             mikki = Rakenne.Nappi(null, "mk-chat__nappula mk-chat__mikki", VaihdaSanelu, nappirivi);
             mikkiIkoni = Rakenne.Ikoni(MikkiIkoni, "mk-ikoni", mikki);
             lopetaIkoni = Rakenne.Ikoni(PysaytysIkoni, "mk-ikoni", mikki);
             lopetaTeksti = Rakenne.Teksti("Lopeta", "mk-chat__mikkiteksti", mikki);
             MerkitseMikki(false);
-            PaivitaKaiutin();
             sanelussa = Sanelu.Saatavilla; // web: tila = saneluTuettu() ? 'sanelu' : 'kirjoitus'
             NaytaSyote();
             AsetaSaneluTila(null);
@@ -250,7 +259,8 @@ namespace Matkakirja.Natiivi
             if (Auki) return;
             Auki = true;
             sulkija.style.display = DisplayStyle.Flex;
-            Rakenne.Nayta(paneeli, true, 200);
+            // Web pollo.js animoiAvaus(paneeli, nappi): kasvaa avaajan (Pulun tai napin) kohdalta, 220/200 ms.
+            Ponnahdus.Avaa(paneeli);
             SyoteLukko.Esta(this);
             Aanisoitin.Hiljennys("pollo", true);
             pulu.Tilanne("chatOpen");
@@ -312,6 +322,7 @@ namespace Matkakirja.Natiivi
                 }
             }
             LopetaPuheVuoro();
+            AsetaLukijalle(v.Vastaus);
             if (AaniPaalla) Puhe.Hae()?.Lue(v.Vastaus, "pollo");
             historia.Add(("kayttaja", kysymys));
             historia.Add(("pollo", v.Vastaus));
@@ -327,6 +338,7 @@ namespace Matkakirja.Natiivi
             // chatissa (luentaHiljennetty), ja Pulun puhe (myös latautuva pala) pysähtyy riippumatta kaiutinvivusta.
             if (kysyy) luentaHiljennetty = true;
             PeruLuenta();
+            lukija.Pysayta();
             if (Auki) PysaytaPulunPuhe();
             LopetaPuheVuoro();
             suurennos.Sulje();
@@ -334,7 +346,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             sulkija.style.display = DisplayStyle.None;
-            Rakenne.Nayta(paneeli, false, 200);
+            Ponnahdus.Sulje(paneeli);
             SyoteLukko.Vapauta(this);
             Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");
@@ -405,6 +417,8 @@ namespace Matkakirja.Natiivi
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki) Avaa(false);
             LopetaPuheVuoro();
+            // Uusi kysymys: edellisen vastauksen luenta ylärivin lukijassa seis (uusi vastaus luetaan omana luentanaan).
+            lukija.Vaihtui();
             luentaHiljennetty = false;
             luentaVirta = null;
             luettuun = 0;
@@ -825,6 +839,7 @@ namespace Matkakirja.Natiivi
             if (!t.Uusittava) Matkakirjalinkit();
             UiKerros.Hae().StartCoroutine(VastausKuva(kupla, t.Vastaus, kysymys));
             pulu.Tilanne("answer", nakyva);
+            if (!t.Uusittava) AsetaLukijalle(t.Vastaus);
             // Virkevirta luki jo alun striimin aikana: loppu perään (web paataLuenta), muuten koko vastaus nyt.
             // Mikki hiljensi tai chat suljettiin kesken vastauksen: ei luentaa tälle vastaukselle.
             if (luentaHiljennetty || !Auki) PeruLuenta();
@@ -1480,6 +1495,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento (ui chat aani): kaiutinkytkin kuin napautus; palauttaa uuden tilan.</summary>
         public bool VaihdaAaniTesti() { VaihdaAani(); return AaniPaalla; }
 
+        /// <summary>Testikomento ui chat lukija [valikko]: kaiuttimen napautus (tai valikko auki); tila lokiin.</summary>
+        public string LukijaTesti(bool valikko)
+        {
+            if (valikko) lukija.AvaaValikko(); else lukija.Paina();
+            return valikko ? "valikko" : lukija.Lukee ? "lukee" : "hiljaa";
+        }
+
         void VaihdaAani()
         {
             PlayerPrefs.SetInt(AaniAvain, AaniPaalla ? 0 : 1);
@@ -1589,10 +1611,49 @@ namespace Matkakirja.Natiivi
 
         void PaivitaKaiutin()
         {
-            bool paalla = AaniPaalla;
-            kaiutin.EnableInClassList("mk-valittu", paalla);
-            kaiutinPaalla.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
-            kaiutinPois.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
+            if (autolukuTila != null) autolukuTila.text = AaniPaalla ? "päällä" : "pois";
+        }
+
+        /// <summary>
+        /// Lukijan valikon rivi ääni-valitsimen paikalla: "Lue vastaukset automaattisesti" (kaiutinvipu). Sama asu kuin
+        /// Nopeus-rivillä: nimi vasemmalla, kytkin oikealla kelausnapin tyylillä (valikko on paneelin juuressa, joten
+        /// vain Matkakirja.uss:n luokat pätevät siinä, ei Pulu.uss).
+        /// </summary>
+        void RakennaAutoluku(VisualElement saadot)
+        {
+            var rivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
+            var nimi = Rakenne.Teksti("Lue vastaukset automaattisesti", "mk-lukija-saadot__nimi", rivi);
+            nimi.style.width = StyleKeyword.Auto;
+            nimi.style.flexGrow = 1;
+            nimi.style.flexShrink = 1;
+            nimi.style.whiteSpace = WhiteSpace.Normal;
+            Kirjasimet.Aseta(nimi, Kirjasin.Luku);
+            var nappi = Rakenne.Nappi("", "mk-lukija-valikko__kelausnappi", VaihdaAani, rivi);
+            nappi.tooltip = "Lue vastaukset automaattisesti";
+            autolukuTila = nappi.Q<Label>(className: "mk-nappi__teksti");
+            Kirjasimet.Aseta(nappi, Kirjasin.LukuLihava);
+            PaivitaKaiutin();
+        }
+
+        /// <summary>Pulun oma automaattinen luenta soi tai on tauolla (ei ylärivin lukijan käynnistämä).</summary>
+        bool OmaLuentaKaynnissa
+        {
+            get
+            {
+                var p = Puhe.Instanssi;
+                if (p == null || lukija.Lukee) return false;
+                return p.PuluaaniSoi || (p.Tauolla && (luentaVirta != null || puheVuoro != null));
+            }
+        }
+
+        /// <summary>Valmis vastaus ylärivin lukijalle (luettavaksi uudelleen, keskeytettäväksi tai kelattavaksi).</summary>
+        void AsetaLukijalle(string vastaus)
+        {
+            if (string.IsNullOrWhiteSpace(vastaus)) return;
+            lukija.Aseta(new[] { Puhuttava(vastaus) }, "Kuuntele Pulun vastaus");
+            // Lyhytkin vastaus saa säätimet: chatissa rivi on aina näkyvissä (kortilla alle 80 merkkiä piilottaa).
+            lukija.Juuri.style.display = DisplayStyle.Flex;
+            lukija.Nappi.RemoveFromClassList("mk-lukija--keskeytetty");
         }
     }
 }

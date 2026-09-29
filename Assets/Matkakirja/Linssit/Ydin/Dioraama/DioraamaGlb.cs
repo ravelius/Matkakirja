@@ -40,6 +40,11 @@ namespace Matkakirja.Linssit.Dioraama
         public float[] Paikat;
         public float[] Normaalit;
         public float[] Uv;
+        /// <summary>LINNA (Siirtoseppä 29.9.2026, Blender → Unity): TEXCOORD_1 = leivotun valon atlas-UV (float VEC2,
+        /// ei käännetä kuten ei UV0:kaan); null, jos primitiivillä ei ole toista UV-karttaa (rakennuskoneen glb).</summary>
+        public float[] Uv1;
+        /// <summary>LINNA: materiaalin baseColorTexture → images-indeksi (GlbMalli.Kuvat), tai -1.</summary>
+        public int Kuva = -1;
         /// <summary>COLOR_0 raakoina tavuina RGBA (R = AO, G = lämpö, B = 0, A = 255; kohta 3).</summary>
         public byte[] Varit;
         /// <summary>ERÄ 2B: materiaalin pbrMetallicRoughness.baseColorFactor [r,g,b,a] (LINEAARINEN, glTF-spec) —
@@ -66,6 +71,9 @@ namespace Matkakirja.Linssit.Dioraama
         public float[] Scale = { 1f, 1f, 1f };
         /// <summary>Tämän solmun mesh pinnoittain — tyhjä lista, jos solmulla ei ole meshiä (puhdas nivel).</summary>
         public List<GlbOsa> Osat = new List<GlbOsa>();
+        /// <summary>LINNA: solmun extras (Blenderin custom properties, esim. valo:/liekki:/ikkuna:-tyhjien väri, säde,
+        /// voima, koko); null, jos kenttää ei ole.</summary>
+        public Dictionary<string, object> Extras;
     }
 
     /// <summary>Tilan koko glb: yksi mesh (solmun nimi), primitiivi per käytetty pinta. Nimi/Osat = ENSIMMÄINEN
@@ -76,6 +84,9 @@ namespace Matkakirja.Linssit.Dioraama
         public string Nimi;
         public List<GlbOsa> Osat = new List<GlbOsa>();
         public List<GlbSolmu> Solmut = new List<GlbSolmu>();
+        /// <summary>LINNA (ulkokuori): glb:n sisään upotetut kuvat (images[i].bufferView) tavuina (JPEG/PNG) images-
+        /// järjestyksessä; null alkio, jos kuva on ulkoinen (uri) — ulkoisia ei tueta.</summary>
+        public List<byte[]> Kuvat = new List<byte[]>();
     }
 
     public static class DioraamaGlb
@@ -142,6 +153,11 @@ namespace Matkakirja.Linssit.Dioraama
                 // ERÄ 2B (kohta 4): koko solmuhierarkia — KAIKKI nodes[], ei vain ensimmäinen jolla on
                 // mesh. Yksisolmuisella glb:llä (ei children-kenttiä) tästä tulee 1 alkio (kaikuu Nimi/Osat).
                 malli.Solmut = LueSolmuhierarkia(solmut);
+                foreach (var io in Lista("images"))
+                {
+                    var bvi = MiniJson.Luku(MiniJson.Objekti(io), "bufferView");
+                    malli.Kuvat.Add(bvi.HasValue ? BufferView((int)bvi.Value) : null);
+                }
                 return malli;
             }
 
@@ -164,6 +180,7 @@ namespace Matkakirja.Linssit.Dioraama
                     var pos = FloatVec(a, "POSITION", 3) ?? throw new DioraamaGlbVirhe("POSITION puuttuu");
                     var nor = FloatVec(a, "NORMAL", 3);
                     var tex = FloatVec(a, "TEXCOORD_0", 2);
+                    var tex1 = FloatVec(a, "TEXCOORD_1", 2);
                     var vari = ColorVec(a, "COLOR_0");
                     int k = pos.Length / 3;
 
@@ -206,8 +223,13 @@ namespace Matkakirja.Linssit.Dioraama
                     string pinta = MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Kentta(p, "extras")), "pinta");
                     if (pinta == null && materiaaliObj != null) pinta = MiniJson.Teksti(materiaaliObj, "name");
                     float[] materiaaliVari = materiaaliObj != null ? LueBaseColor(materiaaliObj) : null;
+                    int kuva = -1;
+                    var bct = MiniJson.ObjektiTaiNull(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Kentta(materiaaliObj, "pbrMetallicRoughness")), "baseColorTexture"));
+                    var texI = MiniJson.Luku(bct, "index");
+                    if (texI.HasValue && (int)texI.Value < Lista("textures").Count)
+                        kuva = (int)(MiniJson.Luku(MiniJson.Objekti(Lista("textures")[(int)texI.Value]), "source") ?? -1);
 
-                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Varit = vari, Kolmiot = kolmiot });
+                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, Varit = vari, Kolmiot = kolmiot });
                 }
                 return osat;
             }
@@ -240,6 +262,7 @@ namespace Matkakirja.Linssit.Dioraama
                         Translation = LueTranslation(s),
                         Rotation = LueRotation(s),
                         Scale = LueVec(MiniJson.Kentta(s, "scale"), new[] { 1f, 1f, 1f }),
+                        Extras = MiniJson.ObjektiTaiNull(MiniJson.Kentta(s, "extras")),
                     };
                     var meshIn = MiniJson.Luku(s, "mesh");
                     g.Osat = meshIn.HasValue ? LueMeshinOsat((int)meshIn.Value) : new List<GlbOsa>();
@@ -329,17 +352,30 @@ namespace Matkakirja.Linssit.Dioraama
                 return t;
             }
 
-            /// <summary>COLOR_0: UNSIGNED_BYTE normalized VEC4 (kohta 3) → raa'at tavut RGBA sellaisinaan.</summary>
+            /// <summary>COLOR_0: UNSIGNED_BYTE normalized VEC4 (kohta 3) → raa'at tavut RGBA sellaisinaan. LINNA: myös
+            /// Blenderin UNSIGNED_SHORT normalized VEC4 (yläbitit tavuiksi).</summary>
             byte[] ColorVec(Dictionary<string, object> attr, string nimi)
             {
                 var i = MiniJson.Luku(attr, nimi);
                 if (!i.HasValue) return null;
                 var (alku, askel, maara, komponentit, tyyppi, normalisoitu) = Accessor((int)i.Value);
-                if (tyyppi != 5121 || komponentit != 4 || !normalisoitu) throw new DioraamaGlbVirhe(nimi + " ei ole normalisoitu UNSIGNED_BYTE VEC4");
+                if ((tyyppi != 5121 && tyyppi != 5123) || komponentit != 4 || !normalisoitu) throw new DioraamaGlbVirhe(nimi + " ei ole normalisoitu UNSIGNED_BYTE/SHORT VEC4");
                 var t = new byte[maara * 4];
                 for (int q = 0; q < maara; q++)
                     for (int c = 0; c < 4; c++)
-                        t[q * 4 + c] = b[alku + q * askel + c];
+                        t[q * 4 + c] = tyyppi == 5121 ? b[alku + q * askel + c] : b[alku + q * askel + c * 2 + 1];
+                return t;
+            }
+
+            /// <summary>bufferViewin tavut kopiona (upotettu kuva).</summary>
+            byte[] BufferView(int i)
+            {
+                var bv = Alkio("bufferViews", i);
+                if ((int)(MiniJson.Luku(bv, "buffer") ?? 0) != 0 || binAlku < 0) throw new DioraamaGlbVirhe("vain upotettu BIN-puskuri");
+                int alku = (int)(MiniJson.Luku(bv, "byteOffset") ?? 0), pituus = (int)(MiniJson.Luku(bv, "byteLength") ?? 0);
+                if (alku < 0 || pituus < 0 || alku + pituus > binPituus) throw new DioraamaGlbVirhe("bufferView yli puskurin");
+                var t = new byte[pituus];
+                Array.Copy(b, binAlku + alku, t, 0, pituus);
                 return t;
             }
 

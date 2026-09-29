@@ -275,6 +275,9 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public string Id, Nimi;
         public bool Kohdistettava;
+        /// <summary>Ulkotila (erä 3: laituri, muurinharja): kohdistettuna aurinko ja taivas pysyvät täysinä
+        /// (Valaistus.Sisalla-kertoimia ei käytetä). Puuttuva = false.</summary>
+        public bool Ulkona;
         public V3 RajaMin, RajaMax;
         public List<string> Naapurit = new List<string>();
         public Asento Kamera;
@@ -286,6 +289,10 @@ namespace Matkakirja.Linssit.Dioraama
         public List<Hahmo> Hahmot = new List<Hahmo>();
         public List<Askel> Kasikirjoitus = new List<Askel>();
         public string GlbTiedosto, GlbSha256;
+        /// <summary>LINNA (Siirtoseppä 29.9.2026): Blenderin Cyclesillä leivottu valoatlas (albedo × valo, AO, kuluma)
+        /// tilan glb:n UV1:lle; `valoatlas: { tiedosto, puoli }` (4k iPad, 2k iPhone). null = rakennuskoneen tila
+        /// (maalattu/valaistu varjostin kuten ennen).</summary>
+        public string ValoAtlas, ValoAtlasPuoli;
         /// <summary>Tilaan sijoitetut liekki-instanssit (era 2); tyhjä vanhassa muodossa.</summary>
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
         /// <summary>Tilaan sijoitetut äänilähteet (era 2); tyhjä vanhassa muodossa.</summary>
@@ -337,6 +344,12 @@ namespace Matkakirja.Linssit.Dioraama
     }
 
     /// <summary>Koko rakennus (kohta 1: RAKENNUS + rakennuskoneen lisäykset, kohta 3).</summary>
+    /// <summary>Ulkokuoren glb-polut laatutasoittain (puuttuva taso = seuraava kevyempi käytössä).</summary>
+    public sealed class Ulkokuori
+    {
+        public string Huippu, Normaali, Kevyt;
+    }
+
     public sealed class Rakennus
     {
         public string Id, Nimi, Otsikko;
@@ -346,6 +359,9 @@ namespace Matkakirja.Linssit.Dioraama
         public Taulu Taulu;
         /// <summary>Rakennuksen valaistus (era 2b, kohta 1); null vanhassa muodossa.</summary>
         public Valaistus Valaistus;
+        /// <summary>LINNA (Siirtoseppä 29.9.2026): fotogrammetrinen ulkokuori kolmella laatutasolla
+        /// (`ulkokuori: { huippu, normaali, kevyt }`, glb-polut paketin juuresta); null = ei kuorta.</summary>
+        public Ulkokuori Ulkokuori;
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
@@ -355,6 +371,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Liikesilmukkapankki (era 2b, kohta 4); tyhjä, jos rakennus.json:ssa ei ole liikkeet-
         /// kenttää (rakennuskone lisää sen vain, jos rakennuksella on ≥1 3D-hahmo — tools/dioraama/rakenna.mjs).</summary>
         public Dictionary<string, Liike> Liikkeet = new Dictionary<string, Liike>();
+        /// <summary>Pulun kiertue (era 3 kohta 5): kohdistettavien tilojen id:t järjestyksessä; puuttuva = tyhjä lista.</summary>
+        public List<string> Kiertue = new List<string>();
 
         /// <summary>Tila id:llä, tai null jos ei löydy (kuten js:n loydaTila).</summary>
         public Tila Tila(string id)
@@ -377,6 +395,13 @@ namespace Matkakirja.Linssit.Dioraama
                 Otsikko = MiniJson.Teksti(juuri, "otsikko"),
                 Versio = (int)(MiniJson.Luku(juuri, "versio") ?? 0),
             };
+            var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));
+            if (kuori != null)
+                r.Ulkokuori = new Ulkokuori
+                {
+                    Huippu = MiniJson.Teksti(kuori, "huippu"), Normaali = MiniJson.Teksti(kuori, "normaali"),
+                    Kevyt = MiniJson.Teksti(kuori, "kevyt"),
+                };
             var yleiskamera = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "yleiskamera"));
             r.YleisVaaka = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "vaaka")));
             r.YleisPysty = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "pysty")));
@@ -384,6 +409,11 @@ namespace Matkakirja.Linssit.Dioraama
             r.PuluLaskeutuminen = LueV3(MiniJson.Kentta(pulu, "laskeutuminen"));
             r.Taulu = LueTaulu(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "taulu")));
             r.Valaistus = LueValaistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "valaistus")));
+            foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "kiertue")))
+            {
+                var id = rivi as string;
+                if (!string.IsNullOrEmpty(id)) r.Kiertue.Add(id);
+            }
 
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "tilat")))
             {
@@ -579,6 +609,7 @@ namespace Matkakirja.Linssit.Dioraama
                 Id = MiniJson.Teksti(o, "id"),
                 Nimi = MiniJson.Teksti(o, "nimi"),
                 Kohdistettava = MiniJson.Totuus(o, "kohdistettava"),
+                Ulkona = MiniJson.Totuus(o, "ulkona"),
                 Kamera = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kamera"))),
                 KameraPysty = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kameraPysty")) is Dictionary<string, object> kp
                     ? LueAsento(kp) : (Asento?)null,
@@ -603,6 +634,9 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var glb = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "glb"));
             t.GlbTiedosto = MiniJson.Teksti(glb, "tiedosto");
+            var valoatlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas"));
+            t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
+            t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
             t.GlbSha256 = MiniJson.Teksti(glb, "sha256");
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "liekit")))
             {

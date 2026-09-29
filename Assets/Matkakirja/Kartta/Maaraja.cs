@@ -49,11 +49,35 @@ namespace Matkakirja
     /// arvo (Viivaleveys: 1,6–3 pt × Pistekerroin = webin css × dpr, peitto 1, #6b5539), mutta kuvassa kehä oli noin
     /// 8,6 laitepikseliä 6:n sijaan. Syy: janojen neliöjatke porrasmaisilla rannoilla täytti kulmat; web piirtää
     /// korostuksen päätypyörylöillä. Rajaviiva-varjostin tekee nyt pyöreät päät (myös avoimen viivan päihin).
+    ///
+    /// RAJA JA RANNAT (omistaja 29.9.2026, sitova; korvaa Painon/KehaPt-lain ja musteen #6b5539): kaksi kerrosta samalla
+    /// musteella #5a4330 (Rannikko.RantaMuste). 1) MAA–MAA-RAJA: aineisto <see cref="MaamaaPolku"/> (avoimet viivat, kuten
+    /// ennen), leveys kiinteä <see cref="RajaPt"/> 2,2 pt, webin peitto <see cref="RajaPeitto"/> 0,50 (natiivin lineaarinen
+    /// <see cref="RajaPeittoNatiivi"/>). 2) KAIKKI RANNAT SAARINEEN: sama maa, kaikki renkaat maapolygonit.geojsonista
+    /// (<see cref="GeojsonPolku"/>, suljettuina) rajan alle (renderQueue <see cref="Jono"/> − 1), leveys kiinteä
+    /// <see cref="RantaPt"/> 1,2 pt, peitto <see cref="RantaPeitto"/> 0,22 (<see cref="RantaPeittoNatiivi"/>). Ei yleistystä,
+    /// pienten renkaiden karsinta (<see cref="PieninRengasPx"/>) ennallaan. Vara: jos maamaa ei lataudu, rajan nauha on koko
+    /// rengas kuten ennen ja rannat piirtyvät silti. Komento "maaraja paksuus" ohittaa yhä rajan leveyden; "maaraja paino"
+    /// ei enää vaikuta (Paino jäi vain komennon yhteensopivuudeksi).
     /// </summary>
     public class Maaraja : MonoBehaviour
     {
-        /// <summary>Webin RAJA_MUSTE (paletin --raja-muste), sRGB.</summary>
-        public static readonly Color Muste = new Color32(0x6b, 0x55, 0x39, 0xff);
+        /// <summary>
+        /// Rajan ja rantojen muste (omistaja 29.9.2026): rantaviivan sepia #5a4330 (Rannikko.RantaMuste = Vektorisolut.RantaMuste),
+        /// sRGB. Ennen webin RAJA_MUSTE #6b5539.
+        /// </summary>
+        public static readonly Color Muste = Rannikko.RantaMuste;
+        /// <summary>Maa–maa-rajan leveys pisteinä (omistaja 29.9.2026), kiinteä; laitepikselit = pt × PalloKierto.Pistekerroin.</summary>
+        public const float RajaPt = 2.2f;
+        /// <summary>Maa–maa-rajan peitto webin sRGB-sekoituksena.</summary>
+        public const float RajaPeitto = 0.50f;
+        /// <summary>Rantojen (kaikki renkaat saarineen) leveys pisteinä, kiinteä.</summary>
+        public const float RantaPt = 1.2f;
+        /// <summary>Rantojen peitto webin sRGB-sekoituksena.</summary>
+        public const float RantaPeitto = 0.22f;
+        /// <summary>Peitot natiivin lineaariseen sekoitukseen (kuten Rannikko.PeittoNatiivi, KaupunkiMerkit.KaupunkiPeittoNatiivi).</summary>
+        public static readonly float RajaPeittoNatiivi = (float)Vektorisolut.LineaarinenPeitto(Vektorisolut.RantaMuste, RajaPeitto);
+        public static readonly float RantaPeittoNatiivi = (float)Vektorisolut.LineaarinenPeitto(Vektorisolut.RantaMuste, RantaPeitto);
         /// <summary>
         /// Webin leveys css-pikseleinä [kaukana, lähellä] (web VEKTORIT_KOROSTUS_LEVEYS_CSS; paino Web). Löydös 127:n jälkeen
         /// käytössä oleva leveys tulee painosta (Viivaleveys.KehaPt).
@@ -70,7 +94,7 @@ namespace Matkakirja
         /// <summary>
         /// Piirtojärjestys: Cesium-laattojen ja väritason (läpinäkymättömät) sekä maatäyttöjen
         /// (Transparent−10/−9) ja aluerajojen (−8/−7) päällä, reittien ja karttavalojen (Transparent),
-        /// kaupunkipisteiden (+1), nimiöiden (3005) ja nappulan (+20) alla.
+        /// kaupunkipisteiden (+1), nimiöiden (3005) ja nappulan (+20) alla. Rantanauha piirtyy yhtä alempana (Jono − 1).
         /// </summary>
         public const int Jono = 2995;
         /// <summary>
@@ -97,10 +121,11 @@ namespace Matkakirja
         /// Korvaa 25.9. klo 00.0x:n päätöksen (kehä pois, kun Rannikko piirtyy). Komento "maaraja pois" vertailuun.
         /// </summary>
         public static bool Pakota = true;
-        /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = painon laki (<see cref="Paino"/>).</summary>
+        /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = <see cref="RajaPt"/> (omistaja 29.9.2026); koskee vain maa–maa-rajaa, ei rantoja.</summary>
         public static float PaksuusPt = float.NaN;
         /// <summary>
-        /// Löydös 127: kehän paino. Oletus Kevyt ([1,0; 1,8] pt, peitto 0,8); omistaja valitsee kuvaparista
+        /// EI ENÄÄ VAIKUTA (omistaja 29.9.2026: kiinteät <see cref="RajaPt"/>/<see cref="RantaPt"/> ja peitot); jäi vain
+        /// komennon "maaraja paino" yhteensopivuudeksi. Löydös 127: kehän paino. Oletus Kevyt ([1,0; 1,8] pt, peitto 0,8); omistaja valitsee kuvaparista
         /// (lokit/rajat-126-128), ja valinta vaihdetaan tähän. Komento "maaraja paino web|kevyt|kevein|oletus".
         /// </summary>
         public const Viivaleveys.KehanPaino OletusPaino = Viivaleveys.KehanPaino.Kevyt;
@@ -130,26 +155,36 @@ namespace Matkakirja
         /// <summary>Maa–maa-rajat avoimina viivoina (maamaa.geojson) maittain.</summary>
         Dictionary<string, List<(double Lon, double Lat)[]>> maamaa;
         bool renkaatHaussa, maamaaHaussa;
+        /// <summary>maapolygonit.geojson (ja sen vara maarajat.json) ei latautunut: rantoja ei piirretä eikä haeta uudelleen.</summary>
+        bool renkaatPuuttuu;
         /// <summary>maamaa.geojson ei latautunut (tai oli tyhjä): varana koko rengas, vanha polku.</summary>
         bool maamaaPuuttuu;
         string haluttu;
         /// <summary>Viimeksi aloitettu rakennus: maa ja lähde (true = koko rengas).</summary>
         string kohdeMaa;
         bool kohdeKoko, kohdeAsetettu;
-        Coroutine rakennus;
-        MeshRenderer piirto;
-        MeshFilter suodatin;
-        Material oma;
-        bool linssit, piilossa, nakyiEdella;
-        /// <summary>Painon peitto lineaarisena (lasketaan, kun paino vaihtuu).</summary>
-        Viivaleveys.KehanPaino peitonPaino = (Viivaleveys.KehanPaino)(-1);
-        float peittoNatiivi = 1f;
-        float haiveAlku = -1f;
+        Coroutine rakennus, rakennusRanta;
+        /// <summary>Yksi nauhakerros (oma lapsi-GameObject, Mesh ja materiaalikopio, oma häive).</summary>
+        sealed class Kerros
+        {
+            public MeshRenderer Piirto;
+            public MeshFilter Suodatin;
+            public Material Oma;
+            public bool NakyiEdella;
+            public float HaiveAlku = -1f;
+        }
+        /// <summary>Maa–maa-raja (Jono) ja rannat saarineen (Jono − 1).</summary>
+        readonly Kerros raja = new Kerros(), ranta = new Kerros();
+        bool linssit, piilossa;
+        /// <summary>Rantanauhan viimeksi aloitettu maa.</summary>
+        string rantaMaa;
+        bool rantaAsetettu;
 
         // LÄMPÖERÄ (PallonLepo): uuden kehän häive 260 ms; kehän katoaminen on yksittäinen muutos (LateUpdate).
         void OnEnable() => PallonLepo.Animoi(Haivyttaa, "maaraja");
         void OnDisable() => PallonLepo.Poista(Haivyttaa);
-        bool Haivyttaa() => piirto != null && piirto.enabled && haiveAlku >= 0f && Time.unscaledTime - haiveAlku < HaiveSek;
+        static bool Haiveessa(Kerros k) => k.Piirto != null && k.Piirto.enabled && k.HaiveAlku >= 0f && Time.unscaledTime - k.HaiveAlku < HaiveSek;
+        bool Haivyttaa() => Haiveessa(raja) || Haiveessa(ranta);
 
         void Start()
         {
@@ -160,8 +195,10 @@ namespace Matkakirja
 
         void OnDestroy()
         {
-            Vapauta();
-            if (oma != null) Destroy(oma);
+            Vapauta(raja);
+            Vapauta(ranta);
+            if (raja.Oma != null) Destroy(raja.Oma);
+            if (ranta.Oma != null) Destroy(ranta.Oma);
         }
 
         // ---- Näkyvyys (KarttaKerrokset.Nakyvyys) ----
@@ -198,19 +235,33 @@ namespace Matkakirja
             haluttu = maa;
             // Löydös 127: maa–maa-rajat (maamaa.geojson); varana ja komennolla koko rengas (vanha polku).
             bool koko = KokoRengas || maamaaPuuttuu;
+            // Omistajan linjaus 29.9.2026: rannat saarineen piirretään aina, joten renkaat ladataan rinnakkain maamaan kanssa.
+            if (renkaat == null && !renkaatHaussa && !renkaatPuuttuu) StartCoroutine(LataaRenkaat());
+            if (!koko && maamaa == null && !maamaaHaussa) StartCoroutine(LataaMaamaa());
+            PaivitaRaja(maa, koko);
+            PaivitaRanta(maa);
+        }
+
+        void PaivitaRaja(string maa, bool koko)
+        {
             var lahde = koko ? renkaat : maamaa;
-            if (lahde == null)
-            {
-                if (koko) { if (!renkaatHaussa) StartCoroutine(LataaRenkaat()); }
-                else if (!maamaaHaussa) StartCoroutine(LataaMaamaa());
-                return;
-            }
+            if (lahde == null) return;
             if (kohdeAsetettu && maa == kohdeMaa && koko == kohdeKoko) return;
             kohdeAsetettu = true;
             kohdeMaa = maa;
             kohdeKoko = koko;
             if (rakennus != null) StopCoroutine(rakennus);
             rakennus = StartCoroutine(Rakenna(maa, lahde, koko));
+        }
+
+        void PaivitaRanta(string maa)
+        {
+            if (renkaat == null) return;
+            if (rantaAsetettu && maa == rantaMaa) return;
+            rantaAsetettu = true;
+            rantaMaa = maa;
+            if (rakennusRanta != null) StopCoroutine(rakennusRanta);
+            rakennusRanta = StartCoroutine(RakennaRanta(maa));
         }
 
         /// <summary>
@@ -285,7 +336,7 @@ namespace Matkakirja
             {
                 string teksti = null;
                 yield return Sisalto.HaeTeksti("maarajat", t => teksti = t, true);
-                if (teksti == null) { Debug.LogWarning("MATKAKIRJA ääriviiva: maarajat.json puuttuu tästä paketista"); renkaatHaussa = false; yield break; }
+                if (teksti == null) { Debug.LogWarning("MATKAKIRJA ääriviiva: maarajat.json puuttuu tästä paketista"); renkaatHaussa = false; renkaatPuuttuu = true; yield break; }
                 var tehtava = Task.Run(() =>
                 {
                     var aineisto = MaatAineisto.LueRajat(Peli.MiniJson.Jasenna(teksti));
@@ -297,6 +348,7 @@ namespace Matkakirja
                 {
                     Debug.LogError("MATKAKIRJA ääriviiva: maarajojen luku kaatui: " + tehtava.Exception?.GetBaseException());
                     renkaatHaussa = false;
+                    renkaatPuuttuu = true;
                     yield break;
                 }
             }
@@ -311,7 +363,7 @@ namespace Matkakirja
         IEnumerator Rakenna(string maa, Dictionary<string, List<(double Lon, double Lat)[]>> lahde, bool koko)
         {
             // Vanha kehä pois heti (web vapautaKorostus), uusi häivytetään sisään.
-            Vapauta();
+            Vapauta(raja);
             Maa = null;
             if (string.IsNullOrEmpty(maa) || !lahde.TryGetValue(maa, out var viivat) || viivat.Count == 0)
             {
@@ -332,11 +384,38 @@ namespace Matkakirja
             rakennus = null;
             if (tehtava.IsFaulted) { Debug.LogError("MATKAKIRJA ääriviiva: " + tehtava.Exception?.GetBaseException()); yield break; }
             if (maa != kohdeMaa || koko != kohdeKoko || nauha.Janoja == 0) yield break;
-            TeeNauha(nauha);
+            TeeNauha(raja, nauha, Jono, "Maaraja");
             Maa = maa;
-            haiveAlku = Time.unscaledTime;
+            raja.HaiveAlku = Time.unscaledTime;
             Debug.Log($"MATKAKIRJA ääriviiva: {maa}, {viivat.Count} {(koko ? "rengasta (koko rengas)" : "maa–maa-rajaviivaa")}, " +
-                      $"{nauha.Janoja} janaa, paino {Paino}");
+                      $"{nauha.Janoja} janaa, leveys {(PaksuusPt > 0 ? PaksuusPt : RajaPt)} pt, peitto {RajaPeitto} (natiivi {RajaPeittoNatiivi:0.###})");
+        }
+
+        /// <summary>
+        /// Rannat saarineen (omistaja 29.9.2026): kaikki maan renkaat maapolygonit.geojsonista suljettuina, rajan alle.
+        /// Maa aineiston ulkopuolella jää ilman rantoja.
+        /// </summary>
+        IEnumerator RakennaRanta(string maa)
+        {
+            Vapauta(ranta);
+            if (string.IsNullOrEmpty(maa) || !renkaat.TryGetValue(maa, out var viivat) || viivat.Count == 0)
+            {
+                if (!string.IsNullOrEmpty(maa)) Debug.Log($"MATKAKIRJA ääriviiva: {maa} ei aineistossa, ei rantoja");
+                rakennusRanta = null;
+                yield break;
+            }
+            double h = korkeus;
+            double4x4 ecefPaikalliseksi = georeferenssi.ecefToLocalMatrix;
+            Nauha nauha = null;
+            var tehtava = Task.Run(() => nauha = TeeTaulukot(viivat, false, h, ecefPaikalliseksi));
+            while (!tehtava.IsCompleted) yield return null;
+            rakennusRanta = null;
+            if (tehtava.IsFaulted) { Debug.LogError("MATKAKIRJA ääriviiva (rannat): " + tehtava.Exception?.GetBaseException()); yield break; }
+            if (maa != rantaMaa || nauha.Janoja == 0) yield break;
+            TeeNauha(ranta, nauha, Jono - 1, "Maaraja-rannat");
+            ranta.HaiveAlku = Time.unscaledTime;
+            Debug.Log($"MATKAKIRJA ääriviiva: {maa}, {viivat.Count} rantarengasta, {nauha.Janoja} janaa, " +
+                      $"leveys {RantaPt} pt, peitto {RantaPeitto} (natiivi {RantaPeittoNatiivi:0.###})");
         }
 
         /// <summary>Nauhaverkon taulukot (rakennetaan taustasäikeessä, Mesh pääsäikeessä).</summary>
@@ -411,66 +490,82 @@ namespace Matkakirja
             return new Nauha { Janoja = i, Paikat = paikat, Toiset = toiset, Puolet = puolet, Kolmiot = kolmiot };
         }
 
-        void TeeNauha(Nauha nauha)
+        void TeeNauha(Kerros k, Nauha nauha, int jono, string nimi)
         {
-            var mesh = new Mesh { name = "Maaraja", indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
+            var mesh = new Mesh { name = nimi, indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
             mesh.vertices = nauha.Paikat;
             mesh.SetUVs(0, nauha.Toiset);
             mesh.SetUVs(1, nauha.Puolet);
             mesh.triangles = nauha.Kolmiot;
             mesh.RecalculateBounds();
-            if (piirto == null)
+            if (k.Piirto == null)
             {
-                var go = new GameObject("Maaraja");
+                var go = new GameObject(nimi);
                 go.transform.SetParent(georeferenssi.transform, false);
-                suodatin = go.AddComponent<MeshFilter>();
-                piirto = go.AddComponent<MeshRenderer>();
-                piirto.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-                piirto.receiveShadows = false;
-                oma = new Material(materiaali) { name = "Maaraja", renderQueue = Jono };
-                oma.SetFloat("_Kerroin", PalloKierto.Pistekerroin);
-                oma.SetFloat("_Jatke", 1f);
-                oma.SetFloat("_PieninRengas", PieninRengasPx);
-                piirto.sharedMaterial = oma;
+                k.Suodatin = go.AddComponent<MeshFilter>();
+                k.Piirto = go.AddComponent<MeshRenderer>();
+                k.Piirto.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                k.Piirto.receiveShadows = false;
+                k.Oma = new Material(materiaali) { name = nimi, renderQueue = jono };
+                k.Oma.SetFloat("_Kerroin", PalloKierto.Pistekerroin);
+                k.Oma.SetFloat("_Jatke", 1f);
+                k.Oma.SetFloat("_PieninRengas", PieninRengasPx);
+                k.Piirto.sharedMaterial = k.Oma;
             }
-            suodatin.sharedMesh = mesh;
-            piirto.enabled = false; // LateUpdate päättää näkyvyyden ja leveyden samassa kehyksessä
-            nakyiEdella = false;
+            k.Suodatin.sharedMesh = mesh;
+            k.Piirto.enabled = false; // LateUpdate päättää näkyvyyden ja leveyden samassa kehyksessä
+            k.NakyiEdella = false;
         }
 
-        void Vapauta()
+        static void Vapauta(Kerros k)
         {
-            if (suodatin == null || suodatin.sharedMesh == null) return;
-            var m = suodatin.sharedMesh;
-            suodatin.sharedMesh = null;
+            if (k.Suodatin == null || k.Suodatin.sharedMesh == null) return;
+            var m = k.Suodatin.sharedMesh;
+            k.Suodatin.sharedMesh = null;
             Destroy(m);
-            if (piirto != null) piirto.enabled = false;
+            if (k.Piirto != null) k.Piirto.enabled = false;
         }
 
         void LateUpdate()
         {
-            if (piirto == null || georeferenssi == null) return;
+            if (georeferenssi == null || (raja.Piirto == null && ranta.Piirto == null)) return;
             bool rantaPiirtyy = Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy;
-            bool nakyy = suodatin.sharedMesh != null && (!linssit || linssissaSallittu) && !piilossa && Sallittu && (Pakota || !rantaPiirtyy);
-            // Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).
-            if (nakyy && !nakyiEdella) haiveAlku = Time.unscaledTime;
-            nakyiEdella = nakyy;
-            if (piirto.enabled != nakyy) PallonLepo.Valmistui("maaraja");
-            piirto.enabled = nakyy;
-            if (!nakyy) return;
+            bool sallittu = (!linssit || linssissaSallittu) && !piilossa && Sallittu && (Pakota || !rantaPiirtyy);
+            bool rajaNakyy = Nakyy(raja, sallittu), rantaNakyy = Nakyy(ranta, sallittu);
+            PaivitaNakyvyys(raja, rajaNakyy);
+            PaivitaNakyvyys(ranta, rantaNakyy);
+            if (!rajaNakyy && !rantaNakyy) return;
 
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
-            oma.SetVector("_Keskus", georeferenssi.transform.TransformPoint((float3)keskus));
+            Vector3 keskusU = georeferenssi.transform.TransformPoint((float3)keskus);
             float tiheys = Tiheys();
-            // Painon laki (Viivaleveys.KehaPt: webin viivanLeveysCss painon päätteillä, löydös 127) tai komennon kiinteä leveys.
-            oma.SetFloat("_Paksuus", (float)Viivaleveys.KehaPt(tiheys, PaksuusPt, Paino));
-            oma.SetFloat("_Tiheys", tiheys);
-            float h = haiveAlku < 0f ? 1f : Mathf.Clamp01((Time.unscaledTime - haiveAlku) / HaiveSek);
+            // Kiinteät leveydet (omistaja 29.9.2026); komento "maaraja paksuus" ohittaa vain rajan leveyden.
+            if (rajaNakyy) AsetaKerros(raja, keskusU, tiheys, PaksuusPt > 0 ? PaksuusPt : RajaPt, RajaPeittoNatiivi);
+            if (rantaNakyy) AsetaKerros(ranta, keskusU, tiheys, RantaPt, RantaPeittoNatiivi);
+        }
+
+        static bool Nakyy(Kerros k, bool sallittu) => k.Piirto != null && k.Suodatin.sharedMesh != null && sallittu;
+
+        /// <summary>Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).</summary>
+        static void PaivitaNakyvyys(Kerros k, bool nakyy)
+        {
+            if (k.Piirto == null) return;
+            if (nakyy && !k.NakyiEdella) k.HaiveAlku = Time.unscaledTime;
+            k.NakyiEdella = nakyy;
+            if (k.Piirto.enabled != nakyy) PallonLepo.Valmistui("maaraja");
+            k.Piirto.enabled = nakyy;
+        }
+
+        static void AsetaKerros(Kerros k, Vector3 keskus, float tiheys, float pt, float peittoNatiivi)
+        {
+            k.Oma.SetVector("_Keskus", keskus);
+            k.Oma.SetFloat("_Paksuus", pt);
+            k.Oma.SetFloat("_Tiheys", tiheys);
+            float h = k.HaiveAlku < 0f ? 1f : Mathf.Clamp01((Time.unscaledTime - k.HaiveAlku) / HaiveSek);
             float alfa = 1f - (1f - h) * (1f - h) * (1f - h);
-            if (Paino != peitonPaino) { peitonPaino = Paino; peittoNatiivi = (float)Viivaleveys.KehaPeittoNatiivi(Paino); }
             var vari = Muste;
             vari.a = alfa * peittoNatiivi;
-            oma.SetColor("_BaseColor", vari);
+            k.Oma.SetColor("_BaseColor", vari);
         }
 
         /// <summary>

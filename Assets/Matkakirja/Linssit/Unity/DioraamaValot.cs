@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Joka ruutu (DioraamaNayttamo.Paivita): rakennuksen/kohdetilan tunnistus + lepatus ajasta.
         /// t on Ydin-aika (pysäytettävissä "poikki aika" -komennolla, kuten liekkien ruutu).</summary>
-        public void Paivita(double t, bool vahennettyLiike)
+        public void Paivita(double t, bool vahennettyLiike, Camera kamera = null)
         {
             VarmistaUrpAsetus();
 
@@ -113,12 +113,23 @@ namespace Matkakirja.Natiivi
                 viimeisinKohdeTila = kohdeTila;
                 if (urpAsetus != null) urpAsetus.shadowDistance = kohdeTila != null ? TilaVarjoEtaisyys : YleisVarjoEtaisyys;
             }
+            // Yleisnäkymän varjoetäisyys seuraa kameraa (Laitetestaaja 29.9., savukierros 1051: iPhonen pystykamera on
+            // 300 m päässä, joten kiinteä 160 m karsi kaikki varjot; iPadin vaakakamera 150 m näytti ne): etäisyys
+            // linnan keskipisteeseen + 90 m (linnan säde + marginaali), vähintään YleisVarjoEtaisyys. Päivitetään vain
+            // > 5 m muutoksella, ettei varjokartta välky nipistyksessä.
+            if (kohdeTila == null && urpAsetus != null && kamera != null)
+            {
+                float haluttu = Mathf.Max(YleisVarjoEtaisyys, Vector3.Distance(kamera.transform.position, juuri.position) + 90f);
+                if (Mathf.Abs(urpAsetus.shadowDistance - haluttu) > 5f) urpAsetus.shadowDistance = haluttu;
+            }
 
             if (viimeisinRakennus != null)
             {
                 // Sisalla-liukuma: MoveTowards ~1 s:ssa kohti tavoitetta (0 = yleisnäkymä, 1 = kohdistettu
                 // tila) — sama kaava kuin muualla natiivissa (Avaruus.cs, ElavatElementit.cs).
-                float tavoite = kohdeTila != null ? 1f : 0f;
+                // Ulkotila (erä 3, Tila.Ulkona: laituri, muurinharja) pitää täyden päivänvalon kohdistettunakin.
+                bool sisalla = kohdeTila != null && !(viimeisinRakennus.Tilat.Find(x => x.Id == kohdeTila)?.Ulkona ?? false);
+                float tavoite = sisalla ? 1f : 0f;
                 sisallaTaso = Mathf.MoveTowards(sisallaTaso, tavoite, Time.unscaledDeltaTime / SisallaSiirtymaS);
                 if (aurinkoValo != null)
                     aurinkoValo.intensity = aurinkoPerusVoima * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
@@ -275,6 +286,35 @@ namespace Matkakirja.Natiivi
             }
             // "ei lepatusta" (era2b: ikkunan aurinko ei ole tuli/lamppu) -- keila ohittaa datan Lepatuksen.
             double lepatus = onKeila ? 0 : valo.Lepatus;
+            bool onTuli = lepatus > 0;
+            l.enabled = onTuli ? tuliPaalla : lamputPaalla;
+            pisteValot.Add(new PisteValo { Go = go, Light = l, Lepatus = lepatus, PerusVoimakkuus = l.intensity,
+                VaiheSiemen = UnityEngine.Random.value * 1000f, OnTuli = onTuli });
+        }
+
+        /// <summary>
+        /// Olavinlinna (Siirtoseppä 29.9.2026): Blenderin valo:-tyhjä pistevaloksi. Leivotussa tilassa valo on jo
+        /// atlaksessa, joten tämä valaisee vain reaaliaikaiset kohteet (3D-pienoisfiguurit) — ne istuvat samaan valoon
+        /// kuin huone. extras: vari ("#ffc26a"), sade (m, 4), voima (1), lepatus (0–1, 0). paikka on maailmassa.
+        /// </summary>
+        public void LisaaTyhja(string tilaId, DioraamaTyhja tyhja, Vector3 paikka)
+        {
+            // Valmistele tyhjentää pistevalot rakennuksen vaihtuessa: aja se ensin, ettei tyhjän valo katoa perään.
+            var rakennus = DioraamaSovitin.Linssi?.Rakennus;
+            if (rakennus != null && rakennus != viimeisinRakennus) Valmistele(rakennus);
+            var go = new GameObject("Valo:" + tilaId + "/" + tyhja.Id) { layer = DioraamaNayttamo.Kerros };
+            go.transform.SetParent(juuri, false);
+            go.transform.position = paikka;
+            var l = go.AddComponent<Light>();
+            l.type = LightType.Point;
+            l.range = Mathf.Max(0.05f, tyhja.Luku("sade", 4f));
+            l.intensity = Mathf.Max(0f, tyhja.Luku("voima", 1f));
+            Color vari = LampunOletusVari;
+            if (tyhja.Extras != null && tyhja.Extras.TryGetValue("vari", out var v) && v is string hex) ColorUtility.TryParseHtmlString(hex, out vari);
+            l.color = vari;
+            l.shadows = LightShadows.None;
+            l.cullingMask = 1 << DioraamaNayttamo.Kerros;
+            double lepatus = Mathf.Clamp01(tyhja.Luku("lepatus", 0f));
             bool onTuli = lepatus > 0;
             l.enabled = onTuli ? tuliPaalla : lamputPaalla;
             pisteValot.Add(new PisteValo { Go = go, Light = l, Lepatus = lepatus, PerusVoimakkuus = l.intensity,

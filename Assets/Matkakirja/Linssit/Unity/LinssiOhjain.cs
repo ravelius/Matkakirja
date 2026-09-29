@@ -1459,16 +1459,24 @@ namespace Matkakirja.Natiivi
                 }
                 else if (osat[0] == "taivas")
                 {
-                    // Tähtitaivas: "taivas" = tila, "taivas katso <atsimuutti> <korkeus> [kenttä]", "taivas kelaa <k>".
+                    // Tähtitaivas: "taivas" = tila, "taivas katso <atsimuutti> <korkeus> [kenttä]", "taivas kelaa <k>",
+                    // "taivas gyro 0|1|kaanteinen" (kaanteinen: A/B-kvaternio kääntäen laitetestiin).
                     var ts = rekisteri?.Hae("tahdet") as TahtitaivasSovitin;
                     var n = ts?.Nayttamo;
                     if (n != null && osat.Length > 3 && osat[1] == "katso")
                         n.Katso((float)Luku(osat[2]), (float)Luku(osat[3]), osat.Length > 4 ? (float)Luku(osat[4]) : (float?)null);
                     if (osat.Length > 2 && osat[1] == "kelaa") ts?.Linssi?.Kelaa(Luku(osat[2]));
+                    if (n != null && osat.Length > 2 && osat[1] == "gyro")
+                    {
+                        if (osat[2] == "kaanteinen") TaivasNayttamo.Kaanteinen = !TaivasNayttamo.Kaanteinen;
+                        else { TaivasNayttamo.GyroSallittu = osat[2] != "0"; n.AsetaGyro(TaivasNayttamo.GyroSallittu); }
+                    }
                     Kirjaa(n == null ? "taivas: linssi ei auki (linssi tahdet)"
                         : $"taivas: paikka {ts.Linssi.Lat:F2}, {ts.Linssi.Lon:F2}, kello {Matkakirja.Linssit.Iss.IssNyt.Simu} "
                         + $"({Matkakirja.Linssit.Iss.IssNyt.Kello():HH:mm} UTC), aurinko {n.AurinkoKorkeus:F1}°, Kuu {n.KuuKorkeus:F1}° / {n.KuuAtsimuutti:F0}°, "
-                        + $"tähtiä {(n.TahdetValmiit ? "ladattu" : "ei vielä")} näkyvyys {n.Nakyvyys:F2}, katse {n.Atsimuutti:F0}° / {n.Korkeus:F0}°, kenttä {n.Kentta:F0}°");
+                        + $"tähtiä {(n.TahdetValmiit ? "ladattu" : "ei vielä")} näkyvyys {n.Nakyvyys:F2}, katse {n.Atsimuutti:F0}° / {n.Korkeus:F0}°, kenttä {n.Kentta:F0}°, "
+                        + $"gyro {(n.Pohjoinen ? "pohjoinen (magneettinen kehys)" : n.Gyro ? "suhteellinen" : UnityEngine.InputSystem.AttitudeSensor.current == null ? "ei anturia" : "pois")}, "
+                        + $"deklinaatio {n.Deklinaatio:F1}°, kalibrointi {n.Tarkkuus}{(TaivasNayttamo.Kaanteinen ? ", kääntäen" : "")}");
                 }
                 else if (osat[0] == "yokartta")
                 {
@@ -1535,7 +1543,9 @@ namespace Matkakirja.Natiivi
                         else if (a == "alas" && osat.Length > 3)   // A/B katse alas ulkona (°): 45 = oletus, Codexin horisontti ~45 %
                             Matkakirja.Linssit.Iss.IssKuvakulma.UlkonaKatseAlas = Math.Max(22, Math.Min(70, Luku(osat[3])));
                         else if (a == "suunta" && osat.Length > 3) Matkakirja.Linssit.Iss.Avaruuskavely.KohtiAurinkoa = osat[3] != "sivu";
-                        else if (a != "tila" && a != "alas" && a != "suunta")
+                        // A/B Pulun repliikit kävelyllä (omistaja 29.9.: pois toistaiseksi): astro kavely pulu 0|1
+                        else if (a == "pulu" && osat.Length > 3) Matkakirja.Natiivi.AvaruuskavelyNakyma.PuluPuhuu = osat[3] != "0";
+                        else if (a != "tila" && a != "alas" && a != "suunta" && a != "pulu")
                         {
                             if (!l.Kyydissa) l.NapautaIss();
                             if (!l.AloitaKavely()) Kirjaa("astro kavely: ei alkanut (kyyti, kuva tai avaus kesken)");
@@ -1571,6 +1581,8 @@ namespace Matkakirja.Natiivi
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
                         else if (a == "ajelehdus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Ajelehdus = osat[3] != "0"; // A/B painoton ajelehdus
+                        else if (a == "kellunta" && osat.Length > 3 && float.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float kellunta))
+                            Matkakirja.Natiivi.IssKyytiNakyma.Kellunta = kellunta; // A/B kellunnan nopeus (1 = 28.9.)
                         else if (a == "lasi" && osat.Length > 3   // A/B lähemmäs lasia: 1 = 1.0.37, 1.3 = uusi
                                  && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double lasi))
                             Matkakirja.Linssit.Iss.IssKuvakulma.LasiZoom = Math.Max(0.5, Math.Min(3.0, lasi));

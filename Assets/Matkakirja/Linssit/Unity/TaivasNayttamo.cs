@@ -8,7 +8,20 @@
 //             sarakekierto ECI → horisontti paikallisesta tähtiajasta; näkyvyys auringon korkeudesta
 //   Kuu       KyydinKuu (vaihe auringon suunnasta, 0,52°)
 //   suunnat   P, I, E, L horisontissa (kartan fontti)
+//   ERÄ 3     tähtikuviot (Ydin/Taivas/Tahtikuviot: 16 kuviota, napsautettu BSC5-tähtiin) hentoina viivoina ja nimet,
+//             planeetat Merkurius–Saturnus (Ydin/Taivas/Planeetat, JPL) kirkkaina pisteinä nimineen; kaikki häipyvät
+//             päivänvalossa kuten tähdet (planeetat näkyvät jo hämärässä).
 //   ohjaus    veto kääntää katsetta (atsimuutti ja korkeus −5…90°), nipistys tai rulla zoomaa (näkökenttä 25…100°)
+//   GYRO      (erä 2) puhelin osoittaa taivaalle: Input Systemin AttitudeSensor (CoreMotion). Kallistus ja korkeus ovat
+//             todellisia (painovoima), mutta suunta on suhteellinen: iOS:n asentoanturin kiertokulma on mielivaltainen, eikä
+//             Input System tarjoa iOS:llä kompassia. Siksi avaushetken katse (Kuu tai etelä) sidotaan puhelimen sen hetkiseen
+//             suuntaan, ja vaakaveto säätää sitä (pelaaja voi kääntää P:n oikeaan pohjoiseen). Pystyveto ei vaikuta gyrossa.
+//             Anturi ei vaadi lupaa. Ruudun kierto korjataan (pysty, vaaka vasen/oikea). Ilman anturia (simulaattori, editori)
+//             ohjaus on vedolla kuten erässä 1. Testikomento taivas gyro 0|1.
+//   POHJOINEN (Päätoimittajan tilaus 29.9.): iOS:llä ensisijaisesti CoreMotion magneettisen pohjoisen kehyksessä
+//             (Plugins/iOS/MatkakirjaTaivasAsento.mm, ei sijaintilupaa) + WMM2025-deklinaatio kartalla katsotusta paikasta
+//             (Ydin/Taivas/Wmm.cs), joten P osoittaa todelliseen pohjoiseen; vaakaveto jää hienosäädöksi. AttitudeSensor (yllä)
+//             on varapolku laitteille, joilla magneettista kehystä ei ole. A/B `taivas gyro kaanteinen` (kvaternio kääntäen).
 using System.Collections.Generic;
 using Matkakirja.Linssit.Taivas;
 using TMPro;
@@ -31,7 +44,11 @@ namespace Matkakirja.Natiivi
             IdSuunta = Shader.PropertyToID("_Suunta"), IdKoko = Shader.PropertyToID("_Koko");
 
         Camera kamera, pallonKamera;
-        Material taivasMat, maaMat, tahtiMat, kuuMat;
+        Material taivasMat, maaMat, tahtiMat, kuuMat, viivaMat, planeettaMat;
+        Mesh viivaMesh, planeettaMesh;
+        readonly List<(TextMeshPro teksti, Vector3 eci)> nimiot = new List<(TextMeshPro, Vector3)>();
+        readonly List<TextMeshPro> planeettaNimet = new List<TextMeshPro>();
+        double planeetatLaskettu = double.NaN;
         Mesh kupuMesh, kuuMesh, tahtiMesh;
         readonly List<GameObject> oliot = new List<GameObject>();
         System.Func<bool> peitto;
@@ -90,12 +107,18 @@ namespace Matkakirja.Natiivi
             kuuMat = new Material(Resources.Load<Shader>("Varjostimet/KyydinKuu")) { name = "TaivaanKuu" };
             kuuMesh = Nelio();
             Olio("Kuu", kuuMesh, kuuMat, 1f);
+            viivaMat = new Material(Resources.Load<Shader>("Varjostimet/TaivaanViivat")) { name = "TaivaanViivat" };
+            planeettaMat = new Material(Resources.Load<Shader>("Varjostimet/KyydinTahdet")) { name = "TaivaanPlaneetat" };
+            planeettaMesh = Planeettamesh();
+            Olio("Planeetat", planeettaMesh, planeettaMat, 1f);
+            foreach (var p in Planeetat.Kaikki) planeettaNimet.Add(Nimio(p.Nimi, new Color(1f, 0.93f, 0.78f, 0.95f), 34));
             StartCoroutine(KyydinTaivas.HaeTahtiLista(lista =>
             {
                 if (lista == null || this == null) return;
                 tahtiMesh = KyydinTaivas.RakennaTahdet(lista, out _, out _);
-                if (tahtiMesh != null) Olio("Tahdet", tahtiMesh, tahtiMat, 1f);
-                Debug.Log($"MATKAKIRJA tähtitaivas: {lista.Count} tähteä (BSC5)");
+                if (tahtiMesh != null) Olio("Tahdet", tahtiMesh, tahtiMat, 1f).SetActive(auki);
+                RakennaKuviot(lista);
+                Debug.Log($"MATKAKIRJA tähtitaivas: {lista.Count} tähteä (BSC5), {Tahtikuviot.Kaikki.Length} tähtikuviota");
             }));
             Suunnat();
             foreach (var o in oliot) o.SetActive(false);
@@ -113,6 +136,119 @@ namespace Matkakirja.Natiivi
             r.receiveShadows = false;
             oliot.Add(o);
             return o;
+        }
+
+        TextMeshPro Nimio(string teksti, Color vari, float koko)
+        {
+            var o = new GameObject("Nimi " + teksti) { layer = Kerros };
+            o.transform.SetParent(transform, false);
+            var t = o.AddComponent<TextMeshPro>();
+            var fontti = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.merkit != null ? KarttaKerrokset.Instanssi.merkit.fontti : null;
+            if (fontti != null) t.font = fontti;
+            t.text = teksti;
+            t.fontSize = koko;
+            t.alignment = TextAlignmentOptions.Center;
+            t.color = vari;
+            t.enabled = false;
+            oliot.Add(o);
+            return t;
+        }
+
+        /// <summary>Tähtikuvioiden viivat yhdeksi viivameshiksi (kärjet ECI-suuntia) ja nimet kuvion keskelle.</summary>
+        void RakennaKuviot(List<object> lista)
+        {
+            var luettelo = new List<(double, double)>(lista.Count);
+            foreach (var o in lista)
+                if (o is List<object> r && r.Count >= 2) luettelo.Add((System.Convert.ToDouble(r[0]), System.Convert.ToDouble(r[1])));
+            var napsautetut = Tahtikuviot.Napsauta(luettelo);
+            var karjet = new List<Vector3>();
+            var indeksit = new List<int>();
+            for (int k = 0; k < napsautetut.Count; k++)
+            {
+                var t = napsautetut[k];
+                foreach (var (a, b) in Tahtikuviot.Kaikki[k].Viivat)
+                {
+                    indeksit.Add(karjet.Count); karjet.Add(V(t[a]));
+                    indeksit.Add(karjet.Count); karjet.Add(V(t[b]));
+                }
+                nimiot.Add((Nimio(Tahtikuviot.Kaikki[k].Nimi, new Color(0.62f, 0.74f, 0.95f, 0.8f), 30), V(Tahtikuviot.Keskipiste(t))));
+            }
+            viivaMesh = new Mesh { name = "TaivaanViivat" };
+            viivaMesh.SetVertices(karjet);
+            viivaMesh.SetIndices(indeksit, MeshTopology.Lines, 0);
+            viivaMesh.bounds = new Bounds(Vector3.zero, Vector3.one * 1e9f);
+            Olio("Kuviot", viivaMesh, viivaMat, 1f).SetActive(auki);
+        }
+
+        static Vector3 V((double x, double y, double z) s) => new Vector3((float)s.x, (float)s.y, (float)s.z);
+
+        /// <summary>Planeetat neljän kärjen neliöinä kuten tähdet (KyydinTahdet): koko ja kirkkaus magnitudista, väri planeetasta.</summary>
+        static Mesh Planeettamesh()
+        {
+            int n = Planeetat.Kaikki.Length;
+            var paikat = new Vector3[n * 4];
+            var uv = new Vector2[n * 4];
+            var uv2 = new Vector2[n * 4];
+            var varit = new Color32[n * 4];
+            var kolmiot = new int[n * 6];
+            var kulmat = new[] { new Vector2(-1, -1), new Vector2(1, -1), new Vector2(-1, 1), new Vector2(1, 1) };
+            for (int i = 0; i < n; i++)
+            {
+                var p = Planeetat.Kaikki[i];
+                float koko = Mathf.Lerp(2.6f, 5.2f, Mathf.Clamp01((1.5f - p.Magnitudi) / 5.5f));
+                for (int c = 0; c < 4; c++)
+                {
+                    paikat[i * 4 + c] = Vector3.forward;
+                    uv[i * 4 + c] = kulmat[c];
+                    uv2[i * 4 + c] = new Vector2(koko, KyydinTaivas.Kirkkaus(p.Magnitudi));
+                    varit[i * 4 + c] = new Color(p.Vari.r, p.Vari.g, p.Vari.b);
+                }
+                kolmiot[i * 6] = i * 4; kolmiot[i * 6 + 1] = i * 4 + 2; kolmiot[i * 6 + 2] = i * 4 + 1;
+                kolmiot[i * 6 + 3] = i * 4 + 1; kolmiot[i * 6 + 4] = i * 4 + 2; kolmiot[i * 6 + 5] = i * 4 + 3;
+            }
+            var m = new Mesh { name = "TaivaanPlaneetat", vertices = paikat, uv = uv, uv2 = uv2, colors32 = varit, triangles = kolmiot };
+            m.bounds = new Bounds(Vector3.zero, Vector3.one * 1e9f);
+            return m;
+        }
+
+        readonly Vector3[] planeettaSuunnat = new Vector3[5];
+
+        /// <summary>Planeettojen suunnat hetkeen jd (kerran minuutissa riittää: planeetat liikkuvat taivaalla hitaasti).</summary>
+        void PaivitaPlaneetat(double jd)
+        {
+            if (!double.IsNaN(planeetatLaskettu) && System.Math.Abs(jd - planeetatLaskettu) < 1.0 / 1440) return;
+            planeetatLaskettu = jd;
+            var paikat = planeettaMesh.vertices;
+            for (int i = 0; i < Planeetat.Kaikki.Length; i++)
+            {
+                var s = V(Planeetat.Paikka(Planeetat.Kaikki[i], jd).Suunta);
+                planeettaSuunnat[i] = s;
+                for (int c = 0; c < 4; c++) paikat[i * 4 + c] = s;
+            }
+            planeettaMesh.vertices = paikat;
+        }
+
+        /// <summary>Nimiöt horisonttiin nykyisellä kierrolla: näkyvissä vain horisontin yllä, kasvot kameraan päin.</summary>
+        void PaivitaNimiot(Vector3 kx, Vector3 ky, Vector3 kz, float kuviot, float planeetat)
+        {
+            foreach (var (t, eci) in nimiot) Aseta(t, kx * eci.x + ky * eci.y + kz * eci.z, kuviot, -1f);
+            for (int i = 0; i < planeettaNimet.Count; i++)
+            {
+                var s = planeettaSuunnat[i];
+                Aseta(planeettaNimet[i], kx * s.x + ky * s.y + kz * s.z, planeetat, -12f);
+            }
+        }
+
+        static void Aseta(TextMeshPro t, Vector3 suunta, float peitto, float siirto)
+        {
+            bool nakyy = peitto > 0.02f && suunta.y > 0.02f;
+            if (t.enabled != nakyy) t.enabled = nakyy;
+            if (!nakyy) return;
+            var d = suunta.normalized;
+            // Nimi hieman kohteen alle (siirto ruudun ylösakselin suuntaan), jottei se peitä tähteä tai planeettaa.
+            t.transform.localPosition = d * 300f + Vector3.up * (siirto * 0.1f);
+            t.transform.localRotation = Quaternion.LookRotation(d);
+            var c = t.color; c.a = peitto; t.color = c;
         }
 
         void Suunnat()
@@ -144,12 +280,15 @@ namespace Matkakirja.Natiivi
             this.lat = lat;
             this.lon = lon;
             auki = true;
+            Deklinaatio = Wmm.Deklinaatio(lat, lon, Wmm.Vuosi(System.DateTime.UtcNow));
             foreach (var o in oliot) o.SetActive(true);
             kamera.enabled = true;
             kamera.fieldOfView = KuvanKentta;
             SyoteLukko.LisaaNakymaPeitto(peitto);
             SyoteLukko.Esta(this);
             alkuKatse = true;
+            gyroTasattu = Quaternion.identity;
+            AsetaGyro(true);
         }
 
         bool alkuKatse;
@@ -160,9 +299,14 @@ namespace Matkakirja.Natiivi
             double lst = Taivaslaskenta.Lst(jd, lon);
             var (e, u, n) = Taivaslaskenta.Rivit(lat, lst);
             // Sarakkeet: ECI-akseli → maailma (x itä, y ylös, z pohjoinen), kuten KyydinTahdet-varjostin odottaa.
-            tahtiMat.SetVector(IdKiertoX, new Vector4((float)e.x, (float)u.x, (float)n.x, 0));
-            tahtiMat.SetVector(IdKiertoY, new Vector4((float)e.y, (float)u.y, (float)n.y, 0));
-            tahtiMat.SetVector(IdKiertoZ, new Vector4((float)e.z, (float)u.z, (float)n.z, 0));
+            var kx = new Vector4((float)e.x, (float)u.x, (float)n.x, 0);
+            var ky = new Vector4((float)e.y, (float)u.y, (float)n.y, 0);
+            var kz = new Vector4((float)e.z, (float)u.z, (float)n.z, 0);
+            foreach (var m in new[] { tahtiMat, viivaMat, planeettaMat })
+            {
+                m.SetVector(IdKiertoX, kx); m.SetVector(IdKiertoY, ky); m.SetVector(IdKiertoZ, kz);
+            }
+            PaivitaPlaneetat(jd);
 
             var a = Taivaslaskenta.Aurinko(jd, lat, lon);
             var k = Taivaslaskenta.Kuu(jd, lat, lon);
@@ -180,6 +324,12 @@ namespace Matkakirja.Natiivi
             float h = (float)a.Korkeus;
             taivasMat.SetFloat(IdHehku, Mathf.Clamp01(1f - Mathf.Abs(h + 1f) / 7f));
             tahtiMat.SetFloat(IdPeitto, (float)Nakyvyys);
+            // Kuviot hentoina, planeetat näkyvät jo hämärässä (kirkkaat kappaleet ennen tähtiä).
+            float kuviot = (float)Nakyvyys * 0.35f;
+            float planeetat = Mathf.Clamp01((float)Taivaslaskenta.TahtienNakyvyys(a.Korkeus + 5));
+            viivaMat.SetFloat(IdPeitto, kuviot);
+            planeettaMat.SetFloat(IdPeitto, planeetat);
+            PaivitaNimiot(kx, ky, kz, kuviot * 2.2f, planeetat);
             kuuMat.SetVector(IdSuunta, new Vector3((float)k.Ita, (float)k.Ylos, (float)k.Pohjoinen));
             kuuMat.SetVector(IdAurinko, aurinko);
             // Ensimmäinen katse: Kuuhun, jos se on taivaalla, muuten etelään.
@@ -193,6 +343,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            AsetaGyro(false);
             auki = false;
             if (kamera != null) kamera.enabled = false;
             foreach (var o in oliot) if (o != null) o.SetActive(false);
@@ -204,6 +355,112 @@ namespace Matkakirja.Natiivi
 
         Vector2? edellinen;
         float? edellinenVali;
+
+        /// <summary>Gyro-ohjaus päällä (AttitudeSensor on käytössä); testikomento taivas gyro 0|1.</summary>
+        public bool Gyro { get; private set; }
+        /// <summary>Gyro sallittu (A/B-kytkin).</summary>
+        public static bool GyroSallittu = true;
+        float? gyroSiirto;
+        Quaternion gyroTasattu = Quaternion.identity;
+        /// <summary>Magneettinen kehys käytössä (natiivi CoreMotion); deklinaatio asteina itään; hienosäätö vaakavedosta.</summary>
+        public bool Pohjoinen { get; private set; }
+        public double Deklinaatio { get; private set; }
+        public static bool Kaanteinen;
+        float hienosaato;
+        public int Tarkkuus => Pohjoinen ? MatkakirjaTaivas_Tarkkuus() : -2;
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern bool MatkakirjaTaivas_Aloita();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaTaivas_Lopeta();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern bool MatkakirjaTaivas_Asento(float[] q);
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern int MatkakirjaTaivas_Tarkkuus();
+#else
+        static bool MatkakirjaTaivas_Aloita() => false;
+        static void MatkakirjaTaivas_Lopeta() { }
+        static bool MatkakirjaTaivas_Asento(float[] q) => false;
+        static int MatkakirjaTaivas_Tarkkuus() => -2;
+#endif
+        readonly float[] asento = new float[4];
+
+        static Matkakirja.Linssit.Taivas.Ruutu RuudunAsento() => Screen.orientation switch
+        {
+            ScreenOrientation.LandscapeLeft => Matkakirja.Linssit.Taivas.Ruutu.VaakaVasen,
+            ScreenOrientation.LandscapeRight => Matkakirja.Linssit.Taivas.Ruutu.VaakaOikea,
+            ScreenOrientation.PortraitUpsideDown => Matkakirja.Linssit.Taivas.Ruutu.Ylosalaisin,
+            _ => Matkakirja.Linssit.Taivas.Ruutu.Pysty,
+        };
+
+        /// <summary>Natiivin magneettikehyksen kehys: katse todellisessa horisontissa; false = ei näytettä.</summary>
+        bool PohjoinenKehys(float vetoX, float asteitaPx)
+        {
+            if (!Pohjoinen || !MatkakirjaTaivas_Asento(asento)) return false;
+            if (!(asento[0] * asento[0] + asento[1] * asento[1] + asento[2] * asento[2] + asento[3] * asento[3] > 0.5f)) return false;
+            hienosaato -= vetoX * asteitaPx;
+            var (katse, ylos) = Gyromatikka.Kamera(asento[0], asento[1], asento[2], asento[3], RuudunAsento(), Deklinaatio + hienosaato, Kaanteinen);
+            var tavoite = Quaternion.LookRotation(new Vector3((float)katse.Ita, (float)katse.Ylos, (float)katse.Pohjoinen),
+                new Vector3((float)ylos.Ita, (float)ylos.Ylos, (float)ylos.Pohjoinen));
+            gyroTasattu = gyroTasattu == Quaternion.identity ? tavoite : Quaternion.Slerp(gyroTasattu, tavoite, 1f - Mathf.Exp(-Time.unscaledDeltaTime / 0.06f));
+            kamera.transform.localRotation = gyroTasattu;
+            Atsimuutti = (float)katse.Atsimuutti;
+            Korkeus = (float)katse.Korkeus;
+            return true;
+        }
+
+        /// <summary>Gyro päälle tai pois (anturi otetaan käyttöön vasta tarvittaessa ja vapautetaan sulkiessa).</summary>
+        public void AsetaGyro(bool paalla)
+        {
+            // Ensisijaisesti magneettinen kehys (todellinen pohjoinen), muuten AttitudeSensor (suhteellinen suunta).
+            bool pohjoinen = paalla && GyroSallittu && MatkakirjaTaivas_Aloita();
+            if (!pohjoinen && Pohjoinen) MatkakirjaTaivas_Lopeta();
+            Pohjoinen = pohjoinen;
+            hienosaato = 0f;
+            if (pohjoinen) paalla = false;   // AttitudeSensoria ei tarvita
+            var anturi = AttitudeSensor.current;
+            bool voi = paalla && GyroSallittu && anturi != null;
+            if (voi && !anturi.enabled) InputSystem.EnableDevice(anturi);
+            if (!voi && anturi != null && anturi.enabled && Gyro) InputSystem.DisableDevice(anturi);
+            Gyro = voi || pohjoinen;
+            gyroSiirto = null;
+        }
+
+        /// <summary>Laitteen asento Unityn kameran kierroksi (iOS: CoreMotion x oikealle, y ylös, z ruudusta ulos) ja ruudun kierto.</summary>
+        static Quaternion Laitteesta(Quaternion q)
+        {
+            var r = Quaternion.Euler(90f, 0f, 0f) * new Quaternion(q.x, q.y, -q.z, -q.w);
+            float kierto = Screen.orientation switch
+            {
+                ScreenOrientation.LandscapeLeft => 90f,
+                ScreenOrientation.LandscapeRight => -90f,
+                ScreenOrientation.PortraitUpsideDown => 180f,
+                _ => 0f,
+            };
+            return r * Quaternion.Euler(0f, 0f, kierto);
+        }
+
+        /// <summary>Gyron kehys: katse laitteen asennosta, suunta sidottu avaushetken katseeseen (gyroSiirto).</summary>
+        bool GyroKehys(float vetoX, float asteitaPx)
+        {
+            if (Pohjoinen) return PohjoinenKehys(vetoX, asteitaPx);
+            var anturi = AttitudeSensor.current;
+            if (!Gyro || anturi == null) return false;
+            var raaka = anturi.attitude.ReadValue();
+            // Ennen ensimmäistä näytettä anturi antaa nollan (tai NaN): ohjaus vedolla siihen asti.
+            float pituus = raaka.x * raaka.x + raaka.y * raaka.y + raaka.z * raaka.z + raaka.w * raaka.w;
+            if (!(pituus > 0.5f)) return false;
+            var laite = Laitteesta(raaka);
+            float laiteSuunta = laite.eulerAngles.y;
+            gyroSiirto ??= Atsimuutti - laiteSuunta;
+            // Vaakaveto säätää pohjoista (sormen alla oleva taivas seuraa sormea).
+            gyroSiirto -= vetoX * asteitaPx;
+            var tavoite = Quaternion.Euler(0f, gyroSiirto.Value, 0f) * laite;
+            // Pehmennys: anturin värinä ei näy tähdissä (noin 60 ms:n aikavakio).
+            gyroTasattu = gyroTasattu == Quaternion.identity ? tavoite : Quaternion.Slerp(gyroTasattu, tavoite, 1f - Mathf.Exp(-Time.unscaledDeltaTime / 0.06f));
+            kamera.transform.localRotation = gyroTasattu;
+            var e = gyroTasattu.eulerAngles;
+            Atsimuutti = Mathf.Repeat(e.y, 360f);
+            Korkeus = Mathf.Clamp(-(e.x > 180f ? e.x - 360f : e.x), -90f, 90f);
+            return true;
+        }
 
         void LateUpdate()
         {
@@ -230,7 +487,8 @@ namespace Matkakirja.Natiivi
                 edellinenVali = vali;
                 edellinen = null;
             }
-            else
+            float vetoX = 0f;
+            if (sormia < 2)
             {
                 edellinenVali = null;
                 if (sormia == 1)
@@ -238,14 +496,19 @@ namespace Matkakirja.Natiivi
                     if (edellinen.HasValue)
                     {
                         var d = p0 - edellinen.Value;
-                        Atsimuutti = Mathf.Repeat(Atsimuutti - d.x * asteitaPx, 360f);
-                        Korkeus = Mathf.Clamp(Korkeus - d.y * asteitaPx, KorkeusMin, KorkeusMax);
+                        vetoX = d.x;
+                        if (!Gyro)
+                        {
+                            Atsimuutti = Mathf.Repeat(Atsimuutti - d.x * asteitaPx, 360f);
+                            Korkeus = Mathf.Clamp(Korkeus - d.y * asteitaPx, KorkeusMin, KorkeusMax);
+                        }
                     }
                     edellinen = p0;
                 }
                 else edellinen = null;
             }
-            kamera.transform.localRotation = Quaternion.Euler(-Korkeus, Atsimuutti, 0f);
+            if (!GyroKehys(vetoX, asteitaPx))
+                kamera.transform.localRotation = Quaternion.Euler(-Korkeus, Atsimuutti, 0f);
             // Kuun kulmasäde todellisena (0,26°); tähtivarjostin laskee koon ruudun pikseleinä.
             kuuMat.SetFloat(IdKoko, Mathf.Tan(0.26f * Mathf.Deg2Rad));
         }
@@ -257,6 +520,7 @@ namespace Matkakirja.Natiivi
             Korkeus = Mathf.Clamp(korkeus, KorkeusMin, KorkeusMax);
             if (kentta.HasValue && kamera != null) kamera.fieldOfView = Mathf.Clamp(kentta.Value, KenttaMin, KenttaMax);
             alkuKatse = false;
+            gyroSiirto = null;
         }
 
         static Mesh Pallo()
@@ -295,7 +559,9 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             if (auki) Sulje();
-            Destroy(taivasMat); Destroy(maaMat); Destroy(tahtiMat); Destroy(kuuMat);
+            Destroy(taivasMat); Destroy(maaMat); Destroy(tahtiMat); Destroy(kuuMat); Destroy(viivaMat); Destroy(planeettaMat);
+            if (viivaMesh != null) Destroy(viivaMesh);
+            Destroy(planeettaMesh);
             Destroy(kupuMesh); Destroy(kuuMesh);
             if (tahtiMesh != null) Destroy(tahtiMesh);
         }

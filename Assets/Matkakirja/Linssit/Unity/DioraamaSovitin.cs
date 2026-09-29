@@ -86,6 +86,8 @@ namespace Matkakirja.Natiivi
         /// pinnan/liekin id, ei tiedostopolku (toisin kuin hahmoatlaksissa, joissa monta henkilöä voisi jakaa polun).</summary>
         readonly Dictionary<string, Texture2D> ladatutPinnat = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
         readonly Dictionary<string, Texture2D> ladatutLiekkiAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
+        /// <summary>Olavinlinna: tilojen leivotut valoatlakset (avain tilan id), sama omistus kuin pinnoilla.</summary>
+        readonly Dictionary<string, Texture2D> ladatutValoAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
         string peiliKuvaus = "pois (ämpäri)";
         Func<string, string> peili = s => s;
         /// <summary>Paketin juuri: AmpariJuuri + uusin.json:n polku, tai AmpariJuuri (kehityspeili).</summary>
@@ -101,6 +103,8 @@ namespace Matkakirja.Natiivi
             this.o = o;
             this.kierto = kierto;
             nakymaPeitto = () => avoinna;
+            // Kehittäjän kuoritason vaihto (komento tai DioraamaTaulun nappi) lataa kuoren uudelleen, jos linssi on auki.
+            DioraamaUlkokuori.PakotusVaihtui += () => { if (avoinna && rakennus != null) LataaUlkokuori(); };
         }
 
         /// <summary>Koko ruudun näkymäpeitto (SyoteLukko): tosi, kun linssi on auki.</summary>
@@ -148,6 +152,7 @@ namespace Matkakirja.Natiivi
                 linssi.Avaa(rakennus, ymparisto.Aika);
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
+                LataaUlkokuori();
             }
             o.Kirjaa(Tilaraportti());
         }
@@ -245,6 +250,8 @@ namespace Matkakirja.Natiivi
             ladatutPinnat.Clear();
             foreach (var vanhaKuva in ladatutLiekkiAtlakset.Values) if (vanhaKuva != null) UnityEngine.Object.Destroy(vanhaKuva);
             ladatutLiekkiAtlakset.Clear();
+            foreach (var vanhaKuva in ladatutValoAtlakset.Values) if (vanhaKuva != null) UnityEngine.Object.Destroy(vanhaKuva);
+            ladatutValoAtlakset.Clear();
         }
 
         IEnumerator LataaRakennus()
@@ -276,7 +283,15 @@ namespace Matkakirja.Natiivi
                 aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
+                LataaUlkokuori();
             }
+        }
+
+        /// <summary>Olavinlinna: ulkokuori valitulla laatutasolla (DioraamaUlkokuori), jos paketissa on kuori.</summary>
+        void LataaUlkokuori()
+        {
+            if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
+            o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa));
         }
 
         /// <summary>Kevyt Tila-kopio, jonka Hahmot-lista suodattaa POIS henkilöt, joilla ON malli3d.glb JA
@@ -375,7 +390,41 @@ namespace Matkakirja.Natiivi
             // rakennus3D on silloin joko tuhottu (null) tai uuden avauskerran tuore instanssi. Kirjoitus siihen
             // olisi vanhentunutta tietoa tai NullReferenceä, joten perääntytään hiljaa.
             if (kerta != avauskerta || rakennus3D == null) yield break;
-            if (rakennus3D.LisaaTila(rakennus, tila, tavut, o.Kirjaa)) o.Kirjaa($"poikki: {tila.Id} valmis ({rakennus3D.Kolmiot} kolmiota yhteensä)");
+            if (!rakennus3D.LisaaTila(rakennus, tila, tavut, o.Kirjaa)) yield break;
+            o.Kirjaa($"poikki: {tila.Id} valmis ({rakennus3D.Kolmiot} kolmiota yhteensä)");
+            // Olavinlinna (Siirtoseppä 29.9.2026): Blenderin tyhjät → 3D-liekit ja savu; leivottu valoatlas.
+            var tyhjat = rakennus3D.Tyhjat(tila.Id);
+            if (tyhjat.Count > 0 && rakennus3D.Tilat.TryGetValue(tila.Id, out var tilaGo) && tilaGo != null)
+            {
+                foreach (var t in tyhjat)
+                    if (t.Laji == "liekki") nayttamo?.Liekit?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka), o.Kirjaa);
+                nayttamo?.Savu?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
+                nayttamo?.Ikkunat?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
+                foreach (var t in tyhjat)
+                    if (t.Laji == "valo") nayttamo?.Valot?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka));
+            }
+            if (!string.IsNullOrEmpty(tila.ValoAtlas)) yield return LataaValoAtlas(tila);
+        }
+
+        /// <summary>Tilan leivottu valoatlas (Blender Cycles, Linnanrakentaja): puolikas (2k) pienelle laitteelle kuten
+        /// pinnoilla (PieniLaite), muuten täysi (4k). sRGB, mipmapit, Clamp; Compress(false) pakkaa GPU-muotoon.
+        /// Virhe ei kaada linssiä: tila jää harmaaksi (varjostimen "grey").</summary>
+        IEnumerator LataaValoAtlas(Tila tila)
+        {
+            int kerta = avauskerta;
+            bool puoli = PieniLaite() && !string.IsNullOrEmpty(tila.ValoAtlasPuoli);
+            string polku = puoli ? tila.ValoAtlasPuoli : tila.ValoAtlas;
+            byte[] tavut = null;
+            yield return HaeTavut(peili(paketinJuuri + polku), t => tavut = t);
+            if (tavut == null) { o.Kirjaa($"poikki: valoatlas {polku} ei latautunut (tila harmaana)"); yield break; }
+            var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
+            { name = "Valoatlas:" + tila.Id, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+            if (!kuva.LoadImage(tavut, false)) { o.Kirjaa($"poikki: valoatlas {polku} ei jäsentynyt (tila harmaana)"); UnityEngine.Object.Destroy(kuva); yield break; }
+            kuva.Compress(false);
+            if (kerta != avauskerta || rakennus3D == null) { UnityEngine.Object.Destroy(kuva); yield break; } // ks. LataaTila-kommentti
+            ladatutValoAtlakset[tila.Id] = kuva;
+            rakennus3D.AsetaValoAtlas(tila.Id, kuva);
+            o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({kuva.width}x{kuva.height}{(puoli ? ", puolikas" : "")})");
         }
 
         IEnumerator LataaAtlas(string atlasPolku)
@@ -480,6 +529,19 @@ namespace Matkakirja.Natiivi
                     peiliKuvaus = uusiJuuri;
                 }
                 o.Kirjaa("poikki: peili " + peiliKuvaus);
+                return;
+            }
+            // "poikki kuori [auto|huippu|normaali|kevyt]": ulkokuoren laatutaso (kehittäjän valitsin, muistetaan).
+            if (mita == "kuori")
+            {
+                var uk = nayttamo?.Ulkokuori;
+                if (arvo != null)
+                {
+                    // Setteri laukaisee PakotusVaihtui → LataaUlkokuori (konstruktori).
+                    DioraamaUlkokuori.Pakotettu = arvo == "huippu" ? DioraamaUlkokuori.Laatu.Huippu : arvo == "normaali" ? DioraamaUlkokuori.Laatu.Normaali
+                        : arvo == "kevyt" ? DioraamaUlkokuori.Laatu.Kevyt : (DioraamaUlkokuori.Laatu?)null;
+                }
+                o.Kirjaa("poikki: " + (uk != null ? uk.Kuvaus() : "kuori ei käytössä (näyttämö puuttuu)"));
                 return;
             }
             if (mita == "lataa")
@@ -626,6 +688,7 @@ namespace Matkakirja.Natiivi
             long uusienTavuja = 0;
             foreach (var t in ladatutPinnat.Values) uusienTavuja += TekstuuriTavuja(t);
             foreach (var t in ladatutLiekkiAtlakset.Values) uusienTavuja += TekstuuriTavuja(t);
+            foreach (var t in ladatutValoAtlakset.Values) uusienTavuja += TekstuuriTavuja(t);
             double tekstuuriMt = ((hahmot3D?.TekstuuriTavuja() ?? 0) + uusienTavuja) / (1024.0 * 1024.0);
             // era 2b (kohta 4, ali-agentti P4b): 3D-hahmojen kolmiot lasketaan JAETUSTA geometriasta (kerran
             // per henkilö, ei per instanssi -- ks. DioraamaHahmot3D.KolmiotJaetussaGeometriassa-kommentti).

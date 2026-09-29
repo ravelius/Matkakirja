@@ -29,7 +29,7 @@ namespace Matkakirja.Natiivi
     public sealed class Karttaselite
     {
         readonly UiKerros kerros;
-        readonly Button nappi, pelaajaNappi;
+        readonly Button nappi;
         const string ValilehtiAvain = "matkakirja-karttaselite-valilehti";
         readonly VisualElement paneeli, lista, peukalo, paneeliNostot, paneeliMaakunnat;
         readonly Button valilehtiNostot, valilehtiMaakunnat;
@@ -55,9 +55,6 @@ namespace Matkakirja.Natiivi
             nappi.style.top = Ylapalkki.Varaus + 8;
             // Pelaajan näkymä (omistaja 29.9.2026, web on malli, Siirtoseppä): kehittäjän maailmatilassa silmänappi
             // karttaselitenapin alla (sama koko ja tyyli, väli 8), valittuna = kartta kuten pelaajalla.
-            pelaajaNappi = Rakenne.Nappi(null, "mk-seliteNappi mk-pelaajanakymaNappi", VaihdaPelaajanNakyma, turva, Ikonit.Viiva["silma"]);
-            pelaajaNappi.tooltip = "Pelaajan näkymä";
-            pelaajaNappi.style.display = DisplayStyle.None;
             Aloitusnakyma.AukiMuuttui += _ => PaivitaNappi();
 
             paneeli = Rakenne.El("mk-selite", turva);
@@ -233,7 +230,8 @@ namespace Matkakirja.Natiivi
                 Maakunnat.AsetaKarttatila(true);
                 PalloKierto.Sieppaaja = MaakuntaNapautus;
                 MaakuntaKerros()?.AsetaTilaRajat(true);
-                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.AsetaMaakuntaEsto(true);
+                // Nostot pysyvät kartalla maakuntatilassa (omistaja 29.9.2026: "saisi näkyä edelleen kaikki nostot myös
+                // kartalla"); maakuntakerros on 3D-pallossa niiden alla.
             }
             KytkePalvelu();
             Paivita();
@@ -256,7 +254,6 @@ namespace Matkakirja.Natiivi
                 Maakunnat.AsetaKarttatila(false);
                 MaakuntaKerros()?.AsetaTilaRajat(false);
                 if (PalloKierto.Sieppaaja == (System.Func<Vector2, bool>)MaakuntaNapautus) PalloKierto.Sieppaaja = null;
-                if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.AsetaMaakuntaEsto(false);
             }
             AukiMuuttui?.Invoke(false);
         }
@@ -298,22 +295,6 @@ namespace Matkakirja.Natiivi
             bool nakyy = nappiSallittu && !Aloitusnakyma.AloitusAuki && !Ylapalkki.PalkkiPiilossa;
             if (!nakyy) Sulje();
             nappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            PaivitaPelaajaNappi();
-        }
-
-        /// <summary>Silmänappi vain kehittäjän maailmatilassa ja kun karttaselitteen nappi näkyy (maailmatilan sammutus piilottaa).</summary>
-        void PaivitaPelaajaNappi()
-        {
-            bool nakyy = Paavalikko.Maailma && nappi.style.display != DisplayStyle.None;
-            var d = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            if (pelaajaNappi.style.display != d) pelaajaNappi.style.display = d;
-            pelaajaNappi.EnableInClassList("mk-valittu", Paavalikko.PelaajanNakyma);
-        }
-
-        void VaihdaPelaajanNakyma()
-        {
-            Paavalikko.AsetaPelaajanNakyma(!Paavalikko.PelaajanNakyma);
-            PaivitaPelaajaNappi();
         }
 
         void KytkePalvelu()
@@ -376,8 +357,6 @@ namespace Matkakirja.Natiivi
             bool rivissa = nappi.ClassListContains("mk-ylapalkki__vieras");
             nappi.style.top = rivissa ? StyleKeyword.Null : yla;
             nappi.style.right = rivissa ? StyleKeyword.Null : oikea;
-            pelaajaNappi.style.top = rivissa ? yla : yla + 40 + 8;
-            pelaajaNappi.style.right = oikea;
             // Maakuntakartassa lappu peittää sen avanneen napin (omistaja 29.9.2026); sulkeminen lapun omalla ✕:llä.
             paneeli.style.top = yla;
             paneeli.style.right = oikea;
@@ -385,7 +364,6 @@ namespace Matkakirja.Natiivi
 
         void TarkistaOhiNapautus()
         {
-            PaivitaPelaajaNappi(); // maailmatila vaihtuu päävalikosta
             if (!Auki || Maakunnat.KorttiAuki || MaakuntaKartta) return; // maakuntakartta: napautus kartalla valitsee
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;

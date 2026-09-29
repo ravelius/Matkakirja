@@ -163,11 +163,12 @@ namespace Matkakirja.Natiivi
             nappi.EnableInClassList("mk-paalla", id != null);
             foreach (var (rid, rivi, tila) in rivit)
             {
-                bool p = rid == id;
+                bool p = rid == (id ?? EiLinssia);
                 rivi.EnableInClassList("mk-valittu", p);
                 tila.text = p ? "päällä" : "";
             }
-            poisNappi.style.display = id != null ? DisplayStyle.Flex : DisplayStyle.None;
+            // Pillerivalikossa linssi otetaan pois "Ei linssiä" -riviltä kuten webissä.
+            poisNappi.style.display = id != null && !PilleriValikko ? DisplayStyle.Flex : DisplayStyle.None;
             Asettele();
         }
 
@@ -306,35 +307,102 @@ namespace Matkakirja.Natiivi
                 Rakenne.Teksti("LINSSIT", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
             }
             if (tiedot.Count == 0 && !tyhjaValikko) Rakenne.Teksti("Linssit latautuvat…", "mk-linssivalitsin__tyhja", lista);
-            foreach (var t in tiedot) LuoRivi(t);
+            if (PilleriValikko && tiedot.Count > 0)
+            {
+                // Web (js/ui.js paivitaLinssiTiedot, pariteetti-2 rivi 12): "Ei linssiä" ja valmiit, sitten otsikko
+                // KESKENERÄISET ja keskeneräiset nimellä "(keskeneräinen)".
+                LuoEiLinssia();
+                foreach (var t in tiedot) if (!t.Kesken) LuoRivi(t);
+                if (tiedot.Exists(t => t.Kesken))
+                {
+                    var o = Rakenne.Teksti("KESKENERÄISET", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
+                    Kirjasimet.Aseta(o, Kirjasin.Kone);
+                    foreach (var t in tiedot) if (t.Kesken) LuoRivi(t, " (keskeneräinen)");
+                }
+            }
+            else foreach (var t in tiedot) LuoRivi(t);
             Merkitse(r?.Auki?.Tiedot?.Id ?? aukiId);
         }
 
-        void LuoRivi(LinssiTiedot t)
+        readonly Dictionary<string, LinssiTiedot> linssiTiedot = new Dictionary<string, LinssiTiedot>();
+        static string EsikatselunKuva(LinssiTiedot t) => string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(t.Id) : t.Havainnekuva;
+        static string EsikatselunTeksti(LinssiTiedot t) => string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely;
+
+        /// <summary>"Ei linssiä" -rivin tunnus rivilistassa (web linssiRivi(null)).</summary>
+        const string EiLinssia = "";
+
+        /// <summary>Web linssiRivi(null, 'Ei linssiä'): yliviivatut taikalasit, esikatselu ilman kuvaa, toiminto sulkee linssin.</summary>
+        void LuoEiLinssia()
         {
-            string id = t.Id;
             Button b = null;
             Label tila = null;
+            b = Rakenne.Nappi(null, "mk-linssirivi", () =>
+            {
+                if (esiId != EiLinssia)
+                {
+                    Esikatsele(EiLinssia, b, tila, null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.",
+                        aukiId == null ? "Ota pois" : "Aktivoi", () => { Sulje(); Suljettava?.Invoke(); });
+                    return;
+                }
+                Sulje();
+                Suljettava?.Invoke();
+            }, lista);
+            b.tooltip = "Ei linssiä";
+            b.AddToClassList("mk-linssirivi--aktivoi");
+            var ikoni = new SvgIkoni(Ikonit.Viiva["taikalasit"] + "<path d=\"M5.4 5.4 20 20\"/>");
+            ikoni.AddToClassList("mk-linssirivi__ikoni");
+            b.Add(ikoni);
+            var nimirivi = Rakenne.El("mk-linssirivi__nimirivi", Rakenne.El("mk-linssirivi__tekstit", b, PickingMode.Ignore), PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti("Ei linssiä", "mk-linssirivi__nimi", nimirivi), Kirjasin.LukuLihava);
+            tila = Rakenne.Teksti("", "mk-linssirivi__tila", nimirivi);
+            rivit.Add((EiLinssia, b, tila));
+        }
+
+        void LuoRivi(LinssiTiedot t, string nimenPerassa = "")
+        {
+            string id = t.Id;
+            linssiTiedot[id] = t;
+            Button b = null;
+            Label tila = null;
+            // Web (Pelikoodari): kuva LINSSI.havainnekuva tai varana varusteen kuva, teksti esittely tai varana lyhyt.
+            string kuva = EsikatselunKuva(t);
             // Pillerivalikko (Pelikoodari 29.9., web malli): 1. napautus esikatselu vasemmalle ja rivi "Aktivoi", 2. avaa.
             b = Rakenne.Nappi(null, "mk-linssirivi", () =>
             {
                 if (PilleriValikko && esiId != id)
                 {
                     // Web (Pelikoodari): kuva LINSSI.havainnekuva tai varana varusteen kuva, teksti esittely tai varana lyhyt.
-                    Esikatsele(id, b, tila, string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(id) : t.Havainnekuva, t.Nimi,
-                        string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely, "Aktivoi", () => { Sulje(); Valittu?.Invoke(id); });
+                    // Aktiivisen linssin rivi: "Ota pois" (palaute 6, web).
+                    bool paalla = id == aukiId;
+                    Esikatsele(id, b, tila, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), paalla ? "Ota pois" : "Aktivoi",
+                        paalla ? () => { Sulje(); Suljettava?.Invoke(); } : () => { Sulje(); Valittu?.Invoke(id); });
                     return;
                 }
                 Sulje();
                 Valittu?.Invoke(id);
             }, lista);
             b.tooltip = t.Nimi;
+            if (PilleriValikko) b.AddToClassList("mk-linssirivi--aktivoi");
             var ikoni = new SvgIkoni(string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);
             ikoni.AddToClassList("mk-linssirivi__ikoni");
-            b.Add(ikoni);
+            if (PilleriValikko && !string.IsNullOrEmpty(kuva))
+            {
+                // Web: rivikuvakkeena havainnekuva pyöreänä (kokoelma-rivi kuvaPieni); viivapiirros vain kun kuva ei lataudu.
+                var kehys = Rakenne.El("mk-linssirivi__ikoni mk-linssirivi__kuva", b, PickingMode.Ignore);
+                kehys.Add(ikoni);
+                ikoni.RemoveFromClassList("mk-linssirivi__ikoni");
+                ikoni.AddToClassList("mk-linssirivi__varaikoni");
+                Kuvat.Hae(kuva, tex =>
+                {
+                    if (tex == null || kehys.panel == null) return;
+                    kehys.style.backgroundImage = new StyleBackground(tex);
+                    ikoni.RemoveFromHierarchy();
+                });
+            }
+            else b.Add(ikoni);
             var tekstit = Rakenne.El("mk-linssirivi__tekstit", b, PickingMode.Ignore);
             var nimirivi = Rakenne.El("mk-linssirivi__nimirivi", tekstit, PickingMode.Ignore);
-            var nimi = Rakenne.Teksti(t.Nimi ?? id, "mk-linssirivi__nimi", nimirivi);
+            var nimi = Rakenne.Teksti((t.Nimi ?? id) + nimenPerassa, "mk-linssirivi__nimi", nimirivi);
             Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
             tila = Rakenne.Teksti("", "mk-linssirivi__tila", nimirivi);
             if (!string.IsNullOrEmpty(t.Lyhyt) && !PilleriValikko)
