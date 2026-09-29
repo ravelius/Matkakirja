@@ -1628,6 +1628,22 @@ button, .brand, .turn-pill, .fact-card h2 {
 .kokoelma-runko {
   display: grid;
   /*
+   * YKSI SARAKE OLETUKSENA (korjaus 29.9.2026 illalla, toinen kierros:
+   * omistajan havainto: Aarteet-rivit vain n. 150 px leveitä ja nimet
+   * katkesivat, vaikka paneelin oikea puoli oli tyhjä). `grid-template-
+   * columns` varaa tilan MOLEMMILLE sarakkeille aina, VAIKKA
+   * `.kokoelma-esikatselu` on `hidden` ja siis pois ruudukon
+   * asettelusta — piilotettu lapsi ei poista TRACKIA, joten `.kokoelma-
+   * lista` jäi aina toiseen, kapeampaan sarakkeeseen. Kaksisarakkeinen
+   * asettelu tulee siis vain silloin, kun jokin rivi ON esikatseltu
+   * (ks. .kokoelma-esikatselu-auki alla ja js/kokoelmanakyma.js).
+   */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--pilleri-runko-vali);
+  align-items: start;
+}
+.kokoelma-runko.kokoelma-esikatselu-auki {
+  /*
    * SARAKKEEN LEVEYS RUUDUKON OMASSA MÄÄRITTELYSSÄ, EI LAPSEN
    * width-OMINAISUUDESSA (korjaus mitatusta viasta 29.9.2026):
    * `auto`-sarake mitoittuu lapsensa MAX-CONTENT-leveyteen — tekstin
@@ -1637,8 +1653,6 @@ button, .brand, .turn-pill, .fact-card h2 {
    * ruudukolle suoraan oikean leveyden.
    */
   grid-template-columns: minmax(7.5rem, var(--pilleri-esikatselu-leveys)) minmax(0, 1fr);
-  gap: var(--pilleri-runko-vali);
-  align-items: start;
 }
 
 .kokoelma-esikatselu {
@@ -1727,7 +1741,19 @@ button, .brand, .turn-pill, .fact-card h2 {
   color: var(--muted);
 }
 .kokoelma-otsikko:first-child { margin-top: 0; }
-.kokoelma-otsikko-luku { font-variant-numeric: tabular-nums; }
+/*
+ * OTSIKKO PYSYY YHDELLÄ RIVILLÄ (korjaus 29.9.2026 illalla: "AARNIN
+ * LUETTELO 1 / 8" rivittyi kahdelle riville kapeassa sarakkeessa).
+ * Nimi typistyy kolmella pisteellä ennemmin kuin rivittyy; laskuri ei
+ * kutistu eikä katkea, koska se on tärkeämpi luku kuin otsikon teksti.
+ */
+.kokoelma-otsikko-nimi {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.kokoelma-otsikko-luku { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
 
 .kokoelma-ryhma { display: flex; flex-direction: column; gap: 0.1rem; }
 
@@ -1783,12 +1809,24 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 .kokoelma-rivi-kuvake img { width: 100%; height: 100%; object-fit: cover; }
 .kokoelma-rivi-kuvake svg { width: 70%; height: 70%; }
+/*
+ * NIMI SAA RIVITTYÄ KAHDELLE RIVILLE ENNEN KATKAISUA (korjaus 29.9.2026
+ * illalla: "Vertailulinssi (ke…" katkesi yhdelle riville vaikka
+ * kokonainen nimi olisi mahtunut kahdelle). `-webkit-line-clamp`
+ * (myös standardoitu `line-clamp`) rajaa kahteen riviin ja lisää
+ * kolme pistettä vasta, jos nimi ei mahdu niihinkään — huomattavasti
+ * harvinaisempaa kuin yhden rivin katkaisu.
+ */
 .kokoelma-rivi-nimi {
   min-width: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  white-space: normal;
   font-size: 0.86rem;
+  line-height: 1.25;
 }
 
 /*

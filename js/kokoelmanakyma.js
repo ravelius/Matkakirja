@@ -90,6 +90,16 @@ export function piirraKokoelma(kotelo, ryhmat, tila) {
 
   const esikatseltuRivi = kaikkiRivit.find((r) => r.id === tila.esikatseltu) ?? null;
   esikatseluKotelo.hidden = !esikatseltuRivi;
+  /*
+   * LISTA VIE KOKO LEVEYDEN, KUN ESIKATSELU EI OLE AUKI (korjaus
+   * 29.9.2026 illalla, omistajan havainto: Aarteet-rivit vain n.
+   * 150 px leveitä ja nimet katkesivat vaikka paneelin oikea puoli
+   * oli tyhjä). CSS-luokka ratkaisee grid-template-columnsin
+   * (css/styles.css .kokoelma-runko.kokoelma-esikatselu-auki) — kun
+   * mitään ei ole esikatseltu, ruudukko on yksisarakkeinen eikä
+   * ensimmäinen sarake varaa tilaa piilotetulta esikatselulta.
+   */
+  runko.classList.toggle('kokoelma-esikatselu-auki', Boolean(esikatseltuRivi));
   if (esikatseltuRivi) {
     if (esikatseltuRivi.kuva) {
       const img = document.createElement('img');

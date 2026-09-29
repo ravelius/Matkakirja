@@ -13,7 +13,6 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2404, teksti: 'Aarteiden kuvat ja Linssit-esikatselu korjattu' },
   { v: 2403, teksti: 'Yläpalkki uudistui: logo, pilleri, linssit ja aarteet' },
   { v: 2402, teksti: 'Maakuntakortti: kiinteä koko ja avaus/sulku ani… (#3610)' },
   { v: 2401, teksti: 'ISS-tervetulo: kuvan selite ei vaienna Pulun C2… (#3609)' },

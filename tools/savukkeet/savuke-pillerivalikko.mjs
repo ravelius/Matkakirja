@@ -264,6 +264,21 @@ await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: t
   vaadi('Linssit: listassa on vähintään kaksi riviä (Ei linssiä + yksi linssi)',
     Boolean(ekaRivi?.id), JSON.stringify(ekaRivi));
 
+  /*
+   * NIMI EI KATKEA VAAKASUUNNASSA (omistajan korjauspyyntö 29.9.2026,
+   * toinen kierros: "Vertailulinssi (ke…" katkesi, vaikka paneelin
+   * oikea puoli oli tyhjä — rivi oli vain n. 150 px leveä, koska
+   * ruudukko varasi tilan esikatselulle vaikka sitä ei näytetty).
+   * `scrollWidth > clientWidth` paljastaisi vaakaylivuodon (rivi
+   * yrittää olla oikeaa leveämpi); `-webkit-line-clamp: 2` sallii
+   * pystysuuntaisen kahden rivin rivityksen sen sijaan.
+   */
+  const linssiNimetEivatKatkea = await sivu.evaluate(() => [
+    ...document.querySelectorAll('#linssi-valikko .kokoelma-rivi-nimi'),
+  ].every((el) => el.scrollWidth <= el.clientWidth + 1));
+  vaadi('Linssit: rivin nimi ei katkea vaakasuunnassa (scrollWidth ≤ clientWidth)',
+    linssiNimetEivatKatkea, String(linssiNimetEivatKatkea));
+
   await sivu.click(RIVI);
   await sivu.waitForTimeout(250);
   const ekaNapautus = await sivu.evaluate((v) => {
@@ -326,6 +341,35 @@ await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: t
     otsikot.length > 0 && otsikot.every((o) => (o.nimi === 'Tavarat'
       ? /^\d+$/.test(o.luku) : /\d+\s*\/\s*\d+/.test(o.luku))),
     JSON.stringify(otsikot));
+
+  /*
+   * OTSIKKO YHDELLÄ RIVILLÄ (omistajan korjauspyyntö 29.9.2026, toinen
+   * kierros: "AARNIN LUETTELO 1 / 8" rivittyi kahdelle riville kapeassa
+   * sarakkeessa). Otsikkorivin korkeus on yhden rivin korkuinen, jos se
+   * ei ole rivittynyt — mitataan lukemalla laatikon korkeus ja
+   * vertaamalla fontin riviväliin (rivitys näkyisi selvästi yli
+   * kaksinkertaisena korkeutena).
+   */
+  const otsikkoYhdellaRivilla = await sivu.evaluate(() => {
+    const el = document.querySelector('#pilleri-aarteet-lista .kokoelma-otsikko');
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    const rivikorkeus = parseFloat(getComputedStyle(el).fontSize) * 1.6;
+    return { korkeus: r.height, rivikorkeus, yhdellaRivilla: r.height <= rivikorkeus * 1.5 };
+  });
+  vaadi('Aarteet: otsikko ("N / kaikki") pysyy yhdellä rivillä',
+    Boolean(otsikkoYhdellaRivilla?.yhdellaRivilla), JSON.stringify(otsikkoYhdellaRivilla));
+
+  /*
+   * NIMI EI KATKEA VAAKASUUNNASSA, ei myöskään Aarteet-listassa (sama
+   * korjaus kuin Linsseissä yllä — molemmat käyttävät samaa
+   * js/kokoelmanakyma.js-piirrintä).
+   */
+  const aarreNimetEivatKatkea = await sivu.evaluate(() => [
+    ...document.querySelectorAll('#pilleri-aarteet-lista .kokoelma-rivi-nimi'),
+  ].every((el) => el.scrollWidth <= el.clientWidth + 1));
+  vaadi('Aarteet: rivin nimi ei katkea vaakasuunnassa (scrollWidth ≤ clientWidth)',
+    aarreNimetEivatKatkea, String(aarreNimetEivatKatkea));
 
   /*
    * KUVIEN EHJYYS RIVEILLÄ JA ESIKATSELUSSA (omistajan korjauspyyntö
