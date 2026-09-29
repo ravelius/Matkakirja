@@ -11,8 +11,11 @@
  *   1. Logo näkyy vasemmalla, pilleri oikealla; hampurilainen ei näy
  *      iPhonella (≤560 px) mutta näkyy iPadilla.
  *   2. Pilleri avaa valikon, jonka osat ovat oikeassa järjestyksessä:
- *      Äänet, Kartta, uusi peli/ehdota, Linssit›/Aarteet›, pillerin
- *      tiedot, versio.
+ *      Äänet, Uusi peli/Asetukset, Linssit›/Aarteet› (samalla rivillä),
+ *      pillerin tiedot, versio. Etusivulla ei ole liukusäätimiä,
+ *      Karttaa, Ehdotaa eikä Kehittäjää.
+ *   2b. Asetukset›: oma näkymä (liukusäätimet, Kartta/Pieni liike,
+ *      Ehdota, Kehittäjä), mahtuu ruudulle 393/360/834 px:llä.
  *   3. Linssit›: näkymä vaihtuu, 1. napautus näyttää esikatselun
  *      vasemmalla ja rivi muuttuu Aktivoi-napiksi, 2. napautus
  *      aktivoi linssin ja sulkee valikon.
@@ -458,17 +461,60 @@ async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy
   });
   vaadi(`${nimi}: pilleri avaa valikon`, jarjestys.hidden === false, JSON.stringify(jarjestys));
   const idx = (osa) => jarjestys.osat.findIndex((o) => o.includes(osa));
+  /*
+   * ETUSIVUN JÄRJESTYS (omistaja 29.9.2026, pillerivalikon palaute):
+   * Äänet-kytkimet, [Uusi peli · Asetukset] -rivi, [Linssit › · Aarteet ›]
+   * -rivi, Matka-tiedot ja versio. Äänentasot, Kartta, Ehdota ja
+   * Kehittäjä asuvat Asetukset-näkymässä (testaaAsetukset alla).
+   */
   const jAanet = idx('kertoja-kotelo');
-  const jKartta = idx('kartta-kotelo');
-  const jAlarivi = idx('valikko-alarivi') === -1
-    ? jarjestys.osat.findIndex((o) => o === 'valikko-alarivi') : idx('valikko-alarivi');
+  const jAlarivi = jarjestys.osat.findIndex((o) => o === 'valikko-alarivi');
   const jPikanapit = idx('pilleri-pikanapit');
   const jTiedot = idx('pilleri-tiedot');
   const jPohja = idx('valikko-pohjarivi');
-  vaadi(`${nimi}: valikon osat oikeassa järjestyksessä (Äänet, Kartta, …, Linssit/Aarteet, tiedot, versio)`,
-    jAanet >= 0 && jAanet < jKartta && jKartta < jAlarivi && jAlarivi < jPikanapit
+  vaadi(`${nimi}: valikon osat oikeassa järjestyksessä (Äänet, Uusi peli/Asetukset, Linssit/Aarteet, tiedot, versio)`,
+    jAanet >= 0 && jAanet < jAlarivi && jAlarivi < jPikanapit
       && jPikanapit < jTiedot && jTiedot < jPohja,
     JSON.stringify(jarjestys.osat));
+  const etusivu = await sivu.evaluate(() => {
+    const paa = document.getElementById('pilleri-paanakyma');
+    const sisalla = (id) => Boolean(paa.querySelector(`#${id}`));
+    const nakyy = (id) => {
+      const el = document.getElementById(id);
+      if (!el) return false;
+      const r = el.getBoundingClientRect();
+      return !el.hidden && r.width > 0 && r.height > 0;
+    };
+    const rivi = (id) => document.getElementById(id)?.getBoundingClientRect();
+    return {
+      kertoja: sisalla('kertoja-valikko'),
+      liukuEtusivulla: sisalla('aanivoimat'),
+      karttaEtusivulla: sisalla('kartta-valikko'),
+      ehdotaEtusivulla: sisalla('palaute-kulma'),
+      kehittajaEtusivulla: sisalla('asetukset-kehittaja-btn'),
+      uusi: nakyy('newgame-btn'),
+      asetukset: nakyy('pilleri-asetukset-btn'),
+      linssit: nakyy('pilleri-linssit-btn'),
+      aarteet: nakyy('pilleri-aarteet-btn'),
+      linssitY: rivi('pilleri-linssit-btn')?.y,
+      aarteetY: rivi('pilleri-aarteet-btn')?.y,
+      linssitX: rivi('pilleri-linssit-btn')?.x,
+      aarteetX: rivi('pilleri-aarteet-btn')?.x,
+      aarteetOikea: rivi('pilleri-aarteet-btn')?.right,
+      paneeliOikea: document.getElementById('paavalikko').getBoundingClientRect().right,
+    };
+  });
+  vaadi(`${nimi}: etusivulla on Äänet-kytkimet mutta EI liukusäätimiä, Karttaa, Ehdotaa eikä Kehittäjää`,
+    etusivu.kertoja && !etusivu.liukuEtusivulla && !etusivu.karttaEtusivulla
+      && !etusivu.ehdotaEtusivulla && !etusivu.kehittajaEtusivulla,
+    JSON.stringify(etusivu));
+  vaadi(`${nimi}: Uusi peli ja Asetukset näkyvät`, etusivu.uusi && etusivu.asetukset, JSON.stringify(etusivu));
+  vaadi(`${nimi}: Linssit › ja Aarteet › ovat samalla rivillä (sama y ±2 px)`,
+    etusivu.linssit && etusivu.aarteet && Math.abs(etusivu.linssitY - etusivu.aarteetY) <= 2
+      && etusivu.aarteetX > etusivu.linssitX,
+    JSON.stringify(etusivu));
+  vaadi(`${nimi}: Aarteet › mahtuu paneelin sisään (ei ylivuotoa oikealle)`,
+    etusivu.aarteetOikea <= etusivu.paneeliOikea + 0.5, JSON.stringify(etusivu));
   vaadi(`${nimi}: valikko mahtuu ruudulle (ei ylivuotoa)`,
     jarjestys.rect.left >= 0 && jarjestys.rect.right <= leveys + 0.5,
     JSON.stringify(jarjestys.rect));
@@ -516,6 +562,124 @@ async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy
 await testaaAsetteluJaAvaus('iPhone 393×852', 393, 852, { hampurilainenNakyy: false, onNahka: true });
 await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: true, onNahka: false });
 await testaaAsetteluJaAvaus('Kapein 360×740', 360, 740, { hampurilainenNakyy: false, onNahka: true });
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* 2b: ASETUKSET-NÄKYMÄ (omistaja 29.9.2026, pillerivalikon palaute)   */
+/* ══════════════════════════════════════════════════════════════════ */
+async function testaaAsetukset(nimi, leveys, korkeus) {
+  const { ctx, sivu, virheet } = await avaaPeli(leveys, korkeus);
+  await sivu.click('#turn-pill');
+  await sivu.waitForTimeout(300);
+  await sivu.click('#pilleri-asetukset-btn');
+  await sivu.waitForTimeout(350);
+  // Avausanimaatio (skaalaus) loppuun ennen mittausta: kuormitetulla koneella se voi kestää yli 350 ms.
+  await sivu.evaluate(() => Promise.all(document.getAnimations()
+    .filter((an) => an.effect?.getComputedTiming().iterations !== Infinity)
+    .map((an) => an.finished.catch(() => {}))));
+  const a = await sivu.evaluate(() => {
+    const nakyma = document.getElementById('pilleri-asetukset-nakyma');
+    const paneeli = document.getElementById('paavalikko');
+    const nakyy = (el) => Boolean(el) && !el.hidden && el.getClientRects().length > 0;
+    const sisalla = (id) => Boolean(nakyma.querySelector(`#${id}`));
+    const liukuja = ['voima-tehosteet', 'voima-pulu', 'voima-lukija', 'kehittaja-musiikki-liuku', 'voima-tausta'];
+    const pr = paneeli.getBoundingClientRect();
+    // Ylivuoto: mikään näkymän elementti ei ylitä paneelin oikeaa reunaa eikä ruudun laitoja.
+    let pahinOikea = -Infinity;
+    for (const el of nakyma.querySelectorAll('*')) {
+      if (!el.getClientRects().length) continue;
+      pahinOikea = Math.max(pahinOikea, el.getBoundingClientRect().right);
+    }
+    const liuku = document.getElementById('voima-pulu').getBoundingClientRect();
+    const nimiEl = document.querySelector('label[for="voima-pulu"]').getBoundingClientRect();
+    const arvo = document.getElementById('voima-pulu-arvo').getBoundingClientRect();
+    const otsikot = [...nakyma.querySelectorAll('.valikko-otsikko')].map((o) => o.textContent.trim());
+    return {
+      nakyy: nakyy(nakyma),
+      etusivuPiilossa: document.getElementById('pilleri-paanakyma').hidden,
+      otsikko: nakyma.querySelector('h2')?.textContent.trim(),
+      otsikot,
+      liukujaSisalla: liukuja.every(sisalla),
+      liukujaNakyvia: liukuja.every((id) => nakyy(document.getElementById(id))),
+      kertojaSisalla: sisalla('kertoja-valikko'),
+      pieniLiike: Boolean(nakyma.querySelector('#kartta-valikko [data-kytkin="liike"]')),
+      ehdota: nakyy(document.getElementById('palaute-kulma')) && sisalla('palaute-kulma'),
+      kehittaja: nakyy(document.getElementById('asetukset-kehittaja-btn')),
+      ehdotaOnKytkinrivi: document.getElementById('palaute-kulma')?.classList.contains('aanikytkin'),
+      takaisin: nakyy(nakyma.querySelector('[data-pilleri-takaisin]')),
+      pahinOikea, paneeliOikea: pr.right, paneeliVasen: pr.left, ruutu: window.innerWidth,
+      leveysPaneeli: Math.round(pr.width),
+      liukuLeveys: Math.round(liuku.width),
+      nimiVasemmalla: nimiEl.right <= liuku.left + 1,
+      arvoOikealla: arvo.left >= liuku.right - 1,
+      sivuVieri: document.documentElement.scrollWidth > window.innerWidth + 1,
+      paneeliVieriX: paneeli.scrollWidth > paneeli.clientWidth + 1,
+    };
+  });
+  vaadi(`${nimi}: Asetukset-nappi avaa Asetukset-näkymän`,
+    a.nakyy && a.etusivuPiilossa && a.otsikko === 'Asetukset' && a.takaisin, JSON.stringify(a));
+  vaadi(`${nimi}: Asetuksissa viisi liukusäädintä (ja Äänet-kytkimet eivät ole täällä)`,
+    a.liukujaSisalla && a.liukujaNakyvia && !a.kertojaSisalla, JSON.stringify(a));
+  vaadi(`${nimi}: Asetuksissa Äänentasot- ja Kartta-otsikot sekä Pieni liike`,
+    a.otsikot.includes('Äänentasot') && a.otsikot.includes('Kartta') && a.pieniLiike, JSON.stringify(a.otsikot));
+  vaadi(`${nimi}: Asetuksissa Ehdota (kytkinrivi) ja Kehittäjä näkyvät`,
+    a.ehdota && a.ehdotaOnKytkinrivi && a.kehittaja, JSON.stringify(a));
+  vaadi(`${nimi}: liukusäädin: nimi vasemmalla, liuku venyy (≥ 90 px), prosentti oikealla`,
+    a.nimiVasemmalla && a.arvoOikealla && a.liukuLeveys >= 90, JSON.stringify(a));
+  vaadi(`${nimi}: Asetukset-näkymä mahtuu ruudulle (ei ylivuotoa)`,
+    a.paneeliVasen >= 0 && a.paneeliOikea <= leveys + 0.5 && a.pahinOikea <= a.paneeliOikea + 0.5
+      && !a.sivuVieri && !a.paneeliVieriX,
+    JSON.stringify(a));
+  vaadi(`${nimi}: Asetusten leveys = valikon leveys (min(23rem, 100vw − 1.6rem))`,
+    Math.abs(a.leveysPaneeli - Math.min(368, leveys - 25.6)) <= 2, JSON.stringify(a));
+
+  // Liukusäädin toimii siirron jälkeenkin: arvo-teksti seuraa liukua.
+  const liukuToimii = await sivu.evaluate(() => {
+    const el = document.getElementById('voima-pulu');
+    el.value = '40';
+    el.dispatchEvent(new Event('input', { bubbles: true }));
+    return document.getElementById('voima-pulu-arvo').textContent.trim();
+  });
+  vaadi(`${nimi}: siirretty liukusäädin päivittää prosentin`, liukuToimii === '40 %', liukuToimii);
+
+  // Näytä huntu näkyy kehittäjän maailmatilassa vain kun se nykyisinkin näkyy; ei kartan päällä.
+  const huntu = await sivu.evaluate(() => ({
+    kartallaVanha: Boolean(document.querySelector('.karttaselite .pelaajanakyma-nappi')),
+    rivi: Boolean(document.getElementById('asetukset-huntu-btn')),
+    piilossa: document.getElementById('asetukset-huntu-btn')?.hidden,
+  }));
+  vaadi(`${nimi}: Näytä huntu -rivi on Asetuksissa eikä kartan päällä`,
+    huntu.rivi && !huntu.kartallaVanha, JSON.stringify(huntu));
+
+  // Kehittäjä-nappi avaa salasanakyselyn (kehittäjätila on tässä savukkeessa päällä → Kytke pois).
+  await sivu.click('#asetukset-kehittaja-btn');
+  await sivu.waitForTimeout(300);
+  const dlg = await sivu.evaluate(() => ({
+    auki: document.getElementById('kehittaja-dialog').open,
+    valikkoSuljettu: document.getElementById('paavalikko').hidden,
+  }));
+  vaadi(`${nimi}: Kehittäjä-nappi avaa kehittäjätilan ikkunan`, dlg.auki, JSON.stringify(dlg));
+  await sivu.evaluate(() => document.getElementById('kehittaja-dialog').close());
+
+  // Takaisin-nappi palaa etusivulle.
+  await sivu.click('#turn-pill');
+  await sivu.waitForTimeout(300);
+  await sivu.click('#pilleri-asetukset-btn');
+  await sivu.waitForTimeout(250);
+  await sivu.click('#pilleri-asetukset-nakyma [data-pilleri-takaisin]');
+  await sivu.waitForTimeout(250);
+  const takaisin = await sivu.evaluate(() => ({
+    etusivu: !document.getElementById('pilleri-paanakyma').hidden,
+    asetukset: document.getElementById('pilleri-asetukset-nakyma').hidden,
+  }));
+  vaadi(`${nimi}: ‹ Takaisin palaa etusivulle`, takaisin.etusivu && takaisin.asetukset, JSON.stringify(takaisin));
+
+  vaadi(`${nimi}: ei sivuvirheitä (Asetukset)`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
+  await ctx.close();
+}
+
+await testaaAsetukset('Asetukset iPhone 393×852', 393, 852);
+await testaaAsetukset('Asetukset Kapein 360×740', 360, 740);
+await testaaAsetukset('Asetukset iPad 834×1194', 834, 1194);
 
 /* ══════════════════════════════════════════════════════════════════ */
 /* 3: LINSSIT — KAKSIVAIHEINEN NAPAUTUS                                */

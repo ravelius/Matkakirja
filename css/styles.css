@@ -1602,9 +1602,30 @@ button, .brand, .turn-pill, .fact-card h2 {
   --pilleri-runko-vali: 0.6rem;
 }
 
-/* Linssit›/Aarteet›-napit ovat samaa riviä kuin Uusi peli / Ehdota
-   sisältöä (.valikko-alarivi), vain omalla pienellä yläraolla. */
-.pilleri-pikanapit { margin-top: 0.3rem; }
+/* Linssit›/Aarteet›-napit ovat OMA VAAKARIVINÄÄN (omistaja 29.9.2026:
+   [Linssit › · Aarteet ›] vierekkäin, myös 360 px:n ruudulla): rivi ei
+   saa rivittyä, ja kumpikin nappi jakaa leveyden puoliksi ja saa
+   kutistua (min-width: 0), ettei pitkä teksti työnnä toista alas.
+   Kun Linssit-nappi on piilossa, Aarteet täyttää koko rivin. */
+.paavalikko .pilleri-pikanapit {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.45rem;
+  margin-top: 0.1rem;
+  padding-top: 0;
+  border-top: 0;
+}
+.paavalikko .pilleri-pikanapit button {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-inline: 0.4rem;
+}
+
+/* Asetukset-näkymän kytkinrivit (Ehdota, Kehittäjä, Näytä huntu) ja
+   osioiden väli: sama .kertoja-valikko/.aanikytkin-asu kuin Kartta-osion
+   Pieni liike -rivillä (.paavalikko .kertoja-valikko button). */
+#pilleri-asetukset-nakyma .kertoja-kotelo + .kertoja-kotelo { margin-top: 0.75rem; }
+#pilleri-asetukset-nakyma .aanikytkin[hidden] { display: none; }
 
 /*
  * PILLERIN TIEDOT: entisen matkalaukun Sijainti/Kukkaro/tietäjätaso ja
@@ -26655,34 +26676,6 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 }
 
 .karttaselite-nappi svg { display: block; }
-
-/*
- * PELAAJAN NÄKYMÄ -APUNAPPI (kehittäjän maailmatila, omistaja 29.9.2026; js/pelaajanakyma.js): sama laatta kuin
- * selitenappi, sen alla 8 px:n välillä. Päällä ollessaan tumma (sama kieli kuin kehittäjävalikon kytkimillä).
- */
-.pelaajanakyma-nappi {
-  display: grid;
-  width: 2.15rem;
-  height: 2.15rem;
-  min-width: 40px;
-  min-height: 40px;
-  margin-top: 8px;
-  padding: 0;
-  place-items: center;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(239, 220, 180, 0.9);
-  color: var(--map-ink);
-  cursor: pointer;
-}
-.pelaajanakyma-nappi[hidden] { display: none; }
-.pelaajanakyma-nappi:hover:not(:disabled) { background: rgba(239, 220, 180, 1); color: var(--map-ink); }
-.pelaajanakyma-nappi svg { display: block; }
-.pelaajanakyma-nappi[aria-pressed='true'],
-.pelaajanakyma-nappi[aria-pressed='true']:hover:not(:disabled) {
-  background: var(--map-ink);
-  color: #f3e6c8;
-}
 
 /*
  * HOVER-SÄÄNNÖT TARVITSEVAT `:not(:disabled)`-LISÄN, eivät koristeeksi

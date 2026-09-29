@@ -1278,7 +1278,9 @@ menuBtn.addEventListener('click', vaihdaValikko);
 paavalikko.addEventListener('click', (event) => {
   const nappi = event.target.closest('button');
   if (!nappi) return;
-  if (nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma')) return;
+  // #pilleri-asetukset-btn vaihtaa näkymää kuten Linssit/Aarteet: ei sulje valikkoa.
+  if (nappi.id === 'pilleri-asetukset-btn'
+    || nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma')) return;
   suljeValikko();
 }, true);
 
@@ -1596,7 +1598,12 @@ document.getElementById('nollaa-ok').addEventListener('click', () => {
 turnPillNappi.addEventListener('click', vaihdaValikko);
 // Alakulman huutomerkki: palaute juuri siitä kohdasta peliä, jossa
 // pelaaja on. Kytketään kerran, koska nappi elää pelin ulkopuolella.
-document.getElementById('palaute-kulma').addEventListener('click', () => ui?.naytaPalauteKulmasta());
+// Ehdota asuu nyt Asetukset-näkymässä (.pilleri-alanakyma ei sulje valikkoa
+// itsestään), joten valikko suljetaan tässä kuten ennen.
+document.getElementById('palaute-kulma').addEventListener('click', () => {
+  suljeValikko();
+  ui?.naytaPalauteKulmasta();
+});
 document.getElementById('rules-close').addEventListener('click', () => rulesDialog.close());
 document.getElementById('winner-close').addEventListener('click', startGame);
 
@@ -2049,6 +2056,12 @@ async function kytkeKehittaja() {
 }
 
 document.getElementById('kehittaja-btn').addEventListener('click', avaaKehittajaIkkuna);
+// Asetukset-näkymän Kehittäjä-rivi: sama salasanakysely (omistaja 29.9.2026);
+// valikko suljetaan ensin, ettei se jää modaalin taakse.
+document.getElementById('asetukset-kehittaja-btn')?.addEventListener('click', () => {
+  suljeValikko();
+  avaaKehittajaIkkuna();
+});
 kehittajaOk.addEventListener('click', kytkeKehittaja);
 document.getElementById('kehittaja-peru').addEventListener('click', () => kehittajaDialog.close());
 // Enter kentässä kytkee: puhelimen näppäimistössä on "mene"-nappi.
