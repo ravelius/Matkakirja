@@ -9075,3 +9075,7 @@ Omistaja 29.9. klo 05.3x kysyi "Onko tätä kokeiltu Gemini 3.8 Flash TTS" (vast
 ## KORJAUS: RADIOLINSSIN UUDISTUS VAIN NATIIVISSA, WEB ENNALLAAN (29.9.2026 klo 06.32)
 
 Siirtoseppä 29.9. klo 06.4x huomasi: Päätoimittajan ohje Linssiseppä 2:lle viedä radiolinssin uudistus webiin oli ristiriidassa Raamatun sitovan linjauksen RADIOLINSSIN UUDISTUS NATIIVISSA (omistaja 24.9.2026 klo 19.2x: 'vain natiivissa, web ennallaan') kanssa; lisäksi WebKit ei päästä CORS-suojattua striimiä AnalyserNodeen, joten aitoa VU:ta ei webissä ole. Päätoimittaja: web jää ennalleen, ohje peruttu Siirtosepälle ja Linssiseppä 2:lle. Omistajan 28.9. klo 23.47 radiotoiveet (usva, mastot, uusi radio, kaikki maat) koskevat natiivia.
+
+## OMISTAJA: KONE KOKONAAN ROOLEILLA 29.9. (29.9.2026 klo 06.53)
+
+Omistaja 29.9. klo 06.5x sanatarkasti: "En tarvitse tänään konetta". → Koko 29.9. päivä: ei tarve-ikkunaa, /tmp/matkakirja-kevyt ei ole päällä (tarkistettu 06.53); päivän rajoitukset puretaan tältä päivältä: GPU-työt (renderöinnit, Karttasepän poltot, simulaattorikuvaukset) sallittu päivällä, enintään 3 simulaattoria samaan aikaan (muistipaine seurannassa: Postivahti hälyttää, jos vapaa muisti < 25 %), käännökset edelleen nice -n 15 (ei taskpolicy -b), yksi Unity-käännös kerrallaan käännöspalvelussa. Sammuta oma simulaattori ajon jälkeen. Palautuu normaaliksi 30.9. klo 00.
