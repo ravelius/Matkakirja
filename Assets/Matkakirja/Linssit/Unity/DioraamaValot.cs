@@ -53,6 +53,9 @@ namespace Matkakirja.Natiivi
         bool alkuperaisetTallennettu;
         float alkuShadowDistance;
         int alkuShadowmapResoluutio;
+        int alkuLisavaloRaja;
+        /// <summary>Lisävaloja per objekti linssin ajan (URP enintään 8): keittiössä tuli, ikkuna, kynttilät ja lamppu.</summary>
+        const int LisavaloRaja = 8;
         AmbientMode alkuAmbientMode;
         Color alkuAmbientTaivas, alkuAmbientEkvaattori, alkuAmbientMaa;
         float alkuAmbientVoimakkuus;
@@ -120,6 +123,7 @@ namespace Matkakirja.Natiivi
             if (urpAsetus == null) return;
             alkuShadowDistance = urpAsetus.shadowDistance;
             alkuShadowmapResoluutio = urpAsetus.mainLightShadowmapResolution;
+            alkuLisavaloRaja = urpAsetus.maxAdditionalLightsCount;
             alkuAmbientMode = RenderSettings.ambientMode;
             alkuAmbientTaivas = RenderSettings.ambientSkyColor;
             alkuAmbientEkvaattori = RenderSettings.ambientEquatorColor;
@@ -127,6 +131,7 @@ namespace Matkakirja.Natiivi
             alkuAmbientVoimakkuus = RenderSettings.ambientIntensity;
             alkuperaisetTallennettu = true;
             urpAsetus.mainLightShadowmapResolution = VarjokarttaResoluutio;
+            urpAsetus.maxAdditionalLightsCount = LisavaloRaja;
         }
 
         /// <summary>Uusi tai vaihtunut Rakennus (ensilataus tai "poikki lataa"): aurinko, taivas ja KAIKKIEN
@@ -230,6 +235,7 @@ namespace Matkakirja.Natiivi
                 {
                     urpAsetus.shadowDistance = alkuShadowDistance;
                     urpAsetus.mainLightShadowmapResolution = alkuShadowmapResoluutio;
+                    urpAsetus.maxAdditionalLightsCount = alkuLisavaloRaja;
                 }
                 RenderSettings.ambientMode = alkuAmbientMode;
                 RenderSettings.ambientSkyColor = alkuAmbientTaivas;
