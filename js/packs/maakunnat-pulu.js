@@ -2870,4 +2870,74 @@ export const MAAKUNTIEN_PULU = {
       { q: "Kuka Rákóczi oli?", a: "Ferenc II Rákóczi oli unkarilainen ruhtinas ja vapaustaistelun johtaja, joka vietti loppuelämänsä osmanien alueella. Hän asui Tekirdağissa vuodesta 1720 kuolemaansa 1735, ja hänen 1700-luvun taloonsa on perustettu Rákóczi-museo." },
     ],
   },
+  RUS: {
+    "Kaliningrad": [
+      { q: "Miksi Kuurinkynnäksen yli lentää miljoonia lintuja?", a: "Hiekkaniemi kuuluu Itä-Atlantin muuttolintujen reittiin, ja sen yli kulkee keväin ja syksyin miljoonia lintuja. Linnut seuraavat mielellään rantaviivaa, ja Rybatšin lintuasemalla niitä on rengastettu ja tutkittu vuosikymmeniä." },
+      { q: "Miksi Immanuel Kantin hauta on tuomiokirkon kyljessä?", a: "Kant syntyi ja kuoli Königsbergissä, nykyisessä Kaliningradissa (1724–1804), ja hänet haudattiin tuomiokirkon viereen. Nykyinen hautamonumentti valmistui 1924, hänen 200-vuotisjuhlavuotenaan." },
+      { q: "Mikä on Tanssiva metsä?", a: "Kuurinkynnäksellä on männikkö, jonka rungot ovat kiertyneet silmukoiksi ja kaariksi. Syytä ei tiedetä varmasti: selityksiksi on esitetty tuulta, liikkuvaa hiekkaa ja puita vioittavia hyönteisiä." },
+    ],
+    "City of St. Petersburg": [
+      { q: "Miksi Pietarin metro on niin syvällä?", a: "Kaupungin maaperä on pehmeää ja täynnä pohjavesiä, joten tunnelit piti kaivaa kovempiin kerroksiin; asemia suunniteltiin myös väestönsuojiksi. Syvin asema Admiralteiskaja on 86 metrin syvyydessä." },
+      { q: "Miksi Peterhofin suihkulähteet toimivat ilman pumppuja?", a: "Noin 150 suihkulähteen paine syntyy painovoimasta: vesi virtaa ylempien lähteiden ja altaiden korkeuserosta alas Suomenlahden rannalle. Ratkaisu on peräisin Pietari Suuren ajalta." },
+      { q: "Miksi Rembrandtin Danae on panssarilasin takana?", a: "Maalaukseen heitettiin 1985 happoa, ja se vaurioitui pahoin. Restaurointi kesti vuosia, ja nykyisin teos on esillä suojalasin takana." },
+    ],
+    "Leningrad": [
+      { q: "Miksi Viipurin kirjaston luentosalin katto aaltoilee?", a: "Aalto suunnitteli aaltoilevan puukaton heijastamaan äänen tasaisesti koko saliin. Kirjasto oli myös Suomen ensimmäinen, jossa oli avohyllyt ja oma lastenosasto." },
+      { q: "Miksi Šlisselburgin linnaa kutsutaan Pähkinälinnaksi?", a: "Nevan lähteellä saarella oleva linnoitus on venäjäksi Orešek, 'pähkinä', ja ruotsalaisten aikana Nöteborg. Novgorodilaiset perustivat sen 1323." },
+      { q: "Miksi Staraja Ladogaa sanotaan Venäjän ensimmäiseksi pääkaupungiksi?", a: "Perimätiedon mukaan varjagien johtaja Rurik asettui sinne 862, ja paikka mielletään Venäjän valtiollisen historian alkupisteeksi. Lähikumpuja kutsutaan Rurikin ja Olegin haudoiksi, mutta se on legendaa." },
+    ],
+    "Moskva": [
+      { q: "Miksi Moskovan metroasemat ovat kuin palatseja?", a: "Metro avattiin 1935, ja asemia rakennettiin 'kansan palatseiksi': esimerkiksi Komsomolskajassa ja Kievskajassa on kattokruunuja, mosaiikkeja ja marmoria. Nykyään asemia on yli 300." },
+      { q: "Miksi Kremlin lähellä on puisto, jossa on neljä ilmastovyöhykettä?", a: "Zarjadjen puisto avattiin 2017 puretun Rossija-hotellin paikalle. Se on jaettu metsään, arojen, tundraan ja tulvaniittyihin, ja sen V:n muotoinen silta ulottuu 70 metriä joen yli ilman tukea." },
+    ],
+    "Moskovskaya": [
+      { q: "Mistä alkuaine dubnium on saanut nimensä?", a: "Dubnan tiedekaupungista, jossa Yhteinen ydintutkimuslaitos JINR tekee raskaiden alkuaineiden synteesikokeita. Alkuaine 105 nimettiin kaupungin mukaan." },
+      { q: "Miksi matrjoška yhdistetään Sergijev Posadiin?", a: "Ensimmäinen matrjoška suunniteltiin 1890-luvulla Abramtsevon taiteilijayhteisössä lähellä Moskovaa, ja nukkeja alettiin valmistaa Sergijev Posadin puuleluperinteessä. Kaupungin lelumuseossa on satoja esineitä." },
+      { q: "Miksi Moskovan lähellä elää visenttejä?", a: "Prioksko-Terrasnyin luonnonsuojelualue Oka-joen varrella suojelee Euroopan biisoneja eli visenttejä. Laji oli 1900-luvulla sukupuuton partaalla, ja sitä on palautettu luontoon kasvatusohjelmilla." },
+    ],
+    "Murmansk": [
+      { q: "Miksi Murmanskin satama ei jäädy talvella, vaikka kaupunki on kaukana napapiirin pohjoispuolella?", a: "Golfvirran haara lämmittää Kuolan pohjoisrannikon merivettä, joten Murmanin rannikon vedet pysyvät talvellakin jäättöminä. Siksi satama toimii ympäri vuoden." },
+      { q: "Mitä Hibiinien vuoristosta louhitaan?", a: "Ennen kaikkea apatiittia, josta tehdään muun muassa lannoitteita. Vuoristosta on kuvattu satoja mineraalilajeja, ja yli sata niistä on löydetty ensimmäisen kerran juuri täältä." },
+    ],
+    "Karelia": [
+      { q: "Miksi Kižin kirkkoa sanotaan naulattomaksi?", a: "Hirsirunko liitettiin yhteen ilman rautanauloja, mutta kattolaudoitus on kiinnitetty: noin 60 000 kattolautaa on naulattu noin 180 000 naulalla." },
+      { q: "Miksi Kivatšin putous on nykyään pienempi kuin ennen?", a: "Suna-joen vettä ohjattiin 1936 vesivoimalaitokselle, jolloin putouksen virtaama pieneni. Putouksen korkeus on 10,7 metriä." },
+    ],
+    "Nenets": [
+      { q: "Mitä sana nenetsi tarkoittaa, ja mitä nenetsejä kutsuttiin ennen?", a: "Omalla kielellään nenetsi tarkoittaa suunnilleen oikeaa ihmistä. Aiemmin heitä sanottiin samojedeiksi, mutta nimi jäi pois käytöstä 1900-luvulla. Nenetsin kieli kuuluu samojedikieliin, jotka ovat suomen etäisiä sukulaisia uralilaisessa kieliperheessä." },
+      { q: "Onko Naryan-Marissa keskiyön aurinko?", a: "On, ja pitkään: kaupunki on hieman napapiirin pohjoispuolella, ja touko-heinäkuussa aurinko pysyy taivaalla yötä päivää noin seitsemän viikon ajan. Talvella päivät ovat vastaavasti hyvin lyhyitä." },
+    ],
+    "Komi": [
+      { q: "Mitä Syktyvkarin nimi tarkoittaa?", a: "Komin kielellä Syktyv on Sysola-joen nimi ja kar kaupunki, eli nimi tarkoittaa Sysolan kaupunkia. Kaupunki tunnettiin aiemmin nimellä Ust-Sysolsk, ja nykyinen nimi otettiin käyttöön 1930." },
+      { q: "Onko komin kieli sukua suomelle?", a: "On: komi kuuluu suomalais-ugrilaisiin kieliin ja on suomen kaukainen sukulainen. Se on Komin tasavallan virallinen kieli venäjän rinnalla." },
+    ],
+    "Pskov": [
+      { q: "Miksi Petserin luostari säilyi toiminnassa Neuvostoliiton aikana?", a: "Petserin luolaluostari kuului vuosina 1920–1944 Viroon, joten sitä ei suljettu Neuvostoliiton vuosikymmeninä. Sen luolakirkko on rakennettu 1473, ja luostari toimii yhä." },
+      { q: "Miksi Peipsijärveä sanotaan kolmen järven yhdistelmäksi?", a: "Se koostuu varsinaisesta Peipsistä (noin 73 prosenttia pinta-alasta), Pihkovanjärvestä (noin 20 prosenttia) ja niitä yhdistävästä Lämpimästä järvestä (noin 7 prosenttia). Keskisyvyys on vain noin seitsemän metriä." },
+    ],
+    "Novgorod": [
+      { q: "Mikä oli veetše?", a: "Novgorodin keskiaikaisessa tasavallassa 1136–1478 tärkeistä asioista päätti ruhtinaan rinnalla kansankokous, veetše. Se oli kaupungin hallinnon ydin." },
+      { q: "Mikä Staraja Russa on ja miksi sinne matkataan?", a: "Se on alueen kolmanneksi suurin kaupunki (noin 27 500 asukasta) ja vanha suola- ja kylpyläkaupunki, jonka mineraalilähteet ovat yhä käytössä. Kirjailija Fjodor Dostojevski asui siellä, ja hänen talonsa on museona." },
+      { q: "Mikä on Valdain Iverskin luostari?", a: "Luostari perustettiin vuonna 1653 saarelle Valdai-järvellä Valdain kansallispuiston alueella. Vesien ympäröimänä se on yksi seudun suosituimmista retkikohteista." },
+    ],
+    "Smolensk": [
+      { q: "Mikä Talaškino on?", a: "Talaškino on kylä noin 18 kilometrin päässä Smolenskista. Ruhtinatar Maria Tenisheva perusti sinne 1890-luvulla taiteilijayhteisön, jossa vieraili muun muassa Ilja Repin ja Mihail Vrubel, ja Pyhän Hengen kirkon mosaiikit teki Nikolai Roerich." },
+      { q: "Miksi Gžatsk-nimi vaihtui Gagarin-kaupungiksi?", a: "Avaruuslentäjä Juri Gagarin syntyi 9. maaliskuuta 1934 Kluššinon kylässä lähellä kaupunkia. Gžatsk sai hänen nimensä vuonna 1968, kun hän oli kuollut harjoituslennolla." },
+    ],
+    "Vologda": [
+      { q: "Mikä on Vologdan voi, ja miksi sen nimeä suojellaan?", a: "Vologdan voi on makeahkoa, pähkinäistä ja kermaista voita. Vuonna 2010 se sai Venäjällä ensimmäisenä tuotteena suojatun alkuperänimityksen, joten nimeä saa käyttää vain Vologdan alueella tehty voi." },
+      { q: "Missä Pohjois-Dvina syntyy?", a: "Veliki Ustjugissa, jossa Suhona ja Jug-joki kohtaavat ja muodostavat yhdessä Pohjois-Dvinan. Kaupunki mainitaan kronikassa ensi kerran vuonna 1207." },
+      { q: "Miksi Pakkasukon kartano on Veliki Ustjugissa?", a: "Venäjän Pakkasukon virallinen kotipaikka on Veliki Ustjug, ja kartano sijaitsee noin 16 kilometrin päässä kaupungista. Kaupunki tunnetaan myös hopean mustaustyöstä (niello), filigraanista ja tuohitöistä." },
+    ],
+    "Kostroma": [
+      { q: "Miksi Kostroman kadut lähtevät keskustasta kuin viuhka?", a: "Vuoden 1773 tulipalon jälkeen kaupunki rakennettiin uudelleen säteittäisesti. Kertomuksen mukaan Katariina Suuri pudotti viuhkansa kaupungin karttaan ja hyväksyi suunnitelman viuhkan muodon mukaan." },
+      { q: "Mitä Sumarokovon hirvitilalla tehdään?", a: "Tila perustettiin 1963 noin 25 kilometrin päähän Kostromasta itään. Siellä tutkitaan hirven kesyttämistä ja lypsetään hirvenmaitoa läheiselle parantolalle. Vierailut on järjestettävä matkatoimiston kautta." },
+      { q: "Mikä Hypatioksen kronikka on?", a: "Se on keskiaikainen venäläinen kronikka, joka löydettiin Kostroman Ipatjevin luostarista. Nimi tulee luostarin nimestä (Ipatjev), ja kronikka on tärkeä lähde Kiovan Venäjän historialle." },
+    ],
+    "Vladimir": [
+      { q: "Miksi Suzdalia sanotaan museokaupungiksi?", a: "Alle 10 000 asukkaan Suzdalissa on 305 suojeltua kohdetta, muun muassa 30 kirkkoa ja viisi luostaria, sillä kaupunki jäi neuvostoaikana ilman raskasta teollisuutta." },
+      { q: "Mistä Gus-Hrustalnyi on saanut nimensä?", a: "Gus-joen varrella vuonna 1756 perustettu Maltsovin lasitehdas on Venäjän vanhin yhä toimiva kristallin valmistaja, ja kaupunki nimettiin sen mukaan. Sana hrustalnyi tarkoittaa kristallista." },
+      { q: "Miksi Murom tunnetaan?", a: "Murom on Oka-joen varrella oleva kaupunki, jonka ensimmäinen maininta on vuodelta 862. Sen tunnetuin sankari on eepoksien Ilja Muromets, ja kaupungissa syntyi televisiotekniikan pioneeri Vladimir Zvorykin." },
+    ],
+  },
 };

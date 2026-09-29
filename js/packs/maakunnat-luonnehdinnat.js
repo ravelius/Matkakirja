@@ -9701,6 +9701,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kaliningrad: {
       lyhyt: 'Kaliningradin alueen Jantarnyissa on maailman suurin meripihkaesiintymä, ja meripihkaa kaivetaan siellä avolouhoksesta.',
+      pitka: "Kaliningradin kaupungissa asuu noin 500 000 ihmistä, ja sen sydän on Pregolja-joen Kantin saari. Siellä kohoaa 1300-luvulla rakennettu tiiligoottilainen tuomiokirkko, jonka katto ja huippu palautettiin 1990-luvulla; kello soittaa tasatunnein Beethovenin viidennen sinfonian alkutahdit. Maailmanmeren museo esittelee tutkimusalus Vitjazin sekä vuonna 2000 tuodun sukellusvene B-413:n, jonka sisällä voi kävellä. Länsipuolella Kuurinkynnäs, 98 kilometrin pituinen hiekkaniemi, on ollut Unescon maailmanperintökohde vuodesta 2000. Venäjän puolella se on kapeimmillaan vain 400 metriä leveä, ja liikkuvat dyynit nousevat jopa 60 metriin. Kesäisin Zelenogradskin ja Svetlogorskin rannat täyttyvät lomailijoista.",
     },
     Kalmyk: {
       lyhyt: 'Kalmukian pääkaupungissa Elistassa on Euroopan suurin buddhalainen temppeli, Buddha Šakjamunin kultainen asumus.',
@@ -9716,6 +9717,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Karelia: {
       lyhyt: 'Äänisen ja Vienanmeren rantakallioihin on hakattu tuhansia kivikautisia kalliopiirroksia, ja ne ovat Unescon maailmanperintöä.',
+      pitka: "Karjalan tasavallassa on noin 60 000 järveä, ja Euroopan suurimmat järvet, Laatokka ja Äänisjärvi, ulottuvat sen rajoille. Äänisen Kižin saarella seisova pogosta on ollut Unescon maailmanperintökohde vuodesta 1990. Sen Kirkastuskirkko on 37 metriä korkea ja siinä on 22 kupolia. Ruskealan entinen marmorilouhos, jota on louhittu vuodesta 1769, on täyttynyt kirkkaalla vedellä, ja sen kiveä on käytetty esimerkiksi Pietarin Iisakinkirkossa. Paikka kuului ennen talvisotaa Suomeen Ruskealan kuntana. Laatokan Valamon luostarin munkit muuttivat 1940 Heinävedelle, mutta luostari on nykyään jälleen toiminnassa.",
     },
     Kemerovo: {
       lyhyt: 'Kemerovon alue on Kuzbass eli Kuznetskin hiiliallas, Venäjän suurin kivihiilen louhinta-alue.',
@@ -9728,9 +9730,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Komi: {
       lyhyt: 'Komin Manpupunerin ylängöllä seisoo seitsemän 30–42-metristä kivipylvästä, joita kutsutaan seitsemäksi voimamieheksi.',
+      pitka: "Komin tasavalta on noin 416 000 neliökilometrin laajuinen, ja yli 70 prosenttia sen alasta on metsää. Pohjois-Uralin Komin neitseelliset metsät, 32 800 neliökilometrin alue, tulivat 1995 Venäjän ensimmäiseksi luonnon maailmanperintökohteeksi ja ovat Euroopan laajin koskematon boreaalinen metsä. Alueeseen kuuluvat Petšora-Ilytšin luonnonsuojelualue vuodelta 1930 ja Jugyd Va -kansallispuisto. Uralin korkein huippu Narodnaja, noin 1 900 metriä, kohoaa tasavallan puolella. Metsissä elää muun muassa poroja, soopeleita ja metsoja. Komit muodostavat tasavallan asukkaista noin neljänneksen.",
     },
     Kostroma: {
       lyhyt: 'Kostromaa pidetään Snegurotškan, Pakkasukon lumityttären, kotikaupunkina, ja Volgan rannalla on hänen puinen satutalonsa.',
+      pitka: "Kostroman kaupunki, noin 267 000 asukasta, sijaitsee Volgan ja Kostroma-joen yhtymäkohdassa, ja sen perustamisvuotena pidetään perinteisesti 1152. Kaupunki kuuluu Venäjän Kultaiseen renkaaseen: klassistiset Krasnyje rjady eli kauppa-arkadit nousivat entisen kremlin paikalle, ja Bogojavlenskin katedraali valmistui 1559–1565 kaupungin ensimmäisenä kivirakennuksena. Ipatjevin luostari Kostroma-joen rannalla perustettiin noin 1330; sinne oli majoittunut Mihail Romanov, kun kansankokous julisti hänet tsaariksi 14. maaliskuuta 1613. Luostarista löydettiin myös Hypatioksen kronikka. Alueen pinta-ala on noin 60 200 neliökilometriä, ja se on tärkeä puuntuotannon alue sekä perinteinen pellavan ja korutyön seutu.",
     },
     Krasnodar: {
       lyhyt: 'Krasnodarin aluepiirin Sotši on subtrooppinen lomakaupunki, jonka yläpuolisilla vuorilla ajettiin 2014 talviolympialaisten alppilajit.',
@@ -9746,6 +9750,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Leningrad: {
       lyhyt: 'Leningradin alueella on suuri osa Laatokasta, Euroopan suurimmasta järvestä, josta Neva virtaa kohti Pietaria.',
+      pitka: "Leningradin alue kietoutuu Pietarin ympärille: yli 83 000 neliökilometrin alueella asuu noin kaksi miljoonaa ihmistä, ja hallinnollinen keskus on Gatšina. Pohjoisessa Viipuri eli Vyborg syntyi ruotsalaisten linnaksi 1293. Kaupungissa, jossa asuu nykyään noin 72 500 ihmistä, ovat nähtävinä keskiaikainen linna, Monrepos'n maisemapuisto ja Alvar Aallon kirjasto, joka valmistui 1935 ja kunnostettiin 2013. Viipuri oli 1917–1940 Suomen toiseksi suurin kaupunki. Volhov-joen varrella Staraja Ladoga ajoitetaan puuvuosirenkaiden mukaan perustetuksi 753, ja sen Yrjön kirkon freskot ovat 1100-luvulta.",
     },
     Lipetsk: {
       lyhyt: 'Lipetskin nimi tulee lehmuksesta, venäjäksi lipa, mutta nykyään kaupunki tunnetaan ennen kaikkea suuresta terästehtaastaan.',
@@ -9761,21 +9766,26 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Moskva: {
       lyhyt: 'Moskovan Ostankinon televisiotorni kohoaa 540 metriin, ja se on Euroopan korkein vapaasti seisova rakennelma.',
+      pitka: "Moskova mainitaan kronikoissa ensi kerran 1147, ja nykyään Moskovajoen varrella asuu noin 13 miljoonaa ihmistä. Kreml ja Punainen tori ovat Unescon maailmanperintöä vuodesta 1990, ja torin laidalla kohoaa Vasili Autuaan katedraali, joka rakennettiin 1555–1561. Pohjoisessa VDNKh avattiin 1939 maatalousnäyttelynä, ja peruskorjauksen jälkeen alueella on nykyään paviljonkeja, jäärata ja 2015 avattu Moskvarium-akvaario. Tretjakovin galleria, Bolšoi ja lukemattomat puistot pitävät kaupungin kulttuurielämän vireänä läpi vuoden.",
     },
     Moskovskaya: {
       lyhyt: 'Moskovan alueen Sergijev Posadissa on Kolminaisuuden lavra, Venäjän ortodoksisen kirkon tärkeimpiä luostareita.',
+      pitka: "Moskovan alue ympäröi pääkaupunkia ja on noin 8,5 miljoonan asukkaan kotiseutu. Kolomnassa Moskovajoki ja Oka yhtyvät; kaupunki mainitaan ensi kerran 1177, sen punatiilinen kremli valmistui 1525–1531, ja pastilamuseossa maistuu paikallinen hedelmäkarkki. Tähtikaupungissa eli Zvjozdnyi gorodokissa toimii Juri Gagarinin mukaan nimetty kosmonauttien koulutuskeskus. Tiedekaupunki Dubnassa Volgan varrella on vuonna 1956 perustettu ydintutkimuslaitos JINR. Kultaisen renkaan kaupunkeihin kuuluvat alueella myös Dmitrov ja Zvenigorod.",
     },
     Murmansk: {
       lyhyt: 'Murmansk on maailman suurin kaupunki napapiirin pohjoispuolella, ja talvella aurinko pysyy siellä horisontin alla noin kuusi viikkoa.',
+      pitka: "Kuolan niemimaan pohjoisrannalla luonto ja raskas teollisuus elävät rinnakkain. Entisen Petsamon alueella Zapoljarnyin lähellä porattiin vuosina 1970–1989 Kuolan supersyväreikä, joka yltää 12 262 metriin ja on yhä syvin ihmisen tekemä reikä. Hibiinien tunturimassiivin korkein huippu Judytšvumtšorr on 1 201 metriä, ja sen juurella Kirovskissa lasketellaan; Hibiinien kansallispuisto perustettiin 2018. Barentsinmeren rannalla Teriberkan kalastajakylässä asuu enää muutama sata ihmistä, mutta rantojen hylätyt puuveneet ja elokuva Leviathan (2014) ovat tehneet siitä matkailukohteen. Kuolan alkuperäiskansa saamelaiset ovat nykyään pieni vähemmistö.",
     },
     Nenets: {
       lyhyt: 'Nenetsian tundralla nenetsit paimentavat yhä poroja, ja pääkaupungin Narjan-Marin nimi tarkoittaa nenetsiksi punaista kaupunkia.',
+      pitka: "Nenetsian autonominen piirikunta on Venäjän asukasluvultaan pienimpiä alueita: vuoden 2021 väestölaskennassa asukkaita oli noin 41 400, vaikka pinta-alaa on noin 177 000 neliökilometriä, eli reilut puolet Suomen alasta. Nenetsit ovat nykyään noin viidesosa asukkaista. Tundra jatkuu Barentsinmeren rannikolle, ja merellä ovat Kolgujevin ja Vaigatšin saaret. Naryan-Mar, jossa asuu noin 24 000 ihmistä eli suunnilleen puolet piirikunnan väestöstä, sijaitsee Petšora-joen varrella. Tieyhteydet ovat vähäisiä, ja liikenne kulkee paljolti lentäen ja kesällä joen kautta. Piirikunnan talous perustuu öljyyn ja poronhoitoon.",
     },
     Nizhegorod: {
       lyhyt: 'Nižni Novgorodin alueen Semjonovissa maalataan hohlomaa, puuastioita, joiden kukkakuviot hohtavat punaisena, mustana ja kultaisena.',
     },
     Novgorod: {
       lyhyt: 'Novgorodin kosteasta maasta on kaivettu esiin yli tuhat keskiaikaista tuohikirjettä, tavallisten kaupunkilaisten arkisia viestejä.',
+      pitka: "Novgorodin alueella on 54 500 neliökilometriä metsiä, soita ja järviä, mutta sen sydän on yksi kaupunki Volhov-joen varrella. Veliki Novgorodin Detinets eli kremlin muurit kiertävät 1 487 metriä, ja yhdeksän alkuperäisestä kahdestatoista tornista on yhä pystyssä. Muurien sisällä seisoo Sofian katedraali, rakennettu 1045–1050 ja Venäjän vanhimpia kirkkoja, sekä vuonna 1862 paljastettu Venäjän tuhatvuotismuistomerkki. Juurjevin luostarin katedraali on vuodelta 1119, ja Vitoslavlitsyn ulkomuseoon on koottu yli kaksikymmentä puurakennusta. Valdain kansallispuisto, perustettu 1990, ympäröi 76 järveä ja on ollut Unescon biosfäärialue vuodesta 2004.",
     },
     Novosibirsk: {
       lyhyt: 'Novosibirskin Akademgorodok on 1950-luvulla metsän keskelle rakennettu tiedekaupunki, jossa toimii kymmeniä tutkimuslaitoksia.',
@@ -9797,6 +9807,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'City of St. Petersburg': {
       lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
+      pitka: "Pietari perustettiin 27. toukokuuta 1703 Nevan suistoon, ja nykyään siellä asuu noin 5,6 miljoonaa ihmistä. Kesäisin valkeat yöt pitävät taivaan valoisana lähes kuukauden. Eremitaasin kokoelmassa on noin kolme miljoonaa esinettä, ja museo jakautuu kuuteen historialliseen rakennukseen, joihin kuuluvat Talvipalatsin lisäksi myös entinen Yleisesikunnan talo. Pietari-Paavalin linnoitus perustettiin kaupungin ytimeksi 1703, ja Marian teatterissa esiintyvät maailman huippubaletit. Suomenlahden rannalla nousee Lahta-keskus: 462 metriä ja 87 kerrosta korkea pilvenpiirtäjä, valmistunut 2019 ja Euroopan korkein rakennus.",
     },
     'North Ossetia': {
       lyhyt: 'Pohjois-Ossetian Dargavsin laakson rinteellä on vanha kuolleiden kaupunki, lähes sata kivistä hautahuonetta rivissä.',
@@ -9806,6 +9817,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pskov: {
       lyhyt: 'Puškinin sukutila Mihailovskoje Pihkovan alueella on museona, ja runoilija on haudattu läheiseen Svjatogorskin luostariin.',
+      pitka: "Pihkovan alue on Venäjän läntisimpiä alueita, ja sen pinta-ala on noin 55 400 neliökilometriä ja asukasluku noin 600 000. Pihkovan kaupunki mainitaan aikakirjoissa jo vuonna 903. Sen Krom-linnake seisoo Velikaja- ja Pihkovanjoen yhtymäkohdassa. Kaupungista noin 30 kilometriä länteen Izborskin linnoitus kohoaa kukkulalla lähellä Viron rajaa, ja sen kivimuurit ovat keskiaikaiset. Peipsijärvi, jonka pinta-ala on noin 3 555 neliökilometriä, on Euroopan suurin rajat ylittävä järvi. Sen jäällä kävi 1242 Jäätaistelu, ja nykyään rannoilla kalastetaan ja levähtää muuttolintuja.",
     },
     Rostov: {
       lyhyt: 'Donin suistossa Rostovin lähellä on Tanaisin kaivausalue, antiikin kreikkalaisten kauppakaupungin rauniot, jotka ovat nyt ulkomuseo.',
@@ -9833,6 +9845,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Smolensk: {
       lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
+      pitka: "Smolenskin kaupunki seisoo Dneprin kummallakin rannalla noin 360 kilometriä Moskovasta länteen, ja kaupunki mainitaan kronikassa ensi kerran 863. Pyhän Mikaelin (Svirskaja) kirkko on vuosilta 1180–1197 ja kuuluu harvoihin mongolivaltaa edeltäneisiin rakennuksiin Venäjällä. Kaupungissa asuu noin 317 000 ihmistä, koko alueella noin 888 000. Alueen luoteisosassa Smolenskin Järviseudun kansallispuisto, perustettu 1992, kattaa yli 146 000 hehtaaria metsää ja soita, ja siellä on 35 järveä; se on ollut Unescon biosfäärialue vuodesta 2002.",
     },
     "Stavropol'": {
       lyhyt: 'Stavropolin aluepiirin Kislovodskista pulppuaa narzan-kivennäisvettä, ja sen kylpylöihin tullaan yhä parantumaan.',
@@ -9878,12 +9891,14 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vladimir: {
       lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
+      pitka: "Vladimirin alue on pinta-alaltaan pieni, 29 084 neliökilometriä, mutta asukkaita on noin 1,35 miljoonaa. Aluekeskus Vladimir, noin 350 000 asukasta, on 190 kilometrin päässä Moskovasta idässä. Unesco merkitsi Vladimirin ja Suzdalin valkoiset monumentit maailmanperintökohteeksi vuonna 1992. Uspenskin katedraali rakennettiin 1158–1160 ja laajennettiin 1185–1189, ja sen seinille Andrei Rublev maalasi freskoja 1408. Dmitrin katedraali valmistui 1194–1197, ja sen seinien valkokivi on koristeltu tiheällä veistoskuvituksella. Kultainen portti on rakennettu 1100-luvulla mutta rakennettiin osin uudelleen 1700-luvun lopulla. Alueen itäosassa Meštšjoran kansallispuisto, perustettu 1992, suojaa noin 119 000 hehtaaria soita ja mäntymetsiä.",
     },
     Volgograd: {
       lyhyt: 'Volgogradin alueen Eltonjärvi on Euroopan suurin mineraalijärvi, ja levät värjäävät sen suolaisen veden punertavaksi.',
     },
     Vologda: {
       lyhyt: 'Vologdan nypläyspitsi on alueen tunnetuin käsityö, ja kaupungissa on sille oma museonsa.',
+      pitka: "Vologdan alue on 144 500 neliökilometrin laajuudessaan harvaan asuttu: asukkaita on runsaat 1,1 miljoonaa. Vologdan kaupungin Sofian katedraali rakennettiin 1568–1570 Ivan IV:n käskystä, ja kaupunki on yksi Venäjän harvoista, joissa on säilynyt puuarkkitehtuuria. Pohjoisempana Kirillo-Belozerskin luostari perustettiin 1397 Siverskoje-järven rannalle, ja sen Uspenskin katedraali valmistui 1497. Ferapontovin luostarin Neitsyt Marian syntymän katedraalin seinät maalasi ikonimaalari Dionisi poikineen vuonna 1502, ja noin 600 neliömetriä freskoja on säilynyt; luostari on Unescon maailmanperintökohde vuodesta 2000. Cherepovetsissa toimii Severstalin terästehdas, ja Volga–Itämeri-vesitie kulkee alueen halki.",
     },
     Voronezh: {
       lyhyt: 'Voronežin alueen Kostjonkissa on kaivettu esiin kymmeniä kivikautisia asuinpaikkoja, joista osa on rakennettu mammutinluista.',
