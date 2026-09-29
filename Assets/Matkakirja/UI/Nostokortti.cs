@@ -270,6 +270,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             lukija.Pysayta();
             Rakenne.PiilotaHaivyttaen(kerros, 200);
+            Ponnahdus.Sulje(kortti, () => { }); // kortti pienenee kerroksen häivytyksen mukana; kerros piilottaa
             suurennos.Sulje();
             SyoteLukko.Vapauta(this);
         }
@@ -528,6 +529,9 @@ namespace Matkakirja.Natiivi
             // Löydös 134 (omistaja, build 16): nosto näkyviin heti samassa kehyksessä, ei 220 ms:n sisäänhäivytystä
             // (Pelikoodarin mittaus: näkyvä 267 ms, josta häivytys 220 ms). Sulku häivyttää kuten ennen.
             Rakenne.NaytaHeti(kerros);
+            // Omistaja 29.9.2026 (Päätoimittaja, Raamattu PR #3602): nosto pysyy välittömänä mutta saa avausanimaation, joka
+            // alkaa samalla ruudunpäivityksellä kuin napautus (Ponnahdus: alkutila heti, 220 ms kasvu ja häivytys).
+            Ponnahdus.Avaa(kortti);
             SyoteLukko.Esta(this);
         }
 

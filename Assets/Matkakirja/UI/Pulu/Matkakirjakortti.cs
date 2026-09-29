@@ -78,7 +78,7 @@ namespace Matkakirja.Natiivi
         Merkinta merkinta;
         Action kirjoitettu;
 
-        public bool Nakyy => kortti.style.display == DisplayStyle.Flex;
+        public bool Nakyy => nakyvissa; // sulkuanimaation aikana jo kiinni (Ponnahdus)
         /// <summary>Kortin rajat paneelissa (elämäpalkki väistää auki olevaa päiväkirjaa); tyhjä, kun ei näy.</summary>
         public Rect Rajat => Nakyy ? kortti.worldBound : Rect.zero;
         /// <summary>Kortin laatikko paneelissa (nopan lepopaikan kulmavalinta, web factCard.dataset.corner).</summary>
@@ -390,7 +390,9 @@ namespace Matkakirja.Natiivi
             pikkukuvat.Clear();
             if (m.Valokuvat.Count > 0) LisaaValokuva(m.Valokuvat);
             AsetaPieni(TekstitPiilossa);
-            kortti.style.display = DisplayStyle.Flex;
+            // Avaus ja sulku animoiden (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot); jo näkyvä vain päivittyy.
+            if (!nakyvissa) Ponnahdus.Avaa(kortti);
+            nakyvissa = true;
             sanat = null;
             teksti.text = "";
             Kirjoittamatta = true;
@@ -413,10 +415,14 @@ namespace Matkakirja.Natiivi
             Kirjoita(merkinta.Lihava, merkinta.Teksti);
         }
 
+        bool nakyvissa;
+
         public void Piilota()
         {
             kirjoitus?.Pause();
-            kortti.style.display = DisplayStyle.None;
+            if (!nakyvissa) { Ponnahdus.Lopeta(kortti); kortti.style.display = DisplayStyle.None; return; }
+            nakyvissa = false;
+            Ponnahdus.Sulje(kortti);
         }
 
         /// <summary>Tyhjentää kortin (web pickstart: uusiFactKey(null)); seuraava merkintä kirjoittuu varmasti.</summary>
