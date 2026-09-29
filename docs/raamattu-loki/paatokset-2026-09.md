@@ -9147,3 +9147,7 @@ Omistaja 29.9. klo 09.2x sanatarkasti: "Samalla tavalla aarteet ovat otsikoittai
 ## TILA: LUENNAN ALKUKATKON JUURISYY LÖYTYI (NATIIVI) (29.9.2026 klo 09.43)
 
 Natiivi-UI 29.9. klo 09.5x: omistajan havaitsema isoisän luennan alun/kaupungin nimen katoaminen laitteella johtui siitä, että vanha alku häivytti uutta klippiä ruutujen tahdissa → pelin jumi heti soiton alussa soitti alun hiljaa (250 ms jumi = 0,34 s, 500 ms = 0,60 s), ja klippien alussa on vain 0,11–0,20 s hiljaisuutta, joten ensimmäinen tavu katosi. Korjaus natiivi-ui/luenta-reitti d33f6df6: hiljaa soitettu aika 0,000 s; äänisessio asetetaan vain väärästä tilasta (korjaa Bluetooth-reitin uusintaneuvottelun). Päätoimittaja: 1.0.44:ään (BUILD 44 + avaukset 222ce07e + luenta-reitti + tervetulo jos ehtii, takaraja 11.30); omistajalle laiteohje TF:n jälkeen.
+
+## PÄÄTÖS: VIE 1.0.44 (LUENNAN ALKU, AVAUKSET, MAAKUNTALAPPU) (29.9.2026 klo 10.11)
+
+Natiiviseppä 29.9. klo 10.11: 1.0.44 = BUILD 44 -yhdistelmä proto master 4d7bc2ed (käännös cd78a365): Natiivi-UI:n maakuntalappu (kiinteä kortti, ✕, vieritys), minipulu kuvaselaimessa, avausanimaatiot (8 pintaa) ja luennan alkukatkon korjaus (luenta-reitti d33f6df6); Laitetestaajan savuke PASS (luennan alku kuuluu kokonaan). Päätoimittaja: VIE 1.0.44, muutosrivi #3607 päivitetään; Pulun ISS-tervetulo 1.0.45:een. Havainto 1.0.45:een: maakuntakortin korkeus vaihtelee maakunnittain (Englanti 727 pt, Attika 616 pt) → Natiivi-UI.
