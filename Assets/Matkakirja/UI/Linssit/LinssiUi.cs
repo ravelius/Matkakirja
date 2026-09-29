@@ -252,7 +252,8 @@ namespace Matkakirja.Natiivi
             if (kerros != kerrosPaalla) { kerrosPaalla = kerros; ui.Matkakirja.Linssi(kerros); }
             // Löydös 42: karttaselitteen nappi näkyy linssin aikana kuten webissä; piiloon vain aikajanalinsseissä
             // (web body.aikajana-paalla .karttaselite) ja astronautin kamerassa (body.linssi-satelliitti .karttaselite).
-            bool selitePiiloon = vuosi || id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id);
+            // Radio: maakuntanappi piiloon linssin ajaksi (omistaja 29.9.2026: "poista maakunta nappi näkyvistä").
+            bool selitePiiloon = vuosi || radio || id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id);
             ui.Karttaselite.NaytaNappi(!selitePiiloon);
             if (paalla) ui.Karttaselite.Sulje();
             // Löydös S3 (Laitetestaaja b18): linssin avaus sulkee kartan kortit (nosto, kaupunkikortti, matkakirjan

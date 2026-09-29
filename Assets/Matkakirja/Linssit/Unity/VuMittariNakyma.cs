@@ -25,9 +25,9 @@ namespace Matkakirja.Natiivi
         static readonly Color Muste = new Color32(0x2e, 0x21, 0x12, 0xff);
         static readonly Color Puna = new Color32(0xb2, 0x2e, 0x1c, 0xff);
         static readonly Color NeulanVari = new Color32(0x14, 0x0e, 0x08, 0xff);
-        /// <summary>Luvut asteikon kohdissa (VuMittari.Jaot: 0,28 = −10 ja 0,46 = −5).</summary>
+        /// <summary>Luvut asteikon kohdissa (VuMittari.Jaot: 0,28 = −10; −5 jätetty pois, laite j1055: meni −10:n päälle).</summary>
         static readonly (double Osuus, string Teksti, bool Punainen)[] Luvut =
-            { (0, "-20", false), (0.28, "-10", false), (0.46, "-5", false), (VuMittari.Punainen, "0", true), (1, "+3", true) };
+            { (0, "-20", false), (0.28, "-10", false), (VuMittari.Punainen, "0", true), (1, "+3", true) };
 
         readonly Func<VuMittari> lahde;
         readonly VisualElement neula, heijastus;
@@ -127,7 +127,7 @@ namespace Matkakirja.Natiivi
             bool kapea = L < 96;
             foreach (var (osuus, teksti, punainen) in Luvut)
             {
-                if (kapea && (teksti == "-10" || teksti == "-5")) continue;
+                if (kapea && teksti == "-10") continue;
                 var paikka = Piste((float)osuus, Sade - 6.5f * v - fontti * 0.9f);
                 var l = new Label(teksti) { pickingMode = PickingMode.Ignore };
                 l.style.position = Position.Absolute;
