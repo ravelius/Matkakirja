@@ -118,6 +118,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Lentolistan tarjotut kohteet (web tarjotutLennot), kun lentokaaret ovat näkyvissä.</summary>
         List<string> lentoKohteet;
         string peliSuodatinAvain;
+        (bool, bool) viimeNakyma;
+        /// <summary>Pelaajalle näkyvät kaupungit (pelin rajaus), null = ei rajausta; pelaajan näkymän hyppy vain muihin.</summary>
+        HashSet<string> pelaajanKaupungit;
 
         /// <summary>
         /// Web lauta.js pelinKaupunkirajaus (liikkumisen pariteetti D15): tavallisessa pelissä näkyvät ja ovat
@@ -130,20 +133,24 @@ namespace Matkakirja.Natiivi
             var t = matka.Tila;
             string oma = PelaajanKaupunki;
             string iso = oma != null && verkko.Kaupungit.TryGetValue(oma, out var ok) ? ok.Maa : null;
-            bool vapaa = !Kaytossa || Tila == SilmukanTila.Matkalla || AloituslentoKaynnissa || Paavalikko.Maailma || iso == null;
+            bool vapaa = !Kaytossa || Tila == SilmukanTila.Matkalla || AloituslentoKaynnissa || Paavalikko.MaailmaNakyma || iso == null;
+            // Pelaajan näkymä (omistaja 29.9.2026): pelaajan rajaus, muut pelin kaupungit himmeinä ja napautettavina.
+            bool himmeat = !vapaa && Paavalikko.PelaajanNakyma;
             var kohteet = new List<string>();
             if (!vapaa)
             {
                 if (t.Vaihe == Vaihe.Siirto) foreach (var k in siirtoKohteet) if (k.Kaupunki != null) kohteet.Add(k.Kaupunki);
                 if (lentoKohteet != null) kohteet.AddRange(lentoKohteet);
             }
-            string avain = vapaa ? "" : iso + "|" + oma + "|" + string.Join(",", kohteet);
+            string avain = vapaa ? "" : iso + "|" + oma + "|" + string.Join(",", kohteet) + (himmeat ? "|himmeat" : "");
             if (avain == peliSuodatinAvain) return;
             peliSuodatinAvain = avain;
-            if (vapaa) { merkit.PeliSuodatin(null); return; }
+            if (vapaa) { pelaajanKaupungit = null; merkit.PeliSuodatin(null); merkit.Himmeat(null); return; }
             var joukko = new HashSet<string>(kohteet) { oma };
             foreach (var kv in verkko.Kaupungit) if (kv.Value.Maa == iso) joukko.Add(kv.Key);
+            pelaajanKaupungit = joukko;
             merkit.PeliSuodatin(joukko);
+            merkit.Himmeat(himmeat ? verkko.Kaupungit.Keys.Where(k => !joukko.Contains(k)).ToList() : null);
         }
 
         /// <summary>Päivittää reitit, jos valinta muuttui (PaivitaNakyma, saapuminen, liuska, siirron alku).</summary>

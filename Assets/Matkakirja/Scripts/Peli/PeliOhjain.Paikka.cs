@@ -42,6 +42,8 @@ namespace Matkakirja.Natiivi
         bool MaailmaHyppy(string kaupunki)
         {
             if (!Paavalikko.Maailma || matka == null || kaupunki == null) return false;
+            // Pelaajan näkymä: pelaajalle näkyvät kaupungit toimivat pelaajan tavalla, himmeät hyppäävät (Siirtoseppä, web).
+            if (Paavalikko.PelaajanNakyma && pelaajanKaupungit != null && pelaajanKaupungit.Contains(kaupunki)) return false;
             if (kaupunki == PelaajanKaupunki || SiirtoAvain(kaupunki) != null) return false;
             VaiennaPaikanPuhe();
             dialogi.Piilota();
