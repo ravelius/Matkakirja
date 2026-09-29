@@ -18,7 +18,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { asentoSijainti, siirtymanKesto, siirtymaAsento } from '../../js/dioraama/kamera.js';
+import { asentoSijainti, siirtymanKesto, siirtymaAsento, rajaaKierto, leijunta } from '../../js/dioraama/kamera.js';
 import { tilanTaso, tilanTasoJaEdellinen, hahmonTila, aanenVoimakkuus } from '../../js/dioraama/heratys.js';
 import { askeleenKesto, kasikirjoitusHetkella, puluLento } from '../../js/dioraama/ohjaaja.js';
 
@@ -180,6 +180,20 @@ const KAMERA_PARIT = [
     p0: { kohde: [-3, 0.2, 4], atsimuutti: 200, korkeus: 22, etaisyys: 8, fov: 50, aukko: 0.35 },
     p1: { kohde: [1, 1.5, -2], atsimuutti: 260, korkeus: 12, etaisyys: 5.5, fov: 30, aukko: 0.05 },
   },
+  {
+    // ERÄ 2B: kaarilento, matka01 KYLLÄSTYY 1:een (|Δkohde| = 80 m > 60 m -jakaja) — huippu (t=0,5) saa
+    // täyden KAAREN_NOUSU_MAX_ASTETTA (12°) nousun ja täyden 0,35-kertoimen etäisyyden pullistuman.
+    nimi: 'kaari-kylla-60m',
+    p0: { kohde: [0, 0, 0], atsimuutti: 0, korkeus: 20, etaisyys: 6, fov: 45, aukko: 0.2 },
+    p1: { kohde: [80, 0, 0], atsimuutti: 90, korkeus: 20, etaisyys: 6, fov: 45, aukko: 0.2 },
+  },
+  {
+    // ERÄ 2B: lyhyt kaarilento saman tilan sisällä (esim. kohdistuksen tarkennus) — matka01 pieni (10/60),
+    // nousu/pullistuma vaimeaa, ei nykäystä. "keittiö → yleis" -tyyppinen siirtymä raportin lukuja varten.
+    nimi: 'kaari-lyhyt-tila-sisalla',
+    p0: { kohde: [1, 1, 0], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3 }, // keittiön kamera
+    p1: { kohde: [2, 1, 0], atsimuutti: 180, korkeus: 35, etaisyys: 8, fov: 50, aukko: 0.1 }, // yleiskamera (YLEISKAMERA)
+  },
 ];
 
 const kameraVektorit = KAMERA_PARIT.map(({ nimi, p0, p1 }) => ({
@@ -275,6 +289,76 @@ const puluVektorit = PULU_LENNOT.map(({ nimi, alku, loppu }) => ({
 }));
 
 /* ================================================================
+ * 5. RAJAUS (era 2b, kohta 1/5): rajaaKierto(perus, asento, yleisnakyma).
+ * ================================================================ */
+
+const RAJAUS_TAPAUKSET = [
+  {
+    // Ei kierto-kenttää perusasennolla, yleisnakyma=false -> OLETUS_KIERTO_TILA. Pelaaja pysyy rajojen
+    // sisällä (atsimuutti-ero 20°<55°, korkeus 30∈[6,65], etaisyys 4,5∈[perus·0,55, perus·1,6]=[2,2;6,4]):
+    // tulos = asento sellaisenaan.
+    nimi: 'tila-oletus-sisalla',
+    perus: { kohde: [1, 1, 0], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3 },
+    asento: { kohde: [1, 1, 0], atsimuutti: 220, korkeus: 30, etaisyys: 4.5, fov: 45, aukko: 0.3 },
+    yleisnakyma: false,
+  },
+  {
+    // Sama oletus, mutta pelaaja ylittää kaikki kolme rajaa reilusti -> kaikki kolme leikkautuvat rajaan.
+    nimi: 'tila-oletus-ylitys',
+    perus: { kohde: [1, 1, 0], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3 },
+    asento: { kohde: [1, 1, 0], atsimuutti: 350, korkeus: 90, etaisyys: 20, fov: 45, aukko: 0.3 },
+    yleisnakyma: false,
+  },
+  {
+    // Ei kierto-kenttää, yleisnakyma=true -> OLETUS_KIERTO_YLEIS: atsimuutti VAPAA (molemmat null, ei rajaa
+    // vaikka ero on 160°), korkeus/etaisyys rajautuvat silti yleisnäkymän omiin rajoihin.
+    nimi: 'yleis-oletus-atsimuutti-vapaa',
+    perus: { kohde: [2, 1, 0], atsimuutti: 180, korkeus: 35, etaisyys: 8, fov: 50, aukko: 0.1 },
+    asento: { kohde: [2, 1, 0], atsimuutti: 340, korkeus: 90, etaisyys: 20, fov: 50, aukko: 0.1 },
+    yleisnakyma: true,
+  },
+  {
+    // Perusasennolla OMA kierto-kenttä (kapeampi kuin oletus): tämä voittaa aina, yleisnakyma-lipusta riippumatta.
+    nimi: 'oma-kierto-voittaa-oletuksen',
+    perus: {
+      kohde: [1, 1, 0], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3,
+      kierto: { atsimuuttiMin: -10, atsimuuttiMax: 10, korkeusMin: 20, korkeusMax: 30, etaisyysMin: 0.9, etaisyysMax: 1.1 },
+    },
+    asento: { kohde: [1, 1, 0], atsimuutti: 230, korkeus: 5, etaisyys: 10, fov: 45, aukko: 0.3 },
+    yleisnakyma: true, // lippu on tosi, mutta perus.kierto ohittaa OLETUS_KIERTO_YLEISin kokonaan
+  },
+  {
+    // Atsimuutti kiertyy 0/360-rajan yli JA ylittää rajan: perus 350°, pelaaja 350+80=430(≡70°) -> lyhin
+    // ero (kiertoero) on +80°, joka leikkautuu tila-oletuksen +55°:aan -> tulos 350+55=405 (EI normalisoida
+    // 0..360-välille, samaa periaatetta kuin siirtymaAsennon atsimuutti muuallakin tässä tiedostossa).
+    nimi: 'atsimuutti-yli-360-rajan-ja-ylitys',
+    perus: { kohde: [0, 0, 0], atsimuutti: 350, korkeus: 20, etaisyys: 5, fov: 45, aukko: 0.2 },
+    asento: { kohde: [0, 0, 0], atsimuutti: 430, korkeus: 20, etaisyys: 5, fov: 45, aukko: 0.2 },
+    yleisnakyma: false,
+  },
+];
+
+const rajausVektorit = RAJAUS_TAPAUKSET.map(({ nimi, perus, asento, yleisnakyma }) => ({
+  nimi,
+  perus,
+  asento,
+  yleisnakyma,
+  tulos: rajaaKierto(perus, asento, yleisnakyma),
+}));
+
+/* ================================================================
+ * 6. LEIJUNTA (era 2b, kohta 5): leijunta(asento, t) — atsimuutti ±3°/24 s, korkeus ±1,5°/31 s.
+ * ================================================================ */
+
+const LEIJUNTA_T_GRID = [0, 6, 12, 18, 24, 31, 48, 62, 100];
+const LEIJUNTA_ASENTO = { kohde: [1, 1, 0], atsimuutti: 200, korkeus: 25, etaisyys: 4, fov: 45, aukko: 0.3 };
+
+const leijuntaVektorit = {
+  asento: LEIJUNTA_ASENTO,
+  naytteet: LEIJUNTA_T_GRID.map((t) => ({ t, tulos: leijunta(LEIJUNTA_ASENTO, t) })),
+};
+
+/* ================================================================
  * KOKOELMA JA KIRJOITUS.
  * ================================================================ */
 
@@ -294,6 +378,9 @@ const TULKINNAT = [
   { aihe: 'kasikirjoitusHetkella: useampi napautus saman askeleen luonnollisessa ikkunassa', tulkinta: 'Napautukset kulutetaan aikajärjestyksessä yksi kerrallaan; vain ajallisesti ensimmäinen vaikuttaa kyseiseen askeleeseen, koska askel on jo päättynyt kun seuraava napautus käsitellään.' },
   { aihe: 'puluLento nollamatkalla (alku === loppu)', tulkinta: 'Huippu = alku + (0,1,0): nostotermi 0,3*|loppu-alku|+1 = 0,3*0+1 = 1 ei häviä. Testattu lennolla "paikallaan".' },
   { aihe: 'rak.henkilot / rak.aanet koostettu, ei raaka pankit-lähdedata', tulkinta: 'Heratys- ja Ohjaaja-funktiot olettavat, että niille annettu rak (Rakennus) on jo koostettu: rak.henkilot on id -> {silmukat} ja rak.aanet on id -> {kesto_s,...}, kuten rakennettu rakennus.json (speksin kohta 3) ja C#:n Rakennus.Henkilot-malli (kohta 5) — ei pelkkää js/dioraama/pankit/-lähdedataa sellaisenaan. Tämän tiedoston oma pieni "rakennus" koostaa nämä itse.' },
+  { aihe: 'ERÄ 2B: siirtymaAsennon "nousu" (korkeus += nousu·sin(πs))', tulkinta: 'Speksi (dioraama-rajapinnat-era2b-20260929.md kohta 5) ei anna nousulle lukuarvoa. Tulkinta: nousu skaalataan matka01:llä kuten etäisyyden 0,35-kerroinkin (nousu = KAAREN_NOUSU_MAX_ASTETTA·matka01, vakio 12°), jotta lyhyt/paikallinen siirtymä ei nykäise kameraa ylös mutta tilasta toiseen -lento kaartaa selvästi. Kirjattu raporttiin, odottaa omistajan/Fablen vahvistusta.' },
+  { aihe: 'ERÄ 2B: rajaaKierto(perus, asento, yleisnakyma) — allekirjoitus', tulkinta: 'Speksin kohta 5 kirjoittaa kutsun kaksiargumenttisena "RajaaKierto(perus, asento)" (rajat luetaan perus.kierrosta). Kolmas parametri yleisnakyma (oletus false) tarvitaan, koska perus.kierto voi olla null (lähteessä ei kierto-kenttää) — silloin funktio ei muuten tietäisi, kumpaa oletusta (OLETUS_KIERTO_TILA/OLETUS_KIERTO_YLEIS) käyttää. Sama ratkaisu C#:ssa (Kameraliike.RajaaKierto).' },
+  { aihe: 'rajaaKierto: atsimuuttia ei normalisoida 0..360-välille', tulkinta: 'perus.atsimuutti + rajattu kiertoero voi olla alle 0 tai yli 360 (esim. 350+55=405) — sama käytäntö kuin siirtymaAsennon atsimuutissa muualla tässä tiedostossa (kulma kulkee trigonometrian läpi, joka on jaksollinen; wrappaus ei muuttaisi lopputulosta mutta veisi tarkkuutta pois testivektorista).' },
 ];
 
 const MUOTO = {
@@ -310,14 +397,18 @@ const MUOTO = {
     + '= kasikirjoitusHetkella(askeleet, kestot, napautukset, t).',
   pulu: 'pulu[i] = { nimi, alku:[x,y,z], loppu:[x,y,z], naytteet: [{ t01, piste: puluLento(alku,loppu,t01) }] }. '
     + 't01 ∈ {0, 0.25, 0.5, 0.75, 1}.',
+  rajaus: 'rajaus[i] = { nimi, perus: ASENTO (voi sisältää kierto-kentän), asento: ASENTO (pelaajan raaka, '
+    + 'rajaamaton), yleisnakyma: bool, tulos: rajaaKierto(perus,asento,yleisnakyma) }. Era 2b, kohta 1/5.',
+  leijunta: 'leijunta = { asento: ASENTO, naytteet: [{ t, tulos: leijunta(asento,t) }] }. Era 2b, kohta 5.',
 };
 
 const ULOSTULO = {
   $kuvaus: 'Dioraamamoottorin puhtaan logiikan testivektorit (tools/dioraama/tee-vektorit.mjs, älä muokkaa käsin — '
     + 'aja skripti uudelleen). JS-testi tests/dioraama-logiikka.test.mjs ja C#-testi Linssit-testit/Testit/DioraamaTestit.cs '
     + '(tämän tiedoston kopio Linssit-testit/kultaiset/dioraama-vektorit.json) ajavat samat vektorit js/dioraama/{kamera,heratys,'
-    + 'ohjaaja}.js:n ja Kameraliike/Heratys/Ohjaaja-luokkien kaavojen pariteetin varmistamiseksi '
-    + '(docs/raportit/dioraama-rajapinnat-20260929.md kohta 4).',
+    + 'ohjaaja}.js:n ja Kameraliike/Heratys/Ohjaaja-luokkien kaavojen pariteetin varmistamiseksi (docs/raportit/'
+    + 'dioraama-rajapinnat-20260929.md kohta 4; kamera/rajaus/leijunta era 2b:n kaarilento+kierto kohdat '
+    + 'dioraama-rajapinnat-era2b-20260929.md kohdat 1 ja 5).',
   tarkkuus: 1e-9,
   muoto: MUOTO,
   tulkinnat: TULKINNAT,
@@ -325,6 +416,8 @@ const ULOSTULO = {
   heratys: heratysVektorit,
   ohjaaja: ohjaajaVektorit,
   pulu: puluVektorit,
+  rajaus: rajausVektorit,
+  leijunta: leijuntaVektorit,
 };
 
 mkdirSync(dirname(fileURLToPath(ULOS)), { recursive: true });
@@ -333,5 +426,6 @@ console.log(
   `vektorit.json: kamera ${kameraVektorit.length} paria x ${T_GRID.length} t, `
   + `heratys ${HETKET_HERATYS.length} hetkeä (${RAK.tilat.length} tilaa), `
   + `ohjaaja ${KASIKIRJOITUS.length} askelta x ${HETKET_OHJAAJA.length} hetkeä, `
-  + `pulu ${puluVektorit.length} lentoa x ${T01_GRID.length} näytettä.`,
+  + `pulu ${puluVektorit.length} lentoa x ${T01_GRID.length} näytettä, `
+  + `rajaus ${rajausVektorit.length} tapausta, leijunta ${leijuntaVektorit.naytteet.length} näytettä.`,
 );

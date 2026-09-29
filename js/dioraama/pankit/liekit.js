@@ -11,9 +11,14 @@
 // ruudut = animaation ruutumäärä, fps = toistonopeus. koko_m = liekin maailmankoko
 // metreinä [leveys, korkeus] billboardina, pivot = ankkuri [u-keskitys, y-alhaalta].
 export const LIEKIT = {
+  // KORJAUS 29.9.2026 (omistaja: "keltainen hehkupallo tulisijan päällä peittää hupun"): koko_m [0.42, 0.52]
+  // (oli [1.1, 1.1]) -- yhdessä natiivin DioraamaLiekit.LuoLiekkiMesh-pienennyksen kanssa (era 2b, sama pvm)
+  // tulisijan 3D-liekki päätyy noin 0,5 m korkeaksi (0,52 x 0,96 mesh-kerroin ~ 0,5) ja aiempaa kapeammaksi
+  // (leveys < korkeus, toisin kuin ennen [1.1,1.1]). ATLAS-VARALLA sama koko_m (DioraamaLiekit.cs:n
+  // alkukommentti) -- billboard pienenee/kapenee siis samalla, tarkoituksella.
   tulisija: {
     lahde: 'liekit/tulisija.png', ruutu: [256, 256], sarakkeet: 4, ruudut: 8, fps: 12,
-    koko_m: [1.1, 1.1], pivot: [0.5, 0.06],
+    koko_m: [0.42, 0.52], pivot: [0.5, 0.06],
   },
   kynttila: {
     lahde: 'liekit/kynttila.png', ruutu: [64, 128], sarakkeet: 4, ruudut: 4, fps: 10,

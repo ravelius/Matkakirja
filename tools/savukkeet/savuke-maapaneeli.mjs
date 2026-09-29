@@ -706,12 +706,21 @@ for (const ruutu of RUUDUT) {
 
   /* --- 8a. Liiku levossa ------------------------------------------ */
   const liiku = lepo.liiku;
+  /*
+   * NÄKYVÄ POHJA PALASI 29.9.2026 (Siirtosepän pariteettikatsaus, rivi
+   * 6: Liiku hukkui Kreetanmeren nimiöön iPadilla, koska täysin
+   * läpinäkyvällä napilla ei ollut mitään, mikä erottaisi sen toisesta
+   * tekstistä. Ks. css/styles.css .toimintorivi.rivi-yksi
+   * .monitoimi-nappi). Ehto kääntyi ympäri: ennen vaadittiin alpha 0 ja
+   * reunus 0; nyt vaaditaan näkyvä tausta ja reunus.
+   */
   const liikuHyva = Boolean(liiku
     && liiku.laatikko.y0 >= 0 && liiku.laatikko.y1 <= lepo.ruutu.h + 1
     && liiku.laatikko.y0 > lepo.ruutu.h * 0.5
     && liiku.keskipoikkeama <= 8
-    && /rgba\([^)]*,\s*0\)/.test(String(liiku.tausta))
-    && liiku.reunus === '0px'
+    && !/rgba\([^)]*,\s*0\)/.test(String(liiku.tausta))
+    && liiku.tausta !== 'none' && liiku.tausta !== 'transparent'
+    && liiku.reunus !== '0px'
     && liiku.sana !== 'none' && liiku.sananLeveys > 4
     && liiku.sananPeitto >= 0.5 && liiku.sananPeitto <= 0.8
     && liiku.laatikko.w >= 32 && liiku.laatikko.h >= 32

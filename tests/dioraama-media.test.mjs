@@ -92,6 +92,46 @@ test('kopioiPinnanKuva: olemassa oleva lähde kopioituu tavu-identtisenä', () =
   }
 });
 
+test('kopioiPinnanKuva: -puoli.jpg-sisarlähde kopioituu myös, tulos.puoli kertoo sen (era 2b)', () => {
+  const assetsJuuri = uusiTilapaisinenKansio('assets-pinta-puoli-a');
+  const kansio = uusiTilapaisinenKansio('paketti-pinta-puoli-a');
+  try {
+    const sisalto = Buffer.from('testikuva-pinta-tavuja-taysi', 'utf8');
+    const puoliSisalto = Buffer.from('testikuva-pinta-tavuja-puolikas', 'utf8');
+    mkdirSync(join(assetsJuuri, 'pinnat'), { recursive: true });
+    writeFileSync(join(assetsJuuri, 'pinnat', 'kivi.jpg'), sisalto);
+    writeFileSync(join(assetsJuuri, 'pinnat', 'kivi-puoli.jpg'), puoliSisalto);
+    const pinta = { vari: '#b8ad9c', toisto_m: 2, lahde: 'pinnat/kivi.jpg' };
+    const tulos = kopioiPinnanKuva('kivi', pinta, kansio, assetsJuuri);
+    assert.ok(tulos.puoli, 'tulos.puoli puuttuu vaikka -puoli.jpg löytyi assetsJuuresta');
+    assert.equal(tulos.puoli.polku, 'pinnat/kivi-puoli.jpg');
+    assert.equal(tulos.puoli.sha256, sha(puoliSisalto));
+    assert.equal(tulos.puoli.tavuja, puoliSisalto.length);
+    assert.ok(readFileSync(join(kansio, 'pinnat', 'kivi-puoli.jpg')).equals(puoliSisalto));
+    assert.ok(readFileSync(join(kansio, 'pinnat', 'kivi.jpg')).equals(sisalto), 'täysikokoinen ei saa muuttua');
+  } finally {
+    rmSync(assetsJuuri, { recursive: true, force: true });
+    rmSync(kansio, { recursive: true, force: true });
+  }
+});
+
+test('kopioiPinnanKuva: ei -puoli.jpg-sisarlähdettä -> tulos.puoli on undefined (vanha pinta ennen era 2b:tä)', () => {
+  const assetsJuuri = uusiTilapaisinenKansio('assets-pinta-puoli-b');
+  const kansio = uusiTilapaisinenKansio('paketti-pinta-puoli-b');
+  try {
+    const sisalto = Buffer.from('testikuva-pinta-ei-puolikasta', 'utf8');
+    mkdirSync(join(assetsJuuri, 'pinnat'), { recursive: true });
+    writeFileSync(join(assetsJuuri, 'pinnat', 'lankku.jpg'), sisalto);
+    const pinta = { vari: '#caa678', toisto_m: 1.5, lahde: 'pinnat/lankku.jpg' };
+    const tulos = kopioiPinnanKuva('lankku', pinta, kansio, assetsJuuri);
+    assert.equal(tulos.puoli, undefined);
+    assert.equal(existsSync(join(kansio, 'pinnat', 'lankku-puoli.jpg')), false);
+  } finally {
+    rmSync(assetsJuuri, { recursive: true, force: true });
+    rmSync(kansio, { recursive: true, force: true });
+  }
+});
+
 /* ==================== teeHenkilonAtlas ==================== */
 
 test('teeHenkilonAtlas: ei paikkamerkkiä eikä maalattua -> null', () => {
@@ -338,7 +378,7 @@ test('rakennaData: kokki-1500 maalattu-lähde PUUTTUU -> paikkamerkkimuoto; tuli
     assert.equal(liekki.sarakkeet, 4);
     assert.equal(liekki.ruudut, 8);
     assert.equal(liekki.fps, 12);
-    assert.deepEqual(liekki.koko_m, [1.1, 1.1]);
+    assert.deepEqual(liekki.koko_m, [0.42, 0.52]); // korjaus 29.9.2026: liekki pienemmäksi/kapeammaksi (era 2b)
     assert.deepEqual(liekki.pivot, [0.5, 0.06]);
     assert.equal(liekki.atlas, 'liekit/tulisija.png');
     assert.equal('lahde' in liekki, false);

@@ -38,7 +38,14 @@ function kirjoitaPakettiin(kansio, polkuSuhteellinen, buf) {
  * Pinnalla ei ole `lahde`-kenttää lainkaan → null hiljaa (pinnalla ei vain ole
  * tekstuuria, ei virhe eikä puuttuva-lähde-ilmoitusta). `lahde` annettu mutta
  * tiedosto puuttuu levyltä → `ei lähdettä: <polku>` ja null. Palauttaa muuten
- * {polku, sha256, tavuja}.
+ * {polku, sha256, tavuja, puoli?}.
+ *
+ * PUOLIKAS (era 2b, tekstuurimuisti pienille laitteille): jos `<id>-puoli.jpg`
+ * löytyy samasta kansiosta kuin `lahde` (tools/dioraama/tuo-codex.mjs tuottaa
+ * sen tuonnissa), se kopioituu myös pakettiin ja paluuarvon `puoli`-kenttään
+ * ({polku, sha256, tavuja}). Puuttuminen EI ole virhe -- vanhempi pinta ennen
+ * tätä ominaisuutta jää ilman puolikasta, natiivi käyttää silloin täyskokoista
+ * kaikilla laitteilla (DioraamaSovitin.LataaPinta).
  */
 export function kopioiPinnanKuva(id, pinta, kansio, assetsJuuri = OLETUS_ASSETS_JUURI) {
   if (!pinta?.lahde) return null;
@@ -47,7 +54,12 @@ export function kopioiPinnanKuva(id, pinta, kansio, assetsJuuri = OLETUS_ASSETS_
     console.log(`ei lähdettä: ${lahdePolku}`);
     return null;
   }
-  return kirjoitaPakettiin(kansio, `pinnat/${id}.jpg`, readFileSync(lahdePolku));
+  const tulos = kirjoitaPakettiin(kansio, `pinnat/${id}.jpg`, readFileSync(lahdePolku));
+  const puoliLahde = lahdePolku.replace(/\.jpe?g$/i, '-puoli.jpg');
+  if (existsSync(puoliLahde)) {
+    tulos.puoli = kirjoitaPakettiin(kansio, `pinnat/${id}-puoli.jpg`, readFileSync(puoliLahde));
+  }
+  return tulos;
 }
 
 /**
