@@ -329,6 +329,7 @@ namespace Matkakirja.Natiivi
                 Valittu?.Invoke(id);
             }, lista);
             b.tooltip = t.Nimi;
+            if (PilleriValikko) b.AddToClassList("mk-linssirivi--aktivoi");
             var ikoni = new SvgIkoni(string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);
             ikoni.AddToClassList("mk-linssirivi__ikoni");
             b.Add(ikoni);

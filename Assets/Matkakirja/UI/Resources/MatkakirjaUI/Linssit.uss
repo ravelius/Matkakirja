@@ -3902,6 +3902,23 @@
     color: rgba(70, 51, 31, 0.92);
 }
 
+/* Linssit (omistaja 29.9.2026, 1.0.50 palaute 6): linssin nimen kohta muuttuu oranssiksi Aktivoi-napiksi (sama kulta kuin
+ * entinen esikatselun nappi, joka poistui Linsseistä); ikoni jää vasemmalle. */
+.mk-linssirivi--aktivoi.mk-esikatseltu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tekstit {
+    justify-content: center;
+    min-height: 36px;
+    border-radius: 8px;
+    background-color: rgba(217, 161, 59, 0.9);
+}
+
+.mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tila {
+    color: #211d18;
+}
+
 /* Esikatseltu rivi muuttuu samassa kohdassa toimintonapiksi (web: "rivi muuttuu Aktivoi-napiksi"; laite cl2: teksti päällekkäin). */
 .mk-linssirivi.mk-esikatseltu .mk-linssirivi__nimi {
     display: none;

@@ -135,6 +135,9 @@ namespace Matkakirja.Natiivi
             alaTakaisin.style.display = paa ? DisplayStyle.None : DisplayStyle.Flex;
             otsikko.text = n == Nakyma.Linssit ? "LINSSIT" : n == Nakyma.Aarteet ? "AARTEET" : "";
             if (n == Nakyma.Aarteet) RakennaAarteet();
+            // Omistaja 29.9.2026 (1.0.50, palaute 6): Linssit-lista on heti oikealla ja esikatselun paikka valmiina vasemmalla,
+            // jottei teksti hyppää ensimmäisellä valinnalla; Aarteet ennallaan.
+            VaraaEsikatselu();
             vieritys.scrollOffset = Vector2.zero;
         }
 
@@ -157,6 +160,9 @@ namespace Matkakirja.Natiivi
             esiTeksti.text = teksti ?? "";
             esiTeksti.style.display = string.IsNullOrEmpty(teksti) ? DisplayStyle.None : DisplayStyle.Flex;
             esiNappi.text = toimintoNimi;
+            // Linsseissä ainoa Aktivoi on rivin oranssi nappi linssin nimen kohdalla (palaute 6); Aarteissa Näytä-nappi jää.
+            esiNappi.style.display = NykyinenNakyma == Nakyma.Linssit ? DisplayStyle.None : DisplayStyle.Flex;
+            esikatselu.style.visibility = StyleKeyword.Null;
             esiKuva.style.backgroundImage = StyleKeyword.Null;
             esiKuva.style.display = string.IsNullOrEmpty(kuvaUrl) ? DisplayStyle.None : DisplayStyle.Flex;
             if (!string.IsNullOrEmpty(kuvaUrl))
@@ -180,8 +186,25 @@ namespace Matkakirja.Natiivi
             esiId = null;
             esiTila = null;
             esiToiminto = null;
-            if (esikatselu != null && esikatselu.style.display == DisplayStyle.Flex)
-                Ponnahdus.Sulje(esikatselu, () => { esikatselu.style.display = DisplayStyle.None; runko.RemoveFromClassList("mk-linssivalitsin__runko--esikatselu"); });
+            if (esikatselu != null && esikatselu.style.display == DisplayStyle.Flex && esikatselu.resolvedStyle.visibility == Visibility.Visible)
+                Ponnahdus.Sulje(esikatselu, () => { esikatselu.style.display = DisplayStyle.None; runko.RemoveFromClassList("mk-linssivalitsin__runko--esikatselu"); VaraaEsikatselu(); });
+        }
+
+        /// <summary>Linssit-näkymässä tyhjä esikatselu pitää paikkansa näkymättömänä (lista ei siirry valinnassa).</summary>
+        void VaraaEsikatselu()
+        {
+            if (esikatselu == null || esiId != null) return;
+            if (NykyinenNakyma == Nakyma.Linssit && Valikkona)
+            {
+                Ponnahdus.Lopeta(esikatselu);
+                esikatselu.style.display = DisplayStyle.Flex;
+                esikatselu.style.visibility = Visibility.Hidden;
+            }
+            else
+            {
+                esikatselu.style.visibility = StyleKeyword.Null;
+                if (!Ponnahdus.Kaynnissa(esikatselu)) esikatselu.style.display = DisplayStyle.None;
+            }
         }
 
         bool EsikatseluSisaltaa(Vector2 p) => esiId != null && esikatselu.worldBound.Contains(p);

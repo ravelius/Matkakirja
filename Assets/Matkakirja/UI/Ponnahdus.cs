@@ -80,6 +80,9 @@ namespace Matkakirja.Natiivi
             }).Every(0);
         }
 
+        /// <summary>Elementillä on kesken oleva liike.</summary>
+        public static bool Kaynnissa(VisualElement e) => e != null && ajot.ContainsKey(e);
+
         /// <summary>Kesken oleva liike seis nykyiseen arvoon.</summary>
         public static void Lopeta(VisualElement e)
         {
