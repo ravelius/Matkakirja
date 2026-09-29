@@ -7,6 +7,22 @@ namespace Matkakirja.Linssit.Testit
 {
     public static class SimukelloTestit
     {
+        [Testi] static void KerroinSuoraanIlmanLiveHyppya()
+        {
+            var r = new DateTime(2026, 9, 29, 12, 0, 0, DateTimeKind.Utc);
+            var k = new Simukello(() => r);
+            k.AsetaNopeus(10);
+            r = r.AddSeconds(10);
+            var ennen = k.Nyt();
+            k.AsetaKerroin(1);
+            Oleta.Tosi(!k.Live && k.Kerroin == 1 && k.Nyt() == ennen, "1× tästä hetkestä, ei LIVE");
+            r = r.AddSeconds(5);
+            Oleta.Sama(ennen.AddSeconds(5), k.Nyt());
+            k.AsetaKerroin(24);
+            r = r.AddSeconds(1);
+            Oleta.Sama(ennen.AddSeconds(29), k.Nyt());
+        }
+
         static readonly DateTime Alku = new DateTime(2026, 9, 28, 9, 0, 0, DateTimeKind.Utc);
 
         [Testi] static void NopeutusPalaaLiveJaKelausHetkeen()

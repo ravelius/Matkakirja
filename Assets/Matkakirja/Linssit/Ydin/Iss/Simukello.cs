@@ -127,6 +127,20 @@ namespace Matkakirja.Linssit.Iss
         }
 
         /// <summary>
+        /// Kerroin suoraan (myös 1× ilman paluuta LIVE:ksi, toisin kuin AsetaNopeus): simuloitu aika jatkuu tästä hetkestä
+        /// kertoimella <paramref name="k"/> ilman hyppyä. Avaruuskävely: aurinko nousee Pulun repliikin aikana nopeutettuna.
+        /// </summary>
+        public void AsetaKerroin(double k)
+        {
+            var s = Nyt();
+            kelaus = null;
+            live = false;
+            ankkuriR = reaali();
+            ankkuriS = s;
+            kerroin = Math.Max(0, k);
+        }
+
+        /// <summary>
         /// "Palaa LIVE": kelaus todelliseen hetkeen pehmeästi (tavoite liikkuu todellisen kellon mukana), kesto
         /// 0,6 s + 1 s poikkeaman tuntia kohden, enintään 3 s (tai <paramref name="kestoS"/>); vähennetty liike = heti.
         /// Palauttaa kelauksen tunnisteen (0 = oli jo LIVE).

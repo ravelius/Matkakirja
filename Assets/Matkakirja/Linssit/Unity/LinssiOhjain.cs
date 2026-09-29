@@ -1391,6 +1391,26 @@ namespace Matkakirja.Natiivi
                     }
                     else if (osat[1] == "kierros")
                         Kirjaa("astro kierros: " + string.Join(" ", l.KierrosTunnukset()));
+                    else if (osat[1] == "kavely")
+                    {
+                        // Avaruuskävely (29.9.): "astro kavely" = kyytiin tarvittaessa ja kävely alkaa, "astro kavely napauta" =
+                        // pelaajan napautus (seuraava vaihe), "astro kavely pois" = keskeytys, "astro kavely tila" = tila lokiin.
+                        string a = osat.Length > 2 ? osat[2] : "";
+                        if (a == "napauta") l.NapautaIss();
+                        else if (a == "pois") l.LopetaKavely();
+                        else if (a == "alas" && osat.Length > 3)   // A/B katse alas ulkona (°): 45 = oletus, Codexin horisontti ~45 %
+                            Matkakirja.Linssit.Iss.IssKuvakulma.UlkonaKatseAlas = Math.Max(22, Math.Min(70, Luku(osat[3])));
+                        else if (a == "suunta" && osat.Length > 3) Matkakirja.Linssit.Iss.Avaruuskavely.KohtiAurinkoa = osat[3] != "sivu";
+                        else if (a != "tila" && a != "alas" && a != "suunta")
+                        {
+                            if (!l.Kyydissa) l.NapautaIss();
+                            if (!l.AloitaKavely()) Kirjaa("astro kavely: ei alkanut (kyyti, kuva tai avaus kesken)");
+                        }
+                        var k = l.Kavely;
+                        var v = l.KavelynVertailu;
+                        Kirjaa($"astro kavely: {k.Vaihe} (kyyti {l.Kyyti}, alas {Matkakirja.Linssit.Iss.IssKuvakulma.UlkonaKatseAlas:0}°), nousu {(k.NousuHetki.HasValue ? k.NousuHetki.Value.ToString("HH:mm:ss") + " UTC" : "-")}, "
+                            + $"kello {Matkakirja.Linssit.Iss.IssNyt.Simu}, vertailu {(v.HasValue ? v.Value.Kohde.Tunnus + " " + v.Value.Km.ToString("F0") + " km" : "-")}");
+                    }
                     else if (osat[1] == "kyyti")
                     {
                         // ISS:n kyyti (suositus 28.9.): "astro kyyti" = napautus ISS:ään (kauko → seuranta → ikkuna → seuranta),

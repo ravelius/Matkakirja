@@ -302,7 +302,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(y.Musiikkipito, "musiikki pitoon");
             Oleta.Tosi(!RadioLinssi.LuentaSallittu, "luenta estetty radiotilassa");
             Oleta.Sama(RadioVaihe.Hiljaa, l.Tila.Vaihe);
-            Oleta.Sama("RADIO POIS", l.Tila.Rivi1);
+            Oleta.Sama("EI ASEMAA", l.Tila.Rivi1);   // radio on aina päällä (omistaja 29.9.)
             Oleta.Tosi(l.Asteikko.Count > 80, "asteikolla kanavalliset: " + l.Asteikko.Count);
             // Asteikko lännestä itään.
             var lon = l.Asteikko.Select(id => S().Kaupunki(id).Lon).ToList();

@@ -5,6 +5,10 @@
 // KOHTEEN YLLÄ (web iss-kyyti.js TILA.kohde, commit 891958e17; omistaja 28.9.2026 klo 12.1x "Lennä kohteen ylle"): ylilennon
 // perillä silmä ISS:ssä ja katse kohteeseen kuten astronautin vinokuvissa, pitkä objektiivi (noin 90 km leveä alue ruudun
 // pystyyn, 6–50°); napautus palaa seurantaan.
+// ULKONA (avaruuskävely, omistaja 29.9.2026 "Kyllä, radion jälkeen"; suunnitelma docs/raportit/avaruuskavely-suunnitelma-
+// 20260929.md): silmä ISS:n kaiteella, katse radan sivulle 45° alas (kohteen zeniittikulma ~49°), kenttä 70°. Kallistus
+// pidetään alle 55°: laite 29.9. näytti yli ~55–60°:n kallistuksella pitkällä objektiivilla pelkän pohjapallon (#264e91).
+// Tila avataan ja suljetaan vain Avaruuskavely-tilakoneesta (Ulos / Sisaan), napautus ei vaihda sitä.
 //
 // Puhdas C#: kameran asento (Kuvakulma) ISS:n paikasta, korkeudesta ja maajäljen suunnasta, sekä siirtymät asentojen
 // välillä. Kohde liikkuu ajon aikana (7,66 km/s), joten siirtymä sekoittaa lähtöasennon ja kohdetilan TÄMÄN kehyksen
@@ -15,7 +19,7 @@ using Matkakirja.Linssit.Aikajana;
 
 namespace Matkakirja.Linssit.Iss
 {
-    public enum KyydinTila { Kauko, Seuranta, Ikkuna, Kohde }
+    public enum KyydinTila { Kauko, Seuranta, Ikkuna, Kohde, Ulkona }
 
     /// <summary>ISS tällä hetkellä: alapiste, korkeus ellipsoidista (m) ja maajäljen suunta (asteina).</summary>
     public readonly struct IssHetki
@@ -169,6 +173,22 @@ namespace Matkakirja.Linssit.Iss
             return new Kuvakulma(lat, lon, rho, zeta / Deg, loppu, 0);
         }
 
+        /// <summary>Ulkona: katse radan suunnasta näin monta astetta oikealle (sivulle), vaakatason alapuolelle ja kenttäkulma.</summary>
+        public const double UlkonaSivulle = 90, UlkonaKentta = 70;
+        /// <summary>
+        /// Ulkona katse alas (°): 30 = horisontti ~40 % ruudun korkeudesta kuten Codexin kerroksissa (45 %); kohteen zeniittikulma
+        /// 67°, laatat piirtyvät (laite 29.9. kavely2 A/B 45 | 30, kenttä 70°; pitkällä objektiivilla yli ~55° ei piirtynyt).
+        /// A/B `astro kavely alas <aste>`.
+        /// </summary>
+        public static double UlkonaKatseAlas = 30;
+
+        /// <summary>
+        /// Ulkona (avaruuskävely): Ikkunan kaava radan sivulle. 420 km, 45° alas: kohteen zeniittikulma ζ = asin(6 791 / 6 371 ·
+        /// sin 45°) ≈ 48,9°, eli laatat piirtyvät (yli ~55°:n kallistus näytti laitteella vain pohjapallon).
+        /// </summary>
+        public static Kuvakulma Ulkona(in IssHetki iss, double? suunta = null) =>
+            Ikkuna(new IssHetki(iss.Paikka, iss.KorkeusM, suunta ?? (iss.Suuntima + UlkonaSivulle) % 360), UlkonaKatseAlas);
+
         /// <summary>Kaukonäkymän asento pelaajan kamerasta (katse alas, suuntima säilyy).</summary>
         public static Kuvakulma Kauko(double lat, double lon, double korkeusM, double kallistus, double suuntima) =>
             new Kuvakulma(lat, lon, korkeusM, kallistus, suuntima, 0);
@@ -306,6 +326,13 @@ namespace Matkakirja.Linssit.Iss
         public const double PaluuKorkeus = 0.72;
         /// <summary>Siirtymä seurannasta kohteen ylle (s, web KOHTEESEEN_S).</summary>
         public const double KohteeseenS = 1.2;
+        /// <summary>Avaruuskävely: siirtymä ilmalukosta ulos kaiteelle ja takaisin sisään (seurantaan), s.</summary>
+        public const double UlosS = 4, SisaanS = 2;
+        /// <summary>
+        /// Ulkona katseen suunta (asteina pohjoisesta ISS:n alapisteessä) joka kehys, null = radan sivulle. Avaruuskävely antaa
+        /// auringon suunnan (laite 29.9. kavely1: sivulle katsottaessa auringonnousu jäi kuvan ulkopuolelle).
+        /// </summary>
+        public Func<double?> UlkonaSuunta;
 
         /// <summary>Tila, johon ollaan menossa tai jossa ollaan.</summary>
         public KyydinTila Tila { get; private set; } = KyydinTila.Kauko;
@@ -330,7 +357,7 @@ namespace Matkakirja.Linssit.Iss
         bool onKohde;
 
         /// <summary>
-        /// Napautus: kauko → seuranta → ikkuna → seuranta; kohteen yltä takaisin seurantaan. <paramref name="nykyinen"/> on
+        /// Napautus: kauko → seuranta → ikkuna → seuranta; kohteen yltä takaisin seurantaan; ulkona ei mitään (avaruuskävely). <paramref name="nykyinen"/> on
         /// kameran asento nyt.
         /// </summary>
         public void Napauta(in Kuvakulma nykyinen, in IssHetki iss, double kentta, double nyt, bool vahennetty)
@@ -344,6 +371,7 @@ namespace Matkakirja.Linssit.Iss
                 case KyydinTila.Seuranta:
                     Aloita(KyydinTila.Ikkuna, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
                     break;
+                case KyydinTila.Ulkona: break;   // avaruuskävelyn tilakone ohjaa (Ulos / Sisaan)
                 case KyydinTila.Ikkuna:
                 case KyydinTila.Kohde:
                     Aloita(KyydinTila.Seuranta, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
@@ -357,6 +385,20 @@ namespace Matkakirja.Linssit.Iss
             kohdePaikka = paikka;
             onKohde = true;
             Aloita(KyydinTila.Kohde, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : KohteeseenS);
+        }
+
+        /// <summary>Avaruuskävely ulos (Avaruuskavely.Vaihe.Ulos): silmä kaiteelle, katse radan sivulle. Vain kyydissä.</summary>
+        public void Ulos(in Kuvakulma nykyinen, double kentta, double nyt, bool vahennetty)
+        {
+            if (!Kyydissa || Tila == KyydinTila.Kauko) return;
+            Aloita(KyydinTila.Ulkona, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : UlosS);
+        }
+
+        /// <summary>Avaruuskävely päättyi: takaisin sisään seurantaan.</summary>
+        public void Sisaan(in Kuvakulma nykyinen, double kentta, double nyt, bool vahennetty)
+        {
+            if (Tila != KyydinTila.Ulkona) return;
+            Aloita(KyydinTila.Seuranta, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : SisaanS);
         }
 
         /// <summary>✕: paluu kaukonäkymään ISS:n alapisteen ylle korkeudelle <paramref name="kaukoKorkeusM"/>.</summary>
@@ -396,6 +438,7 @@ namespace Matkakirja.Linssit.Iss
             {
                 case KyydinTila.Seuranta: kohde = IssKuvakulma.Seuranta(iss); break;
                 case KyydinTila.Ikkuna: kohde = IssKuvakulma.Ikkuna(iss); kohdeKentta = IssKuvakulma.IkkunanKentta; break;
+                case KyydinTila.Ulkona: kohde = IssKuvakulma.Ulkona(iss, UlkonaSuunta?.Invoke()); kohdeKentta = IssKuvakulma.UlkonaKentta; break;
                 case KyydinTila.Kohde when onKohde:
                     kohde = IssKuvakulma.KohteenKulma(iss, kohdePaikka.Lat, kohdePaikka.Lon);
                     kohdeKentta = IssKuvakulma.KohteenKentta(kohde.EtaisyysM);
