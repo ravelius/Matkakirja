@@ -94,10 +94,12 @@ export const OFFLINE_LAHTEET = {
  *   yovalot (RadioMastot.YovaloUrl, z0–z6): globaalisti z0–z5, maittain rasterin väleillä z6.
  * Natiivi muodostaa osoitteet omista sarjoistaan (kuten rasteriPohja ja maastoLayer); url-kentät kertovat, mistä
  * sarjoista välit ja koot on laskettu. Koot mitataan maittain (HEAD, --paivita-kerrokset) offline-koot.json:iin.
+ * 29.9.2026: kerma 2026-09-27-p060 (Karttaseppä, poltettu pohjasta 2026-09-27-pohja-20260927; natiivin
+ * Kermasarja.Oletus samaan). Pohja ja kerma vaihtuvat yhdessä.
  */
 export const OFFLINE_KERROKSET = {
   kerma: {
-    url: 'https://media.matkakirja.app/julisteet/pallo/kerma/2026-09-26-p060/{alue}/{z}/{x}/{y}.webp',
+    url: 'https://media.matkakirja.app/julisteet/pallo/kerma/2026-09-27-p060/{alue}/{z}/{x}/{y}.webp',
     maaTasot: [3, 8], maailmaAlue: '_maailma', globaaliTasot: [3, 5], maittainTasot: [6, 8],
   },
   reliefi: {
