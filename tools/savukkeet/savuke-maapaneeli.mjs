@@ -707,20 +707,23 @@ for (const ruutu of RUUDUT) {
   /* --- 8a. Liiku levossa ------------------------------------------ */
   const liiku = lepo.liiku;
   /*
-   * NÄKYVÄ POHJA PALASI 29.9.2026 (Siirtosepän pariteettikatsaus, rivi
-   * 6: Liiku hukkui Kreetanmeren nimiöön iPadilla, koska täysin
-   * läpinäkyvällä napilla ei ollut mitään, mikä erottaisi sen toisesta
-   * tekstistä. Ks. css/styles.css .toimintorivi.rivi-yksi
-   * .monitoimi-nappi). Ehto kääntyi ympäri: ennen vaadittiin alpha 0 ja
-   * reunus 0; nyt vaaditaan näkyvä tausta ja reunus.
+   * LÄPINÄKYVYYS PALASI 29.9.2026 (Päätoimittajan päätös PAATOKSET 28
+   * kohta 3: Liiku pysyy läpinäkyvänä; iPadin Kreetanmeri-osuma
+   * korjataan SIIRTÄMÄLLÄ nappi pois keskilinjalta, ei pergamentti-
+   * pohjalla — ks. css/styles.css .toimintorivi.rivi-yksi
+   * .monitoimi-nappi ja tools/savukkeet/savuke-pariteetti-web-20260929.mjs
+   * kohta (c)). Tämän savukkeen RUUDUT (390 ja 1400 px) eivät osu uuden
+   * sijoitussäännön `@media (min-width: 768px) and (orientation:
+   * portrait)` -rajaukseen (390 px on liian kapea, 1400 × 900 on
+   * vaakasuunta), joten keskitysvaatimus `keskipoikkeama <= 8` pysyy
+   * ennallaan molemmilla.
    */
   const liikuHyva = Boolean(liiku
     && liiku.laatikko.y0 >= 0 && liiku.laatikko.y1 <= lepo.ruutu.h + 1
     && liiku.laatikko.y0 > lepo.ruutu.h * 0.5
     && liiku.keskipoikkeama <= 8
-    && !/rgba\([^)]*,\s*0\)/.test(String(liiku.tausta))
-    && liiku.tausta !== 'none' && liiku.tausta !== 'transparent'
-    && liiku.reunus !== '0px'
+    && /rgba\([^)]*,\s*0\)/.test(String(liiku.tausta))
+    && liiku.reunus === '0px'
     && liiku.sana !== 'none' && liiku.sananLeveys > 4
     && liiku.sananPeitto >= 0.5 && liiku.sananPeitto <= 0.8
     && liiku.laatikko.w >= 32 && liiku.laatikko.h >= 32

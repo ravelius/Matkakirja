@@ -29478,6 +29478,40 @@ body.luenta-tekstit-piiloon .pollo-vihje-yksin {
 }
 
 /*
+ * TABLETILLA POIS RUUDUN KESKILINJALTA (omistajan päätös 29.9.2026,
+ * Päätoimittajan kautta: Liiku pysyy läpinäkyvänä — PÄÄTÖKSET 28 kohta 3
+ * ei muutu — mutta paikkaa saa siirtää). Siirtosepän pariteettikatsaus
+ * mittasi 834 × 1194 Kreikalla, että keskilinjalla "Liiku" osui
+ * "KREETANMERI"-nimiöön eikä läpinäkyvä sana erottunut sen päällä.
+ * Nimiöt ovat karttadatan omia tekstejä eri paikoissa joka maalla, eikä
+ * niillä ole ajonaikaista väistömekanismia, jota nappi voisi käyttää
+ * (js/fokuskohteet.js:n "nimiöväistö" ladotaan pakkien
+ * GENEROINTIVAIHEESSA vain kohdemerkkien kesken, kiinteän
+ * ruutukoordinaatin UI-napin ei tarvitse — eikä sen pidä osallistua
+ * siihen). Yksinkertaisin yleinen korjaus on siis siirtää nappi pois
+ * juuri siltä keskilinjalta, jolle useimman maan oletusnäkymä keskittää
+ * rantaviivan ja siten myös meren nimiön: nappi nousee samaan pystyreunaan
+ * kuin Pulu (.pollo-nappi.pollo-kelluu, right: 1.1rem + turva-alue) mutta
+ * jää Pulun ALAPUOLELLE aivan ruudun alalaitaan (Pulu on kartalla 5,3rem
+ * ylhäällä), joten napit eivät voi koskaan osua toisiinsa. Vain PYSTYSSÄ
+ * OLEVA TABLETTI (>= 768px leveä JA `orientation: portrait`, sama
+ * leveysraja kuin maapaneelin kartuschan reunalla rivillä 27617): puhelin
+ * pysyy ennallaan keskellä, koska kapealla ruudulla ei ole sivutilaa
+ * siirtoon (PÄÄTÖKSET 28 kohta 3 kirjaimellisesti), ja TYÖPÖYTÄ/vaaka
+ * pysyy myös ennallaan keskellä, koska leveä maisemaruutu ei ole se
+ * tapaus, jossa Kreetanmeri mitattiin (savuke-maapaneeli.mjs 1400 × 900
+ * -ruutu ja savuke-iphone-tekstit.mjs työpöytäruutu vaativat yhä
+ * keskityksen) — `orientation: portrait` erottaa 834 × 1194:n niistä.
+ */
+@media (min-width: 768px) and (orientation: portrait) {
+  .toimintorivi.rivi-yksi .monitoimi-nappi {
+    left: auto;
+    right: calc(1.1rem + env(safe-area-inset-right, 0px));
+    transform: none;
+  }
+}
+
+/*
  * Rivi varaa yhä napin korkeuden, jottei alapalkki kutistu napin
  * irrotessa ja koko alareuna hypähdä.
  *
@@ -29552,32 +29586,24 @@ body[data-mode] .turn-card:has(.toimintorivi.rivi-yksi) .actions,
  * joissa se asetettiin.
  */
 /*
- * NÄKYVÄ POHJA PALASI 29.9.2026 (Siirtosepän pariteettikatsaus, rivi 6:
- * "Liiku-nappi osuu Kreetanmeren meren nimiöön, eikä sillä näy
- * nappipohjaa (834 × 1194)"). ERÄ 19:n täysin läpinäkyvä nappi
- * (PÄÄTÖKSET 28 kohta 3: *"Tee napista lapinakyva ja teksti
- * kuultavaksi"*) nojasi pelkkään pehmeään halohin (ks. .icon-label
- * text-shadow) kartan taustaa vasten — se ei riitä, kun napin ALLA on
- * TOINEN TEKSTI (kartan meren nimiö), ei vain väri tai kuvio: mitattu
- * iPadilla 834 × 1194 Kreetanmerellä, "Liiku" ja "KREETANMERI" sulivat
- * yhteen luettamattomaksi. Tausta on sama vaalea pergamentti ja ohut
- * mustereunus kuin muilla kartan pikkunapeilla (.karttaselite-nappi),
- * joten Liiku erottuu nyt MINKÄ TAHANSA nimiön päällä — myös silloin
- * kun nimiön siirto olisi oikeampi korjaus (Karttasepän asia, ei
- * korjattu tässä). Tämä poikkeaa PÄÄTÖKSET 28 kohdan 3 sanamuodosta
- * ("läpinäkyvä"); kirjattava Raamattuun, ei muutettu itse tässä.
+ * ERÄ 19: TÄYSIN LÄPINÄKYVÄ NAPPI (PÄÄTÖKSET 28 kohta 3: *"Tee napista
+ * lapinakyva ja teksti kuultavaksi"*). Tausta on `rgba(…, 0)` eikä
+ * `transparent`, jotta savuke voi mitata alphan nollaksi; reunus ja
+ * varjo ovat poissa kokonaan. Kolme sääntöä (perus, hover, disabled)
+ * kumoavat pergamentin täsmälleen niissä kohdissa, joissa se
+ * asetettiin.
  */
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi {
-  background: rgba(244, 231, 202, 0.9);
-  border: 1px solid rgba(70, 51, 31, 0.35);
+  background: rgba(244, 231, 202, 0);
+  border: 0;
   color: #46331f;
   font-weight: 600;
-  box-shadow: 0 1px 3px rgba(20, 14, 6, 0.25);
+  box-shadow: none;
 }
 
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:hover:not(:disabled) {
-  background: rgba(244, 231, 202, 0.97);
-  border: 1px solid rgba(70, 51, 31, 0.35);
+  background: rgba(244, 231, 202, 0);
+  border: 0;
 }
 
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:hover:not(:disabled) .icon-label {
@@ -29585,9 +29611,8 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:hover:not(:disabled) .i
 }
 
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
-  background: rgba(244, 231, 202, 0.55);
-  border: 1px solid rgba(70, 51, 31, 0.18);
-  box-shadow: none;
+  background: rgba(244, 231, 202, 0);
+  border: 0;
   color: rgba(70, 51, 31, 0.45);
   font-weight: 400;
 }
