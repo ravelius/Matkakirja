@@ -1052,6 +1052,8 @@ namespace Matkakirja.Natiivi
                 linssi = new Matkakirja.Linssit.Astronautti.AstronauttiLinssi(aineisto, kerros);
                 kerros.Linssi = linssi;
                 linssi.Avaa(y);
+                // Pelaajan veto tai nipistys päättää ISS-seurannan (web otePalloon); napautus AstronauttiKerros.Napautuksessa.
+                if (o.kierto != null) o.kierto.PelaajanEle += linssi.PelaajanEle;
                 mustaAlku = Time.realtimeSinceStartup;
             }
             float mustaAlku = -1f;
@@ -1064,7 +1066,11 @@ namespace Matkakirja.Natiivi
                 VerkkoOdotus.Kirjaa("linssi", Tiedot.Id + ":musta", (Time.realtimeSinceStartup - mustaAlku) * 1000.0);
                 mustaAlku = -1f;
             }
-            public void Sulje() { linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f; }
+            public void Sulje()
+            {
+                if (linssi != null && o.kierto != null) o.kierto.PelaajanEle -= linssi.PelaajanEle;
+                linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f;
+            }
         }
 
         // ── Profilointimerkit (`ui piikit`, KehysPiikit.cs) ────────────────
@@ -1412,6 +1418,17 @@ namespace Matkakirja.Natiivi
                     }
                     else if (osat[1] == "kierros")
                         Kirjaa("astro kierros: " + string.Join(" ", l.KierrosTunnukset()));
+                    else if (osat[1] == "seuranta")
+                    {
+                        // ISS-seuranta avauksesta (web PAATOKSET 53): "astro seuranta" kertoo, seuraako kamera asemaa, ja kameran
+                        // katseen etäisyyden aseman alapisteestä; "astro seuranta ote" = pelaajan ote palloon.
+                        if (osat.Length > 2 && osat[2] == "ote") l.PelaajanEle();
+                        var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(Matkakirja.Linssit.Iss.IssNyt.Kello());
+                        var (kl, ko) = l.Katse;
+                        Kirjaa($"astro seuranta: {(l.IssSeuranta ? "päällä" : "pois")}, vaihe {l.Vaihe}, katse {kl:F2}, {ko:F2}, "
+                            + $"ISS {p.Lat:F2}, {p.Lon:F2}, ero {Matkakirja.Linssit.Iss.Ylilennot.MaaEtaisyysKm(kl, ko, p.Lat, p.Lon):F0} km, "
+                            + $"korkeus {l.Suhde:F2} × avaus");
+                    }
                     else if (osat[1] == "kavely")
                     {
                         // Avaruuskävely (29.9.): "astro kavely" = kyytiin tarvittaessa ja kävely alkaa, "astro kavely napauta" =

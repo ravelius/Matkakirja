@@ -604,6 +604,8 @@ namespace Matkakirja.Natiivi
         void Napautus(Vector2 ruutu)
         {
             if (Linssi == null || kamera == null) return;
+            // Ote palloon päättää ISS-seurannan (web otePalloon: pointerdown kaappausvaiheessa).
+            Linssi.PelaajanEle();
             PalloNapautettu?.Invoke();
             if (Linssi.Kyydissa) { Linssi.NapautaIss(); return; }
             float kerroin = LinssiOhjain.Pistekerroin;
