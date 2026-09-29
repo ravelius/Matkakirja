@@ -41,6 +41,15 @@ namespace Matkakirja.Linssit.Testit
             finally { IssNyt.Nollaa(); }
         }
 
+        [Testi] static void KatseEnintaan700Km()
+        {
+            var (la, lo) = OmaSijainti.Katsepiste(51.0, 26.0, 64.5, 26.29);
+            double d = Ylilennot.MaaEtaisyysKm(51.0, 26.0, la, lo);
+            Oleta.Tosi(Math.Abs(d - OmaSijainti.KatseKm) < 5, $"katse 700 km: {d:0} km");
+            Oleta.Tosi(la > 51 && la < 64.5 && Math.Abs(lo - 26.1) < 0.5, $"kohti Suomea: {la:0.00}, {lo:0.00}");
+            Oleta.Sama((45.0, 12.0), OmaSijainti.Katsepiste(45.2, 12.1, 45.0, 12.0), "lähellä kohde itse");
+        }
+
         [Testi] static void ValikonRivi()
         {
             Oleta.Sama("Oma sijainti · Suomi", OmaSijainti.Rivi("Suomi"));

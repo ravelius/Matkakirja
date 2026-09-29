@@ -236,7 +236,8 @@ namespace Matkakirja.Linssit.Astronautti
                 {
                     l.Perilla = true;
                     l.PerillaAika = y.Aika;
-                    kyyti.Kohteeseen(new LatLon(l.Kohde.Lat, l.Kohde.Lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
+                    var katse = Iss.OmaSijainti.Katsepiste(l.Ylilento.Value.Lat, l.Ylilento.Value.Lon, l.Kohde.Lat, l.Kohde.Lon);
+                    kyyti.Kohteeseen(new LatLon(katse.lat, katse.lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
                     tietoAika = -1;
                 }
                 else if (Iss.IssNyt.Simu.KelausId != l.Id) { lento = null; tietoAika = -1; }
