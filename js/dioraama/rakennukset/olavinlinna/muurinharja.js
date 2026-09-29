@@ -89,6 +89,8 @@ export const TILA = {
     { paikka: [-11.9, 14.4, -20.0], sade: 3, voima: 0.5, vari: '#ff8a3a', lepatus: 0.2 },
   ],
   palikat: [
+    // Muurin runko kannen alla (uusi tapa 29.9.: leikkaus avaa kuoren, jossa ei ole muurin sisusta).
+    { resepti: 'seina', paikka: [-14.75, -0.3, -20], suunta: 0, pituus: 14.5, korkeus: 13.2, paksuus: 3.6 },
     // Lankkukansi muurin päällä (lankut poikittain, kävelysuunta x): x −22,4…−7,1, z −21,5…−18,5.
     { resepti: 'laiturikansi', paikka: [-14.75, KY, -20], suunta: 90, leveys: 3, pituus: 15.3, paksuus: 0.12, siemen: 1495 },
     // Sakarat pohjoisreunalla (korkeus 1,15: hakapyssyn piippu mahtuu raosta) ja matala kivikaide etelälaidalla.
