@@ -29,6 +29,27 @@ namespace Matkakirja.Linssit.Testit
         public KerrosTila Tila(string avain) => Tilat.TryGetValue(avain, out var t) ? t : KerrosTila.Latautuu;
     }
 
+    /// <summary>Silmukka-kahvan lokiluokka (ISilmukka, Linnanrakentaja erä 2): jokainen Voimakkuus/Lopeta lokiin
+    /// tunnuksineen, jotta testi voi todentaa sovittimen kutsujärjestyksen.</summary>
+    public sealed class ValeSilmukka : ISilmukka
+    {
+        public readonly string Tunnus;
+        readonly List<string> loki;
+        public bool Lopetettu;
+        public float ViimeisinTaso;
+        public ValeSilmukka(string tunnus, List<string> loki) { Tunnus = tunnus; this.loki = loki; }
+        public void Voimakkuus(float taso, float liukuS)
+        {
+            ViimeisinTaso = taso;
+            loki.Add($"silmukka {Tunnus} voimakkuus {taso:0.##} liuku {liukuS:0.##}");
+        }
+        public void Lopeta(float haiveS = 0.35f)
+        {
+            Lopetettu = true;
+            loki.Add($"silmukka {Tunnus} lopeta {haiveS:0.##}");
+        }
+    }
+
     public sealed class ValeYmparisto : ILinssiYmparisto
     {
         public readonly List<string> Loki = new List<string>();
@@ -75,6 +96,16 @@ namespace Matkakirja.Linssit.Testit
         public void LinssiMusiikkiHimmennys(double t) { Loki.Add("raidan taso " + t); RaidanTaso = t; }
         public void Tehoste(string nimi, float voima = 1f) => Loki.Add($"tehoste {nimi} {voima:0.##}");
         public void Taustaaani(string tunnus) => Loki.Add("taustaääni " + (tunnus ?? "pois"));
+        public readonly List<ValeSilmukka> Silmukat = new List<ValeSilmukka>();
+        public ISilmukka Silmukka(string tunnus)
+        {
+            Loki.Add("silmukka+ " + tunnus);
+            var s = new ValeSilmukka(tunnus, Loki);
+            Silmukat.Add(s);
+            return s;
+        }
+        public bool RepliikkiPuhuu;
+        public void Repliikki(bool puhuu) { Loki.Add("repliikki " + puhuu); RepliikkiPuhuu = puhuu; }
         public bool VahennettyLiike => Vahennetty;
         public double Aika => Kello;
     }
