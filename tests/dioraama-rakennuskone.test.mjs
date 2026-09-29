@@ -310,3 +310,76 @@ test('lämpö on suurin valon lähellä, ja nolla huoneessa jossa ei ole valoa e
     rmSync(ulos, { recursive: true, force: true });
   }
 });
+
+/* ==================== 7: tyyppi 'keila' ei vaikuta lämmön leivontaan ==================== */
+
+// 'keilahuone': pelkkä lattia + yksi VOIMAKAS ja LÄHELLÄ oleva tyyppi 'keila' -valo (kuvaa ikkunan
+// aurinkoa). Omistajan valo-päätös 29.9. (era2b kohta 1/2): auringonvalo ei ole lämpöä, joten
+// rakenna.mjs:n pitää ohittaa se COLOR_0.G-leivonnasta — vain hiillos/kynttilä/lamppu-tyyppinen
+// piste- tai tulivalo lämmittää. Fixture on OMA (ei TUPA/AITTA), jotta tämä ei sekoita fixturen
+// muita, jo olemassa olevia lämpötestejä.
+const KEILAHUONE = {
+  id: 'keilahuone',
+  nimi: 'Keilahuone',
+  kohdistettava: true,
+  rajat: { min: [-3, -0.5, -3], max: [3, 3, 3] },
+  naapurit: [],
+  kamera: { kohde: [0, 0, 0], atsimuutti: 0, korkeus: 20, etaisyys: 15, fov: 35, aukko: 0.5 },
+  pulu: { laskeutuminen: [0, 0, 0], taulupuoli: 'oikea' },
+  taulu: {
+    otsikko: 'Keilahuone',
+    tila: 'luonnos',
+    kohdat: [{ teksti: 'a', lahde: 't' }, { teksti: 'b', lahde: 't' }, { teksti: 'c', lahde: 't' }],
+  },
+  valot: [{
+    tyyppi: 'keila', paikka: [0, 0.5, 0], kohti: [0, 0, 0], kulma: 30, sade: 4, voima: 5, vari: '#ffd8a0',
+  }],
+  palikat: [
+    { resepti: 'laatta', paikka: [0, 0, 0], suunta: 0, leveys: 6, syvyys: 6, paksuus: 0.3 },
+  ],
+  hahmot: [],
+  aanet: [],
+  kasikirjoitus: [],
+};
+
+const KEILA_RAKENNUS = {
+  id: 'keila-testi',
+  nimi: 'Keilatesti',
+  otsikko: 'Keilatesti',
+  versio: 1,
+  lahteet: [{ nimi: 'testi', osoite: 'https://example.test/' }],
+  geoAnkkuri: { lat: 0, lon: 0, suuntima: 0 },
+  aikakerros: { id: 'testi', nimi: 'Testi' },
+  yleiskamera: {
+    vaaka: { kohde: [0, 0, 0], atsimuutti: 0, korkeus: 40, etaisyys: 30, fov: 30, aukko: 0.3 },
+    pysty: { kohde: [0, 0, 0], atsimuutti: 0, korkeus: 45, etaisyys: 40, fov: 35, aukko: 0.3 },
+  },
+  pulu: { laskeutuminen: [0, 0, 0] },
+  taulu: {
+    otsikko: 'Keilatesti',
+    tila: 'luonnos',
+    kohdat: [{ teksti: 'x', lahde: 't' }, { teksti: 'y', lahde: 't' }, { teksti: 'z', lahde: 't' }],
+  },
+  tilat: [KEILAHUONE],
+};
+
+test('tyyppi "keila" -valo ei lämmitä (COLOR_0.G pysyy nollassa voimakkaasta lähivalosta huolimatta)', async () => {
+  const ulos = uusiTilapaisinenKansio();
+  try {
+    const tulos = await rakennaData(KEILA_RAKENNUS, { ulos, saateita: SAATEITA_TESTISSA });
+    const glb = lueGlb(readFileSync(join(tulos.kansio, 'tilat', 'keilahuone.glb')));
+    for (const osa of glb.osat) {
+      for (let i = 1; i < osa.varit.length; i += 4) {
+        assert.equal(osa.varit[i], 0, `tyyppi 'keila' -valon pitäisi ohittaa lämmön leivonta, mutta G oli ${osa.varit[i]}`);
+      }
+    }
+
+    // rakennus.json vie valon SELLAISENAAN (tyyppi/kohti/kulma mukana) — lämmön leivonnan ohitus ei
+    // saa pudottaa mitään kenttää pois ajonaikaista (natiivi/esikatselu) käyttöä varten.
+    const rakennusJson = JSON.parse(readFileSync(join(tulos.kansio, 'rakennus.json'), 'utf8'));
+    const huone = rakennusJson.tilat.find((t) => t.id === 'keilahuone');
+    assert.deepEqual(huone.valot, KEILAHUONE.valot);
+  } finally {
+    rmSync(ulos, { recursive: true, force: true });
+  }
+});
