@@ -16,12 +16,14 @@
  * rajapinta (elementti + lähde) on jo sama.
  */
 
-const AVAUS_MS = 220;
-const AVAUS_KAYRA = 'cubic-bezier(0.22, 0.9, 0.24, 1)';
-const SULKU_MS = 200;
-const SULKU_KAYRA = 'cubic-bezier(0.4, 0, 1, 1)';
+/*
+ * Arvot tulevat js/avausanimaatio.js:stä (#3605 on nyt mainissa), jotta
+ * kesto ja käyrä ovat yhdessä paikassa — eikä yhden tiedoston versiossa
+ * synny nimitörmäystä (tools/tarkista-niputus.mjs).
+ */
+import { AVAUS_MS, AVAUS_KAARI, SULKU_MS, SULKU_KAARI } from './avausanimaatio.js';
 
-function vahennettyLiike() {
+function pillerinLiikeVahennetty() {
   try {
     return window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
   } catch {
@@ -36,14 +38,14 @@ function vahennettyLiike() {
  * @param {'oikea'|'vasen'} [lahde] kummasta reunasta liike lähtee (napin puoli)
  */
 export function avaaAnimoiden(el, lahde = 'oikea') {
-  if (!el || typeof el.animate !== 'function' || vahennettyLiike()) return;
+  if (!el || typeof el.animate !== 'function' || pillerinLiikeVahennetty()) return;
   const x = lahde === 'vasen' ? -8 : 8;
   el.animate(
     [
       { opacity: 0, transform: `translate(${x}px, -6px) scale(0.96)` },
       { opacity: 1, transform: 'translate(0, 0) scale(1)' },
     ],
-    { duration: AVAUS_MS, easing: AVAUS_KAYRA, fill: 'backwards' },
+    { duration: AVAUS_MS, easing: AVAUS_KAARI, fill: 'backwards' },
   );
 }
 
@@ -57,13 +59,13 @@ export function avaaAnimoiden(el, lahde = 'oikea') {
  *   liike on vähennetty tai elementtiä ei animoida)
  */
 export async function suljeAnimoiden(el) {
-  if (!el || typeof el.animate !== 'function' || vahennettyLiike()) return;
+  if (!el || typeof el.animate !== 'function' || pillerinLiikeVahennetty()) return;
   const animaatio = el.animate(
     [
       { opacity: 1, transform: 'translate(0, 0) scale(1)' },
       { opacity: 0, transform: 'translate(0, -4px) scale(0.98)' },
     ],
-    { duration: SULKU_MS, easing: SULKU_KAYRA, fill: 'forwards' },
+    { duration: SULKU_MS, easing: SULKU_KAARI, fill: 'forwards' },
   );
   try {
     await animaatio.finished;
