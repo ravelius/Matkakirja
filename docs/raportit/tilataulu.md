@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 13:42:** LEVY 90,77 Gi (laski 96,5→94,6→92,5→90,8 Gi 20 min; hälytys <90, ilmoitettu Päätoimittajalle 13:42). wt/ 13 Gt (14 kohdetta), /private/tmp 25,2 Gt (claude-502 8,6 Gt), proto-3d/lokit 18 Gt. Muisti 58 % vapaa, kuorma 234/286/185 (uusi >200-sarja alkoi, 1/3; Playwright-chromiumit + node ~100 % CPU kukin), sim 0, GPU-chrome 0. Roolit: käynnissä Pelikoodari (68 %) ja Päätoimittaja (62 %); muut levossa (Natiivi-UI 75 %, ilmoitettu). Viikkolimit 91 % (5 h 9 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Postilaatikko: molemmat odotetut Codex-tiedostot tulleet (13:27, 13:37).
+
 **Päivitetty 13:32:** Levy 94,61 Gi (/private/tmp 25,0 Gt, wt/ 12 Gt), muisti 42 % vapaa, kuorma 100/89/84, sim 1, GPU-chrome 0, wt/ 13 kohdetta. Roolit: käynnissä Natiivi-UI (75 %, ilmoitettu 71 %:ssa), Linnanrakentaja (64 %) ja Päätoimittaja (62 %); muut levossa. Viikkolimit 90 % (5 h 7 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Postilaatikko: ylapalkki-matkalaukku tuli 13:27 (b64ebd75c, ilmoitettu), radio-yksikuva-v2 ei vielä.
 
 **Päivitetty 13:22:** Levy 96,49 Gi (/private/tmp 24,6 Gt, wt/ 10 Gt), muisti 46 % vapaa, kuorma 45/57/74, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: kaikki levossa (Linnanrakentaja päättyi 13.13Z→ei käynnissä). Viikkolimit 90 % (5 h 6 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Postilaatikko: uusin fda242204, ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
