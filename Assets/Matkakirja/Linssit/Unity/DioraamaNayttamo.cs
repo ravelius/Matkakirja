@@ -89,6 +89,19 @@ namespace Matkakirja.Natiivi
         public DioraamaIkkunat Ikkunat { get; private set; }
         /// <summary>Fotogrammetrinen ulkokuori laatutasoineen (Olavinlinna, Siirtoseppä 29.9.2026).</summary>
         public DioraamaUlkokuori Ulkokuori { get; private set; }
+        /// <summary>Lokkiparvet lokit:-tyhjistä (tunnelma).</summary>
+        public DioraamaLokit Lokit { get; private set; }
+
+        /// <summary>Tunnelma (DioraamaTunnelma): tausta ja sumu, auringon ja taivaan kerroin, lintujen valo.</summary>
+        public void AsetaTunnelma(bool hamara)
+        {
+            var tausta = hamara ? DioraamaTunnelma.HamaraTausta : TaustaVari;
+            if (Kamera != null) Kamera.backgroundColor = tausta;
+            Shader.SetGlobalColor(IdSumuVari, tausta);
+            DioraamaValot.TunnelmaAurinko = hamara ? DioraamaTunnelma.HamaraAurinko : 1f;
+            DioraamaValot.TunnelmaTaivas = hamara ? DioraamaTunnelma.HamaraTaivas : 1f;
+            Shader.SetGlobalFloat(DioraamaLokit.IdLintuValo, hamara ? DioraamaTunnelma.HamaraLinnut : 1f);
+        }
         /// <summary>
         /// Näyttämön kuva: kamera piirtää tähän, ja DioraamaTaulu näyttää sen koko ruudun UI-elementtinä kerroksessa
         /// LinssiUi.MustaKerros (24, Ihmisen matkan musta tausta). Näin kartan UI (nimet, tilarivi, Liiku) jää alle ja
@@ -112,6 +125,7 @@ namespace Matkakirja.Natiivi
             n.Savu = new DioraamaSavu(n.transform);
             n.Ikkunat = new DioraamaIkkunat(n.transform);
             n.Ulkokuori = new DioraamaUlkokuori(n.transform);
+            n.Lokit = new DioraamaLokit(n.transform);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
             Shader.SetGlobalColor(IdSumuVari, TaustaVari); // sama muunnos kuin kameran taustavärillä
             Shader.SetGlobalVector(IdSumu, new Vector4(1000f, 4000f, 0, 0));
@@ -252,6 +266,7 @@ namespace Matkakirja.Natiivi
             Liekit?.Paivita(null, default, Kamera, t);
             Savu?.Paivita(t, vahennettyLiike, Kamera);
             Ikkunat?.Paivita(t, vahennettyLiike);
+            Lokit?.Paivita(t, vahennettyLiike);
             // Aurinko/pistevalojen lepatus + kohdetilan mukainen varjoetäisyys (era 2b, DioraamaValot.cs).
             Valot?.Paivita(t, vahennettyLiike, Kamera);
         }
@@ -291,6 +306,9 @@ namespace Matkakirja.Natiivi
             Ikkunat = null;
             Ulkokuori?.Tyhjenna();
             Ulkokuori = null;
+            Lokit?.Tyhjenna();
+            Lokit = null;
+            AsetaTunnelma(false); // globaalit takaisin päiväksi (muut linssit)
             if (profiili != null) Destroy(profiili);
             profiili = null;
             syvyys = null;

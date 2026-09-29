@@ -105,6 +105,14 @@ namespace Matkakirja.Natiivi
             nakymaPeitto = () => avoinna;
             // Kehittäjän kuoritason vaihto (komento tai DioraamaTaulun nappi) lataa kuoren uudelleen, jos linssi on auki.
             DioraamaUlkokuori.PakotusVaihtui += () => { if (avoinna && rakennus != null) LataaUlkokuori(); };
+            // Tunnelman vaihto: kuori ja jo ladattujen tilojen atlakset uudelleen oikealla versiolla.
+            DioraamaTunnelma.Vaihtui += () =>
+            {
+                if (!avoinna || rakennus == null) return;
+                LataaUlkokuori();
+                foreach (var t in rakennus.Tilat)
+                    if (!string.IsNullOrEmpty(t.ValoAtlas) && rakennus3D != null && rakennus3D.SisaltaaTilan(t.Id)) o.StartCoroutine(LataaValoAtlas(t));
+            };
         }
 
         /// <summary>Koko ruudun näkymäpeitto (SyoteLukko): tosi, kun linssi on auki.</summary>
@@ -293,8 +301,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Olavinlinna: ulkokuori valitulla laatutasolla (DioraamaUlkokuori), jos paketissa on kuori.</summary>
         void LataaUlkokuori()
         {
+            nayttamo?.AsetaTunnelma(DioraamaTunnelma.Hamara(rakennus));
             if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
-            o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa));
+            o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa, DioraamaTunnelma.Hamara(rakennus)));
             // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).
             double toisto = rakennus.Pinnat != null && rakennus.Pinnat.TryGetValue("vesi", out var vp) && vp.ToistoU > 0 ? vp.ToistoU : 8;
             nayttamo.Ulkokuori.LisaaVesi(rakennus3D?.PinnanMateriaali(rakennus, "vesi"), (float)rakennus.Ulkokuori.VesiY, (float)toisto);
@@ -406,6 +415,7 @@ namespace Matkakirja.Natiivi
                     if (t.Laji == "liekki") nayttamo?.Liekit?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka), o.Kirjaa);
                 nayttamo?.Savu?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
                 nayttamo?.Ikkunat?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
+                nayttamo?.Lokit?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
                 foreach (var t in tyhjat)
                     if (t.Laji == "valo") nayttamo?.Valot?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka));
             }
@@ -418,10 +428,14 @@ namespace Matkakirja.Natiivi
         IEnumerator LataaValoAtlas(Tila tila)
         {
             int kerta = avauskerta;
-            bool puoli = PieniLaite() && !string.IsNullOrEmpty(tila.ValoAtlasPuoli);
-            string polku = puoli ? tila.ValoAtlasPuoli : tila.ValoAtlas;
+            // Hämärä (DioraamaTunnelma): tilan hämäräatlas, jos paketissa; muuten päiväversio.
+            bool hamara = DioraamaTunnelma.Hamara(rakennus) && !string.IsNullOrEmpty(tila.HamaraAtlas);
+            string atlas = hamara ? tila.HamaraAtlas : tila.ValoAtlas, atlasPuoli = hamara ? tila.HamaraAtlasPuoli : tila.ValoAtlasPuoli;
+            string astcTaysi = hamara ? tila.HamaraAtlasAstc : tila.ValoAtlasAstc, astcPuoliP = hamara ? tila.HamaraAtlasAstcPuoli : tila.ValoAtlasAstcPuoli;
+            bool puoli = PieniLaite() && !string.IsNullOrEmpty(atlasPuoli);
+            string polku = puoli ? atlasPuoli : atlas;
             // ASTC-mipketju ensin (valoatlas.astc / astcPuoli), JPEG varalla.
-            string astcPolku = puoli ? tila.ValoAtlasAstcPuoli : tila.ValoAtlasAstc;
+            string astcPolku = puoli ? astcPuoliP : astcTaysi;
             if (!string.IsNullOrEmpty(astcPolku))
             {
                 byte[] astcTavut = null;
@@ -430,6 +444,7 @@ namespace Matkakirja.Natiivi
                 if (kerta != avauskerta || rakennus3D == null) { if (astc != null) UnityEngine.Object.Destroy(astc); yield break; }
                 if (astc != null)
                 {
+                    if (ladatutValoAtlakset.TryGetValue(tila.Id, out var vanhaA) && vanhaA != null && vanhaA != astc) UnityEngine.Object.Destroy(vanhaA);
                     ladatutValoAtlakset[tila.Id] = astc;
                     rakennus3D.AsetaValoAtlas(tila.Id, astc);
                     o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({astc.width}x{astc.height} {astc.format}{(puoli ? ", puolikas" : "")})");
@@ -445,6 +460,7 @@ namespace Matkakirja.Natiivi
             if (!kuva.LoadImage(tavut, false)) { o.Kirjaa($"poikki: valoatlas {polku} ei jäsentynyt (tila harmaana)"); UnityEngine.Object.Destroy(kuva); yield break; }
             kuva.Compress(false);
             if (kerta != avauskerta || rakennus3D == null) { UnityEngine.Object.Destroy(kuva); yield break; } // ks. LataaTila-kommentti
+            if (ladatutValoAtlakset.TryGetValue(tila.Id, out var vanha) && vanha != null && vanha != kuva) UnityEngine.Object.Destroy(vanha); // tunnelman vaihto
             ladatutValoAtlakset[tila.Id] = kuva;
             rakennus3D.AsetaValoAtlas(tila.Id, kuva);
             o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({kuva.width}x{kuva.height}{(puoli ? ", puolikas" : "")})");
@@ -554,6 +570,13 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: peili " + peiliKuvaus);
                 return;
             }
+            // "poikki tunnelma [paiva|hamara|auto]": päivä / iltahämärä (kehittäjä, muistetaan; auto = rakennuksen oletus).
+            if (mita == "tunnelma")
+            {
+                if (arvo != null) DioraamaTunnelma.Pakotettu = arvo == "hamara" ? true : arvo == "paiva" ? false : (bool?)null;
+                o.Kirjaa($"poikki: tunnelma {(DioraamaTunnelma.Hamara(rakennus) ? "hämärä" : "päivä")} ({(DioraamaTunnelma.Pakotettu.HasValue ? "pakotettu" : "rakennuksen oletus " + (rakennus?.Tunnelma ?? "paiva"))})");
+                return;
+            }
             // "poikki kuori [auto|huippu|normaali|kevyt]": ulkokuoren laatutaso (kehittäjän valitsin, muistetaan).
             if (mita == "kuori")
             {
@@ -572,7 +595,7 @@ namespace Matkakirja.Natiivi
                 rakennus = null; latausKaynnissa = false;
                 NollaaNakymanLataukset();
                 rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
-                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); // Olavinlinna: ei tuplia
+                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;

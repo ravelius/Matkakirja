@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Lataa kuoren valitulla tasolla. url = paketin polku → haettava osoite (peili mukana).</summary>
-        public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa)
+        public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa, bool hamara = false)
         {
             Tyhjenna();
             if (kuori == null) yield break;
@@ -97,7 +97,11 @@ namespace Matkakirja.Natiivi
 
             Laatu tavoite = Valittu;
             string Polku(Laatu l) => l == Laatu.Huippu ? kuori.Huippu : l == Laatu.Normaali ? kuori.Normaali : kuori.Kevyt;
-            string AstcPolku(Laatu l) => l == Laatu.Huippu ? kuori.AstcHuippu : l == Laatu.Normaali ? kuori.AstcNormaali : kuori.AstcKevyt;
+            // Hämärä (DioraamaTunnelma): omat tekstuurit samaan UV:hen; puuttuva hämärätaso → päiväversio.
+            string AstcPaiva(Laatu l) => l == Laatu.Huippu ? kuori.AstcHuippu : l == Laatu.Normaali ? kuori.AstcNormaali : kuori.AstcKevyt;
+            string AstcHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraHuippu : l == Laatu.Normaali ? kuori.HamaraNormaali : kuori.HamaraKevyt;
+            string JpgHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraJpgHuippu : l == Laatu.Normaali ? kuori.HamaraJpgNormaali : kuori.HamaraJpgKevyt;
+            string AstcPolku(Laatu l) => hamara && !string.IsNullOrEmpty(AstcHamara(l)) ? AstcHamara(l) : AstcPaiva(l);
             // Nopea ensimmäinen taso: HUIPPU-laitteellakin normaali ensin, ettei 66 Mt:n lataus pidä kuorta poissa.
             var jarjestys = new List<Laatu>();
             Laatu ensin = tavoite == Laatu.Huippu && !string.IsNullOrEmpty(kuori.Normaali) ? Laatu.Normaali : tavoite;
@@ -151,6 +155,19 @@ namespace Matkakirja.Natiivi
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
                     kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
                     if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
+                }
+                if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
+                {
+                    byte[] jpg = null;
+                    using (var p = UnityWebRequest.Get(url(JpgHamara(taso))))
+                    {
+                        p.timeout = 120;
+                        yield return p.SendWebRequest();
+                        if (p.result == UnityWebRequest.Result.Success) jpg = p.downloadHandler.data;
+                    }
+                    if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
+                    if (jpg != null) koottu.Kuva = jpg; // sama JPEG-polku alla
+                    else kirjaa?.Invoke($"poikki: kuori {taso} hämärä-JPEG ei latautunut, päivätekstuuri");
                 }
                 if (kuva == null && koottu.Kuva != null)
                 {

@@ -91,6 +91,9 @@ namespace Matkakirja.Natiivi
             set { tuliPaalla = value; PaivitaPisteValojenTilat(); }
         }
 
+        /// <summary>Tunnelman kertoimet (DioraamaTunnelma, Olavinlinna hämärä): aurinko ja taivas; 1 = päivä.</summary>
+        public static float TunnelmaAurinko = 1f, TunnelmaTaivas = 1f;
+
         public DioraamaValot(Transform juuri) { this.juuri = juuri; }
 
         void PaivitaPisteValojenTilat()
@@ -132,7 +135,7 @@ namespace Matkakirja.Natiivi
                 float tavoite = sisalla ? 1f : 0f;
                 sisallaTaso = Mathf.MoveTowards(sisallaTaso, tavoite, Time.unscaledDeltaTime / SisallaSiirtymaS);
                 if (aurinkoValo != null)
-                    aurinkoValo.intensity = aurinkoPerusVoima * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
+                    aurinkoValo.intensity = aurinkoPerusVoima * TunnelmaAurinko * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
                 PaivitaTaivasVoima();
             }
 
@@ -222,7 +225,7 @@ namespace Matkakirja.Natiivi
             aurinkoPerusVoima = (float)(aurinko?.Voima ?? 1.15);
             // sisallaTaso: 0 tällä hetkellä (Valmistele nollaa/pysyy vanhassa arvossa vain kesken latauksen
             // uudelleenlataus-tapauksessa) -- Paivita() päivittää tämän joka ruutu Sisalla-kertoimella.
-            aurinkoValo.intensity = aurinkoPerusVoima * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
+            aurinkoValo.intensity = aurinkoPerusVoima * TunnelmaAurinko * Mathf.Lerp(1f, (float)sisallaAurinkoKerroin, sisallaTaso);
             aurinkoValo.color = TaivasVari(aurinko?.Vari, AurinkoOletusVari);
             aurinkoValo.enabled = aurinkoPaalla;
         }
@@ -243,7 +246,7 @@ namespace Matkakirja.Natiivi
         /// kohdistetun tilan ja yleisnäkymän välillä (era2b, omistajan valo-päätös 29.9.).</summary>
         void PaivitaTaivasVoima()
         {
-            float voima = taivasPerusVoima * Mathf.Lerp(1f, (float)sisallaTaivasKerroin, sisallaTaso);
+            float voima = taivasPerusVoima * TunnelmaTaivas * Mathf.Lerp(1f, (float)sisallaTaivasKerroin, sisallaTaso);
             Shader.SetGlobalVector(IdTaivasYla, new Vector4(taivasYlaVari.r, taivasYlaVari.g, taivasYlaVari.b, voima));
             Shader.SetGlobalVector(IdTaivasAla, new Vector4(taivasAlaVari.r, taivasAlaVari.g, taivasAlaVari.b, 1f));
 

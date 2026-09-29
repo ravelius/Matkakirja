@@ -56,7 +56,7 @@ namespace Matkakirja.Natiivi
                 int kaksoispiste = s.Nimi.IndexOf(':');
                 if (kaksoispiste <= 0) continue;
                 string laji = s.Nimi.Substring(0, kaksoispiste).ToLowerInvariant();
-                if (laji != "valo" && laji != "liekki" && laji != "ikkuna") continue;
+                if (laji != "valo" && laji != "liekki" && laji != "ikkuna" && laji != "savu" && laji != "lokit") continue;
                 var m = Maailma(i, 0);
                 tulos.Add(new DioraamaTyhja
                 {
@@ -98,6 +98,7 @@ namespace Matkakirja.Natiivi
             if (tyhjat == null) return;
             foreach (var t in tyhjat)
             {
+                if (t.Laji == "savu") { LisaaPiippu(tilaId, tilanJuuri, t, kirjaa); continue; }
                 if (t.Laji != "liekki") continue;
                 Vector3 maailma = tilanJuuri != null ? tilanJuuri.TransformPoint(t.Paikka) : t.Paikka;
                 liekkipisteet.Add(new Vector4(maailma.x, maailma.y, maailma.z, t.Luku("sade", 2.5f)));
@@ -123,6 +124,39 @@ namespace Matkakirja.Natiivi
             }
             PaivitaLiekkipisteet();
             kirjaa?.Invoke($"poikki: {tilaId} savu {emitterit.Count} emitteriä, liekkipisteitä {liekkipisteet.Count}");
+        }
+
+        static readonly int IdVari = Shader.PropertyToID("_Vari"), IdLammin = Shader.PropertyToID("_Lammin"),
+            IdElinaika = Shader.PropertyToID("_Elinaika");
+
+        /// <summary>
+        /// Tunnelma: savu:NN piipun suulle (extras leveys m 0,6, korkeus m nousu 4, voima 0–1 0,6, vari "#8a8580").
+        /// Sama GPU-savu kuin liekeillä, mutta tasainen väri (ei liekin heijastusta), hitaampi ja korkeampi.
+        /// </summary>
+        void LisaaPiippu(string tilaId, Transform tilanJuuri, DioraamaTyhja t, Action<string> kirjaa)
+        {
+            if (varjostin == null) { kirjaa?.Invoke("poikki: DioraamaSavu-varjostin puuttuu"); return; }
+            VarmistaMesh();
+            float leveys = Mathf.Max(0.1f, t.Luku("leveys", 0.6f)), korkeus = Mathf.Max(0.5f, t.Luku("korkeus", 4f));
+            Color vari = new Color(0.54f, 0.52f, 0.50f);
+            if (t.Extras != null && t.Extras.TryGetValue("vari", out var v) && v is string hex) ColorUtility.TryParseHtmlString(hex, out vari);
+            var m = new Material(varjostin) { name = "Piippu:" + tilaId + "/" + t.Id };
+            m.SetColor(IdVari, vari);
+            m.SetColor(IdLammin, vari);
+            m.SetFloat(IdKorkeus, korkeus);
+            m.SetVector(IdKoko, new Vector4(leveys, leveys * 3.5f, 0, 0));
+            m.SetFloat(IdPeitto, 0.45f * Mathf.Clamp01(t.Luku("voima", 0.6f)));
+            m.SetFloat(IdElinaika, 9f);
+            var go = new GameObject("Piippu:" + tilaId + "/" + t.Id) { layer = DioraamaNayttamo.Kerros };
+            go.transform.SetParent(juuri, false);
+            go.transform.position = tilanJuuri != null ? tilanJuuri.TransformPoint(t.Paikka) : t.Paikka;
+            go.AddComponent<MeshFilter>().sharedMesh = mesh;
+            var r = go.AddComponent<MeshRenderer>();
+            r.sharedMaterial = m;
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            r.receiveShadows = false;
+            r.localBounds = new Bounds(new Vector3(0, korkeus * 0.5f, 0), new Vector3(korkeus + leveys * 4f, korkeus + 2f, korkeus + leveys * 4f));
+            emitterit.Add((go, m));
         }
 
         /// <summary>Dioraaman aika t (sama kuin liekeillä); vähennetty liike jäädyttää savun.</summary>
