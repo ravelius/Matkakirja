@@ -11,26 +11,26 @@
 // henkilöpankin '-1500'-hahmoilla.
 
 // ---------------------------------------------------------------------------
-// Linnan taulu (RAKENNUS-tason opetustaulu, 3 ydinasiaa). Lähde TARKISTAMATTA:
+// Linnan taulu (RAKENNUS-tason opetustaulu, 3 ydinasiaa). Sisältökirjuri tarkisti 29.9. (Kansallismuseo, Museovirasto, Finna):
 // tekstit ovat luonnos, Fable/Sisältökirjuri tarkistaa ja korvaa oikealla lähteellä.
 const TAULU_LINNA = {
   otsikko: 'Olavinlinna',
-  tila: 'luonnos',
+  tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Olavinlinna rakennettiin 1475 kalliosaarelle vartioimaan valtakunnan itärajaa.', lahde: 'TARKISTAMATTA' },
-    { teksti: 'Keskiaikaista kivilinnaa on korjattu ja laajennettu vuosisatojen kuluessa moneen otteeseen.', lahde: 'TARKISTAMATTA' },
-    { teksti: 'Nykyään linnassa on museo, ja kesäisin sen pihat toimivat oopperajuhlien näyttämönä.', lahde: 'TARKISTAMATTA' },
+    { teksti: 'Olavinlinna rakennettiin 1475 kalliosaarelle vartioimaan valtakunnan itärajaa.', lahde: 'Kansallismuseo: Olavinlinnan historiaa' },
+    { teksti: 'Keskiaikaista kivilinnaa on korjattu ja laajennettu vuosisatojen kuluessa moneen otteeseen.', lahde: 'Kansallismuseo: Olavinlinnan historiaa' },
+    { teksti: 'Nykyään linnassa on museo, ja kesäisin sen pihat toimivat oopperajuhlien näyttämönä.', lahde: 'Kansallismuseo: Olavinlinnan historiaa' },
   ],
 };
 
 // Keittiön opetustaulu (TILA-tason, 3 kohtaa).
 const TAULU_KEITTIO = {
   otsikko: 'Linnan keittiö',
-  tila: 'luonnos',
+  tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'TARKISTAMATTA' },
-    { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'TARKISTAMATTA' },
-    { teksti: 'Keittiö ruokki koko linnaväen: vartijat, palvelusväen ja isännän pöytään kutsutut vieraat.', lahde: 'TARKISTAMATTA' },
+    { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä' },
+    { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä' },
+    { teksti: 'Keittiö ruokki koko linnaväen: vartijat, palvelusväen ja isännän pöytään kutsutut vieraat.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä' },
   ],
 };
 
@@ -148,7 +148,7 @@ const KEITTIO_HAHMOT = [
     silmukka: 'kavely', heraa: 2,
     reitti: { pisteet: [[19.5, 0, 9.5], [13.8, 0, 5.6], [19.5, 0, 9.5]], nopeus: 1.0, tauko: 1.5 },
     repliikit: [
-      { id: 'vesipoika-1', teksti: 'Kaivosta tänne ja takaisin, jalat tuntevat jo polun ulkoa.', aani: null },
+      { id: 'vesipoika-1', teksti: 'Järvestä tänne ja takaisin, jalat tuntevat jo polun ulkoa.', aani: null },
       { id: 'vesipoika-2', teksti: 'Yksi sanko kokille, toinen padalle — kolmannen taidan juoda itse.', aani: null },
     ],
     reaktio: { id: 'pulu-vesipoika-r1', teksti: 'Kymmeniä sankoja päivässä! Vesijohtoa hän ei ehtinyt nähdä.', aani: null },
