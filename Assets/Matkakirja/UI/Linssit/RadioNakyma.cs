@@ -304,8 +304,9 @@ namespace Matkakirja.Natiivi
         {
             float ala = kerros.Reunat(LinssiUi.Kerros).w;
             // Paneeli turva-alueen sisällä kaikilla laitteilla (Päätoimittajan katselmus 29.9.: ennen puhelimessa puu jatkui
-            // kotipalkin alle tyhjänä): kelluu 8 pt turva-alueen yläpuolella, tasaiset 12 pt:n raot.
-            juuri.style.paddingBottom = ala + 8f;
+            // kotipalkin alle tyhjänä): alareuna turva-alueen reunassa, tasaiset 12 pt:n raot.
+            // Omistaja 29.9. klo 22: "Laske radio alaspäin" → alareuna turva-alueen reunaan, kartalle enemmän tilaa.
+            juuri.style.paddingBottom = ala;
             kotelo.style.paddingBottom = pinnat ? (levea ? 14f : 12f) : 8f;
         }
 
