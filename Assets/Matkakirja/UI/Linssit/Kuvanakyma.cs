@@ -26,6 +26,8 @@
 // viereisen kohteen kuvat maailmankierroksella, joten selaus ei pääty. Tausta on läpikuultava, ja linssin pallo liukuu kuvan
 // kohteen ylle (AstronauttiLinssi.AvaaKohde): kuvan takana hohtaa himmeästi maapallo juuri kuvan kohdalta, kuin ikkunasta.
 // Liu'ut 140 + 160 ms; pieni liike pois: suora vaihto.
+// AVAUS JA SULKU (Raamattu PR #3602, omistaja 29.9.2026): näkymä kasvaa ja häivyttyy esiin kohteen pisteestä ruudulla
+// (napautettu kohta; Pulun tervetulossa väärä kohde) ja sulkeutuu samaa reittiä, Ponnahdus-apurilla webin arvoin.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -186,7 +188,9 @@ namespace Matkakirja.Natiivi
             if (!Auki)
             {
                 Auki = true;
-                juuri.style.display = DisplayStyle.Flex;
+                // Kasvaa esiin kohteen pisteestä (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; Ponnahdus = webin arvot).
+                Ruudunpaivitys.Herata(Ponnahdus.AukiS + 0.1f);
+                Ponnahdus.Avaa(juuri, Origo(k));
                 SyoteLukko.Esta(this);
                 AukiMuuttui?.Invoke(true);
             }
@@ -232,7 +236,9 @@ namespace Matkakirja.Natiivi
             liuku?.Pause();
             liukuu = pyyhkaisy = false;
             kuva.style.opacity = StyleKeyword.Null;
-            juuri.style.display = DisplayStyle.None;
+            // Sulkeutuu samaa reittiä avauksen pisteeseen (Ponnahdus, 200 ms); linssi ja pallo saavat syötteen heti.
+            Ruudunpaivitys.Herata(Ponnahdus.KiinniS + Ponnahdus.PoistoViiveS + 0.1f);
+            Ponnahdus.Sulje(juuri);
             pulukortti.Sulje();
             sormet.Clear();
             SyoteLukko.Vapauta(this);
@@ -242,6 +248,17 @@ namespace Matkakirja.Natiivi
         }
 
         void SuljeKuva() => Sulje(true);
+
+        /// <summary>
+        /// Avauksen suunta: kohteen piste ruudulla paneelin koordinaateissa eli napautettu kohta, tai Pulun tervetulossa väärä
+        /// kohde, jonka nokka räppäisi auki. null (keskeltä), jos piste ei näy.
+        /// </summary>
+        Vector2? Origo(Havaintokohde k)
+        {
+            var kerros = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>();
+            if (k == null || kerros == null || juuri.panel == null || !kerros.KohdeRuudulla(k.Tunnus, out var px)) return null;
+            return RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(px.x, Screen.height - px.y));
+        }
 
         /// <summary>
         /// Avoin kuva pulun kontekstiin (web pollo.js avoinAvaruuskuva): nimi, seutu ja pelaajan näkemä
@@ -396,6 +413,12 @@ namespace Matkakirja.Natiivi
         string luettu, luennanUrl;
 
         /// <summary>
+        /// Selitettä ei lueta, kun tämä on tosi: Pulun tervetulo puhuu, ja sen C1 avaa väärän kuvan kesken repliikin (omistaja
+        /// 8.9.2026: pulun ja kertojan äänet eivät mene päällekkäin; PulunTervetuloNakyma asettaa).
+        /// </summary>
+        public static Func<bool> LuentaEste;
+
+        /// <summary>
         /// SELITE LUETAAN ÄÄNEEN (omistaja 28.9.2026: "Tee selitteelle myös striinilukija joka automaattisesti päällä"; web
         /// satelliitti.js lueSelite, PR #3568): kuvan avautuessa ja vaihtuessa selite luetaan kertojan äänellä palavirtana
         /// (Puhe.Lue), kun Kertoja on päällä (sama kytkin kuin matkakirjan automaattisella luennalla). Uusi kuva keskeyttää
@@ -405,7 +428,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void LueSelite(Havainto h)
         {
-            if (kohde == null || !Puhe.Paalla) return;
+            if (kohde == null || !Puhe.Paalla || LuentaEste?.Invoke() == true) return;
             string t = kohde.Luettava(h);
             if (string.IsNullOrEmpty(t) || t == luettu) return;
             luettu = t;

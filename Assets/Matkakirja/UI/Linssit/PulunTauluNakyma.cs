@@ -11,12 +11,15 @@
 //
 // Leveys min(232, ruutu − 32) pt, tumma lasi rgba(6,13,10,0.8), vihreä reuna 0,28, kulmat 12 pt, ei varjoa.
 // AVAAJAT: Pulun napautus linssissä (UiNakymat, Pulu.NapautusEstetty), valokuvan minipulu (Kuvanakyma) ja "Näkymät"-nappi
-// Pulun paikalla, kun Pulu ei ole näkyvissä. Napautuksella avattaessa puhuva Pulu vaikenee; automaattinen avaus ei
-// koskaan vaienna. AVAUS KERRAN ITSESTÄÄN linssin paljastuksen jälkeen (web: tervetulon jälkeen, tai heti, jos tervetuloa
-// ei ole; natiivissa ei vielä tervetuloa): Pulu hiljaa, 600 ms hengähdys, katto 90 s, ei jos pelaaja jo valitsi.
+// Pulun paikalla, kun Pulu ei ole näkyvissä. Napautuksella avattaessa puhuva Pulu vaikenee ja tervetulo ohittuu; automaattinen
+// avaus ei koskaan vaienna. AVAUS KERRAN ITSESTÄÄN Pulun tervetulon jälkeen (PulunTervetuloNakyma, web #3575), tai linssin
+// paljastuksen jälkeen, jos tervetuloa ei ole (kuultu tai mykistetty): Pulu hiljaa, 600 ms hengähdys, katto 90 s, ei jos
+// pelaaja jo valitsi.
 // SULKEVAT: ✕, rivin valinta, Kysy Pululta, uusi napautus avaajaan, napautus muualle (ei niele: ISS:n napautus vie silti
 // kyytiin), linssin sulku. PAIKKA (PulunTaulu.Sijoita): Pulun yllä tai vasemmalla, ei koskaan Pulun eikä ISS-merkin
-// päällä; auki ollessa mitataan 400 ms:n välein. Häivytys 160 ms (peitto ja 6 pt:n nousu), pieni liike pois: suoraan.
+// päällä; auki ollessa mitataan 400 ms:n välein. AVAUS JA SULKU (Raamattu PR #3602, omistaja 29.9.2026): taulu kasvaa ja
+// häivyttyy esiin avaajan (Pulu, minipulu, Näkymät) suunnasta ja sulkeutuu samaa reittiä (Ponnahdus, webin arvot 220/200 ms);
+// pieni liike pois: suoraan.
 // LAAJENNUS: LisaaRivi lisää rivin ISS-rivien jälkeen (Linssiseppä 2:n avaruuskävely, Päätoimittaja 29.9.2026).
 using System;
 using System.Collections.Generic;
@@ -36,7 +39,12 @@ namespace Matkakirja.Natiivi
         bool linssiAuki, pulunPaikalla = true;
         string paikka;
         float ala;
-        IVisualElementScheduledItem seuranta, paikkaKierros, automaattiAjo, haivytys;
+        IVisualElementScheduledItem seuranta, paikkaKierros, automaattiAjo;
+        /// <summary>Avaajan keskipiste paneelin koordinaateissa: taulu kasvaa siitä ja sulkeutuu sinne.</summary>
+        Vector2? avaajanPiste;
+
+        /// <summary>Pulun ISS-tervetulo (web #3575): linssin ensimmäisellä kuultavalla avauksella ennen taulun automaattiavausta.</summary>
+        public readonly PulunTervetuloNakyma Tervetulo;
 
         enum Automaatti { Odottaa, Avattu, Ohitettu, Valittu, Katto }
         Automaatti automaatti = Automaatti.Ohitettu;
@@ -72,6 +80,8 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(paneeli, Kirjasin.Luku);
             // Kosketukset taulussa eivät valu kuvaan eivätkä palloon.
             paneeli.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            // Kasvun keskipiste pysyy avaajassa, vaikka taulun paikka tai korkeus asettuu vasta avauksen jälkeen.
+            paneeli.RegisterCallback<GeometryChangedEvent>(_ => OrigoAvaajaan());
             var ylarivi = Rakenne.El("mk-astroTaulu__ylarivi", paneeli, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(PulunTaulu.Otsikko, "mk-astroTaulu__otsikko", ylarivi), Kirjasin.LukuLihava);
             var sulku = Rakenne.Nappi(null, "mk-astroTaulu__sulku", () => Sulje("sulku"), ylarivi);
@@ -79,11 +89,13 @@ namespace Matkakirja.Natiivi
             var ympyra = Rakenne.El("mk-astroTaulu__sulkuYmpyra", sulku, PickingMode.Ignore);
             Rakenne.Teksti("×", "mk-astroTaulu__sulkuMerkki", ympyra);
             rivit = Rakenne.El("mk-astroTaulu__rivit", paneeli, PickingMode.Ignore);
-            var linkki = Rakenne.Nappi(null, "mk-astroTaulu__linkki", KysyPululta, paneeli);
+            // Sulkeutuva taulu (200 ms) ei enää toimi: linkki ja rivit vain auki ollessa.
+            var linkki = Rakenne.Nappi(null, "mk-astroTaulu__linkki", () => { if (Auki) KysyPululta(); }, paneeli);
             var linkkiTeksti = Rakenne.Teksti("<u>" + PulunTaulu.KysyTeksti + "</u>", "mk-astroTaulu__linkkiTeksti", linkki);
             linkkiTeksti.enableRichText = true;
 
             astro.Kuva.MinipuluNapautettu += () => Vaihda("minipulu");
+            Tervetulo = new PulunTervetuloNakyma(kerros);
         }
 
         readonly HashSet<VisualElement> kuunnellut = new HashSet<VisualElement>();
@@ -108,6 +120,7 @@ namespace Matkakirja.Natiivi
             linssiAuki = auki;
             if (!auki)
             {
+                Tervetulo.Pura();
                 Sulje("linssi");
                 PeruVaihto();
                 automaattiAjo?.Pause();
@@ -117,6 +130,8 @@ namespace Matkakirja.Natiivi
                 return;
             }
             linssiAlkoi = Time.unscaledTime;
+            // Tervetulo ensin (kerran per laite), taulu itsestään sen jälkeen (web satelliitti.js: tervetulo → taulu).
+            Tervetulo.Aloita();
             automaatti = Automaatti.Odottaa;
             automaattiAjo?.Pause();
             automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn(0);
@@ -158,13 +173,18 @@ namespace Matkakirja.Natiivi
 
         public void Vaihda(string syy) { if (Auki) Sulje(syy); else Avaa("napautus:" + syy); }
 
+        /// <summary>Soiko Livia juuri nyt: puhekanava tai tervetulon oma repliikki (web liviaPuhuu).</summary>
+        bool LiviaPuhuu => Aanet.PuluPuhuu || Tervetulo.Puhuu;
+
         public bool Avaa(string syy)
         {
             if (!linssiAuki) return false;
             bool napautus = syy.StartsWith("napautus", StringComparison.Ordinal);
-            if (napautus && Aanet.PuluPuhuu)
+            if (napautus && LiviaPuhuu)
             {
-                // Pelaajan napautus on pyyntö juuri nyt: puhe vaikenee (web vaikene). Automaattinen avaus ei vaienna.
+                // Pelaajan napautus on pyyntö juuri nyt: tervetulo ohittuu ja puhe vaikenee (web tervetulo.ohita + vaikene).
+                // Automaattinen avaus ei vaienna.
+                Tervetulo.Ohita();
                 Aanet.Pysayta(AaniKanava.Puhe);
                 if (Puhe.Instanssi != null && Puhe.Instanssi.PuluaaniSoi) Puhe.Instanssi.Pysayta(0.3f);
                 loki.Add("vaiensi");
@@ -178,9 +198,11 @@ namespace Matkakirja.Natiivi
             if (automaatti == Automaatti.Odottaa) automaatti = Automaatti.Ohitettu;
             Rakenna();
             paikka = null;
-            paneeli.style.display = DisplayStyle.Flex;
+            // Kasvaa esiin avaajan suunnasta (Raamattu AVAUS JA SULKU AINA ANIMOIDEN; Ponnahdus näyttää paneelin).
+            avaajanPiste = AvaajanKeski();
+            Ruudunpaivitys.Herata(Ponnahdus.AukiS + 0.1f);
+            Ponnahdus.Avaa(paneeli, avaajanPiste);
             Sijoita(false);
-            Haivyta(true);
             seuranta?.Pause();
             seuranta = paneeli.schedule.Execute(() => Sijoita(true)).Every((long)PulunTaulu.SeurantaMs);
             return true;
@@ -192,33 +214,19 @@ namespace Matkakirja.Natiivi
             Auki = false;
             loki.Add("sulje:" + syy);
             seuranta?.Pause();
-            Haivyta(false);
+            // Samaa reittiä takaisin avaajaan (myös ✕, ohinapautus, valinta ja linssin sulku).
+            Ruudunpaivitys.Herata(Ponnahdus.KiinniS + Ponnahdus.PoistoViiveS + 0.1f);
+            Ponnahdus.Sulje(paneeli);
             return true;
         }
 
-        void Haivyta(bool nakyviin)
+        /// <summary>Kasvun keskipiste avaajaan skaalaamattoman laatikon koordinaateissa (sama kaava kuin Ponnahduksessa).</summary>
+        void OrigoAvaajaan()
         {
-            haivytys?.Pause();
-            var s = paneeli.style;
-            if (LinssiUi.VahennettyLiike())
-            {
-                s.opacity = nakyviin ? 1f : 0f;
-                s.translate = new Translate(0, 0);
-                if (!nakyviin) s.display = DisplayStyle.None;
-                return;
-            }
-            float alku = Time.unscaledTime, a0 = nakyviin ? 0f : paneeli.resolvedStyle.opacity, a1 = nakyviin ? 1f : 0f;
-            haivytys = paneeli.schedule.Execute(() =>
-            {
-                Ruudunpaivitys.Herata(0.1f);
-                float t = Mathf.Clamp01((Time.unscaledTime - alku) * 1000f / PulunTaulu.HaivytysMs);
-                float k = Tiivistys.Ease(t);
-                s.opacity = Mathf.Lerp(a0, a1, k);
-                s.translate = new Translate(0, nakyviin ? 6f * (1f - k) : 6f * k);
-                if (t < 1f) return;
-                haivytys.Pause();
-                if (!nakyviin) s.display = DisplayStyle.None;
-            }).Every(16);
+            if (!avaajanPiste.HasValue || paneeli.parent == null || !(paneeli.layout.width > 0f)) return;
+            var r = new Rect(paneeli.parent.worldBound.position + paneeli.layout.position, paneeli.layout.size);
+            var p = avaajanPiste.Value;
+            paneeli.style.transformOrigin = new TransformOrigin(Mathf.Clamp(p.x - r.x, 0f, r.width), Mathf.Clamp(p.y - r.y, 0f, r.height), 0f);
         }
 
         void Rakenna()
@@ -241,7 +249,7 @@ namespace Matkakirja.Natiivi
 
         void Rivi(string otsikko, string selite, bool valittu, Action valinta)
         {
-            var b = Rakenne.Nappi(null, "mk-astroTaulu__rivi" + (valittu ? " mk-valittu" : ""), valinta, rivit);
+            var b = Rakenne.Nappi(null, "mk-astroTaulu__rivi" + (valittu ? " mk-valittu" : ""), () => { if (Auki) valinta(); }, rivit);
             b.tooltip = otsikko;
             Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-astroTaulu__riviOtsikko", b), Kirjasin.LukuLihava);
             Rakenne.Teksti(selite, "mk-astroTaulu__riviSelite", b);
@@ -346,14 +354,15 @@ namespace Matkakirja.Natiivi
         {
             if (!linssiAuki || automaatti != Automaatti.Odottaa) return;
             if ((Time.unscaledTime - linssiAlkoi) * 1000f > PulunTaulu.AutomaattiKattoMs) { automaatti = Automaatti.Katto; return; }
-            // Linssin oma paljastus (musta → otsikko → pallo) ohi: web avaruus.paljastettu().
-            bool paljastettu = Linssi()?.Vaihe == AvauksenVaihe.Pois;
-            if (!paljastettu || Aanet.PuluPuhuu) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
+            // Tervetulo ensin: taulu odottaa, kun se odottaa verhoa tai puhuu (web tervetulo.tila().vaihe). Ilman tervetuloa linssin
+            // oma paljastus (musta → otsikko → pallo) ohi: web avaruus.paljastettu().
+            bool valmis = Tervetulo.Jakso != null ? !Tervetulo.Kesken : Linssi()?.Vaihe == AvauksenVaihe.Pois;
+            if (!valmis || LiviaPuhuu) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
             automaattiAjo = paneeli.schedule.Execute(() =>
             {
                 if (!linssiAuki || automaatti != Automaatti.Odottaa) return;
                 // Välissä alkanut puhe (esim. kupla) odotetaan vielä loppuun.
-                if (Aanet.PuluPuhuu) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
+                if (LiviaPuhuu) { automaattiAjo = paneeli.schedule.Execute(AutomaattiKierros).StartingIn((long)PulunTaulu.KyselyMs); return; }
                 // Pelaaja ehti jo valita (valokuva tai kyyti): taulua ei tuoda päälle.
                 var l = Linssi();
                 if (astro.Kuva.Auki || (l != null && l.Kyydissa)) { automaatti = Automaatti.Valittu; loki.Add("automaatti:valittu"); return; }
@@ -486,6 +495,8 @@ namespace Matkakirja.Natiivi
                 + $"avaaja {(a.HasValue ? $"{a.Value.x:0} {a.Value.y:0}" : "-")}, rivejä {rivit.childCount}, "
                 + $"moodi {Nykyinen(l)}, kyyti {(l != null ? l.Kyyti.ToString() : "-")}{(l != null && l.KyytiSiirtyy ? " (siirtyy)" : "")}, "
                 + $"nakymat {(nakymat.resolvedStyle.display == DisplayStyle.Flex ? "näkyy" : "piilossa")}, automaatti {automaatti}, "
+                + $"tervetulo {(Tervetulo.Jakso != null ? Tervetulo.Jakso.Vaihe.ToString() : "-")}, "
+                + $"peitto {paneeli.resolvedStyle.opacity:0.00} skaala {paneeli.resolvedStyle.scale.value.x:0.00}, "
                 + $"loki [{string.Join(" ", loki.GetRange(Math.Max(0, loki.Count - 8), Math.Min(8, loki.Count)))}]";
         }
     }
