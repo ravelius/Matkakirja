@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 14:11:** Levy 94,99 Gi (/private/tmp 23,6 Gt, wt/ 13 Gt), muisti 64 % vapaa, kuorma 14/53/79, sim 0, GPU-chrome 0, wt/ 14 kohdetta. Roolit: vain Päätoimittaja käynnissä (62 %); muut levossa (Natiivi-UI 79 % ilmoitettu, Pelikoodari 68 %, Linnanrakentaja 67 %). Viikkolimit 91 % (5 h 11 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Posti: ei uutta.
+
 **Päivitetty 14:01:** Levy 96,00 Gi (palasi 89,3:sta; /private/tmp 23,5 Gt, wt/ 13 Gt), muisti 65 % vapaa, kuorma 68/51/89, sim 1, GPU-chrome 0, wt/ 14 kohdetta. Roolit: käynnissä Natiivi-UI (79 %, ilmoitettu 71 %:ssa) ja Päätoimittaja (62 %); muut levossa (Pelikoodari 68 %, Linnanrakentaja 67 %). Viikkolimit 91 % (5 h 10 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Posti: ei uutta.
 
 **Päivitetty 13:52:** LEVY ALLE 90: 89,31 Gi (13:47 90,99; hälytys <90 ilmoitettu Päätoimittajalle 13:52 + siivouslista; kova 82). wt/ 13 Gt (14 kohdetta), /private/tmp 25,7 Gt (mm. tukholma-qa, wien-qa, odessa-worktree, lontoo-qa ~1,3 Gt kpl), proto-3d/lokit 18 Gt. Muisti 56 % vapaa, kuorma 50/121/140 (sarja katkesi), sim 0, GPU-chrome 0. Roolit: käynnissä Linnanrakentaja (67 %) ja Päätoimittaja (62 %); muut levossa (Natiivi-UI 75 % ilmoitettu, Pelikoodari 68 %). Viikkolimit 91 % (5 h 10 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Posti: ei uutta.
