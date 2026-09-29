@@ -8679,7 +8679,8 @@ body.flight-active .fact-card {
   overscroll-behavior: contain;
   touch-action: pan-y;
   overflow-wrap: break-word;
-  animation: card-in 0.32s cubic-bezier(0.2, 1.2, 0.5, 1);
+  /* Avaus ja sulku: js/avausanimaatio.js asennaDialogianimaatiot (omistaja 29.9.2026, 220/200 ms napautuksen
+     suunnasta); vanha card-in (0,32 s kallistuksella, sulku hypyllä) pois. */
 }
 
 /*
