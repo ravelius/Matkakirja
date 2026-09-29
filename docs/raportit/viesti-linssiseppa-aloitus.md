@@ -1,4 +1,4 @@
-# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 07.1x)
+# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 08.0x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
@@ -23,9 +23,10 @@ Lue:
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
 **Järjestys: luovutus -20260929-b kohta 1:**
-1. Pulun taulun ja LISÄYS 6:n uusintakierros. Julkaisija antaa NYT-vuoron haaralle linssiseppa/pulun-taulu 9750340f.
-   Tarkista, että Pulu näkyy Cupolassa ja linkki on vasemmassa laidassa. Tee sen jälkeen kuvaparit (koosta_taulu.py) ja
-   merge-pyyntö Natiivisepälle.
+0. UUSI: Pulun ISS-tervetulo natiiviin webin #3575 mukaan. Speksi: docs/raportit/pulu-tervetulo-natiivi-speksi-20260929.md.
+   Taulu avautuu vasta tervetulon jälkeen.
+1. Pulun taulu ja LISÄYS 6 ovat merge-pyynnössä Natiivisepällä (linssiseppa/pulun-taulu 9750340f; kierrokset 1–2 PASS).
+   Seuraa mergeä ja vastaa korjauspyyntöihin.
 2. Kerro Linssiseppä 2:lle taulun lopullinen SHA (LisaaRivi avaruuskävelylle).
 3. Cupola 2 -kuvien alfa 252–254 korjataan cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön. Kohta 4 (BMNG, Kuu,
    tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.

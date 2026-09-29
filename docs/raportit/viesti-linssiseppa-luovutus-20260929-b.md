@@ -1,6 +1,6 @@
 # Linssisepän luovutus 29.9.2026 (b) — Linssiseppä (Opus) = myös Mallinseppä
 
-*Kirjoitettu klo 07.1x (konteksti 62 %). Edellinen: -20260929.md.*
+*Kirjoitettu klo 07.1x, päivitetty klo 08.0x (konteksti 67 %, nollaus). Edellinen: -20260929.md.*
 
 **Session id:t:** Päätoimittaja "Päätoimittaja (Opus, xhigh)" local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 · Julkaisija
 "Julkaisija (Opus)" local_24e63224-112c-449a-b6a3-e10e4ed43f4b · Natiiviseppä "Natiiviseppä (max)" local_fcc10552-5810-49bf-b0cf-188456f1231c ·
@@ -9,6 +9,14 @@ local_c6d63773-0270-4873-96f8-63c66cf52794 · Postivahti local_0a4f4c68-d24d-4b1
 
 ## 1. KESKEN (tee ensin)
 
+0. **UUSI ERÄ (Päätoimittaja 29.9. klo 07.5x): Pulun ISS-tervetulo natiiviin webin #3575 mukaan (pariteetti).** Taulu avautuu
+   itsestään vasta tervetulon jälkeen, kuten webissä.
+   - Valmis speksi: **docs/raportit/pulu-tervetulo-natiivi-speksi-20260929.md** (Sonnet-agentti; tarkista luvut lähteestä).
+     Siinä ovat A1–C2-repliikit ja äänet, ajastus ja kamera-ajot (Venetsia ja Saharan silmä), ensimmäisen avauksen muisti,
+     ohitus, mykistys, pieni liike ja taulun kytkentä.
+   - Toteutus uuteen haaraan linssiseppa/pulun-taulun päälle (tai juna/b13:n päälle, jos taulu on jo mergetty).
+     PulunTauluNakyma.AutomaattiKierros odottaa tervetulon vaihetta, ja Pulun napautus kesken tervetulon ohittaa sen.
+   - D1–D4 (ISS-kyydin repliikit) on webissäkin kytkemättä, joten natiiviin vain A–C.
 1. **Pulun taulu + LISÄYS 6: MERGE-PYYNTÖ Natiivisepällä (klo 07.4x).** Proto-haara linssiseppa/pulun-taulu 9750340f.
    Worktree on poistettu. Tarvittaessa: `git -C …/Matkakirja-proto worktree add /Users/Shared/Claude/wt/proto-linssiseppa-taulu
    linssiseppa/pulun-taulu`.
