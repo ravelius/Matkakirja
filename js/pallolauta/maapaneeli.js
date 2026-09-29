@@ -185,6 +185,9 @@ import { asetaKuva } from '../media.js';
 import { avaaLippuikkuna } from '../liput.js';
 import { viritysaaniPaalle, viritysaaniPois } from '../linssit/radio.js';
 import { MERKKI_SOITA } from '../ui-apurit.js';
+import {
+  animoidaanko, AVAUS_HAIVE_KAARI, AVAUS_HAIVE_MS, AVAUS_KAARI, AVAUS_MS, SULKU_KAARI, SULKU_MS,
+} from '../avausanimaatio.js';
 
 /**
  * Kortin peruskoko tyylitiedostossa (css .maapaneeli-kortti).
@@ -1062,6 +1065,50 @@ function taytaKortti(el, d) {
 }
 
 /**
+ * KARTUSCHA AUKEAA JA SULKEUTUU ANIMOIDEN (omistaja 29.9.2026: "Voiko lapun aukeamisen ja sulkeutumisen animoida? Ja
+ * jatkossa myös kaikki vastaavat"; yhteiset arvot js/avausanimaatio.js). Kartuscha ei ilmesty tyhjästä vaan kasvaa
+ * pienestä nimilaatasta infotauluksi, joten mittakaavamuunnos venyttäisi tekstiä. Sen sijaan paperi paljastuu
+ * nimilaatan kohdalta (clip-path pienen muodon laatikosta koko laatikkoon) ja uudet osat häivyttyvät esiin; sulku
+ * kulkee samaa reittiä takaisin ja pieni muoto asetetaan vasta liikkeen lopussa. Uusi tilanvaihto kesken liikkeen
+ * perii vanhan. Ilman liikettä muoto vaihtuu heti.
+ */
+function kartuschanLiike(kortti, auki, muoto, osat) {
+  kortti.kartuschaLiike?.peru();
+  if (!animoidaanko(kortti)) { muoto(auki); return; }
+  const suuri = () => { muoto(true); return kortti.getBoundingClientRect(); };
+  const pieni = () => { muoto(false); return kortti.getBoundingClientRect(); };
+  let r0; let r1;
+  if (auki) { r0 = pieni(); r1 = suuri(); } else { r1 = suuri(); r0 = pieni(); r1 = suuri(); }
+  const px = (n) => `${Math.max(0, Math.round(n))}px`;
+  const rajattu = `inset(${px(r0.top - r1.top)} ${px(r1.right - r0.right)} ${px(r1.bottom - r0.bottom)} ${px(r0.left - r1.left)})`;
+  const koko = 'inset(0px 0px 0px 0px)';
+  const nakyvat = osat.filter((o) => o && !o.hidden);
+  const ajo = auki
+    ? { kesto: AVAUS_MS, kaari: AVAUS_KAARI, leike: [rajattu, koko], haive: [0, 1], haiveKesto: AVAUS_HAIVE_MS,
+      haiveKaari: AVAUS_HAIVE_KAARI }
+    : { kesto: SULKU_MS, kaari: SULKU_KAARI, leike: [koko, rajattu], haive: [1, 0], haiveKesto: SULKU_MS,
+      haiveKaari: SULKU_KAARI };
+  const liikkeet = [
+    kortti.animate([{ clipPath: ajo.leike[0] }, { clipPath: ajo.leike[1] }],
+      { duration: ajo.kesto, easing: ajo.kaari, fill: 'forwards' }),
+    ...nakyvat.map((o) => o.animate([{ opacity: ajo.haive[0] }, { opacity: ajo.haive[1] }],
+      { duration: ajo.haiveKesto, easing: ajo.haiveKaari, fill: 'forwards' })),
+  ];
+  let ohi = false;
+  const lopeta = () => {
+    if (ohi) return;
+    ohi = true;
+    if (kortti.kartuschaLiike === tila) kortti.kartuschaLiike = null;
+    if (!auki) muoto(false);
+    for (const l of liikkeet) l.cancel();
+  };
+  const tila = { peru: lopeta, auki };
+  kortti.kartuschaLiike = tila;
+  liikkeet[0].addEventListener?.('finish', lopeta);
+  setTimeout(lopeta, ajo.kesto + 80);
+}
+
+/**
  * AUKI VAI KIINNI — kalusteen ainoa tila.
  *
  * LEVOSSA NÄKYY VAIN AVAIN: nimi, viiva ja alarivi (PÄÄTÖKSET 28
@@ -1079,10 +1126,19 @@ function asetaAuki(el, d) {
   const sisus = kortti.querySelector('.maapaneeli-sisus');
   const valikko = kortti.querySelector('.maapaneeli-valikko');
   const avain = kortti.querySelector('.maapaneeli-avain');
-  if (sisus) sisus.hidden = !auki;
-  if (valikko) valikko.hidden = !auki || !d.aiheet?.length;
+  const muoto = (onAuki) => {
+    if (sisus) sisus.hidden = !onAuki;
+    if (valikko) valikko.hidden = !onAuki || !d.aiheet?.length;
+    kortti.classList.toggle('valikko-auki', onAuki);
+  };
   if (avain) avain.setAttribute('aria-expanded', String(auki));
-  kortti.classList.toggle('valikko-auki', auki);
+  const oli = kortti.classList.contains('valikko-auki');
+  const kaynnissa = kortti.kartuschaLiike;
+  // Uusi piirto kesken liikkeen samaan suuntaan ei aloita liikettä alusta.
+  if (kaynnissa?.auki !== auki) {
+    if (oli !== auki) kartuschanLiike(kortti, auki, muoto, [sisus, valikko]);
+    else { kaynnissa?.peru(); muoto(auki); }
+  }
   /*
    * PULU VÄISTÄÄ AUKI OLEVAN KARTUSCHAN (Sonnet 1, kierros 16b,
    * 20.9.2026: pulu jäi kielirivin päälle). Kaluste on kokonaan
