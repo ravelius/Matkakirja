@@ -11,10 +11,17 @@ Päiväsääntö 29.9. (normaalit säännöt palaavat 30.9. klo 00):
 - Käännökset nice 15, yksi kerrallaan.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)".
 
-## KÄRKI: juna tyhjä, BUILD 47 = master 329ffaf0
-Päätoimittajan VIE-lupaa odottavat TF 1.0.45 = 6dc1b7cc, 1.0.46 = 1b2609ce ja 1.0.47 = 329ffaf0. Vie aina oman BUILDin SHA:lla.
-Seuraavat merge-pyynnöt kootaan sivuhaaraan natiiviseppa/juna-1048 masterista, testataan (exit-koodit) ja avataan junaan Julkaisijan
-luvalla. Burst-korjaus on todennettu.
+## KÄRKI: 1.0.48-juna → BUILD 48
+juna/b13 c1117fe9 = master 329ffaf0 (BUILD 47) + natiivi-ui/pelaajan-nakyma 9652f810 (kehittäjän maailmatilan silmänappi). Juna avattiin
+12.0x Julkaisijan luvalla, testit exit 0 (0/401/357/425), ja vahti kääntää sen Linnanrakentajan jälkeen. Seuraa juna.logia
+(KÄÄNNETTY/VIKA). Sitten Laitetestaajalle savuke (maailmatila, silmänappi, himmeät kaupungit ja maailmahyppy) → PASS → BUILD 48 =
+`git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto merge --no-ff c1117fe9` masteriin (329ffaf0). Tarkista, että puu = käännös,
+ja lähetä SHA:t. Poista sivuhaara natiiviseppa/juna-1048.
+Seuraavaksi tulee Linssiseppä 2:n avaruuskävelyn merge-pyyntö 1.0.48:aan (Päätoimittaja). Kokoa se sivuhaaraan, testaa ja lisää junaan
+Julkaisijan luvalla. Jos 1.0.48 on jo savukkeessa, avaruuskävely menee 1.0.49:ään. AstronautinNakyma.cs:ssä on triviaali ristiriita
+Pulun taulun kanssa: pidä molemmat.
+TF: VIE annettiin vain 1.0.47:lle (329ffaf0), koska se sisältää 1.0.45:n ja 1.0.46:n. Vie aina oman BUILDin SHA:lla.
+Burst-korjaus on todennettu: ajastin ohitti 12.01 jonon aikana käännetyn junan.
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain, kun erä on valmis, olet jumissa tai sinulla on kysymys (enintään 8 riviä), SendMessage nimellä.
