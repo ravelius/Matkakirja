@@ -9275,3 +9275,7 @@ Omistaja 29.9.2026: "ei kun ok oli aiempaan kysymykseesi johon pyysit ok." Edell
 ## OMISTAJA: JOKIEN POLTOT ODOTTAMAAN (29.9.2026 klo 19.32)
 
 Omistaja 29.9.2026: "jätä jokien poltot odottamaan." Kaikki jokipoltot pidossa (täysi 2026-09-30-pohja ja koepoltot); jokikoe d:n koodi talteen haarassa karttaseppa-joet-rauha. Tuotannossa pysyy 27-pohja. Karttaseppä siirtyy maan raja mereen ilman saaria -tehtävään.
+
+## OMISTAJA: PYSYVÄ TF-VIENTILUPA JA CI-PIKATIE (29.9.2026 klo 19.36)
+
+Omistaja 29.9.2026 Julkaisijan sessioon: jokainen BUILD viedään TestFlightin sisäiseen ryhmään heti käännöksen jälkeen ilman erillistä VIE-kysymystä (alkaen 1.0.52), sekä CI-pikatie (savukkeet pois PR-portista, testit ohitetaan docs-/muutosloki-PR:iltä; PR #3633) ja muutosloki-PR:t pikatietä (#3634 mergetty). Julkaisijan arvio: BUILD → TF-ajon alku 2–5 min (ennen 78 min), TF-ryhmässä noin 40 min BUILDista (ennen noin 2 h). TF 1.0.51 sisäisessä ryhmässä 19.31, TF 1.0.52 (d45086d3, kohdekaupunkien sepia) viennissä.
