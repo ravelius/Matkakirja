@@ -268,7 +268,7 @@ namespace Matkakirja
             return Siirtokoreografia.KorkeusLeveydesta(leveysYks, fov, kuvasuhde, CesiumWgs84Ellipsoid.GetMaximumRadius());
         }
 
-        double KameranKorkeus => kierto.korkeus > 0 ? kierto.korkeus : kierto.MaxKorkeus();
+        double KameranKorkeus => kierto.korkeus > 0 ? kierto.korkeus : kierto.KokoPallonKorkeus();
 
         Siirtokoreografia.Aikataulu Suunnittele(List<(double lat, double lon)> pisteet, Siirtokoreografia.Tapa tapa, int askelia,
             float mahduS, out Siirtokoreografia.Ennakko ennakko, out bool kamera)

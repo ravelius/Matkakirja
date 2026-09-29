@@ -209,6 +209,8 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
+            // Zoomikaista pois aina, kun mikään linssi ei ole auki (linssin oma Sulje palauttaa sen myös vaihdossa).
+            rekisteri.Vaihtui += l => { if (l == null) kierto?.LinssinRajat(null, null); };
             // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.
             LinssienEsilataaja.Kytke(this, rekisteri);
             // Syntetisoidut tehosteet (ESILATAUSPOLITIIKKA kohta 1: efektiäänet ilman verkkoa) taustasäikeessä heti.
@@ -1052,6 +1054,8 @@ namespace Matkakirja.Natiivi
                 linssi = new Matkakirja.Linssit.Astronautti.AstronauttiLinssi(aineisto, kerros);
                 kerros.Linssi = linssi;
                 linssi.Avaa(y);
+                // Pelaajan veto tai nipistys päättää ISS-seurannan (web otePalloon); napautus AstronauttiKerros.Napautuksessa.
+                if (o.kierto != null) o.kierto.PelaajanEle += linssi.PelaajanEle;
                 mustaAlku = Time.realtimeSinceStartup;
             }
             float mustaAlku = -1f;
@@ -1064,7 +1068,11 @@ namespace Matkakirja.Natiivi
                 VerkkoOdotus.Kirjaa("linssi", Tiedot.Id + ":musta", (Time.realtimeSinceStartup - mustaAlku) * 1000.0);
                 mustaAlku = -1f;
             }
-            public void Sulje() { linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f; }
+            public void Sulje()
+            {
+                if (linssi != null && o.kierto != null) o.kierto.PelaajanEle -= linssi.PelaajanEle;
+                linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f;
+            }
         }
 
         // ── Profilointimerkit (`ui piikit`, KehysPiikit.cs) ────────────────
@@ -1131,7 +1139,7 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void OnDisable() { ViimeisteleJalkiajot(); PalautaKuvaus(); }
+        void OnDisable() { ViimeisteleJalkiajot(); PalautaKuvaus(); kierto?.LinssinRajat(null, null); }
 
         void OnDestroy()
         {
@@ -1166,7 +1174,8 @@ namespace Matkakirja.Natiivi
         /// joten topografian pyyntö ei muuta mitään. Tiukempi katto tarvitaan
         /// vasta, jos jokin linssi rajaa loitonnusta; silloin PalloKierto saa asettimen.
         /// </summary>
-        public void ZoomiKatto(double? maxKorkeus) { }
+        /// <summary>Linssin zoomikaista PalloKierrolle (LinssinRajat, Natiivisepän rajapinta 29.9.2026); null = pelin oma sääntö.</summary>
+        public void ZoomiKatto(double? maxKorkeus, double? minKorkeus = null) => kierto?.LinssinRajat(minKorkeus, maxKorkeus);
 
         public void KameraAvaruuteen(double lat, double lon, double pallonSateita)
         {
@@ -1174,7 +1183,7 @@ namespace Matkakirja.Natiivi
             kierto.AsetaKaukaa(lat, lon, pallonSateita * CesiumWgs84Ellipsoid.GetMaximumRadius());
         }
 
-        public double KokoPallonKorkeus => kierto.MaxKorkeus();
+        public double KokoPallonKorkeus => kierto.KokoPallonKorkeus();
 
         /// <summary>
         /// PalloKierto.KorkeusKaarelle mittaa kapeamman suunnan kaaren. Pystyruudulla
@@ -1392,6 +1401,16 @@ namespace Matkakirja.Natiivi
                     var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(utc);
                     Kirjaa($"iss: {IssTleLataaja.Tila()}, alapiste {p.Lat:F2}, {p.Lon:F2} ({utc:HH:mm:ss} UTC)");
                 }
+                else if (osat[0] == "kaista")
+                {
+                    // Zoomikaista (LinssinRajat): "kaista" kertoo pallon lähimmän ja kaukaisimman korkeuden sekä koko pallon;
+                    // "kaista kauas|lahelle" ajaa kameran kaistan reunaan (0,6 s), kuten pelaajan loitonnus tai lähennys.
+                    if (kierto != null && osat.Length > 1 && (osat[1] == "kauas" || osat[1] == "lahelle"))
+                        kierto.Aja(kierto.leveys, kierto.pituus, osat[1] == "kauas" ? kierto.MaxKorkeus() : kierto.MinKorkeus(), 0.6f, null);
+                    Kirjaa(kierto == null ? "kaista: ei palloa"
+                        : $"kaista: {kierto.MinKorkeus() / 1000:F0}–{kierto.MaxKorkeus() / 1000:F0} km, koko pallo {kierto.KokoPallonKorkeus() / 1000:F0} km, "
+                        + $"nyt {kierto.korkeus / 1000:F0} km, linssi {rekisteri?.Auki?.Tiedot.Id ?? "-"}");
+                }
                 else if (osat[0] == "astro" && osat.Length > 1)
                 {
                     // Kuvaselain (Linssisepän suositus 28.9.): "astro kuva <tunnus|n>" avaa astronautin linssin kuvan
@@ -1412,6 +1431,17 @@ namespace Matkakirja.Natiivi
                     }
                     else if (osat[1] == "kierros")
                         Kirjaa("astro kierros: " + string.Join(" ", l.KierrosTunnukset()));
+                    else if (osat[1] == "seuranta")
+                    {
+                        // ISS-seuranta avauksesta (web PAATOKSET 53): "astro seuranta" kertoo, seuraako kamera asemaa, ja kameran
+                        // katseen etäisyyden aseman alapisteestä; "astro seuranta ote" = pelaajan ote palloon.
+                        if (osat.Length > 2 && osat[2] == "ote") l.PelaajanEle();
+                        var p = Matkakirja.Linssit.Iss.IssNyt.Paikka(Matkakirja.Linssit.Iss.IssNyt.Kello());
+                        var (kl, ko) = l.Katse;
+                        Kirjaa($"astro seuranta: {(l.IssSeuranta ? "päällä" : "pois")}, vaihe {l.Vaihe}, katse {kl:F2}, {ko:F2}, "
+                            + $"ISS {p.Lat:F2}, {p.Lon:F2}, ero {Matkakirja.Linssit.Iss.Ylilennot.MaaEtaisyysKm(kl, ko, p.Lat, p.Lon):F0} km, "
+                            + $"korkeus {l.Suhde:F2} × avaus");
+                    }
                     else if (osat[1] == "kavely")
                     {
                         // Avaruuskävely (29.9.): "astro kavely" = kyytiin tarvittaessa ja kävely alkaa, "astro kavely napauta" =

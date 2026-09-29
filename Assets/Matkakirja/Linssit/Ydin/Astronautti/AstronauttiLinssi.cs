@@ -102,9 +102,21 @@ namespace Matkakirja.Linssit.Astronautti
         double avattu, vaiheAlkoi, avaus;
         int valmiitaKehyksia;
         bool zoomi, nimet;
-        /// <summary>Avauksen laskeutumisen päätepiste ja loppuhetki (ms): Pulun tervetulon aloitusnäkymä (Aloitustila).</summary>
-        Nakyma? avausajonKohde;
-        double avausajoPaattyy;
+
+        // ---- ISS KESKELLÄ, MAA PYÖRII SEN ALLA (web satelliitti-avaruus.js seuranta, Raamattu PAATOKSET 53) ----
+        // Omistaja 19.9.2026: "Alussa iss voisi pysyä keskellä ja maapallo pyöriä kunnes pelaaja pysäyttää liikkeen." Avauksesta
+        // alkaen (jo mustan aikana) kamera katsoo joka kehys aseman alapistettä, joten ISS pysyy ruudun keskellä ja Maa liukuu
+        // sen alla todellisella nopeudella (noin 4° minuutissa). Avauszoomi lasketaan silloin itse joka kehys (web ajaAvaus: vain
+        // korkeus, suunta seurannasta). Pelaajan ensimmäinen ote (napautus, veto tai nipistys), kuvan avaus ja kyyti päättävät
+        // seurannan; sen jälkeen ohjaus on tavallinen. Vähennetyllä liikkeellä ei seurantaa (web !reduced).
+        bool seuranta;
+        double ajoAlku = double.NaN, ajoAlkuH, ajoLoppuH;
+        /// <summary>Seurannan korkeus: avauskorkeus, zoomin aikana käyrältä ja sen jälkeen lepokorkeus (pelaajan nipistys päättää
+        /// seurannan, joten korkeutta ei tarvitse lukea kamerasta).</summary>
+        double seurantaH;
+
+        /// <summary>Seuraako kamera asemaa (web tila().issSeuranta; testikomento `astro tila`).</summary>
+        public bool IssSeuranta => seuranta;
 
         public AvauksenVaihe Vaihe { get; private set; }
         public Havaintokohde AvoinKuva { get; private set; }
@@ -138,8 +150,10 @@ namespace Matkakirja.Linssit.Astronautti
             zoomi = false;
             nimet = false;
             AvoinKuva = null;
-            avausajonKohde = null;
             avaus = y.KokoPallonKorkeus;
+            seuranta = !y.VahennettyLiike;
+            ajoAlku = double.NaN;
+            seurantaH = avaus;
 
             Vaihe = AvauksenVaihe.Musta;
             vaiheAlkoi = Nyt;
@@ -155,9 +169,18 @@ namespace Matkakirja.Linssit.Astronautti
             y.MusiikkiPitoon(true);
             // Oma ääni vasta muiden vaientamisen jälkeen (web satelliitti.js: linssiaani-vaihe aanet-vaiheen jälkeen).
             y.Taustaaani(Humina);
-            // Pimeässä kamera avauskorkeuteen saman paikan yllä (lat rajattu ±55°, ettei napa jää keskelle).
-            y.AjaKamera(new Nakyma(Math.Max(-55, Math.Min(55, talteen.Lat)), talteen.Lon, avaus), 0f);
-            y.ZoomiKatto(avaus * Astronauttimatikka.ZoominKauin);
+            // Pimeässä kamera avauskorkeuteen: seurannassa aseman ylle, muuten saman paikan ylle (lat rajattu ±55°, ettei napa
+            // jää keskelle).
+            if (seuranta)
+            {
+                var iss = Iss.IssNyt.Paikka(Iss.IssNyt.Kello());
+                y.AjaKamera(new Nakyma(iss.Lat, iss.Lon, avaus), 0f);
+            }
+            else y.AjaKamera(new Nakyma(Math.Max(-55, Math.Min(55, talteen.Lat)), talteen.Lon, avaus), 0f);
+            // Zoomikaista (web zoomirajat: säteinä max(0,1; 0,084 × avaus) … 1,3 × avaus): lähin noin 820–2 200 km, kaukaisin koko
+            // pallon taakse.
+            var kaista = Astronauttimatikka.Zoomirajat(avaus / MaanSade);
+            y.ZoomiKatto(kaista.max * MaanSade, kaista.min * MaanSade);
             nakyma.Kohteet(aineisto.Kohteet);
             nakyma.Tahdet(1);
         }
@@ -186,6 +209,40 @@ namespace Matkakirja.Linssit.Astronautti
             var paikka = Iss.IssNyt.Paikka(utc);
             nakyma.Iss(paikka, kaari);
             PaivitaKyyti(nyt / 1000, utc, paikka);
+            // Kyyti kirjoittaa kameran ensin; seuranta vain kyydin ulkopuolella (web askel: if (!kyydissa) seuraaAsemaa()).
+            if (seuranta && !kyyti.Kyydissa) SeuraaAsemaa(nyt, paikka);
+        }
+
+        /// <summary>Yksi seurannan kehys: kamera aseman alapisteen ylle seurannan korkeudella (web seuraaAsemaa).</summary>
+        void SeuraaAsemaa(double nyt, LatLon paikka)
+        {
+            if (double.IsNaN(paikka.Lat) || double.IsNaN(paikka.Lon)) return;
+            if (!double.IsNaN(ajoAlku))
+            {
+                double osuus = Math.Min(1, (nyt - ajoAlku) / Astronauttimatikka.AvauszoominKestoMs);
+                seurantaH = ajoAlkuH + (ajoLoppuH - ajoAlkuH) * Astronauttimatikka.AvausPehmennys(osuus);
+                if (osuus >= 1) ajoAlku = double.NaN;
+            }
+            y.AjaKamera(new Nakyma(paikka.Lat, paikka.Lon, seurantaH), 0f);
+        }
+
+        /// <summary>
+        /// Seuranta päättyy (web lopetaSeuranta + paataAvausajo): kamera jää siihen, missä se on, myös kesken avauszoomin.
+        /// </summary>
+        void LopetaSeuranta()
+        {
+            seuranta = false;
+            ajoAlku = double.NaN;
+        }
+
+        /// <summary>
+        /// Pelaajan ote palloon (PalloKierto.PelaajanEle ja pallon napautus; web otePalloon): seuranta päättyy. Mustan aikana
+        /// ote ei vielä päätä sitä (pelaaja ei näe palloa).
+        /// </summary>
+        public void PelaajanEle()
+        {
+            if (!Auki || Vaihe == AvauksenVaihe.Musta) return;
+            LopetaSeuranta();
         }
 
         // ---- ISS:n kyyti (omistajan kysymys 27.9.2026 klo 23.5x, suositus docs/raportit/iss-kyyti-suositus-20260928.md) ----
@@ -215,6 +272,8 @@ namespace Matkakirja.Linssit.Astronautti
         {
             if (!Auki || Vaihe == AvauksenVaihe.Musta || AvoinKuva != null) return;
             if (kavely.Kaynnissa) { kavely.Napauta(Nyt / 1000); return; }
+            // Kyyti ottaa kameran: seuranta ja avauszoomi päättyvät (web ennenKyytia).
+            LopetaSeuranta();
             var utc = Iss.IssNyt.Kello();
             if (!kyyti.Kyydissa) kentta0 = y.Nakokulma;
             kyyti.Napauta(Nykyinen(), Hetki(utc, Iss.IssNyt.Paikka(utc)), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
@@ -501,12 +560,14 @@ namespace Matkakirja.Linssit.Astronautti
             Siirry(y.VahennettyLiike ? AvauksenVaihe.Pois : AvauksenVaihe.OtsikkoPois, nyt);
             if (zoomi) return;
             zoomi = true;
-            // Avauszoomi alkaa paljastuksesta (web: ei kulje, kun paljastus odottaa). Päätepiste talteen Pulun tervetulolle.
+            // Avauszoomi alkaa paljastuksesta (web: ei kulje, kun paljastus odottaa). Seurannassa korkeus lasketaan joka kehys
+            // (SeuraaAsemaa), muuten kamera-ajona.
             var k = y.Kamera;
+            double loppu = avaus * Astronauttimatikka.AvausajonLoppu;
+            // Lähtö on avauskorkeus, johon kamera asetettiin pimeässä (Avaa).
+            if (seuranta) { ajoAlku = nyt; ajoAlkuH = avaus; ajoLoppuH = loppu; return; }
             float kesto = y.VahennettyLiike ? 0f : (float)(Astronauttimatikka.AvauszoominKestoMs / 1000);
-            avausajonKohde = new Nakyma(k.Lat, k.Lon, avaus * Astronauttimatikka.AvausajonLoppu);
-            avausajoPaattyy = nyt + kesto * 1000;
-            y.AjaKamera(avausajonKohde.Value, kesto, Astronauttimatikka.AvausPehmennys);
+            y.AjaKamera(new Nakyma(k.Lat, k.Lon, loppu), kesto, Astronauttimatikka.AvausPehmennys);
         }
 
         void Siirry(AvauksenVaihe v, double nyt)
@@ -543,6 +604,8 @@ namespace Matkakirja.Linssit.Astronautti
 
         void AvaaKohde(Havaintokohde kohde, int indeksi)
         {
+            // Kamera liukuu kuvan kohteen ylle: seuranta päättyy (web katsoKohteeseen → lopetaSeuranta).
+            LopetaSeuranta();
             AvoinKuva = kohde;
             nakyma.Kuva(kohde, indeksi);
             if (double.IsNaN(kohde.Lat) || double.IsNaN(kohde.Lon)) return;
@@ -588,43 +651,10 @@ namespace Matkakirja.Linssit.Astronautti
             nakyma.KuvaPois();
         }
 
-        // ---- Pulun tervetulo (PulunTervetulo; web satelliitti-avaruus.js aloitustila, katsoKohteeseen, palaaAloitukseen) ----
-
-        /// <summary>
-        /// Aloitusnäkymä talteen (web aloitustila): kameran nykyinen näkymä, avauksen laskeutumisen aikana sen päätepiste
-        /// (lepokorkeus), jottei paluu jää laskeutumisen välikorkeuteen. null = linssi kiinni.
-        /// </summary>
-        public Nakyma? Aloitustila()
-        {
-            if (!Auki) return null;
-            if (avausajonKohde.HasValue && Nyt < avausajoPaattyy) return avausajonKohde;
-            return y.Kamera;
-        }
-
-        /// <summary>
-        /// Kamera kohteen ylle nykyisellä korkeudella, kuitenkin enintään lepokorkeudella (web katsoKohteeseen, Pulun pyöräytys
-        /// Venetsian ylle repliikin tahdissa). Ei avauksen mustan aikana eikä kyydissä.
-        /// </summary>
-        public bool KatsoKohteeseen(double lat, double lon, float kestoS)
-        {
-            if (!Auki || Vaihe == AvauksenVaihe.Musta || kyyti.Kyydissa || double.IsNaN(lat) || double.IsNaN(lon)) return false;
-            double h = Math.Min(y.Kamera.Korkeus, avaus * KuvanKorkeus);
-            y.AjaKamera(new Nakyma(lat, lon, h), y.VahennettyLiike ? 0f : Math.Max(0f, kestoS), Matkakirja.Linssit.Kamera.Kamerakayrat.Pehmea);
-            return true;
-        }
-
-        /// <summary>Paluu aloitusnäkymään (web palaaAloitukseen) samalla kuminauhalla kuin linssin sulun paluu; vähennetyllä liikkeellä hyppy.</summary>
-        public bool PalaaAloitukseen(Nakyma tila, float kestoS)
-        {
-            if (!Auki || kyyti.Kyydissa) return false;
-            y.AjaKamera(tila, y.VahennettyLiike ? 0f : Math.Max(0f, kestoS),
-                Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));
-            return true;
-        }
-
         public void Sulje()
         {
             if (!Auki) return;
+            LopetaSeuranta();
             LopetaKyyti();
             // Web pura: linssi suljetaan, aika heti todelliseksi (testikellon siirto säilyy).
             lento = null;

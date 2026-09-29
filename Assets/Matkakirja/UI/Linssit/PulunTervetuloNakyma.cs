@@ -1,21 +1,20 @@
 // PULUN TERVETULO ASTRONAUTIN KAMERAAN, Unity-kytkennät (Linssiseppä 29.9.2026; web js/linssit/pulu-tervetulo.js, PR #3575;
 // logiikka Linssit/Ydin/Astronautti/PulunTervetulo.cs). Elää Pulun taulun mukana (PulunTauluNakyma): linssin avaus aloittaa,
-// sulku purkaa, ja taulu avautuu itsestään vasta tervetulon jälkeen.
+// sulku purkaa, ja taulu avautuu itsestään heti paljastuksen jälkeen myös tervetulon aikana (omistaja 29.9.2026).
 //
-//   puhe      Pulu.Sano(teksti, ämpärin versioitu mp3): kupla (iPhonella ja luennan aikana piilossa, löydös 21), ele tekstin
-//             sävystä ja ääni puhekanavalla. Aanet.Soitan alkoi-kutsu = webin 'playing' (äänitteen pituus; null = ei soinut).
-//   kamera    AstronauttiLinssi.KatsoKohteeseen (B2), Napauta("richat") ja SuljeKuva (C1–C2) samalla polulla kuin pisteen
-//             napautus, PalaaAloitukseen (C2 ja ohitus).
+//   puhe      ILMAN KUPLAA (omistaja 29.9.2026, web sanoPulunIssRepliikkiIlmanKuplaa): Pulu ruudulla ja chatti kiinni, ele
+//             tekstin sävystä (Pulu.RepliikinEle) ja ääni puhekanavalla (nokka liikkuu Aanet.PuluPuhuu-tilasta). Aanet.Soita
+//             alkoi-kutsu = webin 'playing' (äänitteen pituus; null = ei soinut).
 //   ohitus    napautus tai näppäin missä tahansa joka ruudussa (Pointer, Touchscreen ja Keyboard wasPressedThisFrame,
 //             UiKerros.JokaRuutu), UI-kerrosten juurten kaappausvaihe ja pallon napautus taulun kautta (myös testikomento
-//             ui napauta). Napautusta ei niele, joten pallo, ✕ ja kuva saavat sen silti (webin kaappausvaiheen passiivinen
+//             ui napauta). Napautusta ei niele, joten taulun rivi, pallo ja ✕ saavat sen silti (webin kaappausvaiheen passiivinen
 //             kuuntelija). Pulun napautus ohittaa myös taulun kautta (PulunTauluNakyma.Avaa, webin tervetulo.ohita).
 //   muisti    PlayerPrefs "matkakirja-pulu-astro-tervetulo" (webin localStorage-avain).
 //   mykistys  Kertoja-kytkin pois tai Pulun liuku 0 (web pulunIssMykistetty; Äänimaisema ei vaikuta Pulun puheeseen, Aanet.Taso):
 //             ei aloiteta eikä muistia kuluteta, joten tervetulo tulee ensimmäisellä avauksella, jonka pelaaja kuulee.
-//   luenta    väärän kuvan selitettä ei lueta Pulun puheen päälle (Kuvanakyma.LuentaEste). Omistaja 8.9.2026: pulun ja
-//             kertojan äänet eivät saa mennä päällekkäin; webissä C1:n kuva käynnistää selitteen luennan, joka estää C2:n äänen.
-//   esilataus seuraava äänite haetaan muistiin edellisen aikana (ensimmäinen jo odotusvaiheessa), jotta toimet osuvat sanoihin.
+//   luenta    kuvan selitettä ei lueta tervetulon päälle, kun jakso on kesken (odottaa tai puhuu; web #3609 tervetuloKesken):
+//             Kuvanakyma.LuentaEste. Omistaja 8.9.2026: pulun ja kertojan äänet eivät saa mennä päällekkäin.
+//   esilataus seuraava äänite haetaan muistiin edellisen aikana (ensimmäinen jo odotusvaiheessa).
 // Testikomento `ui linssi tervetulo [tila|aloita|ohita|pura|nollaa]` (LinssiKomennot).
 using System;
 using System.Collections.Generic;
@@ -44,11 +43,12 @@ namespace Matkakirja.Natiivi
 
         static AstronauttiLinssi Linssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
 
-        /// <summary>Linssi avattiin: tervetulo, jos sen aika on.</summary>
-        public void Aloita()
+        /// <summary>Linssi avattiin: tervetulo, jos sen aika on ja se on käytössä (PulunIss.Kaytossa; pakota = testikomento).</summary>
+        public void Aloita(bool pakota = false)
         {
             Pura();
-            jakso = PulunTervetulo.Aloita(this, LinssiUi.VahennettyLiike());
+            if (!PulunIss.Kaytossa && !pakota) return;
+            jakso = PulunTervetulo.Aloita(this);
             if (jakso == null) return;
             Esilataa(0);
             Kuuntele(true);
@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
                 foreach (var j in juuret) j.UnregisterCallback<PointerDownEvent>(UiNapautus, TrickleDown.TrickleDown);
                 juuret.Clear();
             }
-            Kuvanakyma.LuentaEste = paalla ? () => jakso != null && jakso.Vaihe == TervetulonVaihe.Puhuu : (Func<bool>)null;
+            Kuvanakyma.LuentaEste = paalla ? () => jakso != null && jakso.Kesken : (Func<bool>)null;
         }
 
         void UiNapautus(PointerDownEvent e) => Napautus();
@@ -119,7 +119,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Jakson äänite muistiin ennen vuoroaan (Aanet.Hae).</summary>
         static void Esilataa(int i)
         {
-            if (i >= 0 && i < PulunIss.Jakso.Count) Aanet.Hae(Aanet.Juuri + PulunIss.Jakso[i].Repliikki.Aani, _ => { });
+            if (i >= 0 && i < PulunIss.Jakso.Count) Aanet.Hae(Aanet.Juuri + PulunIss.Jakso[i].Aani, _ => { });
         }
 
         // --- ympäristö -------------------------------------------------------------------------------------------------
@@ -128,32 +128,16 @@ namespace Matkakirja.Natiivi
 
         bool ITervetulonYmparisto.Paljastettu() => Linssi()?.Vaihe == AvauksenVaihe.Pois;
 
-        Nakyma? ITervetulonYmparisto.Aloitustila() => Linssi()?.Aloitustila();
-
-        bool ITervetulonYmparisto.KatsoKohteeseen(double lat, double lon, double kestoMs) =>
-            Linssi()?.KatsoKohteeseen(lat, lon, (float)(kestoMs / 1000.0)) == true;
-
-        void ITervetulonYmparisto.PalaaAloitukseen(Nakyma tila, double kestoMs, bool seuraa) =>
-            Linssi()?.PalaaAloitukseen(tila, (float)(kestoMs / 1000.0));
-
-        bool ITervetulonYmparisto.AvaaVaaraKohde()
-        {
-            var l = Linssi();
-            if (l == null) return false;
-            l.Napauta(PulunIss.VaaraKohde);
-            return l.AvoinKuva?.Tunnus == PulunIss.VaaraKohde;
-        }
-
-        void ITervetulonYmparisto.SuljeKortti() => Linssi()?.SuljeKuva();
-
         bool ITervetulonYmparisto.Sano(IssRepliikki r, Action<double?> aaniAlkoi)
         {
             var pulu = Pulu.Hae();
-            if (!pulu.Nakyvissa) return false;
-            pulu.Sano(r.Teksti, Aanet.Juuri + r.Aani, null, null,
-                klippi => aaniAlkoi(klippi != null ? klippi.length * 1000.0 : (double?)null));
+            if (!pulu.Nakyvissa || (UiNakymat.Olemassa && UiNakymat.Hae().Chat?.Auki == true)) return false;
+            // Ei kuplaa (omistaja 29.9.2026): taulu on auki, ja Pulu puhuu sen aikana.
+            var ele = Pulu.RepliikinEle(r.Teksti);
+            if (ele != "blink") pulu.Toista(ele, "speech");
+            Aanet.Soita(AaniKanava.Puhe, Aanet.Juuri + r.Aani, klippi => aaniAlkoi(klippi != null ? klippi.length * 1000.0 : (double?)null));
             int i = 0;
-            while (i < PulunIss.Jakso.Count && PulunIss.Jakso[i].Repliikki != r) i++;
+            while (i < PulunIss.Jakso.Count && PulunIss.Jakso[i] != r) i++;
             Esilataa(i + 1);
             return true;
         }
@@ -186,14 +170,14 @@ namespace Matkakirja.Natiivi
             switch (a1)
             {
                 case "nollaa": PlayerPrefs.DeleteKey(PulunIss.TalleAvain); PlayerPrefs.Save(); break;
-                case "aloita": PlayerPrefs.DeleteKey(PulunIss.TalleAvain); Aloita(); break;
+                case "aloita": PlayerPrefs.DeleteKey(PulunIss.TalleAvain); Aloita(pakota: true); break;
                 case "ohita": jakso?.Napautus(); break;
                 case "pura": Pura(); break;
             }
             var muisti = PlayerPrefs.GetInt(PulunIss.TalleAvain, 0) == 1 ? "kuultu" : "ei kuultu";
             var m = ((ITervetulonYmparisto)this).Mykistetty() ? ", mykistetty" : "";
             return (jakso != null ? jakso.ToString() : "tervetulo ei alkanut") + $", muisti {muisti}{m}, "
-                + $"puhuu {(Aanet.PuluPuhuu ? "kyllä" : "ei")}, kuva {(Linssi()?.AvoinKuva?.Tunnus ?? "-")}";
+                + $"puhuu {(Aanet.PuluPuhuu ? "kyllä" : "ei")}, kuplia {Pulu.Hae().Kuplat.Maara}, kuva {(Linssi()?.AvoinKuva?.Tunnus ?? "-")}";
         }
     }
 }
