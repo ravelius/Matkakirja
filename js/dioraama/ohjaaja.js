@@ -33,16 +33,19 @@ function keskipiste(a, b) {
  * taulun kohdat[n].tekstistä; repliikki/reaktio = max(2, 0,06·merkit)
  * hahmon tekstistä; odota = askel.s.
  *
- * TULKINTA (merkkien lähde 'repliikki'-askeleessa): ASKEL yksilöi vain
- * hahmon (`hahmo: id`), ei rivi-indeksiä, vaikka hahmolla voi olla
- * useampi repliikki. Yksinkertaisin selvä valinta: käytetään AINA
- * hahmo.repliikit[0] (ensimmäinen rivi). 'reaktio' on yksiselitteinen
- * (hahmo.reaktio, yksi rivi).
+ * TULKINTA (merkkien lähde 'repliikki'-askeleessa, PÄIVITETTY era2 kohta 2
+ * "AANET"): ASKEL yksilöi hahmon (`hahmo: id`) ja valinnaisen rivi-indeksin
+ * (`n`) — hahmo.repliikit[askel.n ?? 0] (oletus 0 = ensimmäinen rivi, kuten
+ * ennen `n`:n lisäystä). 'reaktio' on yksiselitteinen (hahmo.reaktio, yksi
+ * rivi, `n`:ää ei käytetä).
  * TULKINTA (merkit = teksti.length, UTF-16-yksiköt; ei erillistä
  * graafeemi-/koodipistelaskentaa — sama kuin C#:n string.Length).
  *
- * Kun rivillä on ääni (aani ≠ null), kesto tulee äänestä:
- * rak.aanet[aani].kesto_s korvaa tekstipohjaisen arvion kokonaan.
+ * Kun repliikki-/reaktiorivillä on ääni (aani ≠ null), kesto tulee äänestä:
+ * rak.aanet[aani].kesto_s korvaa tekstipohjaisen arvion kokonaan. 'kohta'-
+ * askeleella (era2 lisäys) ääni EI korvaa kokonaan vaan LISÄÄ 0,6 s taukoa
+ * perään (rak.aanet[kohta.aani].kesto_s + 0,6) — ero repliikkiin nähden,
+ * koska taulun kohta jää muuten näkyviin ilman omaa "lue seuraava" -taukoa.
  */
 export function askeleenKesto(askel, tila, rak) {
   switch (askel.tee) {
@@ -52,12 +55,13 @@ export function askeleenKesto(askel, tila, rak) {
       return 0.25;
     case 'kohta': {
       const kohta = tila.taulu.kohdat[askel.n];
+      if (kohta.aani) return rak.aanet[kohta.aani].kesto_s + 0.6;
       return Math.max(3, 0.06 * kohta.teksti.length);
     }
     case 'repliikki':
     case 'reaktio': {
       const hahmo = tila.hahmot.find((h) => h.id === askel.hahmo);
-      const rivi = askel.tee === 'reaktio' ? hahmo.reaktio : hahmo.repliikit[0];
+      const rivi = askel.tee === 'reaktio' ? hahmo.reaktio : hahmo.repliikit[askel.n ?? 0];
       if (rivi.aani) return rak.aanet[rivi.aani].kesto_s;
       return Math.max(2, 0.06 * rivi.teksti.length);
     }

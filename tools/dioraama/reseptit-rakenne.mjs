@@ -1,13 +1,17 @@
 // DIORAAMAN RESEPTIT — RAKENNE (Linnanrakentaja 29.9.2026, ali-agentti C1): laatta, seina, torni,
-// porras. Speksi: docs/raportit/dioraama-rajapinnat-20260929.md kohdat 0, 2 ja 3b. Rinnakkaiset
-// tiedostot reseptit-maasto.mjs (kartiokatto, harjakatto, kallio, vesi) ja reseptit-kalusteet.mjs
-// (kalusteet) kootaan yhteen tools/dioraama/reseptit.mjs:ssä (RESEPTIT + OLETUSPINNAT + sijoita).
+// porras. Speksi: docs/raportit/dioraama-rajapinnat-20260929.md kohdat 0, 2 ja 3b; erä 2:
+// docs/raportit/dioraama-rajapinnat-era2-20260929.md kohta "UV" (torni: ulko/sisä/vyo saavat
+// kärjille uv_m:n tasoprojektion sijaan). Rinnakkaiset tiedostot reseptit-maasto.mjs (kartiokatto,
+// harjakatto, kallio, vesi) ja reseptit-kalusteet.mjs (kalusteet) kootaan yhteen
+// tools/dioraama/reseptit.mjs:ssä (RESEPTIT + OLETUSPINNAT + sijoita).
 //
 // Jokainen resepti (param) → Kolmio[] paikallisessa kehyksessä (u, y, w), param = koko instanssi
 // (mm. paikka, suunta, resepti + reseptikohtaiset parametrit). Kolmiot oikeakätisenä: kärjet
 // vastapäivään ulkoa katsottuna eli (p1 − p0) × (p2 − p0) osoittaa ulos. Ks. reseptit-apu.mjs:n
 // kommentit apufunktioista ja kulmasopimuksesta (paikallinen kompassikulma 0 = +w, 90 = +u).
 import { laatikko, nelio, kaaripiste, vaippa, rengas } from './reseptit-apu.mjs';
+
+const RAD = Math.PI / 180;
 
 /**
  * Laatta: laatikko u ±leveys/2, w ±syvyys/2, y −paksuus…0. Suljettu kuutio (6 sivua): yla, ala,
@@ -88,6 +92,10 @@ export function seina(param) {
  * sisävaipasta sekä kuoren yläreunasta; sektorin reunoille tulee pystysuorat leikkauspinnat
  * rooliin 'leikkaus'. vyo = ulkovaipan osa hieman ulompana (sade + 0,05) rooliin 'vyo', samalla
  * auki-sektorilla leikattuna. Pohjaa ei tehdä (rakennuskone/naapuripalikat hoitavat sen).
+ *
+ * uv_m (erä 2): ulko/sisä/vyo-kärjet saavat valmiin uv_m:n (a = kulma_rad kertaa sade, sisällä
+ * sade − paksuus, b = y) — ks. vaipanUvM. Yläreunan rengas ja leikkauspinnat EIVÄT saa uv_m:ää
+ * (jäävät rakennuskoneen tasoprojektioon), koska "b = y" ei sovi vakiokorkeuksiselle levylle.
  */
 export function torni(param) {
   const sade = param.sade, korkeus = param.korkeus, paksuus = param.paksuus ?? 2;
@@ -103,9 +111,13 @@ export function torni(param) {
     k1 = alkuL + 360;
   }
 
+  // uv_m vain vaipoille (ulko, sisä, vyo — pystysuorat lieriöpinnat, joilla "b = y" on mielekäs).
+  // Yläreunan rengas (litteä, y vakio) ja leikkauspinnat jäävät ennalleen (tasoprojektio).
   const k = [];
-  k.push(...vaippa({ r: sade, y0: 0, y1: korkeus, k0, k1, segmentit, ulos: true, rooli: 'ulko' }));
-  k.push(...vaippa({ r: sisa, y0: 0, y1: korkeus, k0, k1, segmentit, ulos: false, rooli: 'sisa' }));
+  const ulko = vaippa({ r: sade, y0: 0, y1: korkeus, k0, k1, segmentit, ulos: true, rooli: 'ulko' });
+  k.push(...liitaUvM(ulko, vaipanUvM(k0, k1, 0, korkeus, segmentit, sade, true)));
+  const sisaVaippa = vaippa({ r: sisa, y0: 0, y1: korkeus, k0, k1, segmentit, ulos: false, rooli: 'sisa' });
+  k.push(...liitaUvM(sisaVaippa, vaipanUvM(k0, k1, 0, korkeus, segmentit, sisa, false)));
   k.push(...rengas({
     rSisa: sisa, rUlko: sade, y: korkeus, k0, k1, segmentit, ylos: true,
     rooli: auki ? 'leikkaus' : 'ulko',
@@ -116,9 +128,50 @@ export function torni(param) {
   }
   if (param.vyo) {
     const vy0 = param.vyo.y, vy1 = vy0 + param.vyo.korkeus;
-    k.push(...vaippa({ r: sade + 0.05, y0: vy0, y1: vy1, k0, k1, segmentit, ulos: true, rooli: 'vyo' }));
+    const vyo = vaippa({
+      r: sade + 0.05, y0: vy0, y1: vy1, k0, k1, segmentit, ulos: true, rooli: 'vyo',
+    });
+    k.push(...liitaUvM(vyo, vaipanUvM(k0, k1, vy0, vy1, segmentit, sade + 0.05, true)));
   }
   return k;
+}
+
+/**
+ * uv_m (erä 2 -speksin `docs/raportit/dioraama-rajapinnat-era2-20260929.md` kohta "UV") apu.vaippa():n
+ * TUOTTAMILLE kolmioille SAMASSA järjestyksessä ja samalla segmenttijaolla: a = kulma (asteina) · RAD ·
+ * sade, b = y. Kulmaa EI normalisoida [0, 360):ksi — esim. umpinaisen tornin (k0 = 0, k1 = 360) sauma-
+ * kärjet 0° ja 360° ovat samassa maailmanpisteessä mutta saavat silti eri a:n (0 ja 2π·sade), jotta
+ * rakenna.mjs:n hitsausavain EI yhdistä niitä ja UV jatkuu oikein koko kierroksen ympäri sen sijaan
+ * että viimeinen kolmio kiertyisi takaisin nollaan.
+ *
+ * Kärkijärjestys per segmentti toistaa TÄSMÄLLEEN apu.vaippa():n sisäisen nelio(a0,b0,b1,a1)-jaon
+ * (ulos = true: [a0,b0,b1],[a0,b1,a1]) ja ulos = false -haaran apu.kaanna()-vaihdon (p1 ↔ p2) —
+ * muuten uv[i] osoittaisi väärään kärkeen.
+ */
+function vaipanUvM(k0, k1, y0, y1, segmentit, sade, ulos) {
+  const n = Math.max(1, Math.ceil(segmentit * (k1 - k0) / 360));
+  const uv = [];
+  for (let i = 0; i < n; i++) {
+    const ka = k0 + (k1 - k0) * i / n, kb = k0 + (k1 - k0) * (i + 1) / n;
+    const a0 = [ka * RAD * sade, y0], b0 = [kb * RAD * sade, y0];
+    const a1 = [ka * RAD * sade, y1], b1 = [kb * RAD * sade, y1];
+    if (ulos) uv.push([a0, b0, b1], [a0, b1, a1]);
+    else uv.push([a0, b1, b0], [a0, a1, b1]);
+  }
+  return uv;
+}
+
+/**
+ * Liittää vaipanUvM():n tuottamat uv_m:t samanpituiseen kolmiotaulukkoon (sama järjestys, sama
+ * segmenttijako — ks. vaipanUvM). Heittää jos pituudet eroavat, ettei uv_m päädy väärään kärkeen
+ * hiljaa.
+ */
+function liitaUvM(kolmiot, uvLista) {
+  if (kolmiot.length !== uvLista.length) {
+    throw new Error(`liitaUvM: kolmioiden määrä (${kolmiot.length}) != uv-listan pituus (${uvLista.length})`);
+  }
+  for (let i = 0; i < kolmiot.length; i++) kolmiot[i].uv_m = uvLista[i];
+  return kolmiot;
 }
 
 // Pystysuora leikkauspinta tornin auki-sektorin reunalle paikallisessa kulmassa k (astetta),
