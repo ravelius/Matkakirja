@@ -2234,6 +2234,7 @@ export const LINSSI = {
   kerros: false,
   nimi: 'Astronautin kamera',
   lyhyt: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
+  esittely: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
   /*
    * NIMI VAIHTUI 12.9.2026: "Satelliittilinssi" → "Astronautin kamera"
    * (omistaja, sanatarkasti: *"muuta linssin nimeksi astronautin kamera

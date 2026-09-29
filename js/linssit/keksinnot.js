@@ -1785,6 +1785,7 @@ export const LINSSI = {
   kerros: false,
   nimi: 'Keksintölinssi',
   lyhyt: 'Keksinnöt Euroopassa 1769–1928: kello juoksee, valot syttyvät.',
+  esittely: 'Eurooppalaisten keksintöjen aikajana 1769–1928: käynnistä kello ja katso, missä ja milloin mikin keksintö syntyi.',
   ikoni: '<circle cx="12" cy="12" r="7.5"/><path d="M12 7.5V12l3 2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2"/>',
   valokuva: false,
   laudat: ['maailmankartta'],
