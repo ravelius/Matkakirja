@@ -9,19 +9,15 @@ local_c6d63773-0270-4873-96f8-63c66cf52794 · Postivahti local_0a4f4c68-d24d-4b1
 
 ## 1. KESKEN (tee ensin)
 
-1. **Pulun taulu + LISÄYS 6: uusintakierros ja merge-pyyntö.** Proto-haara linssiseppa/pulun-taulu 9750340f (worktree
-   /Users/Shared/Claude/wt/proto-linssiseppa-astroselite). Pohjana linssiseppa/astroselite, joka on jo juna/b13:ssa.
-   - Laitekierros 1 (käännös c85f8e12 = da44d743) oli PASS iPhonella ja iPadilla, 0 poikkeusta. Kaikki webin seitsemän
-     mallikuvan tilannetta, Kysy Pululta ja LISÄYS 6 toimivat. Kuvat ja parit: proto-3d/lokit/linssiseppa-laite-20260929-taulu/
-     (pari-iphone-N-*.png, pari-ipad-N-*.png).
-   - Kierroksen jälkeen kaksi korjausta 9750340f:ssä, vielä todentamatta:
-     - Pulu nousee kyydin ajaksi Cupola-kehyksen yläpuolelle (UiKerros.AsetaJarjestys: Pulu 35 → 38; webin z 49), koska
-       kehys peitti Pulun.
-     - "Kysy Pululta" on vasemmassa laidassa.
-   - Julkaisijan jonossa neljäntenä ("NYT" tulee). Käännä ja aja:
-     `S=… kaanna-jono.sh taulu linssiseppa/pulun-taulu`, sitten `SIMRAJA=3 APPNIMI=taulu L=…-taulu2 ajo-taulu.sh`.
-     Tarkista kuvista 3 ja 4, että Pulu näkyy Cupolassa. Aja `koosta_taulu.py <L> <SHA>`, ja sen jälkeen merge-pyyntö
-     Natiivisepälle kuvaparien kanssa. Kerro, että LisaaRivi on Linssiseppä 2:n käytössä. Poista sitten worktree.
+1. **Pulun taulu + LISÄYS 6: MERGE-PYYNTÖ Natiivisepällä (klo 07.4x).** Proto-haara linssiseppa/pulun-taulu 9750340f.
+   Worktree on poistettu. Tarvittaessa: `git -C …/Matkakirja-proto worktree add /Users/Shared/Claude/wt/proto-linssiseppa-taulu
+   linssiseppa/pulun-taulu`.
+   - Kierros 1 (c85f8e12) ja kierros 2 (e6a9daa3, Pulu Cupolan päällä ja linkin tasaus): PASS iPhonella ja iPadilla,
+     0 poikkeusta. Parit: proto-3d/lokit/linssiseppa-laite-20260929-taulu/ ja -taulu2/.
+   - Seuraa mergeä ja vastaa korjauspyyntöihin. Linssiseppä 2:n avaruuskavely-haaran kanssa AstronautinNakyma.cs:ssä on
+     triviaali ristiriita (otsake ja kentät): säilytetään molemmat, ja se on kerrottu Natiivisepälle ja Linssiseppä 2:lle.
+   - Kysytty Päätoimittajalta: tehdäänkö natiiviin webin #3575:n Pulun ISS-tervetulo (taulun automaattiavaus odottaa sitä
+     webissä).
 2. **Linssiseppä 2:n avaruuskävely:** rivi tulee tauluun rajapinnalla
    `Taulu.LisaaRivi(tunnus, otsikko, selite, aktiivinen, toiminto, AstroMoodi? lahto)` (cc4d05a4). Rivi näkyy ISS-rivien
    jälkeen. lahto = Seuranta vie ensin ISS:n rinnalle. Kerro heille lopullinen SHA mergen jälkeen.
