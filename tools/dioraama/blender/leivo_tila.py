@@ -228,6 +228,8 @@ ao.rotation_euler = Vector(suunta).to_track_quat('-Z', 'Y').to_euler()
 # --- Tilan valot rakennus.json:sta (tulisija, rekvisiitan kynttilät, keilat) ---
 for i, lv in enumerate(tila.get('valot', [])):
     if lv.get('tyyppi') == 'keila':
+        if HAMARA:
+            continue  # iltahämärässä ikkunasta ei tule päivänvaloa
         d = bpy.data.lights.new(f'keila{i}', 'SPOT'); d.spot_size = math.radians(lv.get('kulma', 30) * 2)
         d.energy = 60.0 * lv.get('voima', 100) / 100; d.color = srgb(lv.get('vari', '#ffd8a0'))
         o = bpy.data.objects.new(f'keila{i}', d); sc.collection.objects.link(o); o.location = bl(lv['paikka'])
@@ -258,6 +260,46 @@ ko = bpy.data.objects.new('kamera', kd); sc.collection.objects.link(ko); sc.came
 ko.location = bl(sij)
 ko.rotation_euler = (Vector(bl(kohde)) - Vector(bl(sij))).to_track_quat('-Z', 'Y').to_euler()
 
+# Luonnoskuvat (elävän linnan käsikirjoitus 29.9.): hahmot paikoilleen ja kamera huoneen sisälle.
+if '--hahmot' in argv:
+    for h in tila.get('hahmot', []):
+        polku = os.path.join(PAKETTI, 'hahmot3d', f"{h.get('henkilo', h['id'])}.glb")
+        if not os.path.exists(polku):
+            continue
+        for o in tuo(polku):
+            if o.parent is None:
+                kierto = math.radians(180 - h.get('suunta', 0)); alku = o.location.copy(); alku.rotate(__import__('mathutils').Euler((0, 0, kierto)))
+                o.location = Vector(bl(h['paikka'])) + alku; o.rotation_euler = (0, 0, kierto)  # juuri (lantio) jää korkeudelleen
+    # Hahmojen pinnat nimen mukaan (verteksiväri ei kulje Cyclesiin luonnoksessa).
+    HAHMOVARIT = {'iho': '#c9a07e', 'vaate2': '#4a3a2c', 'vaate': '#7a5c3e', 'esiliina': '#d8cfbd', 'hiukset': '#3a2a1e',
+                  'kengat': '#2e241c', 'esine-metalli': '#8a8580', 'esine-puu': '#6b4a2e'}
+    for m in bpy.data.materials:
+        perus = m.name.split('.')[0]
+        if perus in HAHMOVARIT and m.use_nodes and 'Principled BSDF' in m.node_tree.nodes:
+            b = m.node_tree.nodes['Principled BSDF']
+            for l_ in list(b.inputs['Base Color'].links): m.node_tree.links.remove(l_)
+            b.inputs['Base Color'].default_value = (*srgb(HAHMOVARIT[perus]), 1); b.inputs['Roughness'].default_value = 0.8
+    # Näkyvät liekit luonnokseen (Unityssä partikkelit): hehkuva kartio jokaiseen liekkiin.
+    for l in tila.get('liekit', []):
+        k0 = {'tulisija': 0.45, 'soihtu': 0.25}.get(l.get('liekki'), 0.05) * l.get('koko', 1)
+        # Rypäs kapeita kieliä: korkeus ja väri vaihtelevat (keltainen ydin → punaoranssi reuna).
+        for n_, (dx, dy, kk_, vari_) in enumerate([(0, 0, 1.0, (1, 0.5, 0.08)), (0.25, 0.1, 0.7, (1, 0.28, 0.03)),
+                                                   (-0.22, 0.05, 0.75, (1, 0.22, 0.02)), (0.08, -0.2, 0.6, (1, 0.18, 0.02)),
+                                                   (-0.1, 0.22, 0.55, (0.9, 0.12, 0.01))]):
+            h_ = k0 * kk_
+            bpy.ops.mesh.primitive_cone_add(radius1=k0 * 0.16, depth=h_, vertices=8,
+                                            location=Vector(bl(l['paikka'])) + Vector((dx * k0, dy * k0, h_ * 0.5)))
+            lm = bpy.data.materials.new('liekki-luonnos'); lm.use_nodes = True; nt_ = lm.node_tree; nt_.nodes.clear()
+            em = nt_.nodes.new('ShaderNodeEmission'); em.inputs['Color'].default_value = (*vari_, 1)
+            em.inputs['Strength'].default_value = 1.2  # puhdas emissio: ei heijasta tulisijan valoa
+            nt_.links.new(em.outputs['Emission'], nt_.nodes.new('ShaderNodeOutputMaterial').inputs['Surface'])
+            bpy.context.object.data.materials.append(lm)
+if '--luonnos' in argv:  # luonnoskuva: Standard-näyttömuunnos, jotta liekkien värit säilyvät (AgX latisti ne)
+    sc.view_settings.view_transform = 'Standard'; sc.view_settings.look = 'None'; sc.view_settings.exposure = 0.4
+if '--kamera' in argv:  # --kamera x,y,z,kx,ky,kz (glTF): silmä ja katsekohde
+    c_ = [float(x) for x in arg('--kamera').split(',')]
+    ko.location = bl(c_[:3]); ko.rotation_euler = (Vector(bl(c_[3:])) - Vector(bl(c_[:3]))).to_track_quat('-Z', 'Y').to_euler()
+    kd.angle_y = math.radians(55); kd.dof.focus_distance = (Vector(bl(c_[3:])) - Vector(bl(c_[:3]))).length
 if '--renderoi' in argv:
     sc.render.resolution_x, sc.render.resolution_y = 1600, 900
     sc.cycles.use_denoising = True

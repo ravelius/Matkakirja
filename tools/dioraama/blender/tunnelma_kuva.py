@@ -6,6 +6,9 @@ import bpy, math, sys
 from mathutils import Vector
 a = sys.argv[sys.argv.index('--') + 1:]
 PAIVA = '--paiva' in a; a = [x for x in a if x != '--paiva']
+SYTTYNEET = 1.0  # --syttyneet 0.6: vain osa liekeistä palaa (saapuminen, soihdut syttymässä)
+if '--syttyneet' in a:
+    i_ = a.index('--syttyneet'); SYTTYNEET = float(a[i_ + 1]); del a[i_:i_ + 2]
 GLB, TEX, TGLB, ATLAS, ULOS = a[:5]
 az, kk, d, fov = (float(x) for x in (a[5:9] if len(a) >= 9 else ('165', '30', '230', '32')))
 kohde = Vector((float(a[9]), float(a[10]), 2) if len(a) >= 11 else (0, 0, 2))
@@ -35,7 +38,7 @@ if TGLB != '-':
     for o in uudet:
         if o.type == 'MESH':
             valaisematon(o, at, uv=o.data.uv_layers[-1].name)
-        elif o.name.startswith('liekki:') and not PAIVA:
+        elif o.name.startswith('liekki:') and not PAIVA and (hash(o.name) % 100) / 100 < SYTTYNEET:
             r = 0.12 if 'soihtu' in o.name else 0.05
             bpy.ops.mesh.primitive_uv_sphere_add(radius=r, location=o.matrix_world.translation)
             p = bpy.context.object; m = bpy.data.materials.new('liekki'); m.use_nodes = True
@@ -48,6 +51,13 @@ vb.inputs['Base Color'].default_value = (0.01, 0.02, 0.035, 1) if not PAIVA else
 vb.inputs['Roughness'].default_value = 0.06; bpy.context.object.data.materials.append(vm)
 w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
 w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.04, 0.06, 0.12, 1) if not PAIVA else (0.55, 0.65, 0.8, 1)
+if not PAIVA:  # iltataivas: lämmin horisontti → tumma sininen lakipiste
+    nt = w.node_tree; tc = nt.nodes.new('ShaderNodeTexCoord'); sx = nt.nodes.new('ShaderNodeSeparateXYZ')
+    cr = nt.nodes.new('ShaderNodeValToRGB'); e0, e1 = cr.color_ramp.elements
+    e0.position, e0.color = 0.0, (0.55, 0.25, 0.12, 1); e1.position, e1.color = 0.35, (0.02, 0.03, 0.08, 1)
+    m_ = cr.color_ramp.elements.new(0.08); m_.color = (0.12, 0.13, 0.24, 1)
+    nt.links.new(tc.outputs['Generated'], sx.inputs['Vector']); nt.links.new(sx.outputs['Z'], cr.inputs['Fac'])
+    nt.links.new(cr.outputs['Color'], nt.nodes['Background'].inputs['Color'])
 w.node_tree.nodes['Background'].inputs['Strength'].default_value = 1.0
 azr, kr = math.radians(az), math.radians(kk)
 sij = kohde + Vector((d * math.cos(kr) * math.sin(azr), d * math.cos(kr) * math.cos(azr), d * math.sin(kr)))
