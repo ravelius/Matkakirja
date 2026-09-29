@@ -620,10 +620,15 @@ static void Muunna(MKVirta* v, UInt32 paketteja, const void* data, AudioStreamPa
 {
 #if TARGET_OS_IOS
     AVAudioSession* istunto = [AVAudioSession sharedInstance];
+    // YHTEINEN ISTUNTO PUHEEN KANSSA (omistaja 29.9.2026: AirPodseilla lukijoiden alku katosi; MatkakirjaAani.mm): puhe
+    // käyttää tilaa SpokenAudio ja radio Default. Kumpikin vaihtoi istunnon omakseen, ja jokainen setCategory käynnisti
+    // reitin neuvottelun (Bluetooth katkeaa hetkeksi). Playback + MixWithOthers riittää: kumpi tahansa tila kelpaa.
     BOOL oikein = [istunto.category isEqualToString:AVAudioSessionCategoryPlayback]
-        && [istunto.mode isEqualToString:AVAudioSessionModeDefault]
+        && ([istunto.mode isEqualToString:AVAudioSessionModeDefault] || [istunto.mode isEqualToString:AVAudioSessionModeSpokenAudio])
         && istunto.categoryOptions == AVAudioSessionCategoryOptionMixWithOthers;
     NSError* virhe = nil;
+    if (!oikein) NSLog(@"MATKAKIRJA radio: istunto vaihdetaan (%@ / %@ / %lu → Playback / Default / MixWithOthers)",
+        istunto.category, istunto.mode, (unsigned long)istunto.categoryOptions);
     if (!oikein && ![istunto setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeDefault
                                  options:AVAudioSessionCategoryOptionMixWithOthers error:&virhe])
         NSLog(@"MATKAKIRJA radio: setCategory epäonnistui: %@", virhe);

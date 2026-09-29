@@ -168,6 +168,8 @@ namespace Matkakirja.Natiivi
             if (leivottu)
             {
                 leivottuMateriaali = new Material(varjostinLeivottu) { name = "Dioraama/Leivottu:" + tila.Id };
+                // Kohdistamaton tila (tunnelma) leikataan kuoren tavoin, jottei se jää kellumaan leikkauskäytävään.
+                leivottuMateriaali.SetFloat("_Leikattava", tila.Kohdistettava ? 0f : 1f);
                 if (odottavatValoAtlakset.TryGetValue(tila.Id, out var atlas)) leivottuMateriaali.SetTexture(IdValoAtlas, atlas);
                 leivotut[tila.Id] = leivottuMateriaali;
             }

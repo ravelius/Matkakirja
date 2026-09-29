@@ -93,6 +93,8 @@ namespace Matkakirja.Natiivi
         public DioraamaLokit Lokit { get; private set; }
         /// <summary>Sykkivä vihje ensimmäisellä käynnillä (elävä linna).</summary>
         public DioraamaSyke Syke { get; private set; }
+        /// <summary>Etsintä (voudin sinetti): kimallukset, irtoesineet, löytö.</summary>
+        public DioraamaEtsinta Etsinta { get; private set; }
 
         /// <summary>Tunnelma (DioraamaTunnelma): tausta ja sumu, auringon ja taivaan kerroin, lintujen valo.</summary>
         public void AsetaTunnelma(bool hamara)
@@ -129,6 +131,7 @@ namespace Matkakirja.Natiivi
             n.Ulkokuori = new DioraamaUlkokuori(n.transform);
             n.Lokit = new DioraamaLokit(n.transform);
             n.Syke = new DioraamaSyke(n.transform);
+            n.Etsinta = new DioraamaEtsinta(n.transform);
             var liekit = n.Liekit;
             DioraamaHahmot3D.LyhdynLuoja = isa => liekit?.LuoLyhty(isa);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
@@ -254,7 +257,10 @@ namespace Matkakirja.Natiivi
             // fieldOfView on aina pystykenttä).
             Kamera.fieldOfView = Mathf.Clamp((float)kameranAsento.Fov, 1f, 179f);
             float d = (float)kameranAsento.Etaisyys;
-            Shader.SetGlobalVector(IdSumu, new Vector4(d * SumuAlkuKerroin, d * SumuLoppuKerroin, 0, 0));
+            // Elävä linna (1.0.57): kaukaa saavuttaessa (600 m) järven taso katkesi kaukoleikkaukseen (2000 m) näkyvänä
+            // reunana. Sumu on aina täysi ennen kaukotasoa, jolloin järvi häipyy taustaan saumatta.
+            float sumuLoppu = Mathf.Min(d * SumuLoppuKerroin, Kamera != null ? Kamera.farClipPlane * 0.9f : 1800f);
+            Shader.SetGlobalVector(IdSumu, new Vector4(Mathf.Min(d * SumuAlkuKerroin, sumuLoppu * 0.6f), sumuLoppu, 0, 0));
             if (syvyys != null)
             {
                 // Aukko 0..1 (0,3 yleisnäkymä loiva -- 0,8 huone voimakas taustan sumennus, ks. DioraamaData.Asento).
@@ -315,6 +321,8 @@ namespace Matkakirja.Natiivi
             Lokit = null;
             Syke?.Tyhjenna();
             Syke = null;
+            Etsinta?.Tyhjenna();
+            Etsinta = null;
             AsetaTunnelma(false); // globaalit takaisin päiväksi (muut linssit)
             if (profiili != null) Destroy(profiili);
             profiili = null;

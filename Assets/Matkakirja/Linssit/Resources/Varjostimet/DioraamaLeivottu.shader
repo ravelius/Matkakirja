@@ -20,6 +20,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
         _ValoAtlas ("Leivottu valoatlas (UV1)", 2D) = "grey" {}
         _Kirkkaus ("Kirkkaus", Float) = 1
         _Heilunta ("Lipun heilunta", Float) = 0
+        _Leikattava ("Kuoren leikkaus koskee tätä", Float) = 0
     }
     SubShader
     {
@@ -49,7 +50,30 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
                 float4 _ValoAtlas_ST;
                 half _Kirkkaus;
                 float _Heilunta;
+                float _Leikattava;
             CBUFFER_END
+
+            // Sama leikkaustilavuus kuin DioraamaKuori.shaderissa (globaalit DioraamaUlkokuori.PaivitaLeikkaus): tilat, joita
+            // ei kohdisteta (tunnelma: lyhtytolpat, soihtutelineet), hylätään leikkauskäytävästä kuten kuori (1.0.57 E8:
+            // pihan lyhtytolppa jäi kellumaan keittiön eteen).
+            float4 _DioraamaLeikkausMin, _DioraamaLeikkausMax, _DioraamaLeikkausKamera;
+            bool Leikkauksessa(float3 p)
+            {
+                float3 lo = _DioraamaLeikkausMin.xyz, hi = _DioraamaLeikkausMax.xyz;
+                if (p.y < lo.y || p.y > hi.y) return false;
+                if (all(p.xz >= lo.xz) && all(p.xz <= hi.xz)) return true;
+                if (_DioraamaLeikkausMax.w < 0.5) return false;
+                float2 keski = (lo.xz + hi.xz) * 0.5;
+                float2 kohti = _DioraamaLeikkausKamera.xz - keski;
+                float L = length(kohti);
+                if (L < 1e-3) return false;
+                float2 d = -kohti / L;
+                float2 inv = 1.0 / ((step(0.0, d) * 2.0 - 1.0) * max(abs(d), 1e-5));
+                float2 t0 = (lo.xz - p.xz) * inv, t1 = (hi.xz - p.xz) * inv;
+                float2 tmin = min(t0, t1), tmax = max(t0, t1);
+                float sisaan = max(tmin.x, tmin.y), ulos = min(tmax.x, tmax.y);
+                return sisaan <= ulos && ulos >= 0 && sisaan <= L;
+            }
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; };
             struct Vali { float4 paikka : SV_POSITION; float2 uv1 : TEXCOORD0; float3 paikkaW : TEXCOORD1; };
@@ -72,6 +96,7 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
 
             half4 frag(Vali i) : SV_Target
             {
+                if (_Leikattava > 0.5 && _DioraamaLeikkausMin.w > 0.001 && Leikkauksessa(i.paikkaW)) discard;
                 half3 vari = SAMPLE_TEXTURE2D(_ValoAtlas, sampler_ValoAtlas, i.uv1).rgb * _Kirkkaus;
 
                 half lisa = 0;

@@ -171,6 +171,7 @@ namespace Matkakirja.Natiivi
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
             bool pysty = y.Kuvasuhde < 1.0;
+            if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             var nakyma = linssi.NakymaHetkella(t, pysty);
             // Elävä linna: saapumiskaaren eteneminen → soihtujen syttyminen; kaari nähty → seuraavalla kerralla lyhyt.
             if (rakennus.Saapuminen != null)
@@ -179,6 +180,9 @@ namespace Matkakirja.Natiivi
                 nayttamo.Liekit?.Syttyminen(osuus, DioraamaNayttamo.UnityPiste((pysty ? rakennus.YleisPysty : rakennus.YleisVaaka).Kohde));
                 if (osuus >= 1 && !SaapuminenNahty) SaapuminenNahty = true;
                 nayttamo.Syke?.Paivita(rakennus, nakyma.KohdeTila == null && osuus >= 1, nakyma.KohdeTila != null, t, y.VahennettyLiike);
+                // Etsintä: vaihe näkyy vasta perillä tilassa (ei kesken lennon).
+                bool perilla = nakyma.KohdeTila != null && linssi.LeikkausHetkella(t).osuus >= 1;
+                nayttamo.Etsinta?.Paivita(rakennus, perilla ? nakyma.KohdeTila : null, t, y.VahennettyLiike);
             }
             if (pakotettuTila != null && pakotettuTaso >= 0 && nakyma.Tasot != null) nakyma.Tasot[pakotettuTila] = pakotettuTaso;
             viimeNakyma = nakyma;
@@ -235,6 +239,10 @@ namespace Matkakirja.Natiivi
         }
 
         public void Yleisnakymaan(double t) => Kohdista(null, t);
+
+        /// <summary>Elävä linna: UI:n ‹-nappi (DioraamaTaulu) pyytää paluuta yleisnäkymään; toteutetaan seuraavassa Paivitassa.</summary>
+        public static void PyydaPaluu() => paluuPyydetty = true;
+        static bool paluuPyydetty;
 
         /// <summary>Äänen URL (era 2, DioraamaAanet.cs): Rakennus.Aanet[id].Tiedosto on suhteessa RAKENNUKSEN
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
@@ -437,6 +445,9 @@ namespace Matkakirja.Natiivi
                     if (t.Laji == "valo") nayttamo?.Valot?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka));
             }
             if (!string.IsNullOrEmpty(tila.ValoAtlas)) yield return LataaValoAtlas(tila);
+            // Elävä linna: tilan irtoesineet (arkun kansi, sinetti) etsintää varten.
+            if (tila.Esineet.Count > 0 && nayttamo?.Etsinta != null)
+                yield return nayttamo.Etsinta.LataaEsineet(rakennus, tila, s => peili(paketinJuuri + s), o.Kirjaa);
         }
 
         /// <summary>Tilan leivottu valoatlas (Blender Cycles, Linnanrakentaja): puolikas (2k) pienelle laitteelle kuten
@@ -588,6 +599,13 @@ namespace Matkakirja.Natiivi
                 return;
             }
             // "poikki saapuminen alusta": seuraava avaus näyttää täyden saapumiskaaren (kehittäjä, kuvaukset).
+            if (mita == "etsinta")
+            {
+                if (arvo == "alusta") DioraamaEtsinta.Nollaa(rakennus);
+                else if (arvo == "seuraava") o.Kirjaa("poikki: etsintä seuraava " + (nayttamo?.Etsinta?.Suorita(rakennus) == true ? "suoritettu" : "ei aktiivista vaihetta tässä tilassa"));
+                o.Kirjaa("poikki: etsintä " + DioraamaEtsinta.Tila(rakennus));
+                return;
+            }
             if (mita == "vihje")
             {
                 if (arvo == "alusta") DioraamaSyke.Nahty = false;

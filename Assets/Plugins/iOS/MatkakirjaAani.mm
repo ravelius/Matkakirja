@@ -21,9 +21,14 @@ extern "C" void MatkakirjaAani_Toisto(void)
     // muutoksesta (AaniIstunto.cs), eli juuri reitin vaihtuessa (Bluetooth herää, kuulokkeet kytketään). Ehdoton
     // setCategory samaan luokkaan käynnistää reitin neuvottelun uudelleen ja katkaisee ulostulon hetkeksi, joten
     // luokka asetetaan vain, kun se on väärä (sama kuvio kuin MatkakirjaRadio.mm istuntoKuntoon). setActive on halpa.
+    // YHTEINEN ISTUNTO RADION KANSSA (omistaja 29.9.2026: AirPodseilla iskulause ja luennan alku katosivat, "kaikki
+    // lukijat aloittavat väärin"): radio (MatkakirjaRadio.mm) jättää tilaksi Default, ja puhe vaihtoi sen SpokenAudioksi
+    // jokaisen puheen alussa, eli reitti neuvoteltiin uudelleen juuri ennen ensimmäistä tavua. Kumpi tahansa tila kelpaa.
     BOOL oikein = [istunto.category isEqualToString:AVAudioSessionCategoryPlayback]
-        && [istunto.mode isEqualToString:AVAudioSessionModeSpokenAudio]
+        && ([istunto.mode isEqualToString:AVAudioSessionModeSpokenAudio] || [istunto.mode isEqualToString:AVAudioSessionModeDefault])
         && istunto.categoryOptions == AVAudioSessionCategoryOptionMixWithOthers;
+    if (!oikein) NSLog(@"MATKAKIRJA puhe: istunto vaihdetaan (%@ / %@ / %lu → Playback / SpokenAudio / MixWithOthers)",
+        istunto.category, istunto.mode, (unsigned long)istunto.categoryOptions);
     if (!oikein && ![istunto setCategory:AVAudioSessionCategoryPlayback
                                     mode:AVAudioSessionModeSpokenAudio
                                  options:AVAudioSessionCategoryOptionMixWithOthers
@@ -34,6 +39,16 @@ extern "C" void MatkakirjaAani_Toisto(void)
     }
     if (![istunto setActive:YES error:&virhe])
         NSLog(@"MATKAKIRJA puhe: setActive epäonnistui: %@", virhe);
+}
+
+// Bluetooth-reitti (omistaja 29.9.2026: luennan alku jäi kuulematta AirPodseilla): Puhe esilämmittää linkin lyhyellä
+// hiljaisella viiveellä ennen uutta klippiä, kun jokin ulostulo on Bluetooth (A2DP, LE tai HFP).
+extern "C" bool MatkakirjaAani_Bluetooth(void)
+{
+    for (AVAudioSessionPortDescription* p in [AVAudioSession sharedInstance].currentRoute.outputs)
+        if ([p.portType isEqualToString:AVAudioSessionPortBluetoothA2DP] || [p.portType isEqualToString:AVAudioSessionPortBluetoothLE]
+            || [p.portType isEqualToString:AVAudioSessionPortBluetoothHFP]) return true;
+    return false;
 }
 
 // Istunnon tila mittaukseen (peli-komento "aani mittaa"): luokka, tila, valinnat, laitteen äänenvoimakkuus,

@@ -289,7 +289,14 @@ namespace Matkakirja
         float RuutuPt(float perusPt, double kerroin, double kynnys, float etaisyys) =>
             SymbolienVaisto.RuutuKoko(perusPt, kerroin, kynnys, fokusEtaisyys, etaisyys, kallistusPainoNyt, LisaKasvu, kattoPtNyt);
 
-        public static bool Paalla = true;
+        /// <summary>
+        /// 3D-SYMBOLIT POIS OLETUKSENA (omistaja 29.9.2026 klo 23.2x Päätoimittajan kautta, iPad-kuva Italiasta: "Pakko ottaa 3D
+        /// nostot ja symbolit pois, eivät vain toimi ja palauttaa 2D takaisin."): kaikki 3D-mallit (arkkityypit, kategoriasymbolit,
+        /// tasot 2–3, maamerkit, lähitaso ja erikoismallit kuten Kronborg, Malbork ja Olavinlinna) ovat pois, jolloin OnMalli on
+        /// epätosi ja Natiivi-UI piirtää kaikille nostoille webin 2D-merkit. Koodi säilyy: kehittäjäkomento `symbolit paalle`
+        /// (Documents/komento.txt) palauttaa 3D:n, `symbolit pois` ottaa sen taas pois.
+        /// </summary>
+        public static bool Paalla = false;
         /// <summary>
         /// Vain erikoismallit 3D:nä (kytkin omistajan 28.9. klo 17.2x päätöksestä "otetaan ne kolmiulotteiset symbolit pois"):
         /// tason 1 arkkityypit ja kategoriasymbolit sekä tasojen 2–3 instanssit pois, jolloin Natiivi-UI piirtää nostoille webin
@@ -303,7 +310,7 @@ namespace Matkakirja
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa()
         {
-            KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = true; VainErikoismallit = false; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
+            KokoPt = 40f; KokoKynnysPt = 22f; KallistusRajaAste = 25f; kallistettu = false; Paalla = false; VainErikoismallit = false; PakotaLoydetty = false; instanssi = null; verkot.Clear(); tiedot.Clear();
             Ylhaalta3D = true; PerspektiiviAste = (float)LiioiteltuPerspektiivi.KulmaMax; ReunaPt = 1.2f; ErikoisYlhaalta = true; SivuunSaanto = true;
             MaallaSaanto = true; ErikoisSeepia = true;
             NollaaTasot23();

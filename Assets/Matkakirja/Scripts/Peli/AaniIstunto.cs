@@ -61,6 +61,14 @@ namespace Matkakirja.Natiivi
         [DllImport("__Internal")] static extern void MatkakirjaAani_Toisto();
         [DllImport("__Internal")] static extern string MatkakirjaAani_Tila();
         [DllImport("__Internal")] static extern string MatkakirjaAani_Vaihda(string luokka);
+        [DllImport("__Internal")] static extern bool MatkakirjaAani_Bluetooth();
+
+        /// <summary>Soiko ääni Bluetoothin kautta (AirPods): Puhe esilämmittää linkin ennen uutta klippiä.</summary>
+        public static bool Bluetooth()
+        {
+            try { return BluetoothTesti || MatkakirjaAani_Bluetooth(); }
+            catch (Exception) { return false; }
+        }
 
         /// <summary>Mittauksen istunnon vaihto (peli-komento aani istunto): playback | puhe | ambient.</summary>
         public static string Vaihda(string luokka)
@@ -86,6 +94,9 @@ namespace Matkakirja.Natiivi
         public static void Aseta(string syy) { }
         public static string Tila() => "ei iOS";
         public static string Vaihda(string luokka) => "ei iOS";
+        public static bool Bluetooth() => BluetoothTesti;
 #endif
+        /// <summary>Testikomento (puhe bt 1|0): esilämmitys ilman oikeaa Bluetooth-reittiä (editori ja simulaattori).</summary>
+        public static bool BluetoothTesti;
     }
 }
