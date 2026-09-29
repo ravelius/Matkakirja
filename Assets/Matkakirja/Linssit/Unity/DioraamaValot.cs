@@ -62,6 +62,8 @@ namespace Matkakirja.Natiivi
         float alkuShadowDistance;
         int alkuShadowmapResoluutio;
         int alkuLisavaloRaja;
+        Light alkuSun;
+        readonly List<(Light valo, int maski)> rajatutValot = new List<(Light, int)>();
         /// <summary>Lisävaloja per objekti linssin ajan (URP enintään 8): keittiössä tuli, ikkuna, kynttilät ja lamppu.</summary>
         const int LisavaloRaja = 8;
         AmbientMode alkuAmbientMode;
@@ -149,6 +151,17 @@ namespace Matkakirja.Natiivi
             alkuAmbientMaa = RenderSettings.ambientGroundColor;
             alkuAmbientVoimakkuus = RenderSettings.ambientIntensity;
             alkuperaisetTallennettu = true;
+            // 29.9. diagnoosi: pallon suuntavalo (cullingMask Everything) oli dioraaman PÄÄVALO -- oma aurinko ja
+            // lamput eivät vaikuttaneet kuvaan. Linssin ajaksi muut valot rajataan pois näyttämön kerroksesta ja
+            // oma aurinko asetetaan RenderSettings.suniksi (Valmistele); palautus Tuhoassa.
+            alkuSun = RenderSettings.sun;
+            int kerrosBitti = 1 << DioraamaNayttamo.Kerros;
+            foreach (var v in UnityEngine.Object.FindObjectsByType<Light>(FindObjectsSortMode.None))
+            {
+                if (v == null || v.gameObject.layer == DioraamaNayttamo.Kerros || (v.cullingMask & kerrosBitti) == 0) continue;
+                rajatutValot.Add((v, v.cullingMask));
+                v.cullingMask &= ~kerrosBitti;
+            }
             urpAsetus.mainLightShadowmapResolution = VarjokarttaResoluutio;
             urpAsetus.maxAdditionalLightsCount = LisavaloRaja;
         }
@@ -190,6 +203,7 @@ namespace Matkakirja.Natiivi
                 aurinkoValo.shadows = LightShadows.Hard; // ei pehmeitä varjoja (Mobile_RPAsset m_SoftShadowsSupported 0)
                 aurinkoValo.cullingMask = 1 << DioraamaNayttamo.Kerros;
             }
+            RenderSettings.sun = aurinkoValo; // URP valitsee päävalon RenderSettings.sunista
             double atsimuutti = aurinko?.Atsimuutti ?? 215, korkeus = aurinko?.Korkeus ?? 38;
             double k = korkeus * Math.PI / 180, a = atsimuutti * Math.PI / 180, ck = Math.Cos(k);
             Vector3 suuntaKohtiAurinkoa = DioraamaNayttamo.UnityPiste(new V3(ck * Math.Sin(a), Math.Sin(k), -ck * Math.Cos(a)));
@@ -294,6 +308,9 @@ namespace Matkakirja.Natiivi
                 RenderSettings.ambientEquatorColor = alkuAmbientEkvaattori;
                 RenderSettings.ambientGroundColor = alkuAmbientMaa;
                 RenderSettings.ambientIntensity = alkuAmbientVoimakkuus;
+                RenderSettings.sun = alkuSun;
+                foreach (var (v, maski) in rajatutValot) if (v != null) v.cullingMask = maski;
+                rajatutValot.Clear();
             }
             alkuperaisetTallennettu = false;
             urpAsetus = null;
