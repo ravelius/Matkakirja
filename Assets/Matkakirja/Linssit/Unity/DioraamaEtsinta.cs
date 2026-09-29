@@ -270,6 +270,9 @@ namespace Matkakirja.Natiivi
                 var tulos = Kutsu("LoydaMatkamuisto", e.Id);
                 if (tulos == null) Debug.LogWarning("MATKAKIRJA etsintä: PeliOhjain.LoydaMatkamuisto puuttuu (pelipuolen haara ei tässä käännöksessä)");
             }
+            // Pulun kommentti (Päätoimittajan teksti datassa) kortin loppuun; paikkamerkkejä ei näytetä.
+            if (!string.IsNullOrEmpty(aktiivinen.Pulu) && !aktiivinen.Pulu.StartsWith("PAIKKAMERKKI", StringComparison.Ordinal))
+                teksti = (string.IsNullOrEmpty(teksti) ? "" : teksti + "\n\n") + "Pulu: " + aktiivinen.Pulu;
             Debug.Log($"MATKAKIRJA linssit: poikki: etsintä {e.Id} vaihe {aktiivinen.Vaihe}/{e.Vaiheet.Count} ({aktiivinen.Tyyppi})");
             Nayta?.Invoke(otsikko, teksti);
             return true;
