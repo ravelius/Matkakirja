@@ -57,11 +57,45 @@ class Elementti {
     this.luokat = new Set(String(arvo).split(/\s+/).filter(Boolean));
   }
 
-  appendChild(lapsi) { this.childNodes.push(lapsi); return lapsi; }
+  appendChild(lapsi) { lapsi.parentElement = this; this.childNodes.push(lapsi); return lapsi; }
 
   append(...lapset) { for (const l of lapset) this.appendChild(l); }
 
-  replaceChildren(...lapset) { this.childNodes = lapset; }
+  replaceChildren(...lapset) {
+    this.childNodes = lapset;
+    for (const l of lapset) l.parentElement = this;
+  }
+
+  remove() {
+    if (!this.parentElement) return;
+    this.parentElement.childNodes = this.parentElement.childNodes.filter((n) => n !== this);
+    this.parentElement = null;
+  }
+
+  /*
+   * replaceWith/src ovat js/media.js asetaKuva:n takia (kokoelmanakyma.js
+   * käyttää sitä kuvien lataukseen 29.9.2026 illan korjauksesta lähtien).
+   * `src`-setteri jäljittelee selainta MIKROTASKISSA, ei oikealla
+   * kuvanlatauksella — ilman tätä asetaKuva jäisi odottamaan oikeita
+   * `load`/`error`-tapahtumia, jotka eivät tässä tyngässä koskaan tule,
+   * ja sen sisäinen uusintasilmukka venytti yhden testitiedoston ajon
+   * 30 sekuntiin (mitattu ennen korjausta).
+   */
+  replaceWith(...uudet) {
+    if (!this.parentElement) return;
+    const i = this.parentElement.childNodes.indexOf(this);
+    if (i >= 0) this.parentElement.childNodes.splice(i, 1, ...uudet);
+    for (const u of uudet) u.parentElement = this.parentElement;
+    this.parentElement = null;
+  }
+
+  set src(arvo) {
+    this._src = arvo;
+    this.attrs.src = arvo;
+    queueMicrotask(() => { for (const f of this.kuuntelijat.get('load') ?? []) f({}); });
+  }
+
+  get src() { return this._src; }
 
   setAttribute(nimi, arvo) { this.attrs[nimi] = String(arvo); }
 
@@ -72,6 +106,13 @@ class Elementti {
   addEventListener(laji, kasittelija) {
     if (!this.kuuntelijat.has(laji)) this.kuuntelijat.set(laji, []);
     this.kuuntelijat.get(laji).push(kasittelija);
+  }
+
+  removeEventListener(laji, kasittelija) {
+    const lista = this.kuuntelijat.get(laji);
+    if (!lista) return;
+    const i = lista.indexOf(kasittelija);
+    if (i >= 0) lista.splice(i, 1);
   }
 
   napauta() {

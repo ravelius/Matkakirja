@@ -1761,6 +1761,16 @@ button, .brand, .turn-pill, .fact-card h2 {
 .kokoelma-rivi.aktiivinen .kokoelma-rivi-kuvake {
   box-shadow: 0 0 0 2px var(--accent);
 }
+/*
+ * HIOMASSA OPTIKOLLA: HARMAA RIVI (korjaus 29.9.2026 illalla, item 3 —
+ * omistaja: "harmaa 'hiomassa optikolla' -tila pitää näkyä Linssit-
+ * listassa"). Rivi on olemassa ja napautettavissa (esikatselu selittää
+ * miksi), mutta koko rivi näyttää harmaalta — linssiä ei vielä ole.
+ */
+.kokoelma-rivi.hiomassa {
+  filter: grayscale(1);
+  opacity: 0.72;
+}
 .kokoelma-rivi-kuvake {
   flex: 0 0 auto;
   display: grid;

@@ -420,12 +420,19 @@ export const NAKYMAT = [
     parametri: { maa: 'FRA' }, odota: '#arrival-media',
     viimeinen: () => { document.querySelector('#arrival-media')?.scrollIntoView({ block: 'center' }); },
   },
+  /*
+   * PILLERIVALIKKO KORVASI ISOISÄN MATKALAUKUN (#passport-dialog,
+   * omistaja 29.9.2026) — ui.openPassport() on yhä yhteensopivuuskutsu
+   * (js/ui.js openPassport-kommentti), mutta se avaa nyt pillerivalikon
+   * Linssit-näkymään (#pilleri-linssit-nakyma) eikä enää <dialog>ia.
+   * odota-valitsin ja alempi TODENNUS-taulu päivitetty vastaavasti.
+   */
   {
-    nimi: 'laukku', kuvaus: 'Matkalaukku = passi (ui.openPassport(); yläpalkin #turn-pill)',
-    avaa: () => { window.matkakirja.ui.openPassport(); }, odota: '#passport-dialog[open]',
+    nimi: 'laukku', kuvaus: 'Pillerivalikko = passi (ui.openPassport(); yläpalkin #turn-pill)',
+    avaa: () => { window.matkakirja.ui.openPassport(); }, odota: '#pilleri-linssit-nakyma:not([hidden])',
   },
   {
-    nimi: 'laukku-linssit', kuvaus: 'Matkalaukku kaikki linssit omistettuina (linssivalitsin #linssi-kotelo)',
+    nimi: 'laukku-linssit', kuvaus: 'Pillerivalikko kaikki linssit omistettuina (linssivalitsin #linssi-kotelo)',
     avaa: async () => {
       const ui = window.matkakirja.ui;
       for (const l of ['ihmisen-matka', 'keksinnot', 'pallo', 'radio', 'satelliitti', 'topografia', 'vertailu', 'maatiedot', 'vesistot']) {
@@ -435,7 +442,7 @@ export const NAKYMAT = [
       ui.render?.();
       ui.openPassport();
     },
-    odota: '#passport-dialog[open]',
+    odota: '#pilleri-linssit-nakyma:not([hidden])',
   },
   ...Object.entries(LINSSIT).map(([linssi, asetus]) => ({
     nimi: `linssi-${linssi}`,
@@ -744,11 +751,11 @@ const TODENNUS = {
     },
   },
   'maalehti-mediarivi': { nakyy: ['#arrival-media'] },
-  laukku: { nakyy: ['#passport-dialog .passport-card'] },
+  laukku: { nakyy: ['#pilleri-linssit-nakyma'] },
   'laukku-linssit': {
-    nakyy: ['#passport-dialog .passport-card'],
+    nakyy: ['#pilleri-linssit-nakyma'],
     ehto: () => {
-      const n = [...document.querySelectorAll('#passport-dialog [data-linssi]')]
+      const n = [...document.querySelectorAll('#pilleri-linssit-nakyma [data-linssi]')]
         .filter((e) => e.getBoundingClientRect().width > 20).length;
       return n >= 8 ? null : `laukussa näkyy vain ${n} linssinappia`;
     },

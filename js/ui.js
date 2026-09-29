@@ -18109,6 +18109,18 @@ export class UI {
    * vaihdaValikko piilottaa/näyttää `hidden`-attribuutilla.
    */
   avaaPilleriValikko() {
+    /*
+     * NÄKYVYYS TÄSTÄ ITSESTÄÄN, EI VAIN js/main.js:n avaaPaavalikko:sta
+     * (korjaus 29.9.2026 illalla, item 3): openPassport()-yhteensopivuus-
+     * kutsuja (savuke-hiomassa-linssi.mjs, savuke-satelliittilinssi.mjs,
+     * tools/pariteettikuvat-nakymat.mjs) kutsuu TÄTÄ metodia suoraan
+     * ohittaen main.js:n avaaPaavalikko-kääreen, joka muuten olisi ainoa
+     * paikka missä `paavalikko.hidden` menee todeksi. Ilman tätä riviä
+     * openPassport() täytti näkymän sisällön mutta paneeli pysyi
+     * piilossa. Idempotentti: oikea nappireitti asettaa saman arvon jo
+     * ennen tätä kutsua (js/main.js avaaPaavalikko).
+     */
+    if (this.paavalikko) this.paavalikko.hidden = false;
     this.renderProgress();
     void this.paivitaLinssit();
     if (this.pilleriLinssitBtn) this.pilleriLinssitBtn.hidden = Boolean(this.linssiKotelo?.hidden);
@@ -18272,15 +18284,31 @@ export class UI {
     const { game } = this;
     const p = game.player;
 
+    /*
+     * KUVAPARI (osoite + peili), SAMA REITTI KUIN aarreIkoni (js/ui-
+     * apurit.js): korjaus 29.9.2026 illalla, omistajan huomio rikkinäisistä
+     * kuvista — aiemmin tähän otettiin vain aarrekuvanOsoitteet()-parin
+     * ENSIMMÄINEN arvo eikä peiliä lainkaan, ja piirrin latasi kuvan
+     * suoralla `img.src`-sijoituksella ilman uusintaa tai vikasietoa.
+     * js/kokoelmanakyma.js lataa nyt kuvat asetaKuva:lla (uusinta + peili +
+     * siisti poisto virheestä), joten tänne annetaan molemmat osoitteet.
+     */
+    const aarreKuvapari = (kuva) => (kuva ? aarrekuvanOsoitteet(kuva) : [null, null]);
+
     const { kaikki, loydetyt } = this.aarreLuettelo();
-    const aarneRivit = loydetyt.map((aarre, i) => ({
-      id: `aarre:${i}:${aarre.name}`,
-      nimi: aarre.name,
-      kuva: aarre.kuva ? aarrekuvanOsoitteet(aarre.kuva)[0] : null,
-      kuvakeSvg: aarre.kuva ? null : tokenIconSvg('star', 96),
-      kuvaPieni: aarre.kuva ? aarrekuvanOsoitteet(aarre.kuva)[0] : null,
-      kuvakePieni: aarre.kuva ? null : tokenIconSvg('star', 34),
-    }));
+    const aarneRivit = loydetyt.map((aarre, i) => {
+      const [osoite, vara] = aarreKuvapari(aarre.kuva);
+      return {
+        id: `aarre:${i}:${aarre.name}`,
+        nimi: aarre.name,
+        kuva: osoite,
+        kuvaVara: vara,
+        kuvakeSvg: osoite ? null : tokenIconSvg('star', 96),
+        kuvaPieni: osoite,
+        kuvaPieniVara: vara,
+        kuvakePieni: osoite ? null : tokenIconSvg('star', 34),
+      };
+    });
 
     /*
      * TAVARAT: sama ryhmittely kuin ennen renderFinds-metodissa (nimen
@@ -18294,15 +18322,26 @@ export class UI {
       rivit.n++;
       counts.set(token.name, rivit);
     });
-    const tavaraRivit = [...counts.values()].map(({ type, token, n }) => ({
-      id: `tavara:${token.name}`,
-      nimi: `${token.name}${n > 1 ? ` ×${n}` : ''}`,
-      kuva: token.kuva ? aarrekuvanOsoitteet(token.kuva)[0] : null,
-      kuvakeSvg: token.kuva ? null : tokenIconSvg(type, 96),
-      kuvaPieni: token.kuva ? aarrekuvanOsoitteet(token.kuva)[0] : null,
-      kuvakePieni: token.kuva ? null : tokenIconSvg(type, 34),
-    }));
+    const tavaraRivit = [...counts.values()].map(({ type, token, n }) => {
+      const [osoite, vara] = aarreKuvapari(token.kuva);
+      return {
+        id: `tavara:${token.name}`,
+        nimi: `${token.name}${n > 1 ? ` ×${n}` : ''}`,
+        kuva: osoite,
+        kuvaVara: vara,
+        kuvakeSvg: osoite ? null : tokenIconSvg(type, 96),
+        kuvaPieni: osoite,
+        kuvaPieniVara: vara,
+        kuvakePieni: osoite ? null : tokenIconSvg(type, 34),
+      };
+    });
 
+    /*
+     * JULISTEET: TÄSMÄLLEEN SAMA OSOITELASKU KUIN renderJulisteet/
+     * avaaJulisteGalleria (`julisteUrl(JULISTEET[cityId].tiedosto)`) —
+     * julisteilla ei ole peiliosoitetta (sama kuin niissä, `vara: null`),
+     * joten pettävä lataus vain poistaa kuvan siististi.
+     */
     const voitetut = this.julisteVoitot();
     const julisteRivit = voitetut.map((cityId) => {
       const juliste = JULISTEET[cityId];
@@ -18355,21 +18394,35 @@ export class UI {
       return;
     }
     const rivi = this.pilleriAarreData?.get(id);
-    this.naytaAarreSuurennos({ nimi: rivi?.nimi ?? id, kuva: rivi?.kuva ?? null });
+    this.naytaAarreSuurennos({
+      nimi: rivi?.nimi ?? id,
+      kuva: rivi?.kuva ?? null,
+      kuvaVara: rivi?.kuvaVara ?? null,
+    });
   }
 
-  /** Aarteen/tavaran koko ruudun katselin (juliste käyttää galleriaa). */
-  naytaAarreSuurennos({ nimi, kuva }) {
+  /*
+   * Aarteen/tavaran koko ruudun katselin (juliste käyttää galleriaa).
+   * KUVA ASETAKUVAN KAUTTA (korjaus 29.9.2026 illalla, sama syy kuin
+   * js/kokoelmanakyma.js asetaRivinKuva): suora img.src ei kokeillut
+   * kuvaVara-peiliosoitetta eikä poistanut kuvaa siististi, jos molemmat
+   * pettivät — rikkinäinen kuvake jäi näkyviin koko ruudun katselimeen.
+   */
+  naytaAarreSuurennos({ nimi, kuva, kuvaVara = null }) {
     this.suljeAarreSuurennos();
     const huntu = html('div', 'aarre-suurennos-huntu');
     const kotelo = html('div', 'aarre-suurennos');
     if (kuva) {
       const img = document.createElement('img');
       img.className = 'aarre-suurennos-kuva';
-      img.src = kuva;
       img.alt = nimi;
       img.decoding = 'async';
       kotelo.appendChild(img);
+      asetaKuva(img, kuva, kuvaVara, () => {
+        const ikoni = html('div', 'aarre-suurennos-ikoni');
+        ikoni.innerHTML = tokenIconSvg('star', 96);
+        img.replaceWith(ikoni);
+      });
     } else {
       const ikoni = html('div', 'aarre-suurennos-ikoni');
       ikoni.innerHTML = tokenIconSvg('star', 96);
@@ -19158,13 +19211,14 @@ export class UI {
    * Ei yhdelläkään yhdeksästä pelissä olevasta linssistä ole 29.9.2026
    * vielä omaa havainnekuvaa — kaikki käyttävät varustekuvaa.
    *
-   * ESITTELYTEKSTI: `LINSSI.esittely`, VARANA `lyhyt`, MUTTA VAIN JOS
-   * ESITTELY ON MERKKIJONO. Kahdella aikajanalinssillä (keksinnot,
-   * ihmisen-matka) `esittely` on jo ennestään OBJEKTI (avausjakson
-   * otsikko+teksti, js/aikajana.js avaaAvausjakso) — eri käyttö samalla
-   * nimellä. Tyyppitarkistus välttää törmäyksen kaatumatta; näillä
-   * kahdella käytetään toistaiseksi `lyhyt`-varakenttää kuten kaikilla
-   * muillakin (raportoitu nimiristiriita tilaajalle 29.9.2026).
+   * ESITTELYTEKSTI: `LINSSI.esittely` (ylätason merkkijono, Sisältökirjurin
+   * PR #3611), VARANA `lyhyt`. HUOM: kahdella aikajanalinssillä
+   * (keksinnot, ihmisen-matka) on JO ENNESTÄÄN oma `esittely`-kenttä,
+   * mutta se asuu `LINSSI.aikajana.esittely`-polussa (avausjakson
+   * otsikko+teksti, js/aikajana.js avaaAvausjakso) — ERI POLKU eikä siis
+   * törmää ylätason kenttään. Tyyppitarkistus (`typeof === 'string'`)
+   * jätetään silti varmuuden vuoksi: jos joku joskus lisäisi ylätasolle
+   * ei-merkkijonoarvon, esikatselu putoaa `lyhyt`-varakenttään kaatumatta.
    */
   linssiRivi(tunnus, nimi, { hiomassa = false, kesken = false } = {}) {
     if (!tunnus) {
@@ -19177,7 +19231,15 @@ export class UI {
       };
     }
     const linssi = this.linssiTuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
-    const kuva = hiomassa ? null : (linssi?.havainnekuva ?? `assets/varusteet/varuste-${tunnus}.jpg`);
+    /*
+     * HIOMASSA-KUVA UNOHTUI ENSIMMÄISESSÄ UUDISTUKSESSA (korjaus
+     * 29.9.2026 illalla, item 3: "harmaa 'hiomassa optikolla' -tila
+     * pitää näkyä Linssit-listassa"). LINSSI_HIOMASSA_KUVA
+     * (assets/linssit/hiomassa.svg) oli jo olemassa entisestä laukusta
+     * mutta jäi käyttämättä — rivi näytti ennen tätä pelkän nimen ilman
+     * kuvaketta.
+     */
+    const kuva = hiomassa ? LINSSI_HIOMASSA_KUVA : (linssi?.havainnekuva ?? `assets/varusteet/varuste-${tunnus}.jpg`);
     const esittely = typeof linssi?.esittely === 'string' ? linssi.esittely : null;
     return {
       id: hiomassa ? `hiomassa:${tunnus}` : tunnus,
@@ -19254,20 +19316,22 @@ export class UI {
 
     /*
      * YHTEENSOPIVUUSMERKINNÄT VANHOILLE SAVUKKEILLE (omistaja 29.9.2026;
-     * tools/savukkeet/savuke-satelliittilinssi.mjs, savuke-astro-pallo.mjs
-     * ja savuke-satelliitti-avaruus.mjs eivät kuulu tämän erän
-     * päivityslistaan, mutta lukevat `button[data-linssi=…]` ja
-     * `.linssi-aktivoi` suoraan DOMista). VAIN attribuutti ja kaksi
+     * tools/savukkeet/savuke-satelliittilinssi.mjs, savuke-astro-pallo.mjs,
+     * savuke-satelliitti-avaruus.mjs ja savuke-hiomassa-linssi.mjs lukevat
+     * `button[data-linssi=…]` ja `.linssi-aktivoi` suoraan DOMista — nämä
+     * neljä päivitettiin 29.9.2026 illalla käyttämään uusia valitsimia,
+     * ks. kunkin tiedoston oma kommentti). VAIN attribuutti ja kolme
      * luokkaa, joilla EI OLE omaa CSS:ää enää tässä uudessa asussa —
      * `.linssi-liuskat`-luokkaa EI lisätä, koska sen vanha ruudukko-CSS
      * (grid, neliönapit) muuttaisi tiheän listan takaisin ruudukoksi ja
      * romahdutti kotelon korkeuden (mitattu vika, korjattu 29.9.2026).
-     * Kolme kapeampaa savuketta (mm. hiomassa-rivin oma luokka) jäävät
-     * siis toistaiseksi päivittämättä; raportoitu tilaajalle.
+     * `.hiomassa`-luokka SAA oman, UUDEN CSS-säännön (harmaa suodatin,
+     * css/styles.css) — se ei ole vanha luokka eikä siis törmää mihinkään.
      */
     for (const rivi of this.linssiValikko.querySelectorAll('.kokoelma-rivi')) {
       rivi.dataset.linssi = rivi.dataset.id ?? '';
       rivi.classList.toggle('paalla', rivi.classList.contains('aktiivinen'));
+      rivi.classList.toggle('hiomassa', String(rivi.dataset.id ?? '').startsWith('hiomassa:'));
     }
     const esikatselulohko = this.linssiValikko.querySelectorAll('.kokoelma-esikatselu')[0];
     esikatselulohko?.classList.add('linssi-tiedot');

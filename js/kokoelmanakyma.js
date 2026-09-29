@@ -22,16 +22,47 @@
  */
 
 import { html } from './ui-apurit.js';
+import { asetaKuva } from './media.js';
+
+/*
+ * KUVAT ASETAKUVAN KAUTTA, EI SUORAAN img.src (korjaus 29.9.2026 illalla,
+ * omistajan huomio kuvasta pillerivalikko-d: julisterivien ja
+ * esikatselun kuvat näkyivät rikkinäisinä). Sama apuri kuin muualla
+ * pelissä (js/ui.js renderJulisteet, avaaJulisteGalleria,
+ * js/ui-apurit.js aarreIkoni): kokeilee ensin `kuva`-osoitteen, sitten
+ * `kuvaVara`-peiliosoitteen (jos annettu), ja jos molemmat pettävät,
+ * poistaa <img>-elementin siististi sen sijaan että jättäisi selaimen
+ * oman rikkinäisen kuvakkeen näkyviin.
+ */
+function asetaRivinKuva(img, kuva, kuvaVara, kuvakeVara) {
+  asetaKuva(img, kuva, kuvaVara ?? null, () => {
+    // `replaceWith` eikä vanhemman `innerHTML`: esikatselukortissa kuvan
+    // VIEREEN on jo ehtinyt ilmestyä nimi, selite ja toimintonappi (asetaKuva
+    // on asynkroninen) — koko vanhemman tyhjentäminen olisi pyyhkinyt nekin.
+    if (kuvakeVara) {
+      const korvaaja = document.createElement('span');
+      korvaaja.innerHTML = kuvakeVara;
+      img.replaceWith(korvaaja);
+    } else {
+      img.remove();
+    }
+  });
+}
 
 /**
  * Piirtää kokoelmanäkymän annettuun koteloon.
  *
  * @param {HTMLElement} kotelo elementti, jonka SISÄLLE näkymä piirretään
  * @param {Array<{otsikko?: string, luku?: string, rivit: Array<{
- *   id: string, nimi: string, kuva?: string|null, kuvakeSvg?: string,
- *   kuvaPieni?: string|null, kuvakePieni?: string, selite?: string,
+ *   id: string, nimi: string, kuva?: string|null, kuvaVara?: string|null,
+ *   kuvakeSvg?: string, kuvaPieni?: string|null, kuvaPieniVara?: string|null,
+ *   kuvakePieni?: string, selite?: string,
  * }>}>} ryhmat yksi tai useampi ryhmä; otsikko jää pois flättinä listana
  *   (Linssit), näkyy Aarteet-tyylisenä otsikkona kun se on annettu.
+ *   `kuva`/`kuvaPieni` ovat ensisijainen osoite, `kuvaVara`/`kuvaPieniVara`
+ *   valinnainen peiliosoite (sama pari kuin js/ui-apurit.js
+ *   aarrekuvanOsoitteet palauttaa) — jos molemmat puuttuvat/pettävät,
+ *   `kuvakeSvg`/`kuvakePieni` jää varasoluksi.
  * @param {object} tila
  * @param {string|null} tila.esikatseltu esikatseltavan rivin id, tai null
  * @param {(id: string) => void} tila.esikatsele napautus riviin, jota EI vielä esikatseltu
@@ -65,8 +96,8 @@ export function piirraKokoelma(kotelo, ryhmat, tila) {
       img.className = 'kokoelma-esikatselu-kuva';
       img.alt = '';
       img.decoding = 'async';
-      img.src = esikatseltuRivi.kuva;
       esikatseluKotelo.appendChild(img);
+      asetaRivinKuva(img, esikatseltuRivi.kuva, esikatseltuRivi.kuvaVara, esikatseltuRivi.kuvakeSvg);
     } else if (esikatseltuRivi.kuvakeSvg) {
       const kehys = html('div', 'kokoelma-esikatselu-ikoni');
       kehys.innerHTML = esikatseltuRivi.kuvakeSvg;
@@ -107,8 +138,8 @@ export function piirraKokoelma(kotelo, ryhmat, tila) {
           const img = document.createElement('img');
           img.alt = '';
           img.decoding = 'async';
-          img.src = rivi.kuvaPieni;
           kuvake.appendChild(img);
+          asetaRivinKuva(img, rivi.kuvaPieni, rivi.kuvaPieniVara, rivi.kuvakePieni);
         } else {
           kuvake.innerHTML = rivi.kuvakePieni;
         }

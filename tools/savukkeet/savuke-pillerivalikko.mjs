@@ -78,6 +78,21 @@ async function avaaPeli(leveys, korkeus) {
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e)));
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
+  /*
+   * ÄMPÄRIN KUVAOSOITTEET (media.matkakirja.app) TÄYTETÄÄN PAIKALLISELLA
+   * TESTIKUVALLA sen sijaan että ne katkaistaisiin muun ulkopuolisen
+   * liikenteen mukana (korjaus 29.9.2026 illalla, item 1: img.complete/
+   * naturalWidth-väitteet vaativat OIKEAN kuvanlatauksen läpi asetaKuva-
+   * putken). Rekisteröity abort-säännön JÄLKEEN, joten Playwright
+   * kokeilee tätä tarkempaa sääntöä ensin eikä savuke silti riipu
+   * oikeasta verkosta. Sama reitti kelpaa mille tahansa ämpärikuvalle,
+   * koska testi ei väitä mitään KUVAN SISÄLLÖSTÄ, vain siitä että
+   * <img> latautuu onnistuneesti eikä jää rikki.
+   */
+  const testikuva = readFileSync(join(JUURI, 'assets/aarteet/aarre-europe-star.jpg'));
+  await sivu.route('https://media.matkakirja.app/**', (r) => r.fulfill({
+    status: 200, contentType: 'image/jpeg', body: testikuva,
+  }));
   await sivu.goto(osoite, { waitUntil: 'domcontentloaded' });
   await sivu.waitForSelector('.start-btn', { timeout: 15000 });
   await sivu.evaluate(() => {
@@ -96,17 +111,50 @@ async function avaaPeli(leveys, korkeus) {
     const { ui } = window.matkakirja;
     const g = ui.game;
     const p = g.player;
-    const kaupunkiId = g.pack.cities?.[0]?.id;
+    const kaupungit = g.pack.cities ?? [];
+    const kaupunkiId = kaupungit[0]?.id;
     if (kaupunkiId) {
       p.pos = { type: 'city', city: kaupunkiId };
       g.world.visited.add(kaupunkiId);
     }
     p.money = 2000;
     p.linssit = ['satelliitti', 'ihmisen-matka', 'radio', 'topografia', 'vesistot'];
-    p.finds = ['star'];
-    const mannerTypes = g.pack?.tokens?.mannerTypes;
-    p.findManner = [mannerTypes ? Object.keys(mannerTypes)[0] : null];
-    if (p.pos?.city) g.world.tokens.set(p.pos.city, 'star');
+    /*
+     * AARTEET PELIN OMILLA API:LLA, EI KÄSIN TÄYTETTYINÄ TAULUKKOINA
+     * (omistajan tilaus 29.9.2026: "Aarteisiin oikeaa sisältöä pelin
+     * omien API:en kautta: ... game.world.starsFound oikein täytettynä
+     * ... p.finds + findManner/findMaa"). g.revealToken(cityId) hoitaa
+     * kaikki kirjaukset kerralla (p.finds, findManner, findMaa,
+     * starsFound) — sama kutsu kuin tools/savuke-mannerlento.mjs
+     * käyttää. Kaksi ERI kaupunkia: yksi tähtilaatta (Aarnin luettelo)
+     * ja yksi tavallinen aarre (Tavarat).
+     *
+     * g.pack ON TÄSSÄ VAIHEESSA VIELÄ 'maailma' (lähtökaupunkilauta,
+     * ks. js/packs/maailma.js: "tällä laudalla ei pelata") EIKÄ
+     * oikea mannerkartta (maailmankartta.js) — kirjaaLoytopaikka ei
+     * siis löydä cityManner/cityCountry-tietoa näille kaupungeille
+     * (findManner/findMaa jäävät nulliksi). Tähtilaatta saa silti
+     * OIKEAN paikallisen kuvan, koska 'maailma'-laudalla on oma
+     * star-kuva (aarre-maailma-star.jpg). Tavaralla ei ole vastaavaa
+     * yleiskuvaa (js/tokens.js TOKEN_TYPES.pieniAarre ei sisällä
+     * kuva-kenttää), joten sille asetetaan jälkikäteen oikea
+     * ISO3-maakoodi (FIN) — game.aarreMantereella yhdistää silloin
+     * paikallisaarteen (js/packs/paikallisaarteet.js) kuvan riippumatta
+     * laudasta, aivan kuten oikeassa pelissä sen jälkeen kun pelaaja on
+     * siirtynyt Suomeen. Yhä sama pelin oma API (revealToken), vain
+     * kirjattu maa korjattu vastaamaan sitä mitä oikea peluu antaisi.
+     */
+    const tahtiKaupunki = kaupungit[0]?.id;
+    const tavaraKaupunki = kaupungit.find((k) => k.id !== tahtiKaupunki)?.id;
+    if (tahtiKaupunki) {
+      g.world.tokens.set(tahtiKaupunki, 'star');
+      g.revealToken(tahtiKaupunki);
+    }
+    if (tavaraKaupunki) {
+      g.world.tokens.set(tavaraKaupunki, 'pieniAarre');
+      g.revealToken(tavaraKaupunki);
+      p.findMaa[p.findMaa.length - 1] = 'FIN';
+    }
     const { JULISTEET } = await import('./js/packs/julisteet.js');
     g.julisteet = new Set(Object.keys(JULISTEET).slice(0, 2));
     g.phase = 'action';
@@ -260,12 +308,68 @@ await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: t
   await sivu.click('#pilleri-aarteet-btn');
   await sivu.waitForTimeout(300);
 
+  /*
+   * OTSIKON LUKEMA: Aarnin luettelo ja Julisteet näyttävät "N / kaikki"
+   * (kiinteä kokonaismäärä), mutta Tavaroilla ei ole ylärajaa — sen
+   * otsikko on aina pelkkä lukumäärä (js/ui.js renderPilleriAarteet:
+   * `luku: \`${tavaraRivit.length}\``). Nimi ja luku luetaan erikseen
+   * DOMista (.kokoelma-otsikko-nimi/-luku), koska pelkkä textContent
+   * liittäisi ne yhteen ilman välilyöntiä ("Tavarat1").
+   */
   const otsikot = await sivu.evaluate(() => [...document.querySelectorAll(
     '#pilleri-aarteet-lista .kokoelma-otsikko',
-  )].map((o) => o.textContent.trim()));
-  vaadi('Aarteet: vähintään yksi otsikko N/kaikki-lukemalla',
-    otsikot.length > 0 && otsikot.every((t) => /\d+\s*\/\s*\d+/.test(t)),
+  )].map((o) => ({
+    nimi: o.querySelector('.kokoelma-otsikko-nimi')?.textContent.trim() ?? '',
+    luku: o.querySelector('.kokoelma-otsikko-luku')?.textContent.trim() ?? '',
+  })));
+  vaadi('Aarteet: otsikoissa on lukema (Aarnin luettelo/Julisteet N/kaikki, Tavarat pelkkä N)',
+    otsikot.length > 0 && otsikot.every((o) => (o.nimi === 'Tavarat'
+      ? /^\d+$/.test(o.luku) : /\d+\s*\/\s*\d+/.test(o.luku))),
     JSON.stringify(otsikot));
+
+  /*
+   * KUVIEN EHJYYS RIVEILLÄ JA ESIKATSELUSSA (omistajan korjauspyyntö
+   * 29.9.2026 illalla, kuva pillerivalikko-d: Julisteiden pikkukuvat
+   * ja esikatselu näkyivät rikkinäisinä). Käydään läpi kaikki kolme
+   * ryhmää (Aarnin luettelo, Tavarat, Julisteet): rivin OMA <img> ja
+   * 1. napautuksen jälkeen esikatselun <img> molemmat todella
+   * latautuivat (img.complete && naturalWidth > 0), ei vain että
+   * elementti on olemassa.
+   */
+  const ryhmat = [
+    ['aarre:', 'Aarnin luettelo'],
+    ['tavara:', 'Tavarat'],
+    ['juliste:', 'Julisteet'],
+  ];
+  for (const [etuliite, nimi] of ryhmat) {
+    const rivi = `#pilleri-aarteet-lista .kokoelma-rivi[data-id^="${etuliite}"]`;
+    const onRivi = await sivu.evaluate((v) => Boolean(document.querySelector(v)), rivi);
+    if (!onRivi) {
+      vaadi(`Aarteet ${nimi}: rivi löytyy testattavaksi`, false, 'ei rivejä — aineisto puuttuu avaaPeli-tilasta');
+      continue;
+    }
+    await sivu.waitForTimeout(300); // rivikuvien lataus (asetaKuva)
+    const rivinKuva = await sivu.evaluate((v) => {
+      const img = document.querySelector(`${v} img`);
+      return img
+        ? { onImg: true, complete: img.complete, naturalWidth: img.naturalWidth, src: img.src }
+        : { onImg: false };
+    }, rivi);
+    vaadi(`Aarteet ${nimi}: rivin pikkukuva latautuu (ei rikkinäinen)`,
+      rivinKuva.onImg && rivinKuva.complete && rivinKuva.naturalWidth > 0, JSON.stringify(rivinKuva));
+
+    await sivu.click(rivi);
+    await sivu.waitForTimeout(300);
+    const esikatselunKuva = await sivu.evaluate(() => {
+      const img = document.querySelector('#pilleri-aarteet-lista .kokoelma-esikatselu img');
+      return img
+        ? { onImg: true, complete: img.complete, naturalWidth: img.naturalWidth, src: img.src }
+        : { onImg: false };
+    });
+    vaadi(`Aarteet ${nimi}: esikatselun kuva latautuu (ei rikkinäinen)`,
+      esikatselunKuva.onImg && esikatselunKuva.complete && esikatselunKuva.naturalWidth > 0,
+      JSON.stringify(esikatselunKuva));
+  }
 
   await sivu.click('#pilleri-aarteet-lista .kokoelma-rivi');
   await sivu.waitForTimeout(250);
