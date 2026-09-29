@@ -9331,3 +9331,7 @@ Omistaja 29.9.2026 klo 22.30: "Kartassa järvet esim. Suomessa ovat turhan paksu
 ## OMISTAJA: EI SAAVUTETTAVUUSOHJEITA ULKOASUUN + PILLERIVALIKON JA LUENNAN PALAUTE (29.9.2026 klo 23.04)
 
 Omistaja 29.9.2026 klo 23.04 (1.0.56): "älä tuo mukaan saavutettavuus ohjeita, ne pilaavat asettelun. kirjoita tämä ohje raamattuun." → Raamattu, Ydinajatus: EI SAAVUTETTAVUUSOHJEITA ULKOASUUN. Palaute: iPadin yläpalkki liian matala; pillerivalikon napit kiinni toisissaan ja matalammiksi, ääninapit ylimmäksi, Linssit ja Matka vaihtavat paikkaa, valikko kapeammaksi, Linsseihin ja Aarteisiin vasemmalle erillinen kuva- ja seliteikkuna, keskeneräisissä maininta vain otsikossa, paperi hieman vaaleammaksi ja teksti hieman tummemmaksi, Matka-sivun pöllötason kuva isommaksi ja tekstille isompi marginaali (Natiivi-UI). Isoisän luennan alku jää kuulematta, hypoteesi: luenta käynnistyy jo kaupunkiesittelyn aikana; matkakirjan pohja paperin väriseksi kuten webissä (Linssiseppä 2).
+
+## OMISTAJA: LIPPU MAAN OIKEAAN YLÄKULMAAN, HUNTU EI RAJAA LIIKETTÄ (29.9.2026 klo 23.12)
+
+Omistaja 29.9.2026 klo 23.12 (iPad, Italia): "Lippu pitää olla aina maan oik. yläkulmassa. Muuten se näkyy huonosti kun koko maa on näytöllä." → lipputanko aina maan rajauslaatikon koilliskulman tuntumaan maan puolelle, kaikissa maissa (Linssiseppä, 6e5ccf55:n jatko). Omistaja 29.9.2026 klo 23.1x: "Kun huntu on päällä maailma tilassa, pelaajan pitää pystyä liikkumaan koko pallolla." → huntu peittää mutta ei rajaa kameraa eikä liikettä (Linssiseppä, merge Natiivisepälle). Molemmat web-jonoon.
