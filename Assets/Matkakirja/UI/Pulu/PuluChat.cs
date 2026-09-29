@@ -1614,24 +1614,10 @@ namespace Matkakirja.Natiivi
             if (autolukuTila != null) autolukuTila.text = AaniPaalla ? "päällä" : "pois";
         }
 
-        /// <summary>
-        /// Lukijan valikon rivi ääni-valitsimen paikalla: "Lue vastaukset automaattisesti" (kaiutinvipu). Sama asu kuin
-        /// Nopeus-rivillä: nimi vasemmalla, kytkin oikealla kelausnapin tyylillä (valikko on paneelin juuressa, joten
-        /// vain Matkakirja.uss:n luokat pätevät siinä, ei Pulu.uss).
-        /// </summary>
+        /// <summary>Lukijan valikon rivi ääni-valitsimen paikalla: "Lue vastaukset automaattisesti" (kaiutinvipu).</summary>
         void RakennaAutoluku(VisualElement saadot)
         {
-            var rivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
-            var nimi = Rakenne.Teksti("Lue vastaukset automaattisesti", "mk-lukija-saadot__nimi", rivi);
-            nimi.style.width = StyleKeyword.Auto;
-            nimi.style.flexGrow = 1;
-            nimi.style.flexShrink = 1;
-            nimi.style.whiteSpace = WhiteSpace.Normal;
-            Kirjasimet.Aseta(nimi, Kirjasin.Luku);
-            var nappi = Rakenne.Nappi("", "mk-lukija-valikko__kelausnappi", VaihdaAani, rivi);
-            nappi.tooltip = "Lue vastaukset automaattisesti";
-            autolukuTila = nappi.Q<Label>(className: "mk-nappi__teksti");
-            Kirjasimet.Aseta(nappi, Kirjasin.LukuLihava);
+            autolukuTila = KortinLukija.KytkinRivi(saadot, "Lue vastaukset automaattisesti", VaihdaAani);
             PaivitaKaiutin();
         }
 
