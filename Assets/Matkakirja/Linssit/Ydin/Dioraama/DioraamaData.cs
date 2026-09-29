@@ -293,6 +293,14 @@ namespace Matkakirja.Linssit.Dioraama
         /// tilan glb:n UV1:lle; `valoatlas: { tiedosto, puoli }` (4k iPad, 2k iPhone). null = rakennuskoneen tila
         /// (maalattu/valaistu varjostin kuten ennen).</summary>
         public string ValoAtlas, ValoAtlasPuoli;
+        /// <summary>ASTC-pakattu valoatlas mip-ketjuna (.astcm, tyokalut/astc-mip.swift): `valoatlas.astc` / `astcPuoli`;
+        /// null = JPEG kuten ennen.</summary>
+        public string ValoAtlasAstc, ValoAtlasAstcPuoli;
+        /// <summary>LINNA, leikkausikkuna kuoreen (speksi dioraama-rajapinnat-blender-20260929.md kohta 3):
+        /// `leikkaus: { laajennus 1.0, kameraan true }` (oletus) tai käsin `{ min, max }` (korvaa rajat).</summary>
+        public double LeikkausLaajennus = 1.0;
+        public bool LeikkausKameraan = true;
+        public V3? LeikkausMin, LeikkausMax;
         /// <summary>Tilaan sijoitetut liekki-instanssit (era 2); tyhjä vanhassa muodossa.</summary>
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
         /// <summary>Tilaan sijoitetut äänilähteet (era 2); tyhjä vanhassa muodossa.</summary>
@@ -348,6 +356,11 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class Ulkokuori
     {
         public string Huippu, Normaali, Kevyt;
+        /// <summary>ASTC-tekstuurit tasoittain (.astcm; `tekstuurit: { huippu, normaali, kevyt }`); puuttuva = glb:n JPEG.</summary>
+        public string AstcHuippu, AstcNormaali, AstcKevyt;
+        /// <summary>Järven pinnan korkeus metreinä (`vesi`, oletus −7): fotogrammetriasta vesi on poistettu, ja natiivi
+        /// piirtää järven pinnan "vesi" tälle korkeudelle.</summary>
+        public double VesiY = -7;
     }
 
     public sealed class Rakennus
@@ -402,6 +415,14 @@ namespace Matkakirja.Linssit.Dioraama
                     Huippu = MiniJson.Teksti(kuori, "huippu"), Normaali = MiniJson.Teksti(kuori, "normaali"),
                     Kevyt = MiniJson.Teksti(kuori, "kevyt"),
                 };
+            if (r.Ulkokuori != null && MiniJson.Luku(kuori, "vesi") is double vesiY) r.Ulkokuori.VesiY = vesiY;
+            var kuoriTekstuurit = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuori, "tekstuurit"));
+            if (r.Ulkokuori != null && kuoriTekstuurit != null)
+            {
+                r.Ulkokuori.AstcHuippu = MiniJson.Teksti(kuoriTekstuurit, "huippu");
+                r.Ulkokuori.AstcNormaali = MiniJson.Teksti(kuoriTekstuurit, "normaali");
+                r.Ulkokuori.AstcKevyt = MiniJson.Teksti(kuoriTekstuurit, "kevyt");
+            }
             var yleiskamera = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "yleiskamera"));
             r.YleisVaaka = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "vaaka")));
             r.YleisPysty = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "pysty")));
@@ -634,9 +655,22 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var glb = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "glb"));
             t.GlbTiedosto = MiniJson.Teksti(glb, "tiedosto");
+            var leikkaus = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "leikkaus"));
+            if (leikkaus != null)
+            {
+                t.LeikkausLaajennus = MiniJson.Luku(leikkaus, "laajennus") ?? 1.0;
+                t.LeikkausKameraan = MiniJson.Totuus(leikkaus, "kameraan", true);
+                if (MiniJson.Kentta(leikkaus, "min") != null && MiniJson.Kentta(leikkaus, "max") != null)
+                {
+                    t.LeikkausMin = LueV3(MiniJson.Kentta(leikkaus, "min"));
+                    t.LeikkausMax = LueV3(MiniJson.Kentta(leikkaus, "max"));
+                }
+            }
             var valoatlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas"));
             t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
             t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
+            t.ValoAtlasAstc = MiniJson.Teksti(valoatlas, "astc");
+            t.ValoAtlasAstcPuoli = MiniJson.Teksti(valoatlas, "astcPuoli");
             t.GlbSha256 = MiniJson.Teksti(glb, "sha256");
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "liekit")))
             {

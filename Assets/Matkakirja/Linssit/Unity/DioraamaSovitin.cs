@@ -159,7 +159,8 @@ namespace Matkakirja.Natiivi
 
         public void Paivita()
         {
-            if (!avoinna || y == null || !linssi.Auki) return;
+            // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
+            if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
             bool pysty = y.Kuvasuhde < 1.0;
             var nakyma = linssi.NakymaHetkella(t, pysty);
@@ -176,6 +177,8 @@ namespace Matkakirja.Natiivi
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
             nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
+            // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
+            nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
             syote.Paivita(rakennus, t);
             aanet?.Paivita(rakennus, nakyma, t);
         }
@@ -292,6 +295,9 @@ namespace Matkakirja.Natiivi
         {
             if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
             o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa));
+            // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).
+            double toisto = rakennus.Pinnat != null && rakennus.Pinnat.TryGetValue("vesi", out var vp) && vp.ToistoU > 0 ? vp.ToistoU : 8;
+            nayttamo.Ulkokuori.LisaaVesi(rakennus3D?.PinnanMateriaali(rakennus, "vesi"), (float)rakennus.Ulkokuori.VesiY, (float)toisto);
         }
 
         /// <summary>Kevyt Tila-kopio, jonka Hahmot-lista suodattaa POIS henkilöt, joilla ON malli3d.glb JA
@@ -414,6 +420,23 @@ namespace Matkakirja.Natiivi
             int kerta = avauskerta;
             bool puoli = PieniLaite() && !string.IsNullOrEmpty(tila.ValoAtlasPuoli);
             string polku = puoli ? tila.ValoAtlasPuoli : tila.ValoAtlas;
+            // ASTC-mipketju ensin (valoatlas.astc / astcPuoli), JPEG varalla.
+            string astcPolku = puoli ? tila.ValoAtlasAstcPuoli : tila.ValoAtlasAstc;
+            if (!string.IsNullOrEmpty(astcPolku))
+            {
+                byte[] astcTavut = null;
+                yield return HaeTavut(peili(paketinJuuri + astcPolku), t => astcTavut = t);
+                var astc = DioraamaAstc.Lue(astcTavut, "Valoatlas:" + tila.Id + ":astc");
+                if (kerta != avauskerta || rakennus3D == null) { if (astc != null) UnityEngine.Object.Destroy(astc); yield break; }
+                if (astc != null)
+                {
+                    ladatutValoAtlakset[tila.Id] = astc;
+                    rakennus3D.AsetaValoAtlas(tila.Id, astc);
+                    o.Kirjaa($"poikki: valoatlas {tila.Id} valmis ({astc.width}x{astc.height} {astc.format}{(puoli ? ", puolikas" : "")})");
+                    yield break;
+                }
+                o.Kirjaa($"poikki: valoatlas {tila.Id} ASTC ei käytössä, JPEG varalla");
+            }
             byte[] tavut = null;
             yield return HaeTavut(peili(paketinJuuri + polku), t => tavut = t);
             if (tavut == null) { o.Kirjaa($"poikki: valoatlas {polku} ei latautunut (tila harmaana)"); yield break; }
@@ -549,6 +572,7 @@ namespace Matkakirja.Natiivi
                 rakennus = null; latausKaynnissa = false;
                 NollaaNakymanLataukset();
                 rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
+                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); // Olavinlinna: ei tuplia
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
