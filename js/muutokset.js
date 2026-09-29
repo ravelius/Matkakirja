@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2412, teksti: 'ISL: pitkä-luonnehdinta + pulu kaikille 9 maaku… (#3560)' },
   { v: 2411, teksti: 'Natiivin muutosloki: 1.0.51 (#3629)' },
   { v: 2410, teksti: 'Linssien esittelyt: 9 lyhyttä selitystä pilleri… (#3611)' },
   { v: 2409, teksti: 'Linssikatalogi: E11 tila rakenteilla + n1500-to… (#3593)' },

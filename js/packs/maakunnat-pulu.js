@@ -2087,4 +2087,51 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mitä luostarin kirjastossa säilytetään?", a: "Kirjastossa on noin 11 000 teosta, joiden joukossa 31 inkunaabelia eli 1400-luvun painettua kirjaa sekä bosniankielisiä kyrillisiä käsikirjoituksia." },
     ],
   },
+  ISL: {
+    Austurland: [
+      { q: "Miksi Stuðlagilin kanjoni näkyy vasta nyt, vaikka basalttipylväät ovat tuhansia vuosia vanhoja?", a: "Kanjoni oli aiemmin piilossa Jöklan joen alla. Kun Kárahnjúkarin voimalaitos valjastettiin 2006–2009, suurin osa vedestä ohjattiin patoaltaaseen ja joen pinta laski 7–8 metriä – silloin tiiviit basalttipylväät paljastuivat ensi kertaa ihmisten nähtäväksi." },
+      { q: "Mistä Islannin villit peurat oikein tulivat?", a: "Norjalaisia peuroja tuotiin saarelle neljässä erässä 1770–80-luvuilla eri puolille maata. Vain Vopnafjörðuriin Austurlandille päästetty lauma selvisi hengissä, ja kaikki nykyiset noin 6 000–7 000 villipeuraa polveutuvat siitä." },
+      { q: "Miksi Petra alkoi kerätä kiviä?", a: "Petra Sveinsdóttir aloitti kivien keräämisen jo seitsemänvuotiaana ja jatkoi sitä koko elämänsä ajan patikoiden syrjäisilläkin seuduilla. Vuonna 1974 hän avasi kotinsa yleisölle, ja kokoelma on nykyään yksi maailman suurimmista yksityisistä kivikokoelmista." },
+    ],
+    'Höfuðborgarsvæði': [
+      { q: "Miksi Hafnarfjörðuria kutsutaan Islannin haltiapääkaupungiksi?", a: "Kaupungin keskustan laavakedot ja varsinkin 1923 avattu Hellisgerðin puisto tunnetaan kansanperinteessä piilokansan – haltioiden ja peikkojen – asuinsijoina. Kyselyjen mukaan yli puolet hafnarfjörðurilaisista pitää haltioita ainakin mahdollisina, ja aiheesta järjestetään nykyään opastettuja kierroksia." },
+      { q: "Kuinka suuri osa islantilaisista asuu pääkaupunkiseudulla?", a: "Nykyään lähes kaksi kolmasosaa koko maan reilusta 380 000 asukkaasta asuu pääkaupunkiseudun kunnissa. Loppu maa on sitäkin harvemmin asuttua, mikä tekee alueesta ylivoimaisesti tiheimmin asutun osan Islantia." },
+      { q: "Kuka Bessastaðirissa asui ennen kuin siitä tuli presidentin virka-asunto?", a: "1200-luvulla paikan omisti valtiomies ja saagakirjailija Snorri Sturluson, yksi Islannin historian vaikutusvaltaisimmista hahmoista. Presidentin virka-asunnoksi Bessastaðir vakiintui vasta 1941, ja sitä ennen se toimi muun muassa kuninkaan käskynhaltijan residenssinä." },
+    ],
+    'Vestfirðir': [
+      { q: "Miksi Ísafjörðurin yläpuolelle rakennettiin isot betoniset vallit?", a: "1990-luvulla lumivyöryt tappoivat kymmeniä ihmisiä Vestfirðirin kylissä, muun muassa Flateyrissa 1995. Onnettomuuksien jälkeen useisiin kaupunkeihin, myös Ísafjörðuriin, rakennettiin suuria ohjausvalleja, jotka pakottavat vyöryt kääntymään pois asutuksen kohdalta." },
+      { q: "Miksi juuri Vestfirðir sai maineen noituuden keskuksena?", a: "1600-luvun \"poltettujen vuosisadalla\" Strandirin alueella tuomittiin ja poltettiin roviolla 21 ihmistä noituudesta – enemmän kuin missään muualla Islannissa. Hólmavíkin Strandagaldur-museo kertoo nykyään tästä historiasta ja ajan taikamerkeistä." },
+      { q: "Mistä Dynjandin nimi tulee?", a: "Dynjandi tarkoittaa suomeksi suunnilleen \"jylisevää\" tai \"kumisevaa\", ja nimi viittaa putouksen voimakkaaseen ääneen. Se on Vestfirðirin suurin putous, ja sen leveys kasvaa yläosan 30 metristä alaosan 60 metriin." },
+    ],
+    'Norðurland eystra': [
+      { q: "Miksi Akureyrin liikennevaloissa on sydämiä?", a: "Sydämenmuotoiset valot ilmestyivät kaupungin liikennevaloihin 2008, vain kuukausia ennen kuin Islannin pankkijärjestelmä romahti finanssikriisissä. Kriisin jälkeen sydämistä tuli symboli positiiviselle ajattelulle ja yhteisöllisyydelle, ja ne ovat säilyneet kaupungissa siitä lähtien." },
+      { q: "Miksi juuri Húsavíkin edustalla nähdään niin paljon valaita?", a: "Skjálfandin lahden ravinteikkaat, matalat vedet houkuttelevat useita valaslajeja ruokailemaan lähelle rannikkoa lähes ympäri vuoden. Kaupungista on tullut sen ansiosta Islannin tunnetuin valaidenkatselukohde." },
+      { q: "Mikä tekee Akureyrin kasvitieteellisestä puutarhasta erikoisen?", a: "Se on yksi maailman pohjoisimmista kasvitieteellisistä puutarhoista, vain noin 50 kilometrin päässä napapiiristä. Silti siellä kasvaa nykyään yli 7 000 kasvilajia, joista suurin osa on tuotu muualta maailmasta." },
+    ],
+    'Norðurland vestra': [
+      { q: "Mitä Glaumbæjrin turvetaloissa oikein näkee?", a: "Kompleksi koostuu kolmestatoista toisiinsa käytävillä yhdistetystä pienestä rakennuksesta – muun muassa keittiöstä, ruokavarastosta ja pajasta – jotka on rakennettu turpeesta ja kivestä puurungon varaan. Taloissa asuttiin aina vuoteen 1947 asti, jolloin kansallismuseo hankki paikan museoksi." },
+      { q: "Kuka oli Grettir ja miksi hän liittyy Drangeyn saareen?", a: "Grettir Ásmundarson on Islannin tunnetuimpia saagasankareita, lainsuojaton mies, joka joutui pakenemaan vuosikausiksi asumattomille seuduille. Grettis sagan mukaan hän vietti viimeiset vuotensa piilossa Drangeyn jyrkällä saarella ennen kuin vihamiehet lopulta löysivät hänet." },
+      { q: "Miksi juuri Skagafjörður tunnetaan hevoskasvatuksesta?", a: "Alueen laajat, ravinteikkaat laaksoniityt ja pitkä kasvatusperinne ovat tehneet siitä yhden Islannin tärkeimmistä islanninhevosten kasvatusalueista. Hevosnäyttelyjä ja -kilpailuja järjestetään seudulla nykyään säännöllisesti ympäri vuoden." },
+    ],
+    'Reykjavík': [
+      { q: "Mitä Hallgrímskirkjan torni matkii?", a: "Arkkitehti Guðjón Samúelsson suunnitteli kirkon 1930-luvulla niin, että sen harjakatto ja pylväsmäiset seinät muistuttavat Islannin luonnossa esiintyviä basalttipatsaita. Kirkko valmistui lopulta vasta 1986, yli 40 vuotta suunnittelun aloittamisen jälkeen." },
+      { q: "Mitä Sólfar-veistos oikeastaan esittää?", a: "Teos on tekijänsä Jón Gunnar Árnasonin mukaan \"unelmalaiva\" ja auringon ja toivon symboli, ei historiallinen viikinkilaiva. Teräksinen veistos paljastettiin 1990 Reykjavíkin 200-vuotisjuhlan kunniaksi." },
+      { q: "Miksi Harpa rakennettiin juuri satamaan?", a: "Konserttitalon rakentaminen aloitettiin ennen vuoden 2008 finanssikriisiä osana laajempaa satama-alueen uudistusta. Hanke jäi kriisin myötä hetkeksi kesken, mutta valtio ja kaupunki päättivät rahoittaa sen loppuun, ja Harpa avattiin 2011." },
+    ],
+    'Suðurland': [
+      { q: "Mitä Reynisfjaralle tapahtui helmikuussa 2026?", a: "Viikkoja jatkuneet voimakkaat aallot ja itätuulet kuluttivat rantaa niin pahasti, että osa rannan kuuluisista basalttipylväsmuureista sortui mereen. Tapaus muistutti, miten altis eroosiolle tämä Atlantin avomerelle avautuva ranta on." },
+      { q: "Miksi Eyjafjallajökullin purkaus 2010 pysäytti lentoliikenteen kaukana Euroopassa?", a: "Purkaus tapahtui jäätikön alla, ja jää suli äkillisesti kuumaan laavaan koskettaessaan, mikä hienonsi tuhkan poikkeuksellisen pieneksi ja nosti sen korkealle ilmakehään. Hieno tuhka ajautui tuulten mukana laajalle Euroopan ylle ja pysäytti yli 100 000 lentoa noin viikossa." },
+      { q: "Miksi Seljalandsfossin putouksen takaa voi kävellä?", a: "Putous putoaa entiseltä merenrantajyrkänteeltä, jonka juurelle on ajan mittaan syntynyt onkalo putouksen taakse. Kallioseinämän ja vesiverhon väliin jää juuri sen verran tilaa, että sieltä pääsee kulkemaan ympäri, joskin täysin kastuen." },
+    ],
+    'Suðurnes': [
+      { q: "Miten Sininen lagúuni oikeastaan syntyi?", a: "Se ei ole luonnollinen allas, vaan Svartsengin geotermisen voimalan käytetyn veden kertymä, joka alkoi muodostua 1976. Veden korkea piidioksidipitoisuus tiivisti altaan pohjan vedenpitäväksi, ja vasta myöhemmin ihmiset huomasivat, että kylpeminen vedessä tuntui miellyttävältä iholle." },
+      { q: "Mitä Grindavíkissa tapahtui vuodesta 2023 alkaen?", a: "Reykjanesin niemimaan uusi purkaussarja alkoi uhata kaupunkia, ja sen noin 3 800 asukasta evakuoitiin marraskuussa 2023. Useita purkauksia on tapahtunut sen jälkeen, ja kaupunkia suojaamaan on rakennettu kilometrien pituisia laavavalleja." },
+      { q: "Miksi Reykjanesviti on Islannin vanhin majakka?", a: "Ensimmäinen majakka paikalla valmistui jo 1878, mutta maanjäristys vaurioitti sen pahoin vain kahdeksan vuotta myöhemmin. Nykyinen, yhä käytössä oleva betonimajakka rakennettiin 1907–1908 ja on säilynyt siitä lähtien lähes alkuperäisenä." },
+    ],
+    Vesturland: [
+      { q: "Miksi Deildartunguhverin vesi riittää lämmittämään kokonaisia kaupunkeja?", a: "Lähde pulppuaa 180 litraa lähes kiehuvaa vettä sekunnissa, mikä tekee siitä Euroopan voimakkaimman kuuman lähteen. Vesi johdetaan putkia pitkin muun muassa Borgarnesiin ja 64 kilometrin päähän Akranesiin, mikä on Islannin pisin kaukolämpöputki." },
+      { q: "Miksi Hraunfossarin vesi näyttää tulevan tyhjästä?", a: "Vesi ei virtaa maanpäällisestä joesta, vaan on suodattunut hitaasti läheisen laavakentän huokoisen kiven läpi. Se purkautuu lukemattomina pieninä putouksina suoraan kivien raoista Hvítá-jokeen usean sadan metrin matkalla." },
+      { q: "Mitä hákarl oikein on?", a: "Se on perinteinen islantilaisherkku, joka valmistetaan mätättämällä ja kuivattamalla jäämerihain lihaa useiden kuukausien ajan – tuore liha on myrkyllistä ilman tätä käsittelyä. Bjarnarhöfnin tilan museo Vesturlannissa esittelee valmistusprosessin ja tarjoaa maistiaisia." },
+    ],
+  },
 };

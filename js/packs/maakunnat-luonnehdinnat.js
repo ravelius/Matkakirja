@@ -8998,6 +8998,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ISL: {
     Austurland: {
       lyhyt: 'Hallormsstaðurin koivikko suojeltiin 1905, ja siitä tuli Islannin ensimmäinen kansallismetsä – nyt se on maan suurimpia metsiä.',
+      pitka: 'Austurlandin vuonot pistävät syvälle sisämaahan, ja alueen ainoat villit peurat Islannissa – noin 6 000–7 000 eläintä – polveutuvat 1780-luvulla Norjasta tuoduista laumoista, joista vain Vopnafjörðuriin päästetty ryhmä selvisi hengissä. Jökuldalurin laaksossa Stuðlagilin kanjoni paljastui vasta 2009, kun Kárahnjúkarin vesivoimalaitos ohjasi suuren osan joen vedestä toisaalle ja pudotti vedenpinnan niin paljon, että tuhansia vuosia veden alla piilleet, tiiviisti pakkautuneet basalttipylväät nousivat näkyviin turkoosin joen molemmin puolin. Seyðisfjörðurin kirjava pääkatu ja vuonon ympäröimä taiteilijayhteisö ovat tehneet pikkukaupungista alueen kulttuurikeskuksen, ja sieltä lähtee yhä lautta Tanskaan ja Färsaarille. Stöðvarfjörðurissa Petra Sveinsdóttirin elämänmittainen kivikokoelma – hän aloitti keräämisen seitsemänvuotiaana ja avasi kotinsa yleisölle 1974 – täyttää nykyään sekä pihan että talon kymmenillätuhansilla kivillä ja mineraaleilla.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-austurland-7d1dac43.jpg",
@@ -9012,6 +9013,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Höfuðborgarsvæði': {
       lyhyt: 'Bessastaðir Álftanesin niemellä on ollut Islannin presidentin virka-asunto vuodesta 1941; 1200-luvulla sen omisti Snorri Sturluson.',
+      pitka: 'Pääkaupunkiseudulla asuu nykyään lähes kaksi kolmasosaa koko Islannin väestöstä, vaikka alue koostuu muodollisesti erillisistä kunnista – Kópavogurista, Hafnarfjörðurista, Garðabæristä, Mosfellsbæristä ja Seltjarnarnesista – jotka ovat vuosikymmenten kuluessa kasvaneet yhteen Reykjavíkin kanssa yhtenäiseksi kaupunkialueeksi. Hafnarfjörðuria kutsutaan Islannin piilokansan pääkaupungiksi: kaupungin sydämessä sijaitseva, 1923 avattu Hellisgerðin sammaleinen laavapuisto on täynnä tarinoita haltioista ja peikoista, ja tuoreiden kyselyjen mukaan yli puolet asukkaista pitää haltioiden olemassaoloa mahdollisena tai todennäköisenä. Bessastaðirin niemellä presidentti asuu yhä samassa paikassa, jota Snorri Sturluson hallitsi 1200-luvulla, mutta ympäröivä seutu on muuttunut rauhallisesta maatilamaisemasta vilkkaaksi esikaupunkialueeksi. Kaupunkien rajat sulautuvat toisiinsa niin saumattomasti, ettei matkailija useinkaan huomaa siirtyvänsä kunnasta toiseen.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-hofudborgarsvaedi-9def4fe5.jpg",
@@ -9026,6 +9028,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vestfirðir': {
       lyhyt: 'Látrabjarg on Islannin läntisin kohta: 14 kilometriä pitkä ja paikoin 440 metriä korkea lintuvuori, jonka jyrkänteillä pesii lunneja.',
+      pitka: 'Vestfirðirin vuonoihin pääsee vieläkin paikoin vain hitaita, mutkittelevia vuoristoteitä tai tunneleita pitkin, ja seutu on koko Islannin harvimmin asuttu ja syrjäisin osa. Arnarfjörðurin perukassa Dynjandi putoaa noin sata metriä portaittain leveästä, 60-metrisestä alaosastaan kapeampaan 30-metriseen yläosaan – nimi tarkoittaa suunnilleen "jylisevää", ja putouksen kohina kuuluu kauas vuonolle. Ísafjörður, alueen suurin kaupunki, kyyristelee jyrkkien vuorten alla, ja 1990-luvun tuhoisien lumivyöryjen, muun muassa Flateyrin 1995 onnettomuuden, jälkeen sen yläpuolelle rakennettiin massiiviset betoniset ohjausvallit suojaamaan asutusta. Hólmavíkissa Strandagaldur-museo kertoo 1600-luvun "poltettujen vuosisadan" noitavainoista, jolloin alueella tuomittiin roviolle 21 ihmistä – enemmän kuin missään muualla Islannissa.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vestfirdir-4f8cbc1f.jpg",
@@ -9040,6 +9043,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Norðurland eystra': {
       lyhyt: 'Húsavíkin lahdelle tulee usein valaita, ja kaupungin ympäristössä harjoittelivat 1960-luvulla Apollo-lentojen astronautit.',
+      pitka: 'Akureyri, usein "Pohjolan pääkaupungiksi" kutsuttu, on Islannin toiseksi suurin taajama ja Eyjafjörðurin vuonon perukassa sijaitseva elävä yliopisto- ja kulttuurikaupunki. Sen kasvitieteellinen puutarha Lystigarðurinn on yksi maailman pohjoisimmista, ja siellä kasvaa nykyään yli 7 000 kasvilajia vain runsaat 50 kilometriä napapiiriltä etelään. Kaupungin liikennevaloissa on palanut sydämen muotoisia valoja vuodesta 2008 lähtien – ne ilmestyivät alun perin vain kuukausia ennen Islannin finanssikriisiä, ja kriisin jälkeen niistä tuli symboli yhteisöllisyydelle ja toivolle vaikeina aikoina. Húsavíkin edustalla, missä valaita nähdään lähes ympäri vuoden, entinen kalastuskaupunki on muuttunut vähitellen valassafarien keskukseksi, ja samalla rannikolla harjoittelivat 1960-luvulla myös Apollo-ohjelman astronautit kuun pintaa muistuttavassa laavamaisemassa.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-eystra-72883732.jpg",
@@ -9054,6 +9058,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Norðurland vestra': {
       lyhyt: 'Vatnsnesin rannalla seisova Hvítserkur on 15-metrinen kivipaasi; tarun mukaan se on peikko, jonka nouseva aurinko muutti kiveksi.',
+      pitka: 'Skagafjörðurin laakso tunnetaan islanninhevosten kasvatuksesta, ja alueen vihreillä niityillä laiduntavat hevoslaumat ovat yhtä tuttu näky kuin vuonon jäätikköhuiput taustalla. Glaumbæjrin turvekattoinen kyläkeskus pysyi asuttuna aina vuoteen 1947 asti, ja sen kolmetoista toisiinsa käytävin yhdistettyä turve- ja puurakennusta – keittiöstä pajaan – kertovat nykyään museona 1700–1800-lukujen maalaiselämästä. Vuonon suulla kohoava Drangeyn saari, jyrkkäseinäinen kalliosaareke keskellä merta, tunnetaan saagakirjallisuudesta paikkana, jonne lainsuojaton Grettir Ásmundarson pakeni viimeisiksi vuosikseen. Skagaströndin ja Sauðárkrókurin kaltaiset pienet kalastuskaupungit elävät nykyään yhtä lailla merestä kuin matkailusta, joka tuo alueelle väkeä katsomaan hylkeitä Vatnsnesin niemellä.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-vestra-7e152ac6.jpg",
@@ -9068,6 +9073,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Reykjavík': {
       lyhyt: 'Reykjavíkin taloja lämmitetään kuumalla maalämpövedellä, jota johdetaan putkia pitkin muun muassa Nesjavellirin voimalasta.',
+      pitka: 'Hallgrímskirkjan 74-metrinen torni hallitsee Reykjavíkin siluettia ja on suunniteltu muistuttamaan Islannin luonnon basalttipylväitä; kirkko valmistui lopulta vasta 1986, ja sen huipulle pääsee nykyään hississä katsomaan koko kaupunkia ja ympäröiviä vuoria. Satamanrannassa siintävä Harpa-konserttitalo, valmistunut 2011 finanssikriisin jälkimainingeissa kesken jääneenä hankkeena, kimaltelee lasijulkisivullaan kuin basalttia muistuttava taideteos, ja siitä on tullut kaupungin uusi maamerkki. Rannan tuntumassa seisova Sólfar – Auringonlaiva – on Jón Gunnar Árnasonin 1990 paljastama teräsveistos, joka ei kuvaa mitään tiettyä matkaa vaan unelmaa ja toivoa paremmasta tulevaisuudesta. Kaupungin sydämessä Laugavegurin kauppakatu täyttyy iltaisin baareista ja live-musiikista, sillä Reykjavík tunnetaan pienestä koostaan huolimatta vilkkaasta yöelämästään.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-reykjavik-97da3fc8.jpg",
@@ -9082,6 +9088,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Suðurland': {
       lyhyt: 'Þingvellirin laaksossa kokoontui Islannin Alþingi ensimmäisen kerran 930, ja paikka on Unescon maailmanperintöä vuodesta 2004.',
+      pitka: 'Etelärannikon mustat hiekkarannat syntyvät jäätiköiden alta purkautuneiden tulivuorten laavasta, ja Reynisfjaran basalttipylväsmuurit sekä merestä nousevat Reynisdrangarin kalliopaadet ovat niistä tunnetuimmat – helmikuussa 2026 osa pylväsmuurista sortui rantaa vuosia kuluttaneen aallokon vuoksi, muistutuksena siitä, miten nopeasti tämä rannikko yhä muuttuu. Vuonna 2010 Eyjafjallajökullin jäätikön alla purkautunut tulivuori lähetti hienojakoisen tuhkapilven Euroopan ilmatilaan ja pysäytti yli 100 000 lentoa viikossa – suurimman ilmaliikenteen seisokin sitten toisen maailmansodan – ja jäätikkö näkyy yhä matkalla kohti Víkin kylää. Seljalandsfoss ja Skógafoss putoavat molemmat entisiltä rantajyrkänteiltä, jotka merenpinta on jättänyt taakseen tuhansia vuosia sitten, ja Seljalandsfossin taakse pääsee kävelemään aivan putouksen verhon sisäpuolelle. Sisämaassa Landmannalaugarin värikkäät riolitivuoret ja lämpimät lähteet houkuttelevat kesäisin vaeltajia yhdelle Islannin tunnetuimmista reiteistä, Laugaveguriin.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurland-16add566.jpg",
@@ -9096,6 +9103,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Suðurnes': {
       lyhyt: 'Reykjanesin niemimaalla 15-metrinen kävelysilta ylittää railon, joka erottaa Pohjois-Amerikan ja Euraasian mannerlaatat.',
+      pitka: 'Sinisen lagúunin kuumat, piidioksidipitoiset vedet ovat alun perin Svartsengin geotermisen voimalan jätevettä: kun laitos alkoi 1976 johtaa käytettyä vettä läheiselle laavakentälle, piidioksidi tiivisti maaperän vedenpitäväksi altaaksi, ja vasta myöhemmin huomattiin veden miellyttävyys iholle – ensimmäinen virallinen uimapaikka avattiin 1987. Niemenkärjessä seisova Reykjanesviti on Islannin vanhin majakka: ensimmäinen versio valmistui 1878, mutta maanjäristys vaurioitti sen korjauskelvottomaksi jo kahdeksan vuotta myöhemmin, ja nykyinen, vuosina 1907–1908 rakennettu betonimajakka on seissyt siitä lähtien lähes muuttumattomana. Vuodesta 2021 alkaen Reykjanesin niemimaa on herännyt kahdeksan vuosisadan hiljaiselon jälkeen uuteen tulivuoritoimintaan, ja Grindavíkin kalastuskaupunki jouduttiin evakuoimaan marraskuussa 2023 usean peräkkäisen purkauksen vuoksi; kaupunkia suojaavat nykyään kilometrien pituiset, jopa 25 metriä korkeat laavavallit. Niemi sijaitsee suoraan Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla, mikä selittää sekä jatkuvan maanjäristystoiminnan että alueen lukuisat kuumat lähteet.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurnes-edb71def.jpg",
@@ -9110,6 +9118,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vesturland: {
       lyhyt: 'Snæfellsjökull on 1 446-metrinen jäätikön peittämä tulivuori – Jules Vernen romaanissa matka maan keskipisteeseen alkaa sen kraaterista.',
+      pitka: 'Deildartunguhver pulppuaa maan alta 180 litraa lähes kiehuvaa vettä sekunnissa – enemmän kuin mikään muu lähde Euroopassa – ja se lämmittää nykyään paitsi lähiseudun myös Borgarnesin ja Akranesin kaupungit, joihin kuuma vesi virtaa 64 kilometrin pituista putkea pitkin, Islannin pisintä. Lähistöllä Hraunfossar-putoukset eivät virtaa yhdestä joesta vaan valuvat lukemattomina pieninä suihkuina suoraan laavakentän alta Hvítá-jokeen usean sadan metrin matkalla – vesi on suodattunut vuosia maan alla ennen kuin se ilmestyy näkyviin. Breiðafjörðurin lahdella Bjarnarhöfnin tilalla käsitellään yhä perinteiseen tapaan jäämerihain lihaa hákarl-herkuksi mätättämällä ja kuivattamalla sitä kuukausien ajan, ja ammoniakintuoksuinen lopputulos tarjoillaan nykyään uteliaille matkailijoille paikan omassa museossa. Stykkishólmurin satamakaupungin värikkäät puutalot ja tuhansien saarien pirstoma lahti tekevät siitä suositun lähtöpisteen lautoille, jotka kulkevat Vestfirðirin suuntaan Breiðafjörðurin poikki.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vesturland-0020c602.jpg",
