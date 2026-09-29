@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 12:03:** Levy 98,63 Gi, muisti 63 % vapaa, kuorma 76/62/51, sim 1, GPU-chrome 0, wt/ 19 kohdetta 13 Gt (raja 20), /private/tmp 25,3 Gt. Roolit: käynnissä Päätoimittaja (56 %), Laitetestaaja (56 %) ja Natiivi-UI (71 %, ylitti 70 %:n; jo ilmoitettu aiemmin, auto-tiivistys 97 %); muut levossa, Natiiviseppä 73 %, Linssiseppä 69 %. Viikkokiintiö 86 %, 5 h -ikkuna 54 % (nollautuu 12:50). Juna: b13 HEAD af53ba8c (11:41) käännetty 12:01 (f4580638), ei hälytystä. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
+
 **Päivitetty 11:54:** Levy 98,03 Gi, muisti 63 % vapaa, kuorma 13/24/41, sim 0, GPU-chrome 0, wt/ 19 kohdetta 13 Gt (+1, raja 20), /private/tmp 25,3 Gt. Roolit: vain Päätoimittaja käynnissä (56 %), muut levossa; korkeimmat Natiiviseppä 73 %, Natiivi-UI 70 % (ilmoitettu), Linssiseppä 69 %. Juna: b13 HEAD 9a6b06c4 käännetty (debdf84f 11:23), ei uutta commitia. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
 
 **Päivitetty 11:45:** Levy 99,35 Gi (laskenut ~1,3 Gi/10 min; /private/tmp 25,2 Gt), muisti 61 % vapaa, kuorma 44/47/56, sim 1, GPU-chrome 0, wt/ 18 kohdetta 12 Gt. Roolit: vain Päätoimittaja käynnissä (56 %), muut levossa; korkeimmat Natiiviseppä 73 %, Natiivi-UI 70 % (ilmoitettu), Linssiseppä 69 %. Juna: b13 HEAD 9a6b06c4 käännetty (debdf84f 11:23), ei uutta commitia. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
