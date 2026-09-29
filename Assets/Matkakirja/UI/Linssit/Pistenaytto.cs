@@ -156,13 +156,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Sammuneet pisteet piirretään (false: Codexin radion ikkunakuvassa on oma pistepohja).</summary>
         public bool Sammuneet { get => sammuneet; set { if (sammuneet == value) return; sammuneet = value; MarkDirtyRepaint(); } }
 
+        Color? omaMuste;
+        /// <summary>Oma kirjainväri ilman hehkua (Codexin radion kirkas meripihkanäyttö: tumma muste); null = webin meripihka.</summary>
+        public Color? OmaMuste { get => omaMuste; set { if (omaMuste == value) return; omaMuste = value; MarkDirtyRepaint(); } }
+
         void Piirra(MeshGenerationContext mgc)
         {
             var rect = contentRect;
             if (float.IsNaN(rect.width) || rect.width <= 0 || rect.height <= 0) return;
             float s = Mathf.Min(rect.width / leveys, rect.height / korkeus);
             var o = rect.center - new Vector2(leveys, korkeus) * (s * 0.5f);
-            Color muste = Suodin(Muste), tausta = Suodin(lasi);
+            Color muste = Suodin(omaMuste ?? Muste), tausta = Suodin(lasi);
             var sammunut = muste; sammunut.a = Peitto(SammunutPeitto, muste, tausta);
             float r = Sade * s;
             int palavia = 0;
@@ -172,7 +176,7 @@ namespace Matkakirja.Natiivi
             if (sammuneita > 0 && sammuneet) Pisteet(mgc, KiekkoTekstuuri(), sammuneita, false, o, s, r * TekstuuriVara, sammunut);
             if (palavia == 0) return;
             // Hehkut ensin kaikkien palavien alle, sitten kiekot (naapurin hehku ei peitä kiekkoa).
-            Pisteet(mgc, HehkuTekstuuri(himmea, lasi), palavia, true, o, s, r * HehkuSade * TekstuuriVara, Color.white);
+            if (omaMuste == null) Pisteet(mgc, HehkuTekstuuri(himmea, lasi), palavia, true, o, s, r * HehkuSade * TekstuuriVara, Color.white);
             Pisteet(mgc, KiekkoTekstuuri(), palavia, true, o, s, r * TekstuuriVara, muste);
         }
 
