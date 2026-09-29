@@ -928,16 +928,16 @@ namespace Matkakirja.Natiivi
             viuhka.style.left = vasen ? StyleKeyword.Auto : m.Piste.x + ViuhkaSivuun - 10f;
             viuhka.style.right = vasen ? leveys - m.Piste.x + ViuhkaSivuun - 10f : StyleKeyword.Auto;
             viuhka.EnableInClassList("mk-nosto-viuhka--vasen", vasen);
-            viuhka.style.display = DisplayStyle.Flex;
             viuhka.BringToFront();
+            // Avaus ja sulku animoiden merkin suunnasta (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot).
+            Ponnahdus.Avaa(viuhka, juuri.LocalToWorld(m.Piste));
         }
 
         void SuljeViuhka()
         {
             if (viuhkanAvain == null) return;
             viuhkanAvain = null;
-            viuhka.style.display = DisplayStyle.None;
-            viuhka.Clear();
+            Ponnahdus.Sulje(viuhka, () => { viuhka.style.display = DisplayStyle.None; viuhka.Clear(); });
         }
 
         /// <summary>Kartan napautus viuhkan ja merkkien ohi sulkee listan (web napautaPintaan).</summary>
