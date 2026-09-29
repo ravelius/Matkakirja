@@ -124,6 +124,9 @@ export const TILA = {
   id: 'kappeli',
   nimi: 'Kappeli',
   kohdistettava: true,
+  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−21, 13) eli glTF
+  // (−21, z 13 pohjoiseen = −13); torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.
+  sijoitus: { ankkuri: [0, 0, -20], paikka: [-21, -3.0, -13], suunta: 0 },
   rajat: { min: [-5, 9, -25], max: [5, 13.5, -15] },
   naapurit: ['massa', 'muurinharja', 'keskushalli'],
   kamera: {

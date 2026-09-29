@@ -55,6 +55,10 @@ export const TILA = {
   id: 'keittio',
   nimi: 'Keittiö',
   kohdistettava: true,
+  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): todellinen paikka fotogrammetriakuoressa. Keittiö
+  // itäsiiven alakerrassa Pienen linnanpihan laidalla (tulkinta, Sisältökirjuri 29.9.: ikkunat pihalle, hormit
+  // Kuninkaansaliin), piha y −3,0 (kuoren säde), avoin sivu länteen pihalle (suunta 90: +z → −x).
+  sijoitus: { ankkuri: [14, 0, 7.5], paikka: [-12, -3.0, 8], suunta: 90 },
   rajat: { min: [8, 0, 4], max: [20, 4, 11] },
   naapurit: ['massa', 'keskushalli'],
   kamera: { kohde: [14, 1.2, 7.2], atsimuutti: 172, korkeus: 22, etaisyys: 16, fov: 38, aukko: 0.8 },

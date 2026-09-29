@@ -6,6 +6,7 @@
 #   nice -n 15 /Applications/Blender.app/Contents/MacOS/Blender -b -P tools/dioraama/blender/leivo_tila.py -- \
 #     --paketti dist/dioraama/olavinlinna --tila keittio --ulos <kansio> [--renderoi] [--leivo] [--naytteet 128]
 import bpy, json, math, os, sys
+from mathutils import Vector
 
 argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
 def arg(nimi, oletus=None):
@@ -46,10 +47,36 @@ def tuo(polku):
     bpy.ops.import_scene.gltf(filepath=polku)
     return [o for o in bpy.data.objects if o not in ennen]
 tilan = tuo(os.path.join(PAKETTI, 'tilat', f'{TILA}.glb'))
-massa = tuo(os.path.join(PAKETTI, 'tilat', 'massa.glb')) if TILA != 'massa' else []
-for n in tila.get('naapurit', []):
-    if n not in ('massa', TILA):
-        massa += tuo(os.path.join(PAKETTI, 'tilat', f'{n}.glb'))
+KUORI = arg('--kuori')
+if KUORI:
+    # Uusi tapa: fotogrammetriakuori ympäristöksi (varjostaa ja heijastaa valoa), ei proseduraalista massaa.
+    massa = tuo(KUORI)
+    if '--renderoi' in argv or '--leikkaa' in argv:
+        # Leikkausikkuna (speksi kohta 3): kuoresta pois pinnat tilan rajojen (+1 m) sisältä ja käytävästä kameraan.
+        import bmesh
+        r = tila['rajat']; mn = Vector(bl(r['min'])); mx = Vector(bl(r['max']))
+        lo = Vector((min(mn.x, mx.x) - 1, min(mn.y, mx.y) - 1, min(mn.z, mx.z) - 1))
+        hi = Vector((max(mn.x, mx.x) + 1, max(mn.y, mx.y) + 1, max(mn.z, mx.z) + 1))
+        kes = (lo + hi) / 2; puoli = max(hi.x - lo.x, hi.y - lo.y) / 2
+        k_ = tila['kamera']; az_ = math.radians(k_['atsimuutti'])
+        suunta2 = Vector((math.sin(az_), math.cos(az_)))  # kameran suunta kohteesta (Blender x itä, y pohjoinen)
+        for o in massa:
+            if o.type != 'MESH': continue
+            bm = bmesh.new(); bm.from_mesh(o.data); pois = []
+            for f in bm.faces:
+                c = o.matrix_world @ f.calc_center_median()
+                if lo.x <= c.x <= hi.x and lo.y <= c.y <= hi.y and lo.z <= c.z <= hi.z + 30:
+                    pois.append(f); continue
+                d2 = Vector((c.x - kes.x, c.y - kes.y)); pitkin = d2.dot(suunta2)
+                sivuun = abs(d2.x * suunta2.y - d2.y * suunta2.x)
+                if 0 < pitkin < k_['etaisyys'] + 5 and sivuun < puoli and c.z > lo.z:
+                    pois.append(f)
+            bmesh.ops.delete(bm, geom=pois, context='FACES'); bm.to_mesh(o.data); bm.free()
+else:
+    massa = tuo(os.path.join(PAKETTI, 'tilat', 'massa.glb')) if TILA != 'massa' else []
+    for n in tila.get('naapurit', []):
+        if n not in ('massa', TILA):
+            massa += tuo(os.path.join(PAKETTI, 'tilat', f'{n}.glb'))
 
 # --- PBR-materiaalit pinnan nimen mukaan (proseduraaliset) ---
 def solmu(nt, tyyppi, x=0, y=0):
@@ -157,7 +184,7 @@ MATERIAALIT = {
     'vesi': dict(vari=srgb('#2c3d44'), karheus=0.15, mittakaava=2, kumpu=0.02),
 }
 valmiit = {}
-for o in tilan + massa:
+for o in tilan + ([] if KUORI else massa):
     if o.type != 'MESH':
         continue
     for s in o.material_slots:
