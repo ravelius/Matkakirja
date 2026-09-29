@@ -241,7 +241,10 @@ namespace Matkakirja.Linssit.Astronautti
                 {
                     l.Perilla = true;
                     l.PerillaAika = y.Aika;
-                    var katse = Iss.OmaSijainti.Katsepiste(l.Ylilento.Value.Lat, l.Ylilento.Value.Lon, l.Kohde.Lat, l.Kohde.Lon);
+                    // Vain oma sijainti (kohde voi olla radan ulottumattomissa); kohteet katsotaan suoraan kuten ennen.
+                    var katse = l.Kohde.Tunnus == OmaSijaintiTunnus
+                        ? Iss.OmaSijainti.Katsepiste(l.Ylilento.Value.Lat, l.Ylilento.Value.Lon, l.Kohde.Lat, l.Kohde.Lon)
+                        : (lat: l.Kohde.Lat, lon: l.Kohde.Lon);
                     kyyti.Kohteeseen(new LatLon(katse.lat, katse.lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
                     tietoAika = -1;
                 }
