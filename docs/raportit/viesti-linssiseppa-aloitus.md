@@ -33,6 +33,10 @@ Lue:
    Natiivi-UI:n haara natiivi-ui/ponnahdus-herata 6c3df126 tekee Ponnahduksesta itseherättävän ja jättää Pulun kuplat
    kuvan taakse; se yhdistyy ilman konfliktia. Kun se on masterissa, omat Ruudunpaivitys.Herata-kutsut PulunTauluNakymasta
    ja Kuvanakymasta voi poistaa (ne eivät haittaa).
+   TILA 29.9. klo 11.0x: tervetulo ja linssiesittelyt ovat BUILD 45:ssä (master 6dc1b7cc), ja Laitetestaajan savuke on PASS.
+   Laitetestaajan löydös: tervetulo ei lähtenyt Äänimaisema pois -tilassa. Syy oli se, että natiivin Aanet mykisti Pulun
+   puheen Äänimaiseman mukana (web ei mykistä). Korjaus proto linssiseppa/pulu-aani-kertoja 4fb54bba (Aanet.Taso(Puhe) = Kertoja +
+   Pulun liuku, tervetulon mykistysehto sama; sovittu Natiivi-UI:n kanssa) on MERGE-PYYNNÖSSÄ seuraavaan junaan.
 1. Pulun taulu ja LISÄYS 6 ovat MASTERISSA (9750340f, master 634be415).
 2. Taulun SHA on kerrottu Linssiseppä 2:lle 29.9. klo 10.2x.
 2b. LINSSIEN ESITTELYT (Päätoimittajan erä "Linssit- ja Aarteet-näkymät", omistaja 29.9. loki 09.12/09.14) on MERGE-PYYNNÖSSÄ:
