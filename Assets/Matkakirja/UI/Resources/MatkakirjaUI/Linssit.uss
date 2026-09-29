@@ -1807,10 +1807,11 @@
     -unity-text-align: middle-left;
 }
 
-/* Kysy Pululta: 44 pt:n linkki ohuen viivan alla (web .astro-paneeli-linkki). */
+/* Kysy Pululta: 44 pt:n linkki ohuen viivan alla, vasemmassa laidassa (web .astro-paneeli-linkki text-align left). */
 .mk-astroTaulu__linkki {
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     height: 44px;
     min-height: 44px;
     margin: 2px 0 0 0;

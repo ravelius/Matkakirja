@@ -56,6 +56,9 @@ namespace Matkakirja.Natiivi
             Kyyti.AukiMuuttui += auki => KuvaAuki?.Invoke(auki);
             // Taulu kuvanäkymän ja kyydin päälle (web z-index 50 > kyydin kosketuskerros 48).
             Taulu = new PulunTauluNakyma(kerros, this);
+            // PULU KYYDIN PÄÄLLÄ (web body.satelliitti-kyyti .pollo-nappi z-index 49 > kyydin kerros 48): Cupola-kehys peitti
+            // Pulun, joka on taulun avaaja kaikissa moodeissa. Kyydin ajaksi Pulun kerros nousee kehyksen yläpuolelle.
+            Kyyti.AukiMuuttui += auki => kerros.AsetaJarjestys(Pulu.Kerros, auki ? LinssiUi.SulkuKerros : Pulu.Kerros);
 
             AstronauttiKerros.AvausKasittelija = Avaus;
             AstronauttiKerros.KuvaKasittelija = (kohde, indeksi) =>
