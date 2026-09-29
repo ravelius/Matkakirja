@@ -1050,6 +1050,9 @@ namespace Matkakirja
                     if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
                     else if (o.Length > 3 && o[1] == "varavika") Laattapalvelin.AsetaVaraVika(D(2), D(3));
+                    // palvelin uudelleen: kuuntelijoiden uudelleenavaus kuten taustalta palatessa (löydös 29.9. klo 22.4x)
+                    else if (o.Length > 1 && o[1] == "uudelleen") Laattapalvelin.Instanssi?.AvaaKuuntelijatUudelleen("komento");
+                    else if (o.Length > 1 && o[1] == "tapa") Laattapalvelin.Instanssi?.TapaKuuntelijat();
                     else if (o.Length > 2 && o[1] == "yksiportti")
                     {
                         PlayerPrefs.SetInt(LaattaPortit.YksiPorttiAvain, o[2] == "paalle" ? 1 : 0);

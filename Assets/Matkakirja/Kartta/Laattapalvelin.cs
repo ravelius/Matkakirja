@@ -85,7 +85,11 @@ namespace Matkakirja
         public int valimuistiMt = 600;
 
         TcpListener[] kuuntelijat;
+        /// <summary>Kuuntelijoiden luokat (portti-indeksi laskureille), samassa järjestyksessä kuin <see cref="kuuntelijat"/>.</summary>
+        int[] kuuntelijaLuokat;
         CancellationTokenSource lopetus;
+        /// <summary>Kuuntelija kaatui (esim. iOS otti soketin takaisin taustalla): avataan uudelleen Updatessa.</summary>
+        volatile bool kuuntelijaKaatui;
 
         // ---- Löydös 176: varmistuslaskurit (Palvele) ----
         /// <summary>Avoimet asiakasyhteydet (Cesium ja UnityWebRequest → palvelin) yhteensä ja porteittain.</summary>
@@ -605,13 +609,14 @@ namespace Matkakirja
                     lista.Add((k, i));
                 }
                 kuuntelijat = new TcpListener[lista.Count];
-                for (int i = 0; i < lista.Count; i++) kuuntelijat[i] = lista[i].k;
+                kuuntelijaLuokat = new int[lista.Count];
+                for (int i = 0; i < lista.Count; i++) { kuuntelijat[i] = lista[i].k; kuuntelijaLuokat[i] = lista[i].luokka; }
                 Juuret = juuret;
                 Portteja = lista.Count;
                 lopetus = new CancellationTokenSource();
                 var peru = lopetus.Token;
                 // Laskureiden portti-indeksi = luokka; luokka, jonka lisäportti ei auennut, näkyy ensimmäisen portin (pohja) alla.
-                foreach (var (k, luokka) in lista) _ = Task.Run(() => Kuuntele(k, luokka, peru));
+                for (int i = 0; i < lista.Count; i++) { int n = i; _ = Task.Run(() => Kuuntele(n, kuuntelijat[n], peru)); }
                 var kuvaus = new StringBuilder();
                 for (int i = 0; i < juuret.Length; i++) kuvaus.Append(i == 0 ? "" : ", ").Append(LaattaPortit.Nimet[i]).Append(' ').Append(juuret[i]);
                 Debug.Log($"MATKAKIRJA laattapalvelin: {Juuri} (löydös 176: {Portteja} porttia{(YksiPortti ? ", yksi-portti-lippu" : "")}: {kuvaus})");
@@ -724,15 +729,77 @@ namespace Matkakirja
             Portteja = 0;
         }
 
-        async Task Kuuntele(TcpListener kuuntelija, int portti, CancellationToken peru)
+        async Task Kuuntele(int indeksi, TcpListener kuuntelija, CancellationToken peru)
         {
+            int portti = kuuntelijaLuokat[indeksi];
             while (!peru.IsCancellationRequested)
             {
                 TcpClient asiakas;
                 try { asiakas = await kuuntelija.AcceptTcpClientAsync(); }
-                catch { if (peru.IsCancellationRequested) return; continue; }
+                catch (Exception e)
+                {
+                    // TAUSTALTA PALUU (omistajan löydös 29.9.2026 klo 22.4x, iPad: "pallo katoaa, kun käyn toisessa ohjelmassa
+                    // tai laite kiinni"): iOS ottaa keskeytetyn sovelluksen kuuntelevat soketit takaisin (Apple TN2277), jolloin
+                    // AcceptTcpClientAsync heittää heti uudestaan. Ennen silmukka jatkoi (continue) pyörien eikä Cesium saanut
+                    // yhtään laattaa. Nyt: kuuntelija merkitään kaatuneeksi ja avataan Updatessa uudelleen SAMAAN porttiin.
+                    if (peru.IsCancellationRequested || kuuntelijat == null || kuuntelijat[indeksi] != kuuntelija) return;
+                    Debug.LogWarning($"MATKAKIRJA laattapalvelin: kuuntelija {indeksi} kaatui ({e.GetType().Name}: {e.Message}), avataan uudelleen");
+                    kuuntelijaKaatui = true;
+                    return;
+                }
                 _ = Task.Run(() => Palvele(asiakas, portti));
             }
+        }
+
+        /// <summary>
+        /// Avaa kuuntelijat uudelleen samoihin portteihin (Cesiumin osoitteet ovat kiinteät: <see cref="Juuret"/>). Kutsutaan
+        /// palattaessa etualalle (TN2277: taustalla reclaimed-soketti on suljettava ja avattava uudelleen) ja kun kuuntelija
+        /// kaatui. Vanha suljetaan ensin; uusi ReuseAddress-lipulla, jotta sama portti aukeaa heti. Epäonnistunut yritetään
+        /// uudelleen seuraavassa Updatessa (enintään kerran sekunnissa).
+        /// </summary>
+        public void AvaaKuuntelijatUudelleen(string syy)
+        {
+            if (kuuntelijat == null || lopetus == null || lopetus.IsCancellationRequested) return;
+            kuuntelijaKaatui = false;
+            var peru = lopetus.Token;
+            int avattu = 0, virheita = 0;
+            for (int i = 0; i < kuuntelijat.Length; i++)
+            {
+                var vanha = kuuntelijat[i];
+                int p = vanha != null ? ((IPEndPoint)vanha.LocalEndpoint).Port : 0;
+                if (p == 0) continue;
+                kuuntelijat[i] = null;   // vanha silmukka päättyy (ei ole enää nykyinen)
+                try { vanha.Stop(); } catch { }
+                TcpListener uusi = null;
+                try
+                {
+                    uusi = new TcpListener(IPAddress.Loopback, p);
+                    uusi.Server.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                    uusi.Start(64);
+                    kuuntelijat[i] = uusi;
+                    int n = i;
+                    _ = Task.Run(() => Kuuntele(n, uusi, peru));
+                    avattu++;
+                }
+                catch (Exception e)
+                {
+                    try { uusi?.Stop(); } catch { }
+                    kuuntelijat[i] = vanha;   // säilytetään portti seuraavaa yritystä varten
+                    virheita++;
+                    Debug.LogWarning($"MATKAKIRJA laattapalvelin: portti {p} ei auennut uudelleen ({syy}): {e.Message}");
+                }
+            }
+            if (virheita > 0) { kuuntelijaKaatui = true; seuraavaAvaus = Time.realtimeSinceStartup + 1f; }
+            Debug.Log($"MATKAKIRJA laattapalvelin: kuuntelijat avattu uudelleen ({syy}): {avattu}/{kuuntelijat.Length}");
+        }
+        float seuraavaAvaus;
+
+        /// <summary>Kehittäjän vikakoe (komento `palvelin tapa`): sulkee kuuntelijat kuin iOS taustalla (TN2277); korjaus avaa ne.</summary>
+        public void TapaKuuntelijat()
+        {
+            if (kuuntelijat == null) return;
+            foreach (var k in kuuntelijat) { try { k?.Stop(); } catch { } }
+            Debug.Log("MATKAKIRJA laattapalvelin: vikakoe, kuuntelijat suljettu");
         }
 
         async Task Palvele(TcpClient asiakas, int portti)
@@ -1255,12 +1322,16 @@ namespace Matkakirja
 
         void OnApplicationPause(bool tauolla)
         {
-            // Palaus etualalle: iOS katkaisee taustalla kesken olevat haut, joista tuli varalaattoja → uusinta heti.
-            if (!tauolla && !varalla.IsEmpty) seuraavaUusinta = 0f;
+            if (tauolla) return;
+            // Palaus etualalle: kuuntelevat soketit uudelleen (TN2277, ks. Kuuntele) ennen kuin Cesium pyytää laattoja.
+            AvaaKuuntelijatUudelleen("etualalle");
+            // iOS katkaisee taustalla kesken olevat haut, joista tuli varalaattoja → uusinta heti.
+            if (!varalla.IsEmpty) seuraavaUusinta = 0f;
         }
 
         void Update()
         {
+            if (kuuntelijaKaatui && Time.realtimeSinceStartup >= seuraavaAvaus) AvaaKuuntelijatUudelleen("kaatui");
             SatelliittiLoki.Yhteenveto();
             Suurenna(6);
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
