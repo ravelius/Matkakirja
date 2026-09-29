@@ -102,6 +102,7 @@ import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 
 /*
  * LÖYTÖPALKKIO 20 PUNTAA (omistaja: *"pienen puntapalkkion"*).
@@ -750,6 +751,7 @@ export function avaaElaintaky(ui, iso) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('elaintaky-auki');
+  animoiAvaus(kortti);
   sfx.play('popup');
 }
 
@@ -1338,6 +1340,6 @@ export function suljeElaintaky(ui) {
   for (const vanha of document.querySelectorAll('.elaintaky-kerros')) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
     vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
-    vanha.remove();
+    suljeKerrosAnimoiden(vanha, '.elaintaky-kortti', ['elaintaky-kerros', 'elaintaky-auki']);
   }
 }

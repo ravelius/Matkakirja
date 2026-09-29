@@ -84,6 +84,7 @@ import { sfx } from './sound.js';
 import {
   hiljennaAmbienssi, palautaAmbienssi, taukoaSanelunAjaksi, jatkaSanelunJalkeen,
 } from './ambience-stream.js';
+import { animoiAvaus, piilotaAnimoiden } from './avausanimaatio.js';
 
 /** Kontekstipaketin katto merkkeinä. Sama luku myös workerin puolella. */
 export const KONTEKSTIN_ENIMMAISPITUUS = 5000;
@@ -4988,6 +4989,8 @@ export class Pollo {
       this.realtimeNappi.hidden = !puluRealtimeKoeNakyvissa({ palvelin: this.palvelin });
     }
     this.paneeli.hidden = false;
+    // Kasvaa Pulun napin suunnasta (omistaja 29.9.2026, js/avausanimaatio.js).
+    animoiAvaus(this.paneeli, this.nappi);
     this.nappi.setAttribute('aria-expanded', 'true');
     this.nappi.classList.add('auki');
     /*
@@ -5139,7 +5142,8 @@ export class Pollo {
     this.lopetaPuheVuoro();
     this.auki = false;
     this.merkitseAuki(false);
-    this.paneeli.hidden = true;
+    // Sulkeutuu samaa reittiä nappiin; piilotus animaation lopussa, ellei paneelia ole sillä välin avattu uudelleen.
+    piilotaAnimoiden(this.paneeli, this.nappi, () => { if (!this.auki) this.paneeli.hidden = true; });
     this.nappi.setAttribute('aria-expanded', 'false');
     this.nappi.classList.remove('auki');
     // Paneelin sulku on paluu kartalle: geometria johdetaan uudelleen

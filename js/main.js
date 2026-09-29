@@ -85,6 +85,7 @@ import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
  * kartan ja kohdekerroksen, eikä pöllö saa tuoda niitä perässään.
  */
 import { kytkePulunPaikannus } from './pulu-paikka.js';
+import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
 
 /*
  * Valikosta poistettujen mittausvipujen (Vedon seuranta, Tarkkuus
@@ -165,7 +166,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2396';
+const APP_VERSION = '2026-09-21.2399';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1186,44 +1187,56 @@ naytaLauta();
 // peli asuvat sen alla; päivitys ja kehittäjätila jäävät versionumeron
 // taakse, minne ne v237:ssä siirrettiin.
 //
-// PILLERIVALIKKOUUDISTUS (omistaja 29.9.2026): sama paneeli avautuu nyt
-// sekä hampurilaisesta että ylärivin pilleristä (#turn-pill, kytkentä
-// alempana tässä tiedostossa) — "kun pilleriä klikkaa, niin siihen
-// avautuisi nykyiset napit, mitkä ovat jo nyt hampurilaisessa". Avaus ja
-// sulku kutsuvat myös ui.js:n avaaPilleriValikko/suljePilleriValikko-
-// metodeja (matkan tiedot, musiikkitila, Livian tunnereaktio) — ne
-// olivat ennen isoisän matkalaukun openPassport/close-kuuntelijan työtä.
-//
 // Valikko sulkeutuu valinnasta, napautuksesta muualle ja Escistä.
 
 const menuBtn = document.getElementById('menu-btn');
 const paavalikko = document.getElementById('paavalikko');
+const turnPillNappi = document.getElementById('turn-pill');
 
-const avaaPaavalikko = () => {
+/*
+ * AVAUS JA SULKU ANIMOIDEN NAPIN KULMASTA (omistaja 29.9.2026,
+ * js/avausanimaatio.js, PR #3605). Kaksi nappia voi avata paneelin
+ * (hampurilainen ja pilleri, ks. pillerivalikkouudistus alla) —
+ * `lahdeNappi` on siis se nappi, jota OIKEASTI napautettiin, ei aina
+ * `menuBtn`, jotta liike lähtee kartalla oikeasta kulmasta kummallakin
+ * napilla.
+ */
+const avaaPaavalikko = (lahdeNappi = menuBtn) => {
   if (!paavalikko.hidden) return;
   paavalikko.hidden = false;
+  animoiAvaus(paavalikko, lahdeNappi);
   menuBtn.setAttribute('aria-expanded', 'true');
   turnPillNappi.setAttribute('aria-expanded', 'true');
   ui?.avaaPilleriValikko();
 };
 
-const suljeValikko = () => {
+const suljeValikko = (lahdeNappi = menuBtn) => {
   if (paavalikko.hidden) return;
+  haamuSulku(paavalikko, lahdeNappi);
   paavalikko.hidden = true;
   menuBtn.setAttribute('aria-expanded', 'false');
   turnPillNappi.setAttribute('aria-expanded', 'false');
   ui?.suljePilleriValikko();
 };
 
-const vaihdaValikko = () => {
-  if (paavalikko.hidden) avaaPaavalikko(); else suljeValikko();
+/*
+ * PILLERIVALIKKOUUDISTUS (omistaja 29.9.2026): sama paneeli avautuu nyt
+ * sekä hampurilaisesta että ylärivin pilleristä (#turn-pill) — "kun
+ * pilleriä klikkaa, niin siihen avautuisi nykyiset napit, mitkä ovat
+ * jo nyt hampurilaisessa". Avaus ja sulku kutsuvat myös ui.js:n
+ * avaaPilleriValikko/suljePilleriValikko-metodeja (matkan tiedot,
+ * musiikkitila, Livian tunnereaktio) — ne olivat ennen isoisän
+ * matkalaukun openPassport/close-kuuntelijan työtä.
+ */
+const vaihdaValikko = (tapahtuma) => {
+  const lahdeNappi = tapahtuma?.currentTarget ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahdeNappi); else suljeValikko(lahdeNappi);
   // Kiintiöpalkit (R2, repo, ElevenLabs, pöllö) EIVÄT enää täyty
   // täällä: ne siirtyivät Tilastot-lehden Kiintiöt-sivulle
   // (omistajan tilaus 21.8.2026), ja haku lähtee sen avauksesta —
   // js/tyohuone-tilastot.js osio KIINTIÖT.
 };
 
-const turnPillNappi = document.getElementById('turn-pill');
 menuBtn.addEventListener('click', vaihdaValikko);
 
 /*

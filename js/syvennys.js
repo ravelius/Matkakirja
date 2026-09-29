@@ -62,6 +62,7 @@ import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA: kortin kuori ja sisus ovat
@@ -258,6 +259,7 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('syvennys-auki');
+  animoiAvaus(kortti);
 }
 
 /**
@@ -372,7 +374,7 @@ export function suljeSyvennys(ui) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
     // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
     vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
-    vanha.remove();
+    suljeKerrosAnimoiden(vanha, '.syvennys-kortti', ['syvennys-kerros', 'syvennys-auki']);
   }
 }
 

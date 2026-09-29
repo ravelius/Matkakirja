@@ -1215,3 +1215,34 @@ button.skandaali-kuvanuoli:is(:hover, :active, :focus, :focus-visible) { backgro
     column-count: 1;
   }
 }
+
+/*
+ * AVAUS JA SULKU ANIMOIDEN (omistaja 29.9.2026: "Voiko lapun aukeamisen ja sulkeutumisen animoida? Ja jatkossa myös
+ * kaikki vastaavat"): kortin kasvu ja häivytys avanneen napautuksen suunnasta tehdään js/avausanimaatio.js:ssä
+ * (animoiAvaus, sulku haamukerroksessa suljeKerrosAnimoiden). Vanha 12 px:n nousu alhaalta pois, jotta kortti ei
+ * liiku kahdella tavalla yhtä aikaa ja jotta haamukerrokseen siirretty kortti pysyy näkyvissä, kunnes sen oma
+ * sulkuanimaatio häivyttää sen. Himmennys 220 ms sisään (kerroksen -auki-luokka).
+ */
+.fokusnosto-kortti,
+.elaintaky-kortti,
+.syvennys-kortti,
+.skandaali-kortti,
+.hetki-kortti {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.fokusnosto-kerros,
+.elaintaky-kerros,
+.syvennys-kerros,
+.skandaali-kerros,
+.hetki-kerros { transition: background 220ms cubic-bezier(0, 0, 0.2, 1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusnosto-kerros,
+  .elaintaky-kerros,
+  .syvennys-kerros,
+  .skandaali-kerros,
+  .hetki-kerros { transition: none; }
+}
