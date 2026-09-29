@@ -34,9 +34,77 @@ namespace Matkakirja.Linssit.Testit
             return (Math.Asin(v.z / r) / Deg, Math.Atan2(v.y, v.x) / Deg, r - IssKuvakulma.MaanSadeM);
         }
 
+        [Testi] static void IkkunanRajaukset()
+        {
+            // Omistaja 28.9. klo 22.5x: oletuksena pyöreä kattoikkuna tiiviisti rajattuna, katse 55° kuten ennen.
+            Oleta.Tosi(IssKuvakulma.Rajaus == IssKuvakulma.IkkunanRajaus.Pyorea && double.IsNaN(IssKuvakulma.KatseAlasPakotettu), "oletus pyöreä");
+            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "pyöreä 55°");
+            // Horisontti (A/B, omistaja 21.5x): katse sivuikkunasta 36°, maan reuna 20,3° alapuolella eli 15,7° kuvan keskikohdan
+            // yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
+            IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Horisontti;
+            try
+            {
+                Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.HorisontinKatseAlas, "horisontti 36°");
+                double horisontti = Math.Acos(IssKuvakulma.MaanSadeM / (IssKuvakulma.MaanSadeM + Iss.KorkeusM)) / Deg;
+                double yla = IssKuvakulma.HorisontinKatseAlas - horisontti;
+                Oleta.Tosi(yla > 1 && yla < IssKuvakulma.IkkunanKentta / 2 - 10, $"maan reuna {yla:0.0}° keskikohdan yläpuolella");
+                var k = IssKuvakulma.Ikkuna(Iss);
+                var s = Llh(Silma(k));
+                Oleta.Tosi(Math.Abs(s.h - 420_000) < 500, $"silmän korkeus {s.h:0} m");
+                Oleta.Tosi(IssKuvakulma.Kaari(s.lat, s.lon, Iss.Paikka.Lat, Iss.Paikka.Lon) < 0.01, "silmä ISS:n kohdalla");
+                Oleta.Tosi(Math.Abs(IssKuvakulma.Suunta(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon) - Iss.Suuntima) < 0.01, "radan suuntaan");
+                // Katto (A/B) = 1.0.40.
+                IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Katto;
+                Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "katto 55°");
+            }
+            finally { IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Pyorea; }
+        }
+
+        [Testi] static void Cupola3KuvaJaValot()
+        {
+            // Kuva laitteen muodosta: iPhone pysty sellaisenaan ja vaaka käännettynä, iPad vaaka sellaisenaan ja pysty käännettynä.
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(402, 874) == (false, false), "iPhone pysty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(874, 402) == (false, true), "iPhone vaaka käännetty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(1194, 834) == (true, false), "iPad 11 vaaka");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(834, 1194) == (true, true), "iPad 11 pysty käännetty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(1032, 1376) == (true, true), "iPad 13 pysty käännetty");
+            Oleta.Tosi(IssKuvakulma.Cupola3Kuva(1290, 2796) == (false, false) && IssKuvakulma.Cupola3Kuva(0, 0) == (false, false), "pikselit ja nolla");
+            // Valot (luode, koillinen, lounas): aurinko kaakossa → luoteen reuna täysin, viereiset himmeästi.
+            var p = new float[3];
+            IssKuvakulma.Cupola3Valot(1, -1, p);
+            Oleta.Tosi(Math.Abs(p[0] - 1) < 1e-4 && p[1] > 0.2 && p[1] < 0.3 && Math.Abs(p[1] - p[2]) < 1e-4, $"kaakko {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            // Aurinko etelässä → yläreunat (luode ja koillinen) yhtä paljon, lounas ei.
+            IssKuvakulma.Cupola3Valot(0, -0.5, p);
+            Oleta.Tosi(p[0] > 0.7 && Math.Abs(p[0] - p[1]) < 1e-4 && p[2] == 0, $"etelä {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            // Aurinko koillisessa → lounas; pohjoisessa → lounas (ainoa alareuna); luoteessa → kaksi viereistä himmeästi.
+            IssKuvakulma.Cupola3Valot(2, 2, p);
+            Oleta.Tosi(Math.Abs(p[2] - 1) < 1e-4 && p[0] < 0.3 && p[1] == 0, $"koillinen {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            IssKuvakulma.Cupola3Valot(0, 1, p);
+            Oleta.Tosi(p[2] > 0.7 && p[0] == 0 && p[1] == 0, $"pohjoinen {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            IssKuvakulma.Cupola3Valot(-1, 1, p);
+            Oleta.Tosi(p[0] == 0 && p[1] > 0.2 && p[1] < 0.3 && Math.Abs(p[1] - p[2]) < 1e-4, $"luode {p[0]:0.00} {p[1]:0.00} {p[2]:0.00}");
+            // Suoraan edessä tai takana: ei reunavaloa.
+            IssKuvakulma.Cupola3Valot(0.0002, 0.0001, p);
+            Oleta.Tosi(p[0] == 0 && p[1] == 0 && p[2] == 0, "edessä");
+            // Keskitys (cl18: iPadilla lappu leikkautui reunaan; cl19: laatikon siirto paljasti 16 pt:n aukon, koska taustakuva
+            // leikataan laatikkoon): iPad Pro 11 vaaka 1210 × 834, ikkuna y 0,465 → kuva siirtyy laatikossa (asema y 0,065 eli 31,8 pt
+            // alas) ja laatikko pysyy paikallaan (y 0), vaaka pieni siirto laatikon varan sisällä.
+            var d = IssKuvakulma.Cupola3Rajaus(1210, 834, true, "a", 1.04, 8);
+            Oleta.Tosi(Math.Abs(d.asemaY - 0.065) < 0.005 && Math.Abs(d.y) < 0.01 && d.asemaX == 0.5 && d.x < -3 && d.x > -4.5,
+                $"iPad vaaka asema ({d.asemaX:0.000}, {d.asemaY:0.000}) siirto ({d.x:0.0}, {d.y:0.0})");
+            // Laatikko peittää ruudun: siirto enintään (z − 1) · korkeus / 2 − vara.
+            Oleta.Tosi(Math.Abs(d.y) <= 0.04 * 417 - 8 && Math.Abs(d.x) <= 0.04 * 605 - 8, "iPad laatikon vara");
+            // iPhone pysty: ei cover-ylijäämää pystyyn, joten siirto laatikkona varan verran (17,5 − 8 = 9,5 pt).
+            d = IssKuvakulma.Cupola3Rajaus(402, 874, false, "a", 1.04, 8);
+            Oleta.Tosi(Math.Abs(d.y - 9.48) < 0.05 && d.asemaY == 0.5 && Math.Abs(d.x) < 0.1, $"iPhone pysty ({d.asemaX:0.00}, {d.x:0.00}, {d.y:0.00})");
+            // Ilman suurennosta (z = 1) laatikkoa ei siirretä lainkaan.
+            d = IssKuvakulma.Cupola3Rajaus(402, 874, false, "a", 1, 8);
+            Oleta.Tosi(d.x == 0 && d.y == 0, "ei varaa");
+        }
+
         [Testi] static void IkkunanSilmaOnIssissa()
         {
-            var k = IssKuvakulma.Ikkuna(Iss);
+            var k = IssKuvakulma.Ikkuna(Iss, IssKuvakulma.IkkunanKatseAlas);
             Oleta.Tosi(Math.Abs(k.EtaisyysM - 521_000) < 3_000, "etäisyys noin 521 km: " + k);
             Oleta.Tosi(Math.Abs(k.Kallistus - 37.7) < 0.2, "kallistus noin 37,7°: " + k);
             Oleta.Tosi(Math.Abs(IssKuvakulma.Kaari(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon) - 2.69) < 0.05, "kohde 2,69° edellä");

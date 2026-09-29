@@ -695,6 +695,16 @@ namespace Matkakirja
                     else if (o.Length > 3 && o[2] == "ilma") AloituslennonIlma.Paalla = o[3] == "1" || o[3] == "paalle";
                     Debug.Log(Nappula.LentoV3Kuvaus() + $", aloitusrata {(Nappula.Aloitusrata ? 1 : 0)}, ilma {(AloituslennonIlma.Paalla ? 1 : 0)}");
                     break;
+                case "paivanvalo":
+                    // paivanvalo 0|1|auto|tila (v3f: päivän ja yön raja ja yövalot; 1 = päällä myös valinnan ja lennon ulkopuolella)
+                    if (o.Length > 1 && (o[1] == "1" || o[1] == "paalle")) Paivanvalo.Pakota = true;
+                    else if (o.Length > 1 && (o[1] == "0" || o[1] == "pois")) Paivanvalo.Pakota = false;
+                    else if (o.Length > 1 && o[1] == "auto") Paivanvalo.Pakota = null;
+                    // paivanvalo voimakkuus x (yövalot) | paivanvalo alku h (Pelikello.AlkuKelloUtc: lähdön kellonaika, kuvaparit)
+                    else if (o.Length > 2 && o[1] == "voimakkuus") Paivanvalo.Voimakkuus = (float)D(2);
+                    else if (o.Length > 2 && o[1] == "alku") Pelikello.AlkuKelloUtc = D(2);
+                    Debug.Log("MATKAKIRJA " + (Paivanvalo.Instanssi != null ? Paivanvalo.Instanssi.Tila : "päivänvalo: ei käynnissä"));
+                    break;
                 case "kamerareitti":
                     Nappula.KamerareittiLoki = o.Length < 2 || o[1] != "pois";
                     Debug.Log($"MATKAKIRJA kamerareitti: loki {(Nappula.KamerareittiLoki ? "päällä" : "pois")}");

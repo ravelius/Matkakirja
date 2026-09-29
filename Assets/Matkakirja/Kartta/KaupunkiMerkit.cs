@@ -296,6 +296,9 @@ namespace Matkakirja
         public Color valintaMuste = new Color32(0x46, 0x33, 0x1f, 0xff);
         /// <summary>Nimen alareuna keskipisteestä (pt): web nimenSade = max(12 × 1,42, 54 / 2) = 27, + rako 8.</summary>
         float ValintaNimenY => Mathf.Max(kohdemerkkiPx * 0.5f * 1.42f, rengasSade) + valintaNimiRako;
+        /// <summary>Valittavan nimen yläreuna pisteen yllä (pt): ValintaNimenY + rivin korkeus (v3f-laitekuva 28.9.: ~52 pt).
+        /// Aloitusnäkymä rajaa valinnan pelikellon alle (Valintarajaus).</summary>
+        public float ValintaNimenYlaPt => ValintaNimenY + valintaKirjain * 1.3f;
 
         [Header("Aloitusvalinnan huomiorengas (web .pallolauta-huomio)")]
         [Tooltip("Matkakirja/Rengas (Rakennus.cs); väri #eab84e (web --kulta).")]

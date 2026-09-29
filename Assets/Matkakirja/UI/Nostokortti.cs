@@ -88,7 +88,8 @@ namespace Matkakirja.Natiivi
         {
             kerros = Rakenne.El("mk-himmennys mk-nosto__kerros", ui.Juuri(UiKerros.Valikot));
             kerros.style.display = DisplayStyle.None;
-            kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros) Sulje(); });
+            // Kohde poimitaan itse (Poimi): vanhentunut kohde kortin kohdalla ei sulje korttia himmennyksestä.
+            kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros && Poimi(e.position, kerros) == kerros) Sulje(); });
             kortti = Rakenne.El("mk-nosto", kerros);
             sisus = new ScrollView(ScrollViewMode.Vertical);
             sisus.AddToClassList("mk-nosto__sisus");
@@ -320,8 +321,18 @@ namespace Matkakirja.Natiivi
             kuvaKatto = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
             // Fable 26.9. (UI-pariteetti iPad 13): 130/135:n kuvan korkeudesta laskettu leveys enintään LeveysKatto (webin
             // ~34 rem vastine); omistajan löydös koski puhelimen pystykuvaa, ei koko iPadin ruutua. Pystypuhelimella ei vaikuta.
-            float leveys = Mathf.Round(Mathf.Min(Mathf.Min(kuvaKatto * 1.5f + KortinVara, rl - 2f * Sivuvara), LeveysKatto));
+            float leveys = LaskeLeveys(rl, rk);
             if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
+        }
+
+        /// <summary>
+        /// Kortin leveys turva-alueen käytettävästä koosta (sama kaava kuin Mitoita): omistaja 28.9.2026, maakunnan
+        /// kortti "saman kokoinen kuin muut nostot" (MaakuntaKortti.Mitoita) — yksi laskukaava kaikille korteille.
+        /// </summary>
+        public static float LaskeLeveys(float rl, float rk)
+        {
+            float kuvaKattoLaskuun = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
+            return Mathf.Round(Mathf.Min(Mathf.Min(kuvaKattoLaskuun * 1.5f + KortinVara, rl - 2f * Sivuvara), LeveysKatto));
         }
 
         // Web NOSTOKUVA_YLAVARA 88 (omistaja 12.9.): vaiheen 1 kortti ei jää keskitettynä tätä alemmas, jotta vaiheen 2
@@ -447,18 +458,63 @@ namespace Matkakirja.Natiivi
             kuvaEnnen = null;
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
+            // Painalluksen kohde päätetään alussa: nappi (LISÄÄ, lukijan kaiutin/valikko), kenttä, kuva tai linkki ei sulje korttia,
+            // vaikka napin toiminto muuttaa asettelua ja nostosta syntyvä ClickEvent osuu sen jälkeen korttiin (1.0.39-savuke,
+            // Laitetestaaja: lukijan napautus sulki kortin; LISÄÄ-napautus sulki kortin FB234D08:lla).
+            var kohde = Poimi(e.position, e.target as VisualElement);
+            alkuValitsee = Valitseva(kohde);
+            // 1.0.40 (mitattu FB234D08): UI Toolkit antaa kosketukselle kohteeksi välimuistissa olevan "osoittimen alla" -elementin,
+            // kun kosketus osuu samaan pisteeseen kuin edellinen. Kaiuttimen napautus sai kohteeksi kortin (edellinen kosketus
+            // ennen asettelun muutosta), vaikka pisteessä on nappi: kortti sulkeutui eikä luenta alkanut (omistaja iPadilla:
+            // kuvan napautus, kaiutin ja lukijan valikkonappi sulkivat kortin ~joka kolmas kerta). Nappi tai kuva, joka ei saanut
+            // painallusta, painetaan napautuksen lopussa (NapautusKorttiin).
+            ohitettu = null;
+            if (kohde != e.target)
+                for (var v = kohde; v != null && v != kortti; v = v.parent)
+                    if (v is Button || v.ClassListContains("mk-nosto__kuvakehys"))
+                    {
+                        if (!(e.target is VisualElement t && (t == v || v.Contains(t)))) ohitettu = v;
+                        break;
+                    }
+        }
+
+        /// <summary>
+        /// Elementti ruudun kohdassa nyt; ilman paneelia tapahtuman kohde. PickAll eikä Pick: Pick(point) lukee hiiren
+        /// välimuistia (Panel.Pick → pointerId hiiri), joka iPad-simulaattorissa on sama vanhentunut kohde (Laitetestaaja
+        /// 1.0.40: kaiutin sulki kortin iPadilla ~6/7); PickAll poimii aina tuoreesti.
+        /// </summary>
+        VisualElement Poimi(Vector2 paikka, VisualElement varalla) => kortti.panel?.PickAll(paikka, null) ?? varalla;
+
+        /// <summary>Nappi tai kuvakehys, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
+        VisualElement ohitettu;
+
+        bool alkuValitsee;
+
+        bool Valitseva(VisualElement kohde)
+        {
+            for (var v = kohde; v != null && v != kortti; v = v.parent)
+            {
+                if (v is Button || v is TextField || v.ClassListContains("mk-nosto__kuvakehys") || v.ClassListContains("mk-nosto__lukija")) return true;
+                if (v is TextElement te && te.text != null && te.text.Contains("<link=")) return true;
+            }
+            return false;
         }
 
         /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
         void NapautusKorttiin(ClickEvent e)
         {
+            var ohi = ohitettu;
+            ohitettu = null;
             if (((Vector2)e.position - eleAlku).magnitude >= Napautuskynnys || Time.unscaledTime * 1000f - eleAika > NapautusMs) return;
-            for (var v = e.target as VisualElement; v != null && v != kortti; v = v.parent)
+            var kohde = Poimi(e.position, e.target as VisualElement);
+            if (ohi != null && ohi.panel != null && (kohde == ohi || ohi.Contains(kohde)))
             {
-                if (v is Button || v is TextField || v.ClassListContains("mk-nosto__kuvakehys") || v.ClassListContains("mk-nosto__lukija")) return;
-                if (v is TextElement te && te.text != null && te.text.Contains("<link=")) return;
+                Debug.Log($"MATKAKIRJA ui nostokortti: vanhentunut kohde {(e.target as VisualElement)?.GetType().Name}, painetaan {string.Join(".", ohi.GetClasses())}");
+                if (ohi is Button) using (var s = NavigationSubmitEvent.GetPooled()) { s.target = ohi; ohi.SendEvent(s); }
+                else using (var c = ClickEvent.GetPooled()) { c.target = ohi; ohi.SendEvent(c); }
+                return;
             }
-            var kohde = e.target as VisualElement;
+            if (alkuValitsee || Valitseva(kohde)) return;
             bool pohja = kohde == kortti || kohde == sisus || kohde == sisus.contentContainer || kohde == sisus.contentViewport || kohde is TextElement;
             if (!pohja) return;
             Aanet.PulunTehoste("paper");

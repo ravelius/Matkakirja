@@ -26,7 +26,13 @@ namespace Matkakirja
         }
 
         /// <summary>Näkyvien erikoismallien ruutulaatikot (pikselit, y ylös) listaan.</summary>
-        public static void LisaaKalusteet(List<Ruutulaatikko> ulos)
+        public static void LisaaKalusteet(List<Ruutulaatikko> ulos) => LisaaKalusteet(ulos, null);
+
+        /// <summary>
+        /// Kuten yllä, ja kunkin laatikon noston id (kappaleen avain) samaan indeksiin listaan avaimet: mallinoston oma laatikko
+        /// haetaan avaimella eikä geometrisesti (Linssiseppä cl16: Spillingsin kätkö nappasi Visbyn siirretyn mallin laatikon).
+        /// </summary>
+        public static void LisaaKalusteet(List<Ruutulaatikko> ulos, List<string> avaimet)
         {
             if (instanssi == null || instanssi.kamera == null) return;
             var kam = instanssi.kamera;
@@ -39,6 +45,7 @@ namespace Matkakirja
                 if (r.z <= 0f) continue;
                 // Sama laatikko piilottaa muiden nostojen symbolit (Symbolimallit.ErikoismallinAlla.cs).
                 ulos.Add(ErikoismallinAlla.Kalustelaatikko(r.x, r.y, k.LeveysPx, k.Suhde, vara));
+                avaimet?.Add(p.Key);
             }
         }
 
