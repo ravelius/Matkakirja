@@ -4365,3 +4365,31 @@
     margin-top: -2px;
     font-size: 11px;
 }
+
+/* MATKALAUKKUNAHKA (omistaja 29.9.2026, Codex iphone-v1): kaistale rajattuna matalaan palkkiin alareuna (tikkaus) edellä,
+   keskitummennus koko leveydeltä samalla rajauksella, pilleri kohopainatuksena 9-slicellä (@3x → slice-scale 1/3). */
+.mk-ylapalkki--nahka {
+    -unity-background-scale-mode: scale-and-crop;
+    background-position-y: bottom;
+    border-bottom-width: 0;
+}
+
+.mk-ylapalkki__varjo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+    background-position-y: bottom;
+}
+
+.mk-pilleri.mk-pilleri--nahka {
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-slice-left: 53;
+    -unity-slice-right: 53;
+    -unity-slice-top: 47;
+    -unity-slice-bottom: 47;
+    -unity-slice-scale: 0.3333;
+}
