@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 19:29:** Levy 88 Gi, muisti 80 % vapaa, kuorma 26/100/120, sim 0, ei kevyttä tilaa. Viikko 11 % (5 h 41 %). Konteksti: Linnanrakentaja 57 %, Natiivi-UI 45 %, oma 19 %. Juna: BUILD 52 = master d45086d3 (juna a45c4a24, käännös 48d15d41; Laitetestaaja 4/4 PASS), varmuuskopio ok 19.25. Posti: ei uutta.
+
 **Päivitetty 19:18:** Levy 90 Gi, muisti 80 % vapaa, kuorma 113/116/130, sim 0, ei kevyttä tilaa. Viikko 10 % (5 h 38 %). Konteksti: Linnanrakentaja 54 %, Natiivi-UI 45 %, oma 18 %. Juna ennallaan (viimeisin lokirivi 18.58). Posti: ei uutta.
 
 **Päivitetty 19:07:** Levy 89 Gi, muisti 78 % vapaa, kuorma 158/185/133 (juna-käännös käynnissä 18.58→), sim 0, ei kevyttä tilaa. Viikko 10 % (5 h 36 %). Konteksti: Linnanrakentaja 52 %, Natiivi-UI 44 %, oma 18 %. Juna: vahti käänsi 18.58 (ylärajakäännös, vanhin kääntämätön 4271 s). Posti: ei uutta.
