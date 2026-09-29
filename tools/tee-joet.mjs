@@ -50,6 +50,49 @@ export function gpkgViivat(b) {
   return viivat;
 }
 
+/*
+ * PÄTKÄN GEOMETRIA VOI OLLA MONIOSAINEN (Karttaseppä 29.9.2026, Tiberin
+ * kahdeksikkosilmukka Roomassa). TDX-Hydro/GEOGLOWS tallentaa osan
+ * pätkistä MultiLineStringina yhdellä rivillä — mitattu vpu 201:llä 545
+ * pätkää 11 015:stä (≥ 300 km²). Syy jää lähteen datan arvoitukseksi,
+ * mutta osat OVAT topologisesti jatkuvia: yksi pätkä oli 656 + 12
+ * pisteen kaksi osaa, ja niiden liitoskohta osui täsmälleen yhteen
+ * (0 m). `.flat()` liitti osat GeoPackagen TALLENNUSJÄRJESTYKSESSÄ, ei
+ * niiden todellisessa jatkuvuudessa — [12 pisteen jatke, 656 pisteen
+ * pääosa] tuotti hypyn jatkeen päästä pääosan alkuun ja silmukan, joka
+ * risteää itsensä (ks. tests/joet.test.mjs). `yhdistaOsat` ketjuttaa
+ * osat lähimmän päätepisteen mukaan — sama periaate kuin `suunnattu()`
+ * pätkien välillä, nyt yhden pätkän omien osien välillä.
+ */
+export function yhdistaOsat(viivat) {
+  if (viivat.length <= 1) return viivat[0] ?? [];
+  const jaljella = [...viivat].sort((a, b) => b.length - a.length);
+  let ketju = jaljella.shift();
+  while (jaljella.length) {
+    let parasI = -1; let parasD = Infinity; let parasKaanna = false; let parasAlkuun = false;
+    for (let i = 0; i < jaljella.length; i += 1) {
+      const v = jaljella[i];
+      const ehdokkaat = [
+        [etaisyys(ketju.at(-1), v[0]), false, false],
+        [etaisyys(ketju.at(-1), v.at(-1)), true, false],
+        [etaisyys(ketju[0], v.at(-1)), false, true],
+        [etaisyys(ketju[0], v[0]), true, true],
+      ];
+      for (const [d, kaanna, alkuun] of ehdokkaat) {
+        if (d < parasD) { parasD = d; parasI = i; parasKaanna = kaanna; parasAlkuun = alkuun; }
+      }
+    }
+    const v = jaljella.splice(parasI, 1)[0];
+    const suunnattuV = parasKaanna ? [...v].reverse() : v;
+    // Liitoskohdan toistuva piste pois, jos osat kohtaavat käytännössä samassa pisteessä.
+    const paallekkain = parasD < 1e-6;
+    ketju = parasAlkuun
+      ? [...suunnattuV.slice(0, paallekkain ? -1 : undefined), ...ketju]
+      : [...ketju, ...suunnattuV.slice(paallekkain ? 1 : 0)];
+  }
+  return ketju;
+}
+
 export function lueUomat(gpkg, valumaKm2) {
   const db = new DatabaseSync(gpkg, { readOnly: true });
   const taulu = db.prepare('select table_name from gpkg_contents').get().table_name;
@@ -57,7 +100,7 @@ export function lueUomat(gpkg, valumaKm2) {
   db.close();
   return rivit.map((r) => ({
     id: r.LINKNO, alas: r.DSLINKNO, jarjestys: r.strmOrder, valuma: r.DSContArea / 1e6,
-    viiva: gpkgViivat(Buffer.from(r.geom)).flat().map(([x, y]) => lonLat(x, y)),
+    viiva: yhdistaOsat(gpkgViivat(Buffer.from(r.geom))).map(([x, y]) => lonLat(x, y)),
   }));
 }
 
