@@ -61,6 +61,8 @@ namespace Matkakirja.Natiivi
         const float NeulaKuvassa = -45f, NeulanPuolikulma = 62f;
         /// <summary>Radio enintään tämän osuuden näkymän pinta-alasta (Codexin README).</summary>
         const float PintaAlaKatto = 0.22f;
+        /// <summary>Kirjaimet tummana musteena kirkkaalla näytöllä (Codexin v3: pohja ~#df8719, meripihkamusteen kontrasti 1,6 → tällä ~5).</summary>
+        static readonly Color NayttoMuste = new Color32(0x3a, 0x1e, 0x06, 255);
 
         VisualElement codex, cNeula, cTeksti, cAsteikko, cVirta;
         CodexVariantti cVar;
@@ -108,6 +110,7 @@ namespace Matkakirja.Natiivi
             vanhaNayttoIsa ??= naytto.parent; vanhaAsteikkoIsa ??= asteikko.parent; vanhaLamppuIsa ??= lamppu.parent; vanhaLinkkiIsa ??= linkkiRivi.parent;
             cTeksti.Add(naytto);
             naytto.Sammuneet = false;   // kuvan pistepohja näyttää sammuneet pisteet
+            naytto.OmaMuste = NayttoMuste;
             cAsteikko.Add(asteikko);
             asteikko.AddToClassList("mk-radio__asteikko--codex");
             asteikko.style.backgroundImage = StyleKeyword.None;
@@ -145,7 +148,7 @@ namespace Matkakirja.Natiivi
         {
             if (cVar == null) return;
             cVar = null;
-            vanhaNayttoIsa?.Add(naytto); naytto.Sammuneet = true;
+            vanhaNayttoIsa?.Add(naytto); naytto.Sammuneet = true; naytto.OmaMuste = null;
             vanhaAsteikkoIsa?.Insert(0, asteikko);
             asteikko.RemoveFromClassList("mk-radio__asteikko--codex");
             if (asteikko is Asteikkoviivat av) av.Nakymaton = false;
