@@ -1,8 +1,11 @@
 /*
- * Dioraamamoottorin rakennuskone (Linnanrakentaja, ali-agentti B3, erä 1).
- * Speksi: docs/raportit/dioraama-rajapinnat-20260929.md kohdat 0, 3 ja 3b.
+ * Dioraamamoottorin rakennuskone (Linnanrakentaja, ali-agentti B3, erä 1;
+ * media-putki laajennettu erä 2:ssa). Speksi: docs/raportit/dioraama-rajapinnat-
+ * 20260929.md kohdat 0, 3 ja 3b sekä docs/raportit/dioraama-rajapinnat-era2-
+ * 20260929.md kohdat 1 ja 2.
  *
- * CLI: node tools/dioraama/rakenna.mjs <rakennus-id> [--ulos dist/dioraama] [--saateita 48]
+ * CLI: node tools/dioraama/rakenna.mjs <rakennus-id> [--ulos dist/dioraama]
+ *   [--saateita 48] [--aanet <kansio>]
  *   → kansio <ulos>/<rakennus-id>/ (oletus dist/dioraama/<rakennus-id>/), ks. alla.
  *
  * PUTKI per tila (speksin kohta 3b): palikat.flatMap(sijoita) [reseptit.mjs, B2]
@@ -11,9 +14,14 @@
  *   'massa' [ao.mjs] → lämpö + pinnan hehku [ao.mjs] → COLOR_0 (R=AO, G=lämpö)
  *   → kirjoitaGlb [glb.mjs, B1].
  *
- * Tuotokset (kohta 3): tilat/<tila>.glb, rakennus.json (lähdedata + glb-kentät +
- * käytetyt pinnat/henkilot/aanet), hahmot/<id>.png (paikkamerkkihenkilöille),
- * manifest.json (aakkosjärjestys, sha256, tavuja, EI aikaleimoja).
+ * Tuotokset (kohta 3 + era2 kohdat 1–2, media.mjs): tilat/<tila>.glb, rakennus.json
+ * (lähdedata + glb-kentät + käytetyt pinnat/henkilot/liekit/aanet), pinnat/<id>.jpg
+ * (kuvallisille pinnoille), hahmot/<id>.png (maalattu tai paikkamerkki),
+ * liekit/<id>.png (maalattu tai paikkamerkki), aanet/v<versio>/<id>.mp3 (vain --aanet,
+ * versio AANET-pankista — natiivin URL-välimuisti),
+ * manifest.json (aakkosjärjestys, sha256, tavuja, EI aikaleimoja). Puuttuva
+ * mediatiedosto EI ole virhe: tulostaa `ei lähdettä: <polku>` ja käyttää
+ * paikkamerkkiä / jättää kentän pois.
  *
  * EI UUSIA NPM-RIIPPUVUUKSIA. B1:n (glb.mjs) ja B2:n (reseptit.mjs) tiedostoja
  * ei muokata tästä — vain käytetään niiden dokumentoitua rajapintaa.
@@ -28,9 +36,12 @@ import { performance } from 'node:perf_hooks';
 import { kirjoitaGlb } from './glb.mjs';
 import { sijoita } from './reseptit.mjs';
 import { luoBvh, leivoAO, lampo } from './ao.mjs';
-import { teePaikkamerkkiAtlas } from './paikkamerkit.mjs';
+import {
+  OLETUS_ASSETS_JUURI, kopioiPinnanKuva, teeHenkilonAtlas, teeLiekinAtlas, kopioiAanet,
+} from './media.mjs';
 import { PINNAT } from '../../js/dioraama/pankit/pinnat.js';
 import { HENKILOT } from '../../js/dioraama/pankit/henkilot.js';
+import { LIEKIT } from '../../js/dioraama/pankit/liekit.js';
 import { AANET } from '../../js/dioraama/pankit/aanet.js';
 
 const AO_MAX_M = 3; // speksin kohta 3: AO enintään 3 m kantama
@@ -61,29 +72,43 @@ function laskeTasonNormaali(p0, p1, p2) {
  * Toteutus on säännöllinen ristikkoon pyöristys (Math.round(arvo / toleranssi)) —
  * yksinkertainen ja deterministinen tapa toteuttaa "saman toleranssin sisällä
  * olevat kärjet yhdistetään" ilman kalliimpaa naapurihakua.
+ *
+ * `uv` (erä 2, speksin kohta "UV"): jos resepti antoi kärjelle uv_m:n (esim.
+ * torni, kartiokatto), se lisätään avaimeen SELLAISENAAN (ei pyöristystä).
+ * Saumakohdassa (esim. tornin 0°/360°) kärjet ovat samassa paikassa ja
+ * normaalissa mutta eri uv:ssä — ilman tätä ne hitsautuisivat yhdeksi
+ * kärjeksi ja UV hyppäisi väärin sauman yli sen sijaan että jatkuisi.
  */
-function hitsausavain(p, n) {
+export function hitsausavain(p, n, uv) {
   const px = Math.round(p[0] / HITSAUS_PAIKKA);
   const py = Math.round(p[1] / HITSAUS_PAIKKA);
   const pz = Math.round(p[2] / HITSAUS_PAIKKA);
   const nx = Math.round(n[0] / HITSAUS_NORMAALI);
   const ny = Math.round(n[1] / HITSAUS_NORMAALI);
   const nz = Math.round(n[2] / HITSAUS_NORMAALI);
-  return `${px},${py},${pz}|${nx},${ny},${nz}`;
+  const uvOsa = uv ? `|${uv[0]},${uv[1]}` : '';
+  return `${px},${py},${pz}|${nx},${ny},${nz}${uvOsa}`;
 }
 
 /**
  * Maailmatason UV normaalin pääakselin mukaan (speksin kohta 3b):
- * |nx| suurin → (z, y); |ny| suurin → (x, z); |nz| suurin → (x, y); / toisto_m.
+ * |nx| suurin → (z, y); |ny| suurin → (x, z); |nz| suurin → (x, y); / toisto (tu, tv).
  * Maailmakoordinaatteihin sidottu (ei per-palikka-paikallinen), joten toistuva
- * tekstuuri jatkuu saumattomasti palikasta toiseen.
+ * tekstuuri jatkuu saumattomasti palikasta toiseen. `toistoM` on number (tu = tv)
+ * tai [tu, tv] (erä 2: eri toisto per akseli, esim. leikkaus ja tiili [4, 1]).
+ *
+ * `uvM` (erä 2, speksin kohta "UV"): jos resepti antoi kärjelle uv_m = [a, b]
+ * metreinä (esim. torni, kartiokatto — kaarenpituus/korkeus), UV = [a / tu, b / tv]
+ * eikä tasoprojektiota käytetä lainkaan.
  */
-function laskeUv(p, n, toistoM) {
+export function laskeUv(p, n, toistoM, uvM) {
+  const [tu, tv] = Array.isArray(toistoM) ? toistoM : [toistoM, toistoM];
+  if (uvM) return [uvM[0] / tu, uvM[1] / tv];
   const ax = Math.abs(n[0]); const ay = Math.abs(n[1]); const az = Math.abs(n[2]);
   let u;
   let v;
   if (ax >= ay && ax >= az) { u = p[2]; v = p[1]; } else if (ay >= az) { u = p[0]; v = p[2]; } else { u = p[0]; v = p[1]; }
-  return [u / toistoM, v / toistoM];
+  return [u / tu, v / tv];
 }
 
 /* ==================== Ryhmittely pinnan mukaan + kärkien hitsaus ==================== */
@@ -118,13 +143,17 @@ function ryhmitteleJaHitsaa(rawKolmiot) {
     const idx3 = [0, 0, 0];
     for (let v = 0; v < 3; v++) {
       const p = k.p[v]; const n = normaalit3[v];
-      const avain = hitsausavain(p, n);
+      // uv_m (erä 2): resepti (torni, kartiokatto) voi antaa kärjelle valmiin uv_m:n
+      // maailmankärjen sijaan — silloin se ohittaa tasoprojektion JA otetaan mukaan
+      // hitsausavaimeen, jotta saumakärjet (sama paikka/normaali, eri uv) eivät hitsaudu.
+      const uvM = k.uv_m ? k.uv_m[v] : undefined;
+      const avain = hitsausavain(p, n, uvM);
       let vi = ryhma.vertexMap.get(avain);
       if (vi === undefined) {
         vi = ryhma.positions.length / 3;
         ryhma.positions.push(p[0], p[1], p[2]);
         ryhma.normals.push(n[0], n[1], n[2]);
-        const uv = laskeUv(p, n, pintaTieto.toisto_m);
+        const uv = laskeUv(p, n, pintaTieto.toisto_m, uvM);
         ryhma.uvs.push(uv[0], uv[1]);
         ryhma.vertexMap.set(avain, vi);
       }
@@ -158,11 +187,23 @@ function litistaKolmiot(rawKolmiot) {
  *
  * `ulos`: kansio, jonka ALLE `<rakennus.id>/` luodaan (oletus 'dist/dioraama').
  * `saateita`: leivoAO:n sädemäärä per kärki (oletus 48, ks. tools/dioraama/ao.mjs).
+ * `assetsJuuri` (erä 2): juuri pinta-/hahmo-/liekkilähdekuville (oletus
+ * media.mjs:n OLETUS_ASSETS_JUURI = 'assets/dioraama') — testit voivat antaa
+ * väliaikaiskansion tähän, ettei oikeaa assets/-kansiota kosketa.
+ * `aanetKansio` (erä 2): paikallinen kansio, josta `<id>.mp3`-tiedostot
+ * kopioidaan (speksin kohta 1, `--aanet`-lippu) — null/puuttuu = ei kopioida.
  */
 /**
  * Tihentää kolmiot puolittamalla pisimmän sivun, kunnes jokainen sivu on ≤ maxReuna (m). Pehmeät normaalit
  * interpoloidaan ja normalisoidaan; litteät kolmiot pysyvät litteinä. Kiertosuunta säilyy. Nelikulmion
  * lävistäjä on molempien kolmioiden pisin sivu, joten jaetut sivut puolittuvat samasta kohdasta.
+ *
+ * uv_m (erä 2, speksin kohta "UV"): interpoloidaan LINEAARISESTI puolituspisteeseen (a ja b erikseen,
+ * ei normalisointia — toisin kuin normaali, uv_m ei ole yksikkövektori) puolitettavan sivun kahden
+ * kärjen väliltä. Jos jommalla kummalla puolitettavan sivun kärjellä ei ole uv_m:ää (ei pitäisi
+ * tapahtua nykyisillä resepteillä, jotka asettavat sen aina koko kolmiolle kerralla), uv_m jätetään
+ * KOKONAAN POIS jälkeläisiltä sen sijaan että jäätäisiin sekaan puoliksi projisoitu/puoliksi uv_m-
+ * kolmio — silloin jälkeläinen palaa tavalliseen tasoprojektioon.
  */
 export function tihenna(kolmiot, maxReuna) {
   const tulos = [];
@@ -183,14 +224,17 @@ export function tihenna(kolmiot, maxReuna) {
     // Kierrä niin, että puolitettava sivu on p0–p1.
     const j = [i, (i + 1) % 3, (i + 2) % 3];
     const P = j.map((k) => t.p[k]), N = t.n ? j.map((k) => t.n[k]) : null;
+    const UV = t.uv_m ? j.map((k) => t.uv_m[k]) : null;
     const m = keski(P[0], P[1]), nm = N ? keskiN(N[0], N[1]) : null;
-    const uusi = (p, n) => {
+    const uvM = (UV && UV[0] && UV[1]) ? [(UV[0][0] + UV[1][0]) / 2, (UV[0][1] + UV[1][1]) / 2] : null;
+    const uusi = (p, n, uv) => {
       const x = { ...t, p };
       if (n) x.n = n; else delete x.n;
+      if (uv) x.uv_m = uv; else delete x.uv_m;
       return x;
     };
-    pino.push(uusi([P[0], m, P[2]], N ? [N[0], nm, N[2]] : null));
-    pino.push(uusi([m, P[1], P[2]], N ? [nm, N[1], N[2]] : null));
+    pino.push(uusi([P[0], m, P[2]], N ? [N[0], nm, N[2]] : null, uvM ? [UV[0], uvM, UV[2]] : null));
+    pino.push(uusi([m, P[1], P[2]], N ? [nm, N[1], N[2]] : null, uvM ? [uvM, UV[1], UV[2]] : null));
   }
   return tulos;
 }
@@ -202,7 +246,9 @@ export function tihennysraja(palikka, tila) {
   return tila.kohdistettava === false ? 2 : 0.5;
 }
 
-export async function rakennaData(rakennus, { ulos = 'dist/dioraama', saateita = 48 } = {}) {
+export async function rakennaData(rakennus, {
+  ulos = 'dist/dioraama', saateita = 48, assetsJuuri = OLETUS_ASSETS_JUURI, aanetKansio = null,
+} = {}) {
   if (!rakennus || typeof rakennus.id !== 'string' || rakennus.id.length === 0) {
     throw new Error('rakennaData: rakennus.id puuttuu tai ei ole merkkijono');
   }
@@ -298,9 +344,19 @@ export async function rakennaData(rakennus, { ulos = 'dist/dioraama', saateita =
         if (rivi.aani != null) kaytetytAanet.add(rivi.aani);
       }
     }
+    // Tilan äänisilmukat: kentän nimi on speksin (era2 kohta 2 "AANET") mukaan `aani`, ei `id`
+    // — merkkijonotuki (lyhyt muoto, pelkkä id) säilytetty siltä varalta että jokin data käyttää sitä.
     for (const a of tila.aanet ?? []) {
       if (typeof a === 'string') kaytetytAanet.add(a);
-      else if (a && typeof a.id === 'string') kaytetytAanet.add(a.id);
+      else if (a && typeof a.aani === 'string') kaytetytAanet.add(a.aani);
+    }
+    // Tilan satunnaiset kertaäänet (era2 kohta 2 "AANET": tehosteet[].aanet[]) ja tilan oman
+    // taulun kohdat (taulu.kohdat[].aani) — RAKENNUS-tason taulu kerätään erikseen alempana.
+    for (const t of tila.tehosteet ?? []) {
+      for (const id of t.aanet ?? []) if (typeof id === 'string') kaytetytAanet.add(id);
+    }
+    for (const kohta of tila.taulu?.kohdat ?? []) {
+      if (kohta.aani != null) kaytetytAanet.add(kohta.aani);
     }
 
     tilaTulokset.push({
@@ -308,22 +364,65 @@ export async function rakennaData(rakennus, { ulos = 'dist/dioraama', saateita =
     });
   }
 
-  // Paikkamerkkiatlaat: vain henkilöille, joilla on `paikkamerkki` (kohta 3).
+  // RAKENNUS-tason taulun äänet (era2 kohta 2 "AANET"): eri taulu kuin tilojen omat (esim.
+  // 'massa'-tilalla ei ole omaa taulua — se käyttää tätä yhteistä linnan taulua).
+  for (const kohta of rakennus.taulu?.kohdat ?? []) {
+    if (kohta.aani != null) kaytetytAanet.add(kohta.aani);
+  }
+
+  // Käytetyt liekit (erä 2, era2-speksin kohta 2 "LIEKIT"): kerätty tilojen omista
+  // `liekit`-listoista (oma pieni silmukka — ei kosketa yllä olevaa geometria/AO-silmukkaa).
+  const kaytetytLiekit = new Set();
+  for (const tila of rakennus.tilat) {
+    for (const l of tila.liekit ?? []) {
+      if (l && typeof l.liekki === 'string') kaytetytLiekit.add(l.liekki);
+    }
+  }
+
+  // Pintakuvat (erä 2, media.mjs): kopioidaan käytetyille pinnoille, joilla on `lahde`
+  // JA lähdetiedosto löytyy levyltä. Puuttuva → "ei lähdettä" (media.mjs tulostaa) + ei tekstuuria.
+  const pintaTulokset = [];
+  const pintaAtlas = new Map(); // id -> tiedosto (vain onnistuneet kopiot)
+  for (const id of [...kaytetytPinnat].sort()) {
+    const tulos = kopioiPinnanKuva(id, PINNAT[id], kansio, assetsJuuri);
+    if (tulos) { pintaTulokset.push({ id, ...tulos }); pintaAtlas.set(id, tulos); }
+  }
+
+  // Henkilöatlaat: maalattu (jos lähde löytyy) tai paikkamerkki (media.mjs, kohta 2 "HENKILOT").
   const hahmoTulokset = [];
+  const henkiloAtlas = new Map(); // id -> { polku, maalattu }
   for (const id of [...kaytetytHenkilot].sort()) {
     const henkilo = HENKILOT[id];
     if (!henkilo) throw new Error(`rakenna: käytetty henkilö '${id}' puuttuu HENKILOT-pankista`);
-    if (!henkilo.paikkamerkki) continue;
-    const png = teePaikkamerkkiAtlas(henkilo, id);
-    const polkuSuhteellinen = `hahmot/${id}.png`;
-    writeFileSync(join(kansio, 'hahmot', `${id}.png`), png);
-    hahmoTulokset.push({
-      id, polku: polkuSuhteellinen, sha256: createHash('sha256').update(png).digest('hex'), tavuja: png.length,
-    });
+    const tulos = teeHenkilonAtlas(id, henkilo, kansio, assetsJuuri);
+    if (!tulos) continue; // ei paikkamerkkiä eikä maalattua lähdettä (ei tapahdu nykyisellä pankilla)
+    henkiloAtlas.set(id, { polku: tulos.polku, maalattu: tulos.maalattu });
+    hahmoTulokset.push({ id, polku: tulos.polku, sha256: tulos.sha256, tavuja: tulos.tavuja });
   }
 
+  // Liekkiatlaat: lähde (jos löytyy) tai proseduraalinen paikkamerkki (media.mjs, kohta 2 "LIEKIT").
+  // Liekillä on aina jotain piirrettävää, joten atlas syntyy aina käytetylle liekille.
+  const liekkiTulokset = [];
+  const liekkiAtlas = new Map(); // id -> tiedosto
+  for (const id of [...kaytetytLiekit].sort()) {
+    const liekki = LIEKIT[id];
+    if (!liekki) throw new Error(`rakenna: käytetty liekki '${id}' puuttuu LIEKIT-pankista`);
+    const tulos = teeLiekinAtlas(id, liekki, kansio, assetsJuuri);
+    liekkiTulokset.push({ id, ...tulos });
+    liekkiAtlas.set(id, tulos);
+  }
+
+  // Äänten versiot (koordinaattorin lisäys 29.9., era2 kohta 1/2): natiivi välimuistittaa äänet
+  // levylle URL:n mukaan, joten polku sisältää AANET-pankin version (uusintaotto → versio kasvaa
+  // VAIN sillä äänellä → uusi URL). Puuttuvalle id:lle oletus 1 — alempi Object.hasOwn-tarkistus
+  // heittää joka tapauksessa selvän virheen, joten tämä ei peitä sitä.
+  const aanetVersiot = Object.fromEntries([...kaytetytAanet].map((id) => [id, AANET[id]?.versio ?? 1]));
+
+  // Äänten paikalliskopio (vain jos --aanet annettu; ks. era2-speksin kohta 1).
+  const aanetTulokset = kopioiAanet(kaytetytAanet, kansio, aanetKansio, aanetVersiot);
+
   // rakennus.json: lähdedata sellaisenaan (syväkopio JSON:in kautta, jottei alkuperäistä
-  // moduulia mutatoida) + jokaiselle tilalle glb-kentät + käytetyt pinnat/henkilot/aanet.
+  // moduulia mutatoida) + jokaiselle tilalle glb-kentät + käytetyt pinnat/henkilot/liekit/aanet.
   const rakennusJson = JSON.parse(JSON.stringify(rakennus));
   for (const t of rakennusJson.tilat) {
     const tulos = tilaTulokset.find((x) => x.id === t.id);
@@ -332,16 +431,43 @@ export async function rakennaData(rakennus, { ulos = 'dist/dioraama', saateita =
     };
   }
   rakennusJson.pinnat = {};
-  for (const id of [...kaytetytPinnat].sort()) rakennusJson.pinnat[id] = PINNAT[id];
+  for (const id of [...kaytetytPinnat].sort()) {
+    // `lahde` ei tulostu — `tekstuuri` korvaa sen vain jos lähde todella kopioitui (era2 kohta 2 "PINNAT").
+    const { lahde, ...muu } = PINNAT[id];
+    const atlas = pintaAtlas.get(id);
+    rakennusJson.pinnat[id] = atlas ? { ...muu, tekstuuri: atlas.polku } : muu;
+  }
   rakennusJson.henkilot = {};
   for (const id of [...kaytetytHenkilot].sort()) {
     const henkilo = HENKILOT[id];
-    rakennusJson.henkilot[id] = henkilo.paikkamerkki ? { ...henkilo, atlas: `hahmot/${id}.png` } : { ...henkilo };
+    const atlas = henkiloAtlas.get(id);
+    if (atlas?.maalattu) {
+      // Maalattu-muoto (era2 kohta 2 "HENKILOT"): maalattu-lohkon kentät ylätasolle
+      // (ei `lahde`) + nimi/korkeus_m henkilöltä itseltään + atlas-polku.
+      const { lahde, ...maalattuMuu } = henkilo.maalattu;
+      rakennusJson.henkilot[id] = {
+        nimi: henkilo.nimi, korkeus_m: henkilo.korkeus_m, ...maalattuMuu, atlas: atlas.polku,
+      };
+    } else {
+      // Nykyinen paikkamerkkimuoto (ei px_per_m). `maalattu` (jos oli, mutta lähde
+      // puuttui levyltä) ei kuulu tänne — samasta syystä kuin pinnan `lahde`.
+      const { maalattu, ...muu } = henkilo;
+      rakennusJson.henkilot[id] = atlas ? { ...muu, atlas: atlas.polku } : muu;
+    }
+  }
+  rakennusJson.liekit = {};
+  for (const id of [...kaytetytLiekit].sort()) {
+    const { lahde, ...muu } = LIEKIT[id];
+    rakennusJson.liekit[id] = { ...muu, atlas: liekkiAtlas.get(id).polku };
   }
   rakennusJson.aanet = {};
   for (const id of [...kaytetytAanet].sort()) {
     if (!Object.hasOwn(AANET, id)) throw new Error(`rakenna: käytetty ääni '${id}' puuttuu AANET-pankista`);
-    rakennusJson.aanet[id] = AANET[id];
+    const { silmukka, voimakkuus, kesto_s: kestoS, versio } = AANET[id];
+    // `tiedosto` on suhteessa rakennuksen juureen (ei hash-kansioon) — vakio polku riippumatta
+    // siitä, kopioitiinko paikallinen mp3 tässä ajossa (`--aanet`); ämpäri tarjoaa sen julkaisussa.
+    // v<versio>-alikansio: ks. aanetVersiot yllä (natiivin URL-välimuisti).
+    rakennusJson.aanet[id] = { tiedosto: `aanet/v${versio ?? 1}/${id}.mp3`, silmukka, voimakkuus, kesto_s: kestoS };
   }
 
   const rakennusJsonBuf = Buffer.from(`${JSON.stringify(rakennusJson, null, 2)}\n`, 'utf8');
@@ -352,7 +478,10 @@ export async function rakennaData(rakennus, { ulos = 'dist/dioraama', saateita =
   // manifest.json: aakkosjärjestyksessä, EI aikaleimoja — sama syöte = sama tavujono.
   const tiedostot = [
     ...tilaTulokset.map((t) => ({ polku: t.tiedosto, sha256: t.sha256, tavuja: t.tavuja })),
+    ...pintaTulokset.map((p) => ({ polku: p.polku, sha256: p.sha256, tavuja: p.tavuja })),
     ...hahmoTulokset.map((h) => ({ polku: h.polku, sha256: h.sha256, tavuja: h.tavuja })),
+    ...liekkiTulokset.map((l) => ({ polku: l.polku, sha256: l.sha256, tavuja: l.tavuja })),
+    ...aanetTulokset.map((a) => ({ polku: a.polku, sha256: a.sha256, tavuja: a.tavuja })),
     { polku: rakennusJsonPolku, sha256: rakennusJsonSha, tavuja: rakennusJsonBuf.length },
   ].sort((a, b) => (a.polku < b.polku ? -1 : (a.polku > b.polku ? 1 : 0)));
 
@@ -367,7 +496,10 @@ export async function rakennaData(rakennus, { ulos = 'dist/dioraama', saateita =
   return {
     kansio,
     tilat: tilaTulokset,
+    pinnat: pintaTulokset,
     hahmot: hahmoTulokset,
+    liekit: liekkiTulokset,
+    aanet: aanetTulokset,
     rakennusJson: { polku: rakennusJsonPolku, sha256: rakennusJsonSha, tavuja: rakennusJsonBuf.length },
     manifest: { polku: manifestPolku, sha256: createHash('sha256').update(manifestBuf).digest('hex'), tavuja: manifestBuf.length },
     aikaMs,
@@ -393,7 +525,7 @@ async function main() {
   }
   const rakennusId = vapaat[0];
   if (!rakennusId) {
-    console.error('Käyttö: node tools/dioraama/rakenna.mjs <rakennus-id> [--ulos dist/dioraama] [--saateita 48]');
+    console.error('Käyttö: node tools/dioraama/rakenna.mjs <rakennus-id> [--ulos dist/dioraama] [--saateita 48] [--aanet <kansio>]');
     process.exit(1);
     return;
   }
@@ -405,11 +537,12 @@ async function main() {
     process.exit(1);
     return;
   }
+  const aanetKansio = lippu('--aanet'); // null = ei kopioida paikallisia ääniä (speksin kohta 1)
 
   const moduulinUrl = new URL(`../../js/dioraama/rakennukset/${rakennusId}.js`, import.meta.url);
   const { RAKENNUS } = await import(moduulinUrl.href);
 
-  const tulos = await rakennaData(RAKENNUS, { ulos, saateita });
+  const tulos = await rakennaData(RAKENNUS, { ulos, saateita, aanetKansio });
 
   console.log(`${RAKENNUS.otsikko ?? RAKENNUS.nimi} (${RAKENNUS.id}): ${tulos.tilat.length} tilaa\n`);
   let kolmioKaikki = 0; let karkiKaikki = 0; let tavuaKaikki = 0;
@@ -424,8 +557,17 @@ async function main() {
     `  ${'yhteensä'.padEnd(12)}: ${String(kolmioKaikki).padStart(7)} kolmiota, `
     + `${String(karkiKaikki).padStart(7)} kärkeä, ${String(tavuaKaikki).padStart(9)} tavua`,
   );
+  if (tulos.pinnat.length > 0) {
+    console.log(`\n  pinnat: ${tulos.pinnat.length} kuvaa (${tulos.pinnat.map((p) => p.id).join(', ')})`);
+  }
   if (tulos.hahmot.length > 0) {
     console.log(`\n  hahmot: ${tulos.hahmot.length} atlasta (${tulos.hahmot.map((h) => h.id).join(', ')})`);
+  }
+  if (tulos.liekit.length > 0) {
+    console.log(`\n  liekit: ${tulos.liekit.length} atlasta (${tulos.liekit.map((l) => l.id).join(', ')})`);
+  }
+  if (tulos.aanet.length > 0) {
+    console.log(`\n  aanet: ${tulos.aanet.length} tiedostoa (${tulos.aanet.map((a) => a.id).join(', ')})`);
   }
   console.log(`  ${tulos.rakennusJson.polku}: ${tulos.rakennusJson.tavuja} tavua`);
   console.log(`  ${tulos.manifest.polku}: ${tulos.manifest.tavuja} tavua`);
