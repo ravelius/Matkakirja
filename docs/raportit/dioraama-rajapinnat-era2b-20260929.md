@@ -11,11 +11,11 @@ Varjostin on kevyt: valaistus, AO, lämpö ja pieni kuvio. Nimet ovat tarkkoja; 
 
 ## 1. Data (pelin repo)
 
-- `RAKENNUS.valaistus = { aurinko: { atsimuutti: 215, korkeus: 38, vari: '#fff0d8', voima: 1.15 },
-  taivas: { yla: '#b9cddd', ala: '#5d4c3c', voima: 0.55 }, sumu: null }` (kompassiasteet; valo tulee atsimuutin
+- `RAKENNUS.valaistus = { aurinko: { atsimuutti: 215, korkeus: 38, vari: '#fff0d8', voima: 0.95 },
+  taivas: { yla: '#b9cddd', ala: '#5d4c3c', voima: 0.45 }, sumu: null }` (kompassiasteet; valo tulee atsimuutin
   suunnasta).
 - Tilan `valot: [{ paikka, sade, voima, vari?: '#ffb070', lepatus?: 0–1 }]`: sama lista leipoo lämmön (G) KUTEN NYT ja
-  on lisäksi reaaliaikainen pistevalo (range = sade, intensiteetti = voima · 2,2). Tulisijalla lepatus 0,35.
+  on lisäksi reaaliaikainen pistevalo (range = sade, intensiteetti = voima · 1,4; natiivissa Neutral-tonemappaus). Tulisijalla lepatus 0,35.
 - `PINNAT[id].kuvio = { tyyppi, koko_m?: [u, v], sauma_m?, vaihtelu?: 0–1 }`, tyypit: `tasainen | kivi | puu | lankku |
   rappaus | tiili | kallio | vesi | metalli | kangas | olki`. rakennus.json → `pinnat[id].kuvio` sellaisenaan.
 - **COLOR_0.B** (oli 0) = osan satunnaisluku 0–1 (palikka, lankku, laatta, kivi): rakennuskone arpoo sen siemenellä
