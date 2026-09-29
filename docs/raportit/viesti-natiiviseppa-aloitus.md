@@ -11,15 +11,10 @@ Päiväsääntö 29.9. (normaalit säännöt palaavat 30.9. klo 00):
 - Käännökset nice 15, yksi kerrallaan.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)".
 
-## KÄRKI: 1.0.47-juna → BUILD 47
-juna/b13 af53ba8c = master 1b2609ce (BUILD 46) + natiivi-ui/kartuscha-liike af008b7f + natiivi-ui/ponnahdus-herata 6c3df126.
-Käännös f4580638 valmistui 12.01 ja on asennettu. Laitetestaajan savuke on tulossa. Kun se on PASS:
-- `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto merge --no-ff af53ba8c` masteriin (1b2609ce)
-- tarkista, että puu = f4580638
-- SHA:t Julkaisijalle ja Päätoimittajalle
-- poista sivuhaara natiiviseppa/juna-1047
-TF: 1.0.45 = 6dc1b7cc ja 1.0.46 = 1b2609ce odottavat VIE:tä. Vie aina oman BUILDin SHA:lla. Burst-korjaus on todennettu: juna-ajo.sh
-ohitti 12.01 jonon aikana käännetyn junan.
+## KÄRKI: juna tyhjä, BUILD 47 = master 329ffaf0
+Päätoimittajan VIE-lupaa odottavat TF 1.0.45 = 6dc1b7cc, 1.0.46 = 1b2609ce ja 1.0.47 = 329ffaf0. Vie aina oman BUILDin SHA:lla.
+Seuraavat merge-pyynnöt kootaan sivuhaaraan natiiviseppa/juna-1048 masterista, testataan (exit-koodit) ja avataan junaan Julkaisijan
+luvalla. Burst-korjaus on todennettu.
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain, kun erä on valmis, olet jumissa tai sinulla on kysymys (enintään 8 riviä), SendMessage nimellä.
