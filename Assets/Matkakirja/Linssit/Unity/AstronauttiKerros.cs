@@ -562,10 +562,28 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// ISS-merkki ruudulla (pikselit, origo vasen alakulma; web issRuudulla): Pulun taulu ei peitä sitä, jotta napautus
+        /// asemaan vie kyytiin. false, kun asema ei näy (kamera sen takana tai merkki piilossa).
+        /// </summary>
+        public bool IssRuudulla(out Vector2 ruutu)
+        {
+            ruutu = default;
+            if (kamera == null || iss == null || !iss.gameObject.activeSelf || georeferenssi == null) return false;
+            Vector3 s = kamera.WorldToScreenPoint(georeferenssi.transform.TransformPoint(issPinta));
+            if (s.z <= 0) return false;
+            ruutu = new Vector2(s.x, s.y);
+            return true;
+        }
+
+        /// <summary>Pallon napautus linssissä (Pulun taulu sulkeutuu kuten webin ulkonapautus, ei niele napautusta).</summary>
+        public event Action PalloNapautettu;
+
         /// <summary>Lähin näkyvä havaintopiste 44 pt:n säteellä (web lahinLinssimerkki).</summary>
         void Napautus(Vector2 ruutu)
         {
             if (Linssi == null || kamera == null) return;
+            PalloNapautettu?.Invoke();
             if (Linssi.Kyydissa) { Linssi.NapautaIss(); return; }
             float kerroin = LinssiOhjain.Pistekerroin;
             Piste paras = null;

@@ -13,7 +13,8 @@
 //                jo nähtyyn kohteeseen, nimipilleri kirkastuu täyteen peittoon 1,2 s:ksi.
 //                Koko liukuu nimipillerin ja avatun välillä (Tiivistys, omistaja 28.9. "animoitu
 //                pienennys mahdollisimman tiiviiksi"), ja selite luetaan ääneen kertojan äänellä
-//                (säilölohko astro-selite kuten webissä, PR #3568).
+//                (säilölohko astro-selite kuten webissä, PR #3568). Kuvan napautus, veto, nipistys
+//                ja rulla pienentävät auki olevan selitteen (web LISÄYS 6), mutta eivät koskaan avaa sitä.
 //   oikea ylä    ✕ sulkee kuvan (linssi jää auki; AstronauttiLinssi.SuljeKuva).
 //   vasen ala    pikkukuvat (38 × 26), jos kohteella on useampi havainto.
 //   oikea ala    minipulu astronauttina (LiviaKuva mini, leijuu itsestään);
@@ -88,6 +89,7 @@ namespace Matkakirja.Natiivi
             lava.RegisterCallback<PointerCaptureOutEvent>(e => SormiYlos(e.pointerId));
             lava.RegisterCallback<WheelEvent>(e =>
             {
+                KelaaKuvasta();
                 ZoomaaKohtaan(zoomi * Mathf.Pow(1.0015f, -e.delta.y * 40f), e.localMousePosition);
                 e.StopPropagation();
             });
@@ -132,7 +134,9 @@ namespace Matkakirja.Natiivi
             {
                 e.StopPropagation();
                 Aanet.PulunTehoste("pulu.kujerrus");
-                pulukortti.Vaihda(kohde);
+                // Web #3590: minipulu avaa Pulun taulun, jonka "Kysy Pululta" avaa tämän kortin; ilman taulua kortti.
+                if (MinipuluNapautettu != null) MinipuluNapautettu();
+                else pulukortti.Vaihda(kohde);
             });
             // Web minipulu koko 'auto': 84 pt, pieni ruutu (≤ 620 × 500) 56 pt; kortin mitat samasta ruudusta.
             turva.RegisterCallback<GeometryChangedEvent>(e =>
@@ -246,8 +250,17 @@ namespace Matkakirja.Natiivi
         public (string Nimi, string Seutu, string Teksti)? AvoinKuva =>
             Auki && kohde != null ? (kohde.Nimi, kohde.Seutu, teksti.text) : ((string, string, string)?)null;
 
-        /// <summary>Testikomento: minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
+        /// <summary>Testikomento ja Pulun taulun "Kysy Pululta": minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
         public void AvaaPulukortti() { if (Auki) pulukortti.Avaa(kohde); }
+
+        /// <summary>Pulun taulu avautuu kortin paikalle (web: taulu ja kuvan chatti eivät ole yhtä aikaa samassa kulmassa).</summary>
+        public void SuljePulukortti() => pulukortti.Sulje();
+
+        /// <summary>Minipulun napautus (web #3590: valokuvan minipulu avaa Pulun taulun). Ilman kuuntelijaa kortti.</summary>
+        public event Action MinipuluNapautettu;
+
+        /// <summary>Minipulun laatikko Pulun taulun sijoitukseen (web pulunLaatikko: kuvan ollessa auki minipulu).</summary>
+        public Rect MinipulunLaatikko => Auki && pulunappi.panel != null ? pulunappi.worldBound : default;
 
         void Valitse(int i)
         {
@@ -313,6 +326,20 @@ namespace Matkakirja.Natiivi
             kelaus?.Pause();
             bool k = !vinkki && !kiinni;
             Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(k));
+        }
+
+        /// <summary>
+        /// KUVAN KÄSITTELY PIENENTÄÄ SELITTEEN (web LISÄYS 6: "Inforuutu saisi pienentyä automaattisesti kun kuvaa klikataan,
+        /// panoroidaan tai zoomataan"; web satelliitti.js kelaaKuvasta): lavan kosketus (napautus, veto, nipistys, pyyhkäisy ja
+        /// reunan napautus) ja rulla pienentävät auki olevan selitteen liukuen ja lopettavat vinkin. Yksisuuntainen: kuva ei
+        /// koskaan avaa selitettä, vaan avaus tapahtuu vain selitteen napautuksesta (muuten panorointi vilkuttaisi laatikkoa).
+        /// </summary>
+        void KelaaKuvasta()
+        {
+            kelaus?.Pause();
+            vinkki = false;
+            if (kiinni) return;
+            Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(true));
         }
 
         IVisualElementScheduledItem riveittain;
@@ -399,10 +426,11 @@ namespace Matkakirja.Natiivi
         // --- testikomento --------------------------------------------------------------
 
         /// <summary>
-        /// `ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|tila]` (Linssiseppä 29.9.): kelaa = selitteen napautus,
-        /// kiinni/auki = napautus vain tarvittaessa, automaatti = vinkin automaattinen kelaus heti. Liukuvat komennot
-        /// käynnistävät kokomittarin, joka kirjaa selitteen koon jokaisella ruudulla 0,8 s ajan (MATKAKIRJA kuvaselite
-        /// koko …): liu'un on edettävä vanhasta koosta uuteen ilman välikuvaa uudessa koossa. Palauttaa tilan.
+        /// `ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|mittaa|tila]` (Linssiseppä 29.9.): kelaa = selitteen
+        /// napautus, kiinni/auki = napautus vain tarvittaessa, automaatti = vinkin automaattinen kelaus heti, mittaa =
+        /// pelkkä kokomittari 1,2 s (esim. ennen `ui napauta x y` kuvaan, LISÄYS 6). Liukuvat komennot käynnistävät
+        /// kokomittarin, joka kirjaa selitteen koon jokaisella ruudulla 0,8 s ajan (MATKAKIRJA kuvaselite koko …):
+        /// liu'un on edettävä vanhasta koosta uuteen ilman välikuvaa uudessa koossa. Palauttaa tilan.
         /// </summary>
         public string TestaaSelite(string komento)
         {
@@ -414,6 +442,7 @@ namespace Matkakirja.Natiivi
                 case "kiinni": if (!kiinni) { MittaaKoko(0.8f); Kelaa(); } break;
                 case "auki": if (kiinni) { MittaaKoko(0.8f); Kelaa(); } break;
                 case "automaatti": kelaus?.Pause(); MittaaKoko(1.2f); KelaaRiveittain(); break;
+                case "mittaa": MittaaKoko(1.2f); break;
             }
             return SeliteTila;
         }
@@ -583,6 +612,8 @@ namespace Matkakirja.Natiivi
 
         void SormiAlas(PointerDownEvent e)
         {
+            // Kuvan napautus, panorointi, nipistys ja selaus pienentävät selitteen (web LISÄYS 6).
+            KelaaKuvasta();
             sormet[e.pointerId] = e.localPosition;
             lava.CapturePointer(e.pointerId);
             if (sormet.Count == 1)
