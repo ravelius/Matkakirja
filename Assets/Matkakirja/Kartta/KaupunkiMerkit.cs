@@ -182,6 +182,14 @@ namespace Matkakirja
         HashSet<string> himmeat;
         const float HimmeanPeitto = 0.4f;
 
+        /// <summary>Mittari (kehittaja nakyma): himmeitä kaupunkeja kaikkiaan ja niistä ruudulla näkyviä.</summary>
+        public (int Kaikki, int Nakyvissa) HimmeidenMaara()
+        {
+            int k = 0, n = 0;
+            foreach (var m in merkit) { if (!m.himmea) continue; k++; if (m.juuri.gameObject.activeSelf) n++; }
+            return (k, n);
+        }
+
         /// <summary>Sallivatko NaytaVain- ja pelisuodatin kaupungin (leikkaus).</summary>
         bool Suodatettu(string id) =>
             (suodatin == null || suodatin.Contains(id))

@@ -358,8 +358,11 @@ namespace Matkakirja.Natiivi
                         case "maailma": Matkakirja.Natiivi.Paavalikko.AsetaMaailma(A(2) != "0"); goto case "nakyma";
                         case "pelaaja": Matkakirja.Natiivi.Paavalikko.AsetaPelaajanNakyma(A(2) != "0"); goto case "nakyma";
                         case "nakyma":
+                        {
+                            var hm = FindAnyObjectByType<KaupunkiMerkit>()?.HimmeidenMaara() ?? (0, 0);
                             return $"=maailmatila {(Matkakirja.Natiivi.Paavalikko.Maailma ? "päällä" : "pois")}, pelaajan näkymä "
-                                + (Matkakirja.Natiivi.Paavalikko.PelaajanNakyma ? "päällä" : "pois");
+                                + (Matkakirja.Natiivi.Paavalikko.PelaajanNakyma ? "päällä" : "pois") + $", himmeitä {hm.Item1} (ruudulla {hm.Item2})";
+                        }
                         default: return "käyttö: kehittaja koodi|pois|tila|maailma 0|1|pelaaja 0|1|nakyma";
                     }
                 case "pulu" when A(1) == "realtime":
