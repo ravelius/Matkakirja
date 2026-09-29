@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 17:45 — HÄLYTYS levy:** 75 Gi (<80; 87→82→75 klo 17.35–17.44, ei junakäännöstä kesken), ilmoitettu Päätoimittajalle. wt/ 12→20 Gi, /private/tmp 26 Gi, proto-3d 46 Gi; Unity -batchmode -nographics + chrome-headless GPU käynnissä. Muisti taso 2, 45 % vapaa (ok), sim 1, viikko 7 % (5 h 24 %), kuorma 243/228/209. Posti: ei uutta. Seuranta 5 min välein.
+
 **Päivitetty 17:40:** Levy 82 Gi (siivouksen jälkeen 87 → 82, uusi lasku vaikka juna-käännös päättyi 17.28; raja 80, seurataan 5 min välein), muisti taso 2 mutta 37 % vapaa (yli omistajan 25 % rajan → ei hälytystä), kuorma 241/203/192, sim 1. Viikko 7 % (5 h 23 %). Konteksti: Natiivi-UI 38 %, oma 12 %. Juna: b13 c5d8f0e7 ennallaan. Posti: ei uutta.
 
 **Lokisiivous 17:35 (Päätoimittaja):** poistettu proto-3d/lokit: 47 yli 48 h vanhaa kansiota + 4 yli 24 h vanhaa .app-kopiota (4,7 Gi), levy 87 Gi. Levyn pudotus 17:20–17:31 = junakäännöksen Build-välitiedostot (proto-kaannos/Build ~5 Gi, ylikirjoittuu, pysähtyy käännöksen jälkeen). Hälytys vain jos < 80 Gi käännöksen päätyttyä.
