@@ -565,6 +565,7 @@ export function omanMaanKeskipiste(alpha3, maakartat) {
  */
 export async function haeOmaSijainti({
   ikkuna = globalThis, osoite = OMA_SIJAINTI_OSOITE, tuoMaakartat = () => import('../packs/maakartat.js'),
+  tuoMaanimet = () => import('../packs/maakunnat-nimet.js'),
 } = {}) {
   try {
     const f = ikkuna.fetch?.bind(ikkuna);
@@ -578,8 +579,11 @@ export async function haeOmaSijainti({
     const oma = omanMaanKeskipiste(alpha3, MAAKARTAT);
     if (!oma) return null;
     const haku = omanSijainninHakupiste(oma.lat, oma.lon);
+    // Maan nimi suomeksi (natiivi: "Oma sijainti · <maa>"); pääkaupunki varalla, jos nimeä ei löydy.
+    const nimet = await tuoMaanimet().then((m) => m.MAAKUNNAT_KAIKKI_MAAT ?? []).catch(() => []);
+    const maa = nimet.find((x) => x.iso === alpha3)?.nimi ?? oma.nimi;
     return {
-      tunnus: 'oma', nimi: 'Oma sijainti', lat: haku.lat, lon: haku.lon, oikeaLat: oma.lat, oikeaLon: oma.lon, maa: oma.nimi,
+      tunnus: 'oma', nimi: `Oma sijainti · ${maa}`, lat: haku.lat, lon: haku.lon, oikeaLat: oma.lat, oikeaLon: oma.lon, maa,
     };
   } catch { return null; }
 }
