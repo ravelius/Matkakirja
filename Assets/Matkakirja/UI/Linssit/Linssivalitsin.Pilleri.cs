@@ -213,10 +213,17 @@ namespace Matkakirja.Natiivi
             }
             else if (NykyinenNakyma == Nakyma.Aarteet && Valikkona)
             {
-                // Palaute 7: Aarteissa lista heti oikealla, esikatselun paikka varattuna (tyhjä ennen valintaa).
+                // Palaute 7 (web malli, Pelikoodari): Aarteissa lista heti oikealla ja kortissa ensimmäinen kerätty rivi
+                // (Aarnin luettelo → Tavarat → Julisteet); ilman kerättyjä kortin paikka on tyhjä.
                 Ponnahdus.Lopeta(esikatselu);
                 esikatselu.style.display = DisplayStyle.Flex;
-                esikatselu.style.visibility = Visibility.Hidden;
+                esiNappi.style.display = DisplayStyle.None;
+                if (ensimmainenAarre.HasValue)
+                {
+                    var a = ensimmainenAarre.Value;
+                    TaytaEsikatselu("ensimmainen:" + a.Id, a.Kuva, a.Nimi, a.Selite);
+                }
+                else esikatselu.style.visibility = Visibility.Hidden;
             }
             else
             {
@@ -229,9 +236,12 @@ namespace Matkakirja.Natiivi
 
         // --- Aarteet ---------------------------------------------------------------------------------
 
+        (string Id, string Kuva, string Nimi, string Selite)? ensimmainenAarre;
+
         void RakennaAarteet()
         {
             aarteet.Clear();
+            ensimmainenAarre = null;
             var d = AarteetData?.Invoke();
             if (d == null) { Rakenne.Teksti("Matka ei ole vielä alkanut.", "mk-linssivalitsin__tyhja", aarteet); return; }
             var loydetyt = d.AarninLuettelo.Where(a => a.Loydetty).ToList();
@@ -265,6 +275,7 @@ namespace Matkakirja.Natiivi
 
         void AarreRivi(string id, string nimi, string kuvaUrl, string selite, Action nayta)
         {
+            ensimmainenAarre ??= (id, kuvaUrl, nimi, selite);
             Button b = null;
             Label tila = null;
             b = Rakenne.Nappi(null, "mk-linssirivi mk-linssivalitsin__aarrerivi mk-linssirivi--aktivoi", () =>
