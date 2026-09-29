@@ -4,9 +4,10 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260928-b.md`](viesti-pelikoodari-luovutus-20260928-b.md) (28.9. klo 13.1x, nollaus): KÄRKI xAI-nappi natiiviin (osio 0, worker #3553); junassa #3517/#3526/#3528/
-   #3532/#3535/#3537/#3540/#3541/#3546/#3547 (#3544 mainissa); selite + ihme-lyhyt + ISS-kyyti odottavat mergejä; ISS-nopeutuserä
-   agentilla. Fable = "Päätoimittaja (Opus, xhigh)" (ref [e6550e]). Edellinen: `viesti-pelikoodari-luovutus-20260928.md`.
+   [`viesti-pelikoodari-luovutus-20260929.md`](viesti-pelikoodari-luovutus-20260929.md) (29.9. klo 16.1x, tilinvaihto): KÄRKI
+   matkalaukkunahka iPhone-yläpalkkiin (worktree pelikoodari-ylapalkki-nahka, #3624 mergetty → yhdistä main); auki #3627 (Liiku)
+   ja #3611 (Sisältökirjuri). Rajatut tehtävät Sonnet-ali-agenteille, rooli todentaa ja julkaisee. Päätoimittaja =
+   "Päätoimittaja (Opus, xhigh)". Edellinen: `viesti-pelikoodari-luovutus-20260928-b.md`.
    - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
    - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
@@ -50,5 +51,7 @@ jokaisen pariteettiajon lopussa (Clauden omaa työkalua, ei tarvitse omistajaa).
 "Failed to send", käytä `mcp__ccd_session_mgmt__send_message` session id:llä; jos molemmat estyvät,
 `docs/raportit/posti-pelikoodari-<pvm>.md` + push (Postivahti välittää). Omistajalta ei pyydetä ok-viestejä.
 
-Ali-agentit vain Opus tai Sonnet (Opus koodiin, Sonnet lukevaan), EI KOSKAAN Fable-mallia.
+Ali-agentit vain Opus tai Sonnet, EI KOSKAAN Fable-mallia. Omistaja 28.9. klo 23.3x: rajatut tehtävät (myös haastava
+bugiselvitys, testikorjaus, aineistoerä) Sonnet-ali-agentille; rooli todentaa ja julkaisee. Ennen jokaista PR:ää
+`node tools/build-standalone.mjs` + `node tools/tarkista-niputus.mjs` (uudet moduulit MODULES-listaan, ei nimitörmäyksiä).
 Viestit Fablelle vain valmis erä, jumi tai kysymys, enintään 8 riviä.
