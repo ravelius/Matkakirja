@@ -496,6 +496,7 @@ export const LINSSI = {
    */
   kesken: true,
   lyhyt: 'Joet ja järvet maaston päällä: vesi näkyy siellä minne maa viettää.',
+  esittely: 'Joet ja järvet maaston päällä: vesi näkyy siellä minne maa viettää.',
   /*
    * Mutkitteleva joki ja järvi sen varrella. Ei pisaraa eikä aaltoa:
    * kuvakkeen on kerrottava mitä linssi NÄYTTÄÄ, ja tämä linssi näyttää
