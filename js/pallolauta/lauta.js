@@ -98,7 +98,7 @@ import {
 import { packById } from '../pack.js';
 import { pixelOf, pointAlong, posKey } from '../rules.js';
 import {
-  PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
+  PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajanPelaajanakyma, kehittajaTilaPaalla,
   nollaaPallonKaatumiset, palloKaatui, valikkoSulkeutuiNapautuksesta,
 } from '../ui-apurit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
@@ -1174,6 +1174,9 @@ export const KAUPUNKIPISTEEN_VARI = '#8c6d4e';
  * erottanut enää mitään — jäljelle jäi vain sininen kartalla, joka ei
  * kuulu seepiaan.
  */
+/** Kehittäjän pelaajan näkymän himmeä kohdekaupunki: tavallinen seepia 40 %:n peitolla (natiivissa sama). */
+const HIMMEAN_PISTEEN_VARI = 'rgba(140, 109, 78, 0.4)';
+
 /** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa. */
 export function kaupunkipisteenVari(kaupunki) {
   if (livianKorostetutKaupungit().has(kaupunki.id)) return TARKISTUSVARI;
@@ -2746,6 +2749,14 @@ export async function avaaPallolauta(ui) {
   };
 
   /**
+   * HIMMEÄ KOHDEKAUPUNKI KEHITTÄJÄN PELAAJAN NÄKYMÄSSÄ (omistaja 29.9.2026, js/pelaajanakyma.js): kartta on kuten
+   * pelaajalla, mutta ne pelin kaupungit, joita pelaaja ei nyt näe, piirretään himmeinä pisteinä (peitto 40 %, sama
+   * koko, ei nimeä) ja niiden napautus on maailmatilan hyppy. Lennolla ja lähtövalinnassa ei himmeitä.
+   */
+  const himmeaPiste = (k) => kehittajanPelaajanakyma() && !ui.katselu && !lento && !aloitusNakyvat()
+    && !pisteNakyy(k);
+
+  /**
    * NAPAUTUS KAUPUNKIIN — sama teko kuin tasokartalla: nykyinen kaupunki
    * avaa kaupunkilehden (ui.avaaTutkinta, omistaja 2.9.: *"Kohdekaupunki
    * avaa aina kaupunkilehden"*), nopanheiton kohde valitsee kohteen
@@ -2794,6 +2805,12 @@ export async function avaaPallolauta(ui) {
     if (ui.radioPaalla?.()) return false;
     const city = laudanKaupunki(k);
     if (!city) return false;
+    // Himmeä kohdekaupunki (pelaajan näkymä): napautus on maailmatilan hyppy, kamera seuraa teleporttihaarassa.
+    if (himmeaPiste(k)) {
+      heraa();
+      ui.doKehittajaSiirto(city);
+      return true;
+    }
     /*
      * LÄHTÖVALINNASSA VAIN KOHTEET OVAT NAPAUTETTAVIA (aalto 3A): sama
      * sääntö kuin tasokartalla, jossa drawTargets piirtää pickstart-
@@ -3346,6 +3363,7 @@ export async function avaaPallolauta(ui) {
     const ehdokkaat = [];
     for (const k of kaupungit) {
       if (pisteNakyy(k)) ehdokkaat.push({ laji: 'kaupunki', lat: k.lat, lng: k.lon, k });
+      else if (himmeaPiste(k)) ehdokkaat.push({ laji: 'kaupunki', lat: k.lat, lng: k.lon, k });
     }
     for (const o of nostot.osumat()) ehdokkaat.push({ laji: 'nosto', lat: o.lat, lng: o.lng, o });
     // Turisti-info kaupungin vieressä (erä 4): samassa sarjassa kuin
@@ -4098,6 +4116,7 @@ export async function avaaPallolauta(ui) {
     .pointColor((d) => {
       if (d.laji === 'helmi') return d.reuna ? HELMEN_REUNAN_VARI : HELMEN_VARI;
       if (d.laji === 'valo') return d.vari;
+      if (d.himmea) return HIMMEAN_PISTEEN_VARI;
       return kaupunkipisteenVari(d);
     })
     .pointAltitude((d) => {
@@ -4215,12 +4234,19 @@ export async function avaaPallolauta(ui) {
      */
     const piiloKaupunki = nostot.liuskanKaupunkiId?.() ?? null;
     const nakyvat = kaupungit.filter((k) => pisteNakyy(k) && k.id !== piiloKaupunki);
+    // Kehittäjän pelaajan näkymä: pelaajalta piilossa olevat kaupungit himmeinä (himmeaPiste, väri pointColorissa).
+    for (const k of kaupungit) k.himmea = false;
+    const himmeat = kaupungit.filter((k) => k.id !== piiloKaupunki && himmeaPiste(k));
+    for (const k of himmeat) k.himmea = true;
+    nakyvat.push(...himmeat);
     const valot = nostot.valot();
     const avain = [
       // Piilotettu kaupunki on osa avainta: ilman sitä pistejoukko
       // näyttäisi muuttumattomalta eikä kirjasto saisi uutta dataa.
       `liuska:${piiloKaupunki ?? ''}`,
       nakyvat.map((k) => `${k.id}${k.kayty ? '*' : ''}`).join(','),
+      // Himmeät ovat nakyvat-joukon lopussa; oma rivi erottaa himmeän tavallisesta samalla kaupungilla.
+      himmeat.map((k) => k.id).join(','),
       helmet.map((h) => h.id).join(','),
       valot.map((v) => v.id).join(','),
     ].join('|');

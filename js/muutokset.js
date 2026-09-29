@@ -13,7 +13,10 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2397, teksti: 'ISS-tervetulo: kuvan selite ei enää vaienna Pulua' },
+  { v: 2400, teksti: 'Maailmatilan Pelaajan näkymä -apunappi (#3608)' },
+  { v: 2399, teksti: 'Raamattu: avaus ja sulku aina animoiden (#3602)' },
+  { v: 2398, teksti: 'Avaus ja sulku animoiden: nostokortit, popupit,… (#3605)' },
+  { v: 2397, teksti: 'Maakunnan nostokortti nostojen kokoiseksi, kuva… (#3583)' },
   { v: 2396, teksti: 'Dioraama erä 2: maalattujen pintojen, atlaksen,… (#3601)' },
   { v: 2395, teksti: 'Natiivin offline-pohja ja kerma sarjaan 2026-09… (#3599)' },
   { v: 2394, teksti: 'ISS-kyyti: Codexin säätöpaneeli (#3595)' },
