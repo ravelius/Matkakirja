@@ -9135,3 +9135,7 @@ Omistaja 29.9. klo 09.1x sanatarkasti: "Ja matkakirjan logoa painavalla avautuis
 ## OMISTAJA: YLÄPALKKI ENSIN IPHONELLE, IPAD SEN JÄLKEEN (29.9.2026 klo 09.10)
 
 Omistaja 29.9. klo 09.1x sanatarkasti: "Tehdään iPad-versio sitten sen jälkeen, kun on saatu ensin iPhone-versio yläpalkista valmiiksi." → Codexille muutos (fable-codex-ylapalkki-vain-iphone-20260929.md): nyt vain iPhone-kooste 1290×300 + palat; iPad-koosteet erillisellä tilauksella iPhone-version hyväksynnän jälkeen. Pelikoodari ja Natiivi-UI: yläpalkin uusi ulkoasu ensin puhelimen asettelussa; iPadilla nykyinen palkki kunnes iPad-versio tehdään (valikkorakenne pillerin takana voi tulla molemmille).
+
+## OMISTAJA: LINSSILISTA TIHEÄNÄ, NAPAUTUS NÄYTTÄÄ HAVAINNEKUVAN JA AKTIVOI-NAPIN (29.9.2026 klo 09.12)
+
+Omistaja 29.9. klo 09.2x sanatarkasti: "Linssit voisivat olla listana ilman selitetekstiä, niin mahtuvat tiheämmin näkyvään. Ja kun linssiä klikkaa, niin vasemmalle puolelle tulee havainnekuva linssistä sekä selite, mikä tai minkälainen linssi on. Ja samalla klikattu linssirivi muuttuukin. Aktivoi napiksi, jolloin uudestaan samasta paikasta klikkaamalla linssi avautuu." → Yläpalkkierän Linssit-näkymä (Pelikoodari web, Natiivi-UI natiivi): tiheä nimilista; 1. napautus avaa vasemmalle havainnekuvan + lyhyen selitteen ja muuttaa rivin samassa kohdassa Aktivoi-napiksi; 2. napautus avaa linssin; havainnekuvat olemassa olevista (linssikatalogi), puuttuvat tilataan Päätoimittajan kautta.
