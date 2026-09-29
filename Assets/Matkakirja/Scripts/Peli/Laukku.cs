@@ -51,6 +51,11 @@ namespace Matkakirja.Natiivi
         public string Teksti => Maara > 1 ? $"{Nimi} ×{Maara}" : Nimi;
     }
 
+    /// <summary>Matkamuisto (elävän linnan etsintä, Peli/Matkamuistot.cs; vain natiivi): Aarteiden Matkamuistot-ryhmä.</summary>
+    public sealed class LaukkuMatkamuisto
+    {
+        public string Id, Nimi, Selite, KuvaUrl;
+    }
     /// <summary>Voitettu juliste (web julisteVoitot, julisteUrl).</summary>
     public sealed class LaukkuJuliste
     {
@@ -75,6 +80,8 @@ namespace Matkakirja.Natiivi
         public List<LaukkuTavara> Tavarat = new List<LaukkuTavara>();
         /// <summary>Tyhjän Tavarat-lohkon teksti (web: "Laukku on vielä tyhjä." / "Ei vielä matkalöytöjä.").</summary>
         public string TavaratTyhja;
+        /// <summary>Löydetyt matkamuistot löytöjärjestyksessä; ryhmä piiloon, kun tyhjä.</summary>
+        public List<LaukkuMatkamuisto> Matkamuistot = new List<LaukkuMatkamuisto>();
         /// <summary>Voitetut julisteet voittojärjestyksessä; rivi piiloon, kun tyhjä.</summary>
         public List<LaukkuJuliste> Julisteet = new List<LaukkuJuliste>();
         /// <summary>Julisteita kaikkiaan (web "{voitetut}/{kaikki} »").</summary>
@@ -204,6 +211,9 @@ namespace Matkakirja.Natiivi
                                 : j.Tiedosto.StartsWith("http", StringComparison.Ordinal) ? j.Tiedosto : JulisteJuuri + j.Tiedosto,
                         });
             }
+            foreach (var id in p.Matkamuistot)
+                if (Matkamuistot.Hae(id) is Matkamuisto mm)
+                    d.Matkamuistot.Add(new LaukkuMatkamuisto { Id = mm.Id, Nimi = mm.Nimi, Selite = mm.Selite, KuvaUrl = mm.KuvaUrl });
             return d;
         }
 

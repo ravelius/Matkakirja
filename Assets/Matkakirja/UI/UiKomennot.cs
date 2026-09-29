@@ -131,6 +131,7 @@
 //   ui saavutettavuus [nimi]                  VoiceOver-nimet, 44 pt:n kosketusalat, kontrasti → Documents/saavutettavuus[-nimi].json
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
+//   ui matkamuisto <id>                       matkamuiston löytö kuten dioraamasta (voudin-sinetti); tila lokiin
 //   ui chat aani                              kaiutinkytkin (vastausten luenta) kuin napautus; tila lokiin
 //   ui chat lukija [valikko]                  ylärivin lukija: kaiuttimen napautus tai valikko auki (29.9.2026)
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
@@ -588,6 +589,14 @@ namespace Matkakirja.Natiivi
                     ui.Saapumiskortti.Nayta(korttirivi, () => Kirjaa("saapumiskortti arkki täynnä"),
                         () => Kirjaa("saapumiskortti valmis: " + korttirivi));
                     return null;
+                }
+                // Matkamuiston löytö kuin dioraamasta (PeliOhjain.LoydaMatkamuisto): "ui matkamuisto voudin-sinetti".
+                case "matkamuisto":
+                {
+                    var mo = PeliOhjain.Instanssi;
+                    if (mo == null) return "peli ei käynnissä";
+                    bool uusi = mo.LoydaMatkamuisto(loput);
+                    return $"matkamuisto {loput}: {(uusi ? "löytyi" : mo.OnMatkamuisto(loput) ? "jo löydetty" : "tuntematon")}";
                 }
                 case "chat":
                     if (loput == "ehdota") { ui.Chat.Avaa(); ui.Chat.EhdotaSisaltoa(); return null; }

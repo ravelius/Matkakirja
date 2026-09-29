@@ -25,6 +25,8 @@
 // pelin matkaPaattyi (Peli/Talous.cs). Vanha tallennus: ei velkaa, ei varoitusta.
 // Versio 7 (27.9.2026, pelistreak): pelaajan streak {paiva, pituus} (Peli/Pelistreak.cs),
 // kirjoitetaan vain kun putki on alkanut (web: p.streak puuttuu). Vanha tallennus: ei putkea.
+// Versio 8 (29.9.2026, matkamuistot): pelaajan matkamuistot [tunnus, …] (Peli/Matkamuistot.cs, vain natiivi),
+// kirjoitetaan vain kun jokin on löytynyt. Vanha tallennus: ei matkamuistoja.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -72,6 +74,8 @@ namespace Matkakirja.Peli
         public bool Pudonnut;
         /// <summary>Pelipäiväputki (web p.streak; Peli/Pelistreak.cs), null ennen ensimmäistä kirjausta. Versio 7.</summary>
         public StreakTila Streak;
+        /// <summary>Löydetyt matkamuistot tunnuksina löytöjärjestyksessä (Peli/Matkamuistot.cs; vain natiivi). Versio 8.</summary>
+        public List<string> Matkamuistot = new List<string>();
     }
 
     /// <summary>Kuljetun reitin piste: kaupunki ja kulkutapa, jolla sinne saavuttiin (null = aloitus tai siirto ilman tapaa).</summary>
@@ -96,7 +100,7 @@ namespace Matkakirja.Peli
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 7;
+        public const int TallennusVersio = 8;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -240,6 +244,9 @@ namespace Matkakirja.Peli
                     Kentta(sb, "streak", "{\"paiva\":" + Teksti(p.Streak.Paiva)
                         + ",\"pituus\":" + p.Streak.Pituus.ToString(CultureInfo.InvariantCulture)
                         + (p.Streak.Armo != null ? ",\"armo\":" + Teksti(p.Streak.Armo) : "") + "}");
+                // Matkamuistot (versio 8): vain kun jokin on löytynyt.
+                if (p.Matkamuistot.Count > 0)
+                    Kentta(sb, "matkamuistot", "[" + string.Join(",", p.Matkamuistot.Select(Teksti)) + "]");
                 sb.Append('}');
             }
             sb.Append(']');
@@ -343,6 +350,8 @@ namespace Matkakirja.Peli
                         Paiva = sp, Pituus = Math.Max(1, (int)(MiniJson.Luku(so, "pituus") ?? 1)),
                         Armo = MiniJson.Teksti(so, "armo") is string sa && Streak.Kelpaa(sa) ? sa : null,
                     };
+                // Matkamuistot (versio 8); vanhassa tallennuksessa ei ole.
+                p.Matkamuistot = Tekstit(pd, "matkamuistot");
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
@@ -388,6 +397,7 @@ namespace Matkakirja.Peli
             //   vanha peli jatkuu nykyisellä kassalla, päiväkulu veloitetaan seuraavasta vuorokaudesta.
             // 6 → 7 (pelistreak): pelaajan streak puuttuu → null (lukija hoitaa); ensimmäinen
             //   pelipäivä päivityksen jälkeen aloittaa putken 1:stä.
+            // 7 → 8 (matkamuistot): pelaajan matkamuistot puuttuu → tyhjä (lukija hoitaa).
             for (int v = versio; v < TallennusVersio; v++)
             {
                 switch (v)
