@@ -1025,6 +1025,7 @@ namespace Matkakirja.Natiivi
                 {
                     var ks = loput.Split(' ');
                     if (ks[0] == "pois") { ui.Kartuscha.Testaa(null, false); return null; }
+                    if (ks[0] == "kiinni") { ui.Kartuscha.Sulje(); return null; } // sulkuanimaatio videolle (29.9.)
                     ui.Kartuscha.Testaa(ks[0].Length > 0 ? ks[0].ToUpperInvariant() : "ITA", ks.Length > 1 && ks[1] == "auki");
                     return null;
                 }
