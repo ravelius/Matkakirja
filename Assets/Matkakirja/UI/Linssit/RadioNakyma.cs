@@ -64,7 +64,7 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class RadioNakyma
+    public sealed partial class RadioNakyma
     {
         const float LiuunVahin = 10f, LiuunVaramatka = 0.5f;
         const float SiirtymaMs = 1250f, HakuMs = 2800f, LukkoMs = 320f;
@@ -95,7 +95,11 @@ namespace Matkakirja.Natiivi
         bool tauolla;
 
         /// <summary>Radion kotelo ja onko se näkyvissä (Pulu hyppää kotelon yläpuolelle, omistaja 28.9.2026).</summary>
-        public VisualElement Kotelo => kotelo;
+        public VisualElement Kotelo => codex != null && codex.resolvedStyle.display == DisplayStyle.Flex ? codex : kotelo;
+
+        static RadioNakyma instanssi;
+        /// <summary>A/B: Codexin uusi radio (true) tai vanha kotelo (komento radio kuori uusi|vanha).</summary>
+        public static void Kuori(bool uusi) { CodexSallittu = uusi; instanssi?.MitoitaCodex(); }
         public bool Nakyvissa => nakyvissa;
 
         /// <summary>Virtakytkin: sulkee radiolinssin (LinssiUi asettaa SuljeLinssi).</summary>
@@ -117,6 +121,7 @@ namespace Matkakirja.Natiivi
         public RadioNakyma(UiKerros kerros)
         {
             this.kerros = kerros;
+            instanssi = this;
             // Pallon napit kotelon alle samaan kerrokseen; pelin merkit piiloon radion ajaksi.
             LinssiOhjain.RadioSovitin.OmatNapit = true;
             napit = new RadioNapit(kerros.Juuri(LinssiUi.Kerros));
@@ -184,8 +189,10 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(avaaSivu, Kirjasin.KoneLihava);
             avaaSivu.tooltip = "Avaa aseman oma sivu selaimessa";
 
-            juuri.RegisterCallback<GeometryChangedEvent>(e => Mitoita(e.newRect.width));
+            RakennaCodex();
+            juuri.RegisterCallback<GeometryChangedEvent>(e => { Mitoita(e.newRect.width); MitoitaCodex(); });
             kerros.TurvaMuuttui += Asettele;
+            kerros.TurvaMuuttui += MitoitaCodex;
             Asettele();
             RakennaPaikat();
             juuri.schedule.Execute(Tikki).Every(16);
@@ -663,6 +670,7 @@ namespace Matkakirja.Natiivi
 
         void Tikki()
         {
+            PaivitaCodex();
             if (sovitin != null && !ReferenceEquals(sovitin.Linssi, linssi)) Sido(sovitin.Linssi);
             if (nakyvissa && !testi && liike == Liike.Ei && Time.unscaledTime - asteikkoTarkistettu > 1f)
             {
@@ -1035,8 +1043,13 @@ namespace Matkakirja.Natiivi
 
             public Asteikkoviivat() { generateVisualContent += Piirra; }
 
+            bool nakymaton;
+            /// <summary>Codexin radiossa asteikon viivat ovat kuvassa: ei piirretä.</summary>
+            public bool Nakymaton { set { if (nakymaton == value) return; nakymaton = value; MarkDirtyRepaint(); } }
+
             void Piirra(MeshGenerationContext mgc)
             {
+                if (nakymaton) return;
                 var r = contentRect;
                 if (float.IsNaN(r.width) || r.width <= 0) return;
                 var p = mgc.painter2D;
@@ -1085,6 +1098,9 @@ namespace Matkakirja.Natiivi
         public RadioVaihe Vaihe { get => vaihe; set { if (vaihe == value) return; vaihe = value; MarkDirtyRepaint(); } }
         public bool Tauko { get => tauko; set { if (tauko == value) return; tauko = value; MarkDirtyRepaint(); } }
         public float Halkaisija { get => halkaisija; set { halkaisija = value; MarkDirtyRepaint(); } }
+        bool nakymaton;
+        /// <summary>Codexin radiossa kytkin on kuvassa: lamppu jää vain osuma-alaksi.</summary>
+        public bool Nakymaton { get => nakymaton; set { if (nakymaton == value) return; nakymaton = value; MarkDirtyRepaint(); } }
 
         static Color V(string hex) => Kuviot.Vari(hex);
 
@@ -1138,6 +1154,7 @@ namespace Matkakirja.Natiivi
 
         void Piirra(MeshGenerationContext mgc)
         {
+            if (nakymaton) return;
             var r = contentRect;
             if (float.IsNaN(r.width) || r.width <= 0) return;
             var p = mgc.painter2D;
