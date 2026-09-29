@@ -193,6 +193,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuoren kierto sellaisenaan (sumun ajelehtiminen ja aikahypyn pyörre).</summary>
         public void Kierto(Quaternion q) => transform.localRotation = q;
 
+        /// <summary>Pilvipeiton säädin: alfan kynnys 0 (ennallaan) … 1 (selkeä); ohuet pilvet katoavat ensin.</summary>
+        public void Karsinta(float kynnys) => materiaali.SetFloat(IdKarsinta, Mathf.Clamp01(kynnys));
+        static readonly int IdKarsinta = Shader.PropertyToID("_Karsinta");
+
         /// <summary>Sävy: kertoo pilvikuvan värin ja alfan (valkoinen = ennallaan).</summary>
         public void Savy(Color vari) => materiaali.SetColor(IdVari, vari);
 

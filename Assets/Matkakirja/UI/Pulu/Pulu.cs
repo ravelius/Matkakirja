@@ -147,6 +147,10 @@ namespace Matkakirja.Natiivi
             var vuosi = ui.Linssit?.Vuosi?.Paneeli;
             if (vuosi != null && vuosi.panel != null && ui.Linssit.Vuosi.Nakyvissa && vuosi.worldBound.height > 0)
                 korkein = Mathf.Max(korkein, vuosi.panel.visualTree.layout.height - vuosi.worldBound.yMin + 6f);
+            // Radiolinssi (omistaja 28.9.2026: "Pulu siirtyy radion yläpuolelle"): kotelon yläreunan päälle.
+            var radio = ui.Linssit?.Radio?.Kotelo;
+            if (radio != null && radio.panel != null && ui.Linssit.Radio.Nakyvissa && radio.worldBound.height > 0)
+                korkein = Mathf.Max(korkein, radio.panel.visualTree.layout.height - radio.worldBound.yMin + 6f);
             return Mathf.Max(perus, korkein);
         }
 

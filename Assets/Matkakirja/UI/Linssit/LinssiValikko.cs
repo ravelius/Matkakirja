@@ -150,8 +150,9 @@ namespace Matkakirja.Natiivi
             Paivita();
             Auki = true;
             Asettele();
-            valikko.style.display = DisplayStyle.Flex;
             valikko.BringToFront();
+            // Avaus ja sulku animoiden napin kulmasta (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot).
+            Ponnahdus.Avaa(valikko, origo: new TransformOrigin(Length.Percent(100), Length.Percent(0)));
             Nappi.AddToClassList("mk-valittu");
         }
 
@@ -159,7 +160,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             Auki = false;
-            valikko.style.display = DisplayStyle.None;
+            Ponnahdus.Sulje(valikko);
             Nappi.RemoveFromClassList("mk-valittu");
         }
 

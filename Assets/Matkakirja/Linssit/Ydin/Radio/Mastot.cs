@@ -13,6 +13,11 @@
 //               alfa 0,55 → 0 säteen mukana
 //   rahina      viivainta vedettäessä: u = max(0, 1 − e/0,18)², lähetys sin(u·π/2), rahina cos(u·π/2)
 //   kamera-ajo  2,28 s (saapuu lukkoon), alle 150 km 1,2 s; kaaren korotus 1 + 0,6·min(1, d/2500 km)
+//
+// RADIOLINSSIN UUDISTUS (omistaja 28.9.2026 iPad-kaappauksesta Päätoimittajan kautta: "nyt antennit vilkkuvat, saisivat
+// hohtaa himmeästi ja valittu masto kirkkaammin"): vilkku pois — muut mastot HimmeaHohde, valittu ValitunKirkkaus
+// (0,7 + 0,3 · VU); renkaat syntyvät äänen iskuista (VuRenkaat) eivätkä tasatahdissa; vain näkymän lähialueen mastot
+// (LahialueenNakyvyys), kaukaiset häipyvät ennen horisontin usvaa, joten pallon reunalta ei nouse neulamaisia mastoja.
 using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Kamera;
@@ -52,6 +57,8 @@ namespace Matkakirja.Linssit.Radio
         void Valittu(string id, float kirkkaus);
         /// <summary>Radioaaltorenkaat: keskus, kuuluvuussäde ja näkyvien renkaiden osuudet 0…1 (alfa 0,55 × (1 − osuus)).</summary>
         void Renkaat(double lat, double lon, double sadeKm, IReadOnlyList<double> osuudet);
+        /// <summary>Renkaiden voimat 0…1 samassa järjestyksessä kuin viimeisimmät osuudet (VuRenkaat); null = kaikki 1.</summary>
+        void RengasVoimat(IReadOnlyList<double> voimat);
         /// <summary>Yövalojen paikallinen tehostus valitun maston ympärillä (0…1).</summary>
         void YonValot(double lat, double lon, float paikallinen);
     }
@@ -125,6 +132,30 @@ namespace Matkakirja.Linssit.Radio
             return Kamerakayrat.Pehmea(Math.Min(nousu, lasku));
         }
 
+        // ---- Hohde (omistaja 28.9.: ei vilkkua) ----
+
+        /// <summary>Muiden mastojen valo: tasainen himmeä hohde (ei vilkkua).</summary>
+        public const double HimmeaHohde = 0.32;
+
+        /// <summary>Valitun maston valo VU-kirkkaudesta (MastonKirkkaus 0,25…1): aina selvästi muita kirkkaampi.</summary>
+        public static double ValitunKirkkaus(double vuKirkkaus) => 0.7 + 0.3 * Math.Clamp(vuKirkkaus, 0, 1);
+
+        // ---- Lähialue (omistaja 28.9.: "vähemmän mastoja", ei neuloja horisontin takaa) ----
+
+        /// <summary>Häivytyksen alku ja loppu maapinnan matkana katsepisteestä, × kameran etäisyys (horisonttiusvan raja on 0,6).</summary>
+        public const double LahialueAlku = 0.33, LahialueLoppu = 0.52;
+
+        /// <summary>
+        /// Maston näkyvyys 0…1, kun se on matkan <paramref name="matkaKm"/> päässä katsepisteestä ja kamera etäisyydellä
+        /// <paramref name="kameraKm"/>: täysi lähialueella, Pehmeä häivytys, 0 ennen usvan rajaa.
+        /// </summary>
+        public static double LahialueenNakyvyys(double matkaKm, double kameraKm)
+        {
+            if (!(kameraKm > 0)) return 1;
+            double t = (matkaKm / kameraKm - LahialueAlku) / (LahialueLoppu - LahialueAlku);
+            return 1 - Kamerakayrat.Pehmea(Math.Clamp(t, 0, 1));
+        }
+
         // ---- Renkaat ----
 
         public const double RenkaanVali = 1.6, RenkaanKasvu = 4.8, RenkaanAlfa = 0.55;
@@ -193,6 +224,57 @@ namespace Matkakirja.Linssit.Radio
             double x = a * x1 + b * x2, y = a * y1 + b * y2, z = a * z1 + b * z2;
             return (Math.Atan2(z, Math.Sqrt(x * x + y * y)) / r, Math.Atan2(y, x) / r);
         }
+    }
+
+    /// <summary>
+    /// Aaltorenkaat äänen tahdissa (omistaja 28.9.: staattisen renkaan tilalle "valitusta asemasta leviävät aaltorenkaat,
+    /// jotka sykkivät äänen voimakkuuden tahdissa"). Uusi rengas syntyy iskusta: VU nousee vähintään Isku yli hitaan
+    /// keskiarvon (tau 0,6 s), aikaisintaan VahinVali edellisestä; hiljaisessa kohdassa rengas silti viimeistään
+    /// PisinVali:n välein, jos ääntä on (VU &gt; Hiljainen). Voima = 0,35 + 0,65 · VU syntyhetkellä; rengas kasvaa
+    /// kuuluvuussäteeseen Kasvu-ajassa käyrällä Nousu, alfa = RenkaanAlfa × voima × (1 − osuus). Enintään 8 kerrallaan.
+    /// </summary>
+    public sealed class VuRenkaat
+    {
+        public const double Isku = 0.10, VahinVali = 0.28, PisinVali = 1.6, Hiljainen = 0.04, Kasvu = 3.2, KeskiTau = 0.6;
+        public const int Enintaan = 8;
+        readonly List<(double ika, double voima)> renkaat = new List<(double, double)>();
+        double keski, sitten = double.PositiveInfinity;
+
+        public int Maara => renkaat.Count;
+
+        /// <summary>Kehys: dt sekunteina, vu 0…1. Palauttaa true, jos uusi rengas syntyi.</summary>
+        public bool Paivita(double dt, double vu)
+        {
+            dt = Math.Max(0, dt);
+            vu = Math.Clamp(vu, 0, 1);
+            for (int i = renkaat.Count - 1; i >= 0; i--)
+            {
+                double ika = renkaat[i].ika + dt;
+                if (ika >= Kasvu) renkaat.RemoveAt(i); else renkaat[i] = (ika, renkaat[i].voima);
+            }
+            sitten += dt;
+            bool isku = vu - keski >= Isku && sitten >= VahinVali;
+            bool tahti = vu > Hiljainen && sitten >= PisinVali;
+            keski += (vu - keski) * (1 - Math.Exp(-dt / KeskiTau));
+            if (!isku && !tahti) return false;
+            if (renkaat.Count >= Enintaan) renkaat.RemoveAt(0);
+            renkaat.Add((0, 0.35 + 0.65 * vu));
+            sitten = 0;
+            return true;
+        }
+
+        /// <summary>Näkyvien renkaiden osuudet säteestä (0…1) ja voimat samassa järjestyksessä; listat tyhjennetään ensin.</summary>
+        public void Lue(List<double> osuudet, List<double> voimat)
+        {
+            osuudet.Clear(); voimat.Clear();
+            foreach (var (ika, voima) in renkaat)
+            {
+                osuudet.Add(Kamerakayrat.Arvo(Kayra.Nousu, ika / Kasvu));
+                voimat.Add(voima);
+            }
+        }
+
+        public void Nollaa() { renkaat.Clear(); keski = 0; sitten = double.PositiveInfinity; }
     }
 
     /// <summary>Valitun maston kirkkaus VU-tasosta: nousu 30 ms, lasku 250 ms, lattia 0,25.</summary>

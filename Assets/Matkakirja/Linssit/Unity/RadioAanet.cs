@@ -252,4 +252,58 @@ namespace Matkakirja.Natiivi
             foreach (var c in ladatut.Values) if (c != null) Destroy(c);
         }
     }
+
+    /// <summary>
+    /// Radion tehosteet (Pelikoodarin äänet 29.9.2026, ElevenLabs Sound Effects, radio-aanet.json): kytkin päälle/pois,
+    /// putkiradion lämpeneminen, lukittuminen asemalle ja 8 s:n saumaton kohinasilmukka asemien väliin. WAV-muodossa
+    /// Resources/RadioAanet/ (mp3:n kooderiviive pois, silmukka näytetarkka: AudioSource.loop samalla leikkeellä).
+    /// Kohinan taso pehmennetään 60 ms:n aikavakiolla (veto antaa portaittaisia arvoja).
+    /// </summary>
+    public class RadioEfektit : MonoBehaviour, IRadioEfektit
+    {
+        AudioSource kerta, silmukka;
+        readonly Dictionary<RadioEfekti, AudioClip> leikkeet = new Dictionary<RadioEfekti, AudioClip>();
+        float kohina, kohinaNyt;
+
+        public static RadioEfektit Luo(Transform isanta)
+        {
+            var go = new GameObject("RadioEfektit");
+            go.transform.SetParent(isanta, false);
+            var e = go.AddComponent<RadioEfektit>();
+            e.kerta = go.AddComponent<AudioSource>();
+            e.kerta.playOnAwake = false;
+            e.kerta.spatialBlend = 0;
+            e.silmukka = go.AddComponent<AudioSource>();
+            e.silmukka.playOnAwake = false;
+            e.silmukka.loop = true;
+            e.silmukka.spatialBlend = 0;
+            e.silmukka.volume = 0;
+            e.silmukka.clip = Resources.Load<AudioClip>("RadioAanet/radio-kohina-silmukka");
+            void L(RadioEfekti k, string nimi) { var c = Resources.Load<AudioClip>("RadioAanet/radio-" + nimi); if (c != null) e.leikkeet[k] = c; }
+            L(RadioEfekti.KytkinPaalle, "kytkin-paalle");
+            L(RadioEfekti.KytkinPois, "kytkin-pois");
+            L(RadioEfekti.Lampeneminen, "lampeneminen");
+            L(RadioEfekti.Lukittuminen, "lukittuminen");
+            if (e.silmukka.clip == null || e.leikkeet.Count < 4)
+                Debug.LogWarning($"MATKAKIRJA radio: tehosteita {e.leikkeet.Count}/4, silmukka {(e.silmukka.clip != null ? "ok" : "puuttuu")}");
+            return e;
+        }
+
+        public void Soita(RadioEfekti efekti, float voimakkuus)
+        {
+            if (leikkeet.TryGetValue(efekti, out var c) && voimakkuus > 0) kerta.PlayOneShot(c, Mathf.Clamp01(voimakkuus));
+        }
+
+        public float Kohina { set => kohina = Mathf.Clamp01(value); }
+
+        void Update()
+        {
+            if (silmukka.clip == null) return;
+            kohinaNyt += (kohina - kohinaNyt) * (1f - Mathf.Exp(-Time.unscaledDeltaTime / 0.06f));
+            if (kohina <= 0 && kohinaNyt < 0.002f) kohinaNyt = 0;
+            silmukka.volume = kohinaNyt;
+            if (kohinaNyt > 0 && !silmukka.isPlaying) { silmukka.time = Random.Range(0f, silmukka.clip.length); silmukka.Play(); }
+            else if (kohinaNyt <= 0 && silmukka.isPlaying) silmukka.Stop();
+        }
+    }
 }

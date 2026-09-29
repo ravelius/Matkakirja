@@ -22,6 +22,8 @@ namespace Matkakirja.Linssit.Testit
         public void Valittu(string id, float k) { ValittuId = id; Kirkkaus = k; }
         public void Renkaat(double lat, double lon, double sade, System.Collections.Generic.IReadOnlyList<double> o) { Renkaita = o.Count; RengasSade = sade; }
         public void YonValot(double lat, double lon, float p) => Paikallinen = p;
+        public System.Collections.Generic.List<double> Voimat;
+        public void RengasVoimat(System.Collections.Generic.IReadOnlyList<double> v) => Voimat = v?.ToList();
     }
 
     public static class MastoTestit
@@ -76,6 +78,48 @@ namespace Matkakirja.Linssit.Testit
             Lahella(1, Mastot.VilkunValo("FRA", alku + 0.2), 1e-9, "palaa keskellä");
             Oleta.Sama(0.0, Mastot.VilkunValo("FRA", alku + 0.8), "sammunut");
             Oleta.Tosi(Mastot.VilkunValo("FRA", alku + 0.06) is > 0 and < 1, "pehmeä nousu");
+        }
+
+        [Testi] static void EiVilkkuaValittuKirkkain()
+        {
+            Oleta.Tosi(Mastot.HimmeaHohde is > 0.15 and < 0.5, "muut hohtavat himmeästi");
+            Oleta.Tosi(Mastot.ValitunKirkkaus(0) >= 2 * Mastot.HimmeaHohde, "valittu hiljaisenakin selvästi kirkkaampi");
+            Lahella(1, Mastot.ValitunKirkkaus(1), 1e-9, "täysi VU");
+        }
+
+        [Testi] static void LahialueHaivyttaaKaukaiset()
+        {
+            Lahella(1, Mastot.LahialueenNakyvyys(500, 2600), 1e-9, "lähellä täysi");
+            Lahella(0, Mastot.LahialueenNakyvyys(0.6 * 2600, 2600), 1e-9, "usvan rajalla poissa");
+            double puoli = Mastot.LahialueenNakyvyys(0.5 * (Mastot.LahialueAlku + Mastot.LahialueLoppu) * 2600, 2600);
+            Lahella(0.5, puoli, 0.01, "häivytyksen keskellä puolet");
+        }
+
+        [Testi] static void VuRenkaatIskuistaJaTahdista()
+        {
+            var r = new VuRenkaat();
+            var o = new System.Collections.Generic.List<double>();
+            var v = new System.Collections.Generic.List<double>();
+            Oleta.Tosi(!r.Paivita(1 / 60.0, 0), "hiljaisuus: ei rengasta");
+            for (int i = 0; i < 240; i++) r.Paivita(1 / 60.0, 0);
+            Oleta.Sama(0, r.Maara, "4 s hiljaa: ei renkaita");
+            Oleta.Tosi(r.Paivita(1 / 60.0, 0.8), "isku synnyttää renkaan");
+            Oleta.Tosi(!r.Paivita(1 / 60.0, 0.9), "ei uutta heti perään (vähin väli)");
+            r.Lue(o, v);
+            Oleta.Sama(1, o.Count);
+            Lahella(0.35 + 0.65 * 0.8, v[0], 1e-9, "voima iskun VU:sta");
+            // Tasainen ääni ilman iskuja: rengas silti pisimmän välin välein.
+            var t = new VuRenkaat();
+            int syntyi = 0;
+            for (int i = 0; i < 600; i++) if (t.Paivita(1 / 60.0, 0.3)) syntyi++;
+            Oleta.Tosi(syntyi >= 6 && syntyi <= 8, $"10 s tasaista ääntä → ~6 rengasta, saatu {syntyi}");
+            // Rytmikäs ääni: iskut 0,5 s välein → rengas jokaisesta.
+            var u = new VuRenkaat();
+            syntyi = 0;
+            for (int i = 0; i < 600; i++) if (u.Paivita(1 / 60.0, i % 30 < 4 ? 0.9 : 0.1)) syntyi++;
+            Oleta.Tosi(syntyi >= 18, $"iskut 0,5 s välein → rengas jokaisesta, saatu {syntyi}");
+            u.Lue(o, v);
+            Oleta.Tosi(o.Count <= VuRenkaat.Enintaan && o.All(x => x >= 0 && x <= 1), "osuudet 0…1, enintään 8");
         }
 
         [Testi] static void RenkaatSyntyvatJaKasvavat()
