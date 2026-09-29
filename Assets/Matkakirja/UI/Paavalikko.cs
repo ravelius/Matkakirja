@@ -73,6 +73,11 @@ namespace Matkakirja.Natiivi
         public Paavalikko(UiKerros kerros, Func<float> alareuna, Vahvistus vahvistus) : base(kerros, alareuna, "mk-paavalikko")
         {
             this.vahvistus = vahvistus;
+            // YKSI POHJA (omistaja 29.9.2026 klo 20.2x: "eri väripohjia"): Retkikunta ja Kehittäjätyökalut samalla pergamentilla
+            // kuin pillerivalikko; tumman paneelin värit vaihtuvat muuttujina (Matkakirja.uss .mk-paavalikko--pergamentti).
+            Paneeli.AddToClassList("mk-paavalikko--pergamentti");
+            Rakenne.Tausta(Paneeli, Kuviot.Pergamentti);
+            Paneeli.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
             AukiMuuttui += auki => { if (!auki) { osa = Osa.Kaikki; Asetukset.Tallenna(); } };
             // iPhonen Asetukset-osion ylin osio: äänentasot liukusäätimin (Fable 24.9.: ☰-valikon kytkimet ovat
             // pikakytkimet, säädöt täällä). iPadilla ne ovat rattaan paneelissa, joten osio näkyy vain Asetukset-osana.
@@ -416,8 +421,8 @@ namespace Matkakirja.Natiivi
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             DisplayStyle Nayta(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
             bool asetuksia = osa == Osa.Kaikki || osa == Osa.Asetukset;
-            Paneeli.EnableInClassList("mk-paavalikko--asetukset", osa == Osa.Asetukset);
-            takaisin.style.display = Nayta(osa == Osa.Asetukset && Takaisin != null);
+            Paneeli.EnableInClassList("mk-paavalikko--asetukset", osa != Osa.Kaikki);
+            takaisin.style.display = Nayta(osa != Osa.Kaikki && Takaisin != null);
             kokeet.style.display = Nayta(Asetukset.Kehittaja && osa == Osa.Kehittaja);
             if (Asetukset.Kehittaja && osa == Osa.Kehittaja) PaivitaSavy();
             aanentasot.style.display = Nayta(osa == Osa.Asetukset);

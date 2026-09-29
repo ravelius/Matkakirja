@@ -171,6 +171,8 @@ namespace Matkakirja.Natiivi
             v.LisaNappi(toiminnot, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
                 () => Valikko.RetkikuntaSaatavilla);
             v.LisaNappi(toiminnot, "Asetukset", Ikonit.Ratas, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Asetukset), pysy: true);
+            // Retkikunnan ja Kehittäjätyökalujen ‹ Takaisin palaa pillerivalikkoon (sama pergamentti, Paavalikko).
+            Valikko.Takaisin = () => { if (!v.Auki) v.Avaa(); };
 
             // ASETUKSET-näkymä: äänentasot, kartta (Pieni liike, Kuljettu reitti, kehittäjän maailmatilassa Näytä huntu), muut
             // (Offline-kartat ja Ehdota toimintoina, Kehittäjä kytkimenä koodilukolla; päällä myös Kehittäjätyökalut).
