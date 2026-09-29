@@ -10793,13 +10793,17 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * on aina border-radius: 999px, JOKA RAJAA lopputuloksen pyöreäksi
    * riippumatta näistä luvuista) — `fill` piirtää kuvan keskiosan
    * pilleri runkoon jäävään väliin, `stretch` venyttää sen ilman
-   * saumaa. Tekstit (kassa, päivä, aika) piirtyvät JS:ssä pillerin
-   * OIKEIKSI lapsiksi ::before:n JÄLKEEN, joten ne ovat aina
-   * kohokuvan päällä (ks. tools/savukkeet/savuke-pillerivalikko.mjs:
-   * kontrastimittaus).
+   * saumaa. Tekstit (kassa, päivä, aika) ovat pillerin tavallisia
+   * lapsia, ja absoluuttinen ::before piirtyisi niiden PÄÄLLE
+   * DOM-järjestyksestä riippumatta (positioitu elementti maalataan
+   * virtaavan sisällön jälkeen) — `fill`-keskiosa himmensi tekstin.
+   * Siksi ::before on z-index -1 ja pilleri oma pinoamiskontekstinsa
+   * (isolation), jolloin kohokuva jää tekstin alle mutta nahkan päälle
+   * (ks. tools/savukkeet/savuke-pillerivalikko.mjs: kontrastimittaus).
    */
   .turn-pill {
     position: relative;
+    isolation: isolate;
     background: none;
     border-color: transparent;
   }
@@ -10816,6 +10820,7 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
     border-image-slice: 47 53 fill;
     border-image-repeat: stretch;
     pointer-events: none;
+    z-index: -1;
   }
 
   .event-toast { font-size: 0.92rem; padding: 0.55rem 0.8rem; top: 10%; }

@@ -187,7 +187,23 @@ async function avaaPeli(leveys, korkeus) {
    * VAIKKA rahasumma oli jo kiinnitetty). document.fonts.ready
    * poistaa tämän: mittaus tapahtuu aina lopullisella fontilla.
    */
+  /*
+   * SAAPUMISKUVA (fokusvirta, #3622) voi avautua viiveellä ja himmentää
+   * koko ruudun — renderöity kontrastimittaus näki silloin pelkän
+   * himmennyksen. Suljetaan pelin omalla API:lla ennen mittausta.
+   */
+  await sivu.evaluate(async () => {
+    document.querySelectorAll('.fokusvirta-ohitanappi').forEach((n) => n.click());
+    const { suljeFokusvirta } = await import('./js/fokusvirta.js');
+    suljeFokusvirta(window.matkakirja.ui);
+  });
+  await sivu.waitForTimeout(600);
   await sivu.evaluate(() => document.fonts.ready);
+  // Kertaluonteiset animaatiot (laukku-elo rahan muuttuessa) loppuun ennen
+  // mittausta: kesken animaation pilleri on siirtynyt/himmeä (y = -1 havaittu).
+  await sivu.evaluate(() => Promise.all(document.getAnimations()
+    .filter((a) => a.effect?.getComputedTiming().iterations !== Infinity)
+    .map((a) => a.finished.catch(() => {}))));
   return { ctx, sivu, virheet };
 }
 
@@ -261,6 +277,33 @@ async function pillerinTaustaVari(sivu) {
     return { r: r / n, g: g / n, b: b / n };
   }, b64);
   return { vari, piilotettuja: piilotetut };
+}
+
+/**
+ * Tekstin KIRKKAIN RENDERÖITY pikseli (elementin oma alue ruudusta).
+ * CSS:n väri ei kerro, peittääkö jokin kerros tekstin: 29.9.2026
+ * pillerin ::before-kohokuva (fill) piirtyi tekstin päälle ja himmensi
+ * sen, vaikka CSS-väri oli yhä vaalea. Kirkkain pikseli on kirjaimen
+ * ydin, joten sen kontrasti taustaan mittaa sen mitä silmä näkee.
+ */
+async function renderoityTekstinVari(sivu, valitsin) {
+  const kuva = await sivu.locator(valitsin).first().screenshot();
+  return sivu.evaluate(async (data) => {
+    const img = new Image();
+    img.src = `data:image/png;base64,${data}`;
+    await img.decode();
+    const c = document.createElement('canvas');
+    c.width = img.naturalWidth; c.height = img.naturalHeight;
+    const ctx = c.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const id = ctx.getImageData(0, 0, c.width, c.height).data;
+    let paras = { r: 0, g: 0, b: 0 }; let parasL = -1;
+    for (let i = 0; i < id.length; i += 4) {
+      const l = 0.2126 * id[i] + 0.7152 * id[i + 1] + 0.0722 * id[i + 2];
+      if (l > parasL) { parasL = l; paras = { r: id[i], g: id[i + 1], b: id[i + 2] }; }
+    }
+    return paras;
+  }, kuva.toString('base64'));
 }
 
 /** Tekstin väri CSS:stä (rgb(...) → {r,g,b}). */
@@ -395,6 +438,11 @@ async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy
     vaadi(`${nimi}: pillerin tekstin kontrasti ≥ 4.5:1`,
       kontrasti >= 4.5,
       `kontrasti ${kontrasti.toFixed(2)} (tausta ${JSON.stringify(tausta.vari)}, teksti ${JSON.stringify(teksti)})`);
+    const nakyva = await renderoityTekstinVari(sivu, '#turn-pill .kassa');
+    const nakyvaKontrasti = kontrastisuhde(tausta.vari, nakyva);
+    vaadi(`${nimi}: pillerin teksti ei jää kohokuvan alle (renderöity kontrasti ≥ 7:1)`,
+      nakyvaKontrasti >= 7,
+      `kontrasti ${nakyvaKontrasti.toFixed(2)} (kirkkain pikseli ${JSON.stringify(nakyva)})`);
   } else {
     vaadi(`${nimi}: yläpalkissa EI ole nahkaa (iPad ennallaan)`,
       !topbarTausta.includes('assets/ylapalkki'), topbarTausta);
