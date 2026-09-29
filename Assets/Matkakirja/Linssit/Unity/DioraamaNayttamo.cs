@@ -19,6 +19,7 @@
 //                       jotta tarkennettu tila pysyy kirkkaana ja kaukainen tausta sulautuu
 using Matkakirja.Linssit.Dioraama;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
 namespace Matkakirja.Natiivi
@@ -42,7 +43,16 @@ namespace Matkakirja.Natiivi
         // "Ylhäältä vasemmalta edestä": +Y ylös, -X vasen, +Z kohti tavanomaista katsojaa (Unity-avaruudessa).
         static readonly Vector3 ValonSuunta = new Vector3(-0.45f, 0.78f, 0.45f).normalized;
 
+        /// <summary>QA-kytkin ("poikki dof 0|1", DioraamaSovitin.Komento). Pois päältä: volume.enabled ja
+        /// kameran renderPostProcessing menevät epätodeksi joka ruudussa (PaivitaDofTila) -- 0 kustannusta.</summary>
+        public static bool DofPaalla = true;
+        const float VolyymiPrioriteetti = 100f;
+
         Camera pallonKamera;
+        UniversalAdditionalCameraData kameraData;
+        Volume volyymi;
+        VolumeProfile profiili;
+        DepthOfField syvyys;
 
         public Camera Kamera { get; private set; }
         /// <summary>
@@ -80,12 +90,44 @@ namespace Matkakirja.Natiivi
             Kamera.nearClipPlane = 0.3f;
             Kamera.farClipPlane = 2000f;
             Kamera.depth = (pallonKamera != null ? pallonKamera.depth : 0f) + 1f;
-            var data = Kamera.GetUniversalAdditionalCameraData();
-            data.renderType = CameraRenderType.Base;
-            data.renderPostProcessing = false;
-            data.renderShadows = false;
-            data.requiresDepthTexture = false;
-            data.requiresColorTexture = false;
+            kameraData = Kamera.GetUniversalAdditionalCameraData();
+            kameraData.renderType = CameraRenderType.Base;
+            kameraData.renderPostProcessing = DofPaalla;
+            kameraData.renderShadows = false;
+            kameraData.requiresDepthTexture = true; // syväterävyys tarvitsee syvyystekstuurin; vain tällä kameralla (ei Mobile_RPAssetiin)
+            kameraData.requiresColorTexture = false;
+            kameraData.volumeLayerMask = 1 << Kerros;
+
+            LuoSyvyysvolyymi();
+        }
+
+        /// <summary>
+        /// Ajonaikainen Volume + DepthOfField (Gaussian) kerroksessa Kerros, Filmipinon (Kartta/Filmipino.cs) tapaan
+        /// (profile, ei sharedProfile: ajonaikainen kopio, jottei säätö kirjoita mihinkään assetiin). HUOM: Filmipino
+        /// käyttää bakattua asset-profiilia (Assets/Matkakirja/Asetukset/Filmipino.asset), koska URP karsii
+        /// käännöksestä jälkikäsittelyn shader-variantit joita mikään profiili ei käytä -- ajonaikana luotu profiili
+        /// jäisi laitteella hiljaa vaikutuksettomaksi, JOS mikään muu profiili buildissa ei käyttäisi samaa efektiä.
+        /// Filmipino.asset käyttää jo täsmälleen samaa Gaussian DoF -tilaa (luettu: DepthOfField.mode m_Value 1 =
+        /// Gaussian, m_OverrideState 1) ja on osa buildia, joten variantti on jo säilytetty -- tämän näyttämön
+        /// ajonaikainen profiili on siis turvallinen NIIN KAUAN kuin Filmipino/sen asset pysyvät projektissa
+        /// käytössä (riski kirjattu erän raporttiin).
+        /// </summary>
+        void LuoSyvyysvolyymi()
+        {
+            var vg = new GameObject("DioraamaSyvyys");
+            vg.layer = Kerros;
+            vg.transform.SetParent(transform, false);
+            volyymi = vg.AddComponent<Volume>();
+            volyymi.isGlobal = true;
+            volyymi.priority = VolyymiPrioriteetti;
+            profiili = ScriptableObject.CreateInstance<VolumeProfile>();
+            profiili.name = "DioraamaSyvyysProfiili";
+            syvyys = profiili.Add<DepthOfField>(true);
+            syvyys.mode.Override(DepthOfFieldMode.Gaussian);
+            syvyys.highQualitySampling.Override(false);
+            syvyys.active = DofPaalla;
+            volyymi.profile = profiili;
+            volyymi.enabled = DofPaalla;
         }
 
         /// <summary>Kanoninen (metrit, +X itä +Y ylös +Z etelä) → Unity (x, y, −z). Ks. dioraama-rajapinnat kohta 0.</summary>
@@ -119,6 +161,7 @@ namespace Matkakirja.Natiivi
         public void Paivita(Asento kameranAsento, bool vahennettyLiike)
         {
             VarmistaKuva();
+            PaivitaDofTila();
             var (sijainti, kohde) = Kameraliike.AsentoSijainti(kameranAsento);
             Vector3 paikka = UnityPiste(sijainti), kohdeU = UnityPiste(kohde);
             Kamera.transform.position = paikka;
@@ -129,9 +172,31 @@ namespace Matkakirja.Natiivi
             Kamera.fieldOfView = Mathf.Clamp((float)kameranAsento.Fov, 1f, 179f);
             float d = (float)kameranAsento.Etaisyys;
             Shader.SetGlobalVector(IdSumu, new Vector4(d * SumuAlkuKerroin, d * SumuLoppuKerroin, 0, 0));
+            if (syvyys != null)
+            {
+                // Aukko 0..1 (0,3 yleisnäkymä loiva -- 0,8 huone voimakas taustan sumennus, ks. DioraamaData.Asento).
+                float aukko = (float)kameranAsento.Aukko;
+                syvyys.gaussianStart.Override(d + 1.5f);
+                syvyys.gaussianEnd.Override(d + 6f + 18f * (1f - aukko));
+                syvyys.gaussianMaxRadius.Override(Mathf.Lerp(0.5f, 1.5f, aukko));
+            }
 
             float kohina = Mathf.PerlinNoise((float)(Time.unscaledTimeAsDouble * 0.35), 17.3f);
             Shader.SetGlobalFloat(IdLepatus, vahennettyLiike ? 1f : Mathf.Lerp(0.85f, 1f, kohina));
+        }
+
+        /// <summary>"poikki dof 0|1" voi vaihtaa DofPaalla-arvon milloin tahansa; synkronoi näyttämön volumen ja
+        /// kameran tilan siihen joka ruutu (pois päältä = 0 kustannusta: ei jälkikäsittelyä tällä kameralla).</summary>
+        void PaivitaDofTila()
+        {
+            bool paalla = DofPaalla;
+            if (volyymi != null) volyymi.enabled = paalla;
+            if (kameraData != null)
+            {
+                kameraData.renderPostProcessing = paalla;
+                // Syvyysajo vain DoF:n tarpeeseen: pois päältä ei jäännöskustannusta.
+                kameraData.requiresDepthTexture = paalla;
+            }
         }
 
         public void Tuhoa()
@@ -139,6 +204,11 @@ namespace Matkakirja.Natiivi
             VapautaKuva();
             NykyinenKuva = null;
             KuvaVaihtui?.Invoke(null);
+            if (profiili != null) Destroy(profiili);
+            profiili = null;
+            syvyys = null;
+            volyymi = null;
+            kameraData = null;
             if (this != null && gameObject != null) Destroy(gameObject);
         }
     }

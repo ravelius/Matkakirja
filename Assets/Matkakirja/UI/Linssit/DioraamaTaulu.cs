@@ -171,7 +171,10 @@ namespace Matkakirja.Natiivi
                 bool oikealla = TaulunPuoliOikealla(rakennus, nakyma.KohdeTila);
                 float tauluLeveys = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 260f : lauta.layout.width;
                 float tauluKorkeus = float.IsNaN(lauta.layout.height) || lauta.layout.height <= 0 ? 160f : lauta.layout.height;
-                float x = oikealla ? paneeliste.x + 24f : paneeliste.x - 24f - tauluLeveys;
+                // Pulun viereen marginaalilla, ettei taulu peitä Pulua: oikealla keskikohta + puoli pululeveyttä +
+                // 12 pt, vasemmalla keskikohta - puoli pululeveyttä - 12 pt - taululeveys (aiemmin kiinteä ±24 pt
+                // keskikohdasta peitti linnun oikean reunan, kun puluLeveys ylitti 2×24 pt, savuke 29.9.).
+                float x = oikealla ? paneeliste.x + puluLeveys * 0.5f + 12f : paneeliste.x - puluLeveys * 0.5f - 12f - tauluLeveys;
                 x = Mathf.Clamp(x, 8f, Mathf.Max(8f, pw - tauluLeveys - 8f));
                 float y = Mathf.Clamp(paneeliste.y - koko - 8f, 8f, Mathf.Max(8f, ph - tauluKorkeus - 8f));
                 if (nakyma.KohdeTila == null)

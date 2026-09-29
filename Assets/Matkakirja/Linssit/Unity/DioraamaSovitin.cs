@@ -277,6 +277,12 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
             }
+            if (mita == "dof")
+            {
+                DioraamaNayttamo.DofPaalla = arvo == "1";
+                o.Kirjaa("poikki: dof " + (DioraamaNayttamo.DofPaalla ? "päällä" : "pois"));
+                return;
+            }
             if (!avoinna) { o.Kirjaa("poikki: linssi ei ole auki (linssi poikkileikkaus)"); return; }
             // rakennus.json (ja siis Ydin-linssin Avaa) voi olla vielä lataamatta: PoikkileikkausLinssi.Kohdista
             // lukee Rakennus-kentän suoraan eikä tarkista nulliä (AsentoFor → Rakennus.YleisVaaka).
