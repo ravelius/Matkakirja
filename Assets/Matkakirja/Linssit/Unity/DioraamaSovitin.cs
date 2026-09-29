@@ -159,7 +159,8 @@ namespace Matkakirja.Natiivi
 
         public void Paivita()
         {
-            if (!avoinna || y == null || !linssi.Auki) return;
+            // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
+            if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
             bool pysty = y.Kuvasuhde < 1.0;
             var nakyma = linssi.NakymaHetkella(t, pysty);
@@ -551,6 +552,7 @@ namespace Matkakirja.Natiivi
                 rakennus = null; latausKaynnissa = false;
                 NollaaNakymanLataukset();
                 rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
+                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); // Olavinlinna: ei tuplia
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
