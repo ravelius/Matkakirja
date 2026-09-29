@@ -201,6 +201,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pilvikuoren nykyinen peitto (0…1): himmennys seuraa näkyviä pilviä (A/B `astro kyyti pilvet pois` → 0).</summary>
+        /// <summary>Pilvipeiton säädin (sama kynnys kuin Pilvikuori.Karsinta).</summary>
+        public void Karsinta(float kynnys) => materiaali.SetFloat(IdKarsinta, Mathf.Clamp01(kynnys));
+        static readonly int IdKarsinta = Shader.PropertyToID("_Karsinta");
+
         public void PilvienPeitto(float peitto)
         {
             if (Mathf.Approximately(pilviPeitto, peitto)) return;

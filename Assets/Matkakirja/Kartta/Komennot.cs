@@ -346,6 +346,8 @@ namespace Matkakirja
                 case "pois": Aurinko.UsvaSallittu = false; break;
                 case "paalle": Aurinko.UsvaSallittu = true; break;
                 case "raja" when o.Length > 2: Aurinko.UsvaRaja = System.Math.Max(0.05, System.Math.Min(5.0, D(2))); break;
+                // Radiolinssin liu'un kerroin täydessä hämärässä (omistaja 28.9.: "raja ei saisi olla noin selvä").
+                case "radio" when o.Length > 2: RadioMastot.UsvanLiuku = (float)System.Math.Max(1.0, System.Math.Min(8.0, D(2))); break;
                 case "vari" when o.Length > 4:
                 {
                     double r = D(2), g = D(3), b = D(4);
@@ -356,7 +358,7 @@ namespace Matkakirja
             }
             var au = FindAnyObjectByType<Aurinko>();
             Debug.Log("MATKAKIRJA usva " + string.Join(" ", o, 1, o.Length - 1) + ": " + (au != null ? au.Tila() : "ei aurinkoa")
-                      + $", väri {Aurinko.UsvaVari}, katto {kierto.KallistusRaja():0.0}°");
+                      + $", väri {Aurinko.UsvaVari}, katto {kierto.KallistusRaja():0.0}°, radion liuku {RadioMastot.UsvanLiuku:0.0} (nyt {Horisonttiusva.LiukuNyt:0.00})");
         }
 
         /// <summary>

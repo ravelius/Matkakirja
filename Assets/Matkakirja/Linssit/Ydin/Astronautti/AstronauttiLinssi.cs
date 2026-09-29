@@ -240,7 +240,12 @@ namespace Matkakirja.Linssit.Astronautti
                 if (Iss.IssNyt.Simu.ValmisId == l.Id)
                 {
                     l.Perilla = true;
-                    kyyti.Kohteeseen(new LatLon(l.Kohde.Lat, l.Kohde.Lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
+                    l.PerillaAika = y.Aika;
+                    // Vain oma sijainti (kohde voi olla radan ulottumattomissa); kohteet katsotaan suoraan kuten ennen.
+                    var katse = l.Kohde.Tunnus == OmaSijaintiTunnus
+                        ? Iss.OmaSijainti.Katsepiste(l.Ylilento.Value.Lat, l.Ylilento.Value.Lon, l.Kohde.Lat, l.Kohde.Lon)
+                        : (lat: l.Kohde.Lat, lon: l.Kohde.Lon);
+                    kyyti.Kohteeseen(new LatLon(katse.lat, katse.lon), Nykyinen(), y.Nakokulma, nyt, y.VahennettyLiike);
                     tietoAika = -1;
                 }
                 else if (Iss.IssNyt.Simu.KelausId != l.Id) { lento = null; tietoAika = -1; }
@@ -291,6 +296,22 @@ namespace Matkakirja.Linssit.Astronautti
             public Iss.Ylilento? Ylilento;
             public int Id;
             public bool Perilla;
+            /// <summary>Lennon alku (y.Aika) ja perilläolon hetki; siirtymä = ero + kohteeseen kääntyminen.</summary>
+            public double Alku = double.NaN, PerillaAika = double.NaN;
+        }
+
+        /// <summary>
+        /// Viimeisimmän lennon koko siirtymä sekunteina (kelaus + kääntyminen kohteeseen, IssKyyti.KohteeseenS; vähennetyllä
+        /// liikkeellä 0), tai null ennen perilläoloa. Omistaja 28.9.: enintään 5 s (Simukello.SiirtymaMaxS); laitemittaus.
+        /// </summary>
+        public double? ViimeisinSiirtymaS
+        {
+            get
+            {
+                var l = lento;
+                if (l == null || double.IsNaN(l.Alku) || double.IsNaN(l.PerillaAika)) return null;
+                return l.PerillaAika - l.Alku + (y.VahennettyLiike ? 0 : Iss.IssKyyti.KohteeseenS);
+            }
         }
 
         Lento lento;
@@ -323,13 +344,33 @@ namespace Matkakirja.Linssit.Astronautti
         public Iss.Ylilento? LennaKohteeseen(string tunnus, bool valoisa = false)
         {
             if (!Auki) return null;
-            var k = Ylikohteet.Find(x => x.Tunnus == tunnus);
+            return Lenna(Ylikohteet.Find(x => x.Tunnus == tunnus), valoisa);
+        }
+
+        /// <summary>Oman sijainnin tunnus "Lennä kohteen ylle" -rivillä ja testikomennoissa.</summary>
+        public const string OmaSijaintiTunnus = "oma-sijainti";
+
+        /// <summary>
+        /// "Oma sijainti" (omistaja 28.9. TF 1.0.39: "Lisää myös mahdollisuus mennä käyttäjän sijainnin kohdalle"): kuten
+        /// LennaKohteeseen, mutta paikka annetaan (karkea sijainti ilman lupakyselyä: maan keskipiste, Unity-puolen OmaSijainti).
+        /// </summary>
+        public Iss.Ylilento? LennaPaikkaan(string nimi, double lat, double lon, bool valoisa = false)
+        {
+            if (!Auki) return null;
+            // Pohjoisempana kuin rata ulottuu (Suomi 64,5°N, laitemittaus 28.9.: "ei ylilentoa 48 tunnin sisällä"): ylilento
+            // radan pohjoisimmalle osuudelle samalla pituudella, kamera kääntyy perillä silti omaan maahan (horisontissa).
+            return Lenna(new Havaintokohde { Tunnus = OmaSijaintiTunnus, Nimi = nimi, Lat = lat, Lon = lon }, valoisa,
+                Iss.OmaSijainti.HakuLeveys(lat));
+        }
+
+        Iss.Ylilento? Lenna(Havaintokohde k, bool valoisa, double? hakuLat = null)
+        {
             if (k == null || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko) return null;
-            var yl = Iss.Ylilennot.Seuraava(k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
+            var yl = Iss.Ylilennot.Seuraava(hakuLat ?? k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
             tietoAika = -1;
             if (yl == null) { lento = new Lento { Kohde = k }; return null; }
             if (kyyti.Tila != Iss.KyydinTila.Seuranta) NapautaIss();
-            var uusi = new Lento { Kohde = k, Ylilento = yl };
+            var uusi = new Lento { Kohde = k, Ylilento = yl, Alku = y.Aika };
             lento = uusi;
             uusi.Id = Iss.IssNyt.Simu.KelaaHetkeen(yl.Value.Hetki, vahennetty: y.VahennettyLiike);
             return yl;
@@ -343,9 +384,14 @@ namespace Matkakirja.Linssit.Astronautti
             if (!l.Ylilento.HasValue) return $"{l.Kohde.Nimi}: ei ylilentoa {Iss.Ylilennot.HakuH:0} tunnin sisällä";
             var yl = l.Ylilento.Value;
             return l.Perilla
-                ? $"{l.Kohde.Nimi}: ISS {Iss.KyydinTeksti.Luku(yl.SivuttainKm)} km sivussa"
+                ? $"{l.Kohde.Nimi}: ISS {Iss.KyydinTeksti.Luku(SivussaKm(l.Kohde, yl))} km sivussa"
                 : $"{l.Kohde.Nimi} · {Iss.KyydinTeksti.YlilennonTeksti(yl.Hetki, Iss.IssNyt.Kello())}";
         }
+
+        /// <summary>Etäisyys kohteeseen itseensä: oman sijainnin haku voi osua radan pohjoisimpaan kohtaan (OmaSijainti.HakuLeveys),
+        /// jolloin rivi kertoo matkan omaan maahan eikä hakupisteeseen (laite 28.9.: Suomi "20 km sivussa").</summary>
+        internal static double SivussaKm(Havaintokohde k, Iss.Ylilento yl) =>
+            Math.Max(yl.SivuttainKm, Iss.Ylilennot.MaaEtaisyysKm(yl.Lat, yl.Lon, k.Lat, k.Lon));
 
         readonly LatLon[] kaari = new LatLon[Astronauttimatikka.IssKaarenPisteita + 1];
         DateTime? kaariLaskettu;

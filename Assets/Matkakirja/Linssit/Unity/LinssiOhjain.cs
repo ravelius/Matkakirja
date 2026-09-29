@@ -108,6 +108,8 @@ namespace Matkakirja.Natiivi
         public static Func<bool> VahennettyLiikeKysely;
 
         PalloKierto kierto;
+        /// <summary>Maiden aineisto (vertailu ja maatiedot), kun ladattu; muuten null.</summary>
+        internal static Matkakirja.Linssit.Maat.MaatAineisto MaatAineisto;
         MaapallonVuosiSovitin vuosi;
         Linssirekisteri rekisteri;
 
@@ -731,6 +733,7 @@ namespace Matkakirja.Natiivi
             while (!lataus.IsCompleted) yield return null;
             if (lataus.IsFaulted) { Kirjaa("maat: " + lataus.Exception?.InnerException?.Message); yield break; }
             var a = lataus.Result;
+            MaatAineisto = a;   // ISS-kyydin "Oma sijainti" (OmaSijaintiHaku): maan nimi ja keskipiste ISO2-koodilla
             rekisteri.Lisaa(new MaatSovitin(this, a, vertailu: true));
             rekisteri.Lisaa(new MaatSovitin(this, a, vertailu: false));
             Kirjaa($"maat: {a.Maat.Count} maata, {a.Maat.Values.Count(m => m.NimiPallolle)} nimeä");
@@ -871,6 +874,8 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Radio.RadioLinssi linssi;
             RadioVirta virta;
             RadioViritin viritin;
+            /// <summary>Tehosteet elävät linssin yli (sulun kytkinääni ehtii soida loppuun).</summary>
+            RadioEfektit efektit;
             Kartta kartta;
 
             public RadioSovitin(LinssiOhjain o, Matkakirja.Linssit.Radio.RadioAineisto a) { this.o = o; aineisto = a; }
@@ -905,6 +910,8 @@ namespace Matkakirja.Natiivi
                 kartta = new Kartta(o.kierto);
                 linssi = new Matkakirja.Linssit.Radio.RadioLinssi(aineisto, virta, viritin, kartta,
                     Matkakirja.Linssit.Radio.RadioAineisto.Pistefontti);
+                if (efektit == null) efektit = RadioEfektit.Luo(o.transform);
+                linssi.Efektit = efektit;
                 // Pelaajan kaupunki näkyy aina radiotilassa (web sääntö 1).
                 linssi.Sijainti = () => PeliOhjain.Instanssi?.PelaajanKaupunki;
                 // Esikuuntelu (Natiivisepän ehto 4): ei kuumana eikä virransäästössä (Lampo.Kuuma, sama kuin Esilataaja.Seis).
@@ -1393,6 +1400,8 @@ namespace Matkakirja.Natiivi
                         else if (a == "yo" && osat.Length > 3) Yokuori.Pois = osat[3] == "0";   // A/B: astro kyyti yo 0|1
                         // A/B omistajan Cupola-palautteeseen (28.9.): uusi = Codexin tumma kuva syväterävyydellä (poltettu),
                         // terava = Codexin alkuperäinen, 3d = valaistu 3D-kehys, vanha = 1.0.35:n UI-kehys.
+                        // ISS-säätöpaneeli (omistaja 29.9.): välilehti, kutistus ja nahka kuvapariin.
+                        else if (a == "paneeli") Kirjaa(Matkakirja.Natiivi.IssKyytiNakyma.Paneeli(osat.Skip(3).ToArray()));
                         else if (a == "cupola" && osat.Length > 3)
                         {
                             CupolaKerros.Tyyli = osat[3] == "vanha" ? CupolaKerros.Tyylit.Vanha
@@ -1460,6 +1469,20 @@ namespace Matkakirja.Natiivi
                                 AstronauttiKerros.TarkkojenPilvienKm = Mathf.Clamp(km, 2f, 200f);
                         }
                         else if (a == "revontulet" && osat.Length > 3) Revontulet.Pois = osat[3] == "0";
+                        else if (a == "siirtyma")
+                            Kirjaa("astro kyyti siirtymä: " + (FindAnyObjectByType<AstronauttiKerros>()?.Linssi?.ViimeisinSiirtymaS is double ss
+                                ? $"{ss:F2} s (raja {Matkakirja.Linssit.Iss.Simukello.SiirtymaMaxS:0} s)" : "ei perillä"));
+                        else if (a == "pilvimaara" && osat.Length > 3) AstronauttiKerros.PilvienMaara = Mathf.Clamp01((float)Luku(osat[3])); // säädin 0–1
+                        else if (a == "sijainti")
+                        {
+                            // Oma sijainti: "astro kyyti sijainti [ISO2]" (ISO2 pakottaa maan ilman verkkoa).
+                            if (osat.Length > 3) OmaSijaintiHaku.Pakota(osat[3]);
+                            if (OmaSijaintiHaku.Paikka(out var sn, out var slat, out var slon))
+                                Kirjaa($"oma sijainti: {OmaSijaintiHaku.Iso2} ({OmaSijaintiHaku.Lahde}) {sn} {slat:F2}, {slon:F2} → "
+                                    + ((FindAnyObjectByType<AstronauttiKerros>()?.Linssi?.LennaPaikkaan($"Oma sijainti ({sn})", slat, slon)) is Matkakirja.Linssit.Iss.Ylilento yl
+                                        ? $"ylilento {yl.Hetki:HH:mm} UTC, {yl.SivuttainKm:F0} km" : "ei ylilentoa/ei kyydissä"));
+                            else { OmaSijaintiHaku.Aloita(); Kirjaa($"oma sijainti: ei vielä ({OmaSijaintiHaku.Iso2 ?? "-"}, haettu {OmaSijaintiHaku.Haettu})"); }
+                        }
                         else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("m") && int.TryParse(osat[3].Substring(1), out int pakko))
                             AstronauttiKerros.KuukausiPakotettu = pakko;                                   // 4a: m<kk> pakottaa, m0 pois
                         else if (a == "kuukausi" && osat.Length > 3 && osat[3].StartsWith("a") && float.TryParse(osat[3].Substring(1).Replace(',', '.'),
@@ -1545,6 +1568,8 @@ namespace Matkakirja.Natiivi
                     else if (osat[1] == "esikuuntelu" && osat.Length > 2) { EsikuunteluPois = osat[2] == "pois"; Kirjaa($"radio: esikuuntelu {(EsikuunteluPois ? "pois" : "päällä")}"); }
                     else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, taajuus {r.Tila.Taajuus:F4}, esikuuntelu {r.Esikuunneltu ?? "-"}, näkyvissä {r.Nakyvat.Count}, VU {r.Mittari.Osuus:F2}{(r.Mittari.Jaljitelty ? " (varakuvio)" : "")}, rms {((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Taso ?? -1):F4}, {VuSyy((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Kuvaus)}");
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
+                    // A/B Codexin uusi radio (29.9.) ↔ vanha kotelo kuvapariin.
+                    else if (osat[1] == "kuori" && osat.Length > 2) { RadioNakyma.Kuori(osat[2] != "vanha"); Kirjaa($"radio: kuori {osat[2]}"); }
                     else r.Viritä(osat[1].ToUpperInvariant());
                 }
                 else if (osat[0] == "isoisa" && osat.Length > 1 && osat[1] == "tila")
