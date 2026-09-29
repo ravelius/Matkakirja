@@ -144,7 +144,7 @@ namespace Matkakirja.Linssit.Radio
 
         public LinssiTiedot Tiedot => aineisto.Tiedot;
         public bool Auki { get; private set; }
-        public RadioTila Tila { get; private set; } = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "RADIO POIS", Rivi2 = "VALITSE KAUPUNKI" };
+        public RadioTila Tila { get; private set; } = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "EI ASEMAA", Rivi2 = "VALITSE KAUPUNKI" };
         public event Action<RadioTila> TilaMuuttui;
 
         /// <summary>Mitä asemalle tehdään sen lisenssiluokan mukaan (hybridimalli).</summary>
@@ -839,9 +839,13 @@ namespace Matkakirja.Linssit.Radio
             if (!viritysJatkuu) { soiva = null; Korostus(null); }
         }
 
+        /// <summary>
+        /// Ei asemaa (omistaja 29.9.2026: "radio on aina päällä, ja kun kytkin käännetään pois, koko radio häviää ja linssi
+        /// sulkeutuu"): näyttö ei sano "RADIO POIS", koska pois-tilaa ei ole — virtakytkin sulkee linssin (LinssiUi.SuljeLinssi).
+        /// </summary>
         void AsetaHiljaa()
         {
-            Tila = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "RADIO POIS", Rivi2 = "VALITSE KAUPUNKI" };
+            Tila = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "EI ASEMAA", Rivi2 = "VALITSE KAUPUNKI" };
             TilaMuuttui?.Invoke(Tila);
         }
 

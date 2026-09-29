@@ -789,7 +789,7 @@ namespace Matkakirja.Natiivi
             switch (mika)
             {
                 case "hiljaa":
-                    TilaMuuttui(new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "RADIO POIS", Rivi2 = "VALITSE KAUPUNKI" });
+                    TilaMuuttui(new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "EI ASEMAA", Rivi2 = "VALITSE KAUPUNKI" });
                     return null;
                 case "viritys":
                     Simuloi("pariisi", false);
