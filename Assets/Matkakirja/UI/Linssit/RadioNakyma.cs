@@ -1440,7 +1440,9 @@ namespace Matkakirja.Natiivi
             PaivitaNimi();
             if (napit.Count == 0 || juuri.panel == null) return;
             // Yksinkertaisessa kartassa merkit vain yläpalkin ja radiopaneelin välissä (laite rk1: nimet palkin päällä).
-            float yla = Yksinkertainen ? Ylapalkki.Varaus + 6f : float.MinValue, ala = Yksinkertainen ? RadioNakyma.PaneelinYla - 6f : float.MaxValue;
+            // Ylapalkki.Varaus on turva-alueen yläreunasta (laite rk2: ilman turvaa nimet jäivät palkin päälle).
+            float turvaYla = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(0, Screen.height - Screen.safeArea.yMax)).y;
+            float yla = Yksinkertainen ? turvaYla + Ylapalkki.Varaus + 6f : float.MinValue, ala = Yksinkertainen ? RadioNakyma.PaneelinYla - 6f : float.MaxValue;
             foreach (var n in napit.Values)
             {
                 var piste = LinssiOhjain.Ruutupiste(n.Tieto.Lat, n.Tieto.Lon);

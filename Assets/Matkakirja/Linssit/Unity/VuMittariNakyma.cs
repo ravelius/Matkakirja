@@ -142,8 +142,9 @@ namespace Matkakirja.Natiivi
                 Insert(0, l);
             }
             vuTeksti.style.fontSize = fontti;
-            vuTeksti.style.left = 0; vuTeksti.style.right = 0;
-            vuTeksti.style.top = 0.62f * K;
+            // VU vasempaan alakulmaan: neula nousee alareunan keskeltä (laite rk2: keskellä teksti jäi neulan alle).
+            vuTeksti.style.left = 0.06f * L; vuTeksti.style.right = StyleKeyword.Auto;
+            vuTeksti.style.top = K - fontti * 1.5f;
             // Neula akselilta kaaren yli; näkyvä osa alkaa alareunasta (akseli piilossa).
             float pituus = Sade + 2f * v;
             neula.style.width = Mathf.Max(1.2f, 1.3f * v);
