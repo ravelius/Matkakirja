@@ -2368,6 +2368,10 @@ export class UI {
     this.pilleriAarteetLista = document.getElementById('pilleri-aarteet-lista');
     this.pilleriLinssitBtn = document.getElementById('pilleri-linssit-btn');
     this.pilleriAarteetBtn = document.getElementById('pilleri-aarteet-btn');
+    // Asetukset-näkymä (omistaja 29.9.2026): äänentasot, Kartta, Ehdota, Kehittäjä, Näytä huntu.
+    this.pilleriAsetuksetNakyma = document.getElementById('pilleri-asetukset-nakyma');
+    this.pilleriAsetuksetBtn = document.getElementById('pilleri-asetukset-btn');
+    this.pilleriAsetuksetBtn?.addEventListener('click', () => this.naytaPilleriNakyma('asetukset'));
     this.pilleriNakyma = 'paa';
     this.pilleriAarreEsikatseltu = null;
     this.pilleriLinssitBtn?.addEventListener('click', () => this.naytaPilleriNakyma('linssit'));
@@ -3364,7 +3368,7 @@ export class UI {
      * palavat heti ensimmäisessä piirrossa.
      */
     kaynnistaKarttaselite(this);
-    // Kehittäjän Pelaajan näkymä -apunappi selitenapin alle (js/pelaajanakyma.js).
+    // Kehittäjän Näytä huntu -rivi Asetukset-näkymässä (js/pelaajanakyma.js).
     paivitaPelaajanakymaNappi(this);
     // Maakunnat-välilehden runko (js/karttatyokalu-maakunnat.js) heti
     // perässä: se vain rekisteröi rakentajan, ei piirrä mitään ennen
@@ -18198,7 +18202,7 @@ export class UI {
    * #3605:n (Siirtosepän avausanimaatio) jälkeen tämä kutsuu sen sijaan
    * animoiAvaus/haamuSulku-funktioita.
    *
-   * @param {'paa'|'linssit'|'aarteet'} nakyma
+   * @param {'paa'|'linssit'|'aarteet'|'asetukset'} nakyma
    * @param {{animoi?: boolean}} [asetukset] animoi=false ohittaa liikkeen
    *   (paneelin oma avaus/sulku hoitaa sen jo silloin)
    */
@@ -18209,6 +18213,7 @@ export class UI {
       paa: this.pilleriPaanakyma,
       linssit: this.pilleriLinssitNakyma,
       aarteet: this.pilleriAarteetNakyma,
+      asetukset: this.pilleriAsetuksetNakyma,
     };
     for (const [nimi, el] of Object.entries(kasvot)) {
       if (el) el.hidden = nimi !== nakyma;
@@ -18218,6 +18223,25 @@ export class UI {
     if (nakyma !== 'aarteet') this.pilleriAarreEsikatseltu = null;
     if (animoi && nayta) avaaAnimoiden(nayta, nakyma === 'paa' ? 'oikea' : 'vasen');
     if (nakyma === 'linssit') this.paivitaLinssiTiedot();
+    if (nakyma === 'asetukset') this.paivitaAsetuksetNakyma();
+  }
+
+  /**
+   * Asetukset-näkymän tilariippuvaiset rivit: Kehittäjä-rivin teksti
+   * (päällä/pois) ja Näytä huntu -rivin näkyvyys (js/pelaajanakyma.js).
+   * Kehittäjä-rivi avaa AINA saman salasanaikkunan (js/main.js
+   * avaaKehittajaIkkuna): ilman kehittäjätilaa kytkentäkyselyn, tilan
+   * ollessa päällä saman ikkunan Kytke pois -näkymän.
+   */
+  paivitaAsetuksetNakyma() {
+    const nappi = document.getElementById('asetukset-kehittaja-btn');
+    if (nappi) {
+      const paalla = kehittajaTilaPaalla();
+      nappi.classList.toggle('valittu', paalla);
+      const nimi = nappi.querySelector('.aanikytkin-nimi');
+      if (nimi) nimi.textContent = paalla ? 'Kehittäjätila päällä' : 'Kehittäjä';
+    }
+    paivitaPelaajanakymaNappi(this);
   }
 
   /*

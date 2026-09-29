@@ -5,7 +5,8 @@
  * että maailmatila ei olisi päällä. Ainoastaan kohdekaupungit näkyisivät himmeänä ja pystyisin edelleen klikkaamalla
  * siirtymään myös niihin, mutta muuten näkisin pelinäkymän samalla lailla, kuin normaali pelaaja."*
  *
- * Nappi on karttaselitenapin alla samassa kotelossa (.karttaselite), samankokoisena laattana, ja näkyy vain kun
+ * Nappi asui ensin karttaselitenapin alla (.karttaselite); omistaja 29.9.2026 (pillerivalikon palaute) siirsi sen
+ * Asetukset-näkymän "Näytä huntu" -riviksi (index.html #asetukset-huntu-btn, js/ui.js naytaPilleriNakyma). Nappi näkyy vain kun
  * kehittäjätila ja maailmatila ovat päällä (ei katselutilassa). Painallus kääntää pelaajan näkymän
  * (js/ui-apurit.js asetaKehittajaPelaajanakyma) ja ajaa saman päivityksen kuin maailmanappi
  * (ui.paivitaKehittajaMaailma): zoomi- ja panorointirajat, maan rajaus ja pisteet palaavat pelaajan sääntöihin, ja
@@ -14,39 +15,32 @@
  */
 
 import {
-  asetaKehittajaPelaajanakyma, html, kehittajaMaailmaValittu, kehittajaPelaajanakymaValittu, kehittajaTilaPaalla,
+  asetaKehittajaPelaajanakyma, kehittajaMaailmaValittu, kehittajaPelaajanakymaValittu, kehittajaTilaPaalla,
 } from './ui-apurit.js';
 
-const SILMA = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" '
-  + 'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'
-  + '<path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/>'
-  + '<circle cx="12" cy="12" r="2.8"/></svg>';
-
-/** Nappi karttaselitteen koteloon (luodaan kerran) ja sen näkyvyys ja tila ajan tasalle. */
+/** Rivi Asetukset-näkymässä (staattinen, index.html) ja sen näkyvyys ja tila ajan tasalle. */
 export function paivitaPelaajanakymaNappi(ui) {
   if (typeof document === 'undefined') return null;
-  const kotelo = ui?.mapPane?.querySelector?.('.karttaselite');
-  if (!kotelo) return null;
-  let nappi = kotelo.querySelector(':scope > .pelaajanakyma-nappi');
-  if (!nappi) {
-    nappi = html('button', 'pelaajanakyma-nappi');
-    nappi.type = 'button';
-    nappi.innerHTML = SILMA;
+  const nappi = document.getElementById('asetukset-huntu-btn');
+  if (!nappi) return null;
+  if (!nappi.dataset.kytketty) {
+    nappi.dataset.kytketty = '1';
     nappi.addEventListener('click', () => {
       asetaKehittajaPelaajanakyma(!kehittajaPelaajanakymaValittu());
       ui.paivitaKehittajaMaailma?.();
       paivitaPelaajanakymaNappi(ui);
     });
-    kotelo.appendChild(nappi);
   }
   const nakyy = kehittajaTilaPaalla() && kehittajaMaailmaValittu() && !ui.katselu;
   nappi.hidden = !nakyy;
   const paalla = kehittajaPelaajanakymaValittu();
-  nappi.setAttribute('aria-pressed', String(paalla));
+  nappi.classList.toggle('valittu', paalla);
+  nappi.setAttribute('aria-checked', String(paalla));
+  const tila = nappi.querySelector('.aanikytkin-tila');
+  if (tila) tila.textContent = paalla ? 'päällä' : 'pois';
   nappi.title = paalla
     ? 'Pelaajan näkymä PÄÄLLÄ: kartta kuten pelaajalla, piilossa olevat kaupungit himmeinä — napauta himmeää '
       + 'kaupunkia siirtyäksesi sinne; napauta tätä palataksesi maailmatilaan'
     : 'Pelaajan näkymä: näytä kartta kuten pelaajalla (piilossa olevat kaupungit himmeinä ja napautettavina)';
-  nappi.setAttribute('aria-label', paalla ? 'Pelaajan näkymä päällä' : 'Pelaajan näkymä');
   return nappi;
 }

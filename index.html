@@ -408,40 +408,6 @@
             <div class="kertoja-kotelo">
               <p class="valikko-otsikko">Äänet</p>
               <div id="kertoja-valikko" class="kertoja-valikko"></div>
-              <div id="aanivoimat" class="aanivoimat">
-                <div class="aanivoima">
-                  <label class="aanivoima-nimi" for="voima-tehosteet">Äänitehosteet</label>
-                  <input id="voima-tehosteet" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="100" />
-                  <b id="voima-tehosteet-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-                </div>
-                <div class="aanivoima">
-                  <label class="aanivoima-nimi" for="voima-pulu">Pulun ääni</label>
-                  <input id="voima-pulu" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="100" />
-                  <b id="voima-pulu-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-                </div>
-                <div class="aanivoima">
-                  <label class="aanivoima-nimi" for="voima-lukija">Lukija</label>
-                  <input id="voima-lukija" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="90" />
-                  <b id="voima-lukija-arvo" class="aanivoima-arvo" aria-live="polite">90 %</b>
-                </div>
-                <div class="aanivoima" data-liuku="musiikki">
-                  <label class="aanivoima-nimi" for="kehittaja-musiikki-liuku">Taustamusiikki</label>
-                  <input id="kehittaja-musiikki-liuku" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="35"
-                         aria-label="Taustamusiikin voimakkuus" />
-                  <b id="kehittaja-musiikki-arvo" class="aanivoima-arvo" aria-live="polite">35 %</b>
-                </div>
-                <div class="aanivoima" data-liuku="tausta">
-                  <label class="aanivoima-nimi" for="voima-tausta">Taustaäänet</label>
-                  <input id="voima-tausta" class="aanivoima-liuku" type="range"
-                         min="0" max="100" step="1" value="100"
-                         aria-label="Kaupungin äänimaiseman voimakkuus" />
-                  <b id="voima-tausta-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
-                </div>
-              </div>
             </div>
             <!-- KARTTA: PIENI LIIKE (Fable 21.9.2026): pulu lentää harvoin
                  kartan yli, pilven varjo liukuu reliefin päällä ja kellonaika
@@ -449,17 +415,6 @@
                  laiteasetus samassa riviasussa kuin äänikytkimet; rivi
                  rakennetaan js/main.js:ssä. prefers-reduced-motion sammuttaa
                  liikkeen kytkimestä riippumatta. -->
-            <div class="kertoja-kotelo kartta-kotelo">
-              <p class="valikko-otsikko">Kartta</p>
-              <div id="kartta-valikko" class="kertoja-valikko"></div>
-              <!-- VEDON SEURANTA JA TARKKUUS LIIKKEESSÄ POISTETTU VALIKOSTA
-                   (omistaja 22.9.2026 klo 22.30: "Poista kaikki ylimääräiset
-                   vivut valikosta niin löydän testattavat vaihtoehdot
-                   paremmin."). Liput toimivat yhä osoitteessa (?koe=,
-                   ?tarkkuus=); aiemmin tallennettu valinta nollataan
-                   käynnistyksessä (js/piirtokoe-asetus.js
-                   unohdaPoistetutValinnat). -->
-            </div>
             <!--
               PELILAUTA: KARTTAPALLO VAI VANHA KARTTA (omistaja
               5.9.2026, sanatarkasti: *"pelissä periaatteessa voisi olla
@@ -488,18 +443,20 @@
                    role="radiogroup" aria-label="Pelilauta"></div>
               <p id="lauta-vihje" class="lauta-vihje" hidden></p>
             </div>
-            <!-- Uusi peli ja ehdotuskanava LEVEINÄ TEKSTINAPPEINA
-                 allekkain (omistajan päätös 18.8.2026): v854:n kapeat
-                 kuvakeleveät "uusi"/"ehdota" olivat liian pienet
-                 kohteet, ja teksti kertoo mitä nappi tekee ilman
-                 arvailua. Rivi saa korostua: nämä ovat valikon ainoat
-                 komennot. -->
+            <!-- UUSI PELI JA ASETUKSET (omistaja 29.9.2026, pillerivalikon
+                 palaute): etusivun järjestys on Äänet-kytkimet, [Uusi peli],
+                 [Asetukset], [Linssit › · Aarteet ›] ja matkan tiedot. Natiivi
+                 tekee saman asettelun. RETKIKUNTA-nappia ei ole webissä:
+                 retkikuntaosio (js/sahke.js retkikuntaOsio) on osa
+                 palautelomaketta eikä oma näkymänsä, joten rivillä on vain
+                 Uusi peli. Äänentasot, Kartta-osio, Ehdota ja Kehittäjä
+                 asuvat Asetukset-näkymässä (#pilleri-asetukset-nakyma). -->
             <div class="valikko-alarivi">
               <button id="newgame-btn" class="ghost valikko-tekstinappi" type="button"
                       title="Uusi peli" aria-label="Uusi peli">uusi peli</button>
-              <button id="palaute-kulma" class="palaute-kulma valikko-tekstinappi" type="button"
-                      aria-label="Ehdota sisältöä tai lähetä palautetta tästä kohdasta"
-                      title="Ehdota sisältöä tai lähetä palautetta tästä kohdasta">ehdota sisältöä</button>
+              <button id="pilleri-asetukset-btn" class="ghost valikko-tekstinappi" type="button"
+                      aria-haspopup="true" aria-controls="pilleri-asetukset-nakyma"
+                      title="Asetukset: äänentasot, kartta, ehdotukset ja kehittäjä">Asetukset ›</button>
             </div>
             <!--
               LINSSIT JA AARTEET (omistaja 29.9.2026): kaksi omaa
@@ -593,6 +550,109 @@
                       aria-label="Mitä uutta, päivitys ja kehittäjätila"></button>
             </div>
           </div>
+          <!--
+            ASETUKSET-NÄKYMÄ (omistaja 29.9.2026): [Asetukset]-napin takana samassa
+            paneelissa kuin Linssit ja Aarteet (js/ui.js naytaPilleriNakyma).
+            Sisältö ylhäältä alas: ÄÄNENTASOT-liukusäätimet, KARTTA (Pieni liike),
+            Ehdota, Kehittäjä ja Näytä huntu. Liukusäätimet ja Kartta-lohko on
+            SIIRRETTY etusivulta (tunnisteet ja kuuntelijat ennallaan, ei kopioita);
+            Äänet-kytkimet (#kertoja-valikko) jäivät etusivulle.
+          -->
+          <div id="pilleri-asetukset-nakyma" class="pilleri-alanakyma" hidden>
+            <div class="pilleri-alanakyma-otsikko">
+              <button type="button" class="pilleri-takaisin" data-pilleri-takaisin
+                      aria-label="Takaisin valikkoon">‹ Takaisin</button>
+              <h2>Asetukset</h2>
+            </div>
+            <div class="kertoja-kotelo">
+              <p class="valikko-otsikko">Äänentasot</p>
+              <div id="aanivoimat" class="aanivoimat">
+                <div class="aanivoima">
+                  <label class="aanivoima-nimi" for="voima-tehosteet">Äänitehosteet</label>
+                  <input id="voima-tehosteet" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="100" />
+                  <b id="voima-tehosteet-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+                </div>
+                <div class="aanivoima">
+                  <label class="aanivoima-nimi" for="voima-pulu">Pulun ääni</label>
+                  <input id="voima-pulu" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="100" />
+                  <b id="voima-pulu-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+                </div>
+                <div class="aanivoima">
+                  <label class="aanivoima-nimi" for="voima-lukija">Lukija</label>
+                  <input id="voima-lukija" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="90" />
+                  <b id="voima-lukija-arvo" class="aanivoima-arvo" aria-live="polite">90 %</b>
+                </div>
+                <div class="aanivoima" data-liuku="musiikki">
+                  <label class="aanivoima-nimi" for="kehittaja-musiikki-liuku">Taustamusiikki</label>
+                  <input id="kehittaja-musiikki-liuku" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="35"
+                         aria-label="Taustamusiikin voimakkuus" />
+                  <b id="kehittaja-musiikki-arvo" class="aanivoima-arvo" aria-live="polite">35 %</b>
+                </div>
+                <div class="aanivoima" data-liuku="tausta">
+                  <label class="aanivoima-nimi" for="voima-tausta">Taustaäänet</label>
+                  <input id="voima-tausta" class="aanivoima-liuku" type="range"
+                         min="0" max="100" step="1" value="100"
+                         aria-label="Kaupungin äänimaiseman voimakkuus" />
+                  <b id="voima-tausta-arvo" class="aanivoima-arvo" aria-live="polite">100 %</b>
+                </div>
+              </div>
+            </div>
+            <div class="kertoja-kotelo kartta-kotelo">
+              <p class="valikko-otsikko">Kartta</p>
+              <div id="kartta-valikko" class="kertoja-valikko"></div>
+              <!-- VEDON SEURANTA JA TARKKUUS LIIKKEESSÄ POISTETTU VALIKOSTA
+                   (omistaja 22.9.2026 klo 22.30: "Poista kaikki ylimääräiset
+                   vivut valikosta niin löydän testattavat vaihtoehdot
+                   paremmin."). Liput toimivat yhä osoitteessa (?koe=,
+                   ?tarkkuus=); aiemmin tallennettu valinta nollataan
+                   käynnistyksessä (js/piirtokoe-asetus.js
+                   unohdaPoistetutValinnat). -->
+            </div>
+            <!-- EHDOTA, KEHITTÄJÄ JA NÄYTÄ HUNTU (omistaja 29.9.2026, sovittu
+                 natiivin kanssa): kukin OMANA kytkinrivinään samaan tyyliin kuin
+                 Kartta-osion Pieni liike (.kertoja-valikko > button.aanikytkin;
+                 kuvake, nimi, tila/nuoli oikealla) — ei pieniä tekstinappeja.
+                 - Ehdota (#palaute-kulma): toiminta ennallaan (js/main.js).
+                   Offline on vain natiivissa.
+                 - Kehittäjä: avaa saman salasanakyselyn kuin versionumeron
+                   takainen Kehittäjä-nappi (js/main.js avaaKehittajaIkkuna);
+                   teksti vaihtuu kehittäjätilan mukaan (js/ui.js
+                   paivitaAsetuksetNakyma).
+                 - Näytä huntu: kehittäjän maailmatilan Pelaajan näkymä -kytkin
+                   asui ennen kartalla karttaselitenapin alla; nyt täällä.
+                   js/pelaajanakyma.js pitää sen ajan tasalla, ja se näkyy vain
+                   silloin kuin ennenkin (kehittäjätila + maailmatila, ei
+                   katselutilassa). -->
+            <div class="kertoja-kotelo asetukset-rivikotelo">
+              <div class="kertoja-valikko asetukset-rivit">
+                <button id="palaute-kulma" class="aanikytkin" type="button"
+                        aria-label="Ehdota sisältöä tai lähetä palautetta tästä kohdasta"
+                        title="Ehdota sisältöä tai lähetä palautetta tästä kohdasta">
+                  <span class="viiva-ikoni"><svg viewBox="0 0 24 24"><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-7l-4.5 3.5V16.5H5A1.5 1.5 0 0 1 3.5 15V7A1.5 1.5 0 0 1 5 5.5z"/></svg></span>
+                  <span class="aanikytkin-nimi">Ehdota</span>
+                  <span class="aanikytkin-tila">›</span>
+                </button>
+                <button id="asetukset-kehittaja-btn" class="aanikytkin" type="button"
+                        title="Kehittäjätila">
+                  <span class="viiva-ikoni"><svg viewBox="0 0 24 24"><path d="M9.4 7.4 4.8 12l4.6 4.6M14.6 7.4 19.2 12l-4.6 4.6"/></svg></span>
+                  <span class="aanikytkin-nimi">Kehittäjä</span>
+                  <span class="aanikytkin-tila">›</span>
+                </button>
+                <button id="asetukset-huntu-btn" class="aanikytkin" type="button" role="switch"
+                        aria-checked="false" data-kytkin="huntu" hidden
+                        title="Pelaajan näkymä: näytä kartta kuten pelaajalla (piilossa olevat kaupungit himmeinä ja napautettavina)">
+                  <span class="viiva-ikoni"><svg viewBox="0 0 24 24"><path d="M2.5 12s3.5-6.5 9.5-6.5S21.5 12 21.5 12s-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg></span>
+                  <span class="aanikytkin-nimi">Näytä huntu</span>
+                  <span class="aanikytkin-tila">pois</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
           <!--
             LINSSIT-NÄKYMÄ (omistaja 29.9.2026): "Linssit voisivat olla
             listana ilman selitetekstiä ... kun linssiä klikkaa, niin
