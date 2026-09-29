@@ -212,11 +212,12 @@ namespace Matkakirja.Natiivi
 
         public void Yleisnakymaan(double t) => Kohdista(null, t);
 
-        /// <summary>Äänen URL (era 2, DioraamaAanet.cs): sama juuri ja peili kuin muu paketti (rakennus.json, glb,
-        /// atlakset) -- Rakennus.Aanet[id].Tiedosto on suhteessa rakennuksen juureen (dioraama-rajapinnat-
-        /// era2-20260929.md kohta 2 "AANET").</summary>
+        /// <summary>Äänen URL (era 2, DioraamaAanet.cs): Rakennus.Aanet[id].Tiedosto on suhteessa RAKENNUKSEN
+        /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md
+        /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/&lt;r&gt;/aanet/v&lt;versio&gt;/). Peili-ajossa
+        /// juuret ovat samat. Löydös 29.9. PEILI=pois-ajosta: paketinJuuri antoi 404 kaikille äänille.</summary>
         public string AaniUrl(string tiedostoRelPolku) =>
-            string.IsNullOrEmpty(tiedostoRelPolku) ? null : peili(paketinJuuri + tiedostoRelPolku);
+            string.IsNullOrEmpty(tiedostoRelPolku) ? null : peili(AmpariJuuri + tiedostoRelPolku);
 
         IEnumerator PeiteHetkeksi(float sekuntia)
         {
