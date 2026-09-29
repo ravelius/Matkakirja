@@ -3912,7 +3912,7 @@
     justify-content: center;
     min-height: 36px;
     border-radius: 8px;
-    background-color: rgba(217, 161, 59, 0.9);
+    background-color: #d9a13b; /* web --accent */
 }
 
 .mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tila {
