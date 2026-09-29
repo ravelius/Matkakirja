@@ -9243,3 +9243,7 @@ Omistaja 29.9.2026: pillerivalikon Aarteet-näkymään sama muutos kuin Linsseih
 ## OMISTAJA: LUENTA EI KUULU, MAAN RAJA MEREEN ILMAN SAARIA, IPAD-PALKKI MATALAMMAKSI (29.9.2026 klo 19.01)
 
 Omistaja 29.9.2026: 1) "isoisän matkakirjaluenta ei kuulu" — juurisyy Natiivi-UI (+ Laitetestaaja toistaa laitteella, Pelikoodari tarkistaa webin). 2) "maan rajan voi piirtää myös mereen. mutta jos maalla on saaria, niin älä piirrä niitä" — korostetun maan raja saa kulkea yksinkertaistettuna meren puolella, saaria ei ympäröidä omilla renkailla (Karttaseppä selvittää näkymän, natiivi Natiiviseppä/Natiivi-UI). 3) iPadin nahkapalkki: Codexin 130 pt:n kooste liian korkea → 89 pt tai matalampi, tikkaus alareunassa.
+
+## OMISTAJA: JOET RAUHALLISEMMIKSI, OHUEMMIKSI, EI JÄRVIEN PÄÄLLE (29.9.2026 klo 19.06)
+
+Omistaja 29.9.2026 jokipolton vientikuvista: "liian hektisesti piirretyiltä sekä liian paksuilta. Ja yhdessä kuvassa joki menee järven päältä... Voisiko nuo tarkemmat jokikuvat piirtää vain omalle tasolleen. Voi olla vaara, että ne hyppäävät liikaa." Linja: jokien yleistys ja pehmennys zoomin mukaan, ohuempi viiva (pääjoki hieman vahvempi), jokiviivat leikataan järvipolygoneilla, tarkemmat sivujoet vain syville tasoille, sama pääjoki samassa kohdassa kaikilla tasoilla (ei hyppimistä). Koepoltto ja kuvaparit (myös tasosiirtymä) omistajalle ennen täyttä polttoa ja vientiä. Isoisän luenta toimi — omistajan äänenvoimakkuus oli nollissa.
