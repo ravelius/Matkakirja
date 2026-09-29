@@ -17,6 +17,7 @@
 // SULKEVAT: ✕, rivin valinta, Kysy Pululta, uusi napautus avaajaan, napautus muualle (ei niele: ISS:n napautus vie silti
 // kyytiin), linssin sulku. PAIKKA (PulunTaulu.Sijoita): Pulun yllä tai vasemmalla, ei koskaan Pulun eikä ISS-merkin
 // päällä; auki ollessa mitataan 400 ms:n välein. Häivytys 160 ms (peitto ja 6 pt:n nousu), pieni liike pois: suoraan.
+// LAAJENNUS: LisaaRivi lisää rivin ISS-rivien jälkeen (Linssiseppä 2:n avaruuskävely, Päätoimittaja 29.9.2026).
 using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Astronautti;
@@ -225,14 +226,52 @@ namespace Matkakirja.Natiivi
             rivit.Clear();
             var l = Linssi();
             var nyt = Nykyinen(l);
-            foreach (var r in PulunTaulu.Rivit(l != null && l.Auki, l != null && l.Kohteet.Count > 0, nyt))
+            bool kyytiOn = l != null && l.Auki;
+            // Käynnissä oleva lisärivi (esim. avaruuskävely) on valittu; silloin moodirivi ei ole.
+            var lisaAktiivinen = kyytiOn ? lisarivit.Find(x => Kysy(x.Aktiivinen)) : null;
+            foreach (var r in PulunTaulu.Rivit(kyytiOn, l != null && l.Kohteet.Count > 0, nyt))
             {
                 string tunnus = r.Tunnus;
-                var b = Rakenne.Nappi(null, "mk-astroTaulu__rivi" + (r.Aktiivinen ? " mk-valittu" : ""), () => Valitse(tunnus), rivit);
-                b.tooltip = r.Otsikko;
-                Kirjasimet.Aseta(Rakenne.Teksti(r.Otsikko, "mk-astroTaulu__riviOtsikko", b), Kirjasin.LukuLihava);
-                Rakenne.Teksti(r.Selite, "mk-astroTaulu__riviSelite", b);
+                Rivi(r.Otsikko, r.Selite, r.Aktiivinen && lisaAktiivinen == null, () => Valitse(tunnus));
+                // Lisärivit ISS-rivien jälkeen, ennen kuvia (kyydin kanssa kuten ISS-rivit).
+                if (tunnus == "iss-sisalle")
+                    foreach (var x in lisarivit) { var y = x; Rivi(y.Otsikko, y.Selite, ReferenceEquals(y, lisaAktiivinen), () => Valitse(y.Tunnus)); }
             }
+        }
+
+        void Rivi(string otsikko, string selite, bool valittu, Action valinta)
+        {
+            var b = Rakenne.Nappi(null, "mk-astroTaulu__rivi" + (valittu ? " mk-valittu" : ""), valinta, rivit);
+            b.tooltip = otsikko;
+            Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-astroTaulu__riviOtsikko", b), Kirjasin.LukuLihava);
+            Rakenne.Teksti(selite, "mk-astroTaulu__riviSelite", b);
+        }
+
+        static bool Kysy(Func<bool> f) { try { return f != null && f(); } catch { return false; } }
+
+        // --- laajennus: lisärivit ------------------------------------------------------------
+
+        sealed class LisaRivi
+        {
+            public string Tunnus, Otsikko, Selite;
+            public Func<bool> Aktiivinen;
+            public Action Toiminto;
+            public AstroMoodi? Lahto;
+        }
+        readonly List<LisaRivi> lisarivit = new List<LisaRivi>();
+
+        /// <summary>
+        /// LAAJENNUS (Linssiseppä 2:n avaruuskävely, Päätoimittaja 29.9.2026): lisärivi ISS-rivien jälkeen ja ennen kuvia. Näkyy
+        /// kuten ISS-rivit (kyyti olemassa) ja on valittu (vihreä), kun aktiivinen() on tosi. Valinta sulkee taulun; jos lahto on
+        /// annettu, askelkone vie ensin siihen moodiin (esim. kuva kiinni ja ISS:n rinnalle) ja kutsuu toiminto() vasta perillä.
+        /// Sama tunnus korvaa aiemman rivin. Rivi rekisteröidään omasta koodista, jotta haarat eivät riipu toisistaan.
+        /// </summary>
+        public void LisaaRivi(string tunnus, string otsikko, string selite, Func<bool> aktiivinen, Action toiminto, AstroMoodi? lahto = null)
+        {
+            if (string.IsNullOrEmpty(tunnus) || toiminto == null) return;
+            lisarivit.RemoveAll(x => x.Tunnus == tunnus);
+            lisarivit.Add(new LisaRivi { Tunnus = tunnus, Otsikko = otsikko, Selite = selite, Aktiivinen = aktiivinen, Toiminto = toiminto, Lahto = lahto });
+            if (Auki) Rakenna();
         }
 
         AstroMoodi Nykyinen(AstronauttiLinssi l) =>
@@ -327,10 +366,18 @@ namespace Matkakirja.Natiivi
 
         void Valitse(string tunnus)
         {
+            var lisa = lisarivit.Find(x => x.Tunnus == tunnus);
             var rivi = PulunTaulu.Rivi(tunnus);
-            if (rivi == null) return;
+            if (rivi == null && lisa == null) return;
             loki.Add("valitse:" + tunnus);
             Sulje("valinta");
+            if (lisa != null)
+            {
+                void Tee() { try { lisa.Toiminto(); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA pulun taulu: " + tunnus + ": " + e.Message); } }
+                if (lisa.Lahto.HasValue) SiirryMoodiin(lisa.Lahto.Value, Tee);
+                else Tee();
+                return;
+            }
             if (Nykyinen(Linssi()) == rivi.Moodi) return;
             SiirryMoodiin(rivi.Moodi, null);
         }
@@ -406,7 +453,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Testikomento `ui linssi taulu [auki|kiinni|pulu|valitse <tunnus>|kysy|ilman-pulua|pulu-takaisin|tila]`: auki/kiinni
+        /// Testikomento `ui linssi taulu [auki|kiinni|pulu|valitse <tunnus>|kysy|ilman-pulua|pulu-takaisin|testirivi|tila]`: auki/kiinni
         /// suoraan, pulu = Pulun napautuksen polku (vaientaa puheen), valitse = rivin napautus (pallo|iss-rinnalla|iss-sisalle|
         /// kuvat), kysy = Kysy Pululta, ilman-pulua = Näkymät-nappi. Palauttaa tilan (paikka, alue, Pulun laatikko, moodi, loki).
         /// </summary>
@@ -421,6 +468,8 @@ namespace Matkakirja.Natiivi
                 case "kysy": KysyPululta(); break;
                 // Pulu pois näkyvistä ja takaisin: Näkymät-nappi Pulun paikalla (webin mallikuva 7).
                 case "ilman-pulua": Pulu.Hae().Nayta(false); PaikkaKierros(); break;
+                // Laajennuksen koe: lisärivi ISS-rivien jälkeen, valinta vie ensin ISS:n rinnalle ja kirjaa toiminnon.
+                case "testirivi": LisaaRivi("testirivi", "Testirivi", "Laajennuksen koe", () => false, () => loki.Add("testirivi:toiminto"), AstroMoodi.Seuranta); break;
                 case "pulu-takaisin": Pulu.Hae().Nayta(true); PaikkaKierros(); break;
             }
             return Tila();
