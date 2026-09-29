@@ -16,6 +16,9 @@ TF 1.0.44 = 4d7bc2ed ja 1.0.45 = 6dc1b7cc odottavat Päätoimittajan VIE-lupaa j
 Seuraavat merge-pyynnöt kootaan sivuhaaraan natiiviseppa/juna-1046 masterista, testataan (exit-koodit) ja avataan junaan Julkaisijan
 luvalla. Burst-korjaus (omistajan lupa 10.33) on käännöspalvelussa, ja 1.0.45-juna meni sillä läpi. Seuraa, toistuuko AotLinkerException.
 
+HUOM seuraavaan junaan: tervetulon Äänimaisema-korjaus tulee kahtena osana, jotka otetaan junaan YHDESSÄ: Natiivi-UI:n puhekanava
+(ei mykisty Äänimaiseman mukana) ja Linssisepän mykistysehto (Kertoja + Pulun liuku). Yksinään kumpikin kuluttaisi "kuultu"-muistin.
+
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain, kun erä on valmis, olet jumissa tai sinulla on kysymys (enintään 8 riviä), SendMessage nimellä.
 - Juna avataan vain Julkaisijan kuittauksella.
