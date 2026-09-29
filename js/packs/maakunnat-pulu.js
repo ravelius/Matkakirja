@@ -1762,6 +1762,16 @@ export const MAAKUNTIEN_PULU = {
   { q: "Kuka oli Sergei Koroljov ja miksi hän on niin tärkeä?", a: "Koroljov syntyi Žytomyrissa 1907 ja hänestä tuli myöhemmin Neuvostoliiton avaruusohjelman johtava suunnittelija. Hän vastasi muun muassa ensimmäisen satelliitin Sputnikin ja ensimmäisen ihmisen avaruuslennon teknisestä toteutuksesta." },
   { q: "Kuka oli Vasili Grossman?", a: "Grossman syntyi Berdytšivissä 1905 ja työskenteli myöhemmin sotakirjeenvaihtajana toisessa maailmansodassa. Hänen kirjoituksiaan pidetään yhtenä ajan tärkeimmistä silminnäkijäkuvauksista, ja hänen myöhempi romaaninsa Elämä ja kohtalo on yksi 1900-luvun merkittävimmistä venäjänkielisistä teoksista." },
 ],
+    "Crimea": [
+      { q: "Mitä Bahtšisarai tarkoittaa, ja mikä on Kyynelten lähde?", a: "Nimi tulee krimintataarin sanoista bahçe (puutarha) ja saray (palatsi). Kyynelten lähde on kaanien palatsin marmorinen suihkukaivo, jonka legendan mukaan kaani Kırım Giray teetti kaipaamansa Marian muistoksi; Pushkin vieraili palatsissa 1820 ja julkaisi aiheesta runon 1824." },
+      { q: "Mitä krimintataarien perinneruokaa kannattaisi maistaa ensimmäiseksi?", a: "Çiberekiä eli chiburekkia: rapeaksi paistettua taikinataskua, jonka täytteenä on jauhelihaa ja sipulia. Sen grillattu versio on yantıq, ja juhlaruokana tunnetaan köbete, riisistä ja kanasta tehty piirakka kahden taikinakerroksen välissä." },
+      { q: "Mikä on örnek, jota näkee krimintataarien kirjonnoissa ja koruissa?", a: "Örnek on krimintataarien koristekuviojärjestelmä, jossa on noin 35 symbolia, ja jokaisella on oma merkityksensä. Sitä käytetään kirjonnassa, keramiikassa, puunveistossa ja koruissa, ja se hyväksyttiin UNESCOn aineettoman kulttuuriperinnön luetteloon joulukuussa 2021." },
+    ],
+    "Sevastopol": [
+      { q: "Mitä khora tarkoittaa Khersonesoksen yhteydessä?", a: "Khora oli antiikin kaupungin maaseutualue, jonka pellot ja viinitarhat jaettiin satoihin suorakulmaisiin, samankokoisiin tontteihin. Viinistä tuli Khersonesoksen vientituote." },
+      { q: "Mistä Balaklavan nimi tulee?", a: "Antiikin kreikkalaiset kutsuivat paikkaa nimellä Symbolon, ja genovalaisten aikana se oli Cembalo. Nykyisen nimen selitetään yleensä tulevan turkkilaisesta muodosta Balık-yuva eli kalanpesä." },
+      { q: "Millainen paikka Inkermanin luolaluostari on?", a: "Se on kallioseinämään louhittu luostarikompleksi Tšornaja-joen suulla, jossa on kalliokirkkoja ja asuinluolia. Vanhimmat kirkot ajoitetaan tavallisesti vähintään 700-luvulle." },
+    ],
   },
   BGR: {
     Blagoevgrad: [

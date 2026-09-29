@@ -8956,6 +8956,14 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       ],
       pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
     },
+    Crimea: {
+      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
+      pitka: "Krimin niemimaan eteläisellä rannikolla Mustameri ja vuoret ovat lähes kosketusetäisyydellä: noin 150 kilometriä pitkän Krimin vuoriston korkein huippu Roman-Kosh nousee 1 545 metriin. Rannikon puutarhojen keskellä Livadian valkoinen kalkkikivipalatsi valmistui vuonna 1911 uusrenessanssin tyyliin, ja siinä on 116 huonetta. Jaltan tuntumassa Massandran viinikellarit ovat kypsyttäneet muskottiviinejä vuodesta 1894 graniittiin louhituissa tunneleissa. Vuorten pohjoispuolella Bahtšisarain kaanien palatsi, jonka rakennutti 1500-luvulla Sahib I Giray, kätkee sisäpihalleen Kyynelten lähteen, josta Aleksandr Pushkin sai aiheen runoonsa.",
+    },
+    Sevastopol: {
+      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+      pitka: "Sevastopolin kalliorannikolla antiikki, luostarit ja merihistoria kulkevat rinnakkain. Taurisen Khersonesoksen kaupungin perustivat kreikkalaiset siirtolaiset noin 2 500 vuotta sitten, ja sen viininviljelyalue eli khora kuuluu vuonna 2013 UNESCOn maailmanperintöluetteloon hyväksyttyyn kohteeseen. Kaupunki eli aina 1400-luvun tienoille. Sevastopolinlahti ulottuu noin 7,5 kilometrin mittaisena sisämaahan kohti Inkermanin luolaluostaria, jonka kalliokirkot ovat varhaiskeskiajalta. Etelämpänä Balaklavan pieni lahti kätkeytyy kallioiden suojaan; genovalaisten Cembalo-linnakkeen vanhimmat rakennuskirjoitukset ovat vuodelta 1357, ja antiikissa paikka tunnettiin nimellä Symbolon.",
+    },
   },
   /*
    * VALKO-VENÄJÄ (BLR) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A),
@@ -9667,9 +9675,6 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     Chita: {
       lyhyt: 'Taka-Baikalin Daurian arot ja Toreijärvet ovat Unescon maailmanperintöä, ja niillä vaeltaa mongoliangaselleja.',
     },
-    Crimea: {
-      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
-    },
     Dagestan: {
       lyhyt: 'Dagestanin Sulakin kanjoni on lähes kaksi kilometriä syvä, syvempi kuin Coloradon Grand Canyon.',
     },
@@ -9822,9 +9827,6 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Saratov: {
       lyhyt: 'Saratovin harmonikan kannessa on kaksi pientä kelloa, jotka helähtävät bassonappien tahdissa tanssikappaleissa.',
-    },
-    Sevastopol: {
-      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
     },
     Smolensk: {
       lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
