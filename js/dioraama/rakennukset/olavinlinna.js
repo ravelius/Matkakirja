@@ -30,9 +30,9 @@ const TAULU_KEITTIO = {
   otsikko: 'Linnan keittiö',
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä', aani: 'keittio-kohta-0' },
-    { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä', aani: 'keittio-kohta-1' },
-    { teksti: 'Keittiö ruokki koko linnaväen: vartijat, palvelusväen ja isännän pöytään kutsutut vieraat.', lahde: 'Keittiön paikka linnassa on tulkinta; kuvaus keskiaikaisista linnankeittiöistä', aani: 'keittio-kohta-2' },
+    { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-0' },
+    { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-1' },
+    { teksti: 'Keittiö ruokki koko linnaväen: vartijat, palvelusväen ja isännän pöytään kutsutut vieraat.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-2' },
   ],
 };
 
