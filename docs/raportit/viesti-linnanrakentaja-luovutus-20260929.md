@@ -13,7 +13,8 @@ Poikkileikkaus-linssi (id `poikkileikkaus`, moottori "dioraama"). Lue ensin
   - `js/dioraama/` (data ja logiikka), `tools/dioraama/` (rakennuskone), testit `tests/dioraama-*` 104/104.
   - Rajapintaspeksi: `docs/raportit/dioraama-rajapinnat-20260929.md`.
   - Ei PR:ää vielä, koska pelistä ei viitata tiedostoihin.
-- **Proto-git:** worktree `/Users/Shared/Claude/wt/proto-linnanrakentaja-keittio`, haara `linnanrakentaja/keittio` 474df855.
+- **Proto-git:** worktree `/Users/Shared/Claude/wt/proto-linnanrakentaja-keittio`, haara `linnanrakentaja/keittio` c2525dd5
+  (erä 1 474df855 + DoF).
   - Sisältö: `Linssit/Ydin/Dioraama/`, `Linssit/Unity/Dioraama*`, 2 varjostinta ja `UI/Linssit/DioraamaTaulu.cs`.
   - Yhteiset tiedostot: `LinssiOhjain.cs` +3 riviä, `LinssiUi.cs` +2 riviä.
   - Testit: Linssit-testit 414/414 ja unity-tarkistus 0 virhettä.
@@ -44,10 +45,11 @@ Poikkileikkaus-linssi (id `poikkileikkaus`, moottori "dioraama"). Lue ensin
 
 ## Seuraavaksi (erä 2)
 
-**Kesken luovutushetkellä:** Sonnet-agentti tekee proto-worktreehen syväterävyyden (Volume + Gaussian DoF kerrokseen 9,
-komento `poikki dof 0|1`) ja taulun marginaalin Pulun viereen. Muutokset ovat commitoimatta: tarkista `git status` ja
-unity-tarkistus, commitoi, ja käännä vasta sitten Julkaisijan vuorolla.
-
+**Valmis mutta kääntämättä:** proto `linnanrakentaja/keittio` c2525dd5 sisältää syväterävyyden ja taulun marginaalin.
+Syväterävyys: Volume + Gaussian DoF kerrokseen 9, komento `poikki dof 0|1`; syvyysajo on käytössä vain DoF:n ollessa
+päällä. Testit: unity-tarkistus 0 virhettä, Linssit 414/414.
+Seuraava askel: käännös Julkaisijan vuorolla ja kuvapari DoF päällä/pois. Riski: Gaussian-variantti pysyy buildissa
+vain Filmipino.assetin kautta.
 
 1. **Julkaisija vie paketin ämpäriin.** `dist/dioraama/olavinlinna/` → `media.matkakirja.app/dioraama/olavinlinna/`.
    Sen jälkeen oletuspeili pois, uusi käännös, simulaattorisavuke ja merge-pyyntö Natiivisepälle (haara, commit,
