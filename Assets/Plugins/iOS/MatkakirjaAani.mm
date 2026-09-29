@@ -17,10 +17,17 @@ extern "C" void MatkakirjaAani_Toisto(void)
 {
     AVAudioSession* istunto = [AVAudioSession sharedInstance];
     NSError* virhe = nil;
-    if (![istunto setCategory:AVAudioSessionCategoryPlayback
-                         mode:AVAudioSessionModeSpokenAudio
-                      options:AVAudioSessionCategoryOptionMixWithOthers
-                        error:&virhe])
+    // LUENNAN ALKUKATKO (omistaja 1.0.39, Natiivi-UI 29.9.): tätä kutsutaan myös jokaisesta Unityn äänen kokoonpanon
+    // muutoksesta (AaniIstunto.cs), eli juuri reitin vaihtuessa (Bluetooth herää, kuulokkeet kytketään). Ehdoton
+    // setCategory samaan luokkaan käynnistää reitin neuvottelun uudelleen ja katkaisee ulostulon hetkeksi, joten
+    // luokka asetetaan vain, kun se on väärä (sama kuvio kuin MatkakirjaRadio.mm istuntoKuntoon). setActive on halpa.
+    BOOL oikein = [istunto.category isEqualToString:AVAudioSessionCategoryPlayback]
+        && [istunto.mode isEqualToString:AVAudioSessionModeSpokenAudio]
+        && istunto.categoryOptions == AVAudioSessionCategoryOptionMixWithOthers;
+    if (!oikein && ![istunto setCategory:AVAudioSessionCategoryPlayback
+                                    mode:AVAudioSessionModeSpokenAudio
+                                 options:AVAudioSessionCategoryOptionMixWithOthers
+                                   error:&virhe])
     {
         NSLog(@"MATKAKIRJA puhe: setCategory epäonnistui: %@", virhe);
         return;

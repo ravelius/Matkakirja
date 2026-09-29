@@ -61,8 +61,12 @@ namespace Matkakirja.Natiivi
         public const int TekstinKatto = 2500;
         /// <summary>Luennan loppuhäivytys (web LUENNAN_HAIPYMA_S).</summary>
         public const float Haivytys = 1.5f;
-        /// <summary>Uuden puheen alkuhäivytys (web: kertoja alkaa pehmeästi).</summary>
+        /// <summary>Korvattavan puheen häivytys uuden alta (web: kertoja alkaa pehmeästi).</summary>
         public const float Alkuhaivytys = 0.15f;
+        /// <summary>A/B-mittaus (peli-komento "puhe alku vanha|uusi"): vanha = uusi klippi häivytetään nollasta ruutujen tahdissa.</summary>
+        public static bool VanhaAlku;
+        /// <summary>Testi (peli-komento "puhe jumi ms"): pääsäie seisoo seuraavan Play():n jälkeen, kuten raskaassa ruudussa.</summary>
+        public static int JumiMs;
 
         public static Puhe Instanssi { get; private set; }
 
@@ -1061,12 +1065,22 @@ namespace Matkakirja.Natiivi
             var vanha = lahde.clip;
             lahde.Stop();
             lahde.clip = klippi;
-            lahde.volume = 0;
+            // LUENNAN ALKUKATKO (omistaja 1.0.39: isoisän luennan ja kaupungin nimen alku ei välillä kuulu laitteella;
+            // Natiivi-UI 29.9.): ennen klippi alkoi voimakkuudella 0 ja nousi 150 ms:ssa pääsäikeen ruuduissa. Äänisäie
+            // soittaa kuitenkin Play():sta lähtien, joten jos pääsäie seisoo heti Play():n jälkeen (saapuminen: kaupunki,
+            // kortti ja kartta samassa ruudussa; laitteella hitaampi kuin simulaattorissa), klippi soi koko jumin ajan
+            // mykkänä ja ensimmäinen tavu katoaa. Puheklipeissä on 0,11–0,20 s hiljaisuutta alussa (mitattu 10 klippiä
+            // välimuistista), joten alku ei naksahda: klippi alkaa suoraan kohdetasolla, ja häivytys jää vain korvattavalle.
+            lahde.volume = VanhaAlku ? 0f : Kohdetaso;
             lahde.pitch = 1f; // nopeus on generoinnissa (web: ei playbackRatea)
             this.synteesi = synteesi;
             PaivitaVahvistus();
             vahvistin.Nollaa();
             lahde.Play();
+            double playDsp = AudioSettings.dspTime;
+            float playRuutu = Time.unscaledTime;
+            if (JumiMs > 0) { System.Threading.Thread.Sleep(JumiMs); JumiMs = 0; }
+            StartCoroutine(AlkuMittari(klippi, playDsp, playRuutu));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
             // saman puheen jatkoa: ei loppua eikä alkua väliin (lataus-kahva kuuluu yhä SoitaPalat-korutiinille).
@@ -1076,7 +1090,24 @@ namespace Matkakirja.Natiivi
                 lataus = null;
             }
             if (!puhuu) AsetaPuhuu(true);
-            haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
+            if (VanhaAlku) haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
+        }
+
+        /// <summary>
+        /// Alun mittari (currentTime-mittaus): ensimmäisessä ruudussa Play():n jälkeen soittokohta, voimakkuus ja kulunut
+        /// äänikello. "mykkänä" = soitettu aika, jonka lähde oli voimakkuudella 0 (vanha alku jumin jälkeen), yli klipin
+        /// alkuhiljaisuuden se on kadonnut tavu.
+        /// </summary>
+        IEnumerator AlkuMittari(AudioClip klippi, double playDsp, float playRuutu)
+        {
+            float v0 = lahde.volume;
+            yield return null;
+            if (lahde.clip != klippi) yield break;
+            double dsp = (AudioSettings.dspTime - playDsp) * 1000.0;
+            float t = lahde.time;
+            Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: 1. ruutu {(Time.unscaledTime - playRuutu) * 1000:0} ms "
+                + $"(äänikello {dsp:0} ms), soittokohta {t:0.000} s, voimakkuus Play():ssa {v0:0.00} nyt {lahde.volume:0.00}, "
+                + $"mykkänä {(v0 > 0f ? 0f : t):0.000} s {klippi?.name}");
         }
 
         /// <summary>Valmiin virran tavut välimuistitiedostoon (atominen siirto). false, jos tavuja ei saatu.</summary>
