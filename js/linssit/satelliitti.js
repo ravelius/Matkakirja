@@ -161,7 +161,7 @@ import { diagNyt, pallodiag } from '../pallodiag.js';
 import { luoMinipulu } from '../minipulu.js';
 import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
-import { aloitaPulunTervetulo } from './pulu-tervetulo.js';
+import { PULUN_TERVETULO_KAYTOSSA, aloitaPulunTervetulo } from './pulu-tervetulo.js';
 import { luoAstroTaulu } from './pulu-taulu.js';
 
 /*
@@ -1961,8 +1961,10 @@ function avaa(lauta, tila, ui) {
    * ensimmäisellä avauksella, kun musta verho on poissa. Pulu puhuu
    * Pulun taulun aikana ilman kuplaa, eikä kamera liiku.
    * Ei avaruusnäkymää (tasokartta, kaatunut WebGL) → ei tervetuloa.
+   * OMISTAJA 29.9.2026: Pulun ääni toistaiseksi kokonaan pois
+   * ISS-kohtauksesta (PULUN_TERVETULO_KAYTOSSA = false).
    */
-  const tervetulo = avaruus ? vaihe('pulun-tervetulo', () => aloitaPulunTervetulo({
+  const tervetulo = avaruus && PULUN_TERVETULO_KAYTOSSA ? vaihe('pulun-tervetulo', () => aloitaPulunTervetulo({
     ui,
     avaruus,
   })) : null;

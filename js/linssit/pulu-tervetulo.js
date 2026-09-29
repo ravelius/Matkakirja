@@ -32,6 +32,15 @@ import {
   sanoPulunIssRepliikkiIlmanKuplaa,
 } from './pulu-iss.js';
 
+/**
+ * TERVETULO POIS KÄYTÖSTÄ (omistaja 29.9.2026: *"Ota pulun ääni toistaiseksi
+ * kokonaan pois ISS-kohtauksesta."*): Astronautin kamerassa Pulu ei puhu
+ * lainkaan, ja Pulun taulu aukeaa heti hiljaisena. Jakso jää tähän
+ * valmiiksi (testit ajavat sen suoraan); satelliitti.js ei aloita sitä,
+ * kun kytkin on pois.
+ */
+export const PULUN_TERVETULO_KAYTOSSA = false;
+
 /** Laitteen muistin avain: tervetulo on kuultu. */
 export const PULUN_TERVETULO_TALLE = 'matkakirja-pulu-astro-tervetulo';
 /** Hengähdys paljastuksen (musta verho pois) jälkeen ennen A1:tä. */

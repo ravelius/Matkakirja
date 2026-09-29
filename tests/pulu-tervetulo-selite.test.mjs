@@ -59,7 +59,12 @@ test('avaaHavaintokortti ottaa automaattiluentaSallittu-parametrin (oletus: sall
 test('avaaKohde antaa automaattiluentaSallittu: () => !tervetuloKesken() joka avaukselle', () => {
   assert.match(lahde, /automaattiluentaSallittu: \(\) => !tervetuloKesken\(\),/);
   // Sama tervetulo-kahva, jonka vaihetta portti lukee.
-  assert.match(lahde, /const tervetulo = avaruus \? vaihe\('pulun-tervetulo', \(\) => aloitaPulunTervetulo\(\{/);
+  assert.match(lahde, /const tervetulo = avaruus && PULUN_TERVETULO_KAYTOSSA \? vaihe\('pulun-tervetulo', \(\) => aloitaPulunTervetulo\(\{/);
+});
+
+test('omistaja 29.9.: Pulun ääni toistaiseksi pois ISS-kohtauksesta (tervetulo ei ala)', async () => {
+  const { PULUN_TERVETULO_KAYTOSSA } = await import('../js/linssit/pulu-tervetulo.js');
+  assert.equal(PULUN_TERVETULO_KAYTOSSA, false);
 });
 
 test('tervetuloKesken käyttää samaa vaihe-tarkistusta kuin pulu-taulu.js:n automaattiKierros', () => {
