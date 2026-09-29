@@ -9235,3 +9235,7 @@ Omistaja 29.9.2026: "ei generoida vielä ääniä. Haluan nähdä itse linssin e
 ## OMISTAJA: PUURADIO V3 KÄYTTÖÖN, V4 HYLÄTTY (29.9.2026 klo 18.51)
 
 Omistaja 29.9.2026: "Se vanhempi versio kolme, radio on parempi kuin tämä uusi. Käytetään sitä, vaikka onkin vielä huono." Codexin v3 (näyttö valonlähteenä, runko tummempi) tuodaan peliin tummalla kirjainvärillä #3a1e06 (Linssiseppä 2 2cd27b8c); v4 (valokuvamaiset materiaalit, heikompi valon leviäminen puuhun) hylätty. Radion parantaminen jatkuu myöhemmin.
+
+## OMISTAJA: AARTEET SAMOIN KUIN LINSSIT (29.9.2026 klo 18.57)
+
+Omistaja 29.9.2026: pillerivalikon Aarteet-näkymään sama muutos kuin Linsseihin — lista heti oikeassa reunassa, valittu rivi muuttuu oranssiksi Näytä-napiksi aarteen nimen kohdalla, vasemman puolen erillinen nappi pois (Natiivi-UI + Pelikoodari).
