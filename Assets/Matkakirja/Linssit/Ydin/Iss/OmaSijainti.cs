@@ -35,8 +35,12 @@ namespace Matkakirja.Linssit.Iss
         public static double HakuLeveys(double lat) =>
             Math.Abs(lat) <= Ylilennot.MaksimiLeveys ? lat : Math.Sign(lat) * RadanLeveys;
 
-        /// <summary>Katseen enimmäismatka ISS:n alapisteestä (km): kauempana maa näkyy vain utuna horisontissa.</summary>
-        public const double KatseKm = 700;
+        /// <summary>
+        /// Katseen enimmäismatka ISS:n alapisteestä (km). 700 km (kallistus ~60°) ei piirtänyt laattoja lainkaan: pitkällä
+        /// objektiivilla (kenttä ~11°) ja loivalla katseella näkyi vain pohjapallon reliefisävy #264e91 (laite 29.9. vertailu
+        /// master ↔ haara: Etna 33 km sivussa, kallistus 5–20°, piirtyy molemmissa). 200 km ≈ 25° kallistus.
+        /// </summary>
+        public const double KatseKm = 200;
 
         /// <summary>
         /// Minne kamera kääntyy perillä (laite 28.9. saatimet4: Suomi 1 520 km:n päässä näkyi pelkkänä harmaana utuna, kun katse
