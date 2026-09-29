@@ -1367,6 +1367,21 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
 }
 .iss-kyyti-ikkuna .iss-kyyti-cupola > div[data-ladattu="1"] { opacity: 1; }
 /*
+ * CUPOLA 3 (natiivi c2645317, omistaja 28.9.2026 klo 22.5x): valmiiksi rajattu ohjaamo cover × 1,04; kun ruutu on eri
+ * asennossa kuin kuva, säiliö (leveys = ruudun korkeus, JS) käännetään 90° myötäpäivään keskeltä. Reunavalojen
+ * läpinäkyvyys tulee auringosta (--valo, iss-kyyti-nakyma.js paivitaCupola3).
+ */
+.iss-kyyti-cupola[data-malli="3"] { transform: scale(1.04); }
+.iss-kyyti-cupola.iss-kyyti-cupola-kaanna {
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(90deg) scale(1.04);
+}
+.iss-kyyti-ikkuna .iss-kyyti-cupola > div.iss-kyyti-valo[data-ladattu="1"] { opacity: var(--valo, 0); }
+/* iPadin Cupola 3 -kuvassa ikkuna on hieman yläpuolella: keskelle kuvaa siirtämällä (natiivi: 31,8 pt alas), ei laatikkoa. */
+.iss-kyyti-cupola[data-malli="3"][data-koko="ipad-2732x2048"] > div { background-position: 50% 6.5%; }
+/*
  * SYVYYS: ulko-osat (lasin takana) ja heijastus (lasissa) liikkuvat hitaasti
  * vastakkain kuin katsojan pää liikkuisi — täsmälleen kuten natiivin
  * IssKyytiNakyma.Heilu (Linssiseppä 28.9.2026): u = 2π·t/8 s, heijastus

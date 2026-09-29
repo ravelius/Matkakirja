@@ -63340,6 +63340,125 @@ export const MAA_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Serbian historia kulkee luostarin valkoisesta marmorista '
+        + 'linnoituksen väärinpäin käyvään kelloon ja lopulta pimeään '
+        + 'museohuoneeseen, jossa loistaa kultainen pallo. Neljä pysähdystä '
+        + 'näyttävät, miten keskiajan kuningaskunta, Habsburgien '
+        + 'raja-linnoitus ja nykyaikaisen tieteen sankari kietoutuvat samaan '
+        + 'tarinaan Tonavan rannalla.',
+      nostot: [
+        {
+          otsikko: 'Linnoitus, joka pelastui mutta ei pelastanut',
+          aika: '1456–1459',
+          tiedosto: 'Sava and Danube in Belgrade, view from Kalemegdan Park at the Victor statue.jpg',
+          teksti: 'Heinäkuussa 1456 sulttaani Mehmed II piiritti '
+            + 'Nándorfehérvárin linnoitusta, nykyistä Belgradia. Serbian '
+            + 'despootti Đurađ Branković, 79-vuotias, saattoi vain katsoa '
+            + 'vierestä: hänen oma 9 000 miehen armeijansa oli murskattu '
+            + 'lähistöllä jo kolme viikkoa aiemmin, 18. kesäkuuta. '
+            + 'Piirityksen mursivat lopulta János Hunyadin joukot ja '
+            + 'talonpoikaisristiretkeläiset 22. heinäkuuta. Branković kuoli '
+            + 'joulukuussa samana vuonna omassa Smederevon linnassaan. '
+            + 'Voitto jäi lyhytaikaiseksi: kolme vuotta myöhemmin, 1459, '
+            + 'Smederevo itse – Serbian viimeinen pääkaupunki – antautui '
+            + 'sulttaanille, ja maa katosi kartalta vuosisadoiksi.',
+          lyhyt: 'Belgradin Kalemegdan-linnoitus, jonka juurella Sava laskee '
+            + 'Tonavaan – ottomaanien piirityksen 1456 näyttämö.',
+          selite: 'Näkymä Kalemegdanin puistosta Voittajan patsaan luota '
+            + 'Savan ja Tonavan yhtymäkohtaan. Linnoitus oli 1456 Unkarin '
+            + 'hallussa, ei Serbian.',
+          lahde: 'Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)',
+          wiki: 'Siege of Belgrade (1456)',
+        },
+        {
+          otsikko: 'Kello, joka käy väärinpäin',
+          aika: '1692–1780',
+          tiedosto: 'Clock tower at Petrovaradin Fortress 2.jpg',
+          teksti: 'Kun Habsburgit valtasivat Petrovaradinin osmaneilta, '
+            + 'keisari Leopold I käski 1692 rakentaa vanhan linnoituksen '
+            + 'tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden '
+            + 'hallitsijan ajalle, ja suunnittelun uskotaan nojanneen '
+            + 'ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva '
+            + 'pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. '
+            + 'Linnoituksen kellotornissa iso viisari näyttää tunnit ja '
+            + 'pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa '
+            + 'joelta tulevat laivurit erottivat kellonajan helpommin. '
+            + 'Lämpötilaherkkä koneisto käy kesällä edellä ja talvella '
+            + 'jäljessä, minkä vuoksi paikalliset kutsuvat sitä '
+            + 'Humalaiseksi kelloksi.',
+          lyhyt: 'Petrovaradinin linnoituksen kellotorni Novi Sadissa, '
+            + 'jonka iso viisari näyttää tunnit.',
+          selite: 'Petrovaradinin kellotornin kaksi kellotaulua läheltä. '
+            + 'Tornin nykyinen koneisto on 1700-luvun puolivälistä.',
+          lahde: 'Miluša Snidová, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Petrovaradin Fortress',
+        },
+        {
+          otsikko: 'Kuningas, josta tuli munkki',
+          aika: '1190–1196',
+          tiedosto: 'Manastir Studenica, Bogorodičina crkva.jpg',
+          teksti: 'Stefan Nemanja yhdisti Serbian pirstoutuneet '
+            + 'ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi '
+            + 'maata yli kaksisataa vuotta. Hän aloitti Studenican '
+            + 'luostarin rakentamisen 1180-luvulla ja pystytti sen '
+            + 'sydämeen valkoisesta marmorista Neitsyt Marian kirkon. '
+            + 'Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa '
+            + 'Stefanin hyväksi ja otti munkiksi vihkimisessä nimen '
+            + 'Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle '
+            + 'liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan '
+            + 'poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian '
+            + 'ortodoksisen kirkon perustaja. Studenica on Unescon '
+            + 'maailmanperintöä vuodesta 1986.',
+          lyhyt: 'Studenican luostarin Neitsyt Marian kirkko, jonka '
+            + 'perusti kuningas Stefan Nemanja.',
+          selite: 'Studenican luostarin valkomarmorinen Neitsyt Marian '
+            + 'kirkko Kraljevon lähellä. Nemanjić-suvun hallitsijoita on '
+            + 'haudattu Serbian keskiaikaisiin luostareihin.',
+          lahde: 'BrankaVV, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Studenica Monastery',
+        },
+        {
+          otsikko: 'Kultapallo pimeässä huoneessa',
+          aika: '1943–1957',
+          tiedosto: 'Urn with Teslas ashes.jpg',
+          teksti: 'Nikola Tesla kuoli yksin hotellihuoneessaan New '
+            + 'Yorkissa 7. tammikuuta 1943, 86-vuotiaana ja käytännössä '
+            + 'varattomana. Ruumis tuhkattiin, mutta uurna jäi '
+            + 'vuosikymmeniksi Yhdysvaltoihin, kunnes se tuotiin '
+            + 'Belgradiin vuonna 1957. Kuvanveistäjä Nebojša Mitrić '
+            + 'suunnitteli tuhkille kultapinnoitetun pallon, sillä pallo '
+            + 'oli Tesla itse nimennyt täydellisimmäksi geometriseksi '
+            + 'muodoksi. Pallo lepää marmorijalustalla pimennetyssä '
+            + 'huoneessa Nikola Tesla -museossa, ja se on museon käydyin '
+            + 'kohde. Serbiaan syntynyt, Yhdysvaltoihin muuttanut keksijä '
+            + 'palasi lopulta kotimaahansa – tosin vasta pallon muodossa, '
+            + 'museon perustamisvuonna 1957.',
+          lyhyt: 'Nikola Teslan tuhkaa säilyttävä kultapinnoitettu pallo '
+            + 'Belgradin Tesla-museossa.',
+          selite: 'Kuvanveistäjä Nebojša Mitrićin suunnittelema urna '
+            + 'lepää marmorijalustalla pimennetyssä huoneessa.',
+          lahde: 'Vasenka, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Nikola Tesla Museum',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Petrovaradinin kellotornin iso viisari näyttää '
+          + 'tunnit eikä minuutteja?',
+        vaihtoehdot: [
+          'Kellorakentaja teki virheen',
+          'Jotta joen laivurit erottivat ajan kaukaa',
+          'Kello on peräisin toisesta tornista',
+          'Se on vain koriste eikä oikeasti käy',
+        ],
+        oikea: 1,
+        fakta: 'Petrovaradinin linnoituksen kellotornissa iso viisari '
+          + 'näyttää tunnit ja pieni viisari minuutit, jotta Tonavalla '
+          + 'kulkevat laivurit erottaisivat kellonajan kaukaa.',
+      },
+    },
   ],
   ALB: [
     /*
@@ -63411,6 +63530,128 @@ export const MAA_KATEGORIAT = {
           ],
         },
       ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Albanian historia on kerrottu vuoristossa: antiikin '
+        + 'kaupunki, jonka suot lopulta nielaisivat, tuhannen ikkunan '
+        + 'kaupunki vuoren rinteellä, linna jota sulttaanikaan ei saanut '
+        + 'valloitettua, ja parveke, jolta nostettu lippu teki maasta '
+        + 'itsenäisen. Neljä pysähdystä kattavat yli kaksi vuosituhatta '
+        + 'yhden pienen maan tarinaa.',
+      nostot: [
+        {
+          otsikko: 'Yön yli syntynyt lippu',
+          aika: '28.11.1912',
+          tiedosto: 'Monumenti i Pavarësisë.jpg',
+          teksti: 'Marraskuun 28. päivänä 1912 kokoontui Vlorëen 83 '
+            + 'edustajaa eri puolilta Albaniaa ja julisti maan '
+            + 'itsenäiseksi Osmanien valtakunnasta. Sen jälkeen johtaja '
+            + 'Ismail Qemali astui vuokra-asuntonsa parvekkeelle ja nosti '
+            + 'punaisen lipun, jossa oli Skanderbegin musta kaksipäinen '
+            + 'kotka – symboli oli ollut osmanivallan aikana kiellettyä. '
+            + 'Lipun ompelijaksi muistetaan paikallinen aktivisti Marigo '
+            + 'Posio, jota kutsutaan yhä Albanian lipun äidiksi; hän teki '
+            + 'omalla kustannuksellaan useita kopioita uusille '
+            + 'virastoille. Qemalista tuli itsenäisen Albanian '
+            + 'ensimmäinen pääministeri, mutta rajat vahvistuivat vasta '
+            + 'seuraavana vuonna Lontoon suurvaltaneuvottelussa.',
+          lyhyt: 'Vlorën itsenäisyysmonumentti, joka muistuttaa 28. '
+            + 'marraskuuta 1912 julistetusta itsenäisyydestä.',
+          selite: 'Monumentti kuvaa itsenäisyysjulistuksen allekirjoittajia '
+            + 'ja pystytettiin Vlorëen vuosikymmeniä tapahtuman jälkeen.',
+          lahde: 'Arianit, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Albanian Declaration of Independence',
+        },
+        {
+          otsikko: 'Valkoinen kaupunki tuhannella ikkunalla',
+          aika: '314 eaa. – 2008',
+          tiedosto: 'The old town of Berat 2019.jpg',
+          teksti: 'Makedonialainen kenraali Kassandros perusti kaupungin '
+            + 'nimellä Antipatreia vuonna 314 eaa. isänsä Antipatroksen '
+            + 'kunniaksi, vanhan illyrialaisasutuksen paikalle. Bysantin '
+            + 'aikaan se tunnettiin nimellä Pulcheriopolis, ja keskiajan '
+            + 'slaavilainen nimi Beligrad – Valkoinen kaupunki – kuvasi '
+            + 'jo silloin sen valkoisia taloja. Osmanit valtasivat '
+            + 'kaupungin 1417. Nykyisin Osum-joen kahta rantaa '
+            + 'reunustavat Mangalemin ja Gorican korttelit, joiden '
+            + 'rinteille kiipeävissä taloissa on niin paljon ikkunoita, '
+            + 'että albaanit kutsuvat kaupunkia tuhannen ikkunan '
+            + 'kaupungiksi. Unesco liitti Beratin '
+            + 'maailmanperintöluetteloon 2008 yhdessä Gjirokastërin '
+            + 'kanssa.',
+          lyhyt: 'Beratin vanhakaupunki, jonka valkoiset talot kiipeävät '
+            + 'rinnettä ikkunarivi toisensa perään.',
+          selite: 'Näkymä Beratin Mangalemin korttelin ylle Kalaja-'
+            + 'linnanmäeltä. Kaupunki on ollut Unescon maailmanperintöä '
+            + 'vuodesta 2008.',
+          lahde: 'Michel NOCTURE, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Berat',
+        },
+        {
+          otsikko: 'Kaupunki, jonka suot nielaisivat',
+          aika: '600-luku eaa. – 1928',
+          tiedosto: 'Butrint, Theater.jpg',
+          teksti: 'Korkyran (nykyisen Korfun) kreikkalaiset perustivat '
+            + 'Butrintiin kauppa-asutuksen viimeistään 600-luvulla eaa., '
+            + 'ja siitä kasvoi vaurastuva Rooman-kauden kaupunki, jolla '
+            + 'oli oma teatteri, kylpylät ja vesijohto. Bysantin aikana '
+            + 'kaupungista tuli piispanistuin, ja lyhyen '
+            + 'venetsialaiskauden jälkeen ympäristö alkoi soistua. '
+            + 'Keskiajan lopulla Butrint hylättiin kokonaan, ja raunioita '
+            + 'peitti vuosisatojen ajan malariasuo. Italialainen '
+            + 'arkeologi Luigi Maria Ugolini alkoi kaivaa kaupunkia esiin '
+            + '1928, ja työ paljasti kerroksia kreikkalaisesta, '
+            + 'roomalaisesta ja bysanttilaisesta ajasta päällekkäin. '
+            + 'Unesco liitti Butrintin maailmanperintöluetteloon 1992.',
+          lyhyt: 'Butrintin antiikin teatteri, kreikkalaisen ja '
+            + 'roomalaisen kaupungin jäänne Etelä-Albaniassa.',
+          selite: 'Butrintin hyvin säilynyt kreikkalainen teatteri. '
+            + 'Kaupunki hylättiin keskiajalla soistumisen vuoksi ja '
+            + 'kaivettiin esiin vasta 1920-luvulla.',
+          lahde: 'Cosal, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Butrint',
+        },
+        {
+          otsikko: 'Linna, jota sulttaani ei saanut',
+          aika: '1450',
+          tiedosto: 'Krujë castle during sunset.jpg',
+          teksti: 'Marraskuussa 1443 Gjergj Kastrioti eli Skanderbeg '
+            + 'karkasi osmanien armeijasta kesken sotaretken, ratsasti '
+            + 'Krujëhun väärennetyillä asiakirjoilla ja otti linnan '
+            + 'haltuunsa juonella. Hän luopui islamista, palasi '
+            + 'kristityksi ja aloitti 25 vuotta kestäneen kapinan. '
+            + 'Toukokuussa 1450 sulttaani Murad II saapui linnan juurelle '
+            + 'noin 100 000 sotilaan – niistä 60 000 ratsuväkeä – '
+            + 'kanssa, mukanaan nuori poikansa, tuleva Mehmed II. '
+            + 'Piiritys kesti lokakuuhun asti, yli viisi kuukautta. '
+            + 'Ottomaanit menettivät noin 20 000 miestä ja albaanit yli '
+            + 'tuhat, ennen kuin sulttaani luovutti ja vetäytyi '
+            + 'Edirneen. Krujë pysyi valloittamattomana koko Skanderbegin '
+            + 'elinajan.',
+          lyhyt: 'Krujën linna, Skanderbegin tukikohta 25 vuotta '
+            + 'kestäneessä kapinassa osmaneja vastaan.',
+          selite: 'Krujën linna auringonlaskussa. Se kesti kolme suurta '
+            + 'piiritystä Skanderbegin elinaikana: 1450, 1466 ja 1467.',
+          lahde: 'Ravi Dwivedi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Skanderbeg',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Beratin keskiaikainen slaavilainen nimi Beligrad '
+          + 'tarkoittaa?',
+        vaihtoehdot: [
+          'Valkoinen kaupunki',
+          'Musta kaupunki',
+          'Suuri kaupunki',
+          'Pyhä kaupunki',
+        ],
+        oikea: 0,
+        fakta: 'Beratin keskiaikainen slaavilainen nimi Beligrad '
+          + 'tarkoittaa Valkoista kaupunkia, mikä viittasi jo tuolloin '
+          + 'sen valkoisiin taloihin.',
+      },
     },
   ],
   MKD: [
@@ -63485,6 +63726,110 @@ export const MAA_KATEGORIAT = {
           ],
         },
       ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Pohjois-Makedonia on maa, jossa antiikin roomalaiskaupungin rauniot, '
+        + 'keskiaikaisen Bysantin kirkot ja vuoden 1903 kymmenen päivän tasavalta '
+        + 'kerrostuvat samalle maaperälle. Jopa maan oma nimi ja pääkaupungin suurin '
+        + 'patsas ovat olleet kiistan aiheita – historia täällä ei ole koskaan pelkkää '
+        + 'menneisyyttä.',
+      nostot: [
+        {
+          otsikko: 'Kymmenen päivän tasavalta',
+          aika: '3.–13.8.1903',
+          tiedosto: 'Makedonium 09.JPG',
+          teksti: 'Elokuun 3. päivänä 1903 makedonialaiskapinalliset valtasivat pienen Kruševon '
+            + 'vuoristokaupungin Osmanivaltakunnalta. Seuraavana päivänä sosialisti Nikola '
+            + 'Karev julistettiin tasavallan presidentiksi, ja hän kokosi hallintoneuvoston, '
+            + 'jossa istui edustajia sekä slaaveista, albaaneista että vlaheista – kapina ei '
+            + 'ollut yhden kansan asia. Ilo jäi lyhyeksi: 12. elokuuta osmanijoukot '
+            + 'murskasivat kapinalliset Mečkin Kamenin taistelussa, jossa komentaja Pitu Guli '
+            + 'kaatui ja Karev pakeni hädin tuskin Bulgariaan. Kaupunki paloi osittain '
+            + 'seuraavana päivänä. Vuonna 1974 pystytetty Makedonium-muistomerkki kohoaa yhä '
+            + 'kukkulalla kaupungin yllä.',
+          lyhyt: 'Kruševon lyhytikäinen tasavalta yhdisti slaavit, albaanit ja vlahit kymmeneksi '
+            + 'päiväksi ennen osmanien vastaiskua.',
+          selite: 'Vuonna 1974 avattu Makedonium-muistomerkki Kruševon kukkulalla kunnioittaa '
+            + 'vuoden 1903 Ilinden-kapinaa ja sen lyhytikäistä tasavaltaa.',
+          lahde: 'Raso mk, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kruševon tasavalta',
+        },
+        {
+          otsikko: 'Balkanin Jerusalem',
+          aika: '9.–13. vuosisata',
+          tiedosto: 'Church of St. John at Kaneo 6.jpg',
+          teksti: 'Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen '
+            + 'pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava '
+            + 'Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun '
+            + 'ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä '
+            + 'keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, '
+            + 'yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on '
+            + 'kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. '
+            + 'Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.',
+          lyhyt: 'Ohridin järven rannalla kohoava Pyhän Johanneksen kirkko on yksi Euroopan '
+            + 'kuvatuimmista maisemista.',
+          selite: 'Kaneon niemelle rakennettu kirkko on peräisin 1200-luvulta, ja Ohridin järvi '
+            + 'ja vanhakaupunki kuuluvat Unescon maailmanperintöön sekä luontona että '
+            + 'kulttuurina.',
+          lahde: 'Kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ohridin järvi',
+        },
+        {
+          otsikko: 'Linnoitus maanjäristysten raunioilla',
+          aika: '6. vuosisata –',
+          tiedosto: 'KaleFortress-Skopje2.JPG',
+          teksti: 'Vardar-joen mutkaan roomalaiset perustivat Scupin kaupungin, josta kasvoi '
+            + 'tärkeä uskonnollinen ja kaupallinen keskus temppeleineen ja teattereineen. '
+            + 'Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja keisari Justinianus I '
+            + 'käski rakentaa uuden linnoituksen läheiselle kukkulalle – osin juuri '
+            + 'raunioituneen kaupungin kivistä. Kaivauksissa linnoituksen alta on paljastunut '
+            + 'Scupin asukkaiden taloja, jotka jäivät uuden Kale-nimisen muurin alle '
+            + 'vuosisadoiksi. Muureja on sittemmin rakennettu uudelleen bysanttilaisten, '
+            + 'slaavien ja osmanien aikana, ja ne ovat kestäneet myös Skopjen toisen suuren '
+            + 'maanjäristyksen vuonna 1963.',
+          lyhyt: 'Skopjen Kale-linnoitus nousi roomalaisen Scupin raunioista, kun maanjäristys '
+            + 'tuhosi kaupungin vuonna 518.',
+          selite: 'Kale on turkkia ja tarkoittaa linnoitusta; muurien alta kaivetut talot '
+            + 'kuuluivat vielä Scupin viimeisille asukkaille.',
+          lahde: 'Yemc, Wikimedia Commons (PD)',
+          wiki: 'Skopjen linnoitus',
+        },
+        {
+          otsikko: 'Ratsastava soturi torilla',
+          aika: '2011',
+          tiedosto: 'Warrior on horse statue, Skopje, Macedonia 2.jpg',
+          teksti: 'Skopjen pääaukiolle nousi syyskuussa 2011 pronssipatsas: hevonen '
+            + 'ratsastajineen 10-metrisen suihkulähdejalustan päällä, yhteensä lähes 25 '
+            + 'metriä korkea. Firenzessä valettu, Valentina Stevanovskan suunnittelema teos '
+            + 'paljastettiin itsenäisyysäänestyksen 20-vuotispäivänä, mutta se ristittiin '
+            + 'virallisesti vain "Ratsastavaksi soturiksi" – naapurimaa Kreikka piti '
+            + 'Aleksanteri Suuren nimen käyttöä oman historiansa omimisena. Yli 20 vuotta '
+            + 'kestänyt nimikiista ratkesi vasta 2018 Prespan sopimuksella, kun maan nimeksi '
+            + 'vahvistettiin Pohjois-Makedonia. Patsas on osa Skopje 2014 -hanketta, joka '
+            + 'täytti kaupungin sadoilla uusilla patsailla.',
+          lyhyt: 'Skopjen pääaukion jättiläispatsas esittää Aleksanteri Suurta, vaikka sitä ei '
+            + 'virallisesti saanut nimetä hänen mukaansa.',
+          selite: 'Patsas on osa Skopje 2014 -rakennushanketta, ja sen nimeäminen oli osa Kreikan '
+            + 'ja Pohjois-Makedonian pitkää kiistaa muinaisen Makedonian perinnöstä.',
+          lahde: 'Yann Forget, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Skopje 2014',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka valittiin Kruševon tasavallan presidentiksi elokuussa 1903?',
+        vaihtoehdot: [
+          'Nikola Karev',
+          'Pitu Guli',
+          'Gotse Delchev',
+          'Dame Gruev',
+        ],
+        oikea: 0,
+        fakta: 'Nikola Karev julistettiin Kruševon tasavallan presidentiksi 4. elokuuta 1903, '
+          + 'ja tasavalta kesti kymmenen päivää ennen kuin osmanijoukot murskasivat sen '
+          + 'Mečkin Kamenin taistelussa.',
+      },
     },
   ],
   MNE: [
@@ -63562,6 +63907,106 @@ export const MAA_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Montenegron pieni maa on täynnä äärimmäisyyksiä: eteläslaavien ensimmäinen '
+        + 'painettu kirja syntyi vuoristokylässä jo 1494, Euroopan eteläisin vuono '
+        + 'leikkaa kalkkikivivuoret kahtia, ja kaksi pyhää miestä lepää yhä maan '
+        + 'korkeimmalla huipulla ja kalliolouhoksessa.',
+      nostot: [
+        {
+          otsikko: 'Lyijykirjaimet Obodin kalliolla',
+          aika: '1493–1496',
+          tiedosto: 'Cetinje monastery.jpg',
+          teksti: 'Zetan hallitsija Ivan Crnojević siirsi pääkaupunkinsa 1480-luvulla vuoristoon '
+            + 'perustamalleen Cetinjeen, koska Skadarjärven ranta ei enää ollut turvassa '
+            + 'osmaneilta. Hänen poikansa Đurađ pystytti 1493 lähelle, Obodin kalliolle '
+            + 'Rijeka Crnojevićan luona, eteläslaavien ensimmäisen kirjapainon – '
+            + 'lyijyladelmat ja koristekirjaimet valettiin paikan päällä. Munkki Makarijen '
+            + 'johdolla painosta vieri 4. tammikuuta 1494 valmiiksi Oktoih prvoglasnik, '
+            + 'ensimmäinen kyrillisin kirjaimin painettu kirja Kaakkois-Euroopassa. Painosta '
+            + 'ehti ilmestyä vain viisi teosta ennen kuin osmanien eteneminen pysäytti '
+            + 'toiminnan 1496.',
+          lyhyt: 'Obodin kirjapaino painoi vuonna 1494 ensimmäisen eteläslaavien kyrillisen '
+            + 'kirjan.',
+          selite: 'Đurađ Crnojevićin isä Ivan perusti Cetinjen ja sen luostarin 1480-luvulla; '
+            + 'Cetinjen museot säilyttävät yhä painon jäänteitä ja alkuperäiskappaleita.',
+          lahde: 'Koroner, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Obodin kirjapaino',
+        },
+        {
+          otsikko: 'Muuri joka kiipeää vuorelle',
+          aika: '9.–18. vuosisata',
+          tiedosto: 'Kotor, Montenegro.jpg',
+          teksti: 'Kotor kätkeytyy Euroopan eteläisimmän vuonon perukkaan, jyrkkien vuorten ja '
+            + 'meren väliin. Kaupunki on ollut asutettu yli 2000 vuotta, ja roomalaiset, '
+            + 'bysanttilaiset, venetsialaiset, itävaltalaiset ja osmanit ovat jättäneet '
+            + 'siihen jälkensä – vanhankaupungin sydämessä kohoaa vuonna 1166 vihitty Pyhän '
+            + 'Tryphonin katedraali. Suurin osa muureista nousi venetsialaisvallan aikana: ne '
+            + 'kiipeävät 260 metrin korkeuteen kaupungin yllä, ja pituutta niillä on lähes '
+            + '4,5 kilometriä. Unesco listasi Kotorin maailmanperinnöksi jo 1979, ja 2017 '
+            + 'muurit liitettiin vielä venetsialaisten puolustusrakennelmien sarjaan.',
+          lyhyt: 'Kotorin vuono ja sen venetsialaismuurein varustettu vanhakaupunki ovat '
+            + 'kaksinkertaisesti Unescon maailmanperintöä.',
+          selite: 'Kotorin satamakaupunki on ollut asuttu yli 2000 vuotta, ja sen 4,5 kilometrin '
+            + 'muurit kiipeävät 260 metrin korkeuteen kaupungin yllä olevalle kalliolle.',
+          lahde: 'Ronnie Pander, Wikimedia Commons (PD)',
+          wiki: 'Kotorin vuono',
+        },
+        {
+          otsikko: '461 porrasta pilviin',
+          aika: '1851–1974',
+          tiedosto: 'Njegošev mauzolej.JPG',
+          teksti: 'Petar II Petrović-Njegoš oli sekä Montenegron ruhtinaspiispa että maan tärkein '
+            + 'runoilija, ja hänen toiveensa oli levätä Lovćenin vuoren huipulla. Kuoltuaan '
+            + '1851 hänet haudattiin sinne pieneen kappeliin. Ensimmäisessä maailmansodassa '
+            + 'Itävalta-Unkarin miehittäjät halusivat pystyttää huipulle muistomerkin keisari '
+            + 'Franz Josefille ja vaativat jäännökset siirrettäväksi Cetinjeen; kappeli '
+            + 'rappeutui pahoin. Vasta 1970-luvulla kroatialainen kuvanveistäjä Ivan '
+            + 'Meštrović sai valmiiksi uuden mausoleumin Jezerski vrhin huipulle, 1660 metrin '
+            + 'korkeuteen. Huipulle kiipeää 461 kiviporrasta, ja mausoleumia pidetään '
+            + 'maailman korkeimpana.',
+          lyhyt: 'Runoilijaruhtinas Njegošin mausoleumi Lovćenin huipulla on maailman '
+            + 'korkeimmalla sijaitseva.',
+          selite: 'Kroatialainen kuvanveistäjä Ivan Meštrović suunnitteli mausoleumin, joka '
+            + 'valmistui vasta vuosikymmenten viivytysten jälkeen 1974.',
+          lahde: 'Darko Bulatović, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Njegošin mausoleumi',
+        },
+        {
+          otsikko: 'Luostari joka kasvoi kalliosta',
+          aika: '1665–1671',
+          tiedosto: 'Manastir Ostrog - panoramio.jpg',
+          teksti: 'Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää '
+            + 'kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta '
+            + 'Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – '
+            + 'samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. '
+            + 'Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije '
+            + 'johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin '
+            + 'pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne '
+            + 'saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.',
+          lyhyt: 'Ostrogin luostari on veistetty suoraan pystysuoraan kallioseinämään.',
+          selite: 'Sen perustaja, metropoliitta Vasilije, julistettiin kuolemansa jälkeen '
+            + 'pyhäksi, ja luostarista tuli Balkanin vierailluin pyhiinvaelluskohde.',
+          lahde: 'Dragan Jankovic Faza, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ostrogin luostari',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Obodin kirjapaino painoi Oktoih prvoglasnikin, ensimmäisen '
+          + 'eteläslaavien kyrillisen kirjan?',
+        vaihtoehdot: [
+          '1391',
+          '1494',
+          '1596',
+          '1696',
+        ],
+        oikea: 1,
+        fakta: 'Oktoih prvoglasnik valmistui Obodin kirjapainosta 4. tammikuuta 1494 Đurađ '
+          + 'Crnojevićin ja munkki Makarijen johdolla.',
+      },
+    },
   ],
   MDA: [
     /*
@@ -63637,6 +64082,109 @@ export const MAA_KATEGORIAT = {
         },
       ],
     },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota '
+        + 'tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin '
+        + 'kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että '
+        + 'maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto '
+        + 'äänesti sen liittymisestä Romaniaan.',
+      nostot: [
+        {
+          otsikko: 'Neuvosto äänesti maan kohtalosta',
+          aika: '27.3.1918',
+          tiedosto: 'Sfatul Țării Palace in Chișinău.jpg',
+          teksti: 'Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen '
+            + 'neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa '
+            + 'äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, '
+            + '3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto '
+            + 'liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja '
+            + 'alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman '
+            + 'vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja '
+            + 'julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul '
+            + 'Tării -palatsina.',
+          lyhyt: 'Sfatul Tării äänesti Bessarabian liittymisestä Romaniaan maaliskuussa '
+            + '1918.',
+          selite: 'Kuva esittää rakennusta, jossa Bessarabian kansanvaltainen neuvosto '
+            + 'Sfatul Tării kokoontui 1917-1918. Se tunnettiin aiemmin poikien lyseona '
+            + 'ja on nykyään Sfatul Tării -palatsi.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Sfatul Țării',
+        },
+        {
+          otsikko: 'Luola kaiverrettiin kallioon',
+          aika: '1200-luvulta',
+          tiedosto: 'Orheiul Vechi Looking Southeast (41120829460).jpg',
+          teksti: 'Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit '
+            + 'kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes '
+            + '1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan '
+            + 'jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: '
+            + 'geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi '
+            + 'Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 '
+            + 'munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, '
+            + 'siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon '
+            + 'hakatuissa seinissä.',
+          lyhyt: 'Räutin joen jyrkänteeseen kaiverrettu keskiaikainen luolaluostari '
+            + 'Orheiul Vechissä.',
+          selite: 'Orheiul Vechi on arkeologinen alue Trebujenin kylän liepeillä. '
+            + 'Kalkkikivijyrkänteeseen on kerrostunut yli 2000 vuoden asutushistoria.',
+          lahde: 'John Pavelka, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Orheiul Vechi',
+        },
+        {
+          otsikko: 'Muurari allekirjoitti työnsä',
+          aika: '1499/1546',
+          tiedosto: 'Cetatea Sorocii.jpg',
+          teksti: 'Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen '
+            + 'linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan '
+            + 'kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus '
+            + 'on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä '
+            + 'pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä '
+            + 'paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut '
+            + 'muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, '
+            + 'jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.',
+          lyhyt: 'Soroca on Moldovan parhaiten säilynyt keskiaikainen ympyrälinnoitus.',
+          selite: 'Cetatea Soroca seisoo Dnestr-joen rannalla. Sen viisi bastionia ja '
+            + 'paksut muurit suojasivat kahlaamoa tataarien hyökkäyksiltä.',
+          lahde: 'Vadim Sterbate, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Soroca Fort',
+        },
+        {
+          otsikko: 'Görkingin viinit päätyivät kalkkiluolaan',
+          aika: '1950-luvulta',
+          tiedosto: 'Caves Milestii Mici Moldavie.jpg',
+          teksti: 'Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun '
+            + 'puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi '
+            + 'miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman '
+            + 'suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon '
+            + 'kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se '
+            + 'takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa '
+            + 'saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 '
+            + 'pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, '
+            + 'tasaisessa kalkkikiviluolassa.',
+          lyhyt: 'Mileștii Micin maanalaiset käytävät säilyttävät lähes kahta miljoonaa '
+            + 'viinipulloa.',
+          selite: 'Kuva on entisestä kalkkikivilouhoksesta, joka muutettiin '
+            + 'viinikellariksi 1900-luvun puolivälissä. Naapurissa Cricovan luolastossa '
+            + 'säilytetään myös sotasaalisviinejä.',
+          lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mileștii Mici',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Sfatul Tării äänesti Bessarabian liittymisestä Romaniaan?',
+        vaihtoehdot: [
+          '1917',
+          '1918',
+          '1924',
+          '1940',
+        ],
+        oikea: 1,
+        fakta: 'Sfatul Tării äänesti Bessarabian liittymisestä Romaniaan 27. maaliskuuta '
+          + '1918 - 86 edustajaa puolesta, 3 vastaan.',
+      },
+    },
   ],
   BLR: [
     /*
@@ -63709,6 +64257,113 @@ export const MAA_KATEGORIAT = {
           ],
         },
       ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tiheät metsät ja suuret joet ovat sekä suojelleet että tuhonneet: '
+        + 'samassa aarniometsässä selvisi Euroopan viimeinen villi biisonikanta, kun '
+        + 'taas Berezina-joesta tuli Napoleonin suurarmeijan hauta. Linnat ja '
+        + 'kivikirkot todistavat, että alueella on hallinnut niin ruhtinaita, '
+        + 'mahtisukuja kuin ritarikuntiakin jo tuhat vuotta.',
+      nostot: [
+        {
+          otsikko: 'Kolme päivää jäisellä joella',
+          aika: '26.-29.11.1812',
+          tiedosto: 'Berezyna.jpg',
+          teksti: 'Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui '
+            + 'marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. '
+            + 'Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén '
+            + 'insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat '
+            + 'jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin '
+            + '60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat '
+            + 'poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. '
+            + 'Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa '
+            + 'täydellistä katastrofia.',
+          lyhyt: 'Napoleonin armeija ylitti jäisen Berezina-joen paetessaan Venäjältä '
+            + 'marraskuussa 1812.',
+          selite: 'January Suchodolskin maalaus vuodelta noin 1859 kuvaa Ranskan '
+            + 'armeijan kaoottista ylitystä Berezina-joen yli. Teos on nykyään '
+            + 'Poznańin kansallismuseossa.',
+          lahde: 'January Suchodolski, Wikimedia Commons (PD)',
+          wiki: 'Battle of Berezina',
+        },
+        {
+          otsikko: 'Linna joka selvisi joka sodasta',
+          aika: '1500-luvulta',
+          tiedosto: 'Belarus Mir Castle Complex (248358971).jpeg',
+          teksti: 'Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun '
+            + 'lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun '
+            + 'jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj '
+            + 'Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla '
+            + 'asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen '
+            + 'ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi '
+            + 'toisessa maailmansodassa, jolloin sen muurien sisään perustettiin '
+            + 'juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan '
+            + 'maailmanperintöluetteloon vuonna 2000.',
+          lyhyt: 'Mirin linna on yksi harvoista säilyneistä myöhäisgoottilaisista '
+            + 'linnoista Valko-Venäjällä.',
+          selite: 'Linna sijaitsee Mirin kaupungissa Hrodnan alueella. '
+            + 'Radziwiłł-suku laajensi sen 1500-luvulla renessanssityyliseksi '
+            + 'asuinlinnaksi.',
+          lahde: 'Alexxx Malev, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mir Castle Complex',
+        },
+        {
+          otsikko: 'Metsä joka pelasti biisonin',
+          aika: '1929 alkaen',
+          tiedosto: '2022.08.27 Bison bonasus in Bielaviežskaja Pušča National Park 07.jpg',
+          teksti: 'Metsästä on kirjallisia mainintoja jo 900-luvulta, ja 1400-luvulla '
+            + 'suurruhtinaat rauhoittivat sen kuninkaalliseksi metsästysmaaksi - '
+            + 'suojelu jatkui liettualaisista ruhtinaista Puolan kuninkaisiin ja '
+            + 'Venäjän tsaareihin asti. Juuri tämä vuosisatoja jatkunut rauhoitus '
+            + 'pelasti Euroopan raskaimman maanisän: villi biisonikanta hävisi '
+            + 'metsästyksen takia täysin ensimmäisen maailmansodan jälkeen, mutta '
+            + 'eläintarhoihin selvinneistä yksilöistä aloitettu paluu vuodesta 1929 '
+            + 'alkaen on kasvattanut Belovežan Puščan kannan yli 1200 biisoniin - '
+            + 'Euroopan suurimmaksi vapaana laiduntavaksi laumaksi.',
+          lyhyt: 'Belovežan Pušča on Euroopan viimeinen laaja aarniometsä ja biisonien '
+            + 'viimeinen turvapaikka.',
+          selite: 'Kuvassa emobiisoni ja vasikka laiduntavat Belovežan Puščan '
+            + 'kansallispuistossa. Puisto on Unescon maailmanperintökohde.',
+          lahde: 'Rabbi Mendl, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Belovezhskaya Pushcha National Park',
+        },
+        {
+          otsikko: 'Velhoruhtinaan kivikirkko',
+          aika: '1044-1066',
+          tiedosto: '2023.03.25 Cathedral of Saint Sophia in Polack.jpg',
+          teksti: 'Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista '
+            + 'valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir '
+            + 'Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti '
+            + 'väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin '
+            + 'heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin '
+            + 'Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin '
+            + 'Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän '
+            + 'kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen '
+            + 'barokkijulkisivu on 1700-luvulta.',
+          lyhyt: 'Pyhän Sofian kirkko Polotskissa on Valko-Venäjän vanhin '
+            + 'kivirakennus.',
+          selite: 'Nykyinen barokkijulkisivu on 1700-luvulta, mutta perustukset ja osa '
+            + 'muureista ovat 1000-luvulta. Kirkko seisoo Dvina-joen rannalla.',
+          lahde: 'Dina Panayotis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Saint Sophia Cathedral, Polotsk',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Napoleonin armeija ylitti Berezina-joen pakomatkallaan '
+          + 'Venäjältä?',
+        vaihtoehdot: [
+          '1805',
+          '1812',
+          '1815',
+          '1848',
+        ],
+        oikea: 1,
+        fakta: 'Napoleonin Grande Armée ylitti jäisen Berezina-joen 26.-29. marraskuuta '
+          + '1812 paetessaan Venäjältä; tapahtumasta tuli ranskan kieleen synonyymi '
+          + 'täydelliselle katastrofille.',
+      },
     },
   ],
 };
