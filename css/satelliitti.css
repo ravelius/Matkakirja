@@ -1603,3 +1603,198 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
 .iss-kyyti-liikkumaton .iss-kyyti-piste,
 .iss-kyyti-liikkumaton .iss-kyyti-ulko,
 .iss-kyyti-liikkumaton .iss-kyyti-heijastus { animation: none !important; }
+
+/*
+ * ══════════ PULUN TAULU (js/linssit/pulu-taulu.js, 28.9.2026) ══════════
+ *
+ * Linssin moodit yhdessä kevyessä paneelissa Pulun yllä oikeassa
+ * alakulmassa. Omistajan raja: peitto ≤ 45 % ruudusta (tämä on noin 15 %
+ * puhelimella), ei koristeita, avaus ja sulku alle 250 ms (160 ms).
+ *
+ * ELEMENTTITYYPIT OMINA LUOKKINAAN, jotta Codexin ISS-säätöpaneelin
+ * modulaariset osat (paneelipohja 9-slice, valikkorivi, sulkunappi) voi
+ * pukea päälle muuttamatta logiikkaa: .astro-paneeli (pohja),
+ * .astro-paneeli-otsikko, .astro-sulku, .astro-paneeli-rivi.astro-painike
+ * (valikkorivi) ja .astro-valittu (nykyinen moodi). Värit ja mitat ovat
+ * muuttujia; 9-slice korvaa myöhemmin taustan ja reunan (border-image).
+ */
+.astro-paneeli {
+  --astro-paneeli-tausta: rgba(6, 13, 10, 0.8);
+  --astro-paneeli-reuna: rgba(93, 255, 168, 0.28);
+  --astro-paneeli-teksti: rgba(233, 250, 240, 0.92);
+  --astro-paneeli-himmea: rgba(233, 250, 240, 0.6);
+  --astro-paneeli-korostus: rgb(93, 255, 168);
+  --astro-paneeli-korostus-tausta: rgba(93, 255, 168, 0.14);
+  --astro-paneeli-sade: 12px;
+  --astro-paneeli-leveys: 232px;
+  --astro-paneeli-rivi: 44px;
+  --astro-paneeli-kesto: 160ms;
+  position: fixed;
+  right: var(--astro-paneeli-oikea, max(12px, env(safe-area-inset-right, 0px)));
+  bottom: var(--astro-paneeli-ala, calc(128px + env(safe-area-inset-bottom, 0px)));
+  z-index: 50;
+  width: min(var(--astro-paneeli-leveys), calc(100vw - 32px));
+  /* Ei koskaan Pulun päälle: tilan loppuessa rivit vierivät. */
+  max-height: calc(100vh - var(--astro-paneeli-ala, 140px) - 12px - env(safe-area-inset-top, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+  padding: 6px;
+  border-radius: var(--astro-paneeli-sade);
+  border: 1px solid var(--astro-paneeli-reuna);
+  background: var(--astro-paneeli-tausta);
+  color: var(--astro-paneeli-teksti);
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--astro-paneeli-kesto) ease, transform var(--astro-paneeli-kesto) ease;
+  pointer-events: none;
+}
+.astro-paneeli[hidden] { display: none; }
+.astro-paneeli.astro-paneeli-auki { opacity: 1; transform: none; pointer-events: auto; }
+.astro-paneeli-liikkumaton { transition: none; transform: none; }
+
+.astro-paneeli-ylarivi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 2px 4px 8px;
+}
+.astro-paneeli-otsikko {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--astro-paneeli-himmea);
+}
+/*
+ * ✕: EHJÄ YMPYRÄ, OSUMA-ALA 44 × 44 px. Pelin yleiset nappisäännöt
+ * (min-height) venyttivät 28 px:n pyörän soikeaksi, joten kaikki mitat
+ * on lukittu ja ympyrä piirretään keskelle omana kerroksenaan; negatiivinen
+ * marginaali pitää otsikkorivin matalana.
+ */
+.astro-sulku {
+  position: relative;
+  flex: none;
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  margin: -8px -6px -8px 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: rgba(230, 230, 230, 0.9);
+  font: inherit;
+  font-size: 18px;
+  line-height: 44px;
+  text-align: center;
+  cursor: pointer;
+}
+.astro-sulku::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border-radius: 50%;
+  background: rgba(128, 128, 128, 0.28);
+  z-index: -1;
+}
+.astro-sulku { isolation: isolate; }
+.astro-paneeli-rivit { display: flex; flex-direction: column; gap: 2px; }
+.astro-paneeli-rivi.astro-painike {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: var(--astro-paneeli-rivi);
+  width: 100%;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: calc(var(--astro-paneeli-sade) - 4px);
+  background: transparent;
+  color: var(--astro-paneeli-teksti);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.astro-painike-otsikko { font-size: 15px; font-weight: 600; }
+.astro-painike-selite { font-size: 12px; color: var(--astro-paneeli-himmea); }
+.astro-paneeli-rivi.astro-valittu { background: var(--astro-paneeli-korostus-tausta); }
+.astro-paneeli-rivi.astro-valittu .astro-painike-otsikko { color: var(--astro-paneeli-korostus); }
+.astro-paneeli-rivi:focus-visible,
+.astro-sulku:focus-visible { outline: 2px solid var(--astro-paneeli-korostus); outline-offset: 1px; }
+@media (hover: hover) {
+  .astro-paneeli-rivi.astro-painike:hover { background: rgba(233, 250, 240, 0.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .astro-paneeli { transition: none; transform: none; }
+}
+
+/*
+ * PULU KYYDIN PÄÄLLÄ: kyydin kosketuskerros (.iss-kyyti, z 48) peittää
+ * koko ruudun, ja pöllönappi (z 40) jäisi sen alle — Pulun napautus
+ * vaihtaisi kyydin tilaa eikä avaisi taulua. Kyydin ajaksi Pulu (nappi ja
+ * lentonäyttämö) nousee kerroksen yläpuolelle; astronauttiasu sopii
+ * Cupolaan.
+ */
+body.satelliitti-kyyti .pollo-nappi.pollo-kelluu { z-index: 49; }
+body.satelliitti-kyyti.livia-astronautti-paalla .livia-lentonayttamo { z-index: 49; }
+
+/*
+ * "KYSY PULULTA" TAULUN ALAREUNASSA (Päätoimittaja 28.9.): Pulun oma
+ * toiminto, ei moodirivi — pieni tekstilinkki. Osuma-ala 44 px (sama kuin
+ * rivin vähimmäiskorkeus, ei korkeampi).
+ */
+.astro-paneeli-linkki {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  margin: 2px 0 0;
+  padding: 0 10px;
+  border: 0;
+  border-top: 1px solid rgba(233, 250, 240, 0.1);
+  background: transparent;
+  color: var(--astro-paneeli-himmea);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.astro-paneeli-linkki:focus-visible { outline: 2px solid var(--astro-paneeli-korostus); outline-offset: -2px; }
+
+/*
+ * NÄKYMÄT-NAPPI PULUN PAIKALLA, kun Livia ei ole vielä pelissä: sama kulma
+ * ja sama etäisyys reunoista kuin pelin Pulun napilla linssissä
+ * (css/styles.css .pollo-kelluu-kartalla: 3.6rem), osuma-ala 44 px.
+ * Valokuvan (z 47) alla, kyydissä kosketuskerroksen (z 48) päällä.
+ */
+.astro-nakymat-nappi {
+  position: fixed;
+  right: calc(3.6rem + env(safe-area-inset-right, 0px));
+  bottom: calc(3.6rem + env(safe-area-inset-bottom, 0px));
+  z-index: 46;
+  box-sizing: border-box;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(93, 255, 168, 0.28);
+  background: rgba(6, 13, 10, 0.72);
+  color: rgba(233, 250, 240, 0.9);
+  font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+.astro-nakymat-nappi[hidden] { display: none; }
+body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }

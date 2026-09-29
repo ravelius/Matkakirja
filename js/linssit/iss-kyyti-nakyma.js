@@ -1137,6 +1137,8 @@ export function luoIssKyytiNakyma({
     },
     kohteet: () => kohteet.slice(),
     kyydissa: () => kyyti.kyydissa,
+    /** Kevyt tila Pulun taululle (js/linssit/pulu-taulu.js): moodi ja siirtymä. */
+    moodi: () => ({ tila: kyyti.tila, siirtyy: kyyti.siirtyy }),
     /** Tähtien peitto: 1 kaukonäkymässä, 0,3 kyydissä (liukuen). */
     tahdet: () => 1 + (TAHDET_KYYDISSA - 1) * osuus,
     tila: () => {
