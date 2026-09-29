@@ -1403,7 +1403,10 @@ namespace Matkakirja.Natiivi
                 }
                 else if (osat[0] == "kaista")
                 {
-                    // Zoomikaista (LinssinRajat): "kaista" kertoo pallon lähimmän ja kaukaisimman korkeuden sekä koko pallon.
+                    // Zoomikaista (LinssinRajat): "kaista" kertoo pallon lähimmän ja kaukaisimman korkeuden sekä koko pallon;
+                    // "kaista kauas|lahelle" ajaa kameran kaistan reunaan (0,6 s), kuten pelaajan loitonnus tai lähennys.
+                    if (kierto != null && osat.Length > 1 && (osat[1] == "kauas" || osat[1] == "lahelle"))
+                        kierto.Aja(kierto.leveys, kierto.pituus, osat[1] == "kauas" ? kierto.MaxKorkeus() : kierto.MinKorkeus(), 0.6f, null);
                     Kirjaa(kierto == null ? "kaista: ei palloa"
                         : $"kaista: {kierto.MinKorkeus() / 1000:F0}–{kierto.MaxKorkeus() / 1000:F0} km, koko pallo {kierto.KokoPallonKorkeus() / 1000:F0} km, "
                         + $"nyt {kierto.korkeus / 1000:F0} km, linssi {rekisteri?.Auki?.Tiedot.Id ?? "-"}");
