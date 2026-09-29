@@ -557,7 +557,13 @@ namespace Matkakirja.Natiivi
 
         void Katko(VisualElement isa, string url)
         {
-            var katko = Rakenne.El("mk-kysymys__katko", isa, PickingMode.Ignore);
+            // Web js/visa.js (katko.addEventListener('click') → ui.openLightbox(null, 'Kätkö', src)): napautus avaa kuvan
+            // koko ruudulle samalla suurennoksella kuin kysymyskuva (Kuva-metodi).
+            var katko = Rakenne.El("mk-kysymys__katko", isa);
+            katko.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
+            {
+                new LehtiKuva { Lahde = url, Selite = "Kätkö" },
+            })));
             string odotettu = avain;
             Kuvat.Hae(url, t =>
             {

@@ -55,6 +55,9 @@ namespace Matkakirja.Natiivi
         public const string TunnusAvain = "matkakirja-retkikunta", NahdytAvain = "matkakirja-sahke-nahdyt";
         /// <summary>Kiinni olevan linjan rivi retkikuntaosiossa.</summary>
         public const string LinjaKiinni = "Sähkelinja avataan pian.";
+        /// <summary>Syy, kun verkkokutsu ei tavoita palvelinta (web: fetch-virhe; natiivissa Tila 0). Myös näkymän varasyy,
+        /// jos toiminto heittää poikkeuksen: pelaajalle ei näytetä Exception.Message-tekstiä.</summary>
+        public const string EiVastaa = "Sähkelinja ei vastaa";
     }
 
     // =====================================================================
@@ -347,7 +350,7 @@ namespace Matkakirja.Natiivi
         public bool Ok => Tila >= 200 && Tila < 300;
         /// <summary>Web: data?.virhe ?? `HTTP ${status}`; onnistuneella null.</summary>
         public string Virhe => Ok ? null
-            : (Data != null ? MiniJson.Teksti(Data, "virhe") : null) ?? (Tila == 0 ? "Sähkelinja ei vastaa" : "HTTP " + Tila);
+            : (Data != null ? MiniJson.Teksti(Data, "virhe") : null) ?? (Tila == 0 ? SahkeVakiot.EiVastaa : "HTTP " + Tila);
 
         public static SahkeVastaus Katkos() => new SahkeVastaus { Tila = 0 };
 
