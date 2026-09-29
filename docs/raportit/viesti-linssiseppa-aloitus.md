@@ -35,6 +35,12 @@ Lue:
    ja Kuvanakymasta voi poistaa (ne eivät haittaa).
 1. Pulun taulu ja LISÄYS 6 ovat MASTERISSA (9750340f, master 634be415).
 2. Taulun SHA on kerrottu Linssiseppä 2:lle 29.9. klo 10.2x.
+2b. LINSSIEN ESITTELYT (Päätoimittajan erä "Linssit- ja Aarteet-näkymät", omistaja 29.9. loki 09.12/09.14) on MERGE-PYYNNÖSSÄ:
+   proto linssiseppa/linssi-esittelyt d42d11d5. Siinä ovat LinssiTiedot.Esittely ja Havainnekuva (moduulin JSON ensin, sitten
+   LinssiEsittelyt-taulu) sekä kultainen linssi-esittelyt.json webin #3611:stä. Näkymät tekee Natiivi-UI (natiivi-ui/pillerivalikko,
+   Linssivalitsin.Pilleri.cs), sovittu Natiivi-UI:n ja Päätoimittajan kanssa. Esikatselu lukee Esittely ?? Lyhyt ja
+   Havainnekuva ?? varustekuva. KESKEN: iPhonen web | natiivi -kuvapari, kun Pelikoodarin webmalli on pushattu (nyt committoimatta
+   wt/pelikoodari-pillerivalikko). Jos #3611:n teksti muuttuu, tee kultainen uudelleen (tee-linssi-esittelyt.mjs).
 3. Cupola 2 -kuvien alfa 252–254 korjataan cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön. Kohta 4 (BMNG, Kuu,
    tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
 
