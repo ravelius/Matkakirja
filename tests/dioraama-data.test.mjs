@@ -26,6 +26,11 @@ const RESEPTIT = new Set([
   'orsileivat', 'yrttinippu', 'riippupata', 'kattila', 'kauha', 'leikkuulauta', 'veitsi', 'kala', 'leipa',
   'nauriskori', 'puukasa', 'vesisanko', 'saavi', 'kirnu', 'huhmar', 'suolalaatikko', 'kynttilanjalka',
   'oljylamppu', 'vati', 'ruukku', 'pullo', 'luuta', 'hiillospihdit',
+  // Erä 3 (dioraama-rajapinnat-era3-20260929.md kohta 2): reseptit-linna.mjs ja reseptit-kalusteet2.mjs.
+  'kiekko', 'kierreportaat', 'sakarat', 'paalu', 'laiturikansi', 'vene', 'lippu', 'rako', 'kupoli',
+  'alttari', 'vihkimisristi', 'kirkonpenkki', 'kynttilakruunu', 'seinasoihtu', 'arkku', 'keihasteline', 'kilpi',
+  'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
+  'jalkajousi', 'nuolitynnyri',
 ]);
 
 const KIELLETYT_TAGIT = [/\[softly\]/i, /\[whispers\]/i];
