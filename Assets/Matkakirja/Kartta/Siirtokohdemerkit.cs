@@ -256,7 +256,7 @@ namespace Matkakirja
         }
 
         /// <summary>Häivytysaskel (lineaarinen kuten CSS-siirtymä 250 ms); tosi, kun poistuva on kokonaan poissa.</summary>
-        static bool Haivyta(Merkki m, float nyt)
+        bool Haivyta(Merkki m, float nyt)
         {
             float t = Mathf.Clamp01((nyt - m.alku) / SiirtymaS);
             float a = m.poistuu ? Mathf.Lerp(m.alkuAlfa, 0f, t) : Mathf.Lerp(m.alkuAlfa, 1f, t);
