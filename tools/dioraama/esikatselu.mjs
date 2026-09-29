@@ -200,8 +200,9 @@ async function paakoodi() {
   }
 
   // Valot vasta kun huoneiden geometria on ladattu: aurinko sovitetaan bboxiin.
+  // kohdeTilaAlku != null: sivu on latautunut kohdistettuun tilaan → sisalla-kertoimet (era2b, 29.9.).
   const bbox = new THREE.Box3().setFromObject(scene);
-  const paavalot = rakennaPaavalot(scene, rakennusJson.valaistus, bbox);
+  const paavalot = rakennaPaavalot(scene, rakennusJson.valaistus, bbox, kohdeTilaAlku != null);
   const kaikkiPisteValot = [];
   const kaikkiHahmot = [];
   const kaikkiLiekit = [];

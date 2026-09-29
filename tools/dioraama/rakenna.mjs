@@ -351,7 +351,11 @@ export async function rakennaData(rakennus, {
     const bvh = luoBvh(peittajaFlat);
     // Lämmön valot: tilan omat (esim. tulisija) + rekvisiitan kynttilät/lamput (era2b kohta 3) —
     // rekvisiitan valot leivotaan lämpöön SAMALLA kaavalla kuin tilan muutkaan valot (ks. yllä).
-    const valotLampoon = [...(tila.valot ?? []), ...valotPerTila.get(tila.id)];
+    // tyyppi 'keila' (era2b, ikkunan aurinko, omistajan valo-päätös 29.9.) OHITETAAN tästä: auringonvalo
+    // ei ole lämpöä, vain reaaliaikainen valo natiivissa/esikatselussa. Suodatus ei mutatoi `tila.valot`-
+    // taulukkoa (spread + filter palauttavat uudet taulukot) — rakennus.json (t.valot alempana) vie siis
+    // keila-valon SELLAISENAAN, filter vaikuttaa vain tähän paikalliseen lämpölaskuun.
+    const valotLampoon = [...(tila.valot ?? []), ...valotPerTila.get(tila.id)].filter((v) => v.tyyppi !== 'keila');
     const osat = [];
     let kolmioYht = 0; let karkiYht = 0;
     for (const pinta of [...ryhmat.keys()].sort()) {
@@ -512,7 +516,11 @@ export async function rakennaData(rakennus, {
     // `lahde` ei tulostu — `tekstuuri` korvaa sen vain jos lähde todella kopioitui (era2 kohta 2 "PINNAT").
     const { lahde, ...muu } = PINNAT[id];
     const atlas = pintaAtlas.get(id);
-    rakennusJson.pinnat[id] = atlas ? { ...muu, tekstuuri: atlas.polku } : muu;
+    // tekstuuri_puoli (era 2b, tekstuurimuisti): mukana vain jos kopioiPinnanKuva löysi puolikkaan
+    // (ks. media.mjs) -- natiivi (DioraamaData.Pinta.TekstuuriPuoli) käyttää täyttä, jos kenttä puuttuu.
+    rakennusJson.pinnat[id] = atlas
+      ? { ...muu, tekstuuri: atlas.polku, ...(atlas.puoli ? { tekstuuri_puoli: atlas.puoli.polku } : {}) }
+      : muu;
   }
   rakennusJson.henkilot = {};
   for (const id of [...kaytetytHenkilot].sort()) {
@@ -566,7 +574,12 @@ export async function rakennaData(rakennus, {
   // manifest.json: aakkosjärjestyksessä, EI aikaleimoja — sama syöte = sama tavujono.
   const tiedostot = [
     ...tilaTulokset.map((t) => ({ polku: t.tiedosto, sha256: t.sha256, tavuja: t.tavuja })),
-    ...pintaTulokset.map((p) => ({ polku: p.polku, sha256: p.sha256, tavuja: p.tavuja })),
+    // Puolikas (p.puoli, ks. media.mjs kopioiPinnanKuva) on OMA fyysinen tiedosto pakettikansiossa --
+    // pitää listata manifestissa niin kuin täysikin, tai paketin sisältö ei täsmää manifestiin.
+    ...pintaTulokset.flatMap((p) => [
+      { polku: p.polku, sha256: p.sha256, tavuja: p.tavuja },
+      ...(p.puoli ? [{ polku: p.puoli.polku, sha256: p.puoli.sha256, tavuja: p.puoli.tavuja }] : []),
+    ]),
     ...hahmoTulokset.map((h) => ({ polku: h.polku, sha256: h.sha256, tavuja: h.tavuja })),
     ...hahmo3dTulokset.map((h) => ({ polku: h.polku, sha256: h.sha256, tavuja: h.tavuja })),
     ...liekkiTulokset.map((l) => ({ polku: l.polku, sha256: l.sha256, tavuja: l.tavuja })),

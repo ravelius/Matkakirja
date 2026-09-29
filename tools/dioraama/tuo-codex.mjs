@@ -21,7 +21,9 @@
  * (node:zlib inflateSync + suotimien purku — sama tekniikka kuin
  * tools/tarkista-karttapisteet.mjs ja tools/savukkeet/savuke-ihmisen-
  * rintama.mjs) → mitat ja värityyppi tilausta vasten → laatuvaroitukset
- * (alfahistogrammi, jalkapohjat, saumattomuus) → kirjoitus kohteeseen.
+ * (alfahistogrammi, jalkapohjat, saumattomuus) → kirjoitus kohteeseen. PINNAT
+ * saavat kirjoituksessa myös PUOLIKKAAN <id>-puoli.jpg:n (era 2b, tekstuurimuisti
+ * pienille laitteille) -- ks. kirjoitaPintaPuoliJpg.
  *
  * VIRHE (estää KIRJOITUKSEN tälle yhdelle tiedostolle, muut tiedostot
  * käsitellään silti) vs. VAROITUS (ei estä kirjoitusta — tunnettuja Codex-
@@ -63,6 +65,10 @@ import { pathToFileURL } from 'node:url';
 export const OLETUS_ASSETS_JUURI = 'assets/dioraama';
 
 const JPEG_LAATU = 90; // sips -s formatOptions <0-100> (tilaus: "sips JPEG laatu 90, sRGB säilyy")
+// TEKSTUURIMUISTI (era 2b, omistaja 29.9.2026: natiivissa 89 Mt Codexin pinnoilla, liikaa iPhonelle):
+// puolikas <id>-puoli.jpg jokaiselle pinnalle (sips --resampleWidth, laatu hieman matalampi kuin täysi --
+// pieni laite ei näytä eroa läheltä katsonakaan, ks. DioraamaSovitin.LataaPinta natiivissa).
+const JPEG_LAATU_PUOLI = 88;
 
 /* ==================== Tilauksen mitat (posti/fable-codex-dioraama-osa1-20260929.md) ==================== */
 
@@ -521,6 +527,33 @@ function kirjoitaPintaJpg(lahdePolku, assetsJuuri, id) {
   return kohde;
 }
 
+/**
+ * Pinta PUOLIKKAALLA resoluutiolla (era 2b, tekstuurimuisti): sama PNG-lähde kuin kirjoitaPintaJpg,
+ * mutta sips --resampleWidth puolittaa leveyden (korkeus skaalautuu automaattisesti samassa suhteessa,
+ * koska sips säilyttää kuvasuhteen kun vain leveys annetaan) — 2048×512 → 1024×256, 1024² → 512²,
+ * laatu JPEG_LAATU_PUOLI. Kohde: <id>-puoli.jpg samaan pinnat/-kansioon kuin täysikokoinen.
+ */
+function kirjoitaPintaPuoliJpg(lahdePolku, assetsJuuri, id, leveys) {
+  if (!onOlemassa('sips')) {
+    throw new Error('sips-komentoa ei löytynyt (macOS vaaditaan pintojen PNG→JPG-muunnokseen)');
+  }
+  const kohde = resolve(assetsJuuri, 'pinnat', `${id}-puoli.jpg`);
+  mkdirSync(dirname(kohde), { recursive: true });
+  const puoliLeveys = Math.round(leveys / 2);
+  const tulos = spawnSync(
+    'sips',
+    [
+      '-s', 'format', 'jpeg', '-s', 'formatOptions', String(JPEG_LAATU_PUOLI),
+      '--resampleWidth', String(puoliLeveys), lahdePolku, '--out', kohde,
+    ],
+    { encoding: 'utf8' },
+  );
+  if (tulos.status !== 0) {
+    throw new Error(`sips (puolikas) epäonnistui (${tulos.status}): ${(tulos.stderr || tulos.stdout || '?').trim()}`);
+  }
+  return kohde;
+}
+
 /** Hahmo/liekki/kortti: suora tavukopio (ei uudelleenpakkausta — lähde on jo oikea PNG). */
 function kirjoitaKopio(lahdePolku, assetsJuuri, suhteellinenKohde) {
   const kohde = resolve(assetsJuuri, suhteellinenKohde);
@@ -640,8 +673,12 @@ export function kasitteleTiedosto(toimituskansio, manifestiRivi, assetsJuuri, ku
     return rivi;
   }
   try {
-    if (tunniste.laji === 'pinta') kirjoitaPintaJpg(lahdePolku, assetsJuuri, tunniste.id);
-    else kirjoitaKopio(lahdePolku, assetsJuuri, tunniste.kohdeTiedosto);
+    if (tunniste.laji === 'pinta') {
+      kirjoitaPintaJpg(lahdePolku, assetsJuuri, tunniste.id);
+      // Puolikas AINA täyden rinnalla (era 2b) -- kuva.leveys on tässä kohdassa aina odotettuKoko[0]
+      // (mittaero olisi VIRHE ja palauttanut yllä, ennen tätä try-lohkoa).
+      kirjoitaPintaPuoliJpg(lahdePolku, assetsJuuri, tunniste.id, kuva.leveys);
+    } else kirjoitaKopio(lahdePolku, assetsJuuri, tunniste.kohdeTiedosto);
     rivi.tila = 'kirjoitettu';
   } catch (e) {
     virheet.push(`kirjoitus epäonnistui: ${e.message}`);

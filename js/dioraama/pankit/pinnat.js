@@ -16,23 +16,23 @@
 // katto: valittu 'tiili' (kattotiilien limitys) kahdesta speksin vaihtoehdosta (tiili/tasainen).
 export const PINNAT = {
   kivi: {
-    vari: '#b8ad9c', toisto_m: 2.0, lahde: 'pinnat/kivi.jpg',
-    kuvio: { tyyppi: 'kivi', koko_m: [0.5, 0.35], sauma_m: 0.02, vaihtelu: 0.35 },
+    vari: '#9c8d76', toisto_m: 2.0, lahde: 'pinnat/kivi.jpg',
+    kuvio: { tyyppi: 'kivi', koko_m: [0.42, 0.28], sauma_m: 0.02, vaihtelu: 0.35 },
   },
   leikkaus: {
     vari: '#d9ceb8', toisto_m: [4, 1], lahde: 'pinnat/leikkaus.jpg',
     kuvio: { tyyppi: 'kivi', koko_m: [0.3, 0.2], sauma_m: 0.015, vaihtelu: 0.3 }, // kivi, pienempi
   },
   rappaus: {
-    vari: '#e7d7bd', toisto_m: 2.0, lahde: 'pinnat/rappaus.jpg',
-    kuvio: { tyyppi: 'rappaus', koko_m: [1.2, 1.2], vaihtelu: 0.25 },
+    vari: '#d6c3a3', toisto_m: 2.0, lahde: 'pinnat/rappaus.jpg',
+    kuvio: { tyyppi: 'rappaus', koko_m: [1.2, 1.2], vaihtelu: 0.3 },
   },
   lankku: {
     vari: '#caa678', toisto_m: 1.5, lahde: 'pinnat/lankku.jpg',
     kuvio: { tyyppi: 'lankku', koko_m: [0.2, 2.0], sauma_m: 0.01, vaihtelu: 0.3 },
   },
   puu: {
-    vari: '#8a6a48', toisto_m: 1.0, lahde: 'pinnat/puu.jpg',
+    vari: '#6e4f34', toisto_m: 1.0, lahde: 'pinnat/puu.jpg',
     kuvio: { tyyppi: 'puu', koko_m: [0.3, 0.3], vaihtelu: 0.3 },
   },
   katto: {

@@ -178,8 +178,22 @@ const TILA_KEITTIO = {
   // Tulisijan valo on lämmin ja lepattaa (erä 2b, kohta 1: "Tulisijalla lepatus 0,35"); pöydän täytevalo
   // pysyy tasaisena ja värittömänä (ei liekkiä, ei lepatusta).
   valot: [
-    { paikka: [14, 0.5, 4.9], sade: 7, voima: 1, vari: '#ffb070', lepatus: 0.35 },
-    { paikka: [10.5, 0.8, 9], sade: 2.5, voima: 0.4 },
+    // Omistajan valinta 29.9. "B + tummempi valo": tulisija kantaa tunnelman (lämmin, voimakas), ikkunan
+    // aurinko tekee valoläikän, yleisvalo on tumma. Entinen täytevalo (10,5, 0,8, 9) poistettu.
+    { paikka: [14, 0.5, 4.9], sade: 8, voima: 1.8, vari: '#ff9a4a', lepatus: 0.35 },
+    // Ikkunan aurinko (era2b-rajapinta, dioraama-rajapinnat-era2b-20260929.md kohta 1/2): länsi-ikkuna
+    // (aukko u −1,2 eli z ≈ 6,3, y 1,3–2,6, ks. länsiseinän aukot alla) päästää keilan sisään — matala
+    // länsiaurinko ei osu tähän (linnan muut osat varjostavat), korkea lounaisaurinko tekee valoläikän.
+    // EI leivota lämpöön (rakenna.mjs ohittaa tyyppi 'keila' G-kanavasta — auringonvalo ei ole lämpöä).
+    // voima 120 (iteroitu esikatselussa 29.9., ei alkuperäinen 3): keila on ~4,7 m päässä kohteestaan,
+    // ja esikatselun three.js-moottori (r170) käyttää fysikaalisesti oikeaa käänteisneliövaimennusta
+    // ilman "legacy"-kerrointa — pistevalojen tapaan lähietäisyydelle (≤ 0,5 m) viritetty voima (esim.
+    // tulisijan 1,8) katoaisi näkymättömiin jo muutaman metrin päässä. Tarkista sama arvo natiivissa
+    // Laitetestaajan kierroksella (Unityn URP-valomalli EI ole sama kuin three.js:n — sama luku voi
+    // näyttää eri kirkkaalta, ks. luovutusraportti).
+    {
+      tyyppi: 'keila', paikka: [7.5, 2.5, 6.3], kohti: [11.5, 0, 6.0], kulma: 32, sade: 7, voima: 120, vari: '#ffd8a0',
+    },
   ],
   palikat: [
     // Lattia ja katto (katto = salin lattia yläpuolella, leikkausreuna näkyy sivu-roolista). Katto on
@@ -196,6 +210,8 @@ const TILA_KEITTIO = {
     // Länsiseinä — eteläpää (avoin sivu) leikkaus-roolilla.
     {
       resepti: 'seina', paikka: [8, 0, 7.5], suunta: 90, pituus: 7, korkeus: 4, paksuus: 0.6,
+      // Syvä ikkuna (29.9.): matala länsiaurinko piirtää valoläikän lattialle ja pöydälle.
+      aukot: [{ u: -1.2, y: 1.3, leveys: 0.9, korkeus: 1.3 }],
       leikkaus: { vasen: false, oikea: true, yla: false },
     },
     // Itäseinä, ovi portaille (u 2 ≈ z 9,5) — eteläpää leikkaus-roolilla.
@@ -343,11 +359,14 @@ export const RAKENNUS = {
   lahteet: [{ nimi: 'Kansallismuseo: Olavinlinnan historiaa', osoite: 'https://www.kansallismuseo.fi/fi/olavinlinna/historiaa' }],
   geoAnkkuri: { lat: 61.8639, lon: 28.9011, suuntima: 0 },
   aikakerros: { id: 'n1500', nimi: '1500-luvun alku (tulkinta)' },
-  // Valaistus (erä 2b, speksi dioraama-rajapinnat-era2b-20260929.md kohta 1): iltapäivän aurinko lounaasta,
-  // taivaan ambienssi lämpimästä harmaasta taivaansiniseen. Sumu varalla (ei vielä käytössä).
+  // Valaistus (erä 2b, omistajan valo-päätös 29.9. "B + tummempi valo"): korkea lounaisaurinko, tumma
+  // yleisvalo — tulisija, kynttilät ja ikkunan keila (ks. TILA_KEITTIO.valot) kantavat tunnelman.
+  // Sumu varalla (ei vielä käytössä). `sisalla`: aurinko/taivas-kertoimet kun kamera on kohdistettu
+  // tilaan (DioraamaValot.cs liukuu näihin ~1 s:ssa) — yleisnäkymässä kertoimet ovat 1 (ei vaimennusta).
   valaistus: {
-    aurinko: { atsimuutti: 215, korkeus: 38, vari: '#fff0d8', voima: 0.85 },
-    taivas: { yla: '#b9cddd', ala: '#5d4c3c', voima: 0.35 },
+    aurinko: { atsimuutti: 225, korkeus: 36, vari: '#ffd29a', voima: 1.5 },
+    taivas: { yla: '#8fa3bc', ala: '#3a2c20', voima: 0.5 },
+    sisalla: { aurinko: 0.2, taivas: 0.3 },
     sumu: null,
   },
   yleiskamera: {
