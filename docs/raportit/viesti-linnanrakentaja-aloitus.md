@@ -8,7 +8,8 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-g.md`** (uusin: omistajan 22.28 päätös, työnjako
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-h.md`** (uusin: PR #3648 pidossa, vaiheet 1–2 valmiit) ja
+   `…-g.md` (uusin: omistajan 22.28 päätös, työnjako
    Siirtosepän kanssa, tehtävät 1–5) ja sen säännöt `…-f.md`:stä.
 3. Speksi pelin repon worktreessä `/Users/Shared/Claude/wt/linnanrakentaja-linna-3` (haara `linnanrakentaja-linna-3`):
    `docs/raportit/dioraama-rajapinnat-blender-20260929.md` (+ era3-speksi tiloista ja teksteistä).
