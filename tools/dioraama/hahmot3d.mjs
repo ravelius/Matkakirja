@@ -27,7 +27,9 @@
  * EI SATUNNAISUUTTA, EI KELLOA: puhdas funktio samasta henkilö-oliosta samat
  * tavut aina (testattu tests/dioraama-hahmot3d.test.mjs:ssä).
  */
-import { kolmio, nelio, kaaripiste } from './reseptit-apu.mjs';
+import {
+  kolmio, nelio, kaaripiste, laatikko,
+} from './reseptit-apu.mjs';
 import { PINNAT } from '../../js/dioraama/pankit/pinnat.js';
 
 const RAD = Math.PI / 180;
@@ -225,6 +227,89 @@ function skaalaaJaSiirra(kolmiot, [su, sy, sw], [tu, ty, tw]) {
 /** Siirtää kolmiojoukon (ei skaalaa, normaalit pysyvät). */
 function siirra(kolmiot, [tu, ty, tw]) {
   return kolmiot.map((t) => ({ ...t, p: t.p.map((p) => [p[0] + tu, p[1] + ty, p[2] + tw]) }));
+}
+
+/* ==================== Erä 3: lisäapufunktiot (päähineet, kaapu, esineet) ==================== */
+
+/** Lisää litteän normaalin kolmioille joilla ei ole n:ää (esim. laatikko()n tuotos). */
+function litteaksi(kolmiot) {
+  return kolmiot.map((t) => {
+    if (t.n) return t;
+    const n = tasonNormaali(t.p[0], t.p[1], t.p[2]);
+    return { ...t, n: [n, n, n] };
+  });
+}
+
+/**
+ * Litteä KAKSIPUOLINEN rengas (lierit): ylä- ja alapinta, rSisa..rUlko, kiinteä y.
+ * Materiaalit eivät ole doubleSided, joten kumpikin puoli tehdään omana kolmionaan.
+ */
+function rengas({
+  rSisa, rUlko, y, segU, rooli,
+}) {
+  const yla = [0, 1, 0]; const ala = [0, -1, 0];
+  const kolmiot = [];
+  for (let j = 0; j < segU; j++) {
+    const ka = (j * 360) / segU; const kb = ((j + 1) * 360) / segU;
+    const sA = kaaripiste([0, 0], rSisa, ka, y); const sB = kaaripiste([0, 0], rSisa, kb, y);
+    const uA = kaaripiste([0, 0], rUlko, ka, y); const uB = kaaripiste([0, 0], rUlko, kb, y);
+    kolmiot.push(kolmio(sA, uA, uB, rooli, yla, yla, yla), kolmio(sA, uB, sB, rooli, yla, yla, yla));
+    kolmiot.push(kolmio(sA, uB, uA, rooli, ala, ala, ala), kolmio(sA, sB, uB, rooli, ala, ala, ala));
+  }
+  return kolmiot;
+}
+
+/**
+ * Pallovyöhyke KAARENA (k0..k1, kompassikulma, 0 = +w = hahmon etu): kuten
+ * palloVyohyke, mutta vain sektori (huppu: etuaukko jää kasvoille). Pehmeät normaalit.
+ */
+function palloKaari({
+  r, segU, segV, kulmaYla = 0, kulmaAla = 180, k0, k1, rooli,
+}) {
+  const renkaat = [];
+  for (let i = 0; i <= segV; i++) {
+    const kulma = kulmaYla + (kulmaAla - kulmaYla) * (i / segV);
+    const y = r * Math.cos(kulma * RAD);
+    const rr = r * Math.sin(kulma * RAD);
+    const rengasPisteet = [];
+    for (let j = 0; j <= segU; j++) rengasPisteet.push(kaaripiste([0, 0], rr, k0 + ((k1 - k0) * j) / segU, y));
+    renkaat.push(rengasPisteet);
+  }
+  const kolmiot = [];
+  for (let i = 0; i < segV; i++) {
+    for (let j = 0; j < segU; j++) {
+      const a0 = renkaat[i][j]; const a1 = renkaat[i + 1][j];
+      const b1 = renkaat[i + 1][j + 1]; const b0 = renkaat[i][j + 1];
+      kolmiot.push(...nelio(a0, a1, b1, b0, rooli,
+        [sateenNormaali(a0), sateenNormaali(a1), sateenNormaali(b1), sateenNormaali(b0)]));
+    }
+  }
+  return kolmiot;
+}
+
+/**
+ * Pystyssä oleva rengas (torus) u-y-tasossa (akseli w): avainrengas. keski = [u,y,w],
+ * R = renkaan säde, r = putken säde. Kärkijärjestys tarkistettu (b-a)x(d-a) = ulos.
+ */
+function torusPysty({
+  keski, R, r, segU, segV, rooli,
+}) {
+  const piste = (i, j) => {
+    const th = ((i % segU) * 360) / segU; const ph = ((j % segV) * 360) / segV;
+    const ulos = [Math.cos(th * RAD) * Math.cos(ph * RAD), Math.sin(th * RAD) * Math.cos(ph * RAD), Math.sin(ph * RAD)];
+    return {
+      p: [keski[0] + R * Math.cos(th * RAD) + r * ulos[0], keski[1] + R * Math.sin(th * RAD) + r * ulos[1], keski[2] + r * ulos[2]],
+      n: ulos,
+    };
+  };
+  const kolmiot = [];
+  for (let i = 0; i < segU; i++) {
+    for (let j = 0; j < segV; j++) {
+      const a = piste(i, j); const b = piste(i + 1, j); const c = piste(i + 1, j + 1); const d = piste(i, j + 1);
+      kolmiot.push(...nelio(a.p, b.p, c.p, d.p, rooli, [a.n, b.n, c.n, d.n]));
+    }
+  }
+  return kolmiot;
 }
 
 /* ==================== Mittasuhteet ==================== */
@@ -521,6 +606,65 @@ function rakennaPaahine(kartta, m, paahine) {
         k1: 248,
       }),
     ]);
+  } else if (paahine === 'kypara') {
+    // Erä 3: kattilakypärä = matala metallikupu + leveä kaksipuolinen lieri. Kupu
+    // päättyy 74°:een (silmälinja ~84° jää lierin alle), lieri kupun reunan korkeudella.
+    const capR = m.headR * 1.10;
+    const reunaY = m.headR + capR * Math.cos(74 * RAD);
+    const reunaR = capR * Math.sin(74 * RAD);
+    lisaa(kartta, 'paa', 'esine-metalli', [
+      ...siirra(palloVyohyke({
+        r: capR, segU: SEG.paa.u, segV: 4, kulmaYla: 0, kulmaAla: 74, rooli: 'esine-metalli',
+      }), [0, m.headR, 0]),
+      ...rengas({
+        rSisa: reunaR * 0.99, rUlko: m.headR * 1.75, y: reunaY, segU: SEG.paa.u, rooli: 'esine-metalli',
+      }),
+    ]);
+  } else if (paahine === 'hattu') {
+    // Erä 3: leveälierinen huopahattu ('vaate2' = tumma): loivasti kapeneva kruunu
+    // + kaksipuolinen lieri silmälinjan yläpuolella (y = 1,28 headR, silmät ~1,10).
+    const h = m.headR;
+    lisaa(kartta, 'paa', 'vaate2', [
+      ...lathe([
+        { r: h * 1.07, y: h * 1.28 },
+        { r: h * 1.02, y: h * 1.62 },
+        { r: h * 0.86, y: h * 2.14 },
+      ], SEG.paa.u, 'vaate2'),
+      ...kiekko({
+        r: h * 0.86, y: h * 2.14, ylospain: true, segU: SEG.paa.u, rooli: 'vaate2',
+      }),
+      ...rengas({
+        rSisa: h * 1.05, rUlko: h * 1.95, y: h * 1.28, segU: SEG.paa.u, rooli: 'vaate2',
+      }),
+    ]);
+  } else if (paahine === 'huppu') {
+    // Erä 3: päätä myötäilevä huppu: pallokaari päälaelta korvien alle, etuaukko
+    // (k = -55..55) jää kasvoille, + niskaan/hartioille laskeutuva kaapuosa (k 90..270).
+    const h = m.headR;
+    lisaa(kartta, 'paa', 'vaate', [
+      ...siirra(palloKaari({
+        r: h * 1.08, segU: SEG.paa.u, segV: 6, kulmaYla: 0, kulmaAla: 102, k0: 55, k1: 305, rooli: 'vaate',
+      }), [0, h, 0]),
+      ...kartioVaippa({
+        r0: h * 1.32, y0: -h * 0.55, r1: h * 1.02, y1: h * 0.35, segU: SEG.paa.u, rooli: 'vaate', k0: 90, k1: 270,
+      }),
+    ]);
+  } else if (paahine === 'lakki') {
+    // Erä 3: papin musta pyöreä lakki ('vaate2' - kappalaisella tumma/musta) + pieni nuppi.
+    const h = m.headR;
+    const capR = h * 1.06;
+    const reunaY = h + capR * Math.cos(66 * RAD);
+    lisaa(kartta, 'paa', 'vaate2', [
+      ...siirra(palloVyohyke({
+        r: capR, segU: SEG.paa.u, segV: 4, kulmaYla: 0, kulmaAla: 66, rooli: 'vaate2',
+      }), [0, h, 0]),
+      ...kartioVaippa({
+        r0: capR * Math.sin(66 * RAD) * 1.03, y0: reunaY - h * 0.08, r1: capR * Math.sin(66 * RAD), y1: reunaY, segU: SEG.paa.u, rooli: 'vaate2',
+      }),
+      ...siirra(pallo({
+        r: h * 0.12, segU: SEG.tiny.u, segV: SEG.tiny.v, rooli: 'vaate2',
+      }), [0, h + capR + h * 0.04, 0]),
+    ]);
   } else {
     lisaa(kartta, 'paa', 'hiukset', siirra(
       palloVyohyke({
@@ -572,6 +716,31 @@ function rakennaHame(kartta, m) {
       r: helmaR, y: nilkkaY, ylospain: false, segU: SEG.runko.u, rooli: 'vaate2',
     }),
   ]);
+}
+
+/**
+ * Kaapu (erä 3, vaatteet.kaapu): nilkkapituinen, kartiomainen 'vaate'-hame vyötäröltä
+ * nilkkoihin + leveät hihat kyynärvarsien ympärille. Housut (reidet/sääret 'vaate2')
+ * jäävät kaavun sisään; hame korvaa tunikan helman ja hameen (ks. teeHahmo3d).
+ */
+function rakennaKaapu(kartta, m) {
+  const nilkkaY = -(m.thighL + m.shinL) * 0.97;
+  const helmaR = m.LA * 0.98;
+  lisaa(kartta, 'lantio', 'vaate', [
+    ...lathe([
+      { r: m.pelvisR * 1.10, y: m.pelvisRise * 0.5 },
+      { r: m.LA * 0.68, y: -m.thighL * 0.85 },
+      { r: helmaR, y: nilkkaY },
+    ], SEG.runko.u, 'vaate'),
+    ...kiekko({
+      r: helmaR, y: nilkkaY, ylospain: false, segU: SEG.runko.u, rooli: 'vaate',
+    }),
+  ]);
+  for (const v of ['v', 'o']) {
+    lisaa(kartta, `kyynar_${v}`, 'vaate', kartioVaippa({
+      r0: m.forearmR1 * 2.1, y0: -m.forearmL * 0.94, r1: m.forearmR0 * 1.55, y1: 0, segU: SEG.raaja.u, rooli: 'vaate',
+    }));
+  }
 }
 
 /** Liivi (selka-solmu, VAIN mekkoa käyttävälle - OHJE "liivi"): kapea
@@ -628,7 +797,153 @@ function rakennaEsine(kartta, m, esine) {
         r: alaR, y: -korkeus, ylospain: false, segU: SEG.pieni.u, rooli: 'esine-puu',
       }), [0, kahvaY, 0]),
     ], sivuOff));
+  } else if (esine === 'keihas' || esine === 'airo') {
+    rakennaPystyvarsi(kartta, m, esine);
+  } else if (esine === 'kirja') {
+    rakennaKirja(kartta, m);
+  } else if (esine === 'avaimet') {
+    rakennaAvaimet(kartta, m);
+  } else if (esine === 'lyhty') {
+    rakennaLyhty(kartta, m);
   }
+}
+
+/**
+ * Käsiesineiden yhteinen paikka (kasi_o-solmun kehys, origo ranteessa): u = sivuun
+ * reiden ULKOPUOLELLE (sama takuuvarma rako kuin sangolla: reiden uloin reuna vs.
+ * käden etäisyys keskilinjasta), w = hieman eteen. sr = esineen oma säde.
+ */
+function kadenPaikka(m, sr) {
+  const lisa = Math.max(0, m.LA / 2 + m.thighR0 - m.HA / 2 + 0.012);
+  return {
+    u: -(m.handR * 0.5 + lisa + sr),
+    w: m.handR * 0.30,
+    kasiY: -m.handR * 0.75,
+    // Ranteen korkeus maailmassa (lepoasento) - pystyvarsi ulottuu tästä maahan asti.
+    ranneKorkeus: 0.52 * m.H + m.torsoH - m.upperArmL - m.forearmL,
+  };
+}
+
+/**
+ * Pystyssä kädessä pidettävä varsi (erä 3): keihäs = 2,2 m varsi ('esine-puu') +
+ * lehtimäinen kärki ja kaulus ('esine-metalli'); airo = 1,75 m varsi + litteä
+ * lapa ylhäällä (molemmat 'esine-puu'). Varren alapää ~3 cm maan yläpuolella.
+ */
+function rakennaPystyvarsi(kartta, m, esine) {
+  const keihas = esine === 'keihas';
+  const r = keihas ? 0.015 : 0.014;
+  const { u, w, ranneKorkeus } = kadenPaikka(m, r);
+  const pohja = -ranneKorkeus + 0.03;
+  const pituus = keihas ? 2.2 : 1.75;
+  const huippu = pohja + pituus;
+  lisaa(kartta, 'kasi_o', 'esine-puu', siirra(kapseli({
+    r, pituus, segU: 6, segV: 2, rooli: 'esine-puu',
+  }), [u, huippu, w]));
+  if (keihas) {
+    lisaa(kartta, 'kasi_o', 'esine-metalli', siirra([
+      ...lathe([
+        { r: 0.012, y: -0.02 }, // kaulus varren päällä
+        { r: 0.019, y: 0.0 },
+        { r: 0.030, y: 0.07 }, // kärjen leveä kohta
+        { r: 0.002, y: 0.20 }, // terävä huippu
+      ], 6, 'esine-metalli'),
+      ...kiekko({
+        r: 0.019, y: 0.0, ylospain: false, segU: 6, rooli: 'esine-metalli',
+      }),
+    ], [u, huippu, w]));
+  } else {
+    lisaa(kartta, 'kasi_o', 'esine-puu', skaalaaJaSiirra(
+      pallo({ r: 1, segU: SEG.pieni.u, segV: SEG.pieni.v, rooli: 'esine-puu' }),
+      [0.07, 0.27, 0.013],
+      [u, huippu - 0.10, w],
+    ));
+  }
+}
+
+/** Pieni kirja kädessä (erä 3): 'esine-puu'-kannet + vaalea sivunippu ('esiliina'-pinta) etureunassa. */
+function rakennaKirja(kartta, m) {
+  const t = m.handL * 0.55; const lev = m.handL * 1.35; const kor = m.handL * 2.0;
+  const { u, w, kasiY } = kadenPaikka(m, t / 2);
+  const y1 = kasiY + kor * 0.30; const y0 = y1 - kor;
+  const kaikki = { yla: 1, ala: 1, etu: 1, taka: 1, vasen: 1, oikea: 1 };
+  const roolit = (pinta) => Object.fromEntries(Object.keys(kaikki).map((k) => [k, pinta]));
+  lisaa(kartta, 'kasi_o', 'esine-puu', litteaksi(laatikko({
+    u0: u - t / 2, u1: u + t / 2, y0, y1, w0: w - lev / 2, w1: w + lev / 2,
+  }, roolit('esine-puu'))));
+  lisaa(kartta, 'kasi_o', 'esiliina', litteaksi(laatikko({
+    u0: u - t * 0.36, u1: u + t * 0.36, y0: y0 + 0.006, y1: y1 - 0.006, w0: w - lev / 2 + 0.008, w1: w + lev / 2 + 0.006,
+  }, roolit('esiliina'))));
+}
+
+/** Avainrengas + kolme avainta kädessä (erä 3, pieni, kaikki 'esine-metalli'). */
+function rakennaAvaimet(kartta, m) {
+  const { u, w, kasiY } = kadenPaikka(m, 0.03);
+  const kaikki = ['yla', 'ala', 'etu', 'taka', 'vasen', 'oikea'];
+  const roolit = Object.fromEntries(kaikki.map((k) => [k, 'esine-metalli']));
+  const rengasY = kasiY - 0.025;
+  const osat = [
+    ...torusPysty({
+      keski: [u, rengasY, w], R: 0.026, r: 0.005, segU: 8, segV: 4, rooli: 'esine-metalli',
+    }),
+  ];
+  const avaimet = [[-0.014, 0.070], [0.0, 0.058], [0.014, 0.076]];
+  for (const [du, pit] of avaimet) {
+    const ylaY = rengasY - 0.026;
+    osat.push(...litteaksi(laatikko({
+      u0: u + du - 0.005, u1: u + du + 0.005, y0: ylaY - pit, y1: ylaY + 0.004, w0: w - 0.004, w1: w + 0.004,
+    }, roolit)));
+    osat.push(...litteaksi(laatikko({
+      u0: u + du - 0.005, u1: u + du + 0.017, y0: ylaY - pit, y1: ylaY - pit + 0.014, w0: w - 0.004, w1: w + 0.004,
+    }, roolit))); // avaimen hammas
+  }
+  lisaa(kartta, 'kasi_o', 'esine-metalli', osat);
+}
+
+/**
+ * Roikkuva lyhty kädessä (erä 3): metallikehys (kansi, neljä pylvästä, jalusta) +
+ * lämmin 'hiillos'-liekki sisällä + ripustuskahva kädestä kanteen.
+ */
+function rakennaLyhty(kartta, m) {
+  const { u, w, kasiY } = kadenPaikka(m, 0.045);
+  const yt = kasiY - 0.09; const yb = yt - 0.13; const pylvasR = 0.038;
+  const kaikki = ['yla', 'ala', 'etu', 'taka', 'vasen', 'oikea'];
+  const roolit = Object.fromEntries(kaikki.map((k) => [k, 'esine-metalli']));
+  const osat = [
+    // kahva: vaakapalkki kädestä lyhdyn yläpuolelle + pystysilmukka kanteen
+    ...litteaksi(laatikko({
+      u0: u - 0.004, u1: -0.012, y0: kasiY - 0.008, y1: kasiY, w0: w - 0.004, w1: w + 0.004,
+    }, roolit)),
+    ...litteaksi(laatikko({
+      u0: u - 0.004, u1: u + 0.004, y0: yt + 0.03, y1: kasiY, w0: w - 0.004, w1: w + 0.004,
+    }, roolit)),
+    // kansi
+    ...siirra(lathe([{ r: 0.05, y: yt }, { r: 0.014, y: yt + 0.04 }], 8, 'esine-metalli'), [u, 0, w]),
+    ...siirra(kiekko({
+      r: 0.05, y: yt, ylospain: false, segU: 8, rooli: 'esine-metalli',
+    }), [u, 0, w]),
+    // jalusta
+    ...siirra([
+      ...lathe([{ r: 0.045, y: yb - 0.012 }, { r: 0.045, y: yb }], 8, 'esine-metalli'),
+      ...kiekko({
+        r: 0.045, y: yb - 0.012, ylospain: false, segU: 8, rooli: 'esine-metalli',
+      }),
+      ...kiekko({
+        r: 0.045, y: yb, ylospain: true, segU: 8, rooli: 'esine-metalli',
+      }),
+    ], [u, 0, w]),
+  ];
+  for (const k of [45, 135, 225, 315]) {
+    const [pu, , pw] = kaaripiste([0, 0], pylvasR, k, 0);
+    osat.push(...litteaksi(laatikko({
+      u0: u + pu - 0.004, u1: u + pu + 0.004, y0: yb, y1: yt, w0: w + pw - 0.004, w1: w + pw + 0.004,
+    }, roolit)));
+  }
+  lisaa(kartta, 'kasi_o', 'esine-metalli', osat);
+  lisaa(kartta, 'kasi_o', 'hiillos', skaalaaJaSiirra(
+    pallo({ r: 0.028, segU: SEG.pieni.u, segV: SEG.pieni.v, rooli: 'hiillos' }),
+    [1, 1.5, 1],
+    [u, (yt + yb) / 2, w],
+  ));
 }
 
 /* ==================== Värit ==================== */
@@ -688,7 +1003,9 @@ export function teeHahmo3d(henkiloId, henkilo) {
   rakennaVartalo(kartta, m);
   rakennaKasvot(kartta, m);
   rakennaPaahine(kartta, m, vaatteet.paahine ?? null);
-  if (vaatteet.hame) {
+  if (vaatteet.kaapu) {
+    rakennaKaapu(kartta, m); // erä 3: nilkkapituinen kaapu korvaa tunikan/hameen
+  } else if (vaatteet.hame) {
     rakennaHame(kartta, m);
     rakennaVesti(kartta, m); // OHJE "liivi" - vain mekkoa käyttävälle
   } else {

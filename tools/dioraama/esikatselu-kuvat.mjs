@@ -6,10 +6,14 @@
  * — EI GPU-lippuja: tämä työkalu ottaa vain pysäytyskuvia sommittelun/valaistuksen
  * tarkistamiseksi, ei mittaa suorituskykyä (ks. tools/savukkeet/gpu-vaisto.mjs).
  *
- *   node tools/dioraama/esikatselu-kuvat.mjs [kansio] [--paketti /dist/dioraama/<r>/]
+ *   node tools/dioraama/esikatselu-kuvat.mjs [kansio] [--paketti /dist/dioraama/<r>/] [--tila <id>] [--yleis]
  *
- * kansio: minne PNG:t kirjoitetaan (oletus alla). --paketti: harvinainen ohitus
- * esikatselu.mjs:n omalle paketti-oletukselle (URL-polku, ei tiedostojärjestelmäpolku).
+ * kansio: minne PNG:t kirjoitetaan (oletus alla). --paketti: ohitus esikatselu.mjs:n omalle
+ * paketti-oletukselle (URL-polku repon juuresta, ei tiedostojärjestelmäpolku); myös rakennus.json luetaan
+ * sieltä. Erä 3: rinnakkaiset tila-agentit rakentavat omaan kansioonsa (rakenna.mjs --ulos dist/<oma>)
+ * ja antavat --paketti /dist/<oma>/olavinlinna/. --tila <id>: vain tämä tila (+ pahvitarkistus kahdesta
+ * yläkulmasta); --yleis: lisäksi yleisnäkymä; --nopea: vain vaaka 852x393 + pysty 393x852 + pahvikuvat,
+ * deviceScaleFactor 1 (SwiftShader on hidas: rinnakkaiset agentit).
  *
  * Kuvat: yleis + jokainen kohdistettava tila (rakennus.json: kohdistettava === true)
  * × {pysty 393x852, vaaka 852x393, iPad vaaka 1366x1024}, taulu=1, paneeli=0 (kytkin-
@@ -40,7 +44,12 @@ const OLETUSKANSIO = join(
 );
 const ULOS = vapaat[0] ?? OLETUSKANSIO;
 const PAKETTI_URL = lippu('paketti'); // null = anna esikatselu.mjs:n käyttää omaa oletustaan
-const RAKENNUS_POLKU_FS = join(JUURI, 'dist/dioraama/olavinlinna/rakennus.json');
+const VAIN_TILA = lippu('tila'); // erä 3: yksi tila kerrallaan (tila-agentit)
+const YLEIS = argv.includes('--yleis');
+const NOPEA = argv.includes('--nopea');
+const RAKENNUS_POLKU_FS = PAKETTI_URL
+  ? join(JUURI, PAKETTI_URL, 'rakennus.json')
+  : join(JUURI, 'dist/dioraama/olavinlinna/rakennus.json');
 mkdirSync(ULOS, { recursive: true });
 
 if (!existsSync(RAKENNUS_POLKU_FS)) {
@@ -48,13 +57,18 @@ if (!existsSync(RAKENNUS_POLKU_FS)) {
   process.exit(1);
 }
 const rakennusJson = JSON.parse(readFileSync(RAKENNUS_POLKU_FS, 'utf8'));
-const kohteet = ['', ...rakennusJson.tilat.filter((t) => t.kohdistettava).map((t) => t.id)];
+const kaikki = rakennusJson.tilat.filter((t) => t.kohdistettava).map((t) => t.id);
+if (VAIN_TILA && !kaikki.includes(VAIN_TILA)) {
+  console.error(`esikatselu-kuvat: tilaa '${VAIN_TILA}' ei ole (${kaikki.join(', ')})`);
+  process.exit(1);
+}
+const kohteet = VAIN_TILA ? [...(YLEIS ? [''] : []), VAIN_TILA] : ['', ...kaikki];
 
 const KOOT = [
   { suunta: 'pysty', koko: '393x852' },
   { suunta: 'vaaka', koko: '852x393' },
   { suunta: 'vaaka', koko: '1366x1024' }, // iPad vaaka — sama suunta, eri koko/kuvasuhde kuin puhelin
-];
+].filter((k) => !NOPEA || k.koko !== '1366x1024');
 
 // Peruskuvat: yleis + jokainen kohdistettava tila × jokainen koko.
 const kuvat = [];
@@ -63,15 +77,17 @@ for (const tila of kohteet) {
     kuvat.push({ tila, suunta, koko, tiedostonimi: `${tila || 'yleis'}-${suunta}-${koko}.png` });
   }
 }
-// Pahvitarkistus (era2b kohta 7, tehtävän kuvaus): keittiö ylhäältä kahdesta
+// Pahvitarkistus (era2b kohta 7, tehtävän kuvaus): tila ylhäältä kahdesta
 // kulmasta iPad-koossa — paljastaisiko joku kulma litteän pahvin/billboardin.
-if (rakennusJson.tilat.some((t) => t.id === 'keittio')) {
+// Oletuksena keittiö; --tila <id> tekee saman annetulle tilalle.
+const pahviTila = VAIN_TILA ?? (rakennusJson.tilat.some((t) => t.id === 'keittio') ? 'keittio' : null);
+if (pahviTila) {
   kuvat.push({
-    tila: 'keittio', suunta: 'vaaka', koko: '1366x1024', tiedostonimi: 'keittio-pahvi-ipad34-1366x1024.png',
+    tila: pahviTila, suunta: 'vaaka', koko: '1366x1024', tiedostonimi: `${pahviTila}-pahvi-ipad34-1366x1024.png`,
     lisaparametrit: { atsimuuttilisa: '35', korkeus: '40' },
   });
   kuvat.push({
-    tila: 'keittio', suunta: 'vaaka', koko: '1366x1024', tiedostonimi: 'keittio-pahvi-ylhaalta-1366x1024.png',
+    tila: pahviTila, suunta: 'vaaka', koko: '1366x1024', tiedostonimi: `${pahviTila}-pahvi-ylhaalta-1366x1024.png`,
     lisaparametrit: { korkeus: '65' },
   });
 }
@@ -104,7 +120,11 @@ console.log(`esikatselu-kuvat: palvelin ${JUURI_URL} (${kuvat.length} kuvaa)`);
 const selain = await avaaChromium({
   // CLAUDE.md: /opt/pw-browsers/chromium pätee konttiympäristössä — Mac Studiolla
   // (tämä sessio) Playwright löytää oman lataamansa selaimen itse (CHROMIUM ohittaa).
-  args: ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'],
+  // GPU oletuksena (Päätoimittaja 29.9. klo 19: SwiftShader vei ~500 % CPU:ta per ajo ja jumitti koneen);
+  // ESIKATSELU_SWIFTSHADER=1 palauttaa ohjelmistorenderöinnin, jos Metal-kuva on musta.
+  args: process.env.ESIKATSELU_SWIFTSHADER
+    ? ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist']
+    : ['--use-angle=metal', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 
 // ── Kuvat: peruskuvat + pahvitarkistus (ks. kuvat-listan rakennus yllä) ─────
@@ -113,7 +133,7 @@ for (const kuva of kuvat) {
   const { tila, suunta, koko, tiedostonimi, lisaparametrit } = kuva;
   const [leveys, korkeus] = koko.split('x').map(Number);
   // eslint-disable-next-line no-await-in-loop
-  const ctx = await selain.newContext({ viewport: { width: leveys, height: korkeus }, deviceScaleFactor: 2 });
+  const ctx = await selain.newContext({ viewport: { width: leveys, height: korkeus }, deviceScaleFactor: NOPEA ? 1 : 2 });
   // eslint-disable-next-line no-await-in-loop
   const sivu = await ctx.newPage();
   const konsoliVirheet = [];
@@ -138,7 +158,7 @@ for (const kuva of kuvat) {
     // eslint-disable-next-line no-await-in-loop
     await sivu.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
     // eslint-disable-next-line no-await-in-loop
-    await sivu.screenshot({ path: polku });
+    await sivu.screenshot({ path: polku, timeout: 90000 });
     tulokset.push({ tiedostonimi, ok: true });
   } catch (e) {
     const lisa = konsoliVirheet.length ? ` | konsoli: ${konsoliVirheet.slice(0, 3).join(' / ')}` : '';
