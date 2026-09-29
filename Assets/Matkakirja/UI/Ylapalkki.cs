@@ -681,8 +681,12 @@ namespace Matkakirja.Natiivi
                 bool nakyy = ikoni.style.display != DisplayStyle.None;
                 if (nakyy && ikoni.resolvedStyle.width > 0f)
                     ikoninTila = ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight;
-                float ilmanIkonia = nakyy ? kiintea - ikoninTila : kiintea;
-                bool mahtuu = ilmanIkonia + ikoninTila + teksti * koko / nyt + 2f <= pilleriMax;
+                // Päivärivillä on oma kokonsa (kaksirivinen 11 px), joten mahtuminen luetaan asettelusta: rivin tarvitsema leveys
+                // vs. sille jäänyt tila (1.0.55-laitekuva: arvio pillerin koosta näytti mahtuvan, mutta "Päivä 1, aa…" katkesi).
+                float tila = kello.contentRect.width;
+                bool mahtuu = float.IsNaN(tila) || tila <= 0f
+                    ? kiintea - (nakyy ? ikoninTila : 0f) + ikoninTila + teksti * koko / nyt + 2f <= pilleriMax
+                    : kelloLeveys <= tila + 0.5f - (nakyy ? 0f : ikoninTila);
                 bool varoitus = rahaton.style.display == DisplayStyle.Flex;
                 var d = mahtuu && !varoitus ? DisplayStyle.Flex : DisplayStyle.None;
                 if (ikoni.style.display != d) ikoni.style.display = d;
