@@ -9167,3 +9167,7 @@ Omistaja 29.9. klo 12.1x sanatarkasti: "kun viikkolimit 97%, lopeta sessiot ja k
 ## OMISTAJA: JOKIEN TÄYSI POLTTO 2026-09-30-POHJA (29.9.2026 klo 12.25)
 
 Karttasepän jokikoe (GEOGLOWS-joet --joet-lisa, #3614: Wienissä yksi Tonava, Tiberin silmukka korjattu, Moskva ja Kemijoki uusina; kuvaparit pyramidi-poltto/joet-koe-20260929/kuvaparit/) näytetty omistajalle. Omistaja kortilla 29.9. klo 12.2x: 'Aloita poltto' → täysi poltto 2026-09-30-pohja (+viivat, joet molempiin kerroksiin, ei --piirit) + pallo, nice 15, yön yli; vienti ja osoitin erillisellä luvalla aamulla. Poltto saa jatkua myös viikkokiintiön 97 %:n pysäytyksen yli (tilinvaihto).
+
+## PÄÄTÖS: VIE 1.0.48 (AVARUUSKÄVELY) (29.9.2026 klo 13.01)
+
+Natiiviseppä 29.9. klo 13.0x: BUILD 48 = proto master 1c4a7eff (käännös 39fc303b): Linssiseppä 2:n avaruuskävely bdea89bf (omistaja hyväksyi) + radio-virta b68dcdd3 (ei-asemaa-teksti, kytkin sulkee linssin) + Natiivi-UI:n pelaajan näkymä 9652f810; Laitetestaaja 5/5 PASS (iPad pysty; vaaka todennettu 8affab73:ssa). Päätoimittaja: VIE 1.0.48; jos 1.0.47:n vienti ei ole alkanut, se ohitetaan (1.0.48 sisältää kaiken); muutosrivit yhdistetään.
