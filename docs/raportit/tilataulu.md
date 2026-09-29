@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 16:34:** Levy 92,23 Gi (/private/tmp 23,4 Gt, wt/ 12 Gt), muisti 59 % vapaa, kuorma 18/20/36, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: kaikki levossa (Päätoimittaja 65 %, viimeksi 16:30); Natiivi-UI 79 % ilmoitettu. VIIKKO 95 % (5 h 25 %, vakaa 16:16→16:34); 97 %:ssa erillinen viesti. Juna: b13 HEAD ddf90f51 käännetty (fc26b44c 15:42). Posti: ei uutta (vain Fablen omia viestejä).
+
 **Päivitetty 16:25:** Levy 92,42 Gi (/private/tmp 23,4 Gt, wt/ 12 Gt), muisti 67 % vapaa, kuorma 12/28/51, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: kaikki levossa (luovutukset pushattu, 8/11 vastannut); Natiivi-UI 79 % ilmoitettu. VIIKKO 95 % (5 h 25 %, ei noussut 16:16→16:25); 97 %:ssa erillinen viesti. Juna: b13 HEAD ddf90f51 käännetty (fc26b44c 15:42). Posti: ei uutta.
 
 **Päivitetty 16:16:** Levy 93,03 Gi (/private/tmp 23,4 Gt, wt/ 12 Gt), muisti 57 % vapaa, kuorma 109/64/71, sim 0, GPU-chrome 0, wt/ 12 kohdetta. VIIKKO 95 % (5 h 25 %; 94 %-viesti Päätoimittajalle 16:11, 97 %:ssa erillinen viesti). Päätoimittajan luovutuskäsky (94 %) välitetty kaikille 11 roolille 16:12; luovutukset pushattu: Linnanrakentaja 9aedb5967, Julkaisija e30efb6a1, Natiivi-UI 1d7a0e947, Linssiseppä 2 f5628cd51, Karttaseppä 8dcb7190f, Pelikoodari ab6e0e56d, Laitetestaaja e4ef21d55, Sisältökirjuri a93e7e4f8; puuttuu Natiiviseppä, Linssiseppä, Siirtoseppä. Juna: b13 HEAD ddf90f51 käännetty (fc26b44c 15:42). Posti: ei uutta.
