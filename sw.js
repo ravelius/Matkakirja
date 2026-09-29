@@ -846,6 +846,13 @@ const SHELL = [
   './js/die.js',
   './assets/icon.svg',
   './assets/logo.png',
+  // Puhelimen nahkainen yläpalkki (css/styles.css, max-width: 560px):
+  // Codexin kooste, omistaja hyväksyi 29.9.2026. iPadilla näitä ei
+  // käytetä, mutta esilataus ei erottele laitetta — sama SHELL kaikille.
+  './assets/ylapalkki/nahka.jpg',
+  './assets/ylapalkki/keski-varjo.png',
+  './assets/ylapalkki/logo-emboss.png',
+  './assets/ylapalkki/pilleri-emboss.png',
   // Etusivun työpöytäsommitelma: isoisän matkakirja ja sen alta
   // pilkottava irtolehti (läpinäkyviä PNG:itä). Ilman esilatausta
   // pelin ENSIMMÄINEN ruutu olisi offline-tilassa vajaa.

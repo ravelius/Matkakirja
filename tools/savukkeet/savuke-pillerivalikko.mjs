@@ -182,10 +182,83 @@ const mitat = (sivu, valitsin) => sivu.evaluate((v) => {
   };
 }, valitsin);
 
+/*
+ * NAHKAINEN YLÄPALKKI (omistaja 29.9.2026: "Hyväksyn, madalletaan").
+ * Apurit tälle savukkeelle: taustakuvan osoite, kuvien lataus (fetch
+ * 200), keskivyöhykkeen ylivuoto ja pillerin tekstin kontrasti
+ * OIKEASTI MITATTUNA renderöidystä pikselistä (ei vain CSS:n
+ * väriarvoista laskettuna) — border-image-9-slice ei näy DOMissa
+ * yksikkötestille, joten tämä on ainoa paikka, jossa se todella
+ * todennetaan.
+ */
+
+/** WCAG-kontrastisuhde kahden {r,g,b}-värin välillä (0-255). */
+function kontrastisuhde(a, b) {
+  const lum = ({ r, g, b: bl }) => {
+    const f = (c) => { const s = c / 255; return s <= 0.03928 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4; };
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(bl);
+  };
+  const [l1, l2] = [lum(a), lum(b)].sort((x, y) => y - x);
+  return (l1 + 0.05) / (l2 + 0.05);
+}
+
+/**
+ * Pillerin TAUSTAN keskimääräinen väri renderöidystä ruudusta, teksti
+ * ja kuvake väliaikaisesti piilotettuina (muuten näyte sekoittaisi
+ * tekstin ja taustan pikselit). Näyte otetaan pillerin keskialueelta
+ * (25-75 % leveydestä, 35-65 % korkeudesta) — pyöreät päät ja
+ * kohokuvan reunavalo/-varjo jäävät ulos, koska juuri siihen tekstit
+ * oikeasti piirtyvät.
+ */
+async function pillerinTaustaVari(sivu) {
+  const piilotetut = await sivu.evaluate(() => {
+    const pilleri = document.getElementById('turn-pill');
+    const lapset = [...pilleri.children];
+    const vanhat = lapset.map((el) => el.style.visibility);
+    lapset.forEach((el) => { el.style.visibility = 'hidden'; });
+    return vanhat.length;
+  });
+  const kuva = await sivu.locator('#turn-pill').screenshot();
+  await sivu.evaluate(() => {
+    document.getElementById('turn-pill').querySelectorAll(':scope > *')
+      .forEach((el) => { el.style.visibility = ''; });
+  });
+  const b64 = kuva.toString('base64');
+  const vari = await sivu.evaluate(async (data) => {
+    const img = new Image();
+    img.src = `data:image/png;base64,${data}`;
+    await img.decode();
+    const c = document.createElement('canvas');
+    c.width = img.naturalWidth; c.height = img.naturalHeight;
+    const ctx = c.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const x0 = Math.round(c.width * 0.25); const x1 = Math.max(x0 + 1, Math.round(c.width * 0.75));
+    const y0 = Math.round(c.height * 0.35); const y1 = Math.max(y0 + 1, Math.round(c.height * 0.65));
+    const id = ctx.getImageData(x0, y0, x1 - x0, y1 - y0).data;
+    let r = 0; let g = 0; let b = 0; let n = 0;
+    for (let i = 0; i < id.length; i += 4) { r += id[i]; g += id[i + 1]; b += id[i + 2]; n += 1; }
+    return { r: r / n, g: g / n, b: b / n };
+  }, b64);
+  return { vari, piilotettuja: piilotetut };
+}
+
+/** Tekstin väri CSS:stä (rgb(...) → {r,g,b}). */
+const tekstinVari = (sivu, valitsin) => sivu.evaluate((v) => {
+  const el = document.querySelector(v);
+  if (!el) return null;
+  const m = getComputedStyle(el).color.match(/[\d.]+/g);
+  return m ? { r: Number(m[0]), g: Number(m[1]), b: Number(m[2]) } : null;
+}, valitsin);
+
+/** Elementin haetun kuvan/taustan HTTP-tila (fetch, sama origin). */
+const kuvaLataantuu = (sivu, osoite) => sivu.evaluate(async (u) => {
+  try { const r = await fetch(u); return r.status; } catch { return 0; }
+}, osoite);
+
 /* ══════════════════════════════════════════════════════════════════ */
 /* 1–2 ja 6–7: LOGO/PILLERI, VALIKON JÄRJESTYS, EI YLIVUOTOA, EI VIRHEITÄ */
 /* ══════════════════════════════════════════════════════════════════ */
-async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy }) {
+async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy, onNahka = false }) {
   const { ctx, sivu, virheet } = await avaaPeli(leveys, korkeus);
 
   const logo = await mitat(sivu, '#brand-btn');
@@ -213,6 +286,87 @@ async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy
   }
   vaadi(`${nimi}: hampurilainen ${hampurilainenNakyy ? 'näkyy' : 'on piilossa'}`,
     Boolean(hampurilainen?.nakyy) === hampurilainenNakyy, JSON.stringify(hampurilainen));
+
+  /*
+   * NAHKAINEN YLÄPALKKI, VAIN PUHELIMELLA (omistaja 29.9.2026: "Hyväksyn,
+   * madalletaan" — Codexin matkalaukkunahka-kooste). iPadilla palkki
+   * pysyy ennallaan (ei nahkaa, css/styles.css @media max-width:560px);
+   * sama savuke todentaa molemmat puolet omalla `onNahka`-lipullaan.
+   */
+  const topbarTausta = await sivu.evaluate(
+    () => getComputedStyle(document.querySelector('.topbar')).backgroundImage,
+  );
+  if (onNahka) {
+    vaadi(`${nimi}: yläpalkin tausta on nahkakuva`,
+      topbarTausta.includes('assets/ylapalkki/nahka.jpg'), topbarTausta);
+
+    // KUVAT LATAUTUVAT (fetch 200) — nahka, keskitummennus, logon ja
+    // pillerin kohopainatukset. content:url()-vaihdon ja border-imagen
+    // takia naturalWidth ei luotettavasti näytä UUTTA kuvaa, joten
+    // testi hakee osoitteet itse samalta palvelimelta.
+    const [nahkaTila, varjoTila, logoTila, pilleriTila] = await Promise.all([
+      kuvaLataantuu(sivu, '/assets/ylapalkki/nahka.jpg'),
+      kuvaLataantuu(sivu, '/assets/ylapalkki/keski-varjo.png'),
+      kuvaLataantuu(sivu, '/assets/ylapalkki/logo-emboss.png'),
+      kuvaLataantuu(sivu, '/assets/ylapalkki/pilleri-emboss.png'),
+    ]);
+    vaadi(`${nimi}: nahka.jpg latautuu (200)`, nahkaTila === 200, String(nahkaTila));
+    vaadi(`${nimi}: keski-varjo.png latautuu (200)`, varjoTila === 200, String(varjoTila));
+    const logoSisalto = await sivu.evaluate(
+      () => getComputedStyle(document.querySelector('.brand-kuva')).content,
+    );
+    vaadi(`${nimi}: logon kohokuva on käytössä (CSS content)`,
+      logoSisalto.includes('assets/ylapalkki/logo-emboss.png'), logoSisalto);
+    vaadi(`${nimi}: logo-emboss.png latautuu (200)`, logoTila === 200, String(logoTila));
+    vaadi(`${nimi}: pilleri-emboss.png latautuu (200)`, pilleriTila === 200, String(pilleriTila));
+
+    /*
+     * KESKIVYÖHYKE TYHJÄNÄ (Codexin manifest.json centerSafeAreaPx:
+     * 385-905 / 1290 eli 29,8-70,2 % leveydestä). Logo ei saa ulottua
+     * vyöhykkeelle oikealta eikä pilleri vasemmalta millään
+     * puhelinleveydellä (testataan sekä 393 että 360 px).
+     */
+    const vyohykeVasen = leveys * (385 / 1290);
+    const vyohykeOikea = leveys * (905 / 1290);
+    vaadi(`${nimi}: logo ei ulotu keskivyöhykkeelle`,
+      logo.x + logo.w <= vyohykeVasen,
+      `logon oikea reuna ${logo.x + logo.w}, vyöhyke alkaa ${vyohykeVasen.toFixed(1)}`);
+    vaadi(`${nimi}: pilleri ei ulotu keskivyöhykkeelle`,
+      pilleri.x >= vyohykeOikea,
+      `pillerin vasen reuna ${pilleri.x}, vyöhyke loppuu ${vyohykeOikea.toFixed(1)}`);
+
+    /*
+     * PALKIN KORKEUS EI KASVA (omistajan ehto: "käytä nykyistä palkin
+     * korkeutta"). Perusarvo mitattu origin/pelikoodari-pillerivalikko-
+     * haarasta ENNEN nahkaa (sama Chromium-ajuri, sama leveys, sama
+     * pelitila kuin tässä savukkeessa — pilleri täytettynä oikeilla
+     * teksteillä, EI tyhjä aloitusruutu, joka näyttäisi virheellisesti
+     * pienemmän luvun): 53 px sekä 393 että 360 px:n leveydellä,
+     * 29.9.2026. Sieto ±1 px pyöristyksille.
+     */
+    const topbarMitat = await mitat(sivu, '.topbar');
+    vaadi(`${nimi}: palkin korkeus ei kasva (perusarvo 53 px)`,
+      topbarMitat?.h != null && Math.abs(topbarMitat.h - 53) <= 1,
+      JSON.stringify(topbarMitat));
+
+    /*
+     * PILLERIN TEKSTIN KONTRASTI ≥ 4.5:1 (WCAG AA), mitattuna OIKEASTA
+     * renderöidystä pikselistä (pillerinTaustaVari yllä) eikä vain
+     * CSS-muuttujista laskettuna — border-image-9-slice ei näy DOMin
+     * väriarvoissa.
+     */
+    const [tausta, teksti] = await Promise.all([
+      pillerinTaustaVari(sivu),
+      tekstinVari(sivu, '.turn-pill .kassa'),
+    ]);
+    const kontrasti = teksti ? kontrastisuhde(tausta.vari, teksti) : 0;
+    vaadi(`${nimi}: pillerin tekstin kontrasti ≥ 4.5:1`,
+      kontrasti >= 4.5,
+      `kontrasti ${kontrasti.toFixed(2)} (tausta ${JSON.stringify(tausta.vari)}, teksti ${JSON.stringify(teksti)})`);
+  } else {
+    vaadi(`${nimi}: yläpalkissa EI ole nahkaa (iPad ennallaan)`,
+      !topbarTausta.includes('assets/ylapalkki'), topbarTausta);
+  }
 
   await sivu.click('#turn-pill');
   await sivu.waitForTimeout(350);
@@ -279,9 +433,9 @@ async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy
   await ctx.close();
 }
 
-await testaaAsetteluJaAvaus('iPhone 393×852', 393, 852, { hampurilainenNakyy: false });
-await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: true });
-await testaaAsetteluJaAvaus('Kapein 360×740', 360, 740, { hampurilainenNakyy: false });
+await testaaAsetteluJaAvaus('iPhone 393×852', 393, 852, { hampurilainenNakyy: false, onNahka: true });
+await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: true, onNahka: false });
+await testaaAsetteluJaAvaus('Kapein 360×740', 360, 740, { hampurilainenNakyy: false, onNahka: true });
 
 /* ══════════════════════════════════════════════════════════════════ */
 /* 3: LINSSIT — KAKSIVAIHEINEN NAPAUTUS                                */

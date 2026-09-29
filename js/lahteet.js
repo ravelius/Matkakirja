@@ -301,6 +301,13 @@ export const LAHTEET = [
         tekija: 'Pelin omaa aineistoa (Sami Reivinen / VVI)',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
+      {
+        nimi: 'Yläpalkin matkalaukkunahka puhelimella (nahkakaistale, '
+          + 'keskitummennus sekä logon ja pillerin kohopainatukset)',
+        tekija: 'Pelin oma tuotanto, tekoälyllä generoitu (Codex, 29.9.2026, '
+          + 'omistajan hyväksymä)',
+        lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
+      },
     ],
   },
   {

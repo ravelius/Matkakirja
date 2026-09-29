@@ -10704,6 +10704,111 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
   .brand { flex: 0 0 auto; }
   .brand-kuva { height: 1.75rem; }
 
+  /*
+   * NAHKAINEN YLÄPALKKI, VAIN PUHELIMELLA (omistaja 29.9.2026: "Hyväksyn,
+   * madalletaan" — Codexin matkalaukkunahka-kooste, kansio
+   * ylapalkki-matkalaukku/. iPad jää ennalleen: sama media-ehto kuin
+   * hampurilaisen piilotus ja pillerin siirto oikealle yllä).
+   *
+   * PALKIN KORKEUS EI KASVA. .topbar on ~53 px korkea pelin OIKEASSA
+   * pelitilassa tällä leveydellä (mitattu Chromiumissa 393 ja 360 px,
+   * pilleri täytettynä oikeilla teksteillä — ks. tools/savukkeet/
+   * savuke-pillerivalikko.mjs; tyhjä aloitusruutu näyttäisi virheellisesti
+   * pienemmän luvun, koska pilleri on silloin vielä sisällötön eikä
+   * kasvata riviä yhtä paljon) — nahka VAIN maalataan sen sisään, mittoja
+   * ei kosketa. Kuva ei silti ole tiedostossa 300 px:n täydessä koossa
+   * (Codexin kooste, 3×): se on skaalattu valmiiksi 503 × 117 px:ään
+   * (assets/ylapalkki/nahka.jpg), riittävän isoksi kattamaan palkin koko
+   * korkeus ilman ylimääräistä CSS-suurennosta. Koska koko kuva
+   * skaalattiin (ei vain rajattu), tikkaus pysyy samalla suhteellisella
+   * paikalla kuin Codexin alkuperäisessä 1290×300-kuvassa (alin ~15 %) —
+   * `background-position: left bottom` ankkuroi sen palkin alareunaan,
+   * `background-size: auto 100%` toistaa saumattomasti vaakaan samassa
+   * korkeudessa.
+   *
+   * Keskitummennus (keski-varjo.png) venyy koko leveydelle nahkan
+   * PÄÄLLE (background-image-listassa ensin = ylimpänä), kuten Codexin
+   * manifest.json kuvaa (layersBottomToTop). Se tummentaa kohtaa, jossa
+   * logo ja pilleri EIVÄT ole (keskivyöhyke, ks. testi
+   * tools/savukkeet/savuke-pillerivalikko.mjs).
+   */
+  .topbar {
+    background-image:
+      url('../assets/ylapalkki/keski-varjo.png'),
+      url('../assets/ylapalkki/nahka.jpg');
+    background-repeat: no-repeat, repeat-x;
+    background-position: center top, left bottom;
+    background-size: 100% 100%, auto 100%;
+  }
+
+  /*
+   * LOGO KOHOPAINETTUNA NAHKAAN (omistajan hyväksymä Codex-kooste).
+   *
+   * VALINTA: kuva KORVAA assets/logo.pngin (`content: url(...)`), ei
+   * erillinen kohokuva logon TAUSTALLA. Codexin koosteessa kirjaimet
+   * ovat itse painuneet nahkaan (oma valo/varjo poltettu tekstin
+   * ympärille) — kaksi päällekkäistä kuvaa (vanha litteä logo + oma
+   * kohokuva sen alla) olisi näyttänyt liimatulta tasolta eikä
+   * painaumalta. `content` korvaa <img>-elementin piirtoaineiston;
+   * Chromium ja Safari (16.4+) tukevat tätä, ja peli ajetaan juuri
+   * niillä (ks. tools/savukkeet/, natiivi WKWebView).
+   *
+   * KORKEUS EI MUUTU (1.75rem yllä, sama kuin ennen) — LEVEYS seuraa
+   * UUDEN kuvan omaa kuvasuhdetta (288×84 eli 3,43:1, Codexin
+   * logo-kohopainatus.png skaalattuna), jolloin logo on kapeampi kuin
+   * ennen (mitattu ~96 px 28 px:n korkeudella, ennen 115 px) — ei
+   * ylivuotoa, ja kapenemisen ansiosta logo mahtuu selvästi ennen
+   * keskivyöhykettä myös 360 px:n leveydellä (testattu).
+   */
+  .brand-kuva { content: url('../assets/ylapalkki/logo-emboss.png'); }
+
+  /*
+   * PILLERI KOHOPAINETTUNA NAHKAAN, 9-SLICE (Codexin manifest.json:
+   * nineSlicePx left/right 53, top/bottom 47 kuvan 302×104-koossa —
+   * assets/ylapalkki/pilleri-emboss.png on tallennettu TÄSMÄLLEEN
+   * tuossa koossa, jotta luvut käyvät sellaisenaan).
+   *
+   * TOTEUTUS ::before-KERROKSENA, EI border-image SUORAAN PILLERIIN:
+   * ::before on position: absolute; inset: 0; box-sizing: border-box,
+   * siis KOKONAAN POISSA asettelusta ja aina täsmälleen pillerin oman
+   * laatikon kokoinen (border mukaan lukien) — sen border-width
+   * (kohokuvan "reunapaksuus") ei voi kasvattaa pilleriä eikä siis
+   * palkkia, oli arvo mikä tahansa (todennettu: sama ~53 px korkeus
+   * myös ilman tätä sääntöä, ks. yllä oleva kommentti — palkin korkeus
+   * TULEE pillerin TEKSTISISÄLLÖSTÄ, ei tästä kuvasta). Itse .turn-pill
+   * säilyttää VANHAN reunuksensa (1px, sama paksuus kuin ennen — vain
+   * väri muuttuu läpinäkyväksi) ja vanhan pehmusteensa, joten pillerin
+   * oma korkeus ei muutu.
+   *
+   * border-width 10px/14px on valittu pyöreän pään näköiseksi (pilleri
+   * on aina border-radius: 999px, JOKA RAJAA lopputuloksen pyöreäksi
+   * riippumatta näistä luvuista) — `fill` piirtää kuvan keskiosan
+   * pilleri runkoon jäävään väliin, `stretch` venyttää sen ilman
+   * saumaa. Tekstit (kassa, päivä, aika) piirtyvät JS:ssä pillerin
+   * OIKEIKSI lapsiksi ::before:n JÄLKEEN, joten ne ovat aina
+   * kohokuvan päällä (ks. tools/savukkeet/savuke-pillerivalikko.mjs:
+   * kontrastimittaus).
+   */
+  .turn-pill {
+    position: relative;
+    background: none;
+    border-color: transparent;
+  }
+  .turn-pill::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    border-radius: 999px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 10px 14px;
+    border-image-source: url('../assets/ylapalkki/pilleri-emboss.png');
+    border-image-slice: 47 53 fill;
+    border-image-repeat: stretch;
+    pointer-events: none;
+  }
+
   .event-toast { font-size: 0.92rem; padding: 0.55rem 0.8rem; top: 10%; }
   .event-toast .toast-icon { font-size: 1.3rem; }
 
