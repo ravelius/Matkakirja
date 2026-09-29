@@ -204,7 +204,6 @@ namespace Matkakirja.Natiivi
             paikka = null;
             // Kasvaa esiin avaajan suunnasta (Raamattu AVAUS JA SULKU AINA ANIMOIDEN; Ponnahdus näyttää paneelin).
             avaajanPiste = AvaajanKeski();
-            Ruudunpaivitys.Herata(Ponnahdus.AukiS + 0.1f);
             Ponnahdus.Avaa(paneeli, avaajanPiste);
             Sijoita(false);
             seuranta?.Pause();
@@ -219,7 +218,6 @@ namespace Matkakirja.Natiivi
             loki.Add("sulje:" + syy);
             seuranta?.Pause();
             // Samaa reittiä takaisin avaajaan (myös ✕, ohinapautus, valinta ja linssin sulku).
-            Ruudunpaivitys.Herata(Ponnahdus.KiinniS + Ponnahdus.PoistoViiveS + 0.1f);
             Ponnahdus.Sulje(paneeli);
             return true;
         }
