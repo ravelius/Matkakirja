@@ -38,7 +38,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 |---|---|---|---|---|
 | Postivahti | Matkakirja-posti | postivahti | Sonnet, medium | kierto 10 min, 70 %:n kontekstivahti, viikkoraja 94/97 % |
 | Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 eeb378f63 | Opus, high | TF 1.0.50 ajo 36576368826 (tarkista), #3627 junassa, jokien vienti omistajan luvalla |
-| Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus 6c7465d74 (+ päivitys) | Opus, max | keittiön merge 573ccecc seuraavaksi junaksi |
+| Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus 8e7658e0a | Opus, max | keittiö 573ccecc seuraavana junana (natiiviseppa/juna-1051 d49a3a7f, testit ok, kääntämättä) |
 | Natiivi-UI | Matkakirja-natiivi-ui | natiivi-ui-luovutus-m b755e7850 | Opus | iPad-yläpalkki (odottaa Codexia), avausanimaatioiden loput |
 | Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 7273a4a13 | Opus | webin nahkayläpalkki WIP (pelikoodari-ylapalkki-nahka df49af37d); #3624 mergetty, #3627 ja #3611 auki |
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 d9738f3bb | Opus, max | jono tyhjä, anna uusi erä |
