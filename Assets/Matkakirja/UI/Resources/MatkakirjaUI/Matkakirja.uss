@@ -4387,15 +4387,15 @@
     align-items: center;
 }
 
-/* Logo ja pilleri tikkauksen yläpuolisen 46 pt:n nahkarivin mittaan (Codexin 41 ja 45 pt 130 pt:n palkissa). */
+/* Logo ja pilleri tikkauksen yläpuolisen 38 pt:n nahkarivin mittaan (57 − 19 pt; Codexin 41 ja 45 pt 130 pt:n palkissa). */
 .mk-ylapalkki--nahka-ipad .mk-logo {
-    height: 34px;
-    width: 117px;
+    height: 28px;
+    width: 97px;
 }
 
 .mk-ylapalkki--nahka-ipad .mk-pilleri {
-    height: 40px;
-    min-height: 40px;
+    height: 34px;
+    min-height: 34px;
 }
 
 .mk-pilleri.mk-pilleri--nahka.mk-pilleri--nahka-ipad {

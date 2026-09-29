@@ -56,7 +56,8 @@ namespace Matkakirja.Natiivi
         /// Palkin korkeus turva-alueen alla. iPad 61 → 65 (löydös 78, omistaja 25.9. klo 09.4x: "hieman korkeampi";
         /// hyväksytty poikkeama webin 60 pt:stä, Fable). iPhonen matala palkki: MatalaLisa.
         /// </summary>
-        public static float Korkeus => Puhelin ? 57f : 65f;
+        // iPadin nahkapalkki webin tavoin turva-alue + 57 pt (Pelikoodari 29.9.; omistaja ≤ 89 pt).
+        public static float Korkeus => Puhelin || IpadNahka ? 57f : 65f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
         /// <summary>Palkin täyte (pysty, sivut). Löydös 88 (omistaja build 13): logo ja ☰ sisemmäs kuin webissä (12,8 → 22 pt).</summary>
         static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 14f) : new Vector2(7.2f, 22f);
@@ -121,7 +122,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// iPadin nahkapalkki (omistaja 29.9.2026, Codex ipad-v1; Päätoimittaja: iPad pillerivalikkoon kuten iPhone): ☰ pois,
-        /// logo 36 pt vasemmasta ja pilleri 36 pt oikeasta reunasta, korkeus 24 + 65 pt, nahka rajautuu yläosasta niin, että
+        /// logo 36 pt vasemmasta ja pilleri 36 pt oikeasta reunasta, korkeus turva-alue + 57 pt (web), nahka rajautuu yläosasta niin, että
         /// alareuna ja tikkaus näkyvät kokonaisina; logo ja pilleri tikkauksen yläpuolisen nahan keskellä.
         /// </summary>
         public static bool IpadNahka => !Puhelin && UiKerros.Tabletti && Linssivalitsin.PilleriValikko;
