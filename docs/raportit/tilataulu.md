@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 08:07:** Levy 101,16 Gi (−1,3 Gi; raja 82), muisti 62 % vapaa, kuorma 12,9/13,7/22,4, sim 0, GPU-chrome 0, wt/ 14 kohdetta 6,9 Gt (13→14, raja 20, tavoite <15), /private/tmp 37,8 Gt, Devices 67,2 Gt vakaa (DerivedData 5,6 Gt palasi, Library 5,8, build 9,6). Roolit: Linssiseppä nollautui 65→26 %, muut ei muutosta, ei ≥70 %. Juna OK: b13 HEAD 507d865e, käännetty 07:15. Postilaatikko: Codexin ISS-avaruuskävelyn kerrokset (f1668c2e0) välitetty Päätoimittajalle.
+
 **Päivitetty 07:56:** Levy 102,48 Gi (+1,4 Gi; DerivedData 5,6→1,4 Gt siivottu), muisti 60 % vapaa, kuorma 39/26/34, sim 0, GPU-chrome 0, wt/ 13 kohdetta 6,9 Gt (12→13, raja 20, tavoite <15), /private/tmp 37,8 Gt, Devices 67,2 Gt vakaa. Roolit: ajossa Päätoimittaja ja Linnanrakentaja (34 %); Linssiseppä (65 %) pysähtynyt, remote control pois; ei ≥70 %. Juna OK: b13 HEAD 507d865e, käännetty 07:15. Postilaatikko: ei uutta.
 
 **Päivitetty 07:45:** Levy 101,08 Gi (−0,5 Gi/11 min, hidastui; raja 82), muisti 64 % vapaa, kuorma 6,4/24,7/47,7 (laskussa), sim 0, GPU-chrome 0, wt/ 12 kohdetta 5,7 Gt (11→12, raja 20), /private/tmp 37,6 Gt, Devices 67,2 Gt (+1,0 Gt), muut kasvajat vakaat. Roolit: Linssiseppä 65 % (ajossa), Siirtoseppä ajossa, muut ei muutosta, ei ≥70 %. Juna OK: b13 HEAD 507d865e, käännetty 07:15. Postilaatikko: ei uutta.
