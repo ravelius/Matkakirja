@@ -10717,9 +10717,10 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * pienemmän luvun, koska pilleri on silloin vielä sisällötön eikä
    * kasvata riviä yhtä paljon) — nahka VAIN maalataan sen sisään, mittoja
    * ei kosketa. Kuva ei silti ole tiedostossa 300 px:n täydessä koossa
-   * (Codexin kooste, 3×): se on skaalattu valmiiksi 503 × 117 px:ään
-   * (assets/ylapalkki/nahka.jpg), riittävän isoksi kattamaan palkin koko
-   * korkeus ilman ylimääräistä CSS-suurennosta. Koska koko kuva
+   * (Codexin kooste, 3×): se on skaalattu valmiiksi 683 × 159 px:ään
+   * (assets/ylapalkki/nahka.jpg — 159 = 53 × 3, retinaterävä tälle
+   * korkeudelle), riittävän isoksi kattamaan palkin koko korkeus ilman
+   * ylimääräistä CSS-suurennosta. Koska koko kuva
    * skaalattiin (ei vain rajattu), tikkaus pysyy samalla suhteellisella
    * paikalla kuin Codexin alkuperäisessä 1290×300-kuvassa (alin ~15 %) —
    * `background-position: left bottom` ankkuroi sen palkin alareunaan,

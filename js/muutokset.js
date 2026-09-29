@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2408, teksti: 'Yläpalkki puhelimella: matkalaukkunahka' },
   { v: 2407, teksti: 'Yläpalkki: logo, pillerivalikko, Linssit- ja Aa… (#3624)' },
   { v: 2406, teksti: 'Pariteetti web: saapumiskuva ilman kehystä, yks… (#3622)' },
   { v: 2405, teksti: 'Korjaa puuttuva paivitaPelaajanakymaNappi-tuonti (#3623)' },
