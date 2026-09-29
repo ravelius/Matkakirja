@@ -305,6 +305,9 @@ namespace Matkakirja.Linssit.Astronautti
             return true;
         }
 
+        /// <summary>Kävely keskeytetään (testikomento): takaisin sisään seurantaan.</summary>
+        public void LopetaKavely() { if (Auki) kavely.Lopeta(Nyt / 1000); }
+
         void KavelyVaihtui(Iss.KavelynVaihe v)
         {
             double nyt = Nyt / 1000, kentta = kyyti.OnAsento ? kyyti.ViimeisinKentta : y.Nakokulma;

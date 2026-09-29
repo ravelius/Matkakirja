@@ -231,6 +231,8 @@ namespace Matkakirja.Natiivi
             ylilento.text = aika.Ylilento ?? "";
             ylilento.style.display = auki && aika.Ylilento != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (auki) PaivitaSaatimet();
+            // Avaruuskävelyllä ei nopeutusta eikä ylilentoa (tilakone kelaa itse auringonnousuun).
+            ohjaimet.style.display = tila == KyydinTila.Ulkona ? DisplayStyle.None : DisplayStyle.Flex;
             if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;
             if (ikkuna && !kuvatHaettu && CupolaKerros.Vanha) HaeKuvat();

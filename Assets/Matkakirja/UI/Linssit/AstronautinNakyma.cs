@@ -9,7 +9,8 @@
 //                      näkymätöntä palloa pyöritetä; linssin ✕ on sen päällä.
 //   KuvaKasittelija    astronautin valokuva (Kuvanakyma); (null, −1) sulkee.
 //   SumuKasittelija    avaruussumu (Avaruussumu): kaksi ajelehtivaa harsoa.
-//   KyytiKasittelija   ISS:n kyyti (IssKyytiNakyma): tietorivi, ✕ ja ikkunassa Cupola-kehys.
+//   KyytiKasittelija   ISS:n kyyti (IssKyytiNakyma): tietorivi, ✕ ja ikkunassa Cupola-kehys; avaruuskävely
+//                      (AvaruuskavelyNakyma) kyydin päällä.
 // Linssin ollessa auki pulu on astronautti (LinssiUi asettaa Pulu.Astronautti).
 using System;
 using Matkakirja.Linssit.Astronautti;
@@ -27,6 +28,7 @@ namespace Matkakirja.Natiivi
         public readonly Kuvanakyma Kuva;
         public readonly Avaruussumu Sumu;
         public readonly IssKyytiNakyma Kyyti;
+        public readonly AvaruuskavelyNakyma Kavely;
         IVisualElementScheduledItem piilotus;
 
         public AvauksenVaihe Vaihe { get; private set; } = AvauksenVaihe.Pois;
@@ -51,6 +53,9 @@ namespace Matkakirja.Natiivi
             Kyyti = new IssKyytiNakyma(kerros);
             // Kyydin ✕ on linssin sulkunapin paikalla, joten sulkunappi piiloon kuten kuvanäkymässä.
             Kyyti.AukiMuuttui += auki => KuvaAuki?.Invoke(auki);
+            // Avaruuskävely (29.9.): paikkamerkit ja vertailukortti kyydin päällä.
+            Kavely = new AvaruuskavelyNakyma(kerros);
+            Kyyti.AukiMuuttui += Kavely.Kyydissa;
 
             AstronauttiKerros.AvausKasittelija = Avaus;
             AstronauttiKerros.KuvaKasittelija = (kohde, indeksi) =>
@@ -107,6 +112,7 @@ namespace Matkakirja.Natiivi
             Sumu.Aseta(0);
             Kuva.Sulje(false);
             Kyyti.Pois();
+            Kavely.Kyydissa(false);
         }
 
         // --- testit ----------------------------------------------------------------------

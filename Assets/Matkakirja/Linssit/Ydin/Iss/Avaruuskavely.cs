@@ -24,8 +24,8 @@ namespace Matkakirja.Linssit.Iss
     public sealed class Avaruuskavely
     {
         /// <summary>Automaattiset vaiheet (s): ulos kaiteelle (= IssKyyti.UlosS), Pulun repliikki (napautus nopeuttaa;
-        /// äänen kesto korvaa, kun Pelikoodarin äänet tulevat) ja paluu sisään (= IssKyyti.SisaanS).</summary>
-        public const double UlosS = IssKyyti.UlosS, PuluS = 8, TakaisinS = IssKyyti.SisaanS;
+        /// Pelikoodarin radioversio avaruuskavely-2 8,80 s + quindar 0,25 s + tauko) ja paluu sisään (= IssKyyti.SisaanS).</summary>
+        public const double UlosS = IssKyyti.UlosS, PuluS = 9.5, TakaisinS = IssKyyti.SisaanS;
         /// <summary>Kelaus päättyy näin monta simuloitua sekuntia ENNEN auringonnousua, ja vaihe jatkuu nousun jälkeen
         /// JalkeenS: pelaaja näkee valon pyyhkäisyn (ISS:ltä nousu kestää noin 10 s) omassa tahdissaan.</summary>
         public const double EnnenS = 4, JalkeenS = 3;
