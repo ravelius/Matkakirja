@@ -23,7 +23,7 @@ namespace Matkakirja.Natiivi
         static readonly Color Teksti = new Color(0.2039f, 0.1569f, 0.1137f);
 
         readonly VisualElement juuri, lauta, nakyma, lappuKerros;
-        readonly Label otsikko, teksti, lainaus, lahde, laskuri;
+        readonly Label otsikko, teksti, lainaus, lahde, laskuri, seuraava;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
 
@@ -106,6 +106,15 @@ namespace Matkakirja.Natiivi
             lahde.style.marginTop = 4;
             lahde.style.whiteSpace = WhiteSpace.Normal; // pitkä lähderivi rivittyy (ei leikkaudu oikeasta reunasta)
 
+            // Kiertue (era 3 kohta 5): himmeä "Seuraavaksi: <tila> ›" -rivi taulun alaosaan; ei nappia, taulun napautus siirtää.
+            seuraava = Rakenne.Teksti("", "mk-dioraama__seuraava", lauta);
+            Kirjasimet.Aseta(seuraava, Kirjasin.Luku);
+            seuraava.style.color = new Color(Teksti.r, Teksti.g, Teksti.b, 0.5f);
+            seuraava.style.fontSize = 12;
+            seuraava.style.marginTop = 8;
+            seuraava.style.whiteSpace = WhiteSpace.Normal;
+            seuraava.style.display = DisplayStyle.None;
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -117,9 +126,24 @@ namespace Matkakirja.Natiivi
             nakyma.style.backgroundImage = kuva != null ? new StyleBackground(Background.FromRenderTexture(kuva)) : new StyleBackground(StyleKeyword.None);
         }
 
+        bool peitetty;
+        bool kytketty;
+
+        /// <summary>Linssivalitsin on auki linssin päällä (LinssiUi, Laitetestaaja 29.9.): taulu ja laput pois, jotteivät
+        /// ne piirry valitsimen (kerros 25) päälle. Näyttämön kuva (kerros 24) jää valitsimen alle.</summary>
+        public bool Peitetty
+        {
+            set
+            {
+                peitetty = value;
+                juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
+            }
+        }
+
         void Kytke(PoikkileikkausLinssi uusi)
         {
-            juuri.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
+            kytketty = uusi != null;
+            juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
             nakyma.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
             // Kulman Pulu piiloon linssin ajaksi: dioraamassa Pulu liitää näyttämöllä (oma LiviaKuva).
             var p = Pulu.Hae();
@@ -224,6 +248,25 @@ namespace Matkakirja.Natiivi
             bool lainausNakyy = !string.IsNullOrEmpty(puhe) && puhe != teksti.text;
             lainaus.style.display = lainausNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (lainausNakyy) lainaus.text = PuhujanNimi(rakennus, nakyma) + ": ”" + puhe + "”";
+
+            string seuraavaRivi = SeuraavaRivi(rakennus, nakyma, taulu.Kohdat.Count);
+            seuraava.text = seuraavaRivi ?? "";
+            seuraava.style.display = seuraavaRivi != null ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        /// <summary>Kiertue (era 3 kohta 5): rivi taulun alaosaan, kun tilan viimeinen kohta näkyy tai käsikirjoitus on
+        /// lopussa ja kiertue on olemassa; muuten null. Yleisnäkymässä (linnan avaustaulu) "Aloita kierros: …", kiertueen
+        /// viimeisen tilan lopussa "Takaisin linnaan ›". Napautus taulua hoitaa siirtymän (PoikkileikkausLinssi.Napauta).</summary>
+        static string SeuraavaRivi(Rakennus rakennus, Nakyma nakyma, int kohtia)
+        {
+            if (rakennus.Kiertue == null || rakennus.Kiertue.Count == 0) return null;
+            int viimeinen = (nakyma.KohdeTila == null ? Mathf.Min(3, kohtia) : kohtia) - 1;
+            if (!nakyma.KasikirjoitusLopussa && nakyma.Kohta != viimeinen) return null;
+            string seuraavaId = Ohjaaja.SeuraavaKiertueella(rakennus, nakyma.KohdeTila);
+            if (seuraavaId == null) return "Takaisin linnaan ›";
+            var tila = rakennus.Tila(seuraavaId);
+            string nimi = !string.IsNullOrEmpty(tila?.Nimi) ? tila.Nimi : seuraavaId;
+            return (nakyma.KohdeTila == null ? "Aloita kierros: " : "Seuraavaksi: ") + nimi + " ›";
         }
 
         static string PuhujanNimi(Rakennus rakennus, Nakyma nakyma)

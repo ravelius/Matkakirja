@@ -235,6 +235,8 @@ namespace Matkakirja.Natiivi
             /// <summary>Kutsujan pyytämä taso (ISilmukka.Voimakkuus), rampattuna liukuS:ssä.</summary>
             public readonly Tasoramppi Taso = new Tasoramppi(0);
             public bool Ladattu, Kaynnistetty, Lopetettu, Vapautettu, VaroitettuKerran;
+            /// <summary>Sanelun kova tauko on pysäyttänyt silmukan (Natiiviseppä 29.9., katselmointi a/c).</summary>
+            public bool Tauotettu;
             public int Vuoro;
         }
 
@@ -278,6 +280,7 @@ namespace Matkakirja.Natiivi
         {
             if (Instanssi != null && Instanssi != this) { Destroy(this); return; }
             Instanssi = this;
+            dioraamaRepliikkiPuhuu = false; // (Natiiviseppä 29.9., katselmointi a/c)
             Taulut = AaniTaulut.Oletus();
             Tila = new AaniTila(Taulut, arpa.NextDouble);
             Koukut = new Aanikoukut(Tila, Taulut);
@@ -320,7 +323,7 @@ namespace Matkakirja.Natiivi
             foreach (var l in elavat.ToArray()) Vapauta(l);
             foreach (var l in pooliElossa.ToArray()) PooliVapauta(l);
             foreach (var k in new List<Klippi>(klipit.Values)) Tuhoa(k);
-            if (Instanssi == this) Instanssi = null;
+            if (Instanssi == this) { Instanssi = null; dioraamaRepliikkiPuhuu = false; } // (Natiiviseppä 29.9., katselmointi a/c)
         }
 
         void AsetuksetMuuttuivat(string nimi)
@@ -345,12 +348,18 @@ namespace Matkakirja.Natiivi
         // maisema ja pohjaraita pysäytetään oikeasti sanelun ajaksi ja jatketaan samasta kohdasta.
         // Kone ei tiedä tauosta (web: saneluTauolla-lippu soittimessa), joten toiveet pysyvät ennallaan.
         readonly List<Lahde> sanelunTauottamat = new List<Lahde>();
+        // Poolisilmukat (Linssi/dioraama) tauotetaan samoin (Natiiviseppä 29.9., katselmointi a/c).
+        readonly List<PooliAani> sanelunTauottamatPooli = new List<PooliAani>();
 
         void SaneluAlkoi()
         {
             foreach (var l in elavat)
                 if ((l.Kanava == Kanava.Pohja || l.Kanava == Kanava.Maisema) && l.Kaynnistetty && !l.Tauotettu && l.A.isPlaying)
                 { l.A.Pause(); l.Tauotettu = true; sanelunTauottamat.Add(l); }
+            // (Natiiviseppä 29.9., katselmointi a/c): poolisilmukat samoin kuin Pohja ja Maisema.
+            foreach (var p in pooliElossa)
+                if (!p.Vapautettu && p.Kaynnistetty && !p.Tauotettu && p.A != null && p.A.isPlaying)
+                { p.A.Pause(); p.Tauotettu = true; sanelunTauottamatPooli.Add(p); }
         }
 
         void SaneluLoppui()
@@ -358,6 +367,10 @@ namespace Matkakirja.Natiivi
             foreach (var l in sanelunTauottamat)
                 if (!l.Vapautettu && l.Tauotettu && !jaassa) { l.A.UnPause(); l.Tauotettu = false; }
             sanelunTauottamat.Clear();
+            // (Natiiviseppä 29.9., katselmointi a/c): poolisilmukat jatkuvat samasta kohdasta.
+            foreach (var p in sanelunTauottamatPooli)
+                if (!p.Vapautettu && p.Tauotettu && p.A != null && !jaassa) { p.A.UnPause(); p.Tauotettu = false; }
+            sanelunTauottamatPooli.Clear();
         }
 
         void OnApplicationPause(bool tauko)

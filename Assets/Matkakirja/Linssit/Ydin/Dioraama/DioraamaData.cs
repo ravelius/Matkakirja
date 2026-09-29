@@ -275,6 +275,9 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public string Id, Nimi;
         public bool Kohdistettava;
+        /// <summary>Ulkotila (erä 3: laituri, muurinharja): kohdistettuna aurinko ja taivas pysyvät täysinä
+        /// (Valaistus.Sisalla-kertoimia ei käytetä). Puuttuva = false.</summary>
+        public bool Ulkona;
         public V3 RajaMin, RajaMax;
         public List<string> Naapurit = new List<string>();
         public Asento Kamera;
@@ -355,6 +358,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Liikesilmukkapankki (era 2b, kohta 4); tyhjä, jos rakennus.json:ssa ei ole liikkeet-
         /// kenttää (rakennuskone lisää sen vain, jos rakennuksella on ≥1 3D-hahmo — tools/dioraama/rakenna.mjs).</summary>
         public Dictionary<string, Liike> Liikkeet = new Dictionary<string, Liike>();
+        /// <summary>Pulun kiertue (era 3 kohta 5): kohdistettavien tilojen id:t järjestyksessä; puuttuva = tyhjä lista.</summary>
+        public List<string> Kiertue = new List<string>();
 
         /// <summary>Tila id:llä, tai null jos ei löydy (kuten js:n loydaTila).</summary>
         public Tila Tila(string id)
@@ -384,6 +389,11 @@ namespace Matkakirja.Linssit.Dioraama
             r.PuluLaskeutuminen = LueV3(MiniJson.Kentta(pulu, "laskeutuminen"));
             r.Taulu = LueTaulu(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "taulu")));
             r.Valaistus = LueValaistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "valaistus")));
+            foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "kiertue")))
+            {
+                var id = rivi as string;
+                if (!string.IsNullOrEmpty(id)) r.Kiertue.Add(id);
+            }
 
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "tilat")))
             {
@@ -579,6 +589,7 @@ namespace Matkakirja.Linssit.Dioraama
                 Id = MiniJson.Teksti(o, "id"),
                 Nimi = MiniJson.Teksti(o, "nimi"),
                 Kohdistettava = MiniJson.Totuus(o, "kohdistettava"),
+                Ulkona = MiniJson.Totuus(o, "ulkona"),
                 Kamera = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kamera"))),
                 KameraPysty = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kameraPysty")) is Dictionary<string, object> kp
                     ? LueAsento(kp) : (Asento?)null,
