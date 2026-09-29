@@ -44,6 +44,11 @@ Poikkileikkaus-linssi (id `poikkileikkaus`, moottori "dioraama"). Lue ensin
 
 ## Seuraavaksi (erä 2)
 
+**Kesken luovutushetkellä:** Sonnet-agentti tekee proto-worktreehen syväterävyyden (Volume + Gaussian DoF kerrokseen 9,
+komento `poikki dof 0|1`) ja taulun marginaalin Pulun viereen. Muutokset ovat commitoimatta: tarkista `git status` ja
+unity-tarkistus, commitoi, ja käännä vasta sitten Julkaisijan vuorolla.
+
+
 1. **Julkaisija vie paketin ämpäriin.** `dist/dioraama/olavinlinna/` → `media.matkakirja.app/dioraama/olavinlinna/`.
    Sen jälkeen oletuspeili pois, uusi käännös, simulaattorisavuke ja merge-pyyntö Natiivisepälle (haara, commit,
    mitä muuttui, testit). Näin omistaja näkee linssin TF-kehittäjätilassa.
