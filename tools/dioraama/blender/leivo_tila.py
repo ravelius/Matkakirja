@@ -301,8 +301,9 @@ if '--leivo' in argv:
     sc.render.image_settings.file_format = 'JPEG'; sc.render.image_settings.quality = 90
     os.makedirs(os.path.join(ULOS, 'valot'), exist_ok=True)
     kuva.save_render(os.path.join(ULOS, 'valot', f'{TILA}.jpg'), scene=sc)
-    k2 = kuva.copy(); k2.scale(RESO // 2, RESO // 2)
-    k2.save_render(os.path.join(ULOS, 'valot', f'{TILA}-2k.jpg'), scene=sc)
+    # 2k tallennetusta 4k-kuvasta: kuva.copy() leivotusta float-puskurista oli musta (29.9. korjaus).
+    k2 = bpy.data.images.load(os.path.join(ULOS, 'valot', f'{TILA}.jpg')); k2.scale(RESO // 2, RESO // 2)
+    k2.filepath_raw = os.path.join(ULOS, 'valot', f'{TILA}-2k.jpg'); k2.file_format = 'JPEG'; k2.save(quality=90)
     # Vientiä varten: pinnan alkuperäinen nimi takaisin (ei kuvatekstuureja glb:hen), UV "valo" = TEXCOORD_1.
     for m in kaytetyt:
         m.name = m.name.replace('_pbr', '')
