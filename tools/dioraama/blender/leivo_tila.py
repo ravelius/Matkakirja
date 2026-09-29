@@ -52,11 +52,16 @@ if KUORI:
     # Uusi tapa: fotogrammetriakuori ympäristöksi (varjostaa ja heijastaa valoa), ei proseduraalista massaa.
     massa = tuo(KUORI)
     if '--renderoi' in argv or '--leikkaa' in argv:
-        # Leikkausikkuna (speksi kohta 3): kuoresta pois pinnat tilan rajojen (+1 m) sisältä ja käytävästä kameraan.
+        # Leikkausikkuna (speksi kohta 3) samoin kuin Unityn DioraamaUlkokuori.PaivitaLeikkaus: laatikko = leikkaus.min/max
+        # (tai rajat) + laajennus (oletus 1 m; alas enintään 0,2 m), käytävä kameraan vain kun kameraan ≠ false.
+        # Ilman leikkaus-kenttää vanha tapa (rajat + 1 m, ylös +30 m), jotta aiemmat leivonnat pysyvät toistettavina.
         import bmesh
-        r = tila['rajat']; mn = Vector(bl(r['min'])); mx = Vector(bl(r['max']))
-        lo = Vector((min(mn.x, mx.x) - 1, min(mn.y, mx.y) - 1, min(mn.z, mx.z) - 1))
-        hi = Vector((max(mn.x, mx.x) + 1, max(mn.y, mx.y) + 1, max(mn.z, mx.z) + 1))
+        lk = tila.get('leikkaus') or {}
+        r = lk if lk.get('min') else tila['rajat']; mn = Vector(bl(r['min'])); mx = Vector(bl(r['max']))
+        la = float(lk.get('laajennus', 1.0)); ylos = 0 if lk.get('min') else 30
+        lo = Vector((min(mn.x, mx.x) - la, min(mn.y, mx.y) - la, min(mn.z, mx.z) - (min(la, 0.2) if lk.get('min') else la)))
+        hi = Vector((max(mn.x, mx.x) + la, max(mn.y, mx.y) + la, max(mn.z, mx.z) + la))
+        kameraan = lk.get('kameraan', True)
         kes = (lo + hi) / 2; puoli = max(hi.x - lo.x, hi.y - lo.y) / 2
         k_ = tila['kamera']; az_ = math.radians(k_['atsimuutti'])
         suunta2 = Vector((math.sin(az_), math.cos(az_)))  # kameran suunta kohteesta (Blender x itä, y pohjoinen)
@@ -65,8 +70,9 @@ if KUORI:
             bm = bmesh.new(); bm.from_mesh(o.data); pois = []
             for f in bm.faces:
                 c = o.matrix_world @ f.calc_center_median()
-                if lo.x <= c.x <= hi.x and lo.y <= c.y <= hi.y and lo.z <= c.z <= hi.z + 30:
+                if lo.x <= c.x <= hi.x and lo.y <= c.y <= hi.y and lo.z <= c.z <= hi.z + ylos:
                     pois.append(f); continue
+                if not kameraan: continue
                 d2 = Vector((c.x - kes.x, c.y - kes.y)); pitkin = d2.dot(suunta2)
                 sivuun = abs(d2.x * suunta2.y - d2.y * suunta2.x)
                 if 0 < pitkin < k_['etaisyys'] + 5 and sivuun < puoli and c.z > lo.z:

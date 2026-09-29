@@ -77,6 +77,10 @@ export const TILA = {
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
   sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
   rajat: { min: [-22, 13, -22], max: [-7.5, 16, -18] },
+  // Leikkaus (29.9. B:n repeämä): ilman omaa laatikkoa Unity leikkasi kiertyneiden rajojen AABB:n + 1 m, joka kaivoi
+  // 1,8 m Kellotornin ja 1,4 m Kirkkotornin kuoreen. Kapea kannen laatikko + 0,3 m jää tornien ulkopuolelle (≤ 0,1 m),
+  // eikä käytävää kameraan tarvita (avoin kansi; käytävä olisi leikannut Kirkkotornin lounaiskylkeä).
+  leikkaus: { laajennus: 0.3, kameraan: false, min: [-21.3, 13, -21.3], max: [-8.3, 16.5, -18.6] },
   naapurit: ['massa', 'kierreportaat', 'kappeli', 'keskushalli'],
   kamera: { kohde: [-12.5, 13.7, -20], atsimuutti: 165, korkeus: 27, etaisyys: 19.5, fov: 38, aukko: 0.8 },
   kameraPysty: { kohde: [-15, 8.8, -20], atsimuutti: 165, korkeus: 28, etaisyys: 40, fov: 38, aukko: 0.8 },
