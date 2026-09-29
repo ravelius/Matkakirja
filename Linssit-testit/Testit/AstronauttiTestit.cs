@@ -125,6 +125,25 @@ namespace Matkakirja.Linssit.Testit
             foreach (var r in K().GetProperty("oletukset").EnumerateArray())
                 Oleta.Sama(r[1].GetInt32(), a.Kohteet.First(x => x.Tunnus == r[0].GetString()).OletusIndeksi, "oletus " + r[0].GetString());
         }
+
+        /// <summary>
+        /// Selitteen luenta (web satelliitti.js lueSelite, PR #3568): sama merkkijono ja säilölohko kuin webissä, jotta
+        /// kerran syntetisoitu ääni osuu molemmilla alustoilla (säilöavain persoona|ääni|ohje|nopeus|teksti).
+        /// </summary>
+        [Testi] static void SelitteenLuentaKutenWebissa()
+        {
+            var a = AstronauttiAineisto.Lue(MiniJson.Jasenna(File.ReadAllText(Polku("paketti/satelliitti-data.json"))));
+            var etna = a.Kohteet.First(x => x.Tunnus == "etna");
+            var h = etna.Havainnot[1];
+            Oleta.Sama("Etna, Sisilia, Italia. " + h.Teksti, etna.Luettava(h));
+            // Ilman havaintoa tai sen tekstiä luetaan kohteen selite (web h?.teksti ?? kohde.selite), reunat siistittyinä.
+            Oleta.Sama("Etna, Sisilia, Italia. " + etna.Selite, etna.Luettava(null));
+            Oleta.Sama("Etna, Sisilia, Italia. " + etna.Selite, etna.Luettava(new Havainto()));
+            Oleta.Sama("X, Y.", new Havaintokohde { Nimi = "X", Seutu = "Y" }.Luettava(null));
+            Oleta.Sama("astro-selite", AstronauttiLinssi.SelitteenSailio);
+            Oleta.Tosi(System.Text.RegularExpressions.Regex.IsMatch(AstronauttiLinssi.SelitteenSailio, "^[a-z0-9-]{1,24}$"),
+                "workerin lohkomuoto (tools/pollo/worker.js)");
+        }
     }
 }
 

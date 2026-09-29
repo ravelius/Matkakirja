@@ -17,8 +17,15 @@ namespace Matkakirja.Linssit.Iss
     {
         /// <summary>Nopeuden porras (×), 1 = LIVE (web NOPEUDET).</summary>
         public static readonly int[] Nopeudet = { 1, 10, 100, 1000 };
-        /// <summary>Ylilennon kelauksen huippunopeus (×) ja kelauksen kesto (s) rajoineen.</summary>
-        public const double KelauksenHuippu = 1000, KelausMinS = 2, KelausMaxS = 25;
+        /// <summary>
+        /// Ylilennon kelauksen tavoitehuippu (×) ja kelauksen kesto (s) rajoineen. SIIRTYMÄ ENINTÄÄN 5 S (omistaja 28.9.2026:
+        /// "siirtymä paikkojen välillä ei saa kestää yli 5sek"): kelaus 1,5…3,6 s + perillä kääntyminen kohteeseen
+        /// (IssKyyti.KohteeseenS 1,2 s) ≤ 4,8 s etäisyydestä riippumatta; pitkällä kelauksella huippu nousee yli 1000×:n
+        /// (48 h ≈ 90 000×). Ennen 2…25 s huipulla 1000×.
+        /// </summary>
+        public const double KelauksenHuippu = 1000, KelausMinS = 1.5, KelausMaxS = 3.6;
+        /// <summary>Koko siirtymän katto (s): kelaus + kääntyminen, testit ja laitemittaus vertaavat tähän.</summary>
+        public const double SiirtymaMaxS = 5;
         /// <summary>Palaa LIVE: kesto 0,6 s + 1 s poikkeaman tuntia kohden, enintään 3 s.</summary>
         public const double PaluuMinS = 0.6, PaluuMaxS = 3;
 
@@ -117,6 +124,20 @@ namespace Matkakirja.Linssit.Iss
             ankkuriR = reaali();
             ankkuriS = s;
             kerroin = k;
+        }
+
+        /// <summary>
+        /// Kerroin suoraan (myös 1× ilman paluuta LIVE:ksi, toisin kuin AsetaNopeus): simuloitu aika jatkuu tästä hetkestä
+        /// kertoimella <paramref name="k"/> ilman hyppyä. Avaruuskävely: aurinko nousee Pulun repliikin aikana nopeutettuna.
+        /// </summary>
+        public void AsetaKerroin(double k)
+        {
+            var s = Nyt();
+            kelaus = null;
+            live = false;
+            ankkuriR = reaali();
+            ankkuriS = s;
+            kerroin = Math.Max(0, k);
         }
 
         /// <summary>

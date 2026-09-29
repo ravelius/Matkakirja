@@ -4,7 +4,7 @@ namespace Matkakirja
 {
     /// <summary>
     /// POHJAN KAUPUNKITASO Z10 (Fablen tilaus 27.9.2026, Karttasepän pallo-Z10-poltto, Siirtosepän #3395 skeema 1.51):
-    /// pohjasarjassa (2026-09-26-pohja-20260926) Z0–Z9 kattavat koko maailman, mutta Z10 on poltettu vain kaupunkien ±1°:n
+    /// pohjasarjassa (2026-09-27-pohja-20260927) Z0–Z9 kattavat koko maailman, mutta Z10 on poltettu vain kaupunkien ±1°:n
     /// laatikoihin (13 856 laattaa). offline.json kertoo joukon: lahteet.rasteri.kaupunkiRasteri.tasot [10] ja
     /// maat.&lt;ISO&gt;.kaupunkiRasteri["10"] = rivijuoksut [x0, y, x1, y] (XYZ, rivi 0 pohjoisessa, kuten pohjan polut).
     /// Vanhat buildit eivät lue kaupunkiRasteri-avainta (Siirtosepälle kuitattu 27.9. klo 17.0x).

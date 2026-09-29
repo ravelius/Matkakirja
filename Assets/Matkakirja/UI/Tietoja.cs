@@ -42,6 +42,12 @@ namespace Matkakirja.Natiivi
             var logo = Rakenne.El("mk-tietoja__logo", kilpi, PickingMode.Ignore);
             var logoKuva = Resources.Load<Texture2D>("MatkakirjaUI/logo");
             if (logoKuva != null) logo.style.backgroundImage = new StyleBackground(logoKuva);
+            // Omistaja 29.9.2026: "niiden tietojen yläreunassa olisi nappi, mistä pääsisi pelin tilannesivulle, missä on ne
+            // linssit ja kehityksen yhteenveto" (web projekti.html; natiivissa selaimeen).
+            var tilanne = Rakenne.Nappi("Pelin tilannesivu", "mk-nappi--haamu mk-tietoja__tilanne",
+                () => Application.OpenURL(Laukku.SivustoJuuri + "projekti.html"), kortti.Sisus);
+            Kirjasimet.Aseta(tilanne, Kirjasin.KoneLihava);
+            tilanne.tooltip = "Pelin tilannesivu: linssit ja kehityksen yhteenveto";
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;

@@ -3,8 +3,10 @@
 //   x = vilkun jakso (s), y = vaihe (0…1)   Mastot.Vilkku(asema): FNV-1a-tiivisteestä, 1,5 s ± 20 %
 //   z = kirkkaus: < 0 = muu masto (vilkku lasketaan tässä), ≥ 0 = valittu masto VU-tahdissa (Valittu(id, kirkkaus))
 //   w = näkyvyys 0…1 (maston nousu)
-// Vilkku samalla kaavalla kuin Mastot.VilkunValo: palaa 0,45 s jakson alussa, nousu ja lasku 0,12 s, Pehmeä
-// (smootherstep). Prosessori ei tee kehyskohtaista vilkkutyötä.
+// EI VILKKUA (omistaja 28.9.2026: "antennit vilkkuvat, saisivat hohtaa himmeästi ja valittu masto kirkkaammin"): muut
+// mastot tasaisella himmeällä hohteella _Himmea (Mastot.HimmeaHohde) ja pienemmällä halolla (5 r); valittu lämpimän
+// meripihkan sävyssä kirkkaudella Mastot.ValitunKirkkaus (0,7 + 0,3 · VU). x ja y (vilkun jakso ja vaihe) jäävät
+// käyttämättä.
 //
 // Ulkoasu havainnekuvan mastot.js:stä: valon säde r = 2,1 pt (valittu 2,8 pt) × max(0,7, mittakaava) (_Sade ja
 // _SadeValittu pikseleinä); halo 6,8 r (valittu 12 r) radialGradient-pysäyttimillä
@@ -18,6 +20,7 @@ Shader "Matkakirja/Lentoestevalo"
     {
         _Sade("Valon säde (px)", Float) = 6.3
         _SadeValittu("Valitun valon säde (px)", Float) = 8.4
+        _Himmea("Muiden mastojen hohde (Mastot.HimmeaHohde)", Float) = 0.32
     }
     SubShader
     {
@@ -38,7 +41,7 @@ Shader "Matkakirja/Lentoestevalo"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
-                float _Sade, _SadeValittu;
+                float _Sade, _SadeValittu, _Himmea;
             CBUFFER_END
 
             UNITY_INSTANCING_BUFFER_START(Valot)
@@ -58,16 +61,9 @@ Shader "Matkakirja/Lentoestevalo"
                 UNITY_SETUP_INSTANCE_ID(i);
                 float4 valo = UNITY_ACCESS_INSTANCED_PROP(Valot, _Valo);
                 bool valittu = valo.z >= 0.0;
-                float v;
-                if (valittu) v = saturate(valo.z);
-                else
-                {
-                    float jakso = max(valo.x, 0.1);
-                    float x = frac(_Time.y / jakso + valo.y) * jakso;   // s jakson alusta (Mastot.VilkunValo)
-                    v = x >= 0.45 ? 0.0 : Pehmea(min(min(1.0, x / 0.12), min(1.0, (0.45 - x) / 0.12)));
-                }
+                float v = valittu ? saturate(valo.z) : _Himmea;
                 float r = valittu ? _SadeValittu : _Sade;
-                float halo = r * (valittu ? 12.0 : 6.8);
+                float halo = r * (valittu ? 12.0 : 5.0);
                 float3 keski = float3(UNITY_MATRIX_M._m03, UNITY_MATRIX_M._m13, UNITY_MATRIX_M._m23);
                 o.paikka = TransformWorldToHClip(keski);
                 o.paikka.xy += i.kulma * halo * 2.0 / _ScreenParams.xy * o.paikka.w;
@@ -96,12 +92,12 @@ Shader "Matkakirja/Lentoestevalo"
                 // b12d-palaute: halo erottui vain ytimen ympärillä. Reunan peitto nostettu (hehku 0,22: 0,7 · 0,55: 0,34,
                 // valittu 0,18: 0,9 · 0,5: 0,45), ja loppuosa hiipuu neliöllisesti reunaan asti.
                 half4 h = valittu
-                    ? Liuku(d, 0.18, 0.5, half3(1.0, 0.6308, 0.4342), half3(1.0, 0.1022, 0.0232), half3(1.0, 0.0423, 0.0060), half3(1.0, 0.0232, 0.0030), 1.0, 0.9, 0.45)
+                    ? Liuku(d, 0.18, 0.5, half3(1.0, 0.7454, 0.4342), half3(1.0, 0.3372, 0.0648), half3(1.0, 0.1845, 0.0212), half3(1.0, 0.1022, 0.0080), 1.0, 0.9, 0.45)
                     : Liuku(d, 0.22, 0.55, half3(1.0, 0.1022, 0.0423), half3(1.0, 0.0423, 0.0103), half3(1.0, 0.0232, 0.0030), half3(1.0, 0.0232, 0.0030), 1.0, 0.7, 0.34);
                 h.a *= v;
                 // Ydin: palaessa kirkas (säde r), sammuneena tumma piste 0,8 r. Valitun ydin on lähes valkoinen ja
                 // hieman suurempi (1,15 r), jotta masto ei huku omaan hehkuunsa (b12d: Pariisi).
-                half3 kirkas = valittu ? half3(1.0, 0.86, 0.72) : half3(1.0, 0.1022, 0.0423);
+                half3 kirkas = valittu ? half3(1.0, 0.90, 0.72) : half3(1.0, 0.1022, 0.0423);
                 half3 ydinVari = lerp(half3(0.1022, 0.0103, 0.0052), kirkas, v);
                 float ydinR = i.tila.z * lerp(0.8, valittu ? 1.15 : 1.0, v);
                 half ydin = 1.0 - smoothstep(ydinR - w, ydinR + w, d);

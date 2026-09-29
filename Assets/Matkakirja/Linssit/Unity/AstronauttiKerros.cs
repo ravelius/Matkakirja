@@ -198,10 +198,21 @@ namespace Matkakirja.Natiivi
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
             pilvet?.Tarkkuus(kyyti != KyydinTila.Kauko && !TarkatPilvetPois ? 1f : 0f, TarkkojenPilvienKm);
+            // Pilvipeiton säädin vain kyydissä (kaukonäkymä ennallaan): kynnys 1 − määrä.
+            float maara = kyyti != KyydinTila.Kauko ? Mathf.Clamp01(PilvienMaara) : 1f;
+            pilvet?.Karsinta(1f - maara);
+            yokuori?.Karsinta(1f - maara);
             yokuori?.PilvienPeitto(pilvienPeitto);
         }
 
         float pilvienPeitto;
+
+        /// <summary>
+        /// KYYDIN SÄÄTIMET (omistaja 28.9. TF 1.0.39 -kaappaus: "Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle
+        /// sekä vuodenajalle?"): pilvien määrä 0 (selkeä) … 1 (nykyinen, oletus); vuodenaika = KuukausiPakotettu (0 = kuluva
+        /// kuukausi). Molemmat palaavat oletukseen, kun kyydistä poistutaan kaukonäkymään (IssKyytiNakyma näyttää säätimet).
+        /// </summary>
+        public static float PilvienMaara = 1f;
 
         /// <summary>
         /// Terävät pilvet kyydissä (omistaja 28.9. "Vielä liikaa blurrina"; Cupolasta 4096 px:n pilvikuvan tekseli on ruudulla
@@ -275,6 +286,9 @@ namespace Matkakirja.Natiivi
 
         public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
         {
+            // Kyydin säätimet palaavat oletukseen kaukonäkymässä (pilvet nyt, kuluva kuukausi).
+            if (tila == KyydinTila.Kauko) { PilvienMaara = 1f; KuukausiPakotettu = 0; }
+            else OmaSijaintiHaku.Aloita();
             kyyti = tila;
             if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();
             // Ikkunassa ollaan aseman sisällä: havaintopisteet eivät kuulu Cupolan näkymään. Rata pois koko kyydin ajaksi: seurannassa
@@ -480,8 +494,8 @@ namespace Matkakirja.Natiivi
                 Vector3 paikka = gt.TransformPoint(p.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                // Ikkunassa ja kohteen yllä silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
-                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde
+                // Ikkunassa, kohteen yllä ja ulkona silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
+                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde && kyyti != KyydinTila.Ulkona
                     && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
                 if (p.juuri.gameObject.activeSelf != edessa) p.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
@@ -548,10 +562,49 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// ISS-merkki ruudulla (pikselit, origo vasen alakulma; web issRuudulla): Pulun taulu ei peitä sitä, jotta napautus
+        /// asemaan vie kyytiin. false, kun asema ei näy (kamera sen takana tai merkki piilossa).
+        /// </summary>
+        public bool IssRuudulla(out Vector2 ruutu)
+        {
+            ruutu = default;
+            if (kamera == null || iss == null || !iss.gameObject.activeSelf || georeferenssi == null) return false;
+            Vector3 s = kamera.WorldToScreenPoint(georeferenssi.transform.TransformPoint(issPinta));
+            if (s.z <= 0) return false;
+            ruutu = new Vector2(s.x, s.y);
+            return true;
+        }
+
+        /// <summary>
+        /// Havaintopiste ruudulla (pikselit, origo vasen alakulma): astronautin valokuva kasvaa esiin kohteensa pisteestä ja
+        /// sulkeutuu sinne (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; myös Pulun tervetulon C1, joka avaa kuvan
+        /// ilman napautusta). false, kun piste ei näy (pallon takana, kyydin ikkunassa tai kamera sen takana).
+        /// </summary>
+        public bool KohdeRuudulla(string tunnus, out Vector2 ruutu)
+        {
+            ruutu = default;
+            if (kamera == null || georeferenssi == null || string.IsNullOrEmpty(tunnus)) return false;
+            foreach (var p in pisteet)
+            {
+                if (p.kohde?.Tunnus != tunnus) continue;
+                if (!p.juuri.gameObject.activeSelf) return false;
+                Vector3 s = kamera.WorldToScreenPoint(georeferenssi.transform.TransformPoint(p.pinta));
+                if (s.z <= 0) return false;
+                ruutu = new Vector2(s.x, s.y);
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>Pallon napautus linssissä (Pulun taulu sulkeutuu kuten webin ulkonapautus, ei niele napautusta).</summary>
+        public event Action PalloNapautettu;
+
         /// <summary>Lähin näkyvä havaintopiste 44 pt:n säteellä (web lahinLinssimerkki).</summary>
         void Napautus(Vector2 ruutu)
         {
             if (Linssi == null || kamera == null) return;
+            PalloNapautettu?.Invoke();
             if (Linssi.Kyydissa) { Linssi.NapautaIss(); return; }
             float kerroin = LinssiOhjain.Pistekerroin;
             Piste paras = null;

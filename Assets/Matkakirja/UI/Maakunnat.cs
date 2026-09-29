@@ -135,6 +135,9 @@ namespace Matkakirja.Natiivi
         {
             this.kerros = kerros;
             juuri = Rakenne.El("mk-maakunnat", isa, PickingMode.Ignore);
+            // Omistaja 29.9.2026 (iPhone-laitekuva): ~1,4×-isonnus vain tabletilla (mk-maakunnat--tabletti,
+            // Kartta.uss); iPhonella "mininosto" pysyy aiemman kokoisena, vain pohjaväri ja kehyksettömyys jäävät.
+            juuri.EnableInClassList("mk-maakunnat--tabletti", UiKerros.Tabletti);
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-selite__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -562,7 +565,18 @@ namespace Matkakirja.Natiivi
             peukalo.style.height = r.layout.height;
         }
 
+        /// <summary>
+        /// Maakuntakartassa lapun sisällön vaihto (ohje → maakunta → toinen maakunta) liukuu uuteen kokoon (Tiivistys, 250 ms)
+        /// eikä hyppää (omistaja 29.9.2026: lapun avaus ja sulku animoiden, Raamattu PR #3602).
+        /// </summary>
         void PaivitaLuonnehdinta()
+        {
+            if (listaPiilossa && Karttatila && kuvaus.panel != null && kuvaus.resolvedStyle.display == DisplayStyle.Flex)
+                Tiivistys.AnimoiKoko(kuvaus, PaivitaLuonnehdintaHeti);
+            else PaivitaLuonnehdintaHeti();
+        }
+
+        void PaivitaLuonnehdintaHeti()
         {
             kuvaus.Clear();
             if (ValittuAvain == null && listaPiilossa)
@@ -597,7 +611,7 @@ namespace Matkakirja.Natiivi
                     kuva.style.backgroundImage = new StyleBackground(tx);
                     paikka.RemoveFromHierarchy();
                 });
-            if (data != null) kuva.RegisterCallback<ClickEvent>(_ => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain)));
+            if (data != null) kuva.RegisterCallback<ClickEvent>(e => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain), e.position));
             var t = Rakenne.Teksti(data?.Lyhyt ?? "Luonnehdinta tulossa.", "mk-maakunnat__lteksti", rivi);
             Kirjasimet.Aseta(t, Kirjasin.Luku);
             if (data != null)
@@ -608,11 +622,14 @@ namespace Matkakirja.Natiivi
                 t.text = (data.Lyhyt ?? "") + " <color=#7a5514><u>Lue lisää</u></color>";
                 t.pickingMode = PickingMode.Position;
                 t.tooltip = "Lisää alueesta";
-                t.RegisterCallback<ClickEvent>(_ => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain)));
+                t.RegisterCallback<ClickEvent>(e => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain), e.position));
             }
         }
 
         // --- testi ---------------------------------------------------------------------
+
+        /// <summary>Testikomento "ui maakunnat kysymys n": kortin n:s kysymys auki/kiinni, mitat lokiin.</summary>
+        public string TestiKysymys(int n) => kortti.TestiKysymys(n);
 
         /// <summary>Testikomento: valitse avain ("ISO:tunnus") ja avaa tarvittaessa kortti.</summary>
         public void Testaa(string avain, bool korttiAuki)
@@ -644,19 +661,51 @@ namespace Matkakirja.Natiivi
     /// </summary>
     public sealed class MaakuntaKortti
     {
+        readonly UiKerros kerros;
         readonly VisualElement himmennys, kortti, kuvat;
         readonly ScrollView sisalto;
         readonly Label otsikko, teksti;
         readonly VisualElement puluLohko;
+        /// <summary>Kuvan kokoruutusuurennos (omistaja 28.9.2026): sama komponentti ja asetukset kuin Nostokortti.</summary>
+        readonly Kuvasuurennos suurennos;
         (Button Nappi, Label Vastaus) avoinVastaus;
         public bool Auki { get; private set; }
+        /// <summary>
+        /// Omistaja 29.9.2026 klo 07.4x (kaappaukset maakuntakortti-kiinni/-kysymys-auki): "Ikkunan koko ei saa muuttua kun
+        /// noita klikkaa auki." Kortin korkeus lukitaan avauksen jälkeiseen asetteluun (koko ja paikka kiinteät); vastaus
+        /// avautuu kortin sisällä, sisältö vierittyy ja avattu vastaus vieritetään pehmeästi näkyviin.
+        /// </summary>
+        bool lukitaan, avautuu;
+        /// <summary>Avanneen napautuksen kohta paneelin koordinaateissa: kortin origo (web: ⊕-napin keskipiste avaushetkellä).</summary>
+        Vector2? lahto;
+        IVisualElementScheduledItem vieritys;
+        const float VieritysMs = 250f;
 
         public MaakuntaKortti(UiKerros kerros)
         {
+            this.kerros = kerros;
             himmennys = Rakenne.El("mk-himmennys mk-maakuntaKortti__kerros", kerros.Juuri(UiKerros.Valikot));
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
-            kortti = Rakenne.El("mk-maakuntaKortti", himmennys);
+            // Omistaja 28.9.2026: kortti saman kokoinen kuin nostokortti — mk-nosto-luokka + sama leveyskaava
+            // (Nostokortti.LaskeLeveys), ei omaa ulkoasua (mieluummin lisätty nostokortin luokka tähän kuin
+            // muutettu nostokortin tyylejä).
+            himmennys.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
+            kortti = Rakenne.El("mk-maakuntaKortti mk-nosto", himmennys);
+            kortti.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                if (!lukitaan || kortti.layout.height <= 0 || float.IsNaN(kortti.layout.height)) return;
+                lukitaan = false;
+                kortti.style.height = kortti.layout.height;
+                // Origo avanneesta kohdasta, kun kortin paikka on tiedossa; kasvu alkaa vasta tämän jälkeen (ei hyppyä
+                // origon vaihtuessa kesken). Ilman kohtaa (testikomento) keskeltä.
+                // Skaalaamaton laatikko (worldBound sisältäisi kesken olevan 0,92-mittakaavan).
+                var r = new Rect(himmennys.worldBound.position + kortti.layout.position, kortti.layout.size);
+                var o = lahto ?? r.center;
+                kortti.style.transformOrigin = new TransformOrigin(
+                    Mathf.Clamp(o.x - r.x, 0f, r.width), Mathf.Clamp(o.y - r.y, 0f, r.height), 0f);
+                if (avautuu) { avautuu = false; himmennys.schedule.Execute(() => { if (Auki) himmennys.AddToClassList("mk-auki"); }); }
+            });
             var sulje = Rakenne.Nappi("×", "mk-selite__sulje mk-maakuntaKortti__sulje", Sulje, kortti);
             sulje.tooltip = "Sulje";
             sisalto = new ScrollView(ScrollViewMode.Vertical);
@@ -671,18 +720,58 @@ namespace Matkakirja.Natiivi
             teksti = Rakenne.Teksti("", "mk-maakuntaKortti__teksti", sisalto);
             Kirjasimet.Aseta(teksti, Kirjasin.Luku);
             puluLohko = Rakenne.El("mk-maakuntaKortti__pulu", sisalto, PickingMode.Ignore);
+            // Kuvan napautus kokoruudulle (omistaja 28.9.2026): sama Kuvasuurennos-komponentti kuin Nostokortti.
+            suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
         }
 
-        public void Avaa(string nimi, string pitka, IReadOnlyList<Dictionary<string, object>> kuvalista, IReadOnlyList<(string Q, string A)> kysymykset)
+        /// <summary>Sama leveyskaava kuin Nostokortti.Mitoita (Nostokortti.LaskeLeveys): kortit samankokoisia.</summary>
+        void Mitoita()
         {
+            var pohja = himmennys.panel?.visualTree.layout ?? default;
+            var t = kerros.Reunat(UiKerros.Valikot);
+            float rl = pohja.width - t.x - t.z, rk = pohja.height - t.y - t.w;
+            if (float.IsNaN(rl) || float.IsNaN(rk) || rl <= 0 || rk <= 0)
+            {
+                kortti.style.width = StyleKeyword.Null;
+                kortti.style.maxWidth = StyleKeyword.Null;
+                return;
+            }
+            float leveys = Nostokortti.LaskeLeveys(rl, rk);
+            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; Lukitse(); }
+        }
+
+        /// <summary>Korkeus vapaaksi ja uudelleen lukkoon seuraavassa asettelussa (uusi alue tai leveyden muutos, ei vastauksesta).</summary>
+        void Lukitse()
+        {
+            kortti.style.height = StyleKeyword.Null;
+            lukitaan = true;
+        }
+
+        public void Avaa(string nimi, string pitka, IReadOnlyList<Dictionary<string, object>> kuvalista, IReadOnlyList<(string Q, string A)> kysymykset,
+            Vector2? lahtopiste = null)
+        {
+            if (!Auki) lahto = lahtopiste;
             otsikko.text = nimi;
             teksti.text = pitka ?? "";
             TaytaKuvat(kuvalista);
             TaytaPulu(kysymykset);
+            vieritys?.Pause();
             sisalto.scrollOffset = Vector2.zero;
+            Lukitse();
             if (Auki) return;
             Auki = true;
-            Rakenne.Nayta(himmennys, true, 220);
+            Mitoita();
+            // Avaus: näkyviin ilman mk-auki-luokkaa; luokka (kasvu ja häivytys) vasta kun korkeus ja origo on lukittu (yllä).
+            // Uusi versio kumoaa kesken olevan sulun viivästetyn piilotuksen (Rakenne.Nayta).
+            bool pieni = LinssiUi.VahennettyLiike();
+            kortti.style.transitionDuration = pieni ? new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(0f) }) : StyleKeyword.Null;
+            himmennys.style.transitionDuration = kortti.style.transitionDuration;
+            himmennys.userData = new object();
+            himmennys.RemoveFromClassList("mk-auki");
+            himmennys.style.display = DisplayStyle.Flex;
+            avautuu = true;
+            // Varmistus: jos asettelu ei kerro uutta kokoa (GeometryChanged), kortti ei saa jäädä näkymättömäksi.
+            himmennys.schedule.Execute(() => { if (Auki && avautuu) { avautuu = false; himmennys.AddToClassList("mk-auki"); } }).StartingIn(120);
             SyoteLukko.Esta(this);
         }
 
@@ -690,7 +779,10 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             Auki = false;
-            Rakenne.Nayta(himmennys, false, 220);
+            suurennos.Sulje();
+            avautuu = false;
+            // Sulku samaa reittiä avanneeseen kohtaan (origo pysyy), 200 ms + 40 ms kuten webissä; pieni liike: heti.
+            Rakenne.Nayta(himmennys, false, LinssiUi.VahennettyLiike() ? 0 : 240);
             SyoteLukko.Vapauta(this);
         }
 
@@ -699,6 +791,9 @@ namespace Matkakirja.Natiivi
             kuvat.Clear();
             kuvat.style.display = lista.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (lista.Count == 0) return;
+            // Omistaja 28.9.2026: kuvan napautus avaa saman kokoruutusuurennoksen kuin nostokortti (Kuvasuurennos);
+            // koko kuvasarja selattavaksi kuten nostokortissa (Nostokortti.Suurenna).
+            var sarja = lista.Select(MaakuntaLehtikuva).ToList();
             // Kaksi rinnakkain, useampi vaakavieritteeseen (webin karuselli).
             VisualElement isa = kuvat;
             if (lista.Count > 2)
@@ -711,22 +806,38 @@ namespace Matkakirja.Natiivi
                 isa = v.contentContainer;
                 isa.style.flexDirection = FlexDirection.Row;
             }
-            foreach (var k in lista)
+            for (int i = 0; i < lista.Count; i++)
             {
-                var kehys = Rakenne.El("mk-maakuntaKortti__kuva" + (lista.Count > 2 ? " mk-maakuntaKortti__kuva--karuselli" : ""), isa, PickingMode.Ignore);
+                var k = lista[i];
+                int kohta = i;
+                // Kehys napautettavissa (ei PickingMode.Ignorea kuten kuva-alkiolla): napautus avaa suurennoksen.
+                var kehys = Rakenne.El("mk-maakuntaKortti__kuva" + (lista.Count > 2 ? " mk-maakuntaKortti__kuva--karuselli" : ""), isa);
                 var kuva = Rakenne.El("mk-maakuntaKortti__kuvapinta", kehys, PickingMode.Ignore);
                 string osoite = MiniJson.Teksti(k, "osoite");
                 if (!string.IsNullOrEmpty(osoite))
                     Kuvat.Hae(osoite, t => { if (t != null) kuva.style.backgroundImage = new StyleBackground(t); });
-                string lahde = string.Join(" · ", new[] { MiniJson.Teksti(k, "lahde"), MiniJson.Teksti(k, "lisenssi") }.Where(s => !string.IsNullOrEmpty(s)));
-                // Tekijä ja lisenssi Commonsista, jos puuttuu (web karttatyokalu-maakunnat taytaLahderivi, #3438).
-                lahde = Kuvatekija.Taydenna(lahde, MiniJson.Teksti(k, "tiedosto") ?? osoite) ?? "";
+                kehys.RegisterCallback<ClickEvent>(_ => suurennos.Avaa(sarja, kohta));
+                string lahde = KuvanLahde(k, osoite);
                 if (lahde.Length > 0)
                 {
                     var l = Rakenne.Teksti(lahde, "mk-maakuntaKortti__lahde", kehys);
                     Kirjasimet.Aseta(l, Kirjasin.Kone);
                 }
             }
+        }
+
+        /// <summary>Lähderivi täydennettynä Commonsin tekijällä ja lisenssillä, jos puuttuu (web taytaLahderivi, #3438).</summary>
+        static string KuvanLahde(Dictionary<string, object> k, string osoite)
+        {
+            string lahde = string.Join(" · ", new[] { MiniJson.Teksti(k, "lahde"), MiniJson.Teksti(k, "lisenssi") }.Where(s => !string.IsNullOrEmpty(s)));
+            return Kuvatekija.Taydenna(lahde, MiniJson.Teksti(k, "tiedosto") ?? osoite) ?? "";
+        }
+
+        /// <summary>Maakunnan kuva Kuvasuurennokselle (sama kuvatyyppi kuin nostokortin kuvasarjassa).</summary>
+        static LehtiKuva MaakuntaLehtikuva(Dictionary<string, object> k)
+        {
+            string osoite = MiniJson.Teksti(k, "osoite");
+            return new LehtiKuva { Lahde = osoite, LahdeRivi = KuvanLahde(k, osoite) };
         }
 
         void TaytaPulu(IReadOnlyList<(string Q, string A)> kysymykset)
@@ -741,6 +852,19 @@ namespace Matkakirja.Natiivi
                 var t = Rakenne.Teksti(q, "mk-maakuntaKortti__kysymysteksti", nappi);
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
             }
+        }
+
+        /// <summary>Testi: n:s kysymys kuten napautus; kortin reunat ja vieritys lokiin 300 ms päästä (vierityksen jälkeen).</summary>
+        public string TestiKysymys(int n)
+        {
+            if (!Auki) return "kortti ei auki";
+            var napit = puluLohko.Query<Button>(className: "mk-maakuntaKortti__kysymys").ToList();
+            if (n < 0 || n >= napit.Count) return $"kysymyksiä {napit.Count}";
+            string Mitta() { var r = kortti.worldBound; return $"kortti {r.x:0},{r.y:0} {r.width:0} × {r.height:0} pt, vieritys {sisalto.scrollOffset.y:0}"; }
+            string ennen = Mitta();
+            using (var e = NavigationSubmitEvent.GetPooled()) { e.target = napit[n]; napit[n].SendEvent(e); }
+            kortti.schedule.Execute(() => Debug.Log($"MATKAKIRJA ui: maakuntakortti kysymys {n}: ennen {ennen} → nyt {Mitta()}")).ExecuteLater(300);
+            return ennen;
         }
 
         /// <summary>Yksi vastaus kerrallaan; sama napautus sulkee sen.</summary>
@@ -759,6 +883,32 @@ namespace Matkakirja.Natiivi
             puluLohko.Insert(puluLohko.IndexOf(nappi) + 1, v);
             nappi.AddToClassList("mk-auki");
             avoinVastaus = (nappi, v);
+            v.RegisterCallback<GeometryChangedEvent>(NaytaVastaus);
+        }
+
+        /// <summary>Avattu vastaus pehmeästi näkyviin (250 ms): alareuna ruutuun, kysymys ei kuitenkaan katoa yläreunan yli.</summary>
+        void NaytaVastaus(GeometryChangedEvent e)
+        {
+            var v = (VisualElement)e.target;
+            v.UnregisterCallback<GeometryChangedEvent>(NaytaVastaus);
+            if (avoinVastaus.Vastaus != v) return;
+            var sisa = sisalto.contentContainer;
+            float ikkuna = sisalto.contentViewport.layout.height;
+            float kysymysYla = avoinVastaus.Nappi.ChangeCoordinatesTo(sisa, Vector2.zero).y;
+            float ala = v.ChangeCoordinatesTo(sisa, new Vector2(0, v.layout.height)).y + 8f;
+            float alku = sisalto.scrollOffset.y, kohde = alku;
+            if (ala > alku + ikkuna) kohde = Mathf.Min(ala - ikkuna, kysymysYla - 8f);
+            if (kysymysYla < kohde) kohde = Mathf.Max(0f, kysymysYla - 8f);
+            if (Mathf.Abs(kohde - alku) < 1f) return;
+            vieritys?.Pause();
+            float t0 = Time.unscaledTime;
+            vieritys = sisalto.schedule.Execute(() =>
+            {
+                float x = Mathf.Clamp01((Time.unscaledTime - t0) * 1000f / VieritysMs);
+                float k = 1f - (1f - x) * (1f - x) * (1f - x);
+                sisalto.scrollOffset = new Vector2(0f, Mathf.Lerp(alku, kohde, k));
+                if (x >= 1f) vieritys?.Pause();
+            }).Every(16);
         }
     }
 }

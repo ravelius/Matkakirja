@@ -320,6 +320,14 @@ namespace Matkakirja.Natiivi
                                 + $"{(Puhe.VirtaPetti ? " (striimi petti: vanha polku)" : "")}, 1. ääni {Puhe.ViimeEkaAaniMs:0} ms"
                                 + $", katkot [{string.Join(", ", System.Linq.Enumerable.Select(Puhe.Raot, x => x.ToString("0", CultureInfo.InvariantCulture)))}] ms";
                         case "katkot": Puhe.NollaaRaot(); return "=katkot nollattu";
+                        // Luennan alkukatko (29.9.): A/B "puhe alku vanha|uusi" ja pääsäikeen jumi seuraavan Play():n jälkeen
+                        // "puhe jumi <ms>"; mittaus lokiin rivinä "puhe: alku …".
+                        case "alku":
+                            if (A(2) == "vanha") Puhe.VanhaAlku = true; else if (A(2) == "uusi") Puhe.VanhaAlku = false;
+                            return $"=alku {(Puhe.VanhaAlku ? "vanha (häivytys nollasta)" : "uusi (kohdetasolla)")}";
+                        case "jumi":
+                            Puhe.JumiMs = int.TryParse(A(2), out int jumi) ? Mathf.Clamp(jumi, 0, 3000) : 0;
+                            return $"=jumi {Puhe.JumiMs} ms ensimmäisessä soivassa ruudussa";
                         // Palaloki (TF 1.0.32 ohitukset): soitetut/jatketut/uusitut palat ja viimeiset rivit (soi s/kesto, lähde, worker).
                         case "palat":
                             if (A(2) == "nollaa") { Puhe.NollaaPalaloki(); return "=palaloki nollattu"; }
@@ -354,7 +362,16 @@ namespace Matkakirja.Natiivi
                         }
                         case "pois": Asetukset.AsetaKehittaja(null); return "=kehittäjätila pois";
                         case "tila": return $"=kehittäjätila {(Asetukset.Kehittaja ? "päällä" : "pois")}, pöllön koodi {(Asetukset.PolloKoodi != null ? "on" : "ei")}";
-                        default: return "käyttö: kehittaja koodi|pois|tila";
+                        // Maailmatila ja pelaajan näkymä (omistaja 29.9.2026): kuvapari ja testit ilman päävalikkoa.
+                        case "maailma": Matkakirja.Natiivi.Paavalikko.AsetaMaailma(A(2) != "0"); goto case "nakyma";
+                        case "pelaaja": Matkakirja.Natiivi.Paavalikko.AsetaPelaajanNakyma(A(2) != "0"); goto case "nakyma";
+                        case "nakyma":
+                        {
+                            var hm = FindAnyObjectByType<KaupunkiMerkit>()?.HimmeidenMaara() ?? (0, 0);
+                            return $"=maailmatila {(Matkakirja.Natiivi.Paavalikko.Maailma ? "päällä" : "pois")}, pelaajan näkymä "
+                                + (Matkakirja.Natiivi.Paavalikko.PelaajanNakyma ? "päällä" : "pois") + $", himmeitä {hm.Item1} (ruudulla {hm.Item2})";
+                        }
+                        default: return "käyttö: kehittaja koodi|pois|tila|maailma 0|1|pelaaja 0|1|nakyma";
                     }
                 case "pulu" when A(1) == "realtime":
                 {

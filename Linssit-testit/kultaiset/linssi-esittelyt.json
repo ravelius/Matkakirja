@@ -1,0 +1,40 @@
+{
+ "linssit": {
+  "ihmisen-matka": {
+   "esittely": "Ihmiskunnan leviäminen Afrikasta koko maailmaan aikajanalla: käynnistä kello ja katso, miten asutus etenee mantereelta toiselle.",
+   "havainnekuva": null
+  },
+  "keksinnot": {
+   "esittely": "Eurooppalaisten keksintöjen aikajana 1769–1928: käynnistä kello ja katso, missä ja milloin mikin keksintö syntyi.",
+   "havainnekuva": null
+  },
+  "pallo": {
+   "esittely": "Isoisän juliste pallona: pyöritä maailmaa ja napauta kohtaa, johon haluat sukeltaa.",
+   "havainnekuva": null
+  },
+  "radio": {
+   "esittely": "Kaupungit ovat play-nappeja: kuulet mitä siellä lähetetään juuri nyt.",
+   "havainnekuva": null
+  },
+  "satelliitti": {
+   "esittely": "Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.",
+   "havainnekuva": null
+  },
+  "topografia": {
+   "esittely": "Maailma maastona: väri kertoo korkeuden, varjo kertoo muodon.",
+   "havainnekuva": null
+  },
+  "vertailu": {
+   "esittely": "Valitse kartalta enintään kolme maata Suomen rinnalle ja vertaa niitä samoilla asteikoilla.",
+   "havainnekuva": null
+  },
+  "maatiedot": {
+   "esittely": "Napauta kartalta mitä tahansa maata ja lue sen oma lehti — ei tarvitse matkustaa perille.",
+   "havainnekuva": null
+  },
+  "vesistot": {
+   "esittely": "Joet ja järvet maaston päällä: vesi näkyy siellä minne maa viettää.",
+   "havainnekuva": null
+  }
+ }
+}

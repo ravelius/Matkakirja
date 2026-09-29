@@ -49,6 +49,15 @@ namespace Matkakirja.Linssit
         public bool Kesken;
         public Lahde Lahde;
         public IReadOnlyList<SeliteRivi> Selite = Array.Empty<SeliteRivi>();
+
+        /// <summary>
+        /// Pillerivalikon Linssit-näkymän esikatselun esittely (web LINSSI.esittely, #3611, 1–2 lausetta, enintään 160 merkkiä):
+        /// linssimoduulin JSON:sta, muuten LinssiEsittelyt-taulusta. null = ei esittelyä (UI näyttää Lyhyen).
+        /// </summary>
+        public string Esittely { get => esittely ?? LinssiEsittelyt.Esittely(Id); set => esittely = value; }
+        /// <summary>Esikatselun havainnekuvan osoite (web LINSSI.havainnekuva); null = ei kuvaa (UI näyttää varustekuvan).</summary>
+        public string Havainnekuva { get => havainnekuva ?? LinssiEsittelyt.Havainnekuva(Id); set => havainnekuva = value; }
+        string esittely, havainnekuva;
     }
 
     /// <summary>Rasterikerroksen tiilitys (Cesiumin projektiot).</summary>

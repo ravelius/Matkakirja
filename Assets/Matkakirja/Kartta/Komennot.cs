@@ -123,7 +123,7 @@ namespace Matkakirja
     ///                             web = build 16:n korostus) ja koko rengas rannikkoineen vertailuun (oletus pois =
     ///                             vain Karttasepän maa–maa-rajat)
     ///   vari sarja p080|p060|p045|oletus|<versio>   kermahunnun sarja (löydös 128, Varitaso.Versio; peitto on poltettu
-    ///                             sarjaan, oletus 2026-09-26-p060, omistaja 26.9.); vari <ISO3>|pelaaja|pois|paalle|alin <z> kuten ennen
+    ///                             sarjaan, oletus 2026-09-27-p060, omistaja 26.9.); vari <ISO3>|pelaaja|pois|paalle|alin <z> kuten ennen
     ///   rajat pois|paalle|tila | rajat taso <0–4>|auto | rajat peitto <a>|oletus   valtioiden rajat vektorina (Rajat, E2)
     ///   vektorit versio <nimi>|web|oletus   rannikko- ja rajasarjan versio (oletus 2026-09-25-gshhs-korkeus, web =
     ///                             2026-09-21-gshhs ilman korkeuksia); luettelo ja solut ladataan uudelleen
@@ -346,6 +346,8 @@ namespace Matkakirja
                 case "pois": Aurinko.UsvaSallittu = false; break;
                 case "paalle": Aurinko.UsvaSallittu = true; break;
                 case "raja" when o.Length > 2: Aurinko.UsvaRaja = System.Math.Max(0.05, System.Math.Min(5.0, D(2))); break;
+                // Radiolinssin liu'un kerroin täydessä hämärässä (omistaja 28.9.: "raja ei saisi olla noin selvä").
+                case "radio" when o.Length > 2: RadioMastot.UsvanLiuku = (float)System.Math.Max(1.0, System.Math.Min(8.0, D(2))); break;
                 case "vari" when o.Length > 4:
                 {
                     double r = D(2), g = D(3), b = D(4);
@@ -356,7 +358,7 @@ namespace Matkakirja
             }
             var au = FindAnyObjectByType<Aurinko>();
             Debug.Log("MATKAKIRJA usva " + string.Join(" ", o, 1, o.Length - 1) + ": " + (au != null ? au.Tila() : "ei aurinkoa")
-                      + $", väri {Aurinko.UsvaVari}, katto {kierto.KallistusRaja():0.0}°");
+                      + $", väri {Aurinko.UsvaVari}, katto {kierto.KallistusRaja():0.0}°, radion liuku {RadioMastot.UsvanLiuku:0.0} (nyt {Horisonttiusva.LiukuNyt:0.00})");
         }
 
         /// <summary>

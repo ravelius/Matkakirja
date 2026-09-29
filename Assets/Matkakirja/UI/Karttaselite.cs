@@ -29,7 +29,7 @@ namespace Matkakirja.Natiivi
     public sealed class Karttaselite
     {
         readonly UiKerros kerros;
-        readonly Button nappi;
+        readonly Button nappi, pelaajaNappi;
         const string ValilehtiAvain = "matkakirja-karttaselite-valilehti";
         readonly VisualElement paneeli, lista, peukalo, paneeliNostot, paneeliMaakunnat;
         readonly Button valilehtiNostot, valilehtiMaakunnat;
@@ -53,12 +53,18 @@ namespace Matkakirja.Natiivi
             nappi = Rakenne.Nappi(null, "mk-seliteNappi", Vaihda, turva, NostoMerkit.SeliteNappi);
             nappi.tooltip = MaakuntaKartta ? "Maakuntakartta" : "Karttaselitteet";
             nappi.style.top = Ylapalkki.Varaus + 8;
+            // Pelaajan näkymä (omistaja 29.9.2026, web on malli, Siirtoseppä): kehittäjän maailmatilassa silmänappi
+            // karttaselitenapin alla (sama koko ja tyyli, väli 8), valittuna = kartta kuten pelaajalla.
+            pelaajaNappi = Rakenne.Nappi(null, "mk-seliteNappi mk-pelaajanakymaNappi", VaihdaPelaajanNakyma, turva, Ikonit.Viiva["silma"]);
+            pelaajaNappi.tooltip = "Pelaajan näkymä";
+            pelaajaNappi.style.display = DisplayStyle.None;
             Aloitusnakyma.AukiMuuttui += _ => PaivitaNappi();
 
             paneeli = Rakenne.El("mk-selite", turva);
             paneeli.style.top = Ylapalkki.Varaus + 8;
             paneeli.style.display = DisplayStyle.None;
-            paneeli.Add(new KarheaKehys { Sade = 8, Paksuus = 1.2f });
+            var kehys = new KarheaKehys { Sade = 8, Paksuus = 1.2f };
+            paneeli.Add(kehys);
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
 
             var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
@@ -81,7 +87,18 @@ namespace Matkakirja.Natiivi
             {
                 ylarivi.style.display = DisplayStyle.None; // ei välilehtiä eikä ✕: nappi on kytkin
                 paneeli.AddToClassList("mk-selite--karttatila");
+                // iPadilla leveämpi (omistaja: "mininosto saisi olla isompi"): 300 pt jätti isonnetulle tekstille kapean palstan.
+                paneeli.EnableInClassList("mk-selite--karttatila-tabletti", UiKerros.Tabletti);
+                // Omistaja 29.9.2026 (iPhone-laitekuva): käsin piirretty kehys (KarheaKehys) näkyi tummana
+                // reunana koko pienen kuvausruudun ympärillä — pois vain maakuntakarttatilassa, pohja jää
+                // silti nostokortin paperin väriseksi (mk-selite background-color).
+                kehys.style.display = DisplayStyle.None;
                 Maakunnat.PiilotaLista();
+                // Omistaja 29.9.2026 klo 07.3x (iPhone-kaappaus maakuntalappu-paikka.jpg): "Tuo maakunta lappu saisi olla
+                // ylempänä ja peittää sen avanneen painikkeet. Lisää pieni x sen oik yläkulmaan sulkemista varten." Lappu
+                // napin kohdalle (Asettele) ja pieni ✕ kulmaan, osuma-ala 44 pt (mitat sovittu Siirtosepän kanssa webiin).
+                var x = Rakenne.Nappi(null, "mk-selite__sulje mk-selite__lappusulje", Sulje, paneeli, Ikonit.Viiva["rasti"]);
+                x.tooltip = "Sulje maakuntakartta";
             }
             NaytaValilehti();
             lista = Rakenne.El("mk-selite__lista", vieritys);
@@ -215,6 +232,7 @@ namespace Matkakirja.Natiivi
             {
                 Maakunnat.AsetaKarttatila(true);
                 PalloKierto.Sieppaaja = MaakuntaNapautus;
+                MaakuntaKerros()?.AsetaTilaRajat(true);
                 if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.AsetaMaakuntaEsto(true);
             }
             KytkePalvelu();
@@ -230,12 +248,13 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             Auki = false;
-            Rakenne.Nayta(paneeli, false, 220);
+            Rakenne.Nayta(paneeli, false, LinssiUi.VahennettyLiike() ? 0 : 240); // webin sulku 200 ms + 40 ms (omistaja 29.9.2026)
             nappi.RemoveFromClassList("mk-valittu");
             Maakunnat.AsetaNakyvissa(false); // löydös 165: kartan korostus pois, valinta säilyy listassa
             if (MaakuntaKartta)
             {
                 Maakunnat.AsetaKarttatila(false);
+                MaakuntaKerros()?.AsetaTilaRajat(false);
                 if (PalloKierto.Sieppaaja == (System.Func<Vector2, bool>)MaakuntaNapautus) PalloKierto.Sieppaaja = null;
                 if (UiNakymat.Olemassa) UiNakymat.Hae().Nostot.AsetaMaakuntaEsto(false);
             }
@@ -252,9 +271,13 @@ namespace Matkakirja.Natiivi
             if (mk == null || !mk.RuutuPallolle(ruutu, out double lat, out double lon)) return true;
             string avain = mk.MaaPisteessa(lat, lon);
             Debug.Log($"MATKAKIRJA ui maakuntakartta: napautus {lat:0.00} {lon:0.00} → {avain ?? "ei maakuntaa"}");
+            // Omistaja 28.9. klo 20.3x: saman maakunnan uusi napautus tyhjentää valinnan ja poistuu maakuntatilasta.
+            if (avain != null && avain == Maakunnat.ValittuAvain) { Sulje(); return true; }
             if (avain != null) Maakunnat.Valitse(avain);
             return true;
         }
+
+        static MaaKartta MaakuntaKerros() => KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
 
         /// <summary>Nappi näkyviin tai piiloon (linssi päällä, aloitus).</summary>
         /// <summary>Karttanappi (iPhonella yläpalkin riviin, Ylapalkki.Vieras).</summary>
@@ -275,6 +298,22 @@ namespace Matkakirja.Natiivi
             bool nakyy = nappiSallittu && !Aloitusnakyma.AloitusAuki && !Ylapalkki.PalkkiPiilossa;
             if (!nakyy) Sulje();
             nappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            PaivitaPelaajaNappi();
+        }
+
+        /// <summary>Silmänappi vain kehittäjän maailmatilassa ja kun karttaselitteen nappi näkyy (maailmatilan sammutus piilottaa).</summary>
+        void PaivitaPelaajaNappi()
+        {
+            bool nakyy = Paavalikko.Maailma && nappi.style.display != DisplayStyle.None;
+            var d = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (pelaajaNappi.style.display != d) pelaajaNappi.style.display = d;
+            pelaajaNappi.EnableInClassList("mk-valittu", Paavalikko.PelaajanNakyma);
+        }
+
+        void VaihdaPelaajanNakyma()
+        {
+            Paavalikko.AsetaPelaajanNakyma(!Paavalikko.PelaajanNakyma);
+            PaivitaPelaajaNappi();
         }
 
         void KytkePalvelu()
@@ -337,12 +376,16 @@ namespace Matkakirja.Natiivi
             bool rivissa = nappi.ClassListContains("mk-ylapalkki__vieras");
             nappi.style.top = rivissa ? StyleKeyword.Null : yla;
             nappi.style.right = rivissa ? StyleKeyword.Null : oikea;
+            pelaajaNappi.style.top = rivissa ? yla : yla + 40 + 8;
+            pelaajaNappi.style.right = oikea;
+            // Maakuntakartassa lappu peittää sen avanneen napin (omistaja 29.9.2026); sulkeminen lapun omalla ✕:llä.
             paneeli.style.top = yla;
             paneeli.style.right = oikea;
         }
 
         void TarkistaOhiNapautus()
         {
+            PaivitaPelaajaNappi(); // maailmatila vaihtuu päävalikosta
             if (!Auki || Maakunnat.KorttiAuki || MaakuntaKartta) return; // maakuntakartta: napautus kartalla valitsee
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;

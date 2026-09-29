@@ -11,6 +11,10 @@
 //                Selitteen napautus kelaa rungon kiinni/auki (otsikko jää); kohteen
 //                ensimmäisellä avauksella selite on auki 1,5 s ja kelautuu sitten; kun selaus vie
 //                jo nähtyyn kohteeseen, nimipilleri kirkastuu täyteen peittoon 1,2 s:ksi.
+//                Koko liukuu nimipillerin ja avatun välillä (Tiivistys, omistaja 28.9. "animoitu
+//                pienennys mahdollisimman tiiviiksi"), ja selite luetaan ääneen kertojan äänellä
+//                (säilölohko astro-selite kuten webissä, PR #3568). Kuvan napautus, veto, nipistys
+//                ja rulla pienentävät auki olevan selitteen (web LISÄYS 6), mutta eivät koskaan avaa sitä.
 //   oikea ylä    ✕ sulkee kuvan (linssi jää auki; AstronauttiLinssi.SuljeKuva).
 //   vasen ala    pikkukuvat (38 × 26), jos kohteella on useampi havainto.
 //   oikea ala    minipulu astronauttina (LiviaKuva mini, leijuu itsestään);
@@ -22,6 +26,8 @@
 // viereisen kohteen kuvat maailmankierroksella, joten selaus ei pääty. Tausta on läpikuultava, ja linssin pallo liukuu kuvan
 // kohteen ylle (AstronauttiLinssi.AvaaKohde): kuvan takana hohtaa himmeästi maapallo juuri kuvan kohdalta, kuin ikkunasta.
 // Liu'ut 140 + 160 ms; pieni liike pois: suora vaihto.
+// AVAUS JA SULKU (Raamattu PR #3602, omistaja 29.9.2026): näkymä kasvaa ja häivyttyy esiin kohteen pisteestä ruudulla
+// (napautettu kohta; Pulun tervetulossa väärä kohde) ja sulkeutuu samaa reittiä, Ponnahdus-apurilla webin arvoin.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -85,6 +91,7 @@ namespace Matkakirja.Natiivi
             lava.RegisterCallback<PointerCaptureOutEvent>(e => SormiYlos(e.pointerId));
             lava.RegisterCallback<WheelEvent>(e =>
             {
+                KelaaKuvasta();
                 ZoomaaKohtaan(zoomi * Mathf.Pow(1.0015f, -e.delta.y * 40f), e.localMousePosition);
                 e.StopPropagation();
             });
@@ -129,7 +136,9 @@ namespace Matkakirja.Natiivi
             {
                 e.StopPropagation();
                 Aanet.PulunTehoste("pulu.kujerrus");
-                pulukortti.Vaihda(kohde);
+                // Web #3590: minipulu avaa Pulun taulun, jonka "Kysy Pululta" avaa tämän kortin; ilman taulua kortti.
+                if (MinipuluNapautettu != null) MinipuluNapautettu();
+                else pulukortti.Vaihda(kohde);
             });
             // Web minipulu koko 'auto': 84 pt, pieni ruutu (≤ 620 × 500) 56 pt; kortin mitat samasta ruudusta.
             turva.RegisterCallback<GeometryChangedEvent>(e =>
@@ -179,7 +188,9 @@ namespace Matkakirja.Natiivi
             if (!Auki)
             {
                 Auki = true;
-                juuri.style.display = DisplayStyle.Flex;
+                // Kasvaa esiin kohteen pisteestä (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; Ponnahdus = webin arvot).
+                Ruudunpaivitys.Herata(Ponnahdus.AukiS + 0.1f);
+                Ponnahdus.Avaa(juuri, Origo(k));
                 SyoteLukko.Esta(this);
                 AukiMuuttui?.Invoke(true);
             }
@@ -189,9 +200,13 @@ namespace Matkakirja.Natiivi
                 // per kohde), sen jälkeen kelattuna; myöhemmin suoraan kelattuna.
                 Lisatiedot(false);
                 bool ensiKerta = k.Tunnus == null || nahdyt.Add(k.Tunnus);
-                AsetaKiinni(!ensiKerta);
+                // Selauksessa laatikko liukuu edellisen kohteen koosta uuteen (PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN).
+                if (selaus) Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(!ensiKerta));
+                else AsetaKiinni(!ensiKerta);
+                vinkki = ensiKerta;
                 kelaus?.Pause();
-                if (ensiKerta) kelaus = selite.schedule.Execute(() => { if (!lisatiedotAuki) KelaaRiveittain(); }).StartingIn(1500);
+                if (ensiKerta)
+                    kelaus = selite.schedule.Execute(() => { if (lisatiedotAuki) vinkki = false; else KelaaRiveittain(); }).StartingIn(1500);
                 else if (selaus && !Vanha) Korosta();
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
@@ -211,12 +226,19 @@ namespace Matkakirja.Natiivi
             }
             if (!Auki) return;
             Auki = false;
+            LopetaLuenta();
+            kelaus?.Pause();
+            riveittain?.Pause();
+            vinkki = false;
+            Tiivistys.Lopeta(selite);
             korostus?.Pause();
             selite.RemoveFromClassList("mk-korostus");
             liuku?.Pause();
             liukuu = pyyhkaisy = false;
             kuva.style.opacity = StyleKeyword.Null;
-            juuri.style.display = DisplayStyle.None;
+            // Sulkeutuu samaa reittiä avauksen pisteeseen (Ponnahdus, 200 ms); linssi ja pallo saavat syötteen heti.
+            Ruudunpaivitys.Herata(Ponnahdus.KiinniS + Ponnahdus.PoistoViiveS + 0.1f);
+            Ponnahdus.Sulje(juuri);
             pulukortti.Sulje();
             sormet.Clear();
             SyoteLukko.Vapauta(this);
@@ -228,14 +250,34 @@ namespace Matkakirja.Natiivi
         void SuljeKuva() => Sulje(true);
 
         /// <summary>
+        /// Avauksen suunta: kohteen piste ruudulla paneelin koordinaateissa eli napautettu kohta, tai Pulun tervetulossa väärä
+        /// kohde, jonka nokka räppäisi auki. null (keskeltä), jos piste ei näy.
+        /// </summary>
+        Vector2? Origo(Havaintokohde k)
+        {
+            var kerros = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>();
+            if (k == null || kerros == null || juuri.panel == null || !kerros.KohdeRuudulla(k.Tunnus, out var px)) return null;
+            return RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(px.x, Screen.height - px.y));
+        }
+
+        /// <summary>
         /// Avoin kuva pulun kontekstiin (web pollo.js avoinAvaruuskuva): nimi, seutu ja pelaajan näkemä
         /// selite; null, kun kuva on kiinni (vanhentunut kuva kontekstissa olisi pahempi kuin puuttuva).
         /// </summary>
         public (string Nimi, string Seutu, string Teksti)? AvoinKuva =>
             Auki && kohde != null ? (kohde.Nimi, kohde.Seutu, teksti.text) : ((string, string, string)?)null;
 
-        /// <summary>Testikomento: minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
+        /// <summary>Testikomento ja Pulun taulun "Kysy Pululta": minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
         public void AvaaPulukortti() { if (Auki) pulukortti.Avaa(kohde); }
+
+        /// <summary>Pulun taulu avautuu kortin paikalle (web: taulu ja kuvan chatti eivät ole yhtä aikaa samassa kulmassa).</summary>
+        public void SuljePulukortti() => pulukortti.Sulje();
+
+        /// <summary>Minipulun napautus (web #3590: valokuvan minipulu avaa Pulun taulun). Ilman kuuntelijaa kortti.</summary>
+        public event Action MinipuluNapautettu;
+
+        /// <summary>Minipulun laatikko Pulun taulun sijoitukseen (web pulunLaatikko: kuvan ollessa auki minipulu).</summary>
+        public Rect MinipulunLaatikko => Auki && pulunappi.panel != null ? pulunappi.worldBound : default;
 
         void Valitse(int i)
         {
@@ -244,6 +286,7 @@ namespace Matkakirja.Natiivi
             var h = i >= 0 && i < kohde.Havainnot.Count ? kohde.Havainnot[i] : null;
             otsikko.text = kohde.Nimi + (string.IsNullOrEmpty(kohde.Seutu) ? "" : " — " + kohde.Seutu);
             teksti.text = h?.Teksti ?? kohde.Selite ?? "";
+            LueSelite(h);
             if (lisatiedotAuki) LadoLisatiedot();
             for (int n = 0; n < nauha.childCount; n++) nauha[n].EnableInClassList("mk-valittu", n == i);
             NollaaZoomi();
@@ -285,23 +328,50 @@ namespace Matkakirja.Natiivi
 
         bool kiinni, lisatiedotAuki;
 
+        /// <summary>Kohteen ensimmäisen avauksen vinkki (auki 1,5 s, sitten automaattinen kelaus) on kesken.</summary>
+        bool vinkki;
+
+        /// <summary>
+        /// Selitteen napautus kelaa rungon kiinni tai auki. PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN (omistaja 28.9.2026,
+        /// Raamattu PR #3527; web satelliitti.js asetaSelite + js/tiivistys.js): laatikko liukuu nimipillerin ja avatun koon
+        /// välillä (Tiivistys.AnimoiKoko, 250 ms) eikä hyppää. PELAAJAN ELE VOITTAA VINKIN (web kelaaSelite): napautus kesken
+        /// vinkin tai sen automaattisen kelauksen lopettaa sen ja jättää selitteen auki, muuten laatikko sulkeutuisi juuri
+        /// kun pelaaja alkaa lukea.
+        /// </summary>
         void Kelaa()
         {
             kelaus?.Pause();
-            AsetaKiinni(!kiinni);
+            bool k = !vinkki && !kiinni;
+            Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(k));
+        }
+
+        /// <summary>
+        /// KUVAN KÄSITTELY PIENENTÄÄ SELITTEEN (web LISÄYS 6: "Inforuutu saisi pienentyä automaattisesti kun kuvaa klikataan,
+        /// panoroidaan tai zoomataan"; web satelliitti.js kelaaKuvasta): lavan kosketus (napautus, veto, nipistys, pyyhkäisy ja
+        /// reunan napautus) ja rulla pienentävät auki olevan selitteen liukuen ja lopettavat vinkin. Yksisuuntainen: kuva ei
+        /// koskaan avaa selitettä, vaan avaus tapahtuu vain selitteen napautuksesta (muuten panorointi vilkuttaisi laatikkoa).
+        /// </summary>
+        void KelaaKuvasta()
+        {
+            kelaus?.Pause();
+            vinkki = false;
+            if (kiinni) return;
+            Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(true));
         }
 
         IVisualElementScheduledItem riveittain;
 
         /// <summary>
         /// Löydös 97 (SÄÄNTÖ, omistaja build 13): automaattinen kelaus madaltaa selitteen rivin (20 pt) 45 ms:n välein ja
-        /// kutistaa sen lopuksi tekstin kokoiseksi nimilaatikoksi (web .satelliitti-selite-kiinni width auto). Pieni liike
-        /// pois: suoraan.
+        /// kutistaa sen lopuksi tekstin kokoiseksi nimilaatikoksi (web .satelliitti-selite-kiinni width auto). Viimeinen
+        /// vaihe liukuu nimipilleriksi (Tiivistys, omistaja 28.9.: animoitu pienennys mahdollisimman tiiviiksi), joten
+        /// leveys ei hyppää. Pieni liike pois: suoraan.
         /// </summary>
         void KelaaRiveittain()
         {
+            if (kiinni) { AsetaKiinni(true); return; }
             float h = runko.layout.height;
-            if (kiinni || LinssiUi.VahennettyLiike() || float.IsNaN(h) || h <= 20f) { AsetaKiinni(true); return; }
+            if (LinssiUi.VahennettyLiike() || float.IsNaN(h) || h <= 20f) { Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(true)); return; }
             riveittain?.Pause();
             runko.style.overflow = Overflow.Hidden;
             riveittain = runko.schedule.Execute(() =>
@@ -309,7 +379,7 @@ namespace Matkakirja.Natiivi
                 h -= 20f;
                 if (h > 0f && !kiinni) { runko.style.maxHeight = h; return; }
                 riveittain?.Pause();
-                if (!kiinni) AsetaKiinni(true);
+                if (!kiinni) Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(true));
             }).Every(45);
         }
 
@@ -330,11 +400,106 @@ namespace Matkakirja.Natiivi
         void AsetaKiinni(bool k)
         {
             riveittain?.Pause();
+            vinkki = false;
             runko.style.maxHeight = StyleKeyword.Null;
             runko.style.overflow = StyleKeyword.Null;
             kiinni = k;
             selite.EnableInClassList("mk-kiinni", k);
             runko.style.display = k ? DisplayStyle.None : DisplayStyle.Flex;
+        }
+
+        // --- luenta ------------------------------------------------------------------
+
+        string luettu, luennanUrl;
+
+        /// <summary>
+        /// Selitettä ei lueta, kun tämä on tosi: Pulun tervetulo puhuu, ja sen C1 avaa väärän kuvan kesken repliikin (omistaja
+        /// 8.9.2026: pulun ja kertojan äänet eivät mene päällekkäin; PulunTervetuloNakyma asettaa).
+        /// </summary>
+        public static Func<bool> LuentaEste;
+
+        /// <summary>
+        /// SELITE LUETAAN ÄÄNEEN (omistaja 28.9.2026: "Tee selitteelle myös striinilukija joka automaattisesti päällä"; web
+        /// satelliitti.js lueSelite, PR #3568): kuvan avautuessa ja vaihtuessa selite luetaan kertojan äänellä palavirtana
+        /// (Puhe.Lue), kun Kertoja on päällä (sama kytkin kuin matkakirjan automaattisella luennalla). Uusi kuva keskeyttää
+        /// edellisen luennan (yksi puhuja kerrallaan), ja kuvan sulkeminen lopettaa sen. Teksti (Havaintokohde.Luettava) ja
+        /// säilölohko (AstronauttiLinssi.SelitteenSailio) ovat samat kuin webissä, joten sama selite syntetisoidaan kerran
+        /// molemmille alustoille (laite, reuna ja ämpäri).
+        /// </summary>
+        void LueSelite(Havainto h)
+        {
+            if (kohde == null || !Puhe.Paalla || LuentaEste?.Invoke() == true) return;
+            string t = kohde.Luettava(h);
+            if (string.IsNullOrEmpty(t) || t == luettu) return;
+            luettu = t;
+            var puhe = Puhe.Hae();
+            luennanUrl = puhe.Lue(t, "kertoja", lohko: AstronauttiLinssi.SelitteenSailio) ? puhe.SoivaUrl : null;
+            Debug.Log($"MATKAKIRJA kuvaselite luetaan ({AstronauttiLinssi.SelitteenSailio}, {t.Length} mrk): "
+                + (luennanUrl != null ? t.Substring(0, Math.Min(60, t.Length)) : "ei alkanut"));
+        }
+
+        /// <summary>Kuvan sulkeminen lopettaa selitteen luennan, ei muiden puhujien (esim. pulun vastausta).</summary>
+        void LopetaLuenta()
+        {
+            var puhe = Puhe.Instanssi;
+            if (luennanUrl != null && puhe != null && puhe.SoivaUrl == luennanUrl) puhe.Pysayta(0.3f);
+            luettu = luennanUrl = null;
+        }
+
+        // --- testikomento --------------------------------------------------------------
+
+        /// <summary>
+        /// `ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|mittaa|tila]` (Linssiseppä 29.9.): kelaa = selitteen
+        /// napautus, kiinni/auki = napautus vain tarvittaessa, automaatti = vinkin automaattinen kelaus heti, mittaa =
+        /// pelkkä kokomittari 1,2 s (esim. ennen `ui napauta x y` kuvaan, LISÄYS 6). Liukuvat komennot käynnistävät
+        /// kokomittarin, joka kirjaa selitteen koon jokaisella ruudulla 0,8 s ajan (MATKAKIRJA kuvaselite koko …):
+        /// liu'un on edettävä vanhasta koosta uuteen ilman välikuvaa uudessa koossa. Palauttaa tilan.
+        /// </summary>
+        public string TestaaSelite(string komento)
+        {
+            // Suljetun kuvan jälkeen tila kertoo, soiko puhe vielä (sulku lopettaa selitteen luennan).
+            if (!Auki) return $"kuva ei ole auki, puhe {(Puhe.Instanssi != null && Puhe.Instanssi.Soi ? "soi" : "hiljaa")}";
+            switch (komento)
+            {
+                case "kelaa": MittaaKoko(0.8f); Kelaa(); break;
+                case "kiinni": if (!kiinni) { MittaaKoko(0.8f); Kelaa(); } break;
+                case "auki": if (kiinni) { MittaaKoko(0.8f); Kelaa(); } break;
+                case "automaatti": kelaus?.Pause(); MittaaKoko(1.2f); KelaaRiveittain(); break;
+                case "mittaa": MittaaKoko(1.2f); break;
+            }
+            return SeliteTila;
+        }
+
+        /// <summary>Selitteen tila testikomennoille: kelaus, koko, kesken olevat liu'ut ja luenta.</summary>
+        public string SeliteTila
+        {
+            get
+            {
+                var r = selite.layout;
+                var puhe = Puhe.Instanssi;
+                // Oma luenta on kesken, kunnes Puhe päättää sen (SoivaUrl nollautuu viimeisen palan jälkeen tai pysäytyksessä).
+                bool oma = puhe != null && luennanUrl != null && puhe.SoivaUrl == luennanUrl;
+                string luenta = luettu == null ? "ei" : luennanUrl == null ? "ei alkanut" : !oma ? "ohi"
+                    : puhe.Soi ? $"soi {puhe.Aika:0.0}/{puhe.Kesto:0.0} s" : "latautuu";
+                return $"selite {(kiinni ? "kiinni" : "auki")}{(vinkki ? " (vinkki)" : "")} {r.width:0}x{r.height:0}, liukuja {Tiivistys.Kesken}, "
+                    + $"luenta {luenta} ({AstronauttiLinssi.SelitteenSailio}, {luettu?.Length ?? 0} mrk)";
+            }
+        }
+
+        void MittaaKoko(float s)
+        {
+            float alku = Time.unscaledTime;
+            var sb = new System.Text.StringBuilder();
+            IVisualElementScheduledItem mittari = null;
+            mittari = selite.schedule.Execute(() =>
+            {
+                Ruudunpaivitys.Herata(0.1f);
+                var r = selite.layout;
+                sb.Append($" {(Time.unscaledTime - alku) * 1000f:0}:{r.width:0}x{r.height:0}");
+                if (Time.unscaledTime - alku < s) return;
+                mittari.Pause();
+                Debug.Log("MATKAKIRJA kuvaselite koko" + sb);
+            }).Every(0);
         }
 
         void Lisatiedot(bool auki)
@@ -470,6 +635,10 @@ namespace Matkakirja.Natiivi
 
         void SormiAlas(PointerDownEvent e)
         {
+            // Sulkeutuva kuva (Ponnahdus, 240 ms) ei ota kosketuksia (web .maakunta-kortti-sulkeutuu pointer-events: none).
+            if (!Auki) return;
+            // Kuvan napautus, panorointi, nipistys ja selaus pienentävät selitteen (web LISÄYS 6).
+            KelaaKuvasta();
             sormet[e.pointerId] = e.localPosition;
             lava.CapturePointer(e.pointerId);
             if (sormet.Count == 1)

@@ -61,8 +61,12 @@ namespace Matkakirja.Natiivi
         public const int TekstinKatto = 2500;
         /// <summary>Luennan loppuhäivytys (web LUENNAN_HAIPYMA_S).</summary>
         public const float Haivytys = 1.5f;
-        /// <summary>Uuden puheen alkuhäivytys (web: kertoja alkaa pehmeästi).</summary>
+        /// <summary>Korvattavan puheen häivytys uuden alta (web: kertoja alkaa pehmeästi).</summary>
         public const float Alkuhaivytys = 0.15f;
+        /// <summary>A/B-mittaus (peli-komento "puhe alku vanha|uusi"): vanha = uusi klippi häivytetään nollasta ruutujen tahdissa.</summary>
+        public static bool VanhaAlku;
+        /// <summary>Testi (peli-komento "puhe jumi ms"): pääsäie seisoo seuraavan Play():n jälkeen, kuten raskaassa ruudussa.</summary>
+        public static int JumiMs;
 
         public static Puhe Instanssi { get; private set; }
 
@@ -349,13 +353,15 @@ namespace Matkakirja.Natiivi
         /// </summary>
         /// <param name="loppuTagi">xAI-puhetagi palan loppuun (Lukijaaani.LuennanPalatJaTagit: [pause] kappalejaossa,
         /// [long-pause] väliotsikon edellä); vain puhepyyntöön, säilö omaan lohkoonsa (kertoja-t1).</param>
+        /// <param name="lohko">säilölohko (web lueAaneen sailio), oletuksena persoonan lohko (Lukijaaani.OletusLohko); esim.
+        /// astronautin kuvaselite astro-selite kuten webissä (Linssiseppä 29.9.2026).</param>
         public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null, bool pyynnosta = false,
-            string loppuTagi = null)
+            string loppuTagi = null, string lohko = null)
         {
             // pyynnosta: kaiuttimen painallus lukee aina (omistaja 27.9.2026 klo 15.5x); automaattista ohjaa Kertoja.
             if (!Paalla && !PulunPuhe(persoona) && !pyynnosta) return false;
             soiPyynnosta = pyynnosta;
-            return Syntetisoi(teksti, persoona, TagiLohko(Lukijaaani.OletusLohko(persoona), loppuTagi), true, viiveS, loppu, loppuTagi);
+            return Syntetisoi(teksti, persoona, TagiLohko(lohko ?? Lukijaaani.OletusLohko(persoona), loppuTagi), true, viiveS, loppu, loppuTagi);
         }
 
         static string TagiLohko(string lohko, string loppuTagi) => Lukijaaani.TagiLohko(lohko, loppuTagi);
@@ -1059,12 +1065,19 @@ namespace Matkakirja.Natiivi
             var vanha = lahde.clip;
             lahde.Stop();
             lahde.clip = klippi;
-            lahde.volume = 0;
+            // LUENNAN ALKUKATKO (omistaja 1.0.39: isoisän luennan ja kaupungin nimen alku ei välillä kuulu laitteella;
+            // Natiivi-UI 29.9.): ennen klippi alkoi voimakkuudella 0 ja nousi 150 ms:ssa pääsäikeen ruuduissa. Äänisäie
+            // soittaa kuitenkin Play():sta lähtien, joten jos pääsäie seisoo heti Play():n jälkeen (saapuminen: kaupunki,
+            // kortti ja kartta samassa ruudussa; laitteella hitaampi kuin simulaattorissa), klippi soi koko jumin ajan
+            // mykkänä ja ensimmäinen tavu katoaa. Puheklipeissä on 0,11–0,20 s hiljaisuutta alussa (mitattu 10 klippiä
+            // välimuistista), joten alku ei naksahda: klippi alkaa suoraan kohdetasolla, ja häivytys jää vain korvattavalle.
+            lahde.volume = VanhaAlku ? 0f : Kohdetaso;
             lahde.pitch = 1f; // nopeus on generoinnissa (web: ei playbackRatea)
             this.synteesi = synteesi;
             PaivitaVahvistus();
             vahvistin.Nollaa();
             lahde.Play();
+            StartCoroutine(AlkuMittari(klippi, Kohdetaso));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
             // saman puheen jatkoa: ei loppua eikä alkua väliin (lataus-kahva kuuluu yhä SoitaPalat-korutiinille).
@@ -1074,7 +1087,32 @@ namespace Matkakirja.Natiivi
                 lataus = null;
             }
             if (!puhuu) AsetaPuhuu(true);
-            haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
+            if (VanhaAlku) haivytys = StartCoroutine(Voimakkuuteen(Kohdetaso, Alkuhaivytys, false));
+        }
+
+        /// <summary>
+        /// Alun mittari (currentTime-mittaus, 29.9.): ruuduittain 1 s ajan soittokohta ja voimakkuus. "hiljaa" = soitettu
+        /// aika, jonka lähde oli alle puolen kohdetasosta; klipin alkuhiljaisuuden (0,11–0,20 s) ylittävä osa on kadonnut
+        /// tavu. Unity käynnistää soiton vasta Play()-ruudun lopussa, joten testijumi (puhe jumi) osuu ensimmäiseen ruutuun,
+        /// jossa klippi jo soi: raskas ruutu heti soiton alettua (saapuminen, kortin avaus).
+        /// </summary>
+        IEnumerator AlkuMittari(AudioClip klippi, float taso)
+        {
+            float t0 = Time.unscaledTime, edellinen = 0f, hiljaa = 0f, v = lahde.volume, jumi = 0f;
+            int ruutuja = 0;
+            while (lahde.clip == klippi && Time.unscaledTime - t0 < 1f)
+            {
+                yield return null;
+                if (lahde.clip != klippi) yield break;
+                float t = lahde.time;
+                if (t > edellinen && v < 0.5f * taso) hiljaa += t - edellinen;
+                if (t > 0f) edellinen = t;
+                v = lahde.volume;
+                ruutuja++;
+                if (JumiMs > 0 && t > 0f) { jumi = JumiMs; System.Threading.Thread.Sleep(JumiMs); JumiMs = 0; }
+            }
+            Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: jumi {jumi:0} ms, {ruutuja} ruutua, soittokohta {edellinen:0.000} s, "
+                + $"hiljaa (< 50 %) soitettu {hiljaa:0.000} s {klippi?.name}");
         }
 
         /// <summary>Valmiin virran tavut välimuistitiedostoon (atominen siirto). false, jos tavuja ei saatu.</summary>

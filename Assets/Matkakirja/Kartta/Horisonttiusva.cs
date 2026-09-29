@@ -28,6 +28,14 @@ namespace Matkakirja
         public const double Liuku = 0.12;
         /// <summary>Webin usvan voimistuminen: täysi, kun kallistus ≥ tämä (°).</summary>
         public const double TaysiKallistus = 8.0;
+        /// <summary>
+        /// Liu'un kerroin (1 = web). Radiolinssi pidentää liukua hämärän mukana (RadioMastot.UsvanLiuku, omistaja 28.9.2026:
+        /// "tuo horisontin sumu ei näytä hyvältä, raja ei saisi olla noin selvä"), jolloin maa häipyy usvaan pitkällä matkalla.
+        /// </summary>
+        public static double LiukuKerroin = 1.0;
+        /// <summary>Tämän kehyksen liuku (Liuku × LiukuKerroin).</summary>
+        public static double LiukuNyt => Liuku * Math.Max(1.0, LiukuKerroin);
+
         /// <summary>Katto: usvan raja saa laskea ruudulla enintään tälle korkeudelle (osuus puolikorkeudesta).</summary>
         public const double RajanY = 0.5;
 
@@ -45,16 +53,16 @@ namespace Matkakirja
         /// Webin usvan peitto ruudun kohdassa y (osuus ylhäältä): täysi rajan yläpuolella, lineaarisesti nollaan
         /// <see cref="Liuku"/>:n matkalla rajan alla (linear-gradient kerma → 0 %), kerrottuna voimalla.
         /// </summary>
-        public static double Peitto(double yYlhaalta, double rajaY, double voima)
+        public static double Peitto(double yYlhaalta, double rajaY, double voima, double liuku = Liuku)
         {
             if (!(voima > 0)) return 0;
             if (yYlhaalta <= rajaY) return voima;
-            double t = (yYlhaalta - rajaY) / Liuku;
+            double t = (yYlhaalta - rajaY) / liuku;
             return t >= 1 ? 0 : voima * (1 - t);
         }
 
         /// <summary>Tämän kehyksen peitto ruudun kohdassa y (osuus ylhäältä).</summary>
-        public static float Peitto(float yYlhaalta) => (float)Peitto(yYlhaalta, RuutuRajaY, RuutuVoima);
+        public static float Peitto(float yYlhaalta) => (float)Peitto(yYlhaalta, RuutuRajaY, RuutuVoima, LiukuNyt);
 
         /// <summary>Usvan voimakkuus kallistuksen mukaan (web: min(1, kulma / 8)).</summary>
         public static double Vahvuus(double kallistusAst) => Math.Max(0.0, Math.Min(1.0, kallistusAst / TaysiKallistus));
@@ -117,11 +125,11 @@ namespace Matkakirja
         /// liuku on 0,12 koko korkeudesta). Alku on aina lopun edessä.
         /// </summary>
         public static (double alku, double loppu) Sumu(double d, double alfaAst, double puoliFovAst, double R,
-            double kerroin = RajaKerroin)
+            double kerroin = RajaKerroin, double liuku = Liuku)
         {
             double loppu = RajanSyvyys(d, alfaAst, R, kerroin);
             double y = RajanRuutuY(d, alfaAst, puoliFovAst, R, kerroin);
-            double alku = double.IsNaN(y) ? loppu * 0.8 : SyvyysRuudulla(d, alfaAst, puoliFovAst, R, y - 2.0 * Liuku);
+            double alku = double.IsNaN(y) ? loppu * 0.8 : SyvyysRuudulla(d, alfaAst, puoliFovAst, R, y - 2.0 * liuku);
             if (!(alku < loppu)) alku = loppu * 0.8;
             return (Math.Max(0.0, alku), loppu);
         }

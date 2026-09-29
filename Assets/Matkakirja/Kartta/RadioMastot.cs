@@ -100,6 +100,8 @@ namespace Matkakirja
         static readonly int MitatId = Shader.PropertyToID("_Mitat");
         static readonly int Renkaat0Id = Shader.PropertyToID("_Renkaat0");
         static readonly int Renkaat1Id = Shader.PropertyToID("_Renkaat1");
+        static readonly int Voimat0Id = Shader.PropertyToID("_Voimat0");
+        static readonly int Voimat1Id = Shader.PropertyToID("_Voimat1");
 
         const int EnintaanMastoja = 512, EnintaanValoja = 1023, EnintaanRenkaita = 8;
         const double MaanSade = 6_371_000.0;
@@ -142,6 +144,8 @@ namespace Matkakirja
         int valittu = -1;
         float kirkkaus, maavalo;
         readonly float[] renkaat = new float[EnintaanRenkaita];
+        /// <summary>Renkaiden voimat (VuRenkaat, omistaja 28.9.); 1 = täysi.</summary>
+        readonly float[] rengasVoimat = { 1, 1, 1, 1, 1, 1, 1, 1 };
         int renkaita;
         double rLat = double.NaN, rLon = double.NaN, rSadeKm;
         Vector3 rPohja, rIta, rPohjoinen;
@@ -217,6 +221,7 @@ namespace Matkakirja
             }
             // Edellisen kohtauksen jäljiltä voimassa olevat globaalit nollaan (0 = tileset ennallaan).
             Shader.SetGlobalFloat(HamaraId, 0f);
+            Horisonttiusva.LiukuKerroin = 1.0;
             Shader.SetGlobalVector(YovalotId, Vector4.zero);
             maavaloPaalla = true;
             AsetaGlobaalit();
@@ -229,6 +234,7 @@ namespace Matkakirja
             hamara = 0; maara = 0; valittu = -1; maavaloPaalla = true;
             PoistaYovalot();
             Shader.SetGlobalFloat(HamaraId, 0f);
+            Horisonttiusva.LiukuKerroin = 1.0;
             AsetaGlobaalit();
         }
 
@@ -264,7 +270,9 @@ namespace Matkakirja
                 var (jakso, vaihe) = Linssit.Radio.Mastot.Vilkku(m.Asema);
                 tiedot[maara] = new Tieto
                 {
-                    Id = m.Id, Koko = (int)m.Koko, Juuri = juuri, Normaali = n,
+                    // Pieni-verkko (ohut ristikko yhdellä poikkipuulla) näytti kaukaa ristiltä tai hautamerkiltä (omistaja 28.9.):
+                    // pienetkin kaupungit Keski-mastona.
+                    Id = m.Id, Koko = Math.Max((int)MastoKoko.Keski, (int)m.Koko), Juuri = juuri, Normaali = n,
                     Kierto = Quaternion.LookRotation(pohjoinen.normalized, n),
                     Sade = (juuri - keskus).magnitude, Peitto = m.Kanava ? 1f : 0.5f, Valot = m.Kanava,
                     Jakso = (float)jakso, Vaihe = (float)vaihe, Nousu = 0f,
@@ -285,12 +293,19 @@ namespace Matkakirja
             if (id != null && indeksi.TryGetValue(id, out int i)) tiedot[i].Nousu = Mathf.Clamp01(osuus);
         }
 
+        /// <summary>
+        /// Horisonttiusvan liu'un kerroin täydessä hämärässä (omistaja 28.9.2026: "raja ei saisi olla noin selvä"): maa
+        /// häipyy usvaan 2,5-kertaisella matkalla (laite radio1: 1 terävä raja, 3 haalisti yläpuolen, 5 liikaa). Komento "usva radio &lt;k&gt;" kuvapariin.
+        /// </summary>
+        public static float UsvanLiuku = 2.5f;
+
         public void Hamara(float h)
         {
             hamaraKehys = Time.frameCount;
             hamaraAika = Time.unscaledTime;
             hamara = Mathf.Clamp01(float.IsNaN(h) ? 0 : h);
             Shader.SetGlobalFloat(HamaraId, hamara);
+            Horisonttiusva.LiukuKerroin = 1f + (Mathf.Max(1f, UsvanLiuku) - 1f) * hamara;
             Tausta();
             Pohja();
         }
@@ -318,6 +333,12 @@ namespace Matkakirja
             if (uusi != valittu) maavalo = 0f;   // uusi masto: maavalo nousee alusta (0,8 s)
             valittu = uusi;
             this.kirkkaus = Mathf.Clamp01(kirkkaus);
+        }
+
+        public void RengasVoimat(IReadOnlyList<double> voimat)
+        {
+            for (int i = 0; i < EnintaanRenkaita; i++)
+                rengasVoimat[i] = voimat != null && i < voimat.Count ? Mathf.Clamp01((float)voimat[i]) : 1f;
         }
 
         public void Renkaat(double lat, double lon, double sadeKm, IReadOnlyList<double> osuudet)
@@ -521,14 +542,25 @@ namespace Matkakirja
             const float Mittapuikko = 20_000f;
             bool nousuOhi = Time.unscaledTime - mastotAika > 2f;   // RadioLinssi syöttää nousun vain avauksen ajan
 
+            // LÄHIALUE (omistaja 28.9.: "vähemmän mastoja", ei neulamaisia mastoja horisontin takaa taivaalle): näkyvyys
+            // maapinnan matkasta katsepisteeseen (ruudun keskisäteen osuma pallolla), häivytys ennen horisonttiusvaa.
+            Vector3 katseN = KatsePiste(kameraPaikka, kamera.transform.forward, maara > 0 ? tiedot[0].Sade : 0f);
+            double kameraKm = etaisyys / 1000.0;
+
             lkm[0] = lkm[1] = lkm[2] = 0;
             osumia = 0;
             int valoja = 0;
             for (int i = 0; i < maara; i++)
             {
                 ref var m = ref tiedot[i];
+                // Kanavaton maa (ei soitettavaa asemaa) jätetään pois: valoton puolihaalea masto näytti ristiltä tai
+                // hautamerkiltä (omistaja 28.9.: "epäselvät risti- tai hautamerkit pois").
+                if (!m.Valot) continue;
                 float nousu = nousuOhi ? 1f : m.Nousu;
                 if (nousu <= 0.001f) continue;
+                float lahi = i == valittu ? 1f : (float)Linssit.Radio.Mastot.LahialueenNakyvyys(
+                    Mathf.Acos(Mathf.Clamp(Vector3.Dot(m.Normaali, katseN), -1f, 1f)) * (MaanSade / 1000.0), kameraKm);
+                if (lahi <= 0.01f) continue;
                 Vector3 s0 = kamera.WorldToScreenPoint(m.Juuri);
                 if (s0.z <= 0) continue;
                 Vector3 s1 = kamera.WorldToScreenPoint(m.Juuri + m.Normaali * Mittapuikko);
@@ -542,14 +574,14 @@ namespace Matkakirja
                 if (MastoGeometria.PallonTakana(nk, N(huippu), no, raja)) continue;
                 int k = m.Koko;
                 matriisit[k][lkm[k]] = Matrix4x4.TRS(m.Juuri, m.Kierto, new Vector3(h, korkeusNyt, h));
-                peitot[k][lkm[k]] = m.Peitto;
+                peitot[k][lkm[k]] = m.Peitto * lahi;
                 lkm[k]++;
 
                 Vector3 puoli = m.Juuri + m.Normaali * (korkeusNyt * 0.5f);
                 if (!MastoGeometria.PallonTakana(nk, N(puoli), no, raja))
                 {
                     Vector3 r = kamera.WorldToScreenPoint(puoli);
-                    if (r.z > 0) { osumaX[osumia] = r.x; osumaY[osumia] = r.y; osumaIndeksi[osumia++] = i; }
+                    if (r.z > 0 && lahi > 0.5f) { osumaX[osumia] = r.x; osumaY[osumia] = r.y; osumaIndeksi[osumia++] = i; }
                 }
 
                 if (!m.Valot) continue;
@@ -559,7 +591,9 @@ namespace Matkakirja
                     Vector3 p = m.Juuri + m.Normaali * (korkeusNyt * tasot[t]);
                     if (MastoGeometria.PallonTakana(nk, N(p), no, raja)) continue;
                     valoMatriisit[valoja] = Matrix4x4.Translate(p);
-                    valoTiedot[valoja++] = new Vector4(m.Jakso, m.Vaihe, i == valittu ? kirkkaus : -1f, nousu);
+                    // Ei vilkkua (omistaja 28.9.): muut hohtavat himmeästi varjostimessa, valittu kirkkaana VU-tahdissa.
+                    valoTiedot[valoja++] = new Vector4(m.Jakso, m.Vaihe,
+                        i == valittu ? (float)Linssit.Radio.Mastot.ValitunKirkkaus(kirkkaus) : -1f, nousu * lahi);
                 }
             }
             Valoja = valoja;
@@ -602,6 +636,8 @@ namespace Matkakirja
                 rengasMpb.SetVector(MitatId, new Vector4(kulma * 1.04f, rSade, kerroin, kulma));
                 rengasMpb.SetVector(Renkaat0Id, new Vector4(R(0), R(1), R(2), R(3)));
                 rengasMpb.SetVector(Renkaat1Id, new Vector4(R(4), R(5), R(6), R(7)));
+                rengasMpb.SetVector(Voimat0Id, new Vector4(rengasVoimat[0], rengasVoimat[1], rengasVoimat[2], rengasVoimat[3]));
+                rengasMpb.SetVector(Voimat1Id, new Vector4(rengasVoimat[4], rengasVoimat[5], rengasVoimat[6], rengasVoimat[7]));
                 rp.material = rengasMateriaali;
                 rp.matProps = rengasMpb;
                 Graphics.RenderMesh(rp, rengasVerkko, 0, Matrix4x4.identity);
@@ -613,6 +649,15 @@ namespace Matkakirja
         }
 
         float R(int i) => i < renkaita ? renkaat[i] : -1f;
+
+        /// <summary>Ruudun keskisäteen osuma pallolla (säde r maailmassa) normaalina; ohi mennessä lähin kohta.</summary>
+        Vector3 KatsePiste(Vector3 silma, Vector3 suunta, float r)
+        {
+            Vector3 oc = silma - keskus;
+            float b = Vector3.Dot(oc, suunta), c = oc.sqrMagnitude - r * r, disk = b * b - c;
+            Vector3 p = disk >= 0f ? oc + suunta * (-b - Mathf.Sqrt(disk)) : oc + suunta * Mathf.Max(0f, -b);
+            return p.sqrMagnitude > 1e-6f ? p.normalized : -suunta;
+        }
 
         static Num.Vector3 N(Vector3 v) => new Num.Vector3(v.x, v.y, v.z);
 

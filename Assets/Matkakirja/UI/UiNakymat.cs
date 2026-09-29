@@ -150,28 +150,43 @@ namespace Matkakirja.Natiivi
         {
             var v = Linssit.Valitsin;
             v.Avaaja = Tilarivi.Valikko;
-            // Omistaja 24.9.2026 klo 13.3x: rivi 1 äänikytkimet, rivi 2 Uusi peli · Muut · Kehittäjä; Muut avaa oman
-            // paneelin (Offline-kartat, Asetukset, Ehdota, Tekijätiedot, Mitä uutta); viivan alla LINSSIT.
+            v.Avaajat.Add(Tilarivi.Pilleri);
+            // PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07, loki "YLÄPALKKI MATKALAUKUKSI"; web malli, Pelikoodarin rakenne):
+            // Äänet (kytkimet + tasot) → Kartta → [Uusi peli · Ehdota · Offline-kartat · Asetukset · Retkikunta · Kehittäjä]
+            // → Linssit › → Aarteet › → pillerin tiedot (matkalaukun Matka ja tilastot) → versiorivi. Tekijätiedot logosta.
+            v.LisaOsioOtsikko("Äänet");
             var aanet = v.LisaNappirivi();
             foreach (var (k, ikoni) in new[] { (Kytkin.Kertoja, Ikonit.Kertoja), (Kytkin.Musiikki, Ikonit.Musiikki), (Kytkin.Aanimaisema, Ikonit.Aanimaisema) })
             {
                 var kk = k;
                 v.LisaKytkin(aanet, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
             }
+            v.LisaSaatimet();
+            v.LisaOsioOtsikko("Kartta");
+            var kartta = v.LisaNappirivi();
+            foreach (var (k, ikoni) in new[] { (Kytkin.PieniLiike, Ikonit.PieniLiike), (Kytkin.KuljettuReitti, Ikonit.KuljettuReitti) })
+            {
+                var kk = k;
+                v.LisaKytkin(kartta, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
+            }
             var toiminnot = v.LisaNappirivi();
             v.LisaNappi(toiminnot, "Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
-            v.LisaMuutNappi(toiminnot, "Muut", Ikonit.Valikko);
-#if !MATKAKIRJA_APPSTORE
-            v.LisaNappi(toiminnot, "Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
-#endif
-            v.LisaMuuRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
-            v.LisaMuuRivi("Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
-            // Löydös 65 (omistaja 25.9.2026): retkikunta yhden napin takana omana paneelinaan.
-            v.LisaMuuRivi("Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
+            v.LisaNappi(toiminnot, "Ehdota", Ikonit.Kyna, Valikko.Ehdota);
+            var toiminnot2 = v.LisaNappirivi();
+            v.LisaNappi(toiminnot2, "Offline", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
+            v.LisaNappi(toiminnot2, "Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
+            var toiminnot3 = v.LisaNappirivi();
+            v.LisaNappi(toiminnot3, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
                 () => Valikko.RetkikuntaSaatavilla);
-            v.LisaMuuRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
-            v.LisaMuuRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
-            v.LisaMuuRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
+#if !MATKAKIRJA_APPSTORE
+            v.LisaNappi(toiminnot3, "Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
+#endif
+            v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0);
+            v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet);
+            v.AarteetData = () => PeliOhjain.Instanssi?.Laukku();
+            Matkalaukku.Upota(v.TiedotKohde);
+            v.Avautuu += Matkalaukku.PaivitaTiedot;
+            v.LisaVersio(() => "v" + Application.version + (Asetukset.Kehittaja ? " · kehittäjä" : ""), Valikko.MitaUutta.Avaa);
         }
 
         /// <summary>
@@ -284,13 +299,16 @@ namespace Matkakirja.Natiivi
                 Karttaselite?.Maakunnat?.SisaltoVaihtui();
                 Debug.Log($"MATKAKIRJA ui: sisältö v{versio} käyttöön kesken istunnon ({muuttuneet?.Count ?? 0} muuttunutta): maakunta- ja nostodata hylätty");
             };
-            // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin pallonäkymässä
-            // ison pulun napautus ei avaa pääkeskustelua (löydös 96); kuvanäkymässä keskustelu on minipulun kortissa.
+            // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin linssissä ison
+            // pulun napautus ei avaa pääkeskustelua (löydös 96). PULUN TAULU (web #3590, Linssiseppä 29.9.): napautus avaa ja
+            // sulkee linssin moodien taulun; keskustelu on minipulun kortissa (taulun "Kysy Pululta").
             Pulu.Napautus += Chat.Vaihda;
             Pulu.NapautusEstetty = () =>
             {
                 var l = Linssit;
-                return !Chat.Auki && l != null && l.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId && !l.Astronautti.Kuva.Auki;
+                bool astro = !Chat.Auki && l != null && l.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId;
+                if (astro) l.Astronautti.Taulu.PulunNapautus();
+                return astro;
             };
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
@@ -361,6 +379,10 @@ namespace Matkakirja.Natiivi
             });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
+            // Astronautin kuvaselaimessa pulu on minipulu (Kuvanakyma): iso Pulu kuulsi sen takaa kuvanäkymän himmennyksen
+            // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
+            // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
+            Linssit.Astronautti.Kuva.AukiMuuttui += auki => Pulu.Peita(auki);
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             Valikko.TietojaPainettu += Tietoja.Avaa;
             Valikko.EhdotaPainettu += () => Palaute.Avaa();
@@ -381,7 +403,12 @@ namespace Matkakirja.Natiivi
             Tilarivi.Vieras(Karttaselite.Nappi);
             Matkakirja.Kiinnita(Tilarivi);
             Tilarivi.Ratas.clicked += () => { Valikko.Sulje(); Matkalaukku.Sulje(); Aanentasot.Vaihda(); };
-            Tilarivi.PilleriPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Vaihda(); };
+            // Pillerivalikko (omistaja 29.9.2026): pilleri avaa saman valikon kuin iPadin ☰ (ei enää matkalaukkudialogia).
+            Tilarivi.PilleriPainettu += () =>
+            {
+                Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje();
+                if (Linssivalitsin.PilleriValikko) Linssit.Valitsin.Vaihda(); else Matkalaukku.Vaihda();
+            };
             Valikko.AukiMuuttui += auki => Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
             Aanentasot.AukiMuuttui += auki => Tilarivi.Ratas.EnableInClassList("mk-valittu", auki);
             // Löydös 24: Uusi peli palaa aloitusporttiin ilman tallennuksen jatkoa → avausruutu → valinta → lento;

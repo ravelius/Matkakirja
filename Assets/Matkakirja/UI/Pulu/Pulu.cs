@@ -46,6 +46,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement alue, nayttamo, kosketus;
         /// <summary>Pulun alue paneelissa (kalusteena kaupunkiliuskan kamera-ajolle, D17); tyhjä, kun piilossa.</summary>
         public Rect Laatikko => nakyvissa && alue.panel != null ? alue.worldBound : default;
+        /// <summary>Linnun kosketusalue lepopaikalla (62 × 82 pt, web .pollo-nappi): Pulun taulun sijoitus ja avaaja; tyhjä piilossa.</summary>
+        public Rect Lintu => nakyvissa && kosketus.panel != null ? kosketus.worldBound : default;
         readonly LiviaKuva kuva;
         readonly LiviaTila tila = new LiviaTila();
         public readonly PuluKuplat Kuplat;
@@ -145,6 +147,10 @@ namespace Matkakirja.Natiivi
             var vuosi = ui.Linssit?.Vuosi?.Paneeli;
             if (vuosi != null && vuosi.panel != null && ui.Linssit.Vuosi.Nakyvissa && vuosi.worldBound.height > 0)
                 korkein = Mathf.Max(korkein, vuosi.panel.visualTree.layout.height - vuosi.worldBound.yMin + 6f);
+            // Radiolinssi (omistaja 28.9.2026: "Pulu siirtyy radion yläpuolelle"): kotelon yläreunan päälle.
+            var radio = ui.Linssit?.Radio?.Kotelo;
+            if (radio != null && radio.panel != null && ui.Linssit.Radio.Nakyvissa && radio.worldBound.height > 0)
+                korkein = Mathf.Max(korkein, radio.panel.visualTree.layout.height - radio.worldBound.yMin + 6f);
             return Mathf.Max(perus, korkein);
         }
 
@@ -689,6 +695,12 @@ namespace Matkakirja.Natiivi
             Tilanne("chatOpen");
             Toista("welcome", "chatOpen");
         }
+
+        /// <summary>
+        /// Pelkkä linnun näkyvyys (astronautin kuvaselain, jossa minipulu korvaa ison): puhe jatkuu ja kuplat jäävät näkyviin
+        /// kuvanäkymän himmennyksen taakse kuten webissä (Linssisepän huomio 29.9.: tervetulon C1-kupla iPadilla).
+        /// </summary>
+        public void Peita(bool peitossa) => nayttamo.style.visibility = peitossa ? Visibility.Hidden : Visibility.Visible;
 
         /// <summary>Pulu näkyviin tai piiloon (lehti, linssin oma näkymä).</summary>
         public void Nayta(bool nakyy)

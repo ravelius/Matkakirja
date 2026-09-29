@@ -108,12 +108,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Saaririvin korkeus ja reunavara pisteinä (näytön pyöristetty kulma).</summary>
         /// <summary>SaariReuna: löydös 68 (omistaja 25.9.) pilleri ja ☰ sisemmäs reunoista (14 → 20 pt), löydös 88 (build 13) 26 pt.</summary>
         const float SaariRivi = 36f, SaariReuna = 26f, SaariVali = 6f;
+        /// <summary>Leveimmän Dynamic Islandin leveys (Pro Max, noin 126 pt, pyöristetty) ja keskivyöhykkeen marginaali (pt).</summary>
+        const float LeveinSaari = 130f, SaarenMarginaali = 12f;
 
         /// <summary>
         /// Löydös 44 (omistaja 24.9. klo 19.4x, Raamattu NATIIVIN YLÄPALKKI, TARKENNUS): iPhonen pystyasennossa palkki
         /// matalana ilman logoa; pilleri (raha/päivä) vasemmalle ja ☰ oikealle Dynamic Islandin riville, ruskea palkki
         /// taustalla vain turva-alueen korkuisena (rivi + 4,8 pt, jos rivi ulottuu turva-alueen alle).
         /// </summary>
+        /// <summary>Pillerivalikko puhelimella: logo vasemmalla, pilleri oikealla, ei ☰:ta (omistaja 29.9.2026).</summary>
+        public static bool PilleriOikealla => Puhelin && Linssivalitsin.PilleriValikko;
+
         public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
         /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
         const float MatalaRivi = 40f, MatalaAla = 4.8f;
@@ -197,24 +202,36 @@ namespace Matkakirja.Natiivi
 
         void VaihdaElamaSelite()
         {
-            bool auki = elamaSelite.style.display != DisplayStyle.Flex;
-            elamaSelite.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            bool auki = !elamaSeliteAuki;
             elamaSeliteAjastin?.Pause();
-            if (!auki) return;
+            if (!auki) { SuljeElamaSelite(); return; }
+            elamaSeliteAuki = true;
             elamaSelite.BringToFront();
             AsetteleElama();
-            elamaSeliteAjastin = elamaSelite.schedule.Execute(() => elamaSelite.style.display = DisplayStyle.None).StartingIn(7000);
+            // Avaus ja sulku animoiden palkin suunnasta (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot).
+            Ponnahdus.Avaa(elamaSelite, elama.worldBound.center);
+            elamaSeliteAjastin = elamaSelite.schedule.Execute(SuljeElamaSelite).StartingIn(7000);
+        }
+
+        bool elamaSeliteAuki;
+
+        void SuljeElamaSelite()
+        {
+            if (!elamaSeliteAuki) return;
+            elamaSeliteAuki = false;
+            elamaSeliteAjastin?.Pause();
+            Ponnahdus.Sulje(elamaSelite);
         }
 
         /// <summary>Web: miniselite sulkeutuu napautuksella mihin tahansa (palkin oma napautus hoitaa itsensä).</summary>
         void TarkistaElamaSelite()
         {
-            if (elamaSelite.style.display != DisplayStyle.Flex || elama.panel == null) return;
+            if (!elamaSeliteAuki || elama.panel == null) return;
             var osoitin = Pointer.current;
             if (osoitin == null || !osoitin.press.wasPressedThisFrame) return;
             var ruutu = osoitin.position.ReadValue();
             var pp = RuntimePanelUtils.ScreenToPanel(elama.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            if (!elama.worldBound.Contains(pp)) { elamaSelite.style.display = DisplayStyle.None; elamaSeliteAjastin?.Pause(); }
+            if (!elama.worldBound.Contains(pp)) SuljeElamaSelite();
         }
         IVisualElementScheduledItem ilmoitusAjastin, valahdysAjastin, rahaAjastin;
 
@@ -251,6 +268,17 @@ namespace Matkakirja.Natiivi
             rahaton = Rakenne.Teksti("", "mk-pilleri__rahaton", pilleri);
             rahaton.style.display = DisplayStyle.None;
             kello = Rakenne.Teksti("", "mk-pilleri__kello", pilleri);
+            // Pillerivalikko puhelimella (web mitat.md 29.9.): kaksirivinen pilleri, ikoni vasemmalla ja rahat + päivä allekkain,
+            // jotta "400 ₰" ja "Päivä 1, aamu" mahtuvat saaren oikealle puolelle.
+            if (PilleriOikealla)
+            {
+                var pino = Rakenne.El("mk-pilleri__pino", pilleri, PickingMode.Ignore);
+                var rivi1 = Rakenne.El("mk-pilleri__rivi1", pino, PickingMode.Ignore);
+                rivi1.Add(raha);
+                rivi1.Add(rahaton);
+                pino.Add(kello);
+                pilleri.AddToClassList("mk-pilleri--kaksirivinen");
+            }
             pilleri.style.display = DisplayStyle.None;
             pilleri.RegisterCallback<GeometryChangedEvent>(_ => { SovitaPilleri(); PilleriMuuttui?.Invoke(); });
 
@@ -259,6 +287,14 @@ namespace Matkakirja.Natiivi
             Ratas.tooltip = "Äänentasot ja asetukset";
             Valikko = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Valikko);
             Valikko.tooltip = "Valikko";
+            // Pillerivalikko (omistaja 29.9.2026 klo 09.07): puhelimella logo vasemmalla, ☰ pois ja pilleri oikealla; pilleri
+            // avaa valikon. iPadilla nykyinen palkki jää (iPad-versio vasta iPhonen jälkeen), ☰ ja pilleri avaavat saman valikon.
+            if (PilleriOikealla)
+            {
+                Valikko.style.display = DisplayStyle.None;
+                palkki.AddToClassList("mk-ylapalkki--pilleri-oikealla");
+                PueNahka();
+            }
 
             // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
             // Web #3421 rahattomuuspalkki: lappu kartan keskellä selitenapin alla, 8 lohkoa 10 × 6 ja teksti.
@@ -304,6 +340,38 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += TarkistaVeto;
             Asettele();
         }
+
+        /// <summary>
+        /// MATKALAUKKUNAHKA (omistaja 29.9.2026: "Hyväksyn, madalletaan"; Codexin paketti ylapalkki-matkalaukku, iphone-v1):
+        /// nahkakaistale taustaksi rajattuna ja skaalattuna nykyiseen matalaan palkkiin (alareunan tikkausreuna säilyy:
+        /// scale-and-crop alareunaan), keskitummennus erillisenä kerroksena saaren kohdalle (koko leveys, sama rajaus),
+        /// logo ja pillerin muoto kohopainatuksina (pilleri 9-slice 53/47 px @3x). Luvut piirtää peli kuten ennen.
+        /// </summary>
+        void PueNahka()
+        {
+            var nahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/nahka-tile");
+            if (nahka == null) return;
+            palkki.style.backgroundImage = new StyleBackground(nahka);
+            palkki.AddToClassList("mk-ylapalkki--nahka");
+            var varjo = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/keski-varjo");
+            if (varjo != null)
+            {
+                var v = Rakenne.El("mk-ylapalkki__varjo", palkki, PickingMode.Ignore);
+                v.style.backgroundImage = new StyleBackground(varjo);
+                v.SendToBack();
+            }
+            var logoNahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus");
+            if (logoNahka != null) { logo.style.backgroundImage = new StyleBackground(logoNahka); logoSuhde = 326f / 95f; }
+            var pilleriNahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/pilleri-kohopainatus");
+            if (pilleriNahka != null)
+            {
+                pilleri.style.backgroundImage = new StyleBackground(pilleriNahka);
+                pilleri.AddToClassList("mk-pilleri--nahka");
+            }
+        }
+
+        /// <summary>Logon kuvasuhde (kultalogo 4:1, kohopainatus 326 × 95).</summary>
+        float logoSuhde = 4f;
 
         /// <summary>Löydös 68: piilotetun palkin nappi kolmena allekkaisena väkäsenä (⌄), ei ☰.</summary>
         const string KolmeVakasta = "<path d=\"M7 5.5l5 3 5-3\"/><path d=\"M7 10.5l5 3 5-3\"/><path d=\"M7 15.5l5 3 5-3\"/>";
@@ -369,7 +437,7 @@ namespace Matkakirja.Natiivi
             if (matala != matalaNyt)
             {
                 matalaNyt = matala;
-                logo.style.display = matala || kelluvaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
+                logo.style.display = (matala && !PilleriOikealla) || kelluvaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
                 // Pillerin muoto vaihtuu ("300£ 1/80" saaren vieressä): sama rivi uudelleen.
                 string rv = rivi;
                 rivi = null;
@@ -439,8 +507,9 @@ namespace Matkakirja.Natiivi
             palkki.EnableInClassList("mk-ylapalkki--saari", !matala);
             palkki.EnableInClassList("mk-ylapalkki--matala", matala);
             palkki.style.paddingTop = yla;
-            palkki.style.paddingLeft = r.x + SaariReuna * yksikko;
-            palkki.style.paddingRight = r.z + SaariReuna * yksikko;
+            // Pillerivalikko: webin reunat (logo 12, pilleri 8 pt ruudun reunasta; mitat.md logo x 7, pilleri oikea 389/393).
+            palkki.style.paddingLeft = r.x + (PilleriOikealla ? 12f : SaariReuna) * yksikko;
+            palkki.style.paddingRight = r.z + (PilleriOikealla ? 8f : SaariReuna) * yksikko;
             // Matala: ruskea tausta turva-alueen korkuisena, ja rivi + alavara, jos rivi ulottuu sen alle.
             float korkeus = matala ? Mathf.Max(r.y + MatalaLisa * yksikko, yla + rivi + MatalaAla * yksikko) : yla + rivi;
             palkki.style.height = korkeus;
@@ -450,6 +519,23 @@ namespace Matkakirja.Natiivi
             // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
             float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
             pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
+            if (PilleriOikealla)
+            {
+                // Omistaja 29.9.2026: "logo näyttää olevan liian lähellä dynamic islandin reunaa … pitää varmaan miettiä pillerin
+                // ja logon sijainti leveimmän saaren mukaan ja sitten vain keskelle jää tyhjää." Keskelle kiinteä vyöhyke
+                // leveimmän saaren (Pro Max) verran + marginaali, sama kaikilla malleilla; lovellisella laitteella leveämpi lovi
+                // voittaa. Logo vasempaan reunaan, pilleri oikeaan reunaan vyöhykkeen ulkopuolelle.
+                float ruudunKeski = P(Screen.width / pp / 2f, 0f).x;
+                float oma = saari.width > 0 ? (alakulma.x - ylakulma.x) / 2f : 0f;
+                float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + SaarenMarginaali * yksikko;
+                float vasenReuna = r.x + 12f * yksikko;
+                float oikeaReuna = P(Screen.width / pp, 0f).x - r.z - 8f * yksikko;
+                pilleriMax = Mathf.Max(60f, oikeaReuna - (ruudunKeski + puoli));
+                float logoTila = Mathf.Max(40f, (ruudunKeski - puoli) - vasenReuna);
+                float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / logoSuhde);
+                logo.style.height = lk;
+                logo.style.width = lk * logoSuhde;
+            }
             pilleri.style.maxWidth = pilleriMax;
             // Varaus turva-alueen yläreunasta: se osa palkista, joka jää turva-alueen alle.
             kelluvaVaraus = Mathf.Max(0f, korkeus - r.y);
@@ -478,11 +564,14 @@ namespace Matkakirja.Natiivi
                 + pilleri.resolvedStyle.borderLeftWidth + pilleri.resolvedStyle.borderRightWidth
                 + kello.resolvedStyle.marginLeft
                 + (ikoni != null && ikoni.style.display != DisplayStyle.None ? ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight : 0f);
-            float teksti = raha.MeasureTextSize(raha.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
-                + kello.MeasureTextSize(kello.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            float rahaLeveys = raha.MeasureTextSize(raha.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            float kelloLeveys = kello.MeasureTextSize(kello.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
             if (rahaton.style.display == DisplayStyle.Flex)
-                teksti += rahaton.MeasureTextSize(rahaton.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
+                rahaLeveys += rahaton.MeasureTextSize(rahaton.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
                     + rahaton.resolvedStyle.marginLeft;
+            // Kaksirivinen (pillerivalikko): leveämpi rivi ratkaisee; yksirivinen: rivit peräkkäin.
+            float teksti = PilleriOikealla ? Mathf.Max(rahaLeveys, kelloLeveys) : rahaLeveys + kelloLeveys;
+            if (PilleriOikealla) kiintea -= kello.resolvedStyle.marginLeft;
             if (float.IsNaN(kiintea) || teksti <= 0) return;
             float koko = matala ? 12.48f : 14f; // matala: webin iPhone-pillerin koko
             // Rahattomuuden varoitus mukana: kutistus 10 px:iin asti, jotta päivä mahtuu yhä pilleriin.
@@ -502,9 +591,9 @@ namespace Matkakirja.Natiivi
             SiirraVieraat();
             palkki.EnableInClassList("mk-ylapalkki--kelluva", k);
             palkki.pickingMode = k ? PickingMode.Ignore : PickingMode.Position;
-            logo.style.display = k || matalaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
+            logo.style.display = k || (matalaNyt == true && !PilleriOikealla) ? DisplayStyle.None : DisplayStyle.Flex;
             if (k) palkki.style.backgroundImage = StyleKeyword.None;
-            else Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
+            else if (!palkki.ClassListContains("mk-ylapalkki--nahka")) Rakenne.Tausta(palkki, Kuviot.Ylapalkki); // nahka pysyy
             // Pillerin muoto vaihtuu: sama rivi uudelleen.
             string r = rivi;
             rivi = null;
@@ -642,7 +731,8 @@ namespace Matkakirja.Natiivi
                 kello.text = "";
                 kello.style.display = DisplayStyle.None;
             }
-            else if (kelluvaNyt == true || matalaNyt == true)
+            // Pillerivalikko (Pelikoodari 29.9.): molemmilla laitteilla "rahat · Päivä N, aamu"; "N/80" poistui webistä 16.8.
+            else if ((kelluvaNyt == true || matalaNyt == true) && !Linssivalitsin.PilleriValikko)
             {
                 // iPhone: "300 £ 1/80" — raha ja päivä / isoisän ennätys (omistaja 24.9.2026; suomalainen muoto
                 // "400 £" kaikkialle, Fable 27.9. klo 20.1x).
@@ -662,7 +752,7 @@ namespace Matkakirja.Natiivi
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
                 if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
-                string uusiKello = Iso(osat[1]) + ", " + osat[2];
+                string uusiKello = (Linssivalitsin.PilleriValikko && !PilleriOikealla ? "· " : "") + Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
@@ -709,7 +799,7 @@ namespace Matkakirja.Natiivi
         {
             bool naytetaan = rahatonVuoroja != null && !matkaPaattyi && nakyy;
             elama.style.display = naytetaan ? DisplayStyle.Flex : DisplayStyle.None;
-            if (!naytetaan) { elamaAjastin.Pause(); elamaSelite.style.display = DisplayStyle.None; return; }
+            if (!naytetaan) { elamaAjastin.Pause(); elamaSeliteAuki = false; Ponnahdus.Lopeta(elamaSelite); elamaSelite.style.display = DisplayStyle.None; return; }
             elamaAjastin.Resume();
             int n = Mathf.Clamp(rahatonVuoroja.Value, 0, ElamaLohkoja);
             for (int i = 0; i < elamaLohkot.childCount; i++)

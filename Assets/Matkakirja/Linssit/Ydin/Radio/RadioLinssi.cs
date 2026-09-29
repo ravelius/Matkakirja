@@ -51,6 +51,19 @@ namespace Matkakirja.Linssit.Radio
         float Voimakkuus { set; }
     }
 
+    /// <summary>Radion tehosteäänet (Pelikoodarin äänet 29.9.2026, omistaja: "viritysääni jo on, mutta muut voisi tuottaa").</summary>
+    public enum RadioEfekti { KytkinPaalle, KytkinPois, Lampeneminen, Lukittuminen }
+
+    /// <summary>
+    /// Tehosteet ja asemien välin kohinasilmukka (Unityssä RadioEfektit, äänet Resources/RadioAanet). Kohina = silmukan taso
+    /// 0…1 (viivaimen veto asemien välissä); toteutus pehmentää muutokset.
+    /// </summary>
+    public interface IRadioEfektit
+    {
+        void Soita(RadioEfekti efekti, float voimakkuus);
+        float Kohina { set; }
+    }
+
     /// <summary>Kartan radiotila (Natiivisepän KaupunkiMerkit + IKamera.KaupunkiNapautettu).</summary>
     public interface IRadioKartta
     {
@@ -100,7 +113,11 @@ namespace Matkakirja.Linssit.Radio
         public const double VahimmaisaikaMs = 2600, SiirtymaMs = 1250, LukittuminenMs = 320;
         public const double LukitusAikaisintaanMs = VahimmaisaikaMs - LukittuminenMs;
         public const double AikakatkaisuMs = 12000;
-        public const double RistihaivytysS = 0.6, LukituksenHaivytysS = 0.9, PysaytyksenHaiveS = 0.25;
+        /// <summary>
+        /// Lukituksen häivytys 2,2 s (omistaja 28.9.2026: "asema selkiytyy vähitellen"; ennen 0,9 s): lähetys nousee
+        /// Nouseva-käyrällä ja viritysääni (kohina ja rahina) vaimenee saman ajan alla tasatehoisesti.
+        /// </summary>
+        public const double RistihaivytysS = 0.6, LukituksenHaivytysS = 2.2, PysaytyksenHaiveS = 0.25;
         public const float OletusAani = 0.8f;
 
         public static double Nouseva(double x) => Math.Sin(Math.Clamp(x, 0, 1) * Math.PI / 2);
@@ -127,7 +144,7 @@ namespace Matkakirja.Linssit.Radio
 
         public LinssiTiedot Tiedot => aineisto.Tiedot;
         public bool Auki { get; private set; }
-        public RadioTila Tila { get; private set; } = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "RADIO POIS", Rivi2 = "VALITSE KAUPUNKI" };
+        public RadioTila Tila { get; private set; } = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "EI ASEMAA", Rivi2 = "VALITSE KAUPUNKI" };
         public event Action<RadioTila> TilaMuuttui;
 
         /// <summary>Mitä asemalle tehdään sen lisenssiluokan mukaan (hybridimalli).</summary>
@@ -179,10 +196,14 @@ namespace Matkakirja.Linssit.Radio
 
         /// <summary>Mastojen piirto (Natiiviseppä); null = ei mastoja (vanha käännös, testit ilman piirtoa).</summary>
         public IRadioMastot Mastot3D;
+        /// <summary>Tehosteäänet (null = ei tehosteita, kuten testeissä ilman Unityä).</summary>
+        public IRadioEfektit Efektit;
         readonly List<Masto> mastot = new List<Masto>();
         readonly Dictionary<string, double> nousunViive = new Dictionary<string, double>();
         readonly MastonKirkkaus kirkkaus = new MastonKirkkaus();
-        readonly List<double> renkaat = new List<double>(4);   // uudelleenkäyttö: ei roskaa joka kehys
+        readonly List<double> renkaat = new List<double>(8), rengasVoimat = new List<double>(8);   // uudelleenkäyttö: ei roskaa joka kehys
+        /// <summary>Aaltorenkaat äänen iskuista (omistaja 28.9.).</summary>
+        readonly VuRenkaat vuRenkaat = new VuRenkaat();
         double avausHetki = double.NaN, soiAlku = double.NaN, edellinenKello = double.NaN;
         double? kallistusEnnen;
         // Kaareva kamera-ajo uudelle mastolle (Mastot.KameraAjonKesto, Kuminauha 0,25).
@@ -245,6 +266,7 @@ namespace Matkakirja.Linssit.Radio
             avausHetki = Nyt;
             soiAlku = double.NaN;
             kirkkaus.Nollaa();
+            vuRenkaat.Nollaa();
             if (Mastot3D != null)
             {
                 Mastot3D.Mastot(mastot);
@@ -384,13 +406,20 @@ namespace Matkakirja.Linssit.Radio
                 var koko = Mastot.Koko(k);
                 bool linkki = ToimintoAsemalle(aineisto.MaanAsema(k.Iso3)) == Toiminto.Linkki;
                 renkaat.Clear();
-                if (!linkki && !vahennetty) Mastot.Renkaat(sLukosta, renkaat);
+                rengasVoimat.Clear();
+                if (!linkki && !vahennetty)
+                {
+                    vuRenkaat.Paivita(dt, vu);
+                    vuRenkaat.Lue(renkaat, rengasVoimat);
+                }
+                Mastot3D.RengasVoimat(rengasVoimat);
                 Mastot3D.Renkaat(k.Lat, k.Lon, Mastot.KuuluvuusKm(koko), renkaat);
                 Mastot3D.YonValot(k.Lat, k.Lon, (float)Kamera.Kamerakayrat.Pehmea(Math.Clamp(sLukosta / Mastot.ValojenSyttyminen, 0, 1)));
             }
             else
             {
                 kirkkaus.Nollaa();
+                vuRenkaat.Nollaa();
                 Mastot3D.Valittu(null, 0);
                 Mastot3D.Renkaat(0, 0, 0, Array.Empty<double>());
             }
@@ -429,6 +458,25 @@ namespace Matkakirja.Linssit.Radio
         public IReadOnlyCollection<string> Nakyvat => nakyvat;
         /// <summary>Asteikon asemat (kaupunki-id:t) lännestä itään.</summary>
         public IReadOnlyList<string> Asteikko => asteikko;
+
+        /// <summary>
+        /// Näkymän asemat lännestä itään (omistaja 28.9.2026: "Asteikolla näytetään näkymän asemat länsi → itä"): Asteikko
+        /// rajattuna kameran lähialueeseen (Mastot.LahialueenNakyvyys &gt; 0,3, sama joukko kuin pallolla näkyvät mastot);
+        /// soiva asema on aina mukana. Ilman kameraa koko asteikko.
+        /// </summary>
+        public IReadOnlyList<string> NakymanAsteikko()
+        {
+            if (y?.Kamera is not Nakyma n || !(n.Korkeus > 0)) return asteikko;
+            double km = n.Korkeus / 1000;
+            var o = new List<string>();
+            foreach (var id in asteikko)
+            {
+                var k = aineisto.Kaupunki(id);
+                if (k == null) continue;
+                if (id == soiva || Mastot.LahialueenNakyvyys(Mastot.EtaisyysKm(n.Lat, n.Lon, k.Lat, k.Lon), km) > 0.3) o.Add(id);
+            }
+            return o;
+        }
         public IReadOnlyList<Asema> Asemat => aineisto.Asemat.Values.ToList();
         /// <summary>Maan asema (kartuscha).</summary>
         public Asema MaanAsema(string iso3) => aineisto.MaanAsema(iso3);
@@ -493,12 +541,16 @@ namespace Matkakirja.Linssit.Radio
             AvaaMastot();
             NapitMuuttuivat?.Invoke();
             if (viritin != null) viritin.Voimakkuus = aani;
+            // Virtakytkin ja putkiradion lämpeneminen (Pelikoodarin äänet).
+            Efektit?.Soita(RadioEfekti.KytkinPaalle, aani);
+            Efektit?.Soita(RadioEfekti.Lampeneminen, aani);
             AsetaHiljaa();
         }
 
         public void Sulje()
         {
             if (!Auki) return;
+            if (Efektit != null) { Efektit.Kohina = 0; Efektit.Soita(RadioEfekti.KytkinPois, aani); }
             LopetaAani(PysaytyksenHaiveS);
             SuljeMastot();
             Auki = false;
@@ -621,6 +673,8 @@ namespace Matkakirja.Linssit.Radio
             if (!vetaa) return;
             var (lahetys, rahina) = Mastot.Rahina(e);
             if (viritin != null) viritin.Voimakkuus = (float)(aani * rahina);
+            // Asemien välissä kohinasilmukka voimistuu viritysäänen rinnalla (Pelikoodari: "voimistuu kun asteikko asemien välissä").
+            if (Efektit != null) Efektit.Kohina = (float)(aani * rahina);
             if (lukittu && virta != null) virta.Voimakkuus = VirranTaso = (float)(aani * lahetys);
         }
 
@@ -632,6 +686,7 @@ namespace Matkakirja.Linssit.Radio
         {
             if (!vetaa) return;
             vetaa = false;
+            if (Efektit != null) Efektit.Kohina = 0;
             if (lahin != null && lahin == soiva && lukittu)
             {
                 // Lukituksen ramppi jatkuu nykyisestä tasosta (Nouseva⁻¹), ettei taso hyppää.
@@ -743,6 +798,7 @@ namespace Matkakirja.Linssit.Radio
                 if (!lukittu && kuuluu && t >= LukitusAikaisintaanMs && !vetaa)
                 {
                     lukittu = true;
+                    if (!Tauolla) Efektit?.Soita(RadioEfekti.Lukittuminen, aani);
                     lukittuHetki = Nyt;
                     viritin?.Lopeta(LukituksenHaivytysS);
                     Vaihe(ViritysVaihe.Lukittuu);
@@ -783,9 +839,13 @@ namespace Matkakirja.Linssit.Radio
             if (!viritysJatkuu) { soiva = null; Korostus(null); }
         }
 
+        /// <summary>
+        /// Ei asemaa (omistaja 29.9.2026: "radio on aina päällä, ja kun kytkin käännetään pois, koko radio häviää ja linssi
+        /// sulkeutuu"): näyttö ei sano "RADIO POIS", koska pois-tilaa ei ole — virtakytkin sulkee linssin (LinssiUi.SuljeLinssi).
+        /// </summary>
         void AsetaHiljaa()
         {
-            Tila = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "RADIO POIS", Rivi2 = "VALITSE KAUPUNKI" };
+            Tila = new RadioTila { Vaihe = RadioVaihe.Hiljaa, Rivi1 = "EI ASEMAA", Rivi2 = "VALITSE KAUPUNKI" };
             TilaMuuttui?.Invoke(Tila);
         }
 

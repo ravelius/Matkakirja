@@ -270,6 +270,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             lukija.Pysayta();
             Rakenne.PiilotaHaivyttaen(kerros, 200);
+            Ponnahdus.Sulje(kortti, () => { }); // kortti pienenee kerroksen häivytyksen mukana; kerros piilottaa
             suurennos.Sulje();
             SyoteLukko.Vapauta(this);
         }
@@ -321,8 +322,18 @@ namespace Matkakirja.Natiivi
             kuvaKatto = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
             // Fable 26.9. (UI-pariteetti iPad 13): 130/135:n kuvan korkeudesta laskettu leveys enintään LeveysKatto (webin
             // ~34 rem vastine); omistajan löydös koski puhelimen pystykuvaa, ei koko iPadin ruutua. Pystypuhelimella ei vaikuta.
-            float leveys = Mathf.Round(Mathf.Min(Mathf.Min(kuvaKatto * 1.5f + KortinVara, rl - 2f * Sivuvara), LeveysKatto));
+            float leveys = LaskeLeveys(rl, rk);
             if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
+        }
+
+        /// <summary>
+        /// Kortin leveys turva-alueen käytettävästä koosta (sama kaava kuin Mitoita): omistaja 28.9.2026, maakunnan
+        /// kortti "saman kokoinen kuin muut nostot" (MaakuntaKortti.Mitoita) — yksi laskukaava kaikille korteille.
+        /// </summary>
+        public static float LaskeLeveys(float rl, float rk)
+        {
+            float kuvaKattoLaskuun = Mathf.Round(Mathf.Max(rk - KuvaPystyvara, rk * KuvaVahinOsuus));
+            return Mathf.Round(Mathf.Min(Mathf.Min(kuvaKattoLaskuun * 1.5f + KortinVara, rl - 2f * Sivuvara), LeveysKatto));
         }
 
         // Web NOSTOKUVA_YLAVARA 88 (omistaja 12.9.): vaiheen 1 kortti ei jää keskitettynä tätä alemmas, jotta vaiheen 2
@@ -468,8 +479,12 @@ namespace Matkakirja.Natiivi
                     }
         }
 
-        /// <summary>Elementti ruudun kohdassa nyt (paneelin poiminta); ilman paneelia tapahtuman kohde.</summary>
-        VisualElement Poimi(Vector2 paikka, VisualElement varalla) => kortti.panel?.Pick(paikka) ?? varalla;
+        /// <summary>
+        /// Elementti ruudun kohdassa nyt; ilman paneelia tapahtuman kohde. PickAll eikä Pick: Pick(point) lukee hiiren
+        /// välimuistia (Panel.Pick → pointerId hiiri), joka iPad-simulaattorissa on sama vanhentunut kohde (Laitetestaaja
+        /// 1.0.40: kaiutin sulki kortin iPadilla ~6/7); PickAll poimii aina tuoreesti.
+        /// </summary>
+        VisualElement Poimi(Vector2 paikka, VisualElement varalla) => kortti.panel?.PickAll(paikka, null) ?? varalla;
 
         /// <summary>Nappi tai kuvakehys, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
         VisualElement ohitettu;
@@ -514,6 +529,9 @@ namespace Matkakirja.Natiivi
             // Löydös 134 (omistaja, build 16): nosto näkyviin heti samassa kehyksessä, ei 220 ms:n sisäänhäivytystä
             // (Pelikoodarin mittaus: näkyvä 267 ms, josta häivytys 220 ms). Sulku häivyttää kuten ennen.
             Rakenne.NaytaHeti(kerros);
+            // Omistaja 29.9.2026 (Päätoimittaja, Raamattu PR #3602): nosto pysyy välittömänä mutta saa avausanimaation, joka
+            // alkaa samalla ruudunpäivityksellä kuin napautus (Ponnahdus: alkutila heti, 220 ms kasvu ja häivytys).
+            Ponnahdus.Avaa(kortti);
             SyoteLukko.Esta(this);
         }
 

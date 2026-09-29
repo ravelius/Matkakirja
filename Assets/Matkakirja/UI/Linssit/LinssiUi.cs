@@ -81,6 +81,7 @@ namespace Matkakirja.Natiivi
             Maat = new MaidenNakyma(kerros, ui);
             Aikajana = new AikajanaNakyma(kerros, this);
             Radio = new RadioNakyma(kerros);
+            Radio.SuljePyynto = SuljeLinssi;   // virtakytkin (omistaja 28.9.2026)
             Vuosi = new MaapallonVuosiNakyma(kerros);
             Dioraama = new DioraamaTaulu(kerros);
 
@@ -219,7 +220,8 @@ namespace Matkakirja.Natiivi
             // lisäksi yläpalkki, paikkapilleri ja taikalasit pois (Linssiseppä 2, laitekuva vuosi1 07-pohja.png).
             bool vuosi = id == MaapallonVuosiLinssi.Id;
             portti |= vuosi;
-            ui.Kartuscha.NaytaSallittu(!portti);
+            // Radio: maan nimi piiloon linssin ajaksi (omistaja 28.9.2026: KREIKKA näkyi arktisellakin radion vieressä).
+            ui.Kartuscha.NaytaSallittu(!(portti || radio));
             ui.Nostot.NaytaSallittu(!(portti || vertailu || radio));
             ui.MaakuntaNimet.NaytaSallittu(!(portti || vertailu || radio));
             ui.OfflineTila.NaytaSallittu(!paalla);
