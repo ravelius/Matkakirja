@@ -2157,8 +2157,9 @@ namespace Matkakirja.Natiivi
             PaivitaLento();
             // Maan rajat pois maailmatilassa (Natiivisepän PalloKierto.MaailmaTila, pariteetti D7/D8/D11; setteri ei tee
             // mitään samalla arvolla, sammutus puristaa kameran heti maan rajaan).
-            // Pelaajan näkymä (omistaja 29.9.2026): maailmatilassa rajat kuten pelaajalla.
-            if (kierto != null) kierto.MaailmaTila = Paavalikko.MaailmaNakyma;
+            // Huntu päällä (pelaajan näkymä) ei rajaa liikettä (omistaja 29.9.2026 klo 23.1x: "Kun huntu on päällä
+            // maailma-tilassa, pelaajan pitää pystyä liikkumaan koko pallolla"): rajat pois koko maailmatilassa.
+            if (kierto != null) kierto.MaailmaTila = Paavalikko.Maailma;
             // Kytkimen vaihto (maailmatila, pelaajan näkymä) laskee kaupunkirajauksen ja himmeät heti uudelleen: rajaus
             // päivittyy muuten vain pelin tapahtumista (laite 29.9.: himmeitä 0 kytkimen jälkeen).
             var nakyma = (Paavalikko.Maailma, Paavalikko.PelaajanNakyma);

@@ -498,6 +498,19 @@ namespace Matkakirja
 
         bool kosketettu;
         double2 liuku;        // astetta sekunnissa (pituus, leveys)
+        /// <summary>Ohjauksen (eleet, liuku, itsestään pyöriminen) suurin aika-askel sekunteina; ks. Update.</summary>
+        const float OhjausDtMax = 0.1f;
+
+        /// <summary>Taustalle: liuku ja vedon nopeus pois, ettei paluu jatka heittoa (löydös 29.9. klo 23.2x, napahyppy).</summary>
+        void OnApplicationPause(bool tauolla)
+        {
+            if (!tauolla) return;
+            liuku = 0;
+            vetoNopeus = 0;
+            // Kesken jäänyt kosketus ei paluussa laukaise irrotusta (liuku tai napautus): uusi ele alkaa puhtaalta.
+            edellinenSormia = 0;
+            lukko = Elelukko.Ei;
+        }
         double2 vetoNopeus;   // sama suodatettuna vedon aikana
         float2 edellinenKeski;
         float edellinenVali;
@@ -557,7 +570,11 @@ namespace Matkakirja
                 if (porttiTila) PorttiKierto(Time.unscaledDeltaTime);
                 else
                 {
-                    Ohjaa(Time.unscaledDeltaTime);
+                    // TAUSTALTA PALUU (omistajan löydös 29.9. klo 23.2x: "kartta saattaa hypätä navalle palattaessa"): paluun
+                    // ensimmäisen kehyksen unscaledDeltaTime on koko taustalla oloaika (sekunteja tai minuutteja), ja jäljellä oleva
+                    // heiton liuku (astetta/s) kerrottiin sillä → leveys rajautui ±maxLeveys eli navalle. Eleiden ja liukuman
+                    // aika-askel rajataan (OhjausDtMax); kamera-ajot ja muut animaatiot saavat valmistua suurella dt:llä.
+                    Ohjaa(math.min(Time.unscaledDeltaTime, OhjausDtMax));
                     if (ajo != null) Etene(Time.unscaledDeltaTime);
                 }
             }

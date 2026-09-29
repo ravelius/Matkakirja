@@ -133,7 +133,8 @@ namespace Matkakirja.Natiivi
             ylaLippu.style.display = DisplayStyle.None;
             // Kaksinappinen lukija (omistaja 28.9.2026, web #3537): [valikko][kaiutin] ylärivin oikeaan päähän; tekstit sivulta
             // napautushetkellä (ValmistaSivu ladoo loput lohkot).
-            lukija = new KortinLukija(ylarivi, "Lue sivu ääneen", "mk-lehti__lukija", saatimet: true, rajaus: () => arkki.worldBound);
+            lukija = new KortinLukija(ylarivi, "Lue sivu ääneen", "mk-lehti__lukija", saatimet: true, rajaus: () => arkki.worldBound,
+                lisaRivi: RakennaJatkuva, loppui: JatkaLuentaa);
             lukija.Lahde = SivunTekstit;
             lukija.Juuri.style.display = DisplayStyle.Flex;
             ylaosa.RegisterCallback<GeometryChangedEvent>(e => { if (!Mathf.Approximately(e.oldRect.width, e.newRect.width)) MitoitaNimio(); });
@@ -260,6 +261,7 @@ namespace Matkakirja.Natiivi
 
         void Avaa(LehtiLaji laji, string omistaja, string aihe, int? sivu)
         {
+            LehtiReaktiot.AloitaKierros(); // uusi lehti: pulu saa reagoida taas samaankin sivuun (web aloitaLivianLehtikierros)
             // Fokustehtävät ensin (pieni kokoelma), jotta sivun oma minitehtävä osaa väistyä.
             LehtiFokus.Lataa(() => UiKerros.Hae().StartCoroutine(LehtiSisalto.Hae(laji, omistaja, l =>
             {
@@ -404,6 +406,8 @@ namespace Matkakirja.Natiivi
             PaivitaAlapalkki();
             if (lehti.Laji == LehtiLaji.Kehittaja) return; // liite ei ole pelin lehti: ei sivutapahtumia
             SivuNakyi?.Invoke(lehti.Omistaja, s.Aihe?.Id, i);
+            // Livian lehtireaktio (web reagoiLivianLehtisivuun): aiheen ele tunnetagilla, geneeriset sivut hiljaa.
+            if (s.Aihe != null) LehtiReaktiot.Reagoi(lehti.Omistaja, i, s.Aihe);
             Teko(new LehtiTeko
             {
                 Laji = LehtiTekoLaji.SivuNakyi, Omistaja = lehti.Omistaja, Aihe = s.Aihe?.Id, Sivu = i, Kaupunki = avausKaupunki,
@@ -1692,8 +1696,57 @@ namespace Matkakirja.Natiivi
         IEnumerable<string> SivunTekstit()
         {
             ValmistaSivu();
-            return (sivu?.contentContainer.Query<Label>(className: "mk-lehti__luettava").ToList().Select(l => l.text)
+            var tekstit = (sivu?.contentContainer.Query<Label>(className: "mk-lehti__luettava").ToList().Select(l => l.text)
                 ?? Enumerable.Empty<string>()).Concat(lisaLuettavat).ToList();
+            // Jatkuvan luennan sivunvaihdossa yläotsikko luetaan mukaan: kuulija ei nähnyt sivun vaihtuvan (web
+            // jatkaLehdenLuentaa, lueOtsikko; omistajan tilaus 15.8.2026).
+            if (lueOtsikko && !string.IsNullOrWhiteSpace(ylaNimi.text)) tekstit.Insert(0, ylaNimi.text);
+            return tekstit;
+        }
+
+        // --- jatkuva luenta (web js/lukija.js AUTO_AVAIN ja js/lehti.js jatkaLehdenLuentaa) -------------------------
+
+        /// <summary>Sama avain kuin webin localStorage 'matkakirja-lukija-auto'; oletus pois.</summary>
+        const string JatkuvaAvain = "matkakirja-lukija-auto";
+        const string JatkuvaNimi = "Jatkuva luenta — lehti kääntää sivua itse";
+        static bool Jatkuva => PlayerPrefs.GetInt(JatkuvaAvain, 0) == 1;
+        bool lueOtsikko;
+        Label jatkuvaTila;
+
+        /// <summary>Lukijan valikkoon ääni-valitsimen alle (web .lukija-jatkuva).</summary>
+        void RakennaJatkuva(VisualElement saadot)
+        {
+            jatkuvaTila = KortinLukija.KytkinRivi(saadot, JatkuvaNimi, () =>
+            {
+                PlayerPrefs.SetInt(JatkuvaAvain, Jatkuva ? 0 : 1);
+                PlayerPrefs.Save();
+                PaivitaJatkuva();
+            });
+            PaivitaJatkuva();
+        }
+
+        void PaivitaJatkuva()
+        {
+            if (jatkuvaTila != null) jatkuvaTila.text = Jatkuva ? "päällä" : "pois";
+        }
+
+        /// <summary>
+        /// Sivu luettiin loppuun: jatkuvalla luennalla seuraavalle sivulle, jolla on luettavaa (pelkät kartta- ja kuvasivut
+        /// ohitetaan). Viimeisen sivun jälkeen luenta jää siihen: lehti ei ala alusta itsekseen (web).
+        /// </summary>
+        void JatkaLuentaa()
+        {
+            if (!Jatkuva || lehti == null || !Auki) return;
+            for (int seuraava = nyt + 1; seuraava < lehti.Sivut.Count; seuraava++)
+            {
+                Kaanna(seuraava);
+                if (SivunTekstit().Sum(t => t.Length) < KortinLukija.Vahimmais) continue;
+                Debug.Log($"MATKAKIRJA ui lukija: jatkuva luenta sivulle {nyt + 1}/{lehti.Sivut.Count}");
+                lueOtsikko = true;
+                lukija.Paina();
+                lueOtsikko = false;
+                return;
+            }
         }
 
         void PysaytaLuenta() => lukija.Vaihtui();
@@ -1702,7 +1755,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen (ylärivin ☰, "sisallys-ala" alapalkin), "kuva" suurennoksen,
-        /// "viimeinen" viimeiselle sivulle, "fokus-vastaa n" / "fokus-pulla" napauttaa fokustehtävää.
+        /// "viimeinen" viimeiselle sivulle, "fokus-vastaa n" / "fokus-pulla" napauttaa fokustehtävää, "jatkuva 0|1" asettaa
+        /// jatkuvan luennan, "lue" napauttaa kaiutinta, "valikko" avaa lukijan valikon.
         /// </summary>
         public string Testaa(string mita, int n)
         {
@@ -1712,8 +1766,10 @@ namespace Matkakirja.Natiivi
                 case "fokus-vastaa":
                 case "fokus-pulla": return LehtiFokus.Testaa(sivu?.contentContainer, mita, n);
                 case "sivu": Kaanna(n); break;
-                // Luennan alun laitemittaus (omistaja 29.9.2026): lukijan kaiutin kuin napautus.
-                case "lue": lukija.Paina(); return "lukija painettu";
+                // "jatkuva 0|1": jatkuvan luennan kytkin; "lue": kaiuttimen napautus (tila lokiin "ui lukija: ...").
+                case "jatkuva": PlayerPrefs.SetInt(JatkuvaAvain, n == 1 ? 1 : 0); PaivitaJatkuva(); return "jatkuva " + (Jatkuva ? "päällä" : "pois");
+                case "lue": lukija.Paina(); return $"sivu {nyt + 1}, lukee {lukija.Lukee}";
+                case "valikko": lukija.AvaaValikko(); return "lukijan valikko";
                 case "viimeinen": if (lehti != null) Kaanna(lehti.Sivut.Count - 1); break;
                 case "sisallys":
                 case "sisallys-ala": if (lehti != null && lehti.Sivut.Count >= 2) VaihdaSisallys(mita == "sisallys"); break;

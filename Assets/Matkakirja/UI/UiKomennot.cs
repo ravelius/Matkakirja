@@ -14,7 +14,7 @@
 //   ui aloitus [portti|avaus|valinta|kortti|lento|jatka]  aloitusnäkymä ilman peliä (avaus = avausteksti ruudullaan, valinta kartalla, kortti = vara, lento = lennon kaistale)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
-//   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys(-ala)
+//   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys(-ala) | ui lehti jatkuva 0|1 | ui lehti lue | ui lehti valikko
 //   ui wiki [otsikko]                         Lue lisää -artikkeli (oletus Venetsia: pelin oma artikkeli)
 //   ui piikit [s] [kynnys ms] | ui piikit pois  pitkien kehysten raskaimmat profilointimerkit lokiin (oletus 20 s,
 //                                             40 ms; KehysPiikit.cs), esim. ennen komentoa ui jatka
@@ -145,6 +145,7 @@
 //                                             Saapumistekstit (skeema 1.24): lokiin valokuvien määrä ja äänite (kairo)
 //                                             tai lukijan pituus; esim. kairo, fes (havainto kokoelmasta)
 //   ui kartuscha [ISO3] [auki] | pois         kartuscha maalle ilman peliä (oletus ITA); raukeaa pelaajan maan vaihtuessa
+//   ui kartuscha lippu vanha|kulma           lipputangon paikka: vanha itäreunan ankkuri tai maan oikea yläkulma (29.9.)
 //   ui muste laskuri <ISO:tunnus> [l/k]       Elävä kartta ilman peliä: kartussi auki maalle, maakunnan rivin pisteet l/k
 //                                             (oletus 1/datan määrä tai 7); maakunnat heränneinä heti (maakuntaerä 27.9.)
 //   ui muste valmis <ISO> | pois | tila       maa valmis → lippu liehuu; testitila pois; tila lokiin
@@ -780,8 +781,8 @@ namespace Matkakirja.Natiivi
                 case "maalehti":
                 {
                     var l = loput.Split(' ');
-                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "lue" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "sisallys-ala" || l[0] == "viimeinen"
-                        || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla"))
+                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "sisallys-ala" || l[0] == "viimeinen"
+                        || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla" || l[0] == "jatkuva" || l[0] == "lue" || l[0] == "valikko"))
                         return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
                     if (osat[1] == "lehti" && l[0] == "vieritys")
                     {
@@ -1052,6 +1053,12 @@ namespace Matkakirja.Natiivi
                     var ks = loput.Split(' ');
                     if (ks[0] == "pois") { ui.Kartuscha.Testaa(null, false); return null; }
                     if (ks[0] == "kiinni") { ui.Kartuscha.Sulje(); return null; } // sulkuanimaatio videolle (29.9.)
+                    if (ks[0] == "lippu" && ks.Length > 1) // tangon paikka: vanha itäreuna | kulma (oikea yläkulma, 29.9.)
+                    {
+                        Kartuscha.VanhaLippupaikka = ks[1] == "vanha";
+                        ui.Kartuscha.PaivitaLipputanko();
+                        return null;
+                    }
                     ui.Kartuscha.Testaa(ks[0].Length > 0 ? ks[0].ToUpperInvariant() : "ITA", ks.Length > 1 && ks[1] == "auki");
                     return null;
                 }
