@@ -11,12 +11,15 @@
 // Liekkipisteet asettaa DioraamaLeivotutValot (Shader.SetGlobalVectorArray, aina 8 alkiota) tilan
 // liekki:-tyhjistä. Ennen atlaksen latausta pinta on harmaa (_ValoAtlas "grey"), ei musta.
 // SRP Batcher -yhteensopiva (CBUFFER UnityPerMaterial, TEXTURE2D/SAMPLER-makrot).
+// LIPUT (tunnelma): _Heilunta > 0 (pinta "lippu", DioraamaRakennus antaa oman materiaalin) taivuttaa kärkiä normaalin
+// suuntaan: siirto = sin(2,8 t + 5 u + x) · 0,12 m · u² · _Heilunta, u = UV0.x (0 tangolla, 1 kärjessä).
 Shader "Matkakirja/Linssit/DioraamaLeivottu"
 {
     Properties
     {
         _ValoAtlas ("Leivottu valoatlas (UV1)", 2D) = "grey" {}
         _Kirkkaus ("Kirkkaus", Float) = 1
+        _Heilunta ("Lipun heilunta", Float) = 0
     }
     SubShader
     {
@@ -45,15 +48,22 @@ Shader "Matkakirja/Linssit/DioraamaLeivottu"
             CBUFFER_START(UnityPerMaterial)
                 float4 _ValoAtlas_ST;
                 half _Kirkkaus;
+                float _Heilunta;
             CBUFFER_END
 
-            struct Syote { float4 paikka : POSITION; float2 uv1 : TEXCOORD1; };
+            struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; float2 uv0 : TEXCOORD0; float2 uv1 : TEXCOORD1; };
             struct Vali { float4 paikka : SV_POSITION; float2 uv1 : TEXCOORD0; float3 paikkaW : TEXCOORD1; };
 
             Vali vert(Syote i)
             {
                 Vali o;
                 float3 maailma = TransformObjectToWorld(i.paikka.xyz);
+                if (_Heilunta > 0)
+                {
+                    float u = saturate(i.uv0.x);
+                    float3 n = normalize(TransformObjectToWorldNormal(i.normaali));
+                    maailma += n * sin(_Time.y * 2.8 + u * 5.0 + maailma.x) * 0.12 * u * u * _Heilunta;
+                }
                 o.paikka = TransformWorldToHClip(maailma);
                 o.paikkaW = maailma;
                 o.uv1 = i.uv1;

@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Lataa kuoren valitulla tasolla. url = paketin polku → haettava osoite (peili mukana).</summary>
-        public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa)
+        public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa, bool hamara = false)
         {
             Tyhjenna();
             if (kuori == null) yield break;
@@ -97,7 +97,11 @@ namespace Matkakirja.Natiivi
 
             Laatu tavoite = Valittu;
             string Polku(Laatu l) => l == Laatu.Huippu ? kuori.Huippu : l == Laatu.Normaali ? kuori.Normaali : kuori.Kevyt;
-            string AstcPolku(Laatu l) => l == Laatu.Huippu ? kuori.AstcHuippu : l == Laatu.Normaali ? kuori.AstcNormaali : kuori.AstcKevyt;
+            // Hämärä (DioraamaTunnelma): omat tekstuurit samaan UV:hen; puuttuva hämärätaso → päiväversio.
+            string AstcPaiva(Laatu l) => l == Laatu.Huippu ? kuori.AstcHuippu : l == Laatu.Normaali ? kuori.AstcNormaali : kuori.AstcKevyt;
+            string AstcHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraHuippu : l == Laatu.Normaali ? kuori.HamaraNormaali : kuori.HamaraKevyt;
+            string JpgHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraJpgHuippu : l == Laatu.Normaali ? kuori.HamaraJpgNormaali : kuori.HamaraJpgKevyt;
+            string AstcPolku(Laatu l) => hamara && !string.IsNullOrEmpty(AstcHamara(l)) ? AstcHamara(l) : AstcPaiva(l);
             // Nopea ensimmäinen taso: HUIPPU-laitteellakin normaali ensin, ettei 66 Mt:n lataus pidä kuorta poissa.
             var jarjestys = new List<Laatu>();
             Laatu ensin = tavoite == Laatu.Huippu && !string.IsNullOrEmpty(kuori.Normaali) ? Laatu.Normaali : tavoite;
@@ -149,8 +153,21 @@ namespace Matkakirja.Natiivi
                         if (p.result == UnityWebRequest.Result.Success) astcTavut = p.downloadHandler.data;
                     }
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
-                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc");
-                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : "laite/tiedosto")}), JPEG varalla");
+                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
+                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
+                }
+                if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
+                {
+                    byte[] jpg = null;
+                    using (var p = UnityWebRequest.Get(url(JpgHamara(taso))))
+                    {
+                        p.timeout = 120;
+                        yield return p.SendWebRequest();
+                        if (p.result == UnityWebRequest.Result.Success) jpg = p.downloadHandler.data;
+                    }
+                    if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
+                    if (jpg != null) koottu.Kuva = jpg; // sama JPEG-polku alla
+                    else kirjaa?.Invoke($"poikki: kuori {taso} hämärä-JPEG ei latautunut, päivätekstuuri");
                 }
                 if (kuva == null && koottu.Kuva != null)
                 {
@@ -184,7 +201,8 @@ namespace Matkakirja.Natiivi
             var a = DioraamaNayttamo.UnityPiste(t.LeikkausMin ?? t.RajaMin);
             var b = DioraamaNayttamo.UnityPiste(t.LeikkausMax ?? t.RajaMax);
             float laajennus = (float)t.LeikkausLaajennus, osuus = Mathf.Clamp01((float)leikkaus.osuus);
-            Vector3 lo = Vector3.Min(a, b) - Vector3.one * laajennus, hi = Vector3.Max(a, b) + Vector3.one * laajennus;
+            // Alaspäin vain 0,2 m (1.0.55-kuvat): täysi laajennus kaivoi kallion lattian alta ja järvi näkyi tilan alla.
+            Vector3 lo = Vector3.Min(a, b) - new Vector3(laajennus, Mathf.Min(laajennus, 0.2f), laajennus), hi = Vector3.Max(a, b) + Vector3.one * laajennus;
             Vector3 keski = (lo + hi) * 0.5f, puoli = (hi - lo) * 0.5f * osuus;
             lo = keski - puoli; hi = keski + puoli;
             Shader.SetGlobalVector(IdLeikkausMin, new Vector4(lo.x, lo.y, lo.z, osuus));

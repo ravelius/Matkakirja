@@ -296,6 +296,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>ASTC-pakattu valoatlas mip-ketjuna (.astcm, tyokalut/astc-mip.swift): `valoatlas.astc` / `astcPuoli`;
         /// null = JPEG kuten ennen.</summary>
         public string ValoAtlasAstc, ValoAtlasAstcPuoli;
+        /// <summary>Hämärän valoatlas (`valoatlas.hamara { tiedosto, puoli, astc, astcPuoli }`); null = päiväversio myös hämärässä.</summary>
+        public string HamaraAtlas, HamaraAtlasPuoli, HamaraAtlasAstc, HamaraAtlasAstcPuoli;
         /// <summary>LINNA, leikkausikkuna kuoreen (speksi dioraama-rajapinnat-blender-20260929.md kohta 3):
         /// `leikkaus: { laajennus 1.0, kameraan true }` (oletus) tai käsin `{ min, max }` (korvaa rajat).</summary>
         public double LeikkausLaajennus = 1.0;
@@ -358,6 +360,9 @@ namespace Matkakirja.Linssit.Dioraama
         public string Huippu, Normaali, Kevyt;
         /// <summary>ASTC-tekstuurit tasoittain (.astcm; `tekstuurit: { huippu, normaali, kevyt }`); puuttuva = glb:n JPEG.</summary>
         public string AstcHuippu, AstcNormaali, AstcKevyt;
+        /// <summary>Hämärätekstuurit (tunnelma, omistaja 29.9. 21.4x): `tekstuurit.hamara` (.astcm) ja `tekstuurit.hamaraJpg`
+        /// (varalle, esim. simulaattori ilman ASTC:tä) tasoittain; sama UV kuin päivällä.</summary>
+        public string HamaraHuippu, HamaraNormaali, HamaraKevyt, HamaraJpgHuippu, HamaraJpgNormaali, HamaraJpgKevyt;
         /// <summary>Järven pinnan korkeus metreinä (`vesi`, oletus −7): fotogrammetriasta vesi on poistettu, ja natiivi
         /// piirtää järven pinnan "vesi" tälle korkeudelle.</summary>
         public double VesiY = -7;
@@ -375,6 +380,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>LINNA (Siirtoseppä 29.9.2026): fotogrammetrinen ulkokuori kolmella laatutasolla
         /// (`ulkokuori: { huippu, normaali, kevyt }`, glb-polut paketin juuresta); null = ei kuorta.</summary>
         public Ulkokuori Ulkokuori;
+        /// <summary>Oletustunnelma (`tunnelma`: "paiva" | "hamara"); puuttuva = päivä.</summary>
+        public string Tunnelma;
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
@@ -408,6 +415,7 @@ namespace Matkakirja.Linssit.Dioraama
                 Otsikko = MiniJson.Teksti(juuri, "otsikko"),
                 Versio = (int)(MiniJson.Luku(juuri, "versio") ?? 0),
             };
+            r.Tunnelma = MiniJson.Teksti(juuri, "tunnelma");
             var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));
             if (kuori != null)
                 r.Ulkokuori = new Ulkokuori
@@ -422,6 +430,12 @@ namespace Matkakirja.Linssit.Dioraama
                 r.Ulkokuori.AstcHuippu = MiniJson.Teksti(kuoriTekstuurit, "huippu");
                 r.Ulkokuori.AstcNormaali = MiniJson.Teksti(kuoriTekstuurit, "normaali");
                 r.Ulkokuori.AstcKevyt = MiniJson.Teksti(kuoriTekstuurit, "kevyt");
+                var h = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuoriTekstuurit, "hamara"));
+                var hj = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuoriTekstuurit, "hamaraJpg"));
+                r.Ulkokuori.HamaraHuippu = MiniJson.Teksti(h, "huippu"); r.Ulkokuori.HamaraNormaali = MiniJson.Teksti(h, "normaali");
+                r.Ulkokuori.HamaraKevyt = MiniJson.Teksti(h, "kevyt");
+                r.Ulkokuori.HamaraJpgHuippu = MiniJson.Teksti(hj, "huippu"); r.Ulkokuori.HamaraJpgNormaali = MiniJson.Teksti(hj, "normaali");
+                r.Ulkokuori.HamaraJpgKevyt = MiniJson.Teksti(hj, "kevyt");
             }
             var yleiskamera = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "yleiskamera"));
             r.YleisVaaka = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "vaaka")));
@@ -671,6 +685,9 @@ namespace Matkakirja.Linssit.Dioraama
             t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
             t.ValoAtlasAstc = MiniJson.Teksti(valoatlas, "astc");
             t.ValoAtlasAstcPuoli = MiniJson.Teksti(valoatlas, "astcPuoli");
+            var hamaraAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(valoatlas, "hamara"));
+            t.HamaraAtlas = MiniJson.Teksti(hamaraAtlas, "tiedosto"); t.HamaraAtlasPuoli = MiniJson.Teksti(hamaraAtlas, "puoli");
+            t.HamaraAtlasAstc = MiniJson.Teksti(hamaraAtlas, "astc"); t.HamaraAtlasAstcPuoli = MiniJson.Teksti(hamaraAtlas, "astcPuoli");
             t.GlbSha256 = MiniJson.Teksti(glb, "sha256");
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "liekit")))
             {

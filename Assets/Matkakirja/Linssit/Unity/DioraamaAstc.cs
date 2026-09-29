@@ -10,24 +10,29 @@ namespace Matkakirja.Natiivi
 {
     public static class DioraamaAstc
     {
-        public static Texture2D Lue(byte[] t, string nimi, TextureWrapMode kaari = TextureWrapMode.Clamp)
+        public static Texture2D Lue(byte[] t, string nimi, TextureWrapMode kaari = TextureWrapMode.Clamp) => Lue(t, nimi, out _, kaari);
+
+        /// <summary>Kuten yllä; syy kertoo lokiin, miksi ASTC:tä ei käytetty (laite ei tue / otsake / koko).</summary>
+        public static Texture2D Lue(byte[] t, string nimi, out string syy, TextureWrapMode kaari = TextureWrapMode.Clamp)
         {
-            if (t == null || t.Length < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) return null;
+            syy = null;
+            if (t == null || t.Length < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) { syy = "otsake"; return null; }
             int bx = t[4], by = t[5];
             int w = t[7] | t[8] << 8 | t[9] << 16, h = t[10] | t[11] << 8 | t[12] << 16;
             TextureFormat muoto;
             if (bx == 4 && by == 4) muoto = TextureFormat.ASTC_4x4;
             else if (bx == 6 && by == 6) muoto = TextureFormat.ASTC_6x6;
             else if (bx == 8 && by == 8) muoto = TextureFormat.ASTC_8x8;
-            else return null;
-            if (!SystemInfo.SupportsTextureFormat(muoto) || w <= 0 || h <= 0) return null;
+            else { syy = $"lohko {bx}×{by}"; return null; }
+            if (w <= 0 || h <= 0) { syy = "mitat"; return null; }
+            if (!SystemInfo.SupportsTextureFormat(muoto)) { syy = $"laite ei tue {muoto} ({SystemInfo.graphicsDeviceName})"; return null; }
             int tasoja = 0; long tavuja = 0;
             for (int x = w, y = h; ; x = Math.Max(1, x / 2), y = Math.Max(1, y / 2))
             {
                 tavuja += (long)((x + bx - 1) / bx) * ((y + by - 1) / by) * 16; tasoja++;
                 if (x == 1 && y == 1) break;
             }
-            if (t.Length - 16 != tavuja) return null;
+            if (t.Length - 16 != tavuja) { syy = $"koko {t.Length - 16} ≠ {tavuja}"; return null; }
             var raaka = new byte[tavuja];
             Buffer.BlockCopy(t, 16, raaka, 0, (int)tavuja);
             var kuva = new Texture2D(w, h, muoto, tasoja, false)
