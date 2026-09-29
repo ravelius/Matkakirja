@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 22:30:** Päätoimittajalle Remote Control kytketty päälle omistajan pyynnöstä 22.2x (tila on; kytketään aina nollauksen jälkeen). Levy 74 Gi, muisti 82 % vapaa, kuorma 79/28/36, sim 0, ei kevyttä tilaa. Viikko 22 % (5 h 7 %). Konteksti: Linnanrakentaja 64 % (ei liikettä), Natiivi-UI 19 %, oma ~28 %, Päätoimittaja 15 %. Juna: a5ed0c8e käännetty ja asennettu 22.29. Posti: ei uutta.
+
 **Päivitetty 22:20:** PÄÄTOIMITTAJAN OMA NOLLAUS 22.18 (aloitusviesti lähetetty, list_events "no messages" = nollattu; Remote Control ei kytketty, vain käyttäjän pyynnöstä). Levy 74 Gi, muisti 82 % vapaa, kuorma 5/17/52, sim 0, ei kevyttä tilaa. Viikko 22 % (5 h 6 %). Konteksti: Linnanrakentaja 64 % (70 % lähestyy), Natiivi-UI 17 %, oma 27 %. Juna: b13 b2164df2 uusi, odottaa niputusta (22.16). Posti: ei uutta.
 
 **Päivitetty 22:03:** Levy 74 Gi, muisti 74 % vapaa, kuorma 290/164/117 (junakäännös), sim 3 (= päivän raja, ei ylitystä), ei kevyttä tilaa. Viikko 21 % (5 h 3 %). Konteksti: Linnanrakentaja 62 % (nousee, 70 % lähestyy), Natiivi-UI 14 %, oma 27 %. Juna: b13 3b0ca5ee ennallaan 22.00. Posti: ei uutta.
