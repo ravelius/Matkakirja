@@ -9,7 +9,10 @@
 // (siellä ei ole uusin.jsonia, joten paketti luetaan suoraan juuresta).
 //
 // TESTIKOMENNOT (linssi-komento.txt): "poikki peili <url|pois> | yleis | tila <id> | aika <s|pois> |
-// taso <tila> <0-2> | napauta | lataa | mittaus | tila" (LinssiOhjain.Komento reitittää "poikki"-alkuiset tänne).
+// taso <tila> <0-2> | napauta | lataa | mittaus | tila | dof <0|1> | hehku <0|1> | aanet [0|1] | drift <0|1> |
+// hahmot <2d|3d>" (LinssiOhjain.Komento reitittää "poikki"-alkuiset tänne). drift = Leijunta (era 2b, kohta 5,
+// agentti P5): hidas ajelehtiminen levossa, oletus pois. hahmot = 3D-pienoisfiguuri vs. 2D-kortti (era 2b
+// kohta 4, agentti P4b), oletus 3d.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -71,6 +74,9 @@ namespace Matkakirja.Natiivi
         int avauskerta;
         readonly HashSet<string> tilatJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
         readonly HashSet<string> atlaksetJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
+        /// <summary>Era 2b (kohta 4, ali-agentti P4b): 3D-hahmojen glb-polut, sama dedup-malli kuin
+        /// atlaksetJonossaTaiValmiit (avain glb-polku, ei henkilö-id — ks. DioraamaHahmot3D.TarvittavatGlb).</summary>
+        readonly HashSet<string> hahmoGlbJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
         // ERA 2 (dioraama-rajapinnat-era2-20260929.md kohta 3): pintojen tekstuurit ja liekkien atlakset ovat
         // rakennustason (ei tilakohtaista) dataa, jo rakennuskoneen esisuodattamia "käytettyjä" (kohta 2) --
         // siksi ei tarvita DioraamaHahmot.TarvittavatAtlakset-tyylistä tila-suodatusta, ks. TaydennaPinnatJaLiekit.
@@ -162,6 +168,9 @@ namespace Matkakirja.Natiivi
             // ajasta) -- nayttamo-kentän kommentti kutsui juuri tätä ("Sovitin voi jatkossa antaa Ydin-ajan tähän").
             nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
+            // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
+            // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
+            nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
             syote.Paivita(rakennus, t);
             aanet?.Paivita(rakennus, nakyma, t);
         }
@@ -228,6 +237,7 @@ namespace Matkakirja.Natiivi
             avauskerta++;
             tilatJonossaTaiValmiit.Clear();
             atlaksetJonossaTaiValmiit.Clear();
+            hahmoGlbJonossaTaiValmiit.Clear();
             pinnatJonossaTaiValmiit.Clear();
             liekkiatlaksetJonossaTaiValmiit.Clear();
             foreach (var vanhaKuva in ladatutPinnat.Values) if (vanhaKuva != null) UnityEngine.Object.Destroy(vanhaKuva);
@@ -268,6 +278,25 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Kevyt Tila-kopio, jonka Hahmot-lista suodattaa POIS henkilöt, joilla ON malli3d.glb JA
+        /// DioraamaHahmot3D.Paalla on päällä (era 2b kohta 4, ali-agentti P4b: "3D-hahmo korvaa kortin").
+        /// Vanha 2D-DioraamaHahmot (ei muokattu tässä erässä) ei tiedä mitään 3D-malleista, niin suodatus
+        /// tehdään TÄSSÄ, ennen sen LisaaTila/TarvittavatAtlakset-kutsuja. Muut Tila-kentät (paitsi Id/Hahmot)
+        /// jäävät oletukseen -- turvallista, koska DioraamaHahmot.cs lukee vain näitä kahta (tarkistettu).</summary>
+        Tila SuodataHahmot3dPois(Tila tila)
+        {
+            if (!DioraamaHahmot3D.Paalla || tila.Hahmot == null) return tila;
+            List<Hahmo> jaljelle = null;
+            foreach (var hahmo in tila.Hahmot)
+            {
+                bool onMalli3d = rakennus.Henkilot != null && rakennus.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)
+                    && !string.IsNullOrEmpty(henkilo.Malli3d?.Glb);
+                if (!onMalli3d) (jaljelle ??= new List<Hahmo>()).Add(hahmo);
+            }
+            if (jaljelle != null && jaljelle.Count == tila.Hahmot.Count) return tila; // ei yhtään suodatettavaa
+            return new Tila { Id = tila.Id, Hahmot = jaljelle ?? new List<Hahmo>() };
+        }
+
         /// <summary>Jonottaa lataamatta olevat tilat (glb) ja hahmoatlakset yksi kerrallaan (ei rinnakkaisia hakuja).</summary>
         void TaydennaLataamattomat()
         {
@@ -276,7 +305,12 @@ namespace Matkakirja.Natiivi
                 if (tilatJonossaTaiValmiit.Contains(tila.Id)) continue;
                 tilatJonossaTaiValmiit.Add(tila.Id);
                 o.StartCoroutine(LataaTila(tila));
-                hahmot3D.LisaaTila(rakennus, tila, o.Kirjaa);
+                var tila2d = SuodataHahmot3dPois(tila);
+                hahmot3D.LisaaTila(rakennus, tila2d, o.Kirjaa);
+                // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit, alkuperäisellä (suodattamattomalla)
+                // tila-oliolla -- DioraamaHahmot3D.LisaaTila suodattaa ITSE (Malli3d.Glb + Paalla), sama
+                // Nayttamo-omistus/elinkaari kuin Liekit/Valot (ks. DioraamaNayttamo.cs).
+                nayttamo.Hahmot3D?.LisaaTila(rakennus, tila, o.Kirjaa);
                 aanet?.TilaValmis(tila); // esilataa tilan tehosteet ja puheäänet (era 2).
                 // ERA 2 -LISÄYS (ei ollut kirjaimellisesti tehtävänannon tiedostokohdan listalla, mutta välttämätön):
                 // DioraamaLiekit on rakennettu DioraamaHahmot-mallilla -- LisaaTila luo liekkien GameObjectit
@@ -287,12 +321,20 @@ namespace Matkakirja.Natiivi
                 // deduplikoi liekki.Id:llä, vaikka monta liekkimääritystä voi jakaa yhden atlas-tiedoston).
                 nayttamo.Liekit?.LisaaTila(rakennus, tila, o.Kirjaa);
                 var atlakset = new List<string>();
-                hahmot3D.TarvittavatAtlakset(rakennus, tila, atlakset);
+                hahmot3D.TarvittavatAtlakset(rakennus, tila2d, atlakset);
                 foreach (var atlas in atlakset)
                 {
                     if (atlaksetJonossaTaiValmiit.Contains(atlas)) continue;
                     atlaksetJonossaTaiValmiit.Add(atlas);
                     o.StartCoroutine(LataaAtlas(atlas));
+                }
+                var hahmoGlbt = new List<string>();
+                nayttamo.Hahmot3D?.TarvittavatGlb(rakennus, tila, hahmoGlbt);
+                foreach (var glb in hahmoGlbt)
+                {
+                    if (hahmoGlbJonossaTaiValmiit.Contains(glb)) continue;
+                    hahmoGlbJonossaTaiValmiit.Add(glb);
+                    o.StartCoroutine(LataaHahmoGlb(glb));
                 }
             }
         }
@@ -343,6 +385,24 @@ namespace Matkakirja.Natiivi
             if (kerta != avauskerta || hahmot3D == null) { UnityEngine.Object.Destroy(kuva); yield break; } // ks. LataaTila-kommentti
             hahmot3D.AsetaAtlas(atlasPolku, kuva);
             o.Kirjaa($"poikki: atlas {atlasPolku} valmis ({kuva.width}x{kuva.height})");
+        }
+
+        /// <summary>3D-pienoisfiguurin glb (era 2b kohta 4, ali-agentti P4b): sama LataaTila-malli, mutta
+        /// yksi glb per HENKILÖ (ei per tila) -- DioraamaGlb.Lue(unityyn:true) peilaa Unityyn samassa kutsussa
+        /// kuin rakennus3D:n LataaTila. Virhe (verkko/jäsennys) EI kaada linssiä: 3D-hahmo jää puuttumaan (ks.
+        /// DioraamaHahmot3D.cs:n Esiintyma-kommentti "kortti on varalla" -poikkeamasta).</summary>
+        IEnumerator LataaHahmoGlb(string glbPolku)
+        {
+            int kerta = avauskerta;
+            byte[] tavut = null;
+            yield return HaeTavut(peili(paketinJuuri + glbPolku), t => tavut = t);
+            if (tavut == null) { o.Kirjaa($"poikki: hahmo3d {glbPolku} ei latautunut (hahmo puuttuu)"); yield break; }
+            GlbMalli malli;
+            try { malli = DioraamaGlb.Lue(tavut, true); }
+            catch (Exception e) { o.Kirjaa($"poikki: hahmo3d {glbPolku} virhe: {e.Message}"); yield break; }
+            if (kerta != avauskerta || nayttamo?.Hahmot3D == null) yield break; // ks. LataaTila-kommentti
+            nayttamo.Hahmot3D.AsetaGlb(glbPolku, malli);
+            o.Kirjaa($"poikki: hahmo3d {glbPolku} valmis ({malli.Solmut.Count} solmua)");
         }
 
         /// <summary>Pinnan Tekstuuri (era 2 kohta 3): mipmapattu, ei-lineaarinen (sRGB-lähde), toistuva ja
@@ -419,7 +479,7 @@ namespace Matkakirja.Natiivi
             {
                 rakennus = null; latausKaynnissa = false;
                 NollaaNakymanLataukset();
-                rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna();
+                rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna();
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
@@ -438,6 +498,33 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: hehku " + (arvo == "1" ? "päällä" : "pois"));
                 return;
             }
+            if (mita == "drift")
+            {
+                // Leijunta (era 2b, kohta 5) on linssi-instanssin ominaisuus. Toisin kuin Hehku (nayttamo-
+                // instanssin ominaisuus, nayttamo tuhotaan/luodaan uudelleen joka Sulje/Avaa) linssi-kenttä on
+                // readonly ja säilyy koko Sovittimen elinajan -- kytkin jää päälle Sulje/Avaa-kierron yli (vain
+                // uusi peli-/Sovitin-instanssi nollaa sen oletukseen, pois).
+                linssi.Leijunta = arvo == "1";
+                o.Kirjaa("poikki: drift " + (arvo == "1" ? "päällä" : "pois"));
+                return;
+            }
+            if (mita == "hahmot")
+            {
+                // 3D-malli vs. 2D-kortti (era 2b kohta 4, ali-agentti P4b): DioraamaHahmot3D.Paalla on
+                // staattinen, oletus 3d (tosi) -- vaikuttaa seuraaviin LisaaTila-kutsuihin (SuodataHahmot3dPois
+                // + DioraamaHahmot3D.LisaaTila), "poikki lataa" lataa tilat uudelleen. Sama sopimus kuin liekit.
+                if (arvo == "3d" || arvo == "2d") DioraamaHahmot3D.Paalla = arvo == "3d";
+                o.Kirjaa("poikki: hahmot " + (DioraamaHahmot3D.Paalla ? "3d" : "2d"));
+                return;
+            }
+            if (mita == "liekit")
+            {
+                // 3D-liekki vs. atlas-billboard (era 2b kohta 6): DioraamaLiekit.Kolmiulotteinen on staattinen,
+                // oletus 3d -- vaikuttaa seuraaviin LisaaTila-kutsuihin ("poikki lataa" lataa tilat uudelleen).
+                if (arvo == "3d" || arvo == "atlas") DioraamaLiekit.Kolmiulotteinen = arvo == "3d";
+                o.Kirjaa("poikki: liekit " + (DioraamaLiekit.Kolmiulotteinen ? "3d" : "atlas"));
+                return;
+            }
             if (mita == "aanet")
             {
                 // A/B-kehityskytkin (era 2) + tilaraportti ("poikki aanet"): ladatut klipit, silmukat, puhuja.
@@ -448,6 +535,37 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa("poikki: äänet " + (arvo == "1" ? "päällä" : "pois"));
                 }
                 else o.Kirjaa(aanet.Tilaraportti());
+                return;
+            }
+            if (mita == "valo")
+            {
+                // Aurinko/Lamput/Tuli (era 2b, DioraamaValot.cs): nayttamo.Valot-olion kytkimet, kuten Hehku.
+                // Nelisanainen komento: osat[2] = aurinko|lamput|tuli, osat[3] = 0|1 (kuten "taso"-komento).
+                string kohde = arvo;
+                bool paalla = (osat.Length > 3 ? osat[3] : null) == "1";
+                if (nayttamo?.Valot == null) { o.Kirjaa("poikki: valot eivät ole valmiit (linssiä ei ole avattu kertaakaan)"); return; }
+                if (kohde == "aurinko") nayttamo.Valot.Aurinko = paalla;
+                else if (kohde == "lamput") nayttamo.Valot.Lamput = paalla;
+                else if (kohde == "tuli") nayttamo.Valot.Tuli = paalla;
+                else { o.Kirjaa("poikki: tuntematon valo " + kohde + " (aurinko|lamput|tuli)"); return; }
+                o.Kirjaa("poikki: valo " + kohde + " " + (paalla ? "päällä" : "pois"));
+                return;
+            }
+            if (mita == "valaistus")
+            {
+                // DioraamaValaistu/DioraamaMaalattu-vaihto (era 2b, DioraamaRakennus.Valaistus-ominaisuus): kuten
+                // Hehku nayttamolle -- jos linssi on kiinni, kytkin ei säily seuraavaan avaukseen.
+                if (rakennus3D != null) rakennus3D.Valaistus = arvo == "1";
+                o.Kirjaa("poikki: valaistus " + (arvo == "1" ? "päällä (DioraamaValaistu)" : "pois (DioraamaMaalattu)"));
+                return;
+            }
+            if (mita == "pinnat")
+            {
+                // A/B-vertailu (kohta 2: "Taulussa A/B-kytkin vain kehittäjätilassa"): kertaluonteinen pakotus
+                // kaikille jo luoduille materiaaleille (ei pysyvä tila), ks. DioraamaRakennus.PakotaTilaKaikille.
+                if (arvo != "a" && arvo != "b") { o.Kirjaa("poikki: pinnat a|b"); return; }
+                rakennus3D?.PakotaTilaKaikille(arvo == "b");
+                o.Kirjaa("poikki: pinnat " + arvo);
                 return;
             }
             if (!avoinna) { o.Kirjaa("poikki: linssi ei ole auki (linssi poikkileikkaus)"); return; }
@@ -477,7 +595,8 @@ namespace Matkakirja.Natiivi
             if (rakennus == null) return "poikki: lataa" + (latausKaynnissa ? "…" : "");
             string kohde = viimeNakyma?.KohdeTila ?? "yleisnäkymä";
             return $"poikki: {rakennus.Nimi}, kohde {kohde}, tiloja {rakennus3D.TilojaLadattu}/{rakennus.Tilat.Count}, " +
-                   $"hahmoja {hahmot3D.Maara}, peili {peiliKuvaus}, aika {(pysaytettyT.HasValue ? pysaytettyT.Value.ToString("F1", CultureInfo.InvariantCulture) : "elää")}";
+                   $"hahmoja {hahmot3D.Maara}+{nayttamo.Hahmot3D?.Maara ?? 0} 3d ({nayttamo.Hahmot3D?.MallejaLadattu ?? 0} mallia), " +
+                   $"peili {peiliKuvaus}, aika {(pysaytettyT.HasValue ? pysaytettyT.Value.ToString("F1", CultureInfo.InvariantCulture) : "elää")}";
         }
 
         string Mittausraportti()
@@ -493,7 +612,10 @@ namespace Matkakirja.Natiivi
             foreach (var t in ladatutPinnat.Values) uusienTavuja += TekstuuriTavuja(t);
             foreach (var t in ladatutLiekkiAtlakset.Values) uusienTavuja += TekstuuriTavuja(t);
             double tekstuuriMt = ((hahmot3D?.TekstuuriTavuja() ?? 0) + uusienTavuja) / (1024.0 * 1024.0);
-            return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {rakennus3D?.Kolmiot ?? 0}, " +
+            // era 2b (kohta 4, ali-agentti P4b): 3D-hahmojen kolmiot lasketaan JAETUSTA geometriasta (kerran
+            // per henkilö, ei per instanssi -- ks. DioraamaHahmot3D.KolmiotJaetussaGeometriassa-kommentti).
+            int hahmo3dKolmiot = nayttamo?.Hahmot3D?.KolmiotJaetussaGeometriassa() ?? 0;
+            return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {(rakennus3D?.Kolmiot ?? 0) + hahmo3dKolmiot} (3d-hahmot {hahmo3dKolmiot}), " +
                    $"kärkiä {rakennus3D?.Karjet ?? 0}, rendereitä {(rakennus3D?.Renderereita ?? 0) + (hahmot3D?.Maara ?? 0)}, " +
                    $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, kamera {asento}";
         }

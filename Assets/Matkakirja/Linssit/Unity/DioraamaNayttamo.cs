@@ -72,6 +72,16 @@ namespace Matkakirja.Natiivi
         /// samalla kerroksella kuin muu dioraama. DioraamaSovitin kutsuu tätä viittausta LisaaTila/AsetaAtlas-
         /// kutsuihin (Hahmot-malli), kun rakennus.json:n liekkidata on ladattu.</summary>
         public DioraamaLiekit Liekit { get; private set; }
+        /// <summary>Dioraaman valot (aurinko + tilojen pistevalot, erä 2b): omistus ja elinkaari täällä (Luo/
+        /// Paivita/Tuhoa), sama kerros kuin muu dioraama. Ks. DioraamaValot.cs:n alkukommentti siitä, miksi se
+        /// lukee Rakennuksen/kohdetilan DioraamaSovitin-staattisista sen sijaan, että Sovitin työntäisi ne tänne.</summary>
+        public DioraamaValot Valot { get; private set; }
+        /// <summary>3D-pienoisfiguurit (erä 2b, kohta 4 "3D-HAHMOT"): omistus ja elinkaari TÄÄLLÄ (Luo/Tuhoa),
+        /// sama malli kuin Liekit/Valot yllä — mutta Paivita EI tapahdu tämän luokan Paivita-metodissa (toisin
+        /// kuin Liekit/Valot), koska se tarvitsee Rakennus+Nakyma-parametrit, joita DioraamaNayttamo.Paivita ei
+        /// vastaanota: DioraamaSovitin kutsuu nayttamo.Hahmot3D.Paivita(...):a suoraan omasta Paivita-metodistaan,
+        /// SAMAAN kohtaan kuin vanhaa 2D-hahmot3D-kenttää (ks. DioraamaSovitin.cs).</summary>
+        public DioraamaHahmot3D Hahmot3D { get; private set; }
         /// <summary>
         /// Näyttämön kuva: kamera piirtää tähän, ja DioraamaTaulu näyttää sen koko ruudun UI-elementtinä kerroksessa
         /// LinssiUi.MustaKerros (24, Ihmisen matkan musta tausta). Näin kartan UI (nimet, tilarivi, Liiku) jää alle ja
@@ -90,6 +100,8 @@ namespace Matkakirja.Natiivi
             n.pallonKamera = pallonKamera;
             n.LuoKamera();
             n.Liekit = new DioraamaLiekit(n.transform);
+            n.Valot = new DioraamaValot(n.transform);
+            n.Hahmot3D = new DioraamaHahmot3D(n.transform);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
             Shader.SetGlobalColor(IdSumuVari, TaustaVari); // sama muunnos kuin kameran taustavärillä
             Shader.SetGlobalVector(IdSumu, new Vector4(1000f, 4000f, 0, 0));
@@ -118,7 +130,7 @@ namespace Matkakirja.Natiivi
             kameraData = Kamera.GetUniversalAdditionalCameraData();
             kameraData.renderType = CameraRenderType.Base;
             kameraData.renderPostProcessing = DofPaalla;
-            kameraData.renderShadows = false;
+            kameraData.renderShadows = true; // era 2b: aurinko+lamput+tuli heittävät varjoja (DioraamaValot.cs)
             kameraData.requiresDepthTexture = true; // syväterävyys tarvitsee syvyystekstuurin; vain tällä kameralla (ei Mobile_RPAssetiin)
             kameraData.requiresColorTexture = false;
             kameraData.volumeLayerMask = 1 << Kerros;
@@ -224,6 +236,8 @@ namespace Matkakirja.Natiivi
 
             // Liekkien billboard-kääntö ja ruutu (ks. Paivita-parametrin t-kommentti yllä).
             Liekit?.Paivita(null, default, Kamera, t);
+            // Aurinko/pistevalojen lepatus + kohdetilan mukainen varjoetäisyys (era 2b, DioraamaValot.cs).
+            Valot?.Paivita(t, vahennettyLiike);
         }
 
         /// <summary>"poikki dof 0|1" ja Hehku-ominaisuus ("poikki hehku 0|1") voivat vaihtaa tilaa milloin tahansa;
@@ -251,6 +265,10 @@ namespace Matkakirja.Natiivi
             KuvaVaihtui?.Invoke(null);
             Liekit?.Tyhjenna();
             Liekit = null;
+            Valot?.Tuhoa();
+            Valot = null;
+            Hahmot3D?.Tyhjenna();
+            Hahmot3D = null;
             if (profiili != null) Destroy(profiili);
             profiili = null;
             syvyys = null;

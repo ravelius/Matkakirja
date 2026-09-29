@@ -26,6 +26,15 @@
 //    pulu + hahmon Reaktio; muuten null. Askel + AskeleenAani kertovat saman askeleen indeksin ja äänipankin id:n
 //    (DioraamaAanet.cs käyttää näitä, ei tekstiä, tunnistaakseen askeleen vaihtumisen ja soittaakseen äänen).
 //  - Pystynäytössä tilan kamera on KameraPysty, jos data antaa sen (muuten Kamera).
+//  - LEIJUNTA JA KIERRON RAJAUS (era 2b, dioraama-rajapinnat-era2b-20260929.md kohta 5, agentti P5): Leijunta-
+//    ominaisuus (oletus pois, "poikki drift 0|1" DioraamaSovitin.cs:ssä) lisää Kameraliike.Leijunta-ajelehduksen
+//    NakymaHetkellän palauttamaan kameraan VAIN kun kamera on levossa (ei kesken siirtymää) EIKÄ pelaaja vedä/
+//    nipistä (VetoKaynnissa-ominaisuus; Unity-puolen DioraamaSyote asettaa tämän joka kehys kosketusten määrän
+//    mukaan). RajaaPelaajanAsento on Unity-puolen (DioraamaSyote.Sovita) kutsupiste Kameraliike.RajaaKierrolle:
+//    "perus" saa tässä olla NakymaHetkellän palauttama (mahdollisesti leijunnan siirtämä) kamera-asento sellaisenaan
+//    — leijunnan ±3°/±1,5°-poikkeama perusasennossa on mitätön kierron rajoihin nähden (±55° tms.), joten erillistä
+//    "puhdasta" perusasentoa ei tarvita rajauksen vertailukohdaksi. yleisnakyma-tieto RajaaKierrolle tulee
+//    viimeisimmän Kohdista-kutsun kohteesta (null = yleisnäkymä), ei erillisenä parametrina kutsujalta.
 //  - AVAUS (Linnanrakentaja 29.9.): ensimmäisessä yleisnäkymässä (tapahtuma 0) ajetaan linnan oma käsikirjoitus
 //    AvausViive s avauksen jälkeen: Pulu liitää taivaalta (TaivasPiste) linnan laskeutumispisteeseen, ja taulu
 //    esittää linnan 3 ydinasiaa (pulu-lenna, taulu, kohta 0–2). Myöhemmät paluut yleisnäkymään eivät toista sitä.
@@ -98,6 +107,11 @@ namespace Matkakirja.Linssit.Dioraama
         public LinssiTiedot Tiedot => PoikkiTiedot;
         public Rakennus Rakennus { get; private set; }
         public bool Auki { get; private set; }
+        /// <summary>Ajelehtiminen levossa (era 2b, "poikki drift 0|1"); oletus pois. Ks. tiedoston alkukommentti.</summary>
+        public bool Leijunta { get; set; }
+        /// <summary>Unity-puoli (DioraamaSyote) asettaa tämän joka kehys: tosi kun sormi/sormet ovat ruudulla
+        /// ja ele vaikuttaa kameraan (ei UI:n peittämä). Leijunta ei etene tämän ollessa tosi.</summary>
+        public bool VetoKaynnissa { get; set; }
 
         readonly List<Kameratapahtuma> tapahtumat = new List<Kameratapahtuma>();
         readonly List<double> napautukset = new List<double>();
@@ -154,6 +168,18 @@ namespace Matkakirja.Linssit.Dioraama
             napautukset.Add(t);
         }
 
+        /// <summary>
+        /// Rajaa pelaajan vedon/nipistyksen tuottaman asennon (Kameraliike.PelaajanAsento-tulos) kierron rajoihin
+        /// (era 2b, kohta 1/5). Unity-puoli (DioraamaSyote.Sovita) kutsuu tätä sen sijaan, että soveltaisi
+        /// Kameraliike.RajaaKierrolle itse — tämä metodi tietää, onko viimeisin kohdistus tila vai yleisnäkymä
+        /// (yleisnakyma-parametri Kameraliike.RajaaKierrolle), Unity-puolen ei tarvitse tuntea tapahtumat-listaa.
+        /// </summary>
+        public Asento RajaaPelaajanAsento(Asento perus, Asento pelaajanAsento)
+        {
+            bool yleisnakyma = tapahtumat.Count == 0 || tapahtumat[tapahtumat.Count - 1].Kohde == null;
+            return Kameraliike.RajaaKierto(perus, pelaajanAsento, yleisnakyma);
+        }
+
         /// <summary>Viimeisen tapahtuman indeksi jonka Hetki ≤ t (sama malli kuin Heratys.ViimeisinKohde).</summary>
         int ViimeisinIndeksi(double t)
         {
@@ -190,7 +216,9 @@ namespace Matkakirja.Linssit.Dioraama
             Asento kamera;
             if (i == 0 || tapahtuma.Kesto <= 0 || t >= tapahtuma.Hetki + tapahtuma.Kesto)
             {
-                kamera = p1;
+                // Levossa (ei kesken siirtymää): leijunta saa ajelehtia VAIN tässä haarassa, ei kaarilennon aikana,
+                // ja vain kun pelaaja ei vedä/nipistä (VetoKaynnissa) — ks. tiedoston alkukommentti.
+                kamera = Leijunta && !VetoKaynnissa ? Kameraliike.Leijunta(p1, t) : p1;
             }
             else
             {

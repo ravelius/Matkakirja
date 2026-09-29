@@ -397,6 +397,110 @@ namespace Matkakirja.Linssit.Testit
         }
 
         // ═══════════════════════════════════════════════════════════════════
+        // 1d) DioraamaGlb.Solmut (era 2b, kohta 4, ali-agentti P4b): monisolmuinen glb — 2 solmua
+        // (juuri: mesh+TRS+lapsi; lapsi: EI meshiä, vanhempi luetaan juuren "children"-taulukosta).
+        // Kattaa: hierarkia/vanhempi-indeksi, TRS-oletukset puuttuvalle rotation/scale-kentälle, ja
+        // unityyn-peilaus (translation.z ja rotation (z,w) negatoituvat, scale EI muutu).
+        // ═══════════════════════════════════════════════════════════════════
+
+        static byte[] TestiMonisolmuGlb()
+        {
+            // Sama POSITION/COLOR_0/indeksit-data kuin TestiGlb() — vain nodes/mesh-rakenne eroaa.
+            float[] pos = { 0, 0, 2, 1, 0, 2, 0, 1, 5 };
+            byte[] vareja = { 200, 10, 5, 255, 0, 255, 0, 128, 10, 20, 30, 40 };
+            uint[] idx = { 0, 1, 2 };
+            var bin = new List<byte>();
+            foreach (var f in pos) bin.AddRange(BitConverter.GetBytes(f));
+            bin.AddRange(vareja);
+            foreach (var ix in idx) bin.AddRange(BitConverter.GetBytes(ix));
+
+            // juuri: mesh 0, translation [1,2,3], rotation [0.5,0.5,0.5,0.5] (yksikkökvaternio — 0.25×4=1 —
+            // 120° kierto akselin (1,1,1)/√3 ympäri), scale [2,1,0.5], lapsi = solmu 1 ("children":[1]).
+            // lapsi: EI mesh-kenttää (puhdas nivel), translation [0,-0.3,0.2], rotation/scale PUUTTUU lähteestä
+            // (-> lukijan oletus [0,0,0,1] / [1,1,1]).
+            string json = @"{
+              ""asset"": {""version"":""2.0""},
+              ""nodes"": [
+                {""name"":""juuri"",""mesh"":0,""translation"":[1,2,3],""rotation"":[0.5,0.5,0.5,0.5],""scale"":[2,1,0.5],""children"":[1]},
+                {""name"":""lapsi"",""translation"":[0,-0.3,0.2]}
+              ],
+              ""meshes"": [{""primitives"":[{""attributes"":{""POSITION"":0,""COLOR_0"":1},""indices"":2,""material"":0,""extras"":{""pinta"":""iho""}}]}],
+              ""materials"": [{""name"":""iho"",""pbrMetallicRoughness"":{""baseColorFactor"":[0.2,0.4,0.6,1]}}],
+              ""accessors"": [
+                {""bufferView"":0,""componentType"":5126,""count"":3,""type"":""VEC3""},
+                {""bufferView"":1,""componentType"":5121,""count"":3,""type"":""VEC4"",""normalized"":true},
+                {""bufferView"":2,""componentType"":5125,""count"":3,""type"":""SCALAR""}
+              ],
+              ""bufferViews"": [
+                {""buffer"":0,""byteOffset"":0,""byteLength"":36},
+                {""buffer"":0,""byteOffset"":36,""byteLength"":12},
+                {""buffer"":0,""byteOffset"":48,""byteLength"":12}
+              ],
+              ""buffers"": [{""byteLength"":60}]
+            }";
+            return TeeGlbTavut(json, bin.ToArray());
+        }
+
+        [Testi] static void MonisolmuGlbHierarkiaJaTrsKanoninen()
+        {
+            var malli = DioraamaGlb.Lue(TestiMonisolmuGlb(), unityyn: false);
+            Oleta.Sama(2, malli.Solmut.Count);
+            var juuri = malli.Solmut[0]; var lapsi = malli.Solmut[1];
+            Oleta.Sama("juuri", juuri.Nimi); Oleta.Sama(-1, juuri.Vanhempi);
+            Oleta.Sama("lapsi", lapsi.Nimi); Oleta.Sama(0, lapsi.Vanhempi);
+            Oleta.Sama(1, juuri.Osat.Count, "juurella on mesh -> 1 osa");
+            Oleta.Sama(0, lapsi.Osat.Count, "lapsella ei meshiä -> 0 osaa (ei virhe)");
+
+            Lahella(1, juuri.Translation[0], "juuri T.x"); Lahella(2, juuri.Translation[1], "juuri T.y");
+            Lahella(3, juuri.Translation[2], "juuri T.z");
+            Lahella(0.5, juuri.Rotation[0], "juuri R.x"); Lahella(0.5, juuri.Rotation[1], "juuri R.y");
+            Lahella(0.5, juuri.Rotation[2], "juuri R.z"); Lahella(0.5, juuri.Rotation[3], "juuri R.w");
+            Lahella(2, juuri.Scale[0], "juuri S.x"); Lahella(1, juuri.Scale[1], "juuri S.y"); Lahella(0.5, juuri.Scale[2], "juuri S.z");
+
+            Lahella(0, lapsi.Translation[0], "lapsi T.x"); Lahella(-0.3, lapsi.Translation[1], "lapsi T.y");
+            Lahella(0.2, lapsi.Translation[2], "lapsi T.z");
+            Lahella(0, lapsi.Rotation[0], "lapsi R.x (oletus)"); Lahella(0, lapsi.Rotation[1], "lapsi R.y (oletus)");
+            Lahella(0, lapsi.Rotation[2], "lapsi R.z (oletus)"); Lahella(1, lapsi.Rotation[3], "lapsi R.w (oletus identiteetti)");
+            Lahella(1, lapsi.Scale[0], "lapsi S.x (oletus)"); Lahella(1, lapsi.Scale[1], "lapsi S.y (oletus)");
+            Lahella(1, lapsi.Scale[2], "lapsi S.z (oletus)");
+
+            // Vanha yksisolmu-sopimus säilyy MUUTTUMATTOMANA: Nimi/Osat = ensimmäinen solmu, jolla on mesh.
+            Oleta.Sama("juuri", malli.Nimi);
+            Oleta.Sama(1, malli.Osat.Count);
+
+            // GlbOsa.Vari (era 2b): materiaalin pbrMetallicRoughness.baseColorFactor luetaan sellaisenaan
+            // (LINEAARINEN, ei sRGB-muunnosta — glTF-spec ja hahmot3d.mjs:n rakenna aina näin).
+            var osa = juuri.Osat[0];
+            Lahella(0.2, osa.Vari[0], "osa.Vari.r"); Lahella(0.4, osa.Vari[1], "osa.Vari.g");
+            Lahella(0.6, osa.Vari[2], "osa.Vari.b"); Lahella(1, osa.Vari[3], "osa.Vari.a");
+        }
+
+        [Testi] static void MonisolmuGlbUnityynPeilaaTranslationJaRotationEiScalea()
+        {
+            var malli = DioraamaGlb.Lue(TestiMonisolmuGlb(), unityyn: true);
+            var juuri = malli.Solmut[0]; var lapsi = malli.Solmut[1];
+
+            Lahella(1, juuri.Translation[0], "juuri T.x sama"); Lahella(2, juuri.Translation[1], "juuri T.y sama");
+            Lahella(-3, juuri.Translation[2], "juuri T.z negatoitu");
+            Lahella(0.5, juuri.Rotation[0], "juuri R.x sama"); Lahella(0.5, juuri.Rotation[1], "juuri R.y sama");
+            Lahella(-0.5, juuri.Rotation[2], "juuri R.z negatoitu"); Lahella(-0.5, juuri.Rotation[3], "juuri R.w negatoitu");
+            Lahella(2, juuri.Scale[0], "juuri S.x muuttumaton"); Lahella(1, juuri.Scale[1], "juuri S.y muuttumaton");
+            Lahella(0.5, juuri.Scale[2], "juuri S.z muuttumaton");
+
+            Lahella(0, lapsi.Translation[0], "lapsi T.x sama"); Lahella(-0.3, lapsi.Translation[1], "lapsi T.y sama");
+            Lahella(-0.2, lapsi.Translation[2], "lapsi T.z negatoitu");
+            // Oletusidentiteetti [0,0,0,1] peilattuna -> [0,0,0,-1]: SAMA rotaatio (kvaternio q ≡ -q), ei virhe.
+            Lahella(0, lapsi.Rotation[0], "lapsi R.x (oletus, muuttumaton)"); Lahella(0, lapsi.Rotation[1], "lapsi R.y (oletus)");
+            Lahella(0, lapsi.Rotation[2], "lapsi R.z (oletus)"); Lahella(-1, lapsi.Rotation[3], "lapsi R.w (identiteetti peilattuna: -1 ≡ +1)");
+
+            // Pyörivä osa (juuren mesh, osat[0]): sama POSITION/kiertosuunta-muunnos kuin ennen — vertaa
+            // GlbUnityynMuuntaaZnJaKiertosuunnan-testiin (identtinen lähde-POSITION/indeksit).
+            var osa = juuri.Osat[0];
+            Oleta.Sama(-2f, osa.Paikat[2]); Oleta.Sama(-2f, osa.Paikat[5]); Oleta.Sama(-5f, osa.Paikat[8]);
+            Oleta.Sama(0, osa.Kolmiot[0]); Oleta.Sama(2, osa.Kolmiot[1]); Oleta.Sama(1, osa.Kolmiot[2]);
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
         // 2a) Kameraliike: käsin lasketut arvot (a = 180 → +Z)
         // ═══════════════════════════════════════════════════════════════════
 
@@ -459,6 +563,82 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(-10.0, b.Atsimuutti, "da rajattu -20");
             Oleta.Sama(15.0, b.Korkeus, "dk rajattu +10");
             Oleta.Sama(3.0, b.Etaisyys, "zoom rajattu 0,75");
+        }
+
+        // ─── ERA 2B (agentti P5, dioraama-rajapinnat-era2b-20260929.md kohdat 1 ja 5): kaarilento, RajaaKierto, Leijunta ───
+
+        [Testi] static void SiirtymaAsentoKaariNouseeJaPullistuuKeskella()
+        {
+            var p0 = new Asento(new V3(0, 0, 0), 0, 0, 5, 45, 0);
+            var p1 = new Asento(new V3(10, 0, 0), 0, 0, 5, 45, 0); // |Δkohde|=10
+            var reuna0 = Kameraliike.SiirtymaAsento(p0, p1, 0);
+            var reuna1 = Kameraliike.SiirtymaAsento(p0, p1, 1);
+            Lahella(0.0, reuna0.Korkeus, "t=0: ei nousua"); Lahella(5.0, reuna0.Etaisyys, "t=0: ei pullistumaa");
+            Lahella(0.0, reuna1.Korkeus, "t=1: ei nousua"); Lahella(5.0, reuna1.Etaisyys, "t=1: ei pullistumaa");
+            double matka01 = 10.0 / 60.0; // ei kyllästy
+            var keski = Kameraliike.SiirtymaAsento(p0, p1, 0.5);
+            Lahella(12.0 * matka01, keski.Korkeus, "keski.Korkeus = KaarenNousuMaxAstetta·matka01");
+            Lahella(5.0 * (1 + 0.35 * matka01), keski.Etaisyys, "keski.Etaisyys = lerp·(1+0,35·matka01)");
+
+            var p1Kauas = new Asento(new V3(100, 0, 0), 0, 0, 5, 45, 0); // |Δkohde|=100 > 60 -> matka01=1 (kyllästys)
+            var kaukoKeski = Kameraliike.SiirtymaAsento(p0, p1Kauas, 0.5);
+            Lahella(12.0, kaukoKeski.Korkeus, "matka01=1 -> täysi 12° nousu");
+            Lahella(5.0 * 1.35, kaukoKeski.Etaisyys, "matka01=1 -> täysi 0,35-pullistuma");
+        }
+
+        [Testi] static void RajaaKiertoEiKiertoKenttaaKayttaaTilaOletusta()
+        {
+            var perus = new Asento(new V3(0, 0, 0), 200, 25, 4, 45, 0.3);
+            var sisalla = Kameraliike.RajaaKierto(perus, new Asento(new V3(0, 0, 0), 220, 30, 4.5, 45, 0.3));
+            Oleta.Sama(220.0, sisalla.Atsimuutti, "rajojen sisällä: läpi muuttumattomana");
+            Oleta.Sama(30.0, sisalla.Korkeus);
+            Oleta.Sama(4.5, sisalla.Etaisyys);
+            var ylitys = Kameraliike.RajaaKierto(perus, new Asento(new V3(0, 0, 0), 350, 90, 20, 45, 0.3));
+            Oleta.Sama(perus.Atsimuutti + Kierto.OletusTila.AtsimuuttiMax.Value, ylitys.Atsimuutti, "atsimuutti leikkautuu +55:een");
+            Oleta.Sama(Kierto.OletusTila.KorkeusMax, ylitys.Korkeus, "korkeus leikkautuu 65:een");
+            Oleta.Sama(perus.Etaisyys * Kierto.OletusTila.EtaisyysMax, ylitys.Etaisyys, "etaisyys leikkautuu perus·1,6:een");
+        }
+
+        [Testi] static void RajaaKiertoYleisnakymaAtsimuuttiVapaa()
+        {
+            var perus = new Asento(new V3(0, 0, 0), 180, 35, 8, 50, 0.1);
+            var kauas = Kameraliike.RajaaKierto(perus, new Asento(new V3(0, 0, 0), 340, 90, 20, 50, 0.1), yleisnakyma: true);
+            Oleta.Sama(340.0, kauas.Atsimuutti, "yleisnäkymä: atsimuutti vapaa (ei rajaa)");
+            Oleta.Sama(Kierto.OletusYleis.KorkeusMax, kauas.Korkeus);
+            Oleta.Sama(perus.Etaisyys * Kierto.OletusYleis.EtaisyysMax, kauas.Etaisyys);
+        }
+
+        [Testi] static void RajaaKiertoOmaKiertoVoittaaOletuksenVaikkaYleisnakymaTosi()
+        {
+            var oma = new Kierto { AtsimuuttiMin = -10, AtsimuuttiMax = 10, KorkeusMin = 20, KorkeusMax = 30, EtaisyysMin = 0.9, EtaisyysMax = 1.1 };
+            var perus = new Asento(new V3(0, 0, 0), 200, 25, 4, 45, 0.3, oma);
+            var tulos = Kameraliike.RajaaKierto(perus, new Asento(new V3(0, 0, 0), 230, 5, 10, 45, 0.3), yleisnakyma: true);
+            Oleta.Sama(210.0, tulos.Atsimuutti, "perus.Kierto voittaa OLETUS_KIERTO_YLEISin");
+            Oleta.Sama(20.0, tulos.Korkeus);
+            Oleta.Sama(4.4, tulos.Etaisyys);
+        }
+
+        [Testi] static void RajaaKiertoAtsimuuttiEiNormalisoidu360Ylle()
+        {
+            // perus 350°, pelaaja 430°(≡70°): lyhin ero on +80°, leikkautuu +55:een -> tulos 350+55=405 (ei 45).
+            var perus = new Asento(new V3(0, 0, 0), 350, 20, 5, 45, 0.2);
+            var tulos = Kameraliike.RajaaKierto(perus, new Asento(new V3(0, 0, 0), 430, 20, 5, 45, 0.2));
+            Oleta.Sama(405.0, tulos.Atsimuutti, "ei normalisoida 0..360-välille");
+        }
+
+        [Testi] static void LeijuntaJaksollinenMuutKentatEnnallaan()
+        {
+            var p = new Asento(new V3(1, 2, 3), 200, 25, 4, 45, 0.3);
+            var t0 = Kameraliike.Leijunta(p, 0);
+            Lahella(200.0, t0.Atsimuutti, "t=0: nollapoikkeama atsimuutille"); Lahella(25.0, t0.Korkeus, "t=0: nollapoikkeama korkeudelle");
+            var t6 = Kameraliike.Leijunta(p, 6); // 24/4=6 -> sin(π/2)=1 -> +3°
+            Lahella(203.0, t6.Atsimuutti, "t=6: neljännesjakso -> +3°");
+            var t24 = Kameraliike.Leijunta(p, 24); // täysi jakso -> takaisin 0:aan
+            Lahella(200.0, t24.Atsimuutti, "t=24: täysi jakso -> 0");
+            var t31 = Kameraliike.Leijunta(p, 31); // täysi jakso korkeudelle -> takaisin 0:aan
+            Lahella(25.0, t31.Korkeus, "t=31: täysi jakso -> 0");
+            SamaV3(p.Kohde, t6.Kohde, "kohde koskematta"); Lahella(p.Etaisyys, t6.Etaisyys, "etaisyys koskematta");
+            Lahella(p.Fov, t6.Fov, "fov koskematta"); Lahella(p.Aukko, t6.Aukko, "aukko koskematta");
         }
 
         // ═══════════════════════════════════════════════════════════════════
@@ -856,7 +1036,22 @@ namespace Matkakirja.Linssit.Testit
 
         static Asento LueAsentoJson(JsonElement e) => new Asento(
             LueV3Json(e.GetProperty("kohde")), e.GetProperty("atsimuutti").GetDouble(), e.GetProperty("korkeus").GetDouble(),
-            e.GetProperty("etaisyys").GetDouble(), e.GetProperty("fov").GetDouble(), e.GetProperty("aukko").GetDouble());
+            e.GetProperty("etaisyys").GetDouble(), e.GetProperty("fov").GetDouble(), e.GetProperty("aukko").GetDouble(),
+            LueKiertoJson(e));
+
+        /// <summary>ERA 2B: lukee ASENTOn valinnaisen "kierto"-kentän (dioraama-vektorit.json:n rajaus-osio,
+        /// tools/dioraama/tee-vektorit.mjs). Puuttuva kenttä -> null (Kameraliike.RajaaKierto soveltaa oletuksen).</summary>
+        static Kierto LueKiertoJson(JsonElement asentoJson)
+        {
+            if (!asentoJson.TryGetProperty("kierto", out var k) || k.ValueKind != JsonValueKind.Object) return null;
+            return new Kierto
+            {
+                AtsimuuttiMin = k.GetProperty("atsimuuttiMin").ValueKind == JsonValueKind.Null ? (double?)null : k.GetProperty("atsimuuttiMin").GetDouble(),
+                AtsimuuttiMax = k.GetProperty("atsimuuttiMax").ValueKind == JsonValueKind.Null ? (double?)null : k.GetProperty("atsimuuttiMax").GetDouble(),
+                KorkeusMin = k.GetProperty("korkeusMin").GetDouble(), KorkeusMax = k.GetProperty("korkeusMax").GetDouble(),
+                EtaisyysMin = k.GetProperty("etaisyysMin").GetDouble(), EtaisyysMax = k.GetProperty("etaisyysMax").GetDouble(),
+            };
+        }
 
         static string TekstiTaiNull(JsonElement e) => e.ValueKind == JsonValueKind.Null ? null : e.GetString();
 
@@ -1053,6 +1248,302 @@ namespace Matkakirja.Linssit.Testit
                 var j = new TehosteJakso { ValiMin = valiMin, ValiMax = valiMax };
                 j.AaniIdt.AddRange(aaniIdt);
                 return j;
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
+        // 6) ERA 2B (dioraama-rajapinnat-era2b-20260929.md kohdat 1 ja 4, P0/datakerros): Rakennus.Valaistus,
+        //    Tila.Valot, Pinta.Kuvio, Asento.Kierto, Henkilo.Malli3d. Jokainen testi tarkistaa myös vanhan
+        //    muodon (kenttä puuttuu lähteestä) oletusarvon.
+        // ═══════════════════════════════════════════════════════════════════
+
+        [Testi] static void ValaistusJasennysJaOletusPuuttuessa()
+        {
+            const string json = @"{
+              ""valaistus"": {
+                ""aurinko"": {""atsimuutti"":215,""korkeus"":38,""vari"":""#fff0d8"",""voima"":1.15},
+                ""taivas"": {""yla"":""#b9cddd"",""ala"":""#5d4c3c"",""voima"":0.55},
+                ""sumu"": null
+              }
+            }";
+            var r = DioraamaData.Lue(json);
+            Oleta.Tosi(r.Valaistus != null, "valaistus jäsentyy");
+            Oleta.Sama(215.0, r.Valaistus.Aurinko.Atsimuutti);
+            Oleta.Sama(38.0, r.Valaistus.Aurinko.Korkeus);
+            Oleta.Sama("#fff0d8", r.Valaistus.Aurinko.Vari);
+            Oleta.Sama(1.15, r.Valaistus.Aurinko.Voima);
+            Oleta.Sama("#b9cddd", r.Valaistus.Taivas.Yla);
+            Oleta.Sama("#5d4c3c", r.Valaistus.Taivas.Ala);
+            Oleta.Sama(0.55, r.Valaistus.Taivas.Voima);
+
+            // Vanha rakennus.json (ei valaistus-kenttää lähteessä): Valaistus pysyy nullina.
+            var vanha = DioraamaData.Lue(KeittioFixture);
+            Oleta.Tosi(vanha.Valaistus == null, "vanhassa muodossa ei valaistusta -> null");
+        }
+
+        [Testi] static void TilanValotJasennysJaOletusPuuttuessa()
+        {
+            const string json = @"{
+              ""tilat"": [
+                {
+                  ""id"":""keittio"",""kohdistettava"":true,""rajat"":{""min"":[0,0,0],""max"":[1,1,1]},
+                  ""valot"": [
+                    {""paikka"":[14,0.5,4.9],""sade"":7,""voima"":1},
+                    {""paikka"":[13.3,0.9,4.9],""sade"":1.5,""voima"":0.6,""vari"":""#ffb070"",""lepatus"":0.35}
+                  ]
+                },
+                {""id"":""massa"",""kohdistettava"":false,""rajat"":{""min"":[0,0,0],""max"":[1,1,1]}}
+              ]
+            }";
+            var r = DioraamaData.Lue(json);
+            var keittio = r.Tila("keittio");
+            Oleta.Sama(2, keittio.Valot.Count);
+            SamaV3(new V3(14, 0.5, 4.9), keittio.Valot[0].Paikka, "valot[0].Paikka");
+            Oleta.Sama(7.0, keittio.Valot[0].Sade);
+            Oleta.Sama(1.0, keittio.Valot[0].Voima);
+            Oleta.Tosi(keittio.Valot[0].Vari == null, "ensimmäisellä valolla ei väriä -> null");
+            Oleta.Sama(0.0, keittio.Valot[0].Lepatus, "lepatus puuttuu -> 0");
+            Oleta.Sama("#ffb070", keittio.Valot[1].Vari);
+            Oleta.Sama(0.35, keittio.Valot[1].Lepatus, "tulisijan lepatus 0,35 (kohta 1)");
+
+            var massa = r.Tila("massa");
+            Oleta.Sama(0, massa.Valot.Count, "valot puuttuu JSON:sta -> tyhjä lista");
+        }
+
+        [Testi] static void PinnanKuvioJasennysJaOletusTasainen()
+        {
+            const string json = @"{
+              ""pinnat"": {
+                ""kivilattia"": {""vari"":""#9c948a"",""toisto_m"":0.5,
+                  ""kuvio"":{""tyyppi"":""kivi"",""koko_m"":[0.6,0.6],""sauma_m"":0.015,""vaihtelu"":0.4}},
+                ""kivi"": {""vari"":""#b8ad9c"",""toisto_m"":2.0}
+              }
+            }";
+            var r = DioraamaData.Lue(json);
+            var kivilattia = r.Pinnat["kivilattia"].Kuvio;
+            Oleta.Sama("kivi", kivilattia.Tyyppi);
+            Oleta.Sama(0.6, kivilattia.KokoU);
+            Oleta.Sama(0.6, kivilattia.KokoV);
+            Oleta.Sama(0.015, kivilattia.Sauma);
+            Oleta.Sama(0.4, kivilattia.Vaihtelu);
+
+            // Pinta ilman kuvio-kenttää: oletus "tasainen", muut kentät 0. Kuvio ei ole koskaan null.
+            var kivi = r.Pinnat["kivi"].Kuvio;
+            Oleta.Tosi(kivi != null, "Kuvio ei ole koskaan null");
+            Oleta.Sama("tasainen", kivi.Tyyppi);
+            Oleta.Sama(0.0, kivi.KokoU);
+            Oleta.Sama(0.0, kivi.Vaihtelu);
+        }
+        [Testi] static void AsennonKiertoJasennysJaOletusPuuttuessa()
+        {
+            const string json = @"{
+              ""yleiskamera"": {
+                ""vaaka"": {""kohde"":[0,2,0],""atsimuutti"":165,""korkeus"":30,""etaisyys"":150,""fov"":32,""aukko"":0.3,
+                  ""kierto"":{""atsimuutti"":null,""korkeus"":[8,70],""etaisyys"":[0.45,1.8]}}
+              },
+              ""tilat"": [
+                {""id"":""keittio"",""kohdistettava"":true,""rajat"":{""min"":[0,0,0],""max"":[1,1,1]},
+                  ""kamera"":{""kohde"":[1,1,1],""atsimuutti"":172,""korkeus"":22,""etaisyys"":16,""fov"":38,""aukko"":0.8,
+                    ""kierto"":{""atsimuutti"":[-55,55],""korkeus"":[6,65],""etaisyys"":[0.55,1.6]}}},
+                {""id"":""ilmankiertoa"",""kohdistettava"":true,""rajat"":{""min"":[0,0,0],""max"":[1,1,1]},
+                  ""kamera"":{""kohde"":[1,1,1],""atsimuutti"":0,""korkeus"":0,""etaisyys"":1,""fov"":40,""aukko"":0}}
+              ]
+            }";
+            var r = DioraamaData.Lue(json);
+
+            var yleisKierto = r.YleisVaaka.Kierto;
+            Oleta.Tosi(yleisKierto != null, "yleiskameran kierto jäsentyy");
+            Oleta.Tosi(yleisKierto.AtsimuuttiMin == null && yleisKierto.AtsimuuttiMax == null, "atsimuutti null -> vapaa 360");
+            Oleta.Sama(8.0, yleisKierto.KorkeusMin);
+            Oleta.Sama(70.0, yleisKierto.KorkeusMax);
+            Oleta.Sama(0.45, yleisKierto.EtaisyysMin);
+            Oleta.Sama(1.8, yleisKierto.EtaisyysMax);
+
+            var tilaKierto = r.Tila("keittio").Kamera.Kierto;
+            Oleta.Tosi(tilaKierto != null, "tilan kierto jäsentyy");
+            Oleta.Sama(-55.0, tilaKierto.AtsimuuttiMin.Value);
+            Oleta.Sama(55.0, tilaKierto.AtsimuuttiMax.Value);
+            Oleta.Sama(6.0, tilaKierto.KorkeusMin);
+            Oleta.Sama(65.0, tilaKierto.KorkeusMax);
+            Oleta.Sama(0.55, tilaKierto.EtaisyysMin);
+            Oleta.Sama(1.6, tilaKierto.EtaisyysMax);
+
+            Oleta.Tosi(r.Tila("ilmankiertoa").Kamera.Kierto == null, "kierto puuttuu lähteestä -> null (kutsuja valitsee oletuksen)");
+
+            // Speksin kohdan 1 valmiit oletukset: lukittu regressiota vastaan (muut agentit nojaavat näihin).
+            Oleta.Sama(-55.0, Kierto.OletusTila.AtsimuuttiMin.Value);
+            Oleta.Sama(55.0, Kierto.OletusTila.AtsimuuttiMax.Value);
+            Oleta.Sama(6.0, Kierto.OletusTila.KorkeusMin);
+            Oleta.Sama(65.0, Kierto.OletusTila.KorkeusMax);
+            Oleta.Sama(0.55, Kierto.OletusTila.EtaisyysMin);
+            Oleta.Sama(1.6, Kierto.OletusTila.EtaisyysMax);
+            Oleta.Tosi(Kierto.OletusYleis.AtsimuuttiMin == null && Kierto.OletusYleis.AtsimuuttiMax == null, "yleisnäkymän oletus: vapaa atsimuutti");
+            Oleta.Sama(8.0, Kierto.OletusYleis.KorkeusMin);
+            Oleta.Sama(70.0, Kierto.OletusYleis.KorkeusMax);
+            Oleta.Sama(0.45, Kierto.OletusYleis.EtaisyysMin);
+            Oleta.Sama(1.8, Kierto.OletusYleis.EtaisyysMax);
+        }
+
+        [Testi] static void HenkilonMalli3dJasennysJaOletusPuuttuessa()
+        {
+            const string json = @"{
+              ""henkilot"": {
+                ""kokki-1500"": {
+                  ""nimi"":""Kokki"",""atlas"":""hahmot/kokki-1500.png"",""ruutu"":[128,192],""sarakkeet"":8,
+                  ""pivot"":[0.5,0.04],""korkeus_m"":1.72,
+                  ""silmukat"":{""idle"":{""rivi"":0,""ruudut"":4,""fps"":6}},
+                  ""malli3d"": {
+                    ""mittasuhteet"": {""pituus_m"":1.72,""hartiat_m"":0.42,""lantio_m"":0.34,""paa_m"":0.22},
+                    ""vaatteet"": {""paita"":""#7a3b2e"",""housut"":""#4b3a2a"",""esiliina"":""#e8e0cc"",""paahine"":""myssy""},
+                    ""varit"": {""iho"":""#d9b48f"",""hiukset"":""#3a2a1f""},
+                    ""esine"": ""kauha"",
+                    ""glb"": ""hahmot3d/kokki-1500.glb""
+                  }
+                },
+                ""apulainen-1500"": {
+                  ""nimi"":""Apulainen"",""atlas"":""hahmot/apulainen-1500.png"",""ruutu"":[128,192],""sarakkeet"":8,
+                  ""pivot"":[0.5,0.04],""korkeus_m"":1.65,
+                  ""silmukat"":{""idle"":{""rivi"":0,""ruudut"":4,""fps"":6}}
+                }
+              }
+            }";
+            var r = DioraamaData.Lue(json);
+            var kokki = r.Henkilot["kokki-1500"].Malli3d;
+            Oleta.Tosi(kokki != null, "malli3d jäsentyy");
+            Oleta.Sama(1.72, kokki.Mittasuhteet.PituusM);
+            Oleta.Sama(0.42, kokki.Mittasuhteet.HartiatM);
+            Oleta.Sama(0.34, kokki.Mittasuhteet.LantioM);
+            Oleta.Sama(0.22, kokki.Mittasuhteet.PaaM);
+            Oleta.Sama("#7a3b2e", kokki.Vaatteet.Paita);
+            Oleta.Sama("#4b3a2a", kokki.Vaatteet.Housut);
+            Oleta.Tosi(kokki.Vaatteet.Hame == null, "housut asetettu -> hame null (housut|hame poissulkevat)");
+            Oleta.Sama("#e8e0cc", kokki.Vaatteet.Esiliina);
+            Oleta.Sama("myssy", kokki.Vaatteet.Paahine);
+            Oleta.Sama(2, kokki.Varit.Count);
+            Oleta.Sama("#d9b48f", kokki.Varit["iho"]);
+            Oleta.Sama("#3a2a1f", kokki.Varit["hiukset"]);
+            Oleta.Sama("kauha", kokki.Esine);
+            Oleta.Sama("hahmot3d/kokki-1500.glb", kokki.Glb);
+
+            // Vanha henkilö (ei malli3d-kenttää lähteessä): Malli3d pysyy nullina (2D-atlashahmo jatkuu).
+            Oleta.Tosi(r.Henkilot["apulainen-1500"].Malli3d == null, "malli3d puuttuu -> null");
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
+        // 6) ERA 2B PARITEETTI (agentti P5, dioraama-rajapinnat-era2b-20260929.md kohdat 1 ja 5):
+        //    RajaaKierto ja Leijunta — dioraama-vektorit.json:n rajaus/leijunta-osiot.
+        //    (Kaarilennon SiirtymaAsento-pariteetti ajautuu jo yllä olevassa PariteettiKamera-testissä,
+        //    koska formulanmuutos ei muuttanut sen allekirjoitusta tai kutsutapaa.)
+        // ═══════════════════════════════════════════════════════════════════
+
+        [Testi] static void PariteettiRajaus()
+        {
+            if (!KultainenSaatavilla()) return;
+            foreach (var tapaus in Kultainen().GetProperty("rajaus").EnumerateArray())
+            {
+                string nimi = tapaus.GetProperty("nimi").GetString();
+                var perus = LueAsentoJson(tapaus.GetProperty("perus"));
+                var asento = LueAsentoJson(tapaus.GetProperty("asento"));
+                bool yleisnakyma = tapaus.GetProperty("yleisnakyma").GetBoolean();
+                var odotettu = tapaus.GetProperty("tulos");
+                var tulos = Kameraliike.RajaaKierto(perus, asento, yleisnakyma);
+                Lahella(odotettu.GetProperty("atsimuutti").GetDouble(), tulos.Atsimuutti, nimi + " atsimuutti");
+                Lahella(odotettu.GetProperty("korkeus").GetDouble(), tulos.Korkeus, nimi + " korkeus");
+                Lahella(odotettu.GetProperty("etaisyys").GetDouble(), tulos.Etaisyys, nimi + " etaisyys");
+                Lahella(odotettu.GetProperty("fov").GetDouble(), tulos.Fov, nimi + " fov");
+                Lahella(odotettu.GetProperty("aukko").GetDouble(), tulos.Aukko, nimi + " aukko");
+            }
+        }
+
+        [Testi] static void PariteettiLeijunta()
+        {
+            if (!KultainenSaatavilla()) return;
+            var l = Kultainen().GetProperty("leijunta");
+            var asento = LueAsentoJson(l.GetProperty("asento"));
+            foreach (var nayte in l.GetProperty("naytteet").EnumerateArray())
+            {
+                double t = nayte.GetProperty("t").GetDouble();
+                string mita = "leijunta t=" + t;
+                var odotettu = nayte.GetProperty("tulos");
+                var tulos = Kameraliike.Leijunta(asento, t);
+                Lahella(odotettu.GetProperty("atsimuutti").GetDouble(), tulos.Atsimuutti, mita + " atsimuutti");
+                Lahella(odotettu.GetProperty("korkeus").GetDouble(), tulos.Korkeus, mita + " korkeus");
+                Lahella(odotettu.GetProperty("etaisyys").GetDouble(), tulos.Etaisyys, mita + " etaisyys");
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════════
+        // 7) ERÄ 2B (ali-agentti P4b, dioraama-rajapinnat-era2b-20260929.md kohta 4 "3D-HAHMOT"):
+        //    Liikkeet.cs (NivelKulmat/JuuriNousu) pariteetti Linssit-testit/kultaiset/dioraama-liikkeet-
+        //    vektorit.json:ia vasten (tools/dioraama/tee-liikevektorit.mjs). Kultainen tiedosto ei sisällä
+        //    LIIKKEET-pankin lähdeavaimia (vain tulokset) — LiikkeetFixtureJson alla on SUORAAN pelin repon
+        //    js/dioraama/pankit/liikkeet.js:stä generoitu (node -e "console.log(JSON.stringify(LIIKKEET))"),
+        //    ei käsin näpätty, jotta transkriptioriski ei sekoita pariteettia. Testaa SAMALLA DioraamaData.
+        //    Lue/LueLiike-jäsennyksen (era2b kohta 4, rakennus.json:n uusi "liikkeet"-kenttä).
+        // ═══════════════════════════════════════════════════════════════════
+
+        const string LiikkeetFixtureJson = @"{""liikkeet"": {
+  ""idle"": {""kesto_s"":4,""avaimet"":{""selka"":[[0,0,0,0],[0.5,1.5,0,0],[1,0,0,0]],""paa"":[[0,0,0,0],[0.5,0,2,0],[1,0,0,0]],""olka_v"":[[0,0,0,0],[0.5,2,0,0],[1,0,0,0]],""olka_o"":[[0,0,0,0],[0.5,2,0,0],[1,0,0,0]]}},
+  ""tyo"": {""kesto_s"":2,""avaimet"":{""olka_o"":[[0,20,0,10],[0.25,35,0,-15],[0.5,20,0,-30],[0.75,5,0,-15],[1,20,0,10]],""kyynar_o"":[[0,40,0,0],[0.25,55,0,0],[0.5,40,0,0],[0.75,25,0,0],[1,40,0,0]],""kasi_o"":[[0,0,0,10],[0.5,0,0,-10],[1,0,0,10]],""selka"":[[0,0,0,0],[0.25,0,0,3],[0.5,0,0,0],[0.75,0,0,-3],[1,0,0,0]],""paa"":[[0,0,0,0],[0.5,3,0,0],[1,0,0,0]]}},
+  ""kavely"": {""kesto_s"":1,""juuri"":{""nousu_m"":0.03},""avaimet"":{""lonkka_v"":[[0,25,0,0],[0.25,-5,0,0],[0.5,-25,0,0],[0.75,-5,0,0],[1,25,0,0]],""lonkka_o"":[[0,-25,0,0],[0.25,-5,0,0],[0.5,25,0,0],[0.75,-5,0,0],[1,-25,0,0]],""polvi_v"":[[0,8,0,0],[0.5,8,0,0],[0.75,50,0,0],[1,8,0,0]],""polvi_o"":[[0,8,0,0],[0.25,50,0,0],[0.5,8,0,0],[1,8,0,0]],""olka_v"":[[0,-15,0,0],[0.25,-3,0,0],[0.5,15,0,0],[0.75,-3,0,0],[1,-15,0,0]],""olka_o"":[[0,15,0,0],[0.25,3,0,0],[0.5,-15,0,0],[0.75,3,0,0],[1,15,0,0]],""kyynar_v"":[[0,15,0,0],[0.5,20,0,0],[1,15,0,0]],""kyynar_o"":[[0,15,0,0],[0.5,20,0,0],[1,15,0,0]],""selka"":[[0,0,0,3],[0.25,0,0,0],[0.5,0,0,-3],[0.75,0,0,0],[1,0,0,3]],""paa"":[[0,0,0,0],[0.5,2,0,0],[1,0,0,0]]}},
+  ""kanto"": {""kesto_s"":1,""juuri"":{""nousu_m"":0.025},""avaimet"":{""lonkka_v"":[[0,25,0,0],[0.25,-5,0,0],[0.5,-25,0,0],[0.75,-5,0,0],[1,25,0,0]],""lonkka_o"":[[0,-25,0,0],[0.25,-5,0,0],[0.5,25,0,0],[0.75,-5,0,0],[1,-25,0,0]],""polvi_v"":[[0,8,0,0],[0.5,8,0,0],[0.75,50,0,0],[1,8,0,0]],""polvi_o"":[[0,8,0,0],[0.25,50,0,0],[0.5,8,0,0],[1,8,0,0]],""olka_v"":[[0,-10,0,0],[0.5,10,0,0],[1,-10,0,0]],""kyynar_v"":[[0,20,0,0],[0.5,25,0,0],[1,20,0,0]],""olka_o"":[[0,10,0,0],[1,10,0,0]],""kyynar_o"":[[0,60,0,0],[1,60,0,0]],""selka"":[[0,0,0,3],[0.25,0,0,0],[0.5,0,0,-3],[0.75,0,0,0],[1,0,0,3]],""paa"":[[0,0,0,0],[0.5,2,0,0],[1,0,0,0]]}},
+  ""puhe"": {""kesto_s"":3,""avaimet"":{""paa"":[[0,0,0,0],[0.25,3,4,0],[0.5,-2,-3,0],[0.75,2,3,0],[1,0,0,0]],""olka_o"":[[0,10,0,0],[0.3,30,0,15],[0.6,15,0,-10],[1,10,0,0]],""kyynar_o"":[[0,30,0,0],[0.3,70,0,0],[0.6,50,0,0],[1,30,0,0]]}}
+}}";
+
+        static Dictionary<string, Liike> liikkeetPankkiCache;
+        static Dictionary<string, Liike> LiikkeetPankki() => liikkeetPankkiCache ??= DioraamaData.Lue(LiikkeetFixtureJson).Liikkeet;
+
+        static string KultainenLiikkeetPolku() => Path.Combine(AppContext.BaseDirectory, "..", "kultaiset", "dioraama-liikkeet-vektorit.json");
+        static bool KultainenLiikkeetSaatavilla() => File.Exists(KultainenLiikkeetPolku());
+        static JsonElement? kultainenLiikkeetPuskuri;
+        static JsonElement KultainenLiikkeet() => kultainenLiikkeetPuskuri ??= JsonDocument.Parse(File.ReadAllText(KultainenLiikkeetPolku())).RootElement;
+
+        static double[] LueLukuTaulukkoJson(JsonElement e) => e.EnumerateArray().Select(x => x.GetDouble()).ToArray();
+
+        [Testi] static void LiikkeetJasennysRakennusJsonista()
+        {
+            // DioraamaData.Lue/LueLiike (era2b kohta 4): fixturen "liikkeet"-kenttä jäsentyy pankiksi.
+            var pankki = LiikkeetPankki();
+            Oleta.Sama(5, pankki.Count);
+            Oleta.Sama(4.0, pankki["idle"].KestoS);
+            Oleta.Tosi(pankki["idle"].JuuriNousuM == null, "idle: ei juuri-kenttää lähteessä -> null");
+            Oleta.Sama(0.03, pankki["kavely"].JuuriNousuM.Value);
+            Oleta.Sama(0.025, pankki["kanto"].JuuriNousuM.Value);
+            var selka = pankki["idle"].Avaimet["selka"];
+            Oleta.Sama(3, selka.Length);
+            Lahella(0.5, selka[1][0], "idle.selka avain[1].t01"); Lahella(1.5, selka[1][1], "idle.selka avain[1].rx");
+            Oleta.Tosi(!pankki["puhe"].Avaimet.ContainsKey("lantio"), "puhe ei mainitse lantiota avaimissaan");
+        }
+
+        [Testi] static void PariteettiLiikkeet()
+        {
+            if (!KultainenLiikkeetSaatavilla()) return;
+            var pankki = LiikkeetPankki();
+            foreach (var s in KultainenLiikkeet().GetProperty("silmukat").EnumerateArray())
+            {
+                string nimi = s.GetProperty("silmukka").GetString();
+                Oleta.Tosi(pankki.TryGetValue(nimi, out var liike), $"LiikkeetFixtureJson: silmukka '{nimi}' puuttuu (ei täsmää LIIKKEET-pankkiin)");
+                Lahella(s.GetProperty("kesto_s").GetDouble(), liike.KestoS, nimi + " kesto_s (fixturen ja kultaisen täsmäys)");
+                var juuriOdotettu = s.GetProperty("juuri_nousu_m");
+                if (juuriOdotettu.ValueKind == JsonValueKind.Null)
+                    Oleta.Tosi(liike.JuuriNousuM == null, nimi + " juuri_nousu_m: odotettu null");
+                else Lahella(juuriOdotettu.GetDouble(), liike.JuuriNousuM ?? 0, nimi + " juuri_nousu_m");
+
+                foreach (var nayte in s.GetProperty("naytteet").EnumerateArray())
+                {
+                    double t = nayte.GetProperty("t").GetDouble();
+                    string mita = $"{nimi} t={t}";
+                    var nivelKulmat = Liikkeet.NivelKulmat(liike, t);
+                    var odotetutNivelet = nayte.GetProperty("nivelet");
+                    foreach (var nivel in Liikkeet.Nivelet)
+                    {
+                        var odotettu = LueLukuTaulukkoJson(odotetutNivelet.GetProperty(nivel));
+                        var saatu = nivelKulmat[nivel];
+                        Lahella(odotettu[0], saatu[0], $"{mita} {nivel}.rx"); Lahella(odotettu[1], saatu[1], $"{mita} {nivel}.ry");
+                        Lahella(odotettu[2], saatu[2], $"{mita} {nivel}.rz");
+                    }
+                    Lahella(nayte.GetProperty("juuriNousu").GetDouble(), Liikkeet.JuuriNousu(liike, t), mita + " juuriNousu");
+                }
             }
         }
     }

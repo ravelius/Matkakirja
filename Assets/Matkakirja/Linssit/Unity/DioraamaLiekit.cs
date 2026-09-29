@@ -1,16 +1,20 @@
-// DIORAAMAN LIEKIT (Poikkileikkaus-linssi, Linnanrakentaja erä 2, 29.9.2026): tulisijojen, kynttilöiden ja
-// soihtujen liekkikuvakkeet quadeina, additiivisena sylinteribillboardina kameraa kohti (kuten DioraamaHahmot,
-// mutta additiivinen eikä alpha-cutout). Paikat/koot/vaiheet tulevat Tila.Liekit-listasta (LiekkiPaikka), atlas-
-// ja ruudukkotiedot Rakennus.Liekit-sanakirjasta (Liekki). Ei Ytimen NakymaHetkella-ohjausta: liekki palaa aina
-// kun sen tila on ladattu, ja ruutu lasketaan suoraan ajasta t (floor(t·fps + vaihe·ruudut) mod ruudut) -- ei siis
-// HahmoNakyma-tyylistä näkyvyys/silmukka-hakua. Paivita ottaa silti Rakennus/Nakyma-parametrit DioraamaHahmot.
-// Paivita-signatuuriyhteensopivuuden vuoksi (kuten Hahmotkaan ei käytä omaa rakennus-parametriaan).
+// DIORAAMAN LIEKIT (Poikkileikkaus-linssi, Linnanrakentaja erä 2/2b, 29.9.2026): tulisijojen, kynttilöiden ja
+// soihtujen liekit. Paikat/koot/vaiheet tulevat Tila.Liekit-listasta (LiekkiPaikka), atlas- ja ruudukkotiedot
+// Rakennus.Liekit-sanakirjasta (Liekki). Ei Ytimen NakymaHetkella-ohjausta: liekki palaa aina kun sen tila on
+// ladattu. Paivita ottaa silti Rakennus/Nakyma-parametrit DioraamaHahmot.Paivita-signatuuriyhteensopivuuden
+// vuoksi (kuten Hahmotkaan ei käytä omaa rakennus-parametriaan).
 //
-// ENNEN ATLASTA: pehmeä oranssi paikkamerkki (ei tyhjää). Additiivinen Blend One One tekee kovareunaisesta tai
-// tyhjästä neliöstä rumemman kuin hahmoilla (ei alpha-cutoutia peittämässä virhettä), joten pieni proseduraalinen
-// pehmeä pisara -- sama idea kuin JS-puolen paikkamerkkiatlaksessa (dioraama-rajapinnat-era2-20260929.md kohta 2
-// LIEKIT: "pehmeä pisara valkoisesta keskeltä oranssiin reunaan, alfa = kirkkaus") -- on parempi kuin räikeä kova
-// neliö tai täysi tyhjyys ennen latausta.
+// ERA 2B (dioraama-rajapinnat-era2b-20260929.md kohta 6): OLETUS on 3D-liekki -- proseduraalinen pisaramesh
+// (2 sisäkkäistä kerrosta, ydin+vaippa) + 24 kipinän mesh, molemmat rakennetaan KERRAN (VarmistaJaetutResurssit)
+// ja JAETAAN kaikkien esiintymien kesken; DioraamaLiekki3D.shader laskee vääntymän/kipinöiden paikan ajasta
+// kärkivarjostimessa, ei CPU-päivitystä joka ruutu. "poikki liekit 3d|atlas" (DioraamaSovitin.Komento) vaihtaa
+// staattista Kolmiulotteinen-lippua; ATLAS on varalla (ennallaan, alla) siltä varalta että 3D-varjostin puuttuu
+// tai omistaja haluaa vertailla. Kolme-lippu Esiintymässä kertoo, kumpaa tapaa se käyttää.
+//
+// ATLAS-VARALLE (ennen atlasta): pehmeä oranssi paikkamerkki (ei tyhjää). Additiivinen Blend One One tekee
+// kovareunaisesta tai tyhjästä neliöstä rumemman kuin hahmoilla (ei alpha-cutoutia peittämässä virhettä), joten
+// pieni proseduraalinen pehmeä pisara -- sama idea kuin JS-puolen paikkamerkkiatlaksessa (dioraama-rajapinnat-
+// era2-20260929.md kohta 2 LIEKIT) -- on parempi kuin räikeä kova neliö tai täysi tyhjyys ennen latausta.
 using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Dioraama;
@@ -20,8 +24,22 @@ namespace Matkakirja.Natiivi
 {
     public sealed class DioraamaLiekit
     {
+        /// <summary>"poikki liekit 3d|atlas" (DioraamaSovitin.Komento): oletus 3D (era 2b kohta 6). Staattinen
+        /// (kuten DioraamaNayttamo.DofPaalla), koska LisaaTila luo esiintymän geometrian sen mukaan -- vaihdos
+        /// vaikuttaa seuraaviin LisaaTila-kutsuihin ("poikki lataa" lataa tilat uudelleen).</summary>
+        public static bool Kolmiulotteinen = true;
+
         static readonly int IdVoima = Shader.PropertyToID("_Voima"), IdMainTex = Shader.PropertyToID("_MainTex");
+        static readonly int IdAika = Shader.PropertyToID("_DioraamaAika");
         static Texture2D paikkamerkkiKuva;
+
+        // 3D-liekin jaetut resurssit (VarmistaJaetutResurssit): luodaan kerran tätä DioraamaLiekit-instanssia
+        // kohti (yksi nayttamo.Liekit koko linssin auki-oloajan) ja tuhotaan Tyhjennassa -- EI staattisia/ikuisia
+        // kuten paikkamerkkiKuva, jotta ne oikeasti vapautuvat sulkiessa (spesifikaation vaatimus).
+        Shader varjostin3D;
+        Mesh liekkiMesh, kipinaMesh;
+        Material liekkiMateriaali, kipinaMateriaali;
+        bool varoitettu3D;
 
         sealed class Esiintyma
         {
@@ -29,6 +47,9 @@ namespace Matkakirja.Natiivi
             public LiekkiPaikka Paikka;
             public Liekki Liekki;
             public GameObject Go;
+            /// <summary>Tosi = 3D-liekki (jaettu mesh/materiaali, ei per-ruutu CPU-työtä, ks. Paivita).
+            /// Epätosi = atlas-billboard (alla olevat Renderer/Mesh/AtlasAvain/ViimeRuutu käytössä).</summary>
+            public bool Kolme;
             public MeshRenderer Renderer;
             public Mesh Mesh;
             public string AtlasAvain;
@@ -45,6 +66,30 @@ namespace Matkakirja.Natiivi
         {
             this.juuri = juuri;
             varjostin = Resources.Load<Shader>("Varjostimet/DioraamaLiekki");
+        }
+
+        /// <summary>Rakentaa 3D-liekin jaetut meshit ja materiaalit KERRAN tätä instanssia kohti (LisaaTila
+        /// kutsuu joka tilalle, mutta liekkiMesh != null jälkeen tämä palaa heti). Jos varjostinta ei löydy
+        /// Resources-kansiosta, jättää liekkiMesh/kipinaMesh nulliksi -- LisaaTila putoaa silloin atlas-varalle
+        /// (varoittaa vain kerran, ettei loki tulvi tilaa/liekkiä kohti).</summary>
+        void VarmistaJaetutResurssit(Action<string> kirjaa)
+        {
+            if (liekkiMesh != null || varoitettu3D) return;
+            varjostin3D = Resources.Load<Shader>("Varjostimet/DioraamaLiekki3D");
+            if (varjostin3D == null)
+            {
+                varoitettu3D = true;
+                kirjaa?.Invoke("poikki: DioraamaLiekki3D-varjostin puuttuu, liekit atlas-varalla");
+                return;
+            }
+            liekkiMesh = LuoLiekkiMesh();
+            kipinaMesh = LuoKipinaMesh();
+            liekkiMateriaali = new Material(varjostin3D) { name = "DioraamaLiekki3D/Liekki" };
+            liekkiMateriaali.SetShaderPassEnabled("Kipinat", false);
+            liekkiMateriaali.SetFloat(IdVoima, 1f);
+            kipinaMateriaali = new Material(varjostin3D) { name = "DioraamaLiekki3D/Kipinat" };
+            kipinaMateriaali.SetShaderPassEnabled("Liekki", false);
+            kipinaMateriaali.SetFloat(IdVoima, 1f);
         }
 
         public int Maara => esiintymat.Count;
@@ -83,8 +128,12 @@ namespace Matkakirja.Natiivi
         /// päivittyvät Paivita-metodissa.</summary>
         public void LisaaTila(Rakennus rakennus, Tila tila, Action<string> kirjaa)
         {
-            if (varjostin == null) { kirjaa?.Invoke("poikki: DioraamaLiekki-varjostin puuttuu"); return; }
             if (tila.Liekit == null) return;
+            bool kolme = Kolmiulotteinen;
+            if (kolme) VarmistaJaetutResurssit(kirjaa);
+            bool voi3D = kolme && liekkiMesh != null && kipinaMesh != null;
+            if (!voi3D && varjostin == null) { kirjaa?.Invoke("poikki: DioraamaLiekki-varjostin puuttuu"); return; }
+
             foreach (var paikka in tila.Liekit)
             {
                 if (rakennus.Liekit == null || !rakennus.Liekit.TryGetValue(paikka.LiekkiId, out var liekki))
@@ -97,6 +146,32 @@ namespace Matkakirja.Natiivi
                 var go = new GameObject("Liekki:" + tila.Id + "/" + paikka.LiekkiId) { layer = DioraamaNayttamo.Kerros };
                 go.transform.SetParent(juuri, false);
                 go.transform.position = DioraamaNayttamo.UnityPiste(paikka.Paikka);
+
+                if (voi3D)
+                {
+                    // Koko liekkipaikan Koko-kertoimesta (paikka.Koko) ja liekkipankin koko_m:stä (liekki.KokoL/
+                    // KokoK) transform.localScalena -- jaettu pisaramesh on rakennettu yksikkökokoon (ks.
+                    // LuoLiekkiMesh), joten epäsymmetrinen skaala tuottaa halutun leveys×korkeus-suhteen.
+                    go.transform.localScale = new Vector3(Mathf.Max(0.01f, leveys), Mathf.Max(0.01f, korkeus), Mathf.Max(0.01f, leveys));
+                    go.AddComponent<MeshFilter>().sharedMesh = liekkiMesh;
+                    var runko = go.AddComponent<MeshRenderer>();
+                    runko.sharedMaterial = liekkiMateriaali;
+                    runko.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    runko.receiveShadows = false;
+
+                    var kipinaGo = new GameObject("Kipinat") { layer = DioraamaNayttamo.Kerros };
+                    kipinaGo.transform.SetParent(go.transform, false);
+                    kipinaGo.AddComponent<MeshFilter>().sharedMesh = kipinaMesh;
+                    var kipinaRend = kipinaGo.AddComponent<MeshRenderer>();
+                    kipinaRend.sharedMaterial = kipinaMateriaali;
+                    kipinaRend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    kipinaRend.receiveShadows = false;
+
+                    esiintymat.Add(new Esiintyma { TilaId = tila.Id, Paikka = paikka, Liekki = liekki, Go = go, Kolme = true });
+                    continue;
+                }
+
+                // ATLAS-TILA (varalla, ks. tiedoston alkukommentti): entinen sylinteribillboard-nelikulmio.
                 var mesh = LuoNelio(leveys, korkeus, (float)liekki.PivotX, (float)liekki.PivotY);
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
                 var renderer = go.AddComponent<MeshRenderer>();
@@ -160,13 +235,117 @@ namespace Matkakirja.Natiivi
             return mesh;
         }
 
+        /// <summary>3D-liekin jaettu pisaramesh (era 2b kohta 6): venytetty pallo 16x10, kaksi sisäkkäistä
+        /// kerrosta (vaippa+ydin) eri vaiheella niin että niiden verteksivääntö ei mene synkkaan. Yksikkökokoon
+        /// rakennettu -- todellinen leveys/korkeus tulee GameObjectin transform.localScalesta (LisaaTila).</summary>
+        static Mesh LuoLiekkiMesh()
+        {
+            var verts = new List<Vector3>();
+            var normit = new List<Vector3>();
+            var uv0 = new List<Vector2>();
+            var uv1 = new List<Vector2>();
+            var tris = new List<int>();
+            LisaaPisaraKerros(verts, normit, uv0, uv1, tris, sade: 1f, korkeusKerroin: 1f, vaihe: 0f, kirkkaus: 0.6f);
+            LisaaPisaraKerros(verts, normit, uv0, uv1, tris, sade: 0.55f, korkeusKerroin: 0.82f, vaihe: 2.1f, kirkkaus: 1.35f);
+            var mesh = new Mesh { name = "DioraamaLiekki3D" };
+            mesh.SetVertices(verts);
+            mesh.SetNormals(normit);
+            mesh.SetUVs(0, uv0);
+            mesh.SetUVs(1, uv1);
+            mesh.SetTriangles(tris, 0);
+            mesh.RecalculateBounds();
+            // Verteksivääntö siirtää kärkiä hieman rajojen ulkopuolelle -- turvamarginaali, ettei renderer
+            // katoa näkymästä väärän kulman/etäisyyden frustum-leikkauksessa.
+            var b = mesh.bounds; b.Expand(0.35f); mesh.bounds = b;
+            return mesh;
+        }
+
+        /// <summary>Yksi pisarakerros (leveä tyvi, kapeneva kärki): lisää valmiiden listojen perään, kärki-
+        /// indeksit jatkuvat automaattisesti edellisestä kerroksesta. uv0 = (ympärikulma 0..1, korkeus01 0..1),
+        /// uv1 = (kerroksen ajanvaihe, kerroksen kirkkaus) -- DioraamaLiekki3D.shaderin vert/frag lukee näitä.</summary>
+        static void LisaaPisaraKerros(List<Vector3> verts, List<Vector3> normit, List<Vector2> uv0, List<Vector2> uv1,
+            List<int> tris, float sade, float korkeusKerroin, float vaihe, float kirkkaus)
+        {
+            const int SARAKKEET = 16, RIVIT = 10;
+            int alku = verts.Count;
+            for (int rivi = 0; rivi <= RIVIT; rivi++)
+            {
+                float v01 = rivi / (float)RIVIT; // 0 tyvi .. 1 kärki
+                // Säde tyvestä kärkeen: cos-profiili on LEVEIMMILLÄÄN tyvessä (v01=0, vaakasuora tangentti ->
+                // pyöreä avoin tyvi kuin pallon pinta hieman navan alta leikattuna) ja kapenee pehmeästi
+                // terävään pisteeseen kärjessä (v01=1) -- EI kahta napaa (sin(theta) kapenisi väärin molemmista
+                // päistä, kokeiltu ja hylätty katselmoinnissa).
+                float r = sade * Mathf.Cos(v01 * Mathf.PI * 0.5f);
+                float y = v01 * korkeusKerroin * 1.6f;
+                for (int sarake = 0; sarake <= SARAKKEET; sarake++)
+                {
+                    float u = sarake / (float)SARAKKEET;
+                    float kulma = u * Mathf.PI * 2f;
+                    float x = Mathf.Cos(kulma) * r, z = Mathf.Sin(kulma) * r;
+                    verts.Add(new Vector3(x, y, z));
+                    var n = new Vector3(x, r * 0.35f, z);
+                    normit.Add(n.sqrMagnitude > 1e-6f ? n.normalized : Vector3.up);
+                    uv0.Add(new Vector2(u, v01));
+                    uv1.Add(new Vector2(vaihe, kirkkaus));
+                }
+            }
+            for (int rivi = 0; rivi < RIVIT; rivi++)
+                for (int sarake = 0; sarake < SARAKKEET; sarake++)
+                {
+                    int a = alku + rivi * (SARAKKEET + 1) + sarake, b = a + SARAKKEET + 1;
+                    tris.Add(a); tris.Add(a + 1); tris.Add(b + 1);
+                    tris.Add(a); tris.Add(b + 1); tris.Add(b);
+                }
+        }
+
+        /// <summary>3D-liekin jaettu kipinämesh (era 2b kohta 6): 24 nelikulmiota YHDESSÄ meshissä. Todellinen
+        /// paikka lasketaan DioraamaLiekki3D.shaderin Kipinat-passissa ajasta ja indeksistä (POSITION.xy =
+        /// nelikulman paikallinen kulma -1..1, TEXCOORD0.x = kipinän indeksi) -- kärkien omat koordinaatit
+        /// tässä eivät ole todellinen paikka, vain data varjostimelle, siksi bounds asetetaan käsin alla.</summary>
+        static Mesh LuoKipinaMesh()
+        {
+            const int MAARA = 24;
+            var verts = new Vector3[MAARA * 4];
+            var uv0 = new Vector2[MAARA * 4];
+            var tris = new int[MAARA * 6];
+            Vector2[] kulmat = { new Vector2(-1, -1), new Vector2(1, -1), new Vector2(1, 1), new Vector2(-1, 1) };
+            for (int i = 0; i < MAARA; i++)
+            {
+                int vBase = i * 4;
+                for (int k = 0; k < 4; k++)
+                {
+                    verts[vBase + k] = new Vector3(kulmat[k].x, kulmat[k].y, 0f);
+                    uv0[vBase + k] = new Vector2(i, 0f);
+                }
+                int tBase = i * 6;
+                tris[tBase] = vBase; tris[tBase + 1] = vBase + 1; tris[tBase + 2] = vBase + 2;
+                tris[tBase + 3] = vBase; tris[tBase + 4] = vBase + 2; tris[tBase + 5] = vBase + 3;
+            }
+            var mesh = new Mesh { name = "DioraamaKipinat" };
+            mesh.SetVertices(verts);
+            mesh.SetUVs(0, uv0);
+            mesh.SetTriangles(tris, 0);
+            // Käsin asetetut bounds (ks. summary): kipinät nousevat/ajelehtivat karkeasti tyvestä ~1,5 yksikköä
+            // ylöspäin, ±0,15 sivuille, plus billboard-koon marginaali.
+            mesh.bounds = new Bounds(new Vector3(0f, 0.8f, 0f), new Vector3(1.3f, 1.9f, 1.3f));
+            return mesh;
+        }
+
         /// <summary>Joka ruutu: sylinteribillboard kameraa kohti ja atlaksen ruutu ajasta t. Rakennus/Nakyma-
         /// parametrit ovat mukana vain DioraamaHahmot.Paivita-signatuuriyhteensopivuuden vuoksi (ei käytetä, kuten
         /// Hahmotkaan ei käytä rakennus-parametriaan) -- liekillä ei ole Ytimen ohjaamaa näkyvyyttä/silmukkaa.</summary>
         public void Paivita(Rakennus rakennus, Nakyma nakyma, Camera kamera, double t)
         {
+            // Globaali (ei per-esiintymä): DioraamaLiekki3D.shader lukee tämän _DioraamaAika-uniformista sekä
+            // liekin vääntöön että kipinöiden paikkaan -- SAMA t kuin muualla dioraamassa (ei Unityn omaa
+            // _Time:a), jotta "poikki aika" pysäyttää nämäkin kuten atlas-liekin ruudun ennen tätä.
+            Shader.SetGlobalFloat(IdAika, (float)t);
             foreach (var e in esiintymat)
             {
+                // 3D-liekki laskee kaiken (vääntö, kipinöiden nousu/ajelehdus/sammuminen) kärkivarjostimessa
+                // yllä asetetusta globaalista -- ei billboard-kääntöä (oikea 3D-mesh näyttää oikealta kaikista
+                // kulmista) eikä per-ruutu CPU-työtä, ks. tiedoston alkukommentti.
+                if (e.Kolme) continue;
                 if (kamera != null)
                 {
                     Vector3 paikka = e.Go.transform.position;
@@ -209,13 +388,22 @@ namespace Matkakirja.Natiivi
             foreach (var e in esiintymat)
                 if (e.Go != null)
                 {
+                    // e.Mesh on atlas-tilan OMA nelikulmio (per esiintymä); 3D-tilan liekki/kipinämesh ovat
+                    // jaettuja (liekkiMesh/kipinaMesh) ja tuhotaan kerran alla, ei per esiintymä.
                     if (e.Mesh != null) UnityEngine.Object.Destroy(e.Mesh);
-                    UnityEngine.Object.Destroy(e.Go);
+                    UnityEngine.Object.Destroy(e.Go); // tuhoaa myös 3D-tilan Kipinat-lapsiobjektin
                 }
             esiintymat.Clear();
             foreach (var m in atlasMateriaalit.Values) if (m != null) UnityEngine.Object.Destroy(m);
             atlasMateriaalit.Clear();
             atlasKuvat.Clear();
+
+            // 3D-liekin jaetut resurssit (spesifikaation vaatimus: jaetut meshit ja materiaalit tuhotaan tässä).
+            if (liekkiMateriaali != null) { UnityEngine.Object.Destroy(liekkiMateriaali); liekkiMateriaali = null; }
+            if (kipinaMateriaali != null) { UnityEngine.Object.Destroy(kipinaMateriaali); kipinaMateriaali = null; }
+            if (liekkiMesh != null) { UnityEngine.Object.Destroy(liekkiMesh); liekkiMesh = null; }
+            if (kipinaMesh != null) { UnityEngine.Object.Destroy(kipinaMesh); kipinaMesh = null; }
+            varoitettu3D = false;
         }
     }
 }

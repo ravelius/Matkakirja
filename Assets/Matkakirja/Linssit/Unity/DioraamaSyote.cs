@@ -9,6 +9,12 @@
 //             jottei pieni tärinä kerry; nollautuu aina uuden Kohdista-kutsun yhteydessä.
 // nipistys  → zoom samalla tavalla; sormien etääntyessä lähempi (zoom < 1). Reilusti rajan (1,3) yli asti
 //             pinnistäminen palaa yleisnäkymään (Sovitin.Yleisnakymaan), kuten speksi pyytää.
+//
+// ERA 2B (agentti P5, herkkyystarkistus): AstettaPerPikseli=0,15°/pt -> da (±20°) saturoituu ~133 pt:n vedolla,
+// dk (±10°) ~67 pt:llä — iPhonen (375–430 pt leveä, 667–926 pt korkea) ruudulla molemmat ovat selvästi alle
+// yhden ruudun mitan, eli täysi kierto/kallistus ei vaadi koko ruudun mittaista vetoa (järkevä peukalotuntuma).
+// RajaaKierto (Kameraliike, kohta 1/5) kiristää tätä tarvittaessa vielä tilan/yleisnäkymän omiin rajoihin —
+// ks. Sovita alla, joka kutsuu PoikkileikkausLinssi.RajaaPelaajanAsento-metodia PelaajanAsennon jälkeen.
 using Matkakirja.Linssit.Dioraama;
 using UnityEngine;
 using Kosketus = UnityEngine.InputSystem.EnhancedTouch.Touch;
@@ -43,8 +49,16 @@ namespace Matkakirja.Natiivi
             this.nayttamo = nayttamo;
         }
 
-        /// <summary>Pelaajan lisäämä poikkeama viimeisimpään Kohdista-asentoon (veto/nipistys); nollataan uudella Kohdistalla.</summary>
-        public Asento Sovita(Asento perus) => Kameraliike.PelaajanAsento(perus, kokonaisDa, kokonaisDk, kokonaisZoom);
+        /// <summary>Pelaajan lisäämä poikkeama viimeisimpään Kohdista-asentoon (veto/nipistys), RAJATTUNA
+        /// PoikkileikkausLinssi.RajaaPelaajanAsento-metodilla (era 2b, kohta 1/5: Kameraliike.RajaaKierto tilan/
+        /// yleisnäkymän kierto-rajoihin); nollataan uudella Kohdistalla. DioraamaSovitin.Linssi (staattinen,
+        /// samat instanssi kuin Sovittimen sisäinen linssi-kenttä) on ainoa reitti tähän — DioraamaSovitin.cs:ää
+        /// ei muuteta tätä varten (ks. Kohdista/Paivita-metodit siellä, joita tämä erä ei koske).</summary>
+        public Asento Sovita(Asento perus)
+        {
+            var pelaajan = Kameraliike.PelaajanAsento(perus, kokonaisDa, kokonaisDk, kokonaisZoom);
+            return DioraamaSovitin.Linssi != null ? DioraamaSovitin.Linssi.RajaaPelaajanAsento(perus, pelaajan) : pelaajan;
+        }
 
         public void NollaaPoikkeama() { kokonaisDa = 0; kokonaisDk = 0; kokonaisZoom = 1; kaksiKaynnissa = false; }
 
@@ -52,6 +66,9 @@ namespace Matkakirja.Natiivi
         {
             var sormet = Kosketus.activeTouches;
             int n = sormet.Count;
+            // Leijunta (era 2b, "poikki drift") ei etene kesken vedon/nipistyksen: PoikkileikkausLinssi.Leijunta
+            // lukee tämän NakymaHetkellässä joka kehys (ks. sen alkukommentti).
+            if (DioraamaSovitin.Linssi != null) DioraamaSovitin.Linssi.VetoKaynnissa = n > 0;
 
             if (n == 0)
             {

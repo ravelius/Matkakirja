@@ -12,6 +12,20 @@
 // unityyn = true: (x, y, z) → (x, y, −z) paikoille ja normaaleille, kolmion kiertosuunta käännetään
 // (i0, i2, i1) — sama kaava kuin kohdan 0 Unity-muunnos (+Z_unity = pohjoinen). unityyn = false palauttaa
 // kanonisen kehyksen (+Z = etelä) sellaisenaan.
+//
+// ERÄ 2B (kohta 4 "3D-HAHMOT", ali-agentti P4b, 29.9.2026): GlbMalli.Solmut — KOKO solmuhierarkia
+// (pienoisfiguurien nivelet, tools/dioraama/glb.mjs:n kirjoitaMonisolmuGlb) TRS:nä (translation/rotation/
+// scale) + vanhemman indeksi + omat osat JOKA solmulle. VANHA Nimi/Osat-luku (ensimmäinen solmu, jolla on
+// mesh) säilyy TÄSMÄLLEEN ennallaan yksisolmuisille (rakennusosien) glb:ille — Solmut on sille silloin
+// 1 alkion lista, joka kaikuu samat Osat. "solmuhierarkia ei tuettu" -esto poistettu (ei tarvita — vanhoilla
+// fixtureilla ei ollut children-kenttää, joten poisto ei muuta niiden käytöstä).
+//
+// unityyn solmun TRS:lle: translation.z negatoidaan (sama kuin POSITION). rotation-kvaternio (x,y,z,w):
+// PEILAUS z:n suhteen on konjugaatio R·M·R, missä R = diag(1,1,-1) ja M kvaternion rotaatiomatriisi —
+// merkkilaskulla M'_ij = R_i·R_j·M_ij, joka TÄSMÄLLEEN toteutuu kvaterniolla q' = (x, y, −z, −w) (todennettu
+// komponenteittain: esim. M'_13 = -M_13 ja M(q')_13 = 2(x·(-z) + (-w)·y) = -2(xz+wy) = -M_13, jne. kaikille
+// 9 komponentille). scale EI muutu (skaalan etumerkki ei kuvaa kätisyyttä — kätisyyden kääntää jo paikkojen/
+// normaalien peilaus + kiertosuunnan kääntö; ja diag(sx,sy,sz) kommutoi R:n kanssa: R·S·R = S).
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,14 +42,40 @@ namespace Matkakirja.Linssit.Dioraama
         public float[] Uv;
         /// <summary>COLOR_0 raakoina tavuina RGBA (R = AO, G = lämpö, B = 0, A = 255; kohta 3).</summary>
         public byte[] Varit;
+        /// <summary>ERÄ 2B: materiaalin pbrMetallicRoughness.baseColorFactor [r,g,b,a] (LINEAARINEN, glTF-spec) —
+        /// null, jos materiaali/kenttä puuttuu (vanhat testifixturet). Rakennusosien glb:issä (DioraamaRakennus)
+        /// TÄTÄ ei käytetä — värin antaa Rakennus.Pinnat[pinta].Vari. Pienoisfiguureissa (hahmot3d/&lt;id&gt;.glb)
+        /// TÄMÄ ON AINOA lähde: rakennuskone (hahmot3d.mjs:n teeVariHaku) on jo ratkaissut henkilön OMAN värin
+        /// (malli3d.varit[pinta]) tai pankin oletuksen (PINNAT[pinta].vari — EI rakennus.json:ssa hahmojen
+        /// pinnoille, koska niitä ei käytetä rakennuksen geometriassa) ja leiponut tuloksen tähän.</summary>
+        public float[] Vari;
         public int[] Kolmiot;
     }
 
-    /// <summary>Tilan koko glb: yksi mesh (solmun nimi), primitiivi per käytetty pinta.</summary>
+    /// <summary>ERÄ 2B: yksi solmu solmuhierarkiassa (pienoisfiguurin nivel). Translation/Rotation/Scale ovat
+    /// PAIKALLISIA (suhteessa Vanhempaan) — sama sopimus kuin glTF node TRS ja tools/dioraama/glb.mjs:n
+    /// kirjoitaMonisolmuGlb. Rotation on kvaternio [x,y,z,w] (oletus identiteetti [0,0,0,1], jos solmulla ei
+    /// ole rotation-kenttää — nykyinen rakennuskone kirjoittaa vain translationin, mutta lukija on yleinen).</summary>
+    public sealed class GlbSolmu
+    {
+        public string Nimi;
+        /// <summary>Vanhemman indeksi Solmut-listassa, -1 = juuri (ei vanhempaa).</summary>
+        public int Vanhempi = -1;
+        public float[] Translation = { 0f, 0f, 0f };
+        public float[] Rotation = { 0f, 0f, 0f, 1f };
+        public float[] Scale = { 1f, 1f, 1f };
+        /// <summary>Tämän solmun mesh pinnoittain — tyhjä lista, jos solmulla ei ole meshiä (puhdas nivel).</summary>
+        public List<GlbOsa> Osat = new List<GlbOsa>();
+    }
+
+    /// <summary>Tilan koko glb: yksi mesh (solmun nimi), primitiivi per käytetty pinta. Nimi/Osat = ENSIMMÄINEN
+    /// solmu, jolla on mesh (vanha, muuttumaton sopimus yksisolmuisille rakennusosien/tilojen glb:ille).
+    /// Solmut = ERÄ 2B: koko hierarkia (ks. GlbSolmu) — käytä TÄTÄ pienoisfiguureille (DioraamaHahmot3D).</summary>
     public sealed class GlbMalli
     {
         public string Nimi;
         public List<GlbOsa> Osat = new List<GlbOsa>();
+        public List<GlbSolmu> Solmut = new List<GlbSolmu>();
     }
 
     public static class DioraamaGlb
@@ -93,14 +133,28 @@ namespace Matkakirja.Linssit.Dioraama
                 if (solmuIndeksi < 0) throw new DioraamaGlbVirhe("ei solmua, jolla on mesh");
                 var solmu = MiniJson.Objekti(solmut[solmuIndeksi]);
                 if (MiniJson.Kentta(solmu, "skin") != null) throw new DioraamaGlbVirhe("skin ei tuettu");
-                if (MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(solmu, "children")).Count > 0)
-                    throw new DioraamaGlbVirhe("solmuhierarkia ei tuettu (speksi: yksi solmu)");
                 string nimi = MiniJson.Teksti(solmu, "name");
                 int meshI = (int)MiniJson.Luku(solmu, "mesh").Value;
+
+                var malli = new GlbMalli { Nimi = nimi, Osat = LueMeshinOsat(meshI) };
+                if (malli.Osat.Count == 0) throw new DioraamaGlbVirhe("ei primitiivejä");
+
+                // ERÄ 2B (kohta 4): koko solmuhierarkia — KAIKKI nodes[], ei vain ensimmäinen jolla on
+                // mesh. Yksisolmuisella glb:llä (ei children-kenttiä) tästä tulee 1 alkio (kaikuu Nimi/Osat).
+                malli.Solmut = LueSolmuhierarkia(solmut);
+                return malli;
+            }
+
+            /// <summary>Yhden meshin primitiivit GlbOsa-listaksi: POSITION/NORMAL/TEXCOORD_0/COLOR_0/indeksit +
+            /// unityyn-muunnos (z-peilaus, kiertosuunnan kääntö). ERIYTETTY omaksi metodiksi (ERÄ 2B) alkuperäisestä
+            /// Kokoa()-silmukasta, jotta samaa lukulogiikkaa voi käyttää MYÖS solmuhierarkian jokaiselle mesh-
+            /// solmulle — algoritmi itse EI muuttunut (vain siirretty paikoiltaan, vertaa DioraamaTestitin
+            /// GlbLukijaJasennysJaVarit/GlbUnityynMuuntaaZnJaKiertosuunnan-testeihin, jotka eivät muuttuneet).</summary>
+            List<GlbOsa> LueMeshinOsat(int meshI)
+            {
                 var mesh = Alkio("meshes", meshI);
                 var materiaalit = Lista("materials");
-
-                var malli = new GlbMalli { Nimi = nimi };
+                var osat = new List<GlbOsa>();
                 foreach (var po in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(mesh, "primitives")))
                 {
                     var p = MiniJson.Objekti(po);
@@ -144,18 +198,94 @@ namespace Matkakirja.Linssit.Dioraama
                         kolmiot[q + 2] = unityyn ? ii[q + 1] : ii[q + 2];
                     }
 
+                    // ERÄ 2B: materiaali luetaan KERRAN riippumatta siitä, tuliko pinta extrasista (aina näin
+                    // hahmojen glb:ssä) — baseColorFactor (GlbOsa.Vari) tarvitaan kummassa tapauksessa tahansa.
+                    Dictionary<string, object> materiaaliObj = null;
+                    var matI = MiniJson.Luku(p, "material");
+                    if (matI.HasValue && (int)matI.Value < materiaalit.Count) materiaaliObj = MiniJson.Objekti(materiaalit[(int)matI.Value]);
                     string pinta = MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Kentta(p, "extras")), "pinta");
-                    if (pinta == null)
-                    {
-                        var matI = MiniJson.Luku(p, "material");
-                        if (matI.HasValue && (int)matI.Value < materiaalit.Count)
-                            pinta = MiniJson.Teksti(MiniJson.Objekti(materiaalit[(int)matI.Value]), "name");
-                    }
+                    if (pinta == null && materiaaliObj != null) pinta = MiniJson.Teksti(materiaaliObj, "name");
+                    float[] materiaaliVari = materiaaliObj != null ? LueBaseColor(materiaaliObj) : null;
 
-                    malli.Osat.Add(new GlbOsa { Pinta = pinta, Paikat = paikat, Normaalit = normaalit, Uv = tex, Varit = vari, Kolmiot = kolmiot });
+                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Varit = vari, Kolmiot = kolmiot });
                 }
-                if (malli.Osat.Count == 0) throw new DioraamaGlbVirhe("ei primitiivejä");
-                return malli;
+                return osat;
+            }
+
+            /// <summary>KAIKKI nodes[] GlbSolmu-listaksi (ERÄ 2B). Vanhempi luetaan LAPSEN kautta: jokaisen
+            /// solmun "children"-taulukko listaa lapsi-indeksit (kuten glb.mjs:n kirjoitaMonisolmuGlb
+            /// kirjoittaa) — solmu, jota kukaan ei mainitse lapsenaan, on juuri (Vanhempi = -1).</summary>
+            List<GlbSolmu> LueSolmuhierarkia(List<object> solmuJsonit)
+            {
+                int n = solmuJsonit.Count;
+                var vanhempi = new int[n];
+                for (int i = 0; i < n; i++) vanhempi[i] = -1;
+                for (int i = 0; i < n; i++)
+                {
+                    var s = MiniJson.Objekti(solmuJsonit[i]);
+                    foreach (var lapsiArvo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(s, "children")))
+                    {
+                        if (lapsiArvo is double d) { int lapsi = (int)d; if (lapsi >= 0 && lapsi < n) vanhempi[lapsi] = i; }
+                    }
+                }
+
+                var tulos = new List<GlbSolmu>(n);
+                for (int i = 0; i < n; i++)
+                {
+                    var s = MiniJson.Objekti(solmuJsonit[i]);
+                    var g = new GlbSolmu
+                    {
+                        Nimi = MiniJson.Teksti(s, "name"),
+                        Vanhempi = vanhempi[i],
+                        Translation = LueTranslation(s),
+                        Rotation = LueRotation(s),
+                        Scale = LueVec(MiniJson.Kentta(s, "scale"), new[] { 1f, 1f, 1f }),
+                    };
+                    var meshIn = MiniJson.Luku(s, "mesh");
+                    g.Osat = meshIn.HasValue ? LueMeshinOsat((int)meshIn.Value) : new List<GlbOsa>();
+                    tulos.Add(g);
+                }
+                return tulos;
+            }
+
+            /// <summary>materials[i].pbrMetallicRoughness.baseColorFactor [r,g,b,a] (LINEAARINEN) — null, jos
+            /// materiaalilla ei ole pbrMetallicRoughness- tai baseColorFactor-kenttää (ei virhe: vanhat
+            /// testifixturet ja rakennusosien glb:t, joissa väri tulee muualta, ks. GlbOsa.Vari-kommentti).</summary>
+            static float[] LueBaseColor(Dictionary<string, object> materiaali)
+            {
+                var pbr = MiniJson.ObjektiTaiNull(MiniJson.Kentta(materiaali, "pbrMetallicRoughness"));
+                var bcf = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(pbr, "baseColorFactor"));
+                if (bcf.Count < 4) return null;
+                var t = new float[4];
+                for (int i = 0; i < 4; i++) t[i] = bcf[i] is double d ? (float)d : (i == 3 ? 1f : 0f);
+                return t;
+            }
+
+            /// <summary>Lukee JSON-lukutaulukon float[]:ksi kiinteällä pituudella (oletus, jos kenttä puuttuu
+            /// tai on lyhyempi kuin oletus.Length — per-komponentti, ei koko taulukolle kerralla).</summary>
+            static float[] LueVec(object arvo, float[] oletus)
+            {
+                var l = MiniJson.TaulukkoTaiTyhja(arvo);
+                var t = new float[oletus.Length];
+                for (int i = 0; i < t.Length; i++) t[i] = l.Count > i && l[i] is double d ? (float)d : oletus[i];
+                return t;
+            }
+
+            /// <summary>translation [x,y,z] (oletus [0,0,0]); unityyn: z negatoidaan (sama kuin POSITION).</summary>
+            float[] LueTranslation(Dictionary<string, object> s)
+            {
+                var t = LueVec(MiniJson.Kentta(s, "translation"), new[] { 0f, 0f, 0f });
+                if (unityyn) t[2] = -t[2];
+                return t;
+            }
+
+            /// <summary>rotation-kvaternio [x,y,z,w] (oletus identiteetti [0,0,0,1]); unityyn: (x,y,−z,−w) —
+            /// perustelu tiedoston yläkommentissa.</summary>
+            float[] LueRotation(Dictionary<string, object> s)
+            {
+                var r = LueVec(MiniJson.Kentta(s, "rotation"), new[] { 0f, 0f, 0f, 1f });
+                if (unityyn) { r[2] = -r[2]; r[3] = -r[3]; }
+                return r;
             }
 
             static int[] Jarjestys(int n) { var t = new int[n]; for (int i = 0; i < n; i++) t[i] = i; return t; }

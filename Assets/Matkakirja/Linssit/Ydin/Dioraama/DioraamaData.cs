@@ -1,7 +1,7 @@
 // DIORAAMAN LÄHDEDATA (Linnanrakentaja, speksi docs/raportit/dioraama-rajapinnat-20260929.md kohdat 1 ja 5).
 // Jäsentää rakennus.json-muotoisen (tai käsin kirjoitetun testifixturen) JSON-merkkijonon Rakennus-puuksi
 // MiniJsonilla. Kentät, joita Ydin-luokat (Kameraliike/Heratys/Ohjaaja/PoikkileikkausLinssi) eivät tarvitse
-// (geoAnkkuri, aikakerros, lahteet, valot, palikat — rakennuskoneen ja Unity-puolen omaa dataa) jätetään
+// (geoAnkkuri, aikakerros, lahteet, palikat — rakennuskoneen ja Unity-puolen omaa dataa) jätetään
 // tarkoituksella lukematta; ylimääräiset JSON-kentät eivät riko jäsennystä.
 //
 // LISÄYS SPEKSIN YLI (kirjattu raporttiin, era 1): Rakennus.Aanet ei ollut speksin kohdan 5 Rakennus-listalla,
@@ -19,6 +19,12 @@
 // kertaäänet). Askel.N oli jo olemassa (repliikki-askel voi valita rivin sillä); rakennus.json:n aanet[id].Tiedosto
 // sisältää nyt v<versio>-alikansion (natiivin URL-välimuisti) — merkkijono luetaan sellaisenaan, ei erillistä
 // Versio-kenttää Aani-luokkaan.
+//
+// ERA 2B -LISÄYKSET (dioraama-rajapinnat-era2b-20260929.md kohdat 1 ja 4, P0/datakerros): Rakennus.Valaistus
+// (+ Aurinko, Taivas), Tila.Valot (+ Valo: piste- ja tulivalot), Pinta.Kuvio (+ Kuvio: proseduraalisen kuvion
+// varjostinparametrit, oletus Tyyppi "tasainen"), Asento.Kierto (+ Kierto: kameran kiertorajat, staattiset
+// oletukset Kierto.OletusTila/OletusYleis), Henkilo.Malli3d (+ Malli3d, Mittasuhteet, Vaatteet: 3D-pienoisfiguurin
+// kuvaus). Kaikki valinnaisia: vanha rakennus.json (ilman näitä kenttiä) jäsentyy ennallaan.
 using System;
 using System.Collections.Generic;
 using Matkakirja.Peli;
@@ -30,8 +36,29 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public readonly V3 Kohde;
         public readonly double Atsimuutti, Korkeus, Etaisyys, Fov, Aukko;
-        public Asento(V3 kohde, double atsimuutti, double korkeus, double etaisyys, double fov, double aukko)
-        { Kohde = kohde; Atsimuutti = atsimuutti; Korkeus = korkeus; Etaisyys = etaisyys; Fov = fov; Aukko = aukko; }
+        /// <summary>Valinnaiset kiertorajat (era 2b, kohta 1 "kierto"); null = lähteessä ei kierto-kenttää —
+        /// kutsuja valitsee tilanteeseen sopivan oletuksen (Kierto.OletusTila / Kierto.OletusYleis). Uusi
+        /// kenttä oletusarvoisella parametrilla; vanhat 6-argumenttiset kutsut kääntyvät ennallaan.</summary>
+        public readonly Kierto Kierto;
+        public Asento(V3 kohde, double atsimuutti, double korkeus, double etaisyys, double fov, double aukko, Kierto kierto = null)
+        { Kohde = kohde; Atsimuutti = atsimuutti; Korkeus = korkeus; Etaisyys = etaisyys; Fov = fov; Aukko = aukko; Kierto = kierto; }
+    }
+
+    /// <summary>Kameran kiertorajat yhtä Asentoa kohti (era 2b, kohta 1 "kierto"). AtsimuuttiMin/Max ovat
+    /// asteina SUHTEESSA perusasennon atsimuuttiin; molemmat null = vapaa 360° kierto. KorkeusMin/Max asteina
+    /// absoluuttisina, EtaisyysMin/Max kertoimina perusasennon etäisyydestä. OletusTila ja OletusYleis ovat
+    /// speksin kohdan 1 valmiit oletusarvot sille tilanteelle, jossa rakennus.json ei anna kierto-kenttää
+    /// (tilan kameralle vs. rakennuksen yleisnäkymän kameralle eri oletus — kutsuja tietää kummasta on kyse).</summary>
+    public sealed class Kierto
+    {
+        public double? AtsimuuttiMin, AtsimuuttiMax;
+        public double KorkeusMin, KorkeusMax, EtaisyysMin, EtaisyysMax;
+
+        public static Kierto OletusTila => new Kierto
+        { AtsimuuttiMin = -55, AtsimuuttiMax = 55, KorkeusMin = 6, KorkeusMax = 65, EtaisyysMin = 0.55, EtaisyysMax = 1.6 };
+
+        public static Kierto OletusYleis => new Kierto
+        { AtsimuuttiMin = null, AtsimuuttiMax = null, KorkeusMin = 8, KorkeusMax = 70, EtaisyysMin = 0.45, EtaisyysMax = 1.8 };
     }
 
     /// <summary>Hahmon spritelehden yksi animaatiosilmukka (rivi ruudukossa, ruutumäärä, toistonopeus).</summary>
@@ -50,6 +77,47 @@ namespace Matkakirja.Linssit.Dioraama
         /// (paikkamerkkihahmo, ei kenttää lähteessä).</summary>
         public double PxPerM;
         public Dictionary<string, Silmukka> Silmukat = new Dictionary<string, Silmukka>();
+        /// <summary>3D-pienoisfiguurin kuvaus (era 2b, kohta 4 "HENKILOT.malli3d"); null = lähteessä ei
+        /// malli3d-kenttää (2D-atlashahmo jatkuu, kortit varalla).</summary>
+        public Malli3d Malli3d;
+    }
+
+    /// <summary>Hahmon 3D-mittasuhteet metreinä (era 2b, kohta 4 "malli3d.mittasuhteet").</summary>
+    public sealed class Mittasuhteet
+    {
+        public double PituusM, HartiatM, LantioM, PaaM;
+    }
+
+    /// <summary>Hahmon vaatetus (era 2b, kohta 4 "malli3d.vaatteet"); Housut ja Hame ovat toisensa poissulkevia
+    /// lähteessä (housut|hame) mutta molemmat luetaan omaan kenttäänsä — vain toinen on ei-null kerrallaan.
+    /// Esiliina ja Paahine ovat valinnaisia (Paahine: 'myssy' | 'huivi' | 'hattu' | null).</summary>
+    public sealed class Vaatteet
+    {
+        public string Paita, Housut, Hame, Esiliina, Paahine;
+    }
+
+    /// <summary>Henkilön 3D-pienoisfiguuri (era 2b, kohta 4 "HENKILOT.malli3d"): rakennuskoneen tuottaman
+    /// hahmot3d/&lt;id&gt;.glb:n kuvaus. Varit on vapaamuotoinen sanakirja (osan nimi → hex-väri), koska
+    /// pankin varit-oliolla ei ole kiinteää avainjoukkoa. Glb luetaan rakennus.jsonin malli3d.glb-kentästä
+    /// sellaisenaan (kuten Henkilo.Atlas); rakennuskone kirjoittaa siihen polun "hahmot3d/&lt;id&gt;.glb".</summary>
+    public sealed class Malli3d
+    {
+        public Mittasuhteet Mittasuhteet;
+        public Vaatteet Vaatteet;
+        public Dictionary<string, string> Varit = new Dictionary<string, string>();
+        public string Esine;
+        public string Glb;
+    }
+
+    /// <summary>Yksi liikesilmukka LIIKKEET-pankista (era 2b, kohta 4 "3D-HAHMOT"); JS-pari
+    /// js/dioraama/pankit/liikkeet.js, C#-logiikkapari Ydin/Dioraama/Liikkeet.cs. Avaimet[nivel][i] =
+    /// [t01, rx, ry, rz] (asteina, t01 kasvava 0..1) — sama muoto kuin lähteessä, ei esikäsittelyä tässä.
+    /// JuuriNousuM null = silmukalla ei ole pystysuoraa "pomppua" (kohta 4: "juuri?: { nousu_m }").</summary>
+    public sealed class Liike
+    {
+        public double KestoS;
+        public double? JuuriNousuM;
+        public Dictionary<string, double[][]> Avaimet = new Dictionary<string, double[][]>();
     }
 
     /// <summary>Pintapankin (js/dioraama/pankit/pinnat.js) rivi.</summary>
@@ -64,6 +132,20 @@ namespace Matkakirja.Linssit.Dioraama
         public double ToistoU, ToistoV;
         /// <summary>UV-siirtymä metriä/s (era 2), vain vesipinnoilla; muuten (0, 0).</summary>
         public double VirtausU, VirtausV;
+        /// <summary>Proseduraalisen kuvion varjostinparametrit (era 2b, kohta 1 "PINNAT.kuvio"); ei koskaan
+        /// null — puuttuessa lähteestä Tyyppi = "tasainen" ja muut kentät 0.</summary>
+        public Kuvio Kuvio = new Kuvio();
+    }
+
+    /// <summary>Pinnan proseduraalinen kuvio DioraamaKuviot.hlsl:n DioraamaKuvio()-funktiolle (era 2b, kohta 1
+    /// "PINNAT.kuvio"): Tyyppi on yksi speksin listasta (tasainen | kivi | puu | lankku | rappaus | tiili |
+    /// kallio | vesi | metalli | kangas | olki), KokoU/KokoV vastaavat lähteen koko_m:ää (metriä), Sauma
+    /// lähteen sauma_m:ää ja Vaihtelu on 0–1. Oletus (lähteessä ei kuvio-kenttää tai se puuttuu tyhjäksi):
+    /// Tyyppi "tasainen", muut 0.</summary>
+    public sealed class Kuvio
+    {
+        public string Tyyppi = "tasainen";
+        public double KokoU, KokoV, Sauma, Vaihtelu;
     }
 
     /// <summary>Äänipankin (js/dioraama/pankit/aanet.js) rivi rakennus.jsonista (era 2 kohta 2 "AANET";
@@ -98,6 +180,18 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public string AaniId;
         public double Voimakkuus;
+    }
+
+    /// <summary>Yksi tilan valo (era 2b, kohta 1 "TILA.valot"): sama lista leipoo lämmön (G) rakennuskoneessa
+    /// KUTEN ENNEN ja on lisäksi reaaliaikainen pistevalo natiivissa/esikatselussa (range = Sade, intensiteetti
+    /// = Voima · 2,2). Vari ja Lepatus ovat valinnaisia: Vari null = ei väriohitusta (natiivi käyttää omaa
+    /// oletustaan), Lepatus 0 = ei lepatusta (tulisijalla lepatus 0,35, ks. olavinlinna.js).</summary>
+    public sealed class Valo
+    {
+        public V3 Paikka;
+        public double Sade, Voima;
+        public string Vari;
+        public double Lepatus;
     }
 
     /// <summary>Yksi tilan satunnaisten kertaäänien tehostejakso (era 2 kohta 2 "AANET": TILA.tehosteet-lista,
@@ -177,9 +271,37 @@ namespace Matkakirja.Linssit.Dioraama
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
         /// <summary>Tilaan sijoitetut äänilähteet (era 2); tyhjä vanhassa muodossa.</summary>
         public List<AaniPaikka> Aanet = new List<AaniPaikka>();
+        /// <summary>Tilan valot (era 2b, kohta 1 "TILA.valot"); tyhjä vanhassa muodossa ja tiloissa, joilla ei
+        /// ole valoja.</summary>
+        public List<Valo> Valot = new List<Valo>();
         /// <summary>Tilan satunnaisten kertaäänien tehostejaksot (era 2, koordinaattorin lisäys 29.9.); tyhjä
         /// vanhassa muodossa ja tiloissa, joilla ei ole tehosteita.</summary>
         public List<TehosteJakso> Tehosteet = new List<TehosteJakso>();
+    }
+
+    /// <summary>Auringon (päävalon) asetukset rakennuksen valaistuksessa (era 2b, kohta 1
+    /// "RAKENNUS.valaistus.aurinko"); Atsimuutti/Korkeus kompassiasteina (valo tulee Atsimuutin suunnasta).</summary>
+    public sealed class Aurinko
+    {
+        public double Atsimuutti, Korkeus, Voima;
+        public string Vari;
+    }
+
+    /// <summary>Taivaan ambienttivalon asetukset (era 2b, kohta 1 "RAKENNUS.valaistus.taivas"): Yla/Ala ovat
+    /// hex-värit gradientin ylä- ja alareunalle.</summary>
+    public sealed class Taivas
+    {
+        public string Yla, Ala;
+        public double Voima;
+    }
+
+    /// <summary>Rakennuksen valaistus (era 2b, kohta 1 "RAKENNUS.valaistus"); null vanhassa rakennus.jsonissa
+    /// (ei valaistus-kenttää lähteessä) — natiivi käyttää silloin omia oletuksiaan. Spekissä on myös valinnainen
+    /// sumu-kenttä (aina null nykydatalla); sitä ei jäsennetä tässä erässä, ei ole tarvetta ennen toteutusta.</summary>
+    public sealed class Valaistus
+    {
+        public Aurinko Aurinko;
+        public Taivas Taivas;
     }
 
     /// <summary>Koko rakennus (kohta 1: RAKENNUS + rakennuskoneen lisäykset, kohta 3).</summary>
@@ -190,12 +312,17 @@ namespace Matkakirja.Linssit.Dioraama
         public Asento YleisVaaka, YleisPysty;
         public V3 PuluLaskeutuminen;
         public Taulu Taulu;
+        /// <summary>Rakennuksen valaistus (era 2b, kohta 1); null vanhassa muodossa.</summary>
+        public Valaistus Valaistus;
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
         /// <summary>Käytetyt liekkimääritykset (era 2); tyhjä vanhassa muodossa.</summary>
         public Dictionary<string, Liekki> Liekit = new Dictionary<string, Liekki>();
         public Dictionary<string, Aani> Aanet = new Dictionary<string, Aani>();
+        /// <summary>Liikesilmukkapankki (era 2b, kohta 4); tyhjä, jos rakennus.json:ssa ei ole liikkeet-
+        /// kenttää (rakennuskone lisää sen vain, jos rakennuksella on ≥1 3D-hahmo — tools/dioraama/rakenna.mjs).</summary>
+        public Dictionary<string, Liike> Liikkeet = new Dictionary<string, Liike>();
 
         /// <summary>Tila id:llä, tai null jos ei löydy (kuten js:n loydaTila).</summary>
         public Tila Tila(string id)
@@ -224,6 +351,7 @@ namespace Matkakirja.Linssit.Dioraama
             var pulu = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "pulu"));
             r.PuluLaskeutuminen = LueV3(MiniJson.Kentta(pulu, "laskeutuminen"));
             r.Taulu = LueTaulu(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "taulu")));
+            r.Valaistus = LueValaistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "valaistus")));
 
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "tilat")))
             {
@@ -245,7 +373,7 @@ namespace Matkakirja.Linssit.Dioraama
                 double vv = virtaus.Count > 1 && virtaus[1] is double vvd ? vvd : 0;
                 r.Pinnat[pari.Key] = new Pinta { Id = pari.Key, Vari = MiniJson.Teksti(o, "vari"),
                     ToistoM = tu, ToistoU = tu, ToistoV = tv, Hehku = MiniJson.Luku(o, "hehku") ?? 0,
-                    Tekstuuri = MiniJson.Teksti(o, "tekstuuri"), VirtausU = vu, VirtausV = vv };
+                    Tekstuuri = MiniJson.Teksti(o, "tekstuuri"), VirtausU = vu, VirtausV = vv, Kuvio = LueKuvio(o) };
             }
             foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "liekit")) ?? new Dictionary<string, object>())
             {
@@ -260,7 +388,35 @@ namespace Matkakirja.Linssit.Dioraama
                         Silmukka = MiniJson.Totuus(o, "silmukka"), Voimakkuus = MiniJson.Luku(o, "voimakkuus") ?? 1,
                         KestoS = MiniJson.Luku(o, "kesto_s") ?? 0 };
             }
+            foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "liikkeet")) ?? new Dictionary<string, object>())
+            {
+                var o = MiniJson.ObjektiTaiNull(pari.Value);
+                if (o != null) r.Liikkeet[pari.Key] = LueLiike(o);
+            }
             return r;
+        }
+
+        /// <summary>Yksi LIIKKEET-pankin silmukka (era 2b, kohta 4) — sama muoto kuin js/dioraama/pankit/
+        /// liikkeet.js: avaimet[nivel] = [[t01,rx,ry,rz], ...]. Nivel tai avainrivi, joka ei jäsenny
+        /// (esim. rivi ei ole 4 lukua), jää pois — ei kaada koko silmukan lukemista.</summary>
+        static Liike LueLiike(Dictionary<string, object> o)
+        {
+            var l = new Liike { KestoS = MiniJson.Luku(o, "kesto_s") ?? 0 };
+            var juuriKentta = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "juuri"));
+            if (juuriKentta != null) l.JuuriNousuM = MiniJson.Luku(juuriKentta, "nousu_m");
+            foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "avaimet")) ?? new Dictionary<string, object>())
+            {
+                var rivit = MiniJson.TaulukkoTaiTyhja(pari.Value);
+                var avaimet = new double[rivit.Count][];
+                for (int i = 0; i < rivit.Count; i++)
+                {
+                    var rivi = MiniJson.TaulukkoTaiTyhja(rivit[i]);
+                    double Osa(int k) => rivi.Count > k && rivi[k] is double d ? d : 0;
+                    avaimet[i] = new[] { Osa(0), Osa(1), Osa(2), Osa(3) };
+                }
+                l.Avaimet[pari.Key] = avaimet;
+            }
+            return l;
         }
 
         /// <summary>toisto_m on joko numero (→ U = V = numero) tai [u_m, v_m] (era 2 kohta 2 "PINNAT"/"UV").</summary>
@@ -275,6 +431,37 @@ namespace Matkakirja.Linssit.Dioraama
             }
             double numero = arvo is double d ? d : 0;
             return (numero, numero);
+        }
+
+        /// <summary>Lukee pinnan valinnaisen kuvio-kentän (era 2b, kohta 1 "PINNAT.kuvio"). Puuttuessa tai
+        /// tyhjänä palauttaa oletuksen Tyyppi = "tasainen", muut kentät 0 (Kuvion oma oletusarvo).</summary>
+        static Kuvio LueKuvio(Dictionary<string, object> o)
+        {
+            var kuvio = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kuvio"));
+            if (kuvio == null) return new Kuvio();
+            var k = new Kuvio { Tyyppi = MiniJson.Teksti(kuvio, "tyyppi") ?? "tasainen" };
+            var koko = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(kuvio, "koko_m"));
+            k.KokoU = koko.Count > 0 && koko[0] is double ku ? ku : 0;
+            k.KokoV = koko.Count > 1 && koko[1] is double kv ? kv : 0;
+            k.Sauma = MiniJson.Luku(kuvio, "sauma_m") ?? 0;
+            k.Vaihtelu = MiniJson.Luku(kuvio, "vaihtelu") ?? 0;
+            return k;
+        }
+
+        /// <summary>Lukee rakennuksen valinnaisen valaistus-kentän (era 2b, kohta 1 "RAKENNUS.valaistus").
+        /// Palauttaa null, jos lähteessä ei ole valaistus-oliota lainkaan (vanha rakennus.json).</summary>
+        static Valaistus LueValaistus(Dictionary<string, object> o)
+        {
+            if (o == null) return null;
+            var v = new Valaistus();
+            var aurinko = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "aurinko"));
+            if (aurinko != null) v.Aurinko = new Aurinko { Atsimuutti = MiniJson.Luku(aurinko, "atsimuutti") ?? 0,
+                Korkeus = MiniJson.Luku(aurinko, "korkeus") ?? 0, Vari = MiniJson.Teksti(aurinko, "vari"),
+                Voima = MiniJson.Luku(aurinko, "voima") ?? 0 };
+            var taivas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "taivas"));
+            if (taivas != null) v.Taivas = new Taivas { Yla = MiniJson.Teksti(taivas, "yla"),
+                Ala = MiniJson.Teksti(taivas, "ala"), Voima = MiniJson.Luku(taivas, "voima") ?? 0 };
+            return v;
         }
 
         static Liekki LueLiekki(string id, Dictionary<string, object> o)
@@ -310,7 +497,30 @@ namespace Matkakirja.Linssit.Dioraama
             if (o == null) return default;
             return new Asento(LueV3(MiniJson.Kentta(o, "kohde")), MiniJson.Luku(o, "atsimuutti") ?? 0,
                 MiniJson.Luku(o, "korkeus") ?? 0, MiniJson.Luku(o, "etaisyys") ?? 0,
-                MiniJson.Luku(o, "fov") ?? 0, MiniJson.Luku(o, "aukko") ?? 0);
+                MiniJson.Luku(o, "fov") ?? 0, MiniJson.Luku(o, "aukko") ?? 0, LueKierto(o));
+        }
+
+        /// <summary>Lukee Asennon valinnaisen kierto-kentän (era 2b, kohta 1 "kierto"). Palauttaa null, jos
+        /// lähteessä ei ole kierto-oliota lainkaan; muuten atsimuutti puuttuu/JSON null → AtsimuuttiMin/Max
+        /// jäävät nulliksi (vapaa 360°). Kutsuja soveltaa Kierto.OletusTila / Kierto.OletusYleis, kun tämä
+        /// palauttaa null (ei kierto-kenttää lähteessä).</summary>
+        static Kierto LueKierto(Dictionary<string, object> o)
+        {
+            var k = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kierto"));
+            if (k == null) return null;
+            var kierto = new Kierto();
+            if (MiniJson.Kentta(k, "atsimuutti") is List<object> at && at.Count > 1)
+            {
+                kierto.AtsimuuttiMin = at[0] is double amin ? amin : 0;
+                kierto.AtsimuuttiMax = at[1] is double amax ? amax : 0;
+            }
+            var korkeus = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "korkeus"));
+            kierto.KorkeusMin = korkeus.Count > 0 && korkeus[0] is double kmin ? kmin : 0;
+            kierto.KorkeusMax = korkeus.Count > 1 && korkeus[1] is double kmax ? kmax : 0;
+            var etaisyys = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "etaisyys"));
+            kierto.EtaisyysMin = etaisyys.Count > 0 && etaisyys[0] is double emin ? emin : 0;
+            kierto.EtaisyysMax = etaisyys.Count > 1 && etaisyys[1] is double emax ? emax : 0;
+            return kierto;
         }
 
         static Taulu LueTaulu(Dictionary<string, object> o)
@@ -371,6 +581,13 @@ namespace Matkakirja.Linssit.Dioraama
                 if (a != null) t.Aanet.Add(new AaniPaikka { AaniId = MiniJson.Teksti(a, "aani"),
                     Voimakkuus = MiniJson.Luku(a, "voimakkuus") ?? 1 });
             }
+            foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "valot")))
+            {
+                var v = MiniJson.ObjektiTaiNull(rivi);
+                if (v != null) t.Valot.Add(new Valo { Paikka = LueV3(MiniJson.Kentta(v, "paikka")),
+                    Sade = MiniJson.Luku(v, "sade") ?? 0, Voima = MiniJson.Luku(v, "voima") ?? 0,
+                    Vari = MiniJson.Teksti(v, "vari"), Lepatus = MiniJson.Luku(v, "lepatus") ?? 0 });
+            }
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "tehosteet")))
             {
                 var te = MiniJson.ObjektiTaiNull(rivi);
@@ -409,7 +626,27 @@ namespace Matkakirja.Linssit.Dioraama
                     h.Silmukat[pari.Key] = new Silmukka { Rivi = (int)(MiniJson.Luku(s, "rivi") ?? 0),
                         Ruudut = (int)(MiniJson.Luku(s, "ruudut") ?? 0), Fps = (int)(MiniJson.Luku(s, "fps") ?? 0) };
             }
+            h.Malli3d = LueMalli3d(MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "malli3d")));
             return h;
+        }
+
+        /// <summary>Lukee henkilön valinnaisen malli3d-kentän (era 2b, kohta 4 "HENKILOT.malli3d"). Palauttaa
+        /// null, jos lähteessä ei ole malli3d-oliota lainkaan (2D-atlashahmo jatkuu).</summary>
+        static Malli3d LueMalli3d(Dictionary<string, object> o)
+        {
+            if (o == null) return null;
+            var m = new Malli3d { Esine = MiniJson.Teksti(o, "esine"), Glb = MiniJson.Teksti(o, "glb") };
+            var mitat = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "mittasuhteet"));
+            if (mitat != null) m.Mittasuhteet = new Mittasuhteet { PituusM = MiniJson.Luku(mitat, "pituus_m") ?? 0,
+                HartiatM = MiniJson.Luku(mitat, "hartiat_m") ?? 0, LantioM = MiniJson.Luku(mitat, "lantio_m") ?? 0,
+                PaaM = MiniJson.Luku(mitat, "paa_m") ?? 0 };
+            var vaatteet = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "vaatteet"));
+            if (vaatteet != null) m.Vaatteet = new Vaatteet { Paita = MiniJson.Teksti(vaatteet, "paita"),
+                Housut = MiniJson.Teksti(vaatteet, "housut"), Hame = MiniJson.Teksti(vaatteet, "hame"),
+                Esiliina = MiniJson.Teksti(vaatteet, "esiliina"), Paahine = MiniJson.Teksti(vaatteet, "paahine") };
+            foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "varit")) ?? new Dictionary<string, object>())
+                if (pari.Value is string vari) m.Varit[pari.Key] = vari;
+            return m;
         }
 
         static Hahmo LueHahmo(Dictionary<string, object> o)
