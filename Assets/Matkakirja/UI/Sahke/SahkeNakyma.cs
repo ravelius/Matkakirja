@@ -280,10 +280,10 @@ namespace Matkakirja.Natiivi
                 }
             }
 
-            Rakenne.Nappi("Arvo uudet nimet", "mk-sahke__haamu", ArvoNimet, s);
+            Toiminto("Arvo uudet nimet", ArvoNimet, s);
 
             Button perusta = null, liity = null;
-            perusta = Rakenne.Nappi("Perusta retkikunta", "mk-nappi--kulta mk-sahke__laheta", () =>
+            perusta = Toiminto("Perusta retkikunta", () =>
             {
                 if (valittu == null) { huomio.text = "Valitse ensin nimimerkki."; return; }
                 if (toiminnot.Perusta == null) return;
@@ -298,8 +298,6 @@ namespace Matkakirja.Natiivi
                 try { toiminnot.Perusta(valittu, valmis); }
                 catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut."); }
             }, s);
-            Rakenne.Tausta(perusta, Kuviot.Kulta);
-            Kirjasimet.Aseta(perusta, Kirjasin.KoneLihava);
 
             Huomio("Tai liity kaverin koodilla:", s);
             var koodi = new TextField { maxLength = SahkeVakiot.KoodinPituus };
@@ -316,7 +314,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(koodi, Kirjasin.Kone);
             s.Add(koodi);
 
-            liity = Rakenne.Nappi("Liity retkikuntaan", "mk-komentorivi mk-sahke__laheta", () =>
+            liity = Toiminto("Liity retkikuntaan", () =>
             {
                 if (valittu == null) { huomio.text = "Valitse ensin nimimerkki."; return; }
                 var arvo = Siisti(koodi.value);
@@ -333,7 +331,6 @@ namespace Matkakirja.Natiivi
                 try { toiminnot.Liity(arvo, valittu, valmis); }
                 catch (Exception e) { Debug.LogException(e); valmis("Ei onnistunut."); }
             }, s);
-            Kirjasimet.Aseta(liity, Kirjasin.KoneLihava);
 
             huomio = Huomio("", s);
             ArvoNimet();
@@ -408,10 +405,24 @@ namespace Matkakirja.Natiivi
             }
 
             huomio = Huomio("", s);
-            Rakenne.Nappi("Eroa retkikunnasta", "mk-sahke__haamu", () =>
+            Toiminto("Eroa retkikunnasta", () =>
             {
                 try { toiminnot.Eroa?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
             }, s);
+        }
+
+        /// <summary>
+        /// Retkikunnan toimintonappi päävalikon asussa (omistaja 29.9.2026 "valikot yhtenäisiksi", 1.0.55:stä Retkikunta on
+        /// Paavalikon pergamentilla): .mk-valikkonappi--toiminto (48 pt, ohut reunus, ei täyttöä) omalla .mk-valikkorivillä,
+        /// jotta flex-grow venyttää leveyteen eikä korkeuteen. Palauttaa napin (SetEnabled kesken pyynnön).
+        /// </summary>
+        static Button Toiminto(string nimi, Action painettu, VisualElement isa)
+        {
+            var rivi = Rakenne.El("mk-valikkorivi mk-sahke__toimintorivi", isa, PickingMode.Ignore);
+            var b = Rakenne.Nappi(null, "mk-valikkonappi mk-valikkonappi--toiminto", painettu, rivi);
+            b.tooltip = nimi;
+            Kirjasimet.Aseta(Rakenne.Teksti(nimi, "mk-valikkonappi__nimi", b), Kirjasin.KoneLihava);
+            return b;
         }
 
         // =====================================================================

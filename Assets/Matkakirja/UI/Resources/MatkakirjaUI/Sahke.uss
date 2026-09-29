@@ -258,27 +258,14 @@
     white-space: normal;
 }
 
-.mk-sahke__haamu {
-    align-self: flex-start;
-    min-height: 36px;
-    margin: 2px 0 10px 0;
-    padding: 4px 11px;
-    border-color: var(--line);
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--muted);
+/* Retkikunnan toimintonapit päävalikon asussa (SahkeNakyma.Toiminto, .mk-valikkonappi--toiminto Linssit.uss):
+   rivien väli sama 12 pt kuin valikossa, kesken pyynnön himmeänä. */
+.mk-sahke__toimintorivi {
+    margin-top: 6px;
 }
 
-.mk-sahke__haamu .mk-nappi__teksti {
-    font-size: 13px;
-}
-
-.mk-sahke__laheta {
-    margin: 6px 0 4px 0;
-}
-
-.mk-sahke__laheta .mk-nappi__teksti {
-    -unity-text-align: middle-center;
+.mk-sahke .mk-valikkonappi:disabled {
+    opacity: 0.5;
 }
 
 .mk-sahke__koodi {
