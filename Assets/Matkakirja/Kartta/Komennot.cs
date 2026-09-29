@@ -806,7 +806,7 @@ namespace Matkakirja
                     break;
                 case "symbolit":
                 {
-                    // symbolit tila|pois|paalle|koko <pt>|taso23 0|1 (löydös 160, 3D-symbolinostot)
+                    // symbolit tila|pois|paalle|koko <pt>|taso23 0|1 (löydös 160, 3D-symbolinostot; oletus pois 29.9.2026, paalle = 3D takaisin)
                     string m = o.Length > 1 ? o[1] : "tila";
                     if (m == "pois" || m == "paalle") Symbolimallit.Paalla = m == "paalle";
                     else if (m == "taso23" && o.Length > 2) Symbolimallit.Taso23 = o[2] != "0" && o[2] != "pois";
