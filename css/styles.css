@@ -936,14 +936,42 @@ button, .brand, .turn-pill, .fact-card h2 {
  */
 .turn-pill.laukku-elo {
   animation: laukku-elo 0.9s cubic-bezier(0.34, 1.4, 0.5, 1);
+  /*
+   * JUURISYY (korjaus 29.9.2026, kolmas kierros): omistajan raportoima
+   * "pilleri x137 y-11 w245 h78" EI ollut kaksirivinen sisältö —
+   * .turn-pill on koko ajan white-space: nowrap eikä rivitä. Se oli
+   * TÄMÄN animaation KESKELTÄ mitattu bounding box: alkuperäinen
+   * rotate(±7deg) + scale(1.14) keskipivotilla (oletus) kasvattaa
+   * 226 px leveän pillerin laatikkoa n. 78 px korkeaksi (levossa
+   * 42 px) ja työntää vasenta reunaa n. 17 px vasemmalle — iPadilla
+   * (834×1194) tämä ajoi suoraan logon alueelle (lepotilan väli oli
+   * vain n. 12 px) ja pillerin yläreuna nousi n. 11 px topbarin (ja
+   * ruudun) yläreunan yli. Todennettu mittaamalla koko 0,9 s:n
+   * animaatio 25 ms:n välein (ei vain yhtä satunnaista hetkeä).
+   *
+   * KORJAUS on kaksiosainen, EI koske lepotilaa (omistajan linja:
+   * "iPadin palkki jää nykyiselleen") — vain itse eloonheräämis-
+   * animaatiota pienennetty ja pivotoitu:
+   *   1) transform-origin vasempaan yläkulmaan (logoa lähin reuna) —
+   *      heilahdus kasvaa oikealle/alas, poispäin logosta.
+   *   2) rotate/scale-amplitudi neljäsosaan alkuperäisestä (±7deg/
+   *      1.14 → ±1,75deg/1.06 huipulla) — kulmapivotti ei yksinään
+   *      riitä, koska NEGATIIVINEN kierto nostaa laatikon kaukaisen
+   *      kulman pivotin YLÄPUOLELLE suunnasta riippumatta.
+   * Mitattu (koko animaatio, 834/393/360 px): logon päällekkäisyys
+   * ja ruudun yläreunan ylitys aina < 1,5 px (ei havaittavissa) —
+   * ei osu logon PÄÄLLE millään mitatulla leveydellä. Efekti on yhä
+   * selvästi nähtävissä, vain rauhallisempi.
+   */
+  transform-origin: 0% 0%;
 }
 
 @keyframes laukku-elo {
   0% { transform: none; }
-  14% { transform: rotate(-7deg) scale(1.14); }
-  32% { transform: rotate(6deg) scale(1.1); box-shadow: 0 0 12px rgba(234, 184, 78, 0.55); }
-  52% { transform: rotate(-4deg) scale(1.06); }
-  72% { transform: rotate(2.5deg) scale(1.03); }
+  14% { transform: rotate(-1.75deg) scale(1.06); }
+  32% { transform: rotate(1.5deg) scale(1.045); box-shadow: 0 0 12px rgba(234, 184, 78, 0.55); }
+  52% { transform: rotate(-1deg) scale(1.025); }
+  72% { transform: rotate(0.6deg) scale(1.01); }
   100% { transform: none; }
 }
 

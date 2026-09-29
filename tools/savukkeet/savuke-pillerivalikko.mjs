@@ -239,12 +239,49 @@ async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy
     jarjestys.rect.left >= 0 && jarjestys.rect.right <= leveys + 0.5,
     JSON.stringify(jarjestys.rect));
 
+  /*
+   * "LAUKKU HERÄÄ ELOON" -ANIMAATIO EI SAA MENNÄ LOGON PÄÄLLE EIKÄ
+   * RUUDUN YLÄREUNAN YLI (omistaja 29.9.2026, kolmas kierros: FAIL
+   * "pilleri x137 y-11 w245 h78" iPadilla — EI kaksirivinen sisältö
+   * (.turn-pill on aina white-space: nowrap), vaan .laukku-elo-
+   * animaation (css/styles.css, rotate+scale) bounding box kesken
+   * heilahduksen: rotate(±7deg)+scale(1.14) keskipivotilla työnsi
+   * vasenta reunaa n. 17 px logon alueelle ja yläreunaa n. 11 px
+   * topbarin/ruudun yli. Suljetaan valikko ensin (pilleri jäisi sen
+   * taakse), käynnistetään animaatio OIKEALLA pelin metodilla
+   * (ui.elavoitaLaukku) ja mitataan koko 0,9 s:n kesto tiheästi — yksi
+   * satunnainen hetki ei riitä, koska pahin arvo osuu vain murto-
+   * osaan animaatiosta.
+   */
+  await sivu.click('#turn-pill');
+  await sivu.waitForTimeout(300);
+  await sivu.evaluate(() => window.matkakirja.ui.elavoitaLaukku());
+  let pahinVasen = -Infinity;
+  let pahinYlos = -Infinity;
+  for (let i = 0; i < 36; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(25);
+    // eslint-disable-next-line no-await-in-loop
+    const m = await sivu.evaluate(() => {
+      const l = document.getElementById('brand-btn').getBoundingClientRect();
+      const p = document.getElementById('turn-pill').getBoundingClientRect();
+      return { vasen: l.x + l.width - p.x, ylos: -p.y };
+    });
+    pahinVasen = Math.max(pahinVasen, m.vasen);
+    pahinYlos = Math.max(pahinYlos, m.ylos);
+  }
+  vaadi(`${nimi}: laukku-elo-animaatio ei mene logon päälle (koko 0,9 s tiheästi mitattuna)`,
+    pahinVasen < 0, `pahin päällekkäisyys ${pahinVasen.toFixed(1)} px`);
+  vaadi(`${nimi}: laukku-elo-animaatio ei mene ruudun yläreunan yli`,
+    pahinYlos <= 2, `pahin ylitys ${pahinYlos.toFixed(1)} px`);
+
   vaadi(`${nimi}: ei sivuvirheitä`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
   await ctx.close();
 }
 
 await testaaAsetteluJaAvaus('iPhone 393×852', 393, 852, { hampurilainenNakyy: false });
 await testaaAsetteluJaAvaus('iPad 834×1194', 834, 1194, { hampurilainenNakyy: true });
+await testaaAsetteluJaAvaus('Kapein 360×740', 360, 740, { hampurilainenNakyy: false });
 
 /* ══════════════════════════════════════════════════════════════════ */
 /* 3: LINSSIT — KAKSIVAIHEINEN NAPAUTUS                                */
