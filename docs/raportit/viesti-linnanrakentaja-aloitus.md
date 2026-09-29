@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 21.4x: kuori siivottu, 7 tilaa sijoitettu ja leivottu)
+# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 22.4x: ELÄVÄ LINNA vaihe 1, omistaja hyväksyi A + C)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama", tila hiomassa. Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,17 +8,17 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-f.md`** (uusin: siivous v11, tornien oikeat keskipisteet,
-   7 tilaa sijoitettu ja leivottu) ja tarvittaessa `…-e.md` (Blender-putki, Siirtosepän rajapinta).
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-g.md`** (uusin: omistajan 22.28 päätös, työnjako
+   Siirtosepän kanssa, tehtävät 1–5) ja sen säännöt `…-f.md`:stä.
 3. Speksi pelin repon worktreessä `/Users/Shared/Claude/wt/linnanrakentaja-linna-3` (haara `linnanrakentaja-linna-3`):
    `docs/raportit/dioraama-rajapinnat-blender-20260929.md` (+ era3-speksi tiloista ja teksteistä).
 
-## Kärki (luovutuksen -f osio "Auki")
+## Kärki (luovutuksen -g tehtävät 1–5)
 
-1. Kuoren jäänteet (telineurat, muurin pintakuvat lounaassa, kaakkoislaiturin katokset: käsimallinnus).
-2. Tornitilojen leikkausrajat ja fatabuurin kamerarajaus; valokuvamaisuus (Poly Haven CC0 -kalusteet).
-3. Leivo aina `--leikkaa --leivo`, tarkista 2k-atlas (ei musta), toimita `_valmiit/olavinlinna-blender/` + astcm.
-4. KUORMA: enintään 2 raskasta ajoa kerrallaan, nice 15.
+1. Tarkista hämäräatlasten taustaleivonta (proto-3d/lokit/linnanrakentaja-hamara-20260929/ajo.log) → Siirtosepälle.
+2. saapuminen- ja elava-kentät dataan (Siirtosepän muodot luovutuksessa), testit, rakennus-sijoitettu.json.
+3. Lämpimät ikkunat kuoren hämärätekstuuriin. 4. Repeämän siivous (B:n ehto). 5. C:n sisätilat.
+KUORMA: enintään 2 raskasta ajoa kerrallaan, nice 15. Rakentamisen lupa: omistaja 22.28 (A + C).
 
 ## Säännöt, jotka opittiin
 
