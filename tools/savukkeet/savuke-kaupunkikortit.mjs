@@ -68,10 +68,8 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { jaaKappaleiksi } from '../../js/ui-apurit.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from '../../js/packs/nakyvat-kaupungit-fra.js';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -170,7 +168,7 @@ vaadi('7. yksikään lisäkaupunki ei ole laudan matkakohde',
   laudanKaupungit.size > 0 && kohteina.length === 0, kohteina.map((k) => k.id).join(', '));
 
 /* ---------------- selainvartiot ---------------- */
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /*
  * KUVA MITATAAN VASTA KUN SE ON DEKOODATTU. `loading="lazy"` ja ämpärin

@@ -63,11 +63,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-
-// Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argit = process.argv.slice(2);
@@ -144,7 +140,7 @@ const kaappaa = async (sivuOlio, nimi, skaala = 0.72) => {
   writeFileSync(join(ULOS, nimi), Buffer.from(pieni, 'base64'));
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 },
   deviceScaleFactor: DPR,

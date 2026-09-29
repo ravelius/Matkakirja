@@ -73,6 +73,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 /* Portti ympäristöstä: rinnakkaisajo tarvitsee oman (vrt. savuke-topografialinssi). */
@@ -184,10 +185,7 @@ const JEBELIN_OSAT = jaaOsiin(
   IHMISEN_MATKA_KERTOMUS.find((j) => j.id === 'jebel-irhoud')?.teksti ?? '',
 ).map((o) => o.teksti);
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
 

@@ -24,6 +24,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
@@ -100,13 +101,9 @@ const JUURI_URL = `http://127.0.0.1:${PORT}`;
 console.log(`esikatselu-kuvat: palvelin ${JUURI_URL} (${kuvat.length} kuvaa)`);
 
 // ── Playwright: SwiftShader, EI GPU-lippuja (tehtävän vaatimus) ──────────────
-const paketti = await import(process.env.PLAYWRIGHT_JS
-  ?? '/Users/Shared/Claude/Matkakirja-fable/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
+const selain = await avaaChromium({
   // CLAUDE.md: /opt/pw-browsers/chromium pätee konttiympäristössä — Mac Studiolla
   // (tämä sessio) Playwright löytää oman lataamansa selaimen itse (CHROMIUM ohittaa).
-  executablePath: process.env.CHROMIUM || undefined,
   args: ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 

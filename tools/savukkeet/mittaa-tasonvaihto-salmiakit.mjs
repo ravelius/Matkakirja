@@ -25,6 +25,7 @@ import { existsSync, readFileSync, mkdirSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -72,7 +73,7 @@ async function taplat(kuva) {
 }
 
 const selain = MOOTTORI === 'chromium'
-  ? await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--use-angle=metal'] })
+  ? await avaaChromium({ args: ['--use-angle=metal'] })
   : await paketti.webkit.launch();
 let esta = null;
 let tulos = 1;

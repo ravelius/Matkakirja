@@ -15,20 +15,16 @@
  */
 import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import { mkdirSync } from 'node:fs';
+import { avaaChromium } from '../selain.mjs';
 
 // Sama kaksoispolku kuin muissa savukkeissa: repon oma asennus tai
-// kontin globaali Playwright.
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const OSOITE = process.env.SAVUKE_OSOITE ?? 'http://localhost:8123/';
 const KAAPPAUS = '/tmp/matkakirja-kaappaukset';
 
 mkdirSync(KAAPPAUS, { recursive: true });
 
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required', '--mute-audio'],
 });
 const sivu = await selain.newPage({ viewport: { width: 900, height: 800 } });

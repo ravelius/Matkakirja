@@ -59,10 +59,9 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const PW = process.env.PLAYWRIGHT_JS ?? 'playwright';
-const paketti = await import(PW).catch(() => import('playwright'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 const CHROME = process.env.CHROMIUM ?? '/opt/pw-browsers/chromium';
 const LISALIPUT = (process.env.SAVUKE_CHROMIUM_LIPUT ?? '').split(' ').filter(Boolean);
 
@@ -110,7 +109,7 @@ const peli = new Game({
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
+const selain = await avaaChromium({
   executablePath: CHROME,
   args: ['--autoplay-policy=no-user-gesture-required', ...LISALIPUT],
 });

@@ -61,7 +61,7 @@ export function webkitRivi(rivi, lahde = '') {
   const moottori = rivi.env?.SAVUKE_MOOTTORI;
   if (moottori) return moottori === 'webkit';
   if (/SAVUKE_MOOTTORI\s*\?\?\s*'webkit'/.test(lahde)) return true;
-  return /webkit\.launch\(/.test(lahde) && !/chromium\.launch\(/.test(lahde);
+  return /webkit\.launch\(/.test(lahde) && !/(chromium\.launch|avaaChromium)\(/.test(lahde);
 }
 
 /**

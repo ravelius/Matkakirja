@@ -26,6 +26,7 @@ import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -67,7 +68,7 @@ const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; c
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 const p = (x, n = 1) => (Number.isFinite(x) ? x.toFixed(n) : '—');
 
-const selain = MOOTTORI === 'webkit' ? await paketti.webkit.launch() : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+const selain = MOOTTORI === 'webkit' ? await paketti.webkit.launch() : await avaaChromium();
 for (const nakyma of NAKYMAT) {
   const ruutu = RUUDUT[nakyma];
   const virheet = [];

@@ -6,8 +6,8 @@
 //   const selain = await avaaChromium({ args: ['--autoplay-policy=no-user-gesture-required'] });
 //
 // Mitä avaaChromium tekee:
-//   1. Playwright: ensin repon oma node_modules ('playwright'), sitten PLAYWRIGHT_JS (Mac: Fablen
-//      checkoutin node_modules), sitten kontin polku /opt/node22/… — sama järjestys kuin savukkeissa ennen.
+//   1. Playwright: ensin repon oma node_modules ('playwright'), sitten PLAYWRIGHT_JS, sitten Macin Fablen
+//      checkoutin node_modules ja kontin /opt/node22/… — worktreessä ajo ei siis tarvitse PLAYWRIGHT_JS:ää.
 //   2. Selain: asetukset.executablePath > CHROMIUM > PW_CHROMIUM > kontin /opt/pw-browsers/chromium, jos se
 //      on olemassa > Playwrightin oma selain. Kovakoodattu kontin polku ei enää kaada ajoa Macilla.
 //   3. GPU OLETUKSENA Macilla: --use-angle=metal --enable-gpu --ignore-gpu-blocklist (headless-Chromium
@@ -25,6 +25,8 @@ import { existsSync } from 'node:fs';
 export const GPU_LIPUT = ['--use-angle=metal', '--enable-gpu', '--ignore-gpu-blocklist'];
 const KONTIN_SELAIN = '/opt/pw-browsers/chromium';
 const KONTIN_PLAYWRIGHT = '/opt/node22/lib/node_modules/playwright/index.js';
+// Mac Studio: worktreeissä ei ole node_modulesia; Fablen checkoutin Playwright (sama kuin PLAYWRIGHT_JS-ohje).
+const MACIN_PLAYWRIGHT = '/Users/Shared/Claude/Matkakirja-fable/node_modules/playwright/index.js';
 // Sama lista kuin tools/savukkeet/chromium-liput.mjs OLETUSPOIS (sitä ei tuoda: moduuli kytkee
 // tuotaessa oman launch-käärön ja tulostaa INFO-rivin).
 const OLETUSPOIS = ['HardwareMediaKeyHandling', 'MediaSessionService'];
@@ -46,7 +48,7 @@ let playwright = null;
 /** Playwright-moduuli (chromium, webkit, firefox) samasta lähteestä kuin avaaChromium. */
 export async function lataaPlaywright() {
   if (playwright) return playwright;
-  for (const lahde of ['playwright', process.env.PLAYWRIGHT_JS, KONTIN_PLAYWRIGHT].filter(Boolean)) {
+  for (const lahde of ['playwright', process.env.PLAYWRIGHT_JS, MACIN_PLAYWRIGHT, KONTIN_PLAYWRIGHT].filter(Boolean)) {
     try {
       // eslint-disable-next-line no-await-in-loop
       const m = await import(lahde);

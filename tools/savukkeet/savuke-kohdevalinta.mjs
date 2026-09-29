@@ -61,6 +61,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { LIUSKAN_AJO_MS } from '../../js/pallolauta/kamera.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 // Julkaisusarjassa kaappauskansio tulee ajurilta (tools/savukkeet/
@@ -178,7 +179,7 @@ const TALLENNE = JSON.stringify(peli.toJSON());
 const konttiSelain = '/opt/pw-browsers/chromium';
 const selainPolku = process.env.CHROMIUM
   ?? (existsSync(konttiSelain) ? konttiSelain : chromium.executablePath());
-const selain = await chromium.launch({ executablePath: selainPolku });
+const selain = await avaaChromium({ executablePath: selainPolku });
 
 /**
  * Kaupungin ruutupiste LUETAAN AINA TUOREENA (sama syy kuin

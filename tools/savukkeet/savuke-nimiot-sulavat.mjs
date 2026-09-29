@@ -61,11 +61,9 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { ennustevirhe, kehysnopeus, koonLiukuvuus, siirtymanMuutokset } from '../../js/pallolauta/sulavuusmittari.js';
 import { NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO, nostosymNimionKattoPx } from '../../js/fokusnosto-symbolit.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
@@ -124,8 +122,7 @@ if (kirjasto?.status !== 200) {
  * mittari näkee vain portaita. Sulavuus mitataan GPU:lla — Macilla
  * ikkunallisena (60 fps), laitteella Laitetestaaja.
  */
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   headless: process.env.SAVUKE_IKKUNA !== '1',
 });
 

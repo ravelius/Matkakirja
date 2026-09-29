@@ -41,10 +41,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -82,7 +79,7 @@ const PIKSELI = Buffer.from(
   'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==',
   'base64',
 );
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+const selain = await avaaChromium();
 
 const avaa = async (asetukset) => {
   const konteksti = await selain.newContext(asetukset);

@@ -39,6 +39,7 @@ import { createServer } from 'node:http';
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const MIME = {
@@ -69,10 +70,7 @@ await new Promise((r) => palvelin.listen(PORTTI, r));
 
 // Rivikohtaiset Chromium-liput (SAVUKE_CHROMIUM_LIPUT) samalla shimillä kuin sarja-ajossa.
 await import('./chromium-liput.mjs');
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
 

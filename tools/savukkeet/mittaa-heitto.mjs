@@ -17,6 +17,7 @@ import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -47,7 +48,7 @@ const tallenne = JSON.stringify(peli.toJSON());
 
 const selain = MOOTTORI === 'webkit'
   ? await paketti.webkit.launch()
-  : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--use-angle=metal', '--ignore-gpu-blocklist'] });
+  : await avaaChromium({ args: ['--use-angle=metal', '--ignore-gpu-blocklist'] });
 const ctx = await selain.newContext({ viewport: { width: 820, height: 1180 }, deviceScaleFactor: 2, isMobile: MOOTTORI !== 'webkit' ? true : undefined, hasTouch: true, serviceWorkers: 'block' });
 await ctx.addInitScript(([d, koe]) => {
   if (sessionStorage.getItem('savuke-alustettu')) return;

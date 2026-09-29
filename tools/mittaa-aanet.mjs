@@ -37,6 +37,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 // Playwright tuodaan vasta ajossa (alempana), jottei sitä tarvita
 // pelkkien laskufunktioiden käyttöön — tests/aanitasot.test.mjs tuo
 // tämän tiedoston eikä selainta ole testiajossa saatavilla.
@@ -66,7 +67,6 @@ const arvo = (lippu, oletus) => {
   return i >= 0 ? argv[i + 1] : oletus;
 };
 const KIRJOITA = argv.includes('--kirjoita');
-const SELAIN = process.env.CHROMIUM ?? '/opt/pw-browsers/chromium';
 
 /*
  * Tavoitetaso (LUFS). Taustaäänen kuuluu jäädä selvästi kertojan alle:
@@ -232,12 +232,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   // Suoraan polusta tuotuna Playwright on CommonJS-paketti, jolloin
   // kaikki on default-avaimen takana; nimettynä pakettina se purkautuu
   // suoraan. Kelpuutetaan kumpikin muoto.
-  const paketti = await import('playwright')
-    .catch(() => import(process.env.PLAYWRIGHT_JS
-      ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-  const chromium = paketti.chromium ?? paketti.default?.chromium;
-  if (!chromium) throw new Error('Playwrightia ei löydy; anna polku PLAYWRIGHT_JS-muuttujassa');
-  const selain = await chromium.launch({ executablePath: SELAIN });
+  const selain = await avaaChromium();
   const sivu = await (await selain.newContext()).newPage();
   // Tyhjä sivu ämpärin alkuperästä ei ole tarpeen: fetch menee CORSin
   // läpi, koska ämpäri sallii GETin — ja epäonnistuessa kokeillaan

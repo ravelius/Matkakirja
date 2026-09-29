@@ -44,10 +44,8 @@ import http from 'node:http';
 import net from 'node:net';
 import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const NIMIO = (process.argv.find((a) => a.startsWith('--nimio=')) ?? '--nimio=jalkeen').split('=')[1];
@@ -77,12 +75,12 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-const selain = await chromium.launch({
+const selain = await avaaChromium({
   executablePath: '/opt/pw-browsers/chromium/chrome-linux/chrome',
   args: ['--no-sandbox', '--no-proxy-server',
     // Ulkomaailma pois: vain peli ja jumittuva ämpäri vastaavat.
     `--host-resolver-rules=MAP media.matkakirja.app 127.0.0.1:${JUMIPORTTI}, MAP * ~NOTFOUND, EXCLUDE 127.0.0.1`],
-}).catch(async () => chromium.launch({
+}).catch(async () => avaaChromium({
   executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome',
   args: ['--no-sandbox', '--no-proxy-server',
     `--host-resolver-rules=MAP media.matkakirja.app 127.0.0.1:${JUMIPORTTI}, MAP * ~NOTFOUND, EXCLUDE 127.0.0.1`],

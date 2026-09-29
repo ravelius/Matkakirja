@@ -61,11 +61,7 @@ import { packById } from '../../js/pack.js';
 // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta`
 // ohjataan pallolle (tools/savukkeet/vanha-kartta-ohitus.mjs).
 import { vainPallo } from './vanha-kartta-ohitus.mjs';
-
-// Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argit = process.argv.slice(2);
@@ -137,7 +133,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 /**
  * Ajaa mittaukset yhdellä ruutukoolla ja palauttaa tulokset.

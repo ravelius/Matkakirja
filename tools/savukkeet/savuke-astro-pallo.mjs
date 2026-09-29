@@ -91,6 +91,7 @@ import { fileURLToPath } from 'node:url';
 import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
 import { suorituskykyVaatija } from './suorituskyky.mjs';
 import { SATELLIITTI_KOHTEET } from '../../js/linssit/satelliitti-data.js';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
@@ -184,15 +185,7 @@ await new Promise((r) => palvelin.listen(PORTTI, r));
  * Playwright kahdesta paikasta (README: älä kirjoita kiinteää
  * ../../node_modules-polkua).
  */
-let paketti = null;
-for (const polku of [process.env.PLAYWRIGHT_JS, join(JUURI, 'node_modules', 'playwright', 'index.js'),
-  '/opt/node22/lib/node_modules/playwright/index.js']) {
-  if (!polku) continue;
-  paketti = await import(polku).catch(() => null);
-  if (paketti) break;
-}
-const chromium = paketti?.chromium ?? paketti?.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 
 const NAKYMAT = {

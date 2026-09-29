@@ -36,10 +36,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -92,7 +89,7 @@ peli.phase = 'action';
 peli.tokens.delete('ateena');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 /*
  * YKSI KONTEKSTI KOKO AJON AJAN: kytkin kirjoittaa laitteen varastoon ja
  * lataa sivun uudestaan, joten vaihdon vaikutus näkyy vain, jos varasto

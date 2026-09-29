@@ -39,10 +39,7 @@
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
-
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const AJOJA = Number(process.argv[2] ?? 11);
@@ -102,7 +99,7 @@ if (kirjasto?.status !== 200) {
   process.exit(0);
 }
 
-const selain = await chromium.launch({
+const selain = await avaaChromium({
   executablePath: process.env.CHROMIUM ?? (existsSync('/opt/pw-browsers/chromium') ? '/opt/pw-browsers/chromium' : undefined),
   // Macilla oikea GPU headlessissä (muistiinpano gpu-headless-metal).
   args: process.platform === 'darwin' ? ['--use-angle=metal'] : [],

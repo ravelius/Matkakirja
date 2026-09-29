@@ -62,6 +62,7 @@ import {
 } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
+import { avaaChromium } from './selain.mjs';
 
 const argv = process.argv.slice(2);
 const tila = argv[0];
@@ -466,11 +467,7 @@ async function sauma() {
   }
   if (!pari) kuole('paikatun alueen oikealta reunalta ei löytynyt kopioitua naapuria');
 
-  const paketti = await import('playwright')
-    .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-  const chromium = paketti.chromium ?? paketti.default?.chromium;
-  const selain = await chromium.launch({
-    executablePath: process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium',
+  const selain = await avaaChromium({
     args: ['--no-sandbox'],
   });
   const sivu = await selain.newPage();
