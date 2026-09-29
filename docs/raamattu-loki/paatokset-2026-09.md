@@ -9343,3 +9343,7 @@ Linssiseppä 29.9.2026 klo 23.12: juurisyy PeliOhjain antoi PalloKierrolle Maail
 ## OMISTAJA: 3D-NOSTOT JA -SYMBOLIT POIS, 2D TAKAISIN (29.9.2026 klo 23.24)
 
 Omistaja 29.9.2026 klo 23.24 (iPad, Italia): "Pakko ottaa 3D nostot ja symbolit pois, eivät vain toimi ja palauttaa 2d takaisin." Kumoaa 27.–28.9. 3D-symbolien ja erikoismallien (Kronborg, Malbork, Olavinlinna jne.) oletuksen kartalla: natiivissa 2D-nostot ja -symbolit kuten ennen 3D:tä (webin malli); 3D-koodi jää kehittäjäkomennon taakse (Linssiseppä, merge Natiivisepälle). Elävän linnan dioraama (Poikkileikkaus-linssi) ei kuulu tähän. Samalla kysymys hunnutetun alueen laattakuvioista → Karttaseppä selvittää.
+
+## OMISTAJA: PAPERIRAE RUUDUN PÄÄLLE, EI LAATTOIHIN (29.9.2026 klo 23.39)
+
+Omistaja 29.9.2026 klo 23.39 kortilla. Juurisyy laattakuvioihin (Karttaseppä): pohjalaattoihin poltettu pikselirae eroaa tasoittain (z7 1,45–1,64 vs ylösnäytetty z6 0,83–0,92), ja natiivin LOD näyttää eri tasot vierekkäin suorakaiteina merellä ja aavikolla; kerman tasokohtainen alfa on pienempi lisätekijä (kerma z8:sta alasnäytteellä, p060b). Päätös A: pikselirae pois laatoista (patina rae ja raeKarkea = 0, paperikuitu ennallaan) jo tämän yön jokipoltossa (uudelleenkäynnistys); natiivin pallovarjostimeen proseduraalinen maahan ankkuroitu paperirae säädettävällä voimakkuudella (Natiiviseppä), sama käännös kuin uusi laattakansio. Täysi vienti (delta ei auta), omistajan lupa kuvien kanssa. Web menettää rakeen, kunnes web-varjostin saa saman kohinan (web-jono).
