@@ -3866,6 +3866,7 @@
 }
 
 .mk-linssivalitsin__esinappi {
+    -unity-text-align: middle-center;
     min-height: 44px;
     margin: 8px 0 0 0;
     font-size: 13px;
