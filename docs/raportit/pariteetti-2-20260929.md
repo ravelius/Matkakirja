@@ -43,6 +43,17 @@ Vastaavat hyvin: avauskortin rakenne ja mitat, kaupunkilehden ylätunniste, sä�
 anfangi, kartuschan otsikko, tunnusluvut, kielet ja kategorialinkit, linssin 1. napautus (esikatselu vasemmalle ja
 rivi "Aktivoi").
 
+## Tilanne 29.9. illalla (Päätoimittajan jako)
+
+| # | Tila |
+|---|---|
+| 7 | Vahvistettu koodista: natiivin alapalkki oli kiinteä arkin pohjalla (Lehtinakyma.cs), kansi itse on täysi. Korjaus Siirtosepällä: napit sivun loppuun kuten web (proto `siirtoseppa/pariteetti-2`). |
+| 8 | ‹ ›-nuolet: **sallittu**, omistajan löydös 34 (build 10, proto 6285b06b: kuvien selaus eleillä ilman nuolia). Pääkuvan kehys: korjaus Siirtosepällä (web border 0, kulma 4). |
+| 9 | Tähdet ovat webin "Matkakirjan ihmeen tähti" (`.kohde-ihmetahti`, omistaja 2.9.2026). Korjaus Siirtosepällä: tähti natiivin kohdekarttaan fokuskohteiden `ihme`-kentästä. |
+| 10 | **Sallittu:** omistajan päätös 28.9. (Natiivi-UI:n maakuntatila v2), Päätoimittaja kirjaa. |
+| 11 | **Sallittu:** omistajan hyväksymä aloituslento v3f. Renkaat näkyvät kaikilla neljällä ennen valintaa; kuva oli otettu valinnan jälkeen. |
+| 12 | Linssiseppä 2. |
+
 ## Sallitut (eivät vaadi korjausta)
 
 - **Kartuschan maakuntalista pikkukuvineen ja NOSTOT 0/83 -rivi (natiivi):** ELÄVÄ KARTTA kohta 3, "pikkukuva
