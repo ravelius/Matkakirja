@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2396';
+const CACHE = 'matkakirja-2026-09-21.2399';
 const SHELL = [
   './',
   './index.html',
@@ -53,6 +53,7 @@ const SHELL = [
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
+  './js/avausanimaatio.js',
   // Viisaan pöllön arvonimet (nimilappuvitsi, Raamattu VIISAAN POLLON ARVONIMET).
   './js/packs/pollon-arvonimet.js',
   './js/liput.js',

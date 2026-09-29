@@ -630,6 +630,9 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  // Avaus- ja sulkuanimaatioiden apuri (omistaja 29.9.2026) ennen kortteja, popupeja ja valikoita,
+  // jotka tuovat sen; moduuli itse ei tuo mitään.
+  'js/avausanimaatio.js',
   // Saapumisasento ennen fokusvirtaa (fokusvirta ja kartta tuovat sen);
   // moduuli itse ei tuo mitään.
   'js/saapumisasento.js',
@@ -994,7 +997,6 @@ const MODULES = [
   'js/packs/maakunnat-luonnehdinnat.js',
   'js/packs/maakunnat-pulu.js',
   'js/packs/maakunnat-nimet.js',
-  'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
    * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,
@@ -1008,6 +1010,9 @@ const MODULES = [
    * listalla vasta tässä.
    */
   'js/fokusnosto.js',
+  // Maakunnat-välilehden moduuli (data yllä) vasta nostokortin jälkeen:
+  // maakunnan kortti käyttää nostokortin kuvia ja tyyliä (#3583).
+  'js/karttatyokalu-maakunnat.js',
   /*
    * Syvennystarinat kartalle (yhtenäinen kohdemalli): data ensin,
    * kerroskytkentä perässä. js/syvennys.js tuo fokusvirran,

@@ -137,6 +137,7 @@ import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 /** Kuvan tekijä- tai lisenssirivi (ei tekstin lähde). */
 const KUVAN_TEKIJARIVI = /Wikimedia Commons|Valokuva:|havainnekuva|\bCC[ -](?:BY|0)|public domain/i;
 
@@ -629,7 +630,7 @@ const NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
  * työvaiheen hallussa. Yhden tiedoston versiossa erillistä linkkiä ei
  * ole, koska tyylit ovat jo sivun <style>-lohkossa.
  */
-function nostoLataaTyyli() {
+export function nostoLataaTyyli() {
   if (typeof document === 'undefined') return;
   if (document.getElementById(NOSTO_TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
@@ -1237,6 +1238,7 @@ function avaaNostonKortti(ui, nosto) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('fokusnosto-kortti-auki');
+  animoiAvaus(kortti);
   sfx.play('paper');
   return true;
 }
@@ -1282,7 +1284,7 @@ export function suljeNostonKortti(ui) {
       // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
       // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
       vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
-      vanha.remove();
+      suljeKerrosAnimoiden(vanha, '.fokusnosto-kortti', ['fokusnosto-kerros', 'fokusnosto-kortti-auki']);
     }
   }
 }
