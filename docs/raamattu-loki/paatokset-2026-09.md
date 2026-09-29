@@ -9295,3 +9295,7 @@ Omistaja 29.9.2026: "Virhe toistuu silloin, jos lopetan edellisen luennon kesken
 ## OMISTAJA: MAARAJAT KEVYIKSI, HENTO RANTA KAIKKIALLA (29.9.2026 klo 19.56)
 
 Omistaja 29.9.2026 kuvasarjasta raja-ja-rannat: "Tämä on hyvä. Pidetään tämä viimeisin versio." Natiivin maarajat: maa–maa-raja #5a4330 50 % peitolla 2,2 px; kaikki rannat saarineen samasta aineistosta ilman yleistystä #5a4330 22 %, 1,2 px maarajan alla. Ei uutta aineistoa eikä vientiä (maamaa.geojson + maapolygonit.geojson); mannerrajat-koe ja A/B hylätty. Natiiviseppä + Karttaseppä, seuraava juna; web web-jonoon.
+
+## OMISTAJA: LUENTAVIKA — TOINEN NAPAUTUS ALKAA OIKEIN (29.9.2026 klo 20.00)
+
+Omistaja 29.9.2026: "toisto alkaa oikeasta kohdasta jos klikkaan mini hampurilaisesta kaksi kertaa ensimmäistä otsikkoa". Päätoimittajan hypoteesi Natiivi-UI:lle: laitteella striimattu ensimmäinen pala alkaa soida ennen kuin dataa on puskurissa, soittoaika juoksee odotuksen ajan ja alusta puuttuu ~1–2 s; välimuistista (2. napautus) oikein. Korjaus: ensimmäinen pala vasta ladattuna tai ei-striimattuna, timeSamples = 0 datan saavuttua. Simulaattori ei toista (nopea verkko).
