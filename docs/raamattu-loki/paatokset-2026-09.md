@@ -9071,3 +9071,7 @@ Julkaisija 29.9.: 1.0.40 (build 202609281959, proto 23983305) sisäisessä ryhm�
 ## OMISTAJA: GEMINI 3.8 FLASH TTS -KOE JA HINNAT (29.9.2026 klo 05.25)
 
 Omistaja 29.9. klo 05.3x kysyi "Onko tätä kokeiltu Gemini 3.8 Flash TTS" (vastaus: ei; aiempi Gemini-puhe hylättiin 26.9. striimivertailussa, koska ei striimannut, ensiääni 5–16 s) ja sanatarkasti: "Tee Testi ja anna hinnat". → Pelikoodari (Sonnet-ali-agentti): ≤ 5 lyhyttä Pulun repliikkiä, striimaus, ensiäänen viive (5 ajoa, mediaani), suomen ääntäminen, viralliset hinnat (Gemini 3.8 Flash TTS vs ElevenLabs v4 ja Flash v2.5, per 1 000 merkkiä ja per ~300 merkin Pulun vastaus) + kooste mp3 omistajalle. Poikkeus 28.9. 'älä vertaa' -linjaukseen omistajan omalla pyynnöllä.
+
+## KORJAUS: RADIOLINSSIN UUDISTUS VAIN NATIIVISSA, WEB ENNALLAAN (29.9.2026 klo 06.32)
+
+Siirtoseppä 29.9. klo 06.4x huomasi: Päätoimittajan ohje Linssiseppä 2:lle viedä radiolinssin uudistus webiin oli ristiriidassa Raamatun sitovan linjauksen RADIOLINSSIN UUDISTUS NATIIVISSA (omistaja 24.9.2026 klo 19.2x: 'vain natiivissa, web ennallaan') kanssa; lisäksi WebKit ei päästä CORS-suojattua striimiä AnalyserNodeen, joten aitoa VU:ta ei webissä ole. Päätoimittaja: web jää ennalleen, ohje peruttu Siirtosepälle ja Linssiseppä 2:lle. Omistajan 28.9. klo 23.47 radiotoiveet (usva, mastot, uusi radio, kaikki maat) koskevat natiivia.
