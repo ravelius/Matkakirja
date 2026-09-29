@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2413, teksti: 'Isoisän linssi 1873: vuoden 1873 rajat ja valtakunnat' },
   { v: 2412, teksti: 'ISL: pitkä-luonnehdinta + pulu kaikille 9 maaku… (#3560)' },
   { v: 2411, teksti: 'Natiivin muutosloki: 1.0.51 (#3629)' },
   { v: 2410, teksti: 'Linssien esittelyt: 9 lyhyttä selitystä pilleri… (#3611)' },
