@@ -9159,3 +9159,7 @@ Natiiviseppä 29.9. klo 10.11: 1.0.44 = BUILD 44 -yhdistelmä proto master 4d7bc
 ## OMISTAJA: VIIKKORAJA 97 % → SESSIOT SEIS JA SIIRTOPROMPTI (EI AIEMMIN) (29.9.2026 klo 12.15)
 
 Omistaja 29.9. klo 12.1x sanatarkasti: "kun viikkolimit 97%, lopeta sessiot ja kirjoita siirtoprompti. mutta tee vasta siinä vaiheessa, älä aiemmin." Tilanne 12.15: Weekly · all models 86 %, vauhti ~3,3 %/h → 97 % arviolta ~15.30. Postivahti ilmoittaa 94 %:ssa (valmistelu: roolit päivittävät luovutukset, ei pysäytystä) ja 97 %:ssa (toimeenpano: roolit pushaavat luovutuksen + aloitusviestin ja lopettavat; Päätoimittaja kirjoittaa siirtopromptin docs/raportit/viesti-fable-siirtoprompti-<pvm>.md, antaa sen omistajalle kopioitavana ja pysäyttää sessiot). Muistio viikkoraja-97-siirtoprompti.md.
+
+## OMISTAJA: KEITTIÖ B + TUMMEMPI VALO; PARITEETTIPÄÄTÖKSET (29.9.2026 klo 12.20)
+
+(1) Linnanrakentajan keittiö v1 A|B (simulaattori a57ce34e: aurinko ja varjot, tulen valo, 3D-pienoisfiguurit, 3D-liekki, 70 esinettä, kaarilennot, äänet). Omistaja kortilla 29.9. klo 12.3x: 'B + tummempi valo' → jatketaan Codexin maalatuilla pinnoilla, valaistus referenssikeittiön tapaan (tummempi yleisvalo, tuli/kynttilät/ikkunan aurinko tekevät tunnelman, syvät varjot), liekin hehkua pienennetään. (2) Pariteetti: pilleri molemmilla 'rahat · Päivä N, vuorokaudenaika', N/80 pois natiivista (omistaja poisti webistä 16.8.); saapumisen valokuvakortti webissä natiivin mukaan ilman polaroid-kehystä ja kuvatekstiä (omistajan löydös 138, build 16); ratas ei ero (kehittäjätila).
