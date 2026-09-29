@@ -2159,6 +2159,10 @@ namespace Matkakirja.Natiivi
             // mitään samalla arvolla, sammutus puristaa kameran heti maan rajaan).
             // Pelaajan näkymä (omistaja 29.9.2026): maailmatilassa rajat kuten pelaajalla.
             if (kierto != null) kierto.MaailmaTila = Paavalikko.MaailmaNakyma;
+            // Kytkimen vaihto (maailmatila, pelaajan näkymä) laskee kaupunkirajauksen ja himmeät heti uudelleen: rajaus
+            // päivittyy muuten vain pelin tapahtumista (laite 29.9.: himmeitä 0 kytkimen jälkeen).
+            var nakyma = (Paavalikko.Maailma, Paavalikko.PelaajanNakyma);
+            if (nakyma != viimeNakyma) { viimeNakyma = nakyma; if (matka != null) PaivitaPeliSuodatin(); }
             PaivitaAutomaattiheitto();
             if (matka != null) { PaivitaSiirtoKohteet(); PaivitaValintavihje(); }
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.

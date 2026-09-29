@@ -118,6 +118,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Lentolistan tarjotut kohteet (web tarjotutLennot), kun lentokaaret ovat näkyvissä.</summary>
         List<string> lentoKohteet;
         string peliSuodatinAvain;
+        (bool, bool) viimeNakyma;
         /// <summary>Pelaajalle näkyvät kaupungit (pelin rajaus), null = ei rajausta; pelaajan näkymän hyppy vain muihin.</summary>
         HashSet<string> pelaajanKaupungit;
 
