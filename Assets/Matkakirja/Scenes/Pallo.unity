@@ -804,7 +804,7 @@ MonoBehaviour:
   rakennusKehys: 24
   pisteMateriaali: {fileID: 2100000, guid: 4353d89444b4e402fbea0f34520d7387, type: 2}
   fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
-  musteenVari: {r: 0.2, g: 0.15, b: 0.1, a: 1}
+  musteenVari: {r: 0.3529412, g: 0.2627451, b: 0.1882353, a: 0.92643493}
   piste: 9
   tarkeaPiste: 13
   kirjain: 13

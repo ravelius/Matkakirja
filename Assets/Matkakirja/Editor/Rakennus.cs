@@ -84,7 +84,7 @@ namespace Matkakirja.Editori
 
             var merkit = georefGo.AddComponent<KaupunkiMerkit>();
             merkit.georeferenssi = georef;
-            merkit.pisteMateriaali = Materiaali("Kaupunkipiste", "Matkakirja/Piste", new Color32(0x3b, 0x2f, 0x22, 0xff));
+            merkit.pisteMateriaali = Materiaali("Kaupunkipiste", "Matkakirja/Piste", KaupunkiMerkit.KaupunkiMuste); // sepia, palaute 3
             merkit.fontti = Fontti();
             // Aloitusvalinnan huomiorengas: web .pallolauta-huomio, --kulta #eab84e.
             merkit.rengasMateriaali = Materiaali("Kaupunkirengas", "Matkakirja/Rengas", new Color32(0xea, 0xb8, 0x4e, 0xff));
