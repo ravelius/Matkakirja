@@ -119,6 +119,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Pillerivalikko puhelimella: logo vasemmalla, pilleri oikealla, ei ☰:ta (omistaja 29.9.2026).</summary>
         public static bool PilleriOikealla => Puhelin && Linssivalitsin.PilleriValikko;
 
+        /// <summary>
+        /// iPadin nahkapalkki (omistaja 29.9.2026, Codex ipad-v1; Päätoimittaja: iPad pillerivalikkoon kuten iPhone): ☰ pois,
+        /// logo 36 pt vasemmasta ja pilleri 36 pt oikeasta reunasta, korkeus 24 + 65 pt, nahka rajautuu yläosasta niin, että
+        /// alareuna ja tikkaus näkyvät kokonaisina; logo ja pilleri tikkauksen yläpuolisen nahan keskellä.
+        /// </summary>
+        public static bool IpadNahka => !Puhelin && UiKerros.Tabletti && Linssivalitsin.PilleriValikko;
+        /// <summary>iPad-nahan pala @2x: 1290 × 260 px = 645 × 130 pt; alareunan varjo, sauma ja tikkaus rivit 222–260 = 19 pt.</summary>
+        const float IpadNahkaLeveys = 645f, IpadNahkaKorkeus = 130f, IpadTikkaus = 19f, IpadReuna = 36f;
+
         public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
         /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
         const float MatalaRivi = 40f, MatalaAla = 4.8f;
@@ -295,6 +304,12 @@ namespace Matkakirja.Natiivi
                 palkki.AddToClassList("mk-ylapalkki--pilleri-oikealla");
                 PueNahka();
             }
+            else if (IpadNahka)
+            {
+                Valikko.style.display = DisplayStyle.None;
+                palkki.AddToClassList("mk-ylapalkki--pilleri-oikealla");
+                PueNahka("-ipad");
+            }
 
             // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
             // Web #3421 rahattomuuspalkki: lappu kartan keskellä selitenapin alla, 8 lohkoa 10 × 6 ja teksti.
@@ -347,12 +362,30 @@ namespace Matkakirja.Natiivi
         /// scale-and-crop alareunaan), keskitummennus erillisenä kerroksena saaren kohdalle (koko leveys, sama rajaus),
         /// logo ja pillerin muoto kohopainatuksina (pilleri 9-slice 53/47 px @3x). Luvut piirtää peli kuten ennen.
         /// </summary>
-        void PueNahka()
+        void PueNahka(string laite = "")
         {
-            var nahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/nahka-tile");
+            var nahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/nahka-tile" + laite);
             if (nahka == null) return;
             palkki.style.backgroundImage = new StyleBackground(nahka);
             palkki.AddToClassList("mk-ylapalkki--nahka");
+            bool ipad = laite.Length > 0;
+            if (ipad)
+            {
+                // Pala toistuu vaakaan luonnollisessa koossaan (@2x) ja asettuu alareunaan: yläosa rajautuu, tikkaus kokonaan.
+                palkki.AddToClassList("mk-ylapalkki--nahka-ipad");
+                palkki.style.backgroundRepeat = new BackgroundRepeat(Repeat.Repeat, Repeat.NoRepeat);
+                palkki.style.backgroundSize = new BackgroundSize(IpadNahkaLeveys, IpadNahkaKorkeus);
+                var logoIpad = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus-ipad");
+                if (logoIpad != null) { logo.style.backgroundImage = new StyleBackground(logoIpad); logoSuhde = 283f / 82f; }
+                var pilleriIpad = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/pilleri-kohopainatus-ipad");
+                if (pilleriIpad != null)
+                {
+                    pilleri.style.backgroundImage = new StyleBackground(pilleriIpad);
+                    pilleri.AddToClassList("mk-pilleri--nahka");
+                    pilleri.AddToClassList("mk-pilleri--nahka-ipad");
+                }
+                return;
+            }
             var varjo = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/keski-varjo");
             if (varjo != null)
             {
@@ -460,6 +493,14 @@ namespace Matkakirja.Natiivi
                 palkki.style.paddingLeft = r.x + t.y;
                 palkki.style.paddingRight = r.z + t.y;
                 palkki.style.height = r.y + Korkeus;
+                if (IpadNahka && palkki.ClassListContains("mk-ylapalkki--nahka-ipad"))
+                {
+                    // Rivi tikkauksen yläpuolisen nahan keskelle; reunat 36 pt (Codex ipad-v1), turva-alue ja kulmakaari mukana.
+                    palkki.style.paddingTop = r.y;
+                    palkki.style.paddingBottom = IpadTikkaus;
+                    palkki.style.paddingLeft = Mathf.Max(r.x, 0f) + IpadReuna;
+                    palkki.style.paddingRight = Mathf.Max(r.z, 0f) + IpadReuna;
+                }
             }
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
             // Löydös 68: väkäsnappi täsmälleen ☰:n paikalle ja kokoiseksi (turva-alueen sisällä, palkin täyte).

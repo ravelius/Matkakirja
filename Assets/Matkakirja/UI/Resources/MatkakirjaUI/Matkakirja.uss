@@ -4380,6 +4380,32 @@
     background-position-y: bottom;
 }
 
+/* iPadin nahkapalkki (Codex ipad-v1, @2x): pala toistuu vaakaan luonnollisessa koossaan, alareuna ja tikkaus aina näkyvissä. */
+.mk-ylapalkki--nahka.mk-ylapalkki--nahka-ipad {
+    background-position-x: left;
+    background-position-y: bottom;
+    align-items: center;
+}
+
+/* Logo ja pilleri tikkauksen yläpuolisen 46 pt:n nahkarivin mittaan (Codexin 41 ja 45 pt 130 pt:n palkissa). */
+.mk-ylapalkki--nahka-ipad .mk-logo {
+    height: 34px;
+    width: 117px;
+}
+
+.mk-ylapalkki--nahka-ipad .mk-pilleri {
+    height: 40px;
+    min-height: 40px;
+}
+
+.mk-pilleri.mk-pilleri--nahka.mk-pilleri--nahka-ipad {
+    -unity-slice-left: 46;
+    -unity-slice-right: 46;
+    -unity-slice-top: 41;
+    -unity-slice-bottom: 41;
+    -unity-slice-scale: 0.5;
+}
+
 .mk-pilleri.mk-pilleri--nahka {
     border-width: 0;
     background-color: rgba(0, 0, 0, 0);
