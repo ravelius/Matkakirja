@@ -72,6 +72,11 @@ Poikkileikkaus-linssi (id `poikkileikkaus`, moottori "dioraama"). Lue ensin
     `{"rakennus","hash","polku":"<hash>/"}`, jossa polku on suhteellinen kansioon `dioraama/olavinlinna/`.
   - Välimuisti: hash-kansio immutable, `uusin.json` max-age=60.
   - PR ravelius/Matkakirja#3594 (js/dioraama + tools/dioraama, 104/104) on Julkaisijan junassa.
+- **Vientityönkulku ravelius/Matkakirja#3596** (vie-dioraama.yml):
+  - Push mainiin (js/dioraama/** tai tools/dioraama/**) rakentaa ja vie kaikki js/dioraama/rakennukset/*.js.
+  - Käsiajo on oletuksena kuiva.
+  - Osoitin vaihtuu vasta, kun rakennus.json vastaa 200.
+  - Tila: #3594 on junassa, ja #3596 odottaa omistajan hyväksyntää. Kuiva-ajo ajetaan #3594:n mergen jälkeen.
 - **Natiivi lukee `uusin.json`in** (proto `linnanrakentaja/keittio`, commit tämän jälkeen). Oletuspeili on poistettu, joten
   simulaattorissa kehityspaketti otetaan käyttöön komennolla `poikki peili file:///…/dist/dioraama/olavinlinna/`
   (ajo-poikki.sh tekee tämän itse).
