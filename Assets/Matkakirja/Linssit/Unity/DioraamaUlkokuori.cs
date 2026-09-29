@@ -152,6 +152,30 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        static readonly int IdLeikkausMin = Shader.PropertyToID("_DioraamaLeikkausMin"),
+            IdLeikkausMax = Shader.PropertyToID("_DioraamaLeikkausMax"), IdLeikkausKamera = Shader.PropertyToID("_DioraamaLeikkausKamera");
+
+        /// <summary>
+        /// Leikkausikkuna (speksi dioraama-rajapinnat-blender kohta 3) joka ruutu: tilan rajat (tai leikkaus.min/max)
+        /// Unity-avaruuteen, laajennus metreinä, kutistus keskipisteeseen osuudella 0…1 (kasvu kaarilennolla), ja kameran
+        /// paikka jatketta varten. Osuus 0 = kuori ehjä (varjostin ei tee mitään).
+        /// </summary>
+        public void PaivitaLeikkaus(Rakennus rakennus, (string tila, double osuus) leikkaus, Camera kamera)
+        {
+            var t = leikkaus.tila != null && leikkaus.osuus > 0 ? rakennus?.Tilat?.Find(x => x.Id == leikkaus.tila) : null;
+            if (t == null || go == null) { Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero); return; }
+            var a = DioraamaNayttamo.UnityPiste(t.LeikkausMin ?? t.RajaMin);
+            var b = DioraamaNayttamo.UnityPiste(t.LeikkausMax ?? t.RajaMax);
+            float laajennus = (float)t.LeikkausLaajennus, osuus = Mathf.Clamp01((float)leikkaus.osuus);
+            Vector3 lo = Vector3.Min(a, b) - Vector3.one * laajennus, hi = Vector3.Max(a, b) + Vector3.one * laajennus;
+            Vector3 keski = (lo + hi) * 0.5f, puoli = (hi - lo) * 0.5f * osuus;
+            lo = keski - puoli; hi = keski + puoli;
+            Shader.SetGlobalVector(IdLeikkausMin, new Vector4(lo.x, lo.y, lo.z, osuus));
+            Shader.SetGlobalVector(IdLeikkausMax, new Vector4(hi.x, hi.y, hi.z, t.LeikkausKameraan ? 1f : 0f));
+            var k = kamera != null ? kamera.transform.position : keski;
+            Shader.SetGlobalVector(IdLeikkausKamera, new Vector4(k.x, k.y, k.z, 0));
+        }
+
         sealed class Koottu
         {
             public Vector3[] Paikat;
@@ -238,6 +262,7 @@ namespace Matkakirja.Natiivi
         public void Tyhjenna()
         {
             kerta++;
+            Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero);
             for (int i = 0; i < 3; i++) PoistaTaso(i);
             if (go != null) UnityEngine.Object.Destroy(go);
             go = null; lodit = null; Lahitaso = null; Kolmiot = 0;

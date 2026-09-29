@@ -176,6 +176,8 @@ namespace Matkakirja.Natiivi
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
             nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
+            // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
+            nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
             syote.Paivita(rakennus, t);
             aanet?.Paivita(rakennus, nakyma, t);
         }

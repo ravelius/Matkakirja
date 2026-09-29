@@ -293,6 +293,11 @@ namespace Matkakirja.Linssit.Dioraama
         /// tilan glb:n UV1:lle; `valoatlas: { tiedosto, puoli }` (4k iPad, 2k iPhone). null = rakennuskoneen tila
         /// (maalattu/valaistu varjostin kuten ennen).</summary>
         public string ValoAtlas, ValoAtlasPuoli;
+        /// <summary>LINNA, leikkausikkuna kuoreen (speksi dioraama-rajapinnat-blender-20260929.md kohta 3):
+        /// `leikkaus: { laajennus 1.0, kameraan true }` (oletus) tai käsin `{ min, max }` (korvaa rajat).</summary>
+        public double LeikkausLaajennus = 1.0;
+        public bool LeikkausKameraan = true;
+        public V3? LeikkausMin, LeikkausMax;
         /// <summary>Tilaan sijoitetut liekki-instanssit (era 2); tyhjä vanhassa muodossa.</summary>
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
         /// <summary>Tilaan sijoitetut äänilähteet (era 2); tyhjä vanhassa muodossa.</summary>
@@ -634,6 +639,17 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var glb = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "glb"));
             t.GlbTiedosto = MiniJson.Teksti(glb, "tiedosto");
+            var leikkaus = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "leikkaus"));
+            if (leikkaus != null)
+            {
+                t.LeikkausLaajennus = MiniJson.Luku(leikkaus, "laajennus") ?? 1.0;
+                t.LeikkausKameraan = MiniJson.Totuus(leikkaus, "kameraan", true);
+                if (MiniJson.Kentta(leikkaus, "min") != null && MiniJson.Kentta(leikkaus, "max") != null)
+                {
+                    t.LeikkausMin = LueV3(MiniJson.Kentta(leikkaus, "min"));
+                    t.LeikkausMax = LueV3(MiniJson.Kentta(leikkaus, "max"));
+                }
+            }
             var valoatlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "valoatlas"));
             t.ValoAtlas = MiniJson.Teksti(valoatlas, "tiedosto");
             t.ValoAtlasPuoli = MiniJson.Teksti(valoatlas, "puoli");
