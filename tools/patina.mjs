@@ -965,7 +965,17 @@ const LEVIAMINEN_KIRKAS = { ...LEVIAMINEN, voima: 0.15 };
  * 22/0,010/ei leviämistä) poistettiin; ne ovat git-historiassa.
  */
 const SAVYT_VALITTU = { ...SAVYT_KIRKAS, kayra: { kerroin: 0.87, nosto: 30 } };
-const PAPERI_VALITTU = { ...PAPERI_KIRKAS, rae: 0.027, raeKarkea: 0.020, kuitu: 0.020, kuituRisti: 0.011 };
+/*
+ * PIKSELIRAE POIS LAATOISTA (omistaja 29.9.2026 klo 23.4x, vaihtoehto A):
+ * rae leivottiin jokaiselle tasolle pikselin mittaisena, joten ylösnäytetty
+ * vanhempi oli sileämpi (rae 0,83–0,92) kuin lapsi (1,45–1,64), ja natiivin
+ * LOD-sekoitus näytti tasaisilla alueilla rakeisia ja sileitä suorakaiteita.
+ * Rae tulee nyt natiivin pallovarjostimesta proseduraalisena, maahan
+ * ankkuroituna (Natiiviseppä); entiset arvot rae 0,027 ja raeKarkea 0,020
+ * (skaala 2,4 px) ovat sen voimakkuuden mitta. Paperikuitu pysyy.
+ */
+export const PAPERI_VALITTU_RAE_ENNEN = Object.freeze({ rae: 0.027, raeKarkea: 0.020, raeKarkeaSkaala: 2.4 });
+const PAPERI_VALITTU = { ...PAPERI_KIRKAS, rae: 0, raeKarkea: 0, kuitu: 0.020, kuituRisti: 0.011 };
 const LEVIAMINEN_VALITTU = { ...LEVIAMINEN, voima: 0.10 };
 const PASTELLI_VALITTU = { ...PASTELLI_KIRKAS, kyllaisyys: 0.40, kromanVahvistus: 0.80 };
 
