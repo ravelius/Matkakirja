@@ -9347,3 +9347,7 @@ Omistaja 29.9.2026 klo 23.24 (iPad, Italia): "Pakko ottaa 3D nostot ja symbolit 
 ## OMISTAJA: PAPERIRAE RUUDUN PÄÄLLE, EI LAATTOIHIN (29.9.2026 klo 23.39)
 
 Omistaja 29.9.2026 klo 23.39 kortilla. Juurisyy laattakuvioihin (Karttaseppä): pohjalaattoihin poltettu pikselirae eroaa tasoittain (z7 1,45–1,64 vs ylösnäytetty z6 0,83–0,92), ja natiivin LOD näyttää eri tasot vierekkäin suorakaiteina merellä ja aavikolla; kerman tasokohtainen alfa on pienempi lisätekijä (kerma z8:sta alasnäytteellä, p060b). Päätös A: pikselirae pois laatoista (patina rae ja raeKarkea = 0, paperikuitu ennallaan) jo tämän yön jokipoltossa (uudelleenkäynnistys); natiivin pallovarjostimeen proseduraalinen maahan ankkuroitu paperirae säädettävällä voimakkuudella (Natiiviseppä), sama käännös kuin uusi laattakansio. Täysi vienti (delta ei auta), omistajan lupa kuvien kanssa. Web menettää rakeen, kunnes web-varjostin saa saman kohinan (web-jono).
+
+## TARKENNUS: VAIN EUROOPPA — TURKKI JA VENÄJÄ VAIN EUROOPAN OSALTA (30.9.2026 klo 01.04)
+
+Päätoimittaja 30.9.2026 klo 01.04 (Sisältökirjurin maakuntajono valmis): TUR ja RUS otetaan maakuntasisältöön vain Euroopan osalta. TUR: Itä-Traakia (Edirne, Kırklareli, Tekirdağ, İstanbul) + Çanakkale (Gallipoli). RUS: Uralin länsipuoliset subjektit erinä à 15 (Kaliningrad, Pietari ja Leningradin alue, Moskova ja alue ensin). Sävy neutraali maantieteellis-historiallinen, ei nykypolitiikkaa; Aasian puoleiset alueet pois.
