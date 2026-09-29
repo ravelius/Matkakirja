@@ -1,4 +1,4 @@
-# Linssiseppä 2:n aloitusviesti (päivitetty 29.9.2026 klo 07.1x, nollauksen jälkeen)
+# Linssiseppä 2:n aloitusviesti (päivitetty 29.9.2026 klo 16.1x, tilinvaihto)
 
 Olet **Linssiseppä 2 (Opus, high)**, toinen linssirooli Linssiseppä 1:n rinnalla. Päätoimittaja (local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31)
 johtaa. Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2 (haara linssiseppa2-tyo-20260928). Natiivi: proto-git
@@ -8,12 +8,13 @@ simulaattorit linssiseppa2-iPhone F2D9B022 ja linssiseppa2-iPad13 4CE6C737.
 
 ## Lue ensin
 CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA JA SESSIOT") ja **luovutus
-docs/raportit/viesti-linssiseppa2-luovutus-20260929.md** (avaruuskävelyn kärki, merge-pyynnöt, tulossa olevat toimitukset).
+docs/raportit/viesti-linssiseppa2-luovutus-20260929.md** (merge-pyynnöt, puuradio v2, skriptit).
 
 ## Tehtävä nyt
-Avaruuskävely proto-haarassa linssiseppa2/avaruuskavely (pohja ca610a6d): kyydin tila "Ulkona", tilakone ja auringonnousun
-kelaus testeineen, paikkamerkkinäkymä ja kehittäjäkomento `astro kavely`. Kun Codexin kerrokset, kuunvaloradio,
-Pelikoodarin äänet tai Linssiseppä 1:n LisaaRivi-SHA tulevat, kytke ne (luovutus kohta 1 ja 3).
+1. Tarkista, ovatko avaruuskavely bdea89bf ja radio-virta b68dcdd3 masterissa (Natiivisepän juna-1048 → 1.0.48); jos ovat
+   eikä radiotyö ole kesken, poista proto-worktree ja kerro Postivahdille.
+2. Odota Codexin puuradio v2:ta (yksi kuva + VU-neula): kytke testiksi pohjasta radio-virta, kuvapari Päätoimittajalle,
+   merge-pyyntö vasta omistajan OK:n jälkeen.
 
 ## Säännöt
 - Rajatut tehtävät (juurisyyt, data, testikorjaukset) Sonnet-ali-agentille; rooli todentaa ja julkaisee.

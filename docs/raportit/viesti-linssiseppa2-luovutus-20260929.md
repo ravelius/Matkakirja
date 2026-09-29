@@ -1,71 +1,50 @@
-# Linssiseppä 2:n luovutus 29.9.2026 klo 07.1x (nollaus, konteksti 69 %)
+# Linssiseppä 2:n luovutus 29.9.2026 klo 16.1x (tilinvaihto, viikkokiintiö 94 %)
 
 Rooli: Linssiseppä 2 (Opus, high), Päätoimittaja johtaa. Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2 (haara
-linssiseppa2-tyo-20260928). Proto-worktree /Users/Shared/Claude/wt/proto-linssiseppa2-saatimet: EI uusia worktreitä, vaihda
-haaraa siinä (git checkout). Simulaattorit: linssiseppa2-iPhone F2D9B022-CBC4-41CD-85E2-E30CCA5D6446, linssiseppa2-iPad13
-4CE6C737-B056-4F73-9CEA-D2DABFC9B8FC. Käännös- ja laitevuorot Julkaisijalta ("NYT"; ilmoita "sammutettu").
-Skriptit S = /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa-2/8e74262f-165d-4279-9d93-701effda9a78/scratchpad:
-kaanna-jono.sh (proto-3d/tyokalut/linssiseppa-ajot) + ajo-*.sh (ajo-radio2.sh iPad pysty/vaaka, ajo-saatimet6.sh, ajo-kohde.sh
-master-vertailu, ajo-radio3.sh äänikontrolli), ketju*.sh odottaa käännöstä ja lupatiedostoa ($S/laite-nyt, $S/laite-nyt-radio).
-29.9. koko päivän: enintään 3 simulaattoria, GPU-työt sallittu päivällä (Päätoimittajan tiedote), käännökset nice 15.
+linssiseppa2-tyo-20260928). Proto-worktree /Users/Shared/Claude/wt/proto-linssiseppa2-saatimet (roolin ainoa; vaihda haaraa
+siinä, älä luo uusia; poista `git worktree remove` kun haarat masterissa eikä radiotyö kesken — Postivahti kysyy).
+Simulaattorit: linssiseppa2-iPhone F2D9B022-CBC4-41CD-85E2-E30CCA5D6446, linssiseppa2-iPad13 4CE6C737-B056-4F73-9CEA-D2DABFC9B8FC.
+Käännös- ja laitevuorot Julkaisijalta ("NYT"; ilmoita "käännös valmis" ja "sammutettu"), käännökset nice 15.
+Skriptit S = /private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa-2/1db40375-7217-4e74-82c8-e8101e4d9a26/scratchpad:
+kaanna-jono.sh (`S=$S zsh $S/kaanna-jono.sh <nimi> "haara+haara"` → $S/<nimi>-app), ajo-kavely3.sh
+(`APPNIMI=<nimi> LAITE=iphone|ipad [VAAKA=1] UDID=… zsh ajo-kavely3.sh`: kyyti, astro kavely -vaiheet kuvina, radio Rooma;
+sallii 3 käynnissä olevaa simulaattoria), hehku_maski.py. Lokit proto-3d/lokit/linssiseppa2-laite-20260929-kavely{1,2,3}/.
 
-## 1. KÄRKI: avaruuskävely (omistaja 29.9. "Kyllä, radion jälkeen")
+## 1. MERGE-PYYNNÖSSÄ (Natiiviseppä, 1.0.48)
 
-- Suunnitelma docs/raportit/avaruuskavely-suunnitelma-20260929.md (7 vaihetta), Codex-tilaus lähetetty sellaisenaan
-  (posti/fable-codex-avaruuskavely-kerrokset-20260929.md 06a0a84c7; vastaus codex-fable-avaruuskavely-kerrokset-*.md).
-  Luonnos docs/raportit/codex-tilausluonnos-avaruuskavely-20260929.md (kerrokset, ankkurit).
-- Proto-haara **linssiseppa2/avaruuskavely** luotu kohdasta ca610a6d (kyyti-saatimet), EI VIELÄ KOODIA. Tee ensin:
-  1) IssKyyti.cs: KyydinTila.Ulkona + IssKuvakulma.Ulkona(iss) = Ikkunan kaava suunnalla Suuntima + 90 ja alas 45°
-     (ζ ≈ 49°), kenttä ~70°. Kallistus yli ~55–60° pitkällä objektiivilla ei piirrä laattoja (näkyy pohjapallo #264e91,
-     laite 29.9.), joten pysy siinä alle.
-  2) Ydin/Iss/Avaruuskavely.cs: tilakone Ilmalukko → Ulos (4 s) → Köysi (napautus) → Auringonnousu (simukello kelaa ISS:n
-     seuraavaan auringonnousuun ≤ 5 s; nousu kun auringon korkeus alapisteessä > −dip, dip = acos(R/(R+h)) ≈ 20,3°;
-     Aurinko.Alihajapiste + Aika.Jd, kuten Ylilennot.Valossa) → Pulu (repliikit) → Kuva (napautus) → Vertailu → Takaisin.
-     Testit Linssit-testeihin.
-  3) Unity: AvaruuskavelyNakyma paikkamerkeillä (harmaat laatikot: kaide, käsine, luukku), kehittäjäkomento
-     `astro kavely`, Pulu.Astronautti = true, repliikit tekstinä kunnes äänet tulevat.
-- Pulun repliikit (Päätoimittaja, sanatarkasti): luukulla "[excited] Luukku on auki! [warmly] Kiinnitä köysi kaiteeseen
-  ennen kuin päästät irti – täällä ei ole alas, on vain ympäri."; auringonnousu "[excited] Katso horisonttia! [warmly]
-  Kierrämme maapallon puolessatoista tunnissa, joten aurinko nousee meille noin kuusitoista kertaa vuorokaudessa.";
-  kuva "[amused] Hymyile, kamera on valmis! [warmly] Ota kuva – verrataan sitä astronautin oikeaan kuvaan samalta paikalta."
-- Pelikoodari tekee 5 ääntä (ilmalukko-paine, ilmalukko-luukku, karabiini, hengitys-silmukka, suljin) + Pulun 3 repliikkiä
-  radioversiona: proto-3d/lokit/avaruuskavely-aanet/ (tehosteet/, pulu/, pulu/kuiva/, aanet.json). Quindar-piippaukset
-  (2 525 Hz, 250 ms) tekee peli itse. Tuonti kuten radion äänissä: WAV, ADPCM, normalize 0, pitkät Compressed In Memory.
-- Avaus Pulun taulusta (Päätoimittaja): Linssiseppä 1 lisää haaraan linssiseppa/pulun-taulu rajapinnan
-  `PulunTauluNakyma.LisaaRivi(tunnus, otsikko, selite, Func<bool> aktiivinen, Action toiminto, AstroMoodi? lahto)` ja kertoo
-  SHA:n. Rekisteröi: `…Astronautti.Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "<selite>", () => Avaruuskavely.Kaynnissa,
-  Avaruuskavely.Aloita, AstroMoodi.Seuranta)`; paikka ISS:n sisälle -rivin jälkeen.
-- Web päätetään erikseen natiivin jälkeen.
+- **Avaruuskävely** proto linssiseppa2/avaruuskavely **bdea89bf** — OMISTAJA HYVÄKSYI 29.9. ("Hyväksyn"). Natiiviseppä yhdisti
+  sivuhaaraan natiiviseppa/juna-1048 73cdb113 (testit ajossa) → 1.0.48-juna Julkaisijan luvalla. Tarkista: `git merge-base
+  --is-ancestor linssiseppa2/avaruuskavely master` proto-gitissä. Sisältö: KyydinTila.Ulkona (katse kohti aurinkoa, 30° alas,
+  kenttä 70°), Iss.Avaruuskavely (Ilmalukko → Ulos → Köysi → Auringonnousu-kelaus ≤ 5 s → Pulu 24× → Kuva → Vertailu →
+  Takaisin), AvaruuskavelyNakyma Codexin kerroksilla (Resources/KavelyKerrokset, tuonti tyokalut/kavely_kerrokset.py),
+  Pelikoodarin äänet Resources/KavelyAanet, Pulun taulun rivi, `astro kavely [napauta|pois|tila|alas <°>|suunta aurinko|sivu]`.
+  Kuvaparit proto-3d/lokit/linssiseppa2-laite-20260929-kavely3/kuvapari-kavely-{iphone-pysty,ipad-vaaka}.jpg.
+- **Radio aina päällä** proto linssiseppa2/radio-virta **b68dcdd3** (pohja 9ee9136e): ei-asemaa-teksti "EI ASEMAA / VALITSE
+  KAUPUNKI" (ei "RADIO POIS"); kytkin sulkee linssin (jo 28.9.). Samassa juna-1048:ssa.
 
-## 2. MERGE-PYYNNÖSSÄ (Natiiviseppä)
+## 2. KÄRKI: Codexin puuradio v2 (odottaa)
 
-- **Radiolinssin uudistus** linssiseppa2/radiolinssi **9ee9136e** (metat f784f214, tuonti 9ee9136e) → 1.0.42-yhdistelmä
-  25c7c971 (juna 76f6f422). Laitetestaajan "EI PASS rms 0" = mittausvirhe: asemat soivat MatkakirjaRadio.mm:n
-  AVAudioEnginellä Unityn ohi, `aani mittaa` ei näe niitä; oikea mittari `radio tila` -rms (radio2: 0,18, moottori käy).
-  Laitetestaaja mittaa radio tila -rms:n 25c7c971:stä — tarkista tulos (Natiiviseppä/Julkaisija). Kuvaparit
-  proto-3d/lokit/linssiseppa2-laite-20260928-radio2/kuvapari-{rooma,napa,vaaka}.jpg, omistaja nähnyt ("hienolta").
-- **Kyyti-säätimet** linssiseppa2/kyyti-saatimet **ca610a6d** (metat b40a43de): pilvet, vuodenaika, oma sijainti (haku ±51°,
-  katse 200 km vain omalle sijainnille), siirtymä 4,80 s. Master-vertailu: Etna piirtyy masterissa ja haarassa (ei regressio).
-- Säätöpaneelin nahka Natiivi-UI:lla (natiivi-ui/iss-nahka fb1465ed, pohja linssiseppa2/iss-paneeli a3926649).
+- Omistaja 29.9. hylkäsi kuunvaloradion ("ihan kamala … sininen"): uusi tilaus posti/fable-codex-radio-yksikuva-20260929.md —
+  alkuperäinen puuradio YHTENÄ kuvana (iso osa varjossa, omat lamput valaisevat pintoja, ohut sinertävä reunavalo), vain
+  VU-neula erillisenä (sama akseli) ja näytön teksti tyhjänä; asemanimet piirtää peli. Ei kerroksia, hehkuja eikä pois-tilaa.
+- Kun toimitus tulee (Julkaisija hakee ~/Documents/Codex/2026-09-29/…): uusi haara pohjasta linssiseppa2/radio-virta b68dcdd3,
+  vaihda RadioNakyma.Codex.cs yhteen kuvaan + neulaan (poista cValot/hehkut/power-on|off), Resources/RadioUusi, alfa ≥ 240 → 255
+  peittävissä (muisti ui-kuvien-alfa-255), kuvapari (iPhone pysty + iPad vaaka, Rooma; ennen = kavely3/ipad-radio-rooma.png).
+  OMISTAJA HYVÄKSYY KUVAN ENSIN: ei merge-pyyntöä ennen Päätoimittajan välittämää OK:ta.
+- Hylätty haara linssiseppa2/radio-kuunvalo e26ab11e: EI mergeä (käyttökelpoista: tyokalut/radio_hehku_maski.py,
+  Pistenaytto.PisteVari).
 
-## 3. TULOSSA
+## 3. MUUT
 
-- **Kuunvaloradio** (omistaja: "Radio saisi olla kuun valossa kuvattu ja sen omat valot ja näyttö hehkuisivat"): Codex
-  tilattu posti/fable-codex-radio-kuunvalo-20260929.md; samat kerrokset, nimet ja manifestin akselit + additiiviset
-  hehkukerrokset (VU-tahdissa, pois-tilassa sammuvat). Kun tulee: vaihda Resources/RadioUusi ja kytke hehkut
-  RadioNakyma.Codex.cs:ssä (PaivitaCodex: opacity VU:sta, 0 kun !nakyvissa).
-- Codexin avaruuskävelyn kerrokset, Pelikoodarin avaruuskävelyn äänet, Linssiseppä 1:n LisaaRivi-SHA.
+- Web: avaruuskävely päätetään erikseen natiivin jälkeen; radion uudistus vain natiivi (omistaja 24.9.).
+- Siivous: vanhat .app-kopiot poistettu; scratchpad ~0,4 Gt.
 
-## 4. WEB
+## 4. OPIT
 
-- Radiodata 182 maata PR ravelius/Matkakirja#3589 mergetty ja viety (v2391). Radion uudistus VAIN NATIIVI (omistaja 24.9.),
-  webiin ei mitään.
-
-## 5. OPIT
-
-- `ui kierto vaaka` (ui-etuliite) kääntää iPadin; kuvatiedosto jää pystymuotoon, käännä kuvapariin 90°.
-- Käännöspalvelun Burst AotLinkerException on satunnainen → aja uudelleen.
-- Rajatut selvitykset Sonnet-ali-agentille (juurisyyt, data) — napaläiskä (napakansi ilman MixFogia) ja kohdetilan
-  harmaa pinta ratkesivat niillä.
-- Radiohaaran testikommentissa RadioTestit.VakiotKutenWebissa lukee "webin vastine Siirtosepälle" — virheellinen (vain
-  natiivi); korjaa seuraavan radiomuutoksen yhteydessä.
+- UI Toolkitissa ei ole additiivista sekoitusta: tasaväriset hehkut alfa poltettuna (× voimakkuus) ja läpinäkyvyys ajossa;
+  hehku merkkien päällä pesee ne → maski taulun kirkkaudesta tai hehku tekstin alle.
+- Codexin koko kankaan kerrokset: rajaa sisällön kokoisiksi ja alfa ≥ 240 → 255 (tyokalut/kavely_kerrokset.py).
+- ISS:n auringonnousun hetkellä maa alla on yötä (aurinko 20° alapisteen horisontin alla): katse kohti aurinkoa ja aika 24×
+  Pulun ajan, jotta valo leviää. Reunavalokerrokset vain nousussa (muuten oranssi sädekehä).
+- Katse 30° alas (ζ 67°, kenttä 70°) piirtää laatat; ongelma yli ~55° oli vain pitkällä objektiivilla.
+- rm -rf muuttujalla estyy turvatarkistuksessa: kirjoita polut auki.
