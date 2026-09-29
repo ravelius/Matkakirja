@@ -9267,3 +9267,7 @@ Omistaja 29.9.2026: "pulun chattiin pitää saada samat äänikontrollit ja aset
 ## OMISTAJA: JOKIKOE D HYVÄKSYTTY, TÄYSI POLTTO UUDESTAAN (29.9.2026 klo 19.31)
 
 Omistaja 29.9.2026 kuittasi jokikokeen d kuvaparit ("ok"): viivataso px, leveys valumasta 0,55–1,7 px, yleistys 1,3 px + pehmennys, joki katkaistaan järvillä, hierarkkiset tasokynnykset (≥ 150 000 km² kaikilla tasoilla, 50 000 z6, 15 000 z7, 5 000 z8). Täysi poltto 2026-09-30-pohja uudestaan + pallo (Karttaseppä, haara karttaseppa-joet-rauha a5710caa6); vienti ja osoittimen vaihto erillisellä luvalla. Olavinlinnan fotogrammetriamalli ladattu (omistajan Sketchfab-tili) ja siirretty proto-3d/_lahteet/olavinlinna-senaatti/ (CC BY 4.0).
+
+## KORJAUS: JOKIKOE D EI VIELÄ HYVÄKSYTTY; CC0 JA CC BY HYVÄKSYTTY (29.9.2026 klo 19.32)
+
+Omistaja 29.9.2026: "ei kun ok oli aiempaan kysymykseesi johon pyysit ok." Edellinen kirjaus (JOKIKOE D HYVÄKSYTTY) oli Päätoimittajan virhetulkinta: jokikoe d odottaa yhä omistajan arviota, täyttä polttoa ei käynnistetä. Omistajan OK koski lisenssejä: Poly Havenin CC0-tekstuurit ja -mallit sekä Senaatti-kiinteistöjen fotogrammetriamalli (Sketchfab, CC BY 4.0) hyväksytty Olavinlinnaan, lähde ja lisenssi kirjataan jokaisesta tiedostosta.
