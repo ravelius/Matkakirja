@@ -1248,9 +1248,18 @@ namespace Matkakirja.Natiivi
         const float Laatikko = 44f, Rengas = 13f, Hehku = 21f, Ulkokeha = 17f, Kolmio = 4.6f;
         static readonly Color Muste = new Color32(0x46, 0x33, 0x1f, 255), Punainen = new Color32(0xc2, 0x45, 0x2f, 255);
 
+        // YKSINKERTAINEN KARTTA (omistaja 29.9.2026, RadioLinssi.Yksinkertainen): asteikon asemat pieninä meripihkaisina
+        // pisteinä nimineen hämärän kartan päällä, muut himmeinä; viritetty isompana, kirkkaana ja yhdellä hillityllä
+        // sykkivällä renkaalla (2,4 s, 8 → 24 pt, vähennetty liike: paikallaan oleva rengas). Nimet eivät mene päällekkäin
+        // (viritetty ensin, sitten asteikon järjestyksessä).
+        const float Piste = 3.2f, PisteSoi = 5.2f, SykeAlku = 8f, SykeLoppu = 24f, SykeS = 2.4f;
+        static readonly Color Meripihka = new Color32(0xf2, 0xc0, 0x5e, 255), Varjo = new Color32(0x1a, 0x10, 0x06, 255);
+        static bool Yksinkertainen => RadioLinssi.Yksinkertainen;
+
         sealed class Nappi : VisualElement
         {
             public RadioNappi Tieto;
+            public Label Nimi;
             public Nappi() { generateVisualContent += Piirra; }
 
             void Piirra(MeshGenerationContext mgc)
@@ -1259,6 +1268,7 @@ namespace Matkakirja.Natiivi
                 if (d == null) return;
                 var p = mgc.painter2D;
                 var c = new Vector2(Laatikko / 2f, Laatikko / 2f);
+                if (Yksinkertainen) { PiirraMerkki(p, c, d); return; }
                 if (d.Soi)
                 {
                     p.fillColor = new Color(Punainen.r, Punainen.g, Punainen.b, 0.16f);
@@ -1309,6 +1319,29 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        static void PiirraMerkki(Painter2D p, Vector2 c, RadioNappi d)
+        {
+            if (d.Soi)
+            {
+                // Yksi hillitty sykkivä rengas (vähennetty liike: paikallaan keskikoossa).
+                float u = LinssiUi.VahennettyLiike() ? 0.4f : Time.realtimeSinceStartup / SykeS % 1f;
+                p.strokeColor = new Color(Meripihka.r, Meripihka.g, Meripihka.b, 0.55f * (1f - u));
+                p.lineWidth = 1.4f;
+                p.BeginPath();
+                p.Arc(c, Mathf.Lerp(SykeAlku, SykeLoppu, u), Angle.Degrees(0f), Angle.Degrees(360f));
+                p.Stroke();
+            }
+            float r = d.Soi ? PisteSoi : Piste;
+            p.fillColor = new Color(Varjo.r, Varjo.g, Varjo.b, d.Soi ? 0.7f : 0.5f);
+            p.BeginPath();
+            p.Arc(c, r + 1.2f, Angle.Degrees(0f), Angle.Degrees(360f));
+            p.Fill();
+            p.fillColor = new Color(Meripihka.r, Meripihka.g, Meripihka.b, d.Soi ? 1f : 0.62f);
+            p.BeginPath();
+            p.Arc(c, r, Angle.Degrees(0f), Angle.Degrees(360f));
+            p.Fill();
+        }
+
         readonly VisualElement juuri;
         readonly Dictionary<string, Nappi> napit = new Dictionary<string, Nappi>();
         // Radiouudistus (build 12, suunnitelma luku 4): mastot korvaavat ▶-napit, ja valitun maston nimi on sen vieressä.
@@ -1319,7 +1352,7 @@ namespace Matkakirja.Natiivi
         /// Mastot piirretään (LinssiOhjain asettaa linssi.Mastot3D ennen avausta, RadioSovitin.MastoPiirto): ▶-napit
         /// piiloon, jotteivät ne sieppaa maston juurelta. Ei riipu MastoListan täyttöjärjestyksestä.
         /// </summary>
-        bool Mastot => linssi?.Mastot3D != null;
+        bool Mastot => linssi?.Mastot3D != null && !Yksinkertainen;
 
         public RadioNapit(VisualElement isa)
         {
@@ -1347,6 +1380,8 @@ namespace Matkakirja.Natiivi
             var mukana = new HashSet<string>();
             foreach (var d in tiedot)
             {
+                // Yksinkertaisessa kartassa vain asteikon asemat (kanavattomat eivät ole virityksen kohteita).
+                if (Yksinkertainen && d != null && !d.OnKanava) continue;
                 if (d?.Kaupunki == null || !mukana.Add(d.Kaupunki)) continue;
                 if (!napit.TryGetValue(d.Kaupunki, out var n))
                 {
@@ -1357,7 +1392,13 @@ namespace Matkakirja.Natiivi
                     n.RegisterCallback<ClickEvent>(e => { e.StopPropagation(); linssi?.SoitaKaupunki(kaupunki); });
                     juuri.Add(n);
                     napit[d.Kaupunki] = n;
+                    n.Nimi = Rakenne.Teksti(linssi?.Kaupunki(kaupunki)?.Nimi ?? kaupunki, "mk-radiomerkki__nimi", juuri);
+                    n.Nimi.pickingMode = PickingMode.Ignore;
+                    n.Nimi.style.visibility = Visibility.Hidden;
+                    Kirjasimet.Aseta(n.Nimi, Kirjasin.Luku);
                 }
+                n.Nimi.EnableInClassList("mk-radiomerkki__nimi--soi", d.Soi);
+                if (d.Soi) Kirjasimet.Aseta(n.Nimi, Kirjasin.LukuLihava); else Kirjasimet.Aseta(n.Nimi, Kirjasin.Luku);
                 bool muuttui = n.Tieto == null || n.Tieto.Soi != d.Soi || n.Tieto.OnKanava != d.OnKanava;
                 n.Tieto = d;
                 n.tooltip = d.OnKanava ? "Soita " + d.Kaupunki : d.Kaupunki;
@@ -1367,6 +1408,7 @@ namespace Matkakirja.Natiivi
             }
             foreach (var k in napit.Keys.Where(k => !mukana.Contains(k)).ToList())
             {
+                napit[k].Nimi?.RemoveFromHierarchy();
                 napit[k].RemoveFromHierarchy();
                 napit.Remove(k);
             }
@@ -1391,6 +1433,42 @@ namespace Matkakirja.Natiivi
                 n.style.left = p.x - Laatikko / 2f;
                 n.style.top = p.y - Laatikko / 2f;
                 if (n.style.visibility.value != Visibility.Visible) n.style.visibility = Visibility.Visible;
+                // Sykkivä rengas piirretään joka ruutu vain viritetylle.
+                if (Yksinkertainen && n.Tieto.Soi && !LinssiUi.VahennettyLiike()) n.MarkDirtyRepaint();
+            }
+            if (Yksinkertainen) LadoNimet();
+            else foreach (var n in napit.Values) if (n.Nimi != null && n.Nimi.style.visibility.value != Visibility.Hidden) n.Nimi.style.visibility = Visibility.Hidden;
+        }
+
+        readonly List<Rect> varatut = new List<Rect>();
+        readonly List<Nappi> ladottavat = new List<Nappi>();
+
+        /// <summary>Nimet pisteen oikealle puolelle; päällekkäin menevä nimi jää piiloon (viritetty ensin, sitten asteikon järjestys).</summary>
+        void LadoNimet()
+        {
+            varatut.Clear();
+            ladottavat.Clear();
+            string soiva = linssi?.Tila?.KaupunkiId;
+            if (soiva != null && napit.TryGetValue(soiva, out var s0)) ladottavat.Add(s0);
+            var asteikko = linssi?.Asteikko;
+            if (asteikko != null) foreach (var id in asteikko) if (id != soiva && napit.TryGetValue(id, out var n)) ladottavat.Add(n);
+            foreach (var n in ladottavat)
+            {
+                var nimi = n.Nimi;
+                bool nakyy = n.style.visibility.value == Visibility.Visible;
+                float w = nimi.layout.width, h = nimi.layout.height;
+                if (nakyy && (float.IsNaN(w) || w <= 0)) { w = nimi.text.Length * 6.5f; h = 14f; }
+                float x = n.style.left.value.value + Laatikko / 2f + (n.Tieto.Soi ? 10f : 7f), y = n.style.top.value.value + Laatikko / 2f - h / 2f;
+                var r = new Rect(x - 2f, y - 1f, w + 4f, h + 2f);
+                if (nakyy) foreach (var v in varatut) if (v.Overlaps(r)) { nakyy = false; break; }
+                if (nakyy)
+                {
+                    varatut.Add(r);
+                    nimi.style.left = Mathf.Round(x);
+                    nimi.style.top = Mathf.Round(y);
+                }
+                var tavoite = nakyy ? Visibility.Visible : Visibility.Hidden;
+                if (nimi.style.visibility.value != tavoite) nimi.style.visibility = tavoite;
             }
         }
 

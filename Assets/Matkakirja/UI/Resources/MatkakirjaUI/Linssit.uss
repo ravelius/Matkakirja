@@ -3054,6 +3054,23 @@
     height: 44px;
 }
 
+/* Yksinkertaisen radiokartan asemanimet (omistaja 29.9.2026): pieni meripihka tummalla varjolla hämärän kartan päällä,
+   viritetty kirkkaampana ja lihavana. */
+.mk-radiomerkki__nimi {
+    position: absolute;
+    font-size: 11px;
+    color: rgba(242, 192, 94, 0.72);
+    text-shadow: 0 1px 2px rgba(10, 6, 2, 0.9);
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.mk-radiomerkki__nimi--soi {
+    font-size: 13px;
+    color: rgb(255, 214, 130);
+}
+
 
 .mk-radio--levea .mk-radio__keskio {
     width: auto;
