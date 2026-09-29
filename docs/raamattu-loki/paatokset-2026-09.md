@@ -9335,3 +9335,7 @@ Omistaja 29.9.2026 klo 23.04 (1.0.56): "älä tuo mukaan saavutettavuus ohjeita,
 ## OMISTAJA: LIPPU MAAN OIKEAAN YLÄKULMAAN, HUNTU EI RAJAA LIIKETTÄ (29.9.2026 klo 23.12)
 
 Omistaja 29.9.2026 klo 23.12 (iPad, Italia): "Lippu pitää olla aina maan oik. yläkulmassa. Muuten se näkyy huonosti kun koko maa on näytöllä." → lipputanko aina maan rajauslaatikon koilliskulman tuntumaan maan puolelle, kaikissa maissa (Linssiseppä, 6e5ccf55:n jatko). Omistaja 29.9.2026 klo 23.1x: "Kun huntu on päällä maailma tilassa, pelaajan pitää pystyä liikkumaan koko pallolla." → huntu peittää mutta ei rajaa kameraa eikä liikettä (Linssiseppä, merge Natiivisepälle). Molemmat web-jonoon.
+
+## TARKENNUS: HUNTU-LIIKE KUMOAA PELAAJAN NÄKYMÄN KAMERARAJAN (29.9.2026 klo 23.12)
+
+Linssiseppä 29.9.2026 klo 23.12: juurisyy PeliOhjain antoi PalloKierrolle MaailmaTila = MaailmaNakyma, jolloin Näytä huntu palautti saapumismaan zoomikaton ja panorajan. Korjaus ee5f2876 (1.0.58, Natiivisepän merge): MaailmaTila = Maailma, liike ja zoomi vapaat koko pallolla; huntu, himmeät ja kaupunkirajaus kytkimen mukaan. Omistajan 23.1x-linjaus kumoaa 8530c3d4:n linjauksen "rajat, zoomi kuten pelaajalla" hunnun osalta.
