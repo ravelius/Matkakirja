@@ -9291,3 +9291,7 @@ Omistaja 29.9.2026 (kumoaa Päätoimittajan tulkinnan ja kokeet A/B, "aivan surk
 ## OMISTAJA: LUENTAVIAN TOISTO-OHJE (29.9.2026 klo 19.53)
 
 Omistaja 29.9.2026: "Virhe toistuu silloin, jos lopetan edellisen luennon kesken klikkaamalla karttaa ja siirryn uuteen kohteeseen ja sitten aloitan uuden kohteen luennan, niin silloin luenta ei ala alusta, vaan ensimmäisen lauseen noin puolesta välistä suurin piirtein." → Natiivi-UI: keskeytetyn luennan soittokohta/palatila siirtyy seuraavan noston ensimmäiseen palaan; nollaus kartan napautuksessa ja lähteen vaihtuessa.
+
+## OMISTAJA: MAARAJAT KEVYIKSI, HENTO RANTA KAIKKIALLA (29.9.2026 klo 19.56)
+
+Omistaja 29.9.2026 kuvasarjasta raja-ja-rannat: "Tämä on hyvä. Pidetään tämä viimeisin versio." Natiivin maarajat: maa–maa-raja #5a4330 50 % peitolla 2,2 px; kaikki rannat saarineen samasta aineistosta ilman yleistystä #5a4330 22 %, 1,2 px maarajan alla. Ei uutta aineistoa eikä vientiä (maamaa.geojson + maapolygonit.geojson); mannerrajat-koe ja A/B hylätty. Natiiviseppä + Karttaseppä, seuraava juna; web web-jonoon.

@@ -12,4 +12,4 @@ webiin, jos ne on tehty natiivissa paremmin.
 | 29.9. | Linssit ja Aarteet: lista oikeaan reunaan, valittu rivi oranssiksi Aktivoi/Näytä-napiksi | OMISTAJA: AARTEET SAMOIN KUIN LINSSIT | natiivi-ui/palaute-1050 0b1f838d | sisältyy haaraan pelikoodari-ylapalkki-nahka 7fa43ff13 |
 | 29.9. | iPadin Maailma-nappi pois kartalta, nostot näkyvät maakuntatilassa, iPadin nahkapalkki 89 pt | OMISTAJA: NOSTOT NÄKYVÄT MAAKUNTATILASSA | natiivi-ui/ipad-nahka 85be3e3e | ei aloitettu: iPad-nahka turva + 57 pt, tikkaus 19 pt, logo 28 / pilleri 34 pt, reunat 36 pt (Codex ipad/-paketti) |
 | 29.9. | Pulun chat: nostojen äänikontrollit ja asetussäädöt chat-ikkunan yläreunaan; Näytä puhekuplat ja Ehdota sisältöä ikoneiksi | OMISTAJA: PULUN CHATIN YLÄREUNAAN ÄÄNIKONTROLLIT | Pelikoodari (tulossa) | ei aloitettu |
-| 29.9. | Maan raja: mantereen rantaviiva samalla viivalla kuin maa–maa-raja, saaret ilman | OMISTAJA: MANTEREEN RANTAVIIVA RAJAKSI | Natiiviseppä/Karttaseppä (tulossa) | — |
+| 29.9. | Maarajat: maa–maa-raja #5a4330 50 % 2,2 px + kaikki rannat saarineen #5a4330 22 % 1,2 px | OMISTAJA: MAARAJAT KEVYIKSI, HENTO RANTA KAIKKIALLA | Natiiviseppä (tulossa) | — |
