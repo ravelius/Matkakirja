@@ -197,7 +197,7 @@ namespace Matkakirja.Natiivi
         public void PaivitaLeikkaus(Rakennus rakennus, (string tila, double osuus) leikkaus, Camera kamera)
         {
             var t = leikkaus.tila != null && leikkaus.osuus > 0 ? rakennus?.Tilat?.Find(x => x.Id == leikkaus.tila) : null;
-            if (t == null || go == null) { Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero); return; }
+            if (t == null || go == null) { Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero); LeikkausOsuus = 0; LeikkausTila = null; return; }
             var a = DioraamaNayttamo.UnityPiste(t.LeikkausMin ?? t.RajaMin);
             var b = DioraamaNayttamo.UnityPiste(t.LeikkausMax ?? t.RajaMax);
             float laajennus = (float)t.LeikkausLaajennus, osuus = Mathf.Clamp01((float)leikkaus.osuus);
@@ -205,6 +205,8 @@ namespace Matkakirja.Natiivi
             Vector3 lo = Vector3.Min(a, b) - new Vector3(laajennus, Mathf.Min(laajennus, 0.2f), laajennus), hi = Vector3.Max(a, b) + Vector3.one * laajennus;
             Vector3 keski = (lo + hi) * 0.5f, puoli = (hi - lo) * 0.5f * osuus;
             lo = keski - puoli; hi = keski + puoli;
+            LeikkausLaatikko = new Bounds((lo + hi) * 0.5f, hi - lo); LeikkausTila = t.Id; LeikkausOsuus = osuus;
+            LeikkausKamera = kamera != null ? kamera.transform.position : keski; LeikkausKameraan = t.LeikkausKameraan;
             Shader.SetGlobalVector(IdLeikkausMin, new Vector4(lo.x, lo.y, lo.z, osuus));
             Shader.SetGlobalVector(IdLeikkausMax, new Vector4(hi.x, hi.y, hi.z, t.LeikkausKameraan ? 1f : 0f));
             var k = kamera != null ? kamera.transform.position : keski;
@@ -240,6 +242,32 @@ namespace Matkakirja.Natiivi
             r.sharedMaterial = materiaali;
             r.shadowCastingMode = ShadowCastingMode.Off;
             r.receiveShadows = true;
+        }
+
+        /// <summary>Nykyinen leikkaustilavuus C#-puolelle (sama kuin varjostimissa): tyhjäliekit, joita ei kuulu kohdistettuun
+        /// tilaan, piiloutuvat leikkauskäytävässä (DioraamaLiekit.Paivita).</summary>
+        public static Bounds LeikkausLaatikko;
+        public static string LeikkausTila;
+        public static float LeikkausOsuus;
+        public static Vector3 LeikkausKamera;
+        public static bool LeikkausKameraan;
+
+        public static bool Leikkauksessa(Vector3 p)
+        {
+            if (LeikkausOsuus <= 0.001f) return false;
+            var b = LeikkausLaatikko;
+            if (p.y < b.min.y || p.y > b.max.y) return false;
+            if (p.x >= b.min.x && p.x <= b.max.x && p.z >= b.min.z && p.z <= b.max.z) return true;
+            if (!LeikkausKameraan) return false;
+            var kohti = new Vector2(LeikkausKamera.x - b.center.x, LeikkausKamera.z - b.center.z);
+            float L = kohti.magnitude;
+            if (L < 1e-3f) return false;
+            var d = -kohti / L;
+            float Inv(float v) => 1f / (Mathf.Sign(v) * Mathf.Max(Mathf.Abs(v), 1e-5f));
+            float tx0 = (b.min.x - p.x) * Inv(d.x), tx1 = (b.max.x - p.x) * Inv(d.x);
+            float tz0 = (b.min.z - p.z) * Inv(d.y), tz1 = (b.max.z - p.z) * Inv(d.y);
+            float sisaan = Mathf.Max(Mathf.Min(tx0, tx1), Mathf.Min(tz0, tz1)), ulos = Mathf.Min(Mathf.Max(tx0, tx1), Mathf.Max(tz0, tz1));
+            return sisaan <= ulos && ulos >= 0 && sisaan <= L;
         }
 
         sealed class Koottu
