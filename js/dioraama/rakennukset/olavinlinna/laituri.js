@@ -141,8 +141,11 @@ export const TILA = {
     ...SOIHDUT,
   ],
   hahmot: HAHMOT,
-  aanet: [],
-  tehosteet: [],
+  aanet: [{ aani: 'jarvi-laineet' }, { aani: 'linna-tuuli' }],
+  tehosteet: [
+    { aanet: ['lokit'], valit_s: [15, 35] },
+    { aanet: ['askel-puu'], valit_s: [8, 18] },
+  ],
   // Soihtuliekit paalujen soihtujen päässä (liekin alapiste seinasoihtu-reseptin mukaan ≈ [0, 0,47, 0,26] paikallisesti).
   liekit: [
     { liekki: 'soihtu', paikka: [-17.82, -4.03, 36], koko: 1, vaihe: 0 },

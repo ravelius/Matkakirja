@@ -229,7 +229,10 @@ export const TILA = {
   ],
   hahmot: HAHMOT,
   aanet: [],
-  tehosteet: [],
+  tehosteet: [
+    { aanet: ['askel-kivi'], valit_s: [10, 22] },
+    { aanet: ['ovi-puu'], valit_s: [30, 60] },
+  ],
   liekit: [
     { liekki: 'soihtu', paikka: soihduLiekki(0, SOIHTU_Y), koko: 1, vaihe: 0 },
     { liekki: 'soihtu', paikka: soihduLiekki(75, SOIHTU_Y + 0.1), koko: 1, vaihe: 0.5 },

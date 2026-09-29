@@ -74,7 +74,8 @@ const KIRJURI_REITTI = [...KIRJURI_YLOS, ...KIRJURI_YLOS.slice(1, -1).reverse(),
 const HAHMOT = [
   {
     id: 'kirjuri', henkilo: 'kirjuri-1500', paikka: KIRJURI_YLOS[0], suunta: 268, peilattu: false,
-    silmukka: 'kavely', heraa: 2,
+    // Elävä linna (erä 3): kirjuri kantaa lyhtyä portaissa, joten valo vilkkuu ampumaraoissa ylös ja alas (käsikirjoitus kohta 2).
+    silmukka: 'kavely', heraa: 2, lyhty: true,
     reitti: { pisteet: KIRJURI_REITTI, nopeus: 1.3, tauko: 2.5 },
     repliikit: [
       { id: 'kirjuri-1', teksti: 'Jyrkät nämä portaat: joka askel on kuin pieni kallio, ja niitä riittää.' },
@@ -191,7 +192,7 @@ export const TILA = {
     { resepti: 'sakki', paikka: P(3.3, 156, Y2), suunta: 0, sade: 0.26, korkeus: 0.5, siemen: 37 },
   ],
   hahmot: HAHMOT,
-  aanet: [],
+  aanet: [{ aani: 'linna-tuuli' }],
   tehosteet: [{ aanet: ['askel-kivi'], valit_s: [9, 18] }],
   liekit: [
     { liekki: 'soihtu', paikka: soihtuLiekki(270, 9.4), koko: 1, vaihe: 0 },
