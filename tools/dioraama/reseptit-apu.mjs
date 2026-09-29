@@ -76,10 +76,18 @@ export function vaippa({ keski = [0, 0], r, y0, y1, k0 = 0, k1 = 360, segmentit 
   return k;
 }
 
-/** Kääntää kolmion kiertosuunnan (b ↔ c) normaaleineen. */
+/**
+ * Kääntää kolmion kiertosuunnan (b ↔ c) normaaleineen. uv_m (erä 2) seuraa SAMAA kärkien
+ * uudelleenjärjestystä (b ↔ c) kuin p ja n — kaanna vain vaihtaa kumpi taulukkopaikka vastaa
+ * kumpaa fyysistä kärkeä, ei laske uusia arvoja eikä peilaa a:ta/b:tä geometrisesti, joten kärjen
+ * omat uv_m-arvot pysyvät muuttumattomina ja UV:n jatkuvuus säilyy (ei tarvitse a:n etumerkin
+ * kääntöä; jos joku tuleva resepti jostain syystä TARVITSISI sen, se pitäisi tehdä reseptissä
+ * ennen kaanna-kutsua, ei tässä yleisessä apufunktiossa).
+ */
 export function kaanna(k) {
   const t = { p: [k.p[0], k.p[2], k.p[1]], rooli: k.rooli };
   if (k.n) t.n = [k.n[0], k.n[2], k.n[1]];
+  if (k.uv_m) t.uv_m = [k.uv_m[0], k.uv_m[2], k.uv_m[1]];
   if (k.pinta) t.pinta = k.pinta;
   return t;
 }

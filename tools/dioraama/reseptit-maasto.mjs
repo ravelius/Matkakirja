@@ -1,6 +1,8 @@
 // DIORAAMAN MAASTORESEPTIT (Linnanrakentaja 29.9.2026, ali-agentti C2): katot ja maasto.
 // Speksi: docs/raportit/dioraama-rajapinnat-20260929.md kohdat 0, 2 (kartiokatto, harjakatto,
-// kallio, vesi) ja 3b. Reseptit tuottavat kolmiot paikallisessa kehyksessä (u, y, w),
+// kallio, vesi) ja 3b; erä 2: docs/raportit/dioraama-rajapinnat-era2-20260929.md kohta "UV"
+// (kartiokatto: pintakolmiot saavat kärjille uv_m:n tasoprojektion sijaan; ks. kartiokatto()).
+// Reseptit tuottavat kolmiot paikallisessa kehyksessä (u, y, w),
 // oikeakätisenä: kärjet vastapäivään ulkoa katsottuna ((b − a) × (c − a) osoittaa ulos).
 // Sisarmoduulit (ei kosketa): reseptit-rakenne.mjs (laatta, seina, torni, porras),
 // reseptit-kalusteet.mjs (poyta, penkki, tynnyri, pata, sakki, tulisija, hylly).
@@ -14,6 +16,12 @@ const RAD = Math.PI / 180;
  * normalisoitu (korkeus·sin k, R, korkeus·cos k) — johdettu pinnan tangenttien
  * (kehä- ja sivusuunta) ristitulosta. Lisäksi räystään alapinta (rengas sade…R,
  * alaspäin), rooli 'katto' (litteä sävytys, kattopinnasta poiketen).
+ *
+ * uv_m (erä 2, speksin kohta "UV"): PINTAKOLMIOIDEN (huippu+kantapisteet, ei räystään alapinta)
+ * kärjille a = kulma_rad · pohjasäde (R), b = viistomatka pohjasta (0 kantapisteissä, kartion
+ * sivun pituus huipulla). Kulmaa ei normalisoida [0, 360):ksi, joten UV jatkuu koko kierroksen
+ * ympäri; sauma 0°/360° ei hitsaudu rakennuskoneessa (eri a). Räystään alapinta on litteä
+ * vaakarengas ("b = y" ei sovi sille) ja jää rakennuskoneen tasoprojektioon.
  */
 export function kartiokatto(param) {
   const { sade, korkeus, ylitys = 0.6, segmentit = 32 } = param;
@@ -21,6 +29,7 @@ export function kartiokatto(param) {
   const R = sade + ylitys;
   const n = Math.max(3, Math.round(segmentit));
   const huippu = [0, h, 0];
+  const viistoPituus = Math.hypot(h, R); // kartion sivun (viiston) pituus huipulta kantaan
 
   const pintaNormaali = (k) => {
     const kr = k * RAD;
@@ -29,17 +38,21 @@ export function kartiokatto(param) {
     return [v[0] / l, v[1] / l, v[2] / l];
   };
   const kantapiste = (k) => kaaripiste([0, 0], R, k, 0);
+  const uvKanta = (k) => [k * RAD * R, 0];
+  const uvHuippu = (kMid) => [kMid * RAD * R, viistoPituus];
 
   const kolmiot = [];
   for (let i = 0; i < n; i++) {
     const k0 = (360 * i) / n;
     const k1 = (360 * (i + 1)) / n;
     const kMid = (k0 + k1) / 2;
-    kolmiot.push(
-      kolmio(huippu, kantapiste(k0), kantapiste(k1), 'katto', pintaNormaali(kMid), pintaNormaali(k0), pintaNormaali(k1))
+    const t = kolmio(
+      huippu, kantapiste(k0), kantapiste(k1), 'katto', pintaNormaali(kMid), pintaNormaali(k0), pintaNormaali(k1)
     );
+    t.uv_m = [uvHuippu(kMid), uvKanta(k0), uvKanta(k1)];
+    kolmiot.push(t);
   }
-  // Räystään alapinta: rengas sade…R, alaspäin, sama rooli.
+  // Räystään alapinta: rengas sade…R, alaspäin, sama rooli (EI uv_m, ks. yllä).
   kolmiot.push(...rengas({ rSisa: sade, rUlko: R, y: 0, segmentit: n, ylos: false, rooli: 'katto' }));
   return kolmiot;
 }

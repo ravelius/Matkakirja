@@ -6,6 +6,12 @@
 // alaosassa (u-keskitys, y ylhäältä), korkeus_m = hahmon todellinen
 // pituus maailmassa (billboard-skaalaus). Kaikilla sama silmukka-asettelu
 // (rivi/ruudut/fps), jotta 'tyo' ja 'kavely' löytyvät joka hahmolta.
+//
+// Erä 2 (docs/raportit/dioraama-rajapinnat-era2-20260929.md kohta 2 "HENKILOT"):
+// valinnainen `maalattu` kuvaa Codexin oikean RGBA-atlaksen omalla ruudukollaan
+// (eri kuin paikkamerkin 128×192/8 sarr.) — rakennuskone (media.mjs) käyttää
+// sitä jos lähde löytyy, muuten palautuu paikkamerkkiin. `paikkamerkki` säilyy
+// kokilla varalähteenä siihen asti.
 export const HENKILOT = {
   'kokki-1500': {
     nimi: 'Kokki',
@@ -16,6 +22,18 @@ export const HENKILOT = {
       puhe: { rivi: 2, ruudut: 4, fps: 8 }, kavely: { rivi: 3, ruudut: 8, fps: 10 },
     },
     lisenssi: 'oma paikkamerkki',
+    maalattu: {
+      lahde: 'hahmot/kokki-1500.png',
+      ruutu: [256, 384],
+      sarakkeet: 8,
+      pivot: [0.5, 15 / 384],
+      px_per_m: 196,
+      silmukat: {
+        idle: { rivi: 0, ruudut: 8, fps: 10 }, tyo: { rivi: 1, ruudut: 12, fps: 10 },
+        puhe: { rivi: 3, ruudut: 6, fps: 10 },
+      },
+      lisenssi: 'Codex (Päätoimittajan tilaus), omistajan oikeudet',
+    },
   },
   'apulainen-1500': {
     nimi: 'Apulainen',

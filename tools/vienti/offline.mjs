@@ -51,6 +51,8 @@ export const OFFLINE_LAHTEET = {
    * on siksi LISTA välejä, yksi kaupunkia kohti.
    * 26.9.2026: sarja 2026-09-26-pohja-20260926 (omistaja hyväksyi pohja 26:n myös natiiviin; kaikki 41 413
    * offline-laattaa tarkistettu ämpäristä). Ei skeemamuutosta, vain osoite ja koot.
+   * 29.9.2026: sarja 2026-09-27-pohja-20260927 (peruskartta 27, webissä #3597; Päätoimittaja: natiiviin Natiivisepän
+   * kanssa). Ei skeemamuutosta; rasterin keskikoot uudesta sarjasta, pallo-z10.json samaan sarjaan.
    * Skeema 1.51 (Fable 27.9.2026): Z10 samaan sarjaan kaikkien kokoelman kaupunkien ympärille (± 1°), TARKKA
    * laattajoukko Karttasepän poltosta (tools/tee-pallolaatat.mjs kaupunkienLaatat, PR #3393) tiedostossa
    * tools/vienti/pallo-z10.json ({ sarja, laatat: ["x/y", …] }). Z10 on OMASSA avaimessa: lahteet.rasteri.kaupunkiRasteri
@@ -60,7 +62,7 @@ export const OFFLINE_LAHTEET = {
    * ennallaan. Ilman tiedostoa kaupunkiRasteri jää pois.
    */
   rasteri: {
-    url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-26-pohja-20260926/{z}/{x}/{y}.jpg',
+    url: 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-27-pohja-20260927/{z}/{x}/{y}.jpg',
     skeema: 'xyz', projektio: 'EPSG:3857', koko: 256, minzoom: 0, maxzoom: 9, globaaliMax: 5, maaMax: 8,
     kaupunkitaso: { tasot: [9], sadeKm: 60, kaupungit: "kokoelma kaupungit, tyyppi 'kaupunki'" },
   },
@@ -92,10 +94,12 @@ export const OFFLINE_LAHTEET = {
  *   yovalot (RadioMastot.YovaloUrl, z0–z6): globaalisti z0–z5, maittain rasterin väleillä z6.
  * Natiivi muodostaa osoitteet omista sarjoistaan (kuten rasteriPohja ja maastoLayer); url-kentät kertovat, mistä
  * sarjoista välit ja koot on laskettu. Koot mitataan maittain (HEAD, --paivita-kerrokset) offline-koot.json:iin.
+ * 29.9.2026: kerma 2026-09-27-p060 (Karttaseppä, poltettu pohjasta 2026-09-27-pohja-20260927; natiivin
+ * Kermasarja.Oletus samaan). Pohja ja kerma vaihtuvat yhdessä.
  */
 export const OFFLINE_KERROKSET = {
   kerma: {
-    url: 'https://media.matkakirja.app/julisteet/pallo/kerma/2026-09-26-p060/{alue}/{z}/{x}/{y}.webp',
+    url: 'https://media.matkakirja.app/julisteet/pallo/kerma/2026-09-27-p060/{alue}/{z}/{x}/{y}.webp',
     maaTasot: [3, 8], maailmaAlue: '_maailma', globaaliTasot: [3, 5], maittainTasot: [6, 8],
   },
   reliefi: {
