@@ -36,6 +36,8 @@ import {
 import {
   asetaMusiikinLiuku, asetaMusiikkiPaalla, musiikinLiuku, musiikinLiuunTeksti, musiikkiPaalla,
 } from './musiikkivalitsin.js';
+// Maailmatilan Pelaajan näkymä -apunappi (#3608); tuonti puuttui, joten ES-moduuleina sivu kaatui.
+import { paivitaPelaajanakymaNappi } from './pelaajanakyma.js';
 // Siirtymämusiikin kehittäjärivit (raitojen olemassaolo + varamusiikki).
 import {
   MUSIIKKILAJIT, asetaVaramusiikki, lopetaSiirtymamusiikki, lopetaVaramusiikki,
@@ -169,7 +171,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2404';
+const APP_VERSION = '2026-09-21.2405';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
