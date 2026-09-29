@@ -3,9 +3,10 @@
 // rakennus.json + glb + atlas-tekstuurit, pitää DioraamaNayttamo/DioraamaRakennus/DioraamaHahmot/DioraamaSyote-
 // oliot ja syöttää ajan (t = ymparisto.Aika) Ytimelle joka kehys. Katso dioraama-rajapinnat-20260929.md kohta 6.
 //
-// KEHITYSPEILI: oletuksena PÄÄLLÄ (poikkeaa vuosi-linssin identiteettioletuksesta), koska ämpärissä
-// (https://media.matkakirja.app/dioraama/olavinlinna/) ei vielä ole sisältöä — juuri ohjautuu oletuksena
-// paikalliseen dist-kansioon (task-annettu polku). "poikki peili pois" palauttaa oikean ämpärin.
+// ÄMPÄRI (Päätoimittaja 29.9.: CI rakentaa paketin deterministisesti ja vie sen polkuun dioraama/<rakennus>/<hash>/,
+// uusin.json viimeisenä): sovitin lukee ensin AmpariJuuri + "uusin.json" ({ polku: "<hash>/" }) ja lataa paketin sen
+// alta. KEHITYSPEILI: "poikki peili file:///…/dist/dioraama/olavinlinna/" ohjaa ämpäripolut paikalliseen rakennukseen
+// (siellä ei ole uusin.jsonia, joten paketti luetaan suoraan juuresta).
 //
 // TESTIKOMENNOT (linssi-komento.txt): "poikki peili <url|pois> | yleis | tila <id> | aika <s|pois> |
 // taso <tila> <0-2> | napauta | lataa | mittaus | tila" (LinssiOhjain.Komento reitittää "poikki"-alkuiset tänne).
@@ -26,8 +27,6 @@ namespace Matkakirja.Natiivi
     public sealed class DioraamaSovitin : ILinssi
     {
         public const string AmpariJuuri = "https://media.matkakirja.app/dioraama/olavinlinna/";
-        /// <summary>Oletuspeili kehitykseen (task-annettu polku): ämpärissä ei vielä ole erän 1 sisältöä.</summary>
-        public const string OletusPeiliJuuri = "file:///Users/Shared/Claude/wt/linnanrakentaja-keittio/dist/dioraama/olavinlinna/";
 
         /// <summary>Auki oleva linssi (Natiivi-UI:n paneeli, DioraamaTaulu), muuten null.</summary>
         public static PoikkileikkausLinssi Linssi { get; private set; }
@@ -61,8 +60,10 @@ namespace Matkakirja.Natiivi
         bool avoinna, latausKaynnissa;
         readonly HashSet<string> tilatJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
         readonly HashSet<string> atlaksetJonossaTaiValmiit = new HashSet<string>(StringComparer.Ordinal);
-        string peiliKuvaus = "kehitys (oletus)";
-        Func<string, string> peili = OletusPeiliFunktio;
+        string peiliKuvaus = "pois (ämpäri)";
+        Func<string, string> peili = s => s;
+        /// <summary>Paketin juuri: AmpariJuuri + uusin.json:n polku, tai AmpariJuuri (kehityspeili).</summary>
+        string paketinJuuri = AmpariJuuri;
 
         double? pysaytettyT;
         string pakotettuTila;
@@ -81,9 +82,6 @@ namespace Matkakirja.Natiivi
 
         public LinssiTiedot Tiedot => linssi.Tiedot;
         public bool Auki => linssi.Auki;
-
-        static string OletusPeiliFunktio(string s) =>
-            s.StartsWith(AmpariJuuri, StringComparison.Ordinal) ? OletusPeiliJuuri + s.Substring(AmpariJuuri.Length) : s;
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
@@ -179,14 +177,27 @@ namespace Matkakirja.Natiivi
 
         IEnumerator LataaRakennus()
         {
+            string uusin = null;
+            yield return HaeTeksti(peili(AmpariJuuri + "uusin.json"), t => uusin = t);
+            paketinJuuri = AmpariJuuri;
+            if (uusin != null)
+            {
+                try
+                {
+                    var o = Matkakirja.Peli.MiniJson.Jasenna(uusin) as Dictionary<string, object>;
+                    string polku = o != null && o.TryGetValue("polku", out var p) ? p as string : null;
+                    if (!string.IsNullOrEmpty(polku)) paketinJuuri = AmpariJuuri + polku.TrimEnd('/') + "/";
+                }
+                catch (Exception e) { o.Kirjaa("poikki: uusin.json: " + e.Message); }
+            }
             string json = null;
-            yield return HaeTeksti(peili(AmpariJuuri + "rakennus.json"), t => json = t);
+            yield return HaeTeksti(peili(paketinJuuri + "rakennus.json"), t => json = t);
             latausKaynnissa = false;
             if (json == null) { o.Kirjaa("poikki: rakennus.json ei latautunut"); yield break; }
             try { rakennus = DioraamaData.Lue(json); }
             catch (Exception e) { o.Kirjaa("poikki: rakennus.json jäsennys: " + e.Message); yield break; }
             if (rakennus?.Tilat == null) { o.Kirjaa("poikki: rakennus.json ilman tiloja"); yield break; }
-            o.Kirjaa($"poikki: {rakennus.Nimi} ladattu, {rakennus.Tilat.Count} tilaa");
+            o.Kirjaa($"poikki: {rakennus.Nimi} ladattu, {rakennus.Tilat.Count} tilaa, juuri {paketinJuuri}");
             if (avoinna)
             {
                 linssi.Avaa(rakennus, y.Aika);
@@ -218,7 +229,7 @@ namespace Matkakirja.Natiivi
         {
             if (string.IsNullOrEmpty(tila.GlbTiedosto)) { o.Kirjaa($"poikki: {tila.Id} ilman glb-tiedostoa"); yield break; }
             byte[] tavut = null;
-            yield return HaeTavut(peili(AmpariJuuri + tila.GlbTiedosto), t => tavut = t);
+            yield return HaeTavut(peili(paketinJuuri + tila.GlbTiedosto), t => tavut = t);
             if (tavut == null) { o.Kirjaa($"poikki: {tila.Id} glb ei latautunut (tila jää puuttumaan)"); yield break; }
             if (rakennus3D.LisaaTila(rakennus, tila, tavut, o.Kirjaa)) o.Kirjaa($"poikki: {tila.Id} valmis ({rakennus3D.Kolmiot} kolmiota yhteensä)");
         }
@@ -226,7 +237,7 @@ namespace Matkakirja.Natiivi
         IEnumerator LataaAtlas(string atlasPolku)
         {
             byte[] tavut = null;
-            yield return HaeTavut(peili(AmpariJuuri + atlasPolku), t => tavut = t);
+            yield return HaeTavut(peili(paketinJuuri + atlasPolku), t => tavut = t);
             if (tavut == null) { o.Kirjaa($"poikki: atlas {atlasPolku} ei latautunut (hahmo harmaana)"); yield break; }
             var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true) { name = atlasPolku, filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp };
             if (!kuva.LoadImage(tavut, false)) { o.Kirjaa($"poikki: atlas {atlasPolku} ei jäsentynyt (hahmo harmaana)"); UnityEngine.Object.Destroy(kuva); yield break; }
