@@ -2193,4 +2193,162 @@ export const MAAKUNTIEN_PULU = {
       { q: "Kuinka suuri Sazanin saari on?", a: "Sazan on Albanian suurin saari, noin 4,8 kilometriä pitkä ja 2,7 leveä. Se kuuluu Karaburun-Sazanin meripuistoon, jonka vesillä uivat delfiinit ja sukeltajien löytämät hylyt." },
     ],
   },
+  MKD: {
+    "Eastern": [
+      { q: "Mitä ovat Vinican terrakottaikonit?", a: "Savilaattoja, jotka löytyivät Viničko Kalen linnavuoren raunioilta ja ajoittuvat 500–600-luvuille. Ne on valettu muoteilla, ja niissä on kristillisiä kuvia sekä latinankielisiä rukoustekstejä. Suuri osa on nykyään Skopjen museossa." },
+      { q: "Mikä on Lesnovon luostari?", a: "Probištipin lähellä Osogovon rinteellä oleva luostari perustettiin vuonna 1341 despootti Jovan Oliverin toimesta. Pyhän Mikaelin kirkon freskot maalattiin 1346–1347, ja ne ovat keskiaikaisen serbialais-bysanttilaisen maalaustaiteen merkittäviä esimerkkejä." },
+    ],
+    "Southeastern": [
+      { q: "Miksi Dojranin kalastajat pyytävät kalaa merimetsojen avulla?", a: "Talvella kalastajat rakentavat ruokoaidoista pyydyksen, mandran, ja merimetsot ajavat kalat sinne. Tapa on harvinainen, ja kausi alkaa lokakuussa ja kestää maaliskuuhun." },
+      { q: "Milloin Končen luostari rakennettiin?", a: "Radovišin eteläpuolella Konče-vuoren juurella oleva Pyhän Tapanin kirkko rakennettiin vuonna 1366. Luostari oli keskiajalla tärkeä hengellinen keskus, ja sen ympärille kohosi asuinrakennuksia." },
+    ],
+    "Northeastern": [
+      { q: "Mitä ovat Kuklican kivinuket?", a: "Kratovon lähellä, Kriva-joen laaksossa olevat noin 0,3 neliökilometrin alueen kivipilarit ovat eroosion veistämiä: kova tulivuorikivi suojaa alla olevaa pehmeää tuffia. Legendan mukaan ne ovat kirouksen kivettämä häävieraiden joukko." },
+      { q: "Mikä on Osogovon luostari?", a: "Kriva Palankan lähellä, kymmenen kilometrin päässä Bulgarian rajasta oleva luostari, jossa on kaksi kirkkoa. Suuri Pyhän Joakimin kirkko rakennettiin 1847–1851, ja freskoissa on Kriva Palankan kansallispukua. Pieni Neitsyt Marian kirkko on 1300-luvulta." },
+    ],
+    "Southwestern": [
+      { q: "Miksi Vevčanin kylällä on oma 'tasavalta'?", a: "Vuonna 1987 kyläläiset vastustivat suunnitelmaa johtaa heidän lähdevetensä Strugaan, ja leikillinen 'Vevčanin tasavalta' sai alkunsa. Kylällä on oma ličnik-rahansa, ja sen karnevaali juhlii vuodenvaihdetta juliaanisen kalenterin mukaan." },
+      { q: "Milloin Kaneon kirkko on rakennettu?", a: "Tarkkaa vuotta ei tiedetä. Asiakirjojen mukaan kirkko oli olemassa ennen vuotta 1447, ja arkeologit arvioivat sen rakennetun 1200-luvulla. Ristin muotoisen kirkon kupolin freskot löytyivät vuoden 1964 entisöinnissä." },
+      { q: "Miksi Plaošnik on tärkeä paikka?", a: "Kliment saapui Ohridiin 893 ja rakensi varhaiskristillisen basilikan perustuksille Pyhän Panteleimonin kirkon, jonne hänet on haudattu. Hänen kirjallista koulutustaan pidetään usein Euroopan vanhimpana yliopistona." },
+    ],
+    "Pelagonia": [
+      { q: "Miksi Golem Grad on 'käärmesaari'?", a: "Prespanjärven Golem Grad on 600 metriä pitkä ja 350 metriä leveä asumaton saari, jossa elää muun muassa sarvikyitä ja vesikäärmeitä sekä noin tuhat ihmisen tuomaa Hermannin kilpikonnaa, ja saari avattiin turisteille elokuussa 2008." },
+      { q: "Miksi Kruševon Makedonium näyttää avaruusalukselta?", a: "Makedonium on vuonna 1974 avattu muistomerkki, jonka suunnittelivat Jordan ja Iskra Grabuloski. Pyöreässä rakennuksessa on ovaalit lasimaalausikkunat, ja se muistaa vuoden 1903 Ilinden-kansannousua sekä toisen maailmansodan vastarintaa." },
+      { q: "Miksi Manaki-festivaalin palkinto on 'Kultainen kamera 300'?", a: "Nimi viittaa veljesten Yanakin ja Miltonin Manakin kameraan: Yanaki osti Lontoosta 35 mm:n Urban Bioscope -kameran, jonka sarjanumero oli 300. Festivaali on pidetty Bitolassa vuodesta 1979." },
+    ],
+    "Polog": [
+      { q: "Miksi Galičnikin häät ovat kuuluisat?", a: "Kylässä järjestetään heinäkuun 12. päivää, Pietarin ja Paavalin päivää, lähinnä oleva viikonloppu. Ennen häät kestivät viisi päivää. Nykyään valittu pari vihitään perinteisin menoin, ja miehet tanssivat Teškoto-tanssin, joka muistuttaa työhön ulkomaille lähtevistä miehistä." },
+      { q: "Mikä tekee Bigorskin luostarin ikonostaasista erikoisen?", a: "Pähkinäpuusta 1829–1835 kaiverretussa Mijak-mestareiden teoksessa on satoja ihmishahmoja ja eläimiä, jotka kuvaavat Vanhaa ja Uutta testamenttia. Se lasketaan yhdeksi Balkanin kauneimmista." },
+    ],
+    "Skopje": [
+      { q: "Miksi Kuršumli An on 'lyijyinen'?", a: "Vanhan basaarin karavaanisarai rakennettiin 1400- tai 1500-luvulla, ja sen pyramidimaiset kupolit olivat alun perin lyijypeitteiset. Nimi tulee turkin lyijyä tarkoittavasta sanasta." },
+      { q: "Miten pääsee Vodnon huipulle ilman kävelyä?", a: "Gondolihissi otettiin käyttöön 3. kesäkuuta 2011. Se nousee 1 600 metrin matkan ja 480 metriä ylöspäin Sredno Vodnosta Millennium-ristille, joka on rakennettu vuonna 2002 ja on 66-metrisenä yksi maailman korkeimmista risteistä." },
+      { q: "Milloin Mustafa-pashan moskeija rakennettiin?", a: "Vuonna 1492 Çoban Mustafa Pasha rakennutti moskeijan tasanteelle vanhan basaarin yläpuolelle. Se on yksi Skopjen vanhimmista säilyneistä moskeijoista." },
+    ],
+    "Vardar": [
+      { q: "Mikä on stanušina-rypäle?", a: "Tikvešin harvinainen punainen viinirypälelajike, jota ei kasva missään muualla maailmassa. Siitä tehty viini on vaalean värinen ja kuivan lehden ja mansikan sävyinen. Lajike on uhanalainen, ja viinitilat yrittävät elvyttää sitä." },
+      { q: "Miksi Veles nousi kansainvälisiin uutisiin vuonna 2016?", a: "Toimittajat paljastivat, että kaupungista käsin pyöritettiin yli sataa sivustoa, jotka julkaisivat Yhdysvaltain vaaleista ja Donald Trumpin kampanjasta usein virheellisiä juttuja. Motiivi oli raha." },
+    ],
+  },
+  MNE: {
+    "Andrijevica": [
+      { q: "Mistä Andrijevica on saanut nimensä?", a: "Perimätiedon mukaan nimi tulee Andrijevina-kirkosta, jonka rakennutti Nemanjić-suvun jälkeläinen Andrija. Osmanit tuhosivat kirkon vuonna 1765, ja myöhemmin uuden kirkon ympärille kasvoi asutus, josta tuli nykyinen kaupunki." },
+      { q: "Mikä tunnettu romaani on peräisin Andrijevican seudulta?", a: "Kirjailija Mihailo Lalić syntyi vuonna 1914 lähellä Andrijevicaa, Trepčan kylässä. Hänen pääteoksensa Lelejska gora ilmestyi 1957, ja se kertoo toisen maailmansodan ajan Montenegrosta." },
+    ],
+    "Bar": [
+      { q: "Mitä Marconi teki Barissa vuonna 1904?", a: "Italialainen Guglielmo Marconi rakensi Barin (silloin Antivari) ja italialaisen Barin välille kaupallisen radiosähkeyhteyden, joka avattiin elokuussa 1904. Marconi kävi itse tarkastamassa Montenegron puoleisen aseman." },
+      { q: "Miksi Stari Bar on nykyään raunio?", a: "Vanha kaupunki vaurioitui vuonna 1878, kun Montenegro valtasi sen taistelujen jälkeen, ja vuoden 1979 maanjäristys vaurioitti sitä lisää. Jäljellä on satoja rakennuksia: kirkkoja, moskeijoita, hamam ja vesijohto." },
+      { q: "Mikä oli Montenegron ensimmäinen rautatie?", a: "Vuonna 1908 avattu kapearaiteinen Bar–Virpazar, 43 kilometriä pitkä ja 750 millimetrin raiteella. Se yhdisti Barin sataman Skadarjärven Virpazarin satamaan, ja se lopetettiin vasta 1959, kun normaaliraiteinen rata Podgoricaan avattiin." },
+    ],
+    "Berane": [
+      { q: "Miksi Berane oli 43 vuotta nimeltään Ivangrad?", a: "Vuosina 1949–1992 kaupunki kantoi nimeä Ivangrad kansansankari Ivan Milutinovićin mukaan. Vanha nimi Berane palautettiin vuonna 1992, ja se on ollut käytössä siitä lähtien." },
+      { q: "Mitä nimeä seutu kantoi keskiajalla?", a: "Seutu tunnettiin nimellä Budimlja. Se kuului laajempaan Raškan alueeseen, kunnes ottomaanit valtasivat sen vuonna 1455." },
+      { q: "Mitä Kaludran kylän lähellä on?", a: "Noin kymmenen kilometriä Beranesta kaakkoon ovat Ćelijen luostarikompleksin rauniot. Museon arkeologit tutkivat paikkaa 1991 ja löysivät Pyhän Luukkaan kirkon jäänteet sekä luostarin asuinrakennuksen perustukset." },
+    ],
+    "Bijelo Polje": [
+      { q: "Miksi amerikkalaistutkijat tulivat Bijelo Poljeen 1930-luvulla?", a: "Milman Parry ja Albert Lord nauhoittivat seudulla 1935 guslari Avdo Međedovićin, jonka eepos Smailagić Meho -häistä on noin 12 300 säettä pitkä. Tallenteet auttoivat selittämään, miten suullinen runous syntyy ja miten Homeroksen eepokset ehkä on sävelletty." },
+      { q: "Mikä on Ratkovićin runoillat?", a: "Vuosittainen runofestivaali, joka on nimetty Bijelo Poljessa syntyneen kirjailijan Risto Ratkovićin mukaan. Festivaalilla jaetaan palkinto parhaalle runokirjalle ja palkintoja nuorille runoilijoille." },
+    ],
+    "Budva": [
+      { q: "Mikä on Sveti Nikola?", a: "Montenegron suurin saari, noin kilometrin päässä Budvan vanhakaupungista ja pituudeltaan noin kaksi kilometriä. Saari on autoton ja suurelta osin rakentamaton, ja sinne pääsee vesitaksilla; paikalliset kutsuvat sitä Montenegron Havaijiksi." },
+      { q: "Mitä Budvan muinaishaudoista löytyi?", a: "Vuoden 1979 maanjäristyksen jälkeen kaupungin länsipuolelta löytyi laaja hellenistis-roomalainen hautausmaa. Esineet konservoitiin Cetinjessä ja palasivat Budvaan 2003. Kokoelmaan kuuluu kultakoruja, muun muassa korvakorut, joissa on kotka ja poika, joita on tulkittu Zeuksen ja Ganymedeen myytiksi." },
+    ],
+    "Cetinje": [
+      { q: "Miksi Biljarda on saanut nimensä?", a: "Vuonna 1838 valmistunut Njegošin asuinrakennus kantaa nimeään talon biljardipöydän mukaan, joka oli Montenegron ensimmäinen ja jonka Njegoš toi Italiasta. Nykyään talo on Njegoš-museo." },
+      { q: "Miksi Vlaška-kirkon aita on tehty kivääreistä?", a: "Kirkko rakennettiin noin vuonna 1450 keskiaikaisen hautausmaan paikalle, jossa oli noin 150 stećci-hautakiveä. Sen pihaa kiertävä aita on tehty kivääreistä, jotka Montenegro sai sotasaaliina Osmanien valtakuntaa vastaan." },
+      { q: "Mitä pyhäinjäännöksiä Cetinjen luostarissa säilytetään?", a: "Luostarissa säilytetään Kastajan Johanneksen oikeaa kättä, Pyhän Ristin palasta ja Pietari Cetinjeläisen jäännöksiä." },
+    ],
+    "Danilovgrad": [
+      { q: "Mistä Zeta-joki oikeasti nousee?", a: "Zeta kulkee Nikšićin kautta, uppoaa maan alle ja nousee uudelleen Danilovgradissa Glava Zeten lähteinä. Joki jatkaa Bjelopavlićin tasangon läpi Moračaan." },
+      { q: "Kuinka kuumaksi Danilovgradin seutu käy?", a: "Montenegron lämpöennätys 44,8 °C mitattiin Podgoricassa elokuussa 2007, ja sama lukema toistui Danilovgradissa elokuussa 2012. Tasangon kesät ovat poikkeuksellisen kuumia." },
+    ],
+    "Herceg Novi": [
+      { q: "Mitä Kanli Kula tarkoittaa, ja mitä sen seinillä on?", a: "Kanli Kula tarkoittaa Verinen torni. Linnakkeen vesisäiliö muutettiin vankikoppiin, ja sen seinillä on yhä piirroksia kaleereista, kaloista, risteistä sekä nimiä ja vuosilukuja. Nykyään tornin sisäpihalla on kesäisin ulkoilmaesityksiä." },
+      { q: "Miksi Igaloon tullaan hoitoihin?", a: "Herceg Novin kyljessä olevan Igalon rannoilta ja lähteistä saadaan parantavaksi katsottua meriliejua ja kivennäisvettä. Sen ympärille on kasvanut kylpylä- ja kuntoutuspaikkakunta." },
+      { q: "Kuinka vanha Savinan luostarin pieni kirkko oikeasti on?", a: "Perinne ajoittaa Neitsyt Marian kuolleeksi nukkumisen pienen kirkon vuoteen 1030, mutta tyylintutkimus viittaa 1400-lukuun ja Kosačojen aikaan. Kirkko on vain kymmenen metriä korkea ja kuusi leveä." },
+    ],
+    "Kolašin": [
+      { q: "Mitä erikoista Morača-luostarin seinillä on?", a: "Luostarin 1200-luvun freskoihin kuuluu kolmetoista kohtausta profeetta Eliaan elämästä. Osmanit hävittivät luostarin 1505, ja se oli autiona noin seitsemän vuosikymmentä, kunnes kunnostus alkoi vuonna 1574." },
+      { q: "Miksi Belgrad–Bar-rata on kuuluisa?", a: "Rata valmistui 1976, ja sen Kolašinin läheinen Mala Rijeka -viadukti oli valmistuessaan maailman korkein rautatiesilta. Rata kulkee kymmenien tunneleiden ja siltojen kautta Montenegron vuoristojen läpi." },
+    ],
+    "Kotor": [
+      { q: "Onko Kotorinlahti oikea fjordi?", a: "Ei ole. Vaikka lahtea kutsutaan usein Etelä-Euroopan fjordiksi, se on veden peittämä jokilaakso eli ria. Se on yksi Adrianmeren mutkikkaimmista rannikkokohdista." },
+      { q: "Miksi Kotorin yllä kiemurtelee tie, jossa on kymmeniä mutkia?", a: "Serpentiinitie yhdistää rannikon Njegušin kylään ja Lovćenin kansallispuiston suuntaan. Se rakennettiin 1800-luvun lopulla Itävalta-Unkarin aikana, ja siinä on noin 25 hiusneulamutkaa, joista jokainen avaa uuden näkymän lahdelle." },
+    ],
+    "Mojkovac": [
+      { q: "Miksi Mojkovacin taistelua kutsutaan verisen joulun taisteluksi?", a: "Taistelu osui ortodoksiseen jouluun tammikuussa 1916. Montenegrolaiset torjuivat hyökkäyksen ja saivat Serbian armeijan perääntymisen turvattua." },
+      { q: "Mikä Brskovo oli?", a: "Keskiajalla Brskovo oli kaivos- ja rahapajakaupunki, jonka saksilaiset kaivosmiehet tekivät vilkkaaksi 1280-luvulla. Siellä lyötiin Grossi de Brescova -rahoja, ja Dubrovnikilla oli paikalla konsuli." },
+    ],
+    "Nikšic": [
+      { q: "Mitä Bedem tarkoittaa, ja millainen linnoitus se oli?", a: "Bedem tarkoittaa vallia tai muuria. Osmanien aikana linnoitus oli alueen vahvin linnake." },
+      { q: "Miksi Krupacia kutsutaan Nikšićin mereksi?", a: "Krupac on tekojärvi, jonka nikšiläiset ovat ristineet leikillään mereksi. Kesäisin sen rannoilla uidaan ja harrastetaan vesiurheilua." },
+    ],
+    "Plav": [
+      { q: "Miksi Hridsko-järvelle kävellään monta tuntia?", a: "Hridsko-järvi on jäätikköjärvi noin 1 970 metrin korkeudessa Prokletijen kansallispuistossa. Polku alkaa Plavin yläpuolelta, ja yhteen suuntaan kävelyyn menee noin 4–5 tuntia." },
+      { q: "Minne Plavin järven vesi lopulta päätyy?", a: "Järvestä lähtevä Lim virtaa Drinaan ja sieltä Savan ja Tonavan kautta Mustallemerelle." },
+    ],
+    "Pljevlja": [
+      { q: "Mikä on häkkimalja, ja miksi Pljevlja on sillä kuuluisa?", a: "Roomalainen diatretum on lasiastia, jonka ulkopinta on veistetty verkkomaiseksi häkiksi. Kominin nekropolista Pljevljan lähellä löytynyt, 300-luvulle ajoitettu malja on harvinaisen ehjä, ja se on esillä Pljevljan kotiseutumuseossa." },
+      { q: "Kuka maalasi Pljevljan luostarin freskot?", a: "Pappi Strahinja Budimljesta maalasi kirkon ja esikirkon freskot vuosina 1592–1595. Alimmalla vyöhykkeellä ovat pyhät ja Nemanjić-suvun jäsenet, ylempänä suuret kirkkojuhlat ja Kristuksen kärsimys." },
+    ],
+    "Plužine": [
+      { q: "Mitä tapahtuu Šćepan Poljessa, Plužinen kunnan rajaseudulla?", a: "Siellä Tara ja Piva yhtyvät ja muodostavat Drina-joen. Šćepan Polje on myös Taran koskenlaskun päätepiste." },
+      { q: "Mikä Pivanjärvi oikeastaan on?", a: "Se ei ole luonnonjärvi vaan Mratinjen padon 1970-luvulla kanjoniin nostama tekojärvi. Sen pinta-ala on noin 12 neliökilometriä, ja se on yksi Montenegron suurimmista järvistä." },
+    ],
+    "Podgorica": [
+      { q: "Mikä on Doclea, ja miksi sinne kannattaa mennä?", a: "Doclea oli roomalainen kaupunki, jonka rauniot ovat noin kolmen kilometrin päässä Podgorican pohjoispuolella. Niistä erottuvat foorumi, basilika, temppeleitä ja kylpylä." },
+      { q: "Mitä kaupungin nimi tarkoittaa?", a: "Nimi tulkitaan suunnilleen muotoon 'Gorican alla'. Goricalla tarkoitetaan keskustan viereistä kukkulaa." },
+      { q: "Onko Podgorica sateinen?", a: "On: vuosisadanta on noin 1 650 millimetriä, ja sateet tulevat pääosin syksyllä ja talvella. Kesät ovat kuivia ja kuumia." },
+    ],
+    "Rožaje": [
+      { q: "Mistä Ibar-joki saa alkunsa?", a: "Ibarin lähde, Vrelo Ibra, on tiheän havumetsän keskellä lähellä Rožajea. Joki virtaa lopulta 272 kilometrin matkan ja laskee Länsi-Moravaan Kraljevon lähellä Serbiassa." },
+      { q: "Mikä Hajla on?", a: "Hajla on vuorijono, jonka huiput ylittävät 2 000 metriä. Korkein huippu on 2 403 metriä, ja se sijaitsee valtionrajalla." },
+    ],
+    "Šavnik": [
+      { q: "Miksi Nevidio-kanjonia sanotaan yhdeksi Euroopan viimeisistä valloitetuista kanjoneista?", a: "Komarnica-joen Nevidio-kanjoni on noin kaksi kilometriä pitkä ja paikoin vain metrin levyinen. Sen läpi kerrotaan päästyn ensimmäisen kerran 1965, kun vuoristokiipeilijät kulkivat sen sukellusvarusteissa." },
+      { q: "Missä Montenegron ensimmäinen tuulipuisto on?", a: "Krnovon ylätasangolla Nikšićin ja Šavnikin välisen tien varrella. Puisto käynnistyi 2017, ja siinä on 26 tuuliturbiinia, yhteensä 72 megawattia." },
+    ],
+    "Tivat": [
+      { q: "Mikä sukellusvene Tivatissa voi käydä katsomassa?", a: "Se on P-821 Heroj, vuonna 1968 valmistunut noin 50-metrinen sukellusvene, jonka miehistö oli 28. Sitä pääsee kiertämään meriperinnemuseon yhteydessä, entisen laivastoarsenaalin tiloissa." },
+      { q: "Mikä on Kukkasaari Tivatin edustalla?", a: "Se on pieni saari, joka on yhdistetty mantereeseen kapealla hiekkakannaksella. Sen vanhempi nimi Miholjska prevlaka viittaa arkkienkeli Mikaelin luostariin." },
+      { q: "Kuinka suuri Porto Montenegro on?", a: "Satamassa on noin 480 venepaikkaa, joista noin 350 on tarkoitettu superjahdeille, ja se mainostaa olevansa Euroopan suurin superjahtisatama." },
+    ],
+    "Ulcinj": [
+      { q: "Miksi Ulcinjia sanotaan merirosvojen kaupungiksi?", a: "Ottomaanien valloituksen 1571 jälkeen kaupungista tuli Adrianmeren korsaarien tukikohta, ja merirosvoilu jatkui 1700-luvun alkuun. Legenda liittää kaupunkiin myös Cervantesin, mutta useimpien lähteiden mukaan hänen vankeutensa oli Algerissa." },
+      { q: "Miten Ada Bojana -saari syntyi?", a: "Tarinan mukaan Bojana-joen suulle 1858 haaksirikkoutunut laiva sitoi jokisedimenttiä, ja siitä kasvoi saari. Nykyinen kolmionmuotoinen saari on noin 4,8 neliökilometrin kokoinen ja matala." },
+      { q: "Kuka kuoli Ulcinjissa 1676?", a: "Sabbatai Zevi, itseään messiaaksi julistanut juutalainen, kuoli maanpaossa Ulcinjissa 1676." },
+    ],
+    "Žabljak": [
+      { q: "Kuinka syvä Taran kanjoni on?", a: "Noin 1 300 metriä ja 80 kilometriä pitkä, mikä tekee siitä yhden Euroopan syvimmistä kanjoneista." },
+      { q: "Miksi Durmitorin järviä sanotaan vuorten silmiksi?", a: "Alueella on 18 jäätikköjärveä, joita kutsutaan nimellä Gorske oči eli vuorten silmät. Niistä suurin ja lähin on Mustajärvi." },
+      { q: "Kuka rakensi Taran sillan?", a: "Sillan suunnitteli insinööri Mijat Trojanović, ja se valmistui 1937–1940. Se on viisikaarinen betonisilta korkealla joen yläpuolella, ja sitä on käytetty muun muassa elokuvassa Force 10 from Navarone 1978." },
+    ],
+  },
+  CYP: {
+    "Famagusta": [
+      { q: "Mitä Ayia Napan nimi tarkoittaa?", a: "\"Ayia\" on pyhä ja \"napa\" metsäinen laakso. Perimätiedon mukaan metsästäjä löysi luolasta koiransa etsiessään Neitsyt Marian ikonin, ja paikasta tuli pyhiinvaelluskohde." },
+      { q: "Miksi vedenalaiset veistokset upotettiin juuri merisuojelualueelle?", a: "MUSANin teokset on tehty myös keinotekoiseksi riutaksi, jolle kasvaa merieliöitä. Veistokset sijaitsevat Pernera-rannan merisuojelualueella, ja niihin pääsee snorklaamalla tai sukeltamalla." },
+      { q: "Miksi muinainen Salamis hylättiin?", a: "Maanjäristykset tuhosivat kaupunkia 300-luvun alussa, ja se rakennettiin uudelleen Constantiana. Lopulta se autioitui 600-luvulla arabien hyökkäysten jälkeen." },
+    ],
+    "Larnaca": [
+      { q: "Miksi Zenobia upposi?", a: "Uusi, 172-metrinen lautta kaatui 7. kesäkuuta 1980 neitsytmatkallaan. Yleisimmän selityksen mukaan painolastin ohjausjärjestelmän vika sotki lastin tasapainon. Kyydissä oli 108 rekkaa, eikä ketään kuollut." },
+      { q: "Mistä Lefkaran pitsi on kuuluisa?", a: "Lefkaran kylän käsityö on Unescon aineetonta kulttuuriperintöä vuodesta 2009. Tarun mukaan Leonardo da Vinci toi täältä pitsiliinan Milanoon." },
+      { q: "Kuka oli Zenon Kitionilainen?", a: "Stoalaisen filosofian perustaja, joka syntyi Kitionissa eli nykyisessä Larnacassa. Hän opetti Ateenassa, ja \"stoalainen\" tulee hänen koulunsa kokoontumispaikasta, pylväshallista." },
+    ],
+    "Limassol": [
+      { q: "Miksi Englannin kuningatar kruunattiin Limassolissa?", a: "Richard Leijonasydän valloitti Kyproksen vuonna 1191 matkalla ristiretkelle, ja hän meni naimisiin Berengarian kanssa Limassolin linnan kappelissa 12. toukokuuta. Berengaria kruunattiin samana päivänä, eikä hän koskaan käynyt Englannissa." },
+      { q: "Mitä Kolossin linnan vieressä tehtiin keskiajalla?", a: "Linnan vieressä oli sokeriruokoa jalostava sokeritehdas, ja sokeri oli tuolloin yksi Kyproksen tärkeimmistä vientituotteista. Sokeritehtaan rauniot näkyvät yhä linnan vieressä." },
+      { q: "Onko Kourionin teatteria vielä käytössä?", a: "On. Teatteri rakennettiin 100-luvulla eaa. ja laajennettiin 100-luvulla jaa., ja siellä esitetään yhä näytelmiä, esimerkiksi antiikin draamaa." },
+    ],
+    "Nicosia": [
+      { q: "Mistä Nikosian muurien bastionit ovat saaneet nimensä?", a: "Kunkin bastionin nimi tulee yhdestä yhdestätoista aatelissuvusta, jotka rahoittivat rakentamista. Muurit suunnittelivat insinöörit Giulio Savorgnano ja Francesco Barbaro." },
+      { q: "Millaisia Troodoksen maalatut kirkot ovat?", a: "Kivikirkon päällä on jyrkkä, laattakattoinen puukatto. Sisällä seiniä peittävät maalaukset ovat 1000–1500-luvuilta." },
+      { q: "Miksi Kyproksen museo perustettiin?", a: "Se perustettiin vuonna 1882 saaren asukkaiden vetoomuksen jälkeen, ja nykyiseen uusklassiseen rakennukseensa se muutti vuonna 1924. Kokoelma on laaja kyproslaisen antiikin esineistö." },
+    ],
+    "Paphos": [
+      { q: "Miksi Afroditea palvottiin Kouklian pyhäkössä kivenä eikä patsaana?", a: "Palaipaphosin pyhäkössä, joka perustettiin noin vuonna 1200 eaa., jumalatarta esitti kartiomainen kivi. Se on nyt esillä Kouklian museossa." },
+      { q: "Mitä Lara-rannalla tehdään merikilpikonnien hyväksi?", a: "Lara on Välimeren tärkeimpiä caretta- ja vihreän merikilpikonnan pesimärantoja. Kalastusosasto on pitänyt siellä hautomoa vuodesta 1978 ja siirtää vaarassa olevat munat suojaan." },
+      { q: "Miksi Kuninkaiden haudat on nimetty kuninkaiden mukaan?", a: "Nimi tulee hautojen komeudesta: kuninkaita niihin ei haudattu, vaan Paphosin aatelisia ja korkeita virkamiehiä 200-luvulle jaa. asti. Osassa haudoista on dorilaisia pylväitä ja seinämaalauksia." },
+    ],
+  },
 };

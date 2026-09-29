@@ -6464,6 +6464,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MNE: {
     Andrijevica: {
       lyhyt: 'Andrijevica jakaa Kolašinin kanssa Komovin vuoriston, jonka korkein huippu Kom Kučki kohoaa 2 487 metriin.',
+      pitka: "Andrijevica sijaitsee 740 metrin korkeudessa Limin ja Zlorečican yhtymäkohdassa, ja koko kunnassa asuu vain noin 4 000 ihmistä. Kaupunki on Komovin vuoriston epävirallinen retkeilytukikohta: korkeimman huipun lisäksi lähellä kohoavat Ljevorijecki Kom ja Vasojevićki Kom, joista jälkimmäiselle nousee kokonaisessa päiväretkessä. Kolašinin suuntaan johtaa 1 568 metrin korkeudessa kulkeva Trešnjevikin solatie, jota pidetään yhtenä Montenegron näyttävimmistä vuoristoteistä. Sekä Beraneen että Kolašiniin on noin 30 kilometriä, joten kaupunki on solmukohta Komovin, Bjelasican ja Prokletijen vuorimaisemien välissä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-andrijevica-a0c0a228.jpg",
@@ -6478,6 +6479,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bar: {
       lyhyt: 'Stari Barin lähellä kasvaa oliivipuu Stara maslina, jonka arvellaan olevan yli 2 000 vuotta vanha – yksi maailman vanhimmista.',
+      pitka: "Bar on Montenegron tärkein satamakaupunki, jonka satamasta lähtee yön yli kulkeva lautta Italian Bariin. Satama ja Belgradiin johtava 435 kilometrin rata, joka avattiin 1976, tekivät kaupungista maan portin merelle. Koko kunnassa asuu noin 46 000 ihmistä. Sutomoren pitkä hiekkaranta houkuttaa kotimaisia lomailijoita, ja Skadarjärven Virpazarin kylään on noin puoli tuntia ajomatkaa. Kaupungin takana Rumija-vuori kohoaa jyrkästi rannikon yläpuolelle, ja Topolicassa kuningas Nikolan kesäpalatsi toimii nykyään Barin kotiseutumuseona.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bar-151e1eb7.jpg",
@@ -6492,6 +6494,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Berane: {
       lyhyt: 'Limin varrella Beranen laidalla kohoaa Đurđevi Stupovin luostari, joka rakennettiin jo 1100-luvun lopulla.',
+      pitka: "Berane on Limin varren kaupunki, jossa asuu noin 9 500–10 000 ihmistä; koko kunnassa asukkaita on noin 25 000. Keskustassa toimii Polimski-museo, jonka kokoelmiin kuuluu useita tuhansia esineitä arkeologiasta, etnografiasta ja aseista. Seudun arkeologia yltää kauas: Ylä-Polimlen mesoliittisia asuinpaikkoja on ajoitettu vuosiin 9 000–6 000 eaa. Perhokalastajat tuntevat Limin, ja etelässä kohoaa Bjelasican vuoristo. Museo perustettiin 1950-luvulla, ja kaupungin lukio on toiminut jo vuodesta 1913.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-berane-fef33b0b.jpg",
@@ -6506,6 +6509,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bijelo Polje': {
       lyhyt: 'Limin varren Bijelo Polje on Pohjois-Montenegron keskus, jonka asukkaista lähes puolet on muslimeja ja lähes puolet ortodokseja.',
+      pitka: "Bijelo Polje, suomeksi Valkoinen kenttä, on Limin varren kaupunki, jonka kunnassa on yli 130 asutusta ja 38 662 asukasta (2023). Kaupungin vanhin maamerkki on Pyhien Pietarin ja Paavalin kirkko, jonka ruhtinas Miroslav Hum rakennutti sisäänkäynnin kirjoituksen mukaan vuonna 1196. Kirkko liittyy Miroslavin evankeliumiin, vanhimpaan säilyneeseen serbialaiseen kyrilliseen käsikirjoitukseen, joka tehtiin 1100-luvun lopulla ja kuuluu UNESCOn Muisti maailmasta -rekisteriin. Alkuteos säilytetään Belgradissa. Heinäkuisin kaupungissa pidetään White Field Jazz Festival, ja Lim on tunnettu taimenestaan ja harjuksestaan.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bijelo-polje-441da6da.jpg",
@@ -6520,6 +6524,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Budva: {
       lyhyt: 'Sveti Stefanin kalastajakylä on pieni saari hiekkakannaksen päässä, ja koko kylä muutettiin Jugoslavian aikana luksushotelliksi.',
+      pitka: "Budvan pieni vanhakaupunki kalkkikiviniemellä on ollut asuttu yhtäjaksoisesti noin 2 500 vuotta, ja sen juuret ulottuvat kreikkalais-illyrialaiseen asutukseen 400-luvulla eaa. Vuoden 1979 maanjäristys vaurioitti kaupunkia pahoin, ja jälleenrakennus kesti vuoteen 1987. Muurien sisällä on neljä kirkkoa, muun muassa vuodelta 840 peräisin oleva Santa Maria in Punta, ja Citadelan ulkoteatteri toimii kesän Grad Teatar -festivaalin näyttämönä. Kaupungin ulkopuolella Slovenska plaža on noin 1,6 kilometriä pitkä, ja kunnassa asuu noin 26 700 ihmistä, joista noin 17 500 kaupungissa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-budva-ceca849d.jpg",
@@ -6534,6 +6539,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cetinje: {
       lyhyt: 'Cetinje on virallisesti Montenegron vanha kuninkaallinen pääkaupunki, ja presidentin virka-asunto Sininen palatsi on yhä siellä.',
+      pitka: "Cetinje perustettiin vuonna 1482, kun Ivan Crnojević siirsi valtansa Lovćenin juurelle helpommin puolustettavaan paikkaan. Kaupunki sijaitsee noin 650 metrin korkeudessa, ja kunnassa asuu noin 14 500 ihmistä. Täällä painettiin Crnojevićin kirjapainossa 1494 Oktoih, ensimmäinen eteläslaavien kyrillisin kirjaimin painettu kirja. Cetinjeen rakennettiin aikanaan suurvaltojen lähetystöjä, ja venäläinen, 1903 valmistunut lähetystörakennus kuuluu nykyään Taidekorkeakoululle. UNESCO otti Cetinjen mukaan Luovien kaupunkien verkostoon vuonna 2023 muotoilukaupunkina.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-cetinje-61df0219.jpg",
@@ -6548,6 +6554,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Danilovgrad: {
       lyhyt: 'Ostrogin luostari on rakennettu pystysuoraan kallioseinään, ja sinne nousee vuosittain yli miljoona pyhiinvaeltajaa.',
+      pitka: "Danilovgrad levittäytyy Zeta-joen hedelmällisellä Bjelopavlićin tasangolla noin 25 kilometrin päässä Podgoricasta, päätien varrella Nikšićin ja pääkaupungin välissä. Kaupunki perustettiin vuonna 1870 suunnitelmakaupungiksi ja nimettiin ruhtinas Danilon mukaan. Kunnassa on 103 asutusta, ala noin 501 neliökilometriä ja 18 617 asukasta (2023). Spužin kukkulalla kohoaa ottomaanien vuonna 1704 valmistama linnoitus, joka valvoi keskisen Montenegron kulkuteitä. Ždrebaonikin luostari ja Glava Zeten lähteet ovat tasangon reunoilla, ja tasangon lämmin, kostea subtrooppinen ilmasto tekee kesistä kuumia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-danilovgrad-29098384.jpg",
@@ -6562,6 +6569,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Herceg Novi': {
       lyhyt: 'Herceg Novissa keltaiset mimosat kukkivat jo talvella, ja kaupunki juhlii niitä joka vuosi omalla mimosajuhlallaan.',
+      pitka: "Herceg Novi on rakentunut portaikoiksi: vanhakaupunki laskeutuu rinnettä pitkin Kotorinlahden länsiportilta merelle, ja rantaa myötäilevä Pet Danican kävelyreitti yhdistää Škverin sataman ja Forte Maren. Linnake perustettiin kaupungin ytimeksi vuonna 1382 Bosnian kuningas Tvrtko I:n aikana. Sittemmin kaupunkia ovat hallinneet espanjalaiset (1538–1539), osmanit noin kaksisataa vuotta, venetsialaiset ja itävaltalaiset, ja jokainen on jättänyt jälkensä muureihin. Lähellä olevan Savinan luostarin suuri kirkko rakennettiin vuosina 1777–1799, ja sen ikonostaasin maalasi vuonna 1795 Simeon Lazović. Aurinkoisia päiviä on noin 200 vuodessa, joten rantakävelyllä viihtyy lähes ympäri vuoden.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-herceg-novi-7aea1a37.jpg",
@@ -6576,6 +6584,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Kolašin': {
       lyhyt: 'Kolašinin Biogradska Gorassa on yksi Euroopan viimeisistä aarniometsistä, ja osa sen puista on yli 500 vuotta vanhoja.',
+      pitka: "Kolašin on Morača-joen kaupunki noin 950 metrin korkeudessa Bjelasican ja Sinjajevinan vuorten juurella. Kaupungissa asuu vajaat 2 500 ihmistä ja koko kunnassa noin 10 000. Belgrad–Bar-rautatie pysähtyy täällä, ja Podgorican lentokenttä on noin 80 kilometrin päässä. Ympäristössä on Kolašin 1450 -hiihtokeskus Bjelasican rinteillä. Morača-kanjonin läpi noin puolen tunnin ajomatkan päässä etelässä on Morača-luostari, jonka Stefan Vukanović perusti vuonna 1252. Se on yksi Montenegron tunnetuimmista keskiaikaisista kohteista, ja siinä yhdistyy romaaninen ja raškalainen rakennustyyli.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kolasin-4432bfd2.jpg",
@@ -6590,6 +6599,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kotor: {
       lyhyt: 'Kotorin vanhassakaupungissa kissoja on niin paljon, että niistä on tullut kaupungin symboli – niillä on oma aukionsa ja museonsa.',
+      pitka: "Kotor on kätkeytynyt Kotorinlahden syvimpään sopukkaan, ja sen vanhakaupunki on kuulunut UNESCOn maailmanperintöön vuodesta 1979. Nykyinen ilme on peräisin venetsialaisilta, jotka hallitsivat kaupunkia vuosina 1420–1797 ja kutsuivat sitä nimellä Cattaro. Pyhän Tryphonin katedraali on vuodelta 1166. Kaupungin yllä nousevat muurit ovat noin 4,5 kilometriä pitkät, ja Pyhän Johanneksen linnoitukselle vie noin 1 350 askelmaa. Vuonna 2017 Kotorin puolustusrakennelmat liitettiin myös Venetsian 1500–1600-lukujen puolustusrakennelmien maailmanperintökokonaisuuteen. Kunnassa asuu noin 22 000 ihmistä, ja risteilylaivojen suosiman kaupungin kapeat kujat täyttyvät kesäisin vierailijoista.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kotor-ce21ec2a.jpg",
@@ -6604,6 +6614,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mojkovac: {
       lyhyt: 'Mojkovacin yllä leviää Sinjajevinan ylänkö, jonka laajoilla kesälaitumilla paimenet pitävät yhä lampaitaan.',
+      pitka: "Mojkovac on Tara-joen itärannalla sijaitseva pieni kaupunki, jossa on runsaat 2 500 asukasta, ja koko kunnassa noin 6 800. Kaupunki on tunnettu Mojkovacin taistelusta 6.–7. tammikuuta 1916: noin 6 500 montenegrolaissotilasta piti asemansa selvästi suurempaa Itävalta-Unkarin joukkoa vastaan suojatakseen Serbian armeijan perääntymistä Albanian halki Korfulle. Kunnan alueella sijaitsee Brskovo, keskiajan kaivos- ja kauppapaikka, joka mainitaan ensi kertaa 1200-luvun alun kauppakirjassa. Kaivostoimintaa Brskovossa jatkettiin uudelleen 1900-luvulla, ja kaupungissa on asema Belgrad–Bar-radalla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-mojkovac-9997941d.jpg",
@@ -6618,6 +6629,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Nikšic': {
       lyhyt: 'Nikšićin Trebjesan panimo on Montenegron suurin, ja kaupungissa on pantu olutta 1800-luvun lopulta asti.',
+      pitka: "Nikšić on Montenegron toiseksi suurin kaupunki, ja sen kaupunkialueella asuu noin 66 700 ihmistä (2023). Se levittäytyy noin 640 metrin korkeudessa karstiselle Nikšićin kentälle Trebjesa-kukkulan juurelle. Alueen historia on kerroksellinen: roomalaisaikana paikalla oli Anagastum-linnoitus, keskiajalla slaavien Onogošt, ja nykyinen nimi vakiintui 1400-luvun puolivälissä. Bedemin linnoitus sai nykyisen muotonsa osmanien aikana 1700-luvulla, ja Berliinin sopimus vuonna 1878 vahvisti kaupungin kuulumisen Montenegrolle. Jugoslavian aikana Nikšićistä kasvoi teollisuuskaupunki, jossa oli terästehtaita ja bauksiittikaivoksia. Kaupungin lähellä ovat vesivoimatuotantoa varten rakennetut tekojärvet Krupac, Slano ja Vrtac.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-niksic-ab3345fe.jpg",
@@ -6632,6 +6644,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Plav: {
       lyhyt: 'Kirottujen vuorten juurella Plavin järvi on Montenegron suurin jäätikköjärvi, ja sitä ruokkivat maan alta pulppuavat lähteet.',
+      pitka: "Plav on noin 3 700 asukkaan kaupunki Lim-joen alkulähteillä lähes kilometrin korkeudessa. Järvi on pinta-alaltaan noin kaksi neliökilometriä ja enimmillään yhdeksän metriä syvä, ja sieltä Lim lähtee virtaamaan. Paikka mainitaan ensi kertaa vuonna 1330 Dečanin luostarin asiakirjoissa nimellä Hotina Gora, ja osmanien väestölaskennassa 1582–1583 Plaviin kuului 18 kylää. Alue liitettiin Montenegroon ensimmäisen Balkanin sodan jälkeen 1912. Seutu on suosittu patikointi- ja kalastuskohde, ja järvestä sekä vuoristopuroista pyydetään taimenta.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-plav-bdb42b39.jpg",
@@ -6646,6 +6659,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pljevlja: {
       lyhyt: 'Pljevljan Husein-pašan moskeija valmistui 1500-luvun lopulla, ja sen 42-metrinen minareetti on Balkanin korkeimpia.',
+      pitka: "Pljevlja on noin 770 metrin korkeudessa Ćehotina-joen varrella, ja sen kunta on pinta-alaltaan 1 346 neliökilometriä Montenegron toiseksi suurin. Kunnassa asuu noin 24 000 ihmistä (2023), kaupungissa noin 16 000. Täällä on maan ainoa hiilivoimala, ja Montenegron hiili louhitaan Pljevljan kaivoksesta. Kominin kaupunginosassa sijaitsevat roomalaisen Municipium S:n jäänteet, joista löytyneitä esineitä on nähtävillä kotiseutumuseossa. Kaupunki joutui osmanien haltuun vuonna 1465 ja vapautui 26. lokakuuta 1912. Pyhän Kolminaisuuden luostarin kirkko ja sen esikirkko freskattiin vuosina 1592–1595. Talvet ovat kylmiä, ja lunta on kuukausikaupalla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pljevlja-ae434d02.jpg",
@@ -6660,6 +6674,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Plužine': {
       lyhyt: 'Pivan luostari siirrettiin kivi kiveltä uuteen paikkaan padon tieltä, ja yli tuhat freskon kappaletta irrotettiin ja kiinnitettiin takaisin.',
+      pitka: "Plužinen kunta on pinta-alaltaan suuri, noin 850 neliökilometriä, mutta asukkaita on siellä vain muutamia neliökilometrillä. Paikka tunnetaan jo 1300-luvulta, ja Montenegroon se liitettiin vasta Berliinin kongressin jälkeen 1878. Alueen ylle kohoaa Mratinjen holvipato: 220 metriä korkea betonirakennelma valmistui 1975 ja on yksi Euroopan korkeimmista padoista. Sen luoma Pivanjärvi täyttää kanjonin, jonka rinteitä pitkin tie kulkee lukuisten tunneleiden läpi. Plužine on tienristeys, joka yhdistää Nikšićin ja Podgorican Bosnia-Hertsegovinan suuntaan, ja Durmitorin kansallispuisto on lähellä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pluzine-926974b6.jpg",
@@ -6674,6 +6689,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Podgorica: {
       lyhyt: 'Montenegron pääkaupunki Podgorica kantoi 1946–1992 nimeä Titograd, ja se on rakentunut Ribnica- ja Morača-jokien yhtymäkohtaan.',
+      pitka: "Podgoricassa asuu noin 172 000 ihmistä, ja itsenäisen Montenegron pääkaupunkina se on toiminut vuodesta 2006. Morača-joen yli kaartuu heinäkuussa 2005 avattu Millennium-silta. Toinen maamerkki on Kristuksen ylösnousemuksen katedraali, joka vihittiin käyttöön 2013 ja näkyy kauas yli kaupungin. Ottomaanien ajan Stara Varošia edustaa 1600-luvun kellotorni, yksi harvoista rakennuksista, jotka selvisivät toisen maailmansodan pommituksista. Kesäisin kaupunki on maan kuumimpia paikkoja: Montenegron lämpöennätys 44,8 astetta mitattiin täällä elokuussa 2007.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-podgorica-6c21eb06.jpg",
@@ -6688,6 +6704,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Rožaje': {
       lyhyt: 'Rožaje on noin kilometrin korkeudessa vuorten keskellä, ja kaupungin luota alkava Ibar-joki halkaisee sen kahtia.',
+      pitka: "Rožajen kaupungissa asuu noin 13 600 ihmistä ja koko kunnassa noin 27 600, ja se on Montenegron bosniakkien kulttuurinen keskus. Kaupungin suurin moskeija, Sulttaani Murad II:n moskeija, uudistettiin perusteellisesti 2008. Pääaukiolta on parin minuutin kävely Ganićin torniin, joka rakennettiin 1797 kula-tyylisenä asuintornina ja toimii nykyään kotiseutumuseona: siellä esitellään pukuja, käsitöitä ja arjen esineitä. Rajaseudulla kohoaa Hajlan vuoristo, ja lähellä kaupunkia toimii hiihtokeskus.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-rozaje-6a4d5fb5.jpg",
@@ -6702,6 +6719,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šavnik': {
       lyhyt: 'Kolmen joen yhtymäkohtaan 1861 perustetussa Šavnikissa asuu vain noin 360 ihmistä – se on Montenegron pienimpiä kaupunkeja.',
+      pitka: "Šavnikin kunta kattaa noin 550 neliökilometriä ja 27 asutusta, mutta koko kunnassa asuu alle 1 600 ihmistä eli vain noin viisi neliökilometrillä. Jugoslavian aikaisen teollistumisen ohittama seutu on jäänyt hiljaiseksi: ihmiset kävelevät jokien rannoilla tai kalastavat Bukovicassa ja Bijela-joessa. Žabljakiin on noin 15 kilometriä ja Nikšiciin noin 45. Ympäristö on suojeltu Dragišnican ja Komarnican luonnonpuistona, joka kattaa kanjoneita ja vuoristoa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-savnik-fa98eb13.jpg",
@@ -6716,6 +6734,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tivat: {
       lyhyt: 'Tivatin vanha, 1889 rakennettu laivastoarsenaali on muutettu Porto Montenegroksi, luksusjahtien satamaksi ja lomakyläksi.',
+      pitka: "Tivatissa asuu noin 10 700 ihmistä, mutta lentokenttä käsittelee moninkertaisen määrän: 2019 se palveli noin 1,37 miljoonaa matkustajaa. Kaupunki on rakentunut Vrmac-harjun ja lahden väliin, ja sen edustalla on kolme pientä saarta. Yksi niistä on Gospa od Milosti, noin 160 metriä pitkä ja 60 metriä leveä saari, jolla on Neitsyt Marian kappeli. Rannalla seisoo Buća-Lukovićin kartano, jonka linnoitettu torni on vuodelta 1548 ja jonka museo perustettiin 2017.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-tivat-1a6ca9dc.jpg",
@@ -6730,6 +6749,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ulcinj: {
       lyhyt: 'Ulcinjin Velika plaža on 12 kilometriä pitkä, Montenegron pisin hiekkaranta, ja kesätuulet tekevät siitä leijalautailijoiden suosikin.',
+      pitka: "Ulcinj perustettiin viidennellä vuosisadalla eaa., joten se on yksi Adrianmeren rannikon vanhimmista asutuksista; roomalaiset valtasivat sen 163 eaa. Osmanien valtakunta hallitsi kaupunkia yli kolmesataa vuotta, kunnes se liitettiin Montenegroon 1880 suurvaltojen painostuksen jälkeen. Kaupungin lähellä levittäytyy Ulcinjin suola-allas, noin 1 500 hehtaarin kosteikko, jossa on havaittu noin 250 lintulajia; alue julistettiin luonnonpuistoksi 2019. Sen matalissa altaissa ruokailevat flamingot, pitkäjalat ja harvinaiset kähäräpelikaanit, ja Adrianmeren lintureitillä se on tärkeä levähdyspaikka.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-ulcinj-90060bbd.jpg",
@@ -6744,6 +6764,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Žabljak': {
       lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
+      pitka: "Žabljakissa asuu vain noin 1 700 ihmistä, ja kaupunki perustettiin 1871. Se on kasvanut Durmitorin kansallispuiston portiksi. Puisto perustettiin 1952 ja otettiin Unescon maailmanperintöluetteloon 1980; sen pinta-ala on noin 32 000 hehtaaria. Vuoristossa kohoaa Bobotov Kuk, 2 523 metriä korkea huippu, ja lunta on rinteillä noin 120 päivänä vuodessa. Kesällä kävijöitä tuovat vaellus, pyöräily ja koskenlasku, talvella laskettelu. Durmitorin vuoristossa on kymmeniä yli 2 000 metrin huippuja, ja kaupungin keskustasta pääsee kävellen Mustajärven rannalle.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-zabljak-2402297e.jpg",
@@ -7502,6 +7523,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MKD: {
     Eastern: {
       lyhyt: 'Bregalnica-joen varren Kočanin laakso on Pohjois-Makedonian suurin riisinviljelyalue, ja sadonkorjuuta juhlitaan joka syksy.',
+      pitka: "Berovon tekojärvi lepää 990 metrin korkeudessa metsäisten rinteiden keskellä. Se on 75 hehtaarin kokoinen ja 2,5 kilometriä pitkä, ja paikalliset uivat, soutavat ja kalastavat siinä kesäisin. Štipin kaupunki kohoaa Isar-kukkulan linnoituksen juurella, ja kivinen Bezisten, entinen katettu basaari, toimii nykyään taidegalleriana. Štip on maan tekstiili- ja muotiteollisuuden keskus, ja kaupungissa järjestetään Kulttuurikesä-tapahtumasarjaa vuodesta 1987.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-eastern-dfd3cc5e.jpg",
@@ -7516,6 +7538,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Southeastern: {
       lyhyt: 'Strumican karnevaalista kirjoitti jo turkkilainen matkailija Evliya Çelebi 1670, ja naamiaiskulkue täyttää kadut yhä joka kevättalvi.',
+      pitka: "Dojranjärvi on pieni ja matala: pinta-alaa 43,1 neliökilometriä, pituutta noin 9 kilometriä ja syvyyttä enimmillään kymmenen metriä. Rannat jaetaan Kreikan kanssa, ja Pohjois-Makedonian osuus on 27,3 neliökilometriä. Ruovikot ovat tärkeä lintualue, jolla pesivät esimerkiksi kiharapelikaanit. Belasican vuoren rinteellä Novo Selon Smolare-vesiputous putoaa 39,5 metriä satavuotiaiden pyökkien keskellä, ja sinne pääsee noin 300 kiviportaan kautta. Valandovon lähellä Marvincin Isar-kukkulalla on kaivettu esiin yli 200 hautaa pronssikaudelta myöhäisantiikkiin, ja Strumican liepeillä Banskossa seisovat 300–400-luvun roomalaiskylpylän kivimuurit.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southeastern-71080379.jpg",
@@ -7530,6 +7553,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Northeastern: {
       lyhyt: 'Kratovo on rakennettu sammuneen tulivuoren kraatteriin, ja kaupungissa on yhä kuusi vanhaa kivitornia ja kaarevia kivisiltoja.',
+      pitka: "Kumanovo on maan toiseksi suurin kaupunki, vuoden 2021 väestölaskennan mukaan 75 051 asukasta. Noin 30 kilometrin päässä koilliseen, Tatićev Kamenin harjanteella 1 010–1 030 metrin korkeudessa, on Kokino. Arkeologi Jovica Stankovski löysi paikan vuonna 2001, ja sen vanhimmat löydöt ovat 1800-luvulta eaa. Kivi-istuimet ja merkkikivet on tulkittu muinaiseksi observatorioksi, joka seurasi Auringon ja Kuun paikkoja horisontissa, mutta tulkinta on tutkijoiden kesken kiistanalainen. Kratovon lähellä Kriva-joen laaksossa puolestaan kohoaa kivipilareiden metsä, ja Osogovon vuorilla Kriva Palankan lähellä on luostari lähellä Bulgarian rajaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-northeastern-983a946c.jpg",
@@ -7544,6 +7568,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Southwestern: {
       lyhyt: 'Ohridinjärvi on yli miljoona vuotta vanha, ja sen vedessä elää ohridintaimen, jota ei tavata luonnonvaraisena missään muualla.',
+      pitka: "Ohridinjärvi on 36 kilometriä pitkä, 358 neliökilometrin kokoinen ja enimmillään 288 metriä syvä. Noin puolet sen vedestä tihkuu itärannan maanalaisista lähteistä, ja yli viidennes tulee Prespanjärveltä, joka on 150 metriä ylempänä. Alue on kuulunut Unescon maailmanperintöluetteloon vuodesta 1979. Peštanin rannalla Luiden lahdella (Bay of Bones) on rakennettu kopio pronssikauden paalukylästä, jonka arkeologit ajoittavat vuosiin 1200–700 eaa.; jälleenrakennus tehtiin 2007–2008. Strugassa Drim-joen sillalla päättyy joka vuosi Strugan runousillat, jotka alkoivat 1961 ja joiden Kultaisen seppeleen ovat saaneet muun muassa Pablo Neruda (1972) ja Tomas Tranströmer (2003).",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southwestern-fb820c3a.jpg",
@@ -7558,6 +7583,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pelagonia: {
       lyhyt: 'Bitolan laidalla on Heraclea Lyncestis, Makedonian Filippos II:n perustama kaupunki, jonka basilikoiden lattiamosaiikit ovat säilyneet.',
+      pitka: "Bitola, jossa on vuoden 2021 väestölaskennan mukaan 69 287 asukasta, tunnettiin osmanien aikana konsulien kaupunkina, ja yhä kaupungissa on konsulaatteja. Pitkän Širok Sokakin kävelykadun kahvilat täyttyvät iltaisin. Kaupungin takana kohoaa Pelisterin kansallispuisto, joka oli Jugoslavian ensimmäinen, perustettu 30.11.1948; sen pinta-ala on 171,5 neliökilometriä ja huippu 2 601 metriä. Puiston rinteillä kasvaa molika-mäntyä, jonka metsät ulottuvat 1 200–1 600 metrin korkeuteen. Prilepissä Markovi Kulin linnoituksen rauniot ovat 120–180-metrisellä kukkulalla, ja sen muurit rakennettiin 1200–1300-luvuilla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-pelagonia-26d30929.jpg",
@@ -7572,6 +7598,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Polog: {
       lyhyt: 'Mavrovonjärvestä nousee kuivina kesinä esiin Pyhän Nikolaoksen kirkko, joka jäi veden alle, kun tekojärvi padottiin 1950-luvulla.',
+      pitka: "Vardar-joki alkaa Gostivarin lähellä Vrutokin lähteestä 683 metrin korkeudesta ja virtaa Egeanmereen asti 388 kilometrin matkan. Tetovossa Šarena-moskeija on rakennettu 1438 kahden sisaruksen lahjoituksena ja saanut nykyisen kirjavan ilmeensä 1833, kun Abdurrahman-pasha laajensi sen; seiniä koristavat kukkakuviot ja maisemat. Kaupungin yläpuolella Šar-vuorilla on Popova Šapkan hiihtokeskus. Mavrovon kansallispuisto perustettiin 1949 ja on maan suurin; puiston Korab-vuori, 2 764 metriä, on Pohjois-Makedonian korkein huippu. Radikan rotko on yli 25 kilometriä pitkä ja sen jyrkänteet ovat yli 300 metriä korkeita.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-polog-08567e22.jpg",
@@ -7586,6 +7613,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Skopje: {
       lyhyt: 'Skopjen laidalla on Matkan kanjoni – nimi tarkoittaa kohtua – ja sen tekojärveltä pääsee veneellä Vrelon luolaan.',
+      pitka: "Skopje syntyi uudelleen 26. heinäkuuta 1963 kello 5.17 tapahtuneen maanjäristyksen jälkeen: noin tuhat ihmistä kuoli, ja 75–80 prosenttia kaupungista tuhoutui. Vanhan rautatieaseman kello pysähtyi silloin, ja asemasta tuli kaupunginmuseo ja muistomerkki. Japanilainen Kenzo Tange voitti 60 prosenttia kansainvälisen kilpailun palkinnosta ja laati vuonna 1965 keskustan yleissuunnitelman. Kaupungin nykytaiteen museo perustettiin helmikuussa 1964 lahjoitusten varaan, ja sen puolalaisten suunnittelema talo avattiin 1970. Vanhan basaarin kupeessa kulkee Vardarin yli kivisilta, joka on 214 metriä pitkä ja 12 kaarta; sen rakennutti Mehmed II 1451–1469. Lähellä on Daut-pashan hamam, jonka 13 kupolin alla on vuodesta 1948 toiminut taidegalleria.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-skopje-7407cee9.jpg",
@@ -7600,6 +7628,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vardar: {
       lyhyt: 'Gradskon lähellä on Stobi, antiikin kaupunki Vardarin ja Crna-joen yhtymäkohdassa, jonka teatterin ja basilikoiden rauniot näkyvät yhä.',
+      pitka: "Tikveš on Pohjois-Makedonian suurin viinialue, ja sen viinitarhat, noin 11 000 hehtaaria, ulottuvat Kavadarcin ja Negotinon ympäristössä 110 metristä 800 metrin korkeuteen. Rypäleistä tunnetuin on tumma Vranec. Demir Kapijan rotkossa, jonka nimi tarkoittaa turkiksi Rautaporttia, Vardar puskee kalkkikivikallioiden läpi; antiikissa paikka tunnettiin nimellä Stenae, ja siellä on noin 3 000 vuotta vanhoja paionialaisia linnoituksia. Velesissä, jossa asuu vuoden 2021 väestölaskennassa 40 664 ihmistä, Vardar halkoo kaupunkia, ja sieltä on kotoisin runoilija Kočo Racin.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-vardar-791f8908.jpg",
@@ -7833,18 +7862,23 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CYP: {
     Famagusta: {
       lyhyt: 'Kap Grecon niemellä meri on kovertanut kalkkikiveen luolia ja kallioportteja, ja sen kirkkaassa vedessä sukelletaan.',
+      pitka: "Famagustan piiri on jakautunut maisema: eteläosassa Ayia Napan ja Protaraksen lomakohteet täyttyvät kesäisin, pohjoisempana taas ovat Famagustan muurien ympäröimä vanhakaupunki ja Salamiin rauniot. Ayia Napan luostari on rakennettu venetsialaisaikana noin vuonna 1500, ja sen portin edessä kasvaa noin 600-vuotias metsäviikuna. Pernera-rannan edustalla, kahdeksan–kymmenen metrin syvyydessä, on vuonna 2021 avattu vedenalainen veistosmuseo MUSAN, jossa on 93 Jason deCaires Taylorin teosta. Famagustan vanhassa kaupungissa Lala Mustafa Pashan moskeija on alun perin Pyhän Nikolauksen katedraali, jonka rakentaminen alkoi vuonna 1298. Lähellä sijaitseva Varosha oli ennen vuotta 1974 noin 39 000 asukkaan lomakaupunki, ja sen osia on avattu vierailijoille lokakuusta 2020.",
     },
     Larnaca: {
       lyhyt: 'Larnakan suolajärvelle saapuu talvisin tuhansia flamingoja, ja sen rannalla seisoo Hala Sultan Tekke -moskeija.',
+      pitka: "Larnaca tunnetaan lentokentästä, mutta kaupungin alla lepää muinainen Kition, joka perustettiin 1200-luvulla eaa. Pyhän Lasaruksen kirkko rakennettiin 800-luvun lopulla sen jälkeen, kun kaupungista löytyi vuonna 890 hauta, jossa oli kirjoitus \"Lasarus, neljä päivää kuollut\". Kamaresin akvedukti, jossa on 75 kaarta, rakennettiin 1700-luvun puolivälissä tuomaan kaupunkiin vettä. Ulkomerellä makaa 42 metrin syvyydessä Zenobia-lautta, joka kaatui vuonna 1980 ja on nykyään yksi maailman suosituimmista hylkysukelluskohteista. Sisämaassa Choirokoitian neoliittinen kylä, perustettu noin 7000 eaa., kuuluu Unescon maailmanperintöluetteloon vuodesta 1998.",
     },
     Limassol: {
       lyhyt: 'Limassolin vuoristokylissä tehdään makeaa Commandaria-viiniä, jota pidetään maailman vanhimpana yhä valmistettavana nimettynä viininä.',
+      pitka: "Limassol on Kyproksen väkirikkain kunta: siellä asuu noin 108 000 ihmistä ja koko piirissä noin 262 000 (vuoden 2021 väestölaskenta). Kaupungin keskustan Limassolin linnassa toimii nykyään Kyproksen keskiaikamuseo. Syyskuussa Kunnallispuiston täyttää yhdeksänpäiväinen viinifestivaali, jota on järjestetty vuodesta 1961, ja helmikuussa kaupungissa vietetään karnevaalia, jonka päätöskulkueessa marssii kymmeniä vaunuja. Kaupungin länsipuolella Kolossin linnan nykyinen torni on rakennettu vuonna 1454 johanniittojen aikana. Vielä pidemmälle länteen, Episkopin lähellä, muinaisen Kourionin kreikkalais-roomalaiseen teatteriin mahtuu noin 3 500 katsojaa.",
     },
     Nicosia: {
       lyhyt: 'Troodoksen rinteillä Kykkosin luostari vaalii Neitsyt Marian ikonia, jonka perimätieto sanoo evankelista Luukkaan maalaamaksi.',
+      pitka: "Nikosia on pääkaupunki, jota halkoo YK:n valvoma puskurivyöhyke, ja vanhakaupunki jakautuu sen molemmin puolin. Venetsialaiset rakensivat kaupungin ympärille vuodesta 1567 alkaen noin viiden kilometrin mittaisen kehämuurin, jossa on yksitoista bastionia ja kolme porttia. Ledran kadun ylityspaikka avattiin jalankulkijoille 3. huhtikuuta 2008, ja Kyproksen museo on toiminut kaupungissa vuodesta 1882. Piirin vuoristossa Troodoksella sijaitsee yhdeksän kymmenestä Unescon maailmanperintökohteeksi vuonna 1985 hyväksytystä maalatusta kirkosta. Niiden joukossa ovat Kakopetrian 1000-luvun Agios Nikolaos tis Stegis ja Nikitarin lähellä oleva Asinoun 1100-luvun kirkko.",
     },
     Paphos: {
       lyhyt: 'Paphosin rannikolla Petra tou Romioun kallio on tarun mukaan paikka, jossa Afrodite nousi merenvaahdosta.',
+      pitka: "Paphosin Kato Pafosin arkeologinen puisto kuuluu Unescon maailmanperintöön vuodesta 1980, ja sen roomalaisten huviloiden lattiamosaiikit löytyivät vuonna 1962, kun maanviljelijä kynsi peltoaan. Dionysoksen talon mosaiikit peittävät 556 neliömetriä. Kuninkaiden hautojen kallioon hakattuja hautakammioita on osin 300-luvulta eaa., vaikka yhtään kuningasta ei niihin haudattu. Paphos oli vuoden 2017 Euroopan kulttuuripääkaupunki yhdessä Aarhusin kanssa, ja Paphos Aphrodite -festivaali on tuonut oopperaa keskiaikaisen linnan aukiolle vuodesta 1999.",
     },
   },
   /*
