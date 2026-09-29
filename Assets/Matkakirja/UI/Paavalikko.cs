@@ -76,6 +76,9 @@ namespace Matkakirja.Natiivi
             AukiMuuttui += auki => { if (!auki) { osa = Osa.Kaikki; Asetukset.Tallenna(); } };
             // iPhonen Asetukset-osion ylin osio: äänentasot liukusäätimin (Fable 24.9.: ☰-valikon kytkimet ovat
             // pikakytkimet, säädöt täällä). iPadilla ne ovat rattaan paneelissa, joten osio näkyy vain Asetukset-osana.
+            // Asetukset pillerivalikon alinäkymänä (web, Pelikoodari 29.9.): ‹ Takaisin palaa pillerivalikkoon.
+            takaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin mk-paavalikko__takaisin", () => { Sulje(); Takaisin?.Invoke(); }, Sisalto);
+            takaisin.tooltip = "Takaisin valikkoon";
             aanentasot = Rakenne.El("mk-paavalikko__aanentasot", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("ÄÄNENTASOT", "mk-pudotus__otsikko", aanentasot);
             foreach (var v in Asetukset.VoimaJarjestys) saatimet[v] = Aanentasot.LuoSaadinrivi(aanentasot, v);
@@ -120,6 +123,7 @@ namespace Matkakirja.Natiivi
             Retkikunta.style.display = DisplayStyle.None;
             asetusosat.AddRange(Sisalto.Children());
             asetusosat.Remove(aanentasot);
+            asetusosat.Remove(takaisin);
             asetusosat.Remove(maailma);
             asetusosat.Remove(retkiKuori);
             foreach (var e in aanetOsat) asetusosat.Remove(e);
@@ -366,6 +370,9 @@ namespace Matkakirja.Natiivi
             Rakenne.Teksti(nimi, "mk-kytkinrivi__nimi", b);
         }
 
+        readonly Button takaisin;
+        /// <summary>Asetusten ‹ Takaisin: pillerivalikko auki (UiNakymat).</summary>
+        public Action Takaisin;
         readonly List<VisualElement> aanetOsat = new List<VisualElement>(), asetusOmat = new List<VisualElement>();
         readonly Button offline, huntu;
         readonly Label huntuTila;
@@ -408,6 +415,7 @@ namespace Matkakirja.Natiivi
             DisplayStyle Nayta(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
             bool asetuksia = osa == Osa.Kaikki || osa == Osa.Asetukset;
             Paneeli.EnableInClassList("mk-paavalikko--asetukset", osa == Osa.Asetukset);
+            takaisin.style.display = Nayta(osa == Osa.Asetukset && Takaisin != null);
             kokeet.style.display = Nayta(Asetukset.Kehittaja && osa == Osa.Kehittaja);
             if (Asetukset.Kehittaja && osa == Osa.Kehittaja) PaivitaSavy();
             aanentasot.style.display = Nayta(osa == Osa.Asetukset);

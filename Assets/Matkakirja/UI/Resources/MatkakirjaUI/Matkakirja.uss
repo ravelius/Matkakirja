@@ -894,10 +894,17 @@
     width: 244.6px;
 }
 
-/* Asetukset leveämpänä (omistaja 29.9.2026, 1.0.50: "liian kapea, jotta äänitasoja voi säätää"): pillerivalikon levyinen. */
+/* Asetukset leveämpänä (omistaja 29.9.2026, 1.0.50: "liian kapea, jotta äänitasoja voi säätää"): pillerivalikon levyinen
+ * (web min(23rem, 100vw − 1,6rem) = 367 pt, Pelikoodari 29.9.). */
 .mk-paavalikko.mk-paavalikko--asetukset {
-    width: 300px;
-    max-width: 88%;
+    width: 367px;
+    max-width: 94%;
+}
+
+.mk-paavalikko__takaisin {
+    position: relative;
+    align-self: flex-start;
+    margin: 0 0 4px 0;
 }
 
 /* Web äänipaneeli on sisältönsä levyinen (296,36). */

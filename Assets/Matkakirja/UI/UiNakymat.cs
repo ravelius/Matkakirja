@@ -168,6 +168,7 @@ namespace Matkakirja.Natiivi
                 () => Valikko.RetkikuntaSaatavilla);
             var toiminnot2 = v.LisaNappirivi();
             v.LisaNappi(toiminnot2, "Asetukset", Ikonit.Ratas, () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
+            Valikko.Takaisin = () => { if (!v.Auki) v.Avaa(); };
             Valikko.AvaaOffline = () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline);
             Valikko.OfflineSaatavilla = () => UiPalvelut.Offline != null;
             var alinakymat = v.LisaNappirivi();

@@ -310,9 +310,14 @@ namespace Matkakirja.Natiivi
             Merkitse(r?.Auki?.Tiedot?.Id ?? aukiId);
         }
 
+        readonly Dictionary<string, LinssiTiedot> linssiTiedot = new Dictionary<string, LinssiTiedot>();
+        static string EsikatselunKuva(LinssiTiedot t) => string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(t.Id) : t.Havainnekuva;
+        static string EsikatselunTeksti(LinssiTiedot t) => string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely;
+
         void LuoRivi(LinssiTiedot t)
         {
             string id = t.Id;
+            linssiTiedot[id] = t;
             Button b = null;
             Label tila = null;
             // Pillerivalikko (Pelikoodari 29.9., web malli): 1. napautus esikatselu vasemmalle ja rivi "Aktivoi", 2. avaa.
@@ -321,8 +326,10 @@ namespace Matkakirja.Natiivi
                 if (PilleriValikko && esiId != id)
                 {
                     // Web (Pelikoodari): kuva LINSSI.havainnekuva tai varana varusteen kuva, teksti esittely tai varana lyhyt.
-                    Esikatsele(id, b, tila, string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(id) : t.Havainnekuva, t.Nimi,
-                        string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely, "Aktivoi", () => { Sulje(); Valittu?.Invoke(id); });
+                    // Aktiivisen linssin rivi: "Ota pois" (palaute 6, web).
+                    bool paalla = id == aukiId;
+                    Esikatsele(id, b, tila, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), paalla ? "Ota pois" : "Aktivoi",
+                        paalla ? () => { Sulje(); Suljettava?.Invoke(); } : () => { Sulje(); Valittu?.Invoke(id); });
                     return;
                 }
                 Sulje();
