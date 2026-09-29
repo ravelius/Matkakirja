@@ -52,7 +52,6 @@ namespace Matkakirja.Linssit.Astronautti
         public const string KysyTeksti = "Kysy Pululta";
         public const string NakymatTeksti = "Näkymät";
         public const float Leveys = 232f, ReunaVara = 32f;
-        public const float HaivytysMs = 160f;
         public const float MoodinAskelMs = 120f, MoodinKattoMs = 15000f;
         public const int MoodinToimia = 4;
         public const float RakoPt = 8f, LeijunnanVaraPt = 5f, IssVaistoPt = 56f, PulunEleenVaraPt = 90f, PulunEleenSivuvaraPt = 14f;

@@ -576,6 +576,27 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>
+        /// Havaintopiste ruudulla (pikselit, origo vasen alakulma): astronautin valokuva kasvaa esiin kohteensa pisteestä ja
+        /// sulkeutuu sinne (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; myös Pulun tervetulon C1, joka avaa kuvan
+        /// ilman napautusta). false, kun piste ei näy (pallon takana, kyydin ikkunassa tai kamera sen takana).
+        /// </summary>
+        public bool KohdeRuudulla(string tunnus, out Vector2 ruutu)
+        {
+            ruutu = default;
+            if (kamera == null || georeferenssi == null || string.IsNullOrEmpty(tunnus)) return false;
+            foreach (var p in pisteet)
+            {
+                if (p.kohde?.Tunnus != tunnus) continue;
+                if (!p.juuri.gameObject.activeSelf) return false;
+                Vector3 s = kamera.WorldToScreenPoint(georeferenssi.transform.TransformPoint(p.pinta));
+                if (s.z <= 0) return false;
+                ruutu = new Vector2(s.x, s.y);
+                return true;
+            }
+            return false;
+        }
+
         /// <summary>Pallon napautus linssissä (Pulun taulu sulkeutuu kuten webin ulkonapautus, ei niele napautusta).</summary>
         public event Action PalloNapautettu;
 
