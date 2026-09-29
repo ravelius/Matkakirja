@@ -94,10 +94,20 @@ namespace Matkakirja.Natiivi
         /// yksi ääni). Null = kertojan ääni-valitsin kuten ennen.
         /// </summary>
         readonly Action<VisualElement> korvaavaAaniRivi;
+        /// <summary>Valikon lisärivi ääni-valitsimen alle (lehti: "Jatkuva luenta"). Null = ei riviä.</summary>
+        readonly Action<VisualElement> lisaRivi;
+        /// <summary>
+        /// Luenta luettiin loppuun omia aikojaan (viimeinen pala soi loppuun; lehti: jatkuva luenta kääntää sivua). Ei laukea
+        /// käyttäjän pysäytyksestä, sulusta, kelauksesta eikä uudesta luennasta: versio vaihtuu niissä ennen palan loppua.
+        /// </summary>
+        readonly Action loppui;
 
         public KortinLukija(VisualElement isa, string otsikko = "Kuuntele kortti", string luokka = null, bool saatimet = false,
-            Func<Rect> rajaus = null, string persoona = "kertoja", Action<VisualElement> aaniRivi = null)
+            Func<Rect> rajaus = null, string persoona = "kertoja", Action<VisualElement> aaniRivi = null,
+            Action<VisualElement> lisaRivi = null, Action loppui = null)
         {
+            this.lisaRivi = lisaRivi;
+            this.loppui = loppui;
             this.otsikko = otsikko;
             this.persoona = persoona;
             korvaavaAaniRivi = aaniRivi;
@@ -227,7 +237,7 @@ namespace Matkakirja.Natiivi
             void Seuraava()
             {
                 if (v != versio) return;
-                if (i >= palat.Count) { jatkoKohta = -1; kohta = palat.Count; Pysayta(false); return; } // luettu loppuun: alusta
+                if (i >= palat.Count) { jatkoKohta = -1; kohta = palat.Count; Pysayta(false); loppui?.Invoke(); return; } // luettu loppuun: alusta
                 kohta = i;
                 latausAlku = Time.unscaledTime * 1000f;
                 if (!puhe.Lue(palat[i], persoona, 0, () => UiKerros.PaaSaikeessa(Seuraava), pyynnosta: true, loppuTagi: tagit[i])) { Pysayta(); return; }
@@ -441,6 +451,7 @@ namespace Matkakirja.Natiivi
 
             if (korvaavaAaniRivi != null) korvaavaAaniRivi(saadot);
             else RakennaAaniValinta(saadot);
+            lisaRivi?.Invoke(saadot);
 
             // 3. kelaus ALIMPANA (omistaja: "alimpana -10sek ja +10sek"): taaksepäin vasemmalla, eteenpäin oikealla.
             kelausnapit.Clear();
@@ -469,6 +480,25 @@ namespace Matkakirja.Natiivi
             Ruudunpaivitys.Herata(0.4f);
             // Napautus valikon ohi sulkee vain valikon (web kerran-kuuntelija). Valikon ponnahduslista on omassa paneelissaan.
             Juuri.panel?.visualTree.RegisterCallback<PointerDownEvent>(OhiNapautus, TrickleDown.TrickleDown);
+        }
+
+        /// <summary>
+        /// Kytkinrivi valikkoon Nopeus-rivin asulla: nimi vasemmalla, päällä/pois oikealla kelausnapin tyylillä (Pulun chatin
+        /// auto-luenta, lehden jatkuva luenta). Palauttaa tilatekstin, jonka kutsuja päivittää.
+        /// </summary>
+        public static Label KytkinRivi(VisualElement saadot, string nimi, Action painettu)
+        {
+            var rivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
+            var n = Rakenne.Teksti(nimi, "mk-lukija-saadot__nimi", rivi);
+            n.style.width = StyleKeyword.Auto;
+            n.style.flexGrow = 1;
+            n.style.flexShrink = 1;
+            n.style.whiteSpace = WhiteSpace.Normal;
+            Kirjasimet.Aseta(n, Kirjasin.Luku);
+            var nappi = Rakenne.Nappi("", "mk-lukija-valikko__kelausnappi", painettu, rivi);
+            nappi.tooltip = nimi;
+            Kirjasimet.Aseta(nappi, Kirjasin.LukuLihava);
+            return nappi.Q<Label>(className: "mk-nappi__teksti");
         }
 
         /// <summary>Kertojan ääni-valitsin valikkoon (pelinimet; oletus ensin).</summary>

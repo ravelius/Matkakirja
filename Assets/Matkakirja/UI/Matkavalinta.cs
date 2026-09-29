@@ -292,6 +292,42 @@ namespace Matkakirja.Natiivi
             RakennaLiuku();
             liikuNappi.AddToClassList("mk-valittu");
             Rakenne.Nayta(liuku, true, 180);
+            KytkeUlkoSulku();
+        }
+
+        // --- sulku ulkopuolelta (web ui.js kytkeLiukuSulku: pointerdown toimintorivin ulkopuolella sulkee liu'un) ---------
+
+        PalloKierto kierto;
+        bool ulkoSulkuKytketty;
+
+        /// <summary>
+        /// Kerran: karttanapautus ja pallon veto tai nipistys (PalloKierto; kartta ei ole UI Toolkitia) sekä painallus saman
+        /// UI-paneelin muualla kuin Liiku-rivissä sulkevat liu'un. Napautus menee silti perille (web ei estä sitä).
+        /// </summary>
+        void KytkeUlkoSulku()
+        {
+            if (ulkoSulkuKytketty) return;
+            if (kierto == null) kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            var juuri = liiku.panel?.visualTree;
+            if (kierto == null && juuri == null) return;
+            ulkoSulkuKytketty = true;
+            if (kierto != null)
+            {
+                kierto.Napautettu += _ => SuljeUlkoa();
+                kierto.PelaajanEle += SuljeUlkoa;
+            }
+            juuri?.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (e.target is VisualElement v && (v == liiku || liiku.Contains(v))) return;
+                SuljeUlkoa();
+            }, TrickleDown.TrickleDown);
+        }
+
+        void SuljeUlkoa()
+        {
+            if (!liukuAuki || noppaLiussa) return;
+            Debug.Log("MATKAKIRJA ui liiku: liuku suljettu ulkopuolelta");
+            SuljeLiuku();
         }
 
         void SuljeLiuku()

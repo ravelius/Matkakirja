@@ -504,9 +504,11 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Pelitilanne: success, retry, emotion (tunne), answer (teksti), card (symboli/otsikko),
         /// photo (kaupunki), narration, narrationEnd, reaction (tarkoitus, voimakkuus),
-        /// arrival (saapuminen), bunGranted. Palauttaa, soiko ele.
+        /// arrival (saapuminen), bunGranted. Palauttaa, soiko ele. ele = emotionin oma ele tunteen eleen sijaan (web tiedot.ele,
+        /// lehtireaktio: aiheen ele); ohitaVali = ei eleiden vähimmäisväliä (web vakavaLehti: vakava sivu heti).
         /// </summary>
-        public bool Tilanne(string laji, string teksti = null, string tunne = null, float voimakkuus = 0.5f, string symboli = null, string kaupunki = null)
+        public bool Tilanne(string laji, string teksti = null, string tunne = null, float voimakkuus = 0.5f, string symboli = null, string kaupunki = null,
+            string ele = null, bool ohitaVali = false)
         {
             float nyt = Aika;
             if (!nakyvissa) return false;
@@ -525,13 +527,13 @@ namespace Matkakirja.Natiivi
             if (laji == "narrationEnd") { if (omistaja == "narration" || omistaja == "reaction") Katkaise(); return false; }
             bool vapaa = laji == "card" || laji == "narration" || laji == "answer" || laji == "reaction" || laji == "microphone" || laji == "error"
                 || laji == "chatOpen" || laji == "chatClose";
-            if (!vapaa && nyt - viimeTilanne < VahimmaisVali) return false;
+            if (!vapaa && !ohitaVali && nyt - viimeTilanne < VahimmaisVali) return false;
             if (Aanet.PuluPuhuu && laji != "photo") return false;
             string id = laji switch
             {
                 "success" => "grin",
                 "retry" => "nod",
-                "emotion" => TunteenEle(tunne),
+                "emotion" => ele ?? TunteenEle(tunne),
                 "error" => TunteenEle(tunne), // web virhereaktio: tunnetagin ele (sanelu: hämmentynyt)
                 "microphone" => "listen",     // web livia-eleet: mikrofoni auki → kuuntelee
                 "chatOpen" => "welcome",      // löydös 66, web livia-eleet.js:524
