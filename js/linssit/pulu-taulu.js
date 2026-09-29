@@ -35,15 +35,13 @@
  *
  * ── PULU EI PUHU PÄÄLLEKKÄIN ─────────────────────────────────────────
  *
- *  • ENSIMMÄINEN AVAUS: tervetulo A1–C2 (js/linssit/pulu-tervetulo.js)
- *    soi kuten ennen. Taulu tulee vasta, kun jakso on valmis tai ohitettu
- *    — C2:n "Pyöritä sinä…" -luovutuksen jälkeen, TAULUN_HENGAHDYS_MS:n
- *    päästä.
- *  • MYÖHEMMÄT AVAUKSET: taulu tulee heti, kun musta verho on poissa,
- *    ilman puhetta. Uusia ääniä ei generoitu, eikä olemassa olevista
- *    repliikeistä yksikään kerro taulusta.
- *  • AUTOMAATTINEN AVAUS ODOTTAA: jos Livia puhuu (joku muu kupla), taulu
- *    tulee vasta kun puhe on ohi — se ei koskaan keskeytä Liviaa itse.
+ *  • JOKAINEN AVAUS (omistaja 29.9.2026): taulu tulee heti, kun musta
+ *    verho on poissa, TAULUN_HENGAHDYS_MS:n päästä. Ensimmäisellä
+ *    avauksella tervetulo A1–A2 (js/linssit/pulu-tervetulo.js) puhuu
+ *    taulun aikana ilman kuplaa; taulu ei odota sitä eikä vaienna sitä.
+ *  • AUTOMAATTINEN AVAUS ODOTTAA MUUTA PUHETTA: jos Livia puhuu jotain
+ *    muuta kuin tervetuloa (joku muu kupla), taulu tulee vasta kun puhe on
+ *    ohi — se ei koskaan keskeytä Liviaa itse.
  *  • NAPAUTUS VAIENTAA: pelaajan napautus Puluun on pyyntö juuri nyt, joten
  *    taulu aukeaa heti ja kesken oleva puhe vaikenee (sama vaikeneminen
  *    kuin tervetulon ohituksella). Odottaminen jättäisi napautuksen
@@ -582,10 +580,10 @@ export function luoAstroTaulu({
       loki.push('vaiensi');
     }
     /*
-     * PULUN VANHAT KUPLAT POIS: tervetulon viimeiset kuplat (C1–C2) jäävät
-     * lukuajakseen ruudulle, ja iPadilla ne osuivat taulun alle (mitattu
-     * savukkeella 28.9.). Puhe on tässä vaiheessa jo ohi tai vaiennettu,
-     * joten taulu on Pulun ainoa puheenvuoro ruudulla.
+     * PULUN VANHAT KUPLAT POIS: kuplat jäävät lukuajakseen ruudulle, ja
+     * iPadilla ne osuivat taulun alle (mitattu savukkeella 28.9.). Taulu on
+     * Pulun ainoa puheenvuoro ruudulla; tervetulo puhuu ilman kuplaa, joten
+     * tämä ei vaienna sitä.
      */
     try { kuplatPois(); } catch { /* ei kuplia */ }
     // Valokuvan chatti ja taulu ovat samassa kulmassa: taulu tulee tilalle.
@@ -699,23 +697,28 @@ export function luoAstroTaulu({
 
   /* ---- automaattinen avaus linssin alussa ------------------------ */
   const alkoi = kello.nyt?.() ?? Date.now();
+  /*
+   * MUU PUHE: tervetulon aikana Livian soitin soittaa tervetuloa, jonka
+   * aikana taulu kuuluu olla auki (omistaja 29.9.2026). Vain muu puhe
+   * (joku muu kupla) siirtää automaattista avausta.
+   */
+  const tervetuloKesken = () => {
+    let vaihe = null;
+    try { vaihe = tervetulo?.tila?.()?.vaihe ?? null; } catch { vaihe = null; }
+    return ['odottaa', 'puhuu'].includes(vaihe);
+  };
+  const muuPuhe = () => !tervetuloKesken() && liviaPuhuu(ui);
   const automaattiKierros = () => {
     if (purettu || automaattiTila !== 'odottaa') return;
     const kulunut = (kello.nyt?.() ?? Date.now()) - alkoi;
     if (kulunut > TAULUN_KATTO_MS) { automaattiTila = 'katto'; return; }
     let valmis = true;
-    if (tervetulo) {
-      let vaihe = null;
-      try { vaihe = tervetulo.tila?.()?.vaihe ?? null; } catch { vaihe = null; }
-      valmis = !['odottaa', 'puhuu'].includes(vaihe);
-    } else {
-      try { valmis = avaruus?.paljastettu?.() ?? true; } catch { valmis = true; }
-    }
-    if (!valmis || liviaPuhuu(ui, tervetulo)) { ajasta(automaattiKierros, TAULUN_KYSELY_MS); return; }
+    try { valmis = avaruus?.paljastettu?.() ?? true; } catch { valmis = true; }
+    if (!valmis || muuPuhe()) { ajasta(automaattiKierros, TAULUN_KYSELY_MS); return; }
     ajasta(() => {
       if (purettu || automaattiTila !== 'odottaa') return;
-      // Välissä alkanut puhe (esim. kupla) odotetaan vielä loppuun.
-      if (liviaPuhuu(ui, tervetulo)) { ajasta(automaattiKierros, TAULUN_KYSELY_MS); return; }
+      // Välissä alkanut muu puhe (esim. kupla) odotetaan vielä loppuun.
+      if (muuPuhe()) { ajasta(automaattiKierros, TAULUN_KYSELY_MS); return; }
       // Pelaaja ehti jo valita (valokuva tai kyyti): taulua ei tuoda päälle.
       if (kuvaAuki() || (kyytiMoodi(k)?.tila ?? 'kauko') !== 'kauko') { automaattiTila = 'valittu'; return; }
       automaattiTila = 'avattu';

@@ -1,11 +1,11 @@
 /*
- * PULUN ISS-REPLIIKIT: Astronautin kameran tervetulo (A–C,
+ * PULUN ISS-REPLIIKIT: Astronautin kameran tervetulo (A1–A2, omistaja 29.9.2026,
  * js/linssit/pulu-tervetulo.js) ja ISS-kyydin rajapinta (D,
  * js/linssit/pulu-iss.js). Käsikirjoitus: päätoimittaja 28.9.2026.
  *
  * Kello, kuplat, soitin, kamera ja muisti ovat tynkiä: testi mittaa
- * ajoituksen, ohituksen, kerran-muistin, mykistyksen ja vähennetyn
- * liikkeen ilman selainta ja ilman ääntä.
+ * ajoituksen, ohituksen, kerran-muistin ja mykistyksen ilman selainta
+ * ja ilman ääntä.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -14,11 +14,11 @@ import { LIVIAN_ISS } from '../js/livia.js';
 import { LIVIAN_KESTOT, LIVIAN_VERSIOIDUT_AANET } from '../js/liviapuhe.js';
 import {
   PULUN_ISS_D2_VIIVE_MS, QUINDAR_KESTO_MS, QUINDAR_TAAJUUS_HZ, QUINDAR_VALI_MS,
-  luoPulunIssKyyti, nollaaPulunIssIstunto, pulunIssRepliikki, soitaQuindar,
+  luoPulunIssKyyti, nollaaPulunIssIstunto, pulunIssRepliikki, sanoPulunIssRepliikkiIlmanKuplaa, soitaQuindar,
 } from '../js/linssit/pulu-iss.js';
 import {
-  PULUN_SUOSIKKI, PULUN_TERVETULON_JAKSO, PULUN_TERVETULON_VIIVE_MS, PULUN_TERVETULO_TALLE,
-  aloitaPulunTervetulo, nollaaPulunTervetuloIstunto, pulunTervetulonRepliikit,
+  PULUN_TERVETULON_JAKSO, PULUN_TERVETULON_VIIVE_MS, PULUN_TERVETULO_TALLE,
+  aloitaPulunTervetulo, nollaaPulunTervetuloIstunto,
 } from '../js/linssit/pulu-tervetulo.js';
 
 /* ---------- tynkäkello, soitin, kupla, dokumentti, muisti ---------- */
@@ -152,20 +152,18 @@ test('ISS-repliikeillä on kaanoninen teksti, versioitu äänite ja kesto', () =
   assert.match(LIVIAN_ISS.d[1], /puolessatoista tunnissa/);
 });
 
-/* ---------- A–C: tervetulo ---------- */
+/* ---------- A: tervetulo ---------- */
 
-test('tervetulo: A1–C2 järjestyksessä, kamera repliikkien tahdissa', () => {
+test('tervetulo: A1–A2 järjestyksessä ilman kameraliikettä (omistaja 29.9.: B ja C pois)', () => {
+  assert.deepEqual(PULUN_TERVETULON_JAKSO.map((r) => `${r.ryhma}${r.indeksi}`), ['a0', 'a1']);
   const kello = luoKello();
   const kamera = luoKamera();
   const puhuja = luoPuhuja();
   const muisti = luoMuisti();
   const doc = luoDokumentti();
-  let vaaraAuki = 0;
-  let suljettu = 0;
   const kahva = aloitaPulunTervetulo({
     avaruus: kamera, kello, varasto: muisti, doc, sano: puhuja.sano,
-    mykistetty: () => false, vahennaLiiketta: false,
-    avaaVaaraKohde: () => { vaaraAuki += 1; return true; }, suljeKortti: () => { suljettu += 1; },
+    mykistetty: () => false,
     vaikene: () => assert.fail('ei saa vaientaa kesken'),
   });
   assert.ok(kahva);
@@ -175,100 +173,55 @@ test('tervetulo: A1–C2 järjestyksessä, kamera repliikkien tahdissa', () => {
   kello.kulje(1);
   assert.deepEqual(puhuja.sanotut, ['iss-a-1']);
   assert.equal(muisti.data.get(PULUN_TERVETULO_TALLE), '1');
+  assert.equal(kahva.tila().puhuu, true);
 
-  soitaLoppuun(kello, puhuja); kello.kulje(400); // A1 → A2
-  soitaLoppuun(kello, puhuja); kello.kulje(400); // A2 → B1
-  soitaLoppuun(kello, puhuja); kello.kulje(400); // B1 → B2
-  assert.deepEqual(puhuja.sanotut, ['iss-a-1', 'iss-a-2', 'iss-b-1', 'iss-b-2']);
-  assert.deepEqual(kamera.kutsut, []);
-
-  // B2: kamera ei liiku ennen kuin soitin alkaa, ja pyöräytys osuu
-  // sanaan "Pyöräytän" (2,00 s) ja kestää sanaan "noin" (4,60 s).
-  const b2 = puhuja.soittimet.at(-1);
-  kello.kulje(500);
-  assert.deepEqual(kamera.kutsut, []);
-  b2.paused = false; b2.laukaise('playing');
-  kello.kulje(1999);
-  assert.deepEqual(kamera.kutsut, []);
-  kello.kulje(1);
-  assert.deepEqual(kamera.kutsut, [['katso', PULUN_SUOSIKKI.lat, PULUN_SUOSIKKI.lon, 2600]]);
-  kello.kulje(pulunIssRepliikki('b', 1).kestoMs); b2.laukaise('ended'); kello.kulje(400);
-
-  // C1: räppäisy heti [tap]-äänen kohdalla.
-  assert.equal(puhuja.sanotut.at(-1), 'iss-c-1');
-  const c1 = puhuja.soittimet.at(-1);
-  c1.paused = false; c1.laukaise('playing');
-  kello.kulje(250);
-  assert.equal(vaaraAuki, 1);
-  kello.kulje(pulunIssRepliikki('c', 0).kestoMs); c1.laukaise('ended'); kello.kulje(400);
-
-  // C2: kuva kiinni ja kamera aloitukseen sanasta "Viedään" (3,08 s).
-  assert.equal(puhuja.sanotut.at(-1), 'iss-c-2');
-  const c2 = puhuja.soittimet.at(-1);
-  c2.paused = false; c2.laukaise('playing');
-  kello.kulje(3079);
-  assert.equal(suljettu, 0);
-  kello.kulje(1);
-  assert.equal(suljettu, 1);
-  assert.deepEqual(kamera.kutsut.at(-1), ['palaa', 2780, true]);
-  kello.kulje(pulunIssRepliikki('c', 1).kestoMs); c2.laukaise('ended'); kello.kulje(400);
-
+  soitaLoppuun(kello, puhuja);
+  assert.equal(kahva.tila().puhuu, false, 'hengähdyksen aikana ei puhuta');
+  kello.kulje(400); // A1 → A2
+  soitaLoppuun(kello, puhuja); kello.kulje(400);
+  assert.deepEqual(puhuja.sanotut, ['iss-a-1', 'iss-a-2']);
   assert.equal(kahva.tila().vaihe, 'valmis');
   assert.equal(doc.kuuntelijoita(), 0, 'ohituksen kuuntelija jäi dokumenttiin');
-  assert.deepEqual(kahva.tila().toimitetut, ['pyorayta', 'rappaise', 'palaa']);
+  assert.deepEqual(kamera.kutsut, [], 'tervetulo ei liikuta kameraa');
 });
 
-test('tervetulo: napautus ohittaa — Livia vaikenee heti ja näkymä palaa aloitukseen', () => {
+test('tervetulo: napautus puheen aikana vaientaa Livian heti', () => {
   const kello = luoKello();
-  const kamera = luoKamera();
   const puhuja = luoPuhuja();
   const doc = luoDokumentti();
   let vaientui = 0;
-  let suljettu = 0;
   const kahva = aloitaPulunTervetulo({
-    avaruus: kamera, kello, varasto: luoMuisti(), doc, sano: puhuja.sano,
-    mykistetty: () => false, vahennaLiiketta: false,
-    avaaVaaraKohde: () => true, suljeKortti: () => { suljettu += 1; },
-    vaikene: () => { vaientui += 1; },
+    avaruus: luoKamera(), kello, varasto: luoMuisti(), doc, sano: puhuja.sano,
+    mykistetty: () => false, vaikene: () => { vaientui += 1; },
   });
   // Napautus ennen ensimmäistä repliikkiä ei ohita (tavallista katselua).
   doc.napauta();
   kello.kulje(PULUN_TERVETULON_VIIVE_MS);
   assert.deepEqual(puhuja.sanotut, ['iss-a-1']);
-  for (let i = 0; i < 4; i += 1) { soitaLoppuun(kello, puhuja); kello.kulje(400); }
-  // C1 alkaa, räppäisy avaa väärän kuvan.
-  const c1 = puhuja.soittimet.at(-1);
-  c1.paused = false; c1.laukaise('playing');
-  kello.kulje(1000);
-  assert.equal(kahva.tila().korttiAuki, true);
+  assert.equal(vaientui, 0);
   doc.napauta();
   assert.equal(vaientui, 1);
-  assert.equal(suljettu, 1);
-  assert.deepEqual(kamera.kutsut.at(-1), ['palaa', 700, false]);
   assert.equal(kahva.tila().vaihe, 'ohitettu');
-  // Mitään ei enää sanota eikä kamera liiku.
-  const kutsuja = kamera.kutsut.length;
+  assert.deepEqual(kahva.tila().tapahtumat, ['ohitus:napautus']);
+  // Mitään ei enää sanota.
   kello.kulje(60000);
-  c1.laukaise('ended');
+  puhuja.soittimet.at(-1).laukaise('ended');
   kello.kulje(60000);
-  assert.equal(puhuja.sanotut.at(-1), 'iss-c-1');
-  assert.equal(kamera.kutsut.length, kutsuja);
+  assert.deepEqual(puhuja.sanotut, ['iss-a-1']);
   assert.equal(doc.kuuntelijoita(), 0);
+  assert.equal(kahva.ohita(), false, 'jo ohitettu');
 });
 
-test('tervetulo: ohitus ennen kameraliikettä ei liikuta kameraa', () => {
-  const kello = luoKello();
-  const kamera = luoKamera();
-  const puhuja = luoPuhuja();
-  let vaientui = 0;
-  const kahva = aloitaPulunTervetulo({
-    avaruus: kamera, kello, varasto: luoMuisti(), doc: luoDokumentti(), sano: puhuja.sano,
-    mykistetty: () => false, vahennaLiiketta: false, vaikene: () => { vaientui += 1; },
-  });
-  kello.kulje(PULUN_TERVETULON_VIIVE_MS);
-  assert.equal(kahva.ohita(), true);
-  assert.equal(vaientui, 1);
-  assert.deepEqual(kamera.kutsut, []);
+test('tervetulo ilman kuplaa: Pulu puhuu vain, kun se saa puhua (Livia pelissä, chatti kiinni)', () => {
+  const soitot = [];
+  const soita = (_ui, lahde, indeksi, { teksti }) => { soitot.push([lahde, indeksi, teksti]); return { paused: true }; };
+  const a1 = pulunIssRepliikki('a', 0);
+  const kahva = sanoPulunIssRepliikkiIlmanKuplaa(null, a1, { puhe: () => true, soita });
+  assert.equal(kahva.repliikki, a1);
+  assert.deepEqual(soitot, [['iss-a', 0, a1.teksti]]);
+  assert.equal(sanoPulunIssRepliikkiIlmanKuplaa(null, a1, { puhe: () => false, soita }), null);
+  assert.equal(sanoPulunIssRepliikkiIlmanKuplaa(null, null, { puhe: () => true, soita }), null);
+  assert.equal(soitot.length, 1, 'kun Pulu ei saa puhua, mitään ei soiteta');
 });
 
 test('tervetulo kuullaan kerran: muisti laitteessa, varalla istunnossa', () => {
@@ -299,7 +252,7 @@ test('tervetulo kuullaan kerran: muisti laitteessa, varalla istunnossa', () => {
   assert.equal(aloitaPulunTervetulo({ avaruus: luoKamera(), varasto: estetty, mykistetty: () => false }), null);
 });
 
-test('tervetulo: kupla ei näy (Livia ei ole pelissä) → jakso pois, muisti ennallaan', () => {
+test('tervetulo: Pulu ei voi puhua (Livia ei ole pelissä) → jakso pois, muisti ennallaan', () => {
   const muisti = luoMuisti();
   const kello = luoKello();
   const kahva = aloitaPulunTervetulo({
@@ -315,7 +268,7 @@ test('tervetulo: mykistettynä ei aloiteta eikä muistia kuluteta', () => {
   const muisti = luoMuisti();
   assert.equal(aloitaPulunTervetulo({ avaruus: luoKamera(), varasto: muisti, mykistetty: () => true }), null);
   assert.equal(muisti.data.size, 0);
-  // Mykistys kesken jakson: seuraavaa repliikkiä ei sanota, kamera palaa.
+  // Mykistys kesken jakson: seuraavaa repliikkiä ei sanota.
   const kello = luoKello();
   const puhuja = luoPuhuja();
   let mykka = false;
@@ -330,24 +283,6 @@ test('tervetulo: mykistettynä ei aloiteta eikä muistia kuluteta', () => {
   kello.kulje(400);
   assert.deepEqual(puhuja.sanotut, ['iss-a-1']);
   assert.equal(kahva.tila().vaihe, 'ohitettu');
-});
-
-test('tervetulo: Vähennä liikettä → pelkkä A1–A2, kamera ei liiku', () => {
-  assert.deepEqual(pulunTervetulonRepliikit({ vahennaLiiketta: true }).map((r) => `${r.ryhma}${r.indeksi}`), ['a0', 'a1']);
-  assert.equal(pulunTervetulonRepliikit().length, PULUN_TERVETULON_JAKSO.length);
-  const kello = luoKello();
-  const kamera = luoKamera();
-  const puhuja = luoPuhuja();
-  const kahva = aloitaPulunTervetulo({
-    avaruus: kamera, kello, varasto: luoMuisti(), doc: luoDokumentti(), sano: puhuja.sano,
-    mykistetty: () => false, vahennaLiiketta: true,
-  });
-  kello.kulje(PULUN_TERVETULON_VIIVE_MS);
-  soitaLoppuun(kello, puhuja); kello.kulje(400);
-  soitaLoppuun(kello, puhuja); kello.kulje(400);
-  assert.deepEqual(puhuja.sanotut, ['iss-a-1', 'iss-a-2']);
-  assert.equal(kahva.tila().vaihe, 'valmis');
-  assert.deepEqual(kamera.kutsut, []);
 });
 
 test('tervetulo odottaa mustan verhon poistumista', () => {
