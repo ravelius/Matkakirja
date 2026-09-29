@@ -9283,3 +9283,7 @@ Omistaja 29.9.2026 Julkaisijan sessioon: jokainen BUILD viedään TestFlightin s
 ## OMISTAJA: NOSTOJEN LUENTA ALKAA YHÄ VÄÄRÄSTÄ KOHDASTA (29.9.2026 klo 19.38)
 
 Omistaja 29.9.2026: "nostojen luenta alkaa vieläkin väärästä kohtaa. chatissa näytti toimivan. tosin juuri tuli uusi versio niin en ole sitä kokeillut". Palvelut: nostojen ja kertojan striimiluenta xAI TTS (api.x.ai/v1/tts) matkakirja-pollo-workerin kautta; Pulun chat ja puhekeskustelu ElevenLabs v4 Turbo Pulun omalla äänellä saman workerin kautta; käsikirjoitetut Pulun repliikit ja isoisän luennat esigeneroituja ElevenLabs-tiedostoja ämpäristä. Aloituskohdan vika → Natiivi-UI etusijalla (toisto BUILD 52:lla, ensimmäisen napautuksen kohta ja palakartta lokiin).
+
+## OMISTAJA: MANTEREEN RANTAVIIVA RAJAKSI, EI YLEISTYSTÄ (29.9.2026 klo 19.41)
+
+Omistaja 29.9.2026 (kumoaa Päätoimittajan tulkinnan ja kokeet A/B, "aivan surkea", "aivan liian pyöristettyjä"): "Pitää olla siis aivan samanlainen raja kuin tähänkin asti, mutta lisätään sen piirto myös siihen mantereella olevaan merirajaan." Linja: nykyinen natiivin maa–maa-raja ennallaan, ja siihen lisätään mantereen (maan suurimman renkaan) rantaviiva samalla viivalla, samasta aineistosta ja samalla tarkkuudella; saarten rantoja ei piirretä. Karttaseppä aineisto, Natiiviseppä piirto; web web-jonoon.
