@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 08.0x)
+# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 10.3x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
-- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omia worktreitä ei ole (cupola3 poistettu merge-pyynnön jälkeen,
-  haara linssiseppa/cupola3 6da6664c Natiivisepällä 1.0.41:tä varten); luovutus -20260929.
+- Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto. Omia worktreitä ei ole (tervetulo poistettu merge-pyynnön jälkeen;
+  haara linssiseppa/pulun-tervetulo 5b3acd53 Natiivisepällä 1.0.45:tä varten).
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13 ja 1.0.40:n sivuhaara natiiviseppa/juna-1040.
 
 Lue:
@@ -22,12 +22,16 @@ Lue:
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -20260929-b kohta 1:**
-0. UUSI: Pulun ISS-tervetulo natiiviin webin #3575 mukaan. Speksi: docs/raportit/pulu-tervetulo-natiivi-speksi-20260929.md.
-   Taulu avautuu vasta tervetulon jälkeen.
-1. Pulun taulu ja LISÄYS 6 ovat merge-pyynnössä Natiivisepällä (linssiseppa/pulun-taulu 9750340f; kierrokset 1–2 PASS).
-   Seuraa mergeä ja vastaa korjauspyyntöihin.
-2. Kerro Linssiseppä 2:lle taulun lopullinen SHA (LisaaRivi avaruuskävelylle).
+**Järjestys (tila 29.9. klo 10.3x):**
+0. Pulun ISS-tervetulo (web #3575) on MERGE-PYYNNÖSSÄ Natiivisepällä 1.0.45:een: proto linssiseppa/pulun-tervetulo 5b3acd53.
+   Se vaatii natiivi-ui/avaukset 3621d00d:n (Ponnahdus). Raportti, mitat ja poikkeamat ovat tiedostossa
+   docs/raportit/pulu-tervetulo-natiivi-20260929.md. Laitekierros 9/9 PASS iPhonella ja iPadilla, ja kuvaparit ovat kansiossa
+   proto-3d/lokit/linssiseppa-laite-20260929-tervetulo/. Seuraa mergeä ja vastaa korjauspyyntöihin.
+   Ajo: tyokalut/linssiseppa-ajot/ajo-tervetulo.sh, ajo-tervetulo-web.mjs ja koosta_tervetulo.py. Testikomento on
+   `ui linssi tervetulo [tila|aloita|ohita|pura|nollaa]`. Laiteajossa kertoja on oltava päällä (`puhe paalle`), muuten tervetulo
+   on mykistetty.
+1. Pulun taulu ja LISÄYS 6 ovat MASTERISSA (9750340f, master 634be415).
+2. Taulun SHA on kerrottu Linssiseppä 2:lle 29.9. klo 10.3x.
 3. Cupola 2 -kuvien alfa 252–254 korjataan cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön. Kohta 4 (BMNG, Kuu,
    tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
 
