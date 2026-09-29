@@ -26,7 +26,7 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class Linssivalitsin
+    public sealed partial class Linssivalitsin
     {
         readonly Button nappi;
         readonly VisualElement paneeli, lista, lisaosa;
@@ -75,6 +75,10 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
 
             var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
+            // Pillerivalikon alinäkymät (Linssit, Aarteet): ‹ Takaisin pääsivulle (Linssivalitsin.Pilleri.cs).
+            alaTakaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin", () => NaytaNakyma(Nakyma.Paa), ylarivi);
+            alaTakaisin.tooltip = "Takaisin valikkoon";
+            alaTakaisin.style.display = DisplayStyle.None;
             otsikko = Rakenne.Teksti("LINSSIT", "mk-selite__otsikko", ylarivi);
             var sulje = Rakenne.Nappi("×", "mk-selite__sulje", Sulje, ylarivi);
             sulje.tooltip = "Sulje linssivalikko";
@@ -89,6 +93,8 @@ namespace Matkakirja.Natiivi
             lisaosa = Rakenne.El("mk-linssivalitsin__lisaosa", vieritys, PickingMode.Ignore);
             lista = Rakenne.El("mk-linssivalitsin__lista", vieritys);
             lisaosa.style.display = DisplayStyle.None;
+            this.vieritys = vieritys;
+            LuoPilleriOsat(turva, kerros);
 
             // Muut-paneeli: sama pergamentti ja kehys, ‹ takaisin ja ✕, rivit (Valikkona).
             muut = Rakenne.El("mk-linssivalitsin mk-linssivalitsin--valikko mk-linssivalitsin--muut", turva);
@@ -181,6 +187,7 @@ namespace Matkakirja.Natiivi
             PaivitaKytkimet();
             Asettele();
             Rakenna();
+            if (PilleriValikko) { NaytaNakyma(Nakyma.Paa); Avautuu?.Invoke(); PaivitaSaatimet(); }
             AukiMuuttui?.Invoke(true);
             Rakenne.Nayta(paneeli, true, 220);
             nappi.AddToClassList("mk-valittu");
@@ -192,6 +199,7 @@ namespace Matkakirja.Natiivi
             Auki = false;
             Rakenne.Nayta(paneeli, false, 220);
             SuljeMuut();
+            SuljeEsikatselu();
             nappi.RemoveFromClassList("mk-valittu");
             AukiMuuttui?.Invoke(false);
         }
@@ -292,7 +300,7 @@ namespace Matkakirja.Natiivi
             // Valikkona otsikko "LINSSIT" on linssien yllä viivan alla, yläkaistassa vain ✕.
             otsikko.text = Valikkona ? "" : "LINSSIT";
             lista.style.display = tyhjaValikko ? DisplayStyle.None : DisplayStyle.Flex;
-            if (Valikkona && !tyhjaValikko)
+            if (Valikkona && !tyhjaValikko && !PilleriValikko)
             {
                 Rakenne.El("mk-linssivalitsin__erotin", lista, PickingMode.Ignore);
                 Rakenne.Teksti("LINSSIT", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
@@ -305,7 +313,21 @@ namespace Matkakirja.Natiivi
         void LuoRivi(LinssiTiedot t)
         {
             string id = t.Id;
-            var b = Rakenne.Nappi(null, "mk-linssirivi", () => { Sulje(); Valittu?.Invoke(id); }, lista);
+            Button b = null;
+            Label tila = null;
+            // Pillerivalikko (Pelikoodari 29.9., web malli): 1. napautus esikatselu vasemmalle ja rivi "Aktivoi", 2. avaa.
+            b = Rakenne.Nappi(null, "mk-linssirivi", () =>
+            {
+                if (PilleriValikko && esiId != id)
+                {
+                    // Web (Pelikoodari): kuva LINSSI.havainnekuva tai varana varusteen kuva, teksti esittely tai varana lyhyt.
+                    Esikatsele(id, b, tila, string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(id) : t.Havainnekuva, t.Nimi,
+                        string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely, "Aktivoi", () => { Sulje(); Valittu?.Invoke(id); });
+                    return;
+                }
+                Sulje();
+                Valittu?.Invoke(id);
+            }, lista);
             b.tooltip = t.Nimi;
             var ikoni = new SvgIkoni(string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);
             ikoni.AddToClassList("mk-linssirivi__ikoni");
@@ -314,8 +336,8 @@ namespace Matkakirja.Natiivi
             var nimirivi = Rakenne.El("mk-linssirivi__nimirivi", tekstit, PickingMode.Ignore);
             var nimi = Rakenne.Teksti(t.Nimi ?? id, "mk-linssirivi__nimi", nimirivi);
             Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
-            var tila = Rakenne.Teksti("", "mk-linssirivi__tila", nimirivi);
-            if (!string.IsNullOrEmpty(t.Lyhyt))
+            tila = Rakenne.Teksti("", "mk-linssirivi__tila", nimirivi);
+            if (!string.IsNullOrEmpty(t.Lyhyt) && !PilleriValikko)
             {
                 var lyhyt = Rakenne.Teksti(t.Lyhyt, "mk-linssirivi__lyhyt", tekstit);
                 Kirjasimet.Aseta(lyhyt, Kirjasin.Luku);
@@ -331,7 +353,8 @@ namespace Matkakirja.Natiivi
             var ruutu = osoitin.position.ReadValue();
             var p = RuntimePanelUtils.ScreenToPanel(paneeli.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
             if (!paneeli.worldBound.Contains(p) && !nappi.worldBound.Contains(p) && !(MuutAuki && muut.worldBound.Contains(p))
-                && (Avaaja == null || !Avaaja.worldBound.Contains(p))) Sulje();
+                && !EsikatseluSisaltaa(p) && (Avaaja == null || !Avaaja.worldBound.Contains(p))
+                && !Avaajat.Exists(a => a != null && a.panel != null && a.worldBound.Contains(p))) Sulje();
         }
     }
 }

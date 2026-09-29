@@ -4321,3 +4321,47 @@
     color: rgba(234, 184, 78, 0.95);
     -unity-text-align: middle-right;
 }
+
+/* PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07): puhelimella logo vasemmalla, pilleri oikealla, ei ☰:ta. */
+.mk-ylapalkki--pilleri-oikealla .mk-pilleri {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.mk-ylapalkki--pilleri-oikealla .mk-logo {
+    margin-left: 0;
+}
+
+/* Tyhjä nappikontti (☰ pois) ei saa jakaa vapaata tilaa pillerin kanssa (laite cl1: pilleri jäi keskelle). */
+.mk-ylapalkki--pilleri-oikealla .mk-ylapalkki__napit {
+    margin-left: 0;
+}
+
+.mk-tietoja__tilanne {
+    align-self: center;
+    margin: 6px 0 4px 0;
+}
+
+/* Kaksirivinen pilleri (pillerivalikko puhelimella, web mitat.md): ikoni vasemmalla, rahat ja päivä allekkain. */
+.mk-pilleri--kaksirivinen {
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+.mk-pilleri__pino {
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.mk-pilleri__rivi1 {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-pilleri--kaksirivinen .mk-pilleri__kello {
+    margin-left: 0;
+    margin-top: -2px;
+    font-size: 11px;
+}

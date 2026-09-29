@@ -94,20 +94,22 @@ namespace Matkakirja.Natiivi
                 logo.AddManipulator(new Clickable(() => { Sulje(); LogoPainettu?.Invoke(); }));
             }
 
-            Osio("Matka");
-            matka = Rakenne.El("mk-laukku__rivit", Sisalto, PickingMode.Ignore);
+            // Pillerin tiedot omassa kuoressaan: pillerivalikko (omistaja 29.9.2026) upottaa ne pääsivunsa pohjalle (Upota).
+            tiedotKuori = Rakenne.El("mk-laukku__tiedot", Sisalto, PickingMode.Ignore);
+            Osio("Matka", tiedotKuori);
+            matka = Rakenne.El("mk-laukku__rivit", tiedotKuori, PickingMode.Ignore);
 
-            tilastoNappi = Rakenne.Nappi(null, "mk-laukku__lohkonappi", VaihdaTilastot, Sisalto);
+            tilastoNappi = Rakenne.Nappi(null, "mk-laukku__lohkonappi", VaihdaTilastot, tiedotKuori);
             var ot = Rakenne.Teksti("MATKAN TILASTOT", "mk-laukku__osio", tilastoNappi);
             Kirjasimet.Aseta(ot, Kirjasin.Kone);
             Rakenne.Teksti("›", "mk-laukku__vakanen", tilastoNappi);
-            lohko = Rakenne.El("mk-laukku__lohko", Sisalto, PickingMode.Ignore);
+            lohko = Rakenne.El("mk-laukku__lohko", tiedotKuori, PickingMode.Ignore);
             tilastot = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
-            var aarniOtsikko = Rakenne.El("mk-laukku__osiorivi", lohko, PickingMode.Ignore);
+            aarniOtsikko = Rakenne.El("mk-laukku__osiorivi", lohko, PickingMode.Ignore);
             Osio("Aarnin luettelo", aarniOtsikko);
             Pikkuseloste.Nappi(AarniSeloste, aarniOtsikko);
             aarteet = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
-            Osio("Tavarat", lohko);
+            tavaraOtsikko = Osio("Tavarat", lohko);
             tavarat = Rakenne.El("mk-laukku__rivit", lohko, PickingMode.Ignore);
             julisteet = Rakenne.El("mk-laukku__julisteet", lohko);
             julisteet.AddManipulator(new Clickable(AvaaJulisteet));
@@ -116,6 +118,25 @@ namespace Matkakirja.Natiivi
             AsetaTilastot(PlayerPrefs.GetString(TilastotAvain, "0") == "1");
             AukiMuuttui += auki => { if (!auki) Pikkuseloste.Sulje(); Aanisoitin.MusiikkiTila("matkalaukku", auki); };
         }
+
+        readonly VisualElement tiedotKuori, aarniOtsikko;
+        readonly Label tavaraOtsikko;
+        bool upotettu;
+
+        /// <summary>
+        /// Pillerivalikko (omistaja 29.9.2026): pillerin tiedot (Matka ja Matkan tilastot) valikon pääsivun pohjalle; Aarnin
+        /// luettelo, Tavarat ja Julisteet ovat valikon Aarteet-näkymässä, joten ne piiloon tästä.
+        /// </summary>
+        public void Upota(VisualElement kohde)
+        {
+            upotettu = true;
+            kohde.Add(tiedotKuori);
+            foreach (var e in new VisualElement[] { aarniOtsikko, aarteet, tavaraOtsikko, tavarat, julisteet })
+                e.style.display = DisplayStyle.None;
+        }
+
+        /// <summary>Upotettujen tietojen päivitys (valikon avaus).</summary>
+        public void PaivitaTiedot() => Paivita();
 
         /// <summary>Testikomento: tilastolohko auki (Aarnin luettelo näkyviin).</summary>
         public void AvaaTilastot() => AsetaTilastot(true);
@@ -208,7 +229,7 @@ namespace Matkakirja.Natiivi
                 Rakenne.Teksti(t.Teksti, "mk-laukku__teksti", r);
             }
 
-            julisteet.style.display = d.Julisteet.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            julisteet.style.display = d.Julisteet.Count > 0 && !upotettu ? DisplayStyle.Flex : DisplayStyle.None;
             if (d.Julisteet.Count > 0)
             {
                 var n = Rakenne.Teksti("JULISTEET", "mk-laukku__julistenimio", julisteet);
