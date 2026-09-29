@@ -87,6 +87,7 @@
  *    pikseleistä eikä laattakoosta, ja arkin oikea reuna osuu tasan
  *    kohtaan leveys, jossa kopio jatkaa.
  */
+import { laattaMuuttunut } from './deltasarja.js';
 import { el } from './mapart.js';
 import { pyramidiUrl, pyramidinLuettelonPolku } from './media.js';
 import {
@@ -935,6 +936,17 @@ export function varitasonLaattapolku(kirjaus, z, sarake, rivi, muoto = 'webp', a
 }
 
 /** Laatan osoite ämpärissä. Sama merkkijono sekä kuvalle että noudolle. */
+/**
+ * Kerroksen versio laatalle: DELTASARJASSA (js/deltasarja.js) muuttumaton
+ * laatta asuu perussarjan versiossa. `kerros` on luettelo itse (pohja) tai
+ * sen viiva-, joki- tai rantataso; sarakkeita tulee tasolta.
+ */
+function kerroksenVersio(kerros, taso, sarake, rivi) {
+  const d = kerros?.delta;
+  if (!d) return kerros.versio;
+  return laattaMuuttunut(d, taso.z, sarake, rivi, taso.sarakkeita) ? kerros.versio : d.perus;
+}
+
 function laattaUrl(taso, sarake, rivi) {
   // Nostotason laatta asuu oman versionsa alla pohjan rinnalla:
   // <nostoversio>/nostot/z…. Oma versio on koko mallin päähyöty —
@@ -954,14 +966,14 @@ function laattaUrl(taso, sarake, rivi) {
   }
   // Viivataso samoin omassa versiossaan: <viivaversio>/viivat/z…
   if (taso.viiva) {
-    return pyramidiUrl(`${luettelo.viivataso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+    return pyramidiUrl(`${kerroksenVersio(luettelo.viivataso, taso, sarake, rivi)}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
   // Jokitaso on viivatason generaattorin tuote ilman reittejä, joten
   // sen laatat asuvat samassa alipolussa: <jokiversio>/viivat/z…
   // (ks. JOKITASO alempana).
   if (taso.joki) {
-    return pyramidiUrl(`${luettelo.jokitaso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+    return pyramidiUrl(`${kerroksenVersio(luettelo.jokitaso, taso, sarake, rivi)}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
   // Nimiötaso: <nimioversio>/nimiot/z… (ks. NIMIÖTASO alempana).
@@ -971,7 +983,7 @@ function laattaUrl(taso, sarake, rivi) {
   }
   // Rantataso samoin: <rantaversio>/ranta/z… (omistaja 6.9.2026 ilta).
   if (taso.ranta) {
-    return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
+    return pyramidiUrl(`${kerroksenVersio(luettelo.rantataso, taso, sarake, rivi)}/ranta/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
   // Väritaso samoin omassa polussaan, ja MAA ON POLUSSA: ks.
@@ -989,7 +1001,7 @@ function laattaUrl(taso, sarake, rivi) {
    * kysytään sieltä eikä rakenneta tässä.
    */
   if (taso.reliefi) return reliefinLaattaUrl(taso, sarake, rivi);
-  return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
+  return pyramidiUrl(`${kerroksenVersio(luettelo, taso, sarake, rivi)}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
 
