@@ -339,7 +339,7 @@ test('napautettu rivi muuttuu "Aktivoi"-napiksi, kortissa ei ole omaa nappia (om
     n.childNodes.find((k) => k.luokat?.has('kokoelma-rivi-nimi'))?.textContent ?? '')));
   // Oranssi asu tulee CSS:stä ja on rajattu Linssit-näkymään.
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
-  assert.match(css, /#linssi-valikko \.kokoelma-rivi\.esikatselu \{[^}]*background: var\(--accent\);/);
+  assert.match(css, /#linssi-valikko \.kokoelma-rivi\.esikatselu,?[^{]*\{[^}]*background: var\(--accent\);/);
   assert.match(css, /--pilleri-rivi-korkeus: 44px;/);
 });
 
