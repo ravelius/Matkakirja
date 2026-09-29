@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 07:23:** Levy 103,46 Gi, muisti 60 % vapaa, kuorma 45/62/63 (Xcode-käännös käynnissä, Evoto-camera-link 83 %), sim 1 (raja ≤3), GPU-chrome 0, wt/ 10 kohdetta 4,3 Gt, /private/tmp 37,4 Gt, Devices 66,5 Gt (muut kasvajat vakaat). Roolit: Linnanrakentaja 34 %, Laitetestaaja 22 %, Siirtoseppä 18 %, Linssiseppä 2 23 %, Linssiseppä 63 %, ei ≥70 %. Juna OK: b13 HEAD 507d865e, käännetty 07:15 (44faaf32). Postilaatikko: Codexin kuunvaloradio-viesti (77036b7f6) välitetty Päätoimittajalle.
+
 **Päivitetty 07:11:** Levy 104,47 Gi, muisti 65 % vapaa, kuorma 4,9/29,7/61 (laskussa), sim 0, GPU-chrome 0, wt/ 10 kohdetta 4,3 Gt, /private/tmp 36,8 Gt, Devices 66,1 Gt (DerivedData 5,6, Library 6,3, build 10,6 Gt vakaat). Roolit: Linssiseppä 2 23 %, Linssiseppä 63 %, ei ≥70 %. Juna: b13 HEAD 507d865e (1.0.42-kokonaisuus, 06:55), vahti käynnisti käännöksen 07:11 (yläraja 1200 s), ei hälytystä.
 
 **Päivitetty 06:59:** Levy 103,43 Gi (97,3→103,4). Devices 65,6 Gt. Muisti vapaana 60 %. Kuorma 110/85/89 (Playwright-chromium 134 %, Evoto 90 %), sim 1 (päiväraja tänään 3, omistajan tiedote). Kasvajakansiot vakaat (DerivedData 5,63, Library 6,34, build 10,74 Gt). /private/tmp 37,0 Gt. **wt/ 11 kohdetta 5,6 Gt (17→11, tavoite <15 saavutettu; omistajan komennot ajettu).** Roolit: Linssiseppä 1+2 käynnissä; Laitetestaaja nollautui 72→14 %, Linssiseppä 2 69 % (lähellä 70), muut ennallaan. Juna OK: b13 HEAD a61e8c3f, viimeisin käännös 25c7c971 06:41. Tiedote 'ei konetta tarvita tänään' välitetty kaikille 11 roolille.
