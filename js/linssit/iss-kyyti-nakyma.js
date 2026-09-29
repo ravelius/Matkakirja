@@ -72,18 +72,90 @@ export const CUPOLA_KUVAT = Object.freeze({
     juuri: 'https://media.matkakirja.app/karttanostot/20260926/',
     kerrokset: [['kehys', 'iss-cupola-kokonainen-'], ['heijastus', 'iss-cupola-heijastus-']],
   },
+  /*
+   * CUPOLA 3 (omistaja 28.9.2026 klo 22.5x: "voisiko ennemmin käyttää sitä pyöreää ikkunaa ja rajata se lähelle?";
+   * Codexin toimitus, natiivi linssiseppa/cupola3 c2645317, suunnitelma iss-realismi-suunnitelma-20260928.md §5):
+   * valmiiksi rajattu tumma ohjaamo pyöreällä kattoikkunalla, sen alla hyvin heikko lasi ja päällä kolme kapeaa
+   * reunavaloa (luode, koillinen, lounas). Ulko-osia ei ole. a = keskitetty (oletus), b = hieman vino.
+   */
+  /*
+   * Linssisepän jälkikäsittely natiivin kanssa samaksi (29.9.2026, "pehmea-umpi"): ohjaamon alfa ≥ 240 → 255 (maa
+   * kuulsi 245–254-alfaisen metallin läpi; Natiivisepän juurisyy), kevyt sumennus ~2 näyttö-px, reunavalot huippuunsa.
+   */
+  'cupola3-a': {
+    juuri: 'https://media.matkakirja.app/karttanostot/20260928/',
+    malli: 3,
+    kerrokset: [['heijastus', 'iss-cupola3-a-pehmea-umpi-glass-'], ['kehys', 'iss-cupola3-a-pehmea-umpi-cockpit-'],
+      ['valo-nw', 'iss-cupola3-a-pehmea-umpi-sun-nw-'], ['valo-ne', 'iss-cupola3-a-pehmea-umpi-sun-ne-'],
+      ['valo-sw', 'iss-cupola3-a-pehmea-umpi-sun-sw-']],
+  },
+  'cupola3-b': {
+    juuri: 'https://media.matkakirja.app/karttanostot/20260928/',
+    malli: 3,
+    kerrokset: [['heijastus', 'iss-cupola3-b-glass-'], ['kehys', 'iss-cupola3-b-cockpit-'],
+      ['valo-nw', 'iss-cupola3-b-sun-nw-'], ['valo-ne', 'iss-cupola3-b-sun-ne-'], ['valo-sw', 'iss-cupola3-b-sun-sw-']],
+  },
 });
-export const CUPOLA_VERSIO = '20260928-pehmea';
+export const CUPOLA_VERSIO = 'cupola3-a';
 
-/** Kuvan koko: iPad-kehys leveämmälle ruudulle (natiivi: leveys > 0,5 × korkeus). */
-export function cupolanKoko(leveys, korkeus) {
+/** Cupola 3: iPadin vaakakuva, kun pitkä / lyhyt sivu < 1,75 (natiivi IssKuvakulma.Cupola3IpadRaja). */
+export const CUPOLA3_IPAD_RAJA = 1.75;
+/** Cupola 3: suurennos ruudun yli (cover × 1,04), jotta ikkuna pysyy pyöreänä eikä heilunta paljasta reunaa. */
+export const CUPOLA3_YLI = 1.04;
+const CUPOLA3_KEILA = 0.35;
+const R2 = Math.SQRT1_2;
+/** Reunavalojen puolet kuvassa (x oikealle, y ylös): luode, koillinen, lounas (kerrosten järjestys). */
+const CUPOLA3_REUNAT = [[-R2, R2], [R2, R2], [-R2, -R2]];
+
+/**
+ * Cupola 3:n kuva laitteen muodosta ja kääntö (natiivi IssKuvakulma.Cupola3Kuva): iPadin vaakakuva 2732 × 2048
+ * neliömäisemmälle ruudulle, muuten iPhonen pystykuva 1290 × 2796; kuva käännetään 90°, kun ruutu on eri asennossa
+ * (iPhone vaaka, iPad pysty), jolloin ikkuna pysyy pyöreänä ja täyttää lyhyemmän sivun.
+ */
+export function cupola3Kuva(leveys, korkeus) {
+  const pitka = Math.max(leveys, korkeus); const lyhyt = Math.min(leveys, korkeus);
+  const ipad = lyhyt > 0 && pitka / lyhyt < CUPOLA3_IPAD_RAJA;
+  return { ipad, kaanna: ipad ? korkeus > leveys : leveys > korkeus };
+}
+
+/**
+ * Cupola 3:n reunavalojen painot 0…1 (natiivi IssKuvakulma.Cupola3Valot): aurinko kuvan suunnassa (x oikealle, y ylös),
+ * valo tulee lasin läpi ja osuu karmin sisäreunaan auringon VASTAKKAISELLA puolella; pehmeä keila 0,35. Aurinko suoraan
+ * edessä tai takana (xy alle 0,001): ei reunavaloa.
+ */
+export function cupola3Valot(x, y) {
+  const l = Math.hypot(x, y);
+  return CUPOLA3_REUNAT.map(([rx, ry]) => (l < 1e-3 ? 0 : Math.max(0, (-(x * rx + y * ry) / l + CUPOLA3_KEILA) / (1 + CUPOLA3_KEILA))));
+}
+
+const pehmea01 = (t) => { const u = Math.min(1, Math.max(0, t)); return u * u * (3 - 2 * u); };
+/** ISS auringossa 0…1 (natiivi CupolanValo.Aurinkoisuus): ylös · aurinko verrattuna maan varjon rajaan ISS:n korkeudella. */
+export function aurinkoisuus(ylosDotAurinko, korkeusKm) {
+  const r = 6371 / (6371 + Math.max(0, korkeusKm));
+  return pehmea01((ylosDotAurinko + Math.sqrt(Math.max(0, 1 - r * r))) / 0.02 + 0.5);
+}
+
+/**
+ * Reunavalojen läpinäkyvyydet (natiivi IssKyytiNakyma.PaivitaReunavalo, Cupola 3): aurinko kameran suunnissa
+ * (x oikealle, y ylös, yksikkövektori), ISS:n aurinkoisuus ja kuvan kääntö → [luode, koillinen, lounas].
+ */
+export function cupola3Opasiteetit([x, y], aurinkoOsuus, kaanna) {
+  const s = kaanna ? [-y, x] : [x, y];
+  const sivu = Math.hypot(s[0], s[1]);
+  const voima = 0.95 * Math.min(1, Math.max(0, aurinkoOsuus)) * (0.45 + 0.55 * Math.min(1, Math.max(0, sivu * 1.4)));
+  return cupola3Valot(s[0], s[1]).map((p) => Math.min(1, Math.max(0, voima * p)));
+}
+
+/** Kuvan koko: iPad-kehys leveämmälle ruudulle (natiivi: leveys > 0,5 × korkeus); Cupola 3:lla oma valinta. */
+export function cupolanKoko(leveys, korkeus, malli = 2) {
+  if (malli === 3) return cupola3Kuva(leveys, korkeus).ipad ? 'ipad-2732x2048' : 'iphone-1290x2796';
   return leveys > 0.5 * korkeus ? 'ipad-1536x2732' : 'iphone-1206x2622';
 }
 
 /** Cupolan kerrosten osoitteet takaa eteen: [{ laji, osoite }]. */
 export function cupolanOsoitteet(leveys, korkeus, versio = CUPOLA_VERSIO) {
   const k = CUPOLA_KUVAT[versio] ?? CUPOLA_KUVAT[CUPOLA_VERSIO];
-  const koko = cupolanKoko(leveys, korkeus);
+  const koko = cupolanKoko(leveys, korkeus, k.malli ?? 2);
   return k.kerrokset.map(([laji, nimi]) => ({ laji, osoite: `${k.juuri}${nimi}${koko}.png` }));
 }
 
@@ -663,9 +735,11 @@ export function luoIssKyytiNakyma({
       if (kuvatHaettu) return;
       kuvatHaettu = true;
       const osoitteet = cupolanOsoitteet(ikkuna.innerWidth ?? 390, ikkuna.innerHeight ?? 844);
+      cupola.dataset.malli = String(CUPOLA_KUVAT[CUPOLA_VERSIO]?.malli ?? 2);
+      cupola.dataset.koko = cupolanKoko(ikkuna.innerWidth ?? 390, ikkuna.innerHeight ?? 844, CUPOLA_KUVAT[CUPOLA_VERSIO]?.malli ?? 2);
       for (const { laji, osoite } of osoitteet) {
         const el = doc.createElement('div');
-        el.className = `iss-kyyti-${laji}`;
+        el.className = `iss-kyyti-${laji}${laji.startsWith('valo-') ? ' iss-kyyti-valo' : ''}`;
         el.dataset.laji = laji;
         cupola.appendChild(el);
         kerrokset.set(laji, el);
@@ -715,6 +789,44 @@ export function luoIssKyytiNakyma({
         ? `${ylilento.nimi}: ISS ${Math.round(ylilento.sivuttainKm)} km sivussa`
         : `${ylilento.nimi} · ${ylilennonTeksti(ylilento.ms, simu.nyt())}`;
     }
+  };
+
+  /*
+   * CUPOLA 3:N KÄÄNTÖ JA REUNAVALOT (natiivi c2645317): kuvasäiliö käännetään 90° myötäpäivään, kun ruutu on eri asennossa
+   * kuin kuva, ja kolmen reunavalon läpinäkyvyys lasketaan auringosta kameran suunnissa neljästi sekunnissa (--valo).
+   */
+  let cupola3Aika = -Infinity;
+  const cupola3Tila = { kaanna: false, valot: [0, 0, 0], aurinko: 0 };
+  const paivitaCupola3 = (iss, issP, ms) => {
+    const c = ui?.cupola;
+    if (!c || c.dataset.malli !== '3') return;
+    const nyt = typeof performance !== 'undefined' ? performance.now() : Date.now();
+    if (nyt - cupola3Aika < 250) return;
+    cupola3Aika = nyt;
+    const W = ikkuna.innerWidth ?? 390; const H = ikkuna.innerHeight ?? 844;
+    const { kaanna } = cupola3Kuva(W, H);
+    c.classList.toggle('iss-kyyti-cupola-kaanna', kaanna);
+    c.style.width = kaanna ? `${H}px` : '';
+    c.style.height = kaanna ? `${W}px` : '';
+    const sa = auringonAlihajapiste(jdHetkesta(ms));
+    const ap = pallo.getCoords(sa.lat, sa.lon, 0);
+    const al = Math.hypot(ap.x, ap.y, ap.z) || 1;
+    const a = [ap.x / al, ap.y / al, ap.z / al];
+    const cam = pallo.camera();
+    cam.updateMatrixWorld?.();
+    const e = cam.matrixWorld?.elements;
+    if (!e) return;
+    const oikea = [e[0], e[1], e[2]]; const ylos = [e[4], e[5], e[6]]; const eteen = [-e[8], -e[9], -e[10]];
+    const piste = (u, v) => u[0] * v[0] + u[1] * v[1] + u[2] * v[2];
+    const k = [piste(a, oikea), piste(a, ylos), piste(a, eteen)];
+    const kl = Math.hypot(...k) || 1;
+    const il = Math.hypot(issP.x, issP.y, issP.z) || 1;
+    const aur = aurinkoisuus(piste([issP.x / il, issP.y / il, issP.z / il], a), iss.korkeusM / 1000);
+    const valot = cupola3Opasiteetit([k[0] / kl, k[1] / kl], aur, kaanna);
+    ['valo-nw', 'valo-ne', 'valo-sw'].forEach((laji, i) => {
+      c.querySelector(`.iss-kyyti-${laji}`)?.style.setProperty('--valo', valot[i].toFixed(3));
+    });
+    Object.assign(cupola3Tila, { kaanna, valot, aurinko: +aur.toFixed(3) });
   };
 
   /** UI:n tila: auki kyydissä (ei paluussa), Cupola ikkunassa. */
@@ -967,6 +1079,7 @@ export function luoIssKyytiNakyma({
 
     /* ISS-malli seurannassa, kun kamera on alle 3 000 km:n päässä. */
     const issP = pallo.getCoords(iss.lat, iss.lon, iss.korkeusM / MAAN_SADE_M);
+    if (kehysNakyy) paivitaCupola3(iss, issP, ms);
     const etaisyys = Math.hypot(a.silma[0] - issP.x, a.silma[1] - issP.y, a.silma[2] - issP.z);
     mallinakyy = Boolean(malli) && kyyti.tila === TILA.seuranta && etaisyys < MALLIN_NAKYMISRAJA_M * metri;
     if (malli) {
@@ -1042,6 +1155,7 @@ export function luoIssKyytiNakyma({
         kehys: kehysNakyy,
         kehysOk: ui?.kehysOk?.() ?? null,
         kerrokset: ui?.kerrokset?.() ?? [],
+        cupola3: ui?.cupola?.dataset.malli === '3' ? { ...cupola3Tila, valot: [...cupola3Tila.valot] } : null,
         tieto: ui && !ui.juuri.hidden ? ui.tieto.textContent : null,
         live: simu.live && ui ? !ui.live.hidden && ui.live.textContent === 'LIVE' : false,
         aika: { simMs: Math.round(ms), eroMs: Math.round(ms - Date.now()), live: simu.live, kelaa: simu.kelaa, nopeus: +simu.nopeus().toFixed(1) },
