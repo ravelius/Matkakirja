@@ -232,21 +232,52 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Löydös 161 (omistaja, build 21 -koe; tarkennus 11.4x, sitova): kohdemaan 3D-lipputanko (Natiivisepän
-        /// Lipputanko) maan itäreunaan maalle, ei pääkaupunkiin. Paikka on Karttasepän ankkurista lippu_lonlat
-        /// ({ISO3: [lon, lat]}, sisältöpaketissa <see cref="LippuAnkkuritPolku"/>); ilman ankkuria ei tankoa.
-        /// Lippu on sama 1873-lipun tekstuuri kuin kartussissa.
+        /// Lipputanko) maalle, ei pääkaupunkiin. OIKEA YLÄKULMA (omistaja 29.9.2026 klo 23.2x: "Lippu pitää olla aina maan
+        /// oik. yläkulmassa. Muuten se näkyy huonosti kun koko maa on näytöllä."): paikka lasketaan maarajoista
+        /// (Linssisepän Lippukulma: mantereen koilliskulma, 15 km sisämaassa, kaupungeista erillään). Varalla, jos maarajat
+        /// eivät ole ladattuina, Karttasepän vanha ankkuri lippu_lonlat ({ISO3: [lon, lat]}, <see cref="LippuAnkkuritPolku"/>);
+        /// ilman kumpaakaan ei tankoa. Lippu on sama 1873-lipun tekstuuri kuin kartussissa.
         /// </summary>
         Texture kiinnitettyLippu;
 
         void AsetaLipputanko(MaaTiedot m, Texture lippu)
         {
             string maa = m.Iso3;
-            UiKerros.Hae().StartCoroutine(LippuAnkkuri(maa, a =>
+            UiKerros.Hae().StartCoroutine(LippuPaikka(maa, a =>
             {
                 if (iso != maa) return;
                 if (a.HasValue) Lipputanko.Aseta(maa, a.Value.Lat, a.Value.Lon, lippu);
                 else Lipputanko.Pois();
             }));
+        }
+
+        /// <summary>Kuvapari ennen/jälkeen: true = vanha itäreunan ankkuri (`ui kartuscha lippu vanha|kulma`).</summary>
+        public static bool VanhaLippupaikka;
+
+        /// <summary>Asettaa nykyisen maan tangon uudelleen (paikkasäännön vaihto testikomennolla).</summary>
+        public void PaivitaLipputanko()
+        {
+            var m = UiSisalto.Maa(iso);
+            if (m != null && kiinnitettyLippu != null) AsetaLipputanko(m, kiinnitettyLippu);
+        }
+
+        static readonly Dictionary<string, (double Lat, double Lon)?> lippukulmat = new Dictionary<string, (double Lat, double Lon)?>();
+
+        /// <summary>Koilliskulma maarajoista (odottaa latausta enintään 5 s), muuten vanha ankkuri.</summary>
+        static System.Collections.IEnumerator LippuPaikka(string maa, Action<(double Lat, double Lon)?> valmis)
+        {
+            if (VanhaLippupaikka) { yield return LippuAnkkuri(maa, valmis); yield break; }
+            float raja = Time.realtimeSinceStartup + 5f;
+            while (LinssiOhjain.MaatAineisto == null && Time.realtimeSinceStartup < raja) yield return null;
+            if (!lippukulmat.TryGetValue(maa, out var p) && LinssiOhjain.MaatAineisto?.Hae(maa) is Matkakirja.Linssit.Maat.Maa rajat)
+            {
+                var kaupungit = new List<(double Lat, double Lon)>();
+                foreach (var k in UiSisalto.Kaikki) if (k.Maa == maa) kaupungit.Add((k.Lat, k.Lon));
+                p = Matkakirja.Linssit.Maat.Lippukulma.Laske(rajat, kaupungit);
+                lippukulmat[maa] = p;
+            }
+            if (p.HasValue) { valmis(p); yield break; }
+            yield return LippuAnkkuri(maa, valmis);
         }
 
         /// <summary>Karttasepän lipputankoankkurit sisältöpaketissa (Siirtoseppä vie; polku vahvistetaan datan tullessa).</summary>
