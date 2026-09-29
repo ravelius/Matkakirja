@@ -210,8 +210,8 @@ namespace Matkakirja.Natiivi
         //   rivi 2: Uusi peli · Muut · Kehittäjä (vain kehittäjätilassa)
         //   Muut avaa samannäköisen paneelin päälle: loput toiminnot ja ‹ Takaisin.
 
-        /// <summary>Uusi tiivis nappirivi valikon yläosaan.</summary>
-        public VisualElement LisaNappirivi() => Rakenne.El("mk-valikkorivi", lisaosa, PickingMode.Ignore);
+        /// <summary>Uusi nappirivi pääsivulle tai annettuun osaan (Asetukset).</summary>
+        public VisualElement LisaNappirivi(VisualElement isa = null) => Rakenne.El("mk-valikkorivi", isa ?? lisaosa, PickingMode.Ignore);
 
         Button ValikkoNappi(VisualElement isa, string nimi, string ikoni, Action painettu, string luokka = "mk-valikkonappi")
         {
@@ -225,21 +225,27 @@ namespace Matkakirja.Natiivi
             return b;
         }
 
-        /// <summary>Toiminto: valikko sulkeutuu ja toiminto ajetaan (nakyy kysytään avattaessa).</summary>
-        public Button LisaNappi(VisualElement rivi, string nimi, string ikoni, Action toiminto, Func<bool> nakyy = null)
+        // VALIKKOJEN KOLME NAPPITYYPPIÄ (omistaja 29.9.2026 klo 20.2x: "järkeistä noita valikoita … eri väripohjia"; Päätoimittajan
+        // malli): sama muoto ja korkeus (48 pt), raot 12 pt, sama kulma ja reuna. NAVIGOINTI avaa näkymän (kuvake + nimi + ›,
+        // LisaAlinakyma), KYTKIN on päällä meripihka ja pois pergamentti himmeällä tekstillä, TOIMINTO on kertatoiminto ohuella
+        // reunuksella ilman täyttöä (Matkakirja.uss/Linssit.uss .mk-valikkonappi--*).
+
+        /// <summary>Toiminto: valikko sulkeutuu ja toiminto ajetaan (nakyy kysytään avattaessa); pysy = valikko jää auki.</summary>
+        public Button LisaNappi(VisualElement rivi, string nimi, string ikoni, Action toiminto, Func<bool> nakyy = null, bool pysy = false)
         {
-            var b = ValikkoNappi(rivi, nimi, ikoni, () => { Sulje(); toiminto?.Invoke(); });
+            var b = ValikkoNappi(rivi, nimi, ikoni, () => { if (!pysy) Sulje(); toiminto?.Invoke(); }, "mk-valikkonappi mk-valikkonappi--toiminto");
             if (nakyy != null) lisarivit.Add((b, nakyy));
             return b;
         }
 
-        /// <summary>Kytkin: vaihtaa tilan valikon pysyessä auki; päällä-tila korostettuna.</summary>
-        public Button LisaKytkin(VisualElement rivi, string nimi, string ikoni, Func<bool> paalla, Action vaihda)
+        /// <summary>Kytkin: vaihtaa tilan valikon pysyessä auki; päällä-tila korostettuna (nakyy kysytään avattaessa).</summary>
+        public Button LisaKytkin(VisualElement rivi, string nimi, string ikoni, Func<bool> paalla, Action vaihda, Func<bool> nakyy = null)
         {
             Button b = null;
             b = ValikkoNappi(rivi, nimi, ikoni, () => { vaihda?.Invoke(); PaivitaKytkimet(); });
             b.AddToClassList("mk-valikkonappi--kytkin");
             kytkimet.Add((b, paalla));
+            if (nakyy != null) lisarivit.Add((b, nakyy));
             return b;
         }
 
