@@ -119,7 +119,7 @@ export function maamaski(ne, askel = MASKI) {
 }
 
 /** Janan luokka: true = maaraja (molemmin puolin maata, eri maat). */
-function janaOnRaja(maski, [ax, ay], [bx, by], d = ETAISYYS, rannat = null) {
+export function janaOnRaja(maski, [ax, ay], [bx, by], d = ETAISYYS, rannat = null) {
   let dx = bx - ax; if (dx > 180) dx -= 360; if (dx < -180) dx += 360;
   const kx = Math.cos(((ay + by) / 2) * (Math.PI / 180)); // pituusaste lyhenee
   const vx = dx * kx; const vy = by - ay; const l = Math.hypot(vx, vy);
