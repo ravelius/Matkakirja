@@ -9127,3 +9127,7 @@ Omistaja 29.9. klo 09.1x (kaappaus docs/raportit/kaappaukset/omistaja-20260929/y
 ## OMISTAJA: LOGO AVAA TEKIJÄ- JA LISENSSITIEDOT, NIISTÄ NAPPI TILANNESIVULLE (29.9.2026 klo 09.08)
 
 Omistaja 29.9. klo 09.1x sanatarkasti: "Ja matkakirjan logoa painavalla avautuisi ne tekijä- ja lisenssitiedot, ja niiden tietojen yläreunassa olisi nappi, mistä pääsisi pelin tilannesivulle, missä on ne linssit ja kehityksen yhteenveto ja niin poispäin." → Yläpalkkierään (loki 09.07): logon napautus avaa tekijä- ja lisenssitiedot (avausanimaatiolla), niiden yläreunaan nappi pelin tilannesivulle projekti.html (linssit, kehityksen yhteenveto); natiivissa sivu avautuu selaimeen. Pelikoodari (web) + Natiivi-UI (natiivi).
+
+## OMISTAJA: PUURADIO KORJAUSKIERROKSELLE; 1.0.44 KOOTAAN KLO 11.30 ASTI (29.9.2026 klo 09.10)
+
+(1) Codexin puuradio yhtenä kuvana (codex-fable-radio-yksikuva-20260929.md, 9b1270bd1: puun väri ja muoto oikein, mutta runko tasaisesti valaistu ja näyttö tumma) näytetty omistajalle heti; omistaja kortilla 29.9. klo 09.1x 'Korjaus: varjo ja hehku' → Codexille posti/fable-codex-radio-yksikuva-korjaus-20260929.md (8515cff42): enemmän varjoa, meripihkainen hehkuva näyttö, lamppujen valo puun ja messingin pinnoilla, ohut sinertävä takareunavalo; muoto/mitat/tiedostot ennallaan, v2. (2) BUILD 44 = proto master 634be415 (maakuntalappu + minipulu, savuke 4/4) pidossa: 1.0.44 kootaan BUILD 44 + Natiivi-UI:n avausanimaatiot 222ce07e + Linssisepän Pulun ISS-tervetulo; takaraja klo 11.30, jolloin vienti sillä mitä junassa on. TF 1.0.43 viennissä (36528067177).
