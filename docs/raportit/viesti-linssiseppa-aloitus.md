@@ -1,4 +1,4 @@
-# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 01.4x)
+# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 07.1x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
@@ -13,21 +13,22 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260929.md** (Cupola 3 pyöreä kattoikkuna: omistajan OK, umpinainen alfa
-  läpikuulon juurisyynä, iPad-keskitys background-positionilla, merge-pyyntö 1.0.41; nimiöt v2b JUMI Päätoimittajalla;
-  -20260928-u.md aiempi)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260929-b.md**: astroselite on juna/b13:ssa. Pulun taulu ja LISÄYS 6 ovat
+  haarassa linssiseppa/pulun-taulu 9750340f, ja niiden uusintakierros ja merge-pyyntö ovat kesken. LisaaRivi on
+  Linssiseppä 2:n avaruuskävelylle. Aiemmat luovutukset: -20260929.md (Cupola 3) ja -20260928-u.md.
 - docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)
 - docs/raportit/iss-realismi-suunnitelma-20260928.md (ISS-realismin kaavat, vakiot, datalähteet ja tila)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys: luovutus -20260929 kohta 1:**
-1. Cupola 3:n merge-pyyntö (linssiseppa/cupola3 6da6664c) on Natiivisepällä 1.0.41:tä varten: vastaa korjauspyyntöihin
-   (worktree uudelleen luovutuksen komennolla) ja seuraa mergeä. Web-pari: Siirtosepän #3587 samoilla kuvilla.
-2. JUMI: Natiivi-UI:n nimiöt v2b (7f799271) laitetarkistus odottaa Päätoimittajan päätöstä (luokitin esti minulta).
-3. Cupola 2 -kuvien sama alfa 252–254 (katto- ja horisontti-A/B): korjaa cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön.
-4. Natiivin astroselite webin mallin jälkeen (PR #3527). Kohta 4 (BMNG, Kuu, tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
+**Järjestys: luovutus -20260929-b kohta 1:**
+1. Pulun taulun ja LISÄYS 6:n uusintakierros. Julkaisija antaa NYT-vuoron haaralle linssiseppa/pulun-taulu 9750340f.
+   Tarkista, että Pulu näkyy Cupolassa ja linkki on vasemmassa laidassa. Tee sen jälkeen kuvaparit (koosta_taulu.py) ja
+   merge-pyyntö Natiivisepälle.
+2. Kerro Linssiseppä 2:lle taulun lopullinen SHA (LisaaRivi avaruuskävelylle).
+3. Cupola 2 -kuvien alfa 252–254 korjataan cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön. Kohta 4 (BMNG, Kuu,
+   tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
