@@ -292,6 +292,15 @@ namespace Matkakirja.Natiivi
             return new Laatikko(r.xMin, ele ? r.yMin - PulunTaulu.PulunEleenVaraPt : r.yMin, r.xMax, r.yMax);
         }
 
+        /// <summary>Näkyvän avaajan keskipiste (testikomennon napautukseen): minipulu, Pulun lintu tai Näkymät-nappi.</summary>
+        Vector2? AvaajanKeski()
+        {
+            if (astro.Kuva.Auki && astro.Kuva.MinipulunLaatikko.width > 0) return astro.Kuva.MinipulunLaatikko.center;
+            if (Pulu.Hae().Nakyvissa && Pulu.Hae().Lintu.width > 0) return Pulu.Hae().Lintu.center;
+            if (nakymat.resolvedStyle.display == DisplayStyle.Flex && nakymat.worldBound.width > 0) return nakymat.worldBound.center;
+            return null;
+        }
+
         // --- automaattinen avaus ---------------------------------------------------------
 
         void AutomaattiKierros()
@@ -423,7 +432,9 @@ namespace Matkakirja.Natiivi
             var r = paneeli.worldBound;
             var l = Linssi();
             var p = PulunLaatikko();
-            return $"taulu {(Auki ? "auki" : "kiinni")} {paikka ?? "-"} {r.xMin:0},{r.yMin:0}–{r.xMax:0},{r.yMax:0}, pulu {(p.HasValue ? p.Value.ToString() : "-")}, rivejä {rivit.childCount}, "
+            var a = AvaajanKeski();
+            return $"taulu {(Auki ? "auki" : "kiinni")} {paikka ?? "-"} {r.xMin:0},{r.yMin:0}–{r.xMax:0},{r.yMax:0}, pulu {(p.HasValue ? p.Value.ToString() : "-")}, "
+                + $"avaaja {(a.HasValue ? $"{a.Value.x:0} {a.Value.y:0}" : "-")}, rivejä {rivit.childCount}, "
                 + $"moodi {Nykyinen(l)}, kyyti {(l != null ? l.Kyyti.ToString() : "-")}{(l != null && l.KyytiSiirtyy ? " (siirtyy)" : "")}, "
                 + $"nakymat {(nakymat.resolvedStyle.display == DisplayStyle.Flex ? "näkyy" : "piilossa")}, automaatti {automaatti}, "
                 + $"loki [{string.Join(" ", loki.GetRange(Math.Max(0, loki.Count - 8), Math.Min(8, loki.Count)))}]";
