@@ -28,6 +28,16 @@ import { packById } from './pack.js';
 import { avaaPikatie, pikatienKaupunki, rakennaPikatiePeli } from './kehittaja-pikatie.js';
 import { avaaLehtikuori, lehtikuorenKaupunki } from './lehtikuori.js';
 import { ohitaSaapumisluenta, suljeFokusvirta } from './fokusvirta.js';
+/*
+ * KORJAUS 29.9.2026 (mergen jälkeen, pillerivalikko-korjauskierros):
+ * js/main.js paivitaKehittajaValikko kutsuu tätä (rivi ~2282), mutta
+ * puuttuva tuonti näkyi vain SILLOIN kun tiedostot ladataan oikeina
+ * ES-moduuleina (Playwright/kehitystila) — yhden tiedoston versiossa
+ * (tools/build-standalone.mjs) nimi olisi näkynyt "ilmaiseksi" samasta
+ * globaalista näkyvyysalueesta, joten tools/tarkista-niputus.mjs ei
+ * huomannut puutetta.
+ */
+import { paivitaPelaajanakymaNappi } from './pelaajanakyma.js';
 import {
   kaynnistaPohjaMusiikki, startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
 } from './ambience-stream.js';
@@ -166,7 +176,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2403';
+const APP_VERSION = '2026-09-21.2404';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
