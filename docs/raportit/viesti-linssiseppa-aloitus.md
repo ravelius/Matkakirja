@@ -1,4 +1,4 @@
-# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 10.3x)
+# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 10.2x)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
@@ -22,7 +22,7 @@ Lue:
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys (tila 29.9. klo 10.3x):**
+**Järjestys (tila 29.9. klo 10.2x):**
 0. Pulun ISS-tervetulo (web #3575) on MERGE-PYYNNÖSSÄ Natiivisepällä 1.0.45:een: proto linssiseppa/pulun-tervetulo 5b3acd53.
    Se vaatii natiivi-ui/avaukset 3621d00d:n (Ponnahdus). Raportti, mitat ja poikkeamat ovat tiedostossa
    docs/raportit/pulu-tervetulo-natiivi-20260929.md. Laitekierros 9/9 PASS iPhonella ja iPadilla, ja kuvaparit ovat kansiossa
@@ -31,7 +31,7 @@ Lue:
    `ui linssi tervetulo [tila|aloita|ohita|pura|nollaa]`. Laiteajossa kertoja on oltava päällä (`puhe paalle`), muuten tervetulo
    on mykistetty.
 1. Pulun taulu ja LISÄYS 6 ovat MASTERISSA (9750340f, master 634be415).
-2. Taulun SHA on kerrottu Linssiseppä 2:lle 29.9. klo 10.3x.
+2. Taulun SHA on kerrottu Linssiseppä 2:lle 29.9. klo 10.2x.
 3. Cupola 2 -kuvien alfa 252–254 korjataan cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön. Kohta 4 (BMNG, Kuu,
    tähdet) ja Maapallon vuosi ovat Linssiseppä 2:lla.
 
