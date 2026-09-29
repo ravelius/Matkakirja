@@ -3,10 +3,10 @@
  *
  * Päätoimittajan käsikirjoitus 28.9.2026 (docs/raportit/
  * pulu-iss-kasikirjoitus-20260928.md, omistaja klo 19.3x): Pulu toivottaa
- * avaruuslinssiin tervetulleeksi, suosittelee, pyöräyttää pallon, räppäisee
- * väärän näkymän, pahoittelee ja luovuttaa ohjauksen (A–C,
- * js/linssit/pulu-tervetulo.js) — ja palaa radioon, kun pelaaja menee
- * ISS:n kyytiin (D, tämä moduuli).
+ * avaruuslinssiin tervetulleeksi (A, js/linssit/pulu-tervetulo.js; omistaja
+ * 29.9.2026: B- ja C-ryhmät pois, tervetulo ilman kuplaa Pulun taulun
+ * aikana) — ja palaa radioon, kun pelaaja menee ISS:n kyytiin (D, tämä
+ * moduuli).
  *
  * TEKSTIT OVAT KAANONIA js/livia.js:n LIVIAN_ISS-taulussa, äänitteet
  * eleven_v4:llä esigeneroituja (tools/generoi-pulu.mjs, lähteet iss-a …
@@ -47,7 +47,7 @@ import {
 } from '../liviapuhe.js';
 import { luentaKytkinPaalla } from '../luenta.js';
 import { musiikkiKonteksti } from '../musiikkivahvistin.js';
-import { polloKuplatPois, polloLinssikupla } from '../pollo.js';
+import { polloKuplatPois, polloLinssikupla, polloPuheIlmanKuplaa } from '../pollo.js';
 
 /** Quindar-piippauksen taajuus (NASA Apollo/ISS: 2 525 Hz alku, 2 475 Hz loppu; käsikirjoitus: 2 525 molemmat). */
 export const QUINDAR_TAAJUUS_HZ = 2525;
@@ -176,6 +176,26 @@ export function sanoPulunIssRepliikki(ui, repliikki, {
     },
   });
   return nakyi ? { audio, repliikki } : null;
+}
+
+/**
+ * SANOO YHDEN ISS-REPLIIKIN ILMAN KUPLAA (omistaja 29.9.2026: tervetulo
+ * puhuu Pulun taulun aikana). Portit ovat samat kuin kuplalla (Livia on
+ * pelissä, chatti ei ole auki, js/pollo.js polloPuheIlmanKuplaa), ja
+ * repliikki kirjataan chattiin. Palauttaa kahvan tai null, jolloin mitään
+ * ei soiteta.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {object} repliikki pulunIssRepliikki()
+ * @param {object} [riippuvuudet] testien korvattavat kutsut
+ * @returns {{audio: HTMLAudioElement|null, repliikki: object}|null}
+ */
+export function sanoPulunIssRepliikkiIlmanKuplaa(ui, repliikki, {
+  puhe = polloPuheIlmanKuplaa, soita = soitaLivianAani,
+} = {}) {
+  if (!repliikki || !puhe(repliikki.teksti)) return null;
+  const audio = soita(ui, repliikki.lahde, repliikki.indeksi, { teksti: repliikki.teksti });
+  return { audio, repliikki };
 }
 
 /**

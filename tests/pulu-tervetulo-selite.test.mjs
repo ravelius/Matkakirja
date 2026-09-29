@@ -2,23 +2,20 @@
  * PULUN TERVETULO EI VAIENNA ITSEÄÄN SELITTEEN LUENNALLA (löydös:
  * Linssiseppä 1 / Päätoimittaja 29.9.2026, PR ravelius/Matkakirja#3575).
  *
- * JUURISYY: C1 avaa väärän kohteen (Saharan silmä) valokuvan tervetulon
- * omalla avaaKohde-kutsulla (js/linssit/satelliitti.js). Kuvan avautuessa
- * satelliitti.js:n `nayta()` kutsuu automaattisesti `lueSelite(h)`:tä, joka
- * käynnistää kertoja-äänisen striimiluennan selitteestä (js/lukija.js
- * lueAaneen). Tämä merkitsee kertojan puhujaksi (js/luenta.js
- * merkitsePuhuja), ja koska js/liviapuhe.js:n soitaLivianAani ei koskaan
- * ala kertojan päälle (`if (vaista && puhujaAanessa(PUHUJA_PULU)) return
- * null;`, rivi ~1687), C2:n Livian ääni jää kokonaan soimatta.
+ * JUURISYY (alkuperäinen A–C-jakso): C1 avasi väärän kohteen valokuvan
+ * tervetulon omalla avaaKohde-kutsulla, ja kuvan avautuessa satelliitti.js:n
+ * `nayta()` kutsui automaattisesti `lueSelite(h)`:tä, joka käynnisti
+ * kertoja-äänisen striimiluennan (js/lukija.js lueAaneen). Kertoja
+ * merkittiin puhujaksi (js/luenta.js merkitsePuhuja), ja koska
+ * js/liviapuhe.js:n soitaLivianAani ei ala kertojan päälle, C2:n Livian
+ * ääni jäi soimatta.
  *
- * KORJAUS: satelliitti.js:n avaaHavaintokortti saa uuden parametrin
+ * KORJAUS JÄÄ VOIMAAN, vaikka B ja C poistuivat (omistaja 29.9.2026):
+ * satelliitti.js:n avaaHavaintokortti saa parametrin
  * `automaattiluentaSallittu`, ja `lueSelite` ohittaa automaattisen
  * luennan, kun se on false. `avaaKohde` laskee arvon `tervetuloKesken()`-
- * apufunktiolla, joka tarkistaa `aloitaPulunTervetulo`-kahvan
- * `tila().vaihe`:n — sama idiomi kuin js/linssit/pulu-taulu.js:n
- * automaattiKierros jo käyttää ('odottaa' ja 'puhuu' ovat kesken olevat
- * vaiheet). Pelaajan oma kuvan avaus (tervetulon jälkeen tai ennen sitä)
- * ei koske tätä porttia ollenkaan.
+ * apufunktiolla ('odottaa' ja 'puhuu' ovat kesken olevat vaiheet), joten
+ * kuva, joka aukeaa paljastuksen ja A1:n välissä, ei vaienna tervetuloa.
  *
  * Tämä testi varmistaa kaksi asiaa ilman selainta (satelliitti.js:n
  * avaaHavaintokortti vaatii oikean DOM:n, samoin kuin
@@ -30,8 +27,8 @@
  *      käyttää samaa vaihe-tarkistusta kuin pulu-taulu.js.
  *   2. KÄYTTÄYTYMINEN: aloitaPulunTervetulo()-kahvan tila().vaihe — jota
  *      tervetuloKesken lukee — on 'odottaa' tai 'puhuu' koko A1:stä
- *      C2:n loppuun asti (myös C1:n kuvan ajan), ja siirtyy päättyneeksi
- *      ('valmis') heti jakson jälkeen tai ('ohitettu') heti ohituksesta.
+ *      A2:n loppuun asti, ja siirtyy päättyneeksi ('valmis') heti jakson
+ *      jälkeen tai ('ohitettu') heti ohituksesta.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -61,17 +58,17 @@ test('avaaHavaintokortti ottaa automaattiluentaSallittu-parametrin (oletus: sall
 
 test('avaaKohde antaa automaattiluentaSallittu: () => !tervetuloKesken() joka avaukselle', () => {
   assert.match(lahde, /automaattiluentaSallittu: \(\) => !tervetuloKesken\(\),/);
-  // Sama tervetulo-kahva, joka avaa C1:n väärän kuvan.
+  // Sama tervetulo-kahva, jonka vaihetta portti lukee.
   assert.match(lahde, /const tervetulo = avaruus \? vaihe\('pulun-tervetulo', \(\) => aloitaPulunTervetulo\(\{/);
 });
 
 test('tervetuloKesken käyttää samaa vaihe-tarkistusta kuin pulu-taulu.js:n automaattiKierros', () => {
   const taulu = lue('../js/linssit/pulu-taulu.js');
   assert.match(lahde, /const tervetuloKesken = \(\) => \{\s*if \(!tervetulo\) return false;\s*let vaihe = null;\s*try \{ vaihe = tervetulo\.tila\?\.\(\)\?\.vaihe \?\? null; \} catch \{ vaihe = null; \}\s*return \['odottaa', 'puhuu'\]\.includes\(vaihe\);\s*\};/);
-  assert.match(taulu, /valmis = !\['odottaa', 'puhuu'\]\.includes\(vaihe\);/);
+  assert.match(taulu, /const tervetuloKesken = \(\) => \{\s*let vaihe = null;\s*try \{ vaihe = tervetulo\?\.tila\?\.\(\)\?\.vaihe \?\? null; \} catch \{ vaihe = null; \}\s*return \['odottaa', 'puhuu'\]\.includes\(vaihe\);\s*\};/);
 });
 
-/* ---------- 2. käyttäytyminen: tila().vaihe koko A–C:n ajan ---------- */
+/* ---------- 2. käyttäytyminen: tila().vaihe koko A1–A2:n ajan ---------- */
 
 function luoKello() {
   let nyt = 0;
@@ -166,50 +163,31 @@ const kesken = (kahva) => ['odottaa', 'puhuu'].includes(kahva.tila().vaihe);
 
 test.beforeEach(() => nollaaPulunTervetuloIstunto());
 
-test('tervetulo: automaattiluenta on estetty (kesken) koko A1:stä C2:n loppuun, myös C1:n kuvan ajan', () => {
-  const kello = luoKello();
-  let vaaraAuki = 0;
+test('tervetulo: automaattiluenta on estetty jo odotusvaiheessa (ennen A1:tä)', () => {
   const kahva = aloitaPulunTervetulo({
-    avaruus: luoKamera(), kello, varasto: luoMuisti(), doc: luoDokumentti(),
-    sano: luoPuhuja().sano, mykistetty: () => false, vahennaLiiketta: false,
-    avaaVaaraKohde: () => { vaaraAuki += 1; return true; }, suljeKortti: () => {},
+    avaruus: luoKamera(), kello: luoKello(), varasto: luoMuisti(), doc: luoDokumentti(),
+    sano: luoPuhuja().sano, mykistetty: () => false,
   });
   assert.ok(kahva);
-  // Ennen A1:tä (verho/hengähdys): ei vielä käynnistetty, mutta portti on
-  // silti kiinni, koska handle on olemassa eikä 'odottaa'-vaihe ole ohi.
   assert.equal(kesken(kahva), true, 'odottaa-vaihe estää automaattiluennan jo ennen A1:tä');
-  void vaaraAuki;
 });
 
-test('tervetulo: A1–C2 asti kesken, ja heti C2:n jälkeen luenta vapautuu (valmis)', () => {
+test('tervetulo: A1–A2 asti kesken, ja heti A2:n jälkeen luenta vapautuu (valmis)', () => {
   const kello = luoKello();
   const puhuja = luoPuhuja();
-  let vaaraAuki = 0;
   const kahva = aloitaPulunTervetulo({
     avaruus: luoKamera(), kello, varasto: luoMuisti(), doc: luoDokumentti(), sano: puhuja.sano,
-    mykistetty: () => false, vahennaLiiketta: false,
-    avaaVaaraKohde: () => { vaaraAuki += 1; return true; }, suljeKortti: () => {},
+    mykistetty: () => false,
   });
   kello.kulje(1000); // verho pois + hengähdys → A1 alkaa
   assert.equal(puhuja.sanotut.at(-1), 'iss-a-1');
   assert.equal(kesken(kahva), true);
-
-  for (let i = 0; i < 3; i += 1) { soitaLoppuun(kello, puhuja); kello.kulje(400); } // A1→A2→B1→B2
-  // B2 kesken ja kesken myös C1:n (väärän kuvan) räppäisyn ajan.
+  soitaLoppuun(kello, puhuja);
+  assert.equal(kesken(kahva), true, 'hengähdys A1:n ja A2:n välissä on yhä kesken');
+  kello.kulje(400); // A1 → A2
+  assert.equal(puhuja.sanotut.at(-1), 'iss-a-2');
   assert.equal(kesken(kahva), true);
-  soitaLoppuun(kello, puhuja); kello.kulje(400); // B2 → C1
-  assert.equal(puhuja.sanotut.at(-1), 'iss-c-1');
-  const c1 = puhuja.soittimet.at(-1);
-  c1.paused = false; c1.laukaise('playing');
-  kello.kulje(250); // [tap]: avaaVaaraKohde() kutsutaan — väärä kuva aukeaa
-  assert.equal(vaaraAuki, 1, 'C1 avasi väärän kuvan');
-  assert.equal(kesken(kahva), true, 'automaattiluenta on yhä estetty kesken C1:n kuvan');
-
-  soitaLoppuun(kello, puhuja); kello.kulje(400); // C1 → C2
-  assert.equal(puhuja.sanotut.at(-1), 'iss-c-2');
-  assert.equal(kesken(kahva), true, 'C2 (Livian ääni) on vielä kesken');
-
-  soitaLoppuun(kello, puhuja); kello.kulje(400); // C2 loppuu → jakso valmis
+  soitaLoppuun(kello, puhuja); kello.kulje(400); // A2 loppuu → jakso valmis
   assert.equal(kahva.tila().vaihe, 'valmis');
   assert.equal(kesken(kahva), false, 'jakson jälkeen automaattiluenta vapautuu');
 });
@@ -220,8 +198,7 @@ test('tervetulo: ohitus vapauttaa automaattiluennan heti (vaihe muuttuu ohitetuk
   const doc = luoDokumentti();
   const kahva = aloitaPulunTervetulo({
     avaruus: luoKamera(), kello, varasto: luoMuisti(), doc, sano: puhuja.sano,
-    mykistetty: () => false, vahennaLiiketta: false,
-    avaaVaaraKohde: () => true, suljeKortti: () => {},
+    mykistetty: () => false,
   });
   kello.kulje(1000);
   assert.equal(kesken(kahva), true);

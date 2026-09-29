@@ -595,7 +595,10 @@ export const TAGIT = {
    * piippausta malli ei tuota, joten se soitetaan pelissä siniäänenä
    * (js/linssit/pulu-iss.js) eikä sille ole tagia.
    */
-  'iss-a-1': { alku: '[wings flapping] [excited]', kohdat: [['Tämä on Astronautin kamera', '[proud]']] },
+  // Omistaja 29.9.2026: alussa kuului "todella outo ääni" = [wings flapping]
+  // -tehoste ennen ensimmäistä sanaa. Tervetuloon ei tehosteita eikä
+  // alkutagia (viuhahdukset pois äänitehosteista).
+  'iss-a-1': { kohdat: [['Tämä on Astronautin kamera', '[proud]']] },
   'iss-a-2': { alku: '[mischievously]', kohdat: [['Minä en ole koskaan lentänyt niin korkealle. Setäni väittää lentäneensä, mutta setä väittää paljon.', '[pause]']] },
   'iss-b-1': { alku: '[curious]' },
   'iss-b-2': {
