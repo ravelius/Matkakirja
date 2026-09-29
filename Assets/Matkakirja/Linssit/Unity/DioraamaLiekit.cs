@@ -431,6 +431,13 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalFloat(IdAika, (float)t);
             foreach (var e in esiintymat)
             {
+                // Elävä linna: toisen tilan (tunnelma) tyhjäliekki piiloon leikkauskäytävässä, kuten sen leivottu teline.
+                if (e.Kolme && e.Go != null && e.Paikka?.LiekkiId != null && e.Paikka.LiekkiId.StartsWith("tyhja:") && e.TilaId != DioraamaUlkokuori.LeikkausTila)
+                {
+                    var r = e.Go.GetComponent<MeshRenderer>();
+                    bool piilo = DioraamaUlkokuori.Leikkauksessa(e.Go.transform.position);
+                    if (r != null && r.enabled == piilo) { r.enabled = !piilo; foreach (var rr in e.Go.GetComponentsInChildren<MeshRenderer>()) rr.enabled = !piilo; }
+                }
                 // 3D-liekki laskee kaiken (vääntö, kipinöiden nousu/ajelehdus/sammuminen) kärkivarjostimessa
                 // yllä asetetusta globaalista -- ei billboard-kääntöä (oikea 3D-mesh näyttää oikealta kaikista
                 // kulmista) eikä per-ruutu CPU-työtä, ks. tiedoston alkukommentti.
