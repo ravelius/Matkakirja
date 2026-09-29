@@ -9223,3 +9223,7 @@ Päätoimittaja 29.9.2026: rivi 11 (natiivin aloituskaupungin valinta yöpallona
 ## OMISTAJA: ISS-CUPOLA PELKISTETYKSI, KYTKIMET ALAREUNAAN, PULU ULKONA (29.9.2026 klo 17.26)
 
 Omistaja 29.9.2026: kun ollaan ISS:n sisällä (Cupola), Pulu on ulkona avaruuskävelyllä ikkunan takana. Cupolan näkymässä ei mitään peliin liittyviä elementtejä (ei 3D-nostoja, merkkejä eikä nimiöitä), vain kartta efekteineen. Cupola heijaa hieman (kellunnan tunne; Vähennä liikettä poistaa). Vasemman yläreunan säätönapit alareunaan oikean avaruusaluksen kytkimiksi Cupolan estetiikalla: Codexille kytkinmoduulitilaus e449d52a1 (posti/fable-codex-iss-kytkimet-20260929.md), valokuvamainen, ohjauspöytä ≤ 15 % ruudusta. Toteutus Linssiseppä 2 (natiivi ensin, sitten web). Astronautin kameran Pulun tervetulo lyhenee kolmasosaan ilman puhekuplia, taulu auki heti, viuhahdukset pois; tekstivedos omistajalla (Linssiseppä).
+
+## OMISTAJA: ÄÄNET VASTA KUN OMISTAJA ON NÄHNYT LINSSIN; VIE 1.0.51 (29.9.2026 klo 17.48)
+
+Omistaja 29.9.2026: "ei generoida vielä ääniä. Haluan nähdä itse linssin ensin. Siinä on varmasti vielä paljon korjattavaa ennen kuin kannattaa ääniä tehdä." Sääntö: uuden linssin tai dioraaman äänet (tehosteet ja Pulun puhe) generoidaan vasta, kun omistaja on nähnyt linssin laitteella ja hyväksynyt sen. Olavinlinna erä 3:n äänitilaus pidossa, Linnanrakentaja toimittaa laitekuvat ensin. VIE 1.0.51 (BUILD 51 = proto f3d7b408, keittiö kehittäjätilassa, savuke 4/4), rivi "Pieniä parannuksia kulissien takana."
