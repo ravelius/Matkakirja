@@ -85,6 +85,7 @@ import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
  * kartan ja kohdekerroksen, eikä pöllö saa tuoda niitä perässään.
  */
 import { kytkePulunPaikannus } from './pulu-paikka.js';
+import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
 
 /*
  * Valikosta poistettujen mittausvipujen (Vedon seuranta, Tarkkuus
@@ -1191,14 +1192,18 @@ naytaLauta();
 const menuBtn = document.getElementById('menu-btn');
 const paavalikko = document.getElementById('paavalikko');
 
+// Avaus ja sulku animoiden napin kulmasta (omistaja 29.9.2026, js/avausanimaatio.js).
 const suljeValikko = () => {
   if (paavalikko.hidden) return;
+  haamuSulku(paavalikko, menuBtn);
   paavalikko.hidden = true;
   menuBtn.setAttribute('aria-expanded', 'false');
 };
 
 menuBtn.addEventListener('click', () => {
+  if (!paavalikko.hidden) haamuSulku(paavalikko, menuBtn);
   paavalikko.hidden = !paavalikko.hidden;
+  if (!paavalikko.hidden) animoiAvaus(paavalikko, menuBtn);
   menuBtn.setAttribute('aria-expanded', String(!paavalikko.hidden));
   // Kiintiöpalkit (R2, repo, ElevenLabs, pöllö) EIVÄT enää täyty
   // täällä: ne siirtyivät Tilastot-lehden Kiintiöt-sivulle

@@ -212,6 +212,7 @@ import { asetaAkustiikka } from './tehosteketju.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { KUVASARJA_PYYHKAISY_PX, piirraKuvasarja } from './kuvasarja.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
+import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -4715,6 +4716,8 @@ export function suljeFokuskohde(ui) {
   auki.merkki?.classList.remove('auki');
   // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
   auki.popup?.nostokuvaPurku?.();
+  // Sulkeutuu samaa reittiä merkkiin (haamu; kortti itse lähtee heti).
+  haamuSulku(auki.popup, auki.merkki ?? auki.ankkuri);
   auki.popup?.remove();
   if (auki.purku) auki.purku();
 }
@@ -6688,6 +6691,8 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.
   globalThis.requestAnimationFrame?.(() => asetaKohteenPaikka(ui));
   setTimeout(() => asetaKohteenPaikka(ui), 200);
+  // Kasvaa ja häivyttyy esiin napautetun merkin kohdalta (omistaja 29.9.2026, js/avausanimaatio.js).
+  animoiAvaus(popup, merkki ?? ankkuri);
   // Avausääni soi jo funktion alussa (ks. sfx.play('popup') ylhäällä).
   return popup;
 }
