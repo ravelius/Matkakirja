@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 07:56:** Levy 102,48 Gi (+1,4 Gi; DerivedData 5,6→1,4 Gt siivottu), muisti 60 % vapaa, kuorma 39/26/34, sim 0, GPU-chrome 0, wt/ 13 kohdetta 6,9 Gt (12→13, raja 20, tavoite <15), /private/tmp 37,8 Gt, Devices 67,2 Gt vakaa. Roolit: ajossa Päätoimittaja ja Linnanrakentaja (34 %); Linssiseppä (65 %) pysähtynyt, remote control pois; ei ≥70 %. Juna OK: b13 HEAD 507d865e, käännetty 07:15. Postilaatikko: ei uutta.
+
 **Päivitetty 07:45:** Levy 101,08 Gi (−0,5 Gi/11 min, hidastui; raja 82), muisti 64 % vapaa, kuorma 6,4/24,7/47,7 (laskussa), sim 0, GPU-chrome 0, wt/ 12 kohdetta 5,7 Gt (11→12, raja 20), /private/tmp 37,6 Gt, Devices 67,2 Gt (+1,0 Gt), muut kasvajat vakaat. Roolit: Linssiseppä 65 % (ajossa), Siirtoseppä ajossa, muut ei muutosta, ei ≥70 %. Juna OK: b13 HEAD 507d865e, käännetty 07:15. Postilaatikko: ei uutta.
 
 **Päivitetty 07:34:** Levy 101,56 Gi (−1,9 Gi/11 min, /private/tmp +0,4 Gt, build +0,2 Gt; raja 82), muisti 58 % vapaa, kuorma 22/46/61 (laskussa; Playwright-chromium 211 %, Evoto 92 %), sim 0, GPU-chrome 0, wt/ 11 kohdetta 5,5 Gt, /private/tmp 37,8 Gt, Devices 66,2 Gt. Roolit: ajossa Päätoimittaja ja Siirtoseppä (18 %), muut ei muutosta, ei ≥70 %. Juna OK: b13 HEAD 507d865e, käännetty 07:15. Postilaatikko: ei uutta.
