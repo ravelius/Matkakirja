@@ -21,11 +21,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Paneeli on pillerin valikko: pääsivu, Linssit- ja Aarteet-näkymät (kaikki laitteet, omistaja 29.9.2026).</summary>
         public static bool PilleriValikko => true;
 
-        public enum Nakyma { Paa, Linssit, Aarteet }
+        /// <summary>Pääsivu ja sen alinäkymät (omistaja 29.9.2026 klo 20.2x: Matka-nappi ja Asetukset samaan paneeliin).</summary>
+        public enum Nakyma { Paa, Linssit, Aarteet, Matka, Asetukset }
         public Nakyma NykyinenNakyma { get; private set; }
 
         ScrollView vieritys;
-        VisualElement tiedot, aarteet, pohja, esikatselu, esiKuva, runko;
+        VisualElement tiedot, aarteet, pohja, esikatselu, esiKuva, runko, asetukset;
+        /// <summary>Asetukset-näkymän sisältö (UiNakymat rakentaa: äänentasot, kartta, muut).</summary>
+        public VisualElement AsetusKohde => asetukset;
+        /// <summary>Asetukset-näkymä avautui (UiNakymat päivittää kytkimet ja säätimet).</summary>
+        public event Action AsetuksetAvautuu;
         Label esiOtsikko, esiTeksti, esiTila;
         Button esiNappi;
         Button alaTakaisin;
@@ -56,8 +61,9 @@ namespace Matkakirja.Natiivi
             oikea.Add(lista);
             aarteet = Rakenne.El("mk-linssivalitsin__aarteet", oikea, PickingMode.Ignore);
             tiedot = Rakenne.El("mk-linssivalitsin__tiedot", vieritys, PickingMode.Ignore);
+            asetukset = Rakenne.El("mk-linssivalitsin__asetukset", vieritys, PickingMode.Ignore);
             pohja = Rakenne.El("mk-pudotus__pohjarivi mk-linssivalitsin__pohja", vieritys, PickingMode.Ignore);
-            tiedot.style.display = aarteet.style.display = pohja.style.display = runko.style.display = DisplayStyle.None;
+            tiedot.style.display = aarteet.style.display = pohja.style.display = runko.style.display = asetukset.style.display = DisplayStyle.None;
 
             esiKuva = Rakenne.El("mk-linssivalitsin__esikuva", esikatselu, PickingMode.Ignore);
             esiOtsikko = Rakenne.Teksti("", "mk-linssivalitsin__esiotsikko", esikatselu);
@@ -72,14 +78,14 @@ namespace Matkakirja.Natiivi
 
         // --- pääsivun osat (UiNakymat.RakennaPuhelinvalikko) -------------------------------------
 
-        /// <summary>Osion otsikko pääsivulle (ÄÄNET, KARTTA).</summary>
-        public Label LisaOsioOtsikko(string teksti) =>
-            Rakenne.Teksti(teksti.ToUpperInvariant(), "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lisaosa);
+        /// <summary>Osion otsikko (ÄÄNET, KARTTA, MUUT): vasen reuna, pienet kapiteelit, sama kaikissa näkymissä.</summary>
+        public Label LisaOsioOtsikko(string teksti, VisualElement isa = null) =>
+            Rakenne.Teksti(teksti.ToUpperInvariant(), "mk-linssivalitsin__valiotsikko", isa ?? lisaosa);
 
-        /// <summary>Äänentasojen liukusäätimet (web: Äänet-osio; entinen Äänentasot-paneeli).</summary>
-        public void LisaSaatimet()
+        /// <summary>Äänentasojen liukusäätimet (Asetukset-näkymä; entinen Äänentasot-paneeli).</summary>
+        public void LisaSaatimet(VisualElement isa = null)
         {
-            var kuori = Rakenne.El("mk-linssivalitsin__saatimet", lisaosa, PickingMode.Ignore);
+            var kuori = Rakenne.El("mk-linssivalitsin__saatimet", isa ?? lisaosa, PickingMode.Ignore);
             foreach (var v in Asetukset.VoimaJarjestys)
             {
                 var (s, a) = Aanentasot.LuoSaadinrivi(kuori, v);
@@ -104,7 +110,7 @@ namespace Matkakirja.Natiivi
         public Button LisaAlinakyma(string nimi, string ikoni, Nakyma n, Func<bool> nakyy = null, VisualElement rivi = null)
         {
             var b = ValikkoNappi(rivi ?? lisaosa, nimi, ikoni, () => NaytaNakyma(n),
-                "mk-valikkonappi mk-valikkonappi--rivi mk-linssivalitsin__alinakyma" + (rivi != null ? " mk-linssivalitsin__alinakyma--puoli" : ""));
+                "mk-valikkonappi mk-valikkonappi--nav mk-linssivalitsin__alinakyma");
             Rakenne.Teksti("›", "mk-linssivalitsin__vakanen", b);
             if (nakyy != null) lisarivit.Add((b, nakyy));
             return b;
@@ -126,15 +132,24 @@ namespace Matkakirja.Natiivi
             NykyinenNakyma = n;
             SuljeEsikatselu();
             bool paa = n == Nakyma.Paa;
-            lisaosa.style.display = paa ? DisplayStyle.Flex : DisplayStyle.None;
-            tiedot.style.display = paa ? DisplayStyle.Flex : DisplayStyle.None;
-            pohja.style.display = paa ? DisplayStyle.Flex : DisplayStyle.None;
-            lista.style.display = n == Nakyma.Linssit ? DisplayStyle.Flex : DisplayStyle.None;
-            runko.style.display = paa ? DisplayStyle.None : DisplayStyle.Flex;
-            aarteet.style.display = n == Nakyma.Aarteet ? DisplayStyle.Flex : DisplayStyle.None;
-            alaTakaisin.style.display = paa ? DisplayStyle.None : DisplayStyle.Flex;
-            otsikko.text = n == Nakyma.Linssit ? "LINSSIT" : n == Nakyma.Aarteet ? "AARTEET" : "";
+            DisplayStyle D(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
+            lisaosa.style.display = D(paa);
+            tiedot.style.display = D(n == Nakyma.Matka);
+            asetukset.style.display = D(n == Nakyma.Asetukset);
+            pohja.style.display = D(paa);
+            lista.style.display = D(n == Nakyma.Linssit);
+            runko.style.display = D(n == Nakyma.Linssit || n == Nakyma.Aarteet);
+            aarteet.style.display = D(n == Nakyma.Aarteet);
+            alaTakaisin.style.display = D(!paa);
+            otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => "MATKA", Nakyma.Asetukset => "ASETUKSET", _ => "" };
             if (n == Nakyma.Aarteet) RakennaAarteet();
+            if (n == Nakyma.Asetukset)
+            {
+                foreach (var (rivi, nakyy) in lisarivit) rivi.style.display = nakyy == null || nakyy() ? DisplayStyle.Flex : DisplayStyle.None;
+                PaivitaKytkimet();
+                PaivitaSaatimet();
+                AsetuksetAvautuu?.Invoke();
+            }
             // Omistaja 29.9.2026 (1.0.50, palaute 6): Linssit-lista on heti oikealla ja esikatselun paikka valmiina vasemmalla,
             // jottei teksti hyppää ensimmäisellä valinnalla; Aarteet ennallaan.
             VaraaEsikatselu();
@@ -303,7 +318,7 @@ namespace Matkakirja.Natiivi
         public string TestaaNakyma(string nimi, int rivi)
         {
             if (!Auki) Avaa();
-            NaytaNakyma(nimi == "linssit" ? Nakyma.Linssit : nimi == "aarteet" ? Nakyma.Aarteet : Nakyma.Paa);
+            NaytaNakyma(nimi switch { "linssit" => Nakyma.Linssit, "aarteet" => Nakyma.Aarteet, "matka" => Nakyma.Matka, "asetukset" => Nakyma.Asetukset, _ => Nakyma.Paa });
             if (rivi < 0) return $"näkymä {NykyinenNakyma}";
             var isa = NykyinenNakyma == Nakyma.Linssit ? lista : aarteet;
             var napit = isa.Query<Button>(className: "mk-linssirivi").ToList();

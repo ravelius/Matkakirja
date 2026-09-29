@@ -236,6 +236,8 @@ namespace Matkakirja.Natiivi
         }
 
         public void Ehdota() => EhdotaPainettu?.Invoke();
+        /// <summary>Kehittäjätilan koodi-ikkuna (pillerivalikon Asetukset: Kehittäjä-kytkin; sama lukko).</summary>
+        public void AvaaKehittajakoodi() => kehittaja.Avaa();
         public void Tietoja() => TietojaPainettu?.Invoke();
 
         readonly Button reliefi;

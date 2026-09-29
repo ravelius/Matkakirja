@@ -151,10 +151,14 @@ namespace Matkakirja.Natiivi
             var v = Linssit.Valitsin;
             v.Avaaja = Tilarivi.Valikko;
             v.Avaajat.Add(Tilarivi.Pilleri);
-            // PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07, loki "YLÄPALKKI MATKALAUKUKSI"; web malli, Pelikoodarin rakenne).
-            // 1.0.50-palaute (omistaja 29.9. klo 17.1x): etusivulta pois tasosäätimet, Kartta-kytkimet, Ehdota ja Offline
-            // (→ Asetukset, samoin Kehittäjä); Retkikunta Uusi pelin viereen; Linssit ja Aarteet vierekkäin.
-            // Äänet (kytkimet) → [Uusi peli · Retkikunta] → [Asetukset] → [Linssit › · Aarteet ›] → pillerin tiedot → versio.
+            // PILLERIVALIKKO YHTENÄ JÄRJESTELMÄNÄ (omistaja 29.9.2026 klo 20.2x: "Asetukset samalle riville Uusi pelin ja Retkikunnan
+            // kanssa, Linssit–Aarteet-riville Matka-nappi … järkeistä noita valikoita"; Päätoimittajan malli): yksi pergamentti,
+            // kolme nappityyppiä (navigointi, kytkin, toiminto), alinäkymät Linssit, Aarteet, Matka ja Asetukset ‹ Takaisin -paluulla.
+            // Pääsivu: [Linssit | Aarteet | Matka] → ÄÄNET [Kertoja | Musiikki | Äänimaisema] → [Uusi peli | Retkikunta | Asetukset] → versio.
+            var alinakymat = v.LisaNappirivi();
+            v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0, alinakymat);
+            v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet, null, alinakymat);
+            v.LisaAlinakyma("Matka", Ikonit.Viiva["passi"], Linssivalitsin.Nakyma.Matka, null, alinakymat);
             v.LisaOsioOtsikko("Äänet");
             var aanet = v.LisaNappirivi();
             foreach (var (k, ikoni) in new[] { (Kytkin.Kertoja, Ikonit.Kertoja), (Kytkin.Musiikki, Ikonit.Musiikki), (Kytkin.Aanimaisema, Ikonit.Aanimaisema) })
@@ -166,14 +170,32 @@ namespace Matkakirja.Natiivi
             v.LisaNappi(toiminnot, "Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
             v.LisaNappi(toiminnot, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
                 () => Valikko.RetkikuntaSaatavilla);
-            var toiminnot2 = v.LisaNappirivi();
-            v.LisaNappi(toiminnot2, "Asetukset", Ikonit.Ratas, () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
-            Valikko.Takaisin = () => { if (!v.Auki) v.Avaa(); };
-            Valikko.AvaaOffline = () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline);
-            Valikko.OfflineSaatavilla = () => UiPalvelut.Offline != null;
-            var alinakymat = v.LisaNappirivi();
-            v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0, alinakymat);
-            v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet, null, alinakymat);
+            v.LisaNappi(toiminnot, "Asetukset", Ikonit.Ratas, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Asetukset), pysy: true);
+
+            // ASETUKSET-näkymä: äänentasot, kartta (Pieni liike, Kuljettu reitti, kehittäjän maailmatilassa Näytä huntu), muut
+            // (Offline-kartat ja Ehdota toimintoina, Kehittäjä kytkimenä koodilukolla; päällä myös Kehittäjätyökalut).
+            var a = v.AsetusKohde;
+            v.LisaOsioOtsikko("Äänentasot", a);
+            v.LisaSaatimet(a);
+            v.LisaOsioOtsikko("Kartta", a);
+            var kartta = v.LisaNappirivi(a);
+            foreach (var (k, ikoni) in new[] { (Kytkin.PieniLiike, Ikonit.PieniLiike), (Kytkin.KuljettuReitti, Ikonit.KuljettuReitti) })
+            {
+                var kk = k;
+                v.LisaKytkin(kartta, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
+            }
+            var huntu = v.LisaNappirivi(a);
+            v.LisaKytkin(huntu, "Näytä huntu", Ikonit.Viiva["silma"], () => Paavalikko.PelaajanNakyma,
+                () => Paavalikko.AsetaPelaajanNakyma(!Paavalikko.PelaajanNakyma), () => Paavalikko.Maailma);
+            v.LisaOsioOtsikko("Muut", a);
+            var muut = v.LisaNappirivi(a);
+            v.LisaNappi(muut, "Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
+            v.LisaNappi(muut, "Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
+#if !MATKAKIRJA_APPSTORE
+            var kehittaja = v.LisaNappirivi(a);
+            v.LisaKytkin(kehittaja, "Kehittäjä", Ikonit.Ratas, () => Asetukset.Kehittaja, () => { v.Sulje(); Valikko.AvaaKehittajakoodi(); });
+            v.LisaNappi(kehittaja, "Kehittäjätyökalut", Ikonit.Viiva["kone"], () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
+#endif
             v.AarteetData = () => PeliOhjain.Instanssi?.Laukku();
             Matkalaukku.Upota(v.TiedotKohde);
             v.Avautuu += Matkalaukku.PaivitaTiedot;
