@@ -11,16 +11,11 @@ Päiväsääntö 29.9. (normaalit säännöt palaavat 30.9. klo 00):
 - Käännökset nice 15, yksi kerrallaan.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)".
 
-## KÄRKI: 1.0.46-juna → BUILD 46
-juna/b13 9a6b06c4 = master 6dc1b7cc (BUILD 45) + linssiseppa/pulu-aani-kertoja 4fb54bba. Haarassa ovat molemmat tervetulon
-äänikorjauksen osat: Pulun puhe seuraa Kertojaa eikä Äänimaisemaa. Käännös debdf84f valmistui 11.23 ja on asennettu. Laitetestaajan
-savuke on tulossa. Kun se on PASS:
-- `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto merge --no-ff 9a6b06c4` masteriin
-- tarkista, että puu = debdf84f
-- SHA ja muutosrivi Julkaisijalle ja Päätoimittajalle
-- poista sivuhaara natiiviseppa/juna-1046
-TF: 1.0.44 = 4d7bc2ed on ryhmässä 11.05, ja 1.0.45 = 6dc1b7cc odottaa VIE:tä. Vie aina oman BUILDin SHA:lla. Burst-korjaus on
-käännöspalvelussa, ja 1.0.45- ja 1.0.46-junat menivät sillä läpi.
+## KÄRKI: juna tyhjä, BUILD 46 = master 1b2609ce
+TF: 1.0.44 = 4d7bc2ed on ryhmässä. 1.0.45 = 6dc1b7cc (Pulun ISS-tervetulo) ja 1.0.46 = 1b2609ce (Pulun puhe Kertojan mukaan)
+odottavat Päätoimittajan VIE-lupaa. Vie aina oman BUILDin SHA:lla. Seuraavat merge-pyynnöt kootaan sivuhaaraan
+natiiviseppa/juna-1047 masterista, testataan (exit-koodit) ja avataan junaan Julkaisijan luvalla. Burst-korjaus on käännöspalvelussa,
+ja kolme junaa on mennyt sillä läpi.
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain, kun erä on valmis, olet jumissa tai sinulla on kysymys (enintään 8 riviä), SendMessage nimellä.
