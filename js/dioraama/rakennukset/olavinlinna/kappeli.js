@@ -151,6 +151,8 @@ export const TILA = {
   palikat: [
     // Pyöreä lattia (sade 7 = tornin ulkosäde): auki-sektorin kohdalla lattia jää "näyttämöksi".
     { resepti: 'kiekko', paikka: [CX, LATTIA, CZ], suunta: 0, sade: 7, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' } },
+    // Tornin seinä kerroksen korkeudelta (uusi tapa 29.9.: kuoressa ei ole sisäpintaa, massan torni ei ole mukana).
+    { resepti: 'torni', paikka: [CX, 9.0, CZ], suunta: 0, sade: 7, paksuus: 2, korkeus: 4.5, segmentit: 32, auki: { alku: 100, loppu: 230 } },
     // Holvikatto: alkaa y 11,6, huippu y 13,45; sama auki-sektori kuin tornilla. Maalaukset (lehti- ja kukka-aiheet):
     // holvi-pinta rappaus, Codexin maalaus-pinta tulee erä 3b:ssä.
     { resepti: 'kupoli', paikka: [CX, 11.6, CZ], suunta: 0, sade: 5, korkeus: 1.85, segmentit: 32, auki: { alku: 100, loppu: 230 }, pinnat: { holvi: 'rappaus' } },
