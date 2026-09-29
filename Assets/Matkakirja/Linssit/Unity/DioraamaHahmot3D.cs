@@ -183,7 +183,16 @@ namespace Matkakirja.Natiivi
             e.Juuri = go;
             e.SolmuT = solmuT;
             e.Malli = malli;
+            // Elävä linna: lyhty (hahmo.lyhty) oikean käden kohdalle, liekki DioraamaLiekit-3D-mallista.
+            if (e.Hahmo.Lyhty && LyhdynLuoja != null)
+            {
+                var lyhty = LyhdynLuoja(go.transform);
+                if (lyhty != null) lyhty.transform.localPosition = new Vector3(0.28f, 0.95f, 0.12f);
+            }
         }
+
+        /// <summary>DioraamaNayttamo asettaa: luo lyhdyn liekin annetun juuren lapseksi (DioraamaLiekit.LuoLyhty).</summary>
+        public static Func<Transform, GameObject> LyhdynLuoja;
 
         /// <summary>Yhden solmun mesh (submesh per osa) + materiaalit (SAMA rakenne kuin DioraamaRakennus.
         /// LisaaTila, mutta yhdelle solmulle koko tilan sijaan — ei UV:tä eikä lämpöä, hahmoilla ei ole

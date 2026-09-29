@@ -157,7 +157,7 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                linssi.Avaa(rakennus, ymparisto.Aika);
+                linssi.Avaa(rakennus, ymparisto.Aika, SaapuminenNahty);
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
@@ -172,6 +172,14 @@ namespace Matkakirja.Natiivi
             double t = pysaytettyT ?? y.Aika;
             bool pysty = y.Kuvasuhde < 1.0;
             var nakyma = linssi.NakymaHetkella(t, pysty);
+            // Elävä linna: saapumiskaaren eteneminen → soihtujen syttyminen; kaari nähty → seuraavalla kerralla lyhyt.
+            if (rakennus.Saapuminen != null)
+            {
+                double osuus = linssi.SaapuminenOsuus(t);
+                nayttamo.Liekit?.Syttyminen(osuus, DioraamaNayttamo.UnityPiste((pysty ? rakennus.YleisPysty : rakennus.YleisVaaka).Kohde));
+                if (osuus >= 1 && !SaapuminenNahty) SaapuminenNahty = true;
+                nayttamo.Syke?.Paivita(rakennus, nakyma.KohdeTila == null && osuus >= 1, nakyma.KohdeTila != null, t, y.VahennettyLiike);
+            }
             if (pakotettuTila != null && pakotettuTaso >= 0 && nakyma.Tasot != null) nakyma.Tasot[pakotettuTila] = pakotettuTaso;
             viimeNakyma = nakyma;
             ViimeisinNakyma = nakyma;
@@ -290,12 +298,21 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: {rakennus.Nimi} ladattu, {rakennus.Tilat.Count} tilaa, juuri {paketinJuuri}");
             if (avoinna)
             {
-                linssi.Avaa(rakennus, y.Aika);
+                linssi.Avaa(rakennus, y.Aika, SaapuminenNahty);
                 aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
             }
+        }
+
+        const string SaapuminenAvain = "dioraama-saapuminen-nahty";
+        /// <summary>Elävä linna: toisella käynnillä saapumiskaari on lyhyt (Saapuminen.Lyhyt), kehittäjä nollaa
+        /// "poikki saapuminen alusta".</summary>
+        static bool SaapuminenNahty
+        {
+            get => PlayerPrefs.GetInt(SaapuminenAvain, 0) == 1;
+            set { PlayerPrefs.SetInt(SaapuminenAvain, value ? 1 : 0); PlayerPrefs.Save(); }
         }
 
         /// <summary>Olavinlinna: ulkokuori valitulla laatutasolla (DioraamaUlkokuori), jos paketissa on kuori.</summary>
@@ -568,6 +585,19 @@ namespace Matkakirja.Natiivi
                     peiliKuvaus = uusiJuuri;
                 }
                 o.Kirjaa("poikki: peili " + peiliKuvaus);
+                return;
+            }
+            // "poikki saapuminen alusta": seuraava avaus näyttää täyden saapumiskaaren (kehittäjä, kuvaukset).
+            if (mita == "vihje")
+            {
+                if (arvo == "alusta") DioraamaSyke.Nahty = false;
+                o.Kirjaa($"poikki: vihje {(DioraamaSyke.Nahty ? "nähty" : "näytetään")}");
+                return;
+            }
+            if (mita == "saapuminen")
+            {
+                if (arvo == "alusta") SaapuminenNahty = false;
+                o.Kirjaa($"poikki: saapuminen {(SaapuminenNahty ? "nähty (lyhyt)" : "täysi")}, osuus {(Linssi != null ? Linssi.SaapuminenOsuus(y?.Aika ?? 0).ToString("F2", CultureInfo.InvariantCulture) : "-")}");
                 return;
             }
             // "poikki tunnelma [paiva|hamara|auto]": päivä / iltahämärä (kehittäjä, muistetaan; auto = rakennuksen oletus).

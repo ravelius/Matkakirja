@@ -52,6 +52,14 @@ namespace Matkakirja.Linssit.Dioraama
         }
 
         /// <summary>Δ = |kohde1 − kohde0| + |etaisyys1 − etaisyys0|; T = clamp(1,6 + 0,35·√Δ, 2,0, 3,8).</summary>
+        /// <summary>ELÄVÄ LINNA (käsikirjoitus 29.9. kohta 2): lento leikkausikkunan kautta tilaan 0,8–1,2 s
+        /// (Linnanrakentajan lupa Siirtosepälle 29.9.). Käytetään, kun rakennuksessa on saapuminen (uusi kokemus).</summary>
+        public static double LeikkausLennonKesto(Asento p0, Asento p1)
+        {
+            double delta = (p1.Kohde - p0.Kohde).Pituus + Math.Abs(p1.Etaisyys - p0.Etaisyys);
+            return Rajaa(0.8 + 0.03 * Math.Sqrt(delta), 0.8, 1.2);
+        }
+
         public static double SiirtymanKesto(Asento p0, Asento p1)
         {
             double delta = (p1.Kohde - p0.Kohde).Pituus + Math.Abs(p1.Etaisyys - p0.Etaisyys);

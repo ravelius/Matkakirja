@@ -91,6 +91,8 @@ namespace Matkakirja.Natiivi
         public DioraamaUlkokuori Ulkokuori { get; private set; }
         /// <summary>Lokkiparvet lokit:-tyhjistä (tunnelma).</summary>
         public DioraamaLokit Lokit { get; private set; }
+        /// <summary>Sykkivä vihje ensimmäisellä käynnillä (elävä linna).</summary>
+        public DioraamaSyke Syke { get; private set; }
 
         /// <summary>Tunnelma (DioraamaTunnelma): tausta ja sumu, auringon ja taivaan kerroin, lintujen valo.</summary>
         public void AsetaTunnelma(bool hamara)
@@ -126,6 +128,9 @@ namespace Matkakirja.Natiivi
             n.Ikkunat = new DioraamaIkkunat(n.transform);
             n.Ulkokuori = new DioraamaUlkokuori(n.transform);
             n.Lokit = new DioraamaLokit(n.transform);
+            n.Syke = new DioraamaSyke(n.transform);
+            var liekit = n.Liekit;
+            DioraamaHahmot3D.LyhdynLuoja = isa => liekit?.LuoLyhty(isa);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
             Shader.SetGlobalColor(IdSumuVari, TaustaVari); // sama muunnos kuin kameran taustavärillä
             Shader.SetGlobalVector(IdSumu, new Vector4(1000f, 4000f, 0, 0));
@@ -308,6 +313,8 @@ namespace Matkakirja.Natiivi
             Ulkokuori = null;
             Lokit?.Tyhjenna();
             Lokit = null;
+            Syke?.Tyhjenna();
+            Syke = null;
             AsetaTunnelma(false); // globaalit takaisin päiväksi (muut linssit)
             if (profiili != null) Destroy(profiili);
             profiili = null;
