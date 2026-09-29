@@ -1,4 +1,4 @@
-# Natiivisepän aloitusviesti (29.9.2026 klo 16.1x, BUILD 50, tilinvaihto; nollaus luovutuksesta -20260929)
+# Natiivisepän aloitusviesti (29.9.2026 klo 16.2x, BUILD 50 + keittiö sivuhaarassa, tilinvaihto; luovutus -20260929)
 
 Olet Natiiviseppä (Opus, max), Macin käyttäjä koodaus. Checkout on /Users/Shared/Claude/Matkakirja-3d-selvittaja ja proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutuksesi (ensin PÄIVITYS 16.1x -osio, sitten muu):
@@ -11,7 +11,12 @@ Päiväsääntö 29.9. (normaalit säännöt palaavat 30.9. klo 00):
 - Käännökset nice 15, yksi kerrallaan.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)".
 
-## KÄRKI: BUILD 50 valmis, juna tyhjä (29.9. klo 15.5x)
+## KÄRKI: seuraava juna = Linnanrakentajan keittiö (1.0.51)
+Sivuhaara **natiiviseppa/juna-1051 d49a3a7f** = master cbf78690 (BUILD 50) + linnanrakentaja/keittio 573ccecc (omistaja hyväksyi;
+poikkileikkaus-linssi on hiomassa, kehittäjätila). Testit ovat exit 0 (0/401/358/484). Katselmoinnin kysymykset (a)–(c) Linnanrakentajalle
+ja savukkeen sisältö: luovutuksen osio "SEURAAVA JUNA (1.0.51)". Juna/b13 = ddf90f51 (tyhjä). Juna avataan vain Julkaisijan luvalla.
+
+## EDELLINEN: BUILD 50 valmis (29.9. klo 15.5x)
 **BUILD 50 = proto master cbf78690** (juna ddf90f51, käännös fc26b44c; Laitetestaaja e4ef21d 5/5 PASS). Sisältö: BUILD 49 5ce37440
 + natiivi-ui/ylapalkki-nahka 5cdb457a + 44b742e5 (iPhonen matkalaukkunahka, iOS 2048 px). Aiemmin tänään: BUILD 48 = 1c4a7eff (pelaajan
 näkymä, avaruuskävely, radio-virta), BUILD 49 = 5ce37440 (pillerivalikko). SHA:t on lähetetty Julkaisijalle ja Päätoimittajalle,

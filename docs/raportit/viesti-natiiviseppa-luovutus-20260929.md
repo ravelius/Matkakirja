@@ -7,6 +7,36 @@ käytännöt ovat voimassa, ellei tässä toisin sanota.
 
 Tämä korvaa alla olevat tilatiedot. Vanhemmat osiot ovat historiaa, mutta niiden käytännöt ovat yhä voimassa.
 
+### SEURAAVA JUNA (1.0.51): Linnanrakentajan keittiö — kesken tilinvaihdossa 16.2x
+
+- **Merge-pyyntö:** proto `linnanrakentaja/keittio` **573ccecc** (myös natiivi-backupissa), 16 committia, 62 tiedostoa, noin 17 400
+  riviä. Omistaja on hyväksynyt ("saa mennä"). Poikkileikkaus-linssi on hiomassa, joten Kesken = true ja se näkyy vain kehittäjätilassa.
+  Sisältö: dioraamamoottori (Ydin/Dioraama, Unity/Dioraama*, 6 varjostintiedostoa, UI/Linssit/DioraamaTaulu), paketti ämpäristä
+  (uusin.json), valot ja varjot, 3D-hahmot ja -liekit, kaarilennot sekä äänet.
+- **Tehty:** sivuhaara **natiiviseppa/juna-1051 d49a3a7f** = master cbf78690 (BUILD 50) + 573ccecc. Yhdistyminen oli ristiriidaton.
+  Metat ovat kunnossa, eikä yli 200 kt:n tiedostoja ole. Testit väliaikaisessa worktreessä /Users/Shared/Claude/wt/proto-natiiviseppa-juna1051:
+  **kaikki exit 0: unity-tarkistus 0, Kartta 401/401, Peli 358/358, Linssit 484/484.** Worktree on poistettu.
+- **Katselmointi, Aanisoitin-osa** (minun vastuullani, linja A hyväksytty aiemmin): pooli on enintään 6 silmukkaa (ylite lopettaa hiljaisimman), jokaisella
+  oma AudioSource ja priority 128. Taso = pyyntö × Äänimaisema × TaustanKerroin × globaali väistö (650 ms). Repliikki toimii puhujana
+  AaniTila.Puhe-reunalla. Kahvat eivät koskaan ole null, ja OnDestroy vapauttaa poolin. Rakenne on OK. Kysy Linnanrakentajalta ennen
+  junaa, ei estettä:
+  (a) SaneluAlkoi tauottaa vain Pohja- ja Maisema-kanavat, ei poolin silmukoita, joten dioraaman silmukat soivat sanelun aikana.
+  (b) Kutsutaanko DioraamaAanet.cs:217:n `Repliikki(false)` varmasti linssin sulkeutuessa kesken repliikin? Muuten 5 kanavaa jäävät väistöön.
+  (c) `static bool dioraamaRepliikkiPuhuu` jää voimaan, jos Aanisoitin-instanssi luodaan uudelleen (harvinainen reunatapaus).
+- **Globaali renderöintitila** linssin ajaksi (URP-varjot 2048 ja etäisyys, lisävaloraja 8, ambient, RenderSettings.sun, muiden valojen
+  cullingMask) palautetaan sulkiessa. Savukkeessa testataan sulku kolmella tavalla: ✕, toisen linssin avaus ja sovellus taustalle ja
+  takaisin. Tämän jälkeen karttanäkymän valot ja varjot on tarkistettava ennallaan (vertaa BUILD 50:een).
+- **Seuraavat askeleet:** Linnanrakentajan vastaukset kohtiin (a)–(c) → Julkaisijan lupa (juna/b13 ddf90f51 → d49a3a7f) → Monitor juna.log → KÄÄNNETTY →
+  Laitetestaajan savuke.
+  Savukkeen sisältö:
+  - poikkileikkaus-linssi kehittäjätilassa (`poikki`-komennot, ks. LinssiOhjain `osat[0] == "poikki"` → DioraamaSovitin.Komento)
+  - äänet ja repliikki
+  - sulkutavat
+  - regressio: kartta, Cupola, radio, nostokortin kaiutin
+  PASS → BUILD 51 = merge --no-ff d49a3a7f.
+- **Huom:** ämpärin paketti päivittyy erään 2b vasta, kun ravelius/Matkakirja#3621 on mergetty (Julkaisijan juna). Siihen asti linssi
+  näyttää erän 2 paketin (kortit, oletusvalot), eikä se ole vika.
+
 **Kärki:** proto master **cbf78690** = BUILD 50. Juna on tyhjä: juna/b13 = ddf90f51, joka sisältyy masteriin. Käännöksiä tai ajoja ei
 ole käynnissä, eikä Natiivisepän omia worktreetä tai sivuhaaroja ole auki.
 
