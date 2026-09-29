@@ -1756,7 +1756,7 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Testikomento: "sivu n" kääntää, "sisallys" avaa sisällyksen (ylärivin ☰, "sisallys-ala" alapalkin), "kuva" suurennoksen,
         /// "viimeinen" viimeiselle sivulle, "fokus-vastaa n" / "fokus-pulla" napauttaa fokustehtävää, "jatkuva 0|1" asettaa
-        /// jatkuvan luennan, "lue" napauttaa kaiutinta.
+        /// jatkuvan luennan, "lue" napauttaa kaiutinta, "valikko" avaa lukijan valikon.
         /// </summary>
         public string Testaa(string mita, int n)
         {
@@ -1769,6 +1769,7 @@ namespace Matkakirja.Natiivi
                 // "jatkuva 0|1": jatkuvan luennan kytkin; "lue": kaiuttimen napautus (tila lokiin "ui lukija: ...").
                 case "jatkuva": PlayerPrefs.SetInt(JatkuvaAvain, n == 1 ? 1 : 0); PaivitaJatkuva(); return "jatkuva " + (Jatkuva ? "päällä" : "pois");
                 case "lue": lukija.Paina(); return $"sivu {nyt + 1}, lukee {lukija.Lukee}";
+                case "valikko": lukija.AvaaValikko(); return "lukijan valikko";
                 case "viimeinen": if (lehti != null) Kaanna(lehti.Sivut.Count - 1); break;
                 case "sisallys":
                 case "sisallys-ala": if (lehti != null && lehti.Sivut.Count >= 2) VaihdaSisallys(mita == "sisallys"); break;

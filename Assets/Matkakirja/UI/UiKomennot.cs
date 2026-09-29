@@ -14,7 +14,7 @@
 //   ui aloitus [portti|avaus|valinta|kortti|lento|jatka]  aloitusnäkymä ilman peliä (avaus = avausteksti ruudullaan, valinta kartalla, kortti = vara, lento = lennon kaistale)
 //   ui aloita [kaupunki] | ui jatka           automaatio: ohittaa aloitusnäkymän (UusiMatka / Jatka);
 //                                             listan ulkopuolinen kaupunki (pariisi) = oletuslähtö Pariisi
-//   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys(-ala) | ui lehti jatkuva 0|1 | ui lehti lue
+//   ui lehti <kaupunki> [sivu] | ui lehti sivu n | ui lehti kuva | ui maalehti <ISO> [aihe] | ui lehti sisallys(-ala) | ui lehti jatkuva 0|1 | ui lehti lue | ui lehti valikko
 //   ui wiki [otsikko]                         Lue lisää -artikkeli (oletus Venetsia: pelin oma artikkeli)
 //   ui piikit [s] [kynnys ms] | ui piikit pois  pitkien kehysten raskaimmat profilointimerkit lokiin (oletus 20 s,
 //                                             40 ms; KehysPiikit.cs), esim. ennen komentoa ui jatka
@@ -781,7 +781,7 @@ namespace Matkakirja.Natiivi
                 {
                     var l = loput.Split(' ');
                     if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "sisallys-ala" || l[0] == "viimeinen"
-                        || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla" || l[0] == "jatkuva" || l[0] == "lue"))
+                        || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla" || l[0] == "jatkuva" || l[0] == "lue" || l[0] == "valikko"))
                         return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
                     if (osat[1] == "lehti" && l[0] == "vieritys")
                     {
