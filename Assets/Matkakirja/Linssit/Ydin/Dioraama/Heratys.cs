@@ -149,7 +149,8 @@ namespace Matkakirja.Linssit.Dioraama
             double fps;
             if (taso == 2 && t >= herasi)
             {
-                silmukkaNimi = hahmo.Silmukka;
+                // Puuttuva/tuntematon silmukka (esim. elava.reitti-hahmo ilman silmukkaa) → idle, ei kaatumista (1.0.57-ajo).
+                silmukkaNimi = hahmo.Silmukka != null && henkilo.Silmukat.ContainsKey(hahmo.Silmukka) ? hahmo.Silmukka : "idle";
                 silmukka = henkilo.Silmukat[silmukkaNimi];
                 fps = silmukka.Fps;
             }
