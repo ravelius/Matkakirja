@@ -480,13 +480,13 @@ namespace Matkakirja.Natiivi
                 // ja logon sijainti leveimmän saaren mukaan ja sitten vain keskelle jää tyhjää." Keskelle kiinteä vyöhyke
                 // leveimmän saaren (Pro Max) verran + marginaali, sama kaikilla malleilla; lovellisella laitteella leveämpi lovi
                 // voittaa. Logo vasempaan reunaan, pilleri oikeaan reunaan vyöhykkeen ulkopuolelle.
-                float keski = P(Screen.width / pp / 2f, 0f).x;
+                float ruudunKeski = P(Screen.width / pp / 2f, 0f).x;
                 float oma = saari.width > 0 ? (alakulma.x - ylakulma.x) / 2f : 0f;
                 float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + SaarenMarginaali * yksikko;
                 float vasenReuna = r.x + SaariReuna * yksikko;
                 float oikeaReuna = P(Screen.width / pp, 0f).x - r.z - SaariReuna * yksikko;
-                pilleriMax = Mathf.Max(60f, oikeaReuna - (keski + puoli));
-                float logoTila = Mathf.Max(40f, (keski - puoli) - vasenReuna);
+                pilleriMax = Mathf.Max(60f, oikeaReuna - (ruudunKeski + puoli));
+                float logoTila = Mathf.Max(40f, (ruudunKeski - puoli) - vasenReuna);
                 float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / 4f);
                 logo.style.height = lk;
                 logo.style.width = lk * 4f;
