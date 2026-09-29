@@ -150,7 +150,11 @@ namespace Matkakirja.Natiivi
             if (k != null) k.PalloNapautettu += PalloNapautettu;
         }
 
-        void PalloNapautettu() { if (Auki) Sulje("ulkopuoli"); }
+        void PalloNapautettu()
+        {
+            Tervetulo.Napautus();
+            if (Auki) Sulje("ulkopuoli");
+        }
 
         /// <summary>Näkymät-nappi Pulun paikalla, kun Pulu ei ole näkyvissä (web pulunPaikalla, 700 ms).</summary>
         void PaikkaKierros()

@@ -7,7 +7,8 @@
 //   kamera    AstronauttiLinssi.KatsoKohteeseen (B2), Napauta("richat") ja SuljeKuva (C1–C2) samalla polulla kuin pisteen
 //             napautus, PalaaAloitukseen (C2 ja ohitus).
 //   ohitus    napautus tai näppäin missä tahansa joka ruudussa (Pointer, Touchscreen ja Keyboard wasPressedThisFrame,
-//             UiKerros.JokaRuutu). Napautusta ei niele, joten pallo, ✕ ja kuva saavat sen silti (webin kaappausvaiheen passiivinen
+//             UiKerros.JokaRuutu), UI-kerrosten juurten kaappausvaihe ja pallon napautus taulun kautta (myös testikomento
+//             ui napauta). Napautusta ei niele, joten pallo, ✕ ja kuva saavat sen silti (webin kaappausvaiheen passiivinen
 //             kuuntelija). Pulun napautus ohittaa myös taulun kautta (PulunTauluNakyma.Avaa, webin tervetulo.ohita).
 //   muisti    PlayerPrefs "matkakirja-pulu-astro-tervetulo" (webin localStorage-avain).
 //   mykistys  Kertoja-kytkin pois tai Pulun taso 0 (Aanet.Taso(Puhe): Pulun liuku ja Äänimaisema): ei aloiteta eikä muistia
@@ -17,10 +18,12 @@
 //   esilataus seuraava äänite haetaan muistiin edellisen aikana (ensimmäinen jo odotusvaiheessa), jotta toimet osuvat sanoihin.
 // Testikomento `ui linssi tervetulo [tila|aloita|ohita|pura|nollaa]` (LinssiKomennot).
 using System;
+using System.Collections.Generic;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Astronautti;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
@@ -62,14 +65,33 @@ namespace Matkakirja.Natiivi
         /// <summary>Pulun taulun napautus ja testikomento (web tervetulo.ohita).</summary>
         public bool Ohita(string syy = "kutsu") => jakso != null && jakso.Ohita(syy);
 
+        /// <summary>Pelaajan napautus (pallo taulun kautta, UI-kerrosten juuret): ohittaa vain puheen aikana.</summary>
+        public void Napautus() => jakso?.Napautus();
+
+        readonly List<VisualElement> juuret = new List<VisualElement>();
+
         void Kuuntele(bool paalla)
         {
             if (paalla == kuunnellaan) return;
             kuunnellaan = paalla;
-            if (paalla) kerros.JokaRuutu += Ruutu;
-            else kerros.JokaRuutu -= Ruutu;
+            if (paalla)
+            {
+                kerros.JokaRuutu += Ruutu;
+                // Myös UI:n kautta tulevat napautukset (kaappausvaiheessa, ei niele): testikomento ui napauta ja kosketukset
+                // ruudun elementteihin samassa ruudussa kuin Input System näkee ne.
+                foreach (var (_, j) in kerros.Juuret)
+                    if (j != null && !juuret.Contains(j)) { juuret.Add(j); j.RegisterCallback<PointerDownEvent>(UiNapautus, TrickleDown.TrickleDown); }
+            }
+            else
+            {
+                kerros.JokaRuutu -= Ruutu;
+                foreach (var j in juuret) j.UnregisterCallback<PointerDownEvent>(UiNapautus, TrickleDown.TrickleDown);
+                juuret.Clear();
+            }
             Kuvanakyma.LuentaEste = paalla ? () => jakso != null && jakso.Vaihe == TervetulonVaihe.Puhuu : (Func<bool>)null;
         }
+
+        void UiNapautus(PointerDownEvent e) => Napautus();
 
         void Ruutu()
         {
