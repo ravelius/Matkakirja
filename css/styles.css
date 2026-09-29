@@ -6002,6 +6002,19 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
    tilaa alleen. */
 .karttanimi-kohde { fill: rgba(var(--karttamuste), 0.92); }
 /*
+   KOHDEKAUPUNGIN NIMI RANNAN MUSTEELLA, VÄHEMMÄN MUSTA (omistaja 29.9.2026
+   klo 17.3x, sanatarkasti: "Tee kohdekaupunkien pisteistä ja
+   nimitekstistä vähemmän musta."). Muste on rantaviivan ruskea
+   (js/pallovektorit.js RANTA_MUSTE #5a4330) peitolla 0,75 — sama arvo
+   kuin kaupunkipisteellä (js/pallolauta/lauta.js KAUPUNKIPISTEEN_VARI)
+   ja natiivissa (Natiiviseppä, haara kaupunki-sepia). Pelaajan oma
+   kaupunki pitää entisen musteen (.karttanimi-oma), ja siirtokohteen
+   nimi (.target-nimi) on oma asunsa. GL-nimiöt lukevat tämän
+   koettimella (js/pallolauta/nimiorasterit.js lueNimenAsu). */
+:root { --kohdekaupunkimuste: 90, 67, 48; }
+.karttanimi-kaupunki { fill: rgba(var(--kohdekaupunkimuste), 0.75); }
+.karttanimi-kaupunki.karttanimi-oma { fill: rgba(var(--karttamuste), 0.92); }
+/*
    NOSTON VIIVA — merkiltä nimelle. Kartan kevyttä apuviivastoa: ohut,
    haalistunut muste, lyhyet katkot, ei nuolenpäitä. Paksuus ja katkot
    tulevat elementiltä CSS-pikseleinä (js/karttanimet.js NOSTON_VIIVA,

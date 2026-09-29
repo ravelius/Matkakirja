@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2410, teksti: 'Kaupunkien pisteet ja nimet pehmeämmällä ruskealla' },
   { v: 2408, teksti: 'Liiku läpinäkyväksi, iPadilla Pulun reunaan (#3627)' },
   { v: 2407, teksti: 'Yläpalkki: logo, pillerivalikko, Linssit- ja Aa… (#3624)' },
   { v: 2406, teksti: 'Pariteetti web: saapumiskuva ilman kehystä, yks… (#3622)' },
