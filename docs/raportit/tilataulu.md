@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Lokisiivous 17:35 (Päätoimittaja):** poistettu proto-3d/lokit: 47 yli 48 h vanhaa kansiota + 4 yli 24 h vanhaa .app-kopiota (4,7 Gi), levy 87 Gi. Levyn pudotus 17:20–17:31 = junakäännöksen Build-välitiedostot (proto-kaannos/Build ~5 Gi, ylikirjoittuu, pysähtyy käännöksen jälkeen). Hälytys vain jos < 80 Gi käännöksen päätyttyä.
+
 **Päivitetty 17:32:** Levy 83 Gi (97→93→87→83 17:00–17:31, juna-käännös c5d8f0e7 17.28; raja 80, ilmoitettu Päätoimittajalle), muisti 56 % vapaa (taso 1), kuorma 240/182/184, sim 1, NAS ok. Viikko 6 % (5 h 20 %). Konteksti: Natiivi-UI 38 %, Linnanrakentaja 32 %, Siirtoseppä 32 %, Laitetestaaja 24 %, oma 11 %. Juna: b13 c5d8f0e7 käännetty ja asennettu 17.28. Posti: ei uutta.
 
 **Päivitetty 17:21:** Levy 87 Gi (laskussa 97→93→87 Gi 17:00→17:20, seurataan; raja 80), muisti 59 % vapaa (taso 1), kuorma 38/147/202, sim 0, NAS ok. Viikko 4 % (5 h 14 %). Konteksti: Natiivi-UI 32 %, Linnanrakentaja 26 %, Laitetestaaja 22 %, Siirtoseppä 20 %, muut 10–19 %. Kaikki 12 roolia käynnissä. Juna: b13 ddf90f51 ennallaan. Posti: Codexin puuradio v3 -viesti ilmoitettu Päätoimittajalle.
