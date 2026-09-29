@@ -61,9 +61,6 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -122,8 +119,7 @@ const peli = new Game({
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   // Ilman tätä Chromium ei päästä <audio>-elementtiä soimaan ilman
   // elettä, eikä analysaattorilla olisi mitään mitattavaa.
   args: ['--autoplay-policy=no-user-gesture-required'],
@@ -802,6 +798,7 @@ if (!AANIOSOITE) {
 </svg></button>
 <script type="module">
 import { kaynnistaKaiutinmittari } from '/js/kaiutinmittari.js';
+import { avaaChromium } from '../selain.mjs';
 window.koe = async (url, asetukset) => {
   const ctx = new AudioContext();
   await ctx.resume();

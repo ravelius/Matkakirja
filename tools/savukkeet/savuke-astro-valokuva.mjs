@@ -56,6 +56,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
@@ -103,9 +104,7 @@ const palvelin = createServer((req, res) => {
 const PORTTI = Number(process.env.PORTTI) || 8757;
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /*
  * KOLME RUUTUA, JOISTA YKSI ON OMISTAJAN OMA. iPad 1024 × 1366 on se

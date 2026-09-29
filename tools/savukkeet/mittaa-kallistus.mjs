@@ -25,6 +25,7 @@ import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -67,7 +68,7 @@ const KULMAT = [0, 15, 30];
 /* Horisonttirajan kerroin (kallistus.js KALLISTUS_RAJA_KERROIN); RAJA=… kokeiluun. */
 const RAJA = Number(process.env.RAJA) || undefined;
 
-const selain = MOOTTORI === 'webkit' ? await paketti.webkit.launch() : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+const selain = MOOTTORI === 'webkit' ? await paketti.webkit.launch() : await avaaChromium({});
 const ctx = await selain.newContext({ viewport: { width: RUUTU.width, height: RUUTU.height }, deviceScaleFactor: RUUTU.dpr, isMobile: RUUTU.mobiili, hasTouch: RUUTU.mobiili, serviceWorkers: 'block' });
 await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); }, tallenne);
 const sivu = await ctx.newPage();

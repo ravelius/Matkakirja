@@ -32,10 +32,7 @@
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
-
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 /** Kuvakansio (valinnainen): kaappaukset iPadin kummastakin suunnasta. */
@@ -83,9 +80,7 @@ const IPAD_PRO_VAAKA = { width: 1366, height: 1024 };
 /** Työpöytä hiirellä: säännön on jätettävä tämä täsmälleen ennalleen. */
 const TYOPOYTA = { width: 1400, height: 900 };
 
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-});
+const selain = await avaaChromium();
 
 /** Avaa pelin karttanäkymään annetulla ruudulla (`kosketus` = iPad). */
 async function avaaPeli(viewport, { kosketus = false } = {}) {

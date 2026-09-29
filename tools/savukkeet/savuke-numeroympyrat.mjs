@@ -22,10 +22,8 @@
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
-import { createRequire } from 'node:module';
+import { avaaChromium } from '../selain.mjs';
 
-const require = createRequire(import.meta.url);
-const { chromium } = require('playwright');
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO) mkdirSync(KUVAKANSIO, { recursive: true });
@@ -49,7 +47,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM });
+const selain = await avaaChromium();
 // Kaikki kaupungit, joiden kartalla on numeroympyrat-lippu (ei kovakoodattua listaa).
 for (const kaupunki of Object.keys(KAUPUNKIKARTAT).filter((id) => KAUPUNKIKARTAT[id].numeroympyrat)) {
   const kohteita = KAUPUNKIKARTAT[kaupunki].kohteet.length;

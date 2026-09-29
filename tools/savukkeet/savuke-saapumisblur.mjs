@@ -19,10 +19,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { decodePng } from './pallon-liike-mittarit.mjs';
-
-const paketinLahde = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const paketti = paketinLahde?.webkit ? paketinLahde : (paketinLahde?.default ?? paketinLahde);
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? process.env.KAAPPAUKSET ?? null;
@@ -95,7 +92,7 @@ const LAUDAT = [
   { nimi: 'pallolauta', param: '?lauta=pallo' },
   { nimi: 'tasokartta', param: '' },
 ];
-const selain = await paketti.chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 for (const lauta of LAUDAT) {
   const ctx = await selain.newContext({
     viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block',

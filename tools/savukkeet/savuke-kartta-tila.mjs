@@ -51,6 +51,7 @@ import { packById } from '../../js/pack.js';
 // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta`
 // ohjataan pallolle (tools/savukkeet/vanha-kartta-ohitus.mjs).
 import { vainPallo } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta` ei
@@ -71,9 +72,6 @@ async function ampariHaku(url) {
 }
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.geojson': 'application/json' };
@@ -89,7 +87,7 @@ const osoite = `http://localhost:${palvelin.address().port}/?lauta=${LAUTA}`;
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({
   viewport: { width: 834, height: 1112 }, hasTouch: true, isMobile: true,
   deviceScaleFactor: 2, serviceWorkers: 'block',

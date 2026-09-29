@@ -73,6 +73,7 @@ import { KAUPUNKIMERKIN_NIMIO_PX } from '../../js/pallolauta/nostot.js';
 import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
 import { MINIATYYRIT } from '../../js/packs/miniatyyrit.js';
 import { NAHTAVYYSJUTUT } from '../../js/packs/nahtavyysjutut.js';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * KAUPUNKILIUSKA POISTUI (omistaja 27.9.2026 klo 23.4x): kaupungin napautus
@@ -83,9 +84,6 @@ import { NAHTAVYYSJUTUT } from '../../js/packs/nahtavyysjutut.js';
 const LIUSKA_KAYTOSSA = /export const KAUPUNKILIUSKA = true;/.test(
   readFileSync(new URL('../../js/pallolauta/lauta.js', import.meta.url), 'utf8'));
 
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -194,7 +192,7 @@ if (!LIUSKA_KAYTOSSA) {
   palvelin.close();
   process.exit(0);
 }
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /* ---------------------------------------------------------------- ajo */
 

@@ -123,6 +123,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { basename, extname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 /* ============================================================ RESEPTIT */
 
@@ -2276,11 +2277,7 @@ console.log(maailma
 
 mkdirSync(resolve(ulosKansio), { recursive: true });
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--max-old-space-size=4096'],
 });
 const sivu = await selain.newPage();

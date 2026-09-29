@@ -174,6 +174,7 @@ import { suorituskykyVaatija } from './suorituskyky.mjs';
 import {
   NOSTON_MITTA, NOSTON_NIMIO_KATTO_PX, KAUPUNKIMERKIN_KERROIN, KAUPUNKIMERKIN_NIMIO_PX,
 } from '../../js/pallolauta/nostot.js';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * KAUPUNKILIUSKA POISTUI (omistaja 27.9.2026 klo 23.4x): kaupungin napautus
@@ -184,9 +185,6 @@ import {
 const LIUSKA_KAYTOSSA = /export const KAUPUNKILIUSKA = true;/.test(
   readFileSync(new URL('../../js/pallolauta/lauta.js', import.meta.url), 'utf8'));
 
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
@@ -473,7 +471,7 @@ function tallenne(kaupunki) {
 /** CPU:n hidastuskerroin (`SAVUKE_HIDASTUS`), 1 = ei hidastusta. */
 const HIDASTUS = Number(process.env.SAVUKE_HIDASTUS ?? 1) || 1;
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 async function avaaSivu(ruutu, { ryhmitys = true } = {}) {
   const ctx = await selain.newContext({

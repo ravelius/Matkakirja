@@ -40,10 +40,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { FOKUSVIRTA_BUDAPEST } from '../../js/packs/fokusvirta-budapest.js';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -93,7 +90,7 @@ const tallenne = JSON.stringify(peli.toJSON());
  */
 const KESTO_S = 7;
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const ctx = await selain.newContext({ viewport: RUUTU, serviceWorkers: 'block' });
 await ctx.addInitScript((kesto) => {
   const Alkuperainen = window.Audio;

@@ -65,6 +65,7 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { NAYTA_VAIN_KOHDEMAAN_NOSTOT } from '../../js/pallolauta/nostot.js';
 import { musteenVoittaja } from '../../js/pallolauta/lauta.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
@@ -142,9 +143,6 @@ if ((await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`))?.status !== 200
   process.exit(lapi === kaikki ? 0 : 1);
 }
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const tallenne = (aloitus) => {
   const peli = new Game({
@@ -157,7 +155,7 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch({ executablePath: process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const virheet = [];
 
 async function avaaPeli(kaupunki, leveys, korkeus) {

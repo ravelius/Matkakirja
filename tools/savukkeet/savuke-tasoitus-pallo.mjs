@@ -81,10 +81,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { varitasonKansio } from '../../js/laattapyramidi.js';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -354,8 +351,7 @@ tieto('pilotin parametrit', `paletti ${VARITASOT.FRA.paletti} · vesi ${VARITASO
   + `· feidaus ${VARITASOT.FRA.feidaus} (häive ${VARITASOT.FRA.feidausReuna}) `
   + `· rajattu ${VARITASOT.FRA.rajattu} · tasot ${VARITASOT.FRA.tasot.join(',')}`);
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--disable-dev-shm-usage'],
 });
 /* Tallenne: Fogg Ateenassa (sama kuin muilla pallosavukkeilla). */
