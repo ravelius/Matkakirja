@@ -67,7 +67,8 @@ export const TILA = {
   kamera: { kohde: [14, 1.2, 7.2], atsimuutti: 172, korkeus: 22, etaisyys: 16, fov: 38, aukko: 0.8 },
   // Kamerat ~22–24° vaakatason yläpuolella (Codexin hahmot on piirretty ~25° kulmasta). Pystynäytössä taulu
   // peittää alimman 45 %, joten huone rajataan lähelle ja nostetaan näkyvän yläosan keskelle.
-  kameraPysty: { kohde: [13.8, -0.8, 7.0], atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
+  kameraPysty: { kohde: [13.05, -0.8, 7.08], // pysty 30.9.: kokki ja vihje 1 keskelle (x 0,52)
+     atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea' },
   taulu: TAULU_KEITTIO,
   // Elävä linna (29.9.): yleisnäkymän napautuskohde pihan puolen julkisivulla (ikkunasta kajastaa tuli); ensimmäisen
