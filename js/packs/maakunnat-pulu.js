@@ -2351,4 +2351,213 @@ export const MAAKUNTIEN_PULU = {
       { q: "Miksi Kuninkaiden haudat on nimetty kuninkaiden mukaan?", a: "Nimi tulee hautojen komeudesta: kuninkaita niihin ei haudattu, vaan Paphosin aatelisia ja korkeita virkamiehiä 200-luvulle jaa. asti. Osassa haudoista on dorilaisia pylväitä ja seinämaalauksia." },
     ],
   },
+  MLT: {
+    "Southern Harbour": [
+      { q: "Miksi Caravaggion Johannes Kastajan mestaus on Vallettassa niin erikoinen?", a: "Se on ainoa maalaus, johon Caravaggio on kirjoittanut nimensä – Johannes Kastajan kaulasta valuvaan vereen. Työ valmistui 1608 St. John's Co-Cathedralin oratorioon, ja ritarikunta erotti taiteilijan saman vuoden joulukuussa." },
+      { q: "Missä ritarit asuivat ennen Vallettaa?", a: "Ritarikunta asettui Birguun vuonna 1530 ja piti sitä keskuspaikkanaan vuoteen 1571, jolloin se muutti uuteen Vallettaan. Birgu on nykyään yksi Suuren sataman toisella rannalla olevista Kolmesta kaupungista." },
+    ],
+    "Northern Harbour": [
+      { q: "Mitä Sliema tarkoittaa?", a: "Maltaksi sliema on \"rauha\", ja sanaa käytettiin myös tervehdyksenä. Pienestä kalastajakylästä kasvoi kaupunki, kun Vallettan varakkaat alkoivat rakentaa rantaan kesähuviloita ja kulkivat niille lautalla." },
+      { q: "Miksi Maltan yliopiston historia alkaa Vallettasta eikä Msidasta?", a: "Jesuiitat perustivat Collegium Melitensen paavin luvalla 1592, ja sen oma rakennus valmistui Vallettaan vuosina 1595–1597. Msidan kampus on paljon nuorempi: se otettiin käyttöön vasta 1900-luvun jälkipuoliskolla." },
+    ],
+    "South Eastern": [
+      { q: "Miksi Mnajdran temppelit ovat kuuluisia auringosta?", a: "Päiväntasauksena aamuaurinko valaisee pääoven läpi koko käytävän perimmäiseen apsikseen, ja päivänseisauksina valo osuu sisään vain kapeana säteenä. Temppelin rakentajat näyttävät siis tunteneen auringon vuotuisen kierron yli 5 000 vuotta sitten." },
+      { q: "Mitä Marsaxlokk tarkoittaa?", a: "Nimessä yhdistyvät sanat marsa, \"satama\", ja xlokk, kaakkoistuuli eli sirocco, joten se on suunnilleen \"kaakon satama\". Lahti tarjoaa suojaisen ankkuripaikan saaren kaakkoisrannalla." },
+    ],
+    "Western": [
+      { q: "Miksi Mdina näyttää televisiosarjan kuninkaankaupungilta?", a: "Koska se esitti sitä: Game of Thrones -sarjan ensimmäisellä kaudella linnoitettu Mdina oli Westerosin pääkaupunki King's Landing. Keskiaikaiset muurit ja hiekkakiviset kujat kelpasivat lavasteiksi lähes sellaisenaan." },
+      { q: "Mikä Verdalan palatsi on?", a: "Suurmestari Hugues Loubenx de Verdalle rakennutti sen vuonna 1586 ritarikunnan kesäasunnoksi Rabatin liepeille Buskettin metsän kupeeseen." },
+    ],
+    "Northern": [
+      { q: "Miksi pohjoisrannikolla on värikäs puukylä, Popeye Village?", a: "Kylä rakennettiin Anchor Bayn rannalle 1979 Robin Williamsin tähdittämän Popeye-elokuvan lavasteeksi: 19 puurakennusta ja aallonmurtaja. Kuvausten jälkeen se jäi paikalleen, ja nykyään se on ympärivuotinen turistikohde." },
+      { q: "Mistä St Paul's Bay on saanut nimensä?", a: "Perimätiedon mukaan apostoli Paavali haaksirikkoutui lahdelle noin vuonna 60 matkalla Roomaan; tapahtumasta kertovat Apostolien teot. Kristinuskon tulon Maltalle katsotaan alkaneen juuri tästä." },
+    ],
+    "Gozo and Comino": [
+      { q: "Miksi Ġgantija-temppelit ovat niin kuuluisia?", a: "Xagħran temppelit ovat noin 5 500 vuotta vanhoja, siis vanhempia kuin Gizan pyramidit. Nimi tulee sanasta ġgant, jättiläinen: myöhemmät sukupolvet uskoivat, että vain jättiläisnainen saattoi nostaa niin suuria kiviä." },
+      { q: "Miksi Dwejran Fungus Rockille ei saanut kiivetä?", a: "Kalliolla kasvaa haiseva loiskasvi, jota ritarit pitivät lääkkeenä. Suurmestari Pinto julisti kallion 1746 kielletyksi alueeksi, ja luvaton keräilijä saattoi joutua kolmeksi vuodeksi keittiöorjaksi." },
+      { q: "Mikä Kalypson luola on?", a: "Xagħran lähellä Ramlan lahden reunalla oleva luola yhdistetään Homeroksen Ogygiaan, jonne nymfi Kalypso piti Odysseusta vankinaan seitsemän vuotta. Todisteita ei ole, mutta legenda on pitänyt paikkaa kartalla." },
+    ],
+  },
+  LUX: {
+    "Diekirch": [
+      { q: "Miksi Diekirchin kirkontornia kruunaa aasi kukon sijaan?", a: "Legendan mukaan aasit raatoivat Herrenbergin jyrkillä viinitarhoilla, koska vain ne pärjäsivät rinteessä. Niistä tuli kaupungin tunnus: Laurentius-kirkon tornissa on aasi, ja karnevaalikulkueissa se on vieläkin päätähti." },
+      { q: "Mikä on The Family of Man, ja miksi se on juuri Clervaux'ssa?", a: "Se on 503 valokuvan näyttely 273 kuvaajalta 68 maasta, jonka Edward Steichen kokosi New Yorkiin 1955. Luxemburgilaissyntyinen Steichen halusi sen pysyvästi kotimaahansa, ja Clervaux'n linnassa se on ollut vuodesta 1994. Unesco liitti sen Memory of the World -luetteloon 2003." },
+      { q: "Mitä Viandenin pumppuvoimalaitoksessa tapahtuu öisin?", a: "Kun sähkön kysyntä on pieni, vettä pumpataan Our-joen alaaltaasta ylös vuorella olevaan altaaseen. Päivällä huippukulutuksen aikaan vesi lasketaan takaisin turbiinien läpi." },
+    ],
+    "Grevenmacher": [
+      { q: "Mitä Echternachin hyppykulkueessa tapahtuu?", a: "Helluntaitiistaina tuhannet pyhiinvaeltajat ja katsojat etenevät kaupungin läpi hyppien, valkoiset nenäliinat käsissä ja torvisoittokuntien soittaessa. Perinne juontaa 1400-luvun lopulta, ja Unesco lisäsi sen aineettoman perinnön luetteloonsa 2010." },
+      { q: "Mikä tekee Mullerthalista Luxemburgin Pikku-Sveitsin?", a: "Alue on nimetty maisemansa mukaan, ei korkeuden: siellä on hiekkakivikallioita, kapeita rotkoja ja luolia. Mullerthal Trail kiertää seutua kolmena reittinä, yhteensä noin 112 kilometriä." },
+      { q: "Miksi Luxemburgin viinit ovat lähinnä kuivia valkoviinejä ja kuohuvia?", a: "Viileän ilmaston viinialueen erikoisuutta ovat kuivat, Alsacen tyyliä muistuttavat valkoviinit, ja perinteisellä menetelmällä tehtyä kuohuviiniä myydään nimellä Crémant de Luxembourg. Yleisimpiä lajikkeita ovat Rivaner, Auxerrois, Pinot gris ja Riesling." },
+    ],
+    "Luxembourg": [
+      { q: "Mistä Luxemburgin nimi tulee?", a: "Nimi juontuu sanasta Lucilinburhuc, 'pieni linnoitus'. Kreivi Siegfried vaihtoi Bock-kalliolla sijainneen linnan omiin maihinsa Feulenissa Trierin apotin kanssa 7. huhtikuuta 963." },
+      { q: "Mikä on Gëlle Fra?", a: "Se on kultapintainen naisveistos 21-metrisen obeliskin huipulla Perustuslaintorilla, ja se muistuttaa kaatuneista luxemburgilaissotilaista. Claus Citon veistämä monumentti paljastettiin 1923, ja natsit tuhosivat sen 1940." },
+      { q: "Mitä EU-toimintaa Kirchbergin tasangolla on?", a: "Siellä toimii EU:n tuomioistuin, joka perustettiin 1952 ja jonka kotipaikka on Luxemburg. Kaupungissa ovat myös EU:n tilintarkastustuomioistuin ja Euroopan parlamentin sihteeristö." },
+    ],
+  },
+  MDA: {
+    "Anenii Noi": [
+      { q: "Miksi Euroopan johtajat kokoontuivat pieneen moldovalaiskylään?", a: "Castel Mimi isännöi Bulboacassa 1. kesäkuuta 2023 Euroopan poliittisen yhteisön toista huippukokousta. Linnassa on kongressitilat ja hotelli, ja tapahtuma nosti pienen kylän hetkeksi Euroopan uutisiin." },
+      { q: "Mikä on Euroopan poliittinen yhteisö?", a: "Se on vuonna 2022 perustettu foorumi, jossa EU-maat ja muut Euroopan valtiot keskustelevat yhteisistä kysymyksistä kuten turvallisuudesta ja energiasta. Ensimmäinen kokous pidettiin Prahassa ja toinen Moldovassa." },
+    ],
+    "Bălţi": [
+      { q: "Miksi Bălția sanotaan Moldovan pohjoiseksi pääkaupungiksi?", a: "Se on pohjoisen suurin kaupunki ja tärkeä teollisuus-, kauppa- ja liikennekeskus. Rautatie- ja linja-autoyhteydet johtavat sieltä sekä Chișinăuhun että Romaniaan ja Ukrainaan." },
+      { q: "Mikä on Vasile Alecsandrin kansallisteatteri?", a: "Bălțin teatteri perustettiin 1957, ja sen nimi tulee romanialaisesta runoilijasta ja näytelmäkirjailijasta Vasile Alecsandrista." },
+      { q: "Mitä Pyhän Konstantinin ja Helenan katedraalin vihkiäisissä tapahtui?", a: "Kulmakivi laskettiin 1924, rakennus valmistui 1934 ja se vihittiin 2. kesäkuuta 1935. Uusromanialaisen tyylin katedraalin vihkiäisissä olivat läsnä kuningas Carol II ja hänen poikansa, tuleva kuningas Mikael I." },
+    ],
+    "Basarabeasca": [
+      { q: "Miksi 1,2 kilometrin pituinen rataosuus on niin tärkeä?", a: "Berezyne–Basarabeasca-radasta vain 1,2 kilometriä kulkee Moldovassa, mutta se avasi ukrainalaiselle rahdille reitin Tonavan satamiin." },
+      { q: "Miksi Basarabeasca-piirin väkiluku on puolittunut?", a: "Piirissä oli vuonna 1989 noin 31 600 asukasta, mutta vuonna 2025 enää noin 15 700. Piiri on pieni, 295 neliökilometriä, ja siihen kuuluvat kaupungin lisäksi yhdeksän kylää, muun muassa Abaclia, Sadaclia ja Carabetovca." },
+    ],
+    "Bender": [
+      { q: "Mitä Benderissä hyväksyttiin huhtikuussa 1710?", a: "Kasakkahetmani Pylyp Orlyk ja kasakkaeliitti hyväksyivät 5. huhtikuuta 1710 perustuslain, joka erotti lainsäädäntö-, toimeenpano- ja tuomiovallan lähes 40 vuotta ennen Montesquieun tunnettua teosta. Ruotsin kuningas Kaarle XII vahvisti asiakirjan." },
+      { q: "Missä Orlykin perustuslaki on nykyään?", a: "Ukrainankielinen alkuperäinen ja Ruotsin kuninkaan diplomi löytyivät vuonna 2008 Moskovan Venäjän muinaisten asiakirjojen valtionarkistosta. Latinankielinen versio säilytetään Ruotsin kansallisarkistossa." },
+    ],
+    "Briceni": [
+      { q: "Mikä Lipcani on ja miksi se on tärkeä paikka?", a: "Lipcani on Briceni-piirin kaupunki Prut-joen rannalla ja rajanylityspaikka Moldovan ja Romanian välillä." },
+      { q: "Mitä Briceni-kaupungin itäpuolella on?", a: "Siellä on Bricenin juutalainen hautausmaa. Juutalaisyhteisö oli aikoinaan kaupungin väestöenemmistö, ja se kärsi toisessa maailmansodassa raskaita menetyksiä." },
+    ],
+    "Cahul": [
+      { q: "Miksi Cahulin seutu on Moldovan lämpimin?", a: "Cahulin piirin ilmasto on maan kuivin ja lämpimin: keskilämpötilat ovat 2–3 astetta muuta maata korkeammat ja sadetta tulee vain 400–550 millimetriä vuodessa." },
+      { q: "Missä Moldovan suurimmat luonnonjärvet ovat?", a: "Cahulin piirissä Prutin alajuoksun tulvatasangolla ovat Beleu ja Manta, jotka luetaan Moldovan suurimpiin luonnonjärviin. Piiri ulottuu pohjoisen kukkulaseudun 230–240 metristä Tonavan tasangon 5–10 metriin." },
+    ],
+    "Călărași": [
+      { q: "Mikä on Luostarien risti?", a: "Călărașin piirissä sijaitsevat Hîrjauca, Hîrbovăț, Frumoasa ja Răciula, neljä luostaria, jotka muodostavat ylhäältä katsottuna ristin. Niiden yhdistämä pyhiinvaellusreitti tunnetaan nimellä Luostarien risti." },
+      { q: "Mitä Hîrbovățin luostarille tapahtui neuvostoaikana?", a: "Bojaari Constantin Carpuzin 1730 perustama luostari toimi vuoteen 1962, jolloin neuvostoviranomaiset sulkivat sen. Ortodoksinen kirkko sai sen takaisin vuonna 1992." },
+      { q: "Mistä Călărași-nimi tulee?", a: "Sana călărași tarkoitti historiallisesti ratsumiehiä. Paikallisen legendan mukaan Stefan Suuri määräsi ratsurykmentin vartioimaan seutua ottomaaneja vastaan." },
+    ],
+    "Camenca": [
+      { q: "Ketkä Camencassa asuvat?", a: "Vuoden 2004 laskennassa moldovalaisia oli 51,3 %, ukrainalaisia 33,7 % ja venäläisiä 12,6 %. Pienempiä ryhmiä olivat muun muassa valkovenäläiset, puolalaiset, bulgarialaiset, gagauzit, saksalaiset, armenialaiset ja romanit." },
+      { q: "Mitä Camencan juutalaisyhteisölle tapahtui?", a: "Vuonna 1939 kaupungissa asui 1 283 juutalaista, 17,4 % väestöstä. Kun Romanian joukot saapuivat heinäkuussa 1941, kaupungissa ja sen ympäristössä surmattiin yli tuhat juutalaista." },
+    ],
+    "Cantemir": [
+      { q: "Miksi Cantemirin piirissä on bulgarialaisia kyliä?", a: "Esimerkiksi Stoianovcan kylän perustivat vuonna 1902 Bessarabian bulgarialaiset, jotka muuttivat sinne muun muassa Cortenin, Ceadîr-Lungan ja Valea Perjein kylistä. Kylässä asuu edelleen enimmäkseen bulgarialaisia." },
+      { q: "Mikä joki kulkee Cantemirin piirin läpi?", a: "Piirin pääjoki on Prut, joka virtaa sen länsiosassa ja on samalla Moldovan ja Romanian välinen raja." },
+      { q: "Mitä Cantemirin piirissä viljellään?", a: "Maatalous hallitsee: noin 57 prosenttia alasta on viljelyssä. Pääkasveja ovat vilja, auringonkukka, rypsi ja soija, ja viinirypäleitä kasvatetaan noin 6,5 prosentilla piirin maasta." },
+    ],
+    "Causeni": [
+      { q: "Kuka maalasi Căușenin kirkon seinät?", a: "Sisäseinät maalasivat vuonna 1763 valakialaiset taiteilijat Radu ja Voicu Stanciul. Kreikankielinen kirjoitus kirkossa kertoo työn ajankohdan, ja tyylissä yhdistyvät bysanttilainen ja romanialainen perinne." },
+      { q: "Miksi kirkko on niin matala?", a: "Paikallisen legendan mukaan tataarit sallivat kirkon rakentamisen vain, jos se ei olisi keihäällä varustetun ratsumiehen korkeampi. Kyseessä on legenda, ei todistettu tosiasia." },
+      { q: "Mitä kirkolle tapahtui neuvostoaikana?", a: "Rakennus muutettiin varastoksi ja hedelmien savustus- ja kuivauslaitokseksi, mikä vaurioitti maalauksia. Suojelukohteeksi se julistettiin vuonna 1983." },
+    ],
+    "Chişinău": [
+      { q: "Mistä Chișinăun nimi tulee?", a: "Yhden selityksen mukaan nimi tulee vanhasta romanian sanasta chișla, lähde, ja sanasta nouă, uusi. Selitys on kuitenkin vain yksi tulkinta." },
+      { q: "Mikä on Klassikkojen kuja?", a: "Se on Ștefan cel Mare -puiston reitti, jonka peruskivi muurattiin vuonna 1958. Alussa siinä oli 12 pronssista rintakuvaa; nykyään kirjailijoiden ja muiden merkkihenkilöiden rintakuvia on noin 29." },
+      { q: "Milloin Valea Morilor -puisto perustettiin?", a: "Puisto perustettiin vuonna 1952. Sen keskellä on suuri järvi, jota kiertää kävelyreitti." },
+    ],
+    "Cimişlia": [
+      { q: "Mikä joki virtaa Cimișlian läpi?", a: "Cogâlnic, piirin pääjoki, on 183 kilometriä pitkä. Se virtaa Cimișlian kautta ja laskee lopulta Sasyk-järveen Ukrainan puolella." },
+      { q: "Mitä Cimișlian seudulla viljellään ja tuotetaan?", a: "Maatalousmaata on noin 60 prosenttia piirin alasta. Alueella tuotetaan lihaa, maitoa, hedelmiä ja viljaa, ja viinintuotanto on merkittävä osa taloutta." },
+    ],
+    "Comrat": [
+      { q: "Mistä Comratin nimi tulee?", a: "Nimen arvellaan tulevan turkkilaisesta sanaparista kömür at, musta hevonen. Toisen selityksen mukaan se viittaa alueelle asettuneisiin konrat-nogaitatarilaisiin heimoihin. Tarkkaa alkuperää ei tiedetä." },
+      { q: "Mikä oli Comratin tasavalta vuonna 1906?", a: "Talonpoikaislevottomuuksien aikana sosialistivallankumouksellinen Andrei Gălățeanu julisti Comratissa itsehallinnollisen, mutta ei itsenäisen, tasavallan. Se kesti vain noin viisi päivää, ja Gălățeanu karkotettiin Siperiaan." },
+      { q: "Mikä on Hıdırlez ja miten sitä vietetään Gagauziassa?", a: "Hıdırlez on kevään tulon juhla, jota vietetään 5.–6. toukokuuta. Perinteen mukaan silloin uhrataan karitsa tai kukko, jonka liha keitetään bulgurin kanssa: puolet jaetaan köyhille tai naapureille ja puolet syödään perheen kesken." },
+    ],
+    "Criuleni": [
+      { q: "Mikä oli Criulenin ensimmäinen maininta?", a: "Paikka mainitaan ensimmäisen kerran vuonna 1607 Moldavian ruhtinas Mihail Movilăn asiakirjassa nimellä Criveni. Nykyinen nimi on kehittynyt siitä." },
+      { q: "Kuka kuuluisa shakkimestari on syntynyt Criulenissä?", a: "Suurmestari Viktor Gavrikov syntyi Criulenissä 29. heinäkuuta 1957. Hän jakoi Neuvostoliiton mestaruuden vuonna 1985 ja voitti Sveitsin mestaruuden vuonna 1996. Hän kuoli vuonna 2016." },
+    ],
+    "Donduseni": [
+      { q: "Mitä nimi Dondoșani-Gară tarkoitti?", a: "Nimen loppuosa Gară tarkoittaa romaniaksi asemaa. Paikka oli siis alun perin Dondoșanin asema, jonka ympärille asutus kasvoi rautatien mukana." },
+      { q: "Kuka perusti Țaulin puiston kartanon ympärille?", a: "Puiston perusti Pommerin suku noin vuonna 1900, ja maisema-arkkitehtina toimi insinööri Ipolit Vladislavski-Padalka. Puisto on 46,2 hehtaarin kokoinen, ja siellä kasvaa lehti- ja havupuita eri puolilta maailmaa." },
+    ],
+    "Drochia": [
+      { q: "Mikä lintu on dropie?", a: "Dropie on isotrappi, yksi Euroopan painavimmista lentävistä linnuista. Drochian nimen kerrotaan tulevan tästä paikallisesta linnusta." },
+      { q: "Millainen on Drochian piirin maisema?", a: "Piirin eteläosassa on Bălțin arojen tasankoa ja pohjoisessa Moldovan ylängön jäänteitä. Pinta-alaa on noin tuhat neliökilometriä, ja vesistöinä ovat Răut ja sen sivujoet, kuten Cubolta." },
+    ],
+    "Edineţ": [
+      { q: "Mikä Cupcini on ja miksi sillä on ollut toinenkin nimi?", a: "Cupcini on Edineţin piirin toinen kaupunki, pikkukaupunki Ciuhur-joen laaksossa. Neuvostoaikana, vuosina 1958–1990, sitä kutsuttiin nimellä Kalininsk." },
+      { q: "Mistä Edineţin nimi on peräisin ja milloin se mainitaan ensi kerran?", a: "Vuonna 1431 Moldavian ruhtinas Aleksanteri Hyvä vahvisti bojaari Cupcicin maat, ja asiakirjan kylien joukossa esiintyy Edineţin edeltäjä, jota kutsuttiin nimellä Vedinţi." },
+    ],
+    "Făleşti": [
+      { q: "Mikä on Moldovan kaikkien aikojen kuumin mitattu lukema ja missä se mitattiin?", a: "Fălestissä mitattiin 7. elokuuta 2012 peräti 42,4 astetta, mikä on Moldovan korkein koskaan rekisteröity lämpötila." },
+      { q: "Kuka oli Lazăr Dubinovschi, jonka mukaan museo on nimetty?", a: "Dubinovschi (1910–1982) oli Fălestissä syntynyt kuvanveistäjä, joka opiskeli Bukarestin taideakatemiassa. Museolle hän lahjoitti 13 veistostaan vuonna 1979." },
+    ],
+    "Floreşti": [
+      { q: "Mikä Răut on ja miksi se on Moldovalle tärkeä?", a: "Răut on 286 kilometriä pitkä joki, joka on Moldovan pisin kokonaan maan sisällä virtaava joki ja Dnestrin suurin sivujoki. Se kulkee Bălţin, Floreştin ja Orheiin kaupunkien kautta." },
+      { q: "Ketkä Moldovan presidenteistä ovat kotoisin Floreştin piiristä?", a: "Petru Lucinschi syntyi Rădulenii Vechin kylässä ja Mircea Snegur Trifăneştin kylässä, molemmat nykyisessä Floreştin piirissä." },
+    ],
+    "Glodeni": [
+      { q: "Mitä Glodenin pelloilla kasvaa?", a: "Piirin maasta noin kolme neljäsosaa on maatalouskäytössä. Tärkeimpiä viljelykasveja ovat auringonkukka, sokerijuurikas ja tupakka." },
+      { q: "Mikä on Glodenin piirin vanhin asiakirjoihin merkitty asuinpaikka?", a: "Cobanin kylä, joka mainitaan asiakirjoissa jo vuonna 1374. Se sijaitsee Prutin lähellä, Pădurea Domnească -suojelualueen kupeessa." },
+    ],
+    "Grigoriopol": [
+      { q: "Mistä Grigoriopolin nimi tulee?", a: "Nimen loppuosa polis tarkoittaa kaupunkia, ja alkuosa viittaa Armenian kirkon perustajaan, pyhään Gregorius Valistajaan." },
+      { q: "Mistä armenialaiset tulivat Grigoriopoliin?", a: "Lähteiden mukaan asutus koostui Kiliasta, Cetatea Albăsta ja muualta Mustanmeren rannikolta tulleista armenialaisista. Kaupunki perustettiin vuonna 1792 Dnestrin kauppapaikaksi." },
+    ],
+    "Hîncesti": [
+      { q: "Mikä Petrocub on ja miksi se on tehnyt Hînceştin tunnetuksi?", a: "FC Petrocub Hînceşti voitti Moldovan Super Liga -mestaruuden 18. toukokuuta 2024, kun se voitti Zimbru Chişinăun 4–1." },
+      { q: "Mitä Manuc Beille nimetyssä kartanossa on nykyään?", a: "Kartanokompleksissa toimii historia- ja etnografiamuseo, joka perustettiin 1979. Rakennukset restauroitiin 2014–2015, ja kompleksi avattiin uudelleen joulukuussa 2015." },
+    ],
+    "Ialoveni": [
+      { q: "Miksi Surucenin luostarin kirkko on vaaleanpunainen?", a: "Sen seinät on verhoiltu vaaleanpunaisella armenialaisella tuffilla. Luostari perustettiin 1785, kivikirkko rakennettiin 1825–1832, ja luostari palautettiin uskovaisille 1991." },
+      { q: "Miksi Ialovenin väkiluku kasvaa, vaikka monessa pikkukaupungissa se laskee?", a: "Kaupunki on aivan pääkaupungin vieressä, ja Chişinăun läheisyys houkuttelee asukkaita. Vuosien 2014 ja 2024 välillä väkiluku kasvoi 12 515:stä 14 665:een." },
+    ],
+    "Leova": [
+      { q: "Kuka oli Idel Ianchelevici ja mikä yhteys hänellä oli Leovaan?", a: "Ianchelevici syntyi Leovassa 1909, muutti Belgiaan 1920-luvun lopulla ja asettui 1950 Ranskaan, jossa hän kuoli 1994. Hänestä tuli kuvanveistäjä ja Romanian akatemian ulkomainen kunniajäsen vuonna 1992." },
+      { q: "Mikä on Lebăda albă?", a: "Se on noin 30 hehtaarin vesiekosysteemialue Leovan kaupungissa, jonka nimi tarkoittaa Valkoista joutsenta. Alue on suojeltu luontokohde kaupungin sisällä." },
+    ],
+    "Nisporeni": [
+      { q: "Miksi Vărzărești'n luostaria sanotaan alueen vanhimmaksi?", a: "Sen ensimmäinen asiakirjamaininta on vuodelta 1420, kun ruhtinas Aleksanteri Hyvän läänityskirja vahvistaa erään maa-alueen rajat luostarin maiden kanssa. Sitä pidetään vanhimpana luostarina Prutin ja Dnestrin välisellä alueella." },
+      { q: "Mitä Codru tarkoittaa viininviljelijälle?", a: "Codru on Moldovan suurin viinialue, tunnettu raikkaista, kukkaisista valkoviineistä kuten chardonnaysta, rieslingistä ja sauvignon blancista. Nisporenin piirissä viinitarhoja on noin 6 100 hehtaaria." },
+    ],
+    "Ocniţa": [
+      { q: "Mikä on \"Kolmenkymmenenkolmen kahlaamon\" suojelualue?", a: "La 33 de Vaduri on Chisărău-joen laaksossa Naslavcean lähellä sijaitseva maisemansuojelualue. Sen tunnetaan olevan tasavallan pohjoisin ja siellä on vaaleanpunaisesta mustaan vaihtelevia piikivikerrostumia sekä vanhojen vesimyllyjen kahlaamoita." },
+      { q: "Miksi Clocușnan pikkukylässä on elokuvamuseo?", a: "Siellä syntyi 6.11.1936 ohjaaja Emil Loteanu, jonka elokuvat Lăutarii ja Tabor ukhodit v nebo saivat kansainvälistä huomiota. Museo avattiin 2006, hänen 70-vuotispäivänään." },
+    ],
+    "Orhei": [
+      { q: "Mitä Orheiul Vechin kalliolla oli 1300-luvulla?", a: "1300-luvun alkupuoliskolla Kultaisen Ordan johtajat perustivat sinne Şehr al-Jedidin, \"Uuden kaupungin\", jossa oli moskeija, karavaanisaarai ja kolme kylpylää. Tutkijat ovat kartoittaneet yli 300 rakennetta, ja kaupunki jäi asukkaistaan tyhjäksi 1300-luvun lopulla." },
+      { q: "Miksi Curchin luostari avattiin uudelleen vasta vuonna 2005?", a: "Neuvostoaikana sen tiloissa toimi psykiatrinen sairaala, ja rakennukset vaativat sen jälkeen mittavan korjauksen. Luostarin kirkon kupolin kerrotaan olevan Moldovan korkein." },
+    ],
+    "Rezina": [
+      { q: "Mikä Țipovan luolaluostari on?", a: "Kallioon hakattu luolaluostari sijaitsee korkealla Dnestrin yläpuolella. Lähteet ajoittavat luostarin 1000–1100-luvuille." },
+      { q: "Kuka perusti Saharnan luostarin?", a: "Munkki Vartolomeu Ciungulin mainitaan perustaneen Pyhän Kolminaisuuden luostarin vuonna 1776 kolmen kukkulan juurelle. Luostari säilyttää autuaan Macarien pyhäinjäännöksiä." },
+    ],
+    "Rîşcani": [
+      { q: "Mitä Duruitoarea Vechen luolasta on löytynyt?", a: "Kolmiosaisesta luolasta on kaivettu esiin biisonin, sarvikuonon ja jalohirven luita, työkaluja, koruja sekä mammutinluusta ja poron hampaista tehtyjä riipuksia. Vanhimman kerroksen arvioidaan olevan kymmeniä tuhansia vuosia vanha." },
+      { q: "Paljonko sähköä Costești–Stâncan pato tuottaa?", a: "Voimalan yhteisteho on 32 megawattia, josta 16 megawattia kuuluu Moldovalle ja 16 Romanialle." },
+    ],
+    "Sîngerei": [
+      { q: "Voiko Răut-jokea kulkea veneellä?", a: "Joki on 286 kilometriä pitkä, ja sen valuma-alue on noin 7 760 neliökilometriä. Se oli yleensä kulkukelpoinen aina 1700–1800-luvuille asti, mutta nykyään sillä liikkuu vain pieniä huviveneitä." },
+      { q: "Mikä on Bălțin aro?", a: "Se on Pohjois-Moldovan laaja, pehmeästi kumpuileva tasanko, jonka mustamultainen maaperä on erittäin hedelmällistä. Sîngerein piirissä sen korkeimmat kohdat ovat 190–240 metrissä." },
+    ],
+    "Şoldăneşti": [
+      { q: "Mikä Vadul-Rașcovin juutalaishautausmaa on?", a: "Kukkulan rinteellä Dnestrin rannan tuntumassa oleva hautausmaa on yli 300 vuotta vanha. Sen kivet on veistetty paikallisesta kivestä, ja sitä pidetään yhtenä Moldovan suurimmista juutalaishautausmaista." },
+      { q: "Kuka oli Dumitru Matcovschi?", a: "Matcovschi (1939–2013) oli runoilija ja näytelmäkirjailija, jonka talomuseo on Vadul-Rașcovin kylässä Dnestrin rannalla." },
+    ],
+    "Soroca": [
+      { q: "Mikä on Sorocan romanikukkula?", a: "Kaupungin rinteellä kohoaa romaniyhteisön ylellisiä taloja, joissa yhdistyvät itämaiset, barokkiset ja klassiset tyylit. Kauempaa katsottuna kukkula näyttää satukaupungilta." },
+      { q: "Mikä on Sorocan Kiitollisuuden kynttilä?", a: "Kynttilän muotoinen, noin 30 metrin korkuinen muistomerkki ja kappeli avattiin 2004. Se on omistettu tuntemattomille kulttuurin säilyttäjille, ja idean esitti kirjailija Ion Druță." },
+    ],
+    "Ștefan Vodă": [
+      { q: "Mikä Ștefan Vodă -kaupungin nimi oli ennen?", a: "Kaupunki tunnettiin ensin nimellä Chizil ja neuvostoaikana nimellä Suvorovo. Nykyinen nimi, joka viittaa Moldovan ruhtinaaseen Tapani Suureen, otettiin käyttöön 22. toukokuuta 1990." },
+      { q: "Miksi Palancan rajanylityspaikka on Ukrainan puolella, vaikka kylä on Moldovassa?", a: "Moldova ja Ukraina sopivat maa-alueiden vaihdosta: Moldova luovutti Ukrainalle noin 7,7 kilometrin pituisen Odesa–Reni-tien alla olevan maan, ja sai vastineeksi pienen Tonavan rantatontin Giurgiulești'ssa, jonne se halusi satamansa." },
+    ],
+    "Stîngă Nistrului": [
+      { q: "Miten Cocierin ja Molovata Nouăn kylistä pääsee Nistrun toiselle puolelle?", a: "Molovatan lautalla. Sen varassa on noin kymmenen kylää ja noin 10 000 asukasta Cocierin ylätasangolla." },
+      { q: "Mikä tekee Dubăsarin piiristä erikoisen Moldovan kartalla?", a: "Se on Moldovan ainoa piiri, jossa ei ole yhtään kaupunkia: kaikki asutukset ovat kyliä. Suurimpia ovat Cocieri ja Coșnița, joista jälkimmäisessä asui väestölaskennan mukaan runsaat 5 000 ihmistä." },
+    ],
+    "Străşeni": [
+      { q: "Kuka lepää Căprianan luostarin kirkossa?", a: "Metropoliitta Gavriil Bănulescu-Bodoni, Bessarabian arkkipiispakunnan ensimmäinen johtaja vuodesta 1814. Hän kuoli 1821 ja haudattiin Căprianaan, jonka entisöintiin hän oli osallistunut." },
+      { q: "Mistä Străşenin nimi tulee?", a: "Erään selityksen mukaan nimi juontuu romanian sanasta strașnic, joka tarkoittaa pelottavaa tai kauheaa, koska seutu oli ennen tiheän metsän peitossa. Nimen alkuperästä kerrotaan kuitenkin useampia tarinoita." },
+    ],
+    "Taraclia": [
+      { q: "Mitä Taraclian nimi tarkoittaa?", a: "Nimen uskotaan tulevan nogaitataarien Tarak-kylästä, jonka nimi tarkoittaa harjua tai kampaa, tai paikallisesta Tarakly-suvusta. Varmaa selitystä ei ole." },
+      { q: "Kuinka moni piirin oppilas opiskelee bulgariaa?", a: "Noin 3 000 oppilasta eli noin 80 prosenttia piirin oppilaista opiskelee bulgariaa. Opetusta annetaan kymmenessä koulussa ja kymmenessä päiväkodissa." },
+    ],
+    "Teleneşti": [
+      { q: "Mitä Hora Sânzienelor tarkoittaa?", a: "Se on Teleneștin perinnefestivaali, jossa esiintyy kansantanssiryhmiä Moldovasta ja Romaniasta ja jossa nähdään käsitöitä ja perinneruokia. Romanialaisessa kansanperinteessä sânziene ovat juhannuksen aikaan liittyviä keijuhahmoja, ja samaa nimeä kantavat myös keltaiset kesäkukat." },
+      { q: "Mistä Verejenin kylän nimi tulee?", a: "Kansantarun mukaan nimi tulee parantaja Verasta. Kylä mainitaan asiakirjoissa 1627–1628, kun maata annettiin Istrățel-nimiselle verejeniläiselle, ja sen kivikirkko valmistui 1901." },
+      { q: "Miksi Teleneștin piirissä on niin paljon lampia?", a: "Piirissä on 99 vesialuetta, joiden yhteispinta-ala on noin 1 350 hehtaaria. Niitä käytetään kasteluun, virkistykseen ja kalanviljelyyn, ja suuria kalatiloja on Verejenissä, Mândreștissä ja Ghilicenissä." },
+    ],
+    "Transnistria": [
+      { q: "Mistä Tiraspolin nimi tulee?", a: "Nimi yhdistää kreikan sanat Tyras, Nistrun antiikin aikainen nimi, ja polis eli kaupunki. Se tarkoittaa siis suunnilleen Nistrun kaupunkia." },
+      { q: "Miksi Tiraspolin jalkapalloseura Sheriff on tunnettu Euroopassa?", a: "Sheriff on voittanut Moldovan mestaruuden lukuisia kertoja, ja syksyllä 2021 se yllätti voittamalla Real Madridin 2–1 Mestarien liigassa kotikentällään Tiraspolissa." },
+    ],
+    "Ungheni": [
+      { q: "Mikä on Plaiul Fagului?", a: "Rădenii Vechin kylän luona sijaitseva metsäsuojelualue, joka perustettiin 12. maaliskuuta 1992 ja kattaa noin 5 642 hehtaaria Codrun metsää. Kuusi kasvilajia tunnetaan Moldovassa vain sieltä." },
+      { q: "Mikä on Pietari I:n pöytä Zagarancean Semenin kylässä?", a: "Paikallisen perimätiedon mukaan Semenissä ruhtinas Dimitrie Cantemir tapasi tsaari Pietari I:n, ja bojaarit kokoontuivat kaiverretun pöydän ääreen maljoja nostamaan. Zagarancean kylässä on lisäksi 2016 avattu ulkoilmamuseo." },
+    ],
+  },
 };
