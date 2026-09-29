@@ -888,6 +888,9 @@
     position: relative;
     align-self: flex-start;
     margin: 0 0 4px 0;
+    /* Tumma paneeli (laite 1.0.54: teksti tumma tummalla): sama vaalea kuin paneelin otsikot. */
+    color: rgba(230, 214, 184, 0.9);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Web äänipaneeli on sisältönsä levyinen (296,36). */
