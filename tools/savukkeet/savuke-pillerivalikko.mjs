@@ -158,6 +158,17 @@ async function avaaPeli(leveys, korkeus) {
       g.revealToken(tavaraKaupunki);
       p.findMaa[p.findMaa.length - 1] = 'FIN';
     }
+    /*
+     * RAHASUMMA UUDELLEEN KIINTEÄKSI revealToken-KUTSUJEN JÄLKEEN.
+     * revealToken palkitsee löydöistä satunnaisen summan (p.money +=
+     * STAR_PRIZE / arvo, js/game.js), joka ylikirjoittaa yllä asetetun
+     * 2000:n — ilman tätä pillerin teksti ("N £ · Päivä 1, aamu") ja
+     * siis LEVEYS vaihtelisi ajosta toiseen, ja "pilleri mahtuu
+     * ruudulle" -väite olisi satunnaisesti läppäilevä (havaittu
+     * koordinaattorin toisella kierroksella 29.9.2026: sama pilleri
+     * näytti kolmella ajolla kolme eri leveyttä, 179–189 px).
+     */
+    p.money = 2000;
     const { JULISTEET } = await import('./js/packs/julisteet.js');
     g.julisteet = new Set(Object.keys(JULISTEET).slice(0, 2));
     g.phase = 'action';
@@ -167,6 +178,16 @@ async function avaaPeli(leveys, korkeus) {
     document.querySelectorAll('.postikortti, .kulttuuri-suurennos').forEach((e) => e.remove?.());
   });
   await sivu.waitForTimeout(400);
+  /*
+   * FONTIT VALMIIKSI ENNEN MITTAUSTA. Ilman tätä pillerin (ja logon)
+   * teksti saattoi mitata hetkellisesti varafontilla (selaimen oma,
+   * ennen @font-face-latauksen valmistumista) — leveys vaihteli
+   * ajosta toiseen (havaittu koordinaattorin toisella kierroksella
+   * 29.9.2026, "pilleri mahtuu ruudulle" läppäili 191/186/179/189 px
+   * VAIKKA rahasumma oli jo kiinnitetty). document.fonts.ready
+   * poistaa tämän: mittaus tapahtuu aina lopullisella fontilla.
+   */
+  await sivu.evaluate(() => document.fonts.ready);
   return { ctx, sivu, virheet };
 }
 
@@ -321,19 +342,30 @@ async function testaaAsetteluJaAvaus(nimi, leveys, korkeus, { hampurilainenNakyy
     vaadi(`${nimi}: pilleri-emboss.png latautuu (200)`, pilleriTila === 200, String(pilleriTila));
 
     /*
-     * KESKIVYÖHYKE TYHJÄNÄ (Codexin manifest.json centerSafeAreaPx:
-     * 385-905 / 1290 eli 29,8-70,2 % leveydestä). Logo ei saa ulottua
-     * vyöhykkeelle oikealta eikä pilleri vasemmalta millään
-     * puhelinleveydellä (testataan sekä 393 että 360 px).
+     * KESKIVYÖHYKE EI KOSKE WEBIÄ (koordinaattori 29.9.2026, korjaus
+     * ensimmäisen kierroksen jälkeen): Codexin manifest.json:n
+     * centerSafeArea (385-905/1290) on mitoitettu NATIIVIN Dynamic
+     * Island -saarelle, joka nousee palkin PÄÄLLE. Webin PWA-palkki
+     * alkaa vasta saaren ALAPUOLELTA — juuren padding-top on
+     * env(safe-area-inset-top), joten .topbar ei koskaan mene saaren
+     * kohdalle eikä keskivyöhykkeellä ole webissä samaa merkitystä.
+     * Aiempi versio vaati pillerin pysyvän vyöhykkeen ulkopuolella,
+     * mikä EI koskaan toteudu pillerin nykyisellä sisällöllä (kuvake +
+     * rahat + "Päivä N, vuorokaudenaika" — sovittu natiivin kanssa,
+     * ei lyhennetä). Tilalla kolme oikeaa web-vaatimusta: logo ja
+     * pilleri eivät mene päällekkäin, väliä on vähintään 8 px, ja
+     * molemmat mahtuvat ruudulle (ei ylivuotoa vasemmalle eikä
+     * oikealle) — testattu sekä 393 että 360 px:llä.
      */
-    const vyohykeVasen = leveys * (385 / 1290);
-    const vyohykeOikea = leveys * (905 / 1290);
-    vaadi(`${nimi}: logo ei ulotu keskivyöhykkeelle`,
-      logo.x + logo.w <= vyohykeVasen,
-      `logon oikea reuna ${logo.x + logo.w}, vyöhyke alkaa ${vyohykeVasen.toFixed(1)}`);
-    vaadi(`${nimi}: pilleri ei ulotu keskivyöhykkeelle`,
-      pilleri.x >= vyohykeOikea,
-      `pillerin vasen reuna ${pilleri.x}, vyöhyke loppuu ${vyohykeOikea.toFixed(1)}`);
+    const vali = pilleri.x - (logo.x + logo.w);
+    vaadi(`${nimi}: logo ja pilleri eivät mene päällekkäin`,
+      vali >= 0, `logon oikea reuna ${logo.x + logo.w}, pillerin vasen reuna ${pilleri.x}`);
+    vaadi(`${nimi}: logon ja pillerin väli on vähintään 8 px`,
+      vali >= 8, `väli ${vali.toFixed(1)} px`);
+    vaadi(`${nimi}: logo mahtuu ruudulle`,
+      logo.x >= 0 && logo.x + logo.w <= leveys, JSON.stringify(logo));
+    vaadi(`${nimi}: pilleri mahtuu ruudulle`,
+      pilleri.x >= 0 && pilleri.x + pilleri.w <= leveys, JSON.stringify(pilleri));
 
     /*
      * PALKIN KORKEUS EI KASVA (omistajan ehto: "käytä nykyistä palkin

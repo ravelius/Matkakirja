@@ -10729,9 +10729,16 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    *
    * Keskitummennus (keski-varjo.png) venyy koko leveydelle nahkan
    * PÄÄLLE (background-image-listassa ensin = ylimpänä), kuten Codexin
-   * manifest.json kuvaa (layersBottomToTop). Se tummentaa kohtaa, jossa
-   * logo ja pilleri EIVÄT ole (keskivyöhyke, ks. testi
-   * tools/savukkeet/savuke-pillerivalikko.mjs).
+   * manifest.json kuvaa (layersBottomToTop). Codexin manifest.json
+   * varaa tälle kohdalle "centerSafeArea"-vyöhykkeen NATIIVIN Dynamic
+   * Islandin vuoksi — WEBISSÄ tätä vyöhykettä EI tarvitse pitää
+   * tyhjänä logosta/pilleristä, koska webin PWA-palkki alkaa vasta
+   * saaren ALAPUOLELTA (juuren padding-top on env(safe-area-inset-
+   * top), ei .topbar itse) — ks. testin perustelu tools/savukkeet/
+   * savuke-pillerivalikko.mjs:ssä ja proto-3d/lokit/ylapalkki-nahka/
+   * mitat.md (koordinaattori 29.9.2026, toinen kierros). Keskitummennus
+   * jää silti paikoilleen (osa Codexin taideasettelua), vaikka logo tai
+   * pilleri ulottuisivat sen ylle.
    */
   .topbar {
     background-image:
@@ -10758,8 +10765,9 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * UUDEN kuvan omaa kuvasuhdetta (288×84 eli 3,43:1, Codexin
    * logo-kohopainatus.png skaalattuna), jolloin logo on kapeampi kuin
    * ennen (mitattu ~96 px 28 px:n korkeudella, ennen 115 px) — ei
-   * ylivuotoa, ja kapenemisen ansiosta logo mahtuu selvästi ennen
-   * keskivyöhykettä myös 360 px:n leveydellä (testattu).
+   * ylivuotoa, ja kapenemisen ansiosta logo jää selvästi erilleen
+   * pillerin oikeasta laidasta myös 360 px:n leveydellä (testattu —
+   * väli vähintään 8 px, ks. savuke-pillerivalikko.mjs).
    */
   .brand-kuva { content: url('../assets/ylapalkki/logo-emboss.png'); }
 
