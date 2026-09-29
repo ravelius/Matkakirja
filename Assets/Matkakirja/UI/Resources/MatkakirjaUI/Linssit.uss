@@ -3768,30 +3768,45 @@
 }
 
 /* PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07; web malli, Pelikoodarin rakenne): alinäkymät Linssit ja Aarteet samassa
-   paneelissa, tiheä lista kapeassa paneelissa, esikatselu paneelin vasemmalla puolella. Nahka myöhemmin (Codex). */
-.mk-linssivalitsin--valikko.mk-linssivalitsin--kapea {
-    width: 224px;
+   paneelissa, esikatselu paneelin sisällä vasempana sarakkeena (web mitat.md). Nahka myöhemmin (Codex). */
+/* Web (Pelikoodari mitat.md 29.9.): paneeli kiinteä 367 pt kaikissa näkymissä, rivi 44 pt, kuvake 30, nimi 13,76 kahdelle
+   riville; esikatselu paneelin sisällä vasempana sarakkeena (42 %, vähintään 120 pt), lista oikealla. */
+.mk-linssivalitsin.mk-linssivalitsin--valikko {
+    width: 367px;
+    max-width: 94%;
 }
 
-.mk-linssivalitsin--kapea .mk-linssirivi__nimi {
-    font-size: 14px;
+.mk-linssivalitsin__runko {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mk-linssivalitsin__oikea {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.mk-linssivalitsin__runko .mk-linssirivi {
+    min-height: 44px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.mk-linssivalitsin__runko .mk-linssirivi__ikoni {
+    width: 30px;
+    height: 30px;
+}
+
+.mk-linssivalitsin__runko .mk-linssirivi__nimi {
+    font-size: 13.76px;
     white-space: normal;
-}
-
-.mk-linssivalitsin--kapea .mk-selite__otsikko {
-    font-size: 11px;
 }
 
 /* Äänitasot pergamentilla (laite cl1: tumman paneelin vaaleat nimet eivät erottuneet). */
 .mk-linssivalitsin__saatimet .mk-saadinrivi__nimi,
 .mk-linssivalitsin__saatimet .mk-saadinrivi__arvo {
     color: rgba(70, 51, 31, 0.85);
-}
-
-.mk-linssivalitsin--kapea .mk-linssirivi {
-    min-height: 36px;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 .mk-linssirivi.mk-esikatseltu {
@@ -3841,13 +3856,26 @@
 }
 
 .mk-linssivalitsin__esikatselu {
-    position: absolute;
+    width: 42%;
+    min-width: 120px;
+    flex-shrink: 0;
+    margin: 4px 8px 4px 0;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 8px;
+    background-color: rgba(122, 85, 20, 0.08);
+}
+
+.mk-linssivalitsin__esinappi {
+    min-height: 44px;
+    margin: 8px 0 0 0;
+    font-size: 13px;
+    border-radius: 8px;
+    color: #211d18;
+    background-color: rgba(217, 161, 59, 0.9);
 }
 
 .mk-linssivalitsin__esikuva {
-    height: 120px;
+    height: 125px;
     margin-bottom: 6px;
     border-radius: 6px;
     -unity-background-scale-mode: scale-and-crop;

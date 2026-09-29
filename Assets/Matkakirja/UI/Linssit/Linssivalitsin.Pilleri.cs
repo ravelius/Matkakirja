@@ -25,8 +25,9 @@ namespace Matkakirja.Natiivi
         public Nakyma NykyinenNakyma { get; private set; }
 
         ScrollView vieritys;
-        VisualElement tiedot, aarteet, pohja, esikatselu, esiKuva;
+        VisualElement tiedot, aarteet, pohja, esikatselu, esiKuva, runko;
         Label esiOtsikko, esiTeksti, esiTila;
+        Button esiNappi;
         Button alaTakaisin;
         Kuvasuurennos suurennos;
         string esiId;
@@ -45,21 +46,26 @@ namespace Matkakirja.Natiivi
 
         void LuoPilleriOsat(VisualElement turva, UiKerros kerros)
         {
+            // Web (Pelikoodari, mitat.md 29.9.): Linssit ja Aarteet samassa kiinteän levyisessä paneelissa; runko on yksi
+            // sarake (lista koko levyltä) ja kaksisarakkeinen vasta esikatselussa: vasemmalla esikatselu (42 %, vähintään
+            // 120 pt: neliökuva, nimi, selite ja toimintonappi), oikealla lista.
+            runko = Rakenne.El("mk-linssivalitsin__runko", null, PickingMode.Ignore);
+            vieritys.contentContainer.Insert(vieritys.contentContainer.IndexOf(lista), runko);
+            esikatselu = Rakenne.El("mk-linssivalitsin__esikatselu", runko, PickingMode.Ignore);
+            var oikea = Rakenne.El("mk-linssivalitsin__oikea", runko, PickingMode.Ignore);
+            oikea.Add(lista);
+            aarteet = Rakenne.El("mk-linssivalitsin__aarteet", oikea, PickingMode.Ignore);
             tiedot = Rakenne.El("mk-linssivalitsin__tiedot", vieritys, PickingMode.Ignore);
-            aarteet = Rakenne.El("mk-linssivalitsin__aarteet", vieritys, PickingMode.Ignore);
             pohja = Rakenne.El("mk-pudotus__pohjarivi mk-linssivalitsin__pohja", vieritys, PickingMode.Ignore);
-            tiedot.style.display = aarteet.style.display = pohja.style.display = DisplayStyle.None;
+            tiedot.style.display = aarteet.style.display = pohja.style.display = runko.style.display = DisplayStyle.None;
 
-            // Esikatselu paneelin vasemmalla puolella (pergamentti kuten paneeli).
-            esikatselu = Rakenne.El("mk-linssivalitsin__esikatselu", turva);
-            Rakenne.Tausta(esikatselu, Kuviot.Pergamentti);
-            esikatselu.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
             esiKuva = Rakenne.El("mk-linssivalitsin__esikuva", esikatselu, PickingMode.Ignore);
             esiOtsikko = Rakenne.Teksti("", "mk-linssivalitsin__esiotsikko", esikatselu);
             Kirjasimet.Aseta(esiOtsikko, Kirjasin.LukuLihava);
             esiTeksti = Rakenne.Teksti("", "mk-linssivalitsin__esiteksti", esikatselu);
             Kirjasimet.Aseta(esiTeksti, Kirjasin.Luku);
-            esikatselu.AddManipulator(new Clickable(() => esiToiminto?.Invoke()));
+            esiNappi = Rakenne.Nappi("", "mk-linssivalitsin__esinappi", () => esiToiminto?.Invoke(), esikatselu);
+            Kirjasimet.Aseta(esiNappi, Kirjasin.KoneLihava);
             esikatselu.style.display = DisplayStyle.None;
             suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
         }
@@ -120,11 +126,10 @@ namespace Matkakirja.Natiivi
             tiedot.style.display = paa ? DisplayStyle.Flex : DisplayStyle.None;
             pohja.style.display = paa ? DisplayStyle.Flex : DisplayStyle.None;
             lista.style.display = n == Nakyma.Linssit ? DisplayStyle.Flex : DisplayStyle.None;
+            runko.style.display = paa ? DisplayStyle.None : DisplayStyle.Flex;
             aarteet.style.display = n == Nakyma.Aarteet ? DisplayStyle.Flex : DisplayStyle.None;
             alaTakaisin.style.display = paa ? DisplayStyle.None : DisplayStyle.Flex;
             otsikko.text = n == Nakyma.Linssit ? "LINSSIT" : n == Nakyma.Aarteet ? "AARTEET" : "";
-            // Tiheä lista: kapea paneeli, jotta esikatselu mahtuu sen vasemmalle puolelle myös puhelimella.
-            paneeli.EnableInClassList("mk-linssivalitsin--kapea", !paa);
             if (n == Nakyma.Aarteet) RakennaAarteet();
             vieritys.scrollOffset = Vector2.zero;
         }
@@ -147,6 +152,7 @@ namespace Matkakirja.Natiivi
             esiOtsikko.text = otsikkoTeksti ?? "";
             esiTeksti.text = teksti ?? "";
             esiTeksti.style.display = string.IsNullOrEmpty(teksti) ? DisplayStyle.None : DisplayStyle.Flex;
+            esiNappi.text = toimintoNimi;
             esiKuva.style.backgroundImage = StyleKeyword.Null;
             esiKuva.style.display = string.IsNullOrEmpty(kuvaUrl) ? DisplayStyle.None : DisplayStyle.Flex;
             if (!string.IsNullOrEmpty(kuvaUrl))
@@ -159,16 +165,7 @@ namespace Matkakirja.Natiivi
                     else esiKuva.style.display = DisplayStyle.None;
                 });
             }
-            // Paikka: paneelin vasemmalle, rivin korkeudelle (ruudun rajoissa).
-            var pr = paneeli.worldBound;
-            var juuri = esikatselu.parent;
-            var jr = juuri.worldBound;
-            float oikea = jr.xMax - pr.xMin + 8f;
-            float leveys = Mathf.Clamp(pr.xMin - jr.xMin - 16f, 150f, 260f);
-            esikatselu.style.right = oikea;
-            esikatselu.style.width = leveys;
-            float y = rivi != null ? rivi.worldBound.yMin - jr.yMin : pr.yMin - jr.yMin;
-            esikatselu.style.top = Mathf.Clamp(y - 20f, pr.yMin - jr.yMin, Mathf.Max(pr.yMin - jr.yMin, jr.height - 260f));
+            runko.AddToClassList("mk-linssivalitsin__runko--esikatselu");
             Ponnahdus.Avaa(esikatselu, rivi != null ? rivi.worldBound.center : (Vector2?)null);
         }
 
@@ -179,7 +176,8 @@ namespace Matkakirja.Natiivi
             esiId = null;
             esiTila = null;
             esiToiminto = null;
-            if (esikatselu != null && esikatselu.style.display == DisplayStyle.Flex) Ponnahdus.Sulje(esikatselu);
+            if (esikatselu != null && esikatselu.style.display == DisplayStyle.Flex)
+                Ponnahdus.Sulje(esikatselu, () => { esikatselu.style.display = DisplayStyle.None; runko.RemoveFromClassList("mk-linssivalitsin__runko--esikatselu"); });
         }
 
         bool EsikatseluSisaltaa(Vector2 p) => esiId != null && esikatselu.worldBound.Contains(p);

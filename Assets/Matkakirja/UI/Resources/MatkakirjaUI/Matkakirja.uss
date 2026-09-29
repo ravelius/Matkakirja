@@ -4341,3 +4341,27 @@
     align-self: center;
     margin: 6px 0 4px 0;
 }
+
+/* Kaksirivinen pilleri (pillerivalikko puhelimella, web mitat.md): ikoni vasemmalla, rahat ja päivä allekkain. */
+.mk-pilleri--kaksirivinen {
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+.mk-pilleri__pino {
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.mk-pilleri__rivi1 {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-pilleri--kaksirivinen .mk-pilleri__kello {
+    margin-left: 0;
+    margin-top: -2px;
+    font-size: 11px;
+}
