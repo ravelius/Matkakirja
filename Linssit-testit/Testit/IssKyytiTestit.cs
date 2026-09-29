@@ -500,5 +500,62 @@ namespace Matkakirja.Linssit.Testit
             }
             finally { Palauta(); }
         }
+
+        [Testi] static void AvaruuskavelyKyydista()
+        {
+            // Avaruuskävely (29.9.): kyydistä ilmalukkoon, ulos kaiteelle (Ulkona), köysi, kelaus seuraavaan auringonnousuun
+            // (≤ 5 s), Pulu, kuva ja NASA-vertailu, takaisin seurantaan. Ylilento ei käynnisty kävelyn aikana.
+            try
+            {
+                var (l, y, n) = AvaaValekellolla();
+                Oleta.Tosi(!l.AloitaKavely(), "vain kyydissä");
+                l.NapautaIss();
+                AjaUtc(l, y, 3.5);
+                Oleta.Tosi(l.AloitaKavely(), "kävely alkaa seurannasta");
+                Oleta.Sama(KavelynVaihe.Ilmalukko, l.Kavely.Vaihe);
+                l.NapautaIss();
+                Oleta.Sama(KavelynVaihe.Ulos, l.Kavely.Vaihe, "napautus kulkee tilakoneelle");
+                AjaUtc(l, y, 0.1);
+                Oleta.Sama(KyydinTila.Ulkona, n.Tila, "näkymä tietää ulkona");
+                AjaUtc(l, y, IssKyyti.UlosS);
+                Oleta.Sama(KavelynVaihe.Koysi, l.Kavely.Vaihe);
+                Oleta.Tosi(Math.Abs(y.Kentta.Value - IssKuvakulma.UlkonaKentta) < 1e-6 && y.Kuvaus.Value.Kallistus < 70, "kaiteella: " + y.Kuvaus);
+                Oleta.Tosi(!l.LennaKohteeseen("etna").HasValue, "ei ylilentoa kävelyllä");
+                l.NapautaIss();
+                Oleta.Sama(KavelynVaihe.Auringonnousu, l.Kavely.Vaihe);
+                var nousu = l.Kavely.NousuHetki;
+                Oleta.Tosi(nousu.HasValue && nousu.Value > IssNyt.Kello(), "seuraava nousu: " + nousu);
+                Oleta.Tosi(Avaruuskavely.Valoisuus(IssNyt.Kello(), IssNyt.Paikka(IssNyt.Kello()), IssNyt.KorkeusKm(IssNyt.Kello())) <= 0
+                    || (nousu.Value - IssNyt.Kello()).TotalMinutes > 30, "valossa aloitettu: nousu vasta varjon jälkeen");
+                double t0 = y.Kello;
+                while (l.Kavely.Vaihe == KavelynVaihe.Auringonnousu && y.Kello - t0 < 20) AjaUtc(l, y, 0.1);
+                Oleta.Sama(KavelynVaihe.Pulu, l.Kavely.Vaihe);
+                double kesto = y.Kello - t0;
+                Oleta.Tosi(kesto <= Simukello.KelausMaxS + Avaruuskavely.EnnenS + Avaruuskavely.JalkeenS + 0.3, $"auringonnousu {kesto:0.0} s");
+                Oleta.Tosi(Avaruuskavely.Valoisuus(IssNyt.Kello(), IssNyt.Paikka(IssNyt.Kello()), IssNyt.KorkeusKm(IssNyt.Kello())) > 0, "ISS auringossa");
+                Oleta.Tosi(!IssNyt.Simu.Live && Math.Abs(IssNyt.Simu.Kerroin - Avaruuskavely.NousuKerroin) < 1e-9, "aurinko nousee nopeutettuna");
+                l.NapautaIss();
+                Oleta.Sama(KavelynVaihe.Kuva, l.Kavely.Vaihe);
+                Oleta.Tosi(!IssNyt.Simu.Live && IssNyt.Simu.Kerroin == 1, "kuvasta eteenpäin 1× (ei hyppyä LIVE:ksi)");
+                l.NapautaIss();
+                Oleta.Sama(KavelynVaihe.Vertailu, l.Kavely.Vaihe);
+                Oleta.Tosi(l.KavelynVertailu.HasValue, "NASA-vertailukuva valittu");
+                l.NapautaIss();
+                AjaUtc(l, y, IssKyyti.SisaanS + 0.2);
+                Oleta.Sama(KavelynVaihe.Ei, l.Kavely.Vaihe);
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti, "takaisin seurannassa");
+                Oleta.Tosi(Math.Abs(y.Kuvaus.Value.Kallistus - IssKuvakulma.SeurannanKallistus) < 1e-6, "seurannan asento");
+
+                // ✕ kesken kävelyn: kävely pois ja kaukonäkymään.
+                Oleta.Tosi(l.AloitaKavely(), "uusi kävely");
+                l.NapautaIss();
+                AjaUtc(l, y, 1);
+                l.PoistuKyydista();
+                Oleta.Sama(KavelynVaihe.Ei, l.Kavely.Vaihe);
+                AjaUtc(l, y, IssKyyti.KaukoonS + 0.2);
+                Oleta.Sama(false, l.Kyydissa);
+            }
+            finally { Palauta(); }
+        }
     }
 }

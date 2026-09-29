@@ -9,7 +9,8 @@
 //                      näkymätöntä palloa pyöritetä; linssin ✕ on sen päällä.
 //   KuvaKasittelija    astronautin valokuva (Kuvanakyma); (null, −1) sulkee.
 //   SumuKasittelija    avaruussumu (Avaruussumu): kaksi ajelehtivaa harsoa.
-//   KyytiKasittelija   ISS:n kyyti (IssKyytiNakyma): tietorivi, ✕ ja ikkunassa Cupola-kehys.
+//   KyytiKasittelija   ISS:n kyyti (IssKyytiNakyma): tietorivi, ✕ ja ikkunassa Cupola-kehys; avaruuskävely
+//                      (AvaruuskavelyNakyma) kyydin päällä.
 //   Taulu              Pulun taulu (PulunTauluNakyma, web #3590): moodit Pulun napautuksesta.
 // Linssin ollessa auki pulu on astronautti (LinssiUi asettaa Pulu.Astronautti).
 using System;
@@ -28,6 +29,7 @@ namespace Matkakirja.Natiivi
         public readonly Kuvanakyma Kuva;
         public readonly Avaruussumu Sumu;
         public readonly IssKyytiNakyma Kyyti;
+        public readonly AvaruuskavelyNakyma Kavely;
         /// <summary>Pulun taulu (web #3590): linssin moodit, Kysy Pululta ja ilman Pulua Näkymät-nappi.</summary>
         public readonly PulunTauluNakyma Taulu;
         IVisualElementScheduledItem piilotus;
@@ -54,8 +56,17 @@ namespace Matkakirja.Natiivi
             Kyyti = new IssKyytiNakyma(kerros);
             // Kyydin ✕ on linssin sulkunapin paikalla, joten sulkunappi piiloon kuten kuvanäkymässä.
             Kyyti.AukiMuuttui += auki => KuvaAuki?.Invoke(auki);
+            // Avaruuskävely (29.9.): paikkamerkit ja vertailukortti kyydin päällä.
+            Kavely = new AvaruuskavelyNakyma(kerros);
+            Kyyti.AukiMuuttui += Kavely.Kyydissa;
             // Taulu kuvanäkymän ja kyydin päälle (web z-index 50 > kyydin kosketuskerros 48).
             Taulu = new PulunTauluNakyma(kerros, this);
+            // Avaruuskävely Pulun taulusta (Päätoimittaja 29.9.): rivi ISS-rivien jälkeen; valinta vie ensin seurantaan (kuva kiinni,
+            // kyytiin) ja aloittaa kävelyn perillä.
+            Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "Ulos kaiteelle katsomaan auringonnousua",
+                () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Seuranta);
+            // Laite 29.9. kavely1: linssin avauksen automaattitaulu jäi auki kävelyn päälle (kehittäjäkomennolla aloitettu).
+            Kavely.Alkoi += () => { if (Taulu.Auki) Taulu.Sulje("avaruuskavely"); };
             // PULU KYYDIN PÄÄLLÄ (web body.satelliitti-kyyti .pollo-nappi z-index 49 > kyydin kerros 48): Cupola-kehys peitti
             // Pulun, joka on taulun avaaja kaikissa moodeissa. Kyydin ajaksi Pulun kerros nousee kehyksen yläpuolelle.
             Kyyti.AukiMuuttui += auki => kerros.AsetaJarjestys(Pulu.Kerros, auki ? LinssiUi.SulkuKerros : Pulu.Kerros);
@@ -69,6 +80,8 @@ namespace Matkakirja.Natiivi
             AstronauttiKerros.SumuKasittelija = Sumu.Aseta;
             AstronauttiKerros.KyytiKasittelija = Kyyti.Aseta;
         }
+
+        static AstronauttiLinssi AstroLinssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
 
         /// <summary>AstronauttiKerros.AvausKasittelija: avauksen vaihe.</summary>
         public void Avaus(AvauksenVaihe vaihe)
@@ -116,6 +129,7 @@ namespace Matkakirja.Natiivi
             Sumu.Aseta(0);
             Kuva.Sulje(false);
             Kyyti.Pois();
+            Kavely.Kyydissa(false);
         }
 
         // --- testit ----------------------------------------------------------------------
