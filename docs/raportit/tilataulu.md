@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 18:34:** KEVYT TILA PÄÄLLÄ (/tmp/matkakirja-kevyt 18.17, omistaja etäyhteys, Päätoimittaja): sim 0 ja ei GPU-raskaita prosesseja (chrome-headless metal, Unity ilman -nographics, xcodebuild) — tarkistettu, ei poikkeamia; tiukempi valvonta voimassa. Levy 89 Gi, muisti taso 1, 86 % vapaa, kuorma 28/31/69. Viikko 9 % (5 h 32 %). Konteksti: Linnanrakentaja 51 %, Natiivi-UI 42 %, oma 16 %. Korjaus: linssiseppa-tervetulo-palaute EI ole mainissa (3 pushaamatonta committia, pushataan kun kevyt tila päättyy) — aiempi "MERGATTU" oli virhe. Karttaseppä: kohdekaupungit-sepia jää (aktiivinen erä). Juna: 1.0.52 keskeytetty 18.18, b13 f10f978b. Posti: ei uutta.
+
 **Päivitetty 18:23:** Levy 88 Gi, muisti taso 1, 85 % vapaa, kuorma 24/97/123 (laskenut), sim 0. Viikko 9 % (5 h 32 %). Konteksti: Linnanrakentaja 51 %, Natiivi-UI 42 %, oma 15 %. Juna: 1.0.52-käännös keskeytetty 18.18 Päätoimittajan kiireellisestä pyynnöstä (kuorma 270, omistaja ei pääse etäyhteyteen); juna/b13 palautettu f10f978b:hen, 1.0.52 = ee2fbedd (sivuhaara natiiviseppa/juna-1052) avataan uudelleen luvalla. Posti: ei uutta.
 
 **Päivitetty 18:12:** Levy 81 Gi (hälytysraja 50), muisti taso 2 mutta 34 % vapaa (yli 25 %, ei hälytystä), kuorma 93/81/122, sim 0. Viikko 8 % (5 h 30 %). Konteksti: Linnanrakentaja 49 %, Natiivi-UI 41 %, oma 15 % (70 %:n vahti ei lauennut). GPU-chrome: vain ms-playwright type=gpu-process yli 30 min = 0 (Julkaisijan ohje: sovellusten omat gpu-processit ohitetaan). Juna: b13 ee2fbedd (1.0.52) ennallaan. Posti: ei uutta.
