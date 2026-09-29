@@ -320,7 +320,9 @@ namespace Matkakirja.Natiivi
             {
                 if (PilleriValikko && esiId != id)
                 {
-                    Esikatsele(id, b, tila, Matkalaukku.VarusteKuva(id), t.Nimi, t.Lyhyt, "Aktivoi", () => { Sulje(); Valittu?.Invoke(id); });
+                    // Web (Pelikoodari): kuva LINSSI.havainnekuva tai varana varusteen kuva, teksti esittely tai varana lyhyt.
+                    Esikatsele(id, b, tila, string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(id) : t.Havainnekuva, t.Nimi,
+                        string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely, "Aktivoi", () => { Sulje(); Valittu?.Invoke(id); });
                     return;
                 }
                 Sulje();
