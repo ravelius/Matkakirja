@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 09:04:** Levy 89,50 Gi (−1,9 Gi/10 min; raja 82 ~30 min päässä jos vauhti jatkuu; Devices 70,1 Gt, /private/tmp 39,6 Gt), muisti 58 % vapaa, kuorma 44/78/94, sim 1, GPU-chrome 0, wt/ 18 kohdetta 11 Gt (raja 20 – ilmoitettu Päätoimittajalle). Roolit: ajossa Siirtoseppä 45 %, Natiivi-UI 52 %, Pelikoodari 52 %, Laitetestaaja 37 %; ei ≥70 %. Juna OK: käännetty a2887ec5 08:59. Postilaatikko: ei uutta (radio-yksikuva ei vielä tullut).
+
 **Päivitetty 08:54:** Levy 91,34 Gi (+0,9 Gi/14 min, trendi tasaantunut; raja 82; Devices 70,0 Gt, /private/tmp 39,6 Gt), muisti 62 % vapaa, kuorma 35/55/104 (laskussa), sim 0, GPU-chrome 0, wt/ 16 kohdetta 9,5 Gt. Roolit: ajossa vain Linnanrakentaja (44 %); ei ≥70 %. Juna OK: b13 HEAD a10c40fb, käännetty 420a04de 08:09. Postilaatikko: ei uutta (radio-yksikuva ei vielä tullut).
 
 **Päivitetty 08:40:** Levy 93,10 Gi (−2,3 Gi/11 min; raja 82; Devices 70,0 Gt +1,45, /private/tmp 39,2 Gt +0,5), muisti 55 % vapaa, kuorma 139/223/187 (erittäin korkea: Chrome/Playwright 20 prosessia ~220 %, Unity 14 prosessia, Evoto 98 %, fseventsd 80 %; omistaja ei tarvitse konetta tänään, ei sääntörikkomusta), sim 1 (raja ≤3), GPU-chrome 0, wt/ 15 kohdetta 8,3 Gt. Roolit: ajossa Linssiseppä 54 %, Linnanrakentaja 44 %, Siirtoseppä 41 %; ei ≥70 %. Juna OK: b13 HEAD a10c40fb, käännetty 420a04de 08:09. Postilaatikko: ei uutta.
