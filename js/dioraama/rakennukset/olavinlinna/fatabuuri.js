@@ -58,8 +58,10 @@ const HAHMOT = [
 // "näyttämönä") ja holvi (sisäpinta kiveä: muurareiden taito), jonka yläreuna jää alle kierreportaiden lattian (4,5).
 const Y = 0.1; // lattian yläpinta
 const RAKENNE = [
+  // Tornin seinä (uusi tapa 29.9.: kuoressa ei ole sisäpintaa; säde 7,1 jää kuoren sisään).
+  { resepti: 'torni', paikka: [C[0], -0.3, C[1]], suunta: 0, sade: 7.1, paksuus: 1.6, korkeus: 4.8, segmentit: 32, auki: { alku: 95, loppu: 235 } },
   {
-    resepti: 'kiekko', paikka: [C[0], Y, C[1]], suunta: 0, sade: 7.5, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' },
+    resepti: 'kiekko', paikka: [C[0], Y, C[1]], suunta: 0, sade: 7.1, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' },
   },
   {
     resepti: 'kupoli', paikka: [C[0], 3.1, C[1]], suunta: 0, sade: 5.5, korkeus: 1.3, segmentit: 32, paksuus: 0.2,
@@ -167,6 +169,9 @@ export const TILA = {
   id: 'fatabuuri',
   nimi: 'Fatabuuri',
   kohdistettava: true,
+  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
+  // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
+  sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
   rajat: { min: [-35.5, 0, -25.5], max: [-24.5, 4.5, -14.5] },
   naapurit: ['massa', 'vartiotupa', 'kierreportaat', 'keskushalli'],
   // Vaaka: kohde siirretty oikealle (taulu peittää oikean 40 %), jotta huone jää näkyvälle 60 %:lle.

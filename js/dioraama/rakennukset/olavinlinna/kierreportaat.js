@@ -99,6 +99,9 @@ export const TILA = {
   id: 'kierreportaat',
   nimi: 'Kierreportaat',
   kohdistettava: true,
+  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
+  // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
+  sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
   rajat: { min: [-35.5, 4.5, -25.5], max: [-24.5, 18, -14.5] },
   naapurit: ['massa', 'fatabuuri', 'muurinharja'],
   // Tornin pystysuora leikkaus: korkea kapea tila; kamera hieman ylempää kuin kuilun pohja, jotta portaiden
@@ -128,7 +131,9 @@ export const TILA = {
   ],
   palikat: [
     // 2. kerroksen lattia (y 4,5…4,9), koko ympyrä ilman auki-sektoria.
-    { resepti: 'kiekko', paikka: [KX, Y_LATTIA, KZ], suunta: 0, sade: 7.5, paksuus: 0.4, segmentit: 32 },
+    { resepti: 'kiekko', paikka: [KX, Y_LATTIA, KZ], suunta: 0, sade: 7.1, paksuus: 0.4, segmentit: 32 },
+    // Tornin seinä (uusi tapa 29.9.: kuoressa ei ole sisäpintaa).
+    { resepti: 'torni', paikka: [KX, 4.5, KZ], suunta: 0, sade: 7.1, paksuus: 1.6, korkeus: 13.5, segmentit: 32, auki: { alku: 95, loppu: 235 } },
     ...portaat(),
     tasanne(TASANNE_1),
     tasanne(TASANNE_2),

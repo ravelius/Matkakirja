@@ -21,16 +21,20 @@ suunta: aste }` siirtää KAIKEN tilan geometrian ja datan (palikat, rajat, kame
 liekit) muunnoksella p' = R(suunta) · (p − ankkuri) + paikka ennen rakennusta (rakenna.mjs). Blender saa siis valmiiksi
 sijoitetun glb:n ja leipoo sen kuoren kanssa (kuori varjostaa).
 
-| Tila | Todellinen paikka (mallin x itä, y pohjoinen) | Varmuus |
+| Tila | Todellinen paikka (mallin x itä, y pohjoinen) | Sijoitus (29.9. klo 21) |
 |---|---|---|
-| fatabuuri | Kellotorni (−50, 5), pohjakerros | D (alakerta) |
-| kierreportaat | Kellotorni (−50, 5), 2.–3. krs | T (kulma ?) |
-| muurinharja | Kellotornin 4. krs avoin puolustuskäytävä | D |
-| kappeli | Kirkkotorni (−21, 13), 3. krs | D |
-| keskushalli → Linnantupa | Kirkkotornin vieressä, itäsiiven pohjoispää ≈ (−14, 5) | viereisyys D |
-| keittiö | itäsiiven alakerta Pienen linnanpihan laidalla ≈ (−12, −8) | T (ehdotus) |
-| vartiotupa | päälinnan eteläkulman aukon ≈ (−7, −19) vieressä | T heikko |
-| laituri | Vesiportin puoli lounaassa ≈ (−48, −36), vedessä | T heikko |
+| fatabuuri, kierreportaat | Kellotorni (−44,4; 4,6), pohjakerros y 2,9 | pohjoismuurin muunnos* |
+| muurinharja | pohjoismuuri tornien välissä, kansi y 15,9 (harja 16,4…16,9) | pohjoismuurin muunnos* |
+| keskushalli | pohjoissiipi tornien välissä (≈ −28; 3,7), lattia y 2,9, katto 13,8 | pohjoismuurin muunnos* |
+| kappeli | Kirkkotorni (−15,4; 14,6), 3. krs lattia y 6,4 | ankkuri [0,0,−20] → [−15,4; −3; −14,6] |
+| keittiö | itäsiiven alakerta Pienen linnanpihan (y −2,9) laidalla ≈ (−12, −8) | [14,0,7,5] → [−12; −3; 8], suunta 90 |
+| vartiotupa | T heikko: portin sijainti tarkistamatta | ei vielä |
+| laituri | T heikko: vesiportti | ei vielä |
+
+\* Pohjoismuurin muunnos: ankkuri [−30, 0, −20] (lähteen Kellotorni) → paikka [−44,4; 2,9; −4,6], suunta 341: lähteen
+Kello–Kirkko-jana (30 m, +x) osuu kuoren tornien väliin (30,7 m). Tornien keskipisteet ovat kartiokattojen huippuja
+(kuori_korkeudet.py: Kello 34,6 m, Kirkko 32,3 m); aiemmat (−50, 5) ja (−21, 13) osuivat kattojen rinteisiin.
+Tornitiloilla on nyt oma torniseinä (säde 6,6…7,1), koska kuoressa ei ole sisäpintaa.
 
 Tornin sisäsäde mitataan kuoresta (ulkohalkaisija ≈ 17 m); tornitilojen kiekot, kupolit ja portaat skaalataan siihen.
 Kerroskorkeudet ja lattiatasot luetaan kuoresta raycastilla (kuoren sisäpintaa ei ole: tilan omat seinät tekevät

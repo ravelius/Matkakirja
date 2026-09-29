@@ -315,9 +315,14 @@ if '--leivo' in argv:
         e = bpy.data.objects.new(nimi, None); sc.collection.objects.link(e); e.location = bl(paikka)
         for k_, v_ in extras.items(): e[k_] = v_
         tyhjat.append(e)
-    for j, l in enumerate(tila.get('liekit', [])):
-        tyhja(f"liekki:{l.get('liekki', 'liekki')}-{j}", l['paikka'], koko=0.45 * l.get('koko', 1),
-              savu=1.0 if l.get('liekki') == 'tulisija' else 0.2, korkeus=1.2, sade=2.5)
+    # Siirtosepän sopimus: extras.koko = liekin korkeus metreinä. Lepatus enintään 8 liekille nimijärjestyksessä,
+    # joten tärkeimmät ensin (tulisija, soihdut, kynttilät lähdejärjestyksessä) ja numero nollilla täytettynä.
+    LIEKKIKOOT = {'tulisija': (0.45, 1.0, 1.2, 0), 'soihtu': (0.25, 0.4, 0.8, 1), 'kynttila': (0.045, 0.1, 0.4, 2)}
+    liekit = sorted(tila.get('liekit', []), key=lambda l: LIEKKIKOOT.get(l.get('liekki'), (0, 0, 0, 3))[3])
+    for j, l in enumerate(liekit):
+        k0, savu0, kork0, _ = LIEKKIKOOT.get(l.get('liekki'), (0.3, 0.2, 1.0, 3))
+        tyhja(f"liekki:{j:02d}-{l.get('liekki', 'liekki')}", l['paikka'], koko=round(k0 * l.get('koko', 1), 3),
+              savu=savu0, korkeus=kork0, sade=2.5)
     for j, lv in enumerate(tila.get('valot', [])):
         if lv.get('tyyppi') == 'keila':
             # Siirtosepän sopimus (f5938d7c): keila kulkee tyhjän Blender-Z:n suuntaan huoneeseen; leveys = X, korkeus = Y.

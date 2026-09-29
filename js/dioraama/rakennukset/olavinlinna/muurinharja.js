@@ -73,6 +73,9 @@ export const TILA = {
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,
+  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
+  // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
+  sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
   rajat: { min: [-22, 13, -22], max: [-7.5, 16, -18] },
   naapurit: ['massa', 'kierreportaat', 'kappeli', 'keskushalli'],
   kamera: { kohde: [-12.5, 13.7, -20], atsimuutti: 165, korkeus: 27, etaisyys: 19.5, fov: 38, aukko: 0.8 },

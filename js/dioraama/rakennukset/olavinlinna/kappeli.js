@@ -124,9 +124,9 @@ export const TILA = {
   id: 'kappeli',
   nimi: 'Kappeli',
   kohdistettava: true,
-  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−21, 13) eli glTF
-  // (−21, z 13 pohjoiseen = −13); torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.
-  sijoitus: { ankkuri: [0, 0, -20], paikka: [-21, -3.0, -13], suunta: 0 },
+  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−15,4, 14,6) (kartiokaton
+  // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella; torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.
+  sijoitus: { ankkuri: [0, 0, -20], paikka: [-15.4, -3.0, -14.6], suunta: 0 },
   rajat: { min: [-5, 9, -25], max: [5, 13.5, -15] },
   naapurit: ['massa', 'muurinharja', 'keskushalli'],
   kamera: {
@@ -150,9 +150,9 @@ export const TILA = {
   ],
   palikat: [
     // Pyöreä lattia (sade 7 = tornin ulkosäde): auki-sektorin kohdalla lattia jää "näyttämöksi".
-    { resepti: 'kiekko', paikka: [CX, LATTIA, CZ], suunta: 0, sade: 7, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' } },
+    { resepti: 'kiekko', paikka: [CX, LATTIA, CZ], suunta: 0, sade: 6.6, paksuus: 0.4, segmentit: 32, pinnat: { yla: 'kivi' } },
     // Tornin seinä kerroksen korkeudelta (uusi tapa 29.9.: kuoressa ei ole sisäpintaa, massan torni ei ole mukana).
-    { resepti: 'torni', paikka: [CX, 9.0, CZ], suunta: 0, sade: 7, paksuus: 2, korkeus: 4.5, segmentit: 32, auki: { alku: 100, loppu: 230 } },
+    { resepti: 'torni', paikka: [CX, 9.0, CZ], suunta: 0, sade: 6.6, paksuus: 1.6, korkeus: 4.5, segmentit: 32, auki: { alku: 100, loppu: 230 } },
     // Holvikatto: alkaa y 11,6, huippu y 13,45; sama auki-sektori kuin tornilla. Maalaukset (lehti- ja kukka-aiheet):
     // holvi-pinta rappaus, Codexin maalaus-pinta tulee erä 3b:ssä.
     { resepti: 'kupoli', paikka: [CX, 11.6, CZ], suunta: 0, sade: 5, korkeus: 1.85, segmentit: 32, auki: { alku: 100, loppu: 230 }, pinnat: { holvi: 'rappaus' } },

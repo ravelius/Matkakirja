@@ -113,6 +113,9 @@ const PALIKAT = [
     aukot: [{ u: -1.5, y: 0, leveys: 1.2, korkeus: 2.3 }],
     leikkaus: { vasen: false, oikea: true, yla: false },
   },
+  // Pohjoisseinä ja katto (voudin asunnon lattia) — ennen massassa, uudessa tavassa tilan omia (29.9.).
+  { resepti: 'seina', paikka: [-14.75, 0, -18.8], suunta: 0, pituus: 15.1, korkeus: 5, paksuus: 0.6 },
+  { resepti: 'lankkulattia', paikka: [-14.75, 5.0, -13.75], suunta: 0, leveys: 15.1, syvyys: 10.1, paksuus: 0.4, siemen: 1503 },
   // Kattopalkit voudin asunnon lattian (y 4,6) alla; etummainen palkki katon etureunalla.
   { resepti: 'seina', paikka: [-14.75, 4.2, -16.9], suunta: 0, pituus: 14.2, korkeus: 0.4, paksuus: 0.4, pinnat: { etu: 'puu', taka: 'puu', paaty: 'puu', yla: 'puu' } },
   { resepti: 'seina', paikka: [-14.75, 4.2, -15.4], suunta: 0, pituus: 14.2, korkeus: 0.4, paksuus: 0.4, pinnat: { etu: 'puu', taka: 'puu', paaty: 'puu', yla: 'puu' } },
@@ -239,7 +242,12 @@ export const TILA = {
   id: 'keskushalli',
   nimi: 'Keskushalli',
   kohdistettava: true,
+  // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
+  // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
+  sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
   rajat: { min: [-22, 0, -18.5], max: [-7.5, 5, -9] },
+  // Leikkaus pohjoissiiven katon (≈ 13,8 → lähteessä 10,9) yli.
+  leikkaus: { laajennus: 1.0, kameraan: true, min: [-22, 0, -18.5], max: [-7.5, 11.5, -9] },
   naapurit: ['massa', 'fatabuuri', 'muurinharja', 'kappeli', 'keittio'],
   kamera: { kohde: [-14.75, 1.6, -13.8], atsimuutti: 170, korkeus: 22, etaisyys: 17, fov: 38, aukko: 0.8 },
   kameraPysty: { kohde: [-14.75, -4, -13.8], atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
