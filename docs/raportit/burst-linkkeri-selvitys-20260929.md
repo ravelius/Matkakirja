@@ -38,3 +38,16 @@ tämän kanssa, mutta niitä ei ole todennettu. Lisenssivirhe sim.login rivillä
 
 Ennen hyväksyntää talteenottovahti (Natiiviseppä, scratchpad/burst-vahti.sh, klo 14 asti) tallentaa seuraavan kaatumisen
 lokit kansioon lokit/kaannospalvelu/burst-vika-<ajo>/.
+
+## Toteutettu 29.9.2026 klo 10.33 (omistajan hyväksyntä Natiivisepän sessiossa)
+- Varmuuskopiot: tyokalut/proto-kaanna.sh.ennen-burst-20260929 ja tyokalut/juna-ajo.sh.ennen-burst-20260929.
+- proto-kaanna.sh: lukon jälkeen `cd /` ja enintään 30 s:n odotus, kunnes kopioon ei viittaa yksikään prosessi
+  (pgrep -f ja lsof cwd). Odotus kirjataan ajon lokiin. Lisäksi oma `TMPDIR=/tmp/mkk.XXXXXX`, jonka EXIT-trap poistaa
+  lukon ohella, ja LuoPallo-vaiheeseen `UNITY_BURST_DISABLE_COMPILATION=1` (ei IosSimulaattoriin).
+- juna-ajo.sh: ennen proto-kaanna.sh:ta odotetaan, kunnes jono on vapaa (enintään 60 min). Sen jälkeen junan kärki luetaan
+  uudelleen, ja jos juna-viimeisin.txt on jo sama, ajo ohitetaan ("käännettiin jo jonon aikana, ohitetaan").
+- Testit hiekkalaatikossa, jossa kopio, lukko ja lokit olivat testipolkuja:
+  - tuntematon haara → VIKA merge, lukko ja TMPDIR poistuvat
+  - roikkuva prosessi kopiossa → odotus 4 s ja lokirivi
+  - juna-ajon lohko: jo käännetty ohitetaan jonon kanssa ja ilman, uusi kärki käännetään
+- Seuraava todellinen testi on 1.0.45-junan käännös.
