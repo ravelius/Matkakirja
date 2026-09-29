@@ -24,6 +24,7 @@ const SHELL = [
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
+  './js/pelaajanakyma.js',
   './js/siirtokoreografia.js',
   /*
    * TASOKARTTA POIS ESILATAUKSESTA (omistaja 7.9.2026, sanatarkasti:
