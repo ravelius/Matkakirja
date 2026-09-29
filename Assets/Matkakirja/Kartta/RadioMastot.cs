@@ -270,7 +270,9 @@ namespace Matkakirja
                 var (jakso, vaihe) = Linssit.Radio.Mastot.Vilkku(m.Asema);
                 tiedot[maara] = new Tieto
                 {
-                    Id = m.Id, Koko = (int)m.Koko, Juuri = juuri, Normaali = n,
+                    // Pieni-verkko (ohut ristikko yhdellä poikkipuulla) näytti kaukaa ristiltä tai hautamerkiltä (omistaja 28.9.):
+                    // pienetkin kaupungit Keski-mastona.
+                    Id = m.Id, Koko = Math.Max((int)MastoKoko.Keski, (int)m.Koko), Juuri = juuri, Normaali = n,
                     Kierto = Quaternion.LookRotation(pohjoinen.normalized, n),
                     Sade = (juuri - keskus).magnitude, Peitto = m.Kanava ? 1f : 0.5f, Valot = m.Kanava,
                     Jakso = (float)jakso, Vaihe = (float)vaihe, Nousu = 0f,
@@ -293,9 +295,9 @@ namespace Matkakirja
 
         /// <summary>
         /// Horisonttiusvan liu'un kerroin täydessä hämärässä (omistaja 28.9.2026: "raja ei saisi olla noin selvä"): maa
-        /// häipyy usvaan kolminkertaisella matkalla. Komento "usva radio &lt;k&gt;" kuvapariin.
+        /// häipyy usvaan 2,5-kertaisella matkalla (laite radio1: 1 terävä raja, 3 haalisti yläpuolen, 5 liikaa). Komento "usva radio &lt;k&gt;" kuvapariin.
         /// </summary>
-        public static float UsvanLiuku = 3f;
+        public static float UsvanLiuku = 2.5f;
 
         public void Hamara(float h)
         {

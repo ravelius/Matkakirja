@@ -37,6 +37,9 @@ Shader "Matkakirja/Napakansi"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            // Horisonttiusva kuten laatoissa ja Pohjapallossa (löydös 9, radion napakaappaus 28.9.: kansi erottui terävänä
+            // tummansinisenä soikiona usvaantuneen maan keskeltä, koska se ei saanut sumua).
+            #include_with_pragmas "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Fog.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
             #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
@@ -61,7 +64,7 @@ Shader "Matkakirja/Napakansi"
             float4 _paljastus, _paljastusReuna;
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; half4 vari : COLOR; float2 uv : TEXCOORD0; };
-            struct Vali { float4 paikka : SV_POSITION; float3 normaali : TEXCOORD0; float2 uv : TEXCOORD1; half4 vari : COLOR; float3 maailma : TEXCOORD2; };
+            struct Vali { float4 paikka : SV_POSITION; float3 normaali : TEXCOORD0; float2 uv : TEXCOORD1; half4 vari : COLOR; float3 maailma : TEXCOORD2; float sumu : TEXCOORD3; };
 
             Vali vert(Syote i)
             {
@@ -80,6 +83,7 @@ Shader "Matkakirja/Napakansi"
                 o.uv = i.uv;
                 o.vari = i.vari;
                 o.maailma = paikka;
+                o.sumu = ComputeFogFactor(o.paikka.z);
                 return o;
             }
 
@@ -124,12 +128,8 @@ Shader "Matkakirja/Napakansi"
                     hehku = (half3)(vari * (_keila0Vari.rgb * (_keila0Vari.a * k0 * k0) + _keila1Vari.rgb * (_keila1Vari.a * k1 * k1)));
                     vari *= (half3)(lerp(1.0 - 0.95 * kh, 1.0, max(k0, k1)) * ksavy);
                 }
-                // Radion hämärä kannessa puolet laattojen tummennuksesta (löydös 9, omistajan napakaappaus 28.9.2026:
-                // "tumma sininen soikea läiskä"): radio käyttää reliefipohjaa, jolloin navalla on reliefikansi, jonka keskiosa
-                // on reunanäytteiden tasainen keskiarvo (#4370aa); Lambert-valossa se tummui hämärässä mustansiniseksi
-                // soikioksi laattojen vaihtelevan pinnan keskellä.
-                vari = lerp(vari, vari * half3(0.42, 0.40, 0.50) + half3(0.02, 0.02, 0.035), (half)saturate(_radioHamara));
-                return half4((vari * valaistus + hehku) * a, a);
+                vari = lerp(vari, vari * half3(0.18, 0.17, 0.24) + half3(0.006, 0.006, 0.016), (half)saturate(_radioHamara));
+                return half4(MixFog(vari * valaistus + hehku, i.sumu) * a, a);
             }
             ENDHLSL
         }
