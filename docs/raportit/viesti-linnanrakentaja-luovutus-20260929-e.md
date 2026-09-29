@@ -58,3 +58,8 @@ Rooli: **Linnanrakentaja (Opus, max)**. Päätoimittaja johtaa (viestit NIMELLÄ
   koneen, kuorma 271, omistaja ei päässyt etäyhteyteen). Esikatselu Metal-GPU:lla (esikatselu-kuvat.mjs oletus).
   Kevyt tila `/tmp/matkakirja-kevyt` = tauko. Muistio: selainagentit-max-kaksi.
 - Sonnet-agentit: selkeä tiedosto-omistus, atominen kirjoitus, `kierto.etaisyys` on kerroin (testi valvoo).
+
+## Viimeisin (klo 20.0x)
+- Siirtoseppä: leikkausikkuna tehty `linna-valo` 9ea5cff3 (Tila.leikkaus {laajennus 1.0, kameraan true, [min,max]},
+  12 cm vaalea kivireuna, 0→1 kaarilennon jälkipuoliskolla). HUOM: jatke on vaakasuora rajojen korkeudella → aseta
+  tilan rajat.max.y katon yli tai anna leikkaus.max, muuten ylhäältä katsottaessa katto jää näkyviin.
