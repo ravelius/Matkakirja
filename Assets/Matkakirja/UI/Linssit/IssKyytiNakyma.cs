@@ -74,8 +74,15 @@ namespace Matkakirja.Natiivi
             else if (a.Length > 0 && a[0] == "avaa") Kutistettu = false;
             else if (a.Length > 1 && a[0] == "nahka") IssOhjaus.Nahka = a[1] == "perus" ? IssOhjaus.Perus : IssOhjaus.Codex;
             n.PaivitaPaneeli();
-            var r = n.ohjaimet.worldBound;
-            var ruutu = n.juuri.panel?.visualTree.layout ?? Rect.zero;
+            // Asettelu lasketaan vasta seuraavassa ruudussa (laite cl1: rivi kertoi edellisen tilan koon), siksi mitta viiveellä.
+            n.juuri.schedule.Execute(() => Debug.Log("MATKAKIRJA linssit: " + n.PaneelinMitta())).ExecuteLater(150);
+            return $"paneeli: välilehti {Valilehti}, kutistettu {Kutistettu}, nahka {IssOhjaus.Nahka.Nimi} (mitta 150 ms päästä)";
+        }
+
+        string PaneelinMitta()
+        {
+            var r = ohjaimet.worldBound;
+            var ruutu = juuri.panel?.visualTree.layout ?? Rect.zero;
             float peitto = ruutu.width > 0 ? r.width * r.height / (ruutu.width * ruutu.height) : 0;
             return $"paneeli: välilehti {Valilehti}, kutistettu {Kutistettu}, nahka {IssOhjaus.Nahka.Nimi}, {r.width:0} × {r.height:0} pt, " +
                    $"ruutu {ruutu.width:0} × {ruutu.height:0}, peitto {peitto * 100:0.0} %";
