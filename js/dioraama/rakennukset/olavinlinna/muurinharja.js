@@ -17,6 +17,8 @@ export const TILA = {
   id: 'muurinharja',
   nimi: 'Muurinharja',
   kohdistettava: true,
+  // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
+  ulkona: true,
   rajat: { min: [-22, 13, -22], max: [-7.5, 16, -18] },
   naapurit: ['massa', 'kierreportaat', 'kappeli', 'keskushalli'],
   kamera: { kohde: [-15, 14, -20], atsimuutti: 165, korkeus: 24, etaisyys: 22, fov: 38, aukko: 0.8 },

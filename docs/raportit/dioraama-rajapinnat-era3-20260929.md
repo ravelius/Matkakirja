@@ -57,6 +57,8 @@ keskushalli → keittio`.
 `js/dioraama/rakennukset/olavinlinna/<id>.js`, kukin `export const TILA = { … }` (+ tarvittaessa omat vakiot).
 Yksi agentti = yksi tilatiedosto. Tila noudattaa keittiön mallia (`olavinlinna/keittio.js`):
 
+- `ulkona: true` ulkotiloille (laituri, muurinharja): kohdistettuna aurinko ja taivas pysyvät täysinä (ei
+  `valaistus.sisalla`-himmennystä; esikatselu.mjs ja DioraamaValot.cs).
 - `id, nimi, kohdistettava: true, rajat, naapurit` (aina `'massa'` + fyysiset naapurit; molemminsuuntaiset, kokoaja
   korjaa), `kamera` + `kameraPysty` (+ valinnainen `kierto`, era2b kohta 1; torneissa atsimuutti [−40, 40]),
   `pulu { laskeutuminen (rajojen sisällä), taulupuoli }`, `taulu` (3 kohtaa ≤ 110 merkkiä, `tila: 'luonnos'`, ei

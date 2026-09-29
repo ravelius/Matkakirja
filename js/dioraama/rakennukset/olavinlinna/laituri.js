@@ -17,6 +17,8 @@ export const TILA = {
   id: 'laituri',
   nimi: 'Laituri',
   kohdistettava: true,
+  // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
+  ulkona: true,
   rajat: { min: [-27, -7.5, 33], max: [-11, -3, 47] },
   naapurit: ['massa', 'vartiotupa'],
   kamera: { kohde: [-19, -5.5, 40], atsimuutti: 200, korkeus: 24, etaisyys: 22, fov: 38, aukko: 0.8 },
