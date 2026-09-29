@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 20:18:** Levy 81 Gi, muisti 70 % vapaa, kuorma 166/274/269, sim 3 (= päivän raja 3, juna-asennus; ei ylitystä), ei kevyttä tilaa. Viikko 15 % (5 h 57 %). Konteksti: Linnanrakentaja nollautunut 70 %→15 % (vahdit uudelleen: 70 %/85 %), Natiivi-UI 61 % (nousee, 70 % lähestyy), oma 21 %. Juna: 7199a90b käännetty ja asennettu 20.16. Posti: ei uutta.
+
 **Päivitetty 20:07:** Levy 81 Gi (85→81 20 min, seurataan; raja 50), muisti 58 % vapaa, kuorma 724/535/312 (ei luotettava mittari; muisti ok), sim 2 (≤3 ok), ei kevyttä tilaa. Viikko 15 % (5 h 54 %). Konteksti: LINNANRAKENTAJA 70 % → ilmoitettu Päätoimittajalle 20.06 (85 % seuraava raja), Natiivi-UI 57 %, oma 21 %. Juna: b13 3e056e63 uusi, odottaa niputusta (20.01). Posti: ei uutta.
 
 **Päivitetty 19:58:** Levy 85 Gi, muisti 62 % vapaa, kuorma 253/168/118 (junakäännös 9572f024 valmis 19.51, simulaattorit asennettu), sim 2 (juna-asennus, ≤3 ok), ei kevyttä tilaa. Viikko 14 % (5 h 51 %). Konteksti: Linnanrakentaja 67 % (70 % ei vielä), Natiivi-UI 55 %, oma 20 %. Posti: ei uutta.
