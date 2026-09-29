@@ -1,14 +1,12 @@
-// CODEXIN UUSI RADIO (radiolinssin uudistus, omistaja 28.9.2026 Päätoimittajan kautta; Codexin toimitus 29.9.
-// ~/Documents/Codex/2026-09-29/radio-uusi, manifest.json): pyöristetty puurunko kerroksina, iPad 1400 × 520 ja iPhone
-// 1100 × 600, kaikki kerrokset koko kankaan kokoisia ja kohdistettuja. Järjestys (manifest layer_order_on):
-//   cabinet · vu-backlight · vu-face · vu-needle · vu-glass · vu-reflection · display-backlight · display-window ·
-//   tuning-backlight · tuning-window · tuning-pointer · power-on|power-off · tuning-knob
-// Neula kääntyy vu_needle_pivotin ympäri (kuvassa lepoasennossa −45°, asteikko noin ±62°), nuppi tuning_knob_pivotin
-// ympäri taajuuden mukaan (±135°). Pelin omat osat kerrosten päällä: pistenäyttö display_text_safe_boundsiin (kuvan
-// pistepohja korvaa sammuneet pisteet), asteikon nimet ja veto tuning_scale_boundsiin (kuvan viivat ja osoitin korvaavat
-// piirretyt), virtakytkin power_hit-kohtaan (vähintään 44 pt). Radio vie enintään 22 % näkymän pinta-alasta.
+// CODEXIN PUURADIO YHTENÄ KUVANA (omistaja 29.9.2026: "Radio on aina päällä, joten ei tarvitse kikkailla tasojen kanssa,
+// vaan Codex voi suoraan tehdä yhden kuvan. Ainut, mikä jätetään tyhjäksi, on VU-mittarin neula, joka animoidaan, sekä
+// näytön teksti."; Codexin toimitus ~/Documents/Codex/2026-09-29/radio-yksikuva/<versio>, manifest.json, tuonti
+// tyokalut/radio_yksikuva.py): iPad 1400 × 520 ja iPhone 1100 × 600, valaistu radio.png (lamput valaisevat puuta, runko
+// varjossa, ohut sinertävä reunavalo) ja VU-neula 160 × 160 -rajauksena (akseli rajauksen keskellä = vu_needle_pivot).
+// Pelin omat osat kuvan päällä: pistenäyttö display_text_safe_boundsiin (kuvan pistepohja korvaa sammuneet pisteet),
+// asteikon nimet ja veto tuning_scale_boundsiin (kuvan viivat ja punainen osoitin korvaavat piirretyt), virtakytkin
+// power_hit-kohtaan (vähintään 44 pt; kytkin sulkee linssin). Radio vie enintään 22 % näkymän pinta-alasta.
 // Ilman kuvia (vanha käännös) vanha kotelo jää käyttöön.
-using System.Collections.Generic;
 using Matkakirja.Linssit.Radio;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -17,21 +15,15 @@ namespace Matkakirja.Natiivi
 {
     public sealed partial class RadioNakyma
     {
-        /// <summary>Codexin radion variantti: kangas, akselit ja alueet kankaan pikseleinä (manifest.json).</summary>
+        /// <summary>Codexin radion variantti: kangas, neula ja alueet kankaan pikseleinä (manifest.json).</summary>
         sealed class CodexVariantti
         {
             public string Nimi;
-            public Vector2 Kangas, NeulanAkseli, NupinAkseli, VirtaKeski;
+            public Vector2 Kangas, VirtaKeski;
             public float VirtaSade;
-            public Rect Teksti, Asteikko;
-            public readonly Dictionary<string, Texture2D> Kuvat = new Dictionary<string, Texture2D>();
+            public Rect Teksti, Asteikko, Neula;
+            public Texture2D Radio, NeulaKuva;
         }
-
-        static readonly string[] CodexKerrokset =
-        {
-            "cabinet", "vu-backlight", "vu-face", "vu-needle", "vu-glass", "vu-reflection", "display-backlight", "display-window",
-            "tuning-backlight", "tuning-window", "tuning-pointer", "power", "tuning-knob",
-        };
 
         static Rect Alue(float x0, float y0, float x1, float y1) => Rect.MinMaxRect(x0, y0, x1, y1);
 
@@ -40,14 +32,9 @@ namespace Matkakirja.Natiivi
 
         static CodexVariantti Lataa(CodexVariantti v)
         {
-            foreach (var k in CodexKerrokset)
-                foreach (var nimi in k == "power" ? new[] { "power-on", "power-off" } : new[] { k })
-                {
-                    var t = Resources.Load<Texture2D>($"RadioUusi/{v.Nimi}/{nimi}");
-                    if (t == null) return null;
-                    v.Kuvat[nimi] = t;
-                }
-            return v;
+            v.Radio = Resources.Load<Texture2D>($"RadioUusi/{v.Nimi}/radio");
+            v.NeulaKuva = Resources.Load<Texture2D>($"RadioUusi/{v.Nimi}/vu-neula");
+            return v.Radio != null && v.NeulaKuva != null ? v : null;
         }
 
         static void HaeCodex()
@@ -56,12 +43,12 @@ namespace Matkakirja.Natiivi
             codexHaettu = true;
             ipad = Lataa(new CodexVariantti
             {
-                Nimi = "ipad", Kangas = new Vector2(1400, 520), NeulanAkseli = new Vector2(408, 296), NupinAkseli = new Vector2(1203, 315),
+                Nimi = "ipad", Kangas = new Vector2(1400, 520), Neula = Alue(328, 216, 488, 376),
                 Teksti = Alue(599, 163, 1108, 275), Asteikko = Alue(335, 340, 1119, 391), VirtaKeski = new Vector2(1203, 212), VirtaSade = 21,
             });
             iphone = Lataa(new CodexVariantti
             {
-                Nimi = "iphone", Kangas = new Vector2(1100, 600), NeulanAkseli = new Vector2(390, 317), NupinAkseli = new Vector2(921, 333),
+                Nimi = "iphone", Kangas = new Vector2(1100, 600), Neula = Alue(310, 237, 470, 397),
                 Teksti = Alue(558, 185, 837, 300), Asteikko = Alue(315, 386, 836, 447), VirtaKeski = new Vector2(914, 232), VirtaSade = 20,
             });
         }
@@ -75,11 +62,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Radio enintään tämän osuuden näkymän pinta-alasta (Codexin README).</summary>
         const float PintaAlaKatto = 0.22f;
 
-        VisualElement codex, cNeula, cNuppi, cPaalla, cPois, cTeksti, cAsteikko, cVirta;
-        VisualElement[] cValot;
+        VisualElement codex, cNeula, cTeksti, cAsteikko, cVirta;
         CodexVariantti cVar;
         VisualElement vanhaNayttoIsa, vanhaAsteikkoIsa, vanhaLamppuIsa, vanhaLinkkiIsa;
-        float cNeulaPiirretty = float.NaN, cNuppiPiirretty = float.NaN;
+        float cNeulaPiirretty = float.NaN;
 
         /// <summary>Rakentaa Codexin kuoren (piilossa, kunnes Mitoita valitsee variantin).</summary>
         void RakennaCodex()
@@ -87,13 +73,6 @@ namespace Matkakirja.Natiivi
             if (!CodexSaatavilla) return;
             codex = Rakenne.El("mk-radio__codex", juuri, PickingMode.Ignore);
             codex.style.display = DisplayStyle.None;
-        }
-
-        VisualElement Kerros(Texture2D t, string luokka = "mk-radio__kerros")
-        {
-            var e = Rakenne.El(luokka, codex, PickingMode.Ignore);
-            e.style.backgroundImage = new StyleBackground(t);
-            return e;
         }
 
         static Length Pros(float osa, float koko) => Length.Percent(osa / koko * 100f);
@@ -105,34 +84,25 @@ namespace Matkakirja.Natiivi
             e.style.width = Pros(r.width, kangas.x); e.style.height = Pros(r.height, kangas.y);
         }
 
-        /// <summary>Kerrokset variantille (iPad tai iPhone); toiminnalliset osat siirretään kerrosten päälle.</summary>
+        /// <summary>Kuva ja neula variantille (iPad tai iPhone); toiminnalliset osat siirretään kuvan päälle.</summary>
         void KaytaVarianttia(CodexVariantti v)
         {
             if (cVar == v) return;
             cVar = v;
             codex.Clear();
             var k = v.Kangas;
-            var valot = new List<VisualElement>();
-            foreach (var nimi in CodexKerrokset)
-            {
-                if (nimi == "power")
-                {
-                    cPaalla = Kerros(v.Kuvat["power-on"]);
-                    cPois = Kerros(v.Kuvat["power-off"]);
-                    continue;
-                }
-                var e = Kerros(v.Kuvat[nimi]);
-                if (nimi.EndsWith("backlight")) valot.Add(e);
-                if (nimi == "vu-needle") { cNeula = e; e.usageHints = UsageHints.DynamicTransform; e.style.transformOrigin = new TransformOrigin(Pros(v.NeulanAkseli.x, k.x), Pros(v.NeulanAkseli.y, k.y)); }
-                if (nimi == "tuning-knob") { cNuppi = e; e.usageHints = UsageHints.DynamicTransform; e.style.transformOrigin = new TransformOrigin(Pros(v.NupinAkseli.x, k.x), Pros(v.NupinAkseli.y, k.y)); }
-                // Pelin osat oikeaan väliin: näyttö ikkunan päälle, nimet asteikkoikkunan päälle ennen osoitinta.
-                if (nimi == "display-window") { cTeksti = Rakenne.El("mk-radio__codex-teksti", codex, PickingMode.Ignore); Sijoita(cTeksti, v.Teksti, k); }
-                if (nimi == "tuning-window") { cAsteikko = Rakenne.El("mk-radio__codex-asteikko", codex, PickingMode.Ignore); Sijoita(cAsteikko, v.Asteikko, k); }
-            }
-            cValot = valot.ToArray();
+            var radio = Rakenne.El("mk-radio__kerros", codex, PickingMode.Ignore);
+            radio.style.backgroundImage = new StyleBackground(v.Radio);
+            cTeksti = Rakenne.El("mk-radio__codex-teksti", codex, PickingMode.Ignore); Sijoita(cTeksti, v.Teksti, k);
+            cAsteikko = Rakenne.El("mk-radio__codex-asteikko", codex, PickingMode.Ignore); Sijoita(cAsteikko, v.Asteikko, k);
+            // Neula kääntyy rajauksen keskipisteen (vu_neula_pivot_local 80,80) eli VU-akselin ympäri.
+            cNeula = Rakenne.El("mk-radio__codex-neula", codex, PickingMode.Ignore); Sijoita(cNeula, v.Neula, k);
+            cNeula.style.backgroundImage = new StyleBackground(v.NeulaKuva);
+            cNeula.usageHints = UsageHints.DynamicTransform;
+            cNeula.style.transformOrigin = new TransformOrigin(Length.Percent(50), Length.Percent(50));
             // Virtakytkin: osuma-ala vähintään 44 pt (koko asetetaan Mitoitessa).
             cVirta = Rakenne.El("mk-radio__codex-virta", codex);
-            cNeulaPiirretty = cNuppiPiirretty = float.NaN;
+            cNeulaPiirretty = float.NaN;
 
             // Siirrot (kerran): näyttö, asteikko (nimet + veto), lamppu (virtakytkin) ja linkkirivi.
             vanhaNayttoIsa ??= naytto.parent; vanhaAsteikkoIsa ??= asteikko.parent; vanhaLamppuIsa ??= lamppu.parent; vanhaLinkkiIsa ??= linkkiRivi.parent;
@@ -186,7 +156,7 @@ namespace Matkakirja.Natiivi
             codex.Clear();
         }
 
-        /// <summary>Kehys: neula VU:n mukaan, nuppi taajuuden mukaan, virta ja taustavalot tilan mukaan.</summary>
+        /// <summary>Kehys: neula VU:n mukaan (muu radio on valmis kuva; aina päällä).</summary>
         void PaivitaCodex()
         {
             if (cVar == null || codex.resolvedStyle.display == DisplayStyle.None) return;
@@ -198,17 +168,6 @@ namespace Matkakirja.Natiivi
                 cNeulaPiirretty = neula;
                 cNeula.style.rotate = new Rotate(new Angle(neula, AngleUnit.Degree));
             }
-            float nuppi = (float)(((linssi?.Tila?.Taajuus ?? 0.5) - 0.5) * 270.0);
-            if (float.IsNaN(cNuppiPiirretty) || Mathf.Abs(nuppi - cNuppiPiirretty) > 0.1f)
-            {
-                cNuppiPiirretty = nuppi;
-                cNuppi.style.rotate = new Rotate(new Angle(nuppi, AngleUnit.Degree));
-            }
-            bool paalla = nakyvissa;
-            cPaalla.style.display = paalla ? DisplayStyle.Flex : DisplayStyle.None;
-            cPois.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
-            float valo = vaihe == RadioVaihe.Soi || vaihe == RadioVaihe.Viritys ? 1f : 0.55f;
-            foreach (var e in cValot) if (!Mathf.Approximately(e.resolvedStyle.opacity, valo)) e.style.opacity = valo;
         }
     }
 }

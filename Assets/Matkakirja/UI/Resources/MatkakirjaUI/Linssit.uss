@@ -3716,8 +3716,8 @@
     background-color: rgb(93, 255, 168);
 }
 
-/* CODEXIN UUSI RADIO (radiolinssin uudistus 29.9.2026, RadioNakyma.Codex.cs): kohdistetut kerrokset koko kankaan
-   kokoisina, pelin osat (pistenäyttö, asteikon nimet, virtakytkin, linkkirivi) kerrosten päällä. */
+/* CODEXIN PUURADIO (29.9.2026, RadioNakyma.Codex.cs): yksi valaistu kuva koko kankaan kokoisena ja VU-neula rajauksena,
+   pelin osat (pistenäyttö, asteikon nimet, virtakytkin, linkkirivi) kuvan päällä. */
 .mk-radio__codex {
     align-self: flex-end;
     flex-shrink: 0;
@@ -3729,6 +3729,10 @@
     top: 0;
     right: 0;
     bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-radio__codex-neula {
     -unity-background-scale-mode: stretch-to-fill;
 }
 
