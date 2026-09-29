@@ -54,6 +54,11 @@ namespace Matkakirja.Linssit.Astronautti
         /// osoite, voima 0,45 ja nousu 2 s ovat Pelikoodarin taulussa (Aanisoitin.LinssiTaustat). Musiikki on pidossa.
         /// </summary>
         public const string Humina = "astro-humina";
+        /// <summary>
+        /// Kuvanäkymän selitteen luentojen pysyvä säilölohko (web satelliitti.js SELITTEEN_SAILIO, PR #3568): sama lohko kuin
+        /// webissä, joten kerran syntetisoitu selite soi molemmilla alustoilla ämpäristä (workerin lohko /^[a-z0-9-]{1,24}$/).
+        /// </summary>
+        public const string SelitteenSailio = "astro-selite";
         public const double MaanSade = 6_371_000;
         public const double PaljastuksenMinimiMs = 1800, PaljastuksenKattoMs = 12000;
         public const int PaljastuksenKehykset = 3;

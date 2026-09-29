@@ -874,6 +874,8 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Radio.RadioLinssi linssi;
             RadioVirta virta;
             RadioViritin viritin;
+            /// <summary>Tehosteet elävät linssin yli (sulun kytkinääni ehtii soida loppuun).</summary>
+            RadioEfektit efektit;
             Kartta kartta;
 
             public RadioSovitin(LinssiOhjain o, Matkakirja.Linssit.Radio.RadioAineisto a) { this.o = o; aineisto = a; }
@@ -908,6 +910,8 @@ namespace Matkakirja.Natiivi
                 kartta = new Kartta(o.kierto);
                 linssi = new Matkakirja.Linssit.Radio.RadioLinssi(aineisto, virta, viritin, kartta,
                     Matkakirja.Linssit.Radio.RadioAineisto.Pistefontti);
+                if (efektit == null) efektit = RadioEfektit.Luo(o.transform);
+                linssi.Efektit = efektit;
                 // Pelaajan kaupunki näkyy aina radiotilassa (web sääntö 1).
                 linssi.Sijainti = () => PeliOhjain.Instanssi?.PelaajanKaupunki;
                 // Esikuuntelu (Natiivisepän ehto 4): ei kuumana eikä virransäästössä (Lampo.Kuuma, sama kuin Esilataaja.Seis).
@@ -1564,6 +1568,8 @@ namespace Matkakirja.Natiivi
                     else if (osat[1] == "esikuuntelu" && osat.Length > 2) { EsikuunteluPois = osat[2] == "pois"; Kirjaa($"radio: esikuuntelu {(EsikuunteluPois ? "pois" : "päällä")}"); }
                     else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, taajuus {r.Tila.Taajuus:F4}, esikuuntelu {r.Esikuunneltu ?? "-"}, näkyvissä {r.Nakyvat.Count}, VU {r.Mittari.Osuus:F2}{(r.Mittari.Jaljitelty ? " (varakuvio)" : "")}, rms {((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Taso ?? -1):F4}, {VuSyy((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Kuvaus)}");
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
+                    // A/B Codexin uusi radio (29.9.) ↔ vanha kotelo kuvapariin.
+                    else if (osat[1] == "kuori" && osat.Length > 2) { RadioNakyma.Kuori(osat[2] != "vanha"); Kirjaa($"radio: kuori {osat[2]}"); }
                     else r.Viritä(osat[1].ToUpperInvariant());
                 }
                 else if (osat[0] == "isoisa" && osat.Length > 1 && osat[1] == "tila")

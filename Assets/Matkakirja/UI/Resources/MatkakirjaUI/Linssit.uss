@@ -3555,3 +3555,54 @@
     border-radius: 10px;
     background-color: rgb(93, 255, 168);
 }
+
+/* CODEXIN UUSI RADIO (radiolinssin uudistus 29.9.2026, RadioNakyma.Codex.cs): kohdistetut kerrokset koko kankaan
+   kokoisina, pelin osat (pistenäyttö, asteikon nimet, virtakytkin, linkkirivi) kerrosten päällä. */
+.mk-radio__codex {
+    align-self: flex-end;
+    flex-shrink: 0;
+}
+
+.mk-radio__kerros {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-radio__codex-virta {
+    position: absolute;
+}
+
+.mk-radio__codex-virta .mk-radio__lamppu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.mk-radio__asteikko--codex {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    border-width: 0;
+    height: auto;
+}
+
+.mk-radio__linkki--codex {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 6px;
+    justify-content: center;
+}

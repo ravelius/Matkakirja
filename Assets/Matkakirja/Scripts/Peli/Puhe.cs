@@ -349,13 +349,15 @@ namespace Matkakirja.Natiivi
         /// </summary>
         /// <param name="loppuTagi">xAI-puhetagi palan loppuun (Lukijaaani.LuennanPalatJaTagit: [pause] kappalejaossa,
         /// [long-pause] väliotsikon edellä); vain puhepyyntöön, säilö omaan lohkoonsa (kertoja-t1).</param>
+        /// <param name="lohko">säilölohko (web lueAaneen sailio), oletuksena persoonan lohko (Lukijaaani.OletusLohko); esim.
+        /// astronautin kuvaselite astro-selite kuten webissä (Linssiseppä 29.9.2026).</param>
         public bool Lue(string teksti, string persoona = "merkinnat", float viiveS = 0, Action loppu = null, bool pyynnosta = false,
-            string loppuTagi = null)
+            string loppuTagi = null, string lohko = null)
         {
             // pyynnosta: kaiuttimen painallus lukee aina (omistaja 27.9.2026 klo 15.5x); automaattista ohjaa Kertoja.
             if (!Paalla && !PulunPuhe(persoona) && !pyynnosta) return false;
             soiPyynnosta = pyynnosta;
-            return Syntetisoi(teksti, persoona, TagiLohko(Lukijaaani.OletusLohko(persoona), loppuTagi), true, viiveS, loppu, loppuTagi);
+            return Syntetisoi(teksti, persoona, TagiLohko(lohko ?? Lukijaaani.OletusLohko(persoona), loppuTagi), true, viiveS, loppu, loppuTagi);
         }
 
         static string TagiLohko(string lohko, string loppuTagi) => Lukijaaani.TagiLohko(lohko, loppuTagi);

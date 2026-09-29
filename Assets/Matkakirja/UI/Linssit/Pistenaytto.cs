@@ -152,6 +152,10 @@ namespace Matkakirja.Natiivi
 
         // --- piirto --------------------------------------------------------------------
 
+        bool sammuneet = true;
+        /// <summary>Sammuneet pisteet piirretään (false: Codexin radion ikkunakuvassa on oma pistepohja).</summary>
+        public bool Sammuneet { get => sammuneet; set { if (sammuneet == value) return; sammuneet = value; MarkDirtyRepaint(); } }
+
         void Piirra(MeshGenerationContext mgc)
         {
             var rect = contentRect;
@@ -165,7 +169,7 @@ namespace Matkakirja.Natiivi
             foreach (bool b in tilat) if (b) palavia++;
             int sammuneita = pisterivit * sarakkeita - palavia;
             // Kiekon reunan pehmennys on tekstuurin sisällä: nelikulmio on hiukan kiekkoa suurempi.
-            if (sammuneita > 0) Pisteet(mgc, KiekkoTekstuuri(), sammuneita, false, o, s, r * TekstuuriVara, sammunut);
+            if (sammuneita > 0 && sammuneet) Pisteet(mgc, KiekkoTekstuuri(), sammuneita, false, o, s, r * TekstuuriVara, sammunut);
             if (palavia == 0) return;
             // Hehkut ensin kaikkien palavien alle, sitten kiekot (naapurin hehku ei peitä kiekkoa).
             Pisteet(mgc, HehkuTekstuuri(himmea, lasi), palavia, true, o, s, r * HehkuSade * TekstuuriVara, Color.white);
