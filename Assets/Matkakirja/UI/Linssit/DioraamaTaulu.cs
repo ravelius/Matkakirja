@@ -104,6 +104,7 @@ namespace Matkakirja.Natiivi
             lahde.style.color = new Color(Teksti.r, Teksti.g, Teksti.b, 0.65f);
             lahde.style.fontSize = 11;
             lahde.style.marginTop = 4;
+            lahde.style.whiteSpace = WhiteSpace.Normal; // pitkä lähderivi rivittyy (ei leikkaudu oikeasta reunasta)
 
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;

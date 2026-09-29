@@ -740,6 +740,74 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(nNapautuksenJalkeen.TauluAuki, "taulu pysyy auki repliikin ajan");
         }
 
+        // REGRESSIO (löydös, katselmointi 29.9.2026): Puhe() käytti Repliikit[0]:aa askel.N:stä riippumatta, ja
+        // DioraamaAanet tunnisti askeleen vaihtumisen tekstillä. Sama hahmo puhuu tässä kahdesti peräkkäin eri
+        // N:llä -- Nakyma.Repliikki/AskeleenAani/Askel on kummallakin askeleella eri.
+        [Testi] static void PuheKayttaaAskeleenNJaPerakkaisetAskeletAntavatEriAanen()
+        {
+            var henkilo = new Henkilo
+            {
+                Id = "h", Nimi = "H",
+                Silmukat = new Dictionary<string, Silmukka> { ["idle"] = new Silmukka { Rivi = 0, Ruudut = 4, Fps = 4 } },
+            };
+            var hahmo = new Hahmo
+            {
+                Id = "kokki", HenkiloId = "h", Silmukka = "idle",
+                Repliikit = new List<Repliikki>
+                {
+                    new Repliikki { Id = "r0", Teksti = "Ensimmäinen repliikki.", Aani = "aani-0" },
+                    new Repliikki { Id = "r1", Teksti = "Toinen repliikki.", Aani = "aani-1" },
+                },
+            };
+            var tila = new Tila
+            {
+                Id = "keittio", Nimi = "Keittiö", Kohdistettava = true,
+                Kamera = new Asento(new V3(1, 1, 0), 200, 25, 4, 45, 0.3),
+                PuluLaskeutuminen = new V3(1, 0, 0.5),
+                Taulu = new Taulu(),
+                Hahmot = new List<Hahmo> { hahmo },
+                Kasikirjoitus = new List<Askel>
+                {
+                    new Askel { Tee = "pulu-lenna" },
+                    new Askel { Tee = "repliikki", HahmoId = "kokki", N = 0 },
+                    new Askel { Tee = "repliikki", HahmoId = "kokki", N = 1 },
+                },
+            };
+            var rak = new Rakennus
+            {
+                YleisVaaka = new Asento(new V3(1, 0, 1), 0, 40, 10, 50, 0.1),
+                YleisPysty = new Asento(new V3(1, 0, 1), 0, 50, 14, 55, 0.1),
+                PuluLaskeutuminen = new V3(0, 0, 0),
+                Taulu = new Taulu(),
+                Tilat = new List<Tila> { tila },
+                Henkilot = new Dictionary<string, Henkilo> { ["h"] = henkilo },
+            };
+
+            var linssi = new PoikkileikkausLinssi();
+            linssi.Avaa(rak, 0);
+            double kohdistusHetki = 1.0;
+            linssi.Kohdista("keittio", kohdistusHetki);
+            double saapumisHetki = kohdistusHetki + Kameraliike.SiirtymanKesto(rak.YleisVaaka, tila.Kamera);
+
+            double kestoN0 = Ohjaaja.AskeleenKesto(tila.Kasikirjoitus[1], tila, rak);
+            var n0 = linssi.NakymaHetkella(saapumisHetki + 1.8 + kestoN0 / 2, pysty: false);
+            Oleta.Sama("kokki", n0.Puhuja, "N=0: puhuja");
+            Oleta.Sama("Ensimmäinen repliikki.", n0.Repliikki, "N=0: teksti tulee askel.N:stä (ei aina Repliikit[0])");
+            Oleta.Sama("aani-0", n0.AskeleenAani, "N=0: aani-id askel.N:stä");
+            Oleta.Sama(1, n0.Askel, "N=0: askelindeksi (0=pulu-lenna, 1=tämä repliikki)");
+
+            double alkuN1 = saapumisHetki + 1.8 + kestoN0;
+            double kestoN1 = Ohjaaja.AskeleenKesto(tila.Kasikirjoitus[2], tila, rak);
+            var n1 = linssi.NakymaHetkella(alkuN1 + kestoN1 / 2, pysty: false);
+            Oleta.Sama("kokki", n1.Puhuja, "N=1: puhuja");
+            Oleta.Sama("Toinen repliikki.", n1.Repliikki, "N=1: eri teksti kuin N=0:lla");
+            Oleta.Sama("aani-1", n1.AskeleenAani, "N=1: eri aani-id kuin N=0:lla");
+            Oleta.Sama(2, n1.Askel, "N=1: eri askelindeksi kuin N=0:lla");
+
+            Oleta.Tosi(n0.AskeleenAani != n1.AskeleenAani, "sama hahmo puhuu kahdesti peräkkäin eri N:llä -> kaksi eri AskeleenAani-arvoa");
+            Oleta.Tosi(n0.Askel != n1.Askel, "sama hahmo puhuu kahdesti peräkkäin eri N:llä -> eri Askel");
+        }
+
         [Testi] static void NakymaHetkellaOnToistettava()
         {
             var rak = DioraamaData.Lue(KeittioFixture);

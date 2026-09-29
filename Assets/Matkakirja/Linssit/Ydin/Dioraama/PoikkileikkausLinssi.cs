@@ -22,7 +22,9 @@
 //    (pysyy näkyvissä myöhempien askelten ajan). TauluAuki on tosi ensimmäisestä 'taulu'-askeleesta alkaen
 //    käsikirjoituksen loppuun ja sen jälkeenkin, kunnes kamera lähtee tilasta (Linnanrakentaja 29.9.: taulu ei
 //    välähdä 0,25 s:ssa kiinni). Puhuja ja Repliikki kertovat kuluvan puheaskeleen: 'kohta' = pulu + kohdan teksti,
-//    'repliikki' = hahmo + Repliikit[0], 'reaktio' = pulu + hahmon Reaktio; muuten null.
+//    'repliikki' = hahmo + Repliikit[askel.N] (KORJATTU 29.9.2026, katselmointi: ei aina Repliikit[0]), 'reaktio' =
+//    pulu + hahmon Reaktio; muuten null. Askel + AskeleenAani kertovat saman askeleen indeksin ja äänipankin id:n
+//    (DioraamaAanet.cs käyttää näitä, ei tekstiä, tunnistaakseen askeleen vaihtumisen ja soittaakseen äänen).
 //  - Pystynäytössä tilan kamera on KameraPysty, jos data antaa sen (muuten Kamera).
 //  - AVAUS (Linnanrakentaja 29.9.): ensimmäisessä yleisnäkymässä (tapahtuma 0) ajetaan linnan oma käsikirjoitus
 //    AvausViive s avauksen jälkeen: Pulu liitää taivaalta (TaivasPiste) linnan laskeutumispisteeseen, ja taulu
@@ -60,13 +62,21 @@ namespace Matkakirja.Linssit.Dioraama
         public readonly string KohdeTila;
         /// <summary>Kuluvan puheaskeleen puhuja ("pulu" tai hahmon id) ja teksti; null kun kukaan ei puhu.</summary>
         public readonly string Puhuja, Repliikki;
+        /// <summary>Kuluvan käsikirjoitusaskeleen indeksi tilan (tai avauksessa linnan) Kasikirjoitus-listassa;
+        /// -1 = ei käynnissä olevaa puheaskelta. DioraamaAanet tunnistaa askeleen VAIHTUMISEN parilla
+        /// (KohdeTila, Askel), ei tekstillä (korjattu 29.9.2026, katselmointi: teksti on hauras avain).</summary>
+        public readonly int Askel;
+        /// <summary>Kuluvan askeleen äänipankin id (repliikki[N].Aani, reaktion Aani tai taulun kohdan Aani);
+        /// null kun ei puhetta tai askeleella ei ole ääntä.</summary>
+        public readonly string AskeleenAani;
 
         public Nakyma(Asento kamera, Dictionary<string, int> tasot, List<HahmoNakyma> hahmot, V3 pulu,
-            bool puluLentaa, bool tauluAuki, int kohta, string kohdeTila, string puhuja = null, string repliikki = null)
+            bool puluLentaa, bool tauluAuki, int kohta, string kohdeTila, string puhuja = null, string repliikki = null,
+            int askel = -1, string askeleenAani = null)
         {
             Kamera = kamera; Tasot = tasot; Hahmot = hahmot; Pulu = pulu;
             PuluLentaa = puluLentaa; TauluAuki = tauluAuki; Kohta = kohta; KohdeTila = kohdeTila;
-            Puhuja = puhuja; Repliikki = repliikki;
+            Puhuja = puhuja; Repliikki = repliikki; Askel = askel; AskeleenAani = askeleenAani;
         }
     }
 
@@ -206,6 +216,8 @@ namespace Matkakirja.Linssit.Dioraama
             bool puluLentaa = false, tauluAuki = false;
             int kohta = -1;
             string puhuja = null, repliikki = null;
+            int askel = -1;
+            string askeleenAani = null;
 
             bool avaus = kohdeTila == null && i == 0 && Rakennus.Taulu?.Kohdat != null && Rakennus.Taulu.Kohdat.Count > 0;
             if (kohdeTila == null && !avaus)
@@ -218,7 +230,7 @@ namespace Matkakirja.Linssit.Dioraama
                 double kasikirjoitusAlku = tapahtuma.Hetki + tapahtuma.Kesto + (avaus ? AvausViive : 0);
                 double paikallinenAika = t - kasikirjoitusAlku;
                 var kestot = new List<double>(tila.Kasikirjoitus.Count);
-                foreach (var askel in tila.Kasikirjoitus) kestot.Add(Ohjaaja.AskeleenKesto(askel, tila, Rakennus));
+                foreach (var a in tila.Kasikirjoitus) kestot.Add(Ohjaaja.AskeleenKesto(a, tila, Rakennus));
 
                 double sessionLoppu = i + 1 < tapahtumat.Count ? tapahtumat[i + 1].Hetki : double.PositiveInfinity;
                 var napitLokaali = new List<double>();
@@ -255,31 +267,42 @@ namespace Matkakirja.Linssit.Dioraama
                             if (tila.Kasikirjoitus[qi].Tee == "taulu") { tauluAuki = true; break; }
                         for (int qi = idx; qi >= 0; qi--)
                             if (tila.Kasikirjoitus[qi].Tee == "kohta") { kohta = tila.Kasikirjoitus[qi].N; break; }
-                        if (!kt.Valmis) (puhuja, repliikki) = Puhe(tila, tila.Kasikirjoitus[idx]);
+                        if (!kt.Valmis)
+                        {
+                            askel = idx;
+                            (puhuja, repliikki, askeleenAani) = Puhe(tila, tila.Kasikirjoitus[idx]);
+                        }
                     }
                 }
             }
 
-            return new Nakyma(kamera, tasot, hahmot, pulu, puluLentaa, tauluAuki, kohta, kohdeTila, puhuja, repliikki);
+            return new Nakyma(kamera, tasot, hahmot, pulu, puluLentaa, tauluAuki, kohta, kohdeTila, puhuja, repliikki,
+                askel, askeleenAani);
         }
 
-        /// <summary>Puheaskeleen puhuja ja teksti (kohta, repliikki, reaktio); muut askeleet (null, null).</summary>
-        static (string, string) Puhe(Tila tila, Askel askel)
+        /// <summary>Puheaskeleen puhuja, teksti ja äänipankin id (kohta, repliikki, reaktio); muut askeleet
+        /// (null, null, null). KORJATTU (29.9.2026, katselmointi): repliikki-askel käyttää askel.N:ää eikä aina
+        /// Repliikit[0]:aa (askel.N valitsee rivin, kuten Ohjaaja.AskeleenKesto tekee jo). Äänen id tulee suoraan
+        /// askeleesta, ei DioraamaAanet.cs:n aiemmasta tekstitäsmäytyksestä (EtsiAskeleenAani, poistettu).</summary>
+        static (string Puhuja, string Repliikki, string Aani) Puhe(Tila tila, Askel askel)
         {
             switch (askel.Tee)
             {
                 case "kohta":
                     var kohdat = tila.Taulu?.Kohdat;
-                    return kohdat != null && askel.N >= 0 && askel.N < kohdat.Count ? ("pulu", kohdat[askel.N].Teksti) : (null, null);
+                    return kohdat != null && askel.N >= 0 && askel.N < kohdat.Count
+                        ? ("pulu", kohdat[askel.N].Teksti, kohdat[askel.N].Aani) : (null, null, null);
                 case "repliikki":
                 case "reaktio":
                     Hahmo h = null;
                     foreach (var x in tila.Hahmot) if (x.Id == askel.HahmoId) { h = x; break; }
-                    if (h == null) return (null, null);
-                    if (askel.Tee == "reaktio") return h.Reaktio != null ? ("pulu", h.Reaktio.Teksti) : (null, null);
-                    return h.Repliikit.Count > 0 ? (h.Id, h.Repliikit[0].Teksti) : (null, null);
+                    if (h == null) return (null, null, null);
+                    if (askel.Tee == "reaktio")
+                        return h.Reaktio != null ? ("pulu", h.Reaktio.Teksti, h.Reaktio.Aani) : (null, null, null);
+                    return askel.N >= 0 && askel.N < h.Repliikit.Count
+                        ? (h.Id, h.Repliikit[askel.N].Teksti, h.Repliikit[askel.N].Aani) : (null, null, null);
                 default:
-                    return (null, null);
+                    return (null, null, null);
             }
         }
     }
