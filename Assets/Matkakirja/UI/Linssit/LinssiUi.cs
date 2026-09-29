@@ -248,6 +248,8 @@ namespace Matkakirja.Natiivi
             Aseta("matkavalinta", () => ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio)));
             Aseta("matkakirja", () => ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio)));
             pelielementitAsetettu = ok ? (portti, vertailu, radio, paalla) : ((bool, bool, bool, bool)?)null;
+            // Natiivi-UI 30.9.: rivi erottaa, jäikö kutsu tulematta vai heittikö jokin elementti (Tähtitaivas 1.0.57).
+            Debug.Log($"MATKAKIRJA ui linssit: pelielementit {Auki?.Tiedot?.Id ?? "-"}: portti {portti}, vertailu {vertailu}, radio {radio}, linssi {paalla}, {(ok ? "ok" : "uudelleen")}");
         }
 
         void Vaihtui(ILinssi linssi)
