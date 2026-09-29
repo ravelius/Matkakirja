@@ -60,6 +60,8 @@ export const TILA = {
   // Kuninkaansaliin), piha y −3,0 (kuoren säde), avoin sivu länteen pihalle (suunta 90: +z → −x).
   sijoitus: { ankkuri: [14, 0, 7.5], paikka: [-12, -3.0, 8], suunta: 90 },
   rajat: { min: [8, 0, 4], max: [20, 4, 11] },
+  // Leikkaus itäsiiven katon (≈ 12,6) yli: ylhäältä katsottaessa katto ei jää huoneen eteen (Siirtoseppä 29.9.).
+  leikkaus: { laajennus: 1.0, kameraan: true, min: [8, 0, 4], max: [20, 16.5, 11] },
   naapurit: ['massa', 'keskushalli'],
   kamera: { kohde: [14, 1.2, 7.2], atsimuutti: 172, korkeus: 22, etaisyys: 16, fov: 38, aukko: 0.8 },
   // Kamerat ~22–24° vaakatason yläpuolella (Codexin hahmot on piirretty ~25° kulmasta). Pystynäytössä taulu
