@@ -294,6 +294,16 @@ if '--hahmot' in argv:
             em.inputs['Strength'].default_value = 1.2  # puhdas emissio: ei heijasta tulisijan valoa
             nt_.links.new(em.outputs['Emission'], nt_.nodes.new('ShaderNodeOutputMaterial').inputs['Surface'])
             bpy.context.object.data.materials.append(lm)
+if '--lyhty' in argv:  # luonnos: lyhty hahmon oikeaan käteen (esim. vartija muurinharjalla)
+    h = next(h for h in tila.get('hahmot', []) if h['id'] == arg('--lyhty'))
+    s_ = math.radians(h.get('suunta', 0)); f_ = (math.sin(s_), -math.cos(s_)); r_ = (math.cos(s_), math.sin(s_))
+    p_ = [h['paikka'][0] + 0.25 * f_[0] + 0.32 * r_[0], h['paikka'][1] + 0.78, h['paikka'][2] + 0.25 * f_[1] + 0.32 * r_[1]]
+    bpy.ops.mesh.primitive_cube_add(size=0.16, location=bl(p_)); lk = bpy.context.object
+    km = bpy.data.materials.new('lyhty-luonnos'); km.use_nodes = True; nt_ = km.node_tree; nt_.nodes.clear()
+    em = nt_.nodes.new('ShaderNodeEmission'); em.inputs['Color'].default_value = (1, 0.55, 0.15, 1); em.inputs['Strength'].default_value = 3
+    nt_.links.new(em.outputs['Emission'], nt_.nodes.new('ShaderNodeOutputMaterial').inputs['Surface']); lk.data.materials.append(km)
+    lv_ = bpy.data.lights.new('lyhtyvalo', 'POINT'); lv_.energy = 60; lv_.color = srgb('#ffb060'); lv_.shadow_soft_size = 0.05
+    lo_ = bpy.data.objects.new('lyhtyvalo', lv_); sc.collection.objects.link(lo_); lo_.location = Vector(bl(p_)) + Vector((0, 0, 0.02))
 if '--luonnos' in argv:  # luonnoskuva: Standard-näyttömuunnos, jotta liekkien värit säilyvät (AgX latisti ne)
     sc.view_settings.view_transform = 'Standard'; sc.view_settings.look = 'None'; sc.view_settings.exposure = 0.4
 if '--kamera' in argv:  # --kamera x,y,z,kx,ky,kz (glTF): silmä ja katsekohde
