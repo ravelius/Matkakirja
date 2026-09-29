@@ -548,6 +548,9 @@ const PULU_IKONI = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden=
   + '<circle cx="9.5" cy="10" r="0.9" fill="currentColor" stroke="none"/>'
   + '<circle cx="14.5" cy="10" r="0.9" fill="currentColor" stroke="none"/></svg>';
 
+/** Käyttäjä on pyytänyt vähemmän liikettä: vieritys ilman animaatiota. */
+const liikettaVahennetty = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /** Auki oleva kortti (yksi kerrallaan, kuten fokusnosto.js:n ui.fokusnostoKortti). */
 let avoinKortti = null;
 
@@ -619,6 +622,14 @@ function avaaMaakuntaKortti(ui, avain, nimi, data) {
   if (kysymykset.length) {
     const pulu = html('div', 'maakunta-pulu');
     let avoinVastaus = null;
+    /*
+     * KORTIN KOKO EI MUUTU (omistaja 29.9.2026: "Ikkunan koko ei saa muuttua kun noita klikkaa auki"): korkeus
+     * lukitaan ensimmäisellä napautuksella siihen, mikä se on (kuvat ovat jo ehtineet latautua; katto on
+     * max-height), ja vastaus avautuu kortin sisällä vieritettävänä. Sulkeminen ei kutista korttia.
+     */
+    const lukitseKorkeus = () => {
+      if (!kortti.style.height) kortti.style.height = `${kortti.getBoundingClientRect().height}px`;
+    };
     for (const { q, a } of kysymykset) {
       const nappi = html('button', 'maakunta-pulu-kysymys');
       nappi.type = 'button';
@@ -639,10 +650,12 @@ function avaaMaakuntaKortti(ui, avain, nimi, data) {
           avoinVastaus.vastaus.remove();
           avoinVastaus.nappi.setAttribute('aria-expanded', 'false');
         }
+        lukitseKorkeus();
         const vastaus = html('p', 'maakunta-pulu-vastaus', a);
         nappi.insertAdjacentElement('afterend', vastaus);
         nappi.setAttribute('aria-expanded', 'true');
         avoinVastaus = { nappi, vastaus };
+        vastaus.scrollIntoView?.({ block: 'nearest', behavior: liikettaVahennetty() ? 'auto' : 'smooth' });
       });
       pulu.appendChild(nappi);
     }
