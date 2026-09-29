@@ -1077,10 +1077,7 @@ namespace Matkakirja.Natiivi
             PaivitaVahvistus();
             vahvistin.Nollaa();
             lahde.Play();
-            double playDsp = AudioSettings.dspTime;
-            float playRuutu = Time.unscaledTime;
-            if (JumiMs > 0) { System.Threading.Thread.Sleep(JumiMs); JumiMs = 0; }
-            StartCoroutine(AlkuMittari(klippi, playDsp, playRuutu));
+            StartCoroutine(AlkuMittari(klippi, Kohdetaso));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
             // saman puheen jatkoa: ei loppua eikä alkua väliin (lataus-kahva kuuluu yhä SoitaPalat-korutiinille).
@@ -1094,20 +1091,28 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Alun mittari (currentTime-mittaus): ensimmäisessä ruudussa Play():n jälkeen soittokohta, voimakkuus ja kulunut
-        /// äänikello. "mykkänä" = soitettu aika, jonka lähde oli voimakkuudella 0 (vanha alku jumin jälkeen), yli klipin
-        /// alkuhiljaisuuden se on kadonnut tavu.
+        /// Alun mittari (currentTime-mittaus, 29.9.): ruuduittain 1 s ajan soittokohta ja voimakkuus. "hiljaa" = soitettu
+        /// aika, jonka lähde oli alle puolen kohdetasosta; klipin alkuhiljaisuuden (0,11–0,20 s) ylittävä osa on kadonnut
+        /// tavu. Unity käynnistää soiton vasta Play()-ruudun lopussa, joten testijumi (puhe jumi) osuu ensimmäiseen ruutuun,
+        /// jossa klippi jo soi: raskas ruutu heti soiton alettua (saapuminen, kortin avaus).
         /// </summary>
-        IEnumerator AlkuMittari(AudioClip klippi, double playDsp, float playRuutu)
+        IEnumerator AlkuMittari(AudioClip klippi, float taso)
         {
-            float v0 = lahde.volume;
-            yield return null;
-            if (lahde.clip != klippi) yield break;
-            double dsp = (AudioSettings.dspTime - playDsp) * 1000.0;
-            float t = lahde.time;
-            Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: 1. ruutu {(Time.unscaledTime - playRuutu) * 1000:0} ms "
-                + $"(äänikello {dsp:0} ms), soittokohta {t:0.000} s, voimakkuus Play():ssa {v0:0.00} nyt {lahde.volume:0.00}, "
-                + $"mykkänä {(v0 > 0f ? 0f : t):0.000} s {klippi?.name}");
+            float t0 = Time.unscaledTime, edellinen = 0f, hiljaa = 0f, v = lahde.volume, jumi = 0f;
+            int ruutuja = 0;
+            while (lahde.clip == klippi && Time.unscaledTime - t0 < 1f)
+            {
+                yield return null;
+                if (lahde.clip != klippi) yield break;
+                float t = lahde.time;
+                if (t > edellinen && v < 0.5f * taso) hiljaa += t - edellinen;
+                if (t > 0f) edellinen = t;
+                v = lahde.volume;
+                ruutuja++;
+                if (JumiMs > 0 && t > 0f) { jumi = JumiMs; System.Threading.Thread.Sleep(JumiMs); JumiMs = 0; }
+            }
+            Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: jumi {jumi:0} ms, {ruutuja} ruutua, soittokohta {edellinen:0.000} s, "
+                + $"hiljaa (< 50 %) soitettu {hiljaa:0.000} s {klippi?.name}");
         }
 
         /// <summary>Valmiin virran tavut välimuistitiedostoon (atominen siirto). false, jos tavuja ei saatu.</summary>

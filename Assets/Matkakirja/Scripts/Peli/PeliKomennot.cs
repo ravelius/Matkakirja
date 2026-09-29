@@ -327,7 +327,7 @@ namespace Matkakirja.Natiivi
                             return $"=alku {(Puhe.VanhaAlku ? "vanha (häivytys nollasta)" : "uusi (kohdetasolla)")}";
                         case "jumi":
                             Puhe.JumiMs = int.TryParse(A(2), out int jumi) ? Mathf.Clamp(jumi, 0, 3000) : 0;
-                            return $"=jumi {Puhe.JumiMs} ms seuraavan puheen Play():n jälkeen";
+                            return $"=jumi {Puhe.JumiMs} ms ensimmäisessä soivassa ruudussa";
                         // Palaloki (TF 1.0.32 ohitukset): soitetut/jatketut/uusitut palat ja viimeiset rivit (soi s/kesto, lähde, worker).
                         case "palat":
                             if (A(2) == "nollaa") { Puhe.NollaaPalaloki(); return "=palaloki nollattu"; }
