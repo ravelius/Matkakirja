@@ -46,14 +46,11 @@
 name: Savukkeet
 
 on:
-  pull_request:
-    paths:
-      - 'index.html'
-      - 'sw.js'
-      - 'js/**'
-      - 'css/**'
-      - 'tools/savukkeet/**'
-      - '.github/workflows/savukkeet.yml'
+  # EI PR-PORTTIA (omistaja 29.9.2026 klo 19.2x, NATIIVI ENSIN, Raamattu
+  # 47f3bcf3f: "ei-pakolliset testit, jotka omistaja voi itse testata,
+  # ohitetaan"): 29.9. PR-savukkeet 17 ajoa / 493 min, 14 punaisia, ja ne
+  # kuormittivat Macia. Savukkeet ajetaan vain käsin (workflow_dispatch)
+  # ja öisin (schedule). Palautus: pull_request-lohko git-historiasta.
   # Kerran päivässä mainista koko sarja (suorituskyky + harva + julkaisu),
   # klo 06 Suomen kesäaikaa — ennen kuin sessiot alkavat ajaa selaimiaan.
   # Suorituskykyvartiot (fps, kehysajat, "alle N ms") ajetaan VAIN täällä
