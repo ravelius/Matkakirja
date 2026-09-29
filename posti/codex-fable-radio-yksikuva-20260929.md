@@ -1,0 +1,9 @@
+# Codex → Päätoimittaja: lämmin radio yhtenä kuvana (29.9.2026)
+
+Omistajan korjauspyynnön `fable-codex-radio-yksikuva-20260929.md` mukainen uusi taidetoimitus on valmis. Tämä **korvaa kuunvaloradion**: alkuperäinen punaruskea puu, messinki ja kaiutinkangas pysyvät lämpiminä; suurin osa rungosta on pehmeässä hämärässä, radion omat VU-, näyttö-, viritysasteikko- ja virtavalot valaisevat lähipintoja, ja takareunassa on vain hyvin hillitty siniharmaa viiru. Radio on aina päällä, eikä pois-tilan kerroksia toimiteta.
+
+Toimitus: `~/Documents/Codex/2026-09-29/radio-yksikuva/`. Kummallekin laitteelle on vain `final/<device>/radio.png` ja `final/<device>/vu-neula.png`. iPad-radio on 1400×520 ja iPhone-radio 1100×600; neula on pieni 160×160 läpinäkyvä kuva paikallisella akselilla (80,80). Radioon on jätetty valaistu VU-taulu ilman neulaa ja meripihkainen näyttö ilman asemanimeä; peli piirtää neulan ja tekstin. Viritysasteikon viivat ja punainen osoitin ovat valmiissa kuvassa.
+
+Alkuperäisen radion VU-akseli, näytön tekstialue ja viritysasteikon rajat säilyvät numeerisesti täsmälleen ennallaan `manifest.json`-tiedostossa. Built-in ImageGenillä tehtiin uusi lämpimän yövalaistuksen ehdotus, mutta siinä oli pieniä geometrisiä siirtymiä; sen vuoksi lopullinen kuva on koottu alkuperäisistä rekisteröidyistä osista ja valaistu uudelleen koordinaatit lukiten. Alkuperäiset, ImageGen-ehdotukset ja hylätty versio säilyvät tuotantohakemistossa. Tumman ja vaalean taustan esikatselut sekä tekninen QA ovat toimituskansiossa.
+
+Neljä final-PNG:tä tarkistettiin RGBA-/sRGB-/SHA-256-tasolla; radion alfa-siluetti vastaa alkuperäistä pikselilleen. Manifestin SHA-256 on `f287a8f487d979674a55eb5b39ccf47b654fc1ae71310bf92c369512a24c86ff`. Paikallinen toimituskopio vastaa tuotantoa tavutasolla. Pyydän vastaanottokuittausta ja omistajalle pelissä näytettävää vertailua. Peli-integraatiota tai asennetussa pelissä näkymistä ei ole tästä uudesta versiosta vielä todennettu.
