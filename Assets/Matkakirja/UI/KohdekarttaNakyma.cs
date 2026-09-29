@@ -156,6 +156,15 @@ namespace Matkakirja.Natiivi
                 pisteet.Add(piirros ? LuoPiirros(kohde) : LuoYmpyra(kohde));
             }
 
+            // Pariteetti 2 rivi 9 (web .kohde-ihmetahti, omistaja 2.9.2026): Matkakirjan ihmeen tähti piirroksen yläkulmaan.
+            string maa = UiSisalto.Kaupunki(kartta.Kaupunki)?.Maa;
+            if (!string.IsNullOrEmpty(maa))
+                UiKerros.Hae().StartCoroutine(NostoSisalto.MaanIhmeet(maa, onIhme =>
+                {
+                    foreach (var p in pisteet)
+                        if (p.Piirros && onIhme(p.Kohde.Nimi)) Ihmetahti(p.Juuri);
+                }));
+
             if (!kokoruutu && !string.IsNullOrEmpty(kartta.Lahde))
                 Kirjasimet.Aseta(Rakenne.Teksti(kartta.Lahde, "mk-kohdekartta__lahde", this), Kirjasin.Kone);
             if (this.pelkka) RegisterCallback<GeometryChangedEvent>(_ => AsettelePelkka());
@@ -199,6 +208,33 @@ namespace Matkakirja.Natiivi
             });
             return p;
         }
+
+        /// <summary>
+        /// Web .kohde-ihmetahti: kompassiruusun tähti (fokusnosto-symbolit piirraNostosymTahti, viewBox −12 −12 24 24)
+        /// 15 × 15 merkin laatikon yläreunaan hieman oikealle (top −6, right −3), kulta --sym-ihme #b8862b musteääriviivalla
+        /// #4b3a1c 1,2 ja varjolla drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3)); lavan lapsena se skaalautuu kartan mukana.
+        /// Valitulla piirroksella tähti piiloutuu (web .kohde-piirros.valittu > .kohde-ihmetahti).
+        /// </summary>
+        static void Ihmetahti(VisualElement merkki)
+        {
+            if (merkki.Q(className: "mk-kohdekartta__ihmetahti") != null) return;
+            var t = Rakenne.El("mk-kohdekartta__ihmetahti", merkki, PickingMode.Ignore);
+            SvgIkoni Kerros(string luokka, bool tayta)
+            {
+                var k = new SvgIkoni(Tahti) { Ruutu = 24, Alku = new Vector2(-12, -12) };
+                k.AddToClassList(luokka);
+                if (tayta) k.AddToClassList("mk-ikoni--tayta");
+                t.Add(k);
+                return k;
+            }
+            Kerros("mk-kohdekartta__ihmetahti-varjo", true);
+            Kerros("mk-kohdekartta__ihmetahti-kulta", true);
+            Kerros("mk-kohdekartta__ihmetahti-muste", false);
+        }
+
+        /// <summary>Web piirraNostosymTahti (js/fokusnosto-symbolit.js), path d sellaisenaan.</summary>
+        const string Tahti = "M0.00 -10.00 L1.76 -4.25 L4.10 -4.10 L4.25 -1.76 L10.00 0.00 L4.25 1.76 L4.10 4.10 L1.76 4.25 "
+            + "L0.00 10.00 L-1.76 4.25 L-4.10 4.10 L-4.25 1.76 L-10.00 0.00 L-4.25 -1.76 L-4.10 -4.10 L-1.76 -4.25 Z";
 
         Piste LuoYmpyra(KohdekarttaKohde kohde)
         {

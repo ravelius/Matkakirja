@@ -823,6 +823,40 @@ namespace Matkakirja.Natiivi
         /// <summary>Ihmekuvan nauhan teksti (web KOHDE_IHMENAUHA, pelin alaotsikko).</summary>
         public const string IhmeNauha = "Unohdettu aarre";
 
+        /// <summary>
+        /// Web KOHDE_IHMEEN_NIMET (js/fokuskohteet.js): kaupunkikartan nimi → fokuskohteen nimi, kun ne eroavat.
+        /// Kaikki muut kohteet osuvat suoraan nimellä.
+        /// </summary>
+        static readonly Dictionary<string, string> KohteenIhmeNimet = new Dictionary<string, string>
+        {
+            { "Zeuksen temppeli", "Olympieion" },
+            { "Pyhän Paavalin katedraali", "St Paulin katedraali" },
+            { "Vanha kesäpalatsi", "Yuanmingyuan" },
+            { "Karnakin suuri pylvässali", "Karnakin pylvässali" },
+        };
+
+        /// <summary>Web ihmeAvain: pienaakkoset, välit tiivistettyinä.</summary>
+        static string IhmeAvain(string nimi) =>
+            string.Join(" ", (nimi ?? "").Trim().ToLowerInvariant().Split((char[])null, StringSplitOptions.RemoveEmptyEntries));
+
+        /// <summary>
+        /// Pariteetti 2 rivi 9 (web matkakirjanIhme + ihmehaku): maan fokuskohteiden nimet, joilla on Matkakirjan ihme
+        /// (kenttä ihme.osoite). Kaupunkikartta piirtää niiden piirrosten yläkulmaan ihmetähden. Palauttaa predikaatin
+        /// kaupunkikartan kohteen nimelle; tyhjä maa tai puuttuva moduuli → aina false.
+        /// </summary>
+        public static IEnumerator MaanIhmeet(string iso, Action<Func<string, bool>> valmis)
+        {
+            var nimet = new HashSet<string>();
+            if (!string.IsNullOrEmpty(iso))
+            {
+                List<object> lista = null;
+                yield return Moduuli($"moduulit/js/packs/fokuskohteet-{iso.ToLowerInvariant()}.json", "FOKUSKOHTEET_" + iso.ToUpperInvariant(), l => lista = l);
+                foreach (var d in lista?.Select(Ob).Where(x => x != null) ?? Enumerable.Empty<Dictionary<string, object>>())
+                    if (T(Ob(MiniJson.Kentta(d, "ihme")), "osoite") != null && T(d, "nimi") is string nimi) nimet.Add(IhmeAvain(nimi));
+            }
+            valmis(n => n != null && nimet.Contains(IhmeAvain(KohteenIhmeNimet.TryGetValue(n.Trim(), out var f) ? f : n)));
+        }
+
         /// <summary>Kortin ylärivin luokka aihesymbolista (web nostosymKortinYlarivi: tuntematon → huuto).</summary>
         static string Ylarivi(string symboli, Dictionary<string, object> luokat)
         {
