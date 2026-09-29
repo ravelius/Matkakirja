@@ -157,8 +157,8 @@ namespace Matkakirja.Natiivi
                 if (r != rivi) r.RemoveFromClassList("mk-esikatseltu");
             esiToiminto = toiminto;
             esiNappi.text = toimintoNimi;
-            // Linsseissä ainoa Aktivoi on rivin oranssi nappi linssin nimen kohdalla (palaute 6); Aarteissa Näytä-nappi jää.
-            esiNappi.style.display = NykyinenNakyma == Nakyma.Linssit ? DisplayStyle.None : DisplayStyle.Flex;
+            // Ainoa Aktivoi / Näytä on rivin oranssi nappi nimen kohdalla (omistaja 29.9.2026, palautteet 6 ja 7).
+            esiNappi.style.display = DisplayStyle.None;
             TaytaEsikatselu(id, kuvaUrl, otsikkoTeksti, teksti);
             runko.AddToClassList("mk-linssivalitsin__runko--esikatselu");
             Ponnahdus.Avaa(esikatselu, rivi != null ? rivi.worldBound.center : (Vector2?)null);
@@ -211,6 +211,13 @@ namespace Matkakirja.Natiivi
                     TaytaEsikatselu("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t));
                 else TaytaEsikatselu("aktiivinen:", null, "Ei linssiä", null);
             }
+            else if (NykyinenNakyma == Nakyma.Aarteet && Valikkona)
+            {
+                // Palaute 7: Aarteissa lista heti oikealla, esikatselun paikka varattuna (tyhjä ennen valintaa).
+                Ponnahdus.Lopeta(esikatselu);
+                esikatselu.style.display = DisplayStyle.Flex;
+                esikatselu.style.visibility = Visibility.Hidden;
+            }
             else
             {
                 esikatselu.style.visibility = StyleKeyword.Null;
@@ -260,7 +267,7 @@ namespace Matkakirja.Natiivi
         {
             Button b = null;
             Label tila = null;
-            b = Rakenne.Nappi(null, "mk-linssirivi mk-linssivalitsin__aarrerivi", () =>
+            b = Rakenne.Nappi(null, "mk-linssirivi mk-linssivalitsin__aarrerivi mk-linssirivi--aktivoi", () =>
             {
                 if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, "Näytä", nayta); return; }
                 nayta?.Invoke();
