@@ -14,13 +14,18 @@ import { PINNAT } from '../js/dioraama/pankit/pinnat.js';
 import { HENKILOT } from '../js/dioraama/pankit/henkilot.js';
 import { AANET } from '../js/dioraama/pankit/aanet.js';
 
-// Reseptien nimet speksin kohdan 2 taulukosta (dioraama-rajapinnat-20260929.md).
+// Reseptien nimet speksin kohdan 2 taulukosta (dioraama-rajapinnat-20260929.md) + era2b:n
+// lattiareseptit (dioraama-rajapinnat-era2b-20260929.md kohta 3, tools/dioraama/reseptit-lattiat.mjs)
+// + era2b:n rekvisiittareseptit (sama kohta 3, tools/dioraama/reseptit-rekvisiitta.mjs).
 // Rakennuskone (A1) toteuttaa nämä; tässä validoidaan vain että A2:n data
 // käyttää yhtä näistä nimistä, ei rakenneta geometriaa.
 const RESEPTIT = new Set([
   'laatta', 'seina', 'torni', 'kartiokatto', 'harjakatto', 'porras',
   'kallio', 'vesi', 'poyta', 'penkki', 'tynnyri', 'pata', 'sakki',
-  'tulisija', 'hylly',
+  'tulisija', 'hylly', 'kivilattia', 'lankkulattia',
+  'orsileivat', 'yrttinippu', 'riippupata', 'kattila', 'kauha', 'leikkuulauta', 'veitsi', 'kala', 'leipa',
+  'nauriskori', 'puukasa', 'vesisanko', 'saavi', 'kirnu', 'huhmar', 'suolalaatikko', 'kynttilanjalka',
+  'oljylamppu', 'vati', 'ruukku', 'pullo', 'luuta', 'hiillospihdit',
 ]);
 
 const KIELLETYT_TAGIT = [/\[softly\]/i, /\[whispers\]/i];
@@ -273,6 +278,31 @@ test('PINNAT- ja AANET-pankit ovat oikeamuotoiset', () => {
   }
 });
 
+// era2b kohta 2 "PINNAT" (P3b:n täydennys 29.9.): kaikilla pinnoilla — myös hahmojen ja
+// rekvisiitan, jotka aiemmin jäivät ilman kuviota — pitää nyt olla kuvio speksin tyyppilistasta.
+test('jokaisella PINNAT-pinnalla on kuvio speksin tyyppilistasta oikeamuotoisin parametrein', () => {
+  const SALLITUT_TYYPIT = new Set([
+    'tasainen', 'kivi', 'puu', 'lankku', 'rappaus', 'tiili', 'kallio', 'vesi', 'metalli', 'kangas', 'olki',
+  ]);
+  for (const [id, p] of Object.entries(PINNAT)) {
+    assert.ok(p.kuvio, `pinta '${id}': kuvio puuttuu`);
+    assert.ok(
+      SALLITUT_TYYPIT.has(p.kuvio.tyyppi), `pinta '${id}': kuvio.tyyppi '${p.kuvio.tyyppi}' ei ole speksin listalla`,
+    );
+    if (p.kuvio.koko_m != null) {
+      assert.equal(p.kuvio.koko_m.length, 2, `pinta '${id}': kuvio.koko_m ei ole [u, v]`);
+      assert.ok(
+        p.kuvio.koko_m.every((x) => typeof x === 'number' && x > 0),
+        `pinta '${id}': kuvio.koko_m sisältää ei-positiivisen luvun`,
+      );
+    }
+    if (p.kuvio.sauma_m != null) assert.ok(p.kuvio.sauma_m > 0, `pinta '${id}': kuvio.sauma_m ei ole positiivinen`);
+    if (p.kuvio.vaihtelu != null) {
+      assert.ok(p.kuvio.vaihtelu >= 0 && p.kuvio.vaihtelu <= 1, `pinta '${id}': kuvio.vaihtelu ei ole 0–1`);
+    }
+  }
+});
+
 test('HENKILOT-pankin merkinnät ovat oikeamuotoiset', () => {
   for (const [id, h] of Object.entries(HENKILOT)) {
     assert.equal(typeof h.nimi, 'string', `${id}: nimi puuttuu`);
@@ -287,4 +317,44 @@ test('HENKILOT-pankin merkinnät ovat oikeamuotoiset', () => {
     }
     assert.equal(typeof h.lisenssi, 'string', `${id}: lisenssi puuttuu`);
   }
+});
+
+test('RAKENNUS.valaistus on oikeamuotoinen (erä 2b, dioraama-rajapinnat-era2b-20260929.md kohta 1)', () => {
+  const v = RAKENNUS.valaistus;
+  assert.ok(v, 'RAKENNUS.valaistus puuttuu');
+  assert.ok(v.aurinko, 'valaistus.aurinko puuttuu');
+  assert.equal(typeof v.aurinko.atsimuutti, 'number', 'aurinko.atsimuutti ei ole numero');
+  assert.equal(typeof v.aurinko.korkeus, 'number', 'aurinko.korkeus ei ole numero');
+  assert.match(v.aurinko.vari, /^#[0-9a-f]{6}$/i, 'aurinko.vari ei ole hex-väri');
+  assert.equal(typeof v.aurinko.voima, 'number', 'aurinko.voima ei ole numero');
+  assert.ok(v.aurinko.voima > 0, 'aurinko.voima ei ole positiivinen');
+  assert.ok(v.taivas, 'valaistus.taivas puuttuu');
+  assert.match(v.taivas.yla, /^#[0-9a-f]{6}$/i, 'taivas.yla ei ole hex-väri');
+  assert.match(v.taivas.ala, /^#[0-9a-f]{6}$/i, 'taivas.ala ei ole hex-väri');
+  assert.equal(typeof v.taivas.voima, 'number', 'taivas.voima ei ole numero');
+  assert.ok(v.taivas.voima > 0, 'taivas.voima ei ole positiivinen');
+});
+
+test('tilojen valot[] ovat oikeamuotoiset (erä 2b kohta 1: paikka, sade, voima, valinnainen vari/lepatus)', () => {
+  for (const tila of RAKENNUS.tilat) {
+    for (const [i, valo] of (tila.valot ?? []).entries()) {
+      const nimi = `${tila.id}.valot[${i}]`;
+      assert.equal(valo.paikka?.length, 3, `${nimi}: paikka ei ole [x,y,z]`);
+      assert.ok(valo.paikka.every((x) => typeof x === 'number'), `${nimi}: paikka sisältää ei-numeroita`);
+      assert.equal(typeof valo.sade, 'number', `${nimi}: sade puuttuu`);
+      assert.ok(valo.sade > 0, `${nimi}: sade ei ole positiivinen`);
+      assert.equal(typeof valo.voima, 'number', `${nimi}: voima puuttuu`);
+      assert.ok(valo.voima >= 0, `${nimi}: voima ei ole ≥ 0`);
+      if (valo.vari != null) assert.match(valo.vari, /^#[0-9a-f]{6}$/i, `${nimi}: vari ei ole hex-väri`);
+      if (valo.lepatus != null) {
+        assert.equal(typeof valo.lepatus, 'number', `${nimi}: lepatus ei ole numero`);
+        assert.ok(valo.lepatus >= 0 && valo.lepatus <= 1, `${nimi}: lepatus ei ole 0–1`);
+      }
+    }
+  }
+  // Regressio (kohta 1: "Tulisijalla lepatus 0,35"): keittiön ensimmäinen valo on tulisijan valo.
+  const keittio = tilaLoytyy('keittio');
+  assert.ok(keittio.valot?.length >= 1, 'keittiö: valot puuttuu');
+  assert.equal(keittio.valot[0].lepatus, 0.35, 'keittiön tulisijan valo: lepatus 0,35');
+  assert.ok(keittio.valot[0].vari, 'keittiön tulisijan valo: vari puuttuu');
 });

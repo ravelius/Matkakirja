@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /*
- * DIORAAMAN SOMMITTELUESIKATSELYN KUVAT — ottaa PNG-pysäytyskuvat esikatselu.html:stä
- * (Linnanrakentaja, ali-agentti M, erä 2, 29.9.2026). Rakentaa Node-staattispalvelimen
- * (repon juuri) ja avaa sivun Playwright Chromiumilla SwiftShaderilla — EI GPU-lippuja:
- * tämä työkalu ottaa vain pysäytyskuvia sommittelun tarkistamiseksi, ei mittaa
- * suorituskykyä (ks. tools/savukkeet/gpu-vaisto.mjs-tyylisten savukkeiden ero).
+ * DIORAAMAN ESIKATSELUN KUVAT — ottaa PNG-pysäytyskuvat esikatselu.html:stä
+ * (Linnanrakentaja, ali-agentti P7, erä 2b, 29.9.2026). Rakentaa Node-staattis-
+ * palvelimen (repon juuri) ja avaa sivun Playwright Chromiumilla SwiftShaderilla
+ * — EI GPU-lippuja: tämä työkalu ottaa vain pysäytyskuvia sommittelun/valaistuksen
+ * tarkistamiseksi, ei mittaa suorituskykyä (ks. tools/savukkeet/gpu-vaisto.mjs).
  *
  *   node tools/dioraama/esikatselu-kuvat.mjs [kansio] [--paketti /dist/dioraama/<r>/]
  *
@@ -12,9 +12,9 @@
  * esikatselu.mjs:n omalle paketti-oletukselle (URL-polku, ei tiedostojärjestelmäpolku).
  *
  * Kuvat: yleis + jokainen kohdistettava tila (rakennus.json: kohdistettava === true)
- * × {pysty 393x852, vaaka 852x393, iPad vaaka 1366x1024}, taulu=1 (taulun peittämä
- * alue piirretään puoliläpinäkyvänä, ks. esikatselu.mjs). Tiedostonimi: <tila|yleis>-
- * <suunta>-<koko>.png.
+ * × {pysty 393x852, vaaka 852x393, iPad vaaka 1366x1024}, taulu=1, paneeli=0 (kytkin-
+ * paneeli pois). Tiedostonimi: <tila|yleis>-<suunta>-<koko>.png. Lisäksi keittiölle
+ * kaksi pahvitarkistuskuvaa ylhäältä (era2b kohta 7) — ks. kuvat-listan rakennus alla.
  *
  * PLAYWRIGHT_JS: moduulin polku (oletus Fablen node_modules — tämä worktree ei
  * asenna omia npm-riippuvuuksia). CHROMIUM: selaimen binäärin polku (oletus
@@ -55,6 +55,26 @@ const KOOT = [
   { suunta: 'vaaka', koko: '1366x1024' }, // iPad vaaka — sama suunta, eri koko/kuvasuhde kuin puhelin
 ];
 
+// Peruskuvat: yleis + jokainen kohdistettava tila × jokainen koko.
+const kuvat = [];
+for (const tila of kohteet) {
+  for (const { suunta, koko } of KOOT) {
+    kuvat.push({ tila, suunta, koko, tiedostonimi: `${tila || 'yleis'}-${suunta}-${koko}.png` });
+  }
+}
+// Pahvitarkistus (era2b kohta 7, tehtävän kuvaus): keittiö ylhäältä kahdesta
+// kulmasta iPad-koossa — paljastaisiko joku kulma litteän pahvin/billboardin.
+if (rakennusJson.tilat.some((t) => t.id === 'keittio')) {
+  kuvat.push({
+    tila: 'keittio', suunta: 'vaaka', koko: '1366x1024', tiedostonimi: 'keittio-pahvi-ipad34-1366x1024.png',
+    lisaparametrit: { atsimuuttilisa: '35', korkeus: '40' },
+  });
+  kuvat.push({
+    tila: 'keittio', suunta: 'vaaka', koko: '1366x1024', tiedostonimi: 'keittio-pahvi-ylhaalta-1366x1024.png',
+    lisaparametrit: { korkeus: '65' },
+  });
+}
+
 // ── Staattinen palvelin (repon juuri) ────────────────────────────────────────
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript',
@@ -77,7 +97,7 @@ const PORT = await new Promise((resolve) => {
   palvelin.listen(0, '127.0.0.1', () => resolve(palvelin.address().port));
 });
 const JUURI_URL = `http://127.0.0.1:${PORT}`;
-console.log(`esikatselu-kuvat: palvelin ${JUURI_URL} (${kohteet.length} kohdetta × ${KOOT.length} kokoa)`);
+console.log(`esikatselu-kuvat: palvelin ${JUURI_URL} (${kuvat.length} kuvaa)`);
 
 // ── Playwright: SwiftShader, EI GPU-lippuja (tehtävän vaatimus) ──────────────
 const paketti = await import(process.env.PLAYWRIGHT_JS
@@ -90,42 +110,45 @@ const selain = await chromium.launch({
   args: ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 
-// ── Kuvat: yleis + jokainen kohdistettava tila × jokainen koko ──────────────
+// ── Kuvat: peruskuvat + pahvitarkistus (ks. kuvat-listan rakennus yllä) ─────
 const tulokset = [];
-for (const tila of kohteet) {
-  for (const { suunta, koko } of KOOT) {
-    const [leveys, korkeus] = koko.split('x').map(Number);
-    // eslint-disable-next-line no-await-in-loop
-    const ctx = await selain.newContext({ viewport: { width: leveys, height: korkeus }, deviceScaleFactor: 2 });
-    // eslint-disable-next-line no-await-in-loop
-    const sivu = await ctx.newPage();
-    const konsoliVirheet = [];
-    sivu.on('pageerror', (e) => konsoliVirheet.push(String(e)));
-    sivu.on('console', (m) => { if (m.type() === 'error') konsoliVirheet.push(m.text()); });
+for (const kuva of kuvat) {
+  const { tila, suunta, koko, tiedostonimi, lisaparametrit } = kuva;
+  const [leveys, korkeus] = koko.split('x').map(Number);
+  // eslint-disable-next-line no-await-in-loop
+  const ctx = await selain.newContext({ viewport: { width: leveys, height: korkeus }, deviceScaleFactor: 2 });
+  // eslint-disable-next-line no-await-in-loop
+  const sivu = await ctx.newPage();
+  const konsoliVirheet = [];
+  sivu.on('pageerror', (e) => konsoliVirheet.push(String(e)));
+  sivu.on('console', (m) => { if (m.type() === 'error') konsoliVirheet.push(m.text()); });
 
-    const params = new URLSearchParams({ tila, suunta, koko, taulu: '1' });
-    if (PAKETTI_URL) params.set('paketti', PAKETTI_URL);
-    const url = `${JUURI_URL}/tools/dioraama/esikatselu.html?${params}`;
-    const tiedostonimi = `${tila || 'yleis'}-${suunta}-${koko}.png`;
-    const polku = join(ULOS, tiedostonimi);
-    try {
-      // eslint-disable-next-line no-await-in-loop
-      await sivu.goto(url, { waitUntil: 'load' });
-      // eslint-disable-next-line no-await-in-loop
-      await sivu.waitForFunction('window.valmis === true', null, { timeout: 20000 });
-      // eslint-disable-next-line no-await-in-loop
-      const virhe = await sivu.evaluate(() => window.esikatseluVirhe);
-      if (virhe) throw new Error(virhe);
-      // eslint-disable-next-line no-await-in-loop
-      await sivu.screenshot({ path: polku });
-      tulokset.push({ tiedostonimi, ok: true });
-    } catch (e) {
-      const lisa = konsoliVirheet.length ? ` | konsoli: ${konsoliVirheet.slice(0, 3).join(' / ')}` : '';
-      tulokset.push({ tiedostonimi, ok: false, virhe: `${e?.message ?? e}${lisa}` });
-    }
+  // paneeli=0: kytkinpaneeli pois kuvista. taulu=1: taulun peittämä alue näkyviin.
+  const params = new URLSearchParams({ tila, suunta, koko, taulu: '1', paneeli: '0', ...lisaparametrit });
+  if (PAKETTI_URL) params.set('paketti', PAKETTI_URL);
+  const url = `${JUURI_URL}/tools/dioraama/esikatselu.html?${params}`;
+  const polku = join(ULOS, tiedostonimi);
+  try {
     // eslint-disable-next-line no-await-in-loop
-    await ctx.close();
+    await sivu.goto(url, { waitUntil: 'load' });
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForFunction('window.valmis === true', null, { timeout: 30000 });
+    // eslint-disable-next-line no-await-in-loop
+    const virhe = await sivu.evaluate(() => window.esikatseluVirhe);
+    if (virhe) throw new Error(virhe);
+    // Varjot: odota 2 ruutua valmis-lipun jälkeen, jotta varjokartta on ehtinyt piirtyä
+    // (era2b kohta 7 / tehtävän kuvaus) ennen kuin pysäytyskuva otetaan.
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.screenshot({ path: polku });
+    tulokset.push({ tiedostonimi, ok: true });
+  } catch (e) {
+    const lisa = konsoliVirheet.length ? ` | konsoli: ${konsoliVirheet.slice(0, 3).join(' / ')}` : '';
+    tulokset.push({ tiedostonimi, ok: false, virhe: `${e?.message ?? e}${lisa}` });
   }
+  // eslint-disable-next-line no-await-in-loop
+  await ctx.close();
 }
 
 await selain.close();
