@@ -6,8 +6,9 @@
 // lankkukantta y 13…13,1. Pohjoisreunalla (z ≈ -21,2) sakarat, joiden raoista hakapyssy ampuu; etelälaidalla vain
 // matala kivikaide (0,22 m), jotta kamera etelästä näkee koko kävelytason. Etelän puolella muurin alla on
 // Keskushallin yläkerta ja harjakatto (harja y ≈ 11,5); mikään geometria ei ulotu muurin ulkopuolelle.
-// Tornien kylkien (Kellotorni x ≈ -22,5, Kirkkotorni x ≈ -7,0) sivut ovat umpinaiset z < -19,4:ssä, joten
-// jalkajousiteline, kilvet ja seinäsoihtu kiinnitetään niihin.
+// Tornien kylkien sivut ovat umpinaiset z < -19,4:ssä, joten jalkajousiteline, kilvet ja seinäsoihtu kiinnitetään niihin.
+// Kuoren tornipinnat mitattu säteillä 29.9. klo 23: Kellotorni x ≈ -22,8, Kirkkotorni x ≈ -6,2 (kansi ja muuri
+// ulottuvat niihin asti; ennen massan -22,5 / -7,0 jalkajouset ja kilpi jäivät 0,8 m irti kuoren tornista).
 
 const TAULU = {
   otsikko: 'Muurinharja',
@@ -76,7 +77,7 @@ export const TILA = {
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
   sijoitus: { ankkuri: [-30, 0, -20], paikka: [-44.4, 2.9, -4.6], suunta: 341 },
-  rajat: { min: [-22, 13, -22], max: [-7.5, 16, -18] },
+  rajat: { min: [-23, 13, -22], max: [-6, 16, -18] },
   // Leikkaus (29.9. B:n repeämä): ilman omaa laatikkoa Unity leikkasi kiertyneiden rajojen AABB:n + 1 m, joka kaivoi
   // 1,8 m Kellotornin ja 1,4 m Kirkkotornin kuoreen. Kapea kannen laatikko + 0,3 m jää tornien ulkopuolelle (≤ 0,1 m),
   // eikä käytävää kameraan tarvita (avoin kansi; käytävä olisi leikannut Kirkkotornin lounaiskylkeä).
@@ -100,12 +101,12 @@ export const TILA = {
   ],
   palikat: [
     // Muurin runko kannen alla (uusi tapa 29.9.: leikkaus avaa kuoren, jossa ei ole muurin sisusta).
-    { resepti: 'seina', paikka: [-14.75, -0.3, -20], suunta: 0, pituus: 14.5, korkeus: 13.2, paksuus: 3.6 },
+    { resepti: 'seina', paikka: [-14.5, -0.3, -20], suunta: 0, pituus: 16.6, korkeus: 13.2, paksuus: 3.6 },
     // Lankkukansi muurin päällä (lankut poikittain, kävelysuunta x): x −22,4…−7,1, z −21,5…−18,5.
-    { resepti: 'laiturikansi', paikka: [-14.75, KY, -20], suunta: 90, leveys: 3, pituus: 15.3, paksuus: 0.12, siemen: 1495 },
+    { resepti: 'laiturikansi', paikka: [-14.5, KY, -20], suunta: 90, leveys: 3, pituus: 16.6, paksuus: 0.12, siemen: 1495 },
     // Sakarat pohjoisreunalla (korkeus 1,15: hakapyssyn piippu mahtuu raosta) ja matala kivikaide etelälaidalla.
-    { resepti: 'sakarat', paikka: [-14.75, 13, -21.2], suunta: 0, pituus: 14.5, korkeus: 1.15, leveys: 0.8, vali: 0.7, paksuus: 0.6 },
-    { resepti: 'seina', paikka: [-14.75, KY, -18.62], suunta: 0, pituus: 14.5, korkeus: 0.22, paksuus: 0.24 },
+    { resepti: 'sakarat', paikka: [-14.5, 13, -21.2], suunta: 0, pituus: 16.6, korkeus: 1.15, leveys: 0.8, vali: 0.7, paksuus: 0.6 },
+    { resepti: 'seina', paikka: [-14.5, KY, -18.62], suunta: 0, pituus: 16.6, korkeus: 0.22, paksuus: 0.24 },
     // Ampumarakoja muurin sisäreunaan ei tarvita; lippu salossa raossa keskellä.
     { resepti: 'lippu', paikka: [-14.75, KY, -20.95], suunta: 0, korkeus: 2.85, leveys: 1.3, lippu: 0.85 },
 
@@ -114,9 +115,9 @@ export const TILA = {
     ...kivikasa(-21.75, -19.0, 19, [3, 1]),
     { resepti: 'sakki', paikka: [-20.6, KY, -18.95], suunta: 0, sade: 0.24, korkeus: 0.45, siemen: 3 },
     { resepti: 'sakki', paikka: [-20.15, KY, -18.85], suunta: 0, sade: 0.22, korkeus: 0.42, siemen: 4 },
-    { resepti: 'seinasoihtu', paikka: [-22.45, 14.9, -20.25], suunta: 90 },
-    { resepti: 'kilpi', paikka: [-22.42, 14.35, -21.0], suunta: 90, sade: 0.3 },
-    { resepti: 'kilpi', paikka: [-22.42, 13.85, -20.7], suunta: 90, sade: 0.24 },
+    { resepti: 'seinasoihtu', paikka: [-22.75, 14.9, -20.25], suunta: 90 },
+    { resepti: 'kilpi', paikka: [-22.72, 14.35, -21.0], suunta: 90, sade: 0.3 },
+    { resepti: 'kilpi', paikka: [-22.72, 13.85, -20.7], suunta: 90, sade: 0.24 },
     { resepti: 'nuolitynnyri', paikka: [-19.95, KY, -20.6], suunta: 0, sade: 0.21, korkeus: 0.5, nuolia: 14, siemen: 5 },
     { resepti: 'nuolitynnyri', paikka: [-19.45, KY, -20.5], suunta: 0, sade: 0.19, korkeus: 0.45, nuolia: 11, siemen: 12 },
     { resepti: 'nuolitynnyri', paikka: [-19.7, KY, -20.2], suunta: 0, sade: 0.17, korkeus: 0.42, nuolia: 9, siemen: 8 },
@@ -137,8 +138,8 @@ export const TILA = {
 
     // --- Itäpää (Kirkkotorni): keihästeline, jalkajousiteline tornin kyljessä, vartioväen noppapöytä, köysi ---
     { resepti: 'keihasteline', paikka: [-9.85, KY, -20.5], suunta: 180, leveys: 0.9, keihaita: 4, pituus: 2.0 },
-    { resepti: 'jalkajousi', paikka: [-7.06, KY + 1.15, -20.3], suunta: 270, kpl: 2 },
-    { resepti: 'kilpi', paikka: [-7.05, 14.7, -19.55], suunta: 270, sade: 0.27 },
+    { resepti: 'jalkajousi', paikka: [-6.26, KY + 1.15, -20.3], suunta: 270, kpl: 2 },
+    { resepti: 'kilpi', paikka: [-6.25, 14.7, -19.55], suunta: 270, sade: 0.27 },
     { resepti: 'tynnyri', paikka: [-8.2, KY, -20.45], suunta: 0, sade: 0.3, korkeus: 0.85, segmentit: 14 },
     { resepti: 'tynnyri', paikka: [-10.7, KY, -18.95], suunta: 0, sade: 0.27, korkeus: 0.75, segmentit: 14 },
     { resepti: 'pelilauta', paikka: [-10.7, KY + 0.75, -18.95], suunta: 15, koko: 0.4, nopat: 3, siemen: 5 },
@@ -160,7 +161,7 @@ export const TILA = {
     // Tulikorin liekki hiilloksen päällä (KY + 0,25 + 0,21 = 13,56).
     { liekki: 'soihtu', paikka: [-16.2, KY + 0.46, -20.4], koko: 1.5, vaihe: 0 },
     // Seinäsoihdun liekki: origo [-22,45, 14,9, -20,25] + [w 0,262 (→ +x), y 0,471].
-    { liekki: 'soihtu', paikka: [-22.19, 15.37, -20.25], koko: 1.0, vaihe: 0.4 },
+    { liekki: 'soihtu', paikka: [-22.49, 15.37, -20.25], koko: 1.0, vaihe: 0.4 },
   ],
   kasikirjoitus: [
     { tee: 'pulu-lenna' },

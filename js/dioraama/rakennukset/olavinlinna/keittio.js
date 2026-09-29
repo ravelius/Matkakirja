@@ -234,6 +234,11 @@ export const TILA = {
   // palikan paikka [14, 0, 4.9] + korkeus 0.9 pystyyn = [14, 0.9, 4.9].
   liekit: [
     { liekki: 'tulisija', paikka: [14, 0.9, 4.9], koko: 1, vaihe: 0 },
+    // Elävä linna (C, 29.9.): pöytien kynttilät (kärki = jalka + korkeus × 0,98 kuten kappelissa) ja öljylampun nokka
+    // (fatabuurin lampun mitoin × 0,9) — iltahämärässä tulisijan lisäksi ainoat valot.
+    { liekki: 'kynttila', paikka: [10.35, 0.967, 9.3], koko: 1, vaihe: 0.3 },
+    { liekki: 'kynttila', paikka: [18.05, 0.967, 8.85], koko: 1, vaihe: 0.7 },
+    { liekki: 'kynttila', paikka: [8.668, 2.062, 10.1], koko: 0.8, vaihe: 0.5 },
   ],
   kasikirjoitus: [
     { tee: 'pulu-lenna' },
