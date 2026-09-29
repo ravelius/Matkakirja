@@ -115,8 +115,11 @@ export const TILA = {
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,
+  // Uusi tapa (Päätoimittaja 29.9.): kuoren länsirannan ponttonilaituriin. Pohjoispää (−19,5; 33) pontonin lounaisreunaan
+  // (−73, −18,5), laituri kohtisuoraan avoveteen (suunta 40), kansi pontonin tasolle (−5,9).
+  sijoitus: { ankkuri: [-19.5, 0, 33], paikka: [-73.0, 0.3, 18.5], suunta: 40 },
   rajat: { min: [-27, -7.5, 33], max: [-11, -3, 47] },
-  naapurit: ['massa', 'vartiotupa'],
+  naapurit: ['massa', 'fatabuuri'],
   kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 14.5, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-40, 40], korkeus: [10, 50], etaisyys: [0.6, 1.5] },
   kameraPysty: { kohde: [-19.5, -9.2, 39.5], atsimuutti: 200, korkeus: 26, etaisyys: 32, fov: 38, aukko: 0.8 },

@@ -143,7 +143,11 @@ const PALIKAT = [
   { resepti: 'penkki', paikka: [POYTA_B.x + 0.85, 0, -14.2], suunta: 90, leveys: 5.2, syvyys: 0.3, korkeus: 0.45 },
   ...kattaus(POYTA_A.x, POYTA_A.z0, POYTA_A.z1, POYTA_A.siemen),
   ...kattaus(POYTA_B.x, POYTA_B.z0, POYTA_B.z1, POYTA_B.siemen),
-  { resepti: 'pelilauta', paikka: [POYTA_B.x, 0.8, -11.9], suunta: 90 },
+  { resepti: 'pelilauta', paikka: [POYTA_B.x, 0.8, -11.9], suunta: 90, nopat: 3, siemen: 1495 },
+  // Vartiotupa yhdistetty väentupaan (Päätoimittaja 29.9.: lähin dokumentoitu vartiotupa): keihäät, kilpi, jalkajouset.
+  { resepti: 'keihasteline', paikka: [-21.55, 0, -10.6], suunta: 90, keihaita: 4 },
+  { resepti: 'kilpi', paikka: [-12.5, 1.75, -18.45], suunta: 180, sade: 0.28 },
+  { resepti: 'jalkajousi', paikka: [-16.5, 1.55, -18.45], suunta: 180, kpl: 2 },
 
   // Tarjoilupöytä salin keskellä (apulaisen reitin päätepiste).
   { resepti: 'poyta', paikka: [-14.75, 0, -12.2], suunta: 0, leveys: 2.4, syvyys: 0.9, korkeus: 0.8 },

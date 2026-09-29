@@ -1,3 +1,4 @@
+// EI KÄYTÖSSÄ 29.9.2026 (Päätoimittaja): vartiotupa yhdistetty keskushallin väentupaan; tiedosto säilyy tekstien lähteenä.
 // OLAVINLINNA / vartiotupa: portinvartijoiden tupa lounaiskulmassa portin vieressä (tulkinta); eteläseinä poistettu kuten keittiössä.
 // Erä 3 (docs/raportit/dioraama-rajapinnat-era3-20260929.md). Taulun faktat: Sisältökirjuri 29.9.
 // (docs/raportit/sisaltokirjuri-olavinlinna-era3-20260929.md); tila 'luonnos' kunnes äänet ja tarkistus valmiit.

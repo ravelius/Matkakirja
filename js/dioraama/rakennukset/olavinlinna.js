@@ -12,12 +12,11 @@
 // Aikakerros n1500 (1500-luvun alku, tulkinta) — sama vuosikymmenkerros kuin
 // henkilöpankin '-1500'-hahmoilla.
 //
-// Erä 3 (docs/raportit/dioraama-rajapinnat-era3-20260929.md): linna auki, 8 tilaa. Tilat omissa
+// Erä 3 (docs/raportit/dioraama-rajapinnat-era3-20260929.md): linna auki, 7 tilaa (vartiotupa yhdistetty keskushalliin 29.9.). Tilat omissa
 // tiedostoissaan olavinlinna/<id>.js (export const TILA), tämä tiedosto kokoaa rakennuksen.
 
 import { TILA as TILA_MASSA } from './olavinlinna/massa.js';
 import { TILA as TILA_LAITURI } from './olavinlinna/laituri.js';
-import { TILA as TILA_VARTIOTUPA } from './olavinlinna/vartiotupa.js';
 import { TILA as TILA_FATABUURI } from './olavinlinna/fatabuuri.js';
 import { TILA as TILA_KIERREPORTAAT } from './olavinlinna/kierreportaat.js';
 import { TILA as TILA_MUURINHARJA } from './olavinlinna/muurinharja.js';
@@ -65,9 +64,9 @@ export const RAKENNUS = {
   pulu: { laskeutuminen: [-10, 0.5, 0] },
   taulu: TAULU_LINNA,
   // Pulun kiertue (erä 3 kohta 5): laiturilta portille, torneihin ja muurille, lopuksi saliin ja keittiöön.
-  kiertue: ['laituri', 'vartiotupa', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli', 'keittio'],
+  kiertue: ['laituri', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli', 'keittio'],
   tilat: [
-    TILA_MASSA, TILA_LAITURI, TILA_VARTIOTUPA, TILA_FATABUURI, TILA_KIERREPORTAAT, TILA_MUURINHARJA,
+    TILA_MASSA, TILA_LAITURI, TILA_FATABUURI, TILA_KIERREPORTAAT, TILA_MUURINHARJA,
     TILA_KAPPELI, TILA_KESKUSHALLI, TILA_KEITTIO,
   ],
 };
