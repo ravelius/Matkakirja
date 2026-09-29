@@ -83,6 +83,12 @@ export const TILA = {
   kierto: { atsimuutti: [-35, 35], korkeus: [14, 45], etaisyys: [0.7, 1.4] },
   pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea' },
   taulu: TAULU,
+  // Elävä linna (29.9.): vartija kulkee lyhdyn kanssa kannen päästä päähän (Kellotornin puolelta Kirkkotornille)
+  // kivikasojen välistä; sijoitettuna y ≈ 16.
+  elava: {
+    kohde: [-14.75, 14.2, -19.75], sade: 6,
+    reitti: { henkilo: 'vartija-1500', pisteet: [[-21.0, KY, -19.75], [-9.0, KY, -19.75]], nopeus: 0.8, edestakaisin: true, lyhty: true },
+  },
   // Ulkona aurinko valaisee; tulikori tekee lämpimän päävalon, seinäsoihtu (.valo) pienemmän.
   valot: [
     { paikka: [-16.2, 14.1, -20.4], sade: 8, voima: 1.5, vari: '#ff9a4a', lepatus: 0.3 },

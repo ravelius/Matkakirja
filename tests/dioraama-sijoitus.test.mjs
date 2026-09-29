@@ -163,3 +163,15 @@ test('rakennaData: sijoitettu tila tuottaa glb:n, jonka kärjet ovat siirtyneet;
     rmSync(ulos, { recursive: true, force: true });
   }
 });
+
+test('elävä kohde ja elävä reitti kiertyvät ja siirtyvät kuten hahmot; muut elava-kentät säilyvät', () => {
+  const elava = { kohde: [2, 1, 1], sade: 6, vihje: true, reitti: { henkilo: 'x', pisteet: [[1, 0, 1], [2, 0, 1]], nopeus: 0.8, edestakaisin: true, lyhty: true } };
+  const u = sijoitaTila({ ...tila(), elava, sijoitus: S({ ankkuri: [1, 0, 1], paikka: [10, 2, 10], suunta: 180 }) });
+  lahella(u.elava.kohde, [9, 3, 10]);
+  lahella(u.elava.reitti.pisteet[0], [10, 2, 10]);
+  lahella(u.elava.reitti.pisteet[1], [9, 2, 10]);
+  assert.equal(u.elava.sade, 6);
+  assert.equal(u.elava.vihje, true);
+  assert.equal(u.elava.reitti.edestakaisin, true);
+  assert.deepEqual(elava.kohde, [2, 1, 1], 'alkuperäistä ei muuteta');
+});

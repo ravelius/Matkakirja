@@ -140,6 +140,8 @@ export const TILA = {
   kierto: { atsimuutti: [-40, 40], korkeus: [8, 45], etaisyys: [0.7, 1.4] },
   pulu: { laskeutuminen: [-1.6, 10.35, -20.2], taulupuoli: 'oikea' }, // penkin selkänojan päälle
   taulu: TAULU,
+  // Elävä linna (29.9.): Kirkkotornin kylki kappelin kerroksessa kameran puolella (kynttilänvalo ikkunoissa).
+  elava: { kohde: [1.9, 11.5, -12.8], sade: 6 },
   // Tumma yleisvalo; kynttiläkruunu ja alttarikynttilät kantavat tunnelman (jalkojen .valo tulee reseptistä).
   valot: [
     { paikka: [0, 12.1, -20], sade: 8, voima: 1.8, vari: '#ffb070', lepatus: 0.3 }, // kruunun ja penkkien alue

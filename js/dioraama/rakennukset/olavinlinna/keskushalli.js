@@ -257,6 +257,8 @@ export const TILA = {
   kameraPysty: { kohde: [-14.75, -4, -13.8], atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea' },
   taulu: TAULU,
+  // Elävä linna (29.9.): pohjoissiiven pihajulkisivu (ikkunoista valo ja sorina).
+  elava: { kohde: [-14.75, 3.5, -9.2], sade: 6 },
   // Tumma yleisvalo; avotakka on lämmin päälähde ("keittiön lämmin ilma nousi hormia..."), keskellä salia pieni
   // kynttilöiden hehku. Soihtujen, kynttilänjalkojen ja kruunun valot tulevat rekvisiitasta automaattisesti.
   valot: [

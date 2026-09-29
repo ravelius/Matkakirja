@@ -375,3 +375,38 @@ test('tilojen kamerakierron etäisyys on kerroin (0,2–3), ei metrejä (erä 3:
     }
   }
 });
+
+// Elävä linna (käsikirjoitus 29.9., omistajan hyväksyntä 22.28): yleisnäkymän elävät kohteet nimilappujen tilalla.
+test('elävä linna: jokaisella kohdistettavalla tilalla on elava.kohde, vihje vain yhdellä, reitit ehjiä', () => {
+  const nuoli = (p) => Array.isArray(p) && p.length === 3 && p.every(Number.isFinite);
+  let vihjeita = 0;
+  for (const tila of RAKENNUS.tilat.filter((t) => t.kohdistettava)) {
+    const e = tila.elava;
+    assert.ok(e, `${tila.id}: elava puuttuu`);
+    assert.ok(nuoli(e.kohde), `${tila.id}: elava.kohde ei ole piste`);
+    const laatikko = tila.leikkaus?.min ? tila.leikkaus : tila.rajat;
+    assert.ok(pisteRajoissa(e.kohde, laatikko), `${tila.id}: elava.kohde ${e.kohde} ei ole tilan leikkaus-/rajalaatikossa`);
+    assert.ok(e.sade > 0 && e.sade <= 12, `${tila.id}: elava.sade ${e.sade} ei ole 0–12 m`);
+    if (e.vihje) vihjeita += 1;
+    if (!e.reitti) continue;
+    const r = e.reitti;
+    assert.ok(Object.hasOwn(HENKILOT, r.henkilo), `${tila.id}: reitin henkilo '${r.henkilo}' ei ole HENKILOT-pankissa`);
+    assert.ok(Object.hasOwn(HENKILOT[r.henkilo].silmukat, 'kavely'), `${tila.id}: reitin henkilöltä puuttuu 'kavely'`);
+    assert.ok(Array.isArray(r.pisteet) && r.pisteet.length >= 2 && r.pisteet.every(nuoli), `${tila.id}: reitti.pisteet ≥ 2 pistettä`);
+    for (const p of r.pisteet) assert.ok(pisteRajoissa(p, tila.rajat), `${tila.id}: reitin piste ${p} ei ole tilan rajoissa`);
+    assert.ok(r.nopeus > 0 && r.nopeus <= 2, `${tila.id}: reitti.nopeus ${r.nopeus} ei ole kävelyvauhti`);
+    assert.equal(typeof r.edestakaisin, 'boolean', `${tila.id}: reitti.edestakaisin ei ole totuusarvo`);
+  }
+  assert.equal(vihjeita, 1, 'sykkivä vihje (elava.vihje) täsmälleen yhdellä tilalla');
+  assert.equal(RAKENNUS.tilat.find((t) => t.elava?.vihje)?.id, 'keittio');
+});
+
+test('elävä linna: RAKENNUS.saapuminen ja nimilaput ovat oikeamuotoiset', () => {
+  assert.equal(RAKENNUS.nimilaput, false);
+  const s = RAKENNUS.saapuminen;
+  assert.ok(s && s.alku, 'saapuminen.alku puuttuu');
+  for (const k of ['atsimuutti', 'etaisyys', 'korkeus']) assert.ok(Number.isFinite(s.alku[k]), `saapuminen.alku.${k}`);
+  assert.ok(s.alku.atsimuutti >= 0 && s.alku.atsimuutti < 360);
+  assert.ok(s.kesto >= 15 && s.kesto <= 20, `saapuminen.kesto ${s.kesto} s (käsikirjoitus 15–20 s)`);
+  assert.ok(s.lyhyt > 0 && s.lyhyt < s.kesto, 'saapuminen.lyhyt < kesto');
+});

@@ -69,6 +69,9 @@ export const TILA = {
   kameraPysty: { kohde: [13.8, -0.8, 7.0], atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea' },
   taulu: TAULU_KEITTIO,
+  // Elävä linna (29.9.): yleisnäkymän napautuskohde pihan puolen julkisivulla (ikkunasta kajastaa tuli); ensimmäisen
+  // käynnin sykkivä vihje on tässä.
+  elava: { kohde: [14, 2.2, 10.8], sade: 6, vihje: true },
   // Tulisijan valo on lämmin ja lepattaa (erä 2b, kohta 1: "Tulisijalla lepatus 0,35"); pöydän täytevalo
   // pysyy tasaisena ja värittömänä (ei liekkiä, ei lepatusta).
   valot: [

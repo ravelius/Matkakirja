@@ -1,6 +1,6 @@
 // DIORAAMAN TILAKOHTAINEN SIJOITUS (Linnanrakentaja 29.9.2026). Speksi docs/raportit/dioraama-rajapinnat-blender-20260929.md
 // kohta 2. Tilalla voi olla `sijoitus: { ankkuri: [x,y,z], paikka: [x,y,z], suunta: astetta }`. Silloin KAIKKI tilan
-// pistedata (palikat, rajat, kamerat, pulu, hahmot ja reitit, valot, liekit, leikkaus) muunnetaan
+// pistedata (palikat, rajat, kamerat, pulu, hahmot ja reitit, valot, liekit, leikkaus, elava.kohde ja elava.reitti) muunnetaan
 //   p' = R(suunta) · (p − ankkuri) + paikka
 // ennen rakennusta. Tila-data pysyy tiivistetyissä lähdekoordinaateissaan; rakenna.mjs kutsuu sijoitaTila()a ensimmäisenä.
 //
@@ -78,5 +78,8 @@ export function sijoitaTila(tila) {
   }
   for (const v of t.valot ?? []) { pisteeksi(v, 'paikka'); pisteeksi(v, 'kohti'); }
   for (const l of t.liekit ?? []) pisteeksi(l, 'paikka');
+  // Elävä linna (29.9.): yleisnäkymän napautuskohde ja reittihahmon polku samaan sijoitukseen.
+  pisteeksi(t.elava, 'kohde');
+  if (Array.isArray(t.elava?.reitti?.pisteet)) t.elava.reitti.pisteet = t.elava.reitti.pisteet.map((p) => (onPiste(p) ? m.piste(p) : p));
   return t;
 }

@@ -61,6 +61,10 @@ export const RAKENNUS = {
     vaaka: { kohde: [0, 2, 0], atsimuutti: 165, korkeus: 30, etaisyys: 150, fov: 32, aukko: 0.3 },
     pysty: { kohde: [0, 0, 2], atsimuutti: 160, korkeus: 38, etaisyys: 300, fov: 40, aukko: 0.3 },
   },
+  // Elävä linna (käsikirjoitus 29.9., omistajan hyväksyntä 22.28): ei nimilappuja yleisnäkymässä, ja saapuminen on
+  // matala kaari Kyrönsalmen yltä (lounas, 600 m) yleisnäkymään; toisella käynnillä lyhyt (6 s).
+  nimilaput: false,
+  saapuminen: { alku: { atsimuutti: 200, etaisyys: 600, korkeus: 8 }, kesto: 18, lyhyt: 6 },
   // Linnan taulun laskeutumispiste pihan länsiosaan, ettei Pulu peitä Keittiö-lappua (DoF-savuke 29.9.).
   pulu: { laskeutuminen: [-10, 0.5, 0] },
   taulu: TAULU_LINNA,

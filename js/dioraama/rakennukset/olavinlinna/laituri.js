@@ -125,6 +125,11 @@ export const TILA = {
   kameraPysty: { kohde: [-19.5, -9.2, 39.5], atsimuutti: 200, korkeus: 26, etaisyys: 32, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [-21.0, -5.35, 35.2], taulupuoli: 'oikea' },
   taulu: TAULU,
+  // Elävä linna (29.9.): kohde paalun lyhdyssä; soutaja kävelee kannen keskikaistaa päästä päähän.
+  elava: {
+    kohde: [-17.82, -4.03, 36], sade: 6,
+    reitti: { henkilo: 'soutaja-1500', pisteet: [[-19.4, KANSI_Y, 34.2], [-19.4, KANSI_Y, 44.3]], nopeus: 0.8, edestakaisin: true, lyhty: true },
+  },
   // Ulkona aurinko valaisee; lämmin aksentti tulee soihdusta (itä, lähellä portaita) + heikompi länsisoihtu.
   valot: [
     { paikka: [-17.95, -4.1, 36.2], sade: 9, voima: 1.5, vari: '#ff9a4a', lepatus: 0.3 },

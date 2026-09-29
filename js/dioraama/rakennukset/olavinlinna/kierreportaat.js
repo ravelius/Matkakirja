@@ -113,6 +113,8 @@ export const TILA = {
   // Pulu laskeutuu 4. kerroksen tasanteen tynnyrin kanteen (P(3,1; 183°), tynnyri 0,9 m).
   pulu: { laskeutuminen: P(3.1, 183, +(Y2 + 0.9).toFixed(2)), taulupuoli: 'oikea' },
   taulu: TAULU,
+  // Elävä linna (29.9.): Kellotornin kylki portaiden korkeudella kameran puolella (lyhty ampumaraoissa).
+  elava: { kohde: [-27.4, 11, -12.8], sade: 6 },
   valot: [
     // Päälähde: soihtu pohjoisen välitasanteen yläpuolella (lämmin, lepattava, kuilun poikki näkyvä).
     { paikka: P(4.8, 335, 11.6), sade: 9, voima: 1.7, vari: LAMMIN, lepatus: 0.3 },

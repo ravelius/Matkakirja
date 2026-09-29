@@ -182,6 +182,8 @@ export const TILA = {
   kierto: { atsimuutti: [-40, 40], korkeus: [10, 40], etaisyys: [0.8, 1.3] },
   pulu: { laskeutuminen: lok(P_ARKKU, 298 + 180, 0.0, Y + 0.6, 0), taulupuoli: 'oikea' },
   taulu: TAULU,
+  // Elävä linna (29.9.): Kellotornin juuri kameran puolella (ovi raollaan, viileä hämärä).
+  elava: { kohde: [-28.2, 1.5, -13.2], sade: 6 },
   valot: [
     // Päävalo: soihtu pohjoisseinällä, lämmin ja lepattava; tumma perusvalo tekee varastosta hämärän.
     {
