@@ -65,6 +65,8 @@ namespace Matkakirja.Natiivi
             // kyytiin) ja aloittaa kävelyn perillä.
             Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "Ulos kaiteelle katsomaan auringonnousua",
                 () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Seuranta);
+            // Laite 29.9. kavely1: linssin avauksen automaattitaulu jäi auki kävelyn päälle (kehittäjäkomennolla aloitettu).
+            Kavely.Alkoi += () => { if (Taulu.Auki) Taulu.Sulje("avaruuskavely"); };
             // PULU KYYDIN PÄÄLLÄ (web body.satelliitti-kyyti .pollo-nappi z-index 49 > kyydin kerros 48): Cupola-kehys peitti
             // Pulun, joka on taulun avaaja kaikissa moodeissa. Kyydin ajaksi Pulun kerros nousee kehyksen yläpuolelle.
             Kyyti.AukiMuuttui += auki => kerros.AsetaJarjestys(Pulu.Kerros, auki ? LinssiUi.SulkuKerros : Pulu.Kerros);

@@ -174,14 +174,16 @@ namespace Matkakirja.Linssit.Iss
         }
 
         /// <summary>Ulkona: katse radan suunnasta näin monta astetta oikealle (sivulle), vaakatason alapuolelle ja kenttäkulma.</summary>
-        public const double UlkonaSivulle = 90, UlkonaKatseAlas = 45, UlkonaKentta = 70;
+        public const double UlkonaSivulle = 90, UlkonaKentta = 70;
+        /// <summary>Ulkona katse alas (°); A/B `astro kavely alas <aste>` (Codexin kerroksissa horisontti ~45 % ruudun korkeudesta).</summary>
+        public static double UlkonaKatseAlas = 45;
 
         /// <summary>
         /// Ulkona (avaruuskävely): Ikkunan kaava radan sivulle. 420 km, 45° alas: kohteen zeniittikulma ζ = asin(6 791 / 6 371 ·
         /// sin 45°) ≈ 48,9°, eli laatat piirtyvät (yli ~55°:n kallistus näytti laitteella vain pohjapallon).
         /// </summary>
-        public static Kuvakulma Ulkona(in IssHetki iss) =>
-            Ikkuna(new IssHetki(iss.Paikka, iss.KorkeusM, (iss.Suuntima + UlkonaSivulle) % 360), UlkonaKatseAlas);
+        public static Kuvakulma Ulkona(in IssHetki iss, double? suunta = null) =>
+            Ikkuna(new IssHetki(iss.Paikka, iss.KorkeusM, suunta ?? (iss.Suuntima + UlkonaSivulle) % 360), UlkonaKatseAlas);
 
         /// <summary>Kaukonäkymän asento pelaajan kamerasta (katse alas, suuntima säilyy).</summary>
         public static Kuvakulma Kauko(double lat, double lon, double korkeusM, double kallistus, double suuntima) =>
@@ -322,6 +324,11 @@ namespace Matkakirja.Linssit.Iss
         public const double KohteeseenS = 1.2;
         /// <summary>Avaruuskävely: siirtymä ilmalukosta ulos kaiteelle ja takaisin sisään (seurantaan), s.</summary>
         public const double UlosS = 4, SisaanS = 2;
+        /// <summary>
+        /// Ulkona katseen suunta (asteina pohjoisesta ISS:n alapisteessä) joka kehys, null = radan sivulle. Avaruuskävely antaa
+        /// auringon suunnan (laite 29.9. kavely1: sivulle katsottaessa auringonnousu jäi kuvan ulkopuolelle).
+        /// </summary>
+        public Func<double?> UlkonaSuunta;
 
         /// <summary>Tila, johon ollaan menossa tai jossa ollaan.</summary>
         public KyydinTila Tila { get; private set; } = KyydinTila.Kauko;
@@ -427,7 +434,7 @@ namespace Matkakirja.Linssit.Iss
             {
                 case KyydinTila.Seuranta: kohde = IssKuvakulma.Seuranta(iss); break;
                 case KyydinTila.Ikkuna: kohde = IssKuvakulma.Ikkuna(iss); kohdeKentta = IssKuvakulma.IkkunanKentta; break;
-                case KyydinTila.Ulkona: kohde = IssKuvakulma.Ulkona(iss); kohdeKentta = IssKuvakulma.UlkonaKentta; break;
+                case KyydinTila.Ulkona: kohde = IssKuvakulma.Ulkona(iss, UlkonaSuunta?.Invoke()); kohdeKentta = IssKuvakulma.UlkonaKentta; break;
                 case KyydinTila.Kohde when onKohde:
                     kohde = IssKuvakulma.KohteenKulma(iss, kohdePaikka.Lat, kohdePaikka.Lon);
                     kohdeKentta = IssKuvakulma.KohteenKentta(kohde.EtaisyysM);

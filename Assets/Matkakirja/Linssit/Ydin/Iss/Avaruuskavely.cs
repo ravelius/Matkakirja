@@ -139,6 +139,25 @@ namespace Matkakirja.Linssit.Iss
             return s + Math.Sqrt(Math.Max(0, 1 - q * q));
         }
 
+        /// <summary>Katsotaanko ulkona kohti aurinkoa (true, oletus) vai radan sivulle (A/B `astro kavely suunta aurinko|sivu`).</summary>
+        public static bool KohtiAurinkoa = true;
+
+        /// <summary>Auringon suunta ISS:n alapisteestä (asteina pohjoisesta, isoympyrä alihajapisteeseen).</summary>
+        public static double AuringonSuunta(DateTime utc)
+        {
+            var p = IssNyt.Paikka(utc);
+            Aurinko.Alihajapiste(Aika.Jd(utc), out double alat, out double alon);
+            return IssKuvakulma.Suunta(p.Lat, p.Lon, alat, alon);
+        }
+
+        /// <summary>ISS auringossa 0…1 pehmeällä reunalla (kuten CupolanValo.Aurinkoisuus): etualan valokerrokset ja metallin sävy.</summary>
+        public static double Aurinkoisuus(DateTime utc)
+        {
+            double v = Valoisuus(utc, IssNyt.Paikka(utc), IssNyt.KorkeusKm(utc)) / 0.02 + 0.5;
+            v = v < 0 ? 0 : v > 1 ? 1 : v;
+            return v * v * (3 - 2 * v);
+        }
+
         /// <summary>
         /// ISS:n SEURAAVA auringonnousu hetken <paramref name="alku"/> jälkeen: varjosta valoon (Valoisuus nousee yli 0).
         /// Karkea haku 10 s:n askelin enintään kaksi kierrosta, sitten puolitus 0,5 s:iin. null = ei nousua (esim. rata

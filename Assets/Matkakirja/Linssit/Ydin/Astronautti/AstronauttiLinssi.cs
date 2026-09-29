@@ -116,6 +116,7 @@ namespace Matkakirja.Linssit.Astronautti
             if (tiedot == null && aineisto?.Lahde != null) Tiedot.Lahde = aineisto.Lahde;
             kavely = new Iss.Avaruuskavely();
             kavely.Vaihtui += KavelyVaihtui;
+            kyyti.UlkonaSuunta = () => Iss.Avaruuskavely.KohtiAurinkoa ? Iss.Avaruuskavely.AuringonSuunta(Iss.IssNyt.Kello()) : (double?)null;
         }
 
         double Nyt => y.Aika * 1000;

@@ -1,10 +1,15 @@
 // AVARUUSKÄVELYN NÄKYMÄ (Linssiseppä 2, 29.9.2026; suunnitelma docs/raportit/avaruuskavely-suunnitelma-20260929.md):
-// PAIKKAMERKIT ennen Codexin kerroksia — harmaat laatikot luukulle (ilmalukko), kaiteelle ja käsineelle karabiineineen,
-// vaiheen ohje ruudun alalaidassa ja vertailukortti (oma kuva | astronautin NASA-kuva lähimmästä kohteesta). Pulun
-// repliikit puhekuplana (Pulu.Sano, näkyy aina) ja kypäräradiona (KavelyAanet). Kaikki päästää kosketukset
-// läpi: napautus menee AstronauttiKerroksen kautta AstronauttiLinssi.NapautaIss → Avaruuskavely.Napauta.
-// Tila luetaan linssin tilakoneesta 10 kertaa sekunnissa kyydin aikana (linssi luodaan joka avauksella uudelleen).
+// Codexin kerrokset (~/Documents/Codex/2026-09-29/avaruuskavely-kerrokset, manifest.json; tuonti tyokalut/kavely_kerrokset.py):
+// iPhone pysty 1290 × 2796 ja iPad vaaka 2732 × 2048, ruudun peittävänä (cover, keskitetty). Ilmalukko: luukku (avautuu
+// saranastaan ulospäin, 2D:ssä vaakapuristuksena saranan ympäri), kehys ja valovuoto. Ulkona takaa eteen: rakenne, paneeli,
+// kaide, köysi, käsine (irti / kiinni), visiiri ja valokerrokset valo-rakenne / -kaide / -käsine. UI Toolkitissa ei ole
+// additiivista sekoitusta: valokerrokset alfasekoituksella, voimakkuus ISS:n auringosta (Avaruuskavely.Aurinkoisuus), ja
+// metallin sävy tummuu varjossa (maavalo 0,28) — auringonnousu pyyhkäisee etualan. Vertailukortti: oma kuvakaappaus ja
+// astronautin NASA-kuva kortin kuva-alueisiin, tekstit alle. Pulun repliikit puhekuplana ja kypäräradiona (KavelyAanet).
+// Kaikki päästää kosketukset läpi: napautus menee AstronauttiKerroksen kautta AstronauttiLinssi.NapautaIss → Avaruuskavely.
+// Tila luetaan linssin tilakoneesta 30 kertaa sekunnissa kävelyn aikana (10 kertaa kyydissä muuten).
 using System.Collections;
+using System.Collections.Generic;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
 using UnityEngine;
@@ -12,71 +17,104 @@ using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
+    /// <summary>Codexin kerrosten variantti (generoitu KavelyKerrokset.Rajaukset.cs).</summary>
+    public static partial class KavelyKerrokset
+    {
+        public sealed class Variantti
+        {
+            public Vector2 Kangas, Karabiini, KoysiAnkkuri, Sarana;
+            public Rect Vapaa, Aukko;
+            public float HorisonttiY, LuukunKulma;
+        }
+
+        static readonly Dictionary<string, Texture2D> kuvat = new Dictionary<string, Texture2D>();
+
+        /// <summary>Kerroksen kuva Resources/KavelyKerrokset/&lt;laite&gt;/&lt;nimi&gt; (välimuistissa), null = puuttuu.</summary>
+        public static Texture2D Kuva(string laite, string nimi)
+        {
+            string avain = laite + "/" + nimi;
+            if (!kuvat.TryGetValue(avain, out var t))
+            {
+                t = Resources.Load<Texture2D>("KavelyKerrokset/" + avain);
+                if (t == null) Debug.LogWarning("MATKAKIRJA avaruuskävely: kerros puuttuu " + avain);
+                kuvat[avain] = t;
+            }
+            return t;
+        }
+    }
+
     public sealed class AvaruuskavelyNakyma
     {
-        static readonly Color Harmaa = new Color(0.55f, 0.56f, 0.58f, 0.92f), Tumma = new Color(0.16f, 0.17f, 0.19f, 0.96f);
+        /// <summary>Ulos-vaiheen ajoitus (s, IssKyyti.UlosS = 4): luukku avautuu, ilmalukko häipyy, etuala liukuu paikalleen.</summary>
+        const float LuukkuS = 1.2f, LukkoPoisAlku = 1.0f, LukkoPoisS = 1.0f, EtualaAlku = 1.2f, EtualaS = 1.8f, EtualanLiuku = 0.28f;
+        /// <summary>Maavalo varjossa (metallin sävy) ja valokerrosten enimmäisvoimakkuus.</summary>
+        const float Varjossa = 0.28f, ValoMax = 1f;
 
-        readonly VisualElement juuri, luukku, kaide, kasine, kortti, oma, nasa;
-        readonly Label ohje, karabiini, nasaNimi;
+        static readonly string[] Ulko = { "rakenne", "paneeli", "kaide", "koysi", "kasine-irti", "kasine-kiinni", "visiiri", "valo-rakenne", "valo-kaide", "valo-kasine" };
+        static readonly string[] Lukko = { "ilmalukko-luukku", "ilmalukko-kehys", "ilmalukko-valo" };
+
+        readonly VisualElement juuri, kangas, lukko, ulko, korttiJuuri, kortti, oma, nasa;
+        readonly Label ohje, omaTeksti, nasaTeksti;
+        readonly Dictionary<string, VisualElement> kerrokset = new Dictionary<string, VisualElement>();
+        readonly List<VisualElement> perus = new List<VisualElement>(), valot = new List<VisualElement>();
         IVisualElementScheduledItem kysely;
         KavelynVaihe vaihe = KavelynVaihe.Ei;
-        string sanottu;
+        string sanottu, laite;
+        KavelyKerrokset.Variantti v;
+        double vaiheAlkoi;
         Texture2D omaKuva;
         KavelyAanet aanet;
 
         public KavelynVaihe Vaihe => vaihe;
+        /// <summary>Kävely alkoi (AstronautinNakyma sulkee Pulun taulun, jos se jäi auki).</summary>
+        public event System.Action Alkoi;
 
         public AvaruuskavelyNakyma(UiKerros kerros)
         {
             juuri = Rakenne.El("mk-kavely", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
             Tayta(juuri);
+            juuri.style.overflow = Overflow.Hidden;
             juuri.style.display = DisplayStyle.None;
-
-            // Ilmalukko: Questin luukku sisältä (paikkamerkki), luukku liukuu ylös avattaessa.
-            luukku = Laatikko(juuri, Tumma);
-            Tayta(luukku);
-            var kansi = Laatikko(luukku, Harmaa);
-            kansi.style.left = Length.Percent(18); kansi.style.right = Length.Percent(18);
-            kansi.style.top = Length.Percent(22); kansi.style.bottom = Length.Percent(22);
-            kansi.style.borderTopLeftRadius = kansi.style.borderTopRightRadius = 40;
-            kansi.style.borderBottomLeftRadius = kansi.style.borderBottomRightRadius = 40;
-            Merkki("LUUKKU (paikkamerkki)", kansi);
-            luukku.style.transitionProperty = new StyleList<StylePropertyName>(new System.Collections.Generic.List<StylePropertyName> { new StylePropertyName("translate") });
-            luukku.style.transitionDuration = new StyleList<TimeValue>(new System.Collections.Generic.List<TimeValue> { new TimeValue(1.2f, TimeUnit.Second) });
-
-            // Ulkona: kaide ruudun alaosassa ja käsine oikeassa alakulmassa (karabiini irti / kiinni).
-            kaide = Laatikko(juuri, Harmaa);
-            kaide.style.left = 0; kaide.style.right = 0; kaide.style.bottom = Length.Percent(16); kaide.style.height = Length.Percent(4);
-            Merkki("KAIDE", kaide);
-            kasine = Laatikko(juuri, Harmaa);
-            kasine.style.right = Length.Percent(4); kasine.style.bottom = Length.Percent(4);
-            kasine.style.width = Length.Percent(34); kasine.style.height = Length.Percent(18);
-            Merkki("KÄSINE", kasine);
-            karabiini = Merkki("", kasine);
+            juuri.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
+            kangas = Rakenne.El("mk-kavely__kangas", juuri, PickingMode.Ignore);
+            kangas.style.position = Position.Absolute;
+            ulko = Rakenne.El("mk-kavely__ulko", kangas, PickingMode.Ignore);
+            Tayta(ulko);
+            lukko = Rakenne.El("mk-kavely__lukko", kangas, PickingMode.Ignore);
+            Tayta(lukko);
 
             ohje = Rakenne.Teksti("", "mk-kavely__ohje", juuri);
             ohje.style.position = Position.Absolute;
-            ohje.style.left = Length.Percent(6); ohje.style.right = Length.Percent(40); ohje.style.bottom = Length.Percent(6);
+            ohje.style.left = Length.Percent(6); ohje.style.right = Length.Percent(6); ohje.style.bottom = Length.Percent(5);
+            ohje.style.unityTextAlign = TextAnchor.MiddleCenter;
             ohje.style.color = Color.white; ohje.style.fontSize = 17;
-            ohje.style.backgroundColor = new Color(0, 0, 0, 0.55f);
+            ohje.style.backgroundColor = new Color(0, 0, 0, 0.5f);
             ohje.style.paddingLeft = ohje.style.paddingRight = 12; ohje.style.paddingTop = ohje.style.paddingBottom = 8;
             ohje.style.borderTopLeftRadius = ohje.style.borderTopRightRadius = ohje.style.borderBottomLeftRadius = ohje.style.borderBottomRightRadius = 14;
             Kirjasimet.Aseta(ohje, Kirjasin.Kone);
 
-            // Vertailukortti: oma kuva | NASA-kuva (Codexin kehys tulee myöhemmin).
-            kortti = Laatikko(juuri, Tumma);
-            kortti.style.left = Length.Percent(5); kortti.style.right = Length.Percent(5);
-            kortti.style.top = Length.Percent(18); kortti.style.bottom = Length.Percent(22);
-            kortti.style.flexDirection = FlexDirection.Row;
-            kortti.style.paddingLeft = kortti.style.paddingRight = kortti.style.paddingTop = kortti.style.paddingBottom = 10;
-            oma = Puolikas(kortti, "OMA KUVA", out _);
-            nasa = Puolikas(kortti, "ASTRONAUTTI (NASA)", out nasaNimi);
+            // Vertailukortti keskelle (1600 × 1000), kuva-alueet ja tekstit manifestin mukaan.
+            korttiJuuri = Rakenne.El("mk-kavely__korttijuuri", juuri, PickingMode.Ignore);
+            Tayta(korttiJuuri);
+            korttiJuuri.style.alignItems = Align.Center; korttiJuuri.style.justifyContent = Justify.Center;
+            korttiJuuri.style.backgroundColor = new Color(0, 0, 0, 0.45f);
+            kortti = Rakenne.El("mk-kavely__kortti", korttiJuuri, PickingMode.Ignore);
+            var kk = KavelyKerrokset.KortinKangas;
+            oma = Alue(kortti, KavelyKerrokset.KuvaVasen, kk);
+            nasa = Alue(kortti, KavelyKerrokset.KuvaOikea, kk);
+            foreach (var e in new[] { oma, nasa }) { e.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover); }
+            var kehys = Rakenne.El("mk-kavely__kortti-kehys", kortti, PickingMode.Ignore);
+            Tayta(kehys);
+            kehys.userData = "kortti";
+            omaTeksti = Teksti(Alue(kortti, KavelyKerrokset.TekstiVasen, kk));
+            nasaTeksti = Teksti(Alue(kortti, KavelyKerrokset.TekstiOikea, kk));
+            korttiJuuri.style.display = DisplayStyle.None;
         }
 
         /// <summary>Kyyti alkoi / päättyi (AstronautinNakyma): tilaa kysytään linssiltä vain kyydin aikana.</summary>
         public void Kyydissa(bool auki)
         {
-            if (auki) { kysely ??= juuri.schedule.Execute(Paivita).Every(100); kysely.Resume(); }
+            if (auki) { kysely ??= juuri.schedule.Execute(Paivita).Every(33); kysely.Resume(); }
             else { kysely?.Pause(); Aseta(KavelynVaihe.Ei, null); }
         }
 
@@ -85,9 +123,104 @@ namespace Matkakirja.Natiivi
         void Paivita()
         {
             var l = Linssi();
-            var k = l?.Kavely;
-            Aseta(k?.Vaihe ?? KavelynVaihe.Ei, l);
+            Aseta(l?.Kavely?.Vaihe ?? KavelynVaihe.Ei, l);
+            if (vaihe != KavelynVaihe.Ei) Animoi();
         }
+
+        // ---- kerrokset ----
+
+        /// <summary>Variantti ruudun muodon mukaan (vaaka = iPad, pysty = iPhone), kerrokset kerran per variantti.</summary>
+        void Mitoita()
+        {
+            float W = juuri.layout.width, H = juuri.layout.height;
+            if (float.IsNaN(W) || W <= 0 || H <= 0) return;
+            string uusi = W > H ? "ipad" : "iphone";
+            if (uusi != laite) Rakenna(uusi);
+            if (v == null) return;
+            // Cover: kangas peittää ruudun, keskitetty.
+            float m = Mathf.Max(W / v.Kangas.x, H / v.Kangas.y);
+            kangas.style.width = v.Kangas.x * m; kangas.style.height = v.Kangas.y * m;
+            kangas.style.left = (W - v.Kangas.x * m) / 2; kangas.style.top = (H - v.Kangas.y * m) / 2;
+            float kw = Mathf.Min(W * 0.92f, H * 0.8f * 1.6f);
+            kortti.style.width = kw; kortti.style.height = kw / 1.6f;
+            float fs = Mathf.Clamp(kw / 1600f * 34f, 12f, 26f);
+            omaTeksti.style.fontSize = fs; nasaTeksti.style.fontSize = fs;
+        }
+
+        void Rakenna(string uusi)
+        {
+            laite = uusi;
+            KavelyKerrokset.Variantit.TryGetValue(uusi, out v);
+            ulko.Clear(); lukko.Clear(); kerrokset.Clear(); perus.Clear(); valot.Clear();
+            if (v == null) return;
+            foreach (var n in Ulko) Lisaa(ulko, n, n.StartsWith("valo-"));
+            foreach (var n in Lukko) Lisaa(lukko, n, n == "ilmalukko-valo");
+            // Luukku kääntyy saranastaan (vasen reuna): 2D:ssä vaakapuristus saranan ympäri.
+            if (kerrokset.TryGetValue("ilmalukko-luukku", out var luukku) && KavelyKerrokset.Rajaukset.TryGetValue(uusi + "/ilmalukko-luukku", out var r))
+                luukku.style.transformOrigin = new TransformOrigin(Length.Percent((v.Sarana.x - r.x) / r.width * 100f), Length.Percent((v.Sarana.y - r.y) / r.height * 100f));
+            var kehys = kortti.Q(className: "mk-kavely__kortti-kehys");
+            var kt = KavelyKerrokset.Kuva(uusi, "vertailukortti");
+            if (kehys != null && kt != null) kehys.style.backgroundImage = new StyleBackground(kt);
+            Debug.Log($"avaruuskävely: kerrokset {uusi} ({kerrokset.Count})");
+        }
+
+        void Lisaa(VisualElement isa, string nimi, bool valo)
+        {
+            var t = KavelyKerrokset.Kuva(laite, nimi);
+            if (t == null || !KavelyKerrokset.Rajaukset.TryGetValue(laite + "/" + nimi, out var r)) return;
+            var e = Rakenne.El("mk-kavely__kerros", isa, PickingMode.Ignore);
+            e.style.position = Position.Absolute;
+            e.style.left = Length.Percent(r.x / v.Kangas.x * 100f); e.style.top = Length.Percent(r.y / v.Kangas.y * 100f);
+            e.style.width = Length.Percent(r.width / v.Kangas.x * 100f); e.style.height = Length.Percent(r.height / v.Kangas.y * 100f);
+            e.style.backgroundImage = new StyleBackground(t);
+            e.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Contain);
+            kerrokset[nimi] = e;
+            (valo ? valot : perus).Add(e);
+        }
+
+        VisualElement K(string nimi) => kerrokset.TryGetValue(nimi, out var e) ? e : null;
+
+        static void Nayta(VisualElement e, bool nakyy) { if (e != null) e.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None; }
+
+        /// <summary>Kehys: ilmalukon avautuminen, etualan liuku ja auringon valo.</summary>
+        void Animoi()
+        {
+            if (v == null) Mitoita();
+            float t = (float)(Time.realtimeSinceStartupAsDouble - vaiheAlkoi);
+            bool vahennetty = LinssiUi.VahennettyLiike();
+            // Ilmalukko ja Ulos: luukku 0 → 1 (avautuu), ilmalukko häipyy, etuala liukuu.
+            float auki = vaihe == KavelynVaihe.Ilmalukko ? 0f : vahennetty ? 1f : Mathf.Clamp01(t / LuukkuS);
+            float lukkoNakyy = vaihe == KavelynVaihe.Ilmalukko ? 1f : vaihe == KavelynVaihe.Ulos && !vahennetty ? 1f - Mathf.Clamp01((t - LukkoPoisAlku) / LukkoPoisS) : 0f;
+            float etuala = vaihe == KavelynVaihe.Ilmalukko ? 0f : vaihe == KavelynVaihe.Ulos && !vahennetty ? Pehmea(Mathf.Clamp01((t - EtualaAlku) / EtualaS)) : 1f;
+            if (vaihe == KavelynVaihe.Takaisin) etuala = 1f - Mathf.Clamp01(t / (float)Avaruuskavely.TakaisinS);
+            var luukku = K("ilmalukko-luukku");
+            if (luukku != null)
+            {
+                // Avautuu ulospäin katsojan vasemmalle (Codex 105–108°): leveys kosinina, reuna tummuu.
+                float kulma = auki * v.LuukunKulma * Mathf.Deg2Rad;
+                luukku.style.scale = new Scale(new Vector2(Mathf.Max(0.001f, Mathf.Cos(Mathf.Min(kulma, Mathf.PI / 2 - 0.01f))), 1f));
+                luukku.style.opacity = kulma > Mathf.PI / 2 ? 0f : 1f;
+            }
+            var lv = K("ilmalukko-valo");
+            if (lv != null) lv.style.opacity = auki;
+            lukko.style.opacity = lukkoNakyy;
+            Nayta(lukko, lukkoNakyy > 0.001f);
+            ulko.style.opacity = etuala;
+            ulko.style.translate = new Translate(0, Length.Percent((1f - etuala) * EtualanLiuku * 100f));
+            Nayta(ulko, etuala > 0.001f);
+            Nayta(K("kasine-irti"), vaihe <= KavelynVaihe.Koysi);
+            Nayta(K("kasine-kiinni"), vaihe > KavelynVaihe.Koysi);
+            // Aurinko: valokerrokset ja metallin sävy (maavalo varjossa).
+            float sun = (float)Avaruuskavely.Aurinkoisuus(IssNyt.Kello());
+            float s = Mathf.Lerp(Varjossa, 1f, sun);
+            var savy = new Color(s, s, Mathf.Lerp(Varjossa * 1.25f, 1f, sun), 1f);
+            foreach (var e in perus) e.style.unityBackgroundImageTintColor = savy;
+            foreach (var e in valot) e.style.opacity = sun * ValoMax;
+        }
+
+        static float Pehmea(float x) => x * x * (3 - 2 * x);
+
+        // ---- vaiheet ----
 
         void Aseta(KavelynVaihe uusi, AstronauttiLinssi l)
         {
@@ -106,45 +239,49 @@ namespace Matkakirja.Natiivi
             if (uusi == vaihe) return;
             var vanha = vaihe;
             vaihe = uusi;
+            vaiheAlkoi = Time.realtimeSinceStartupAsDouble;
             if (uusi == KavelynVaihe.Ei) sanottu = null;
+            if (vanha == KavelynVaihe.Ei && uusi != KavelynVaihe.Ei) Alkoi?.Invoke();
             Debug.Log($"avaruuskävely: {vanha} → {uusi}");
             juuri.style.display = uusi == KavelynVaihe.Ei ? DisplayStyle.None : DisplayStyle.Flex;
-            // Luukku: ilmalukossa koko ruutu, ulos lähtiessä liukuu ylös (vähennetty liike: pois heti).
-            bool lukossa = uusi == KavelynVaihe.Ilmalukko;
-            luukku.style.display = lukossa || uusi == KavelynVaihe.Ulos ? DisplayStyle.Flex : DisplayStyle.None;
-            luukku.style.translate = new Translate(0, lukossa ? Length.Percent(0) : Length.Percent(-100));
-            bool ulkona = uusi >= KavelynVaihe.Ulos && uusi <= KavelynVaihe.Kuva;
-            kaide.style.display = kasine.style.display = ulkona ? DisplayStyle.Flex : DisplayStyle.None;
-            karabiini.text = uusi <= KavelynVaihe.Koysi ? "karabiini: IRTI" : "karabiini: KIINNI";
-            kortti.style.display = uusi == KavelynVaihe.Vertailu ? DisplayStyle.Flex : DisplayStyle.None;
+            korttiJuuri.style.display = uusi == KavelynVaihe.Vertailu ? DisplayStyle.Flex : DisplayStyle.None;
+            if (uusi != KavelynVaihe.Ei) Animoi();
             if (vanha == KavelynVaihe.Kuva && uusi == KavelynVaihe.Vertailu) UiKerros.Hae().StartCoroutine(OtaKuva(l));
             Aanet().Vaihe(vanha, uusi);
         }
 
         KavelyAanet Aanet() => aanet != null ? aanet : aanet = KavelyAanet.Luo();
 
-        /// <summary>Oma kuva: kerrokset piiloon, ruutu kehyksen lopussa, sitten kortti (NASA-kuva lähimmästä kohteesta).</summary>
+        /// <summary>Oma kuva: ohje ja kortti piiloon (etuala jää kuvaan), ruutu kehyksen lopussa, sitten kortti.</summary>
         IEnumerator OtaKuva(AstronauttiLinssi l)
         {
-            juuri.style.visibility = Visibility.Hidden;
+            korttiJuuri.style.visibility = Visibility.Hidden;
+            ohje.style.visibility = Visibility.Hidden;
             yield return null;
             yield return new WaitForEndOfFrame();
             if (omaKuva != null) Object.Destroy(omaKuva);
             omaKuva = ScreenCapture.CaptureScreenshotAsTexture();
-            juuri.style.visibility = Visibility.Visible;
+            korttiJuuri.style.visibility = Visibility.Visible;
+            ohje.style.visibility = Visibility.Visible;
             oma.style.backgroundImage = new StyleBackground(omaKuva);
+            var utc = IssNyt.Kello();
+            var p = IssNyt.Paikka(utc);
+            omaTeksti.text = $"Oma kuva ISS:n kaiteelta\n{Paikka(p.Lat, p.Lon)}";
             Debug.Log($"avaruuskävely: kuva {omaKuva.width}×{omaKuva.height}");
             nasa.style.backgroundImage = StyleKeyword.None;
-            var v = l?.KavelynVertailu;
-            if (v == null) { nasaNimi.text = "ei NASA-kohdetta"; yield break; }
-            var kohde = v.Value.Kohde;
-            nasaNimi.text = $"{kohde.Nimi} · {KyydinTeksti.Luku(v.Value.Km)} km";
+            var vv = l?.KavelynVertailu;
+            if (vv == null) { nasaTeksti.text = "Astronautin kuvaa ei löytynyt"; yield break; }
+            var kohde = vv.Value.Kohde;
+            nasaTeksti.text = $"Astronautin kuva (NASA)\n{kohde.Nimi} · {KyydinTeksti.Luku(vv.Value.Km)} km alapisteestä";
             var h = kohde.Havainnot.Count > 0 ? kohde.Havainnot[kohde.OletusIndeksi] : null;
             string osoite = h?.Pikku ?? h?.Kuva;
-            Debug.Log($"avaruuskävely: vertailu {kohde.Tunnus} {v.Value.Km:0} km {osoite}");
+            Debug.Log($"avaruuskävely: vertailu {kohde.Tunnus} {vv.Value.Km:0} km {osoite}");
             if (!string.IsNullOrEmpty(osoite))
                 Kuvat.Hae(osoite, t => { if (t != null && vaihe == KavelynVaihe.Vertailu) nasa.style.backgroundImage = new StyleBackground(t); });
         }
+
+        static string Paikka(double lat, double lon) =>
+            $"{System.Math.Abs(lat):0.0}° {(lat >= 0 ? "N" : "S")}, {System.Math.Abs(lon):0.0}° {(lon >= 0 ? "E" : "W")}";
 
         static void Tayta(VisualElement e)
         {
@@ -152,36 +289,22 @@ namespace Matkakirja.Natiivi
             e.style.left = 0; e.style.top = 0; e.style.right = 0; e.style.bottom = 0;
         }
 
-        static VisualElement Laatikko(VisualElement isa, Color vari)
+        static VisualElement Alue(VisualElement isa, Rect r, Vector2 kangas)
         {
-            var e = Rakenne.El("mk-kavely__laatikko", isa, PickingMode.Ignore);
+            var e = Rakenne.El("mk-kavely__alue", isa, PickingMode.Ignore);
             e.style.position = Position.Absolute;
-            e.style.backgroundColor = vari;
-            e.style.alignItems = Align.Center;
-            e.style.justifyContent = Justify.Center;
+            e.style.left = Length.Percent(r.xMin / kangas.x * 100f); e.style.top = Length.Percent(r.yMin / kangas.y * 100f);
+            e.style.width = Length.Percent(r.width / kangas.x * 100f); e.style.height = Length.Percent(r.height / kangas.y * 100f);
             return e;
         }
 
-        static Label Merkki(string teksti, VisualElement isa)
+        static Label Teksti(VisualElement isa)
         {
-            var l = Rakenne.Teksti(teksti, "mk-kavely__merkki", isa);
-            l.style.color = new Color(1, 1, 1, 0.85f);
-            l.style.fontSize = 14;
-            Kirjasimet.Aseta(l, Kirjasin.KoneLihava);
+            var l = Rakenne.Teksti("", "mk-kavely__teksti", isa);
+            l.style.color = new Color(0.93f, 0.9f, 0.84f, 1f);
+            l.style.whiteSpace = WhiteSpace.Normal;
+            Kirjasimet.Aseta(l, Kirjasin.Kone);
             return l;
-        }
-
-        static VisualElement Puolikas(VisualElement isa, string otsikko, out Label alla)
-        {
-            var p = Rakenne.El("mk-kavely__puolikas", isa, PickingMode.Ignore);
-            p.style.flexGrow = 1; p.style.flexBasis = 0;
-            p.style.marginLeft = p.style.marginRight = 5;
-            p.style.backgroundColor = new Color(0.3f, 0.31f, 0.33f, 1);
-            p.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover);
-            p.style.justifyContent = Justify.SpaceBetween;
-            Merkki(otsikko, p);
-            alla = Merkki("", p);
-            return p;
         }
     }
 
