@@ -9287,3 +9287,7 @@ Omistaja 29.9.2026: "nostojen luenta alkaa vieläkin väärästä kohtaa. chatis
 ## OMISTAJA: MANTEREEN RANTAVIIVA RAJAKSI, EI YLEISTYSTÄ (29.9.2026 klo 19.41)
 
 Omistaja 29.9.2026 (kumoaa Päätoimittajan tulkinnan ja kokeet A/B, "aivan surkea", "aivan liian pyöristettyjä"): "Pitää olla siis aivan samanlainen raja kuin tähänkin asti, mutta lisätään sen piirto myös siihen mantereella olevaan merirajaan." Linja: nykyinen natiivin maa–maa-raja ennallaan, ja siihen lisätään mantereen (maan suurimman renkaan) rantaviiva samalla viivalla, samasta aineistosta ja samalla tarkkuudella; saarten rantoja ei piirretä. Karttaseppä aineisto, Natiiviseppä piirto; web web-jonoon.
+
+## OMISTAJA: LUENTAVIAN TOISTO-OHJE (29.9.2026 klo 19.53)
+
+Omistaja 29.9.2026: "Virhe toistuu silloin, jos lopetan edellisen luennon kesken klikkaamalla karttaa ja siirryn uuteen kohteeseen ja sitten aloitan uuden kohteen luennan, niin silloin luenta ei ala alusta, vaan ensimmäisen lauseen noin puolesta välistä suurin piirtein." → Natiivi-UI: keskeytetyn luennan soittokohta/palatila siirtyy seuraavan noston ensimmäiseen palaan; nollaus kartan napautuksessa ja lähteen vaihtuessa.
