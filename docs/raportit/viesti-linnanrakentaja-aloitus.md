@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 ilta: erä 3 "linna auki" työn alla)
+# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 20: Olavinlinna uudella tavalla, Blender + fotogrammetria)
 
 Olet **Linnanrakentaja (Opus, max)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama", tila hiomassa. Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,16 +8,17 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-d.md`** (uusin tila: erä 3) ja
-   `…-20260929-c.md` / `…-b.md` (keittiö, käytännöt).
-3. Erä 3:n speksi pelin repon worktreessä `/Users/Shared/Claude/wt/linnanrakentaja-linna-3` (haara
-   `linnanrakentaja-linna-3`): `docs/raportit/dioraama-rajapinnat-era3-20260929.md`.
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260929-e.md`** (uusin: Blender-putki, kuori, Siirtosepän
+   rajapinta) ja tarvittaessa `…-d.md` (erä 3 proseduraalinen tausta).
+3. Speksi pelin repon worktreessä `/Users/Shared/Claude/wt/linnanrakentaja-linna-3` (haara `linnanrakentaja-linna-3`):
+   `docs/raportit/dioraama-rajapinnat-blender-20260929.md` (+ era3-speksi tiloista ja teksteistä).
 
-## Kärki (katso luovutuksen -d osio "Seuraavaksi")
+## Kärki (luovutuksen -e osio "Käynnissä / auki")
 
-1. Erä 3: tila-agenttien tulokset kokoon, käännös (Julkaisijan NYT) ja simulaattorikuvat `ajo-linna.sh`:lla.
-2. Kuvat Päätoimittajalle omistajaa varten (omistaja katsoo ennen ääniä; äänitilaus pidossa).
-3. Keittiö on BUILD 51:ssä (valmis).
+1. Kuoren siivouksen tulos (nosturi, telineet, kontit) ja laatutasojen uusinta.
+2. Sisätilat todellisiin paikkoihin kuoren sisään (sijoitus-kenttä), leikkausaukon hionta, leivonta kuoren kanssa.
+3. Assetit Siirtosepälle / ämpäriin, laitekuvapari omistajalle (Siirtoseppä kääntää).
+4. KUORMA: enintään 2 raskasta ajoa kerrallaan, nice 15.
 
 ## Säännöt, jotka opittiin
 
