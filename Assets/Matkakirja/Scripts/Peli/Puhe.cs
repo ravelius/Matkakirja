@@ -1115,7 +1115,7 @@ namespace Matkakirja.Natiivi
             // LUENTA ALUSTA (omistaja 29.9.2026, laitteella: uusi luenta alkoi ensimmäisen virkkeen keskeltä edellisen
             // keskeytetyn jälkeen): uusi klippi soi aina näytteestä 0; palan jatko (jatko) kelaa itse.
             if (!jatko) lahde.timeSamples = 0;
-            StartCoroutine(AlkuMittari(klippi, Kohdetaso));
+            StartCoroutine(AlkuMittari(klippi, Kohdetaso, !jatko));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
             // saman puheen jatkoa: ei loppua eikä alkua väliin (lataus-kahva kuuluu yhä SoitaPalat-korutiinille).
@@ -1134,7 +1134,7 @@ namespace Matkakirja.Natiivi
         /// tavu. Unity käynnistää soiton vasta Play()-ruudun lopussa, joten testijumi (puhe jumi) osuu ensimmäiseen ruutuun,
         /// jossa klippi jo soi: raskas ruutu heti soiton alettua (saapuminen, kortin avaus).
         /// </summary>
-        IEnumerator AlkuMittari(AudioClip klippi, float taso)
+        IEnumerator AlkuMittari(AudioClip klippi, float taso, bool kelaaAlkuun = false)
         {
             float t0 = Time.unscaledTime, edellinen = 0f, hiljaa = 0f, v = lahde.volume, jumi = 0f, ekaKohta = -1f;
             int ruutuja = 0;
@@ -1147,7 +1147,12 @@ namespace Matkakirja.Natiivi
                 {
                     // Ensimmäinen soiva ruutu: kohta yli 0,25 s (yksi ruutu on ≤ 0,05 s) = klippi ei alkanut alusta.
                     ekaKohta = t;
-                    if (t > 0.25f) Debug.LogWarning($"MATKAKIRJA puhe: ALKU EI ALUSSA: 1. soiva ruutu kohdassa {t:0.000} s {klippi?.name}");
+                    if (t > 0.25f) Debug.LogWarning($"MATKAKIRJA puhe: ALKU EI ALUSSA: 1. soiva ruutu kohdassa {t:0.000} s {klippi?.name}"
+                        + (kelaaAlkuun ? " → kelattu alkuun" : ""));
+                    // Turvaverkko (omistaja 29.9.2026: "isoisän luennan alku jää kuulematta"): uusi klippi, joka ehti soida
+                    // pääsäikeen jumin aikana yli 0,25 s, kelataan alkuun, jotta ensimmäinen virke kuuluu. Palavirran
+                    // jatkopala ei kelaa (se jatkaa edellistä).
+                    if (t > 0.25f && kelaaAlkuun) { lahde.timeSamples = 0; edellinen = 0f; t = 0f; }
                 }
                 if (t > edellinen && v < 0.5f * taso) hiljaa += t - edellinen;
                 if (t > 0f) edellinen = t;
