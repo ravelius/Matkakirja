@@ -71,3 +71,14 @@ haara `linnanrakentaja/linna-3` = f5877128 (74e0cd0e + master f3d7b408), natiivi
    speksi Siirtosepälle) → tilat uudelleen Blenderissä oikeaan paikkaan.
 2. Siivoa kuoresta 2021-restauroinnin nosturi/telineet/kontit.
 3. Laitekuvapari HUIPPU vs nykyinen, kun Siirtosepän kuori latautuu natiivissa.
+
+## Tila klo 19.5x
+- Siirtoseppä: kuori + laatutasot valmiina proto `siirtoseppa/linna-valo` b1ac2ab3 (muistin mukaan: ≥7 Gt huippu,
+  ≥3,5 Gt normaali; kehittäjänappi "Kuori: auto" + `poikki kuori auto|huippu|normaali|kevyt`). Testipeili
+  `/Users/Shared/Claude/proto-3d/lokit/siirtoseppa-linna-peili/`. Hän kääntää ja ottaa laitekuvaparin HUIPPU vs nykyinen
+  Julkaisijan NYT-vuorolla. ASTC vaatii esipakatut kuvat (astcenc) — Siirtoseppä kertoo omistajalle.
+- Tornit kuoressa (Blender x itä, y pohjoinen; glTF z = −y): Kellotorni ≈ (−50, 5), Kirkkotorni ≈ (−22, 14),
+  Eerikin tornin raunio ≈ (−1, −17). Yläkuvaskripti `tools/dioraama/blender/kuori_ylakuva.py` (Eevee-valo vielä tumma).
+- Sisältökirjurilta tilattu pohjakaava + tilojen todelliset paikat → `sisaltokirjuri-olavinlinna-pohjakaava-20260929.md`.
+- Seuraava oma työ: tilat oikeisiin paikkoihin (leivo_tila.py:hin sijoitus/siirto per tila), kuoren siivous
+  (nosturi, telineet, kontit), leikkausikkunan speksi Siirtosepälle.
