@@ -145,7 +145,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 }
                 #endif
 
-                half3 vari = albedo * valo * lerp(1.0h, ao, 0.85h) + _Lampo.rgb * lampo * _DioraamaLepatus;
+                half3 vari = albedo * valo * lerp(1.0h, ao, 0.85h) + _Lampo.rgb * (lampo * lampo * 0.45h) * _DioraamaLepatus; // g²·0,45: oikea pistevalo valaisee jo (sama kuin esikatselussa)
 
                 // Etäisyyssumu (era 1 kohta 6, kuten DioraamaMaalattu/DioraamaHahmo): massa ja keittiö erottuvat.
                 float etaisyys = length(_WorldSpaceCameraPos - i.paikkaW);

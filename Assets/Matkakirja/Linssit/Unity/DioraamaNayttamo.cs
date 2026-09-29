@@ -168,9 +168,9 @@ namespace Matkakirja.Natiivi
             // Filmipino.asset käyttää jo Bloomia (luettu: active 1), joten variantti on säilytetty samalla perusteella
             // kuin yllä DoF:lle (riski kirjattu erän raporttiin).
             hehkuBloom = profiili.Add<Bloom>(true);
-            hehkuBloom.threshold.Override(0.9f);
-            hehkuBloom.intensity.Override(0.7f);
-            hehkuBloom.scatter.Override(0.6f);
+            hehkuBloom.threshold.Override(1.2f); // 29.9.: 0,9 tarttui HDR:ssä lähes kaikkiin pintoihin (usva)
+            hehkuBloom.intensity.Override(0.45f);
+            hehkuBloom.scatter.Override(0.55f);
             hehkuBloom.tint.Override(HehkuSavy);
             // Tonemappaus (erä 2b, 29.9.): valaistu HDR-kuva puristetaan näytölle ilman palanutta valkoista.
             // Neutral, koska Filmipino.asset käyttää sitä jo (variantti säilyy buildissa; ACES voisi karsiutua).

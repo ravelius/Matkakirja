@@ -195,7 +195,7 @@ namespace Matkakirja.Natiivi
         static Color TaivasVari(string hex, Color oletus) =>
             !string.IsNullOrEmpty(hex) && ColorUtility.TryParseHtmlString(hex, out var v) ? v : oletus;
 
-        /// <summary>Yksi tilan pistevalo (era 2b kohta 1 "TILA.valot"): range = Sade, intensity = Voima · 1,4 (tonemappauksen kanssa; oli 2,2).
+        /// <summary>Yksi tilan pistevalo (era 2b kohta 1 "TILA.valot"): range = Sade, intensity = Voima · 1,0 (tonemappauksen kanssa; oli 2,2 → 1,4 → 1,0).
         /// Lepatus &gt; 0 luokitellaan "Tuli"-kytkimeen (tulisija), muuten "Lamput"-kytkimeen (öljylamppu/kynttilä)
         /// -- data ei erottele näitä nimellä, vain Lepatuksella (POIKKEAMA/tulkinta, kirjattu raporttiin).</summary>
         void LuoPisteValo(string tilaId, Valo valo)
@@ -206,7 +206,7 @@ namespace Matkakirja.Natiivi
             var l = go.AddComponent<Light>();
             l.type = LightType.Point;
             l.range = Mathf.Max(0.05f, (float)valo.Sade);
-            l.intensity = (float)(valo.Voima * 1.4);
+            l.intensity = (float)(valo.Voima * 1.0);
             l.color = TaivasVari(valo.Vari, LampunOletusVari);
             l.shadows = LightShadows.None; // ei lisävalojen varjoja (Mobile_RPAsset m_AdditionalLightShadowsSupported 0)
             l.cullingMask = 1 << DioraamaNayttamo.Kerros;
