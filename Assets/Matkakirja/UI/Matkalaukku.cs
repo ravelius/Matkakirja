@@ -395,7 +395,8 @@ namespace Matkakirja.Natiivi
 
         void Tietaja(LaukkuTietaja t)
         {
-            var r = Rakenne.El("mk-laukku__rivi", matka, PickingMode.Ignore);
+            // mk-laukku__tietaja: pillerivalikon Matka-sivulla muotokuva isona (Linssit.uss, omistaja 29.9.2026, 1.0.56).
+            var r = Rakenne.El("mk-laukku__rivi mk-laukku__tietaja", matka, PickingMode.Ignore);
             var kuva = Rakenne.El("mk-laukku__muotokuva", r, PickingMode.Ignore);
             if (!string.IsNullOrEmpty(t.AvatarUrl))
                 Kuvat.Hae(t.AvatarUrl, tex => { if (tex != null) kuva.style.backgroundImage = new StyleBackground(tex); });

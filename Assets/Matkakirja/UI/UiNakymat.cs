@@ -154,11 +154,8 @@ namespace Matkakirja.Natiivi
             // PILLERIVALIKKO YHTENÄ JÄRJESTELMÄNÄ (omistaja 29.9.2026 klo 20.2x: "Asetukset samalle riville Uusi pelin ja Retkikunnan
             // kanssa, Linssit–Aarteet-riville Matka-nappi … järkeistä noita valikoita"; Päätoimittajan malli): yksi pergamentti,
             // kolme nappityyppiä (navigointi, kytkin, toiminto), alinäkymät Linssit, Aarteet, Matka ja Asetukset ‹ Takaisin -paluulla.
-            // Pääsivu: [Linssit | Aarteet | Matka] → ÄÄNET [Kertoja | Musiikki | Äänimaisema] → [Uusi peli | Retkikunta | Asetukset] → versio.
-            var alinakymat = v.LisaNappirivi();
-            v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0, alinakymat);
-            v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet, null, alinakymat);
-            v.LisaAlinakyma("Matka", Ikonit.Viiva["passi"], Linssivalitsin.Nakyma.Matka, null, alinakymat);
+            // Pääsivu (omistaja 29.9.2026 klo 23.0x, 1.0.56: äänet ylimmäksi, Linssit ja Matka vaihtavat paikkaa):
+            // ÄÄNET [Kertoja | Musiikki | Äänimaisema] → [Matka | Aarteet | Linssit] → [Uusi peli | Retkikunta | Asetukset] → versio.
             v.LisaOsioOtsikko("Äänet");
             var aanet = v.LisaNappirivi();
             foreach (var (k, ikoni) in new[] { (Kytkin.Kertoja, Ikonit.Kertoja), (Kytkin.Musiikki, Ikonit.Musiikki), (Kytkin.Aanimaisema, Ikonit.Aanimaisema) })
@@ -166,6 +163,10 @@ namespace Matkakirja.Natiivi
                 var kk = k;
                 v.LisaKytkin(aanet, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
             }
+            var alinakymat = v.LisaNappirivi();
+            v.LisaAlinakyma("Matka", Ikonit.Viiva["passi"], Linssivalitsin.Nakyma.Matka, null, alinakymat);
+            v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet, null, alinakymat);
+            v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0, alinakymat);
             var toiminnot = v.LisaNappirivi();
             v.LisaNappi(toiminnot, "Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
             v.LisaNappi(toiminnot, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },

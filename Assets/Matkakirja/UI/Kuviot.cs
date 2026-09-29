@@ -153,38 +153,42 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Dialogikortin pergamentti: säteittäinen liukuväri kertaa paperin rae.</summary>
-        public static Texture2D Pergamentti
+        public static Texture2D Pergamentti => PergamenttiVareilla("pergamentti", "#f6e7c6", "#ecd8ae", "#d9be8d");
+
+        /// <summary>
+        /// Valikoiden pergamentti (omistaja 29.9.2026 klo 23.0x, 1.0.56: "paperi hieman vaaleammaksi"): sama liukuväri ja rae
+        /// noin viidenneksen valkoiseen päin. Pillerivalikko, sen esikatseluikkuna, Retkikunta ja Kehittäjätyökalut.
+        /// </summary>
+        public static Texture2D PergamenttiVaalea => PergamenttiVareilla("pergamentti-vaalea", "#f9eed6", "#f2e3c1", "#e4cea5");
+
+        static Texture2D PergamenttiVareilla(string nimi, string v1, string v2, string v3)
         {
-            get
+            if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
+            const int N = 256;
+            t = Uusi(nimi, N, N);
+            t.wrapMode = TextureWrapMode.Clamp;
+            var a = Vari(v1); var b = Vari(v2); var c = Vari(v3);
+            var px = new Color[N * N];
+            var keski = new Vector2(0.42f, 1f - 0.34f);
+            // radial-gradient(circle …): säde = kauimpaan kulmaan (farthest-corner).
+            float sade = Mathf.Max(
+                Mathf.Max(Vector2.Distance(keski, Vector2.zero), Vector2.Distance(keski, Vector2.right)),
+                Mathf.Max(Vector2.Distance(keski, Vector2.up), Vector2.Distance(keski, Vector2.one)));
+            for (int y = 0; y < N; y++)
+            for (int x = 0; x < N; x++)
             {
-                const string nimi = "pergamentti";
-                if (valimuisti.TryGetValue(nimi, out var t) && t != null) return t;
-                const int N = 256;
-                t = Uusi(nimi, N, N);
-                t.wrapMode = TextureWrapMode.Clamp;
-                var a = Vari("#f6e7c6"); var b = Vari("#ecd8ae"); var c = Vari("#d9be8d");
-                var px = new Color[N * N];
-                var keski = new Vector2(0.42f, 1f - 0.34f);
-                // radial-gradient(circle …): säde = kauimpaan kulmaan (farthest-corner).
-                float sade = Mathf.Max(
-                    Mathf.Max(Vector2.Distance(keski, Vector2.zero), Vector2.Distance(keski, Vector2.right)),
-                    Mathf.Max(Vector2.Distance(keski, Vector2.up), Vector2.Distance(keski, Vector2.one)));
-                for (int y = 0; y < N; y++)
-                for (int x = 0; x < N; x++)
-                {
-                    var p = new Vector2((x + 0.5f) / N, (y + 0.5f) / N);
-                    float s = Vector2.Distance(p, keski) / sade;
-                    var v = s < 0.58f ? Color.Lerp(a, b, s / 0.58f) : Color.Lerp(b, c, (s - 0.58f) / 0.42f);
-                    // Paperin rae: kaksi oktaavia Perlinin kohinaa, multiply noin 0,9–1,0.
-                    float n = 0.6f * Mathf.PerlinNoise(x * 0.09f, y * 0.09f) + 0.4f * Mathf.PerlinNoise(x * 0.31f + 17f, y * 0.31f + 5f);
-                    float kerroin = 0.9f + 0.1f * n;
-                    px[y * N + x] = new Color(v.r * kerroin, v.g * kerroin, v.b * kerroin, 1f);
-                }
-                t.SetPixels(px);
-                t.Apply(false, true);
-                valimuisti[nimi] = t;
-                return t;
+                var p = new Vector2((x + 0.5f) / N, (y + 0.5f) / N);
+                float s = Vector2.Distance(p, keski) / sade;
+                var v = s < 0.58f ? Color.Lerp(a, b, s / 0.58f) : Color.Lerp(b, c, (s - 0.58f) / 0.42f);
+                // Paperin rae: kaksi oktaavia Perlinin kohinaa, multiply noin 0,9–1,0.
+                float n = 0.6f * Mathf.PerlinNoise(x * 0.09f, y * 0.09f) + 0.4f * Mathf.PerlinNoise(x * 0.31f + 17f, y * 0.31f + 5f);
+                float kerroin = 0.9f + 0.1f * n;
+                px[y * N + x] = new Color(v.r * kerroin, v.g * kerroin, v.b * kerroin, 1f);
             }
+            t.SetPixels(px);
+            t.Apply(false, true);
+            valimuisti[nimi] = t;
+            return t;
         }
 
         /// <summary>

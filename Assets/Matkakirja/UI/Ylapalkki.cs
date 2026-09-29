@@ -56,8 +56,9 @@ namespace Matkakirja.Natiivi
         /// Palkin korkeus turva-alueen alla. iPad 61 → 65 (löydös 78, omistaja 25.9. klo 09.4x: "hieman korkeampi";
         /// hyväksytty poikkeama webin 60 pt:stä, Fable). iPhonen matala palkki: MatalaLisa.
         /// </summary>
-        // iPadin nahkapalkki webin tavoin turva-alue + 57 pt (Pelikoodari 29.9.; omistaja ≤ 89 pt).
-        public static float Korkeus => Puhelin || IpadNahka ? 57f : 65f;
+        // iPadin nahkapalkki turva-alue + 57 pt (Pelikoodari 29.9., web) → 72 pt (omistaja 29.9.2026 klo 23.0x, 1.0.56: "liian matala").
+        public static float Korkeus => Puhelin ? 57f : IpadNahka ? IpadKorkeus : 65f;
+        const float IpadKorkeus = 72f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
         /// <summary>Palkin täyte (pysty, sivut). Löydös 88 (omistaja build 13): logo ja ☰ sisemmäs kuin webissä (12,8 → 22 pt).</summary>
         static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 14f) : new Vector2(7.2f, 22f);
