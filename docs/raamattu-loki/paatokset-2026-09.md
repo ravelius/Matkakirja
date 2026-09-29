@@ -9339,3 +9339,7 @@ Omistaja 29.9.2026 klo 23.12 (iPad, Italia): "Lippu pitää olla aina maan oik. 
 ## TARKENNUS: HUNTU-LIIKE KUMOAA PELAAJAN NÄKYMÄN KAMERARAJAN (29.9.2026 klo 23.12)
 
 Linssiseppä 29.9.2026 klo 23.12: juurisyy PeliOhjain antoi PalloKierrolle MaailmaTila = MaailmaNakyma, jolloin Näytä huntu palautti saapumismaan zoomikaton ja panorajan. Korjaus ee5f2876 (1.0.58, Natiivisepän merge): MaailmaTila = Maailma, liike ja zoomi vapaat koko pallolla; huntu, himmeät ja kaupunkirajaus kytkimen mukaan. Omistajan 23.1x-linjaus kumoaa 8530c3d4:n linjauksen "rajat, zoomi kuten pelaajalla" hunnun osalta.
+
+## OMISTAJA: 3D-NOSTOT JA -SYMBOLIT POIS, 2D TAKAISIN (29.9.2026 klo 23.24)
+
+Omistaja 29.9.2026 klo 23.24 (iPad, Italia): "Pakko ottaa 3D nostot ja symbolit pois, eivät vain toimi ja palauttaa 2d takaisin." Kumoaa 27.–28.9. 3D-symbolien ja erikoismallien (Kronborg, Malbork, Olavinlinna jne.) oletuksen kartalla: natiivissa 2D-nostot ja -symbolit kuten ennen 3D:tä (webin malli); 3D-koodi jää kehittäjäkomennon taakse (Linssiseppä, merge Natiivisepälle). Elävän linnan dioraama (Poikkileikkaus-linssi) ei kuulu tähän. Samalla kysymys hunnutetun alueen laattakuvioista → Karttaseppä selvittää.
