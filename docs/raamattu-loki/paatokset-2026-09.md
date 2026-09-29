@@ -9259,3 +9259,7 @@ Omistaja 29.9.2026 klo 19.2x: "Ei tehdä jatkossa mitään linssejä webbiin, jo
 ## OMISTAJA: PULUN CHATIN YLÄREUNAAN ÄÄNIKONTROLLIT, NAPIT IKONEIKSI (29.9.2026 klo 19.24)
 
 Omistaja 29.9.2026: "pulun chattiin pitää saada samat äänikontrollit ja asetusten säädöt kuin nostoissa. ne voisivat tulla chat ikkunan yläreunaan. muuta samalla näytä puhekuplat sekä ehdota sisältöä napit ikoneiksi". Natiiviin Pelikoodarin ensimmäisenä natiivityönä (nostokortin komponentit uudelleen Natiivi-UI:lta); webiin web-jonon kautta.
+
+## PÄÄTOIMITTAJA: POLY HAVEN CC0 LINNAN 3D-MATERIAALEIHIN (OMISTAJAN VAHVISTUS AUKI) (29.9.2026 klo 19.26)
+
+29.9.2026: Linnanrakentaja käyttää Olavinlinnan sisätiloissa Poly Havenin CC0-PBR-tekstuureja ja -malleja (ei Commonsista). Päätoimittaja hyväksyi väliaikaisesti: CC0 vastaa PD:tä, lisenssi tarkistetaan jokaisesta assetista ja kirjataan lähde + lisenssi manifestiin ja tekijätietoihin. Samoin ulkokuoren Senaatti-kiinteistöjen fotogrammetriamalli (Sketchfab, CC BY 4.0) tekijämaininnalla. CLAUDE.md:n sääntö "PD/CC, tarkistettuina Commonsista" — omistajan vahvistus pyydetty 29.9.
