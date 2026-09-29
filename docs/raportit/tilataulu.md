@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 10:49:** Levy 102,83 Gi (10:45 dippi 101,5 Gi palautui; Devices 72,1 Gt, /private/tmp 23,1 Gt, proto-3d 50,8 Gt), muisti 62 % vapaa, kuorma 62/46/91, sim 1, GPU-chrome 0, wt/ 18 kohdetta 12 Gt. Roolit: vain Päätoimittaja käynnissä, muut levossa. Viimeisimmät kontekstit: Natiiviseppä 73 %, Natiivi-UI 70 % (ilmoitettu Päätoimittajalle), Linssiseppä 69 %. Juna: b13 HEAD 73e10f44 (10:39) kääntämättä 10 min, viimeksi käännetty cd78a365 10:04 (hälytysraja 30 min → 11:09). Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
+
 **Päivitetty 10:40:** Levy 102,70 Gi (hidas lasku ~0,8 Gi/10 min), /private/tmp 23,4 Gt, muisti 61 % vapaa, kuorma 41/93/143 (rauhoittunut), sim 0, GPU-chrome 0, wt/ 18 kohdetta 12 Gt. Roolit: käynnissä Linssiseppä 69 %, Natiivi-UI 68 % (molemmat juuri alle rajan, nousussa), Päätoimittaja; Natiiviseppä 73 % (ilmoitettu 10:31, nyt levossa); muut levossa. Juna OK: käännetty cd78a365 10:04. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
 
 **Päivitetty 10:31:** Levy 103,56 Gi (vakaa), /private/tmp 22,9 Gt, muisti 58 % vapaa, kuorma 85/181/194 (piikki laskenut, putki katkesi 10:27), sim 0, GPU-chrome 0, wt/ 18 kohdetta 12 Gt. Roolit: Natiiviseppä (konteksti 73 %, ilmoitettu Päätoimittajalle) ja Päätoimittaja käynnissä, muut levossa. Juna OK: käännetty cd78a365 10:04. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
