@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 13:22:** Levy 96,49 Gi (/private/tmp 24,6 Gt, wt/ 10 Gt), muisti 46 % vapaa, kuorma 45/57/74, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: kaikki levossa (Linnanrakentaja päättyi 13.13Z→ei käynnissä). Viikkolimit 90 % (5 h 6 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Postilaatikko: uusin fda242204, ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
+
 **Päivitetty 13:11:** Levy 95,79 Gi (/private/tmp 24,5 Gt, wt/ 10 Gt), muisti 61 % vapaa, kuorma 29/48/92, sim 0, GPU-chrome 0, wt/ 12 kohdetta. Roolit: vain Linnanrakentaja käynnissä; muut levossa (Karttaseppä 70 % ilmoitettu, Natiivi-UI 71 %, Linssiseppä 69 %). Viikkolimit 90 % (5 h 5 %); 94/97 %-valvonta käynnissä (~1 %/5 min → 94 % noin 13.35–13.50). Juna: b13 HEAD 73cdb113 sisältyy käännettyyn 39fc303b. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
 
 **Päivitetty 13:02:** Levy 96,56 Gi (nousi 94,6:sta; /private/tmp 24,4 Gt, wt/ 11 Gt), muisti 55 % vapaa, kuorma 47/139/147 (laski alle 200; 3. peräkkäinen >200 ilmoitettu 12:57), sim 0, GPU-chrome 0, wt/ 13 kohdetta. Roolit: vain Julkaisija käynnissä (62 % / 1 M); muut levossa (Karttaseppä 70 % ilmoitettu, Natiivi-UI 71 %, Linssiseppä 69 %). Viikkolimit 89 % (5 h 3 %); 94/97 %-valvonta käynnissä. Juna: b13 HEAD 73cdb113 (12:17, radio-virta-merge) sisältyy käännettyyn 39fc303b (12:44), ei kääntämätöntä. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
