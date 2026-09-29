@@ -281,7 +281,7 @@ test('Oma sijainti: haeOmaSijainti hakee, kääntää alpha2→alpha3 ja hakee p
   const ikkunaOk = { fetch: async () => ({ ok: true, text: async () => 'ip=1.2.3.4\nloc=IT\n' }) };
   const oma = await haeOmaSijainti({ ikkuna: ikkunaOk, tuoMaakartat });
   assert.deepEqual(oma, {
-    tunnus: 'oma', nimi: 'Oma sijainti', lat: 41.9, lon: 12.5, oikeaLat: 41.9, oikeaLon: 12.5, maa: 'Rooma',
+    tunnus: 'oma', nimi: 'Oma sijainti · Italia', lat: 41.9, lon: 12.5, oikeaLat: 41.9, oikeaLon: 12.5, maa: 'Italia',
   });
   // Ei fetch-funktiota (esim. hyvin vanha ympäristö tai testi-ikkuna).
   assert.equal(await haeOmaSijainti({ ikkuna: {}, tuoMaakartat }), null);
@@ -301,7 +301,7 @@ test('Oma sijainti: haeOmaSijainti hakee, kääntää alpha2→alpha3 ja hakee p
     tuoMaakartat: async () => ({ MAAKARTAT: pohjoinenMaakartat }),
   });
   assert.deepEqual(pohjoinen, {
-    tunnus: 'oma', nimi: 'Oma sijainti', lat: 51, lon: 18.96, oikeaLat: 69.65, oikeaLon: 18.96, maa: 'Tromssa',
+    tunnus: 'oma', nimi: 'Oma sijainti · Norja', lat: 51, lon: 18.96, oikeaLat: 69.65, oikeaLon: 18.96, maa: 'Norja',
   });
 });
 
