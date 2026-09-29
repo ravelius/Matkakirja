@@ -14,13 +14,15 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void UlkonaKatsooRadanSivulleLaatatPiirtyvat()
         {
             var k = IssKuvakulma.Ulkona(Iss);
-            // 45° alas 420 km:stä: kohteen zeniittikulma asin(6791/6371 · sin 45°) = 48,9°; laite 29.9.: yli ~55° ei piirrä laattoja.
-            Oleta.Tosi(Math.Abs(k.Kallistus - 48.9) < 0.2, "kallistus noin 49°: " + k);
-            Oleta.Tosi(k.Kallistus < 55, "kallistus alle 55°");
+            // 30° alas 420 km:stä: kohteen zeniittikulma asin(6791/6371 · sin 60°) = 67,4° (laite 29.9. kavely2: laatat piirtyvät
+            // kentällä 70°; pitkällä objektiivilla yli ~55° ei piirtynyt). 45°: 48,9°.
+            Oleta.Tosi(Math.Abs(IssKuvakulma.UlkonaKatseAlas - 30) < 1e-9, "oletus 30°");
+            Oleta.Tosi(Math.Abs(k.Kallistus - 67.4) < 0.2, "kallistus noin 67°: " + k);
+            Oleta.Tosi(Math.Abs(IssKuvakulma.Ikkuna(Iss, 45).Kallistus - 48.9) < 0.2, "45°: 48,9°");
             double suunta = IssKuvakulma.Suunta(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon);
             Oleta.Tosi(Math.Abs(((suunta - (Iss.Suuntima + 90)) % 360 + 540) % 360 - 180) < 0.01, $"radan oikealle puolelle: {suunta:0.00}°");
             // Sama kaava kuin ikkunassa: silmä ISS:ssä (etäisyys ja keskuskulma kolmiosta).
-            var ikkuna = IssKuvakulma.Ikkuna(new IssHetki(Iss.Paikka, Iss.KorkeusM, Iss.Suuntima + 90), 45);
+            var ikkuna = IssKuvakulma.Ikkuna(new IssHetki(Iss.Paikka, Iss.KorkeusM, Iss.Suuntima + 90), IssKuvakulma.UlkonaKatseAlas);
             Oleta.Tosi(Math.Abs(ikkuna.EtaisyysM - k.EtaisyysM) < 1 && Math.Abs(ikkuna.Kallistus - k.Kallistus) < 1e-9, "Ikkunan kaava");
         }
 
@@ -158,6 +160,29 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("alpit", l?.Kohde.Tunnus);
             Oleta.Tosi(l.Value.Km > 150 && l.Value.Km < 250, $"{l.Value.Km:0} km");
             Oleta.Tosi(Avaruuskavely.LahinKohde(null, 0, 0) == null, "ei kohteita");
+        }
+
+        [Testi] static void KohtiAurinkoaJaSuunnanOhitus()
+        {
+            var k = IssKuvakulma.Ulkona(Iss, 200);
+            double suunta = IssKuvakulma.Suunta(Iss.Paikka.Lat, Iss.Paikka.Lon, k.Lat, k.Lon);
+            Oleta.Tosi(Math.Abs(suunta - 200) < 0.01, $"annettu suunta: {suunta:0.00}");
+            // Auringon suunta alapisteestä osoittaa alihajapisteeseen.
+            var t = new DateTime(2026, 9, 29, 6, 0, 0, DateTimeKind.Utc);
+            var p = IssNyt.Paikka(t);
+            Aurinko.Alihajapiste(Aika.Jd(t), out double alat, out double alon);
+            Oleta.Tosi(Math.Abs(Avaruuskavely.AuringonSuunta(t) - IssKuvakulma.Suunta(p.Lat, p.Lon, alat, alon)) < 1e-9, "auringon suunta");
+        }
+
+        [Testi] static void ReunavaloVoimakasVainNousussa()
+        {
+            var alku = new DateTime(2026, 9, 29, 6, 0, 0, DateTimeKind.Utc);
+            var n = Avaruuskavely.SeuraavaNousu(alku).Value;
+            Oleta.Tosi(Avaruuskavely.ReunaValo(n.AddSeconds(-30)) < 0.01, "varjossa ei reunavaloa");
+            double nousussa = Avaruuskavely.ReunaValo(n.AddSeconds(10));
+            Oleta.Tosi(nousussa > 0.8, $"nousun jälkeen voimakas: {nousussa:0.00}");
+            double myohemmin = Avaruuskavely.ReunaValo(n.AddMinutes(10));
+            Oleta.Tosi(Math.Abs(myohemmin - Avaruuskavely.ReunaPohja) < 0.01, $"päivällä pohja: {myohemmin:0.00}");
         }
 
         [Testi] static void RepliikitIlmanTageja()

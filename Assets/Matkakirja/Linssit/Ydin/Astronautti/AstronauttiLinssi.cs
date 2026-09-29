@@ -340,6 +340,13 @@ namespace Matkakirja.Linssit.Astronautti
                     if (kelaus.HasValue) Iss.IssNyt.Simu.KelaaHetkeen(kelaus.Value, vahennetty: y.VahennettyLiike);
                     break;
                 }
+                case Iss.KavelynVaihe.Pulu:
+                    // Aurinko nousee Pulun repliikin ajan nopeutettuna (valo ehtii maahan), kuvasta eteenpäin 1×.
+                    if (!y.VahennettyLiike) Iss.IssNyt.Simu.AsetaKerroin(Iss.Avaruuskavely.NousuKerroin);
+                    break;
+                case Iss.KavelynVaihe.Kuva:
+                    if (!Iss.IssNyt.Simu.Live && !Iss.IssNyt.Simu.Kelaa) Iss.IssNyt.Simu.AsetaKerroin(1);
+                    break;
                 case Iss.KavelynVaihe.Vertailu:
                 {
                     var p = Iss.IssNyt.Paikka(Iss.IssNyt.Kello());

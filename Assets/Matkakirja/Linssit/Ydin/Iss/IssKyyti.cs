@@ -175,8 +175,12 @@ namespace Matkakirja.Linssit.Iss
 
         /// <summary>Ulkona: katse radan suunnasta näin monta astetta oikealle (sivulle), vaakatason alapuolelle ja kenttäkulma.</summary>
         public const double UlkonaSivulle = 90, UlkonaKentta = 70;
-        /// <summary>Ulkona katse alas (°); A/B `astro kavely alas <aste>` (Codexin kerroksissa horisontti ~45 % ruudun korkeudesta).</summary>
-        public static double UlkonaKatseAlas = 45;
+        /// <summary>
+        /// Ulkona katse alas (°): 30 = horisontti ~40 % ruudun korkeudesta kuten Codexin kerroksissa (45 %); kohteen zeniittikulma
+        /// 67°, laatat piirtyvät (laite 29.9. kavely2 A/B 45 | 30, kenttä 70°; pitkällä objektiivilla yli ~55° ei piirtynyt).
+        /// A/B `astro kavely alas <aste>`.
+        /// </summary>
+        public static double UlkonaKatseAlas = 30;
 
         /// <summary>
         /// Ulkona (avaruuskävely): Ikkunan kaava radan sivulle. 420 km, 45° alas: kohteen zeniittikulma ζ = asin(6 791 / 6 371 ·

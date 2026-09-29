@@ -139,6 +139,25 @@ namespace Matkakirja.Linssit.Iss
             return s + Math.Sqrt(Math.Max(0, 1 - q * q));
         }
 
+        /// <summary>
+        /// Pulun vaiheessa aurinko nousee nopeutettuna (×): 9,5 s × 24 ≈ 4 min, jolloin valo ehtii horisontista maahan päin
+        /// (ISS:n nousun hetkellä maa alla on vielä yötä, aurinko 20° horisontin alla; laite 29.9. kavely2). Kuvasta eteenpäin 1×.
+        /// </summary>
+        public const double NousuKerroin = 24;
+        /// <summary>
+        /// Etualan reunavalo (Codexin valo-*-kerrokset, oranssi viiva siluetin reunassa): voimakas auringonnousun matalassa valossa
+        /// ja heikko muulloin (laite kavely2: koko päivän täydellä voimalla sädekehä). ReunaValo = aurinko × (pohja + (1 − pohja) ×
+        /// max(0, 1 − valoisuus / ReunaKaista)); kaista 0,05 ≈ 45 s ISS:n nousun jälkeen.
+        /// </summary>
+        public const double ReunaPohja = 0.2, ReunaKaista = 0.05;
+
+        public static double ReunaValo(DateTime utc)
+        {
+            double v = Valoisuus(utc, IssNyt.Paikka(utc), IssNyt.KorkeusKm(utc));
+            double a = Aurinkoisuus(utc);
+            return a * (ReunaPohja + (1 - ReunaPohja) * Math.Max(0, Math.Min(1, 1 - v / ReunaKaista)));
+        }
+
         /// <summary>Katsotaanko ulkona kohti aurinkoa (true, oletus) vai radan sivulle (A/B `astro kavely suunta aurinko|sivu`).</summary>
         public static bool KohtiAurinkoa = true;
 

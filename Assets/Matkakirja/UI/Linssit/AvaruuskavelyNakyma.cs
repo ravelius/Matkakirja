@@ -215,7 +215,8 @@ namespace Matkakirja.Natiivi
             float s = Mathf.Lerp(Varjossa, 1f, sun);
             var savy = new Color(s, s, Mathf.Lerp(Varjossa * 1.25f, 1f, sun), 1f);
             foreach (var e in perus) e.style.unityBackgroundImageTintColor = savy;
-            foreach (var e in valot) e.style.opacity = sun * ValoMax;
+            float reuna = (float)Avaruuskavely.ReunaValo(IssNyt.Kello());
+            foreach (var e in valot) e.style.opacity = reuna * ValoMax;
         }
 
         static float Pehmea(float x) => x * x * (3 - 2 * x);
