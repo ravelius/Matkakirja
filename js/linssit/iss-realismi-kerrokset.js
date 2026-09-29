@@ -85,7 +85,7 @@ void main() {
 /* ─────────────────────────── YÖKUORI ─────────────────────────── */
 
 const YOKUORI_FRAGMENT = `
-uniform float uOsuus, uPeitto, uR, uValot, uMaaVoima, uKiilto, uAalto, uVarjo, uYoVesi, uPilvetOn, uPilviPeitto;
+uniform float uOsuus, uPeitto, uR, uValot, uMaaVoima, uKiilto, uAalto, uVarjo, uYoVesi, uPilvetOn, uPilviPeitto, uPilviKarsinta;
 uniform vec3 uVari, uAurinko;
 uniform vec4 uEuRaja;
 uniform sampler2D uValotEu, uValotMaa, uVesiEu, uVesiMaa, uPilvet;
@@ -124,7 +124,11 @@ void main() {
   // Päivän pilvet peittävät valot ja heijastuksen (natiivi 2eb8a5d0): pilvikuoren kuva, tasakulmainen, v = 0 etelässä.
   // Himmennys seuraa pilvikuoren nykyistä peittoa (natiivi e6e0ef61): pilvet pois → valot ilman himmennystä.
   // Bias −16 = tason 0 näyte kuten natiivin LOD 0: atan-sauma ±180°:ssa ei valitse pienintä mip-tasoa.
-  float pilvi = uPilvetOn * uPilviPeitto * texture2D(uPilvet, vec2(lon / 6.2831853 + 0.5, asin(clamp(ng.y, -1.0, 1.0)) / 3.14159265 + 0.5), -16.0).r;
+  // KARSITTU PILVI EI HIMMENNÄ YÖVALOJA (ISS-säätöpaneeli, Siirtoseppä 29.9.2026): pilvet-kerros antaa oman
+  // karsintarajansa (pilvikuva-callback), ja alle rajan jäävä alfa vaimennetaan pois kapealla ±0,02 smoothstepillä.
+  float pilviAlfa = texture2D(uPilvet, vec2(lon / 6.2831853 + 0.5, asin(clamp(ng.y, -1.0, 1.0)) / 3.14159265 + 0.5), -16.0).r;
+  float pilviNaytto = smoothstep(uPilviKarsinta - 0.02, uPilviKarsinta + 0.02, pilviAlfa);
+  float pilvi = uPilvetOn * uPilviPeitto * pilviAlfa * pilviNaytto;
   float lapi = 1.0 - 0.85 * pilvi;
   vec3 savy = mix(vec3(1.0, 0.52, 0.2), vec3(1.0, 0.88, 0.7), clamp(l * 1.6, 0.0, 1.0));
   c += savy * l * uValot * yo(ng) * osuu * lapi;
@@ -241,11 +245,16 @@ void main() {
 // alle kahden pikselin oktaavit häipyvät), t = 0,5 + 0,36 tanh(0,8 f), smoothstep ±0,08, sekoitus näkyvän osuuden mukaan
 // ja kirkkaus × (1 + 0,05 · kahden alimman oktaavin vaihtelu). Kokonaislukuhajautus (WebGL2), ei sin-hashia.
 const PILVET_FRAGMENT = `
-uniform float uOsuus, uPeitto, uYo, uTarkkuus, uTarkkuusKm, uKynnys;
+uniform float uOsuus, uPeitto, uYo, uTarkkuus, uTarkkuusKm, uKynnys, uKarsinta;
 uniform vec3 uAurinko;
 uniform vec4 uTekseli;
 uniform sampler2D uKuva;
 varying vec3 vMaailma;
+
+// PILVIPEITON KARSINTA (ISS-säätöpaneeli, Siirtoseppä 29.9.2026): pilvimäärä-liuku 0…1 (oletus 1 = nyt) asettaa
+// uKarsinta = 1 − pilvimäärä. Näyte alle karsintarajan häviää heti näytteen jälkeen, kapealla ±0,02 smoothstepillä
+// ettei reuna sahaa; oletus 0 = ei karsintaa.
+float karsi(float a0) { return a0 * smoothstep(uKarsinta - 0.02, uKarsinta + 0.02, a0); }
 
 uint hajautus(ivec3 k) {
   uint h = (uint(k.x) * 0x8da6b343u) ^ (uint(k.y) * 0xd8163841u) ^ (uint(k.z) * 0xcb1ab31fu);
@@ -289,7 +298,7 @@ float tarkatPilvet(vec3 n, vec2 uv, out float vaihtelu) {
   vec2 t0 = (ix - 0.5 + w1 / g0) * uTekseli.xy, t1 = (ix + 1.5 + w3 / g1) * uTekseli.xy;
   vec4 c = g0.y * (g0.x * textureGrad(uKuva, vec2(t0.x, t0.y), dx, dy) + g1.x * textureGrad(uKuva, vec2(t1.x, t0.y), dx, dy))
          + g1.y * (g0.x * textureGrad(uKuva, vec2(t0.x, t1.y), dx, dy) + g1.x * textureGrad(uKuva, vec2(t1.x, t1.y), dx, dy));
-  float a0 = clamp(c.r, 0.0, 1.0);
+  float a0 = karsi(clamp(c.r, 0.0, 1.0));
 
   float h[5];
   float kaikki = 0.0, nakyva = 0.0, amp = 1.0, taaj = 1.0;
@@ -322,7 +331,7 @@ void main() {
   vec3 n = normalize(vMaailma);
   vec2 uv = vec2(atan(n.x, n.z) / 6.2831853 + 0.5, asin(clamp(n.y, -1.0, 1.0)) / 3.14159265 + 0.5);
   float vaihtelu = 0.0;
-  float a = uTarkkuus > 0.0 ? tarkatPilvet(n, uv, vaihtelu) : texture2D(uKuva, uv).r;
+  float a = uTarkkuus > 0.0 ? tarkatPilvet(n, uv, vaihtelu) : karsi(texture2D(uKuva, uv).r);
   // Yksikanavainen kuva (R = alfa): sävy natiivin Pilvikuva.Alfan kaavalla 226 + 29 · lum, lum alfasta takaisin.
   float lum = uKynnys + (1.0 - uKynnys) * pow(a, 1.0 / 0.85);
   float savy = (226.0 + 29.0 * lum) / 255.0;
@@ -393,7 +402,7 @@ export function yokuori({
         uVarjo: { value: arvot.varjo }, uYoVesi: { value: arvot.yoVesi }, uVari: { value: vec3(y, arvot.vari) },
         uAurinko: { value: vec3(y, [1, 0, 0]) }, uEuRaja: { value: null },
         uValotEu: { value: null }, uValotMaa: { value: null }, uVesiEu: { value: null }, uVesiMaa: { value: null },
-        uPilvet: { value: null }, uPilvetOn: { value: 0 }, uPilviPeitto: { value: 0 },
+        uPilvet: { value: null }, uPilvetOn: { value: 0 }, uPilviPeitto: { value: 0 }, uPilviKarsinta: { value: 0 },
       };
       const [a, b, c, d] = arvot.euRaja;
       u.uEuRaja.value = { x: a, y: b, z: c, w: d };
@@ -421,6 +430,7 @@ export function yokuori({
       u.uPilvet.value = pk?.kuva ?? null;
       u.uPilvetOn.value = pk ? 1 : 0;
       u.uPilviPeitto.value = pk?.peitto ?? 0;
+      u.uPilviKarsinta.value = pk?.karsinta ?? 0;
       aurinkoUniform(mesh.material, k.aurinko);
     },
     pura() {
@@ -520,8 +530,12 @@ export function revontulet({ ikkuna = globalThis, lahde = LAHTEET.revontulet, ar
 /** Päivän pilvet: data/pilvet/uusin.png → kangas (pilvikuvanAlfa) → kuori 8 km:ssä kyydin ajan. */
 export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PILVET, jarjestys = JARJESTYS.pilvet } = {}) {
   let mesh = null; let valmis = false; let T = null; let haettu = false;
-  /** A/B: pilvet 0|1, tarkat 0|1, tarkkuusKm = kohinan pohja-aallonpituus (natiivi `astro kyyti tarkat 0|1|<km>`). */
-  const ab = { pilvet: 1, tarkat: 1, tarkkuusKm: arvot.tarkkuusKm };
+  /*
+   * A/B: pilvet 0|1, tarkat 0|1, tarkkuusKm = kohinan pohja-aallonpituus (natiivi `astro kyyti tarkat 0|1|<km>`).
+   * maara = ISS-säätöpaneelin "Pilvipeitto"-liuku (Siirtoseppä 29.9.2026, omistajan asettelumuutos): 0…1, oletus
+   * 1 = nyt (ei karsintaa). Karsinta = 1 − maara asetetaan uKarsinta-uniformiin joka kehys (paivita).
+   */
+  const ab = { pilvet: 1, tarkat: 1, tarkkuusKm: arvot.tarkkuusKm, maara: 1 };
   const hae = () => {
     if (haettu || !T || !mesh) return;
     haettu = true;
@@ -556,6 +570,7 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       const u = { uOsuus: { value: 0 }, uPeitto: { value: arvot.peitto ?? PILVIEN_PEITTO }, uKuva: { value: null },
         uYo: { value: arvot.yo ?? 0.04 }, uAurinko: { value: vec3(y, [1, 0, 0]) },
         uTarkkuus: { value: 1 }, uTarkkuusKm: { value: arvot.tarkkuusKm }, uKynnys: { value: PILVIEN_KUVAN_KYNNYS },
+        uKarsinta: { value: 0 },
         uTekseli: { value: { x: 1 / arvot.leveys, y: 1 / arvot.korkeusPx, z: arvot.leveys, w: arvot.korkeusPx } } };
       mesh = kuori(y, { sade: 1 + arvot.korkeus / MAAN_SADE_M, fragment: PILVET_FRAGMENT, uniformit: u, jarjestys });
       T = tekstuuriLuokka(y.pallo);
@@ -569,6 +584,7 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       mesh.material.uniforms.uOsuus.value = k.osuus;
       mesh.material.uniforms.uTarkkuus.value = ab.tarkat > 0 ? 1 : 0;
       mesh.material.uniforms.uTarkkuusKm.value = ab.tarkkuusKm;
+      mesh.material.uniforms.uKarsinta.value = Math.max(0, Math.min(1, 1 - ab.maara));
       aurinkoUniform(mesh.material, k.aurinko);
     },
     pura() {
@@ -577,11 +593,14 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
       mesh.parent?.remove(mesh); mesh.geometry.dispose?.(); mesh.material.dispose?.(); mesh = null; valmis = false; haettu = false;
     },
     tila: () => ({ valmis, nakyy: Boolean(mesh?.visible) }),
-    /** Pilvikuva ja nykyinen peitto (peitto × osuus) muille kerroksille (yökuori), kun pilvet näkyvät; muuten null. */
+    /**
+     * Pilvikuva, nykyinen peitto (peitto × osuus) ja karsinta muille kerroksille (yökuori), kun pilvet näkyvät;
+     * muuten null. Karsittu pilvi ei saa himmentää yövaloja (YOKUORI_FRAGMENT uPilviKarsinta).
+     */
     kuva: () => {
       if (!mesh?.visible) return null;
       const u = mesh.material.uniforms;
-      return { kuva: u.uKuva.value, peitto: u.uPeitto.value * u.uOsuus.value };
+      return { kuva: u.uKuva.value, peitto: u.uPeitto.value * u.uOsuus.value, karsinta: u.uKarsinta.value };
     },
   };
 }
