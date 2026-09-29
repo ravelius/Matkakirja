@@ -106,6 +106,7 @@
 //   ui lippu [ISO3]                           lipun tarina (oletus FIN; skeema 1.15 maat.lipputarina)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
+//   ui maakunnat sulje                        auki oleva maakuntakortti tai lappu kiinni (sulkuanimaatio)
 //   ui maakunnat kysymys [n]                  auki olevan kortin n:s kysymys auki/kiinni; kortin reunat ja vieritys 300 ms päästä
 //   ui pulu tekstit piiloon|nakyviin|auto | ui pulu napauta   löydös 21: repliikkien tekstit / piilotettu kuplaksi
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
@@ -1000,6 +1001,10 @@ namespace Matkakirja.Natiivi
                         case "pois": OfflineTilaUi.TestiLataus.Lopeta(); ui.OfflineTila.TestaaVerkoton(null); return null;
                         default: return "ui offline demo|verkoton|verkko|pois";
                     }
+                case "maakunnat" when loput == "sulje":
+                    // Sulkuanimaation video (omistaja 29.9.): auki oleva kortti, muuten lappu (kuten ✕).
+                    if (ui.Karttaselite.Maakunnat.KorttiAuki) ui.Karttaselite.Maakunnat.SuljeKortti(); else ui.Karttaselite.Sulje();
+                    return null;
                 case "maakunnat" when loput.StartsWith("kysymys"):
                 {
                     // Kortin kysymys auki/kiinni (omistaja 29.9.: koko ei saa muuttua): kortin reunat ja vieritys lokiin.
