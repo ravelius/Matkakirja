@@ -1,4 +1,4 @@
-# Natiivisepän aloitusviesti (29.9.2026 klo 10.5x, nollaus luovutuksesta -20260929)
+# Natiivisepän aloitusviesti (29.9.2026 klo 12.5x, BUILD 48; nollaus luovutuksesta -20260929)
 
 Olet Natiiviseppä (Opus, max), Macin käyttäjä koodaus. Checkout on /Users/Shared/Claude/Matkakirja-3d-selvittaja ja proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutuksesi KOKONAAN:
@@ -11,19 +11,14 @@ Päiväsääntö 29.9. (normaalit säännöt palaavat 30.9. klo 00):
 - Käännökset nice 15, yksi kerrallaan.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)".
 
-## KÄRKI: 1.0.48-juna → BUILD 48
-juna/b13 c1117fe9 = master 329ffaf0 (BUILD 47) + natiivi-ui/pelaajan-nakyma 9652f810 (kehittäjän maailmatilan silmänappi). Juna avattiin
-12.0x Julkaisijan luvalla, testit exit 0 (0/401/357/425), ja vahti kääntää sen Linnanrakentajan jälkeen. Seuraa juna.logia
-(KÄÄNNETTY/VIKA). Sitten Laitetestaajalle savuke (maailmatila, silmänappi, himmeät kaupungit ja maailmahyppy) → PASS → BUILD 48 =
-`git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto merge --no-ff c1117fe9` masteriin (329ffaf0). Tarkista, että puu = käännös,
-ja lähetä SHA:t. Poista sivuhaara natiiviseppa/juna-1048.
-Linssiseppä 2:n avaruuskävely TULI juuri ennen nollausta: proto linssiseppa2/avaruuskavely bdea89bf. Siinä on 6 committia masterin
-329ffaf0 päälle ja metat mukana, noin 28 Mt PNG (ASTC max 4096) ja WAV ADPCM. Linssit 419/419, unity 0, laite 8affab73 (F2D9B022 ja
-4CE6C737), omistajan hyväksyntä Päätoimittajan kautta. Kuittaa Linssiseppä 2:lle, että pyyntö on vastaanotettu. Kokoa se sivuhaaraan, testaa ja lisää junaan
-Julkaisijan luvalla. Jos 1.0.48 on jo savukkeessa, avaruuskävely menee 1.0.49:ään. AstronautinNakyma.cs:ssä on triviaali ristiriita
-Pulun taulun kanssa: pidä molemmat.
-TF: VIE annettiin vain 1.0.47:lle (329ffaf0), koska se sisältää 1.0.45:n ja 1.0.46:n. Vie aina oman BUILDin SHA:lla.
+## KÄRKI: BUILD 48 valmis, juna tyhjä (29.9. klo 12.5x)
+**BUILD 48 = proto master 1c4a7eff** (juna 73cdb113, käännös 39fc303b; Laitetestaaja c27e1fc 5/5 PASS). Sisältö: BUILD 47 329ffaf0
++ natiivi-ui/pelaajan-nakyma 9652f810 + linssiseppa2/avaruuskavely bdea89bf + linssiseppa2/radio-virta b68dcdd3. SHA:t on lähetetty
+Julkaisijalle ja Päätoimittajalle, sivuhaara natiiviseppa/juna-1048 on poistettu. Seuraava sisältö kootaan sivuhaaraan
+natiiviseppa/juna-1049 master 1c4a7eff:stä → testit → junaan Julkaisijan luvalla.
+TF: VIE annettiin 1.0.47:lle (329ffaf0), ja 1.0.48 = 1c4a7eff odottaa VIE:tä. Vie aina oman BUILDin SHA:lla.
 Burst-korjaus on todennettu: ajastin ohitti 12.01 jonon aikana käännetyn junan.
+Tulossa: natiivi-ui/pillerivalikko (työn alla) ja Linnanrakentajan dioraama (Aanisoitin-osa katsotaan merge-pyynnössä).
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain, kun erä on valmis, olet jumissa tai sinulla on kysymys (enintään 8 riviä), SendMessage nimellä.
