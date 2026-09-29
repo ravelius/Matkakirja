@@ -53,6 +53,12 @@ namespace Matkakirja.Linssit.Astronautti
     /// <summary>Tervetulon repliikit, jakso ja vakiot (web pulu-tervetulo.js ja pulu-iss.js, kultaiset/pulu-iss.json).</summary>
     public static class PulunIss
     {
+        /// <summary>
+        /// TERVETULO POIS KÄYTÖSTÄ (omistaja 29.9.2026: "Ota pulun ääni toistaiseksi kokonaan pois ISS-kohtauksesta."; web
+        /// PULUN_TERVETULO_KAYTOSSA): linssin avaus ei aloita jaksoa, ja Pulun taulu aukeaa heti hiljaisena. Jakso jää valmiiksi
+        /// (testit ja testikomento `ui linssi tervetulo aloita` ajavat sen suoraan).
+        /// </summary>
+        public const bool Kaytossa = false;
         /// <summary>Laitteen muistin avain: tervetulo on kuultu (web PULUN_TERVETULO_TALLE, sama nimi PlayerPrefsissä).</summary>
         public const string TalleAvain = "matkakirja-pulu-astro-tervetulo";
         public const double TervetulonViiveMs = 900, KyselyMs = 250, KattoMs = 20000, HengahdysMs = 400, VaraMs = 2000;

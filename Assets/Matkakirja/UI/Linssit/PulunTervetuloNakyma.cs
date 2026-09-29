@@ -43,10 +43,11 @@ namespace Matkakirja.Natiivi
 
         static AstronauttiLinssi Linssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
 
-        /// <summary>Linssi avattiin: tervetulo, jos sen aika on.</summary>
-        public void Aloita()
+        /// <summary>Linssi avattiin: tervetulo, jos sen aika on ja se on käytössä (PulunIss.Kaytossa; pakota = testikomento).</summary>
+        public void Aloita(bool pakota = false)
         {
             Pura();
+            if (!PulunIss.Kaytossa && !pakota) return;
             jakso = PulunTervetulo.Aloita(this);
             if (jakso == null) return;
             Esilataa(0);
@@ -169,7 +170,7 @@ namespace Matkakirja.Natiivi
             switch (a1)
             {
                 case "nollaa": PlayerPrefs.DeleteKey(PulunIss.TalleAvain); PlayerPrefs.Save(); break;
-                case "aloita": PlayerPrefs.DeleteKey(PulunIss.TalleAvain); Aloita(); break;
+                case "aloita": PlayerPrefs.DeleteKey(PulunIss.TalleAvain); Aloita(pakota: true); break;
                 case "ohita": jakso?.Napautus(); break;
                 case "pura": Pura(); break;
             }

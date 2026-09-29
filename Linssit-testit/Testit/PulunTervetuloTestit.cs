@@ -85,6 +85,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(v.GetProperty("varaMs").GetDouble(), PulunIss.VaraMs);
         }
 
+        [Testi] static void PoisKaytostaOmistajan29_9Mukaan()
+        {
+            // Omistaja 29.9.2026: Pulun ääni toistaiseksi kokonaan pois ISS-kohtauksesta (web PULUN_TERVETULO_KAYTOSSA = false).
+            Oleta.Tosi(!PulunIss.Kaytossa);
+        }
+
         [Testi] static void A1JaA2Jarjestyksessa()
         {
             var v = Aloita();
