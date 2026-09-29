@@ -1,4 +1,6 @@
-// OLAVINLINNA / fatabuuri: Kellotornin pohjakerros (torni [−30, 0, −20], sisäsäde 5,5), y 0…4,5; holvattu varasto.
+// OLAVINLINNA / fatabuuri: Kellotornin pohjakerros (torni [−30, 0, −20], sisäsäde 5,5), y 0…4,5; holvattu vaate- ja
+// tavara-aitta (Sisältökirjuri 29.9. era4: fatabuuri = vaate- ja tavara-aitta, arvotavaran varasto, EI ruokavarasto;
+// Päätoimittajan päätös: arkut, kangaspakat, vaatteet orsilla, kalusto, hoitajan kirjanpito; voudin sinetti arkussa).
 // Erä 3 (docs/raportit/dioraama-rajapinnat-era3-20260929.md). Taulun faktat: Sisältökirjuri 29.9.
 // (docs/raportit/sisaltokirjuri-olavinlinna-era3-20260929.md); tila 'luonnos' kunnes äänet ja tarkistus valmiit.
 //
@@ -32,25 +34,28 @@ const TAULU = {
   ],
 };
 
-// Hahmot: hoitaja kiertää varastoa pulpetin ja hyllyjen välillä, tynnyrintekijä korjaa tynnyriä läntisellä laidalla.
+// Hahmot (erä 2, 29.9.): aitan hoitaja kirjaa tavaraa pulpetilla (kirjuri-1500, Päätoimittaja), renki kantaa
+// kangaspakkoja arkuilta itäseinän pinoihin. Repliikit luonnos (Päätoimittaja tarkistaa); Pulun reaktiot paikkamerkkejä.
+const PULU_PAIKKAMERKKI = 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)';
 const HAHMOT = [
   {
-    id: 'fatabuurinhoitaja', henkilo: 'fatabuurinhoitaja-1500', paikka: pol(318, 2.9), suunta: 318, peilattu: false,
+    id: 'hoitaja', henkilo: 'kirjuri-1500', paikka: pol(312, 3.95), suunta: 312, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'fatabuurinhoitaja-1', teksti: 'Kaksisataakaksikymmentäyhdeksän kalapäivää vuodessa. Tynnyrit eivät riitä ilman minua.' },
-      { id: 'fatabuurinhoitaja-2', teksti: 'Jokainen tynnyri kirjaan, jokainen säkki myös. Rotta ei kirjaa, se vain syö.' },
+      { id: 'hoitaja-1', teksti: 'Kolme viittaa, kaksi villapaitaa, tusina tinakannuja. Kaikki kirjaan, muuten vouti kysyy.' },
+      { id: 'hoitaja-2', teksti: 'Arkkuihin ei kosketa ilman lupaa – täällä on linnan arvokkain tavara.' },
     ],
-    reaktio: { id: 'pulu-fatabuurinhoitaja-r1', teksti: 'Kaikki kirjattuna käsin! Meillä sama tehdään taulukolla, ja silti puuttuu aina yksi tynnyri.' },
+    reaktio: { id: 'pulu-hoitaja-r1', teksti: PULU_PAIKKAMERKKI },
   },
   {
-    id: 'tynnyrintekija', henkilo: 'tynnyrintekija-1500', paikka: pol(268, 2.6), suunta: 320, peilattu: false,
-    silmukka: 'tyo', heraa: 2, reitti: null,
+    id: 'renki', henkilo: 'renki-1500', paikka: pol(262, 2.4), suunta: 80, peilattu: false,
+    silmukka: 'kanto', heraa: 2,
+    reitti: { pisteet: [pol(262, 2.4), pol(200, 0.8), pol(75, 3.3), pol(200, 0.8), pol(262, 2.4)], nopeus: 0.7, tauko: 2 },
     repliikit: [
-      { id: 'tynnyrintekija-1', teksti: 'Tämä vanne löystyi suolasta. Olut ja suolakala syövät puuta, ei tynnyri ikuisesti kestä.' },
-      { id: 'tynnyrintekija-2', teksti: 'Hyvä tynnyri pitää oluen makeana ja voin vihreänä. Väelle riittää vihreä.' },
+      { id: 'renki-1', teksti: 'Kangaspakka painaa enemmän kuin näyttää. Kutojat eivät säästäneet lankaa.' },
+      { id: 'renki-2', teksti: 'Vaatteet kuivina ja koit poissa – siinä on aitan koko salaisuus.' },
     ],
-    reaktio: { id: 'pulu-tynnyrintekija-r1', teksti: 'Puinen tynnyri, käsin sidottu vanne. Muovia ei vielä keksitty, ja hyvä niin.' },
+    reaktio: { id: 'pulu-renki-r1', teksti: PULU_PAIKKAMERKKI },
   },
 ];
 
@@ -70,30 +75,33 @@ const RAKENNE = [
   },
 ];
 
-// Tynnyrit: rivi länsi- ja luoteisseinällä (r 4,95, tornin sisäsäde 5,5), pinoja ja toinen rivi edessä.
-const TYNNYRIT = [
-  [244, 0.38, 0.95], [255, 0.34, 0.85], [266, 0.4, 1.0], [277, 0.36, 0.9], [288, 0.35, 0.9],
-].map(([a, sade, korkeus]) => ({ resepti: 'tynnyri', paikka: pol(a, 4.95, Y), suunta: a * 3, sade, korkeus, segmentit: 16 }));
-const TYNNYRIT_PINO = [
-  { resepti: 'tynnyri', paikka: pol(255, 4.95, Y + 0.85), suunta: 20, sade: 0.3, korkeus: 0.7, segmentit: 14 },
-  { resepti: 'tynnyri', paikka: pol(266, 4.95, Y + 1.0), suunta: 50, sade: 0.31, korkeus: 0.72, segmentit: 14 },
-  { resepti: 'tynnyri', paikka: pol(248, 3.95, Y), suunta: 70, sade: 0.33, korkeus: 0.8, segmentit: 14 },
-  { resepti: 'tynnyri', paikka: pol(281, 3.95, Y), suunta: 130, sade: 0.34, korkeus: 0.85, segmentit: 14 },
-  { resepti: 'tynnyri', paikka: pol(238, 4.9, Y), suunta: 10, sade: 0.36, korkeus: 0.9, segmentit: 14 },
+// Arkut länsi- ja luoteisseinällä (r 4,9) etupuoli sisään, osa päällekkäin, ja kangaspakkoja arkkujen kansilla.
+const ARKUT = [
+  ...[[244, 0.9, 0.5, 0.55], [256, 1.0, 0.55, 0.6], [268, 0.9, 0.5, 0.55], [280, 0.8, 0.45, 0.5]].map(([a, leveys, syvyys, korkeus]) => (
+    { resepti: 'arkku', paikka: pol(a, 4.75, Y), suunta: a + 180, leveys, syvyys, korkeus })),
+  { resepti: 'arkku', paikka: pol(256, 4.8, Y + 0.6), suunta: 256 + 180 + 6, leveys: 0.75, syvyys: 0.42, korkeus: 0.45 },
+  { resepti: 'arkku', paikka: pol(268, 4.8, Y + 0.55), suunta: 268 + 180 - 5, leveys: 0.7, syvyys: 0.4, korkeus: 0.42 },
+  { resepti: 'kangaspakka', paikka: pol(244, 4.75, Y + 0.55), suunta: 244 + 90, pituus: 0.8, sade: 0.08, siemen: 11 },
+  { resepti: 'kangaspakka', paikka: pol(280, 4.75, Y + 0.5), suunta: 280 + 95, pituus: 0.7, sade: 0.085, siemen: 12 },
+  { resepti: 'vaatepino', paikka: pol(256, 4.8, Y + 1.05), suunta: 256 + 180, leveys: 0.4, syvyys: 0.3, kerroksia: 3, siemen: 13 },
 ];
 
-// Viljasäkit itäseinällä: alarivi, toinen ja kolmas kerros pyramidina + makaavia edessä.
-const SAKIT = [
-  ...[44, 54, 64, 74, 84].map((a, i) => ({ resepti: 'sakki', paikka: pol(a, 4.9, Y), suunta: i * 40, sade: 0.3, korkeus: 0.6, siemen: 40 + i })),
-  ...[49, 59, 69, 79].map((a, i) => ({ resepti: 'sakki', paikka: pol(a, 4.9, Y + 0.55), suunta: i * 70, sade: 0.28, korkeus: 0.55, siemen: 50 + i })),
-  ...[59, 69].map((a, i) => ({ resepti: 'sakki', paikka: pol(a, 4.9, Y + 1.05), suunta: i * 90, sade: 0.26, korkeus: 0.5, siemen: 60 + i })),
-  { resepti: 'sakki', paikka: pol(52, 4.0, Y), suunta: 20, sade: 0.3, korkeus: 0.6, siemen: 71 },
-  { resepti: 'sakki', paikka: pol(61, 4.05, Y), suunta: 80, sade: 0.29, korkeus: 0.55, siemen: 72 },
-  { resepti: 'sakki', paikka: pol(104, 4.6, Y), suunta: 0, sade: 0.3, korkeus: 0.6, siemen: 73 },
-  { resepti: 'sakki', paikka: pol(111, 4.35, Y), suunta: 0, sade: 0.28, korkeus: 0.55, siemen: 74 },
+// Kangaspakat itäseinällä kahtena siistinä pinona matalalla lavalla (pakat seinän suuntaisesti, 4 + 3 + 2 kerroksin).
+function pakkapino(a, siemen) {
+  const P = pol(a, 4.55, Y), s = a + 180, lava = [{ resepti: 'laatta', paikka: [P[0], Y + 0.04, P[2]], suunta: s, leveys: 1.1, syvyys: 0.9, paksuus: 0.08, pinnat: { yla: 'lankku', ala: 'lankku', sivu: 'puu' } }];
+  const rivit = [[-0.3, -0.1, 0.1, 0.3], [-0.2, 0, 0.2], [-0.1, 0.1]];
+  return lava.concat(rivit.flatMap((ws, r) => ws.map((w, i) => ({
+    resepti: 'kangaspakka', paikka: lok(P, s, (i % 2) * 0.03, Y + 0.08 + r * 0.17, w), suunta: s, pituus: 1.0 - r * 0.05, sade: 0.095, siemen: siemen + r * 10 + i,
+  }))));
+}
+const PAKAT = [
+  ...pakkapino(45, 400), ...pakkapino(72, 500),
+  { resepti: 'vaatepino', paikka: pol(55, 4.0, Y), suunta: 55 + 180, siemen: 71 },
+  { resepti: 'vaatepino', paikka: pol(70, 4.05, Y), suunta: 70 + 170, kerroksia: 5, siemen: 72 },
+  { resepti: 'arkku', paikka: pol(104, 4.5, Y), suunta: 104 + 180, leveys: 0.8, syvyys: 0.45, korkeus: 0.5 },
 ];
 
-// Hyllyt pohjoisseinällä (leveys 2,2, r 5,08) ruukkuineen, suolalaatikkoineen ja suolakaloineen. Hyllytasojen
+// Hyllyt pohjoisseinällä (leveys 2,2, r 5,08): linnan kalusto (kattilat, vadit, kannut, kynttilänjalat) ja tekstiilit. Hyllytasojen
 // yläpinnat y = 0,12 / 1,045 / 1,97 hyllyn pohjasta (reseptit-kalusteet.mjs). Rivi: [u, taso, resepti, parametrit, w, suuntaLisa].
 const HYLLYTASO = [0.12, 1.045, 1.97];
 function hyllyRivi(a, rivit) {
@@ -107,20 +115,17 @@ function hyllyRivi(a, rivit) {
 const R = (sade, korkeus) => ({ sade, korkeus });
 const HYLLYT = [
   ...hyllyRivi(340, [
-    [-0.8, 0, 'ruukku', R(0.12, 0.2)], [-0.4, 0, 'ruukku', R(0.1, 0.18)], [0.05, 0, 'suolalaatikko'], [0.5, 0, 'suolalaatikko', {}, 0, 15],
-    [0.85, 0, 'ruukku', R(0.11, 0.19)],
-    [-0.8, 1, 'ruukku', R(0.11, 0.19)], [-0.4, 1, 'ruukku', R(0.13, 0.21)], [0.0, 1, 'ruukku', R(0.1, 0.17)],
-    [0.45, 1, 'vati', { sade: 0.14 }], [0.85, 1, 'pullo', { sade: 0.05, korkeus: 0.19 }],
-    [-0.75, 2, 'pullo', { sade: 0.05, korkeus: 0.18 }], [-0.3, 2, 'ruukku', R(0.1, 0.17)],
-    [0.15, 2, 'pullo', { sade: 0.055, korkeus: 0.2 }], [0.6, 2, 'ruukku', R(0.11, 0.18)],
+    [-0.55, 0, 'vaatepino', { leveys: 0.4, syvyys: 0.3, kerroksia: 3, siemen: 81 }], [0.45, 0, 'vaatepino', { leveys: 0.4, syvyys: 0.3, kerroksia: 4, siemen: 82 }],
+    [-0.8, 1, 'kattila', { sade: 0.13, korkeus: 0.15 }], [-0.4, 1, 'kattila', { sade: 0.11, korkeus: 0.13 }],
+    [0.05, 1, 'vati', { sade: 0.14 }], [0.45, 1, 'vati', { sade: 0.13 }], [0.85, 1, 'pullo', { sade: 0.05, korkeus: 0.19 }],
+    [-0.7, 2, 'kynttilanjalka', { korkeus: 0.17 }], [-0.4, 2, 'kynttilanjalka', { korkeus: 0.17 }],
+    [0.05, 2, 'kirja'], [0.5, 2, 'pullo', { sade: 0.055, korkeus: 0.2 }],
   ]),
   ...hyllyRivi(20, [
-    [-0.75, 0, 'ruukku', R(0.13, 0.22)], [-0.3, 0, 'ruukku', R(0.12, 0.2)], [0.25, 0, 'vesisanko', R(0.13, 0.2)],
-    [0.75, 0, 'suolalaatikko'],
-    [-0.65, 1, 'kala', { pituus: 0.32 }, 0, 90], [-0.2, 1, 'kala', { pituus: 0.3 }, 0.05, 80], [0.25, 1, 'suolalaatikko'],
-    [0.7, 1, 'ruukku', R(0.1, 0.18)],
-    [-0.75, 2, 'pullo', { sade: 0.05, korkeus: 0.17 }], [-0.4, 2, 'pullo', { sade: 0.05, korkeus: 0.18 }],
-    [0.0, 2, 'ruukku', R(0.11, 0.19)], [0.45, 2, 'ruukku', R(0.1, 0.17)],
+    [-0.5, 0, 'kangaspakka', { pituus: 0.9, sade: 0.085, siemen: 91 }, 0, 0], [0.45, 0, 'vaatepino', { leveys: 0.4, syvyys: 0.3, siemen: 92 }],
+    [-0.5, 1, 'kangaspakka', { pituus: 0.85, sade: 0.08, siemen: 93 }, 0, 0], [0.45, 1, 'kangaspakka', { pituus: 0.8, sade: 0.08, siemen: 94 }, 0, 0],
+    [-0.75, 2, 'pullo', { sade: 0.05, korkeus: 0.17 }], [-0.4, 2, 'vati', { sade: 0.12 }],
+    [0.05, 2, 'kattila', { sade: 0.1, korkeus: 0.12 }], [0.5, 2, 'ruukku', R(0.1, 0.17)],
   ]),
 ];
 
@@ -132,30 +137,45 @@ const KIRJANPITO = [
   sein('arkku', 298, 4.85, { y: Y }),
   { resepti: 'kirja', paikka: lok(P_ARKKU, 298 + 180, -0.15, Y + 0.56, 0), suunta: 298 + 180 + 12 },
   { resepti: 'oljylamppu', paikka: LAMPPU, suunta: 0, sade: 0.07, korkeus: 0.1 },
-  // Toinen arkku vasemmassa etukulmassa (sektorin reunalla) ja suolalaatikko sen vieressä.
+  // Toinen arkku vasemmassa etukulmassa (sektorin reunalla) ja kangaspakka sen vieressä lattialla.
   { resepti: 'arkku', paikka: pol(226, 4.5, Y), suunta: 226 + 180 - 20 },
-  { resepti: 'suolalaatikko', paikka: pol(232, 3.9, Y), suunta: 30, leveys: 0.5, syvyys: 0.34, korkeus: 0.3 },
+  { resepti: 'kangaspakka', paikka: pol(233, 3.85, Y), suunta: 30, pituus: 0.7, sade: 0.08, siemen: 21 },
   { resepti: 'koysikieppi', paikka: pol(112, 3.5, Y), suunta: 0 },
 ];
 
-// Tynnyrintekijän työpaikka: avoin saavi (auki oleva tynnyri), tynnyrin kansi lattialla, kaaria ja kauha.
-const TYOPAIKKA = [
-  { resepti: 'saavi', paikka: pol(303, 3.0, Y), suunta: 0, sade: 0.42, korkeus: 0.55 },
-  {
-    resepti: 'kiekko', paikka: pol(292, 3.55, Y + 0.05), suunta: 0, sade: 0.4, paksuus: 0.05, segmentit: 16,
-    pinnat: { yla: 'puu', ala: 'puu', sivu: 'puu' },
-  },
-  { resepti: 'puukasa', paikka: pol(262, 3.3, Y), suunta: 35, pituus: 0.55, halkoja: 7, siemen: 611 },
-  { resepti: 'kauha', paikka: pol(303, 3.0, Y + 0.55), suunta: 60 },
-  { resepti: 'vesisanko', paikka: pol(284, 3.2, Y), suunta: 20, sade: 0.14, korkeus: 0.2 },
-  { resepti: 'saavi', paikka: pol(330, 3.4, Y), suunta: 0, sade: 0.34, korkeus: 0.42 },
+// VOUDIN SINETTI (käsikirjoitus kohta 4, Päätoimittaja 29.9.: vaatearkun kannen alla kankaiden välissä). Arkku
+// huoneen keskellä vasemmalla, etupuoli kameraan; runko palikkana (yläpinta kangasta), kansi ja sormus irtoesineinä
+// (esineet[] alla), jotta natiivi voi avata kannen saranastaan ja nostaa sormuksen. Vieressä hoitajan jo purkamia vaatteita.
+const P_SINETTI = pol(250, 3.3, Y);
+const S_SINETTI = 250 + 180 - 25;
+const SINETTI_ARKKU = { leveys: 0.9, syvyys: 0.5, korkeus: 0.55 };
+const SINETTI_Y = Y + SINETTI_ARKKU.korkeus * 0.72;
+const P_SORMUS = lok(P_SINETTI, S_SINETTI, 0.14, SINETTI_Y, 0.06);
+const SINETTI = [
+  { resepti: 'arkku', paikka: P_SINETTI, suunta: S_SINETTI, ...SINETTI_ARKKU, osa: 'runko', pinnat: { kansi: 'kangas' } },
+  { resepti: 'vaatepino', paikka: lok(P_SINETTI, S_SINETTI, -0.75, Y, 0.35), suunta: S_SINETTI + 20, kerroksia: 3, siemen: 31 },
+  { resepti: 'kangaspakka', paikka: lok(P_SINETTI, S_SINETTI, 0.2, Y, 0.62), suunta: S_SINETTI - 12, pituus: 0.75, sade: 0.08, siemen: 32 },
+];
+const ESINEET = [
+  { id: 'arkun-kansi', resepti: 'arkku', paikka: P_SINETTI, suunta: S_SINETTI, ...SINETTI_ARKKU, osa: 'kansi', sarana: [0, SINETTI_Y - Y, -SINETTI_ARKKU.syvyys / 2], avaa: 105 },
+  { id: 'sinetti', resepti: 'sinettisormus', paikka: P_SORMUS, suunta: S_SINETTI + 30 },
 ];
 
-// Katosta roikkuvat reikäleivät holvin alla (holvin alapinta r 4,3:ssa ≈ y 3,66) ja seinäsoihdut + ampumarako.
+// Vaateorret holvin alla (holvin alapinta r 4,3:ssa ≈ y 3,66): viitat, paidat ja mekot kuivumassa ja tuulettumassa.
+// Hoitajan taittopöytä huoneen oikealla: kangas levitettynä, taiteltu pino ja kynttilä (iltahämärän toinen valo).
+const P_POYTA = pol(28, 2.7, Y);
+const KYNTTILA_POYTA = lok(P_POYTA, 28 + 180, 0.45, Y + 0.75, -0.1);
+const POYTA = [
+  { resepti: 'poyta', paikka: P_POYTA, suunta: 28 + 180, leveys: 1.4, syvyys: 0.7, korkeus: 0.75 },
+  { resepti: 'laatta', paikka: lok(P_POYTA, 28 + 180, -0.15, Y + 0.752, 0.02), suunta: 28 + 180 + 4, leveys: 0.9, syvyys: 0.6, paksuus: 0.006, pinnat: { yla: 'vaate', ala: 'vaate', sivu: 'vaate' } },
+  { resepti: 'vaatepino', paikka: lok(P_POYTA, 28 + 180, 0.4, Y + 0.75, 0.12), suunta: 28 + 170, leveys: 0.35, syvyys: 0.28, kerroksia: 3, siemen: 41 },
+  { resepti: 'kynttilanjalka', paikka: KYNTTILA_POYTA, suunta: 0, korkeus: 0.17 },
+];
+
 const RIPUSTETUT = [
-  { resepti: 'orsileivat', paikka: pol(290, 4.3, 3.55), suunta: 290, pituus: 1.4, leipia: 5, siemen: 701 },
-  { resepti: 'orsileivat', paikka: pol(40, 4.3, 3.55), suunta: 40, pituus: 1.3, leipia: 4, siemen: 702 },
-  { resepti: 'orsileivat', paikka: pol(350, 4.4, 3.55), suunta: 350, pituus: 1.2, leipia: 4, siemen: 703 },
+  { resepti: 'vaateorsi', paikka: pol(290, 4.1, 3.5), suunta: 290 + 90, pituus: 1.4, vaatteita: 4, pituusVaate: 1.0, siemen: 701 },
+  { resepti: 'vaateorsi', paikka: pol(40, 4.1, 3.5), suunta: 40 + 90, pituus: 1.3, vaatteita: 4, pituusVaate: 0.9, siemen: 702 },
+  { resepti: 'vaateorsi', paikka: pol(350, 4.2, 3.5), suunta: 350 + 90, pituus: 1.2, vaatteita: 3, pituusVaate: 1.1, siemen: 703 },
 ];
 const SOIHTU_Y = 2.25;
 const SOIHDUT = [
@@ -190,7 +210,7 @@ export const TILA = {
     {
       paikka: pol(0, 3.6, 2.6), sade: 9, voima: 2.0, vari: '#ff9a4a', lepatus: 0.3,
     },
-    // Läntinen lisähehku tynnyrien ja tynnyrintekijän kohdalle (öljylampun ja tynnyrityön valo).
+    // Läntinen lisähehku arkkujen ja sinettiarkun kohdalle (öljylampun valo).
     {
       paikka: pol(283, 3.6, 1.8), sade: 5.5, voima: 1.2, vari: '#ffb070', lepatus: 0.2,
     },
@@ -200,7 +220,13 @@ export const TILA = {
     },
   ],
   palikat: [
-    ...RAKENNE, ...TYNNYRIT, ...TYNNYRIT_PINO, ...SAKIT, ...HYLLYT, ...KIRJANPITO, ...TYOPAIKKA, ...RIPUSTETUT, ...SOIHDUT,
+    ...RAKENNE, ...ARKUT, ...PAKAT, ...HYLLYT, ...KIRJANPITO, ...SINETTI, ...POYTA, ...RIPUSTETUT, ...SOIHDUT,
+  ],
+  esineet: ESINEET,
+  // Voudin sinetin etsintä, vaihe 3 (löytö): napautus arkkuun avaa kannen ja nostaa sormuksen → PeliOhjain.LoydaMatkamuisto.
+  etsinta: [
+    { etsinta: 'voudin-sinetti', vaihe: 3, tyyppi: 'loyto', kohde: [P_SORMUS[0], SINETTI_Y + 0.05, P_SORMUS[2]], sade: 0.8,
+      kansi: 'arkun-kansi', esine: 'sinetti', pulu: PULU_PAIKKAMERKKI },
   ],
   hahmot: HAHMOT,
   aanet: [],
@@ -209,16 +235,17 @@ export const TILA = {
     { liekki: 'soihtu', paikka: soihduLiekki(0, SOIHTU_Y), koko: 1, vaihe: 0 },
     { liekki: 'soihtu', paikka: soihduLiekki(75, SOIHTU_Y + 0.1), koko: 1, vaihe: 0.5 },
     { liekki: 'kynttila', paikka: lok(LAMPPU, 0, 0.021, LAMPPU[1] + 0.102, 0), koko: 1, vaihe: 0.25 },
+    { liekki: 'kynttila', paikka: [KYNTTILA_POYTA[0], r1(KYNTTILA_POYTA[1] + 0.167), KYNTTILA_POYTA[2]], koko: 1, vaihe: 0.6 },
   ],
   kasikirjoitus: [
     { tee: 'pulu-lenna' },
     { tee: 'taulu' },
     { tee: 'kohta', n: 0 },
-    { tee: 'repliikki', hahmo: 'fatabuurinhoitaja' },
-    { tee: 'reaktio', hahmo: 'fatabuurinhoitaja' },
+    { tee: 'repliikki', hahmo: 'hoitaja' },
+    { tee: 'reaktio', hahmo: 'hoitaja' },
     { tee: 'kohta', n: 1 },
-    { tee: 'repliikki', hahmo: 'tynnyrintekija' },
-    { tee: 'reaktio', hahmo: 'tynnyrintekija' },
+    { tee: 'repliikki', hahmo: 'renki' },
+    { tee: 'reaktio', hahmo: 'renki' },
     { tee: 'kohta', n: 2 },
   ],
 };

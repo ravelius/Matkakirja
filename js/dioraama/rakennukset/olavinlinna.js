@@ -65,6 +65,21 @@ export const RAKENNUS = {
   // matala kaari Kyrönsalmen yltä (lounas, 600 m) yleisnäkymään; toisella käynnillä lyhyt (6 s).
   nimilaput: false,
   saapuminen: { alku: { atsimuutti: 200, etaisyys: 600, korkeus: 8 }, kesto: 18, lyhyt: 6 },
+  // Voudin sinetti (käsikirjoitus kohta 4, Päätoimittaja 29.9.): vapaaehtoinen kolmen vihjeen etsintä; vaiheet ovat
+  // tilojen etsinta[]-listoissa (keittiö → kappeli → fatabuuri), vihjeet näkyvät vasta kun huone on avattu. Löytö on
+  // matkamuisto (ei Aarnin luettelon aarre): PeliOhjain.LoydaMatkamuisto('voudin-sinetti') (Pelikoodari). Kortin
+  // faktat ovat yleistä keskiajan sinettitietoa (Sisältökirjuri era4 S1, S3: Olavinlinnan voudin sinetistä ei lähdettä).
+  etsinnat: [{
+    id: 'voudin-sinetti', nimi: 'Voudin sinetti', vaiheet: ['keittio', 'kappeli', 'fatabuuri'],
+    kuvaus: 'Vouti on hukannut sinettisormuksensa.',
+    kortti: {
+      tila: 'tarkistettu',
+      kohdat: [
+        { teksti: 'Keskiajalla kirjeeseen ei kirjoitettu nimeä: aitouden takasi vahaan painettu sinetti.', lahde: 'Kansallisarkisto: Arkistojen Portti, Keskiajan asiakirjat' },
+        { teksti: 'Sinettisormus oli suosittu 1100-luvulta keskiajan loppuun, ja siinä oli usein oman suvun vaakuna.', lahde: 'Wikipedia: Sinetti' },
+      ],
+    },
+  }],
   // Linnan taulun laskeutumispiste pihan länsiosaan, ettei Pulu peitä Keittiö-lappua (DoF-savuke 29.9.).
   pulu: { laskeutuminen: [-10, 0.5, 0] },
   taulu: TAULU_LINNA,

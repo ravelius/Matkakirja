@@ -171,6 +171,9 @@ export const TILA = {
     // Kirkonpenkit alttaria (itä) kohti: etupuoli w+ = itä (suunta 90).
     { resepti: 'kirkonpenkki', paikka: [-0.3, LATTIA, -20], suunta: 90 },
     { resepti: 'kirkonpenkki', paikka: [-1.5, LATTIA, -20], suunta: 90 },
+    // Voudin sinetti, vaihe 2: tuore naarmu ja avaimen kuva toisen penkin selkänojan yläpuussa (etupinta x −1,685,
+    // yläpuu y 10,12…10,35), eteläpäässä kameran puolella.
+    { resepti: 'kaiverrus', paikka: [-1.685, 10.24, -19.4], suunta: 90, leveys: 0.12 },
     { resepti: 'kirkonpenkki', paikka: [-2.7, LATTIA, -20], suunta: 90 },
     // Pulpetti kirjoineen (etupuoli etelään) + kynttilä takalistalla.
     { resepti: 'pulpetti', paikka: PULPETTI, suunta: 180 },
@@ -180,6 +183,12 @@ export const TILA = {
     seinalla('arkku', 342, 4.5),
     { resepti: 'kirja', paikka: paik(pol(342, 4.5, LATTIA), 162, 0.15, 0.55, 0), suunta: 165 },
     { resepti: 'ruukku', paikka: paik(pol(342, 4.5, LATTIA), 162, -0.22, 0.55, 0), suunta: 0, sade: 0.07, korkeus: 0.14 },
+  ],
+  // Voudin sinetin etsintä, vaihe 2: napautus penkin kaiverrukseen (kynttilän valossa naarmu ja fatabuurin avaimen kuva).
+  etsinta: [
+    { etsinta: 'voudin-sinetti', vaihe: 2, tyyppi: 'vihje', kohde: [-1.68, 10.24, -19.4], sade: 0.6,
+      teksti: 'Penkin selkänojassa on tuore naarmu, ja sen vieressä on kuva avaimesta – fatabuurin avaimesta.',
+      pulu: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
   ],
   hahmot: KAPPELI_HAHMOT,
   aanet: [], // kappelin äänet (kaiku, kynttilän rätinä, kaukainen laulu) tulevat Pelikoodarin tilauksesta

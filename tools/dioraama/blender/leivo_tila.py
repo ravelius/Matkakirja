@@ -47,6 +47,13 @@ def tuo(polku):
     bpy.ops.import_scene.gltf(filepath=polku)
     return [o for o in bpy.data.objects if o not in ennen]
 tilan = tuo(os.path.join(PAKETTI, 'tilat', f'{TILA}.glb'))
+# Irtoesineet (voudin sinetti 29.9.: arkun kansi, sormus) vain esikuviin: ne liikkuvat natiivissa, joten niitä ei leivota.
+esineet = []
+if '--leivo' not in argv:
+    for e_ in json.load(open(os.path.join(PAKETTI, 'rakennus.json')))['tilat']:
+        if e_['id'] == TILA:
+            for x in e_.get('esineet', []):
+                if x.get('tiedosto'): esineet += tuo(os.path.join(PAKETTI, x['tiedosto']))
 KUORI = arg('--kuori')
 if KUORI:
     # Uusi tapa: fotogrammetriakuori ympäristöksi (varjostaa ja heijastaa valoa), ei proseduraalista massaa.
@@ -183,6 +190,7 @@ MATERIAALIT = {
     'kupari': dict(vari=srgb('#9a5a36'), metalli=0.95, karheus=0.35, mittakaava=10),
     'savi': dict(vari=srgb('#9a5f42'), karheus=0.9, mittakaava=10, kumpu=0.05),
     'kangas': dict(vari=srgb('#c8b995'), karheus=1.0, mittakaava=40, kumpu=0.05),
+    'kulta': dict(vari=srgb('#d8a93a'), karheus=0.3, metalli=1.0, kumpu=0.0),  # voudin sinettisormus
     'olki': dict(vari=srgb('#c9b27a'), kuvio='puu', mittakaava=30, karheus=1.0),
     'nahka': dict(vari=srgb('#5a3a26'), karheus=0.7, mittakaava=20),
     'leipa': dict(vari=srgb('#b07a3e'), karheus=0.8, mittakaava=15),
@@ -196,7 +204,7 @@ MATERIAALIT = {
     'vesi': dict(vari=srgb('#2c3d44'), karheus=0.15, mittakaava=2, kumpu=0.02),
 }
 valmiit = {}
-for o in tilan + ([] if KUORI else massa):
+for o in tilan + esineet + ([] if KUORI else massa):
     if o.type != 'MESH':
         continue
     for s in o.material_slots:
@@ -208,7 +216,8 @@ for o in tilan + ([] if KUORI else massa):
                 tid, koko = TEKSTUURIT[perus]
                 valmiit[perus] = pbr_kuva(perus, tid, koko, metalli=0.8 if perus in ('metalli', 'rauta') else 0.0)
             else:
-                valmiit[perus] = pbr(perus, **MATERIAALIT.get(perus, dict(vari=srgb('#8a8580'))))
+                # Tuntematon pinta (esim. aitan 'vaate', sinetin 'kulta'): väri rakennus.json:n pinnat-pankista.
+                valmiit[perus] = pbr(perus, **MATERIAALIT.get(perus, dict(vari=srgb(rak.get('pinnat', {}).get(perus, {}).get('vari', '#8a8580')))))
         s.material = valmiit[perus]
 
 # --- Maailma: tumma taivas (omistajan linjaus: tumma yleisvalo) + aurinko valaistus.json:sta ---
