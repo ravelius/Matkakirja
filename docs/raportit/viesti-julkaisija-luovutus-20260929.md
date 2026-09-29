@@ -19,8 +19,13 @@ Fable = "Päätoimittaja (Opus, xhigh)".
 
 ## Web-juna
 
-- Auki: #3624 (Pelikoodarin yläpalkkierä, korjattu, jonossa `jonoon.sh 3624`). Tarkista `pgrep -fl jonoon.sh`.
-- Tulossa: Pelikoodarin Liiku-napin PR (uusi), Siirtosepän jatko-PR:t.
+- #3624 (yläpalkkierä) MERGED 16.0x. #3626 (1.0.50-muutosrivi) MERGED.
+- Auki junassa: #3627 (Pelikoodari, Liiku läpinäkyväksi, v2408) – `jonoon.sh 3627` käynnissä,
+  loki /tmp/claude-502/juna-3627.log. Tarkista `pgrep -fl "jonoon.sh|valmistele.sh|mergaa.sh"` ja
+  `gh pr view 3627 --json state`. Jos prosessia ei ole ja PR on OPEN: `JATKA=1 zsh
+  julkaisija-tyokalut/jonoon.sh 3627`.
+- pidossa.txt on tyhjä.
+- Tulossa: Siirtosepän jatko-PR:t.
 - Dioraama: vie-dioraama.yml (#3596) ja äänikohde (#3604) mainissa; äänet 31/31 ämpärissä
   dioraama/olavinlinna/aanet/v1/. Linnanrakentajan PR:t menevät junaan tavallisesti.
 
