@@ -9397,6 +9397,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Çanakkale': {
       lyhyt: 'Dardanellien yli kulkeva 1915 Çanakkale -silta avattiin 2022, ja sen 2 023 metrin pääjänne on maailman riippusilloista pisin.',
+      pitka: "Gallipolin niemimaa on Turkin Euroopan puolen kaakkoiskulma, ja sen eteläosa kuuluu vuonna 1973 perustettuun historialliseen kansallispuistoon, jonka ala on yli 33 000 hehtaaria. Metsäisten kukkuloiden lomassa on kymmeniä hautausmaita ja muistomerkkejä, sillä Gallipolin kampanja käytiin vuosina 1915–1916 ja siinä taistelivat osmanni- ja liittoutuneiden joukot. Niemen kärjessä kohoaa 41,7 metriä korkea Çanakkalen marttyyrien muistomerkki, joka avattiin vuonna 1960. Anzac Covessa ja Lone Pinella Australian ja Uuden-Seelannin vieraat kokoontuvat 25. huhtikuuta muistopäivään. Turkkilaiset viettävät omaa muistopäiväänsä 18. maaliskuuta. Kilitbahirin linnoitus kohoaa niemen puolella Dardanellien kapeimmalla kohdalla, ja lautat vievät salmen yli Eceabatiin.",
     },
     'Çankiri': {
       lyhyt: 'Çankırın suolaluola on yksi Turkin suurimmista vuorisuolaesiintymistä, ja suolaa on louhittu sieltä antiikin ajoista asti.',
@@ -9415,6 +9416,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Edirne: {
       lyhyt: 'Mimar Sinan piti Edirnen Selimiye-moskeijaa mestariteoksenaan, ja se on ollut Unescon maailmanperintöä vuodesta 2011.',
+      pitka: "Edirne on Turkin luoteiskulman rajakaupunki, jonka lähellä Kreikan ja Bulgarian rajat kohtaavat. Noin 180 000 asukkaan kaupunki toimi Osmanien pääkaupunkina 1360-luvulta vuoteen 1453. Vanhin moskeija Eski Cami rakennettiin vuosina 1403–1422, ja Üç Şerefeli -moskeijan kolmiparvekkeiset minareetit valmistuivat 1440-luvulla. Restauroidussa Karaağaçin rautatieasemassa toimii nykyisin Trakian yliopiston kuvataidetiedekunta, ja ympäröivillä tasangoilla viljellään maissia, sokerijuurikasta ja auringonkukkaa. Kesäkuun lopussa Sarayiçin saarella käydään Kırkpınarin öljypainit, jotka ovat Unescon aineetonta kulttuuriperintöä vuodesta 2010. Ravintoloissa tarjotaan Edirnen tunnetuinta ruokaa, ciğer tavaa eli paistettua maksaa.",
     },
     Elazig: {
       lyhyt: 'Hazarjärvi Elazığin kaakkoispuolella on Tigrisin lähde, ja sen pohjasta on löydetty jälkiä veden alle jääneestä kaupungista.',
@@ -9451,6 +9453,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Istanbul: {
       lyhyt: 'Marmaray-junat sukeltavat Bosporinsalmen alle upotettuun tunneliin, ja vuodesta 2013 raiteet ovat yhdistäneet Euroopan ja Aasian.',
+      pitka: "Istanbulin väestöstä, noin 15,75 miljoonasta asukkaasta, kaksi kolmasosaa asuu Euroopan puolella, ja sen sydän on Sultanahmetin niemellä, jonka Unesco merkitsi maailmanperinnöksi vuonna 1985. Hagia Sofia valmistui vuonna 537 ja toimii nykyisin moskeijana. Konstantinopolin muinaiset Theodosioksen maamuurit kulkevat noin 5,7 kilometrin matkan kaupungin länsilaidalla, ja sisämuurissa oli 96 tornia. Bosporin ensimmäinen silta valmistui vuonna 1973 ja Fatih Sultan Mehmetin silta 1988. Uusi Istanbulin lentoasema Arnavutköyn kaupunginosassa Mustanmeren rannalla avattiin 2018, ja kaikki matkustajaliikenne siirtyi sinne huhtikuussa 2019. Kaupungin nimeksi tuli virallisesti Istanbul vuonna 1930.",
     },
     Izmir: {
       lyhyt: 'İzmirin Konakin aukion kellotorni valmistui 1901, ja sen suunnitteli levantiniranskalainen arkkitehti Raymond Charles Péré.',
@@ -9481,6 +9484,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirklareli: {
       lyhyt: 'İğneadan kansallispuistossa Bulgarian rajalla kasvaa harvinaista longoz-tulvametsää, jota Strandžan vuorilta laskevat purot tulvivat.',
+      pitka: "Kırklareli sijaitsee Turkin Traakiassa, ja sen pohjoisraja Bulgariaan on noin 180 kilometriä pitkä. Yıldızin vuoret halkovat 6 459 neliökilometrin läänin, jossa asuu noin 369 000 ihmistä. Pohjoisessa ja idässä maisemaa hallitsevat metsät, etelän pellot ja viinitarhat tekevät alueesta tärkeän viininviljelyalueen, ja Mustanmeren rannikolla kalastetaan. Demirköyn lähellä sijaitsee Dupnisan luola, 3 200 metriä pitkä tippukiviluolakokonaisuus, joka avattiin kävijöille vuonna 2005 ja joka on Itä-Traakian ainoa esittelyluola. Vizen kaupungissa seisoo Justinianus I:n aikainen bysanttilainen Pikku Hagia Sofia, nykyisin Gazi Süleyman Paşa -moskeija.",
     },
     Kirsehir: {
       lyhyt: 'Bağlaman mestari Neşet Ertaş syntyi 1938 Kırtıllarin kylässä Kırşehirissä.',
@@ -9550,6 +9554,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tekirdag: {
       lyhyt: 'Tekirdağin kuuluisin herkku ovat pienet, mausteiset Tekirdağ köftesi -grillipyörykät.',
+      pitka: "Tekirdağ on Marmaranmeren rannalla sijaitseva satamakaupunki, noin 130 kilometrin päässä Istanbulista länteen, jonka asukasluku on noin 186 000. Sen historia ulottuu antiikin Bisantheen, ja Mimar Sinan suunnitteli kaupungin Rüstem Paşa -moskeijan vuonna 1553. Ympäröivillä pelloilla viljellään syysvehnää, auringonkukkaa, kirsikoita ja viinirypäleitä. Kaupunki tunnetaan myös rakı-tislaamoistaan; seudun rypäleistä valmistettu anistislaus on kaupungin tunnetuin tuote. Vanhassa kaupungissa Rákóczi-museo muistuttaa unkarilaisruhtinaan maanpakolaisuudesta.",
     },
     Tokat: {
       lyhyt: 'Tokatin Zilessä Caesar voitti taistelun 47 eaa. ja kuittasi voittonsa sanoilla veni, vidi, vici.',

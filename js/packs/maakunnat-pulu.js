@@ -2845,4 +2845,29 @@ export const MAAKUNTIEN_PULU = {
       { q: "Miten hiilikaupungista on tullut teknologiakaupunki?", a: "Trbovljessa toimii vuonna 2000 perustettu mittaustekniikkayhtiö Dewesoft, joka avasi 2016 Katapult-yrityskiihdyttämön entiseen tehdasrakennukseen." },
     ],
   },
+  TUR: {
+    "Çanakkale": [
+      { q: "Mistä Gelibolun nimi tulee?", a: "Nimi juontuu kreikan sanoista, jotka tarkoittavat kaunista kaupunkia, ja niemi tunnettiin antiikissa Traakian Chersonesoksena. Osmanit valtasivat Gelibolun kaupungin 1350-luvulla maanjäristyksen jälkeen, ja siitä tuli heidän ensimmäinen tukikohtansa Euroopassa." },
+      { q: "Miksi salmen kapeimmalla kohdalla on kaksi linnaa vastakkain?", a: "Mehmed II rakennutti 1460-luvulla Çanakkalen ja Kilitbahirin linnoitukset kahden rannan puolelle, jotta tykit hallitsisivat koko Dardanellien liikennettä." },
+      { q: "Mitä muistopäiviä niemellä vietetään?", a: "Anzac-päivänä 25. huhtikuuta kokoonnutaan Anzac Coven rannalle, ja Turkissa 18. maaliskuuta muistetaan Dardanellien meritaistelua vuonna 1915. Molempina päivinä alueella käy runsaasti vierailijoita." },
+    ],
+    "Edirne": [
+      { q: "Millaista Kırkpınarin painia on?", a: "Painijat pukeutuvat vain nahkaisiin polvipituisiin kispet-housuihin ja voitelevat itsensä öljyllä. Kisa kestää kolme päivää. Järjestäjien mukaan perinne juontaa vuoteen 1360." },
+      { q: "Miksi Beyazid II:n kompleksi on erikoinen?", a: "Se on Edirnen täydellisin säilynyt moskeijakokonaisuus: 1480-luvulla siihen kuului sairaala, lääketieteellinen koulu ja mielisairaala. Nykyisin rakennuksissa toimii museo." },
+      { q: "Mikä ihmeen ciğer tava?", a: "Se on ohuiksi leikattua, rapeaksi paistettua maksaa, joka on kaupungin tunnetuin ruokalaji. Annosta tarjoillaan ravintoloissa lisukkeineen." },
+    ],
+    "Istanbul": [
+      { q: "Mikä on Basilika-sisterna?", a: "Se on 500-luvulla keisari Justinianuksen aikana rakennettu maanalainen vesisäiliö, jossa on 336 marmoripylvästä 12 rivissä. Kaksi pylvään jalustaa on veistetty Medusan pään muotoon, eikä kukaan tiedä varmasti, mistä ne tulivat." },
+      { q: "Mikä Kapalıçarşı on?", a: "Suuri basaari rakennettiin Mehmed II:n aikana 1450-luvun puolivälistä 1460-luvun alkuun, ja siihen kuuluu 61 katettua katua ja yli 4 000 kauppaa. Basaari on palanut monta kertaa ja korjattu maanjäristysten jälkeen." },
+    ],
+    "Kirklareli": [
+      { q: "Miksi osa Dupnisan luolasta on suljettu?", a: "Kız-luola on rauhoitettu, koska siellä asuu suuri lepakkoyhdyskunta. Kävijät kulkevat vain Kuru- ja Sulu-luolissa, joissa näkee tippukiviä ja maanalaisia järviä." },
+      { q: "Mistä Kırklareli on saanut nimensä?", a: "Nimi tarkoittaa neljänkymmenen maata. Yhden tulkinnan mukaan se viittaa neljäänkymmeneen sotilaaseen, jotka sulttaani Murad I lähetti alueelle 1300-luvulla, toisen mukaan neljäänkymmeneen alueella aikoinaan sijainneeseen kirkkoon." },
+      { q: "Mikä Vize on?", a: "Vize oli muinaisen Bizyen kaupunki ja Asti-traakialaisheimon pääkaupunki. Nykyään noin 15 000 asukkaan kaupunki on Cittaslow-hitaan kaupungin verkoston jäsen vuodesta 2012." },
+    ],
+    "Tekirdag": [
+      { q: "Miksi rakıa kutsutaan leijonan maidoksi?", a: "Kun väritön anikselta maistuva rakı sekoitetaan veteen, se muuttuu maitomaisen valkoiseksi. Turkkilaiset kutsuvat sitä aslan sütü eli leijonan maito, koska leijona symboloi voimaa ja rohkeutta." },
+      { q: "Kuka Rákóczi oli?", a: "Ferenc II Rákóczi oli unkarilainen ruhtinas ja vapaustaistelun johtaja, joka vietti loppuelämänsä osmanien alueella. Hän asui Tekirdağissa vuodesta 1720 kuolemaansa 1735, ja hänen 1700-luvun taloonsa on perustettu Rákóczi-museo." },
+    ],
+  },
 };
