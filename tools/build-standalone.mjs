@@ -630,6 +630,9 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  // Avaus- ja sulkuanimaatioiden apuri (omistaja 29.9.2026) ennen kortteja, popupeja ja valikoita,
+  // jotka tuovat sen; moduuli itse ei tuo mitään.
+  'js/avausanimaatio.js',
   // Saapumisasento ennen fokusvirtaa (fokusvirta ja kartta tuovat sen);
   // moduuli itse ei tuo mitään.
   'js/saapumisasento.js',
@@ -863,7 +866,6 @@ const MODULES = [
    * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
    * joka tuo sen.
    */
-  'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin
    * (kartta.js boardBounds → pyramidinArkki), koska pyramidilaudalla
@@ -981,6 +983,15 @@ const MODULES = [
   // Lisäkaupunkien kaupunkikortti (PAATOKSET 16) ennen fokuskohteet.js:ää,
   // joka tuo sen avaaLisakaupunginKortti-funktion.
   'js/kaupunkinosto.js',
+  /*
+   * FOKUSVIRTA SIIRTYI TÄHÄN 29.9.2026 (Siirtosepän pariteettikatsaus,
+   * rivi 5 "vain yksi lappu kerrallaan"): se tuo nyt staattisesti
+   * `suljeKaupunkipopup`in kaupunkinosto.js:stä (yllä), joten sen on
+   * oltava kaupunkinoston JÄLKEEN. Fokuskohteet.js (alla) tuo tästä
+   * `asetaKohdeavaus`/`asetaKohdehakemisto`, joten tämän on oltava
+   * ennen sitä — tässä välissä se on.
+   */
+  'js/fokusvirta.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
@@ -994,7 +1005,6 @@ const MODULES = [
   'js/packs/maakunnat-luonnehdinnat.js',
   'js/packs/maakunnat-pulu.js',
   'js/packs/maakunnat-nimet.js',
-  'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
    * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,
@@ -1008,6 +1018,9 @@ const MODULES = [
    * listalla vasta tässä.
    */
   'js/fokusnosto.js',
+  // Maakunnat-välilehden moduuli (data yllä) vasta nostokortin jälkeen:
+  // maakunnan kortti käyttää nostokortin kuvia ja tyyliä (#3583).
+  'js/karttatyokalu-maakunnat.js',
   /*
    * Syvennystarinat kartalle (yhtenäinen kohdemalli): data ensin,
    * kerroskytkentä perässä. js/syvennys.js tuo fokusvirran,
@@ -1079,6 +1092,11 @@ const MODULES = [
    */
   'js/pallodiag.js',
   'js/linssivirhe.js',
+  // Kehittäjän Pelaajan näkymä -apunappi (29.9.2026) ennen ui.js:ää ja main.js:ää, jotka tuovat sen; tuo vain
+  // ui-apurit.js:n.
+  'js/pelaajanakyma.js',
+  'js/kokoelmanakyma.js',
+  'js/pilleri-animaatio.js',
   'js/ui.js',
 
   'js/muutokset.js',

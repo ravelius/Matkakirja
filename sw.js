@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2391';
+const CACHE = 'matkakirja-2026-09-21.2408';
 const SHELL = [
   './',
   './index.html',
@@ -24,6 +24,7 @@ const SHELL = [
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
+  './js/pelaajanakyma.js',
   './js/siirtokoreografia.js',
   /*
    * TASOKARTTA POIS ESILATAUKSESTA (omistaja 7.9.2026, sanatarkasti:
@@ -52,6 +53,7 @@ const SHELL = [
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
+  './js/avausanimaatio.js',
   // Viisaan pöllön arvonimet (nimilappuvitsi, Raamattu VIISAAN POLLON ARVONIMET).
   './js/packs/pollon-arvonimet.js',
   './js/liput.js',
@@ -113,6 +115,8 @@ const SHELL = [
   './js/karttatyokalu-maakunnat.js',
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',
+  './js/kokoelmanakyma.js',
+  './js/pilleri-animaatio.js',
   './js/fokusnosto.js',
   './js/kuvasarja.js',
   './js/syvennys.js',
@@ -2122,9 +2126,9 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-26-pohja-20260926';
+const LAATTAKANSIO = '2026-09-27-pohja-20260927';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
-const LAATTAKANSIO_SYVA = '2026-09-26-pohja';
+const LAATTAKANSIO_SYVA = '2026-09-27-pohja';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;

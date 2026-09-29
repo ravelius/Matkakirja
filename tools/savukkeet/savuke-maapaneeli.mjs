@@ -706,6 +706,18 @@ for (const ruutu of RUUDUT) {
 
   /* --- 8a. Liiku levossa ------------------------------------------ */
   const liiku = lepo.liiku;
+  /*
+   * LÄPINÄKYVYYS PALASI 29.9.2026 (Päätoimittajan päätös PAATOKSET 28
+   * kohta 3: Liiku pysyy läpinäkyvänä; iPadin Kreetanmeri-osuma
+   * korjataan SIIRTÄMÄLLÄ nappi pois keskilinjalta, ei pergamentti-
+   * pohjalla — ks. css/styles.css .toimintorivi.rivi-yksi
+   * .monitoimi-nappi ja tools/savukkeet/savuke-pariteetti-web-20260929.mjs
+   * kohta (c)). Tämän savukkeen RUUDUT (390 ja 1400 px) eivät osu uuden
+   * sijoitussäännön `@media (min-width: 768px) and (orientation:
+   * portrait)` -rajaukseen (390 px on liian kapea, 1400 × 900 on
+   * vaakasuunta), joten keskitysvaatimus `keskipoikkeama <= 8` pysyy
+   * ennallaan molemmilla.
+   */
   const liikuHyva = Boolean(liiku
     && liiku.laatikko.y0 >= 0 && liiku.laatikko.y1 <= lepo.ruutu.h + 1
     && liiku.laatikko.y0 > lepo.ruutu.h * 0.5

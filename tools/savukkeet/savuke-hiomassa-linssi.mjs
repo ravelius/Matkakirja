@@ -11,9 +11,10 @@
  *   1. Ison aarteen paljastus Pariisissa: aarteen raha + 500 hyvitys,
  *      linssi omistuksessa, aid-kupla "Linssi hiomassa" tekstillä
  *      optikosta.
- *   2. Laukku: linssi harmaalla hiomassa-rivillä (.linssi-liuskat-
- *      hiomassa button.hiomassa), kuvana yhteinen hiomassa.svg, selite
- *      "Hiomassa optikolla" napautettaessa, ei Aktivoi-nappia.
+ *   2. Pillerivalikon Linssit-näkymä: linssi harmaalla hiomassa-
+ *      rivillä (data-linssi="hiomassa:<tunnus>", .hiomassa-luokka),
+ *      kuvana yhteinen hiomassa.svg, selite "Hiomassa optikolla"
+ *      napautettaessa, toimintonappi lukee "Hiomassa" eikä "Aktivoi".
  *   3. Hyvitys vain kerran: toinen paljastus (uusi peli, sama passi)
  *      ei maksa hyvitystä.
  *   4. Rekisterin rivin valmistuminen (tila pois, tuo mukaan):
@@ -178,35 +179,55 @@ for (const ruutu of RUUDUT) {
       && loyto.kupla?.hyvitys === 500 && /Optikko hioo/.test(loyto.kupla?.sub ?? ''),
     JSON.stringify(loyto));
 
-  /* ── 2. laukku ───────────────────────────────────────────────────── */
+  /*
+   * ── 2. laukku ────────────────────────────────────────────────────
+   * Pillerivalikkouudistus (omistaja 29.9.2026): isoisän matkalaukku
+   * (#passport-dialog, .linssi-liuskat-hiomassa, .linssi-nimi/-lyhyt)
+   * korvautui pillerivalikon Linssit-näkymällä (js/kokoelmanakyma.js).
+   * ui.openPassport() on yhä yhteensopivuuskutsu (js/ui.js openPassport-
+   * kommentti) ja avaa sen suoraan. Hiomassa-rivi tunnistetaan nyt id:n
+   * etuliitteestä (`hiomassa:<tunnus>`, ei enää omasta ryhmäluokasta),
+   * ja koko rivi on harmaa CSS:n `.kokoelma-rivi.hiomassa`-säännöllä
+   * (css/styles.css) sen sijaan että vain kuvake olisi harmaa.
+   */
   await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
-    for (const d of document.querySelectorAll('dialog[open]')) if (d.id !== 'passport-dialog') d.close();
+    for (const d of document.querySelectorAll('dialog[open]')) d.close();
     ui.openPassport();
     await ui.paivitaLinssit();
     await new Promise((r) => setTimeout(r, 600));
   });
   const laukku = await sivu.evaluate(async () => {
-    const nappi = document.querySelector('.linssi-liuskat-hiomassa button.hiomassa[data-linssi="testilinssi"]');
+    const nappi = document.querySelector('#linssi-valikko button[data-linssi="hiomassa:testilinssi"]');
     const img = nappi?.querySelector('img');
+    // Mitat ENNEN napautusta: klikkaus piirtää koko listan uudelleen
+    // (piirraKokoelma → kotelo.replaceChildren()), joten `nappi` on
+    // sen jälkeen irronnut solmu eikä getComputedStyle enää näytä sen
+    // oikeaa (renderöityä) filter-arvoa.
+    const rivi = Boolean(nappi);
+    const hiomassaLuokka = Boolean(nappi?.classList.contains('hiomassa'));
+    const kuva = img?.getAttribute('src') ?? '';
+    const harmaa = nappi ? getComputedStyle(nappi).filter : '';
     nappi?.click();
     await new Promise((r) => setTimeout(r, 300));
     const tiedot = document.querySelector('.linssi-tiedot');
     return {
-      rivi: Boolean(nappi),
-      kuva: img?.getAttribute('src') ?? '',
-      harmaa: nappi ? getComputedStyle(nappi).filter : '',
-      nimi: tiedot?.querySelector('.linssi-nimi')?.textContent ?? '',
-      selite: tiedot?.querySelector('.linssi-lyhyt')?.textContent ?? '',
-      aktivoi: Boolean(tiedot?.querySelector('.linssi-aktivoi')),
-      valmiillaRivilla: Boolean(document.querySelector('.linssi-liuskat:not(.linssi-liuskat-kesken) button[data-linssi="testilinssi"]')),
+      rivi,
+      hiomassaLuokka,
+      kuva,
+      harmaa,
+      nimi: tiedot?.querySelector('.kokoelma-esikatselu-nimi')?.textContent ?? '',
+      selite: tiedot?.querySelector('.kokoelma-esikatselu-selite')?.textContent ?? '',
+      toimintoTeksti: tiedot?.querySelector('.linssi-aktivoi')?.textContent ?? '',
+      valmiillaRivilla: Boolean(document.querySelector('#linssi-valikko button[data-linssi="testilinssi"]')),
     };
   });
   tieto(`${ruutu.nimi} · laukku`, JSON.stringify(laukku));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `hiomassa-laukku-${ruutu.nimi}.png`), await sivu.screenshot());
   vaadi(`${ruutu.nimi} · 2. Laukussa harmaalla hiomassa-rivillä, hiomassa-kuva, selite ilman Aktivoi-nappia`,
-    laukku.rivi && /hiomassa\.svg/.test(laukku.kuva) && /grayscale/.test(laukku.harmaa)
-      && laukku.nimi === 'Testilinssi' && /Hiomassa optikolla/.test(laukku.selite) && !laukku.aktivoi
+    laukku.rivi && laukku.hiomassaLuokka && /hiomassa\.svg/.test(laukku.kuva) && /grayscale/.test(laukku.harmaa)
+      && laukku.nimi === 'Testilinssi' && /Hiomassa optikolla/.test(laukku.selite)
+      && laukku.toimintoTeksti === 'Hiomassa'
       && !laukku.valmiillaRivilla,
     JSON.stringify(laukku));
 
@@ -222,7 +243,15 @@ for (const ruutu of RUUDUT) {
   vaadi(`${ruutu.nimi} · 3. Hyvitys vain kerran per linssi`, toinen.uudestaan === 0 && toinen.ero === 0,
     JSON.stringify(toinen));
 
-  /* ── 4. linssi valmistuu ─────────────────────────────────────────── */
+  /*
+   * ── 4. linssi valmistuu ──────────────────────────────────────────
+   * Valmistunut-merkki EI ole enää oma CSS-luokka (.valmistui) vaan
+   * "✦" liitettynä rivin nimeen (js/ui.js paivitaLinssiTiedot:
+   * `rivi.nimi = \`${rivi.nimi} ✦\``) — luetaan siis rivin näkyvästä
+   * tekstistä. `jalkeen: valmistuneet(game)` lukee suoraan pelitilan
+   * (js/linssit/omistus.js), ei DOMia, joten se todistaa kuittauksen
+   * riippumatta DOM-merkinnän tarkasta muodosta.
+   */
   const valmis = await sivu.evaluate(async () => {
     const { ui, game } = window.matkakirja;
     const { LINSSIT } = await import('/js/linssit/rekisteri.js');
@@ -244,23 +273,22 @@ for (const ruutu of RUUDUT) {
     const ennen = valmistuneet(game);
     await ui.paivitaLinssit();
     await new Promise((r) => setTimeout(r, 500));
-    const nappi = document.querySelector('.linssi-liuskat:not(.linssi-liuskat-kesken) button[data-linssi="testilinssi"]');
-    const merkki = Boolean(nappi?.classList.contains('valmistui'));
-    const hiomassaRivi = Boolean(document.querySelector('.linssi-liuskat-hiomassa button[data-linssi="testilinssi"]'));
+    const nappi = document.querySelector('#linssi-valikko button[data-linssi="testilinssi"]');
+    const merkki = /✦/.test(nappi?.querySelector('.kokoelma-rivi-nimi')?.textContent ?? '');
+    const hiomassaRivi = Boolean(document.querySelector('#linssi-valikko button[data-linssi="hiomassa:testilinssi"]'));
     nappi?.click();
     await new Promise((r) => setTimeout(r, 300));
     return {
       ladattu: Boolean(linssi), ennen, valmiillaRivilla: Boolean(nappi), merkki, hiomassaRivi,
-      merkkiKuitattu: nappi ? !nappi.classList.contains('valmistui') : false,
       jalkeen: valmistuneet(game),
       aktivoi: Boolean(document.querySelector('.linssi-tiedot .linssi-aktivoi')),
     };
   });
   tieto(`${ruutu.nimi} · valmis`, JSON.stringify(valmis));
   if (KUVAKANSIO) writeFileSync(join(KUVAKANSIO, `hiomassa-valmis-${ruutu.nimi}.png`), await sivu.screenshot());
-  vaadi(`${ruutu.nimi} · 4. Valmistunut linssi herää: valmiiden rivillä, valmistui-merkki kerran, Aktivoi tarjolla`,
+  vaadi(`${ruutu.nimi} · 4. Valmistunut linssi herää: valmiiden rivillä, valmistui-merkki, Aktivoi tarjolla, kuitattu`,
     valmis.ladattu && valmis.ennen.includes('testilinssi') && valmis.valmiillaRivilla && valmis.merkki
-      && !valmis.hiomassaRivi && valmis.merkkiKuitattu && valmis.jalkeen.length === 0 && valmis.aktivoi,
+      && !valmis.hiomassaRivi && valmis.jalkeen.length === 0 && valmis.aktivoi,
     JSON.stringify(valmis));
 
   /* ── 5. kehittäjätila ────────────────────────────────────────────── */
