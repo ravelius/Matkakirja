@@ -9091,3 +9091,7 @@ Omistaja 29.9. klo 07.1x sanatarkasti: "Radio saisi olla kuun valossa kuvattu ja
 ## PÄÄTÖS: VIE 1.0.42 (RADIO, ISS-PANEELI, SÄÄTIMET, ASTROSELITE) (29.9.2026 klo 07.27)
 
 Natiiviseppä 29.9. klo 07.3x: BUILD 42 = proto master c7c5b8e7 (käännös 44faaf32): Linssisepän astroselite, Linssiseppä 2:n radiolinssin uudistus (d7895639/9ee9136e, vain natiivi) ja ISS-kyydin säätimet ca610a6d (harmaa pinta oman sijainnin katseesta korjattu), Natiivi-UI:n ISS-säätöpaneelin Codex-nahka 03368417. Laitetestaajan savuke 4/4 PASS; radio tila rms 0,125 (aiempi rms 0 oli mittausharha: asemat soivat liitännäisen AVAudioEnginellä Unityn ohi). Muutosrivi #3600. Päätoimittaja: VIE 1.0.42 (ehdot: muutosrivi mainissa + sisältövienti ennen TF:ää, Testattavaa tyhjä). Kuunvaloradio (Codex 77036b7f6) ja pohja 2026-09-27 + kerma p060 tulevat 1.0.43:een.
+
+## OMISTAJA: MAAKUNTALAPPU YLEMMÄS AVAUSNAPIN PÄÄLLE + PIENI X (29.9.2026 klo 07.34)
+
+Omistaja 29.9. klo 07.4x (iPhone-kaappaus docs/raportit/kaappaukset/omistaja-20260929/maakuntalappu-paikka.jpg: Länsi-Makedonia, Kastorian luonnehdinta + Lue lisää) sanatarkasti: "Tuo maakunta lappu saisi olla ylempänä ja peittää sen avanneen painikkeet. Lisää pieni x sen oik yläkulmaan sulkemista varten". → Natiivi-UI (natiivi, kärkeen ennen luennan alkukatkoa): maakuntatilan lappu nostetaan ylemmäs niin, että se peittää sen avanneen painikkeen (oikean yläkulman listanappi), ja lapun oikeaan yläkulmaan pieni sulkeva x (osuma-ala ≥ 44 pt, ei koristeita); Siirtoseppä sama webiin pariteetiksi.
