@@ -34,6 +34,7 @@ import { packById } from '../../js/pack.js';
  * siksi "olenko minä se tiedosto, joka nodelle annettiin".
  */
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
   ohitaVanhanKartanSavuke(import.meta.url);
@@ -46,14 +47,6 @@ const JUURI = new URL('../..', import.meta.url).pathname;
  * kirjoita kiinteää polkua): PLAYWRIGHT_JS → juuren node_modules →
  * paljas paketti (vanha ensimmäinen yritys) → konttiympäristön /opt.
  */
-let paketti = null;
-for (const polku of [process.env.PLAYWRIGHT_JS, join(JUURI, 'node_modules', 'playwright', 'index.js'),
-  'playwright', '/opt/node22/lib/node_modules/playwright/index.js']) {
-  if (!polku) continue;
-  paketti = await import(polku).catch(() => null);
-  if (paketti) break;
-}
-const chromium = paketti?.chromium ?? paketti?.default?.chromium;
 const TYYPIT = {
   '.html': 'text/html',
   '.js': 'text/javascript',
@@ -121,7 +114,7 @@ export async function mittaaSyvaZoomi({
   peli.phase = 'action';
   const tallenne = JSON.stringify(peli.toJSON());
 
-  const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+  const selain = await avaaChromium({});
   const ctx = await selain.newContext({
     viewport: ruutu, deviceScaleFactor: dpr, reducedMotion: 'reduce',
   });

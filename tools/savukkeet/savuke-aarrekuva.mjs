@@ -30,12 +30,10 @@ import { ASSET_KANSIOT } from '../../js/media.js';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KAAPPAUKSET = process.env.KAAPPAUSKANSIO ?? join(JUURI, 'tools/savukkeet/kaappaukset');
@@ -66,7 +64,7 @@ const vaadi = (nimi, ehto, lisa = '') => {
 };
 
 mkdirSync(KAAPPAUKSET, { recursive: true });
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const sivu = await selain.newPage({ viewport: { width: 900, height: 900 } });
 await lisaaPolloKehittajakoodi(sivu); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 /*

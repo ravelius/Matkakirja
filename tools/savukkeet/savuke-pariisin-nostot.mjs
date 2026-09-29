@@ -52,6 +52,7 @@ import { FOKUSVIRTA_PARIISI } from '../../js/packs/fokusvirta-pariisi.js';
 import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { paakartanNostot, kohdekarttojenNostot } from '../tarkista-nostopaikat.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -134,9 +135,6 @@ vaadi('3b. piste palautui ajon jälkeen',
 
 /* ==================== VARTIOT 4–5: SELAIN ==================== */
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -182,7 +180,7 @@ function tallenne() {
   return JSON.stringify(peli.toJSON());
 }
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block',
 });

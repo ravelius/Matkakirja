@@ -33,6 +33,7 @@ import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const { Game } = await import(`${JUURI}/js/game.js`);
@@ -83,7 +84,7 @@ const VEDOT = [
 const ZOOMIT = [['sisaan', 4000], ['sisaan', 4000], ['sisaan', 4000], ['ulos', 4000], ['ulos', 4000], ['ulos', 4000]];
 const TAUKO_MS = 450;
 
-const selain = MOOTTORI === 'webkit' ? await paketti.webkit.launch() : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+const selain = MOOTTORI === 'webkit' ? await paketti.webkit.launch() : await avaaChromium();
 const ctx = await selain.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
 await ctx.addInitScript((d) => { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); }, tallenne);
 const sivu = await ctx.newPage();

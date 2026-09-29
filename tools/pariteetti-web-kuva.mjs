@@ -9,13 +9,13 @@
 // Käyttö: node pariteetti-web-kuva.mjs <ulostulo.jpg> [click:"Teksti"] [wait:ms] [tap:x,y] ...
 // PW_W/PW_H ympäristömuuttujilla vaihdetaan pisteleveys (oletus iPhone
 // 393×852; iPad 834×1194).
-import { chromium } from 'playwright';
+import { avaaChromium } from './selain.mjs';
 
 const [, , out, ...steps] = process.argv;
 const width = Number(process.env.PW_W || 393);
 const height = Number(process.env.PW_H || 852);
 
-const browser = await chromium.launch({ args: ['--use-angle=metal'] });
+const browser = await avaaChromium({ args: ['--use-angle=metal'] });
 const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 2 });
 await page.goto('https://matkakirja.app/', { waitUntil: 'networkidle' });
 try {

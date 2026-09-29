@@ -104,13 +104,11 @@ import { MERKINNAN_TAUKO_MS } from '../../js/fokusvirta.js';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
@@ -153,7 +151,7 @@ peli.revealed.delete('ateena');
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /** Sama alkutila joka kontekstiin: peli tallenteesta, fokusmoodi päällä. */
 const istuta = (data) => {

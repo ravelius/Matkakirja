@@ -36,10 +36,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
 import { FOKUS_POHJAT } from '../js/packs/fokus-grc.js';
-
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = new URL('..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -111,8 +108,7 @@ function tallenne(kaupunki) {
   return JSON.stringify(peli.toJSON());
 }
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--use-gl=swiftshader', '--enable-webgl', '--ignore-gpu-blocklist'],
 });
 const ctx = await selain.newContext({

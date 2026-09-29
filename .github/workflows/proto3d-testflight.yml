@@ -306,7 +306,7 @@ jobs:
           mkdir -p "$hakemisto"
           chmod 700 "$hakemisto"
           polku="$hakemisto/AuthKey.p8"
-          if printf '%s' "$ASC_KEY_P8" | grep -q "BEGIN PRIVATE KEY"; then
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then  # ei putkea: pipefail + grep -q → SIGPIPE (29.9. TF 1.0.57)
             printf '%s\n' "$ASC_KEY_P8" > "$polku"
           else
             printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"

@@ -609,6 +609,11 @@ test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivou
   assert.equal(swKansio, `${versio}${sarjassaNostot ? '-nostot' : ''}-${tunniste}`,
     'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
     + 'activate siivoaisi juuri käytössä olevat laatat');
+  // Deltasarjan perussarja (js/deltasarja.js): sama kaksoiskappale, muuten activate siivoaisi perussarjan laatat.
+  const swPerus = sw.match(/const LAATTAKANSIO_PERUS = (null|'[^']*');/)?.[1];
+  const palloPerus = pallo.match(/export const PALLO_LAATTAPERUS = (null|'[^']*');/)?.[1];
+  assert.ok(swPerus && palloPerus, 'LAATTAKANSIO_PERUS / PALLO_LAATTAPERUS puuttuu');
+  assert.equal(swPerus, palloPerus, 'sw.js:n LAATTAKANSIO_PERUS ja js/pallo.js:n PALLO_LAATTAPERUS eroavat');
 });
 
 /*

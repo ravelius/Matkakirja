@@ -37,14 +37,12 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 /* Kortin kasvun kesto pelin vakiosta (js/kaupunkinosto.js); luetaan tekstinä, ettei DOM-moduulia tuoda Nodeen. */
 const AVAUSKORTIN_KASVU_MS = Number(readFileSync(new URL('../../js/kaupunkinosto.js', import.meta.url), 'utf8')
   .match(/export const AVAUSKORTIN_KASVU_MS = (\d+);/)?.[1]);
 
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
@@ -99,7 +97,7 @@ if (kirjasto?.status !== 200) {
   process.exit(0);
 }
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+const selain = await avaaChromium({});
 const leikkaa = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
 
 for (const ruutu of RUUDUT) {

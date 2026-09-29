@@ -325,19 +325,20 @@ function luoTervetulo(kello, { kestoMs = 5000 } = {}) {
   return t;
 }
 
-test('ensimmäinen avaus: taulu vasta tervetulon jälkeen, ei puheen aikana', () => {
+test('ensimmäinen avaus (omistaja 29.9.): taulu heti paljastuksen jälkeen, tervetulo puhuu sen aikana', () => {
   const kello = luoKello();
   const tervetulo = luoTervetulo(kello, { kestoMs: 30000 });
-  const { taulu, kuplaPoistot } = luoTaulu({ kello, tervetulo });
-  kello.kulje(29000);
-  assert.equal(taulu.tila().auki, false, 'tervetulo soi: ei taulua');
-  kello.kulje(1000 + TAULUN_KYSELY_MS);
+  // Tervetulon ääni soi pelin soittimessa: se ei ole "muuta puhetta".
+  const ui = { liviaAani: soitin() };
+  const { taulu, kuplaPoistot, vaiennukset } = luoTaulu({ kello, tervetulo, ui });
   assert.equal(taulu.tila().auki, false, 'hengähdys ennen taulua');
   kello.kulje(TAULUN_HENGAHDYS_MS);
   assert.equal(taulu.tila().auki, true);
   assert.equal(taulu.tila().automaatti, 'avattu');
   assert.ok(taulu.tila().loki.includes('avaa:automaatti'));
-  assert.equal(kuplaPoistot.length, 1, 'tervetulon jäljelle jääneet kuplat pois taulun tieltä');
+  assert.equal(kuplaPoistot.length, 1, 'vanhat kuplat pois taulun tieltä');
+  assert.deepEqual(vaiennukset, [], 'automaattinen avaus ei vaienna tervetuloa');
+  assert.equal(tervetulo.ohitettu(), false);
 });
 
 test('myöhempi avaus (ei tervetuloa): taulu heti paljastuksen jälkeen ilman puhetta', () => {
@@ -368,18 +369,18 @@ test('Pulun napautus kesken puheen: puhe vaikenee heti ja taulu aukeaa (ei pää
   const kello = luoKello();
   const tervetulo = luoTervetulo(kello, { kestoMs: 30000 });
   const ui = { liviaAani: soitin() };
-  const { taulu, doc, vaiennukset } = luoTaulu({ kello, tervetulo, ui });
+  // Pelaaja on sulkenut taulun (tässä: ei automaattiavausta) ja napauttaa Pulua.
+  const { taulu, doc, vaiennukset } = luoTaulu({ kello, tervetulo, ui, automaatti: false });
   kello.kulje(3000);
+  assert.equal(taulu.tila().auki, false);
   assert.equal(liviaPuhuu(ui, tervetulo), true);
   doc.laukaise('click', pulunTapahtuma());
   assert.equal(taulu.tila().auki, true);
   assert.equal(tervetulo.ohitettu(), true);
   assert.equal(vaiennukset.length, 1);
   assert.equal(ui.liviaAani, null);
-  // Automaattinen avaus ei tule enää päälle.
   kello.kulje(60000);
   assert.equal(taulu.tila().avauksia, 1);
-  assert.equal(taulu.tila().automaatti, 'ohitettu');
 });
 
 test('automaattista avausta ei tule, jos pelaaja on jo valokuvassa tai kyydissä', () => {

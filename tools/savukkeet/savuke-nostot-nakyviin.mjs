@@ -31,11 +31,9 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO) mkdirSync(KUVAKANSIO, { recursive: true });
 
@@ -86,7 +84,7 @@ peli.world.visited.add('pariisi');
 peli.world.visited.add('marseille');
 const TALLENNE = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+const selain = await avaaChromium();
 const RUUDUT = [
   { nimi: '2000', width: 2000, height: 1300, dpr: 2, katto: true },
   { nimi: '390', width: 390, height: 844, dpr: 3, katto: false },

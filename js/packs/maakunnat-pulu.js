@@ -2087,4 +2087,477 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mitä luostarin kirjastossa säilytetään?", a: "Kirjastossa on noin 11 000 teosta, joiden joukossa 31 inkunaabelia eli 1400-luvun painettua kirjaa sekä bosniankielisiä kyrillisiä käsikirjoituksia." },
     ],
   },
+  ISL: {
+    Austurland: [
+      { q: "Miksi Stuðlagilin kanjoni näkyy vasta nyt, vaikka basalttipylväät ovat tuhansia vuosia vanhoja?", a: "Kanjoni oli aiemmin piilossa Jöklan joen alla. Kun Kárahnjúkarin voimalaitos valjastettiin 2006–2009, suurin osa vedestä ohjattiin patoaltaaseen ja joen pinta laski 7–8 metriä – silloin tiiviit basalttipylväät paljastuivat ensi kertaa ihmisten nähtäväksi." },
+      { q: "Mistä Islannin villit peurat oikein tulivat?", a: "Norjalaisia peuroja tuotiin saarelle neljässä erässä 1770–80-luvuilla eri puolille maata. Vain Vopnafjörðuriin Austurlandille päästetty lauma selvisi hengissä, ja kaikki nykyiset noin 6 000–7 000 villipeuraa polveutuvat siitä." },
+      { q: "Miksi Petra alkoi kerätä kiviä?", a: "Petra Sveinsdóttir aloitti kivien keräämisen jo seitsemänvuotiaana ja jatkoi sitä koko elämänsä ajan patikoiden syrjäisilläkin seuduilla. Vuonna 1974 hän avasi kotinsa yleisölle, ja kokoelma on nykyään yksi maailman suurimmista yksityisistä kivikokoelmista." },
+    ],
+    'Höfuðborgarsvæði': [
+      { q: "Miksi Hafnarfjörðuria kutsutaan Islannin haltiapääkaupungiksi?", a: "Kaupungin keskustan laavakedot ja varsinkin 1923 avattu Hellisgerðin puisto tunnetaan kansanperinteessä piilokansan – haltioiden ja peikkojen – asuinsijoina. Kyselyjen mukaan yli puolet hafnarfjörðurilaisista pitää haltioita ainakin mahdollisina, ja aiheesta järjestetään nykyään opastettuja kierroksia." },
+      { q: "Kuinka suuri osa islantilaisista asuu pääkaupunkiseudulla?", a: "Nykyään lähes kaksi kolmasosaa koko maan reilusta 380 000 asukkaasta asuu pääkaupunkiseudun kunnissa. Loppu maa on sitäkin harvemmin asuttua, mikä tekee alueesta ylivoimaisesti tiheimmin asutun osan Islantia." },
+      { q: "Kuka Bessastaðirissa asui ennen kuin siitä tuli presidentin virka-asunto?", a: "1200-luvulla paikan omisti valtiomies ja saagakirjailija Snorri Sturluson, yksi Islannin historian vaikutusvaltaisimmista hahmoista. Presidentin virka-asunnoksi Bessastaðir vakiintui vasta 1941, ja sitä ennen se toimi muun muassa kuninkaan käskynhaltijan residenssinä." },
+    ],
+    'Vestfirðir': [
+      { q: "Miksi Ísafjörðurin yläpuolelle rakennettiin isot betoniset vallit?", a: "1990-luvulla lumivyöryt tappoivat kymmeniä ihmisiä Vestfirðirin kylissä, muun muassa Flateyrissa 1995. Onnettomuuksien jälkeen useisiin kaupunkeihin, myös Ísafjörðuriin, rakennettiin suuria ohjausvalleja, jotka pakottavat vyöryt kääntymään pois asutuksen kohdalta." },
+      { q: "Miksi juuri Vestfirðir sai maineen noituuden keskuksena?", a: "1600-luvun \"poltettujen vuosisadalla\" Strandirin alueella tuomittiin ja poltettiin roviolla 21 ihmistä noituudesta – enemmän kuin missään muualla Islannissa. Hólmavíkin Strandagaldur-museo kertoo nykyään tästä historiasta ja ajan taikamerkeistä." },
+      { q: "Mistä Dynjandin nimi tulee?", a: "Dynjandi tarkoittaa suomeksi suunnilleen \"jylisevää\" tai \"kumisevaa\", ja nimi viittaa putouksen voimakkaaseen ääneen. Se on Vestfirðirin suurin putous, ja sen leveys kasvaa yläosan 30 metristä alaosan 60 metriin." },
+    ],
+    'Norðurland eystra': [
+      { q: "Miksi Akureyrin liikennevaloissa on sydämiä?", a: "Sydämenmuotoiset valot ilmestyivät kaupungin liikennevaloihin 2008, vain kuukausia ennen kuin Islannin pankkijärjestelmä romahti finanssikriisissä. Kriisin jälkeen sydämistä tuli symboli positiiviselle ajattelulle ja yhteisöllisyydelle, ja ne ovat säilyneet kaupungissa siitä lähtien." },
+      { q: "Miksi juuri Húsavíkin edustalla nähdään niin paljon valaita?", a: "Skjálfandin lahden ravinteikkaat, matalat vedet houkuttelevat useita valaslajeja ruokailemaan lähelle rannikkoa lähes ympäri vuoden. Kaupungista on tullut sen ansiosta Islannin tunnetuin valaidenkatselukohde." },
+      { q: "Mikä tekee Akureyrin kasvitieteellisestä puutarhasta erikoisen?", a: "Se on yksi maailman pohjoisimmista kasvitieteellisistä puutarhoista, vain noin 50 kilometrin päässä napapiiristä. Silti siellä kasvaa nykyään yli 7 000 kasvilajia, joista suurin osa on tuotu muualta maailmasta." },
+    ],
+    'Norðurland vestra': [
+      { q: "Mitä Glaumbæjrin turvetaloissa oikein näkee?", a: "Kompleksi koostuu kolmestatoista toisiinsa käytävillä yhdistetystä pienestä rakennuksesta – muun muassa keittiöstä, ruokavarastosta ja pajasta – jotka on rakennettu turpeesta ja kivestä puurungon varaan. Taloissa asuttiin aina vuoteen 1947 asti, jolloin kansallismuseo hankki paikan museoksi." },
+      { q: "Kuka oli Grettir ja miksi hän liittyy Drangeyn saareen?", a: "Grettir Ásmundarson on Islannin tunnetuimpia saagasankareita, lainsuojaton mies, joka joutui pakenemaan vuosikausiksi asumattomille seuduille. Grettis sagan mukaan hän vietti viimeiset vuotensa piilossa Drangeyn jyrkällä saarella ennen kuin vihamiehet lopulta löysivät hänet." },
+      { q: "Miksi juuri Skagafjörður tunnetaan hevoskasvatuksesta?", a: "Alueen laajat, ravinteikkaat laaksoniityt ja pitkä kasvatusperinne ovat tehneet siitä yhden Islannin tärkeimmistä islanninhevosten kasvatusalueista. Hevosnäyttelyjä ja -kilpailuja järjestetään seudulla nykyään säännöllisesti ympäri vuoden." },
+    ],
+    'Reykjavík': [
+      { q: "Mitä Hallgrímskirkjan torni matkii?", a: "Arkkitehti Guðjón Samúelsson suunnitteli kirkon 1930-luvulla niin, että sen harjakatto ja pylväsmäiset seinät muistuttavat Islannin luonnossa esiintyviä basalttipatsaita. Kirkko valmistui lopulta vasta 1986, yli 40 vuotta suunnittelun aloittamisen jälkeen." },
+      { q: "Mitä Sólfar-veistos oikeastaan esittää?", a: "Teos on tekijänsä Jón Gunnar Árnasonin mukaan \"unelmalaiva\" ja auringon ja toivon symboli, ei historiallinen viikinkilaiva. Teräksinen veistos paljastettiin 1990 Reykjavíkin 200-vuotisjuhlan kunniaksi." },
+      { q: "Miksi Harpa rakennettiin juuri satamaan?", a: "Konserttitalon rakentaminen aloitettiin ennen vuoden 2008 finanssikriisiä osana laajempaa satama-alueen uudistusta. Hanke jäi kriisin myötä hetkeksi kesken, mutta valtio ja kaupunki päättivät rahoittaa sen loppuun, ja Harpa avattiin 2011." },
+    ],
+    'Suðurland': [
+      { q: "Mitä Reynisfjaralle tapahtui helmikuussa 2026?", a: "Viikkoja jatkuneet voimakkaat aallot ja itätuulet kuluttivat rantaa niin pahasti, että osa rannan kuuluisista basalttipylväsmuureista sortui mereen. Tapaus muistutti, miten altis eroosiolle tämä Atlantin avomerelle avautuva ranta on." },
+      { q: "Miksi Eyjafjallajökullin purkaus 2010 pysäytti lentoliikenteen kaukana Euroopassa?", a: "Purkaus tapahtui jäätikön alla, ja jää suli äkillisesti kuumaan laavaan koskettaessaan, mikä hienonsi tuhkan poikkeuksellisen pieneksi ja nosti sen korkealle ilmakehään. Hieno tuhka ajautui tuulten mukana laajalle Euroopan ylle ja pysäytti yli 100 000 lentoa noin viikossa." },
+      { q: "Miksi Seljalandsfossin putouksen takaa voi kävellä?", a: "Putous putoaa entiseltä merenrantajyrkänteeltä, jonka juurelle on ajan mittaan syntynyt onkalo putouksen taakse. Kallioseinämän ja vesiverhon väliin jää juuri sen verran tilaa, että sieltä pääsee kulkemaan ympäri, joskin täysin kastuen." },
+    ],
+    'Suðurnes': [
+      { q: "Miten Sininen lagúuni oikeastaan syntyi?", a: "Se ei ole luonnollinen allas, vaan Svartsengin geotermisen voimalan käytetyn veden kertymä, joka alkoi muodostua 1976. Veden korkea piidioksidipitoisuus tiivisti altaan pohjan vedenpitäväksi, ja vasta myöhemmin ihmiset huomasivat, että kylpeminen vedessä tuntui miellyttävältä iholle." },
+      { q: "Mitä Grindavíkissa tapahtui vuodesta 2023 alkaen?", a: "Reykjanesin niemimaan uusi purkaussarja alkoi uhata kaupunkia, ja sen noin 3 800 asukasta evakuoitiin marraskuussa 2023. Useita purkauksia on tapahtunut sen jälkeen, ja kaupunkia suojaamaan on rakennettu kilometrien pituisia laavavalleja." },
+      { q: "Miksi Reykjanesviti on Islannin vanhin majakka?", a: "Ensimmäinen majakka paikalla valmistui jo 1878, mutta maanjäristys vaurioitti sen pahoin vain kahdeksan vuotta myöhemmin. Nykyinen, yhä käytössä oleva betonimajakka rakennettiin 1907–1908 ja on säilynyt siitä lähtien lähes alkuperäisenä." },
+    ],
+    Vesturland: [
+      { q: "Miksi Deildartunguhverin vesi riittää lämmittämään kokonaisia kaupunkeja?", a: "Lähde pulppuaa 180 litraa lähes kiehuvaa vettä sekunnissa, mikä tekee siitä Euroopan voimakkaimman kuuman lähteen. Vesi johdetaan putkia pitkin muun muassa Borgarnesiin ja 64 kilometrin päähän Akranesiin, mikä on Islannin pisin kaukolämpöputki." },
+      { q: "Miksi Hraunfossarin vesi näyttää tulevan tyhjästä?", a: "Vesi ei virtaa maanpäällisestä joesta, vaan on suodattunut hitaasti läheisen laavakentän huokoisen kiven läpi. Se purkautuu lukemattomina pieninä putouksina suoraan kivien raoista Hvítá-jokeen usean sadan metrin matkalla." },
+      { q: "Mitä hákarl oikein on?", a: "Se on perinteinen islantilaisherkku, joka valmistetaan mätättämällä ja kuivattamalla jäämerihain lihaa useiden kuukausien ajan – tuore liha on myrkyllistä ilman tätä käsittelyä. Bjarnarhöfnin tilan museo Vesturlannissa esittelee valmistusprosessin ja tarjoaa maistiaisia." },
+    ],
+  },
+  ALB: {
+    "Berat": [
+      { q: "Mikä Onufrin punainen oikein on?", a: "Onufri maalasi Beratissa 1500-luvulla, ja hänen tunnusmerkkinsä on hehkuva punainen, jota kutsutaan hänen mukaansa. Hän varmisti signeerauksensa vuoden 1547 kirjoituksella: Olen Onufri, Beratin kaupungista." },
+      { q: "Miksi Osumin kanjoni on niin kapea?", a: "Kanjonissa on kuusi ahdasta kohtaa, joissa seinät ovat joen pohjalla vain 1,5 metrin päässä toisistaan. Tutkijat arvelevat, että maanalaisen joen katto romahti ja paljasti rotkon 2–3 miljoonaa vuotta sitten." },
+      { q: "Mitä Beratista on Albanian kolikoissa?", a: "Linnoituksen kuva on 10 lekin kolikossa. Linnan alueella oli aikanaan noin 20 kirkkoa mutta vain yksi moskeija, joka rakennettiin turkkilaiselle varuskunnalle." },
+    ],
+    "Dibër": [
+      { q: "Miksi Peshkopin lähteillä ei saa pitää koruja?", a: "Vesi on niin rikkipitoista, että se tummentaa ja syövyttää useimmat metallit. Kerrotaan, että vain kulta kestää. Rikki tulee Korabin kipsikerrostumista, ja lähteet tuottavat noin 14 litraa sekunnissa." },
+      { q: "Mistä Peshkopi on saanut nimensä?", a: "Nimi tulee sanasta piispa. Alue liitettiin Ohridin arkkipiispakuntaan 1019, ja vuotta myöhemmin siitä tuli oma piispakunta. Ottomaanien aikaan paikkaa kutsuttiin nimellä Debre-i Zir eli Ala-Debre." },
+    ],
+    "Durrës": [
+      { q: "Miksi Durrës oli kerran Albanian pääkaupunki?", a: "Vuosina 1914–1920 Durrës toimi maan pääkaupunkina Vlorën jälkeen, ennen kuin Tirana sai aseman." },
+      { q: "Miksi kaupungin vanha nimi on Dyrrhachium?", a: "Kreikkalaiset perustivat kaupungin nimellä Epidamnos. Roomalaiset antoivat sille nimen Dyrrhachium sen jälkeen, kun heistä tuli alueen isäntiä 229 eaa." },
+      { q: "Onko Durrësissa ottomaanien jälkiä?", a: "On. Ottomaanit valtasivat kaupungin 1501, ja Fatih-moskeija rakennettiin jo 1502. Nykyinen Suuri moskeija on vuodelta 1931 ja seisoo aiemman ottomaanimoskeijan paikalla." },
+    ],
+    "Elbasan": [
+      { q: "Mitä Elbasan-nimi tarkoittaa?", a: "Nimen arvellaan tarkoittavan albaniaksi tasaista linnoitusta tai turkiksi tasaista maakuntaa. Tasainen viittaa Shkumbinin laaksoon Skanderbegin vuorten ja Myzeqen tasangon välissä." },
+      { q: "Mikä oli Puolueen teräs?", a: "Se oli 1970-luvulla kiinalaisten avulla rakennettu valtava metallurginen kombinaatti. Sen pohjalta toimii nyt Kurumin terästehdas, joka kattaa noin 85 prosenttia Albanian rautatuotteiden markkinoista. Alue on myös yksi Balkanin saastuneimmista." },
+      { q: "Onko Elbasanissa pelattu maajoukkueen otteluita?", a: "On. Vuonna 2014 kunnostettu Elbasan Arena nousi Albanian jalkapallomaajoukkueen kotikentäksi, joten kansallisen tason otteluita nähtiin kaupungissa eikä vain pääkaupungissa." },
+    ],
+    "Fier": [
+      { q: "Miksi Apolloniassa ei ole enää satamaa?", a: "Maanjäristys 200-luvulla jKr. muutti Vjosan uomaa, satama liettyi umpeen ja ympäristö muuttui malariasuoksi. Kaupunki autioitui vähitellen." },
+      { q: "Miksi Karavastan laguunilla käy lintuharrastajia?", a: "Laguunilla pesii harvinainen kiharapelikaani, jopa 300 paria. Se on noin 5 prosenttia koko maailman kannasta, ja siksi kansallispuisto on kansainvälisesti tärkeä lintualue." },
+      { q: "Miksi Ardenican luostari on tunnettu Skanderbegistä?", a: "Kansallissankari Skanderbeg vihittiin siellä 21. huhtikuuta 1451 Andronika Arianitin kanssa, ja häihin osallistuivat Lezhën liiton ruhtinaat." },
+    ],
+    "Gjirokastër": [
+      { q: "Miksi talot on rakennettu kuin pienet linnat?", a: "Sukujen välinen verikosto, rosvot ja levottomat ajat tekivät kotien linnoittamisesta järkevää. Paksut kiviseinät, pienet alaikkunat ja talon oma vesihuolto pitivät perheen turvassa." },
+      { q: "Miksi linnoituksessa on ollut vankila?", a: "Vankilatiloja laajennettiin 1932 kuningas Zogin aikaan, ja myöhemmin siellä pidettiin poliittisia vankeja. Nykyään linnoitus on museo ja yksi kaupungin suosituimmista nähtävyyksistä." },
+      { q: "Miksi linnan pihalla on lentokone?", a: "Siellä on esillä vangittu Yhdysvaltain ilmavoimien lentokone, joka muistuttaa hallinnon kylmän sodan ajan kannasta. Linnassa on viisi tornia, ja sen länsipään laajennus on Ali Pashan käsialaa vuoden 1812 jälkeen." },
+    ],
+    "Korçë": [
+      { q: "Mikä on Mirahorin moskeija ja miksi se on niin vanha?", a: "Sen rakennutti 1494–95 sulttaani Bayezid II:n tallimestari Iljaz bej Mirahori, ja se on yksi Albanian vanhimmista säilyneistä ottomaanirakennuksista. Moskeijan ympärille kasvoi kaupungin alkuperäinen ydin." },
+      { q: "Miksi Birra Korça maistuu Korçëlta?", a: "Panimo perustettiin 1928, ja vetensä se ottaa Moravan vuoren lähteistä. Olut on yksi Albanian tunnetuimmista tuotemerkeistä." },
+      { q: "Miksi Korçën ortodoksinen katedraali on vasta 1990-luvulta?", a: "Edellinen Pyhän Yrjön katedraali purettiin 1968. Nykyinen Kristuksen ylösnousemuksen katedraali rakennettiin uudelleen ja valmistui 1992, ja se on kaupungin pääkirkko." },
+    ],
+    "Kukës": [
+      { q: "Miksi Kukësia ehdotettiin Nobelin rauhanpalkinnon saajaksi?", a: "Kosovon sodan aikana 1999 noin 16 000 asukkaan kaupunki otti vastaan satojatuhansia pakolaisia telttoihin ja koteihin. Kaupunkia ehdotettiin rauhanpalkinnon saajaksi vuonna 2000." },
+      { q: "Miksi Valbonan solan yli kävellään yhä vanhaa muulipolkua Thethiin?", a: "Reitti Valbonasta Thethiin nousee noin 1 800 metriin ja on vanha muulipolku, jota pitkin kylien väki kulki markkinoille ja sukulaisten luo ennen teitä. Nyt sen kävelee moni retkeilijä yhdessä päivässä kesäkuukausina, punavalkoisten merkkien opastamana." },
+      { q: "Mikä on flija, ja miksi sen valmistus vie tuntikausia?", a: "Flija on pohjois-Albanian ja Kosovon ruoka, jossa ohutta taikinaa levitetään kerros kerrokselta kuumalle rautaiselle saç-kannelle hiillosten päällä ja voidellaan. Kukësissa sen paistoon voi mennä useita tunteja, ja alueella järjestetään flija-festivaaleja." },
+    ],
+    "Lezhë": [
+      { q: "Kuka perusti Lezhën antiikin Lissoksen?", a: "Diodoroksen mukaan Syrakusan hallitsija Dionysios I perusti Lissoksen 385 eaa. turvaamaan kauppareittejä Adrianmerellä. Linnoitus rakennettiin kukkulalle, joka kohoaa yhä kaupungin päällä." },
+      { q: "Miksi Lezhëä sanotaan myös Alessioksi?", a: "Se on kaupungin italialainen nimi, jonka Venetsian 1400-luvun hallinto jätti historiakirjoihin. Nimi elää yhä vanhoissa kartoissa ja historiakirjoissa." },
+    ],
+    "Shkodër": [
+      { q: "Miksi Shkodërin sanotaan pyöräkaupungiksi?", a: "Kaupunki on tasainen, ja pyöräily on ollut arkea vuosikymmeniä. Vuokrapyörällä pääsee kaupungista Rozafan linnalle, Mesin sillalle ja järven rantaan, esimerkiksi Shirokan kylään." },
+      { q: "Mitä lintuja Shkodërjärvellä näkee?", a: "Järvellä on noin 270 lintulajia, muun muassa kiharapelikaaneja, joita on Euroopassa enää harvassa. Noin 35 prosenttia järvestä kuuluu Albanialle ja loput Montenegrolle." },
+      { q: "Mitä Komanin järven lautalla näkee?", a: "Lautta kulkee Komanista Fierzaan noin kaksi ja puoli tuntia kapeissa rotkoissa, joiden jyrkät seinämät nousevat suoraan vedestä. Pienemmät veneet kuljettavat ihmisiä ja tavaraa kyliin, joihin ei pääse tietä pitkin." },
+    ],
+    "Tiranë": [
+      { q: "Miksi Tiranan pyramidi on nyt portaikko?", a: "Pyramidi avattiin 1988 museona, ja sitä käytettiin myöhemmin muun muassa konferenssikeskuksena. Hollantilainen MVRDV muutti sen 2023 nuorten teknologiakeskus TUMOksi, ja katolle johtavat portaat saavat kiipeämään sinne kuten paikalliset ennenkin." },
+      { q: "Kuinka nopeasti pääsee vuorelle Tiranasta?", a: "Dajti Ekspres -köysirata nousee 15 minuutissa noin 1 613 metrin korkeuteen Dajtin parvekkeelle. Se valmistui 2005, ja ylhäältä näkee koko Tiranan tasangon." },
+    ],
+    "Vlorë": [
+      { q: "Miksi Muradien moskeija on tärkeä?", a: "Se rakennettiin 1537–1542 ja sen suunnitteli Mimar Sinan, joka teki myös Süleymaniyen moskeijan Istanbulissa. Moskeija on Albanian kulttuurimonumentti ja edelleen käytössä." },
+      { q: "Miksi Narta-laguuni on niin matala?", a: "Sen keskisyvyys on vain noin 0,7 metriä, koska Vjosa-joki on kasannut siihen sedimenttiä tuhansien vuosien ajan. Matala vesi on kuin suunniteltu suolalammikoille ja lintujen ruokapaikaksi." },
+      { q: "Kuinka suuri Sazanin saari on?", a: "Sazan on Albanian suurin saari, noin 4,8 kilometriä pitkä ja 2,7 leveä. Se kuuluu Karaburun-Sazanin meripuistoon, jonka vesillä uivat delfiinit ja sukeltajien löytämät hylyt." },
+    ],
+  },
+  MKD: {
+    "Eastern": [
+      { q: "Mitä ovat Vinican terrakottaikonit?", a: "Savilaattoja, jotka löytyivät Viničko Kalen linnavuoren raunioilta ja ajoittuvat 500–600-luvuille. Ne on valettu muoteilla, ja niissä on kristillisiä kuvia sekä latinankielisiä rukoustekstejä. Suuri osa on nykyään Skopjen museossa." },
+      { q: "Mikä on Lesnovon luostari?", a: "Probištipin lähellä Osogovon rinteellä oleva luostari perustettiin vuonna 1341 despootti Jovan Oliverin toimesta. Pyhän Mikaelin kirkon freskot maalattiin 1346–1347, ja ne ovat keskiaikaisen serbialais-bysanttilaisen maalaustaiteen merkittäviä esimerkkejä." },
+    ],
+    "Southeastern": [
+      { q: "Miksi Dojranin kalastajat pyytävät kalaa merimetsojen avulla?", a: "Talvella kalastajat rakentavat ruokoaidoista pyydyksen, mandran, ja merimetsot ajavat kalat sinne. Tapa on harvinainen, ja kausi alkaa lokakuussa ja kestää maaliskuuhun." },
+      { q: "Milloin Končen luostari rakennettiin?", a: "Radovišin eteläpuolella Konče-vuoren juurella oleva Pyhän Tapanin kirkko rakennettiin vuonna 1366. Luostari oli keskiajalla tärkeä hengellinen keskus, ja sen ympärille kohosi asuinrakennuksia." },
+    ],
+    "Northeastern": [
+      { q: "Mitä ovat Kuklican kivinuket?", a: "Kratovon lähellä, Kriva-joen laaksossa olevat noin 0,3 neliökilometrin alueen kivipilarit ovat eroosion veistämiä: kova tulivuorikivi suojaa alla olevaa pehmeää tuffia. Legendan mukaan ne ovat kirouksen kivettämä häävieraiden joukko." },
+      { q: "Mikä on Osogovon luostari?", a: "Kriva Palankan lähellä, kymmenen kilometrin päässä Bulgarian rajasta oleva luostari, jossa on kaksi kirkkoa. Suuri Pyhän Joakimin kirkko rakennettiin 1847–1851, ja freskoissa on Kriva Palankan kansallispukua. Pieni Neitsyt Marian kirkko on 1300-luvulta." },
+    ],
+    "Southwestern": [
+      { q: "Miksi Vevčanin kylällä on oma 'tasavalta'?", a: "Vuonna 1987 kyläläiset vastustivat suunnitelmaa johtaa heidän lähdevetensä Strugaan, ja leikillinen 'Vevčanin tasavalta' sai alkunsa. Kylällä on oma ličnik-rahansa, ja sen karnevaali juhlii vuodenvaihdetta juliaanisen kalenterin mukaan." },
+      { q: "Milloin Kaneon kirkko on rakennettu?", a: "Tarkkaa vuotta ei tiedetä. Asiakirjojen mukaan kirkko oli olemassa ennen vuotta 1447, ja arkeologit arvioivat sen rakennetun 1200-luvulla. Ristin muotoisen kirkon kupolin freskot löytyivät vuoden 1964 entisöinnissä." },
+      { q: "Miksi Plaošnik on tärkeä paikka?", a: "Kliment saapui Ohridiin 893 ja rakensi varhaiskristillisen basilikan perustuksille Pyhän Panteleimonin kirkon, jonne hänet on haudattu. Hänen kirjallista koulutustaan pidetään usein Euroopan vanhimpana yliopistona." },
+    ],
+    "Pelagonia": [
+      { q: "Miksi Golem Grad on 'käärmesaari'?", a: "Prespanjärven Golem Grad on 600 metriä pitkä ja 350 metriä leveä asumaton saari, jossa elää muun muassa sarvikyitä ja vesikäärmeitä sekä noin tuhat ihmisen tuomaa Hermannin kilpikonnaa, ja saari avattiin turisteille elokuussa 2008." },
+      { q: "Miksi Kruševon Makedonium näyttää avaruusalukselta?", a: "Makedonium on vuonna 1974 avattu muistomerkki, jonka suunnittelivat Jordan ja Iskra Grabuloski. Pyöreässä rakennuksessa on ovaalit lasimaalausikkunat, ja se muistaa vuoden 1903 Ilinden-kansannousua sekä toisen maailmansodan vastarintaa." },
+      { q: "Miksi Manaki-festivaalin palkinto on 'Kultainen kamera 300'?", a: "Nimi viittaa veljesten Yanakin ja Miltonin Manakin kameraan: Yanaki osti Lontoosta 35 mm:n Urban Bioscope -kameran, jonka sarjanumero oli 300. Festivaali on pidetty Bitolassa vuodesta 1979." },
+    ],
+    "Polog": [
+      { q: "Miksi Galičnikin häät ovat kuuluisat?", a: "Kylässä järjestetään heinäkuun 12. päivää, Pietarin ja Paavalin päivää, lähinnä oleva viikonloppu. Ennen häät kestivät viisi päivää. Nykyään valittu pari vihitään perinteisin menoin, ja miehet tanssivat Teškoto-tanssin, joka muistuttaa työhön ulkomaille lähtevistä miehistä." },
+      { q: "Mikä tekee Bigorskin luostarin ikonostaasista erikoisen?", a: "Pähkinäpuusta 1829–1835 kaiverretussa Mijak-mestareiden teoksessa on satoja ihmishahmoja ja eläimiä, jotka kuvaavat Vanhaa ja Uutta testamenttia. Se lasketaan yhdeksi Balkanin kauneimmista." },
+    ],
+    "Skopje": [
+      { q: "Miksi Kuršumli An on 'lyijyinen'?", a: "Vanhan basaarin karavaanisarai rakennettiin 1400- tai 1500-luvulla, ja sen pyramidimaiset kupolit olivat alun perin lyijypeitteiset. Nimi tulee turkin lyijyä tarkoittavasta sanasta." },
+      { q: "Miten pääsee Vodnon huipulle ilman kävelyä?", a: "Gondolihissi otettiin käyttöön 3. kesäkuuta 2011. Se nousee 1 600 metrin matkan ja 480 metriä ylöspäin Sredno Vodnosta Millennium-ristille, joka on rakennettu vuonna 2002 ja on 66-metrisenä yksi maailman korkeimmista risteistä." },
+      { q: "Milloin Mustafa-pashan moskeija rakennettiin?", a: "Vuonna 1492 Çoban Mustafa Pasha rakennutti moskeijan tasanteelle vanhan basaarin yläpuolelle. Se on yksi Skopjen vanhimmista säilyneistä moskeijoista." },
+    ],
+    "Vardar": [
+      { q: "Mikä on stanušina-rypäle?", a: "Tikvešin harvinainen punainen viinirypälelajike, jota ei kasva missään muualla maailmassa. Siitä tehty viini on vaalean värinen ja kuivan lehden ja mansikan sävyinen. Lajike on uhanalainen, ja viinitilat yrittävät elvyttää sitä." },
+      { q: "Miksi Veles nousi kansainvälisiin uutisiin vuonna 2016?", a: "Toimittajat paljastivat, että kaupungista käsin pyöritettiin yli sataa sivustoa, jotka julkaisivat Yhdysvaltain vaaleista ja Donald Trumpin kampanjasta usein virheellisiä juttuja. Motiivi oli raha." },
+    ],
+  },
+  MNE: {
+    "Andrijevica": [
+      { q: "Mistä Andrijevica on saanut nimensä?", a: "Perimätiedon mukaan nimi tulee Andrijevina-kirkosta, jonka rakennutti Nemanjić-suvun jälkeläinen Andrija. Osmanit tuhosivat kirkon vuonna 1765, ja myöhemmin uuden kirkon ympärille kasvoi asutus, josta tuli nykyinen kaupunki." },
+      { q: "Mikä tunnettu romaani on peräisin Andrijevican seudulta?", a: "Kirjailija Mihailo Lalić syntyi vuonna 1914 lähellä Andrijevicaa, Trepčan kylässä. Hänen pääteoksensa Lelejska gora ilmestyi 1957, ja se kertoo toisen maailmansodan ajan Montenegrosta." },
+    ],
+    "Bar": [
+      { q: "Mitä Marconi teki Barissa vuonna 1904?", a: "Italialainen Guglielmo Marconi rakensi Barin (silloin Antivari) ja italialaisen Barin välille kaupallisen radiosähkeyhteyden, joka avattiin elokuussa 1904. Marconi kävi itse tarkastamassa Montenegron puoleisen aseman." },
+      { q: "Miksi Stari Bar on nykyään raunio?", a: "Vanha kaupunki vaurioitui vuonna 1878, kun Montenegro valtasi sen taistelujen jälkeen, ja vuoden 1979 maanjäristys vaurioitti sitä lisää. Jäljellä on satoja rakennuksia: kirkkoja, moskeijoita, hamam ja vesijohto." },
+      { q: "Mikä oli Montenegron ensimmäinen rautatie?", a: "Vuonna 1908 avattu kapearaiteinen Bar–Virpazar, 43 kilometriä pitkä ja 750 millimetrin raiteella. Se yhdisti Barin sataman Skadarjärven Virpazarin satamaan, ja se lopetettiin vasta 1959, kun normaaliraiteinen rata Podgoricaan avattiin." },
+    ],
+    "Berane": [
+      { q: "Miksi Berane oli 43 vuotta nimeltään Ivangrad?", a: "Vuosina 1949–1992 kaupunki kantoi nimeä Ivangrad kansansankari Ivan Milutinovićin mukaan. Vanha nimi Berane palautettiin vuonna 1992, ja se on ollut käytössä siitä lähtien." },
+      { q: "Mitä nimeä seutu kantoi keskiajalla?", a: "Seutu tunnettiin nimellä Budimlja. Se kuului laajempaan Raškan alueeseen, kunnes ottomaanit valtasivat sen vuonna 1455." },
+      { q: "Mitä Kaludran kylän lähellä on?", a: "Noin kymmenen kilometriä Beranesta kaakkoon ovat Ćelijen luostarikompleksin rauniot. Museon arkeologit tutkivat paikkaa 1991 ja löysivät Pyhän Luukkaan kirkon jäänteet sekä luostarin asuinrakennuksen perustukset." },
+    ],
+    "Bijelo Polje": [
+      { q: "Miksi amerikkalaistutkijat tulivat Bijelo Poljeen 1930-luvulla?", a: "Milman Parry ja Albert Lord nauhoittivat seudulla 1935 guslari Avdo Međedovićin, jonka eepos Smailagić Meho -häistä on noin 12 300 säettä pitkä. Tallenteet auttoivat selittämään, miten suullinen runous syntyy ja miten Homeroksen eepokset ehkä on sävelletty." },
+      { q: "Mikä on Ratkovićin runoillat?", a: "Vuosittainen runofestivaali, joka on nimetty Bijelo Poljessa syntyneen kirjailijan Risto Ratkovićin mukaan. Festivaalilla jaetaan palkinto parhaalle runokirjalle ja palkintoja nuorille runoilijoille." },
+    ],
+    "Budva": [
+      { q: "Mikä on Sveti Nikola?", a: "Montenegron suurin saari, noin kilometrin päässä Budvan vanhakaupungista ja pituudeltaan noin kaksi kilometriä. Saari on autoton ja suurelta osin rakentamaton, ja sinne pääsee vesitaksilla; paikalliset kutsuvat sitä Montenegron Havaijiksi." },
+      { q: "Mitä Budvan muinaishaudoista löytyi?", a: "Vuoden 1979 maanjäristyksen jälkeen kaupungin länsipuolelta löytyi laaja hellenistis-roomalainen hautausmaa. Esineet konservoitiin Cetinjessä ja palasivat Budvaan 2003. Kokoelmaan kuuluu kultakoruja, muun muassa korvakorut, joissa on kotka ja poika, joita on tulkittu Zeuksen ja Ganymedeen myytiksi." },
+    ],
+    "Cetinje": [
+      { q: "Miksi Biljarda on saanut nimensä?", a: "Vuonna 1838 valmistunut Njegošin asuinrakennus kantaa nimeään talon biljardipöydän mukaan, joka oli Montenegron ensimmäinen ja jonka Njegoš toi Italiasta. Nykyään talo on Njegoš-museo." },
+      { q: "Miksi Vlaška-kirkon aita on tehty kivääreistä?", a: "Kirkko rakennettiin noin vuonna 1450 keskiaikaisen hautausmaan paikalle, jossa oli noin 150 stećci-hautakiveä. Sen pihaa kiertävä aita on tehty kivääreistä, jotka Montenegro sai sotasaaliina Osmanien valtakuntaa vastaan." },
+      { q: "Mitä pyhäinjäännöksiä Cetinjen luostarissa säilytetään?", a: "Luostarissa säilytetään Kastajan Johanneksen oikeaa kättä, Pyhän Ristin palasta ja Pietari Cetinjeläisen jäännöksiä." },
+    ],
+    "Danilovgrad": [
+      { q: "Mistä Zeta-joki oikeasti nousee?", a: "Zeta kulkee Nikšićin kautta, uppoaa maan alle ja nousee uudelleen Danilovgradissa Glava Zeten lähteinä. Joki jatkaa Bjelopavlićin tasangon läpi Moračaan." },
+      { q: "Kuinka kuumaksi Danilovgradin seutu käy?", a: "Montenegron lämpöennätys 44,8 °C mitattiin Podgoricassa elokuussa 2007, ja sama lukema toistui Danilovgradissa elokuussa 2012. Tasangon kesät ovat poikkeuksellisen kuumia." },
+    ],
+    "Herceg Novi": [
+      { q: "Mitä Kanli Kula tarkoittaa, ja mitä sen seinillä on?", a: "Kanli Kula tarkoittaa Verinen torni. Linnakkeen vesisäiliö muutettiin vankikoppiin, ja sen seinillä on yhä piirroksia kaleereista, kaloista, risteistä sekä nimiä ja vuosilukuja. Nykyään tornin sisäpihalla on kesäisin ulkoilmaesityksiä." },
+      { q: "Miksi Igaloon tullaan hoitoihin?", a: "Herceg Novin kyljessä olevan Igalon rannoilta ja lähteistä saadaan parantavaksi katsottua meriliejua ja kivennäisvettä. Sen ympärille on kasvanut kylpylä- ja kuntoutuspaikkakunta." },
+      { q: "Kuinka vanha Savinan luostarin pieni kirkko oikeasti on?", a: "Perinne ajoittaa Neitsyt Marian kuolleeksi nukkumisen pienen kirkon vuoteen 1030, mutta tyylintutkimus viittaa 1400-lukuun ja Kosačojen aikaan. Kirkko on vain kymmenen metriä korkea ja kuusi leveä." },
+    ],
+    "Kolašin": [
+      { q: "Mitä erikoista Morača-luostarin seinillä on?", a: "Luostarin 1200-luvun freskoihin kuuluu kolmetoista kohtausta profeetta Eliaan elämästä. Osmanit hävittivät luostarin 1505, ja se oli autiona noin seitsemän vuosikymmentä, kunnes kunnostus alkoi vuonna 1574." },
+      { q: "Miksi Belgrad–Bar-rata on kuuluisa?", a: "Rata valmistui 1976, ja sen Kolašinin läheinen Mala Rijeka -viadukti oli valmistuessaan maailman korkein rautatiesilta. Rata kulkee kymmenien tunneleiden ja siltojen kautta Montenegron vuoristojen läpi." },
+    ],
+    "Kotor": [
+      { q: "Onko Kotorinlahti oikea fjordi?", a: "Ei ole. Vaikka lahtea kutsutaan usein Etelä-Euroopan fjordiksi, se on veden peittämä jokilaakso eli ria. Se on yksi Adrianmeren mutkikkaimmista rannikkokohdista." },
+      { q: "Miksi Kotorin yllä kiemurtelee tie, jossa on kymmeniä mutkia?", a: "Serpentiinitie yhdistää rannikon Njegušin kylään ja Lovćenin kansallispuiston suuntaan. Se rakennettiin 1800-luvun lopulla Itävalta-Unkarin aikana, ja siinä on noin 25 hiusneulamutkaa, joista jokainen avaa uuden näkymän lahdelle." },
+    ],
+    "Mojkovac": [
+      { q: "Miksi Mojkovacin taistelua kutsutaan verisen joulun taisteluksi?", a: "Taistelu osui ortodoksiseen jouluun tammikuussa 1916. Montenegrolaiset torjuivat hyökkäyksen ja saivat Serbian armeijan perääntymisen turvattua." },
+      { q: "Mikä Brskovo oli?", a: "Keskiajalla Brskovo oli kaivos- ja rahapajakaupunki, jonka saksilaiset kaivosmiehet tekivät vilkkaaksi 1280-luvulla. Siellä lyötiin Grossi de Brescova -rahoja, ja Dubrovnikilla oli paikalla konsuli." },
+    ],
+    "Nikšic": [
+      { q: "Mitä Bedem tarkoittaa, ja millainen linnoitus se oli?", a: "Bedem tarkoittaa vallia tai muuria. Osmanien aikana linnoitus oli alueen vahvin linnake." },
+      { q: "Miksi Krupacia kutsutaan Nikšićin mereksi?", a: "Krupac on tekojärvi, jonka nikšiläiset ovat ristineet leikillään mereksi. Kesäisin sen rannoilla uidaan ja harrastetaan vesiurheilua." },
+    ],
+    "Plav": [
+      { q: "Miksi Hridsko-järvelle kävellään monta tuntia?", a: "Hridsko-järvi on jäätikköjärvi noin 1 970 metrin korkeudessa Prokletijen kansallispuistossa. Polku alkaa Plavin yläpuolelta, ja yhteen suuntaan kävelyyn menee noin 4–5 tuntia." },
+      { q: "Minne Plavin järven vesi lopulta päätyy?", a: "Järvestä lähtevä Lim virtaa Drinaan ja sieltä Savan ja Tonavan kautta Mustallemerelle." },
+    ],
+    "Pljevlja": [
+      { q: "Mikä on häkkimalja, ja miksi Pljevlja on sillä kuuluisa?", a: "Roomalainen diatretum on lasiastia, jonka ulkopinta on veistetty verkkomaiseksi häkiksi. Kominin nekropolista Pljevljan lähellä löytynyt, 300-luvulle ajoitettu malja on harvinaisen ehjä, ja se on esillä Pljevljan kotiseutumuseossa." },
+      { q: "Kuka maalasi Pljevljan luostarin freskot?", a: "Pappi Strahinja Budimljesta maalasi kirkon ja esikirkon freskot vuosina 1592–1595. Alimmalla vyöhykkeellä ovat pyhät ja Nemanjić-suvun jäsenet, ylempänä suuret kirkkojuhlat ja Kristuksen kärsimys." },
+    ],
+    "Plužine": [
+      { q: "Mitä tapahtuu Šćepan Poljessa, Plužinen kunnan rajaseudulla?", a: "Siellä Tara ja Piva yhtyvät ja muodostavat Drina-joen. Šćepan Polje on myös Taran koskenlaskun päätepiste." },
+      { q: "Mikä Pivanjärvi oikeastaan on?", a: "Se ei ole luonnonjärvi vaan Mratinjen padon 1970-luvulla kanjoniin nostama tekojärvi. Sen pinta-ala on noin 12 neliökilometriä, ja se on yksi Montenegron suurimmista järvistä." },
+    ],
+    "Podgorica": [
+      { q: "Mikä on Doclea, ja miksi sinne kannattaa mennä?", a: "Doclea oli roomalainen kaupunki, jonka rauniot ovat noin kolmen kilometrin päässä Podgorican pohjoispuolella. Niistä erottuvat foorumi, basilika, temppeleitä ja kylpylä." },
+      { q: "Mitä kaupungin nimi tarkoittaa?", a: "Nimi tulkitaan suunnilleen muotoon 'Gorican alla'. Goricalla tarkoitetaan keskustan viereistä kukkulaa." },
+      { q: "Onko Podgorica sateinen?", a: "On: vuosisadanta on noin 1 650 millimetriä, ja sateet tulevat pääosin syksyllä ja talvella. Kesät ovat kuivia ja kuumia." },
+    ],
+    "Rožaje": [
+      { q: "Mistä Ibar-joki saa alkunsa?", a: "Ibarin lähde, Vrelo Ibra, on tiheän havumetsän keskellä lähellä Rožajea. Joki virtaa lopulta 272 kilometrin matkan ja laskee Länsi-Moravaan Kraljevon lähellä Serbiassa." },
+      { q: "Mikä Hajla on?", a: "Hajla on vuorijono, jonka huiput ylittävät 2 000 metriä. Korkein huippu on 2 403 metriä, ja se sijaitsee valtionrajalla." },
+    ],
+    "Šavnik": [
+      { q: "Miksi Nevidio-kanjonia sanotaan yhdeksi Euroopan viimeisistä valloitetuista kanjoneista?", a: "Komarnica-joen Nevidio-kanjoni on noin kaksi kilometriä pitkä ja paikoin vain metrin levyinen. Sen läpi kerrotaan päästyn ensimmäisen kerran 1965, kun vuoristokiipeilijät kulkivat sen sukellusvarusteissa." },
+      { q: "Missä Montenegron ensimmäinen tuulipuisto on?", a: "Krnovon ylätasangolla Nikšićin ja Šavnikin välisen tien varrella. Puisto käynnistyi 2017, ja siinä on 26 tuuliturbiinia, yhteensä 72 megawattia." },
+    ],
+    "Tivat": [
+      { q: "Mikä sukellusvene Tivatissa voi käydä katsomassa?", a: "Se on P-821 Heroj, vuonna 1968 valmistunut noin 50-metrinen sukellusvene, jonka miehistö oli 28. Sitä pääsee kiertämään meriperinnemuseon yhteydessä, entisen laivastoarsenaalin tiloissa." },
+      { q: "Mikä on Kukkasaari Tivatin edustalla?", a: "Se on pieni saari, joka on yhdistetty mantereeseen kapealla hiekkakannaksella. Sen vanhempi nimi Miholjska prevlaka viittaa arkkienkeli Mikaelin luostariin." },
+      { q: "Kuinka suuri Porto Montenegro on?", a: "Satamassa on noin 480 venepaikkaa, joista noin 350 on tarkoitettu superjahdeille, ja se mainostaa olevansa Euroopan suurin superjahtisatama." },
+    ],
+    "Ulcinj": [
+      { q: "Miksi Ulcinjia sanotaan merirosvojen kaupungiksi?", a: "Ottomaanien valloituksen 1571 jälkeen kaupungista tuli Adrianmeren korsaarien tukikohta, ja merirosvoilu jatkui 1700-luvun alkuun. Legenda liittää kaupunkiin myös Cervantesin, mutta useimpien lähteiden mukaan hänen vankeutensa oli Algerissa." },
+      { q: "Miten Ada Bojana -saari syntyi?", a: "Tarinan mukaan Bojana-joen suulle 1858 haaksirikkoutunut laiva sitoi jokisedimenttiä, ja siitä kasvoi saari. Nykyinen kolmionmuotoinen saari on noin 4,8 neliökilometrin kokoinen ja matala." },
+      { q: "Kuka kuoli Ulcinjissa 1676?", a: "Sabbatai Zevi, itseään messiaaksi julistanut juutalainen, kuoli maanpaossa Ulcinjissa 1676." },
+    ],
+    "Žabljak": [
+      { q: "Kuinka syvä Taran kanjoni on?", a: "Noin 1 300 metriä ja 80 kilometriä pitkä, mikä tekee siitä yhden Euroopan syvimmistä kanjoneista." },
+      { q: "Miksi Durmitorin järviä sanotaan vuorten silmiksi?", a: "Alueella on 18 jäätikköjärveä, joita kutsutaan nimellä Gorske oči eli vuorten silmät. Niistä suurin ja lähin on Mustajärvi." },
+      { q: "Kuka rakensi Taran sillan?", a: "Sillan suunnitteli insinööri Mijat Trojanović, ja se valmistui 1937–1940. Se on viisikaarinen betonisilta korkealla joen yläpuolella, ja sitä on käytetty muun muassa elokuvassa Force 10 from Navarone 1978." },
+    ],
+  },
+  CYP: {
+    "Famagusta": [
+      { q: "Mitä Ayia Napan nimi tarkoittaa?", a: "\"Ayia\" on pyhä ja \"napa\" metsäinen laakso. Perimätiedon mukaan metsästäjä löysi luolasta koiransa etsiessään Neitsyt Marian ikonin, ja paikasta tuli pyhiinvaelluskohde." },
+      { q: "Miksi vedenalaiset veistokset upotettiin juuri merisuojelualueelle?", a: "MUSANin teokset on tehty myös keinotekoiseksi riutaksi, jolle kasvaa merieliöitä. Veistokset sijaitsevat Pernera-rannan merisuojelualueella, ja niihin pääsee snorklaamalla tai sukeltamalla." },
+      { q: "Miksi muinainen Salamis hylättiin?", a: "Maanjäristykset tuhosivat kaupunkia 300-luvun alussa, ja se rakennettiin uudelleen Constantiana. Lopulta se autioitui 600-luvulla arabien hyökkäysten jälkeen." },
+    ],
+    "Larnaca": [
+      { q: "Miksi Zenobia upposi?", a: "Uusi, 172-metrinen lautta kaatui 7. kesäkuuta 1980 neitsytmatkallaan. Yleisimmän selityksen mukaan painolastin ohjausjärjestelmän vika sotki lastin tasapainon. Kyydissä oli 108 rekkaa, eikä ketään kuollut." },
+      { q: "Mistä Lefkaran pitsi on kuuluisa?", a: "Lefkaran kylän käsityö on Unescon aineetonta kulttuuriperintöä vuodesta 2009. Tarun mukaan Leonardo da Vinci toi täältä pitsiliinan Milanoon." },
+      { q: "Kuka oli Zenon Kitionilainen?", a: "Stoalaisen filosofian perustaja, joka syntyi Kitionissa eli nykyisessä Larnacassa. Hän opetti Ateenassa, ja \"stoalainen\" tulee hänen koulunsa kokoontumispaikasta, pylväshallista." },
+    ],
+    "Limassol": [
+      { q: "Miksi Englannin kuningatar kruunattiin Limassolissa?", a: "Richard Leijonasydän valloitti Kyproksen vuonna 1191 matkalla ristiretkelle, ja hän meni naimisiin Berengarian kanssa Limassolin linnan kappelissa 12. toukokuuta. Berengaria kruunattiin samana päivänä, eikä hän koskaan käynyt Englannissa." },
+      { q: "Mitä Kolossin linnan vieressä tehtiin keskiajalla?", a: "Linnan vieressä oli sokeriruokoa jalostava sokeritehdas, ja sokeri oli tuolloin yksi Kyproksen tärkeimmistä vientituotteista. Sokeritehtaan rauniot näkyvät yhä linnan vieressä." },
+      { q: "Onko Kourionin teatteria vielä käytössä?", a: "On. Teatteri rakennettiin 100-luvulla eaa. ja laajennettiin 100-luvulla jaa., ja siellä esitetään yhä näytelmiä, esimerkiksi antiikin draamaa." },
+    ],
+    "Nicosia": [
+      { q: "Mistä Nikosian muurien bastionit ovat saaneet nimensä?", a: "Kunkin bastionin nimi tulee yhdestä yhdestätoista aatelissuvusta, jotka rahoittivat rakentamista. Muurit suunnittelivat insinöörit Giulio Savorgnano ja Francesco Barbaro." },
+      { q: "Millaisia Troodoksen maalatut kirkot ovat?", a: "Kivikirkon päällä on jyrkkä, laattakattoinen puukatto. Sisällä seiniä peittävät maalaukset ovat 1000–1500-luvuilta." },
+      { q: "Miksi Kyproksen museo perustettiin?", a: "Se perustettiin vuonna 1882 saaren asukkaiden vetoomuksen jälkeen, ja nykyiseen uusklassiseen rakennukseensa se muutti vuonna 1924. Kokoelma on laaja kyproslaisen antiikin esineistö." },
+    ],
+    "Paphos": [
+      { q: "Miksi Afroditea palvottiin Kouklian pyhäkössä kivenä eikä patsaana?", a: "Palaipaphosin pyhäkössä, joka perustettiin noin vuonna 1200 eaa., jumalatarta esitti kartiomainen kivi. Se on nyt esillä Kouklian museossa." },
+      { q: "Mitä Lara-rannalla tehdään merikilpikonnien hyväksi?", a: "Lara on Välimeren tärkeimpiä caretta- ja vihreän merikilpikonnan pesimärantoja. Kalastusosasto on pitänyt siellä hautomoa vuodesta 1978 ja siirtää vaarassa olevat munat suojaan." },
+      { q: "Miksi Kuninkaiden haudat on nimetty kuninkaiden mukaan?", a: "Nimi tulee hautojen komeudesta: kuninkaita niihin ei haudattu, vaan Paphosin aatelisia ja korkeita virkamiehiä 200-luvulle jaa. asti. Osassa haudoista on dorilaisia pylväitä ja seinämaalauksia." },
+    ],
+  },
+  MLT: {
+    "Southern Harbour": [
+      { q: "Miksi Caravaggion Johannes Kastajan mestaus on Vallettassa niin erikoinen?", a: "Se on ainoa maalaus, johon Caravaggio on kirjoittanut nimensä – Johannes Kastajan kaulasta valuvaan vereen. Työ valmistui 1608 St. John's Co-Cathedralin oratorioon, ja ritarikunta erotti taiteilijan saman vuoden joulukuussa." },
+      { q: "Missä ritarit asuivat ennen Vallettaa?", a: "Ritarikunta asettui Birguun vuonna 1530 ja piti sitä keskuspaikkanaan vuoteen 1571, jolloin se muutti uuteen Vallettaan. Birgu on nykyään yksi Suuren sataman toisella rannalla olevista Kolmesta kaupungista." },
+    ],
+    "Northern Harbour": [
+      { q: "Mitä Sliema tarkoittaa?", a: "Maltaksi sliema on \"rauha\", ja sanaa käytettiin myös tervehdyksenä. Pienestä kalastajakylästä kasvoi kaupunki, kun Vallettan varakkaat alkoivat rakentaa rantaan kesähuviloita ja kulkivat niille lautalla." },
+      { q: "Miksi Maltan yliopiston historia alkaa Vallettasta eikä Msidasta?", a: "Jesuiitat perustivat Collegium Melitensen paavin luvalla 1592, ja sen oma rakennus valmistui Vallettaan vuosina 1595–1597. Msidan kampus on paljon nuorempi: se otettiin käyttöön vasta 1900-luvun jälkipuoliskolla." },
+    ],
+    "South Eastern": [
+      { q: "Miksi Mnajdran temppelit ovat kuuluisia auringosta?", a: "Päiväntasauksena aamuaurinko valaisee pääoven läpi koko käytävän perimmäiseen apsikseen, ja päivänseisauksina valo osuu sisään vain kapeana säteenä. Temppelin rakentajat näyttävät siis tunteneen auringon vuotuisen kierron yli 5 000 vuotta sitten." },
+      { q: "Mitä Marsaxlokk tarkoittaa?", a: "Nimessä yhdistyvät sanat marsa, \"satama\", ja xlokk, kaakkoistuuli eli sirocco, joten se on suunnilleen \"kaakon satama\". Lahti tarjoaa suojaisen ankkuripaikan saaren kaakkoisrannalla." },
+    ],
+    "Western": [
+      { q: "Miksi Mdina näyttää televisiosarjan kuninkaankaupungilta?", a: "Koska se esitti sitä: Game of Thrones -sarjan ensimmäisellä kaudella linnoitettu Mdina oli Westerosin pääkaupunki King's Landing. Keskiaikaiset muurit ja hiekkakiviset kujat kelpasivat lavasteiksi lähes sellaisenaan." },
+      { q: "Mikä Verdalan palatsi on?", a: "Suurmestari Hugues Loubenx de Verdalle rakennutti sen vuonna 1586 ritarikunnan kesäasunnoksi Rabatin liepeille Buskettin metsän kupeeseen." },
+    ],
+    "Northern": [
+      { q: "Miksi pohjoisrannikolla on värikäs puukylä, Popeye Village?", a: "Kylä rakennettiin Anchor Bayn rannalle 1979 Robin Williamsin tähdittämän Popeye-elokuvan lavasteeksi: 19 puurakennusta ja aallonmurtaja. Kuvausten jälkeen se jäi paikalleen, ja nykyään se on ympärivuotinen turistikohde." },
+      { q: "Mistä St Paul's Bay on saanut nimensä?", a: "Perimätiedon mukaan apostoli Paavali haaksirikkoutui lahdelle noin vuonna 60 matkalla Roomaan; tapahtumasta kertovat Apostolien teot. Kristinuskon tulon Maltalle katsotaan alkaneen juuri tästä." },
+    ],
+    "Gozo and Comino": [
+      { q: "Miksi Ġgantija-temppelit ovat niin kuuluisia?", a: "Xagħran temppelit ovat noin 5 500 vuotta vanhoja, siis vanhempia kuin Gizan pyramidit. Nimi tulee sanasta ġgant, jättiläinen: myöhemmät sukupolvet uskoivat, että vain jättiläisnainen saattoi nostaa niin suuria kiviä." },
+      { q: "Miksi Dwejran Fungus Rockille ei saanut kiivetä?", a: "Kalliolla kasvaa haiseva loiskasvi, jota ritarit pitivät lääkkeenä. Suurmestari Pinto julisti kallion 1746 kielletyksi alueeksi, ja luvaton keräilijä saattoi joutua kolmeksi vuodeksi keittiöorjaksi." },
+      { q: "Mikä Kalypson luola on?", a: "Xagħran lähellä Ramlan lahden reunalla oleva luola yhdistetään Homeroksen Ogygiaan, jonne nymfi Kalypso piti Odysseusta vankinaan seitsemän vuotta. Todisteita ei ole, mutta legenda on pitänyt paikkaa kartalla." },
+    ],
+  },
+  LUX: {
+    "Diekirch": [
+      { q: "Miksi Diekirchin kirkontornia kruunaa aasi kukon sijaan?", a: "Legendan mukaan aasit raatoivat Herrenbergin jyrkillä viinitarhoilla, koska vain ne pärjäsivät rinteessä. Niistä tuli kaupungin tunnus: Laurentius-kirkon tornissa on aasi, ja karnevaalikulkueissa se on vieläkin päätähti." },
+      { q: "Mikä on The Family of Man, ja miksi se on juuri Clervaux'ssa?", a: "Se on 503 valokuvan näyttely 273 kuvaajalta 68 maasta, jonka Edward Steichen kokosi New Yorkiin 1955. Luxemburgilaissyntyinen Steichen halusi sen pysyvästi kotimaahansa, ja Clervaux'n linnassa se on ollut vuodesta 1994. Unesco liitti sen Memory of the World -luetteloon 2003." },
+      { q: "Mitä Viandenin pumppuvoimalaitoksessa tapahtuu öisin?", a: "Kun sähkön kysyntä on pieni, vettä pumpataan Our-joen alaaltaasta ylös vuorella olevaan altaaseen. Päivällä huippukulutuksen aikaan vesi lasketaan takaisin turbiinien läpi." },
+    ],
+    "Grevenmacher": [
+      { q: "Mitä Echternachin hyppykulkueessa tapahtuu?", a: "Helluntaitiistaina tuhannet pyhiinvaeltajat ja katsojat etenevät kaupungin läpi hyppien, valkoiset nenäliinat käsissä ja torvisoittokuntien soittaessa. Perinne juontaa 1400-luvun lopulta, ja Unesco lisäsi sen aineettoman perinnön luetteloonsa 2010." },
+      { q: "Mikä tekee Mullerthalista Luxemburgin Pikku-Sveitsin?", a: "Alue on nimetty maisemansa mukaan, ei korkeuden: siellä on hiekkakivikallioita, kapeita rotkoja ja luolia. Mullerthal Trail kiertää seutua kolmena reittinä, yhteensä noin 112 kilometriä." },
+      { q: "Miksi Luxemburgin viinit ovat lähinnä kuivia valkoviinejä ja kuohuvia?", a: "Viileän ilmaston viinialueen erikoisuutta ovat kuivat, Alsacen tyyliä muistuttavat valkoviinit, ja perinteisellä menetelmällä tehtyä kuohuviiniä myydään nimellä Crémant de Luxembourg. Yleisimpiä lajikkeita ovat Rivaner, Auxerrois, Pinot gris ja Riesling." },
+    ],
+    "Luxembourg": [
+      { q: "Mistä Luxemburgin nimi tulee?", a: "Nimi juontuu sanasta Lucilinburhuc, 'pieni linnoitus'. Kreivi Siegfried vaihtoi Bock-kalliolla sijainneen linnan omiin maihinsa Feulenissa Trierin apotin kanssa 7. huhtikuuta 963." },
+      { q: "Mikä on Gëlle Fra?", a: "Se on kultapintainen naisveistos 21-metrisen obeliskin huipulla Perustuslaintorilla, ja se muistuttaa kaatuneista luxemburgilaissotilaista. Claus Citon veistämä monumentti paljastettiin 1923, ja natsit tuhosivat sen 1940." },
+      { q: "Mitä EU-toimintaa Kirchbergin tasangolla on?", a: "Siellä toimii EU:n tuomioistuin, joka perustettiin 1952 ja jonka kotipaikka on Luxemburg. Kaupungissa ovat myös EU:n tilintarkastustuomioistuin ja Euroopan parlamentin sihteeristö." },
+    ],
+  },
+  MDA: {
+    "Anenii Noi": [
+      { q: "Miksi Euroopan johtajat kokoontuivat pieneen moldovalaiskylään?", a: "Castel Mimi isännöi Bulboacassa 1. kesäkuuta 2023 Euroopan poliittisen yhteisön toista huippukokousta. Linnassa on kongressitilat ja hotelli, ja tapahtuma nosti pienen kylän hetkeksi Euroopan uutisiin." },
+      { q: "Mikä on Euroopan poliittinen yhteisö?", a: "Se on vuonna 2022 perustettu foorumi, jossa EU-maat ja muut Euroopan valtiot keskustelevat yhteisistä kysymyksistä kuten turvallisuudesta ja energiasta. Ensimmäinen kokous pidettiin Prahassa ja toinen Moldovassa." },
+    ],
+    "Bălţi": [
+      { q: "Miksi Bălția sanotaan Moldovan pohjoiseksi pääkaupungiksi?", a: "Se on pohjoisen suurin kaupunki ja tärkeä teollisuus-, kauppa- ja liikennekeskus. Rautatie- ja linja-autoyhteydet johtavat sieltä sekä Chișinăuhun että Romaniaan ja Ukrainaan." },
+      { q: "Mikä on Vasile Alecsandrin kansallisteatteri?", a: "Bălțin teatteri perustettiin 1957, ja sen nimi tulee romanialaisesta runoilijasta ja näytelmäkirjailijasta Vasile Alecsandrista." },
+      { q: "Mitä Pyhän Konstantinin ja Helenan katedraalin vihkiäisissä tapahtui?", a: "Kulmakivi laskettiin 1924, rakennus valmistui 1934 ja se vihittiin 2. kesäkuuta 1935. Uusromanialaisen tyylin katedraalin vihkiäisissä olivat läsnä kuningas Carol II ja hänen poikansa, tuleva kuningas Mikael I." },
+    ],
+    "Basarabeasca": [
+      { q: "Miksi 1,2 kilometrin pituinen rataosuus on niin tärkeä?", a: "Berezyne–Basarabeasca-radasta vain 1,2 kilometriä kulkee Moldovassa, mutta se avasi ukrainalaiselle rahdille reitin Tonavan satamiin." },
+      { q: "Miksi Basarabeasca-piirin väkiluku on puolittunut?", a: "Piirissä oli vuonna 1989 noin 31 600 asukasta, mutta vuonna 2025 enää noin 15 700. Piiri on pieni, 295 neliökilometriä, ja siihen kuuluvat kaupungin lisäksi yhdeksän kylää, muun muassa Abaclia, Sadaclia ja Carabetovca." },
+    ],
+    "Bender": [
+      { q: "Mitä Benderissä hyväksyttiin huhtikuussa 1710?", a: "Kasakkahetmani Pylyp Orlyk ja kasakkaeliitti hyväksyivät 5. huhtikuuta 1710 perustuslain, joka erotti lainsäädäntö-, toimeenpano- ja tuomiovallan lähes 40 vuotta ennen Montesquieun tunnettua teosta. Ruotsin kuningas Kaarle XII vahvisti asiakirjan." },
+      { q: "Missä Orlykin perustuslaki on nykyään?", a: "Ukrainankielinen alkuperäinen ja Ruotsin kuninkaan diplomi löytyivät vuonna 2008 Moskovan Venäjän muinaisten asiakirjojen valtionarkistosta. Latinankielinen versio säilytetään Ruotsin kansallisarkistossa." },
+    ],
+    "Briceni": [
+      { q: "Mikä Lipcani on ja miksi se on tärkeä paikka?", a: "Lipcani on Briceni-piirin kaupunki Prut-joen rannalla ja rajanylityspaikka Moldovan ja Romanian välillä." },
+      { q: "Mitä Briceni-kaupungin itäpuolella on?", a: "Siellä on Bricenin juutalainen hautausmaa. Juutalaisyhteisö oli aikoinaan kaupungin väestöenemmistö, ja se kärsi toisessa maailmansodassa raskaita menetyksiä." },
+    ],
+    "Cahul": [
+      { q: "Miksi Cahulin seutu on Moldovan lämpimin?", a: "Cahulin piirin ilmasto on maan kuivin ja lämpimin: keskilämpötilat ovat 2–3 astetta muuta maata korkeammat ja sadetta tulee vain 400–550 millimetriä vuodessa." },
+      { q: "Missä Moldovan suurimmat luonnonjärvet ovat?", a: "Cahulin piirissä Prutin alajuoksun tulvatasangolla ovat Beleu ja Manta, jotka luetaan Moldovan suurimpiin luonnonjärviin. Piiri ulottuu pohjoisen kukkulaseudun 230–240 metristä Tonavan tasangon 5–10 metriin." },
+    ],
+    "Călărași": [
+      { q: "Mikä on Luostarien risti?", a: "Călărașin piirissä sijaitsevat Hîrjauca, Hîrbovăț, Frumoasa ja Răciula, neljä luostaria, jotka muodostavat ylhäältä katsottuna ristin. Niiden yhdistämä pyhiinvaellusreitti tunnetaan nimellä Luostarien risti." },
+      { q: "Mitä Hîrbovățin luostarille tapahtui neuvostoaikana?", a: "Bojaari Constantin Carpuzin 1730 perustama luostari toimi vuoteen 1962, jolloin neuvostoviranomaiset sulkivat sen. Ortodoksinen kirkko sai sen takaisin vuonna 1992." },
+      { q: "Mistä Călărași-nimi tulee?", a: "Sana călărași tarkoitti historiallisesti ratsumiehiä. Paikallisen legendan mukaan Stefan Suuri määräsi ratsurykmentin vartioimaan seutua ottomaaneja vastaan." },
+    ],
+    "Camenca": [
+      { q: "Ketkä Camencassa asuvat?", a: "Vuoden 2004 laskennassa moldovalaisia oli 51,3 %, ukrainalaisia 33,7 % ja venäläisiä 12,6 %. Pienempiä ryhmiä olivat muun muassa valkovenäläiset, puolalaiset, bulgarialaiset, gagauzit, saksalaiset, armenialaiset ja romanit." },
+      { q: "Mitä Camencan juutalaisyhteisölle tapahtui?", a: "Vuonna 1939 kaupungissa asui 1 283 juutalaista, 17,4 % väestöstä. Kun Romanian joukot saapuivat heinäkuussa 1941, kaupungissa ja sen ympäristössä surmattiin yli tuhat juutalaista." },
+    ],
+    "Cantemir": [
+      { q: "Miksi Cantemirin piirissä on bulgarialaisia kyliä?", a: "Esimerkiksi Stoianovcan kylän perustivat vuonna 1902 Bessarabian bulgarialaiset, jotka muuttivat sinne muun muassa Cortenin, Ceadîr-Lungan ja Valea Perjein kylistä. Kylässä asuu edelleen enimmäkseen bulgarialaisia." },
+      { q: "Mikä joki kulkee Cantemirin piirin läpi?", a: "Piirin pääjoki on Prut, joka virtaa sen länsiosassa ja on samalla Moldovan ja Romanian välinen raja." },
+      { q: "Mitä Cantemirin piirissä viljellään?", a: "Maatalous hallitsee: noin 57 prosenttia alasta on viljelyssä. Pääkasveja ovat vilja, auringonkukka, rypsi ja soija, ja viinirypäleitä kasvatetaan noin 6,5 prosentilla piirin maasta." },
+    ],
+    "Causeni": [
+      { q: "Kuka maalasi Căușenin kirkon seinät?", a: "Sisäseinät maalasivat vuonna 1763 valakialaiset taiteilijat Radu ja Voicu Stanciul. Kreikankielinen kirjoitus kirkossa kertoo työn ajankohdan, ja tyylissä yhdistyvät bysanttilainen ja romanialainen perinne." },
+      { q: "Miksi kirkko on niin matala?", a: "Paikallisen legendan mukaan tataarit sallivat kirkon rakentamisen vain, jos se ei olisi keihäällä varustetun ratsumiehen korkeampi. Kyseessä on legenda, ei todistettu tosiasia." },
+      { q: "Mitä kirkolle tapahtui neuvostoaikana?", a: "Rakennus muutettiin varastoksi ja hedelmien savustus- ja kuivauslaitokseksi, mikä vaurioitti maalauksia. Suojelukohteeksi se julistettiin vuonna 1983." },
+    ],
+    "Chişinău": [
+      { q: "Mistä Chișinăun nimi tulee?", a: "Yhden selityksen mukaan nimi tulee vanhasta romanian sanasta chișla, lähde, ja sanasta nouă, uusi. Selitys on kuitenkin vain yksi tulkinta." },
+      { q: "Mikä on Klassikkojen kuja?", a: "Se on Ștefan cel Mare -puiston reitti, jonka peruskivi muurattiin vuonna 1958. Alussa siinä oli 12 pronssista rintakuvaa; nykyään kirjailijoiden ja muiden merkkihenkilöiden rintakuvia on noin 29." },
+      { q: "Milloin Valea Morilor -puisto perustettiin?", a: "Puisto perustettiin vuonna 1952. Sen keskellä on suuri järvi, jota kiertää kävelyreitti." },
+    ],
+    "Cimişlia": [
+      { q: "Mikä joki virtaa Cimișlian läpi?", a: "Cogâlnic, piirin pääjoki, on 183 kilometriä pitkä. Se virtaa Cimișlian kautta ja laskee lopulta Sasyk-järveen Ukrainan puolella." },
+      { q: "Mitä Cimișlian seudulla viljellään ja tuotetaan?", a: "Maatalousmaata on noin 60 prosenttia piirin alasta. Alueella tuotetaan lihaa, maitoa, hedelmiä ja viljaa, ja viinintuotanto on merkittävä osa taloutta." },
+    ],
+    "Comrat": [
+      { q: "Mistä Comratin nimi tulee?", a: "Nimen arvellaan tulevan turkkilaisesta sanaparista kömür at, musta hevonen. Toisen selityksen mukaan se viittaa alueelle asettuneisiin konrat-nogaitatarilaisiin heimoihin. Tarkkaa alkuperää ei tiedetä." },
+      { q: "Mikä oli Comratin tasavalta vuonna 1906?", a: "Talonpoikaislevottomuuksien aikana sosialistivallankumouksellinen Andrei Gălățeanu julisti Comratissa itsehallinnollisen, mutta ei itsenäisen, tasavallan. Se kesti vain noin viisi päivää, ja Gălățeanu karkotettiin Siperiaan." },
+      { q: "Mikä on Hıdırlez ja miten sitä vietetään Gagauziassa?", a: "Hıdırlez on kevään tulon juhla, jota vietetään 5.–6. toukokuuta. Perinteen mukaan silloin uhrataan karitsa tai kukko, jonka liha keitetään bulgurin kanssa: puolet jaetaan köyhille tai naapureille ja puolet syödään perheen kesken." },
+    ],
+    "Criuleni": [
+      { q: "Mikä oli Criulenin ensimmäinen maininta?", a: "Paikka mainitaan ensimmäisen kerran vuonna 1607 Moldavian ruhtinas Mihail Movilăn asiakirjassa nimellä Criveni. Nykyinen nimi on kehittynyt siitä." },
+      { q: "Kuka kuuluisa shakkimestari on syntynyt Criulenissä?", a: "Suurmestari Viktor Gavrikov syntyi Criulenissä 29. heinäkuuta 1957. Hän jakoi Neuvostoliiton mestaruuden vuonna 1985 ja voitti Sveitsin mestaruuden vuonna 1996. Hän kuoli vuonna 2016." },
+    ],
+    "Donduseni": [
+      { q: "Mitä nimi Dondoșani-Gară tarkoitti?", a: "Nimen loppuosa Gară tarkoittaa romaniaksi asemaa. Paikka oli siis alun perin Dondoșanin asema, jonka ympärille asutus kasvoi rautatien mukana." },
+      { q: "Kuka perusti Țaulin puiston kartanon ympärille?", a: "Puiston perusti Pommerin suku noin vuonna 1900, ja maisema-arkkitehtina toimi insinööri Ipolit Vladislavski-Padalka. Puisto on 46,2 hehtaarin kokoinen, ja siellä kasvaa lehti- ja havupuita eri puolilta maailmaa." },
+    ],
+    "Drochia": [
+      { q: "Mikä lintu on dropie?", a: "Dropie on isotrappi, yksi Euroopan painavimmista lentävistä linnuista. Drochian nimen kerrotaan tulevan tästä paikallisesta linnusta." },
+      { q: "Millainen on Drochian piirin maisema?", a: "Piirin eteläosassa on Bălțin arojen tasankoa ja pohjoisessa Moldovan ylängön jäänteitä. Pinta-alaa on noin tuhat neliökilometriä, ja vesistöinä ovat Răut ja sen sivujoet, kuten Cubolta." },
+    ],
+    "Edineţ": [
+      { q: "Mikä Cupcini on ja miksi sillä on ollut toinenkin nimi?", a: "Cupcini on Edineţin piirin toinen kaupunki, pikkukaupunki Ciuhur-joen laaksossa. Neuvostoaikana, vuosina 1958–1990, sitä kutsuttiin nimellä Kalininsk." },
+      { q: "Mistä Edineţin nimi on peräisin ja milloin se mainitaan ensi kerran?", a: "Vuonna 1431 Moldavian ruhtinas Aleksanteri Hyvä vahvisti bojaari Cupcicin maat, ja asiakirjan kylien joukossa esiintyy Edineţin edeltäjä, jota kutsuttiin nimellä Vedinţi." },
+    ],
+    "Făleşti": [
+      { q: "Mikä on Moldovan kaikkien aikojen kuumin mitattu lukema ja missä se mitattiin?", a: "Fălestissä mitattiin 7. elokuuta 2012 peräti 42,4 astetta, mikä on Moldovan korkein koskaan rekisteröity lämpötila." },
+      { q: "Kuka oli Lazăr Dubinovschi, jonka mukaan museo on nimetty?", a: "Dubinovschi (1910–1982) oli Fălestissä syntynyt kuvanveistäjä, joka opiskeli Bukarestin taideakatemiassa. Museolle hän lahjoitti 13 veistostaan vuonna 1979." },
+    ],
+    "Floreşti": [
+      { q: "Mikä Răut on ja miksi se on Moldovalle tärkeä?", a: "Răut on 286 kilometriä pitkä joki, joka on Moldovan pisin kokonaan maan sisällä virtaava joki ja Dnestrin suurin sivujoki. Se kulkee Bălţin, Floreştin ja Orheiin kaupunkien kautta." },
+      { q: "Ketkä Moldovan presidenteistä ovat kotoisin Floreştin piiristä?", a: "Petru Lucinschi syntyi Rădulenii Vechin kylässä ja Mircea Snegur Trifăneştin kylässä, molemmat nykyisessä Floreştin piirissä." },
+    ],
+    "Glodeni": [
+      { q: "Mitä Glodenin pelloilla kasvaa?", a: "Piirin maasta noin kolme neljäsosaa on maatalouskäytössä. Tärkeimpiä viljelykasveja ovat auringonkukka, sokerijuurikas ja tupakka." },
+      { q: "Mikä on Glodenin piirin vanhin asiakirjoihin merkitty asuinpaikka?", a: "Cobanin kylä, joka mainitaan asiakirjoissa jo vuonna 1374. Se sijaitsee Prutin lähellä, Pădurea Domnească -suojelualueen kupeessa." },
+    ],
+    "Grigoriopol": [
+      { q: "Mistä Grigoriopolin nimi tulee?", a: "Nimen loppuosa polis tarkoittaa kaupunkia, ja alkuosa viittaa Armenian kirkon perustajaan, pyhään Gregorius Valistajaan." },
+      { q: "Mistä armenialaiset tulivat Grigoriopoliin?", a: "Lähteiden mukaan asutus koostui Kiliasta, Cetatea Albăsta ja muualta Mustanmeren rannikolta tulleista armenialaisista. Kaupunki perustettiin vuonna 1792 Dnestrin kauppapaikaksi." },
+    ],
+    "Hîncesti": [
+      { q: "Mikä Petrocub on ja miksi se on tehnyt Hînceştin tunnetuksi?", a: "FC Petrocub Hînceşti voitti Moldovan Super Liga -mestaruuden 18. toukokuuta 2024, kun se voitti Zimbru Chişinăun 4–1." },
+      { q: "Mitä Manuc Beille nimetyssä kartanossa on nykyään?", a: "Kartanokompleksissa toimii historia- ja etnografiamuseo, joka perustettiin 1979. Rakennukset restauroitiin 2014–2015, ja kompleksi avattiin uudelleen joulukuussa 2015." },
+    ],
+    "Ialoveni": [
+      { q: "Miksi Surucenin luostarin kirkko on vaaleanpunainen?", a: "Sen seinät on verhoiltu vaaleanpunaisella armenialaisella tuffilla. Luostari perustettiin 1785, kivikirkko rakennettiin 1825–1832, ja luostari palautettiin uskovaisille 1991." },
+      { q: "Miksi Ialovenin väkiluku kasvaa, vaikka monessa pikkukaupungissa se laskee?", a: "Kaupunki on aivan pääkaupungin vieressä, ja Chişinăun läheisyys houkuttelee asukkaita. Vuosien 2014 ja 2024 välillä väkiluku kasvoi 12 515:stä 14 665:een." },
+    ],
+    "Leova": [
+      { q: "Kuka oli Idel Ianchelevici ja mikä yhteys hänellä oli Leovaan?", a: "Ianchelevici syntyi Leovassa 1909, muutti Belgiaan 1920-luvun lopulla ja asettui 1950 Ranskaan, jossa hän kuoli 1994. Hänestä tuli kuvanveistäjä ja Romanian akatemian ulkomainen kunniajäsen vuonna 1992." },
+      { q: "Mikä on Lebăda albă?", a: "Se on noin 30 hehtaarin vesiekosysteemialue Leovan kaupungissa, jonka nimi tarkoittaa Valkoista joutsenta. Alue on suojeltu luontokohde kaupungin sisällä." },
+    ],
+    "Nisporeni": [
+      { q: "Miksi Vărzărești'n luostaria sanotaan alueen vanhimmaksi?", a: "Sen ensimmäinen asiakirjamaininta on vuodelta 1420, kun ruhtinas Aleksanteri Hyvän läänityskirja vahvistaa erään maa-alueen rajat luostarin maiden kanssa. Sitä pidetään vanhimpana luostarina Prutin ja Dnestrin välisellä alueella." },
+      { q: "Mitä Codru tarkoittaa viininviljelijälle?", a: "Codru on Moldovan suurin viinialue, tunnettu raikkaista, kukkaisista valkoviineistä kuten chardonnaysta, rieslingistä ja sauvignon blancista. Nisporenin piirissä viinitarhoja on noin 6 100 hehtaaria." },
+    ],
+    "Ocniţa": [
+      { q: "Mikä on \"Kolmenkymmenenkolmen kahlaamon\" suojelualue?", a: "La 33 de Vaduri on Chisărău-joen laaksossa Naslavcean lähellä sijaitseva maisemansuojelualue. Sen tunnetaan olevan tasavallan pohjoisin ja siellä on vaaleanpunaisesta mustaan vaihtelevia piikivikerrostumia sekä vanhojen vesimyllyjen kahlaamoita." },
+      { q: "Miksi Clocușnan pikkukylässä on elokuvamuseo?", a: "Siellä syntyi 6.11.1936 ohjaaja Emil Loteanu, jonka elokuvat Lăutarii ja Tabor ukhodit v nebo saivat kansainvälistä huomiota. Museo avattiin 2006, hänen 70-vuotispäivänään." },
+    ],
+    "Orhei": [
+      { q: "Mitä Orheiul Vechin kalliolla oli 1300-luvulla?", a: "1300-luvun alkupuoliskolla Kultaisen Ordan johtajat perustivat sinne Şehr al-Jedidin, \"Uuden kaupungin\", jossa oli moskeija, karavaanisaarai ja kolme kylpylää. Tutkijat ovat kartoittaneet yli 300 rakennetta, ja kaupunki jäi asukkaistaan tyhjäksi 1300-luvun lopulla." },
+      { q: "Miksi Curchin luostari avattiin uudelleen vasta vuonna 2005?", a: "Neuvostoaikana sen tiloissa toimi psykiatrinen sairaala, ja rakennukset vaativat sen jälkeen mittavan korjauksen. Luostarin kirkon kupolin kerrotaan olevan Moldovan korkein." },
+    ],
+    "Rezina": [
+      { q: "Mikä Țipovan luolaluostari on?", a: "Kallioon hakattu luolaluostari sijaitsee korkealla Dnestrin yläpuolella. Lähteet ajoittavat luostarin 1000–1100-luvuille." },
+      { q: "Kuka perusti Saharnan luostarin?", a: "Munkki Vartolomeu Ciungulin mainitaan perustaneen Pyhän Kolminaisuuden luostarin vuonna 1776 kolmen kukkulan juurelle. Luostari säilyttää autuaan Macarien pyhäinjäännöksiä." },
+    ],
+    "Rîşcani": [
+      { q: "Mitä Duruitoarea Vechen luolasta on löytynyt?", a: "Kolmiosaisesta luolasta on kaivettu esiin biisonin, sarvikuonon ja jalohirven luita, työkaluja, koruja sekä mammutinluusta ja poron hampaista tehtyjä riipuksia. Vanhimman kerroksen arvioidaan olevan kymmeniä tuhansia vuosia vanha." },
+      { q: "Paljonko sähköä Costești–Stâncan pato tuottaa?", a: "Voimalan yhteisteho on 32 megawattia, josta 16 megawattia kuuluu Moldovalle ja 16 Romanialle." },
+    ],
+    "Sîngerei": [
+      { q: "Voiko Răut-jokea kulkea veneellä?", a: "Joki on 286 kilometriä pitkä, ja sen valuma-alue on noin 7 760 neliökilometriä. Se oli yleensä kulkukelpoinen aina 1700–1800-luvuille asti, mutta nykyään sillä liikkuu vain pieniä huviveneitä." },
+      { q: "Mikä on Bălțin aro?", a: "Se on Pohjois-Moldovan laaja, pehmeästi kumpuileva tasanko, jonka mustamultainen maaperä on erittäin hedelmällistä. Sîngerein piirissä sen korkeimmat kohdat ovat 190–240 metrissä." },
+    ],
+    "Şoldăneşti": [
+      { q: "Mikä Vadul-Rașcovin juutalaishautausmaa on?", a: "Kukkulan rinteellä Dnestrin rannan tuntumassa oleva hautausmaa on yli 300 vuotta vanha. Sen kivet on veistetty paikallisesta kivestä, ja sitä pidetään yhtenä Moldovan suurimmista juutalaishautausmaista." },
+      { q: "Kuka oli Dumitru Matcovschi?", a: "Matcovschi (1939–2013) oli runoilija ja näytelmäkirjailija, jonka talomuseo on Vadul-Rașcovin kylässä Dnestrin rannalla." },
+    ],
+    "Soroca": [
+      { q: "Mikä on Sorocan romanikukkula?", a: "Kaupungin rinteellä kohoaa romaniyhteisön ylellisiä taloja, joissa yhdistyvät itämaiset, barokkiset ja klassiset tyylit. Kauempaa katsottuna kukkula näyttää satukaupungilta." },
+      { q: "Mikä on Sorocan Kiitollisuuden kynttilä?", a: "Kynttilän muotoinen, noin 30 metrin korkuinen muistomerkki ja kappeli avattiin 2004. Se on omistettu tuntemattomille kulttuurin säilyttäjille, ja idean esitti kirjailija Ion Druță." },
+    ],
+    "Ștefan Vodă": [
+      { q: "Mikä Ștefan Vodă -kaupungin nimi oli ennen?", a: "Kaupunki tunnettiin ensin nimellä Chizil ja neuvostoaikana nimellä Suvorovo. Nykyinen nimi, joka viittaa Moldovan ruhtinaaseen Tapani Suureen, otettiin käyttöön 22. toukokuuta 1990." },
+      { q: "Miksi Palancan rajanylityspaikka on Ukrainan puolella, vaikka kylä on Moldovassa?", a: "Moldova ja Ukraina sopivat maa-alueiden vaihdosta: Moldova luovutti Ukrainalle noin 7,7 kilometrin pituisen Odesa–Reni-tien alla olevan maan, ja sai vastineeksi pienen Tonavan rantatontin Giurgiulești'ssa, jonne se halusi satamansa." },
+    ],
+    "Stîngă Nistrului": [
+      { q: "Miten Cocierin ja Molovata Nouăn kylistä pääsee Nistrun toiselle puolelle?", a: "Molovatan lautalla. Sen varassa on noin kymmenen kylää ja noin 10 000 asukasta Cocierin ylätasangolla." },
+      { q: "Mikä tekee Dubăsarin piiristä erikoisen Moldovan kartalla?", a: "Se on Moldovan ainoa piiri, jossa ei ole yhtään kaupunkia: kaikki asutukset ovat kyliä. Suurimpia ovat Cocieri ja Coșnița, joista jälkimmäisessä asui väestölaskennan mukaan runsaat 5 000 ihmistä." },
+    ],
+    "Străşeni": [
+      { q: "Kuka lepää Căprianan luostarin kirkossa?", a: "Metropoliitta Gavriil Bănulescu-Bodoni, Bessarabian arkkipiispakunnan ensimmäinen johtaja vuodesta 1814. Hän kuoli 1821 ja haudattiin Căprianaan, jonka entisöintiin hän oli osallistunut." },
+      { q: "Mistä Străşenin nimi tulee?", a: "Erään selityksen mukaan nimi juontuu romanian sanasta strașnic, joka tarkoittaa pelottavaa tai kauheaa, koska seutu oli ennen tiheän metsän peitossa. Nimen alkuperästä kerrotaan kuitenkin useampia tarinoita." },
+    ],
+    "Taraclia": [
+      { q: "Mitä Taraclian nimi tarkoittaa?", a: "Nimen uskotaan tulevan nogaitataarien Tarak-kylästä, jonka nimi tarkoittaa harjua tai kampaa, tai paikallisesta Tarakly-suvusta. Varmaa selitystä ei ole." },
+      { q: "Kuinka moni piirin oppilas opiskelee bulgariaa?", a: "Noin 3 000 oppilasta eli noin 80 prosenttia piirin oppilaista opiskelee bulgariaa. Opetusta annetaan kymmenessä koulussa ja kymmenessä päiväkodissa." },
+    ],
+    "Teleneşti": [
+      { q: "Mitä Hora Sânzienelor tarkoittaa?", a: "Se on Teleneștin perinnefestivaali, jossa esiintyy kansantanssiryhmiä Moldovasta ja Romaniasta ja jossa nähdään käsitöitä ja perinneruokia. Romanialaisessa kansanperinteessä sânziene ovat juhannuksen aikaan liittyviä keijuhahmoja, ja samaa nimeä kantavat myös keltaiset kesäkukat." },
+      { q: "Mistä Verejenin kylän nimi tulee?", a: "Kansantarun mukaan nimi tulee parantaja Verasta. Kylä mainitaan asiakirjoissa 1627–1628, kun maata annettiin Istrățel-nimiselle verejeniläiselle, ja sen kivikirkko valmistui 1901." },
+      { q: "Miksi Teleneștin piirissä on niin paljon lampia?", a: "Piirissä on 99 vesialuetta, joiden yhteispinta-ala on noin 1 350 hehtaaria. Niitä käytetään kasteluun, virkistykseen ja kalanviljelyyn, ja suuria kalatiloja on Verejenissä, Mândreștissä ja Ghilicenissä." },
+    ],
+    "Transnistria": [
+      { q: "Mistä Tiraspolin nimi tulee?", a: "Nimi yhdistää kreikan sanat Tyras, Nistrun antiikin aikainen nimi, ja polis eli kaupunki. Se tarkoittaa siis suunnilleen Nistrun kaupunkia." },
+      { q: "Miksi Tiraspolin jalkapalloseura Sheriff on tunnettu Euroopassa?", a: "Sheriff on voittanut Moldovan mestaruuden lukuisia kertoja, ja syksyllä 2021 se yllätti voittamalla Real Madridin 2–1 Mestarien liigassa kotikentällään Tiraspolissa." },
+    ],
+    "Ungheni": [
+      { q: "Mikä on Plaiul Fagului?", a: "Rădenii Vechin kylän luona sijaitseva metsäsuojelualue, joka perustettiin 12. maaliskuuta 1992 ja kattaa noin 5 642 hehtaaria Codrun metsää. Kuusi kasvilajia tunnetaan Moldovassa vain sieltä." },
+      { q: "Mikä on Pietari I:n pöytä Zagarancean Semenin kylässä?", a: "Paikallisen perimätiedon mukaan Semenissä ruhtinas Dimitrie Cantemir tapasi tsaari Pietari I:n, ja bojaarit kokoontuivat kaiverretun pöydän ääreen maljoja nostamaan. Zagarancean kylässä on lisäksi 2016 avattu ulkoilmamuseo." },
+    ],
+  },
 };

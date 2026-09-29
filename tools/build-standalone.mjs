@@ -894,6 +894,8 @@ const MODULES = [
    * versiossa moduulit ajetaan listan järjestyksessä, eikä tuoja saa
    * olla ennen tuotua.
    */
+  // Deltasarjan laattakartta (29.9.2026): js/pallo.js ja js/laattapyramidi.js tuovat tämän.
+  'js/deltasarja.js',
   'js/reliefipyramidi.js',
   'js/laattapyramidi.js',
   /*

@@ -28,10 +28,8 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const lippu = (nimi, oletus) => {
@@ -82,7 +80,7 @@ function tallenne(kaupunki) {
   return JSON.stringify(peli.toJSON());
 }
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({
   viewport: { width: LEVEYS, height: KORKEUS }, deviceScaleFactor: 1, serviceWorkers: 'block',
 });

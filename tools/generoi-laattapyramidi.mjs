@@ -119,6 +119,7 @@ import {
   DELTA_LAJIT, DELTA_LISAMARGINAALI_PX, DELTA_TARKISTUS_OLETUS,
   lataaLuokitin, pyramidinDeltaSuunnitelma, tasonLuvut,
 } from './delta-luokitin.mjs';
+import { avaaChromium } from './selain.mjs';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -4105,12 +4106,7 @@ const osoite = `http://127.0.0.1:${palvelin.address().port}/`;
  * ajaa työpuussa lainkaan. Järjestys on sama kuin ennen: paketti
  * ensin, varapolut vasta sen puuttuessa.
  */
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'))
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--no-sandbox'],
 });
 const sivu = await selain.newPage({ viewport: { width: 300, height: 200 } });

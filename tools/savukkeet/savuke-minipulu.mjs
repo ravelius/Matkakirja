@@ -1,13 +1,13 @@
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
-import { chromium } from 'playwright';
+import { avaaChromium } from '../selain.mjs';
 
 // Käynnistä ensin projektin HTTP-palvelin. Kaappaukset jäävät outputiin.
 const base = process.env.BASE_URL || 'http://127.0.0.1:8000';
 const out = resolve(process.env.OUTPUT_DIR || 'output/minipulu-savuke');
 await mkdir(out, { recursive: true });
-const browser = await chromium.launch({ headless: true });
+const browser = await avaaChromium({ headless: true });
 const results = [];
 try {
   const page = await browser.newPage();

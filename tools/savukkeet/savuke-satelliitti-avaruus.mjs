@@ -81,6 +81,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
@@ -122,19 +123,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8754, r));
 
-/*
- * Playwright kahdesta paikasta (README: älä kirjoita kiinteää
- * ../../node_modules-polkua).
- */
-let paketti = null;
-for (const polku of [process.env.PLAYWRIGHT_JS, join(JUURI, 'node_modules', 'playwright', 'index.js'),
-  '/opt/node22/lib/node_modules/playwright/index.js']) {
-  if (!polku) continue;
-  paketti = await import(polku).catch(() => null);
-  if (paketti) break;
-}
-const chromium = paketti?.chromium ?? paketti?.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 const NAKYMAT = {
   puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true },

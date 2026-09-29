@@ -13,6 +13,18 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2420, teksti: 'MLT, LUX, MDA: pitkä-luonnehdinta + pulu, 48 al… (#3643)' },
+  { v: 2419, teksti: 'Deltasarja: vain muuttuneet laatat ämpäriin (#3641)' },
+  { v: 2418, teksti: 'MKD, MNE, CYP: pitkä-luonnehdinta + pulu, 34 al… (#3638)' },
+  { v: 2417, teksti: 'Playwright-työkalut: yhteinen tools/selain.mjs,… (#3636)' },
+  { v: 2416, teksti: 'ALB: pitkä-luonnehdinta + pulu kaikille 12 maak… (#3632)' },
+  { v: 2415, teksti: 'Astronautin kamera: Pulu hiljaa, taulu heti auki (#3631)' },
+  { v: 2414, teksti: 'Pallo: lähdelaattasuodattimen sarakekierto päät… (#3574)' },
+  { v: 2413, teksti: 'Joet: rajajokien ja paketin jokien päällekkäisy… (#3614)' },
+  { v: 2412, teksti: 'ISL: pitkä-luonnehdinta + pulu kaikille 9 maaku… (#3560)' },
+  { v: 2411, teksti: 'Natiivin muutosloki: 1.0.51 (#3629)' },
+  { v: 2410, teksti: 'Linssien esittelyt: 9 lyhyttä selitystä pilleri… (#3611)' },
+  { v: 2409, teksti: 'Linssikatalogi: E11 tila rakenteilla + n1500-to… (#3593)' },
   { v: 2408, teksti: 'Liiku läpinäkyväksi, iPadilla Pulun reunaan (#3627)' },
   { v: 2407, teksti: 'Yläpalkki: logo, pillerivalikko, Linssit- ja Aa… (#3624)' },
   { v: 2406, teksti: 'Pariteetti web: saapumiskuva ilman kehystä, yks… (#3622)' },
