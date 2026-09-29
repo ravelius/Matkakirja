@@ -23,11 +23,12 @@ const sein = (resepti, a, r, { y = 0, ...extra } = {}) => ({ resepti, paikka: po
 
 const TAULU = {
   otsikko: 'Kellotornin fatabuuri',
-  tila: 'luonnos',
+  // Sisältökirjurin korjaus 29.9. (era4-tarkistus, F1–F3): fatabuuri = vaate- ja tavara-aitta, ei ruokavarasto.
+  tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Fatabuuri on suojainen, vaikeapääsyinen varastotila, jonka holvikatto näyttää muurareiden taidon.', lahde: 'Kansallismuseo: Kellotornin fatabuuri' },
-    { teksti: 'Kalaa syötiin katolisen paaston vuoksi 229 päivänä vuodessa – suolakala tarvitsi varastotilaa.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6' },
-    { teksti: 'Hämeen linnassa fatabuuria hoiti naispuolinen fatabuurinhoitaja, joka vastasi ruokavarastosta.', lahde: 'Ailio: Hämeen linnan asukkaista ja oloista (analogia)' },
+    { teksti: 'Kellotornin fatabuuri: suojainen, vaikeapääsyinen varasto – holvikatto kertoo muurareiden taidosta.', lahde: 'Kansallismuseo: Kellotornin fatabuuri' },
+    { teksti: 'Sana fatabuuri tulee ruotsista: se oli vaate- ja tavara-aitta, arvotavaran varasto.', lahde: 'Kotimaisten kielten keskus / SKES: fatabuuri' },
+    { teksti: 'Hämeen linnan fatabuurissa säilytettiin vaatteita ja kalustoa; naisväki kutoi ja hoiti sitä.', lahde: 'Ailio: Hämeen linnan asukkaista ja oloista (1500-luku, analogia)' },
   ],
 };
 

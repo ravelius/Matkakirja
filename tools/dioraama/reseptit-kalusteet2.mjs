@@ -340,17 +340,22 @@ export function lyhty({ korkeus = 2.2, varsi = 0.45 } = {}) {
  * Origo: pohjan keskipiste lattialla; etupuoli (w+) = lukkopuoli. Kolme vannetta kiertää arkun,
  * lukkolevy edessä. Roolit: puu, kansi, rauta.
  */
-export function arkku({ leveys = 0.9, syvyys = 0.5, korkeus = 0.55 } = {}) {
+export function arkku({ leveys = 0.9, syvyys = 0.5, korkeus = 0.55, osa = 'koko' } = {}) {
+  // osa (voudin sinetti 29.9.): 'koko' = suljettu arkku; 'runko' = ilman kantta, yläpinta roolilla 'kansi' (data: pinnat { kansi: 'kangas' } = kankaat näkyvät);
+  // 'kansi' = pelkkä kansi rautoineen irtoesineeksi (sarana takareunassa [0, yk, −sw]), samoin koordinaatein.
   const lu = leveys / 2, sw = syvyys / 2, yk = korkeus * 0.72, k = [];
-  k.push(...L(-lu, lu, 0, yk, -sw, sw, SIVUT('puu')));
-  k.push(...L(-lu - 0.01, lu + 0.01, yk, korkeus - 0.05, -sw - 0.01, sw + 0.01, SIVUT('kansi')));
-  k.push(...L(-lu + 0.03, lu - 0.03, korkeus - 0.05, korkeus, -sw + 0.03, sw - 0.03, SIVUT('kansi')));
-  for (const u of [-lu * 0.68, lu * 0.68]) {
-    k.push(...L(u - 0.03, u + 0.03, -0.004, yk, -sw - 0.006, sw + 0.006, { yla: 'rauta', etu: 'rauta', taka: 'rauta', vasen: 'rauta', oikea: 'rauta' }));
-    k.push(...L(u - 0.03, u + 0.03, yk, korkeus, -sw - 0.014, sw + 0.014, { yla: 'rauta', etu: 'rauta', taka: 'rauta', vasen: 'rauta', oikea: 'rauta' }));
+  const RAUTA = { yla: 'rauta', etu: 'rauta', taka: 'rauta', vasen: 'rauta', oikea: 'rauta' };
+  if (osa !== 'kansi') {
+    k.push(...L(-lu, lu, 0, yk, -sw, sw, osa === 'runko' ? { ...SIVUT('puu'), yla: 'kansi' } : SIVUT('puu')));
+    for (const u of [-lu * 0.68, lu * 0.68]) k.push(...L(u - 0.03, u + 0.03, -0.004, yk, -sw - 0.006, sw + 0.006, RAUTA));
+    k.push(...L(-0.035, 0.035, yk - 0.09, yk + 0.05, sw + 0.006, sw + 0.02, SIVUT('rauta')));
+    for (const s of [-1, 1]) k.push(...L(s * lu - 0.02, s * lu + 0.02, 0, 0.05, -sw, sw, SIVUT('rauta')));
   }
-  k.push(...L(-0.035, 0.035, yk - 0.09, yk + 0.05, sw + 0.006, sw + 0.02, SIVUT('rauta')));
-  for (const s of [-1, 1]) k.push(...L(s * lu - 0.02, s * lu + 0.02, 0, 0.05, -sw, sw, SIVUT('rauta')));
+  if (osa !== 'runko') {
+    k.push(...L(-lu - 0.01, lu + 0.01, yk, korkeus - 0.05, -sw - 0.01, sw + 0.01, SIVUT('kansi')));
+    k.push(...L(-lu + 0.03, lu - 0.03, korkeus - 0.05, korkeus, -sw + 0.03, sw - 0.03, SIVUT('kansi')));
+    for (const u of [-lu * 0.68, lu * 0.68]) k.push(...L(u - 0.03, u + 0.03, yk, korkeus, -sw - 0.014, sw + 0.014, RAUTA));
+  }
   return k;
 }
 

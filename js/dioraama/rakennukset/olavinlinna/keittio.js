@@ -9,7 +9,8 @@ const TAULU_KEITTIO = {
   kohdat: [
     { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-0' },
     { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-1' },
-    { teksti: 'Keittiö ruokki koko linnaväen: vartijat, palvelusväen ja isännän pöytään kutsutut vieraat.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-2' },
+    // Sisältökirjuri 29.9. (era4): entinen "ruokki koko linnaväen" oli tulkinta; ääni tehdään uudelleen hyväksynnän jälkeen.
+    { teksti: 'Vouti ja seurue söivät ylhäällä Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420)' },
   ],
 };
 

@@ -31,6 +31,8 @@ const RESEPTIT = new Set([
   'alttari', 'vihkimisristi', 'kirkonpenkki', 'kynttilakruunu', 'seinasoihtu', 'arkku', 'keihasteline', 'kilpi',
   'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
   'jalkajousi', 'nuolitynnyri',
+  'sinettisormus', 'kaiverrus', // Voudin sinetti 29.9.
+  'kangaspakka', 'vaatepino', 'vaateorsi', // Fatabuuri vaateaitaksi 29.9.
   // Tunnelma 29.9. (tunnelma.js): lyhty tolpassa.
   'lyhty',
 ]);

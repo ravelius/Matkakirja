@@ -9,11 +9,12 @@
 
 const TAULU = {
   otsikko: 'Kirkkotornin kappeli',
-  tila: 'luonnos',
+  // Sisältökirjurin tarkistus 29.9. (docs/raportit/sisaltokirjuri-olavinlinna-era4-tarkistus-20260929.md, K1–K3).
+  tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Kappeli mainitaan jo 1499; seinää kiertää 12 vihkimisristiä, apostolien merkkinä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
-    { teksti: 'Viereisestä hagioskooppikammiosta rikolliset ja sairaat seurasivat messua pienestä aukosta.', lahde: 'Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' },
-    { teksti: 'Holvikaton maalauksista näkyy vielä lehti- ja kukka-aiheita sekä vaakunoita.', lahde: 'Kansallismuseo: Pyhä Olavi' },
+    { teksti: 'Kappelin seinää kiertää 12 vihkimisristiä; Savon historian mukaan kappeli mainitaan jo 1499.', lahde: 'Kansallismuseo: Pyhä Olavi; Savon historia: Olavinlinnan suojassa' },
+    { teksti: 'Suomessa ainutlaatuinen hagioskooppi: rikolliset ja sairaat seurasivat messua pienestä aukosta.', lahde: 'Kansallismuseo: Pyhä Olavi; Wikipedia: Olavinlinna; Apu' },
+    { teksti: 'Kattomaalausten jäänteistä erottaa vielä lehti- ja kukkakuvioita sekä vaakunoita.', lahde: 'Kansallismuseo: Pyhä Olavi' },
   ],
 };
 

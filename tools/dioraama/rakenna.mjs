@@ -450,6 +450,45 @@ export async function rakennaData(rakennus, {
     });
   }
 
+  // Irtoesineet (elävä linna, voudin sinetti 29.9.): tilan `esineet[]` ovat palikan muotoisia (resepti, paikka, suunta,
+  // parametrit), mutta niitä EI yhdistetä tilan verkkoon eikä valoatlakseen, koska natiivi liikuttaa niitä (arkun kansi
+  // aukeaa saranastaan, sinetti nousee käteen). Jokainen omaksi glb:kseen esineet/<tila>-<id>.glb (maailmakoordinaatit
+  // kuten tilat; COLOR_0: AO 1, lämpö = pinnan hehku). Valinnainen `sarana: [u, y, w]` (esineen paikallinen) viedään
+  // maailmapisteeksi ja `akseli` esineen u-suunnaksi, jonka ympäri natiivi kääntää `avaa`-asteen verran.
+  const esineTulokset = new Map();
+  for (const tila of rakennus.tilat) {
+    for (const e of tila.esineet ?? []) {
+      mkdirSync(join(kansio, 'esineet'), { recursive: true });
+      const raw = sijoita(e);
+      for (const k of raw) k.osa = `${tila.id}:${e.id}`;
+      const ryhmat = ryhmitteleJaHitsaa(raw);
+      const osat = [];
+      for (const pinta of [...ryhmat.keys()].sort()) {
+        const r = ryhmat.get(pinta); kaytetytPinnat.add(pinta);
+        const karkia = r.positions.length / 3, varit = new Uint8Array(karkia * 4);
+        const g = Math.round(Math.min(1, PINNAT[pinta]?.hehku ?? 0) * 255);
+        for (let i = 0; i < karkia; i++) varit.set([255, g, Math.round(osanSatunnaisluku(r.osaTunnisteet[i]) * 255), 255], i * 4);
+        osat.push({
+          pinta, vari: PINNAT[pinta].vari, paikat: Float32Array.from(r.positions), normaalit: Float32Array.from(r.normals),
+          uv: Float32Array.from(r.uvs), varit, kolmiot: Uint32Array.from(r.indices),
+        });
+      }
+      const buf = kirjoitaGlb({ nimi: `${tila.id}-${e.id}`, osat });
+      const tiedosto = `esineet/${tila.id}-${e.id}.glb`;
+      writeFileSync(join(kansio, tiedosto), buf);
+      const tulos = { tiedosto, sha256: createHash('sha256').update(buf).digest('hex') };
+      if (Array.isArray(e.sarana)) {
+        const s = (e.suunta || 0) * Math.PI / 180, r = [Math.cos(s), 0, Math.sin(s)], f = [Math.sin(s), 0, -Math.cos(s)];
+        const [u, y, w] = e.sarana, [px, py, pz] = e.paikka;
+        const pyor = (x) => Math.round(x * 1e6) / 1e6;
+        tulos.sarana = [pyor(px + u * r[0] + w * f[0]), pyor(py + y), pyor(pz + u * r[2] + w * f[2])];
+        tulos.akseli = r.map(pyor);
+      }
+      if (!esineTulokset.has(tila.id)) esineTulokset.set(tila.id, []);
+      esineTulokset.get(tila.id).push({ id: e.id, ...tulos });
+    }
+  }
+
   // RAKENNUS-tason taulun äänet (era2 kohta 2 "AANET"): eri taulu kuin tilojen omat (esim.
   // 'massa'-tilalla ei ole omaa taulua — se käyttää tätä yhteistä linnan taulua).
   for (const kohta of rakennus.taulu?.kohdat ?? []) {
@@ -536,6 +575,10 @@ export async function rakennaData(rakennus, {
     // Rekvisiitan valot (era2b kohta 3) tilan OMAN valot-listan jatkoksi — sama muoto
     // (paikka, sade, voima, vari), lisänä lahde: 'rekvisiitta' ja lepatus (ks. valotPerTila yllä).
     t.valot = [...(t.valot ?? []), ...valotPerTila.get(t.id)];
+    if (t.esineet) {
+      const et = esineTulokset.get(t.id) ?? [];
+      t.esineet = t.esineet.map((e) => ({ ...e, ...et.find((x) => x.id === e.id) }));
+    }
   }
   rakennusJson.pinnat = {};
   for (const id of [...kaytetytPinnat].sort()) {

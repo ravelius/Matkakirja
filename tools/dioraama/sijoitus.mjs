@@ -1,6 +1,6 @@
 // DIORAAMAN TILAKOHTAINEN SIJOITUS (Linnanrakentaja 29.9.2026). Speksi docs/raportit/dioraama-rajapinnat-blender-20260929.md
 // kohta 2. Tilalla voi olla `sijoitus: { ankkuri: [x,y,z], paikka: [x,y,z], suunta: astetta }`. Silloin KAIKKI tilan
-// pistedata (palikat, rajat, kamerat, pulu, hahmot ja reitit, valot, liekit, leikkaus, elava.kohde ja elava.reitti) muunnetaan
+// pistedata (palikat, rajat, kamerat, pulu, hahmot ja reitit, valot, liekit, leikkaus, elava.kohde ja elava.reitti, esineet, etsinta-kohteet) muunnetaan
 //   p' = R(suunta) · (p − ankkuri) + paikka
 // ennen rakennusta. Tila-data pysyy tiivistetyissä lähdekoordinaateissaan; rakenna.mjs kutsuu sijoitaTila()a ensimmäisenä.
 //
@@ -57,7 +57,7 @@ export function sijoitaTila(tila) {
   const suuntaan = (a) => kulma((a || 0) + m.suunta);
   const pisteeksi = (o, kentta) => { if (onPiste(o?.[kentta])) o[kentta] = m.piste(o[kentta]); };
 
-  for (const p of t.palikat ?? []) {
+  for (const p of [...(t.palikat ?? []), ...(t.esineet ?? [])]) {
     p.paikka = m.piste(p.paikka || [0, 0, 0]);
     p.suunta = suuntaan(p.suunta);
   }
@@ -80,6 +80,7 @@ export function sijoitaTila(tila) {
   for (const l of t.liekit ?? []) pisteeksi(l, 'paikka');
   // Elävä linna (29.9.): yleisnäkymän napautuskohde ja reittihahmon polku samaan sijoitukseen.
   pisteeksi(t.elava, 'kohde');
+  for (const v of t.etsinta ?? []) pisteeksi(v, 'kohde');  // voudin sinetti: vihjeen/löydön kohta
   if (Array.isArray(t.elava?.reitti?.pisteet)) t.elava.reitti.pisteet = t.elava.reitti.pisteet.map((p) => (onPiste(p) ? m.piste(p) : p));
   return t;
 }
