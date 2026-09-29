@@ -425,8 +425,10 @@ namespace Matkakirja.Natiivi
             {
                 var r = selite.layout;
                 var puhe = Puhe.Instanssi;
-                bool soi = puhe != null && luennanUrl != null && puhe.SoivaUrl == luennanUrl;
-                string luenta = luettu == null ? "ei" : luennanUrl == null ? "ei alkanut" : soi ? $"soi {puhe.Aika:0.0}/{puhe.Kesto:0.0} s" : "ohi";
+                // Oma luenta on kesken, kunnes Puhe päättää sen (SoivaUrl nollautuu viimeisen palan jälkeen tai pysäytyksessä).
+                bool oma = puhe != null && luennanUrl != null && puhe.SoivaUrl == luennanUrl;
+                string luenta = luettu == null ? "ei" : luennanUrl == null ? "ei alkanut" : !oma ? "ohi"
+                    : puhe.Soi ? $"soi {puhe.Aika:0.0}/{puhe.Kesto:0.0} s" : "latautuu";
                 return $"selite {(kiinni ? "kiinni" : "auki")}{(vinkki ? " (vinkki)" : "")} {r.width:0}x{r.height:0}, liukuja {Tiivistys.Kesken}, "
                     + $"luenta {luenta} ({AstronauttiLinssi.SelitteenSailio}, {luettu?.Length ?? 0} mrk)";
             }
