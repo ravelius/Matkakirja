@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 05:10:** Levy 90 Gi (92→90, raja 80). Muisti OK (69 %). Kuorma piikki 15,3/25,7/18,6 (kaikki roolit heräsivät 05.10), sim 0, GPU-chrome 0. /private/tmp 33,5 Gt, wt/ 16 kohdetta 14 Gt (raja 20). Roolit: 8 käynnissä. Kontekstit: Siirtoseppä 70 % (ilmoitettu), Linnanrakentaja 68 %, Karttaseppä 58 %, Laitetestaaja 57 %, Linssiseppä 2 50 %, Sisältökirjuri 37 %, Linssiseppä 13 % (nollattu); Natiivi-UI ei luettavissa (viimeksi 76 %). Linnanrakentajan PR #3594 auki. Juna OK (b13 75db27d3 käännetty e434161d).
+
 **Päivitetty 04:59:** Levy 92 Gi (vakaa). Muisti OK (66 %). Kuorma 5,7/5,9/6,4, sim 0, GPU-chrome 0. /private/tmp 33,4 Gt, wt/ 14 kohdetta 12 Gt. Roolit heräsivät 04.58–04.59: Päätoimittaja (23 %, nollattu), Linnanrakentaja (64 %) ja Linssiseppä käynnissä; Pelikoodari (45 %) ja Julkaisija (35 %) liikkuivat. Muut levossa, ennallaan (Natiivi-UI 76 %). Jumi-epäily poistui. Juna OK (b13 75db27d3 käännetty e434161d).
 
 **Päivitetty 04:48:** Levy 93 Gi (vakaa). Muisti OK (68 %). Kuorma 7,0/7,7/7,6, sim 0, GPU-chrome 0. /private/tmp 33,3 Gt, wt/ 14 kohdetta 12 Gt. Roolit: 10 levossa, ennallaan. Päätoimittaja isRunning=true, lastActivityAt 04.26 ennallaan (22 min; seuraava raja 05.00). Juna OK (b13 75db27d3 käännetty e434161d).
