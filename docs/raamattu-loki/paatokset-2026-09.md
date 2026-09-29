@@ -9279,3 +9279,7 @@ Omistaja 29.9.2026: "jätä jokien poltot odottamaan." Kaikki jokipoltot pidossa
 ## OMISTAJA: PYSYVÄ TF-VIENTILUPA JA CI-PIKATIE (29.9.2026 klo 19.36)
 
 Omistaja 29.9.2026 Julkaisijan sessioon: jokainen BUILD viedään TestFlightin sisäiseen ryhmään heti käännöksen jälkeen ilman erillistä VIE-kysymystä (alkaen 1.0.52), sekä CI-pikatie (savukkeet pois PR-portista, testit ohitetaan docs-/muutosloki-PR:iltä; PR #3633) ja muutosloki-PR:t pikatietä (#3634 mergetty). Julkaisijan arvio: BUILD → TF-ajon alku 2–5 min (ennen 78 min), TF-ryhmässä noin 40 min BUILDista (ennen noin 2 h). TF 1.0.51 sisäisessä ryhmässä 19.31, TF 1.0.52 (d45086d3, kohdekaupunkien sepia) viennissä.
+
+## OMISTAJA: NOSTOJEN LUENTA ALKAA YHÄ VÄÄRÄSTÄ KOHDASTA (29.9.2026 klo 19.38)
+
+Omistaja 29.9.2026: "nostojen luenta alkaa vieläkin väärästä kohtaa. chatissa näytti toimivan. tosin juuri tuli uusi versio niin en ole sitä kokeillut". Palvelut: nostojen ja kertojan striimiluenta xAI TTS (api.x.ai/v1/tts) matkakirja-pollo-workerin kautta; Pulun chat ja puhekeskustelu ElevenLabs v4 Turbo Pulun omalla äänellä saman workerin kautta; käsikirjoitetut Pulun repliikit ja isoisän luennat esigeneroituja ElevenLabs-tiedostoja ämpäristä. Aloituskohdan vika → Natiivi-UI etusijalla (toisto BUILD 52:lla, ensimmäisen napautuksen kohta ja palakartta lokiin).
