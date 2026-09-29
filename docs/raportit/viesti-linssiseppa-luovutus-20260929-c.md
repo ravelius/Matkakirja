@@ -30,7 +30,7 @@ Tarkistus: `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto merge-base --i
 - **Siivous:** Natiivi-UI:n ponnahdus-herata on masterissa, joten omat `Ruudunpaivitys.Herata(Ponnahdus…)`-kutsut
   PulunTauluNakyma.Avaa/Sulje- ja Kuvanakyma.Avaa/Sulje-metodeissa ovat turhia (eivät haittaa). Poista ne seuraavan erän
   yhteydessä.
-- **Linssit/Aarteet-kuvapari:** EI TARVITA (Natiivi-UI 29.9. klo 16.2x). Pillerivalikko on BUILD 49:ssä, ja Laitetestaaja
+- **Linssit/Aarteet-kuvapari:** EI TARVITA (Natiivi-UI 29.9. klo 16.1x). Pillerivalikko on BUILD 49:ssä, ja Laitetestaaja
   hyväksyi sen. Kuvat ovat kansioissa natiivi-ui-pilleri-20260929 ja pillerivalikko/. Valinnainen: Aarteet-esikatselun pari pelistä,
   jossa on löytöjä (kuvattu vain tyhjänä). Vain käännösvuoron ohessa, ei omana eränään.
 - **Webin bugi (Pelikoodarille, Päätoimittajalle ilmoitettu):** tervetulon C1 käynnistää selitteen luennan Livian päälle, ja C2:n
