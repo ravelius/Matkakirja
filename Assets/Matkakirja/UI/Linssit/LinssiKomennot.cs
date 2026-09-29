@@ -10,6 +10,9 @@
 //   ui linssi kuva [tunnus] [pulu]        astronautin kuvanäkymä: aineiston kohde (oletus ensimmäinen);
 //                                         pulu = minipulun kysymyskortti auki
 //                                         tai Commonsin esimerkkikuvat, jos aineisto ei lataudu
+//   ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|tila]  kuvanäkymän selite: napautus (animoitu pienennys ja
+//                                         avaus, kokomittari lokiin "MATKAKIRJA kuvaselite koko"), vinkin automaattinen
+//                                         kelaus heti; palauttaa koon ja luennan tilan (astro-selite)
 //   ui linssi selaa 1|-1                  kuvaselain: seuraava/edellinen kuva (galleria, kohteen lopussa naapuriin)
 //   ui linssi kohde 1|-1                  kuvaselain: viereinen kohde kartalla (alanapit ‹ ›)
 //   ui linssi kuvaselain 0|1              kuvapari: 0 = 1.0.33 (läpinäkymätön tausta, ei ‹ ›), 1 = kuvaselain
@@ -48,7 +51,7 @@ namespace Matkakirja.Natiivi
 {
     public static class LinssiKomennot
     {
-        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|selaa|kohde|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois";
+        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|kuvaselite|selaa|kohde|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois";
 
         public static string Aja(UiNakymat ui, string loput)
         {
@@ -91,6 +94,8 @@ namespace Matkakirja.Natiivi
                 case "kuva":
                     UiKerros.Hae().StartCoroutine(AvaaKuva(l, a1 == "pulu" ? "" : a1, a1 == "pulu" || a2 == "pulu"));
                     return "ladataan aineistoa…";
+                case "kuvaselite":
+                    return l.Astronautti.Kuva.TestaaSelite(a1.Length > 0 ? a1 : "tila");
                 case "selaa":
                     l.Astronautti.Kuva.Selaa(a1 == "-1" ? -1 : 1);
                     return l.Astronautti.Kuva.Kohde?.Tunnus;
