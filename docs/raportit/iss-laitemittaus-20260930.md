@@ -63,3 +63,26 @@ asti ulottuva maa. Hypoteesi on, että näkyvien laattojen määrä ja ilmakehä
 2. Toteutetaan halvin, joka nostaa Cupolan ≥ 55 fps:iin ja pitää thermalStaten 0–1:ssä 5 minuutin ajan. Varalla on
    Cupolan tavoite 30 fps (näkymä liikkuu hitaasti, eikä omistaja erota), mikä puolittaa GPU-työn.
 3. Muistimittaus pienellä laitteella (4 Gt), jos sellainen on käytettävissä.
+
+## Jatko: juurisyy löytyi (ajot 3–5, klo 01.06–02.07)
+
+- **Kamera-A/B** (`iss-cupola-kamera-20260930`): kapeampi fov 56° ei nopeuttanut (40 vs. 47 fps). Laite lämpeni tilaan 2
+  kolmessa minuutissa, joten loput tulokset eivät kelpaa. Kamera ei ole syy: avaruuskävely on samoin matala ja laaja,
+  ja se pyörii 53 fps:ssä.
+- **Vuorotellen tehty UI-A/B** (`iss-cupola-ui-20260930` ja `-ui2-`, 20 s jaksot, thermal 0 koko ajan):
+
+| Tila | Mediaani |
+|---|---|
+| Cupola, perus | 24,7–25,0 ms |
+| Vanha 1.0.35-kehys (ei reunavaloja) | 16,9 ms |
+| Neljä tehostetta pois | 17,7 ms |
+| **Pelkkä reunavalo pois** | **16,8 ms** |
+| Ajelehdus pois | 24,8 ms |
+| Pölyt pois | 24,9 ms |
+| Seuranta | 16,7 ms |
+
+- **Juurisyy: Cupola 3:n kolme reunavaloa** (sun-nw, sun-ne, sun-sw). Ne ovat kolme koko ruudun 2732 × 2048 -kuvaa UI
+  Toolkitissa, ja kukin sekoitetaan koko ruudulta, vaikka näkyviä pikseleitä on vain 2–3 %. Hinta on noin 8 ms kehyksessä.
+- **Korjaus** (proto linssiseppa/cupola-fps 28f3e947): varjostin `CupolaValot` yhdistää kolme valoa painoineen puolikokoiseen
+  RT:hen vain painojen muuttuessa, ja UI piirtää yhden kerroksen. Kompositio on sama. A/B-komento on `astro kyyti valot1 0|1`.
+  Laitemittaus odottaa laite-release-käännöstä (Natiiviseppä).
