@@ -115,6 +115,9 @@ namespace Matkakirja.Natiivi
                 if (!Aanet.Tehoste(nimi, voima)) Debug.Log("MATKAKIRJA aani: linssin tehostetta ei ole taulussa: " + nimi);
             };
             LinssiOhjain.TaustaaaniKasittelija = Aanisoitin.LinssiTausta;
+            // Dioraaman äänisilmukkapooli ja repliikin puhuja-merkki (Linnanrakentaja erä 2, 29.9.2026).
+            LinssiOhjain.SilmukkaKasittelija = Aanisoitin.LinssiSilmukka;
+            LinssiOhjain.RepliikkiKasittelija = Aanisoitin.DioraamaRepliikki;
         }
 
         /// <summary>

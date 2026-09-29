@@ -63,6 +63,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Linssin äänitehoste ja taustaääni (Aanisoitin, PeliOhjain.Aanet kytkee).</summary>
         public static Action<string, float> TehosteKasittelija;
         public static Action<string> TaustaaaniKasittelija;
+        /// <summary>Nimetty taustasilmukka poolista (Aanisoitin.LinssiSilmukka), Linnanrakentaja erä 2 (dioraama).</summary>
+        public static Func<string, ISilmukka> SilmukkaKasittelija;
+        /// <summary>Dioraaman repliikin puhuja-merkki (Aanisoitin.DioraamaRepliikki), Linnanrakentaja erä 2.</summary>
+        public static Action<bool> RepliikkiKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
         public static Action<double> LinssiHimmennysKasittelija;
         /// <summary>
@@ -1323,6 +1327,21 @@ namespace Matkakirja.Natiivi
         {
             Kirjaa("taustaääni " + (tunnus ?? "pois"));
             TaustaaaniKasittelija?.Invoke(tunnus);
+        }
+
+        public ISilmukka Silmukka(string tunnus) => SilmukkaKasittelija != null ? SilmukkaKasittelija(tunnus) : TyhjaSilmukka.Kahva;
+
+        public void Repliikki(bool puhuu) => RepliikkiKasittelija?.Invoke(puhuu);
+
+        /// <summary>
+        /// Turvallinen kahva, kun SilmukkaKasittelija ei ole (vielä) kytketty (esim. Aanisoitin ei ole
+        /// käynnistynyt): Silmukka ei koskaan palauta nullia, mutta tämä kahva ei koskaan soi.
+        /// </summary>
+        sealed class TyhjaSilmukka : ISilmukka
+        {
+            public static readonly ISilmukka Kahva = new TyhjaSilmukka();
+            public void Voimakkuus(float taso, float liukuS) { }
+            public void Lopeta(float haiveS = 0.35f) { }
         }
 
         public bool VahennettyLiike => VahennettyLiikeKysely?.Invoke() ?? false;
