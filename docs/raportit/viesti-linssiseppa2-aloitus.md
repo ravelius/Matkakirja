@@ -11,8 +11,8 @@ CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA 
 docs/raportit/viesti-linssiseppa2-luovutus-20260929.md** (merge-pyynnöt, puuradio v2, skriptit).
 
 ## Tehtävä nyt
-1. Tarkista, ovatko avaruuskavely bdea89bf ja radio-virta b68dcdd3 masterissa (Natiivisepän juna-1048 → 1.0.48); jos ovat
-   eikä radiotyö ole kesken, poista proto-worktree ja kerro Postivahdille.
+1. Avaruuskavely bdea89bf ja radio-virta b68dcdd3 ovat masterissa (29.9.). Proto-worktree jää puuradio v3:lle; poista se
+   (git worktree remove) kun radiotyö on valmis, ja kerro Postivahdille.
 2. Odota Codexin puuradio v3:a (posti/fable-codex-radio-yksikuva-v3-20260929.md) (yksi kuva + VU-neula): kytke omistajan OK:n jälkeen pohjasta radio-virta, kuvapari Päätoimittajalle,
    merge-pyyntö vasta omistajan OK:n jälkeen.
 

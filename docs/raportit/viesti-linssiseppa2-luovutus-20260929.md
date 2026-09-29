@@ -10,7 +10,7 @@ kaanna-jono.sh (`S=$S zsh $S/kaanna-jono.sh <nimi> "haara+haara"` → $S/<nimi>-
 (`APPNIMI=<nimi> LAITE=iphone|ipad [VAAKA=1] UDID=… zsh ajo-kavely3.sh`: kyyti, astro kavely -vaiheet kuvina, radio Rooma;
 sallii 3 käynnissä olevaa simulaattoria), hehku_maski.py. Lokit proto-3d/lokit/linssiseppa2-laite-20260929-kavely{1,2,3}/.
 
-## 1. MERGE-PYYNNÖSSÄ (Natiiviseppä, 1.0.48)
+## 1. MASTERISSA (tarkistettu 29.9. klo 16.2x; Natiivisepän juna-1048 → 1.0.48)
 
 - **Avaruuskävely** proto linssiseppa2/avaruuskavely **bdea89bf** — OMISTAJA HYVÄKSYI 29.9. ("Hyväksyn"). Natiiviseppä yhdisti
   sivuhaaraan natiiviseppa/juna-1048 73cdb113 (testit ajossa) → 1.0.48-juna Julkaisijan luvalla. Tarkista: `git merge-base
