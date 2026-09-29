@@ -909,15 +909,6 @@
     flex-grow: 1;
 }
 
-/* Lukijan valikon auto-luennan rivi (ääni-valitsimen paikalla): nimi vasemmalla, päällä/pois oikealla. */
-.mk-chat__autoluku {
-    min-height: 34px;
-    padding: 0;
-    border-width: 0;
-    background-color: rgba(0, 0, 0, 0);
-    justify-content: space-between;
-}
-
 /* Pöllöpoiminta vastauksen perässä (web .pollo-poimintarivi, -nappi, -tila). */
 .mk-chat__poimintarivi {
     flex-direction: row;
