@@ -1,4 +1,4 @@
-# Natiivisepän aloitusviesti (29.9.2026 klo 12.5x, BUILD 48; nollaus luovutuksesta -20260929)
+# Natiivisepän aloitusviesti (29.9.2026 klo 14.3x, BUILD 49; nollaus luovutuksesta -20260929)
 
 Olet Natiiviseppä (Opus, max), Macin käyttäjä koodaus. Checkout on /Users/Shared/Claude/Matkakirja-3d-selvittaja ja proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutuksesi KOKONAAN:
@@ -11,14 +11,16 @@ Päiväsääntö 29.9. (normaalit säännöt palaavat 30.9. klo 00):
 - Käännökset nice 15, yksi kerrallaan.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)".
 
-## KÄRKI: BUILD 48 valmis, juna tyhjä (29.9. klo 12.5x)
-**BUILD 48 = proto master 1c4a7eff** (juna 73cdb113, käännös 39fc303b; Laitetestaaja c27e1fc 5/5 PASS). Sisältö: BUILD 47 329ffaf0
-+ natiivi-ui/pelaajan-nakyma 9652f810 + linssiseppa2/avaruuskavely bdea89bf + linssiseppa2/radio-virta b68dcdd3. SHA:t on lähetetty
-Julkaisijalle ja Päätoimittajalle, sivuhaara natiiviseppa/juna-1048 on poistettu. Seuraava sisältö kootaan sivuhaaraan
-natiiviseppa/juna-1049 master 1c4a7eff:stä → testit → junaan Julkaisijan luvalla.
-TF: VIE annettiin 1.0.47:lle (329ffaf0), ja 1.0.48 = 1c4a7eff odottaa VIE:tä. Vie aina oman BUILDin SHA:lla.
-Burst-korjaus on todennettu: ajastin ohitti 12.01 jonon aikana käännetyn junan.
-Tulossa: natiivi-ui/pillerivalikko (työn alla) ja Linnanrakentajan dioraama (Aanisoitin-osa katsotaan merge-pyynnössä).
+## KÄRKI: BUILD 49 valmis, juna tyhjä (29.9. klo 14.3x)
+**BUILD 49 = proto master 5ce37440** (juna c98f2cac, käännös 6212c0ad; Laitetestaaja 74710a2 4/4 PASS + Natiivi-UI:n laitekuva cl3
+tekijätiedoista). Sisältö: BUILD 48 1c4a7eff + natiivi-ui/pillerivalikko 12ed8b69 (yläpalkki ja pillerivalikko). BUILD 48 = 1c4a7eff
+(pelaajan näkymä, avaruuskävely, radio-virta). SHA:t on lähetetty Julkaisijalle ja Päätoimittajalle, sivuhaarat on poistettu. Seuraava
+sisältö kootaan sivuhaaraan natiiviseppa/juna-1050 master 5ce37440:stä → testit → junaan Julkaisijan luvalla.
+TF: 1.0.47 = 329ffaf0 on viety. VIE:tä odottavat 1.0.48 = 1c4a7eff (sisältövienti #3620) ja 1.0.49 = 5ce37440. Vie aina oman
+BUILDin SHA:lla.
+Laitetestaajalle: iPadin vaaka `ui kierto vaaka`, tekijätiedot logosta tai `ui tietoja`.
+Tulossa: Linnanrakentajan dioraama (Aanisoitin-osa katsotaan merge-pyynnössä) ja pillerivalikon nahka (Codexin kuva omistajan
+hyväksynnän jälkeen).
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain, kun erä on valmis, olet jumissa tai sinulla on kysymys (enintään 8 riviä), SendMessage nimellä.
