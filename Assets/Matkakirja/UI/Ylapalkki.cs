@@ -512,6 +512,13 @@ namespace Matkakirja.Natiivi
             palkki.style.paddingRight = r.z + (PilleriOikealla ? 8f : SaariReuna) * yksikko;
             // Matala: ruskea tausta turva-alueen korkuisena, ja rivi + alavara, jos rivi ulottuu sen alle.
             float korkeus = matala ? Mathf.Max(r.y + MatalaLisa * yksikko, yla + rivi + MatalaAla * yksikko) : yla + rivi;
+            float saariYla = Mathf.Min(ylakulma.y, alakulma.y), saariAla = Mathf.Max(ylakulma.y, alakulma.y);
+            if (matala && PilleriOikealla && palkki.ClassListContains("mk-ylapalkki--nahka") && saarenKorkeus > 0f)
+            {
+                // Omistaja 29.9.2026 (1.0.50, palaute 5): nahkaa yhtä paljon saaren ylä- ja alapuolella, sitten tikkauskaista.
+                // Laitteen saaren mukaan; kuva rajautuu alareunasta (scale-and-crop), joten tikkaus ei veny.
+                korkeus = saariAla + saariYla + P(Screen.width / pp, 0f).x * NahkaTikkausOsuus;
+            }
             palkki.style.height = korkeus;
             // Löydös 73: palkki keskittää rivin pystysuunnassa, joten turva-alueen korkuinen palkki valutti pillerin
             // ja ☰:n 5,6 pt saaren alapuolelle (iPhone 17: pilleri y 19,6, saari y 14). Loppu alatäytteeksi.
@@ -528,8 +535,15 @@ namespace Matkakirja.Natiivi
                 float ruudunKeski = P(Screen.width / pp / 2f, 0f).x;
                 float oma = saari.width > 0 ? (alakulma.x - ylakulma.x) / 2f : 0f;
                 float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + SaarenMarginaali * yksikko;
-                float vasenReuna = r.x + 12f * yksikko;
-                float oikeaReuna = P(Screen.width / pp, 0f).x - r.z - 8f * yksikko;
+                // Näytön pyöristetyt kulmat (omistaja 29.9.2026, 1.0.50: logo ja pilleri jäivät kulmien taakse): reuna vähintään
+                // kulmakaaren sisään (KulmaVara), ei pelkkä turva-alue.
+                float kulmaR = NaytonKulmaPt(saari, saariYla) * yksikko;
+                float lkArvio = matala ? rivi * 0.8f : 24f * yksikko;
+                float vasenReuna = Mathf.Max(r.x + 12f * yksikko, KulmaVara(yla + (rivi - lkArvio) / 2f, 0f, kulmaR, KulmaMarginaali * yksikko));
+                float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
+                float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
+                palkki.style.paddingLeft = vasenReuna;
+                palkki.style.paddingRight = oikeaVara;
                 pilleriMax = Mathf.Max(60f, oikeaReuna - (ruudunKeski + puoli));
                 float logoTila = Mathf.Max(40f, (ruudunKeski - puoli) - vasenReuna);
                 float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / logoSuhde);
@@ -544,6 +558,41 @@ namespace Matkakirja.Natiivi
         }
 
         float pilleriMax;
+
+        /// <summary>
+        /// Nahkakuvan (nahka-tile 1290 × 300) alareunan varjo, sauma ja tikkaus: rivit 258–300 eli 42 / 1290 kuvan leveydestä,
+        /// kun kuva skaalautuu palkin levyiseksi.
+        /// </summary>
+        const float NahkaTikkausOsuus = 42f / 1290f;
+
+        /// <summary>Etäisyys kulmakaaresta (pt), jonka sisällä logo ja pilleri pysyvät.</summary>
+        const float KulmaMarginaali = 4f;
+
+        /// <summary>
+        /// Näytön kulmasäde pisteinä (iOS ei kerro sitä julkisesti): Dynamic Island -iPhonet 62 (suurin, iPhone 16 Pro / 17),
+        /// lovelliset 47, iPad 18, kotinäppäimelliset 0. Saari erotetaan lovesta sen yläreunan raosta.
+        /// </summary>
+        static float NaytonKulmaPt(Rect saari, float saarenYla)
+        {
+            if (UiKerros.Tabletti) return 18f;
+            if (saari.width <= 0f) return 0f;
+            return saarenYla > 2f ? 62f : 47f;
+        }
+
+        /// <summary>
+        /// Pienin etäisyys näytön pystyreunasta (paneelin yksiköissä), jolla elementin yläkulma pysyy näytön pyöristetyn kulman
+        /// (säde kulmaR) sisällä marginaalin verran: elementin yläkulman kaari (säde rho; suorakulmiolle 0, pillerille puolet
+        /// korkeudesta) ei saa leikata näytön kulmakaarta. yla = elementin yläreuna näytön yläreunasta.
+        /// </summary>
+        public static float KulmaVara(float yla, float rho, float kulmaR, float marginaali)
+        {
+            if (kulmaR <= 0f) return 0f;
+            float cy = yla + rho;
+            if (cy >= kulmaR) return 0f;
+            float d = kulmaR - rho - marginaali, dy = kulmaR - cy;
+            if (d <= 0f || dy >= d) return kulmaR;
+            return Mathf.Max(0f, kulmaR - Mathf.Sqrt(d * d - dy * dy) - rho);
+        }
 
         /// <summary>
         /// Saaririvillä pillerin teksti pienenee (14 → 11 px), kunnes "raha£ päivä/80" mahtuu saaren viereen;

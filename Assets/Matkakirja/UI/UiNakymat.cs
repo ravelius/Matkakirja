@@ -151,9 +151,10 @@ namespace Matkakirja.Natiivi
             var v = Linssit.Valitsin;
             v.Avaaja = Tilarivi.Valikko;
             v.Avaajat.Add(Tilarivi.Pilleri);
-            // PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07, loki "YLÄPALKKI MATKALAUKUKSI"; web malli, Pelikoodarin rakenne):
-            // Äänet (kytkimet + tasot) → Kartta → [Uusi peli · Ehdota · Offline-kartat · Asetukset · Retkikunta · Kehittäjä]
-            // → Linssit › → Aarteet › → pillerin tiedot (matkalaukun Matka ja tilastot) → versiorivi. Tekijätiedot logosta.
+            // PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07, loki "YLÄPALKKI MATKALAUKUKSI"; web malli, Pelikoodarin rakenne).
+            // 1.0.50-palaute (omistaja 29.9. klo 17.1x): etusivulta pois tasosäätimet, Kartta-kytkimet, Ehdota ja Offline
+            // (→ Asetukset, samoin Kehittäjä); Retkikunta Uusi pelin viereen; Linssit ja Aarteet vierekkäin.
+            // Äänet (kytkimet) → [Uusi peli · Retkikunta] → [Asetukset] → [Linssit › · Aarteet ›] → pillerin tiedot → versio.
             v.LisaOsioOtsikko("Äänet");
             var aanet = v.LisaNappirivi();
             foreach (var (k, ikoni) in new[] { (Kytkin.Kertoja, Ikonit.Kertoja), (Kytkin.Musiikki, Ikonit.Musiikki), (Kytkin.Aanimaisema, Ikonit.Aanimaisema) })
@@ -161,28 +162,17 @@ namespace Matkakirja.Natiivi
                 var kk = k;
                 v.LisaKytkin(aanet, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
             }
-            v.LisaSaatimet();
-            v.LisaOsioOtsikko("Kartta");
-            var kartta = v.LisaNappirivi();
-            foreach (var (k, ikoni) in new[] { (Kytkin.PieniLiike, Ikonit.PieniLiike), (Kytkin.KuljettuReitti, Ikonit.KuljettuReitti) })
-            {
-                var kk = k;
-                v.LisaKytkin(kartta, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
-            }
             var toiminnot = v.LisaNappirivi();
             v.LisaNappi(toiminnot, "Uusi peli", Ikonit.Viiva["paivita"], Valikko.KysyUusiPeli);
-            v.LisaNappi(toiminnot, "Ehdota", Ikonit.Kyna, Valikko.Ehdota);
-            var toiminnot2 = v.LisaNappirivi();
-            v.LisaNappi(toiminnot2, "Offline", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
-            v.LisaNappi(toiminnot2, "Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
-            var toiminnot3 = v.LisaNappirivi();
-            v.LisaNappi(toiminnot3, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
+            v.LisaNappi(toiminnot, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
                 () => Valikko.RetkikuntaSaatavilla);
-#if !MATKAKIRJA_APPSTORE
-            v.LisaNappi(toiminnot3, "Kehittäjä", Ikonit.Ratas, () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
-#endif
-            v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0);
-            v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet);
+            var toiminnot2 = v.LisaNappirivi();
+            v.LisaNappi(toiminnot2, "Asetukset", Ikonit.Ratas, () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
+            Valikko.AvaaOffline = () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline);
+            Valikko.OfflineSaatavilla = () => UiPalvelut.Offline != null;
+            var alinakymat = v.LisaNappirivi();
+            v.LisaAlinakyma("Linssit", Ikonit.Viiva["taikalasit"], Linssivalitsin.Nakyma.Linssit, () => LinssiUi.Rekisteri?.Valittavat.Count > 0, alinakymat);
+            v.LisaAlinakyma("Aarteet", Ikonit.Laukku, Linssivalitsin.Nakyma.Aarteet, null, alinakymat);
             v.AarteetData = () => PeliOhjain.Instanssi?.Laukku();
             Matkalaukku.Upota(v.TiedotKohde);
             v.Avautuu += Matkalaukku.PaivitaTiedot;

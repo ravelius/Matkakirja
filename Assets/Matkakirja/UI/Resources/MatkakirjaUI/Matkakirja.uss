@@ -894,6 +894,12 @@
     width: 244.6px;
 }
 
+/* Asetukset leveämpänä (omistaja 29.9.2026, 1.0.50: "liian kapea, jotta äänitasoja voi säätää"): pillerivalikon levyinen. */
+.mk-paavalikko.mk-paavalikko--asetukset {
+    width: 300px;
+    max-width: 88%;
+}
+
 /* Web äänipaneeli on sisältönsä levyinen (296,36). */
 .mk-pudotus.mk-aanentasot {
     width: 296px;

@@ -3818,6 +3818,13 @@
     align-items: center;
 }
 
+/* Linssit ja Aarteet vierekkäin (omistaja 29.9.2026, 1.0.50): puolikkaat samassa rivissä. */
+.mk-linssivalitsin__alinakyma--puoli {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 2px 1.5px;
+}
+
 .mk-linssivalitsin__vakanen {
     margin-left: auto;
     font-size: 18px;

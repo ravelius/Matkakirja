@@ -97,10 +97,14 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Alinäkymän rivi pääsivulle ("Linssit ›", "Aarteet ›").</summary>
-        public Button LisaAlinakyma(string nimi, string ikoni, Nakyma n, Func<bool> nakyy = null)
+        /// <summary>
+        /// Alinäkymän rivi pääsivulle ("Linssit ›", "Aarteet ›"); rivi annettuna napit puolikkaina vierekkäin (omistaja 29.9.2026,
+        /// 1.0.50-palaute: Linssit ja Aarteet vierekkäin).
+        /// </summary>
+        public Button LisaAlinakyma(string nimi, string ikoni, Nakyma n, Func<bool> nakyy = null, VisualElement rivi = null)
         {
-            var b = ValikkoNappi(lisaosa, nimi, ikoni, () => NaytaNakyma(n), "mk-valikkonappi mk-valikkonappi--rivi mk-linssivalitsin__alinakyma");
+            var b = ValikkoNappi(rivi ?? lisaosa, nimi, ikoni, () => NaytaNakyma(n),
+                "mk-valikkonappi mk-valikkonappi--rivi mk-linssivalitsin__alinakyma" + (rivi != null ? " mk-linssivalitsin__alinakyma--puoli" : ""));
             Rakenne.Teksti("›", "mk-linssivalitsin__vakanen", b);
             if (nakyy != null) lisarivit.Add((b, nakyy));
             return b;
