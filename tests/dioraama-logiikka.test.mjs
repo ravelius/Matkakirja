@@ -274,6 +274,34 @@ test('askeleenKesto: ääni korvaa tekstipohjaisen keston kokonaan', () => {
   assert.equal(askeleenKesto({ tee: 'repliikki', hahmo: 'h' }, tila, rak), 7.25);
 });
 
+// --- era2 (dioraama-rajapinnat-era2-20260929.md kohta 2 "AANET"): kohta.aani lisää
+// tauon (ei korvaa kokonaan, toisin kuin repliikki/reaktio) ja repliikki.n valitsee rivin. ---
+
+test('askeleenKesto: kohta.aani LISÄÄ 0,6 s tekstipohjaisen/äänipohjaisen keston perään (ei korvaa)', () => {
+  const tila = { taulu: { kohdat: [{ teksti: 'x'.repeat(10), aani: 'k1' }] }, hahmot: [] }; // teksti jäisi 0,6*10=... -> max(3,·)=3 ilman ääntä
+  const rak = { aanet: { k1: { kesto_s: 4 } } };
+  assert.equal(askeleenKesto({ tee: 'kohta', n: 0 }, tila, rak), 4.6, 'kesto_s (4) + 0,6 s tauko');
+  // Sama kohta ilman aani-kenttää palaa tekstipohjaiseen kaavaan (regressio: ei riko vanhaa muotoa).
+  const tilaEiAania = { taulu: { kohdat: [{ teksti: 'x'.repeat(10) }] }, hahmot: [] };
+  assert.equal(askeleenKesto({ tee: 'kohta', n: 0 }, tilaEiAania, rak), 3);
+});
+
+test('askeleenKesto: repliikki.n valitsee hahmon repliikit[n]-rivin (oletus 0)', () => {
+  const hahmo = {
+    id: 'h',
+    repliikit: [
+      { teksti: 'x'.repeat(10), aani: null }, // 0,06*10=0,6 -> max(2,·)=2
+      { teksti: 'y'.repeat(100), aani: null }, // 0,06*100=6
+    ],
+    reaktio: { teksti: 'z', aani: null },
+  };
+  const tila = { taulu: { kohdat: [] }, hahmot: [hahmo] };
+  const rak = { aanet: {} };
+  assert.equal(askeleenKesto({ tee: 'repliikki', hahmo: 'h' }, tila, rak), 2, 'n puuttuu -> oletus 0 (ennallaan)');
+  assert.equal(askeleenKesto({ tee: 'repliikki', hahmo: 'h', n: 0 }, tila, rak), 2, 'n=0 eksplisiittisenä');
+  assert.equal(askeleenKesto({ tee: 'repliikki', hahmo: 'h', n: 1 }, tila, rak), 6, 'n=1 -> toinen repliikki');
+});
+
 test('kasikirjoitusHetkella: napautus päättää käynnissä olevan askeleen napautushetkellä', () => {
   const kestot = [2, 2, 2];
   assert.equal(kasikirjoitusHetkella([], kestot, [1.5], 1.49999).indeksi, 0);
