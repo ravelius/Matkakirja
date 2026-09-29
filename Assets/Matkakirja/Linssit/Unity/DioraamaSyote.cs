@@ -93,6 +93,8 @@ namespace Matkakirja.Natiivi
 
             if (n == 1)
             {
+                // Paluu kahdesta sormesta yhteen: jatketaan nykyisestä kohdasta (ei hyppyä nipistystä edeltävään pisteeseen).
+                if (kaksiKaynnissa) edellinenYhdenSormenKohta = sormet[0].screenPosition;
                 kaksiKaynnissa = false;
                 Vector2 p = sormet[0].screenPosition;
                 liikeSitenAlusta += Vector2.Distance(p, edellinenYhdenSormenKohta);

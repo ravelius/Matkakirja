@@ -13,15 +13,10 @@
 // (NivelKulmat/JuuriNousu, JS-pariteetti kultaisilla vektoreilla). EULER-JÄRJESTYS (selvitetty TÄSSÄ erässä —
 // tools/dioraama/esikatselu-hahmot.mjs:n kommentti jätti tämän auki: "natiivin C#-vastine ei ollut vielä
 // olemassa... jos [järjestys] poikkeaa, tämä on ensimmäinen paikka katsoa"): JS/THREE soveltaa solmu.rotation.
-// set(rx,ry,rz):n THREEn OLETUSJÄRJESTYKSELLÄ 'XYZ' = kvaterniotulo Qz(rz)·Qy(ry)·Qx(rx) (rx sovelletaan
-// ENSIN pisteeseen). Unityyn (kohdan 0 z-peilaus, SAMA R=diag(1,1,-1) kuin DioraamaGlb.cs:n rotation-kommentti):
-// mesh-pisteet on JO peilattu kerran (DioraamaGlb.Lue(unityyn:true)); jotta nivelen kierto tuottaa Unityssä
-// f(R(p)) samalle peilatulle pisteelle f(p), tarvittava Unity-matriisi on Q = R·M·R (konjugaatio), missä
-// M = Qz(rz)·Qy(ry)·Qx(rx). Konjugaatio on rengashomomorfismi (R·R=I) JA per-akseli-matriisi konjugoituu
-// erikseen: Rz(θ)' = Rz(θ) (Z ON peilattava akseli itse — rotaatio SEN ympäri säilyy), Ry(θ)' = Ry(-θ),
-// Rx(θ)' = Rx(-θ) (todistus komponenteittain, sama kaava kuin DioraamaGlb.cs). JÄRJESTYS säilyy siis samana:
-// Q = Rz(rz)·Ry(-ry)·Rx(-rx). Unityn Quaternion.AngleAxis toteuttaa Rodriguesin kaavan SUORAAN (puhdas
-// algebra samoille Rx/Ry/Rz-matriiseille, ei riipu "kätisyys"-tulkinnasta) — ks. NivelKierto()-metodi alla.
+// set(rx,ry,rz):n THREEn OLETUSJÄRJESTYKSELLÄ 'XYZ' = matriisi M = Rx(rx)·Ry(ry)·Rz(rz) (Rz sovelletaan
+// pisteeseen ENSIN; korjattu katselmoinnissa 29.9.). Unityyn (kohdan 0 z-peilaus R = diag(1,1,-1), sama kuin
+// DioraamaGlb.cs:n rotation-kommentti) tarvitaan Q = R·M·R; konjugaatio pitää järjestyksen ja kääntää x- ja
+// y-kulmien etumerkin (Rz säilyy): Q = Rx(-rx)·Ry(-ry)·Rz(rz) — ks. NivelKierto()-metodi alla.
 // EI VISUAALISESTI VARMISTETTU (ei simulaattoria sallittu tässä erässä) — jos raaja kiertyy väärään suuntaan
 // (esim. tyo-silmukan olka_o, jolla rx JA rz ovat molemmat nollasta poikkeavia yhtä aikaa), TARKISTA TÄMÄ.
 //
@@ -311,16 +306,15 @@ namespace Matkakirja.Natiivi
             if (kasvot.sqrMagnitude > 1e-8f) e.Juuri.transform.rotation = Quaternion.LookRotation(kasvot, Vector3.up);
         }
 
-        /// <summary>Nivelen (rx,ry,rz) [asteina, JS:n THREE 'XYZ'-järjestys] -> Unity-paikallinen kvaternio,
-        /// VALMIIKSI peilattuna unityyn-muunnokseen. Perustelu tiedoston yläkommentissa: Q = Rz(rz)·Ry(-ry)·
-        /// Rx(-rx) (SAMA järjestys kuin JS, ry/rx etumerkki kääntyy, rz ei). Quaternion.AngleAxis(θ,akseli)
-        /// toteuttaa Rodriguesin kaavan (puhdas algebra) täsmälleen samoille Rx/Ry/Rz-matriiseille kuin kaavassa
-        /// käytetty — operaattori * soveltaa OIKEANPUOLEISEN ensin (Unity-sopimus), joten Rx tulee viimeiseksi
-        /// tekijäksi (sovelletaan ensin), Rz ensimmäiseksi (uloimmainen) -- täsmää kaavan.</summary>
+        /// <summary>Nivelen (rx,ry,rz) [asteina, JS:n THREE 'XYZ'] -> Unity-paikallinen kvaternio peilattuna.
+        /// KORJATTU 29.9. (katselmointi): THREE 'XYZ' on matriisina Rx·Ry·Rz (Rz sovelletaan vektoriin ensin).
+        /// z-peilaus S = diag(1,1,−1) antaa S·Rx(a)·Ry(b)·Rz(c)·S = Rx(−a)·Ry(−b)·Rz(c), ja Unityn * soveltaa
+        /// oikeanpuoleisen ensin, joten tulon järjestys on sama kuin matriisissa: Rx(−rx)·Ry(−ry)·Rz(rz).
+        /// (Aiempi Rz·Ry·Rx oli käänteinen: näkyi, kun nivelellä on kaksi akselia yhtä aikaa, esim. olka_o työssä.)</summary>
         static Quaternion NivelKierto(double rx, double ry, double rz) =>
-            Quaternion.AngleAxis((float)rz, Vector3.forward)
+            Quaternion.AngleAxis((float)-rx, Vector3.right)
           * Quaternion.AngleAxis((float)-ry, Vector3.up)
-          * Quaternion.AngleAxis((float)-rx, Vector3.right);
+          * Quaternion.AngleAxis((float)rz, Vector3.forward);
 
         /// <summary>Kompassisuunta (asteina, sama sopimus kuin tools/dioraama/reseptit.mjs:n "suunta" ja
         /// Kameraliike.AsentoSijainti: kanoninen suuntavektori (sin,0,−cos)) -> Unity-suuntavektori. EI erillistä
