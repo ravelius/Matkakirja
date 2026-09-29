@@ -261,6 +261,7 @@ namespace Matkakirja.Natiivi
 
         void Avaa(LehtiLaji laji, string omistaja, string aihe, int? sivu)
         {
+            LehtiReaktiot.AloitaKierros(); // uusi lehti: pulu saa reagoida taas samaankin sivuun (web aloitaLivianLehtikierros)
             // Fokustehtävät ensin (pieni kokoelma), jotta sivun oma minitehtävä osaa väistyä.
             LehtiFokus.Lataa(() => UiKerros.Hae().StartCoroutine(LehtiSisalto.Hae(laji, omistaja, l =>
             {
@@ -405,6 +406,8 @@ namespace Matkakirja.Natiivi
             PaivitaAlapalkki();
             if (lehti.Laji == LehtiLaji.Kehittaja) return; // liite ei ole pelin lehti: ei sivutapahtumia
             SivuNakyi?.Invoke(lehti.Omistaja, s.Aihe?.Id, i);
+            // Livian lehtireaktio (web reagoiLivianLehtisivuun): aiheen ele tunnetagilla, geneeriset sivut hiljaa.
+            if (s.Aihe != null) LehtiReaktiot.Reagoi(lehti.Omistaja, i, s.Aihe);
             Teko(new LehtiTeko
             {
                 Laji = LehtiTekoLaji.SivuNakyi, Omistaja = lehti.Omistaja, Aihe = s.Aihe?.Id, Sivu = i, Kaupunki = avausKaupunki,
