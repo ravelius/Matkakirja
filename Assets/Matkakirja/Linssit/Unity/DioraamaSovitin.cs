@@ -103,6 +103,8 @@ namespace Matkakirja.Natiivi
             this.o = o;
             this.kierto = kierto;
             nakymaPeitto = () => avoinna;
+            // Kehittäjän kuoritason vaihto (komento tai DioraamaTaulun nappi) lataa kuoren uudelleen, jos linssi on auki.
+            DioraamaUlkokuori.PakotusVaihtui += () => { if (avoinna && rakennus != null) LataaUlkokuori(); };
         }
 
         /// <summary>Koko ruudun näkymäpeitto (SyoteLukko): tosi, kun linssi on auki.</summary>
@@ -150,6 +152,7 @@ namespace Matkakirja.Natiivi
                 linssi.Avaa(rakennus, ymparisto.Aika);
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
+                LataaUlkokuori();
             }
             o.Kirjaa(Tilaraportti());
         }
@@ -280,7 +283,15 @@ namespace Matkakirja.Natiivi
                 aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
+                LataaUlkokuori();
             }
+        }
+
+        /// <summary>Olavinlinna: ulkokuori valitulla laatutasolla (DioraamaUlkokuori), jos paketissa on kuori.</summary>
+        void LataaUlkokuori()
+        {
+            if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
+            o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa));
         }
 
         /// <summary>Kevyt Tila-kopio, jonka Hahmot-lista suodattaa POIS henkilöt, joilla ON malli3d.glb JA
@@ -518,6 +529,19 @@ namespace Matkakirja.Natiivi
                     peiliKuvaus = uusiJuuri;
                 }
                 o.Kirjaa("poikki: peili " + peiliKuvaus);
+                return;
+            }
+            // "poikki kuori [auto|huippu|normaali|kevyt]": ulkokuoren laatutaso (kehittäjän valitsin, muistetaan).
+            if (mita == "kuori")
+            {
+                var uk = nayttamo?.Ulkokuori;
+                if (arvo != null)
+                {
+                    // Setteri laukaisee PakotusVaihtui → LataaUlkokuori (konstruktori).
+                    DioraamaUlkokuori.Pakotettu = arvo == "huippu" ? DioraamaUlkokuori.Laatu.Huippu : arvo == "normaali" ? DioraamaUlkokuori.Laatu.Normaali
+                        : arvo == "kevyt" ? DioraamaUlkokuori.Laatu.Kevyt : (DioraamaUlkokuori.Laatu?)null;
+                }
+                o.Kirjaa("poikki: " + (uk != null ? uk.Kuvaus() : "kuori ei käytössä (näyttämö puuttuu)"));
                 return;
             }
             if (mita == "lataa")

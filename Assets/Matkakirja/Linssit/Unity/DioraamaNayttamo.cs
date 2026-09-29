@@ -87,6 +87,8 @@ namespace Matkakirja.Natiivi
         public DioraamaSavu Savu { get; private set; }
         /// <summary>Ikkunakeilat pölyineen ikkuna:-tyhjistä (Olavinlinna, Siirtoseppä 29.9.2026).</summary>
         public DioraamaIkkunat Ikkunat { get; private set; }
+        /// <summary>Fotogrammetrinen ulkokuori laatutasoineen (Olavinlinna, Siirtoseppä 29.9.2026).</summary>
+        public DioraamaUlkokuori Ulkokuori { get; private set; }
         /// <summary>
         /// Näyttämön kuva: kamera piirtää tähän, ja DioraamaTaulu näyttää sen koko ruudun UI-elementtinä kerroksessa
         /// LinssiUi.MustaKerros (24, Ihmisen matkan musta tausta). Näin kartan UI (nimet, tilarivi, Liiku) jää alle ja
@@ -109,6 +111,7 @@ namespace Matkakirja.Natiivi
             n.Hahmot3D = new DioraamaHahmot3D(n.transform);
             n.Savu = new DioraamaSavu(n.transform);
             n.Ikkunat = new DioraamaIkkunat(n.transform);
+            n.Ulkokuori = new DioraamaUlkokuori(n.transform);
             Shader.SetGlobalVector(IdValo, ValonSuunta);
             Shader.SetGlobalColor(IdSumuVari, TaustaVari); // sama muunnos kuin kameran taustavärillä
             Shader.SetGlobalVector(IdSumu, new Vector4(1000f, 4000f, 0, 0));
@@ -286,6 +289,8 @@ namespace Matkakirja.Natiivi
             Savu = null;
             Ikkunat?.Tyhjenna();
             Ikkunat = null;
+            Ulkokuori?.Tyhjenna();
+            Ulkokuori = null;
             if (profiili != null) Destroy(profiili);
             profiili = null;
             syvyys = null;

@@ -344,6 +344,12 @@ namespace Matkakirja.Linssit.Dioraama
     }
 
     /// <summary>Koko rakennus (kohta 1: RAKENNUS + rakennuskoneen lisäykset, kohta 3).</summary>
+    /// <summary>Ulkokuoren glb-polut laatutasoittain (puuttuva taso = seuraava kevyempi käytössä).</summary>
+    public sealed class Ulkokuori
+    {
+        public string Huippu, Normaali, Kevyt;
+    }
+
     public sealed class Rakennus
     {
         public string Id, Nimi, Otsikko;
@@ -353,6 +359,9 @@ namespace Matkakirja.Linssit.Dioraama
         public Taulu Taulu;
         /// <summary>Rakennuksen valaistus (era 2b, kohta 1); null vanhassa muodossa.</summary>
         public Valaistus Valaistus;
+        /// <summary>LINNA (Siirtoseppä 29.9.2026): fotogrammetrinen ulkokuori kolmella laatutasolla
+        /// (`ulkokuori: { huippu, normaali, kevyt }`, glb-polut paketin juuresta); null = ei kuorta.</summary>
+        public Ulkokuori Ulkokuori;
         public List<Tila> Tilat = new List<Tila>();
         public Dictionary<string, Henkilo> Henkilot = new Dictionary<string, Henkilo>();
         public Dictionary<string, Pinta> Pinnat = new Dictionary<string, Pinta>();
@@ -386,6 +395,13 @@ namespace Matkakirja.Linssit.Dioraama
                 Otsikko = MiniJson.Teksti(juuri, "otsikko"),
                 Versio = (int)(MiniJson.Luku(juuri, "versio") ?? 0),
             };
+            var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));
+            if (kuori != null)
+                r.Ulkokuori = new Ulkokuori
+                {
+                    Huippu = MiniJson.Teksti(kuori, "huippu"), Normaali = MiniJson.Teksti(kuori, "normaali"),
+                    Kevyt = MiniJson.Teksti(kuori, "kevyt"),
+                };
             var yleiskamera = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "yleiskamera"));
             r.YleisVaaka = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "vaaka")));
             r.YleisPysty = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "pysty")));

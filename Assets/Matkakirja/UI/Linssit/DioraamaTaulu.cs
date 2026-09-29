@@ -28,6 +28,7 @@ namespace Matkakirja.Natiivi
         readonly List<Label> laput = new List<Label>();
 
         bool puluPiilotettu;
+        readonly Button kuoriNappi;
 
         public DioraamaTaulu(UiKerros kerros)
         {
@@ -115,6 +116,26 @@ namespace Matkakirja.Natiivi
             seuraava.style.whiteSpace = WhiteSpace.Normal;
             seuraava.style.display = DisplayStyle.None;
 
+            // Kehittäjätilan kuoren laatutasovalitsin (Olavinlinna, omistajan toive 29.9.: "kehittäjätilaan tasovalitsin"):
+            // napautus kiertää auto → huippu → normaali → kevyt; valinta muistetaan laitteeseen (DioraamaUlkokuori).
+            kuoriNappi = Rakenne.Nappi(DioraamaUlkokuori.ValintaTeksti(), "mk-dioraama__kuoritaso", DioraamaUlkokuori.SeuraavaPakotus, juuri);
+            kuoriNappi.style.position = Position.Absolute;
+            kuoriNappi.style.left = 12; kuoriNappi.style.bottom = 24;
+            kuoriNappi.style.backgroundColor = new Color(0.1f, 0.08f, 0.06f, 0.6f);
+            kuoriNappi.style.color = Color.white;
+            kuoriNappi.style.fontSize = 12;
+            kuoriNappi.style.paddingLeft = 10; kuoriNappi.style.paddingRight = 10; kuoriNappi.style.paddingTop = 6; kuoriNappi.style.paddingBottom = 6;
+            kuoriNappi.style.borderTopLeftRadius = 8; kuoriNappi.style.borderTopRightRadius = 8;
+            kuoriNappi.style.borderBottomLeftRadius = 8; kuoriNappi.style.borderBottomRightRadius = 8;
+            var kuoriTeksti = kuoriNappi.Q<Label>();
+            if (kuoriTeksti != null) { kuoriTeksti.style.color = Color.white; kuoriTeksti.style.fontSize = 12; }
+            kuoriNappi.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            DioraamaUlkokuori.PakotusVaihtui += () =>
+            {
+                var l = kuoriNappi?.Q<Label>();
+                if (l != null) l.text = DioraamaUlkokuori.ValintaTeksti(); else if (kuoriNappi != null) kuoriNappi.text = DioraamaUlkokuori.ValintaTeksti();
+            };
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -143,6 +164,7 @@ namespace Matkakirja.Natiivi
         void Kytke(PoikkileikkausLinssi uusi)
         {
             kytketty = uusi != null;
+            if (kuoriNappi != null) kuoriNappi.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
             juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
             nakyma.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
             // Kulman Pulu piiloon linssin ajaksi: dioraamassa Pulu liitää näyttämöllä (oma LiviaKuva).
