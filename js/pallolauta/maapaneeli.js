@@ -1260,6 +1260,7 @@ function tahdistaLiikunPohja(kortti) {
  *   paivita({ iso, laatikko })  maa vaihtui tai kaluste on nollattu
  *   tahdistaKoko()              ruutu vaihtoi kokoa: otsikot uusiksi
  *   valikkoAuki()               savukkeille ja vartijoille
+ *   suljeValikko()              sulkee auki olevan kortin (rivi 5, 29.9.2026)
  *   mitat()                     kalusteen ruutulaatikko savukkeille
  *   pura()
  */
@@ -1643,6 +1644,16 @@ export function luoMaapaneeli({
     },
     /** Savukkeen ja vartijan mittarit. */
     valikkoAuki: () => valikkoAuki,
+    /*
+     * SULKEE VALIKON ULKOPUOLELTA (Siirtosepän pariteettikatsaus
+     * 29.9.2026, rivi 5, "vain yksi lappu kerrallaan"): kutsutaan
+     * ennen kuin fokusvirran tai fokusnoston oma lappu avautuu kartan
+     * päälle, jottei auki oleva maakortti jää sumennettuna sen alle.
+     * Sama sulkureitti (avaaValikko) ja sama animaatio kuin avaimen
+     * omalla napautuksella — ei uutta sulkulogiikkaa. Ei tee mitään,
+     * jos valikko ei ollut auki.
+     */
+    suljeValikko() { avaaValikko(false); },
     /*
      * MITAT LUETAAN ELEMENTISTÄ, EI VAKIOISTA. Kalusteella ei ole enää
      * kiinteää 104 × 82 px:n laatikkoa: sen koko on sen sisältö, ja
