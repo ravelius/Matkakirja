@@ -1215,7 +1215,9 @@ namespace Matkakirja
         {
             get
             {
-                if (!maanLaatikko.HasValue || MatkallaVapaana || maailmaTila) return false;
+                // Linssin zoomikaista (LinssinRajat) vapauttaa myös panoroinnin: "maan rajat eivät ole silloin voimassa"
+                // (radio: koko maapallo selattavissa, omistaja 29.9.2026).
+                if (!maanLaatikko.HasValue || MatkallaVapaana || maailmaTila || linssinKatto.HasValue) return false;
                 if (kaupunkiMerkit == null) kaupunkiMerkit = FindAnyObjectByType<KaupunkiMerkit>();
                 return kaupunkiMerkit == null || !kaupunkiMerkit.LinssiTila;
             }

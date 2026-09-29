@@ -184,6 +184,14 @@ namespace Matkakirja.Linssit.Testit
             var k = new ValeRadioKartta();
             var m = new ValeMastot();
             var l = new RadioLinssi(RadioTestit.SallittuAineisto(), v, new ValeViritin(), k) { OmatNapit = true, Mastot3D = m };
+            // Mastokartta (A/B `radio kartta mastot`); oletus on yksinkertainen kartta (YksinkertainenKartta).
+            RadioLinssi.Yksinkertainen = false;
+            try { MastokarttaAvausSoittoJaSulku(y, v, k, m, l); }
+            finally { RadioLinssi.Yksinkertainen = true; }
+        }
+
+        static void MastokarttaAvausSoittoJaSulku(ValeYmparisto y, ValeVirta v, ValeRadioKartta k, ValeMastot m, RadioLinssi l)
+        {
             l.Avaa(y);
             Oleta.Sama(118, m.Lista.Count, "masto per radiokaupunki");
             Oleta.Tosi(m.Lista.Count(x => x.Kanava) > 80, "kanavalliset");
@@ -237,5 +245,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "kallistus palaa");
             Oleta.Sama((double?)0.0, y.AjonKallistus, "palautus välitetään");
         }
-    }
+    
+        /// <summary>
+        /// Yksinkertainen kartta (omistaja 29.9.2026): ei 3D-mastoja, renkaita eikä yövaloja, kallistus 20°, koko maapallo
+        /// (zoomikatto) avauksesta sulkuun, viritetty asema radion yläpuolella ja sulku palaa radiota edeltävään näkymään.
+        /// </summary>
+        [Testi] static void YksinkertainenKartta()
+        {
+            var y = new ValeYmparisto();
+            var v = new ValeVirta();
+            var k = new ValeRadioKartta();
+            var m = new ValeMastot();
+            var l = new RadioLinssi(RadioTestit.SallittuAineisto(), v, new ValeViritin(), k) { OmatNapit = true, Mastot3D = m };
+            Oleta.Tosi(RadioLinssi.Yksinkertainen, "oletus");
+            y.Asento = new Nakyma(60.17, 24.94, 1_800_000, 0);
+            l.Avaa(y);
+            Oleta.Sama(0, m.Lista.Count, "ei 3D-mastoja");
+            Oleta.Sama((double?)y.KokoPallonKorkeus, y.Katto, "koko maapallo");
+            Oleta.Sama(20.0, y.Ajo.Value.Kallistus, "loiva kallistus");
+            void Aja(double s) { for (double t = 0; t < s; t += 1 / 60.0) { y.Kello += 1 / 60.0; l.Paivita(); } }
+            Aja(2);
+            Oleta.Tosi(Math.Abs(m.H - 1) < 1e-6, "hämärä jää");
+            y.Asento = new Nakyma(48.85, 2.35, 2_600_000, 20);
+            k.Napauta("rooma");
+            v.Kuuluu = true;
+            Aja(4);
+            var rooma = RadioTestit.SallittuAineisto().Kaupunki("rooma");
+            Oleta.Tosi(y.Ajo.Value.Lat < rooma.Lat - 1 && Math.Abs(y.Ajo.Value.Lon - rooma.Lon) < 0.01,
+                "keskipiste etelämpänä, asema radion yläpuolella: " + y.Ajo.Value);
+            Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
+            Oleta.Sama(null, m.ValittuId, "ei 3D-korostusta");
+            Oleta.Sama(0, m.Renkaita, "ei suuria renkaita");
+            l.Sulje();
+            Oleta.Sama((double?)null, y.Katto, "rajaus palaa");
+            Oleta.Tosi(Math.Abs(y.Ajo.Value.Lat - 60.17) < 1e-6 && Math.Abs(y.Ajo.Value.Korkeus - 1_800_000) < 1, "takaisin radiota edeltävään näkymään: " + y.Ajo.Value);
+            Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "kallistus palaa");
+        }
+}
 }

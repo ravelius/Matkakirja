@@ -1,35 +1,13 @@
-// PÄÄVALIKKO (hampurilainen, Natiivi-UI erä 1): verkkopelin #paavalikko.
+// RETKIKUNTA- JA KEHITTÄJÄPANEELI (entinen päävalikko, verkkopelin #paavalikko).
 //
-//   ÄÄNET    [kirja]  Kertoja       PÄÄLLÄ
-//            [nuotti] Musiikki      PÄÄLLÄ
-//            [kaiutin] Äänimaisema  PÄÄLLÄ
-//   KARTTA   [aalto]  Pieni liike   PÄÄLLÄ
-//            [reitti] Kuljettu reitti PÄÄLLÄ (omistaja 26.9.2026: kuljetun reitin viiva pois näkyvistä)
-//            [pallo]  Maailma       PÄÄLLÄ   (vain kehittäjätilassa; löydös 65: KOKEET-ryhmästä tänne)
-//   RETKIKUNTA (sähkelinja, UI/Sahke/SahkeNakyma rakentaa; piilossa, kunnes linjan tila selviää;
-//            web retkikuntaOsio asuu hampurilaisen palautelomakkeessa). Löydös 65 (omistaja 25.9.2026): vain omana
-//            osanaan (Osa.Retkikunta) ☰-valikon Muut-paneelin Retkikunta-napista.
-//   KEHITTÄJÄ (löydös 65: entinen KOKEET, vain Kehittäjä-osassa kehittäjätilassa, ei pelaajalle)
-//            [satelliitti] Astronautin reliefi  TÄYSI | VAIMEA
-//            (omistajan TestFlight-vertailu 24.9.2026: kylläisyys 1,0 vs. webin 0,8;
-//            LinssiOhjain.AsetaAstronautinKyllaisyys, muistetaan, näkyy seuraavalla
-//            avauksella. Poistetaan, kun omistaja on päättänyt.)
-//   ─────────────────────────────────────
-//            [ uusi peli ]
-//            [ ehdota sisältöä ]             (webin #palaute-kulma → "Kerro mitä huomasit", PalauteIkkuna)
-//            [ tekijätiedot ja lähteet ]     (Tietoja: karttojen pakollinen attribuutio)
-//   v1.0 (kehittäjätilassa v1.0 · kehittäjä)
-//
-// Kytkinrivit (.kertoja-valikko): min 44 pt, puolihimmeä tausta, reuna --line,
-// pyöristys 8; päällä-rivi: --panel-2, reuna --accent-dark, teksti --accent;
-// pois-rivi himmeä. Tilateksti versaalina ("päällä"/"pois").
-// Kehittäjän syötekokeet (webin Syötekoe, Kerrokset, Kehysprofiili) ja
-// laudanvalinta (piilossa webissäkin) jätetään pois.
-// ☰-VALIKKO (löydös 20 iPhone, löydös 65 kaikki laitteet): ☰ avaa linssivalikon, jonka riveiltä tämä paneeli aukeaa
-// osana: Asetukset (äänentasot ja kytkimet), Retkikunta tai Kehittäjä (kehittäjärivit ja kehittäjäkoodi); komennot
-// kutsutaan suoraan (KysyUusiPeli ym.).
-// Uusi peli kysyy varmistuksen (webin #nollaa-dialog) ja tyhjentää tallennuksen
-// ja ääniasetukset: PeliOhjain.UusiPeli (Pelikoodari) + Asetukset.Nollaa.
+// Pelin valikko on pillerivalikko (Linssivalitsin, omistaja 29.9.2026: valikot yhtenä järjestelmänä). Tämä paneeli
+// aukeaa sen napeista kahtena osana samalla pergamentilla ‹ Takaisin -paluulla:
+//   Osa.Retkikunta: sähkelinja (UI/Sahke/SahkeNakyma täyttää; nappi näkyy, kun osiolla on sisältöä).
+//   Osa.Kehittaja (vain kehittäjätilassa, ei App Store -buildissa): Maailma, Astronautin reliefi, Linssien kynnykset,
+//     kartan sävy, rae ja patina, Raamattu ja Kehittäjälehti sekä Kehittäjäkoodi.
+// Äänet-, Kartta- ja Asetukset-rivit ovat pillerivalikossa (UiNakymat.RakennaPuhelinvalikko); täällä asuvat niiden
+// yhteiset toiminnot: Uusi peli -varmistus, Ehdota, Tietoja, Mitä uutta, kehittäjäkoodin ikkuna sekä maailmatilan
+// ja pelaajan näkymän tilat.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,9 +17,6 @@ namespace Matkakirja.Natiivi
 {
     public sealed class Paavalikko : Pudotus
     {
-        readonly Dictionary<Kytkin, (Button Rivi, Label Tila)> rivit = new Dictionary<Kytkin, (Button, Label)>();
-        readonly Label versio;
-
         /// <summary>"uusi peli" vahvistettiin.</summary>
         public event Action UusiPeli;
         /// <summary>"ehdota sisältöä" painettiin (webin #palaute-kulma).</summary>
@@ -51,16 +26,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Retkikuntaosion paikka (SahkeNakyma täyttää; tyhjänä piilossa).</summary>
         public readonly VisualElement Retkikunta;
 
-        /// <summary>Paneelin osa (iPhonen ☰-valikon riveiltä); Kaikki = iPad ja web-asettelu.</summary>
-        public enum Osa { Kaikki, Asetukset, Kehittaja, Retkikunta }
+        /// <summary>Paneelin osa (pillerivalikon napeista).</summary>
+        public enum Osa { Retkikunta, Kehittaja }
 
-        /// <summary>Retkikunnalla on sisältöä (SahkeNakyma rakensi osion): Muut-paneelin Retkikunta-nappi näkyy.</summary>
+        /// <summary>Retkikunnalla on sisältöä (SahkeNakyma rakensi osion): pillerivalikon Retkikunta-nappi näkyy.</summary>
         public bool RetkikuntaSaatavilla => Retkikunta.childCount > 0 && Retkikunta.resolvedStyle.display != DisplayStyle.None;
         Osa osa;
-        readonly List<VisualElement> asetusosat = new List<VisualElement>(), komentoosat = new List<VisualElement>();
         readonly Vahvistus vahvistus;
-        readonly VisualElement aanentasot;
-        readonly Dictionary<Voima, (Slider Saadin, Label Arvo)> saatimet = new Dictionary<Voima, (Slider, Label)>();
         readonly VisualElement retkiKuori;
 
         public void AvaaOsa(Osa o)
@@ -73,70 +45,29 @@ namespace Matkakirja.Natiivi
         public Paavalikko(UiKerros kerros, Func<float> alareuna, Vahvistus vahvistus) : base(kerros, alareuna, "mk-paavalikko")
         {
             this.vahvistus = vahvistus;
-            AukiMuuttui += auki => { if (!auki) { osa = Osa.Kaikki; Asetukset.Tallenna(); } };
-            // iPhonen Asetukset-osion ylin osio: äänentasot liukusäätimin (Fable 24.9.: ☰-valikon kytkimet ovat
-            // pikakytkimet, säädöt täällä). iPadilla ne ovat rattaan paneelissa, joten osio näkyy vain Asetukset-osana.
-            // Asetukset pillerivalikon alinäkymänä (web, Pelikoodari 29.9.): ‹ Takaisin palaa pillerivalikkoon.
+            // YKSI POHJA (omistaja 29.9.2026 klo 20.2x: "eri väripohjia"): Retkikunta ja Kehittäjätyökalut samalla pergamentilla
+            // kuin pillerivalikko; tumman paneelin värit vaihtuvat muuttujina (Matkakirja.uss .mk-paavalikko--pergamentti).
+            // Leveys pillerivalikon mukaan (.mk-paavalikko--asetukset, 367 pt).
+            Paneeli.AddToClassList("mk-paavalikko--pergamentti");
+            Paneeli.AddToClassList("mk-paavalikko--asetukset");
+            Rakenne.Tausta(Paneeli, Kuviot.Pergamentti);
+            Paneeli.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
+            AukiMuuttui += auki => { if (!auki) Asetukset.Tallenna(); };
+            // ‹ Takaisin palaa pillerivalikkoon (UiNakymat).
             takaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin mk-paavalikko__takaisin", () => { Sulje(); Takaisin?.Invoke(); }, Sisalto);
             takaisin.tooltip = "Takaisin valikkoon";
-            aanentasot = Rakenne.El("mk-paavalikko__aanentasot", Sisalto, PickingMode.Ignore);
-            Rakenne.Teksti("ÄÄNENTASOT", "mk-pudotus__otsikko", aanentasot);
-            foreach (var v in Asetukset.VoimaJarjestys) saatimet[v] = Aanentasot.LuoSaadinrivi(aanentasot, v);
-            // Omistaja 29.9.2026 (1.0.50): Äänet-kytkimet pois Asetuksista (ne ovat pillerivalikon etusivulla), liukusäätimet jäävät.
-            int aanetAlku = Sisalto.childCount;
-            Otsikko("Äänet");
-            Kytkinrivi(Kytkin.Kertoja, Ikonit.Kertoja);
-            Kytkinrivi(Kytkin.Musiikki, Ikonit.Musiikki);
-            Kytkinrivi(Kytkin.Aanimaisema, Ikonit.Aanimaisema);
-            for (int i = aanetAlku; i < Sisalto.childCount; i++) aanetOsat.Add(Sisalto[i]);
-            Otsikko("Kartta");
-            Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
-            Kytkinrivi(Kytkin.KuljettuReitti, Ikonit.KuljettuReitti);
-            // Maailmanappi (omistajan löydös 36, web #kehittaja-maailma-btn kehittäjävalikossa): vain kehittäjälle;
-            // huntu pois koko pallolta (web: ei kermaa maailmanäkymässä). Löydös 65: KARTTA-ryhmään Pieni liike -rivin alle.
-            maailma = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, Sisalto, Maapallo);
-            maailma.tooltip = "Maailmanäkymä: huntu pois ja liikkuminen koko pallolla (kehittäjä)";
-            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma);
-            maailmaTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma);
-            // ASETUKSET (omistaja 29.9.2026, 1.0.50-palaute): matkalaukun etusivulta tänne Offline-kartat ja Ehdota, Kehittäjä-nappi
-            // (sama koodilukko: pois päältä koodi-ikkuna, päällä kehittäjäosio) ja Näytä huntu (entinen kartan silmänappi,
-            // pelaajan näkymä; vain kehittäjän maailmatilassa).
-            int omatAlku = Sisalto.childCount;
-            Rakenne.El("mk-pudotus__erotin", Sisalto, PickingMode.Ignore);
-            offline = Toimintorivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => { Sulje(); AvaaOffline?.Invoke(); });
-            Toimintorivi("Ehdota sisältöä", Ikonit.Kyna, () => { Sulje(); Ehdota(); });
-#if !MATKAKIRJA_APPSTORE
-            kehittajaRivi = Toimintorivi("Kehittäjä", Ikonit.Ratas, () =>
-            {
-                if (Asetukset.Kehittaja) AvaaOsa(Osa.Kehittaja);
-                else { Sulje(); kehittaja.Avaa(); }
-            });
-            kehittajaTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", kehittajaRivi);
-#endif
-            huntu = Toimintorivi("Näytä huntu", Ikonit.Viiva["silma"], () => { AsetaPelaajanNakyma(!PelaajanNakyma); Paivita(); });
-            huntu.tooltip = "Pelaajan näkymä maailmatilassa: kartta, huntu ja kaupungit kuten pelaajalla (kehittäjä)";
-            huntuTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", huntu);
-            for (int i = omatAlku; i < Sisalto.childCount; i++) asetusOmat.Add(Sisalto[i]);
             // Retkikunta omassa kuoressaan: SahkeNakyma ohjaa sisemmän näkyvyyttä, osa kuoren.
             retkiKuori = Rakenne.El("mk-paavalikko__retkikuori", Sisalto, PickingMode.Ignore);
             Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", retkiKuori, PickingMode.Ignore);
             Retkikunta.style.display = DisplayStyle.None;
-            asetusosat.AddRange(Sisalto.Children());
-            asetusosat.Remove(aanentasot);
-            asetusosat.Remove(takaisin);
-            asetusosat.Remove(maailma);
-            asetusosat.Remove(retkiKuori);
-            foreach (var e in aanetOsat) asetusosat.Remove(e);
-            foreach (var e in asetusOmat) asetusosat.Remove(e);
             // Kehittäjärivit vain Kehittäjä-osassa kehittäjätilassa (Fablen tarkastus C4, löydös 65: ei pelaajalle).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
             Rakenne.Teksti("KEHITTÄJÄ", "mk-pudotus__otsikko", kokeet);
-            // Löydös 103 (omistaja build 13): Maailma-tilan pois kytkeminen löytyy myös Kehittäjä-osasta (sama kytkin kuin
-            // KARTTA-ryhmässä, löydös 65).
-            maailma2 = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, kokeet, Maapallo);
-            maailma2.tooltip = maailma.tooltip;
-            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma2);
-            maailmaTila2 = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma2);
+            // Löydös 103 (omistaja build 13): Maailma-tilan kytkin kehittäjäosassa.
+            maailma = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, kokeet, Maapallo);
+            maailma.tooltip = "Maailmanäkymä: huntu pois ja liikkuminen koko pallolla (kehittäjä)";
+            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma);
+            maailmaTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma);
             reliefi = Rakenne.Nappi(null, "mk-kytkinrivi", VaihdaReliefi, kokeet, Ikonit.Viiva["satelliitti"]);
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
@@ -186,41 +117,19 @@ namespace Matkakirja.Natiivi
             Tyohuonerivi("Kehittäjälehti", "<path d=\"M4.5 5.5h15v13h-15z\"/><path d=\"M7.5 9.5h6M7.5 12.5h9M7.5 15.5h9\"/>", Tyohuone.AvaaKehittajalehti);
 #endif
 
-            int ennenKomentoja = Sisalto.childCount;
-            Rakenne.El("mk-pudotus__erotin", Sisalto, PickingMode.Ignore);
-            var uusi = Rakenne.Nappi("uusi peli", "mk-komentorivi", () => { Sulje(); KysyUusiPeli(); }, Sisalto);
-            Kirjasimet.Aseta(uusi, Kirjasin.KoneLihava);
-
-            var ehdota = Rakenne.Nappi("ehdota sisältöä", "mk-komentorivi", () => { Sulje(); Ehdota(); }, Sisalto);
-            ehdota.tooltip = "Ehdota sisältöä tai lähetä palautetta tästä kohdasta";
-            Kirjasimet.Aseta(ehdota, Kirjasin.KoneLihava);
-
-            var tietoja = Rakenne.Nappi("tekijätiedot ja lähteet", "mk-komentorivi", () => { Sulje(); Tietoja(); }, Sisalto);
-            Kirjasimet.Aseta(tietoja, Kirjasin.KoneLihava);
-
-            var pohja = Rakenne.El("mk-pudotus__pohjarivi", Sisalto, PickingMode.Ignore);
-            // Versiorivi avaa "Mitä uutta" (webin versiokulma → #muutokset-dialog); sen Kehittäjä-nappi
-            // avaa kehittäjätilan koodi-ikkunan (webin #kehittaja-btn).
-            var versioNappi = Rakenne.Nappi("", "mk-pudotus__versionappi", () => { Sulje(); MitaUutta.Avaa(); }, pohja);
-            versio = versioNappi.Q<Label>();
-            versio.AddToClassList("mk-pudotus__versio");
             kehittaja = new KehittajaIkkuna(kerros);
 #if MATKAKIRJA_APPSTORE
             // App Storessa ei kehittäjätilaa: "Mitä uutta" ilman Kehittäjä-nappia.
             MitaUutta = new MitaUutta(kerros, null);
 #else
             MitaUutta = new MitaUutta(kerros, kehittaja.Avaa);
-#endif
-            for (int i = ennenKomentoja; i < Sisalto.childCount; i++) komentoosat.Add(Sisalto[i]);
-#if !MATKAKIRJA_APPSTORE
-            // Kehittäjäkoodi (iPhonen Kehittäjä-osa; iPadilla sama ikkuna aukeaa Mitä uutta -näkymän napista).
+            // Kehittäjäkoodi (sama ikkuna aukeaa myös Asetusten Kehittäjä-kytkimestä ja Mitä uutta -näkymän napista).
             var koodi = Rakenne.Nappi(null, "mk-kytkinrivi", () => { Sulje(); kehittaja.Avaa(); }, kokeet, Ikonit.Ratas);
             Rakenne.Teksti("Kehittäjäkoodi", "mk-kytkinrivi__nimi", koodi);
 #endif
             Asetukset.Muuttui += _ => { VarmistaMaailma(); if (Auki) Paivita(); };
             kerros.Juuri(UiKerros.Valikot).schedule.Execute(VarmistaMaailma).StartingIn(1000);
         }
-
         /// <summary>"uusi peli": varmistus (webin #nollaa-dialog), sitten tyhjennys ja UusiPeli.</summary>
         public void KysyUusiPeli()
         {
@@ -236,6 +145,8 @@ namespace Matkakirja.Natiivi
         }
 
         public void Ehdota() => EhdotaPainettu?.Invoke();
+        /// <summary>Kehittäjätilan koodi-ikkuna (pillerivalikon Asetukset: Kehittäjä-kytkin; sama lukko).</summary>
+        public void AvaaKehittajakoodi() => kehittaja.Avaa();
         public void Tietoja() => TietojaPainettu?.Invoke();
 
         readonly Button reliefi;
@@ -313,8 +224,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Webin maailmanapin viivaikoni (index.html #kehittaja-maailma-btn).</summary>
         const string Maapallo = "<circle cx=\"12\" cy=\"12\" r=\"7.5\"/><path d=\"M4.5 12h15\"/><path d=\"M12 4.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15z\"/>";
         const string MaailmaAvain = "matkakirja-kehittaja-maailma";
-        Button maailma, maailma2;
-        Label maailmaTila, maailmaTila2;
+        readonly Button maailma;
+        readonly Label maailmaTila;
 
         /// <summary>Kehittäjän maailmanäkymä päällä (säilyy kuten webin kehittajaMaailmaPaalla); vain kehittäjätilassa.</summary>
         public static bool Maailma => Asetukset.Kehittaja && PlayerPrefs.GetInt(MaailmaAvain, 0) == 1;
@@ -371,80 +282,29 @@ namespace Matkakirja.Natiivi
         }
 
         readonly Button takaisin;
-        /// <summary>Asetusten ‹ Takaisin: pillerivalikko auki (UiNakymat).</summary>
+        /// <summary>‹ Takaisin: pillerivalikko auki (UiNakymat).</summary>
         public Action Takaisin;
-        readonly List<VisualElement> aanetOsat = new List<VisualElement>(), asetusOmat = new List<VisualElement>();
-        readonly Button offline, huntu;
-        readonly Label huntuTila;
-        Button kehittajaRivi;
-        Label kehittajaTila;
-        /// <summary>Offline-kartat (UiNakymat: Aanentasot.AvaaOsa(Offline)); rivi näkyy, kun OfflineSaatavilla.</summary>
-        public Action AvaaOffline;
-        public Func<bool> OfflineSaatavilla;
-
-        Button Toimintorivi(string nimi, string ikoni, Action toiminto)
-        {
-            var b = Rakenne.Nappi(null, "mk-kytkinrivi", toiminto, Sisalto, ikoni);
-            Rakenne.Teksti(nimi, "mk-kytkinrivi__nimi", b);
-            return b;
-        }
-
-        void Kytkinrivi(Kytkin k, string ikoni)
-        {
-            var b = Rakenne.Nappi(null, "mk-kytkinrivi", () => Asetukset.Aseta(k, !Asetukset.Paalla(k)), Sisalto, ikoni);
-            b.tooltip = Asetukset.Seloste(k);
-            Rakenne.Teksti(Asetukset.Nimi(k), "mk-kytkinrivi__nimi", b);
-            var tila = Rakenne.Teksti("", "mk-kytkinrivi__tila", b);
-            rivit[k] = (b, tila);
-        }
 
         protected override void Paivita()
         {
-            foreach (var pari in rivit)
-            {
-                bool paalla = Asetukset.Paalla(pari.Key);
-                pari.Value.Rivi.EnableInClassList("mk-valittu", paalla);
-                pari.Value.Tila.text = paalla ? "PÄÄLLÄ" : "POIS";
-            }
-            reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
-            maailma.EnableInClassList("mk-valittu", Maailma);
-            maailmaTila.text = Maailma ? "PÄÄLLÄ" : "POIS";
-            maailma2.EnableInClassList("mk-valittu", Maailma);
-            maailmaTila2.text = maailmaTila.text;
-            reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             DisplayStyle Nayta(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
-            bool asetuksia = osa == Osa.Kaikki || osa == Osa.Asetukset;
-            Paneeli.EnableInClassList("mk-paavalikko--asetukset", osa == Osa.Asetukset);
-            takaisin.style.display = Nayta(osa == Osa.Asetukset && Takaisin != null);
-            kokeet.style.display = Nayta(Asetukset.Kehittaja && osa == Osa.Kehittaja);
-            if (Asetukset.Kehittaja && osa == Osa.Kehittaja) PaivitaSavy();
-            aanentasot.style.display = Nayta(osa == Osa.Asetukset);
-            if (osa == Osa.Asetukset) Aanentasot.PaivitaSaatimet(saatimet);
-            foreach (var e in asetusosat) e.style.display = Nayta(asetuksia);
-            foreach (var e in aanetOsat) e.style.display = Nayta(osa == Osa.Kaikki);
-            foreach (var e in asetusOmat) e.style.display = Nayta(osa == Osa.Asetukset);
-            offline.style.display = Nayta(osa == Osa.Asetukset && (OfflineSaatavilla?.Invoke() ?? false));
-            huntu.style.display = Nayta(osa == Osa.Asetukset && Maailma);
-            huntu.EnableInClassList("mk-valittu", PelaajanNakyma);
-            huntuTila.text = PelaajanNakyma ? "PÄÄLLÄ" : "POIS";
-            if (kehittajaRivi != null)
-            {
-                kehittajaRivi.EnableInClassList("mk-valittu", Asetukset.Kehittaja);
-                kehittajaTila.text = Asetukset.Kehittaja ? "PÄÄLLÄ" : "POIS";
-            }
-            // Maailma-kytkin vain Kehittäjä-osassa (omistaja 29.9.2026: iPadin kartan päältä pois); Kaikki-osassa kuten ennen.
-            maailma.style.display = Nayta(osa == Osa.Kaikki && Asetukset.Kehittaja);
+            bool kehittajaOsa = Asetukset.Kehittaja && osa == Osa.Kehittaja;
+            takaisin.style.display = Nayta(Takaisin != null);
             // Retkikunnan sisemmän näkyvyyden päättää SahkeNakyma; kuori näkyy vain Retkikunta-osassa.
             retkiKuori.style.display = Nayta(osa == Osa.Retkikunta);
-            foreach (var e in komentoosat) e.style.display = Nayta(osa == Osa.Kaikki);
+            kokeet.style.display = Nayta(kehittajaOsa);
+            if (!kehittajaOsa) return;
+            PaivitaSavy();
+            maailma.EnableInClassList("mk-valittu", Maailma);
+            maailmaTila.text = Maailma ? "PÄÄLLÄ" : "POIS";
+            reliefi.EnableInClassList("mk-valittu", ReliefiTaysi);
+            reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
             if (kynnykset != null)
             {
                 bool paalla = !Matkakirja.Linssit.Linssirekisteri.Kehittajatila;
                 kynnykset.EnableInClassList("mk-valittu", paalla);
                 kynnyksetTila.text = paalla ? "PÄÄLLÄ" : "POIS";
             }
-            // E7: webin versiokulma "vNNN" / "vNNN · kehittäjä" (js/main.js); sisältöversio vain Tietoja-näkymässä.
-            versio.text = "v" + Application.version + (Asetukset.Kehittaja ? " · kehittäjä" : "");
         }
     }
 
@@ -483,7 +343,7 @@ namespace Matkakirja.Natiivi
         public void Avaa()
         {
             bool paalla = Asetukset.Kehittaja;
-            selite.text = paalla ? "Kehittäjätila on päällä: KOKEET-osio näkyy päävalikossa." : "Kehittäjätila avaa päävalikon KOKEET-osion.";
+            selite.text = paalla ? "Kehittäjätila on päällä: Kehittäjätyökalut näkyvät Asetuksissa." : "Kehittäjätila avaa Asetuksiin Kehittäjätyökalut.";
             kentta.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
             kentta.value = "";
             virhe.style.display = DisplayStyle.None;

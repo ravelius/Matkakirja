@@ -199,6 +199,24 @@ namespace Matkakirja.Linssit.Dioraama
         }
 
         /// <summary>Viimeisen tapahtuman indeksi jonka Hetki ≤ t (sama malli kuin Heratys.ViimeisinKohde).</summary>
+        /// <summary>
+        /// LINNA, leikkausikkuna (Siirtoseppä 29.9.2026, speksi dioraama-rajapinnat-blender kohta 3): mikä tila on auki
+        /// leikattuna ja kuinka paljon (0…1) hetkellä t. Tilaan lennettäessä leikkaus kasvaa 0 → 1 kaarilennon
+        /// jälkipuoliskolla (smoothstep), tilasta poistuttaessa se sulkeutuu 1 → 0 alkupuoliskolla; levossa tilassa 1,
+        /// yleisnäkymässä (null, 0). Tilasta toiseen: ensin vanha sulkeutuu, sitten uusi aukeaa.
+        /// </summary>
+        public (string tila, double osuus) LeikkausHetkella(double t)
+        {
+            int i = ViimeisinIndeksi(t);
+            var e = tapahtumat[i];
+            string edellinen = i > 0 ? tapahtumat[i - 1].Kohde : null;
+            if (i == 0 || e.Kesto <= 0 || t >= e.Hetki + e.Kesto) return (e.Kohde, e.Kohde != null ? 1.0 : 0.0);
+            double u = (t - e.Hetki) / e.Kesto;
+            double Tasaa(double x) { x = Math.Max(0, Math.Min(1, x)); return x * x * (3 - 2 * x); }
+            if (u < 0.5) return edellinen != null ? (edellinen, 1 - Tasaa(u * 2)) : (null, 0.0);
+            return e.Kohde != null ? (e.Kohde, Tasaa((u - 0.5) * 2)) : (null, 0.0);
+        }
+
         int ViimeisinIndeksi(double t)
         {
             int i = 0;

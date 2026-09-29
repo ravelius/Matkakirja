@@ -58,6 +58,9 @@ namespace Matkakirja.Natiivi
         const long VilkkuMs = 700;
         static KortinLukija ajossa;
 
+        /// <summary>Pysäytyksen häivytys: napsahdukseton mutta välitön (luenta alusta, omistaja 29.9.2026).</summary>
+        const float PysaytysS = 0.03f;
+
         public readonly Button Nappi;
         /// <summary>Kortille lisättävä elementti: säätimillä rivi [ratas][kaiutin], muuten Nappi.</summary>
         public readonly VisualElement Juuri;
@@ -210,7 +213,10 @@ namespace Matkakirja.Natiivi
             if (palat.Count == 0 || puhe == null) return;
             if (ajossa != null && ajossa != this) ajossa.Pysayta();
             ajossa = this;
-            if (luetaan) Puhe.Instanssi?.Pysayta(0.05f);
+            // LUENTA ALUSTA (omistaja 29.9.2026: luenta A kesken → karttanapautus → nosto B → kaiutin, B alkoi ensimmäisen
+            // virkkeen keskeltä): edellinen puhe (myös muun lähteen) seis heti ennen uutta, tauko- ja palatila tyhjiksi.
+            Puhe.Instanssi?.Pysayta(PysaytysS);
+            Debug.Log($"MATKAKIRJA ui lukija: aloita pala {Mathf.Clamp(alku, 0, palat.Count - 1) + 1}/{palat.Count} \"{Lyhenna(palat[Mathf.Clamp(alku, 0, palat.Count - 1)], 40)}\"");
             luetaan = true;
             Nappi.AddToClassList("mk-lukee");
             int v = ++versio, i = Mathf.Clamp(alku, 0, palat.Count - 1);
@@ -272,7 +278,8 @@ namespace Matkakirja.Natiivi
             PysaytaMittari();
             PaivitaNimi();
             PaivitaValikko();
-            Puhe.Instanssi?.Pysayta(0.3f);
+            // Kortin sulku tai uusi sisältö pysäyttää heti (ei 0,3 s:n häivytystä, jonka aikana uusi luenta voi alkaa).
+            Puhe.Instanssi?.Pysayta(PysaytysS);
         }
 
         // --- keskeytyksen vilkku ja VU -------------------------------------------------------------

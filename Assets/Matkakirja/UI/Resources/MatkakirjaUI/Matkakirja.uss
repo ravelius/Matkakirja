@@ -877,6 +877,51 @@
     width: 244.6px;
 }
 
+/* YKSI POHJA (omistaja 29.9.2026 klo 20.2x): Retkikunta ja Kehittäjätyökalut pergamentilla kuten pillerivalikko. Tumman
+   paneelin värit ovat muuttujia, joten ne vaihdetaan tässä koko alipuulle (myös Sahke.uss:n retkikuntaosio). */
+.mk-pudotus.mk-paavalikko--pergamentti {
+    --panel: rgba(0, 0, 0, 0);
+    --panel-2: #d9a13b;
+    --line: rgba(70, 51, 31, 0.3);
+    --rivi-tausta: rgba(255, 250, 238, 0.45);
+    --ink-light: #3a2812;
+    --muted: rgba(70, 51, 31, 0.7);
+    --accent: #3a2812;
+    --accent-dark: #b07d1e;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    color: var(--map-ink);
+}
+
+.mk-paavalikko--pergamentti .mk-kytkinrivi {
+    min-height: 48px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-color: rgba(70, 51, 31, 0.3);
+    color: rgba(58, 40, 18, 0.5);
+}
+
+.mk-paavalikko--pergamentti .mk-kytkinrivi.mk-valittu {
+    color: #211d18;
+}
+
+.mk-paavalikko--pergamentti .mk-pudotus__otsikko {
+    font-size: 10.5px;
+    letter-spacing: 12px; /* web 0.12em (natiivi ensin, em/100) */
+    color: rgba(70, 51, 31, 0.7);
+    -unity-text-align: middle-left;
+}
+
+.mk-paavalikko--pergamentti .mk-saadinrivi__nimi,
+.mk-paavalikko--pergamentti .mk-saadinrivi__arvo,
+.mk-paavalikko--pergamentti .mk-pudotus__versio {
+    color: rgba(70, 51, 31, 0.85);
+}
+
+.mk-paavalikko--pergamentti .mk-paavalikko__takaisin {
+    color: #3a2812;
+}
+
 /* Asetukset leveämpänä (omistaja 29.9.2026, 1.0.50: "liian kapea, jotta äänitasoja voi säätää"): pillerivalikon levyinen
  * (web min(23rem, 100vw − 1,6rem) = 367 pt, Pelikoodari 29.9.). */
 .mk-paavalikko.mk-paavalikko--asetukset {
@@ -888,6 +933,9 @@
     position: relative;
     align-self: flex-start;
     margin: 0 0 4px 0;
+    /* Tumma paneeli (laite 1.0.54: teksti tumma tummalla): sama vaalea kuin paneelin otsikot. */
+    color: rgba(230, 214, 184, 0.9);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Web äänipaneeli on sisältönsä levyinen (296,36). */
@@ -4313,7 +4361,7 @@
     margin: 1px 0 0 0;
     padding: 0;
     font-size: 10.5px;
-    letter-spacing: 12px;
+    letter-spacing: 114.29px; /* web 12px */
     color: rgba(234, 184, 78, 0.95);
     -unity-text-align: middle-right;
 }

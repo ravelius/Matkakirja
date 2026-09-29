@@ -269,6 +269,8 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             lukija.Pysayta();
+            Puhe.Instanssi?.PeruEsihaku(alunEsihaku);
+            alunEsihaku = null;
             Rakenne.PiilotaHaivyttaen(kerros, 200);
             Ponnahdus.Sulje(kortti, () => { }); // kortti pienenee kerroksen häivytyksen mukana; kerros piilottaa
             suurennos.Sulje();
@@ -285,7 +287,26 @@ namespace Matkakirja.Natiivi
             Mitoita();
             if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
             AvaaKerros();
+            EsihaeLuennanAlku(n);
         }
+
+        string alunEsihaku;
+
+        /// <summary>
+        /// Luennan 1. pala haetaan heti kortin avautuessa (omistaja 29.9.2026), samoista teksteistä kuin Vaihe2:n
+        /// lukija.Aseta; kaiuttimen napautus soi sen välimuistista. Kortin sulku perii jonottavan haun (Sulje).
+        /// </summary>
+        void EsihaeLuennanAlku(Nosto n)
+        {
+            var puhe = Puhe.Hae();
+            if (puhe == null) return;
+            var (palat, tagit) = Lukijaaani.LuennanPalatJaTagit(LuennanTekstit(n));
+            if (palat.Count == 0 || palat.Sum(p => p.Length) < KortinLukija.Vahimmais) return;
+            alunEsihaku = puhe.EsihaeAlku(palat[0], "kertoja", tagit[0]);
+        }
+
+        static IEnumerable<string> LuennanTekstit(Nosto n) =>
+            new[] { n.Otsikko, n.Ingressi }.Concat(Kappaleet(n.Teksti)).Where(t => !string.IsNullOrWhiteSpace(t)).Select(t => t.Trim());
 
         // --- koko ja paikka (löydökset 130, 131, 135) --------------------------------------------
 
@@ -627,7 +648,7 @@ namespace Matkakirja.Natiivi
             var n = nosto;
             // Web: lööppi kuuluu luentaan; otsikko lajin mukaan (skandaalit.js, historian-hetket.js,
             // elaintaky.js, fokuskohteet.js, fokusnosto.js, syvennys.js lisaaLukijanappi).
-            lukija.Aseta(new[] { n.Otsikko, n.Ingressi }.Concat(Kappaleet(n.Teksti)),
+            lukija.Aseta(LuennanTekstit(n),
                 n.Laji == NostoLaji.Skandaali ? "Kuuntele lisälehti"
                 : n.Laji == NostoLaji.Kohde ? "Kuuntele: " + (n.Otsikko ?? "")
                 : n.Laji == NostoLaji.Elain ? "Kuuntele eläinkortti"

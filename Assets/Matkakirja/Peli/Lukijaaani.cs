@@ -223,8 +223,13 @@ namespace Matkakirja.Peli
             return palat;
         }
 
-        /// <summary>Palavirran ensimmäisen palan VÄHIMMÄISPITUUS merkkeinä (~2 s generointia, xAI ~70 mrk/s; käytännössä 140–200).</summary>
-        public const int VirtaEka = 140;
+        /// <summary>
+        /// Palavirran ensimmäisen palan VÄHIMMÄISPITUUS merkkeinä: otsikko + ensimmäinen virke (omistaja 29.9.2026: "voisiko se
+        /// olla lyhyempi, että luenta alkaisi aiemmin"; ennen 140). Toisen palan generointi alkaa jo ensimmäisen haun
+        /// rinnalla (Puhe.SoitaPalat), joten sillä on 1. palan generointi + soitto aikaa: 3 × 70 mrk / ~55 mrk/s ≈ 3,8 s
+        /// &lt; 70 / 55 + 70 / 16 mrk/s ≈ 5,7 s myös nopeudella 1,15.
+        /// </summary>
+        public const int VirtaEka = 70;
         /// <summary>Palavirran kasvukerroin: seuraava pala generoituu edellisen soidessa (puhe ~14 mrk/s, generointi ~5× nopeampi).</summary>
         public const int VirtaKasvu = 3;
 
@@ -235,7 +240,7 @@ namespace Matkakirja.Peli
         /// edellisen soittoaikaan (pituus / ~14 mrk/s):
         ///   - ENSIMMÄINEN pala on VÄHINTÄÄN VirtaEka merkkiä (omistaja 27.9.2026 klo 22.0x, TF 1.0.32: "otsikko on aina
         ///     lyhyt, ja sen jälkeen tulee tauko"): virkkeitä otetaan, kunnes pituus on ≥ VirtaEka, joten otsikko
-        ///     ("Akropolis.", LuennanPalat) ei koskaan jää yksin — sen perään tulee leipätekstin alkua 140–200 merkkiin.
+        ///     ("Akropolis.", LuennanPalat) ei koskaan jää yksin — sen perään tulee ainakin ensimmäinen virke (≥ 70 merkkiä).
         ///   - Seuraava pala on vähintään edellisen pituinen ja enintään VirtaKasvu × edellinen (kattoon asti), joten
         ///     lyhyt välipala ei jätä pitkää generointia soimattomaksi aukoksi.
         /// Virkettä ei katkaista: kattoa pidempi virke on oma palansa. Mitään tekstiä ei pudoteta.

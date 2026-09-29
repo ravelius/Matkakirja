@@ -503,9 +503,10 @@ namespace Matkakirja.Natiivi
             var ui = UiNakymat.Hae();
             switch (osat[1].ToLowerInvariant())
             {
-                // ui valikko [asetukset|kehittaja|retkikunta]: päävalikon osa (1.0.50-palautteen Asetukset-kuvapari).
+                // ui valikko [asetukset|matka|kehittaja|retkikunta]: pillerivalikko tai sen alinäkymä (1.0.50-palautteen kuvaparit).
+                case "valikko" when loput == "asetukset" || loput == "matka": return "=" + ui.Linssit.Valitsin.TestaaNakyma(loput, -1);
                 case "valikko" when System.Enum.TryParse(loput, true, out Paavalikko.Osa osa): ui.Valikko.AvaaOsa(osa); return null;
-                case "valikko": ui.Valikko.Avaa(); return null;
+                case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
                 case "matka": ui.Esimerkkimatka(); return null;

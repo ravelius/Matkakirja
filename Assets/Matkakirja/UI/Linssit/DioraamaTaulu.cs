@@ -26,6 +26,7 @@ namespace Matkakirja.Natiivi
         readonly Label otsikko, teksti, lainaus, lahde, laskuri, seuraava;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
+        readonly List<(Label Lappu, Rect Rect)> sijoitukset = new List<(Label, Rect)>();
 
         bool puluPiilotettu;
         readonly Button kuoriNappi;
@@ -307,7 +308,8 @@ namespace Matkakirja.Natiivi
         void PaivitaLaput(Rakennus rakennus, Camera kamera, Nakyma nakyma)
         {
             int n = 0;
-            if (nakyma.KohdeTila == null)
+            sijoitukset.Clear();
+            if (nakyma.KohdeTila == null && rakennus.Nimilaput)
             {
                 foreach (var tila in rakennus.Tilat)
                 {
@@ -333,9 +335,28 @@ namespace Matkakirja.Natiivi
                     var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y));
                     lappu.text = tila.Nimi ?? tila.Id;
                     float lw = float.IsNaN(lappu.layout.width) ? 60f : lappu.layout.width;
-                    lappu.style.left = p.x - lw * 0.5f;
-                    lappu.style.top = p.y - 10f;
+                    float lh = float.IsNaN(lappu.layout.height) || lappu.layout.height <= 0 ? 22f : lappu.layout.height;
+                    sijoitukset.Add((lappu, new Rect(p.x - lw * 0.5f, p.y - 10f, lw, lh)));
                     lappu.style.display = DisplayStyle.Flex;
+                }
+                // Olavinlinna (1.0.55: viisi tilaa Kellotornin ja pohjoissiiven kohdalla päällekkäin): lähekkäiset laput
+                // porrastetaan ylöspäin ruudun y-järjestyksessä, kunnes ne eivät peitä toisiaan (3 pt väli).
+                sijoitukset.Sort((a, b) => b.Rect.y.CompareTo(a.Rect.y));
+                var varatut = new List<Rect>();
+                foreach (var (lappu, rect) in sijoitukset)
+                {
+                    var r2 = rect;
+                    for (int kierros = 0; kierros < 12; kierros++)
+                    {
+                        bool osuu = false;
+                        foreach (var v in varatut)
+                            if (r2.xMin < v.xMax + 3f && r2.xMax > v.xMin - 3f && r2.yMin < v.yMax + 3f && r2.yMax > v.yMin - 3f)
+                            { r2.y = v.yMin - r2.height - 3f; osuu = true; }
+                        if (!osuu) break;
+                    }
+                    varatut.Add(r2);
+                    lappu.style.left = r2.x;
+                    lappu.style.top = r2.y;
                 }
             }
             for (int k = n; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;

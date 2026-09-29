@@ -125,8 +125,14 @@ namespace Matkakirja.Linssit.Astronautti
         /// w×h = taulun koko, vaistettavat = ISS-merkin alue. vainYlos + edellinenAla: auki olevan taulun ylla-paikka ei
         /// laske kesken (Pulun ele nostaa laatikkoa, ei laske).
         /// </summary>
+        /// <remarks>
+        /// ylaMin: ylin sallittu yläreuna (näkymä antaa turva-alueen ja kyydin lukemarivin alareunan). YLHÄÄLLÄ-VARAPAIKKA
+        /// (Linssiseppä 29.9.2026, Cupolan laitekuva 1.0.54): kun Pulu on ikkunan takana ruudun keskellä, kumpikaan paikka ei mahdu,
+        /// ja taulu puristui yläreunaan (Kysy Pululta rivin päälle). Silloin taulu ankkuroidaan ylhäältä ylaMin:iin täydellä
+        /// korkeudella, kunhan se ei ulotu Pulun päälle eikä väistettävään.
+        /// </remarks>
         public static TaulunPaikka Sijoita(Laatikko pulu, float W, float H, float w, float h, IReadOnlyList<Laatikko> vaistettavat,
-            string edellinen = null, float edellinenAla = 0f)
+            string edellinen = null, float edellinenAla = 0f, float ylaMin = YlaMin)
         {
             float ylaAla = Math.Max(AlaMin, (float)Math.Round(H - pulu.Yla + RakoPt + LeijunnanVaraPt));
             if (edellinen == "ylla" && ylaAla < edellinenAla) ylaAla = edellinenAla;
@@ -137,13 +143,21 @@ namespace Matkakirja.Linssit.Astronautti
             float vierAla = Math.Max(AlaMin, (float)Math.Round(H - pulu.Ala));
             if (W - vierOikea - w >= YlaMin)
                 ehdokkaat.Add(new TaulunPaikka("vieres", vierAla, vierOikea, new Laatikko(W - vierOikea - w, H - vierAla - h, W - vierOikea, H - vierAla)));
+            bool Osuu(Laatikko a)
+            {
+                if (vaistettavat != null) foreach (var v in vaistettavat) if (a.Leikkaa(v)) return true;
+                return false;
+            }
             foreach (var e in ehdokkaat)
             {
-                if (e.Alue.Yla < YlaMin) continue;
-                bool osuu = false;
-                if (vaistettavat != null) foreach (var v in vaistettavat) if (e.Alue.Leikkaa(v)) { osuu = true; break; }
-                if (!osuu) return e;
+                if (e.Alue.Yla < ylaMin) continue;
+                if (!Osuu(e.Alue)) return e;
             }
+            float ylhAla = (float)Math.Round(H - ylaMin - h);
+            var ylhaalla = new TaulunPaikka("ylhaalla", ylhAla, null, new Laatikko(W - OikeaReuna - w, ylaMin, W - OikeaReuna, ylaMin + h));
+            // Pulun eleen vara (90 pt yläpuolella) saa jäädä taulun alle; itse Pulu ei.
+            var pulunKeho = new Laatikko(pulu.Vasen, pulu.Yla + PulunEleenVaraPt, pulu.Oikea, pulu.Ala);
+            if (ylhAla >= AlaMin && !ylhaalla.Alue.Leikkaa(pulunKeho) && !Osuu(ylhaalla.Alue)) return ylhaalla;
             return ylla;
         }
 

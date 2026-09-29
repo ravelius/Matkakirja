@@ -53,6 +53,9 @@ namespace Matkakirja.Natiivi
         readonly Shader varjostinLeivottu;
         static readonly int IdValoAtlas = Shader.PropertyToID("_ValoAtlas");
         readonly Dictionary<string, Material> leivotut = new Dictionary<string, Material>();
+        /// <summary>Tilan liput (pinta "lippu"): sama atlas, heiluva materiaali (DioraamaLeivottu _Heilunta 1).</summary>
+        readonly Dictionary<string, Material> leivotutLiput = new Dictionary<string, Material>();
+        static readonly int IdHeilunta = Shader.PropertyToID("_Heilunta");
         readonly Dictionary<string, Texture2D> odottavatValoAtlakset = new Dictionary<string, Texture2D>();
         readonly Dictionary<string, List<DioraamaTyhja>> tyhjat = new Dictionary<string, List<DioraamaTyhja>>();
 
@@ -68,6 +71,7 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(tilaId) || kuva == null) return;
             odottavatValoAtlakset[tilaId] = kuva;
             if (leivotut.TryGetValue(tilaId, out var m) && m != null) m.SetTexture(IdValoAtlas, kuva);
+            if (leivotutLiput.TryGetValue(tilaId, out var l) && l != null) l.SetTexture(IdValoAtlas, kuva);
         }
 
         public int TilojaLadattu => tilat.Count;
@@ -195,7 +199,8 @@ namespace Matkakirja.Natiivi
                 for (int i = 0; i < lahde.Length; i++) kolmiot[i] = lahde[i] + kv;
                 kolmiotOsittain[oi] = kolmiot;
                 kolmioita += kolmiot.Length / 3;
-                materiaalitJarjestyksessa[oi] = leivottu ? leivottuMateriaali : MateriaaliPinnalle(rakennus, osa.Pinta);
+                materiaalitJarjestyksessa[oi] = leivottu ? (osa.Pinta == "lippu" ? LippuMateriaali(tila.Id, leivottuMateriaali) : leivottuMateriaali)
+                    : MateriaaliPinnalle(rakennus, osa.Pinta);
                 kv += n;
             }
 
@@ -227,6 +232,19 @@ namespace Matkakirja.Natiivi
             Renderereita++;
             return true;
         }
+
+        Material LippuMateriaali(string tilaId, Material pohja)
+        {
+            if (leivotutLiput.TryGetValue(tilaId, out var m) && m != null) return m;
+            m = new Material(pohja) { name = pohja.name + ":lippu" };
+            m.SetFloat(IdHeilunta, 1f);
+            leivotutLiput[tilaId] = m;
+            return m;
+        }
+
+        /// <summary>Olavinlinna: jaetun pinnan materiaali muille näkymille (kuoren alla oleva järvi käyttää pintaa "vesi").</summary>
+        public Material PinnanMateriaali(Rakennus rakennus, string pintaId) =>
+            rakennus != null && NykyinenVarjostin() != null ? MateriaaliPinnalle(rakennus, pintaId) : null;
 
         Material MateriaaliPinnalle(Rakennus rakennus, string pintaId)
         {
@@ -274,6 +292,8 @@ namespace Matkakirja.Natiivi
             materiaalit.Clear(); kuvalliset.Clear();
             foreach (var m in leivotut.Values) if (m != null) UnityEngine.Object.Destroy(m);
             leivotut.Clear(); tyhjat.Clear();
+            foreach (var m in leivotutLiput.Values) if (m != null) UnityEngine.Object.Destroy(m);
+            leivotutLiput.Clear();
             odottavatValoAtlakset.Clear(); // tekstuurit omistaa DioraamaSovitin (ladatutValoAtlakset)
             odottavatPohjakuvat.Clear();
             viimeisinRakennus = null;

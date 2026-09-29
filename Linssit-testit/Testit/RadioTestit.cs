@@ -304,9 +304,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(RadioVaihe.Hiljaa, l.Tila.Vaihe);
             Oleta.Sama("EI ASEMAA", l.Tila.Rivi1);   // radio on aina päällä (omistaja 29.9.)
             Oleta.Tosi(l.Asteikko.Count > 80, "asteikolla kanavalliset: " + l.Asteikko.Count);
-            // Asteikko lännestä itään.
-            var lon = l.Asteikko.Select(id => S().Kaupunki(id).Lon).ToList();
-            Oleta.Tosi(lon.Zip(lon.Skip(1), (a, b) => a <= b).All(x => x), "pituusasteen mukaan");
+            // Asteikko maantieteellisessä järjestyksessä (omistaja 29.9.): läntisin ensin, ja vierekkäiset asemat ovat
+            // naapureita: askelten summa selvästi lyhyempi kuin pelkän pituusasteen mukaan (Sahara, Kamerun, Karthago, Oslo…).
+            var a0 = S();
+            double Askeleet(IReadOnlyList<string> ids) => ids.Zip(ids.Skip(1), (p, q) =>
+                Mastot.EtaisyysKm(a0.Kaupunki(p).Lat, a0.Kaupunki(p).Lon, a0.Kaupunki(q).Lat, a0.Kaupunki(q).Lon)).Sum();
+            var lannestaItaan = l.Asteikko.OrderBy(id => a0.Kaupunki(id).Lon).ThenBy(id => id, StringComparer.Ordinal).ToList();
+            Oleta.Sama(lannestaItaan[0], l.Asteikko[0], "läntisin ensin");
+            double reitti = Askeleet(l.Asteikko), pituus = Askeleet(lannestaItaan);
+            Oleta.Tosi(reitti < 0.5 * pituus, $"naapurit vierekkäin: reitti {reitti:F0} km, pituusasteittain {pituus:F0} km");
+            Oleta.Sama(string.Join(",", l.Asteikko), string.Join(",", RadioLinssi.MaantieteellinenJarjestys(
+                l.Asteikko.Reverse().Select(id => (id, a0.Kaupunki(id).Lat, a0.Kaupunki(id).Lon)))), "deterministinen");
             l.Sulje();
             Oleta.Sama(null, k.Vain);
             Oleta.Tosi(RadioLinssi.LuentaSallittu && !y.Musiikkipito, "purettu");

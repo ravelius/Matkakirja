@@ -708,6 +708,29 @@ namespace Matkakirja.Natiivi
                 EsihaePala(pala, persoona, lohko);
         }
 
+        /// <summary>
+        /// Luennan ENSIMMÄINEN pala valmiiksi (omistaja 29.9.2026: "voitaisiinko ensimmäinen lause tai pelkkä otsikkokin
+        /// esiladata heti kun nosto latautuu"): vain palavirran 1. pala (otsikko + 1. virke) jonon kärkeen, samalla avaimella
+        /// kuin Lue sen hakee, joten kaiuttimen napautus soi välimuistista. Palauttaa avaimen (PeruEsihaku), null = ei haettu.
+        /// </summary>
+        public string EsihaeAlku(string teksti, string persoona = "kertoja", string loppuTagi = null)
+        {
+            if (string.IsNullOrWhiteSpace(teksti)) return null;
+            persoona ??= "kertoja";
+            teksti = Katkaise(Lukijaaani.JsTrim(teksti), TekstinKatto);
+            string lohko = TagiLohko(Lukijaaani.OletusLohko(persoona), loppuTagi);
+            var palat = PyyntoPalat(teksti, true, loppuTagi);
+            if (palat.Count == 0) return null;
+            EsihaePala(palat[0], persoona, lohko, true);
+            return Saadot.Valimuistiavain(persoona, palat[0]);
+        }
+
+        /// <summary>Jonottava esihaku pois (kortti suljettiin ennen kuin haku alkoi); käynnissä oleva valmistuu.</summary>
+        public void PeruEsihaku(string avain)
+        {
+            if (avain != null && PoistaJonosta(avain)) Debug.Log("MATKAKIRJA puhe: esihaku peruttu (kortti suljettiin)");
+        }
+
         /// <summary>Katkaisee tekstin viimeiseen virkkeen loppuun ennen kattoa (tai kattoon).</summary>
         public static string Katkaise(string teksti, int katto)
         {
@@ -854,6 +877,18 @@ namespace Matkakirja.Natiivi
             }
             // Näyte ei jää laitteelle (web: sailio null). Pakattu klippi on jo muistissa.
             if (!sailo) { try { File.Delete(tiedosto); } catch { } }
+            // KLIPPI VALMIIKSI ENNEN SOITTOA (omistaja 29.9.2026: uuden noston 1. napautus alkoi ensimmäisen virkkeen
+            // puolivälistä, 2. napautus välimuistista oikein; laitteella). Pakatun klipin data voi vielä latautua Play():n
+            // hetkellä: soitto alkaa myöhässä tai "ei alkanut 2 s:ssa" ja palavirran pala ohitetaan. Odotetaan Loaded
+            // (enintään 5 s), vasta sitten Play() ja kohta 0 (AloitaKlippi).
+            if (klippi != null && klippi.loadState != AudioDataLoadState.Loaded)
+            {
+                float lataus0 = Time.unscaledTime;
+                if (klippi.loadState == AudioDataLoadState.Unloaded) klippi.LoadAudioData();
+                while (oma == tunnus && klippi.loadState == AudioDataLoadState.Loading && Time.unscaledTime - lataus0 < 5f) yield return null;
+                Kirjaa($"pala {PalaNyt} klippi latautui {(Time.unscaledTime - lataus0) * 1000:0} ms ennen soittoa ({klippi.loadState})");
+                if (oma != tunnus) { Destroy(klippi); yield break; }
+            }
             float jaljella = viiveS - (Time.unscaledTime - alku);
             if (jaljella > 0) yield return new WaitForSecondsRealtime(jaljella);
             if (oma != tunnus) { Destroy(klippi); yield break; }
@@ -1077,6 +1112,9 @@ namespace Matkakirja.Natiivi
             PaivitaVahvistus();
             vahvistin.Nollaa();
             lahde.Play();
+            // LUENTA ALUSTA (omistaja 29.9.2026, laitteella: uusi luenta alkoi ensimmäisen virkkeen keskeltä edellisen
+            // keskeytetyn jälkeen): uusi klippi soi aina näytteestä 0; palan jatko (jatko) kelaa itse.
+            if (!jatko) lahde.timeSamples = 0;
             StartCoroutine(AlkuMittari(klippi, Kohdetaso));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
@@ -1098,20 +1136,26 @@ namespace Matkakirja.Natiivi
         /// </summary>
         IEnumerator AlkuMittari(AudioClip klippi, float taso)
         {
-            float t0 = Time.unscaledTime, edellinen = 0f, hiljaa = 0f, v = lahde.volume, jumi = 0f;
+            float t0 = Time.unscaledTime, edellinen = 0f, hiljaa = 0f, v = lahde.volume, jumi = 0f, ekaKohta = -1f;
             int ruutuja = 0;
             while (lahde.clip == klippi && Time.unscaledTime - t0 < 1f)
             {
                 yield return null;
                 if (lahde.clip != klippi) yield break;
                 float t = lahde.time;
+                if (ekaKohta < 0f && t > 0f)
+                {
+                    // Ensimmäinen soiva ruutu: kohta yli 0,25 s (yksi ruutu on ≤ 0,05 s) = klippi ei alkanut alusta.
+                    ekaKohta = t;
+                    if (t > 0.25f) Debug.LogWarning($"MATKAKIRJA puhe: ALKU EI ALUSSA: 1. soiva ruutu kohdassa {t:0.000} s {klippi?.name}");
+                }
                 if (t > edellinen && v < 0.5f * taso) hiljaa += t - edellinen;
                 if (t > 0f) edellinen = t;
                 v = lahde.volume;
                 ruutuja++;
                 if (JumiMs > 0 && t > 0f) { jumi = JumiMs; System.Threading.Thread.Sleep(JumiMs); JumiMs = 0; }
             }
-            Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: jumi {jumi:0} ms, {ruutuja} ruutua, soittokohta {edellinen:0.000} s, "
+            Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: 1. soiva kohta {ekaKohta:0.000} s, jumi {jumi:0} ms, {ruutuja} ruutua, soittokohta {edellinen:0.000} s, "
                 + $"hiljaa (< 50 %) soitettu {hiljaa:0.000} s {klippi?.name}");
         }
 

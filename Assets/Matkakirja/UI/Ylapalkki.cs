@@ -576,7 +576,8 @@ namespace Matkakirja.Natiivi
                 // voittaa. Logo vasempaan reunaan, pilleri oikeaan reunaan vyöhykkeen ulkopuolelle.
                 float ruudunKeski = P(Screen.width / pp / 2f, 0f).x;
                 float oma = saari.width > 0 ? (alakulma.x - ylakulma.x) / 2f : 0f;
-                float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + SaarenMarginaali * yksikko;
+                // Marginaali 8 pt (ennen 12): kulmavara vei pilleriltä ~13 pt oikeasta reunasta (1.0.54-laitekuva).
+                float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + (SaarenMarginaali - 4f) * yksikko;
                 // Näytön pyöristetyt kulmat (omistaja 29.9.2026, 1.0.50: logo ja pilleri jäivät kulmien taakse): reuna vähintään
                 // kulmakaaren sisään (KulmaVara), ei pelkkä turva-alue.
                 float kulmaR = NaytonKulmaPt(saari, saariYla) * yksikko;
@@ -600,6 +601,8 @@ namespace Matkakirja.Natiivi
         }
 
         float pilleriMax;
+        /// <summary>Pillerin laukkuikonin viemä leveys (viimeksi näkyvissä mitattu; oletus ~20 pt).</summary>
+        float ikoninTila = 20f;
 
         /// <summary>
         /// Nahkakuvan (nahka-tile 1290 × 300) alareunan varjo, sauma ja tikkaus: rivit 258–300 eli 42 / 1290 kuvan leveydestä,
@@ -670,6 +673,24 @@ namespace Matkakirja.Natiivi
             while (koko > alaraja && kiintea + teksti * koko / nyt + 2f > pilleriMax) koko -= 0.5f;
             if (!Mathf.Approximately(koko, nyt)) pilleri.style.fontSize = koko;
             rahaton.style.fontSize = koko * 0.85f;
+            if (PilleriOikealla && ikoni != null)
+            {
+                // Kulmakaaren sisällä pilleri on kapeampi (1.0.54-laitekuva: "Päivä 1, a…" katkesi): jos teksti ei mahdu pienimmälläkään
+                // koolla, laukkuikoni väistyy (kuten rahattomuuden varoituksen aikana), ja päivärivi saa sen ~20 pt.
+                // Ikonin tila aina mukana (myös piilossa), ettei näkyvyys heilu GeometryChangedin välillä.
+                bool nakyy = ikoni.style.display != DisplayStyle.None;
+                if (nakyy && ikoni.resolvedStyle.width > 0f)
+                    ikoninTila = ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight;
+                // Päivärivillä on oma kokonsa (kaksirivinen 11 px), joten mahtuminen luetaan asettelusta: rivin tarvitsema leveys
+                // vs. sille jäänyt tila (1.0.55-laitekuva: arvio pillerin koosta näytti mahtuvan, mutta "Päivä 1, aa…" katkesi).
+                float tila = kello.contentRect.width;
+                bool mahtuu = float.IsNaN(tila) || tila <= 0f
+                    ? kiintea - (nakyy ? ikoninTila : 0f) + ikoninTila + teksti * koko / nyt + 2f <= pilleriMax
+                    : kelloLeveys <= tila + 0.5f - (nakyy ? 0f : ikoninTila);
+                bool varoitus = rahaton.style.display == DisplayStyle.Flex;
+                var d = mahtuu && !varoitus ? DisplayStyle.Flex : DisplayStyle.None;
+                if (ikoni.style.display != d) ikoni.style.display = d;
+            }
         }
 
         void AsetaKelluva()

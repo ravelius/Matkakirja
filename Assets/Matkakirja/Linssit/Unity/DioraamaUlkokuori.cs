@@ -85,7 +85,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Lataa kuoren valitulla tasolla. url = paketin polku → haettava osoite (peili mukana).</summary>
-        public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa)
+        public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa, bool hamara = false)
         {
             Tyhjenna();
             if (kuori == null) yield break;
@@ -97,6 +97,11 @@ namespace Matkakirja.Natiivi
 
             Laatu tavoite = Valittu;
             string Polku(Laatu l) => l == Laatu.Huippu ? kuori.Huippu : l == Laatu.Normaali ? kuori.Normaali : kuori.Kevyt;
+            // Hämärä (DioraamaTunnelma): omat tekstuurit samaan UV:hen; puuttuva hämärätaso → päiväversio.
+            string AstcPaiva(Laatu l) => l == Laatu.Huippu ? kuori.AstcHuippu : l == Laatu.Normaali ? kuori.AstcNormaali : kuori.AstcKevyt;
+            string AstcHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraHuippu : l == Laatu.Normaali ? kuori.HamaraNormaali : kuori.HamaraKevyt;
+            string JpgHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraJpgHuippu : l == Laatu.Normaali ? kuori.HamaraJpgNormaali : kuori.HamaraJpgKevyt;
+            string AstcPolku(Laatu l) => hamara && !string.IsNullOrEmpty(AstcHamara(l)) ? AstcHamara(l) : AstcPaiva(l);
             // Nopea ensimmäinen taso: HUIPPU-laitteellakin normaali ensin, ettei 66 Mt:n lataus pidä kuorta poissa.
             var jarjestys = new List<Laatu>();
             Laatu ensin = tavoite == Laatu.Huippu && !string.IsNullOrEmpty(kuori.Normaali) ? Laatu.Normaali : tavoite;
@@ -134,8 +139,37 @@ namespace Matkakirja.Natiivi
                 mesh.RecalculateBounds();
                 mesh.UploadMeshData(true); // kärjet vain GPU:lle, CPU-kopio vapautuu
 
+                // ASTC-mipketju (tekstuurit.<taso>) ensin: 4×4 on laadultaan lähes JPEG (PSNR ≈ 40 dB) ja jää GPU:lle
+                // pakattuna; puuttuva tai tukematon → glb:n JPEG ja Compress kuten ennen.
                 Texture2D kuva = null;
-                if (koottu.Kuva != null)
+                string astc = AstcPolku(taso);
+                if (!string.IsNullOrEmpty(astc))
+                {
+                    byte[] astcTavut = null;
+                    using (var p = UnityWebRequest.Get(url(astc)))
+                    {
+                        p.timeout = 120;
+                        yield return p.SendWebRequest();
+                        if (p.result == UnityWebRequest.Result.Success) astcTavut = p.downloadHandler.data;
+                    }
+                    if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
+                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
+                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
+                }
+                if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
+                {
+                    byte[] jpg = null;
+                    using (var p = UnityWebRequest.Get(url(JpgHamara(taso))))
+                    {
+                        p.timeout = 120;
+                        yield return p.SendWebRequest();
+                        if (p.result == UnityWebRequest.Result.Success) jpg = p.downloadHandler.data;
+                    }
+                    if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
+                    if (jpg != null) koottu.Kuva = jpg; // sama JPEG-polku alla
+                    else kirjaa?.Invoke($"poikki: kuori {taso} hämärä-JPEG ei latautunut, päivätekstuuri");
+                }
+                if (kuva == null && koottu.Kuva != null)
                 {
                     kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
                     { name = "Ulkokuori:" + taso, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 4 };
@@ -147,9 +181,65 @@ namespace Matkakirja.Natiivi
 
                 AsetaTaso(taso, mesh, kuva);
                 kirjaa?.Invoke($"poikki: kuori {taso.ToString().ToLowerInvariant()} valmis ({koottu.Kolmiot.Length / 3} kolmiota, " +
-                               $"{(kuva != null ? kuva.width + "²" : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s)");
+                               $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s)");
                 yield return null;
             }
+        }
+
+        static readonly int IdLeikkausMin = Shader.PropertyToID("_DioraamaLeikkausMin"),
+            IdLeikkausMax = Shader.PropertyToID("_DioraamaLeikkausMax"), IdLeikkausKamera = Shader.PropertyToID("_DioraamaLeikkausKamera");
+
+        /// <summary>
+        /// Leikkausikkuna (speksi dioraama-rajapinnat-blender kohta 3) joka ruutu: tilan rajat (tai leikkaus.min/max)
+        /// Unity-avaruuteen, laajennus metreinä, kutistus keskipisteeseen osuudella 0…1 (kasvu kaarilennolla), ja kameran
+        /// paikka jatketta varten. Osuus 0 = kuori ehjä (varjostin ei tee mitään).
+        /// </summary>
+        public void PaivitaLeikkaus(Rakennus rakennus, (string tila, double osuus) leikkaus, Camera kamera)
+        {
+            var t = leikkaus.tila != null && leikkaus.osuus > 0 ? rakennus?.Tilat?.Find(x => x.Id == leikkaus.tila) : null;
+            if (t == null || go == null) { Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero); return; }
+            var a = DioraamaNayttamo.UnityPiste(t.LeikkausMin ?? t.RajaMin);
+            var b = DioraamaNayttamo.UnityPiste(t.LeikkausMax ?? t.RajaMax);
+            float laajennus = (float)t.LeikkausLaajennus, osuus = Mathf.Clamp01((float)leikkaus.osuus);
+            // Alaspäin vain 0,2 m (1.0.55-kuvat): täysi laajennus kaivoi kallion lattian alta ja järvi näkyi tilan alla.
+            Vector3 lo = Vector3.Min(a, b) - new Vector3(laajennus, Mathf.Min(laajennus, 0.2f), laajennus), hi = Vector3.Max(a, b) + Vector3.one * laajennus;
+            Vector3 keski = (lo + hi) * 0.5f, puoli = (hi - lo) * 0.5f * osuus;
+            lo = keski - puoli; hi = keski + puoli;
+            Shader.SetGlobalVector(IdLeikkausMin, new Vector4(lo.x, lo.y, lo.z, osuus));
+            Shader.SetGlobalVector(IdLeikkausMax, new Vector4(hi.x, hi.y, hi.z, t.LeikkausKameraan ? 1f : 0f));
+            var k = kamera != null ? kamera.transform.position : keski;
+            Shader.SetGlobalVector(IdLeikkausKamera, new Vector4(k.x, k.y, k.z, 0));
+        }
+
+        GameObject vesi;
+
+        /// <summary>
+        /// Järvi kuoren alle (Päätoimittaja 29.9.: "vesi puuttuu, saari leijuu"): 4 km:n neliö korkeudella y rakennuksen
+        /// omalla vesipinnalla (DioraamaRakennus.PinnanMateriaali "vesi": Codexin maalattu kuva, virtaus, sumu). UV =
+        /// maailman xz / toisto (8 m kuten rakennuskoneen tasoprojektiossa), COLOR = AO 1, lämpö 0.
+        /// </summary>
+        public void LisaaVesi(Material materiaali, float y, float toistoM)
+        {
+            if (vesi != null) { var vmf = vesi.GetComponent<MeshFilter>(); if (vmf != null) UnityEngine.Object.Destroy(vmf.sharedMesh); UnityEngine.Object.Destroy(vesi); }
+            vesi = null;
+            if (materiaali == null) return;
+            const float R = 2000f;
+            float t = 1f / Mathf.Max(0.5f, toistoM);
+            var m = new Mesh { name = "Ulkokuori:vesi" };
+            m.SetVertices(new[] { new Vector3(-R, y, -R), new Vector3(-R, y, R), new Vector3(R, y, R), new Vector3(R, y, -R) });
+            m.SetNormals(new[] { Vector3.up, Vector3.up, Vector3.up, Vector3.up });
+            m.SetUVs(0, new[] { new Vector2(-R * t, -R * t), new Vector2(-R * t, R * t), new Vector2(R * t, R * t), new Vector2(R * t, -R * t) });
+            var c = new Color32(255, 0, 0, 255);
+            m.SetColors(new[] { c, c, c, c });
+            m.SetTriangles(new[] { 0, 1, 2, 0, 2, 3 }, 0);
+            m.RecalculateBounds();
+            vesi = new GameObject("Ulkokuori:vesi") { layer = DioraamaNayttamo.Kerros };
+            vesi.transform.SetParent(juuri, false);
+            vesi.AddComponent<MeshFilter>().sharedMesh = m;
+            var r = vesi.AddComponent<MeshRenderer>();
+            r.sharedMaterial = materiaali;
+            r.shadowCastingMode = ShadowCastingMode.Off;
+            r.receiveShadows = true;
         }
 
         sealed class Koottu
@@ -238,9 +328,11 @@ namespace Matkakirja.Natiivi
         public void Tyhjenna()
         {
             kerta++;
+            Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero);
             for (int i = 0; i < 3; i++) PoistaTaso(i);
             if (go != null) UnityEngine.Object.Destroy(go);
             go = null; lodit = null; Lahitaso = null; Kolmiot = 0;
+            LisaaVesi(null, 0, 1);
         }
     }
 }
