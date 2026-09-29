@@ -20,6 +20,8 @@
 //                                             40 ms; KehysPiikit.cs), esim. ennen komentoa ui jatka
 //   ui skaala piste|viite|auto                UI-skaala: iOS-pisteet (iPadin oletus, 1 yksikkö = web CSS-px), puhelimen
 //                                             viiteruutu 393 × 852 tai automaattinen; kirjaa paneelin leveyden
+//   ui kosketusvalimuisti                     kosketuksen päättymisen välimuistimitätöinnin tila (UiKerros.cs):
+//                                             löytyikö metodi heijastuksella ja montako kierrosta on tehty
 //   ui napauta x y                            napautus UI Toolkitiin paneelin pisteessä (UI-yksiköt = iPadilla pt):
 //                                             poiminta ylimmästä kerroksesta alkaen (sama polku kuin sormella:
 //                                             rajauslaatikko + ContainsPoint), PointerDown ja PointerUp osumaan; kirjaa osuman
@@ -628,6 +630,11 @@ namespace Matkakirja.Natiivi
                     Kirjaa("rauha: " + uk.RauhaKuvaus());
                     return null;
                 }
+                case "kosketusvalimuisti":
+                    // Kosketuksen päättymisen mitätöinti (omistajan löydös 28.9.2026, UiKerros.cs): löytyikö
+                    // ClearCachedElementUnderPointer heijastuksella ja montako mitätöintikierrosta on tehty.
+                    Kirjaa(UiKerros.Hae().KosketusValimuistiKuvaus());
+                    return null;
                 case "skaala":
                 {
                     UiKerros.Hae().VaihdaSkaala(loput.Trim().ToLowerInvariant());

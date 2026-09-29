@@ -1,0 +1,13 @@
+<linker>
+  <!-- Kosketusvälimuistin mitätöinti (UiKerros.cs, omistajan löydös 28.9.2026): BaseVisualElementPanel.
+       ClearCachedElementUnderPointer haetaan heijastuksella ajon aikana (metodi on sisäinen). Unityn oma
+       PointerLeavesPanel-käsittely kutsuu samaa metodia, joten IL2CPP:n koodinpoisto tuskin karsisi sitä
+       muutenkaan, mutta varmistetaan preserve. Lähde: UnityCsReference Modules/UIElements/Core/Panel.cs
+       (ref 6000.3) — metodi on määritelty BaseVisualElementPanel-luokassa (ei Panel-luokassa, joka perii
+       siitä). -->
+  <assembly fullname="UnityEngine.UIElementsModule">
+    <type fullname="UnityEngine.UIElements.BaseVisualElementPanel">
+      <method name="ClearCachedElementUnderPointer" />
+    </type>
+  </assembly>
+</linker>

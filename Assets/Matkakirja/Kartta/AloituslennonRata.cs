@@ -42,6 +42,9 @@ namespace Matkakirja
     /// täsmälleen napautusnäkymä ja loppu täsmälleen saapumisnäkymä (kanavat päättyvät siihen). Kone etenee omalla
     /// nopeusprofiilillaan (matkanopeus ∝ kameran etäisyys, ohituksessa 5 km/s), joka ratkaistaan niin, että ohitus osuu
     /// ohituskohtaan ja pysähdys perille.
+    /// v3f4 (omistajan palaute v3f3-videoon 28.9. klo 17.0x): kone ei hidastu lähellä (<see cref="OhitusNopeus"/>), ylöspäin
+    /// yskähdys vaihtuu kallistettuun kaartoon (<see cref="Sivusiirto"/>, <see cref="TasainenLisa"/>), kamera tapaa koneen
+    /// bumerangina (<see cref="BumerangiAlkuS"/>) ja päivä tulee heti lennon alussa korkealla (<see cref="Kello"/>).
     /// KONEEN KOKO (v3): maailmassa vakio 5 km, ruudulla vähintään <see cref="KokoVahintaan"/> (laskussa <see cref="KokoLaskussa"/>).
     /// USVA (v3): radan ajan horisonttiusvan raja on vähintään <see cref="UsvaVahintaanM"/> katsepisteestä (Aurinko.UsvaVahintaanM).
     /// Puhdas laskenta ilman UnityEngineä (Kartta-testit/AloituslennonRataTestit mittaa koneen näkyvyyden joka näytteessä).
@@ -82,8 +85,46 @@ namespace Matkakirja
         /// <summary>Lähestymisen KUMINAUHA: kone karkaa ensin ruudulla oikealle alas (kamera jää jälkeen), sitten kamera kiihtyy
         /// kiinni (loiva S ruudulla); kupu Kupu(p) = p(1−p)⁴ normitettuna, huippu p = 0,2 (~3 s).</summary>
         public const double KuminauhaX = 0.3, KuminauhaY = 0.15;
-        /// <summary>Ohituksen oletuskohta reitillä (osuus) ja koneen nopeus ohituksessa (m/s).</summary>
-        public const double OhitusOsuus = 0.5, OhitusNopeus = 5000.0;
+        /// <summary>Ohituksen oletuskohta reitillä (osuus) ja koneen nopeus ohituksessa (m/s). v3f4 (omistaja 28.9. klo 17.0x:
+        /// "en tykkää siitä, että koneen vauhti hidastuu, kun lennetään sen lähelle. Voisiko se pysyä ainakin vähän enemmän
+        /// nopeana?"): 15 km/s (v3f3 5 km/s, jolloin kone "leijui" 6–9 s) koko lähikuvan ajan <see cref="OhitusNopeusAlkuS"/>–
+        /// <see cref="OhitusNopeusLoppuS"/>; ennen sitä matkanopeus laskee siihen kameran mukana ja sen jälkeen nousee taas.</summary>
+        public const double OhitusOsuus = 0.5, OhitusNopeus = 15_000.0, OhitusNopeusAlkuS = 4.4, OhitusNopeusLoppuS = 9.6;
+
+        /// <summary>
+        /// BUMERANGI (v3f4, omistaja 28.9. klo 17.0x: "kamera ei jääkään paikalleen seuraamaan konetta, vaan kamera tuleekin kohti
+        /// ja lähtee saman tein kuin bumerangi takaviistoon takaisinpäin. Liike voi olla vähän hidastettu, siis se kameran liike,
+        /// mutta kamera ei jäisikään seuraamaan samaa matkaa konetta, vaan se ikään kuin tapaa lentokoneen sen oman elliptisen
+        /// kiertoradan kärjessä"). Silmän maapiste suunnitellaan kärjen kehyksessä (kone ohituskohdassa: F lentosuunta, R oikea):
+        /// lähestyminen tulee koneen oikealta kuten v3f3:ssa (sivu- ja korkeuskoordinaatti ensimmäisestä kierroksesta), mutta
+        /// pituussuunnassa silmä ei seuraa konetta vaan jarruttaa kärkeen <see cref="KarkiTaakseMs"/>:n vauhtiin taaksepäin.
+        /// Kärjen jälkeen silmä ajautuu enintään <see cref="KarkiTaakseM"/> taakse ja loittonee <see cref="PaluuSivulleM"/>
+        /// sivulle (koneesta katsoen takaviistoon), ja korkeus nousee omistajan S-käyränä. Suunta, kallistus ja etäisyys
+        /// johdetaan silmän kohdepisteestä ja koneesta (kone pysyy ruutupaikassaan); lähestymisen kanavat sulautuvat niihin
+        /// <see cref="BumerangiAlkuS"/>:sta <see cref="BumerangiSulautusS"/>:ssa. Nousun loppuosalla sivumatka rajataan ja suunta
+        /// kääntyy loppunäkymään kuten v3e2:ssa.
+        /// </summary>
+        public const double BumerangiAlkuS = 4.2, BumerangiSulautusS = 1.0, KarkiTaakseMs = 2000.0, KarkiTaakseM = 6000.0,
+            PaluuSivulleM = 35_000.0;
+        /// <summary>Bumerangin jälkeen (kärjestä <see cref="SeurantaAlkuS"/>, kesto <see cref="SeurantaKestoS"/>) silmän kohdepiste
+        /// alkaa kulkea koneen mukana <see cref="SeurantaOsuus"/>:n vauhdilla (kone loittonee yhä, kamera nousee jo), ja suunta kääntyy loppunäkymään ajassa
+        /// <see cref="LoppuKaantoAlkuS"/>–<see cref="LoppuKaantoAlkuS"/> + <see cref="LoppuKaantoKestoS"/> (silmä kiertää koneen
+        /// oikealle ja kohteen ylle kuten v3e2:ssa).</summary>
+        public const double SeurantaAlkuS = 1.6, SeurantaKestoS = 2.2, SeurantaOsuus = 0.65, LoppuKaantoAlkuS = 9.6, LoppuKaantoKestoS = 5.2;
+
+        /// <summary>
+        /// KAARTO (v3f4, omistaja: "Koneen yskähdys ylöspäin lähikuvassa voisi ennemmin vaihtaa johonkin makeampaan kaartoon jompaan
+        /// kumpaan suuntaan"): ohituksessa kone kallistuu kameraan päin (oikealle, jolloin yläpinta näkyy) ja kaartaa oikealle:
+        /// sivunopeus nousee <see cref="KaartoNousuS"/>:ssa <see cref="KaartoSivunopeus"/>:een ja laantuu <see cref="KaartoLaskuS"/>:ssa
+        /// (loiva oikaisu), ja <see cref="KaartoPaluuAlkuS"/>:sta kone lähestyy kohdetta suoraan (siirto pienenee perille nollaan). Kallistus =
+        /// <see cref="KaartoKallistusKerroin"/> × suunnan muutosnopeus (°/s), enintään <see cref="KaartoKallistusEnintaan"/>.
+        /// v3f3:n yskähdys oli maastolisä lähikuvassa (Othrysin harjanne); lisä pysyy nyt ohituksessa vakiona (<see cref="TasainenLisa"/>).
+        /// </summary>
+        public const double KaartoSivunopeus = 6000.0, KaartoAlkuS = 6.7, KaartoNousuS = 1.2, KaartoLaskuS = 3.0,
+            KaartoPaluuAlkuS = 10.4, KaartoPaluuS = 2.4, KaartoKallistusKerroin = 1.1, KaartoKallistusEnintaan = 40.0,
+            KaartoEnnakkoS = 0.15;
+        /// <summary>Maastolisän vakioikkuna (s): ohituksen lähikuva.</summary>
+        public const double LisaIkkunaAlkuS = 5.6, LisaIkkunaLoppuS = 9.6;
 
         /// <summary>
         /// OHITUS LOPPUMATKALLA MAAN PÄÄLLÄ (v3e): lähin kohta on <see cref="OhitusJaljellaM"/> ennen kohdetta, jotta erkaneminen
@@ -177,7 +218,8 @@ namespace Matkakirja
         readonly SKayra lahestyminen = new SKayra(LahestyminenA, LahestyminenB), nousu = new SKayra(NousuA, NousuB),
             pakitus = new SKayra(PakitusA, PakitusB);
         // Näytteet 240 Hz: koneen reittiosuus ja korkeus, symbolinen siipiväli, kameran asento ja katseen paino, mittaus.
-        readonly double[] kp = new double[N + 1], kh = new double[N + 1], siipi = new double[N + 1];
+        readonly double[] kp = new double[N + 1], kh = new double[N + 1], siipi = new double[N + 1], koneLat = new double[N + 1],
+            koneLon = new double[N + 1];
         readonly double[] cLat = new double[N + 1], cLon = new double[N + 1], cLnD = new double[N + 1], cK = new double[N + 1],
             cB = new double[N + 1], cKatse = new double[N + 1], cKatseW = new double[N + 1];
         readonly Mittaus[] mittaus = new Mittaus[N + 1];
@@ -322,11 +364,12 @@ namespace Matkakirja
         double Dref(double t) => Lerp(dRef, t);
 
         static double Rullaus(double t) => 300.0 * S(t / 0.6) * (1 - S((t - 0.6) / 1.6));
-        static double W1(double t) => S((t - 0.5) / 2.4) * (1 - S((t - (KiriS - 1.0)) / 1.0));
-        static double Wo(double t) => S((t - (KiriS - 1.0)) / 1.0) * (1 - S((t - (OhitusS + 0.4)) / 1.4));
+        // v3f4: ohitusnopeus 4,4–5,6 s:sta (kamera ~600 → 60 km, matkanopeus laskee siihen) 9,6–11,2 s:iin (kamera loittonee).
+        static double W1(double t) => S((t - 0.5) / 2.4) * (1 - S((t - OhitusNopeusAlkuS) / 1.2));
+        static double Wo(double t) => S((t - OhitusNopeusAlkuS) / 1.2) * (1 - S((t - OhitusNopeusLoppuS) / 1.6));
         /// <summary>Erkanemisen matkanopeus kameran mukana kosketusta edeltävään jarrutukseen asti: kone liukuu kohteeseen samalla
         /// kun kamera nousee (v3e: loppumatka ~190 km, v3d:n kiito pois).</summary>
-        static double W2(double t) => S((t - (OhitusS + 0.4)) / 1.8) * (1 - S((t - (KosketusS - 1.6)) / 1.2));
+        static double W2(double t) => S((t - OhitusNopeusLoppuS) / 1.6) * (1 - S((t - (KosketusS - 1.6)) / 1.2));
 
         /// <summary>Laskun absoluuttinen nopeus (m/s): 3 km/s → 0,7 km/s kosketuksessa → pysähdys (kamera ~1 000 km:ssä).</summary>
         static double Saapuminen(double t)
@@ -370,6 +413,129 @@ namespace Matkakirja
             }
             // Pysähdyksestä alkaen täsmälleen perillä (numeerinen integraali ± 1e-4).
             for (int i = 0; i <= N; i++) if (i / (double)Hz >= PysahdysS) kp[i] = 1.0;
+            // v3f4: koneen paikka kaarron sivusiirron kanssa (reitin oikealle).
+            for (int i = 0; i <= N; i++)
+            {
+                double t = i / (double)Hz, n = t < PysahdysS ? Sivusiirto(t) : 0.0;
+                var q = Kohta(kp[i]);
+                (koneLat[i], koneLon[i]) = Math.Abs(n) < 0.5 ? q : LennonV3.Kohta(q.Lat, q.Lon, SuuntimaReitilla(kp[i]) + 90.0, n);
+            }
+        }
+
+        // ---- v3f4 KAARTO ----
+
+        /// <summary>∫ S((τ − t0) / nousu) · (1 − S((τ − t0 − nousu) / lasku)) dτ hetkeen t asti (kumpu, jonka nousu ja lasku ovat
+        /// S-käyriä; koko ala (nousu + lasku) / 2).</summary>
+        static double KumpuAla(double t, double t0, double nousu, double lasku)
+        {
+            static double I(double x) { x = Rajaa(x, 0, 1); return x * x * x * x * (x * (x - 3.0) + 2.5); }
+            double x1 = (t - t0) / nousu, x2 = (t - t0 - nousu) / lasku;
+            return nousu * I(x1) + (x2 > 0 ? lasku * (Math.Min(x2, 1.0) - I(x2)) : 0.0);
+        }
+
+        static double Kumpu(double t, double t0, double nousu, double lasku) =>
+            S((t - t0) / nousu) * (1 - S((t - t0 - nousu) / lasku));
+
+        /// <summary>Kaarron jälkeen kone lähestyy kohdetta suoraan (siirto pienenee reittiosuuden mukana nollaan perillä, suunta
+        /// ~4° reitistä ilman näkyvää kallistusta); paluu alkaa pehmeästi <see cref="KaartoPaluuAlkuS"/>:sta.</summary>
+        double Paluu(double t, out double derivaatta)
+        {
+            derivaatta = 0;
+            if (t <= KaartoPaluuAlkuS) return 0;
+            double uc = KoneenOsuus(KaartoPaluuAlkuS), jaljella = Math.Max(1e-9, 1 - uc), x = (t - KaartoPaluuAlkuS) / KaartoPaluuS;
+            double osuus = Math.Min(1.0, (KoneenOsuus(t) - uc) / jaljella), w = S(x);
+            double ds = x < 1 ? 30.0 * x * x * (1 - x) * (1 - x) / KaartoPaluuS : 0.0;
+            derivaatta = ds * osuus + (t < PysahdysS ? w * Nopeus(t) / ReittiM / jaljella : 0.0);
+            return w * osuus;
+        }
+
+        /// <summary>Koneen sivusiirto reitin oikealle (m) hetkellä t (<see cref="KaartoSivunopeus"/>).</summary>
+        public double Sivusiirto(double t) => KaartoSivunopeus * KumpuAla(t, KaartoAlkuS, KaartoNousuS, KaartoLaskuS) * (1 - Paluu(t, out _));
+
+        /// <summary>Sivunopeus (m/s).</summary>
+        public double Sivunopeus(double t)
+        {
+            double c = Paluu(t, out double dc);
+            return KaartoSivunopeus * (Kumpu(t, KaartoAlkuS, KaartoNousuS, KaartoLaskuS) * (1 - c)
+                                       - KumpuAla(t, KaartoAlkuS, KaartoNousuS, KaartoLaskuS) * dc);
+        }
+
+        /// <summary>Koneen suunnan poikkeama reitistä (°, oikealle +) hetkellä t.</summary>
+        public double Poikkeama(double t) => Math.Atan2(Sivunopeus(t), Math.Max(1.0, Nopeus(Rajaa(t, 0, KestoS)))) * 180.0 / Math.PI;
+
+        /// <summary>Koneen kallistus kaarrossa (°, oikealle +): suunnan muutosnopeudesta pienellä ennakolla.</summary>
+        public double KaartoKallistus(double t)
+        {
+            if (t >= PysahdysS) return 0.0;
+            double te = t + KaartoEnnakkoS, h = 0.02;
+            double nopeus = (Poikkeama(te + h) - Poikkeama(te - h)) / (2 * h);
+            return Rajaa(KaartoKallistusKerroin * nopeus, -KaartoKallistusEnintaan, KaartoKallistusEnintaan);
+        }
+
+        /// <summary>Koneen paikka, suunta (° reitin suunta + poikkeama) ja kallistus hetkellä t (Nappula asettaa koneen).</summary>
+        public (double Lat, double Lon, double Suunta, double Kallistus) KoneenPaikka(double t)
+        {
+            double x = Rajaa(t, 0, KestoS) * Hz;
+            int i = Math.Min(N - 1, (int)x);
+            double f = x - i;
+            double lo = koneLon[i] + Kulmaero(koneLon[i], koneLon[i + 1]) * f;
+            return (koneLat[i] + (koneLat[i + 1] - koneLat[i]) * f, Normalisoi180(lo),
+                Normalisoi(SuuntimaReitilla(KoneenOsuus(t)) + Poikkeama(t)), KaartoKallistus(t));
+        }
+
+        /// <summary>
+        /// MAASTOLISÄ OHITUKSESSA VAKIONA (v3f4): v3f3:n "yskähdys ylöspäin" oli maastolisän kyttyrä lähikuvassa (Othrysin harjanne
+        /// 7,2–8,8 s). Ikkunassa <see cref="LisaIkkunaAlkuS"/>–<see cref="LisaIkkunaLoppuS"/> lisä on ikkunan reittiosuuden suurin
+        /// (LennonV3Kaytava.Lisakorkeus), johon noustaan pehmeästi ennen ikkunaa (kamera vielä kaukana) ja josta palataan sen
+        /// jälkeen; muualla lisä kuten ennen. Ei koskaan pienempi kuin paikallinen lisä.
+        /// </summary>
+        public double TasainenLisa(double[] lisa, double t)
+        {
+            if (lisa == null || lisa.Length == 0) return 0.0;
+            double nyt = LennonV3Kaytava.LisaOsuudessa(lisa, KoneenOsuus(t));
+            double w = S((t - (LisaIkkunaAlkuS - 0.8)) / 0.8) * (1 - S((t - LisaIkkunaLoppuS) / 1.0));
+            if (w <= 0) return nyt;
+            if (!ReferenceEquals(lisaLahde, lisa))
+            {
+                lisaLahde = lisa;
+                lisaSuurin = 0;
+                for (double s = LisaIkkunaAlkuS - 0.8; s <= LisaIkkunaLoppuS + 1.0; s += 0.02)
+                    lisaSuurin = Math.Max(lisaSuurin, LennonV3Kaytava.LisaOsuudessa(lisa, KoneenOsuus(s)));
+            }
+            return nyt + (Math.Max(nyt, lisaSuurin) - nyt) * w;
+        }
+
+        double[] lisaLahde;
+        double lisaSuurin;
+
+        /// <summary>Hetki, jolloin kone on reittiosuudessa u (käänteinen <see cref="KoneenOsuus"/>).</summary>
+        double AikaOsuudessa(double u)
+        {
+            int a = 0, b = N;
+            while (b - a > 1) { int m = (a + b) / 2; if (kp[m] < u) a = m; else b = m; }
+            double da = kp[b] - kp[a];
+            return (a + (da > 1e-12 ? Rajaa((u - kp[a]) / da, 0, 1) : 0)) / Hz;
+        }
+
+        /// <summary>Koneen lentämä reitti pisteinä (kynänjälki): isoympyrä <paramref name="n"/> välillä ja kaarron kohdalla
+        /// 0,05 s välein (sivusiirto mukana, jotta jälki kulkee koneen alla).</summary>
+        public List<(double Lat, double Lon)> LentoReitti(int n = 256)
+        {
+            var u = new List<double>(n + 200);
+            for (int i = 0; i <= n; i++) u.Add(i / (double)n);
+            for (double t = KaartoAlkuS; t <= PysahdysS; t += 0.05) u.Add(KoneenOsuus(t));
+            u.Sort();
+            var p = new List<(double, double)>(u.Count);
+            double ed = -1;
+            foreach (double x in u)
+            {
+                if (x - ed < 1e-7) continue;
+                ed = x;
+                var q = Kohta(x);
+                double s = Sivusiirto(AikaOsuudessa(x));
+                p.Add(Math.Abs(s) < 0.5 ? q : LennonV3.Kohta(q.Lat, q.Lon, SuuntimaReitilla(x) + 90.0, s));
+            }
+            return p;
         }
 
         /// <summary>Koneen peruskorkeus (m): nousu 0,6–4 s matkakorkeuteen, liuku 3 s ennen kosketusta.</summary>
@@ -402,18 +568,30 @@ namespace Matkakirja
 
         void Kamera()
         {
+            // v3f4: 1. kierros v3f3:n kanavilla kärkeen asti (silmän lähestymisreitti), bumerangin kohdereitti, 2. kierros.
+            int nA = (int)Math.Round(OhitusS * Hz);
+            var silma = new V[nA + 1];
+            Kierros(nA, silma);
+            TeeBumerangi(silma, nA);
+            Kierros(N, null);
+            // Suunta jatkuvaksi (±360° hypyt pois) interpolointia varten.
+            for (int i = 1; i <= N; i++) cB[i] = cB[i - 1] + Kulmaero(cB[i - 1], cB[i]);
+        }
+
+        void Kierros(int loppu, V[] silma)
+        {
             double edLat = Alku.Lat, edLon = Alku.Lon, edEt = Alku.EtaisyysM;
-            for (int i = 0; i <= N; i++)
+            for (int i = 0; i <= loppu; i++)
             {
                 double t = i / (double)Hz;
                 // Kone tässä näytteessä (koko edellisen näytteen etäisyydestä: heikko kytkös).
-                var q = Kohta(kp[i]);
                 siipi[i] = Siipivali(edEt, t);
                 kh[i] = PerusKorkeus(t) + Nosto(t, siipi[i]);
-                var P = Ecef(q.Lat, q.Lon, kh[i]);
+                var P = Ecef(koneLat[i], koneLon[i], kh[i]);
                 Kanavat(t, kh[i], out double d, out double k, out double b, out double x, out double y, out double katseW);
-                k = Rajaa(k, 0, 85);
                 x = Rajaa(x, -0.8, 0.8); y = Rajaa(y, -0.8, 0.8);
+                if (silma == null) Bumerangi(i, t, koneLat[i], koneLon[i], kh[i], x, y, katseW, ref d, ref k, ref b);
+                k = Rajaa(k, 0, 85);
                 double katse = katseW * kh[i];
                 double lnd = Math.Log(d);
 
@@ -424,12 +602,135 @@ namespace Matkakirja
                 cLat[i] = la; cLon[i] = lo; cLnD[i] = lnd; cK[i] = k; cB[i] = b; cKatse[i] = katse; cKatseW[i] = katseW;
                 edLat = la; edLon = lo;
 
-                var m = Mittaa(t, P, q.Lat, q.Lon, kp[i], siipi[i], new Asento(la, lo, Math.Exp(lnd), k, b, katse));
+                var a = new Asento(la, lo, Math.Exp(lnd), k, b, katse);
+                if (silma != null) silma[i] = Kanta(a).Silma;
+                var m = Mittaa(t, P, SuuntimaReitilla(kp[i]) + Poikkeama(t), siipi[i], a);
                 mittaus[i] = m;
                 edEt = m.EtaisyysM;
             }
-            // Suunta jatkuvaksi (±360° hypyt pois) interpolointia varten.
-            for (int i = 1; i <= N; i++) cB[i] = cB[i - 1] + Kulmaero(cB[i - 1], cB[i]);
+        }
+
+        // ---- v3f4 BUMERANGI: silmän kohdereitti kärjen kehyksessä ----
+
+        /// <summary>Kärjen kehys: O maan pinnalla koneen ohituskohdan alla, F reitin suunta, R oikea, U ylös.</summary>
+        V bO, bF, bR;
+        /// <summary>1. kierroksen silmän sivu- ja korkeuskoordinaatti kärkeen asti (näytteittäin).</summary>
+        double[] bSivu, bKorkeus;
+        /// <summary>Pituussuunnan lähestyminen (alku ja nopeus), kärki ja paluun kesto.</summary>
+        double bF0, bFv0, bFk0, bFa, bRa, bTr;
+        /// <summary>Lähestymisen jarrutuksen eksponentti n (0 = kvinttinen; loki ja testit).</summary>
+        public double BumerangiEksponentti { get; private set; }
+
+        void TeeBumerangi(V[] silma, int nA)
+        {
+            var o = Kohta(kp[nA]);
+            Kanta(o.Lat, o.Lon, out var u, out var pohj, out var ita);
+            double psi = SuuntimaReitilla(kp[nA]) * Math.PI / 180.0;
+            bF = pohj * Math.Cos(psi) + ita * Math.Sin(psi);
+            bR = V.Cross(bF, u);
+            bO = u * R;
+            var f = new double[nA + 1];
+            bSivu = new double[nA + 1]; bKorkeus = new double[nA + 1];
+            for (int i = 0; i <= nA; i++)
+            {
+                double r = silma[i].Pituus;
+                var g = silma[i] * (R / r) - bO;
+                f[i] = V.Dot(g, bF); bSivu[i] = V.Dot(g, bR); bKorkeus[i] = r - R;
+            }
+            // Alkuarvot 0,05 s:n erotuksista (Newtonin kohina pois), kärki 1. kierroksen ohitushetkestä.
+            const int h = Hz / 20;
+            int i0 = (int)Math.Round(BumerangiAlkuS * Hz);
+            double dt = h / (double)Hz;
+            bF0 = f[i0]; bFv0 = (f[i0 + h] - f[i0 - h]) / (2 * dt); bFk0 = (f[i0 + h] - 2 * f[i0] + f[i0 - h]) / (dt * dt);
+            bFa = f[nA]; bRa = bSivu[nA];
+            // Jarrutuksen muoto: ∫ (1 − s)^n = G, jolla silmä kulkee alusta kärkeen; vain silmän tullessa koneen edestä
+            // (taaksepäin kärkeä nopeammin), muuten 0 = kvinttinen.
+            double T = OhitusS - BumerangiAlkuS, v1 = -KarkiTaakseMs;
+            double G = bFv0 - v1 < -1000.0 ? (bFa - bF0 - v1 * T) / ((bFv0 - v1) * T) : -1;
+            BumerangiEksponentti = G >= 0.03 && G <= 0.5 ? 1.0 / G - 1.0 : 0.0;
+            // Paluun sivuliike Q(τ / Tr) = 1 − (1 + 3s) e^(−3s): kärjessä levosta, kiihtyvyys 9 ΔR / Tr² = lähestymisen jarrutus.
+            double rk = Math.Max(2000.0, (bSivu[nA] - 2 * bSivu[nA - h] + bSivu[nA - 2 * h]) / (dt * dt));
+            bTr = Rajaa(3.0 * Math.Sqrt(PaluuSivulleM / rk), 2.0, 6.0);
+            // Seuranta: koneen reittimatka kärjestä painotettuna S((τ − alku) / kesto).
+            bSeuraa = new double[N + 1];
+            for (int i = nA + 1; i <= N; i++)
+                bSeuraa[i] = bSeuraa[i - 1] + SeurantaOsuus * S(((i - 0.5) / Hz - OhitusS - SeurantaAlkuS) / SeurantaKestoS) * (kp[i] - kp[i - 1]) * ReittiM;
+        }
+
+        /// <summary>Seurannan kertymä (m) näytteittäin kärjestä.</summary>
+        double[] bSeuraa;
+
+        /// <summary>Bumerangin silmän kohdepiste (pituus- ja sivukoordinaatti kärjen kehyksessä, m) hetkellä t ≥ alku.</summary>
+        (double F, double R) BumerangiPiste(double t, int i)
+        {
+            if (t <= OhitusS)
+            {
+                // Pituussuunnassa silmä tulee koneen edestä ja jarruttaa kärkeen yhtenä liikkeenä (ei ylitä kärkeä eikä palaa
+                // koneen perään): nopeus v1 + (v0 − v1)(1 − s)^n, n niin, että silmä on kärjessä täsmälleen ohitushetkellä.
+                // Muuten (silmä tulee koneen takaa, esim. Kairo) kvinttinen Hermite: alku 1. kierroksesta (paikka, nopeus,
+                // kiihtyvyys), loppu kärkeen vauhtiin −KarkiTaakseMs.
+                double T = OhitusS - BumerangiAlkuS, s = Rajaa((t - BumerangiAlkuS) / T, 0, 1), v1 = -KarkiTaakseMs;
+                double f;
+                if (BumerangiEksponentti > 0)
+                    f = bF0 + v1 * T * s + (bFv0 - v1) * T * (1 - Math.Pow(1 - s, BumerangiEksponentti + 1)) / (BumerangiEksponentti + 1);
+                else
+                {
+                    double s2 = s * s, s3 = s2 * s, s4 = s3 * s, s5 = s4 * s;
+                    double h0 = 1 - 10 * s3 + 15 * s4 - 6 * s5, h1 = s - 6 * s3 + 8 * s4 - 3 * s5, h2 = 0.5 * s2 - 1.5 * s3 + 1.5 * s4 - 0.5 * s5;
+                    double h3 = 0.5 * s3 - s4 + 0.5 * s5, h4 = -4 * s3 + 7 * s4 - 3 * s5, h5 = 10 * s3 - 15 * s4 + 6 * s5;
+                    double a1 = KarkiTaakseMs * KarkiTaakseMs / KarkiTaakseM;
+                    f = bF0 * h0 + bFv0 * T * h1 + bFk0 * T * T * h2 + a1 * T * T * h3 + v1 * T * h4 + bFa * h5;
+                }
+                return (f, bSivu[Math.Min(i, bSivu.Length - 1)]);
+            }
+            double tau = t - OhitusS, q = 3.0 * tau / bTr;
+            return (bFa - KarkiTaakseM * (1 - Math.Exp(-KarkiTaakseMs * tau / KarkiTaakseM)) + bSeuraa[Math.Min(i, N)],
+                bRa + PaluuSivulleM * (1 - (1 + q) * Math.Exp(-q)));
+        }
+
+        /// <summary>
+        /// Bumerangin kanavat: silmä kohdepisteeseen (korkeus lähestymisessä 1. kierroksesta, erkanemisessa S-käyrä), kone ruudun
+        /// kohtaan (x, y). Suunta = suuntima silmästä koneeseen − ruutupaikan kulma, kallistus = 90° − alakulma − y:n kulma.
+        /// Lähestymisen kanavat sulautuvat tähän <see cref="BumerangiSulautusS"/>:ssa; erkanemisessa sivumatka rajataan ja suunta
+        /// kääntyy loppunäkymään kuten v3e2:ssa.
+        /// </summary>
+        void Bumerangi(int i, double t, double qLat, double qLon, double koneH, double x, double y, double katseW,
+            ref double d, ref double k, ref double b)
+        {
+            if (t <= BumerangiAlkuS || bSivu == null) return;
+            var (f, r) = BumerangiPiste(t, i);
+            bool lahestyy = t <= OhitusS;
+            double a = A(t);
+            double h = lahestyy ? bKorkeus[Math.Min(i, bKorkeus.Length - 1)]
+                : Math.Exp(Math.Log(KorkeusOhitus) + (Math.Log(KorkeusLoppu) - Math.Log(KorkeusOhitus)) * a);
+            var g = bO + bF * f + bR * r;
+            g = g * (R / g.Pituus);
+            double gLat = Math.Asin(g.Z / R) * 180.0 / Math.PI, gLon = Math.Atan2(g.Y, g.X) * 180.0 / Math.PI;
+            double vaaka = Math.Max(1.0, LennonAikajana.ReittiM(gLat, gLon, qLat, qLon));
+            double suunta = LennonV3.Suuntima(gLat, gLon, qLat, qLon);
+            double dH = Math.Max(1.0, h - koneH), katse = katseW * koneH;
+            if (!lahestyy)
+                vaaka = PehmeaMin(vaaka, SivuEnintaanM + (SivuLoppuM - SivuEnintaanM) * S((t - SivuKapeneeS) / (SivuKapeaS - SivuKapeneeS)));
+            double kB = 90.0 - Math.Atan2(dH, vaaka) * 180.0 / Math.PI - Math.Atan(y * tanV) * 180.0 / Math.PI;
+            if (!lahestyy) kB += (Loppu.Kallistus - kB) * S((a - 0.88) / 0.12);
+            // Ruutupaikan kulma suuntimaan (alaspäin katsottaessa singulaarinen: sin k vähintään 0,5).
+            double kr = kB * Math.PI / 180.0;
+            double bB = suunta - Math.Atan2(x * tanH, Math.Max(0.5, Math.Sin(kr)) + y * tanV * Math.Cos(kr)) * 180.0 / Math.PI;
+            double dB = EtaisyysKorkeudesta(h, kB, katse);
+            if (lahestyy)
+            {
+                double w = S((t - BumerangiAlkuS) / BumerangiSulautusS);
+                k += (kB - k) * w;
+                b += Kulmaero(b, bB) * w;
+                d = Math.Exp(Math.Log(d) + (Math.Log(dB) - Math.Log(d)) * w);
+                return;
+            }
+            // Suunta ohituksen suunnasta jatkuvana (kiertää koneen perään), sitten loppunäkymän suuntaan.
+            double gb = S((t - LoppuKaantoAlkuS) / LoppuKaantoKestoS);
+            double bJ = bOhitus + Kulmaero(bOhitus, bB);
+            k = kB;
+            b = bJ + (bOhitus + bMuutosErkaneminen - bJ) * gb;
+            d = dB;
         }
 
         /// <summary>Katsepiste (lat, lon), jolla piste P projisoituu ruudun kohtaan (x, y): Newton kahdella muuttujalla,
@@ -459,14 +760,16 @@ namespace Matkakirja
         bool Arvioi(V P, double la, double lo, double d, double k, double b, double katse, out double x, out double y) =>
             Projisoi(Kanta(new Asento(la, lo, d, k, b, katse)), P, out x, out y, out _);
 
-        Mittaus Mittaa(double t, V P, double qLat, double qLon, double osuus, double siipiM, Asento a)
+        Mittaus Mittaa(double t, V P, double suuntaAste, double siipiM, Asento a)
         {
             var c = Kanta(a);
             bool edessa = Projisoi(c, P, out double x, out double y, out double z);
             var w = c.Silma - P;
             double et = w.Pituus;
-            Kanta(qLat, qLon, out var n, out var pohj, out var ita);
-            double psi = SuuntimaReitilla(osuus) * Math.PI / 180.0;
+            var n = P * (1.0 / P.Pituus);
+            double qLat = Math.Asin(n.Z) * 180.0 / Math.PI, qLon = Math.Atan2(n.Y, n.X) * 180.0 / Math.PI;
+            Kanta(qLat, qLon, out n, out var pohj, out var ita);
+            double psi = suuntaAste * Math.PI / 180.0;
             var eteen = pohj * Math.Cos(psi) + ita * Math.Sin(psi);
             double pysty = V.Dot(w, n);
             var vaaka = w - n * pysty;
@@ -535,6 +838,45 @@ namespace Matkakirja
             return new Asento(cLat[i] + (cLat[i + 1] - cLat[i]) * f, Normalisoi180(lo), Math.Exp(cLnD[i] + (cLnD[i + 1] - cLnD[i]) * f),
                 cK[i] + (cK[i + 1] - cK[i]) * f, Normalisoi(cB[i] + (cB[i + 1] - cB[i]) * f),
                 cKatse[i] + (cKatse[i + 1] - cKatse[i]) * f + lisa * (cKatseW[i] + (cKatseW[i + 1] - cKatseW[i]) * f));
+        }
+
+        /// <summary>
+        /// LENNON PELIKELLO (v3f, omistaja 28.9.: kello "etenee" ja valonraja muuttuu sen mukana): osuus lennon pelitunneista
+        /// hetkellä t, pehmeä S (kiihtyy lähdöstä ja hidastuu perille). Nappula kirjoittaa Pelikello.Tunnit = lähtö + tunnit · tämä.
+        /// v3f2 ("päivä voisi tulla aiemmin"): kello on perillä saapumisen alussa (<see cref="SaapuminenS"/>), ei radan lopussa,
+        /// joten aamu tulee ohitusta ennen ja lasku nähdään täydessä päivässä.
+        /// v3f4 (omistaja 28.9. klo 17.0x: "Se hetki, kun kartta muuttuu yöstä päivään, näyttää oudolta. Lento pitäisi siis alkaa
+        /// vielä paljon aiemmin, että kartta on ehtinyt hyvissä ajoin vaihtua yöstä päivään"): etupainotteinen kello, 70 %
+        /// lentotunneista 0,4–3,5 s:ssa (kamera 7 600 → 1 300 km: valonraja pyyhkäisee Euroopan yli korkealta noin 3 s:ssa, ei
+        /// lähestymisen usvassa kuten v3f3:ssa 4,5–5,2 s) ja loput 30 % tasaisesti perille saapumisen alkuun.
+        /// </summary>
+        public static double Kello(double t) => 0.7 * S((t - 0.4) / 3.1) + 0.3 * S(t / SaapuminenS);
+
+        /// <summary>
+        /// ESIKÄÄNTÖ (v3f, omistaja 28.9. klo 09.29: "mikäli karttapallo on pyörinyt eri kohtaan, kuin on suunniteltu, niin se voisi
+        /// alussa pehmeästi pyörähtää oikeaan paikkaan ja zoomitasoon ja sitten varsinainen lentoanimaatio alkaisi"): kesto (s)
+        /// napautusnäkymästä valintanäkymään. 0, kun ero on huomaamaton (katsepiste alle 1°, etäisyys ±5 %, kallistus alle 2°,
+        /// suunta alle 3°); muuten 0,8–2,0 s suurimman eron mukaan (60° kaarta, 1,5 e-kertaa zoomia, 45° kallistusta, 90° suuntaa).
+        /// </summary>
+        public static double EsikaannonKesto(Asento a, Asento b)
+        {
+            double kulma = LennonAikajana.ReittiM(a.Lat, a.Lon, b.Lat, b.Lon) / R * 180.0 / Math.PI;
+            double zoom = Math.Abs(Math.Log(Math.Max(1.0, a.EtaisyysM) / Math.Max(1.0, b.EtaisyysM)));
+            double kall = Math.Abs(a.Kallistus - b.Kallistus), suu = Math.Abs(Kulmaero(a.Suuntima, b.Suuntima));
+            if (kulma < 1.0 && zoom < 0.05 && kall < 2.0 && suu < 3.0) return 0.0;
+            double m = Math.Max(Math.Max(kulma / 60.0, zoom / 1.5), Math.Max(kall / 45.0, suu / 90.0));
+            return 0.8 + 1.2 * Rajaa(m, 0, 1);
+        }
+
+        /// <summary>Esikäännön asento osuudella u (0–1, pehmeä S): katsepiste isoympyrää, etäisyys log-asteikolla, kallistus ja
+        /// katse suoraan, suunta lyhintä tietä.</summary>
+        public static Asento Esikaanto(Asento a, Asento b, double u)
+        {
+            double s = S(u);
+            var q = LennonV3.Isoympyralla(a.Lat, a.Lon, b.Lat, b.Lon, s);
+            double la = Math.Log(Math.Max(1.0, a.EtaisyysM)), lb = Math.Log(Math.Max(1.0, b.EtaisyysM));
+            return new Asento(q.Lat, q.Lon, Math.Exp(la + (lb - la) * s), a.Kallistus + (b.Kallistus - a.Kallistus) * s,
+                Normalisoi(a.Suuntima + Kulmaero(a.Suuntima, b.Suuntima) * s), a.Katse + (b.Katse - a.Katse) * s);
         }
 
         /// <summary>Silmän korkeus pallon pinnasta (m) hetkellä t (testit ja taulukko: erkanemisen korkeuskäyrä).</summary>

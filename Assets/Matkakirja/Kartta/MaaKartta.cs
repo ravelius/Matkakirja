@@ -447,6 +447,23 @@ namespace Matkakirja
         /// </summary>
         public bool VainKorostetut { get; private set; }
 
+        /// <summary>
+        /// Maakuntatilan rajat (omistaja 28.9. klo 20.3x: "maakuntien rajat pitäisi näkyä"): rajat näkyvät myös maan kokoisessa
+        /// näkymässä (ei z6-tiheysrajaa), vähintään 1,4 pt leveinä ja peitolla vähintään 0,8.
+        /// </summary>
+        public bool TilaRajat { get; private set; }
+
+        public void AsetaTilaRajat(bool paalla)
+        {
+            if (TilaRajat == paalla) return;
+            TilaRajat = paalla;
+            rajaLaitePx = -1f; // leveys lasketaan uudelleen seuraavassa ruudussa
+            AsetaRajanVari();
+        }
+
+        const float TilaRajaPt = 1.4f;
+        const double TilaRajaPeitto = 0.8;
+
         public void AsetaVainKorostetut(bool vain)
         {
             if (VainKorostetut == vain) return;
@@ -858,6 +875,7 @@ namespace Matkakirja
                 bool lin = QualitySettings.activeColorSpace == ColorSpace.Linear;
                 // Löydös 113 jatko: oletusrajat ilman täyttöä webin täydellä rasterirajalla (0,45), täytön kanssa 0,297.
                 double peitto = Viivaleveys.AluerajaPeitto(TayttoNakyy, lin);
+                if (TilaRajat) peitto = Math.Max(peitto, TilaRajaPeitto);
                 // Color on sRGB-arvoina; URP muuntaa _BaseColorin lineaariseksi lineaarisessa projektissa.
                 rajaOma.SetColor("_BaseColor", new Color((float)m[0], (float)m[1], (float)m[2], (float)peitto * rajaAlfa * rajaHaive * saapumisKerroin));
                 return;
@@ -904,6 +922,7 @@ namespace Matkakirja
             rajaTiheys = sallittu ? Pintaosuma.Tiheys(georeferenssi, kamera) : 0f;
             // Maakunnat: webin rasteriraja vasta z6:sta (tiheys yli 60 laitepx/°).
             double minTiheys = maakohtainen ? Math.Max(rajatMinTiheys, Viivaleveys.AluerajaMinTiheys) : rajatMinTiheys;
+            if (TilaRajat) minTiheys = 0.0; // maakuntatila: rajat myös kaukaa
             float uusi = Viivaleveys.AluerajaHaive(rajaHaive, sallittu, rajaTiheys, minTiheys, Time.unscaledDeltaTime);
             bool muuttui = uusi != rajaHaive;
             rajaHaiveLiikkuu = muuttui;
@@ -915,6 +934,7 @@ namespace Matkakirja
                 double lat = Pintaosuma.Osuma(georeferenssi, kamera, keski, out _, out double l) ? l : 0.0;
                 float k = PalloKierto.Pistekerroin;
                 float px = (float)Viivaleveys.AluerajaLaitePx(rajaTiheys, lat);
+                if (TilaRajat) px = Mathf.Max(px, TilaRajaPt * k);
                 var (pt, alfa) = Viivaleveys.AluerajaPiirto(px, k);
                 if (px != rajaLaitePx || (float)alfa != rajaAlfa)
                 {

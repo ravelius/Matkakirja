@@ -25,10 +25,16 @@ namespace Matkakirja
 
         /// <summary>Pelitunteja matkan alusta (lähtö = 0).</summary>
         public static double Tunnit;
-        /// <summary>Lontoon kello lähdössä tunteina (v3f säätää: Eurooppa vielä yössä).</summary>
-        public static double AlkuKelloUtc = 1.0;
+        /// <summary>Lontoon kello lähdössä tunteina (UTC). v3f2 (omistaja 28.9. klo 15.3x v3f2-videosta: "päivä voisi tulla
+        /// aiemmin"): 02.30, jolloin valinnassa koko Eurooppa on yössä (Moskova −8°, porvarillinen hämärä alkaa −6°:sta) ja
+        /// aamu tulee lennolla ennen ohitusta (Ateena 5,4 s; lähdöllä 01.00 8,4 s).</summary>
+        public const double OletusAlkuKelloUtc = 2.5;
+        public static double AlkuKelloUtc = OletusAlkuKelloUtc;
         /// <summary>true lennon ajan (Nappula kirjoittaa Tunnit); false = valinta, kello etenee reaaliajassa.</summary>
         public static bool Lennossa;
+        /// <summary>true aloituskaupungin valinnan ajan (kellonäyttö kirjoittaa joka ruutu); päivän ja yön raja
+        /// (Kartta/Paivanvalo.cs) on päällä valinnassa ja lennossa.</summary>
+        public static bool Valinnassa;
 
         /// <summary>Kellonaika 0–24 h (Lontoo).</summary>
         public static double Kellonaika => ((AlkuKelloUtc + Tunnit) % 24 + 24) % 24;
@@ -77,11 +83,12 @@ namespace Matkakirja
         }
 
         /// <summary>Uusi matka: kello lähtöhetkeen.</summary>
-        public static void Nollaa(double alkuKelloUtc = 1.0)
+        public static void Nollaa(double alkuKelloUtc = OletusAlkuKelloUtc)
         {
             AlkuKelloUtc = alkuKelloUtc;
             Tunnit = 0;
             Lennossa = false;
+            Valinnassa = false;
         }
     }
 }

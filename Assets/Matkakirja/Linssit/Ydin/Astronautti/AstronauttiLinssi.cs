@@ -54,6 +54,11 @@ namespace Matkakirja.Linssit.Astronautti
         /// osoite, voima 0,45 ja nousu 2 s ovat Pelikoodarin taulussa (Aanisoitin.LinssiTaustat). Musiikki on pidossa.
         /// </summary>
         public const string Humina = "astro-humina";
+        /// <summary>
+        /// Kuvanäkymän selitteen luentojen pysyvä säilölohko (web satelliitti.js SELITTEEN_SAILIO, PR #3568): sama lohko kuin
+        /// webissä, joten kerran syntetisoitu selite soi molemmilla alustoilla ämpäristä (workerin lohko /^[a-z0-9-]{1,24}$/).
+        /// </summary>
+        public const string SelitteenSailio = "astro-selite";
         public const double MaanSade = 6_371_000;
         public const double PaljastuksenMinimiMs = 1800, PaljastuksenKattoMs = 12000;
         public const int PaljastuksenKehykset = 3;
@@ -187,6 +192,12 @@ namespace Matkakirja.Linssit.Astronautti
 
         public Iss.KyydinTila Kyyti => kyyti.Tila;
         public bool Kyydissa => kyyti.Kyydissa;
+
+        /// <summary>Kyydin siirtymä kesken (Pulun taulun askelkone odottaa sen loppuun, web kyytiMoodi siirtyy).</summary>
+        public bool KyytiSiirtyy => kyyti.Siirtyy;
+
+        /// <summary>Kameran katsekohde (web aloitustila().pov): Pulun taulun kuvamoodi avaa sitä lähimmän kohteen.</summary>
+        public (double Lat, double Lon) Katse => y == null ? (double.NaN, double.NaN) : (y.Kamera.Lat, y.Kamera.Lon);
 
         Iss.IssHetki Hetki(DateTime utc, LatLon paikka) =>
             new Iss.IssHetki(paikka, Iss.IssNyt.KorkeusKm(utc) * 1000, Iss.IssNyt.Suuntima(utc));

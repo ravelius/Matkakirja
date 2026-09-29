@@ -25,6 +25,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
@@ -68,6 +69,24 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<int, (int Likainen, int Versio)> laskurit = new Dictionary<int, (int, int)>();
         int laskurinKehykset;
         public static bool Diagnostiikka;
+
+        // KOSKETUSVÄLIMUISTIN MITÄTÖINTI (omistajan havainto iPadilla 28.9.2026: ~joka kolmas napautus
+        // ei tehnyt mitään tai sulki nostokortin väärin). Juurisyy (UnityCsReference Modules/UIElements/Core/Panel.cs,
+        // 6000.3): BaseVisualElementPanel.Pick(point, pointerId) palauttaa pointerId:n edellisen Pickin elementin
+        // suoraan välimuistista (m_TopElementUnderPointers), jos Vector2Int.FloorToInt(point) osuu samaan pikseliin
+        // kuin viimeksi. UpdateElementUnderPointers mitätöi tämän välimuistin vain hiirelle (PointerId.screenHoveringPointers);
+        // kosketuspointerien (PointerId.touchPointerIdBase .. +touchPointerCount-1) välimuisti EI mitätöidy asettelun
+        // muuttuessa, joten DefaultEventSystem (ja tämän luokan oma PeittaaPisteen) saattaa kohdistaa kosketuksen
+        // vanhaan, jo irronneeseen elementtiin, kun sormi osuu samaan pikseliin kuin edellinen kosketus. Kun kaikki
+        // kosketukset päättyvät, pakotetaan uudelleenlaskenta: BaseVisualElementPanel.ClearCachedElementUnderPointer
+        // (sisäinen — haetaan heijastuksella) jokaiselle kosketuspointerille, kaikilta kerroksilta.
+        static System.Reflection.MethodInfo tyhjennaValimuistiMetodi;
+        static bool tyhjennaValimuistiHaettu, tyhjennaValimuistiOhitettu, tyhjennaValimuistiKirjattu;
+        bool kosketusPainettunaEdellinen;
+        /// <summary>Jäljellä olevat ruudut, joina mitätöinti toistetaan (kosketuksen päättymisestä: tämä + 2 seuraavaa).</summary>
+        int mitatoiKehyksiaJaljella;
+        /// <summary>Diagnostiikka (`ui kosketusvalimuisti`): onnistuneiden mitätöintikierrosten määrä.</summary>
+        int mitatointeja;
 
         /// <summary>Turva-alueen reunat muuttuivat (kierto, ensimmäinen asettelu).</summary>
         public event Action TurvaMuuttui;
@@ -164,6 +183,10 @@ namespace Matkakirja.Natiivi
             if (!nakyvissa) juuri.style.display = DisplayStyle.None;
             juuri.RegisterCallback<TransitionRunEvent>(TransitioAlkoi, TrickleDown.TrickleDown);
             // Vierityslöydös (omistaja 27.9. klo 17.0x): iOS-tuntumainen kosketusvieritys kaikkiin pystysivuihin.
+            // Kosketusvälimuistin mitätöinti myös UI Toolkitin omasta irrotuksesta (simulaattorin napautus painuu ja nousee saman
+            // ruudun aikana, jolloin Input Systemin isPressed ei ehdi näkyä LateUpdatessa; mitattu iPad 503000D1 29.9.).
+            juuri.RegisterCallback<PointerUpEvent>(_ => mitatoiKehyksiaJaljella = 3, TrickleDown.TrickleDown);
+            juuri.RegisterCallback<PointerCancelEvent>(_ => mitatoiKehyksiaJaljella = 3, TrickleDown.TrickleDown);
             Kosketusvieritys.LiitaYleinen(juuri);
             dokumentit[kerros] = d;
             return d;
@@ -264,7 +287,7 @@ namespace Matkakirja.Natiivi
                 var paneeli = juuri?.panel;
                 if (paneeli == null) continue;
                 var p = RuntimePanelUtils.ScreenToPanel(paneeli, ylhaalta);
-                var osuma = paneeli.Pick(p);
+                var osuma = paneeli.PickAll(p, null); // tuore: Pick lukee hiiren välimuistia (kosketusvälimuisti alla)
                 if (osuma != null && osuma != juuri) return true;
             }
             return false;
@@ -299,6 +322,12 @@ namespace Matkakirja.Natiivi
 
         void LateUpdate()
         {
+            // Kosketusvälimuistin mitätöinti (ks. kenttien yllä oleva kommentti): riippumaton nakyvissa-lipusta,
+            // koska kosketus voi päättyä juuri sillä ruudulla, kun UI piilotetaan (3D-mittaukset). LateUpdatessa,
+            // koska UI Toolkitin paneelit (ja niiden oma PointerUp-käsittely) päivittyvät PreLateUpdatessa ennen
+            // LateUpdatea (ks. tiedoston alun kommentti) — mitätöinti kirjoitetaan siis PÄÄLLE sen jälkeen.
+            PaivitaKosketusValimuisti();
+
             // Lämpö: muutosnäyte joka kehys (ks. tiedoston alku); Ruudunpaivitys (LateUpdate, järjestys 10000) lukee sen.
             if (!nakyvissa) return;
             bool versio = (VersioTapa || Diagnostiikka) && versioOminaisuus != null;
@@ -330,6 +359,108 @@ namespace Matkakirja.Natiivi
                 while (muutokset.Count > 0 && nyt - muutokset.Peek() > 2f) muutokset.Dequeue();
                 if (!Diagnostiikka) break;
             }
+        }
+
+        /// <summary>
+        /// Seuraa kosketusten (sormien) tilaa Input Systemin kautta. Kun kaikki kosketukset päättyvät
+        /// (painettu → ei painettu), mitätöi kosketuspointerien elementtivälimuistin tälle ja kahdelle
+        /// seuraavalle ruudulle — UI Toolkitin oma PointerUp-käsittely voi ajoittua ennen tai jälkeen
+        /// tämän tarkistuksen ja kirjoittaa välimuistin uudelleen samaan pikseliin (ks. kenttien kommentti).
+        /// </summary>
+        void PaivitaKosketusValimuisti()
+        {
+            bool painettuna = false, vapautui = false;
+            var kosketus = Touchscreen.current;
+            if (kosketus != null)
+            {
+                var kosketukset = kosketus.touches;
+                for (int i = 0; i < kosketukset.Count; i++)
+                {
+                    var painike = kosketukset[i].press;
+                    if (painike.isPressed) painettuna = true;
+                    if (painike.wasReleasedThisFrame) vapautui = true;
+                }
+            }
+            // iPad (myös simulaattori) voi syöttää napautukset hiirenä: hiiren painike lasketaan samaksi eleeksi.
+            var hiiri = Mouse.current;
+            if (hiiri != null)
+            {
+                if (hiiri.leftButton.isPressed) painettuna = true;
+                if (hiiri.leftButton.wasReleasedThisFrame) vapautui = true;
+            }
+            if (vapautui || (kosketusPainettunaEdellinen && !painettuna)) mitatoiKehyksiaJaljella = 3; // tämä + 2 seuraavaa
+            kosketusPainettunaEdellinen = painettuna;
+            if (mitatoiKehyksiaJaljella <= 0) return;
+            mitatoiKehyksiaJaljella--;
+            TyhjennaKosketusValimuisti();
+        }
+
+        /// <summary>
+        /// Kutsuu BaseVisualElementPanel.ClearCachedElementUnderPointeria (heijastuksella, sisäinen metodi)
+        /// jokaiselle kosketuspointerille kaikilla kerroksilla. Jos metodia ei löydy tai Invoke heittää,
+        /// kirjaa varoituksen kerran ja ohittaa pysyvästi (ei kaadu).
+        /// </summary>
+        void TyhjennaKosketusValimuisti()
+        {
+            if (tyhjennaValimuistiOhitettu) return;
+            bool jokinPaneeliValmis = false;
+            foreach (var d in dokumentit.Values)
+            {
+                var paneeli = d.rootVisualElement?.panel;
+                if (paneeli == null) continue;
+                jokinPaneeliValmis = true;
+                if (!tyhjennaValimuistiHaettu)
+                {
+                    tyhjennaValimuistiHaettu = true;
+                    tyhjennaValimuistiMetodi = EtsiTyhjennaValimuistiMetodi(paneeli.GetType());
+                    if (tyhjennaValimuistiMetodi == null)
+                    {
+                        tyhjennaValimuistiOhitettu = true;
+                        Debug.LogWarning("MATKAKIRJA ui kosketusvälimuisti: ClearCachedElementUnderPointer-metodia ei löytynyt tyypistä "
+                            + paneeli.GetType() + " — ohitetaan pysyvästi");
+                        return;
+                    }
+                }
+                for (int pid = PointerId.touchPointerIdBase - 1; pid < PointerId.touchPointerIdBase + PointerId.touchPointerCount; pid++)
+                {
+                    // touchPointerIdBase − 1: hiiri (PointerId.mousePointerId, tarkistetaan alla) samalla silmukalla.
+                    int id = pid < PointerId.touchPointerIdBase ? PointerId.mousePointerId : pid;
+                    try { tyhjennaValimuistiMetodi.Invoke(paneeli, new object[] { id, null }); }
+                    catch (Exception e)
+                    {
+                        tyhjennaValimuistiOhitettu = true;
+                        Debug.LogWarning("MATKAKIRJA ui kosketusvälimuisti: mitätöinti heitti (" + e.GetType().Name + ") — ohitetaan pysyvästi");
+                        return;
+                    }
+                }
+            }
+            if (!jokinPaneeliValmis) return;
+            mitatointeja++;
+            if (!tyhjennaValimuistiKirjattu)
+            {
+                tyhjennaValimuistiKirjattu = true;
+                Debug.Log("MATKAKIRJA ui kosketusvälimuisti: mitätöinti käytössä (" + tyhjennaValimuistiMetodi.DeclaringType + ")");
+            }
+        }
+
+        static System.Reflection.MethodInfo EtsiTyhjennaValimuistiMetodi(Type paneelinTyyppi)
+        {
+            for (var t = paneelinTyyppi; t != null; t = t.BaseType)
+            {
+                var m = t.GetMethod("ClearCachedElementUnderPointer",
+                    System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public,
+                    null, new[] { typeof(int), typeof(EventBase) }, null);
+                if (m != null) return m;
+            }
+            return null;
+        }
+
+        /// <summary>Testikomento `ui kosketusvalimuisti`: löytyikö mitätöintimetodi ja montako kierrosta on tehty.</summary>
+        public string KosketusValimuistiKuvaus()
+        {
+            if (tyhjennaValimuistiOhitettu) return "kosketusvälimuisti: EI KÄYTÖSSÄ (metodia ei löytynyt tai Invoke epäonnistui, ks. loki)";
+            if (!tyhjennaValimuistiHaettu) return "kosketusvälimuisti: ei vielä haettu (ei paneelia valmiina)";
+            return $"kosketusvälimuisti: käytössä ({tyhjennaValimuistiMetodi.DeclaringType}), mitätöintikierroksia {mitatointeja}";
         }
 
         /// <summary>UI rauhassa (Ruudunpaivitys.UiRauhassa): piilotettu UI tai ei muutosta RauhaS-aikaan.</summary>
