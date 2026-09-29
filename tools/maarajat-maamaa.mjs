@@ -27,6 +27,8 @@
 // Ämpäriin gzipattuna maapolygonit.geojsonin viereen:
 // julisteet/pallo/vektorit/maarajat-<pvm>/maamaa.geojson
 // (FeatureCollection, properties.iso = ISO3, MultiLineString lon/lat).
+// Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
+import { krimUkrainalleAdmin0 } from './krim-ukrainalle.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { maapolygonitLonLat } from './maapolygonit-geojson.mjs';
 
@@ -185,7 +187,9 @@ if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
     process.exit(1);
   }
   const j = JSON.parse(readFileSync(lahde, 'utf8'));
-  const { features, tilasto } = maamaaRajat(j, JSON.parse(readFileSync(nePolku, 'utf8')), meriPolku ? JSON.parse(readFileSync(meriPolku, 'utf8')) : null);
+  const neAineisto = JSON.parse(readFileSync(nePolku, 'utf8'));
+  krimUkrainalleAdmin0(neAineisto); // maski: Krim UKR:n maata, Perekop ei ole maaraja
+  const { features, tilasto } = maamaaRajat(j, neAineisto, meriPolku ? JSON.parse(readFileSync(meriPolku, 'utf8')) : null);
   writeFileSync(ulos, JSON.stringify({
     type: 'FeatureCollection',
     lahde: `${j.lahde}; luokittelu: admin-0-maamaski ${MASKI}°, koepisteet ±${ETAISYYS}°${meriPolku ? `, salmitesti NE 10m ocean ±${VESI_ETAISYYS}°` : ''}`,
