@@ -152,6 +152,9 @@ namespace Matkakirja.Natiivi
 
         // --- piirto --------------------------------------------------------------------
 
+        /// <summary>Ruudukko laatikon vasempaan reunaan (radion kaksi eri kokoista riviä samaan pystylinjaan).</summary>
+        public bool VasenTasaus;
+
         bool sammuneet = true;
         /// <summary>Sammuneet pisteet piirretään (false: Codexin radion ikkunakuvassa on oma pistepohja).</summary>
         public bool Sammuneet { get => sammuneet; set { if (sammuneet == value) return; sammuneet = value; MarkDirtyRepaint(); } }
@@ -166,6 +169,7 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(rect.width) || rect.width <= 0 || rect.height <= 0) return;
             float s = Mathf.Min(rect.width / leveys, rect.height / korkeus);
             var o = rect.center - new Vector2(leveys, korkeus) * (s * 0.5f);
+            if (VasenTasaus) o.x = rect.xMin;
             Color muste = Suodin(omaMuste ?? Muste), tausta = Suodin(lasi);
             var sammunut = muste; sammunut.a = Peitto(SammunutPeitto, muste, tausta);
             float r = Sade * s;

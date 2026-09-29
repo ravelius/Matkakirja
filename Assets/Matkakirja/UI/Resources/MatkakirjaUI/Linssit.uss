@@ -1425,7 +1425,7 @@
 /* Web .aikajana-avaus-otsikko: 1,46rem, 600, small-caps, 0,09 em (UITK em/100 → 9), #3a2812. */
 .mk-aikajana-avaus__otsikko {
     font-size: 23.4px;
-    letter-spacing: 9px;
+    letter-spacing: 38.46px; /* web 9px */
     color: #3a2812;
     -unity-text-align: upper-center;
     white-space: normal;
@@ -1514,7 +1514,7 @@
 /* 1,06rem small-caps (C# Kapiteelit), 0,17 em (UITK 17). */
 .mk-aikajana-avausnappi .mk-nappi__teksti {
     font-size: 17px;
-    letter-spacing: 17px;
+    letter-spacing: 100px; /* web 17px */
     color: #f6e6c2;
 }
 
@@ -1893,6 +1893,15 @@
     padding: 5px 6px 0 6px;
 }
 
+/* YKSINKERTAINEN SUORAKAIDEPANEELI (omistaja 29.9.2026 klo 20.2x: "Palataan siihen, mutta katso sekin läpi ja paranna
+   hieman"; Päätoimittajan katselmus): paneeli kelluu turva-alueen sisällä kaikilla laitteilla (alareuna koodissa),
+   pyöristys kaikissa kulmissa, tasaiset 12 pt:n raot, VU ja näyttö samassa kehyksessä ja korkeudessa, virtanappi
+   pienenä VIRTA-nimiön kanssa näytön rinnalla, asteikolla viritetty ±2/±3 asemaa isommalla tekstillä. */
+.mk-radio {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 .mk-radio__kotelo {
     flex-grow: 1;
     max-width: 640px;
@@ -1900,11 +1909,10 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 7.2px 8px;
-    border-width: 1px 1px 0 1px;
+    border-width: 1px;
     border-color: rgba(0, 0, 0, 0.5);
     border-top-color: rgba(217, 161, 59, 0.55);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 12px;
 }
 
 .mk-radio--levea .mk-radio__kotelo {
@@ -1969,25 +1977,25 @@
 }
 
 .mk-radio__vukehys {
-    width: 76px;
-    height: 56px;
-    margin-right: 10px;
-    padding: 4px;
+    width: 80px;
+    height: 62px;
+    margin-right: 12px;
+    padding: 6px;
 }
 
 .mk-radio--levea .mk-radio__vukehys {
-    width: 118px;
+    width: 124px;
     height: 84px;
 }
 
 .mk-radio__lcdkehys {
-    width: 240px;
-    height: 58px;
-    padding: 8px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 62px;
+    padding: 6px;
 }
 
 .mk-radio--levea .mk-radio__lcdkehys {
-    width: 424px;
     height: 84px;
 }
 
@@ -2001,23 +2009,41 @@
 }
 
 .mk-radio__lamppualue {
-    flex-grow: 1;
+    flex-shrink: 0;
+    width: 40px;
+    margin-left: 12px;
     align-self: stretch;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 20px;
+}
+
+.mk-radio--levea .mk-radio__lamppualue {
+    width: 48px;
+}
+
+.mk-radio__virta {
+    margin: 1px 0 0 0;
+    padding: 0;
+    font-size: 8px;
+    letter-spacing: 12.5px; /* web 1px */
+    color: rgba(236, 206, 150, 0.85);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.mk-radio--levea .mk-radio__virta {
+    font-size: 9px;
 }
 
 .mk-radio__asteikkokehys {
-    height: 36px;
-    margin-top: 8px;
+    height: 40px;
+    margin-top: 12px;
     padding: 4px;
 }
 
 .mk-radio--levea .mk-radio__asteikkokehys {
-    height: 42px;
-    margin-top: 10px;
+    height: 46px;
+    margin-top: 12px;
 }
 
 .mk-radio__naytto {
@@ -2045,6 +2071,24 @@
     bottom: 0;
 }
 
+/* Näytön rivit: tasaiset sisämarginaalit, 1. rivi (16 merkkiä) isompi, 2. rivi (22) pienempi, vasen reuna samassa. */
+.mk-radio__rivit {
+    padding: 6px 9px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mk-radio__rivi1 {
+    flex-grow: 1.35;
+    flex-basis: 0;
+}
+
+.mk-radio__rivi2 {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-top: 3px;
+}
+
 .mk-radio__lasikehys {
     position: absolute;
     left: 0;
@@ -2060,7 +2104,7 @@
  * väli näyttöön .7rem kuten webissä. */
 .mk-radio__lamppu {
     flex-shrink: 0;
-    width: 36px;
+    width: 40px;
     height: 36px;
 }
 
@@ -2091,22 +2135,31 @@
     flex-shrink: 1;
     flex-basis: 0;
     min-width: 0;
-    padding: 3px 1px 0 1px;
-    font-size: 7px;
-    letter-spacing: 2px; /* web 0.14px */
+    margin: 3px 1px 0 1px;
+    padding: 1px 2px;
+    font-size: 10px;
+    letter-spacing: 5px; /* web 0.5px */
     -unity-text-align: upper-center;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: clip;
-    color: rgba(48, 33, 15, 0.82);
-    text-shadow: 0 1px 0 rgba(255, 246, 220, 0.4);
-    transition-property: color, opacity;
+    text-overflow: ellipsis;
+    color: rgba(34, 22, 8, 0.92);
+    text-shadow: 0 1px 0 rgba(255, 246, 220, 0.45);
+    border-radius: 3px;
+    transition-property: color, opacity, background-color;
     transition-duration: 0.18s;
 }
 
+.mk-radio--levea .mk-radio__kaupunki {
+    font-size: 12px;
+}
+
+/* Viritetty asema meripihkakorostuksella. */
 .mk-radio__kaupunki--keski {
-    color: rgba(40, 27, 12, 0.95);
-    letter-spacing: 1.75px; /* web 0.28px */
+    color: rgb(40, 22, 4);
+    background-color: rgba(242, 192, 94, 0.9);
+    text-shadow: none;
+    letter-spacing: 3.12px; /* web 0.5px */
 }
 
 .mk-radio__kaupunki--kauka {
@@ -3054,6 +3107,23 @@
     height: 44px;
 }
 
+/* Yksinkertaisen radiokartan asemanimet (omistaja 29.9.2026): pieni meripihka tummalla varjolla hämärän kartan päällä,
+   viritetty kirkkaampana ja lihavana. */
+.mk-radiomerkki__nimi {
+    position: absolute;
+    font-size: 11px;
+    color: rgba(242, 192, 94, 0.72);
+    text-shadow: 0 1px 2px rgba(10, 6, 2, 0.9);
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.mk-radiomerkki__nimi--soi {
+    font-size: 13px;
+    color: rgb(255, 214, 130);
+}
+
 
 .mk-radio--levea .mk-radio__keskio {
     width: auto;
@@ -3287,7 +3357,7 @@
     margin: 0 0 0 10px;
     padding: 0;
     font-size: 12px;
-    letter-spacing: 0.4px;
+    letter-spacing: 3.33px; /* web 0.4px */
     color: #efe6d2;
     -unity-text-align: middle-right;
 }
@@ -3686,7 +3756,7 @@
 .mk-issohjaus__nimi {
     flex-grow: 1;
     font-size: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 8.33px; /* web 1px */
     color: rgba(233, 250, 240, 0.85);
 }
 
@@ -3762,61 +3832,6 @@
     height: 20px;
     border-radius: 10px;
     background-color: rgb(93, 255, 168);
-}
-
-/* CODEXIN PUURADIO (29.9.2026, RadioNakyma.Codex.cs): yksi valaistu kuva koko kankaan kokoisena ja VU-neula rajauksena,
-   pelin osat (pistenäyttö, asteikon nimet, virtakytkin, linkkirivi) kuvan päällä. */
-.mk-radio__codex {
-    align-self: flex-end;
-    flex-shrink: 0;
-}
-
-.mk-radio__kerros {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    -unity-background-scale-mode: stretch-to-fill;
-}
-
-.mk-radio__codex-neula {
-    -unity-background-scale-mode: stretch-to-fill;
-}
-
-.mk-radio__codex-virta {
-    position: absolute;
-}
-
-.mk-radio__codex-virta .mk-radio__lamppu {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    margin: 0;
-}
-
-.mk-radio__asteikko--codex {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    border-width: 0;
-    height: auto;
-}
-
-.mk-radio__linkki--codex {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 100%;
-    margin-bottom: 6px;
-    justify-content: center;
 }
 
 /* PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07; web malli, Pelikoodarin rakenne): alinäkymät Linssit ja Aarteet samassa
