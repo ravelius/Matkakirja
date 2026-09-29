@@ -61,7 +61,18 @@ const onVakanen = (d) => (d.match(/L/g) ?? []).length === 2;
 
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
-/** Avaa pelin annetussa ruutukoossa ja palauttaa sivun. */
+/**
+ * Avaa pelin annetussa ruutukoossa ja palauttaa sivun.
+ *
+ * PÄIVITETTY 29.9.2026 (pillerivalikkouudistus, omistaja): tämä savuke
+ * napauttaa nyt #turn-pilliä "pysty"-tapauksessa (hampurilainen on
+ * piilossa kapealla ruudulla), ja pilleri on tyhjä ja `hidden`
+ * PICKSTART-vaiheessa (js/ui.js renderTurnPill: "Etusivulla ja
+ * avauslennolla yläpalkki on tyhjä"). Peli viedään siis väkisin
+ * toimintavaiheeseen samalla kaavalla kuin tools/savuke-mannerlento.mjs
+ * ja tools/savukkeet/savuke-pillerivalikko.mjs — muuten pilleri ei
+ * koskaan näkyisi eikä sitä voisi napauttaa.
+ */
 async function avaaPeli(leveys, korkeus) {
   const ctx = await selain.newContext({
     viewport: { width: leveys, height: korkeus }, serviceWorkers: 'block',
@@ -77,6 +88,21 @@ async function avaaPeli(leveys, korkeus) {
       .find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
   });
   await sivu.waitForTimeout(3500);
+  await sivu.evaluate(() => {
+    const mk = window.matkakirja;
+    if (!mk?.ui?.game) return;
+    const { ui } = mk;
+    const g = ui.game;
+    const p = g.player;
+    const kaupunkiId = g.pack.cities?.[0]?.id;
+    if (kaupunkiId) { p.pos = { type: 'city', city: kaupunkiId }; g.world.visited.add(kaupunkiId); }
+    p.money = 2000;
+    g.phase = 'action';
+    ui.render();
+    document.querySelectorAll('dialog[open]').forEach((d) => d.close());
+    document.querySelectorAll('.postikortti, .kulttuuri-suurennos').forEach((e) => e.remove?.());
+  });
+  await sivu.waitForTimeout(500);
   return { ctx, sivu, virheet };
 }
 
@@ -117,7 +143,17 @@ const lueTila = (sivu) => sivu.evaluate(() => {
 
 const kuvat = [];
 
-/* ── 1. PYSTY 390 × 844: yläpalkki näkyy ───────────────────────────── */
+/*
+ * ── 1. PYSTY 390 × 844: yläpalkki näkyy, hampurilainen POIS ─────────
+ *
+ * PÄIVITETTY 29.9.2026 (omistaja, pillerivalikkouudistus, sanatarkasti:
+ * *"poistetaan tuo hampurilaiskuvake kokonaan niin, että siirretään
+ * pilleri oikealle puolelle"*): kapealla ruudulla (≤560px)
+ * .valikko-kotelo (hampurilaisen kotelo) piiloutuu kokonaan, ja
+ * #turn-pill on ainoa valikkonappi — se avaa saman #paavalikon.
+ * Hampurilaisen kolmen viivan kuvaketarkistus jäi pois: napin muoto ei
+ * ole enää mitattavissa, koska nappi ei näy tällä ruutukoolla lainkaan.
+ */
 {
   const { ctx, sivu, virheet } = await avaaPeli(390, 844);
   vaadi('pysty: sivu latautui ilman poikkeuksia', virheet.length === 0,
@@ -125,21 +161,27 @@ const kuvat = [];
   const tila = await lueTila(sivu);
   console.log('      pysty:', JSON.stringify(tila));
   vaadi('pysty: yläpalkki on näkyvissä', tila.palkkiNakyy, JSON.stringify(tila.palkkiLaatikko));
-  vaadi('pysty: päävalikon nappi on näkyvissä', tila.valikkoNappiNakyy);
-  vaadi('pysty: päävalikossa on kolme viivaa',
-    tila.valikkoPolut.length >= 1
-      && tila.valikkoPolut.every(VASTAKOE ? onVakanen : onSuoraViiva)
-      && tila.valikkoPolut.join('').split('M').length - 1 === 3,
-    JSON.stringify(tila.valikkoPolut));
+  vaadi('pysty: päävalikon nappi (hampurilainen) on piilossa', !tila.valikkoNappiNakyy,
+    'pilleri korvaa sen kapealla ruudulla');
   vaadi('pysty: kartan väkäsnappi on piilossa', !tila.karttaNappiNakyy,
     JSON.stringify(tila.karttaLaatikko));
-  await sivu.click('#menu-btn');
+  const pilleriTila = await sivu.evaluate(() => {
+    const p = document.getElementById('turn-pill');
+    const r = p?.getBoundingClientRect();
+    const t = p && getComputedStyle(p);
+    return {
+      nakyy: Boolean(p) && t.display !== 'none' && r.width > 0 && r.height > 0,
+      x: r ? Math.round(r.x) : null, y: r ? Math.round(r.y) : null,
+    };
+  });
+  vaadi('pysty: pilleri on näkyvissä', pilleriTila.nakyy, JSON.stringify(pilleriTila));
+  await sivu.click('#turn-pill');
   await sivu.waitForTimeout(250);
   const auki = await sivu.evaluate(() => {
     const v = document.getElementById('paavalikko');
     return Boolean(v) && !v.hidden && v.getBoundingClientRect().height > 0;
   });
-  vaadi('pysty: nappi avaa päävalikon', auki);
+  vaadi('pysty: pilleri avaa päävalikon', auki);
   await sivu.screenshot({ path: `${JUURI}docs/raportit/kuvat/hampurilainen-pysty.png` });
   kuvat.push('hampurilainen-pysty.png');
   await ctx.close();

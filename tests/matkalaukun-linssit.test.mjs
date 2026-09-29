@@ -1,31 +1,38 @@
 /*
- * MATKALAUKUN LINSSIRUUDUKKO: NAPAUTUS SELITTÄÄ, "aktivoi" KYTKEE.
+ * LINSSIT-NÄKYMÄ: NAPAUTUS ESIKATSELEE, TOIMINTONAPPI AKTIVOI.
  *
  * Omistajan tilaus 5.9.2026 sanatarkasti: *"muuta: kun linssi klikataan
  * matkalaukussa niin silloin päivittyy vasta selite teksti ja tekstin
  * loppuun tulee "aktivoi", mitä klikkaamalla linssi menee päälle ja
  * matkalaukku sulkeutuu"*.
  *
+ * PÄIVITETTY 29.9.2026 (pillerivalikkouudistus, omistaja): entinen
+ * matkalaukku (#passport-dialog) on poistettu, ja linssivalitsin
+ * (#linssi-kotelo/#linssi-valikko — tunnisteet entiset) asuu nyt
+ * pillerivalikon Linssit-näkymässä. Kaksivaiheisuuden LOGIIKKA
+ * (rakennaLinssivalikko, esikatseleLinssi, aktivoiLinssi) ei muuttunut,
+ * mutta RIVIT piirtää nyt js/kokoelmanakyma.js:n piirraKokoelma —
+ * samalla piirtimellä kuin Aarteet-näkymä (ks. tests/kokoelmanakyma.test.mjs).
+ * Tämä testi vartioi siis kahta asiaa: että ui.js kytkee kokoelmanäkymän
+ * oikeilla takaisinkutsuilla, ja että kaksivaiheisuus toimii rivistä
+ * riviin asti.
+ *
  * Vartioitava sääntö on kaksivaiheisuus, ja se rikkoutuisi HILJAA:
- * jos ruudun kuuntelija joskus palautetaan kutsumaan valitseLinssi
+ * jos ruudun kuuntelija joskus palautetaan kutsumaan valitseLinssiä
  * suoraan, mikään ei kaadu — linssi vain syttyisi taas väärässä
  * kohdassa ja laukku jäisi auki. Siksi testi kiinnittää kolme asiaa:
  *
  *   1. ruudun napautus EI kutsu valitseLinssiä eikä sulje laukkua,
- *   2. napautus kirjoittaa juuri sen linssin selitteen ja panee sen
- *      ALLE Aktivoi-napin (myös "Ei linssiä" -ruudulle),
+ *   2. napautus kirjoittaa juuri sen linssin selitteen esikatselukorttiin
+ *      ja muuttaa rivin itsensä Aktivoi-napiksi (myös "Ei linssiä" -riville),
  *   3. Aktivoi kutsuu valitseLinssiä oikealla tunnuksella JA sulkee
  *      laukun — ja päällä olevan linssin kohdalla nappi on "Ota pois",
  *      joka kytkee linssin pois (valitseLinssi(null)).
  *
- * Napin muoto vaihtui 6.9.2026 (omistaja: *"Tee aktivoi tekstistä
- * nappi."*): ennen se oli tekstilinkin näköinen sana selitteen
- * perässä, nyt oma messinkireunainen nappi selitteen alla.
- *
  * DOM ajetaan pienellä omalla puumallilla samaan tapaan kuin
  * tests/pollo.test.mjs ja tests/lukija.test.mjs: Nodessa ei ole
  * selainta, eikä repoon oteta jsdomia. Malli toteuttaa täsmälleen ne
- * kentät, joita rakennaLinssivalikko ja paivitaLinssiTiedot DOMilta
+ * kentät, joita js/kokoelmanakyma.js ja ui.js:n linssimetodit DOMilta
  * kysyvät.
  */
 import test from 'node:test';
@@ -158,7 +165,7 @@ globalThis.localStorage ??= { getItem: () => null, setItem() {}, removeItem() {}
 const { UI } = await import('../js/ui.js');
 
 /* ---------------------------------------------------------------- */
-/* Laukun linssiosasto pienoiskoossa                                 */
+/* Linssit-näkymä pienoiskoossa                                      */
 /* ---------------------------------------------------------------- */
 
 const LINSSIT = [
@@ -167,9 +174,12 @@ const LINSSIT = [
 ];
 
 /**
- * Rakentaa ruudukon oikeilla ui.js:n metodeilla mutta tyngällä
- * ympäristöllä. valitseLinssi on kirjuri: testin koko idea on, kuka
- * sitä kutsuu ja milloin.
+ * Rakentaa näkymän oikeilla ui.js:n metodeilla mutta tyngällä
+ * ympäristöllä. valitseLinssi ja suljeLaukku ovat kirjureita: testin
+ * koko idea on, kuka niitä kutsuu ja milloin. suljeLaukku on oma
+ * kirjurinsa (ei enää passportDialog-tynkää) — sen oma toteutus
+ * (asetaMusiikkitila, Livian tunnereaktio) kuuluu muualle testattavaksi
+ * eikä tähän kaksivaiheisuuden vartioon.
  */
 function laukku({ paalla = null } = {}) {
   const ui = Object.create(UI.prototype);
@@ -179,33 +189,32 @@ function laukku({ paalla = null } = {}) {
   ui.linssiTuki = { kaikki: LINSSIT };
   ui.valitsut = [];
   ui.valitseLinssi = (tunnus) => { ui.valitsut.push(tunnus); };
-  ui.passportDialog = {
-    open: true,
-    close() { this.open = false; },
-  };
+  ui.suljettu = false;
+  ui.suljeLaukku = () => { ui.suljettu = true; };
   ui.rakennaLinssivalikko(LINSSIT);
   return ui;
 }
 
-const ruudut = (ui) => ui.linssiValikko.querySelectorAll('.linssi-liuskat button');
-const selite = (ui) => ui.linssiTiedot.childNodes.find((n) => n.luokat?.has('linssi-lyhyt'));
-const aktivointi = (ui) => ui.linssiTiedot.querySelectorAll('.linssi-aktivoi')[0] ?? null;
+const ruudut = (ui) => ui.linssiValikko.querySelectorAll('.kokoelma-rivi');
+const esikatselu = (ui) => ui.linssiValikko.querySelectorAll('.kokoelma-esikatselu')[0];
+const selite = (ui) => esikatselu(ui)?.childNodes.find((n) => n.luokat?.has('kokoelma-esikatselu-selite'));
+const toiminto = (ui) => esikatselu(ui)?.childNodes.find((n) => n.luokat?.has('kokoelma-toiminto')) ?? null;
 
 /* ---------------------------------------------------------------- */
 
-test('ruudukossa on "Ei linssiä" ja jokainen linssi', () => {
+test('listassa on "Ei linssiä" ja jokainen linssi', () => {
   const ui = laukku();
-  assert.deepEqual(ruudut(ui).map((n) => n.dataset.linssi), ['', 'topografia', 'vesistot']);
+  assert.deepEqual(ruudut(ui).map((n) => n.dataset.id), [null, 'topografia', 'vesistot']);
 });
 
 /*
- * KESKENERÄISET OMALLE RIVILLEEN RUUDUKON LOPPUUN (omistaja 20.9.2026
+ * KESKENERÄISET OMAAN RYHMÄÄNSÄ LISTAN LOPPUUN (omistaja 20.9.2026
  * klo 15.10: vertailulinssi, maidentiedot ja vesistölinssi harmaalla,
- * omalle riville, pienemmin — toimivat yhä). Linssi kertoo itse
- * (`kesken: true`); laukku latoo ne toiseen `.linssi-liuskat-kesken`-
- * ruudukkoon `kesken`-luokalla, ja napautus toimii kuten valmiilla.
+ * omalle riville — toimivat yhä). Linssi kertoo itse (`kesken: true`);
+ * js/kokoelmanakyma.js latoo ne omaan ryhmäänsä otsikolla
+ * "Keskeneräiset", ja napautus toimii kuten valmiilla.
  */
-test('keskeneräiset linssit ladotaan omalle riville ruudukon loppuun ja toimivat', async () => {
+test('keskeneräiset linssit ladotaan omaan ryhmäänsä listan loppuun ja toimivat', async () => {
   const ui = Object.create(UI.prototype);
   ui.linssiValikko = new Elementti('div');
   ui.linssiValittu = null;
@@ -218,21 +227,23 @@ test('keskeneräiset linssit ladotaan omalle riville ruudukon loppuun ja toimiva
   ui.linssiTuki = { kaikki: linssit };
   ui.valitsut = [];
   ui.valitseLinssi = (tunnus) => { ui.valitsut.push(tunnus); };
-  ui.passportDialog = { open: true, close() { this.open = false; } };
+  ui.suljettu = false;
+  ui.suljeLaukku = () => { ui.suljettu = true; };
   ui.rakennaLinssivalikko(linssit);
-  const rivit = ui.linssiValikko.childNodes.filter((n) => n.luokat?.has('linssi-liuskat'));
-  assert.equal(rivit.length, 2, 'valmiit ja keskeneräiset ovat eri ruudukoissa');
-  assert.ok(!rivit[0].luokat.has('linssi-liuskat-kesken') && rivit[1].luokat.has('linssi-liuskat-kesken'),
-    'keskeneräisten rivi on viimeisenä');
-  assert.deepEqual(rivit[0].querySelectorAll('button').map((n) => n.dataset.linssi), ['', 'topografia']);
-  const kesken = rivit[1].querySelectorAll('button');
-  assert.deepEqual(kesken.map((n) => n.dataset.linssi), ['vertailu', 'vesistot']);
-  assert.ok(kesken.every((n) => n.luokat.has('kesken')), 'kesken-luokka harmaasävylle ja pienelle kuvakkeelle');
-  assert.match(kesken[0].title, /keskeneräinen/);
-  // Toimii yhä: napautus esikatselee, Aktivoi kytkee.
+
+  const ryhmat = ui.linssiValikko.querySelectorAll('.kokoelma-ryhma');
+  assert.equal(ryhmat.length, 2, 'valmiit ja keskeneräiset ovat eri ryhmissä');
+  assert.deepEqual(ryhmat[0].querySelectorAll('.kokoelma-rivi').map((n) => n.dataset.id),
+    [null, 'topografia']);
+  const kesken = ryhmat[1].querySelectorAll('.kokoelma-rivi');
+  assert.deepEqual(kesken.map((n) => n.dataset.id), ['vertailu', 'vesistot']);
+  const otsikot = ui.linssiValikko.querySelectorAll('.kokoelma-otsikko');
+  assert.ok(otsikot.some((o) => /Keskeneräiset/.test(teksti(o))), 'otsikko "Keskeneräiset" puuttuu');
+
+  // Toimii yhä: napautus esikatselee, toimintonappi kytkee.
   kesken[0].napauta();
   assert.equal(ui.linssiEsikatselu, 'vertailu');
-  aktivointi(ui).napauta();
+  toiminto(ui).napauta();
   assert.deepEqual(ui.valitsut, ['vertailu']);
   // Oikeat linssimoduulit kantavat lipun itse.
   for (const tiedosto of ['vertailu', 'maatiedot', 'vesistot']) {
@@ -247,10 +258,10 @@ test('ruudun napautus ei kytke linssiä eikä sulje laukkua (omistaja 5.9.2026)'
   const ui = laukku();
   ruudut(ui)[1].napauta();
   assert.deepEqual(ui.valitsut, [], 'napautus ei saa kutsua valitseLinssiä');
-  assert.equal(ui.passportDialog.open, true, 'laukku jää auki, kunnes aktivoidaan');
+  assert.equal(ui.suljettu, false, 'laukku jää auki, kunnes aktivoidaan');
 });
 
-test('napautus vaihtaa selitteen ja merkitsee ruudun esikatselluksi', () => {
+test('napautus vaihtaa selitteen ja merkitsee rivin esikatselluksi', () => {
   const ui = laukku();
   ruudut(ui)[2].napauta();
   assert.equal(ui.linssiEsikatselu, 'vesistot');
@@ -262,54 +273,52 @@ test('napautus vaihtaa selitteen ja merkitsee ruudun esikatselluksi', () => {
    * linssiä" (kartta on paljas), vaikka selite puhuu vesistöistä.
    * Juuri tämä kahden merkin ero on tilauksen ydin.
    */
-  assert.deepEqual(ruudut(ui).filter((n) => n.luokat.has('paalla')).map((n) => n.dataset.linssi), ['']);
+  assert.deepEqual(ruudut(ui).filter((n) => n.luokat.has('aktiivinen')).map((n) => n.dataset.id), [null]);
 });
 
-test('selitteen ALLE tulee Aktivoi-nappi (omistaja 6.9.2026)', () => {
+test('esikatselukorttiin tulee toimintonappi (omistaja 6.9.2026)', () => {
   const ui = laukku();
   ruudut(ui)[1].napauta();
-  const nappi = aktivointi(ui);
-  assert.ok(nappi, 'Aktivoi-nappi puuttuu');
+  const nappi = toiminto(ui);
+  assert.ok(nappi, 'toimintonappi puuttuu');
   assert.equal(nappi.textContent, 'Aktivoi');
-  assert.equal(nappi.getAttribute('aria-label'), 'Aktivoi linssi Topografia');
   /*
-   * NAPPI ON OMA LOHKONSA, EI SANA KAPPALEEN PERÄSSÄ (omistaja
+   * NAPPI ON ESIKATSELUKORTIN OSA, EI ERILLINEN SANA (omistaja
    * 6.9.2026: "Tee aktivoi tekstistä nappi"). Selite jää pelkäksi
-   * virkkeeksi, ja nappi seuraa sitä tietolohkon lapsena — juuri
-   * tämä ero rikkoutuisi hiljaa, jos joku latoisi sen taas kappaleen
-   * sisään.
+   * kappaleeksi, ja nappi seuraa sitä esikatselukortin lapsena.
    */
-  assert.equal(selite(ui).childNodes.includes(nappi), false,
+  assert.equal(selite(ui).childNodes?.includes(nappi) ?? false, false,
     'nappi ei kuulu selitekappaleen sisään');
   assert.match(teksti(selite(ui)), /Maaston korkeus väreinä\.$/);
-  const lapset = ui.linssiTiedot.childNodes;
+  const lapset = esikatselu(ui).childNodes;
   assert.equal(lapset.indexOf(nappi), lapset.indexOf(selite(ui)) + 1,
     'nappi on heti selitteen jälkeen');
-  // Sormelle riittävä kosketuskohde ja messinkireunus tulevat CSS:stä.
+  // Sormelle riittävä kosketuskohde tulee CSS:stä (.kokoelma-toiminto).
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
-  const lohko = css.slice(css.indexOf('.linssi-aktivoi,\n.dialog .linssi-aktivoi {'));
-  assert.match(lohko.slice(0, 900), /min-height: 44px;/);
+  const lohko = css.slice(css.indexOf('.kokoelma-toiminto {'));
+  assert.match(lohko.slice(0, 400), /min-height: var\(--pilleri-rivi-korkeus\);/);
+  assert.match(css, /--pilleri-rivi-korkeus: 44px;/);
 });
 
-test('Aktivoi-nappi kytkee linssin ja sulkee matkalaukun', () => {
+test('toimintonappi kytkee linssin ja sulkee laukun', () => {
   const ui = laukku();
   ruudut(ui)[1].napauta();
-  aktivointi(ui).napauta();
+  toiminto(ui).napauta();
   assert.deepEqual(ui.valitsut, ['topografia']);
-  assert.equal(ui.passportDialog.open, false, 'laukun pitää sulkeutua aktivoinnista');
+  assert.equal(ui.suljettu, true, 'laukun pitää sulkeutua aktivoinnista');
   assert.equal(ui.linssiEsikatselu, undefined, 'esikatselu nollautuu kytkennästä');
 });
 
-test('"Ei linssiä" toimii kuten linssit: selite ja Aktivoi-nappi', () => {
+test('"Ei linssiä" toimii kuten linssit: selite ja toimintonappi', () => {
   const ui = laukku({ paalla: 'topografia' });
   ruudut(ui)[0].napauta();
   assert.match(teksti(selite(ui)), /Kartta sellaisena kuin isoisä sen piirsi\.$/);
-  assert.equal(aktivointi(ui)?.textContent, 'Aktivoi');
-  const otsikko = ui.linssiTiedot.childNodes.find((n) => n.luokat?.has('linssi-nimi'));
-  assert.equal(otsikko?.textContent, 'Paljain silmin');
-  aktivointi(ui).napauta();
+  assert.equal(toiminto(ui)?.textContent, 'Aktivoi');
+  const otsikko = esikatselu(ui).childNodes.find((n) => n.luokat?.has('kokoelma-esikatselu-nimi'));
+  assert.equal(otsikko?.textContent, 'Ei linssiä');
+  toiminto(ui).napauta();
   assert.deepEqual(ui.valitsut, [null]);
-  assert.equal(ui.passportDialog.open, false);
+  assert.equal(ui.suljettu, true);
 });
 
 /*
@@ -320,40 +329,37 @@ test('"Ei linssiä" toimii kuten linssit: selite ja Aktivoi-nappi', () => {
 test('päällä olevan linssin kohdalla nappi on "Ota pois" ja se kytkee pois', () => {
   const ui = laukku({ paalla: 'vesistot' });
   ruudut(ui)[2].napauta();
-  const nappi = aktivointi(ui);
+  const nappi = toiminto(ui);
   assert.equal(nappi.textContent, 'Ota pois');
-  assert.equal(nappi.luokat.has('pois'), true, 'himmeämpi asu erottaa suunnan');
-  assert.equal(nappi.getAttribute('aria-label'), 'Ota linssi Vesistöt pois käytöstä');
   nappi.napauta();
   assert.deepEqual(ui.valitsut, [null], '"Ota pois" kytkee linssin pois');
-  assert.equal(ui.passportDialog.open, false);
+  assert.equal(ui.suljettu, true);
 });
 
-test('ilman napautusta selite kertoo päällä olevasta linssistä eikä tarjoa Aktivoi-nappia', () => {
+/*
+ * OMISTAJA 29.9.2026 (pillerivalikkouudistus): "Linssit voisivat olla
+ * listana ilman selitetekstiä ... kun linssiä klikkaa, niin vasemmalle
+ * puolelle tulee ... selite" — tämä KUMOAA aiemman linjan, jossa
+ * esikatselu näytti oletuksena päällä olevan linssin selitteen ilman
+ * napautusta. Uusi lista on tyhjä ilman napautusta; aktiivinen linssi
+ * näkyy silti kuvakkeensa kultarenkaasta (linssiRivi: `aktiivinen`).
+ */
+test('ilman napautusta esikatselukortti on piilossa; aktiivinen linssi näkyy kuvakerenkaasta', () => {
   const ui = laukku({ paalla: 'topografia' });
-  assert.match(teksti(selite(ui)), /Maaston korkeus väreinä\.$/);
-  assert.equal(aktivointi(ui), null, 'avattaessa ei ole mitään uutta aktivoitavaa');
-  assert.equal(ruudut(ui)[1].luokat.has('paalla'), true);
-  assert.equal(ruudut(ui)[1].getAttribute('aria-pressed'), 'true');
-});
-
-test('selitteen vaihto häivytetään: lohko saa animaatioluokan joka piirrolla', () => {
-  const ui = laukku();
-  ruudut(ui)[1].napauta();
-  assert.equal(ui.linssiTiedot.luokat.has('vaihtui'), true);
-  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
-  assert.match(css, /\.linssi-tiedot\.vaihtui\s*\{\s*animation:/);
-  assert.match(css, /@keyframes linssiSelitteenVaihto/);
+  assert.equal(esikatselu(ui).hidden, true,
+    'esikatselukortti ei saa näkyä ilman napautusta');
+  assert.equal(toiminto(ui), null, 'avattaessa ei ole mitään uutta aktivoitavaa');
+  assert.equal(ruudut(ui)[1].luokat.has('aktiivinen'), true);
 });
 
 /*
  * Ruudukko on sama molemmilla laudoilla: pallolauta (oletus) ja vanha
  * kartta (?lauta=kartta) käyttävät täsmälleen tätä samaa rakentajaa,
  * eikä kaksivaiheisuus saa kadota kummaltakaan. Sen sijaan pallo on
- * TOIMINTO eikä tila (valitseLinssi('pallo')), joten senkin ruutu
- * odottaa "aktivoi"-napautusta.
+ * TOIMINTO eikä tila (valitseLinssi('pallo')), joten senkin rivi
+ * odottaa toimintonapin napautusta.
  */
-test('pallolinssin ruutu odottaa Aktivoi-napautusta kuten muutkin', () => {
+test('pallolinssin rivi odottaa toimintonapin napautusta kuten muutkin', () => {
   const ui = Object.create(UI.prototype);
   ui.linssiValikko = new Elementti('div');
   ui.linssiValittu = null;
@@ -362,24 +368,25 @@ test('pallolinssin ruutu odottaa Aktivoi-napautusta kuten muutkin', () => {
   ui.linssiTuki = { kaikki: pallolinssit };
   ui.valitsut = [];
   ui.valitseLinssi = (tunnus) => { ui.valitsut.push(tunnus); };
-  ui.passportDialog = { open: true, close() { this.open = false; } };
+  ui.suljettu = false;
+  ui.suljeLaukku = () => { ui.suljettu = true; };
   ui.rakennaLinssivalikko(pallolinssit);
-  const ruutu = ui.linssiValikko.querySelectorAll('.linssi-liuskat button')[1];
-  ruutu.napauta();
+  const rivi = ui.linssiValikko.querySelectorAll('.kokoelma-rivi')[1];
+  rivi.napauta();
   assert.deepEqual(ui.valitsut, []);
-  assert.equal(ui.passportDialog.open, true);
-  aktivointi(ui).napauta();
+  assert.equal(ui.suljettu, false);
+  toiminto(ui).napauta();
   assert.deepEqual(ui.valitsut, ['pallo']);
 });
 
 /*
- * Lähdekoodin lupaus: laukun ruudun kuuntelija menee esikatseluun.
- * Tämä on tarkoituksella tekstitarkistus — se osoittaa suoraan siihen
- * yhteen riviin, joka tilauksessa muuttui, jos joku palauttaa vanhan
- * suoran kytkennän.
+ * Lähdekoodin lupaus: rivin kuuntelija menee esikatseluun eikä
+ * suoraan kytkentään. Tämä on tarkoituksella tekstitarkistus — se
+ * osoittaa suoraan siihen yhteen riviin, joka tilauksessa muuttui,
+ * jos joku palauttaa vanhan suoran kytkennän.
  */
-test('ui.js: ruudun kuuntelija kutsuu esikatseleLinssiä, ei valitseLinssiä', () => {
+test('ui.js: rivin data kertoo esikatseleLinssin, ei valitseLinssin', () => {
   const lahde = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
-  assert.match(lahde, /nappi\.addEventListener\('click', \(\) => this\.esikatseleLinssi\(tunnus\)\)/);
-  assert.doesNotMatch(lahde, /nappi\.addEventListener\('click', \(\) => this\.valitseLinssi\(tunnus\)\)/);
+  assert.match(lahde, /esikatsele: \(id\) => this\.esikatseleLinssi\(id\)/);
+  assert.doesNotMatch(lahde, /esikatsele: \(id\) => this\.valitseLinssi\(id\)/);
 });
