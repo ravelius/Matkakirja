@@ -9231,3 +9231,7 @@ Omistaja 29.9.2026: "ei generoida vielä ääniä. Haluan nähdä itse linssin e
 ## KONE JUMISSA 18.1x: KEVYT TILA, AGENTTIRAJA JA PKILL-KIELTO (29.9.2026 klo 18.49)
 
 29.9.2026 klo 18.1x omistaja ei päässyt etäyhteyteen: kuorma 271 (15 min ka 148). Syyt: Linnanrakentajan 7 rinnakkaista Playwright-agenttia, jokipolton 4 Chromium-työläistä, 17 rinnakkaista node-testiä useasta worktreestä, CI-savukkeet samalla Macilla sekä omistajan Evoto-camera-link (27 h ~90 %) ja Codex CLI. Päätoimittaja asetti kevyen tilan (/tmp/matkakirja-kevyt, ajastettu poisto) ja käski roolit keskeyttämään raskaat ajonsa; luokitin estää roolia pysäyttämästä toisten ajoja (Interfere With Workloads), joten jokainen rooli pysäyttää vain omansa ja loput omistaja. Kuorma 31 klo 18.48, omistaja jatkoi. SÄÄNNÖT: 1) enintään 2 selain- tai rakennusagenttia per rooli kerrallaan, nice -n 15; 2) prosessien lopetus vain pid:llä, ei pkill -f -kuvioilla (Karttasepän pkill kaatoi 18.19 muiden testit); 3) omistajan ilmoitus koneen tarpeesta → Päätoimittaja asettaa kevyen tilan ja kaikki roolit keskeyttävät raskaat ajonsa itse.
+
+## OMISTAJA: PUURADIO V3 KÄYTTÖÖN, V4 HYLÄTTY (29.9.2026 klo 18.51)
+
+Omistaja 29.9.2026: "Se vanhempi versio kolme, radio on parempi kuin tämä uusi. Käytetään sitä, vaikka onkin vielä huono." Codexin v3 (näyttö valonlähteenä, runko tummempi) tuodaan peliin tummalla kirjainvärillä #3a1e06 (Linssiseppä 2 2cd27b8c); v4 (valokuvamaiset materiaalit, heikompi valon leviäminen puuhun) hylätty. Radion parantaminen jatkuu myöhemmin.
