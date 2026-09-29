@@ -53,10 +53,11 @@ const seinalle = (resepti, a, y, muut = {}) => ({ resepti, paikka: P(5.5, a, y),
 
 const TAULU = {
   otsikko: 'Tornin kierreportaat (tulkinta)',
-  tila: 'luonnos',
+  // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). P1–P3; oikeakätisyys-myytti poistettu
+  tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Kellotornissa oli viisi kerrosta; ylin asuttu oli kolmas, neljäs avoin puolustuskäytävä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
-    { teksti: 'Kapeat kierreportaat suosivat oikeakätistä puolustajaa hyökkääjää vastaan.', lahde: 'yleinen linnatieto (tulkinta)' },
+    { teksti: 'Linnan päätornissa oli viisi kerrosta: 3. krs ylin asuttu, 4. krs avoin puolustuskäytävä.', lahde: 'Savon historia: Olavinlinnan suojassa (torninimi epävarma)' },
+    { teksti: 'Kapeissa kierreportaissa vain yksi mies mahtui kerrallaan.', lahde: 'Yleinen linnatieto (ei Olavinlinnan omaa lähdettä)' },
     { teksti: 'Kehämuurit ja esilinnan muurit kohosivat 13 metrin korkeuteen.', lahde: 'Savon historia: Olavinlinnan suojassa' },
   ],
 };
@@ -88,7 +89,7 @@ const HAHMOT = [
     silmukka: 'idle', heraa: 1, reitti: null,
     repliikit: [
       { id: 'renki-1', teksti: 'Raoista käy kylmä veto, eikä tämä lyhty saa sitä kuriin.' },
-      { id: 'renki-2', teksti: 'Portaat kiertävät niin, että oikea käsi jää vapaaksi. Ei se ole sattumaa.' },
+      { id: 'renki-2', teksti: 'Näissä portaissa ei ohiteta ketään. Vastaantulija odottaa tasanteella, halusi tai ei.' },
     ],
     reaktio: { id: 'pulu-renki-r1', teksti: 'Veto raoista? Nykyään siihen on tiivistenauha, mutta höyhenpuku pärjää ilman.' },
   },

@@ -6,11 +6,12 @@
 
 const TAULU = {
   otsikko: 'Laituri ja kavassit',
-  tila: 'luonnos',
+  // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). L1–L3
+  tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Riihisaarta sanottiin 1550-luvulla Kavassisaareksi; linnan kavassisatama oli sen tuntumassa.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt' },
-    { teksti: 'Linnalla oli 1550-luvulla peräti yhdeksän suurta kuljetusvenettä, kavassia.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt' },
-    { teksti: 'Rakennusaikana proomuja suojasi 12–15 haarniskaan ja miekkoihin varustautunutta miestä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { teksti: 'Riihisaarta sanottiin 1550-luvulla Kavassisaareksi; linnan veneet kelluivat sen rannassa.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt; Savonlinna: Riihisaaren historiaa' },
+    { teksti: 'Linnalla oli 1550-luvulla peräti yhdeksän suurta venettä, kavassia.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt' },
+    { teksti: 'Rakennusaikana proomuja suojasi 12–15 haarniskoin ja miekoin varustettua miestä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
   ],
 };
 
@@ -102,10 +103,10 @@ const HAHMOT = [
     silmukka: 'kanto', heraa: 2, lyhty: true, // elävä linna: lyhty käteen (natiivi 1.0.57 lukee hahmolta)
     reitti: { pisteet: [[-18.7, KANSI_Y, 39.9], [-19.5, KANSI_Y, 37.8], [-19.5, KANSI_Y, 34.2], [-19.5, KANSI_Y, 37.8], [-18.7, KANSI_Y, 39.9]], nopeus: 0.9, tauko: 1.2 },
     repliikit: [
-      { id: 'renki-1', teksti: 'Kolmekymmentäneljä porrasta ylös. Lasken askeleita, ettei tarvitse laskea säkkejä.' },
+      { id: 'renki-1', teksti: 'Monta porrasta ylös. Lasken askeleita, ettei tarvitse laskea säkkejä.' },
       { id: 'renki-2', teksti: 'Proomua vahtivat haarniskamiehet, minua vain selkäkipu. Kivi painaa, kalkki pölyää.' },
     ],
-    reaktio: { id: 'pulu-renki-r1', teksti: 'Kolmekymmentäneljä porrasta! Nykyään tähän tulisi hissi. Minä vain lennän ohi.' },
+    reaktio: { id: 'pulu-renki-r1', teksti: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
   },
 ];
 

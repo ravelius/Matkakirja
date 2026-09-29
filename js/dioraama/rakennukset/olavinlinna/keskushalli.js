@@ -10,11 +10,12 @@
 
 const TAULU = {
   otsikko: 'Keskushalli ja väentupa',
-  tila: 'luonnos',
+  // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). H1–H3
+  tila: 'tarkistettu',
   kohdat: [
     { teksti: 'Keskushallin alakerrassa oli väentupa, sotaväen ruokasali; toisessa kerroksessa voudin asunto.', lahde: 'Kansallismuseo: Keskushalli' },
-    { teksti: 'Vouti ja seurue söivät ylhäällä Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa.', lahde: 'Yle: Olavinlinnan keittiöhistoria' },
-    { teksti: 'Linnaa lämmitettiin avotakoin; keittiön lämmin ilma nousi hormia pitkin Kuninkaan saliin.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Yle' },
+    { teksti: 'Linnaa lämmitettiin avotakoin, ja lämpö johdettiin hormien kautta.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6' },
+    { teksti: 'Linnassa asui 1500-luvun tilikirjojen mukaan 150–200 henkeä: sotilaita, virkamiehiä, käsityöläisiä.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Yle Tiede' },
   ],
 };
 
@@ -43,7 +44,7 @@ const HAHMOT = [
       { id: 'vartija-1', teksti: 'Vouti syö ylhäällä, me täällä alhaalla. Sopii minulle, tuli on lähempänä.' },
       { id: 'vartija-2', teksti: 'Vuoro vaihtuu aamuhämärässä. Juo nyt, kun kannu vielä on täysi.' },
     ],
-    reaktio: { id: 'pulu-vartija-r1', teksti: 'Turun linnassa aseväelle laskettiin 3,3 litraa olutta päivässä. Minä nokin vain pisaran.' },
+    reaktio: { id: 'pulu-vartija-r1', teksti: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
   },
   {
     id: 'vartija2', henkilo: 'vartija-1500', paikka: [-10.15, 0, -11.0], suunta: 345, peilattu: true,
