@@ -30,6 +30,9 @@ Lue:
    Ajo: tyokalut/linssiseppa-ajot/ajo-tervetulo.sh, ajo-tervetulo-web.mjs ja koosta_tervetulo.py. Testikomento on
    `ui linssi tervetulo [tila|aloita|ohita|pura|nollaa]`. Laiteajossa kertoja on oltava päällä (`puhe paalle`), muuten tervetulo
    on mykistetty.
+   Natiivi-UI:n haara natiivi-ui/ponnahdus-herata 6c3df126 tekee Ponnahduksesta itseherättävän ja jättää Pulun kuplat
+   kuvan taakse; se yhdistyy ilman konfliktia. Kun se on masterissa, omat Ruudunpaivitys.Herata-kutsut PulunTauluNakymasta
+   ja Kuvanakymasta voi poistaa (ne eivät haittaa).
 1. Pulun taulu ja LISÄYS 6 ovat MASTERISSA (9750340f, master 634be415).
 2. Taulun SHA on kerrottu Linssiseppä 2:lle 29.9. klo 10.2x.
 3. Cupola 2 -kuvien alfa 252–254 korjataan cupola3_pehmea.py-mallilla vain, jos ne palaavat käyttöön. Kohta 4 (BMNG, Kuu,
