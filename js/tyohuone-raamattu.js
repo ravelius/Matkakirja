@@ -51,6 +51,12 @@ export const RAAMATTU = {
           + 'natiivi käyttää niitä. Tuotannon pelaajalle näkyvät viat korjataan. TESTIT: '
           + 'omistaja 29.9.: testi, joka ei ole pakollinen ja jonka omistaja voi itse '
           + 'testata, ohitetaan, jos se nopeuttaa kehitystä.',
+        'EI SAAVUTETTAVUUSOHJEITA ULKOASUUN (omistaja 29.9.2026 klo 23.0x, sitova; vahvistaa 27.9. '
+          + 'hylkäyksen): "älä tuo mukaan saavutettavuus ohjeita, ne pilaavat asettelun." Kukaan rooli ei '
+          + 'muuta näkyvää ulkoasua saavutettavuusohjeiden (WCAG-kontrasti, 44 pt:n kosketusrivit, '
+          + 'fonttiminimit) perusteella eikä ehdota sellaista. Sallittua on vain näkymätön: VoiceOver-nimet '
+          + 'ja -vihjeet sekä laajennettu osuma-ala ilman ulkoasumuutosta. Värit, koot ja välit tulevat '
+          + 'omistajan palautteesta ja webin mitatusta mallista.',
         'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
           + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
           + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '

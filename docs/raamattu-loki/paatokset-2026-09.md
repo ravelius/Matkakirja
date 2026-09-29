@@ -9327,3 +9327,7 @@ Omistaja 29.9.2026 klo 22.28 kortilla (luonnokset A–D, docs: Linnanrakentaja A
 ## OMISTAJA: JÄRVIEN RANTAVIIVA KEVYEMMÄKSI KAUKAA (29.9.2026 klo 22.30)
 
 Omistaja 29.9.2026 klo 22.30: "Kartassa järvet esim. Suomessa ovat turhan paksulla viivalla kaukaa katsoessa." Syy: tools/fokuskartta/maailmapiirto.js osio 5 JÄRVET, kynä 1,0·P ja kostea reuna 2,2·P ovat paperivakioita, joten kaukotasoilla pieni järvi on pelkkää reunaa (natiivin maan kehä ei piirrä järviä, maapolygonit ilman reikiä). Päätoimittaja → Karttaseppä: tasoramppi järvien vedoille (≤ z5 ohuempi ja vaaleampi kynä ilman kosteaa reunaa, ≥ z8 ennallaan) tämän yön jokipolttoon, kuvapari ennen polttoa, vienti deltana.
+
+## OMISTAJA: EI SAAVUTETTAVUUSOHJEITA ULKOASUUN + PILLERIVALIKON JA LUENNAN PALAUTE (29.9.2026 klo 23.04)
+
+Omistaja 29.9.2026 klo 23.04 (1.0.56): "älä tuo mukaan saavutettavuus ohjeita, ne pilaavat asettelun. kirjoita tämä ohje raamattuun." → Raamattu, Ydinajatus: EI SAAVUTETTAVUUSOHJEITA ULKOASUUN. Palaute: iPadin yläpalkki liian matala; pillerivalikon napit kiinni toisissaan ja matalammiksi, ääninapit ylimmäksi, Linssit ja Matka vaihtavat paikkaa, valikko kapeammaksi, Linsseihin ja Aarteisiin vasemmalle erillinen kuva- ja seliteikkuna, keskeneräisissä maininta vain otsikossa, paperi hieman vaaleammaksi ja teksti hieman tummemmaksi, Matka-sivun pöllötason kuva isommaksi ja tekstille isompi marginaali (Natiivi-UI). Isoisän luennan alku jää kuulematta, hypoteesi: luenta käynnistyy jo kaupunkiesittelyn aikana; matkakirjan pohja paperin väriseksi kuten webissä (Linssiseppä 2).
