@@ -4321,3 +4321,18 @@
     color: rgba(234, 184, 78, 0.95);
     -unity-text-align: middle-right;
 }
+
+/* PILLERIVALIKKO (omistaja 29.9.2026 klo 09.07): puhelimella logo vasemmalla, pilleri oikealla, ei ☰:ta. */
+.mk-ylapalkki--pilleri-oikealla .mk-pilleri {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.mk-ylapalkki--pilleri-oikealla .mk-logo {
+    margin-left: 0;
+}
+
+.mk-tietoja__tilanne {
+    align-self: center;
+    margin: 6px 0 4px 0;
+}

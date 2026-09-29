@@ -114,6 +114,9 @@ namespace Matkakirja.Natiivi
         /// matalana ilman logoa; pilleri (raha/päivä) vasemmalle ja ☰ oikealle Dynamic Islandin riville, ruskea palkki
         /// taustalla vain turva-alueen korkuisena (rivi + 4,8 pt, jos rivi ulottuu turva-alueen alle).
         /// </summary>
+        /// <summary>Pillerivalikko puhelimella: logo vasemmalla, pilleri oikealla, ei ☰:ta (omistaja 29.9.2026).</summary>
+        public static bool PilleriOikealla => Puhelin && Linssivalitsin.PilleriValikko;
+
         public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
         /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
         const float MatalaRivi = 40f, MatalaAla = 4.8f;
@@ -271,6 +274,13 @@ namespace Matkakirja.Natiivi
             Ratas.tooltip = "Äänentasot ja asetukset";
             Valikko = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Valikko);
             Valikko.tooltip = "Valikko";
+            // Pillerivalikko (omistaja 29.9.2026 klo 09.07): puhelimella logo vasemmalla, ☰ pois ja pilleri oikealla; pilleri
+            // avaa valikon. iPadilla nykyinen palkki jää (iPad-versio vasta iPhonen jälkeen), ☰ ja pilleri avaavat saman valikon.
+            if (PilleriOikealla)
+            {
+                Valikko.style.display = DisplayStyle.None;
+                palkki.AddToClassList("mk-ylapalkki--pilleri-oikealla");
+            }
 
             // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
             // Web #3421 rahattomuuspalkki: lappu kartan keskellä selitenapin alla, 8 lohkoa 10 × 6 ja teksti.
@@ -381,7 +391,7 @@ namespace Matkakirja.Natiivi
             if (matala != matalaNyt)
             {
                 matalaNyt = matala;
-                logo.style.display = matala || kelluvaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
+                logo.style.display = (matala && !PilleriOikealla) || kelluvaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
                 // Pillerin muoto vaihtuu ("300£ 1/80" saaren vieressä): sama rivi uudelleen.
                 string rv = rivi;
                 rivi = null;
@@ -462,6 +472,16 @@ namespace Matkakirja.Natiivi
             // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
             float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
             pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
+            if (PilleriOikealla)
+            {
+                // Pilleri saaren oikealle puolelle, logo vasemmalle (korkeus = pillerin korkeus, Pelikoodari 29.9.).
+                float oikeaReuna = P(Screen.width / pp, 0f).x - r.z - SaariReuna * yksikko;
+                float vasen = saari.width > 0 ? alakulma.x + SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
+                pilleriMax = Mathf.Max(60f, oikeaReuna - vasen);
+                float lk = matala ? rivi : 24f * yksikko;
+                logo.style.height = lk;
+                logo.style.width = Mathf.Min(lk * 4f, Mathf.Max(40f, oikea - r.x - SaariReuna * yksikko));
+            }
             pilleri.style.maxWidth = pilleriMax;
             // Varaus turva-alueen yläreunasta: se osa palkista, joka jää turva-alueen alle.
             kelluvaVaraus = Mathf.Max(0f, korkeus - r.y);
@@ -514,7 +534,7 @@ namespace Matkakirja.Natiivi
             SiirraVieraat();
             palkki.EnableInClassList("mk-ylapalkki--kelluva", k);
             palkki.pickingMode = k ? PickingMode.Ignore : PickingMode.Position;
-            logo.style.display = k || matalaNyt == true ? DisplayStyle.None : DisplayStyle.Flex;
+            logo.style.display = k || (matalaNyt == true && !PilleriOikealla) ? DisplayStyle.None : DisplayStyle.Flex;
             if (k) palkki.style.backgroundImage = StyleKeyword.None;
             else Rakenne.Tausta(palkki, Kuviot.Ylapalkki);
             // Pillerin muoto vaihtuu: sama rivi uudelleen.
