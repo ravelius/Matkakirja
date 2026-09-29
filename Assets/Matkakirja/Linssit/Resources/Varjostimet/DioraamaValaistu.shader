@@ -9,7 +9,7 @@
 // Väri = albedo · (taivas(N.y) + Σ valo · wrapLambert(N·L, 0,3) · varjo) · lerp(1, AO, 0,85)
 //        + _Lampo · lämpö(G) · _DioraamaLepatus
 //   albedo      _Tila 0 (A, proseduraalinen): _Vari · DioraamaKuvio(_KuvioTyyppi, _KuvioParametrit, uv,
-//               maailma, COLOR.b); _Tila 1 (B, Codexin maalattu): _Vari · _PohjaKuva(sRGB) · (1 + (COLOR.b−0,5)·0,1)
+//               maailma, COLOR.b); _Tila 1 (B, Codexin maalattu): _PohjaKuva(sRGB) · (1 + (COLOR.b−0,5)·0,1)
 //   taivas(N.y) lerp(_DioraamaTaivasAla, _DioraamaTaivasYla.rgb, N.y·0,5+0,5) · _DioraamaTaivasYla.a (voima);
 //               globaalit, DioraamaValot.cs asettaa RAKENNUS.valaistus.taivas-datasta.
 //   AO          COLOR.r (0…1, 1 = avoin, rakennuskoneen leipoma)
@@ -122,7 +122,7 @@ Shader "Matkakirja/Linssit/DioraamaValaistu"
                 if (_Tila > 0.5)
                 {
                     half3 pohja = SAMPLE_TEXTURE2D(_PohjaKuva, sampler_PohjaKuva, uv).rgb;
-                    albedo = _Vari.rgb * pohja * (1.0h + (satunnainen - 0.5h) * 0.1h);
+                    albedo = pohja * (1.0h + (satunnainen - 0.5h) * 0.1h); // B: vain Codexin kuva (_Vari jää A:n pinnan väriksi)
                 }
                 else
                 {

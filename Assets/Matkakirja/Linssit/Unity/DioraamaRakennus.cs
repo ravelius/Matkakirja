@@ -103,7 +103,7 @@ namespace Matkakirja.Natiivi
         void AsetaPohjakuvaMateriaaliin(Material m, string pintaId, Texture2D kuva, Rakennus rakennus)
         {
             m.SetTexture(IdPohjaKuva, kuva);
-            m.SetColor(IdVari, Color.white);
+            if (!m.shader.name.Contains("Valaistu")) m.SetColor(IdVari, Color.white); // valaisematon B: kuva sellaisenaan; valaistu B ohittaa _Varin, joten A säilyttää pinnan värin
             kuvalliset.Add(m);
             m.SetFloat(IdTila, pakotettuTila == 0 ? 0f : 1f); // era 2b: B vain kun tekstuuri on ladattu (ellei A pakotettu)
             double virtausU = 0, virtausV = 0;

@@ -172,6 +172,10 @@ namespace Matkakirja.Natiivi
             hehkuBloom.intensity.Override(0.7f);
             hehkuBloom.scatter.Override(0.6f);
             hehkuBloom.tint.Override(HehkuSavy);
+            // Tonemappaus (erä 2b, 29.9.): valaistu HDR-kuva puristetaan näytölle ilman palanutta valkoista.
+            // Neutral, koska Filmipino.asset käyttää sitä jo (variantti säilyy buildissa; ACES voisi karsiutua).
+            var savy = profiili.Add<Tonemapping>(true);
+            savy.mode.Override(TonemappingMode.Neutral);
 
             volyymi.profile = profiili;
             PaivitaDofTila(); // alkutila: volyymi.enabled, renderPostProcessing, syvyys.active, hehkuBloom.active
