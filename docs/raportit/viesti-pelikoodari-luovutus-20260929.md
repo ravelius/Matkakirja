@@ -9,19 +9,34 @@ rajattu tehtävä (bugiselvitys, testikorjaus, aineistoerä, äänet) annetaan A
 (model sonnet); rooli todentaa (lue diff, katso kuvat, aja savukkeet) ja julkaisee (PR + viesti Julkaisijalle).
 Ali-agentti ei käytä simulaattoreita, käännöspalvelua eikä tuotannon workeria.
 
-## 0. KÄRKI: matkalaukkunahka iPhone-yläpalkkiin (omistaja hyväksyi: "Hyväksyn, madalletaan")
+## 0. KÄRKI: webin matkalaukkunahka iPhone-yläpalkkiin (omistaja hyväksyi: "Hyväksyn, madalletaan")
 
-- Worktree `/Users/Shared/Claude/wt/pelikoodari-ylapalkki-nahka`, haara `pelikoodari-ylapalkki-nahka` (0081da8a6 kirjoitushetkellä),
-  pohja oli `origin/pelikoodari-pillerivalikko` = #3624, joka on nyt **MERGETTY** → yhdistä `origin/main` ennen PR:ää.
-- Sonnet-agentti teki työtä luovutushetkellä. Jos se ei ehtinyt valmiiksi, tarkista: `git -C … log origin/main..HEAD`, kuvat
-  `/Users/Shared/Claude/proto-3d/lokit/ylapalkki-nahka/`, `savuke-pillerivalikko.mjs` (393 + 360 nahkaväitteet).
+- Worktree `/Users/Shared/Claude/wt/pelikoodari-ylapalkki-nahka`, haara `pelikoodari-ylapalkki-nahka`, pushattu, kärki
+  **df49af37d = WIP** (agentti pysäytettiin tilinvaihdossa kesken korjauskierroksen). Varsinainen työ 7922ecd48 + v2408 0081da8a6:
+  assets/ylapalkki/ (nahka.jpg 683×159, keski-varjo, logo-emboss, pilleri-emboss 9-slice, ~45 kt), css/styles.css
+  `@media (max-width:560px)` -lohko, sw.js SHELL, js/lahteet.js-rivi, savuke-pillerivalikko 393/360-väitteet. Palkin korkeus
+  ennallaan (≈53 px), pillerin kontrasti 14:1.
+- **JÄLJELLÄ (kesken WIP:ssä):**
+  1. Keskivyöhykeväitteet (Codexin 385–905/1290) EIVÄT koske webiä — webin palkki on saaren alapuolella (juuren
+     padding-top env(safe-area-inset-top)). Korvaa: logo ja pilleri eivät leikkaa, rako ≥ 8 px, mahtuvat 393/360. WIP-commit
+     aloitti tämän (css + savuke) — tarkista diff `git show df49af37d` ja viimeistele. Pillerin tekstiä EI lyhennetä (sovittu natiivin kanssa).
+  2. Kuvat uusiksi: nykyiset `/Users/Shared/Claude/proto-3d/lokit/ylapalkki-nahka/` kelpaamattomia (palkki himmennyksen alla,
+     karttapallo kaatui). Ota kuten `/Users/Shared/Claude/proto-3d/lokit/pillerivalikko/pillerivalikko-kooste.png`: tasokartta,
+     relay-kaava (savuke-avauskortti.mjs), game.actionPickStart(), ei peittoja; + palkin 3× lähikuvarajaus. Codex | peli, ennen |
+     jälkeen, valikko auki, 360 px → Päätoimittajalle omistajaa varten.
+  3. #3624 mainissa → `git merge origin/main` + `node tools/uusi-versio.mjs` (yksi rivi), build-standalone + niputus,
+     npm test (tests/sisaltopaketti.test.mjs jumittui kuormassa — aja rauhallisemmin), savukkeet pillerivalikko/hampurilainen/
+     ylapalkki-vaaka → PR Julkaisijan junaan.
 - Codexin paketti: `/Users/samireivinen/Documents/Codex/2026-09-29/ylapalkki-matkalaukku/` (manifest: nahka-tile repeat-x,
   keski-varjo, logo- ja pilleri-kohopainatus 9-slice, keskivyöhyke 385–905/1290). Nykyinen palkin korkeus, vain puhelin
   (≤ 560 px pysty), iPad ennallaan. Assetit `assets/ylapalkki/`, lisenssi oma tuotanto.
 - Tarkista ennen PR:ää: `node tools/build-standalone.mjs` (uudet moduulit MODULES-listaan) + `node tools/tarkista-niputus.mjs`
   (nimitörmäykset — #3624 kaatui junassa molempiin), npm test 0 fail, kuvapari Päätoimittajalle omistajaa varten.
 
-## 1. Auki olevat PR:t
+## 1. PR-tilat tilinvaihtohetkellä (klo 16.3x)
+
+- #3622 pariteetti web (saapumiskuva ilman kehystä, yksi lappu kerrallaan) MERGETTY v2406.
+- #3624 yläpalkki (logo, pillerivalikko, Linssit/Aarteet) MERGETTY.
 
 - https://github.com/ravelius/Matkakirja/pull/3627 (v2408) Liiku läpinäkyväksi (omistaja: PAATOKSET 28 kohta 3) ja iPadilla
   Pulun reunaan. Julkaisijan junassa. Worktree `/Users/Shared/Claude/wt/pelikoodari-pariteetti-web` (haara
