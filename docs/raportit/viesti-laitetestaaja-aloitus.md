@@ -6,7 +6,14 @@ Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetesta
 sinun docs-muutoksiisi, peruuta merge ja pushaa suoraan omaan haaraasi, ks. luovutuksen kohta
 tästä jos epäselvää).
 
-## PÄIVITYS 29.9.2026 klo 06.5x — LUE TÄMÄ ENSIN
+## PÄIVITYS 29.9.2026 klo 16.1x — LUE TÄMÄ ENSIN (tilinvaihto, Päätoimittajan käsky)
+- **docs/raportit/viesti-laitetestaaja-luovutus-20260929-b.md** on uusin luovutus. Kärki:
+  `laitetestaaja-savukierros-b13` @ **e4ef21d55**, ei avoimia PR:jä, ei käynnissä olevia ajoja,
+  molemmat simulaattorit Shutdown. Viimeisin valmis kierros 1.0.50 fc26b44c 5/5 PASS. Sisältää
+  myös kootut menetelmämuistutukset (Tekijätiedot-sijainti, iPad-vaaka-komento, kehittäjätila-
+  virheen ohitus). Lue tämä ENSIN, alla oleva 06.5x-päivitys on vanhentunut tausta.
+
+## PÄIVITYS 29.9.2026 klo 06.5x — vanhentunut, tausta
 - **docs/raportit/viesti-laitetestaaja-luovutus-20260929.md** on uusin luovutus. Kärki: 1.0.42-
   yhdistelmän (25c7c971) radiolinssi — UI/mastot/renkaat/viritys täysin oikein, mutta `aani
   mittaa` näyttää rms=0 koko ajan (ei todellista ääntä), vaikka nostokortin kaiutin toimii
