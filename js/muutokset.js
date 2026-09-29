@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2410, teksti: 'Linssien esittelyt pillerivalikon napautusnäkymään' },
+  { v: 2410, teksti: 'Linssien esittelyt: 9 lyhyttä selitystä pilleri… (#3611)' },
   { v: 2409, teksti: 'Linssikatalogi: E11 tila rakenteilla + n1500-to… (#3593)' },
   { v: 2408, teksti: 'Liiku läpinäkyväksi, iPadilla Pulun reunaan (#3627)' },
   { v: 2407, teksti: 'Yläpalkki: logo, pillerivalikko, Linssit- ja Aa… (#3624)' },
