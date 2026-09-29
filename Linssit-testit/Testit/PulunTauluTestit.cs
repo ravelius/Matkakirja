@@ -83,6 +83,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(ilman.Ala, pysyy.Ala);
         }
 
+        [Testi] static void CupolassaYlhaallaTaydellaKorkeudella()
+        {
+            // Laitekuva 1.0.54 (iPhone 402 × 874): Pulu ikkunan takana ruudun keskellä (y ≈ 380–480), lukemarivi ylhäällä → taulu
+            // ankkuroidaan ylhäältä (turva-alue 59 + 52) täydellä korkeudella eikä puristu yläreunaan.
+            const float W = 402, H = 874, w = 232, h = 300;
+            var pulu = new Laatikko(215, 470 - PulunTaulu.PulunEleenVaraPt, 285, 560);
+            var p = PulunTaulu.Sijoita(pulu, W, H, w, h, new List<Laatikko>(), ylaMin: 111);
+            Oleta.Sama("ylhaalla", p.Nimi);
+            Oleta.Sama(111f, p.Alue.Yla);
+            Oleta.Sama(h, p.Alue.Ala - p.Alue.Yla);
+            Oleta.Tosi(p.Alue.Ala < 470, "ei Pulun päällä (eleen vara saa jäädä alle) " + p.Alue);
+            // Normaali kulma-Pulu: entinen yläpaikka ennallaan.
+            var kulma = PulunTaulu.Sijoita(new Laatikko(318, 719 - PulunTaulu.PulunEleenVaraPt, 378, 790), 393, 852, 232, 290, new List<Laatikko>(), ylaMin: 67);
+            Oleta.Sama("ylla", kulma.Nimi);
+        }
+
         [Testi] static void LahinKohdeIsoympyraaPitkin()
         {
             var kohteet = new List<Havaintokohde>
