@@ -38,7 +38,7 @@
  */
 import { html, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus } from './ui-apurit.js';
 import { kohteidenNykyinenIso, suljeKohdeSuurennos } from './fokuskohteet.js';
-import { piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
+import { nostoLataaTyyli, piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from './packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
 import { MAAKUNNAT_KAIKKI, MAAKUNNAT_KAIKKI_MAAT } from './packs/maakunnat-nimet.js';
@@ -553,21 +553,6 @@ let avoinKortti = null;
 
 /** Kuvan suurennoksen ui-avain (js/fokuskohteet.js avaaKohdeSuurennos): kortin sulku ja Esc kuorivat sen ensin. */
 const MAAKUNTA_ZOOM = 'maakuntaZoom';
-/** Sama tunnus kuin js/fokusnosto.js ja js/elaintaky.js: nostokortin tyylit ladataan enintään kerran. */
-const NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
-
-/** Nostokortin kuvaluokat (css/fokusnosto.css) sivulle, jos yhtään nostoa ei ole vielä avattu. */
-function lataaNostonTyyli() {
-  if (typeof document === 'undefined' || document.getElementById(NOSTO_TYYLIN_TUNNUS)) return;
-  const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
-  // Yhden tiedoston versiossa tyylit ovat jo sivun <style>-lohkossa.
-  if (!peruslinkki) return;
-  const linkki = document.createElement('link');
-  linkki.id = NOSTO_TYYLIN_TUNNUS;
-  linkki.rel = 'stylesheet';
-  linkki.href = new URL('fokusnosto.css', peruslinkki.href).href;
-  document.head.appendChild(linkki);
-}
 
 /**
  * Maakunnan kuva nostokortin kuvaksi: osoite sellaisenaan (assetOsoite päästää valmiin osoitteen läpi), lähderiviin
@@ -590,7 +575,7 @@ function suljeMaakuntaKortti() {
 
 function avaaMaakuntaKortti(ui, avain, nimi, data) {
   suljeMaakuntaKortti();
-  lataaNostonTyyli();
+  nostoLataaTyyli();
 
   const kerros = html('div', 'maakunta-kortti-kerros');
   const kortti = html('div', 'maakunta-kortti');
