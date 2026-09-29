@@ -65,6 +65,25 @@ Poikkileikkaus-linssi (id `poikkileikkaus`, moottori "dioraama"). Lue ensin
   pitää silloin lukea ensin uusin.json. Linssiä ei mergetä ennen tätä.
 - **Build-vika:** käännöspalvelun Burst-linkkerivika (AotLinkerException) on ohimenevä. Uusinta menee läpi.
 
+**Päivitys klo 05.2x:**
+
+- **Ämpärityönkulku hyväksytty** (Päätoimittaja, omistajan lupa). Julkaisija rakentaa sen.
+  - Sovittu: pelkkä Node; hash = sha256(manifest.json), 16 heksamerkkiä; `uusin.json` =
+    `{"rakennus","hash","polku":"<hash>/"}`, jossa polku on suhteellinen kansioon `dioraama/olavinlinna/`.
+  - Välimuisti: hash-kansio immutable, `uusin.json` max-age=60.
+  - PR ravelius/Matkakirja#3594 (js/dioraama + tools/dioraama, 104/104) on Julkaisijan junassa.
+- **Natiivi lukee `uusin.json`in** (proto `linnanrakentaja/keittio`, commit tämän jälkeen). Oletuspeili on poistettu, joten
+  simulaattorissa kehityspaketti otetaan käyttöön komennolla `poikki peili file:///…/dist/dioraama/olavinlinna/`
+  (ajo-poikki.sh tekee tämän itse).
+- **Kun paketti on ämpärissä:**
+  1. Käännös ja savuke ilman peiliä (`PEILI=pois`-ajo: poista peilirivi skriptistä tai anna `poikki peili pois`).
+  2. Merge-pyyntö Natiivisepälle: haara, commit, mitä muuttui, testit. Linssi on hiomassa (Kesken=true).
+- **Sisältökirjuri tarkisti tekstit.** Taulut ovat tarkistettu-tilassa, ja vesipoika-1 muuttui (järvestä).
+  - Tornit: n1500-ajassa kolmas torni on Pyhän Eerikin torni. Kijlin torni on vuosilta 1604–1607. Käytä tätä, kun
+    torneille tulee nimet.
+  - Tarkistetut taulukohdat on välitetty Pelikoodarille ääneksi.
+- **Äänirajapinta** (Pelikoodarin linja A: `ISilmukka Silmukka(tunnus)`) sovitaan Natiivisepän kanssa, kun äänet ovat valmiit.
+
 1. **Julkaisija vie paketin ämpäriin.** `dist/dioraama/olavinlinna/` → `media.matkakirja.app/dioraama/olavinlinna/`.
    Sen jälkeen oletuspeili pois, uusi käännös, simulaattorisavuke ja merge-pyyntö Natiivisepälle (haara, commit,
    mitä muuttui, testit). Näin omistaja näkee linssin TF-kehittäjätilassa.
