@@ -109,6 +109,8 @@ namespace Matkakirja.Linssit.Astronautti
             this.nakyma = nakyma;
             Tiedot = tiedot ?? AstronauttiTiedot;
             if (tiedot == null && aineisto?.Lahde != null) Tiedot.Lahde = aineisto.Lahde;
+            kavely = new Iss.Avaruuskavely();
+            kavely.Vaihtui += KavelyVaihtui;
         }
 
         double Nyt => y.Aika * 1000;
@@ -196,6 +198,7 @@ namespace Matkakirja.Linssit.Astronautti
         public void NapautaIss()
         {
             if (!Auki || Vaihe == AvauksenVaihe.Musta || AvoinKuva != null) return;
+            if (kavely.Kaynnissa) { kavely.Napauta(Nyt / 1000); return; }
             var utc = Iss.IssNyt.Kello();
             if (!kyyti.Kyydissa) kentta0 = y.Nakokulma;
             kyyti.Napauta(Nykyinen(), Hetki(utc, Iss.IssNyt.Paikka(utc)), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
@@ -217,6 +220,7 @@ namespace Matkakirja.Linssit.Astronautti
         public void PoistuKyydista()
         {
             if (!Auki || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko) return;
+            kavely.Lopeta(Nyt / 1000);
             // Web poistu: ylilento unohtuu ja aika kelautuu todelliseen hetkeen paluulennon ajassa (ei hyppyä).
             lento = null;
             Iss.IssNyt.Simu.PalaaLive(Iss.IssKyyti.KaukoonS, y.VahennettyLiike);
@@ -245,6 +249,7 @@ namespace Matkakirja.Linssit.Astronautti
                 }
                 else if (Iss.IssNyt.Simu.KelausId != l.Id) { lento = null; tietoAika = -1; }
             }
+            if (kavely.Kaynnissa) kavely.Paivita(nyt, utc);
             double perus = double.IsNaN(kentta0) ? y.Nakokulma : kentta0;
             if (!kyyti.Paivita(nyt, Hetki(utc, paikka), perus, out var asento, out double kentta, out bool paluuValmis)) return;
             y.Kuvaa(asento);
@@ -268,6 +273,7 @@ namespace Matkakirja.Linssit.Astronautti
 
         void LopetaKyyti()
         {
+            kavely.Lopeta(Nyt / 1000);
             kyyti.Nollaa();
             if (kuvataan)
             {
@@ -279,6 +285,58 @@ namespace Matkakirja.Linssit.Astronautti
             if (ilmoitettu == Iss.KyydinTila.Kauko) return;
             ilmoitettu = Iss.KyydinTila.Kauko;
             nakyma.Kyyti(Iss.KyydinTila.Kauko, 0, 0, false, default);
+        }
+
+        // ---- Avaruuskävely (omistaja 29.9.2026; Iss.Avaruuskavely): kyydistä ilmalukkoon, ulos kaiteelle, auringonnousu, kuva ----
+
+        Iss.Avaruuskavely kavely;
+        /// <summary>Avaruuskävelyn tilakone (Unity-näkymä kuuntelee Vaihtui-tapahtumaa).</summary>
+        public Iss.Avaruuskavely Kavely => kavely;
+        /// <summary>Vertailukuva (Vertailu-vaiheessa): astronautin NASA-kohde lähinnä ISS:n alapistettä kuvaushetkellä.</summary>
+        public (Havaintokohde Kohde, double Km)? KavelynVertailu { get; private set; }
+
+        /// <summary>Avaruuskävely alkaa (Pulun taulu / `astro kavely`): vain kyydissä, ei kesken avauksen tai kuvan.</summary>
+        public bool AloitaKavely()
+        {
+            if (!Auki || Vaihe == AvauksenVaihe.Musta || AvoinKuva != null) return false;
+            if (!kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko || kavely.Kaynnissa) return false;
+            KavelynVertailu = null;
+            kavely.Aloita(Nyt / 1000);
+            return true;
+        }
+
+        void KavelyVaihtui(Iss.KavelynVaihe v)
+        {
+            double nyt = Nyt / 1000, kentta = kyyti.OnAsento ? kyyti.ViimeisinKentta : y.Nakokulma;
+            switch (v)
+            {
+                case Iss.KavelynVaihe.Ulos:
+                    if (double.IsNaN(kentta0)) kentta0 = y.Nakokulma;
+                    kyyti.Ulos(Nykyinen(), kentta, nyt, y.VahennettyLiike);
+                    break;
+                case Iss.KavelynVaihe.Auringonnousu:
+                {
+                    // Seuraava auringonnousu ISS:ltä; kello kelaa sinne (≤ 3,6 s) ja pysähtyy EnnenS ennen nousua.
+                    lento = null;
+                    var utc = Iss.IssNyt.Kello();
+                    var nousu = Iss.Avaruuskavely.SeuraavaNousu(utc);
+                    kavely.AsetaNousu(nousu);
+                    var kelaus = nousu.HasValue ? Iss.Avaruuskavely.KelausHetki(nousu.Value, utc) : null;
+                    if (kelaus.HasValue) Iss.IssNyt.Simu.KelaaHetkeen(kelaus.Value, vahennetty: y.VahennettyLiike);
+                    break;
+                }
+                case Iss.KavelynVaihe.Vertailu:
+                {
+                    var p = Iss.IssNyt.Paikka(Iss.IssNyt.Kello());
+                    KavelynVertailu = Iss.Avaruuskavely.LahinKohde(aineisto?.Kohteet, p.Lat, p.Lon);
+                    break;
+                }
+                case Iss.KavelynVaihe.Takaisin:
+                case Iss.KavelynVaihe.Ei:
+                    if (kyyti.Tila == Iss.KyydinTila.Ulkona) kyyti.Sisaan(Nykyinen(), kentta, nyt, y.VahennettyLiike);
+                    break;
+            }
+            tietoAika = -1;
         }
 
         // ---- Nopeutus ja "Lennä kohteen ylle" (omistaja 28.9.2026 klo 12.1x; web iss-kyyti-nakyma.js asetaNopeus ja
@@ -360,7 +418,7 @@ namespace Matkakirja.Linssit.Astronautti
 
         Iss.Ylilento? Lenna(Havaintokohde k, bool valoisa, double? hakuLat = null)
         {
-            if (k == null || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko) return null;
+            if (k == null || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko || kavely.Kaynnissa) return null;
             var yl = Iss.Ylilennot.Seuraava(hakuLat ?? k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
             tietoAika = -1;
             if (yl == null) { lento = new Lento { Kohde = k }; return null; }
