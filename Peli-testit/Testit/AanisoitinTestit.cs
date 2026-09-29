@@ -343,6 +343,31 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(0, k.Tila.Hiljennykset.Count);
         }
 
+        [Testi] static void RepliikkiOmaPuhujaSamallaReunalla()
+        {
+            // Dioraaman repliikki (Aanisoitin.DioraamaRepliikki) merkitsee AaniTilan puhujaksi samalla
+            // reunarajapinnalla kuin Pulun puhe: oma paikallinen reunanseuranta, joka kutsuu Tila.Puhe(bool)
+            // suoraan (ei Aanikoukun kautta). Kaksi riippumatonta lähdettä samaan puhujien laskuriin: väistö
+            // pysyy, kunnes molemmat ovat vaienneet.
+            var k = new Kirjuri();
+            k.Koukut.Paivita(Kaupungissa("pariisi"));
+            bool repliikkiPuhuu = false;
+            void Repliikki(bool puhuu) { if (puhuu == repliikkiPuhuu) return; repliikkiPuhuu = puhuu; k.Tila.Puhe(puhuu); }
+
+            Repliikki(true);
+            Lahella(AaniVakiot.VaistoPuhe, k.Tila.Pyydetty, "repliikki alkoi");
+            Repliikki(true); // tuplakutsu samalla arvolla: harmiton (vain reuna vaikuttaa)
+            Lahella(AaniVakiot.VaistoPuhe, k.Tila.Pyydetty, "tuplatrue harmiton");
+            k.Koukut.Puhe(true); // Kertoja puhuu päälle repliikin aikana: sama puhujien laskuri
+            Lahella(AaniVakiot.VaistoPuhe, k.Tila.Pyydetty, "kaksi puhujaa yhtä aikaa");
+            Repliikki(false); // repliikki loppui, Kertoja puhuu yhä: väistö pysyy
+            Lahella(AaniVakiot.VaistoPuhe, k.Tila.Pyydetty, "yksi puhuja jäljellä");
+            Repliikki(false); // tuplakutsu samalla arvolla: harmiton
+            Lahella(AaniVakiot.VaistoPuhe, k.Tila.Pyydetty, "tuplafalse harmiton");
+            k.Koukut.Puhe(false); // molemmat vaikenevat: väistö pois
+            Lahella(1, k.Tila.Pyydetty, "väistö pois kun kaikki vaikenevat");
+        }
+
         [Testi] static void AvausPuretaanIntronLopussaTaiKartalle()
         {
             var k = new Kirjuri();

@@ -63,6 +63,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Linssin äänitehoste ja taustaääni (Aanisoitin, PeliOhjain.Aanet kytkee).</summary>
         public static Action<string, float> TehosteKasittelija;
         public static Action<string> TaustaaaniKasittelija;
+        /// <summary>Nimetty taustasilmukka poolista (Aanisoitin.LinssiSilmukka), Linnanrakentaja erä 2 (dioraama).</summary>
+        public static Func<string, ISilmukka> SilmukkaKasittelija;
+        /// <summary>Dioraaman repliikin puhuja-merkki (Aanisoitin.DioraamaRepliikki), Linnanrakentaja erä 2.</summary>
+        public static Action<bool> RepliikkiKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
         public static Action<double> LinssiHimmennysKasittelija;
         /// <summary>
@@ -111,6 +115,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Maiden aineisto (vertailu ja maatiedot), kun ladattu; muuten null.</summary>
         internal static Matkakirja.Linssit.Maat.MaatAineisto MaatAineisto;
         MaapallonVuosiSovitin vuosi;
+        DioraamaSovitin poikki;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -200,6 +205,7 @@ namespace Matkakirja.Natiivi
             rekisteri.Lisaa(new Topografia());
             // Maapallon vuosi (Linssiseppä 2, 28.9.2026): hiomassa, vain kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(vuosi = new MaapallonVuosiSovitin(this, k));
+            rekisteri.Lisaa(poikki = new DioraamaSovitin(this, k));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -1330,6 +1336,21 @@ namespace Matkakirja.Natiivi
             TaustaaaniKasittelija?.Invoke(tunnus);
         }
 
+        public ISilmukka Silmukka(string tunnus) => SilmukkaKasittelija != null ? SilmukkaKasittelija(tunnus) : TyhjaSilmukka.Kahva;
+
+        public void Repliikki(bool puhuu) => RepliikkiKasittelija?.Invoke(puhuu);
+
+        /// <summary>
+        /// Turvallinen kahva, kun SilmukkaKasittelija ei ole (vielä) kytketty (esim. Aanisoitin ei ole
+        /// käynnistynyt): Silmukka ei koskaan palauta nullia, mutta tämä kahva ei koskaan soi.
+        /// </summary>
+        sealed class TyhjaSilmukka : ISilmukka
+        {
+            public static readonly ISilmukka Kahva = new TyhjaSilmukka();
+            public void Voimakkuus(float taso, float liukuS) { }
+            public void Lopeta(float haiveS = 0.35f) { }
+        }
+
         public bool VahennettyLiike => VahennettyLiikeKysely?.Invoke() ?? false;
 
         public double Aika => Time.realtimeSinceStartupAsDouble;
@@ -1597,6 +1618,8 @@ namespace Matkakirja.Natiivi
                         ? $"isoisä 1873: näkyvissä {ik.Nakyvia} nimeä, kamera {Kamera}" : "isoisä 1873: linssi ei ole auki");
                 else if (osat[0] == "vuosi")
                     vuosi.Komento(osat);
+                else if (osat[0] == "poikki")
+                    poikki.Komento(osat);
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)

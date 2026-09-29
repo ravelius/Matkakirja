@@ -1,0 +1,4793 @@
+{
+ "$kuvaus": "Dioraaman liikesilmukoiden testivektorit (tools/dioraama/tee-liikevektorit.mjs, älä muokkaa käsin - aja skripti uudelleen). C#-portti Ydin/Dioraama/Liikkeet.cs varmistaa pariteetin näitä vektoreita vasten (docs/raportit/dioraama-rajapinnat-era2b-20260929.md kohta 4).",
+ "tarkkuus": 1e-9,
+ "muoto": {
+  "yleista": "Kaikki liukuluvut pyöristetty 1e-9 tarkkuuteen. Kulmat asteina (rx,ry,rz), t/t01 0..1, juuriNousu metreinä. Nivelnimet: lantio, selka, kaula, paa, olka_v/_o, kyynar_v/_o, kasi_v/_o, lonkka_v/_o, polvi_v/_o, nilkka_v/_o (_v=vasen, _o=oikea) - tools/dioraama/hahmot3d.mjs:n nivelPuu().",
+  "silmukat": "silmukat[i] = { silmukka, kesto_s, juuri_nousu_m (null jos ei juuri-kenttää), naytteet: [{ t, nivelet: nivelKulmat(silmukka,t), juuriNousu: juuriNousu(silmukka,t) }] }. naytteet[j].t = j/10, j=0..10."
+ },
+ "tulkinnat": [
+  {
+   "aihe": "silmukan sulkeutuminen",
+   "tulkinta": "naytteet[0].nivelet/juuriNousu == naytteet[10].nivelet/juuriNousu (t=0 ja t=1) joka silmukalla - testattu myös JS-puolella (tests/dioraama-hahmot3d.test.mjs)."
+  },
+  {
+   "aihe": "nivel, jota LIIKKEET[silmukka].avaimet ei mainitse",
+   "tulkinta": "nivelKulmat palauttaa AINA kaikki 16 niveltä (js/dioraama/liikkeet.js:n NIVELET-lista) - mainitsematon nivel on levossa [0,0,0], ei puuttuva avain."
+  },
+  {
+   "aihe": "juuriNousu silmukalla, jolla ei ole juuri-kenttää",
+   "tulkinta": "palauttaa 0.0 (ei null/NaN) - ks. tämän tiedoston juuri_nousu_m: null kirjaa erikseen puuttuvan amplitudin."
+  },
+  {
+   "aihe": "näytteistys avainten välillä",
+   "tulkinta": "smoothstep (f*f*(3-2f)) kunkin nivelen OMIEN avainten paikallisella t01-osuudella, ei koko silmukan t:llä."
+  }
+ ],
+ "silmukat": [
+  {
+   "silmukka": "idle",
+   "kesto_s": 4,
+   "juuri_nousu_m": null,
+   "naytteet": [
+    {
+     "t": 0,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0.156,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0.208,
+       0
+      ],
+      "olka_v": [
+       0.208,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       0.208,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.2,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0.528,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0.704,
+       0
+      ],
+      "olka_v": [
+       0.704,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       0.704,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.3,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0.972,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       1.296,
+       0
+      ],
+      "olka_v": [
+       1.296,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       1.296,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.4,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       1.344,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       1.792,
+       0
+      ],
+      "olka_v": [
+       1.792,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       1.792,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.5,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       1.5,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       2,
+       0
+      ],
+      "olka_v": [
+       2,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       2,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.6,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       1.344,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       1.792,
+       0
+      ],
+      "olka_v": [
+       1.792,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       1.792,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.7,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0.972,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       1.296,
+       0
+      ],
+      "olka_v": [
+       1.296,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       1.296,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.8,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0.528,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0.704,
+       0
+      ],
+      "olka_v": [
+       0.704,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       0.704,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.9,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0.156,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0.208,
+       0
+      ],
+      "olka_v": [
+       0.208,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       0.208,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       0,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    }
+   ]
+  },
+  {
+   "silmukka": "kanto",
+   "kesto_s": 1,
+   "juuri_nousu_m": 0.025,
+   "naytteet": [
+    {
+     "t": 0,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       3
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       -10,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       20,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       25,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -25,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.208,
+       0,
+       0
+      ],
+      "olka_v": [
+       -7.92,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       20.52,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_o": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.014694631
+    },
+    {
+     "t": 0.2,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.704,
+       0,
+       0
+      ],
+      "olka_v": [
+       -2.96,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       21.76,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_o": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.023776413
+    },
+    {
+     "t": 0.3,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.296,
+       0,
+       0
+      ],
+      "olka_v": [
+       2.96,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       23.24,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_o": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.023776413
+    },
+    {
+     "t": 0.4,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.792,
+       0,
+       0
+      ],
+      "olka_v": [
+       7.92,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       24.48,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_o": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.014694631
+    },
+    {
+     "t": 0.5,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -3
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       2,
+       0,
+       0
+      ],
+      "olka_v": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       25,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -25,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       25,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.6,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.792,
+       0,
+       0
+      ],
+      "olka_v": [
+       7.92,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       24.48,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_v": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.014694631
+    },
+    {
+     "t": 0.7,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.296,
+       0,
+       0
+      ],
+      "olka_v": [
+       2.96,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       23.24,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_v": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.023776413
+    },
+    {
+     "t": 0.8,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.704,
+       0,
+       0
+      ],
+      "olka_v": [
+       -2.96,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       21.76,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_v": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.023776413
+    },
+    {
+     "t": 0.9,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.208,
+       0,
+       0
+      ],
+      "olka_v": [
+       -7.92,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       20.52,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_v": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.014694631
+    },
+    {
+     "t": 1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       3
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       -10,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       20,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       60,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       25,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -25,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    }
+   ]
+  },
+  {
+   "silmukka": "kavely",
+   "kesto_s": 1,
+   "juuri_nousu_m": 0.03,
+   "naytteet": [
+    {
+     "t": 0,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       3
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       -15,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       15,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       15,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       15,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       25,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -25,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.208,
+       0,
+       0
+      ],
+      "olka_v": [
+       -10.776,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       15.52,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10.776,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       15.52,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_o": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.017633558
+    },
+    {
+     "t": 0.2,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.704,
+       0,
+       0
+      ],
+      "olka_v": [
+       -4.248,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       16.76,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       4.248,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       16.76,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_o": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.028531695
+    },
+    {
+     "t": 0.3,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.296,
+       0,
+       0
+      ],
+      "olka_v": [
+       -1.128,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       18.24,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       1.128,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       18.24,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_o": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.028531695
+    },
+    {
+     "t": 0.4,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.792,
+       0,
+       0
+      ],
+      "olka_v": [
+       8.664,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       19.48,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       -8.664,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       19.48,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_o": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.017633558
+    },
+    {
+     "t": 0.5,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -3
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       2,
+       0,
+       0
+      ],
+      "olka_v": [
+       15,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       20,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       -15,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       20,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -25,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       25,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.6,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.792,
+       0,
+       0
+      ],
+      "olka_v": [
+       8.664,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       19.48,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       -8.664,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       19.48,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_v": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.017633558
+    },
+    {
+     "t": 0.7,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.296,
+       0,
+       0
+      ],
+      "olka_v": [
+       -1.128,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       18.24,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       1.128,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       18.24,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_v": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.028531695
+    },
+    {
+     "t": 0.8,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0.312
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.704,
+       0,
+       0
+      ],
+      "olka_v": [
+       -4.248,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       16.76,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       4.248,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       16.76,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       -1.88,
+       0,
+       0
+      ],
+      "polvi_v": [
+       45.632,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -7.08,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.028531695
+    },
+    {
+     "t": 0.9,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       1.944
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.208,
+       0,
+       0
+      ],
+      "olka_v": [
+       -10.776,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       15.52,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10.776,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       15.52,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       14.44,
+       0,
+       0
+      ],
+      "polvi_v": [
+       22.784,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -17.96,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0.017633558
+    },
+    {
+     "t": 1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       3
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       -15,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       15,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       15,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       15,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       25,
+       0,
+       0
+      ],
+      "polvi_v": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       -25,
+       0,
+       0
+      ],
+      "polvi_o": [
+       8,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    }
+   ]
+  },
+  {
+   "silmukka": "puhe",
+   "kesto_s": 3,
+   "juuri_nousu_m": null,
+   "naytteet": [
+    {
+     "t": 0,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       30,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.056,
+       1.408,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       15.185185185,
+       0,
+       3.888888889
+      ],
+      "kyynar_o": [
+       40.37037037,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.2,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       2.688,
+       3.584,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       24.814814815,
+       0,
+       11.111111111
+      ],
+      "kyynar_o": [
+       59.62962963,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.3,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       2.48,
+       3.272,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       30,
+       0,
+       15
+      ],
+      "kyynar_o": [
+       70,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.4,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       -0.24,
+       -0.536,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       26.111111111,
+       0,
+       8.518518519
+      ],
+      "kyynar_o": [
+       64.814814815,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.5,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       -2,
+       -3,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       18.888888889,
+       0,
+       -3.518518519
+      ],
+      "kyynar_o": [
+       55.185185185,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.6,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       -0.592,
+       -0.888,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       15,
+       0,
+       -10
+      ],
+      "kyynar_o": [
+       50,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.7,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.584,
+       2.376,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       14.21875,
+       0,
+       -8.4375
+      ],
+      "kyynar_o": [
+       46.875,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.8,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.792,
+       2.688,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       12.5,
+       0,
+       -5
+      ],
+      "kyynar_o": [
+       40,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.9,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.704,
+       1.056,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10.78125,
+       0,
+       -1.5625
+      ],
+      "kyynar_o": [
+       33.125,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       10,
+       0,
+       0
+      ],
+      "kyynar_o": [
+       30,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    }
+   ]
+  },
+  {
+   "silmukka": "tyo",
+   "kesto_s": 2,
+   "juuri_nousu_m": null,
+   "naytteet": [
+    {
+     "t": 0,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       20,
+       0,
+       10
+      ],
+      "kyynar_o": [
+       40,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       10
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       1.056
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.312,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       25.28,
+       0,
+       1.2
+      ],
+      "kyynar_o": [
+       45.28,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       7.92
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.2,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       2.688
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.056,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       33.44,
+       0,
+       -12.4
+      ],
+      "kyynar_o": [
+       53.44,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       2.96
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.3,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       2.688
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.944,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       33.44,
+       0,
+       -16.56
+      ],
+      "kyynar_o": [
+       53.44,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       -2.96
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.4,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       1.056
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       2.688,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       25.28,
+       0,
+       -24.72
+      ],
+      "kyynar_o": [
+       45.28,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       -7.92
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.5,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       3,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       20,
+       0,
+       -30
+      ],
+      "kyynar_o": [
+       40,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       -10
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.6,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -1.056
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       2.688,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       14.72,
+       0,
+       -24.72
+      ],
+      "kyynar_o": [
+       34.72,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       -7.92
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.7,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -2.688
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.944,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       6.56,
+       0,
+       -16.56
+      ],
+      "kyynar_o": [
+       26.56,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       -2.96
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.8,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -2.688
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       1.056,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       6.56,
+       0,
+       -12.4
+      ],
+      "kyynar_o": [
+       26.56,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       2.96
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 0.9,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       -1.056
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0.312,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       14.72,
+       0,
+       1.2
+      ],
+      "kyynar_o": [
+       34.72,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       7.92
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    },
+    {
+     "t": 1,
+     "nivelet": {
+      "lantio": [
+       0,
+       0,
+       0
+      ],
+      "selka": [
+       0,
+       0,
+       0
+      ],
+      "kaula": [
+       0,
+       0,
+       0
+      ],
+      "paa": [
+       0,
+       0,
+       0
+      ],
+      "olka_v": [
+       0,
+       0,
+       0
+      ],
+      "kyynar_v": [
+       0,
+       0,
+       0
+      ],
+      "kasi_v": [
+       0,
+       0,
+       0
+      ],
+      "olka_o": [
+       20,
+       0,
+       10
+      ],
+      "kyynar_o": [
+       40,
+       0,
+       0
+      ],
+      "kasi_o": [
+       0,
+       0,
+       10
+      ],
+      "lonkka_v": [
+       0,
+       0,
+       0
+      ],
+      "polvi_v": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_v": [
+       0,
+       0,
+       0
+      ],
+      "lonkka_o": [
+       0,
+       0,
+       0
+      ],
+      "polvi_o": [
+       0,
+       0,
+       0
+      ],
+      "nilkka_o": [
+       0,
+       0,
+       0
+      ]
+     },
+     "juuriNousu": 0
+    }
+   ]
+  }
+ ]
+}
