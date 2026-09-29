@@ -256,8 +256,8 @@ namespace Matkakirja.Natiivi
         {
             if (LeikkausOsuus <= 0.001f) return false;
             var b = LeikkausLaatikko;
-            if (p.y < b.min.y || p.y > b.max.y) return false;
-            if (p.x >= b.min.x && p.x <= b.max.x && p.z >= b.min.z && p.z <= b.max.z) return true;
+            if (p.y < b.min.y) return false;
+            if (p.y <= b.max.y && p.x >= b.min.x && p.x <= b.max.x && p.z >= b.min.z && p.z <= b.max.z) return true;
             if (!LeikkausKameraan) return false;
             var kohti = new Vector2(LeikkausKamera.x - b.center.x, LeikkausKamera.z - b.center.z);
             float L = kohti.magnitude;
@@ -267,7 +267,10 @@ namespace Matkakirja.Natiivi
             float tx0 = (b.min.x - p.x) * Inv(d.x), tx1 = (b.max.x - p.x) * Inv(d.x);
             float tz0 = (b.min.z - p.z) * Inv(d.y), tz1 = (b.max.z - p.z) * Inv(d.y);
             float sisaan = Mathf.Max(Mathf.Min(tx0, tx1), Mathf.Min(tz0, tz1)), ulos = Mathf.Min(Mathf.Max(tx0, tx1), Mathf.Max(tz0, tz1));
-            return sisaan <= ulos && ulos >= 0 && sisaan <= L;
+            // Kameraa kohti nouseva katto kuten varjostimissa (DioraamaKuori.shader).
+            float lreuna = Mathf.Max(L - 0.5f * new Vector2(b.size.x, b.size.z).magnitude, 1f);
+            float katto = b.max.y + Mathf.Max(0f, LeikkausKamera.y - b.max.y) * Mathf.Clamp01(Mathf.Max(sisaan, 0f) / lreuna);
+            return sisaan <= ulos && ulos >= 0 && sisaan <= L && p.y <= katto;
         }
 
         sealed class Koottu
