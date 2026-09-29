@@ -249,7 +249,13 @@ namespace Matkakirja.Natiivi
             var reuna = kamera.WorldToScreenPoint(k + kamera.transform.right * (float)aktiivinen.Sade);
             float sade = Mathf.Max(36f * (Screen.dpi > 0 ? Screen.dpi / 163f : 2f), Vector2.Distance(p, reuna));
             if (Vector2.Distance(new Vector2(p.x, p.y), ruutu) > sade) return false;
+            return Suorita(r);
+        }
 
+        /// <summary>Aktiivisen vaiheen suoritus (napautus tai kehittäjän "poikki etsinta seuraava"). Tosi = suoritettiin.</summary>
+        public bool Suorita(Rakennus r)
+        {
+            if (aktiivinen == null || loytoAlku >= 0 || r?.Etsinnat == null) return false;
             var e = r.Etsinnat.Find(x => x.Id == aktiivinen.Etsinta);
             Merkitse(e.Id, aktiivinen.Vaihe);
             string otsikko = aktiivinen.Tyyppi == "repliikki" && !string.IsNullOrEmpty(aktiivinen.Hahmo)

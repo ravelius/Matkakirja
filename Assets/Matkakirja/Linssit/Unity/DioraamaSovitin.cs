@@ -602,6 +602,7 @@ namespace Matkakirja.Natiivi
             if (mita == "etsinta")
             {
                 if (arvo == "alusta") DioraamaEtsinta.Nollaa(rakennus);
+                else if (arvo == "seuraava") o.Kirjaa("poikki: etsintä seuraava " + (nayttamo?.Etsinta?.Suorita(rakennus) == true ? "suoritettu" : "ei aktiivista vaihetta tässä tilassa"));
                 o.Kirjaa("poikki: etsintä " + DioraamaEtsinta.Tila(rakennus));
                 return;
             }
