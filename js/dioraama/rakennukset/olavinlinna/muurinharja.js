@@ -56,7 +56,7 @@ const HAHMOT = [
     reitti: { pisteet: [[-21.0, KY, -19.75], [-9.0, KY, -19.75], [-21.0, KY, -19.75]], nopeus: 0.8, tauko: 2 },
     repliikit: [
       { id: 'vartija-1', teksti: 'Vahtivuoro on pitkä, mutta rajalta ei saa silmää siirtää hetkeksikään.' },
-      { id: 'vartija-2', teksti: 'Raja on aivan tässä vieressä; Moskovan väki tulee sen yli. Siksi harjalla ei nukuta.' },
+      { id: 'vartija-2', teksti: 'Itäraja on lähellä, ja sieltä on tultu ennenkin. Siksi harjalla ei nukuta.' },
     ],
     reaktio: { id: 'pulu-vartija-r1', teksti: 'Yötäkö tässä tuulessa? Minä kaipaisin jo kolmen minuutin jälkeen katon alle.' },
   },

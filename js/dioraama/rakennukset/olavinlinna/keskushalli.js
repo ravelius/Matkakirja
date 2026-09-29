@@ -44,16 +44,16 @@ const HAHMOT = [
       { id: 'vartija-1', teksti: 'Vouti syö ylhäällä, me täällä alhaalla. Sopii minulle, tuli on lähempänä.' },
       { id: 'vartija-2', teksti: 'Vuoro vaihtuu aamuhämärässä. Juo nyt, kun kannu vielä on täysi.' },
     ],
-    reaktio: { id: 'pulu-vartija-r1', teksti: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
+    reaktio: { id: 'pulu-vartija-r1', teksti: 'Noin viisi litraa olutta päivässä kuului vartijan muonaan. Minulle riittäisi pisara – ja murunen leipää.' },
   },
   {
     id: 'vartija2', henkilo: 'vartija-1500', paikka: [-10.15, 0, -11.0], suunta: 345, peilattu: true,
     silmukka: 'tyo', heraa: 2, reitti: null,
     repliikit: [
-      { id: 'vartija2-1', teksti: 'Kolme kuutosta! Kuka sanoi, että noppa on sokea? Maksa, kun vielä kehtaat.' },
+      { id: 'vartija2-1', teksti: 'Kolme kuutosta! Onni suosii rohkeaa. Maksa, kun vielä kehtaat.' },
       { id: 'vartija2-2', teksti: 'Yksi heitto vielä ennen vuoroa. Voudin ei tarvitse tietää, mistä pelataan.' },
     ],
-    reaktio: { id: 'pulu-vartija2-r1', teksti: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
+    reaktio: { id: 'pulu-vartija2-r1', teksti: 'Noppapeli linnassa, ja vouti ylhäällä. Minä en kerro, jos te ette kerro.' },
   },
   {
     id: 'talonpoika', henkilo: 'talonpoika-1500', paikka: [-17.65, 0, -12.6], suunta: 235, peilattu: false,

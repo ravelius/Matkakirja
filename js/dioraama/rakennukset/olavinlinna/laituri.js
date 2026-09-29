@@ -106,7 +106,7 @@ const HAHMOT = [
       { id: 'renki-1', teksti: 'Monta porrasta ylös. Lasken askeleita, ettei tarvitse laskea säkkejä.' },
       { id: 'renki-2', teksti: 'Proomua vahtivat haarniskamiehet, minua vain selkäkipu. Kivi painaa, kalkki pölyää.' },
     ],
-    reaktio: { id: 'pulu-renki-r1', teksti: 'PAIKKAMERKKI: Pulun kommentti (Päätoimittaja kirjoittaa)' },
+    reaktio: { id: 'pulu-renki-r1', teksti: 'Renki laskee askelia. Minä lasken siiveniskuja – kaksi, ja olen jo ylhäällä.' },
   },
 ];
 

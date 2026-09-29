@@ -91,7 +91,7 @@ const HAHMOT = [
       { id: 'renki-1', teksti: 'Raoista käy kylmä veto, eikä tämä lyhty saa sitä kuriin.' },
       { id: 'renki-2', teksti: 'Näissä portaissa ei ohiteta ketään. Vastaantulija odottaa tasanteella, halusi tai ei.' },
     ],
-    reaktio: { id: 'pulu-renki-r1', teksti: 'Veto raoista? Nykyään siihen on tiivistenauha, mutta höyhenpuku pärjää ilman.' },
+    reaktio: { id: 'pulu-renki-r1', teksti: 'Veto raoista? Höyhenpuku pitää lämpimänä – lyhdyn liekkiä vain säälin.' },
   },
 ];
 
