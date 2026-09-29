@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.47 (202609290907)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartuscha avautuu ja sulkeutuu pehmeästi, ja Pulun kuplat näkyvät kuvien takana."
+  },
+  {
    "versio": "1.0.46 (202609290829)",
    "paiva": "2026-09-29",
    "teksti": "Pulun puhe noudattaa Kertoja-asetusta, joten Pulu kuuluu, vaikka äänimaisema on pois päältä."
