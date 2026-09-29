@@ -205,6 +205,9 @@ namespace Matkakirja.Linssit.Radio
                 Lyhyt = MiniJson.Teksti(l, "lyhyt"),
                 Jarjestys = (int)(MiniJson.Luku(l, "jarjestys") ?? 60),
                 Ikoni = MiniJson.Teksti(l, "ikoni"),
+                // Pillerivalikon esikatselu (web LINSSI.esittely #3611 ja havainnekuva); puuttuessa LinssiEsittelyt-taulusta.
+                Esittely = MiniJson.Teksti(l, "esittely"),
+                Havainnekuva = MiniJson.Teksti(l, "havainnekuva"),
                 Valokuva = MiniJson.Totuus(l, "valokuva"),
             };
             return a;
