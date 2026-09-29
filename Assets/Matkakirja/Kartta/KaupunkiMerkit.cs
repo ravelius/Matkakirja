@@ -120,7 +120,7 @@ namespace Matkakirja
                 n.fontSize = valintaKirjain;
                 n.fontStyle = FontStyles.Bold;
                 n.color = valintaMuste;
-                m.nimiPeitto = 1f;
+                m.nimiPeitto = valintaMuste.a;
                 n.alignment = TextAlignmentOptions.Bottom;
                 n.rectTransform.pivot = new Vector2(0.5f, 0f);
                 n.transform.localPosition = new Vector3(0, ValintaNimenY, 0);
@@ -322,8 +322,8 @@ namespace Matkakirja
         public float valintaKirjain = 13f;
         [Tooltip("Nimen rako huomiorenkaan yläpuolella (pt): KOHDEMERKIN_NIMI_RAKO_PX 8 (merkit.js:64).")]
         public float valintaNimiRako = 8f;
-        [Tooltip("Web --map-ink #46331f (css/styles.css:87).")]
-        public Color valintaMuste = new Color32(0x46, 0x33, 0x1f, 0xff);
+        [Tooltip("Sepia #5a4330, web peitto 0,95 (ennen --map-ink #46331f).")]
+        public Color valintaMuste = ValintaSepia;
         /// <summary>Nimen alareuna keskipisteestä (pt): web nimenSade = max(12 × 1,42, 54 / 2) = 27, + rako 8.</summary>
         float ValintaNimenY => Mathf.Max(kohdemerkkiPx * 0.5f * 1.42f, rengasSade) + valintaNimiRako;
         /// <summary>Valittavan nimen yläreuna pisteen yllä (pt): ValintaNimenY + rivin korkeus (v3f-laitekuva 28.9.: ~52 pt).
@@ -533,6 +533,11 @@ namespace Matkakirja
         public static readonly Color KaupunkiMuste = new Color(
             Rannikko.RantaMuste.r, Rannikko.RantaMuste.g, Rannikko.RantaMuste.b, KaupunkiPeittoNatiivi);
         public Color musteenVari = KaupunkiMuste;
+        /// <summary>Valinnan ja siirtokohteen nimi samalla musteella vahvempana (Päätoimittaja 29.9.2026: web peitto
+        /// <see cref="ValintaPeitto"/>); kulta- ja punamerkit ennallaan.</summary>
+        public const float ValintaPeitto = 0.95f;
+        public static readonly Color ValintaSepia = new Color(Rannikko.RantaMuste.r, Rannikko.RantaMuste.g,
+            Rannikko.RantaMuste.b, (float)Vektorisolut.LineaarinenPeitto(Vektorisolut.RantaMuste, ValintaPeitto));
 
         [Header("Koot näytön pisteinä (iOS point, 1/163 tuumaa)")]
         public float piste = 9f;
