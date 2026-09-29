@@ -190,6 +190,7 @@ namespace Matkakirja.Natiivi
             asteikkoKehys.Add(asteikko);
             KytkeVeto();
             nauha = Rakenne.El("mk-radio__nauha", asteikko, PickingMode.Ignore);
+            nauha.RegisterCallback<GeometryChangedEvent>(_ => { foreach (var l in paikat) SovitaNimi(l); });
             viisari = Rakenne.El("mk-radio__viisari", asteikko, PickingMode.Ignore);
             Rakenne.El("mk-radio__viisari-punainen", viisari, PickingMode.Ignore);
 
@@ -500,9 +501,24 @@ namespace Matkakirja.Natiivi
                 string id = ic < 0 || k < -vasen || k > oikea ? null : idt[((ic + k) % nIdt + nIdt) % nIdt];
                 naytetyt[i] = id;
                 paikat[i].text = id == null ? "" : Nimi(id).ToUpperInvariant();
+                SovitaNimi(paikat[i]);
                 paikat[i].tooltip = id == null ? null : "Viritä kanava: " + Nimi(id);
                 paikat[i].pickingMode = id == null ? PickingMode.Ignore : PickingMode.Position;
             }
+        }
+
+        /// <summary>
+        /// Asteikon nimi kokonaan paikkaansa (Päätoimittaja 29.9.: ei katkaisupisteitä): perusfontti (puhelin 10, iPad 12)
+        /// pienenee mitatun leveyden mukaan, kuitenkin vähintään 7 pt.
+        /// </summary>
+        void SovitaNimi(Label l)
+        {
+            float perus = levea ? 12f : 10f;
+            float paikka = nauha.layout.width / Mathf.Max(1, paikat.Count) - 8f;
+            if (string.IsNullOrEmpty(l.text) || float.IsNaN(paikka) || paikka <= 0) { l.style.fontSize = perus; return; }
+            float nyt = l.resolvedStyle.fontSize > 0 ? l.resolvedStyle.fontSize : perus;
+            float leveys = l.MeasureTextSize(l.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * perus / nyt;
+            l.style.fontSize = leveys > paikka ? Mathf.Max(7f, Mathf.Floor(perus * paikka / leveys * 4f) / 4f) : perus;
         }
 
         static int IndexOf(IReadOnlyList<string> l, string id)

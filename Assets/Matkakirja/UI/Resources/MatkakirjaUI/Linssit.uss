@@ -2138,11 +2138,11 @@
     margin: 3px 1px 0 1px;
     padding: 1px 2px;
     font-size: 10px;
-    letter-spacing: 5px; /* web 0.5px */
+    letter-spacing: 2px; /* web 0.2px */
     -unity-text-align: upper-center;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip;
     color: rgba(34, 22, 8, 0.92);
     text-shadow: 0 1px 0 rgba(255, 246, 220, 0.45);
     border-radius: 3px;
@@ -2151,7 +2151,7 @@
 }
 
 .mk-radio--levea .mk-radio__kaupunki {
-    font-size: 12px;
+    font-size: 12px; /* koodi sovittaa pitkät nimet (SovitaNimi) */
 }
 
 /* Viritetty asema meripihkakorostuksella. */
@@ -2159,7 +2159,7 @@
     color: rgb(40, 22, 4);
     background-color: rgba(242, 192, 94, 0.9);
     text-shadow: none;
-    letter-spacing: 3.12px; /* web 0.5px */
+    letter-spacing: 2px; /* web 0.2px */
 }
 
 .mk-radio__kaupunki--kauka {
