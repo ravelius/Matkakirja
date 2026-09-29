@@ -43,7 +43,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 | Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 7273a4a13 | Opus | webin nahkayläpalkki WIP (pelikoodari-ylapalkki-nahka df49af37d); #3624 mergetty, #3627 ja #3611 auki |
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 d9738f3bb | Opus, max | jono tyhjä, anna uusi erä |
 | Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 d2afb0eb4 | Opus, high | puuradio v3 omistajan OK:n jälkeen |
-| Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 292e07f63 | Opus, max | keittiö hiomassa; yleislinna (erä 3) |
+| Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 88da6a7d1 | Opus, max | keittiö hiomassa; yleislinna (erä 3) |
 | Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus a38eea94d | Opus | jono tyhjä, anna uusi erä |
 | Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 8dcb7190f | Opus | jokipolton seuranta, vientikuvat omistajalle |
 | Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 a93e7e4f8 | Sonnet, high | #3611, maakuntajono |
