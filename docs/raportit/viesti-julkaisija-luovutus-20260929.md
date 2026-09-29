@@ -1,4 +1,4 @@
-# Julkaisijan luovutus 29.9.2026 klo 15.5x (tilinvaihto)
+# Julkaisijan luovutus 29.9.2026 klo 16.36 (tilinvaihto)
 
 Julkaisija (Opus 5.5) → seuraava Julkaisija. Checkout /Users/Shared/Claude/Matkakirja-julkaisija, työkalut
 /Users/Shared/Claude/julkaisija-tyokalut/ (jonoon.sh, ajojono.sh, valmistele.sh, mergaa.sh, pidossa.txt,
@@ -11,16 +11,23 @@ Fable = "Päätoimittaja (Opus, xhigh)".
   1.0.44 (4d7bc2ed), 1.0.48 (1c4a7eff), 1.0.49 (5ce37440). 1.0.45–1.0.47 yhdistettiin 1.0.48:aan
   (buildit 202609290759/0829/0907 jäivät käyttämättä; muutoslokirivit poistettu).
 - **1.0.50 = proto master cbf78690** (BUILD 50, käännös fc26b44c, iPhonen yläpalkin matkalaukkunahka),
-  build 202609291251, VIE Fablelta annettu 15.5x. Muutosrivi PR #3626 mergessä → odota sen
-  vie-sisalto success → `gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true
-  -f ordinaali=50 -f proto_ref=cbf78690 -f build_numero=202609291251`. Tarkista, onko jo ajettu
-  (`gh run list --workflow proto3d-testflight.yml --limit 3`) ennen kuin ajat uudelleen.
+  build 202609291251, VIE Fablelta annettu 15.5x. Sisältövienti 36572799262 (#3626) success 16.36.
+  **TF-ajo 36576368826 käynnistetty 16.3x** (ordinaali 50, proto_ref cbf78690). Tarkista
+  `gh run view 36576368826 --json conclusion,jobs` – kun "Build sisäiselle testiryhmälle" success,
+  yksi rivi Päätoimittajalle. Jos failure, lue loki ja aja sama komento uudelleen
+  (`gh workflow run proto3d-testflight.yml --ref main -f vie_unitysta=true -f ordinaali=50
+  -f proto_ref=cbf78690 -f build_numero=202609291251`). Testattavaa tyhjä.
+- **Jokipolton vienti** aamulla 30.9. vain omistajan luvalla (Päätoimittajan ohje; Karttaseppä
+  kertoo yksityiskohdat).
+- **Sallinnat voimassa** (settings.local.json, omistaja): `Bash(gh workflow run:*)`,
+  `Bash(git worktree remove:*)`, `Edit/Write(.github/workflows/**)`. Tuotantomuutokset (osoitin,
+  uudet CI-kohteet) silti omistajan suoralla luvalla.
 - Natiivin juna on tyhjä (Natiiviseppä).
 
 ## Web-juna
 
 - #3624 (yläpalkkierä) MERGED 16.0x. #3626 (1.0.50-muutosrivi) MERGED.
-- Auki junassa: #3627 (Pelikoodari, Liiku läpinäkyväksi, v2408) – `jonoon.sh 3627` käynnissä,
+- Auki junassa: #3627 (Pelikoodari, Liiku läpinäkyväksi, v2408) – `jonoon.sh 3627` käynnissä, 16.36 mergaa.sh odottaa testejä,
   loki /tmp/claude-502/juna-3627.log. Tarkista `pgrep -fl "jonoon.sh|valmistele.sh|mergaa.sh"` ja
   `gh pr view 3627 --json state`. Jos prosessia ei ole ja PR on OPEN: `JATKA=1 zsh
   julkaisija-tyokalut/jonoon.sh 3627`.
