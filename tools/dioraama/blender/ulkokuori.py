@@ -3,7 +3,8 @@
 # Tuo OBJ:n (Rhino, Z ylös), poistaa veden (materiaali 'Custom'; peli piirtää veden itse), siirtää saaren keskelle
 # ja vedenpinnan korkeudelle VESI_Y (dioraaman koordinaatisto: vesi y −7), keventää LOD-tasoiksi ja vie glb:t.
 # Lisäksi yläkuva (ortografinen, pohjoinen ylös) ja yleiskuva dioraaman yleiskamerasta tilojen sijoittelua varten.
-#   nice -n 15 Blender -b -P tools/dioraama/blender/ulkokuori.py -- <obj> <ulos> [--lod 200000,60000,20000]
+#   nice -n 15 Blender -b -P tools/dioraama/blender/ulkokuori.py -- <obj> <ulos> [--lod 200000,60000,20000] [--siivoa]
+#   --siivoa: poistaa restauroinnin työmaaromun (kuori_siivous.py) keskityksen jälkeen ja tallentaa tekstuuri_siivottu.png.
 import bpy, math, os, sys, time
 from mathutils import Vector
 a = sys.argv[sys.argv.index('--') + 1:]
@@ -36,6 +37,14 @@ me.transform(__import__('mathutils').Matrix.Translation(siirto))
 me.update()
 print(f'KUORI: vesi {vesi:.2f} → {VESI_Y}, keskitys ({cx:.1f}, {cy:.1f}), koko x {max(xs)-min(xs):.1f} y {max(ys)-min(ys):.1f} '
       f'korkeus {min(zs)-vesi:.1f}…{max(zs)-vesi:.1f} m vedestä, kolmioita {sum(len(p.vertices)-2 for p in me.polygons)}')
+
+# Valinnainen siivous: työmaaromu pois geometriasta ja tekstuurista (ennen 2k-kopiota ja LOD-vientiä).
+if '--siivoa' in a:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import kuori_siivous
+    _k = next(im for im in bpy.data.images if 'diffuse' in im.name)
+    kuori_siivous.siivoa(o, _k)
+    kuori_siivous.tallenna_kuva(_k, os.path.join(ULOS, 'tekstuuri_siivottu.png'))
 
 # Tekstuuri: 4k alkuperäinen LOD0:lle, 2k muille (JPEG vientiin).
 kuva = next(im for im in bpy.data.images if 'diffuse' in im.name)
