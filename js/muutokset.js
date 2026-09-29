@@ -13,6 +13,21 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2412, teksti: 'ISL: pitkä-luonnehdinta + pulu kaikille 9 maaku… (#3560)' },
+  { v: 2411, teksti: 'Natiivin muutosloki: 1.0.51 (#3629)' },
+  { v: 2410, teksti: 'Linssien esittelyt: 9 lyhyttä selitystä pilleri… (#3611)' },
+  { v: 2409, teksti: 'Linssikatalogi: E11 tila rakenteilla + n1500-to… (#3593)' },
+  { v: 2408, teksti: 'Liiku läpinäkyväksi, iPadilla Pulun reunaan (#3627)' },
+  { v: 2407, teksti: 'Yläpalkki: logo, pillerivalikko, Linssit- ja Aa… (#3624)' },
+  { v: 2406, teksti: 'Pariteetti web: saapumiskuva ilman kehystä, yks… (#3622)' },
+  { v: 2405, teksti: 'Korjaa puuttuva paivitaPelaajanakymaNappi-tuonti (#3623)' },
+  { v: 2404, teksti: 'Dioraama erä 2b: vapaa 3D-keittiö – valot, Code… (#3621)' },
+  { v: 2403, teksti: 'Avaus ja sulku animoiden: pelin dialogit (#3616)' },
+  { v: 2402, teksti: 'Maakuntakortti: kiinteä koko ja avaus/sulku ani… (#3610)' },
+  { v: 2401, teksti: 'ISS-tervetulo: kuvan selite ei vaienna Pulun C2… (#3609)' },
+  { v: 2400, teksti: 'Maailmatilan Pelaajan näkymä -apunappi (#3608)' },
+  { v: 2399, teksti: 'Raamattu: avaus ja sulku aina animoiden (#3602)' },
+  { v: 2398, teksti: 'Avaus ja sulku animoiden: nostokortit, popupit,… (#3605)' },
   { v: 2397, teksti: 'Maakunnan nostokortti nostojen kokoiseksi, kuva… (#3583)' },
   { v: 2396, teksti: 'Dioraama erä 2: maalattujen pintojen, atlaksen,… (#3601)' },
   { v: 2395, teksti: 'Natiivin offline-pohja ja kerma sarjaan 2026-09… (#3599)' },

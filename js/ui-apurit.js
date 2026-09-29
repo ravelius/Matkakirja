@@ -2096,11 +2096,13 @@ const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
 let kehittajaMuisti = null;
 let kehittajaMaailmaMuisti = null;
 let lautaMuisti = null;
+let pelaajanakymaMuisti = null;
 
 /** Kytkinten muisti tyhjäksi: seuraava kysyjä lukee levyltä. */
 export function unohdaKehittajaKytkimet() {
   kehittajaMuisti = null;
   kehittajaMaailmaMuisti = null;
+  pelaajanakymaMuisti = null;
   // Laudan valinta on samaa perhettä (ks. lautaValinta alempana).
   lautaMuisti = null;
 }
@@ -2304,8 +2306,11 @@ function siivoaVanhatKehittajaAvaimet() {
   }
 }
 
-/* Muisti eikä levyluku joka kehyksessä — ks. kehittajaTilaPaalla. */
-export function kehittajaMaailmaPaalla() {
+/*
+ * Maailmanapin VALINTA sellaisenaan (kehittäjävalikon rivi ja Pelaajan näkymä -apunappi lukevat tätä).
+ * Muisti eikä levyluku joka kehyksessä — ks. kehittajaTilaPaalla.
+ */
+export function kehittajaMaailmaValittu() {
   if (kehittajaMaailmaMuisti !== null) return kehittajaMaailmaMuisti;
   try {
     kehittajaMaailmaMuisti = localStorage.getItem(KEHITTAJA_MAAILMA_AVAIN) === '1';
@@ -2313,6 +2318,48 @@ export function kehittajaMaailmaPaalla() {
     kehittajaMaailmaMuisti = false; // yksityinen selaus
   }
   return kehittajaMaailmaMuisti;
+}
+
+/*
+ * PELAAJAN NÄKYMÄ MAAILMATILASSA (omistaja 29.9.2026 klo 08.5x: *"Maailmatilaan voisi tehdä apunapin, joka
+ * näyttäisi kartan samalla lailla, kuin että maailmatila ei olisi päällä. Ainoastaan kohdekaupungit näkyisivät
+ * himmeänä ja pystyisin edelleen klikkaamalla siirtymään myös niihin"*). Apunappi (js/pelaajanakyma.js) näkyy vain
+ * maailmatilassa; oma avain kuten maailmanapilla, laitteen asetus eikä pelitallennuksen osa.
+ *
+ * VAIKUTUS KESKITETYSTI: kun pelaajan näkymä on päällä, kehittajaMaailmaPaalla() vastaa false, joten jokainen
+ * maailmatilan haara (zoomi- ja panorointirajat, maan rajaus, tasoitus, pisteiden näkyvyys, napautuksen hyppy)
+ * toimii pelaajan tavoin. Himmeät, napautettavat kohdekaupungit lisää pallolauta (kehittajanPelaajanakyma).
+ */
+const KEHITTAJA_PELAAJANAKYMA_AVAIN = 'matkakirja-kehittaja-pelaajanakyma';
+
+export function kehittajaPelaajanakymaValittu() {
+  if (pelaajanakymaMuisti !== null) return pelaajanakymaMuisti;
+  try {
+    pelaajanakymaMuisti = localStorage.getItem(KEHITTAJA_PELAAJANAKYMA_AVAIN) === '1';
+  } catch {
+    pelaajanakymaMuisti = false; // yksityinen selaus
+  }
+  return pelaajanakymaMuisti;
+}
+
+export function asetaKehittajaPelaajanakyma(paalla) {
+  unohdaKehittajaKytkimet();
+  try {
+    if (paalla) localStorage.setItem(KEHITTAJA_PELAAJANAKYMA_AVAIN, '1');
+    else localStorage.removeItem(KEHITTAJA_PELAAJANAKYMA_AVAIN);
+  } catch {
+    /* yksityinen selaus: tila jää vain tälle istunnolle */
+  }
+}
+
+/** Maailmatila vaikuttaa karttaan: valittu JA pelaajan näkymä pois. */
+export function kehittajaMaailmaPaalla() {
+  return kehittajaMaailmaValittu() && !kehittajaPelaajanakymaValittu();
+}
+
+/** Kehittäjä katsoo maailmatilassa pelaajan näkymää (himmeät, napautettavat kohdekaupungit). */
+export function kehittajanPelaajanakyma() {
+  return kehittajaTilaPaalla() && kehittajaMaailmaValittu() && kehittajaPelaajanakymaValittu();
 }
 
 export function asetaKehittajaMaailma(paalla) {

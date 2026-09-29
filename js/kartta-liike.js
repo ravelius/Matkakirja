@@ -49,7 +49,7 @@ export const SAVYT = {
 /** Bodyn luokat, joiden aikana lauta ei ole levossa. */
 export const LEVON_ESTEET = [
   'linssi-paalla', 'nosto-popup-auki', 'lento-kesken', 'flight-active',
-  'aikajana-paalla', 'maataulu-auki', 'laukku-auki', 'animaatio-kaynnissa',
+  'aikajana-paalla', 'maataulu-auki', 'pilleri-auki', 'animaatio-kaynnissa',
   'kartta-raahaus', 'zoom-kaynnissa', 'luenta-huntu', 'aloitusverho-paalla',
   'aloitusnakyma', 'pallolauta-lennossa',
 ];

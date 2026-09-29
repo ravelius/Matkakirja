@@ -372,8 +372,8 @@ async function ajaNakyma(nakymanNimi) {
       // Molemmat kuvat latautuvat verkosta — odotetaan, että kumpikin
       // on purettu (naturalWidth > 0), ei vain liitetty DOMiin.
       for (let i = 0; i < 40; i += 1) {
-        const sat = document.querySelector('.linssi-liuskat button[data-linssi="satelliitti"] img');
-        const muu = document.querySelector('.linssi-liuskat button[data-linssi="ihmisen-matka"] img');
+        const sat = document.querySelector('#linssi-valikko button[data-linssi="satelliitti"] img');
+        const muu = document.querySelector('#linssi-valikko button[data-linssi="ihmisen-matka"] img');
         if (sat && muu && sat.naturalWidth > 0 && muu.naturalWidth > 0) break;
         // eslint-disable-next-line no-await-in-loop
         await new Promise((r) => setTimeout(r, 50));
@@ -383,8 +383,8 @@ async function ajaNakyma(nakymanNimi) {
         const r = kuva?.getBoundingClientRect();
         return r ? { w: Math.round(r.width), h: Math.round(r.height) } : null;
       };
-      const satNappi = document.querySelector('.linssi-liuskat button[data-linssi="satelliitti"]');
-      const muuNappi = document.querySelector('.linssi-liuskat button[data-linssi="ihmisen-matka"]');
+      const satNappi = document.querySelector('#linssi-valikko button[data-linssi="satelliitti"]');
+      const muuNappi = document.querySelector('#linssi-valikko button[data-linssi="ihmisen-matka"]');
       const satKuva = satNappi?.querySelector('img');
       // Kuvatiedosto on oikeasti olemassa palvelimella (HEAD 200), ei
       // vain osoitteena — varasolu-SVG ilmestyisi vasta virheestä.

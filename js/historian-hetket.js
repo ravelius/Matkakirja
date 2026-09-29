@@ -68,6 +68,7 @@ import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA — sama järjestely ja sama
@@ -303,6 +304,7 @@ export function avaaHetki(ui, iso, hetki) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('hetki-auki');
+  animoiAvaus(kortti);
 }
 
 /**
@@ -538,7 +540,7 @@ export function suljeHetki(ui) {
   for (const vanha of document.querySelectorAll('.hetki-kerros')) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
     vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
-    vanha.remove();
+    suljeKerrosAnimoiden(vanha, '.hetki-kortti', ['hetki-kerros', 'hetki-auki']);
   }
 }
 

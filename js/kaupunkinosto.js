@@ -66,6 +66,7 @@ import { nostokuvaVakiokortti } from './nostokuva.js';
 import { sfx } from './sound.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, kuunteleSulkevaNapautus } from './ui-apurit.js';
+import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
 
 /* ===================== MERKIN MITAT KARTALLA ===================== */
 
@@ -554,6 +555,7 @@ export function suljeKaupunkipopup(ui) {
     return;
   }
   if (lahde) lahde.style.visibility = '';
+  haamuSulku(auki.popup, typeof auki.ankkuri === 'function' ? auki.ankkuri() : auki.ankkuri);
   auki.popup?.remove();
 }
 
@@ -664,6 +666,9 @@ function avaaKortti(ui, city, {
   // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.
   globalThis.requestAnimationFrame?.(() => asemoiKaupunkipopup(ui));
   setTimeout(() => asemoiKaupunkipopup(ui), 220);
+  // Kasvaa merkin kohdalta (omistaja 29.9.2026, js/avausanimaatio.js). Avauskortti kasvaa kutsuminiatyyristä
+  // omalla liikkeellään (avaaAvauskortti, omistajan 250–300 ms), joten sitä ei animoida tässä.
+  if (laji !== 'avaus') animoiAvaus(popup, typeof ankkuri === 'function' ? ankkuri() : ankkuri);
   return popup;
 }
 
@@ -796,7 +801,11 @@ export function avaaAvauskortti(ui, city, { ankkuri = null, lahde = null } = {})
     ankkuri,
     lato: latoAvauskortti,
   });
-  if (!kortti || !lahde?.isConnected || typeof kortti.animate !== 'function' || avauskortinLiikeVahennetty()) return kortti;
+  if (!kortti || !lahde?.isConnected || typeof kortti.animate !== 'function' || avauskortinLiikeVahennetty()) {
+    // Ilman kutsuminiatyyriä avauskortti kasvaa kuten muut kortit.
+    animoiAvaus(kortti, typeof ankkuri === 'function' ? ankkuri() : ankkuri);
+    return kortti;
+  }
   ui.kaupunkipopupAuki.lahde = lahde;
   kortti.style.animation = 'none';
   const alku = kutsunMuunnos(kortti, lahde);

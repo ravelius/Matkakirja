@@ -605,6 +605,7 @@ export function kuvatiedot(kohde, havainto) {
  */
 function avaaHavaintokortti({
   kohde, valikko, onSuljettu, alkuIndeksi, sisaan = 0, siirry = null, naapuriKohde = null,
+  automaattiluentaSallittu = () => true,
 }) {
   lataaSatelliittiTyyli();
   const katselu = html('div', 'satelliitti-katselu');
@@ -1621,6 +1622,16 @@ function avaaHavaintokortti({
   let luettu = null;
   function lueSelite(h) {
     if (!luentaKytkinPaalla()) return;
+    /*
+     * PULUN TERVETULO VÄISTÄÄ (löydös: Linssiseppä 1 / Päätoimittaja
+     * 29.9.2026, PR #3575): C1 avaa väärän kohteen kuvan tervetulon
+     * OMALLA avaaKohde-kutsulla, ja tämä automaattinen luenta alkaisi
+     * silloin sen päälle. soitaLivianAani ei ala kertojan päälle
+     * (js/liviapuhe.js), joten C2:n Livian ääni jäisi kokonaan soimatta.
+     * Tervetulon aikana vain sen OMA puhe saa kuulua; kuvan avaaminen
+     * pelaajan omasta tahdosta (ei tervetulon aikana) luetaan normaalisti.
+     */
+    if (!automaattiluentaSallittu()) return;
     const teksti = `${kohde.nimi}, ${kohde.seutu}. ${h?.teksti ?? kohde.selite ?? ''}`.trim();
     if (!teksti || teksti === luettu) return;
     luettu = teksti;
@@ -1924,6 +1935,7 @@ function avaa(lauta, tila, ui) {
         avaaKohde(k, { indeksi: galleria ? (suunta > 0 ? 0 : viimeinen) : undefined, sisaan: suunta });
       },
       onSuljettu: () => { suljettiin = Date.now(); kortti = null; },
+      automaattiluentaSallittu: () => !tervetuloKesken(),
     });
     /*
      * PALLO KUVAN TAKANA: kamera liukuu kohteen ylle, ja läpikuultavan
@@ -1961,6 +1973,19 @@ function avaa(lauta, tila, ui) {
     },
     suljeKortti,
   })) : null;
+  /*
+   * ONKO TERVETULO KESKEN (löydös: Linssiseppä 1 / Päätoimittaja
+   * 29.9.2026, PR #3575, ks. avaaKohde → avaaHavaintokortti
+   * automaattiluentaSallittu): sama vaihe-tarkistus kuin pulu-taulu.js:n
+   * automaattiKierros — 'odottaa' ja 'puhuu' ovat jakson kesken olevat
+   * vaiheet, muut (valmis/ohitettu/pois/purettu) ovat päättyneitä.
+   */
+  const tervetuloKesken = () => {
+    if (!tervetulo) return false;
+    let vaihe = null;
+    try { vaihe = tervetulo.tila?.()?.vaihe ?? null; } catch { vaihe = null; }
+    return ['odottaa', 'puhuu'].includes(vaihe);
+  };
 
   /*
    * PULUN TAULU (js/linssit/pulu-taulu.js, omistaja 28.9.2026): linssin
@@ -2216,6 +2241,7 @@ export const LINSSI = {
   kerros: false,
   nimi: 'Astronautin kamera',
   lyhyt: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
+  esittely: 'Suuntaa kaukoputki Maahan ja katso valokuva, jonka astronautti otti ikkunasta.',
   /*
    * NIMI VAIHTUI 12.9.2026: "Satelliittilinssi" → "Astronautin kamera"
    * (omistaja, sanatarkasti: *"muuta linssin nimeksi astronautin kamera

@@ -325,11 +325,14 @@ async function avaaPeli(s) {
 /*
  * LINSSI AUKI PELAAJAN OMILLA ELEILLÄ (ks. tiedoston alku, kohta A).
  *
- * Kolme napautusta, samat kuin pelaajalla:
- *   1. #turn-pill avaa matkalaukun (js/ui.js, index.html),
- *   2. button[data-linssi="satelliitti"] valitsee ruudun laukussa
- *      (js/ui.js linssiLiuska) — tämä EI vielä sytytä linssiä,
- *   3. .linssi-aktivoi sytyttää sen ja sulkee laukun (aktivoiLinssi).
+ * Neljä napautusta, samat kuin pelaajalla (pillerivalikkouudistus,
+ * omistaja 29.9.2026: matkalaukku korvautui pillerivalikolla, jonka
+ * päänäkymästä pitää ERIKSEEN avata Linssit-alanäkymä):
+ *   1. #turn-pill avaa pillerivalikon (js/ui.js avaaPilleriValikko),
+ *   2. #pilleri-linssit-btn vaihtaa näkymän Linssit-alanäkymään,
+ *   3. button[data-linssi="satelliitti"] valitsee ruudun (js/ui.js
+ *      esikatseleLinssi) — tämä EI vielä sytytä linssiä,
+ *   4. .linssi-aktivoi sytyttää sen ja sulkee valikon (aktivoiLinssi).
  *
  * Jos jokin näistä puuttuu, savuke kaatuu tähän — ja juuri se on
  * tarkoitus: silloin pelaaja ei pääse linssiin lainkaan, eikä muilla
@@ -337,7 +340,9 @@ async function avaaPeli(s) {
  */
 async function avaaLinssiEleella(s) {
   await s.click('#turn-pill');
-  await s.waitForTimeout(1200);
+  await s.waitForTimeout(600);
+  await s.click('#pilleri-linssit-btn');
+  await s.waitForTimeout(600);
   const ruutu = s.locator('button[data-linssi="satelliitti"]');
   await ruutu.waitFor({ timeout: 15000 });
   await ruutu.scrollIntoViewIfNeeded();
@@ -350,7 +355,10 @@ async function avaaLinssiEleella(s) {
   await s.waitForTimeout(4500);
   return s.evaluate(() => ({
     linssi: window.matkakirja.ui.linssiValittu,
-    laukku: Boolean(document.getElementById('passport-dialog')?.open),
+    // #passport-dialog korvautui pillerivalikolla (omistaja 29.9.2026):
+    // "auki" on nyt #paavalikko ilman hidden-attribuuttia.
+    laukku: document.getElementById('paavalikko')
+      ? !document.getElementById('paavalikko').hidden : false,
   }));
 }
 
