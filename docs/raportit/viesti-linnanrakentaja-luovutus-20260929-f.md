@@ -40,3 +40,17 @@ Edellinen: `…-20260929-e.md` (Blender-putki, kuori, Siirtosepän rajapinta). O
 - Mittaa paikat kuoresta (kuori_korkeudet.py + ortokuva ruudukolla), älä luota taulukon arvioihin.
 - Leivo aina `--leikkaa`-lipulla; tarkista 2k-atlaksen keskiarvo (ei 0) ennen toimitusta.
 - Siivouksessa muurin vieressä EI poisteta venyneitä kolmioita (takana ei pintaa → reikä muuriin).
+
+## Lisäys klo 22.0x: iltatunnelma ja elävän linnan luonnoskuvat
+- Omistajan pyyntö (Päätoimittaja 21.4x): tunnelma. Uusi tila `tunnelma` (js/dioraama/rakennukset/olavinlinna/tunnelma.js,
+  kohdistettava false): 24 seinäsoihtua mitattuihin seinäpisteisiin (`kuori_seinapiste.py`), 6 lyhtyä (uusi resepti
+  `lyhty`), liput Kello-, Kirkko- ja Kijlin torniin, 3 venettä ponttonilaituriin, `savut` 4 piippuun, `lokit` 2 parvea.
+  leivo_tila.py: `--hamara`, savu:NN/lokit:NN-tyhjät, lippujen UV0.u, kamera valinnainen, `--hahmot`, `--kamera`,
+  `--luonnos` (Standard, liekit näkyvät). `kuori_hamara.py` = kuoren hämärätekstuuri (54 s), `tunnelma_kuva.py` =
+  Unity-tyylinen esikatselu. Siivous v13 (painettu romu 5 cm maan alle). Kaikki _valmiit:ssa + astcm; testit 275/275.
+- Siirtosepän Unity-puoli valmis (linna-valo ea866181): savu, lokit, liput, "tunnelma": hamara|paiva.
+- Elävän linnan käsikirjoitus (haara claude/bold-ride-vow4ki, docs/raportit/linna-elava-kasikirjoitus-20260929.md),
+  omistaja hyväksyi luonnoskuvat. Tehty A (saapuminen) ja C (keittiö sisältä) + D-varaversio Blenderissä:
+  rooli-repo docs/raportit/kuvat/linnanrakentaja-elava/ (98ed349a3). B ja D Unitystä Siirtosepältä.
+  ÄLÄ rakenna kokemusta ennen omistajan kuvahyväksyntää. Rakennusjärjestys käsikirjoituksen kohdassa 8.
+- Kuvamerkinnät Arial-fontilla (PIL:n oletusfontista puuttuvat ääkköset): scratchpad merkitse.py.
