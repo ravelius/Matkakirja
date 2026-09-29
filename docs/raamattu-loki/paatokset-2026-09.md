@@ -9183,3 +9183,7 @@ Omistaja 29.9. klo 13.1x (natiivin pillerivalikon kuvat) sanatarkasti: "matkakir
 ## OMISTAJA: PUURADIO V3 — NÄYTTÖ LOISTAA VALOA, MUU RADIO TUMMEMPI (29.9.2026 klo 16.30)
 
 Omistaja 29.9. klo 16.2x (nähtyään v2:n, 2580997f7) sanatarkasti: "radiossa näyttö ei loista valoa, vaikka pitäisi. radion voisi jättää muuten valaisematta vielä enemmän." → Codexille posti/fable-codex-radio-yksikuva-v3-20260929.md: näyttö valonlähteenä (meripihkainen hehku valaisee kehystä ja lähintä puuta, valo heikkenee etäisyyden mukaan), muu runko syvempään varjoon (vain lamppujen valaisemat kohdat + ohut sinertävä takareunavalo), VU ja asteikko hehkuvat mutta valaisevat vähemmän; muoto, mitat ja tiedostot ennallaan. Linssiseppä 2 kytkee omistajan OK:n jälkeen (mahdollisesti uudella tilillä).
+
+## TILINVAIHTO 29.9. KLO 16.4X: ROOLIT PYSÄYTETTY, SIIRTOPROMPTI (29.9.2026 klo 16.38)
+
+Omistaja 29.9. klo 16.3x: "sen jälkeen voisit lopettaa muut sessiot ja tehdä siirtopromptin" (viikko 94–95 %). Kaikki 12 roolia pushasivat luovutuksen ja aloitusviestin (SHA:t siirtopromptissa). Käynnissä jää: jokipoltto ajo-20260930 (vahti, nice 15) ja TF 1.0.50 -ajo 36576368826 GitHubissa. Siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20260929.md; Päätoimittajan aloitusviesti osoittaa siihen. Codexin puuradio v3 odottaa; iPad-yläpalkki tilataan vasta omistajan nähtyä iPhonen nahkapalkin pelissä.
