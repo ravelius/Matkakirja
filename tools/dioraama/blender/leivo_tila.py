@@ -1,0 +1,325 @@
+# Dioraaman tila Blenderissä (Linnanrakentaja 29.9.2026, omistajan "uusi tapa": valokuvamainen, esilaskettu valo).
+# Tuo rakennuskoneen tilan glb:n (tilat/<id>.glb) pohjaksi, vaihtaa pintojen materiaalit PBR-materiaaleiksi
+# (proseduraaliset nyt, Poly Haven -tekstuurit myöhemmin), lisää tilan valot rakennus.json:sta (tulisija, kynttilät,
+# ikkunakeila) ja joko renderöi esikuvan tilan kamerasta (--renderoi) tai leipoo valon atlakseen UV1:lle (--leivo) ja
+# vie glb:n Unityyn. Ajo taustalla, yksi kerrallaan (kuormaraja):
+#   nice -n 15 /Applications/Blender.app/Contents/MacOS/Blender -b -P tools/dioraama/blender/leivo_tila.py -- \
+#     --paketti dist/dioraama/olavinlinna --tila keittio --ulos <kansio> [--renderoi] [--leivo] [--naytteet 128]
+import bpy, json, math, os, sys
+
+argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
+def arg(nimi, oletus=None):
+    return argv[argv.index(nimi) + 1] if nimi in argv else oletus
+PAKETTI = arg('--paketti', 'dist/dioraama/olavinlinna')
+TILA = arg('--tila', 'keittio')
+ULOS = arg('--ulos', '/tmp/leivo')
+NAYTTEET = int(arg('--naytteet', '128'))
+RESO = int(arg('--reso', '2048'))
+os.makedirs(ULOS, exist_ok=True)
+
+rak = json.load(open(os.path.join(PAKETTI, 'rakennus.json')))
+tila = next(t for t in rak['tilat'] if t['id'] == TILA)
+
+def bl(p):  # glTF (x, y ylös, z etelä) → Blender (x, y = −z, z ylös)
+    return (p[0], -p[2], p[1])
+
+# --- Näyttämö tyhjäksi ja Cycles GPU:lle (Metal) ---
+bpy.ops.wm.read_factory_settings(use_empty=True)
+sc = bpy.context.scene
+sc.render.engine = 'CYCLES'
+try:
+    prefs = bpy.context.preferences.addons['cycles'].preferences
+    prefs.compute_device_type = 'METAL'
+    prefs.get_devices()
+    for d in prefs.devices:
+        d.use = True
+    sc.cycles.device = 'GPU'
+except Exception as e:  # CPU varalla
+    print('LEIVO: GPU ei käytössä:', e)
+sc.cycles.samples = NAYTTEET
+sc.view_settings.view_transform = 'AgX'
+sc.view_settings.look = 'AgX - Medium High Contrast' if 'AgX - Medium High Contrast' in [l.name for l in bpy.types.ColorManagedViewSettings.bl_rna.properties['look'].enum_items] else 'None'
+
+# --- Tuonti: oma tila + massa varjostajaksi (massa vain renderöintiin, ei leivota) ---
+def tuo(polku):
+    ennen = set(bpy.data.objects)
+    bpy.ops.import_scene.gltf(filepath=polku)
+    return [o for o in bpy.data.objects if o not in ennen]
+tilan = tuo(os.path.join(PAKETTI, 'tilat', f'{TILA}.glb'))
+massa = tuo(os.path.join(PAKETTI, 'tilat', 'massa.glb')) if TILA != 'massa' else []
+for n in tila.get('naapurit', []):
+    if n not in ('massa', TILA):
+        massa += tuo(os.path.join(PAKETTI, 'tilat', f'{n}.glb'))
+
+# --- PBR-materiaalit pinnan nimen mukaan (proseduraaliset) ---
+def solmu(nt, tyyppi, x=0, y=0):
+    n = nt.nodes.new(tyyppi); n.location = (x, y); return n
+
+PH = arg('--tekstuurit', '/Users/Shared/Claude/proto-3d/_lahteet/polyhaven')
+# Pinta → Poly Haven -tekstuuri (CC0, manifest.json samassa kansiossa) ja tekstuurin koko metreinä.
+TEKSTUURIT = {
+    'kivi': ('rustic_stone_wall', 2.5), 'leikkaus': ('stacked_stone_wall', 2.0),
+    'rappaus': ('plastered_stone_wall', 2.5), 'kivilattia': ('slate_floor_02', 1.5),
+    'lankku': ('rough_wood', 1.5), 'puu': ('wood_table_worn', 1.2), 'kallio': ('rock_face', 6.0),
+    'metalli': ('rusty_metal_02', 1.0), 'rauta': ('rusty_metal_02', 1.0), 'kangas': ('hessian_230', 0.6),
+    'tiili': ('medieval_red_brick', 2.0), 'katto': ('roof_slates_02', 2.0),
+}
+
+def pbr_kuva(nimi, tid, koko, metalli=0.0):
+    m = bpy.data.materials.new(nimi + '_pbr'); m.use_nodes = True
+    nt = m.node_tree; nt.nodes.clear()
+    ulos = solmu(nt, 'ShaderNodeOutputMaterial', 900, 0)
+    b = solmu(nt, 'ShaderNodeBsdfPrincipled', 600, 0)
+    nt.links.new(b.outputs['BSDF'], ulos.inputs['Surface'])
+    b.inputs['Metallic'].default_value = metalli
+    koord = solmu(nt, 'ShaderNodeTexCoord', -1100, 0)
+    mapp = solmu(nt, 'ShaderNodeMapping', -900, 0)
+    mapp.inputs['Scale'].default_value = (1 / koko, 1 / koko, 1 / koko)
+    nt.links.new(koord.outputs['Object'], mapp.inputs['Vector'])
+    def kuva(kartta, y, vari):
+        t = solmu(nt, 'ShaderNodeTexImage', -600, y)
+        t.image = bpy.data.images.load(os.path.join(PH, tid, f'{tid}_{kartta}_2k.jpg'), check_existing=True)
+        t.image.colorspace_settings.name = 'sRGB' if vari else 'Non-Color'
+        t.projection = 'BOX'; t.projection_blend = 0.25
+        nt.links.new(mapp.outputs['Vector'], t.inputs['Vector'])
+        return t
+    nt.links.new(kuva('diff', 300, True).outputs['Color'], b.inputs['Base Color'])
+    nt.links.new(kuva('rough', 0, False).outputs['Color'], b.inputs['Roughness'])
+    nm = solmu(nt, 'ShaderNodeNormalMap', 300, -300)
+    nt.links.new(kuva('nor', -300, False).outputs['Color'], nm.inputs['Color'])
+    nt.links.new(nm.outputs['Normal'], b.inputs['Normal'])
+    return m
+
+def pbr(nimi, vari, karheus=0.8, metalli=0.0, kuvio='kohina', mittakaava=4.0, kumpu=0.15, vaihtelu=0.25, hehku=0.0):
+    m = bpy.data.materials.new(nimi + '_pbr'); m.use_nodes = True
+    nt = m.node_tree; nt.nodes.clear()
+    ulos = solmu(nt, 'ShaderNodeOutputMaterial', 900, 0)
+    b = solmu(nt, 'ShaderNodeBsdfPrincipled', 600, 0)
+    nt.links.new(b.outputs['BSDF'], ulos.inputs['Surface'])
+    b.inputs['Roughness'].default_value = karheus
+    b.inputs['Metallic'].default_value = metalli
+    koord = solmu(nt, 'ShaderNodeTexCoord', -900, 0)
+    if kuvio == 'kivi':
+        t = solmu(nt, 'ShaderNodeTexVoronoi', -600, 0); t.inputs['Scale'].default_value = mittakaava
+        t.feature = 'DISTANCE_TO_EDGE'
+        nt.links.new(koord.outputs['Object'], t.inputs['Vector'])
+        arvo = t.outputs['Distance']
+    elif kuvio == 'puu':
+        t = solmu(nt, 'ShaderNodeTexWave', -600, 0); t.inputs['Scale'].default_value = mittakaava
+        t.inputs['Distortion'].default_value = 6; t.inputs['Detail'].default_value = 4
+        nt.links.new(koord.outputs['Object'], t.inputs['Vector'])
+        arvo = t.outputs['Fac']
+    else:
+        t = solmu(nt, 'ShaderNodeTexNoise', -600, 0); t.inputs['Scale'].default_value = mittakaava
+        t.inputs['Detail'].default_value = 8
+        nt.links.new(koord.outputs['Object'], t.inputs['Vector'])
+        arvo = t.outputs['Fac']
+    ramppi = solmu(nt, 'ShaderNodeValToRGB', -300, 150)
+    r, g, bb = vari
+    ramppi.color_ramp.elements[0].color = (r * (1 - vaihtelu), g * (1 - vaihtelu), bb * (1 - vaihtelu), 1)
+    ramppi.color_ramp.elements[1].color = (min(1, r * (1 + vaihtelu)), min(1, g * (1 + vaihtelu)), min(1, bb * (1 + vaihtelu)), 1)
+    nt.links.new(arvo, ramppi.inputs['Fac'])
+    nt.links.new(ramppi.outputs['Color'], b.inputs['Base Color'])
+    kb = solmu(nt, 'ShaderNodeBump', 300, -250); kb.inputs['Strength'].default_value = kumpu
+    nt.links.new(arvo, kb.inputs['Height'])
+    nt.links.new(kb.outputs['Normal'], b.inputs['Normal'])
+    if hehku > 0:
+        b.inputs['Emission Color'].default_value = (1.0, 0.35, 0.08, 1)
+        b.inputs['Emission Strength'].default_value = hehku
+    return m
+
+def srgb(h):
+    h = h.lstrip('#'); c = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+    return tuple((x / 12.92) if x <= 0.04045 else ((x + 0.055) / 1.055) ** 2.4 for x in c)
+
+MATERIAALIT = {
+    'kivi': dict(vari=srgb('#8f8577'), kuvio='kivi', mittakaava=2.2, kumpu=0.35, karheus=0.9),
+    'leikkaus': dict(vari=srgb('#a99d8a'), kuvio='kivi', mittakaava=3.0, kumpu=0.3, karheus=0.9),
+    'kivilattia': dict(vari=srgb('#7c7266'), kuvio='kivi', mittakaava=1.8, kumpu=0.25, karheus=0.85),
+    'rappaus': dict(vari=srgb('#cdbfa6'), kuvio='kohina', mittakaava=6, kumpu=0.08, karheus=0.95, vaihtelu=0.12),
+    'lankku': dict(vari=srgb('#6e4c30'), kuvio='puu', mittakaava=3, kumpu=0.1, karheus=0.7),
+    'puu': dict(vari=srgb('#5d402a'), kuvio='puu', mittakaava=5, kumpu=0.1, karheus=0.7),
+    'metalli': dict(vari=srgb('#3b3836'), metalli=0.85, karheus=0.45, mittakaava=12),
+    'rauta': dict(vari=srgb('#2f2c2a'), metalli=0.9, karheus=0.5, mittakaava=12),
+    'kupari': dict(vari=srgb('#9a5a36'), metalli=0.95, karheus=0.35, mittakaava=10),
+    'savi': dict(vari=srgb('#9a5f42'), karheus=0.9, mittakaava=10, kumpu=0.05),
+    'kangas': dict(vari=srgb('#c8b995'), karheus=1.0, mittakaava=40, kumpu=0.05),
+    'olki': dict(vari=srgb('#c9b27a'), kuvio='puu', mittakaava=30, karheus=1.0),
+    'nahka': dict(vari=srgb('#5a3a26'), karheus=0.7, mittakaava=20),
+    'leipa': dict(vari=srgb('#b07a3e'), karheus=0.8, mittakaava=15),
+    'kala': dict(vari=srgb('#9a9a8e'), karheus=0.4, mittakaava=20),
+    'vihannes': dict(vari=srgb('#b98a4a'), karheus=0.6, mittakaava=15),
+    'vaha': dict(vari=srgb('#e8dcc0'), karheus=0.5, mittakaava=10),
+    'hiillos': dict(vari=srgb('#3a1a0a'), karheus=1.0, hehku=1.5, mittakaava=8),
+    'katto': dict(vari=srgb('#5c5652'), kuvio='kivi', mittakaava=4, kumpu=0.2),
+    'tiili': dict(vari=srgb('#8c5a45'), kuvio='kivi', mittakaava=6, kumpu=0.2),
+    'kallio': dict(vari=srgb('#6d6458'), kuvio='kivi', mittakaava=0.6, kumpu=0.5),
+    'vesi': dict(vari=srgb('#2c3d44'), karheus=0.15, mittakaava=2, kumpu=0.02),
+}
+valmiit = {}
+for o in tilan + massa:
+    if o.type != 'MESH':
+        continue
+    for s in o.material_slots:
+        if not s.material:
+            continue
+        perus = s.material.name.split('.')[0]
+        if perus not in valmiit:
+            if perus in TEKSTUURIT and os.path.isdir(os.path.join(PH, TEKSTUURIT[perus][0])):
+                tid, koko = TEKSTUURIT[perus]
+                valmiit[perus] = pbr_kuva(perus, tid, koko, metalli=0.8 if perus in ('metalli', 'rauta') else 0.0)
+            else:
+                valmiit[perus] = pbr(perus, **MATERIAALIT.get(perus, dict(vari=srgb('#8a8580'))))
+        s.material = valmiit[perus]
+
+# --- Maailma: tumma taivas (omistajan linjaus: tumma yleisvalo) + aurinko valaistus.json:sta ---
+maailma = bpy.data.worlds.new('taivas'); sc.world = maailma; maailma.use_nodes = True
+tausta = maailma.node_tree.nodes['Background']
+v = rak.get('valaistus', {})
+tausta.inputs['Color'].default_value = (*srgb(v.get('taivas', {}).get('yla', '#8fa3bc')), 1)
+tausta.inputs['Strength'].default_value = 0.3
+a = v.get('aurinko', {})
+aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 2.2 * a.get('voima', 1.5)
+aur.color = srgb(a.get('vari', '#ffd29a')); aur.angle = math.radians(1.5)
+ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
+atz, kor = math.radians(a.get('atsimuutti', 225)), math.radians(a.get('korkeus', 36))
+# Valo tulee atsimuutin suunnasta: suunta auringosta alas = −(sin a·cos k, cos a·cos k [pohjoinen = +y], sin k)
+suunta = (-math.sin(atz) * math.cos(kor), -math.cos(atz) * math.cos(kor), -math.sin(kor))
+from mathutils import Vector
+ao.rotation_euler = Vector(suunta).to_track_quat('-Z', 'Y').to_euler()
+
+# --- Tilan valot rakennus.json:sta (tulisija, rekvisiitan kynttilät, keilat) ---
+for i, lv in enumerate(tila.get('valot', [])):
+    if lv.get('tyyppi') == 'keila':
+        d = bpy.data.lights.new(f'keila{i}', 'SPOT'); d.spot_size = math.radians(lv.get('kulma', 30) * 2)
+        d.energy = 60.0 * lv.get('voima', 100) / 100; d.color = srgb(lv.get('vari', '#ffd8a0'))
+        o = bpy.data.objects.new(f'keila{i}', d); sc.collection.objects.link(o); o.location = bl(lv['paikka'])
+        kohti = Vector(bl(lv['kohti'])) - Vector(bl(lv['paikka']))
+        o.rotation_euler = kohti.to_track_quat('-Z', 'Y').to_euler()
+        continue
+    d = bpy.data.lights.new(f'valo{i}', 'POINT')
+    rekvisiitta = lv.get('lahde') == 'rekvisiitta'
+    d.energy = (25.0 if rekvisiitta else 260.0) * lv.get('voima', 1.0)
+    d.color = srgb(lv.get('vari', '#ffb070')); d.shadow_soft_size = 0.05 if rekvisiitta else 0.35
+    o = bpy.data.objects.new(f'valo{i}', d); sc.collection.objects.link(o)
+    p = list(lv['paikka'])
+    # Tulisijan valo on datassa hiilloksen korkeudella (lämmön leivontaa varten); Cyclesissä se nostetaan liekin
+    # keskelle ja hieman huoneeseen päin, jottei tulisijan kivirunko varjosta sitä kokonaan.
+    if not rekvisiitta and lv.get('lepatus', 0) >= 0.3:
+        p[1] += 0.9
+    o.location = bl(p)
+
+# --- Kamera tilan kamera-asennosta (sama kaava kuin speksin asentoSijainti) ---
+k = tila['kamera']
+kk, ka = math.radians(k['korkeus']), math.radians(k['atsimuutti'])
+kohde = k['kohde']
+sij = (kohde[0] + k['etaisyys'] * math.cos(kk) * math.sin(ka), kohde[1] + k['etaisyys'] * math.sin(kk),
+       kohde[2] - k['etaisyys'] * math.cos(kk) * math.cos(ka))
+kd = bpy.data.cameras.new('kamera'); kd.sensor_fit = 'VERTICAL'; kd.angle_y = math.radians(k.get('fov', 38))
+kd.dof.use_dof = True; kd.dof.focus_distance = k['etaisyys']; kd.dof.aperture_fstop = 2.8
+ko = bpy.data.objects.new('kamera', kd); sc.collection.objects.link(ko); sc.camera = ko
+ko.location = bl(sij)
+ko.rotation_euler = (Vector(bl(kohde)) - Vector(bl(sij))).to_track_quat('-Z', 'Y').to_euler()
+
+if '--renderoi' in argv:
+    sc.render.resolution_x, sc.render.resolution_y = 1600, 900
+    sc.cycles.use_denoising = True
+    sc.render.filepath = os.path.join(ULOS, f'{TILA}-cycles.png')
+    bpy.ops.render.render(write_still=True)
+    print('LEIVO: renderöity', sc.render.filepath)
+
+if '--leivo' in argv:
+    # UV1 ("valo", lightmap-atlas) tilan omille objekteille, leivonta COMBINED yhteen kuvaan, vienti glb:nä
+    # Siirtosepän sopimuksella (29.9.): kaikilla primitiiveillä TEXCOORD_1, tyhjät liekki:/valo:/ikkuna: extras-kentin.
+    kuva = bpy.data.images.new(f'{TILA}_valo', RESO, RESO, float_buffer=True)
+    omat = [o for o in tilan if o.type == 'MESH']
+    # Alaspäin osoittavat pinnat (laattojen, kalusteiden pohjat) eivät näy dioraaman kameroista, mutta veisivät
+    # atlaksesta tilaa ja leipoutuisivat mustiksi: pois ennen UV-levitystä.
+    import bmesh
+    for o in omat:
+        bm = bmesh.new(); bm.from_mesh(o.data)
+        pois = [f for f in bm.faces if f.normal.z < -0.7]
+        bmesh.ops.delete(bm, geom=pois, context='FACES'); bm.to_mesh(o.data); bm.free()
+    for o in omat:
+        o.data.uv_layers.new(name='valo')
+        o.data.uv_layers.active = o.data.uv_layers['valo']
+    bpy.ops.object.select_all(action='DESELECT')
+    for o in omat: o.select_set(True)
+    bpy.context.view_layer.objects.active = omat[0]
+    bpy.ops.object.mode_set(mode='EDIT'); bpy.ops.mesh.select_all(action='SELECT')
+    bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=0.003)
+    # Tasainen tekselitiheys ja tiivis pakkaus (smart_project jätti atlaksesta suurimman osan tyhjäksi).
+    bpy.ops.uv.select_all(action='SELECT')
+    bpy.ops.uv.average_islands_scale()
+    bpy.ops.uv.pack_islands(rotate=True, margin=0.002, shape_method='CONCAVE')
+    bpy.ops.object.mode_set(mode='OBJECT')
+    kaytetyt = {s.material for o in omat for s in o.material_slots if s.material}
+    for m in kaytetyt:
+        n = m.node_tree.nodes.new('ShaderNodeTexImage'); n.image = kuva
+        uvn = m.node_tree.nodes.new('ShaderNodeUVMap'); uvn.uv_map = 'valo'
+        m.node_tree.links.new(uvn.outputs['UV'], n.inputs['Vector'])
+        m.node_tree.nodes.active = n
+    sc.cycles.samples = NAYTTEET
+    sc.render.bake.margin = 6
+    t0 = __import__('time').time()
+    bpy.ops.object.bake(type='COMBINED')
+    print('LEIVO: leivonta', round(__import__('time').time() - t0, 1), 's')
+    # Tallennus: 4k ja 2k JPEG (näyttömuunnos mukaan: AgX kuten renderissä).
+    sc.render.image_settings.file_format = 'JPEG'; sc.render.image_settings.quality = 90
+    os.makedirs(os.path.join(ULOS, 'valot'), exist_ok=True)
+    kuva.save_render(os.path.join(ULOS, 'valot', f'{TILA}.jpg'), scene=sc)
+    k2 = kuva.copy(); k2.scale(RESO // 2, RESO // 2)
+    k2.save_render(os.path.join(ULOS, 'valot', f'{TILA}-2k.jpg'), scene=sc)
+    # Vientiä varten: pinnan alkuperäinen nimi takaisin (ei kuvatekstuureja glb:hen), UV "valo" = TEXCOORD_1.
+    for m in kaytetyt:
+        m.name = m.name.replace('_pbr', '')
+    for o in omat:
+        o.data.uv_layers.active = o.data.uv_layers[0]
+    # Tyhjät: liekit, valot, ikkunakeilat.
+    tyhjat = []
+    def tyhja(nimi, paikka, **extras):
+        e = bpy.data.objects.new(nimi, None); sc.collection.objects.link(e); e.location = bl(paikka)
+        for k_, v_ in extras.items(): e[k_] = v_
+        tyhjat.append(e)
+    for j, l in enumerate(tila.get('liekit', [])):
+        tyhja(f"liekki:{l.get('liekki', 'liekki')}-{j}", l['paikka'], koko=0.45 * l.get('koko', 1),
+              savu=1.0 if l.get('liekki') == 'tulisija' else 0.2, korkeus=1.2, sade=2.5)
+    for j, lv in enumerate(tila.get('valot', [])):
+        if lv.get('tyyppi') == 'keila':
+            # Siirtosepän sopimus (f5938d7c): keila kulkee tyhjän Blender-Z:n suuntaan huoneeseen; leveys = X, korkeus = Y.
+            tyhja(f'ikkuna:{j}', lv['paikka'], leveys=0.9, korkeus=1.3, pituus=5.0, levenema=0.3,
+                  voima=0.25, vari=lv.get('vari', '#fff0d8'), poly=1.0)
+            suunta = Vector(bl(lv['kohti'])) - Vector(bl(lv['paikka']))
+            tyhjat[-1].rotation_euler = suunta.to_track_quat('Z', 'Y').to_euler()
+        else:
+            tyhja(f'valo:{j}', lv['paikka'], sade=min(4.0, lv.get('sade', 4)), voima=lv.get('voima', 1),
+                  vari=lv.get('vari', '#ffc26a'), lepatus=lv.get('lepatus', 0.0))
+    bpy.ops.object.select_all(action='DESELECT')
+    for o in omat + tyhjat: o.select_set(True)
+    os.makedirs(os.path.join(ULOS, 'tilat'), exist_ok=True)
+    bpy.ops.export_scene.gltf(filepath=os.path.join(ULOS, 'tilat', f'{TILA}.glb'), use_selection=True,
+                              export_format='GLB', export_extras=True, export_texcoords=True, export_normals=True,
+                              export_materials='PLACEHOLDER', export_image_format='NONE')
+    print('LEIVO: vienti', os.path.join(ULOS, 'tilat', f'{TILA}.glb'), 'tyhjiä', len(tyhjat))
+
+if '--tarkista' in argv:
+    # Unityä vastaava tarkistus: viety glb (leivottu) + atlas UV1:llä emissiona, render tilan kamerasta.
+    for o in list(bpy.data.objects):
+        if o.type == 'MESH' and o in tilan: bpy.data.objects.remove(o)
+    uudet = tuo(os.path.join(ULOS, 'tilat', f'{TILA}.glb'))
+    at = bpy.data.images.load(os.path.join(ULOS, 'valot', f'{TILA}.jpg'))
+    m = bpy.data.materials.new('leivottu'); m.use_nodes = True; nt = m.node_tree; nt.nodes.clear()
+    o_ = nt.nodes.new('ShaderNodeOutputMaterial'); e = nt.nodes.new('ShaderNodeEmission')
+    t = nt.nodes.new('ShaderNodeTexImage'); t.image = at; uvn = nt.nodes.new('ShaderNodeUVMap'); uvn.uv_map = 'UVMap.001'
+    nt.links.new(uvn.outputs['UV'], t.inputs['Vector']); nt.links.new(t.outputs['Color'], e.inputs['Color'])
+    nt.links.new(e.outputs['Emission'], o_.inputs['Surface'])
+    for o in uudet:
+        if o.type == 'MESH':
+            uvn.uv_map = o.data.uv_layers[1].name
+            for sl in o.material_slots: sl.material = m
+    sc.view_settings.view_transform = 'Standard'
+    sc.render.resolution_x, sc.render.resolution_y = 1600, 900
+    sc.cycles.samples = 16
+    sc.render.filepath = os.path.join(ULOS, f'{TILA}-leivottu.png')
+    bpy.ops.render.render(write_still=True)
+    print('LEIVO: tarkistus', sc.render.filepath)
