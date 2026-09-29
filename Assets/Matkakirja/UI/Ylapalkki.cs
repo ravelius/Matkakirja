@@ -674,7 +674,8 @@ namespace Matkakirja.Natiivi
                 kello.text = "";
                 kello.style.display = DisplayStyle.None;
             }
-            else if (kelluvaNyt == true || matalaNyt == true)
+            // Pillerivalikko (Pelikoodari 29.9.): molemmilla laitteilla "rahat · Päivä N, aamu"; "N/80" poistui webistä 16.8.
+            else if ((kelluvaNyt == true || matalaNyt == true) && !Linssivalitsin.PilleriValikko)
             {
                 // iPhone: "300 £ 1/80" — raha ja päivä / isoisän ennätys (omistaja 24.9.2026; suomalainen muoto
                 // "400 £" kaikkialle, Fable 27.9. klo 20.1x).
@@ -694,7 +695,7 @@ namespace Matkakirja.Natiivi
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
                 if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
-                string uusiKello = Iso(osat[1]) + ", " + osat[2];
+                string uusiKello = (Linssivalitsin.PilleriValikko ? "· " : "") + Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
