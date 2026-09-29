@@ -293,6 +293,7 @@ namespace Matkakirja.Natiivi
             {
                 Valikko.style.display = DisplayStyle.None;
                 palkki.AddToClassList("mk-ylapalkki--pilleri-oikealla");
+                PueNahka();
             }
 
             // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
@@ -339,6 +340,38 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += TarkistaVeto;
             Asettele();
         }
+
+        /// <summary>
+        /// MATKALAUKKUNAHKA (omistaja 29.9.2026: "Hyväksyn, madalletaan"; Codexin paketti ylapalkki-matkalaukku, iphone-v1):
+        /// nahkakaistale taustaksi rajattuna ja skaalattuna nykyiseen matalaan palkkiin (alareunan tikkausreuna säilyy:
+        /// scale-and-crop alareunaan), keskitummennus erillisenä kerroksena saaren kohdalle (koko leveys, sama rajaus),
+        /// logo ja pillerin muoto kohopainatuksina (pilleri 9-slice 53/47 px @3x). Luvut piirtää peli kuten ennen.
+        /// </summary>
+        void PueNahka()
+        {
+            var nahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/nahka-tile");
+            if (nahka == null) return;
+            palkki.style.backgroundImage = new StyleBackground(nahka);
+            palkki.AddToClassList("mk-ylapalkki--nahka");
+            var varjo = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/keski-varjo");
+            if (varjo != null)
+            {
+                var v = Rakenne.El("mk-ylapalkki__varjo", palkki, PickingMode.Ignore);
+                v.style.backgroundImage = new StyleBackground(varjo);
+                v.SendToBack();
+            }
+            var logoNahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus");
+            if (logoNahka != null) { logo.style.backgroundImage = new StyleBackground(logoNahka); logoSuhde = 326f / 95f; }
+            var pilleriNahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/pilleri-kohopainatus");
+            if (pilleriNahka != null)
+            {
+                pilleri.style.backgroundImage = new StyleBackground(pilleriNahka);
+                pilleri.AddToClassList("mk-pilleri--nahka");
+            }
+        }
+
+        /// <summary>Logon kuvasuhde (kultalogo 4:1, kohopainatus 326 × 95).</summary>
+        float logoSuhde = 4f;
 
         /// <summary>Löydös 68: piilotetun palkin nappi kolmena allekkaisena väkäsenä (⌄), ei ☰.</summary>
         const string KolmeVakasta = "<path d=\"M7 5.5l5 3 5-3\"/><path d=\"M7 10.5l5 3 5-3\"/><path d=\"M7 15.5l5 3 5-3\"/>";
@@ -499,9 +532,9 @@ namespace Matkakirja.Natiivi
                 float oikeaReuna = P(Screen.width / pp, 0f).x - r.z - 8f * yksikko;
                 pilleriMax = Mathf.Max(60f, oikeaReuna - (ruudunKeski + puoli));
                 float logoTila = Mathf.Max(40f, (ruudunKeski - puoli) - vasenReuna);
-                float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / 4f);
+                float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / logoSuhde);
                 logo.style.height = lk;
-                logo.style.width = lk * 4f;
+                logo.style.width = lk * logoSuhde;
             }
             pilleri.style.maxWidth = pilleriMax;
             // Varaus turva-alueen yläreunasta: se osa palkista, joka jää turva-alueen alle.
