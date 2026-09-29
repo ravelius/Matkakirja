@@ -109,7 +109,9 @@ namespace Matkakirja.Natiivi
             kamera.nearClipPlane = 0.5f;
             kamera.farClipPlane = 2000f;
             kamera.fieldOfView = KuvanKentta;
-            kamera.depth = (pallonKamera != null ? pallonKamera.depth : 0f) + 1f;
+            // Kaikkien pelin kameroiden yläpuolelle: elävän kerroksen kamera (ElavaKerros, maamerkit ja nimet) on pallo + 1, ja
+            // samalla syvyydellä sen piirtojärjestys oli satunnainen (Laitetestaaja 1.0.55: Meteora ja Olympos taivaan päällä).
+            kamera.depth = (pallonKamera != null ? pallonKamera.depth : 0f) + 10f;
             kamera.allowHDR = true;
             var data = kamera.GetUniversalAdditionalCameraData();
             data.renderType = CameraRenderType.Base;
