@@ -89,6 +89,11 @@ namespace Matkakirja.Natiivi
                 // silti nostokortin paperin väriseksi (mk-selite background-color).
                 kehys.style.display = DisplayStyle.None;
                 Maakunnat.PiilotaLista();
+                // Omistaja 29.9.2026 klo 07.3x (iPhone-kaappaus maakuntalappu-paikka.jpg): "Tuo maakunta lappu saisi olla
+                // ylempänä ja peittää sen avanneen painikkeet. Lisää pieni x sen oik yläkulmaan sulkemista varten." Lappu
+                // napin kohdalle (Asettele) ja pieni ✕ kulmaan, osuma-ala 44 pt (mitat sovittu Siirtosepän kanssa webiin).
+                var x = Rakenne.Nappi(null, "mk-selite__sulje mk-selite__lappusulje", Sulje, paneeli, Ikonit.Viiva["rasti"]);
+                x.tooltip = "Sulje maakuntakartta";
             }
             NaytaValilehti();
             lista = Rakenne.El("mk-selite__lista", vieritys);
@@ -350,8 +355,8 @@ namespace Matkakirja.Natiivi
             bool rivissa = nappi.ClassListContains("mk-ylapalkki__vieras");
             nappi.style.top = rivissa ? StyleKeyword.Null : yla;
             nappi.style.right = rivissa ? StyleKeyword.Null : oikea;
-            // Maakuntakartassa kuvausruutu napin alle: kytkin jää näkyviin (omistaja: "ei ole mitään nappia poistua").
-            paneeli.style.top = MaakuntaKartta && !rivissa ? yla + 40 + 6 : yla;
+            // Maakuntakartassa lappu peittää sen avanneen napin (omistaja 29.9.2026); sulkeminen lapun omalla ✕:llä.
+            paneeli.style.top = yla;
             paneeli.style.right = oikea;
         }
 

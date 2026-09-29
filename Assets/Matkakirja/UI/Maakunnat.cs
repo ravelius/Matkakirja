@@ -656,6 +656,14 @@ namespace Matkakirja.Natiivi
         readonly Kuvasuurennos suurennos;
         (Button Nappi, Label Vastaus) avoinVastaus;
         public bool Auki { get; private set; }
+        /// <summary>
+        /// Omistaja 29.9.2026 klo 07.4x (kaappaukset maakuntakortti-kiinni/-kysymys-auki): "Ikkunan koko ei saa muuttua kun
+        /// noita klikkaa auki." Kortin korkeus lukitaan avauksen jälkeiseen asetteluun (koko ja paikka kiinteät); vastaus
+        /// avautuu kortin sisällä, sisältö vierittyy ja avattu vastaus vieritetään pehmeästi näkyviin.
+        /// </summary>
+        bool lukitaan;
+        IVisualElementScheduledItem vieritys;
+        const float VieritysMs = 250f;
 
         public MaakuntaKortti(UiKerros kerros)
         {
@@ -668,6 +676,12 @@ namespace Matkakirja.Natiivi
             // muutettu nostokortin tyylejä).
             himmennys.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
             kortti = Rakenne.El("mk-maakuntaKortti mk-nosto", himmennys);
+            kortti.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                if (!lukitaan || kortti.layout.height <= 0 || float.IsNaN(kortti.layout.height)) return;
+                lukitaan = false;
+                kortti.style.height = kortti.layout.height;
+            });
             var sulje = Rakenne.Nappi("×", "mk-selite__sulje mk-maakuntaKortti__sulje", Sulje, kortti);
             sulje.tooltip = "Sulje";
             sisalto = new ScrollView(ScrollViewMode.Vertical);
@@ -699,7 +713,14 @@ namespace Matkakirja.Natiivi
                 return;
             }
             float leveys = Nostokortti.LaskeLeveys(rl, rk);
-            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; }
+            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; Lukitse(); }
+        }
+
+        /// <summary>Korkeus vapaaksi ja uudelleen lukkoon seuraavassa asettelussa (uusi alue tai leveyden muutos, ei vastauksesta).</summary>
+        void Lukitse()
+        {
+            kortti.style.height = StyleKeyword.Null;
+            lukitaan = true;
         }
 
         public void Avaa(string nimi, string pitka, IReadOnlyList<Dictionary<string, object>> kuvalista, IReadOnlyList<(string Q, string A)> kysymykset)
@@ -708,7 +729,9 @@ namespace Matkakirja.Natiivi
             teksti.text = pitka ?? "";
             TaytaKuvat(kuvalista);
             TaytaPulu(kysymykset);
+            vieritys?.Pause();
             sisalto.scrollOffset = Vector2.zero;
+            Lukitse();
             if (Auki) return;
             Auki = true;
             Mitoita();
@@ -809,6 +832,32 @@ namespace Matkakirja.Natiivi
             puluLohko.Insert(puluLohko.IndexOf(nappi) + 1, v);
             nappi.AddToClassList("mk-auki");
             avoinVastaus = (nappi, v);
+            v.RegisterCallback<GeometryChangedEvent>(NaytaVastaus);
+        }
+
+        /// <summary>Avattu vastaus pehmeästi näkyviin (250 ms): alareuna ruutuun, kysymys ei kuitenkaan katoa yläreunan yli.</summary>
+        void NaytaVastaus(GeometryChangedEvent e)
+        {
+            var v = (VisualElement)e.target;
+            v.UnregisterCallback<GeometryChangedEvent>(NaytaVastaus);
+            if (avoinVastaus.Vastaus != v) return;
+            var sisa = sisalto.contentContainer;
+            float ikkuna = sisalto.contentViewport.layout.height;
+            float kysymysYla = avoinVastaus.Nappi.ChangeCoordinatesTo(sisa, Vector2.zero).y;
+            float ala = v.ChangeCoordinatesTo(sisa, new Vector2(0, v.layout.height)).y + 8f;
+            float alku = sisalto.scrollOffset.y, kohde = alku;
+            if (ala > alku + ikkuna) kohde = Mathf.Min(ala - ikkuna, kysymysYla - 8f);
+            if (kysymysYla < kohde) kohde = Mathf.Max(0f, kysymysYla - 8f);
+            if (Mathf.Abs(kohde - alku) < 1f) return;
+            vieritys?.Pause();
+            float t0 = Time.unscaledTime;
+            vieritys = sisalto.schedule.Execute(() =>
+            {
+                float x = Mathf.Clamp01((Time.unscaledTime - t0) * 1000f / VieritysMs);
+                float k = 1f - (1f - x) * (1f - x) * (1f - x);
+                sisalto.scrollOffset = new Vector2(0f, Mathf.Lerp(alku, kohde, k));
+                if (x >= 1f) vieritys?.Pause();
+            }).Every(16);
         }
     }
 }
