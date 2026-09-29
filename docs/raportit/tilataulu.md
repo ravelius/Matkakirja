@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 09:46:** Levy 105,47 Gi (laski ~3,5 Gi), /private/tmp 22,7 Gt, muisti 32 % vapaa (laskussa), kuorma 62/88/99, sim 2, GPU-chrome 0, wt/ 19 kohdetta 14 Gt (ilmoitettu Päätoimittajalle). Kontekstit: Sisältökirjuri 46 %, Laitetestaaja 41 %, Natiivi-UI 61 %, Linnanrakentaja 49 %. Juna OK: käännetty a2887ec5 08:59. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
+
 **Päivitetty 09:37:** Levy 107,69 Gi (vakaa; Devices 69,5 Gt, /private/tmp 23,5 Gt), muisti 54 % vapaa, kuorma 14/34/81 (rauhallinen), sim 1, GPU-chrome 0, wt/ 17 kohdetta 12 Gt. Roolit: kaikki levossa (ilmoitettu Päätoimittajalle); ei ≥70 % (viimeisimmät 37–52 %). Juna OK: käännetty a2887ec5 08:59. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
 
 **Päivitetty 09:27:** Levy 108,02 Gi (+2,3 Gi 09:14 jälkeen; Devices 69,4 Gt, /private/tmp 23,4 Gt), muisti 55 % vapaa, kuorma 31/133/137 (piikki 370 09:19 laskenut), sim 1, GPU-chrome 0, wt/ 17 kohdetta 12 Gt. Roolit: ajossa Siirtoseppä (45 %); ei ≥70 %. Siivous kuitattu: Linssiseppä 2, Karttaseppä, Sisältökirjuri, Pelikoodari, Natiivi-UI, Siirtoseppä, Julkaisija; siirtoseppa-pohja27 poisto omistajalle (ilmoitettu). 09:24 kierros jäi väliin Bash-luokitinvirheen takia. Juna OK: käännetty a2887ec5 08:59. Postilaatikko: ylapalkki-matkalaukku ja radio-yksikuva-v2 ei vielä tullut.
