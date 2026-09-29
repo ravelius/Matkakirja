@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 06:06:** Levy 86 Gi (89→86, hälytysraja 82). Muisti 57 % vapaana (65→57). Kuorma 63/70/74, Unity käynnistyy 150 %, Evoto-camera-link 89 %. Sim 1 käynnissä. Kasvajakansiot vakaat (DerivedData 5,63, Library 6,35, build 10,62 Gt). /private/tmp 35,9 Gt (+1,2), wt/ 16 kohdetta 13 Gt. Kontekstit: Linssiseppä 2 58 %, Natiiviseppä 51 %, Linnanrakentaja 26 %; ei yli 70 %. Juna OK (b13 75db27d3 sisältyy e434161d).
+
 **Päivitetty 05:54:** Levy 89 Gi (88→89). Muisti OK (65 %). Kuorma laskee 18,8/36,8/69,9 (piikki 05.43 ohi; Evoto-camera-link 93 %, Xcode-käännös), sim 0, GPU-chrome 0. /private/tmp 34,7 Gt, wt/ 16 kohdetta 13 Gt. Kasvajakansiot vakaat (DerivedData 5,63, Library 6,35, build 10,58 Gt). Roolit: Natiivi-UI käynnissä, muut levossa. Kontekstit: Linnanrakentaja 25 %, Pelikoodari 50 %, Julkaisija 40 %, Natiivi-UI ~11 %; ei yli 70 %. Juna OK (b13 75db27d3 käännetty e434161d).
 
 **Päivitetty 05:43:** Levy 88 Gi (91→88, hälytys <82). Muisti OK (62 %). Kuorma piikki 120/164/126 (simulaattori FB234D08 iPhone 17 käynnistyi, bfs 145 % 14 min, Evoto-camera-link 97 %), sim 1 (raja päivällä ≤1), GPU-chrome 0. /private/tmp 34,9 Gt (+0,8), wt/ 16 kohdetta 13 Gt. Kasvajamittaus 05.32→05.43: DerivedData 5,63→5,63 Gt, proto-kaannos/Library 6,33→6,35 Gt, build 9,60→10,61 Gt (+1,0 Gt; TF-vienti/käännös) → ei toimia Päätoimittajan mukaan. Roolit: Linnanrakentaja ja Natiivi-UI käynnissä; kontekstit Natiivi-UI 11 %, Linnanrakentaja 22 %, Linssiseppä 2 57 %; ei yli 70 %. Juna OK (b13 75db27d3 käännetty e434161d).
