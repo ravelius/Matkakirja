@@ -39,6 +39,18 @@ export const RAAMATTU = {
           + 'on CLAUDE.md:n ja docs/roolitus.md:n ensimmäisellä rivillä. '
           + 'Kumoaa 1.9.2026 kohdan poikkeuksen "todella vaikeaan ongelmaan '
           + 'kysyen".',
+        'NATIIVI ENSIN, WEB RAJATUMPI (omistaja 29.9.2026 klo 19.2x, sitova; KUMOAA '
+          + 'kaikki "web on malli, natiivi seuraa" -linjaukset): "Ei tehdä jatkossa mitään '
+          + 'linssejä webbiin, jos ne saa tehtyä toisella tavalla paremmin natiiviin. Ja se on '
+          + 'periaatteessa hyväkin, että web-peli on rajatumpi ja kannustaa lataamaan oikean '
+          + 'appin." Sovellus (Unity) johtaa: linssit, linna ja uudet näkymät tehdään '
+          + 'natiivin parhailla keinoilla (Unityn valaistus, Blender, fotogrammetria, Cesium) '
+          + 'ilman web-versiota. Web-pelin käyttöliittymä on tauolla: ei uusia web-PR:iä '
+          + 'eikä pariteettityötä; webiin kuuluvat muutokset kirjataan docs/web-jono.md:hen '
+          + 'ja tehdään myöhemmin yhtenä eränä. Sisältö, kartta ja työkalut jatkuvat, koska '
+          + 'natiivi käyttää niitä. Tuotannon pelaajalle näkyvät viat korjataan. TESTIT: '
+          + 'omistaja 29.9.: testi, joka ei ole pakollinen ja jonka omistaja voi itse '
+          + 'testata, ohitetaan, jos se nopeuttaa kehitystä.',
         'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
           + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
           + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '
