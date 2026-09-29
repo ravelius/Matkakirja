@@ -109,9 +109,39 @@ export function poistaPiikit(p, raja = PIIKKI_AST) {
   return q;
 }
 
-/** Rannikkojakso merelle: yleistys, piikit pois, ulospäin siirto (kapeneva päistä), pehmennys. `ulos` = +1 CCW-renkaalla. */
+export const LAHDEN_SUU = 0.12; // lahti, jonka suu on tätä kapeampi (≈ 13 km), oikaistaan
+
+/**
+ * KAPEAT LAHDET KIINNI (Amvrakikos 29.9.): kun rannikon kaksi kärkeä ovat alle
+ * LAHDEN_SUU päässä toisistaan ja niiden välinen silmukka kiertää VASTAKKAISEEN
+ * suuntaan kuin rengas, silmukka on vettä — se korvataan suoralla suun yli.
+ * Samaan suuntaan kiertävä silmukka on niemi (maata) ja jää.
+ */
+export function suljeLahdet(p, ulos, suu = LAHDEN_SUU) {
+  let q = p.slice();
+  let muuttui = true;
+  while (muuttui) {
+    muuttui = false;
+    for (let i = 0; i < q.length - 2 && !muuttui; i += 1) {
+      for (let j = q.length - 1; j > i + 1; j -= 1) {
+        const k = kx(q[i][1]);
+        if (Math.hypot((q[j][0] - q[i][0]) * k, q[j][1] - q[i][1]) >= suu) continue;
+        // Lahti on paikallinen: enintään puolet kärjistä ja 2° kaarta (saarivaltion koko rengas ei ole lahti).
+        if (j - i > q.length / 2) continue;
+        const silmukka = q.slice(i, j + 1);
+        let kaari = 0;
+        for (let m = i + 1; m <= j; m += 1) kaari += Math.hypot((q[m][0] - q[m - 1][0]) * k, q[m][1] - q[m - 1][1]);
+        if (kaari > 2) continue;
+        if (Math.sign(ala(silmukka)) * ulos < 0) { q = [...q.slice(0, i + 1), ...q.slice(j)]; muuttui = true; break; }
+      }
+    }
+  }
+  return q;
+}
+
+/** Rannikkojakso merelle: yleistys, piikit ja kapeat lahdet pois, ulospäin siirto (kapeneva päistä), pehmennys. `ulos` = +1 CCW-renkaalla. */
 export function merijakso(p, ulos, { yleistys = YLEISTYS, siirto = SIIRTO, kavennus = KAVENNUS } = {}) {
-  const q = poistaPiikit(yleista(p, yleistys));
+  const q = suljeLahdet(poistaPiikit(yleista(p, yleistys)), ulos);
   if (q.length < 2) return q;
   // Kaarenpituus päistä kapenemista varten.
   const s = [0];
