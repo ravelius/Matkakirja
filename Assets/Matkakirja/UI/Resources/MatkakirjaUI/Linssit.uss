@@ -3798,6 +3798,18 @@
     height: 30px;
 }
 
+/* Web (pariteetti-2 rivi 12): rivikuvakkeena havainnekuva pyöreänä, viivapiirros varana kunnes kuva latautuu. */
+.mk-linssirivi__kuva {
+    padding: 0;
+    overflow: hidden;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-linssirivi__varaikoni {
+    flex-grow: 1;
+    margin: 5px;
+}
+
 .mk-linssivalitsin__runko .mk-linssirivi__nimi {
     font-size: 13.76px;
     white-space: normal;
