@@ -26,6 +26,9 @@
  * viimeinen tuloste on isompi kuin lukija ehtii lukea ennen sulkemista.
  */
 import test from 'node:test';
+import { mkdtempSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
@@ -94,7 +97,9 @@ test('lue_edistys: toimii normaalisti (ei-katkaistu putki, todellinen kutsumuoto
   // varmistaa vain, ettei suojaus (trap/`|| true`) ole rikkonut normaalia
   // paluuarvoa — käytetään samaa `$(lue_edistys …)`-kutsumuotoa kuin
   // tools/polta-paikallisesti.sh.
-  const kansio = '/tmp';
+  // Oma tyhjä kansio: CI:n /tmp:ssä on lukukelvottomia alikansioita (systemd-private-*), jolloin
+  // find palaa koodilla 1 ja pipefail kaataisi kutsun — polttoskripti antaa aina oman kansionsa.
+  const kansio = mkdtempSync(join(tmpdir(), 'edistys-'));
   const r = bash(`${funktio('lue_edistys')}\nlue_edistys "/ei/ole/olemassa" "${kansio}" '*.ei-osu-mihinkaan'`);
   assert.equal(r.status, 0, r.stderr);
   assert.equal(r.stdout.trim(), '0 0');
