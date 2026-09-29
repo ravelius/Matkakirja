@@ -3,6 +3,11 @@
 Luovuttaja: Natiiviseppä (Opus 5.5, max, Macin käyttäjä koodaus). Syy: konteksti 76 %. Edellinen: -20260928-v.md; sen
 käytännöt ovat voimassa, ellei tässä toisin sanota.
 
+> **PÄIVITYS 29.9. klo 11.0x:** BUILD 45 on tehty: proto master **6dc1b7cc** (juna 73e10f44, käännös 61f5adc2, Laitetestaaja 19eae30
+> 4/4 PASS), ja SHA on lähetetty Julkaisijalle ja Päätoimittajalle. Sivuhaara juna-1045 on poistettu. Juna on tyhjä, ja seuraava
+> sisältö kootaan sivuhaaraan master 6dc1b7cc:stä. Linssisepältä on kysytty, onko tarkoitus, ettei tervetulo lähde Äänimaisema pois
+> -tilassa. Muut alla olevat "PASS → BUILD 45" -ohjeet ovat jo toteutuneet.
+
 ## Tila heti (lue ensin)
 
 - **1.0.45-juna = juna/b13 73e10f44**, käännös **61f5adc2** (KÄÄNNETTY 10.50, asennettu 1572C658, 3B4CDACB, C1D5E34C ja

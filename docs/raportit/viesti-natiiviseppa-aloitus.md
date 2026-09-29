@@ -11,14 +11,10 @@ Päiväsääntö 29.9. (normaalit säännöt palaavat 30.9. klo 00):
 - Käännökset nice 15, yksi kerrallaan.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)".
 
-## KÄRKI: 1.0.45-juna → BUILD 45
-juna/b13 73e10f44 (BUILD 44 yhdistelmä + Pulun ISS-tervetulo + linssiesittelyt) on käännetty 10.50 käännökseksi 61f5adc2 ja
-asennettu neljään junalaitteeseen. Laitetestaajan savuke on tulossa. Kun se on PASS:
-- `git -C /Users/Shared/Claude/proto-3d/Matkakirja-proto merge --no-ff 73e10f44` masteriin (4d7bc2ed)
-- tarkista, että puu = 61f5adc2
-- SHA ja muutosrivi Julkaisijalle ja Päätoimittajalle
-- poista sivuhaara natiiviseppa/juna-1045
-Burst-korjaus (omistajan lupa 10.33) on käännöspalvelussa. Seuraa, toistuuko AotLinkerException.
+## KÄRKI: juna tyhjä, BUILD 45 = master 6dc1b7cc
+TF 1.0.44 = 4d7bc2ed ja 1.0.45 = 6dc1b7cc odottavat Päätoimittajan VIE-lupaa ja lukkoa, joten vie aina oman BUILDin SHA:lla.
+Seuraavat merge-pyynnöt kootaan sivuhaaraan natiiviseppa/juna-1046 masterista, testataan (exit-koodit) ja avataan junaan Julkaisijan
+luvalla. Burst-korjaus (omistajan lupa 10.33) on käännöspalvelussa, ja 1.0.45-juna meni sillä läpi. Seuraa, toistuuko AotLinkerException.
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain, kun erä on valmis, olet jumissa tai sinulla on kysymys (enintään 8 riviä), SendMessage nimellä.
