@@ -241,7 +241,8 @@ export const RAKENNUS = {
     vaaka: { kohde: [0, 2, 0], atsimuutti: 165, korkeus: 30, etaisyys: 150, fov: 32, aukko: 0.3 },
     pysty: { kohde: [0, 0, 2], atsimuutti: 160, korkeus: 38, etaisyys: 300, fov: 40, aukko: 0.3 },
   },
-  pulu: { laskeutuminen: [2, 0, -2] },
+  // Linnan taulun laskeutumispiste pihan länsiosaan, ettei Pulu peitä Keittiö-lappua (DoF-savuke 29.9.).
+  pulu: { laskeutuminen: [-10, 0.5, 0] },
   taulu: TAULU_LINNA,
   tilat: [TILA_MASSA, TILA_KEITTIO],
 };
