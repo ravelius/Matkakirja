@@ -1,4 +1,4 @@
-// Lippuankkurit (tools/tee-lippuankkurit.mjs, löydös 161): itäinen reuna, sisämaassa, kohteista erillään.
+// Lippuankkurit (tools/tee-lippuankkurit.mjs, löydös 161; koilliskulma 29.9.2026): maan oikea yläkulma, sisämaassa, kohteista erillään.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { etaisyyskentta, lippuankkuri, mantere } from '../tools/tee-lippuankkurit.mjs';
@@ -18,20 +18,31 @@ test('etäisyyskenttä: keskellä kauimpana reunasta, ulkona nolla', () => {
   assert.equal(k.d[0], 0);
 });
 
-test('ankkuri itäisimmässä viidenneksessä, ≥ 15 km reunasta ja ≥ 25 km kohteesta', () => {
-  const { piste, perustelu } = lippuankkuri(maa(nelio(0, 40, 10, 45)), [[9.0, 42.5, 'kaupunki:x']]);
-  assert.ok(piste[0] >= 8 && piste[0] <= 10, String(piste));
-  assert.ok(perustelu.reunastaKm >= 15 && perustelu.lahinKohdeKm >= 25, JSON.stringify(perustelu));
-  assert.deepEqual(perustelu.ehdot, { itaosa: true, reuna15km: true, kohteet25km: true });
+test('ankkuri koilliskulmassa, ≥ 15 km reunasta', () => {
+  const { piste, perustelu } = lippuankkuri(maa(nelio(0, 40, 10, 45)), []);
+  assert.ok(piste[0] >= 9.5 && piste[1] >= 44.6, String(piste));
+  assert.ok(perustelu.reunastaKm >= 15, JSON.stringify(perustelu));
+  assert.equal(perustelu.ehdot.reuna15km, true);
 });
 
-test('kapea itäkärki: alue laajenee länteen, kunnes 15 km täyttyy', () => {
-  // Itäpää on 0,1° korkea kannas (≈ 11 km), länsiosa leveä.
-  const r = [[0, 40], [8, 40], [8, 42.95], [10, 42.95], [10, 43.05], [8, 43.05], [8, 46], [0, 46], [0, 40]];
-  const { piste, perustelu } = lippuankkuri(maa(r), []);
-  assert.ok(piste[0] < 8, String(piste));
-  assert.equal(perustelu.ehdot.itaosa, false);
-  assert.equal(perustelu.ehdot.reuna15km, true);
+test('kaupunki kulmassa: piste väistää 25 km, jos lähes yhtä hyvä', () => {
+  const ilman = lippuankkuri(maa(nelio(0, 40, 10, 45)), []).piste;
+  const { piste, perustelu } = lippuankkuri(maa(nelio(0, 40, 10, 45)), [[ilman[0], ilman[1], 'kaupunki:x']]);
+  assert.ok(perustelu.lahinKohdeKm >= 25 && perustelu.ehdot.kohteet25km, JSON.stringify(perustelu));
+  assert.ok(Math.abs(piste[0] - ilman[0]) + Math.abs(piste[1] - ilman[1]) > 0.2, String(piste));
+});
+
+test('L-muoto: koilliskulma, ei itäisin kärki etelässä (Italia–Puglia)', () => {
+  // Pohjoisosa leveä 0–6°, itään etelässä pitkä kärki 6–10° × 40–41°.
+  const r = [[0, 40], [10, 40], [10, 41], [6, 41], [6, 46], [0, 46], [0, 40]];
+  const { piste } = lippuankkuri(maa(r), []);
+  assert.ok(piste[1] > 44 && piste[0] < 6, String(piste));
+});
+
+test('pieni maa: kynnys puolet syvimmästä', () => {
+  const { piste, perustelu } = lippuankkuri(maa(nelio(6, 49.5, 6.3, 49.8)), []);
+  assert.ok(piste[0] > 6.1 && piste[1] > 49.6, String(piste));
+  assert.equal(perustelu.ehdot.reuna15km, false);
 });
 
 test('assets/data/lippu-lonlat.json: {ISO3: [lon, lat]} kaikille maakuntamaille', async () => {
