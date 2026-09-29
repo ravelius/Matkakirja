@@ -131,7 +131,7 @@ import { FOKUSVIRTA_VILNA } from './packs/fokusvirta-vilna.js';
 import { FOKUSVIRTA_KIOVA } from './packs/fokusvirta-kiova.js';
 import { FOKUSVIRTA_KRAKOVA } from './packs/fokusvirta-krakova.js';
 import { FOKUSVIRTA_PIETARI } from './packs/fokusvirta-pietari.js';
-import { fokusvirtaSisalto } from './fokusvirta.js';
+import { fokusvirtaSisalto, suljeMuutAvoimetLaput } from './fokusvirta.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
@@ -1118,6 +1118,13 @@ function avaaNostonKortti(ui, nosto) {
   if (linssiEstaa()) return false;
   nostoLataaTyyli();
   suljeNostonKortti(ui);
+  /*
+   * VAIN YKSI LAPPU KERRALLAAN (Siirtosepän pariteettikatsaus
+   * 29.9.2026, rivi 5): nostokortti ei saa avautua jo auki olevan
+   * maakortin tai kaupunkilehden päälle. Ks. js/fokusvirta.js
+   * suljeMuutAvoimetLaput.
+   */
+  suljeMuutAvoimetLaput(ui);
 
   const kerros = html('div', 'fokusnosto-kerros');
   const kortti = html('div', 'fokusnosto-kortti');
