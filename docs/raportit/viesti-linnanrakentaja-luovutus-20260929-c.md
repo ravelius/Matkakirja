@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 29.9.2026 klo 14.0x (erä 2b valmis, tunnelmavalo toimii, merge-pyyntö odottaa OK:ta)
+# Linnanrakentajan luovutus 29.9.2026 klo 14.1x (omistaja hyväksyi, merge-pyyntö Natiivisepällä)
 
 Rooli: **Linnanrakentaja (Opus, max)**, Poikkileikkaus-linssi (id `poikkileikkaus`, moottori dioraama, hiomassa).
 Päätoimittaja johtaa. Omistajan toive: Sonnet-agentit mahdollisimman laajasti, tulokset ≤ 15 riviä + polku.
@@ -22,18 +22,14 @@ Aiempi luovutus (erät 2 ja 2b, käytännöt): `viesti-linnanrakentaja-luovutus-
 - **Pelin repo:** ravelius/Matkakirja#3621 (`linnanrakentaja-keittio-2b` = dcc264192) Julkaisijan junassa.
   - Tarkista: `gh pr view 3621 --json state` ja `curl -s https://media.matkakirja.app/dioraama/olavinlinna/uusin.json`
     (hash vaihtuu mergen jälkeen; nyt f8db6536de6715ec = erä 2).
+- **Omistaja hyväksyi 14.1x ("saa mennä").** Merge-pyyntö lähetetty Natiivisepälle klo 14.1x:
+  - haara `linnanrakentaja/keittio` 573ccecc, myös natiivi-backupissa
+  - linssi hiomassa (Kesken = true)
 - **Kärki:**
-  1. Odota Päätoimittajan OK kuvapariin.
-  2. Kun #3621 on ämpärissä: lyhyt simulaattoriajo ILMAN peiliä (Julkaisijan NYT; `PEILI=pois ajo-poikki.sh` → skripti
-     antaa `poikki peili pois`, jolloin paketti luetaan ämpärin uusin.json:sta), ja tarkista että paketti tulee ämpäristä, 3D-hahmot ja valot näkyvät.
-  3. **Merge-pyyntö Natiivisepälle** (SendMessage "Natiiviseppä (max)"):
-     - haara `linnanrakentaja/keittio`, kärki SHA, 16 committia, 62 tiedostoa
-     - jaetut tiedostot: Aanisoitin +217, LinssiSopimus +28, LinssiOhjain +23, PeliOhjain.Aanet +3,
-       IhmisenMatka2Ymparisto +2, LinssiUi +3, ValeYmparisto +31, AanisoitinTestit +25
-     - testit Linssit 440/440, Peli 358/358, unity-tarkistus 0
-     - linssi Kesken = true (vain kehittäjätila)
-     - DioraamaValot muuttaa linssin ajaksi URP-varjot, lisävalorajan, ambientin, RenderSettings.sunin ja muiden valojen
-       dioraamakerroksen maskin, ja kaikki palautetaan sulkiessa.
+  1. Seuraa Natiivisepän vastausta ja korjaa löydökset tähän haaraan.
+  2. Kun #3621 on mergetty ja paketti ämpärissä (Julkaisija ilmoittaa; tarkista uusin.json:n hash): lyhyt simulaattoriajo
+     `PEILI=pois` (Julkaisijan NYT). Tarkista 3D-hahmot, valot ja äänet ämpäristä, ja kerro tulos Natiivisepälle.
+  3. Erä 3: linna auki. Aloita suunnitelmalla ja Sonnet-agenteilla.
 - **Käynnissä olevia ajoja ei ole.** Simulaattorit ovat sammuksissa, eikä agentteja ole käynnissä.
 
 ## Tila

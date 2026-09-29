@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 14.0x: tunnelmavalo valmis, merge-pyyntö odottaa OK:ta)
+# Linnanrakentajan aloitusviesti (päivitetty 29.9.2026 klo 14.1x: omistaja hyväksyi, merge-pyyntö Natiivisepällä)
 
 Olet **Linnanrakentaja (Opus, max)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama", tila hiomassa. Päätoimittaja (local_8d8ebf72…) johtaa.
@@ -13,12 +13,11 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 3. Tarvittaessa pelin repon (`/Users/Shared/Claude/wt/linnanrakentaja-keittio`, haara `linnanrakentaja-keittio-2b`) speksit
    `docs/raportit/dioraama-rajapinnat-era2b-20260929.md` ja `…-era2-20260929.md`.
 
-## Kärki (katso luovutuksen -c osio "TILA KLO 14.0x")
+## Kärki (katso luovutuksen -c osio "TILA")
 
-1. Päätoimittajan OK kuvapariin (tunnelmavalo, lähetetty 13.5x).
-2. #3621 ämpärissä → simulaattoriajo ilman peiliä (Julkaisijan NYT).
-3. **Merge-pyyntö Natiivisepälle:** proto `linnanrakentaja/keittio` 573ccecc. Sisältö on luovutuksessa -c.
-4. Erä 3: linna auki (8 tilaa, yleisnäkymän yksityiskohdat).
+1. **Merge-pyyntö on Natiivisepällä:** proto `linnanrakentaja/keittio` 573ccecc. Korjaa löydökset tähän haaraan.
+2. #3621 ämpärissä → simulaattoriajo `PEILI=pois` (Julkaisijan NYT), ja tulos Natiivisepälle.
+3. Erä 3: linna auki (8 tilaa, yleisnäkymän yksityiskohdat, tilojen nimet luovutuksessa -c).
 
 ## Säännöt, jotka opittiin
 
