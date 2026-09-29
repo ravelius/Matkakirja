@@ -2560,4 +2560,81 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mikä on Pietari I:n pöytä Zagarancean Semenin kylässä?", a: "Paikallisen perimätiedon mukaan Semenissä ruhtinas Dimitrie Cantemir tapasi tsaari Pietari I:n, ja bojaarit kokoontuivat kaiverretun pöydän ääreen maljoja nostamaan. Zagarancean kylässä on lisäksi 2016 avattu ulkoilmamuseo." },
     ],
   },
+  BLR: {
+    "Brest": [
+      { q: "Miksi junan pyörästöt vaihdetaan Brestissä?", a: "Valko-Venäjällä ja sen itäpuolella raideleveys on 1520 millimetriä, Puolassa ja muualla Euroopassa 1435. Brestissä vaunut nostetaan ilmaan ja telit vaihdetaan sopiviksi, joten juna voi jatkaa rajan yli." },
+      { q: "Mikä on Kamjanjecin torni?", a: "Se on punatiilinen vartiotorni, joka rakennettiin 1200-luvun lopulla. Torni on noin 30 metriä korkea ja sen seinät ovat useita metrejä paksut, ja se on harvoja jäljellä olevia tällaisia torneja maassa." },
+      { q: "Miksi Pinskin jesuiittakollegio näyttää melkein linnalta?", a: "Kollegio rakennettiin 1600-luvulla muinaisen linnakkeen paikalle, ja sen seinät ovat paksut. Silti se oli koulu: siellä opetettiin kieliä, logiikkaa, historiaa ja fysiikkaa." },
+    ],
+    "Gomel": [
+      { q: "Miksi Vetkan museossa on niin paljon vanhoja käsinkirjoitettuja kirjoja?", a: "Vetka oli vanhauskoisten keskus, eli niiden uskovien, jotka pitivät kiinni vanhoista kirkollisista tavoista ja teksteistä. Museon kokoelmissa on 1500-luvun ja 1800-luvun alun välisiä käsikirjoituksia ja evankeliumeja." },
+      { q: "Kuka oli Kirill Turaulainen?", a: "Kirill (1100-luvulla elänyt) oli Turaun piispa, joka tunnetaan yhtenä varhaisimmista itäslaavilaisista teologeista, runoilijoista ja saarnaajista. Hänet on kanonisoitu, ja Turaun linnakukkulalla on hänen muistomerkkinsä." },
+      { q: "Mitä tarinoita Turaun kivirististä kerrotaan?", a: "Paikallisen legendan mukaan kymmenkunta ristiä ajelehti Kiovasta joen vastavirtaan Turaun rantaan, jossa ne nostettiin pystyyn." },
+    ],
+    "Grodno": [
+      { q: "Miksi Grodnon Uusi linna mainitaan historiankirjoissa?", a: "Siellä kokoontui vuonna 1793 Puola-Liettuan viimeinen valtiopäivä, venäläisen sotaväen läsnä ollessa. Valtiopäivä hyväksyi Puolan toisen jaon." },
+      { q: "Mikä on Grodnon vanhin säilynyt rakennus?", a: "Kalozan kirkko, joka valmistui ennen vuotta 1183 Njemenin jyrkälle rannalle. Sen seiniin on upotettu sinisiä, vihreitä ja punaisia kiviä. Etelämuuri romahti 1853 joen puolelta, ja korjaustöissä löytyi 1100-luvun freskojen jäänteitä." },
+      { q: "Miksi Navahrudakin linnamäen vieressä on kumpu?", a: "Kumpu on runoilija Adam Mickiewiczin muistoksi 1900-luvun alkupuolella kasattu 'kuolemattomuuden kumpu'. Mickiewicz syntyi vuonna 1798 Navahrudakissa tai sen läheisellä sukutilalla." },
+    ],
+    "Mogilev": [
+      { q: "Miksi Mogilevin raatihuone on uusi, vaikka näyttää vanhalta?", a: "Alkuperäinen kivinen raatihuone rakennettiin 1600-luvun lopulla, ja sen kahdeksankulmainen torni nousi noin 46 metriin. Nykyinen rakennus on rekonstruktio, joka avattiin 2008 samalle paikalle, ja siellä toimii Mogilevin historian museo." },
+      { q: "Mikä on Babruiskin linnoitus?", a: "Tsaari Aleksanteri I määräsi rakennustyöt aloitettavaksi 1810, ja linnoitus valmistui 1836 Berezinan ja Babruikan yhtymäkohtaan. Keskellä oli linnake bastioneineen, ja ympärillä vesikanavia." },
+    ],
+    "Minsk": [
+      { q: "Mikä on Dudutki?", a: "Dudutki on noin 40 kilometrin päässä Minskistä Ptitš-joen rannalla sijaitseva ulkoilmamuseo, jossa esitellään perinteisiä käsitöitä: puusepäntöitä, saviastioita, metallityötä ja juustonvalmistusta." },
+      { q: "Miksi Valožynin kaupunki on tunnettu?", a: "Siellä perusti rabbi Chaim Volozhiner 1803 Etz Chaim -jeshivan. Sitä pidetään ensimmäisenä nykyaikaisena jeshivana, ja 1800-luvulla se oli Itä-Euroopan tärkeimpiä laitoksiaan." },
+      { q: "Miksi Zaslauljen Kirkastumisen kirkko on ollut kolmen kirkkokunnan käytössä?", a: "Kirkko rakennettiin 1500-luvun lopulla kalvinistiseksi seurakuntakirkoksi. Vuonna 1626 se vihittiin katoliseksi Pyhän Mikaelin kirkoksi, ja vuoden 1839 jälkeen se muuttui ortodoksiseksi Kirkastumisen kirkoksi." },
+    ],
+    "City of Minsk": [
+      { q: "Mikä on Kyynelten saari?", a: "Se on pieni saari Svislatš-joessa Troitskoje-esikaupungin vieressä, jonne johtaa kaarisilta. Siellä on Afganistanin sodassa palvelleiden valkovenäläisten muistomerkki, joka paljastettiin 1996 ja jota kutsutaan myös Rohkeuden ja surun saareksi." },
+      { q: "Milloin Minskin metro avattiin?", a: "Rakentaminen alkoi 16. kesäkuuta 1977, ja liikenne käynnistyi 30. kesäkuuta 1984." },
+    ],
+    "Vitebsk": [
+      { q: "Mikä on Polatskin Pyhän Sofian katedraali?", a: "Se rakennettiin vuosina 1044–1066 Polatskin ruhtinas Vseslavin aikana, ja 1700-luvun puolivälissä se uudistettiin vilnalaisbarokkityyliin. Nykyään se toimii museon osana ja konserttisalina, jossa on urut." },
+      { q: "Mikä on Eufrosynen risti?", a: "Polatskin Eufrosyne (1100-luvulla elänyt) lahjoitti kuusihaaraisen kultaisen ristin, jota koristivat emalit ja jalokivet, Vapahtajan kirkolle 1161. Alkuperäinen risti katosi toisen maailmansodan aikana." },
+      { q: "Miksi Francysk Skarynaa pidetään ensimmäisenä valkovenäläisenä kirjapainajana?", a: "Polatskissa vuoden 1490 tienoilla syntynyt Skaryna painoi Prahassa Raamatun vanhalla valkovenäjän kirjakielellä 1517. Häntä pidetään maan kirjapainotaidon uranuurtajana." },
+    ],
+  },
+  SVK: {
+    "Banskobystrický": [
+      { q: "Miksi Banská Štiavnican ympäristössä on kymmeniä pieniä tekojärviä keskellä vuoria?", a: "Ne ovat hopeakaivosten vesivarastoja, tajcheja: huippuaikana niitä oli noin 60, ja yli 100 km kanavia ja tunneleita johti veden kaivosten vesipyörille. Nykyään 24 on jäljellä uimapaikkoina, ja järjestelmä kuuluu Unescon perintökohteeseen." },
+      { q: "Mikä on fujara, ja miksi sitä soitetaan vain Keski-Slovakiassa?", a: "Fujara on 160–200 cm pitkä paimenten huilu, jossa on vain kolme sormireikää: korkeat sävelet syntyvät ylipuhaltamalla. Se tunnetaan Podpoľanien seudulta, ja syvä, mumiseva soundi on Unescon aineettoman perinnön luettelossa." },
+      { q: "Onko totta, että Kremnicassa lyödään yhä rahaa?", a: "On: Kremnican rahapaja sai kuninkaalliset etuoikeutensa vuonna 1328 ja on yksi maailman vanhimmista yhä toimivista rahapajoista." },
+    ],
+    "Bratislavský": [
+      { q: "Miksi Bratislavan Sininen kirkko on kokonaan sininen, jopa katto?", a: "Kirkon suunnitteli Ödön Lechner, ja se vihittiin käyttöön 1913 unkarilaisen jugendin tyyliin. Ulko- ja sisäseinät on maalattu vaaleansinisiksi, koristeena on sinistä majolikaa ja katto on sinistä lasitettua keramiikkaa." },
+      { q: "Mikä Petržalka on, ja miksi siitä puhutaan Bratislavassa jatkuvasti?", a: "Petržalka on Tonavan eteläpuolella sijaitseva paneelitalokaupunginosa, joka on yksi Keski-Euroopan suurimmista. Rakennustyöt alkoivat 1970-luvulla, ensimmäinen talo valmistui 1977, ja nykyään siellä asuu yli 100 000 ihmistä." },
+      { q: "Miksi Bratislavan Pyhän Martinin katedraalin huipulla on kultainen kruunu?", a: "Se on noin 300 kilon painoinen kullattu jäljennös Unkarin kuninkaankruunusta, asetettu torniin 1847. Katedraalissa kruunattiin vuosina 1563–1830 Unkarin kuninkaita ja kuningattaria." },
+    ],
+    "Košický": [
+      { q: "Missä on Euroopan vanhin maraton, ja milloin se juostiin ensimmäisen kerran?", a: "Košicen rauhanmaraton juostiin ensimmäisen kerran lokakuussa 1924, ja sitä pidetään Euroopan vanhimpana maratonina. Ensimmäisen voiton vei paikallinen juoksija Karol Halla." },
+      { q: "Onko totta, että Slovakiassa on kylmävesigeysir?", a: "On: Herľanyn geysir purkautuu noin 34–36 tunnin välein, suihku nousee parhaimmillaan noin 20 metriin ja kestää noin 25 minuuttia. Vesi on vain 14–18-asteista, ja se sai alkunsa 1870-luvulla tehdyistä syväporauksista." },
+      { q: "Miksi Dobšinán luolassa on jäätä kesälläkin?", a: "Dobšinán jääluolaan tulvii kylmää ilmaa talvella, ja se jää loukkuun: jäätä on arviolta noin 110 000 kuutiometriä. Luola löytyi 1870, ja 1887 se valaistiin sähköllä ensimmäisten joukossa maailmassa." },
+    ],
+    "Nitriansky": [
+      { q: "Miksi Nitrassa valmistetaan Land Rovereita?", a: "Jaguar Land Rover avasi Nitrassa lokakuussa 2018 noin 1,4 miljardin euron tehtaan, jonka vuosikapasiteetti on 150 000 autoa. Se oli ensimmäinen brittiläisen autovalmistajan tehdas Slovakiassa." },
+      { q: "Mikä Komárnon linnoitus on, ja miksi se on niin iso?", a: "Komárnon linnoitusjärjestelmä on Keski-Euroopan laajimpia: Vanha linnake alkoi nousta 1546, Uusi linnake tuli 1600-luvulla ja Napoleonin sotien aikaan järjestelmää laajennettiin niin, että siihen piti mahtua suuri sotajoukko." },
+      { q: "Onko Slovakiassa valkoisia lipizzanereita, ja missä niitä kasvatetaan?", a: "On, Topoľčiankyn kansallisessa ori- ja tammatallissa, joka perustettiin 1921. Siellä kasvatetaan useita hevosrotuja, muun muassa lipizzanereita ja shagya-arabeja." },
+    ],
+    "Prešov": [
+      { q: "Miksi Andy Warholilla on museo pienessä itäslovakialaisessa kaupungissa?", a: "Warholin vanhemmat olivat kotoisin läheisestä Mikován kylästä. Medzilaborcen Andy Warhol -nykytaidemuseo perustettiin 1. syyskuuta 1991 hänen veljensä John Warholan ja slovakialaisten kulttuurivaikuttajien aloitteesta." },
+      { q: "Mikä on yksi maailman korkeimmista puisista goottilaisista alttareista?", a: "Se on Levoča Pyhän Jaakobin kirkossa: mestari Paavalin verstaan limepuusta veistämä alttari valmistui 1507–1517, ja sen korkeus on 18,62 metriä. Levoča on nykyään Unescon perintökohde Spišin linnan kanssa." },
+      { q: "Miksi Spišin linna on niin valtava?", a: "Spišský hrad kohoaa travertiinikukkulalla Spišské Podhradiessa ja kattaa yli neljä hehtaaria, joten se on Keski-Euroopan suurimpia linnakomplekseja. Kohde on Unescon listalla vuodesta 1993." },
+    ],
+    "Trenciansky": [
+      { q: "Miksi Trenčínin lentokentällä kuuluu joka kesä musiikkia?", a: "Siellä järjestetään Pohoda, Slovakian suosituin monikulttuurinen festivaali. Se alkoi 1997 yhden päivän tapahtumana kaupungin stadionilla, ja lentokentällä sitä on pidetty vuodesta 2004." },
+      { q: "Kuka syntyi samassa talossa Uhrovecissa, ja miksi se on kansallismonumentti?", a: "Uhrovecin talossa syntyivät sekä slovakin kirjakielen kodifioija Ľudovít Štúr (1815) että myöhempi valtiomies Alexander Dubček (1921). Talo on Trenčínin museon hoidossa ja se julistettiin kansalliseksi kulttuurimonumentiksi 1965." },
+      { q: "Mikä Čachticen linna on, ja miksi se on suojeltu luonnonsuojelualueena?", a: "Čachticen linna on kalliolla sijaitseva 1200-luvulla rakennettu raunio, jossa kreivitär Elizabeth Báthory vietti viimeiset vuotensa vankina. Linnavuoren kalkkikivirinteellä kasvaa harvinaisia kasveja, joten alue on kansallinen luonnonsuojelualue." },
+    ],
+    "Trnavský": [
+      { q: "Onko Skalican trdelník sama asia kuin Prahan turistien trdelník?", a: "Skalický trdelník on EU:n maantieteellisesti suojattu tuote, rekisteröity joulukuussa 2007 Slovakian ensimmäisenä. Taikina kierretään puukeppi trdlon ympärille ja paistetaan hiilloksen säteilylämmössä pyörittäen. Tuloksena on ontto lieriö." },
+      { q: "Miksi Piešťanyn kylpyläsaaren sillan luona seisoo mies, joka katkaisee kainalosauvaansa?", a: "Patsas on kylpylän symboli: pronssiveistos kertoo, että rikkipitoinen lieju ja kuuma lähdevesi auttavat tuki- ja liikuntaelinvaivoihin. Se seisoo Emil Belluksen suunnitteleman katetun Kolonaadisillan luona." },
+      { q: "Miksi Gabčíkovon vesivoimalaitos on niin tärkeä?", a: "Gabčíkovo on suuri Tonavan pato, joka otettiin käyttöön lokakuussa 1992. Voimalassa on kahdeksan turbiinia ja yhteensä 720 megawatin teho." },
+    ],
+    "Žilinský": [
+      { q: "Miksi Vlkolínecissa asuu enää kourallinen ihmisiä, vaikka kylä on koko ajan kunnossa?", a: "Vlkolínec Ružomberokin kupeessa on Unescon kohde vuodesta 1993: noin 45 rakennusta hirsitaloineen on säilynyt lähes ehjänä Veľká Fatran rinteellä. Vakituisia asukkaita on nykyään vain noin kolmisenkymmentä, ja kylä toimii elävänä museona." },
+      { q: "Kuka oli Jánošík, ja miksi Terchovassa vietetään hänen mukaansa nimettyä festivaalia?", a: "Juraj Jánošík (1688–1713) oli Terchovassa syntynyt rosvo, josta kasvoi slovakkien kansansankari, eräänlainen paikallinen Robin Hood. Terchovassa järjestetään vuosittain hänen nimeään kantava Jánošíkove dni -kansanmusiikkifestivaali." },
+      { q: "Mikä on Demänovan Vapauden luola?", a: "Demänovská jaskyňa slobody Matalan Tatran alla on yli 8 400 metrin mittainen luolaverkosto, joka on osa laajaa karstijärjestelmää. Sen naapurissa on Demänovan jääluola." },
+    ],
+  },
 };
