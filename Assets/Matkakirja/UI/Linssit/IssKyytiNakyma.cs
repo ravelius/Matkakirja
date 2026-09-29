@@ -29,7 +29,7 @@
 // kanssa samaksi webissä): yksi paneeli vasemmassa yläkulmassa, leveys 280 pt, sisämarginaali 12, rivien väli 8.
 //   rivi 1  lukema (kyydin tietorivi, nopeutettuna napautus = Palaa LIVE) · kutistusnappi (× → + kutistettuna)
 //   rivi 2  välilehdet Nopeus | Kohde | Olosuhteet (segmentit, valittu aktiivinen)
-//   rivi 3  Nopeus: LIVE · 10× · 100× · 1000× (nopeutettuna ensimmäinen "Palaa LIVE"); Kohde: "Lennä kohteen ylle… ⌄"
+//   rivi 3  Nopeus: LIVE · 10× · 100× · 1000× (nopeutettuna ensimmäinen "Palaa LIVE"); Kohde: "Lennä kohteen ylle…"
 //           (lista, kärjessä Oma sijainti) ja ylilennon lukema; Olosuhteet: pilvipeitto ja vuodenaika (arvo otsikkorivillä)
 // Kutistettuna vain rivi 1. Välilehti ja kutistus säilyvät istunnon ajan. Peitto puhelimella ≤ 45 % (omistaja).
 using System;
@@ -253,7 +253,8 @@ namespace Matkakirja.Natiivi
             liveNappi = napit[0].Q<Label>(className: "mk-nappi__teksti");
 
             // Kohde: "Lennä kohteen ylle…" (lista napin alla, kärjessä Oma sijainti) ja ylilennon lukema.
-            valikko = IssOhjaus.Valikkorivi(sivut[1], "Lennä kohteen ylle…", VaihdaLista, "⌄");
+            // Ei nuolta: web appearance none, ja "⌄" puuttui fontista (laite cl1: □).
+            valikko = IssOhjaus.Valikkorivi(sivut[1], "Lennä kohteen ylle…", VaihdaLista);
             valikko.AddToClassList("mk-isskyyti__kohteet");
             valikko.tooltip = "Lennä kohteen ylle";
             lista = new ScrollView(ScrollViewMode.Vertical);

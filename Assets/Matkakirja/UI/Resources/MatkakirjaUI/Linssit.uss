@@ -3494,17 +3494,21 @@
     color: rgb(93, 255, 168);
 }
 
+/* Liukusäädin: Matkakirja.uss:n .mk-saadin #unity-tracker / #unity-dragger / #unity-drag-container ovat ID-valitsimia ja
+   voittivat luokkavalitsimet (laite cl1: ura 8 pt, nuppi 16 pt kultaisella taustalla), siksi samat ID:t ja kaksi luokkaa.
+   Codexin ura 280 × 46 (asteikko kuvassa), nuppi 36 × 36 uran korkeudelle keskitettynä kuten webissä. */
 .mk-issohjaus__liuku.mk-saadin {
     height: 46px;
     margin: 2px 0 0 0;
     flex-grow: 0;
 }
 
-.mk-issohjaus__liuku .unity-base-slider__input {
+.mk-issohjaus__liuku.mk-saadin .unity-base-slider__input,
+.mk-issohjaus__liuku.mk-saadin #unity-drag-container {
     height: 46px;
 }
 
-.mk-issohjaus__liuku .unity-base-slider__tracker {
+.mk-issohjaus__liuku.mk-saadin #unity-tracker {
     position: absolute;
     left: 0;
     right: 0;
@@ -3516,7 +3520,7 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-.mk-issohjaus__liuku .unity-base-slider__dragger {
+.mk-issohjaus__liuku.mk-saadin #unity-dragger {
     position: absolute;
     top: 5px;
     width: 36px;
@@ -3527,19 +3531,19 @@
     background-color: rgba(0, 0, 0, 0);
 }
 
-.mk-issohjaus__liuku .unity-base-slider__dragger-border,
-.mk-issohjaus__liuku .unity-base-slider__fill {
+.mk-issohjaus__liuku.mk-saadin #unity-dragger-border,
+.mk-issohjaus__liuku.mk-saadin .unity-base-slider__fill {
     display: none;
 }
 
-.mk-issohjaus__liuku .mk-issnahka--perus.unity-base-slider__tracker {
+.mk-issohjaus__liuku.mk-saadin #unity-tracker.mk-issnahka--perus {
     top: 21px;
     height: 4px;
     border-radius: 2px;
     background-color: rgba(233, 250, 240, 0.18);
 }
 
-.mk-issohjaus__liuku .mk-issnahka--perus.unity-base-slider__dragger {
+.mk-issohjaus__liuku.mk-saadin #unity-dragger.mk-issnahka--perus {
     top: 13px;
     width: 20px;
     height: 20px;
