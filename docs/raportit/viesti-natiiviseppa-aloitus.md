@@ -12,7 +12,7 @@ Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)". Vertaisille SendMessag
    8e77c475 (linssi-pelielementit). Lue luovutuksen PÄIVITYS 00.3x (kaksi opittua virhettä: kääntämättömyyden ehto ja .appin lähde).
 2. Karttasepän raeton pohjasarja 2026-09-30-pohja-20260930 (30.9. iltapäivä) + natiiviseppa/paperirae f5b1d5e5 samaan käännökseen,
    kuvapari Päätoimittajalle ennen TF:ää.
-3. Linssiseppä 2:n luenta-alku cee14dc6 merge-pyyntö iPad-mittauksen jälkeen.
+3. (Tehty: Linssiseppä 2:n luenta-alku cee14dc6 on 1.0.59:ssä.)
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain valmis erä / jumi / kysymys (≤ 8 riviä).
