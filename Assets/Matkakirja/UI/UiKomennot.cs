@@ -106,6 +106,7 @@
 //   ui lippu [ISO3]                           lipun tarina (oletus FIN; skeema 1.15 maat.lipputarina)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
+//   ui maakunnat kysymys [n]                  auki olevan kortin n:s kysymys auki/kiinni; kortin reunat ja vieritys 300 ms päästä
 //   ui pulu tekstit piiloon|nakyviin|auto | ui pulu napauta   löydös 21: repliikkien tekstit / piilotettu kuplaksi
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
 //   ui pulu juttu [kaupunki] [n]              pulun kuvakortti nähtävyysjutulle (oletus firenze, ensimmäinen
@@ -999,6 +1000,12 @@ namespace Matkakirja.Natiivi
                         case "pois": OfflineTilaUi.TestiLataus.Lopeta(); ui.OfflineTila.TestaaVerkoton(null); return null;
                         default: return "ui offline demo|verkoton|verkko|pois";
                     }
+                case "maakunnat" when loput.StartsWith("kysymys"):
+                {
+                    // Kortin kysymys auki/kiinni (omistaja 29.9.: koko ei saa muuttua): kortin reunat ja vieritys lokiin.
+                    int n = int.TryParse(loput.Substring(7).Trim(), out int kn) ? kn : 0;
+                    return "=" + ui.Karttaselite.Maakunnat.TestiKysymys(n);
+                }
                 case "maakunnat":
                 {
                     bool kortti = loput == "kortti" || loput.StartsWith("kortti ");

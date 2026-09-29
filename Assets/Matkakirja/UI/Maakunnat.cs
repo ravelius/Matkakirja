@@ -617,6 +617,9 @@ namespace Matkakirja.Natiivi
 
         // --- testi ---------------------------------------------------------------------
 
+        /// <summary>Testikomento "ui maakunnat kysymys n": kortin n:s kysymys auki/kiinni, mitat lokiin.</summary>
+        public string TestiKysymys(int n) => kortti.TestiKysymys(n);
+
         /// <summary>Testikomento: valitse avain ("ISO:tunnus") ja avaa tarvittaessa kortti.</summary>
         public void Testaa(string avain, bool korttiAuki)
         {
@@ -814,6 +817,19 @@ namespace Matkakirja.Natiivi
                 var t = Rakenne.Teksti(q, "mk-maakuntaKortti__kysymysteksti", nappi);
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
             }
+        }
+
+        /// <summary>Testi: n:s kysymys kuten napautus; kortin reunat ja vieritys lokiin 300 ms päästä (vierityksen jälkeen).</summary>
+        public string TestiKysymys(int n)
+        {
+            if (!Auki) return "kortti ei auki";
+            var napit = puluLohko.Query<Button>(className: "mk-maakuntaKortti__kysymys").ToList();
+            if (n < 0 || n >= napit.Count) return $"kysymyksiä {napit.Count}";
+            string Mitta() { var r = kortti.worldBound; return $"kortti {r.x:0},{r.y:0} {r.width:0} × {r.height:0} pt, vieritys {sisalto.scrollOffset.y:0}"; }
+            string ennen = Mitta();
+            using (var e = NavigationSubmitEvent.GetPooled()) { e.target = napit[n]; napit[n].SendEvent(e); }
+            kortti.schedule.Execute(() => Debug.Log($"MATKAKIRJA ui: maakuntakortti kysymys {n}: ennen {ennen} → nyt {Mitta()}")).ExecuteLater(300);
+            return ennen;
         }
 
         /// <summary>Yksi vastaus kerrallaan; sama napautus sulkee sen.</summary>
