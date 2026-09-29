@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
             e.style.display = DisplayStyle.Flex;
             if (LinssiUi.VahennettyLiike()) { Vapauta(e); return; }
             e.style.transitionDuration = Nolla; // USS-siirtymä ei saa pehmentää ruuduittaisia arvoja
+            // Levossa ruudunpäivitys on 30 fps: liikkeen ajaksi täysi taajuus (Linssisepän huomio 29.9.).
+            Ruudunpaivitys.Herata(AukiS + 0.1f);
             AsetaOrigo(e, origoPaneelissa, origo);
             var (a0, s0) = nyt.TryGetValue(e, out var n) ? n : (0f, Mittakaava);
             Aseta(e, a0, s0);
@@ -65,6 +67,7 @@ namespace Matkakirja.Natiivi
             if (LinssiUi.VahennettyLiike() || e.panel == null || e.resolvedStyle.display == DisplayStyle.None) { Loppu(); return; }
             var (a0, s0) = nyt.TryGetValue(e, out var n) ? n : (1f, 1f);
             e.style.transitionDuration = Nolla;
+            Ruudunpaivitys.Herata(KiinniS + PoistoViiveS + 0.1f);
             var kello = new Kello();
             ajot[e] = e.schedule.Execute(() =>
             {
