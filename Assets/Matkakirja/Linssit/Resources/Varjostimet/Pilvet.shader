@@ -19,6 +19,7 @@ Shader "Matkakirja/Linssit/Pilvet"
         _Tarkkuus("Terävät pilvet kyydissä (0 = ennallaan)", Range(0, 1)) = 0
         _TarkkuusKm("Kohinan pohja-aallonpituus (km)", Float) = 35
         _Peitto("Peitto", Range(0, 1)) = 0.9
+        _Karsinta("Pilvipeiton säädin: ohuet pilvet pois ensin (0 = ennallaan, 1 = selkeä)", Range(0, 1)) = 0
         _Vari("Sävy", Color) = (1, 1, 1, 1)
         _Hamara("Hämäryys keilojen ulkopuolella", Range(0, 1)) = 0
         _Tasainen("Tasainen usva (alfan pohja, pilvettömällä valkoinen)", Range(0, 1)) = 0
@@ -54,6 +55,7 @@ Shader "Matkakirja/Linssit/Pilvet"
                 half _Tarkkuus;
                 float _TarkkuusKm;
                 half _Peitto;
+                half _Karsinta;
                 half4 _Vari;
                 half _Hamara;
                 half _Tasainen;
@@ -108,6 +110,10 @@ Shader "Matkakirja/Linssit/Pilvet"
 
             float4 Bilineaarinen(float2 uv, float2 dx, float2 dy) { return SAMPLE_TEXTURE2D_GRAD(_MainTex, sampler_MainTex, uv, dx, dy); }
 
+            // Pilvipeiton säädin (omistaja 28.9. TF 1.0.39: "Pilvet peittävät aika paljon"): kynnys alfasta heti näytteen jälkeen,
+            // joten ohuet pilvet katoavat ensin ja paksut jäävät (tasainen alfakerroin tekisi kaikista harsoa). K = 0 ennallaan.
+            float Karsi(float a) { return _Karsinta > 0.0 ? saturate((a - _Karsinta) / max(1.0 - _Karsinta, 1e-3)) : a; }
+
             half4 TarkatPilvet(Vali i, out half vaihtelu)
             {
                 // Derivaatat ennen dataan perustuvia haaroja. Saumassa (pituus ±180°) u hyppää 1 → 0, joten otetaan pienempi
@@ -129,7 +135,7 @@ Shader "Matkakirja/Linssit/Pilvet"
                 float2 t0 = (ix - 0.5 + w1 / g0) * _MainTex_TexelSize.xy, t1 = (ix + 1.5 + w3 / g1) * _MainTex_TexelSize.xy;
                 float4 c = g0.y * (g0.x * Bilineaarinen(float2(t0.x, t0.y), dx, dy) + g1.x * Bilineaarinen(float2(t1.x, t0.y), dx, dy))
                          + g1.y * (g0.x * Bilineaarinen(float2(t0.x, t1.y), dx, dy) + g1.x * Bilineaarinen(float2(t1.x, t1.y), dx, dy));
-                float a0 = saturate(c.a);
+                float a0 = Karsi(saturate(c.a));   // pilvipeiton säädin ennen kohinakynnystä (terävä reuna karsitusta alfasta)
 
                 // Oktaavien häivytys (alle kahden pikselin oktaavi häipyy) ja näkyvä osuus ennen haaraa.
                 float h[5];
@@ -170,7 +176,7 @@ Shader "Matkakirja/Linssit/Pilvet"
                 half vaihtelu = 0.0h;
                 half4 c;
                 if (_Tarkkuus > 0.0h) c = TarkatPilvet(i, vaihtelu);
-                else c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
+                else { c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv); c.a = (half)Karsi(c.a); }
                 c.rgb *= 1.0h + vaihtelu;
                 if (_Tasainen > 0.0h)
                 {

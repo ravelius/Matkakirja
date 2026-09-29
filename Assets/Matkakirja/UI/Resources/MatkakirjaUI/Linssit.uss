@@ -3210,12 +3210,55 @@
     position: absolute;
 }
 
-/* Tietorivi kuvanäkymän kiinni olevan nimipillerin tyylillä (.mk-astrokuva__selite.mk-kiinni), mutta täysin peittävänä. */
-.mk-isskyyti__tieto {
+/* ISS-SÄÄTÖPANEELI (omistaja 29.9. "Kyllä, kytke"; Codexin sarja IssOhjaus-nahkana, asettelu sama webissä Siirtosepän
+   kanssa): paneeli vasemmassa yläkulmassa 280 pt, sisämarginaali 12, rivien väli 8. Rivi 1 lukema + kutistus, rivi 2
+   välilehdet, rivi 3 valitun välilehden sisältö. Osat: mk-issohjaus__<osa>, nahka mk-issnahka--codex (kuvat koodissa) tai
+   --perus (vanha tyyli ilman kuvia). */
+.mk-isskyyti__ohjaimet {
     position: absolute;
     left: 12px;
     top: 10px;
-    padding: 5px 10px;
+    width: 320px;
+    padding: 12px;
+    flex-direction: column;
+}
+
+.mk-isskyyti__ohjaimet--kutistettu {
+    padding-bottom: 12px;
+}
+
+.mk-issohjaus__paneeli.mk-issnahka--perus {
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+.mk-isskyyti__ylarivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Rivi 1: lukema (kyydin tietorivi). Readout-kuvan vasemmassa reunassa on oma merkkivalo; LIVE-piste sen oikealla. */
+.mk-isskyyti__tieto {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 40px;
+    padding: 0 8px 0 28px;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* LIVE-piste kilven oman merkkivalon päällä (readout-kuvan valo x 17, y 20; ei kahta pistettä, kuten webissä). */
+.mk-isskyyti__tieto .mk-isskyyti__piste {
+    position: absolute;
+    left: 13.5px;
+    top: 16.5px;
+    margin-right: 0;
+}
+
+.mk-issohjaus__lukema.mk-issnahka--perus {
     border-width: 1px;
     border-radius: 10px;
     border-color: rgba(93, 255, 168, 0.28);
@@ -3225,15 +3268,13 @@
 .mk-isskyyti__teksti {
     font-size: 13px;
     white-space: nowrap;
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: rgb(93, 255, 168);
 }
 
 /* LIVE (omistaja 28.9.): punainen piste sykkii 0,9 s:n siirtymällä ja lihavoitu LIVE ennen tietoja. */
-.mk-isskyyti__tieto {
-    flex-direction: row;
-    align-items: center;
-}
-
 .mk-isskyyti__piste {
     width: 7px;
     height: 7px;
@@ -3263,98 +3304,146 @@
     background-color: rgb(150, 170, 160);
 }
 
-/*
- * Nopeutus (LIVE · 10× · 100× · 1000×) ja "Lennä kohteen ylle" pillerin alla (web .iss-kyyti-ohjaimet, commit 891958e17,
- * px → pt 1:1): turva-alueen yläreunasta 48 pt, rako 6 pt, teksti 12 pt, napit vähintään 28 pt korkeita.
- */
-.mk-isskyyti__ohjaimet {
-    position: absolute;
-    left: 12px;
-    top: 48px;
-    right: 12px;
-    flex-direction: column;
-    align-items: flex-start;
+/* Kutistusnappi (close 44 × 44): kutistettuna × kääntyy +:ksi. */
+.mk-issohjaus__sulkunappi {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    margin: 0 0 0 8px;
+    padding: 0;
+    flex-shrink: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition-property: rotate;
+    transition-duration: 0.2s;
 }
 
-.mk-isskyyti__nopeudet {
-    flex-direction: row;
+.mk-issohjaus__sulkunappi.mk-issnahka--perus {
     border-width: 1px;
-    border-radius: 10px;
+    border-radius: 22px;
     border-color: rgba(93, 255, 168, 0.28);
     background-color: rgba(6, 13, 10, 0.72);
-    overflow: hidden;
 }
 
-.mk-nappi.mk-isskyyti__nopeus,
-.mk-nappi.mk-isskyyti__kohde {
-    min-height: 28px;
-    padding: 5px 9px;
+.mk-isskyyti__ohjaimet--kutistettu .mk-issohjaus__sulkunappi {
+    rotate: 45deg;
+}
+
+.mk-isskyyti__runko,
+.mk-isskyyti__sivu {
+    flex-direction: column;
+}
+
+/* Rivi 2 (välilehdet) ja nopeusporras: segmenttisolut tasaleveinä, väli 6. */
+.mk-isskyyti__valilehdet,
+.mk-isskyyti__nopeudet {
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.mk-nappi.mk-issohjaus__segmenttinappi {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 44px;
+    min-height: 44px;
+    margin: 0 0 0 6px;
+    padding: 0 2px;
     border-width: 0;
     border-radius: 0;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.mk-nappi.mk-isskyyti__nopeus--jatko {
-    border-left-width: 1px;
-    border-left-color: rgba(93, 255, 168, 0.18);
+.mk-nappi.mk-issohjaus__segmenttinappi:first-child {
+    margin-left: 0;
 }
 
-/* Päätynapit pyöristetään itse (valittu tausta ei ylitä pillerin kulmia, vaikka leikkaus ei pyöristäisi). */
-.mk-nappi.mk-isskyyti__nopeus--eka {
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
+.mk-nappi.mk-issohjaus__segmenttinappi.mk-issnahka--perus {
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
 }
 
-.mk-nappi.mk-isskyyti__nopeus--vika {
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
+.mk-nappi.mk-issohjaus__segmenttinappi.mk-issnahka--perus.mk-issohjaus--aktiivinen {
+    background-color: rgba(93, 255, 168, 0.14);
 }
 
-.mk-nappi.mk-isskyyti__nopeus--valittu,
-.mk-nappi.mk-isskyyti__nopeus:active,
+.mk-issohjaus__segmenttinappi .mk-nappi__teksti,
+.mk-issohjaus__rivinappi .mk-nappi__teksti {
+    font-size: 12px;
+    white-space: nowrap;
+    color: rgba(233, 250, 240, 0.85);
+}
+
+/* Webissä kaikki segmentit font-weight 650 (valittu vain värillä); natiivin fontissa lähin on bold (laite cl2). */
+.mk-issohjaus__segmenttinappi .mk-nappi__teksti {
+    -unity-font-style: bold;
+}
+
+.mk-issohjaus__segmenttinappi.mk-issohjaus--aktiivinen .mk-nappi__teksti {
+    -unity-font-style: bold;
+    color: rgb(93, 255, 168);
+}
+
+/* Valikkorivi (button-row, 9-slice 12): teksti vasemmalla, merkki (⌄) oikeassa reunassa. */
+.mk-nappi.mk-issohjaus__rivinappi {
+    height: 44px;
+    min-height: 44px;
+    margin-top: 8px;
+    padding: 0 30px 0 12px;
+    justify-content: flex-start;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-nappi.mk-issohjaus__rivinappi.mk-issnahka--perus {
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.72);
+}
+
+.mk-issohjaus__merkki {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    -unity-text-align: middle-center;
+    font-size: 14px;
+    color: rgba(233, 250, 240, 0.7);
+}
+
+/* Kohdelista (webissä selaimen oma valinta): rivit 28 pt, korkeus turva-alueen alareunaan (koodissa). */
+.mk-isskyyti__lista {
+    margin-top: 6px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(6, 13, 10, 0.86);
+}
+
+.mk-nappi.mk-isskyyti__kohde {
+    min-height: 28px;
+    padding: 5px 12px;
+    justify-content: flex-start;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .mk-nappi.mk-isskyyti__kohde:active {
     background-color: rgba(93, 255, 168, 0.14);
 }
 
-.mk-isskyyti__nopeus .mk-nappi__teksti,
-.mk-isskyyti__kohteet .mk-nappi__teksti,
 .mk-isskyyti__kohde .mk-nappi__teksti {
     font-size: 12px;
     color: rgba(233, 250, 240, 0.85);
 }
 
-.mk-isskyyti__nopeus--valittu .mk-nappi__teksti {
+.mk-isskyyti__kohde--oma .mk-nappi__teksti {
     -unity-font-style: bold;
     color: rgb(93, 255, 168);
-}
-
-.mk-nappi.mk-isskyyti__kohteet {
-    min-height: 28px;
-    margin-top: 6px;
-    padding: 5px 22px 5px 9px;
-    border-width: 1px;
-    border-radius: 10px;
-    border-color: rgba(93, 255, 168, 0.28);
-    background-color: rgba(6, 13, 10, 0.72);
-}
-
-/* Painettuna sama vihreä kuin valittu porras (pelin ruskea .mk-nappi:active ei kuulu kyydin asuun). */
-.mk-nappi.mk-isskyyti__kohteet:active {
-    background-color: rgba(93, 255, 168, 0.14);
-}
-
-/* Valikon lista (webissä selaimen oma valinta): samat värit, rivit 28 pt, korkeus turva-alueen alareunaan (koodissa). */
-.mk-isskyyti__lista {
-    min-width: 200px;
-    margin-top: 6px;
-    border-width: 1px;
-    border-radius: 10px;
-    border-color: rgba(93, 255, 168, 0.28);
-    background-color: rgba(6, 13, 10, 0.72);
-}
-
-.mk-nappi.mk-isskyyti__kohde {
-    justify-content: flex-start;
 }
 
 .mk-isskyyti__peite {
@@ -3365,14 +3454,106 @@
     bottom: 0;
 }
 
+/* Ylilennon lukema (readout) valikon alla. */
+.mk-isskyyti__sivu > .mk-issohjaus__lukema {
+    margin-top: 8px;
+    min-height: 40px;
+    padding: 6px 10px 6px 24px;
+    justify-content: center;
+}
+
 .mk-isskyyti__ylilento {
-    margin-top: 6px;
-    padding: 4px 9px;
-    border-radius: 8px;
     font-size: 12px;
     white-space: normal;
-    background-color: rgba(6, 13, 10, 0.72);
     color: rgba(233, 250, 240, 0.9);
+}
+
+/* Olosuhteet: otsikkorivi nimi · arvo, alla ura (slider-track 46) ja nuppi (slider-thumb 36). */
+.mk-issohjaus__rivi {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.mk-issohjaus__nimi {
+    flex-grow: 1;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(233, 250, 240, 0.85);
+}
+
+.mk-issohjaus__paat {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+.mk-issohjaus__paa {
+    font-size: 11px;
+    color: rgba(233, 250, 240, 0.65);
+}
+
+.mk-issohjaus__arvo {
+    font-size: 12px;
+    -unity-text-align: middle-right;
+    color: rgb(93, 255, 168);
+}
+
+/* Liukusäädin: Matkakirja.uss:n .mk-saadin #unity-tracker / #unity-dragger / #unity-drag-container ovat ID-valitsimia ja
+   voittivat luokkavalitsimet (laite cl1: ura 8 pt, nuppi 16 pt kultaisella taustalla), siksi samat ID:t ja kaksi luokkaa.
+   Codexin ura 280 × 46 (asteikko kuvassa), nuppi 36 × 36 uran korkeudelle keskitettynä kuten webissä. */
+.mk-issohjaus__liuku.mk-saadin {
+    height: 46px;
+    margin: 2px 0 0 0;
+    flex-grow: 0;
+}
+
+.mk-issohjaus__liuku.mk-saadin .unity-base-slider__input,
+.mk-issohjaus__liuku.mk-saadin #unity-drag-container {
+    height: 46px;
+}
+
+.mk-issohjaus__liuku.mk-saadin #unity-tracker {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 46px;
+    margin: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-issohjaus__liuku.mk-saadin #unity-dragger {
+    position: absolute;
+    top: 5px;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    border-width: 0;
+    border-radius: 18px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-issohjaus__liuku.mk-saadin #unity-dragger-border,
+.mk-issohjaus__liuku.mk-saadin .unity-base-slider__fill {
+    display: none;
+}
+
+.mk-issohjaus__liuku.mk-saadin #unity-tracker.mk-issnahka--perus {
+    top: 21px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgba(233, 250, 240, 0.18);
+}
+
+.mk-issohjaus__liuku.mk-saadin #unity-dragger.mk-issnahka--perus {
+    top: 13px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(93, 255, 168);
 }
 
 /* CODEXIN UUSI RADIO (radiolinssin uudistus 29.9.2026, RadioNakyma.Codex.cs): kohdistetut kerrokset koko kankaan
