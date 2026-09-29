@@ -10731,22 +10731,37 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * PÄÄLLE (background-image-listassa ensin = ylimpänä), kuten Codexin
    * manifest.json kuvaa (layersBottomToTop). Codexin manifest.json
    * varaa tälle kohdalle "centerSafeArea"-vyöhykkeen NATIIVIN Dynamic
-   * Islandin vuoksi — WEBISSÄ tätä vyöhykettä EI tarvitse pitää
-   * tyhjänä logosta/pilleristä, koska webin PWA-palkki alkaa vasta
-   * saaren ALAPUOLELTA (juuren padding-top on env(safe-area-inset-
-   * top), ei .topbar itse) — ks. testin perustelu tools/savukkeet/
-   * savuke-pillerivalikko.mjs:ssä ja proto-3d/lokit/ylapalkki-nahka/
-   * mitat.md (koordinaattori 29.9.2026, toinen kierros). Keskitummennus
-   * jää silti paikoilleen (osa Codexin taideasettelua), vaikka logo tai
-   * pilleri ulottuisivat sen ylle.
+   * Islandin vuoksi — WEBISSÄ logo ja pilleri eivät ole saaren
+   * vieressä (PWA:n tilarivin kuvakkeet ovat siinä), vaan saaren
+   * ALLA omalla rivillään, joten vyöhykettä ei pidetä tyhjänä.
+   *
+   * NAHKA SAAREN TAKANA (omistaja 29.9.2026 klo 17.5x: "Dynamic
+   * Islandin ylä- ja alapuolelle yhtä paljon nahkaa, ja sen alle vielä
+   * tikkaus"). Juuren (.app) yläturva siirtyy palkin omaksi
+   * pehmusteeksi, jolloin nahka alkaa ruudun yläreunasta. Turva-alue
+   * (--turva-yla ≈ 59 pt saarellisissa iPhoneissa) päättyy saaren alle
+   * saman välin päähän kuin saari on yläreunasta, joten tasavälisyys
+   * tulee iOS:n omasta mitasta. Sen alle logo- ja pilleririvi, jonka
+   * alareunassa tikkaus. Safarin välilehdessä ja työpöydällä turva on
+   * 0 ja palkki on ennallaan. iPad käyttää samaa muuttujaa, kun sen
+   * nahka tulee (Codexin iPad-tilaus).
+   *
+   * Kerrokset: (1) keskitummennus koko palkin yli; (2) nahka tikkauksineen
+   * vain rivin korkeudelle alareunaan; (3) nahka turva-alueen kokoisena
+   * ylös — skaalattu niin, että näkyvä osa on kuvan ylin 80 % (ei
+   * tikkausta; alin osa jää kerroksen 2 alle). Turva 0 → kerros 3 on
+   * nollakokoinen eikä piirry.
    */
+  .app { padding-top: 0; }
   .topbar {
+    padding-top: calc(0.3rem + var(--turva-yla));
     background-image:
       url('../assets/ylapalkki/keski-varjo.png'),
+      url('../assets/ylapalkki/nahka.jpg'),
       url('../assets/ylapalkki/nahka.jpg');
-    background-repeat: no-repeat, repeat-x;
-    background-position: center top, left bottom;
-    background-size: 100% 100%, auto 100%;
+    background-repeat: no-repeat, repeat-x, repeat-x;
+    background-position: center top, left bottom, left top;
+    background-size: 100% 100%, auto calc(100% - var(--turva-yla)), auto calc(var(--turva-yla) / 0.8);
   }
 
   /*
