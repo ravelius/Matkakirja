@@ -780,7 +780,7 @@ namespace Matkakirja.Natiivi
                 case "maalehti":
                 {
                     var l = loput.Split(' ');
-                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "sisallys-ala" || l[0] == "viimeinen"
+                    if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "lue" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "sisallys-ala" || l[0] == "viimeinen"
                         || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla"))
                         return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
                     if (osat[1] == "lehti" && l[0] == "vieritys")

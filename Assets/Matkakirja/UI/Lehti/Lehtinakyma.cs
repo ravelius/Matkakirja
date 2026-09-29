@@ -1712,6 +1712,8 @@ namespace Matkakirja.Natiivi
                 case "fokus-vastaa":
                 case "fokus-pulla": return LehtiFokus.Testaa(sivu?.contentContainer, mita, n);
                 case "sivu": Kaanna(n); break;
+                // Luennan alun laitemittaus (omistaja 29.9.2026): lukijan kaiutin kuin napautus.
+                case "lue": lukija.Paina(); return "lukija painettu";
                 case "viimeinen": if (lehti != null) Kaanna(lehti.Sivut.Count - 1); break;
                 case "sisallys":
                 case "sisallys-ala": if (lehti != null && lehti.Sivut.Count >= 2) VaihdaSisallys(mita == "sisallys"); break;
