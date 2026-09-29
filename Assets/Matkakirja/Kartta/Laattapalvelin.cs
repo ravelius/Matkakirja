@@ -87,6 +87,9 @@ namespace Matkakirja
         TcpListener[] kuuntelijat;
         /// <summary>Kuuntelijoiden luokat (portti-indeksi laskureille), samassa järjestyksessä kuin <see cref="kuuntelijat"/>.</summary>
         int[] kuuntelijaLuokat;
+        /// <summary>Kuuntelijoiden porttinumerot käynnistyksestä. Ei LocalEndpointista uudelleenavauksessa: portilla 0 luodun
+        /// pysäytetyn kuuntelijan LocalEndpoint palauttaa portin 0 (vikakoe 29.9.: pohjaportti jäi avaamatta, 3/4).</summary>
+        int[] kuuntelijaPortit;
         CancellationTokenSource lopetus;
         /// <summary>Kuuntelija kaatui (esim. iOS otti soketin takaisin taustalla): avataan uudelleen Updatessa.</summary>
         volatile bool kuuntelijaKaatui;
@@ -610,7 +613,13 @@ namespace Matkakirja
                 }
                 kuuntelijat = new TcpListener[lista.Count];
                 kuuntelijaLuokat = new int[lista.Count];
-                for (int i = 0; i < lista.Count; i++) { kuuntelijat[i] = lista[i].k; kuuntelijaLuokat[i] = lista[i].luokka; }
+                kuuntelijaPortit = new int[lista.Count];
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    kuuntelijat[i] = lista[i].k;
+                    kuuntelijaLuokat[i] = lista[i].luokka;
+                    kuuntelijaPortit[i] = ((IPEndPoint)lista[i].k.LocalEndpoint).Port;
+                }
                 Juuret = juuret;
                 Portteja = lista.Count;
                 lopetus = new CancellationTokenSource();
@@ -766,8 +775,7 @@ namespace Matkakirja
             for (int i = 0; i < kuuntelijat.Length; i++)
             {
                 var vanha = kuuntelijat[i];
-                int p = vanha != null ? ((IPEndPoint)vanha.LocalEndpoint).Port : 0;
-                if (p == 0) continue;
+                int p = kuuntelijaPortit[i];
                 kuuntelijat[i] = null;   // vanha silmukka päättyy (ei ole enää nykyinen)
                 try { vanha.Stop(); } catch { }
                 TcpListener uusi = null;
