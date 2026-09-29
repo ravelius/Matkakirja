@@ -13,6 +13,10 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2402, teksti: 'Maakuntakortti: kiinteä koko ja avaus/sulku ani… (#3610)' },
+  { v: 2401, teksti: 'ISS-tervetulo: kuvan selite ei vaienna Pulun C2… (#3609)' },
+  { v: 2400, teksti: 'Maailmatilan Pelaajan näkymä -apunappi (#3608)' },
+  { v: 2399, teksti: 'Raamattu: avaus ja sulku aina animoiden (#3602)' },
   { v: 2398, teksti: 'Avaus ja sulku animoiden: nostokortit, popupit,… (#3605)' },
   { v: 2397, teksti: 'Maakunnan nostokortti nostojen kokoiseksi, kuva… (#3583)' },
   { v: 2396, teksti: 'Dioraama erä 2: maalattujen pintojen, atlaksen,… (#3601)' },

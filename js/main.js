@@ -16,7 +16,7 @@ import {
   VANHA_KARTTA_KAYTOSSA,
   asennaValikonSulkuvartija,
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
-  kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
+  kehittajaMaailmaValittu, kehittajaTilaPaalla, lautaValinta,
 } from './ui-apurit.js';
 // Laitemittarin muistettu kytkin (hammasratasvalikko = ?mittari=1/0).
 import { asetaMittari, mittariPaalla } from './karttamittari.js';
@@ -169,7 +169,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2398';
+const APP_VERSION = '2026-09-21.2402';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -2205,8 +2205,9 @@ function paivitaKehittajaValikko() {
    */
   if (kehittajaValikkoKotelo) kehittajaValikkoKotelo.hidden = false;
   for (const ryhma of kehittajaRyhmat) ryhma.hidden = !kehittajaTilaPaalla();
-  const maailma = kehittajaMaailmaPaalla();
+  const maailma = kehittajaMaailmaValittu();
   merkitseKytkin(maailmaNappi, maailma);
+  paivitaPelaajanakymaNappi(ui);
   if (maailmaNappi) {
     maailmaNappi.title = maailma
       ? 'Maailmanäkymä on PÄÄLLÄ: koko lauta ja kaupunkien laatat näkyvissä '
@@ -2319,7 +2320,7 @@ document.addEventListener('keydown', (event) => {
  * valikko on myös se paikka, josta kytkennän tulos luetaan.
  */
 maailmaNappi?.addEventListener('click', () => {
-  asetaKehittajaMaailma(!kehittajaMaailmaPaalla());
+  asetaKehittajaMaailma(!kehittajaMaailmaValittu());
   paivitaKehittajaValikko();
   ui?.paivitaKehittajaMaailma();
 });
