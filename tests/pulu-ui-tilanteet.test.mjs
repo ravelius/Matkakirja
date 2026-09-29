@@ -43,14 +43,24 @@ test('rahattomuuden varoitus reagoi vain vakaaseen metadataan tapahtumakuplan he
   assert.doesNotMatch(kohta, /event\.text/);
 });
 
+/*
+ * PÄIVITETTY 29.9.2026 (pillerivalikkouudistus, omistaja): isoisän
+ * matkalaukku (#passport-dialog) on poistettu, ja "avautuu"-vartiointi
+ * (ettei Livian tunne laukea turhaan, jos avaus kutsutaan uudelleen jo
+ * auki olevana) siirtyi js/ui.js:stä js/main.js:n avaaValikko/
+ * suljeValikko-funktioihin — #paavalikko on tavallinen `hidden`-
+ * attribuutilla piilotettava elementti, ei <dialog>, joten sillä ei
+ * ole omaa `.open`-tilaa kysyttäväksi. ui.js:n avaaPilleriValikko/
+ * suljePilleriValikko luottavat siis kutsujan (main.js) vartiointiin;
+ * tämä testi vartioi molempia puolia.
+ */
 test('laukun tunteet seuraavat vain todellisia avaus- ja sulkusiirtymiä', () => {
-  const avaus = UI.slice(UI.indexOf('  openPassport()'), UI.indexOf('  suljeLaukku()'));
-  assert.match(avaus, /const avautuu = !this\.passportDialog\.open;/);
-  assert.match(avaus, /if \(avautuu\) \{[\s\S]*tunne: 'utelias', voimakkuus: 0\.4[\s\S]*tunnus: 'laukku\.auki'/);
+  const avaus = UI.slice(UI.indexOf('  avaaPilleriValikko()'), UI.indexOf('  suljePilleriValikko()'));
+  assert.match(avaus, /tunne: 'utelias', voimakkuus: 0\.4[\s\S]*tunnus: 'laukku\.auki'/);
 
   const sulkusiivous = UI.slice(
-    UI.indexOf("this.passportDialog?.addEventListener('close'"),
-    UI.indexOf("this.passportDialog?.addEventListener('close'") + 1400,
+    UI.indexOf('  suljePilleriValikko()'),
+    UI.indexOf('  openPassport()'),
   );
   assert.match(sulkusiivous, /if \(!this\.dead\)/);
   assert.match(sulkusiivous, /tunne: 'lammin', voimakkuus: 0\.3/);
