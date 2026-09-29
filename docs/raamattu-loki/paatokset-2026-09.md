@@ -9239,3 +9239,7 @@ Omistaja 29.9.2026: "Se vanhempi versio kolme, radio on parempi kuin tämä uusi
 ## OMISTAJA: AARTEET SAMOIN KUIN LINSSIT (29.9.2026 klo 18.57)
 
 Omistaja 29.9.2026: pillerivalikon Aarteet-näkymään sama muutos kuin Linsseihin — lista heti oikeassa reunassa, valittu rivi muuttuu oranssiksi Näytä-napiksi aarteen nimen kohdalla, vasemman puolen erillinen nappi pois (Natiivi-UI + Pelikoodari).
+
+## OMISTAJA: LUENTA EI KUULU, MAAN RAJA MEREEN ILMAN SAARIA, IPAD-PALKKI MATALAMMAKSI (29.9.2026 klo 19.01)
+
+Omistaja 29.9.2026: 1) "isoisän matkakirjaluenta ei kuulu" — juurisyy Natiivi-UI (+ Laitetestaaja toistaa laitteella, Pelikoodari tarkistaa webin). 2) "maan rajan voi piirtää myös mereen. mutta jos maalla on saaria, niin älä piirrä niitä" — korostetun maan raja saa kulkea yksinkertaistettuna meren puolella, saaria ei ympäröidä omilla renkailla (Karttaseppä selvittää näkymän, natiivi Natiiviseppä/Natiivi-UI). 3) iPadin nahkapalkki: Codexin 130 pt:n kooste liian korkea → 89 pt tai matalampi, tikkaus alareunassa.
