@@ -1,4 +1,4 @@
-# Karttasepän luovutus 29.9.2026 klo 12.3x (sessio 17 → 18, tilinvaihto)
+# Karttasepän luovutus 29.9.2026 klo 12.3x, päivitetty 16.1x (sessio 17 → 18, tilinvaihto)
 
 - **Rooli-worktree:** `/Users/Shared/Claude/Matkakirja-karttaseppa`, haara `karttaseppa-tyo-20260922`
   (tätä haaraa ei mergetä).
@@ -14,8 +14,8 @@
   - Muuten sama kuin 27-pohja: resepti 2026-09-26, gshhs-data-j27b, järvi-, matala- ja pinta-liput, merireittien
     maaosuus.
   - VIE=0, eli vain levylle.
-- **Koodi:** `wt/karttaseppa-poltto-20260930` = main + #3574 (pallon päivämääräraja) + #3613 (koodi 1)
-  + #3614 (joet-lisa ja MultiLineString). Worktreetä EI saa poistaa polton aikana; node_modules on symlinkki
+- **Koodi:** `wt/karttaseppa-poltto-20260930` (HEAD 43bc8c152, ei pushattu, paikallinen merge) = main + #3574 (pallon
+  päivämääräraja) + #3613 (koodi 1) + #3614 (joet-lisa ja MultiLineString). Worktreetä EI saa poistaa polton aikana; node_modules on symlinkki
   Matkakirja-fableen.
 - **Ketju** `ketju.sh` ajetaan polttovahti v5f:n alla (`pyramidi-poltto/polttovahti-v5f.sh`, katto 16, MIN 4,
   nice 15, kevyt-lippu → taskpolicy -b):
@@ -37,6 +37,11 @@
   osat ohitetaan (`OMAKSU`, ks. v5e-ohje edellisessä luovutuksessa).
 - **Tunnettu ansa:** älä muokkaa käynnissä olevaa skriptiä (`python open('w')` tai sed samaan inodeen). Zsh lukee
   sen kesken ajon, ja 28.9. vie.sh sai tästä parse errorin.
+
+- **Tila 16.12:** vaihe 1: 83/144 shardia (59 %), vain 4 ydintä ajossa muiden kuorman vuoksi, arvio noin 18.2x.
+  Sen jälkeen syvä noin 7–10 h ja pallo 3–9 h, eli valmis 30.9. aamupäivällä tai iltapäivällä. Taustavalvonta
+  on päättynyt tämän session myötä. Uusi sessio: `tail -3 ajo-20260930/aja.out ajo-20260930/vahti.out` ja
+  `grep '·' ajo-20260930/1.log | tail -1` (tai 2.log).
 
 ## AAMULLA (tarkistus ilman Karttaseppää onnistuu näin)
 
@@ -72,9 +77,12 @@
   Julkaisijan `iss-pilvet` käyttää `?v=21600` (#3561).
 - **Maapallon vuosi** `data/maapallon-vuosi/` (6 kerrosta × 12 kk + `kerrokset.json` max-age=300) viety. Datakoe ja
   skriptit ovat kansiossa `pyramidi-poltto/maapallon-vuosi-2024/`.
-- **PR:t:**
-  - mergetty: #3521 (kanna-luettelokentat)
-  - auki / junassa: #3522, #3550, #3551, #3574, #3613 ja #3614
+- **PR:t (tila 16.12):**
+  - MERGED: #3521 (kanna-luettelokentat), #3522 (joet-suunta), #3550 (nice-oletus), #3551 (BMNG-työkalu),
+    #3613 (koodi 1, CI-testikorjaus 797c81dac /tmp → mkdtemp), #3597 (27-pohja webiin)
+  - AUKI Julkaisijan junassa: #3574 `karttaseppa-pallo-sauma` 757affad7 (pallon päivämääräraja) ja #3614
+    `karttaseppa-joet-lisa2` a3d0a76b3 (joet-lisa pisteittäin, MultiLineString-ketjutus). Jokipoltto käyttää niitä
+    paikallisesti. Ne on mergettävä ennen kuin jokipolton tuotantoon vievä JS-PR tehdään.
 - **Siivous:** vanhat kokeilut on siirretty T7:lle (`Matkakirja-karttaseppa/pyramidi-poltto-arkisto`).
   `.metadata_never_index` on lisätty pyramidi-poltto- ja T7-kansioihin.
 
