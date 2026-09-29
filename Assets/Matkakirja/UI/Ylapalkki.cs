@@ -56,7 +56,8 @@ namespace Matkakirja.Natiivi
         /// Palkin korkeus turva-alueen alla. iPad 61 → 65 (löydös 78, omistaja 25.9. klo 09.4x: "hieman korkeampi";
         /// hyväksytty poikkeama webin 60 pt:stä, Fable). iPhonen matala palkki: MatalaLisa.
         /// </summary>
-        public static float Korkeus => Puhelin ? 57f : 65f;
+        // iPadin nahkapalkki webin tavoin turva-alue + 57 pt (Pelikoodari 29.9.; omistaja ≤ 89 pt).
+        public static float Korkeus => Puhelin || IpadNahka ? 57f : 65f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
         /// <summary>Palkin täyte (pysty, sivut). Löydös 88 (omistaja build 13): logo ja ☰ sisemmäs kuin webissä (12,8 → 22 pt).</summary>
         static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 14f) : new Vector2(7.2f, 22f);
@@ -118,6 +119,15 @@ namespace Matkakirja.Natiivi
         /// </summary>
         /// <summary>Pillerivalikko puhelimella: logo vasemmalla, pilleri oikealla, ei ☰:ta (omistaja 29.9.2026).</summary>
         public static bool PilleriOikealla => Puhelin && Linssivalitsin.PilleriValikko;
+
+        /// <summary>
+        /// iPadin nahkapalkki (omistaja 29.9.2026, Codex ipad-v1; Päätoimittaja: iPad pillerivalikkoon kuten iPhone): ☰ pois,
+        /// logo 36 pt vasemmasta ja pilleri 36 pt oikeasta reunasta, korkeus turva-alue + 57 pt (web), nahka rajautuu yläosasta niin, että
+        /// alareuna ja tikkaus näkyvät kokonaisina; logo ja pilleri tikkauksen yläpuolisen nahan keskellä.
+        /// </summary>
+        public static bool IpadNahka => !Puhelin && UiKerros.Tabletti && Linssivalitsin.PilleriValikko;
+        /// <summary>iPad-nahan pala @2x: 1290 × 260 px = 645 × 130 pt; alareunan varjo, sauma ja tikkaus rivit 222–260 = 19 pt.</summary>
+        const float IpadNahkaLeveys = 645f, IpadNahkaKorkeus = 130f, IpadTikkaus = 19f, IpadReuna = 36f;
 
         public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
         /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
@@ -295,6 +305,12 @@ namespace Matkakirja.Natiivi
                 palkki.AddToClassList("mk-ylapalkki--pilleri-oikealla");
                 PueNahka();
             }
+            else if (IpadNahka)
+            {
+                Valikko.style.display = DisplayStyle.None;
+                palkki.AddToClassList("mk-ylapalkki--pilleri-oikealla");
+                PueNahka("-ipad");
+            }
 
             // ELÄMÄPALKKI (omistaja 27.9. 15.1x): rahattomuuden 2 vrk = 8 punaista 6 h -lohkoa kartan yläreunassa.
             // Web #3421 rahattomuuspalkki: lappu kartan keskellä selitenapin alla, 8 lohkoa 10 × 6 ja teksti.
@@ -347,12 +363,30 @@ namespace Matkakirja.Natiivi
         /// scale-and-crop alareunaan), keskitummennus erillisenä kerroksena saaren kohdalle (koko leveys, sama rajaus),
         /// logo ja pillerin muoto kohopainatuksina (pilleri 9-slice 53/47 px @3x). Luvut piirtää peli kuten ennen.
         /// </summary>
-        void PueNahka()
+        void PueNahka(string laite = "")
         {
-            var nahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/nahka-tile");
+            var nahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/nahka-tile" + laite);
             if (nahka == null) return;
             palkki.style.backgroundImage = new StyleBackground(nahka);
             palkki.AddToClassList("mk-ylapalkki--nahka");
+            bool ipad = laite.Length > 0;
+            if (ipad)
+            {
+                // Pala toistuu vaakaan luonnollisessa koossaan (@2x) ja asettuu alareunaan: yläosa rajautuu, tikkaus kokonaan.
+                palkki.AddToClassList("mk-ylapalkki--nahka-ipad");
+                palkki.style.backgroundRepeat = new BackgroundRepeat(Repeat.Repeat, Repeat.NoRepeat);
+                palkki.style.backgroundSize = new BackgroundSize(IpadNahkaLeveys, IpadNahkaKorkeus);
+                var logoIpad = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus-ipad");
+                if (logoIpad != null) { logo.style.backgroundImage = new StyleBackground(logoIpad); logoSuhde = 283f / 82f; }
+                var pilleriIpad = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/pilleri-kohopainatus-ipad");
+                if (pilleriIpad != null)
+                {
+                    pilleri.style.backgroundImage = new StyleBackground(pilleriIpad);
+                    pilleri.AddToClassList("mk-pilleri--nahka");
+                    pilleri.AddToClassList("mk-pilleri--nahka-ipad");
+                }
+                return;
+            }
             var varjo = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/keski-varjo");
             if (varjo != null)
             {
@@ -460,6 +494,14 @@ namespace Matkakirja.Natiivi
                 palkki.style.paddingLeft = r.x + t.y;
                 palkki.style.paddingRight = r.z + t.y;
                 palkki.style.height = r.y + Korkeus;
+                if (IpadNahka && palkki.ClassListContains("mk-ylapalkki--nahka-ipad"))
+                {
+                    // Rivi tikkauksen yläpuolisen nahan keskelle; reunat 36 pt (Codex ipad-v1), turva-alue ja kulmakaari mukana.
+                    palkki.style.paddingTop = r.y;
+                    palkki.style.paddingBottom = IpadTikkaus;
+                    palkki.style.paddingLeft = Mathf.Max(r.x, 0f) + IpadReuna;
+                    palkki.style.paddingRight = Mathf.Max(r.z, 0f) + IpadReuna;
+                }
             }
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
             // Löydös 68: väkäsnappi täsmälleen ☰:n paikalle ja kokoiseksi (turva-alueen sisällä, palkin täyte).
@@ -512,6 +554,13 @@ namespace Matkakirja.Natiivi
             palkki.style.paddingRight = r.z + (PilleriOikealla ? 8f : SaariReuna) * yksikko;
             // Matala: ruskea tausta turva-alueen korkuisena, ja rivi + alavara, jos rivi ulottuu sen alle.
             float korkeus = matala ? Mathf.Max(r.y + MatalaLisa * yksikko, yla + rivi + MatalaAla * yksikko) : yla + rivi;
+            float saariYla = Mathf.Min(ylakulma.y, alakulma.y), saariAla = Mathf.Max(ylakulma.y, alakulma.y);
+            if (matala && PilleriOikealla && palkki.ClassListContains("mk-ylapalkki--nahka") && saarenKorkeus > 0f)
+            {
+                // Omistaja 29.9.2026 (1.0.50, palaute 5): nahkaa yhtä paljon saaren ylä- ja alapuolella, sitten tikkauskaista.
+                // Laitteen saaren mukaan; kuva rajautuu alareunasta (scale-and-crop), joten tikkaus ei veny.
+                korkeus = saariAla + saariYla + P(Screen.width / pp, 0f).x * NahkaTikkausOsuus;
+            }
             palkki.style.height = korkeus;
             // Löydös 73: palkki keskittää rivin pystysuunnassa, joten turva-alueen korkuinen palkki valutti pillerin
             // ja ☰:n 5,6 pt saaren alapuolelle (iPhone 17: pilleri y 19,6, saari y 14). Loppu alatäytteeksi.
@@ -528,8 +577,15 @@ namespace Matkakirja.Natiivi
                 float ruudunKeski = P(Screen.width / pp / 2f, 0f).x;
                 float oma = saari.width > 0 ? (alakulma.x - ylakulma.x) / 2f : 0f;
                 float puoli = Mathf.Max(LeveinSaari / 2f * yksikko, oma) + SaarenMarginaali * yksikko;
-                float vasenReuna = r.x + 12f * yksikko;
-                float oikeaReuna = P(Screen.width / pp, 0f).x - r.z - 8f * yksikko;
+                // Näytön pyöristetyt kulmat (omistaja 29.9.2026, 1.0.50: logo ja pilleri jäivät kulmien taakse): reuna vähintään
+                // kulmakaaren sisään (KulmaVara), ei pelkkä turva-alue.
+                float kulmaR = NaytonKulmaPt(saari, saariYla) * yksikko;
+                float lkArvio = matala ? rivi * 0.8f : 24f * yksikko;
+                float vasenReuna = Mathf.Max(r.x + 12f * yksikko, KulmaVara(yla + (rivi - lkArvio) / 2f, 0f, kulmaR, KulmaMarginaali * yksikko));
+                float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
+                float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
+                palkki.style.paddingLeft = vasenReuna;
+                palkki.style.paddingRight = oikeaVara;
                 pilleriMax = Mathf.Max(60f, oikeaReuna - (ruudunKeski + puoli));
                 float logoTila = Mathf.Max(40f, (ruudunKeski - puoli) - vasenReuna);
                 float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / logoSuhde);
@@ -544,6 +600,41 @@ namespace Matkakirja.Natiivi
         }
 
         float pilleriMax;
+
+        /// <summary>
+        /// Nahkakuvan (nahka-tile 1290 × 300) alareunan varjo, sauma ja tikkaus: rivit 258–300 eli 42 / 1290 kuvan leveydestä,
+        /// kun kuva skaalautuu palkin levyiseksi.
+        /// </summary>
+        const float NahkaTikkausOsuus = 42f / 1290f;
+
+        /// <summary>Etäisyys kulmakaaresta (pt), jonka sisällä logo ja pilleri pysyvät.</summary>
+        const float KulmaMarginaali = 4f;
+
+        /// <summary>
+        /// Näytön kulmasäde pisteinä (iOS ei kerro sitä julkisesti): Dynamic Island -iPhonet 62 (suurin, iPhone 16 Pro / 17),
+        /// lovelliset 47, iPad 18, kotinäppäimelliset 0. Saari erotetaan lovesta sen yläreunan raosta.
+        /// </summary>
+        static float NaytonKulmaPt(Rect saari, float saarenYla)
+        {
+            if (UiKerros.Tabletti) return 18f;
+            if (saari.width <= 0f) return 0f;
+            return saarenYla > 2f ? 62f : 47f;
+        }
+
+        /// <summary>
+        /// Pienin etäisyys näytön pystyreunasta (paneelin yksiköissä), jolla elementin yläkulma pysyy näytön pyöristetyn kulman
+        /// (säde kulmaR) sisällä marginaalin verran: elementin yläkulman kaari (säde rho; suorakulmiolle 0, pillerille puolet
+        /// korkeudesta) ei saa leikata näytön kulmakaarta. yla = elementin yläreuna näytön yläreunasta.
+        /// </summary>
+        public static float KulmaVara(float yla, float rho, float kulmaR, float marginaali)
+        {
+            if (kulmaR <= 0f) return 0f;
+            float cy = yla + rho;
+            if (cy >= kulmaR) return 0f;
+            float d = kulmaR - rho - marginaali, dy = kulmaR - cy;
+            if (d <= 0f || dy >= d) return kulmaR;
+            return Mathf.Max(0f, kulmaR - Mathf.Sqrt(d * d - dy * dy) - rho);
+        }
 
         /// <summary>
         /// Saaririvillä pillerin teksti pienenee (14 → 11 px), kunnes "raha£ päivä/80" mahtuu saaren viereen;
@@ -795,10 +886,20 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Elämäpalkki: täysi lohko jokaista jäljellä olevaa 6 h vuoroa kohden; näkyy vain rahattomana.</summary>
+        bool elamaNakyy;
+
         void NaytaElama()
         {
             bool naytetaan = rahatonVuoroja != null && !matkaPaattyi && nakyy;
-            elama.style.display = naytetaan ? DisplayStyle.Flex : DisplayStyle.None;
+            // Lappu ilmestyy ja poistuu animoiden (omistaja 29.9.2026, Ponnahdus); vain tilan vaihtuessa, ei joka päivityksellä.
+            // Palkin piilotus lehden ajaksi (nakyy) on heti, kuten koko yläpalkki.
+            if (naytetaan != elamaNakyy)
+            {
+                elamaNakyy = naytetaan;
+                if (naytetaan) Ponnahdus.Avaa(elama, origo: new TransformOrigin(Length.Percent(50), Length.Percent(0)));
+                else if (nakyy) Ponnahdus.Sulje(elama);
+                else { Ponnahdus.Lopeta(elama); elama.style.display = DisplayStyle.None; }
+            }
             if (!naytetaan) { elamaAjastin.Pause(); elamaSeliteAuki = false; Ponnahdus.Lopeta(elamaSelite); elamaSelite.style.display = DisplayStyle.None; return; }
             elamaAjastin.Resume();
             int n = Mathf.Clamp(rahatonVuoroja.Value, 0, ElamaLohkoja);

@@ -188,7 +188,7 @@ namespace Matkakirja.Natiivi
             // Napautus levyn ulkopuolelta sulkee sen (web ulkosulku); ☰-napit hoitavat itse vaihdon.
             arkki.RegisterCallback<PointerDownEvent>(e =>
             {
-                if (sisallys.style.display != DisplayStyle.Flex || !(e.target is VisualElement v)) return;
+                if (!sisallysAuki || !(e.target is VisualElement v)) return;
                 for (var x = v; x != null; x = x.parent)
                     if (x == sisallys || x == sisallysNappi || x == alaSisallys) return;
                 SuljeSisallys();
@@ -296,7 +296,9 @@ namespace Matkakirja.Natiivi
             lehti = l;
             // Ylärivin ☰ molemmissa lehdissä, kun sivuja on vähintään kaksi (web varmistaLehtiHampurilainen).
             sisallysNappi.style.display = l.Sivut.Count >= 2 ? DisplayStyle.Flex : DisplayStyle.None;
+            Ponnahdus.Lopeta(sisallys);
             sisallys.style.display = DisplayStyle.None;
+            sisallysAuki = false;
             nyt = -1;
             NaytaSivu(Mathf.Clamp(alku, 0, l.Sivut.Count - 1), 0);
             if (!Auki)
@@ -1577,7 +1579,15 @@ namespace Matkakirja.Natiivi
 
         // --- sisällys (maalehti) ------------------------------------------------------------------
 
-        void SuljeSisallys() => sisallys.style.display = DisplayStyle.None;
+        // Levy avautuu ja sulkeutuu animoiden avanneen ☰:n kohdalta (omistaja 29.9.2026 "avaus ja sulku aina animoiden").
+        bool sisallysAuki;
+
+        void SuljeSisallys()
+        {
+            if (!sisallysAuki) return;
+            sisallysAuki = false;
+            Ponnahdus.Sulje(sisallys);
+        }
 
         float turvaYla;
 
@@ -1595,7 +1605,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void VaihdaSisallys(bool ylhaalla)
         {
-            if (sisallys.style.display == DisplayStyle.Flex) { SuljeSisallys(); return; }
+            if (sisallysAuki) { SuljeSisallys(); return; }
+            sisallysAuki = true;
             sisallys.EnableInClassList("mk-lehti__sisallys--ylhaalla", ylhaalla);
             AsetaSisallysVara();
             sisallysLista.Clear();
@@ -1621,7 +1632,7 @@ namespace Matkakirja.Natiivi
                     RajaaRiveihin(ing, 2);
                 }
             }
-            sisallys.style.display = DisplayStyle.Flex;
+            Ponnahdus.Avaa(sisallys, (ylhaalla ? sisallysNappi : alaSisallys).worldBound.center);
         }
 
         /// <summary>Web sisallysTiedot: kuva ja ingressi (johdannon tai ensimmäisen kohteen ensimmäinen virke).</summary>

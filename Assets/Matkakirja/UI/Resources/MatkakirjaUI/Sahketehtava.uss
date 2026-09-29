@@ -571,6 +571,15 @@
     justify-content: center;
     padding: 24px 14px 24px 14px;
     background-color: rgba(14, 9, 4, 0.45);
+    /* Avaus ja sulku animoiden: tausta häivyttää (Rakenne.Nayta), laatikko Ponnahduksella. */
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.mk-st__valitsin-tausta.mk-auki {
+    opacity: 1;
 }
 
 .mk-st__valitsin {

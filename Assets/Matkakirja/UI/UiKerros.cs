@@ -185,6 +185,8 @@ namespace Matkakirja.Natiivi
             // Vierityslöydös (omistaja 27.9. klo 17.0x): iOS-tuntumainen kosketusvieritys kaikkiin pystysivuihin.
             // Kosketusvälimuistin mitätöinti myös UI Toolkitin omasta irrotuksesta (simulaattorin napautus painuu ja nousee saman
             // ruudun aikana, jolloin Input Systemin isPressed ei ehdi näkyä LateUpdatessa; mitattu iPad 503000D1 29.9.).
+            // Avausanimaation lähtökohta, kun avaajaa ei anneta (Ponnahdus.TuoreNapautus, web js/avausanimaatio.js).
+            juuri.RegisterCallback<PointerDownEvent>(e => Ponnahdus.Napautettu(e.position, e.target as VisualElement), TrickleDown.TrickleDown);
             juuri.RegisterCallback<PointerUpEvent>(_ => mitatoiKehyksiaJaljella = 3, TrickleDown.TrickleDown);
             juuri.RegisterCallback<PointerCancelEvent>(_ => mitatoiKehyksiaJaljella = 3, TrickleDown.TrickleDown);
             Kosketusvieritys.LiitaYleinen(juuri);

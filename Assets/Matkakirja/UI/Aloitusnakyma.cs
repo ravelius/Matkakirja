@@ -811,7 +811,8 @@ namespace Matkakirja.Natiivi
             AvausTausta(false);
             portti.style.display = DisplayStyle.None;
             AsetaPortti(false);
-            valinta.style.display = DisplayStyle.None;
+            // Valintakortti sulkeutuu animoiden loppuun (Valitse → Nayta false); suora display none katkaisi sen.
+            Rakenne.Nayta(valinta, false, 200);
             valintaNappi.style.display = DisplayStyle.None;
             intro.style.opacity = 1f;
             arkki.style.opacity = 1f;

@@ -481,7 +481,9 @@
     padding: 16px;
     opacity: 0;
     transition-property: opacity;
-    transition-duration: 0.25s;
+    /* Web: himmennys (::backdrop) 220 ms sisään, 200 ms ulos (js/avausanimaatio.js); USS:ssä yksi kesto molempiin. */
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
 }
 
 .mk-himmennys.mk-auki {
@@ -500,18 +502,8 @@
 .mk-kortti-kehys {
     width: 100%;
     max-width: 420px;
-    translate: 0 16px;
-    rotate: -1.2deg;
-    scale: 0.97 0.97;
-    transition-property: translate, rotate, scale;
-    transition-duration: 0.32s;
-    transition-timing-function: ease-out-back;
-}
-
-.mk-himmennys.mk-auki .mk-kortti-kehys {
-    translate: 0 0;
-    rotate: 0deg;
-    scale: 1 1;
+    /* Avaus ja sulku: Ponnahdus Rakenne.Naytan kautta (web .dialog-card: js/avausanimaatio.js, 220/200 ms, 0,92 ↔ 1
+     * napautuksen kohdalta; vanha card-in 0,32 s kallistuksineen poistui webistä 29.9.2026). */
 }
 
 .mk-kortti__varjo {
@@ -876,22 +868,26 @@
     border-width: 1px;
     border-color: var(--line);
     border-radius: 10px;
-    opacity: 0;
-    translate: 0 -6px;
-    transition-property: opacity, translate;
-    transition-duration: 0.18s;
-    transition-timing-function: ease-out;
-}
-
-.mk-pudotus.mk-auki {
-    opacity: 1;
-    translate: 0 0;
+    /* Avaus ja sulku: Ponnahdus (Pudotus.Avaa/Sulje), web .paavalikko js/avausanimaatio.js 220/200 ms avaajan kohdalta. */
 }
 
 /* Web .paavalikko on sisältönsä levyinen: mitattu 244,6 (napit 217 + täyte 12,8 × 2 + reunus), iPad 834 × 1194,
  * tuotanto 25.9. (pariteetti #18). Natiivin omat osiot (Retkikunta, Kokeet) rivittyvät samaan leveyteen. */
 .mk-paavalikko {
     width: 244.6px;
+}
+
+/* Asetukset leveämpänä (omistaja 29.9.2026, 1.0.50: "liian kapea, jotta äänitasoja voi säätää"): pillerivalikon levyinen
+ * (web min(23rem, 100vw − 1,6rem) = 367 pt, Pelikoodari 29.9.). */
+.mk-paavalikko.mk-paavalikko--asetukset {
+    width: 367px;
+    max-width: 94%;
+}
+
+.mk-paavalikko__takaisin {
+    position: relative;
+    align-self: flex-start;
+    margin: 0 0 4px 0;
 }
 
 /* Web äänipaneeli on sisältönsä levyinen (296,36). */
@@ -4382,6 +4378,32 @@
     bottom: 0;
     -unity-background-scale-mode: scale-and-crop;
     background-position-y: bottom;
+}
+
+/* iPadin nahkapalkki (Codex ipad-v1, @2x): pala toistuu vaakaan luonnollisessa koossaan, alareuna ja tikkaus aina näkyvissä. */
+.mk-ylapalkki--nahka.mk-ylapalkki--nahka-ipad {
+    background-position-x: left;
+    background-position-y: bottom;
+    align-items: center;
+}
+
+/* Logo ja pilleri tikkauksen yläpuolisen 38 pt:n nahkarivin mittaan (57 − 19 pt; Codexin 41 ja 45 pt 130 pt:n palkissa). */
+.mk-ylapalkki--nahka-ipad .mk-logo {
+    height: 28px;
+    width: 97px;
+}
+
+.mk-ylapalkki--nahka-ipad .mk-pilleri {
+    height: 34px;
+    min-height: 34px;
+}
+
+.mk-pilleri.mk-pilleri--nahka.mk-pilleri--nahka-ipad {
+    -unity-slice-left: 46;
+    -unity-slice-right: 46;
+    -unity-slice-top: 41;
+    -unity-slice-bottom: 41;
+    -unity-slice-scale: 0.5;
 }
 
 .mk-pilleri.mk-pilleri--nahka {

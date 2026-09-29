@@ -250,7 +250,8 @@ namespace Matkakirja.Natiivi
             if (Auki) return;
             Auki = true;
             sulkija.style.display = DisplayStyle.Flex;
-            Rakenne.Nayta(paneeli, true, 200);
+            // Web pollo.js animoiAvaus(paneeli, nappi): kasvaa avaajan (Pulun tai napin) kohdalta, 220/200 ms.
+            Ponnahdus.Avaa(paneeli);
             SyoteLukko.Esta(this);
             Aanisoitin.Hiljennys("pollo", true);
             pulu.Tilanne("chatOpen");
@@ -334,7 +335,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             sulkija.style.display = DisplayStyle.None;
-            Rakenne.Nayta(paneeli, false, 200);
+            Ponnahdus.Sulje(paneeli);
             SyoteLukko.Vapauta(this);
             Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");

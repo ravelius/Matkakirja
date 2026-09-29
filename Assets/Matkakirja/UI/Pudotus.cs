@@ -63,7 +63,8 @@ namespace Matkakirja.Natiivi
             Asettele();
             Auki = true;
             Sulkija.style.display = DisplayStyle.Flex;
-            Rakenne.Nayta(Paneeli, true, 180);
+            // Web .paavalikko: animoiAvaus avaajan (napautuksen) kohdalta, 220/200 ms (js/avausanimaatio.js).
+            Ponnahdus.Avaa(Paneeli);
             SyoteLukko.Esta(this);
             AukiMuuttui?.Invoke(true);
         }
@@ -73,7 +74,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             Sulkija.style.display = DisplayStyle.None;
-            Rakenne.Nayta(Paneeli, false, 180);
+            Ponnahdus.Sulje(Paneeli);
             SyoteLukko.Vapauta(this);
             AukiMuuttui?.Invoke(false);
         }

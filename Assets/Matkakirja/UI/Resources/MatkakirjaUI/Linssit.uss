@@ -3818,6 +3818,13 @@
     align-items: center;
 }
 
+/* Linssit ja Aarteet vierekkäin (omistaja 29.9.2026, 1.0.50): puolikkaat samassa rivissä. */
+.mk-linssivalitsin__alinakyma--puoli {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 2px 1.5px;
+}
+
 .mk-linssivalitsin__vakanen {
     margin-left: auto;
     font-size: 18px;
@@ -3893,6 +3900,31 @@
     font-size: 13px;
     white-space: normal;
     color: rgba(70, 51, 31, 0.92);
+}
+
+/* Linssit (omistaja 29.9.2026, 1.0.50 palaute 6): linssin nimen kohta muuttuu oranssiksi Aktivoi-napiksi (sama kulta kuin
+ * entinen esikatselun nappi, joka poistui Linsseistä); ikoni jää vasemmalle. */
+.mk-linssirivi--aktivoi.mk-esikatseltu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tekstit {
+    justify-content: center;
+    min-height: 36px;
+    border-radius: 8px;
+    background-color: #d9a13b; /* web --accent */
+}
+
+/* Aarteet (palaute 7): rivillä ei ikonia eikä tekstikehystä, joten nappi on nimirivi. */
+.mk-linssirivi--aktivoi.mk-esikatseltu > .mk-linssirivi__nimirivi {
+    justify-content: center;
+    min-height: 36px;
+    border-radius: 8px;
+    background-color: #d9a13b; /* web --accent */
+}
+
+.mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tila {
+    color: #211d18;
 }
 
 /* Esikatseltu rivi muuttuu samassa kohdassa toimintonapiksi (web: "rivi muuttuu Aktivoi-napiksi"; laite cl2: teksti päällekkäin). */
