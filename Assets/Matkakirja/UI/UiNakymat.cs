@@ -361,6 +361,10 @@ namespace Matkakirja.Natiivi
             });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
+            // Astronautin kuvaselaimessa pulu on minipulu (Kuvanakyma): iso Pulu kuulsi sen takaa kuvanäkymän himmennyksen
+            // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
+            // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
+            Linssit.Astronautti.Kuva.AukiMuuttui += auki => Pulu.Peita(auki);
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             Valikko.TietojaPainettu += Tietoja.Avaa;
             Valikko.EhdotaPainettu += () => Palaute.Avaa();
