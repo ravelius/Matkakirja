@@ -18,6 +18,13 @@
  *   3. B2 pyöräyttää kameran Venetsian ylle (≤ 3°).
  *   4. C1 avaa väärän kohteen valokuvan (Saharan silmä) — oikea näkymän
  *      vaihto — ja C2 sulkee sen.
+ *   4b. LÖYDÖS (Linssiseppä 1 / Päätoimittaja 29.9.2026, PR #3575): C1:n
+ *      kuva EI käynnistä selitteen automaattista luentaa (js/lukija.js
+ *      lukijaLukee() pysyy epätotena koko C1:n ja C2:n ajan), koska
+ *      js/liviapuhe.js:n soitaLivianAani väistäisi muuten sitä eikä C2:n
+ *      Livian ääni soisi ollenkaan. C2:n Livian ääni SOI oikeasti
+ *      (ui.liviaAani.currentTime kasvaa nollasta — ei luoteta play()-
+ *      kutsuun, ks. muistio aanimittaus-currenttime).
  *   5. Jakson lopussa kamera on poissa Venetsiasta, aseman seuranta on
  *      taas päällä (aloitusnäkymä) ja ohitusten kuuntelijat ovat poissa.
  *   6. Muisti: toinen avaus ei aloita tervetuloa.
@@ -174,6 +181,7 @@ const avaaLinssi = async (s) => {
 
 /** Näytteet sivulla, kunnes jakso on ohi tai katto täynnä. */
 const seuraaJaksoa = (s, kattoMs) => s.evaluate(async (katto) => {
+  const { lukijaLukee } = await import('/js/lukija.js');
   const kahva = window.matkakirja.ui.pallolinssi?.kahva;
   const naytteet = [];
   const alku = performance.now();
@@ -192,6 +200,10 @@ const seuraaJaksoa = (s, kattoMs) => s.evaluate(async (katto) => {
         ? (document.body.innerText.match(/Saharan silmä/) ? 'Saharan silmä' : 'muu') : null,
       kupla: kuplat.at(-1) ?? null,
       kuplat: kaikkiKuplat,
+      // 4b: selitteen automaattinen luenta (js/linssit/satelliitti.js
+      // lueSelite) ja Livian ääni (currentTime, ei play()-kutsu).
+      lukijaLukee: lukijaLukee(),
+      liviaCurrentTime: window.matkakirja.ui.liviaAani?.currentTime ?? null,
     });
     if (!t || ['valmis', 'ohitettu', 'pois', 'purettu'].includes(t.vaihe)) break;
     if (performance.now() - alku > katto) break;
@@ -246,6 +258,17 @@ const seuraaJaksoa = (s, kattoMs) => s.evaluate(async (katto) => {
   const vaaraKuva = naytteet.slice(rappaise).some((n) => n.kuvanNimi === 'Saharan silmä');
   vaadi('4. C1 avaa väärän kohteen valokuvan (Saharan silmä)', rappaise >= 0 && vaaraKuva);
   vaadi('4. C2 sulkee valokuvan', viimeinen.kuvaAuki === false);
+  // 4b. Kuva on auki C1:n ja C2:n ajan (kunnes C2 sulkee sen): selitteen
+  // automaattinen luenta ei saa käynnistyä sinä aikana, koska se veisi
+  // puhevuoron C2:n Livian äänen tieltä (soitaLivianAani väistää kertojaa).
+  const kuvaAukiNaytteet = naytteet.slice(rappaise).filter((n) => n.kuvaAuki);
+  const seliteLuettiin = kuvaAukiNaytteet.filter((n) => n.lukijaLukee);
+  vaadi('4b. C1:n kuva ei käynnistä selitteen automaattista luentaa', rappaise >= 0 && seliteLuettiin.length === 0,
+    seliteLuettiin.length ? `luettiin ${seliteLuettiin.length}/${kuvaAukiNaytteet.length} näytteessä` : '');
+  const c2Naytteet = naytteet.filter((n) => n.sanotut.includes('iss-c-2'));
+  const c2LiviaHuippu = Math.max(0, ...c2Naytteet.map((n) => n.liviaCurrentTime ?? 0));
+  vaadi('4b. C2:n Livian ääni soi (currentTime kasvaa nollasta)', c2Naytteet.length > 0 && c2LiviaHuippu > 0,
+    `currentTime huippu ${c2LiviaHuippu.toFixed(2)} s (${c2Naytteet.length} näytettä)`);
   const loppuEro = viimeinen.pov ? kulmaEro(viimeinen.pov, { lat: PULUN_SUOSIKKI.lat, lng: PULUN_SUOSIKKI.lon }) : 0;
   vaadi('5. lopuksi kamera on poissa Venetsiasta ja aseman seuranta jatkuu',
     loppuEro > 5 && issSeuranta === true, `ero ${loppuEro.toFixed(1)}°, seuranta ${issSeuranta}`);
