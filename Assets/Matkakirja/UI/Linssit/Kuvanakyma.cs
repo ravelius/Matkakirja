@@ -635,6 +635,8 @@ namespace Matkakirja.Natiivi
 
         void SormiAlas(PointerDownEvent e)
         {
+            // Sulkeutuva kuva (Ponnahdus, 240 ms) ei ota kosketuksia (web .maakunta-kortti-sulkeutuu pointer-events: none).
+            if (!Auki) return;
             // Kuvan napautus, panorointi, nipistys ja selaus pienentävät selitteen (web LISÄYS 6).
             KelaaKuvasta();
             sormet[e.pointerId] = e.localPosition;
