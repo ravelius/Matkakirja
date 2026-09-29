@@ -134,7 +134,9 @@ namespace Matkakirja.Natiivi
             {
                 e.StopPropagation();
                 Aanet.PulunTehoste("pulu.kujerrus");
-                pulukortti.Vaihda(kohde);
+                // Web #3590: minipulu avaa Pulun taulun, jonka "Kysy Pululta" avaa tämän kortin; ilman taulua kortti.
+                if (MinipuluNapautettu != null) MinipuluNapautettu();
+                else pulukortti.Vaihda(kohde);
             });
             // Web minipulu koko 'auto': 84 pt, pieni ruutu (≤ 620 × 500) 56 pt; kortin mitat samasta ruudusta.
             turva.RegisterCallback<GeometryChangedEvent>(e =>
@@ -248,8 +250,17 @@ namespace Matkakirja.Natiivi
         public (string Nimi, string Seutu, string Teksti)? AvoinKuva =>
             Auki && kohde != null ? (kohde.Nimi, kohde.Seutu, teksti.text) : ((string, string, string)?)null;
 
-        /// <summary>Testikomento: minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
+        /// <summary>Testikomento ja Pulun taulun "Kysy Pululta": minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
         public void AvaaPulukortti() { if (Auki) pulukortti.Avaa(kohde); }
+
+        /// <summary>Pulun taulu avautuu kortin paikalle (web: taulu ja kuvan chatti eivät ole yhtä aikaa samassa kulmassa).</summary>
+        public void SuljePulukortti() => pulukortti.Sulje();
+
+        /// <summary>Minipulun napautus (web #3590: valokuvan minipulu avaa Pulun taulun). Ilman kuuntelijaa kortti.</summary>
+        public event Action MinipuluNapautettu;
+
+        /// <summary>Minipulun laatikko Pulun taulun sijoitukseen (web pulunLaatikko: kuvan ollessa auki minipulu).</summary>
+        public Rect MinipulunLaatikko => Auki && pulunappi.panel != null ? pulunappi.worldBound : default;
 
         void Valitse(int i)
         {

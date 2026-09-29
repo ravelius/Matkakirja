@@ -14,6 +14,9 @@
 //                                         ja avaus, kokomittari lokiin "MATKAKIRJA kuvaselite koko"), vinkin automaattinen
 //                                         kelaus heti, mittaa = pelkkä kokomittari (ennen ui napauta x y kuvaan);
 //                                         palauttaa koon ja luennan tilan (astro-selite)
+//   ui linssi taulu [auki|kiinni|pulu|valitse <tunnus>|kysy|tila]  Pulun taulu (web #3590): pulu = Pulun napautuksen
+//                                         polku, valitse pallo|iss-rinnalla|iss-sisalle|kuvat, kysy = Kysy Pululta; tila
+//                                         kertoo paikan, alueen, Pulun laatikon, moodin ja lokin
 //   ui linssi selaa 1|-1                  kuvaselain: seuraava/edellinen kuva (galleria, kohteen lopussa naapuriin)
 //   ui linssi kohde 1|-1                  kuvaselain: viereinen kohde kartalla (alanapit ‹ ›)
 //   ui linssi kuvaselain 0|1              kuvapari: 0 = 1.0.33 (läpinäkymätön tausta, ei ‹ ›), 1 = kuvaselain
@@ -52,7 +55,7 @@ namespace Matkakirja.Natiivi
 {
     public static class LinssiKomennot
     {
-        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|kuvaselite|selaa|kohde|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois";
+        public const string Ohje = "ui linssi valitsin|peite|selite|astro|kuva|kuvaselite|taulu|selaa|kohde|sumu|vertailu|maa|keksinnot|matka|radio|valikko|varusteet|sulje|pois";
 
         public static string Aja(UiNakymat ui, string loput)
         {
@@ -97,6 +100,8 @@ namespace Matkakirja.Natiivi
                     return "ladataan aineistoa…";
                 case "kuvaselite":
                     return l.Astronautti.Kuva.TestaaSelite(a1.Length > 0 ? a1 : "tila");
+                case "taulu":
+                    return l.Astronautti.Taulu.Testaa(a1, a2);
                 case "selaa":
                     l.Astronautti.Kuva.Selaa(a1 == "-1" ? -1 : 1);
                     return l.Astronautti.Kuva.Kohde?.Tunnus;
