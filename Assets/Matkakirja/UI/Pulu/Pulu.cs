@@ -151,6 +151,8 @@ namespace Matkakirja.Natiivi
             var radio = ui.Linssit?.Radio?.Kotelo;
             if (radio != null && radio.panel != null && ui.Linssit.Radio.Nakyvissa && radio.worldBound.height > 0)
                 korkein = Mathf.Max(korkein, radio.panel.visualTree.layout.height - radio.worldBound.yMin + 6f);
+            // ISS-kyydin ohjauspöytä alareunassa (omistaja 29.9.2026): Pulu sen yläpuolelle.
+            korkein = Mathf.Max(korkein, AlaVara);
             return Mathf.Max(perus, korkein);
         }
 
@@ -189,6 +191,7 @@ namespace Matkakirja.Natiivi
             tila.Leiju = 0;
             tila.Astronautti = Astronautti;
             kuva.Aseta(tila);
+            Leiju(puhuu);
 
             // Paikka ja koko (kortti auki → yläpuolelle, modaali → 0,72).
             var reunat = kerros.Reunat(Kerros);
@@ -196,11 +199,51 @@ namespace Matkakirja.Natiivi
             // Löydös 66: chatissa täysi kokopulu (web livia-chat-tila: pieni vain lehdessä, passissa ja visassa).
             bool modaali = SyoteLukko.Estetty && !(UiNakymat.Olemassa && UiNakymat.Hae().Chat?.Auki == true);
             alue.style.right = Oikea(reunat.z);
+            if (IkkunanTakana is Vector2 kulma && alue.parent != null && alue.parent.layout.width > 0)
+            {
+                alue.style.right = alue.parent.layout.width - kulma.x;
+                alue.style.bottom = alue.parent.layout.height - kulma.y;
+            }
             alue.EnableInClassList("mk-pulu--pieni", modaali);
         }
 
         /// <summary>Astronautin kamera (Linssiseppä asettaa): kypärä päähän.</summary>
         public bool Astronautti { get; set; }
+
+        /// <summary>
+        /// ISS:n Cupolassa Pulu on ulkona avaruuskävelyllä (omistaja 29.9.2026): alueen oikea alakulma tähän (pt, ruudun vasen
+        /// yläkulma origo) ikkunan aukkoon; Pulun kerros on silloin Cupola-kehyksen alla (AstronautinNakyma). null = tavallinen paikka.
+        /// </summary>
+        public Vector2? IkkunanTakana { get; set; }
+
+        /// <summary>Alareunan paneeli, jonka yläpuolelle Pulu nousee (pt ruudun alareunasta; ISS-kyydin ohjauspöytä), 0 = ei mitään.</summary>
+        public float AlaVara { get; set; }
+
+        // Webin livia-astronautti-leijuu (css/satelliitti.css): 5 s:n kierros, 5 px ylös ja −3° → +3°, puheen ajaksi paikalleen;
+        // vähennetty liike: ei leijuntaa.
+        float leijuAika;
+        bool leijuu;
+
+        void Leiju(bool puhuu)
+        {
+            bool paalla = Astronautti && !LinssiUi.VahennettyLiike();
+            if (!paalla)
+            {
+                if (!leijuu) return;
+                leijuu = false;
+                leijuAika = 0;
+                kuva.style.rotate = StyleKeyword.Null;
+                kuva.style.translate = StyleKeyword.Null;
+                return;
+            }
+            leijuu = true;
+            if (!puhuu) leijuAika += Time.unscaledDeltaTime;
+            float u = 0.5f - 0.5f * Mathf.Cos(2f * Mathf.PI * leijuAika / 5f);
+            // Piirros eikä näyttämö: näyttämön siirto ja kierto ovat kartan väistön (AsetaKarttapaikka).
+            kuva.style.translate = new Translate(0, -5f * u);
+            kuva.style.transformOrigin = new TransformOrigin(Length.Percent(72), Length.Percent(84));
+            kuva.style.rotate = new Rotate(-3f + 6f * u);
+        }
 
         // Kartta herättää väistön vain pelaajan omasta vedosta tai nipistyksestä,
         // ei kameran käsikirjoitetusta ajosta eikä kortin päältä alkaneesta kosketuksesta.

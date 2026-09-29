@@ -15,6 +15,7 @@
 // Linssin ollessa auki pulu on astronautti (LinssiUi asettaa Pulu.Astronautti).
 using System;
 using Matkakirja.Linssit.Astronautti;
+using Matkakirja.Linssit.Iss;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -69,7 +70,10 @@ namespace Matkakirja.Natiivi
             Kavely.Alkoi += () => { if (Taulu.Auki) Taulu.Sulje("avaruuskavely"); };
             // PULU KYYDIN PÄÄLLÄ (web body.satelliitti-kyyti .pollo-nappi z-index 49 > kyydin kerros 48): Cupola-kehys peitti
             // Pulun, joka on taulun avaaja kaikissa moodeissa. Kyydin ajaksi Pulun kerros nousee kehyksen yläpuolelle.
-            Kyyti.AukiMuuttui += auki => kerros.AsetaJarjestys(Pulu.Kerros, auki ? LinssiUi.SulkuKerros : Pulu.Kerros);
+            // Cupolassa (Ikkuna) Pulu on ulkona avaruuskävelyllä ikkunan aukossa (omistaja 29.9.2026), joten kerros pysyy kehyksen
+            // alla ja lasi, heijastus ja pölyt piirtyvät sen päälle; Cupolan läpinäkyvät osat päästävät napautuksen Puluun.
+            Kyyti.TilaMuuttui += tila => kerros.AsetaJarjestys(Pulu.Kerros,
+                tila != KyydinTila.Kauko && tila != KyydinTila.Ikkuna ? LinssiUi.SulkuKerros : Pulu.Kerros);
 
             AstronauttiKerros.AvausKasittelija = Avaus;
             AstronauttiKerros.KuvaKasittelija = (kohde, indeksi) =>

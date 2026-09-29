@@ -1437,6 +1437,8 @@ namespace Matkakirja.Natiivi
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
                         else if (a == "ajelehdus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Ajelehdus = osat[3] != "0"; // A/B painoton ajelehdus
+                        else if (a == "kellunta" && osat.Length > 3 && float.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float kellunta))
+                            Matkakirja.Natiivi.IssKyytiNakyma.Kellunta = kellunta; // A/B kellunnan nopeus (1 = 28.9.)
                         else if (a == "lasi" && osat.Length > 3   // A/B lähemmäs lasia: 1 = 1.0.37, 1.3 = uusi
                                  && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double lasi))
                             Matkakirja.Linssit.Iss.IssKuvakulma.LasiZoom = Math.Max(0.5, Math.Min(3.0, lasi));
