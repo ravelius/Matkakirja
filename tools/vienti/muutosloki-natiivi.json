@@ -4,17 +4,7 @@
   {
    "versio": "1.0.47 (202609290907)",
    "paiva": "2026-09-29",
-   "teksti": "Kartuscha avautuu ja sulkeutuu pehmeästi, ja Pulun kuplat näkyvät kuvien takana."
-  },
-  {
-   "versio": "1.0.46 (202609290829)",
-   "paiva": "2026-09-29",
-   "teksti": "Pulun puhe noudattaa Kertoja-asetusta, joten Pulu kuuluu, vaikka äänimaisema on pois päältä."
-  },
-  {
-   "versio": "1.0.45 (202609290759)",
-   "paiva": "2026-09-29",
-   "teksti": "Ensimmäisellä ISS-kyydillä Pulu toivottaa sinut tervetulleeksi avaruusasemalle."
+   "teksti": "Ensimmäisellä ISS-kyydillä Pulu toivottaa sinut tervetulleeksi avaruusasemalle, ja Pulu kuuluu Kertoja-asetuksen mukaan myös äänimaiseman ollessa pois päältä. Kartuscha avautuu ja sulkeutuu pehmeästi, ja Pulun kuplat näkyvät kuvien takana."
   },
   {
    "versio": "1.0.44 (202609290609)",
