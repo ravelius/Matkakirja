@@ -11,7 +11,11 @@ namespace Matkakirja.Peli
 {
     public sealed class Matkamuisto
     {
-        public string Id, Nimi, Selite, KuvaUrl;
+        public string Id, Nimi, Selite;
+        /// <summary>Kuva dioraaman paketissa (vie-dioraama.yml: assets/dioraama/&lt;rakennus&gt;/ → ämpärin hash-kansio).</summary>
+        public string KuvaPolku;
+        /// <summary>Kuvan osoite: paketin juuri (uusin.json:n polku, Matkamuistot.PaketinJuuri) + KuvaPolku.</summary>
+        public string KuvaUrl => Matkamuistot.PaketinJuuri + KuvaPolku;
         /// <summary>Tietäjäpisteet löydöstä (Kokemus.Anna).</summary>
         public int Pisteet;
     }
@@ -20,18 +24,26 @@ namespace Matkakirja.Peli
     {
         /// <summary>Pieni etsintä = pulman arvoinen (Kokemus.Pulma, web XP_PUZZLE 25 tp).</summary>
         public const int EtsinnanPisteet = Kokemus.Pulma;
-        const string Juuri = "https://media.matkakirja.app/dioraama/olavinlinna/matkamuistot/";
+        /// <summary>Dioraaman ämpärijuuri (sama kuin DioraamaSovitin.AmpariJuuri).</summary>
+        public const string OletusJuuri = "https://media.matkakirja.app/dioraama/olavinlinna/";
+        /// <summary>
+        /// Paketin juuri: UI lukee OletusJuuri + uusin.json ({ polku: "&lt;hash&gt;/" }) ja asettaa tämän (MatkamuistoKuvat).
+        /// Ilman osoitinta juuri itse (kehityspeili, kuten DioraamaSovitin).
+        /// </summary>
+        public static string PaketinJuuri = OletusJuuri;
 
-        /// <summary>Kaikki matkamuistot tunnuksen mukaan. Selite korvataan Sisältökirjurin tarkistamalla tekstillä.</summary>
+        /// <summary>Kaikki matkamuistot tunnuksen mukaan.</summary>
         public static readonly IReadOnlyDictionary<string, Matkamuisto> Kaikki = new Dictionary<string, Matkamuisto>
         {
             ["voudin-sinetti"] = new Matkamuisto
             {
                 Id = "voudin-sinetti",
                 Nimi = "Voudin sinetti",
-                Selite = "Olavinlinnan voudin sinettisormus. Sillä vouti vahvisti linnan kirjeet ja tilit; nyt se löytyi "
-                    + "fatabuurin suolakalatynnyrin kannen alta.",
-                KuvaUrl = Juuri + "voudin-sinetti.jpg",
+                // Sisältökirjurin tarkistamat yleiset faktat (Kansallisarkisto: Arkistojen Portti; Wikipedia: Sinetti). Olavinlinnan
+                // voudin omasta sinetistä ei ole lähdettä, joten sitä ei väitetä (Linnanrakentaja 29.9.2026).
+                Selite = "Keskiajalla kirjeeseen ei kirjoitettu nimeä: aitouden takasi vahaan painettu sinetti. "
+                    + "Sinettisormus oli suosittu 1100-luvulta keskiajan loppuun, ja siinä oli usein oman suvun vaakuna.",
+                KuvaPolku = "matkamuistot/voudin-sinetti.jpg",
                 Pisteet = EtsinnanPisteet,
             },
         };
