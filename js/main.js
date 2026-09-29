@@ -85,7 +85,10 @@ import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
  * kartan ja kohdekerroksen, eikä pöllö saa tuoda niitä perässään.
  */
 import { kytkePulunPaikannus } from './pulu-paikka.js';
-import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
+import { animoiAvaus, asennaDialogianimaatiot, haamuSulku } from './avausanimaatio.js';
+
+// Dialogien avaus ja sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js erä B).
+asennaDialogianimaatiot();
 
 /*
  * Valikosta poistettujen mittausvipujen (Vedon seuranta, Tarkkuus
