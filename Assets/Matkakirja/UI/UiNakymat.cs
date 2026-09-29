@@ -284,13 +284,16 @@ namespace Matkakirja.Natiivi
                 Karttaselite?.Maakunnat?.SisaltoVaihtui();
                 Debug.Log($"MATKAKIRJA ui: sisältö v{versio} käyttöön kesken istunnon ({muuttuneet?.Count ?? 0} muuttunutta): maakunta- ja nostodata hylätty");
             };
-            // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin pallonäkymässä
-            // ison pulun napautus ei avaa pääkeskustelua (löydös 96); kuvanäkymässä keskustelu on minipulun kortissa.
+            // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin linssissä ison
+            // pulun napautus ei avaa pääkeskustelua (löydös 96). PULUN TAULU (web #3590, Linssiseppä 29.9.): napautus avaa ja
+            // sulkee linssin moodien taulun; keskustelu on minipulun kortissa (taulun "Kysy Pululta").
             Pulu.Napautus += Chat.Vaihda;
             Pulu.NapautusEstetty = () =>
             {
                 var l = Linssit;
-                return !Chat.Auki && l != null && l.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId && !l.Astronautti.Kuva.Auki;
+                bool astro = !Chat.Auki && l != null && l.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId;
+                if (astro) l.Astronautti.Taulu.PulunNapautus();
+                return astro;
             };
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);

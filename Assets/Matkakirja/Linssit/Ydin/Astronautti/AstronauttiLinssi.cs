@@ -191,6 +191,12 @@ namespace Matkakirja.Linssit.Astronautti
         public Iss.KyydinTila Kyyti => kyyti.Tila;
         public bool Kyydissa => kyyti.Kyydissa;
 
+        /// <summary>Kyydin siirtymä kesken (Pulun taulun askelkone odottaa sen loppuun, web kyytiMoodi siirtyy).</summary>
+        public bool KyytiSiirtyy => kyyti.Siirtyy;
+
+        /// <summary>Kameran katsekohde (web aloitustila().pov): Pulun taulun kuvamoodi avaa sitä lähimmän kohteen.</summary>
+        public (double Lat, double Lon) Katse => y == null ? (double.NaN, double.NaN) : (y.Kamera.Lat, y.Kamera.Lon);
+
         Iss.IssHetki Hetki(DateTime utc, LatLon paikka) =>
             new Iss.IssHetki(paikka, Iss.IssNyt.KorkeusKm(utc) * 1000, Iss.IssNyt.Suuntima(utc));
 

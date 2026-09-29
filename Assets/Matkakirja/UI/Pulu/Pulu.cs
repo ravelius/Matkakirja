@@ -46,6 +46,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement alue, nayttamo, kosketus;
         /// <summary>Pulun alue paneelissa (kalusteena kaupunkiliuskan kamera-ajolle, D17); tyhjä, kun piilossa.</summary>
         public Rect Laatikko => nakyvissa && alue.panel != null ? alue.worldBound : default;
+        /// <summary>Linnun kosketusalue lepopaikalla (62 × 82 pt, web .pollo-nappi): Pulun taulun sijoitus ja avaaja; tyhjä piilossa.</summary>
+        public Rect Lintu => nakyvissa && kosketus.panel != null ? kosketus.worldBound : default;
         readonly LiviaKuva kuva;
         readonly LiviaTila tila = new LiviaTila();
         public readonly PuluKuplat Kuplat;
