@@ -15,6 +15,10 @@
 //             suuntaan, ja vaakaveto säätää sitä (pelaaja voi kääntää P:n oikeaan pohjoiseen). Pystyveto ei vaikuta gyrossa.
 //             Anturi ei vaadi lupaa. Ruudun kierto korjataan (pysty, vaaka vasen/oikea). Ilman anturia (simulaattori, editori)
 //             ohjaus on vedolla kuten erässä 1. Testikomento taivas gyro 0|1.
+//   POHJOINEN (Päätoimittajan tilaus 29.9.): iOS:llä ensisijaisesti CoreMotion magneettisen pohjoisen kehyksessä
+//             (Plugins/iOS/MatkakirjaTaivasAsento.mm, ei sijaintilupaa) + WMM2025-deklinaatio kartalla katsotusta paikasta
+//             (Ydin/Taivas/Wmm.cs), joten P osoittaa todelliseen pohjoiseen; vaakaveto jää hienosäädöksi. AttitudeSensor (yllä)
+//             on varapolku laitteille, joilla magneettista kehystä ei ole. A/B `taivas gyro kaanteinen` (kvaternio kääntäen).
 using System.Collections.Generic;
 using Matkakirja.Linssit.Taivas;
 using TMPro;
@@ -150,6 +154,7 @@ namespace Matkakirja.Natiivi
             this.lat = lat;
             this.lon = lon;
             auki = true;
+            Deklinaatio = Wmm.Deklinaatio(lat, lon, Wmm.Vuosi(System.DateTime.UtcNow));
             foreach (var o in oliot) o.SetActive(true);
             kamera.enabled = true;
             kamera.fieldOfView = KuvanKentta;
@@ -220,15 +225,64 @@ namespace Matkakirja.Natiivi
         public static bool GyroSallittu = true;
         float? gyroSiirto;
         Quaternion gyroTasattu = Quaternion.identity;
+        /// <summary>Magneettinen kehys käytössä (natiivi CoreMotion); deklinaatio asteina itään; hienosäätö vaakavedosta.</summary>
+        public bool Pohjoinen { get; private set; }
+        public double Deklinaatio { get; private set; }
+        public static bool Kaanteinen;
+        float hienosaato;
+        public int Tarkkuus => Pohjoinen ? MatkakirjaTaivas_Tarkkuus() : -2;
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern bool MatkakirjaTaivas_Aloita();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaTaivas_Lopeta();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern bool MatkakirjaTaivas_Asento(float[] q);
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern int MatkakirjaTaivas_Tarkkuus();
+#else
+        static bool MatkakirjaTaivas_Aloita() => false;
+        static void MatkakirjaTaivas_Lopeta() { }
+        static bool MatkakirjaTaivas_Asento(float[] q) => false;
+        static int MatkakirjaTaivas_Tarkkuus() => -2;
+#endif
+        readonly float[] asento = new float[4];
+
+        static Matkakirja.Linssit.Taivas.Ruutu RuudunAsento() => Screen.orientation switch
+        {
+            ScreenOrientation.LandscapeLeft => Matkakirja.Linssit.Taivas.Ruutu.VaakaVasen,
+            ScreenOrientation.LandscapeRight => Matkakirja.Linssit.Taivas.Ruutu.VaakaOikea,
+            ScreenOrientation.PortraitUpsideDown => Matkakirja.Linssit.Taivas.Ruutu.Ylosalaisin,
+            _ => Matkakirja.Linssit.Taivas.Ruutu.Pysty,
+        };
+
+        /// <summary>Natiivin magneettikehyksen kehys: katse todellisessa horisontissa; false = ei näytettä.</summary>
+        bool PohjoinenKehys(float vetoX, float asteitaPx)
+        {
+            if (!Pohjoinen || !MatkakirjaTaivas_Asento(asento)) return false;
+            if (!(asento[0] * asento[0] + asento[1] * asento[1] + asento[2] * asento[2] + asento[3] * asento[3] > 0.5f)) return false;
+            hienosaato -= vetoX * asteitaPx;
+            var (katse, ylos) = Gyromatikka.Kamera(asento[0], asento[1], asento[2], asento[3], RuudunAsento(), Deklinaatio + hienosaato, Kaanteinen);
+            var tavoite = Quaternion.LookRotation(new Vector3((float)katse.Ita, (float)katse.Ylos, (float)katse.Pohjoinen),
+                new Vector3((float)ylos.Ita, (float)ylos.Ylos, (float)ylos.Pohjoinen));
+            gyroTasattu = gyroTasattu == Quaternion.identity ? tavoite : Quaternion.Slerp(gyroTasattu, tavoite, 1f - Mathf.Exp(-Time.unscaledDeltaTime / 0.06f));
+            kamera.transform.localRotation = gyroTasattu;
+            Atsimuutti = (float)katse.Atsimuutti;
+            Korkeus = (float)katse.Korkeus;
+            return true;
+        }
 
         /// <summary>Gyro päälle tai pois (anturi otetaan käyttöön vasta tarvittaessa ja vapautetaan sulkiessa).</summary>
         public void AsetaGyro(bool paalla)
         {
+            // Ensisijaisesti magneettinen kehys (todellinen pohjoinen), muuten AttitudeSensor (suhteellinen suunta).
+            bool pohjoinen = paalla && GyroSallittu && MatkakirjaTaivas_Aloita();
+            if (!pohjoinen && Pohjoinen) MatkakirjaTaivas_Lopeta();
+            Pohjoinen = pohjoinen;
+            hienosaato = 0f;
+            if (pohjoinen) paalla = false;   // AttitudeSensoria ei tarvita
             var anturi = AttitudeSensor.current;
             bool voi = paalla && GyroSallittu && anturi != null;
             if (voi && !anturi.enabled) InputSystem.EnableDevice(anturi);
             if (!voi && anturi != null && anturi.enabled && Gyro) InputSystem.DisableDevice(anturi);
-            Gyro = voi;
+            Gyro = voi || pohjoinen;
             gyroSiirto = null;
         }
 
@@ -249,6 +303,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Gyron kehys: katse laitteen asennosta, suunta sidottu avaushetken katseeseen (gyroSiirto).</summary>
         bool GyroKehys(float vetoX, float asteitaPx)
         {
+            if (Pohjoinen) return PohjoinenKehys(vetoX, asteitaPx);
             var anturi = AttitudeSensor.current;
             if (!Gyro || anturi == null) return false;
             var raaka = anturi.attitude.ReadValue();
