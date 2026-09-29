@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2387, teksti: 'ISS-realismi webiin natiivin arvoin (#3586)' },
   { v: 2386, teksti: 'ISS-realismi 4a: Blue Marble NG -kuukausipinta… (#3551)' },
   { v: 2385, teksti: 'Maalehti: Historia-aihe SRB/ALB/MKD/MNE/MDA/BLR… (#3556)' },
   { v: 2384, teksti: 'BIH: pitkä-luonnehdinta + pulu kaikille 18 maak… (#3549)' },

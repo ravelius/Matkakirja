@@ -176,7 +176,10 @@ import {
  * kaksi totuutta on pahempi kuin kehä.
  */
 import { luoAstroSumu } from './astro-sumu.js';
-import { ISS_NYT, lataaIssTle, KAAREN_VALI_S, SIMUKELLO } from './iss-rata.js';
+import { ISS_NYT, lataaIssTle, KAAREN_VALI_S, SIMUKELLO, auringonAlihajapiste, jdHetkesta } from './iss-rata.js';
+import { luoIssRealismi } from './iss-realismi.js';
+import { realismiKerrokset } from './iss-realismi-kerrokset.js';
+import { taivasKerrokset } from './iss-realismi-taivas.js';
 import { luoIssKyytiNakyma } from './iss-kyyti-nakyma.js';
 import { ISS_OSUMA_PX, ISS_SYKE_MS } from './iss-kyyti.js';
 import { luoNimiolimitys } from './satelliitti-nimiot.js';
@@ -3079,7 +3082,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     if (!taivas) return;
     const dt = reduced || !edellinen ? 0 : (t - edellinen) / 1000;
     edellinen = t;
-    taivas.paivita(dt, kyyti?.tahdet?.() ?? 1);
+    // Kyydissä oikeat tähdet (ISS-realismi 4c) korvaavat satunnaisen kentän, kun ne ovat ladattu.
+    taivas.paivita(dt, (kyyti?.tahdet?.() ?? 1) * (realismi.satunnaisetTahdet?.() ?? 1));
   };
   let sykeSoi = false;
   /*
@@ -3088,6 +3092,16 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    * ja avauksen ISS-seuranta päättyvät kuten pelaajan otteesta, ja
    * paluun jälkeen kameran korkeus on linssin oma lepokorkeus.
    */
+  /*
+   * ISS-REALISMI (Siirtoseppä 28.9.2026, natiivin arvoin): päivän pilvet, yö + kaupunkien valot + kiilto + varjostus,
+   * revontulet ja ilmakaari hämärineen ja ilmahehkuineen; 4: kuukauden pinta (BMNG), Kuu ja oikeat tähdet (BSC5).
+   * Aurinko samasta simuloidusta kellosta kuin kaari.
+   */
+  const realismi = luoIssRealismi({
+    aurinko: (ms) => auringonAlihajapiste(jdHetkesta(ms)),
+    kerrokset: [...realismiKerrokset({ ikkuna }), ...taivasKerrokset({ ikkuna })],
+    varoita: (v, e) => { try { console.warn(v, e); } catch { /* ei konsolia */ } },
+  });
   const kyyti = luoIssKyytiNakyma({
     pallo,
     lauta,
@@ -3105,8 +3119,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       lauta?.kamera?.pysaytaKameraAjo?.();
     },
     kyytiPaattyi: (korkeus) => { omaKorkeus = korkeus; },
-    /* Siirtosepän realismimoduuli (js/linssit/iss-realismi.js) kytketään tähän, kun se tulee. */
-    realismi: null,
+    realismi,
   });
   kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
 
@@ -3220,6 +3233,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   }, ikkuna);
 
   return {
+    /** ISS-realismin A/B-säätimet kuvapareille ja savukkeille: realismiAb('kuukausi').pakotettu = 1. */
+    realismiAb: (nimi) => realismi.ab(nimi),
     /** Mitatut luvut savukkeelle ja vartijoille. */
     tila: () => ({
       avauskorkeus: +alt.toFixed(3),
@@ -3249,6 +3264,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       tahtikerroksia: taivas?.tila?.()?.kerroksia ?? 0,
       /* LISÄYS 15: ajautuvia 0, pyöreitä = kerroksia, kierto pysyy 0:ssa. */
       tahdet: taivas?.tila?.() ?? null,
+      /* ISS-realismi (Siirtoseppä): kerrokset, virheet, aurinko; savukkeet ja kuvaparit. */
+      realismi: realismi?.tila?.() ?? null,
       piilotettuja: pinnat.maara(),
       nimetNakyvissa: nimetPaalla,
       nimienKynnys: +(alt * NIMIEN_KYNNYS).toFixed(3),
