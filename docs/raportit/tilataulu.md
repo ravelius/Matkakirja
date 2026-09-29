@@ -1,6 +1,6 @@
 # Tilataulu
 
-**Päivitetty 17:52 (Päätoimittajan linjaus):** levyhälytys vasta 50 Gi:ssä (kova raja 30 Gi ennen Unity/Xcode-ajoa; Build 10 G + Library 6 G proto-kaannoksessa odotettuja). Worktree-poistolistat lähetetty 17:5x: Siirtoseppä (3 mergetty PR:ää ~3,7 Gt), Karttaseppä (sepia, vertailu), Linssiseppä (tervetulo-palaute), Pelikoodari (4→3 katto, ylapalkki-nahka ehdolla), Julkaisija (pr3611/pr3614, PR:t auki). Sisältökirjuri: rebase-isl #3560 ja rebase-3611 #3611 auki, ei poistoa. Roolit poistavat itse; wt/ oli 16 kohdetta ~20 Gt.
+**Päivitetty 17:52 (Päätoimittajan linjaus):** levyhälytys vasta 50 Gi:ssä (kova raja 30 Gi ennen Unity/Xcode-ajoa; Build 10 G + Library 6 G proto-kaannoksessa odotettuja). Worktree-poistolistat lähetetty 17:5x: Siirtoseppä (3 mergetty PR:ää ~3,7 Gt), Karttaseppä (sepia, vertailu), Linssiseppä (tervetulo-palaute), Pelikoodari (erä-worktreitä 3 = katto täynnä, ei ylitystä; 4. on pysyvä checkout; poistuvat mergessä), Julkaisija (pr3611/pr3614, PR:t auki). Sisältökirjuri: rebase-isl #3560 ja rebase-3611 #3611 auki, ei poistoa. Roolit poistavat itse; wt/ oli 16 kohdetta ~20 Gt.
 
 **Päivitetty 17:45 — HÄLYTYS levy:** 75 Gi (<80; 87→82→75 klo 17.35–17.44, ei junakäännöstä kesken), ilmoitettu Päätoimittajalle. wt/ 12→20 Gi, /private/tmp 26 Gi, proto-3d 46 Gi; Unity -batchmode -nographics + chrome-headless GPU käynnissä. Muisti taso 2, 45 % vapaa (ok), sim 1, viikko 7 % (5 h 24 %), kuorma 243/228/209. Posti: ei uutta. Seuranta 5 min välein.
 
