@@ -1838,17 +1838,18 @@ button, .brand, .turn-pill, .fact-card h2 {
  * ilmestyä/kadota ja siirtää palstoja n. 15 px (mitattu). Varattu vakaa
  * kaista vain Linssit-näkymälle — pääsivun ja Aarteiden asettelu ei muutu.
  */
-.paavalikko:has(#pilleri-linssit-nakyma:not([hidden])) { scrollbar-gutter: stable; }
+.paavalikko:has(#pilleri-linssit-nakyma:not([hidden])),
+.paavalikko:has(#pilleri-aarteet-nakyma:not([hidden])) { scrollbar-gutter: stable; }
 
 /*
  * LINSSIT: NAPAUTETTU RIVI = ORANSSI "AKTIVOI"-NAPPI (omistaja 29.9.2026:
  * "Napautettu rivi muuttuu oranssiksi napiksi, jossa nimen paikalla lukee
  * Aktivoi"). Väri on pelin oma korostusoranssi (--accent, sama kuin
- * pillerivalikon kultaiset korostukset), täytettynä, tumma teksti. Rajattu
- * #linssi-valikkoon: Aarteet-näkymän rivi pysyy ennallaan ("Aarteisiin ei
- * muutosta ennen omistajan sanaa").
+ * pillerivalikon kultaiset korostukset), täytettynä, tumma teksti. Aarteet
+ * sai saman mallin palautteessa 7 (29.9.2026): nimen paikalla "Näytä".
  */
-#linssi-valikko .kokoelma-rivi.esikatselu {
+#linssi-valikko .kokoelma-rivi.esikatselu,
+#pilleri-aarteet-lista .kokoelma-rivi.esikatselu {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--bg);
@@ -1858,8 +1859,10 @@ button, .brand, .turn-pill, .fact-card h2 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-#linssi-valikko .kokoelma-rivi.esikatselu:hover { background: var(--accent); }
-#linssi-valikko .kokoelma-rivi.esikatselu:focus-visible { outline: 2px solid var(--ink-light); outline-offset: 2px; }
+#linssi-valikko .kokoelma-rivi.esikatselu:hover,
+#pilleri-aarteet-lista .kokoelma-rivi.esikatselu:hover { background: var(--accent); }
+#linssi-valikko .kokoelma-rivi.esikatselu:focus-visible,
+#pilleri-aarteet-lista .kokoelma-rivi.esikatselu:focus-visible { outline: 2px solid var(--ink-light); outline-offset: 2px; }
 /* Päällä oleva linssi (eri asia kuin esikatselu — messinkirengas kuvakkeen
    ympärillä kertoo, mikä on juuri nyt kartalla). */
 .kokoelma-rivi.aktiivinen .kokoelma-rivi-kuvake {
@@ -10801,8 +10804,11 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * ylös — skaalattu niin, että näkyvä osa on kuvan ylin 80 % (ei
    * tikkausta; alin osa jää kerroksen 2 alle). Turva 0 → kerros 3 on
    * nollakokoinen eikä piirry.
+   *
+   * Aikajana- ja satelliittipalkin aikana (.aikajana-palkki-auki) oma
+   * palkki on nollan korkuinen, jolloin yläturva jää juurelle kuten ennen.
    */
-  .app { padding-top: 0; }
+  body:not(.aikajana-palkki-auki) .app { padding-top: 0; }
   .topbar {
     padding-top: calc(0.3rem + var(--turva-yla));
     background-image:

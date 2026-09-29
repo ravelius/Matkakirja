@@ -871,6 +871,42 @@ await testaaAsetukset('Asetukset iPad 834×1194', 834, 1194);
    * latautuivat (img.complete && naturalWidth > 0), ei vain että
    * elementti on olemassa.
    */
+  /*
+   * AVAUS KAKSIPALSTAISENA (omistaja 29.9.2026, palaute 7 — sama kuin
+   * Linssit): kortti näkyy heti, yksikään rivi ei ole nappi, ja lista
+   * pysyy paikallaan 1. napautuksessa. Kortissa ei ole omaa nappia.
+   */
+  const aarreAvaus = await sivu.evaluate(() => {
+    const kortti = document.querySelector('#pilleri-aarteet-lista .kokoelma-esikatselu');
+    const lista = document.querySelector('#pilleri-aarteet-lista .kokoelma-lista')?.getBoundingClientRect();
+    return {
+      korttiNakyy: Boolean(kortti) && !kortti.hidden,
+      riviNappina: Boolean(document.querySelector('#pilleri-aarteet-lista .kokoelma-rivi.esikatselu')),
+      listaX: lista?.x, listaW: lista?.width,
+    };
+  });
+  vaadi('Aarteet: avautuu kortti vasemmalla, ei yhtään riviä nappina',
+    aarreAvaus.korttiNakyy && !aarreAvaus.riviNappina, JSON.stringify(aarreAvaus));
+  await sivu.click('#pilleri-aarteet-lista .kokoelma-rivi');
+  await sivu.waitForTimeout(400);
+  const aarreValinta = await sivu.evaluate(() => {
+    const lista = document.querySelector('#pilleri-aarteet-lista .kokoelma-lista')?.getBoundingClientRect();
+    const rivi = document.querySelector('#pilleri-aarteet-lista .kokoelma-rivi.esikatselu');
+    return {
+      listaX: lista?.x, listaW: lista?.width,
+      teksti: rivi?.textContent?.trim() ?? null,
+      tausta: rivi ? getComputedStyle(rivi).backgroundColor : null,
+      korttinappi: Boolean(document.querySelector('#pilleri-aarteet-lista .kokoelma-esikatselu .kokoelma-toiminto')),
+    };
+  });
+  vaadi('Aarteet: lista ei hyppää 1. napautuksessa (±1 px)',
+    Math.abs(aarreValinta.listaX - aarreAvaus.listaX) <= 1 && Math.abs(aarreValinta.listaW - aarreAvaus.listaW) <= 1,
+    JSON.stringify({ aarreAvaus, aarreValinta }));
+  vaadi('Aarteet: napautettu rivi on oranssi Näytä-nappi',
+    /Näytä/.test(aarreValinta.teksti ?? '') && !/rgba\(0, 0, 0, 0\)|transparent/.test(aarreValinta.tausta ?? 'transparent'),
+    JSON.stringify(aarreValinta));
+  vaadi('Aarteet: kortissa ei ole erillistä nappia', !aarreValinta.korttinappi, JSON.stringify(aarreValinta));
+
   const ryhmat = [
     ['aarre:', 'Aarnin luettelo'],
     ['tavara:', 'Tavarat'],
@@ -893,7 +929,9 @@ await testaaAsetukset('Asetukset iPad 834×1194', 834, 1194);
     vaadi(`Aarteet ${nimi}: rivin pikkukuva latautuu (ei rikkinäinen)`,
       rivinKuva.onImg && rivinKuva.complete && rivinKuva.naturalWidth > 0, JSON.stringify(rivinKuva));
 
-    await sivu.click(rivi);
+    // Jo valittu (oranssi) rivi avaisi 2. napautuksella suurennoksen; kortti näyttää sen jo.
+    const joValittu = await sivu.evaluate((v) => document.querySelector(v)?.classList.contains('esikatselu'), rivi);
+    if (!joValittu) await sivu.click(rivi);
     await sivu.waitForTimeout(300);
     const esikatselunKuva = await sivu.evaluate(() => {
       const img = document.querySelector('#pilleri-aarteet-lista .kokoelma-esikatselu img');

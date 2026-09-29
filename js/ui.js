@@ -18402,8 +18402,18 @@ export class UI {
       [...aarneRivit, ...tavaraRivit, ...julisteRivit].map((rivi) => [rivi.id, rivi]),
     );
 
+    /*
+     * SAMA MALLI KUIN LINSSEILLÄ (omistaja 29.9.2026, palaute 7): lista on
+     * oikealla heti avauksesta ja kortti vasemmalla näyttää ensimmäisen
+     * kerätyn rivin, kunnes pelaaja napauttaa jotain. Napautettu rivi on
+     * oranssi "Näytä"-nappi; kortin oma nappi jää pois.
+     */
+    const ensimmainen = [...aarneRivit, ...tavaraRivit, ...julisteRivit][0]?.id ?? null;
+    const valittu = this.pilleriAarreEsikatseltu ?? undefined;
     piirraKokoelma(this.pilleriAarteetLista, ryhmat, {
-      esikatseltu: this.pilleriAarreEsikatseltu,
+      esikatseltu: valittu,
+      kortti: valittu !== undefined ? valittu : ensimmainen,
+      ilmanKorttinappia: true,
       esikatsele: (id) => { this.pilleriAarreEsikatseltu = id; this.renderPilleriAarteet(); },
       aktivoi: (id) => this.aktivoiAarreRivi(id),
       nappiteksti: () => 'Näytä',
