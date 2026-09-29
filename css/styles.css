@@ -1831,6 +1831,35 @@ button, .brand, .turn-pill, .fact-card h2 {
   color: var(--accent);
   font-weight: 600;
 }
+/*
+ * EI HYPPYÄ 1. VALINNASSA (omistaja 29.9.2026: "palstojen leveydet samat
+ * avauksesta lähtien"). Paneeli vierittyy (.paavalikko overflow-y: auto);
+ * kun esikatselukortin korkeus muuttuu valinnassa, vierityspalkki voi
+ * ilmestyä/kadota ja siirtää palstoja n. 15 px (mitattu). Varattu vakaa
+ * kaista vain Linssit-näkymälle — pääsivun ja Aarteiden asettelu ei muutu.
+ */
+.paavalikko:has(#pilleri-linssit-nakyma:not([hidden])) { scrollbar-gutter: stable; }
+
+/*
+ * LINSSIT: NAPAUTETTU RIVI = ORANSSI "AKTIVOI"-NAPPI (omistaja 29.9.2026:
+ * "Napautettu rivi muuttuu oranssiksi napiksi, jossa nimen paikalla lukee
+ * Aktivoi"). Väri on pelin oma korostusoranssi (--accent, sama kuin
+ * pillerivalikon kultaiset korostukset), täytettynä, tumma teksti. Rajattu
+ * #linssi-valikkoon: Aarteet-näkymän rivi pysyy ennallaan ("Aarteisiin ei
+ * muutosta ennen omistajan sanaa").
+ */
+#linssi-valikko .kokoelma-rivi.esikatselu {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+#linssi-valikko .kokoelma-rivi.esikatselu:hover { background: var(--accent); }
+#linssi-valikko .kokoelma-rivi.esikatselu:focus-visible { outline: 2px solid var(--ink-light); outline-offset: 2px; }
 /* Päällä oleva linssi (eri asia kuin esikatselu — messinkirengas kuvakkeen
    ympärillä kertoo, mikä on juuri nyt kartalla). */
 .kokoelma-rivi.aktiivinen .kokoelma-rivi-kuvake {

@@ -19322,20 +19322,29 @@ export class UI {
     ].filter(Boolean);
 
     /*
-     * EI OLETUSESIKATSELUA (omistaja 29.9.2026, pillerivalikkouudistus:
-     * "Linssit voisivat olla listana ilman selitetekstiä ... kun
-     * linssiä klikkaa, niin vasemmalle puolelle tulee ... selite").
-     * Ennen 29.9.2026 esikatselu näytti oletuksena PÄÄLLÄ olevan
-     * linssin selitteen ilman napautusta (mutta ilman toimintonappia);
-     * uusi tiheä lista näyttää selitteen VASTA napautuksesta, kuten
-     * Aarteet-näkymässäkin. Aktiivinen linssi erottuu silti kultaisesta
-     * kuvakerenkaasta (linssiRivi: `aktiivinen`), joten pelaaja näkee
-     * kartalla juuri nyt olevan linssin ilman napautustakin — vain
-     * teksti ja toimintonappi vaativat napautuksen.
+     * KAKSIPALSTAINEN HETI AVAUKSESTA (omistaja 29.9.2026: "Linssit-näkymä
+     * avautuu heti kaksipalstaisena: lista oikealla ja vasemmalla
+     * esikatselukortti aktiivisesta linssistä"). Ennen tätä esikatselu oli
+     * piilossa ensimmäiseen napautukseen asti ja lista hyppäsi oikealle vasta
+     * silloin. Nyt kortti (`kortti`) näyttää oletuksena PÄÄLLÄ olevan linssin
+     * (tai "Ei linssiä" -rivin, jos mikään ei ole päällä), ja palstojen
+     * leveydet ovat samat avauksesta lähtien.
+     *
+     * `esikatseltu` (this.linssiEsikatselu) on eri asia: se on se rivi, jota
+     * on napautettu ja joka on siksi muuttunut oranssiksi "Aktivoi"/"Ota
+     * pois" -napiksi. Ilman napautusta se on undefined, eikä yksikään rivi
+     * ole nappi. Korttinappia EI ole (`ilmanKorttinappia`): toiminto tehdään
+     * oranssilla rivillä. Vain Linssit — Aarteet-näkymä ei käytä
+     * kumpaakaan asetusta.
      */
     const esikatseltu = this.linssiEsikatselu;
+    const kaikkiIdt = ryhmat.flatMap((r) => r.rivit.map((rivi) => rivi.id));
+    const paallaId = this.linssiValittu ?? null;
+    const oletusKortti = kaikkiIdt.includes(paallaId) ? paallaId : null;
     piirraKokoelma(this.linssiValikko, ryhmat, {
       esikatseltu,
+      kortti: esikatseltu !== undefined ? esikatseltu : oletusKortti,
+      ilmanKorttinappia: true,
       esikatsele: (id) => this.esikatseleLinssi(id),
       aktivoi: (id) => this.aktivoiLinssiRivi(id),
       nappiteksti: (rivi) => (rivi.hiomassa ? 'Hiomassa' : (rivi.aktiivinen ? 'Ota pois' : 'Aktivoi')),
@@ -19346,15 +19355,15 @@ export class UI {
      * YHTEENSOPIVUUSMERKINNÄT VANHOILLE SAVUKKEILLE (omistaja 29.9.2026;
      * tools/savukkeet/savuke-satelliittilinssi.mjs, savuke-astro-pallo.mjs,
      * savuke-satelliitti-avaruus.mjs ja savuke-hiomassa-linssi.mjs lukevat
-     * `button[data-linssi=…]` ja `.linssi-aktivoi` suoraan DOMista — nämä
-     * neljä päivitettiin 29.9.2026 illalla käyttämään uusia valitsimia,
-     * ks. kunkin tiedoston oma kommentti). VAIN attribuutti ja kolme
+     * `button[data-linssi=…]` suoraan DOMista). VAIN attribuutti ja kolme
      * luokkaa, joilla EI OLE omaa CSS:ää enää tässä uudessa asussa —
      * `.linssi-liuskat`-luokkaa EI lisätä, koska sen vanha ruudukko-CSS
      * (grid, neliönapit) muuttaisi tiheän listan takaisin ruudukoksi ja
      * romahdutti kotelon korkeuden (mitattu vika, korjattu 29.9.2026).
      * `.hiomassa`-luokka SAA oman, UUDEN CSS-säännön (harmaa suodatin,
      * css/styles.css) — se ei ole vanha luokka eikä siis törmää mihinkään.
+     * `.linssi-aktivoi`-korttinappi poistui 29.9.2026 (oranssi rivi
+     * korvaa sen); savukkeet napauttavat nyt riviä toisen kerran.
      */
     for (const rivi of this.linssiValikko.querySelectorAll('.kokoelma-rivi')) {
       rivi.dataset.linssi = rivi.dataset.id ?? '';
@@ -19363,16 +19372,13 @@ export class UI {
     }
     const esikatselulohko = this.linssiValikko.querySelectorAll('.kokoelma-esikatselu')[0];
     esikatselulohko?.classList.add('linssi-tiedot');
-    const toiminto = this.linssiValikko.querySelectorAll('.kokoelma-toiminto')[0];
-    if (toiminto) {
-      toiminto.classList.add('linssi-aktivoi');
-      toiminto.classList.toggle('pois', esikatseltu !== undefined && esikatseltu === this.linssiValittu && esikatseltu !== null);
-    }
   }
 
   /**
-   * Linssit-näkymän rivin napautus: merkitsee linssin katsotuksi. EI
-   * kytke linssiä — sen tekee vasta toimintonappi (aktivoiLinssiRivi).
+   * Linssit-näkymän rivin 1. napautus: merkitsee linssin katsotuksi (kortti
+   * vasemmalla vaihtuu ja rivi muuttuu oranssiksi "Aktivoi"-napiksi). EI
+   * kytke linssiä — sen tekee vasta saman rivin 2. napautus
+   * (aktivoiLinssiRivi).
    *
    * @param {string|null} id napautettu linssi (kokoelmarivin id); null =
    *   "Ei linssiä", `hiomassa:<tunnus>` = hiomassa optikolla

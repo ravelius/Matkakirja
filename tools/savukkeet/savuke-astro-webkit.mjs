@@ -235,11 +235,11 @@ async function avaaLinssiEleella(s) {
   await ruutu.click({ timeout: 20000 })
     .catch(() => s.evaluate(() => document.querySelector('button[data-linssi="satelliitti"]')?.click()));
   await s.waitForTimeout(700);
-  const aktivoi = s.locator('.linssi-aktivoi');
+  const aktivoi = s.locator('#linssi-valikko .kokoelma-rivi.esikatselu');
   await aktivoi.waitFor({ timeout: 15000 });
   await aktivoi.scrollIntoViewIfNeeded();
   await aktivoi.click({ timeout: 20000 })
-    .catch(() => s.evaluate(() => document.querySelector('.linssi-aktivoi')?.click()));
+    .catch(() => s.evaluate(() => document.querySelector('#linssi-valikko .kokoelma-rivi.esikatselu')?.click()));
 }
 
 /* Linssi kiinni sen omalla ✕:llä (satelliitti-linssisulku), kuten pelaaja. */

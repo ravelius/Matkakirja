@@ -348,7 +348,7 @@ async function avaaLinssiEleella(s) {
   await ruutu.scrollIntoViewIfNeeded();
   await ruutu.click();
   await s.waitForTimeout(700);
-  const aktivoi = s.locator('.linssi-aktivoi');
+  const aktivoi = s.locator('#linssi-valikko .kokoelma-rivi.esikatselu');
   await aktivoi.waitFor({ timeout: 15000 });
   await aktivoi.scrollIntoViewIfNeeded();
   await aktivoi.click();

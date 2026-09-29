@@ -547,13 +547,13 @@ async function avaaLinssiEleella(s, odota = 4500, ennenAktivointia = null) {
   await ruutu.click({ timeout: 20000 })
     .catch(() => s.evaluate(() => document.querySelector('button[data-linssi="satelliitti"]')?.click()));
   await s.waitForTimeout(700);
-  const aktivoi = s.locator('.linssi-aktivoi');
+  const aktivoi = s.locator('#linssi-valikko .kokoelma-rivi.esikatselu');
   await aktivoi.waitFor({ timeout: 15000 });
   await aktivoi.scrollIntoViewIfNeeded();
   // Mittauskello juuri ennen aktivointia (LISÄYS 13 kohta 36).
   if (ennenAktivointia) await s.evaluate(ennenAktivointia);
   await aktivoi.click({ timeout: 20000 })
-    .catch(() => s.evaluate(() => document.querySelector('.linssi-aktivoi')?.click()));
+    .catch(() => s.evaluate(() => document.querySelector('#linssi-valikko .kokoelma-rivi.esikatselu')?.click()));
   await s.waitForTimeout(odota);
   return s.evaluate(() => ({
     linssi: window.matkakirja.ui.linssiValittu,

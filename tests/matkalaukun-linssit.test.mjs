@@ -235,7 +235,19 @@ function laukku({ paalla = null } = {}) {
 const ruudut = (ui) => ui.linssiValikko.querySelectorAll('.kokoelma-rivi');
 const esikatselu = (ui) => ui.linssiValikko.querySelectorAll('.kokoelma-esikatselu')[0];
 const selite = (ui) => esikatselu(ui)?.childNodes.find((n) => n.luokat?.has('kokoelma-esikatselu-selite'));
-const toiminto = (ui) => esikatselu(ui)?.childNodes.find((n) => n.luokat?.has('kokoelma-toiminto')) ?? null;
+/*
+ * TOIMINTONAPPI = ORANSSIKSI MUUTTUNUT RIVI (omistaja 29.9.2026): kortissa ei
+ * ole enää erillistä Aktivoi-nappia. `toiminto(ui)` palauttaa napautetun
+ * rivin (luokka `esikatselu`); `.textContent` on rivin nimipaikan teksti
+ * ("Aktivoi"/"Ota pois"), `.napauta()` on 2. napautus.
+ */
+const kortinNappi = (ui) => esikatselu(ui)?.childNodes.find((n) => n.luokat?.has('kokoelma-toiminto')) ?? null;
+const toiminto = (ui) => {
+  const rivi = ruudut(ui).find((n) => n.luokat.has('esikatselu'));
+  if (!rivi) return null;
+  const nimi = rivi.childNodes.find((n) => n.luokat?.has('kokoelma-rivi-nimi'));
+  return { textContent: nimi?.textContent ?? '', napauta: () => rivi.napauta() };
+};
 
 /* ---------------------------------------------------------------- */
 
@@ -313,31 +325,25 @@ test('napautus vaihtaa selitteen ja merkitsee rivin esikatselluksi', () => {
   assert.deepEqual(ruudut(ui).filter((n) => n.luokat.has('aktiivinen')).map((n) => n.dataset.id), [null]);
 });
 
-test('esikatselukorttiin tulee toimintonappi (omistaja 6.9.2026)', () => {
+test('napautettu rivi muuttuu "Aktivoi"-napiksi, kortissa ei ole omaa nappia (omistaja 29.9.2026)', () => {
   const ui = laukku();
   ruudut(ui)[1].napauta();
   const nappi = toiminto(ui);
-  assert.ok(nappi, 'toimintonappi puuttuu');
+  assert.ok(nappi, 'oranssi rivinappi puuttuu');
   assert.equal(nappi.textContent, 'Aktivoi');
-  /*
-   * NAPPI ON ESIKATSELUKORTIN OSA, EI ERILLINEN SANA (omistaja
-   * 6.9.2026: "Tee aktivoi tekstistä nappi"). Selite jää pelkäksi
-   * kappaleeksi, ja nappi seuraa sitä esikatselukortin lapsena.
-   */
-  assert.equal(selite(ui).childNodes?.includes(nappi) ?? false, false,
-    'nappi ei kuulu selitekappaleen sisään');
+  assert.equal(kortinNappi(ui), null, 'esikatselukortin alareunassa ei saa olla Aktivoi-nappia');
   assert.match(teksti(selite(ui)), /Maaston korkeus väreinä\.$/);
-  const lapset = esikatselu(ui).childNodes;
-  assert.equal(lapset.indexOf(nappi), lapset.indexOf(selite(ui)) + 1,
-    'nappi on heti selitteen jälkeen');
-  // Sormelle riittävä kosketuskohde tulee CSS:stä (.kokoelma-toiminto).
+  // Vain napautettu rivi on nappi; muut rivit näyttävät nimensä.
+  const muut = ruudut(ui).filter((n) => !n.luokat.has('esikatselu'));
+  assert.ok(muut.every((n) => !/^(Aktivoi|Ota pois)$/.test(
+    n.childNodes.find((k) => k.luokat?.has('kokoelma-rivi-nimi'))?.textContent ?? '')));
+  // Oranssi asu tulee CSS:stä ja on rajattu Linssit-näkymään.
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
-  const lohko = css.slice(css.indexOf('.kokoelma-toiminto {'));
-  assert.match(lohko.slice(0, 400), /min-height: var\(--pilleri-rivi-korkeus\);/);
+  assert.match(css, /#linssi-valikko \.kokoelma-rivi\.esikatselu \{[^}]*background: var\(--accent\);/);
   assert.match(css, /--pilleri-rivi-korkeus: 44px;/);
 });
 
-test('toimintonappi kytkee linssin ja sulkee laukun', () => {
+test('rivin 2. napautus kytkee linssin ja sulkee laukun', () => {
   const ui = laukku();
   ruudut(ui)[1].napauta();
   toiminto(ui).napauta();
@@ -381,12 +387,25 @@ test('päällä olevan linssin kohdalla nappi on "Ota pois" ja se kytkee pois', 
  * napautusta. Uusi lista on tyhjä ilman napautusta; aktiivinen linssi
  * näkyy silti kuvakkeensa kultarenkaasta (linssiRivi: `aktiivinen`).
  */
-test('ilman napautusta esikatselukortti on piilossa; aktiivinen linssi näkyy kuvakerenkaasta', () => {
+test('avautuu heti kaksipalstaisena: kortti aktiivisesta linssistä, ei nappirivejä', () => {
   const ui = laukku({ paalla: 'topografia' });
-  assert.equal(esikatselu(ui).hidden, true,
-    'esikatselukortti ei saa näkyä ilman napautusta');
-  assert.equal(toiminto(ui), null, 'avattaessa ei ole mitään uutta aktivoitavaa');
+  assert.equal(esikatselu(ui).hidden, false, 'kortti näkyy heti avauksessa');
+  const nimi = esikatselu(ui).childNodes.find((n) => n.luokat?.has('kokoelma-esikatselu-nimi'));
+  assert.equal(nimi?.textContent, 'Topografia', 'kortti näyttää aktiivisen linssin');
+  assert.match(teksti(selite(ui)), /Maaston korkeus väreinä\./);
+  assert.equal(toiminto(ui), null, 'avattaessa ei ole oranssia rivinappia');
+  assert.equal(kortinNappi(ui), null);
   assert.equal(ruudut(ui)[1].luokat.has('aktiivinen'), true);
+  const runko = ui.linssiValikko.querySelectorAll('.kokoelma-runko')[0];
+  assert.equal(runko.luokat.has('kokoelma-esikatselu-auki'), true, 'kaksi palstaa heti');
+});
+
+test('ilman aktiivista linssiä kortti näyttää "Ei linssiä" -rivin', () => {
+  const ui = laukku();
+  assert.equal(esikatselu(ui).hidden, false);
+  const nimi = esikatselu(ui).childNodes.find((n) => n.luokat?.has('kokoelma-esikatselu-nimi'));
+  assert.equal(nimi?.textContent, 'Ei linssiä');
+  assert.match(teksti(selite(ui)), /Kartta sellaisena kuin isoisä sen piirsi\.$/);
 });
 
 /*

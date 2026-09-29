@@ -256,3 +256,40 @@ test('esikatselukortti näyttää kuvan/ikonin, nimen, selitteen ja toimintonapi
   const kuva = kortti.childNodes.find((n) => n.luokat?.has('kokoelma-esikatselu-kuva'));
   assert.ok(kuva, 'kuva puuttuu esikatselukortista');
 });
+
+/*
+ * LINSSIT 29.9.2026: `kortti` erottaa esikatselukortin napiksi muuttuneesta
+ * rivistä, ja `ilmanKorttinappia` poistaa kortin Aktivoi-napin. Aarteet ei
+ * anna kumpaakaan, joten sen käytös pysyy ennallaan (testit yllä).
+ */
+test('kortti + ilmanKorttinappia: kortti näkyy ilman napautusta eikä siinä ole nappia', () => {
+  const kotelo = new Elementti('div');
+  const tila = tilanSeuranta(undefined);
+  piirraKokoelma(kotelo, [{ rivit: [
+    { id: 'a', nimi: 'A', selite: 'Selite A' },
+    { id: 'b', nimi: 'B', selite: 'Selite B' },
+  ] }], { ...tila, kortti: 'a', ilmanKorttinappia: true });
+  const kortti = kotelo.querySelectorAll('.kokoelma-esikatselu')[0];
+  assert.equal(kortti.hidden, false);
+  assert.match(teksti(kortti), /Selite A/);
+  assert.equal(kotelo.querySelectorAll('.kokoelma-toiminto').length, 0, 'korttinappia ei saa olla');
+  assert.ok(kotelo.querySelectorAll('.kokoelma-runko')[0].luokat.has('kokoelma-esikatselu-auki'));
+  // Yksikään rivi ei ole nappi, kun esikatseltu on undefined.
+  assert.equal(kotelo.querySelectorAll('.kokoelma-rivi').filter((r) => r.luokat.has('esikatselu')).length, 0);
+});
+
+test('kortti vaihtuu napautettuun riviin ja rivi on nappi', () => {
+  const kotelo = new Elementti('div');
+  const tila = tilanSeuranta('b');
+  piirraKokoelma(kotelo, [{ rivit: [
+    { id: 'a', nimi: 'A', selite: 'Selite A' },
+    { id: 'b', nimi: 'B', selite: 'Selite B' },
+  ] }], { ...tila, kortti: 'b', ilmanKorttinappia: true });
+  const kortti = kotelo.querySelectorAll('.kokoelma-esikatselu')[0];
+  assert.match(teksti(kortti), /Selite B/);
+  const [a, b] = kotelo.querySelectorAll('.kokoelma-rivi');
+  assert.match(teksti(b), /Aktivoi/);
+  assert.match(teksti(a), /A/);
+  b.napauta();
+  assert.deepEqual(tila.aktivoidut, ['b']);
+});

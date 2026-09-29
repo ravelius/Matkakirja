@@ -739,24 +739,55 @@ await testaaAsetukset('Asetukset iPad 834×1194', 834, 1194);
   vaadi('Linssit: rivin nimi ei katkea vaakasuunnassa (scrollWidth ≤ clientWidth)',
     linssiNimetEivatKatkea, String(linssiNimetEivatKatkea));
 
-  await sivu.click(RIVI);
-  await sivu.waitForTimeout(250);
-  const ekaNapautus = await sivu.evaluate((v) => {
+  /*
+   * AVAUKSESSA JO KAKSIPALSTAINEN (omistaja 29.9.2026): esikatselukortti
+   * näkyy vasemmalla ennen ensimmäistäkään napautusta, lista on oikealla,
+   * eikä yksikään rivi ole vielä nappi. Listan x-sijainti mitataan tässä ja
+   * verrataan 1. napautuksen jälkeiseen: ei hyppyä (±1 px).
+   */
+  const mittaaPalstat = () => sivu.evaluate((v) => {
     const kortti = document.querySelector('#linssi-valikko .kokoelma-esikatselu');
+    const lista = document.querySelector('#linssi-valikko .kokoelma-lista');
     const rivi = document.querySelector(v);
-    const r = kortti?.getBoundingClientRect();
-    const rivinR = rivi?.getBoundingClientRect();
+    const k = kortti?.getBoundingClientRect();
+    const l = lista?.getBoundingClientRect();
     return {
-      esikatseluNakyy: Boolean(kortti) && !kortti.hidden,
-      esikatseluVasemmalla: r ? r.x < window.innerWidth / 2 : null,
-      onToiminto: /Aktivoi|Ota pois/.test(rivi?.textContent ?? ''),
-      paavalikonSisalla: rivinR ? rivinR.x >= 0 : null,
+      korttiNakyy: Boolean(kortti) && !kortti.hidden && (k?.width ?? 0) > 20,
+      korttiVasemmalla: k && l ? k.right <= l.left + 1 : null,
+      listaX: l ? Math.round(l.x * 10) / 10 : null,
+      listaLeveys: l ? Math.round(l.width * 10) / 10 : null,
+      kortti: k ? [Math.round(k.x), Math.round(k.width)] : null,
+      paneeli: (() => { const p = document.getElementById('paavalikko').getBoundingClientRect(); return [Math.round(p.x), Math.round(p.width)]; })(),
+      rivinTeksti: rivi?.textContent.trim() ?? '',
+      korttiNappi: document.querySelectorAll('#linssi-valikko .kokoelma-esikatselu button').length,
     };
   }, RIVI);
-  vaadi('Linssit: 1. napautus näyttää esikatselun vasemmalla',
-    ekaNapautus.esikatseluNakyy && ekaNapautus.esikatseluVasemmalla, JSON.stringify(ekaNapautus));
-  vaadi('Linssit: rivi muuttuu Aktivoi/Ota pois -napiksi', ekaNapautus.onToiminto,
-    JSON.stringify(ekaNapautus));
+  // Odotus: näkymän avausanimaatiot (kortin häivytys, näkymänvaihto) ehtivät loppuun.
+  await sivu.waitForTimeout(900);
+  const avaus = await mittaaPalstat();
+  vaadi('Linssit: avauksessa esikatselu näkyy jo vasemmalla, lista oikealla',
+    avaus.korttiNakyy && avaus.korttiVasemmalla, JSON.stringify(avaus));
+  vaadi('Linssit: avauksessa mikään rivi ei ole vielä Aktivoi-nappi',
+    !/^(Aktivoi|Ota pois)$/.test(avaus.rivinTeksti), JSON.stringify(avaus));
+
+  await sivu.click(RIVI);
+  await sivu.waitForTimeout(350);
+  const ekaNapautus = await mittaaPalstat();
+  vaadi('Linssit: 1. napautuksen jälkeen esikatselu on yhä vasemmalla',
+    ekaNapautus.korttiNakyy && ekaNapautus.korttiVasemmalla, JSON.stringify(ekaNapautus));
+  vaadi('Linssit: listan x-sijainti ja leveys samat ennen ja jälkeen 1. napautuksen (±1 px)',
+    Math.abs(ekaNapautus.listaX - avaus.listaX) <= 1 && Math.abs(ekaNapautus.listaLeveys - avaus.listaLeveys) <= 1,
+    `ennen ${JSON.stringify(avaus)}, jälkeen ${JSON.stringify(ekaNapautus)}`);
+  vaadi('Linssit: 1. napautuksen jälkeen rivin teksti on "Aktivoi"',
+    ekaNapautus.rivinTeksti === 'Aktivoi', JSON.stringify(ekaNapautus));
+  vaadi('Linssit: vasemmassa kortissa ei ole Aktivoi-nappia',
+    avaus.korttiNappi === 0 && ekaNapautus.korttiNappi === 0, JSON.stringify({ avaus, ekaNapautus }));
+  const vari = await sivu.evaluate((v) => {
+    const c = getComputedStyle(document.querySelector(v)).backgroundColor;
+    return c;
+  }, RIVI);
+  vaadi('Linssit: napautettu rivi on oranssi (täytetty korostusväri, ei läpinäkyvä)',
+    /rgb\(217, 161, 59\)/.test(vari), vari);
 
   await sivu.click(RIVI);
   await sivu.waitForTimeout(350);

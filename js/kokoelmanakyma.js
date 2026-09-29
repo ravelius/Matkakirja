@@ -69,6 +69,15 @@ function asetaRivinKuva(img, kuva, kuvaVara, kuvakeVara) {
  * @param {(id: string) => void} tila.aktivoi napautus jo esikatseltuun riviin
  * @param {(rivi: object) => string} tila.nappiteksti esikatsellun/aktiivisen rivin nappiteksti
  * @param {string} [tila.tyhjaTeksti] näytetään, jos riviä ei ole yhtään
+ * @param {string|null} [tila.kortti] sen rivin id, jonka esikatselukortti
+ *   näytetään vasemmalla. Oletus: `esikatseltu`. Linssit-näkymä antaa tämän
+ *   erikseen (omistaja 29.9.2026: avautuu heti kaksipalstaisena ja kortti
+ *   näyttää aktiivisen linssin ennen ensimmäistäkään napautusta), jolloin
+ *   `esikatseltu` (= oranssiksi napiksi muuttunut rivi) voi olla vielä
+ *   `undefined`. Aarteet ei anna tätä, joten sen käytös ei muutu.
+ * @param {boolean} [tila.ilmanKorttinappia] true: esikatselukortin alareunaan
+ *   EI piirretä erillistä toimintonappia (Linssit: toiminto tehdään
+ *   oranssiksi muuttuneella rivillä). Oletus false = kuten ennen.
  */
 export function piirraKokoelma(kotelo, ryhmat, tila) {
   kotelo.replaceChildren();
@@ -88,7 +97,13 @@ export function piirraKokoelma(kotelo, ryhmat, tila) {
   const esikatseluKotelo = html('div', 'kokoelma-esikatselu');
   const lista = html('div', 'kokoelma-lista');
 
-  const esikatseltuRivi = kaikkiRivit.find((r) => r.id === tila.esikatseltu) ?? null;
+  /*
+   * KORTTI JA NAPIKSI MUUTTUNUT RIVI OVAT ERI ASIAT (Linssit 29.9.2026):
+   * `tila.esikatseltu` päättää, mikä rivi on oranssi toimintonappi;
+   * `tila.kortti` (oletuksena sama) päättää, kenen kortti vasemmalla näkyy.
+   */
+  const korttiId = tila.kortti !== undefined ? tila.kortti : tila.esikatseltu;
+  const esikatseltuRivi = kaikkiRivit.find((r) => r.id === korttiId) ?? null;
   esikatseluKotelo.hidden = !esikatseltuRivi;
   /*
    * LISTA VIE KOKO LEVEYDEN, KUN ESIKATSELU EI OLE AUKI (korjaus
@@ -117,10 +132,12 @@ export function piirraKokoelma(kotelo, ryhmat, tila) {
     if (esikatseltuRivi.selite) {
       esikatseluKotelo.appendChild(html('p', 'kokoelma-esikatselu-selite', esikatseltuRivi.selite));
     }
-    const nappi = html('button', 'kokoelma-toiminto', tila.nappiteksti(esikatseltuRivi));
-    nappi.type = 'button';
-    nappi.addEventListener('click', () => tila.aktivoi(esikatseltuRivi.id));
-    esikatseluKotelo.appendChild(nappi);
+    if (!tila.ilmanKorttinappia) {
+      const nappi = html('button', 'kokoelma-toiminto', tila.nappiteksti(esikatseltuRivi));
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => tila.aktivoi(esikatseltuRivi.id));
+      esikatseluKotelo.appendChild(nappi);
+    }
   }
 
   for (const ryhma of ryhmat) {
