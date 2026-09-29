@@ -163,9 +163,37 @@ namespace Matkakirja
         }
         HashSet<string> peliSuodatin;
 
+        /// <summary>
+        /// PELAAJAN NÄKYMÄ (omistaja 29.9.2026, web on malli): kehittäjän maailmatilassa pelaajan rajauksen ulkopuoliset pelin
+        /// kaupungit näkyvät himmeinä (piste 40 %, koko sama, ei nimeä) ja ovat napautettavia (maailmahyppy). null = ei.
+        /// </summary>
+        public void Himmeat(ICollection<string> kaupungit)
+        {
+            himmeat = kaupungit == null || kaupungit.Count == 0 ? null : new HashSet<string>(kaupungit);
+            foreach (var m in merkit)
+            {
+                bool h = himmeat != null && himmeat.Contains(m.kaupunki.id);
+                if (m.himmea == h) continue;
+                m.himmea = h;
+                AsetaPisteenVari(m);
+            }
+            PallonLepo.Muuttui("kaupungit");
+        }
+        HashSet<string> himmeat;
+        const float HimmeanPeitto = 0.4f;
+
+        /// <summary>Mittari (kehittaja nakyma): himmeitä kaupunkeja kaikkiaan ja niistä ruudulla näkyviä.</summary>
+        public (int Kaikki, int Nakyvissa) HimmeidenMaara()
+        {
+            int k = 0, n = 0;
+            foreach (var m in merkit) { if (!m.himmea) continue; k++; if (m.juuri.gameObject.activeSelf) n++; }
+            return (k, n);
+        }
+
         /// <summary>Sallivatko NaytaVain- ja pelisuodatin kaupungin (leikkaus).</summary>
         bool Suodatettu(string id) =>
-            (suodatin == null || suodatin.Contains(id)) && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id));
+            (suodatin == null || suodatin.Contains(id))
+            && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id) || (himmeat != null && himmeat.Contains(id)));
 
         /// <summary>
         /// PELI OHJAA REITTEJÄ (build 13, pariteetti B10/D18/A3/A15/C18, löydökset 57 ja 60): webissä kaupungin
@@ -260,7 +288,7 @@ namespace Matkakirja
         void AsetaPisteenVari(Merkki m)
         {
             var r = m.pisteT.GetComponent<MeshRenderer>();
-            float nak = m.usva < 0f ? 1f : m.usva;
+            float nak = (m.usva < 0f ? 1f : m.usva) * (m.himmea ? HimmeanPeitto : 1f);
             if (!m.korostus.HasValue && nak >= 0.999f) { r.SetPropertyBlock(null); return; }
             var v = m.korostus ?? (pisteMateriaali != null ? pisteMateriaali.GetColor("_BaseColor") : Color.black);
             v.a *= nak;
@@ -532,6 +560,7 @@ namespace Matkakirja
             public Transform kohdemerkki; // aloitusvalinnan kohdemerkki renkaan sisällä, luodaan tarvittaessa
             public TextMeshPro lentoaika; // aloitusvalinnan lentoaika renkaan alla ("+6 h", v3f), luodaan tarvittaessa
             public bool valintamerkki; // valittava kaupunki: kohdemerkki, ei pistettä, nimi renkaan yläpuolella
+            public bool himmea; // pelaajan näkymä: rajauksen ulkopuolinen pelin kaupunki, piste 40 %, ei nimeä
             public Vector2 teksti; // nimen piirretty koko pisteinä (ilman pistettä ja rakoa)
             public bool lukittu; // nimen paikka lukittu (web LUKKO): vapautuu, kun kaupunki poistuu näkyvistä tai asu vaihtuu
             public NimiLadonta.NimenPaikka lukko; // pikseleinä
@@ -877,7 +906,7 @@ namespace Matkakirja
                     Pakko = valinta,
                     // Siirtokohteen nimen piirtää kohdemerkki (Siirtokohdemerkit.NimeaaKaupungin): nimi kerran kuten webissä.
                     // UI-pariteetti rivi 2 (Fable 26.9., web on malli): aloitusvalinnan aikana vain valittavien nimet.
-                    Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila)
+                    Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila) && !m.himmea
                                            && !(Siirtokohdemerkit.Instanssi?.NimeaaKaupungin(m.kaupunki.id) ?? false)),
                     X = ruutu.x, Y = ruutu.y,
                     Leveys = valinta ? 0 : m.teksti.x * kerroin, Korkeus = m.teksti.y * kerroin,

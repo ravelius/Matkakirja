@@ -102,6 +102,8 @@ namespace Matkakirja.Natiivi
                     return l.Astronautti.Kuva.TestaaSelite(a1.Length > 0 ? a1 : "tila");
                 case "taulu":
                     return l.Astronautti.Taulu.Testaa(a1, a2);
+                case "tervetulo":
+                    return l.Astronautti.Taulu.Tervetulo.Testaa(a1.Length > 0 ? a1 : "tila");
                 case "selaa":
                     l.Astronautti.Kuva.Selaa(a1 == "-1" ? -1 : 1);
                     return l.Astronautti.Kuva.Kohde?.Tunnus;

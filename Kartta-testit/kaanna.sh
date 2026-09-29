@@ -66,6 +66,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Viivaleveys.cs
 ../Assets/Matkakirja/Linssit/Ydin/Kamera/Kamerakoreografia.cs
 ../Assets/Matkakirja/Linssit/Ydin/Kamera/LiioiteltuPerspektiivi.cs
+../Assets/Matkakirja/Linssit/Ydin/LinssiEsittelyt.cs
 ../Assets/Matkakirja/Linssit/Ydin/LinssiSopimus.cs
 ../Assets/Matkakirja/Linssit/Ydin/Maat/MaaOsuma.cs
 ../Assets/Matkakirja/Linssit/Ydin/Maat/MaatAineisto.cs

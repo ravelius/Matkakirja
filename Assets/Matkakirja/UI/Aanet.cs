@@ -67,10 +67,13 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Kanavan voimakkuus 0…1 asetuksista (webin tasot). Tehoste on tehosteväylän taso
         /// (webin master 0,24 × tehosteVoima); soiva tehoste kertoo sen omalla gainillaan.
+        /// PULUN PUHE seuraa webin tavoin Kertoja-kytkintä ja Pulun liukua, ei Äänimaisemaa (web liviapuhe.js soitaLivianAani:
+        /// luentaKytkinPaalla ja pulunVoima; Laitetestaajan löydös 29.9.2026: Pulun ISS-tervetulo ei lähtenyt Äänimaisema pois -tilassa).
         /// </summary>
-        public static float Taso(AaniKanava k) => Mykistetty ? 0f : k switch
+        public static float Taso(AaniKanava k) => k switch
         {
-            AaniKanava.Puhe => Asetukset.Taso(Voima.Pulu) * 0.9f,
+            AaniKanava.Puhe => Asetukset.Paalla(Kytkin.Kertoja) ? Asetukset.Taso(Voima.Pulu) * 0.9f : 0f,
+            _ when Mykistetty => 0f,
             AaniKanava.Kertoja => Asetukset.Taso(Voima.Lukija),
             // Webin master 0,24 × kompressorin automaattinen makeup (+1,8 dB, Tehostetaulu.Kompressori).
             _ => Tehostetaulu.Master * Tehostetaulu.Kompressori.Makeup * Asetukset.Taso(Voima.Tehosteet),

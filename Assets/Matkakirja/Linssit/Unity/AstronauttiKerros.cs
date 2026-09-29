@@ -494,8 +494,8 @@ namespace Matkakirja.Natiivi
                 Vector3 paikka = gt.TransformPoint(p.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                // Ikkunassa ja kohteen yllä silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
-                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde
+                // Ikkunassa, kohteen yllä ja ulkona silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
+                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde && kyyti != KyydinTila.Ulkona
                     && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
                 if (p.juuri.gameObject.activeSelf != edessa) p.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
@@ -574,6 +574,27 @@ namespace Matkakirja.Natiivi
             if (s.z <= 0) return false;
             ruutu = new Vector2(s.x, s.y);
             return true;
+        }
+
+        /// <summary>
+        /// Havaintopiste ruudulla (pikselit, origo vasen alakulma): astronautin valokuva kasvaa esiin kohteensa pisteestä ja
+        /// sulkeutuu sinne (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; myös Pulun tervetulon C1, joka avaa kuvan
+        /// ilman napautusta). false, kun piste ei näy (pallon takana, kyydin ikkunassa tai kamera sen takana).
+        /// </summary>
+        public bool KohdeRuudulla(string tunnus, out Vector2 ruutu)
+        {
+            ruutu = default;
+            if (kamera == null || georeferenssi == null || string.IsNullOrEmpty(tunnus)) return false;
+            foreach (var p in pisteet)
+            {
+                if (p.kohde?.Tunnus != tunnus) continue;
+                if (!p.juuri.gameObject.activeSelf) return false;
+                Vector3 s = kamera.WorldToScreenPoint(georeferenssi.transform.TransformPoint(p.pinta));
+                if (s.z <= 0) return false;
+                ruutu = new Vector2(s.x, s.y);
+                return true;
+            }
+            return false;
         }
 
         /// <summary>Pallon napautus linssissä (Pulun taulu sulkeutuu kuten webin ulkonapautus, ei niele napautusta).</summary>
