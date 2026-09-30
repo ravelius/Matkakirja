@@ -240,6 +240,8 @@ namespace Matkakirja.Natiivi
                 Otsikko.style.display = paalla && IssPaneeliKuvat.KaiverretutTekstit ? DisplayStyle.None : DisplayStyle.Flex;
                 if (paalla) Add(Otsikko);   // osuma-alan alareunaan (Laatta piilossa)
             }
+            /// <summary>Arvon tai legendan teksti (kerrostilassa osan levylle): kiertokytkimen asento, nupin lukema, painikkeen legenda.</summary>
+            public virtual Label Arvo => null;
         }
 
         // ---- Kiertokytkin ----
@@ -326,6 +328,7 @@ namespace Matkakirja.Natiivi
                 if (teksti != null) arvo.text = teksti;
             }
             public int Asento => asento;
+            public override Label Arvo => arvo;
         }
 
         // ---- Nuppi (jatkuva) ----
@@ -392,6 +395,7 @@ namespace Matkakirja.Natiivi
                 korkki.style.backgroundImage = k != null ? new StyleBackground(k) : new StyleBackground(StyleKeyword.None);
                 Ilmoita();
             }
+            public override Label Arvo => arvo;
             /// <summary>Osoittimen kulma asteina myötäpäivään ylhäältä (−135…135).</summary>
             public float Kulma => -Kaari * 0.5f + Kaari * (max > min ? (arvoNyt - min) / (max - min) : 0f);
             /// <summary>Arvo ja näkyvä lukema pelin tilasta (ei kutsu muuttui-toimintoa).</summary>
@@ -420,6 +424,7 @@ namespace Matkakirja.Natiivi
                 RegisterCallback<PointerCaptureOutEvent>(_ => AsetaPainettu(false));
             }
             void AsetaPainettu(bool p) { if (Painettu == p) return; Painettu = p; Ilmoita(); }
+            public override Label Arvo => Legenda;
             /// <summary>Sormi painikkeella juuri nyt.</summary>
             public bool Painettu { get; private set; }
             protected override void OnKerros(bool paalla)

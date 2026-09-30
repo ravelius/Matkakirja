@@ -176,13 +176,20 @@ namespace Matkakirja.Natiivi
                 ms.position = Position.Absolute; ms.left = osuma.x; ms.top = osuma.y; ms.width = osuma.width; ms.height = osuma.height;
                 ms.minHeight = 0; ms.marginLeft = 0; ms.marginRight = 0; ms.marginTop = 0; ms.marginBottom = 0;
                 ms.justifyContent = Justify.FlexEnd;
+                if (m == Live) Sijoita(Live.Nimi, IssPaneeliKuvat.Osa(a, "live-otsikko"), osuma);
                 if (m is IssKytkimet.Lukema || m is IssKytkimet.Merkkivalo) continue;
+                // Pelin tekstit renderin paikkoihin: otsikko kehyksen yläkatkokseen (<osa>-otsikko), arvo/legenda levylle (<osa>-levy).
+                if (m is IssKytkimet.Saadin sd)
+                {
+                    Sijoita(sd.Otsikko, IssPaneeliKuvat.Osa(a, osaNimet[i] + "-otsikko"), osuma);
+                    Sijoita(sd.Arvo, IssPaneeliKuvat.Osa(a, osaNimet[i] + "-levy"), osuma);
+                }
                 var paikka = new Rect(o.x - osuma.x, o.y - osuma.y, o.width, o.height);
                 osat[m] = Kuvakerros(m, paikka, "osa-" + osaNimet[i]);
                 osat[m].SendToBack();
                 if (m == Oma)
                 {
-                    var kr = IssPaneeliKuvat.Osa(a, "oma-kansi") ?? o;
+                    var kr = IssPaneeliKuvat.Osa(a, "oma-kaari") ?? IssPaneeliKuvat.Osa(a, "oma-kansi") ?? o;
                     kansi = Kuvakerros(m, new Rect(kr.x - osuma.x, kr.y - osuma.y, kr.width, kr.height), "osa-kansi");
                 }
             }
@@ -202,8 +209,29 @@ namespace Matkakirja.Natiivi
             PaivitaKerrokset();
         }
 
+        // Tekstin alkuperäinen sijoittelu (palautus kerrostilasta kehykseen).
+        readonly Dictionary<Label, (StyleEnum<Position>, StyleLength, StyleLength, StyleLength, StyleLength, StyleLength, StyleLength)> tekstit =
+            new Dictionary<Label, (StyleEnum<Position>, StyleLength, StyleLength, StyleLength, StyleLength, StyleLength, StyleLength)>();
+
+        void Sijoita(Label l, Rect? r, Rect osuma)
+        {
+            if (l == null || !r.HasValue) return;
+            var s = l.style;
+            if (!tekstit.ContainsKey(l)) tekstit[l] = (s.position, s.left, s.top, s.right, s.bottom, s.width, s.height);
+            var v = r.Value;
+            s.position = Position.Absolute; s.left = v.x - osuma.x; s.top = v.y - osuma.y; s.width = v.width; s.height = v.height;
+            s.right = StyleKeyword.Null; s.bottom = StyleKeyword.Null;
+            s.unityTextAlign = TextAnchor.MiddleCenter;
+        }
+
         void PurraKerrokset()
         {
+            foreach (var t in tekstit)
+            {
+                var s = t.Key.style; var o = t.Value;
+                s.position = o.Item1; s.left = o.Item2; s.top = o.Item3; s.right = o.Item4; s.bottom = o.Item5; s.width = o.Item6; s.height = o.Item7;
+            }
+            tekstit.Clear();
             pulssi?.Pause(); pulssi = null;
             kerrosPohja?.RemoveFromHierarchy(); valot?.RemoveFromHierarchy(); legendat?.RemoveFromHierarchy();
             foreach (var e in osat.Values) e.RemoveFromHierarchy();
