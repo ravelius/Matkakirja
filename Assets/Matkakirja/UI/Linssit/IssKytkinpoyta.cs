@@ -113,6 +113,8 @@ namespace Matkakirja.Natiivi
         Vector4 painotA = new Vector4(-1, 0, 0, 0), painotB;
         bool legendaMeripihka;
         IVisualElementScheduledItem pulssi;
+        /// <summary>Painikkeen valo levossa: v1-simulaattorikuvassa 0,55 peitti legendan (LENNÄ/POISTU) → hehku vain vihjeenä.</summary>
+        const float LepoValo = 0.15f;
         static readonly string[] ValoJarjestys = { "paneeli", "live-vihrea", "live-meripihka", "kohde", "poistu" };
 
         /// <summary>Kerrostilan asettelu (puhelin | tabletti) tai null (paikkamerkit / kehys).</summary>
@@ -357,7 +359,7 @@ namespace Matkakirja.Natiivi
             }
 
             bool live = Live.Tila == IssKytkimet.Tila.Aktiivinen;
-            float Nappi(IssKytkimet.Painike p) => p.Tila == IssKytkimet.Tila.Pois ? 0f : p.Painettu || p.Tila == IssKytkimet.Tila.Aktiivinen ? 1f : 0.55f;
+            float Nappi(IssKytkimet.Painike p) => p.Tila == IssKytkimet.Tila.Pois ? 0f : p.Painettu || p.Tila == IssKytkimet.Tila.Aktiivinen ? 1f : LepoValo;
             var uA = new Vector4(1f, live && !meri ? 1f : 0f, live && meri ? 1f : 0f, Nappi(Kohde));
             var uB = new Vector4(Nappi(Sulku), 0f, 0f, 0f);
             if (uA == painotA && uB == painotB && valoRt != null && valoRt.IsCreated()) return;
