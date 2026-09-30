@@ -4,7 +4,7 @@
 # Rekisteröinti (ortokuvan ja kuoren yläkuvan korrelaatio 30.9.): kuoren origo = ETRS-TM35FIN (599993, 6860483),
 # kierto 0°, Saimaan pinta N2000 75,7 m = kuoren vesi −7 (z = h − 82,7).
 #   nice -n 15 Blender -b -P ymparisto.py -- <dem.raw> <orto.png (lehden koko, 0,5 m/px)> <ulos-kansio>
-#     [--sade 2000] [--kolmiot 400000,150000,50000]
+#     [--sade 2000] [--kolmiot 380000,130000,42000] [--latvus puut-chm.npy --latvus-r 520]
 # Tulos: ymparisto_{huippu,normaali,kevyt}.glb (UV = ortokuvan rajaus) + ymparisto-{8k,4k,2k}.jpg. Kuoren alue
 # (x ±94, y ±53 m) jätetään pois, vesi jää pelin omaksi (maan reuna ulottuu 0,3 m vedenpinnan alle).
 import bpy, math, os, sys, time
@@ -12,7 +12,12 @@ import numpy as np
 A = sys.argv[sys.argv.index('--') + 1:]
 DEM, ORTO, ULOS = A[:3]
 SADE = float(A[A.index('--sade') + 1]) if '--sade' in A else 2000.0
-KOLMIOT = [int(x) for x in (A[A.index('--kolmiot') + 1] if '--kolmiot' in A else '400000,150000,50000').split(',')]
+KOLMIOT = [int(x) for x in (A[A.index('--kolmiot') + 1] if '--kolmiot' in A else '380000,130000,42000').split(',')]
+# --latvus <puut-chm.npy> (ymparisto_puut.py): metsä maastoon latvuspintana kauempana kuin --latvus-r m linnasta
+# (lähemmät puut ovat kortteja; 1.10.). Latvuspinta = 0,85 × latvuskorkeus 4 m:n maksimi + tasoitus.
+LATVUS = A[A.index('--latvus') + 1] if '--latvus' in A else None
+LATVUS_R = float(A[A.index('--latvus-r') + 1]) if '--latvus-r' in A else 520.0
+LOHKOT = 2   # 2 × 2 lohkoa normaalissa ja huipussa (Siirtoseppä: näkymärajaus), kevyessä yksi
 NIMET = ['huippu', 'normaali', 'kevyt']
 LEHTI = (596000.0, 6858000.0, 602000.0, 6864000.0)   # N5311A: E0, N0, E1, N1
 ORIGO = (599993.0, 6860483.0); VESI_H = 75.7; VESI_Z = -7.0
@@ -37,6 +42,17 @@ ys = LEHTI[3] - (np.arange(r0, r1 + 1) + 0.5) * RES - ORIGO[1]
 X, Y = np.meshgrid(xs, ys)
 maa = Z > VESI_H + 0.05
 z = np.where(maa, Z - VESI_H + VESI_Z, VESI_Z - 0.3)
+if LATVUS:
+    C = np.load(LATVUS)  # 1 m, rivi 0 = etelä (N0), sarake 0 = länsi (E0), E0/N0 = ORIGO − SADE
+    k = int(round(RES)); C = C[:C.shape[0] // k * k, :C.shape[1] // k * k].reshape(C.shape[0] // k, k, C.shape[1] // k, k).max((1, 3))
+    for _ in range(2):  # 4 m:n maksimi ja tasoitus: latvuksista yhtenäinen metsämassa
+        q = np.pad(C, 1, mode='edge'); C = np.maximum(C, np.max([q[a:a + C.shape[0], b:b + C.shape[1]] for a in range(3) for b in range(3)], 0))
+    for _ in range(3):
+        q = np.pad(C, 1, mode='edge'); C = sum(q[a:a + C.shape[0], b:b + C.shape[1]] for a in range(3) for b in range(3)) / 9
+    C = C[::-1]; C = np.pad(C, ((0, max(0, ny - C.shape[0])), (0, max(0, nx - C.shape[1]))), mode='edge')[:ny, :nx]  # rivi 0 = pohjoinen
+    et = np.hypot(X, Y); paino = np.clip((et - LATVUS_R) / 60.0, 0, 1)
+    z = np.where(maa, z + 0.85 * np.where(C > 3, C, 0) * paino, z)
+    print(f'YMP: latvuspinta yli {LATVUS_R:.0f} m, keskikorkeus metsässä {np.mean(C[(C > 3) & maa]):.1f} m')
 print(f'YMP: DEM {nx}×{ny} ruutua ({RES} m), maata {maa.mean():.2f}, korkeus {Z.max() - VESI_H:.1f} m vedestä')
 
 # --- pinnat: ruutu mukaan, jos jokin kulma on maata (rannan reuna jatkuu veden alle) ja ruutu ei ole kuoren alueella ---
@@ -92,10 +108,24 @@ for nimi, kohde in zip(NIMET, KOLMIOT):
         m = k.modifiers.new('kevennys', 'DECIMATE'); m.ratio = kohde / nyt
         bpy.ops.object.select_all(action='DESELECT'); k.select_set(True); bpy.context.view_layer.objects.active = k
         bpy.ops.object.modifier_apply(modifier=m.name)
-    bpy.ops.object.select_all(action='DESELECT'); k.select_set(True); bpy.context.view_layer.objects.active = k
+    osat = [k]
+    if nimi != 'kevyt':  # 2 × 2 lohkoa (erotus pintojen keskipisteen neljänneksen mukaan)
+        import bmesh
+        bpy.ops.object.select_all(action='DESELECT'); k.select_set(True); bpy.context.view_layer.objects.active = k
+        bpy.ops.object.mode_set(mode='EDIT'); bm = bmesh.from_edit_mesh(k.data)
+        for f in bm.faces: c = f.calc_center_median(); f.select = c.x < 0 and c.y < 0
+        bmesh.update_edit_mesh(k.data); bpy.ops.mesh.separate(type='SELECTED')
+        for f in bm.faces: c = f.calc_center_median(); f.select = c.x >= 0 and c.y < 0
+        bmesh.update_edit_mesh(k.data); bpy.ops.mesh.separate(type='SELECTED')
+        for f in bm.faces: c = f.calc_center_median(); f.select = c.x < 0 and c.y >= 0
+        bmesh.update_edit_mesh(k.data); bpy.ops.mesh.separate(type='SELECTED')
+        bpy.ops.object.mode_set(mode='OBJECT'); osat = [o for o in bpy.context.selected_objects]
+    bpy.ops.object.select_all(action='DESELECT')
+    for o in osat: o.select_set(True)
     p = os.path.join(ULOS, f'ymparisto_{nimi}.glb')
     bpy.ops.export_scene.gltf(filepath=p, use_selection=True, export_format='GLB', export_image_format='JPEG',
                               export_jpeg_quality=85, export_texcoords=True, export_normals=True, export_materials='EXPORT')
-    print(f'YMP: {nimi} {sum(len(q.vertices) - 2 for q in k.data.polygons)} kolmiota, {os.path.getsize(p) / 1e6:.1f} Mt')
-    bpy.data.objects.remove(k)
+    print(f'YMP: {nimi} {sum(sum(len(q.vertices) - 2 for q in o.data.polygons) for o in osat)} kolmiota, {len(osat)} lohkoa, '
+          f'{os.path.getsize(p) / 1e6:.1f} Mt')
+    for o in osat: bpy.data.objects.remove(o)
 print(f'YMP: valmis {time.time() - t0:.0f} s', ULOS)
