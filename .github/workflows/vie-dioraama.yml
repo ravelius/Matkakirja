@@ -171,3 +171,5 @@ jobs:
               --content-type application/json --cache-control 'public, max-age=60'
             echo "  - osoitin dioraama/$r/uusin.json → $hash/" >> "$GITHUB_STEP_SUMMARY"
           done
+          # Yhteenveto myös lokiin: hash-kansio näkyy gh run view --log -tulosteessa (Siirtosepän kuittaus).
+          cat "$GITHUB_STEP_SUMMARY"
