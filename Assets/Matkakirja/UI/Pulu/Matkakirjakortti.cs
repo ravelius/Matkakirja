@@ -126,7 +126,7 @@ namespace Matkakirja.Natiivi
             // Avattu matkakirja paperina (omistaja 29.9.2026: "pohja on natiivissa yksivärinen, pitää olla paperin värinen ja
             // kuvioinen kuten webissä"): pergamentti (säteittäinen paperinsävy ja rae, sama kuin dialogeissa); pieni lappu
             // pysyy tasaisena (.mk-matkakirja--pieni peittää kuvan).
-            Rakenne.Tausta(kortti, Kuviot.Pergamentti);
+            Rakenne.Tausta(kortti, KermaValo);
             Kirjasimet.Aseta(kortti, Kirjasin.Kone);
             kortti.RegisterCallback<PointerDownEvent>(_ => { if (pieni) AsetaPieni(false); });
 
@@ -375,6 +375,9 @@ namespace Matkakirja.Natiivi
             kirjoitus?.Pause();
             otsikko.text = m.PaikkaAika ? m.Otsikko ?? "" : (m.Otsikko ?? "Matkapäiväkirja").ToUpperInvariant();
             otsikko.EnableInClassList("mk-matkakirja__otsikko--paikka", m.PaikkaAika);
+            // Web h2 (font-weight 700): paikka ja aika lihavoituna ruskeana kirjoituskoneella.
+            Kirjasimet.Aseta(otsikko, m.PaikkaAika ? Kirjasin.KoneLihava : Kirjasin.Kone);
+            kortti.EnableInClassList("mk-matkakirja--puhelin", Puhelin);
             // Lappu: otsikko ja lyhyt paikkarivi (web #fact-voice + .fact-place-lyhyt).
             // Löydös 86/87: luennan ajan lappu on "Ateena, elokuussa 1873", luennon jälkeen pelkkä "Ateena" (merkintä ilman
             // luentaa on heti luettu).
@@ -475,7 +478,9 @@ namespace Matkakirja.Natiivi
             int n = Mathf.Min(naytetty, sanat.Length);
             string nakyva = Osa(0, n);
             string loput = Osa(n, sanat.Length);
-            teksti.text = loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput : nakyva;
+            // Webin riviväli (.fact-text line-height 1,45, puhelimella 1,35; natiivin fontin oma ~1,14).
+            string rivivali = Puhelin ? "<line-height=1.35em>" : "<line-height=1.45em>";
+            teksti.text = rivivali + (loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput : nakyva);
         }
 
         void Kirjoitettu()
@@ -503,10 +508,46 @@ namespace Matkakirja.Natiivi
             Asettele();
         }
 
+        static Texture2D kermaValo;
+
+        /// <summary>
+        /// Webin kermapaperi (css/styles.css body.pallolauta-paalla .fact-card::before, omistaja 30.9.2026 mallina): pehmeä
+        /// soikea valo rgb(247, 238, 214), alfa 0,9 keskeltä (0–30 %), 0,62 (46 %), 0,28 (62 %), 0 (78 %) ellipsin säteestä.
+        /// Valo on kortin laatikkoa suurempi (inset −46 % −22 %, farthest-corner) ja kortti leikkaa sen: reunoilla ~0,55,
+        /// kulmissa ~0,3, joten kartta kuultaa läpi. Laskettu kortin suhteellisissa koordinaateissa (venyy kortin mukana).
+        /// </summary>
+        static Texture2D KermaValo
+        {
+            get
+            {
+                if (kermaValo != null) return kermaValo;
+                const int N = 128;
+                kermaValo = new Texture2D(N, N, TextureFormat.RGBA32, false) { name = "matkakirja-kermavalo", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
+                var px = new Color[N * N];
+                var vari = new Color(247 / 255f, 238 / 255f, 214 / 255f);
+                // ::beforen puolikkaat kortin mitoissa (0,5 + 0,22 ja 0,5 + 0,46), farthest-corner → säde × √2.
+                float rx = 0.72f * 1.41421f, ry = 0.96f * 1.41421f;
+                for (int y = 0; y < N; y++)
+                for (int x = 0; x < N; x++)
+                {
+                    float dx = ((x + 0.5f) / N - 0.5f) / rx, dy = ((y + 0.5f) / N - 0.5f) / ry;
+                    float d = Mathf.Sqrt(dx * dx + dy * dy);
+                    float a = d <= 0.30f ? 0.9f : d <= 0.46f ? Mathf.Lerp(0.9f, 0.62f, (d - 0.30f) / 0.16f)
+                        : d <= 0.62f ? Mathf.Lerp(0.62f, 0.28f, (d - 0.46f) / 0.16f) : d <= 0.78f ? Mathf.Lerp(0.28f, 0f, (d - 0.62f) / 0.16f) : 0f;
+                    px[y * N + x] = new Color(vari.r, vari.g, vari.b, a);
+                }
+                kermaValo.SetPixels(px);
+                kermaValo.Apply(false, true);
+                return kermaValo;
+            }
+        }
+
         /// <summary>Luennan jälkeen: pikkukuvat kortin loppuun (webin paivitaMatkakirjanPikkukuvat).</summary>
         public void LisaaPikkukuva(VirtaKuva k)
         {
             var el = Rakenne.El("mk-matkakirja__pikkukuva", pikkukuvat);
+            // Web .fact-pikkukuva: rotate(-1.4deg), parilliset +1.4deg (valokuvat pöydällä).
+            el.style.rotate = new Rotate(pikkukuvat.childCount % 2 == 0 ? 1.4f : -1.4f);
             el.tooltip = k.Lyhyt;
             el.userData = k;
             Natiivi.Kuvat.Hae(k.Osoite, t => { if (t != null) el.style.backgroundImage = new StyleBackground(t); });
