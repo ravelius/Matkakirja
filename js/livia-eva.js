@@ -1,6 +1,25 @@
 /* Pulun EVA-varusteet ovat omaa vektoripiirrosta saman paperinuken koordinaateissa.
  * Kaikki valot ja turvaköysi palautetaan erikseen, jotta päivän ja yön voimakkuus
- * voidaan säätää ilman, että perushahmon värit tai alpha muuttuvat. */
+ * voidaan säätää ilman, että perushahmon värit tai alpha muuttuvat.
+ *
+ * LIVIAN AVARUUSKÄVELYASU (Codex 30.9.2026; ohje siirretty docs/moduulit/livia-eva.md:stä tähän).
+ * Pulun nykyinen SVG-pää ja livia-astronauttikypara-2x.png säilyvät. Tämä moduuli piirtää puvun,
+ * repun, rintapaneelin, turvaköyden ja kolme erillistä valoryhmää samoihin js/livia-svg.js-paperinuken
+ * koordinaatteihin. Varjossa oleva peruskuva sisältää puvun, nykyiset kasvot ja visiirin, mutta ei
+ * valoja tai köyttä.
+ *
+ * Webin `astronautti: true` pukee EVA-asun. Ryhmien voimakkuutta säädetään .livia-lentonayttamo-elementin
+ * (tai sen esivanhemman) CSS-muuttujilla --livia-eva-kasvovalo, --livia-eva-kyparalamput ja
+ * --livia-eva-maavalo (0–1); ISS:n valon mukaan ne asettaa js/linssit/pulu-eva-valo.js. `evaValot: false`
+ * sammuttaa kaikki valoryhmät ja `evaTether: false` jättää turvaköyden pois (kerrosvienti). Viiden
+ * sekunnin, 5 px:n ja ±3°:n leijunta sekä puheen aikainen pysähdys jäävät css/satelliitti.css:ään.
+ *
+ * Natiivin läpinäkyvät 2× PNG:t (assets/livia/livia-eva-{turvakoysi,perus,kasvovalo,kyparalamput,maavalo}-2x.png)
+ * ovat kaikki 304 × 608 ja vastaavat samaa 152 × 304 SVG-näkymää; kerrokset samaan suorakulmioon ilman
+ * siirtoa tai skaalaeroa tässä järjestyksessä: turvaköysi hahmon taakse, perus, kasvovalo, kypärälamput,
+ * maavalo. Natiivissa samat kuvat ovat Resources/LiviaEva-kansiossa (LiviaKuva.Eva): kun kuvat korjataan,
+ * ne vaihdetaan molempiin. Puku ja valot ovat omaa vektoripiirrosta, eikä niissä ole tekstiä tai
+ * kolmannen osapuolen kuvia. */
 
 export const LIVIAN_EVA_KERROKSET = Object.freeze(['perus', 'kasvovalo', 'kypärälamput', 'maavalo', 'turvaköysi']);
 
