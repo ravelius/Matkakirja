@@ -332,6 +332,10 @@ namespace Matkakirja.Natiivi
                         case "jumi":
                             Puhe.JumiMs = int.TryParse(A(2), out int jumi) ? Mathf.Clamp(jumi, 0, 3000) : 0;
                             return $"=jumi {Puhe.JumiMs} ms ensimmäisessä soivassa ruudussa";
+                        // Puhe pakattuna vai PCM:nä (kärki 30.9.): "puhe pakattu 1|0".
+                        case "pakattu":
+                            if (A(2) == "1") Puhe.Pakattu = true; else if (A(2) == "0") Puhe.Pakattu = false;
+                            return $"=puhe {(Puhe.Pakattu ? "pakattuna" : "PCM:nä")}";
                         // Hitaat ruudut seuraavan puheen alkuun (kärki 30.9.): "puhe hidas <ms> <s>", 0 = pois.
                         case "hidas":
                             Puhe.HidasMs = int.TryParse(A(2), out int hms) ? Mathf.Clamp(hms, 0, 2000) : 0;
