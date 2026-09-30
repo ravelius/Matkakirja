@@ -1162,7 +1162,16 @@ const TARKISTUSVARI = '#f7c948';
  * ja alku (vaalea kulta) pysyvät sitä vaaleampina ja lämpimämpinä, joten
  * kolme tilaa erottuvat yhä toisistaan.
  */
-export const KAUPUNKIPISTEEN_VARI = '#8c6d4e';
+export const KAUPUNKIPISTEEN_VARI = 'rgba(90, 67, 48, 0.75)';
+/*
+ * KOHDEKAUPUNGIN PISTE RANNAN MUSTEELLA (omistaja 29.9.2026 klo 17.3x:
+ * *"Tee kohdekaupunkien pisteistä ja nimitekstistä vähemmän musta."*).
+ * Käymättömän kaupungin piste on nyt rantaviivan ruskea
+ * (js/pallovektorit.js RANTA_MUSTE #5a4330) peitolla 0,75, samoin kuin
+ * kaupungin nimi (css/styles.css .karttanimi-kaupunki) ja natiivin
+ * piste. Pelaajan oma kaupunki pitää entisen seepiansa.
+ */
+export const OMAN_KAUPUNKIPISTEEN_VARI = '#8c6d4e';
 
 /*
  * SINISET KAUPUNKILAATAT POIS (omistaja 11.9.2026: *"siniset
@@ -1177,11 +1186,12 @@ export const KAUPUNKIPISTEEN_VARI = '#8c6d4e';
 /** Kehittäjän pelaajan näkymän himmeä kohdekaupunki: tavallinen seepia 40 %:n peitolla (natiivissa sama). */
 const HIMMEAN_PISTEEN_VARI = 'rgba(140, 109, 78, 0.4)';
 
-/** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa. */
-export function kaupunkipisteenVari(kaupunki) {
+/** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa, oma entistä seepiaa. */
+export function kaupunkipisteenVari(kaupunki, oma = false) {
   if (livianKorostetutKaupungit().has(kaupunki.id)) return TARKISTUSVARI;
   if (kaupunki.kayty) return '#d9a13b';
   if (kaupunki.alku) return '#b28a4a';
+  if (oma) return OMAN_KAUPUNKIPISTEEN_VARI;
   return KAUPUNKIPISTEEN_VARI;
 }
 
@@ -4117,7 +4127,7 @@ export async function avaaPallolauta(ui) {
       if (d.laji === 'helmi') return d.reuna ? HELMEN_REUNAN_VARI : HELMEN_VARI;
       if (d.laji === 'valo') return d.vari;
       if (d.himmea) return HIMMEAN_PISTEEN_VARI;
-      return kaupunkipisteenVari(d);
+      return kaupunkipisteenVari(d, !!d.id && d.id === pelaajanKaupunki());
     })
     .pointAltitude((d) => {
       if (d.laji === 'helmi') return (d.reuna ? REITTIHELMEN_REUNAN_KORKEUS : REITTIHELMEN_KORKEUS);
@@ -4244,6 +4254,8 @@ export async function avaaPallolauta(ui) {
       // Piilotettu kaupunki on osa avainta: ilman sitä pistejoukko
       // näyttäisi muuttumattomalta eikä kirjasto saisi uutta dataa.
       `liuska:${piiloKaupunki ?? ''}`,
+      // Oma kaupunki värjätään eri musteella (kaupunkipisteenVari), joten siirto vaihtaa avaimen.
+      `oma:${pelaajanKaupunki() ?? ''}`,
       nakyvat.map((k) => `${k.id}${k.kayty ? '*' : ''}`).join(','),
       // Himmeät ovat nakyvat-joukon lopussa; oma rivi erottaa himmeän tavallisesta samalla kaupungilla.
       himmeat.map((k) => k.id).join(','),
