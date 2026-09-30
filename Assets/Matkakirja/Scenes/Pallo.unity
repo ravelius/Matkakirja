@@ -807,7 +807,7 @@ MonoBehaviour:
   musteenVari: {r: 0.3529412, g: 0.2627451, b: 0.1882353, a: 0.86403364}
   piste: 9
   tarkeaPiste: 13
-  kirjain: 13
+  kirjain: 13.5
   tarkeaKirjain: 15
   valistys: 3
   nosto: 5000
