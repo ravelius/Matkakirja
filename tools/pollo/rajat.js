@@ -42,6 +42,12 @@ export const PUHE_PAIVARAJA_OLETUS = 400000;
 export const PUHE_KUUKAUSIRAJA_OLETUS = 6000000;
 
 /*
+ * LUKIJOIDEN ELEVENLABS-PÄIVÄKATTO (omistaja 30.9.2026, v4 Turbo -vertailu): globaali merkkimäärä vuorokaudessa kaikille
+ * ElevenLabs-lukijapyynnöille yhteensä (ei IP-kohtainen). Katon ylittyessä luenta tehdään xAI:lla.
+ */
+export const ELEVEN_LUKIJA_PAIVARAJA_OLETUS = 20000;
+
+/*
  * KUVAGENEROINNIN RAJAT (kehittäjän eräajot, tehtava: 'kuva').
  * Promptin katto on väljä, koska julistepromptit ovat pitkiä
  * tyylikuvauksia; päiväraja on turvaraja karanneelle silmukalle,
@@ -125,6 +131,10 @@ export function kuukausiAvain(nyt = new Date()) {
 
 /** Lukijaäänen laskuriavaimet — oma etuliite, etteivät ne sekoitu pöllön
  * kysymyslaskureihin (eri yksikkö: merkkejä, ei pyyntöjä). */
+export function lukijaElevenPaivaAvain(nyt = new Date()) {
+  return `eleven:lukija:p:${nyt.toISOString().slice(0, 10)}`;
+}
+
 export function puhePaivaAvain(ip, nyt = new Date()) {
   return `puhe:p:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
 }
