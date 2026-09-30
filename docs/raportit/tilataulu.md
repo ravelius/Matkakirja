@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 1.10. 02:05:** LEVY 40 Gi (42→40; Karttasepän yöpoltto pysähtyy < 40 Gt — huomautus posti-tiedostossa; push käyttäjälle < 38), wt/ 58 (raja 20, kasvaa), muisti 66 % vapaa, kuorma 53/161/184, sim 1 (iPhone 18 Pro; yö ok), työtilat ok. Viikko 87 % (5 h 41 %). Konteksti: Päätoimittaja 35 %. Kävijälaskuri 02.05: n=3 (ennallaan; FI 1, US 2, apurahakortti 2), seuraava ~03.05. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 1.10. 01:52:** Levy 42 Gi (41→42; hälytys < 45 tehty 01.41; push < 38), wt/ 57 (raja 20), muisti 74 % vapaa, KUORMA 520/205/140 (piikki), sim 1 (linssiseppa-iPad11; yö ok), työtilat ok. Viikko 87 % (5 h 39 %). Konteksti: Päätoimittaja 33 %. Kävijälaskuri: 01.04 n=3, seuraava ~02.04. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 1.10. 01:41:** LEVY 41 Gi (< 45 → hälytys posti-tiedostoon; 47→41 21 min:ssa; kova 30; push < 38), wt/ 57 (raja 20, kasvaa 55→57), muisti 68 % vapaa, kuorma 150/164/128, sim 1 (linssiseppa-iPad11 903C2B91; yö ok), työtilat ok. Viikko 86 % (5 h 37 %). Konteksti: Päätoimittaja 31 %. Kävijälaskuri: 01.04 n=3, seuraava ~02.04. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
