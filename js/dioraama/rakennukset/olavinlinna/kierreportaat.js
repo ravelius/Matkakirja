@@ -212,8 +212,13 @@ export const TILA = {
     { resepti: 'sakki', paikka: P(3.3, 156, Y2), suunta: 0, sade: 0.26, korkeus: 0.5, siemen: 37 },
   ],
   hahmot: HAHMOT,
-  aanet: [{ aani: 'linna-tuuli' }],
-  tehosteet: [{ aanet: ['askel-kivi'], valit_s: [9, 18] }],
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [
+    { aani: 'porras-kaiku', voimakkuus: 0.6 },
+    { aani: 'linna-tuuli', voimakkuus: 0.3 },
+    { aani: 'soihtu-ratina', voimakkuus: 0.3 },
+  ],
+  tehosteet: [{ aanet: ['askel-porras-1', 'askel-porras-2'], valit_s: [5, 10], voimakkuus: 0.6 }],
   liekit: [
     { liekki: 'soihtu', paikka: soihtuLiekki(270, 9.4), koko: 1, vaihe: 0 },
     { liekki: 'soihtu', paikka: soihtuLiekki(335, 10.9), koko: 1, vaihe: 0.35 },
