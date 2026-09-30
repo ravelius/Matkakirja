@@ -25,12 +25,47 @@ namespace Matkakirja.Natiivi
             Application.isEditor || !string.IsNullOrEmpty(System.Environment.GetEnvironmentVariable("SIMULATOR_DEVICE_NAME"));
 
         /// <summary>
-        /// VAIN eksplisiittiset merkit (Päätoimittaja 30.9.2026): ui omistaja 1 tai Pöllön kehittäjäkoodi Keychainissa.
+        /// VAIN eksplisiittiset merkit (Päätoimittaja 30.9.2026): linkki matkakirja://omistaja, ui omistaja 1 tai Pöllön
+        /// kehittäjäkoodi Keychainissa.
         /// Kehittäjätila, linssien kehittäjätila ja esittelylinssit EIVÄT ole omistajan tunniste: arvioijien TF:ssä ne voivat
         /// olla päällä, ja silloin laskuri näyttäisi nollaa juuri kun sitä tarvitaan.
         /// </summary>
         public static bool Omistaja =>
             PlayerPrefs.GetInt(OmistajaAvain, 0) == 1 || !string.IsNullOrEmpty(Asetukset.PolloKoodi);
+
+        // --- omistajan kertamerkintä linkillä (Päätoimittaja 30.9.2026: TF-laitteilla ui omistaja 1 ei onnistu) ----------
+        // URL-skeema matkakirja (Rakennus.AsetaIos): matkakirja://omistaja merkitsee laitteen omistajan laitteeksi,
+        // matkakirja://omistaja/pois poistaa merkin. Linkki avataan esimerkiksi Safarin osoiteriviltä tai viestistä;
+        // merkintä vain jättää laitteen pois kävijäluvuista, joten väärinkäytöstä ei ole haittaa.
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void KuunteleLinkit()
+        {
+            Application.deepLinkActivated += url => Linkki(url);
+            if (!string.IsNullOrEmpty(Application.absoluteURL)) Linkki(Application.absoluteURL);
+        }
+
+        /// <summary>Käsittelee matkakirja://-linkin; palauttaa vahvistustekstin tai null (ei meille).</summary>
+        public static string Linkki(string url)
+        {
+            if (string.IsNullOrEmpty(url) || !url.StartsWith("matkakirja://omistaja", System.StringComparison.OrdinalIgnoreCase)) return null;
+            bool pois = url.IndexOf("pois", "matkakirja://omistaja".Length, System.StringComparison.OrdinalIgnoreCase) >= 0;
+            PlayerPrefs.SetInt(OmistajaAvain, pois ? 0 : 1);
+            PlayerPrefs.Save();
+            string teksti = pois ? "Omistajan merkintä poistettu: tämän laitteen käynnit lasketaan taas."
+                : "Tämä laite on merkitty omistajan laitteeksi: sen käyntejä ei lasketa.";
+            Debug.Log("MATKAKIRJA kaynti: linkki " + (pois ? "omistaja pois" : "omistaja"));
+            UiKerros.Hae()?.StartCoroutine(Ilmoita(teksti));
+            return teksti;
+        }
+
+        static IEnumerator Ilmoita(string teksti)
+        {
+            // Kylmäkäynnistyksessä käyttöliittymä syntyy vasta hetken päästä.
+            for (int i = 0; i < 100 && !UiNakymat.Olemassa; i++) yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(1.5f);
+            if (UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(teksti);
+        }
 
         /// <summary>Lähettää tapahtuman (avaus | apuraha | esittelylinssit) kerran käynnistyksessä.</summary>
         public static void Laheta(string tapahtuma)
@@ -45,10 +80,18 @@ namespace Matkakirja.Natiivi
             catch (System.Exception e) { Debug.Log("MATKAKIRJA kaynti: ohitettiin (" + e.Message + ")"); }
         }
 
+        public static string Runko(string tapahtuma, bool omistaja) =>
+            "{\"tehtava\":\"kaynti\",\"alusta\":\"ios\",\"versio\":\"" + Application.version
+            + "\",\"tapahtuma\":\"" + tapahtuma + "\",\"omistaja\":" + (omistaja ? "true" : "false") + "}";
+
+        /// <summary>Testi (ui kaynti [tapahtuma]): mitä lähtisi ja lähtisikö, ilman lähetystä.</summary>
+        public static string Kuivaharjoitus(string tapahtuma) =>
+            $"{Runko(tapahtuma, Omistaja)} lähtisi {(!Testiymparisto && !lahetetyt.Contains(tapahtuma))} "
+            + $"(testiympäristö {Testiymparisto}, jo lähetetty {lahetetyt.Contains(tapahtuma)}, omistaja {Omistaja})";
+
         static IEnumerator Laheta(string tapahtuma, bool omistaja)
         {
-            string runko = "{\"tehtava\":\"kaynti\",\"alusta\":\"ios\",\"versio\":\"" + Application.version
-                + "\",\"tapahtuma\":\"" + tapahtuma + "\",\"omistaja\":" + (omistaja ? "true" : "false") + "}";
+            string runko = Runko(tapahtuma, omistaja);
             using var r = new UnityWebRequest(PuluChat.Palvelin, "POST")
             {
                 uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" },

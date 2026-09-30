@@ -613,7 +613,10 @@ namespace Matkakirja.Natiivi
                     if (loput == "mikki") { ui.Chat.MikkiTesti(); Kirjaa("ui chat mikki: " + ui.Chat.PuheTilaTeksti); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
-                case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "tietoja": ui.Aloitus.Apuraha.Sulje(); ui.Tietoja.Avaa(); return null; // kortti (kerros 45) jäi tietojen päälle
+                case "kaynti":
+                    // Kävijälaskurin kuivaharjoitus (Natiiviseppä 30.9.): ping-runko ja ehdot, EI lähetetä (simulaattori ohittaa aina).
+                    return Kaynti.Kuivaharjoitus(loput.Length > 0 ? loput : "avaus");
                 case "piikit":
                 {
                     if (loput == "pois") { KehysPiikit.Lopeta(); return null; }
