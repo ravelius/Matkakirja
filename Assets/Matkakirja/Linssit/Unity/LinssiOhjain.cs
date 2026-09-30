@@ -1679,6 +1679,9 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
+                        else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "valotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Valotus = (float)Luku(osat[3]); Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "bloom" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.BloomPois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "vertailu" && osat.Length > 3)
                             Kirjaa("astro kyyti vertailu: " + KyydinVertailu(osat.Skip(3).ToArray()));
                         else if (a == "yohon")   // kuvapari (30.9.): kelaa seuraavaan hetkeen, jolloin aurinko on alapisteessä ≥ 15° horisontin alla
