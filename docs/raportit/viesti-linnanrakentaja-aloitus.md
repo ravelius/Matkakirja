@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 30.9.2026: elävä linna kohdat 1–3 mainissa, Blender-vienti PR #3663)
+# Linnanrakentajan aloitusviesti (päivitetty 30.9.2026 klo 15.4x: äänet #3702 pidossa, uusi rakenne luonnos #3701)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama", tila hiomassa. Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,8 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260930-i.md`** (uusin: PR #3663 Blender-vienti odottaa omistajaa)
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260930-j.md`** (uusin: #3702 äänet pidossa, #3701 uusi rakenne;
+   SITOVA: ei äänigenerointia ilman omistajan lupaa), edellinen `…-20260930-i.md`
    sekä `…-20260929-h.md` ja `…-g.md` (uusin: omistajan 22.28 päätös, työnjako
    Siirtosepän kanssa, tehtävät 1–5) ja sen säännöt `…-f.md`:stä.
 3. Speksi pelin repon worktreessä `/Users/Shared/Claude/wt/linnanrakentaja-linna-3` (haara `linnanrakentaja-linna-3`):
