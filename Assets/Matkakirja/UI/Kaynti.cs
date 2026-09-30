@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
@@ -64,7 +65,19 @@ namespace Matkakirja.Natiivi
             // Kylmäkäynnistyksessä käyttöliittymä syntyy vasta hetken päästä.
             for (int i = 0; i < 100 && !UiNakymat.Olemassa; i++) yield return new WaitForSeconds(0.1f);
             yield return new WaitForSeconds(1.5f);
-            if (UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(teksti);
+            // Linkki avaa pelin yleensä aloitusnäkymään (kerros 45), jonka alle tilarivin viesti jää (simulaattori 30.9.):
+            // sama viestilaatikko (mk-ilmoitus) Traileri-kerrokseen, 4 s.
+            var ui = UiKerros.Hae();
+            if (ui == null) yield break;
+            var e = Rakenne.El("mk-ilmoitus", ui.Juuri(UiKerros.Traileri), PickingMode.Ignore);
+            Rakenne.Tausta(e, Kuviot.Ilmoitus);
+            Rakenne.Teksti(teksti, "mk-ilmoitus__teksti", e);
+            Kirjasimet.Aseta(e, Kirjasin.KoneLihava);
+            Rakenne.Nayta(e, true);
+            yield return new WaitForSeconds(4f);
+            Rakenne.Nayta(e, false, 300);
+            yield return new WaitForSeconds(0.4f);
+            e.RemoveFromHierarchy();
         }
 
         /// <summary>Lähettää tapahtuman (avaus | apuraha | esittelylinssit) kerran käynnistyksessä.</summary>
