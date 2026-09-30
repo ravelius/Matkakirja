@@ -144,7 +144,9 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
                 // Veden runko on tumma (järvi peilaa taivasta, Päätoimittaja 1.10.): syvyyden mukaan, tunnelman valolla.
                 half3 runko = lerp(_VesiMata.rgb, _VesiSyva.rgb, saturate((half)syvyys / 6.0h));
                 // Horisontin kajo viistossa katseessa (hämärän vaaleanpunainen/oranssi), heijastuksen päälle.
-                heijastus += _VesiHehku.rgb * pow(1 - NoV, 3) * (0.6h + 0.4h * tuuli);
+                // Vain aivan horisontin tuntumassa (1.10. 02.3x: pow 3 värjäsi koko viiston pinnan vaaleanpunaiseksi).
+                half viisto = 1 - NoV;
+                heijastus += _VesiHehku.rgb * (viisto * viisto) * (viisto * viisto) * (viisto * viisto) * (0.6h + 0.4h * tuuli);
                 half3 vari = lerp(runko, heijastus, fresnel);
                 // Matalan auringon kiillot (GGX, karheus pieni) aaltojen harjoilla; tyynissä kohdissa peilimäinen kiilto.
                 half3 Lk = (half3)normalize(_VesiKiiltoSuunta.xyz);

@@ -174,7 +174,7 @@ namespace Matkakirja.Natiivi
             // Hämärä (DioraamaTunnelma): horisontin vaaleanpunainen kajo ja matalan auringon oranssit kiillot lounaasta
             // (valaistus.aurinko atsimuutti 225°, korkeus 6°); päivällä heikko kajo ja kirkas kiilto korkeammalta.
             bool hamara = DioraamaValot.TunnelmaTaivas < 0.99f;
-            Shader.SetGlobalColor(IdHehku, hamara ? new Color(0.62f, 0.34f, 0.36f) : new Color(0.22f, 0.24f, 0.26f));
+            Shader.SetGlobalColor(IdHehku, hamara ? new Color(0.30f, 0.15f, 0.16f) : new Color(0.12f, 0.13f, 0.14f));
             Shader.SetGlobalColor(IdAurinko, hamara ? new Color(1f, 0.55f, 0.30f) : new Color(1f, 0.90f, 0.72f));
             float az = 225f * Mathf.Deg2Rad, kork = (hamara ? 6f : 30f) * Mathf.Deg2Rad;
             var kiilto = DioraamaNayttamo.UnityPiste(new Matkakirja.Linssit.Dioraama.V3(Mathf.Sin(az) * Mathf.Cos(kork), Mathf.Sin(kork), -Mathf.Cos(az) * Mathf.Cos(kork)));
