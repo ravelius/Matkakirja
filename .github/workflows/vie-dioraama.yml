@@ -132,8 +132,10 @@ jobs:
               # aws s3 ls palauttaa 1, kun kansiota ei vielä ole; pipefail + set -e katkaisi ajon hiljaa (30.9. ajo 36671228175).
               kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
               if [ "$kohteessa" != "$bn" ]; then
+                # --copy-props metadata-directive: R2 ei toteuta GetObjectTaggingia, jota oletus (default) kutsuu
+                # monipalaisessa palvelinkopiossa (> 8 Mt, .astcm); ajo 36672278230 kaatui "NotImplemented".
                 aws s3 cp "s3://$AMPARI/$bk" "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" \
-                  --no-progress --only-show-errors --exclude 'blender.json'
+                  --no-progress --only-show-errors --exclude 'blender.json' --copy-props metadata-directive
                 kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
               fi
               [ "$kohteessa" = "$bn" ] || { echo "::error::$kohde/blender/: $kohteessa/$bn tiedostoa kopion jälkeen, osoitinta ei vaihdettu"; exit 1; }
