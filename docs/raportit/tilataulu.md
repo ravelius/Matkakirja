@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 14:07:** Levy 50 Gi (laskussa 54→50 tunnissa; hälytys < 45 → kierros 10 min), swap 12,4/14,0 Gt, muisti 51 % vapaa, kuorma 51/115/95, sim 1 (siirtoseppa-iPhone F989814A; ≤1 ok), ei kevyttä tilaa. Viikko 54 % (5 h 8 %). Konteksti: Natiivi-UI nollattu (14 %), oma 13 %. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Jokipoltto karttaseppa-poltto-20260930 käynnissä (23 prosessia). Posti: ei uutta (Codex-viesti 13.56 jo ilmoitettu).
+
 **Päivitetty 30.9. 13:56:** Levy 51 Gi (hälytys < 45), swap 12,4/14,0 Gt, muisti 59 % vapaa, kuorma 46/45/48, sim 1 (siirtoseppa-iPhone F989814A; ≤1 ok), ei kevyttä tilaa. Viikko 54 % (5 h 6 %). Konteksti: Natiivi-UI 69 % (ilmoitettu Päätoimittajalle), Päätoimittaja 35 %, oma 13 %. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Jokipoltto karttaseppa-poltto-20260930 käynnissä (23 prosessia). Posti: uusi Codex-viesti (posti/codex-fable-iss-kytkimet-3d-referenssit-20260930.md), ilmoitettu Päätoimittajalle.
 
 **Päivitetty 30.9. 13:40:** Levy 52 Gi (hälytys < 45), swap 12,4/14,0 Gt, muisti 66 % vapaa, kuorma 105/42/63, sim 1 (pariteetti-iPad C1D5E34C; ≤1 ok), ei kevyttä tilaa. Viikko 53 % (5 h 4 %). Konteksti: Natiivi-UI 68 % (ennallaan; hälytys 70), oma 12 %. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Jokipoltto karttaseppa-poltto-20260930 käynnissä (23 prosessia). Posti: ei uutta.
