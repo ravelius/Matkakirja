@@ -130,6 +130,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Plovdivin vanhankaupungin katua. Kaupunki on rakentunut '
         + 'seitsemälle kukkulalle.',
       lahde: 'S kirkova, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Plovdiv-old_town.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Mistä lähtien Plovdivissa on asuttu yhtäjaksoisesti?',
@@ -180,6 +183,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Varnan nekropolin kultaesineitä vuosilta 4600–4200 eaa. '
         + 'Varnan arkeologisessa museossa.',
       lahde: 'Zde, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gold_treasure,_4600-4200_BC,_AM_Varna,_Varm24.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -216,6 +222,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Tsarevetsin linnoituksen muureja ja kaupunki niiden takana '
         + 'Veliko Tarnovossa.',
       lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ramparts_of_Tsarevets_Fortress_with_City_Backdrop_-_Veliko_Tarnovo_-_Bulgaria_-_01_(43220029581).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
   {
@@ -255,6 +264,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Seitsemän Rilan järveä. Vuoristossa on lähes 200 jääkauden '
         + 'muovaamaa järveä.',
       lahde: 'Tsvetomira Zaharieva, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Seven_Rila_Lakes.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Minkä kahden meren vedenjakaja kulkee Rilan harjannetta '
@@ -301,6 +313,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Musalan pohjoisseinämä Rilan vuoristossa. Huippu on 2925 '
         + 'metriä korkea.',
       lahde: 'Bulgarian Herald, Wikimedia Commons (CC BY 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Musala_Northern_Wall.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
     },
   },
   {
@@ -337,6 +352,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Rilan luostarin pihaa ja raidallisia kaariholveja Rilan '
         + 'vuoriston sydämessä.',
       lahde: 'Apostoloff, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rilakloster_stitched_14.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Missä korkeudessa Rilan luostari sijaitsee?',
@@ -396,6 +414,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Vitošan rinteitä Sofian kupeessa. Vuoren luonnonpuisto '
         + 'perustettiin 1934.',
       lahde: 'Hans Birger Nilsen, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mount_Vitosha_(1)_(37642153771).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
   {
@@ -438,6 +459,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Balkanvuorten harjannetta; oikealla Triglav ja vasemmalla '
         + 'Botev-huippu Keskisen Balkanin massiivissa.',
       lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Balkan_Mountains_from_Trakia_motorway_1.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -477,6 +501,9 @@ export const FOKUSKOHTEET_BGR = [
       tiedosto: 'Dunav VIdin.jpg',
       selite: 'Tonava Vidinin kohdalla Bulgarian pohjoisrajalla.',
       lahde: 'Aleksand.sl, Wikimedia Commons (CC BY 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dunav_VIdin.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
     },
     visa: {
       kysymys: 'Minkä joen jälkeen Tonava on Euroopan toiseksi pisin?',
@@ -524,6 +551,9 @@ export const FOKUSKOHTEET_BGR = [
       tiedosto: 'Black Sea near Varna.jpg',
       selite: 'Mustaameri Varnan edustalla Bulgarian rannikolla.',
       lahde: 'VisitVarna, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Black_Sea_near_Varna.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -569,6 +599,7 @@ export const FOKUSKOHTEET_BGR = [
         + 'poimitaan käsin touko-kesäkuussa yhä samaan tapaan.',
       lahde: 'Felix Philipp Kanitz, "Donau-Bulgarien und der Balkan" '
         + '(Leipzig 1879), Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rose-picking_in_Bulgaria_1870ies.jpg',
     },
   },
   {
@@ -616,6 +647,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Boyanan kirkko Vitošan juurella. Rakennus nousi kolmessa '
         + 'vaiheessa 300 vuoden aikana.',
       lahde: 'Todor Bozhinov, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Boyana_Church_2_TB.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   /*
@@ -684,6 +718,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Bulgarialaista jogurttia eli kiselo mlyakoa. Sen '
         + 'pääbakteeri kantaa maan nimeä.',
       lahde: 'Ned Jelyazkov, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bulgarian_yogurt.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -730,6 +767,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Kultaisen eli pyöreän kirkon rauniot Veliki Preslavissa, '
         + 'ensimmäisen Bulgarian valtakunnan pääkaupungissa.',
       lahde: 'Alexander.D.Hristov, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Round_Church,_Preslav_-_Church_outside_view.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -777,6 +817,9 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Madaran ratsastaja kalliojyrkänteessä. Reliefi on '
         + 'veistetty 23 metrin korkeuteen.',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Caballero_de_Madara,_reserva_hist%C3%B3rico-arqueol%C3%B3gica_Nacional_de_Madara,_Bulgaria,_2016-05-27,_DD_39.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -834,18 +877,27 @@ export const FOKUSKOHTEET_BGR = [
           + 'muuttoreitin varrella. Järven kaislikoissa pesii 179 '
           + 'lintulajia.',
         lahde: 'Charles J. Sharp, Wikimedia Commons (CC BY-SA 4.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dalmatian_pelican_(Pelecanus_crispus)_in_flight_Danube_delta.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
       },
       {
         tiedosto: 'Dalmatian Pelican.jpg',
         selite: 'Levossa kiharapelikaanin sulat kihartuvat niskassa — '
           + 'siitä lajin nimi.',
         lahde: 'Koustabh Dutta, Wikimedia Commons (CC BY-SA 4.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dalmatian_Pelican.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
       },
       {
         tiedosto: 'Pelican nestling.jpg',
         selite: 'Emo ja poikaset kaislapesällä. Srebarnan yhdyskunnan '
           + 'poikaset kuoriutuvat touko-kesäkuussa.',
         lahde: 'Popov Jevgeni, Wikimedia Commons (CC BY-SA 4.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pelican_nestling.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
       },
     ],
     visa: {
@@ -909,6 +961,7 @@ export const FOKUSKOHTEET_BGR = [
         + 'naamioperinne kokoaa tuhannet kulkijat Pernikin Survaan.',
       lahde: 'Ivaneskoto, bg-Wikipedia / Wikimedia Commons (public '
         + 'domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kukeri_razlog.JPG',
     },
   },
   /*
@@ -967,6 +1020,7 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Banja Bashin moskeija 1800-luvun lopun valokuvassa. Se on '
         + 'Sofian ainoa yhä toimiva moskeija.',
       lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Banya_bashi_dhzamiya_19_vek.jpg',
     },
   },
   /* ================================================================

@@ -9485,6 +9485,9 @@ export const MAA_KATEGORIAT = {
             + 'itsevaltiaan Ludvig XIV:n mahtia, ja se on palatsin tunnetuin '
             + 'huone.',
           lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chateau_Versailles_Galerie_des_Glaces.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
           wiki: 'Peilisali',
         },
       ],
@@ -9527,6 +9530,9 @@ export const MAA_KATEGORIAT = {
             + 'vain Roquefort-sur-Soulzonin Combalou-luolissa kypsytetty '
             + 'juusto saa käyttää nimeä.',
           lahde: 'Thesupermat, Wikimedia Commons (CC BY-SA 4.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wikicheese_-_Roquefort_-_20150417_-_002.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
           wiki: 'Roquefort',
         },
         {
@@ -9567,6 +9573,7 @@ export const MAA_KATEGORIAT = {
             + '1900, ja alun perin autoilijoille tarkoitetusta kirjasta tuli '
             + 'kansainvälinen ravintola-arvostelun mittapuu.',
           lahde: 'O\'Galop, Wikimedia Commons (public domain)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Michelin_Poster_1898.jpg',
           wiki: 'Michelin-opas',
         },
         {
@@ -9586,6 +9593,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Kynttilänpäivä on kristillinen juhla Jeesuksen temppeliin '
             + 'tuomisen muistoksi, ja Ranskassa siihen kuuluvat ohukaiset.',
           lahde: 'Agence de presse Mondial Photo-Presse (commanditaire), Wikimedia Commons (public domain)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:La_Chandeleur_-_gosses_mangeant_des_cr%C3%AApes_-_btv1b9034624v.jpg',
           wiki: 'Kynttilänpäivä',
         },
       ],
@@ -9628,6 +9636,7 @@ export const MAA_KATEGORIAT = {
             + 'paperinvalmistajia Annonaysta, ja heidän kuumailmapallonsa '
             + 'nosti ensimmäiset ihmiset ilmaan.',
           lahde: 'Tuntematon kaivertaja (BnF/Gallica), Wikimedia Commons (public domain)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Experience_A%C3%A9rostatique_faite_%C3%A0_Versailles_le_dix-neuf_Septembre_1783.png',
           wiki: 'Montgolfierin veljekset',
         },
         {
@@ -9650,6 +9659,7 @@ export const MAA_KATEGORIAT = {
             + 'sokeainkirjoituksen, jota käytetään yhä lähes muuttumattomana '
             + 'kaikkialla maailmassa.',
           lahde: 'Henri Thiriat, Wikimedia Commons (public domain)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Engraving_of_Louis_Braille_by_Henri_Thiriat_(cropped).jpg',
           wiki: 'Louis Braille',
         },
         {
@@ -9671,6 +9681,7 @@ export const MAA_KATEGORIAT = {
             + 'Louis Pasteuria (1822–1895), joka kehitti rokotusperiaatteen '
             + 'ja pastöroinnin.',
           lahde: 'Albert Edelfelt, Wikimedia Commons (public domain)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Albert_Edelfelt_-_Louis_Pasteur_-_1885.jpg',
           wiki: 'Louis Pasteur',
         },
         {
@@ -9692,6 +9703,9 @@ export const MAA_KATEGORIAT = {
             + 'ja tunnetaan Cinématographe-järjestelmästään sekä '
             + 'lyhytelokuvistaan vuosilta 1895–1905.',
           lahde: 'Marcellin Auzolle (1862-1942), Wikimedia Commons (CC BY-SA 3.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Poster_Cinematographe_Lumiere.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
           wiki: 'Lumièren veljekset',
         },
       ],
@@ -9731,6 +9745,9 @@ export const MAA_KATEGORIAT = {
           selite: 'Arcachonin lahdella sijaitseva Dune du Pilat on Euroopan '
             + 'korkein hiekkadyyni.',
           lahde: 'Pline, Wikimedia Commons (CC BY-SA 3.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dune_du_pyla_2009.JPG',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
           wiki: 'Dune du Pilat',
         },
         {
@@ -9749,6 +9766,9 @@ export const MAA_KATEGORIAT = {
           selite: 'Camarguenhevonen on ranskalainen työhevosrotu, joka on '
             + 'elänyt vuosisatoja puolivilleinä Rhônen suiston kosteikoilla.',
           lahde: 'Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Saint-Laurent-d\'Aigouze_-_Camargue_horses_-_03.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
           wiki: 'Camarguenhevonen',
         },
         {
@@ -9770,6 +9790,9 @@ export const MAA_KATEGORIAT = {
             + 'laavakupolia ja 15 maaria; korkein on 1 465-metrinen Puy de '
             + 'Dôme.',
           lahde: 'Dexter Perkins, Wikimedia Commons (CC0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Puy_de_Pariou_and_Puy_de_Dome_(GeoDIL_number_-_2451).jpg',
+          lisenssi: 'CC0',
+          lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
           wiki: 'Chaîne des Puys',
         },
         {
@@ -9790,6 +9813,9 @@ export const MAA_KATEGORIAT = {
             + 'sijaitseva vuorovesisaari, jonka pinta-ala on seitsemän '
             + 'hehtaaria.',
           lahde: 'Mathias Neveling, Wikimedia Commons (CC BY-SA 4.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mont_St_Michel_%2B_Jet%C3%A9e_par_Mar%C3%A9e_haute.JPG',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
           wiki: 'Mont-Saint-Michel',
         },
       ],
@@ -9831,6 +9857,7 @@ export const MAA_KATEGORIAT = {
             + 'kasvattamaan L\'Auto-lehden myyntiä, ja se on kolmesta '
             + 'suurkierroksesta vanhin ja arvostetuin.',
           lahde: 'Jules Beau, Wikimedia Commons (public domain)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Maurice_Garin_au_d%C3%A9part_de_la_premi%C3%A8re_%C3%A9tape_du_premier_Tour_de_France_(Villeneuve-Saint-Georges_1903).jpg',
           wiki: 'Tour de France',
         },
         {
@@ -9852,6 +9879,9 @@ export const MAA_KATEGORIAT = {
             + 'ratkeavat siitä, kenen kuulat ovat lähinnä pientä '
             + 'kohdepalloa.',
           lahde: 'Ermell, Wikimedia Commons (CC BY-SA 4.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:P%C3%A9tanque_balls_child-20080713-RM-180115.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
           wiki: 'Petankki',
         },
         {
@@ -9872,6 +9902,9 @@ export const MAA_KATEGORIAT = {
             + 'vuoden toinen tennisen Grand Slam -kilpailu Australian '
             + 'avointen jälkeen.',
           lahde: 'MFonzatti, Wikimedia Commons (CC BY-SA 4.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Court_Philippe_Chatrier_2024.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
           wiki: 'Ranskan avoin tennisturnaus',
         },
         {
@@ -9891,6 +9924,9 @@ export const MAA_KATEGORIAT = {
           selite: 'Le Mansin 24 tunnin ajo järjestettiin ensi kerran 1923, '
             + 'ja se on maailman vanhin yhä ajettava kestävyyskilpailu.',
           lahde: 'ZANTAFIO56, Wikimedia Commons (CC BY-SA 2.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:24_heures_du_Mans_1970_(5000505233).jpg',
+          lisenssi: 'CC BY-SA 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
           wiki: 'Le Mansin 24 tunnin ajo',
         },
       ],
@@ -9951,6 +9987,7 @@ export const MAA_KATEGORIAT = {
             + 'vuotta, ja Ludvig XIV rajasi 1688 nimen käytön '
             + 'oliiviöljypohjaisiin saippuoihin.',
           lahde: 'Arnaud 25, Wikimedia Commons (PD)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Savons_de_Marseille.jpg',
         },
       ],
       tehtava: {
@@ -10010,6 +10047,9 @@ export const MAA_KATEGORIAT = {
             + 'rantamuurien varrella, minkä vuoksi jokea sanotaan ainoaksi, '
             + 'joka virtaa kahden kirjahyllyn välissä.',
           lahde: 'Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Paris_75005_Quai_de_Montebello_Bouquinistes_20071014.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
         },
       ],
       tehtava: {
@@ -18713,6 +18753,9 @@ export const MAA_KATEGORIAT = {
             + 'asutushistoriansa aikana, ja kaivauksissa on erotettu '
             + 'yhdeksän arkeologista kerrosta.',
           lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Legendary_walls_of_Troy_(8708672267).jpg',
+          lisenssi: 'CC BY 2.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
           wiki: 'Troija',
         },
         {
@@ -18795,6 +18838,9 @@ export const MAA_KATEGORIAT = {
           selite: 'Kappadokia on Keski-Anatolian historiallinen maakunta, ja '
             + 'nykyinen matkailualue keskittyy Nevşehirin maakuntaan.',
           lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:G%C3%B6reme_Valley_in_Cappadocia_edit1.jpg',
+          lisenssi: 'CC BY-SA 3.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
           wiki: 'Kappadokia',
         },
         {
@@ -20972,6 +21018,7 @@ export const MAA_KATEGORIAT = {
           selite: 'Ruusuöljy tislataan höyryllä ruusun terälehdistä, ja '
             + 'tuotantomenetelmä on peräisin Persiasta.',
           lahde: 'Felix Philipp Kanitz, Wikimedia Commons (PD)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rose-picking_in_Bulgaria_1870ies.jpg',
           wiki: 'Ruusuöljy',
         },
       ],
@@ -21540,6 +21587,9 @@ export const MAA_KATEGORIAT = {
             + 'Augustuksen aikana ja laajennettiin Vespasianuksen kaudella; '
             + 'se on parhaiten säilyneitä roomalaisia areenoita.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Anfiteatro_de_Pula,_Croacia,_2017-04-17,_DD_13-18_HDR_PAN.jpg',
+          lisenssi: 'CC BY-SA 4.0',
+          lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
         },
       ],
       tehtava: {

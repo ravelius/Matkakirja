@@ -132,6 +132,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Gipfel Zugspitze Sommer.jpg',
       selite: 'Zugspitzen huippu kesällä. Läntisen huipun poikki kulkee Itävallan raja.',
       lahde: 'Treeem, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gipfel_Zugspitze_Sommer.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Kuka mainitaan ensimmäisenä Zugspitzen vuoden 1820 huipulle nousijoista?',
@@ -177,6 +180,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Berchtesgaden - Watzmann-Massiv von Norden.jpg',
       selite: 'Watzmannin massiivi pohjoisesta nähtynä Berchtesgadenin yläpuolella.',
       lahde: 'Franzfoto, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Berchtesgaden_-_Watzmann-Massiv_von_Norden.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -209,6 +215,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Feldberg vom Schauinsland.jpg',
       selite: 'Feldberg Schauinslandilta katsottuna — Schwarzwaldin korkein huippu.',
       lahde: 'Jörg Braukmann, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Feldberg_vom_Schauinsland.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -240,6 +249,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Großer und Kleiner Arber.jpg',
       selite: 'Großer Arber ja sen matalampi naapuri Kleiner Arber Baijerin metsässä.',
       lahde: 'Rosa-Maria Rinkl, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gro%C3%9Fer_und_Kleiner_Arber.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -273,6 +285,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Brockenin huippu Harzin kansallispuistossa. Sumu peittää vuoren jopa '
         + 'kolmesataa päivää vuodessa.',
       lahde: 'Ragnar1904, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nationalpark_Harz_-_Brocken-Gipfel.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 
@@ -311,6 +326,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: '13-09-29-nordfriesisches-wattenmeer-RalfR-03.jpg',
       selite: 'Pohjanmeren vuorovesitasankoa Pohjois-Friisinmaalla Saksan rannikolla.',
       lahde: 'Ralf Roletschek, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:13-09-29-nordfriesisches-wattenmeer-RalfR-03.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Mikä maa EI ole niiden joukossa, joita Pohjanmeri rajaa?',
@@ -355,6 +373,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Kreidefelsen an der Ostsee.jpg',
       selite: 'Rügenin liitukalliot Itämeren rannalla Saksan pohjoisrannikolla.',
       lahde: 'EmeraldAnette, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kreidefelsen_an_der_Ostsee.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -402,6 +423,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Bodensee seen from Konstanz 2024-02-23 01.jpg',
       selite: 'Bodenjärven Obersee-allas Konstanzin rannalta katsottuna.',
       lahde: 'Leonhard Lenz, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bodensee_seen_from_Konstanz_2024-02-23_01.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
 
@@ -448,6 +472,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Loreleyn kallio Keski-Reinin laaksossa, siinä kohdassa jossa uoma '
         + 'kapenee ja kääntyy jyrkästi.',
       lahde: 'Guido Radig, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Loreley_am_Rhein.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Mikä joki on pidempi kuin Rein Keski- ja Länsi-Euroopassa?',
@@ -493,6 +520,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Elben suu Cuxhavenin rannalta katsottuna — tästä joki laskee '
         + 'Pohjanmereen.',
       lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cuxhaven,_Strand,_Blick_auf_die_Elbm%C3%BCndung_--_2024_--_5997.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -526,6 +556,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Der Donaudurchbruch zwischen Weltenburg und Kelheim (11126675003).jpg',
       selite: 'Tonavan läpimurtolaakso Weltenburgin ja Kelheimin välissä Baijerissa.',
       lahde: 'Heribert Pohl, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Der_Donaudurchbruch_zwischen_Weltenburg_und_Kelheim_(11126675003).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
   {
@@ -559,6 +592,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Oder Frankfurt an der Oderin ja puolalaisen Słubicen välissä. Joki on '
         + 'tässä kohtaa valtakunnanraja.',
       lahde: 'Willi Wallroth, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:01_Luftbild_Frankfurt_oder_Slubice_09072011.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -591,6 +627,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Weser bei Reinhardshagen.jpg',
       selite: 'Weser Reinhardshagenin kohdalla yläjuoksullaan Weserbergland-maastossa.',
       lahde: 'Weserfluss, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Weser_bei_Reinhardshagen.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 
@@ -642,6 +681,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Brandenburgin portti ja sen katolla ajava kvadriga Berliinin '
         + 'keskustassa.',
       lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Berlin,_Brandenburger_Tor_--_2013_--_4589.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -683,6 +725,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Sanssoucin linna ja sen edessä laskeutuvat viinitarhaterassit '
         + 'Potsdamissa.',
       lahde: 'H. Zell, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Schloss_Sanssouci_Potsdam_-_Weinbergterrasse_01.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -718,6 +763,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Speicherstadtin varastokortteleita Hampurin satamassa. Tiilivarastot '
         + 'nousivat kanavien varsille pian isoisän matkan jälkeen.',
       lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hamburg,_Speicherstadt,_Wasserschloss_--_2016_--_2956.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Mihin vuoteen asti Hampuria johti perinnöllinen suurporvarisääty?',
@@ -773,6 +821,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Kölnin tuomiokirkko idästä nähtynä. Kirkko valmistui 1880, seitsemän '
         + 'vuotta isoisän matkan jälkeen.',
       lahde: 'Thomas Wolf, www.foto-tw.de, Wikimedia Commons (CC BY-SA 3.0 de)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:K%C3%B6lner_Dom_von_Osten.jpg',
+      lisenssi: 'CC BY-SA 3.0 de',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/de/deed.en',
     },
   },
   {
@@ -807,6 +858,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Marienplatz, uusi raatihuone ja Frauenkirchen tornit Münchenin '
         + 'keskustassa.',
       lahde: 'Guido Radig, Wikimedia Commons (CC BY 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Marienplatz_mit_Rathaus_M%C3%BCnchen_(Panorama)_mit_Frauenkirche_(2019).jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
     },
   },
   {
@@ -839,6 +893,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Dresden Elbe Frauenkirche.jpg',
       selite: 'Dresdenin vanha kaupunki Elben rannalla, keskellä Frauenkirchen kupoli.',
       lahde: 'Immanuel Giel, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dresden_Elbe_Frauenkirche.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
     },
   },
   {
@@ -879,6 +936,9 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Eisenach Germany Wartburg-Castle-01.jpg',
       selite: 'Wartburgin linna jyrkänteellään Eisenachin yläpuolella Thüringenissä.',
       lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eisenach_Germany_Wartburg-Castle-01.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -919,6 +979,9 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Zollvereinin entisen hiilikaivoksen rakennuksia Essenissä Ruhrin '
         + 'alueella.',
       lahde: 'Günter Seggebäing, Coesfeld, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20180114_Zeche_Zollverein,_Essen_(01980).jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
 ];
