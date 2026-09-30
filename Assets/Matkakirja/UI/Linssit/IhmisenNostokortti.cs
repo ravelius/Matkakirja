@@ -160,6 +160,15 @@ namespace Matkakirja.Natiivi
 
         Loytopaikka paikka;
 
+        /// <summary>Testi (linssi matka nosto): kortin n:s kysymys kuten napautus.</summary>
+        public string TestiKysy(int n)
+        {
+            var napit = kortti.Query<Button>(className: "mk-ihmisnosto__kysymys").ToList();
+            if (n < 0 || n >= napit.Count) return $"kysymyksiä {napit.Count}";
+            using (var e = NavigationSubmitEvent.GetPooled()) { e.target = napit[n]; napit[n].SendEvent(e); }
+            return $"kysymys {n + 1}/{napit.Count}: {napit[n].text}";
+        }
+
         void KysyPululta(LinssiKysymys valmiit, string kysymys, Button nappi, VisualElement ryhma)
         {
             if (kysymysKesken || !nappi.enabledSelf) return;

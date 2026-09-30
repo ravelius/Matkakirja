@@ -235,6 +235,12 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(palaa, Kirjasin.Kone);
 
             suurennos = new Kuvasuurennos(juuri);
+            // Näppäimistö (Mac/iPad, Nappaimisto): Esc sulkee ensin chatin kuvapopupin, sitten chatin, ei samalla
+            // painalluksella linssiä tai korttia sen alla (web: Esc sulkee päällimmäisen); ↑ ↓ vierittävät keskustelua.
+            // Kuvasuurennos (100) on tämän (90) edellä.
+            Nappaimisto.Rekisteroi("pulu-chat", 90, () => Auki, null,
+                d => virta.scrollOffset = new Vector2(0f, Mathf.Max(0f, virta.scrollOffset.y + d * 80f)),
+                () => { if (KuvakorttiAuki) kuvakortti.Sulje(); else Sulje(); });
             kerros.TurvaMuuttui += Asettele;
             Asettele();
         }
