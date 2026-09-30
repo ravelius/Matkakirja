@@ -93,7 +93,7 @@ const tallenne = JSON.stringify(peli.toJSON());
 const selain = await (MOOTTORI === 'webkit'
   ? moottori.launch()
   // Oikea GPU Macilla (ANGLE Metal): SwiftShaderin rAF on ~4 fps eikä erota lepoa liikkeestä.
-  : moottori.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--disable-dev-shm-usage', '--use-angle=metal', '--ignore-gpu-blocklist'] }));
+  : moottori.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--disable-dev-shm-usage', '--mute-audio', '--use-angle=metal', '--ignore-gpu-blocklist'] }));
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 },
   hasTouch: true,
