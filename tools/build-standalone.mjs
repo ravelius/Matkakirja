@@ -445,6 +445,8 @@ const MODULES = [
   // passport ennen omistusta: omistus.js tuo sen staattisesti.
   'js/passport.js',
   'js/linssit/rekisteri.js',
+  // Apurahan kortti ja esittelylinssien avain (omistus.js ja ui.js tuovat).
+  'js/apuraha.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
