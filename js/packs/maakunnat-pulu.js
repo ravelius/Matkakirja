@@ -2939,5 +2939,79 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mistä Gus-Hrustalnyi on saanut nimensä?", a: "Gus-joen varrella vuonna 1756 perustettu Maltsovin lasitehdas on Venäjän vanhin yhä toimiva kristallin valmistaja, ja kaupunki nimettiin sen mukaan. Sana hrustalnyi tarkoittaa kristallista." },
       { q: "Miksi Murom tunnetaan?", a: "Murom on Oka-joen varrella oleva kaupunki, jonka ensimmäinen maininta on vuodelta 862. Sen tunnetuin sankari on eepoksien Ilja Muromets, ja kaupungissa syntyi televisiotekniikan pioneeri Vladimir Zvorykin." },
     ],
+    "Ivanovo": [
+      { q: "Miksi Palekhin lakkarasiat ovat mustia ja niin pieniä?", a: "Palekhin ikonimaalarit alkoivat 1920-luvulla maalata munatemperalla ja kultauksella paperimassarasioiden kiiltävälle mustalle lakalle, kun ikonitilauksia ei enää ollut. Musta tausta saa hienot värit hehkumaan." },
+      { q: "Miksi maalari Isaak Levitan viipyi Plyosissa niin pitkään?", a: "Levitan saapui Plyosiin ensimmäisen kerran 1888, ja Volgan rinteet ja joenmutkat antoivat aiheet muun muassa teoksille Sateen jälkeen. Plyos ja Ilta. Kultainen Plyos (1889). Kaupungissa on hänen elämälleen omistettu talomuseo." },
+      { q: "Miksi Andrei Tarkovskin elokuvafestivaali pidetään pienessä Volgan kaupungissa?", a: "Tarkovski vietti lapsuuttaan Juryjevetsissä Ivanovon alueella, ja kaupungissa on Tarkovski-museo. Festivaali Zerkalo on järjestetty alueella vuodesta 2007." },
+    ],
+    "Kaluga": [
+      { q: "Miksi Obninskia sanotaan tiedekaupungiksi?", a: "Obninskissa kytkettiin 26. kesäkuuta 1954 sähköverkkoon maailman ensimmäinen ydinvoimala, jonka teho oli 5 megawattia. Voimala suljettiin 2002 ja on nykyään museo." },
+      { q: "Miksi Polotnjanyi Zavodin kylän nimi tarkoittaa purjekangastehdasta?", a: "Goncharovin suvun purjekangasmanufaktuuri perustettiin 1700-luvun alussa, ja kylä ja kartano saivat sen mukaan nimen. Sukukartanossa toimii Natalia Goncharovan talomuseo; hän oli Aleksandr Pushkinin vaimo." },
+      { q: "Mistä Dostojevski sai esikuvan Zosima-vanhukselle Karamazovin veljeksiin?", a: "Dostojevski matkusti kesäkuussa 1878 Optinan luostariin Kozelskin lähelle, kun hänen nuori poikansa Aljoša oli kuollut, ja tapasi siellä vanhus Amvrosin. Tämän lempeys ja terävyys elävät Zosima-hahmossa." },
+    ],
+    "Tula": [
+      { q: "Miksi Tolstoin hauta on vain vihreä kumpu ilman ristiä?", a: "Tolstoi halusi haudan Vanhan Zakazin metsän rotkon reunalle vihreän kepin paikalle, jonka hänen veljensä Nikolai oli lapsena nimennyt onnen salaisuuden kätköpaikaksi. Hänet haudattiin sinne marraskuussa 1910 ilman hautakiveä tai ristiä." },
+      { q: "Mikä on Beljovin pastila ja miksi se on Tulan seudun herkku?", a: "Beljovin pastila on omenasoseesta, valkuaisesta ja sokerista vaahdotettua makeista, joka kuivatetaan levyiksi ja liimataan kerroksiksi kuin kakku." },
+      { q: "Miksi Tulassa alettiin tehdä samovaareja?", a: "Tulassa työskenteli jo valmiiksi taitavia aseseppiä ja messinkityöläisiä. Lisitsynin veljekset valmistivat ensimmäisen dokumentoidun samovaarinsa 1778." },
+    ],
+    "Bryansk": [
+      { q: "Mikä tekee Brjanskin metsästä lintuharrastajien unelman?", a: "Vuonna 1987 perustetulla Brjanskin metsän suojelualueella tavataan useita Euroopan tikkalajeja. Metsä on yksi harvoista paikoista, joissa mäntymetsät, tammilehdot ja suot elävät niin lähekkäin." },
+      { q: "Milloin visentti palasi Brjanskin metsään?", a: "Euroopanbisonien palautus Brjanskin metsään alkoi 2011, ja laumaa on sittemmin kasvatettu. Alueella elää myös ilveksiä, susia ja karhuja." },
+      { q: "Miksi Djatkovon kristalli on kuuluisaa?", a: "Djatkovon kristallitehtaan perusti 1790 vaikutusvaltaisen Maltsovin kauppiassuvun leski Marja Maltsova metsän keskelle Olshanka-joen varrelle. 1800-luvun alussa sen tavara tunnettiin jo koko Venäjällä." },
+    ],
+    "Orel": [
+      { q: "Miksi Mtsenskin nimi tunnetaan oopperalavoilla?", a: "Leskov kirjoitti 1865 novellin Mtsenskin kihlakunnan Lady Macbeth, ja Dmitri Šostakovitš sävelsi siitä oopperan, joka sai ensiesityksensä Leningradissa 22. tammikuuta 1934." },
+      { q: "Mikä oli Turgenevin tammi Spasskoje-Lutovinovossa?", a: "Kartanon kuuluisa tammi eli lähes kaksisataa vuotta ja kaatui myrskyssä; tarinan mukaan Turgenev itse istutti sen. Puu ehdotettiin Euroopan vuoden puuksi 2022." },
+      { q: "Mitä Orlovskoje Polesje -kansallispuistossa on?", a: "Vuonna 1994 perustetulla puistolla on noin 77 700 hehtaaria metsiä, järviä ja niittyjä Keski-Venäjän ylängöllä, ja siellä elää myös Euroopan biisoneja." },
+    ],
+    "Kursk": [
+      { q: "Miksi Kurskia kutsutaan satakielten kaupungiksi?", a: "Satakielen laulu on Kurskin seudun tunnetuin tunnusmerkki, ja Kurskia kutsutaan usein satakielenlaulun kaupungiksi. Alueella Fatežissa syntynyt säveltäjä Georgi Sviridov kirjoitti vuonna 1964 kantaatin Kurskin laulut." },
+      { q: "Mikä on antonovka, ja miksi se liitetään Kurskiin?", a: "Antonovka on vanha, happamanmakuinen omenalajike, joka levisi Kurskin seudulta. Se säilyy hyvin talven yli, ja sen taimia käytetään pohjustana, koska ne kestävät pakkasta." },
+      { q: "Miksi Keski-Tšernozjomin lähellä osa arosta niitetään?", a: "Streletskaja-aroa niitetään säännöllisesti, kun taas suojelualueen ydin jätetään täysin koskemattomaksi. Tutkijat vertaavat niitä toisiinsa ja peltoon." },
+    ],
+    "Belgorod": [
+      { q: "Miksi Belogorjen tammet ovat erityisiä?", a: "Vorsklan varren metsässä kasvaa yli 300-vuotiaita tammia, ja alue on yksi viimeisistä koskemattomista jokilaakson tammimetsistä metsäaroalla. Kalkkikivipohja muodostaa paikoin karstimaastoa." },
+      { q: "Mikä oli Belgorodin linja?", a: "Se oli 1600–1700-luvuilla rakennettu puolustusjärjestelmä, jossa oli maavalleja ja linnakkeita, ja se suojasi etelärajaa tataarien ryöstöretkiltä. Rakennustyö kesti vuodesta 1633 vuoteen 1740." },
+      { q: "Miksi Vanhaa Oskolia sanotaan vanhaksi?", a: "Nimi erottaa sen Uudesta Oskolista, joka on noin 60 kilometriä etelämpänä. Vanha Oskol rakennettiin linnoituksena uudelleen vuonna 1593 sen jälkeen, kun aiempi asutus oli tuhoutunut Krimin tataarien hyökkäyksissä." },
+    ],
+    "Lipetsk": [
+      { q: "Miksi Polibinon kartanolla seisoo teräsverkkotorni?", a: "Vladimir Šuhovin suunnittelema 37-metrinen torni on maailman ensimmäinen hyperboloidirakenne: suorista teräsparruista syntyy kaareva muoto. Se tehtiin alun perin Nižni Novgorodin näyttelyä varten ja siirrettiin sitten Polibinon kartanoon." },
+      { q: "Miksi Jeletsin pitsi on tunnettua?", a: "Jeletsissä on nypläyspitsiä tehty yli kahden vuosisadan ajan. Kaupungissa on pitsitalomuseo, jossa näkee, miten kuvio syntyy." },
+      { q: "Miksi Lev Tolstoin asemalla on museo?", a: "Asema sai nimensä kirjailija Lev Tolstoin mukaan, koska hän sairastui matkallaan ja kuoli asemapäällikön talossa vuonna 1910. Talo on ollut Tolstoi-museon haaramuseo vuodesta 1946." },
+    ],
+    "Voronezh": [
+      { q: "Mitä sana 'divy' tarkoittaa Divnogorjessa?", a: "Paikalliset kutsuivat liitupylväitä sanalla divo, 'ihme'. Pylväät mainitaan kirjallisissa lähteissä jo vuonna 1389, ja alueella sataa vain noin 480 millimetriä vuodessa, joten siellä kasvaa aroa metsäaron sijaan." },
+      { q: "Miten majavat palasivat Venäjän jokiin?", a: "Voronežin luonnonsuojelualueelta, joka sijaitsee Voronežin ja Lipetskin alueiden rajalla ja perustettiin 1927, siirrettiin vuosina 1934–1977 noin 3 000 euroopanmajavaa 52 alueelle Neuvostoliitossa." },
+      { q: "Mikä on Orlovin ravuri?", a: "Kreivi Aleksei Orlov kehitti sen Hrenovoen ravitilalla Bobrovin lähellä, ja tila perustettiin 1776. Ensimmäisenä orlovinravurina pidetään vuonna 1784 syntynyttä ori Bars I:tä." },
+    ],
+    "Tambov": [
+      { q: "Kuka Mitšurin oli ja mitä hän jalosti?", a: "Ivan Mitšurin loi työuransa aikana yli 300 uutta hedelmäkasvilajiketta. Hän aloitti pieneltä palstalta, ja hänen nimensä kantaa nykyään kaupunki, jossa hän kuoli vuonna 1935." },
+      { q: "Mikä on Voronan laakson luonnonsuojelualue?", a: "Voroninin suojelualue perustettiin vuonna 1994 Kirsanovin ja Inzhavinon piireihin, ja se kattaa yli 10 000 hehtaaria, josta noin 78 prosenttia on metsää. Siellä kasvaa 100–150-vuotiaita tammia sekä vanhoja tammi-, lehmus-, vaahtera- ja jalavametsiä." },
+    ],
+    "Nizhegorod": [
+      { q: "Miksi Nižni Novgorodin Tškalovin portaita kutsutaan Venäjän pisimmiksi?", a: "Portaat yhdistävät ylä- ja alarannan kahdeksikon muotoisina, ja askelmia on molemmat puolet laskien 560. Ne valmistuivat vuonna 1949, ja nykyään niillä järjestetään juoksukilpailuja." },
+      { q: "Mitä Kerženetsin luonnonsuojelualueella tutkitaan?", a: "Noin 47 000 hehtaarin tiukasti suojeltu alue on noin 55 kilometrin päässä kaupungista koillisessa. Siellä tutkitaan erityisesti majavien vaikutusta ympäristöön, ja noin 60 prosenttia metsistä on mäntyä." },
+      { q: "Miksi Nižni Novgorodia kutsuttiin vuosina 1932–1990 Gorkiksi?", a: "Nimi annettiin kaupungissa syntyneen kirjailijan Maksim Gorkin kunniaksi. Vanha nimi palautettiin vuonna 1990." },
+    ],
+    "Mordovia": [
+      { q: "Mitä puuta kuvanveistäjä Stepan Erzja veisti Argentiinassa?", a: "Erzjaa kutsuttiin nimellä ”venäläinen Rodin”. Hän työskenteli Argentiinassa vuosina 1927–1950 ja veisti töitään muun muassa quebracho- ja algarrobopuusta." },
+      { q: "Miksi Sanaksarin luostari Temnikovin lähellä on tunnettu?", a: "Vuonna 1659 perustetussa luostarissa on amiraali Fjodor Ušakovin pyhäinjäännökset. Venäjän ortodoksinen kirkko julisti hänet pyhimykseksi elokuussa 2001 juuri Sanaksarissa." },
+      { q: "Mitä yhteistä mordvalla ja suomella on?", a: "Ne kuuluvat samaan uralilaiseen kieliperheeseen, ja mordvan lähimpiä sukukieliä ovat itämerensuomalaiset kielet ja saame." },
+    ],
+    "Chuvash": [
+      { q: "Mikä on Tšeboksarynlahden yllä seisova valtava naishahmo?", a: "Se on Äiti-Suojelijan muistomerkki, 46 metriä korkea ja paljastettu vuonna 2003. Hahmo levittää kätensä tšuvassien kansallispuvussa." },
+      { q: "Mitä tšuvassien Akatuy-juhlassa juhlitaan?", a: "Akatuy on kyntöjuhla, jolla merkitään kevätkylvötöiden päättymistä. Ohjelmassa on urheilukilpailuja, näyttelyitä, markkinoita ja kansallispukujen kulkueita." },
+      { q: "Miksi Tšeboksarysta löytyy olutmuseo?", a: "Museo avattiin vuonna 1997 paikallisen panimon toimesta. Tšuvassien perinneolut sara oli rituaalijuoma, jota ei juotu ilman aihetta, ja sitä keitettiin tuoreesta sadosta." },
+    ],
+    "Mariy-El": [
+      { q: "Miksi Joškar-Olan keskustassa on belgialaistyylisiä värikkäitä taloja?", a: "Kaupungin keskustaa on 2000-luvun alusta rakennettu arkkitehtuuripuistoksi, jossa Pikku-Kokšagan rannoille on nostettu eurooppalaisia kaupunkeja jäljitteleviä kokonaisuuksia. Brugge-rantakadulla on porrasmaisia päätyjä ja kapeita julkisivuja." },
+      { q: "Mikä on kusle?", a: "Kusle on maristen sylissä soitettava sitra, jossa on 12–20 kieltä ja jonka rakenne ja sointi muistuttavat suomalaista kanteletta." },
+      { q: "Kuinka metsäinen ja vetinen Marin tasavalta on?", a: "Noin puolet alueesta on metsää, ja tasavallassa on satoja jokia ja yli 700 järveä tai lampea. Suurin järvi, Jalčik, on Mari Chodran puistossa ja noin 150 hehtaarin kokoinen." },
+    ],
+    "Kirov": [
+      { q: "Miksi Kirovin taidemuseo on nimetty Vasnetsovin veljesten mukaan?", a: "Maalarit Viktor ja Apollinari Vasnetsov syntyivät Vjatkan seudun kylissä, ja he auttoivat museon perustamisessa vuonna 1910. Kokoelmassa on kymmeniä tuhansia teoksia." },
+      { q: "Mitä Kotelnitšin liepeiltä on löytynyt?", a: "Vjatkan oikealla rannalla on permikautisia fossiileja, joiden ikä on 250–260 miljoonaa vuotta. Tunnetuimpia löytöjä ovat noin kolmemetriset pareiasaurukset, ja paikallinen paleontologinen museo avattiin vuonna 1994." },
+      { q: "Kuinka suuri Kirovin alue on?", a: "Alueen pinta-ala on 120 374 neliökilometriä eli noin kolmannes Suomesta, ja siellä asuu vajaat 1,2 miljoonaa ihmistä. Metsä on enimmäkseen havupuuta." },
+    ],
   },
 };
