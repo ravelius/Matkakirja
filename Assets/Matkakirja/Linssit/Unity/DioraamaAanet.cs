@@ -342,6 +342,7 @@ namespace Matkakirja.Natiivi
                     if (kaiku != null && kaikuTaso > 0.001f)
                     { puheKaiku.clip = kaiku; puheKaiku.volume = PuheTaso * kaikuTaso; puheKaiku.PlayScheduled(hetki); }
                     puheLoppuu = Time.unscaledTime + Math.Max(kuiva.length, kaiku != null ? kaiku.length : 0f) + 0.05f;
+                    Debug.Log($"MATKAKIRJA linssit: poikki: mikseri {aaniId}: kuiva {kuiva.length:F3} s + kaiku {(kaiku != null && kaikuTaso > 0.001f ? kaiku.length.ToString("F3") + " s × " + kaikuTaso.ToString("F2") : "pois")}, dsp {hetki:F3}");
                     return true;
                 }
                 VarmistaLadattu(sovitin.AaniUrl(aani.Kuiva));
