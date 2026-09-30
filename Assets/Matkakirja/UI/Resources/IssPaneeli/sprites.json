@@ -1,0 +1,1367 @@
+{
+ "versio": 1,
+ "tekija": "Linnanrakentaja (Blender Cycles, tools/linssit/blender)",
+ "kokoaminen": "pohja(vasen, keski toistuen, oikea) → ryhma keskitettynä → osat → valot \"over\" painoin",
+ "asettelut": {
+  "puhelin": {
+   "skaala": 3,
+   "korkeus_pt": 167.0,
+   "kallistus_astetta": 15.0,
+   "pohja": {
+    "paaty_pt": 24.0,
+    "keski_px": 64
+   },
+   "ryhma": {
+    "leveys_pt": 418.0,
+    "keskitetty": true
+   },
+   "laatikot": {
+    "nopeus-otsikko": {
+     "keski_pt": [
+      51.5,
+      52.95
+     ],
+     "koko_pt": [
+      20.46,
+      7.73
+     ]
+    },
+    "pilvet-otsikko": {
+     "keski_pt": [
+      114.5,
+      52.95
+     ],
+     "koko_pt": [
+      18.68,
+      7.73
+     ]
+    },
+    "kuukausi-otsikko": {
+     "keski_pt": [
+      177.5,
+      52.95
+     ],
+     "koko_pt": [
+      24.78,
+      7.73
+     ]
+    },
+    "kohde-otsikko": {
+     "keski_pt": [
+      240.5,
+      52.95
+     ],
+     "koko_pt": [
+      17.73,
+      7.73
+     ]
+    },
+    "oma-otsikko": {
+     "keski_pt": [
+      303.5,
+      52.95
+     ],
+     "koko_pt": [
+      29.43,
+      7.73
+     ]
+    },
+    "poistu-otsikko": {
+     "keski_pt": [
+      366.5,
+      52.95
+     ],
+     "koko_pt": [
+      18.87,
+      7.73
+     ]
+    },
+    "live": {
+     "keski_pt": [
+      47.0,
+      30.92
+     ],
+     "koko_pt": [
+      16,
+      15.45
+     ]
+    },
+    "lukema": {
+     "keski_pt": [
+      222.0,
+      30.92
+     ],
+     "koko_pt": [
+      284.0,
+      19.32
+     ]
+    },
+    "nopeus": {
+     "keski_pt": [
+      51.5,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "nopeus-levy": {
+     "keski_pt": [
+      51.5,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "pilvet": {
+     "keski_pt": [
+      114.5,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "pilvet-levy": {
+     "keski_pt": [
+      114.5,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "kuukausi": {
+     "keski_pt": [
+      177.5,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "kuukausi-levy": {
+     "keski_pt": [
+      177.5,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "kohde": {
+     "keski_pt": [
+      240.5,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "kohde-levy": {
+     "keski_pt": [
+      240.5,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "oma": {
+     "keski_pt": [
+      303.5,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "oma-levy": {
+     "keski_pt": [
+      303.5,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "poistu": {
+     "keski_pt": [
+      366.5,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "poistu-levy": {
+     "keski_pt": [
+      366.5,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "live-otsikko": {
+     "keski_pt": [
+      47.0,
+      30.92
+     ],
+     "koko_pt": [
+      22.0,
+      32.84
+     ]
+    },
+    "oma-kaari": {
+     "keski_pt": [
+      303.5,
+      74.39
+     ],
+     "koko_pt": [
+      30.0,
+      38.64
+     ]
+    },
+    "kupu": {
+     "keski_pt": [
+      209.0,
+      66.66
+     ],
+     "koko_pt": [
+      406.0,
+      127.5
+     ]
+    }
+   },
+   "ryhma_pt": [
+    418.0,
+    167.0
+   ],
+   "osat": {
+    "nopeus-0": {
+     "keski_pt": [
+      51.33,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nopeus-1": {
+     "keski_pt": [
+      51.33,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nopeus-2": {
+     "keski_pt": [
+      51.33,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nopeus-3": {
+     "keski_pt": [
+      51.33,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nuppi-00": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-01": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-02": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-03": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-04": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-05": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-06": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-07": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-08": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-09": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-10": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-11": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-12": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-13": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-14": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-15": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-16": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-17": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-18": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-19": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-20": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-21": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-22": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-23": {
+     "keski_pt": [
+      114.33,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "kohde-ylos": {
+     "keski_pt": [
+      240.33,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "kohde-alas": {
+     "keski_pt": [
+      240.33,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "poistu-ylos": {
+     "keski_pt": [
+      366.33,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "poistu-alas": {
+     "keski_pt": [
+      366.33,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "vipu-ylos": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      52.0,
+      52.0
+     ]
+    },
+    "vipu-alas": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      52.0,
+      52.0
+     ]
+    },
+    "kaari-0": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-1": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-2": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-3": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-4": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-5": {
+     "keski_pt": [
+      303.33,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    }
+   },
+   "osat_kaytto": {
+    "nopeus": "nopeus-0…3 (LIVE, 10×, 100×, 1000×)",
+    "pilvet_kuukausi": "nuppi-00…23, 15°/askel",
+    "kohde_poistu": "kohde-ylos/alas, poistu-ylos/alas",
+    "oma": "vipu-ylos/alas + kaari-0 (kiinni) … 5 (auki)"
+   },
+   "valot": {
+    "live-vihrea": {
+     "skaala": 1.5
+    },
+    "live-meripihka": {
+     "skaala": 1.5
+    },
+    "kohde": {
+     "skaala": 1.5
+    },
+    "poistu": {
+     "skaala": 1.5
+    },
+    "legendat-valkoinen": {
+     "skaala": 1.5
+    },
+    "legendat-meripihka": {
+     "skaala": 1.5
+    },
+    "paneeli": {
+     "skaala": 1.5
+    }
+   }
+  },
+  "tabletti": {
+   "skaala": 2,
+   "korkeus_pt": 167.0,
+   "kallistus_astetta": 15.0,
+   "pohja": {
+    "paaty_pt": 24.0,
+    "keski_px": 64
+   },
+   "ryhma": {
+    "leveys_pt": 600.0,
+    "keskitetty": true
+   },
+   "laatikot": {
+    "nopeus-otsikko": {
+     "keski_pt": [
+      66.67,
+      52.95
+     ],
+     "koko_pt": [
+      20.46,
+      7.73
+     ]
+    },
+    "pilvet-otsikko": {
+     "keski_pt": [
+      160.0,
+      52.95
+     ],
+     "koko_pt": [
+      18.68,
+      7.73
+     ]
+    },
+    "kuukausi-otsikko": {
+     "keski_pt": [
+      253.33,
+      52.95
+     ],
+     "koko_pt": [
+      24.78,
+      7.73
+     ]
+    },
+    "kohde-otsikko": {
+     "keski_pt": [
+      346.67,
+      52.95
+     ],
+     "koko_pt": [
+      17.73,
+      7.73
+     ]
+    },
+    "oma-otsikko": {
+     "keski_pt": [
+      440.0,
+      52.95
+     ],
+     "koko_pt": [
+      29.43,
+      7.73
+     ]
+    },
+    "poistu-otsikko": {
+     "keski_pt": [
+      533.33,
+      52.95
+     ],
+     "koko_pt": [
+      18.87,
+      7.73
+     ]
+    },
+    "live": {
+     "keski_pt": [
+      47.0,
+      30.92
+     ],
+     "koko_pt": [
+      16,
+      15.45
+     ]
+    },
+    "lukema": {
+     "keski_pt": [
+      313.0,
+      30.92
+     ],
+     "koko_pt": [
+      466.0,
+      19.32
+     ]
+    },
+    "nopeus": {
+     "keski_pt": [
+      66.67,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "nopeus-levy": {
+     "keski_pt": [
+      66.67,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "pilvet": {
+     "keski_pt": [
+      160.0,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "pilvet-levy": {
+     "keski_pt": [
+      160.0,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "kuukausi": {
+     "keski_pt": [
+      253.33,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "kuukausi-levy": {
+     "keski_pt": [
+      253.33,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "kohde": {
+     "keski_pt": [
+      346.67,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "kohde-levy": {
+     "keski_pt": [
+      346.67,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "oma": {
+     "keski_pt": [
+      440.0,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "oma-levy": {
+     "keski_pt": [
+      440.0,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "poistu": {
+     "keski_pt": [
+      533.33,
+      80.19
+     ],
+     "koko_pt": [
+      48,
+      46.36
+     ]
+    },
+    "poistu-levy": {
+     "keski_pt": [
+      533.33,
+      115.44
+     ],
+     "koko_pt": [
+      44.0,
+      8.69
+     ]
+    },
+    "live-otsikko": {
+     "keski_pt": [
+      47.0,
+      30.92
+     ],
+     "koko_pt": [
+      22.0,
+      32.84
+     ]
+    },
+    "oma-kaari": {
+     "keski_pt": [
+      440.0,
+      74.39
+     ],
+     "koko_pt": [
+      30.0,
+      38.64
+     ]
+    },
+    "kupu": {
+     "keski_pt": [
+      300.0,
+      66.66
+     ],
+     "koko_pt": [
+      588.0,
+      127.5
+     ]
+    }
+   },
+   "ryhma_pt": [
+    600.0,
+    167.0
+   ],
+   "osat": {
+    "nopeus-0": {
+     "keski_pt": [
+      66.5,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nopeus-1": {
+     "keski_pt": [
+      66.5,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nopeus-2": {
+     "keski_pt": [
+      66.5,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nopeus-3": {
+     "keski_pt": [
+      66.5,
+      80.0
+     ],
+     "koko_pt": [
+      50.0,
+      50.0
+     ]
+    },
+    "nuppi-00": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-01": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-02": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-03": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-04": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-05": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-06": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-07": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-08": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-09": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-10": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-11": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-12": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-13": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-14": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-15": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-16": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-17": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-18": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-19": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-20": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-21": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-22": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "nuppi-23": {
+     "keski_pt": [
+      160.0,
+      80.0
+     ],
+     "koko_pt": [
+      44.0,
+      44.0
+     ]
+    },
+    "kohde-ylos": {
+     "keski_pt": [
+      346.5,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "kohde-alas": {
+     "keski_pt": [
+      346.5,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "poistu-ylos": {
+     "keski_pt": [
+      533.0,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "poistu-alas": {
+     "keski_pt": [
+      533.0,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "vipu-ylos": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      52.0,
+      52.0
+     ]
+    },
+    "vipu-alas": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      52.0,
+      52.0
+     ]
+    },
+    "kaari-0": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-1": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-2": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-3": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-4": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    },
+    "kaari-5": {
+     "keski_pt": [
+      440.0,
+      76.0
+     ],
+     "koko_pt": [
+      60.0,
+      60.0
+     ]
+    }
+   },
+   "osat_kaytto": {
+    "nopeus": "nopeus-0…3 (LIVE, 10×, 100×, 1000×)",
+    "pilvet_kuukausi": "nuppi-00…23, 15°/askel",
+    "kohde_poistu": "kohde-ylos/alas, poistu-ylos/alas",
+    "oma": "vipu-ylos/alas + kaari-0 (kiinni) … 5 (auki)"
+   },
+   "valot": {
+    "live-vihrea": {
+     "skaala": 1.0
+    },
+    "live-meripihka": {
+     "skaala": 1.0
+    },
+    "kohde": {
+     "skaala": 1.0
+    },
+    "poistu": {
+     "skaala": 1.0
+    },
+    "legendat-valkoinen": {
+     "skaala": 1.0
+    },
+    "legendat-meripihka": {
+     "skaala": 1.0
+    },
+    "paneeli": {
+     "skaala": 1.0
+    }
+   }
+  }
+ }
+}

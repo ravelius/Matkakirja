@@ -232,7 +232,11 @@ namespace Matkakirja.Natiivi
                 Add(Laatta);
                 Otsikko = Nimio(this, otsikko, 8.5f);
                 Otsikko.style.marginTop = 2;
+                Kilpi = Nimio(this, "", 6.5f);
+                Kilpi.style.display = DisplayStyle.None;
             }
+            /// <summary>Arvokilpi (kerrostilassa renderin levyllä, tarrakirjoitintyyliin): painikkeiden ja vivun nykyinen arvo.</summary>
+            public readonly Label Kilpi;
             protected override void OnKerros(bool paalla)
             {
                 Laatta.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
@@ -241,7 +245,7 @@ namespace Matkakirja.Natiivi
                 if (paalla) Add(Otsikko);   // osuma-alan alareunaan (Laatta piilossa)
             }
             /// <summary>Arvon tai legendan teksti (kerrostilassa osan levylle): kiertokytkimen asento, nupin lukema, painikkeen legenda.</summary>
-            public virtual Label Arvo => null;
+            public virtual Label Arvo => Kilpi;
         }
 
         // ---- Kiertokytkin ----
@@ -424,7 +428,6 @@ namespace Matkakirja.Natiivi
                 RegisterCallback<PointerCaptureOutEvent>(_ => AsetaPainettu(false));
             }
             void AsetaPainettu(bool p) { if (Painettu == p) return; Painettu = p; Ilmoita(); }
-            public override Label Arvo => Legenda;
             /// <summary>Sormi painikkeella juuri nyt.</summary>
             public bool Painettu { get; private set; }
             protected override void OnKerros(bool paalla)

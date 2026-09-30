@@ -373,7 +373,7 @@ namespace Matkakirja.Natiivi
                 // Ohjauspöydän leveys: ruutu − 24, enintään 560 pt, keskellä (kutistettuna vain nappi vasemmalla).
                 poytaLeveys = juuri.layout.width - r.x - r.z;
                 AsetteleOhjaimet();
-                poyta.Asettele(poytaLeveys);
+                poyta.Asettele(poytaLeveys, r.w);
                 PaivitaKupu();   // ruutu kääntyi: pyöreän rajauksen kupu vaakaan tai pystyyn heti
                 PaivitaPulu();
             });
@@ -436,12 +436,13 @@ namespace Matkakirja.Natiivi
                 if (kohteet == null || kohteet.Count == 0) return;
                 listaTaytetty = true;
                 // Oma sijainti ensin (karkea: maan keskipiste IP:n maasta, ilman lupakyselyä; OmaSijaintiHaku).
-                omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); LennaOmaan(); }, lista);
+                omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); omaLento = true; LennaOmaan(); }, lista);
                 omaNappi.AddToClassList("mk-isskyyti__kohde--oma");
                 foreach (var k in kohteet)
                 {
                     string tunnus = k.Tunnus;
-                    Rakenne.Nappi(k.Nimi, "mk-isskyyti__kohde", () => { SuljeLista(); Linssi()?.LennaKohteeseen(tunnus); }, lista);
+                    string kohdeNimi = k.Nimi;
+                    Rakenne.Nappi(k.Nimi, "mk-isskyyti__kohde", () => { SuljeLista(); viimeKohde = kohdeNimi; omaLento = false; Linssi()?.LennaKohteeseen(tunnus); }, lista);
                 }
             }
             // Kytkinpöydällä lista on turva-alueen lapsi pöydän yläpuolella (pöydän levyinen); välilehtipaneelissa Kohde-sivulla.
@@ -468,6 +469,10 @@ namespace Matkakirja.Natiivi
             peite.style.display = DisplayStyle.Flex;
         }
 
+        /// <summary>Renderipaneelin kilvet: viimeksi valittu kohde ja onko lento omaan paikkaan (OMA PAIKKA PÄÄLLÄ/POIS).</summary>
+        static string viimeKohde;
+        static bool omaLento;
+
         /// <summary>"Oma sijainti": lento maan keskipisteen ylle; jos maa ei ole vielä tiedossa, haku ja lento perään.</summary>
         static void LennaOmaan()
         {
@@ -489,7 +494,9 @@ namespace Matkakirja.Natiivi
             {
                 poyta.Pilvet.Aseta(m, m <= 0.01f ? "0 %" : m >= 0.99f ? "NYT" : $"{Mathf.RoundToInt(m * 100)} %");
                 string nimi = Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1];
-                poyta.Vuodenaika.Aseta(kk, (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kk == nyt ? " •" : ""));
+                // Renderipaneelin kilvessä koko nimi (tarrakirjoitin), kehyksessä lyhenne.
+                poyta.Vuodenaika.Aseta(kk, poyta.Asettelu != null ? nimi.ToUpperInvariant()
+                    : (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kk == nyt ? " •" : ""));
             }
         }
 
@@ -556,6 +563,12 @@ namespace Matkakirja.Natiivi
                 poyta.Live.Nimi.text = aika.Nopeutettu ? "PALAA" : "LIVE";
                 int ix = Array.IndexOf(Simukello.Nopeudet, aika.Porras);
                 poyta.Nopeus.Aseta(ix >= 0 && !aika.Kelaa ? ix : 0, aika.Kelaa ? "…" : null);
+                // Arvokilvet (renderipaneeli; Päätoimittaja 30.9.): kohde, oma paikka, näkymä.
+                bool lennossa = tila == KyydinTila.Kohde;
+                if (!lennossa) omaLento = false;
+                poyta.Kohde.Kilpi.text = lennossa && !omaLento && viimeKohde != null ? viimeKohde.ToUpperInvariant() : "VALITSE";
+                poyta.Oma.Kilpi.text = lennossa && omaLento ? "PÄÄLLÄ" : "POIS";
+                poyta.Sulku.Kilpi.text = tila == KyydinTila.Ikkuna ? "CUPOLA" : tila == KyydinTila.Seuranta ? "SEURANTA" : lennossa ? "LENTO" : "KYYTI";
             }
             if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;
