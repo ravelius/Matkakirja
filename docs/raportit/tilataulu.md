@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 23:53:** Levy 56 Gi (vakaa; hälytys < 50), wt/ 48 (raja 20), muisti 42 % vapaa (raja 25), kuorma 82/102/88, sim 1 (iPhone 18 Pro; ≤1 ok), työtilat ok. Viikko 81 % (5 h 17 %). Konteksti: Päätoimittaja 57 % (nousee; raja 60). Kävijälaskuri: 23.10 n=3, seuraava ~00.10. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: Linnanrakentaja→Codex-tilaus PERUUTETTU (posti/linnanrakentaja-codex-olavinlinna-julkisivu-20260930.md; omistaja Päätoimittajan kautta) — Päätoimittaja tietää.
+
 **Päivitetty 30.9. 23:42:** Levy 55 Gi (61→55 16 min:ssa; hälytys < 50 lähellä → kierros 10 min), wt/ 48 (raja 20, kasvaa 47→48), muisti 60 % vapaa, kuorma 156/56/51, sim 1 (pariteetti-iPad11-834 C1D5E34C; ≤1 ok), työtilat ok. Viikko 80 % (5 h 15 %). Konteksti: Päätoimittaja 55 % (nousee; raja 60). Kävijälaskuri: 23.10 n=3, seuraava ~00.10 (ilmoitus estetty viestirajan takia). Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 30.9. 23:26:** Levy 61 Gi (vakaa 23.10:stä; hälytys < 50), wt/ 47 (raja 20, kasvaa 43→47), muisti 78 % vapaa, kuorma 32/36/77, sim 0, työtilat ok. Viikko 79 % (5 h 11 %). Konteksti: Päätoimittaja 48 %. Kävijälaskuri: 23.10 n=3 (FI 1, US 2, apurahakortti 2), seuraava ~00.10; Päätoimittajalle EI ilmoitettu (viestiraja 12). Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
