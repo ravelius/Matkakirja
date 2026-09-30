@@ -69,7 +69,10 @@ namespace Matkakirja.Natiivi
             // Linssi auki (esim. Olavinlinna avattu aloitusvalinnasta): kello pois, ettei se jää linssin "Sulje linssi"
             // -napin alle oikeaan yläkulmaan (Laitetestaaja 1.1 (76) 83763fc7: × osui "Päivä 1/80" -riviin). Kello etenee silti.
             bool linssi = ui != null && ui.Linssit != null && ui.Linssit.Auki != null;
-            bool nayta = (valinta || Pelikello.Lennossa) && !linssi;
+            // Tietoja-kortti (tekijätiedot, Valikot-kerros 40 kellon Traileri-kerroksen 45 alla) auki: kello pois kortin ajaksi
+            // kuten webissä (Laitetestaaja 1.1 (79), savukierros-1179: PÄIVÄ 1/80 piirtyi kortin päälle aloitusvalinnassa).
+            bool tietoja = ui != null && ui.Tietoja != null && ui.Tietoja.Auki;
+            bool nayta = (valinta || Pelikello.Lennossa) && !linssi && !tietoja;
 
             // Häivytys 250 ms (lennon kiihtyvä kello herättää piirron joka tapauksessa).
             float tavoite = nayta ? 1f : 0f;
