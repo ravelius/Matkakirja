@@ -62,11 +62,14 @@ const PISTEEN_PEHMUSTE_PX = 1.5;
  * Kaupungin nimen asu CSS:stä: kirjasin, muste ja halo luetaan
  * koettimella `<svg><text class="karttanimi karttanimi-kaupunki">`
  * kotelosta, jotta tyyli on yksi (css/styles.css .karttanimi). Vara-arvot
- * ovat samat kuin tyylitiedostossa.
+ * ovat samat kuin tyylitiedostossa. `oma` = pelaajan oma kaupunki
+ * (.karttanimi-oma pitää entisen musteen, omistaja 29.9.2026).
  */
-export function lueNimenAsu(kotelo, doc = globalThis.document) {
+export function lueNimenAsu(kotelo, doc = globalThis.document, oma = false) {
   const vara = {
-    kirjasin: KARTTANIMI_FONTTI, muste: 'rgba(103, 88, 73, 0.92)', halo: null, haloLeveys: 0, tyyli: 'normal',
+    kirjasin: KARTTANIMI_FONTTI,
+    muste: oma ? 'rgba(103, 88, 73, 0.92)' : 'rgba(90, 67, 48, 0.75)',
+    halo: null, haloLeveys: 0, tyyli: 'normal',
   };
   if (!doc?.createElementNS || !kotelo?.appendChild) return vara;
   try {
@@ -74,7 +77,7 @@ export function lueNimenAsu(kotelo, doc = globalThis.document) {
     svg.setAttribute('aria-hidden', 'true');
     svg.style.cssText = 'position:absolute;width:1px;height:1px;opacity:0;pointer-events:none';
     const teksti = doc.createElementNS('http://www.w3.org/2000/svg', 'text');
-    teksti.setAttribute('class', 'karttanimi karttanimi-kaupunki');
+    teksti.setAttribute('class', oma ? 'karttanimi karttanimi-kaupunki karttanimi-oma' : 'karttanimi karttanimi-kaupunki');
     teksti.style.fontFamily = KARTTANIMI_FONTTI;
     teksti.textContent = 'x';
     svg.appendChild(teksti);
@@ -97,7 +100,7 @@ export function lueNimenAsu(kotelo, doc = globalThis.document) {
 
 /** Nimen rasterin avain: teksti, koko, asu, ankkuri, dpr. */
 export function nimenAvain(d, dpr) {
-  return `nimi|${d.teksti}|${Number(d.koko).toFixed(2)}|${d.ank ?? 'start'}|${d.tyylitys ?? ''}|${Number(d.vali ?? 0).toFixed(2)}|${dpr}`;
+  return `nimi|${d.teksti}|${Number(d.koko).toFixed(2)}|${d.ank ?? 'start'}|${d.tyylitys ?? ''}|${Number(d.vali ?? 0).toFixed(2)}|${d.oma ? 'oma' : ''}|${dpr}`;
 }
 
 /**
@@ -258,7 +261,7 @@ export function lueKohteenAsu(kotelo, doc = globalThis.document, far = false) {
 export function lueKohteenNimenAsu(kotelo, doc = globalThis.document) {
   const vara = {
     kirjasin: '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif',
-    muste: 'rgba(60, 48, 38, 1)', halo: 'rgba(247, 237, 216, 0.92)', haloLeveys: 3, tyyli: 'normal',
+    muste: 'rgba(90, 67, 48, 0.95)', halo: 'rgba(247, 237, 216, 0.92)', haloLeveys: 3, tyyli: 'normal',
   };
   if (!doc?.createElementNS || !kotelo?.appendChild) return vara;
   try {
@@ -517,7 +520,7 @@ export function luoRasterilahde({
   const valmiit = new Map(); // avain → sprite
   const kesken = new Map(); // avain → Promise
   const tilaajat = new Set();
-  let asu = null;
+  const asut = [null, null]; // [muu kaupunki, pelaajan oma]
   let fontitValmiit = Boolean(doc?.fonts?.status === 'loaded') || !doc?.fonts;
   if (!fontitValmiit) doc.fonts.ready.then(() => { fontitValmiit = true; }).catch(() => { fontitValmiit = true; });
 
@@ -558,8 +561,9 @@ export function luoRasterilahde({
     const avain = nimenAvain(d, dpr);
     if (!fontitValmiit) return { osa: 'nimi', avain, valmis: false };
     return { osa: 'nimi', ...tuotanto(avain, async () => {
-      asu ??= lueNimenAsu(kotelo, doc);
-      return rasteroiNimi(d, asu, dpr, luoKangas ?? undefined);
+      const i = d.oma ? 1 : 0;
+      asut[i] ??= lueNimenAsu(kotelo, doc, Boolean(d.oma));
+      return rasteroiNimi(d, asut[i], dpr, luoKangas ?? undefined);
     }) };
   };
   /*

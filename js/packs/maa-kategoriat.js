@@ -63509,6 +63509,109 @@ export const MAA_KATEGORIAT = {
           + 'kulkevat laivurit erottaisivat kellonajan kaukaa.',
       },
     },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Serbian tiedemiesten jäljet johtavat Belgradin kaduilta Banatin '
+        + 'tasangon kylään: sähkön, kaukopuhelun, jääkausien rytmin ja '
+        + 'karstimaiden salat avautuivat neljälle tutkijalle, joiden kodit ja '
+        + 'työpaikat ovat yhä nähtävissä.',
+      nostot: [
+        {
+          otsikko: 'Teslan huvila Krunska-kadulla',
+          aika: '1952',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-tesla-museo-1bdc6f79.jpg',
+          teksti: 'Belgradin Krunska-kadun huvila valmistui vuonna 1927 Dragiša '
+            + 'Brašovanin suunnitelmien mukaan Đorđe Genčićin kodiksi. Nikola Tesla '
+            + 'syntyi vuonna 1856 Smiljanin kylässä, joka on nykyisin Kroatian '
+            + 'puolella, serbiperheeseen, ja hän kuoli New Yorkissa 1943. Hänen '
+            + 'jäämistönsä kuljetettiin New Yorkista Belgradiin syyskuussa 1951, ja '
+            + 'museo perustettiin 5. joulukuuta 1952. Arkistossa on yli 160 000 '
+            + 'alkuperäistä asiakirjaa, ja se on kirjattu UNESCOn Muisti maailmassa '
+            + '-rekisteriin vuonna 2003. Teslan tuhkat säilytetään museossa '
+            + 'kultaisessa pallossa.',
+          lyhyt: 'Hiekanvärinen huvila, jonka julkisivussa on korinttilaiset pylväät ja '
+            + 'kaareva sisäänkäynti.',
+          selite: 'Nikola Teslan museon rakennus Belgradin Krunska-kadulla. Julkisivua '
+            + 'kehystävät pylväät, ja sisäänkäynnille johtavat kaksi portaikkoa.',
+          lahde: 'Nemezis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Nikola Tesla',
+        },
+        {
+          otsikko: 'Pupinin kylä Banatin tasangolla',
+          aika: '1899',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-pupinin-kansantalo-833a00ae.jpg',
+          teksti: 'Idvorin kylässä Pohjois-Serbian Banatissa syntyi vuonna 1858 Mihajlo '
+            + 'Pupin. Hän valmistui Columbia Collegesta 1883, väitteli Berliinissä '
+            + '1889 ja opetti Columbian yliopistossa vuoteen 1931. Hänen vuonna 1899 '
+            + 'patentoimansa kuormituskela, Pupin-kela, pidensi kaukopuhelujen '
+            + 'kantamaa, ja AT&T osti sen Yhdysvaltain oikeudet. Omaelämäkerta From '
+            + 'Immigrant to Inventor toi hänelle Pulitzer-palkinnon 1924. Idvorin '
+            + 'muistokokonaisuuteen kuuluvat syntymäkoti, koulu ja Pupinin kylälle '
+            + 'lahjoittama Kansantalo, ja kokonaisuus sai poikkeuksellisen tärkeän '
+            + 'kulttuurimonumentin aseman 1990.',
+          lyhyt: 'Vaalea, kolmiopäätyinen talo ja sen viereinen lasipintainen laajennus.',
+          selite: 'Mihajlo Pupinin Kansantalo Idvorissa. Julkisivun kattokehyksen alla on '
+            + 'kyrillinen nimikirjoitus, ja portin yläpuolella on rintakuva.',
+          lahde: 'Mickey Mystique, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mihajlo Pupin',
+        },
+        {
+          otsikko: 'Milankovićin tähtitorni Zvezdaralla',
+          aika: '1887',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-belgradin-observatorio-7c25779c.jpg',
+          teksti: 'Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran '
+            + 'metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. '
+            + 'Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja '
+            + '1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja '
+            + 'prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät '
+            + 'jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, '
+            + 'hän julkaisi saksaksi 1941. Observatorio julistettiin '
+            + 'kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin '
+            + 'robottiteleskooppi kantaa Milankovićin nimeä.',
+          lyhyt: 'Valkoinen kupolirakennus vehreässä puistossa, kupolin katto on '
+            + 'metallia.',
+          selite: 'Belgradin observatorion kupolipaviljonki puiden ympäröimänä. '
+            + 'Rakennuksen etupäädyssä on reliefikuvio, ja sisäänkäynnillä on ruskea '
+            + 'puuovi.',
+          lahde: 'Niegodzisie, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Milutin Milanković',
+        },
+        {
+          otsikko: 'Cvijićin koti karstintutkijan työhuoneena',
+          aika: '1905',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-cvijicin-talo-98a2f503.jpg',
+          teksti: 'Jovan Cvijić syntyi Loznicassa vuonna 1865 ja väitteli Wienin '
+            + 'yliopistossa 1893 aiheenaan karstilmiö, Das Karstphänomen, jota '
+            + 'pidetään karstimorfologian alan uranuurtajana. Hän perusti Serbian '
+            + 'maantieteellisen seuran vuonna 1910 ja johti Serbian kuninkaallista '
+            + 'akatemiaa 1921–1927. Belgradin Jelene Ćetković -kadun talo '
+            + 'rakennettiin 1905, ja hän asui, työskenteli ja kuoli siinä. '
+            + 'Sisätiloissa on Dragutin Inkiostri Medenjakin maalaamia Bosnian, '
+            + 'Šumadijan ja Hertsegovinan maisemia. Talo on toiminut muistomuseona '
+            + '1960-luvulta.',
+          lyhyt: 'Matala vaalea kulmatalo, jonka julkisivua koristavat kohokuviot ja '
+            + 'kadulla seisoo autoja.',
+          selite: 'Jovan Cvijićin entinen koti Belgradissa. Talon julkisivussa on '
+            + 'koristeellisia ikkunakehyksiä ja portti, ja katolla on punaista '
+            + 'tiiltä.',
+          lahde: 'Sadko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Nikola Teslan museo perustettiin Belgradiin?',
+        vaihtoehdot: [
+          '1927',
+          '1943',
+          '1952',
+          '1975',
+        ],
+        oikea: 2,
+        fakta: 'Museo perustettiin 5. joulukuuta 1952, ja Teslan kokoelma oli tuotu '
+          + 'New Yorkista Belgradiin syyskuussa 1951. Vuosi 1927 on huvilan '
+          + 'valmistumisvuosi ja 1943 Teslan kuolinvuosi.',
+      },
+    },
   ],
   ALB: [
     /*
@@ -63703,6 +63806,107 @@ export const MAA_KATEGORIAT = {
           + 'sen valkoisiin taloihin.',
       },
     },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Albanian maisemat mahtuvat pieneen tilaan: korkealla sijaitseva '
+        + 'vuoristojärvi, tuulinen vuoristotie, pelikaanien laguuni ja '
+        + 'meripuiston kalliolahdet. Neljä suojeltua paikkaa kertovat, miten '
+        + 'monenlaista luontoa voi kohdata yhden päivämatkan säteellä.',
+      nostot: [
+        {
+          otsikko: 'Prespajärvi ja sen Maligradin saari',
+          aika: 'vuodesta 1999',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-alb-prespan-jarvi-840d0017.jpg',
+          teksti: 'Suuri Prespajärvi lepää 853 metrin korkeudessa kolmen maan rajalla, ja '
+            + 'Albanian osuus sen 259 neliökilometrin pinta-alasta on 46,3 '
+            + 'neliökilometriä. Albanian puolella järven rannat kuuluvat vuonna 1999 '
+            + 'perustettuun Prespan kansallispuistoon, jonka pinta-ala on noin 276 '
+            + 'neliökilometriä. Pieneltä Maligradin saarelta löytyy paikallisen '
+            + 'aatelismiehen vuonna 1369 rakennuttama Pyhän Marian kirkko. Prespan '
+            + 'vedet purkautuvat karstin maanalaisten kanavien kautta lähteinä '
+            + 'Ohridjärveen, jonka pinta on noin 150 metriä alempana. Ohridjärven '
+            + 'Albanian puolella sijaitsee Pogradec, ja UNESCO ulotti järven '
+            + 'suojelualueen Albanian rannalle vuonna 2019.',
+          lyhyt: 'Prespajärven ranta, Pustecin kylä ja Maligradin saari.',
+          selite: 'Kuvassa näkyvät Pustecin kylä järven rannalla ja Maligradin saari '
+            + 'vuorten ympäröimällä Prespajärvellä.',
+          lahde: 'Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Megáli Préspa',
+        },
+        {
+          otsikko: 'Karavastan laguuni ja pelikaanit',
+          aika: 'vuodesta 2007',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-alb-karavastan-laguuni-324c207d.jpg',
+          teksti: 'Karavastan laguuni levittäytyy Adrianmeren rannikolla Shkumbin- ja '
+            + 'Seman-jokien suiden välissä, ja sen pinta-ala on 41,8 neliökilometriä. '
+            + 'Laguuni syntyi ehkä 1600-luvulla, kun jokien tuoma maa-aines erotti '
+            + 'aiemman lahden merestä. Alue sai Ramsar-suojelun vuonna 1995 ja '
+            + 'kansallispuiston aseman 19. lokakuuta 2007. Divjakë-Karavastan '
+            + 'kansallispuisto kattaa 222,3 neliökilometriä ja noin 35 kilometriä '
+            + 'rannikkoa, ja siellä on suola-ahoja, ruovikoita, dyynejä sekä '
+            + 'aleppomänty- ja pinjametsiä. Puistossa on havaittu 228 lintulajia, ja '
+            + 'noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta '
+            + 'elää täällä.',
+          lyhyt: 'Karavastan laguunin ruohikkoinen ranta ja vene.',
+          selite: 'Laguunin rannalla on ruohikkoa ja kanava, jossa on pieni vene; kaukana '
+            + 'vastarannalla näkyy rakennuksia ja taivaalla pilviä.',
+          lahde: 'Albinfo, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Karavastan laguuni',
+        },
+        {
+          otsikko: 'Llogaran sola Joonianmeren yllä',
+          aika: 'vuodesta 1966',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-alb-llogaran-sola-e77a24d3.jpg',
+          teksti: 'Llogaran solassa tie nousee 1 027 metrin korkeuteen '
+            + 'Ceraunian-vuoristossa, ja kohdalta avautuu näkymä Albanian Rivieralle '
+            + 'ja meren saarille. Ympäröivä Llogaran kansallispuisto perustettiin '
+            + 'vuonna 1966, ja sen pinta-ala on 17,7 neliökilometriä. Puiston korkeus '
+            + 'vaihtelee noin 200 metristä yli 2 000 metriin, ja Maja e Çikës nousee '
+            + '2 045 metriin. Metsissä kasvaa mustamäntyä ja hopeakuusta sekä '
+            + 'lehtipuita, ja seudulla elää muun muassa maakotkia, korppikotkia, '
+            + 'metsäkauriita ja susia. Lähellä oleva Caesarin sola viittaa siihen, '
+            + 'että Julius Caesar ajoi Pompeiusta takaa seudun halki.',
+          lyhyt: 'Tie kiemurtelee vuorenrinnettä kohti Joonianmeren rannikkoa.',
+          selite: 'Näkymä Llogaran solalta: rinteen halki kulkee tie, ja kaukana alhaalla '
+            + 'ovat turkoosi meri ja pitkä hiekkaranta.',
+          lahde: 'Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Karaburun ja Sazan meren rannalla',
+          aika: 'vuodesta 2010',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-alb-karaburun-sazan-4d9179f4.jpg',
+          teksti: 'Karaburun–Sazanin meripuisto perustettiin 28. huhtikuuta 2010 Vlorën '
+            + 'lahden lounaispuolelle, ja sen pinta-ala on noin 12 400 hehtaaria. '
+            + 'Karaburunin niemimaa on noin 24 kilometriä pitkä ja 4–7 kilometriä '
+            + 'leveä, ja sen korkein huippu Maja e Shendelliut nousee 1 499,5 '
+            + 'metriin. Sazanin saari on 4,8 kilometriä pitkä ja 2,7 kilometriä '
+            + 'leveä, ja sen pinta-ala on 5,7 neliökilometriä. Puiston vesillä on '
+            + 'havaittu uhanalaisia lajeja, kuten karettikilpikonna ja Välimeren '
+            + 'munkkihylje. Pohjassa lepää myös antiikin kreikkalaisten ja '
+            + 'roomalaisten alusten hylkyjä.',
+          lyhyt: 'Kirkasvetinen lahti kallioiden ympäröimänä.',
+          selite: 'Vihreänä kimmeltävä merivesi ja kalliot ympäröivät pientä '
+            + 'hiekkarantaa, jossa on kaksi telttaa.',
+          lahde: 'Ehasimja, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Sazan',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä uhanalaisen linnun maailmankannasta noin viisi prosenttia elää '
+          + 'Divjakë-Karavastan kansallispuistossa?',
+        vaihtoehdot: [
+          'Kyhmyjoutsen',
+          'Kiharapelikaani',
+          'Harmaahaikara',
+          'Kuningaskalastaja',
+        ],
+        oikea: 1,
+        fakta: 'Karavastan laguunin ympärillä elää noin viisi prosenttia maailman '
+          + 'uhanalaisesta kiharapelikaanikannasta, ja puistossa on havaittu 228 '
+          + 'lintulajia.',
+      },
+    },
   ],
   MKD: [
     /*
@@ -63881,6 +64085,107 @@ export const MAA_KATEGORIAT = {
           + 'Mečkin Kamenin taistelussa.',
       },
     },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Pohjois-Makedonian pöydässä lämmin ilmasto muuttuu paprikaksi, '
+        + 'pavuiksi, rypäleiksi ja liharuoiksi. Neljä ruokaa vie syksyn '
+        + 'savuisesta ajvarista savipadan ääreen, viinilaaksoihin ja Štipin '
+        + 'uunileipään.',
+      nostot: [
+        {
+          otsikko: 'Ajvar, syksyn punainen purkki',
+          aika: 'syksyisin',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-mkd-ruoka-1-cb4d9bc2.jpg',
+          teksti: 'Ajvar on paahdetuista paprikoista tehty tahna, joka kuuluu koko '
+            + 'Balkanin talvivarastoihin, myös Pohjois-Makedoniassa. Perinteisessä '
+            + 'valmistuksessa kokonaisia paprikoita paahdetaan avotulella, '
+            + 'jäähdytetään, kuoritaan ja perataan, minkä jälkeen liha jauhetaan tai '
+            + 'hienonnetaan. Massaa kypsytetään tuntikausia auringonkukkaöljyssä ja '
+            + 'suolassa, ja valmis tahna suljetaan steriileihin lasipurkkeihin. Työ '
+            + 'tehdään syksyllä, kun paprikat ovat parhaimmillaan, ja purkit kuuluvat '
+            + 'zimnica-nimiseen talviruokavarastoon. Nimi juontuu turkin sanasta '
+            + 'havyar, joka tarkoittaa kaviaaria.',
+          lyhyt: 'Paahdettuja munakoisoja ja paprikoita on levitetty metallilevylle '
+            + 'ulkona.',
+          selite: 'Kuvassa paahdettuja munakoisoja ja vaaleanvihreitä sekä punaisia '
+            + 'paprikoita on levitetty pyöreälle metallilevylle pihalla.',
+          lahde: 'Jasumbe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ajvar',
+        },
+        {
+          otsikko: 'Tavče gravče, papuja padassa',
+          aika: 'kansallisruoka',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-mkd-ruoka-2-68b9c29d.jpg',
+          teksti: 'Tavče gravče tarkoittaa suunnilleen papuja pannulla, ja sitä pidetään '
+            + 'Pohjois-Makedonian kansallisruokana. Pääraaka-aineena ovat isot '
+            + 'voipavut, jotka liotetaan yön yli kylmässä vedessä. Vesi vaihdetaan '
+            + 'kypsennyksen aikana useaan kertaan, ja pavut keitetään kahdesti ennen '
+            + 'paistamista. Sipulia kuullotetaan erikseen jauhojen ja punaisen '
+            + 'paprikajauheen kanssa, ja seos yhdistetään papuihin. Ruoka paistetaan '
+            + 'lasittamattomassa savipadassa 220 asteessa ja tarjotaan kuumana '
+            + 'suoraan padasta, usein kofta-lihapullien ja marinoitujen kasvisten, '
+            + 'torshin, kanssa.',
+          lyhyt: 'Valkoisia papuja on savipadassa, jonka vieressä on kuivattuja '
+            + 'paprikoita.',
+          selite: 'Kuvassa on lasitettu savipata täynnä valkoisia papuja, jossa törröttää '
+            + 'kuivattu punainen paprika. Vieressä ovat leikkuulauta, valkosipulia, '
+            + 'leipää ja kirjailtu liina.',
+          lahde: 'Ivanadukoska, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tikveš, Makedonian viinilaakso',
+          aika: 'yli 2 500 vuotta',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-mkd-ruoka-3-6b862dd4.jpg',
+          teksti: 'Kavadarcin ja Negotinon ympärillä levittäytyvä Tikvešin tasanko on '
+            + 'Pohjois-Makedonian tunnetuin viinialue. Seudulla kerrotaan viiniä '
+            + 'valmistetun yli 2 500 vuotta, ja lämmin, kuiva ilmasto sopii '
+            + 'rypäleille. Paikallisia punaviinilajikkeita ovat vranec ja kratošija, '
+            + 'ja valkoisista tunnetaan smederevka. Viinitarhat ulottuvat Vardar-joen '
+            + 'laaksosta kumpuileville rinteille, ja syksyllä sadonkorjuu täyttää '
+            + 'tilojen pihat. Kavadarcin kaupunki on alueen keskus, ja monet '
+            + 'viinitilat ottavat vieraita vastaan.',
+          lyhyt: 'Viiniköynnösrivejä kukkulaisessa maisemassa Kavadarcin lähellä.',
+          selite: 'Kuvassa näkyy vehreitä viinitarharivejä ja peltolohkoja kumpuilevassa '
+            + 'maisemassa, jossa kaksi hevosta laiduntaa keskellä.',
+          lahde: 'F00700I, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kavadarci',
+        },
+        {
+          otsikko: 'Pastrmajlija, Štipin uunileipä',
+          aika: 'perinneleipä',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-mkd-ruoka-4-40246569.jpg',
+          teksti: 'Pastrmajlija on makedonialainen leipäpiirakka, jonka pohja tehdään '
+            + 'taikinasta ja päälle tulee lihaa, ja lisäksi juustoa ja kananmunaa. '
+            + 'Nimi tulee sanasta pastrma, joka tarkoittaa suolattua ja kuivattua '
+            + 'lampaanlihaa. Lihana käytetään myös savustettua tai kuivattua sikaa ja '
+            + 'siipikarjaa, ja päälle voi tulla kaškavalia, sieniä tai tulisia '
+            + 'marinoituja paprikoita. Leipä on yleensä soikea, ja lihakuutiot '
+            + 'asetetaan sen päälle. Ruoka on suosittu Štipin, Velesin, Sveti '
+            + 'Nikolen, Kratovon ja Negotinon kaupungeissa, ja Štipissä sille on '
+            + 'omistettu vuotuinen Štipska Pastrmalijada -juhla.',
+          lyhyt: 'Soikean pastrmajlijan päällä on lihakuutioita ja kaksi keltaista '
+            + 'paprikaa.',
+          selite: 'Kuvassa on metallivadilla soikea leipä, jonka päällä on ruskeita '
+            + 'lihakuutioita ja kaksi keltaista marinoitua paprikaa.',
+          lahde: 'BlueEagle1, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Štip',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten pavut valmistetaan kansallisruoaksi kutsutussa tavče gravčessa?',
+        vaihtoehdot: [
+          'Savustetaan kokonaisina avotulella',
+          'Haudutetaan kuoressaan hiilloksella',
+          'Paistetaan 220 asteessa savisessa padassa',
+          'Keitetään suolaliemessä ja tarjotaan kylmänä',
+        ],
+        oikea: 2,
+        fakta: 'Tavče gravčen pavut liotetaan ja keitetään ensin, minkä jälkeen ne '
+          + 'paistetaan perinteisessä lasittamattomassa savipadassa noin 220 asteen '
+          + 'lämmössä.',
+      },
+    },
   ],
   MNE: [
     /*
@@ -64055,6 +64360,104 @@ export const MAA_KATEGORIAT = {
         oikea: 1,
         fakta: 'Oktoih prvoglasnik valmistui Obodin kirjapainosta 4. tammikuuta 1494 Đurađ '
           + 'Crnojevićin ja munkki Makarijen johdolla.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Montenegron luonto ulottuu Balkanin suurimman järven pelikaaneista '
+        + 'jäätiköiden veistämiin vuoriin, joiden huiput nousevat yli 2 500 '
+        + 'metrin. Neljä nostoa vie Durmitorin matalasta vuorijärvestä '
+        + 'Skutarijärven kosteikkoon ja sieltä Prokletijen ja Bjelasican '
+        + 'vuorille.',
+      nostot: [
+        {
+          otsikko: 'Barnojärvi, vuoren silmä joka katoaa',
+          aika: 'jääkauden perua',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-mne-durmitor-barno-82b3236b.jpg',
+          teksti: 'Durmitorin massiivissa on 18 jäätikköjärveä, joita kutsutaan nimellä '
+            + 'gorske oči eli vuoren silmät. Barnojärvi on yksi niistä, ja se '
+            + 'sijaitsee 1 489 metrin korkeudessa lähellä tunnetumpaa Mustaajärveä. '
+            + 'Se on kuitenkin outo silmä: syvimmillään vettä on vain noin metri, ja '
+            + 'rannat ovat tiheää kosteikkokasvillisuutta. Kesällä veden pintaa ei '
+            + 'usein näe lainkaan, sillä järvi rajoittuu turvesuohon ja vesi on '
+            + 'tummaa. Durmitorin alue on ollut Unescon maailmanperintökohde vuodesta '
+            + '1980, ja noin kymmenen kilometrin kolmen järven kierros yhdistää '
+            + 'Barnon Mustaanjärveen ja Zminje-järveen.',
+          lyhyt: 'Ruovikon ja kelluvien lehtien peittämä järvi kuusimetsän reunassa.',
+          selite: 'Kuvassa Barnojärven matala vesi on täynnä kaislaa ja kelluvia lehtiä, '
+            + 'ja taustalla nousee tumma havumetsä.',
+          lahde: 'Alexkom000, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Durmitorin kansallispuisto',
+        },
+        {
+          otsikko: 'Pelikaanien järvi, joka hengittää',
+          aika: 'vuodesta 1983',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-mne-skadar-pelikaanit-b6f7a51c.jpg',
+          teksti: 'Skutarijärvi on Balkanin suurin järvi, ja siitä noin kaksi kolmasosaa '
+            + 'kuuluu Montenegrolle. Järven pinta-ala vaihtelee vuodenaikojen mukaan '
+            + '370 ja 530 neliökilometrin välillä, mutta syvimmilläänkin vettä on '
+            + 'vain noin 44 metriä. Montenegron puoli sai kansallispuiston aseman '
+            + 'vuonna 1983, ja alueella on tavattu noin 270 lintulajia sekä 34 '
+            + 'alkuperäistä kalalajia, joista seitsemän on järven omia. Tunnetuimpia '
+            + 'asukkaita ovat kiharapelikaanit, joiden siipiväli voi ylittää kolme '
+            + 'metriä. Järven vedestä noin 62 prosenttia tulee Morača-joesta, ja '
+            + 'Buna-joki laskee järvestä Adrianmerelle.',
+          lyhyt: 'Kolme pelikaania lentää järven yllä vuorten edessä.',
+          selite: 'Kuvassa kolme pelikaania lentää matalalla Skutarijärven pinnan yllä, '
+            + 'ja taustalla näkyvät vuorten rinteet sekä pieni retkivene.',
+          lahde: 'Oktoober, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Skutarijärvi',
+        },
+        {
+          otsikko: 'Zla Kolata, Montenegron korkein huippu',
+          aika: 'vuodesta 2009',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-mne-prokletije-zla-kolata-a680118f.jpg',
+          teksti: 'Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, '
+            + 'vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on '
+            + 'Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa '
+            + 'kirottuja, ja vuoriston Montenegron puolelle perustettiin '
+            + 'kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 '
+            + 'hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien '
+            + 'mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä '
+            + 'pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on '
+            + 'vajaat 300 metriä pitkä.',
+          lyhyt: 'Zla Kolatan jyrkkä huippu nousee sinistä taivasta vasten.',
+          selite: 'Kuvassa näkyy Zla Kolatan huippu koillisesta katsottuna: harmaita '
+            + 'kalliojyrkänteitä, joiden lomassa kasvaa ruohoa.',
+          lahde: 'Pavouk, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Prokletije',
+        },
+        {
+          otsikko: 'Pešićan jäätikköjärvi Bjelasican rinteellä',
+          aika: 'jääkauden perua',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-mne-bjelasica-pesica-0d56ed75.jpg',
+          teksti: 'Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna '
+            + 'Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja '
+            + 'siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. '
+            + 'Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä '
+            + 'pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. '
+            + 'Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, '
+            + 'joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat '
+            + 'Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus '
+            + 'houkuttaa vuorelle myös talvella.',
+          lyhyt: 'Vuoristojärvi laakson pohjalla, taustalla ruohoinen huippu.',
+          selite: 'Kuvassa Pešićan tyyni järvi reunustaa metsikköä, ja sen takana nousee '
+            + 'vihreä, kallioinen vuorenrinne.',
+          lahde: 'Vuk Pajković, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä joki tuo suurimman osan Skutarijärven vedestä?',
+        vaihtoehdot: [
+          'Buna',
+          'Morača',
+          'Tara',
+          'Lim',
+        ],
+        oikea: 1,
+        fakta: 'Morača tuo noin 62 prosenttia Skutarijärven vedestä. Buna on '
+          + 'päinvastoin järven laskujoki, joka vie veden Adrianmerelle.',
       },
     },
   ],
@@ -64235,6 +64638,104 @@ export const MAA_KATEGORIAT = {
           + '1918 - 86 edustajaa puolesta, 3 vastaan.',
       },
     },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Moldovan pöydässä maissipuuro, käärityt piirakat ja kukkuloiden viinit '
+        + 'kuuluvat yhteen. Neljä nostoa kulkee valurautapadan ääreltä '
+        + 'lautaselle, ja sieltä viinitilan linnamaisen rakennuksen kautta '
+        + 'viinitarhojen rinteille.',
+      nostot: [
+        {
+          otsikko: 'Maissipuuro, jota leikataan langalla',
+          aika: '1500-luvulta',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-mda-ruoka-1-a7aeb11c.jpg',
+          teksti: 'Mămăligă on keltaisesta maissijauhosta keitetty puuro, jota syödään '
+            + 'Moldovassa, Romaniassa, Unkarissa ja Ukrainassa. Ennen kuin maissi '
+            + 'levisi Eurooppaan 1500-luvulla, samaa ruokaa tehtiin hirssijauhosta. '
+            + 'Perinteisesti vesi, suola ja jauho keitetään valurautaisessa padassa, '
+            + 'ja leipää korvaavasta paksusta puurosta viipaleet leikataan '
+            + 'ompelulangalla veitsen sijaan. Lautasella seurana on usein tochitură, '
+            + 'omassa rasvassaan haudutettu sianliha, sekä paistettu kananmuna ja '
+            + 'suolainen lampaanjuusto. Nälkävuosina 1600- ja 1700-luvuilla puuro '
+            + 'auttoi torjumaan nälänhätää.',
+          lyhyt: 'Sianlihakuutioita, juustoraastetta ja kananmunaa mămăligă-viipaleiden '
+            + 'vieressä.',
+          selite: 'Lautasella on moldovalaista tochituraa: ruskeita sianlihakuutioita, '
+            + 'juustoraastetta ja kananmunaa sekä keltaisia mămăligă-viipaleita.',
+          lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Mămăligă',
+        },
+        {
+          otsikko: 'Plăcinte ja kiekuraksi käärity vertută',
+          aika: 'Antiikin ajoilta',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-mda-ruoka-2-c2684f83.jpg',
+          teksti: 'Plăcintă on romanialainen ja moldovalainen piirakka, jonka nimi tulee '
+            + 'latinan sanasta placenta, kakku. Antiikin Roomassa suuri levy '
+            + 'leikattiin neliöiksi ja myytiin paloina, ja Romaniassa piirakat '
+            + 'leikataan yhä samaan tapaan annoksiksi. Täytteeksi kelpaavat '
+            + 'esimerkiksi pehmeä urdajuusto, peruna, kaali ja omena, tai ricotta '
+            + 'tillin tai rusinoiden kanssa. Moldovalaisessa vertutassa hyvin ohueksi '
+            + 'venytetty taikina kääritään ja kierretään kiekuraksi, jollainen näkyy '
+            + 'kuvassa. Piirakoita leivotaan sekä suolaisina että makeina.',
+          lyhyt: 'Kullanruskeaksi paistettu kiekuralle käärity piirakka valkoisella '
+            + 'lautasella.',
+          selite: 'Kuvassa on ylhäältä kuvattu moldovalainen vertută-piirakka, joka on '
+            + 'kiertynyt spiraaliksi ja paistettu kiiltävän kullanruskeaksi.',
+          lahde: 'Bapak Alex, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Purcarin tila ja Negru de Purcari',
+          aika: 'vuodesta 1827',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-mda-ruoka-3-ce8e8d48.jpg',
+          teksti: 'Purcarin kylä on Ștefan Vodăn piirikunnassa Moldovan kaakkoisosassa. '
+            + 'Vuonna 1827 Venäjän keisari Nikolai I antoi asetuksen, jolla Purcarin '
+            + 'tila sai Bessarabian ensimmäisen erikoistuneen viinitilan aseman. Tila '
+            + 'sai tunnustusta Pariisin maailmannäyttelyssä 1878. Sen tunnetuin viini '
+            + 'on Negru de Purcari, jossa on 70 prosenttia cabernet sauvignonia, 25 '
+            + 'prosenttia saperavia ja 5 prosenttia rară neagrăa. Tuotanto seisoi '
+            + 'Neuvostoliiton hajoamisen jälkeen kymmenen vuotta ja käynnistyi '
+            + 'uudelleen 2003; nyt tilalla on yli 260 hehtaaria viinitarhoja.',
+          lyhyt: 'Viinitilan vaalea torni ja linnamainen rakennus kohoavat lammen takana '
+            + 'kukkulalla.',
+          selite: 'Purcarin viinitilan rakennus torneineen kohoaa vehreän kukkulan '
+            + 'päällä, ja etualalla on ruovikkoinen lampi.',
+          lahde: 'Gikü, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Viinitarhojen Moldova',
+          aika: '1960',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-mda-ruoka-4-722a98ef.jpg',
+          teksti: 'Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 '
+            + 'prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 '
+            + 'prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria '
+            + 'istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli '
+            + 'kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella '
+            + 'historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan '
+            + 'Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 '
+            + 'maahan, ja 60 prosenttia tuotannosta meni EU-maihin.',
+          lyhyt: 'Syksyn värittämiä viiniköynnösrivejä rinteellä ja avara maisema '
+            + 'taustalla.',
+          selite: 'Viinitarharivit nousevat rinteelle Bulboacan lähellä auringonlaskun '
+            + 'valossa, ja kauempana levittäytyy laakso kylineen.',
+          lahde: 'Nixalsverdrus, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Viininviljely',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Millä perinteisesti leikataan paksusta mămăligă-puurosta viipaleet?',
+        vaihtoehdot: [
+          'Terävällä veitsellä',
+          'Ompelulangalla',
+          'Puulusikalla',
+          'Lasin reunalla',
+        ],
+        oikea: 1,
+        fakta: 'Leipää korvaavasta paksusta mămăligăsta viipaleet leikataan '
+          + 'perinteisesti ompelulangalla veitsen sijaan. Puuro keitetään vedestä, '
+          + 'suolasta ja maissijauhosta valurautaisessa padassa.',
+      },
+    },
   ],
   BLR: [
     /*
@@ -64413,6 +64914,103 @@ export const MAA_KATEGORIAT = {
         fakta: 'Napoleonin Grande Armée ylitti jäisen Berezina-joen 26.-29. marraskuuta '
           + '1812 paetessaan Venäjältä; tapahtumasta tuli ranskan kieleen synonyymi '
           + 'täydelliselle katastrofille.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Valko-Venäjän luonto on vettä, turvetta ja metsää: järviä on noin 4 '
+        + '000, ja Pripjatin tulvat yltävät jopa 30 kilometrin levyisiksi. Neljä '
+        + 'nostoa vie Narachille, Pripjatin niityille, Berezinan erämaahan ja '
+        + 'Jelnjan suolle.',
+      nostot: [
+        {
+          otsikko: 'Narach, maan suurin järvi',
+          aika: 'vuodesta 1999',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-blr-luonto-1-c5acedb0.jpg',
+          teksti: 'Narach on Valko-Venäjän suurin järvi: sen pinta-ala on 79,6 '
+            + 'neliökilometriä ja pituus 12,8 kilometriä. Suurin syvyys on 24,8 '
+            + 'metriä, keskisyvyys 8,9 metriä ja rantaviivaa kertyy 41 kilometriä. '
+            + 'Järvi syntyi noin 11 000 vuotta sitten jääkauden jälkeen, ja sitä '
+            + 'ympäröivät mäntymetsät. Vuonna 1999 sen ympärille perustettiin '
+            + 'Narachin kansallispuisto, joka kattaa yli 87 000 hehtaaria. Puiston '
+            + 'lintuja ovat esimerkiksi kaulushaikara, kalasääski ja kurki, ja '
+            + 'rannoilla sekä saarekkeilla pesii kyhmyjoutsenia, kun taas järven '
+            + 'kalastoon kuuluvat muun muassa ankerias, hauki ja made.',
+          lyhyt: 'Tyyni Narach-järvi peilaa pilviä, ja horisontissa häämöttää matala '
+            + 'vastaranta.',
+          selite: 'Järven tyyni pinta peilaa irrallisia pilviä, ja kaukana näkyy matala, '
+            + 'metsäinen vastaranta.',
+          lahde: 'Blackgrif, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pripjatin tulvaniityt',
+          aika: 'vuodesta 1996',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-blr-luonto-2-9d27bceb.jpg',
+          teksti: 'Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien '
+            + 'suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. '
+            + 'Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus '
+            + 'jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee '
+            + 'Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut '
+            + 'jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, '
+            + 'ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja '
+            + 'villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. '
+            + 'maaliskuuta 2013.',
+          lyhyt: 'Korkean ruohon peittämä tulvaniitty, jossa kukkii vaaleanpunainen '
+            + 'kukka.',
+          selite: 'Tulvaniitty Pripjatin kansallispuistossa: etualalla kasvaa korkeaa '
+            + 'ruohoa ja yksi vaaleanpunainen kukka, kaukana näkyy puurivi.',
+          lahde: 'Tassia24, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Berezinan biosfäärialue',
+          aika: 'vuodesta 1925',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-blr-luonto-3-65623847.jpg',
+          teksti: 'Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 '
+            + 'suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut '
+            + 'biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 '
+            + 'kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. '
+            + 'Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki '
+            + '100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 '
+            + 'lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, '
+            + 'hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue '
+            + 'nimettiin 2010.',
+          lyhyt: 'Berezina-joki mutkittelee keväällä tulvivien rantaniittyjen halki.',
+          selite: 'Kevättulva täyttää Berezinan rantaniityt vedellä, ja joen molemmilla '
+            + 'puolilla kasvaa lehtipuita ja pensaita.',
+          lahde: 'Xutpoctb, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bjarezinan biosfäärialue',
+        },
+        {
+          otsikko: 'Jelnjan suo, laaja suokompleksi',
+          aika: 'vuodesta 1968',
+          osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-blr-luonto-4-25050c39.jpg',
+          teksti: 'Jelnjan suo Vitebskin alueella on Valko-Venäjän laajin suokompleksi: '
+            + 'sen pinta-ala on 253,01 neliökilometriä, ja sen arvioidaan olevan yli '
+            + '9 000 vuotta vanha. Maisemansuojelualue Jelnja perustettiin 1968, ja '
+            + 'se nimettiin Ramsar-kosteikoksi 21. lokakuuta 2002. Suolla kasvaa yli '
+            + '405 kasvilajia, joista 13 on uhanalaisia, ja siellä elää noin 150 '
+            + 'lintulajia. Noin 50 kurkiparia pesii alueella, ja suon ympärillä on '
+            + 'moreeni- ja järvimaisemaa lukuisine järvineen. Suo on pysähdyspaikka '
+            + 'pohjoisesta muuttaville linnuille, jotka talvehtivat muun muassa '
+            + 'Israelissa ja Pohjois-Afrikassa.',
+          lyhyt: 'Harvoja mäntyjä ja koivuja suon reunalla harmaata taivasta vasten.',
+          selite: 'Suon reunalla kasvaa harvakseltaan mäntyjä ja koivuja, joista osa on '
+            + 'kuollut, ja taivas on pilvinen.',
+          lahde: 'Alex A, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka syvä Narach-järvi on syvimmästä kohdastaan?',
+        vaihtoehdot: [
+          '8,9 metriä',
+          '24,8 metriä',
+          '46 metriä',
+          '79,6 metriä',
+        ],
+        oikea: 1,
+        fakta: 'Narachin suurin syvyys on 24,8 metriä, mutta keskisyvyys vain 8,9 '
+          + 'metriä. Luku 79,6 on järven pinta-ala neliökilometreinä.',
       },
     },
   ],
