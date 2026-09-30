@@ -11,7 +11,7 @@ const TAULU_KEITTIO = {
     { teksti: 'Keittiö oli pienellä linnanpihalla; valtavassa liedessä paloi avotuli aamusta iltaan.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420)' },
     { teksti: 'Ruoka valmistettiin isoissa padoissa, ja linnassa syötiin paljon kalaa ja kasviksia.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420); Apu: Suomen keskiaikaiset kivilinnat 6/6' },
     // Sisältökirjuri 29.9. (era4): entinen "ruokki koko linnaväen" oli tulkinta; ääni tehdään uudelleen hyväksynnän jälkeen.
-    { teksti: 'Vouti ja seurue söivät ylhäällä Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420)' },
+    { teksti: 'Vouti ja seurue söivät yläsalissa, sotilaat ja käsityöläiset Linnantuvassa.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420)' },
   ],
 };
 
@@ -90,7 +90,7 @@ export const TILA = {
      atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea',
     // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
-    teksti: 'Keittiö oli pienellä linnanpihalla. Valtavassa liedessä paloi avotuli aamusta iltaan, ja ruoka valmistettiin isoissa padoissa. Linnassa syötiin paljon kalaa ja kasviksia; vouti seurueineen söi ylhäällä Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa. Minä olisin tyytynyt muruihin.', aani: null },
+    teksti: 'Keittiö oli pienellä linnanpihalla. Valtavassa liedessä paloi avotuli aamusta iltaan, ja ruoka valmistettiin isoissa padoissa. Linnassa syötiin paljon kalaa ja kasviksia; vouti seurueineen söi yläsalissa, sotilaat ja käsityöläiset Linnantuvassa. Minä olisin tyytynyt muruihin.', aani: null },
   taulu: TAULU_KEITTIO,
   // Elävä linna (29.9.): yleisnäkymän napautuskohde pihan puolen julkisivulla (ikkunasta kajastaa tuli); ensimmäisen
   // käynnin sykkivä vihje on tässä.

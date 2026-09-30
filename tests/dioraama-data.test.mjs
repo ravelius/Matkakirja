@@ -465,10 +465,11 @@ test('Olavinlinna: kuunnelmat (kohtaus = rivijono), puhujat ratkeavat, Pulu viim
   }
 });
 
-test('Olavinlinna: ei anakronismia "iltamessu" (keskiajalla iltarukous)', async () => {
+test('Olavinlinna: ei asia-anakronismeja (iltamessu → iltarukous, Introibo → Dominus vobiscum, Kuninkaan sali → yläsali)', async () => {
   const { readFileSync, readdirSync } = await import('node:fs');
   const juuri = new URL('../js/dioraama/rakennukset/olavinlinna/', import.meta.url);
   for (const f of readdirSync(juuri).filter((x) => x.endsWith('.js'))) {
-    assert.ok(!/iltamess/i.test(readFileSync(new URL(f, juuri), 'utf8')), f);
+    const teksti = readFileSync(new URL(f, juuri), 'utf8');
+    for (const kielletty of [/iltamess/i, /introibo/i, /kuninkaan sali/i]) assert.ok(!kielletty.test(teksti), `${f}: ${kielletty}`);
   }
 });

@@ -106,7 +106,7 @@ const KAPPELI_HAHMOT = [
     id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.35, LATTIA, -20.8], suunta: 90, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'kappalainen-1', teksti: 'Introibo ad altare Dei. Menen Jumalan alttarille, ja ääni alas, jos sallitte.' },
+      { id: 'kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
       { id: 'kappalainen-2', teksti: 'Vahakynttilä on kallis, siksi ne palavat vain messun ajan, eivät päivän mittaa.' },
     ],
     reaktio: { id: 'pulu-kappalainen-r1', teksti: 'Latinaa! En ymmärrä sanaakaan, mutta kaiku tekee siitä aivan taivaallista.' },
