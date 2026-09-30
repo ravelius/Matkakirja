@@ -4604,3 +4604,13 @@
     -unity-slice-bottom: 47;
     -unity-slice-scale: 0.3333;
 }
+
+/* MAC-TUNTUMA (Natiivi-UI 30.9.2026, omistaja: "pehmeämpää kuten natiivissa mac apissa"): osoittimen alla oleva nappi
+   korostuu hieman (vain Macilla: MacSyote lisää juuriin .mk-mac; iPadin kosketukseen ei jää tahmeaa hoveria). */
+.mk-mac .mk-nappi:hover,
+.mk-mac .mk-ikoninappi:hover,
+.mk-mac .mk-linssirivi:hover {
+    scale: 1.03 1.03;
+    transition-property: scale;
+    transition-duration: 0.12s;
+}
