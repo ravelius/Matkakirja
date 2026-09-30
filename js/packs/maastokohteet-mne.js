@@ -159,4 +159,107 @@ export const MAASTOKOHTEET_MNE = [
       + 'jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.',
     lahde: 'en-Wikipedia "Biogradska Gora National Park", johdanto (tarkistettu 30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ B, 30.9.2026 — 3 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'stari-bar',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-stari-bar-fe0ea1c7.jpg',
+      lyhyt: 'Kellotorni ja kivimuurien rauniot, taustalla laakso.',
+      selite: 'Kivinen kellotorni kohoaa kasvillisuuden peittämien muurinjäänteiden yläpuolelta. Taustalla näkyvät laakso, kaupungin rakennuksia ja vuoria.',
+      lahde: 'Valokuva: Fabio Gargano, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Fabio Gargano',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stari_Bar_Veduta.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Stari Bar',
+    nimio: 'Stari Bar',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka korkealla Stari Bar sijaitsee?',
+      'Mikä rakennelma kunnostettiin, minkä jälkeen ihmiset ovat alkaneet palata?',
+    ],
+    korostukset: ['akveduktin|akveduktin'],
+    nappi: 'Rauniokaupunki vuoren rinteellä',
+    // 19.1264 E / 42.0872 N — en-Wikipedia "Stari Bar", osiot "Geography" ja "History"
+    laudat: {
+      maailmankartta: { x: 6470.9, y: 1720.1 },
+    },
+    teksti: 'Stari Bar on raunioitunut keskiaikainen kaupunki Montenegrossa, noin kolmen '
+      + 'kilometrin päässä Adrianmeren rannikolla sijaitsevasta uudesta Barista. Se seisoo '
+      + 'vuoren rinteellä 184 metrin korkeudessa. Varhaisella keskiajalla paikka kuului '
+      + 'Bysantille, ja Stefan Vojislav liitti sen valtaansa noin vuonna 1040. Kaupunki '
+      + 'tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 maanjäristys '
+      + 'vaurioitti raunioita uudelleen. Osmanniajan akveduktin kunnostuksen jälkeen ihmiset '
+      + 'ovat alkaneet palata alueelle.',
+    lahde: 'en-Wikipedia "Stari Bar", osiot "Geography" ja "History" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'plavjarvi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-plavjarvi-33637e92.jpg',
+      lyhyt: 'Plavjärven tyyni pinta heijastaa rantakylän ja vuoret.',
+      selite: 'Tyyni järvi peilaa sinistä taivasta, rantakylän taloja ja metsäisiä vuorenrinteitä.',
+      lahde: 'Valokuva: Андрей Романенко, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Андрей Романенко',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Plav_Lake_in_Montenegro_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Plavjärvi',
+    nimio: 'Plavjärvi',
+    tyyppi: 'jarvi',
+    kysymykset: [
+      'Minkä vuoriston juurella Plavjärvi on?',
+      'Mihin jokeen Plavjärven vesi virtaa?',
+    ],
+    korostukset: ['Lim-jokeen|Lim-jokeen'],
+    nappi: 'Järvi Kirottujen vuorten juurella',
+    // 19.925 E / 42.5958 N — en-Wikipedia "Plav Lake", johdanto ja yleiskuvaus
+    laudat: {
+      maailmankartta: { x: 6497.5, y: 1699.7 },
+    },
+    teksti: 'Plavjärvi sijaitsee Montenegron koillisosassa Plavin kunnassa Prokletijen eli '
+      + 'Kirottujen vuorten ja Visitor-vuoriston välissä. Sen pinta-ala on noin 1,99 km², '
+      + 'pituus noin 2,2 km ja pinta 906 metrin korkeudessa. Järvi on matala, '
+      + 'keskisyvyydeltään vain noin yhdeksän metriä, ja sen pohjassa on kalkkikiviluolia '
+      + 'sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Vesi virtaa pois Lim-jokeen.',
+    lahde: 'en-Wikipedia "Plav Lake", johdanto ja yleiskuvaus (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'lovcen-njegosin-mausoleumi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-lovcen-njegosin-mausoleumi-a40c0b5e.jpg',
+      lyhyt: 'Mausoleumin sisäpiha ja kaksi kantajapatsasta.',
+      selite: 'Harmaakivinen sisäpiha, jonka perällä kaksi kansallispukuista kantajapatsasta vartioi oviaukkoa.',
+      lahde: 'Valokuva: Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ingo Mehling',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Njego%C5%A1_mausoleum.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Lovćen ja Njegošin mausoleumi',
+    nimio: 'Lovćen',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka suunnitteli nykyisen mausoleumin?',
+      'Minkä huipun päällä mausoleumi seisoo?',
+    ],
+    korostukset: ['Jezerski Vrh|Jezerski Vrh'],
+    nappi: 'Hautapaikka vuoren huipulla',
+    // 18.8184 E / 42.3991 N — en-Wikipedia "Mausoleum of Njegoš" ja "Lovćen"
+    laudat: {
+      maailmankartta: { x: 6460.6, y: 1707.6 },
+    },
+    teksti: 'Njegošin mausoleumi seisoo Lovćenin vuoren Jezerski Vrh -huipulla, 1 657 metrin '
+      + 'korkeudessa. Cetinjestä sinne johtaa noin 21 kilometrin asfalttitie. Petar II '
+      + 'Petrović-Njegoš suunnitteli huipulle kappelin vuonna 1845 ja valitsi paikan itse '
+      + 'hautapaikakseen; hänen jäännöksensä siirrettiin vuorelle 1855. Kappeli vaurioitui '
+      + 'ensimmäisessä maailmansodassa, rakennettiin uudelleen 1925 ja purettiin 1960-luvun '
+      + 'lopulla. Ivan Meštrovićin suunnittelema nykyinen mausoleumi vihittiin käyttöön 1974, '
+      + 'ja sen sisäänkäyntiä kantavat patsaat esittävät montenegrolaisia.',
+    lahde: 'en-Wikipedia "Mausoleum of Njegoš" ja "Lovćen" (tarkistettu 30.9.2026).',
+  },
 ];

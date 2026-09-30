@@ -122,4 +122,43 @@ export const MAASTOKOHTEET_MKD = [
     lahde: 'en-Wikipedia "Stobi", osiot "History", "Ruins" ja "Excavations" (tarkistettu '
       + '30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ B, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'herakleia-lynkestis',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-herakleia-lynkestis-29638901.jpg',
+      lyhyt: 'Herakleia Lynkestiksen kylpylän kiviraunioita vuoristomaisemassa.',
+      selite: 'Kuvassa on antiikin kylpylän kivi- ja tiilimuureja, joiden takana näkyy pylväitä ja vuoria.',
+      lahde: 'Valokuva: Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Marcin Konsek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2011_Bitola,_Heraclea_Lyncestis_(01).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Herakleia Lynkestis',
+    nimio: 'Herakleia',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka perusti Herakleia Lynkestiksen?',
+      'Minkä antiikin tien varrella kaupunki sijaitsi?',
+    ],
+    korostukset: ['Via Egnatian|Via Egnatian'],
+    nappi: 'Via Egnatian varren mosaiikkikaupunki',
+    // 21.3425 E / 41.0108 N — en-Wikipedia "Heraclea Lyncestis", osiot "History" ja "Archaeology"
+    laudat: {
+      maailmankartta: { x: 6544.8, y: 1763 },
+    },
+    teksti: 'Herakleia Lynkestis on antiikin kaupungin arkeologinen kohde noin kaksi kilometriä '
+      + 'Bitolan keskustasta etelään Pohjois-Makedoniassa. Makedonian kuningas Filippos II '
+      + 'perusti kaupungin 300-luvun eaa. puolivälissä, ja se nimettiin Heraklesin mukaan. '
+      + 'Roomalaisaikana kaupunki menestyi Via Egnatian varrella, joka yhdisti Bysantionin ja '
+      + 'Adrianmeren rannikon. Kohteessa on teatteri sekä pieni ja suuri basilika, ja suuren '
+      + 'basilikan narteksin lattiamosaiikki on 500-luvulta, mutta kaupunki autioitui '
+      + 'vähitellen vuoden 518 maanjäristyksen ja noin vuoden 585 slaavien hyökkäysten '
+      + 'jälkeen.',
+    lahde: 'en-Wikipedia "Heraclea Lyncestis", osiot "History" ja "Archaeology" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];
