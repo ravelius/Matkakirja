@@ -222,7 +222,7 @@ namespace Matkakirja.Natiivi
         readonly Label reliefiTila;
 
         /// <summary>Webin maailmanapin viivaikoni (index.html #kehittaja-maailma-btn).</summary>
-        const string Maapallo = "<circle cx=\"12\" cy=\"12\" r=\"7.5\"/><path d=\"M4.5 12h15\"/><path d=\"M12 4.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15z\"/>";
+        public const string Maapallo = "<circle cx=\"12\" cy=\"12\" r=\"7.5\"/><path d=\"M4.5 12h15\"/><path d=\"M12 4.5a11 11 0 0 1 0 15 11 11 0 0 1 0-15z\"/>";
         const string MaailmaAvain = "matkakirja-kehittaja-maailma";
         readonly Button maailma;
         readonly Label maailmaTila;

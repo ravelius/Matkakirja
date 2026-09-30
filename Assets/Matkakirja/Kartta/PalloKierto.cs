@@ -1185,6 +1185,7 @@ namespace Matkakirja
                     liuku = vetoNopeus;
                 }
                 vetoNopeus = 0;
+                MacLiuku(dt);
                 if (math.lengthsq(liuku) > 1e-4)
                 {
                     Siirra(liuku * dt);
@@ -1218,36 +1219,83 @@ namespace Matkakirja
         // ---- MAC-SYÖTE (UI/MacSyote.cs, iPad-sovellus Macilla; omistaja 30.9.2026) ----
         // Ohjauslevyn kahden sormen veto panoroi kuten yhden sormen veto, nipistys ja hiiren rulla zoomaavat osoittimen
         // kohtaan. Pikselit Unityn ruudussa (origo vasen alakulma). Samat rajat kuin sormilla (EleKatto, RajaaMaahan).
+        // LIUKU (omistaja 30.9. klo 22.3x: "jatkaisi pallon pyöritystä kuten ipadilla. nyt pysähtyy heti seinään" ja
+        // nipistykseen "sama liuku"): ohjauslevyn tapahtumista mitataan nopeus (sama 50 ms:n keskiarvo kuin Kierrassa);
+        // kun tapahtumat loppuvat (MacTaukoS), panorointi jatkuu liukuna (liuku, liukuAika kuten sormella) ja nipistys
+        // zoomiliukuna samalla vaimennuksella. Nipistys hitaammaksi (MacNipistysHerkkyys, "aivan liian nopeasti").
+        const double MacTaukoS = 0.08, MacNipistysHerkkyys = 0.45;
         float macEle = -10f;
+        double macViime = -10, macZoomNopeus, macZoomLiuku;
+        double2 macNopeus;
+        float2 macZoomPiste;
 
         void MacKosketus()
         {
             ajo = null;
             liuku = 0;
+            macZoomLiuku = 0;
             kosketettu = true;
             if (Time.unscaledTime - macEle > 0.3f) PelaajanEle?.Invoke();
             macEle = Time.unscaledTime;
+            macViime = Time.unscaledTimeAsDouble;
         }
 
-        /// <summary>Panorointi pikseleinä (maa seuraa sormia kuten vedossa). False, jos syöte on estetty.</summary>
-        public bool MacPanoroi(float2 pikselit)
+        /// <summary>Panorointi pikseleinä (maa seuraa sormia kuten vedossa); dt = aika edellisestä tapahtumasta (s).</summary>
+        public bool MacPanoroi(float2 pikselit, double dt = 0)
         {
             if (syoteEstetty) return false;
             MacKosketus();
+            var ennen = new double2(pituus, leveys);
             Kierra(pikselit, 0);
+            var muutos = new double2(Kiedo(pituus - ennen.x), leveys - ennen.y);
+            if (dt > 0) macNopeus = math.lerp(macNopeus, muutos / dt, 1.0 - math.exp(-dt / 0.05));
             return true;
         }
 
-        /// <summary>Zoomaus osoittimen kohtaan: kerroin > 1 lähemmäs. Osoittimen alla oleva maa pysyy paikallaan.</summary>
-        public bool MacZoomaa(double kerroin, float2 piste)
+        /// <summary>
+        /// Zoomaus osoittimen kohtaan: kerroin > 1 lähemmäs. Osoittimen alla oleva maa pysyy paikallaan. nipistys = ohjauslevyn
+        /// nipistys (hidastettu, liukuu perään); rulla ilman liukua.
+        /// </summary>
+        public bool MacZoomaa(double kerroin, float2 piste, double dt = 0, bool nipistys = false)
         {
             if (syoteEstetty || !(kerroin > 0) || !(korkeus > 0)) return false;
             MacKosketus();
+            if (nipistys) kerroin = math.pow(kerroin, MacNipistysHerkkyys);
+            ZoomaaPisteeseen(kerroin, piste);
+            if (nipistys)
+            {
+                macZoomPiste = piste;
+                if (dt > 0) macZoomNopeus = math.lerp(macZoomNopeus, math.log(kerroin) / dt, 1.0 - math.exp(-dt / 0.05));
+            }
+            return true;
+        }
+
+        void ZoomaaPisteeseen(double kerroin, float2 piste)
+        {
             double ennen = korkeus;
             korkeus = math.clamp(korkeus / kerroin, MinKorkeus(), EleKatto());
             var keski = new float2(Screen.width, Screen.height) * 0.5f;
             Kierra((piste - keski) * (float)(1.0 - ennen / korkeus), 0);
-            return true;
+        }
+
+        /// <summary>Ohjauslevyn ele loppui (ei tapahtumia MacTaukoS): mitattu nopeus liu'uksi; zoomiliuku vaimenee.</summary>
+        void MacLiuku(double dt)
+        {
+            if (macViime > 0 && Time.unscaledTimeAsDouble - macViime > MacTaukoS)
+            {
+                macViime = -10;
+                if (math.lengthsq(macNopeus) > 1e-4) liuku = macNopeus;
+                if (math.abs(macZoomNopeus) > 1e-3) macZoomLiuku = macZoomNopeus;
+                if (math.lengthsq(macNopeus) > 1e-4 || math.abs(macZoomNopeus) > 1e-3)
+                    Debug.Log($"MATKAKIRJA mac-syöte: liuku {macNopeus.x:0.##}/{macNopeus.y:0.##} °/s, zoom {macZoomNopeus:0.###}/s, vaimennus {liukuAika:0.##} s");
+                macNopeus = 0;
+                macZoomNopeus = 0;
+            }
+            if (math.abs(macZoomLiuku) > 1e-3)
+            {
+                ZoomaaPisteeseen(math.exp(macZoomLiuku * dt), macZoomPiste);
+                macZoomLiuku *= math.exp(-dt / liukuAika);
+            }
         }
 
         void Siirra(double2 muutos)
