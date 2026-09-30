@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 11:15:** Levy 62 Gi (hälytys < 45), swap 12,6/14,0 Gt, muisti 57 % vapaa, kuorma 121/87/85, sim 1 (iPhone 18 Pro 1572C658; ≤1 ok), ei kevyttä tilaa. Viikko 48 % (5 h 28 %). Konteksti: Linnanrakentaja 14 %, Natiivi-UI 47 %, Päätoimittaja 18 %, oma 8 %. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Jokipoltto karttaseppa-poltto-20260930 käynnissä (23 prosessia). Posti: ei uutta.
+
 **Päivitetty 30.9. 10:59:** Postivahti nollattu, kierto jatkuu. Levy 64 Gi (hälytys < 45), swap 12,6/14,0 Gt, muisti 61 % vapaa, kuorma 35/112/129, sim 0, ei kevyttä tilaa. Viikko 47 % (5 h 25 %). Konteksti: oma 7 %. Varmuuskopio-VIKA: uusi "ei fast-forward" 10.52 (samaa sarjaa kuin 10.48; ilmoitettu Päätoimittajalle). Jokipoltto karttaseppa-poltto-20260930 (syva-z10) käynnissä. Posti: ei uutta.
 
 **Päivitetty 30.9. 10:55:** Päätoimittaja nollattu 10.50 (aloitusviesti lähetetty, Remote Control päällä). Levy 66 Gi (hälytys < 45), swap 13,0/14,3 Gt, muisti 60 % vapaa, kuorma 211/183/146 (junakäännös), sim 1 (linssiseppa-iPhone; ≤1 ok), ei kevyttä tilaa. Viikko 46 % (5 h 22 %). Konteksti: Linnanrakentaja 14 %, Natiivi-UI 41 %, Päätoimittaja 7 %, oma 65 % → LUOVUTUS kirjoitettu (docs/raportit/viesti-postivahti-luovutus-20260930.md), nollaus tässä vuorossa. Varmuuskopio-VIKA: uusi "ei fast-forward" 10.48 (samaa sarjaa kuin ennakkokuitattu; juna/b13 fabed7d0 avattu 10.48). Jokipoltto karttaseppa-poltto-20260930 käynnissä. Juna: 1.0.68-juna avattu 10.48 (b13 fabed7d0). Posti: ei uutta.
