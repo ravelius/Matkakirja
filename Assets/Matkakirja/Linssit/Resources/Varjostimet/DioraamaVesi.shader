@@ -150,7 +150,7 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
                 half3 vari = lerp(runko, heijastus, fresnel);
                 // Matalan auringon kiillot (GGX, karheus pieni) aaltojen harjoilla; tyynissä kohdissa peilimäinen kiilto.
                 half3 Lk = (half3)normalize(_VesiKiiltoSuunta.xyz);
-                vari += Kiilto((half3)n, Lk, V, lerp(0.05h, 0.12h, tuuli)) * _VesiAurinko.rgb * (half)_VesiKiiltoSuunta.w;
+                vari += Kiilto((half3)n, Lk, V, lerp(0.035h, 0.09h, tuuli)) * _VesiAurinko.rgb * (half)_VesiKiiltoSuunta.w;
 
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 return half4(lerp(vari, _DioraamaSumuVari.rgb, sumu), 1);

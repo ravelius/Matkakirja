@@ -178,7 +178,7 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalColor(IdAurinko, hamara ? new Color(1f, 0.55f, 0.30f) : new Color(1f, 0.90f, 0.72f));
             float az = 225f * Mathf.Deg2Rad, kork = (hamara ? 6f : 30f) * Mathf.Deg2Rad;
             var kiilto = DioraamaNayttamo.UnityPiste(new Matkakirja.Linssit.Dioraama.V3(Mathf.Sin(az) * Mathf.Cos(kork), Mathf.Sin(kork), -Mathf.Cos(az) * Mathf.Cos(kork)));
-            Shader.SetGlobalVector(IdKiiltoSuunta, new Vector4(kiilto.x, kiilto.y, kiilto.z, hamara ? 0.9f : 0.5f));
+            Shader.SetGlobalVector(IdKiiltoSuunta, new Vector4(kiilto.x, kiilto.y, kiilto.z, hamara ? 0.5f : 0.4f));
         }
 
         bool PiirraHeijastus(Camera kamera, float skaala)
