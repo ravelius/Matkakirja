@@ -107,6 +107,11 @@ namespace Matkakirja.Natiivi
                 case "selaa":
                     l.Astronautti.Kuva.Selaa(a1 == "-1" ? -1 : 1);
                     return l.Astronautti.Kuva.Kohde?.Tunnus;
+                case "kuvasumennus":   // ui linssi kuvasumennus 0|1|<pt> (omistaja 1.10.: pallo kuvan taustalla sumeaksi)
+                    if (a1 == "0") LinssiUi.KuvaTaustaSumea = false;
+                    else { LinssiUi.KuvaTaustaSumea = true; if (float.TryParse(a1.Replace(',', '.'), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float pt) && pt > 1f) LinssiUi.KuvaTaustanSumennusPt = pt; }
+                    if (l.Astronautti.Kuva.Auki) PalloKierto.LinssiKuvaSumennusPt = LinssiUi.KuvaTaustaSumea ? LinssiUi.KuvaTaustanSumennusPt : 0f;
+                    return $"kuvasumennus {(LinssiUi.KuvaTaustaSumea ? LinssiUi.KuvaTaustanSumennusPt + " pt" : "pois")}";
                 case "kuvaselain":
                     Kuvanakyma.Vanha = a1 == "0";
                     if (l.Astronautti.Kuva.Auki) l.Astronautti.Kuva.PaivitaVanha();

@@ -122,8 +122,19 @@ namespace Matkakirja.Natiivi
 
             // Kuvaselain: alhaalla keskellä ‹ › viereiseen kohteeseen kartalla (Linssisepän suositus 28.9.).
             kohdeNapit = Rakenne.El("mk-astrokuva__kohteet", turva, PickingMode.Ignore);
-            Rakenne.Nappi("‹", "mk-astrokuva__kohdenappi", () => VaihdaKohde(-1), kohdeNapit).tooltip = "Edellinen kohde kartalla";
-            Rakenne.Nappi("›", "mk-astrokuva__kohdenappi", () => VaihdaKohde(1), kohdeNapit).tooltip = "Seuraava kohde kartalla";
+            // Omistaja 1.10. klo 00.1x: "selausnapit voisi olla vähän pienemmät sekä väkäset keskitetty paremmin ympyrän sisään":
+            // kiekko 30 pt (oli 38) ja väkänen vektorina optisesti keskelle (fontin ‹ › istui alas vasemmalle); osuma-ala 44 pt.
+            foreach (int suunta in new[] { -1, 1 })
+            {
+                int s = suunta;
+                var n = Rakenne.Nappi("", "mk-astrokuva__kohdenappi", () => VaihdaKohde(s), kohdeNapit);
+                n.tooltip = s < 0 ? "Edellinen kohde kartalla" : "Seuraava kohde kartalla";
+                n.generateVisualContent += mgc => PiirraKohdenappi(mgc, n, s);
+                // Painallus näkyvissä (ennen USS :active -tausta): TrickleDown, koska napin Clickable kaappaa osoittimen.
+                n.RegisterCallback<PointerDownEvent>(_ => { n.userData = true; n.MarkDirtyRepaint(); }, TrickleDown.TrickleDown);
+                n.RegisterCallback<PointerUpEvent>(_ => { n.userData = null; n.MarkDirtyRepaint(); }, TrickleDown.TrickleDown);
+                n.RegisterCallback<PointerCaptureOutEvent>(_ => { n.userData = null; n.MarkDirtyRepaint(); });
+            }
 
             // Web .satelliitti-pulukulma (löydös 96): sarake oikeassa alakulmassa, kortti pulun yläpuolella 8 pt:n välein.
             pulukulma = Rakenne.El("mk-astrokuva__pulu", turva, PickingMode.Ignore);
@@ -770,6 +781,28 @@ namespace Matkakirja.Natiivi
             var linssi = Linssi();
             if (linssi == null) { Liu(vetoX, 0f, 120f, 1f, null); return; }
             Vaihda(suunta, () => linssi.Naapuri(suunta, galleria: true));
+        }
+
+        /// <summary>Kohdenappi: lasikiekko 30 pt ja väkänen, jonka painopiste on kiekon keskellä (kärki siirtyy 1 pt suuntaan).</summary>
+        static void PiirraKohdenappi(MeshGenerationContext mgc, VisualElement n, int suunta)
+        {
+            var r = n.contentRect;
+            var c = r.center;
+            var p = mgc.painter2D;
+            bool pohjassa = n.userData is bool b && b;
+            p.fillColor = pohjassa ? new Color(0.365f, 1f, 0.66f, 0.22f) : new Color(0.024f, 0.051f, 0.039f, 0.6f);
+            p.strokeColor = new Color(0.365f, 1f, 0.66f, 0.35f);
+            p.lineWidth = 1f;
+            p.BeginPath(); p.Arc(c, 15f, Angle.Degrees(0f), Angle.Degrees(360f)); p.ClosePath(); p.Fill(); p.Stroke();
+            // Väkänen: 6 × 11 pt; kolmion painopiste 1/3 kärjestä → siirto 1 pt suuntaan keskittää sen optisesti.
+            float d = suunta, w = 3f, h = 5.5f, x = c.x + d * 1f;
+            p.strokeColor = new Color(0.918f, 1f, 0.953f);
+            p.lineWidth = 2f; p.lineCap = LineCap.Round; p.lineJoin = LineJoin.Round;
+            p.BeginPath();
+            p.MoveTo(new Vector2(x - d * w, c.y - h));
+            p.LineTo(new Vector2(x + d * w, c.y));
+            p.LineTo(new Vector2(x - d * w, c.y + h));
+            p.Stroke();
         }
 
         /// <summary>Alanapit ‹ ›: viereinen kohde kartalla (sen oletuskuva); pallo liukuu uuden kohteen ylle.</summary>
