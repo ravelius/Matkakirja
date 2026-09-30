@@ -207,8 +207,37 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        tools/vienti/elava-kartta.mjs pikkukuvaOsoite) — Fable 26.9.2026, löydökset 115 ja 158. Elävä kartta.
  *   1.50 aanitaulut: laji musiikkiaihe (aloituslento, loppu, ratkaisu, epaonnistuminen, saapuminen-<maanosa>; tunnus, url)
  *        ja musiikkiketju.maanosa — Pelikoodari 26.9.2026, musiikkisuunnitelman vaihe 2 (#3304, #3314).
+ *   1.51 offline: natiivin pallon Z10 kaupunkien ympärille (± 1°, 13 856 laattaa Karttasepän poltosta,
+ *        tools/vienti/pallo-z10.json) OMASSA avaimessa: lahteet.rasteri.kaupunkiRasteri { tasot [10], laattoja, … },
+ *        maan kaupunkiRasteri["10"] = rivijuoksut, laattoja.kaupunkiRasteri ja tavuja.kaupunkiRasteri (ei yht:ssä);
+ *        rasteri, maxzoom 9 ja kaupunkitaso ennallaan, jotta vanhat buildit eivät lataa Z10:tä (Natiiviseppä 27.9.)
+ *        — Fable 27.9.2026.
+ *   1.52 offline: maat.*.mediaKuvat [{ url, pieni? }] (+ tavuja.mediaKuvat, ei yht:ssä) ja lahteet.mediaKuvat — pelin
+ *        omat tiedostot, jotka
+ *        puuttuivat offline-latauksesta (oma ämpäri mutta kuva-url/aani-url, tai kokoelmavaiheen suora osoite):
+ *        karttanostot, miniatyyrit, Livian ja saapumisen puheet, luentojen äänet. Omassa avaimessa, koska vanhat buildit
+ *        lataavat media-listan mutta eivät käytä sitä kuville ja puheelle (Natiiviseppä 27.9.). Kuvat pienennettyinä
+ *        (pieni/<avain>.jpg, 1280 px, JPEG 80, tools/vienti/mediakuvat.mjs), katto 100 Mt maata kohden, järjestys
+ *        karttanostot → miniatyyrit → puheet → luennat → muut (Fable 27.9.) — Euroopan eheystarkistus.
+ *   1.53 offline: maat.*.maasto enintään z10 (lahteet.maasto.kokoMaaMax) ja uusi maat.*.kaupunkiMaasto { "11", "12" }
+ *        50 km:n säteeltä kaupungeista (lahteet.maasto.kaupunkiMaasto), tavuja.kaupunkiMaasto (siirto; natiivi pakkaa maaston itse levylle) —
+ *        Fable 27.9.2026 (B1+C): Euroopan offline-maasto 939 → noin 94 Mt siirtona.
+ *   1.54 offline: mediaKuvat on natiivin 1.0.32+ koko offline-media (myös media-listan kuvat pienennettyinä ja äänet)
+ *        yhden 100 Mt:n maakaton alla, lahteet.mediaKuvat.korvaaMedian ja tavuja.offline (natiivin latauskoko);
+ *        media-lista vain vanhoille buildeille — Fable 27.9.2026, tavoite Eurooppa ≤ ~1,2 Gt.
+ *   1.55 POISTO: kokoelma maakuntasalaisuudet ja maakuntarajat.salaisuus (omistaja 27.9.2026: ei salaisuuksia
+ *        maakuntiin; Kreikan 14 salaisuutta tavallisina hahmotelmanostoina, web #3475). Vanhat buildit: puuttuva
+ *        kokoelma = tyhjä, puuttuva kenttä = false (Natiiviseppä kuittasi).
+ *   1.56 offline: kartan muut rasterikerrokset (kerma, reliefi, yövalot) offline-lataukseen: lahteet.kerrokset,
+ *        maat.*.kerma (maan oma kermasarja), tavuja.kerrokset maille ja globaalille, globaali.tavuja.offline — Fable
+ *        28.9.2026 E2E-offline Tanska + Kroatia ("ladattu alue kuten verkossa"), Eurooppa +122 Mt (9,2 %) ja maailma
+ *        +24,7 Mt. Vanhat buildit ohittavat uudet avaimet; tavuja.offline kasvaa kerrosten verran.
+ *   1.57 SRB/ALB/MKD/MNE/MDA/BLR saivat ensimmäisen karttanostonsa (Matkakirjan ihme,
+ *        js/packs/monumentit-eurooppa.js) ja siten ensimmäiset hahmotelmamoduulinsa
+ *        (js/packs/hahmotelma-{srb,alb,mkd,mne,mda,blr}.js) — kuusi uutta moduulia
+ *        manifestissa (Fable 28.9.2026, VAIN EUROOPPA -karttatyö).
  */
-export const SKEEMAVERSIO_TARKKA = '1.50';
+export const SKEEMAVERSIO_TARKKA = '1.58';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;
@@ -229,12 +258,28 @@ const sha = (s) => createHash('sha256').update(s).digest('hex');
 
 /** Nimetyn lisätiedoston muoto (tools/vienti/lahteet.mjs NIMETYT_LISATIEDOSTOT): virhe kaataa viennin. */
 export function tarkistaMuoto(muoto, data, lahde) {
+  if (muoto === 'merikohdat') return tarkistaMerikohdat(data, lahde);
   if (muoto !== 'iso3-lonlat') throw new Error(`${lahde}: tuntematon muoto ${muoto}`);
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error(`${lahde}: odotettiin oliota { ISO3: [lon, lat] }`);
   for (const [iso, p] of Object.entries(data)) {
     const ok = /^[A-Z]{3}$/.test(iso) && Array.isArray(p) && p.length === 2
       && Number.isFinite(p[0]) && Number.isFinite(p[1]) && Math.abs(p[0]) <= 180 && Math.abs(p[1]) <= 90;
     if (!ok) throw new Error(`${lahde}: ${iso}: odotettiin [lon, lat] asteina`);
+  }
+}
+
+/** Merikohdat (tools/tee-merikohdat.mjs): { meret: { id: nimi }, maat: { ISO3: { meret: [id], kohdat: [{ meri, lon, lat, suunta, rannastaKm }] } } }. */
+function tarkistaMerikohdat(data, lahde) {
+  const meret = data?.meret; const maat = data?.maat;
+  if (!meret || typeof meret !== 'object' || !maat || typeof maat !== 'object') throw new Error(`${lahde}: odotettiin { meret, maat }`);
+  for (const [iso, m] of Object.entries(maat)) {
+    if (!/^[A-Z]{3}$/.test(iso) || !Array.isArray(m?.meret) || !Array.isArray(m?.kohdat) || !m.kohdat.length) throw new Error(`${lahde}: ${iso}: odotettiin { meret: [], kohdat: [] }`);
+    for (const k of m.kohdat) {
+      const ok = k && k.meri in meret && m.meret.includes(k.meri) && Number.isFinite(k.lon) && Number.isFinite(k.lat)
+        && Math.abs(k.lon) <= 180 && Math.abs(k.lat) <= 90 && Number.isInteger(k.suunta) && k.suunta >= 0 && k.suunta < 360
+        && Number.isFinite(k.rannastaKm);
+      if (!ok) throw new Error(`${lahde}: ${iso}: kohta ${JSON.stringify(k)}: odotettiin { meri, lon, lat, suunta 0–359, rannastaKm }`);
+    }
   }
 }
 
@@ -437,7 +482,7 @@ export async function kokoaVienti({ juuri = JUURI } = {}) {
     moduulit: manifestModuulit,
   };
   tiedostot.set('manifest.json', JSON.stringify(manifest, null, 1) + '\n');
-  return { tiedostot, manifest, nimiavaruudet };
+  return { tiedostot, manifest, nimiavaruudet, mediaKuvaEhdokkaat: offline.mediaKuvaEhdokkaat };
 }
 
 /** Paketin viittaamat ämpärin assets/-tiedostot: { polku: sha256 }. */
@@ -462,8 +507,10 @@ export function kirjoita(tiedostot, ulos) {
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const i = process.argv.indexOf('--ulos');
   const ulos = resolve(i > 0 ? process.argv[i + 1] : join(JUURI, 'dist/vienti'));
-  const { tiedostot, manifest } = await kokoaVienti();
+  const { tiedostot, manifest, mediaKuvaEhdokkaat } = await kokoaVienti();
   kirjoita(tiedostot, ulos);
+  // Skeema 1.52: mediaKuvat-ehdokkaat paketin ulkopuolelle (tools/vienti/mediakuvat.mjs --paivita, CI:n syöte).
+  writeFileSync(join(dirname(ulos), 'mediakuvat-ehdokkaat.json'), `${JSON.stringify(mediaKuvaEhdokkaat)}\n`);
   // Ämpäriin vietävät sivuston assetit paketin ulkopuolelle (CI:n syöte).
   const assetit = sivustonAssetit(tiedostot);
   writeFileSync(join(dirname(ulos), 'sivusto-assetit.json'), `${JSON.stringify(assetit, null, 1)}\n`);

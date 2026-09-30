@@ -101,6 +101,13 @@ test('versiovahti: kerros vain kun pallon sarja on poltettu samasta pyramidista'
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A' }, pyramidi),
     { pohja: true, ranta: false, viiva: false, nosto: false, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false, nimio: false });
   assert.equal(lepokerroksenKerrokset({ versio: 'B', viivat: 'V', nostot: 'N' }, pyramidi), null, 'eri pohja');
+  // Syvä sarja (Z10-ketju): pohja.kopio kertoo, että z0–z8 on sama kuin pallon versio.
+  const syva = { ...pyramidi, versio: 'A-s', pohja: { kopio: { versio: 'A', tasot: [0, 1, 2, 3, 4, 5, 6, 7, 8] } } };
+  assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, syva),
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false, nimio: false });
+  assert.equal(lepokerroksenKerrokset({ versio: 'B' }, syva), null, 'kopio eri versiosta');
+  assert.equal(lepokerroksenKerrokset({ versio: 'A' }, { ...syva, pohja: { kopio: { versio: 'A', tasot: [0, 1, 2] } } }), null, 'kopio ei kata z0–z8:aa');
+  assert.equal(lepokerroksenKerrokset({ versio: 'A' }, { ...syva, pohja: {} }), null, 'ei kopiokenttää');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N2' }, pyramidi), null, 'eri nostot');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V' }, { versio: 'A' }), null, 'pyramidilla ei viivatasoa');
   assert.equal(lepokerroksenKerrokset(null, pyramidi), null);
@@ -586,4 +593,22 @@ test('laattakerros rajaa jokaisen laatan karttaAlaan', () => {
   const laatat = lue('../js/pallolaatat.js');
   assert.match(laatat, /laatanPalloAlue\(\{\n\s*taso: tasoOlio, sarake, rivi, laatta: koko, lonPx, latPx, karttaAla: karttaAla\(\),/);
   assert.match(laatat, /karttaAlaMuisti = pyramidinKarttaAla\(\{ pyramidi, yLat, naparaja \}\)/);
+});
+
+test('tukitaso mahtuu tavukiintiöön tai sitä ei oteta (puhelimen z9-silmukka 27.9.2026)', async () => {
+  const {
+    tukiMahtuu, LAATTAKERROS_LAATTAKATTO_TAVUT, LAATTAKERROS_TAVUKERROIN_OSOITIN,
+  } = await import('../js/pallolaatat.js');
+  const laatta = Math.round(512 * 512 * 4 * (4 / 3));
+  const nakyvat = 68 * laatta; // mitattu: puhelin, Pariisi, z9, 68 näkyvää
+  // Kosketuslaite: z7:n 34 tukilaattaa eivät mahdu — ennen tätä LRU purki ne joka kierroksella.
+  assert.equal(tukiMahtuu(nakyvat, 34, laatta, LAATTAKERROS_LAATTAKATTO_TAVUT), false);
+  // Karkeampi tuki (muutama laatta) mahtuu.
+  assert.equal(tukiMahtuu(nakyvat, 3, laatta, LAATTAKERROS_LAATTAKATTO_TAVUT), true);
+  // Osoitinlaitteen kaksinkertainen kiintiö: sama tuki mahtuu.
+  assert.equal(tukiMahtuu(nakyvat, 34, laatta,
+    LAATTAKERROS_LAATTAKATTO_TAVUT * LAATTAKERROS_TAVUKERROIN_OSOITIN), true);
+  // Tukitason valinta käyttää ehtoa ennen tukilaattojen luontia.
+  const lahde = readFileSync(new URL('../js/pallolaatat.js', import.meta.url), 'utf8');
+  assert.match(lahde, /if \(!tukiMahtuu\(nakyvienTavut, ehdokkaat\.length, laatanArvio, tavukatto\(\)\)\) continue;/);
 });

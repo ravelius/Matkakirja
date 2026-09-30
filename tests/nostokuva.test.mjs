@@ -427,7 +427,9 @@ test('molemmat karttakortit avaavat kuvan edellä ja kuvaton aukeaa tekstinä', 
   for (const polku of ['js/fokusnosto.js', 'js/fokuskohteet.js']) {
     const src = lue(polku);
     assert.ok(src.includes('nostokuvaAloita'), `${polku} ei käytä kuva edellä -avausta`);
-    assert.ok(/if \(!kaksivaihe\) lato(Nosto|Kohde)\(/.test(src),
+    // Löydös 135: kuvaton haara on lohko, joka latoo tekstin ja antaa
+    // kortille vakiokoon (ks. testi alempana).
+    assert.ok(/if \(!kaksivaihe\) \{\s*lato(Nosto|Kohde)\(/.test(src),
       `${polku}: kuvaton nosto pitää latoa suoraan tekstikorttina`);
     assert.ok(src.includes('latoNosto'), `${polku} ei anna ladontaa kuvaesittelylle`);
   }
@@ -589,4 +591,43 @@ test('nostokuvanLukitunKorkeus sovittaa korkeuden kuvan suhteeseen', async () =>
     { laatikkoLeveys: 342, kuvaLeveys: 0, kuvaKorkeus: 10 }]) {
     assert.equal(nostokuvanLukitunKorkeus(p), 0);
   }
+});
+
+/* ================================================================= */
+/* LÖYDÖS 135: kaikki karttanostot samaan kokoon                     */
+/* ================================================================= */
+
+test('löydös 135: kuvattoman kortin leveys on kuvallisen noston leveys (mitatut ruudut)', async () => {
+  const { nostokuvaKortinVakioleveys } = await import('../js/nostokuva.js');
+  // Kortin oma tila ~31 px (reunus + sisennys, kuten kuvallisella).
+  const vara = 31;
+  // iPhone: ruutu miinus marginaalit (kuvallinen mitattiin 369 / 366 px).
+  assert.equal(nostokuvaKortinVakioleveys({ ruutuLeveys: 393, ruutuKorkeus: 852, vara }), 369);
+  assert.equal(nostokuvaKortinVakioleveys({ ruutuLeveys: 390, ruutuKorkeus: 844, vara }), 366);
+  // iPad pysty: kapea katto 760 → ~748 (kuvallinen 748 px).
+  const ipad = nostokuvaKortinVakioleveys({ ruutuLeveys: 834, ruutuKorkeus: 1194, vara });
+  assert.ok(ipad >= 740 && ipad <= 760, String(ipad));
+  // iPad vaaka (≥ 1100): leveä pohja, katto 1100 (kuvallinen 966–971 px).
+  const vaaka = nostokuvaKortinVakioleveys({ ruutuLeveys: 1194, ruutuKorkeus: 834, vara });
+  assert.ok(vaaka >= 960 && vaaka <= 975, String(vaaka));
+  assert.ok(nostokuvaKortinVakioleveys({ ruutuLeveys: 2400, ruutuKorkeus: 1400, vara }) <= 1100);
+  // Ei ruutua → 0.
+  assert.equal(nostokuvaKortinVakioleveys({ ruutuLeveys: 0, ruutuKorkeus: 800 }), 0);
+});
+
+test('löydös 135: jokainen kuvaton karttanosto ja lisäkaupunki käyttää vakiokorttia', () => {
+  for (const [tiedosto, lato] of [
+    ['js/fokuskohteet.js', 'latoKohde'], ['js/skandaalit.js', 'latoSkandaali'],
+    ['js/fokusnosto.js', 'latoNosto'], ['js/syvennys.js', 'latoSyvennys'],
+    ['js/historian-hetket.js', 'latoHetki'], ['js/elaintaky.js', 'latoElaintaky'],
+  ]) {
+    const lahde = lue(tiedosto);
+    const haara = lahde.match(new RegExp(`if \\(!kaksivaihe\\) \\{\\s*${lato}\\(sisalto, undefined\\);[\\s\\S]{0,200}?nostokuvaVakiokortti\\(`));
+    assert.ok(haara, `${tiedosto}: kuvaton haara ei kutsu nostokuvaVakiokorttia`);
+  }
+  const kaupunki = lue('js/kaupunkinosto.js');
+  assert.match(kaupunki, /latoLisakaupunginKortti\(u, sisalto, kohde\),[\s\S]{0,600}?vakio: true/);
+  assert.match(kaupunki, /if \(vakio\) nostokuvaVakiokortti\(\{ kortti: popup, sisalto \}\)/);
+  // Kuva ei latautunut → tekstikorttina samaan kokoon.
+  assert.match(lue('js/nostokuva.js'), /latoNosto\(sisalto, null\);[\s\S]{0,200}?nostokuvaVakiokortti\(\{ kortti, sisalto \}\)/);
 });

@@ -35,7 +35,8 @@ const VAKIOAVAIMET = new Set(['$skeema', 'nimi', 'lahde', 'kuvaus', 'viittaukset
  *   '<kokoelma>/<avain>'        kokoelman juuressa on avain (esim. maakuntarajat/kaaret)
  *   'moduuli:<polku>'          moduuli on manifestissa (esim. moduuli:js/tyohuone-pelit.js)
  *   'manifest.<avain>' | 'offline.<polku.pisteillä>' | 'offline.maat.*.<avain>' | 'media.<avain>'
- *   '!…'                       ei saa olla (poistot)
+ *   '!…'                       ei saa olla (poistot). Poisto vanhentaa saman ehdon aiemmilta versioilta, ja
+ *                              '!kokoelma:<nimi>' myös kaikki kokoelman kenttäehdot (skeema 1.55).
  */
 export const VAATIMUKSET = {
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
@@ -64,6 +65,23 @@ export const VAATIMUKSET = {
   '1.28': ['kokoelma:tyohuonetilastot', 'tyohuonetilastot/sarakkeet'],
   '1.29': ['maarajat.muutRenkaat', 'maarajat.kokoBbox'],
   '1.30': ['aanitaulut.nousuMs', 'aanitaulut.tunnus', 'reitit.maksu'],
+  // Linssiseppä 2, 28.9.2026: radioiden maailmanlaajennus (omistaja: kaikki maailman
+  // maat linsseihin, VAIN EUROOPPA koskee vain karttaa). radiot.kaupunki/lat/lon =
+  // aseman kotipaikka tai maan pääkaupunki (Wikidata P625); ei enää osajoukko "maat"-
+  // kokoelmasta.
+  '1.58': ['radiot.kaupunki', 'radiot.lat', 'radiot.lon'],
+  // Fable 28.9.2026: SRB/ALB/MKD/MNE/MDA/BLR saivat ensimmäiset karttanostonsa ja hahmotelmamoduulinsa.
+  '1.57': ['moduuli:js/packs/hahmotelma-srb.js', 'moduuli:js/packs/hahmotelma-alb.js',
+    'moduuli:js/packs/hahmotelma-mkd.js', 'moduuli:js/packs/hahmotelma-mne.js',
+    'moduuli:js/packs/hahmotelma-mda.js', 'moduuli:js/packs/hahmotelma-blr.js'],
+  // Omistaja 27.9.2026 klo 20.0x: ei salaisuuksia maakuntiin (Kreikan salaisuudet hahmotelmanostoina, web #3475).
+  // Fable 28.9.2026: kerma, reliefi ja yövalot offline-lataukseen (E2E-offline Tanska + Kroatia).
+  '1.56': ['offline.lahteet.kerrokset', 'offline.globaali.tavuja.kerrokset'],
+  '1.55': ['!kokoelma:maakuntasalaisuudet', '!maakuntarajat.salaisuus'],
+  '1.54': ['offline.lahteet.mediaKuvat.korvaaMedian'],
+  '1.53': ['offline.lahteet.maasto.kaupunkiMaasto'],
+  '1.52': ['offline.lahteet.mediaKuvat'],
+  '1.51': ['offline.lahteet.rasteri.kaupunkiRasteri'],
   '1.50': ['aanitaulut.maanosa'],
   '1.49': ['maakuntasalaisuudet.pikkukuva', 'maakuntasalaisuudet.pikkukuvaLahde'],
   '1.48': ['manifest.kaupunkilehdetKaupungeittain'],
@@ -159,9 +177,14 @@ export function tarkistaSopimus(tiedostot, skeemaversio, { kuvat = lueKuvat() } 
   const virheet = [];
   const l = lukija(tiedostot);
   if (!VAATIMUKSET[skeemaversio]) virheet.push(`skeemasopimus: versiolla ${skeemaversio} ei ole riviä VAATIMUKSISSA (tools/vienti/skeemasopimus.mjs)`);
+  // Voimassa olevat poistot: ne vanhentavat saman ehdon (ja poistetun kokoelman kenttäehdot) aiemmista versioista.
+  const poistot = new Set(Object.entries(VAATIMUKSET).filter(([v]) => vertaa(v, skeemaversio) <= 0)
+    .flatMap(([, ehdot]) => ehdot.filter((e) => e.startsWith('!')).map((e) => e.slice(1))));
+  const vanhentunut = (e) => poistot.has(e) || poistot.has(`kokoelma:${e.split(/[.#/]/)[0]}`);
   for (const [v, ehdot] of Object.entries(VAATIMUKSET)) {
     if (vertaa(v, skeemaversio) > 0) continue;
     for (const e of ehdot) {
+      if (!e.startsWith('!') && vanhentunut(e)) continue;
       const kielto = e.startsWith('!');
       if (tayttyy(kielto ? e.slice(1) : e, l) === kielto) {
         virheet.push(`skeemasopimus: ${skeemaversio} vaatii ${v}:n ${kielto ? 'poiston' : 'kentän'} ${e}`);

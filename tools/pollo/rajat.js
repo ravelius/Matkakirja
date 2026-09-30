@@ -23,9 +23,23 @@ export const KUUKAUSIRAJA_OLETUS = 1500;
  * — kustannuksena (gpt-4o-mini-tts ~1,5 snt/min) noin 13,5 €/kk
  * enimmillään.
  */
-export const PUHE_TEKSTIN_KATTO = 1000;
-export const PUHE_PAIVARAJA_OLETUS = 60000;
-export const PUHE_KUUKAUSIRAJA_OLETUS = 900000;
+/*
+ * 1000 → 2500 (omistaja 27.9.2026 klo 01.5x, "Voiko tekstit viedä yhtenä
+ * nippuna luettavaksi?"): kappale kulkee yhtenä palana myös silloin, kun se
+ * on pitkä, eikä sitä enää pilkota kesken (intonaatiohyppy) tai natiivissa
+ * katkaista. xAI ottaa 2 400 merkkiä yhdellä pyynnöllä (mitattu 27.9.:
+ * ensimmäinen tavu 0,5 s, koko pala 35 s ≈ 5 × reaaliaika).
+ */
+export const PUHE_TEKSTIN_KATTO = 2500;
+/*
+ * 60 000 → 400 000 / 900 000 → 6 000 000 (27.9.2026, Fablen tilaus): 60 000
+ * täyttyi saman päivän mittauksissa ~2 tunnissa, ja koska raja on IP:kohtainen,
+ * koko kotiverkon laitteet saivat 429:n. 400 000 on noin 6,5 tuntia puhetta
+ * vuorokaudessa; kuukausikatto (koko workerin yhteinen) nousee samassa
+ * suhteessa noin sataan tuntiin. R2-/reunaosuma ei kuluta rajaa.
+ */
+export const PUHE_PAIVARAJA_OLETUS = 400000;
+export const PUHE_KUUKAUSIRAJA_OLETUS = 6000000;
 
 /*
  * KUVAGENEROINNIN RAJAT (kehittäjän eräajot, tehtava: 'kuva').
@@ -35,6 +49,45 @@ export const PUHE_KUUKAUSIRAJA_OLETUS = 900000;
  */
 export const KUVA_PROMPTIN_KATTO = 4000;
 export const KUVA_PAIVARAJA_OLETUS = 60;
+
+/*
+ * PULUN ÄÄNIKESKUSTELU (KOE, omistajan tilaus 28.9.2026) — MINUUTTEJA.
+ *
+ * xAI:n Grok Voice Agent laskutetaan yhteysminuuteista (0,08 $/min
+ * 28.9.2026, docs.x.ai/developers/pricing). Selain puhuu xAI:n kanssa
+ * SUORAAN lyhytikäisellä tokenilla, joten worker ei näe istunnon
+ * todellista pituutta: jokainen token VARAA istunnon enimmäispituuden
+ * (REALTIME_ISTUNTO_MIN_OLETUS) koko pelin yhteisestä päiväkatosta, ja
+ * asiakas sulkee yhteyden viimeistään siinä ajassa. Katto on koko
+ * workerin yhteinen (ei IP-kohtainen): 30 min ≈ 2,40 $/vrk enimmillään.
+ */
+export const REALTIME_PAIVARAJA_MIN_OLETUS = 30;
+export const REALTIME_ISTUNTO_MIN_OLETUS = 3;
+
+/** Äänikeskustelun päivälaskurin avain (koko peli, UTC-vuorokausi). */
+export function realtimePaivaAvain(nyt = new Date()) {
+  return `rt:p:${nyt.toISOString().slice(0, 10)}`;
+}
+
+/**
+ * Mahtuuko uusi istunto päivän kattoon? `kaytetty` ja `varaus` ovat
+ * minuutteja. Katto 0 = ei rajaa (sama käytäntö kuin muissa rajoissa).
+ */
+export function tarkistaRealtimeRaja({
+  kaytetty = 0,
+  varaus = REALTIME_ISTUNTO_MIN_OLETUS,
+  paivaraja = REALTIME_PAIVARAJA_MIN_OLETUS,
+} = {}) {
+  if (paivaraja > 0 && kaytetty + varaus > paivaraja) {
+    return {
+      ok: false,
+      syy: 'paivaraja',
+      viesti: `Pulun äänikeskustelun päiväkatto (${paivaraja} min koko pelille) on käytetty. `
+        + 'Kokeile huomenna uudelleen tai kirjoita kysymys.',
+    };
+  }
+  return { ok: true, syy: null, viesti: null };
+}
 
 /** Kontekstipaketin katto merkkeinä (sama luku kuin pelin puolella). */
 export const KONTEKSTIN_KATTO = 5000;
@@ -175,7 +228,9 @@ export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
 export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
 
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
-export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+// 'realtime' (Pulun äänikeskustelun koe, Fable 28.9.2026): natiivikin vain kehittäjäkoodilla (hoidaRealtime).
+// 'kaynti' (nimetön kävijälaskuri, omistaja 30.9.2026) ja 'kaynnit' (luku, vain kehittäjäkoodilla).
+export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime', 'kaynti', 'kaynnit']);
 
 /** Saako natiivi tehdä pyynnön tehtävän? */
 export function natiivilleSallittu(tehtava) {
@@ -215,6 +270,87 @@ export function siivoaTeksti(teksti, katto = KONTEKSTIN_KATTO) {
     .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, ' ')
     .trim();
   return puhdas.length > katto ? `${puhdas.slice(0, katto - 1)}…` : puhdas;
+}
+
+/*
+ * XAI-PUHETAGIT (omistaja 27.9.2026: huokaus, nauru, innostus).
+ *
+ * xAI:n puhemoottori ymmärtää tekstin seassa pistetageja ([pause]) ja
+ * kääretageja (<fast>…</fast>). Pulu merkitsee niitä vastaukseensa
+ * (worker.js PUHETAGIKEHOTE), ja peli lähettää tagillisen tekstin
+ * luettavaksi. Palvelin ei silti luota tekstiin: vain alla luetellut
+ * tagit menevät xAI:lle, kaikki muu tagin näköinen poistetaan.
+ * siivoaTeksti ei koske hakasulkeisiin eikä kulmasulkeisiin, joten
+ * suodatus on tämän funktion yksin.
+ *
+ * KÄÄREET TASAPAINOON: peli pilkkoo Pulun puheen virkerajoilta
+ * paloiksi, joten <fast> voi jäädä ilman sulkuaan (tai sulku ilman
+ * avaustaan). Pariton puolisko poistetaan; ehjä pari säilyy.
+ *
+ * OPENAI-MOOTTORI (gpt-4o-mini-tts) ei tunne tageja ja lausuisi ne
+ * kirjaimellisesti, joten sille `sallitut: false` poistaa KAIKKI.
+ *
+ * Välit siivotaan vain poistetun tagin kohdalta: tagiton teksti pysyy
+ * merkilleen samana, joten ennen tätä säilötyt äänet pysyvät osumina
+ * (puheenAvain lasketaan suodatetusta tekstistä).
+ */
+export const PUHETAGIT_PISTE = ['pause', 'long-pause', 'sigh', 'laugh'];
+export const PUHETAGIT_KAARE = ['fast'];
+
+/** Tagin näköinen merkintä. [[käsite]] ei ole tagi. */
+const PUHETAGI = /(?<!\[)\[([a-z-]{2,20})\](?!\])|<(\/?)([a-z-]{1,20})>/g;
+/** Poistetun tagin paikkamerkki (ohjausmerkki: siivoaTeksti on jo poistanut ne). */
+const POISTETTU = '\u0000';
+/** Peräkkäiset poistetut tagit väleineen yhtenä kohtana. */
+const POISTOKOHTA = /[ \t]*(?:\u0000[ \t]*)+/g;
+
+/**
+ * Poistettujen tagien paikkamerkit pois niin, ettei jälkeen jää
+ * tuplaväliä, väliä rivin alkuun eikä väliä välimerkin eteen
+ * ("Pulu. [x] No." → "Pulu. No."). Muualla tekstiin ei kosketa.
+ */
+function siivoaPoistokohdat(teksti) {
+  return teksti.replace(POISTOKOHTA, (kohta, alku, kaikki) => {
+    const edellinen = kaikki[alku - 1];
+    const seuraava = kaikki[alku + kohta.length];
+    if (edellinen === undefined || edellinen === '\n') return '';
+    if (seuraava === undefined || seuraava === '\n' || /[.,;:!?…]/.test(seuraava)) return '';
+    return /[ \t]/.test(kohta) ? ' ' : '';
+  });
+}
+
+/**
+ * Suodattaa puhetekstin tagit.
+ *
+ * @param {string} teksti luettava teksti (jo siivoaTeksti-siivottu)
+ * @param {{sallitut?: boolean}} asetukset `sallitut: false` poistaa
+ *   myös sallitut tagit (OpenAI-moottori).
+ * @returns {string}
+ */
+export function suodataPuhetagit(teksti, { sallitut = true } = {}) {
+  const raaka = String(teksti ?? '').replaceAll(POISTETTU, '');
+  // Ensin kääreiden parit: kohdat, joiden tagi saa jäädä.
+  const pidetaan = new Set();
+  if (sallitut) {
+    const auki = new Map();
+    for (const osuma of raaka.matchAll(/<(\/?)([a-z-]{1,20})>/g)) {
+      const [, sulku, nimi] = osuma;
+      if (!PUHETAGIT_KAARE.includes(nimi)) continue;
+      // Uusi avaus ennen sulkua syrjäyttää parittoman edeltäjänsä.
+      if (!sulku) auki.set(nimi, osuma.index);
+      else if (auki.has(nimi)) {
+        pidetaan.add(auki.get(nimi));
+        pidetaan.add(osuma.index);
+        auki.delete(nimi);
+      }
+    }
+  }
+  const merkitty = raaka.replace(PUHETAGI, (tagi, piste, sulku, kaare, kohta) => {
+    if (sallitut && piste && PUHETAGIT_PISTE.includes(piste)) return tagi;
+    if (sallitut && kaare && pidetaan.has(kohta)) return tagi;
+    return POISTETTU;
+  });
+  return merkitty === raaka ? raaka : siivoaPoistokohdat(merkitty);
 }
 
 /**
@@ -340,11 +476,18 @@ export function tyhjanSyy({ virhe = null, stop = null } = {}) {
  * Pulun vastaukset ovat lyhyitä, joten ajattelu suljetaan siellä, missä
  * malli sen sallii. Mallit, joilla ajattelua ei voi sulkea (Fable,
  * Mythos, Opus 5.5: `disabled` = 400), ajavat pienimmällä vaivalla.
+ * Sonnet 5.5 (omistaja 28.9.2026: "pulu pitää päivittää tähän myös")
+ * hylkää myös `disabled`-tilan, mutta sen pienin tila on `between_tools`:
+ * ajattelua vain työkalukutsujen välissä, ja Pululla työkaluja ei ole.
+ * Mitattu paikallisella workerilla viidellä Pulu-kysymyksellä: ensimmäinen
+ * pala mediaanina 1,2 s (Sonnet 5 disabled 2,8 s); effort low ajatteli
+ * ennen vastausta (5,4 s) ja jätti yhden vastauksen tyhjäksi.
  * Haiku 4.5 ei ajattele ilman pyyntöä eikä hyväksy effort-kenttää.
  */
 export function ajatteluKentat(malli) {
   const m = String(malli ?? '');
   if (/haiku|claude-3/.test(m)) return {};
+  if (/sonnet-5-5/.test(m)) return { thinking: { type: 'between_tools' } };
   if (/fable|mythos|opus-5-5/.test(m)) return { output_config: { effort: 'low' } };
   return { thinking: { type: 'disabled' } };
 }
@@ -459,6 +602,9 @@ export function luoJatkoSuodatin() {
 export function poimiEhdotukset(teksti, maara = 3) {
   return String(teksti ?? '')
     .split('\n')
+    // Kysymysrivit ovat nappeja, eivät puhetta: puhetagit pois aina
+    // (kehote kieltää ne näiltä riveiltä, tämä on varmistus).
+    .map((rivi) => suodataPuhetagit(rivi, { sallitut: false }))
     .map((rivi) => rivi.trim().replace(/^[-*•\d.)\s]+/, '').trim())
     .filter((rivi) => rivi.length > 6 && rivi.length <= 120 && rivi.includes('?'))
     .slice(0, maara);

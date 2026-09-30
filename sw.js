@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2274';
+const CACHE = 'matkakirja-2026-09-21.2464';
 const SHELL = [
   './',
   './index.html',
@@ -24,6 +24,7 @@ const SHELL = [
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
+  './js/pelaajanakyma.js',
   './js/siirtokoreografia.js',
   /*
    * TASOKARTTA POIS ESILATAUKSESTA (omistaja 7.9.2026, sanatarkasti:
@@ -47,11 +48,13 @@ const SHELL = [
   './js/kartta-lataus.js',
   './js/karttamittari.js',
   './js/fokusmitat.js',
+  './js/deltasarja.js',
   './js/laattapyramidi.js',
   './js/karttanimet.js',
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
+  './js/avausanimaatio.js',
   // Viisaan pöllön arvonimet (nimilappuvitsi, Raamattu VIISAAN POLLON ARVONIMET).
   './js/packs/pollon-arvonimet.js',
   './js/liput.js',
@@ -64,6 +67,7 @@ const SHELL = [
   // Gallerioiden selauskaistat (omistaja 9.9.2026): ui.js tuo staattisesti.
   './js/galleria.js',
   './js/kohtaamiskuvat-data.js',
+  './js/kuvatekija.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
@@ -112,6 +116,8 @@ const SHELL = [
   './js/karttatyokalu-maakunnat.js',
   './js/vakasikoni.js',
   './js/ylapalkki-vaaka.js',
+  './js/kokoelmanakyma.js',
+  './js/pilleri-animaatio.js',
   './js/fokusnosto.js',
   './js/kuvasarja.js',
   './js/syvennys.js',
@@ -123,6 +129,7 @@ const SHELL = [
   './js/fokustehtavat.js',
   './js/maalehti.js',
   './js/lukija.js',
+  './js/puhetagit.js',
   './js/pollo.js',
   './js/pulu-paneelin-ylla.js',
   './js/livia-kasvot.js',
@@ -145,8 +152,10 @@ const SHELL = [
   './js/livia-nostotila.js',
   './js/livia-chat-tila.js',
   './js/pulu-paikka.js',
+  './js/pulu-realtime.js',
   './js/liviapuhe.js',
   './js/livia.js',
+  './js/puhevirta.js',
   './js/puhe.js',
   // Tehosteketjut (Tuna, 5.9.2026): moduuli kuuluu kuoreen, kirjasto
   // itse tulee ämpärin vendor/-polusta ja säilyy VENDORCACHE-korissa.
@@ -169,6 +178,8 @@ const SHELL = [
   './js/passport.js',
   './js/natiivi.js',
   './js/lahteet.js',
+  './js/apuraha.js',
+  './js/kaynti.js',
   './js/wiki.js',
   './js/media.js',
   // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
@@ -210,6 +221,7 @@ const SHELL = [
   './js/packs/omat-tiivistelmat.js',
   './js/packs/liput-paikalliset.js',
   './js/packs/lippu-tekijat.js',
+  './js/packs/commons-tekijat.js',
   './js/aikajana.js',
   // Aikajanan elävä liekkivalo (canvas-kerros, 5.9.2026): vain
   // js/aikajana.js tuo tämän, joten se seuraa samaa polkua.
@@ -295,7 +307,6 @@ const SHELL = [
   './js/pallolauta/kerrokset.js',
   './js/pallolauta/kehysprofiili.js',
   './js/pallolauta/kallistus.js',
-  './js/pallolauta/sumu.js',
   './css/aikajana.css',
   // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
   // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
@@ -385,8 +396,20 @@ const SHELL = [
   './js/linssit/astronaut-kysymykset.js',
   './js/linssit/satelliitti-aani.js',
   './js/linssit/astro-sumu.js',
+  './js/tiivistys.js',
+  './js/linssit/astronautin-kierros.js',
   './js/linssit/satelliitti-avaruus.js',
   './js/linssit/satelliitti-nimiot.js',
+  // Pulun tervetulo ja ISS-repliikit (28.9.2026).
+  './js/linssit/pulu-tervetulo.js',
+  './js/linssit/pulu-iss.js',
+  './js/linssit/pulu-taulu.js',
+  './js/linssit/iss-rata.js',
+  './js/linssit/iss-kyyti.js',
+  './js/linssit/iss-kyyti-nakyma.js',
+  './js/linssit/iss-realismi.js',
+  './js/linssit/iss-realismi-kerrokset.js',
+  './js/linssit/iss-realismi-taivas.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
   './js/linssit/topografia-tarkennus.js',
@@ -394,6 +417,7 @@ const SHELL = [
   './js/linssit/vertailu.js',
   './js/linssit/maatiedot.js',
   './js/linssit/vesistot.js',
+  './js/linssit/maapallon-vuosi.js',
   './js/packs/viritysaanet.js',
   './css/radio.css',
   './js/packs/valokuvat-paikalliset.js',
@@ -495,14 +519,21 @@ const SHELL = [
   './js/packs/hahmotelma-rus.js',
   './js/packs/hahmotelma-bih.js',
   './js/packs/hahmotelma-ukr.js',
+  './js/packs/hahmotelma-srb.js',
+  './js/packs/hahmotelma-alb.js',
+  './js/packs/hahmotelma-mkd.js',
+  './js/packs/hahmotelma-mne.js',
+  './js/packs/hahmotelma-mda.js',
+  './js/packs/hahmotelma-blr.js',
   './js/packs/maakartat.js',
   './js/packs/maakunnat-luonnehdinnat.js',
   './js/packs/maakunnat-pulu.js',
   './js/packs/maakunnat-nimet.js',
   './js/packs/nostojen-kokoluokat.js',
-  './js/packs/maakuntasalaisuudet.js',
-  './js/packs/maakuntasalaisuudet-grc.js',
   './js/packs/nahtavyysjutut.js',
+  './js/lehtiosiot.js',
+  './js/nostokategoriat.js',
+  './js/lehtiosiot-kuvat.js',
   './js/packs/miniatyyrit.js',
   // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
   './assets/nostotyypit/merkki-vuori.png',
@@ -516,6 +547,9 @@ const SHELL = [
   './assets/nostotyypit/merkki-kauppa.png',
   './assets/nostotyypit/merkki-tekniikka.png',
   './assets/nostotyypit/merkki-merenkulku.png',
+  './assets/nostotyypit/merkki-huuto.png',
+  './assets/nostotyypit/merkki-elain.png',
+  './assets/nostotyypit/merkki-hetki.png',
   './assets/kartat/symbolit/sym-elain.webp',
   './assets/kartat/symbolit/sym-historia.webp',
   './assets/kartat/symbolit/sym-huuto.webp',
@@ -661,13 +695,16 @@ const SHELL = [
   // (omistajan päätös). Hakemisto viimeisenä, se tuo maakohtaiset.
   './js/packs/maastokohteet-afg.js',
   './js/packs/maastokohteet-ago.js',
+  './js/packs/maastokohteet-alb.js',
   './js/packs/maastokohteet-are.js',
   './js/packs/maastokohteet-arg.js',
   './js/packs/maastokohteet-ark.js',
   './js/packs/maastokohteet-ata.js',
   './js/packs/maastokohteet-aus.js',
   './js/packs/maastokohteet-aut.js',
+  './js/packs/maastokohteet-bgr.js',
   './js/packs/maastokohteet-bih.js',
+  './js/packs/maastokohteet-blr.js',
   './js/packs/maastokohteet-bol.js',
   './js/packs/maastokohteet-bra.js',
   './js/packs/maastokohteet-can.js',
@@ -680,6 +717,7 @@ const SHELL = [
   './js/packs/maastokohteet-cub.js',
   './js/packs/maastokohteet-cyp.js',
   './js/packs/maastokohteet-cze.js',
+  './js/packs/maastokohteet-deu.js',
   './js/packs/maastokohteet-dnk.js',
   './js/packs/maastokohteet-dza.js',
   './js/packs/maastokohteet-ecu.js',
@@ -715,10 +753,13 @@ const SHELL = [
   './js/packs/maastokohteet-ltu.js',
   './js/packs/maastokohteet-lva.js',
   './js/packs/maastokohteet-mar.js',
+  './js/packs/maastokohteet-mda.js',
   './js/packs/maastokohteet-mdg.js',
   './js/packs/maastokohteet-mex.js',
+  './js/packs/maastokohteet-mkd.js',
   './js/packs/maastokohteet-mli.js',
   './js/packs/maastokohteet-mmr.js',
+  './js/packs/maastokohteet-mne.js',
   './js/packs/maastokohteet-mng.js',
   './js/packs/maastokohteet-moz.js',
   './js/packs/maastokohteet-nam.js',
@@ -749,6 +790,7 @@ const SHELL = [
   './js/packs/maastokohteet-slb.js',
   './js/packs/maastokohteet-sle.js',
   './js/packs/maastokohteet-som.js',
+  './js/packs/maastokohteet-srb.js',
   './js/packs/maastokohteet-swe.js',
   './js/packs/maastokohteet-syr.js',
   './js/packs/maastokohteet-tcd.js',
@@ -773,6 +815,7 @@ const SHELL = [
   './js/packs/paivan-kuvat.js',
   './js/packs/uutislahteet.js',
   './js/packs/pollo-asetukset.js',
+  './js/packs/hintatasot.js',
   './js/packs/pollo-kysymykset.js',
   './js/packs/pollo-poiminnat.js',
   './js/packs/europe-valokuvat.js',
@@ -1029,7 +1072,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/praha-prahan-linna.webp',
   './assets/kartat/miniatyyrit/praha-kaarlensilta.webp',
   './assets/kartat/miniatyyrit/praha-vanhauusi-synagoga.webp',
-  './assets/kartat/miniatyyrit/praha-astronominen-kello.webp',
   './assets/kartat/miniatyyrit/praha-kansallismuseo.webp',
   './assets/kartat/miniatyyrit/amsterdam-keskusrautatieasema.webp',
   './assets/kartat/miniatyyrit/amsterdam-anne-frankin-talo.webp',
@@ -1043,7 +1085,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tukholma-kuninkaanlinna.webp',
   './assets/kartat/miniatyyrit/tukholma-vasa-museo.webp',
   './assets/kartat/miniatyyrit/tukholma-skansen.webp',
-  './assets/kartat/miniatyyrit/kobenhavn-pieni-merenneito.webp',
   './assets/kartat/miniatyyrit/kobenhavn-amalienborg.webp',
   './assets/kartat/miniatyyrit/kobenhavn-rundetarn.webp',
   './assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
@@ -1210,7 +1251,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/budapest-pyhan-tapanin-kirkko.webp',
   './assets/kartat/miniatyyrit/budapest-sankarien-aukio.webp',
   './assets/kartat/miniatyyrit/budapest-suuri-kauppahalli.webp',
-  './assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
   './assets/kartat/miniatyyrit/lissabon-kansallispanteoni.webp',
   './assets/kartat/miniatyyrit/lissabon-kauppatori.webp',
   './assets/kartat/miniatyyrit/lissabon-rossio.webp',
@@ -1231,7 +1271,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/barcelona-arc-de-triomf.webp',
   './assets/kartat/miniatyyrit/barcelona-boquerian-kauppahalli.webp',
   './assets/kartat/miniatyyrit/barcelona-casa-batllo.webp',
-  './assets/kartat/miniatyyrit/barcelona-kolumbuksen-patsas.webp',
   './assets/kartat/miniatyyrit/barcelona-musiikkipalatsi.webp',
   './assets/kartat/miniatyyrit/barcelona-sagrada-familia.webp',
   './assets/kartat/miniatyyrit/dublin-dublinin-linna.webp',
@@ -1377,12 +1416,6 @@ const SHELL = [
   './assets/kartat/miniatyyrit/madrid-kaksi-joukkuetta.webp',
   './assets/kartat/miniatyyrit/madrid-palamaton-linna.webp',
   './assets/kartat/miniatyyrit/madrid-tapaskierros.webp',
-  './assets/kartat/miniatyyrit/nikosia-buyuk-han.webp',
-  './assets/kartat/miniatyyrit/nikosia-faneromenin-kirkko.webp',
-  './assets/kartat/miniatyyrit/nikosia-kyproksen-museo.webp',
-  './assets/kartat/miniatyyrit/nikosia-leventis-museo.webp',
-  './assets/kartat/miniatyyrit/nikosia-omeryen-hamam.webp',
-  './assets/kartat/miniatyyrit/nikosia-selimiyen-moskeija.webp',
   './assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
   './assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
   './assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
@@ -2104,10 +2137,16 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-26-pohja-20260926';
+const LAATTAKANSIO = '2026-09-27-pohja-20260927';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
-const LAATTAKANSIO_SYVA = '2026-09-26-pohja';
-const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
+const LAATTAKANSIO_SYVA = '2026-09-27-pohja';
+/**
+ * DELTASARJAN PERUSSARJA (js/pallo.js PALLO_LAATTAPERUS, js/deltasarja.js):
+ * muuttumattomat laatat haetaan perussarjan kansiosta, joten activate ei
+ * saa siivota niitä. null = tuotantosarja ei ole delta.
+ */
+const LAATTAKANSIO_PERUS = null;
+const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA, ...(LAATTAKANSIO_PERUS ? [LAATTAKANSIO_PERUS] : [])];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;
 /** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */

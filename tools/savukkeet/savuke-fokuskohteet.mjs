@@ -68,13 +68,11 @@ import { NOSTOSYM_MINI_RUUTU, nostosymTekstinLeveys } from '../../js/fokusnosto-
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
@@ -101,7 +99,7 @@ peli.revealed.delete('ateena');
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 
 /**
  * Yksi sivu valmiiksi ladattuna. `fokus` false sammuttaa fokusmoodin,
@@ -1493,15 +1491,17 @@ vaadi('alleviivattu sana kysyy pöllöltä lisää kortin sulkeutumatta',
 await sivu.evaluate(() => window.matkakirjaPollo.sulje());
 await sivu.waitForTimeout(300);
 
-/* --- 10b: MATKAKIRJAN IHME — kuva, nappi kuvan alla ja kulmanauha ---
+/* --- 10b: MATKAKIRJAN IHME — ihmekuva ensin, nykykuva tekstissä, kulmanauha ---
  *
  * Omistajan tilaus 27.8.2026 ilta (Akropoliin kortti iPhonella). Kolme
  * asiaa, jotka näkyvät VAIN oikeassa asettelussa:
  *
- *   a) OLEMASSA OLEVAN KOHTEEN JÄRJESTYS on otsikko → nykytilan
- *      VALOKUVA → "Koe ihme" -nappi → leipäteksti. Nappi seisoo siinä
- *      kohdassa, jossa poistettu loistoaikarekonstruktio ennen oli, eikä
- *      kortissa saa olla enää kahta kuvaa.
+ *   a) OLEMASSA OLEVAN KOHTEEN JÄRJESTYS on otsikko → IHMEKUVA
+ *      nauhoineen (iso, ensimmäinen) → leipäteksti, jonka ENSIMMÄISENÄ
+ *      lapsena kelluu pieni nykytilan valokuva (omistaja 27.9.2026 klo
+ *      23.4x, Olympia-kortti: "Koe ihme" -nappi pois). Nykykuvan
+ *      napautus avaa suurennoksen, ja ihmekuvan suurennoksessa on nauha
+ *      ja havainnekuvamerkintä.
  *   b) NAUHA ON DIAGONAALINEN JA KÄÄRIYTYY KUVAN YMPÄRI: kaista on
  *      käännetty 45 astetta ja sen laatikko jatkuu kuvan ylä- ja
  *      vasemman reunan YLI. Rajoja on kolme ja jokainen mitataan
@@ -1598,13 +1598,17 @@ const nauhanSovitus = (isantaValitsin) => sivu.evaluate((sel) => {
   };
 }, isantaValitsin);
 
-/** Kortin rakenne ihmeen kannalta: kuvat, nappi ja niiden järjestys. */
+/** Kortin rakenne ihmeen kannalta: kuvat, nykykuva ja niiden järjestys. */
 const ihmekortti = () => sivu.evaluate(() => {
   const el = document.querySelector('.fokuskohde-popup');
   if (!el) return null;
   const sisalto = el.querySelector('.fokuskohde-sisalto');
   const jarjestys = [...sisalto.children].map((n) => n.className.split(' ')[0]);
   const nauha = el.querySelector('.fokuskohde-kuva .fokuskohde-ihmenauha');
+  // Ensimmäinen kuva (ei tekstin nykykuva) ja tekstin kelluva nykykuva.
+  const eka = el.querySelector('.fokuskohde-kuva:not(.fokuskohde-nykykuva)');
+  const teksti = el.querySelector('.fokuskohde-teksti');
+  const nyky = teksti?.querySelector(':scope > .fokuskohde-nykykuva');
   const kuva = el.querySelector('.fokuskohde-kuva img');
   const kaista = nauha?.querySelector('.fokuskohde-ihmekaista');
   const k = kaista?.getBoundingClientRect();
@@ -1614,9 +1618,16 @@ const ihmekortti = () => sivu.evaluate(() => {
     jarjestys,
     kuvia: el.querySelectorAll('.fokuskohde-kuva img').length,
     kuvalahde: el.querySelector('.fokuskohde-kuvalahde')?.textContent ?? '',
+    // "Koe ihme" -nappi poistettiin 27.9.2026: vanhaa nappia ei saa olla.
     nappeja: el.querySelectorAll('.fokuskohde-ihmenappi').length,
-    // Nauha kortin kuvassa: vain kadonneella, jonka ainoa kuva on ihme.
+    // Nauha kortin kuvassa: ihmekohteella aina ensimmäisessä kuvassa.
     nauhaKuvassa: Boolean(nauha),
+    ekaNauhalla: Boolean(eka?.querySelector('.fokuskohde-ihmenauha')),
+    nykykuva: nyky ? {
+      ensimmainen: teksti.firstElementChild === nyky,
+      kelluu: getComputedStyle(nyky).float,
+      lahde: nyky.querySelector('.fokuskohde-kuvalahde')?.textContent ?? '',
+    } : null,
     muunnos: kaista ? getComputedStyle(kaista).transform : '',
     osoitin: nauha ? getComputedStyle(nauha).pointerEvents : '',
     yli: k && i ? { ylos: Math.round(i.top - k.top), vasen: Math.round(i.left - k.left) } : null,
@@ -1708,24 +1719,36 @@ await napauta('olympia');
 let ihme = await ihmekortti();
 vaadi('olemassa olevan ihmekohteen kortti aukesi',
   ihme?.otsikko === 'Olympia', JSON.stringify(ihme?.otsikko));
-vaadi('olemassa olevan ihmekohteen kortissa on yksi kuva: nykytilan valokuva',
-  ihme?.kuvia === 1 && /CC BY/.test(ihme.kuvalahde), JSON.stringify(ihme?.kuvalahde));
-vaadi('"Koe ihme" -nappi on kuvan ALLA eikä otsikon alla',
-  ihme?.nappeja === 1
-  && ihme.jarjestys.indexOf('fokuskohde-ihmenappi')
-     > ihme.jarjestys.indexOf('fokuskohde-kuva')
-  && ihme.jarjestys.indexOf('fokuskohde-ihmenappi')
+vaadi('olemassa olevan ihmekohteen ENSIMMÄINEN kuva on ihmekuva nauhoineen, ennen tekstiä',
+  ihme?.ekaNauhalla === true
+  && ihme.jarjestys.indexOf('fokuskohde-kuva') > -1
+  && ihme.jarjestys.indexOf('fokuskohde-kuva')
      < ihme.jarjestys.indexOf('fokuskohde-teksti'),
   JSON.stringify(ihme?.jarjestys));
-vaadi('olemassa olevan kortissa ei ole nauhaa: ihmekuva aukeaa vasta napista',
-  ihme?.nauhaKuvassa === false);
+vaadi('nykytilan valokuva kelluu tekstin ensimmäisenä lapsena oikealla, CC BY -lähteineen',
+  ihme?.nykykuva?.ensimmainen === true && ihme.nykykuva.kelluu === 'right'
+  && /CC BY/.test(ihme.nykykuva.lahde), JSON.stringify(ihme?.nykykuva));
+vaadi('kortissa ei ole "Koe ihme" -nappia', ihme?.nappeja === 0, `${ihme?.nappeja}`);
 
-// Napin puuttuminen on jo raportoitu edellä: älä jää odottamaan sitä
-// 30 sekuntia, vaan anna loppujen väitteiden kertoa oma tuloksensa.
-if (ihme?.nappeja) await sivu.locator('.fokuskohde-ihmenappi').click();
+// Nykykuvan napautus avaa suurennoksen; Esc kuorii vain suurennoksen.
+if (ihme?.nykykuva) {
+  await sivu.locator('.fokuskohde-popup .fokuskohde-nykykuva .fokuskohde-kuvanappi').click();
+}
+await sivu.waitForTimeout(600);
+const nykyZoom = await ihmezoom();
+vaadi('nykykuvan napautus avaa suurennoksen', nykyZoom != null, JSON.stringify(nykyZoom));
+await sivu.keyboard.press('Escape');
+await sivu.waitForTimeout(500);
+
+// Ensimmäisen kuvan puuttuminen on jo raportoitu edellä: älä jää
+// odottamaan sitä 30 sekuntia, vaan anna loppujen väitteiden kertoa
+// oma tuloksensa.
+if (ihme?.ekaNauhalla) {
+  await sivu.locator('.fokuskohde-popup .fokuskohde-kuva-nauhalla .fokuskohde-kuvanappi').first().click();
+}
 await sivu.waitForTimeout(600);
 let zoom = await ihmezoom();
-vaadi('"Koe ihme" avaa suurennoksen, jossa on ihmenauha ja havainnekuvamerkintä',
+vaadi('ihmekuvan suurennoksessa on ihmenauha ja havainnekuvamerkintä',
   zoom?.nauha === true && /Unohdettu aarre/i.test(zoom.teksti)
   && /Matkakirjan havainnekuva/.test(zoom.lahde), JSON.stringify(zoom?.teksti));
 vaadi('suurennoksen nauha on 45 asteen kulmanauha, ei vaakalaatikko',

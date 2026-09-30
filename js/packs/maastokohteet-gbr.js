@@ -577,5 +577,79 @@ export const MAASTOKOHTEET_GBR = [
     lahde: 'en-Wikipedia "Roman Baths (Bath)", johdanto-osa ja osio "Hot spring" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 2 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'jurassic-coast-durdle-door',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/gbr-nosto-jurassic-coast-durdle-door-dbeda20e.jpg',
+      lyhyt: 'Durdle Doorin luonnonkaari kohoaa merestä Dorsetin rannikolla.',
+      selite: 'Kuvassa näkyy Durdle Doorin kalkkikiviholvi, joka nousee turkoosin ja sinisen meren yläpuolelle.',
+      lahde: 'Valokuva: Balon Greyjoy, Wikimedia Commons (CC0).',
+      tekija: 'Balon Greyjoy',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20210528_Durdle_Door-1.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    nimi: 'Jurassic Coast ja Durdle Door',
+    nimio: 'Durdle Door',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Miten meri on muovannut kallioon valtavan kaaren?',
+      'Kuinka pitkän ajan geologinen historia näkyy Jurassic Coastilla?',
+    ],
+    korostukset: ['Durdle Door|Durdle Door'],
+    nappi: 'Kaari, jonka meri louhi kiveen',
+    // -2.277 E / 50.6211 N — en-Wikipedia "Jurassic Coast", osiot "World Heritage Site" ja "Geography"; en-Wikipedia "Durdle Door", johdanto ja "Geology"
+    laudat: {
+      maailmankartta: { x: 5757.4, y: 1363.1 },
+    },
+    teksti: 'Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, '
+      + 'Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen '
+      + 'maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea '
+      + 'kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen '
+      + 'korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle '
+      + 'Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin '
+      + 'kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.',
+    lahde: 'en-Wikipedia "Jurassic Coast", osiot "World Heritage Site" ja "Geography"; '
+      + 'en-Wikipedia "Durdle Door", johdanto ja "Geology" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'canterburyn-katedraali',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/gbr-nosto-canterburyn-katedraali-bc8b876d.jpg',
+      lyhyt: 'Canterburyn katedraalin goottilaiset tornit ja etelänpuoleinen julkisivu.',
+      selite: 'Kuvassa näkyy Canterburyn katedraali viistosti sivulta: länsipään tornit vasemmalla ja korkea keskustorni oikealla.',
+      lahde: 'Valokuva: Peter S, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Peter S',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Canterbury_Cathedral_-_geograph.org.uk_-_8018782.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    nimi: 'Canterburyn katedraali',
+    nimio: 'Canterbury',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mitä katedraalin luoteisessa poikkilaivassa tapahtui joulukuussa 1170?',
+      'Kuka perusti Canterburyn katedraalin vuonna 597?',
+    ],
+    korostukset: ['Thomas Becket|Thomas Becket'],
+    nappi: 'Paikka, jonne Becket kaatui',
+    // 1.0831 E / 51.2797 N — en-Wikipedia "Canterbury Cathedral", johdanto, "History" ja "Architecture"
+    laudat: {
+      maailmankartta: { x: 5869.4, y: 1334.1 },
+    },
+    teksti: 'Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja '
+      + 'Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 '
+      + 'paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen '
+      + 'vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen '
+      + 'jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. '
+      + 'joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat '
+      + 'Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön '
+      + 'vuonna 1988.',
+    lahde: 'en-Wikipedia "Canterbury Cathedral", johdanto, "History" ja "Architecture" '
+      + '(tarkistettu 30.9.2026).',
+  },
 ];
 

@@ -98,6 +98,7 @@ export const MAASTOKOHTEET_UKR = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva Dmytro Petishkin',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Views_of_Hoverla_02.jpg',
+      viitteet: [{ tekija: 'Dmytro Petishkin', lisenssi: 'CC BY 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Views_of_Hoverla_02.jpg' }],
       lisenssi: 'CC BY 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
     },
@@ -108,6 +109,7 @@ export const MAASTOKOHTEET_UKR = [
       lahde: 'Valokuva: Dmytro Petishkin, Wikimedia Commons (CC BY 4.0).',
       tekija: 'Dmytro Petishkin',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Views_of_Hoverla_02.jpg',
+      viitteet: [{ tekija: 'Dmytro Petishkin', lisenssi: 'CC BY 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Views_of_Hoverla_02.jpg' }],
       lisenssi: 'CC BY 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
     }],
@@ -150,6 +152,7 @@ export const MAASTOKOHTEET_UKR = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva George Chernilevsky',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Port_of_Odessa_2016_G3.jpg',
+      viitteet: [{ tekija: 'George Chernilevsky', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Port_of_Odessa_2016_G3.jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
@@ -160,6 +163,7 @@ export const MAASTOKOHTEET_UKR = [
       lahde: 'Valokuva: George Chernilevsky, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'George Chernilevsky',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Port_of_Odessa_2016_G3.jpg',
+      viitteet: [{ tekija: 'George Chernilevsky', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Port_of_Odessa_2016_G3.jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     }],
@@ -191,6 +195,7 @@ export const MAASTOKOHTEET_UKR = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva Vedomosti-dzha',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_(1).jpg',
+      viitteet: [{ tekija: 'Vedomosti-dzha', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_(1).jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
@@ -201,6 +206,7 @@ export const MAASTOKOHTEET_UKR = [
       lahde: 'Valokuva: Vedomosti-dzha, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Vedomosti-dzha',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_(1).jpg',
+      viitteet: [{ tekija: 'Vedomosti-dzha', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Frozen_Sea_of_Azov_near_Kamianka_village_Crimea_Ukraine_(1).jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     }],
@@ -257,6 +263,7 @@ export const MAASTOKOHTEET_UKR = [
       "lahde": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
       "tekija": "OpenAI; referenssikuva Raimond Spekking",
       "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",
+      "viitteet": [{ "tekija": "Raimond Spekking", "lisenssi": "CC BY-SA 4.0", "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "sivu": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg" }],
       "lisenssi": "CC BY-SA 4.0",
       "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
@@ -268,6 +275,7 @@ export const MAASTOKOHTEET_UKR = [
         "lahde": "Valokuva, Wikimedia Commons",
         "tekija": "Raimond Spekking",
         "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg",
+        "viitteet": [{ "tekija": "Raimond Spekking", "lisenssi": "CC BY-SA 4.0", "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "sivu": "https://commons.wikimedia.org/wiki/File:Dniester_River_in_Halych,_Ukraine-6111.jpg" }],
         "lisenssi": "CC BY-SA 4.0",
         "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
       }
@@ -735,5 +743,151 @@ export const MAASTOKOHTEET_UKR = [
       + 'Nelle -tehtaaseen.',
     lahde: 'en-Wikipedia "Derzhprom", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'tsernivtsin-yliopisto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-nosto-tsernivtsin-yliopisto-da7e83c2.jpg',
+      lyhyt: 'Punatiilinen residenssirakennus kellotorneineen puiden ja kukkien takana.',
+      selite: 'Bukovinan ja Dalmatian metropoliittojen residenssi Tšernivtsissä: punatiilinen, koristeellisesti kuvioitu rakennus, jonka kellotorni kohoaa keskellä.',
+      lahde: 'Valokuva: Posterrr, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Posterrr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Residence_of_Bukovinian_and_Dalmatian_Metropolitans_in_Chernivtsi_DSC_9710.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto)',
+    nimio: 'Tšernivtsi',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?',
+      'Kuka suunnitteli Bukovinan metropoliittojen residenssin?',
+    ],
+    korostukset: ['Alhambra|Alhambra'],
+    nappi: 'Alhambran henkeä Bukovinassa',
+    // 25.9244 E / 48.2969 N — en-Wikipedia "Residence of Bukovinian and Dalmatian Metropolitans" ja "Chernivtsi National University", osiot "History" ja "Campuses and buildings"
+    laudat: {
+      maailmankartta: { x: 6697.5, y: 1463.6 },
+    },
+    teksti: 'Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian '
+      + 'metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi '
+      + 'rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä '
+      + 'yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 '
+      + 'metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi '
+      + 'vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin '
+      + 'tiloissa.',
+    lahde: 'en-Wikipedia "Residence of Bukovinian and Dalmatian Metropolitans" ja "Chernivtsi '
+      + 'National University", osiot "History" ja "Campuses and buildings" (tarkistettu '
+      + '30.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ C, 30.9.2026 — 3 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'klevanin-rakkaudentunneli',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-nosto-klevanin-rakkaudentunneli-a3ff143c.jpg',
+      lyhyt: 'Työjuna ajaa vihreän lehtiholvin läpi kahden kiskon päällä.',
+      selite: 'Kuvassa raide jatkuu tiheiden, lehtevien pensaiden ja puiden muodostaman holvin sisään, ja siellä näkyy kiskoilla kulkeva keltainen työkone.',
+      lahde: 'Valokuva: Дядя Саша, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Дядя Саша',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tunnel_of_love_03.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Klevanin rakkaudentunneli',
+    nimio: 'Klevan',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Minkä kaupungin kanssa rata yhdistää Klevanin?',
+      'Kuinka monta kertaa päivässä junat kulkevat radalla?',
+    ],
+    korostukset: ['vihreiksi holveiksi|vihreiksi holveiksi'],
+    nappi: 'Vihreä holvi raiteen yllä',
+    // 26.0461 E / 50.7509 N — en-Wikipedia "Tunnel of Love (railway)", johdanto ja infolaatikko
+    laudat: {
+      maailmankartta: { x: 6701.5, y: 1357.4 },
+    },
+    teksti: 'Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja '
+      + 'rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan '
+      + 'kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän '
+      + 'halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi '
+      + 'holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö '
+      + 'UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät '
+      + 'myös pariskunnat ja valokuvaajat.',
+    lahde: 'en-Wikipedia "Tunnel of Love (railway)", johdanto ja infolaatikko (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'berdytsivin-karmeliittaluostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-nosto-berdytsivin-karmeliittaluostari-c16eeb55.jpg',
+      lyhyt: 'Luostarin tiilinen muuri ja tornit sekä patsas edustalla.',
+      selite: 'Kuvassa näkyvät luostarin punatiilinen pyöreä muuritorni, valkoiset kupolikirkot ja kellotorni sekä edustalla seisova patsas.',
+      lahde: 'Valokuva: Nataliya Shestakova, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Nataliya Shestakova',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Berdychiv_Carmelite_Monastery_01_(YDS_9768).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Berdytšivin karmeliittaluostari',
+    nimio: 'Berdytšiv',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Milloin luostarin rakennustyöt valmistuivat?',
+      'Minkä ikonin ansiosta luostari tuli tunnetuksi?',
+    ],
+    korostukset: ['ikonista|ikonista'],
+    nappi: 'Linnoituksesta pyhiinvaelluskohteeksi',
+    // 28.5744 E / 49.8972 N — en-Wikipedia "Berdychiv Carmelite Monastery", johdanto ja "History"
+    laudat: {
+      maailmankartta: { x: 6785.8, y: 1394.7 },
+    },
+    teksti: 'Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari '
+      + 'Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti '
+      + 'Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt '
+      + 'alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt '
+      + 'Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. '
+      + 'Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle '
+      + 'kirkolle vuonna 1991.',
+    lahde: 'en-Wikipedia "Berdychiv Carmelite Monastery", johdanto ja "History" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'trostjanetsin-dendropuisto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-nosto-trostjanetsin-dendropuisto-8d5f378a.jpg',
+      lyhyt: 'Polku ja korkeita puita Trostjanetsin puistossa.',
+      selite: 'Hiekkapolku kulkee nurmikentän halki, ja sen ympärillä kasvaa mäntyjä, tammi ja pensaita.',
+      lahde: 'Valokuva: Klimetin, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Klimetin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D0%B5%D0%BD%D0%B4%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA_%C2%AB%D0%A2%D1%80%D0%BE%D1%81%D1%82%D1%8F%D0%BD%D0%B5%D1%86%C2%BB_%D0%9D%D0%90%D0%9D_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B.JPG',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    nimi: 'Trostjanetsin dendropuisto',
+    nimio: 'Trostjanets',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuka aloitti puiston rakentamisen ja milloin?',
+      'Kuinka monta lajia puistossa kasvaa?',
+    ],
+    korostukset: ['Skoropadski|Skoropadski'],
+    nappi: 'Puisto, joka rakennettiin tyhjälle aromaalle',
+    // 32.8186 E / 50.7886 N — Encyclopedia of Ukraine "Trostianets Dendrological Park"
+    laudat: {
+      maailmankartta: { x: 6927.3, y: 1355.7 },
+    },
+    teksti: 'Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. '
+      + 'Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 '
+      + 'tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia '
+      + 'puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä '
+      + 'osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. '
+      + 'Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- '
+      + 'ja kasvilajia.',
+    lahde: 'Encyclopedia of Ukraine "Trostianets Dendrological Park" (tarkistettu 30.9.2026).',
   },
 ];

@@ -57,11 +57,12 @@ import {
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
-import { nostokuvaAloita } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaVakiokortti } from './nostokuva.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA: kortin kuori ja sisus ovat
@@ -223,7 +224,11 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
     // kuva pienenee vasemmalle ja teksti tulee oikealle.
     kaksipalstaTaitto: true,
   }) : null;
-  if (!kaksivaihe) latoSyvennys(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoSyvennys(sisalto, undefined);
+    // Kuvaton kortti samaan kokoon ja paikkaan kuin kuvallinen (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
+  }
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele tarina' });
 
@@ -254,6 +259,7 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('syvennys-auki');
+  animoiAvaus(kortti);
 }
 
 /**
@@ -367,8 +373,8 @@ export function suljeSyvennys(ui) {
   for (const vanha of document.querySelectorAll('.syvennys-kerros')) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
     // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
-    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
-    vanha.remove();
+    vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
+    suljeKerrosAnimoiden(vanha, '.syvennys-kortti', ['syvennys-kerros', 'syvennys-auki']);
   }
 }
 

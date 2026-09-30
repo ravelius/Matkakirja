@@ -558,6 +558,14 @@ export const FOKUSVIRTA_SOFIA = {
        * kuvaus "Old Turkish dungeon where Vasil Levski was kept prisoner,
        * late XIX". Valokuva on isoisän omalta vuosikymmeneltä, ja selite
        * sanoo täsmälleen sen, minkä lähde sanoo — ei enempää.
+       *
+       * PIENI KUVA, EI KORVATA (27.9.2026, Siirtosepän eheystarkistus
+       * #3434): tämä on ainoa löytynyt aikalaisvalokuva itse tyrmästä.
+       * Haku Commonsista ei löytänyt suurempaa versiota eikä muuta
+       * 1800-luvun kuvaa samasta paikasta — Levskin muistomerkistä
+       * (nykytila) sen sijaan on runsaasti isoja kuvia, mutta ne
+       * kuvaisivat eri asiaa kuin tämän noston teksti (vankila, ei
+       * muistomerkki).
        */
       kuva: {
         tiedosto: 'Sofia Dungeon.jpg',

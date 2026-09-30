@@ -257,6 +257,7 @@ export const LINSSI = {
   // 6.9.2026 keskipäivä laukun kuvakaappauksesta: "Tässä on liikaa tekstiä
   // linssistä"). Pitkä IHMISEN_MATKA_ESITTELY jää kaaren avauslaatikkoon.
   lyhyt: 'Ihmisen matka Afrikasta koko maapallolle: kello juoksee, valot syttyvät.',
+  esittely: 'Ihmiskunnan leviäminen Afrikasta koko maailmaan aikajanalla: käynnistä kello ja katso, miten asutus etenee mantereelta toiselle.',
   // Jalanjälki: kantapää, päkiä ja viisi varvasta.
   ikoni: '<path d="M9.5 14.5c-1.6-1.2-2.3-3-2.3-5.2C7.2 6.3 8.9 4 11.4 4c2.3 0 3.6 1.9 3.6 4.3 0 1.7-.6 3-.6 4.3 0 1.4.9 2.2.9 3.6 0 2-1.4 3.3-3.3 3.3-1.9 0-3.2-1.1-3.2-2.7 0-1 .3-1.6.7-2.3z"/>'
     + '<circle cx="16.6" cy="6.2" r="1"/><circle cx="17.6" cy="9" r="0.9"/>',

@@ -1,0 +1,434 @@
+[
+  {
+    "tunnus": "malaspina",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka suuri Malaspinan jäätikkö on?",
+        "vastaus": "Malaspina on maailman suurin jalustajäätikkö, ja se on pinta-alaltaan suurempi kuin Rhode Islandin osavaltio. Se muodostuu useista vuoristojäätiköistä, jotka levittäytyvät yhteen laajaksi jäälevyksi rannikkotasangolla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Malaspina_Glacier",
+            "title": "Malaspina Glacier – Wikipedia"
+          }
+        ],
+        "havaintoId": "STS066-117-014"
+      },
+      {
+        "kysymys": "Kenen mukaan Malaspinan jäätikkö on nimetty?",
+        "vastaus": "Jäätikkö on nimetty italialaissyntyisen merenkulkijan Alessandro Malaspinan mukaan, joka tutki Alaskan rannikkoa 1790-luvulla Espanjan palveluksessa. Hänen retkikuntansa etsi tuolloin muun muassa merireittiä pohjoisen kautta Atlantille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Malaspina_Glacier",
+            "title": "Malaspina Glacier – Wikipedia"
+          }
+        ],
+        "havaintoId": "STS066-117-014"
+      }
+    ]
+  },
+  {
+    "tunnus": "makgadikgadin-altaat",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä Makgadikgadin suola-altaiden punainen väri johtuu?",
+        "vastaus": "Altaiden tummanpunainen sävy syntyy suolaa rakastavista leville ja mikrobeille, jotka viihtyvät voimakkaan suolaisessa vedessä. Väri kertoo haihtuvan suolaliuoksen olevan keskivahvaa tai vahvaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Makgadikgadi_Pan",
+            "title": "Makgadikgadi Pan – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e15732"
+      },
+      {
+        "kysymys": "Mistä Makgadikgadin suolatasanko sai alkunsa?",
+        "vastaus": "Tasanko on jäänne valtavasta muinaisesta Makgadikgadi-järvestä, joka kuivui vähitellen ilmaston muuttuessa tuhansien vuosien kuluessa. Nykyään altaisiin virtaa vettä satojen kilometrien päästä, muun muassa Angolasta asti.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Makgadikgadi_Pan",
+            "title": "Makgadikgadi Pan – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e15732"
+      }
+    ]
+  },
+  {
+    "tunnus": "kaukasusvuoret",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä on Euroopan korkein huippu ja missä se on?",
+        "vastaus": "Euroopan korkein huippu on Elbrus, joka kohoaa 5 642 metriin Kaukasuksen vuoristossa Venäjän puolella. Vuori on sammunut tulivuori, jonka huipulle nousee vuosittain tuhansia kiipeilijöitä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Kabardino-Balkaria",
+            "title": "Kabardino-Balkaria – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss071e041651"
+      },
+      {
+        "kysymys": "Mihin tarkoituksiin Mingečaurin tekojärveä käytetään?",
+        "vastaus": "Mingečaurin tekojärvi on Kaukasuksen suurin allas, ja sen vettä käytetään kalastukseen, juomavedeksi ja peltojen kasteluun. Se sijaitsee Kuran laaksossa Suur- ja Vähä-Kaukasuksen välissä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mingachevir_Reservoir",
+            "title": "Mingachevir Reservoir – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss023e035670"
+      }
+    ]
+  },
+  {
+    "tunnus": "guadalupen-pyorteet",
+    "kysymykset": [
+      {
+        "kysymys": "Kenen mukaan von Kármánin pyörrekatu on nimetty?",
+        "vastaus": "Ilmiö on nimetty unkarilaissyntyisen fyysikon Theodore von Kármánin mukaan, joka kuvasi pyörteiden syntymekanismin ensimmäisenä. Hän oli myös perustamassa NASAn Jet Propulsion Laboratorya.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street",
+            "title": "Kármán vortex street – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss036e035663"
+      },
+      {
+        "kysymys": "Millainen paikka Guadalupen saari on?",
+        "vastaus": "Guadalupe on tulivuoresta syntynyt saari Meksikon edustalla Tyynellämerellä, ja se on nykyään suojeltu biosfäärialue. Sen jyrkkä, korkea maasto häiritsee matalan pilvikerroksen virtausta ja synnyttää pyörteitä saaren tuulen puolelle.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Guadalupe_Island",
+            "title": "Guadalupe Island – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss040e016570"
+      }
+    ]
+  },
+  {
+    "tunnus": "kanariansaarten-pyorteet",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi matalat pilvet jäävät Kanariansaarten kohdalle?",
+        "vastaus": "Passaattituulten yläpuolella on lämpimämpi ilmakerros, joka toimii kannen tavoin ja estää matalia pilviä nousemasta korkeammalle. Kun saaren jyrkkä huippu työntyy tämän pilvikerroksen läpi, virtaus häiriintyy ja synnyttää pyörteitä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street",
+            "title": "Kármán vortex street – Wikipedia"
+          }
+        ],
+        "havaintoId": "s40-75-003"
+      },
+      {
+        "kysymys": "Mikä on Kanariansaarten ja Espanjan korkein huippu?",
+        "vastaus": "Kanariansaarten ja koko Espanjan korkein huippu on Teide Teneriffalla, joka kohoaa 3 715 metriin. Se on yhä toimiva tulivuori ja UNESCOn maailmanperintökohde.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Canary_Islands",
+            "title": "Canary Islands – Wikipedia"
+          }
+        ],
+        "havaintoId": "s40-75-003"
+      }
+    ]
+  },
+  {
+    "tunnus": "zagrosvuoret",
+    "kysymykset": [
+      {
+        "kysymys": "Miten Zagrosvuoriston poimut ovat syntyneet?",
+        "vastaus": "Vuoret ovat syntyneet, kun Arabian mannerlaatta on hitaasti törmännyt Euraasian laattaan ja puristanut kerrostuneen kallioperän pitkiksi poimuiksi. Sama törmäys jatkuu yhä, minkä vuoksi alue on altis maanjäristyksille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Zagros_Mountains",
+            "title": "Zagros Mountains – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0315889"
+      },
+      {
+        "kysymys": "Miksi Zagrosvuoret ovat taloudellisesti tärkeät?",
+        "vastaus": "Poimuvuorten rakenteet ovat muodostaneet maanalaisia öljy- ja kaasuesiintymiä, ja Zagrosin alue tuottaa suuren osan Iranin ja Irakin öljystä. Poimujen muoto näkyy usein selvästi jo satelliittikuvista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Zagros_Mountains",
+            "title": "Zagros Mountains – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0315889"
+      }
+    ]
+  },
+  {
+    "tunnus": "lasvegas-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Las Vegasin Strip erottuu yökuvassa kirkkaana?",
+        "vastaus": "Stripin kasinot ja hotellit pitävät valonsa päällä ympäri vuorokauden houkutellakseen asiakkaita, mikä tekee alueesta ympäristöään huomattavasti kirkkaamman. Las Vegas tunnetaankin itseään kuvailevana viihteen maailman pääkaupunkina.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Las_Vegas",
+            "title": "Las Vegas – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss026e006255"
+      },
+      {
+        "kysymys": "Miksi Las Vegas syntyi juuri autiomaahan?",
+        "vastaus": "Kaupunki sai alkunsa 1900-luvun alussa rautatien vesipysäkkinä, sillä aavikon keskellä oli harvinaisia lähteitä. Uhkapelin laillistaminen vuonna 1931 muutti pienen ratapihakylän vähitellen maailman tunnetuimmaksi kasinokaupungiksi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Las_Vegas",
+            "title": "Las Vegas – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss026e006255"
+      }
+    ]
+  },
+  {
+    "tunnus": "iberia-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Madrid näkyy niin kirkkaana niemimaan keskellä?",
+        "vastaus": "Madrid on Espanjan pääkaupunki ja maan suurin kaupunki, ja se sijaitsee poikkeuksellisen korkealla, lähes 700 metrin korkeudessa keskellä Iberian niemimaata. Se on Euroopan korkeimmalla sijaitseva pääkaupunki.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Madrid",
+            "title": "Madrid – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e010008"
+      },
+      {
+        "kysymys": "Mikä tekee Lissabonista poikkeuksellisen vanhan kaupungin?",
+        "vastaus": "Lissabon on yksi Länsi-Euroopan vanhimmista kaupungeista, asutettu kauan ennen Rooman, Lontoon tai Pariisin perustamista. Kaupunki sijaitsee Tejo-joen suulla Atlantin rannikolla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lisbon",
+            "title": "Lisbon – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e010008"
+      }
+    ]
+  },
+  {
+    "tunnus": "labradorin-jaameri",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä virta kuljettaa merijäätä Labradorin rannikolle?",
+        "vastaus": "Kylmä Labradorin virta kuljettaa Arktikselta peräisin olevaa vettä ja jäätä etelään Kanadan itärannikkoa pitkin. Sama virta kuljettaa myös irronneita jäävuoria, joista yksi upotti Titanicin vuonna 1912 kauempana etelässä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Labrador_Current",
+            "title": "Labrador Current – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss070e086805"
+      },
+      {
+        "kysymys": "Miten Arktiksen merijää on muuttunut vuosikymmenten aikana?",
+        "vastaus": "Ilmastonlämpeneminen on vähentänyt Arktiksen merijään kokonaismäärää ja paksuutta vuosikymmenten aikana, ja kutistuminen on nopeinta kesäisin. Satelliitit ja avaruusasemalta otetut valokuvat auttavat tutkijoita seuraamaan muutosta vuodesta toiseen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Arctic_sea_ice_decline",
+            "title": "Arctic sea ice decline – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss070e086805"
+      }
+    ]
+  },
+  {
+    "tunnus": "lake-sharpe",
+    "kysymykset": [
+      {
+        "kysymys": "Miten Lake Sharpe -tekojärvi syntyi?",
+        "vastaus": "Lake Sharpe on tekojärvi, joka syntyi kun Missourijokeen rakennettiin Big Bend -pato Etelä-Dakotassa. Pato valmistui 1960-luvulla osana joen laajaa vesivoimahankkeiden sarjaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Sharpe",
+            "title": "Lake Sharpe – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss038e023651"
+      },
+      {
+        "kysymys": "Miksi kastelukentät näkyvät ilmakuvissa pyöreinä?",
+        "vastaus": "Pyöreä muoto syntyy keskipistekastelusta, jossa pitkä kastelulaite kiertää kiinteän keskipisteen ympäri. Menetelmä yleistyi 1900-luvun puolivälin jälkeen ja näkyy nykyään selvästi avaruudesta eri puolilla maailmaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Center-pivot_irrigation",
+            "title": "Center-pivot irrigation – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss038e023651"
+      }
+    ]
+  },
+  {
+    "tunnus": "new-orleans-mutka",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä New Orleansin lisänimi Puolikuun kaupunki juontuu?",
+        "vastaus": "Nimi juontuu Mississippijoen jyrkästä mutkasta, jonka sisäkaarteeseen kaupungin vanhin osa on rakennettu. Joen muoto muistuttaa ylhäältä katsottuna puolikuuta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/New_Orleans",
+            "title": "New Orleans – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss039e001640"
+      },
+      {
+        "kysymys": "Kuinka laajalta alueelta Mississippijoki kerää vetensä?",
+        "vastaus": "Mississippijoen valuma-alue kattaa noin 31 Yhdysvaltain osavaltiota ja pienen osan Kanadaa. Se on virtaaman mukaan Pohjois-Amerikan suurin jokijärjestelmä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mississippi_River",
+            "title": "Mississippi River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss039e001640"
+      }
+    ]
+  },
+  {
+    "tunnus": "rio-negro-mutkat",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä Río Negro saa alkunsa?",
+        "vastaus": "Río Negro syntyy, kun Neuquén- ja Limay-joet yhtyvät Andien itäpuolella, ja se virtaa siitä eteenpäin Atlantille asti. Joki tunnetaan poikkeuksellisen mutkittelevasta uomastaan Patagonian tasangolla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/R%C3%ADo_Negro_(Argentina)",
+            "title": "Río Negro (Argentina) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss022e019513"
+      },
+      {
+        "kysymys": "Mihin Río Negron vettä käytetään laaksossa?",
+        "vastaus": "Joen vettä johdetaan kanavilla Alto Valle -nimiseen laaksoon, jossa se kastelee laajoja omena- ja päärynätarhoja. Alue on yksi Argentiinan tärkeimmistä hedelmänviljelyseuduista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/R%C3%ADo_Negro_(Argentina)",
+            "title": "Río Negro (Argentina) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss022e019513"
+      }
+    ]
+  },
+  {
+    "tunnus": "ebron-suisto",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä Ebron suistossa viljellään laajalti?",
+        "vastaus": "Ebron suisto on yksi Espanjan tärkeimmistä riisintuotantoalueista, ja suuri osa sen pinta-alasta on tulvitettuja riisipeltoja. Alue on myös tärkeä kosteikko vesilinnuille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ebro_Delta",
+            "title": "Ebro Delta – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss009e09985"
+      },
+      {
+        "kysymys": "Miksi Ebron suisto on kutistunut?",
+        "vastaus": "Yläjuoksulle rakennetut padot pidättävät suurimman osan joen kuljettamasta hiekasta ja mudasta, joten suistoon ei enää kerry riittävästi ainesta korvaamaan meren kuluttamaa rantaa. Suisto on siksi vähitellen pienentynyt vuosikymmenten aikana.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ebro_Delta",
+            "title": "Ebro Delta – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss009e09985"
+      }
+    ]
+  },
+  {
+    "tunnus": "selengan-suisto",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka suuren osan Baikalin vedestä Selengajoki tuo?",
+        "vastaus": "Selengajoki on Baikal-järven suurin sivujoki ja tuo järveen noin puolet sen koko vesimäärästä. Joki saa alkunsa Mongoliasta ja virtaa Venäjän Burjatian tasavallan läpi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Selenge_River",
+            "title": "Selenge River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss029e037915"
+      },
+      {
+        "kysymys": "Miksi Baikal-järvi on ainutlaatuinen makeanveden järvi?",
+        "vastaus": "Baikal on maailman syvin ja vesimäärältään suurin makeanveden järvi, ja se sisältää noin viidenneksen koko maapallon sulan makean veden varannoista. Järvi on myös yksi maailman vanhimmista, yli 25 miljoonaa vuotta vanha.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Baikal",
+            "title": "Lake Baikal – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss029e037915"
+      }
+    ]
+  },
+  {
+    "tunnus": "texasin-kastelurenkaat",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Länsi-Texasin pellot ovat ilmakuvassa pyöreitä?",
+        "vastaus": "Pellot kastellaan keskipistekastelulla, jossa pitkä, pyörillä kulkeva putkisto kiertää kiinteän keskipisteen ympäri. Menetelmä tuottaa ilmasta katsottuna tunnusomaisen pyöreän kuvion.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Center-pivot_irrigation",
+            "title": "Center-pivot irrigation – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0603632"
+      },
+      {
+        "kysymys": "Mikä Permin allas on?",
+        "vastaus": "Permin allas on Länsi-Texasin ja Uuden-Meksikon alueella sijaitseva geologinen muodostuma, joka on yksi maailman tuottavimmista öljy- ja kaasualueista. Sen tuotanto on kasvanut voimakkaasti liuskeöljyn poraustekniikoiden yleistyttyä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Permian_Basin_(North_America)",
+            "title": "Permian Basin (North America) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0603632"
+      }
+    ]
+  },
+  {
+    "tunnus": "ningaloo-riutta",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä tekee Ningaloo-riutasta poikkeuksellisen?",
+        "vastaus": "Toisin kuin useimmat suuret koralliriutat, Ningaloo kasvaa aivan mantereen rannan tuntumassa kaukana avomerellä sijaitsevien riuttojen sijaan. Riutta on UNESCOn maailmanperintökohde ja tunnetaan valashaista, jotka kokoontuvat sen edustalle vuosittain.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ningaloo_Reef",
+            "title": "Ningaloo Reef – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts067-722a-053"
+      },
+      {
+        "kysymys": "Mikä värjäsi Exmouth-lahden veden punaiseksi kuvassa?",
+        "vastaus": "Viikkoa ennen kuvan ottamista alueen yli kulkenut hurrikaani Bobby toi rankkoja sateita, jotka huuhtoivat punaista mutaa jokien mukana lahteen. Sama ilmiö toistuu usein trooppisten myrskyjen jälkeen kuivien alueiden rannikoilla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/sts067-722a-053",
+            "title": "Exmouth Gulf, Australia as seen from STS-67 – NASA"
+          }
+        ],
+        "havaintoId": "sts067-722a-053"
+      }
+    ]
+  }
+]

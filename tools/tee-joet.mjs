@@ -50,6 +50,49 @@ export function gpkgViivat(b) {
   return viivat;
 }
 
+/*
+ * PÄTKÄN GEOMETRIA VOI OLLA MONIOSAINEN (Karttaseppä 29.9.2026, Tiberin
+ * kahdeksikkosilmukka Roomassa). TDX-Hydro/GEOGLOWS tallentaa osan
+ * pätkistä MultiLineStringina yhdellä rivillä — mitattu vpu 201:llä 545
+ * pätkää 11 015:stä (≥ 300 km²). Syy jää lähteen datan arvoitukseksi,
+ * mutta osat OVAT topologisesti jatkuvia: yksi pätkä oli 656 + 12
+ * pisteen kaksi osaa, ja niiden liitoskohta osui täsmälleen yhteen
+ * (0 m). `.flat()` liitti osat GeoPackagen TALLENNUSJÄRJESTYKSESSÄ, ei
+ * niiden todellisessa jatkuvuudessa — [12 pisteen jatke, 656 pisteen
+ * pääosa] tuotti hypyn jatkeen päästä pääosan alkuun ja silmukan, joka
+ * risteää itsensä (ks. tests/joet.test.mjs). `yhdistaOsat` ketjuttaa
+ * osat lähimmän päätepisteen mukaan — sama periaate kuin `suunnattu()`
+ * pätkien välillä, nyt yhden pätkän omien osien välillä.
+ */
+export function yhdistaOsat(viivat) {
+  if (viivat.length <= 1) return viivat[0] ?? [];
+  const jaljella = [...viivat].sort((a, b) => b.length - a.length);
+  let ketju = jaljella.shift();
+  while (jaljella.length) {
+    let parasI = -1; let parasD = Infinity; let parasKaanna = false; let parasAlkuun = false;
+    for (let i = 0; i < jaljella.length; i += 1) {
+      const v = jaljella[i];
+      const ehdokkaat = [
+        [etaisyys(ketju.at(-1), v[0]), false, false],
+        [etaisyys(ketju.at(-1), v.at(-1)), true, false],
+        [etaisyys(ketju[0], v.at(-1)), false, true],
+        [etaisyys(ketju[0], v[0]), true, true],
+      ];
+      for (const [d, kaanna, alkuun] of ehdokkaat) {
+        if (d < parasD) { parasD = d; parasI = i; parasKaanna = kaanna; parasAlkuun = alkuun; }
+      }
+    }
+    const v = jaljella.splice(parasI, 1)[0];
+    const suunnattuV = parasKaanna ? [...v].reverse() : v;
+    // Liitoskohdan toistuva piste pois, jos osat kohtaavat käytännössä samassa pisteessä.
+    const paallekkain = parasD < 1e-6;
+    ketju = parasAlkuun
+      ? [...suunnattuV.slice(0, paallekkain ? -1 : undefined), ...ketju]
+      : [...ketju, ...suunnattuV.slice(paallekkain ? 1 : 0)];
+  }
+  return ketju;
+}
+
 export function lueUomat(gpkg, valumaKm2) {
   const db = new DatabaseSync(gpkg, { readOnly: true });
   const taulu = db.prepare('select table_name from gpkg_contents').get().table_name;
@@ -57,8 +100,27 @@ export function lueUomat(gpkg, valumaKm2) {
   db.close();
   return rivit.map((r) => ({
     id: r.LINKNO, alas: r.DSLINKNO, jarjestys: r.strmOrder, valuma: r.DSContArea / 1e6,
-    viiva: gpkgViivat(Buffer.from(r.geom)).flat().map(([x, y]) => lonLat(x, y)),
+    viiva: yhdistaOsat(gpkgViivat(Buffer.from(r.geom))).map(([x, y]) => lonLat(x, y)),
   }));
+}
+
+/*
+ * PÄTKÄN SUUNTA (Karttaseppä 27.9.2026): GEOGLOWS/TDX-Hydro digitoi pätkät
+ * ALAVIRRASTA YLÄVIRTAAN (vpu 207: 3 946/3 946 kytkettyä pätkää alkaa
+ * alavirran liitoksesta). Kun pätkät liitettiin virtausjärjestyksessä
+ * kääntämättä, ketju hyppäsi joka pätkän yli ja palasi takaisin, ja uoma
+ * piirtyi tuplaviivana (eu-laatu-13: Praha, Bukarest, Innsbruck). Pätkä
+ * suunnataan siksi liitoksen mukaan: ketjun jatko alkaa edellisen loppupisteen
+ * lähempää päätä, ja ketjun ensimmäinen pätkä päättyy alavirran pätkää kohti.
+ */
+const etaisyys = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+const lahinPaa = (p, v) => Math.min(etaisyys(p, v[0]), etaisyys(p, v.at(-1)));
+export function suunnattu(u, edellinen, alavirta) {
+  const v = u.viiva;
+  const kaanna = edellinen
+    ? etaisyys(edellinen, v.at(-1)) < etaisyys(edellinen, v[0])
+    : Boolean(alavirta) && lahinPaa(v[0], alavirta.viiva) < lahinPaa(v.at(-1), alavirta.viiva);
+  return kaanna ? [...v].reverse() : v;
 }
 
 /** Pätkät pääuomiksi: jatko alavirtaan, jos pätkä on alavirran pätkän suurin ylävirran haara. */
@@ -79,7 +141,8 @@ export function ketjuta(uomat) {
     const pisteet = []; let valuma = 0; let jarjestys = 0;
     for (let u = u0; u && !kaytetty.has(u.id); u = jatkuu(u)) {
       kaytetty.add(u.id);
-      pisteet.push(...(pisteet.length ? u.viiva.slice(1) : u.viiva));
+      const viiva = suunnattu(u, pisteet.at(-1), jatkuu(u));
+      pisteet.push(...(pisteet.length ? viiva.slice(1) : viiva));
       valuma = Math.max(valuma, u.valuma); jarjestys = Math.max(jarjestys, u.jarjestys);
     }
     if (pisteet.length >= 2) ketjut.push({ pisteet, valuma, jarjestys });

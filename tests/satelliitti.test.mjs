@@ -172,10 +172,16 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
    * loputtomat animaatiot ovat yhä kiellettyjä, ja tämä mitta on se,
    * joka pitää listan lyhyenä: uusi infinite ei mene läpi ilman että
    * se kirjataan tähän.
+   *
+   * ISS:N KYYTI (omistaja 28.9.2026, LIVE-merkki; Linssisepän suositus
+   * luku 6): LIVE-pillerin punainen piste sykkii 0,9 s:n välein ja
+   * Cupolan ulko-osat ja heijastus huojuvat hitaasti — kaikki kolme vain
+   * kyydin omassa kerroksessa (.iss-kyyti), eivät pisteissä.
    */
   const ilmanLeijuntaa = tyyli
     .replace(/animation:\s*satelliitti-pulu-leijuu[^;]*infinite/g, '')
-    .replace(/animation:\s*livia-astronautti-leijuu[^;]*infinite/g, '');
+    .replace(/animation:\s*livia-astronautti-leijuu[^;]*infinite/g, '')
+    .replace(/animation:\s*iss-kyyti-(live|ulko|heijastus)\b[^;]*infinite[^;]*/g, '');
   assert.ok(!/animation:[^;]*infinite/.test(ilmanLeijuntaa), 'hehku ei saa sykkiä jatkuvasti');
   // Liikkeenvähennys: vakaa hehku ilman ilmestymisanimaatiotakin.
   assert.match(tyyli, /prefers-reduced-motion[\s\S]*satelliitti-piste \{ animation: none/);
@@ -472,7 +478,8 @@ test('kuva avautuu heti koko ruutuun — ei kaksivaiheista nostokuvaa', () => {
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*position: fixed;[\s\S]*inset: 0/);
   // Oma kuvasuhde säilyy, loppu ruudusta tummaa.
   assert.match(tyyli, /\.satelliitti-kuva \{[\s\S]*max-width: 100%;[\s\S]*max-height: 100%/);
-  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: #040907/);
+  // Kuvaselain (omistaja 27.9.2026): läpikuultava, jotta pallo näkyy kuvan takana.
+  assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*background: rgba\(4, 9, 7, 0\.7\)/);
 });
 
 test('✕ ja pienoiskuvat on kiinnitetty RUUTUUN, ei kuvaelementtiin', () => {
@@ -525,7 +532,7 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
   // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, pulukulma\)/);
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
   /*
@@ -554,7 +561,9 @@ test('selitetekstin napautus kelaa tekstin ylös, väkänen avaa lisätiedot', (
    */
   assert.match(lahde, /selite\.classList\.toggle\('satelliitti-selite-kiinni', kiinni\)/);
   assert.match(lahde, /selite\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); kelaaSelite\(\); \}\)/);
-  assert.match(tyyli, /\.satelliitti-selite-runko \{[\s\S]*overflow: hidden;[\s\S]*transition: max-height 250ms/);
+  // Koko liukuu laatikon FLIP-animaationa (js/tiivistys.js, omistaja 28.9.2026); runko häivyttää.
+  assert.match(tyyli, /\.satelliitti-selite-runko \{[\s\S]*overflow: hidden;[\s\S]*transition: opacity 250ms/);
+  assert.match(lahde, /animoiKoko\(selite, \(\) => \{/);
   assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-runko \{[\s\S]*max-height: 0/);
   // Otsikkorivi EI ole rungossa, joten se jää aina näkyviin.
   assert.match(lahde, /selite\.append\(seliteOtsikko, seliteRunko\)/);
@@ -737,9 +746,9 @@ test('galleria: hyvin pienet pikkukuvat, EI laskuria, nuolia eikä Vertaa-nappia
   assert.match(lahde, /satelliitti-nauha/);
   // Pikkukuvanauha lataa pienen tiedoston, ei koko ruudun kuvaa uudestaan.
   assert.match(lahde, /pikku\.src = toinen\.pikku \?\? toinen\.kuva/);
-  // Nuolinäppäimet toimivat yhä ilman nappeja.
-  assert.match(lahde, /if \(e\.key === 'ArrowRight'\) nayta\(indeksi \+ 1\);/);
-  assert.match(lahde, /if \(e\.key === 'ArrowLeft'\) nayta\(indeksi - 1\);/);
+  // Nuolinäppäimet selaavat kuten pyyhkäisy (kuvaselain: galleria jatkuu naapurikohteeseen).
+  assert.match(lahde, /if \(e\.key === 'ArrowRight'\) selaa\(1\);/);
+  assert.match(lahde, /if \(e\.key === 'ArrowLeft'\) selaa\(-1\);/);
   // Pikkukuvat ovat hyvin pieniä (aiempi 72×48 → 38×26).
   assert.match(tyyli, /\.satelliitti-pikku \{[\s\S]*width: 38px;[\s\S]*height: 26px/);
 });
@@ -1083,22 +1092,34 @@ test('linssin ikoni on kamera + Maan kaari, ei enää entinen piirros', () => {
   assert.match(LINSSI.ikoni, /<path d="M2 21c3.6-3.4 16.4-3.4 20 0"\/>/);
 });
 
-test('matkalaukun linssivalikko: oma varustekuva ja oma varasolu, ei jaettua taikalasia', () => {
+test('matkalaukun linssivalikko: oma varustekuva, vektorikuvake infrastruktuuri säilyy', () => {
   /*
    * Omistaja 15.9.2026: *"tee astronauttilinssille oma kuvake
-   * matkalaukkuun ... SVG inline"* → varasolu on oma vektorityyppi
+   * matkalaukkuun ... SVG inline"* → varasolu oli oma vektorityyppi
    * 'linssi-satelliitti', ei yleinen 'linssi'-taikalasi.
    * Omistaja 20.9.2026 klo 14.50: *"tee astronautin kameralle uusi
    * kuvake, missä on astronautti ja kamera"* → Fable valitsi
    * ehdokkaan 3 ja assets/varusteet/varuste-satelliitti.jpg on nyt
-   * olemassa, joten linssiLiuska pyytää kuvan kuten muillekin;
-   * vektorikuvake jää varasoluksi kuvan puuttuessa.
+   * olemassa.
+   *
+   * PÄIVITETTY 29.9.2026 (pillerivalikkouudistus, omistaja): Linssit-
+   * näkymä piirtää rivit nyt js/kokoelmanakyma.js:n kautta (js/ui.js
+   * linssiRivi), joka pyytää samaa varustekuvaa tunnuksesta riippumatta
+   * eikä enää erottele satelliittia (aarreIkoni-pohjainen
+   * onSatelliitti-erikoiskäsittely ja sen automaattinen SVG-varasolu
+   * KUVAN LATAUSVIRHEESSÄ poistuivat yksinkertaistuksessa — kuva on
+   * paikallinen resurssi eikä riipu verkosta, joten latausvirhe on
+   * epätodennäköinen). Vektorikuvake (LINSSIN_IKONI, mapart.js
+   * 'linssi-satelliitti', .icon-satelliitti-kamera) jää silti
+   * infrastruktuuriin, koska muut kutsupaikat (esim. paivitaLinssiNappi)
+   * käyttävät yhä `linssi.ikoni`-kenttää suoraan.
    */
+  assert.match(LINSSI.ikoni, /<rect [^>]*rx="2.2"/, 'linssin oma ikoni säilyy');
+
   const ui = lue('../js/ui.js');
-  assert.match(ui, /onSatelliitti \? 'linssi-satelliitti' : 'linssi'/);
   // Varustekuva on linssin oma; hiomassa-linssi (21.9.2026) saa rekisterin
-  // ikonipaikan tai yhteisen hiomassa-kuvan (js/ui.js linssiLiuska).
-  assert.match(ui, /: `assets\/varusteet\/varuste-\$\{tunnus\}\.jpg`;\s*const tiedot = \{ kuva, name: nimi \};/);
+  // ikonipaikan tai yhteisen hiomassa-kuvan (js/ui.js linssiRivi).
+  assert.match(ui, /`assets\/varusteet\/varuste-\$\{tunnus\}\.jpg`/);
   assert.ok(existsSync(new URL('../assets/varusteet/varuste-satelliitti.jpg', import.meta.url)),
     'varuste-satelliitti.jpg puuttuu');
 
@@ -1224,7 +1245,7 @@ test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () =>
   for (const kohde of SATELLIITTI_KOHTEET) {
     assert.equal(haeAstronautinKysymykset(kohde.tunnus).length, 2, kohde.tunnus);
   }
-  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
+  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, SATELLIITTI_KOHTEET.length);
   /*
    * OMISTAJA 17.9.2026 klo 21.30 Suomen aikaa (Raamattu ASTRONAUTIN KAMERA
    * LISAYS 14): *"ainoastaan kysymykset ovat etukäteen mietittyjä, mutta

@@ -91,7 +91,9 @@ import {
 } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
+import {
+  ikkunanRajat, keraaMaailma, meriRenkaat, rannikot,
+} from './fokuskartta/maailma.mjs';
 import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
 import { demIkkuna, demVali } from './maasto/dem-ikkuna.mjs';
 import {
@@ -105,7 +107,9 @@ import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.m
 import {
   RESEPTIT, TAUSTA, VESIVIIVOITUKSET, patinoiSelaimessa,
 } from './patina.mjs';
-import { laudanProjektio, SYVYYS, asetaSyvyyskontrasti } from './fokuskartta/piirto.js';
+import {
+  laudanProjektio, SYVYYS, asetaSyvyyskontrasti, asetaMatalaViileys,
+} from './fokuskartta/piirto.js';
 import { RANTATYYLI, nimiotasonLadonta } from './fokuskartta/maailmapiirto.js';
 import { NIMISTO_1873 } from '../js/packs/nimisto-1873.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
@@ -115,6 +119,7 @@ import {
   DELTA_LAJIT, DELTA_LISAMARGINAALI_PX, DELTA_TARKISTUS_OLETUS,
   lataaLuokitin, pyramidinDeltaSuunnitelma, tasonLuvut,
 } from './delta-luokitin.mjs';
+import { avaaChromium } from './selain.mjs';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -1111,6 +1116,21 @@ const PAPERIRAE_RUUDULLA = valitsin('paperirae', 'poltto') === 'ruutu';
  *   --dem-kaikki-tasot        --dem myös tasoille z0–z8 (muuten vain z9+)
  */
 const MASKI_AA = Number(valitsin('maski-aa', 0)) || 0;
+/*
+ * JÄRVET (Euroopan laatukierros 27.9.2026, N3). Oletukset ovat entiset
+ * (yleislehden 0,4° ja harvennus 0,006°), joten vanhat reseptit polttavat
+ * tavulleen saman. GSHHG-järvillä (tools/gshhs-jarvet.mjs) annetaan pieni
+ * `--jarvi-pienin` ja `--jarvi-harvennus`, ja `--jarvi-pienin-px` karsii
+ * piirrossa järvet, joiden laatikko on tasolla alle N kuvapikseliä —
+ * muuten kaukotasoille tulisi tummia pisteitä (maailma.mjs `jarvet`).
+ */
+const JARVI_PIENIN = Number(valitsin('jarvi-pienin', '0.4'));
+const JARVI_HARVENNUS = Number(valitsin('jarvi-harvennus', '0.006'));
+const JARVI_PIENIN_PX = Number(valitsin('jarvi-pienin-px', '0')) || 0;
+/** `--pinta-tasoitus askel,ala,yla` (N5; esim. 6,0.03,0.08) — ks. maailmapiirto.js reliefiVarjo. */
+const PINTA_TASOITUS = valitsin('pinta-tasoitus', null)
+  ? (([askel, ala, yla]) => ({ askel, ala, yla }))(String(valitsin('pinta-tasoitus', '')).split(',').map(Number))
+  : null;
 const RANTALEVEYS = valitsin('rantaleveys', null)
   ? String(valitsin('rantaleveys', null)).split(',').map((p) => p.split(':').map(Number))
     .filter(([z, k]) => Number.isFinite(z) && k > 0).sort((a, b) => a[0] - b[0])
@@ -1134,6 +1154,10 @@ const RESEPTI_JSON = valitsin('resepti-json', null);
 /** `--syvyyskontrasti 1.35` — meren syvyysrampin venytys (löydös 129; 1 = entinen, ks. piirto.js asetaSyvyyskontrasti). */
 const SYVYYSKONTRASTI = Number(valitsin('syvyyskontrasti', 1));
 asetaSyvyyskontrasti(SYVYYSKONTRASTI);
+/** `--matala-viileys 0.5 [--matala-syvyys 10]` — matalan veden viileys (V1; 0 = entinen, ks. piirto.js). */
+const MATALA_VIILEYS = Number(valitsin('matala-viileys', 0)) || 0;
+const MATALA_SYVYYS = Number(valitsin('matala-syvyys', 10)) || 10;
+asetaMatalaViileys(MATALA_VIILEYS, MATALA_SYVYYS);
 if (VESIVIIVOITUS_VALINTA && !VESIVIIVOITUKSET[VESIVIIVOITUS_VALINTA]) {
   console.error(`--vesiviivoitus: tuntematon ${VESIVIIVOITUS_VALINTA} (tihea|harva)`);
   process.exit(1);
@@ -1354,7 +1378,31 @@ const SYVA_ALUE = syvaAlueTeksti
     };
   })()
   : null;
-if (TASOT.some((z) => z >= SYVA_ALIN) && !SYVA_ALUE) {
+/*
+ * SYVÄ LAATTALISTA (`--syva-laatat <json>`, Karttaseppä 26.9.2026, Fablen
+ * tilaus Z10 kaupungit ±1° + fokusmaat): ala ei ole yksi suorakaide vaan
+ * tarkka z10-laattajoukko { z: 10, laatat: [[sarake, rivi], …] }. z9 on
+ * sen vanhempien joukko ja z11 sen lasten; sama joukko antaa työlistan ja
+ * luettelon bittikartan (syvallaAlalla), kuten suorakaiteella.
+ */
+const syvaLaatatPolku = valitsin('syva-laatat', null);
+const SYVA_LAATAT = syvaLaatatPolku
+  ? (() => {
+    const j = JSON.parse(readFileSync(syvaLaatatPolku, 'utf8'));
+    if (j.z !== 10 || !Array.isArray(j.laatat) || !j.laatat.length) {
+      console.error(`--syva-laatat ${syvaLaatatPolku}: odotettiin { z: 10, laatat: [[sarake, rivi], …] }`);
+      process.exit(1);
+    }
+    const z10 = new Set(j.laatat.map(([a, b]) => `${a}:${b}`));
+    const z9 = new Set(j.laatat.map(([a, b]) => `${a >> 1}:${b >> 1}`));
+    return { z10, z9, maara: z10.size, lahde: syvaLaatatPolku.split('/').pop() };
+  })()
+  : null;
+if (SYVA_LAATAT && SYVA_ALUE) {
+  console.error('anna joko --syva-alue tai --syva-laatat, ei molempia');
+  process.exit(1);
+}
+if (TASOT.some((z) => z >= SYVA_ALIN) && !SYVA_ALUE && !SYVA_LAATAT) {
   console.error(`--tasot ${TASOT.join(',')}: tasot z${SYVA_ALIN}+ poltetaan vain alueelle — `
     + 'anna --syva-alue lon0,lat0,lon1,lat1 (esim. Ranska -5.5,41,9.8,51.5).');
   process.exit(1);
@@ -1689,6 +1737,21 @@ const laatikko = {
  */
 const lautaSisalto = await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
 /*
+ * --joet-lisa <kansio> (27.9.2026, Euroopan laatukierros kohta 4): Euroopan
+ * alan paketin joet korvataan GEOGLOWS-pääuomilla (tools/fokuskartta/joet-lisa.mjs).
+ */
+if (valitsin('joet-lisa', null)) {
+  const { korvaaEuroopanJoet } = await import('./fokuskartta/joet-lisa.mjs');
+  const { merenPistetesti } = await import('./fokuskartta/merireitit.mjs');
+  const rr = meriRenkaat(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  const k = korvaaEuroopanJoet(lautaSisalto.joet ?? [], resolve(valitsin('joet-lisa', null)), kaava, {
+    onMeri: merenPistetesti(Array.isArray(rr) ? rr : rr.renkaat),
+  });
+  lautaSisalto.joet = k.joet;
+  console.log(`  joet-lisa       Euroopassa ${k.poistettu} paketin jokea korvattu ${k.lisatty} GEOGLOWS-uomalla `
+    + `(${k.paallekkaiset} päällekkäistä pois)`);
+}
+/*
  * RAJAT LAUDAN YKSIKÖIHIN KERRAN. Setti on data (tools/fokuskartta/
  * rajat.mjs); tämä ajo ei tiedä valtioista mitään, vain viivoista.
  */
@@ -1839,7 +1902,13 @@ function alueella(mitat, sarake, rivi, alue = ALUE) {
 
 /** Syvän tason (z ≥ SYVA_ALIN) laatta vain syvällä alalla; muut aina. */
 function syvallaAlalla(mitat, sarake, rivi) {
-  return mitat.z < SYVA_ALIN || alueella(mitat, sarake, rivi, SYVA_ALUE);
+  if (mitat.z < SYVA_ALIN) return true;
+  if (SYVA_LAATAT) {
+    if (mitat.z === 9) return SYVA_LAATAT.z9.has(`${sarake}:${rivi}`);
+    const k = 2 ** (mitat.z - 10);
+    return SYVA_LAATAT.z10.has(`${Math.floor(sarake / k)}:${Math.floor(rivi / k)}`);
+  }
+  return alueella(mitat, sarake, rivi, SYVA_ALUE);
 }
 
 /* ------------------------------------------------- nostotason peite */
@@ -2635,7 +2704,15 @@ if (DELTA) {
       + '(--data <sama aineistokansio kuin piirrolla>).');
     process.exit(1);
   }
-  const luokitin = await lataaLuokitin(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  // Järvet samoin asetuksin kuin piirto; --delta-lisajarvet = lähteen
+  // aineistokansio, jonka järvet (vanhoilla oletuksilla) ovat myös
+  // piirrettäviä laattoja (järvien vaihto, delta-luokitin.mjs).
+  const luokitin = await lataaLuokitin(dataKansio, {
+    harvennus: RANNIKON_HARVENNUS,
+    jarviPienin: JARVI_PIENIN,
+    jarviHarvennus: JARVI_HARVENNUS,
+    lisaJarvet: valitsin('delta-lisajarvet', null),
+  });
   DELTA_SUUNNITELMA = pyramidinDeltaSuunnitelma({
     luokitin,
     geometria: {
@@ -2965,6 +3042,8 @@ if (!ILMAN_AINEISTOA) {
     ruutu: RUUTU,
     palat: KORKEUSPALAT,
     harvennus: RANNIKON_HARVENNUS,
+    jarviPienin: JARVI_PIENIN,
+    jarviHarvennus: JARVI_HARVENNUS,
   });
   if (DEM_KAYTOSSA) {
     /*
@@ -3319,7 +3398,7 @@ if (HARVA) {
   }
   // Työlista ja lohkot uusiksi karsitusta joukosta.
   tyot.length = 0;
-  tyot.push(...jaljelle);
+  for (const t of jaljelle) tyot.push(t); // ei push(...): suuri lista ylittäisi pinon
   tarvitaan.clear();
   lohkot.clear();
   for (const t of tyot) {
@@ -3392,6 +3471,26 @@ if (!ILMAN_AINEISTOA) {
  * POLTETTU UUDESTAAN. Se on kunnossa: laatta on muuttumaton kuva, ja
  * uusi viivaversio korvaa sen kokonaan (ks. VIIVAVERSIO).
  */
+/*
+ * MERIREITTIEN MAAOSUUDET (27.9.2026, Euroopan laatukierros N1, Fablen
+ * päätös a): `--merireitit-maaosuus` merkitsee Euroopan kaupunkien
+ * merireiteille kaupungista satamaan kulkevan maaosuuden, jonka piirto
+ * vetää maareitin tyylillä (tools/fokuskartta/merireitit.mjs). Meri on
+ * sama kuin pohjalla (--data, --rannikon-harvennus).
+ */
+if (VIIVATASO && lippu('merireitit-maaosuus')) {
+  const { merkitseMaaosuudet } = await import('./fokuskartta/merireitit.mjs');
+  const rr = meriRenkaat(dataKansio, { harvennus: RANNIKON_HARVENNUS });
+  const manner = pack.map?.cityManner ?? {};
+  // Reitin poly on pallopistekorjattu (sisalto.mjs), joten kaupungin paikka
+  // on sen pallopiste laudalla — laudan x/y voi olla kymmeniä yksikköjä sivussa.
+  const kaupungit = (pack.cities ?? []).filter((c) => manner[c.id] === 'europe')
+    .map((c) => (c.pallo ? [kaava.lautaX(c.pallo.lon), kaava.lautaY(c.pallo.lat)] : [c.x, c.y]));
+  const n = merkitseMaaosuudet(lautaSisalto.reitit, {
+    renkaat: Array.isArray(rr) ? rr : rr.renkaat, kaava, kaupungit, sade: 6,
+  });
+  console.log(`  merireitit      ${n} Euroopan merireitillä maaosuus maareitin tyylillä`);
+}
 writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(VIIVATASO
   ? {
     reitit: lautaSisalto.reitit,
@@ -4007,12 +4106,7 @@ const osoite = `http://127.0.0.1:${palvelin.address().port}/`;
  * ajaa työpuussa lainkaan. Järjestys on sama kuin ennen: paketti
  * ensin, varapolut vasta sen puuttuessa.
  */
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'))
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--no-sandbox'],
 });
 const sivu = await selain.newPage({ viewport: { width: 300, height: 200 } });
@@ -4047,6 +4141,12 @@ if (SYVYYSKONTRASTI !== 1) {
     const m = await import(new URL('./piirto.js', window.location.href).href);
     m.asetaSyvyyskontrasti(k);
   }, SYVYYSKONTRASTI);
+}
+if (MATALA_VIILEYS) {
+  await sivu.evaluate(async ([v, d]) => {
+    const m = await import(new URL('./piirto.js', window.location.href).href);
+    m.asetaMatalaViileys(v, d);
+  }, [MATALA_VIILEYS, MATALA_SYVYYS]);
 }
 if (PATINA) {
   await sivu.evaluate((lahde) => {
@@ -4248,6 +4348,8 @@ for (const { mitat, bx, by } of lohkot.values()) {
     paperiRaeRuudulla: PAPERIRAE_RUUDULLA,
     // Löydös 46 -koe (oletuksena pois).
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
+    ...(JARVI_PIENIN_PX ? { jarviPieninPx: JARVI_PIENIN_PX } : {}),
+    ...(PINTA_TASOITUS ? { pintaTasoitus: PINTA_TASOITUS } : {}),
     ...(RANTALEVEYS ? { rantaKerroin: rantaKerroinTasolle(mitat.z) } : {}),
     ...(RELIEFI_KOE ? { reliefi: RELIEFI_KOE } : {}),
     ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
@@ -4782,6 +4884,10 @@ function teeLuettelo() {
      */
     ...(RESEPTINIMI ? { resepti: RESEPTINIMI } : {}),
     ...(MASKI_AA ? { maskiAA: MASKI_AA } : {}),
+    ...(MATALA_VIILEYS ? { matalaViileys: { viileys: MATALA_VIILEYS, syvyys: MATALA_SYVYYS } } : {}),
+    ...(PINTA_TASOITUS ? { pintaTasoitus: PINTA_TASOITUS } : {}),
+    ...(valitsin('joet-lisa', null) ? { joetLisa: 'GEOGLOWS v2 (CC BY-SA 4.0), Eurooppa' } : {}),
+    ...(JARVI_PIENIN !== 0.4 || JARVI_PIENIN_PX ? { jarvet: { pienin: JARVI_PIENIN, harvennus: JARVI_HARVENNUS, pieninPx: JARVI_PIENIN_PX } } : {}),
     ...(MERI_KOHINA !== null ? { meriKohina: MERI_KOHINA } : {}),
     ...(RELIEFI_KOE ? { reliefi: valitsin('reliefi-koe', null) === 'lammin' ? 'lammin' : RELIEFI_KOE } : {}),
     ...(RANTALEVEYS ? { rantaleveys: RANTALEVEYS } : {}),
@@ -4822,6 +4928,7 @@ function teeLuettelo() {
       syvat: {
         tasot: tasot.filter((m) => m.z >= SYVA_ALIN).map((m) => m.z),
         alue: SYVA_ALUE,
+        ...(SYVA_LAATAT ? { laattalista: { z10: SYVA_LAATAT.maara, lahde: SYVA_LAATAT.lahde } } : {}),
         aineisto: DEM90_KANSIO ? `${DEM_AINEISTO}, varalla ETOPO1 1′` : 'Copernicus GLO-30 (1″), varalla ETOPO1 1′',
         lahdemaininta: LAHDEMAININTA,
       },
@@ -4929,6 +5036,9 @@ function teeLuettelo() {
     // aineistokansioon): lähde ja lisenssi luetteloon sellaisenaan.
     ...(existsSync(join(dataKansio, 'lahde.json'))
       ? [`Rantaviiva: ${JSON.parse(readFileSync(join(dataKansio, 'lahde.json'), 'utf8')).lahde}`] : []),
+    // Järvet samasta aineistosta (tools/gshhs-jarvet.mjs kirjoittaa lahde-jarvet.json:n).
+    ...(existsSync(join(dataKansio, 'lahde-jarvet.json'))
+      ? [`Järvet: ${JSON.parse(readFileSync(join(dataKansio, 'lahde-jarvet.json'), 'utf8')).lahde}`] : []),
   ],
 };
 }

@@ -39,6 +39,7 @@
  * docs/moduulit/karttapallo.md.
  */
 
+import { laattaMuuttunut } from './deltasarja.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { koepyramidinPallokansio, pyramidiKoe } from './media.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
@@ -130,7 +131,14 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * nostot null, ranta null, versio = pyramidin versio (lepokerroksen
  * versiovahti, js/pallolaatat.js lepokerroksenKerrokset).
  */
-export const PALLO_LAATTAVERSIO = '2026-09-26-pohja';
+/*
+ * PERUSKARTTA 2026-09-27 (omistaja 29.9.2026 klo 05.0x kortilla: "Katsoin,
+ * vaihda"): GSHHG-järvet ja matalan veden viileys (0,5), pintatasoitus ja
+ * merireittien maaosuus maareitin tyylillä (PR #3436). Sama resepti muuten
+ * kuin 2026-09-26: sarja ILMAN viivatasoa, rantaa tai nostoja — levossa
+ * rajat, joet ja nostot tulevat pyramidin lepokerroksesta kuten ennen.
+ */
+export const PALLO_LAATTAVERSIO = '2026-09-27-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -200,7 +208,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-26-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260926';
+export const PALLO_LAATTATUNNISTE = '20260927';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
@@ -241,9 +249,28 @@ export const PALLO_LAATTATASO_MAX = 8;
  * ilman koodimuutosta.
  */
 export const PALLO_LAATAT_SYVA = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERSIO}/`;
+/**
+ * Deltasarjan perussarjan kansio (js/deltasarja.js): sama arvo kuin
+ * tuotannon laatat.json:n `delta.perus`, ja sw.js:n LAATTAKANSIO_PERUS
+ * kaksoiskappaleena (activate ei siivoa perussarjan laattoja). null =
+ * tuotantosarja on täysi sarja.
+ */
+export const PALLO_LAATTAPERUS = null;
 export const PALLO_SYVA_TASO = 0;
-/** Laatan osoite laattamoottorille (slippy map -koordinaatit). */
-export const pallonLaatta = (x, y, l) => `${PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO ? PALLO_LAATAT_SYVA : PALLO_LAATAT}${l}/${x}/${y}.jpg`;
+/**
+ * Laatan osoite laattamoottorille (slippy map -koordinaatit).
+ *
+ * DELTASARJA (js/deltasarja.js, 29.9.2026): kun laatat.json kantaa
+ * `delta`-kentän, muuttumaton laatta haetaan perussarjan kansiosta —
+ * sama osoite kuin ennen, joten selaimen ja palvelutyöntekijän kori
+ * pysyy lämpimänä versionvaihdon yli.
+ */
+export const pallonLaatta = (x, y, l) => {
+  if (PALLO_SYVA_TASO && l >= PALLO_SYVA_TASO) return `${PALLO_LAATAT_SYVA}${l}/${x}/${y}.jpg`;
+  const d = laattaluettelo?.delta;
+  const kansio = d && !laattaMuuttunut(d, l, x, y, 2 ** l) ? `${R2}julisteet/pallo/laatat/${d.perus}/` : PALLO_LAATAT;
+  return `${kansio}${l}/${x}/${y}.jpg`;
+};
 
 let laatatLupaus = null;
 /** Pallon laattaluettelo (laatat.json), kun se on saatu; muuten null. */

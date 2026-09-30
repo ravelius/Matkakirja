@@ -172,7 +172,6 @@ export const MINIATYYRIT = {
   // muihinkin Euroopan kaupunkeihin. Tee 5 erissä" ja "Aloita
   // Kööpenhaminasta").
   kobenhavn: {
-    'Pieni merenneito': 'assets/kartat/miniatyyrit/kobenhavn-pieni-merenneito.webp',
     Amalienborg: 'assets/kartat/miniatyyrit/kobenhavn-amalienborg.webp',
     Rundetårn: 'assets/kartat/miniatyyrit/kobenhavn-rundetarn.webp',
     Nyhavn: 'assets/kartat/miniatyyrit/kobenhavn-nyhavn.webp',
@@ -241,7 +240,6 @@ export const MINIATYYRIT = {
     'Prahan linna': 'assets/kartat/miniatyyrit/praha-prahan-linna.webp',
     Kaarlensilta: 'assets/kartat/miniatyyrit/praha-kaarlensilta.webp',
     'Vanhauusi synagoga': 'assets/kartat/miniatyyrit/praha-vanhauusi-synagoga.webp',
-    'Astronominen kello': 'assets/kartat/miniatyyrit/praha-astronominen-kello.webp',
     Kansallismuseo: 'assets/kartat/miniatyyrit/praha-kansallismuseo.webp',
     // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
     // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
@@ -598,7 +596,6 @@ export const MINIATYYRIT = {
     'Gran Vía': 'assets/kartat/miniatyyrit/madrid-gran-v-a.webp',
   },
   lissabon: {
-    'Glórian köysirata': 'assets/kartat/miniatyyrit/lissabon-glorian-koysirata.webp',
     Rossio: 'assets/kartat/miniatyyrit/lissabon-rossio.webp',
     'São Jorgen linna': 'assets/kartat/miniatyyrit/lissabon-sao-jorgen-linna.webp',
     Tuomiokirkko: 'assets/kartat/miniatyyrit/lissabon-tuomiokirkko.webp',
@@ -689,7 +686,6 @@ export const MINIATYYRIT = {
     'Arc de Triomf': 'assets/kartat/miniatyyrit/barcelona-arc-de-triomf.webp',
     Musiikkipalatsi: 'assets/kartat/miniatyyrit/barcelona-musiikkipalatsi.webp',
     'Boquerian kauppahalli': 'assets/kartat/miniatyyrit/barcelona-boquerian-kauppahalli.webp',
-    'Kolumbuksen patsas': 'assets/kartat/miniatyyrit/barcelona-kolumbuksen-patsas.webp',
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
@@ -1036,7 +1032,6 @@ export const MINIATYYRIT = {
     'Tromssan tuomiokirkko': 'tromssa-tromssan-tuomiokirkko-vari2',
     'Jäämerenkatedraali': 'tromssa-jaamerenkatedraali-vari2',
     Polaria: 'tromssa-polaria-vari2',
-    'Fjellheisenin köysirata': 'tromssa-fjellheisenin-koysirata-vari2',
   },
   jerusalem: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1687,7 +1682,6 @@ export const MINIATYYRIT = {
     // kohtaamiset/miniatyyrit/<tunnus>.png 7.9.2026
     // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
     // tarkistettu 200.
-    'Wynwoodin muraalikorttelit': 'miami-wynwoodin-muraalikorttelit',
     'Esittävän taiteen keskus': 'miami-esittavan-taiteen-keskus',
     'Pérezin taidemuseo': 'miami-perezin-taidemuseo',
     'Lyric-teatteri': 'miami-lyric-teatteri',

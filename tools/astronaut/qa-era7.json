@@ -1,0 +1,353 @@
+[
+  {
+    "tunnus": "niagara",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka paljon vettä virtaa Niagaranputouksesta?",
+        "vastaus": "Niagaranputouksesta virtaa keskimäärin noin 2 400 kuutiometriä vettä sekunnissa, ja suurin osa siitä kaartuu kanadanpuoleisen Hopeankengän putouksen yli. Virtaamaa vähennetään öisin ja talvella, jotta vettä riittää enemmän vesivoimaloille.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Niagara_Falls",
+            "title": "Niagara Falls – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss010e17563"
+      },
+      {
+        "kysymys": "Milloin Niagaranputous sai nykyisen muotonsa?",
+        "vastaus": "Nykyinen Niagaranputous syntyi noin 12 000 vuotta sitten, kun viimeisen jääkauden mannerjää perääntyi ja Suuret järvet alkoivat laskea vettä Niagaranjokeen. Putous on sen jälkeen kuluttanut uomaansa taaksepäin, ja matkan varrelle on jäänyt muun muassa jyrkkä Niagaran pyörteen mutka.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Niagara_Falls",
+            "title": "Niagara Falls – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss015e05624"
+      }
+    ]
+  },
+  {
+    "tunnus": "gronlannin-vuonot",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka paksu on Grönlannin mannerjää paksuimmillaan?",
+        "vastaus": "Grönlannin mannerjää on paksuimmillaan lähes 3 kilometriä, ja se sisältää suuren osan maapallon makeasta vedestä jäänä. Jos koko jäätikkö sulaisi, maailman merenpinta nousisi arviolta yli seitsemän metriä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Greenland_ice_sheet",
+            "title": "Greenland ice sheet – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts066-114-031"
+      },
+      {
+        "kysymys": "Miten Grönlannin vuonot ovat syntyneet?",
+        "vastaus": "Grönlannin lounaisrannikon vuonot ovat jääkauden mannerjäätikön kaivamia laaksoja, jotka meri on myöhemmin vallannut jään sulettua. Samanlaisia vuonoja on myös Norjassa ja Uudessa-Seelannissa, joissa jäätiköt ovat muokanneet rannikkoa vastaavalla tavalla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Fjord",
+            "title": "Fjord – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts066-114-031"
+      }
+    ]
+  },
+  {
+    "tunnus": "manaus",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Rio Negro ja Solimões eivät sekoitu heti?",
+        "vastaus": "Rio Negron tumma vesi on lämpimämpää, hitaampaa ja kevyempää kuin Solimõesin sameampi ja kylmempi vesi, minkä vuoksi joet virtaavat vierekkäin sekoittumatta useiden kilometrien matkan. Ilmiö tunnetaan nimellä Encontro das Águas eli vetten kohtaaminen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Meeting_of_Waters",
+            "title": "Meeting of Waters – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss009e15488"
+      },
+      {
+        "kysymys": "Mistä joista Amazon-joki katsotaan alkavaksi?",
+        "vastaus": "Amazon-joki katsotaan alkavaksi Manausin kohdalta, jossa tumma Rio Negro ja sedimenttipitoinen Solimões-joki yhtyvät. Solimões itsessään jatkuu Andeille asti ja tunnetaan yläjuoksullaan Perussa toisilla nimillä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Meeting_of_Waters",
+            "title": "Meeting of Waters – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss009e15488"
+      }
+    ]
+  },
+  {
+    "tunnus": "cosiguina",
+    "kysymykset": [
+      {
+        "kysymys": "Miten suuri Cosigüinan vuoden 1835 purkaus oli?",
+        "vastaus": "Cosigüinan tulivuoren vuoden 1835 purkaus oli Keski-Amerikan historian voimakkain, ja sen tuhkaa levisi tuulten mukana aina Meksikoon ja Jamaikalle asti. Purkaus muutti pysyvästi vuoren huippua ja synnytti nykyisen kraatterijärven.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cosig%C3%BCina",
+            "title": "Cosigüina – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss016e010894"
+      },
+      {
+        "kysymys": "Missä lahdessa Cosigüinan niemi sijaitsee?",
+        "vastaus": "Cosigüinan tulivuori muodostaa niemen Fonsecanlahden suulla, jota reunustavat Nicaragua, Honduras ja El Salvador. Lahti avautuu Tyynellemerelle ja on kolmen maan yhteinen rajavesialue.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Gulf_of_Fonseca",
+            "title": "Gulf of Fonseca – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss016e010894"
+      }
+    ]
+  },
+  {
+    "tunnus": "jamesinlahti-harjanteet",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi maa kohoaa yhä Jamesinlahden rannoilla?",
+        "vastaus": "Jääkauden mannerjää painoi maankuorta alaspäin tuhansien vuosien ajan, ja jään sulettua maa on hitaasti noussut takaisin – ilmiötä kutsutaan maankohoamiseksi. Hudsoninlahden ja Jamesinlahden ympäristö on yksi maapallon nopeimmin kohoavista alueista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Post-glacial_rebound",
+            "title": "Post-glacial rebound – Wikipedia"
+          }
+        ],
+        "havaintoId": "STS099-706-090"
+      },
+      {
+        "kysymys": "Mitä muinaiset harjanteet Hannah Bayssa kertovat?",
+        "vastaus": "Jokainen harjanne on entinen rantaviiva siltä ajalta, kun meri ulottui nykyistä kauemmas sisämaahan. Kun maa kohosi, ranta perääntyi vaihe vaiheelta, ja harjanteet jäivät merkiksi entisistä rantaviivoista kuin vuosirenkaat.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Post-glacial_rebound",
+            "title": "Post-glacial rebound – Wikipedia"
+          }
+        ],
+        "havaintoId": "STS099-706-090"
+      }
+    ]
+  },
+  {
+    "tunnus": "krimin-lagunit",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä Krimin lagunien eri värit johtuvat?",
+        "vastaus": "Lagunien värit syntyvät veden suolapitoisuuden, syvyyden ja mikrolevien määrän eroista: esimerkiksi tietyt levät värjäävät suolaisimmat lammikot punertaviksi. Vesi on niin matalaa ja suolaista, että olosuhteet muistuttavat enemmän aavikkojärviä kuin merenlahtia.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Sivash",
+            "title": "Sivash – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss056e032828"
+      },
+      {
+        "kysymys": "Mikä valtio hallinnoi Krimiä tällä hetkellä?",
+        "vastaus": "Krim on kansainvälisesti tunnustettu osaksi Ukrainaa, mutta Venäjä on hallinnoinut niemimaata liitettyään sen itseensä vuonna 2014. Suurin osa maailman valtioista ei tunnusta liittämistä lainmukaiseksi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Crimea",
+            "title": "Crimea – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss056e032828"
+      }
+    ]
+  },
+  {
+    "tunnus": "valakian-tasanko",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä vuoristo erottaa Valakian Transilvaniasta?",
+        "vastaus": "Eteläiset Karpaatit eli Transilvanian Alpit erottavat Valakian tasangon Transilvanian ylängöstä pohjoisessa. Vuoristosta laskevat joet virtaavat kohti tasankoa ja lopulta Tonavaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Southern_Carpathians",
+            "title": "Southern Carpathians – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0149572"
+      },
+      {
+        "kysymys": "Mikä Romanian kaupunki sijaitsee Valakiassa?",
+        "vastaus": "Romanian pääkaupunki Bukarest sijaitsee Valakian tasangolla, ja alue on maan väkirikkain ja tärkein maatalousseutu. Tasangon hedelmällinen maaperä on syntynyt Karpaateilta huuhtoutuneesta aineksesta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Wallachia",
+            "title": "Wallachia – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0149572"
+      }
+    ]
+  },
+  {
+    "tunnus": "montreal",
+    "kysymykset": [
+      {
+        "kysymys": "Missä jokien yhtymäkohdassa Montréal sijaitsee?",
+        "vastaus": "Montréal sijaitsee saarella, jonka kärjessä Ottawa-joki yhtyy Saint Lawrence -jokeen. Saarta ympäröivät joet tekivät alueesta tärkeän kauppapaikan jo ennen eurooppalaisten saapumista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Montreal",
+            "title": "Montreal – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts060-94-072"
+      },
+      {
+        "kysymys": "Kuinka suuri ranskankielinen kaupunki Montréal on?",
+        "vastaus": "Montréal on maailman toiseksi suurin ranskankielinen kaupunki heti Pariisin jälkeen, vaikka valtaosa Kanadasta puhuu englantia. Kaupungin ranskankielisyys juontuu Ranskan siirtomaa-ajalta 1600-luvulta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Montreal",
+            "title": "Montreal – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts060-94-072"
+      }
+    ]
+  },
+  {
+    "tunnus": "englanninkanaali-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä tunneli yhdistää Englannin ja Ranskan?",
+        "vastaus": "Eurotunneli eli Kanaalitunneli avattiin vuonna 1994, ja se kulkee Englannin kanaalin pohjan alla Doverin ja Calais'n välillä. Se on yksi maailman pisimmistä merenalaisista rautatietunneleista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Channel_Tunnel",
+            "title": "Channel Tunnel – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss058e005276"
+      },
+      {
+        "kysymys": "Miksi Englannin kanaali on niin vilkasliikenteinen?",
+        "vastaus": "Englannin kanaali yhdistää Pohjanmeren Atlantille ja on lyhin reitti Euroopan suurimpien satamien välillä, minkä vuoksi siitä on tullut yksi maailman vilkkaimmista kauppamerenkulun reiteistä. Kapeimmillaan, Doverinsalmella, kanaali on vain reilut 30 kilometriä leveä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/English_Channel",
+            "title": "English Channel – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss058e005276"
+      }
+    ]
+  },
+  {
+    "tunnus": "tanska",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka monta saarta Tanskaan kuuluu?",
+        "vastaus": "Tanskaan kuuluu Jyllannin niemimaan lisäksi yli 400 nimettyä saarta, joista noin 70 on asuttuja. Suurimmat saaret ovat Sjælland, jolla sijaitsee Kööpenhamina, ja Fyn niiden välissä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Denmark",
+            "title": "Denmark – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss039e017228"
+      },
+      {
+        "kysymys": "Miten Tanskan saaret on yhdistetty toisiinsa?",
+        "vastaus": "Monet Tanskan saarista on yhdistetty silloilla ja tunneleilla, joista tunnetuin on Ison Beltin silta Fynin ja Sjællandin välillä. Se on yksi maailman pisimmistä riippusilloista pääjänteeltään.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Great_Belt_Fixed_Link",
+            "title": "Great Belt Fixed Link – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss039e017228"
+      }
+    ]
+  },
+  {
+    "tunnus": "geneven-jarvi",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä joki virtaa Geneven järven läpi?",
+        "vastaus": "Rhône-joki syntyy Alpeilta ja virtaa Geneven järven läpi matkallaan kohti Välimerta Ranskassa. Joki tuo järveen sulavesiä ja hienoa jäätikköainesta, joka värjää veden turkoosiksi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Geneva",
+            "title": "Lake Geneva – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts068-243-076"
+      },
+      {
+        "kysymys": "Minkä kahden maan rajalla Geneven järvi on?",
+        "vastaus": "Geneven järvi sijaitsee Sveitsin ja Ranskan rajalla, ja valtakunnan raja kulkee pitkälti järven keskeltä. Järvi on tilavuudeltaan Länsi-Euroopan suurin makean veden allas.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Geneva",
+            "title": "Lake Geneva – Wikipedia"
+          }
+        ],
+        "havaintoId": "sts068-243-076"
+      }
+    ]
+  },
+  {
+    "tunnus": "pico",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka korkea Pico-tulivuori on?",
+        "vastaus": "Pico-tulivuori kohoaa 2 351 metrin korkeuteen, ja se on koko Portugalin korkein kohta, vaikka sijaitsee Azoreilla keskellä Atlanttia. Vuoren huipulla on pieni kraatteri, jonka sisällä kohoaa vielä pienempi kartiomainen kukkula.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ponta_do_Pico",
+            "title": "Ponta do Pico – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss036e009390"
+      },
+      {
+        "kysymys": "Miksi Pico-saaren viinitarhat ovat Unesco-kohde?",
+        "vastaus": "Pico-saaren viinitarhat kasvavat pienissä, mustan laavakiven kehystämissä ruuduissa, jotka suojaavat köynnöksiä merituulelta. Viljelytapa on säilynyt lähes muuttumattomana vuosisatoja, minkä vuoksi Unesco lisäsi alueen maailmanperintöluetteloon vuonna 2004.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pico_Island_Vineyard_Culture",
+            "title": "Pico Island Vineyard Culture – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss036e009390"
+      }
+    ]
+  },
+  {
+    "tunnus": "prinssiedwardinsaari",
+    "kysymykset": [
+      {
+        "kysymys": "Mihin kirjasarjaan Prinssi Edwardin saari liittyy?",
+        "vastaus": "Prinssi Edwardin saari on kirjailija Lucy Maud Montgomeryn Anna-kirjojen tapahtumapaikka, ja saarella vierailee yhä paljon kirjasarjan ihailijoita. Saaren punamultaiset maisemat ovat kirjoista tuttuja.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Anne_of_Green_Gables",
+            "title": "Anne of Green Gables – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss067e035819"
+      },
+      {
+        "kysymys": "Miten Prinssi Edwardin saarelle pääsee mantereelta?",
+        "vastaus": "Saarelle pääsee Confederation-sillan kautta, joka valmistui vuonna 1997 ja yhdistää saaren Uuteen-Brunswickiin. Se on yksi maailman pisimmistä silloista, jotka on rakennettu jääpeitteisen veden yli.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Confederation_Bridge",
+            "title": "Confederation Bridge – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss059e019410"
+      }
+    ]
+  }
+]

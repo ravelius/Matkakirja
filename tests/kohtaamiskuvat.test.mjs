@@ -233,7 +233,7 @@ test('kohtaamiskortilla kuva on tervehdyksen yläpuolella ja kuvateksti kuvan al
   const tervehdys = html.indexOf('id="quiz-kohtaaminen"');
   assert.ok(kuvio > 0 && kuva > kuvio && selite > kuva && tervehdys > selite,
     'kuvion, kuvan, kuvatekstin ja tervehdyksen järjestys kortilla on väärä');
-  assert.match(html, /class="kuvalahde">Matkakirjan kuvitus</);
+  assert.match(html, /class="kuvalahde">Matkakirjan havainnekuva</);
   // Kuvaton kohtaaminen ja kaksintaistelu piilottavat koko kuvion.
   assert.match(visa, /ui\.naytaKohtaamiskuva\(null\)/);
   assert.match(visa, /kohtaamiskuvaTavalliselleKohtaamiselle\(quiz\.cityId\)/);

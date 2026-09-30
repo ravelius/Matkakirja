@@ -98,7 +98,7 @@ import {
 import { packById } from '../pack.js';
 import { pixelOf, pointAlong, posKey } from '../rules.js';
 import {
-  PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
+  PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajanPelaajanakyma, kehittajaTilaPaalla,
   nollaaPallonKaatumiset, palloKaatui, valikkoSulkeutuiNapautuksesta,
 } from '../ui-apurit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
@@ -108,7 +108,7 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
  */
 import {
-  TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo,
+  TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo, avaaAvauskortti, avauskortinHeroOsoite,
   avaaKaupunkiesittely, avaaNahtavyysnakyma, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
   kaupungillaKohdekartta, kaupunginMatkailijalle, suljeKaupunkipopup, turistiOppaanArtikkeli,
   turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
@@ -123,9 +123,6 @@ import {
 import * as laattaApi from '../pallolaatat.js';
 import { luoKameraloki } from './kameraloki.js';
 import { luoSulavuusmittari } from './sulavuusmittari.js';
-import {
-  SISASUMUN_PEITTO, SUMUN_RAJAKERROIN, merkitseLoydetyksi, sisasumunAukot, sumuPaalla,
-} from './sumu.js';
 import { LEVON_ESTEET, luoKartanLiike } from '../kartta-liike.js';
 import { asennaLepopiirto, lepopiirtoKaytossa } from './lepopiirto.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
@@ -137,6 +134,7 @@ import {
   KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, PISTEIDEN_KATTO, VALON_KORKEUS, VALON_SADE,
   luoNostot, nostonLaatikko, nostonMitta, nostonRaakaMitta,
 } from './nostot.js';
+import { onMaanNiminenKaupunki } from './kaupunkiliuska.js';
 import {
   HELMEN_REUNAN_VARI, HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_HALKAISIJA_PX,
   REITTIHELMEN_KORKEUS, REITTIHELMEN_REUNAN_KORKEUS, REITTIHELMEN_TAYTE_PX, luoReitit,
@@ -179,6 +177,9 @@ import { luoAloituslennonKohtaus } from './avaus.js';
  * eli kaukana avaruudessa. Kerros elää vain kertomusesityksen avauksen
  * ajan ja tyhjennetään heti sen jälkeen.
  */
+/** Kaupunkiliuska kaupungin napautuksesta (pois 27.9.2026: avauskortti korvaa sen). */
+export const KAUPUNKILIUSKA = false;
+
 export const PALLOLAUDAN_KERROKSET = [
   'pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData', 'particlesData',
 ];
@@ -1161,7 +1162,16 @@ const TARKISTUSVARI = '#f7c948';
  * ja alku (vaalea kulta) pysyvät sitä vaaleampina ja lämpimämpinä, joten
  * kolme tilaa erottuvat yhä toisistaan.
  */
-export const KAUPUNKIPISTEEN_VARI = '#8c6d4e';
+export const KAUPUNKIPISTEEN_VARI = 'rgba(90, 67, 48, 0.75)';
+/*
+ * KOHDEKAUPUNGIN PISTE RANNAN MUSTEELLA (omistaja 29.9.2026 klo 17.3x:
+ * *"Tee kohdekaupunkien pisteistä ja nimitekstistä vähemmän musta."*).
+ * Käymättömän kaupungin piste on nyt rantaviivan ruskea
+ * (js/pallovektorit.js RANTA_MUSTE #5a4330) peitolla 0,75, samoin kuin
+ * kaupungin nimi (css/styles.css .karttanimi-kaupunki) ja natiivin
+ * piste. Pelaajan oma kaupunki pitää entisen seepiansa.
+ */
+export const OMAN_KAUPUNKIPISTEEN_VARI = '#8c6d4e';
 
 /*
  * SINISET KAUPUNKILAATAT POIS (omistaja 11.9.2026: *"siniset
@@ -1173,11 +1183,15 @@ export const KAUPUNKIPISTEEN_VARI = '#8c6d4e';
  * erottanut enää mitään — jäljelle jäi vain sininen kartalla, joka ei
  * kuulu seepiaan.
  */
-/** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa. */
-export function kaupunkipisteenVari(kaupunki) {
+/** Kehittäjän pelaajan näkymän himmeä kohdekaupunki: tavallinen seepia 40 %:n peitolla (natiivissa sama). */
+const HIMMEAN_PISTEEN_VARI = 'rgba(140, 109, 78, 0.4)';
+
+/** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa, oma entistä seepiaa. */
+export function kaupunkipisteenVari(kaupunki, oma = false) {
   if (livianKorostetutKaupungit().has(kaupunki.id)) return TARKISTUSVARI;
   if (kaupunki.kayty) return '#d9a13b';
   if (kaupunki.alku) return '#b28a4a';
+  if (oma) return OMAN_KAUPUNKIPISTEEN_VARI;
   return KAUPUNKIPISTEEN_VARI;
 }
 
@@ -2066,6 +2080,13 @@ export async function avaaPallolauta(ui) {
   /** Laudan kaupunki tunnuksella (lähtövalinnan kohteet, ks. aloitusKohteet). */
   const packKaupunki = new Map((pack?.cities ?? []).map((c) => [c.id, c]));
   /*
+   * MAAN NIMISET KAUPUNGIT (Islanti, Luxemburg …) kerran laudan
+   * datasta: niille kaupunkijäsenyys on pelkkä etäisyys, ei nimitesti
+   * (js/pallolauta/kaupunkiliuska.js onMaanNiminenKaupunki).
+   */
+  const maanNimisetKaupungit = new Set((pack?.cities ?? [])
+    .filter((c) => onMaanNiminenKaupunki(c, pack.map)).map((c) => c.id));
+  /*
    * KAUPUNKIEN OMAT PALLOPISTEET käyttöön koko laudan ajaksi (ks.
    * pallonAsteet yllä). `siirtymat` menee reittikerrokselle, joka
    * korjaa polyn päät samaan pisteeseen.
@@ -2199,6 +2220,8 @@ export async function avaaPallolauta(ui) {
     '.pollo-nappi',
     '.pollo-kuplapino-kehys',
     '.pollo-paneeli',
+    // Rahattomuuspalkki (talous, omistaja 27.9.2026): nostot ja kutsu väistävät sitä.
+    '.rahattomuuspalkki',
   ];
   /**
    * Kalusteiden ruutulaatikot KOTELON pikseleinä (sama koordinaatisto
@@ -2282,6 +2305,7 @@ export async function avaaPallolauta(ui) {
     laudanKaupungit: () => kaupungit.map((k) => ({
       // Pallon kaupungin nimikentta on `n` (js/pallo.js pallonKaupungit).
       id: k.id, nimi: k.n, lat: k.lat, lng: k.lon,
+      maanNimi: maanNimisetKaupungit.has(k.id),
     })),
     /*
      * LIUSKAN YLÄRYHMÄ SAA VAIN SEN, MIKÄ AVAUTUU (20.9.2026, Fablen
@@ -2735,6 +2759,14 @@ export async function avaaPallolauta(ui) {
   };
 
   /**
+   * HIMMEÄ KOHDEKAUPUNKI KEHITTÄJÄN PELAAJAN NÄKYMÄSSÄ (omistaja 29.9.2026, js/pelaajanakyma.js): kartta on kuten
+   * pelaajalla, mutta ne pelin kaupungit, joita pelaaja ei nyt näe, piirretään himmeinä pisteinä (peitto 40 %, sama
+   * koko, ei nimeä) ja niiden napautus on maailmatilan hyppy. Lennolla ja lähtövalinnassa ei himmeitä.
+   */
+  const himmeaPiste = (k) => kehittajanPelaajanakyma() && !ui.katselu && !lento && !aloitusNakyvat()
+    && !pisteNakyy(k);
+
+  /**
    * NAPAUTUS KAUPUNKIIN — sama teko kuin tasokartalla: nykyinen kaupunki
    * avaa kaupunkilehden (ui.avaaTutkinta, omistaja 2.9.: *"Kohdekaupunki
    * avaa aina kaupunkilehden"*), nopanheiton kohde valitsee kohteen
@@ -2783,6 +2815,12 @@ export async function avaaPallolauta(ui) {
     if (ui.radioPaalla?.()) return false;
     const city = laudanKaupunki(k);
     if (!city) return false;
+    // Himmeä kohdekaupunki (pelaajan näkymä): napautus on maailmatilan hyppy, kamera seuraa teleporttihaarassa.
+    if (himmeaPiste(k)) {
+      heraa();
+      ui.doKehittajaSiirto(city);
+      return true;
+    }
     /*
      * LÄHTÖVALINNASSA VAIN KOHTEET OVAT NAPAUTETTAVIA (aalto 3A): sama
      * sääntö kuin tasokartalla, jossa drawTargets piirtää pickstart-
@@ -2877,6 +2915,16 @@ export async function avaaPallolauta(ui) {
        */
       if (siirto && !ui.katselu && !(oma && oma.id === city.id)) {
         return valitseSiirto(siirto.key);
+      }
+      /*
+       * KAUPUNGIN AVAUSKORTTI KORVAA LIUSKAN (omistaja 27.9.2026 klo 23.4x):
+       * napautus avaa kortin (herokuva + esittely, nähtävyyskartta,
+       * turisti-info); kaupungin nostot ovat kaupunkilehden osioissa.
+       * Vanha liuskan avaus jää alle kytkimen taakse (KAUPUNKILIUSKA).
+       */
+      if (!KAUPUNKILIUSKA) {
+        avaaAvauskortti(ui, city);
+        return true;
       }
       void (async () => {
         /*
@@ -3032,8 +3080,6 @@ export async function avaaPallolauta(ui) {
   const napautaNosto = (osuma) => {
     if (ui.dead || ui.busy || !osuma) return false;
     heraa();
-    // Löytämisen sumu: avaaminen mustaa luonnoksen (js/pallolauta/sumu.js).
-    if (sumuPaalla() && merkitseLoydetyksi(osuma.id)) pyydaLadonta();
     osuma.avaa(ankkuri(osuma.lat, osuma.lng));
     return true;
   };
@@ -3327,6 +3373,7 @@ export async function avaaPallolauta(ui) {
     const ehdokkaat = [];
     for (const k of kaupungit) {
       if (pisteNakyy(k)) ehdokkaat.push({ laji: 'kaupunki', lat: k.lat, lng: k.lon, k });
+      else if (himmeaPiste(k)) ehdokkaat.push({ laji: 'kaupunki', lat: k.lat, lng: k.lon, k });
     }
     for (const o of nostot.osumat()) ehdokkaat.push({ laji: 'nosto', lat: o.lat, lng: o.lng, o });
     // Turisti-info kaupungin vieressä (erä 4): samassa sarjassa kuin
@@ -4079,7 +4126,8 @@ export async function avaaPallolauta(ui) {
     .pointColor((d) => {
       if (d.laji === 'helmi') return d.reuna ? HELMEN_REUNAN_VARI : HELMEN_VARI;
       if (d.laji === 'valo') return d.vari;
-      return kaupunkipisteenVari(d);
+      if (d.himmea) return HIMMEAN_PISTEEN_VARI;
+      return kaupunkipisteenVari(d, !!d.id && d.id === pelaajanKaupunki());
     })
     .pointAltitude((d) => {
       if (d.laji === 'helmi') return (d.reuna ? REITTIHELMEN_REUNAN_KORKEUS : REITTIHELMEN_KORKEUS);
@@ -4196,12 +4244,21 @@ export async function avaaPallolauta(ui) {
      */
     const piiloKaupunki = nostot.liuskanKaupunkiId?.() ?? null;
     const nakyvat = kaupungit.filter((k) => pisteNakyy(k) && k.id !== piiloKaupunki);
+    // Kehittäjän pelaajan näkymä: pelaajalta piilossa olevat kaupungit himmeinä (himmeaPiste, väri pointColorissa).
+    for (const k of kaupungit) k.himmea = false;
+    const himmeat = kaupungit.filter((k) => k.id !== piiloKaupunki && himmeaPiste(k));
+    for (const k of himmeat) k.himmea = true;
+    nakyvat.push(...himmeat);
     const valot = nostot.valot();
     const avain = [
       // Piilotettu kaupunki on osa avainta: ilman sitä pistejoukko
       // näyttäisi muuttumattomalta eikä kirjasto saisi uutta dataa.
       `liuska:${piiloKaupunki ?? ''}`,
+      // Oma kaupunki värjätään eri musteella (kaupunkipisteenVari), joten siirto vaihtaa avaimen.
+      `oma:${pelaajanKaupunki() ?? ''}`,
       nakyvat.map((k) => `${k.id}${k.kayty ? '*' : ''}`).join(','),
+      // Himmeät ovat nakyvat-joukon lopussa; oma rivi erottaa himmeän tavallisesta samalla kaupungilla.
+      himmeat.map((k) => k.id).join(','),
       helmet.map((h) => h.id).join(','),
       valot.map((v) => v.id).join(','),
     ].join('|');
@@ -4306,6 +4363,122 @@ export async function avaaPallolauta(ui) {
    * @param {object[]} omaMuste sama NIMIÖINEEN (nostot.omaMuste): koko
    *   muste, jonka päälle kyltin ankkuri ei saa jäädä
    */
+  /*
+   * ══ AVAUSKORTIN KUTSU: MINIATYYRI KAUPUNGIN VIERESSÄ (omistaja 27.9.2026 klo 23.4x) ══
+   *
+   * Saapuessa mikään ei avaudu itsestään, joten pelaajan kaupungin ja
+   * nappulan viereen YLÄVIISTOON tulee pieni kortti (herokuva + nimi,
+   * KUTSUN_KOKO px), joka napautettaessa kasvaa pehmeästi täydeksi
+   * avauskortiksi ja sulkeutuessa palaa samaan paikkaan
+   * (js/kaupunkinosto.js avaaAvauskortti `lahde`).
+   *
+   * PAIKKA VÄISTÄÄ: nostojen ikonit ja muste, kaupungin piste ja
+   * nappula sekä ruudun kalusteet (Pulu, Liiku, paikkarivi —
+   * ruudunKalusteet). Asennot kokeillaan järjestyksessä yläoikea,
+   * ylävasen, oikea, vasen, alaoikea. Piiloon, kun kamera on maatasoa
+   * kauempana (nostojen karttakerroin < KUTSUN_KERROIN), linssissä,
+   * lennolla ja aloitusnäkymässä.
+   *
+   * LÄHELLÄ KAUPUNKIA (omistaja 27.9.2026 klo 11.2x, v2296:n palaute;
+   * natiivin hyväksytty malli Natiivi-UI 11a3c43a): renkaat 8/20/36 px
+   * (ennen 16/40/70/100, jolloin Pariisissa kutsu karkasi kauas). Jos
+   * mikään asento ei ole vapaa, TOINEN KIERROS väistää vain ruudun
+   * kalusteet sekä kaupungin pisteen ja nappulan — kutsu saa peittää
+   * nostomerkin, mutta pysyy kaupungin vieressä.
+   */
+  const KUTSUN_KOKO = 64;
+  /** Edellinen asento { city, a } (asentolukko), säilyy kortin piilossa oloajan. */
+  let kutsunAsento = null;
+  const KUTSUN_KERROIN = 0.95;
+  // Asennot etäisyysrenkaittain (lähin ensin), kussakin renkaassa yläoikea
+  // → ylävasen → oikea → vasen → alaoikea.
+  const KUTSUN_ASENNOT = [8, 20, 36].flatMap((v) => [
+    { dx: v, dy: -v - KUTSUN_KOKO }, { dx: -v - KUTSUN_KOKO, dy: -v - KUTSUN_KOKO },
+    { dx: v + 4, dy: -KUTSUN_KOKO / 2 }, { dx: -v - 4 - KUTSUN_KOKO, dy: -KUTSUN_KOKO / 2 },
+    { dx: v, dy: v },
+  ]);
+  const kutsuElementti = (d) => {
+    const juuri = document.createElement('div');
+    juuri.className = 'kaupunkikortin-kutsu';
+    const nappi = document.createElement('button');
+    nappi.type = 'button';
+    nappi.className = 'kaupunkikortin-kutsu-kortti';
+    nappi.setAttribute('aria-label', `Avaa ${d.nimi}: kaupungin kortti`);
+    if (d.kuva) {
+      const kuva = document.createElement('img');
+      kuva.alt = '';
+      kuva.decoding = 'async';
+      kuva.draggable = false;
+      kuva.src = d.kuva;
+      nappi.appendChild(kuva);
+    }
+    const nimi = document.createElement('span');
+    nimi.className = 'kaupunkikortin-kutsu-nimi';
+    nimi.textContent = d.nimi;
+    nappi.appendChild(nimi);
+    // Oma napautus: pallon eleet eivät saa ottaa tätä (kuten kortin omat napit).
+    nappi.addEventListener('pointerdown', (e) => e.stopPropagation());
+    nappi.addEventListener('click', (e) => { e.stopPropagation(); d.avaa?.(d, nappi); });
+    juuri.appendChild(nappi);
+    return juuri;
+  };
+  const asetteleKutsu = (el, d) => {
+    const kortti = el.firstElementChild;
+    if (!kortti) return;
+    kortti.style.left = `${d.dx}px`;
+    kortti.style.top = `${d.dy}px`;
+  };
+  const paivitaKaupunkikortinKutsu = (kiinteaMuste = [], omaMuste = []) => {
+    const tyhjaa = () => { merkit.aseta('kaupunkikortinkutsu', []); return []; };
+    if (linssiPaalla() || lento || aloitusNakyvat() || ui.katselu) return tyhjaa();
+    if (!(Number(nostot.karttakerroin?.()) >= KUTSUN_KERROIN)) return tyhjaa();
+    const city = ui.game.cityOf?.();
+    if (!city || !kaupungillaKohdekartta(city.id) && !kaupunginMatkailijalle(city.id)) return tyhjaa();
+    const oma = pallonAsteet({ x: city.x, y: city.y });
+    const p = oma ? pallo.getScreenCoords(oma.lat, oma.lon, 0) : null;
+    if (!p) return tyhjaa();
+    const W = kotelo.clientWidth;
+    const H = kotelo.clientHeight;
+    // Kaupungin piste ja nappula (seisoo pisteen päällä, n. 44 px ylös).
+    const nappula = { x0: p.x - 14, y0: p.y - 46, x1: p.x + 14, y1: p.y + 10 };
+    const kalusteet = ruudunKalusteet();
+    /*
+     * ASENTOLUKKO (omistaja 28.9.2026 Fablen kautta: ei hyppyjä): edellinen asento kokeillaan
+     * ensin, joten kortti pysyy paikallaan niin kauan kuin se mahtuu, eikä vaihda asentoa joka
+     * ladonnassa (mitattu ennen: jopa 4 hyppyä yhdessä vedossa). Vaihto liukuu (css).
+     */
+    const jarjestys = kutsunAsento && kutsunAsento.city === city.id
+      ? [kutsunAsento.a, ...KUTSUN_ASENNOT.filter((a) => a !== kutsunAsento.a)] : KUTSUN_ASENNOT;
+    const etsi = (esteet) => {
+      for (const a of jarjestys) {
+        const r = { x0: p.x + a.dx, y0: p.y + a.dy, x1: p.x + a.dx + KUTSUN_KOKO, y1: p.y + a.dy + KUTSUN_KOKO + 14 };
+        if (r.x0 < 4 || r.y0 < 4 || r.x1 > W - 4 || r.y1 > H - 4) continue;
+        if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
+        return { a, r };
+      }
+      return null;
+    };
+    const valittu = etsi([...kiinteaMuste, ...omaMuste, ...kalusteet, nappula]) ?? etsi([...kalusteet, nappula]);
+    // Asento muistetaan myös piilossa: reunalta palaava kortti tulee samaan asentoon.
+    if (!valittu) return tyhjaa();
+    kutsunAsento = { city: city.id, a: valittu.a };
+    merkit.aseta('kaupunkikortinkutsu', [{
+      avain: `kaupunkikortinkutsu:${city.id}`,
+      laji: 'kaupunkikortinkutsu',
+      cityId: city.id,
+      nimi: city.name,
+      kuva: avauskortinHeroOsoite(city),
+      lat: oma.lat,
+      lng: oma.lon,
+      dx: valittu.a.dx,
+      dy: valittu.a.dy,
+      elementti: kutsuElementti,
+      asettele: asetteleKutsu,
+      avaa: (_d, lahde) => { avaaAvauskortti(ui, city, { lahde }); },
+    }]);
+    return [valittu.r];
+  };
+
   const paivitaTuristiInfo = (kiinteaMuste = [], omaMuste = []) => {
     const tyhjaa = () => { merkit.aseta('turistiinfo', []); return []; };
     /*
@@ -4724,8 +4897,9 @@ export async function avaaPallolauta(ui) {
      */
     const kaupunginMitat = kohdekaupunki();
     const infoTulos = paivitaTuristiInfo(nostot.omatIkonilaatikot(), nostot.omaMuste());
+    const kutsuTulos = paivitaKaupunkikortinKutsu(nostot.omatIkonilaatikot(), nostot.omaMuste());
     const nimiTulos = nimet.lado({
-      varaukset: [...nostoTulos.laatikot, ...infoTulos],
+      varaukset: [...nostoTulos.laatikot, ...infoTulos, ...kutsuTulos],
       pinot: pelinLaatikot,
       katto,
       vain,
@@ -4903,8 +5077,6 @@ export async function avaaPallolauta(ui) {
 
   /* ---- merkit pelitilasta ------------------------------------------- */
   let merkkiAvain = null;
-  /** Löytämisen sumu: avain, jolla käytyjen maiden rajat viimeksi laskettiin. */
-  let sumunRajaAvain = null;
   /** posKey siitä paikasta, jossa nappula viimeksi NÄHTIIN laudalla. */
   let nappulanPaikka = null;
   const merkitseNappulanPaikka = (pos) => { nappulanPaikka = pos ? posKey(pos) : null; };
@@ -5184,43 +5356,6 @@ export async function avaaPallolauta(ui) {
      * `poltettu:true` ensimmäisen kameran liikkeen jälkeen.
      */
     if (maaVaihtui) setTimeout(() => { if (!kuori.hidden) ladoLevossa(); }, 0);
-    /*
-     * LÖYTÄMISEN SUMU (prototyyppi, js/pallolauta/sumu.js): kohdemaan
-     * käymättömien kaupunkien seudut kermalla (laattapyramidi
-     * asetaSisasumu → pallolaatat maalaaSisasumu) ja käymättömien
-     * maiden rajat vaaleampina (pallovektorit asetaSumu). Avain =
-     * maa + käydyt kaupungit; molemmat päivittyvät vain sen vaihtuessa.
-     */
-    if (sumuPaalla()) {
-      const { game } = ui;
-      const kaydytIdt = [...(game.world?.visited ?? [])];
-      const nyt = game.cityOf?.();
-      if (nyt?.id && !kaydytIdt.includes(nyt.id)) kaydytIdt.push(nyt.id);
-      const sumuAvain = `${korostusIso ?? '-'}|${kaydytIdt.sort().join(',')}`;
-      // Maan renkaat merentakaisten suodattimeen (sumu.js mantereenKaupungit);
-      // ne saapuvat laiskasti, joten avain erottaa tilan ilman renkaita.
-      const renkaat = korostusIso ? pallonKorostusRenkaat(korostusIso) : [];
-      const aukot = korostusIso
-        ? sisasumunAukot({ iso: korostusIso, game, lauta: PALLO_LAUTA, renkaat })
-        : null;
-      const sisasumunAvain = `${sumuAvain}|r${renkaat.length}`;
-      const sumuVaihtui = asetaSisasumu(aukot ? { ...aukot, peitto: SISASUMUN_PEITTO, avain: sisasumunAvain } : null);
-      if (sumuVaihtui) heraa();
-      if (sumuAvain !== sumunRajaAvain) {
-        sumunRajaAvain = sumuAvain;
-        const cityCountry = game.pack?.map?.cityCountry ?? {};
-        const kaydytMaat = [...new Set(kaydytIdt.map((id) => cityCountry[id]).filter(Boolean))]
-          .filter((iso) => iso !== korostusIso);
-        const renkaitaOli = renkaat.length > 0;
-        lataaMaapolygonit().then((data) => {
-          if (!data || sumuAvain !== sumunRajaAvain || ui.dead) return;
-          const viivat = kaydytMaat.flatMap((iso) => maanRenkaatAsteina(data, iso, pallonAsteet));
-          vektorit?.asetaSumu?.({ paalla: true, avain: sumuAvain, viivat, kerroin: SUMUN_RAJAKERROIN });
-          // Renkaat saapuivat vasta nyt: sisäsumu uudestaan mantereen tiedolla.
-          if (!renkaitaOli && korostusIso && pallonKorostusRenkaat(korostusIso).length) paivita();
-        }).catch(() => {});
-      }
-    }
     if (maaVaihtui || (korostusIso && !maanLaatikko)) {
       if (!korostusIso) {
         maanLaatikko = null;

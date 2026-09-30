@@ -14,11 +14,13 @@
  * kehysajat ja laattapyynnöt, zoomin kuvasarja (tyhjän osuus, perättäisten
  * kuvien ero). Sivut toteuttavat yhteisen window.koe-rajapinnan.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng, reunanLeveys, tyhjanOsuus, kuvienEro, pinta, p } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = process.env.JUURI ?? join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const arg = (n, d) => (process.argv.find((a) => a.startsWith(`--${n}=`))?.split('=')[1] ?? d);
@@ -33,8 +35,6 @@ const LEPO_MS = Number(arg('lepo', 5000));
 const TUNNISTE = arg('tunniste', KOE + (HAKU ? `-${HAKU.replace(/[^a-z0-9]+/gi, '_')}` : ''));
 const ULOS = arg('ulos', process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/pallon-liike');
 mkdirSync(ULOS, { recursive: true });
-const paketti = await import('/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.jpg': 'image/jpeg', '.png': 'image/png' };
 const palvelin = http.createServer((req, res) => {
@@ -65,9 +65,10 @@ const NAKYMAT = {
 const nakyma = { ...NAKYMAT[NAKYMA] };
 if (arg('dpr', null)) nakyma.deviceScaleFactor = Number(arg('dpr'));
 const dpr = nakyma.deviceScaleFactor;
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
 sivu.on('console', (m) => { if (m.type() === 'error') virheet.push(m.text().slice(0, 200)); });

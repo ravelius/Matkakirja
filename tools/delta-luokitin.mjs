@@ -332,16 +332,31 @@ export function luoLuokitin({ meri = [], jarvet = [] } = {}) {
 }
 
 /** Luokitin aineistokansiosta (ne_10m_ocean + ne_10m_lakes), samat kutsut kuin keraaMaailma. */
-export async function lataaLuokitin(kansio, { harvennus = 0.006 } = {}) {
+/*
+ * JÄRVIEN VAIHTO (27.9.2026, GSHHG-järvet, tools/gshhs-jarvet.mjs): järvet
+ * luetaan samalla kokorajalla ja harvennuksella kuin piirto
+ * (`jarviPienin`, `jarviHarvennus`), ja `lisaJarvet` lisää LÄHTEEN järvet
+ * (vanha aineistokansio omilla oletuksillaan). Laatta, josta järvi katoaa
+ * tai johon se tulee, on silloin kummassakin tapauksessa "järvilaatta"
+ * eli piirrettävä — muuten vanha järvi jäisi kopioon.
+ */
+export async function lataaLuokitin(kansio, {
+  harvennus = 0.006, jarviPienin = 0.4, jarviHarvennus = 0.006, lisaJarvet = null,
+} = {}) {
   const { meriRenkaat, jarvet } = await import('./fokuskartta/maailma.mjs');
   const meri = meriRenkaat(kansio, { harvennus });
-  let jarviRenkaat = [];
-  try {
-    jarviRenkaat = jarvet(kansio).flatMap((j) => j.renkaat);
-  } catch {
-    /* Ei järviaineistoa: moottorikaan ei piirrä järviä (aineisto.jarvet on tyhjä). */
-    jarviRenkaat = [];
-  }
+  const lue = (k, asetukset) => {
+    try {
+      return jarvet(k, asetukset).flatMap((j) => j.renkaat);
+    } catch {
+      /* Ei järviaineistoa: moottorikaan ei piirrä järviä (aineisto.jarvet on tyhjä). */
+      return [];
+    }
+  };
+  const jarviRenkaat = [
+    ...lue(kansio, { vahinKoko: jarviPienin, harvennus: jarviHarvennus }),
+    ...(lisaJarvet ? lue(lisaJarvet, {}) : []),
+  ];
   return luoLuokitin({ meri, jarvet: jarviRenkaat });
 }
 

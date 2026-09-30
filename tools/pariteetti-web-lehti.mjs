@@ -7,14 +7,14 @@
 // ~30-40s per näkymä.
 //
 // node tools/pariteetti-web-lehti.mjs
-import { chromium } from 'playwright';
 import { mkdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { avaaChromium } from './selain.mjs';
 
 const OUT = process.env.PARITEETTI_OUT ?? '/Users/Shared/Claude/proto-3d/lokit/pariteetti-20260924';
 mkdirSync(OUT, { recursive: true });
 
-const browser = await chromium.launch({ args: ['--use-angle=metal'] });
+const browser = await avaaChromium({ args: ['--use-angle=metal'] });
 const page = await browser.newPage({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 2 });
 
 async function shot(nimi) {

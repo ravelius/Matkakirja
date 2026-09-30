@@ -84,7 +84,7 @@ const R2 = 'https://media.matkakirja.app/';
  * (erä V0). Polku on versioitu ja ämpäri lähettää sille `immutable`,
  * joten uusi ajo saa AINA uuden version — vanha jää selainten koreihin.
  */
-export const PALLOVEKTORIT_VERSIO = '2026-09-21-gshhs';
+export const PALLOVEKTORIT_VERSIO = '2026-09-30-krim'; // rannikko = 2026-09-21-gshhs tavulleen, rajat ilman Krimin kannaksen viivaa (30.9.2026)
 export const PALLOVEKTORIT_JUURI = `${R2}julisteet/pallo/vektorit/${PALLOVEKTORIT_VERSIO}/`;
 
 /*
@@ -914,7 +914,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * laudan avaimella ja näkyvyys on pelkkä lippu.
    */
   /*
-   * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js, prototyyppi): käymättömien
+   * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js poistettu 27.9.2026 — piirtokyky jäi ilman kytkentää; prototyyppi): käymättömien
    * maiden rajat vaaleammalla (rajamateriaalin peitto × kerroin) ja
    * käytyjen maiden renkaat normaalilla rajapeitolla omana
    * viivajoukkonaan (`kaydyt`, sama katkoviiva kuin rajoilla).

@@ -1116,7 +1116,7 @@ export const FOKUSVIRTA_PARIISI = {
       symboli: 'historia',
       lunastus: [
         'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
-          + 'romahti kello 19.45. Katon alla paloi 1 300 tammirungosta tehty '
+          + 'romahti kello 19.50. Katon alla paloi yli tuhannesta tammirungosta tehty '
           + 'kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi '
           + 'kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. Ensin '
           + 'sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana päivänä '
@@ -1193,10 +1193,10 @@ export const FOKUSVIRTA_PARIISI = {
           + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
           + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
           + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
-          + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu kuusi '
-          + 'arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja '
-          + 'yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät '
-          + 'seuraavan vuoden ajan.',
+          + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu '
+          + 'ammattilaisia, toimittajia ja kuusi arvottua tavallista '
+          + 'pariisilaista. Voittaja saa rahapalkinnon ja yhden velvollisuuden: '
+          + 'hän toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
       ],
       lahde: 'Pariisin kaupunkilehden sivu "Pariisi", nosto "Paras patonki '
         + 'valitaan sokkona" (js/packs/kulttuuri-kategoriat.js). Teksti '
@@ -1379,17 +1379,33 @@ export const FOKUSVIRTA_PARIISI = {
         + '(js/packs/kulttuuri-kategoriat.js). Tekstit siirretty sanatarkasti '
         + 'karttauudistuksen erässä 5, 13.9.2026.',
       /*
-       * KUVATON KORTTI, ja se on rajoite eikä valinta. Lehden kummankin
-       * jutun kuva on R2-ämpärin kuvajonossa
-       * (skandaali-kaulanauhajuttu-1785.jpg ja
-       * skandaali-vrain-lucas-kirjevaarennokset.jpg), eikä nostokortin
-       * kuvakenttä kelpuuta sitä: `osoite` on repon oma tiedosto
-       * (tests/fokusvirta.test.mjs lukee levyn) ja `tiedosto` on
-       * Commons-nimi (js/fokusnosto.js asetaNostonKuva). Kuvaton nosto
-       * aukeaa suoraan tekstikorttina (js/fokusnosto.js:1062), ja samat
-       * kuvat näkyvät yhä skandaalikorteissa. Kirjattu erän raporttiin;
-       * kuvan lisääminen on kuvatyötä eikä tämän erän työtä.
+       * KUVAT LISÄTTY löydös 170:n yhteydessä (26.9.2026). Aiempi
+       * kuvattomuus oli rajoite eikä valinta (lehden oma kuva on
+       * R2-ämpärin kuvajonossa eikä nostokortin kuvakenttä kelpuuta
+       * sitä), mutta kortin `kuva`/`kuvat`-kenttä hyväksyy myös
+       * Commons-nimen (`tiedosto`, js/fokusnosto.js asetaNostonKuva) —
+       * sama mekaniikka kuin naapurikortissa `exchange-alleyn-kupla`
+       * (js/packs/fokusvirta-lontoo.js). Yksi kuva per tarina: Rohan
+       * kaulanauhajutulle, Vrain-Lucas kirjevaarennoksille.
        */
+      kuvat: [
+        {
+          tiedosto: 'Cardinal Rohan2.jpg',
+          lyhyt: 'Kardinaali de Rohan, joka uskoi ostavansa timanttikaulanauhan kuningattarelle.',
+          selite: 'Kardinaali de Rohan 1700-luvun muotokuvassa — mies, joka uskoi '
+            + 'ostavansa timanttikaulanauhan kuningattarelle ja päätyi sen sijaan '
+            + 'Bastiljiin.',
+          lahde: 'Tuntematon taidemaalari 1700-luku, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Denis Vrain-Lucas.jpg',
+          lyhyt: 'Denis Vrain-Lucas noin vuonna 1870, ennen kuin väärennysten laajuus paljastui.',
+          selite: 'Denis Vrain-Lucas noin vuonna 1870 — lakikirjuriksi kouluttautunut '
+            + 'mies, joka väärensi kuudessatoista vuodessa noin 27 000 historiallista '
+            + 'kirjettä.',
+          lahde: 'Tuntematon tekijä n. 1870, Wikimedia Commons (PD)',
+        },
+      ],
       kysymykset: [
         'Miksi kardinaali uskoi väärennetyt kirjeet?',
         'Mihin kaulanauhan timantit lopulta päätyivät?',

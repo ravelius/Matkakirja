@@ -61,9 +61,6 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -122,8 +119,7 @@ const peli = new Game({
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   // Ilman tätä Chromium ei päästä <audio>-elementtiä soimaan ilman
   // elettä, eikä analysaattorilla olisi mitään mitattavaa.
   args: ['--autoplay-policy=no-user-gesture-required'],
@@ -316,7 +312,9 @@ for (const ruutu of RUUDUT) {
       ruutuja: ruudut.length,
       kulmat: ruudut.map(kulma),
       matriisit: ruudut.map((r) => getComputedStyle(r).transform),
-      tekstit: ruudut.map((r) => Boolean(r.querySelector('.fokusvirta-isokuva-teksti'))),
+      // EI ENÄÄ ERILLISTÄ KUVATEKSTIPAPERIA (29.9.2026, löydös 138 /
+      // build 16): kuvateksti on kuvan alt-attribuutissa.
+      tekstit: ruudut.map((r) => Boolean(r.querySelector('.fokusvirta-isokuva-kuva')?.alt)),
       maski: tyyli ? `${tyyli.maskImage} | ${tyyli.webkitMaskImage}` : null,
       reuna: tyyli ? `${tyyli.borderTopWidth} ${tyyli.borderTopColor}` : null,
       huntuPaalla: document.body.classList.contains('luenta-huntu'),
@@ -545,7 +543,10 @@ const TEKSTINAYTE = `(() => {
     rivi: mitta(document.querySelector('.fact-teksti-rivi')),
     teksti: mitta(document.getElementById('fact-text')),
     tekstinPituus: (document.getElementById('fact-text')?.textContent ?? '').trim().length,
-    kuvateksti: mitta(document.querySelector('.fokusvirta-isokuva-teksti')),
+    // EI ENÄÄ ERILLISTÄ KUVATEKSTIPAPERIA (29.9.2026, löydös 138 /
+    // build 16): kuvateksti on kuvan alt-attribuutissa, ei omana
+    // näkyvänä solmunaan.
+    kuvanAlt: document.querySelector('.fokusvirta-isokuva-kuva')?.alt ?? null,
     kuva: mitta(document.querySelector('.fokusvirta-isokuva-kuva')),
     kuplia: document.querySelectorAll('.pollo-kuplapino .pollo-vihje').length,
     // Pluskupla poistettiin 18.9.2026: sitä ei saa enää olla DOMissa.
@@ -593,8 +594,8 @@ for (const ruutu of TEKSTIRUUDUT) {
   await sivu.waitForFunction(
     `document.body.classList.contains('luenta-tekstit-piiloon') && ${LUENTA_SOI}`,
     null, { timeout: 90000 }).catch(() => {});
-  // Kuva ja kuvateksti ruudulle ennen mittausta.
-  await sivu.waitForFunction(() => document.querySelector('.fokusvirta-isokuva-teksti'),
+  // Kuva ruudulle ennen mittausta.
+  await sivu.waitForFunction(() => document.querySelector('.fokusvirta-isokuva-kuva'),
     null, { timeout: 60000 }).catch(() => {});
 
   // 7–8. LAPPU JA KUVATEKSTI.
@@ -604,10 +605,15 @@ for (const ruutu of TEKSTIRUUDUT) {
   vaadi(`${ruutu.nimi}: merkintä on lappuna ja sen teksti mitaton`,
     luennassa.lappu && (luennassa.rivi?.w ?? 99) <= 1 && (luennassa.teksti?.w ?? 99) <= 1,
     `lappu=${luennassa.lappu} rivi=${JSON.stringify(luennassa.rivi)}`);
-  vaadi(`${ruutu.nimi}: kuva ja kuvateksti näkyvät`,
-    (luennassa.kuvateksti?.h ?? 0) > 4 && luennassa.kuvateksti?.display !== 'none'
-      && (luennassa.kuva?.w ?? 0) > 20,
-    JSON.stringify({ kuvateksti: luennassa.kuvateksti, kuva: luennassa.kuva }));
+  /*
+   * EI ENÄÄ ERILLISTÄ KUVATEKSTIPAPERIA (29.9.2026, löydös 138 / build
+   * 16, Päätoimittajan päätös: "kehys ja kuvateksti pois, pelkkä
+   * kuva"). Ennen tämä vartioi paperin korkeutta; nyt riittää, että
+   * kuva näkyy ja sen alt-attribuutissa on yhä teksti.
+   */
+  vaadi(`${ruutu.nimi}: kuva näkyy ja kuvateksti on sen alt-attribuutissa`,
+    Boolean(luennassa.kuvanAlt) && (luennassa.kuva?.w ?? 0) > 20,
+    JSON.stringify({ kuvanAlt: luennassa.kuvanAlt, kuva: luennassa.kuva }));
 
   if (KUVAKANSIO && ruutu.width === 1400) {
     const { data } = await cdp.send('Page.captureScreenshot', { format: 'jpeg', quality: 62 });
@@ -792,6 +798,7 @@ if (!AANIOSOITE) {
 </svg></button>
 <script type="module">
 import { kaynnistaKaiutinmittari } from '/js/kaiutinmittari.js';
+import { avaaChromium } from '../selain.mjs';
 window.koe = async (url, asetukset) => {
   const ctx = new AudioContext();
   await ctx.resume();

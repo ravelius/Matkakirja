@@ -8,7 +8,11 @@
 
 Ympäristö: ASC_KEY_ID, ASC_ISSUER_ID, ASC_AVAIN_POLKU (.p8-tiedosto),
 TESTAAJA (sähköposti, valinnainen; oletus tilin omistaja). Argumentit: --bundle-id, --build
-(CFBundleVersion), --odota-min (käsittelyn aikaraja).
+(CFBundleVersion), --odota-min (käsittelyn aikaraja), --testattavaa (TestFlightin
+"What to test" -teksti buildin kaikille kielille; tyhjä = ei muuteta), --vanhenna
+(build vanhennetaan TestFlightissa eikä liitetä ryhmään; vikainen build pois testaajilta),
+--palaute-pois (sisäisen ryhmän feedbackEnabled=false; omistaja 28.9.2026: TestFlightin
+"Lähetä palautetta" -sivu pois pelin avauksesta; ei muuta ryhmästä muuta).
 Kaikki virheet näkyvät ::error-rivinä ja lopettavat nollasta poikkeavasti.
 """
 import argparse
@@ -32,6 +36,9 @@ def main():
     p.add_argument('--bundle-id', required=True)
     p.add_argument('--build', required=True)
     p.add_argument('--odota-min', type=int, default=45)
+    p.add_argument('--testattavaa', default='')
+    p.add_argument('--vanhenna', action='store_true')
+    p.add_argument('--palaute-pois', action='store_true')
     a = p.parse_args()
 
     kid = os.environ['ASC_KEY_ID']
@@ -59,6 +66,7 @@ def main():
     if tila != 200 or not d.get('data'):
         virhe('Appia ei löydy', f'{a.bundle_id}: {tila}')
     app_id = d['data'][0]['id']
+    paakieli = d['data'][0]['attributes'].get('primaryLocale') or 'fi'
 
     tila, d = kutsu('GET', f'/v1/apps/{app_id}/betaGroups?limit=50')
     if tila != 200:
@@ -69,6 +77,18 @@ def main():
     ryhma_id = ryhma['id']
     kaikki_buildit = bool(ryhma['attributes'].get('hasAccessToAllBuilds'))
     print(f"Sisäinen ryhmä: {ryhma['attributes'].get('name')} (kaikki buildit automaattisesti: {kaikki_buildit})")
+
+    if a.palaute_pois:
+        # Omistaja 28.9.2026: TestFlightin palautesivu pois avauksesta. Vain
+        # feedbackEnabled muutetaan (ASC API BetaGroupUpdateRequest).
+        ennen = ryhma['attributes'].get('feedbackEnabled')
+        tila, d = kutsu('PATCH', f'/v1/betaGroups/{ryhma_id}', {'data': {
+            'type': 'betaGroups', 'id': ryhma_id, 'attributes': {'feedbackEnabled': False}}})
+        if tila != 200:
+            virhe('Palautteen poisto epäonnistui', f'{tila}: {d}')
+        jalkeen = d.get('data', {}).get('attributes', {}).get('feedbackEnabled')
+        print(f'Sisäisen ryhmän palaute: {ennen} → {jalkeen}.')
+        return
 
     if not testaaja:
         # Oletustestaaja on tilin omistaja (ACCOUNT_HOLDER) — osoitetta ei
@@ -119,6 +139,34 @@ def main():
     if build['attributes'].get('usesNonExemptEncryption') is None:
         print('::warning::Buildilta puuttuu vientivalvontatieto (ITSAppUsesNonExemptEncryption) — '
               'se voi jäädä "Missing Compliance" -tilaan.')
+
+    teksti = a.testattavaa.strip()
+    if teksti:
+        # "What to test" (Fable 27.9.2026: tunnetut viat testaajalle näkyviin).
+        tila, d = kutsu('GET', f'/v1/builds/{build_id}/betaBuildLocalizations?limit=50')
+        if tila != 200:
+            virhe('Buildin kielitietoja ei saatu', f'{tila}: {d}')
+        kielet = d.get('data', [])
+        for k in kielet:
+            tila, d = kutsu('PATCH', f"/v1/betaBuildLocalizations/{k['id']}", {'data': {
+                'type': 'betaBuildLocalizations', 'id': k['id'], 'attributes': {'whatsNew': teksti}}})
+            if tila != 200:
+                virhe('What to test -päivitys epäonnistui', f"{k['attributes'].get('locale')}: {tila}: {d}")
+        if not kielet:
+            tila, d = kutsu('POST', '/v1/betaBuildLocalizations', {'data': {
+                'type': 'betaBuildLocalizations', 'attributes': {'whatsNew': teksti, 'locale': paakieli},
+                'relationships': {'build': {'data': {'type': 'builds', 'id': build_id}}}}})
+            if tila not in (200, 201):
+                virhe('What to test -lisäys epäonnistui', f'{paakieli}: {tila}: {d}')
+        print(f"What to test asetettu ({', '.join(k['attributes'].get('locale', '?') for k in kielet) or paakieli}).")
+
+    if a.vanhenna:
+        tila, d = kutsu('PATCH', f'/v1/builds/{build_id}', {'data': {
+            'type': 'builds', 'id': build_id, 'attributes': {'expired': True}}})
+        if tila != 200:
+            virhe('Buildin vanhennus epäonnistui', f'{a.build}: {tila}: {d}')
+        print(f'Build {a.build} vanhennettu (ei enää asennettavissa TestFlightista).')
+        return
 
     if kaikki_buildit:
         print('Ryhmä saa kaikki buildit automaattisesti — liittämistä ei tarvita.')

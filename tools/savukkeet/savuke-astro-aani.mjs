@@ -51,6 +51,18 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
+
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
@@ -83,8 +95,6 @@ const palvelin = createServer((req, res) => {
 const PORTTI = Number(process.env.PORTTI ?? 8759);
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 /*
  * AUTOPLAY AUKI SELAIMEN LIPULLA. Peli käynnistää äänikontekstin
  * käyttäjän eleestä, ja savuke napauttaa "Aloita seikkailu" — mutta
@@ -93,8 +103,7 @@ const chromium = paketti.chromium ?? paketti.default?.chromium;
  * oma väitteensä (soitin odottaa vahtia eikä kirjoita konsoliin), ja se
  * mitataan lähdekoodista tests/satelliitti.test.mjs:ssä.
  */
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
 
@@ -270,6 +279,7 @@ const vaadi = (nimi, ok, lisa = '') => {
 
 async function avaaSivu(nakyma, virheet, musiikkipyynnot) {
   const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   await konteksti.addInitScript(VAHTI);
   const sivu = await konteksti.newPage();
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());

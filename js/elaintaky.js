@@ -88,7 +88,7 @@ import {
   avaaKohdeSuurennos, elainmerkinNapautusLuovutettu, maanLadontaEsteet, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi, piirraNostosymKartalle } from './fokusnosto-symbolit.js';
-import { nostokuvaAloita } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaVakiokortti } from './nostokuva.js';
 import { piirraKarttavalo } from './karttavalot.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { nostoOnPoltettu } from './laattapyramidi.js';
@@ -102,6 +102,7 @@ import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 
 /*
  * LÖYTÖPALKKIO 20 PUNTAA (omistaja: *"pienen puntapalkkion"*).
@@ -695,7 +696,11 @@ export function avaaElaintaky(ui, iso) {
     kaksipalstaTaitto: true,
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoElaintaky(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoElaintaky(sisalto, undefined);
+    // Kuvaton kortti samaan kokoon ja paikkaan kuin kuvallinen (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
+  }
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele eläinkortti' });
 
@@ -746,6 +751,7 @@ export function avaaElaintaky(ui, iso) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('elaintaky-auki');
+  animoiAvaus(kortti);
   sfx.play('popup');
 }
 
@@ -1333,7 +1339,7 @@ export function suljeElaintaky(ui) {
   if (typeof document === 'undefined') return;
   for (const vanha of document.querySelectorAll('.elaintaky-kerros')) {
     // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
-    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
-    vanha.remove();
+    vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
+    suljeKerrosAnimoiden(vanha, '.elaintaky-kortti', ['elaintaky-kerros', 'elaintaky-auki']);
   }
 }

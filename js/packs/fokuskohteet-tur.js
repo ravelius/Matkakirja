@@ -169,6 +169,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Troijan muureja Hisarlıkin kummulla. Kaivaukset ovat '
         + 'paljastaneet yhdeksän päällekkäistä kaupunkia.',
       lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Legendary_walls_of_Troy_(8708672267).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
   },
   {
@@ -213,6 +216,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Celsuksen kirjaston julkisivu Efesoksessa. Artemiin '
         + 'temppelistä on jäljellä vain kivijalka ja yksi pylväs.',
       lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ephesus_Celsus_Library_Fa%C3%A7ade.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     /*
      * MATKAKIRJAN IHME — säännöt js/packs/fokuskohteet-grc.js:n
@@ -294,6 +300,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Göremen laakson keijunsavupiippuja Kappadokiassa. Kiveen '
         + 'on kaiverrettu satoja kirkkoja ja luostareita.',
       lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:G%C3%B6reme_Valley_in_Cappadocia_edit1.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Mitkä kolme tulivuorta peittivät Kappadokian tuhkakiveen?',
@@ -355,6 +364,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Pamukkalen travertiiniterasseja. Muodostuma on noin '
         + '2 700 metriä pitkä ja 160 metriä korkea.',
       lahde: 'Slyronit, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Travertine_terraces_of_Pamukkale.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -400,6 +412,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Ankaran linna kaupungin vanhan ytimen laella. Isoisän '
         + 'aikaan kaupunki tunnettiin Euroopassa nimellä Angora.',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castillo_de_Ankara,_Ankara,_Turqu%C3%ADa,_2024-10-03,_DD_47.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Minä vuonna kelttiläiset galatalaiset asettuivat Ankaraan?',
@@ -455,6 +470,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Konakin aukio İzmirissä. Aukion kellotorni valmistui vasta '
         + '1901, siis isoisän matkan jälkeen.',
       lahde: 'Maurice Flesier, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C4%B0zmir_Clock_Tower,_Konak_Square.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -494,6 +512,7 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Vihreä moskeija ja mausoleumi Bursassa 1880–1893 otetussa '
         + 'valokuvassa.',
       lahde: 'Abdullah frères 1880–1893, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_mausoleum_and_Ye%C5%9Fil_Cami_(Green_Mosque)_of_%C3%87elebi_Sultan_Mehmet_(I)_in_Bursa_between_1880_and_1893.jpg',
     },
   },
   {
@@ -532,6 +551,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Rumin turkoosikupolinen hauta Konyassa. Se on yhä '
         + 'kaupungin tärkein nähtävyys.',
       lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mevlana_M%C3%BCzesi_01.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -573,6 +595,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Trabzonin Hagia Sofia. Kirkko rakennettiin Trapezuntin '
         + 'keisarikunnan aikana meren rannalle.',
       lahde: 'İhsan Deniz Kılıçoğlu, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Trabzon.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -615,6 +640,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Göbekli Tepen kaivausaluetta. T-kirjaimen muotoiset '
         + 'kivipylväät ovat maailman vanhimpia tunnettuja megaliitteja.',
       lahde: 'Teomancimit, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:G%C3%B6bekli_Tepe,_Urfa.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -657,6 +685,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Suuri Ararat, 5 137 metriä. Vasemmalla kohoaa Pieni '
         + 'Ararat.',
       lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:00_2399_Mount_Ararat,_Turkey.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -698,6 +729,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Akdamarin saari Vanjärvellä. Järvi on Turkin suurin ja '
         + 'niin emäksinen, ettei se yleensä jäädy.',
       lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:00_3385_Akdamar_Island_-_Lake_Van.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Kuinka korkeita mikrobialiittitorneja Vanjärven pohjalta on löydetty?',
@@ -749,6 +783,9 @@ export const FOKUSKOHTEET_TUR = [
       tiedosto: 'Black Sea Turkey Giresun.jpg',
       selite: 'Mustameri Giresunin kohdalla Turkin pohjoisrannikolla.',
       lahde: 'Cardiodynia, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Black_Sea_Turkey_Giresun.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -800,6 +837,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Kızılırmak Bafran suistossa. Joki on Turkin pisin '
         + 'kokonaan maan sisällä virtaava joki, 1 355 kilometriä.',
       lahde: 'Sadi Sezgin, Wikimedia Commons (CC BY 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:K%C4%B1z%C4%B1l_%C4%B1rmak_Bafra_Samsun_(64325689).jpeg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
     },
   },
   /*
@@ -863,6 +903,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Baklavaa ja pistaaseja myynnissä Gaziantepissä. Seudun '
         + 'pistaasit ovat kaupungin baklavan ydin.',
       lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Baklava_and_Pistachios_for_Sale_-_Gaziantep.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
   {
@@ -915,6 +958,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Kapalıçarşın Beyazıtin portti. Kaaren medaljongissa on '
         + 'sulttaanin tughra eli nimikirjoitusmerkki.',
       lahde: 'Alexandru Panoiu, Wikimedia Commons (CC BY 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bayezid_Gate_of_the_Grand_Bazaar_(AP4M2098_1PS)_(28796761060).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
     },
     visa: {
       kysymys: 'Minä vuonna alettiin rakentaa Kapalıçarşın ydintä?',
@@ -968,6 +1014,7 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Piri Reisin maailmankartan säilynyt osa vuodelta 1513. '
         + 'Kartta löytyi uudelleen Topkapın palatsista 1929.',
       lahde: 'Piri Reis 1513, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Piri_reis_world_map_01.jpg',
     },
   },
   {
@@ -1024,18 +1071,27 @@ export const FOKUSKOHTEET_TUR = [
         selite: 'Vanin kissan pentu, jolla on yksi sininen ja yksi '
           + 'vihertävä silmä — kannan kuuluisin tuntomerkki.',
         lahde: 'Bertilvidet, Wikimedia Commons (CC BY 2.5)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Van_kitten.jpg',
+        lisenssi: 'CC BY 2.5',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
       },
       {
         tiedosto: 'VAN CAT.png',
         selite: 'Lähikuvassa erot näkyvät parhaiten: toinen silmä '
           + 'sininen, toinen kellanvihreä.',
         lahde: 'Estin Giç Giç, Wikimedia Commons (CC BY-SA 4.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:VAN_CAT.png',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
       },
       {
         tiedosto: "Van, casa del gatto di van, presso la facoltà di veterinaria dell'università 04.jpg",
         selite: 'Aikuinen asukas Vanin yliopiston kissatalossa, jossa '
           + 'kantaa tutkitaan ja suojellaan.',
         lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Van,_casa_del_gatto_di_van,_presso_la_facolt%C3%A0_di_veterinaria_dell\'universit%C3%A0_04.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
       },
     ],
     visa: {
@@ -1105,6 +1161,7 @@ export const FOKUSKOHTEET_TUR = [
         + 'noin 1809. Laji oli sama kuin Kırkpınarin kentällä.',
       lahde: 'Tuntematon kreikkalainen taiteilija n. 1809, Wikimedia '
         + 'Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Oil_wrestling_match_in_the_gardens_of_the_Sultan\'s_Palace.jpg',
     },
   },
   /*
@@ -1182,6 +1239,7 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Keisarinna Eugénie Franz Xaver Winterhalterin '
         + 'muotokuvassa vuodelta 1852.',
       lahde: 'Franz Xaver Winterhalter 1852, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Franz_Xaver_Winterhalter_Empress_Eugenie.jpg',
     },
   },
   {
@@ -1238,6 +1296,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Kattohaikara Turkissa. Haikarat kiertävät Välimeren '
         + 'Bosporin kautta, koska nousuvirtauksia ei synny meren yllä.',
       lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ciconia_ciconia_-_White_Stork_09.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -1473,6 +1534,9 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Theodosiuksen muurien korjattu osuus: edessä vallihaudan '
         + 'muuri, keskellä ulkomuuri ja takana päämuurin torni.',
       lahde: 'Bigdaddy1204, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Walls_of_Constantinople.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
     },
     /*
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
@@ -1488,7 +1552,7 @@ export const FOKUSKOHTEET_TUR = [
       lyhyt: 'Kilpa-ajokannattajat rakentavat puolustuslinjaa hunneja vastaan, muttei suostu lopettamaan kisojaan.',
       selite: 'Sinisten ja vihreiden kilpa-ajokannattajat rakentavat nyt samaa '
         + 'puolustuslinjaa — mutta eivät suostu lopettamaan kilpailuaan. '
-        + 'Kuvituksen muurarinoppilas pelkää pudottavansa raskaan tiilen '
+        + 'Kuvan muurarinoppilas pelkää pudottavansa raskaan tiilen '
         + 'enemmän kuin kaukana lähestyviä hunneja; vanhemman miehen käsi '
         + 'olkapäällä muistuttaa, että sortuneiden tornien on noustava ennen '
         + 'kuin vihollinen ehtii kaupungille.',

@@ -129,7 +129,7 @@ export const LISAMODUULIT = [
   m('js/linssit/ihmisen-matka-virrat.js', ['IHMISEN_MATKA_VIRRAT', 'IHMISEN_MATKA_RETKI', 'IHMISEN_MATKA_VANHA', 'IHMISEN_MATKA_VANAT'], 'linssi'),
   m('js/linssit/ihmisen-matka.js', ['LINSSI', 'ESITYKSEN_KUVAT', 'ALOITUKSEN_TAUSTAKUVAT'], 'linssi'),
   m('js/linssit/keksinnot.js', ['KEKSINNOT', 'LINSSI'], 'linssi'),
-  m('js/linssit/satelliitti-data.js', ['SATELLIITTI_KOHTEET', 'SATELLIITTI_LAHDE'], 'linssi'),
+  m('js/linssit/satelliitti-data.js', ['SATELLIITTI_KOHTEET', 'SATELLIITTI_LAHDE', 'SATELLIITTI_KIERROS'], 'linssi'),
   m('js/linssit/satelliitti.js', ['LINSSI'], 'linssi'),
   m('js/linssit/pallo.js', ['LINSSI'], 'linssi'),
   m('js/linssit/radio.js', ['LINSSI'], 'linssi'),
@@ -174,7 +174,10 @@ export const LISATIEDOSTOT = [
  *
  *   kartta/lippu_lonlat.json  Löydös 161 (Fable 26.9.2026): Karttasepän lipputankoankkurit { ISO3: [lon, lat] },
  *                             natiivi Kartuscha.LippuAnkkuritPolku (Natiivi-UI a500a778).
+ *   kartta/merikohdat.json    Meren koristeet (Fable 26.9.2026, Linssiseppä): kohdemaan meret ja ankkuripisteet
+ *                             (tools/tee-merikohdat.mjs), Eurooppa ensin.
  */
 export const NIMETYT_LISATIEDOSTOT = [
   { lahde: 'assets/data/lippu-lonlat.json', tiedosto: 'kartta/lippu_lonlat.json', muoto: 'iso3-lonlat' },
+  { lahde: 'assets/data/merikohdat.json', tiedosto: 'kartta/merikohdat.json', muoto: 'merikohdat' },
 ];

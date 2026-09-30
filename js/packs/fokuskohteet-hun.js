@@ -117,6 +117,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Debrecenin Suuri kirkko, Unkarin suurin protestanttinen '
         + 'kirkko, kaupungin päätorin laidalla.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Debrecen_-_Protestant_Great_Church.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Miksi Debreceniä alettiin kutsua "kalvinismin Roomaksi"?',
@@ -159,6 +162,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Szegedin votiivikirkko, joka rakennettiin tulvan jälkeen '
         + 'annetun lupauksen täyttämiseksi.',
       lahde: 'Motacilla, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Szeged_Fogadalmi_templom_DDNy.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -191,6 +197,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Pécsin tuomiokirkko neljine torneineen Mecsek-vuorten '
         + 'juurella.',
       lahde: 'Takkk, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:P%C3%A9cs_Cathedral_Roman_art_era_-_Hungary.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -223,6 +232,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Egerin linnan muureja, joiden takana puolustajat kestivät '
         + 'vuoden 1552 piirityksen.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eger_castle_(by_Pudelek)_01.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -253,6 +265,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Győrin Széchenyi-aukio, vanhankaupungin barokkitalojen '
         + 'reunustama päätori.',
       lahde: 'goga504, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sz%C3%A9chenyi_Square,_Gy%C5%91r.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 
@@ -292,6 +307,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Kékesin laki, Unkarin korkein kohta, jossa on näkötorni ja '
         + 'lähetinmasto.',
       lahde: 'Susulyka, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:K%C3%A9kestet%C5%91.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -323,6 +341,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Istállós-kőn laki Bükk-vuoristossa, Unkarin toiseksi '
         + 'korkein kohta.',
       lahde: 'Debrecenivalaki, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ist%C3%A1ll%C3%B3s-k%C5%91.JPG',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -354,6 +375,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Írott-kőn laki Unkarin ja Itävallan rajalla; näkötorni '
         + 'seisoo suoraan rajalinjan päällä.',
       lahde: 'C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Geschriebenstein_-_Gipfelplateau.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 
@@ -394,6 +418,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Tonavan mutka Visegrádin kohdalla, jossa joki kääntyy '
         + 'vuorten pakottamana etelään.',
       lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hungary_donau_Visegrad_bend_IMG_0186.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Mikä silta yhdisti Budan ja Pestin ensimmäistä kertaa pysyvästi?',
@@ -439,6 +466,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Tisza Szolnokin kohdalla, missä joki kulkee oikaistua '
         + 'uomaansa Suuren alangon halki.',
       lahde: 'Derzsi Elekes Andor, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tisza_river_-_Szolnok,_Hungary_(1).JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -470,6 +500,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Drávan hiekkarantaa Barcsin kohdalla Unkarin ja Kroatian '
         + 'rajalla.',
       lahde: 'Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Barcs,_Dr%C3%A1va-part_2021_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -503,6 +536,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Balaton Tihanyn niemeltä katsottuna; järvi on laaja mutta '
         + 'vain muutaman metrin syvyinen.',
       lahde: 'Takkk, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_Balaton_at_Tihany,_Hungary.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Mikä tekee Tihanyn luostarin perustamiskirjasta poikkeuksellisen?',
@@ -556,6 +592,7 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Hortobágyn vipukaivo eli gémeskút, aron tunnusmerkki, joka '
         + 'näkyy kauas puuttomalle laitumelle.',
       lahde: 'Andreas Poeschek, fotografikus.hu, Wikimedia Commons (CC BY 2.0 AT)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hortobagy-ziehbrunnen.jpg',
     },
   },
   {
@@ -589,6 +626,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Viinitarhoja Tokajin vulkaanisella rinteellä Bodrogin ja '
         + 'Tiszan yhtymäkohdan yllä.',
       lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vineyard_near_Tokaj,_Hungary.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -621,6 +661,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Pannonhalman arkkiluostari kukkulallaan; paikalla on ollut '
         + 'benediktiiniläisyhteisö vuodesta 996.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pannonhalma_-_stutue_and_archabbey.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Mitä munkit toivat Pannonhalmaan kristinuskon lisäksi?',
@@ -666,6 +709,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Baradlan luolan tippukiviä; luolasto jatkuu Slovakian '
         + 'puolelle yli kahdenkymmenen kilometrin mittaisena.',
       lahde: 'Fenyessanyi, Wikimedia Commons (CC BY 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aggtelek_-_Baradla.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
     },
   },
   {
@@ -697,6 +743,9 @@ export const FOKUSKOHTEET_HUN = [
       selite: 'Hollókőn vanhan kylän kuja, jonka talot rakennettiin '
         + 'vuoden 1909 tulipalon jälkeen entiseen malliin.',
       lahde: 'Kfbs06, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Holloko_Village_Center.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
 ];

@@ -26,9 +26,9 @@ test('jumissa ja uusi linssi kantavat vakaata emit-metadataa', () => {
   assert.equal(typeof tapahtuma?.linssi, 'string');
 });
 
-test('UI reagoi vain vakaaseen jumissa-, linssi- ja pankkiapumetadataan', () => {
+test('UI reagoi vain vakaaseen jumissa-, linssi- ja rahattomuusmetadataan', () => {
   const playEvents = UI.slice(UI.indexOf('async playEvents()'), UI.indexOf('async naytaTietajaNousut()'));
-  for (const tunnus of ['peli.vararikko.pankkiapu', 'matka.jumissa', 'peli.linssi.avautui']) {
+  for (const tunnus of ['peli.vararikko.varoitus', 'peli.vararikko.selvisi', 'matka.jumissa', 'peli.linssi.avautui']) {
     assert.ok(playEvents.includes(`event.tilanne === '${tunnus}'`));
   }
   assert.doesNotMatch(playEvents, /event\.kind === 'aid'/);

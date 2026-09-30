@@ -87,6 +87,7 @@
  *    pikseleistä eikä laattakoosta, ja arkin oikea reuna osuu tasan
  *    kohtaan leveys, jossa kopio jatkaa.
  */
+import { laattaMuuttunut } from './deltasarja.js';
 import { el } from './mapart.js';
 import { pyramidiUrl, pyramidinLuettelonPolku } from './media.js';
 import {
@@ -207,6 +208,8 @@ const NOUTO_VIIVE_MS = 300;
  * TERÄVÄMPI kuin tarkka taso: pelkkä kustannus ilman hyötyä.
  */
 const POHJA_SYVIN = 3;
+// Syvin taso, joka on poltettu koko maailmalle; sen alla tasot ovat harvoja.
+const KOKO_MAAILMA_SYVIN = 8;
 
 /**
  * Pohjakerroksen taso: AINA sama, tai ei pohjaa lainkaan.
@@ -229,8 +232,18 @@ const POHJA_SYVIN = 3;
  * kerroksesta tulee alin (ks. `alin`), eikä se enää heitä pois sitä,
  * mikä on ruudulla.
  */
-function pohjanTaso(tasot, taso) {
+export function pohjanTaso(tasot, taso) {
   if (taso.z <= POHJA_SYVIN) return null;
+  /*
+   * SYVÄT TASOT OVAT HARVOJA (Z10-ketju 27.9.2026): z9–z10 on poltettu
+   * vain kaupunkien ±1° ja maakuntamaiden alalle, ja muualla laatasto on
+   * nollaa. Pohjaksi otetaan silloin z8 (koko maailma), jotta syvän alan
+   * ulkopuolella näkyy z8 venytettynä eikä z3:n mössö.
+   */
+  if (taso.z > KOKO_MAAILMA_SYVIN) {
+    const z8 = tasot.find((t) => t.z === KOKO_MAAILMA_SYVIN);
+    if (z8) return z8;
+  }
   return tasot.find((t) => t.z === POHJA_SYVIN) ?? null;
 }
 
@@ -578,7 +591,12 @@ export function pyramidinArkki(lauta) {
 /* ------------------------------------------------------------ luettelo */
 
 /*
- * PELIN SYVIN TASO (Karttaseppä 23.9.2026). Ämpärin luettelo voi kuvata
+ * PELIN SYVIN TASO 10 (Karttaseppä 27.9.2026, Z10-ketju): z9–z10 on
+ * poltettu kaupungeille ±1° ja 138 maakuntamaalle (versio
+ * 2026-09-26s-pohja). Harvan tason puuttuvat laatat eivät ole
+ * laatastossa, joten niitä ei pyydetä; alle piirtyy z8 (pohjanTaso).
+ *
+ * Alkuperäinen perustelu kattoon 8 (Karttaseppä 23.9.2026). Ämpärin luettelo voi kuvata
  * tasot z9–z10: ne poltetaan vain alueelle (Ranska) 30 metrin
  * korkeusaineistosta natiivipelin pallosarjaa Z9–Z11 varten
  * (tools/generoi-laattapyramidi.mjs SYVÄT TASOT). Selainpeli EI käytä
@@ -589,7 +607,7 @@ export function pyramidinArkki(lauta) {
  * (tasokartta, pallon lepokerros, pallolauta) saa luettelonsa
  * haePyramidinLuettelo()-kutsusta ja näkee vain tasot z0–z8.
  */
-export const PELIN_SYVIN_TASO = 8;
+export const PELIN_SYVIN_TASO = 10;
 
 /**
  * Luettelo pelin käyttöön: tasot, joiden z ylittää PELIN_SYVIN_TASO:n,
@@ -743,6 +761,9 @@ const mittarit = {
   variMaa: null,
   ladattu: 0,
   epaonnistui: 0,
+  // Virheen jälkeen uudelleen haetut laatat (ks. POHJAN_UUSINNAT) ja myöhemmin paikatut aukot.
+  uusittu: 0,
+  paikattu: 0,
   esiladattu: 0,
   esijonossa: 0,
   esikaynnissa: 0,
@@ -915,6 +936,17 @@ export function varitasonLaattapolku(kirjaus, z, sarake, rivi, muoto = 'webp', a
 }
 
 /** Laatan osoite ämpärissä. Sama merkkijono sekä kuvalle että noudolle. */
+/**
+ * Kerroksen versio laatalle: DELTASARJASSA (js/deltasarja.js) muuttumaton
+ * laatta asuu perussarjan versiossa. `kerros` on luettelo itse (pohja) tai
+ * sen viiva-, joki- tai rantataso; sarakkeita tulee tasolta.
+ */
+function kerroksenVersio(kerros, taso, sarake, rivi) {
+  const d = kerros?.delta;
+  if (!d) return kerros.versio;
+  return laattaMuuttunut(d, taso.z, sarake, rivi, taso.sarakkeita) ? kerros.versio : d.perus;
+}
+
 function laattaUrl(taso, sarake, rivi) {
   // Nostotason laatta asuu oman versionsa alla pohjan rinnalla:
   // <nostoversio>/nostot/z…. Oma versio on koko mallin päähyöty —
@@ -934,14 +966,14 @@ function laattaUrl(taso, sarake, rivi) {
   }
   // Viivataso samoin omassa versiossaan: <viivaversio>/viivat/z…
   if (taso.viiva) {
-    return pyramidiUrl(`${luettelo.viivataso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+    return pyramidiUrl(`${kerroksenVersio(luettelo.viivataso, taso, sarake, rivi)}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
   // Jokitaso on viivatason generaattorin tuote ilman reittejä, joten
   // sen laatat asuvat samassa alipolussa: <jokiversio>/viivat/z…
   // (ks. JOKITASO alempana).
   if (taso.joki) {
-    return pyramidiUrl(`${luettelo.jokitaso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+    return pyramidiUrl(`${kerroksenVersio(luettelo.jokitaso, taso, sarake, rivi)}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
   // Nimiötaso: <nimioversio>/nimiot/z… (ks. NIMIÖTASO alempana).
@@ -951,7 +983,7 @@ function laattaUrl(taso, sarake, rivi) {
   }
   // Rantataso samoin: <rantaversio>/ranta/z… (omistaja 6.9.2026 ilta).
   if (taso.ranta) {
-    return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
+    return pyramidiUrl(`${kerroksenVersio(luettelo.rantataso, taso, sarake, rivi)}/ranta/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
   // Väritaso samoin omassa polussaan, ja MAA ON POLUSSA: ks.
@@ -969,7 +1001,7 @@ function laattaUrl(taso, sarake, rivi) {
    * kysytään sieltä eikä rakenneta tässä.
    */
   if (taso.reliefi) return reliefinLaattaUrl(taso, sarake, rivi);
-  return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
+  return pyramidiUrl(`${kerroksenVersio(luettelo, taso, sarake, rivi)}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
 
@@ -1367,7 +1399,59 @@ function peruLaatta(kuva) {
  * `lapinakyva` kerros on MERKINTÖJÄ pergamentin päällä, ei karttaa:
  *              vanha taso ei jää uuden alle (ks. paivitaKerros).
  */
-const tyhjaTila = (kerros, alin = false, lapinakyva = false) => ({
+/** Olemassa olevan laatan uusinnat virheen jälkeen (1,5 s ja 4,5 s), ks. valmis(false). */
+const POHJAN_UUSINNAT = 2;
+const POHJAN_UUSINTAVALI_MS = 1500;
+/** Aukoksi jäänyt laatta haetaan taas aikaisintaan näin pian (päivityksessä tai paluussa). */
+const PAIKKAUSVALI_MS = 8000;
+
+/** Kaikki kerrokset (paikkaaKaikki käy niiden laatat läpi paluussa näkyviin). */
+const kaikkiTilat = new Set();
+
+/**
+ * Hakee aukoksi jääneen laatan uudelleen: uudet uusintakerrat ja uusi
+ * osoite (?p=aika ohittaa välimuistiin jääneen virheen).
+ */
+function paikkaaLaatta(kuva) {
+  const osoite = kuva.dataset.osoite;
+  const valmis = kuva.__valmis;
+  if (!osoite || !valmis || !kuva.isConnected || kuva.dataset.peruttu === '1') return;
+  delete kuva.dataset.virhe;
+  kuva.dataset.yritys = '0';
+  mittarit.paikattu += 1;
+  kuva.addEventListener('load', () => valmis(true), { once: true });
+  kuva.addEventListener('error', () => valmis(false), { once: true });
+  kuva.setAttribute('href', `${osoite}${osoite.includes('?') ? '&' : '?'}p=${Date.now()}`);
+}
+
+/**
+ * PALUU NÄKYVIIN PAIKKAA AUKOT (omistaja 27.9.2026 klo 23.5x): Safari
+ * katkaisee kesken olevat haut, kun sovellus menee taustalle tai näyttö
+ * lukittuu, ja ne päättyvät virheeseen. Näkyviin palatessa, sivun
+ * palatessa välimuistista (pageshow) ja verkon palatessa jokainen
+ * aukoksi jäänyt laatta haetaan heti uudelleen.
+ */
+function paikkaaKaikki() {
+  if (typeof document !== 'undefined' && document.hidden) return;
+  for (const tila of kaikkiTilat) {
+    for (const kuva of tila.laatat.values()) if (kuva.dataset.virhe) paikkaaLaatta(kuva);
+    for (const kuva of tila.vanhat?.values?.() ?? []) if (kuva.dataset?.virhe) paikkaaLaatta(kuva);
+  }
+}
+// Valinnaiset kutsut: testien tynkäikkunoilla ei ole addEventListeneria.
+if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+  document.addEventListener?.('visibilitychange', paikkaaKaikki);
+  window.addEventListener?.('pageshow', paikkaaKaikki);
+  window.addEventListener?.('online', paikkaaKaikki);
+}
+
+/** Kerros talteen paikkausta varten (paikkaaKaikki). */
+function kirjaaTila(tila) {
+  kaikkiTilat.add(tila);
+  return tila;
+}
+
+const tyhjaTila = (kerros, alin = false, lapinakyva = false) => kirjaaTila({
   kerros, alin, lapinakyva, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
   nakyva: null, jakso: 0,
 });
@@ -1680,6 +1764,8 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
 
     const oli = vanhatSamalta.get(k);
     if (oli) {
+      // Aukoksi jäänyt laatta haetaan uudelleen, kun aluetta taas katsotaan.
+      if (oli.dataset.virhe && Date.now() - Number(oli.dataset.virhe) > PAIKKAUSVALI_MS) paikkaaLaatta(oli);
       // Reunukselta ruudulle siirtynyt laatta on nyt odottaja.
       if (nakyy && oli.dataset.ladattu !== '1') oli.dataset.odottaa = '1';
       uudet.set(k, oli);
@@ -1736,8 +1822,60 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
         kuva.dataset.ladattu = '1';
       } else {
         mittarit.epaonnistui += 1;
+        /*
+         * ALIN KERROS HAETAAN UUDELLEEN (omistaja/Fable 27.9.2026: iPadin
+         * webissä isoja pergamentin värisiä suorakaiteita; Karttasepän
+         * analyysi). Alimman kerroksen alla ei ole mitään, joten yksi
+         * ohimenevä verkkovirhe tai HTTP/2-perutus jätti PYSYVÄN tyhjän
+         * laatan: elementti jäi tila.laatat-karttaan, eikä seuraava
+         * päivitys yrittänyt uudelleen (osoite asetetaan vain luonnissa).
+         * Nyt laatta haetaan uudelleen 1,5 ja 4,5 s:n päästä uudella
+         * osoitteella (?r=n ohittaa välimuistiin jääneen virheen);
+         * odottaja-merkki pysyy, joten vanha taso ei häviä alta ennen
+         * aikojaan.
+         *
+         * KAIKKI OLEMASSA OLEVAT LAATAT (omistaja 27.9.2026 klo 23.5x,
+         * iPad: "karttavirhe palaa, vaikka olisi aluksi näyttänyt kaiken
+         * oikein" — pergamenttiruutuja JA tarkkoja ja karkeita laattoja
+         * vierekkäin). Sama pysyvä aukko syntyi jokaisella kerroksella,
+         * erityisesti kun Safari katkaisi kesken olevat haut taustalle
+         * mennessä tai näytön lukittuessa. Uusitaan siis jokainen laatta,
+         * jonka luettelon bittikartta sanoo olevan olemassa (taso.laatasto;
+         * silloin virhe ei voi olla 404), ja alin kerros aina. Harvat
+         * kerrokset ilman bittikarttaa (puuttuva laatta = tavallinen 404)
+         * eivät uusi.
+         */
+        const yritys = Number(kuva.dataset.yritys ?? 0);
+        const olemassa = tila.alin || Boolean(taso.laatasto);
+        if (olemassa && yritys < POHJAN_UUSINNAT) {
+          kuva.dataset.yritys = String(yritys + 1);
+          mittarit.uusittu += 1;
+          const osoite = kuva.getAttribute('href');
+          if (osoite && !kuva.dataset.osoite) kuva.dataset.osoite = osoite;
+          // Osoite pois odotuksen ajaksi (WebKitin rikkinäisen kuvan merkki, ks. alla).
+          kuva.removeAttribute('href');
+          setTimeout(() => {
+            if (kuva.dataset.peruttu === '1' || !kuva.isConnected || !osoite) return;
+            kuva.addEventListener('load', () => valmis(true), { once: true });
+            kuva.addEventListener('error', () => valmis(false), { once: true });
+            const pohja = osoite.replace(/[?&]r=\d+$/, '');
+            kuva.setAttribute('href', `${pohja}${pohja.includes('?') ? '&' : '?'}r=${yritys + 1}`);
+          }, POHJAN_UUSINTAVALI_MS * 3 ** yritys);
+          return;
+        }
         // Saapumaton laatta ei saa jäädä odottajaksi ikuisesti.
         delete kuva.dataset.odottaa;
+        /*
+         * PAIKKAUS MYÖHEMMIN (ks. paikkaaLaatta): olemassa olevan laatan
+         * uusinnatkin epäonnistuivat (verkko poikki, sovellus taustalla).
+         * Laatta merkitään, ja seuraava päivitys samalla alueella tai
+         * paluu näkyviin hakee sen uudelleen — aukko ei jää pysyväksi.
+         */
+        if (olemassa) {
+          kuva.dataset.virhe = String(Date.now());
+          if (!kuva.dataset.osoite) kuva.dataset.osoite = kuva.getAttribute('href') ?? '';
+          kuva.__valmis = valmis;
+        }
         /*
          * === SININEN KYSYMYSMERKKI KARTALLA (omistaja 4.9.2026) ===
          *
@@ -2094,7 +2232,7 @@ let variLiike = false;
 let variLiikeKohde = null;
 
 /*
- * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js poistettu 27.9.2026 — piirtokyky jäi ilman kytkentää;
  * prototyyppi): lauta antaa käytyjen kaupunkien aukot laudan
  * yksiköissä (sisasumunAukot) ja peiton; tasoitus kantaa ne laatoille
  * (js/pallolaatat.js maalaaSisasumu). Avaimessa mukana, jotta laatat

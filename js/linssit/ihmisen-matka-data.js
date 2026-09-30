@@ -150,7 +150,7 @@ export const IHMISEN_MATKA_LISANOSTOKUVAJUURI = 'https://media.matkakirja.app/li
  * Kuvakohtaiset viitteet ovat esineen `viitteet`-kentässä
  * (kuvaputken toimituksen `sources`, ei näytetä pelissä).
  */
-const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähdeperustainen kuvitus, ei museovalokuva.';
+const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähteisiin perustuva, ei museovalokuva.';
 
 /** Matkalaukun selite: mitä linssi on. */
 export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle: '

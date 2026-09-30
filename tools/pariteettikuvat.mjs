@@ -26,6 +26,7 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync, statSync, rmSync, r
 import { extname, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { NAKYMAT } from './pariteettikuvat-nakymat.mjs';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -63,22 +64,6 @@ if (valitut) {
 }
 mkdirSync(ULOS, { recursive: true });
 
-// ── Playwright: repon node_modules, PLAYWRIGHT_JS tai Macin tunnetut polut ──
-async function lataaPlaywright() {
-  const lahteet = ['playwright', process.env.PLAYWRIGHT_JS,
-    '/Users/Shared/Claude/Matkakirja-fable/node_modules/playwright/index.js',
-    '/Users/samireivinen/Matkakirja-fable/node_modules/playwright/index.js',
-    '/opt/node22/lib/node_modules/playwright/index.js'].filter(Boolean);
-  for (const l of lahteet) {
-    try {
-      // eslint-disable-next-line no-await-in-loop
-      const m = await import(l);
-      const c = m.chromium ?? m.default?.chromium;
-      if (c) return c;
-    } catch { /* seuraava */ }
-  }
-  throw new Error('Playwrightia ei löytynyt (aseta PLAYWRIGHT_JS)');
-}
 
 // ── Palvelin: tuotanto, annettu osoite tai oma staattinen palvelin ────
 let palvelin = null;
@@ -150,7 +135,6 @@ function tallenne() {
 const TALLENNE = tallenne();
 
 // ── Selain ────────────────────────────────────────────────────────────
-const chromium = await lataaPlaywright();
 const LIPUT = GPU === 'metal'
   ? ['--use-angle=metal', '--ignore-gpu-blocklist', '--enable-gpu']
   : ['--use-gl=angle', '--use-angle=swiftshader'];
@@ -162,7 +146,7 @@ LIPUT.push('--disable-features=HardwareMediaKeyHandling,MediaSessionService', '-
  * konteksti suljetaan finallyssa, ja selain suljetaan myös virheessä,
  * Ctrl-C:ssä (SIGINT), SIGTERMissä ja SIGHUPissa.
  */
-const selain = await chromium.launch({ args: LIPUT, executablePath: process.env.CHROMIUM || undefined });
+const selain = await avaaChromium({ args: LIPUT });
 let suljettu = false;
 async function suljeKaikki() {
   if (suljettu) return;

@@ -46,7 +46,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-hauts-de-france-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -68,7 +68,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-grand-est-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -99,7 +99,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-provence-alpes-cote-d-azur-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -121,7 +121,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-auvergne-rhone-alpes-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -143,7 +143,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-nouvelle-aquitaine-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -165,7 +165,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-occitanie-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -187,7 +187,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-bourgogne-franche-comte-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -209,7 +209,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-pays-de-la-loire-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -231,7 +231,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-bretagne-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -253,7 +253,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-normandie-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -275,7 +275,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-corse-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -297,7 +297,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-centre-val-de-loire-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -319,7 +319,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/FRA-ile-de-france-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -343,7 +343,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-sachsen-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -365,7 +365,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-bayern-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -387,7 +387,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-rheinland-pfalz-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -409,7 +409,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-saarland-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -431,7 +431,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-schleswig-holstein-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -453,7 +453,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-niedersachsen-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -475,7 +475,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-nordrhein-westfalen-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -497,7 +497,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-baden-wurttemberg-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -519,7 +519,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-brandenburg-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -541,7 +541,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-mecklenburg-vorpommern-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -563,7 +563,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-bremen-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -585,7 +585,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-hamburg-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -607,7 +607,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-hessen-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -629,7 +629,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-thuringen-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -651,7 +651,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-sachsen-anhalt-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -673,7 +673,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/DEU-berlin-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -697,7 +697,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-piemonte-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -719,7 +719,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-lombardia-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -741,7 +741,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-sicily-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -763,7 +763,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-toscana-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -785,7 +785,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-emilia-romagna-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -807,7 +807,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-sardegna-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -829,7 +829,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-veneto-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -851,7 +851,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-apulia-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -873,7 +873,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-lazio-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -895,7 +895,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-trentino-alto-adige-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -917,7 +917,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-calabria-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -939,7 +939,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-campania-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -961,7 +961,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-abruzzo-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -983,7 +983,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-basilicata-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1005,7 +1005,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-marche-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1027,7 +1027,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-umbria-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1049,7 +1049,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-friuli-venezia-giulia-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1071,7 +1071,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-liguria-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1093,7 +1093,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-molise-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1115,7 +1115,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ITA-valle-d-aosta-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1139,7 +1139,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-castilla-y-leon-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1161,7 +1161,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-andalucia-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1183,7 +1183,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-castilla-la-mancha-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1205,7 +1205,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-aragon-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1227,7 +1227,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-extremadura-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1249,7 +1249,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-cataluna-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1271,7 +1271,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-galicia-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1293,7 +1293,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-valenciana-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1315,7 +1315,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-asturias-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1337,7 +1337,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-murcia-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1359,7 +1359,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-foral-de-navarra-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1381,7 +1381,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-madrid-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1403,7 +1403,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-pais-vasco-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1425,7 +1425,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-canary-is-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1447,7 +1447,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-cantabria-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1469,7 +1469,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-la-rioja-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1491,7 +1491,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-islas-baleares-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1513,7 +1513,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-ceuta-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1535,7 +1535,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/ESP-melilla-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1559,7 +1559,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/GBR-england-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1581,7 +1581,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/GBR-scotland-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1603,7 +1603,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/GBR-wales-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1625,7 +1625,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/GBR-northern-ireland-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1649,7 +1649,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-masovian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1671,7 +1671,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-greater-poland-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1693,7 +1693,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-warmian-masurian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1715,7 +1715,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-west-pomeranian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1737,7 +1737,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-lublin-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1759,7 +1759,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-podlachian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1781,7 +1781,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-pomeranian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1803,7 +1803,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-lower-silesian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1825,7 +1825,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-lodz-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1847,7 +1847,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-kuyavian-pomeranian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1869,7 +1869,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-subcarpathian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1891,7 +1891,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-lesser-poland-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1913,7 +1913,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-lubusz-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1935,7 +1935,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-silesian-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1957,7 +1957,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-swietokrzyskie-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -1979,7 +1979,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/POL-opole-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2003,7 +2003,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-lower-austria-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2025,7 +2025,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-styria-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2047,7 +2047,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-tyrol-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2069,7 +2069,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-upper-austria-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2091,7 +2091,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-carinthia-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2113,7 +2113,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-salzburg-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2135,7 +2135,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-burgenland-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2157,7 +2157,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-vorarlberg-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2179,7 +2179,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
           osoite: 'https://media.matkakirja.app/karttanostot/20260922/AUT-vienna-1873.jpg',
           lahde: 'Matkakirjan havainnekuva vuodelta 1873',
           tekija: 'Matkakirja',
-          lisenssi: 'Matkakirjan oma kuvitus',
+          lisenssi: 'Matkakirjan oma havainnekuva',
           havainnekuva: true,
           vuosi: 1873,
         },
@@ -2658,7 +2658,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/nld-maakunta-noord-brabant-a02068cb.jpg',
-          lahde: 'Stefan Scheer, Wikimedia Commons (CC BY 2.5)',
+          lahde: 'Stefan Scheer, Wikimedia Commons (CC BY 2.5), rajattu',
           tekija: 'Stefan Scheer',
           lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Efteling_Entrance.jpg',
           lisenssi: 'CC BY 2.5',
@@ -4392,7 +4392,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Koroška': {
       lyhyt: 'Pecan vuoren luolaan on asetettu pronssinen kuningas Matjaž, sillä tarun mukaan hän nukkuu vuoren uumenissa Itävallan rajalla.',
-      pitka: `Koroška on Slovenian pohjoisin kolkka, ahdas ja vuoristoinen kaista Itävallan rajaa vasten – niin syrjäinen, että sitä pidetään yhä huonoiten muuhun Sloveniaan yhteydessä olevana alueena. Suurin kaupunki on Slovenj Gradec, mutta laaksoja on vuosisatoja hallinnut raskas teollisuus: Pecan juurella sijaitsevasta Mežican kaivoksesta louhittiin lyijyä ja sinkkiä yli vuosisadan ajan, ja kaivostoiminta muovasi koko seudun maisemaa. Legenda uinuvasta kuningas Matjažista syntyi juuri tässä ahtaudessa: tarinan mukaan hän vetäytyi satapäisine sotureineen Pecan luoliin hävittyään sodan, ja hänen sanotaan heräävän vasta kun hänen partansa on kiertänyt yhdeksän kertaa kivipöydän ympäri. Vaikka moni kaivos on jo sammunut, tarina elää yhä matkailuesitteissä ja lasten iltasaduissa koko Sloveniassa.`,
+      pitka: `Koroška on Slovenian pohjoisin kolkka, ahdas ja vuoristoinen kaista Itävallan rajaa vasten – niin syrjäinen, että sitä pidetään yhä huonoiten muuhun Sloveniaan yhteydessä olevana alueena. Suurin kaupunki on Slovenj Gradec, mutta laaksoja on vuosisatoja hallinnut raskas teollisuus: Pecan juurella sijaitsevasta Mežican kaivoksesta louhittiin lyijyä ja sinkkiä yli kolmen vuosisadan ajan, ja kaivostoiminta muovasi koko seudun maisemaa. Legenda uinuvasta kuningas Matjažista syntyi juuri tässä ahtaudessa: tarinan mukaan hän vetäytyi satapäisine sotureineen Pecan luoliin hävittyään sodan, ja hänen sanotaan heräävän vasta kun hänen partansa on kiertänyt yhdeksän kertaa kivipöydän ympäri. Vaikka moni kaivos on jo sammunut, tarina elää yhä matkailuesitteissä ja lasten iltasaduissa koko Sloveniassa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-koroska-ecb34565.jpg',
@@ -4587,129 +4587,633 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ROU: {
     Alba: {
       lyhyt: 'Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan, ja päivä on yhä maan kansallispäivä.',
+      pitka: `Alba Iulia on Romanian kansallisen yhtenäisyyden symboli: kaupungin 1700-luvulla rakennettu tähtilinnoitus houkuttelee vuosittain satojatuhansia kävijöitä, ja sen suojissa julistettiin 1918 Transilvanian liittyminen Romaniaan. Ennen tätä alue kuului vuosisatoja Unkarin kuningaskuntaan, ja lähellä sijaitseva Blaj tunnettiin "Pienenä Roomana", Transilvanian romanialaisten kreikkalaiskatolisten kirkollisena ja sivistyksellisenä keskuksena. Kaupungin kaduilla risteilevät nykyään barokkiaikaiset muurit ja museokokoelmat, joissa kansallinen historia on läsnä joka käänteessä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-alba-c3cded12.jpg",
+          lahde: "Ela Vaida, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Ela Vaida",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Catedrala_Reintregirii_Neamului_-_Alba_Iulia.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-alba-c3cded12.jpg",
     },
     Arad: {
       lyhyt: 'Aradissa teloitettiin lokakuussa 1849 kolmetoista Unkarin vapaussodan kenraalia, ja heitä muistetaan kaupungissa yhä joka syksy.',
+      pitka: `Aradin keskustaa hallitsee 1700-luvulla rakennettu tähdenmuotoinen linnoitus, joka vartioi yhä Maros-joen ylityspaikkaa ja on osin edelleen armeijan käytössä. Kaupunki oli 1800-luvun lopulla Habsburgien monarkian liikenteellisiä edelläkävijöitä: sen hevosvetoinen raitiotie, avattu 1869, oli yksi koko valtakunnan ensimmäisistä kaupunkiraitioteistä. Nykyään Arad on säilyttänyt asemansa tärkeänä liikenteen risteyskohtana Romanian länsirajalla, ja rautatieyhteydet Budapestiin muistuttavat sen vanhasta roolista alueen kaupallisena solmukohtana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arad-7acd6593.jpg",
+          lahde: "Attilavago, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Attilavago",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Statuia_Libertatii_Maghiare_-_Arad.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arad-7acd6593.jpg",
     },
     Arges: {
       lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli kahden kilometrin korkeuteen, ja tie on auki vain kesäisin.',
+      pitka: `Curtea de Argeșin luostarikirkko on Wallachian ruhtinaiden 1500-luvulla rakennuttama helmi, joka toimii nykyään Romanian kuningassuvun leposijana ja vilkkaana pyhiinvaellus- ja matkailukohteena. Ruhtinas Carol I tilasi kirkolle 1875 perinpohjaisen kunnostuksen ranskalaiselta arkkitehti André Lecomte du Noüyltä, jolloin sisätilat ja freskot uusittiin näyttävän uusbysanttilaisiksi. Piteștin kaupungin liepeillä sijaitseva Dacian autotehdas on nykyään yksi Romanian suurimpia työllistäjiä, ja se muistuttaa maakunnan modernista teollisesta puolesta perinteisen kirkkomaiseman rinnalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arges-03850653.jpg",
+          lahde: "Cristian Bortes, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Cristian Bortes",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Transfagarasan_twisty_road.jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-arges-03850653.jpg",
     },
     Bacau: {
       lyhyt: 'Oneștin kaupungissa kasvoi ja harjoitteli Nadia Comăneci, joka sai Montrealissa 1976 voimistelun ensimmäisen täyden kympin.',
+      pitka: `Bacăun seutu tunnetaan symbolistirunoilija George Bacovian synkkäsävyisistä runoista, jotka ovat osa Romanian kirjallisuuden kaanonia ja tekevät kaupungista kirjallisen pyhiinvaelluskohteen. Lähellä Moineștiä sijaitsevan Lucăceștin kylän öljylähteet ovat pumpanneet raakaöljyä maan pinnalle 1857 lähtien, ja Romania oli maailman ensimmäinen maa, joka rekisteröi öljyntuotantonsa virallisesti. Vaatimattomista käsityöpajoista kasvoi vuosisadan vaihteeseen tultaessa teollisen mittakaavan öljyteollisuus, jonka juuret näkyvät yhä seudun maisemassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bacau-58ab250d.jpg",
+          lahde: "Nushu74, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nushu74",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Onești_-_Pictura_murală_Nadia_Comăneci_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bacau-58ab250d.jpg",
     },
     Bihor: {
       lyhyt: 'Chișcăun Karhuluola aukesi 1975, kun louhoksen räjäytys puhkaisi sen suuaukon, ja sisältä löytyi 140 luolakarhun luurankoa.',
+      pitka: `Bihorin pääkaupunki Oradea on nykyään yksi Euroopan parhaiten säilyneistä art nouveau -kaupungeista, ja sen kadut ovat täynnä unkarilaisten ja itävaltalaisten arkkitehtien suunnittelemia kukka- ja liekkikoristeisia julkisivuja. Komea keskusta syntyi vasta vuosisadan vaihteessa, kun kaupunki oli vuosisatoja kuulunut Unkarin kuningaskuntaan vaatimattomampana, pääosin barokkityylisenä piispankaupunkina. Bihorin lääni tunnetaan nykyään myös lämpimistä kylpylälähteistään, jotka pysyvät ympäri vuoden lämpiminä ja houkuttelevat kylpijöitä joka vuodenaikana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bihor-bf04a2b4.jpg",
+          lahde: "Zátonyi Sándor, (ifj.) Fizped, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Zátonyi Sándor, (ifj.) Fizped",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Medvebarlang09.jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bihor-bf04a2b4.jpg",
     },
     'Bistrita-Nasaud': {
       lyhyt: 'Bram Stokerin Draculassa Jonathan Harker yöpyy Bistritzissa, ja kreivin linnaan vievä Borgon sola on täkäläinen Tihuțan sola.',
+      pitka: `Bistrița-Năsăudin vuoristoalueet, erityisesti suojellut Rodnan vuoret, houkuttelevat nykyään vaeltajia ja luonnonystäviä ympäri vuoden. Bistrițan kaupungissa kohoaa saksilaisten 1500-luvulla rakentama evankelinen kirkontorni, yksi Transilvanian korkeimmista, muistona alueen saksilaisesta asutushistoriasta. Näsăudin seudun romanialaiskylissä elää yhä vahva muisto Habsburgien rajavartiorykmentistä, joka hallinnoi aluetta sotilaallisesti aina vuoteen 1851 asti ennen siviilihallintoon siirtymistä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bistrita-nasaud-1b52fbeb.jpg",
+          lahde: "Andrei Dan Suciu, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Andrei Dan Suciu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hotel_Dracula,_Pasul_Tihuta,_Romania_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bistrita-nasaud-1b52fbeb.jpg",
     },
     Botosani: {
       lyhyt: 'Kansallisrunoilija Mihai Eminescu vietti lapsuutensa Ipoteștin kylässä, ja hänen kotitalonsa on nykyään muistomuseo.',
+      pitka: `Botoșanin lääni on yksi Romanian maatalousvaltaisimmista alueista, ja sen tasaiset pellot ja joenvarret ovat tärkeitä muuttolintujen pesimäalueita. Läänin Liveni-kylässä syntyi 1881 säveltäjä George Enescu, viulunvirtuoosi ja kapellimestari, jonka musiikki tunnetaan nykyään ympäri maailman ja jonka mukaan on nimetty Bukarestin konserttisali ja kansainvälinen musiikkifestivaali. Kylä on nykyään nimetty hänen mukaansa, ja se on suosittu kohde musiikinystäville.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-botosani-558fbdb4.jpg",
+          lahde: "Curcan ionel, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Curcan ionel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Casa_Memorială_Mihai_Eminescu_din_Ipotești,_foto_Ionel_Curcan_(1).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-botosani-558fbdb4.jpg",
     },
     Braila: {
       lyhyt: 'Brăilan kohdalla Tonavan ylittää 2023 avattu riippusilta, Romanian pisin – ennen sitä joen yli pääsi täällä vain lautalla.',
+      pitka: `Brăila on Tonavan tärkeä satamakaupunki, jonka vanha kauppiaskeskusta muistuttaa yhä 1800-luvun kansainvälisestä kukoistuskaudesta, kun kaupunki oli vuodesta 1836 lähtien vapaakauppasatama ja yksi Tonavan vilkkaimmista viljansatamista. Nykyaikaiset betonilaiturit ja jättimäiset viljasiilot, jotka hallitsevat rantaviivaa, rakennutti insinööri Anghel Saligny 1880-luvulla käyttäen Romaniassa ensimmäistä kertaa raudoitettua betonia. Kaupunki on säilyttänyt asemansa tärkeänä Tonavan satamana tähän päivään asti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-braila-bf6d12b4.jpg",
+          lahde: "Raducu.popa, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Raducu.popa",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pod_Braila.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-braila-bf6d12b4.jpg",
     },
     Brasov: {
       lyhyt: 'Brașovin Musta kirkko sai nimensä vuoden 1689 suurpalosta, joka nokesi sen muurit, ja goottilainen jättiläinen hallitsee yhä vanhaakaupunkia.',
+      pitka: `Brașov — saksaksi Kronstadt — on yksi Romanian suosituimmista matkailukaupungeista, ja sen liepeillä sijaitseva Poiana Brașov on maan suosituin hiihtokeskus. Vanha kaupunki muureineen ja torneineen on säilynyt hyvin transilvaniansaksalaisten kauppiaiden aikaisesta keskiaikaisesta perinnöstä. Kaupungissa perustettiin 1838 Gazeta de Transilvania, ensimmäinen romaniankielinen sanomalehti Transilvaniassa, joka osaltaan sytytti vuoden 1848 kansallisen herätteen ja ilmestyi vuosikymmenten ajan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-brasov-69d40fd0.jpg",
+          lahde: "Vlad Moldovean, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Vlad Moldovean",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biserica_Neagra,_Brasov,_Romania.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-brasov-69d40fd0.jpg",
     },
     Bucharest: {
       lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
+      pitka: `Bukarest on yli kahden miljoonan asukkaan pääkaupunki, jonka Belle Époque -arkkitehtuuri ja hulppea Parlamentin palatsi hallitsevat katukuvaa. Kaupungin päänäyttämö, vuonna 1852 avattu "Teatrul cel Mare", sai 1875 nimensä Kansallisteatteri — nimi, joka on säilynyt siitä lähtien. Cișmigiun puisto on kaupungin vanhin keskustapuisto, ja Romanian Athenaeum-konserttitalo, rakennettu 1880-luvulla, on yksi kaupungin tunnetuimmista maamerkeistä ruhtinas Carol I:n hallituskaudelta periytyvän kaupunkikuvan rinnalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
+          lahde: "Andrei Stroe, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Andrei Stroe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:RO_B_Village_museum_Dumbraveni_homestead_2.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-bucharest-9e24bd08.jpg",
     },
     Buzau: {
       lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
+      pitka: `Buzăun läänin kuuluisin aarre, vuonna 1837 löydetty myöhäisantiikin goottilainen kultaesineistö "Cloșca cu puii de aur", on nykyään esillä Bukarestin kansallismuseossa yhtenä Romanian arvokkaimmista muinaisjäännöksistä. Vuonna 1875 sirkusakrobaatti nimeltä Dumitru Pantazescu-Popescu varasti aarteen ja tuhosi osan koruista — vain kaksitoista alkuperäisistä kahdestakymmenestäkahdesta kultaesineestä on säilynyt tähän päivään. Löytäjät itse olivat sulattaneet ja myyneet osan koruista hopeana jo ennen kuin viranomaiset saivat tietää löydöstä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
+          lahde: "Radu Ana Maria, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Radu Ana Maria",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:RO_BZ_Berca_Mud_Volcanoes_7.JPG",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-buzau-a00b00d8.jpg",
     },
     Calarasi: {
       lyhyt: 'Oltenițassa Argeș laskee Tonavaan, ja kaupungin lähellä on Gumelnițan kumpu, jolla asuttiin jo noin 6 000 vuotta sitten.',
+      pitka: `Călărașin lääni on yksi Romanian tärkeimmistä viljanviljelyalueista, ja sen tasaiset pellot ja kastelukanavat tuottavat merkittävän osan maan viljasadosta Baragan-aron laidunmaiden entisillä alueilla, joita Tonavan tulvat muokkasivat vuosittain. Lääninä Călărași on suhteellisen nuori: se syntyi vasta vuonna 1981, kun kommunistihallinto jakoi Ialomițan lääniä kahtia. Kartalla näkyvä raja on siis 1900-luvun lopun hallinnollinen ratkaisu, ei vanha historiallinen rajaviiva.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-calarasi-cc559d16.jpg",
+          lahde: "Leontin l, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Leontin l",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dunarea_la_Chiciu_2006.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-calarasi-cc559d16.jpg",
     },
     'Caras-Severin': {
       lyhyt: 'Băile Herculanen kuumia lähteitä käyttivät jo roomalaiset, ja kylpyläkaupungin tunnuksena seisoo Herkuleen patsas.',
+      pitka: `Caraș-Severinin lääni tunnetaan vuoristoluonnostaan ja kansallispuistoistaan, jotka suojelevat Nera-joen kanjoneita ja Semenicin ylänköä. Seudun teollisuusperintö juontuu vuonna 1771 perustetuista Reșițan rautatehtaista, jotka olivat pitkään itävaltalais-ranskalaisen rautatieyhtiön StEG:n omistuksessa ja veturina Banaatin vuoriston teollistumisessa. Nykyisen läänin nimi ja rajat vakiintuivat vasta 1968 kommunistihallinnon läänijaossa — sitä ennen alueella ehti olla useita lyhytikäisiä hallinnollisia yksiköitä, muun muassa Habsburgien Banaatin rajavartiojärjestelmän purkamisen jälkeen 1867.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-caras-severin-02684952.jpg",
+          lahde: "Kvmgz, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Kvmgz",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Statuia_lui_Hercules,_Băile_Herculane.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-caras-severin-02684952.jpg",
     },
     Cluj: {
       lyhyt: 'Turdan vanhaan suolakaivokseen on rakennettu maailmanpyörä, minigolfrata ja soutuvenelampi syvälle maan alle.',
+      pitka: `Cluj-Napoca on Romanian toiseksi suurin kaupunki ja maan johtava yliopisto- ja teknologiakeskus, jota kutsutaan usein Romanian piilaaksoksi runsaan IT-alan yritystoimintansa ansiosta. Kaupungin katukuvassa risteilevät keskiaikainen vanha kaupunki ja vilkas opiskelijaelämä, joka juontuu jo vuodesta 1872, kun kaupunkiin perustettiin nykyisen Babeș-Bolyain edeltäjä Franz Joseph -yliopisto — Unkarin toinen moderni yliopisto Budapestin jälkeen. Yliopisto toimi kaupungissa aina vuoteen 1919, jolloin Transilvanian siirryttyä Romanialle instituutio muutti Szegediin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-cluj-cd50d877.jpg",
+          lahde: "7oanna, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "7oanna",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Salina_Turda,_Romania.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-cluj-cd50d877.jpg",
     },
     Constanta: {
       lyhyt: 'Constanțan satama on Mustanmeren suurin, ja 64 kilometrin kanava oikaisee sieltä suoraan Tonavalle.',
+      pitka: `Konstanza on Romanian tärkein satamakaupunki Mustanmeren rannalla, ja sen historia ulottuu kauas roomalaisajan Tomikseen. Kaupunki tunnettiin vielä 1800-luvulla nimellä Küstendje ja kuului Osmanien valtakuntaan osana Tonavan vilajettia; brittiläinen pääoma rakensi sinne rautatien Cernavodăsta 1856–1860. Vasta 1878, Venäjän–Turkin sodan päätyttyä Berliinin sopimukseen, Dobrudža siirtyi Romanialle, ja entinen Küstendje muuttui vähitellen nykyiseksi Konstanzaksi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-constanta-6bd4a85d.jpg",
+          lahde: "Sîmbotin, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Sîmbotin",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dig_portuar.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-constanta-6bd4a85d.jpg",
     },
     Covasna: {
       lyhyt: 'Covasnan kylpylässä sydänpotilaita hoidetaan hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa.',
+      pitka: `Covasna on osa Romaniaa, mutta sekeliläinen identiteetti ja unkarin kieli elävät seudulla yhä vahvoina, sillä alue kuului vuosisatojen ajan sekelien (unkariksi székely) autonomiseen Háromszékin istuimeen Unkarin kuningaskunnan osana. Autonomiset istuimet lakkautettiin Unkarin hallinnon uudistuksessa 1876, ja Romania ulottui näille vuorille vasta 1918. Covasnan kylpylässä sydänpotilaita hoidetaan yhä hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa — vanha parantamisperinne, joka jatkuu nykyaikaisin menetelmin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-covasna-0f30dec1.jpg",
+          lahde: "Stipkovits Fülöp, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Stipkovits Fülöp",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mofeta_Bardócz.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-covasna-0f30dec1.jpg",
     },
     'Dâmbovita': {
       lyhyt: 'Târgoviștessa Nicolae ja Elena Ceaușescu tuomittiin ja ammuttiin joulupäivänä 1989, ja varuskunnan rakennus on nyt museo.',
+      pitka: `Pucioasa on yhä toimiva kylpyläkaupunki Dâmbovițan piirikunnassa, jonka rikkipitoiset "pucioasa"-lähteet — nimi tulee sanasta rikki — houkuttelevat kävijöitä edelleen. Ensimmäinen julkinen kylpylaitos valmistui paikalle 1834, ja lähteiden vedet esiteltiin 1873 Wienin maailmannäyttelyssä, mikä toi kylpyläkeskukselle kansainvälistä huomiota. Piirikunnan nimen antava Dâmbovița-joki virtaa Bucegin vuorilta kohti Bukarestia, ja sen varrella kylpylä on kasvanut vuosikymmenten mittaan yhdeksi Valakian tunnetuimmista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dambovita-b78b949a.jpg",
+          lahde: "Nicubunu, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Nicubunu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chindia-tower-wide.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dambovita-b78b949a.jpg",
     },
     Dolj: {
       lyhyt: 'Craiovan Romanescu-puiston suunnitteli ranskalainen Édouard Redont, ja sen järven yli kaartuu yli sata vuotta vanha riippusilta.',
+      pitka: `Craiova on Oltenian vaurastuva keskus, jonka kauppiassuvut — kuten huomattavan omaisuuden kartuttanut Mihailin perhe — rakensivat 1900-luvun alussa komeita palatseja keskustaan. Yksi niistä, Jean Mihailin palatsi, toimii nykyään Craiovan taidemuseona ja säilyttää kokoelmassaan kuusi Constantin Brâncușin nuoruudenveistosta. Kaupungin suora rautatieyhteys Bukarestiin ja maailmalle avautui 1875, ja siitä lähtien Craiova on ollut alueen tärkeä liikenteellinen solmukohta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dolj-a08748ef.jpg",
+          lahde: "Calusarul, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Calusarul",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pilon_pod_suspendat_3.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-dolj-a08748ef.jpg",
     },
     Galati: {
       lyhyt: 'Galațin terästehdas on Romanian suurin, ja Tonavan rannan telakalla rakennetaan yhä laivoja.',
+      pitka: `Galați on yksi Euroopan vilkkaimmista satamakaupungeista, ja sen vapaasatama-asema, myönnetty 1837, teki siitä aikanaan aidosti kansainvälisen risteysaseman, jonne asettui kymmenien maiden konsulaatteja ja kauppahuoneita. Vuoden 1856 Pariisin rauhansopimus teki kaupungista kansainvälisen Tonavan-komission kotipaikan, ja komissio piti päämajaansa Galațissa peräti vuoteen 1939. Nykyään entinen komissiorakennus toimii museona keskellä kaupunkia, muistona tästä kansainvälisestä kaudesta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-galati-fb570cd4.jpg",
+          lahde: "Sludge G, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Sludge G",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Galaţi_-_Sidex_Steelworks_by_day_2001_(3179105750).jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-galati-fb570cd4.jpg",
     },
     Giurgiu: {
       lyhyt: 'Giurgiun ja Rusen välinen Ystävyyden silta valmistui 1954, ja se oli vuoteen 2013 ainoa silta Romaniasta Bulgariaan.',
+      pitka: `Giurgiu on maan tärkein Tonavan satama pääkaupungille, ja kaupungin rautatieyhteys Bukarestiin, valmistunut lokakuussa 1869, oli koko Romanian ensimmäinen rautatie, brittiläisen John Trevor Barkleyn yhtiön rakentama. Yhteys teki radasta aikanaan erityisen tärkeän, koska tavarat ja matkustajat kulkivat laivasta suoraan junaan. Nykyään alkuperäinen rataosuus on sähköistetty ja modernisoitu osana eurooppalaista liikennekäytävää, mutta reitti Bukarestista Giurgiuhun on periaatteessa se sama kuin 1800-luvulla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-giurgiu-4d32bfba.jpg",
+          lahde: "Mark Voorendt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mark Voorendt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Danube_bridge_Ruse-Giurgiu.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-giurgiu-4d32bfba.jpg",
     },
     Gorj: {
       lyhyt: 'Târgu Jiun puistossa kohoaa Constantin Brâncușin Loputon pylväs, lähes 30 metriä päällekkäisiä valurautamoduuleja.',
+      pitka: `Gorjin vuoristoseudun vanhin ja arvostetuin pyhäkkö on Tismanan luostari, perustettu 1370-luvulla Pyhä Nikodemoksen toimesta — Valakian ensimmäinen luostari, joka on toiminut vuosisatojen ajan alueen henkisenä keskuksena, myös Tudor Vladimirescun 1821 kapinan tukikohtana. Gorjin hiili- ja ligniittivarat tekevät alueesta nykyään Romanian energiantuotannon keskuksen. Seudulla syntyi 1876 köyhään paimenperheeseen poika, Constantin Brâncuși, josta tuli 1900-luvun merkittävimpiä kuvanveistäjiä, ja hänen teoksiaan on nähtävillä yhä Târgu Jiun puistossa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-gorj-0a8fc38a.jpg",
+          lahde: "Vlad Tamnos, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vlad Tamnos",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Coloana_la_apus.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-gorj-0a8fc38a.jpg",
     },
     Harghita: {
       lyhyt: 'Pyhän Annan järvi täyttää sammuneen tulivuoren kraatterin, ja se on Romanian ainoa tulivuorijärvi.',
+      pitka: `Harghita on Romanian tiheimmin unkarinkielinen alue, ja sekeliläinen identiteetti elää seudulla vahvana Székelymaan pohjoisosassa. Alue kuului vuosisatojen ajan Unkarin kuningaskuntaan, jossa sekelit hallitsivat itseään Csíkin ja Udvarhelyn autonomisilla istuimilla perinteisten oikeuksiensa mukaan, kunnes Unkarin hallinto lakkautti ne yhtenäistämisuudistuksessa 1876. Romania ulottui näille vuorille vasta 1918, ensimmäisen maailmansodan päätyttyä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-harghita-780de56c.jpg",
+          lahde: "Várkonyi Tibor, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Várkonyi Tibor",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Szent_Anna-tó-1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-harghita-780de56c.jpg",
     },
     Hunedoara: {
       lyhyt: 'Hunedoaran Corvinin linna on yksi Euroopan suurimmista, ja sen portille johtaa pitkä puusilta korkeiden kivipilarien päällä.',
+      pitka: `Hunedoaran suuret rautatehtaat, perustettu 1882, tekivät kaupungista Transilvanian teollisuuskeskuksen ja toivat sinne tuhansia työläisiä ympäröivistä kylistä — perintö, joka juontuu alueen rautamalmiin ja metsiin sekä pieniin masuuneihin kuten 1806 valmistuneeseen Govăjdian masuuniin. Transilvania pysyi osana Unkarin kuningaskuntaa aina vuoteen 1918. Nykyään entiset rautatehtaat ovat suurelta osin sammuneet, ja kaupunki etsii uutta suuntaa vanhan teollisuusperintönsä varjossa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-hunedoara-a617ef42.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hunedoara_Castle_(Vajdahunyadi_vár)_by_Pudelek.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-hunedoara-a617ef42.jpg",
     },
     Ialomita: {
       lyhyt: 'Amaran suolaisen järven pohjamutaa käytetään kylpylässä reuman ja ihotautien hoitoon.',
+      pitka: `Bărăganin tasanko Ialomițassa tunnetaan nykyään Romanian leipomona, vaikka se oli vuosisatoja pääasiassa paimentolaisten laidunmaata, jota Karpaattien paimenet käyttivät lampaidensa vuodenaikaisvaellukseen. Vasta 1800-luvun jälkipuoliskolla laajat laitumet alettiin järjestelmällisesti muokata viljapelloiksi, kun Bărăganin mustan mullan hedelmällisyys huomattiin. Ialomița on yhä harvaan asuttua, tasaista seutua, jonka läpi kulkevat leveät viljapellot hallitsevat maisemaa horisontista horisonttiin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ialomita-c369f0cf.jpg",
+          lahde: "Maryusss2011, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Maryusss2011",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lacul_Amara.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ialomita-c369f0cf.jpg",
     },
     Iasi: {
       lyhyt: 'Iașin kulttuuripalatsi on neogoottinen jättirakennus, jossa toimii nykyään neljä museota.',
+      pitka: `Iași oli Moldovan ruhtinaskunnan pääkaupunki kolmisen vuosisataa, vuodesta 1564, ja menetti asemansa Bukarestille vasta 1862, kun Moldova ja Valakia yhdistyivät lopullisesti yhdeksi Romaniaksi. Pääkaupunkiaseman menetys jätti kaupunkiin haikean jälkijättöisyyden tunnun, joka näkyy yhä sen lempinimessä "Romanian kulttuuripääkaupunki". Iașin yliopisto, perustettu ruhtinas Alexandru Ioan Cuzan asetuksella 1860, oli Romanian ensimmäinen nykyaikainen yliopisto ja on yhä yksi kaupungin sivistyksellisen ylpeyden lähteitä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-iasi-4a2ec737.jpg",
+          lahde: "Rosenborg BK Fan, Wikimedia Commons (CC0)",
+          tekija: "Rosenborg BK Fan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:The_Palace_of_Culture_in_Iași,_Romania_(front_view).jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-iasi-4a2ec737.jpg",
     },
     Ilfov: {
       lyhyt: 'Snagovinjärven saarella seisoo luostari, jonne perimätiedon mukaan Vlad Seivästäjä on haudattu.',
+      pitka: `Mogoșoaian palatsi Ilfovin piirikunnassa on museo ja suosittu retkikohde Bukarestin lähellä, jonka ruhtinas Constantin Brâncoveanu rakennutti 1698–1702 omaa "brâncovenesk"-tyyliään edustavaksi kesäasunnokseen — italialaisten ja ottomaanien vaikutteiden sekoitukseksi, joka oli 1700-luvun alun Valakian arkkitehtuurin huippukohta. Brâncoveanun teloituksen 1714 jälkeen palatsi ryöstettiin ja muuttui majataloksi, ja se koki uuden ryöstön Venäjän–Turkin sodan 1768–1774 aikana. Prinsessa Marta Bibescu kunnosti palatsin loistoonsa vasta 1900-luvun alussa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ilfov-94013699.jpg",
+          lahde: "Madalinfocsa, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Madalinfocsa",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mânăstirea_Snagov.jpg",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-ilfov-94013699.jpg",
     },
     Maramures: {
       lyhyt: 'Săpânțan Iloisella hautausmaalla ristit ovat kirkkaansinisiä, ja niihin on maalattu vainajan elämästä leikillinen kuva ja runo.',
+      pitka: `Seitsemän Maramureșin puukirkkoa on nykyään Unescon maailmanperintölistalla — ainutlaatuinen perinne, joka syntyi, kun Habsburgien viranomaiset kielsivät alueen ortodoksisilta romanialaisilta kivikirkkojen rakentamisen. Paikalliset kirvesmiehet pystyttivät sen sijaan korkeita, suippokattoisia puutapuleita vuosisatojen ajan. Maramureș kuului Unkarin kuningaskuntaan vuodesta 1867 Itävalta-Unkarin monarkian osana eikä liittynyt Romaniaan ennen kuin vasta 1918, ensimmäisen maailmansodan päätyttyä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-maramures-6ea79799.jpg",
+          lahde: "DimiTalen, Wikimedia Commons (CC0)",
+          tekija: "DimiTalen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Merry_Cemetery,_Săpânța,_2017.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-maramures-6ea79799.jpg",
     },
     Mehedinti: {
       lyhyt: 'Rautaportin kallioon on hakattu 55 metriä korkeat daakialaiskuningas Decebaluksen kasvot, Euroopan korkein kallioreliefi.',
+      pitka: `Mehedințin Tonava-rannalla, Rautaporttien kohdalla, virtasi ennen keskellä jokea saari nimeltä Ada Kaleh, turkkilaisasukkaiden saari vuodesta 1699, joka säilyi sulttaanin de jure omaisuutena aina 1920-luvulle asti — sen erikoisasema unohdettiin Berliinin 1878 rauhanneuvotteluissa. Nykyään Ada Kaleh on kokonaan veden alla, upotettuna 1970 Rautaporttien padon rakentamisen yhteydessä. Vuonna 1858 poikkeuksellisen kuivuuden laskettua Tonavan vedenpinnan ennätysmatalaksi joen pohjasta paljastui keisari Trajanuksen 1300 vuotta aiemmin rakennetun sillan pilareita, ja ne ovat yhä nähtävissä Drobeta-Turnu Severinin rannalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mehedinti-a84eee19.jpg",
+          lahde: "Yanko Malinov, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Yanko Malinov",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Frontal_view_of_the_Decebalus_rock_sculpture.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mehedinti-a84eee19.jpg",
     },
     Mures: {
       lyhyt: 'Sighișoaran linnoituksen muurien sisällä asutaan yhä, ja kellotornin lähellä on talo, jossa Vlad Seivästäjän kerrotaan syntyneen.',
+      pitka: `Târgu Mureșin keskustaa hallitsee sezessiotyylinen Kulttuuripalatsi, jonka pormestari Bernády György tilasi ja joka valmistui 1911–1913. Rakennuksen katto on katettu Zsolnay-tehtaan värikkäillä keramiikkalaatoilla, ja sen konserttisalissa on soittanut niin Pablo Casals kuin Béla Bartók. Nykyään rakennus toimii kirjastona, museona ja filharmonian kotina — yksi Romanian tunnetuimmista secessio-rakennuksista kaupungissa, joka kuului rakentamisajankohtana yhä Unkarin kuningaskuntaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mures-1112f822.jpg",
+          lahde: "Kwan Ng, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Kwan Ng",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sighișoara,_Romania.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-mures-1112f822.jpg",
     },
     Neamt: {
       lyhyt: 'Neamțin linnoitus kesti 1476 sulttaani Mehmed II:n piirityksen, ja kunnostettu linna kohoaa yhä Târgu Neamțin yllä.',
+      pitka: `Izvorul Muntelui -tekojärvi Neamțin laaksossa on nykyään suosittu retkeily- ja veneilykohde, jonka rannoilla ei ole enää jälkeäkään sen alle jääneistä kylistä. Bicazin padon valmistuttua 1950–1960 Bistrița-joki hukutti 22 kylää — kaksi niistä, Rapciunița ja Cârnu, katosivat kokonaan veden alle. Insinöörien muuttama maisema on yksi Romanian suurimmista patoaltaista, ja se muutti koko laakson pysyvästi maalaiselämästä moderniksi retkeilyalueeksi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-neamt-14aec22a.jpg",
+          lahde: "Losy, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Losy",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Ceatatea_Neamtului_01.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-neamt-14aec22a.jpg",
     },
     Olt: {
       lyhyt: 'Slatinan Alro-tehdas on yksi Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
+      pitka: `Reșcan kylän lähellä lepää maan alla Romula-Malva, muinaisen Rooman Dacia-provinssin eteläisen osan, Dacia Malvensin, pääkaupunki, joka on nykyään ehdotettu Unescon maailmanperintölistalle. Roomalaiskaupunki oli yli 300 hehtaarin laajuinen, ja siellä toimi maakunnan käskynhaltija sekä laaja kylpylä- ja vesijohtoverkosto — mutta ensimmäiset kaivaukset alkoivat vasta 1900-luvun alussa. Arkeologit kartoittavat aluetta yhä geofysikaalisin menetelmin, ja kokonainen kadonnut kaupunki lepää yhä osin tutkimatta hiljaisen maalaismaiseman alla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-olt-b65c6f1c.jpg",
+          lahde: "Ischek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ischek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Штаб-квартира_компании_Alro_S.A._в_г._Слатина_(Румыния),_входящей_в_структуру_холдинга_\"Виметко\".JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-olt-b65c6f1c.jpg",
     },
     Prahova: {
       lyhyt: 'Sinaian Peleșin linna oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa – virran tuotti oma voimala.',
+      pitka: `Ploieștin seutu Prahovassa oli maailman öljyteollisuuden edelläkävijä: kaupungissa toimi vuodesta 1856 lähtien maailman ensimmäinen teollinen öljynjalostamo, jonka Mehedințeanu-veljekset perustivat, ja sen tuottama valopetroli valaisi Bukarestin kadut ensimmäisenä kaupunkina maailmassa. Alue on nykyään yhä Romanian öljynjalostuksen keskus, vaikka suurin osa vanhoista pienjalostamoista on kadonnut suurten teollisuuslaitosten alle. Sinaian Peleșin linna samassa läänissä oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa, oman voimalansa ansiosta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-prahova-96182ca6.jpg",
+          lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Pudelek (Marcin Szala)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Castle_Peleş_in_2009.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-prahova-96182ca6.jpg",
     },
     Salaj: {
       lyhyt: 'Moigradin kukkuloilla ovat Porolissumin rauniot, Rooman Dakian maakunnan luoteisrajan suuren linnoituskaupungin jäänteet.',
+      pitka: `Sălajin Jiboun kylässä syntyi 1796 paroni Wesselényi Miklós, joka nousi kansallissankariksi kun hän 1838 souti läpi jäätyneen, tulvivan Pestin kaduista toiseen pelastaen ihmisiä katoilta — häntä alettiin kutsua "tulvan lauttamieheksi". Hänen sankaritekonsa elävät yhä unkarilaisten koululaisten tarinoissa, ja suvun linna kohoaa edelleen Jiboun keskustassa, nykyään yksityisomistuksessa. Linnan viereen on rakennettu Jiboun kasvitieteellinen puutarha, joka on yksi Romanian suurimmista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-salaj-56a973fa.jpg",
+          lahde: "Cristian Bortes from Cluj-Napoca, Romania, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Cristian Bortes from Cluj-Napoca, Romania",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cetatea_Porolissum_2.jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-salaj-56a973fa.jpg",
     },
     'Satu Mare': {
       lyhyt: 'Satu Maren keskustaa vartioi 1904 rakennettu 47-metrinen palokunnan torni, josta vahdit aikanaan tähyilivät tulipaloja.',
+      pitka: `Satu Maren keskustassa on runsaasti 1800-luvun lopun ja 1900-luvun alun rakennuksia, jotka nousivat kaupungin vaurastuessa rautatien myötä sen ollessa osa Unkarin kuningaskuntaa. Vuonna 1711 Szatmárin — nykyisen Satu Maren — kaduilla allekirjoitettiin rauha, joka päätti Rákóczin kapinan Habsburgeja vastaan ja toi kaupungille pitkän rauhan ajan. Vanha rauhansopimus on unohtunut monilta, mutta se muutti aikanaan koko Transilvanian kohtaloa vuosisadaksi eteenpäin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-satu-mare-a11090e4.jpg",
+          lahde: "Gabidanea, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Gabidanea",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Turnul_Pompierilor_Satu_Mare.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-satu-mare-a11090e4.jpg",
     },
     Sibiu: {
       lyhyt: 'Sibiun kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007.',
+      pitka: `Sibiu on yksi Transilvanian suosituimmista matkailukaupungeista, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007. Sen vuosisatoja vanhat erityisoikeudet — Transilvanian saksien, siebenbürgisaksien, keskiaikaisesta itsehallinnosta periytyvä Universitas Saxonum, joka hallinnoi saksien asioita vuodesta 1486 — katosivat lopullisesti 1876, kun Budapest lakkautti järjestön poliittisen vallan ja sulatti Sibiun tavalliseksi unkarilaiseksi lääniksi. Kaupungin kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja tämä yksityiskohta on yksi Sibiun tunnetuimmista kuriositeeteista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-sibiu-230cd6b0.jpg",
+          lahde: "DimiTalen, Wikimedia Commons (CC0)",
+          tekija: "DimiTalen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Close-up_of_the_Old_Town_Hostel,_Piața_Mică_26,_with_eyebrow_dormers,_Sibiu,_2017.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-sibiu-230cd6b0.jpg",
     },
     Suceava: {
       lyhyt: 'Voronețin luostarin ulkoseinät on maalattu täyteen raamatunkertomuksia, ja niiden syvä sävy tunnetaan Voronețin sinisenä.',
+      pitka: `Suceava kuului 1800-luvulla Itävallan keisarikuntaan osana Bukovinan herttuakuntaa, jonka pääkaupunki oli Czernowitz (nykyinen Tšernivtsi Ukrainassa) — Bukovina liittyi Romaniaan vasta 1918. Czernowitziin perustettiin 1875 saksankielinen yliopisto satavuotismuistoksi siitä, kun Bukovina liitettiin Itävaltaan, ja siitä tuli Euroopan itäisin saksankielinen korkeakoulu. Suceava itse on nykyään keskiaikaisen Moldovan vanhan pääkaupungin raunioiden kupeessa sijaitseva piirikunnan kaupunki, jonka historia ulottuu ruhtinaskunnan kulta-aikaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-suceava-1a353ae6.jpg",
+          lahde: "Valeria23, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "Valeria23",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Manastirea_Voronet-Judecata_de_Apoi.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-suceava-1a353ae6.jpg",
     },
     Teleorman: {
       lyhyt: 'Teleormanin nimi tarkoittaa kumaanien kielellä ”hullua metsää”, ja maakunnan Zimnicea on Romanian eteläisin paikkakunta.',
+      pitka: `Teleormanin pääkaupunki Alexandria on Romanian harvoja täysin suunnitelmallisesti perustettuja kaupunkeja: valtias Alexandru II Ghica määräsi sen rakennettavaksi tyhjälle tasangolle 1834 ja nimesi sen omalla nimellään. Kaupungin suorat, ruudukkomaiset kadut erottuvat yhä selvästi ympäröivien kylien mutkittelevista poluista, ja alkuperäinen ruutukaava näkyy edelleen keskustan kartassa. Muualla Teleormanissa maisema on avointa lakeutta ja hajanaisia kyliä, tyypillistä Valakian maaseutua.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-teleorman-1adcdd08.jpg",
+          lahde: "Ogchivu, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Ogchivu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Peisaj_Zimnicea.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-teleorman-1adcdd08.jpg",
     },
     Timis: {
       lyhyt: 'Timișoaran kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.',
+      pitka: `Timișoaran leveät bulevardit ja puistokehä kulkevat vanhojen Vauban-tyylisten linnoitusmuurien paikalla, jotka purettiin vaiheittain 1870-luvulta 1890-luvulle asti — kaupungin maistraatti sai purkuluvan 1872, ja linnoitusstatus lakkautettiin virallisesti 1892. Muurit olivat kahlinneet kaupungin kasvua vuosisatojen ajan sen ollessa osa Unkarin kuningaskuntaa Banaatin alueella. Nykyään näkymätön muisto kadonneesta linnoituksesta elää kaupungin katukuvassa, ja Timișoara tunnetaan siitä, että sen kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-timis-6d5dcdaf.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Union_Square,_Timișoara,_Banat_02.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-timis-6d5dcdaf.jpg",
     },
     Tulcea: {
       lyhyt: 'Tulcean takana Tonava hajoaa suistoksi, jonka kaislikoissa pesii Euroopan suurin pelikaanikanta.',
+      pitka: `Tulcea on Romanian portti Tonavan suistoon, ja sen väestö on yhä poikkeuksellisen monietninen verrattuna muuhun maahan — turkkilaisia, tataareja, kreikkalaisia, bulgarialaisia, armenialaisia ja romanialaisia asuu rinnakkain satamassa, joka johtaa Tonavan suistoon johtavan haaran varrella. Alue kuului 1873 Ottomaanien valtakunnan Tonava-vilajettiin, uudistusmielisen kenraalikuvernööri Midhat-pašan 1864 perustamaan mallihallintoalueeseen, ja siirtyi Romanialle vasta 1878 Venäjän–Turkin sodan päätteeksi solmitussa Berliinin sopimuksessa. Monikulttuurinen perintö on säilynyt kaupungissa tähän päivään.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-tulcea-a692d3f9.jpg",
+          lahde: "Thepinkfluffy1211, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Thepinkfluffy1211",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pelicans_at_the_Danube_Delta,_Romania.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-tulcea-a692d3f9.jpg",
     },
     Vaslui: {
       lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
+      pitka: `Vasluin seudun Pleșeștin kylässä syntyi 1858 kirjailija Alexandru Vlahuță, jonka pääteos "România pitorească" ("Kuvauksellinen Romania") kuvasi koko maan maisemia matkakertomuksen muodossa ja tekee hänestä yhden Romanian rakastetuimmista kirjailijoista. Vaslui itse on yhä yksi Romanian rauhallisimmista maakuntakeskuksista, syrjäinen Moldovan pikkukaupunki maatalousseudun keskellä. Vlahuțan syntymäseutu muistetaan nykyään kirjallisuushistoriasta, ja hänen nimeään kantavat koulut ja kadut ympäri Moldovaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
+          lahde: "Bogdan Muraru, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bogdan Muraru",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biserica_Tăierea_Capului_Sfântului_Ioan_Botezătorul_din_Vaslui.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vaslui-0f09372b.jpg",
     },
     'Vâlcea': {
       lyhyt: 'Horezun luostari on Unescon maailmanperintöä, ja kylän savenvalajat koristavat astiansa yhä kukko- ja spiraalikuvioin.',
+      pitka: `Vâlcean Călimăneștin ja Căciulatan lähteiden mineraalivedet palkittiin 1873 Wienin maailmannäyttelyssä, ja lähteen numero yksi vettä pullotettiin ja lähetettiin postivaunulla Pariisiin, Napoleon III:n hoviin, ranskalaisen lääkärin suosituksella. Varsinainen kylpyläkaupunki syntyi vasta 1890, mutta parantavien vesien maine levisi eurooppalaisiin lehtiin jo aiemmin. Nykyään Călimănești-Căciulata on yhä yksi Romanian suosituimmista kylpyläkohteista, ja sen vedet tunnetaan edelleen reumaattisten ja maksavaivojen hoidossa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-valcea-e4f56c14.jpg",
+          lahde: "ChristianMancas, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "ChristianMancas",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mânăstirea_Hurezi-19.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-valcea-e4f56c14.jpg",
     },
     Vrancea: {
       lyhyt: 'Vrancean vuorten alla syvällä maankuoressa syntyvät Romanian pahimmat maanjäristykset – vuoden 1977 järistys tuhosi osia Bukarestista.',
+      pitka: `Focșanin kaupunki jakautui vuosisatoja kahtia: Milcov-joki oli Moldovan ja Valakian ruhtinaskuntien raja, ja kaupungin läpi kulki kaksi puoliskoa, moldovalainen ja valakialainen, aina vuoteen 1859 asti, kun ruhtinaskunnat yhdistyivät Alexandru Ioan Cuzan alaisuudessa. Focșanissa toimi 1858–1864 yhteinen keskuskomissio, joka valmisteli ruhtinaskuntien hallinnollista yhdistämistä. Vanhan sisärajan muisto elää yhä kaupungin historiassa, vaikka tullipaalut ja rajakivet ovat kadonneet aikaa sitten.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vrancea-bbd1554c.jpg",
+          lahde: "ElenaLoredana, Wikimedia Commons (CC BY-SA 3.0 ro)",
+          tekija: "ElenaLoredana",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Monumentul_Unirii_1.JPG",
+          lisenssi: "CC BY-SA 3.0 ro",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/ro/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/rou-maakunta-vrancea-bbd1554c.jpg",
     },
   },
   /*
@@ -4739,45 +5243,212 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CZE: {
     'Jihočeský': {
       lyhyt: 'Český Krumlovin linnan barokkiteatterissa on säilynyt alkuperäinen puinen lavakoneisto kulisseineen, harvinaisuus koko Euroopassa.',
+      pitka: `Hluboká nad Vltavou -linna kohoaa Vltavan mutkan yllä valkoisena satulinnana, joka näyttää lainatulta Englannista — eikä se ole sattumaa, sillä Schwarzenbergin ruhtinassuku muutti keskiaikaisen linnan perinpohjin uusgoottilaiseksi 1841–1871 esikuvanaan Windsorin linna. Nykyään linna on Tšekin suosituimpia nähtävyyksiä komeine sisätiloineen ja laajoine puistoineen. Etelä-Böömin lammikkoverkosto — 1500-luvulla kaivettu Rožmberkin lampi suurimpana — tuottaa yhä valtaosan maan joulukarpeista, ja lampien rannoilla pesii runsaasti vesilintuja. Läänin pääkaupungissa České Budějovicessa pannaan Budweiser Budvar -olutta, jonka nimestä amerikkalainen Anheuser-Busch on kiistellyt tšekkiläisten kanssa oikeussaleissa jo yli sata vuotta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihocesky-8d22070f.jpg",
+          lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Pudelek (Marcin Szala)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Český_Krumlov_(Krummau)_-_panorama.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihocesky-8d22070f.jpg",
     },
     'Jihomoravský': {
       lyhyt: 'Brnon Tugendhatin huvila valmistui 1930 Mies van der Rohen piirustuksista, ja sen olohuoneen suuret ikkunat voi laskea lattian alle.',
+      pitka: `Slavkov u Brnan tasangolla Napoleon murskasi joulukuun toisena päivänä 1805 Venäjän ja Itävallan yhdistetyn armeijan taistelussa, jota historia muistaa Austerlitzin nimellä; taistelukentällä kohoaa nykyään Rauhan kumpu, pystytetty vasta 1900-luvun alussa. Etelä-Moravia tunnetaan nykyään ennen kaikkea viinistä — alueella kasvatetaan enemmän viiniä kuin missään muualla Tšekissä, ja syyskuiset viininkorjuujuhlat täyttävät kylien torit. Lednice-Valticen linnojen ja puistojen kokonaisuus on Euroopan suurin ihmisen muotoilema maisemapuisto ja Unescon maailmanperintöä. Pohjoisempana Moravský kras -karstialueella Macochan kuilu avautuu lähes 140 metrin syvyyteen keskellä metsää, ja sen pohjalta lähtee Punkva-joki uurtamiensa luolastojen läpi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihomoravsky-aeb03b9d.jpg",
+          lahde: "Thomas Ledl, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Thomas Ledl",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Villa_Tugendhat,_Brno.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-jihomoravsky-aeb03b9d.jpg",
     },
     'Karlovarský': {
       lyhyt: 'Karlovy Varyn kuumin lähde Vřídlo suihkuaa yli 70-asteista vettä, ja kylpylävieraat juovat lähdevettä nokallisista posliinikupeista.',
+      pitka: `Karlovy Vary elää yhä kylpyläkulttuuristaan: kaupungin vanhin suurhotelli, nykyinen Pupp, juontaa juurensa vuoteen 1701 ja on isännöinyt vuosisatojen varrella niin Pietari Suurta, Napoleonia kuin Beethovenia, Bachia ja Kafkaa. Nykyiset kivestä ja valuraudasta veistetyt lähdekäytävät korvasivat vaatimattomammat puiset katokset vasta 1800-luvun lopulla. Kaupunki tunnetaan myös Becherovka-yrttilikööristä, jonka apteekkari Josef Vitus Becher kehitti 1807 ja jonka tarkkaa reseptiä vartioidaan yhä salaisuutena. Heinäkuinen kansainvälinen elokuvajuhla, järjestetty vuodesta 1946, tuo nykyään kaupunkiin tähtiä ympäri maailmaa ja täyttää kylpyläkadut punaisilla matoilla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-karlovarsky-b32666cf.jpg",
+          lahde: "Juan de Vojníkov, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Juan de Vojníkov",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vřídelní_kolonáda_zvenku.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-karlovarsky-b32666cf.jpg",
     },
     'Královéhradecký': {
       lyhyt: 'Krkonošen Sněžka on 1 603 metrillään Tšekin korkein vuori, ja sen huipun poikki kulkee raja Puolaan.',
+      pitka: `Heinäkuussa 1866 Preussin ja Itävallan armeijat kohtasivat Hradec Královén pelloilla Königgrätzin taistelussa, yhdessä 1800-luvun Euroopan suurimmista yksipäiväisistä taisteluista, joka ratkaisi koko Saksan yhdistymisen suunnan preussilaisittain; alueella on yhä lukuisia muistomerkkejä ja hautausmaita. Linnoitusstatuksen purkamisen jälkeen arkkitehti Josef Gočár laati kaupungille 1920-luvulla kunnianhimoisen kaupunkisuunnitelman, jonka ansiosta siitä tuli tunnettu "tasavallan salonkina". Lähellä sijaitsevassa Kuksin kylässä barokkitaiteilija Matyáš Bernard Braun veisti 1700-luvulla kivestä hyveitä ja paheita esittävät patsaat, jotka seisovat siellä yhä. Krkonošen vuoristo tarjoaa kesäisin vaellusreittejä ja talvisin hiihtoa Sněžkan juurella, Tšekin korkeimman huipun kupeessa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-kralovehradecky-152c1d3d.jpg",
+          lahde: "GabrielaZelenkova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "GabrielaZelenkova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sněžka,_nejvyšší_hora_Česka.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-kralovehradecky-152c1d3d.jpg",
     },
     'Liberecký': {
       lyhyt: 'Ještědin huipulla seisoo 1973 valmistunut suppilomainen torni, jossa on sekä televisiolähetin että hotelli ja ravintola.',
+      pitka: `Liberecin seutua kutsuttiin 1800-luvulla Böömin Manchesteriksi, koska laakson täyttivät villa- ja pellavakehruumot savupiippuineen, ja alueesta kasvoi koko Habsburgien valtakunnan johtava tekstiiliteollisuuden keskus. Monet tehtaista ovat nykyään tyhjillään tai muutettu muuhun käyttöön, mutta niiden punatiiliset piiput hallitsevat yhä laakson maisemaa. Pohjoisempana Nový Bor jatkaa satojen vuosien mittaista lasinpuhaltajien perinnettään, joka tuottaa nykyään lasikoristeita ja taidelasia ympäri maailman. Ještědin huipun suppilomainen televisiotorni palkittiin 1969 arvostetulla kansainvälisellä Perret-arkkitehtuuripalkinnolla vielä ennen kuin se edes valmistui 1973, ja sen suunnittelija Karel Hubáček on yhä ainoa tšekkiläinen palkinnon saaja.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-liberecky-513d415c.jpg",
+          lahde: "Bernd Gutte, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Bernd Gutte",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jested.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-liberecky-513d415c.jpg",
     },
     'Moravskoslezský': {
       lyhyt: 'Ostravan Dolní Vítkovicessa masuunit sammuivat 1998, ja nyt yhden niistä huipulle pääsee kiipeämään näköalapaikalle.',
+      pitka: `Ostrava kasvoi lähes tyhjästä Vítkovicen rautatehtaan ja sitä ympäröivien hiilikaivosten ympärille: tehdas perustettiin 1828, ja 1843 sen ostivat itävaltalais-juutalaiseen Rothschildin sukuun kuuluneet pankkiirit, jotka rakensivat siitä yhden Habsburgien valtakunnan suurimmista rauta- ja teräslaitoksista. Savupiippujen ja kaivostornien maisema teki kaupungista aikanaan Keski-Euroopan oman pienen Ruhrin alueen. Masuunit sammutettiin lopullisesti 1998, ja nykyään Dolní Vítkovicen teollisuusalue on kulttuurikohde, jonka yhden masuunin huipulle pääsee kiipeämään näköalapaikalle. Entinen kaasukello on muutettu Gong-konserttisaliksi, joka isännöi kesäisin Colours of Ostrava -musiikkifestivaalia, yhtä Keski-Euroopan suurimmista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-moravskoslezsky-86919ccd.jpg",
+          lahde: "Petr Štefek, Wikimedia Commons (CC BY-SA 3.0 cz)",
+          tekija: "Petr Štefek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dolni_Vitkovice_sever.jpg",
+          lisenssi: "CC BY-SA 3.0 cz",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/cz/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-moravskoslezsky-86919ccd.jpg",
     },
     'Olomoucký': {
       lyhyt: 'Olomoucin torilla kohoaa barokkinen Pyhän Kolminaisuuden pylväs, joka on Unescon maailmanperintöä ja kätkee jalustaansa pienen kappelin.',
+      pitka: `Olomoucin vanhakaupunki on Prahan jälkeen maan laajin historiallinen keskusta, ja sen laajuus juontuu pitkästä sotilashistoriasta: raskaat muurit ja bastionit pitivät kaupungin tiukasti linnoitettuna Itävallan sotalaitoksena, eikä siviilirakentaminen vapautunut ennen kuin linnoitusstatus purettiin 1886. Kaupunki tunnetaan myös nuoren Franz Josefin kruunauspaikkana — hänet julistettiin Itävallan keisariksi Olomoucissa 1848. Palackýn yliopisto, jonka juuret ulottuvat jesuiittakollegioon vuodelta 1573, on Prahan Kaarlen yliopiston jälkeen Tšekin toiseksi vanhin korkeakoulu ja tekee kaupungista nykyään vilkkaan opiskelijakaupungin. Alueella valmistetaan yhä ainoaa alkuperäistä tšekkiläistä juustolaatua, voimakastuoksuista tvarůžky-rahkajuustoa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-olomoucky-4a6930cb.jpg",
+          lahde: "Ben Meyer, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ben Meyer",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Holy_Trinity_Column_-_Olomouc.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-olomoucky-4a6930cb.jpg",
     },
     'Pardubický': {
       lyhyt: 'Pardubicessa juostaan joka lokakuu Velká pardubická, yksi Euroopan rankimmista estelaukoista, ja sen pelätyin este on Taxis-oja.',
+      pitka: `Pardubicen kuuluisin estelaukka, Velká pardubická, on juostu joka lokakuu vuodesta 1874, ja sen pelätyin este, syvä Taxis-oja, on niellyt jo lukuisia ratsastajia. Kaupunki on yhtä kuuluisa perinkeitostaan: paikalliset leipurit ovat valmistaneet mausteista Pardubicen perník-piparkakkua ainakin 1500-luvulta lähtien, ja perinne on säilynyt katkeamatta tähän päivään. Renessanssiaikainen Pernštejnin sukukartano hallitsee kaupungin toria, muistona suvusta, joka rakensi seudun vaurauden kalanviljelyllä ja kaupalla 1400–1500-luvuilla. Toukokuussa 1911 lentäjä Jan Kašpar nousi Pardubicesta ilmaan ja lensi 121 kilometrin matkan Prahaan asti — tuolloin pisin lento koko Itävalta-Unkarissa — ja tapaus muistetaan kaupungissa yhä ylpeänä osana sen ilmailuhistoriaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-pardubicky-b550be81.jpg",
+          lahde: "Jarba, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Jarba",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Velký_Taxisův_příkop.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-pardubicky-b550be81.jpg",
     },
     'Plzeňský': {
       lyhyt: 'Plzeňissä pantiin 1842 ensimmäinen vaalea pohjahiivaolut, ja sen mukaan pils-oluet saivat nimensä ympäri maailman.',
+      pitka: `Plzeňin vanhakaupunki perustettiin 1295 kuningas Václav II:n määräyksestä säännölliseksi ruutukaavaksi, joka on säilynyt sellaisenaan ja on yksi Euroopan parhaiten säilyneistä keskiaikaisista kaupunkisuunnitelmista. Insinööri Emil Škoda otti 1869 haltuunsa pienen konepajan kaupungissa — yrityksen, joka kasvoi yhdeksi Habsburgien valtakunnan ja sittemmin koko Euroopan suurimmista kone- ja asetehtaista, ja Škoda-nimi elää yhä sekä autoissa että raskaassa teollisuudessa. Kaupungin toinen kuuluisuus, vaalea pohjahiivaolut, keksittiin siellä 1842, ja nimitys "pils" on siitä lähtien tarkoittanut lähes mitä tahansa vaaleaa lageria ympäri maailman. Panimoalueella käy nykyään vuosittain satojatuhansia matkailijoita, jotka kiertävät historiallisia hiekkakivikellareita syvällä kaupungin alla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-plzensky-99a6a1c6.jpg",
+          lahde: "Taken by me at the Plzen brewary, Wikimedia Commons (Public domain)",
+          tekija: "Taken by me at the Plzen brewary",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pilsner_Urquell_Brewery.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-plzensky-99a6a1c6.jpg",
     },
     Prague: {
       lyhyt: 'Petřínin kukkulalla seisoo 1891 rakennettu näkötorni, Eiffel-tornin pienempi sukulainen, jonka huipulle noustaan 299 askelmaa.',
+      pitka: `Prahan ylpeys, Kansallisteatteri, valmistui vasta 1881 — peruskivi oli muurattu jo 1868 kymmenillä eri puolilta Böömiä tuoduilla kivilohkareilla — mutta rakennus paloi pian samana vuonna uudelleen ja avautui lopullisesti vasta 1883. Nykyään teatterissa esitetään oopperaa, balettia ja draamaa, ja sen kultainen katto kimaltelee Vltavan rannalla yhtenä kaupungin tunnetuimmista maamerkeistä. Vanhassakaupungissa Orloj-tähtitieteellinen kello on yli 600-vuotias, sen alkuperäiset osat ajalta 1410, ja se näyttää yhä aikaa, planeettojen asennot ja apostolien kulkueen joka tunti turistijoukkojen edessä. Praha säästyi suurelta osin toisen maailmansodan pommituksilta, minkä ansiosta sen keskiaikainen ja barokkiajan katutunnelma on säilynyt poikkeuksellisen ehyenä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-prague-013aff3e.jpg",
+          lahde: "Suisant7, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Suisant7",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Petřín_tower_05_2018.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-prague-013aff3e.jpg",
     },
     'Středočeský': {
       lyhyt: 'Kutná Horan Sedlecin luukappelin kattokruunu ja koristeet on koottu kymmenientuhansien vainajien luista.',
+      pitka: `Karlštejnin linna, jonka keisari Kaarle IV rakennutti 1348 säilyttääkseen siellä valtakunnan kruununjalokivet, on nykyään yksi Tšekin suosituimmista linnoista ja sai nykyisen jyrkkäharjaisen ilmeensä vasta arkkitehti Josef Mockerin kunnostuksessa 1887 alkaen. Lähempänä Prahaa sijaitseva Křivoklátin metsästyslinna oli vuosisatoja kuningasten yksityistä metsästysmaata, ja sen laajat metsät ovat säilyneet suojeltuina biosfäärialueena. Kutná Horan keskiaikaiset hopeakaivokset tekivät kaupungista 1300-luvun alussa Euroopan johtavan hopeantuottajan, ja sen omalla rahapajalla lyötiin vuodesta 1300 pražský groš -hopearahaa, joka hallitsi Keski-Euroopan kauppaa vuosisadan ajan. Nykyään kaivoskaupunki on Unescon maailmanperintöä, ja sen Pyhän Barbaran kirkko kaivostyöläisten suojeluspyhimykselle on yksi Böömin komeimmista gotiikan rakennuksista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-stredocesky-fa02cbcb.jpg",
+          lahde: "User: (WT-shared) Puzzlement at wts wikivoyage aka. User:(WT-shared) Hypatia, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "User: (WT-shared) Puzzlement at wts wikivoyage aka. User:(WT-shared) Hypatia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kutna_Hora_Kostnice_Chandelier.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-stredocesky-fa02cbcb.jpg",
     },
     'Ústecký': {
       lyhyt: 'Böömin Sveitsin kansallispuistossa kohoaa Pravčická brána, Euroopan suurin luonnon muovaama hiekkakivikaari.',
+      pitka: `Pohjois-Böömin ruskohiiliallas kasvoi 1800-luvulla nopeasti valtakunnan tärkeimmäksi teollisuusalueeksi, kun kaivokset syvenivät ja rautatiet uudistuivat vuosikymmen toisensa jälkeen. Vuonna 1975 Mostin kaupungin keskiaikainen tiilinen kirkko siirrettiin kokonaisena 841 metrin matkan raiteilla syrjään, kun avolouhos uhkasi niellä sen alleen — insinöörityö, joka ylitti aikanaan maailmanennätyksen siirretyn rakennuksen painossa. Nykyään monet vanhat avolouhokset on täytetty vedellä ja muutettu virkistysjärviksi, joiden rannoilla uidaan ja purjehditaan entisen kaivosmaiseman keskellä. Etelämpänä hiekkakivimaisemat Böömin Sveitsin kansallispuistossa ovat sen sijaan pysyneet lähes koskemattomina ja suosittuina vaellusreitteinä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-ustecky-707b1990.jpg",
+          lahde: "Mars 2002, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mars 2002",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pravcicka-brana-115.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-ustecky-707b1990.jpg",
     },
     'Vysočina': {
       lyhyt: 'Telčin pitkää toria reunustavat renessanssitalot pastellisävyisine päätyineen, ja koko vanha keskusta on Unescon maailmanperintöä.',
+      pitka: `Žďár nad Sázavoun lähellä kohoaa Zelená horan pyhiinvaelluskirkko, jonka arkkitehti Jan Blažej Santini-Aichel suunnitteli 1719–1722 tähdenmuotoiseksi kunnianosoitukseksi Pyhälle Johannes Nepomukille, ja kirkko on nykyään Unescon maailmanperintöä. Vysočinan ylängöllä eletään harvaan asutulla, karulla seudulla, jossa perunat ja hapankaali ovat perinteisesti korvanneet vehnän, koska vuoristoinen maaperä ei ole antanut viljaa yhtä helposti kuin muualla Böömissä. Nykyään ylängön kylmät talvet ja kukkulat tekevät siitä maan johtavan hiihtoseudun: Nové Město na Moravěn stadion isännöi säännöllisesti ampumahiihdon ja maastohiihdon maailmancupin osakilpailuja. Telč sai keskiaikaisen muotonsa kahden keinotekoisen lammikon välisellä kapealla kannaksella, joka suojasi kaupunkia tulipaloilta ja hyökkääjiltä ja selittää yhä sen poikkeuksellisen ehjänä säilyneen renessanssitorin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-vysocina-edd869b3.jpg",
+          lahde: "Beentree., Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Beentree.",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zachariáše_z_Hradce_Square,_Telč,_Moravia,_Czech_Republic_-_20060930-01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-vysocina-edd869b3.jpg",
     },
     'Zlínský': {
       lyhyt: 'Zlín on Baťan kenkätehtaan kaupunki, ja sen pilvenpiirtäjässä johtajan työhuone oli hissi, joka liikkui kerroksesta toiseen.',
+      pitka: `Zlín oli 1800-luvulla vain vaatimaton maalaispitäjä muutaman tuhannen asukkaan kylineen, kunnes paikallisen suutariperheen poika Tomáš Baťa perusti kenkätehtaansa 1894 — tehdas kasvoi nopeasti maailman suurimpien kenkävalmistajien joukkoon, ja koko kaupunki rakennettiin 1920–30-luvuilla uudelleen funktionalistiseksi "puutarhakaupungiksi" tehtaan ympärille. Nykyään Baťan tehdaskompleksi on osittain museona ja osittain yliopiston ja yritysten käytössä, ja sen punatiiliset tehdashallit ovat harvinainen esimerkki 1900-luvun alun teollisuusarkkitehtuurista. Vuoristoisella Valašskon alueella on sen sijaan pitkät perinteet paimentolaiskarjataloudessa ja hirsirakentamisessa, joita Rožnov pod Radhoštěmin ulkoilmamuseo — Keski-Euroopan vanhin, perustettu 1925 — esittelee alkuperäisissä hirsirakennuksissa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-zlinsky-6fc888e8.jpg",
+          lahde: "Romanenko, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Romanenko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Baťův_mrakodrap.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/cze-maakunta-zlinsky-6fc888e8.jpg",
     },
   },
   /*
@@ -4795,12 +5466,48 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   LUX: {
     Diekirch: {
       lyhyt: 'Viandenin linna kohoaa Our-joen laakson yllä, ja joen varrella on talo, jossa Victor Hugo asui maanpaossa 1871.',
+      pitka: "Diekirch on Sauer-joen varrella oleva noin 7 300 asukkaan pikkukaupunki, joka on pohjoisten Ardennien arkinen keskus. Sen museossa on esillä roomalaisen huvilan mosaiikkia: huvila hylättiin 400-luvun alussa. Vanhan panimon tiloissa toimii kansallinen sotahistoriamuseo, jossa Ardennien taistelun tapahtumat on rakennettu eläväkokoisiksi dioraamoiksi. Naapurikaupungissa Ettelbruckissa on kenraali Pattonin muistomuseo, ja siellä laulettiin ensimmäisen kerran julkisesti kansallislaulu Ons Heemecht vuonna 1864. Pohjoisempana Clervaux'n kylässä on linna ja luostari, ja joulukuussa 1944 kylän ympärillä käytiin ankaria taisteluja.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-diekirch-e55c720f.jpg",
+          lahde: "Flocci Nivis, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Flocci Nivis",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:20200829_Vianden_castle_03.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-diekirch-e55c720f.jpg",
     },
     Grevenmacher: {
       lyhyt: 'Schengenin viinikylän edustalla allekirjoitettiin 1985 rajasopimus laivalla Mosel-joella, jossa Luxemburg, Saksa ja Ranska kohtaavat.',
+      pitka: "Grevenmacher on noin 5 300 asukkaan kaupunki Moselin vasemmalla rannalla, ja sen ympärillä rinteet on istutettu viiniköynnöksellä. Luxemburgin viinialue ulottuu joen varrella noin 40 kilometrin matkalle Schengenistä Wasserbilligiin, ja Grevenmacherissa on Vinsmoselle-osuuskunnan tuotantolaitos sekä Bernard-Massardin kuohuviinikellarit. Etelämpänä Remich on pinta-alaltaan maan pienin kunta. Alueen pohjoisosassa Echternachissa on luostari, jonka Willibrord perusti 698 maalahjoituksen turvin. Luostarikirkko sai paavilta basilikan arvon 1939, ja Willibrordin hauta on sen alla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-grevenmacher-1c3c5dfb.jpg",
+          lahde: "Cayambe, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Cayambe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Schengen_Moselle_01.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-grevenmacher-1c3c5dfb.jpg",
     },
     Luxembourg: {
       lyhyt: 'Luxemburgissa bussit, junat ja raitiovaunut ovat olleet maksuttomia koko maassa helmikuusta 2020 lähtien.',
+      pitka: "Luxemburgin kaupungissa asuu noin 138 000 ihmistä, ja noin 70 prosenttia heistä on ulkomaalaisia, joten kadulla kuulee harvoin vain yhtä kieltä. Alzette ja Pétrusse ovat kaivaneet kallioon syvät rotkot, joita ylittävät sillat. Pont Adolphe valmistui 1903, ja sen 84,65 metrin kaari oli sen aikaan maailman suurin kivikaari. Vanhakaupunki ja linnoitukset ovat Unescon maailmanperintökohde vuodesta 1994, ja Bock-kallion alla kulkee noin 17 kilometriä kasemattikäytäviä, joiden rakentaminen alkoi espanjalaisten aikana 1644. Kirchbergin tasangolla Philharmonie avattiin 2005 ja Mudam 2006 entisen Fort Thüngenin paikalle I. M. Pein suunnittelemana. Kaupunki oli Euroopan kulttuuripääkaupunki 1995 ja 2007.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-luxembourg-6f0ca08c.jpg",
+          lahde: "Cayambe, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Cayambe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Luxembourg_City_-_Grund_from_Corniche.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-luxembourg-6f0ca08c.jpg",
     },
   },
   /*
@@ -4820,21 +5527,93 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MLT: {
     'Southern Harbour': {
       lyhyt: 'Vallettan Upper Barrakka -puutarhan alla Saluting Battery laukaisee tykin joka päivä keskipäivällä Suuren sataman yli.',
+      pitka: "Suuren sataman ympärillä sykkii Maltan historiallinen ydin. Vallettan peruskivi muurattiin 28. maaliskuuta 1566, pian Suuren piirityksen jälkeen, ja kaupungin nimi tulee suurmestari Jean de Valettesta; koko kaupunki on ollut Unescon maailmanperintökohde vuodesta 1980. Vuonna 2012 avattu 58-metrinen Barrakka-hissi nostaa kävijät satamasta ylös kaupungin keskustaan, ja vuonna 2018 Valletta oli Euroopan kulttuuripääkaupunki. Paolan katujen alta löytyy vielä vanhempaa: vuonna 1902 vahingossa löydetty Ħal Saflieni -hypogeum on kolmikerroksinen esihistoriallinen hautakammio, jota käytettiin noin 3600 eaa. alkaen.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-southern-harbour-e9f048ea.jpg",
+          lahde: "Trajcinema, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Trajcinema",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Valletta_Grand_Harbour_from_Upper_Barrakka_Gardens.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-southern-harbour-e9f048ea.jpg",
     },
     'Northern Harbour': {
       lyhyt: 'Maltalla kulki 1883–1931 rautatie Vallettasta Mdinaan, ja sen Birkirkaran asemarakennus on nyt rautatiemuseo.',
+      pitka: "Suuren sataman pohjoispuolella Sliemasta St Julian'siin ja Msidaan ulottuu Maltan tiheimmin asuttu ja vilkkain kaupunkiseutu. Sliemasta pääsee lautalla Vallettaan Marsamxettin sataman yli, ja rantakatu täyttyy iltaisin kävelijöistä. Gżiran edustalla Manoelin saarella seisoo Fort Manoel, tähtilinnake, jonka rakennuttaminen aloitettiin 1723 ja joka valmistui 1733. St Julian'sin pienessä Spinolan lahdessa veneet keinuvat värikkäiden talojen edessä, ja aivan vieressä Paceville on saaren yöelämän keskus. Msidan kampuksella toimii Maltan yliopisto.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-harbour-1864cedc.jpg",
+          lahde: "Karm photography, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Karm photography",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:The_Old_Railway_Station.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-harbour-1864cedc.jpg",
     },
     'South Eastern': {
       lyhyt: 'Marsaxlokkin satamassa keinuvat kirjavat luzzu-kalastusveneet, joiden keulaan on maalattu suojeleva silmä.',
+      pitka: "Saaren kaakkoisosassa muinaisuus ja moderni maailmankauppa ovat naapureita. Birżebbuġan Għar Dalamin luolasta on löytynyt jääkauden eläinten luita sekä merkkejä noin 7 400 vuotta sitten alkaneesta ihmisasutuksesta, ja kaupungin satama-alueella toimii vuonna 1988 perustettu Malta Freeport, Välimeren ensimmäinen konttien jälleenlaivauskeskus. Qrendin lähellä kallioiden reunalla seisovat Ħaġar Qimin ja Mnajdran temppelit, jotka rakennettiin noin 3600–3200 eaa. Marsaxlokkin satamassa pidetään sunnuntaisin kalatori, ja Delimaran niemen kärjessä on kallioon muodostunut St Peter's Pool -uimapaikka.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-south-eastern-32366c7b.jpg",
+          lahde: "Kritzolina, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Kritzolina",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Luzzu_in_Marsaxlokk_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-south-eastern-32366c7b.jpg",
     },
     Western: {
       lyhyt: 'Muurien ympäröimää Mdinaa kutsutaan Hiljaiseksi kaupungiksi, sillä sen kapeille kujille saavat ajaa vain asukkaiden autot.',
+      pitka: "Maltan länsiosassa kohoaa saaren korkein maasto. Dingli Cliffsin jyrkänteillä sijaitseva Ta' Dmejrek on Maltan korkein kohta, 253 metriä merenpinnan yläpuolella. Mdinan kukkulalla on kaupunkia ollut foinikialaisista lähtien, ja kaupunki toimi saaren pääkaupunkina aina siihen asti, kun ritarikunta saapui 1530. Naapurikaupungin Rabatin alta löytyvät St Paulin katakombit, roomalaisia hautakammioita, jotka olivat käytössä 300-luvulle jKr. asti ja joiden pinta-ala on noin 2 000 neliömetriä. Ne ovat Maltan varhaisin ja laajin todiste kristinuskon leviämisestä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-western-b688f8c2.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Puerta_principal,_Mdina,_isla_de_Malta,_Malta,_2021-08-25,_DD_130.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-western-b688f8c2.jpg",
     },
     Northern: {
       lyhyt: 'Mostan kirkon kupolin läpi putosi huhtikuussa 1942 saksalainen pommi, joka ei räjähtänyt – sen kopio on esillä kirkossa.',
+      pitka: "Maltan pohjoisosassa historia ja rantaelämä kulkevat rinnakkain. Mostan Rotundan kupolin sisähalkaisija on 39,6 metriä, ja sitä on pitkään pidetty maailman kolmanneksi suurimpana tukemattomana kupolina; kirkko on mallinnettu Rooman Pantheonin mukaan. Mellieħassa ritarikunnan rakennuttama Punainen torni valmistui 1649, ja kallioon louhittu ilmasuojatunneli muistuttaa sota-ajasta. Kaupungin liepeillä Għadiran luonnonsuojelualue on vain seitsemän hehtaarin kokoinen suolakosteikko, jolla käy muuttolintuja. Ċirkewwan satamasta lähtee lautta Gozolle, ja matka Mġarrin satamaan kestää noin 25 minuuttia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-c455ab1c.jpg",
+          lahde: "Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Frank Vincentz",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Malta_-_Mosta_-_Rotunda_01_ies.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-c455ab1c.jpg",
     },
     'Gozo and Comino': {
       lyhyt: 'Gozon kuuluisa Azure Window -kivikaari romahti mereen myrskyssä maaliskuussa 2017, ja sen paikalla on nyt vain avomerta.',
+      pitka: "Gozolla asuu noin 39 000 ihmistä (2021). Rabatin eli Victorian keskustan yllä kohoaa Cittadella, jonka linnoituksen ritarit uudistivat noin 1599–1622 ja jonka barokkikatedraali rakennettiin 1697–1711. Għarbin peltojen keskellä seisova Ta' Pinun basilika on kansallinen pyhiinvaelluskohde: Karmni Grima kertoi kuulleensa kappelin luona äänen kesäkuussa 1883, ja nykyinen kirkko vihittiin 1932. Xwejnin suola-altaat pohjoisrannikolla ovat noin 350 vuotta vanhat. Comino, Gozon ja Maltan välinen pieni saari, on saanut nimensä kuminasta, ja siellä asuu vakituisesti vain muutama ihminen; sen Pyhän Marian torni valmistui 1618.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-gozo-and-comino-37224a77.jpg",
+          lahde: "V1snyk, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "V1snyk",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gozo_citadella_2.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-gozo-and-comino-37224a77.jpg",
     },
   },
   /*
@@ -4897,87 +5676,419 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BGR: {
     Blagoevgrad: {
       lyhyt: 'Pirinin rinteellä Melnik on Bulgarian pienin kaupunki, alle 400 asukasta, ja sen takana kohoavat sateen ja tuulen veistämät hiekkapyramidit.',
+      pitka: `Blagoevgradin ydin on nuori ja kansainvälinen: Amerikan yliopisto Bulgariassa avasi ovensa kaupungissa 1991 kommunismin kaatumisen jälkeen, ensimmäisenä amerikkalaistyylisenä yliopistona koko Itä-Euroopassa, ja sen kampuksella opiskelee nykyään nuoria yli neljästäkymmenestä maasta. Pirin-vuorten juurella Banskon hiihtokeskus muuttuu joka elokuu jazzmusiikin näyttämöksi, kun kaupungin tori täyttyy muusikoista lähes kymmeneksi päiväksi. Melnikin viinikellarit on louhittu suoraan hiekkakiveen, ja paikallista Shiroka Melnishka -rypälettä on kasvatettu alueella kerrotusti jo kahdeksantuhatta vuotta – viiniä nautti aikanaan myös Winston Churchill. Vuoristo ja opiskelijakaupunki elävät maakunnassa rinnakkain: toisaalla lasketellaan ja soitetaan jazzia, toisaalla maistellaan vuosisataisia viinejä kellarien viileydessä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-blagoevgrad-dc482d0d.jpg",
+          lahde: "David Stanley from Nanaimo, Canada, Wikimedia Commons (CC BY 2.0)",
+          tekija: "David Stanley from Nanaimo, Canada",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Melnik_Hoodoos_(48885137463).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-blagoevgrad-dc482d0d.jpg",
     },
     Burgas: {
       lyhyt: 'Burgasin pohjoispuolella Atanasovskojärvestä nostetaan yhä merisuolaa, ja syksyisin järven yli kulkee lintujen muuttoreitti Via Pontica.',
+      pitka: `Burgasin Merenrantapuisto syntyi 1910, kun arkkitehti Georgi Duhtev muutti rannan ja kaupungin välisen suoalueen puistoksi – nykyään sen satojen kasvilajien joukossa on tuontikasveja jokaiselta mantereelta, ja puiston läpi kulkeva promenadi on kaupunkilaisten suosituin iltakävelyreitti. Heinä-elokuussa lähistön Ezero-puistoon nousee toisenlainen näyttely, kun kansainvälinen hiekkaveistosfestivaali muuttaa sadat tonnit hiekkaa satuhahmoiksi ja historian suurmiehiksi. Burgas tavoittelee parhaillaan Euroopan kulttuuripääkaupungin arvonimeä vuodelle 2032, ja kesäiset festivaalit ovat osa tätä pyrkimystä. Illalla promenadilla kävelevät niin paikalliset kuin turistit, kun Mustanmeren tuulet viilentävät päivän helteen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-burgas-7099d2a7.jpg",
+          lahde: "Professor Caretaker, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Professor Caretaker",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Atanasovsko_Lake_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-burgas-7099d2a7.jpg",
     },
     Dobrich: {
       lyhyt: 'Baltšikin rannalla on Romanian kuningatar Marian kesäpalatsi, ja sen puutarhassa kasvaa ulkona yksi Euroopan suurimmista kaktuskokoelmista.',
+      pitka: `Dobrichin maakunnan pohjoiskärjessä Kaliakran niemi työntyy punertavana kalkkikivenä Mustaanmereen, ja sen huipulla seisoo muistomerkki neljästäkymmenestä nuoresta naisesta, jotka legendan mukaan hyppäsivät mereen mieluummin kuin antautuivat 1300-luvun hyökkääjille. Nykyään niemi on tiukasti suojeltu luonnonpuisto, jossa pesii harvinaisia lintuja ja josta avautuu näkymä kilometrien päähän aavalle merelle. Sisämaassa Dobrudžan tasango levittäytyy tummana ja hedelmällisenä peltoaukeana, ja seutua kutsutaan Bulgarian viljavarastoksi: sen vehnä- ja auringonkukkasadot kuuluvat maan parhaimpiin. Rannikon dramaattinen historia ja sisämaan rauhallinen viljelymaisema tekevät Dobrichista maakunnan, jossa äärimmäisyydet kohtaavat.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-dobrich-8bee9277.jpg",
+          lahde: "Izvora, Wikimedia Commons (Public domain)",
+          tekija: "Izvora",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Balchik_Palace_2.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-dobrich-8bee9277.jpg",
     },
     Gabrovo: {
       lyhyt: 'Gabrovoa kutsutaan huumorin pääkaupungiksi: kaupunkilaisten kitsaudesta kerrotaan vitsejä, ja kaupungissa on oma Huumorin ja satiirin talo.',
+      pitka: `Gabrovon laidalla, joen varrella, avautuu Etaran ulkoilmamuseo, joka avattiin 1964 esittelemään seudun elämää 1700–1800-lukujen taitteessa. Sivek-joen vesi pyörittää yhä kymmentä eri laitosta peräkkäin – vesimyllyjä, huopatehdasta ja sahaa – ja käsityöläiset työskentelevät samoissa verstaissa kuin sukupolvet ennen heitä, myyden tuotteitaan suoraan kadulla kävelijöille. Museon kivetty käsityöläiskatu on kuin astuisi suoraan menneisyyteen, vaikka vain muutaman kilometrin päässä keskustassa eletään tavallista nykypäivää. Vesivoiman ja käsityön rinnalla Gabrovo on silti tunnetuin huumoristaan, ja moni matkailija yhdistää käynnin Etariin ja kaupungin pilailevaan maineeseen samalla reissulla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-gabrovo-178da40b.jpg",
+          lahde: "Izvora, Wikimedia Commons (Public domain)",
+          tekija: "Izvora",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gabrovo_humor_Iz1.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-gabrovo-178da40b.jpg",
     },
     'Grad Sofiya': {
       lyhyt: 'Sofian keskustaa hallitsevat Aleksanteri Nevskin katedraalin kullatut kupolit, ja kirkkoon mahtuu kerralla viisituhatta ihmistä.',
+      pitka: `Sofian metroa rakennettaessa 2010-luvun alussa kaivinkoneet paljastivat kaupungin alta kokonaisen roomalaisen kaupunginosan: Serdikan aseman ympärille avautuu nykyään maan alle yhdeksäntuhannen neliömetrin alue, jossa kävelijät kulkevat vanhojen katujen, kylpylöiden ja varhaiskristillisen basilikan raunioiden keskellä matkalla junaan. Aivan kaupungin laidalla kohoaa Vitosha-vuori, jonka rinteille pääsee keskustasta vain puolessa tunnissa – talvisin siellä lasketellaan, ja hissi vie hiihtäjät ylös samana aamuna kun he ovat vielä syöneet aamiaisen kotonaan. Harva pääkaupunki tarjoaa yhtä lyhyttä matkaa antiikin raunioilta laskettelurinteelle. Sofia elää näin kahdessa kerroksessa: maan alla lepää Serdica, ja sen yllä nykyaikainen kaupunki kohoaa suoraan vuoren kupeeseen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-grad-sofiya-6d47d8b7.jpg",
+          lahde: "Żyrafał, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Żyrafał",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral_Sofia_2025.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-grad-sofiya-6d47d8b7.jpg",
     },
     Haskovo: {
       lyhyt: 'Haskovon kukkulalla seisoo 32-metrinen Jumalanäidin patsas, joka on päässyt Guinnessin ennätysten kirjaan maailman korkeimpana laatuaan.',
+      pitka: `Haskovon seutu nousi vuoden 1878 jälkeen Bulgarian johtavaksi tupakan viljelyalueeksi, ja 1900-luvun alussa tupakka työllisti kaupungissa enemmän ihmisiä ja pääomaa kuin mikään muu elinkeino. Viimeinen suuri tupakkatehdas suljettiin vasta 2005, ja tänään entisten tupakkapeltojen tilalla kasvaa elintarvike- ja konepajateollisuutta. Kaupungin laidalla leviää Kenanan puisto, yli kaksisataakolmekymmentä hehtaaria metsää, järveä ja kävelyreittejä, jonka keskellä toimii myös pieni eläintarha. Haskovolaiset viettävät kesäiltansa mieluiten juuri Kenanassa, vesillä soutamassa tai puiston kahviloissa – aivan toisenlaisessa tunnelmassa kuin kaupungin patsailla tunnettu keskusta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-haskovo-5332f871.jpg",
+          lahde: "Nenko Lazarov, Wikimedia Commons (CC BY 2.5)",
+          tekija: "Nenko Lazarov",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Haskovo_41.JPG",
+          lisenssi: "CC BY 2.5",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.5",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-haskovo-5332f871.jpg",
     },
     Yambol: {
       lyhyt: 'Jambolin keskustassa seisoo yli viisisataa vuotta vanha katettu kauppahalli Bezisten, joka on nykyään museo.',
+      pitka: `Vain kymmenen kilometrin päässä Yambolista sijaitsee Kabilen muinainen kaupunki, joka oli jo ennen ajanlaskun alkua yksi Traakian tärkeimmistä keskuksista ja traakialaisten kuninkaiden residenssi – kaupungilla oli jopa oma rahapajansa. Alue julistettiin arkeologiseksi suojelualueeksi jo 1965, ja se on ainoa antiikin traakialaiskaupunki, joka on kaivettu esiin ja kunnostettu näin kokonaisvaltaisesti. Paikan päällä toimiva museo esittelee löytöjä, muun muassa harvinaisen täydellisenä säilyneen muinaisen soturin sotisovan. Yambolilaisille Kabile on tuttu retkikohde, jonne pääsee kaupungista puolessa tunnissa – siinä missä keskustassa kävellään yhä keskiaikaisen Bezistenin katujen varrella, muutaman kilometrin päässä kuljetaan kolmituhatvuotisen kuninkaankaupungin raunioilla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-yambol-9780f1a0.jpg",
+          lahde: "Мико, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Мико",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Yambol_Bezisten_in_2009-1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-yambol-9780f1a0.jpg",
     },
     Kardzhali: {
       lyhyt: 'Kardžalin lähellä kalliokukkulalla on Perperikon, Balkanin suurin megaliittikohde, jonka vanhimmat jäljet ovat noin 7 000 vuoden takaa.',
+      pitka: `Kardžalin maakunta on Bulgarian ainoa maakuntakeskuksen kunta, jossa enemmistö asukkaista on muslimeja – suurin osa heistä etnisiä turkkilaisia tai pomakkeja, bulgariankielisiä muslimeja – ja moskeijat, kirkot ja torit elävät keskustassa rinnakkain. Arda-joen rotkossa, tunnin ajomatkan päässä kaupungista, kaartuu 1500-luvulla sulttaani Selim I:n käskystä rakennettu kolmikaarinen kivisilta, jota kutsutaan Paholaisen sillaksi – nimi juontuu tarinoista, joiden mukaan mikään aiempi silta ei pysynyt paikallaan samassa kohdassa. Kaupungin lähelle padotun Arda-joen tekojärvi on Bulgarian toiseksi suurin tilavuudeltaan ja tuottaa sähköä koko seudulle. Vuoristo, silta ja moniuskontoinen kaupunki tekevät Kardžalista maakunnan, jossa Rodopien historia ja nykypäivä kulkevat käsi kädessä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-kardzhali-25035f2f.jpg",
+          lahde: "Kritzolina, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Kritzolina",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Archaeological_complex_of_Perperikon_03.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-kardzhali-25035f2f.jpg",
     },
     Kyustendil: {
       lyhyt: 'Rilan juurella Sapareva Banjan keskustassa suihkuaa geysir, jonka mineraalivesi on kuumimmillaan 103-asteista.',
+      pitka: `Kyustendilin seutua kutsutaan Bulgarian hedelmätarhaksi, ja kesäkuun lopulla kaupunki juhlii kirsikkasatoa omalla festivaalillaan – ensimmäinen kansallinen hedelmänviljelynäyttely järjestettiin täällä jo 1896, ja perinne jatkuu yhä. Roomalaisajalla kaupunki tunnettiin nimellä Pautalia, ja sen kylpylät olivat niin kuuluisia, että sinne matkasivat hoitoa hakemaan jopa keisarit Traianus ja Septimius Severus. Kaupungin roomalaiskylpylöiden rauniot ovat yhä nähtävissä keskustassa, samalla kun mineraalilähteet pulppuavat edelleen samoista kallioista kuin kaksituhatta vuotta sitten. Hedelmätarhat ja lämpimät lähteet tekevät Kyustendilistä maakunnan, jossa parantava vesi ja makea kirsikka kulkevat käsi kädessä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-kyustendil-889d7259.jpg",
+          lahde: "Elena Chochkova, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Elena Chochkova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sapareva_Banya_E1.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-kyustendil-889d7259.jpg",
     },
     Lovech: {
       lyhyt: 'Devetaškin luolan suu on 35 metriä leveä, ja sen holveissa elää lähes 30 000 lepakkoa – luolassa on kuvattu myös Hollywood-elokuva.',
+      pitka: `Lovechin kaupungin tunnusmerkki on katettu silta, jonka itseoppinut rakennusmestari Kolyu Ficheto pystytti Osamin joen yli 1874–1876, kun edellinen silta oli tuhoutunut tulvassa. Alkuperäisellä sillalla oli 64 puukojua, joissa kauppiaat ja käsityöläiset myivät tavaraansa, ja silta selvisi ehjänä sekä sotavuosista että vuoden 1897 suurtulvasta – vasta tulipalo tuhosi sen lopulta 1925. Nykyinen silta on jälleenrakennettu mahdollisimman uskollisena alkuperäiselle, ja sen kaupat palvelevat yhä lovechilaisia ja matkailijoita samaan tapaan kuin sata viisikymmentä vuotta sitten. Kaupunkia kutsutaankin yhä "katetun sillan kaupungiksi", ja silta on Lovechin tunnetuin maamerkki aivan yhtä lailla kuin lähistön lepakkoluola.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-lovech-55b75026.jpg",
+          lahde: "Красимир Косев, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Красимир Косев",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bulgaria_-_Devetaki_Cave_-_Деветашка_пещера_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-lovech-55b75026.jpg",
     },
     Montana: {
       lyhyt: 'Tšiprovtsissa kudotaan yhä käsin kelim-mattoja, ja kylän mattoperinne otettiin Unescon aineettoman kulttuuriperinnön luetteloon 2014.',
+      pitka: `Montanan kaupunki on vaihtanut nimeään neljä kertaa vajaassa sadassa vuodessa: se oli ensin Golyama Kutlovitsa, sitten 1891 Ferdinand ruhtinaan mukaan, 1945 kommunistijohtaja Hristo Mihaylovin mukaan Mihaylovgrad, ja lopulta 1993 se otti nykyisen nimensä roomalaisajan linnoituksesta Castra ad Montanesium. Kaupungin kupeessa lepää Ogosta-tekojärvi, Bulgarian toiseksi suurin, jonka pato valmistui parikymmentä vuotta kestäneen rakennustyön jälkeen 1986. Kun järven pinta laskee kuivina kesinä, veden alle jääneiden vanhojen kylien rauniot nousevat hetkeksi jälleen näkyviin rannoille asti. Nimi on vaihtunut moneen kertaan, mutta järvi ja sen alle hukkuneet kylät muistuttavat, että osa Montanan menneisyydestä on kirjaimellisesti veden alla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-montana-ada466f9.jpg",
+          lahde: "Vislupus, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vislupus",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chiprovtsi_015.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-montana-ada466f9.jpg",
     },
     Pazardzhik: {
       lyhyt: 'Rodopien Velingradia kutsutaan Balkanin kylpyläpääkaupungiksi, sillä kaupungissa ja sen ympärillä on yli 90 mineraalilähdettä.',
+      pitka: `Pazardžikin maakuntaan kuuluva Batakin kaupunki kantaa yhä yhtä Bulgarian raskaimmista muistoista: huhtikuun kansannousun kukistuessa 1876 osmanien apujoukot surmasivat kaupungissa tuhansia asukkaita, monet heistä kirkkoon paenneina. Kirkko Sveta Nedelja seisoo yhä samalla paikalla, ja siitä on tehty muistomerkki uhreille – paikka on edelleen tärkeä osa bulgarialaisten kansallista muistia ja suosittu kouluretkien kohde. Vuoret ja historia eivät kuitenkaan hallitse koko maakuntaa: Rodopien pohjoisrinteillä sijaitsevaa Velingradia sanotaan Balkanin kylpyläpääkaupungiksi yli 90 mineraalilähteensä ansiosta, ja sinne matkataan nykyään rentoutumaan, ei muistelemaan. Pazardžik yhdistääkin näin synkän historian ja rennon nykyisyyden saman maakunnan sisällä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pazardzhik-0e9b4b20.jpg",
+          lahde: "Izvora, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Izvora",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kleptuza_Iz9.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pazardzhik-0e9b4b20.jpg",
     },
     Pernik: {
       lyhyt: 'Pernik kasvoi 1900-luvulla hiilikaivosten varaan, ja kaupungissa voi yhä laskeutua maanalaiseen kaivosmuseoon.',
+      pitka: `Tammikuun viimeisenä viikonloppuna Pernikin kadut täyttyvät karvaisista, kellokoristeisista hahmoista, kun Surva-festivaali kokoaa yhteen kymmeniä naamiaisryhmiä eri puolilta Bulgariaa ja ulkomailta. Festivaalia on järjestetty vuodesta 1966, ja sen kukeri-perinteen uskotaan karkottavan pahat henget ja tuovan hyvän sadon – naamiot ja suuret kellot ovat perua vuosisataisista maatalousriiteistä. Tapahtuma kokoaa nykyään tuhansia esiintyjiä ja katsojia, ja Pernikiä kutsutaankin naamiaisperinteiden eurooppalaiseksi pääkaupungiksi. Hiilikaivosten aikaan kasvanut teollisuuskaupunki muuttuu näin joka tammikuu hetkeksi meluisaksi, kellonkalskeen täyttämäksi juhlapaikaksi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pernik-ee2b55ca.jpg",
+          lahde: "Vislupus, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vislupus",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mining_museums_of_Pernik_12.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pernik-ee2b55ca.jpg",
     },
     Pleven: {
       lyhyt: 'Plevenin panoraamamuseossa 115 metriä pitkä maalaus kiertää katsojan ympäri ja kuvaa kaupungin piiritystä vuodelta 1877.',
+      pitka: `Pleveniä ympäröi etelässä Kaylakan puisto, kalkkikivinen laakso, jonka jyrkät seinämät paljastavat miljoonien vuosien takaisia meren pohjaeläinten fossiileja suoraan kallioon painuneina. Laakson pohjalla lymyilevät roomalaisen Storgosia-linnoituksen rauniot, ja puiston keskellä kasvaa harvinainen Himalajan mäntyjen ja Libanoninsetrien lehto, jotka istutettiin sinne vuosikymmeniä sitten. Puisto perustettiin nykymuotoonsa 1946 entisen metsästysalueen paikalle, ja siitä on sittemmin tullut plevenilaisten suosituin retkikohde uimaltaan, veneiltään ja kahviloiltaan. Kaupungin raskas historia ja Kaylakan rauhallinen luonto elävät näin rinnakkain saman maakunnan sisällä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pleven-66b2ff79.jpg",
+          lahde: "Vassia Atanassova - Spiritia, Wikimedia Commons (Public domain)",
+          tekija: "Vassia Atanassova - Spiritia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pleven-Panorama-outside.JPG",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-pleven-66b2ff79.jpg",
     },
     Plovdiv: {
       lyhyt: 'Plovdiv oli Euroopan kulttuuripääkaupunki 2019, ja sen vanhoista Kapanan käsityöläiskujista on tullut kahviloiden ja gallerioiden kortteli.',
+      pitka: `Plovdivia pidetään usein Euroopan vanhimpana yhtäjaksoisesti asuttuna kaupunkina – ensimmäiset asutusjäljet ovat kuudennelta vuosituhannelta ennen ajanlaskun alkua, ja kaupungin kukkuloita kutsutaan yhä nimellä Tepeta. Keskustan alla lepäävä, keisari Trajanuksen aikainen roomalainen teatteri kaivettiin esiin vasta 1970-luvulla, ja sen penkkirivit täyttyvät nykyään kesäisin konserttiyleisöstä aivan kuten pari tuhatta vuotta sitten. Kerrostuneisuus näkyy kaduilla joka askeleella: traakialaisten, roomalaisten, bysanttilaisten ja osmanien jäljet limittyvät nykyaikaisen kahvilakaupungin alla. Kapanan käsityöläiskortteli ja vuoden 2019 kulttuuripääkaupunkititteli ovat tuoneet kaupungille uutta mainetta, mutta Plovdiv on ollut merkittävä risteysasema jo ammoisista ajoista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-plovdiv-3008538e.jpg",
+          lahde: "Община Пловдив, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Община Пловдив",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kapana.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-plovdiv-3008538e.jpg",
     },
     Razgrad: {
       lyhyt: 'Razgradin arkeologisessa puistossa on Abrituksen raunioita; lähistöllä gootit löivät Rooman armeijan vuonna 251, ja keisari Decius kaatui.',
+      pitka: `Razgradin ympärillä leviää Ludogorien tasankoa, jonka viljapellot ja tammimetsät ovat muokanneet maakunnan elinkeinoa vuosisatojen ajan. Isperihin lähellä sijaitseva Sboryanovon luonnonsuojelualue kätkee traakialaisen Sveshtarin holvihaudan, jonka ainutlaatuiset puolinaiset, puolikasviaiset naishahmot toivat sille Unescon maailmanperintöaseman jo 1985. Samalla alueella seisoo Demir Baba Teke, 1500-luvulla rakennettu alevimuslimien pyhäkkö kalliolähteen äärellä – paikka, jossa on palvottu pyhänä jo traakialaisajoista lähtien ja jossa käy pyhiinvaeltajia yhä nykyään. Razgrad itse on rauhallinen maakuntakeskus, jonka juuret ulottuvat aina roomalaisajan Abritukseen asti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-razgrad-d7c21a4c.jpg",
+          lahde: "Izvora, Wikimedia Commons (Public domain)",
+          tekija: "Izvora",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Abrittus_3.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-razgrad-d7c21a4c.jpg",
     },
     Ruse: {
       lyhyt: 'Rusesta kulkee Tonavan yli Romaniaan yli kaksikilometrinen Ystävyyden silta, joka oli vuosikymmeniä maiden ainoa yhteinen silta.',
+      pitka: `Rusea kutsutaan usein pieneksi Wieniksi, sillä sen bulevardeja reunustavat 1800-luvun lopun uusklassiset ja art nouveau -rakennukset, joita suunnittelivat osin samat arkkitehdit kuin Wienissä. Kaupunki oli tuolloin Bulgarian eurooppalaisin ja vauras Tonavan satamakaupunki, ja tämä perintö näkyy yhä keskustan suihkulähteissä ja oopperatalossa. Rusessa syntyi 1905 kirjailija Elias Canetti, joka sai myöhemmin Nobelin kirjallisuuspalkinnon 1981 ja kuvasi lapsuutensa monikielistä, monikulttuurista Rusea muistelmissaan. Nykyään kaupungin keskustan kävelykadut ja kahvilat tekevät Rusesta yhden Bulgarian tyylikkäimmistä kaupungeista Tonavan rannalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-ruse-d6d8581e.jpg",
+          lahde: "NAC, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "NAC",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:10_Danube_bridge_Ruse_120916.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-ruse-d6d8581e.jpg",
     },
     Silistra: {
       lyhyt: 'Tonavan rannan Srebarnajärvellä pesivät kiharapelikaanit, ja järven luonnonsuojelualue kuuluu Unescon maailmanperintöön.',
+      pitka: `Silistran alla lepää antiikin Durostorum, roomalaisen XI legioonan tukikohta, joka kasvoi vuosisatojen kuluessa Alatonavan tärkeimmäksi varuskuntakaupungiksi. Kaupungin laidalta löydettiin 1942 sattumalta 300-luvun puolivälissä rakennettu holvihauta, jonka jokainen seinä ja katto on maalattu metsästys- ja perheaiheisilla freskoilla – ainoa täysin maalattu roomalaishauta Bulgariassa. Hauta osoittautui yllättäen tyhjäksi: sen tilannut mies ei koskaan päätynyt lepäämään siihen. Nykyään Silistra on rauhallinen Tonavan rajakaupunki, jonka lähistöllä Srebarnan pelikaanijärvi vetää lintubongareita ympäri Eurooppaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-silistra-5633f7c8.jpg",
+          lahde: "Esther Westerveld from Haarlemmermeer, Nederland, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Esther Westerveld from Haarlemmermeer, Nederland",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kroeskoppelikanen_-_Natuurreservaat_Srebarna_(4759216981).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-silistra-5633f7c8.jpg",
     },
     Sliven: {
       lyhyt: 'Slivenin yllä kohoavat Siniset kivet, luonnonpuisto, jossa kasvaa yli tuhat kasvilajia – kaupunki tunnetaan myös puuskaisesta bora-tuulestaan.',
+      pitka: `Sliveniä kutsutaan sadan vojvodan kaupungiksi, sillä sen yllä kohoavat jyrkät kalliot tarjosivat 1800-luvulla piilopaikan osmanivaltaa vastustaneille kapinallisjohtajille. Kuuluisin heistä, Hadži Dimitar, syntyi kaupungissa 1840 ja kaatui taisteluissa 1868 – hänen lapsuudenkotinsa toimii nykyään museona keskustassa. Sliven oli myös teollinen edelläkävijä: Dobri Zhelyazkov perusti sinne 1834 koko Osmanivaltakunnan ensimmäisen tehtaan, villakangastehtaan, jonka historiaa esittelee nykyään kaupungin tekstiiliteollisuusmuseo. Karandilan näköalapaikalle nousee yhä sama polku, jota vojvodat käyttivät piiloutuessaan Siniset kivet -luonnonpuiston kallioihin, ja se on nykyään suosittu retkikohde.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-sliven-80b34e42.jpg",
+          lahde: "Izvora, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Izvora",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sliven_hollow_1.JPG",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-sliven-80b34e42.jpg",
     },
     Smolyan: {
       lyhyt: 'Trigradin rotkossa joki syöksyy vesiputouksena Paholaisen kurkun luolaan, ja veden mukana heitetyt puut ovat kadonneet sinne jäljettömiin.',
+      pitka: `Smolyan on Bulgarian korkeimmalla sijaitseva kaupunki, ja sen yllä kohoavan Snežanka-huipun laelle vie nykyään tuolihissi, josta avautuu näkymä yli koko Rodopien vuoriston. Kaupungin liepeillä kimaltaa seitsemän Smoljanin järveä, jäljellä parikymmenestä alkuperäisestä lammesta – paikalliset kutsuvat niitä Rodopien smaragdisilmiksi. Lähellä sijaitseva Pamporovo on Bulgarian eteläisin hiihtokeskus, ja se houkuttelee talvisin laskettelijoita ympäri Balkania. Nykyään alue elää matkailusta, karjanhoidosta ja rodopilaisesta musiikkiperinteestä, jonka juuret ulottuvat kauas menneisyyteen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-smolyan-0cccead9.jpg",
+          lahde: "Vislupus, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vislupus",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Devil's_Throat_Cave_03.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-smolyan-0cccead9.jpg",
     },
     Sofia: {
       lyhyt: 'Koprivštitsan museokaupungissa järjestetään noin viiden vuoden välein Bulgarian kansallinen kansanperinnefestivaali, jo vuodesta 1965.',
+      pitka: `Samokovin kaupunki oli 1700–1800-luvuilla yksi Bulgarian tärkeimmistä ikonimaalauskouluista, ja sen kasvatteja, kuten Zahari Zografia, pidetään yhä maan modernin taiteen edelläkävijöinä. Aivan Samokovin kupeessa sijaitsee Borovets, Bulgarian vanhin hiihtokeskus – ruhtinas Ferdinand rakennutti sinne kesäasuntonsa ja metsästysmajansa 1896, ja aatelisto seurasi perässä omilla huviloillaan. Pirdopin ja Zlatitsan välissä toimii Kaakkois-Euroopan suurin kuparinsulatto, joka nykyään vie katodikuparia ympäri maailmaa. Maakunta yhdistää näin vanhaa käsityöperinnettä, vuoristomatkailua ja raskasta teollisuutta aivan pääkaupungin porteilla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-sofia-e8ed6521.jpg",
+          lahde: "Vislupus, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vislupus",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Koprivshtitsa_003.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-sofia-e8ed6521.jpg",
     },
     'Stara Zagora': {
       lyhyt: 'Kazanlakin traakialaisen hautakammion seinissä on yli 2 000 vuotta vanhoja maalauksia, ja hauta on Unescon maailmanperintöä.',
+      pitka: `Stara Zagoran keskustassa seisoo Neoliittisten asumusten museo, jonka sisällä on Euroopan parhaiten säilyneitä kivikautisia taloja – palanut asumus kaivettiin esiin 1969, ja se on lähes 8 000 vuotta vanha yli 1800 löydöksineen. Kaupunkia kutsutaan myös lehmusten kaupungiksi sen vehreiden puistokatujen vuoksi. Naapurissa Kazanlakin laakso tunnetaan ruusulaaksona: joka kesäkuun ensimmäisenä viikonloppuna siellä juhlitaan Ruusujuhlaa, kun laakson ruusupellot ovat täydessä kukassa ja niistä tislataan ruusuöljyä hajuvesiteollisuuden tarpeisiin. Stara Zagora itse on nykyään Bulgarian viidenneksi suurin kaupunki ja tärkeä liikenteen ja teollisuuden keskus.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-stara-zagora-617f5d02.jpg",
+          lahde: "JERRYE AND ROY KLOTZ MD, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "JERRYE AND ROY KLOTZ MD",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:KAZANLAK_THRACIAN_TOMB,_BULGARIA.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-stara-zagora-617f5d02.jpg",
     },
     Shumen: {
       lyhyt: 'Šumenin ylängöllä seisoo 1981 rakennettu jättimäinen muistomerkki Bulgarian 1300 vuoden kunniaksi, ja kaupungin panimo on maan vanhin.',
+      pitka: `Šumenissa seisoo Tombul-moskeija, Bulgarian suurin ja yksi Balkanin suurimmista, valmistunut 1757 – sen 25 metriä korkea kupoli ja koraanijakeilla koristellut seinät tekevät siitä yhä toimivan rukoushuoneen ja suositun käyntikohteen. Kaupungin liepeillä sijaitsevat Pliskan ja Veliki Preslavin rauniot, ensimmäisen ja toisen Bulgarian valtakunnan pääkaupungit, joiden alueella kristinusko julistettiin valtionuskonnoksi 800-luvulla. Šumenin ylängöltä kohoava jättimäinen muistomerkki Bulgarian 1300 vuoden kunniaksi tuijottaa suoraan noiden muinaisten pääkaupunkien suuntaan. Nykyään kaupunki tunnetaan myös monikulttuurisesta historiastaan, joka näkyy yhä sen vanhoissa kortteleissa moskeijoiden ja kirkkojen rinnakkaiselossa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-shumen-aa0cc92e.jpg",
+          lahde: "Спасимир, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Спасимир",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Monument_to_1300_Years_of_Bulgaria_10.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-shumen-aa0cc92e.jpg",
     },
     Targovishte: {
       lyhyt: 'Targovištessa toimii yksi Euroopan suurimmista lasitehtaista, joka työllistää noin 1 500 ihmistä.',
+      pitka: `Targovišten kaupungin edeltäjä oli Misionis, keisari Justinianus I:n 500-luvulla perustama bysanttilainen linnoitus, joka vartioi kauppareittiä Mustanmeren Odessoksesta, nykyisestä Varnasta, toisen Bulgarian valtakunnan pääkaupunkiin Tarnovoon. Arabialainen tutkimusmatkailija al-Idrisi mainitsi kaupungin kirjoituksissaan jo 1153 tärkeänä kauppapaikkana. Linnoitus tuhoutui osmanien valloituksessa 1300-luvun lopulla, mutta sen rauniot Parkan-alueella ovat nykyään avoinna kävijöille aivan kaupungin liepeillä. Nykyään Targovište elää lasi- ja muusta teollisuudesta, mutta kaupungin nimi, joka tarkoittaa kauppapaikkaa, muistuttaa yhä sen alkuperäisestä roolista kauppareittien solmukohtana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-targovishte-3d982d63.jpg",
+          lahde: "MrPanyGoff, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "MrPanyGoff",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Targovishte_museum.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-targovishte-3d982d63.jpg",
     },
     Varna: {
       lyhyt: 'Varnan keskustassa ovat Balkanin suurimmat roomalaiset kylpylät, joiden holvit kohosivat aikanaan yli 20 metrin korkeuteen.',
+      pitka: `Varnan länsilaidan teollisuusalueelta löytyi 1972 vahingossa maailman vanhin tunnettu työstetty kulta, kun kaivinkoneen kuljettaja törmäsi kalkoliittiseen, noin 6 500 vuotta vanhaan hautausmaahan. Haudoista löytyi lopulta lähes 3 000 kultaesinettä, yhteensä noin kuusi kiloa – yksi ainoa hauta sisälsi enemmän kultaa kuin koko muu tunnettu maailma samalta aikakaudelta yhteensä. Löytö muutti käsitystä siitä, milloin ihminen oppi työstämään metalleja, ja aarre on nykyään esillä Varnan arkeologisessa museossa. Kaupunki on Bulgarian meripääkaupunki ja sen kolmanneksi suurin, ja roomalaisten kylpylöiden lisäksi sen kesät täyttyvät festivaaleista ja rantaelämästä Mustanmeren rannalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-varna-a54bb7c6.jpg",
+          lahde: "Svilen Enev, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Svilen Enev",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Roman_Thermae_Varna.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-varna-a54bb7c6.jpg",
     },
     'Veliko Tarnovo': {
       lyhyt: 'Veliko Tarnovon keskiaikainen Tsarevetsin linnoitus herää iltaisin eloon ääni- ja valonäytöksessä, kun muurit valaistaan värein.',
+      pitka: `Veliko Tarnovo oli toisen Bulgarian valtakunnan pääkaupunki vuosina 1185–1393, ja aikanaan sen sanottiin kilpailevan loistollaan itse Konstantinopolin kanssa. Kaupungin Samovodskan käsityöläiskatu on säilyttänyt yli 500 vuoden ajan samat ammatit: kivijalkatyöpajoissa taotaan yhä kuparia, poltetaan keramiikkaa ja kudotaan kankaita samalla tavalla kuin markkinapäivinä satoja vuosia sitten. Tsarevetsin linnoitusmäki hallitsee yhä kaupunkia, ja sen valo- ja äänishow herättää muurit iltaisin eloon värein. Nykyään Veliko Tarnovo tunnetaan Bulgarian kulttuuripääkaupunkina ja suosittuna yliopistokaupunkina, jonka kadut kiipeävät jyrkkinä mäkinä Jantra-joen mutkien yllä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-veliko-tarnovo-9222b7ad.jpg",
+          lahde: "MalevE93, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "MalevE93",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tsarevets,Tarnovo,Bulgaria.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-veliko-tarnovo-9222b7ad.jpg",
     },
     Vidin: {
       lyhyt: 'Tonavan rannalla Vidinissä seisoo Baba Vida, Bulgarian ainoa kokonaan säilynyt keskiaikainen linna.',
+      pitka: `Vidinin maakunnan eteläosassa kohoavat Belogradchikin kalliot, 200 metriä korkeita punaisia hiekkakivimuodostelmia, jotka tuuli ja vesi ovat veistäneet miljoonien vuosien aikana oudoiksi torneiksi ja hahmoiksi. Kallioiden lomaan rakennettu Kaleton linnoitus sai alkunsa roomalaisilta, ja bulgarialaiset ja lopulta osmanit laajensivat sitä aina 1800-luvulle asti hyödyntäen kalliomuodostelmia osana muureja. Muodostelmat olivat 2011 finalistina luonnon seitsemän uuden ihmeen äänestyksessä, ja ne houkuttelevat nykyään kiipeilijöitä ja vaeltajia ympäri Eurooppaa. Vidinin kaupunki itse jatkaa elämäänsä Tonavan rannalla Baba Vidan linnan varjossa, aivan Serbian ja Romanian rajaseudun tuntumassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-vidin-0a448020.jpg",
+          lahde: "Bybbisch94, Christian Gebhardt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bybbisch94, Christian Gebhardt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:20230423.Festung_Baba_Wida.-009.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-vidin-0a448020.jpg",
     },
     Vratsa: {
       lyhyt: 'Rogozenin kylästä löytyi 1985 yli 20 kilon traakialainen hopea-aarre, kun traktorinkuljettaja kaivoi puutarhaansa kasteluputkea varten.',
+      pitka: `Vratsan kaupungin kupeessa avautuu Vratsata-solakuru, jonka pystyt kalkkikivijyrkänteet ovat suosittuja kalliokiipeilijöiden keskuudessa. Lähellä sijaitseva Ledenika-luola avattiin yleisölle 1961, ja sen jäätävät holvit ja tippukivimuodostelmat vetävät nykyään retkeilijöitä ympäri vuoden. Runoilija ja vallankumouksellinen Hristo Botev kaatui taistelussa lähellä sijaitsevalla Okolčican huipulla huhtikuun kapinassa 1876, ja häntä muistetaan yhä joka vuosi kesäkuun alussa, jolloin tuhannet kokoontuvat vuorelle. Vratsa on nykyään portti Vrachanski Balkan -luonnonpuistoon, jonka kalliot, luolat ja putoukset tekevät siitä yhden Bulgarian suosituimmista retkeilyalueista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-vratsa-0658d64f.jpg",
+          lahde: "Vassia Atanassova - Spiritia, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Vassia Atanassova - Spiritia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vratsa-museum-Rogozen-treasure-1.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bgr-maakunta-vratsa-0658d64f.jpg",
     },
   },
   /*
@@ -5029,63 +6140,303 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   HRV: {
     'Bjelovarsko-bilogorska': {
       lyhyt: 'Daruvar on Kroatian tšekkiläisvähemmistön keskus, ja kaupungin lämpimissä lähteissä on kylvetty jo roomalaisten aikaan.',
+      pitka: `Bjelovar syntyi 1756 Habsburgien suunnittelemana ruutukaava-kaupunkina, kun arkkiherttuakunta halusi vahvan varuskunnan osaksi Sotarajaa (Vojna granica), joka vartioi valtakuntaa Ottomaanien hyökkäyksiltä vuosisatojen ajan. Säännöllinen katuverkko näkyy yhä kaupungin keskustassa, vaikka Sotaraja lakkautettiin jo 1881 ja alue siirtyi tavalliseen siviilihallintoon. Naapurikaupunki Daruvarissa on nykyään Kroatian tšekkiläisvähemmistön keskus, ja sen lämpimissä lähteissä on kylvetty jo roomalaisten ajoista lähtien. Bilogoran metsät ja niiden väliin jäävät viljelysmaat tekevät maakunnasta yhä rauhallista maaseutua, jonka sotilaallinen menneisyys elää enää katujen geometriassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-bjelovarsko-bilogorska-c9df4c6e.jpg",
+          lahde: "SMESNJAKphotoZ, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "SMESNJAKphotoZ",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dvorac_Janković_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-bjelovarsko-bilogorska-c9df4c6e.jpg",
     },
     'Brodsko-Posavska': {
       lyhyt: 'Slavonski Brodissa Savan rannalla on Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui 4 000 sotilasta ja 150 tykkiä.',
+      pitka: `Đakovon punatiilinen tuomiokirkko on yksi Kroatian suurimmista kirkoista, uusromaaninen jättiläinen jonka piispa Josip Juraj Strossmayer tilasi wieniläiseltä arkkitehti Friedrich von Schmidtilta – työt kestivät vuosina 1866–1882. Strossmayer oli aikansa vaikutusvaltaisin kroaatti-piispa ja eteläslaavilaisen yhteistyön ajaja, ja hänen nimeään kantaa yhä Zagrebin yliopiston tiedeakatemia. Slavonski Brodissa Savan rannalla seisoo Itävallan 1700-luvulla rakentama tähtilinnoitus, johon mahtui aikanaan 4 000 sotilasta ja 150 tykkiä ja joka on nykyään suosittu käyntikohde. Brodsko-Posavska elää nykyään ennen kaikkea Slavonian viljavista pelloista ja Savan rannan maisemista, Strossmayerin katedraalin kupolin kohotessa yhä tasangon yllä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-brodsko-posavska-03b27267.jpg",
+          lahde: "Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Petar Milošević",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tvrđava_Brod_(Brod_Fortress,_Slavonski_Brod,_Croatia).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-brodsko-posavska-03b27267.jpg",
     },
     'Dubrovacko-Neretvanska': {
       lyhyt: 'Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista.',
+      pitka: `Dubrovnikin keskiaikaiset muurit ja Stradunin pääkatu tekevät kaupungista yhden Kroatian suosituimmista matkailukohteista, ja Unesco liitti vanhankaupungin maailmanperintöluetteloon 1979. Napoleon lakkautti vuosisatoja itsenäisenä säilyneen Ragusan tasavallan 1808, ja seuraavat vuosikymmenet kaupunki eli menneen kauppamahtinsa muistoissa köyhtyneenä – nykyisin ylivoimainen elinkeino, matkailu, käynnistyi vasta 1880-luvun lopulla, kun ensimmäinen suurhotelli avattiin 1897. Etelämpänä Neretvan suistossa Opuzenin ja Metkovićin tienoilla kasvaa yli miljoona mandariinipuuta, ja niistä tulee valtaosa Kroatian mandariineista. Nykyään Dubrovnikin kesät täyttyvät risteilyaluksista ja kaduilla kaikuu useampi kieli kuin koskaan kaupungin historiassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-dubrovacko-neretvanska-8a7bc2ad.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Casco_viejo_de_Dubrovnik,_Croacia,_2014-04-14,_DD_04.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-dubrovacko-neretvanska-8a7bc2ad.jpg",
     },
     Istarska: {
       lyhyt: 'Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista – asukkaita on noin viisikymmentä.',
+      pitka: `Pulan roomalaisajan amfiteatteri on yksi maailman parhaiten säilyneistä, lähes 2 000 vuotta vanha areena, jossa järjestetään nykyään konsertteja ja elokuvafestivaaleja alkuperäisten kivipenkkien keskellä. Itävallan laivasto nosti kaupungin 1856 tärkeimmäksi sotasatamakseen, ja seuraavina vuosikymmeninä sen ympärille kohosi kiihtyvää tahtia uusia linnoituksia ja telakoita; perintö näkyy yhä, sillä Pula on edelleen Kroatian laivaston tukikohta. Istrian kukkuloilla muurien ympäröimää Humia sanotaan yhdeksi maailman pienimmistä kaupungeista, sillä siellä asuu vain noin viisikymmentä ihmistä. Niemimaan sisämaan kylät elävät nykyään tryffeleistä, oliiviöljystä ja viinistä, jotka houkuttelevat ruokamatkailijoita ympäri vuoden.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-istarska-b8605a87.jpg",
+          lahde: "Sheeba Samuel, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Sheeba Samuel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hum_Croatia.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-istarska-b8605a87.jpg",
     },
     Karlovacka: {
       lyhyt: 'Karlovacia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika.',
+      pitka: `Karlovac perustettiin 1579 täydellisen säännölliseksi kuusisakaraiseksi tähtilinnoituskaupungiksi, kun arkkiherttua Kaarle Itävaltalainen halusi vahvan vartioaseman neljän joen risteykseen Ottomaanien hyökkäysreitille. Tähtimuotoinen kaavoitus näkyy yhä selvästi kaupungin katuverkossa, vaikka linnoitusmuurit purettiin 1800-luvun loppupuolella niiden menetettyä sotilaallisen merkityksensä. Nykyään kaupunkia kutsutaan neljän joen kaupungiksi, ja siellä avattiin 2016 Kroatian ensimmäinen makean veden akvaario Aquatika, joka esittelee jokien elämää. Karlovac on yhä tärkeä liikennesolmu Zagrebin ja Adrianmeren rannikon välillä, aivan kuten se oli jo 1800-luvulla puutavaran ja maataloustuotteiden kauttakulkupaikkana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-karlovacka-18f4ab70.jpg",
+          lahde: "Bukovacka, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bukovacka",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zračni_pogled_na_Karlovca-_Autor-_Igor_Čepurkovskii.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-karlovacka-18f4ab70.jpg",
     },
     'Koprivničko-Križevačka': {
       lyhyt: 'Koprivnicassa on Podravka-elintarvikeyhtiön koti, ja siellä on valmistettu Vegeta-maustetta vuodesta 1959 lähtien.',
+      pitka: `Križevcin maatalousoppilaitos, perustettu 1860, on yksi Euroopan vanhimmista edelleen toimivista maatalouskouluista, ja se kouluttaa yhä agronomeja ja maaseudun asiantuntijoita ympäri Kroatiaa. Koulu oli aikanaan koko Itävalta-Unkarin uusimpia ja edistyksellisimpiä, ensimmäinen ammatillinen maatalouskoulu Kroatiassa. Koprivnica tunnetaan nykyään elintarvikeyhtiö Podravkan kotikaupunkina, ja siellä on valmistettu suosittua Vegeta-maustetta vuodesta 1959 lähtien – tuote, joka löytyy nykyään keittiöistä ympäri Balkania ja Keski-Eurooppaa. Maakunta on muuten yhä pääosin hiljaista maaseutua, viljapeltoja ja pieniä kyliä Podravinan tasangolla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-koprivnicko-krizevacka-852b0258.jpg",
+          lahde: "Szatmári Tivadar, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Szatmári Tivadar",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kapronca_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-koprivnicko-krizevacka-852b0258.jpg",
     },
     'Krapinsko-Zagorska': {
       lyhyt: 'Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo.',
+      pitka: `Krapinan Hušnjakovon mäeltä löytyi 1899 yli 800 neandertalinihmisen fossiilia, ja löytöpaikalle on rakennettu moderni museo, joka tekee Krapinasta yhden maailman tärkeimmistä ihmisen esihistorian tutkimuskohteista. Trakošćanin linna Zagorjen kukkuloilla on toinen alueen vetonaula: Drašković-suku muutti sen 1800-luvun puolivälissä keskiaikaisesta puolustuslinnasta romanttiseksi uusgoottilaiseksi kreivillisasunnoksi, ja sen juurelle kaivettu keinotekoinen järvi tekee linnasta nykyään suositun retkikohteen. Zagorjen kukkulamaisema pienine kylineen ja viinitarhoineen on säilynyt idyllisenä, ja seutu tunnetaan nykyään myös termaalikylpylöistään. Krapina ja sen ympäristö vetävät nykyään sekä tiedematkailijoita että viikonloppuretkeilijöitä Zagrebista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-krapinsko-zagorska-861473bf.jpg",
+          lahde: "Zeljko.filipin, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Zeljko.filipin",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Krapina_Neanderthal_Museum_Photo_1.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-krapinsko-zagorska-861473bf.jpg",
     },
     'Licko-Senjska': {
       lyhyt: 'Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä, ja hänen synnyinkotinsa on nykyään muistokeskus.',
+      pitka: `Nikola Tesla syntyi Smiljanin kylässä Gospićin lähellä 1856, ja hänen synnyinkotinsa on nykyään Teslan muistokeskus, joka esittelee keksijän elämää ja kokeita interaktiivisin näyttelyin. Nuori Tesla kirjoittautui Karlovacin realikouluun 1873 ja sairastui pian sen jälkeen vaikeaan koleraan, joka piti hänet hengenvaarassa kuukausien ajan ennen kuin hänestä tuli yksi historian merkittävimmistä keksijöistä. Vuoristoinen Lika on nykyään karua, harvaan asuttua seutua, jota hallitsee Velebit-vuoristo ja jonka läpi kulkee yhä 1700-luvulla rakennettu Josephina-sotatie, nykyään suosittu retkeilyreitti. Suuri osa Plitvicen järvien kansallispuistosta sijaitsee myös tällä maakunnalla, ja se on yksi Kroatian harvimmin asutuista mutta luonnoltaan rikkaimmista alueista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-licko-senjska-99975556.jpg",
+          lahde: "old_s, Wikimedia Commons (CC0)",
+          tekija: "old_s",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Birth_place_Nikola_Tesla.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-licko-senjska-99975556.jpg",
     },
     Medimurska: {
       lyhyt: 'Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa.',
+      pitka: `Čakovecin linnaa hallinnut Zrinski-suku oli 1600-luvulla yksi Kroatian mahtavimmista aatelissuvuista – kreivi Nikola Zrinski kuoli sankarikuoleman 1566 Szigetvárin piirityksessä Ottomaaneja vastaan, ja suvun tarina elää yhä Kroatian kansallistietoisuudessa. Linna toimii nykyään kaupungin museona, joka kertoo suvun nousun ja vuoden 1671 kukistumisen tarinan, kun viimeinen Zrinski teloitettiin petturina ja tilukset takavarikoitiin. Muran ja Draavan väliin jäävä Međimurje on Kroatian pohjoisin ja pinta-alaltaan pienin maakunta, kun Zagrebin kaupunkia ei lasketa. Nykyään alue tunnetaan viinitiestään ja lämpimistä lähteistään, jotka houkuttelevat kylpylävieraita ympäri vuoden, sekä tiiviistä kylämaisemastaan jokien välissä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-medimurska-9eae0c14.jpg",
+          lahde: "Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Krzysztof Golik",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zrinski_Castle_in_Cakovec_(13).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-medimurska-9eae0c14.jpg",
     },
     'Osjecko-Baranjska': {
       lyhyt: 'Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin.',
+      pitka: `Osijekin Tvrđa-linnoituskaupunginosa on yksi Keski-Euroopan parhaiten säilyneistä barokkilinnoituksista: säännölliset kadut, kasarmit ja komentajan talo rakennettiin 1700-luvun alussa Habsburgien voitettua alueen Ottomaaneilta, ja nykyään korttelissa toimii ravintoloita, gallerioita ja yliopiston tiloja vanhojen muurien sisällä. Draavan ja Tonavan yhtymäkohdassa Kopački Ritin tulvasuolla elää noin 260 lintulajia, merikotkista haikaroihin, ja alue on yksi Euroopan merkittävimmistä kosteikkojen suojelukohteista. Slavonia on yhä Kroatian vilja-aitta, laajoja peltoja ja tammimetsiä, joiden puutavaraa on viety Tonavaa pitkin ympäri Eurooppaa jo vuosisatojen ajan. Osijek itse on Slavonian suurin kaupunki ja alueen kulttuurinen ja taloudellinen keskus.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-osjecko-baranjska-adde931c.jpg",
+          lahde: "Antimuonium, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Antimuonium",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kopački_Rit,_Sakadaš_lake,_Kopačevo,_2025_(2).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-osjecko-baranjska-adde931c.jpg",
     },
     'Primorsko-Goranska': {
       lyhyt: 'Rijekassa suunniteltiin ja testattiin 1866 maailman ensimmäinen torpedo, ja kaupunki oli Euroopan kulttuuripääkaupunki 2020.',
+      pitka: `Rijeka on Kroatian tärkein satamakaupunki ja oli Euroopan kulttuuripääkaupunki 2020, jolloin sen entiset telakka- ja tehallialueet muuttuivat näyttely- ja tapahtumatiloiksi. Kaupungin torpedotehdas testasi 1866 maailman ensimmäisen toimivan torpedon Robert Whiteheadin suunnittelemana – keksintö, joka teki Rijeasta aikanaan sotateollisuuden edelläkävijän ja jonka historiaa esitellään nykyään kaupungin merihistoriallisessa museossa. Naapurissa Opatija on nykyään Kroatian tunnetuimpia kylpylärannikkokaupunkeja laurelipuiden ja huviloiden keskellä, vaikka se oli vielä 1800-luvun puolivälissä vaatimaton kalastajakylä ennen ensimmäisen suurhotellin avaamista 1884. Rannikon vuoristoinen tausta, Učka-vuori, kohoaa yhä molempien kaupunkien yllä muistuttaen alueen luonnonläheisyydestä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-primorsko-goranska-08195744.jpg",
+          lahde: "RijekaPhotos, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "RijekaPhotos",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Center_of_Rijeka_and_mountain_Učka.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-primorsko-goranska-08195744.jpg",
     },
     'Šibensko-Kninska': {
       lyhyt: 'Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus.',
+      pitka: `Šibenikissä on kaksi Unescon maailmanperintökohdetta: Pyhän Jaakobin katedraali ja satamansuuta vartioiva Pyhän Nikolauksen linnoitus, jotka molemmat kertovat kaupungin venetsialaisajan puolustusarkkitehtuurista. Krkan kansallispuiston vesiputoukset, suojeltuina vuodesta 1985, ovat yksi Kroatian suosituimmista luontokohteista, ja niiden ympärillä kulkevat pitkoskävelyreitit vetävät kävijöitä ympäri vuoden. Kalliolla kohoava Kninin linnoitus oli vuosisatoja Venetsian, Ottomaanien ja Habsburgien kiistakapula, mutta nykyään se muistuttaa lähihistoriasta: linnoituksessa toimii museo Kroatian itsenäisyyssodasta, ja elokuun 1995 sotilasoperaatio "Oluja" ("Myrsky") päättyi juuri Kninissä. Maakunta yhdistää näin keskiaikaisen rannikkoarkkitehtuurin, luonnonihmeet ja Kroatian nuoren valtion historian.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sibensko-kninska-f4e33cd1.jpg",
+          lahde: "Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bernard Gagnon",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cathedral_of_St._James,_Šibenik_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sibensko-kninska-f4e33cd1.jpg",
     },
     'Sisacko-Moslavacka': {
       lyhyt: 'Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi – haikaroita oli enemmän kuin kylässä ihmisiä.',
+      pitka: `Lonjsko poljen Čigoć nimettiin 1994 Euroopan ensimmäiseksi haikarakyläksi, sillä kesäisin kylässä pesii enemmän haikaroita kuin siellä asuu ihmisiä – puutalot ja niiden räystäät ovat edelleen täynnä pesiä. Sisak tunnettiin antiikissa nimellä Siscia ja toimi Rooman Pannonia-maakunnan tärkeänä keskuksena; roomalaisajan jäänteet ovat yhä esillä kaupungin arkeologisessa museossa. Kaupungin nykyistä teollista identiteettiä hallitsee rautatehdas Željezara Sisak, perustettu 1938, vaikka tuotanto on 2000-luvulla supistunut merkittävästi entisestä huippuvuosistaan. Lonjsko poljen tulvatasangot puukylineen ovat säilyneet vanhana, muuttumattomana talonpoikaismaisemana, joka on nykyään suojeltu luonnonpuisto.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sisacko-moslavacka-3455976d.jpg",
+          lahde: "Fraxinus Croat, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Fraxinus Croat",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cigoc1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-sisacko-moslavacka-3455976d.jpg",
     },
     'Splitsko-Dalmatinska': {
       lyhyt: 'Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne alkoi 1715.',
+      pitka: `Splitin Diocletianuksen palatsi on yli 1 700 vuotta vanha, mutta yhä täynnä eläviä ihmisiä: keisari Diocletianus rakennutti sen eläkepalatsikseen noin vuonna 300, ja vuosisatojen kuluessa paikalliset asukkaat muuttivat palatsin kammiot ja käytävät kaupoiksi, asunnoiksi ja kirkoiksi. Tämä ainutlaatuinen ratkaisu piti antiikin rakennuksen elävänä käytössä sen sijaan, että se olisi jäänyt raunioksi, ja sama kaupunkirakenne on yhä Splitin vanhankaupungin sykkivä ydin täynnä kahviloita ja toreja. Sinjissä ratsastetaan joka elokuu Alka-kilpailu, jossa laukkaava ratsastaja tähtää keihäällä rautarenkaaseen – perinne, joka on jatkunut katkeamatta vuodesta 1715. Nykyään Split on Dalmatian suurin kaupunki ja tärkeä lähtösatama Dalmatian saarille matkustaville.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-splitsko-dalmatinska-368dd37c.jpg",
+          lahde: "dronepicr, Wikimedia Commons (CC BY 2.0)",
+          tekija: "dronepicr",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Diocletian's_Palace_in_Split,_Croatia_(48608247353).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-splitsko-dalmatinska-368dd37c.jpg",
     },
     'Varaždinska': {
       lyhyt: 'Barokkinen Varaždin oli Kroatian pääkaupunki vuoteen 1776, ja nykyään sen kadut täyttää loppukesällä Špancirfest-katufestivaali.',
+      pitka: `Varaždin oli Kroatian pääkaupunki vuoteen 1776 asti, jolloin valtaisa tulipalo tuhosi suuren osan kaupungista ja hallinto siirtyi pysyvästi Zagrebiin. Kaupunki rakennettiin palon jälkeen kokonaan uudelleen barokkityyliin, ja tämä yhtenäinen barokkikeskusta on säilynyt nykypäivään asti yhtenä Kroatian parhaiten säilyneistä historiallisista kaupunkikuvista. Nykyään Varaždinin kaduilla vilisee loppukesällä väkeä Špancirfest-katufestivaalin aikaan, kun kadut täyttyvät muusikoista, käsityöläisistä ja katuesiintyjistä. Entisestä pääkaupungista on tullut rauhallinen mutta elinvoimainen maakuntakeskus, joka elää nykyään kulttuurista, koulutuksesta ja pienteollisuudesta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-varazdinska-c80fd41a.jpg",
+          lahde: "Ptrnc7965, Wikimedia Commons (CC0)",
+          tekija: "Ptrnc7965",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Varaždin_Croatia_Korzo_2025.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-varazdinska-c80fd41a.jpg",
     },
     'Viroviticko-Podravska': {
       lyhyt: 'Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon.',
+      pitka: `Papukin vuoriston geopuisto oli Kroatian ensimmäinen, ja se liitettiin 2007 Euroopan geopuistojen verkostoon sen poikkeuksellisen geologisen monimuotoisuuden ansiosta – alueen kivilajit ja mineraalit kertovat satojen miljoonien vuosien takaisesta merenpohjasta ja tulivuoritoiminnasta. Virovitica on yksi Kroatian vanhimmista kaupungeista, mainittu asiakirjoissa jo 1234, ja sen keskusta säilyttää yhä keskiaikaisen kaupunkirakenteen jäänteitä entisen linnoituskaupungin ajoilta. Seutu elää nykyään ennen kaikkea viljanviljelystä ja puunjalostuksesta laajojen Papukin ja Bilogoran metsien liepeillä. Geopuiston vaellusreitit ja lähteet, kuten Jankovacin laakso, houkuttelevat nykyään luontomatkailijoita ympäri Kroatiaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-viroviticko-podravska-8d3df889.jpg",
+          lahde: "Nikola, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nikola",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lake_at_Jankovac,_Papuk_mountain.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-viroviticko-podravska-8d3df889.jpg",
     },
     'Vukovarsko-Srijemska': {
       lyhyt: 'Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee.',
+      pitka: `Vukovarin vesitorniin osui piirityksessä 1991 yli 600 ammusta, ja se on jätetty reikäiseksi muistomerkiksi, jonka huipulle pääsee nykyään näköalapaikalle kaupungin ja Tonavan ylle. Ilokin viinitilat Tonavan rannalla jatkavat satoja vuosia vanhaa perinnettä, joka juontaa ainakin 1400-luvulle: kellareissa kypsyy yhä graševina-rypäleestä tehtyä valkoviiniä, jota alueella tuotetaan edelleen ja joka on yksi Kroatian tunnetuimmista viineistä. Aivan lähellä, Vučedolin kummulla, kukoisti noin 3000 eaa. kuparikautinen kulttuuri, jonka kuuluisa savikyyhky löydettiin 1938 ja josta tuli myöhemmin yksi Kroatian tunnetuimmista arkeologisista symboleista. Vukovar on nykyään symboli sekä sodan tuhoista että sitkeästä jälleenrakennuksesta, ja kaupunki muistaa piirityksen päättymistä ja uhrejaan vuosittain 18. marraskuuta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-vukovarsko-srijemska-117dca75.jpg",
+          lahde: "August Dominus, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "August Dominus",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vodotoranj_u_Vukovaru_2021.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-vukovarsko-srijemska-117dca75.jpg",
     },
     Zadarska: {
       lyhyt: 'Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä.',
+      pitka: `Zadarin rannan Meriurut soivat aaltojen tahdissa: kiviportaiden alla putkiin painuva vesi puhaltaa ilmaa ja synnyttää säveliä – ainutlaatuinen 2005 avattu teos, joka on tehnyt rantabulevardista suositun auringonlaskun katselupaikan. Roomalaisajan foorumin vierellä kohoava Pyhän Donatuksen pyöreä kirkko rakennettiin 800-luvulla osittain vanhoista roomalaisista pilareista ja kivistä, jotka otettiin suoraan vieressä rapistuneesta foorumista. Kaupunki on asunut roomalaisajoista lähtien lähes katkeamattomasti, ensin Rooman, sitten Bysantin, Venetsian ja lopulta Itävallan hallinnon alla – kerrostunut historia näkyy yhä kaduilla vierekkäin roomalaisista pylväistä keskiaikaisiin kirkkoihin. Zadar on nykyään yksi Dalmatian suosituimmista matkailukaupungeista ja lähtösatama moniin Kornatin saariston kansallispuiston saariin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zadarska-7a42776f.jpg",
+          lahde: "Fred Romero from Paris, France, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Fred Romero from Paris, France",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zadar_-_Morske_Orgulje_(48913834056).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zadarska-7a42776f.jpg",
     },
     Zagrebacka: {
       lyhyt: 'Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos.',
+      pitka: `Turopoljen alue Zagrebin eteläpuolella tunnetaan ainutlaatuisesta puurakentamisen perinteestä: alueen talonpojat rakensivat kirkkonsa ja talonsa perinteisesti tammihirsistä, ja monet 1700–1800-luvun rakennuksista ovat säilyneet tähän päivään Kroatian parhaana esimerkkinä maallikkokäsityöläisten puuarkkitehtuurista. Turopolje oli myös historiallisesti erikoisasemassa: koko alueen talonpojat olivat perineet aatelisoikeuden keskiajalta, ainutlaatuinen järjestely, joka teki heistä muodollisesti aatelisia mutta käytännössä tavallisia maanviljelijöitä – perinne, josta seutu on yhä ylpeä. Samobor on zagrebilaisten suosima retkikaupunki, ja sen kuuluisin herkku on samoborska kremšnita, vaniljakermaleivos, jota myydään kaupungin kahviloissa. Zagrebačka-maakunta toimii nykyään pääkaupungin vihreänä lähiseutuna, jonne kaupunkilaiset pakenevat viikonloppuisin vaeltamaan ja syömään.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zagrebacka-6be197c2.jpg",
+          lahde: "Danijela Stefanac, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Danijela Stefanac",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:At_King_Tomislav_Square_5,_Samobor.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-zagrebacka-6be197c2.jpg",
     },
     'Grad Zagreb': {
       lyhyt: 'Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon.',
+      pitka: `Zagrebin Särkyneiden suhteiden museossa on esillä erojen muistoesineitä tarinoineen, ja se sai 2011 eurooppalaisen museopalkinnon poikkeuksellisen konseptinsa ansiosta. Kaupunki syntyi kahdesta vierekkäisestä keskiaikaisesta kaupungista, kirkollisesta Kaptolista ja maallisesta Gradecista, jotka yhdistettiin muodollisesti yhdeksi Zagrebiksi vasta 1850 – kaksinaisuuden muisto näkyy yhä Yläkaupungin (Gornji grad) mutkittelevissa kaduissa ja kahdessa erillisessä tornissa kaupungin siluetissa. Zagreb on nykyään Kroatian selvästi suurin kaupunki, jossa asuu lähes 800 000 ihmistä ja jonka talous, yliopistot ja kulttuurilaitokset hallitsevat koko maata. Adventtiaikaan Zagrebin joulumarkkinat on toistuvasti valittu yhdeksi Euroopan parhaista, ja ne täyttävät kaupungin keskustan valoilla ja glögin tuoksulla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-grad-zagreb-f81ad3be.jpg",
+          lahde: "Nikolai Karaneschev, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Nikolai Karaneschev",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zagreb_2015_-_Zagrebačka_katedrala_-_pogled_s_Gornjeg_Grada_(Zagreb_Cathedral_-_view_from_Upper_Town)_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hrv-maakunta-grad-zagreb-f81ad3be.jpg",
     },
   },
   /*
@@ -5122,66 +6473,318 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MNE: {
     Andrijevica: {
       lyhyt: 'Andrijevica jakaa Kolašinin kanssa Komovin vuoriston, jonka korkein huippu Kom Kučki kohoaa 2 487 metriin.',
+      pitka: "Andrijevica sijaitsee 740 metrin korkeudessa Limin ja Zlorečican yhtymäkohdassa, ja koko kunnassa asuu vain noin 4 000 ihmistä. Kaupunki on Komovin vuoriston epävirallinen retkeilytukikohta: korkeimman huipun lisäksi lähellä kohoavat Ljevorijecki Kom ja Vasojevićki Kom, joista jälkimmäiselle nousee kokonaisessa päiväretkessä. Kolašinin suuntaan johtaa 1 568 metrin korkeudessa kulkeva Trešnjevikin solatie, jota pidetään yhtenä Montenegron näyttävimmistä vuoristoteistä. Sekä Beraneen että Kolašiniin on noin 30 kilometriä, joten kaupunki on solmukohta Komovin, Bjelasican ja Prokletijen vuorimaisemien välissä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-andrijevica-a0c0a228.jpg",
+          lahde: "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bjoertvedt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kolasin_district_south_Komovi_massif_2487_masl_Bielasici_mountains_IMG_1350.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-andrijevica-a0c0a228.jpg",
     },
     Bar: {
       lyhyt: 'Stari Barin lähellä kasvaa oliivipuu Stara maslina, jonka arvellaan olevan yli 2 000 vuotta vanha – yksi maailman vanhimmista.',
+      pitka: "Bar on Montenegron tärkein satamakaupunki, jonka satamasta lähtee yön yli kulkeva lautta Italian Bariin. Satama ja Belgradiin johtava 435 kilometrin rata, joka avattiin 1976, tekivät kaupungista maan portin merelle. Koko kunnassa asuu noin 46 000 ihmistä. Sutomoren pitkä hiekkaranta houkuttaa kotimaisia lomailijoita, ja Skadarjärven Virpazarin kylään on noin puoli tuntia ajomatkaa. Kaupungin takana Rumija-vuori kohoaa jyrkästi rannikon yläpuolelle, ja Topolicassa kuningas Nikolan kesäpalatsi toimii nykyään Barin kotiseutumuseona.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bar-151e1eb7.jpg",
+          lahde: "BuhaM, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "BuhaM",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Old_olive_in_Bar,_Montenegro.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bar-151e1eb7.jpg",
     },
     Berane: {
       lyhyt: 'Limin varrella Beranen laidalla kohoaa Đurđevi Stupovin luostari, joka rakennettiin jo 1100-luvun lopulla.',
+      pitka: "Berane on Limin varren kaupunki, jossa asuu noin 9 500–10 000 ihmistä; koko kunnassa asukkaita on noin 25 000. Keskustassa toimii Polimski-museo, jonka kokoelmiin kuuluu useita tuhansia esineitä arkeologiasta, etnografiasta ja aseista. Seudun arkeologia yltää kauas: Ylä-Polimlen mesoliittisia asuinpaikkoja on ajoitettu vuosiin 9 000–6 000 eaa. Perhokalastajat tuntevat Limin, ja etelässä kohoaa Bjelasican vuoristo. Museo perustettiin 1950-luvulla, ja kaupungin lukio on toiminut jo vuodesta 1913.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-berane-fef33b0b.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Đurđevi_stupovi,_Berane,_MNE.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-berane-fef33b0b.jpg",
     },
     'Bijelo Polje': {
       lyhyt: 'Limin varren Bijelo Polje on Pohjois-Montenegron keskus, jonka asukkaista lähes puolet on muslimeja ja lähes puolet ortodokseja.',
+      pitka: "Bijelo Polje, suomeksi Valkoinen kenttä, on Limin varren kaupunki, jonka kunnassa on yli 130 asutusta ja 38 662 asukasta (2023). Kaupungin vanhin maamerkki on Pyhien Pietarin ja Paavalin kirkko, jonka ruhtinas Miroslav Hum rakennutti sisäänkäynnin kirjoituksen mukaan vuonna 1196. Kirkko liittyy Miroslavin evankeliumiin, vanhimpaan säilyneeseen serbialaiseen kyrilliseen käsikirjoitukseen, joka tehtiin 1100-luvun lopulla ja kuuluu UNESCOn Muisti maailmasta -rekisteriin. Alkuteos säilytetään Belgradissa. Heinäkuisin kaupungissa pidetään White Field Jazz Festival, ja Lim on tunnettu taimenestaan ja harjuksestaan.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bijelo-polje-441da6da.jpg",
+          lahde: "Steffpop, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Steffpop",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Panorama_Bijelog_Polja.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bijelo-polje-441da6da.jpg",
     },
     Budva: {
       lyhyt: 'Sveti Stefanin kalastajakylä on pieni saari hiekkakannaksen päässä, ja koko kylä muutettiin Jugoslavian aikana luksushotelliksi.',
+      pitka: "Budvan pieni vanhakaupunki kalkkikiviniemellä on ollut asuttu yhtäjaksoisesti noin 2 500 vuotta, ja sen juuret ulottuvat kreikkalais-illyrialaiseen asutukseen 400-luvulla eaa. Vuoden 1979 maanjäristys vaurioitti kaupunkia pahoin, ja jälleenrakennus kesti vuoteen 1987. Muurien sisällä on neljä kirkkoa, muun muassa vuodelta 840 peräisin oleva Santa Maria in Punta, ja Citadelan ulkoteatteri toimii kesän Grad Teatar -festivaalin näyttämönä. Kaupungin ulkopuolella Slovenska plaža on noin 1,6 kilometriä pitkä, ja kunnassa asuu noin 26 700 ihmistä, joista noin 17 500 kaupungissa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-budva-ceca849d.jpg",
+          lahde: "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Marcin Konsek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sveti_Stefan_(07).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-budva-ceca849d.jpg",
     },
     Cetinje: {
       lyhyt: 'Cetinje on virallisesti Montenegron vanha kuninkaallinen pääkaupunki, ja presidentin virka-asunto Sininen palatsi on yhä siellä.',
+      pitka: "Cetinje perustettiin vuonna 1482, kun Ivan Crnojević siirsi valtansa Lovćenin juurelle helpommin puolustettavaan paikkaan. Kaupunki sijaitsee noin 650 metrin korkeudessa, ja kunnassa asuu noin 14 500 ihmistä. Täällä painettiin Crnojevićin kirjapainossa 1494 Oktoih, ensimmäinen eteläslaavien kyrillisin kirjaimin painettu kirja. Cetinjeen rakennettiin aikanaan suurvaltojen lähetystöjä, ja venäläinen, 1903 valmistunut lähetystörakennus kuuluu nykyään Taidekorkeakoululle. UNESCO otti Cetinjen mukaan Luovien kaupunkien verkostoon vuonna 2023 muotoilukaupunkina.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-cetinje-61df0219.jpg",
+          lahde: "AQVA121, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "AQVA121",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Plavi_dvorac,_Montenegro.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-cetinje-61df0219.jpg",
     },
     Danilovgrad: {
       lyhyt: 'Ostrogin luostari on rakennettu pystysuoraan kallioseinään, ja sinne nousee vuosittain yli miljoona pyhiinvaeltajaa.',
+      pitka: "Danilovgrad levittäytyy Zeta-joen hedelmällisellä Bjelopavlićin tasangolla noin 25 kilometrin päässä Podgoricasta, päätien varrella Nikšićin ja pääkaupungin välissä. Kaupunki perustettiin vuonna 1870 suunnitelmakaupungiksi ja nimettiin ruhtinas Danilon mukaan. Kunnassa on 103 asutusta, ala noin 501 neliökilometriä ja 18 617 asukasta (2023). Spužin kukkulalla kohoaa ottomaanien vuonna 1704 valmistama linnoitus, joka valvoi keskisen Montenegron kulkuteitä. Ždrebaonikin luostari ja Glava Zeten lähteet ovat tasangon reunoilla, ja tasangon lämmin, kostea subtrooppinen ilmasto tekee kesistä kuumia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-danilovgrad-29098384.jpg",
+          lahde: "Misa.stefanovic.07, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Misa.stefanovic.07",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:E17_-_Manastir_Ostrog.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-danilovgrad-29098384.jpg",
     },
     'Herceg Novi': {
       lyhyt: 'Herceg Novissa keltaiset mimosat kukkivat jo talvella, ja kaupunki juhlii niitä joka vuosi omalla mimosajuhlallaan.',
+      pitka: "Herceg Novi on rakentunut portaikoiksi: vanhakaupunki laskeutuu rinnettä pitkin Kotorinlahden länsiportilta merelle, ja rantaa myötäilevä Pet Danican kävelyreitti yhdistää Škverin sataman ja Forte Maren. Linnake perustettiin kaupungin ytimeksi vuonna 1382 Bosnian kuningas Tvrtko I:n aikana. Sittemmin kaupunkia ovat hallinneet espanjalaiset (1538–1539), osmanit noin kaksisataa vuotta, venetsialaiset ja itävaltalaiset, ja jokainen on jättänyt jälkensä muureihin. Lähellä olevan Savinan luostarin suuri kirkko rakennettiin vuosina 1777–1799, ja sen ikonostaasin maalasi vuonna 1795 Simeon Lazović. Aurinkoisia päiviä on noin 200 vuodessa, joten rantakävelyllä viihtyy lähes ympäri vuoden.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-herceg-novi-7aea1a37.jpg",
+          lahde: "Alexkom000, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Alexkom000",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2024-02-04_Herceg_Novi_Old_Town_1.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-herceg-novi-7aea1a37.jpg",
     },
     'Kolašin': {
       lyhyt: 'Kolašinin Biogradska Gorassa on yksi Euroopan viimeisistä aarniometsistä, ja osa sen puista on yli 500 vuotta vanhoja.',
+      pitka: "Kolašin on Morača-joen kaupunki noin 950 metrin korkeudessa Bjelasican ja Sinjajevinan vuorten juurella. Kaupungissa asuu vajaat 2 500 ihmistä ja koko kunnassa noin 10 000. Belgrad–Bar-rautatie pysähtyy täällä, ja Podgorican lentokenttä on noin 80 kilometrin päässä. Ympäristössä on Kolašin 1450 -hiihtokeskus Bjelasican rinteillä. Morača-kanjonin läpi noin puolen tunnin ajomatkan päässä etelässä on Morača-luostari, jonka Stefan Vukanović perusti vuonna 1252. Se on yksi Montenegron tunnetuimmista keskiaikaisista kohteista, ja siinä yhdistyy romaaninen ja raškalainen rakennustyyli.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kolasin-4432bfd2.jpg",
+          lahde: "Javier Sánchez Portero, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Javier Sánchez Portero",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biogradsko_jezero_in_July.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kolasin-4432bfd2.jpg",
     },
     Kotor: {
       lyhyt: 'Kotorin vanhassakaupungissa kissoja on niin paljon, että niistä on tullut kaupungin symboli – niillä on oma aukionsa ja museonsa.',
+      pitka: "Kotor on kätkeytynyt Kotorinlahden syvimpään sopukkaan, ja sen vanhakaupunki on kuulunut UNESCOn maailmanperintöön vuodesta 1979. Nykyinen ilme on peräisin venetsialaisilta, jotka hallitsivat kaupunkia vuosina 1420–1797 ja kutsuivat sitä nimellä Cattaro. Pyhän Tryphonin katedraali on vuodelta 1166. Kaupungin yllä nousevat muurit ovat noin 4,5 kilometriä pitkät, ja Pyhän Johanneksen linnoitukselle vie noin 1 350 askelmaa. Vuonna 2017 Kotorin puolustusrakennelmat liitettiin myös Venetsian 1500–1600-lukujen puolustusrakennelmien maailmanperintökokonaisuuteen. Kunnassa asuu noin 22 000 ihmistä, ja risteilylaivojen suosiman kaupungin kapeat kujat täyttyvät kesäisin vierailijoista.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kotor-ce21ec2a.jpg",
+          lahde: "Jaakko Luttinen, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jaakko Luttinen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:View_of_Kotor_bay_and_old_town.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kotor-ce21ec2a.jpg",
     },
     Mojkovac: {
       lyhyt: 'Mojkovacin yllä leviää Sinjajevinan ylänkö, jonka laajoilla kesälaitumilla paimenet pitävät yhä lampaitaan.',
+      pitka: "Mojkovac on Tara-joen itärannalla sijaitseva pieni kaupunki, jossa on runsaat 2 500 asukasta, ja koko kunnassa noin 6 800. Kaupunki on tunnettu Mojkovacin taistelusta 6.–7. tammikuuta 1916: noin 6 500 montenegrolaissotilasta piti asemansa selvästi suurempaa Itävalta-Unkarin joukkoa vastaan suojatakseen Serbian armeijan perääntymistä Albanian halki Korfulle. Kunnan alueella sijaitsee Brskovo, keskiajan kaivos- ja kauppapaikka, joka mainitaan ensi kertaa 1200-luvun alun kauppakirjassa. Kaivostoimintaa Brskovossa jatkettiin uudelleen 1900-luvulla, ja kaupungissa on asema Belgrad–Bar-radalla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-mojkovac-9997941d.jpg",
+          lahde: "JYB Devot, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JYB Devot",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Foothills_of_Sinjajevina_P1010126mod.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-mojkovac-9997941d.jpg",
     },
     'Nikšic': {
       lyhyt: 'Nikšićin Trebjesan panimo on Montenegron suurin, ja kaupungissa on pantu olutta 1800-luvun lopulta asti.',
+      pitka: "Nikšić on Montenegron toiseksi suurin kaupunki, ja sen kaupunkialueella asuu noin 66 700 ihmistä (2023). Se levittäytyy noin 640 metrin korkeudessa karstiselle Nikšićin kentälle Trebjesa-kukkulan juurelle. Alueen historia on kerroksellinen: roomalaisaikana paikalla oli Anagastum-linnoitus, keskiajalla slaavien Onogošt, ja nykyinen nimi vakiintui 1400-luvun puolivälissä. Bedemin linnoitus sai nykyisen muotonsa osmanien aikana 1700-luvulla, ja Berliinin sopimus vuonna 1878 vahvisti kaupungin kuulumisen Montenegrolle. Jugoslavian aikana Nikšićistä kasvoi teollisuuskaupunki, jossa oli terästehtaita ja bauksiittikaivoksia. Kaupungin lähellä ovat vesivoimatuotantoa varten rakennetut tekojärvet Krupac, Slano ja Vrtac.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-niksic-ab3345fe.jpg",
+          lahde: "sr:User:Borisniksic, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "sr:User:Borisniksic",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Niksic_-_Pogled_sa_Trebjese.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-niksic-ab3345fe.jpg",
     },
     Plav: {
       lyhyt: 'Kirottujen vuorten juurella Plavin järvi on Montenegron suurin jäätikköjärvi, ja sitä ruokkivat maan alta pulppuavat lähteet.',
+      pitka: "Plav on noin 3 700 asukkaan kaupunki Lim-joen alkulähteillä lähes kilometrin korkeudessa. Järvi on pinta-alaltaan noin kaksi neliökilometriä ja enimmillään yhdeksän metriä syvä, ja sieltä Lim lähtee virtaamaan. Paikka mainitaan ensi kertaa vuonna 1330 Dečanin luostarin asiakirjoissa nimellä Hotina Gora, ja osmanien väestölaskennassa 1582–1583 Plaviin kuului 18 kylää. Alue liitettiin Montenegroon ensimmäisen Balkanin sodan jälkeen 1912. Seutu on suosittu patikointi- ja kalastuskohde, ja järvestä sekä vuoristopuroista pyydetään taimenta.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-plav-bdb42b39.jpg",
+          lahde: "Андрей Романенко, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Андрей Романенко",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Plav_Lake_in_Montenegro_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-plav-bdb42b39.jpg",
     },
     Pljevlja: {
       lyhyt: 'Pljevljan Husein-pašan moskeija valmistui 1500-luvun lopulla, ja sen 42-metrinen minareetti on Balkanin korkeimpia.',
+      pitka: "Pljevlja on noin 770 metrin korkeudessa Ćehotina-joen varrella, ja sen kunta on pinta-alaltaan 1 346 neliökilometriä Montenegron toiseksi suurin. Kunnassa asuu noin 24 000 ihmistä (2023), kaupungissa noin 16 000. Täällä on maan ainoa hiilivoimala, ja Montenegron hiili louhitaan Pljevljan kaivoksesta. Kominin kaupunginosassa sijaitsevat roomalaisen Municipium S:n jäänteet, joista löytyneitä esineitä on nähtävillä kotiseutumuseossa. Kaupunki joutui osmanien haltuun vuonna 1465 ja vapautui 26. lokakuuta 1912. Pyhän Kolminaisuuden luostarin kirkko ja sen esikirkko freskattiin vuosina 1592–1595. Talvet ovat kylmiä, ja lunta on kuukausikaupalla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pljevlja-ae434d02.jpg",
+          lahde: "Thornjak, Wikimedia Commons (CC0)",
+          tekija: "Thornjak",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Husein-paša's_Mosque_Minaret.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pljevlja-ae434d02.jpg",
     },
     'Plužine': {
       lyhyt: 'Pivan luostari siirrettiin kivi kiveltä uuteen paikkaan padon tieltä, ja yli tuhat freskon kappaletta irrotettiin ja kiinnitettiin takaisin.',
+      pitka: "Plužinen kunta on pinta-alaltaan suuri, noin 850 neliökilometriä, mutta asukkaita on siellä vain muutamia neliökilometrillä. Paikka tunnetaan jo 1300-luvulta, ja Montenegroon se liitettiin vasta Berliinin kongressin jälkeen 1878. Alueen ylle kohoaa Mratinjen holvipato: 220 metriä korkea betonirakennelma valmistui 1975 ja on yksi Euroopan korkeimmista padoista. Sen luoma Pivanjärvi täyttää kanjonin, jonka rinteitä pitkin tie kulkee lukuisten tunneleiden läpi. Plužine on tienristeys, joka yhdistää Nikšićin ja Podgorican Bosnia-Hertsegovinan suuntaan, ja Durmitorin kansallispuisto on lähellä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pluzine-926974b6.jpg",
+          lahde: "Дмитрий Мозжухин, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Дмитрий Мозжухин",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Пивский_монастырь_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pluzine-926974b6.jpg",
     },
     Podgorica: {
       lyhyt: 'Montenegron pääkaupunki Podgorica kantoi 1946–1992 nimeä Titograd, ja se on rakentunut Ribnica- ja Morača-jokien yhtymäkohtaan.',
+      pitka: "Podgoricassa asuu noin 172 000 ihmistä, ja itsenäisen Montenegron pääkaupunkina se on toiminut vuodesta 2006. Morača-joen yli kaartuu heinäkuussa 2005 avattu Millennium-silta. Toinen maamerkki on Kristuksen ylösnousemuksen katedraali, joka vihittiin käyttöön 2013 ja näkyy kauas yli kaupungin. Ottomaanien ajan Stara Varošia edustaa 1600-luvun kellotorni, yksi harvoista rakennuksista, jotka selvisivät toisen maailmansodan pommituksista. Kesäisin kaupunki on maan kuumimpia paikkoja: Montenegron lämpöennätys 44,8 astetta mitattiin täällä elokuussa 2007.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-podgorica-6c21eb06.jpg",
+          lahde: "ines lukic, Wikimedia Commons (CC BY 3.0)",
+          tekija: "ines lukic",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Usce_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-podgorica-6c21eb06.jpg",
     },
     'Rožaje': {
       lyhyt: 'Rožaje on noin kilometrin korkeudessa vuorten keskellä, ja kaupungin luota alkava Ibar-joki halkaisee sen kahtia.',
+      pitka: "Rožajen kaupungissa asuu noin 13 600 ihmistä ja koko kunnassa noin 27 600, ja se on Montenegron bosniakkien kulttuurinen keskus. Kaupungin suurin moskeija, Sulttaani Murad II:n moskeija, uudistettiin perusteellisesti 2008. Pääaukiolta on parin minuutin kävely Ganićin torniin, joka rakennettiin 1797 kula-tyylisenä asuintornina ja toimii nykyään kotiseutumuseona: siellä esitellään pukuja, käsitöitä ja arjen esineitä. Rajaseudulla kohoaa Hajlan vuoristo, ja lähellä kaupunkia toimii hiihtokeskus.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-rozaje-6a4d5fb5.jpg",
+          lahde: "Planeti, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Planeti",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:\"VRELO_IBRA\"_Rozaje.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-rozaje-6a4d5fb5.jpg",
     },
     'Šavnik': {
       lyhyt: 'Kolmen joen yhtymäkohtaan 1861 perustetussa Šavnikissa asuu vain noin 360 ihmistä – se on Montenegron pienimpiä kaupunkeja.',
+      pitka: "Šavnikin kunta kattaa noin 550 neliökilometriä ja 27 asutusta, mutta koko kunnassa asuu alle 1 600 ihmistä eli vain noin viisi neliökilometrillä. Jugoslavian aikaisen teollistumisen ohittama seutu on jäänyt hiljaiseksi: ihmiset kävelevät jokien rannoilla tai kalastavat Bukovicassa ja Bijela-joessa. Žabljakiin on noin 15 kilometriä ja Nikšiciin noin 45. Ympäristö on suojeltu Dragišnican ja Komarnican luonnonpuistona, joka kattaa kanjoneita ja vuoristoa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-savnik-fa98eb13.jpg",
+          lahde: "BuhaM, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "BuhaM",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Šavnik,_Montenegro_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-savnik-fa98eb13.jpg",
     },
     Tivat: {
       lyhyt: 'Tivatin vanha, 1889 rakennettu laivastoarsenaali on muutettu Porto Montenegroksi, luksusjahtien satamaksi ja lomakyläksi.',
+      pitka: "Tivatissa asuu noin 10 700 ihmistä, mutta lentokenttä käsittelee moninkertaisen määrän: 2019 se palveli noin 1,37 miljoonaa matkustajaa. Kaupunki on rakentunut Vrmac-harjun ja lahden väliin, ja sen edustalla on kolme pientä saarta. Yksi niistä on Gospa od Milosti, noin 160 metriä pitkä ja 60 metriä leveä saari, jolla on Neitsyt Marian kappeli. Rannalla seisoo Buća-Lukovićin kartano, jonka linnoitettu torni on vuodelta 1548 ja jonka museo perustettiin 2017.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-tivat-1a6ca9dc.jpg",
+          lahde: "Vux33, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vux33",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Esplanade_Porto_Montenegro.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-tivat-1a6ca9dc.jpg",
     },
     Ulcinj: {
       lyhyt: 'Ulcinjin Velika plaža on 12 kilometriä pitkä, Montenegron pisin hiekkaranta, ja kesätuulet tekevät siitä leijalautailijoiden suosikin.',
+      pitka: "Ulcinj perustettiin viidennellä vuosisadalla eaa., joten se on yksi Adrianmeren rannikon vanhimmista asutuksista; roomalaiset valtasivat sen 163 eaa. Osmanien valtakunta hallitsi kaupunkia yli kolmesataa vuotta, kunnes se liitettiin Montenegroon 1880 suurvaltojen painostuksen jälkeen. Kaupungin lähellä levittäytyy Ulcinjin suola-allas, noin 1 500 hehtaarin kosteikko, jossa on havaittu noin 250 lintulajia; alue julistettiin luonnonpuistoksi 2019. Sen matalissa altaissa ruokailevat flamingot, pitkäjalat ja harvinaiset kähäräpelikaanit, ja Adrianmeren lintureitillä se on tärkeä levähdyspaikka.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-ulcinj-90060bbd.jpg",
+          lahde: "Mjuzikxhankej, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mjuzikxhankej",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dolcinium_kitesurf.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-ulcinj-90060bbd.jpg",
     },
     'Žabljak': {
       lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
+      pitka: "Žabljakissa asuu vain noin 1 700 ihmistä, ja kaupunki perustettiin 1871. Se on kasvanut Durmitorin kansallispuiston portiksi. Puisto perustettiin 1952 ja otettiin Unescon maailmanperintöluetteloon 1980; sen pinta-ala on noin 32 000 hehtaaria. Vuoristossa kohoaa Bobotov Kuk, 2 523 metriä korkea huippu, ja lunta on rinteillä noin 120 päivänä vuodessa. Kesällä kävijöitä tuovat vaellus, pyöräily ja koskenlasku, talvella laskettelu. Durmitorin vuoristossa on kymmeniä yli 2 000 metrin huippuja, ja kaupungin keskustasta pääsee kävellen Mustajärven rannalle.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-zabljak-2402297e.jpg",
+          lahde: "Alexkom000, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Alexkom000",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2025-07-12_Crno_jezero_09.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-zabljak-2402297e.jpg",
     },
   },
   /*
@@ -5238,75 +6841,363 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   SRB: {
     'Grad Beograd': {
       lyhyt: 'Kalemegdanin linnoituksen muureilta keskellä Belgradia näkee kohdan, jossa Sava laskee Tonavaan.',
+      pitka: `Belgradin läpi kulkiessa kannattaa poiketa Tesla-museoon Vračarin kaupunginosassa: siellä säilytetään yli 160 000 alkuperäistä asiakirjaa, teknisiä laitteita ja jopa Nikola Teslan tuhkauurna. Kokoelma on niin merkittävä, että Unesco listasi sen maailmanmuistin joukkoon. Kun tiede alkaa tuntua raskaalta, muutaman kadun päässä avautuu Skadarlijan mukulakivikuja, missä runoilijat ja taiteilijat kokoontuivat jo 1800-luvulla ja missä kapakat soittavat elävää musiikkia yhä tänään. Kaupunki osaa yhdistää sähkömiehen laboratorion ja boheemin iltakävelyn samaan iltapäivään.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-grad-beograd-7b8452a5.jpg",
+          lahde: "Radosław Botev, Wikimedia Commons (CC BY 3.0 pl)",
+          tekija: "Radosław Botev",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sava_and_Danube_in_Belgrade,_view_from_Kalemegdan_Park_at_the_Victor_statue.jpg",
+          lisenssi: "CC BY 3.0 pl",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-grad-beograd-7b8452a5.jpg",
     },
     Borski: {
       lyhyt: 'Lepenski Virin kivikautinen kylä siirrettiin 1971 ylemmäs rinteeseen, kun Rautaportin pato alkoi nostaa Tonavan pintaa.',
+      pitka: `Borin piirin itälaidalla, lähellä Bulgarian ja Romanian rajaa, viinitilat kertovat aivan toisenlaista tarinaa kuin joen rannan esihistoria. Negotinin ympäristö on yksi Serbian arvostetuimmista viinialueista, ja lähikylä Rajac kätkee yli 270 kivistä viinikellaria, jotka on louhittu rinteeseen jo 1700-luvun puolivälistä lähtien. Kellarien alaosa uppoaa pari metriä maan alle viinin valmistusta ja säilytystä varten, yläkerta taas toimi majoituksena viinisadon aikaan. Kun eurooppalaisten viinitarhojen tuho levisi 1800-luvun lopulla, ranskalaiset viininvalmistajat löysivät juuri tämän seudun koskemattomat rypäleet ja maksoivat tynnyristä kultarahalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-borski-e9b574d9.jpg",
+          lahde: "Vule b, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Vule b",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Arheološko_nalazište_Lepenski_vir.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-borski-e9b574d9.jpg",
     },
     Branicevski: {
       lyhyt: 'Požarevacin lähellä kaivetaan esiin Viminaciumia, joka oli Rooman Ylä-Moesian maakunnan pääkaupunki ja legioonan leiri.',
+      pitka: `Tonavan rannalla, siinä missä joki kapenee Rautaportin solaksi, kohoaa Golubacin linnoitus kymmenine torneineen – yksi Euroopan vaikuttavimmista keskiaikaisista linnoista. Ensimmäinen maininta linnasta on vuodelta 1335, jolloin se oli unkarilaisen varuskunnan hallussa, mutta seuraavien vuosisatojen aikana Unkari, Serbia ja lopulta Osmanit kävivät siitä ankaraa taistelua sen strategisen sijainnin vuoksi. Jyrkät kalliot ja Tonavan virta suojasivat linnaa luonnostaan, ja se hallitsi kaikkia itä-länsi-suuntaisia teitä ja vesireittejä. Vuosina 2014–2019 EU rahoitti linnoituksen laajan restauroinnin osana Đerdapin kansallispuiston kehitystä, ja nykyään sen torneissa voi kävellä turvallisesti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-branicevski-c0a4dead.jpg",
+          lahde: "Mickey Mystique, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mickey Mystique",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Amphitheater_in_Viminacium,_2018,_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-branicevski-c0a4dead.jpg",
     },
     'Južno-Backi': {
       lyhyt: 'Novi Sadin Petrovaradinin linnoituksen kellossa iso viisari näyttää tunnit, jotta Tonavan kalastajat erottivat ajan kaukaa.',
+      pitka: `Vain kymmenisen kilometriä Novi Sadista löytyy Sremski Karlovci, pikkukaupunki jonka barokkiset kadut kätkevät toistakymmentä viinitilaa kävelymatkan sisään. Viininviljely juontaa juurensa jo Rooman keisari Probuksen aikaan, ja kaupunki tunnetaan myös paikkana, jossa vuonna 1699 käytettiin ensimmäistä kertaa kansainvälisessä diplomatiassa pyöreää neuvottelupöytää. Vuoteen 1848 asti Karlovci toimi serbiortodoksisen kirkon istuimena ja koko Vojvodinan serbien poliittisena keskuksena. Keväällä ja syksyllä kaupunki juhlii viiniä kahdesti: toukokuun viinifestivaalilla ja syyskuun rypäleenpoiminnalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-juzno-backi-ed673edc.jpg",
+          lahde: "Miluša Snidová, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Miluša Snidová",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Clock_tower_at_Petrovaradin_Fortress_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-juzno-backi-ed673edc.jpg",
     },
     Jablanicki: {
       lyhyt: 'Leskovacin pääkatu suljetaan joka syyskuun alussa Roštiljijada-grillijuhlille, joita on pidetty vuodesta 1989.',
+      pitka: `Leskovacista lounaaseen, lähellä Lebanea, piilee Caričin Grad – kaupunki, jonka keisari Justinianus I rakennutti 530-luvulla kunnianosoitukseksi synnyinseudulleen. Kaupungista tehtiin arkkihiippakunnan keskus, jonka valta ulottui koko Pohjois-Illyricumiin, mutta loisto jäi lyhytaikaiseksi: vain noin 80 vuoden kuluttua avaarit ja slaavit hävittivät sen 600-luvun alussa. Kaivaukset ovat paljastaneet kaupungin kadut, kylpylät ja kirkot niin hyvin säilyneinä, että paikka listattiin Serbian tärkeimpien arkeologisten kohteiden joukkoon jo 1979. Tänään rauniot lepäävät hiljaisina pelloilla, kaukana Leskovacin vilskeestä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-jablanicki-f617ea0a.jpg",
+          lahde: "Almarq, Wikimedia Commons (CC0)",
+          tekija: "Almarq",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Leskovac_from_the_air.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-jablanicki-f617ea0a.jpg",
     },
     'Srednje-Banatski': {
       lyhyt: 'Zrenjaninin eteläpuolella on Carska baran kosteikko, jossa on tavattu noin 240 lintulajia ja talvella kymmeniä tuhansia hanhia.',
+      pitka: `Zrenjaninin liepeillä, Begej-joen rannalla, seisoo Kaštel Ečka – metsien ja niittyjen keskelle 1800-luvun alussa rakennettu englantilaistyylinen kartano. Kartanon avajaisissa vuonna 1820 pianoa soitti yhdeksänvuotias poikanero, josta myöhemmin tuli maailmankuulu säveltäjä Franz Liszt. Vuosisatojen aikana kartanoa isännöivät neljä eri sukua, ja sen vieraskirjaan kirjautuivat keisarit, kreivit ja taiteilijat aina 1900-luvun puoliväliin, jolloin omaisuus kansallistettiin. Tänään entinen metsästyslinna seisoo yhä puistonsa keskellä muistuttamassa Banatin aateliston loisteliaasta arjesta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-srednje-banatski-e356ba27.jpg",
+          lahde: "Faith Photography, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Faith Photography",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Carska_bara,_Serbia.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-srednje-banatski-e356ba27.jpg",
     },
     Kolubarski: {
       lyhyt: 'Valjevon Tešnjar on vanha kauppakortteli Kolubara-joen rannalla, ja sen kivetyillä kujilla istutaan yhä kahviloissa.',
+      pitka: `Valjevon lisäksi Kolubarin piiri muistetaan sodasta: marras-joulukuussa 1914 Kolubara-joen varrella käytiin ratkaiseva taistelu, jossa alle 250 000 huonosti varustautunutta serbisotilasta pysäytti ja löi takaisin 450 000 hengen itävalta-unkarilaisen armeijan. Taistelu levisi laajalle joen molemmin puolin, Valjevosta aina Ub:hen ja Lajkovaciin asti, ja päättyi joulukuun puolivälissä Belgradin vapauttamiseen miehityksestä. Voitto oli yksi ensimmäisen maailmansodan suurimmista yllätyksistä ja nosti pienen Serbian armeijan mainetta ympäri Eurooppaa. Jokilaakso, joka antoi taistelulle nimensä, kulkee yhä rauhallisena piirin halki peltojen ja kylien läpi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-kolubarski-2c1500f5.jpg",
+          lahde: "Thruserbia, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Thruserbia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Stara_carsija_Tesnjar,_Valjevo_PKIC_7-1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-kolubarski-2c1500f5.jpg",
     },
     'Zapadno-Backi': {
       lyhyt: 'Somborin maakuntatalon juhlasalissa riippuu Sentan taistelu, seitsemän metriä leveä öljymaalaus – Serbian suurin.',
+      pitka: `Sombor tunnetaan maalauksesta, mutta piirin toinen kaupunki Apatin tunnetaan oluesta: Apatinin panimo perustettiin jo 1756 keisarillisena panimona, ja se on yksi Serbian vanhimmista yhä toimivista tuotantolaitoksista. 1700-luvulla panimo tuotti noin 12 000 hehtolitraa vuodessa, mutta nykyään kapasiteetti on kasvanut neljään miljoonaan hehtolitraan, ja olutta viedään muun muassa Itävaltaan, Ruotsiin ja Sveitsiin. Panimo siirtyi yksityisomistukseen 1800-luvun lopulla ja on nykyään osa amerikkalaista Molson Coorsia. Tonavan rannalla sijaitseva kaupunki tuoksuu siis mallastukselta yhtä vahvasti kuin joelta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-zapadno-backi-9f3aac36.jpg",
+          lahde: "Aleksandar Cocek, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Aleksandar Cocek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sombor_city_hall,_Sombor,_Serbia.jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-zapadno-backi-9f3aac36.jpg",
     },
     Macvanski: {
       lyhyt: 'Tršićin kylässä syntyi Vuk Karadžić, joka uudisti serbian kirjakielen niin, että sitä kirjoitetaan niin kuin puhutaan.',
+      pitka: `Tršićin kylän lisäksi Mačvan piiri muistetaan sotahistoriasta: elokuussa 1914 Cer-vuoren ja Šabacin ympäristössä käytiin liittoutuneiden ensimmäinen voitto koko ensimmäisessä maailmansodassa. Noin 180 000 serbisotilasta torjui 200 000 hengen itävalta-unkarilaisen hyökkäyksen ja ajoi vihollisen takaisin Drina-joen yli jo muutamassa päivässä. Taistelun aikana käytiin myös sodan ensimmäinen ilmataistelu kahden lentokoneen välillä. Šabacin kaduilla ja Cer-vuoren rinteillä on yhä muistomerkkejä, jotka kertovat viikoista, jolloin pieni Serbia pysäytti suurvallan etenemisen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-macvanski-2c68bbcf.jpg",
+          lahde: "Vladimir Mijailović, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vladimir Mijailović",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rodna_kuća_Vuka_Stefanovića_Karadžića_u_Tršiću,_Srbija.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-macvanski-2c68bbcf.jpg",
     },
     Moravicki: {
       lyhyt: 'Gučan kylässä soi joka elokuu trumpettifestivaali, joka alkoi 1961 neljän orkesterin kisana ja vetää nyt satoja tuhansia kuulijoita.',
+      pitka: `Čačakin länsipuolella Länsi-Moravan kaivertama Ovčar-Kablarin rotko tunnetaan Serbian Athosvuorena: 1300-luvulta lähtien rotkoon rakennettiin yli 30 luostaria, joista kymmenkunta on säilynyt tähän päivään. Suurin osa nykyisistä rakennuksista syntyi osmanivallan aikana, jolloin luostarit toimivat serbiläisen kulttuurin ja uskonnon turvapaikkoina. Vuonna 2001 rotko suojeltiin luonnonmuistomerkkinä ainutlaatuisen maiseman ja tiheän luostarikeskittymän vuoksi. Nykyään patikoijat voivat kulkea samaa polkua, joka yhdistää kymmenen vielä toimivaa luostaria jokivarren kallioiden lomassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-moravicki-0f2fc38f.jpg",
+          lahde: "svickova, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "svickova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gucastatue.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-moravicki-0f2fc38f.jpg",
     },
     'Nišavski': {
       lyhyt: 'Niš oli roomalaisten Naissus, jossa syntyi keisari Konstantinus Suuri – hänen Mediana-huvilansa rauniot ovat kaupungin laidalla.',
+      pitka: `Niš kantaa toisenkin, synkemmän muiston: Ćele Kula eli Kallotorni rakennettiin vuoden 1809 Čegarin taistelun jälkeen, kun komentaja Stevan Sinđelić räjäytti itsensä ja miehensä mieluummin kuin antautui turkkilaisille. Voittaja Hurshid-pasha käski koota kaatuneiden serbikapinallisten pääkallot torniksi pelotteeksi – alun perin 952 kalloa neljälle sivulle. Serbien vallattua Niš takaisin 1878 torni katettiin ja sille rakennettiin kappeli, ja se julistettiin suojelluksi muistomerkiksi jo 1948. Nykyään noin 60 kalloa on yhä näkyvissä seinissä, muistuttaen käydystä kovemmin sanoin kuin mikään kyltti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-nisavski-7f795971.jpg",
+          lahde: "Ванилица, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ванилица",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Wiki.Niš_foto_Mediana_522.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-nisavski-7f795971.jpg",
     },
     'Severno-Banatski': {
       lyhyt: 'Kikindan puistojen puihin kerääntyy talveksi satoja sarvipöllöjä, ja kaupunkia kutsutaan Serbian pöllöpääkaupungiksi.',
+      pitka: `Kikindan pöllöjen lisäksi kaupunki tunnetaan yllättävästä löydöstä: joulukuussa 1996 tiilitehtaan savikuopasta paljastui 20 metrin syvyydestä lähes täydellinen mammutin luuranko. Naaraspuoliseksi tunnistettu Kika oli noin 4,7 metriä korkea ja 7 metriä pitkä, ja sen syöksyhampaat olivat peräti 3,5 metriä pitkät. Luiden säilymisaste on noin 90 prosenttia, mikä tekee löydöstä yhden Euroopan parhaiten säilyneistä mammuttilöydöistä. Kika on nykyään esillä Kikindan luonnontieteellisessä museossa ja on kaupungin ylpeys aivan yhtä paljon kuin talvehtivat pöllöt.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-severno-banatski-1460f763.jpg",
+          lahde: "Anastasish, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Anastasish",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kikinda_City_Hall.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-severno-banatski-1460f763.jpg",
     },
     Pcinjski: {
       lyhyt: 'Vranjska Banjan lähteistä purkautuu 96-asteista vettä, ja ne ovat Serbian kuumimmat.',
+      pitka: `Vranjessa kirjallisuus kulkee kadunkulmilta oopperalavalle. Kaupungin tunnetuin poika, kirjailija Bora Stanković, kuvasi 1900-luvun alussa tarinoissaan intohimoja ja sukupolvien välisiä ristiriitoja niin raa'asti, että hänen kotikaupunkinsa asukkaat suuttuivat hänelle vuosikymmeniksi. Nykyisin Vranje on ylpeä hänestä: kaupungin lukio kantaa hänen nimeään, ja Unesco on nimennyt kaupungin musiikin kaupungiksi sen elävän romanimusiikkiperinteen ansiosta. Kävele keskustan kujilla ja kuulet yhä samaa säveltä, josta Stanković kirjoitti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pcinjski-5425f220.jpg",
+          lahde: "Ванилица, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ванилица",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Crkva_Svetog_proroka_Ilije_u_Vranjskoj_Banji.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pcinjski-5425f220.jpg",
     },
     Pirotski: {
       lyhyt: 'Pirotissa kudotaan yhä kilim-mattoja, ja niiden yli sata perinteistä kuviota on suojattu alkuperämerkinnällä vuodesta 2002.',
+      pitka: `Pirotin piirin itälaidalla kohoaa Stara Planina eli Vanha vuori, ja sen huippu Midžor on koko Serbian korkein kohta rajakiistojen ulkopuolella: 2169 metriä. Huipulla pystyssä oleva betonipylväs merkitsee kohtaa, jossa Serbia päättyy ja Bulgaria alkaa. Vaeltajat nousevat huipulle kahta reittiä, ja talvella rinteillä hiihdetään Stara Planinan omalla laskettelukeskuksella. Vuoristo on myös luonnonsuojelualue, jonka rotkoissa piileskelee muun muassa Kopren-vesiputous. Alueen pohjoispuolella kimmeltää Zavojsko-tekojärvi, joka syntyi kun Visočica-joki padottiin voimalaitosta varten.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pirotski-96c48605.jpg",
+          lahde: "Orjen, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Orjen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pirot_kilim_interior_design_Ethnographical_museum.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pirotski-96c48605.jpg",
     },
     Podunavski: {
       lyhyt: 'Smederevon linnoitus rakennettiin Tonavan rantaan 1400-luvulla despootti Đurađ Brankovićin pääkaupungiksi, ja sen tornit seisovat yhä.',
+      pitka: `Velika Planan liepeillä sijaitsee Radovanjski lug, lehto, jossa Serbian modernin valtion isänä pidetty Karađorđe Petrović sai surmansa vuonna 1817 – tapon takana oli poliittinen kilpailija, joka lähetti hänen päänsä lahjaksi Istanbulin sulttaanille. Paikalle on noussut muistomerkkikompleksi, kirkko ja museo, jossa säilytetään muun muassa ensimmäisen kansannousun tykki ja Karađorđen muotokuva. Alue on suojeltu erityisen tärkeänä historiallisena muistomerkkinä jo vuodesta 1979.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-podunavski-80681ef6.jpg",
+          lahde: "Miomir Magdevski, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Miomir Magdevski",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Fortress_Smederevo_25.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-podunavski-80681ef6.jpg",
     },
     'Severno-Backi': {
       lyhyt: 'Subotican kaupungintalo on unkarilaista jugendia, ja läheisen Palićjärven rannalla on saman aikakauden kylpyläpaviljonkeja.',
+      pitka: `Subotican keskustassa kohoaa Euroopan ainoa säilynyt unkarilaista secessio-tyyliä edustava synagoga, jonka arkkitehdit Dezső Jakab ja Marcell Komor suunnittelivat 1900-luvun alussa. Rakennuksen kupolit on päällystetty sinkillä ja seinät koristeltu ruusuilla, tulppaaneilla ja riikinkukon sulilla Transilvanian kansanperinteen hengessä. 2000-luvun alussa rakennus oli maailman uhanalaisimpien monumenttien listalla, mutta laaja restaurointi on palauttanut sen loiston. Nykyään synagoga toimii konserttisalina ja kulttuurikeskuksena, ei enää säännöllisenä seurakuntana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-severno-backi-9990214c.jpg",
+          lahde: "Nter25, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nter25",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gradska_kuća_u_Subotici.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-severno-backi-9990214c.jpg",
     },
     Pomoravski: {
       lyhyt: 'Despotovacin Manasijan luostaria ympäröivät linnoitusmuurit ja tornit – despootti Stefan Lazarević rakennutti sen 1400-luvun alussa.',
+      pitka: `Ćuprijan kaupungin alla lepää roomalainen Horreum Margi, aikanaan yksi Via Militariksen tärkeimmistä varuskunnista Konstantinopolin ja Rooman välisellä tiellä. Nimi tarkoittaa suoraan Margi-joen viljavarastoa, ja paikka toimikin koko alueen asejakelun ja viljan keskuksena jopa seitsemännen legioonan kotipesänä. Kaupunki ehti hetkeksi jopa Ylä-Mesian pääkaupungiksi ennen kuin valta siirtyi muualle. Nykyisin kaivauksia ja löytöjä pääsee tutkimaan Horreum Margi -museossa keskellä modernia Ćuprijaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pomoravski-26dc66d8.jpg",
+          lahde: "Mickey Mystique, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mickey Mystique",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Manasija_Monastery_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-pomoravski-26dc66d8.jpg",
     },
     'Raški': {
       lyhyt: 'Kraljevon lähellä oleva Studenican luostari perustettiin 1100-luvun lopulla, ja sen marmorikirkko on Unescon maailmanperintöä.',
+      pitka: `Raškin piirin eteläosassa leviää Pešterin ylätasanko, yksi Balkanin laajimmista ja korkeimmista tasangoista, jota paikalliset kutsuvat Sandžakin Siperiaksi armottomien talvien vuoksi. Karulla, yli tuhannen metrin korkeudessa sijaitsevalla ylängöllä laiduntaa lampaita, joiden maidosta valmistetaan Sjenican juustoa – perinteistä suolavedessä kypsytettyä juustoa, joka on ehdolla Unescon aineettoman kulttuuriperinnön listalle. Alue on myös harvinaisen eristynyt: kylät ovat pieniä ja etäisyydet pitkiä, mikä on säilyttänyt paimentolaiskulttuurin elävänä nykypäivään asti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-raski-e88ff6b9.jpg",
+          lahde: "Mickey Mystique, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mickey Mystique",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Studenica_monastery,_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-raski-e88ff6b9.jpg",
     },
     'Južno-Banatski': {
       lyhyt: 'Deliblaton hiekka-alue on Euroopan suurin sisämaan hiekkakenttä, ja sen dyynejä kutsutaan Euroopan Saharaksi.',
+      pitka: `Vršacin vuorten rinteillä kasvaa Serbian laajin yhtenäinen viinitarha-alue, yli 1700 hehtaaria pelkästään Vršacin ympärillä. Aluetta kutsutaan paikallisesti viinitarhojen mereksi, ja jo roomalaiset legioonalaiset joivat täältä peräisin olevaa viiniä ennen kuin alue tunnettiin Serbiana. Nykyään rinteillä viljellään pääosin valkoviinirypäleitä, erityisesti italialaista rieslingiä, ja viinitiellä voi pysähtyä useissa perheviinitiloissa maistelemaan satoa suoraan tuottajalta. Vršacin torni, keskiaikainen linnoitus kaupungin yllä, tarjoaa parhaan näköalan koko viinimerelle.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-juzno-banatski-d935a9b8.jpg",
+          lahde: "Jelena Kostic, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jelena Kostic",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Deliblato_Sands_View.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-juzno-banatski-d935a9b8.jpg",
     },
     Sremski: {
       lyhyt: 'Fruška Gora on Serbian vanhin kansallispuisto, ja sen metsäisillä rinteillä toimii yhä kuusitoista ortodoksista luostaria.',
+      pitka: `Sremska Mitrovican katujen alla lepää Sirmium, joka oli 300-luvulla yksi Rooman valtakunnan neljästä pääkaupungista Trierin, Milanon ja Izmitin rinnalla. Kaupunki synnytti peräti kymmenkunta Rooman keisaria, muun muassa Aurelianuksen ja Probuksen, ja sen keisarillinen palatsi, kylpylät ja foorumi olivat aikansa mahtavimpia. Nykyisin kaivauksissa paljastuu yhä lisää palatsin ja basilikan raunioita keskellä modernia kaupunkia, ja löydöt on koottu Sremin museoon. Harvassa Euroopan kaupungissa kävelee yhtä suoraan valtakunnan ytimen päällä kuin täällä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-sremski-fba8d716.jpg",
+          lahde: "Lukder, Wikimedia Commons (CC0)",
+          tekija: "Lukder",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:The_Bešenovo_Monastery_on_the_Fruška_Gora._Serbia.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-sremski-fba8d716.jpg",
     },
     'Šumadijski': {
       lyhyt: 'Kragujevacin autotehtaalla kootaan nykyään Fiatin Grande Panda -malleja, myös sähköautoina.',
+      pitka: `Kragujevacin laidalla leviää Šumaricen muistopuisto, 352 hehtaarin alue, joka pystytettiin muistoksi lokakuun 1941 joukkoteloituksista. Saksalaiset miehitysjoukot ampuivat tuolloin kahdessa päivässä tuhansia kaupungin siviilejä, miehiä ja poikia, myös koulusta suoraan haettuja, kostoksi partisaanien iskuista. Puistossa on 30 joukkohautaa ja kymmenen muistomerkkiä, joista tunnetuin muistuttaa rikkinäisen lentävän linnun muodossa surmattuja koululaisia. Paikka on yksi Serbian raskaimmista mutta tärkeimmistä muistopaikoista, ja sitä käy vuosittain kymmeniätuhansia kävijöitä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-sumadijski-e436013b.jpg",
+          lahde: "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bjoertvedt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kragujevac_FIAT_IMG_7810.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-sumadijski-e436013b.jpg",
     },
     Toplicki: {
       lyhyt: 'Kuršumlijan lähellä on Đavolja varoš eli Paholaisen kaupunki: parisataa maapyramidia, joiden huipuilla keikkuu kivilohkareita.',
+      pitka: `Prokupljen lähellä sijaitseva Pločnikin kaivauspaikka mullisti vuonna 2007 käsityksen ihmiskunnan metallihistoriasta: siellä löytyi maailman toiseksi vanhin näyttö kuparinsulatuksesta, ajalta noin 5500–5000 eaa., mikä siirsi kuparikauden alkua satoja vuosia aiempaan. Vinčan kulttuurin asukkaat rakensivat sulattoihinsa savesta tehtyjä ilmastointiputkia ja savupiippuja kauan ennen kuin vastaavaa tekniikkaa nähtiin muualla. Paikalta on löytynyt myös maailman vanhin tunnettu tinapronssiesine, noin 4650 eaa. valmistettu foliopala. Löydöt tekevät tästä vaatimattomasta kylästä yhden arkeologian tärkeimmistä kohteista koko maailmassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-toplicki-e0820d43.jpg",
+          lahde: "MarkoStankovic88, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "MarkoStankovic88",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Devil's_Town_-_Đavolja_varoš.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-toplicki-e0820d43.jpg",
     },
     Zajecarski: {
       lyhyt: 'Zaječarin lähellä on Felix Romuliana, keisari Galeriuksen palatsi, joka on ollut Unescon maailmanperintöä vuodesta 2007.',
+      pitka: `Negotinin ja Zaječarin välisellä kukkulalla seisoo Rajacin kylä, jonka rinteillä on lähes 270 kivistä viinikellaria eli pimnicaa, rakennettu 1700-luvun puolivälistä 1930-luvulle asti. Kellarit on kaivettu osittain maahan, jotta lämpötila pysyisi tasaisena ympäri vuoden, ja lähikylä Rogljevo tarjoaa vielä 150 lisää samaa perinnettä. Kuudenkymmenen kellarin joukossa toimii yhä viininviljelijöitä, jotka jatkavat satojen vuosien vanhaa käsityötä ja kutsuvat tuotettaan Rajacin aarteeksi. Kokonaisuus on ehdolla Unescon maailmanperintölistalle ainutlaatuisena viininviljelyarkkitehtuurin näytteenä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-zajecarski-82134d80.jpg",
+          lahde: "Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0 rs)",
+          tekija: "Pudelek (Marcin Szala)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gamzigrad_-_Felix_Romuliana_(by_Pudelek)_1.jpg",
+          lisenssi: "CC BY-SA 3.0 rs",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0/rs/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-zajecarski-82134d80.jpg",
     },
     Zlatiborski: {
       lyhyt: 'Mokra Goran Šarganin kasi on kapearaiteinen museorata, joka nousee vuoren rinnettä kahdeksikon muotoisena silmukkana.',
+      pitka: `Bajina Baštan yläpuolella, keskellä Drina-jokea kohoavalla kalkkikiviluodolla seisoo pieni talo, jonka nuoret uimarit rakensivat käsin vuonna 1968 löydettyään paikan täydelliseksi rantautumispaikaksi. Tulva on tuhonnut talon jo seitsemän kertaa, mutta paikalliset ovat rakentaneet sen joka kerta uudelleen samalle kivelle. Kun National Geographic julkaisi kuvan talosta päivän kuvanaan, siitä tuli yksi Serbian tunnetuimmista matkailunähtävyyksistä ilman minkäänlaista markkinointia. Ainoa tapa päästä talolle on uida tai soutaa virtaavan joen yli, eikä siltaa ole koskaan rakennettu.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-zlatiborski-77c59adf.jpg",
+          lahde: "Ванилица, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ванилица",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mokra_Gora,_Šarganska_osmica_013.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/srb-maakunta-zlatiborski-77c59adf.jpg",
     },
   },
   /*
@@ -5350,57 +7241,273 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BIH: {
     'Banja Luka': {
       lyhyt: 'Banja Lukan keskustan halki virtaa Vrbas-joki, jonka rannalla seisoo Kastelin linnoitus ja jonka koskissa lasketaan kumiveneillä.',
+      pitka: `Banja Luka kätkee sydämeensä 1500-luvun arkkitehtuurin helmen: Ferhadija-moskeijan, jonka rakennutti Gazi Ferhad-paša Sokolović vuonna 1579. Suunnittelun uskotaan syntyneen legendaarisen arkkitehti Mimar Sinanin oppilaiden käsissä, ja 43 metriä kohoava minareetti hallitsee yhä kaupunkikuvaa geometrisine koristeineen. Pihapiiriin kuuluu turkkilaisbarokkia henkivä suihkulähde eli šadrvan sekä kolme perhehautakammiota, turbea. Aikanaan kompleksin ylläpitoon käytettiin yli 30 kylän tuloja, mikä teki siitä paljon muutakin kuin rukoushuoneen: torin, hammamin ja koko yhteisön kohtaamispaikan. Tänään moskeija seisoo yhä keskellä kaupunkia avoinna kaikille, jotka haluavat nähdä ottomaanikauden käsityötaidon huipentuman.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-banja-luka-2dea50c9.jpg",
+          lahde: "ArhistefoBL, Wikimedia Commons (CC0)",
+          tekija: "ArhistefoBL",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rijeka_Vrbas_i_tvrdjava_Kastel_Banja_Luka.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-banja-luka-2dea50c9.jpg",
     },
     Bijeljina: {
       lyhyt: 'Bijeljinan laitaan on koottu Stanišićin etnokylä, jonne on tuotu vanhoja puutaloja ja myllyjä eri puolilta entistä Jugoslaviaa.',
+      pitka: `Bijeljinan ympärillä leviää Semberijan tasanko, yksi koko alueen tuottavimmista maatalousmaisemista. Peltoaukeat tuottavat vuosittain kymmeniätuhansia tonneja paprikaa, tomaattia ja erityisesti kaalia, jolle seutu on tunnettu ilmaston ja hedelmällisen maaperän ansiosta. Viljasiilot käsittelevät vuosittain yli 300 000 tonnia viljaa ja öljykasveja, ja maidontuotantokin lasketaan kymmenissä miljoonissa litroissa. Tasanko kattaa merkittävän osan koko alueen viljelysmaasta, ja se näkyy myös maisemassa: loputtomilta tuntuvat peltoaukeat ulottuvat horisonttiin asti. Syksyisin sadonkorjuu värittää koko Semberijan kultaisen ruskeaksi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bijeljina-025edb80.jpg",
+          lahde: "Bojana Wiki PG, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bojana Wiki PG",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Etno_selo_Stanišići,_Bijeljina_01.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bijeljina-025edb80.jpg",
     },
     'Bosnian Podrinje': {
       lyhyt: 'Goražden lähellä toimi 1519–1523 nykyisen Bosnia ja Hertsegovinan ensimmäinen kirjapaino, jossa painettiin kirkkoslaavinkielisiä kirjoja.',
+      pitka: `Goraždeen halkoo Drina-joki, jonka ympärille koko Podrinjen seutu on rakentunut – nimikin tarkoittaa suoraan 'Drinan vartta'. Joen kirkas vesi virtaa syvien vuorten välistä, ja rannoilla harrastetaan koskimelontaa, kalastusta, pyöräilyä ja vaellusta ympäri vuoden. Kanjonin jyrkät rinteet tarjoavat näköalapaikkoja, joista joen mutkittelua voi seurata kilometrien päähän. Osa Drinan alkuvedestä syntyy kauempana etelässä kahden vuoristojoen yhtyessä, mikä tekee koko vesistöstä yhden alueen vaikuttavimmista luontokohteista. Goraždessa luonto ja hidas jokielämä kohtaavat sopivassa tahdissa retkeilijälle.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bosnian-podrinje-5b46aaf7.jpg",
+          lahde: "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bjoertvedt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gorazde_south_IMG_0570.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-bosnian-podrinje-5b46aaf7.jpg",
     },
     'Brčko Distrikt': {
       lyhyt: 'Brčko on Sava-joen satamakaupunki, ja piirillä on oma pormestarinsa, parlamenttinsa ja hallintonsa.',
+      pitka: `Brčkon satamakaupungin katukuva syntyi pitkälti Itävalta-Unkarin hallintokaudella 1878-1918, jolloin kaupunkiin rakennettiin osa Bosnian vaikuttavimmasta arkkitehtuurista. Kaupungintalo vuodelta 1892, arkkitehti Ćiril Metod Ivekovićin suunnittelema, yhdistelee mauriaishenkisiä koristeaiheita keskieurooppalaiseen rakennustapaan. Trg Mladih, kaupungin keskusaukio, on reunustettu 1800-luvun lopun rakennuksilla, jotka kertovat ajan vaurastumisesta. Sava-joen satama teki Brčkosta jo 1400-luvulta lähtien merkittävän luumujen ja lihan vientipaikan, ja kaupunki tunnettiinkin pitkään erityisesti kuivattujen luumujen kaupasta. Brčkossa ottomaani- ja keskieurooppalaiset vaikutteet limittyvät kadunkulmissa tavalla, joka ei toistu missään muualla maassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-brcko-distrikt-bf4e5af3.jpg",
+          lahde: "Vladanovski, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vladanovski",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Brčansko_šetalište.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-brcko-distrikt-bf4e5af3.jpg",
     },
     'Central Bosnia': {
       lyhyt: 'Jajcen keskustassa Pliva-joki syöksyy vesiputouksena Vrbakseen, ja putouksen yllä kohoaa vanhan linnoituksen muuri.',
+      pitka: `Travnikin vanhan kaupungin sydämessä kumpuaa Plava Voda, karstilähde, joka pulppuaa esiin suoraan kalliorotkosta linnan juurelta. Lähteestä syntyy lyhyt mutta kirkasvetinen joki, joka on kaupungin tärkein juomavesilähde vielä tänäänkin ja jonka ympäristö on nimetty kansallismuistomerkiksi. Ylempänä kohoaa Vlašićin tunturi, lähes 2000 metriin nouseva vuoristo, joka tunnetaan sekä talvihiihdosta että perinteisestä lampaanmaidosta valmistetusta suolajuustosta. Juustoa on valmistettu tunturin laidunmailla sukupolvien ajan, ja sen maku kertoo karusta mutta anteliaasta ylängöstä. Travnikissa vesi ja vuoristo kohtaavat tavalla, joka tekee kaupungista yhden Keski-Bosnian kiinnostavimmista pysähdyspaikoista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-central-bosnia-0640cb43.jpg",
+          lahde: "Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Jocelyn Erskine-Kellie",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bosnia_and_Herzegovina_-_Pliva_Waterfall,_Jajce.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-central-bosnia-0640cb43.jpg",
     },
     Doboj: {
       lyhyt: 'Dobojn linnoitus valvoo mäeltä Bosna-joen laaksoa, ja kaupunki on maan rautateiden tärkeä risteysasema.',
+      pitka: `Vain parinkymmenen kilometrin päässä Dobojista, Teslićin kylpylässä Banja Vrućicassa, on kylpenyt väkeä jo antiikin roomalaisista lähtien. Lähteiden hiilihapollinen, lievästi hapan vesi pulppuaa maasta noin 32-asteisena, ja sitä on perinteisesti käytetty sydän- ja verisuonivaivojen sekä reuman hoitoon. Kylpylä sijaitsee Usora-joen laaksossa, Borjan ja Vučja planinan vuorten lehti- ja havumetsien keskellä, mikä tekee ympäristöstä rauhoittavan riippumatta siitä hakeeko hoitoa vai vain lepoa. Nykyään alueella toimii neljän hotellin kokonaisuus yli tuhannella vuodepaikalla, mikä tekee siitä koko maan suurimman lämminvesikylpylän. Doboj tunnetaan linnoituksestaan, mutta aivan sen kupeessa lymyää tämä vuosisatainen hyvinvoinnin keidas.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-doboj-81d21bee.jpg",
+          lahde: "Inga Cvijanovic, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Inga Cvijanovic",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tvrđava_Doboj_7.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-doboj-81d21bee.jpg",
     },
     'Foča': {
       lyhyt: 'Sutjeskan kansallispuistossa kasvaa Perućican aarniometsä, ja sen reunalla kohoaa Maglić, Bosnia ja Hertsegovinan korkein huippu.',
+      pitka: `Fočan liepeillä Tara-joki on kaivertanut yhden Euroopan syvimmistä kanjoneista, paikan, jota kutsutaan usein 'Euroopan kyyneleeksi' sen kirkkaan, juomakelpoisen veden vuoksi. Jyrkät kalliot kohoavat yli 1300 metrin korkeuteen joen yllä, ja koskimelojat kokevat matkalla noin 50 koskea vaikeusasteiden 2-4 välillä. Kaupungissa itsessään seisoo Aladža-moskeija vuodelta 1549, ensimmäinen puhtaasti klassista ottomaanityyliä edustava moskeija koko Bosniassa, rakennettu Mimar Sinanin lähipiirin toimesta. Sen värikäs sisäkoristelu on antanut sille lempinimen 'kirjava moskeija', ja se lasketaan yhdeksi maan arvokkaimmista ottomaaniajan rakennusmuistomerkeistä. Fočassa villi luonto ja vuosisatainen käsityötaito kohtaavat samalla kaupunkiseudulla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-foca-e31fb6a7.jpg",
+          lahde: "Erwan Martin from Plouzané, France, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Erwan Martin from Plouzané, France",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Perućica_primeval_forest_(7901927430).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-foca-e31fb6a7.jpg",
     },
     'Herzegovina-Neretva': {
       lyhyt: 'Blagajssa Buna-joki pulppuaa kallion alta yhtenä Euroopan suurimmista lähteistä, ja sen partaalla seisoo 1500-luvun dervissitalo.',
+      pitka: `Hertsegovinan viinimaisema keskittyy Čitlukin ympärille kohoavalle Brotnjon karstiylängölle, jota kutsutaan koko Bosnia ja Hertsegovinan viininviljelyn kehdoksi. Kuiva, kalkkikivinen maaperä ja Mostaria ympäröivien vuorten suojaama, pitkiä ja kuumia kesiä suosiva ilmasto ovat tehneet alueesta ihanteellisen viinitarhoille jo yli 2000 vuoden ajan, illyyrien ajoista lähtien. Lähes jokaisella Brotnjon perheellä on oma pieni viinitarha ja kellari, ja perinne on joissakin suvuissa jatkunut yli 300 vuotta polvesta toiseen. Alueen omat rypäleet, valkoinen Žilavka ja punainen Blatina, kasvavat parhaiten juuri tässä punaisessa, hyvin vettä läpäisevässä maaperässä. Viiniä tarjoillaan perinteisesti kotileivän, kuivatun lihan, juuston ja oliivien kanssa, Hertsegovinan omalla pöydällä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-herzegovina-neretva-3216829f.jpg",
+          lahde: "Jocelyn Erskine-Kellie, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jocelyn Erskine-Kellie",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tekiya_Dervish_House_and_Buna_River.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-herzegovina-neretva-3216829f.jpg",
     },
     Posavina: {
       lyhyt: 'Posavina on maan pienin kantoni, vain 331 neliökilometriä, ja sen pohjoisrajana virtaa Sava-joki.',
+      pitka: `Posavina on pinta-alaltaan koko alueen pienin kantoni, mutta sen tasainen, Saava-joen kerrostama maaperä on poikkeuksellisen hedelmällistä. Joki on vuosituhansien saatossa jättänyt rantamaille paksuja tulva-alueen kerrostumia, joiden ansiosta seutu on tunnettu viljavana maatalousalueena. Pääkaupunki Orašje ja alueen suurin kaupunki Odžak sijaitsevat molemmat aivan Saavan varrella, Kroatian rajan tuntumassa. Talous nojaa edelleen vahvasti maatalouteen sekä pieniin ja keskisuuriin yrityksiin, ja peltoaukeat vuorottelevat joen mutkien kanssa koko kantonin matkalta. Pienestä koostaan huolimatta Posavina tarjoaa tiiviin läpileikkauksen Bosnian pohjoisen jokimaiseman elämään.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-posavina-10f13696.jpg",
+          lahde: "MrWeasel91, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "MrWeasel91",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Odzak,_Hauptplatz.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-posavina-10f13696.jpg",
     },
     Sarajevo: {
       lyhyt: 'Sarajevon Baščaršijan puinen Sebilj-kaivo on vanhankaupungin tunnus, ja tarun mukaan siitä juonut palaa kaupunkiin.',
+      pitka: `Sarajevon laidalla, Ilidžan kaupunginosassa, Bosna-joki syntyy yhtäkkiä tyhjästä: kymmenet lähteet pulppuavat esiin Igman-vuoren juurelta ja muodostavat Vrelo Bosnen puiston saarineen ja joutsenlampineen. Kolmen ja puolen kilometrin pituinen puistokuja Velika Aleja istutettiin jo vuonna 1892, ja sen kastanja- ja plataanirivistöjä kuljetaan yhä fiakerilla – avonaisella hevosvaunulla, samanlaisella kuin aikoinaan Wienin ja Budapestin kaduilla. Paikalliset tulevat tänne kävelemään, pyöräilemään ja katsomaan lintuja iltaisin, kaukana kaupungin vilskeestä. 603 hehtaarin suojeltu luonnonmuistomerkki on yksi Sarajevon rakastetuimmista pakopaikoista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-9e774c97.jpg",
+          lahde: "Fred Romero from Paris, France, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Fred Romero from Paris, France",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sarajevo_-_Sebilj_(49090400881).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-9e774c97.jpg",
     },
     'Sarajevo-romanija': {
       lyhyt: 'Jahorina on Bosnia ja Hertsegovinan suurin laskettelukeskus, ja sen korkein huippu Ogorjelica nousee 1 916 metriin.',
+      pitka: `Romanijan ylängöllä, muutaman kilometrin päässä Mokron kylästä, kalkkikivimassiivin sisältä pulppuaa esiin Mokranjska Miljacka – maanalainen joki, joka virtaa esiin Bosnia ja Hertsegovinan pisimmästä tunnetusta luolastosta. Kartoitettua käytävää on jo yli seitsemän kilometriä, ja sen kylmässä pimeydessä sukeltajat ovat löytäneet tieteelle täysin tuntemattomia lajeja. Veden lämpötila pysyy vain noin viidessä asteessa ympäri vuoden, ja luola on suojeltu luonnonmuistomerkkinä. Italialais-bosnialainen sukellusryhmä on tutkinut käytäviä vuodesta 2007 lähtien, eikä luolan loppua ole vieläkään löydetty.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-romanija-09ac959b.jpg",
+          lahde: "EXIT Photo Team, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "EXIT Photo Team",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jahorina_mountain_2018.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-sarajevo-romanija-09ac959b.jpg",
     },
     Trebinje: {
       lyhyt: 'Trebinjen vanhaa toria varjostavat yli satavuotiaat plataanit, ja kaupungin halki virtaa kirkas Trebišnjica-joki.',
+      pitka: `Muutaman kilometrin päässä Trebinjestä, Trebišnjica-joen rannalla, seisoo Tvrdošin luostari, joka perustettiin 1200-luvun lopulla vanhan roomalaisen kirkon paikalle. Munkit ovat viljelleet viinitarhoja jo 1400-luvulta asti, ja luostarin 1500-luvulla louhittu kivikellari on ollut käytössä katkeamatta vuosisatojen ajan. Sen holveissa kypsyy Vranac- ja Žilavka-viiniä satavuotiaissa tammitynnyreissä, kun taas aivan viereen on noussut moderni painovoimaan perustuva viinitehdas. Tvrdoš tunnetaan nykyään kansainvälisesti viineistään, joissa yhdistyvät viiden vuosisadan kokemus ja uusin tekniikka.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-trebinje-ee7e42d0.jpg",
+          lahde: "Emilijatrklja, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Emilijatrklja",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Platanitrebinje.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-trebinje-ee7e42d0.jpg",
     },
     Tuzla: {
       lyhyt: 'Tuzla seisoo suolakerrosten päällä, ja keskustaan on kaivettu suolavetisiä uimajärviä – nimikin tarkoittaa turkiksi suolakaivosta.',
+      pitka: `Tuzlan vanhassa kaupungissa seisoo Šarena džamija, Kirjava moskeija – kaupungin vanhin, alun perin 1500-luvun alusta. Se on saanut lempinimensä koristeellisista, väriä uhkuvista sisä- ja ulkomaalauksistaan, jotka erottavat sen muista alueen moskeijoista. Tulipalo tuhosi rakennusta pahoin, ja se rakennettiin uudelleen vuonna 1888 Itävalta-Unkarin aikana – samalla vuosikymmenellä, jolloin kaupunkiin nousi myös eurooppalaistyylistä secession-arkkitehtuuria. Moskeijan edessä sijaitsevan Behram-begin medresan mukaan koko rakennus tunnetaan myös nimellä Atik Behram-begin moskeija.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-tuzla-cf59887f.jpg",
+          lahde: "Sebleouf, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Sebleouf",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tuzla_-_Pannonian_Lakes_9_(2019).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-tuzla-cf59887f.jpg",
     },
     'Una-Sana': {
       lyhyt: 'Una-joen Štrbački buk syöksyy 25 metrin korkeudelta Kroatian rajalla, ja se on Unan kansallispuiston korkein vesiputous.',
+      pitka: `Unan joen rannalla, noin 14 kilometriä Bihaćista koilliseen, kohoaa Ostrožacin linna – sen vanhin osa mainitaan asiakirjoissa jo vuonna 1286. Linnaa on rakennettu ja laajennettu vuosisatojen ajan, mutta sen nykyinen uusgoottilainen ilme syntyi vasta 1900-luvun taitteessa, kun linnan viimeinen omistaja myi sen itävaltalaiselle kreiville, joka rakennutti sen uudelleen vuosina 1900–1902. Vuodesta 1967 lähtien linnaa ympäröivä kuvanveistäjien kolonia on tuonut paikalle taiteilijoita ympäri maailmaa veistämään paikallista bihacit-kiveä. Alueella seisoo nykyään yli 130 monumentaalista kiviveistosta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-una-sana-61888a28.jpg",
+          lahde: "Julian Nyča, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Julian Nyča",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Štrbački_buk_1.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-una-sana-61888a28.jpg",
     },
     Vlasenica: {
       lyhyt: 'Vlasenican seutu on metsäistä ylänköä, joka laskeutuu idässä Drinan laaksoon – joki on raja Serbian kanssa.',
+      pitka: `Vlasenican seudulla, Sošarin kylässä, lepää yksi Bosnian lukuisista keskiaikaisista kivihautausmaista: alueella on tähän mennessä laskettu 71 nekropolia ja peräti 1595 stećak-hautakiveä, joista 65:ssä on kaiverrettu koriste ja yhdessä kirjoitus. Kivet on veistetty kalkkikivestä 1100–1500-luvuilla, ja niiden pintaan on kaiverrettu tanssi- ja metsästyskohtauksia, geometrisia kuvioita sekä kyrillisiä kirjoituksia. Koko ilmiö – stećci – on Unescon maailmanperintökohde, ja sen levinneisyysalue ulottuu nykyisen Bosnian lisäksi Serbiaan, Montenegroon ja Kroatiaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-vlasenica-a7c9c67d.jpg",
+          lahde: "j.budissin (Julian Nyča) stitched by Marku1988 This image was created with Hugin., Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "j.budissin (Julian Nyča) stitched by Marku1988 This image was created with Hugin.",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vlasenica_Panorama.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-vlasenica-a7c9c67d.jpg",
     },
     'West Bosnia': {
       lyhyt: 'Livnon juustoa tehdään yhä gruyèren tapaan, samalla menetelmällä, jonka sveitsiläiset juustomestarit opettivat seudulle 1886.',
+      pitka: `Livnon ja Tomislavgradin kuntien rajalla lepää Buško jezero, Euroopan suurin tekojärvi: sen pinta-ala on lähes 56 neliökilometriä ja tilavuus yli 780 miljoonaa kuutiometriä. Järvi syntyi vuonna 1974, kun karstipoljea eli kalkkikivilaaksoa patoava vesivoimalaitos otettiin käyttöön ja alueen katoveet alkoivat kertyä sen taakse. Vesi virtaa alun perin Länsi-Bosnian ja Länsi-Hertsegovinan poljen alaisista karstilähteistä, joten järvi kokoaa yhteen koko seudun sadevedet ja lumensulamisvedet. Kesäisin tyyni vuoristojärvi houkuttelee kalastajia ja uimareita 716 metrin korkeudessa merenpinnasta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-bosnia-4f73f657.jpg",
+          lahde: "Brian Eager, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Brian Eager",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gornji_Grad_and_Begluk_in_Livno_during_autumn.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-bosnia-4f73f657.jpg",
     },
     'West Herzegovina': {
       lyhyt: 'Trebižat-joen Kravican vesiputous valuu leveänä kaarena altaaseen, jossa kesäisin uidaan.',
+      pitka: `Ljubuškin ympäristön aurinkoisilla rinteillä kasvaa žilavka, valkoviinirypäle, jota on viljelty samoilla poljilla jo 1300-luvulta lähtien. Rypäle antaa raikkaan, hapokkaan viinin, joka on ollut vuosisatoja Hertsegovinan tärkein valkoviini Blatina-punaviinin rinnalla. Vasta vuonna 1970 žilavka sai virallisen alkuperänimityksensä, ja seuraavana vuonna sen parhaalle laadulle myönnettiin oma suojattu asemansa – yksi entisen Jugoslavian ensimmäisistä nimisuojatuista viineistä. Nykyään lasillinen kylmää žilavkaa kalliolla lounasta syödessä on monelle matkailijalle tiivistetty kuva koko Länsi-Hertsegovinasta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-herzegovina-d4cc1e00.jpg",
+          lahde: "Marcin Ostajewski, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Marcin Ostajewski",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kravica_Waterfalls.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-west-herzegovina-d4cc1e00.jpg",
     },
     'Zenica-Doboj': {
       lyhyt: 'Zenicassa on tehty terästä vuodesta 1892, ja terästehtaan piiput näkyvät yhä Bosna-joen laakson yli.',
+      pitka: `Kaknjin lähellä, kylässä nimeltä Kraljeva Sutjeska eli 'Kuninkaan kanjoni', sijaitsi keskiaikaisen Bosnian kuningaskunnan hovi. Bosnian banuksi kutsuttu Stjepan II Kotromanić perusti hovin tänne 1300-luvulla, ja lähistöllä kohoavalla Grgurevon kummulla ovat yhä näkyvissä kuninkaanlinnan rauniot vuodelta 1330. Paikalle 1300-luvulla perustettu fransiskaaniluostari toimii yhä, ja sen kirjastossa säilytetään noin 11 000 teosta, joukossa 31 inkunaabelia sekä bosniankielistä kyrillistä käsikirjoitusperinnettä. Kansallismonumentiksi julistettu luostari on yksi harvoista paikoista, joissa keskiajan Bosnian kuninkaallinen historia on edelleen käsin kosketeltavissa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-zenica-doboj-e9880795.jpg",
+          lahde: "Ioacc1234red, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ioacc1234red",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Зеница_20230223_131618.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/bih-maakunta-zenica-doboj-e9880795.jpg",
     },
   },
   /*
@@ -5425,27 +7532,123 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MKD: {
     Eastern: {
       lyhyt: 'Bregalnica-joen varren Kočanin laakso on Pohjois-Makedonian suurin riisinviljelyalue, ja sadonkorjuuta juhlitaan joka syksy.',
+      pitka: "Berovon tekojärvi lepää 990 metrin korkeudessa metsäisten rinteiden keskellä. Se on 75 hehtaarin kokoinen ja 2,5 kilometriä pitkä, ja paikalliset uivat, soutavat ja kalastavat siinä kesäisin. Štipin kaupunki kohoaa Isar-kukkulan linnoituksen juurella, ja kivinen Bezisten, entinen katettu basaari, toimii nykyään taidegalleriana. Štip on maan tekstiili- ja muotiteollisuuden keskus, ja kaupungissa järjestetään Kulttuurikesä-tapahtumasarjaa vuodesta 1987.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-eastern-dfd3cc5e.jpg",
+          lahde: "Деан Лазаревски, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Деан Лазаревски",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Оризови_полиња_во_Кочанско_Поле.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-eastern-dfd3cc5e.jpg",
     },
     Southeastern: {
       lyhyt: 'Strumican karnevaalista kirjoitti jo turkkilainen matkailija Evliya Çelebi 1670, ja naamiaiskulkue täyttää kadut yhä joka kevättalvi.',
+      pitka: "Dojranjärvi on pieni ja matala: pinta-alaa 43,1 neliökilometriä, pituutta noin 9 kilometriä ja syvyyttä enimmillään kymmenen metriä. Rannat jaetaan Kreikan kanssa, ja Pohjois-Makedonian osuus on 27,3 neliökilometriä. Ruovikot ovat tärkeä lintualue, jolla pesivät esimerkiksi kiharapelikaanit. Belasican vuoren rinteellä Novo Selon Smolare-vesiputous putoaa 39,5 metriä satavuotiaiden pyökkien keskellä, ja sinne pääsee noin 300 kiviportaan kautta. Valandovon lähellä Marvincin Isar-kukkulalla on kaivettu esiin yli 200 hautaa pronssikaudelta myöhäisantiikkiin, ja Strumican liepeillä Banskossa seisovat 300–400-luvun roomalaiskylpylän kivimuurit.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southeastern-71080379.jpg",
+          lahde: "Тиверополник, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Тиверополник",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Плоштад_Гоце_Делчев_Струмица.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southeastern-71080379.jpg",
     },
     Northeastern: {
       lyhyt: 'Kratovo on rakennettu sammuneen tulivuoren kraatteriin, ja kaupungissa on yhä kuusi vanhaa kivitornia ja kaarevia kivisiltoja.',
+      pitka: "Kumanovo on maan toiseksi suurin kaupunki, vuoden 2021 väestölaskennan mukaan 75 051 asukasta. Noin 30 kilometrin päässä koilliseen, Tatićev Kamenin harjanteella 1 010–1 030 metrin korkeudessa, on Kokino. Arkeologi Jovica Stankovski löysi paikan vuonna 2001, ja sen vanhimmat löydöt ovat 1800-luvulta eaa. Kivi-istuimet ja merkkikivet on tulkittu muinaiseksi observatorioksi, joka seurasi Auringon ja Kuun paikkoja horisontissa, mutta tulkinta on tutkijoiden kesken kiistanalainen. Kratovon lähellä Kriva-joen laaksossa puolestaan kohoaa kivipilareiden metsä, ja Osogovon vuorilla Kriva Palankan lähellä on luostari lähellä Bulgarian rajaa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-northeastern-983a946c.jpg",
+          lahde: "Dars at Macedonian Wikipedia, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Dars at Macedonian Wikipedia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kratovo-panorama.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-northeastern-983a946c.jpg",
     },
     Southwestern: {
       lyhyt: 'Ohridinjärvi on yli miljoona vuotta vanha, ja sen vedessä elää ohridintaimen, jota ei tavata luonnonvaraisena missään muualla.',
+      pitka: "Ohridinjärvi on 36 kilometriä pitkä, 358 neliökilometrin kokoinen ja enimmillään 288 metriä syvä. Noin puolet sen vedestä tihkuu itärannan maanalaisista lähteistä, ja yli viidennes tulee Prespanjärveltä, joka on 150 metriä ylempänä. Alue on kuulunut Unescon maailmanperintöluetteloon vuodesta 1979. Peštanin rannalla Luiden lahdella (Bay of Bones) on rakennettu kopio pronssikauden paalukylästä, jonka arkeologit ajoittavat vuosiin 1200–700 eaa.; jälleenrakennus tehtiin 2007–2008. Strugassa Drim-joen sillalla päättyy joka vuosi Strugan runousillat, jotka alkoivat 1961 ja joiden Kultaisen seppeleen ovat saaneet muun muassa Pablo Neruda (1972) ja Tomas Tranströmer (2003).",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southwestern-fb820c3a.jpg",
+          lahde: "kallerna, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "kallerna",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Church_of_St._John_at_Kaneo_6.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southwestern-fb820c3a.jpg",
     },
     Pelagonia: {
       lyhyt: 'Bitolan laidalla on Heraclea Lyncestis, Makedonian Filippos II:n perustama kaupunki, jonka basilikoiden lattiamosaiikit ovat säilyneet.',
+      pitka: "Bitola, jossa on vuoden 2021 väestölaskennan mukaan 69 287 asukasta, tunnettiin osmanien aikana konsulien kaupunkina, ja yhä kaupungissa on konsulaatteja. Pitkän Širok Sokakin kävelykadun kahvilat täyttyvät iltaisin. Kaupungin takana kohoaa Pelisterin kansallispuisto, joka oli Jugoslavian ensimmäinen, perustettu 30.11.1948; sen pinta-ala on 171,5 neliökilometriä ja huippu 2 601 metriä. Puiston rinteillä kasvaa molika-mäntyä, jonka metsät ulottuvat 1 200–1 600 metrin korkeuteen. Prilepissä Markovi Kulin linnoituksen rauniot ovat 120–180-metrisellä kukkulalla, ja sen muurit rakennettiin 1200–1300-luvuilla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-pelagonia-26d30929.jpg",
+          lahde: "Marcin Konsek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Marcin Konsek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2011_Bitola,_Heraclea_Lyncestis_(15).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-pelagonia-26d30929.jpg",
     },
     Polog: {
       lyhyt: 'Mavrovonjärvestä nousee kuivina kesinä esiin Pyhän Nikolaoksen kirkko, joka jäi veden alle, kun tekojärvi padottiin 1950-luvulla.',
+      pitka: "Vardar-joki alkaa Gostivarin lähellä Vrutokin lähteestä 683 metrin korkeudesta ja virtaa Egeanmereen asti 388 kilometrin matkan. Tetovossa Šarena-moskeija on rakennettu 1438 kahden sisaruksen lahjoituksena ja saanut nykyisen kirjavan ilmeensä 1833, kun Abdurrahman-pasha laajensi sen; seiniä koristavat kukkakuviot ja maisemat. Kaupungin yläpuolella Šar-vuorilla on Popova Šapkan hiihtokeskus. Mavrovon kansallispuisto perustettiin 1949 ja on maan suurin; puiston Korab-vuori, 2 764 metriä, on Pohjois-Makedonian korkein huippu. Radikan rotko on yli 25 kilometriä pitkä ja sen jyrkänteet ovat yli 300 metriä korkeita.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-polog-08567e22.jpg",
+          lahde: "Daniela Stefanoska, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Daniela Stefanoska",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Св._Никола_Маврово.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-polog-08567e22.jpg",
     },
     Skopje: {
       lyhyt: 'Skopjen laidalla on Matkan kanjoni – nimi tarkoittaa kohtua – ja sen tekojärveltä pääsee veneellä Vrelon luolaan.',
+      pitka: "Skopje syntyi uudelleen 26. heinäkuuta 1963 kello 5.17 tapahtuneen maanjäristyksen jälkeen: noin tuhat ihmistä kuoli, ja 75–80 prosenttia kaupungista tuhoutui. Vanhan rautatieaseman kello pysähtyi silloin, ja asemasta tuli kaupunginmuseo ja muistomerkki. Japanilainen Kenzo Tange voitti 60 prosenttia kansainvälisen kilpailun palkinnosta ja laati vuonna 1965 keskustan yleissuunnitelman. Kaupungin nykytaiteen museo perustettiin helmikuussa 1964 lahjoitusten varaan, ja sen puolalaisten suunnittelema talo avattiin 1970. Vanhan basaarin kupeessa kulkee Vardarin yli kivisilta, joka on 214 metriä pitkä ja 12 kaarta; sen rakennutti Mehmed II 1451–1469. Lähellä on Daut-pashan hamam, jonka 13 kupolin alla on vuodesta 1948 toiminut taidegalleria.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-skopje-7407cee9.jpg",
+          lahde: "Güldem Üstün from Istanbul, TURKEY, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Güldem Üstün from Istanbul, TURKEY",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Macedonia_(Skopje)_Beautiful_view_of_Matka_canyon_(26471426684).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-skopje-7407cee9.jpg",
     },
     Vardar: {
       lyhyt: 'Gradskon lähellä on Stobi, antiikin kaupunki Vardarin ja Crna-joen yhtymäkohdassa, jonka teatterin ja basilikoiden rauniot näkyvät yhä.',
+      pitka: "Tikveš on Pohjois-Makedonian suurin viinialue, ja sen viinitarhat, noin 11 000 hehtaaria, ulottuvat Kavadarcin ja Negotinon ympäristössä 110 metristä 800 metrin korkeuteen. Rypäleistä tunnetuin on tumma Vranec. Demir Kapijan rotkossa, jonka nimi tarkoittaa turkiksi Rautaporttia, Vardar puskee kalkkikivikallioiden läpi; antiikissa paikka tunnettiin nimellä Stenae, ja siellä on noin 3 000 vuotta vanhoja paionialaisia linnoituksia. Velesissä, jossa asuu vuoden 2021 väestölaskennassa 40 664 ihmistä, Vardar halkoo kaupunkia, ja sieltä on kotoisin runoilija Kočo Racin.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-vardar-791f8908.jpg",
+          lahde: "d_proffer, Wikimedia Commons (CC BY 2.0)",
+          tekija: "d_proffer",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Roman_city_ruins_Stobi_Macedonia_00.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-vardar-791f8908.jpg",
     },
   },
   /*
@@ -5473,39 +7676,182 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ALB: {
     Berat: {
       lyhyt: 'Beratia kutsutaan tuhannen ikkunan kaupungiksi, sillä sen valkoiset talot nousevat rinnettä ikkunarivi ikkunarivin yllä.',
+      pitka: "Berat ei ole pelkkä museo: linnoituksen muurien sisällä, 214 metrin korkeudessa Osum-joen yllä, asutaan yhä, ja kivikujien varrella on koteja, kahviloita ja parikymmentä kirkkoa. Neitsyt Marian kuolonuneen entisessä katedraalissa toimii Onufrin ikonimuseo, jossa on esillä 173 esinettä 1300-luvulta 1900-luvun alkuun. Onufri oli 1500-luvun maalari, joka tunnetaan omasta hehkuvasta punaisestaan. Linnasta laskeudutaan Mangalemin talojen kautta joelle ja 129 metriä pitkälle Gorican kivisillalle: sen seitsemän kaarta yhdistävät Mangalemin perinteisesti kristittyjen perheiden Goricaan, ja puusilta tässä oli jo 1780. Berat liitettiin Unescon maailmanperintökohteeseen Gjirokastërin rinnalle 2008. Keväällä sulamisvedet täyttävät Osumin 26 kilometrin kanjonin, jossa lasketaan koskia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-berat-3641295d.jpg",
+          lahde: "Michel NOCTURE, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Michel NOCTURE",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:The_old_town_of_Berat_2019.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-berat-3641295d.jpg",
     },
     'Dibër': {
       lyhyt: 'Dibërin itärajalla kohoaa 2 764 metrin Korab, joka on sekä Albanian että Pohjois-Makedonian korkein vuori.',
+      pitka: "Dibërin maakunta on Albanian koillisnurkan vuoristoa: korkeusero on 380 metristä 2 700 metriin, ja noin 107 000 asukasta jakaa lähes 2 600 neliökilometrin alueen. Maakuntakeskus Peshkopi, 651 metrin korkeudessa Mustan Drinin varrella, on alle 15 000 asukkaan kaupunki, jonka laidalla kohoaa höyryä rikkilähteistä: vesi purkautuu maasta 35–43,5-asteisena. Ensimmäinen kylpylä rakennettiin 1964, ja nykyinen 50 kylpyhuoneen rakennus avattiin 1990. Maakunnan länsiosassa Lurë–Dejën kansallispuisto, 20 242 hehtaaria, kätkee kaksitoista jääkauden jälkeen syntynyttä järveä, pyökki-, kuusi- ja mäntymetsiä sekä karhuja, ilveksiä ja susia. Korabille nousevat lähtevät usein Radomiran kylästä, johon pääsee autolla ilman rajoituksia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-diber-273ba90e.jpg",
+          lahde: "Desnosie, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Desnosie",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Korabi,_mountain_(Albania).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-diber-273ba90e.jpg",
     },
     'Durrës': {
       lyhyt: 'Durrësin keskustasta löydettiin 1966 talojen alta roomalainen amfiteatteri, Balkanin niemimaan suurin.',
+      pitka: "Durrës on Albanian vilkkain rantakaupunki ja yksi Adrianmeren suurimmista satamista, josta kulkee yli 1,5 miljoonaa matkustajaa vuodessa. Korinttolaiset ja korfulaiset siirtolaiset perustivat kaupungin 627 eaa., ja roomalaisille se oli Via Egnatian länsipää. Aivan rannan tuntumassa on maan suurin arkeologinen museo, perustettu 1951, jossa on 3 204 esinettä muinaisesta Dyrrhachiumista. Vanhan kaupungin bysanttilaisista muureista, 400–500-luvulta, on jäljellä noin kolmannes, ja niiden kulmassa on 1400-luvun venetsialaistorni, halkaisijaltaan 16 metriä. Se restauroitiin 2022–2023 Albanian ensimmäiseksi perintökeskukseksi, jossa on VR-laseja, äänioppaita ja kupoliprojektio. Satamasta pääsee yölaivalla Italian Bariin: matka kestää 8,5–10 tuntia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-durres-218d275a.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Amphitheatre_of_Durrës_(by_Pudelek).JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-durres-218d275a.jpg",
     },
     Elbasan: {
       lyhyt: 'Elbasanissa juhlitaan 14. maaliskuuta Kesän päivää, ja silloin kaupungissa leivotaan ballokume-keksejä.',
+      pitka: "Elbasanin keskustaa hallitsee linna, jonka sulttaani Mehmed II rakennutti 1466 Scampan roomalaisen ja bysanttilaisen linnoituksen paikalle. Muurissa oli 26 yhdeksän metrin tornia, syvä vallihauta ja kolme porttia, ja Via Egnatia kulki linnan läpi. Linnan tuntumassa seisoo Naziresha-moskeija vuodelta 1599, ja Pyhän Marian ortodoksikirkko on vuodelta 1830. Kaupungissa on Aleksandër Xhuvanin yliopisto, ja Elbasanissa toimi Albanian ensimmäinen opettajakoulu. 1970-luvulla kiinalaisten avulla rakennettu valtava terästehdas, Puolueen teräs, työllisti kerran noin 10 000 ihmistä. Nyt vain kymmenesosa tekee töitä yksityistetyissä tehtaissa, joista Kurumin terästehdas on toiminut 1998 lähtien, ja alue kantaa raskasta saastumisen perintöä. Kaupunkilaisia on noin 115 000.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-elbasan-1520bd09.jpg",
+          lahde: "Brams, Wikimedia Commons (Public domain)",
+          tekija: "Brams",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Elbasan_Castle_1.JPG",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-elbasan-1520bd09.jpg",
     },
     Fier: {
       lyhyt: 'Fierin lähellä on muinainen Apollonia, kreikkalaisten perustama kaupunki, jossa nuori Octavianus – tuleva keisari Augustus – opiskeli.',
+      pitka: "Fierin maakunnassa asuu 240 377 ihmistä, ja se on Albanian kolmanneksi asutuin. Menneisyys näkyy joka kukkulalla. Byllisin kukkulakaupungin 2,25 kilometrin muuri rakennettiin noin 350 eaa., ja sen teatteriin mahtui 7 500 katsojaa. Apollonia oli huippuaikoinaan noin 60 000 asukkaan kaupunki; ranskalaiset kaivoivat sitä 1924–1938 ja kuudennen vuosisadan temppeli löydettiin vasta 2006. Ardenican luostari on vuodelta 1282, ja sen kirkon seinillä ovat Zografi-veljesten 1740-luvun freskot. Luostari suljettiin 1969 ja avattiin uudelleen 1992. Divjakë–Karavastan kansallispuisto kattaa 22 230 hehtaaria, ja Ramsar-kosteikko on ollut suojeltuna 1994. Fierin itäpuolella Patos-Marinza on Euroopan suurin maalla sijaitseva öljykenttä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-fier-572dc708.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Apollonia,_Albania_-_panorama_(by_Pudelek).JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-fier-572dc708.jpg",
     },
     'Gjirokastër': {
       lyhyt: 'Gjirokastërin kivitalojen katot on ladottu harmaista liuskekivistä, ja kaupungissa syntyi kirjailija Ismail Kadare.',
+      pitka: "Gjirokastërin linnoitus kohoaa 336 metrin korkeuteen, ja sen alkuperä on 1100-luvulla. Sisällä on sotamuseo, kellotorni, kaksi tekkeä, vesisäiliö sekä amfiteatteri, jossa kansallinen folklorefestivaali on pidetty viiden vuoden välein vuodesta 1968. Alapuolella vanha basaari on 1600-luvulta ja basaarin moskeija vuodelta 1757. Kaupunki on tunnettu tornitaloistaan: Zekate-talo on rakennettu 1811–1812, ja sen kaksi tornia kehystävät keskikaarta. Kaupungin alla on 1970-luvun alussa louhittu kylmän sodan tunneli, noin 800 metriä pitkä ja 59 huonetta, ja se avattiin vierailijoille 2014. Gjirokastër kuuluu Unescon maailmanperintöön vuodesta 2005, ja kunnassa on noin 23 300 asukasta.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-gjirokaster-b919118d.jpg",
+          lahde: "Radosław Botev, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Radosław Botev",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gjirokaster_castle_hill_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-gjirokaster-b919118d.jpg",
     },
     'Korçë': {
       lyhyt: 'Korçëssa avattiin 1887 ensimmäinen albaniankielinen koulu, ja nykyään kaupungin nimi tunnetaan koko maassa Birra Korça -oluesta.',
+      pitka: "Korçë on korkealla, noin 850 metrin korkeudessa Moravan vuorten kupeessa, ja sen 60 000 asukkaan tahti tuntuu hitaammalta kuin muualla Albaniassa. Iltaisin ihmiset kävelevät Shën Gjergji -bulevardia pitkin kahviloihin, ja Vanhan basaarin kivikadut on viime vuosina korjattu kortteli kortteliksi kauppojen ja majataloiden käyttöön. Kaupungin sydän on museo: Keskiaikaisen taiteen kansallismuseossa on yli 7 000 esinettä, enimmäkseen ikoneja, ja seinillä ovat muun muassa Onufrin ja David Selenican työt. Museo avattiin 1980 ja sen rakennus uudistettiin 2016. Elokuussa kaupunki täyttyy Festa e Birrës -oluttapahtumasta, jota järjestäjät sanovat alueen suurimmaksi.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-korce-39cfa8f7.jpg",
+          lahde: "Nensi Bibe, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nensi Bibe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Resurrection_of_Christ_Cathedral,_Korçë.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-korce-39cfa8f7.jpg",
     },
     'Kukës': {
       lyhyt: 'Kukësin vanha kaupunki jäi 1976 Fierzan tekojärven alle, ja uusi Kukës rakennettiin järven yläpuoliselle tasanteelle.',
+      pitka: "Kukësissa, noin 15 600 asukkaan kaupungissa, huomaa heti, että vuoret ja vesi ovat lähellä: idässä kohoaa Gjallica, 2 468 metriä, ja edessä levittäytyy Fierzan tekojärvi, jonka pinta-ala on noin 72,5 neliökilometriä ja syvyys enimmillään 128 metriä. Järven sulkee Drin-joella 167-metrinen kivitäyttöpato, jonka ensimmäinen voimalayksikkö käynnistyi 1978. Se tuottaa noin kolmanneksen koko Drinin voimalaitosketjun sähköstä. Kaupungin läpi kulkee A1-tie Kosovoon, ja Kukësin maakuntaan kuuluu myös Valbonan laakso ja sen vaellusreitit Albanian Alpeilla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-kukes-5eec596f.jpg",
+          lahde: "CivArmy, Wikimedia Commons (CC BY 4.0)",
+          tekija: "CivArmy",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kukes,_Albania.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-kukes-5eec596f.jpg",
     },
     'Lezhë': {
       lyhyt: 'Lezhën Pyhän Nikolauksen kirkon raunioissa on Skanderbegin muistomerkki, sillä kansallissankari haudattiin sinne 1468.',
+      pitka: "Lezhë on noin 15 000 asukkaan pikkukaupunki Drinin tasangolla, mutta sen historia on paksu. Kaupungin yllä 172 metrin kukkulalla seisoo linna, ja alhaalla, muistomerkin kohdalla, kokoontuivat 2. maaliskuuta 1444 Albanian ruhtinaat Lezhën liittoon. Pyhän Nikolauksen kirkon rauniot muutettiin muistomerkiksi 1981. Muutaman kilometrin päässä Shëngjinin satamakylä tarjoaa hiekkarannat ja kalaravintolat. Drinin suistossa Kunë-Vainin suojelualue on 44 neliökilometrin kokoinen ja siellä on laskettu 196 lintulajia. Alue sai suojelun jo 1940 metsästysreservaattina, ensimmäisenä Albaniassa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-lezhe-624ea869.jpg",
+          lahde: "Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pasztilla aka Attila Terbócs",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lezhë,_Albania_–_Skanderbeg_Memorial_2016_04.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-lezhe-624ea869.jpg",
     },
     'Shkodër': {
       lyhyt: 'Shkodërjärvi on Balkanin suurin järvi, ja sen rannalla kohoaa Rozafan linna, jonka muuriin tarun mukaan muurattiin nuori äiti.',
+      pitka: "Shkodërin vanhassa keskustassa kannattaa kävellä hitaasti, sillä pienet kadut ja vanhat talot kertovat kaupungin taiteilijoista ja kauppiaista. Kolë Idromeno (1860–1939) oli maalari, arkkitehti ja valokuvaaja, ja hänen käsialaansa on kymmeniä kaupungin rakennuksia sekä Albanian ensimmäisiä elokuvaesityksiä. Marubin kansallinen valokuvamuseo hoitaa Pietro Marubin 1856 perustaman studion arkistoa, satojatuhansia lasi- ja filminegatiiveja Albanian 1800-luvun lopulta 1900-luvun puoliväliin. Museo avattiin nykyisessä muodossaan 9. toukokuuta 2016, ja se oli ehdolla Euroopan vuoden museoksi 2017. Kaupungin ulkopuolella Ura e Mesit -silta ylittää Kirin 13 kivikaarella ja yli sadan metrin matkalla, valmistuneena 1770.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-shkoder-4130051d.jpg",
+          lahde: "Artemiss.B, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Artemiss.B",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rozafa_Castle_in_Shkodër.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-shkoder-4130051d.jpg",
     },
     'Tiranë': {
       lyhyt: "Tiranan Bunk'Art on museo Enver Hoxhan viisikerroksisessa maanalaisessa bunkkerissa, jossa on 106 huonetta.",
+      pitka: "Tirana on yllättävän nuori pääkaupunki: Sulejman Pasha Bargjini perusti sen 1614 vanhan moskeijan ympärille, ja Albanian pääkaupungiksi se tuli väliaikaisesti 1920 ja pysyvästi 1925. Kaupungin keskus on Skanderbegin aukio, joka uudistettiin 2016–2017 belgialaisen 51N4E-toimiston suunnitelmalla noin 40 000 neliömetrin kävelyalueeksi ja palkittiin 2018 Euroopan julkisen kaupunkitilan palkinnolla. Aukion reunalla seisovat 35-metrinen Kellotorni ja Et'hem Bey -moskeija, joka valmistui 1821. Kaupungin vieressä on Suuri puisto tekojärvineen, joka tehtiin 1955, ja idässä kohoaa Dajtin kansallispuisto.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-tirane-e3dea515.jpg",
+          lahde: "Albinfo, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Albinfo",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tirana_Bunk'Art_Doors.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-tirane-e3dea515.jpg",
     },
     'Vlorë': {
       lyhyt: 'Vlorëssa julistettiin Albanian itsenäisyys 28. marraskuuta 1912, ja Lipun aukiolla seisoo itsenäisyyden muistomerkki.',
+      pitka: "Vlorë on Albanian kolmanneksi suurin kaupunki, noin 84 000 asukasta, ja sen edustalla Adrianmeri kohtaa Joonianmeren. Kaupungin pohjoispuolella Narta-laguuni on 41,8 neliökilometrin kokoinen suolaisen veden allas, jossa oli 2020 noin 3 000 flamingoa. Laguunin keskellä on Zvërnecin saari, jonne pääsee puisella kävelysillalla ja jossa seisoo 1200-luvun bysanttilainen luostari. Lounaassa Karaburun-Sazanin meripuisto kattaa reilut 124 neliökilometriä ja on ollut suojeltu vuodesta 2010. Sisämaassa Kaninën linna kohoaa noin 380 metrin korkeuteen ja antaa näköalan lahdelle.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-vlore-fbc77cf7.jpg",
+          lahde: "A.jobs02, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "A.jobs02",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Independence_Monument,_Vlorë.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-vlore-fbc77cf7.jpg",
     },
   },
   /*
@@ -5525,18 +7871,23 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CYP: {
     Famagusta: {
       lyhyt: 'Kap Grecon niemellä meri on kovertanut kalkkikiveen luolia ja kallioportteja, ja sen kirkkaassa vedessä sukelletaan.',
+      pitka: "Famagustan piiri on jakautunut maisema: eteläosassa Ayia Napan ja Protaraksen lomakohteet täyttyvät kesäisin, pohjoisempana taas ovat Famagustan muurien ympäröimä vanhakaupunki ja Salamiin rauniot. Ayia Napan luostari on rakennettu venetsialaisaikana noin vuonna 1500, ja sen portin edessä kasvaa noin 600-vuotias metsäviikuna. Pernera-rannan edustalla, kahdeksan–kymmenen metrin syvyydessä, on vuonna 2021 avattu vedenalainen veistosmuseo MUSAN, jossa on 93 Jason deCaires Taylorin teosta. Famagustan vanhassa kaupungissa Lala Mustafa Pashan moskeija on alun perin Pyhän Nikolauksen katedraali, jonka rakentaminen alkoi vuonna 1298. Lähellä sijaitseva Varosha oli ennen vuotta 1974 noin 39 000 asukkaan lomakaupunki, ja sen osia on avattu vierailijoille lokakuusta 2020.",
     },
     Larnaca: {
       lyhyt: 'Larnakan suolajärvelle saapuu talvisin tuhansia flamingoja, ja sen rannalla seisoo Hala Sultan Tekke -moskeija.',
+      pitka: "Larnaca tunnetaan lentokentästä, mutta kaupungin alla lepää muinainen Kition, joka perustettiin 1200-luvulla eaa. Pyhän Lasaruksen kirkko rakennettiin 800-luvun lopulla sen jälkeen, kun kaupungista löytyi vuonna 890 hauta, jossa oli kirjoitus \"Lasarus, neljä päivää kuollut\". Kamaresin akvedukti, jossa on 75 kaarta, rakennettiin 1700-luvun puolivälissä tuomaan kaupunkiin vettä. Ulkomerellä makaa 42 metrin syvyydessä Zenobia-lautta, joka kaatui vuonna 1980 ja on nykyään yksi maailman suosituimmista hylkysukelluskohteista. Sisämaassa Choirokoitian neoliittinen kylä, perustettu noin 7000 eaa., kuuluu Unescon maailmanperintöluetteloon vuodesta 1998.",
     },
     Limassol: {
       lyhyt: 'Limassolin vuoristokylissä tehdään makeaa Commandaria-viiniä, jota pidetään maailman vanhimpana yhä valmistettavana nimettynä viininä.',
+      pitka: "Limassol on Kyproksen väkirikkain kunta: siellä asuu noin 108 000 ihmistä ja koko piirissä noin 262 000 (vuoden 2021 väestölaskenta). Kaupungin keskustan Limassolin linnassa toimii nykyään Kyproksen keskiaikamuseo. Syyskuussa Kunnallispuiston täyttää yhdeksänpäiväinen viinifestivaali, jota on järjestetty vuodesta 1961, ja helmikuussa kaupungissa vietetään karnevaalia, jonka päätöskulkueessa marssii kymmeniä vaunuja. Kaupungin länsipuolella Kolossin linnan nykyinen torni on rakennettu vuonna 1454 johanniittojen aikana. Vielä pidemmälle länteen, Episkopin lähellä, muinaisen Kourionin kreikkalais-roomalaiseen teatteriin mahtuu noin 3 500 katsojaa.",
     },
     Nicosia: {
       lyhyt: 'Troodoksen rinteillä Kykkosin luostari vaalii Neitsyt Marian ikonia, jonka perimätieto sanoo evankelista Luukkaan maalaamaksi.',
+      pitka: "Nikosia on pääkaupunki, jota halkoo YK:n valvoma puskurivyöhyke, ja vanhakaupunki jakautuu sen molemmin puolin. Venetsialaiset rakensivat kaupungin ympärille vuodesta 1567 alkaen noin viiden kilometrin mittaisen kehämuurin, jossa on yksitoista bastionia ja kolme porttia. Ledran kadun ylityspaikka avattiin jalankulkijoille 3. huhtikuuta 2008, ja Kyproksen museo on toiminut kaupungissa vuodesta 1882. Piirin vuoristossa Troodoksella sijaitsee yhdeksän kymmenestä Unescon maailmanperintökohteeksi vuonna 1985 hyväksytystä maalatusta kirkosta. Niiden joukossa ovat Kakopetrian 1000-luvun Agios Nikolaos tis Stegis ja Nikitarin lähellä oleva Asinoun 1100-luvun kirkko.",
     },
     Paphos: {
       lyhyt: 'Paphosin rannikolla Petra tou Romioun kallio on tarun mukaan paikka, jossa Afrodite nousi merenvaahdosta.',
+      pitka: "Paphosin Kato Pafosin arkeologinen puisto kuuluu Unescon maailmanperintöön vuodesta 1980, ja sen roomalaisten huviloiden lattiamosaiikit löytyivät vuonna 1962, kun maanviljelijä kynsi peltoaan. Dionysoksen talon mosaiikit peittävät 556 neliömetriä. Kuninkaiden hautojen kallioon hakattuja hautakammioita on osin 300-luvulta eaa., vaikka yhtään kuningasta ei niihin haudattu. Paphos oli vuoden 2017 Euroopan kulttuuripääkaupunki yhdessä Aarhusin kanssa, ja Paphos Aphrodite -festivaali on tuonut oopperaa keskiaikaisen linnan aukiolle vuodesta 1999.",
     },
   },
   /*
@@ -5609,120 +7960,588 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MDA: {
     'Anenii Noi': {
       lyhyt: 'Varnițan kylässä Benderin pohjoispuolella leireili Ruotsin kuningas Kaarle XII vuosina 1711–1713, kunnes osmanien joukot hyökkäsivät leiriin.',
+      pitka: "Anenii Noi on noin 40 kilometrin päässä Chișinăusta kaakkoon, ja kaupungissa asuu runsaat 10 000 ihmistä. Vuoden 2014 väestönlaskennassa moldovalaisia oli 6 756, ukrainalaisia 1 894 ja venäläisiä 1 427. Keskustan maamerkkejä ovat Pyhän Dumitrun kirkko ja Stefan Suuren muistomerkki, mutta tunnetuin kohde on lähellä Bulboacan kylässä: Castel Mimi. Ranskalaisen mallin mukaan rakennetun viinilinnan betonirakenne oli aikanaan uutuus, ja sen kellariin mahtui noin 300 000 litraa viiniä. Rakennuttaja Constantin Mimi oli opiskellut viininviljelyä Montpellier'ssa. Nykyisin linnassa on museo, hotelli, kylpylä ja ravintola.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-anenii-noi-8b1e0b46.jpg",
+          lahde: "Gikü, Wikimedia Commons (CC0)",
+          tekija: "Gikü",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.AN.AN_-_downtown_-_nov_2012.JPG",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-anenii-noi-8b1e0b46.jpg",
     },
     'Bălţi': {
       lyhyt: 'Bălți tarkoittaa romaniaksi lätäköitä – kaupunki sai nimensä kosteikoista mäen juurella, jossa Răuțel-puro laskee Răut-jokeen.',
+      pitka: "Bălți on Moldovan kolmanneksi suurin kaupunki, noin 127 kilometriä Chișinăusta pohjoiseen Răut-joen varrella. Se on rakentunut kolmelle kukkulalle ja kahteen pieneen laaksoon, ja ympäristön maaperä on hedelmällistä mustaa multaa. Vuoden 2024 väestönlaskennassa kaupungissa oli 94 546 asukasta, kun huippulukema vuonna 1989 oli lähes 161 500. Elinkeinoelämän ytimessä ovat elintarvike- ja jauhoteollisuus, sokeri, maatalouskoneet ja huonekalut. Alecu Russon valtionyliopisto on toiminut vuodesta 1945, ja sen opetus on pääosin romaniankielistä. Keskustan Itsenäisyydenaukion ja kaupungintalon symmetriset julkisivut ovat tyypillistä 1950-luvun arkkitehtuuria.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-balti-518257be.jpg",
+          lahde: "Avereanu, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Avereanu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Panorama_Centru_Bălți.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-balti-518257be.jpg",
     },
     Basarabeasca: {
       lyhyt: 'Basarabeasca sai alkunsa 1846 juutalaisesta maanviljelyssiirtokunnasta nimeltä Romanovka, ja nykyisen nimensä kaupunki sai vasta 1957.',
+      pitka: "Basarabeasca on noin 94 kilometriä Chișinăusta etelään aivan Ukrainan rajalla, ja Cogâlnic-joki virtaa sen piirin läpi. Kaupungissa oli vuoden 2014 väestönlaskennassa 8 471 asukasta, kymmenen vuotta aiemmin 11 192. Suurin ryhmä olivat moldovalaiset ja romanialaiset (39,8 %), sitten gagauzit (17,3 %) ja venäläiset (16,3 %). Rautatiesolmuna kaupunki sai uutta virtaa, kun Berezynen ja Basarabeascan välinen rata avattiin elokuussa 2022 uudelleen ja rajanylityspaikka 25. maaliskuuta 2023. Radalla ukrainalaista rahtia kuljetetaan Tonavan satamiin Reniin, Giurgiulești'iin ja Galațiin.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-basarabeasca-f3a84a5a.jpg",
+          lahde: "Tanyaofearth, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Tanyaofearth",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Complexul_de_clădiri_al_nodului_de_cale_ferată_în_Basarabeasca_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-basarabeasca-f3a84a5a.jpg",
     },
     Bender: {
       lyhyt: 'Benderin linnoituksen Dnestrin rannalla rakennutti uudelleen sulttaani Süleyman Suuri 1500-luvulla, ja sen muureissa on kymmenen bastionia.',
+      pitka: "Bender on Dnestrin oikealla rannalla vain noin kymmenen kilometrin päässä Tiraspolista. Kansainvälisesti kaupunki katsotaan Moldovan osaksi, mutta vuodesta 1992 sitä on tosiasiassa hallinnut Transnistrian hallinto. Kaupunki mainitaan asiakirjoissa ensi kerran 1408 tullipaikkana. Ottomaanit valtasivat linnoituksen 1538, ja arkkitehti Mimar Sinanin suunnitelman mukaan kivilinnoitus valmistui 1541. Linnoitus entisöitiin vuosina 2008–2012, ja nykyään sen alueella on museo, jonka gallerioissa kerrotaan linnoituksen sotahistoriasta. Aivan vieressä on Aleksanteri Nevskin kirkko.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-bender-98d42d40.jpg",
+          lahde: "Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Ivo Kruusamägi",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bender_Fortress._South_side_03.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-bender-98d42d40.jpg",
     },
     Briceni: {
       lyhyt: 'Crivan kylän kipsilouhoksesta avautui 1959 Emil Racovițăn luola, jonka maanalaisia käytäviä on kartoitettu noin 90 kilometriä.',
+      pitka: "Briceni on Moldovan luoteiskulmassa, piirin pohjoispuolella on Ukraina ja Prut-joen takana lännessä Romania. Kaupungissa asui vuoden 2014 väestönlaskennassa 7 314 ihmistä ja koko 814 neliökilometrin piirissä 46 894 vuonna 2024. Talous nojaa maatalouteen: sokerijuurikasta ja tupakkaa viljellään viljan rinnalla, ja tarhoissa kasvaa omenoita, kirsikoita ja luumuja. Lopatnic-joen valuma-alueella on geologisesti ja paleontologisesti merkittäviä muodostumia. Ilmasto on lauhkean mannermainen, ja piirin sademäärä kuuluu Moldovan korkeimpiin.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-briceni-e9e8115d.jpg",
+          lahde: "Heliaque, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Heliaque",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD-BR-mn.A-003-pestera-emil-racovita-01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-briceni-e9e8115d.jpg",
     },
     Cahul: {
       lyhyt: 'Giurgiuleștissa Moldova ulottuu Tonavalle vain noin 480 metrin matkalta, ja siihen on mahtunut maan ainoa Tonavan satama.',
+      pitka: "Cahul on Etelä-Moldovan keskus lähellä Romanian rajaa. Vuoden 2024 väestönlaskennassa siellä oli 22 223 asukasta, kymmenessä vuodessa reilut 7 800 vähemmän kuin vuonna 2014, ja kaupunki on maan kahdeksanneksi suurin. Paikka mainitaan asiakirjoissa ensi kerran vuonna 1502 nimellä Scheia. Nykyään teitä johtaa Oanceaan Romaniaan ja Reniin Ukrainaan. Bogdan Petriceicu Hasdeun yliopisto avattiin 1999. Vuonna 1958 perustetussa historiamuseossa on kymmeniä tuhansia esineitä, ja alueen kivennäisvedet sisältävät bromia ja jodia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cahul-d58fefdf.jpg",
+          lahde: "Glax2007, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Glax2007",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Portul_de_pasgeri_Giurgiulești.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cahul-d58fefdf.jpg",
     },
     'Călărași': {
       lyhyt: 'Hîrjaucan luostari Codrun metsissä perustettiin 1740, kun sinne asettui kaksi munkkia Romanian puolella sijaitsevasta Neamțin luostarista.',
+      pitka: "Călărași on noin 10 800 asukkaan kaupunki Moldovan keskiosassa, Codrin kumpuilevien metsämaiden alueella; vuonna 2004 asukkaita oli vielä 14 660. Koko piirin pinta-ala on 753,5 neliökilometriä, ja noin 31 prosenttia siitä on metsää, jossa kasvaa valkopyökkiä, pyökkiä, saarnia, jalavia ja tammia. Piirin maatalousmaata on 25 801 hehtaaria, ja siitä viinitarhoja on 6 020 hehtaaria. Alueella tuotetaan punaviiniä, valkoviiniä ja konjakkia. Piirin luostarit ovat osa Codrun metsäisten kukkuloiden pyhiinvaellusmaisemaa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-calarasi-14a0c098.jpg",
+          lahde: "Vladikh, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vladikh",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mănăstirea_„Înălțarea_Domnului”_din_sat._Hîrjauca_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-calarasi-14a0c098.jpg",
     },
     Camenca: {
       lyhyt: 'Camencan Dnestr-parantolassa joen rannalla hoidetaan vieraita ampeloterapialla eli rypälemehulla ja viinillä.',
+      pitka: "Camenca on pikkukaupunki Dnestrin rannalla Transnistrian pohjoisimmassa piirissä. Kansainvälisesti alue katsotaan Moldovan osaksi, mutta käytännössä sitä hallinnoi Transnistrian hallinto. Asutus mainitaan ensi kerran 1600-luvun alussa. Kaupungin asukasluku oli vuonna 2019 noin 8 700, kun se vuonna 1989 oli 13 689. Ympäröivä Camencan piiri on pinta-alaltaan 434,5 neliökilometriä, ja siihen kuuluvat kaupungin lisäksi 12 kuntaa ja 23 asuinpaikkaa. Ilmasto on lauhkean mannermainen, ja kesät ovat kuumia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-camenca-ee7bb0e5.jpg",
+          lahde: "Simiprof, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Simiprof",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sanatorium_Dnester1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-camenca-ee7bb0e5.jpg",
     },
     Cantemir: {
       lyhyt: 'Cantemirin kaupunki sai nimensä 1973 ruhtinas Dimitrie Cantemirin 300-vuotispäivänä – hän oli Moldovan hallitsija ja oppinut kirjailija.',
+      pitka: "Cantemir on pieni piirikaupunki Moldovan lounaiskulmassa, noin 120 kilometrin päässä Chișinăusta. Sen länsipuolella virtaa Prut, jonka takana alkaa Romania. Vuoden 2014 väestölaskennassa kaupungissa oli 3 429 asukasta, kun luku oli vuonna 1989 vielä 5 320. Ympäröivä piiri on huomattavasti suurempi: siellä on noin 33 000 asukasta 51 paikkakunnassa, ja yli 90 prosenttia heistä asuu maaseudulla. Maisema on kumpuilevaa tasankoa. Yli puolet maasta on viljelyksessä, ja viinitarhoja on noin 5 660 hehtaaria. Väestö on enimmäkseen moldovalaista, mutta mukana on myös romanialaisia ja noin neljä prosenttia bulgarialaisia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cantemir-bb635cce.jpg",
+          lahde: "Society for Birds and Nature Protection of Moldova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Society for Birds and Nature Protection of Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.CT_-_rezervația_Cantemir_-_jun_2021_-_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cantemir-bb635cce.jpg",
     },
     Causeni: {
       lyhyt: 'Căușenin 1600-luvun Neitsyt Marian kirkon lattia on yli 90 senttiä maanpinnan alapuolella, ja seinillä on Moldovan ainoa keskiaikainen fresko.',
+      pitka: "Căușeni on Botna-joen varrella Etelä-Moldovassa, vuoden 2024 väestölaskennan mukaan noin 13 500 asukkaan kaupunki. Ottomaanien aikana se oli tärkeä paikallinen keskus. Nykyään kaupunki on ympäristönsä hallintokeskus: Căușenin piirissä asuu noin 57 000 ihmistä 1 185 neliökilometrin alueella. Maatalous on pääelinkeino, ja piirissä on noin 5 200 hehtaaria viinitarhoja ja 4 300 hehtaaria hedelmätarhoja. Kaupungin tunnetuin nähtävyys, Neitsyt Marian kuolonuneen kirkko, kunnostettiin vuosina 2017–2023 kansainvälisellä tuella, ja se avattiin uudelleen vierailijoille vuonna 2024.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-causeni-61162f0f.jpg",
+          lahde: "Vladikh, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Vladikh",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Biserica_„Adormirea_Maicii_Domnului”_din_or._Căușeni_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-causeni-61162f0f.jpg",
     },
     'Chişinău': {
       lyhyt: 'Chișinăun pohjoislaidalla Cricovan viinikellareissa kulkee noin 120 kilometriä maanalaisia teitä entisissä kalkkikivilouhoksissa.',
+      pitka: "Chișinău on Moldovan pääkaupunki ja selvästi maan suurin kaupunki: vuoden 2024 väestölaskennan mukaan kaupunkikunnassa asuu 720 128 ihmistä, ja suuri osa maan taloudesta syntyy täällä. Ensimmäinen kirjallinen maininta on päivätty 14. lokakuuta 1436, jolloin paikka oli luostarikylä. Vuonna 1940 voimakas maanjäristys iski kaupunkiin. Keskustassa sijaitseva Ștefan cel Mare -puisto on noin seitsemän hehtaarin kokoinen ja sitä pidetään Moldovan vanhimpana puistona. Sitä kutsutaan myös rakastavaisten puistoksi, koska pariskunnat tapaavat siellä. Joka lokakuu kaupungissa juhlitaan kansallista viinifestivaalia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-chisinau-a8e27317.jpg",
+          lahde: "Kolmkolm, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Kolmkolm",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cricova_Wine_Cellar_Collection.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-chisinau-a8e27317.jpg",
     },
     'Cimişlia': {
       lyhyt: 'Cimișlian rotkoista on kaivettu 1929 lähtien yli 40 selkärankaislajin fossiileja 6–8 miljoonan vuoden takaa, muun muassa mastodontteja.',
+      pitka: "Cimișlia on Etelä-Moldovan kaupunki Cogâlnic-joen varrella, noin 70 kilometrin päässä Chișinăusta ja pääkaupungin ja Gagauzian välissä. Vanhin kirjallinen maininta on päivätty 4. heinäkuuta 1620, ja kaupunkioikeudet se sai 1995. Koko Cimișlian piirissä asuu noin 31 000 ihmistä 924 neliökilometrin alueella, ja väestö on pääosin maaseudulla. Pohjoisosassa Keski-Moldovan ylänkö kohoaa noin 250 metriin, ja viinitarhoja on noin 6 400 hehtaaria, joten viininviljely on seudun tärkeimpiä elinkeinoja. Kaupungista on kotoisin muun muassa Iurie Leancă, joka toimi Moldovan pääministerinä 2010-luvulla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cimislia-6f47cc96.jpg",
+          lahde: "Злодей Андрей, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Злодей Андрей",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cimișlia_panorama.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cimislia-6f47cc96.jpg",
     },
     Comrat: {
       lyhyt: 'Comrat on Gagauzian pääkaupunki, ja gagauusit puhuvat turkkilaista kieltä mutta ovat valtaosin ortodoksikristittyjä.',
+      pitka: "Comrat on Gagauzian pääkaupunki, ja vuoden 2024 väestölaskennan mukaan siellä asuu 19 120 ihmistä. Autonomian perustava laki hyväksyttiin vuonna 1994 ja se tuli voimaan 14. tammikuuta 1995, ja alue koostuu useasta erillisestä osasta. Gagauzeja on kaupungin asukkaista noin kolme neljännestä (73,5 prosenttia vuoden 2014 laskennassa). Comratin yliopisto perustettiin vuonna 1991 Gagauzian kansalliseksi yliopistoksi, ja valtion yliopistoksi se muuttui vuonna 2002. Kaupunki on Moldovan eteläisellä viinialueella, ja täällä tuotetaan punaviiniä ja muskottiviiniä. Vuonna 1906 kaupunki julisti viiden päivän ajaksi oman tasavaltansa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-comrat-cf169ffe.jpg",
+          lahde: "Злодей Андрей, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Злодей Андрей",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.GE.Comrat_-_Catedrala_Sf._Ioan_Botezătorul_-_jun_2017.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-comrat-cf169ffe.jpg",
     },
     Criuleni: {
       lyhyt: 'Criulenin lähellä Dnestrin rantametsässä on Yllätysten luola, 1 700 metriä pitkä kalkkikiviluola ja Moldovan toiseksi pisin.',
+      pitka: "Criuleni sijaitsee Dnestrin oikealla rannalla, noin 40 kilometrin päässä Chișinăusta. Kaupungissa on vuoden 2024 laskennan mukaan noin 5 800 asukasta, ja kaupunkistatuksen se sai 1995. Koko Criulenin piirissä asuu 52 926 ihmistä 688 neliökilometrin alueella, ja siihen kuuluu 43 paikkakuntaa. Piiri on maatalousvaltainen, sillä 63 prosenttia pinta-alasta on maatalouskäytössä ja pääkasveja ovat peltokasvit, hedelmät ja viinirypäleet. Alueella on kalkkikivi- sekä hiekka- ja soralouhoksia, ja Dnestrin rantametsissä on luolia ja luonnonsuojelualueita.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-criuleni-867237a0.jpg",
+          lahde: "Crissty90, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Crissty90",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Intrare_in_pestera_surprizelor.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-criuleni-867237a0.jpg",
     },
     Donduseni: {
       lyhyt: 'Țaulin kylässä vain viiden kilometrin päässä Dondușenista on puisto, jota pidetään Moldovan suurimpana.',
+      pitka: "Dondușeni kasvoi rautatien ympärille: vielä vuoden 1930 väestölaskennassa paikan nimi oli Dondoșani-Gară, eli Dondoșanin asema, ja siellä asui vain 953 ihmistä. Vuoteen 1959 mennessä asukkaita oli 5 129 ja vuoden 2014 laskennassa 7 101. Aseman punatiili- ja graniittirakennukset sekä linnamainen vesitorni ovat yli sadan vuoden takaa ja lasketaan historiallisiksi rakennusmuistomerkeiksi. Kaupunkioikeudet paikka sai vuonna 1957. Piirissä asuu noin 28 000 ihmistä 644 neliökilometrin alueella; siitä 532 neliökilometriä on maatalousmaata, jossa kasvaa muun muassa vehnää, ohraa, maissia, sokerijuurikasta, auringonkukkaa ja rypsiä. Piiri rajoittuu koillisessa Ukrainaan.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-donduseni-a217853c.jpg",
+          lahde: "Cornelia vac, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Cornelia vac",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Parcul_Țaul_08.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-donduseni-a217853c.jpg",
     },
     Drochia: {
       lyhyt: 'Drochiassa toimii Moldovan suurin sokeritehdas, ja piirin maaperästä noin 80 prosenttia on hedelmällistä mustaamultaa.',
+      pitka: "Drochia on pohjoismoldovalainen kaupunki, noin 174 kilometrin päässä Chișinăusta ja noin 67 kilometrin päässä Romanian Iașista. Nimi tulee paikallisesta linnusta, isotrapista, jota paikallisella kielellä kutsutaan sanalla dropie. Ensimmäinen maininta on vuodelta 1777, ja kaupunkioikeudet paikka sai 1973. Väkiluku oli huipussaan vuonna 1989, 21 298 asukasta, ja on sittemmin laskenut noin 12 900:aan vuoden 2024 laskennassa. Kaupungin katedraali, Neitsyt Marian kuolonuneen kirkko, aloitettiin vuonna 1988, ja sen on maalannut romanialainen taiteilija Petre Achițenie. Lyseon lähellä on Mihai Eminescun patsas.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-drochia-eced1f01.jpg",
+          lahde: "Photobank MD from Chisinau, Moldova, Wikimedia Commons (CC0)",
+          tekija: "Photobank MD from Chisinau, Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Дрокия,_дом_культуры_Casa_raionala_de_cultura_din_Drochia_Drochia_House_of_Culture_(43533033121).jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-drochia-eced1f01.jpg",
     },
     'Edineţ': {
       lyhyt: 'Edinețin toltry-kukkulat ovat 15–20 miljoonaa vuotta vanhoja muinaisen meren riuttoja, ja Brînzenin kallioihin on syöpynyt luolia.',
+      pitka: "Edineţ on Pohjois-Moldovan viljelyseudun keskus, noin 200 kilometrin päässä pääkaupungista. Vuoden 2024 väestönlaskennassa kaupungissa asui 12 369 ihmistä, kun kymmenen vuotta aiemmin heitä oli 15 520. Keskustassa seisoo Tapani Suuren patsas, ja kaupungissa toimivat sekä seudun museo että käsityöläisten museo. Ennen toista maailmansotaa kaupunki oli merkittävä kauppapaikka, jonka asukkaista suuri osa oli juutalaisia. Koko piirissä asuu noin 50 000 ihmistä 933 neliökilometrin alueella, ja väkiluku on laskenut selvästi viime vuosikymmeninä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-edinet-e8f069c5.jpg",
+          lahde: "Alex Prodan, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Toltre_din_Brinzeni_Edinet_(1).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-edinet-e8f069c5.jpg",
     },
     'Făleşti': {
       lyhyt: 'Făleștin piiristä lähtöisin oleva taiteilija Gheorghe Vrabie piirsi Moldovan vaakunan, ja häntä kutsutaan Moldovan leun isäksi.',
+      pitka: "Făleşti on Prut-joen tuntumassa sijaitseva piirikeskus, jossa asui vuoden 2024 laskennassa 11 946 ihmistä. Nykyään se on ennen kaikkea maatalouden ja elintarviketeollisuuden kaupunki. Kaupungin oma museo, Lazăr Dubinovschin nimeä kantava historia- ja etnografiamuseo, avattiin 1979 uusromanialaistyylisessä entisessä tyttökoulussa, ja siinä on tuhansia etnografisia esineitä. Ennen toista maailmansotaa merkittävä osa asukkaista oli juutalaisia. Koko piirissä asuu 56 039 ihmistä 1 073 neliökilometrin alueella, ja sen länsirajana virtaa Prut.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-falesti-da911cad.jpg",
+          lahde: "Avereanu, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Avereanu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Centru_Falesti.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-falesti-da911cad.jpg",
     },
     'Floreşti': {
       lyhyt: 'Dnestrin rannalla seisova Japcan luostari oli Bessarabian ainoa luostari, jota neuvostovalta ei koskaan sulkenut.',
+      pitka: "Floreşti sijaitsee Răut-joen varrella noin 130 kilometrin päässä Chişinăusta. Väkiluku oli huipussaan 1989, 18 228 asukasta, mutta vuoden 2024 laskennassa heitä oli enää 10 925. Kaupungin tunnetuin teollisuuslaitos oli lasitehdas Cristal-Flor. Kaupungin piiristä ovat kotoisin kaksi Moldovan itsenäisyyden ajan presidenttiä. Ympäröivässä piirissä asuu 53 264 ihmistä 1 108 neliökilometrin alueella. Piirin maisema on Dnestrin ylätasangon pirstaloitua kumpumaata, ja Dnestr virtaa sen itärajalla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-floresti-cc48a8b2.jpg",
+          lahde: "Criss90kf, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Criss90kf",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Manastirea_Japca_2014.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-floresti-cc48a8b2.jpg",
     },
     Glodeni: {
       lyhyt: 'Pădurea Domneascăn suojelualueelle tuotiin 2006 Puolasta visenttejä, ja sen metsissä on yli 3 500 arvoituksellista muinaista kumpua.',
+      pitka: "Glodeni on noin 170 kilometrin päässä Chişinăusta pohjoisessa, ja sen ensimmäinen asiakirjamaininta on vuodelta 1668. Kaupunki sai kaupunkioikeudet 1995, ja tuoreimman laskennan mukaan siellä asuu 7 284 ihmistä, kun vuonna 2004 heitä oli vielä 10 785. Elinkeinoelämä nojaa maatalouden jalostukseen. Kaupungin suojelupyhimys on arkkienkeli Mikael, jonka mukaan pääkirkko on nimetty. Ystävyyskaupunkeja on Romaniassa, Ukrainassa ja Puolassa. Koko piirissä asuu 35 829 ihmistä 754 neliökilometrin alueella, ja sen länsirajana virtaa Prut.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-glodeni-0400c990.jpg",
+          lahde: "Alex Prodan, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Padurea_Domneasca_zimbrii_Glodeni_(5).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-glodeni-0400c990.jpg",
     },
     Grigoriopol: {
       lyhyt: 'Grigoriopol perustettiin 1792 armenialaisten siirtokunnaksi Dnestrin vasemmalle rannalle.',
+      pitka: "Grigoriopol sijaitsee Dnestrin vasemmalla rannalla, Ciorna-puron yhtymäkohdassa, ja siellä asuu noin 11 000 ihmistä. Kansainvälisesti alue katsotaan Moldovan osaksi, mutta käytännössä sitä hallinnoivat Transnistrian viranomaiset. Kaupungin talous nojaa maatalouteen, säilyketehtaaseen ja soranottoon, ja keskustan rakennukset ovat pääosin kolme–nelikerroksisia. Koillispuolella on Valea Seacă Tamaşlîc -maisemansuojelualue. Piirin pinta-ala on 822 neliökilometriä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-grigoriopol-10fde0a0.jpg",
+          lahde: "Clay Gilliland, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Clay Gilliland",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Along_the_Dniester_River_(14942562199).jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-grigoriopol-10fde0a0.jpg",
     },
     'Hîncesti': {
       lyhyt: 'Hînceștin tiluksille vetäytyi elämänsä lopulla armenialainen kauppias ja diplomaatti Manuc Bei, ja hänen poikansa rakennutti sinne palatsin.',
+      pitka: "Hînceşti on Cogâlnic-joen laaksossa noin 35 kilometrin päässä Chişinăusta lounaaseen, ja sen 11 391 asukasta tekevät siitä piirin keskuksen. Nimi juontuu todennäköisesti Hâncu-bojaarisuvusta. Neuvostoaikana kaupunkia kutsuttiin Kotovskiksi, ja nykyinen nimi palautettiin 1990. Kaupungissa on kenkä- ja viinitehtaita, ja piirin tuotteisiin kuuluvat viini, leipomotuotteet ja hedelmät. Piiri on suurimpia: 1 472 neliökilometriä ja 69 462 asukasta, ja sen maisema jakautuu Codru-metsäkukkuloihin, metsäaroon ja avoaroon Prutin rajajoen lähellä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-hincesti-6422161e.jpg",
+          lahde: "Agenția de Inspectare și Restaurare a Monumentelor din Republica Moldova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Agenția de Inspectare și Restaurare a Monumentelor din Republica Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:AIRM_-_Mansion_of_Manuc_Bei_-_feb_2012_-_07.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-hincesti-6422161e.jpg",
     },
     Ialoveni: {
       lyhyt: 'Mileștii Micin viinikellareissa on lähes kaksi miljoonaa pulloa – Guinness kirjasi sen 2005 maailman suurimmaksi viinikokoelmaksi.',
+      pitka: "Ialoveni on vain noin 10 kilometrin päässä Chişinăusta, ja se on sekä piirin että Moldovan keskisen kehitysalueen hallintokeskus. Kaupungin väkiluku kasvoi vuosien 2014 ja 2024 välillä 12 515:stä 14 665:een, vaikka monessa muussa pikkukaupungissa luvut ovat laskeneet. Kaupungissa toimii viinintuottaja Vinuri-Ialoveni sekä jäätelö-, leipomo- ja tekstiiliyrityksiä. Piirissä asuu 74 458 ihmistä 783,5 neliökilometrin alueella, ja noin 80 prosenttia heistä asuu maaseudulla. Piirin maasta 42,7 prosenttia on peltoa ja 10,2 prosenttia viinitarhoja.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ialoveni-679b7234.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bodegas_de_Mileștii_Mici,_Moldavia,_2023-11-02,_DD_73.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ialoveni-679b7234.jpg",
     },
     Leova: {
       lyhyt: 'Leovan seudun halki kulkee Traianuksen valliksi kutsuttu muinainen maavalli, ja piirin länsilaitaa seuraa Romanian rajajoki Prut.',
+      pitka: "Leova sijaitsee Prutin varrella, Romanian rajan tuntumassa noin sadan kilometrin päässä Chişinăusta lounaaseen. Väkiluku on laskenut: vuoden 2014 laskennassa asukkaita oli 7 443, ja 2024 noin 6 400. Kaupungin pääyritys on viinintuottaja Leovin. Luonnon helmiä ovat 30 hehtaarin Lebăda albă eli Valkoinen joutsen -vesiekosysteemialue sekä kirjaston takana kasvava yli kaksisataavuotias tammi, joka on suojeltu luonnonmuistomerkkinä. Pyhän Paraskevan kirkko on vuodelta 1818. Piirissä asuu 28 835 ihmistä 764,6 neliökilometrin alueella. Piirin toinen kaupunki on Iargara.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-leova-aa11a759.jpg",
+          lahde: "Lars Larsen, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Lars Larsen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Leova,_Moldova,_Piața_mare._-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-leova-aa11a759.jpg",
     },
     Nisporeni: {
       lyhyt: 'Nisporenin piirissä kohoava Bălăneștin kukkula on noin 430 metrin korkeudellaan Moldovan korkein kohta.',
+      pitka: "Nisporenin kaupungissa asuu noin 10 000 ihmistä (2014), ja 629 neliökilometrin piirissä on 39 asutusta ja runsaat 36 000 asukasta (2024). Piiri kuuluu Codrun, Moldovan keskiylängön metsävyöhykkeeseen: noin kolmannes maasta on tammi-, pyökki-, valkopyökki- ja vaahterametsää, ja viljelmiin kuuluu myös noin 3 900 hehtaaria hedelmätarhoja, joissa kasvaa persikoita, omenoita ja luumuja. Zghihaian kukkulalla Vărzărești'n kylän lähellä kohoaa vuonna 2011 vihitty noin 35 metrin risti, jota pidetään Moldovan suurimpana ja joka on valaistu yöllä LED-valoin. Sen vierellä ovat kappeli ja kellotorni sekä sankarihautausmaa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-nisporeni-83be8503.jpg",
+          lahde: "Joerggo, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Joerggo",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Dealul_Bălănești_2.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-nisporeni-83be8503.jpg",
     },
     'Ocniţa': {
       lyhyt: 'Naslavcean kylä Dnestrin rannalla on Moldovan pohjoisin kohta, ja sen kalkkikivirinteiltä avautuu näkymä joen mutkiin.',
+      pitka: "Ocnița on Moldovan pohjoisen piirin keskus: kaupungissa asui 2014 noin 7 300 ihmistä ja 599 neliökilometrin piirissä 2024 noin 31 600. Dnestrin rannalla oleva Otaci on vastarannan ukrainalaisen Mohyliv-Podilskyin naapuri. Lipnicin kylässä muistetaan Tapani Suuren joukkojen voittoa tataarijoukoista 1400-luvulla, ja paikan Cadânein lähde on valtion suojelema muistomerkki. Kirjailija Constantin Stamati (1786–1869) kuoli Ocnițassa, ja hänen talomuseonsa avattiin 1988. Piirin pohjoisimmassa osassa Naslavcean lähellä Chisărău-joen laaksossa on maisemansuojelualue, jossa on vanhojen vesimyllyjen kahlaamoita.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ocnita-1e087f73.jpg",
+          lahde: "Alex Prodan, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Malul_abrupt_al_Nistrului_Naslavcea-Verejeni_Ocnita_(3).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ocnita-1e087f73.jpg",
     },
     Orhei: {
       lyhyt: 'Răut-joen mutkassa Orheiul Vechin kalkkikivikallioon on kaiverrettu luolaluostari, jossa asuu yhä kourallinen munkkeja.',
+      pitka: "Orheissa asuu 22 183 ihmistä (2024), ja se on Moldovan yhdeksänneksi suurin kaupunki, noin 40 kilometriä Chișinăusta pohjoiseen. Piiri kattaa 1 228 neliökilometriä, 75 asutusta ja noin 79 000 asukasta; kaksi kolmasosaa maasta on viljelyksessä, ja alue tunnetaan viinistä sekä vanhasta tupakkateollisuudesta. Orheiul Vechin ympärille perustettiin vuonna 2013 noin 338 neliökilometrin kansallispuisto, ensimmäinen Moldovassa. Kohde on ollut UNESCOn maailmanperintöehdokkaana. Kaupungin jalkapalloseura Milsami voitti Moldovan mestaruuden 2015.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-orhei-21c2c9f0.jpg",
+          lahde: "Julian Nyča, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Julian Nyča",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Orhei_Vechi_08.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-orhei-21c2c9f0.jpg",
     },
     Rezina: {
       lyhyt: 'Saharnan luostari on Moldovan suurimpia pyhiinvaelluspaikkoja, ja tarun mukaan sen yllä kohoavalla kalliolla on Neitsyt Marian jalanjälki.',
+      pitka: "Rezina levittäytyy Dnestrin oikealle rannalle kolmelle terassille noin 100 kilometrin päähän Chișinăusta. Kaupungissa oli 2014 noin 11 000 asukasta ja 622 neliökilometrin piirissä 2024 noin 30 200. Kaupungin lähettyviltä löydettiin 1946 getodakialaisten asuinpaikka 300- tai 200-luvulta eaa. Piirin kalkkikivinen ylänkö on rosoista, ja siellä on kaksi luonnonsuojelualuetta, Saharna (noin 670 hehtaaria) ja Țipova. Saharnajoen rotkossa on kaksikymmentä vesiputousta.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-rezina-0eb6cc45.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Monasterio_de_Saharna,_Saharna,_Moldavia,_2023-11-01,_DD_52-54_HDR.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-rezina-0eb6cc45.jpg",
     },
     'Rîşcani': {
       lyhyt: 'Prutille Costeștiin valmistui 1978 yhdessä Romanian kanssa rakennettu pato ja vesivoimala, jonka tekojärvessä on noin 1,3 miljardia kuutiota vettä.',
+      pitka: "Rîșcanin piiri kattaa 936 neliökilometriä Romanian rajan tuntumassa. Asukkaita on 2024 laskennan mukaan noin 43 700, ja piirissä on 55 asutusta, joista kaupunkeja ovat Rîșcani ja Costești. Rîșcanin kaupungin väkiluku oli huipussaan 1989 (17 650) ja 2014 enää 9 259. Yli 80 prosenttia maasta on viljelyksessä: viljaa, auringonkukkaa ja tupakkaa. Piirissä on rotko- ja luonnonsuojelualueita, kuten Pociumbeni ja Șaptebani. Duruitoarea Veche -luolan ympärille rakennettiin 2016–2017 museokokonaisuus, johon kuuluvat myös luolamuistomerkki ja Duruitoarean rotkon suojelualue.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-riscani-6b8458c4.jpg",
+          lahde: "Bogdan Muraru, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bogdan Muraru",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Barajul_Stânca_Costesti.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-riscani-6b8458c4.jpg",
     },
     'Sîngerei': {
       lyhyt: 'Sîngerein piirin halki virtaa Răut, pisin kokonaan Moldovan rajojen sisällä virtaava joki, matkallaan kohti Dnestriä.',
+      pitka: "Sîngereissä asui 2024 noin 9 950 ihmistä, kun väkiluku oli huipussaan 1989 noin 15 000. Koko piirissä on noin 55 900 asukasta 1 034 neliökilometrin alueella ja 70 asutusta. Maisema on Bălțin aroa, pehmeästi kumpuilevaa tasankoa, jonka korkeimmat kohdat ovat 190–240 metrissä. Yli puolet maasta on viljelyksessä: viljaa, vihanneksia, tupakkaa ja auringonkukkaa. Metsää on vain noin 11 prosenttia, ja eläimistöön kuuluvat jänikset, ketut, villisiat ja haikarat.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-singerei-00cf0ad5.jpg",
+          lahde: "Анатолий Зубанюк, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Анатолий Зубанюк",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sîngerei_District,_Moldova_-_panoramio_(7).jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-singerei-00cf0ad5.jpg",
     },
     'Şoldăneşti': {
       lyhyt: 'Șoldăneștin piiristä lähes viidennes on tammi-, saarni- ja lehmusmetsää, jonka kätköissä elää susia ja villisikoja.',
+      pitka: "Șoldănești on noin 5 900 asukkaan (2014) kaupunki 145 metrin korkeudessa Ciorna-joen laaksossa; 598 neliökilometrin piirissä on noin 25 400 asukasta (2024) ja 33 asutusta. Alueen korkein kohta, Zahornan kukkula, kohoaa 338 metriin, ja maaperästä löytyy kalkkikiveä, soraa, savea ja hiekkaa. Dnestrin oikealla rannalla Vadul-Rașcovin kylässä on runoilija ja näytelmäkirjailija Dumitru Matcovschin (1939–2013) talomuseo. Lähellä sijaitsevassa Climăuții de Josin kylässä on maisemansuojelualue, jonka punertavat kukkulat rajaavat Dnestrin rantaa.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soldanesti-e585f35b.jpg",
+          lahde: "Анатолий Зубанюк, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Анатолий Зубанюк",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Șoldănești_District,_Moldova_-_panoramio_(7).jpg",
+          lisenssi: "CC BY 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soldanesti-e585f35b.jpg",
     },
     Soroca: {
       lyhyt: 'Sorocan linnoitus Dnestrin rannalla on täydellinen ympyrä, jossa on viisi tasavälein sijoitettua bastionia; kivisenä se valmistui 1540-luvulla.',
+      pitka: "Soroca on Dnestrin rannalla noin 160 kilometriä Chișinăusta pohjoiseen, ja siellä asui 2024 laskennan mukaan 21 135 ihmistä; koko piirissä 58 600. Nykyisen kivilinnoituksen edeltäjä oli puinen linnake, jonka Tapani Suuren kerrotaan perustaneen 1499 suojaamaan joen kahlaamoa. Dnestrin osuus piirin itärajasta on 93 kilometriä. Kaupunkia kutsutaan usein Moldovan romanien pääkaupungiksi, sillä romaneja on noin neljä prosenttia asukkaista. Cosăuțin kylän lähellä kaksi geologista luonnonmuistomerkkiä ovat Dnestrin kosket sekä hiekkakiven ja graniitin paljastumat, ja kylä tunnetaan kivenveistäjien työpajoistaan.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soroca-259df16b.jpg",
+          lahde: "Popușoi Radu Cornel, Wikimedia Commons (CC0)",
+          tekija: "Popușoi Radu Cornel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Soroca_Fortress.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soroca-259df16b.jpg",
     },
     'Ștefan Vodă': {
       lyhyt: 'Purcarin viinitila sai 1827 keisarin asetuksella Bessarabian ensimmäisen erikoistuneen viinitilan aseman, ja siellä tehdään tummaa Negru de Purcaria.',
+      pitka: "Ștefan Vodă on Moldovan kaakkoiskulmassa, noin sadan kilometrin päässä sekä Chișinăusta että Odesasta. Piirissä asuu noin 42 000 ihmistä, lähes yhdeksän kymmenestä maaseudulla, ja maisemaa hallitsevat viljelmät: viinitarhoja on lähes 5 000 hehtaaria ja hedelmätarhoja yli 3 000. Crocmazin kylässä viinitilan naapurina on etnografinen museo, joka perustettiin 1986 ja jonka kokoelmissa on tuhansia esineitä paikallisista perinteistä ja tavoista. Cioburciun kylän ympäröimät metsät kuuluvat Moldovan kauneimpiin: siellä soudetaan, onkitaan ja opitaan punomaan pajusta. Nistrun rannalla Palancan kylä on tullut tunnetuksi rajastaan, sillä kansainvälinen rajanylityspaikka sijaitsee Ukrainan puolella.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stefan-voda-22545d5c.jpg",
+          lahde: "Diana.moraru, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diana.moraru",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Purcari.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stefan-voda-22545d5c.jpg",
     },
     'Stîngă Nistrului': {
       lyhyt: 'Dnestrin itärannalla Dubăsarin pato ja vesivoimala valmistuivat 1954, ja padon taakse syntyi Dubăsarin tekojärvi.',
+      pitka: "Nistrun vasemmalla rannalla Moldovan hallintojaossa on Dubăsarin piiri, jonka keskus on Cocieri ja joka perustettiin 2023. Sen 309 neliökilometrillä asuu runsaat 21 000 ihmistä 11 kunnassa, joihin kuuluu yhteensä 15 asutusta. Piirin halki virtaava Nistru on padottu Dubăsarin tekojärveksi, joka on noin 128 kilometriä pitkä ja pinta-alaltaan noin 67,5 neliökilometriä; sen vesivoimalan teho on 48 megawattia. Rannoilla kohoaa paikoin jyrkkää kalkkikiveä ja tiheää metsää, ja tyyni vesi houkuttelee veneilijöitä ja onkijoita. Kylien arki kulkee peltojen ja veden ehdoilla.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stinga-nistrului-8c382a9d.jpg",
+          lahde: "Criss90kf, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Criss90kf",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hidrocentrala_Dubăsari_2011_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stinga-nistrului-8c382a9d.jpg",
     },
     'Străşeni': {
       lyhyt: 'Lozovan lähellä Codrun luonnonsuojelualueella on suojeltu vuodesta 1971 yli 5 000 hehtaaria tiheää tammi- ja pyökkimetsää.',
+      pitka: "Străşeni on Moldovan keskiosassa Chișinăun länsipuolella. Piirin noin 61 000 asukkaan maisema on kukkulaista, ja noin 37 prosenttia pinta-alasta on metsää. Keskuskaupungissa asuu vajaat 14 500 ihmistä. Căprianan luostari, jonka ensimmäinen kirjallinen maininta on vuodelta 1429, on yksi Moldovan vanhimpia; sen Neitsyt Marian kuolonuinumisen kirkko rakennettiin 1491–1496 kivestä. Dolnan kylässä seisoo varakkaan kreikkalaissyntyisen Zamfirache Rallin (1769–1831) kartano, jossa runoilija Aleksandr Pushkin vieraili karkotuksensa aikana; siitä tehtiin museo, joka avattiin yleisölle 6. kesäkuuta 1949, ja kartanolla vietetään Pushkin-juhlaa kesäkuun ensimmäisenä sunnuntaina.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-strasani-8f1af1e0.jpg",
+          lahde: "Alex Prodan md, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alex Prodan md",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rezervatia_Codrii_Straseni_(1).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-strasani-8f1af1e0.jpg",
     },
     Taraclia: {
       lyhyt: 'Taraclian asukkaista yli kolme neljäsosaa on bulgarialaisia, ja kaupungin yliopistossa opetetaan bulgariaksi ja romaniaksi.',
+      pitka: "Taraclia on Moldovan eteläosan pieni kaupunki, jossa asuu noin 10 000 ihmistä ja jota pidetään Bessarabian bulgarialaisten keskuksena. Yli kaksisataavuotias asutus näkyy arjessa: kaupungissa toimii bulgarialainen teatteri, ja piirin kouluissa opiskellaan bulgariaa. Kaupungin viinitehdas perustettiin 1955. Etno Fest Taraclia -festivaali on järjestetty jo 25 kertaa: sillä nähdään kymmeniä esiintyjäryhmiä ja perinnekäsityöläisiä, ja vieraita saapuu Bulgariasta, Romaniasta ja Ukrainasta. Piiri koostuu kahdesta erillisestä osasta, ja toisessa niistä sijaitsee Tvardița, jossa on noin 3 100 asukasta ja lähes 90 prosenttia heistä on bulgarialaisia.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-taraclia-b4edd728.jpg",
+          lahde: "Gikü, Wikimedia Commons (CC0)",
+          tekija: "Gikü",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:MD.TR.TR_-_peste_drum_de_monumentul_de_război_-_jul_2025.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-taraclia-b4edd728.jpg",
     },
     'Teleneşti': {
       lyhyt: 'Teleneștissä syntyi 1898 Nachum Gutman, josta tuli tunnettu israelilainen taidemaalari – hänen taidemuseonsa on Tel Avivissa.',
+      pitka: "Telenești on Moldovan keskiosassa noin 90 kilometriä Chișinăusta pohjoiseen. Piirin noin 850 neliökilometristä peltoa on lähes kolme neljäsosaa, ja väkiluku oli 2024 väestönlaskennassa 41 452, runsaat neljännes vähemmän kuin kymmenen vuotta aiemmin. Piirin läpi virtaavat Răut ja Ciuluc. Kaupungissa kohoaa uusi Pyhän Eliaan katedraali, jonka rakennus alkoi 2006, ja Eminescun patsas on ollut paikallaan vuodesta 1989. Vanhimmat kirjalliset maininnat seudun kylistä ulottuvat 1400-luvulle.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-telenesti-f193ec0e.jpg",
+          lahde: "Gganebnyi, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Gganebnyi",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Primaria_Telenesti_IMG_8094.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-telenesti-f193ec0e.jpg",
     },
     Transnistria: {
       lyhyt: 'Dnestrin itärannalla olevan Dubăsarin nimi tulee vanhasta sanasta dubăsar, joka tarkoitti veneentekijää tai lauttamiestä.',
+      pitka: "Transnistria on kapea, noin 4 160 neliökilometrin alue Nistrun itärannalla Moldovan ja Ukrainan välissä, ja siellä asuu arviolta noin 370 000 ihmistä. Kansainvälisesti alue katsotaan osaksi Moldovaa, mutta käytännössä sitä hallinnoivat omat viranomaiset Tiraspolista käsin. Tiraspol on alueen suurin kaupunki, noin 126 000 asukasta; sen perusti 1792 Aleksandr Suvorov, ja Suvorovin patsas seisoo edelleen keskusaukiolla. Länsirannalla Benderissä kohoaa Tighinan linnoitus, jonka osmanit rakennuttivat kiveksi vuosina 1538–1541 arkkitehti Sinanin suunnitelmien mukaan ja jonka entisöinti kesti 2008–2012. Chițcanin kylän Noul Neamț -luostari suljettiin 1962 ja muutettiin sairaalaksi, mutta sen kirkko avattiin uudelleen 1989.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-transnistria-4e1fa202.jpg",
+          lahde: "Eugene Romanenko from Tiraspol, Moldova, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Eugene Romanenko from Tiraspol, Moldova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tiraspol,_embankment_(7109955089).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-transnistria-4e1fa202.jpg",
     },
     Ungheni: {
       lyhyt: 'Unghenin rautatiesilta Prutin yli tunnetaan Eiffelin siltana; se avattiin 1877, ja sitä pitkin kulkevat yhä junat Romaniaan.',
+      pitka: "Ungheni on Moldovan länsiportti: Prut virtaa kaupungin kohdalla noin kahdeksan kilometriä, ja toisella rannalla alkaa Romania. Kaupunki mainitaan asiakirjoissa ensi kerran 20. elokuuta 1462, ja nykyään siellä asuu noin 27 000 ihmistä. Rajalla vaihtuu myös raideleveys: Neuvostoliitosta peritty leveä 1 520 millimetriä kohtaa Euroopan normaalin 1 435 millimetriä. Historian ja etnografian museo, perustettu 1967, säilyttää yli 10 000 esinettä, joista vanhimmat ovat noin 100 000 vuoden takaa. Kaupungin katuja ja puistoja koristaa noin 33 veistosta kolmelta kuvanveistäjäleiriltä, ja kastanjakuja kulkee noin neljä kilometriä. Vuonna 2014 avattiin kaasuputki Unghenin ja Romanian Iașin välille.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ungheni-a7821b69.jpg",
+          lahde: "Ungheni shoot, Wikimedia Commons (CC0)",
+          tekija: "Ungheni shoot",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Podul_Eiffel_de_peste_Prut,_situat_la_granița_dintre_Romînia_și_Moldova.jpg",
+          lisenssi: "CC0",
+          lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ungheni-a7821b69.jpg",
     },
   },
   /*
@@ -5764,78 +8583,386 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   UKR: {
     Cherkasy: {
       lyhyt: 'Kanivin lähellä Tarasinmäellä Dneprin rannalla lepää runoilija Taras Ševtšenko, jonka maalliset jäännökset siirrettiin sinne Pietarista 1861.',
+      pitka: `Cherkasyn maakunta levittäytyy Dneprin molemmin puolin keskisen Ukrainan metsäaromaisemaan, ja joen rannoilla on asuttu tiiviisti jo vuosisatoja. Alueen nimeen kietoutuu kasakkojen varhaishistoria: 1400-luvulla Keski-Dneprin kasakkayhteisöjä kutsuttiin "tšerkasseiksi", ja Kanivin ja Cherkasyn linnoitukset suojasivat seutua tataarien ratsioilta. Nykyään maakunnan tunnetuin matkakohde ei silti liity sotaan vaan hiljaiseen pyhiinvaellukseen: joka syksy ennen juutalaista uutta vuotta Umaniin saapuu kymmeniätuhansia hasidijuutalaisia rukoilemaan rabbi Nachmanin haudalla, ja pikkukaupungin väkiluku moninkertaistuu muutamaksi päiväksi. Umanin toinen aarre, kreivi Potockin 1796 rakennuttama Sofijivkan puisto, houkuttelee ympäri vuoden retkeilijöitä vesiputouksineen ja keinotekoisine luolineen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-cherkasy-ba7e3558.jpg",
+          lahde: "Visem, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Visem",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chernecha_Hora_(May_2018)_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-cherkasy-ba7e3558.jpg",
     },
     Chernihiv: {
       lyhyt: 'Tšernihivin Kirkastumisen katedraalia alettiin rakentaa 1030-luvulla, ja se on harvoja mongolivalloitusta edeltäneen Kiovan Rusin rakennuksia.',
+      pitka: `Chernihiv makaa Desnan rannalla Polissjan metsien reunalla, ja se on yksi Ukrainan vanhimmista kaupungeista – ensimmäinen kirjallinen maininta siitä on vuodelta 907. Keskiajalla Chernihiv oli Kiovan Rusin toiseksi mahtavin kaupunki heti Kiovan jälkeen, ja tuolta ajalta on säilynyt poikkeuksellisen paljon kivirakennuksia ahtaalla Detynetsin linnanmäellä. Mäen alla kiemurtelee toinenkin aikakerrostuma: munkki Antonius kaivoi 1000-luvulla luolan, joka on laajentunut vuosisatojen varrella satojen metrien pituisiksi maanalaisiksi käytäviksi kappeleineen ja hautoineen. Nykyisin pikkukaupunkimainen Chernihiv elää rauhallista arkea vanhojen kirkkojensa ja luostariluolien varjossa, kaukana suurkaupunkien vilinästä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernihiv-96c88ff1.jpg",
+          lahde: "Wadco2, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Wadco2",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:74-101-0001_001_Chernigiv.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernihiv-96c88ff1.jpg",
     },
     Chernivtsi: {
       lyhyt: 'Tšernivtsin yliopisto toimii entisessä Bukovinan ja Dalmatian metropoliittojen residenssissä, joka on Unescon maailmanperintöä vuodesta 2011.',
+      pitka: `Tšernivtsi on rakennettu kukkuloille Prutin rannalle, ja kaupunkikuvaa hallitsevat yhä keisarilliset kivijulkisivut – vuonna 1873 kaupunki kuului Itävallan keisarikunnan Bukovinan maakuntaan, ja arkkitehtuuri kertoo siitä yhä joka kadulla. Ennen toista maailmansotaa täällä eli rinnakkain ukrainalaisia, romanialaisia, juutalaisia, saksalaisia ja puolalaisia niin tiiviisti, että kaupunkia kutsuttiin "pikku-Wieniksi". Tästä kielten ja kulttuurien sekoituksesta nousi myös runoilija Paul Celan, joka syntyi kaupungissa 1920 ja kirjoitti äidinkielellään saksaksi selviydyttyään natsimiehityksestä juutalaisena – hänestä tuli yksi 1900-luvun tärkeimmistä saksankielisistä runoilijoista. Nykyään yliopistokaupunki on rauhallisempi ja yksikielisempi kuin ennen, mutta sen kadut ja kahvilat muistuttavat yhä siitä, montaa kulttuuria yksi kaupunki voi kantaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernivtsi-491657ec.jpg",
+          lahde: "Artem Vynohradov, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Artem Vynohradov",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chernivtsi_University_main_building.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-chernivtsi-491657ec.jpg",
     },
     "Dnipropetrovs'k": {
       lyhyt: 'Petrykivkan kylästä on lähtöisin valkoiselle pohjalle maalattu kukkakoristelu, joka on ollut Unescon aineetonta kulttuuriperintöä vuodesta 2013.',
+      pitka: `Dnipro-joki virtaa keskellä maakuntaa, ja sen rannoilla kohoava samanniminen suurkaupunki tunnettiin vuoteen 2016 asti nimellä Dnipropetrovsk – nimi vaihtui, kun Ukraina siivosi kaduilta ja kaupungeista neuvostojohtajien muiston. Kylmän sodan aikana kaupunki oli niin suljettu ohjustehtaansa Pivdenmašin (silloin Juzhmaš) vuoksi, ettei ulkomaalainen päässyt sinne lainkaan; tehdas valmisti aikanaan kymmeniä mannertenvälisiä ohjuksia vuodessa ja on nykyään osin siviilikäytössä. Kaupungin siluettiin kuuluu myös Menora-keskus, seitsemän toisiinsa kietoutuvaa tornia, joka on maailman suurin juutalaisyhteisön keskus ja avattiin 2012. Nykyään Dnipro on vilkas yliopisto- ja teknologiakaupunki, jonka kadunkulmissa neuvostoaikainen raskas teollisuus ja uusi startup-into elävät rinnakkain.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-dnipropetrovsk-ad593c25.jpg",
+          lahde: "Skoropadsky, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Skoropadsky",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Petrykivka1.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-dnipropetrovsk-ad593c25.jpg",
     },
     "Donets'k": {
       lyhyt: 'Svjatohirskin luostari kohoaa Siverskyi Donetsin jyrkälle oikealle rannalle liitukallioiden keskelle, ja siitä on kirjallinen maininta vuodelta 1627.',
+      pitka: `Donetskin nykyinen keskuskaupunki syntyi vasta 1869, kun walesilainen teollisuusmies John Hughes perusti aroaukealle rautatehtaan ja hiilikaivoksia – isoisän kulkiessa Eurooppaa 1873 kaupunki, jota kutsuttiin tuolloin Juzovkaksi hänen nimensä mukaan, oli vasta muutaman vuoden ikäinen nouseva tehdasyhdyskunta. Hughes toi mukanaan satakunta walesilaista työläistä perheineen, ja heidän jäljiltään kaupunkiin nousi jopa anglikaaninen kirkko keskelle Donbasin aroa. Kaivosten ja masuunien ympärille kasvoi vuosikymmenten kuluessa koko Neuvostoliiton raskaan teollisuuden ydinalue, ja pohjoisempana Siverskyi Donetsin liitukallioiden harjalla kohoava Svjatohirskin luostari on ollut alueen hengellinen kiintopiste jo vuosisatoja ennen tehtaitakin. Viime vuosien sota on koetellut seutua raskaasti, mutta luostari on pysynyt pystyssä ja on yhä monelle ukrainalaiselle tärkeä paikka.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-donetsk-dc976bd3.jpg",
+          lahde: "Mortier.Daniel, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mortier.Daniel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Laure_de_Sviatohirsk_au_nord_de_Donetsk_en_Ukraine.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-donetsk-dc976bd3.jpg",
     },
     "Ivano-Frankivs'k": {
       lyhyt: 'Kolomyjassa on pääsiäismunan muotoinen 14-metrinen museo, jonka kokoelmissa on yli 10 000 koristeltua pysankaa.',
+      pitka: `Ivano-Frankivskin alue kohoaa Karpaattien juurelle, ja sen vuoristokylissä elää yhä hutsuulien kulttuuri: kirjaillut vaatteet, paimentolaisperinteet ja käsityötaidot periytyvät sukupolvelta toiselle. Vuonna 1873 alue kuului Itävalta-Unkariin osana Galitsiaa, ja nykyinen Ivano-Frankivsk tunnettiin tuolloin nimellä Stanislau – kaupunki sai nykyisen nimensä vasta 1962 kirjailija Ivan Frankon mukaan. Nykyään vuoret tunnetaan ennen kaikkea Bukovelista, Itä-Euroopan suurimmasta hiihtokeskuksesta, joka vetää talvisin rinteilleen väkeä ympäri Ukrainaa. Seudun kylissä seisoo myös kymmeniä satojen vuosien ikäisiä puukirkkoja, joista osa on nostettu Unescon maailmanperintöluetteloon ainutlaatuisen hutsuuli- ja boikkiarkkitehtuurinsa ansiosta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ivano-frankivsk-b819f809.jpg",
+          lahde: "User:VargaA, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "User:VargaA",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pysanka_Kolomyia_06.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ivano-frankivsk-b819f809.jpg",
     },
     Kharkiv: {
       lyhyt: 'Harkovan Vapaudenaukion laidalla seisova konstruktivistinen Deržprom valmistui 1928 Neuvostoliiton ensimmäiseksi pilvenpiirtäjäksi.',
+      pitka: `Harkova on ollut opiskelijakaupunki jo yli 200 vuotta: sen yliopisto perustettiin 1804, ja se on Ukrainan vanhin yhä toimiva korkeakoulu, jonka ympärille on kasvanut kymmeniä muitakin oppilaitoksia. Vuosina 1919–1934 Harkova toimi neuvosto-Ukrainan pääkaupunkina, ja juuri tuolta ajalta ovat peräisin kaupungin laaja Vapaudenaukio sekä sen laidalla kohoava konstruktivistinen Deržprom. Kun pääkaupunki siirrettiin takaisin Kiovaan 1934, Harkovasta jäi silti maan toiseksi suurin kaupunki ja merkittävä teollisuuden ja tieteen keskus. Nykyään reilun 40 kilometrin päässä Venäjän rajasta sijaitseva kaupunki on kokenut sodan raskaasti, mutta sen yliopistot ja teatterit ovat pitäneet ovensa auki läpi vaikeimpienkin vuosien.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kharkiv-be7eb59a.jpg",
+          lahde: "Serhii BobokIf you have any questions please contact with me. Other photos see here.Якщо у Вас є якісь запитання будь ласка зв'яжіться зі мною. Інші фотографії Ви можете переглянути тут, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Serhii BobokIf you have any questions please contact with me. Other photos see here.Якщо у Вас є якісь запитання будь ласка зв'яжіться зі мною. Інші фотографії Ви можете переглянути тут",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Derzhprom_Kharkiv_2025_-_01.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kharkiv-be7eb59a.jpg",
     },
     Kherson: {
       lyhyt: 'Askania-Novan suojelualueen perusti 1898 Friedrich Falz-Fein, ja se tunnetaan przewalskinhevosistaan ja koskemattomasta arostaan.',
+      pitka: `Herson perustettiin 1778 keisarinna Katariina Suuren käskystä Mustanmeren laivaston tukikohdaksi, ja kaupungin ensimmäinen suuri sotalaiva, 66-tykkinen Slava Jekateriny, laskettiin vesille sen telakalta jo 1783. Telakkaperinne on hiipunut, mutta Herson tunnetaan nykyään toisenlaisesta tuotteesta: alueen aurinkoiset pellot tuottavat Ukrainan kuuluisimmat vesimelonit, ja Hersonin vesimeloni on käytännössä oma tuotemerkkinsä kauppojen hyllyillä ympäri maata. Kaupungin lounaispuolella Dnepr laskee laajaksi suistoksi Mustaanmereen, ja rannikon Kinburnin niemi on villi hiekkadyynien ja suolaniittyjen maailma. Aivan kaupungin itäpuolella aukeaa vielä toisenlainen erikoisuus: Oleškin hiekka-aavikko on Euroopan toiseksi suurin aavikko, ja sen dyynit paljastuivat vasta 1800-luvulla, kun liiallinen laiduntaminen ja metsien hakkuu riisuivat jääkauden jättämän hiekkakerroksen kasvillisuudesta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kherson-cf1d7ac2.jpg",
+          lahde: "Nataliya Shestakova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Nataliya Shestakova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Askania-Nova_Steppe_24_Przewalski's_Horses_(YDS_1683).jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kherson-cf1d7ac2.jpg",
     },
     "Khmel'nyts'kyy": {
       lyhyt: 'Kamjanets-Podilskyin linna seisoo niemellä, jonka ympärille Smotrytš-joki on kaivertanut kanjonin; linnaan johtaa 88-metrinen silta.',
+      pitka: `Kamjanets-Podilskyin kanjonin yllä on totuttu näkemään muutakin kuin linnan tornit: kaupungissa lensi Itä-Euroopan ensimmäinen kuumailmapallo jo 1784, ja nykyään siellä järjestetään kahdesti vuodessa ilmapallofestivaali, jossa parikymmentä palloa kohoaa Smotrytšin kanjonin yllä. Etelämpänä Dnestr-joen rannalla sijaitsee Bakotan lahti, jonka pohjaan hukkui 1981 valmistuneen tekoaltaan alle kokonainen keskiaikainen kylä – jäljellä on vain kalliolle 1000-luvulla kaiverrettu luolaluostari, joka kohoaa yhä joen yllä. Maakunnan nykyinen keskuskaupunki on nimetty kasakkahetmani Bohdan Hmelnytskyin mukaan, joka johti 1648 kapinan, mikä lopulta synnytti kasakkavaltion Puolan alaisuudesta. Nykyään Podollian kukkulainen maisema ja hedelmälliset pellot houkuttelevat sekä maalaismatkailijoita että seikkailijoita, jotka etsivät kalliokiipeilyä ja koskimelontaa alueen jokilaaksoista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-khmelnytskyy-23492f8e.jpg",
+          lahde: "Dima Sergiyenko; Please attribute this image as the work of \"DiscoverWithDima.\", Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Dima Sergiyenko; Please attribute this image as the work of \"DiscoverWithDima.\"",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kamianets-Podilskyi_Castle_(2007)-2.JPG",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-khmelnytskyy-23492f8e.jpg",
     },
     Kiev: {
       lyhyt: 'Bila Tserkvan Oleksandrija on Ukrainan suurin dendrologinen puisto, jonka kreivi Branicki perusti Ros-joen rannalle 1793.',
+      pitka: `Kiovan maakunta kehystää pääkaupunkia joka suunnalta, ja sen pohjoisosassa leviävät Polissjan metsät ja suot aina Valko-Venäjän rajalle asti. Juuri pohjoisessa, noin 90 kilometrin päässä Kiovasta, sijaitsee Tšornobylin ydinvoimala ja sen ympärille 1986 perustettu suoja-alue – ennen täysimittaista sotaa alueesta oli tullut yksi maailman puhutuimmista niin sanotun pimeän matkailun kohteista, kun kävijät kiersivät hylätyssä Pripjatin kaupungissa. Etelämpänä, Dneprin ja sen sivujokien varrella, maisema muuttuu jälleen viljavaksi maalaismaisemaksi täynnä pieniä historiallisia kaupunkeja, kuten Perejaslavia, jossa kasakkahetmani Hmelnytski solmi 1654 liiton Venäjän tsaarin kanssa. Nykyään moni kiovalainen pakenee viikonloppuisin juuri näihin maakunnan mökkeihin ja metsiin pääkaupungin vilinästä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-afac92de.jpg",
+          lahde: "Mykola Swarnyk, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mykola Swarnyk",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Oleksandriya_Park_Ros_River.JPG",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-afac92de.jpg",
     },
     'Kiev City': {
       lyhyt: 'Kiovan metron Arsenalna-asema on 105,5 metrin syvyydessä, ja se on yksi maailman syvimmistä metroasemista.',
+      pitka: `Kiova on Ukrainan pääkaupunki ja suurin kaupunki, ja sen symboliksi on noussut yllättävän vaatimaton puu: kastanja, joka tuotiin kaupunkiin 1842 ja jonka valkoiset kukinnot koristavat toukokuisin keskustan puistokatuja. Vanhassa kaupungissa seisoo yhä 1000-luvulla rakennettu Pyhän Sofian katedraali kultaisine kupoleineen, yksi harvoista Kiovan Rusin ajan rakennuksista, jotka ovat säilyneet lähes koskemattomina – se kuuluu Unescon maailmanperintöön. Andriyivskyin mäenrinnettä laskeutuva mutkitteleva katu on täynnä taidemyyjiä ja galleriaportaita, ja siitä on tullut kaupungin epävirallinen taiteilijakortteli jo vuosikymmenten ajan. Maidan Nezaležnostin aukio keskustassa on 2000-luvulla noussut kahdesti koko maan huomion keskipisteeksi suurten mielenosoitusten näyttämönä, ja siitä on tullut nykyajan Ukrainan tärkein symbolinen paikka.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-city-1f928085.jpg",
+          lahde: "AMY (talk) 12:14, 7 May 2010 (UTC), Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "AMY (talk) 12:14, 7 May 2010 (UTC)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Arsenalna_metro_station_Kiev_2010_pano.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kiev-city-1f928085.jpg",
     },
     Kirovohrad: {
       lyhyt: 'Kirovohradin alueen pikkukaupunkia Dobrovelytškivkaa pidetään Ukrainan maantieteellisenä keskipisteenä.',
+      pitka: `Maakunnan keskuskaupunki tunnettiin pitkään nimellä Kirovohrad neuvostojohtaja Sergei Kirovin mukaan, mutta se nimettiin 2016 dekommunisointilain myötä uudelleen Kropyvnytskyiksi näytelmäkirjailija ja näyttelijä Marko Kropyvnytskyin kunniaksi – itse maakunta kantaa yhä vanhaa nimeä, koska sen vaihtaminen vaatisi oman erillisen lakinsa. Kropyvnytskyi oli perustamassa Ukrainan ensimmäistä ammattimaista ukrainankielistä teatteriryhmää, joka esiintyi kaupungissa lokakuussa 1882 – päivää pidetään yhä koko ukrainalaisen ammattiteatterin syntymäpäivänä. Kaupunki tunnettiin aiemmin nimellä Jelisavetgrad, linnoituskaupunkina, joka perustettiin 1754 suojaamaan aroa tataarien ratsioilta. Nykyään ympäröivä maakunta on rauhallista mustamultaista viljelysmaisemaa, jonka läpi kulkee vain vähän läpikulkuliikennettä – ehkä juuri siksi se sopii niin hyvin koko maan symboliseksi keskipisteeksi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kirovohrad-250841fd.jpg",
+          lahde: "Map hobby, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Map hobby",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Гео_Центр_Добровеличківка.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-kirovohrad-250841fd.jpg",
     },
     "L'viv": {
       lyhyt: 'Lvivin Rynok-toria ympäröi 44 vanhaa kaupunkitaloa, ja torin jokaisessa kulmassa on 1790-luvun kaivolähde antiikin tarujen hahmon patsaineen.',
+      pitka: `Lviv oli 1873 osa Itävalta-Unkaria, Galitsian pääkaupunki, ja kaupungin kadut, kahvilat ja teatterit kantavat yhä keisarikunnan aikaista leimaa vahvemmin kuin missään muualla Ukrainassa. Kaupunki väittää olevansa Itä-Euroopan kahvikulttuurin syntysija: legendan mukaan lvivilaissyntyinen Jerzy Franciszek Kulczycki avasi ensimmäisen kahvilan Wieniin 1683 turkkilaisten jättämillä pavuilla, ja nykyään vanhankaupungin kahviloissa tarjoillaan yhä "kaivoksesta nostettua" kahvia entisissä kellarivarastoissa. Lvivin ooppera- ja balettiteatteri valmistui 1900 arkkitehti Zygmunt Gorgolewskin suunnitelmien mukaan, ja sen rakentamiseksi Poltva-joki ohjattiin kulkemaan maan alle rakennuksen perustusten läpi. Nykyään Lviv on maan tärkeimpiä kulttuurikaupunkeja, jonka teattereissa, oopperassa ja kaduilla kuuluu usein useampi kieli kuin yksi – perintö ajalta, jolloin kaupunki kuului vuorotellen puolalaisille, itävaltalaisille ja neuvostoille ennen itsenäistä Ukrainaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-lviv-500ca648.jpg",
+          lahde: "Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Jorge Láscar from Australia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rynok_Square_in_Lviv_(8673813675).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-lviv-500ca648.jpg",
     },
     "Luhans'k": {
       lyhyt: 'Alueen pohjoisosan Striltsivskyin aro otettiin suojeluun arosurmelin vuoksi, ja tuo murmeli on yhä suojelualueen tunnuseläin.',
+      pitka: `Luhanskin alueen aro jatkuu silmänkantamattomiin, ja etelämpänä maisema vaihtuu vähitellen Donbasin teollisiin kaupunkeihin ja vuosisataisen kaivostyön perintöön. Danylivkan kylän liepeillä toimii yhä Derkulin hevostila, joka perustettiin keisarinna Katariina II:n käskystä 1765 kasvattamaan ratsuja armeijalle – vuoteen 1873 mennessä tallissa oli jo yli sata vuotta kartutettu osaamista, josta 1900-luvulla syntyi kokonaan oma rotu, ukrainalainen ratsuhevonen. Alueen ihmiset ovat perinteisesti eläneet sekä maanviljelyn että kaivostyön rytmissä, ja moni perhe tuntee kummankin arjen. Viime vuodet ovat koetelleet seutua raskaasti, mutta Derkulin tallissa hevoset saavat yhä ruokansa ja harjauksensa joka aamu.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-luhansk-cc02798f.jpg",
+          lahde: "Дар`я Коршун, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Дар`я Коршун",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:\"Стрільцівський_степ\",_відділення_Луганського_природного_заповіднику,_Міловський_район,_Луганська_область_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-luhansk-cc02798f.jpg",
     },
     Mykolayiv: {
       lyhyt: 'Parutynen kylän lähellä Etelä-Bugin suistossa ovat Olbian rauniot – kaupungin perustivat Miletoksen kreikkalaiset 600-luvulla eaa.',
+      pitka: `Etelä-Bugin ja Inhulin yhtymäkohtaan perusti ruhtinas Potjomkin 1789 telakan, jonka hän nimesi Pyhän Nikolauksen mukaan muistoksi Otšakivin valtauksesta juuri tuon pyhimyksen nimipäivänä – näin syntyi Mykolajiv. Vuoteen 1873 mennessä kaupungin telakat olivat jo vuosikymmenten ajan rakentaneet sotalaivoja Venäjän Mustanmeren laivastolle, ja sama perinne jatkui läpi Neuvostoliiton ajan aina lentotukialuksiin asti. Kaupungin arki kiertyy edelleen laivanrakennuksen ympärillä, vaikka viime vuodet ovat tuoneet telakoille omat haasteensa. Toista puolta kaupungista edustavat sen vehreät puistokadut ja eläintarha, joka on yksi Ukrainan suosituimmista ja vanhimmista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-mykolayiv-ee5018e9.jpg",
+          lahde: "Investigatio, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Investigatio",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mykolayivs'ka_parutino_Olvia_archeological_site-01.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-mykolayiv-ee5018e9.jpg",
     },
     Odessa: {
       lyhyt: 'Odessan alla kiemurtelee jopa 2 500 kilometriä katakombeja, enimmäkseen louhoksia, joista kaupungin rakennuskivi aikanaan nostettiin.',
+      pitka: `Odessa rakennettiin 1794 alkaen ranskalaisten ja italialaisten arkkitehtien suunnitelmien mukaan, ja kaupungin vaaleat klassismin talot, leveät puistokadut ja Potjomkinin portaat muistuttavat yhä tästä kansainvälisestä alusta. Ooppera- ja balettiteatteri, wieniläisarkkitehtien 1880-luvulla suunnittelema barokkihelmi, on säilynyt kaupungin ylpeytenä ja yhtenä Itä-Euroopan komeimmista teattereista. Odessalaiset ovat kautta aikojen tunnettuja terävästä huumoristaan, ja kaupunki juhlii sitä joka vuosi huhtikuun alussa Humoryna-karnevaalilla, jolloin kaduille kerääntyy klovneja, koomikkoja ja kulkueita. Meri, huumori ja kirjallisuus kietoutuvat täällä yhteen tavalla, joka on tehnyt Odessasta oman legendansa koko Ukrainassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-odessa-e70df068.jpg",
+          lahde: "DIMSFIKAS, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "DIMSFIKAS",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Potemkin_stairs,_Odessa.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-odessa-e70df068.jpg",
     },
     Poltava: {
       lyhyt: 'Opišnjan kylä on tunnettu keramiikastaan: siellä on valmistettu koristeellisia saviastioita perinteisin menetelmin 1800-luvulta asti.',
+      pitka: `Poltavan alue on Ukrainan viljavaa mustamultaa parhaimmillaan, ja kesäisin maisemaa hallitsevat auringonkukka- ja vehnäpellot horisonttiin asti. Kaupungissa syntynyt Ivan Kotljarevskyi kirjoitti 1798 Eneidan, ensimmäisen kokonaan ukrainan puhekielellä kirjoitetun kaunokirjallisen teoksen, ja hänen poltavalainen murteensa muovasi pitkälti nykyisen kirjakielen perustan. Alueen naiset ovat kautta aikojen olleet tunnettuja kirjontataidostaan, ja monet nykyisin tunnetut vyshyvanka-kuosit polveutuvat juuri Poltavan kylistä. Vuoden 1709 suurta taistelua, jossa Pietari Suuri kukisti Ruotsin Kaarle XII:n joukot, muistetaan yhä taistelukentän museossa kaupungin laidalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-poltava-17b214b8.jpg",
+          lahde: "Tetiana.iefimenko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Tetiana.iefimenko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:3_cats_in_the_National_Museum_of_Ukrainian_Pottery,_Opishnya,_Ukraine.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-poltava-17b214b8.jpg",
     },
     Rivne: {
       lyhyt: 'Klevanin lähellä kulkee Rakkauden tunneli, muutaman kilometrin teollisuusrata, jonka yllä puut kaartuvat vihreäksi holviksi.',
+      pitka: `Rivnen alueen pohjoisosa on Polesian suota ja mäntymetsää, jossa kylät kohoavat kuivemmilta hiekkaharjanteilta soiden keskeltä – maisema muistuttaa enemmän Pohjolaa kuin Etelä-Ukrainaa. Ostrohin pikkukaupungissa toimi jo 1576 akatemia, jota pidetään koko itäslaavilaisen maailman ensimmäisenä korkeakouluna, ja sen perintöä jatkaa nykyään uudelleen avattu yliopisto samalla paikalla. Kostopilin lähellä maasta kohoaa kymmeniä metrejä korkeita, lähes täydellisen kuusikulmaisia basalttipatsaita – ne syntyivät muinaisesta laavavirrasta ja paljastuivat vasta, kun talonpoika löi lapionsa kiveen kaivaessaan kaivoa 1700-luvulla. Nykyään paikka tunnetaan yhtenä Ukrainan seitsemästä ihmeestä, ja retkeilijät kiipeävät patsaiden juurelle ympäri vuoden.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-rivne-ee6897f4.jpg",
+          lahde: "Дядя Саша, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Дядя Саша",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tunnel_of_love_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-rivne-ee6897f4.jpg",
     },
     Sumy: {
       lyhyt: 'Hluhiv oli kasakkahetmanaatin pääkaupunki 1708–1764, ja sinne perustettiin 1730 Venäjän keisarikunnan ensimmäinen laulukoulu.',
+      pitka: `Sumyn seutu on lempeää metsä-aroa Psel-joen varrella, ja kaupunki itse levittäytyy joen mutkien ympärille rauhallisena, vehreänä maakuntakeskuksena. Vuonna 1869 varakas Harytonenkon suku rakensi kaupunkiin sokeritehtaan, joka oli vuoteen 1873 mennessä jo yksi seudun suurimmista työllistäjistä; seuraavien vuosikymmenten aikana suvusta kasvoi yksi koko Venäjän keisarikunnan rikkaimmista. Osa varallisuudesta valui hyväntekeväisyyteen: suku rahoitti kaupunkiin kouluja, sairaaloita ja komeita rakennuksia, jotka seisovat yhä keskustassa. Nykyisin Sumy on ennen kaikkea yliopisto- ja konepajakaupunki, jonka opiskelijaelämä ja teollisuus pitävät seudun arkea käynnissä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-sumy-25ce37d5.jpg",
+          lahde: "Андрій Гриценко, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Андрій Гриценко",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hlukhiv_Uspensʹka_tserkva_1724.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-sumy-25ce37d5.jpg",
     },
     "Ternopil'": {
       lyhyt: 'Korolivkan kylän alla on Optymistytšna, maailman pisin kipsiluola – sen käytäviä on kartoitettu noin 264 kilometriä.',
+      pitka: `Ternopilin alueen kalkkikivimaaperä kätkee allaan Optymistytšnan luolaston lisäksi lukuisia muita onkaloita, ja seutu tunnetaankin Ukrainan luolaisimpana maakuntana. Pohjoisessa kohoaa Potšaivin luostari, yksi ortodoksisen kirkon tärkeimmistä pyhiinvaelluskohteista – sen 65-metrinen kellotorni houkuttelee yhä tuhansia pyhiinvaeltajia joka vuosi. Vuonna 1873 seutu kuului Venäjän sijaan Itävalta-Unkarin Galitsiaan, mikä selittää, miksi Ternopilin murre ja kreikkalaiskatolinen kirkko muistuttavat yhä enemmän Keski-Eurooppaa kuin Venäjän tasankoa. Kaupunkien torit reunustavat vaaleat, itävaltalaisvaikutteiset talot, ja moni niistä on viime vuosina saanut uuden raikkaan maalikerroksen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ternopil-728419af.jpg",
+          lahde: "Rbrechko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rbrechko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Optymistychna_Cave_RB.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-ternopil-728419af.jpg",
     },
     Transcarpathia: {
       lyhyt: 'Hustin lähellä on Narsissien laakso, 256 hehtaarin niitty, jolla villit narsissit kukkivat keväisin valkoisena mattona.',
+      pitka: `Transkarpatia on Ukrainan ainoa alue, joka jää kokonaan Karpaattien eteläpuolelle, ja siellä ilmasto ja hedelmätarhat muistuttavat enemmän Unkaria kuin muuta Ukrainaa. Vuonna 1873 seutu kuului Unkarin kuningaskuntaan osana Itävalta-Unkaria, ja tuo perintö näkyy yhä: pääkaupunki Užhorodissa on unkarilaisvaikutteinen linna, ja alueella asuu edelleen merkittävä unkarinkielinen vähemmistö, jolla on omat koulunsa ja lehtensä. Vuosisatojen ajan samalla kapealla kaistaleella ovat eläneet rinnakkain ukrainalaiset, unkarilaiset, slovakit, romanialaiset ja juutalaiset, ja monessa kylässä kuulee yhä useampaa kieltä samalla torilla. Narsissien laakson lisäksi alue tunnetaan viineistään ja termaalilähteistään, jotka nousevat maan alta Karpaattien juurelta ympäri vuoden.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-transcarpathia-585f1b9d.jpg",
+          lahde: "Rbrechko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rbrechko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:21-212-5018_Narcissi_Valley_RB.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-transcarpathia-585f1b9d.jpg",
     },
     Vinnytsya: {
       lyhyt: 'Tultšynissa opettanut Mykola Leontovytš sävelsi 1914 Štšedrykin, jonka melodia kiertää maailmaa joululauluna Carol of the Bells.',
+      pitka: `Vinnytsjan alue on Etelä-Bugin halkomaa hedelmällistä tasankoa, jonka kylissä viljellään yhä sokerijuurikasta ja hedelmäpuita laajoilla puutarhoilla. Kaupungin laidalla sijaitsee kirurgi Nikolai Pirogovin kartano Vyšnja, jonne hän muutti 1861 ja jossa hän asui kuolemaansa 1881 asti; testamenttinsa mukaisesti hänen ruumiinsa balsamoitiin, ja se lepää yhä kartanon kirkon kryptassa lasikannen alla. Museo on säilyttänyt myös hänen apteekkinsa ja leikkaussalinsa sellaisina kuin ne olivat 1870-luvulla, jolloin Pirogov jo eläkkeellä hoiti alueen köyhiä ilmaiseksi. Nykyisin Vinnytsjan tunnetuin nähtävyys on aivan toista sarjaa: Etelä-Bugin rantaan nousee joka kesäilta Euroopan suurin kelluva suihkulähde, jonka vesisuihkut tanssivat musiikin ja valojen tahtiin 60 metrin korkeuteen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-vinnytsya-cb36a3d5.jpg",
+          lahde: "Rbrechko, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rbrechko",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:05-243-0076_Tulchyn_Palace_RB.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-vinnytsya-cb36a3d5.jpg",
     },
     Volyn: {
       lyhyt: 'Lutskin Lubartin linna rakennettiin 1300-luvulla, ja sen porttitorni on painettu 200 hryvnan setelin taakse.',
+      pitka: `Volynin alueen luoteisosaa peittävät Länsi-Polesian suot ja metsät, joissa yli kolmekymmentä järveä muodostaa Šatskin kansallispuiston vesistön. Niistä syvin, Svitjaz, on Ukrainan syvin järvi ja niin kirkasvetinen, että pohja erottuu usean metrin syvyydeltä – kesäisin sen rannoille kertyy tuhansia uimareita ja telttailijoita. Alueen kylissä eletään yhä tiiviisti järvien ja metsien tahdissa: sienestys, kalastus ja lintubongaus kuuluvat arkeen, ja parhaina muuttoaikoina järvillä lepää kymmeniätuhansia muuttolintuja kerralla. Lutskin vanhassa keskustassa keskiaikainen linnoitus ja joenrantakahvilat elävät nykyään rinnakkain, ja kaupungista on tullut suosittu välietappi matkalla Puolan rajalle.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-volyn-a2c67596.jpg",
+          lahde: "Sasha India, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Sasha India",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lubart's_Castle_(Lutsk,_Ukraine)_(26099505504).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-volyn-a2c67596.jpg",
     },
     Zaporizhzhya: {
       lyhyt: 'Hortytsja on Dneprin suurin saari, 12,5 kilometriä pitkä, ja se on Zaporožjen kasakoiden historian keskeisiä paikkoja.',
+      pitka: `Ennen 1930-lukua Dneprin uoma halkoi Hortytsjan saaren kohdalla joukon koskia ja putouksia, jotka tekivät joesta laivaliikenteelle mahdottoman ja saaresta luonnostaan turvallisen tukikohdan kasakoille. Vuonna 1873 kosket kuohuivat vielä valjastamattomina, ja vasta Dneprogesin voimalapato hukutti ne 1930-luvun alussa – yksi Neuvostoliiton ensimmäisistä suurista teollisuushankkeista. Saarella toimii nykyään elävän historian museo, jossa oppaat esittävät Zaporožjen kasakoiden arkea 1500–1700-luvuilta nahka- ja metallitöineen, ja paikka täyttyy juhlapyhinä tuhansista kävijöistä. Kaupungin toinen puoli on raskasta teollisuutta: Zaporižžjan terästehtaat savuavat yhä joen toisella rannalla, vain muutaman kilometrin päässä saaren rauhasta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zaporizhzhya-deab951b.jpg",
+          lahde: "George Chernilevsky, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "George Chernilevsky",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Khortytsia_2021_G1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zaporizhzhya-deab951b.jpg",
     },
     Zhytomyr: {
       lyhyt: 'Žytomyrissa syntyi 1907 rakettisuunnittelija Sergei Koroljov, ja hänen syntymäkotinsa vastapäätä on astronautiikan museo.',
+      pitka: `Žytomyrin alueen pohjoisosa on Polesian havumetsää, ja kaupungin läpi virtaava Teteriv-joki on kaivertanut graniittiin ahtaan kanjonin, jossa nykyään melotaan koskia kesäisin. Berdytšivin kaupungissa ranskalainen kirjailija Honoré de Balzac vihittiin 1850 puolalaiselle kreivitär Ewelina Hańskalle pitkän kirjeenvaihtoromanssin jälkeen – häät pidettiin pienessä Pyhän Barbaran kirkossa, joka seisoo yhä kaupungissa. Samassa Berdytšivissä syntyi 1905 kirjailija Vasili Grossman, jonka sotakirjeenvaihtoa pidetään yhtenä toisen maailmansodan tärkeimmistä silminnäkijäkuvauksista. Havumetsät antavat alueelle myös arkisemman maineen: Žytomyrin seudun sienet ja mustikat täyttävät syksyisin teiden varsien myyntipöydät.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
+          lahde: "Texnik, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Texnik",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Korolev-museum-zhytomyr.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
+    },
+    Crimea: {
+      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
+      pitka: "Krimin niemimaan eteläisellä rannikolla Mustameri ja vuoret ovat lähes kosketusetäisyydellä: noin 150 kilometriä pitkän Krimin vuoriston korkein huippu Roman-Kosh nousee 1 545 metriin. Rannikon puutarhojen keskellä Livadian valkoinen kalkkikivipalatsi valmistui vuonna 1911 uusrenessanssin tyyliin, ja siinä on 116 huonetta. Jaltan tuntumassa Massandran viinikellarit ovat kypsyttäneet muskottiviinejä vuodesta 1894 graniittiin louhituissa tunneleissa. Vuorten pohjoispuolella Bahtšisarain kaanien palatsi, jonka rakennutti 1500-luvulla Sahib I Giray, kätkee sisäpihalleen Kyynelten lähteen, josta Aleksandr Pushkin sai aiheen runoonsa.",
+    },
+    Sevastopol: {
+      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+      pitka: "Sevastopolin kalliorannikolla antiikki, luostarit ja merihistoria kulkevat rinnakkain. Taurisen Khersonesoksen kaupungin perustivat kreikkalaiset siirtolaiset noin 2 500 vuotta sitten, ja sen viininviljelyalue eli khora kuuluu vuonna 2013 UNESCOn maailmanperintöluetteloon hyväksyttyyn kohteeseen. Kaupunki eli aina 1400-luvun tienoille. Sevastopolinlahti ulottuu noin 7,5 kilometrin mittaisena sisämaahan kohti Inkermanin luolaluostaria, jonka kalliokirkot ovat varhaiskeskiajalta. Etelämpänä Balaklavan pieni lahti kätkeytyy kallioiden suojaan; genovalaisten Cembalo-linnakkeen vanhimmat rakennuskirjoitukset ovat vuodelta 1357, ja antiikissa paikka tunnettiin nimellä Symbolon.",
     },
   },
   /*
@@ -5857,24 +8984,108 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BLR: {
     Brest: {
       lyhyt: 'Belovežin aarniometsässä, jonka Valko-Venäjä jakaa Puolan kanssa, elää yli 800 visenttiä – Euroopan painavinta maaeläintä.',
+      pitka: "Brest on Valko-Venäjän länsiportti: Bug-joen rannalla, aivan Puolan rajalla, noin 340 000 asukkaan kaupungissa junien telit vaihdetaan, koska raideleveys muuttuu 1520 millistä Euroopan 1435 milliin. Brestin linnoitus, jonka rakentaminen alkoi 1830-luvulla, on nykyään muistomerkkialue, jossa muistetaan vuoden 1941 puolustustaisteluja; sen Rohkeus-veistos on 33,5 metriä korkea. Samassa linnoituksessa allekirjoitettiin myös vuoden 1918 Brest-Litovskin rauhansopimus. Kaupungin vanhempi kerros on maan alla: Berestje-museon suojakatoksen alla on 1200-luvun puukaupungin hirsitaloja, jotka kaivettiin esiin vuosina 1968–1981. Museo avattiin 1982.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-brest-530d8b42.jpg",
+          lahde: "Eternal Beginner, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Eternal Beginner",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:European_bison_in_the_National_Park_„Belovezhskaya_Pushcha“_aviary_-_Sep_2023.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-brest-530d8b42.jpg",
     },
     Gomel: {
       lyhyt: 'Homelin palatsin ympärille Sož-joen rannalle perusti ruhtinas Ivan Paskevitš 1800-luvulla englantilaisen puiston, joka on yhä paikallaan.',
+      pitka: "Gomelin alue on Valko-Venäjän eteläisin ja yksi suurimmista, noin 40 400 neliökilometriä, ja sen keskus Gomel on maan toiseksi suurin kaupunki, noin 500 000 asukasta. Etelässä avautuu Polesjen metsä- ja suoseutu. Polesjen radioekologinen luonnonsuojelualue perustettiin 18. heinäkuuta 1988, ja se kattaa yli 2 000 neliökilometriä, jolla liikkuvat visentit, hirvet, ruskeakarhut ja Przewalskin hevoset. Vetkan museossa Gomelin liepeillä on yli 10 000 esinettä: vanhauskoisten ikoneita, 1500-luvulta 1800-luvulle ulottuvia käsinkirjoitettuja ja painettuja kirjoja sekä alueen kansanomaisia tekstiilejä. Pripjatin rannalla Mazyrin ensimmäinen maininta on vuodelta 1155.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-gomel-19a2bfdd.jpg",
+          lahde: "diluted88, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "diluted88",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Гомельскі_палацава-паркавы_ансамбль_..._Gomel_Palace_and_Park_Ensemble_-_panoramio.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-gomel-19a2bfdd.jpg",
     },
     Grodno: {
       lyhyt: 'Mirin linnaa alettiin rakentaa 1500-luvun alussa goottilaiseksi linnoitukseksi, ja se on Unescon maailmanperintöä vuodesta 2000.',
+      pitka: "Grodno makaa Njemen-joen korkealla rannalla vain noin 15 kilometrin päässä Puolan rajasta, ja sen noin 360 000 asukasta asuvat kaupungissa, jonka historiallisten rakennusten kokonaisuutta pidetään maan laajimpana. Kaupunki mainitaan ensimmäisen kerran 1127, ja kuningas Stefan Báthory asui täällä 1580-luvulla ja kuoli 1586. Vanha ja Uusi linna seisovat vierekkäin joen töyräällä; Uusi linna valmistui 1789 ja toimii nykyään historia- ja arkeologiamuseona. Alueen asukkaista noin neljännes on puolalaisia, ja se näkyy katolisissa kirkoissa ja juhlissa. Lidan linna rakennettiin Gediminasin käskystä 1300-luvun alussa kivistä ja tiilestä, ja siellä järjestetään joka vuosi keskiaikainen turnaus.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
+          lahde: "Mike1979 Russia, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Mike1979 Russia",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mir_Castle_2023-07-02_5838.jpg",
+          lisenssi: "CC BY-SA 3.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
     },
     Mogilev: {
       lyhyt: 'Mahiljoun Pyhän Nikolauksen luostarin katedraali valmistui 1668, ja sen alkuperäinen ikonostaasi on säilynyt.',
+      pitka: "Mogilev on Dneprin rannalla noin 350 000 asukkaan kaupunki, maan kolmanneksi suurin, ja sen ensimmäinen maininta on vuodelta 1267. Kaupungin tunnettuihin rakennuksiin kuuluu katolinen konkatedraali, joka on omistettu Neitsyt Marian taivaaseenastumiselle ja pyhälle Stanislaukselle. Alueen pinta-ala on noin 29 100 neliökilometriä, noin 14 prosenttia maasta, ja sen läpi virtaavat Dnepr, Berezina, Sož, Drut ja Pronja. Alueen toiseksi suurin kaupunki Babruisk, noin 210 000 asukasta, sijaitsee Berezinan rannalla. Maisema on tasaista: korkeuserot ovat vain noin 126–239 metriä merenpinnasta.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
+          lahde: "Alena2026, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alena2026",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Saint_Nicholas_monastery,_Mogilev,_2025.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
     },
     Minsk: {
       lyhyt: 'Njasvižin linna oli vuosisatoja Radziwiłłien suvun kotilinna, ja se on Unescon maailmanperintöä vuodesta 2005.',
+      pitka: "Minskin alue on Valko-Venäjän ainoa, joka ei rajoitu mihinkään ulkomaahan: noin 39 900 neliökilometriä, lähes viidennes maasta ja noin 1,46 miljoonaa asukasta. Maan suurin järvi, Narač, on 79,6 neliökilometriä ja enimmillään noin 25 metriä syvä; sen ympärille perustettiin 1999 Narač-kansallispuisto, jonka alueella on 43 järveä. Alueella on myös Svir, Mjadel, Sjaljava ja Mjastro, jotka luetaan suurimpiin järviin. Zaslauljen historiallinen museoalue kokoaa satojen vuosien kerrostumat, kuten 1500-luvun lopulla rakennetun kirkon.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
+          lahde: "Alexxx1979, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alexxx1979",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Belarus_Nesvizh_Castle_7259_2050.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
     },
     'City of Minsk': {
       lyhyt: 'Minskin kansalliskirjasto on 73,6 metriä korkea rombikuboktaedri, kuin timantiksi hiottu talo, ja se avattiin 2006.',
+      pitka: "Minsk mainitaan ensimmäisen kerran 1067, ja nykyään siellä asuu lähes kaksi miljoonaa ihmistä. Svislatš-joki virtaa kaupungin halki luoteesta kaakkoon, ja sen rannalla Troitskoje-esikaupunki on säilyttänyt vanhan kaupunginosan tunnelman aivan keskustan vieressä. Kaupungin pääkatu, Itsenäisyyden prospekti, on noin 15 kilometriä pitkä. Njamiha-katu, 1,8 kilometriä, on nimetty samannimisen joen mukaan. Kansallinen ooppera- ja balettiteatteri, jonka nykyinen talo valmistui 1939, on osa suurkaupungin kulttuurielämää.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-city-of-minsk-835329e5.jpg",
+          lahde: "Agbarto, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Agbarto",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2024.04.11_National_Library_of_Belarus_Building_Minsk.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-city-of-minsk-835329e5.jpg",
     },
     Vitebsk: {
       lyhyt: 'Vitsebskin Pokrovskaja-kadulla on talo, jossa Marc Chagall vietti lapsuutensa – nykyään siinä toimii hänen kotimuseonsa.',
+      pitka: "Vitebsk sijaitsee kohdassa, jossa Vitba laskee Väinäjokeen, ja noin 359 000 asukkaallaan se on maan neljänneksi suurin kaupunki. Virallinen perustamisvuosi on 974, mutta kirjallinen maininta on vuodelta 1021. Kaupunki oli avantgarden keskus: Marc Chagall johti täällä taidekoulua, ja Kazimir Malevitš saapui marraskuussa 1919 ja synnytti UNOVIS-ryhmän. Nykyään kaupungissa järjestetään vuodesta 1992 Slaavilainen basaari -musiikkifestivaali. Alue kattaa noin 40 000 neliökilometriä ja on maan harvimmin asuttu, 27 asukasta neliökilometrillä. Asveja-järvi on maan toiseksi suurin, 52,8 neliökilometriä, ja Braslaun järvien kansallispuistossa on 74 järveä.",
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
+          lahde: "Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Adam Jones from Kelowna, BC, Canada",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Marc_Chagall_House_-_Vitebsk_-_Belarus_(27430073700).jpg",
+          lisenssi: "CC BY-SA 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
     },
   },
   /*
@@ -5896,30 +9107,138 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ISL: {
     Austurland: {
       lyhyt: 'Hallormsstaðurin koivikko suojeltiin 1905, ja siitä tuli Islannin ensimmäinen kansallismetsä – nyt se on maan suurimpia metsiä.',
+      pitka: 'Austurlandin vuonot pistävät syvälle sisämaahan, ja alueen ainoat villit peurat Islannissa – noin 6 000–7 000 eläintä – polveutuvat 1780-luvulla Norjasta tuoduista laumoista, joista vain Vopnafjörðuriin päästetty ryhmä selvisi hengissä. Jökuldalurin laaksossa Stuðlagilin kanjoni paljastui vasta 2009, kun Kárahnjúkarin vesivoimalaitos ohjasi suuren osan joen vedestä toisaalle ja pudotti vedenpinnan niin paljon, että tuhansia vuosia veden alla piilleet, tiiviisti pakkautuneet basalttipylväät nousivat näkyviin turkoosin joen molemmin puolin. Seyðisfjörðurin kirjava pääkatu ja vuonon ympäröimä taiteilijayhteisö ovat tehneet pikkukaupungista alueen kulttuurikeskuksen, ja sieltä lähtee yhä lautta Tanskaan ja Färsaarille. Stöðvarfjörðurissa Petra Sveinsdóttirin elämänmittainen kivikokoelma – hän aloitti keräämisen seitsemänvuotiaana ja avasi kotinsa yleisölle 1974 – täyttää nykyään sekä pihan että talon kymmenillätuhansilla kivillä ja mineraaleilla.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-austurland-7d1dac43.jpg",
+          lahde: "Rémih, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rémih",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lagarfljót_@_Hallormsstaður_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-austurland-7d1dac43.jpg",
     },
     'Höfuðborgarsvæði': {
       lyhyt: 'Bessastaðir Álftanesin niemellä on ollut Islannin presidentin virka-asunto vuodesta 1941; 1200-luvulla sen omisti Snorri Sturluson.',
+      pitka: 'Pääkaupunkiseudulla asuu nykyään lähes kaksi kolmasosaa koko Islannin väestöstä, vaikka alue koostuu muodollisesti erillisistä kunnista – Kópavogurista, Hafnarfjörðurista, Garðabæristä, Mosfellsbæristä ja Seltjarnarnesista – jotka ovat vuosikymmenten kuluessa kasvaneet yhteen Reykjavíkin kanssa yhtenäiseksi kaupunkialueeksi. Hafnarfjörðuria kutsutaan Islannin piilokansan pääkaupungiksi: kaupungin sydämessä sijaitseva, 1923 avattu Hellisgerðin sammaleinen laavapuisto on täynnä tarinoita haltioista ja peikoista, ja tuoreiden kyselyjen mukaan yli puolet asukkaista pitää haltioiden olemassaoloa mahdollisena tai todennäköisenä. Bessastaðirin niemellä presidentti asuu yhä samassa paikassa, jota Snorri Sturluson hallitsi 1200-luvulla, mutta ympäröivä seutu on muuttunut rauhallisesta maatilamaisemasta vilkkaaksi esikaupunkialueeksi. Kaupunkien rajat sulautuvat toisiinsa niin saumattomasti, ettei matkailija useinkaan huomaa siirtyvänsä kunnasta toiseen.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-hofudborgarsvaedi-9def4fe5.jpg",
+          lahde: "Bair175, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bair175",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bessastaðir_with_Reykjavik_in_the_background.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-hofudborgarsvaedi-9def4fe5.jpg",
     },
     'Vestfirðir': {
       lyhyt: 'Látrabjarg on Islannin läntisin kohta: 14 kilometriä pitkä ja paikoin 440 metriä korkea lintuvuori, jonka jyrkänteillä pesii lunneja.',
+      pitka: 'Vestfirðirin vuonoihin pääsee vieläkin paikoin vain hitaita, mutkittelevia vuoristoteitä tai tunneleita pitkin, ja seutu on koko Islannin harvimmin asuttu ja syrjäisin osa. Arnarfjörðurin perukassa Dynjandi putoaa noin sata metriä portaittain leveästä, 60-metrisestä alaosastaan kapeampaan 30-metriseen yläosaan – nimi tarkoittaa suunnilleen "jylisevää", ja putouksen kohina kuuluu kauas vuonolle. Ísafjörður, alueen suurin kaupunki, kyyristelee jyrkkien vuorten alla, ja 1990-luvun tuhoisien lumivyöryjen, muun muassa Flateyrin 1995 onnettomuuden, jälkeen sen yläpuolelle rakennettiin massiiviset betoniset ohjausvallit suojaamaan asutusta. Hólmavíkissa Strandagaldur-museo kertoo 1600-luvun "poltettujen vuosisadan" noitavainoista, jolloin alueella tuomittiin roviolle 21 ihmistä – enemmän kuin missään muualla Islannissa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vestfirdir-4f8cbc1f.jpg",
+          lahde: "Steinninn, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Steinninn",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Látrabjarg_(0924).jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vestfirdir-4f8cbc1f.jpg",
     },
     'Norðurland eystra': {
       lyhyt: 'Húsavíkin lahdelle tulee usein valaita, ja kaupungin ympäristössä harjoittelivat 1960-luvulla Apollo-lentojen astronautit.',
+      pitka: 'Akureyri, usein "Pohjolan pääkaupungiksi" kutsuttu, on Islannin toiseksi suurin taajama ja Eyjafjörðurin vuonon perukassa sijaitseva elävä yliopisto- ja kulttuurikaupunki. Sen kasvitieteellinen puutarha Lystigarðurinn on yksi maailman pohjoisimmista, ja siellä kasvaa nykyään yli 7 000 kasvilajia vain runsaat 50 kilometriä napapiiriltä etelään. Kaupungin liikennevaloissa on palanut sydämen muotoisia valoja vuodesta 2008 lähtien – ne ilmestyivät alun perin vain kuukausia ennen Islannin finanssikriisiä, ja kriisin jälkeen niistä tuli symboli yhteisöllisyydelle ja toivolle vaikeina aikoina. Húsavíkin edustalla, missä valaita nähdään lähes ympäri vuoden, entinen kalastuskaupunki on muuttunut vähitellen valassafarien keskukseksi, ja samalla rannikolla harjoittelivat 1960-luvulla myös Apollo-ohjelman astronautit kuun pintaa muistuttavassa laavamaisemassa.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-eystra-72883732.jpg",
+          lahde: "Steven Lek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Steven Lek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Husavik_harbour_2019_2.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-eystra-72883732.jpg",
     },
     'Norðurland vestra': {
       lyhyt: 'Vatnsnesin rannalla seisova Hvítserkur on 15-metrinen kivipaasi; tarun mukaan se on peikko, jonka nouseva aurinko muutti kiveksi.',
+      pitka: 'Skagafjörðurin laakso tunnetaan islanninhevosten kasvatuksesta, ja alueen vihreillä niityillä laiduntavat hevoslaumat ovat yhtä tuttu näky kuin vuonon jäätikköhuiput taustalla. Glaumbæjrin turvekattoinen kyläkeskus pysyi asuttuna aina vuoteen 1947 asti, ja sen kolmetoista toisiinsa käytävin yhdistettyä turve- ja puurakennusta – keittiöstä pajaan – kertovat nykyään museona 1700–1800-lukujen maalaiselämästä. Vuonon suulla kohoava Drangeyn saari, jyrkkäseinäinen kalliosaareke keskellä merta, tunnetaan saagakirjallisuudesta paikkana, jonne lainsuojaton Grettir Ásmundarson pakeni viimeisiksi vuosikseen. Skagaströndin ja Sauðárkrókurin kaltaiset pienet kalastuskaupungit elävät nykyään yhtä lailla merestä kuin matkailusta, joka tuo alueelle väkeä katsomaan hylkeitä Vatnsnesin niemellä.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-vestra-7e152ac6.jpg",
+          lahde: "Jakub Hałun, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Jakub Hałun",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hvítserkur,_a_basalt_stack_in_northwest_Iceland,_20240715_1124_0834.jpg",
+          lisenssi: "CC BY 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-vestra-7e152ac6.jpg",
     },
     'Reykjavík': {
       lyhyt: 'Reykjavíkin taloja lämmitetään kuumalla maalämpövedellä, jota johdetaan putkia pitkin muun muassa Nesjavellirin voimalasta.',
+      pitka: 'Hallgrímskirkjan 74-metrinen torni hallitsee Reykjavíkin siluettia ja on suunniteltu muistuttamaan Islannin luonnon basalttipylväitä; kirkko valmistui lopulta vasta 1986, ja sen huipulle pääsee nykyään hississä katsomaan koko kaupunkia ja ympäröiviä vuoria. Satamanrannassa siintävä Harpa-konserttitalo, valmistunut 2011 finanssikriisin jälkimainingeissa kesken jääneenä hankkeena, kimaltelee lasijulkisivullaan kuin basalttia muistuttava taideteos, ja siitä on tullut kaupungin uusi maamerkki. Rannan tuntumassa seisova Sólfar – Auringonlaiva – on Jón Gunnar Árnasonin 1990 paljastama teräsveistos, joka ei kuvaa mitään tiettyä matkaa vaan unelmaa ja toivoa paremmasta tulevaisuudesta. Kaupungin sydämessä Laugavegurin kauppakatu täyttyy iltaisin baareista ja live-musiikista, sillä Reykjavík tunnetaan pienestä koostaan huolimatta vilkkaasta yöelämästään.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-reykjavik-97da3fc8.jpg",
+          lahde: "Bernd Thaller, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Bernd Thaller",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_and_Leif_Eriksson.jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-reykjavik-97da3fc8.jpg",
     },
     'Suðurland': {
       lyhyt: 'Þingvellirin laaksossa kokoontui Islannin Alþingi ensimmäisen kerran 930, ja paikka on Unescon maailmanperintöä vuodesta 2004.',
+      pitka: 'Etelärannikon mustat hiekkarannat syntyvät jäätiköiden alta purkautuneiden tulivuorten laavasta, ja Reynisfjaran basalttipylväsmuurit sekä merestä nousevat Reynisdrangarin kalliopaadet ovat niistä tunnetuimmat – helmikuussa 2026 osa pylväsmuurista sortui rantaa vuosia kuluttaneen aallokon vuoksi, muistutuksena siitä, miten nopeasti tämä rannikko yhä muuttuu. Vuonna 2010 Eyjafjallajökullin jäätikön alla purkautunut tulivuori lähetti hienojakoisen tuhkapilven Euroopan ilmatilaan ja pysäytti yli 100 000 lentoa viikossa – suurimman ilmaliikenteen seisokin sitten toisen maailmansodan – ja jäätikkö näkyy yhä matkalla kohti Víkin kylää. Seljalandsfoss ja Skógafoss putoavat molemmat entisiltä rantajyrkänteiltä, jotka merenpinta on jättänyt taakseen tuhansia vuosia sitten, ja Seljalandsfossin taakse pääsee kävelemään aivan putouksen verhon sisäpuolelle. Sisämaassa Landmannalaugarin värikkäät riolitivuoret ja lämpimät lähteet houkuttelevat kesäisin vaeltajia yhdelle Islannin tunnetuimmista reiteistä, Laugaveguriin.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurland-16add566.jpg",
+          lahde: "Syrio, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Syrio",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Þingvellir_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurland-16add566.jpg",
     },
     'Suðurnes': {
       lyhyt: 'Reykjanesin niemimaalla 15-metrinen kävelysilta ylittää railon, joka erottaa Pohjois-Amerikan ja Euraasian mannerlaatat.',
+      pitka: 'Sinisen lagúunin kuumat, piidioksidipitoiset vedet ovat alun perin Svartsengin geotermisen voimalan jätevettä: kun laitos alkoi 1976 johtaa käytettyä vettä läheiselle laavakentälle, piidioksidi tiivisti maaperän vedenpitäväksi altaaksi, ja vasta myöhemmin huomattiin veden miellyttävyys iholle – ensimmäinen virallinen uimapaikka avattiin 1987. Niemenkärjessä seisova Reykjanesviti on Islannin vanhin majakka: ensimmäinen versio valmistui 1878, mutta maanjäristys vaurioitti sen korjauskelvottomaksi jo kahdeksan vuotta myöhemmin, ja nykyinen, vuosina 1907–1908 rakennettu betonimajakka on seissyt siitä lähtien lähes muuttumattomana. Vuodesta 2021 alkaen Reykjanesin niemimaa on herännyt kahdeksan vuosisadan hiljaiselon jälkeen uuteen tulivuoritoimintaan, ja Grindavíkin kalastuskaupunki jouduttiin evakuoimaan marraskuussa 2023 usean peräkkäisen purkauksen vuoksi; kaupunkia suojaavat nykyään kilometrien pituiset, jopa 25 metriä korkeat laavavallit. Niemi sijaitsee suoraan Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla, mikä selittää sekä jatkuvan maanjäristystoiminnan että alueen lukuisat kuumat lähteet.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurnes-edb71def.jpg",
+          lahde: "Mike McBey, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Mike McBey",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:A_bridge_between_continents_(50376928216).jpg",
+          lisenssi: "CC BY 2.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurnes-edb71def.jpg",
     },
     Vesturland: {
       lyhyt: 'Snæfellsjökull on 1 446-metrinen jäätikön peittämä tulivuori – Jules Vernen romaanissa matka maan keskipisteeseen alkaa sen kraaterista.',
+      pitka: 'Deildartunguhver pulppuaa maan alta 180 litraa lähes kiehuvaa vettä sekunnissa – enemmän kuin mikään muu lähde Euroopassa – ja se lämmittää nykyään paitsi lähiseudun myös Borgarnesin ja Akranesin kaupungit, joihin kuuma vesi virtaa 64 kilometrin pituista putkea pitkin, Islannin pisintä. Lähistöllä Hraunfossar-putoukset eivät virtaa yhdestä joesta vaan valuvat lukemattomina pieninä suihkuina suoraan laavakentän alta Hvítá-jokeen usean sadan metrin matkalla – vesi on suodattunut vuosia maan alla ennen kuin se ilmestyy näkyviin. Breiðafjörðurin lahdella Bjarnarhöfnin tilalla käsitellään yhä perinteiseen tapaan jäämerihain lihaa hákarl-herkuksi mätättämällä ja kuivattamalla sitä kuukausien ajan, ja ammoniakintuoksuinen lopputulos tarjoillaan nykyään uteliaille matkailijoille paikan omassa museossa. Stykkishólmurin satamakaupungin värikkäät puutalot ja tuhansien saarien pirstoma lahti tekevät siitä suositun lähtöpisteen lautoille, jotka kulkevat Vestfirðirin suuntaan Breiðafjörðurin poikki.',
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vesturland-0020c602.jpg",
+          lahde: "Olga Ernst, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Olga Ernst",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Remote_view_of_Snæfellsjökull.jpg",
+          lisenssi: "CC BY-SA 4.0",
+          lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vesturland-0020c602.jpg",
     },
   },
   /*
@@ -6086,6 +9405,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Çanakkale': {
       lyhyt: 'Dardanellien yli kulkeva 1915 Çanakkale -silta avattiin 2022, ja sen 2 023 metrin pääjänne on maailman riippusilloista pisin.',
+      pitka: "Gallipolin niemimaa on Turkin Euroopan puolen kaakkoiskulma, ja sen eteläosa kuuluu vuonna 1973 perustettuun historialliseen kansallispuistoon, jonka ala on yli 33 000 hehtaaria. Metsäisten kukkuloiden lomassa on kymmeniä hautausmaita ja muistomerkkejä, sillä Gallipolin kampanja käytiin vuosina 1915–1916 ja siinä taistelivat osmanni- ja liittoutuneiden joukot. Niemen kärjessä kohoaa 41,7 metriä korkea Çanakkalen marttyyrien muistomerkki, joka avattiin vuonna 1960. Anzac Covessa ja Lone Pinella Australian ja Uuden-Seelannin vieraat kokoontuvat 25. huhtikuuta muistopäivään. Turkkilaiset viettävät omaa muistopäiväänsä 18. maaliskuuta. Kilitbahirin linnoitus kohoaa niemen puolella Dardanellien kapeimmalla kohdalla, ja lautat vievät salmen yli Eceabatiin.",
     },
     'Çankiri': {
       lyhyt: 'Çankırın suolaluola on yksi Turkin suurimmista vuorisuolaesiintymistä, ja suolaa on louhittu sieltä antiikin ajoista asti.',
@@ -6104,6 +9424,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Edirne: {
       lyhyt: 'Mimar Sinan piti Edirnen Selimiye-moskeijaa mestariteoksenaan, ja se on ollut Unescon maailmanperintöä vuodesta 2011.',
+      pitka: "Edirne on Turkin luoteiskulman rajakaupunki, jonka lähellä Kreikan ja Bulgarian rajat kohtaavat. Noin 180 000 asukkaan kaupunki toimi Osmanien pääkaupunkina 1360-luvulta vuoteen 1453. Vanhin moskeija Eski Cami rakennettiin vuosina 1403–1422, ja Üç Şerefeli -moskeijan kolmiparvekkeiset minareetit valmistuivat 1440-luvulla. Restauroidussa Karaağaçin rautatieasemassa toimii nykyisin Trakian yliopiston kuvataidetiedekunta, ja ympäröivillä tasangoilla viljellään maissia, sokerijuurikasta ja auringonkukkaa. Kesäkuun lopussa Sarayiçin saarella käydään Kırkpınarin öljypainit, jotka ovat Unescon aineetonta kulttuuriperintöä vuodesta 2010. Ravintoloissa tarjotaan Edirnen tunnetuinta ruokaa, ciğer tavaa eli paistettua maksaa.",
     },
     Elazig: {
       lyhyt: 'Hazarjärvi Elazığin kaakkoispuolella on Tigrisin lähde, ja sen pohjasta on löydetty jälkiä veden alle jääneestä kaupungista.',
@@ -6140,6 +9461,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Istanbul: {
       lyhyt: 'Marmaray-junat sukeltavat Bosporinsalmen alle upotettuun tunneliin, ja vuodesta 2013 raiteet ovat yhdistäneet Euroopan ja Aasian.',
+      pitka: "Istanbulin väestöstä, noin 15,75 miljoonasta asukkaasta, kaksi kolmasosaa asuu Euroopan puolella, ja sen sydän on Sultanahmetin niemellä, jonka Unesco merkitsi maailmanperinnöksi vuonna 1985. Hagia Sofia valmistui vuonna 537 ja toimii nykyisin moskeijana. Konstantinopolin muinaiset Theodosioksen maamuurit kulkevat noin 5,7 kilometrin matkan kaupungin länsilaidalla, ja sisämuurissa oli 96 tornia. Bosporin ensimmäinen silta valmistui vuonna 1973 ja Fatih Sultan Mehmetin silta 1988. Uusi Istanbulin lentoasema Arnavutköyn kaupunginosassa Mustanmeren rannalla avattiin 2018, ja kaikki matkustajaliikenne siirtyi sinne huhtikuussa 2019. Kaupungin nimeksi tuli virallisesti Istanbul vuonna 1930.",
     },
     Izmir: {
       lyhyt: 'İzmirin Konakin aukion kellotorni valmistui 1901, ja sen suunnitteli levantiniranskalainen arkkitehti Raymond Charles Péré.',
@@ -6170,6 +9492,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirklareli: {
       lyhyt: 'İğneadan kansallispuistossa Bulgarian rajalla kasvaa harvinaista longoz-tulvametsää, jota Strandžan vuorilta laskevat purot tulvivat.',
+      pitka: "Kırklareli sijaitsee Turkin Traakiassa, ja sen pohjoisraja Bulgariaan on noin 180 kilometriä pitkä. Yıldızin vuoret halkovat 6 459 neliökilometrin läänin, jossa asuu noin 369 000 ihmistä. Pohjoisessa ja idässä maisemaa hallitsevat metsät, etelän pellot ja viinitarhat tekevät alueesta tärkeän viininviljelyalueen, ja Mustanmeren rannikolla kalastetaan. Demirköyn lähellä sijaitsee Dupnisan luola, 3 200 metriä pitkä tippukiviluolakokonaisuus, joka avattiin kävijöille vuonna 2005 ja joka on Itä-Traakian ainoa esittelyluola. Vizen kaupungissa seisoo Justinianus I:n aikainen bysanttilainen Pikku Hagia Sofia, nykyisin Gazi Süleyman Paşa -moskeija.",
     },
     Kirsehir: {
       lyhyt: 'Bağlaman mestari Neşet Ertaş syntyi 1938 Kırtıllarin kylässä Kırşehirissä.',
@@ -6239,6 +9562,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tekirdag: {
       lyhyt: 'Tekirdağin kuuluisin herkku ovat pienet, mausteiset Tekirdağ köftesi -grillipyörykät.',
+      pitka: "Tekirdağ on Marmaranmeren rannalla sijaitseva satamakaupunki, noin 130 kilometrin päässä Istanbulista länteen, jonka asukasluku on noin 186 000. Sen historia ulottuu antiikin Bisantheen, ja Mimar Sinan suunnitteli kaupungin Rüstem Paşa -moskeijan vuonna 1553. Ympäröivillä pelloilla viljellään syysvehnää, auringonkukkaa, kirsikoita ja viinirypäleitä. Kaupunki tunnetaan myös rakı-tislaamoistaan; seudun rypäleistä valmistettu anistislaus on kaupungin tunnetuin tuote. Vanhassa kaupungissa Rákóczi-museo muistuttaa unkarilaisruhtinaan maanpakolaisuudesta.",
     },
     Tokat: {
       lyhyt: 'Tokatin Zilessä Caesar voitti taistelun 47 eaa. ja kuittasi voittonsa sanoilla veni, vidi, vici.',
@@ -6334,18 +9658,23 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Arkhangel'sk": {
       lyhyt: 'Arkangelin alueeseen kuuluu myös Frans Joosefin maa, arktinen saaristo, jonka saaret ovat suurelta osin jäätiköiden peitossa.',
+      pitka: "Arkangelin alueen sydän on Pohjois-Dvinan varsi, jonka rannalle Arkangelin kaupunki perustettiin vuonna 1584 Mikael-arkkienkelin luostarin ympärille. Kaupungin lähellä Malyje Korelyn ulkoilmamuseoon on koottu pohjoisen puukirkkoja, tuulimyllyjä ja talonpoikaistaloja. Etelämpänä Kargopol on mainittu kronikoissa jo 1146, ja pieni kaupunki on tunnettu valkoisista kivikirkoistaan sekä käsin muovatuista savileluistaan. Kenozeron kansallispuisto kattaa 140 000 hehtaaria taigaa, lampia ja järviä; alue on ollut Unescon biosfäärialue vuodesta 2004. Alueen pinta-ala on yli 400 000 neliökilometriä, mutta asukkaita on alle miljoona.",
     },
     "Astrakhan'": {
       lyhyt: 'Volga laskee Astrahanin alueella Kaspianmereen Euroopan suurimpana jokisuistona, ja kesällä suiston lahdet peittyvät lootuksen kukkiin.',
+      pitka: "Astrahanin kaupunki sijaitsee Volgan saarilla, ja sen valkoinen kreml on noin 11 hehtaarin kokoinen linnoitus, jonka muurit nousivat 1500-luvulla. Kremlin sisällä Uspenskin katedraalin viisikupolinen rakennus aloitettiin 1699, ja työ kesti noin kaksitoista vuotta. Volgan suistossa Astrahanin biosfäärialue perustettiin jo 1919; siellä on havaittu yli 200 lintulajia, ja kiharapelikaanit pesivät alueella. Kaupungissa asuu noin 520 000 ihmistä ja koko alueella noin miljoona, ja idän ja etelän vaikutus näkyy ruoassa ja rakennuksissa.",
     },
     Bashkortostan: {
       lyhyt: 'Baškortostanin Šulgan-Tašin eli Kapovan luolan seinillä on kivikautisia maalauksia mammuteista ja hevosista.',
+      pitka: "Baškortostan levittyy Volgan ja Uralin välille, ja tasavallan 143 600 neliökilometrillä asuu noin 4,1 miljoonaa ihmistä: venäläisiä on 37 prosenttia, baškiireja 31 ja tataareja 24. Baškiirin kieli on turkkilainen ja virallinen venäjän rinnalla. Pääkaupunki Ufa perustettiin vuonna 1574 Belaja-joen korkealle rannalle, jossa seisoo vuonna 1967 paljastettu Salavat Julajevin ratsastajapatsas: noin kymmenmetrinen pronssiveistos painaa 40 tonnia. Lala Tulpan -moskeijan turkoosi kupoli ja 53 metriä korkeat minareetit valmistuivat 1998, ja Aksakovin muistomuseo (1991) toimii kaupungin vanhimmassa puurakennuksessa. Uralin länsirinteillä Baškiria-kansallispuisto (1986) kuuluu vuonna 2012 Unescon biosfäärialueeksi hyväksyttyyn Baškiirien Uralin alueeseen.",
     },
     Belgorod: {
       lyhyt: 'Belgorod tarkoittaa valkoista kaupunkia, ja nimi viittaa seudun vaaleisiin liitu- ja kalkkikiviesiintymiin.',
+      pitka: "Belgorod perustettiin rajalinnakkeeksi vuonna 1596 Severski-Donetsin rannalle, ja nykyään noin 380 000 asukkaan kaupungissa on useita yliopistoja, filharmonia ja taidemuseo. Piispa Joasaf (1705–1754), jonka kirkko julisti pyhimykseksi vuonna 1911, on seudun kunnioitetuimpia hahmoja. Koillisessa sijaitseva Vanha Oskol on noin 220 000 asukkaan kaupunki, ja sen ympäristössä louhitaan rautamalmia Kurskin magneettisen anomalian reunalla. Belogorje-luonnonsuojelualue jakautuu useaan erilliseen osaan ja kattaa yhteensä noin 2 100 hehtaaria kalkkikivipohjaista maata. Alueen perinteisiin kuuluvat puunveisto ja kirjaillut rushnyk-pyyhkeet. Insinööri Vladimir Šuhov, jonka verkkomaiset hyperboloiditornit tunnetaan maailmalla, syntyi Grajvoronin kaupungissa.",
     },
     Bryansk: {
       lyhyt: 'Brjanskin metsän mänty- ja tammimetsät ja Nerussajoen suot on suojeltu, ja ne kuuluvat Unescon biosfäärialueeseen.',
+      pitka: "Brjanskin kaupunki Desna-joen varrella laskee perustamisvuodekseen 985, vaikka ensimmäinen kirjallinen maininta (Debrjansk) on vuodelta 1146. Pokrovan mäellä kohoaa vuonna 1698 valmistunut Pokrovan katedraali, joka yhdistää venäläistä muuraustraditiota Naryshkin-barokin piirteisiin. Kaupungin lähellä sijaitseva Svenin luostari perustettiin joidenkin lähteiden mukaan 1288, ja sen Svenskajan markkinat olivat 1600–1700-luvuilla Euroopan-Venäjän suurimpia. Runoilija Fjodor Tjuttšev syntyi 5. joulukuuta 1803 Ovstugin sukukartanossa, jossa toimii nykyään hänen muistokirjallisuusmuseonsa. Desnan yläpuolella Trubtševskin Kolminaisuuden katedraali seisoo kukkulalla; kaupunki mainitaan ensimmäisen kerran 1164.",
     },
     Buryat: {
       lyhyt: 'Selenga tuo Burjatiasta lähes puolet Baikaliin laskevien jokien vedestä, ja sen suisto on satojen lintulajien levähdyspaikka.',
@@ -6355,9 +9684,6 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chita: {
       lyhyt: 'Taka-Baikalin Daurian arot ja Toreijärvet ovat Unescon maailmanperintöä, ja niillä vaeltaa mongoliangaselleja.',
-    },
-    Crimea: {
-      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
     },
     Dagestan: {
       lyhyt: 'Dagestanin Sulakin kanjoni on lähes kaksi kilometriä syvä, syvempi kuin Coloradon Grand Canyon.',
@@ -6379,18 +9705,22 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ivanovo: {
       lyhyt: 'Ivanovo on vanha tekstiilikaupunki, ja koska kutomoissa työskenteli enimmäkseen naisia, sitä kutsutaan morsiamien kaupungiksi.',
+      pitka: "Ivanovon oblasti on yksi Venäjän pienimmistä, mutta väkeä on silti 927 828 (vuoden 2021 väestölaskenta), ja Volga virtaa alueen pohjoisosan halki. Ivanovon kaupungissa kannattaa katsoa ylös: 1920–30-luvun konstruktivismi on jättänyt katukuvaan Laivatalon, joka valmistui 1929–1930, sekä hevosenkengän muotoisen asuinkorttelin. Dmitri Burylinin nimeä kantavaan museokokonaisuuteen kuuluu Teollisuuden ja taiteen museo, joka avattiin 26. joulukuuta 1914, ja Burylinin perheen jugend-talossa toimiva Ivanovon painokankaan museo. Volgan rannalla Plyosin kaupungissa asuu enää alle kaksi tuhatta ihmistä, mutta sen kirkot ja mäkiset kadut vetävät kävijöitä Kultaisen renkaan reitille.",
     },
     'Kabardin-Balkar': {
       lyhyt: 'Baksanin laakson vuoren alla on neutriinolaboratorio, jonka ilmaisin tallensi vuonna 1987 kaukaisesta supernovasta tulleita neutriinoja.',
     },
     Kaliningrad: {
       lyhyt: 'Kaliningradin alueen Jantarnyissa on maailman suurin meripihkaesiintymä, ja meripihkaa kaivetaan siellä avolouhoksesta.',
+      pitka: "Kaliningradin kaupungissa asuu noin 500 000 ihmistä, ja sen sydän on Pregolja-joen Kantin saari. Siellä kohoaa 1300-luvulla rakennettu tiiligoottilainen tuomiokirkko, jonka katto ja huippu palautettiin 1990-luvulla; kello soittaa tasatunnein Beethovenin viidennen sinfonian alkutahdit. Maailmanmeren museo esittelee tutkimusalus Vitjazin sekä vuonna 2000 tuodun sukellusvene B-413:n, jonka sisällä voi kävellä. Länsipuolella Kuurinkynnäs, 98 kilometrin pituinen hiekkaniemi, on ollut Unescon maailmanperintökohde vuodesta 2000. Venäjän puolella se on kapeimmillaan vain 400 metriä leveä, ja liikkuvat dyynit nousevat jopa 60 metriin. Kesäisin Zelenogradskin ja Svetlogorskin rannat täyttyvät lomailijoista.",
     },
     Kalmyk: {
       lyhyt: 'Kalmukian pääkaupungissa Elistassa on Euroopan suurin buddhalainen temppeli, Buddha Šakjamunin kultainen asumus.',
+      pitka: "Kalmukia levittäytyy Volgan alangon ja Kaspianmeren rannikon aroilla noin 74 700 neliökilometrin alalla. Alueella asuu runsaat 267 000 ihmistä, ja noin 63 prosenttia heistä on kalmukkeja. Heidän esi-isänsä, länsimongolialaiset oiraatit, saapuivat Siperiasta Volgan alajuoksulle noin vuonna 1630. He toivat mukanaan tiibetiläisen gelug-koulukunnan buddhalaisuuden, joka on täällä yhä alueen yleisin uskonto. Vuoden suuriin juhliin kuuluvat Tsagaan Sar eli valkoinen kuu ja Zul. Vuonna 1990 perustettu Mustien maiden biosfäärialue suojelee saigaantilooppeja. Huhtikuussa aro kukkii: Punaiseen kirjaan kuuluvat luonnonvaraiset tulppaanit houkuttelevat väkeä Elistasta arolle omaan tulppaanijuhlaansa.",
     },
     Kaluga: {
       lyhyt: 'Kalugassa asui avaruuslentojen uranuurtaja Konstantin Tsiolkovski, ja kaupungin kosmonautiikan historian museo kantaa hänen nimeään.',
+      pitka: "Kaluga kohoaa Okan rannalla noin 150 kilometriä Moskovasta lounaaseen, ja sen ensimmäinen maininta on vuodelta 1371; nykyään kaupungissa on noin 330 000 asukasta ja Volkswagenin autotehdas vuodesta 2007. Alueen kulttuurikärki on maaseudulla: Ugran kansallispuiston (perustettu 1997) sisällä Nikola-Lenivetsin taidepuistossa taiteilija Nikolai Polissky ja Archstoyanie-festivaalin osallistujat ovat rakentaneet maisemaveistoksia vuodesta 2006. Okan vasemmalla rannalla Tarusa on tunnettu jo vuodesta 1246. Siellä on Tsvetajevan perheen museo, avattu 1992, ja Konstantin Paustovskin hauta Vanhalla hautausmaalla. Borovskin piirissä Etnomir esittelee eri kansojen rakennuksia ja käsitöitä.",
     },
     Kamchatka: {
       lyhyt: 'Kamtšatkan Kljutševskaja Sopka, noin 4 750 metriä, on Euraasian korkein toimiva tulivuori, ja se purkautuu yhä usein.',
@@ -6400,6 +9730,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Karelia: {
       lyhyt: 'Äänisen ja Vienanmeren rantakallioihin on hakattu tuhansia kivikautisia kalliopiirroksia, ja ne ovat Unescon maailmanperintöä.',
+      pitka: "Karjalan tasavallassa on noin 60 000 järveä, ja Euroopan suurimmat järvet, Laatokka ja Äänisjärvi, ulottuvat sen rajoille. Äänisen Kižin saarella seisova pogosta on ollut Unescon maailmanperintökohde vuodesta 1990. Sen Kirkastuskirkko on 37 metriä korkea ja siinä on 22 kupolia. Ruskealan entinen marmorilouhos, jota on louhittu vuodesta 1769, on täyttynyt kirkkaalla vedellä, ja sen kiveä on käytetty esimerkiksi Pietarin Iisakinkirkossa. Paikka kuului ennen talvisotaa Suomeen Ruskealan kuntana. Laatokan Valamon luostarin munkit muuttivat 1940 Heinävedelle, mutta luostari on nykyään jälleen toiminnassa.",
     },
     Kemerovo: {
       lyhyt: 'Kemerovon alue on Kuzbass eli Kuznetskin hiiliallas, Venäjän suurin kivihiilen louhinta-alue.',
@@ -6409,15 +9740,19 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirov: {
       lyhyt: 'Kirovin lähellä Dymkovossa muovaillaan yhä savileluja, jotka kalkitaan valkoisiksi ja maalataan kirkkain värein.',
+      pitka: "Kirov nousee Vjatka-joen rannalle, 896 kilometriä Moskovasta koilliseen, ja noin 470 000 asukkaan kaupungin ensimmäinen maininta on vuodelta 1374. Aiemmin se on tunnettu nimillä Vjatka ja Hlynov; nykyisen nimensä se sai joulukuussa 1934 Sergei Kirovin mukaan. Kaupungin tunnusmerkkejä ovat Aleksanterin puiston valkoiset rotundat, vuonna 1580 perustettu Trifonin luostari ja vuonna 1763 valmistunut Spasski-katedraali. Kaupungissa on lukuisia museoita, teattereita ja oppilaitoksia. Kirov on Volga-Vjatkan alueen teollisuuden ja koulutuksen keskus.",
     },
     Komi: {
       lyhyt: 'Komin Manpupunerin ylängöllä seisoo seitsemän 30–42-metristä kivipylvästä, joita kutsutaan seitsemäksi voimamieheksi.',
+      pitka: "Komin tasavalta on noin 416 000 neliökilometrin laajuinen, ja yli 70 prosenttia sen alasta on metsää. Pohjois-Uralin Komin neitseelliset metsät, 32 800 neliökilometrin alue, tulivat 1995 Venäjän ensimmäiseksi luonnon maailmanperintökohteeksi ja ovat Euroopan laajin koskematon boreaalinen metsä. Alueeseen kuuluvat Petšora-Ilytšin luonnonsuojelualue vuodelta 1930 ja Jugyd Va -kansallispuisto. Uralin korkein huippu Narodnaja, noin 1 900 metriä, kohoaa tasavallan puolella. Metsissä elää muun muassa poroja, soopeleita ja metsoja. Komit muodostavat tasavallan asukkaista noin neljänneksen.",
     },
     Kostroma: {
       lyhyt: 'Kostromaa pidetään Snegurotškan, Pakkasukon lumityttären, kotikaupunkina, ja Volgan rannalla on hänen puinen satutalonsa.',
+      pitka: "Kostroman kaupunki, noin 267 000 asukasta, sijaitsee Volgan ja Kostroma-joen yhtymäkohdassa, ja sen perustamisvuotena pidetään perinteisesti 1152. Kaupunki kuuluu Venäjän Kultaiseen renkaaseen: klassistiset Krasnyje rjady eli kauppa-arkadit nousivat entisen kremlin paikalle, ja Bogojavlenskin katedraali valmistui 1559–1565 kaupungin ensimmäisenä kivirakennuksena. Ipatjevin luostari Kostroma-joen rannalla perustettiin noin 1330; sinne oli majoittunut Mihail Romanov, kun kansankokous julisti hänet tsaariksi 14. maaliskuuta 1613. Luostarista löydettiin myös Hypatioksen kronikka. Alueen pinta-ala on noin 60 200 neliökilometriä, ja se on tärkeä puuntuotannon alue sekä perinteinen pellavan ja korutyön seutu.",
     },
     Krasnodar: {
       lyhyt: 'Krasnodarin aluepiirin Sotši on subtrooppinen lomakaupunki, jonka yläpuolisilla vuorilla ajettiin 2014 talviolympialaisten alppilajit.',
+      pitka: "Krasnodarin aluepiirin pohjoisosa on Kubanin tasankoa, jonka mustamultaisilla pelloilla viljellään vehnää, riisiä, auringonkukkaa ja sokerijuurikasta, ja alue on jatkuvasti Venäjän johtavia maatalouskeskuksia. Aluepiirin keskus Krasnodar syntyi 1790-luvulla Mustanmeren kasakkojen Jekaterinodar-linnoituksena, ja kasakkaperinnettä vaalii vuonna 1811 perustettu Kubanin kasakkakuoro. Kaupungissa toimii myös FK Krasnodarin stadion, joka avattiin vuonna 2016 ja jonka kapasiteetti on noin 35 000, ja sen ympärillä on ihmisille avoin puisto. Etelässä Länsi-Kaukasus, UNESCOn maailmanperintökohde vuodesta 1999, kattaa noin 299 000 hehtaaria vuoristoa ja alppiniittyjä.",
     },
     Krasnoyarsk: {
       lyhyt: 'Krasnojarskin aluepiiriin kuuluu Tšeljuskininniemi Taimyrin niemimaalla, Euraasian mantereen pohjoisin kärki.',
@@ -6427,39 +9762,50 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kursk: {
       lyhyt: 'Kurskin alueen maaperässä on niin paljon rautamalmia, että kompassi näyttää väärin – ilmiö tunnetaan Kurskin magneettisena anomaliana.',
+      pitka: "Kurskin kaupunki seisoo kolmen joen risteyksessä, ja sen nimi mainitaan kronikoissa jo vuonna 1032. Noin 435 000 asukkaan kaupungista lähtee perinteisesti kesällä alueen tunnetuin kulkue: Znamenskin luostarin ikoni kannetaan pääsiäisen jälkeisenä yhdeksäntenä perjantaina noin 30 kilometrin päähän Korennaja-erakkolaan ja palautetaan kaupunkiin syyskuun 13. päivänä. Rylskin pikkukaupunki (noin 15 000 asukasta, ensimmäinen maininta 1152) on kotikaupunki kauppias Grigori Šelihoville, joka kävi kauppaa Alaskassa. Kurskin lähellä Keski-Tšernozjom-luonnonsuojelualue (perustettu 1935) suojelee arojen mustamultaa ja kuuluu UNESCOn biosfäärialueiden verkostoon vuodesta 1978. Runoilija Afanasi Fetin kartano Vorobjovka on nykyään museo.",
     },
     Leningrad: {
       lyhyt: 'Leningradin alueella on suuri osa Laatokasta, Euroopan suurimmasta järvestä, josta Neva virtaa kohti Pietaria.',
+      pitka: "Leningradin alue kietoutuu Pietarin ympärille: yli 83 000 neliökilometrin alueella asuu noin kaksi miljoonaa ihmistä, ja hallinnollinen keskus on Gatšina. Pohjoisessa Viipuri eli Vyborg syntyi ruotsalaisten linnaksi 1293. Kaupungissa, jossa asuu nykyään noin 72 500 ihmistä, ovat nähtävinä keskiaikainen linna, Monrepos'n maisemapuisto ja Alvar Aallon kirjasto, joka valmistui 1935 ja kunnostettiin 2013. Viipuri oli 1917–1940 Suomen toiseksi suurin kaupunki. Volhov-joen varrella Staraja Ladoga ajoitetaan puuvuosirenkaiden mukaan perustetuksi 753, ja sen Yrjön kirkon freskot ovat 1100-luvulta.",
     },
     Lipetsk: {
       lyhyt: 'Lipetskin nimi tulee lehmuksesta, venäjäksi lipa, mutta nykyään kaupunki tunnetaan ennen kaikkea suuresta terästehtaastaan.',
+      pitka: "Lipetsk, noin 510 000 asukkaan kaupunki Voronež-joen varrella, syntyi vuonna 1703, kun Pietari Suuri määräsi valurautatehtaan rakennettavaksi rautamalmin lähelle. Kaupungin lieta- ja kivennäisvesikylpylä on yksi Venäjän vanhimmista. Lounaassa Don-joen rannalla, noin 90 kilometrin päässä, on Zadonsk (noin 9 900 asukasta): sen luostari perustettiin vuonna 1610, ja pyhiinvaeltajat tulevat yhä pyhän Tihonin haudalle; hän kuoli vuonna 1783. Jeletsissä, noin 100 000 asukkaan kaupungissa, jonka ensimmäinen maininta on 1146, kuuluisa pitsi on yhä kaupungin tuntomerkki, ja kirjailija Ivan Bunin kävi siellä lukiota. Zadonskin lähellä Galitšja Gora -suojelualue on vain 230 hehtaarin kokoinen, mutta sen osissa kohtaavat metsät, aro ja jokilaakson kosteikot; suojelu alkoi vuonna 1925.",
     },
     'Maga Buryatdan': {
       lyhyt: 'Magadanin alue on pinta-alaltaan Saksaa suurempi, mutta asukkaita on vain noin 136 000, ja lähes kaikki asuvat kaupungeissa.',
     },
     'Mariy-El': {
       lyhyt: 'Moni mari harjoittaa yhä vanhaa luonnonuskontoaan, ja yhteisiä rukoushetkiä pidetään pyhissä lehdoissa.',
+      pitka: "Joškar-Olan nimi tarkoittaa marin kielellä punaista kaupunkia (joškar ’punainen’, ola ’kaupunki’), ja nimi vahvistui vuonna 1927, vaikka kaupunki perustettiin linnoitukseksi jo 1584. Nyt pääkaupungissa asuu 281 000 ihmistä ja koko Marin tasavallassa noin 672 000, joista maria on noin 40 prosenttia. Kirjakieliä on kaksi, niittymari ja vuorimari, ja mari kuuluu suomen sukukieliin. Kaupungin ulkopuolella metsää riittää: vuonna 1985 perustettu Mari Chodran kansallispuisto peittää noin 366 neliökilometriä metsiä ja järviä.",
     },
     Mordovia: {
       lyhyt: 'Mordvassa puhutaan kahta suomalais-ugrilaista kieltä, ersää ja mokšaa, jotka ovat tasavallan virallisia kieliä venäjän rinnalla.',
+      pitka: "Saranskissa Insar-joen itärannalla kohoaa Mordovia Arena, jonka kirkkaanväriset metallipaneelit viittaavat mordvalaisten kansanperinteen aurinkosymboliikkaan. Stadion valmistui vuonna 2018, ja jalkapallon MM-kisojen aikana siihen mahtui 44 442 katsojaa. Kaupungissa toimii Erzja-taidemuseo, jossa on yli 200 kuvanveistäjä Stepan Erzjan teosta. Tasavallassa asuu noin 780 000 ihmistä, ja pohjoisessa, Moksa-joen oikealla rannalla, on vuonna 1935 perustettu Mordovan luonnonsuojelualue: noin 32 000 hehtaaria lähes kokonaan metsää. Alueelle pääsee vain luvalla.",
     },
     Moskva: {
       lyhyt: 'Moskovan Ostankinon televisiotorni kohoaa 540 metriin, ja se on Euroopan korkein vapaasti seisova rakennelma.',
+      pitka: "Moskova mainitaan kronikoissa ensi kerran 1147, ja nykyään Moskovajoen varrella asuu noin 13 miljoonaa ihmistä. Kreml ja Punainen tori ovat Unescon maailmanperintöä vuodesta 1990, ja torin laidalla kohoaa Vasili Autuaan katedraali, joka rakennettiin 1555–1561. Pohjoisessa VDNKh avattiin 1939 maatalousnäyttelynä, ja peruskorjauksen jälkeen alueella on nykyään paviljonkeja, jäärata ja 2015 avattu Moskvarium-akvaario. Tretjakovin galleria, Bolšoi ja lukemattomat puistot pitävät kaupungin kulttuurielämän vireänä läpi vuoden.",
     },
     Moskovskaya: {
       lyhyt: 'Moskovan alueen Sergijev Posadissa on Kolminaisuuden lavra, Venäjän ortodoksisen kirkon tärkeimpiä luostareita.',
+      pitka: "Moskovan alue ympäröi pääkaupunkia ja on noin 8,5 miljoonan asukkaan kotiseutu. Kolomnassa Moskovajoki ja Oka yhtyvät; kaupunki mainitaan ensi kerran 1177, sen punatiilinen kremli valmistui 1525–1531, ja pastilamuseossa maistuu paikallinen hedelmäkarkki. Tähtikaupungissa eli Zvjozdnyi gorodokissa toimii Juri Gagarinin mukaan nimetty kosmonauttien koulutuskeskus. Tiedekaupunki Dubnassa Volgan varrella on vuonna 1956 perustettu ydintutkimuslaitos JINR. Kultaisen renkaan kaupunkeihin kuuluvat alueella myös Dmitrov ja Zvenigorod.",
     },
     Murmansk: {
       lyhyt: 'Murmansk on maailman suurin kaupunki napapiirin pohjoispuolella, ja talvella aurinko pysyy siellä horisontin alla noin kuusi viikkoa.',
+      pitka: "Kuolan niemimaan pohjoisrannalla luonto ja raskas teollisuus elävät rinnakkain. Entisen Petsamon alueella Zapoljarnyin lähellä porattiin vuosina 1970–1989 Kuolan supersyväreikä, joka yltää 12 262 metriin ja on yhä syvin ihmisen tekemä reikä. Hibiinien tunturimassiivin korkein huippu Judytšvumtšorr on 1 201 metriä, ja sen juurella Kirovskissa lasketellaan; Hibiinien kansallispuisto perustettiin 2018. Barentsinmeren rannalla Teriberkan kalastajakylässä asuu enää muutama sata ihmistä, mutta rantojen hylätyt puuveneet ja elokuva Leviathan (2014) ovat tehneet siitä matkailukohteen. Kuolan alkuperäiskansa saamelaiset ovat nykyään pieni vähemmistö.",
     },
     Nenets: {
       lyhyt: 'Nenetsian tundralla nenetsit paimentavat yhä poroja, ja pääkaupungin Narjan-Marin nimi tarkoittaa nenetsiksi punaista kaupunkia.',
+      pitka: "Nenetsian autonominen piirikunta on Venäjän asukasluvultaan pienimpiä alueita: vuoden 2021 väestölaskennassa asukkaita oli noin 41 400, vaikka pinta-alaa on noin 177 000 neliökilometriä, eli reilut puolet Suomen alasta. Nenetsit ovat nykyään noin viidesosa asukkaista. Tundra jatkuu Barentsinmeren rannikolle, ja merellä ovat Kolgujevin ja Vaigatšin saaret. Naryan-Mar, jossa asuu noin 24 000 ihmistä eli suunnilleen puolet piirikunnan väestöstä, sijaitsee Petšora-joen varrella. Tieyhteydet ovat vähäisiä, ja liikenne kulkee paljolti lentäen ja kesällä joen kautta. Piirikunnan talous perustuu öljyyn ja poronhoitoon.",
     },
     Nizhegorod: {
       lyhyt: 'Nižni Novgorodin alueen Semjonovissa maalataan hohlomaa, puuastioita, joiden kukkakuviot hohtavat punaisena, mustana ja kultaisena.',
+      pitka: "Nižni Novgorod, perustettu vuonna 1221, on levittäytynyt korkealle rinteelle Volgan ja Okan yhtymäkohtaan, ja noin 1,2 miljoonan asukkaan kaupungissa katse hakeutuu ensimmäisenä kivikremliin. Sen noin kahden kilometrin mittaista muuria vartioi 13 tornia, ja 22,7 hehtaarin alueella toimii nykyisin taidemuseo. Arkkienkeli Mikaelin katedraalissa on Kuzma Minin hauta. Noin 185 kilometrin päässä kaupungista on Diveevo, jonka luostarissa säilytetään Serafim Sarovilaisen pyhäinjäännöksiä ja jossa pyhiinvaeltajat kulkevat 775 metrin pituisen Pyhän Kanavkan.",
     },
     Novgorod: {
       lyhyt: 'Novgorodin kosteasta maasta on kaivettu esiin yli tuhat keskiaikaista tuohikirjettä, tavallisten kaupunkilaisten arkisia viestejä.',
+      pitka: "Novgorodin alueella on 54 500 neliökilometriä metsiä, soita ja järviä, mutta sen sydän on yksi kaupunki Volhov-joen varrella. Veliki Novgorodin Detinets eli kremlin muurit kiertävät 1 487 metriä, ja yhdeksän alkuperäisestä kahdestatoista tornista on yhä pystyssä. Muurien sisällä seisoo Sofian katedraali, rakennettu 1045–1050 ja Venäjän vanhimpia kirkkoja, sekä vuonna 1862 paljastettu Venäjän tuhatvuotismuistomerkki. Juurjevin luostarin katedraali on vuodelta 1119, ja Vitoslavlitsyn ulkomuseoon on koottu yli kaksikymmentä puurakennusta. Valdain kansallispuisto, perustettu 1990, ympäröi 76 järveä ja on ollut Unescon biosfäärialue vuodesta 2004.",
     },
     Novosibirsk: {
       lyhyt: 'Novosibirskin Akademgorodok on 1950-luvulla metsän keskelle rakennettu tiedekaupunki, jossa toimii kymmeniä tutkimuslaitoksia.',
@@ -6469,18 +9815,23 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Orel: {
       lyhyt: 'Orjolissa syntyi kirjailija Ivan Turgenev, ja hänen sukunsa kartano Spasskoje-Lutovinovo on nykyään museo.',
+      pitka: "Orjol perustettiin 1566 Ivan IV:n käskystä linnoitukseksi Okan ja Orlik-joen yhtymäkohtaan, ja nykyään se kutsuu itseään kirjalliseksi pääkaupungiksi. Turgenevin kirjallisuusmuseo on perustettu 1918, ja lähellä toimivat Leskovin kartanomuseo, Orjolin kirjailijoiden museo sekä Buninin museo; Ivan Bunin sai 1933 ensimmäisenä venäläisenä kirjallisuuden Nobel-palkinnon. Nikolai Leskov syntyi 1831 Gorohovon kylässä, ja runoilija Afanasi Fet syntyi Novosjolkin kylässä Mtsenskin seudulla. Turgenevin sukukartano Spasskoje-Lutovinovo Mtsenskin lähellä on museona, ja sen puistossa kasvoi kuuluisa tammi.",
     },
     Orenburg: {
       lyhyt: 'Orenburgin untuvahuivit neulotaan vuohenuntuvasta niin ohuiksi, että hienoimman huivin voi pujottaa sormuksen läpi.',
+      pitka: "Orenburg nousi vuonna 1743 nykyiselle paikalleen Ural-joen ja Sakmaran yhtymäkohtaan, ja noin 544 000 asukkaan kaupunki on perinteinen Euroopan ja Aasian rajakaupunki: Ural-joen yli kulkee kävelysilta, jota pidetään symbolisena mannerrajana. Vuosina 1837–1844 rakennetussa Karavaanisaarassa arkkitehti Aleksandr Brjullov teki baškiirikylän tyylisen kokonaisuuden, jonka keskellä kahdeksankulmainen moskeija muistuttaa jurttaa; tataarimoskeija oli avattu jo 1805. Alueen pinta-ala on noin 124 000 neliökilometriä, ja väestöstä tataareja on 6,3 ja kazakkeja 5,8 prosenttia. Luoteessa kohoaa Buzulukin mäntymetsän kansallispuisto, noin 106 000 hehtaaria: se on suuri aron ympäröimä yhtenäinen mäntymetsä, ja puolet siitä on Orenburgin alueella.",
     },
     Penza: {
       lyhyt: 'Penzan alueen Tarhanyssa kasvoi runoilija Mihail Lermontov isoäitinsä kartanossa, joka on nyt hänen museonsa.',
+      pitka: "Penza kohoaa Sura-joen rannoille Volgan ylängölle, ja kaupunki perustettiin linnakkeeksi vuonna 1663 Villin kentän eli aron rajalle. Nykyään sen ympärillä on noin 1,27 miljoonan asukkaan Penzan alue, joka erotettiin Tambovin alueesta vuonna 1939 ja jonka pinta-ala on runsaat 43 000 neliökilometriä. Penzassa vietti lapsuutensa teatteriohjaaja Vsevolod Meyerhold (s. 1874), ja siellä toimii nyt hänen muistomuseonsa sekä Tohtori Dapertutto -teatteri. Alueen suurin joki on Hopjor, 979 kilometriä, ja historioitsija Vasili Kljutševski syntyi Penzan alueella vuonna 1841. Venäläisten rinnalla alueella asuu tataareja (vuoden 2010 väestönlaskennassa 6,4 %) ja mordvalaisia (4,1 %): tataarin kieli on turkkilainen, mordvan suomalais-ugrilainen.",
     },
     "Perm'": {
       lyhyt: 'Maapallon historian permikausi on nimetty Permin mukaan, sillä brittigeologi Murchison tutki kauden kerrostumia täällä 1841.',
+      pitka: "Perm kasvoi Kaman rannalle vuonna 1723 perustetusta kuparisulatosta noin miljoonan asukkaan kaupungiksi. Baletti-impressario Sergei Djagilev kasvoi täällä, ja Permin ooppera ja baletti on Venäjän tunnetuimpia. Permin taidegalleria toimii entisessä katedraalissa, ja sen erikoisuus on Permin jumalten puuveistokset, kansantaiteellisia Kristus-hahmoja. Joen entiseen terminaalirakennukseen avattiin 2009 nykytaiteen museo PERMM. Kaupungista noin 85 kilometriä etelään, Belaja Goran kukkulalla, sijaitsee Belogorjen luostari, jonka kivikirkko rakennettiin 1902–1917.",
     },
     'City of St. Petersburg': {
       lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
+      pitka: "Pietari perustettiin 27. toukokuuta 1703 Nevan suistoon, ja nykyään siellä asuu noin 5,6 miljoonaa ihmistä. Kesäisin valkeat yöt pitävät taivaan valoisana lähes kuukauden. Eremitaasin kokoelmassa on noin kolme miljoonaa esinettä, ja museo jakautuu kuuteen historialliseen rakennukseen, joihin kuuluvat Talvipalatsin lisäksi myös entinen Yleisesikunnan talo. Pietari-Paavalin linnoitus perustettiin kaupungin ytimeksi 1703, ja Marian teatterissa esiintyvät maailman huippubaletit. Suomenlahden rannalla nousee Lahta-keskus: 462 metriä ja 87 kerrosta korkea pilvenpiirtäjä, valmistunut 2019 ja Euroopan korkein rakennus.",
     },
     'North Ossetia': {
       lyhyt: 'Pohjois-Ossetian Dargavsin laakson rinteellä on vanha kuolleiden kaupunki, lähes sata kivistä hautahuonetta rivissä.',
@@ -6490,15 +9841,18 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pskov: {
       lyhyt: 'Puškinin sukutila Mihailovskoje Pihkovan alueella on museona, ja runoilija on haudattu läheiseen Svjatogorskin luostariin.',
+      pitka: "Pihkovan alue on Venäjän läntisimpiä alueita, ja sen pinta-ala on noin 55 400 neliökilometriä ja asukasluku noin 600 000. Pihkovan kaupunki mainitaan aikakirjoissa jo vuonna 903. Sen Krom-linnake seisoo Velikaja- ja Pihkovanjoen yhtymäkohdassa. Kaupungista noin 30 kilometriä länteen Izborskin linnoitus kohoaa kukkulalla lähellä Viron rajaa, ja sen kivimuurit ovat keskiaikaiset. Peipsijärvi, jonka pinta-ala on noin 3 555 neliökilometriä, on Euroopan suurin rajat ylittävä järvi. Sen jäällä kävi 1242 Jäätaistelu, ja nykyään rannoilla kalastetaan ja levähtää muuttolintuja.",
     },
     Rostov: {
       lyhyt: 'Donin suistossa Rostovin lähellä on Tanaisin kaivausalue, antiikin kreikkalaisten kauppakaupungin rauniot, jotka ovat nyt ulkomuseo.',
+      pitka: "Rostov-on-Don on Donin rannalla sijaitseva miljoonakaupunki, jota kutsutaan Kaukasuksen portiksi. Joen vasemmalla puolella seisoo Rostov Arena, jossa pelattiin viisi jalkapallon MM-kisojen 2018 ottelua ja jonka MM-kapasiteetti oli noin 43 500 katsojaa. Alue jatkuu pohjoiseen Donin kasakkojen maille, ja Vjoshenskajan kylässä toimii museoalue kirjailija Mihail Sholohovin kunniaksi; hän sai kirjallisuuden Nobelin palkinnon vuonna 1965, ja hänen Hiljaa virtaa Don -romaaninsa sijoittuu Donin kasakoiden elämään. Rostovin alue ulottuu lännessä Aasovanmeren rannikolle, jonka satamakaupungeissa on pitkä merenkulkuperinne.",
     },
     'RUS+99?': {
       lyhyt: 'Tämä pieni saari on Karanmeren Bajdaratskajanlahdella, jonka pohjaan laskettiin 2014 kaasuputket Jamalin niemimaalta.',
     },
     "Ryazan'": {
       lyhyt: 'Runoilija Sergei Jesenin syntyi Rjazanin alueen Konstantinovon kylässä Okan rannalla, ja hänen kotitalonsa on museo.',
+      pitka: "Rjazanin kreml on kaupungin vanhin osa, ja siellä kohoaa Uspenskin katedraali, joka rakennettiin vuosina 1693–1702. Sen kellotorni on yli 80 metriä korkea ja erottuu kauas Oka-joen yli. Rjazan oli 1097–1521 itsenäinen ruhtinaskunta, ja sen pääkaupunki sijaitsi alun perin noin 50 kilometrin päässä nykyisestä kaupungista. Tiedemies Ivan Pavlov, ehdollisten refleksien tutkija ja Nobel-palkittu, syntyi Rjazanissa 1849, ja hänen vanha kotitalonsa on nyt museo. Alue on Okan laaksoa, jossa viljellään ja pidetään mehiläisiä.",
     },
     'Sakha (Yakutia)': {
       lyhyt: 'Sahan Oimjakonin kylässä on mitattu lähes 68 asteen pakkanen, yksi pohjoisen pallonpuoliskon kylmimmistä koskaan mitatuista lukemista.',
@@ -6508,15 +9862,15 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Samara: {
       lyhyt: 'Samaran alueen Toljatissa on AvtoVAZin tehdas, jonka linjoilta Lada-autoja on vierinyt vuodesta 1970.',
+      pitka: "Samaran rantabulevardi kulkee noin viisi kilometriä Volgan vartta, ja se on kaupunkilaisten suosituin ulkoilupaikka. Keskustan Kuibyshevin aukio on yli 15 hehtaaria, joten se lasketaan Euroopan suurimpiin kaupunkiaukioihin, ja sen laidalla seisoo oopperatalo. Aivan kaupungin vieressä Volga kiertää Zhigulin vuoret jyrkässä mutkassa, jota kutsutaan Samarskaja Lukaksi. Mutkan kansallispuisto ja noin 23 000 hehtaarin Zhigulin luonnonsuojelualue muodostavat yhdessä biosfäärialueen, jonka UNESCO on hyväksynyt. Kaupunki tunnettiin vuosina 1935–1991 nimellä Kuibyshev, ja lokakuussa 1941 se määrättiin Neuvostoliiton varapääkaupungiksi.",
     },
     Saratov: {
       lyhyt: 'Saratovin harmonikan kannessa on kaksi pientä kelloa, jotka helähtävät bassonappien tahdissa tanssikappaleissa.',
-    },
-    Sevastopol: {
-      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+      pitka: "Saratov on lähes 900 000 asukkaan kaupunki Volgan oikealla rannalla. Sen keskeinen kävelykatu, noin kilometrin mittainen Kirovin katu, on täynnä 1800- ja 1900-lukujen taitteen kartanoita ja päättyy Lipki-puistoon ja vuonna 1912 avattuun konservatorioon. Radishchev-taidemuseo avattiin yleisölle jo vuonna 1885, ja sen kokoelmiin kuuluu yli 20 000 esinettä. Volgan yli Engelsiin kulkee vuonna 1965 avattu 2,8 kilometrin mittainen maantiesilta, joka oli valmistuessaan Neuvostoliiton pisin. Saratovin alue on myös Venäjän johtavia auringonkukan viljelyalueita.",
     },
     Smolensk: {
       lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
+      pitka: "Smolenskin kaupunki seisoo Dneprin kummallakin rannalla noin 360 kilometriä Moskovasta länteen, ja kaupunki mainitaan kronikassa ensi kerran 863. Pyhän Mikaelin (Svirskaja) kirkko on vuosilta 1180–1197 ja kuuluu harvoihin mongolivaltaa edeltäneisiin rakennuksiin Venäjällä. Kaupungissa asuu noin 317 000 ihmistä, koko alueella noin 888 000. Alueen luoteisosassa Smolenskin Järviseudun kansallispuisto, perustettu 1992, kattaa yli 146 000 hehtaaria metsää ja soita, ja siellä on 35 järveä; se on ollut Unescon biosfäärialue vuodesta 2002.",
     },
     "Stavropol'": {
       lyhyt: 'Stavropolin aluepiirin Kislovodskista pulppuaa narzan-kivennäisvettä, ja sen kylpylöihin tullaan yhä parantumaan.',
@@ -6526,9 +9880,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tambov: {
       lyhyt: 'Säveltäjä Sergei Rahmaninov vietti kesiään Tambovin alueen Ivanovkassa, ja kartano on nykyään hänen museonsa.',
+      pitka: "Tambov perustettiin 17. huhtikuuta 1636 linnoitukseksi, ja nykyään noin 255 000 asukkaan kaupunki levittäytyy Tsna- ja Studenets-jokien yhtymäkohtaan. Joen rantaa seuraa noin 2,5 kilometrin pituinen kaksitasoinen rantapuisto suihkulähteineen. Kulttuurin pohjan loi runoilija Gavriil Deržavin, joka kuvernöörinä 1780-luvun lopulla perusti kaupunkiin teatterin, koulun ja sanomalehden. Michurinsk, aiemmin Kozlov (perustettu 1635), sai nykyisen nimensä vuonna 1932 hedelmänjalostaja Ivan Mitšurinin mukaan; noin 88 000 asukkaan tiedekaupunki on yhä hedelmäntutkimuksen keskus. Alueella asuu noin miljoona ihmistä, ja metsäaromaisemaa halkovat Tsna, Vorona ja Lesnoi Voronež.",
     },
     Tatarstan: {
       lyhyt: 'Tatarstanin kesäjuhlassa sabantuissa kiivetään liukkaaseen salkoon ja painitaan perinteistä vyöpainia.',
+      pitka: "Tatarstan on noin nelimiljoonainen tasavalta Volgan ja Kaman varrella, ja siellä on kolme Unescon maailmanperintökohdetta. Kazanin kreml merkittiin listalle vuonna 2000, ja sen muurien sisällä kohoaa Qolşärif-moskeija, joka avattiin kesäkuussa 2005 kaupungin tuhatvuotisjuhlien alkajaisiksi. Bolgarin muinaiskaupunki hyväksyttiin listalle vuonna 2014: siellä muistetaan Volgan bolgaarien siirtymistä islamiin vuonna 922, ja paikka on yhä tatarimuslimien pyhiinvaelluskohde. Kolmas, Svijažskin saarikaupunki, otettiin mukaan 2017; sen linnoitus rakennettiin Volgan, Svijagan ja Štšukan yhtymäkohtaan vuonna 1551 vain neljässä viikossa. Tataarit ovat noin 54 prosenttia ja venäläiset 40 prosenttia asukkaista, ja tataari kuuluu turkkilaisiin kieliin.",
     },
     Tomsk: {
       lyhyt: 'Tomskia kutsutaan Siperian Ateenaksi, sillä kaupungissa on Siperian vanhin yliopisto ja suuri joukko opiskelijoita.',
@@ -6541,42 +9897,52 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chuvash: {
       lyhyt: 'Tšuvassin kieli on ainoa elossa oleva oguurien turkkilaiskieli, ja se eroaa paljon muista turkkilaiskielistä.',
+      pitka: "Tšeboksary, jonka nimi mainitaan lähteissä ensimmäisen kerran vuonna 1469, on Tšuvassian tasavallan pääkaupunki Volgan rannalla, noin 500 000 asukkaan kaupunki. Volgaa padottava Tšeboksaryn tekoallas on 2 274 neliökilometrin laajuinen, ja voimala tuottaa jopa 1 404 megawattia. Tšeboksarynlahden rantoja on kunnostettu kävelyreiteiksi ja hiekkarannoiksi, ja kaupungissa toimivat Tšuvassian kansallismuseo sekä Venäjän ainoa olutmuseo. Tasavallassa on noin 1,19 miljoonaa asukasta. Tšuvassit puhuvat turkkilaista kieltä, ja heidän vaatteitaan ja liinojaan koristaa omaleimainen kirjonta.",
     },
     Tula: {
       lyhyt: 'Tulan prjanikit ovat hunajaisia piparkakkulevyjä, jotka painetaan kaiverrettuihin puumuotteihin ja täytetään usein hillolla.',
+      pitka: "Tulan kremlin kiviset muurit nousivat vuosina 1514–1520 Vasili III:n käskystä, ja noin kuuden hehtaarin alueella on Uspenskin katedraali (1762–1766) ja Epifanian katedraali (1855–1863); nykyään kompleksi on museo. Tulan samovaarimuseo esittelee satoja samovaareja 1700-luvun lopulta nykypäivään. Kaupungista 12 kilometriä lounaaseen sijaitsee Jasnaja Poljana, jossa Leo Tolstoi syntyi 1828 ja kirjoitti Sodan ja rauhan (1862–1869) sekä Anna Kareninan (1873–1877). Okan korkealla oikealla rannalla Polenovon museokartanossa on maalari Vasili Polenovin itse suunnittelema valkoinen talo, joka valmistui 1892.",
     },
     Tuva: {
       lyhyt: 'Tuvassa lauletaan kurkkulaulua, jossa laulaja tuottaa yhtä aikaa matalan pohjasävelen ja sen yllä viheltävän yläsävelen.',
     },
     "Tver'": {
       lyhyt: 'Volgan lähde on Tverin alueen Valdain ylängöllä, ja pienen lähteen päälle on rakennettu kappeli.',
+      pitka: "Tverin alue ulottuu Moskovan ja Pietarin välille, ja sen pinta-ala on noin 84 200 neliökilometriä. Läntistä osaa peittää Valdain ylänkö, jolta saavat alkunsa Volga ja Läntinen Dvina. Alueen helmi on Seliger-järvi, jonka pinta-ala on noin 212 neliökilometriä ja jossa on noin 160 saarta. Kalastajien ja melojien suosimaa järveä kutsutaan Euroopan Baikaliksi. Sen rannalla sijaitseva Ostashkov on lomakohde, ja Stolobnyin saarella seisoo Nilo-Stolobenskin luostari. Torzhok mainitaan kirjoituksissa ensi kerran 1139. Vanha kauppakaupunki sijaitsee Moskovan ja Pietarin välisen tien varrella, ja se tunnetaan yhä kultalangalla kirjotuista töistä ja uusklassisesta rakennuskannastaan.",
     },
     "Tyumen'": {
       lyhyt: 'Tjumen perustettiin 1586, ja sitä pidetään ensimmäisenä venäläisenä kaupunkina Siperiassa.',
     },
     Udmurt: {
       lyhyt: 'Udmurtialaisen Buranovon kylän mummokuoro lauloi Euroviisuissa 2012 toiseksi, osin udmurtiksi.',
+      pitka: "Udmurtia sijaitsee Uralin länsipuolella Kaman ja sen sivujoen Vjatkan välissä, 42 000 neliökilometrin alueella, jossa asuu noin 1,45 miljoonaa ihmistä. Pääkaupunki Izhevsk sai alkunsa vuonna 1760 rautatehtaasta, ja tehtaan patoallas, Izhin lampi, on noin 22 neliökilometrin kokoinen. Udmurttien osuus asukkaista on noin 24 prosenttia, ja udmurtin kieli on venäjän rinnalla tasavallan virallinen kieli; se kuuluu suomalais-ugrilaisten kielten permiläiseen ryhmään. Votkinskissa syntyi vuonna 1840 säveltäjä Pjotr Tšaikovski, ja hänen lapsuudenkotinsa on ollut museona vuodesta 1940. Sarapulin museo on tasavallan vanhin, perustettu 1909. Kaman varrella Nechkinskin kansallispuisto (perustettu 1997) suojelee metsää ja tulvaniittyjä, ja Ludorvai-ulkomuseossa tutustuu udmurttien, venäläisten ja beserjaanien arkeen.",
     },
     "Ul'yanovsk": {
       lyhyt: 'Oblomovin kirjoittaja Ivan Gontšarov syntyi nykyisessä Uljanovskissa, ja kaupungissa on hänen museonsa.',
+      pitka: "Uljanovskin alue on noin 37 200 neliökilometrin kokoinen ja siellä asuu noin 1,2 miljoonaa ihmistä. Volga jakaa maan kahtia: läntinen ranta on kumpuilevaa ylänköä ja itäpuoli tasaisempaa. Aluekeskus Simbirsk perustettiin linnoitukseksi 1648, ja vuonna 1924 se sai nimekseen Uljanovsk. Kaupungissa syntyi Vladimir Lenin, ja se on myös kirjailija Ivan Gontšarovin kotikaupunki. Unesco nimesi sen kirjallisuuden kaupungiksi 2015. Volgan yli kulkee 2009 avattu Presidentin silta, jonka pituus on yli viisi kilometriä. Kaupungin siviili-ilmailumuseossa on noin 40 lentokonetta, muun muassa yliääninen Tu-144. Alueen teollisuuteen kuuluvat autonvalmistus ja lentokonetehdas.",
     },
     Vladimir: {
       lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
+      pitka: "Vladimirin alue on pinta-alaltaan pieni, 29 084 neliökilometriä, mutta asukkaita on noin 1,35 miljoonaa. Aluekeskus Vladimir, noin 350 000 asukasta, on 190 kilometrin päässä Moskovasta idässä. Unesco merkitsi Vladimirin ja Suzdalin valkoiset monumentit maailmanperintökohteeksi vuonna 1992. Uspenskin katedraali rakennettiin 1158–1160 ja laajennettiin 1185–1189, ja sen seinille Andrei Rublev maalasi freskoja 1408. Dmitrin katedraali valmistui 1194–1197, ja sen seinien valkokivi on koristeltu tiheällä veistoskuvituksella. Kultainen portti on rakennettu 1100-luvulla mutta rakennettiin osin uudelleen 1700-luvun lopulla. Alueen itäosassa Meštšjoran kansallispuisto, perustettu 1992, suojaa noin 119 000 hehtaaria soita ja mäntymetsiä.",
     },
     Volgograd: {
       lyhyt: 'Volgogradin alueen Eltonjärvi on Euroopan suurin mineraalijärvi, ja levät värjäävät sen suolaisen veden punertavaksi.',
+      pitka: "Volgograd venyy Volgan länsirannalla kymmeniä kilometrejä pitkänä, vain muutaman kilometrin leveänä kaistaleena, ja se perustettiin Tsaritsynin linnoituksena vuonna 1589. Kaupungin muotoon sopii Metrotram, osin maan alla kulkeva raitiotie: linja avattiin 1984, se on 17,3 kilometriä pitkä ja siinä on 22 asemaa. Etelässä Volgan ja Donin yhdistää vuonna 1952 avattu, 101 kilometrin pituinen kanava, jossa on 13 sulkua. Kaupungin eteläosassa on Vanha Sarepta, vuonna 1765 herrnhutilaisten perustama siirtokunta, joka on museoalueena. Padon alapuolella Volga haarautuu, ja väliin jää laaja Volga-Ahtuba-tulva-alue.",
     },
     Vologda: {
       lyhyt: 'Vologdan nypläyspitsi on alueen tunnetuin käsityö, ja kaupungissa on sille oma museonsa.',
+      pitka: "Vologdan alue on 144 500 neliökilometrin laajuudessaan harvaan asuttu: asukkaita on runsaat 1,1 miljoonaa. Vologdan kaupungin Sofian katedraali rakennettiin 1568–1570 Ivan IV:n käskystä, ja kaupunki on yksi Venäjän harvoista, joissa on säilynyt puuarkkitehtuuria. Pohjoisempana Kirillo-Belozerskin luostari perustettiin 1397 Siverskoje-järven rannalle, ja sen Uspenskin katedraali valmistui 1497. Ferapontovin luostarin Neitsyt Marian syntymän katedraalin seinät maalasi ikonimaalari Dionisi poikineen vuonna 1502, ja noin 600 neliömetriä freskoja on säilynyt; luostari on Unescon maailmanperintökohde vuodesta 2000. Cherepovetsissa toimii Severstalin terästehdas, ja Volga–Itämeri-vesitie kulkee alueen halki.",
     },
     Voronezh: {
       lyhyt: 'Voronežin alueen Kostjonkissa on kaivettu esiin kymmeniä kivikautisia asuinpaikkoja, joista osa on rakennettu mammutinluista.',
+      pitka: "Voronež, noin miljoonan asukkaan kaupunki, perustettiin linnoitukseksi vuonna 1586, ja sen laivastohistoria näkyy yhä: Pietari Suuren telakalla vesille laskettiin vuonna 1700 Goto Predestinatsija, Venäjän ensimmäinen 58-tykkinen linjalaiva, jonka tarkka jäljennös on museona Admiraliteettiaukiolla. Kaupungin eteläpuolella Divnogorjen museosuojelualueella noin 11 neliökilometrin alueella kohoavat liitupylväät ja luolakirkot. Khopjorin luonnonsuojelualue (perustettu 1935, noin 16 000 hehtaaria) suojaa 50 kilometrin jokiosuutta ja harvinaista venäläistä desmania. Talovajan piirissä Kamennaja Stepin koeasema on peräisin maaperätieteen isän Vasili Dokutšajevin 1890-luvun tutkimuksista.",
     },
     'Yamal-Nenets': {
       lyhyt: 'Salehard on rakennettu aivan napapiirille, ja kaupungissa napapiirin kohtaa merkitsee oma muistomerkki.',
     },
     "Yaroslavl'": {
       lyhyt: 'Jaroslavlin vaakunassa on kirvestä kantava karhu, sillä tarun mukaan kaupungin perustaja Jaroslav Viisas kaatoi karhun juuri täällä.',
+      pitka: "Jaroslavlin alue kuuluu Venäjän Kultaiseen renkaaseen, ja siellä asuu noin 1,2 miljoonaa ihmistä. Aluekeskus Jaroslavl, jonka perustamisvuotena pidetään 1010, sijaitsee Volgan ja Kotorosl-joen yhtymäkohdassa. Se kasvoi 1600-luvulla vauraaksi kauppakaupungiksi, ja sen värikkäät kirkot ovat tuolta ajalta. Spasso-Preobrazhenskin luostarin rakennustyöt alkoivat 1506. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon 2005, ja kaupunki vietti 1000-vuotisjuhlaansa 2010. Alueella on myös Uglichin vanha Volga-kaupunki, jossa tsaarin nuori poika Dmitri kuoli 1591, sekä Rybinskin tekoallas, joka täytettiin 1941–1947.",
     },
     Yevrey: {
       lyhyt: 'Juutalaisen autonomisen alueen pääkaupungin Birobidžanin pääkatu on nimetty jiddišiksi kirjoittaneen Šolem Aleichemin mukaan.',
@@ -7641,84 +11007,435 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Zürich                 — Cabaret Voltaire (Zurich) (dadan syntypaikka
    *                            1916, Spiegelgasse, Lenin samalla kadulla)
    */
+  /*
+   * CHE PITKA (Sisältökirjuri 26.9.2026, maakunta-erä 2). Lähteet
+   * (en-Wikipedia, tarkistettu 26.9.2026, osa faktoista WebSearchilla
+   * varmistettu erikseen):
+   *   Aargau — Habsburg Castle (suvun alkuperä, menetti alueen 1415)
+   *   Appenzell Ausserrhoden — Henry Dunant (köyhyysvuodet, Heiden 1887,
+   *     Nobel 1901)
+   *   Appenzell Innerrhoden — Landsgemeinde; Gossau–Wasserauen railway
+   *     line (juna vasta 1886)
+   *   Basel-Landschaft — Canton of Basel (jako 1833, kansanäänestykset
+   *     1969/2014)
+   *   Basel-Stadt — Mittlere Brücke (ainoa Reinin silta vuoteen 1905)
+   *   Bern — Swiss Federal Constitution (kokonaisuudistus 1874)
+   *   Fribourg — Grand Pont Suspendu (1834–1923, hetken maailman pisin
+   *     riippusilta)
+   *   Genève — International Committee of the Red Cross (perustettu
+   *     1863, Geneven sopimus 1864)
+   *   Glarus — Great Fire of Glarus 1861 (uudelleenrakennus ruutukaavaan)
+   *   Graubünden — Davos (parantola 1868); Rhaetian Railway (1889 alkaen)
+   *   Jura — Kulturkampf (piispan erottaminen 1870-l.); Canton of Jura
+   *     (1979)
+   *   Lucerne — Richard Wagner Museum Tribschen (Wagner lähti 1872)
+   *   Neuchâtel — Absinthe; Val-de-Travers (liittovaltiokielto 1908)
+   *   Nidwalden — Stanserhorn (ensimmäinen rata 1893)
+   *   Obwalden — Pilatus railway (avattu 1889, Eduard Locher)
+   *   Schaffhausen — Rhine Falls (Grand Tour -reitti)
+   *   Schwyz — Vitznau–Rigi railway line (avattu 1871, Euroopan
+   *     ensimmäinen vuoristorautatie)
+   *   Solothurn — Solothurn (Ranskan lähettilään kausi 1530–1792)
+   *   Sankt Gallen — St. Gallen (pitsikirjonta, luostari lakkautettu
+   *     1805)
+   *   Thurgau — Arenenberg; Napoleon III (kuoli maanpaossa 1873)
+   *   Ticino — Gotthard Rail Tunnel (louhinta alkoi syyskuussa 1872)
+   *   Uri — Gotthard Rail Tunnel (läpimurto 1880, avaus 1882)
+   *   Valais — Matterhorn; 1865 Matterhorn disaster
+   *   Vaud — Henri Nestlé; Nestlé (Vevey, maitojauhe 1860-l. lopulla)
+   *   Zug — Vorstadtkatastrophe 5.7.1887 (Katastrophenbucht)
+   *   Zürich — Nadezhda Suslova (Euroopan ensimmäinen naislääkäri 1867)
+   */
   CHE: {
     Aargau: {
       lyhyt: 'Habsburgin kylän kukkulalla seisoo noin 1020 rakennettu linna, josta yksi Euroopan mahtavimmista hallitsijasuvuista sai nimensä.',
+      pitka: `Aargau on nykyään Sveitsin niin sanottu Vesilinna — Aare, Reuss ja Limmat yhtyvät kantonin alueella, ja rannoilla kasvaa maan suurimmat omenatarhat, samalla kun Beznaun ydinvoimala Döttingenin lähellä on käynnissä ollein maailman vanhimpia yhä toimivia kaupallisia ydinvoimaloita. Habsburgin linnankukkulalla käy nykyään lähinnä retkeilijöitä ja museovieraita, ei valtiaita: suku menetti Aargaun alueensa sveitsiläisille jo 1415, minkä jälkeen sen painopiste siirtyi Wieniin. Isoisän matkan aikaan 1873 Habsburgit hallitsivat Itävalta-Unkarin suurvaltaa Wienistä käsin, mutta perheen alkuperäinen nimikkolinna oli silloin jo lähes 460 vuotta ollut osa Sveitsiä — vaatimaton maaseutumaisema, ei minkään valtakunnan keskus.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-aargau-93ffc453.jpg",
+          lahde: "WillYs Fotowerkstatt, Wikimedia Commons (CC BY 3.0)",
+          tekija: "WillYs Fotowerkstatt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Schloss_Habsburg-1.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-aargau-93ffc453.jpg",
     },
     'Appenzell Ausserrhoden': {
       lyhyt: 'Punaisen Ristin perustaja Henry Dunant vietti viimeiset vuotensa Heidenin kylässä, ja siellä asuessaan hän sai ensimmäisen Nobelin rauhanpalkinnon.',
+      pitka: `Appenzell Ausserrhodenin vihreät kumpuilevat niityt ja ruskeat karjalaumat ovat nykyään tuttu näky matkailukuvista, ja Heidenin pieni kylä Bodenjärven yllä elää edelleen siitä, että Punaisen Ristin perustaja Henry Dunant vietti siellä elämänsä viimeiset vuodet ja sai 1901 ensimmäisen Nobelin rauhanpalkinnon. Isoisän vuonna 1873 Dunant ei kuitenkaan asunut vielä Heidenissä eikä missään pysyvässä osoitteessa: hän oli konkurssin runtelemana köyhä ja unohdettu, kierteli Euroopan kaupunkeja ja joutui ajoittain nukkumaan kaduilla Pariisissa. Heidenin idylliin hän löysi tiensä vasta 1887, ja maailma "löysi" hänet uudelleen vasta 1895 — kaksikymmentäkaksi vuotta isoisän matkan jälkeen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-appenzell-ausserrhoden-4a9fcba1.jpg",
+          lahde: "Mario Baronchelli, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Mario Baronchelli",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Henry_Dunant_Museum_Heiden_Aussenansicht_KB-038264.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-appenzell-ausserrhoden-4a9fcba1.jpg",
     },
     'Appenzell Innerrhoden': {
       lyhyt: 'Appenzellin aukiolle kokoontuu joka huhtikuu tuhansia kansalaisia päättämään kantonin asioista – naiset pääsivät mukaan vasta 1991.',
+      pitka: `Appenzellin kylän aukio täyttyy huhtikuisin sadoista miekkaa kantavista äänestäjistä, kun Landsgemeinde päättää kantonin asioista käsien nostolla — perinne, joka jatkuu, vaikka naiset pääsivät mukaan vasta 1991. Alpstein-vuoriston ja Säntis-huipun juurella eletään edelleen karjatalouden ja alppijuuston tahdissa, ja kylän värikkäät talonjulkisivut houkuttelevat nykyään turisteja ympäri maailmaa. Isoisän aikaan 1873 tähän syrjäiseen vuoristokantoniin ei ollut vielä rautatietä: ensimmäinen juna kolisi Appenzelliin vasta 1886, joten viimeiset kilometrit laaksoon olisi pitänyt kulkea jalan tai hevosella.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-appenzell-innerrhoden-1f22919a.jpg",
+          lahde: "Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Daniel Kraft",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Appenzell_Landsgemeindeplatz_20210528.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-appenzell-innerrhoden-1f22919a.jpg",
     },
     'Basel-Landschaft': {
       lyhyt: 'Augusta Rauricassa oli Alppien pohjoispuolen suurin roomalainen teatteri, ja kaupungista vietiin savustettua sianlihaa ympäri valtakuntaa.',
+      pitka: `Baselin maaseutukantonissa Augusta Raurican roomalaisrauniot houkuttelevat nykyään retkeilijöitä ja koululaisryhmiä, ja pääkaupunki Liestal sekä ympäröivät viinitilat elävät tiiviissä kytköksessä naapurikaupunkiin Baseliin — vaikka poliittinen raja kantonien välillä on jyrkkä. Raja syntyi verissä: maaseudun asukkaat nousivat kapinaan kaupungin herruutta vastaan, ja 1833 Basel jaettiin kahtia, Basel-Landschaftiksi ja Basel-Stadtiksi. Isoisän matkan aikaan 1873 jako oli vain neljäkymmentä vuotta vanha, ja nuori maaseutukantoni rakensi vielä omaa hallintoaan mahtavan kaupunkivaltion rinnalla — kansanäänestykset uudesta yhdistymisestä hylättiin sekä 1969 että 2014.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-basel-landschaft-d10e8a8a.jpg",
+          lahde: "Carole Raddato from FRANKFURT, Germany, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Carole Raddato from FRANKFURT, Germany",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Roman_Theatre,_Augusta_Raurica,_Switzerland_(9222467982).jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-basel-landschaft-d10e8a8a.jpg",
     },
     'Basel-Stadt': {
       lyhyt: 'Baselin Rein-lossit kulkevat ilman moottoria: lossari kääntää veneen vinoon virtaan, ja virta työntää sen vaijeria pitkin toiselle rannalle.',
+      pitka: `Basel on nykyään sveitsiläisen taiteen ja lääketeollisuuden keskus, jonka kapeat kujat ja Reinin rannat täyttyvät kesäisin uimareista, jotka antavat virran kuljettaa itsensä alavirtaan. Reinin ylitys on ollut kaupungille elinehto vuosisatoja, ja lossit täydensivät liikennettä, koska pitkään riitti yksi ainoa silta. Isoisän aikaan 1873 keskiaikainen Mittlere Brücke, rakennettu jo 1225, oli edelleen Baselin ainoa Reinin ylittävä silta, eikä tilanne muuttunut ennen kuin kasvava liikenne pakotti sen purkamaan ja rakentamaan uudelleen vasta 1905.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-basel-stadt-f4b409d4.jpg",
+          lahde: "W. Bulach, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "W. Bulach",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:00_3054_Basel_(Schweiz)_-_Münsterfähre_Leu.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-basel-stadt-f4b409d4.jpg",
     },
     Bern: {
       lyhyt: 'Bernin Kramgassen talossa 49 Albert Einstein kirjoitti 1905 artikkelit, joissa hän esitteli suhteellisuusteoriansa – päivät hän teki töitä patenttivirastossa.',
+      pitka: `Bern on nykyään Sveitsin liittovaltion pääkaupunki, jonka UNESCO-suojeltu vanhakaupunki, Zytglogge-kellotorni ja karhupuisto houkuttelevat miljoonia matkailijoita vuosittain — Einsteinin asunto Kramgassella on yksi suosituimmista pysähdyspaikoista. Vuonna 1873 Bern oli jo vakiintunut liittovaltion hallintokaupunki, mutta liittovaltion valta oli vielä paljon suppeampi kuin nykyään: vasta seuraavana vuonna, 1874, Sveitsi uudisti perustuslakinsa kokonaan ja antoi liittovaltiolle lisää valtaa esimerkiksi puolustuksen, kaupan ja lainsäädännön alalla sekä otti käyttöön kansanäänestykset. Isoisä matkusti siis Berniin juuri sillä hetkellä, kun kantonien liitto oli muuttumassa nykyistä muistuttavammaksi liittovaltioksi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-bern-ac989871.jpg",
+          lahde: "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JoachimKohler-HB",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bern_-_Kramgasse_mit_Zytglogge_(2014).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-bern-ac989871.jpg",
     },
     Fribourg: {
       lyhyt: 'Fribourgin köysirataa on vuodesta 1899 liikuttanut jätevesi: yläpään vaunuun lasketaan viemärivettä, ja painava vaunu vetää toisen ylös.',
+      pitka: `Fribourgin vanhakaupunki roikkuu edelleen jyrkän Sarine-joen kanjonin päällä, ja köysirataa pyörittää nykyään viemärivesi, samalla kun kaupungin kaksikielisyys — ranska ja saksa — näkyy kaduilla ja yliopistossa. Isoisän aikaan 1873 kaupungin ylitti Grand Pont Suspendu, vuonna 1834 valmistunut riippusilta, joka oli hetken maailman pisin riippusilta ennen kuin amerikkalainen Wheelingin silta ohitti sen 1849. Fribourgin silta pysyi silti käytössä ja kaupungin ylpeytenä isoisän matkan aikaan ja vielä pitkään sen jälkeen, kunnes se purettiin vasta 1923.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-fribourg-c92f7545.jpg",
+          lahde: "Adrien Quartenoud, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Adrien Quartenoud",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Fribourg_vue_aérienne_de_la_vieille_ville.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-fribourg-c92f7545.jpg",
     },
     'Genève': {
       lyhyt: 'Genevessä CERNissä syntyi 1989 World Wide Web, ja 27 kilometrin hiukkaskiihdytin kiertää maan alla Ranskan rajan yli.',
+      pitka: `Geneve on nykyään kansainvälisen diplomatian pääkaupunki, jonka CERN-tutkimuskeskuksessa syntyi 1989 World Wide Web, ja YK:n Euroopan-päämaja sekä sadat kansainväliset järjestöt työllistävät kaupungissa kymmeniätuhansia. Isoisän aikaan 1873 Geneven kansainvälinen rooli oli vasta alkamassa: Punaisen Ristin kansainvälinen komitea oli perustettu kaupunkiin 1863 ja ensimmäinen Geneven sopimus allekirjoitettu 1864, vain yhdeksän vuotta ennen isoisän matkaa — humanitaarisen Geneven maine oli silloin vielä uusi ja vasta vuosikymmenen ikäinen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-geneve-fdbfcc5e.jpg",
+          lahde: "Adam Nieman, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Adam Nieman",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:CERN_Globe_of_Science_and_Innovation.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-geneve-fdbfcc5e.jpg",
     },
     Glarus: {
       lyhyt: 'Glarus laski äänestysiän 16 vuoteen 2007 ensimmäisenä Sveitsin kantonina, ja asioista päättää yhä Landsgemeinde-kansankokous.',
+      pitka: `Glarus on nykyään kapea vuoristolaakso, jossa liuskekaivokset ja Sardonan tektoninen UNESCO-maailmanperintöalue kertovat kantonin geologisesta erikoislaadusta, ja Landsgemeinde-kansankokous päättää edelleen suoraan asioista kylän aukiolla. Isoisän saapuessa 1873 kaupunki näytti silti vielä varsin nuorelta: föhn-tuulen kiihdyttämä tulipalo tuhosi 1861 kaksi kolmasosaa Glaruksesta, ja kaupunki rakennettiin sen jälkeen uudelleen tiiviiseen ruutukaavaan arkkitehtien Johann Caspar Wolffin ja Bernhard Simonin suunnitelmien mukaan. Isoisä olisi siis kävellyt kaduilla, jotka olivat vain kymmenisen vuotta vanhoja — suorat ja säännölliset, toisin kuin useimpien sveitsiläisten kaupunkien mutkittelevat vanhatkaupungit.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-glarus-bc1c501d.jpg",
+          lahde: "Ikiwaner, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Ikiwaner",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Glarus_Panorama.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-glarus-bc1c501d.jpg",
     },
     'Graubünden': {
       lyhyt: 'Graubünden on Sveitsin ainoa kolmikielinen kantoni ja ainoa, jossa maan neljäs kansalliskieli retoromaani on virallinen kieli.',
+      pitka: `Nykyään Graubünden on Sveitsin suurin kantoni pinta-alaltaan ja maan ainoa kolmikielinen alue, jossa saksan ja italian rinnalla puhutaan retoromaania – neljättä kansalliskieltä, joka on virallinen vain täällä. Vuoristolaaksot kuten Engadin ja Prättigau elävät nykyisin talviurheilusta ja terveysmatkailusta, Davosin ja St. Moritzin loisto tunnetaan ympäri maailman. Isoisän aikaan 1873 Davos oli vasta muutaman vuoden ollut ilmastoparannuspaikka: ensimmäinen keuhkotautisille tarkoitettu parantola avattiin siellä 1868, ja rikkaat eurooppalaiset alkoivat vasta löytää laakson raikasta ilmaa. Rautatiet eivät vielä ulottuneet syvälle vuoristoon – Rhaetian rata rakennettiin vasta 1889 alkaen – niin isoisä olisi kulkenut Graubündenin läpi hevosvaunulla, ei junalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-graubunden-1fbdca42.jpg",
+          lahde: "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JoachimKohler-HB",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Blick_über_den_Sankt_Moritzersee_auf_Sankt_Moritz.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-graubunden-1fbdca42.jpg",
     },
     Jura: {
       lyhyt: 'Jura on Sveitsin nuorin kantoni: se irtautui Bernistä pitkän ja paikoin kiivaan kamppailun jälkeen ja liittyi valaliittoon 1979.',
+      pitka: `Jura on nykyisin Sveitsin nuorin kantoni ja ranskankielinen saareke, joka tunnetaan hevoskasvatuksesta – Franches-Montagnes on maan ainoa oma hevosrotu – ja keskiaikaisesta Saint-Ursannen kaupungista Doubs-joen mutkassa. Kantonin oma identiteetti syntyi vuosikymmenten kamppailussa Bernin vallan alla, ja se johti vuonna 1979 eroon ja liittymiseen valaliittoon omana kantonina. Isoisän aikaan 1873 alue oli yhä osa Bernia, ja juuri tuolloin kuohui: Sveitsin "kulttuuritaistelu" katolisen kirkon ja liittovaltion välillä repi erityisesti Juraa, kun Baselin hiippakunnan piispa erotettiin virastaan ja katolinen väestö jakautui. Livia muistuttaa, että se kiista kylvi siemenen, joka itäisi vasta sata vuotta myöhemmin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-jura-eb4e79ed.jpg",
+          lahde: "Ymblanter, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ymblanter",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Saint-Ursanne_Le_Doubs_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-jura-eb4e79ed.jpg",
     },
     Lucerne: {
       lyhyt: 'Luzernin Kapellbrücke on Euroopan vanhin katettu puusilta, mutta tulipalo tuhosi 1993 suuren osan siitä ja sen 1600-luvun maalauksista.',
+      pitka: `Luzernin läpi virtaavan Reussin yli kaartuva Kapellbrücke on Euroopan vanhin katettu puusilta, mutta suuri osa siitä ja sen 1600-luvun kattomaalauksista tuhoutui tulipalossa 1993 – nykyinen silta on osittain jälleenrakennettu. Kaupunki elää edelleen matkailusta, jota vauhditti 1800-luvulla brittiläisten ja saksalaisten yläluokan matkustajien innostus Pilatus- ja Rigi-vuorten näköalapaikkoihin. Isoisän aikaan 1873 Luzern oli juuri menettänyt kuuluisan asukkaansa: säveltäjä Richard Wagner asui Tribschenin huvilassa vuoteen 1872, ja isoisä ehti kaupunkiin vain vuotta liian myöhään tavatakseen hänet enää siellä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-lucerne-ebd74357.jpg",
+          lahde: "Godot13, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Godot13",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Chapel_Bridge_(Kapellbrücke),_Lucerne,_Switzerland_02.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-lucerne-ebd74357.jpg",
     },
     'Neuchâtel': {
       lyhyt: 'Absintti syntyi Neuchâtelissa, ja Môtiers’n absinttimuseo toimii entisessä oikeustalossa, jossa kiellon aikana tuomittiin tislaajia.',
+      pitka: `Neuchâtel on nykyään tunnettu kellonvalmistuksen keskuksena ja viinitarhoistaan Neuchâtelinjärven rannalla, mutta kantonin erikoisin vientituote syntyi Val-de-Traversin laaksossa: absintti. Môtiers'n kylän absinttimuseo toimii entisessä oikeustalossa, jossa myöhemmin, kieltolain aikana, tuomittiin salatislaajia. Isoisän aikaan 1873 absintti ei ollut vielä minkään kiellon alla – päinvastoin, Val-de-Travers'n tislaamot kukoistivat vapaasti ja veivät vihreää juomaa ympäri Eurooppaa, sillä liittovaltion absinttikielto säädettiin perustuslakiin vasta 1908. Samaan aikaan Neuchâtelin kellotehtaat kasvattivat vientiään, ja kanton oli jo silloin yksi Sveitsin teollisimmista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-neuchatel-66f3d6a2.jpg",
+          lahde: "Paratte Nicolas, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Paratte Nicolas",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vue_sur_le_Château_et_la_Collégiale_de_Neuchâtel.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-neuchatel-66f3d6a2.jpg",
     },
     Nidwalden: {
       lyhyt: 'Stanserhornille nousevassa köysiradassa on avoin yläkansi – se oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata.',
+      pitka: `Stanserhornille nousevassa köysiradassa matkustaa nykyään avokattoisessa "CabriO"-vaunussa, joka oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata – matkalla näkymä avautuu Vierwaldstättersee'lle asti. Pieni Nidwalden elää nykyisin pitkälti tästä näköalamatkailusta sekä pienteollisuudesta Alppien rinteiden juurella. Isoisän aikaan 1873 Stanserhornille ei ollut muuta tietä kuin jalkapolku, ja huipulle kiipeäminen oli varattu harvoille alppivaeltajille – ensimmäinen rautatie sen kupeeseen avattiin vasta 1893.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-nidwalden-c1a06969.jpg",
+          lahde: "Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Dennis G. Jarvis",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Switzerland-03625_-_CabriO_(24084643406).jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-nidwalden-c1a06969.jpg",
     },
     Obwalden: {
       lyhyt: 'Alpnachstadista Pilatukselle kiipeävä hammasrata on maailman jyrkin: jyrkimmässä kohdassa kaltevuus on 48 prosenttia.',
+      pitka: `Alpnachstadista Pilatukselle kiipeävä hammasrata on nykyään maailman jyrkin rautatie, jonka jyrkimmässä kohdassa kaltevuus on 48 prosenttia – matka ylös vie parisenkymmentä minuuttia näkymien vaihtuessa jyrkästi. Obwalden tunnetaan myös Sachslenista, jonne on haudattu Sveitsin suojeluspyhimys Niklaus von Flüe. Isoisän aikaan 1873 Pilatuksen huipulle ei ollut junaa lainkaan – insinööri Eduard Locherin rohkea hammasratasuunnitelma toteutui vasta 1889, ja isoisä olisi joutunut kiipeämään koko matkan omin jaloin tai muulin selässä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-obwalden-98dc36fd.jpg",
+          lahde: "Maria Feofilova, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Maria Feofilova",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Pilatus_railway_train.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-obwalden-98dc36fd.jpg",
     },
     Schaffhausen: {
       lyhyt: 'Schaffhausenilla on pidempi raja Saksan kuin muiden kantonien kanssa, ja sen kupeessa on Büsingen, Saksalle kuuluva saareke.',
+      pitka: `Schaffhausen työntyy nykyään kuin niemi Saksan sisään, ja sen kupeessa on Büsingen am Hochrhein, Saksalle kuuluva saareke, jonka ympäröi kokonaan sveitsiläistä aluetta – kantonilla on pidempi raja Saksan kuin minkään muun kantonin kanssa. Kaupungin tunnetuin nähtävyys on Reinin putous, Euroopan suurin tasangolla sijaitseva vesiputous, joka on vetänyt matkailijoita puoleensa vuosisatoja. Isoisän aikaan 1873 putous oli jo vakiintunut osa "Grand Tourin" reittiä – romantiikan ajan matkailijat olivat vuosikymmeniä aiemmin tehneet siitä yhden Euroopan ihailluimmista luonnonnähtävyyksistä, ja isoisä näki saman veden pauhun kuin nykyinen matkailija.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-schaffhausen-f6e3e88f.jpg",
+          lahde: "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JoachimKohler-HB",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Schloss_Laufen_am_Rheinfall_(2023).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-schaffhausen-f6e3e88f.jpg",
     },
     Schwyz: {
       lyhyt: 'Koko Sveitsi on saanut nimensä ja lippunsa Schwyzin kantonilta, ja vuoden 1291 liittokirja on yhä nähtävillä Schwyzin museossa.',
+      pitka: `Koko Sveitsi on saanut nimensä ja punavalkoisen lippunsa Schwyzin kantonilta, ja Schwyzin kaupungin liittokirjamuseossa on yhä nähtävillä vuoden 1291 liittokirja, joka pitää maata kokoavaa tarinaa yllä. Nykyisin kantonin maisemaa hallitsee Rigi, "vuorten kuningatar", jonka laelta avautuu näkymä kymmenille järville ja Alpeille. Isoisän aikaan 1873 Rigille pääsi jo junalla: Euroopan ensimmäinen vuoristorautatie, Vitznau–Rigi-rata, avattiin vain kaksi vuotta aiemmin, 1871, ja isoisä olisi hyvinkin voinut nousta huipulle höyryveturin vetämässä vaunussa, kun aiemmat sukupolvet joutuivat kiipeämään.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-schwyz-4663b707.jpg",
+          lahde: "Gestumblindi, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Gestumblindi",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rigibahn_VRB_Rigi_Kulm_Feb_2012_1.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-schwyz-4663b707.jpg",
     },
     Solothurn: {
       lyhyt: 'Solothurn oli 1530–1792 Ranskan Sveitsin-lähettilään kotipaikka, ja sen autoton vanhakaupunki on täynnä barokkirakennuksia.',
+      pitka: `Solothurnin autoton, barokkirakennusten täyttämä vanhakaupunki tunnetaan nykyään "yhdentoista luvusta" – kaupungissa kerrotaan olevan yksitoista kirkkoa, tornia ja suihkulähdettä, koska Solothurn liittyi valaliittoon yhdentenätoista kantonina. Kaupunkikuva on peräisin ajalta, jolloin Solothurn oli 1530–1792 Ranskan kuninkaan Sveitsin-lähettilään virka-asuinpaikka, ja Ambassadorenhofin kaltaiset rakennukset muistuttavat siitä yhä. Isoisän aikaan 1873 lähettilään aika oli jo lähes sata vuotta sitten päättynyt Ranskan vallankumouksen myötä, mutta juuri se loisto, jonka lähettiläät toivat mukanaan, oli jättänyt kaupungille sen ylellisen barokkiasun, jota isoisä käveli ihmetellen samoin kuin nykyinen matkailija.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-solothurn-9f4fa816.jpg",
+          lahde: "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JoachimKohler-HB",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Aare_und_St._Ursen_Kathedrale_in_Solothurn_(2014).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-solothurn-9f4fa816.jpg",
     },
     'Sankt Gallen': {
       lyhyt: 'St. Gallenin luostarikirjasto on maailman vanhimpia, ja sen rokokoosalissa lepää keskiaikaisten käsikirjoitusten seassa egyptiläinen muumio.',
+      pitka: `St. Gallenin luostarikirjasto on nykyään Unescon maailmanperintöä, ja sen rokokoosalissa turistit ihailevat keskiaikaisia käsikirjoituksia – ja hätkähtävät hyllyjen välissä lepäävää egyptiläistä muumiota. Kaupunki eli isoisän aikaan toisenlaista kulta-aikaa: 1800-luvun loppupuolella St. Gallenista kasvoi koneellisen pitsikirjonnan maailmanpääkaupunki, ja vuonna 1873 teollisuus oli juuri nousuvaiheessa kohti vuosisadan vaihteen huippuaan. Luostari itse oli lakkautettu jo 1805, joten isoisä näki kirjaston yhtä lailla kantonin hallinnoimana aarteena kuin nykyinen kävijä. Kirjonta on hiipunut, mutta pitsiperinne elää yhä muutamissa erikoistuneissa tekstiilifirmoissa kaupungin laidalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-sankt-gallen-433a1910.jpg",
+          lahde: "Jakub Hałun, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Jakub Hałun",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Library_hall_of_the_Stiftsbibliothek_St._Gallen,_20250502_1526_8648.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-sankt-gallen-433a1910.jpg",
     },
     Thurgau: {
       lyhyt: 'Thurgaussa kasvaa omenaa ja päärynää niin paljon, että suurin osa hedelmätarhojen sadosta puristetaan siideriksi.',
+      pitka: `Thurgaun hedelmätarhat kukkivat keväällä valtoimenaan, ja syksyllä suuri osa sadosta puristetaan siideriksi – kantoni tunnetaan leikkimielisesti nimellä "Mostindien", siiderin Intia. Järven rannalla kohoava Arenenbergin linna oli 1800-luvulla Ranskan entisen keisarisuvun turvapaikka: sen kasvatti, pieni Louis-Napoleon, vietti täällä osan lapsuudestaan ennen kuin hänestä tuli aikuisena keisari Napoleon III. Isoisän lähtiessä matkaan tammikuussa 1873 Napoleon III kuoli maanpaossa Englannissa – Thurgaun linna oli näin yhä elossa muistona miehestä, jonka aika Euroopassa päättyi juuri sinä vuonna. Nykyään Arenenberg on museo, ja sen puutarhassa kasvavat samat hedelmäpuulajit kuin ympäröivissä kantonin tarhoissa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-thurgau-c979d9f3.jpg",
+          lahde: "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JoachimKohler-HB",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:2020_-_(Napoleon-)Schloss_Arenenberg.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-thurgau-c979d9f3.jpg",
     },
     Ticino: {
       lyhyt: 'Luganonjärven yllä kohoavasta Monte San Giorgiosta on kaivettu yli 21 000 fossiilia triaskauden merestä – vuori on Unescon maailmanperintöä.',
+      pitka: `Luganonjärven yllä kohoava Monte San Giorgio kätkee triaskauden meren fossiileja, joita on kaivettu esiin yli 21 000 – vuori on siksi Unescon maailmanperintöä vuodesta 2003. Kantonin pohjoisosassa, Airolon kylän liepeillä, alkoi syyskuussa 1872 toinen, aivan erilainen kaivaus: Gotthardin rautatietunnelin louhinta, joka etenisi vuoriston läpi Uriin päin seuraavan vuosikymmenen ajan. Nykyään alppikylät ja palmuja kasvava Lugano elävät rinnakkain, ja Ticino tuntuu enemmän Italialta kuin muu Sveitsi – kieli, ruoka ja arkkitehtuuri ovat italialaisia. Vuoren fossiilimuseo Meridessa näyttää nykyään kävijöille samoja kalalisko- ja meripihka-löytöjä, jotka tekivät alueesta tiedemaailman kiinnostuksen kohteen jo 1800-luvulla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-ticino-9aad3a21.jpg",
+          lahde: "Japs 88, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Japs 88",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Lugano.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-ticino-9aad3a21.jpg",
     },
     Uri: {
       lyhyt: 'Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli, ja kalliota on enimmillään 2 450 metriä yllä.',
+      pitka: `Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometrin pituudellaan maailman pisin rautatietunneli, ja junat sukeltavat sen kohdalla enimmillään 2 450 metriä kalliota syvemmälle kuin vuoren huippu. Kantonin toisessa päässä, Göschenenin kylässä, alkoi syyskuussa 1872 louhintatyö toista, vanhempaa Gotthard-tunnelia varten – vuonna 1873, isoisän kulkiessa seudulla, työmiehet porasivat yhä vuorta molemmin puolin, ja läpimurto saataisiin vasta 1880, junaliikenteen alkaessa kaksi vuotta myöhemmin. Työ vaati satojen louhijoiden hengen malariaan, onnettomuuksiin ja pölykeuhkoon, ja seudun kylät elivät vuosia rakennustyömaan ehdoilla. Nykyään Uri on hiljainen vuoristokantoni, jonka läpi kulkee sekä vanha että uusi Gotthard-yhteys, mutta arkea leimaavat edelleen enemmän laidunlehmät ja vuoripolut kuin junaliikenne.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-uri-a30c6997.jpg",
+          lahde: "KlausFoehl, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "KlausFoehl",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gotthard_Basistunnel_Portal_Nord_2009-06-14.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-uri-a30c6997.jpg",
     },
     Valais: {
       lyhyt: 'Valais’n Hérens-lehmät ottelevat keväisin sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan kuningattarien kuningattareksi.',
+      pitka: `Valais'n Hérens-lehmät ottelevat keväisin laumahierarkiasta sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan jokavuotisessa Combat des Reines -tapahtumassa kuningattarien kuningattareksi. Vuorten juurella hiihtokylät kuten Zermatt ja Verbier täyttyvät nykyään ympäri vuoden ulkomaalaisista matkailijoista, mutta ilmiö juontuu jo isoisän ajalta: Matterhornin ensimmäinen valtaus 1865 päättyi neljän kiipeäjän kuolemaan laskeutuessa, ja tragedia teki vuoresta ja koko Zermattin laaksosta hetkessä koko Euroopan tuntemat nimet. Kun isoisä kulki seudulla 1873, englantilaiset alpinistit olivat jo löytäneet Valais'n vuoret kesäkohteekseen, ja ensimmäiset kestohotellit palvelivat heitä samoilla paikoilla, joilla nykyiset hiihtohotellit seisovat. Rinteiden alla laaksot ovat yhä täynnä perinteisiä ruskeita puuaittoja ja viinitarhoja, jotka kiipeävät jyrkkiä etelänrinteitä kohti aurinkoa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-valais-9a079010.jpg",
+          lahde: "Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ximonic (Simo Räsänen)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Matterhorn_as_seen_from_Zermatt,_Wallis,_Switzerland,_2012_August.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-valais-9a079010.jpg",
     },
     Vaud: {
       lyhyt: 'Lausanne on maailman pienin kaupunki, jolla on oma metro, ja siellä on myös Kansainvälisen olympiakomitean päämaja.',
+      pitka: `Lausanne on nykyään maailman pienin kaupunki, jolla on oma metro, ja sen rinteillä sijaitsee myös Kansainvälisen olympiakomitean päämaja – kaupunkia kutsutaan siksi leikkimielisesti olympialiikkeen pääkaupungiksi. Vaudin viinirinteet Lavaux'ssa kiertyvät Genevenjärven yllä terasseina, jotka on viljelty samalla tavalla satojen vuosien ajan, ja alue on ollut Unescon maailmanperintöä vuodesta 2007. Järven toisella puolella Vevey'ssä apteekkari Henri Nestlé oli 1860-luvun lopulla kehittänyt pienessä yrityksessään lapsille tarkoitetun maitojauheen – vuonna 1873 yritys oli vielä nuori, mutta tuote alkoi jo levitä muualle Eurooppaan. Nykyään Nestlé on maailman suurin elintarvikeyhtiö, ja sen päämaja seisoo yhä samalla Veveyn rantakadulla, mistä kaikki alkoi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-vaud-932aefd3.jpg",
+          lahde: "Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Krzysztof Golik",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lake_Geneva_from_Lavaux_vineyard_terraces_02.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-vaud-932aefd3.jpg",
     },
     Zug: {
       lyhyt: 'Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse frangeiksi.',
+      pitka: `Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse takaisin frangeiksi, ja seutu tunnetaan nykyään lempinimellä Crypto Valley. Pieni järvenrantakaupunki näyttää nykyään idylliseltä, mutta 5. heinäkuuta 1887 – vain reilut kymmenen vuotta isoisän matkan jälkeen – osa rantakorttelia luhistui iltaseitsemältä järveen maanvyörynä, ja onnettomuus tuhosi kymmeniä taloja ja vei yhdentoista ihmisen hengen. Kaupunki rakennettiin vyöryn jälkeen uudelleen tukevammalle perustalle, ja nykyinen rantaraitti kulkee samalla paikalla, jossa vanhat talot kerran katosivat veteen — lahtea kutsutaan yhä Katastrophenbuchtiksi, tuhon lahdeksi. Zug on Sveitsin pienimpiä ja vauraimpia kantoneita, ja sen alhaiset verot ovat houkutelleet tuhansia yrityksiä pieneen kaupunkiin järven rannalle.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-zug-317548b2.jpg",
+          lahde: "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JoachimKohler-HB",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Altstadt_Zug_ZG_-_Zytturm_und_Zollhaus_(2022).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-zug-317548b2.jpg",
     },
     'Zürich': {
       lyhyt: 'Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen – samalla kadulla asui samaan aikaan Lenin.',
+      pitka: `Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen, ja samalla kadulla asui samaan aikaan pakolainen Lenin – kaksi maailmaa mullistavaa ideaa syntyi parin talon päässä toisistaan. Kaupunki oli isoisän aikaan jo eurooppalaisittain edistyksellinen: Zürichin yliopisto oli vuonna 1867 myöntänyt Euroopan ensimmäisen lääketieteen tohtorin arvon naiselle, venäläiselle Nadežda Suslovalle, ja 1870-luvun alussa kaupunkiin virtasi satoja venäläisiä naisopiskelijoita, joille yliopistoura oli kotimaassa mahdoton. Nykyään Zürich on Sveitsin suurin kaupunki ja yksi maailman johtavista pankki- ja vakuutuskeskuksista, ja Limmatin rantaa reunustavat sekä keskiaikaiset kirkontornit että lasiset pankkitornit. Niederdorfin kapeat kujat, joilla Cabaret Voltaire ja Lenin kerran asuivat, ovat nykyään täynnä baareja ja ravintoloita, mutta talojen julkisivut ovat monin paikoin samat kuin sata vuotta sitten.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-zurich-78236115.jpg",
+          lahde: "Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Daniel Kraft",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Zürich_view_Quaibrücke_20200702.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/che-maakunta-zurich-78236115.jpg",
     },
   },
   /*
@@ -7767,66 +11484,332 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
    *   Viseu            — Lamego (686 porrasta, Nossa Senhora dos Remédios;
    *                      "Legend holds" ensimmäiset Cortes 1143)
    */
+  /*
+   * PRT PITKA (Sisältökirjuri 26.9.2026, maakunta-erä 2). Lähteet
+   * (en-Wikipedia + muut, WebSearchilla tarkistettu 26.9.2026):
+   *   Aveiro — moliço-levän keräys (lannoite ennen kemiallisia)
+   *   Azores — Mount Pico; Pico Island (fylloksera 1872–1874)
+   *   Beja — Mértola (moskeija→kirkko 1238)
+   *   Braga — Bom Jesus do Monte Funicular (1882); Water balance railway
+   *   Bragança — Mirandese language (tunnustus 1999)
+   *   Castelo Branco — Monsanto (Portugalilaisin kylä 1938)
+   *   Coimbra — Biblioteca Joanina (1717–1728, lepakot)
+   *   Évora — Capela dos Ossos
+   *   Faro — Lighthouse of Cabo de São Vicente (1846, sähkö vasta myöh.)
+   *   Guarda — Guarda Cathedral
+   *   Leiria — Praia do Norte; Nazaré Funicular (1889)
+   *   Lisboa — Cabo da Roca (sähkövalo 1897); National Palace of Pena
+   *     (1842–1854)
+   *   Madeira — Levadas of Madeira Island (Rabaçal, Furado Velho 1855)
+   *   Portalegre — Elvas (Amoreira-vesijohto 1622, linnoitukset 1600–1800-l.)
+   *   Porto — Dom Luís I Bridge (1886); Maria Pia Bridge (1877)
+   *   Santarém — Our Lady of Fátima (ilmestykset 1917); Festa dos
+   *     Tabuleiros
+   *   Setúbal — Roman ruins of Tróia; Setúbalin säilyketeollisuus 1850-l.
+   *   Viana do Castelo — Santa Luzia -basilika (1904–1959)
+   *   Vila Real — Alto Douro Wine Region (fylloksera 1871 alkaen; rata
+   *     Régualle 1879)
+   *   Viseu — Sanctuary of Our Lady of Good Remedy (Lamego, valmistui 1905)
+   */
   PRT: {
     Aveiro: {
       lyhyt: 'Aveiroa kutsutaan Portugalin Venetsiaksi: moliceiro-veneet keräsivät ennen kanavilla levää, nyt ne kuljettavat matkailijoita.',
+      pitka: `Aveiro on nykyään turisteille tuttu kaupunki, jossa kirkkaanväriset moliceiro-veneet kuljettavat matkailijoita kanavilla ja Art Nouveau -julkisivut kilpailevat huomiosta kaupungin keskustassa. 1800-luvulla samat veneet olivat arkisia työkaluja: niillä kerättiin ria-lahden pohjasta moliço-levää, jota levitettiin lannoitteeksi hiekkaisille pelloille, ja lahden rannoilla kohosi suolakekoja niin korkeina, että yksi kanava sai nimensä pyramideista. Isoisän matkatessa alueella 1873 veneet olivat siis yhä työveneitä, ei koristeltuja huviretkiveneitä – matkailijaa niissä ei olisi nähnyt, vain levänkerääjän ja suolantekijän. Vasta kun kemialliset lannoitteet syrjäyttivät moliçon 1900-luvulla, veneet vaihtoivat rahdin matkailijoihin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-aveiro-75984d28.jpg",
+          lahde: "lumoplank, Wikimedia Commons (CC0)",
+          tekija: "lumoplank",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Aveiro,_Part_I_-_Aveiro5616.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-aveiro-75984d28.jpg",
     },
     Azores: {
       lyhyt: 'Azorien Pico-saaren tulivuori kohoaa keskellä Atlanttia 2 351 metriin – se on koko Portugalin korkein vuori.',
+      pitka: `Azorien Pico-saaren tulivuori on Portugalin korkein kohta, 2 351 metriä keskellä Atlanttia, ja sen mustan laavan täyttämät currais-viinitarhat ovat nykyään Unescon maailmanperintökohde. 1800-luvun puolivälissä sama rinne tuotti vuosittain jopa 15 000 tynnyriä vahvaa Verdelho-viiniä, jota Venäjän aatelisto arvosti pöydässään – mutta juuri isoisän matkan aikaan, vuosina 1872–1874, viiniä tuhoava fylloksera-kirva levisi saarelle ja tuho oli täydellinen: tuotanto romahti muutamaan sataan tynnyriin ja moni viljelijä lähti siirtolaiseksi. Isoisä olisi siis nähnyt Picon viinimäet juuri siinä hetkessä, kun vuosisatoja vanha vienti alkoi hävitä silmien edessä, ei enää kukoistuksessaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-azores-ca9783ec.jpg",
+          lahde: "José Luís Ávila Silveira/Pedro Noronha e Costa, Wikimedia Commons (Public domain)",
+          tekija: "José Luís Ávila Silveira/Pedro Noronha e Costa",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Montanha_do_Pico,_aspectos_5_ilha_do_Pico,_Açores,_Portugal.JPG",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-azores-ca9783ec.jpg",
     },
     Beja: {
       lyhyt: 'Mértolan pääkirkko oli alun perin moskeija, ja kun kaupunki valloitettiin 1238, rakennus muutettiin kirkoksi muotoaan hävittämättä.',
+      pitka: `Mértolan pääkirkko on nykyään suosittu pysähdyspaikka Alentejon matkailijoille: harvinainen rakennus, jossa moskeijan mihrab-seinäkomero osoittaa yhä Mekkaan kirkon alttarin vierellä. Rakennus nousi moskeijaksi 1100-luvulla, ja kun kuningas Sancho II valtasi kaupungin 1238, se muutettiin kirkoksi muotoaan juuri koskematta – ainutlaatuinen ratkaisu, joka säästyi sekä Reconquistan että vastauskonpuhdistuksen tuholta. Isoisän saapuessa 1873 rakennus oli seisonut kirkkona jo 635 vuotta, ja hän näki täsmälleen saman mihrabin kuin nykyinen matkailija – Mértolassa aika on tässä mielessä pysähtynyt isoisän ajoista tähän päivään.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-beja-76d2e8cc.jpg",
+          lahde: "Raquel Nunes Rodrigues, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Raquel Nunes Rodrigues",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Mértola_-_Church_of_Nossa_Senhora_da_Anunciação_-_20160613182635.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-beja-76d2e8cc.jpg",
     },
     Braga: {
       lyhyt: 'Bom Jesus do Monten pyhäkölle nousee vuodesta 1882 köysirata, jota liikuttaa yhä vesipaino – maailman vanhin laatuaan.',
+      pitka: `Bom Jesus do Monten pyhäkölle kipuaa nykyään vesipainoinen köysirata, joka on toiminut katkeamatta vuodesta 1882 – maailman vanhin laatuaan, sillä täysi vaunu vetää tyhjän ylös pelkällä painovoimalla, ei sähköllä. Isoisän vieraillessa Bragassa 1873 köysirataa ei ollut vielä rakennettu: hän olisi joutunut kiipeämään pyhäkön kuuluisan siksak-portaikon jalan, samaa reittiä, jota barokkiaikaiset pyhiinvaeltajat olivat kulkeneet vuosikymmenten ajan ennen häntä. Vasta yhdeksän vuotta isoisän matkan jälkeen sveitsiläinen insinööri Niklaus Riggenbach rakensi radan, joka yhä tänään kuljettaa matkailijoita samaa 274 metrin nousua.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-braga-785f1c67.jpg",
+          lahde: "Ray Swi-hymn from Sijhih-Taipei, Taiwan, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:20200201_BJ.Staircases_4230_(49653166398).jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-braga-785f1c67.jpg",
     },
     'Bragança': {
       lyhyt: 'Miranda do Douron seudulla puhutaan omaa mirandeesin kieltä, joka tunnustettiin virallisesti 1999 – puhujia on noin 3 500.',
+      pitka: `Miranda do Douron seudulla puhutaan nykyään virallisesti tunnustettua mirandeesin kieltä, jolla on oma kielilaki vuodelta 1999 ja vielä noin 3 500 puhujaa – pieni, sitkeä kieliyhteisö Portugalin ja Espanjan rajaseudulla. Isoisän kulkiessa alueen kylissä 1873 samaa kieltä puhuttiin jo, mutta se oli vain talonpoikien murre vailla mitään virallista asemaa – kukaan sivistynyt lissabonilainen ei olisi tunnustanut sitä omaksi kielekseen, vaan pitänyt sitä rappeutuneena portugalin muotona. Tunnustus antoi kielelle arvon vasta 126 vuotta myöhemmin, kauan isoisän ajan jälkeen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-braganca-8aa78b67.jpg",
+          lahde: "Reis Quarteu, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Reis Quarteu",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Concatedral_de_Miranda_do_Douro_-_1.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-braganca-8aa78b67.jpg",
     },
     'Castelo Branco': {
       lyhyt: 'Monsanton kylän talot on muurattu jättimäisten graniittilohkareiden väliin, ja 1938 se valittiin Portugalin portugalilaisimmaksi kyläksi.',
+      pitka: `Monsanton kylä kyyristyy nykyään jättimäisten graniittilohkareiden lomaan täsmälleen niin kuin ennenkin, ja 1938 kylä voitti kilpailun Portugalin portugalilaisimmasta kylästä – tittelin, jota ei ole sen jälkeen jaettu kenellekään muulle. Kivitalot olivat isoisän aikaan 1873 samat: ensimmäiset asukkaat olivat sovittaneet pienet mökkinsä lohkareiden väliin ja alle vuosisatoja aiemmin, koska kiviä ei yksinkertaisesti jaksettu siirtää. Ero on siinä, että isoisän aikaan kylä oli vain syrjäinen, unohdettu vuorikylä ilman mainetta – kukaan ei matkustanut sinne ihailemaan sitä, ja tittelin tuoma huomio saapui vasta 65 vuotta myöhemmin, Estado Novon aikana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-castelo-branco-a18d2fb8.jpg",
+          lahde: "Alvesgaspar, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Alvesgaspar",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Monsanto_April_2015-13.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-castelo-branco-a18d2fb8.jpg",
     },
     Coimbra: {
       lyhyt: 'Coimbran yliopiston barokkikirjastossa Biblioteca Joaninassa asuu lepakoita, jotka syövät öisin kirjoja uhkaavat hyönteiset.',
+      pitka: `Coimbran yliopiston barokkikirjasto Biblioteca Joanina on nykyään ihailtu nähtävyys, jonka hämärissä hyllyissä asustaa lepakkoyhdyskunta – öisin ne saalistavat kirjoja syöviä hyönteisiä, ja illalla pöydät peitetään nahalla lepakon jätösten varalta. Kirjasto rakennettiin vuosina 1717–1728 kuningas João V:n tilauksesta, ja lepakot ovat asuneet siellä arviolta 250 vuotta, joten isoisän vieraillessa 1873 sekä rakennus että sen siivekkäät vartijat olivat jo paikoillaan – hän olisi kävellyt saman kultareunaisen kirjahyllyn ohi kuin nykyinen matkailija, tietämättä että katossa lepäsi lepakoita. Muuten mikään ei ole muuttunut: kokoelma ja rakennus näyttävät isoisän ajoista tähän päivään suunnilleen samalta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-coimbra-857658d2.jpg",
+          lahde: "Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Alvesgaspar",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Coimbra_November_2012-7.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-coimbra-857658d2.jpg",
     },
     'Évora': {
       lyhyt: 'Évoran Luukappelin seinät on vuorattu noin 5 000 vainajan luilla, ja oven yllä lukee: me luut täällä odotamme teidän luitanne.',
+      pitka: `Évora on Alentejon yliopistokaupunki, jonka kivetyillä kujilla tuoksuu paahdettu korkki ja jonka Pyhän Fransiskuksen kirkon kupeesta löytyy yksi Euroopan makaabereimmista nähtävyyksistä, Luukappeli (Capela dos Ossos). Sen seinät on vuorattu noin 5 000 vainajan luilla, ja sisäänkäynnin yläpuolella lukee muistutus: me luut täällä odotamme teidän luitanne. Kappelin rakensivat 1500-luvulla fransiskaanimunkit, koska kaupungin viiden hautausmaan luille oli loppumassa tila, ja luiden järjestäminen oli aikansa hartaustapa, ei kauhuviihdettä. Isoisän aikaan 1873 kappeli oli jo kolmisataa vuotta vanha nähtävyys – hän katsoi täsmälleen samaa luusommitelmaa jonka sinäkin näet, ei kiveäkään ole siirretty sen jälkeen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-evora-a18cacd9.jpg",
+          lahde: "Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Ingo Mehling",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Evora_-_Chapel_of_Bones_-_Right_Wall.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-evora-a18cacd9.jpg",
     },
     Faro: {
       lyhyt: 'Algarven Cabo de São Vicente on Manner-Euroopan lounaisin kärki, ja sen majakan valo näkyy merelle 60 kilometrin päähän.',
+      pitka: `Cabo de São Vicente Algarven lounaiskärjessä on Manner-Euroopan lounaisin piste, ja nykyään sen majakan valo kantaa merelle 60 kilometrin päähän – niemellä istuu iltaisin rivi kalastajia ja auringonlaskun katsojia paikassa jota kutsutaan "maailman loppuna". Majakka nousi vuonna 1846 keskiaikaisen fransiskaanikonventin raunioille sen jälkeen, kun Portugali lakkautti uskonnolliset veljeskunnat ja otti niiden omaisuuden haltuunsa. Isoisän aikaan 1873 majakka oli siis jo parikymmentä vuotta vanha ja isoisä olisi nähnyt saman kivitornin kuin sinäkin – vaikka sen valo paloi hänen aikanaan yhä öljylampulla, ei sähköllä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-faro-78a2f0a2.jpg",
+          lahde: "Rui Glória, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Rui Glória",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cabo_de_São_Vicente_-_Sagres.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-faro-78a2f0a2.jpg",
     },
     Guarda: {
       lyhyt: 'Guarda on 1 056 metrissä Portugalin korkeimmalla sijaitseva kaupunki, ja sitä kutsutaan viiden F:n kaupungiksi – yksi niistä on fria, kylmä.',
+      pitka: `Guarda on Portugalin korkein kaupunki, 1 056 metrissä Serra da Estrelan kainalossa, ja paikalliset kutsuvat sitä viiden F:n kaupungiksi – forte, farta, fria, fiel, formosa: vahva, runsas, kylmä, uskollinen, kaunis. Talvella lunta kertyy kaduille enemmän kuin missään muualla maassa, ja harmaat graniittitalot on rakennettu kestämään se. Kaupungin katedraali, Sé da Guarda, nousee keskiajan rajakaupungin ytimessä kuin linnoitus – sen rakentaminen kesti 1300-luvun lopulta 1500-luvun puoliväliin. Isoisän aikaan 1873 katedraali oli ollut valmiina jo kolmisataa vuotta, ja Guarda oli tuolloinkin täsmälleen se kylmä, kivinen raja-vartiokaupunki jonka sinäkin näet.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-guarda-f20c864c.jpg",
+          lahde: "Marconpi, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Marconpi",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sé_Catedral_da_Guarda_-_fachada_norte.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-guarda-f20c864c.jpg",
     },
     Leiria: {
       lyhyt: 'Nazarén edustalla kulkee noin 5 000 metriä syvä merenalainen kanjoni, joka nostaa Praia do Norten jättiaallot – niillä on surffattu maailmanennätyksiä.',
+      pitka: `Nazarén rannassa Leirian maakunnassa kokoontuu talvisin maailman parhaita isoaaltosurffareita, sillä Praia do Norten edustalla avautuva lähes 5 000 metriä syvä merenalainen kanjoni puskee syys–maaliskuussa paikalle jättiaaltoja, joilla on rikottu maailmanennätyksiä vuodesta 2011 lähtien. Ranta ja sen yllä kohoava kalliokylä Sítio ovat kuuluneet yhteen aina, mutta jyrkkä nousu niiden välillä piti pitkään kulkea jalan tai aasin selässä. Vasta vuonna 1889 valmistui köysirata, joka vieläkin kuljettaa matkailijoita kalliolle – isoisän vieraillessa 1873 sitä ei ollut, nousu piti tehdä samalla tavalla kuin kalastajat olivat tehneet vuosisatoja.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-leiria-b71d8866.jpg",
+          lahde: "Luis Ascenso from Lisbon, Portugal, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Luis Ascenso from Lisbon, Portugal",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Praia_do_Norte,Nazaré_-19_(50655732248).jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-leiria-b71d8866.jpg",
     },
     Lisboa: {
       lyhyt: 'Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta.',
+      pitka: `Sintran Cabo da Roca on Manner-Euroopan läntisin kärki, ja sen majakka valaisee Atlanttia 165 metrin korkeudesta kalliolta – matkailijat hakevat siellä yhä paperisen sertifikaatin todisteeksi käynnistä maailman äärellä. Majakka oli rakennettu jo vuonna 1772, mutta sen valo kulki isoisän aikaan yhä öljyllä: lupa sähkövalaistukseen myönnettiin vasta 1883 ja se otettiin käyttöön 1897, vuosikymmeniä isoisän matkan jälkeen. Muutaman kilometrin päässä metsäisellä vuorenhuipulla kohoaa satumainen, kirkkaan värinen Pena-palatsi, jonka kuningas Ferdinand II rakennutti vuosina 1842–1854. Isoisän saapuessa 1873 palatsi oli siis vain parikymmentä vuotta vanha ja tuoreen uusi nähtävyys – ei se vuosisatoja paikallaan seisonut linna jonka nykymatkailija mielessään näkee.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-lisboa-0e077884.jpg",
+          lahde: "LensaCibi, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "LensaCibi",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cabo_da_Roca_Lighthouse_and_coastal_cliffs,_Portugal_-_May_2025.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-lisboa-0e077884.jpg",
     },
     Madeira: {
       lyhyt: 'Madeiran vuorenrinteillä kiemurtelee yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja.',
+      pitka: `Madeiran vuorenrinteillä kiemurtelee nykyään yli 2 000 kilometriä levada-kastelukanavia, ja niiden vartta pitkin vaelletaan kuin polkuja saaren vuoristoisessa sisäosassa laaksosta laaksoon. Kanavat syntyivät alkujaan yksityisten tilan- ja lähteenomistajien voimin, mutta 1800-luvulla viinintuotannon kriisi ajoi valtion rahoittamaan uusia, aiempaa suurempia levadoja. Isoisän aikaan 1873 saarella oltiin juuri tämän valtion rahoittaman rakennusbuumin keskellä – esimerkiksi Rabaçalin levadan 1855 valmistunut Furado Velho -tunneli oli silloin vain parikymmentä vuotta vanha, arkinen ihme jota isoisä olisi voinut nähdä yhä rakenteilla naapurilaaksoissa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-madeira-76bd32a1.jpg",
+          lahde: "Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Dietmar Rabich",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Ribeiro_Frio_(Madeira,_Portugal),_Levada_zur_Forellenzucht_--_2025_--_1488.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-madeira-76bd32a1.jpg",
     },
     Portalegre: {
       lyhyt: 'Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on Unescon maailmanperintöä.',
+      pitka: `Elvasin rajakaupunkia kiertää maailman suurin kuivien vallihautojen linnoitusjärjestelmä, ja se on nykyään Unescon maailmanperintöä – muurien sisällä eletään yhä tavallista alentejolaista arkea, ei museossa. Kaupungin vedet kulkevat 1500-luvulla alkunsa saaneessa ja 1622 valmistuneessa Amoreira-vesijohdossa, joka kantaa vettä yli seitsemän kilometrin päästä nelikerroksisten kaariholvien läpi. Linnoitukset itse muotoutuivat nykyiseen laajuuteensa vasta 1600–1800-luvuilla hollantilaisen insinöörin Cosmanderin suunnitelmien mukaan. Isoisän aikaan 1873 Elvas oli siis edelleen toimiva raja-varuskunta, ei rauhoitettu nähtävyys – sen viimeisimmätkin linnoituslaajennukset olivat vain vuosikymmenten takaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-portalegre-37bc83c4.jpg",
+          lahde: "Jacinto Júlio Nozes César, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jacinto Júlio Nozes César",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Aqueduto_da_Amoreira_-_Elvas_Portugal.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-portalegre-37bc83c4.jpg",
     },
     Porto: {
       lyhyt: 'Douron etelärannalla Vila Nova de Gaian kellareissa kypsyy portviini, ja kellareista on tullut Porton seudun suuri nähtävyys.',
+      pitka: `Porto on nykyään yli 200 000 asukkaan kaupunki, jonka graniittiset kujat ja Riberian UNESCO-listattu vanhakaupunki houkuttelevat miljoonia matkailijoita Douron rannoille – joella kuhisee risteilyveneitä ja illalla baarien valot heijastuvat veteen. Jokea reunustaa nykyään kaksi rautaista siltaa, Ponte de Dom Luís I ja rautatiesilta Ponte Maria Pia, joiden suunnittelijoina olivat Gustave Eiffelin oppilas Théophile Seyrig ja Eiffel itse. Isoisän aikaan 1873 kumpaakaan ei ollut vielä olemassa: Maria Pia valmistui 1877 ja Dom Luís I vasta 1886, joten hän olisi ylittänyt joen veneellä tai kapealla riippusillalla, ei rautaisella kaarella korkealla kaupungin yllä. Douro oli silti jo täynnä viinilaivoja matkalla Vila Nova de Gaian kellareihin – se osa maisemasta ei ole muuttunut.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-porto-703bc049.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rabelos_en_el_río_Duero,_Vila_Nova_de_Gaia,_Portugal,_2012-05-09,_DD_14.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-porto-703bc049.jpg",
     },
     'Santarém': {
       lyhyt: 'Tomarin Festa dos Tabuleirosissa tytöt kantavat päänsä päällä 30 leivästä pinottuja kukkatarjottimia – juhla pidetään joka neljäs vuosi.',
+      pitka: `Santarémin maakunta tunnetaan nykyään ennen kaikkea Fátiman pyhiinvaelluspaikasta, jonne saapuu vuosittain miljoonia matkailijoita ja uskovia ympäri maailman suuren basilikan eteen. Vuonna 1873 Fátima ei ollut mitään erityistä – vain tavallinen paimenkylä Keski-Portugalin kukkuloilla, sillä kolmen lapsen kertomat Neitsyt Marian ilmestykset tapahtuivat vasta 1917, kymmeniä vuosia isoisän matkan jälkeen. Samaan aikaan Tomarin Tabuleiros-juhlassa tytöt ovat kantaneet päänsä päällä leipätarjottimia jo satojen vuosien ajan – perinne juontaa keskiajan Pyhän Hengen veljeskuntiin, joten isoisä olisi hyvin voinut nähdä samankaltaisen kulkueen. Tejo-joen keskellä kohoava Almourolin linna, ristiretkeläisten temppeliherrojen linnoitus, oli jo silloin vuosisatoja vanha muistomerkki, ei tuore rakennus.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-santarem-1b3b8a55.jpg",
+          lahde: "Jaimrsilva, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jaimrsilva",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Festa_dos_tabuleiros_(Tomar,_Portugal)_-_Cortejo_dos_Tabuleiros.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-santarem-1b3b8a55.jpg",
     },
     'Setúbal': {
       lyhyt: 'Setúbalin Sadojoessa elää delfiiniyhdyskunta, ja kaupungin kupeessa kohoavat Arrábidan luonnonpuiston kukkulat.',
+      pitka: `Setúbal on nykyään elävä satamakaupunki, jonka rannalta pääsee lautalla parissakymmenessä minuutissa Tróian niemelle valkoisille hiekkarannoille ja loma-asuntoalueille. Niemen kärjessä nousevat esiin antiikin Cetóbrigan rauniot, jossa roomalaiset valmistivat garumia, voimakkaasti maustettua kalakastiketta, jota vietiin ympäri valtakuntaa – paikka oli jo isoisän aikaan vuosituhannen vanha jäänne. Vuonna 1873 Setúbal oli myös nuoren teollisuuden kaupunki: ensimmäiset sardiinisäilyketehtaat oli perustettu 1850-luvulla, ja isoisä olisi saattanut nähdä juuri näitä savuavia tehtaita ja tynnyreitä satamassa, sillä Setúbalista kehittyi vuosisadan loppuun mennessä Portugalin säilyketeollisuuden sydän. Tänään Sadojoen suistossa asuu myös Euroopan harvinaisimpia pysyviä delfiiniyhdyskuntia, ja niiden tarkkailu veneestä on suosituimpia retkiä alueella.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-setubal-29aab504.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Parque_Natural_da_Arrábida,_Setúbal,_Portugal,_2012-05-11,_DD_14.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-setubal-29aab504.jpg",
     },
     'Viana do Castelo': {
       lyhyt: 'Viana do Castelon satamassa on sairaalalaiva Gil Eannes, joka saattoi turskanpyytäjiä Newfoundlandiin 1955–1973 – nyt se on museo.',
+      pitka: `Viana do Castelon yllä kohoava Santa Luzian basilika on nykyään kaupungin maamerkki, jonka portaille kiipeää vuosittain tuhansia matkailijoita nauttimaan näköalasta Lima-joelle ja Atlantille. Isoisän aikaan 1873 basilikaa ei ollut olemassa lainkaan – sen rakentaminen alkoi vasta 1904 ja sisätilat valmistuivat vuonna 1959, joten mäellä seisoi vielä pelkkä pieni kappeli. Alakaupungin Praça da República sen sijaan oli isoisän aikaan jo vuosisatoja vanha – 1500-luvulla rakennettu Misericórdian talo ja Chafariz-suihkulähde seisoivat paikallaan silloinkin. Juhlapäivinä kaduilla näkyy edelleen paikallisia Vianan perinnepuvussa ja kultaisin filigraanikoruin, perinne joka vakiintui juuri 1800-luvulla – isoisä olisi voinut nähdä samanlaisen kulkueen torilla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-viana-do-castelo-bf4fa39c.jpg",
+          lahde: "Xosema, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Xosema",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Viana_do_Castelo_-_Buque_Gil_Eannes_-_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-viana-do-castelo-bf4fa39c.jpg",
     },
     'Vila Real': {
       lyhyt: 'Vila Realin barokkipalatsi Mateus on antanut nimensä Mateus-roseeviinille, ja sen suunnitteli 1700-luvulla Nicolau Nasoni.',
+      pitka: `Vila Realin maakunta on Douro-joen viinialueiden sydän, ja sen kaupunki Peso da Régua toimii nykyään risteilylaivojen ja viinimatkailijoiden porttina Alto Douron UNESCO-maailmanperintöalueelle. Vuonna 1873 alueen viinitarhoja koetteli jo etenevä phylloxera-kirvakriisi, joka levisi Douroon 1871 alkaen ja tuhosi vanhat viiniköynnökset – nykyiset, tarkasti muotoillut terassit istutettiin vasta kriisin jälkeen 1880-luvulla ja sen jälkeen, niin että isoisän näkemä maisema oli rosoisempi ja osin kuihtunut. Rautatie, joka nykyään kuljettaa matkailijoita jokilaaksoa pitkin, ei ollut vielä valmis: raiteet ulottuivat Régualle asti vasta 1879, kuusi vuotta isoisän matkan jälkeen, joten hän olisi noussut jokilaivaan tai matkustanut hevosella. Mateus-palatsin barokkijulkisivu ja Nicolau Nasonin suunnittelemat puutarhat seisoivat kuitenkin jo paikallaan 1700-luvulta asti, ja niiden näkymä on tuskin muuttunut.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-vila-real-25418d86.jpg",
+          lahde: "Daniel VILLAFRUELA., Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Daniel VILLAFRUELA.",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Vila_Real-Palacio_de_Mateus-Solar-20140913.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-vila-real-25418d86.jpg",
     },
     Viseu: {
       lyhyt: 'Lamegossa kiivetään 686 porrasta Nossa Senhora dos Remédiosin barokkikirkolle, ja tarun mukaan Portugalin ensimmäiset säätykokoukset pidettiin täällä 1143.',
+      pitka: `Viseun maakunnan pääkaupunki Viseu on nykyään tunnettu renessanssimaalari Grão Vascon nimikkomuseosta ja keskiaikaisesta katedraalista, jotka houkuttelevat kulttuurimatkailijoita Dão-viinialueen keskuksesta. Lamegossa kohoava barokkiportaikko Nossa Senhora dos Remédiosin pyhäkölle näyttää nykyään valmiilta yhtenäiseltä teokselta, jota kiivetään yhä juhlapäivinä. Isoisän aikaan 1873 se oli kuitenkin vielä työmaa: rakentaminen alkoi 1750-luvulla, mutta pyhäkön rakennus valmistui vasta 1905 ja portaikkoa laajennettiin vuosikymmeniä lisää, niin että hän olisi nähnyt keskeneräisen, telineiden ympäröimän rinteen. Legenda Portugalin ensimmäisistä säätykokouksista Lamegossa vuonna 1143 oli isoisän aikaan yhtä vanha tarina kuin nykyään – historioitsijat kyseenalaistavat sen yhä, mutta paikalliset kertovat sitä samalla ylpeydellä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-viseu-bce181da.jpg",
+          lahde: "Peregrino27, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Peregrino27",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Santuário_de_Nossa_Senhora_dos_Remédios_Lamego.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/prt-maakunta-viseu-bce181da.jpg",
     },
   },
   /*
@@ -7887,63 +11870,301 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   HUN: {
     'Bács-Kiskun': {
       lyhyt: 'Kalocsassa on oma paprikamuseo, ja syyskuussa kypsyvät pellot hehkuvat niin punaisina, että maustetta kutsutaan punaiseksi kullaksi.',
+      pitka: `Kalocsan paprikamuseo kertoo, miten seudulla on kasvatettu ja kuivattu paprikaa jo 1500-luvulta asti, ja syyskuun sadonkorjuun aikaan pellot hehkuvat niin punaisina, että kasvia kutsutaan paikallisesti punaiseksi kullaksi. Isoisän matkan aikaan 1873 paprika oli jo satoja vuosia vanha elinkeino seudulla, mutta jokainen hedelmä oli yhä tulinen: makean, miedon paprikan kehittivät vasta 1920-luvulla kalocsalaiset Ferenc Horváth ja Jenő Obermayer löydettyään yhden lempeän kasvin, jonka ominaisuudet he jalostivat uudeksi lajikkeeksi. Sitä ennen paprikan polttavat siemenet ja jänteet piti puhdistaa käsin, tavallisesti naisten työnä, ennen kuin jauhe pääsi keittiöön. Nykyään Kalocsan tori täyttyy syksyisin punaisista seppeleistä, ja museo pitää tämän tulisen historian elossa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-bacs-kiskun-a22f16e1.jpg",
+          lahde: "Globetrotter19, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Globetrotter19",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Paprika_Haus,_2019_Kalocsa.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-bacs-kiskun-a22f16e1.jpg",
     },
     Baranya: {
       lyhyt: 'Mohácsin busójárásissa naamioidut busót meluavat helmikuussa kaduilla – tarun mukaan sama meteli ajoi aikoinaan turkkilaiset pakoon.',
+      pitka: `Mohácsin busójárás on kuuden päivän naamiaiskarnevaali, joka huipentuu helmikuun lopussa, ja Unesco lisäsi sen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2009. Suositun tarun mukaan seudun asukkaat pakenivat aikoinaan turkkilaisia miehittäjiä soille, kunnes tuntematon vanhus neuvoi heitä tekemään pelottavia puunaamioita ja karkottamaan vihollisen metelillä – tapa, joka elää yhä, kun sadat busó-hahmot soutavat Tonavalla ja marssivat naamioituina kaupungin läpi. Isoisän matkan aikaan 1873 perinne oli jo osa Mohácsin arkea, vaikka kansainvälinen maine ja Unescon tunnustus odottivat vielä yli sata vuotta. Juhla päättyy joka vuosi symbolisiin talven hautajaisiin, kun arkku poltetaan roihuavassa kokossa torilla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-baranya-9c75831d.jpg",
+          lahde: "Jörg Blobelt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jörg Blobelt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:19860902360NR_Pécs_(Fünfkirchen)_Petersdom_Hauptfassade.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-baranya-9c75831d.jpg",
     },
     'Békés': {
       lyhyt: 'Szarvasissa Körös-joen rannalla tuulimyllyn muotoinen muistomerkki näyttää, missä Unkarin keskipiste oli ennen vuoden 1920 rajoja.',
+      pitka: `Szarvasin lähellä Körös-joen rannalla seisoo tuulimyllyn muotoinen muistomerkki, joka merkitsee paikkaa, jonka mittaukset vuonna 1880 osoittivat Unkarin kuningaskunnan maantieteelliseksi keskipisteeksi. Isoisän matkan aikaan 1873 tätä keskipistettä ei kuitenkaan ollut vielä mitattu – se selvisi vasta seitsemän vuotta myöhemmin, ja paikalle pystytettiin oikea, toimiva tuulimylly kunnianosoitukseksi. Mylly purettiin myöhemmin, ja uudet mittaukset 1932 siirsivät keskipisteen puolen kilometrin päähän, minne nykyinen tyylitelty muistomerkki nousi vuonna 1939. Ensimmäisen maailmansodan jälkeisen Trianonin rauhan rajat siirsivät Unkarin keskustan aivan toisaalle, joten Szarvasin muistomerkki kertoo nyt kartasta, joka ei enää ole olemassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-bekes-9d3b555b.jpg",
+          lahde: "Globetrotter19, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Globetrotter19",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rathaus,_2023_Békéscsaba.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-bekes-9d3b555b.jpg",
     },
     'Borsod-Abaúj-Zemplén': {
       lyhyt: 'Tokajin viinialue on Unescon listalla, ja sen aszú-viini kelpasi jo Ludvig XIV:lle – hän kutsui sitä kuninkaiden viiniksi.',
+      pitka: `Tokajin viinialue pääsi Unescon maailmanperintölistalle 2002, ja sen makea aszú-viini tunnetaan yhä lauseesta, jonka Ranskan kuningas Ludvig XIV lausui saatuaan lahjaksi pulloja Tokajista ruhtinas Rákóczilta vuonna 1703: hän kutsui sitä "kuninkaiden viiniksi, viinien kuninkaaksi". Isoisän matkan aikaan 1873 tuo mainelause oli jo 170 vuotta vanha, ja Tokaj oli ehtinyt tulla myös maailman ensimmäiseksi virallisesti luokitelluksi viinialueeksi – Rákóczin oma luokittelu vuodelta 1730 jakoi viinitilat kolmeen laatuluokkaan yli sata vuotta ennen Bordeaux'ta. Rinteiden erikoinen maaperä ja jokien luoma sumu synnyttävät yhä homeen, joka kuivattaa rypäleet aszúksi, ja perinne jatkuu samoilla kukkuloilla tänäkin päivänä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-borsod-abauj-zemplen-1a94ecf6.jpg",
+          lahde: "Elekes Andor, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Elekes Andor",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Tokaj_(1).jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-borsod-abauj-zemplen-1a94ecf6.jpg",
     },
     Budapest: {
       lyhyt: 'Budan kukkuloilla kulkee Lastenrata, jonka junissa kaikki työt veturinkuljettajaa lukuun ottamatta hoitavat 10–14-vuotiaat lapset.',
+      pitka: `Buda-kukkuloiden Lastenrata avattiin vuonna 1948, ja siitä lähtien kaikki tehtävät veturinkuljettajaa lukuun ottamatta – liput, opastus, asemien hoito – ovat kuuluneet 10–14-vuotiaille lapsille, jotka opiskelevat tehtäviään neljä kuukautta ennen lupakirjaa. Isoisän matkan aikaan 1873 rataa ei tietenkään ollut olemassa – se syntyi 75 vuotta myöhemmin osana aikakauden nuorisoliikettä, ja sen rakensivat osin vapaaehtoiset nuoret itse. Rata suljettiin lyhyeksi aikaa vuoden 1956 kansannousun aikana mutta avattiin pian uudelleen, ja vuonna 2015 se pääsi Guinnessin ennätysten kirjaan maailman pisimpänä rautatienä, jota lapset operoivat. Nykyään juna kiemurtelee Buda-vuorten metsissä, ja moni matkustaja yllättyy, kun asemalla tervehtii virkapukuinen kymmenvuotias.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-budapest-6bcd315e.jpg",
+          lahde: "NearEMPTiness, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "NearEMPTiness",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gyermekvasút_-_Children's_Railway_in_Budapest_14.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-budapest-6bcd315e.jpg",
     },
     'Csongrád': {
       lyhyt: 'Ópusztaszerissa Feszty-panoraama kiertää katsojan ympäri: lähes 120 metriä pitkä maalaus unkarilaisten saapumisesta tälle tasangolle.',
+      pitka: `Ópusztaszerin puistossa kiertää katsojan ympäri lähes 120 metriä pitkä ja 15 metriä korkea Feszty-panoraama, joka kuvaa unkarilaisheimojen saapumista Karpaattien altaaseen vuonna 895 ja on ollut pysyvästi esillä täällä vuodesta 1995. Maalaus valmistui kuitenkin vasta 1894, tapahtuman tuhatvuotisjuhlaan – isoisän matkan aikaan 1873 sitä ei siis oltu vielä edes aloitettu, ja sen tekijä Árpád Feszty oli tuolloin vasta 17-vuotias nuorukainen. Panoraaman äänimaailma ja keinotekoinen maasto saavat katsojan tuntemaan olevansa keskellä ratsuväen rynnäkköä, ja se on yhä yksi Unkarin katsotuimmista historiamaalauksista. Ópusztaszer on ollut Unkarin kansallisen tarinan näyttämö jo kauan ennen panoraamaa, sillä paikan uskotaan olleen heimojen ensimmäisen suuren kokoontumisen paikka.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-csongrad-18ee5ee7.jpg",
+          lahde: "User:Beroesz, Wikimedia Commons (CC BY-SA 2.5 hu)",
+          tekija: "User:Beroesz",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Szeged_Fogadalmi_templom_2013-03.26.JPG",
+          lisenssi: "CC BY-SA 2.5 hu",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.5/hu/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-csongrad-18ee5ee7.jpg",
     },
     'Fejér': {
       lyhyt: 'Székesfehérvárissa kruunattiin keskiajalla 43 Unkarin kuningasta, ja kaivettujen basilikan raunioiden keskellä voi nyt kävellä.',
+      pitka: `Székesfehérvárissa kruunattiin keskiajalla 43 Unkarin kuningasta – viimeinen vuonna 1526 – ja kaupungin basilika oli satoja vuosia valtakunnan pyhin paikka, kunnes Habsburgien ja osmanien sodat sekä vuoden 1601 tulipalo jättivät siitä vain raunion. Isoisän matkan aikaan 1873 rauniot eivät olleet enää unohdettuja: kaivaukset olivat alkaneet jo 1848 ja jatkuneet 1862, ja juuri seuraavana vuonna, 1874, arkeologit palasivat kaivamaan lisää kuninkaiden hautoja esiin. Nykyisin rauniopuistossa voi kävellä keskiaikaisen basilikan pohjapiirustuksen läpi, ja maan alta löydetyt luuston jäänteet ovat auttaneet tunnistamaan jopa Árpád-suvun kuninkaiden jäännöksiä geenitutkimuksella. Kruunauskirkon paikalla kulkee siis nykyään turisti, missä ennen kulkivat vain kuninkaat ja piispat.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-fejer-ad68d159.jpg",
+          lahde: "Globetrotter19, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Globetrotter19",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Remains_of_columns_and_walls._Medieval_Ruin_Garden_-_National_Memorial._Listed_ID_3842._-_Koronázó_Square,_Belváros,_Székesfehérvár,_Fejér_county,_Hungary.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-fejer-ad68d159.jpg",
     },
     'Győr-Moson-Sopron': {
       lyhyt: 'Sopronin lähellä rajaportti avattiin elokuussa 1989 Pan-Eurooppa-piknikillä, ja 661 itäsaksalaista juoksi samana päivänä Itävaltaan.',
+      pitka: `Sopronin lähellä avattiin 19. elokuuta 1989 rajaportti muutamaksi tunniksi rauhanomaisen Pan-Eurooppa-piknikin varjolla, ja yli 600 itäsaksalaista käytti tilaisuuden juostakseen Itävallan puolelle – ensimmäinen suuri joukkopako, joka murensi rautaesirippua ennen Berliinin muurin kaatumista. Isoisän matkan aikaan 1873 tuota rajaa ei ollut olemassa edes ideana: alue kuului samaan Itävalta-Unkarin valtakuntaan, eikä kukaan osannut kuvitella rautaesirippua, joka jakaisi Euroopan kahtia yli seitsemänkymmentä vuotta myöhemmin. Nykyään rajanylityspaikalla on muistomerkki, ja paikkakuntalaiset muistavat yhä sen elokuisen iltapäivän, jolloin historia kirjaimellisesti juoksi ohi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-gyor-moson-sopron-6902bd34.jpg",
+          lahde: "Traumrune, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Traumrune",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sopron_67_Fo-ter.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-gyor-moson-sopron-6902bd34.jpg",
     },
     'Hajdú-Bihar': {
       lyhyt: 'Hortobágy on Euroopan suurin puoliluonnontilainen niitty, ja sen arolla karjaa ja hevosia paimentavat yhä ratsastavat csikós-paimenet.',
+      pitka: `Hortobágy julistettiin Unkarin ensimmäiseksi kansallispuistoksi vuonna 1973, ja sen aro on Euroopan suurin yhtenäinen puoliluonnontilainen niitty – täällä ratsastavat yhä csikós-paimenet, jotka vartioivat harmaita unkarinkarjoja ja hevoslaumoja samaan tapaan kuin sukupolvet ennen heitä. Isoisän matkan aikaan 1873 Hortobágyn puszta oli vielä täysin paimentolaiskarjatalouden aluetta ilman mitään suojelustatusta – kansallispuiston ajatus syntyi vasta sata vuotta myöhemmin, kun haluttiin pelastaa katoava maisema tehostuvalta maataloudelta. Aavan tasangon yllä siintävä kangastus, délibáb, on hämmentänyt matkailijoita vuosisatoja, ja se näkyy yhä kuumina kesäpäivinä. Nykyään puiston alueella laiduntaa myös harvinaisia unkarilaisia kotieläinrotuja, joita suojellaan tarkoituksella sukupuuttoa vastaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-hajdu-bihar-ba66ed69.jpg",
+          lahde: "Krzysztof Ziarnek, Kenraiz, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Krzysztof Ziarnek, Kenraiz",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hortobágy_National_Park_kz04.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-hajdu-bihar-ba66ed69.jpg",
     },
     Heves: {
       lyhyt: 'Egerin linnassa muistetaan vuotta 1552, kun runsaat 2 000 puolustajaa kesti moninkertaisen osmaniarmeijan piirityksen.',
+      pitka: `Egerin linnassa runsaat 2 100–2 300 puolustajaa – sotilaiden lisäksi myös naisia ja talonpoikia – kesti syksyllä 1552 viikkojen piirityksen 35 000–40 000 osmanisotilaan armeijaa vastaan: ylivoima oli lähes 17-kertainen, mutta linna ei antautunut. Isoisän matkan aikaan 1873 taistelu oli jo yli 300 vuotta vanha kansallissankaritarina, jonka Géza Gárdonyi kirjoitti maailmankuuluksi romaaniksi vasta 1901 – isoisä ei siis olisi voinut lukea sitä, sillä kirjaa ei vielä ollut olemassa. Linnankomentaja István Dobón patsas ja museo pitävät tarinaa elossa, ja Egerin viinitarhoissa kasvatettu Bikavér eli "sonninveri" -punaviini on saanut nimensä piirityksen ajan taruista. Linnan muurit seisovat yhä kaupungin yllä muistuttamassa voitosta, jota kukaan ei odottanut.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-heves-ebf4c7fd.jpg",
+          lahde: "Mister No, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Mister No",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Eger_Castle_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-heves-ebf4c7fd.jpg",
     },
     'Jász-Nagykun-Szolnok': {
       lyhyt: 'Kesäkuun puolivälissä Tisza kukkii: valtavat päivänkorentoparvet kuoriutuvat joesta, ja aikuisina ne elävät vain muutaman tunnin.',
+      pitka: `Kesäkuun puolivälissä Tisza "kukkii": miljoonat Palingenia longicauda -päivänkorennot kuoriutuvat samana iltana joen pohjamudasta kolmen vuoden toukkavaiheen jälkeen, parittelevat ilmassa ja kuolevat saman vuorokauden aikana, sillä aikuisilla ei ole edes suuta ruokailua varten. Isoisän matkan aikaan 1873 tätä ilmiötä oli tarkkailtu jo vuosisatoja, mutta samoihin aikoihin käynnistynyt Tiszan säännöstely ja jokiuomien perkaus hävittivät lajin myöhemmin suurimmasta osasta sen entistä esiintymisaluetta – ilmiö säilyi enää muutamalla joen mutkalla. Nykyään päivänkorentojen parveilu on suojeltu luonnonnähtävyys, joka houkuttelee kesäiltoina rantaan sekä tutkijoita että uteliaita katsojia. Laji on Euroopan suurin päivänkorento, ja sen lyhyt mutta räjähtävä elämä tiivistää koko joen vuodenkierron yhteen ainoaan iltaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-jasz-nagykun-szolnok-0a9234ce.jpg",
+          lahde: "Akela3, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Akela3",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Szolnok_Tiszavirág-híd_04.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-jasz-nagykun-szolnok-0a9234ce.jpg",
     },
     'Komárom-Esztergom': {
       lyhyt: 'Esztergomin basilika on Unkarin suurin kirkko, ja sen kupoli kohoaa Tonavan rannalla ulkoa sadan metrin korkeuteen.',
+      pitka: `Esztergomin basilika on Unkarin suurin kirkko: sen kupoli kohoaa Tonavan rannalla ulkoa sata metriä ilmaan, ja koko rakennus valmistui kokonaisuudessaan vasta vuonna 1869. Isoisän matkan aikaan 1873 basilika oli siis vielä aivan uusi nähtävyys, valmistunut vain neljä vuotta aiemmin – yhtä tuore kuin tämän päivän vastavalmistunut maamerkki olisi meille. Basilikan sisällä on Unkarin suurin alttaritaulu, yhtenäisenä kankaana maalattu Marian taivaaseenottoa esittävä teos, ja krypta kätkee kardinaalien hautoja. Tonavan toisella puolella häämöttää Slovakia, ja basilikan tornista näkyy selvästi, miten valtakunnan raja kulkee suoraan joen keskeltä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-komarom-esztergom-a9d2912c.jpg",
+          lahde: "Dguendel, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Dguendel",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Esztergom,_the_Basilica,_view_across_the_Danube_to_Štúrovo.jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-komarom-esztergom-a9d2912c.jpg",
     },
     'Nógrád': {
       lyhyt: 'Hollókő eli Korppikivi on palócien vanha kylä, jonka puiset talot ja kapea raitti ovat olleet Unescon maailmanperintöä vuodesta 1987.',
+      pitka: `Hollókő eli Korppikivi on palócien kylä, jonka nykyiset puutalot, kapea raitti ja valkoiset seinät ovat olleet Unescon maailmanperintöä vuodesta 1987 – ensimmäisenä koko Unkarissa. Kylän talot eivät kuitenkaan ole niin vanhoja kuin voisi luulla: suuri tulipalo tuhosi koko kylän 1909, ja nykyiset talot rakennettiin perinteisin menetelmin uudelleen vuoteen 1911 mennessä. Isoisän matkan aikaan 1873 Hollókőssä seisoi siis toisenlainen kylä – vanhempi, kokonaan puusta rakennettu ja vielä alttiimpi tulipaloille, jotka olivat riivanneet sitä toistuvasti vuosikymmenten ajan. Nykyään kylässä asutaan yhä oikeasti, ei vain museona, ja palóc-naiset pukeutuvat juhlapyhinä yhä perinteisiin, värikkäisiin kansallispukuihin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-nograd-d3699f37.jpg",
+          lahde: "Kfbs06, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Kfbs06",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Holloko_Village_Center.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-nograd-d3699f37.jpg",
     },
     Pest: {
       lyhyt: 'Visegrádissa kolme kuningasta neuvotteli rauhasta 1335, ja siksi Unkarin, Puolan ja Tšekkoslovakian yhteistyö sai 1991 nimen Visegrád-ryhmä.',
+      pitka: `Visegrádin linnassa neuvottelivat marraskuussa 1335 kolme kuningasta – Unkarin Kaarle Robert, Böömin Juhana ja Puolan Kasimir Suuri – uusista kauppareiteistä, jotka kiersivät Wienin tullimaksut. Tapaaminen unohtui vuosisadoiksi, kunnes se herätettiin henkiin 15. helmikuuta 1991, kun Tšekkoslovakian, Puolan ja Unkarin johtajat allekirjoittivat samassa Visegrádissa julistuksen, joka antoi nimensä nykyiselle Visegrád-ryhmälle. Isoisän matkan aikaan 1873 keskiaikainen kuninkaiden kokous oli jo lähes 540 vuotta vanha historia, eikä kukaan silloin osannut aavistaa, että paikannimi palaisi Euroopan politiikan otsikoihin vasta yli sata vuotta myöhemmin. Nykyään Visegrádin linnanrauniot kohoavat Tonavan mutkan yllä, ja näköalapaikalta voi nähdä joen tekevän jyrkän käännöksensä kohti Budapestia.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-pest-3c25de7a.jpg",
+          lahde: "Globetrotter19, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Globetrotter19",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:A_Fellegvár_a_Panoráma_út_felől_nézve,_2018_Visegrád.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-pest-3c25de7a.jpg",
     },
     Somogy: {
       lyhyt: 'Siófokia kutsutaan Balatonin pääkaupungiksi: 17 kilometrin rannalla on yli tuhat hotellia, ja kesäöisin yökerhot ovat täynnä.',
+      pitka: `Siófokia kutsutaan Balatonin pääkaupungiksi, ja se on järven suurin ja vilkkain kaupunki – kesäiltaisin rantapromenadi täyttyy baareista, yökerhoista ja tanssilattioista, jotka ovat tehneet siitä koko Unkarin bilekaupungin maineen. Isoisän matkan aikaan 1873 Siófok oli vielä muutoksen kynnyksellä oleva pieni kalastajakylä: sen muutos lomakaupungiksi alkoi vasta, kun rautatieasema Budapestista Balatonin rannalle valmistui 1863 ja höyrylaivat toivat lisää kesävieraita – isoisän aikaan tämä oli siis vasta kymmenisen vuotta kestänyt, tuore ilmiö. Nykyään järven rannalla kulkee 17 kilometriä hiekkarantaa, ja kaupungissa on tuhansittain vuodepaikkoja kesävieraille. Balaton itse on Keski-Euroopan suurin makean veden järvi, ja Siófok sen vilkkain portti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-somogy-c9035aae.jpg",
+          lahde: "Explicatory, Wikimedia Commons (CC0)",
+          tekija: "Explicatory",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Siófok_Aranypart_41.jpg",
+          lisenssi: "CC0",
+        lisenssiUrl: "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-somogy-c9035aae.jpg",
     },
     'Szabolcs-Szatmár-Bereg': {
       lyhyt: 'Maakunta on kuuluisa luumuistaan: niitä syödään tuoreina, kuivataan, keitetään lekvár-hilloksi ja tislataan tunnetuiksi paloviinoiksi.',
+      pitka: `Maakunta on kuuluisa luumuistaan, joita syödään tuoreena, kuivataan luumuiksi, keitetään Szatmári szilva lekvár -hilloksi ja tislataan pálinkaksi – erityisesti Panyolan kylässä, jossa Tisza, Túr ja Szamos yhtyvät ja luovat luumuille ihanteellisen pienilmaston. Isoisän matkan aikaan 1873 pálinka-perinne oli jo keskiajalta periytyvä osa seudun arkea, mutta luumuhillon ja -paloviinan nykyinen maine syntyi vasta myöhemmin, kun tuotteet alkoivat levitä koko maahan ja lopulta vientiin asti. Nykyään Szatmári szilva lekvár on virallinen "hungaricum", kansallista identiteettiä ilmentävä tuote, ja pálinkan valmistuksessa jokainen vaihe mäskäyksestä tislaukseen on tehtävä samassa läänissä kuin luumut on kasvatettu. Syksyisin ilmaan nousee kylien laitamilla makea, hieman poltettu tuoksu, kun luumuhilloa keitetään suurissa padoissa tuntikausia.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-szabolcs-szatmar-bereg-f2ce53fb.jpg",
+          lahde: "PM, Wikimedia Commons (Public domain)",
+          tekija: "PM",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Nyiregyhaza_main_square.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-szabolcs-szatmar-bereg-f2ce53fb.jpg",
     },
     Tolna: {
       lyhyt: 'Szekszárdin kupeessa Gemencin tulvametsässä elää saksanhirviä, joiden mahtavat sarvet ovat maailmankuulut.',
+      pitka: `Szekszárdin ja Bajan välissä leviää Gemenc, Euroopan suurimpiin kuuluva tulvametsä, jossa elää 3 000–4 000 saksanhirveä – niiden mahtavat, maailmankuulut sarvet syntyvät ainutlaatuisen puhtaasta perimästä, jota metsästäjät ja tutkijat arvostavat kaukaa ulkomailta asti. Isoisän matkan aikaan 1873 Tonavan tulva-alueet olivat vielä säännöstelemättömiä ja levisivät nykyistä laajemmalle, ja juuri se villi, alati muuttuva vesimaisema loi metsälle olosuhteet, jotka myöhempi kesyttäminen olisi voinut tuhota. Syyskuisin metsässä kaikuu hirvien kiima-ajan mylvintä, kun urokset kilpailevat naaraista äänekkäästi. Nykyään aluetta pääsee tutkimaan pienjunalla, joka kulkee tulvametsän halki syvälle Gemencin sydämeen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-tolna-b8e7c105.jpg",
+          lahde: "Elekes Andor, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Elekes Andor",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gemenc_forest.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-tolna-b8e7c105.jpg",
     },
     Vas: {
       lyhyt: 'Szombathely on Unkarin vanhin kaupunki: roomalaiset perustivat Savarian vuonna 45, ja täällä syntyi myös Pyhä Martti Toursilainen.',
+      pitka: `Szombathely on Unkarin vanhin kaupunki: roomalaiset perustivat sen Savaria-nimisenä vuonna 45 keisari Claudiuksen aikana, ja se toimi aikanaan Pannonia Superior -provinssin pääkaupunkina tärkeän meripihkatien varrella. Kaupungissa syntyi myös myöhempi pyhimys Martti Tourslainen, josta tuli yksi kristikunnan suosituimmista suojelupyhimyksistä. Isoisän matkan aikaan 1873 kaupungin roomalainen menneisyys oli jo kaukaista historiaa – Savaria oli tuhoutunut maanjäristyksessä jo vuonna 456, lähes 1 400 vuotta aiemmin, ja sen raunioita alettiin kaivaa esiin järjestelmällisesti vasta paljon myöhemmin. Nykyään roomalaisajan rauniot ja Savaria-karnevaali muistuttavat kaupunkilaisia siitä, että Szombathelyn kadut ovat kantaneet asukkaita jo lähes kaksituhatta vuotta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-vas-c5b0e059.jpg",
+          lahde: "Pasztilla aka Attila Terbócs, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pasztilla aka Attila Terbócs",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Szombathely,_római_katolikus_székesegyház_2024_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-vas-c5b0e059.jpg",
     },
     'Veszprém': {
       lyhyt: 'Herendin tehtaassa on maalattu posliinia käsin vuodesta 1839, ja 1800-luvulla sen astioita toimitettiin Habsburgien hoville.',
+      pitka: `Herendin posliinitehdas perustettiin 1826, mutta vasta kun Mór Fischer otti sen haltuunsa 1839, tehdas alkoi valmistaa taidokasta käsinmaalattua posliinia, joka teki siitä pian koko Euroopan aateliston suosikin. Isoisän matkan aikaan 1873 Herend oli jo ehtinyt tulla Habsburgien hovin viralliseksi posliinintoimittajaksi – keisari Frans Joosef oli aateloinut Fischerin 1865 juuri tästä ansiosta – ja tehtaan astiat kattoivat pöytiä Wienistä Lontooseen asti. Nykyään Herendin käsinmaalatut kuviot, kuten kuuluisa perhoskuvio, tunnistetaan yhä posliininystäväpiireissä ympäri maailman, ja tehdas on edelleen toiminnassa samalla paikkakunnalla. Vierailijat voivat käydä tehtaan museossa katsomassa, miten sama käsityötaito jatkuu sukupolvesta toiseen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-veszprem-d68d4e82.jpg",
+          lahde: "Dávid Nagy (ND), Wikimedia Commons (Public domain)",
+          tekija: "Dávid Nagy (ND)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Veszprem_varabenedekhegyrol.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-veszprem-d68d4e82.jpg",
     },
     Zala: {
       lyhyt: 'Hévízin järvi on Euroopan suurin lämmin järvi, jossa voi uida – talvellakin vesi pysyy noin 22-asteisena, ja pinnalla leijuu usva.',
+      pitka: `Hévízin järvi on Euroopan suurin luonnollinen lämminvesinen uimajärvi, ja sen pohjalla olevasta noin 40 metrin syvyisestä luolasta pulppuava vesi uusiutuu koko järvessä joka kolmas päivä. Talvella veden lämpötila ei laske alle 22–25 asteen, ja järven pinnalle nousee tyypillisesti höyryävä usvapatja, joka luo omalaatuisen, melkein aavemaisen tunnelman. Isoisän matkan aikaan 1873 järven parantavaa vaikutusta oli jo hyödynnetty pitkään, mutta nykyisenkaltainen kylpyläkulttuuri ja järven ensimmäiset uimalaitokset kehittyivät vasta seuraavina vuosikymmeninä, kun juna toi lisää matkailijoita Balatonin länsipäähän. Nykyään järvi on ympärivuotinen kylpyläkohde, jonka pohjamutaa on käytetty nivelvaivojen hoitoon jo sukupolvien ajan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-zala-388f70b4.jpg",
+          lahde: "Heather Cowper, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Heather Cowper",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Thermal_Lake_at_Hévíz.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/hun-maakunta-zala-388f70b4.jpg",
     },
   },
   /*
@@ -8007,66 +12228,316 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   SWE: {
     Blekinge: {
       lyhyt: 'Karlskronan laivastotukikohta on Unescon maailmanperintöä ja yhä käytössä, ja sen köysipunomo on Ruotsin pisin puurakennus.',
+      pitka: `Karlskronan laivastotukikohta on nykyään Unescon maailmanperintöä, ja sen sydämessä komeilee Repslagarbanan, vuonna 1692 valmistunut yli 300 metrin pituinen köysipunomo – Ruotsin pisin puurakennus. Isoisän matkan aikaan 1873 punomo oli jo lähes 180 vuotta vanha, mutta yhä täydessä käytössä: köyttä kierrettiin siellä laivastolle aina vuoteen 1960 asti, ja vasta paljon myöhemmin, 2006, rakennus avattiin yleisölle näyttelyineen. Tukikohta on ollut Ruotsin laivaston keskus jo 1600-luvun lopulta lähtien, ja osa telakka-alueesta palvelee laivastoa edelleen tänäänkin. Karlskronan kaduilla kävelee siis yhä sama kaupunki, jonka isoisä olisi nähnyt – rakennukset ja tehtävä ovat pysyneet, vain käyttäjät ovat vaihtuneet.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-blekinge-564810df.jpg",
+          lahde: "Boatbuilder, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Boatbuilder",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Karlskrona_Marine_base.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-blekinge-564810df.jpg",
     },
     Dalarna: {
       lyhyt: 'Maaliskuun ensimmäisenä sunnuntaina tuhannet hiihtävät Sälenistä Moraan: 90 kilometrin Vasaloppet on maailman vanhin hiihtokilpailu.',
+      pitka: `Dalarnassa maaliskuun ensimmäisenä sunnuntaina tuhannet hiihtäjät seuraavat samaa 90 kilometrin reittiä Sälenin kupeesta Moraan, ja Vasaloppet on maailman vanhin ja osallistujamäärältään suurin hiihtokilpailu. Kilpailu syntyi vasta 1922, kun toimittaja Anders Pers halusi muistaa Kustaa Vaasan hiihtopakoa Moraan vuosina 1520–1521 – tarinaa, joka oli isoisänkin aikaan 1873 jo yli 350 vuotta vanhaa kansanperinnettä. Isoisä olisi siis voinut kulkea samat maisemat, mutta ilman ladun vartta reunustavia kannustajia: ensimmäinen kilpailija hiihti maaliin vasta lähes viisikymmentä vuotta isoisän matkan jälkeen. Nykyään reitille osallistuu vuosittain tuhansia hiihtäjiä, ja Mora pukeutuu joka kevät kilpailun väreihin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-dalarna-0ced0d9f.jpg",
+          lahde: "Vasaloppet/Nisse Schmidt, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Vasaloppet/Nisse Schmidt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jørgen_Aukland_Vasaloppet_2013_001.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-dalarna-0ced0d9f.jpg",
     },
     Gotland: {
       lyhyt: 'Visbyn keskiaikaista kaupunginmuuria on yhä pystyssä yli kolme kilometriä, ja sen torneista 36 vartioi edelleen vanhaa kaupunkia.',
+      pitka: `Visbyn keskiaikainen kaupunginmuuri on Pohjolan parhaiten säilynyt: alkuperäisestä 3,6 kilometristä pystyssä on yhä noin 3,44 kilometriä, ja kerran 29 suuresta tornista 27 seisoo edelleen paikallaan. Muuri rakennettiin 1200- ja 1300-luvuilla kaupungin suojaksi, joten isoisän saapuessa saarelle 1873 se oli jo lähes 600 vuotta vanha nähtävyys, ei enää toimiva linnoitus. Monin paikoin torneista puuttuu katto ja muurista puree hammas, mutta juuri se raunioutunut, keskeneräinen olemus on tehnyt siitä Unescon maailmanperintöä ja Gotlannin tunnetuimman maamerkin. Kesäisin muurin varjossa vietetään keskiaikaviikkoa, mutta kivet itse ovat pysyneet paikoillaan yhtä muuttumattomina kuin isoisän aikana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-gotland-4c77edfd.jpg",
+          lahde: "Arild Vågen, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Arild Vågen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Visby_ringmur_September_2020_01.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-gotland-4c77edfd.jpg",
     },
     'Gävleborg': {
       lyhyt: 'Gävlen keskustaan pystytetään joka joulu jättimäinen olkipukki, ja vuodesta 1966 lähtien se on poltettu tai rikottu yli 40 kertaa.',
+      pitka: `Gävlen keskustorille pystytetään joka joulu jättimäinen olkipukki, ja perinne alkoi vuonna 1966 – samana vuonna pukki myös poltettiin ensimmäisen kerran uudenvuodenyönä. Sen jälkeen pukki on tuhoutunut tulipaloissa ja ilkivallassa kymmeniä kertoja, ja poltosta on tullut oma jännitysnäytelmänsä: vartijat, kamerat ja verkot yrittävät suojella sitä, mutta polttajat löytävät silti keinonsa lähes vuosittain. Isoisän aikaan 1873 Gävlen torilla ei ollut mitään tällaista – perinne syntyi vasta lähes sata vuotta myöhemmin, osana 1960-luvun kauppiaiden mainoskampanjaa. Nykyään pukin kohtalo seurataan verkossa ympäri maailmaa, ja sen selviytyminen jouluun asti on vuosittainen puheenaihe Ruotsissa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-gavleborg-83aac5c9.jpg",
+          lahde: "Tomiwoj, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Tomiwoj",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gävle_Goat_2011.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-gavleborg-83aac5c9.jpg",
     },
     Halland: {
       lyhyt: 'Varbergin museossa on Bockstenin mies, 1300-luvulla murhattu ja suohon paalutettu, jonka keskiaikaiset vaatteet säilyivät lähes kokonaan.',
+      pitka: `Varbergin kulttuurihistoriallisessa museossa makaa Bockstenin mies: 1300-luvun puolivälissä murhattu ja kahdella seipäällä suohon paalutettu ruumis, jonka villaviitta, huppu, sukat ja nahkakengät säilyivät suossa lähes täydellisinä. Isoisän kulkiessa Hallannin läpi 1873 mies makasi yhä löytämättömänä suon pohjassa – hänet nostettiin päivänvaloon vasta 1936, turvetta kaivettaessa, lähes 600 vuotta kuolemansa jälkeen ja yli 60 vuotta isoisän matkan jälkeen. Vaatteet ovat yksi Euroopan täydellisimmistä keskiaikaisista asukokonaisuuksista, ja niiden ansiosta tutkijat tietävät tarkalleen, miltä tavallinen mies pukeutui 1300-luvun Ruotsissa. Murha on yhä ratkaisematta: kallo oli lyöty rikki useaan otteeseen ennen kuin ruumis upotettiin veteen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-halland-1e6d7224.jpg",
+          lahde: "David J from Skara, Sweden., Wikimedia Commons (CC BY 2.0)",
+          tekija: "David J from Skara, Sweden.",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Varbergs_fästning_från_söder.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-halland-1e6d7224.jpg",
     },
     'Jämtland': {
       lyhyt: 'Storsjön-järven hirviöstä on kerrottu jo 1600-luvulta, ja 1986 lääni rauhoitti sen uhanalaisena lajina – päätös kumottiin vasta 2005.',
+      pitka: `Storsjön-järven hirviöstä, Storsjöodjuretista, on kerrottu jo vuodesta 1635, joten kun isoisä matkusti 1873, tarina eli jo kansan keskuudessa lähes 240-vuotiaana. Silti hirviön viralliseen suojeluun oli vielä pitkä matka: Jämtlannin lääninhallitus rauhoitti sen uhanalaisena lajina vasta 1986, Östersundin 200-vuotisjuhlien kunniaksi, ja rauhoitus kumottiin hiljaisesti vasta 2005. Legenda elää yhä järven rannoilla, ja monet paikalliset vannovat yhä nähneensä pitkäkaulaisen olennon pinnalla, vaikka todisteita ei ole koskaan löytynyt. Livia muistuttaa, että jo isoisän aikalaiset olisivat tunteneet tarinan järven hirviöstä yhtä hyvin kuin nykypäivän östersundilaiset.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-jamtland-31bc40f6.jpg",
+          lahde: "Rickard Olsson, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Rickard Olsson",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:PB190187.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-jamtland-31bc40f6.jpg",
     },
     'Jönköping': {
       lyhyt: 'Vätternin rannalla Jönköpingin ensimmäisessä tulitikkutehtaassa on nyt tulitikkumuseo – täällä tehtiin turvatikkuja yli sata vuotta.',
+      pitka: `Jönköping tunnetaan nykyään Tulitikkumuseostaan, joka toimii vanhassa, jo 1848 rakennetussa tehdasrakennuksessa Vätternin rannalla – yksi vain kolmesta tällaisesta museosta koko maailmassa. Veljekset Johan ja Carl Lundström perustivat kaupunkiin turvatikkutehtaan 1845, ja heidän keksintönsä palkittiin hopeamitalilla Pariisin maailmannäyttelyssä 1855 – isoisän matkan aikaan 1873 Jönköpingin turvatikku oli siis jo lähes kahdenkymmenen vuoden ajan tunnettu ympäri Eurooppaa. Tehtaat kasvoivat niin suuriksi, että parhaimmillaan lähes kolmasosa koko kaupungin väestöstä teki töitä tulitikkuteollisuudessa, ja kaupunkia alettiin kutsua Tulitikkukaupungiksi. Teollisuus jatkui yli sata vuotta, kunnes viimeinenkin tehdas Jönköpingissä suljettiin vasta 1970.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-jonkoping-41b32b59.jpg",
+          lahde: "Moralist, Wikimedia Commons (Public domain)",
+          tekija: "Moralist",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jönköping_panorama.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-jonkoping-41b32b59.jpg",
     },
     Kalmar: {
       lyhyt: 'Ölannin silta kurottaa Kalmarista saarelle yli kuusi kilometriä, ja valmistuessaan 1972 se oli Euroopan pisin silta.',
+      pitka: `Kalmarista kurottaa Öölannin saarelle 6 072 metrin silta, joka valmistuessaan syyskuussa 1972 oli Euroopan pisin silta – ennätys kesti aina vuoteen 1998 asti, jolloin Portugalin Vasco da Gama -silta ohitti sen. Isoisän aikaan 1873 Öölantiin ei ollut mitään kiinteää yhteyttä: saarelle pääsi vain veneellä, ja silta 155 betonipilarinsa varassa rakennettiin vasta lähes sata vuotta myöhemmin. Sillan ylitys kestää nykyään pari minuuttia, kun isoisän aikalaisilta matka olisi vienyt lauttavuoron mukaan tuntikausia. Nykyään silta on Ruotsin oma kansallismaisema, jonka valot heijastuvat Kalmarsundin veteen kesäöisin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-kalmar-9181e209.jpg",
+          lahde: "Bernt Fransson,Lindås, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bernt Fransson,Lindås",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Ölandsbron_02.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-kalmar-9181e209.jpg",
     },
     Kronoberg: {
       lyhyt: 'Älmhultiin rakennettiin maailman ensimmäinen Ikea-tavaratalo, ja sen paikalla toimii nyt vuonna 2016 avattu Ikea-museo.',
+      pitka: `Älmhultiin nousi 1958 maailman ensimmäinen Ikea-tavaratalo, ja kun myymälä muutti uusiin tiloihin 2012, entiseen rakennukseen avattiin 2016 Ikea-museo, joka kertoo koko yhtiön historian Ingvar Kampradista lähtien. Isoisän kulkiessa seudulla 1873 Älmhult oli vielä vaatimaton rautatiepysäkki keskellä Smoolannin metsiä – Ikeaa ei ollut edes ideana, sillä Kamprad syntyi vasta 1926 ja perusti yrityksensä 1943. Kylän koko identiteetti muuttui vasta 1900-luvun puolivälin jälkeen, kun huonekaluyhtiö teki Älmhultista pääkonttorinsa ja nimensä tunnetuksi ympäri maailman. Nykyään museon seinien sisällä ensimmäiset asiakkaat kiersivät kalusteita jo lähes 70 vuotta sitten, kaukana siitä maailmasta jonka isoisä näki.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-kronoberg-551b106d.jpg",
+          lahde: "Christian Koehn (fragwürdig), Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Christian Koehn (fragwürdig)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:IKEA_Store_Elmhult.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-kronoberg-551b106d.jpg",
     },
     Norrbotten: {
       lyhyt: 'Jukkasjärven jäähotelli rakennetaan joka talvi uudelleen Torniojoen jäästä, ja keväällä se sulaa takaisin jokeen.',
+      pitka: `Jukkasjärvellä rakennetaan joka talvi kokonaan uusi jäähotelli Torniojoen jäästä, ja keväällä koko rakennus sulaa takaisin samaan jokeen, josta se on veistetty – kierto alkoi 1989, kun taidenäyttelystä syntyi vahingossa yöpymispaikka. Isoisän aikaan 1873 Jukkasjärvi oli pieni kirkonkylä Tornionjoen varrella, kaukana matkailukartoilta, eikä kenellekään olisi tullut mieleen yöpyä jäästä veistetyssä huoneessa – ajatus syntyi vasta yli sata vuotta myöhemmin. Nykyään hotellissa on kymmeniä teemahuoneita ja suuri juhlasali, ja taiteilijat matkustavat sinne ympäri maailmaa veistämään uudet huoneet joka syksy. Mikään huone ei näe kahta talvea: se, mikä on tänä vuonna hotelli, on ensi keväänä taas jokivettä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-norrbotten-3e9cca21.jpg",
+          lahde: "Beetle enthusiast, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Beetle enthusiast",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jukkasjärvi,_Sweden.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-norrbotten-3e9cca21.jpg",
     },
     'Skåne': {
       lyhyt: 'Kåsebergan rannikolla Ystadin lähellä seisoo Ales stenar: 59 suurta kiveä, jotka muodostavat 67 metriä pitkän laivan muodon.',
+      pitka: `Kåsebergan rannikkokalliolla Ystadin liepeillä seisoo Ales stenar: 59 kivestä koottu, 67 metriä pitkä laivanmuotoinen kivisommitelma, jonka radiohiiliajoitus sijoittaa todennäköisimmin noin 1 400 vuoden taakse. Isoisän katsellessa sitä 1873 kivet olivat siis jo lähes 1 300 vuotta vanhat – yhtä muinaisia ja selittämättömiä kuin nykyäänkin, sillä yksikään tutkija ei ole koskaan todistanut varmasti, oliko kyseessä hautamonumentti vai aurinkokello. Kivet on aseteltu niin, että kesällä aurinko laskee sommitelman luoteiskulmaan ja nousee talvella tarkalleen vastakkaisesta kulmasta, mikä on ruokkinut teoriaa muinaisesta kalenterista. Paikka on Ruotsin suurin ja parhaiten säilynyt kivilaiva, ja se kohoaa yhä samalla kalliolla meren yllä kuin isoisän aikana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-skane-fef25220.jpg",
+          lahde: "Wikimalte, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Wikimalte",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Ales_Stenar_from_pole_camera.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-skane-fef25220.jpg",
     },
     Stockholm: {
       lyhyt: 'Mälarin Björkön saarella oli viikinkiajan kauppakaupunki Birka, jota pidetään Ruotsin vanhimpana kaupunkina ja joka on nyt Unescon listalla.',
+      pitka: `Tukholman läänissä, Mälarin Björkön saarella Ekerön kunnassa, sijaitsi viikinkiajan kauppakaupunki Birka, joka perustettiin noin vuonna 750 ja hylättiin noin 975 – sitä pidetään Ruotsin vanhimpana kaupunkina, ja se on ollut Unescon maailmanperintöä vuodesta 1993. Isoisän matkan aikaan 1873 Birka oli vasta äskettäin noussut unohduksesta: arkeologi Hjalmar Stolpe oli aloittanut kaivaukset saarella 1871, vain kaksi vuotta aiemmin, ja löysi lopulta yli tuhat viikinkiaikaista hautaa parinkymmenen vuoden kaivaustensa aikana. Nykyään saarella voi kävellä samoja hautakumpuja pitkin, joiden alta Stolpe kaivoi esiin koruja, aseita ja jopa idästä tuotuja silkkikankaita. Birka muistuttaa, että Tukholman seudun historia alkoi kauan ennen itse Tukholmaa – kaupasta ja meren yhteyksistä, jotka Mälariin virtasivat jo yli tuhat vuotta sitten.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-stockholm-b9b63dfe.jpg",
+          lahde: "Holger.Ellgaard, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Holger.Ellgaard",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Birka_hus_2008a.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-stockholm-b9b63dfe.jpg",
     },
     'Södermanland': {
       lyhyt: 'Nyköpingin linnassa kuningas Birger kutsui veljensä joulupitoihin 1317 ja heitti heidät tyrmään – kumpikaan ei päässyt sieltä elävänä.',
+      pitka: `Nyköpingin linnan raunioissa tapahtui yksi Ruotsin historian mustimmista jouluista: kuningas Birger kutsui veljensä herttua Erikin ja Valdemarin juhlaan joulukuussa 1317, vangitutti heidät saman yön aikana ja antoi heidän näännellä nälkään linnan tyrmässä. Teko kostautui nopeasti – kapina ajoi Birgerin pakoon Tanskaan jo seuraavana vuonna, 1318 – ja tarina tunnetaan yhä nimellä Nyköpingin kestit. Isoisän vieraillessa linnalla 1873 verilöyly oli jo yli 550 vuotta vanhaa historiaa, ja rauniot seisoivat samalla paikalla kuin tänäänkin, muistuttamassa vallankaappauksesta joka söi lopulta itse kuninkaan. Kaupunki tunnetaankin yhä tarinansa myötä yhtenä Ruotsin synkimmistä ja kiehtovimmista historiakohteista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-sodermanland-aa1a4420.jpg",
+          lahde: "TS Eriksson, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "TS Eriksson",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Nyköpingshus_nov._2020.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-sodermanland-aa1a4420.jpg",
     },
     Uppsala: {
       lyhyt: 'Gamla Uppsalan kolme kuningaskumpua kasattiin yli 1 400 vuotta sitten, ja perimätieto liitti ne aikoinaan Odiniin, Freyriin ja Thoriin.',
+      pitka: `Gamla Uppsalan kolme mahtavaa kuninkaankumpua kohosivat paikalleen noin vuosina 550–625, ja kansanperinne yhdisti ne aikoinaan jumaliin Odiniin, Freyriin ja Thoriin – todennäköisemmin ne kätkevät sisäänsä mahtavien päälliköiden tai kuninkaiden tuhkat. Isoisän matkan jälkeisenä vuonna, 1874, tutkijat kaivoivat auki Läntisen kummun ja löysivät sieltä kultalangoin koristellun vaatteen jäänteet ja arvokkaita asuja – yksi merkittävimmistä kaivauksista koko Skandinaviassa, tehty vain vuosi isoisän vierailun jälkeen. Kummut kohoavat yhä samalla paikalla lakeuden yllä, ja niiden vierestä löytyy kirkko, joka on rakennettu keskiajalla entisen pakanapyhäkön paikalle. Se, mitä isoisä näki kesällä 1873, oli siis vielä tutkimaton mysteeri – vastaukset alkoivat paljastua vasta hänen matkansa jälkeen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-uppsala-7c319225.jpg",
+          lahde: "Erik Frohne, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Erik Frohne",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gamla_Uppsala_-_Royal_mounds_pano.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-uppsala-7c319225.jpg",
     },
     'Värmland': {
       lyhyt: 'Klarälvenin uitto loppui 1991 viimeisenä Ruotsissa, mutta nyt matkailijat rakentavat itse tukkilautan ja lipuvat sillä jokea alas.',
+      pitka: `Klarälven oli Ruotsin viimeinen tukinuittojoki: puuta uitettiin sen vettä pitkin 1830-luvulta aina vuoteen 1991 asti, jolloin viimeinen tukki kellui perille ja koko perinne päättyi lopullisesti koko maassa. Isoisän matkan aikaan 1873 uitto oli täydessä vauhdissa – joen varrella työskenteli satoja uittajia, ja 1950-luvun huippuvuosina yli 1 800 ihmistä eli joen tukkien varassa. Nykyään puu kulkee teitä ja rautateitä pitkin, mutta matkailijat pääsevät yhä kokeilemaan vanhaa ammattia: Klarälvenillä voi rakentaa oman tukkilautan ja liu'uttaa sillä jokea alas päivien ajan. Joen rannoilla seisoo yhä vanhoja uittajamajoja, jotka muistuttavat ajasta, jolloin koko laakson elämä kulki puun tahdissa – aivan niin kuin isoisän matkan aikaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-varmland-362036c7.jpg",
+          lahde: "Olof Senestam, Wikimedia Commons (Public domain)",
+          tekija: "Olof Senestam",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:View_over_Klarälven.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-varmland-362036c7.jpg",
     },
     'Västerbotten': {
       lyhyt: 'Västerbottensjuustoa tehdään vain Burträskin meijerissä, ja tarun mukaan sen keksi siellä 1870-luvulla karjapiika Ulrika Eleonora Lindström.',
+      pitka: `Västerbottensjuustoa valmistetaan yhä vain yhdessä paikassa, Burträskin meijerissä, ja tarun mukaan koko resepti syntyi vahingossa vuonna 1872 – vain vuotta ennen isoisän matkaa – kun karjapiika Ulrika Eleonora Lindström hajamielisenä unohti juustopadan hoidon. Tuloksena syntyi voimakas, rakeinen juusto, jota kypsytetään yhä alkuperäisen reseptin mukaan vähintään 14 kuukautta ennen kuin se pääsee myyntiin. Isoisä olisi siis voinut isolla mitalla maistaa aivan tuoretta keksintöä, jos hänen reittinsä olisi vienyt Burträskiin asti – juusto oli tuolloin vasta vuoden ikäinen paikallinen kuriositeetti, ei vielä koko Ruotsin ylpeys. Nykyään sitä tunnetaan kaikkialla maassa, mutta sitä valmistetaan yhä samalla pienellä meijerillä Pohjois-Ruotsissa kuin isoisän aikaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vasterbotten-da738089.jpg",
+          lahde: "Vojtasekd, Wikimedia Commons (CC BY 4.0)",
+          tekija: "Vojtasekd",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Umeälven_v_Umeå_(leden_2024).jpg",
+          lisenssi: "CC BY 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vasterbotten-da738089.jpg",
     },
     'Västernorrland': {
       lyhyt: 'Korkearannikon maa kohoaa yhä lähes sentin vuodessa jääkauden jäljiltä, ja vanha rantaviiva on nyt noin 285 metrin korkeudessa.',
+      pitka: `Korkeaa rannikkoa, Höga Kustenia, nousee merestä yhä nykyään noin 8 millimetriä vuodessa – jääkauden jälkeinen maankohoaminen on täällä maailman voimakkainta, ja vanhin rantaviiva kohoaa jo noin 285 metrin korkeudessa nykyisestä merenpinnasta. Isoisän vieraillessa rannikolla 1873 maa oli tietysti jo silloin nousussa, mutta siitä lähtien se on kohonnut yli metrin verran lisää – rannat, joilla isoisä kenties käveli, ovat nyt kauempana vedestä kuin silloin. Alue pääsi Unescon maailmanperintölistalle vasta 2000, geologisena todisteena siitä, miten mannerjää painoi maankuorta alas ja miten se yhä ponnahtaa takaisin ylös. Höga Kustenin kalliorannat ja saaristo ovat siis elävä, hitaasti muuttuva maisema, joka ei näytä koskaan täysin samalta kahtena vuosikymmenenä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vasternorrland-7732e1e1.jpg",
+          lahde: "Pudelek, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Pudelek",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:High_Coast_(Höga_kusten)_-_by_Pudelek.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vasternorrland-7732e1e1.jpg",
     },
     'Västmanland': {
       lyhyt: 'Kuningas Kaarle IX kutsui Salan hopeakaivosta valtakunnan kalleimmaksi aarteeksi – nyt sen syvyyksissä voi yöpyä maanalaisessa sviitissä.',
+      pitka: `Salan hopeakaivos oli 1500-luvulla Ruotsin valtion tärkein rahasampo, ja kuningas Kaarle IX kutsui sitä aikanaan "valtakunnan etevimmäksi aarteeksi" – Riksens förnämsta Clenodium. Isoisän matkan aikaan 1873 kaivos oli yhä toiminnassa, vaikkakin kaukana 1500-luvun kulta-ajastaan; louhinta jatkui vielä vuoteen 1908 asti, ennen kuin koko alueen kaivostoiminta lakkautettiin lopullisesti 1962. Nykyään syvällä maan alla, yli 150 metrin syvyydessä, voi yöpyä maailman syvimmässä hotellihuoneessa – kivikäytävien kaiku ja täydellinen pimeys tekevät yöstä ainutlaatuisen kokemuksen. Vuonna 1988 kaivos avattiin yleisölle museona, ja nyt siellä käy vuosittain enemmän matkailijoita kuin koskaan louhijoita isoisän aikaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vastmanland-be0231b3.jpg",
+          lahde: "Calle Eklund, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Calle Eklund",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sala_silvergruva_2018-12-01_07.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vastmanland-be0231b3.jpg",
     },
     'Västra Götaland': {
       lyhyt: 'Tanumin kallioihin hakattiin pronssikaudella tuhansia kuvia laivoista, vaunuista ja ihmisistä – Vitlyckessä lähes 300 samaan kallioon.',
+      pitka: `Tanumin kallioihin hakattiin pronssikaudella tuhansia kuvia laivoista, ihmisistä ja vaunuista yli 600 kalliopinnalle 25 kilometrin matkalle, ja pelkästään Vitlyckehällissä niitä on yli 500 – lähes sata laivaa ja 87 ihmishahmoa samalla kalliolla. Ensimmäiset piirrokset kuvista teki jo 1600-luvulla norjalainen tohtori, mutta tieteellinen tutkimus alkoi kunnolla vasta 1800-luvulla: pappi Axel Emanuel Holmberg piirsi Vitlyckehällin kuvat muistiin 1845, lähes 30 vuotta ennen isoisän matkaa. Isoisän aikaan 1873 kalliokuvat olivat siis jo tunnettuja tutkijoiden keskuudessa, vaikka Unesco liitti alueen maailmanperintöluetteloonsa vasta 1994, yli sata vuotta myöhemmin. Kuvat ovat säilyneet avoimina taivasalla jo lähes 3 000 vuotta, ja niiden ääriviivat maalataan nykyään punaisiksi vain, jotta ne erottuisivat harmaasta kalliosta paremmin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vastra-gotaland-e2b98772.jpg",
+          lahde: "Boberger, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Boberger",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rock_carving_Vitlycke_Tanum.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-vastra-gotaland-e2b98772.jpg",
     },
     Orebro: {
       lyhyt: 'Örebron sienenmuotoinen vesitorni Svampen valmistui 1958, ja 58 metrin korkeuteen hissi vie kahvilaan ja näköalaterassille.',
+      pitka: `Örebron keskustaa hallitsee nykyään Svampen, 1958 valmistunut sienenmuotoinen vesitorni, jonka huipulle 58 metrin korkeuteen pääsee hississä juomaan kahvia näköalaterassilla. Isoisän vieraillessa kaupungissa 1873 mitään vesitornia ei siellä vielä ollut – ensimmäinen, Södra vattentornet, valmistui vasta 1886, ja senkin korvasi lopulta Svampen yhdessä toisen vanhemman tornin kanssa vuonna 1958. Sienimäinen muoto oli arkkitehti Sune Lindströmin suunnitelma, ja säiliöön mahtuu yhdeksän miljoonaa litraa vettä koko kaupungin tarpeisiin. Nykyään torni on Örebron tunnusmerkki, jonka siluetti näkyy kauas ympäröivälle tasangolle, aivan kuten isoisän aikana kaupungin kirkontornit olivat ainoat korkeat rakennukset.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-orebro-1f935cca.jpg",
+          lahde: "Kirtapa, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Kirtapa",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Svampen_water_tower_in_Örebro,_Sweden_seen_from_the_south.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-orebro-1f935cca.jpg",
     },
     'Östergötland': {
       lyhyt: 'Rökin kirkon vieressä seisoo Rökin riimukivi, jossa on noin 760 riimua – se on pisin tunnettu kiveen hakattu riimukirjoitus.',
+      pitka: `Rökin kirkon vieressä seisoo Euroopan pisin tunnettu riimukirjoitus: noin 760 merkkiä on hakattu yhteen ainoaan kiveen noin vuonna 800, osin salakirjoituksella, joka tekee viestin tulkinnasta yhä kiistanalaista. Isoisän seistessä kiven edessä 1873 se oli jo lähes 1 100 vuotta vanha, ja tutkijat olivat väitelleet sen merkityksestä vuosikymmeniä ilman yksimielisyyttä – kiista jatkuu yhä, ja uusimmat tulkinnat ovat vasta 2020-luvulta. Riimut kertovat kuolemasta ja peloista, joita jotkut tutkijat ovat yhdistäneet kaukaiseen ilmastokatastrofiin, 500-luvulla riehuneeseen pölypilveen joka pimensi taivaan vuosiksi. Kivi on säilynyt paikallaan satojen vuosien ajan lähes muuttumattomana, ikivanha arvoitus keskellä tavallista maalaiskirkkopihaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-ostergotland-c99e1890.jpg",
+          lahde: "Arkland, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Arkland",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rökstenen_Ög_2020_4.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/swe-maakunta-ostergotland-c99e1890.jpg",
     },
   },
   /*
@@ -8137,66 +12608,316 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   NOR: {
     Akershus: {
       lyhyt: 'Eidsvollin kartanossa allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo on nyt museo ja kansallismonumentti.',
+      pitka: `Eidsvollin kartanon juhlasalissa 112 edustajaa laati kevätkylmässä 1814 Norjan perustuslain, ja se allekirjoitettiin 17. toukokuuta – päivästä tuli maan kansallispäivä. Talo on nykyään Eidsvoll 1814 -museo, jossa käy vuosittain noin 80 000 kävijää ihailemassa uusklassista kartanoa ja sen puistoa. Isoisän matkatessa Euroopassa 1873 perustuslaki oli jo lähes 60 vuotta vanha, mutta Norja eli yhä kuningasunionissa Ruotsin kanssa – täysin itsenäinen kruunuistaan vasta 1905, kolmisenkymmentä vuotta isoisän matkan jälkeen. Eidsvollin sali seisoi jo tuolloin muistomerkkinä hetkelle, jolloin Norja otti ensiaskeleensa kohti nykyistä itsenäisyyttään.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-akershus-846b62b1.jpg",
+          lahde: "Mahlum, Wikimedia Commons (Public domain)",
+          tekija: "Mahlum",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Eidsvollsbygningen.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-akershus-846b62b1.jpg",
     },
     'Aust-Agder': {
       lyhyt: 'Grimstadissa nuori Henrik Ibsen oli apteekin oppipoikana ja kirjoitti ensimmäisen näytelmänsä – kaupungissa on nyt hänen nuoruutensa museo.',
+      pitka: `Grimstadin pienessä apteekissa nuori Henrik Ibsen jauhoi lääkkeitä 1840-luvulla ja kirjoitti öisin ensimmäisen näytelmänsä Catilinan, joka ilmestyi 1850 juuri ennen kuin hän lähti kaupungista teatterin pariin. Sama apteekkirakennus avattiin museoksi jo 1916, ja siellä näkyvät yhä sekä myymälä että ullakkokamari, jossa Ibsen sekä asui että kirjoitti. Vuonna 1873, isoisän matkatessa Euroopassa, Ibsen ei ollut enää apteekkarin oppipoika vaan yksi Euroopan tunnetuimmista näytelmäkirjailijoista: samana vuonna Dresdenissä asuva Ibsen julkaisi yhdeksän vuotta kirjoittamansa suurteoksen Keisari ja Galilealainen. Grimstadin vaatimattomasta apteekista oli kolmessakymmenessä vuodessa tultu pitkä matka maailmanmaineeseen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-aust-agder-91c9b840.jpg",
+          lahde: "User:Mahlum, Wikimedia Commons (Public domain)",
+          tekija: "User:Mahlum",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Grimstad_town_center.jpg",
+          lisenssi: "Public domain",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-aust-agder-91c9b840.jpg",
     },
     'Bouvet Island': {
       lyhyt: 'Bouvet’nsaari on maailman syrjäisin saari: jäätikkö peittää 93 prosenttia siitä, ja Etelämantereen rannikolle on 1 700 kilometriä.',
+      pitka: `Bouvet'nsaari on maailman eristyneimpiä paikkoja: 49 neliökilometrin kokoinen tulivuorisaari, jonka pinnasta jäätikkö peittää pysyvästi noin 93 prosenttia. Lähin maapala, Kuningatar Maudin maa Etelämantereella, on saaresta noin 1 700 kilometrin päässä, ja lähin asuttu paikka vielä paljon kauempana. Saarella ei asu ketään pysyvästi – ainoastaan satunnaiset tutkimusretkikunnat pystyttävät sinne väliaikaisia leirejä – ja Norja hallinnoi sitä luonnonsuojelualueena. Jyrkät jäätikköseinämät ja lähes alituinen sumu tekevät maihinnoususta niin vaikeaa, että saarta on kutsuttu yhdeksi maailman vaikeimmin tavoitettavista paikoista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-bouvet-island-1f8fe0e0.jpg",
+          lahde: "François Guerraz, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "François Guerraz",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bouvet_Island_west_coast.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-bouvet-island-1f8fe0e0.jpg",
     },
     Buskerud: {
       lyhyt: 'Kongsbergin hopeakaivokset toimivat 1623–1958, ja 1770-luvulla ne olivat yli 4 000 työntekijällään Norjan suurin työpaikka ennen teollista aikaa.',
+      pitka: `Kongsbergin hopeakaivokset louhivat hopeaa yhtäjaksoisesti vuodesta 1623 aina vuoteen 1958 asti, ja parhaimmillaan 1770-luvulla ne työllistivät yli 4 000 ihmistä – Norjan suurin työpaikka ennen teollista aikaa. Louhinta tapahtui yli 80 eri kaivoksessa, ja vuosisatojen saatossa maan alta nostettiin yhteensä yli 1,3 miljoonaa kiloa hopeaa. Isoisän matkatessa 1873 kaivokset olivat yhä täydessä käynnissä, vaikka 1770-luvun ruuhkavuosista oltiin jo tultu alaspäin; toimintaa jatkui silti vielä lähes sata vuotta isoisän matkan jälkeen, aina vuoteen 1958 saakka. Kongsbergin kaupunki syntyi ja kasvoi kokonaan hopean ympärille, ja vuori säilyi sen elättäjänä sukupolvesta toiseen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-buskerud-92af38d3.jpg",
+          lahde: "Kjetil Bjørnsrud, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Kjetil Bjørnsrud",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kongensgruve_0606.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-buskerud-92af38d3.jpg",
     },
     Finnmark: {
       lyhyt: 'Altan kallioihin on hakattu yli 6 000 kuvaa, vanhimmat ainakin vuodelta 4200 eaa., ja ulkoilmamuseossa niiden lomassa kulkee puisia polkuja.',
+      pitka: `Altan kallioihin on hakattu yli 6 000 kalliopiirrosta, joista vanhimmat ajoittuvat ainakin vuoteen 4200 eaa. – osa tutkijoista pitää joitakin piirroksista vielä tuhat vuotta vanhempina. Unesco listasi piirrokset maailmanperinnöksi 1985, ja Jiepmaluoktan alueella niiden lomassa kiemurtelee nykyään noin kolme kilometriä pitkospuita, joita pitkin kävijät kiertävät ulkoilmamuseon. Piirrokset kertovat poronmetsästyksestä, veneistä ja rituaaleista tuhansien vuosien takaa, ja ne ovat Norjan ainoa esihistoriallinen maailmanperintökohde. Isoisän aikaan 1873 piirroksia ei tunnettu lainkaan – ensimmäiset niistä löydettiin vasta 1973, tasan sata vuotta isoisän matkan jälkeen, kun tienrakennustyömaa paljasti kalliopinnan sammaleen alta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-finnmark-c2e287c4.jpg",
+          lahde: "Jensvins, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Jensvins",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Alta_rock_carvings_06.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-finnmark-c2e287c4.jpg",
     },
     Hedmark: {
       lyhyt: 'Trysilfjellet on Norjan suurin talviurheilukeskus, ja tunturin rinteillä on 65 hoidettua laskettelurinnettä.',
+      pitka: `Trysilfjellet on nykyään Norjan suurin talviurheilukeskus, jonka rinteillä on 65 hoidettua laskettelurinnettä neljällä toisiinsa liittyvällä rinnealueella. Paikkakunnalla elää silti myös paljon vanhempi perintö: Trysilin ampuma- ja hiihtoseura perustettiin jo 1861, ja sitä pidetään maailman vanhimpana hiihtoseurana. Seuraavana vuonna, 1862, Trysilissä järjestettiin yksi historian ensimmäisistä järjestetyistä hiihtokilpailuista – tapahtuma, jota on kutsuttu ensimmäiseksi nykyaikaiseksi hiihtokilpailuksi. Isoisän matkatessa Euroopassa 1873 Trysilin hiihtoperinne oli jo runsaan kymmenen vuoden ikäinen, vaikka rinnehissit ja nykyinen laskettelukeskus syntyivät vasta sata vuotta myöhemmin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-hedmark-11691176.jpg",
+          lahde: "Henrik Buhl, Wikimedia Commons (CC BY 3.0)",
+          tekija: "Henrik Buhl",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Toppen_af_Trysilfjellet_med_Rondslottet_i_det_fjerne_(afstand_over_100_km)_-_panoramio.jpg",
+          lisenssi: "CC BY 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-hedmark-11691176.jpg",
     },
     Hordaland: {
       lyhyt: 'Bergenin Bryggenin puiset kauppatalot reunustavat satamaa, jossa hansakauppiailla oli konttori jo noin 1350 – nyt ne ovat Unescon listalla.',
+      pitka: `Bergenin Bryggenin puiset kauppatalot ovat seisoneet Vågen-sataman reunalla siitä lähtien, kun hansakauppiaat perustivat sinne konttorinsa noin 1350 – lähes 400 vuoden ajan pohjoisen Norjan kuivatun kalan kauppa kulki juuri näiden seinien sisällä. Nykyiset rakennukset nousivat suurpalon jälkeen 1702, ja Unesco listasi Bryggenin maailmanperinnöksi vasta 1979, Norjan ensimmäisten kohteiden joukossa. Isoisän kulkiessa Euroopassa 1873 hansakauppiaat olivat jo kauan poissa – konttori oli lakkautettu 1754 – mutta talot palvelivat yhä kauppiaita, ja niiden ikä oli tuolloin jo yli 170 vuotta. Nykyään Bryggenin toistakymmentä säilynyttä puutalokorttelia täyttyvät käsityöläisistä ja matkamuistomyymälöistä, mutta kapeat solakujat kulkevat samoja reittejä kuin keskiajalla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-hordaland-2e2fb2e5.jpg",
+          lahde: "Diego Delso, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Diego Delso",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Bryggen,_Bergen,_Noruega,_2019-09-08,_DD_115-117_PAN.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-hordaland-2e2fb2e5.jpg",
     },
     Svalbard: {
       lyhyt: 'Huippuvuorten jääkarhut ovat suojeltuja, ja asutuksen ulkopuolelle lähtevillä on oltava karkotusvälineet – mukaan neuvotaan ottamaan myös ase.',
+      pitka: `Huippuvuorilla jääkarhut ovat olleet rauhoitettuja vuodesta 1973, ja asutuksen ulkopuolelle lähtevän on lain mukaan otettava mukaan keino karkottaa karhu – käytännössä lähes kaikki kantavat kivääriä, vaikka sen käyttö on aina vasta viimeinen keino. Norja sai saariryhmän hallintaansa vasta Huippuvuorten sopimuksella, joka allekirjoitettiin 1920, mutta isoisän matkatessa Euroopassa 1873 saarilla ei ollut minkään valtion virallista hallintoa lainkaan: siellä liikkui lähinnä venäläisiä ja norjalaisia pyyntimiehiä sekä valaanpyytäjiä, eikä pysyvää siirtokuntaa ollut. Ensimmäiset hiilikaivosyhteisöt, kuten Longyearbyen, syntyivät vasta 1900-luvun alussa, kolmisenkymmentä vuotta isoisän matkan jälkeen. Nykyään saarilla asuu silti vain muutama tuhat ihmistä jääkarhujen, mursujen ja revontulien naapurissa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-svalbard-81de3e71.jpg",
+          lahde: "Buiobuione, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Buiobuione",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Panorama_Svalbard_Isfjorden.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-svalbard-81de3e71.jpg",
     },
     'Møre og Romsdal': {
       lyhyt: 'Atlanterhavsveien kiemurtelee 8,3 kilometriä luodolta toiselle kahdeksaa siltaa pitkin, ja sitä on kutsuttu maailman parhaaksi automatkaksi.',
+      pitka: `Atlanterhavsveien kiemurtelee 8,3 kilometriä luodolta ja saarelta toiselle kahdeksaa siltaa pitkin, ja sen rakentaminen kesti kuusi vuotta ja kesti matkallaan jopa kaksitoista myrskyä ennen valmistumista 1989. Tie on noussut toistuvasti maailman parhaaksi automatkaksi valittujen listojen kärkeen, ja erityisesti mutkitteleva Storseisundetin silta on saanut lempinimen "tie ei-mihinkään". Isoisän aikaan 1873 näillä luodoilla ei ollut mitään tietä eikä siltaa: ainoa tapa liikkua saarelta toiselle oli soutuvene, ja sama Hustadvikan rannikko, jota tie nykyään kiertää, tunnettiin pelättynä haaksirikkojen vaara-alueena. Yli sata vuotta myöhemmin insinöörit onnistuivat siinä, mitä isoisän aikalaiset olisivat pitäneet mahdottomana: sitomaan hajanaiset luodot yhdeksi ajettavaksi tieksi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-more-og-romsdal-1181f025.jpg",
+          lahde: "Stefan V. Baumgartner, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Stefan V. Baumgartner",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Atlantic_Ocean_Road_taken_during_midnight_sun.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-more-og-romsdal-1181f025.jpg",
     },
     'Nord-Trøndelag': {
       lyhyt: 'Stiklestadissa kuningas Olavi II kaatui taistelussa 1030, ja vuodesta 1954 paikalla on esitetty taistelusta kertovaa Pyhän Olavin näytelmää.',
+      pitka: `Stiklestadissa kaatui vuonna 1030 kuningas Olavi II taistelussa, joka teki hänestä pyhimyksen ja Norjan ikuisen kuninkaan. Vuodesta 1954 lähtien Stiklestadilla on joka kesä esitetty Pyhän Olavin näytelmää, ulkoilmateatteriesitystä, joka kokoaa sadoittain esiintyjiä lavastamaan taistelun uudelleen. Isoisän matkatessa 1873 taistelusta oli kulunut jo 843 vuotta, ja Olavin tarina eli silti vahvana kansallisromanttisessa Norjassa, joka etsi juuri tuohon aikaan omaa historiaansa ja identiteettiään itsenäistymisen kynnyksellä. Näytelmää isoisä ei silti olisi voinut nähdä – sen ensimmäiseen esitykseen oli vielä 81 vuotta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-nord-trondelag-71d3fdc5.jpg",
+          lahde: "Lars Engerengen, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Lars Engerengen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Stiklestad_kirke_21.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-nord-trondelag-71d3fdc5.jpg",
     },
     Nordland: {
       lyhyt: 'Bodøn lähellä Saltstraumenin kapeasta salmesta ryöppyää kuuden tunnin välein jopa 400 miljoonaa kuutiota merivettä, ja virtaan syntyy pyörteitä.',
+      pitka: `Saltstraumenin kapeasta salmesta Bodøn kupeessa ryöppyää maailman voimakkain vuorovesivirtaus: jopa 400 miljoonaa kuutiota merivettä puskee läpi joka kuudes tunti, ja virran ollessa voimakkaimmillaan syntyy jopa kymmenmetrisiä pyörteitä. Kalaa ja lintuja virtaan kerääntyy niin paljon, että salmesta on tullut suosittu onki- ja lintupaikka. Isoisän aikaan 1873 salmen yli ei ollut mitään siltaa: matkalaiset joutuivat odottamaan virran hetkellistä tyyntymistä ylittääkseen sen veneellä, eikä nykyinen, 768 metriä pitkä silta noussut paikalleen ennen vuotta 1978. Vasta silta teki virran ylityksestä arkipäiväistä – yli sata vuotta isoisän matkan jälkeen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-nordland-193f653c.jpg",
+          lahde: "Frankemann, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Frankemann",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Apparent_whirlpools_of_Saltstraumen_seen_from_the_air.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-nordland-193f653c.jpg",
     },
     Oppland: {
       lyhyt: 'Galdhøpiggen on 2 469 metrillään Pohjois-Euroopan korkein vuori, ja sen kupeen jäätiköllä lasketellaan vielä kesälläkin.',
+      pitka: `Galdhøpiggen kohoaa 2 469 metriin ja on Norjan, Skandinavian ja koko Pohjois-Euroopan korkein huippu; sen kupeessa Juvassbreen-jäätiköllä toimii kesäisin hiihtokeskus, josta hissi vie aina 2 200 metrin korkeuteen. Ensimmäisen kerran huipulle kiivettiin jo 1850, ja samoihin aikoihin Jotunheimeniin syntyi ensimmäinen tukikohta, kun tilallinen Steinar Sulheim perusti Spiterstulen-majatalon vaeltajille. Isoisän matkatessa Euroopassa 1873 Galdhøpiggenin huipulla oli siis käyty jo parikymmentä vuotta, mutta kilpailu Norjan korkeimman vuoren tittelistä naapuritunturi Glittertindin kanssa jatkui vielä pitkään – sen huipun jäätikkö teki siitä ajoittain korkeamman, ja kiista ratkesi lopullisesti vasta Galdhøpiggenin hyväksi, kun jäätikkö kutistui ilmaston lämmetessä 2000-luvulla.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-oppland-10480405.jpg",
+          lahde: "Atvelonis., Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Atvelonis.",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Galdhøpiggen_Close-up.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-oppland-10480405.jpg",
     },
     Oslo: {
       lyhyt: 'Nobelin rauhanpalkinto on ainoa Nobel, jota ei jaeta Tukholmassa: se ojennetaan 10. joulukuuta Oslon kaupungintalolla kuninkaan läsnä ollessa.',
+      pitka: `Nobelin rauhanpalkinto on ainoa viidestä Nobel-palkinnosta, jota ei jaeta Tukholmassa: se ojennetaan joka vuosi 10. joulukuuta Oslon kaupungintalolla, Norjan kuninkaan seuratessa juhlallisuutta – nykyinen kaupungintalo on toiminut näyttämönä vuodesta 1990. Ensimmäinen rauhanpalkinto jaettiin jo 1901, mutta koko palkinto oli isoisän matkatessa Euroopassa 1873 vielä kaukainen tulevaisuus. Keksijä Alfred Nobel eli tuolloin 40-vuotiaana ja oli vasta muutamaa vuotta aiemmin patentoinut dynamiitin, eikä hänen testamenttinsa palkintorahastosta ollut vielä tietoakaan. Palkinnon perustamiseen oli vielä 23 vuotta ja ensimmäiseen jakoon 28 vuotta isoisän matkasta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-oslo-bb19c76a.jpg",
+          lahde: "Geir Hval (www.MacWhale.eu), Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Geir Hval (www.MacWhale.eu)",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rådhuset_Rådhusparken_Oslo_Norway_(2021.05.20).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-oslo-bb19c76a.jpg",
     },
     Rogaland: {
       lyhyt: 'Preikestolen eli Saarnatuoli kohoaa 604 metriä Lysevuonon yläpuolelle, ja sen tasaiselle laelle kiipesi vuonna 2024 noin 300 000 kävijää.',
+      pitka: `Preikestolen eli Saarnatuoli kohoaa 604 metriä suoraan Lysevuonon yläpuolelle, ja sen tasaiselle, noin 25 metriä leveälle kalliolaelle kiipesi vuonna 2024 jo noin 300 000 kävijää. Nykyisen nimensä ja mainettaan Saarnatuoli sai vasta vuosisadan vaihteessa: stavangerilainen pankinjohtaja Thomas Peter Randulff huomasi sen höyrylaiva Oscar II:n kannelta vuonna 1896 ja vertasi muotoa saarnatuoliin. Isoisän matkatessa Euroopassa 1873 kallio kohosi vuonon yllä täsmälleen samanlaisena kuin nyt, mutta kukaan ei vielä kiivennyt sinne matkailumielessä eikä sillä ollut edes nimeä – ensimmäiseen tunnettuun retkeen sinne oli vielä 23 vuotta. Ensimmäinen mökki laen juurelle valmistui vasta 1927, joten isoisän aikalaiset olisivat joutuneet kiipeämään ilman minkäänlaista tukikohtaa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-rogaland-8942a8e5.jpg",
+          lahde: "Svein-Magne Tunli, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Svein-Magne Tunli",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Preikestolen_-_Pulpit_Rock.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-rogaland-8942a8e5.jpg",
     },
     'Sogn og Fjordane': {
       lyhyt: 'Vuonojen kuninkaaksi kutsuttu Sognefjord työntyy 205 kilometriä sisämaahan, ja syvimmillään se ulottuu 1 308 metriä merenpinnan alle.',
+      pitka: `Sognefjord työntyy 205 kilometriä sisämaahan ja ulottuu syvimmillään 1 308 metriä merenpinnan alle, mikä tekee siitä sekä Norjan pisimmän että syvimmän vuonon – lempinimeltään "vuonojen kuningas". Sen sivuhaarat Nærøyfjord ja kapea Aurlandsfjord kuuluvat nykyään Unescon maailmanperintöön ja houkuttelevat risteilyaluksia ympäri vuoden. Matkailu alkoi vuonolla jo isoisän aikaan: höyrylaivayhteys Balestrandiin avattiin 1858, ja siitä lähtien brittiläiset ja muut eurooppalaiset matkailijat purjehtivat yhä useammin vuonoa ylös ihailemaan sen jyrkkiä vuoria. Isoisän matkatessa 1873 Balestrandista oli siis jo tullut suosittu kesäpaikka Euroopan yläluokalle – vuonon maine kauneimpana matkakohteena syntyi juuri isoisän oman matkan aikoihin.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-sogn-og-fjordane-b1a39b62.jpg",
+          lahde: "en:User:Worldtraveller,, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "en:User:Worldtraveller,",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Sognefjord,_Norway.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-sogn-og-fjordane-b1a39b62.jpg",
     },
     'Sør-Trøndelag': {
       lyhyt: 'Trondheimin Nidarosin tuomiokirkko on rakennettu Pyhän Olavin haudan päälle, ja se on maailman pohjoisin keskiaikainen katedraali.',
+      pitka: `Nidarosin tuomiokirkko on rakennettu Pyhän Olavin, Norjan taisteluissa kaatuneen ja pyhimykseksi julistetun kuninkaan, haudan päälle, ja rakennustyöt alkoivat jo 1070 – kirkosta tuli koko Pohjolan tärkein pyhiinvaelluskohde ja se on maailman pohjoisin keskiaikainen katedraali. Vuosisatojen tulipalot ja rappio olivat kuitenkin riipineet kirkon lähes raunioiksi, ja vuonna 1869 perustettiin oma restaurointipaja korjaamaan sitä kivi kiveltä. Isoisän matkatessa Euroopassa 1873 restaurointi oli vasta alkutaipaleella: arkkitehti Christian Christie oli ottanut työn johtoonsa vain edellisenä vuonna, 1872, ja hänen urakkansa jatkuisi aina vuoteen 1906 saakka. Isoisä olisi siis nähnyt katedraalin vielä keskeneräisenä työmaana – ei sitä ehjää julkisivua, joka nykyään kohtaa Trondheimin pyhiinvaeltajat.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-sor-trondelag-97f23b3e.jpg",
+          lahde: "Tulipasylvestris, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Tulipasylvestris",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Nidaros_domkirke_2022a.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-sor-trondelag-97f23b3e.jpg",
     },
     Telemark: {
       lyhyt: 'Rjukanin laaksoon ei paista aurinko syyskuusta maaliskuuhun, joten rinteelle rakennettiin 2013 peilejä, jotka heijastavat valoa torille.',
+      pitka: `Rjukanin laakso jää auringolta täysin varjoon syyskuusta maaliskuulle, koska lähes 1 800 metriä korkea Gaustatoppen kätkee matalan arktisen auringon näkyvistä; vuonna 2013 vuoren rinteelle nousi kolme aurinkosähköllä pyörivää peiliä, jotka heijastavat valoa torille noin 80–90 prosentin teholla verrattuna suoraan auringonpaisteeseen. Peilien idea juontuu jo vuodelta 1913, jolloin kirjanpitäjä Oscar Kittelsen ensimmäisenä ehdotti ratkaisua – peili valmistui siis tasan sata vuotta oman ideansa jälkeen. Isoisän matkatessa 1873 laaksossa ei ollut vielä mitään kaupunkia: Rjukanin nykyinen teollisuuskaupunki syntyi vasta 1900-luvun alussa Sam Eyden vesivoimahankkeen ympärille, ja paikalla asui tuolloin vain muutama kymmenen maanviljelijäperhettä. Sen sijaan komea Rjukanfossen-vesiputous oli isoisän aikaan jo tunnettu nähtävyys: matkailijavirta putoukselle oli alkanut kasvaa juuri 1800-luvun jälkipuoliskolla, kauan ennen kuin putous valjastettiin sähköntuotantoon.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-telemark-a67f1105.jpg",
+          lahde: "Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Bjoertvedt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rjukan_panorama_IMG_0052.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-telemark-a67f1105.jpg",
     },
     Troms: {
       lyhyt: 'Tromsøssa keskiyön aurinko pysyy kesällä taivaalla 71 vuorokautta yhtä mittaa, ja talvella kaamos kestää lähes seitsemän viikkoa.',
+      pitka: `Tromsøssa keskiyön aurinko pysyy taivaalla yhtäjaksoisesti noin 71 vuorokautta toukokuun puolivälistä heinäkuun loppuun, ja talvella vastapainoksi seuraa kaamos, jolloin aurinko ei nouse lainkaan lähes seitsemään viikkoon. Nykyään kaupunkia kutsutaan Pohjoisen pääkaupungiksi, ja se elää matkailusta, tutkimuksesta ja kalastuksesta. Isoisän matkatessa 1873 Tromsø tunnettiin toisenlaisesta syystä: kaupunki oli juuri noussut Norjan johtavaksi jäämerenpyynnin – hylkeenpyynnin ja valaanpyynnin – tukikohdaksi, ja sen satamasta lähti joka kevät kymmeniä pyyntialuksia pohjoiseen jäille. Vuosisadan lopulla kaupunkia alettiin kutsua jopa "Pohjolan Pariisiksi", niin vilkasta ja vaurasta oli arktisen pyynnin tuoma kauppa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-troms-df430f0e.jpg",
+          lahde: "Happy Discover, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Happy Discover",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Panorama_Tromsø_from_Fjellheisen.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-troms-df430f0e.jpg",
     },
     'Vest-Agder': {
       lyhyt: 'Lindesnesin majakka seisoo manner-Norjan eteläkärjessä, ja niemellä on näytetty valoa merenkulkijoille jo vuodesta 1656.',
+      pitka: `Lindesnesin niemellä, manner-Norjan eteläisimmässä kärjessä, on näytetty valoa merenkulkijoille jo vuodesta 1656 – Norjan vanhin majakkapaikka ohjasi laivoja kohti Skagerrakin ja Itämeren suuta. Nykyinen 16-metrinen valurautatorni on vuodelta 1915, mutta isoisän matkatessa 1873 majakassa paloi vielä vuonna 1854 uusittu torni, jonka ensimmäisen luokan linssiä ja parafiinilamppua pidettiin tuolloin aikansa uusinta tekniikkaa. Nykyään vanha majakka-alue on museo, jossa pääsee tutustumaan sekä valurautatorniin että sotavuosina kallioon louhittuun bunkkeriin. Lindesnesin valo on siis palanut lähes 370 vuotta, ja isoisän ajan parafiinilamppu oli vasta yksi monista vaiheista sen pitkässä historiassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-vest-agder-5f602889.jpg",
+          lahde: "Svein-Magne Tunli - tunliweb.no, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Svein-Magne Tunli - tunliweb.no",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lindesnes_fyr_Lindesnes_Lighthouse_Norway.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-vest-agder-5f602889.jpg",
     },
     Vestfold: {
       lyhyt: 'Tønsbergin lähellä hautakummusta kaivettiin 1904 Osebergin viikinkilaiva, johon kaksi naista oli haudattu syksyllä 834.',
+      pitka: `Tønsbergin lähellä sijaitsevasta Oseberg-nimisestä hautakummusta kaivettiin 1904–1905 esiin poikkeuksellisen hyvin säilynyt viikinkilaiva, jonka lastina oli kaksi naista, haudattuina syksyllä 834 – toisen heistä arvellaan olleen korkea-arvoinen, toisen mahdollisesti palvelija. Laivasta tuli maailman täydellisimmin säilynyt viikinkilaiva, ja sen mukana löytyi rikas kokoelma puuveistoksia, rekiä ja arkipäivän esineitä. Isoisän matkatessa Euroopassa 1873 laiva makasi yhä koskemattomana mullan alla – kukaan ei tiennyt kummun sisällä lepäävän mitään, ja kaivaukseen oli vielä 31 vuotta. Löydön teki lopulta paikallinen maanviljelijä, joka kaivoi kummusta puuta ja osui vahingossa laivan keulaan – vasta silloin arkeologit pääsivät työhön.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-vestfold-e850f89c.jpg",
+          lahde: "Helge Høifødt, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Helge Høifødt",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Brygga_i_Tønsberg.JPG",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-vestfold-e850f89c.jpg",
     },
     'Østfold': {
       lyhyt: 'Norjan pisin joki Glomma laskee mereen Fredrikstadissa, jonka itärannalla on Pohjois-Euroopan parhaiten säilynyt linnoituskaupunki.',
+      pitka: `Norjan pisin joki Glomma virtaa 621 kilometriä ja laskee mereen Fredrikstadissa, jonka itärannalla sijaitseva tähdenmuotoinen Gamlebyen on Pohjois-Euroopan parhaiten säilynyt linnoitettu kaupunki – vallihaudat ja maavallit ympäröivät sitä yhä lähes ehjänä. Linnoitus rakennettiin vuodesta 1663 alkaen sen jälkeen, kun Norja menetti Bohusin linnoituksen Ruotsille, ja se toimi vuosisatoja eteläisen Norjan tärkeimpänä sotilaskokoontumispaikkana. Isoisän matkatessa Euroopassa 1873 linnoitus oli yhä aktiivisessa sotilaskäytössä – osana 1800-luvulla kuningasunionin aikana rakennettua linnoitusverkostoa, jolla Norja korosti omaa itsenäisyyttään Ruotsin rinnalla. Varuskunta lakkautettiin virallisesti vasta 1903 ja viimeiset sotilaat lähtivät kaupungista 2002, joten isoisän aikaan Gamlebyenin kaduilla marssivat yhä oikeat sotilaat, ei nykyajan matkailijat.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-ostfold-f855a833.jpg",
+          lahde: "Finn Bjørklid, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Finn Bjørklid",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Gamlebyen_i_Fredrikstad.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/nor-maakunta-ostfold-f855a833.jpg",
     },
   },
   /*
@@ -8282,93 +13003,453 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   IRL: {
     Carlow: {
       lyhyt: 'Brownshillin dolmen Carlow’n laidalla on yli 5 000 vuotta vanha hauta, jonka noin 150-tonnista kattokiveä pidetään Euroopan painavimpana.',
+      pitka: `Carlow’n laidalla makaa Brownshillin dolmen, kivikautinen porttihauta, jonka kattokiveä pidetään Euroopan painavimpana: se painaa arvioiden mukaan noin 150 tonnia ja lepää neljän pienemmän kantajakiven varassa ilman minkäänlaista laastia. Rakentajat pystyttivät sen jo noin 4000–3500 eaa., kivikauden alkupuolella, kauan ennen kuin kukaan osasi kirjoittaa muistiin sen tarkoitusta. Isoisän matkan aikaan 1873 dolmen oli jo lähes 5500 vuotta vanha – rakennettu suunnilleen yhtä kauan sitten kuin Egyptin suurimmat pyramidit, ja yhtä mykkä silloin kuin nykyäänkin alkuperäisestä tarkoituksestaan. Nykyään paikalle pääsee tieltä muutaman minuutin kävelymatkan, ja kivi lepää yhä paikallaan, ratkaisematonta arvoitusta vartioimassa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-carlow-c93f4dd7.jpg",
+          lahde: "Jacknow, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Jacknow",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Browneshill_Portal_Tomb.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-carlow-c93f4dd7.jpg",
     },
     Cavan: {
       lyhyt: 'Cuilcaghvuoren juurella on Shannon Pot, 16 metrin levyinen lähdelampi, josta Shannon-joen katsotaan perinteisesti saavan alkunsa.',
+      pitka: `Cuilcaghvuoren juurella pulppuaa Shannon Pot, vain noin 16 metriä leveä lähdelampi, josta Irlannin pisimmän joen, Shannonin, katsotaan perinteisesti saavan alkunsa. Vesi nousee maan alta karstialueen kalkkikivestä, ja sukeltajat ovat käyneet lammen pohjassa lähes 15 metrin syvyydessä löytämättä koko maanalaisen luolaston pohjaa – käytävät jatkuvat kauas rajan taakse Fermanaghiin asti. Isoisän aikaan 1873 tämä maanalainen yhteysverkko oli vielä tuntematon: paikallinen perinnetieto tunsi lammen Shannonin lähteenä, mutta tiede kartoitti luolaston vasta paljon myöhemmin sukellusten avulla. Nykyään pieni parkkipaikka ja opastaulu johdattavat harvat vaeltajat lähteelle, jonka äärellä koko Irlannin pisin joki saa alkunsa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-cavan-9e4a65bb.jpg",
+          lahde: "Andrewhumphreys, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Andrewhumphreys",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Shannon_Pot,_Cuilcagh_Mountain.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "http://creativecommons.org/licenses/by-sa/3.0/",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-cavan-9e4a65bb.jpg",
     },
     Clare: {
       lyhyt: 'Burrenin kalkkikivikarstilla kasvavat arktiset tunturikasvit ja Välimeren kasvit rinnakkain – siellä on yli 70 % Irlannin kukkalajeista.',
+      pitka: `Clare’n Burrenin harmaalla kalkkikivikarstilla kasvaa yli 70 prosenttia koko Irlannin kukkakasvilajeista yhdellä ja samalla kalliopinnalla, ja siellä näkee poikkeuksellisen ilmiön: arktis-alpiiniset kasvit kukkivat aivan Välimeren kasvien vieressä, vaikka niiden luontaiset kasvualueet ovat muuten tuhansien kilometrien päässä toisistaan. Kalkkikivi imee sadeveden nopeasti maan alle, joten pinnalla kasvaa vain ohut mutta poikkeuksellisen rikas kasvillisuus kallionhalkeamien suojassa. Isoisän aikaan 1873 tätä kasvimaantieteellistä erikoisuutta ei vielä osattu selittää tieteellisesti – kasvimaantiede oli nuori tiede, ja Burrenin arvoitus alkoi ratketa kunnolla vasta 1900-luvulla. Nykyään alue on osa Unescon geopuistoa, ja kävijät voivat löytää samalta niityltä kasveja, jotka muualla erottaa toisistaan mannerten mittainen matka.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-clare-249fdce7.jpg",
+          lahde: "Roger D Kidd, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Roger D Kidd",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Limestone_landscape_in_The_Burren,_Co_Clare,_Ireland_-_geograph.org.uk_-_7688001.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-clare-249fdce7.jpg",
     },
     Cork: {
       lyhyt: 'Cobhin satamasta, jonka nimi oli silloin Queenstown, Titanic lähti 11. huhtikuuta 1912 viimeiseltä pysähdykseltään kohti Atlanttia.',
+      pitka: `Cobhin satamasta – silloiselta nimeltään Queenstown – Titanic laski ankkurin 11. huhtikuuta 1912, otti kyytiinsä proomuilla 123 uutta matkustajaa ja lähti sitten viimeiselle etapilleen kohti Atlanttia ja New Yorkia. Heistä vain 44 selvisi hengissä, kun laiva upposi neljä päivää myöhemmin. Isoisän matkan aikaan 1873 Titanicin tarina oli vielä neljäkymmentä vuotta tulevaisuudessa, mutta kaupunki tunnettiin jo tuolloin nimellä Queenstown – nimi oli annettu 1849 kuningatar Viktorian vierailun kunniaksi ja pysyi käytössä aina vuoteen 1920 asti. Nykyään satamassa käy risteilyaluksia, ja Cobhin Heritage Centre kertoo tarinan matkustajista, jotka astuivat laivaan viimeisenä maana allaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-cork-938e9b31.jpg",
+          lahde: "Marathon, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Marathon",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cobh_Harbour_-_geograph.org.uk_-_7563647.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-cork-938e9b31.jpg",
     },
     Donegal: {
       lyhyt: 'Slieve Leaguen merijyrkänteet kohoavat 601 metriin suoraan Atlantista, ja ne kuuluvat Euroopan korkeimpiin.',
+      pitka: `Slieve Leaguen merijyrkänteet kohoavat suoraan Atlantista 601 metrin korkeuteen – lähes kolme kertaa korkeammalle kuin tunnetumpi Cliffs of Moher – ja lukeutuvat Euroopan korkeimpiin, parhaiten tavoitettaviin merijyrkänteisiin. Huipulle vievää kapeaa harjannetta kutsutaan osuvasti nimellä One Man’s Pass. Isoisän aikaan 1873 näille jyrkänteille ei ollut minkäänlaista matkailureittiä eikä opastetta: seutu oli syrjäistä aluetta, jonne pääsi vain hevosella tai jalan, ja jyrkänteiden kansainvälinen maine matkailukohteena syntyi vasta paljon myöhemmin. Nykyään reitille kiipeää vuosittain kymmeniätuhansia kävijöitä, joita huimaa yhtä lailla korkeus kuin allaan pauhaava valtameri.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-donegal-5a931c3e.jpg",
+          lahde: "James Emmans, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "James Emmans",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Very_High_Cliffs_of_Slieve_League_-_geograph.org.uk_-_4677747.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-donegal-5a931c3e.jpg",
     },
     Dublin: {
       lyhyt: 'Dublininlahden Bull Island syntyi vahingossa: hiekka alkoi kasautua saareksi, kun satamaan rakennettiin Bull Wall -aallonmurtaja 1820–1825.',
+      pitka: `Dublinlahden Bull Island syntyi vahingossa: kun insinööri George Halpin rakensi 1820–1825 Bull Wall -aallonmurtajan estämään sataman liettymistä, virran mukana kulkeutuva hiekka alkoi kasautua muurin suojaan ja muodosti vähitellen kokonaisen saaren, jota ei ollut olemassa vuosisataa aiemmin. Isoisän matkan aikaan 1873 saari oli jo lähes viisikymmentä vuotta vanha, mutta yhä nuori ja kasvava hiekkasärkkä – prosessi, joka jatkuu edelleen ja josta on tullut Dublinin tärkein lintualue. Saarella pesii ja talvehtii nykyään kymmeniätuhansia muuttolintuja, ja siitä on tullut osa Unescon Dublinlahden biosfäärialuetta. Harvempi kaupunkilainen tietää kävellessään sen rannalla, että koko maa heidän jalkojensa alla on ihmiskäden, ei luonnon, aikaansaannosta.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-dublin-892fbf08.jpg",
+          lahde: "Colin Park, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Colin Park",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:North_Bull_Island_Lighthouse,_Dublin_Bay_-_geograph.org.uk_-_7670161.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-dublin-892fbf08.jpg",
     },
     'Dún Laoghaire–Rathdown': {
       lyhyt: 'Sandycoven Forty Footilla on uitu Irlanninmeressä ympäri vuoden jo noin 250 vuotta – ennen vain miehet, nykyään kaikki.',
+      pitka: `Sandycoven Forty Footilla on uitu Irlanninmeressä ympäri vuoden jo noin 250 vuotta, alun perin lähistöllä majailleen 40. jalkaväkirykmentin mukaan nimetyllä kalliorannalla. Paikka pysyi virallisesti vain miehille tarkoitettuna pitkään, vaikka naiset olivat uineet siellä luvattakin jo vuosikymmeniä – muutos vahvistettiin lopulta vasta 2014. Isoisän aikaan 1873 uintipaikka oli jo tuolloin ollut käytössä sata vuotta, ja miesten alastonuinti oli seudulla niin vakiintunut tapa, ettei siitä juuri kohistu – naisten piti odottaa virallista muutosta vielä yli sata vuotta lisää. Nykyään Forty Footilla pulahtaa jäiseen veteen väkeä ympäri vuoden, tammikuun aamuisin usein enemmän kuin heinäkuussa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-dun-laoghaire-rathdown-fd498de7.jpg",
+          lahde: "Aleks Scholz, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Aleks Scholz",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Steps_at_the_Forty_Foot_Bathing_Place_-_geograph.org.uk_-_6312431.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-dun-laoghaire-rathdown-fd498de7.jpg",
     },
     Fingal: {
       lyhyt: 'Fingalin rannikon edustalla Lambayn yksityissaarella hyppii noin sata punakaulavallabia, jotka tuotiin sinne 1950- ja 1980-luvuilla.',
+      pitka: `Fingalin rannikon edustalla, yksityisellä Lambayn saarella, hyppii nykyään sata–sataneljäkymmentä punakaulavallabia, jotka eivät ole alkuperäistä irlantilaista eläimistöä lainkaan. Ensimmäiset vallabit tuotiin saarelle 1950-luvulla osana laajempaa, epäonnistunutta yritystä perustaa sinne yksityinen eläintarha, ja 1980-luvulla Dublin Zoon vallabikanta kasvoi niin suureksi, että seitsemän eläintä laivattiin kalastusveneillä täydentämään Lambayn kantaa. Isoisän aikaan 1873 saarella ei ollut ainuttakaan vallabia – Australian pussieläimet saapuivat Irlantiin vasta kahdeksankymmentä vuotta myöhemmin, ja koko idea eläintarhasaaresta oli vielä kaukana tulevaisuudessa. Nykyään Lambay on yksi harvoista paikoista Euroopassa, jossa luonnonvarainen vallabikanta lisääntyy vapaana.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-fingal-917c6ac2.jpg",
+          lahde: "Михал Орела, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Михал Орела",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lambay_Island,_Co._Dublin.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-fingal-917c6ac2.jpg",
     },
     Galway: {
       lyhyt: 'Connemaran Kylemoren linna on ollut vuodesta 1920 luostari, jonka perustivat ensimmäisen maailmansodan aikana Belgiasta paenneet nunnat.',
+      pitka: `Connemaran Kylemoren linna on toiminut vuodesta 1920 benediktiiniläisluostarina, jonka perustivat Belgian Ypresistä paenneet nunnat: heidän vuosisataisen luostarinsa tuhosi ensimmäisen maailmansodan pommitus, Munsterin fisiliöörit pelastivat heidät raunioista, ja matka turvaan vei heidät lopulta Englannin kautta Kylemoreen joulukuussa 1920. Linnan rakennutti alun perin manchesterilainen liikemies Mitchell Henry vaimolleen Margaretille, ja se valmistui 1871 – vain kaksi vuotta ennen isoisän matkaa. Isoisän kulkiessa Euroopassa 1873 linna oli siis vasta tuoreena valmistunut yksityiskoti, eikä kukaan aavistanut, että jo seuraavana vuonna Margaret kuolisi Egyptin-matkalla saamaansa kuumeeseen ja että linnan tulevaisuus olisi lopulta luostari sotapakolaisille toiselta puolelta Eurooppaa. Nykyään linna on Irlannin vierailluimpia nähtävyyksiä, ja sen viktoriaaninen muuripuutarha on entisöity alkuperäiseen loistoonsa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-galway-fd0df9b3.jpg",
+          lahde: "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "JoachimKohler-HB",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:View_of_Kylemore_Abbey_and_Pollacappall_Lough_from_the_slope_of_Diamond_Hill_(2014).jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-galway-fd0df9b3.jpg",
     },
     Kerry: {
       lyhyt: 'Killarneyn kansallispuisto oli Irlannin ensimmäinen, ja sen tammimetsissä elää mantereen ainoa saksanhirvilauma.',
+      pitka: `Killarneyn kansallispuisto syntyi 1932, kun Muckross-tilan silloiset omistajat lahjoittivat maat uudelle Irlannin valtiolle – siitä tuli maan ensimmäinen kansallispuisto. Sen tammi- ja pyökkimetsissä elää mantereen ainoa alkuperäinen jalohirvilauma, jonka juuret ulottuvat kivikaudelle asti, kun taas kaikki muut Irlannin hirvikannat polveutuvat myöhemmin tuoduista eläimistä. Isoisän aikaan 1873 puistoa ei vielä ollut olemassa – Muckross oli tuolloin yhä Herbertin suvun yksityinen tila, joka oli velkaantunut pahoin valmistellessaan kartanoa liian ylellisesti kuningatar Viktorian vierailua varten 1861, ja tila luisui pois suvun käsistä vuosikymmenten sisällä. Nykyään yli sadan neliökilometrin puisto järvineen ja vuorineen on yksi Irlannin suosituimmista luontokohteista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-kerry-26b08f46.jpg",
+          lahde: "Marco Ober, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Marco Ober",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Ladies_View_in_summer,_Ring_of_Kerry,_Killarney_National_Park.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-kerry-26b08f46.jpg",
     },
     Kildare: {
       lyhyt: 'Curraghin tasangolla ajetaan kaikki viisi Irlannin klassikkolaukkaa – tarun mukaan Pyhä Brigid sai maan peittämällä sen viitallaan.',
+      pitka: `Curraghin viidentuhannen eekkerin avoin tasanko Kildaressa on Irlannin hevoskasvatuksen sydän, ja siellä ajetaan vuosittain kaikki maan viisi klassikkolaukkaa, muun muassa Irish Derby. Tarun mukaan Pyhä Brigid sai 400-luvulla kuningaskunnalta niin paljon maata kuin hänen viittansa peittäisi – ja kun viitta levisi maahan, se peitti yllättäen koko Curraghin tasangon. Isoisän aikaan 1873 tasangolla oli jo pitkään toiminut sekä kilparata että brittiarmeijan suuri Curragh Camp -leiri, joka oli perustettu Krimin sodan tarpeisiin vasta vajaat kaksikymmentä vuotta aiemmin, 1855. Nykyään radalla kilpaillaan yhä samalla tasangolla, jonka legenda antoi kerran yhdelle pyhimykselle.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-kildare-4d37f6ef.jpg",
+          lahde: "James Allan, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "James Allan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Road_across_the_Curragh_-_geograph.org.uk_-_902903.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-kildare-4d37f6ef.jpg",
     },
     Kilkenny: {
       lyhyt: 'Kilkenny on hurlingin mahtikreivikunta: se on voittanut lajin All-Ireland-mestaruuden 36 kertaa, enemmän kuin kukaan muu.',
+      pitka: `Kilkenny on hurlingin ehdoton mahtimaakunta: se on voittanut lajin All-Ireland-mestaruuden 36 kertaa, enemmän kuin mikään toinen kreivikunta koko Irlannissa, viimeksi 2015. Nykyinen kilpailu, All-Ireland Senior Hurling Championship, käynnistyi kuitenkin vasta 1887, kolme vuotta sen jälkeen kun Gaelic Athletic Association perustettiin vaalimaan irlantilaisia kansallisurheilulajeja. Isoisän matkan aikaan 1873 koko järjestäytynyt hurling oli vielä tulevaisuudessa – GAA:ta ei ollut edes ajateltu, ja lajia pelattiin hajanaisin, paikallisin säännöin ilman yhtenäistä mestaruutta. Nykyään Kilkennyn musta-keltaiset paidat ovat lajin arvostetuin näky, ja lapset harjoittelevat lyöntejä pihoilla jo ennen kuin oppivat lukemaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-kilkenny-3e4fbcc0.jpg",
+          lahde: "Matthew Chadwick, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Matthew Chadwick",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Kilkenny_Castle_-_geograph.org.uk_-_5917734.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-kilkenny-3e4fbcc0.jpg",
     },
     Laoighis: {
       lyhyt: 'Stradbally Hallin kartanon mailla järjestetään joka vuosi Electric Picnic -festivaali, jota on kutsuttu Irlannin Glastonburyksi.',
+      pitka: `Stradbally Hallin kartanon mailla on järjestetty vuodesta 2004 Electric Picnic -festivaali, jota on kutsuttu Irlannin vastineeksi Glastonburylle ja joka on palkittu useita kertoja Euroopan parhaana festivaalina. Ensimmäinen kerta oli vielä yksipäiväinen tapahtuma, mutta seuraavana vuonna siitä kasvoi koko viikonlopun mittainen, ja nykyään paikalle leiriytyy kymmeniätuhansia kävijöitä joka syksy. Tapahtumalla ei ole mitään yhteyttä isoisän vuoden 1873 matkaan – nykyaikainen festivaalikulttuuri syntyi vasta 1900-luvun jälkipuoliskolla, yli sata vuotta isoisän jälkeen. Kartanon puistomaisema, jossa nykyään soi elektroninen musiikki, oli tuolloin vielä hiljainen, yksityinen maatila.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-laoighis-3baec8e6.jpg",
+          lahde: "Lynn.pinkie, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Lynn.pinkie",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rock_of_Dunamase_Front.JPG",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-laoighis-3baec8e6.jpg",
     },
     Leitrim: {
       lyhyt: 'Leitrim ulottuu mereen vain Tullaghanin kohdalla, ja sen 4,7 kilometrin rantaviiva on Irlannin kreivikunnista lyhyin.',
+      pitka: `Leitrim koskettaa merta vain yhdessä pienessä pisteessä, Tullaghanin kylässä, jonka noin 4,7 kilometrin pituinen rantaviiva on lyhyin kaikista Irlannin merta koskettavista kreivikunnista. Rannalta on löydetty myrskyn paljastama muinainen korkea risti, joka pystytettiin uudelleen paikalliselle maalle 1778 ja jonka uskotaan olleen peräisin kauan sitten kadonneesta rantaluostarista. Isoisän aikaan 1873 risti oli seisonut paikallaan jo lähes sata vuotta, ja Tullaghanin kapea rantakaistale oli yhtä syrjäinen kalastajakylä kuin nykyäänkin. Nykyään Tullaghan mainostaa itseään ylpeästi Irlannin lyhyimmän rantaviivan kylänä, ja matkailijat pysähtyvät ottamaan kuvan kyltistä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-leitrim-f98491f8.jpg",
+          lahde: "Kenneth Allen, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Kenneth Allen",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Lough_Allen,_County_Leitrim_-_geograph.org.uk_-_3696637.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-leitrim-f98491f8.jpg",
     },
     Limerick: {
       lyhyt: 'Foynesin lentovenesatamassa kokki Joe Sheridan lorautti 1943 viskiä kohmeisten matkustajien kahviin – näin syntyi Irish coffee.',
+      pitka: `Foynesin lentovenesatamassa keksittiin talvella 1943 irlantilainen kahvi: kun New Yorkiin matkalla ollut lentovene joutui huonon sään takia kääntymään takaisin, kokki Joe Sheridan lämmitti pettyneet matkustajat kaatamalla viskiä kahviin ja lisäämällä päälle vaahdotettua kermaa. Kun eräs matkustaja kysyi, oliko kyseessä brasilialaista kahvia, Sheridan vastasi kuuluisasti: ei, tämä on irlantilaista kahvia. Isoisän matkan aikaan 1873 Foynes oli vielä vaatimaton kalastajakylä Shannon-joen suistossa – sen suuri hetki koittaisi vasta 1930-luvulla, kun siitä tuli Euroopan tärkein lentovenesatama, ja Sheridanin keksintö syntyisi vielä seitsemänkymmentä vuotta isoisän jälkeen. Nykyään Foynesin lentovenemuseo tarjoilee alkuperäisen reseptin mukaista irlantilaista kahvia jokaiselle vierailijalle.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-limerick-f912b8af.jpg",
+          lahde: "Roger McLachlan, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Roger McLachlan",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Foynes_Flying_Boat_Museum_-_geograph.org.uk_-_224545.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-limerick-f912b8af.jpg",
     },
     Longford: {
       lyhyt: 'Corlean suolta kaivettiin esiin rautakautinen tammilankkutie, jonka puut kaadettiin 148–147 eaa. – samaan aikaan kun Karthagoa piiritettiin.',
+      pitka: `Corlean suolta kaivettiin esiin rautakautinen tammilankkutie, togher, jonka puut kaadettiin dendrokronologisten tutkimusten mukaan täsmälleen vuosina 148–147 eaa. – samaan aikaan kun Rooma piiritti Karthagoa kolmannessa puunilaissodassa toisella puolella Eurooppaa. Vähintään kilometrin pituinen, noin kolmimetrisistä tammipölkyistä koottu tie oli aikanaan yksi Euroopan suurimmista tunnetuista rautakautisista puurakennelmista. Isoisän aikaan 1873 tie makasi yhä suon alla löytämättömänä – se paljastui vasta 1984, kun turvetta nostava kone raapaisi sitä esiin, yli kaksituhatta vuotta rakentamisensa jälkeen ja yli sata vuotta isoisän matkan jälkeen. Nykyään puinen tie on katettu ja esillä Corlean vierailukeskuksessa, yhtenä Euroopan parhaiten säilyneistä esihistoriallisista teistä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-longford-e59bf520.jpg",
+          lahde: "milezero, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "milezero",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Corlea_Trackway.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-longford-e59bf520.jpg",
     },
     Louth: {
       lyhyt: 'Louth on Irlannin pienin kreivikunta, ja Droghedan Pyhän Pietarin kirkossa on vuodesta 1921 säilytetty pyhimys Oliver Plunkettin päätä.',
+      pitka: `Louth on pinta-alaltaan Irlannin pienin kreivikunta, mutta Droghedan Pyhän Pietarin kirkkoon kokoontuu silti pyhiinvaeltajia ympäri maailmaa katsomaan yhtä maan omalaatuisimmista nähtävyyksistä: pyhimyksenä pidetyn Oliver Plunkettin säilynyttä päätä, joka on ollut esillä kirkossa vuodesta 1921. Plunkett oli katolinen arkkipiispa, joka teloitettiin Lontoossa 1681 keksityin syytöksin – viimeisenä katolisena marttyyrina, joka kuoli Englannissa. Isoisän matkan aikaan 1873 pää oli jo lähes 200 vuotta vanha ja ollut säilytettynä useissa eri paikoissa Euroopassa, mutta se saapui nykyiseen kotiinsa Droghedaan vasta vuosikymmeniä isoisän matkan jälkeen. Nykyään kirkon pääsisäänkäynnin lähellä oleva pyhäinjäännös on yhä Louthin tunnetuimpia matkailukohteita.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-louth-11529890.jpg",
+          lahde: "Albert Bridge, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Albert Bridge",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:The_Boyne_viaduct,_Drogheda.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-louth-11529890.jpg",
     },
     Mayo: {
       lyhyt: 'Achill on Irlannin suurin saari, ja sen Croaghaunin merijyrkänteet ovat maan korkeimmat – mantereelle pääsee kääntösiltaa pitkin.',
+      pitka: `Achill on Irlannin suurin saari, ja sen Croaghaunin merijyrkänteet kohoavat 688 metriin – Irlannin korkeimmat ja Euroopankin mittakaavassa kolmanneksi korkeimmat, heti Norjan ja Färsaarten jyrkänteiden jälkeen. Mantereelle pääsee nykyään Michael Davitt -kääntösiltaa pitkin, joka on nimetty maareformiliikkeen johtajan mukaan. Isoisän aikaan 1873 saarelle ei ollut minkäänlaista siltaa – ensimmäinen kääntösilta rakennettiin vasta 1888, viisitoista vuotta isoisän matkan jälkeen, ja sitä ennen saaren asukkaat kulkivat mantereelle veneellä tai kahlaamalla matalikon yli. Nykyään saarella asuu vain murto-osa entisestä väestöstä, mutta jyrkänteet ja hiekkarannat houkuttelevat yhä enemmän kävijöitä joka vuosi.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-mayo-cf62f4b7.jpg",
+          lahde: "Colin Park, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Colin Park",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Keem_Strand,_Achill_Island_-_geograph.org.uk_-_5220485.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-mayo-cf62f4b7.jpg",
     },
     Meath: {
       lyhyt: 'Trimin linna on Irlannin suurin normannilinna, ja elokuvassa Braveheart se esitti muurien ympäröimää Yorkia.',
+      pitka: `Trimin linna Boynen rannalla on Irlannin suurin ja parhaiten säilynyt anglonormannilainen linna, rakennettu jo 1170-luvulla pian normannien saavuttua Irlantiin. Sen muurit tulivat maailmankuuluiksi 1995, kun ne toimivat kuvauspaikkana elokuvassa Braveheart – päälinnasta tehtiin Lontoon Tower ja muureista keskiaikaisen Yorkin kaupunginmuurit, ja kuvauksiin osallistui noin 1700 avustajaa. Isoisän aikaan 1873 linna oli jo ollut rauniona vuosisatoja, hylätty sotilaallisesta käytöstä kauan sitten eikä sitä ollut vielä entisöity kävijöille – ajatus siitä, että sen muurien sisällä joskus kuvattaisiin liikkuvia kuvia, olisi ollut isoisälle käsittämätön. Nykyään linna on Irlannin valtion hoidossa, ja sen tornia pääsee kiipeämään opastetulla kierroksella.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-meath-1e852f22.jpg",
+          lahde: "Andrew Parnell, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Andrew Parnell",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Trim_Castle_6.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-meath-1e852f22.jpg",
     },
     Monaghan: {
       lyhyt: 'Glasloughin Castle Leslien kartanon kirkossa Paul McCartney vihittiin 2002, ja linnan hääjuhlassa oli 300 vierasta.',
+      pitka: `Glasloughin Castle Leslien kartanon yksityisessä kappelissa vihittiin 2002 Paul McCartney ja Heather Mills, ja tuhannen eekkerin tilalla järjestettyyn hääjuhlaan osallistui noin 300 vierasta, mukana muun muassa Ringo Starr ja Elton John. Leslien suku on asunut samalla tilalla jo vuodesta 1665, mutta nykyinen viktoriaaninen linnarakennus on paljon nuorempi: se valmistui vasta 1871, arkkitehti William Henry Lynnin suunnitelmien mukaan. Isoisän matkan aikaan 1873 linna oli siis vasta parin vuoden ikäinen, tuoreen näköinen uudisrakennus vanhalla suvun mailla – kukaan ei osannut kuvitella, että sen kappeliin saapuisi vuosisata myöhemmin maailman kuuluisin populaarimuusikko morsiamineen. Nykyään Castle Leslie markkinoi McCartneyn häitä yhtenä ylpeimmistä historiansa hetkistä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-monaghan-01016250.jpg",
+          lahde: "KaMGe, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "KaMGe",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Glaslough_Castle.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-monaghan-01016250.jpg",
     },
     Offaly: {
       lyhyt: 'Birrin linnan puistossa seisoo Leviathan-kaukoputki, joka oli maailman suurin 1845–1917 ja entisöitiin 1990-luvun lopulla.',
+      pitka: `Birrin linnan puistossa seisoo Leviathan-kaukoputki, jonka kreivi William Parsons rakensi 1845 – 183-senttinen peili teki siitä maailman suurimman kaukoputken aina vuoteen 1917 asti, jolloin Kalifornian Hooker-teleskooppi ohitti sen. Sen läpi kreivi havaitsi ensimmäisenä ihmiskunnan historiassa spiraaligalaksien kierteisen rakenteen, ja teleskooppi mainittiin jopa Jules Vernen romaanissa Matka Kuuhun 1865. Isoisän matkan aikaan 1873 Leviathan oli yhä maailman suurin toimiva kaukoputki, ja pysyisi sellaisena vielä 44 vuotta lisää – harvinaisen pitkä ennätys tähtitieteen historiassa. Nykyään kaukoputki on entisöity alkuperäiseen mittaansa Birr Castlen puistossa, ja sen vieressä toimiva tiedekeskus kertoo kreivin ja hänen jälkeläistensä tieteellisistä saavutuksista.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-offaly-16370e24.jpg",
+          lahde: "Dennis Turner, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Dennis Turner",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Birr_Castle_astronomical_telescope_-_geograph.org.uk_-_1362093.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-offaly-16370e24.jpg",
     },
     Roscommon: {
       lyhyt: 'Rathcroghanin kapea Oweynagat eli Kissojen luola oli tarujen mukaan portti tuonpuoleiseen, ja siihen liitetään Samhain-juhla.',
+      pitka: `Rathcroghanin muinaisen kuningaskeskuksen laidalla ammottaa kapea Oweynagat, Kissojen luola, jota keskiaikaisissa käsikirjoituksissa kutsuttiin suoraan Irlannin porttina helvettiin. Tarinaperinteen mukaan luolasta ryömi Samhain-yönä esiin hirviöitä ja henkiä, kun raja elävien ja tuonpuoleisen välillä katosi hetkeksi – ja juuri tästä myöhäissyksyn juhlasta kehittyi vuosisatojen saatossa nykyinen Halloween. Isoisän aikaan 1873 luola ja sen ympärillä rönsyilevä Rathcroghanin muinaisjäännösten kokonaisuus olivat vielä lähes tutkimattomia – arkeologinen kartoitus alkoi kunnolla vasta 1900-luvulla, kauan sen jälkeen kun paikalliset olivat jo vaalineet luolan mytologista mainetta sukupolvien ajan. Nykyään pieni portti ja kyltti opastavat harvat luolan luo, mutta suurin osa Halloweenia juhlivista ei tiedä sen alkuperästä täällä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-roscommon-48fea4a9.jpg",
+          lahde: "Gillaween, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Gillaween",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Oweynagat_cave,_Rathcroghan_Co_Roscommon.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-roscommon-48fea4a9.jpg",
     },
     Sligo: {
       lyhyt: 'Runoilija W. B. Yeats lepää Drumcliffin kirkkomaalla Benbulbenvuoren juurella – hänen jäännöksensä tuotiin Ranskasta 1948.',
+      pitka: `Runoilija W. B. Yeats haudattiin lopulta 1948 Drumcliffin kirkkomaalle Benbulbenvuoren juurelle, lähes kymmenen vuotta kuolemansa jälkeen: hän kuoli Ranskan Mentonissa 1939, ja hänen jäänteensä tuotiin Irlantiin vasta sodan jälkeen Irlannin laivaston aluksella. Hänen omista runoistaan poimitut säkeet on kaiverrettu hautakiveen hänen omien ohjeidensa mukaisesti. Isoisän matkan aikaan 1873 Yeats oli vasta kahdeksanvuotias koulupoika Dublinissa – hänen maineensa palkittuna runoilijana oli vielä vuosikymmenien päässä, saati ajatus siitä, että hänet joskus haudattaisiin kauas pohjoiseen Sligoon. Nykyään hauta on yksi Irlannin kirjallisuusmatkailun tunnetuimmista pysähdyspaikoista, ja Benbulben kohoaa taustalla samanlaisena kuin runoissa.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-sligo-fd4f2baa.jpg",
+          lahde: "Hellowiki789, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Hellowiki789",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Ben_Bulben_by_Bloom.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-sligo-fd4f2baa.jpg",
     },
     'South Dublin': {
       lyhyt: 'Montpelier Hillin laella on 1725 rakennetun metsästysmajan raunio, jossa Hellfire Clubin herrojen kerrotaan juhlineen ja jonka sanotaan kummittelevan.',
+      pitka: `Montpelier Hillin laella törröttää nykyään pelkkä kivinen raunio: vuonna 1725 sinne rakennettiin metsästysmaja parlamentin puhemiehelle William Connollylle, käyttäen materiaalina lähistöllä sijainneen muinaisen hautaröykkiön kiviä. Vuonna 1735 majasta tuli Dublinin pahamaineisen Hellfire Clubin kokoontumispaikka, ja jo 1741 sen katto tuhoutui tulipalossa – joidenkin tarinoiden mukaan se sytytettiin tahallaan, jotta paikka näyttäisi entistä helvetillisemmältä. Isoisän matkan aikaan 1873 raunio oli jo ollut kattamaton yli 130 vuotta, ja Hellfire Clubin toiminta oli hiipunut jo vuosikymmeniä sitä ennen – jäljellä oli enää kummitustarinoita ja tuulen kuluttama kivikuori Dublinin vuorten laella. Nykyään raunio on suosittu retkikohde, ja arkeologit ovat kaivaneet sen ympäriltä esiin kivikautisen hautapaikan jäänteitä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-south-dublin-afd3d1fc.jpg",
+          lahde: "Joe King, Wikimedia Commons (CC BY-SA 3.0)",
+          tekija: "Joe King",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hell_Fire_Club_Dublin_at_Dawn.jpg",
+          lisenssi: "CC BY-SA 3.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-south-dublin-afd3d1fc.jpg",
     },
     'North Tipperary': {
       lyhyt: 'Devil’s Bit -vuoren harjanteessa on lovi: tarun mukaan paholainen puraisi siitä palan, katkaisi hampaansa ja sylki palasta Cashelin kallion.',
+      pitka: `Devil’s Bit -vuoren huipulla ammottaa selvä lovi, ja legendan mukaan paholainen puraisi siitä palan hampaillaan, katkaisi hampaansa kalkkikiveen ja sylkäisi palan kauas etelään – siitä syntyi Cashelin kallio, jonka koko ja muoto vastaavat kummasti vuoren loveen jäänyttä aukkoa. Nimi ja tarina periytyvät todennäköisesti vasta 1600-luvun englantilaisilta uudisasukkailta, vaikka vuori on ollut merkittävä maamerkki paljon kauemmin. Isoisän matkan aikaan 1873 tarina oli jo parisataa vuotta vanha kansanperinne, ja vuori toimi samoin kuin nykyäänkin: näköalapaikkana, josta näkee poikkeuksellisen laajalti yli koko Tipperaryn maakunnan. Nykyään vuoren juurelle on merkitty patikointireittejä, jotka vievät loven reunalle asti.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-north-tipperary-8256ada8.jpg",
+          lahde: "Colin Park, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Colin Park",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Cross_on_Devil's_Bit_Mountain,_Co_Tipperary_-_geograph.org.uk_-_6009035.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-north-tipperary-8256ada8.jpg",
     },
     'South Tipperary': {
       lyhyt: 'Clonmelissa perustettua Bulmers-siideriä, muualla Magnersia, valmistetaan yhä kaupungin laidalla omenatarhojen keskellä.',
+      pitka: `Clonmelin laidalla, omenatarhojen keskellä, on valmistettu siideriä vuodesta 1935, jolloin paikallinen William Magner aloitti tuotannon Dowd’s Lanella – brändi tunnetaan Irlannissa nimellä Bulmers ja kansainvälisesti nimellä Magners, koska englantilainen H. P. Bulmer osti yhtiön ja toi mukanaan oman, samannimisen tuotemerkkinsä. Tehtaan pääosa siirtyi 1965 nykyiselle paikalleen Annervilleen, muutaman kilometrin päähän kaupungista itään, missä omenoita puristetaan yhä samalla seudulla. Isoisän matkan aikaan 1873 Clonmelin siideriteollisuus oli vielä kaukana tulevaisuudessa – Magnerin tuotanto alkaisi vasta yli 60 vuotta myöhemmin, ja tuolloin kaupunki tunnettiin pikemminkin viljakaupasta ja Suirin joen laivaliikenteestä. Nykyään Clonmelin omenatarhat ja tehdas ovat yksi South Tipperaryn tunnetuimmista maamerkeistä.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-south-tipperary-05ae4f66.jpg",
+          lahde: "Humphrey Bolton, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Humphrey Bolton",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:West_Gate,_Clonmel_-_geograph.org.uk_-_4198079.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-south-tipperary-05ae4f66.jpg",
     },
     Waterford: {
       lyhyt: 'Waterford on Irlannin vanhin kaupunki, ja aamiaiseksi siellä syödään jauhoisia, neliskanttisia blaa-sämpylöitä, joilla on EU:n suoja.',
+      pitka: `Waterford on viikinkien vuonna 914 perustamana Irlannin vanhin kaupunki, ja aamiaiseksi siellä syödään yhä blaata – pehmeää, neliskanttista ja jauholla pöllytettyä sämpylää, jolle Euroopan komissio myönsi suojatun maantieteellisen merkinnän 19. marraskuuta 2013. Nimitystä saavat käyttää enää vain tietyt Waterfordin alueen leipomot, ja resepti on periytynyt sukupolvelta toiselle ilman virallista kirjattua alkuperää. Isoisän matkan aikaan 1873 kaupunki oli jo lähes tuhatvuotias, ja blaa oli jo silloin tuttu paikallinen aamiaisleipä – vasta 140 vuotta myöhemmin siitä tuli virallisesti suojeltu, ainutlaatuinen tuote. Nykyään Waterfordin leipomot myyvät blaita yhä samalla reseptillä, jonka isoisänkin aikalaiset olisivat tunnistaneet.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-waterford-ba95111b.jpg",
+          lahde: "Jonathan Billinger, Wikimedia Commons (CC BY-SA 2.0)",
+          tekija: "Jonathan Billinger",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Reginald's_Tower,_Waterford_-_geograph.org.uk_-_3746750.jpg",
+          lisenssi: "CC BY-SA 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-waterford-ba95111b.jpg",
     },
     Westmeath: {
       lyhyt: 'Uisneachin kukkula lähellä Irlannin maantieteellistä keskipistettä oli taruissa saaren pyhä keskus, jossa druidit viettivät Bealtainea.',
+      pitka: `Uisneachin kukkula lähellä Irlannin maantieteellistä keskipistettä oli muinaisessa mytologiassa saaren pyhä keskus, jonne druidien kerrotaan kokoontuneen sytyttämään ensimmäisen Bealtaine-tulen. Kukkulan 182 metrin huipulta näkee poikkeuksellisen laajalle, ja maastosta on löydetty kymmeniä muinaisjäännöksiä: hautakumpuja, kivipiirejä ja pyhiä lähteitä. Isoisän matkan aikaan 1873 kukkulan arkeologinen merkitys oli vielä tuntematon tiedeyhteisölle – ensimmäiset kaivaukset tehtiin vasta 1900-luvulla, vaikka paikalliset olivat vaalineet sen mytologista mainetta suullisena perinteenä isoisän ajastakin monta sukupolvea taaksepäin. Nykyään kukkulalla vietetään jälleen Bealtaine-tulijuhlaa toukokuun alussa, pitkän tauon jälkeen.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-westmeath-6f4c8ddd.jpg",
+          lahde: "Abi Skipp, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Abi Skipp",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hill_of_Uisneach.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-westmeath-6f4c8ddd.jpg",
     },
     Wexford: {
       lyhyt: 'Hook Headin majakka on toiminut yli 800 vuotta, ja maailmassa vain Espanjan Herkuleen torni on sitä vanhempi toimiva majakka.',
+      pitka: `Hook Headin majakka Wexfordin kärjessä on toiminut jo yli 800 vuotta, ja se on maailman vanhin yhä alkuperäisessä käyttötarkoituksessaan palveleva majakkarakennus – vanhempi on enää Espanjan Herkuleen torni, joka tosin on rakennettu roomalaisen majakan paikalle myöhemmin uudelleen. Nykyisen kivitornin rakennutti 1200-luvulla normanniritari William Marshal opastamaan laivoja hänen perustamaansa New Rossin satamaan, ja majakkaa hoitivat vuosisatoja munkit ennen maallikkovahteja. Isoisän matkan aikaan 1873 torni oli jo yli 650 vuotta vanha ja poltti tuolloin hiiltä valonlähteenään – sähköistys ja nykyaikaiset linssit olivat vielä vuosikymmenien päässä. Nykyään 115 porrasta nousevaan torniin pääsee opastetulle kierrokselle, ja valo vilkkuu yhä samalla niemellä kuin isoisän aikaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-wexford-306cfc29.jpg",
+          lahde: "Athena Flickr, Wikimedia Commons (CC BY 2.0)",
+          tekija: "Athena Flickr",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Hook_Head_Lighthouse.jpg",
+          lisenssi: "CC BY 2.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by/2.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-wexford-306cfc29.jpg",
     },
     Wicklow: {
       lyhyt: 'Powerscourtin vesiputous putoaa 121 metriä, ja sen ympärille 1858 perustettuun peurapuistoon tuotiin Irlannin ensimmäiset japaninpeurat.',
+      pitka: `Powerscourtin vesiputous syöksyy 121 metrin korkeudesta ja on Irlannin toiseksi korkein vesiputous. Viereiselle Powerscourtin kartanoalueelle tuotiin 1860 Japanista Irlannin ensimmäiset japaninpeurat, yksi uros ja kolme naarasta, joista polveutuu suuri osa maan nykyisistä villeistä japaninpeurakannoista. Isoisän matkan aikaan 1873 peurat olivat olleet Irlannissa vasta kolmisentoista vuotta – tuore, eksoottinen uutuus, joka oli juuri alkanut levitä muille tiloille, muun muassa Kerryn Muckrossiin jo 1865. Nykyään vesiputouksen ympäristö on suosittu retkikohde, ja japaninpeuroja tapaa yhä metsissä ympäri Irlantia, kaukana alkuperäisestä tulokohdastaan.`,
+      kuva: [
+        {
+          osoite: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-wicklow-8bcd9f38.jpg",
+          lahde: "Barrowbob, Wikimedia Commons (CC BY-SA 4.0)",
+          tekija: "Barrowbob",
+          lahdeUrl: "https://commons.wikimedia.org/wiki/File:Powerscourt_Waterfall,_Co._Wicklow.jpg",
+          lisenssi: "CC BY-SA 4.0",
+        lisenssiUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+        },
+      ],
+      pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/irl-maakunta-wicklow-8bcd9f38.jpg",
     },
   },
   /*

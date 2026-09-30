@@ -424,7 +424,7 @@ export const ASSET_KANSIOT = {
   aarteet: 'assets/aarteet',
   nostot: 'assets/kartat/nostot',
   ihmeet: 'assets/kartat/ihmeet',
-  // Maakuntien ja maakuntasalaisuuksien pikkukuvat (löydökset 115 ja 158, Fable 26.9.2026).
+  // Maakuntien pikkukuvat (löydökset 115 ja 158, Fable 26.9.2026).
   maakunnat: 'assets/kartat/maakunnat',
 };
 
@@ -697,21 +697,73 @@ export function peilinKatkoJaljella(laji = 'kuvat') {
   return Math.max(0, (poisAsti[laji] ?? 0) - Date.now());
 }
 
-/** Peili petti: kolmannen virheen jälkeen se laji jätetään hetkeksi väliin. */
+/*
+ * ── KOLME PERÄKKÄISTÄ VIRHETTÄ, EI KOLME KOKO ISTUNNOSSA (28.9.2026) ──
+ *
+ * Laskuri nollautui ennen vain katkon vanhetessa. Kolme hajanaista
+ * verkkovirhettä pitkän pelin aikana — tai yksi Safarin taustakatko —
+ * pysäytti siksi laattojen haun 20 sekunniksi, vaikka peili vastasi
+ * koko ajan. Mitattu WebKit-savukkeella (savuke-laattaaukot, 25 %
+ * katkaistuja hakuja): katkaisija laukesi uudelleen jokaisessa
+ * ikkunassa, ja 62/72 näkyvää laattaa jäi jonoon 70 sekunniksi.
+ *
+ * Nyt onnistunut haku nollaa laskurin (`peiliToimi`), ja katkaisija
+ * laukeaa vain, kun kolme hakua peräkkäin kaatuu EIKÄ peili ole
+ * vastannut kertaakaan PEILIN_TUORE_MS:n aikana — se on peilin vika,
+ * ei yksittäinen yskähdys. Aikaehto tarvitaan, koska katkennut haku
+ * palaa heti mutta onnistunut vasta siirron jälkeen: rinnakkaisten
+ * hakujen virheet kasautuvat jonon alkuun, ja pelkkä nollaus antoi
+ * mitatusti yhä katkon joka ikkunaan (50/72 jonossa).
+ *
+ * TAUSTAKATKO EI OLE PEILIN VIKA: Safari katkaisee haut, kun sivu menee
+ * taustalle tai näyttö lukittuu. Piilossa tulleita virheitä ei lasketa,
+ * ja kun sivu palaa näkyviin, laattojen katko puretaan heti — laatat
+ * (js/pallolaatat.js) uusivat virheensä samassa tapahtumassa.
+ */
+/** Peili vastasi: peräkkäisten virheiden laskuri alkaa alusta. */
+export const PEILIN_TUORE_MS = 5000;
+const viimeisinOk = { kuvat: 0, aanet: 0, laatat: 0 };
+export function peiliToimi(laji = 'kuvat') {
+  if (!LAJIT.includes(laji) || poisAsti[laji]) return;
+  virheita[laji] = 0;
+  viimeisinOk[laji] = Date.now();
+}
+
+const piilossa = () => Boolean(globalThis.document?.hidden);
+
+/** Peili petti: kolmannen peräkkäisen virheen jälkeen se laji jätetään hetkeksi väliin. */
 export function peiliPetti(laji = 'kuvat') {
   if (!LAJIT.includes(laji) || !peiliKaytossa(laji)) return;
+  if (piilossa()) return;
   virheita[laji] += 1;
   if (virheita[laji] < VIRHERAJA) return;
+  // Peili vastasi äskettäin: virheet ovat yskähdyksiä, eivät katko.
+  if (Date.now() - viimeisinOk[laji] < PEILIN_TUORE_MS) return;
   poisAsti[laji] = Date.now() + (laji === 'laatat' ? KATKAISUN_KESTO_LAATAT_MS : KATKAISUN_KESTO_MS);
   try {
     globalThis.sessionStorage?.setItem(poisAvain(laji), String(poisAsti[laji]));
   } catch { /* ks. yllä */ }
 }
 
+/*
+ * Paluu näkyviin purkaa laattojen katkon. Kuuntelija rekisteröidään
+ * moduulin latautuessa, eli ennen laattakerroksen omaa uusintaa, joka
+ * kuuntelee samaa tapahtumaa.
+ */
+try {
+  globalThis.document?.addEventListener?.('visibilitychange', () => {
+    if (piilossa() || !poisAsti.laatat) return;
+    poisAsti.laatat = 0;
+    virheita.laatat = 0;
+    try { globalThis.sessionStorage?.removeItem(poisAvain('laatat')); } catch { /* ks. yllä */ }
+  });
+} catch { /* ei dokumenttia (testit, worker) */ }
+
 /** Vain testejä varten: nollaa katkaisijan tila. */
 export function nollaaPeili() {
   for (const laji of LAJIT) {
     virheita[laji] = 0;
+    viimeisinOk[laji] = 0;
     poisAsti[laji] = 0;
     try { globalThis.sessionStorage?.removeItem(poisAvain(laji)); } catch { /* ks. yllä */ }
   }

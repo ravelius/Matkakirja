@@ -286,7 +286,17 @@ export function jarvet(kansio, { vahinKoko = 0.4, harvennus = 0.006 } = {}) {
     else if (f.geometry.type === 'MultiPolygon') {
       for (const p of f.geometry.coordinates) lisaa(p);
     }
-    if (renkaat.length) ulos.push({ nimi: f.properties.name ?? '', renkaat });
+    // Laatikko (asteina) piirron pikselikarsintaa varten (--jarvi-pienin-px).
+    if (renkaat.length) {
+      let l0 = Infinity; let l1 = -Infinity; let b0 = Infinity; let b1 = -Infinity;
+      for (const r of renkaat) {
+        for (const [lon, lat] of r) {
+          if (lon < l0) l0 = lon; if (lon > l1) l1 = lon;
+          if (lat < b0) b0 = lat; if (lat > b1) b1 = lat;
+        }
+      }
+      ulos.push({ nimi: f.properties.name ?? '', renkaat, laatikko: [l0, b0, l1, b1] });
+    }
   }
   return ulos;
 }
@@ -305,7 +315,7 @@ export function jarvet(kansio, { vahinKoko = 0.4, harvennus = 0.006 } = {}) {
  */
 export async function keraaMaailma({
   kansio, laatikko, ruutu = 0.05, korkeuslaatikko = null, palat = null,
-  harvennus = 0.006,
+  harvennus = 0.006, jarviPienin = 0.4, jarviHarvennus = 0.006,
 }) {
   /*
    * KORKEUSLAATIKKO SAA OLLA KAPEAMPI KUIN LAATIKKO.
@@ -335,6 +345,6 @@ export async function keraaMaailma({
     meri,
     meriRenkaat: renkaat,
     rannikot: rannikotRenkaista(renkaat, { laatikko }),
-    jarvet: jarvet(kansio),
+    jarvet: jarvet(kansio, { vahinKoko: jarviPienin, harvennus: jarviHarvennus }),
   };
 }

@@ -1,0 +1,172 @@
+# Rakentaa elävän rakennuksen (dioraama) paketin ja vie sen ämpäriin.
+#
+# Päätoimittajan erä 29.9.2026 (Linnanrakentajan ehdotus): CI rakentaa
+# paketin tools/dioraama/rakenna.mjs:llä (pelkkä Node, deterministinen) ja vie
+# sen hash-kansioon dioraama/<rakennus>/<hash>/. Natiivi lukee osoittimen
+# dioraama/<rakennus>/uusin.json ja hakee paketin sen polusta, joten puolikas
+# vienti ei koskaan näy.
+#
+# OSOITIN (omistaja 30.9.2026): push mainiin rakentaa ja vie hash-kansion, mutta
+# EI vaihda osoitinta. Osoitin vaihtuu vain käsiajolla osoitin=true (kuiva=false),
+# kun Siirtoseppä on kuitannut paketin puhtaalla asennuksella. #3698:n merge vaihtoi
+# osoittimen 30.9. ilman kuittausta, koska push-ajo kirjoitti sen aina.
+#
+# hash = sha256(manifest.json) 16 ensimmäistä heksamerkkiä; manifest listaa
+# jokaisen tiedoston sha256:n, joten hash kattaa koko paketin.
+# Hash-kansiota ei ylikirjoiteta: jos se on jo ämpärissä, vain osoitin
+# tarkistetaan. Välimuisti: hash-kansio immutable, uusin.json max-age=60.
+
+name: Vie dioraama ämpäriin
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'js/dioraama/**'
+      - 'tools/dioraama/**'
+      - 'assets/dioraama/**'
+      - '.github/workflows/vie-dioraama.yml'
+  workflow_dispatch:
+    inputs:
+      rakennus:
+        description: 'Rakennus (js/dioraama/rakennukset/<nimi>.js); tyhjä = kaikki'
+        type: string
+        required: false
+        default: ''
+      kuiva:
+        description: 'Kuiva-ajo: rakenna ja listaa, ei kirjoitusta ämpäriin'
+        type: boolean
+        default: true
+      osoitin:
+        description: 'Vaihda osoitin uusin.json tähän pakettiin (vain Siirtosepän puhtaan asennuksen kuittauksen jälkeen)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vie-dioraama
+  cancel-in-progress: false
+
+jobs:
+  vie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      AWS_MAX_ATTEMPTS: '10'
+      AWS_RETRY_MODE: adaptive
+      AMPARI: ${{ secrets.R2_BUCKET }}
+      PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      JULKINEN: https://media.matkakirja.app
+      RAKENNUS: ${{ inputs.rakennus }}
+      # Push-ajo vie aina; käsiajo on oletuksena kuiva.
+      KUIVA: ${{ github.event_name == 'workflow_dispatch' && inputs.kuiva || 'false' }}
+      # Osoitin vaihtuu vain käsiajolla osoitin=true; push-ajo vie pelkän hash-kansion.
+      OSOITIN: ${{ github.event_name == 'workflow_dispatch' && inputs.osoitin || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        env:
+          TILI: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$TILI" ]                  || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "$AWS_ACCESS_KEY_ID" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "$AWS_SECRET_ACCESS_KEY" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "$AMPARI" ]                || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then echo "::error::Näitä salaisuuksia ei löydy:$puuttuu"; exit 1; fi
+
+      - name: Rakenna ja vie
+        run: |
+          set -euo pipefail
+          if [ -n "$RAKENNUS" ]; then
+            lista="$RAKENNUS"
+          else
+            lista=$(ls js/dioraama/rakennukset/*.js | xargs -n1 basename | sed 's/\.js$//')
+          fi
+          echo "## Dioraama → ämpäri" >> "$GITHUB_STEP_SUMMARY"
+          [ "$KUIVA" = "true" ] && echo "**KUIVA-AJO** — mitään ei kirjoitettu." >> "$GITHUB_STEP_SUMMARY"
+          for r in $lista; do
+            case "$r" in *[!a-z0-9-]*|'') echo "::error::rakennuksen nimi: $r"; exit 1 ;; esac
+            [ -f "js/dioraama/rakennukset/$r.js" ] || { echo "::error::ei rakennusta $r"; exit 1; }
+            node tools/dioraama/rakenna.mjs "$r" --ulos dist/dioraama
+            d="dist/dioraama/$r"
+            [ -f "$d/manifest.json" ] || { echo "::error::$d/manifest.json puuttuu"; exit 1; }
+            hash=$(sha256sum "$d/manifest.json" | cut -c1-16)
+            kohde="dioraama/$r/$hash"
+            printf '{"rakennus":"%s","hash":"%s","polku":"%s/"}\n' "$r" "$hash" "$hash" > "uusin-$r.json"
+            olemassa=$(aws s3 ls "s3://$AMPARI/$kohde/manifest.json" --endpoint-url "$PAATE" >/dev/null 2>&1 && echo kylla || echo ei)
+            {
+              echo "- **$r** → \`$kohde/\` (jo ämpärissä: $olemassa), $(find "$d" -type f | wc -l | tr -d ' ') tiedostoa, $(du -sh "$d" | cut -f1)"
+            } >> "$GITHUB_STEP_SUMMARY"
+            # Blender-tuotokset (Linnanrakentaja 30.9.): omistajan tools/dioraama/vie-blender.sh:lla lataama muuttumaton kansio
+            # kopioidaan PALVELIMELLA paketin alikansioon blender/. Lähdekansio tarkistetaan ENNEN mitään latausta, ja kohde
+            # täydennetään myös uusintaajossa: osoitin ei koskaan osoita pakettiin, jonka Blender-tiedostot puuttuvat.
+            bj="js/dioraama/rakennukset/$r/blender.json"
+            if [ -f "$bj" ]; then
+              bk=$(node -p "require('./$bj').kansio"); bn=$(node -p "require('./$bj').tiedostot.length")
+              loytyi=$(aws s3 ls "s3://$AMPARI/$bk" --recursive --endpoint-url "$PAATE" | grep -vc 'blender.json$' || true)
+              echo "  - blender: $bk ($loytyi/$bn tiedostoa ämpärissä)" >> "$GITHUB_STEP_SUMMARY"
+              if [ "$loytyi" != "$bn" ]; then
+                [ "$KUIVA" = "true" ] && { echo "::warning::$bk: ämpärissä $loytyi/$bn tiedostoa (kuiva-ajo)"; continue; }
+                echo "::error::$bk: ämpärissä $loytyi/$bn tiedostoa — omistaja ajaa ensin tools/dioraama/vie-blender.sh"; exit 1
+              fi
+            fi
+            [ "$KUIVA" = "true" ] && continue
+            if [ "$olemassa" = "ei" ]; then
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.json' \
+                --content-type application/json --cache-control 'public, max-age=31536000, immutable'
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.glb' \
+                --content-type model/gltf-binary --cache-control 'public, max-age=31536000, immutable'
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.png' \
+                --content-type image/png --cache-control 'public, max-age=31536000, immutable'
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.jpg' \
+                --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable'
+            fi
+            if [ -f "$bj" ]; then
+              # aws s3 ls palauttaa 1, kun kansiota ei vielä ole; pipefail + set -e katkaisi ajon hiljaa (30.9. ajo 36671228175).
+              kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
+              if [ "$kohteessa" != "$bn" ]; then
+                # EI palvelinkopiota: R2 ei toteuta S3:n tagikutsuja (GetObjectTagging, x-amz-tagging-directive), joita
+                # aws s3 cp s3→s3 käyttää kaikilla --copy-props-arvoilla (ajot 36672278230 ja 36673568641). Kansio ladataan
+                # ajokoneelle ja lähetetään tyypeittäin samoilla otsakkeilla kuin vie-blender.sh ne asetti.
+                tb=$(mktemp -d)
+                aws s3 cp "s3://$AMPARI/$bk" "$tb/" --recursive --endpoint-url "$PAATE" \
+                  --no-progress --only-show-errors --exclude 'blender.json'
+                for tyyppi in 'glb model/gltf-binary' 'jpg image/jpeg' 'astcm application/octet-stream'; do
+                  aws s3 cp "$tb/" "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" \
+                    --no-progress --only-show-errors --exclude '*' --include "*.${tyyppi%% *}" \
+                    --content-type "${tyyppi#* }" --cache-control 'public, max-age=31536000, immutable'
+                done
+                rm -rf "$tb"
+                kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
+              fi
+              [ "$kohteessa" = "$bn" ] || { echo "::error::$kohde/blender/: $kohteessa/$bn tiedostoa kopion jälkeen, osoitinta ei vaihdettu"; exit 1; }
+              echo "  - blender → $kohde/blender/ ($bn tiedostoa, lataus ja lähetys)" >> "$GITHUB_STEP_SUMMARY"
+            fi
+            koodi=$(curl -s -o /dev/null -w '%{http_code}' "$JULKINEN/$kohde/rakennus.json")
+            [ "$koodi" = "200" ] || { echo "::error::$JULKINEN/$kohde/rakennus.json vastasi $koodi, osoitinta ei vaihdettu"; exit 1; }
+            if [ "$OSOITIN" != "true" ]; then
+              echo "  - osoitinta EI vaihdettu (vaihto: käsiajo osoitin=true, kuiva=false, rakennus=$r → $hash/)" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
+            aws s3 cp "uusin-$r.json" "s3://$AMPARI/dioraama/$r/uusin.json" --endpoint-url "$PAATE" \
+              --content-type application/json --cache-control 'public, max-age=60'
+            echo "  - osoitin dioraama/$r/uusin.json → $hash/" >> "$GITHUB_STEP_SUMMARY"
+          done

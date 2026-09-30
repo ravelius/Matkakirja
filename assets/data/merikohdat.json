@@ -1,0 +1,1135 @@
+{
+ "$kuvaus": "Merikohdat meren koristeille (tools/tee-merikohdat.mjs, säännöt tiedoston alussa). suunta = kompassisuunta rannasta merelle; rannikon kulku ±90°.",
+ "meret": {
+  "valimeri": "Välimeri",
+  "mustameri": "Mustameri",
+  "atlantti": "Atlantti",
+  "pohjanmeri": "Pohjanmeri",
+  "kanaali": "Kanaali",
+  "itameri": "Itämeri",
+  "jaameri": "Jäämeri"
+ },
+ "maat": {
+  "ALB": {
+   "meret": [
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "valimeri",
+     "lon": 19.163,
+     "lat": 41.563,
+     "suunta": 270,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 19.363,
+     "lat": 39.988,
+     "suunta": 214,
+     "rannastaKm": 27
+    }
+   ]
+  },
+  "BEL": {
+   "meret": [
+    "pohjanmeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "pohjanmeri",
+     "lon": 2.613,
+     "lat": 51.388,
+     "suunta": 321,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "BGR": {
+   "meret": [
+    "mustameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "mustameri",
+     "lon": 28.213,
+     "lat": 43.037,
+     "suunta": 103,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "CYP": {
+   "meret": [
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "valimeri",
+     "lon": 32.263,
+     "lat": 35.313,
+     "suunta": 355,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 34.388,
+     "lat": 34.938,
+     "suunta": 101,
+     "rannastaKm": 30
+    }
+   ]
+  },
+  "DEU": {
+   "meret": [
+    "itameri",
+    "pohjanmeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 13.738,
+     "lat": 54.813,
+     "suunta": 56,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "itameri",
+     "lon": 11.413,
+     "lat": 54.263,
+     "suunta": 157,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 8.238,
+     "lat": 54.263,
+     "suunta": 257,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "DNK": {
+   "meret": [
+    "itameri",
+    "pohjanmeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 10.688,
+     "lat": 56.838,
+     "suunta": 77,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "itameri",
+     "lon": 15.413,
+     "lat": 54.838,
+     "suunta": 133,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "itameri",
+     "lon": 12.663,
+     "lat": 54.787,
+     "suunta": 158,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 9.438,
+     "lat": 57.563,
+     "suunta": 297,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 7.963,
+     "lat": 55.287,
+     "suunta": 202,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 7.663,
+     "lat": 56.638,
+     "suunta": 281,
+     "rannastaKm": 30
+    }
+   ]
+  },
+  "ESP": {
+   "meret": [
+    "atlantti",
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "atlantti",
+     "lon": -6.512,
+     "lat": 36.387,
+     "suunta": 244,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "atlantti",
+     "lon": -2.137,
+     "lat": 43.563,
+     "suunta": 12,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "atlantti",
+     "lon": -9.237,
+     "lat": 41.988,
+     "suunta": 265,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "atlantti",
+     "lon": -6.162,
+     "lat": 43.838,
+     "suunta": 8,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "valimeri",
+     "lon": 3.513,
+     "lat": 41.912,
+     "suunta": 96,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": -5.037,
+     "lat": 36.038,
+     "suunta": 56,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "valimeri",
+     "lon": -0.087,
+     "lat": 38.288,
+     "suunta": 180,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "valimeri",
+     "lon": 3.337,
+     "lat": 39.113,
+     "suunta": 132,
+     "rannastaKm": 29
+    }
+   ]
+  },
+  "EST": {
+   "meret": [
+    "itameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 21.738,
+     "lat": 58.788,
+     "suunta": 228,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "itameri",
+     "lon": 27.388,
+     "lat": 59.688,
+     "suunta": 0,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "itameri",
+     "lon": 23.563,
+     "lat": 57.588,
+     "suunta": 141,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "itameri",
+     "lon": 24.138,
+     "lat": 59.663,
+     "suunta": 292,
+     "rannastaKm": 23
+    }
+   ]
+  },
+  "FIN": {
+   "meret": [
+    "itameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 22.713,
+     "lat": 64.013,
+     "suunta": 354,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "itameri",
+     "lon": 23.063,
+     "lat": 59.563,
+     "suunta": 163,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "itameri",
+     "lon": 20.938,
+     "lat": 61.738,
+     "suunta": 265,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "itameri",
+     "lon": 26.338,
+     "lat": 60.163,
+     "suunta": 140,
+     "rannastaKm": 22
+    }
+   ]
+  },
+  "FRA": {
+   "meret": [
+    "atlantti",
+    "kanaali",
+    "pohjanmeri",
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "atlantti",
+     "lon": -4.612,
+     "lat": 47.662,
+     "suunta": 228,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "atlantti",
+     "lon": -1.687,
+     "lat": 43.713,
+     "suunta": 278,
+     "rannastaKm": 20
+    },
+    {
+     "meri": "atlantti",
+     "lon": -1.787,
+     "lat": 46.162,
+     "suunta": 247,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "atlantti",
+     "lon": -2.762,
+     "lat": 47.287,
+     "suunta": 237,
+     "rannastaKm": 20
+    },
+    {
+     "meri": "kanaali",
+     "lon": 1.212,
+     "lat": 50.388,
+     "suunta": 264,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "kanaali",
+     "lon": -5.187,
+     "lat": 48.662,
+     "suunta": 346,
+     "rannastaKm": 23
+    },
+    {
+     "meri": "kanaali",
+     "lon": -1.862,
+     "lat": 48.888,
+     "suunta": 270,
+     "rannastaKm": 22
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 2.038,
+     "lat": 51.238,
+     "suunta": 356,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 9.038,
+     "lat": 42.938,
+     "suunta": 296,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 3.288,
+     "lat": 42.738,
+     "suunta": 90,
+     "rannastaKm": 20
+    },
+    {
+     "meri": "valimeri",
+     "lon": 6.388,
+     "lat": 42.863,
+     "suunta": 144,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "valimeri",
+     "lon": 8.663,
+     "lat": 41.313,
+     "suunta": 220,
+     "rannastaKm": 29
+    }
+   ]
+  },
+  "GBR": {
+   "meret": [
+    "atlantti",
+    "kanaali",
+    "pohjanmeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "atlantti",
+     "lon": -5.087,
+     "lat": 52.713,
+     "suunta": 251,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "atlantti",
+     "lon": -0.587,
+     "lat": 61.088,
+     "suunta": 21,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "atlantti",
+     "lon": -9.037,
+     "lat": 57.713,
+     "suunta": 248,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "atlantti",
+     "lon": -5.387,
+     "lat": 49.738,
+     "suunta": 201,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "kanaali",
+     "lon": -3.162,
+     "lat": 50.363,
+     "suunta": 96,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "kanaali",
+     "lon": 1.087,
+     "lat": 50.738,
+     "suunta": 152,
+     "rannastaKm": 22
+    },
+    {
+     "meri": "kanaali",
+     "lon": -1.012,
+     "lat": 50.412,
+     "suunta": 151,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "kanaali",
+     "lon": -5.187,
+     "lat": 50.787,
+     "suunta": 319,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": -2.512,
+     "lat": 60.063,
+     "suunta": 251,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 1.738,
+     "lat": 51.287,
+     "suunta": 112,
+     "rannastaKm": 22
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": -1.262,
+     "lat": 55.513,
+     "suunta": 82,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": -1.537,
+     "lat": 57.813,
+     "suunta": 53,
+     "rannastaKm": 28
+    }
+   ]
+  },
+  "GRC": {
+   "meret": [
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "valimeri",
+     "lon": 24.338,
+     "lat": 35.762,
+     "suunta": 39,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 19.363,
+     "lat": 39.887,
+     "suunta": 299,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "valimeri",
+     "lon": 25.438,
+     "lat": 40.688,
+     "suunta": 337,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "valimeri",
+     "lon": 28.513,
+     "lat": 36.288,
+     "suunta": 107,
+     "rannastaKm": 28
+    }
+   ]
+  },
+  "HRV": {
+   "meret": [
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "valimeri",
+     "lon": 13.338,
+     "lat": 45.013,
+     "suunta": 251,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 18.088,
+     "lat": 42.313,
+     "suunta": 213,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "valimeri",
+     "lon": 15.663,
+     "lat": 43.463,
+     "suunta": 180,
+     "rannastaKm": 22
+    }
+   ]
+  },
+  "IRL": {
+   "meret": [
+    "atlantti"
+   ],
+   "kohdat": [
+    {
+     "meri": "atlantti",
+     "lon": -10.562,
+     "lat": 52.412,
+     "suunta": 312,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "atlantti",
+     "lon": -7.037,
+     "lat": 55.588,
+     "suunta": 32,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "atlantti",
+     "lon": -5.712,
+     "lat": 52.738,
+     "suunta": 119,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "atlantti",
+     "lon": -10.212,
+     "lat": 54.513,
+     "suunta": 333,
+     "rannastaKm": 28
+    }
+   ]
+  },
+  "ISL": {
+   "meret": [
+    "atlantti",
+    "jaameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "atlantti",
+     "lon": -22.437,
+     "lat": 63.613,
+     "suunta": 174,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "atlantti",
+     "lon": -12.987,
+     "lat": 65.588,
+     "suunta": 74,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "atlantti",
+     "lon": -24.362,
+     "lat": 66.188,
+     "suunta": 299,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "atlantti",
+     "lon": -16.662,
+     "lat": 63.563,
+     "suunta": 167,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "jaameri",
+     "lon": -18.562,
+     "lat": 66.513,
+     "suunta": 257,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "jaameri",
+     "lon": -23.562,
+     "lat": 66.638,
+     "suunta": 318,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "jaameri",
+     "lon": -13.987,
+     "lat": 66.313,
+     "suunta": 101,
+     "rannastaKm": 30
+    }
+   ]
+  },
+  "ITA": {
+   "meret": [
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "valimeri",
+     "lon": 16.388,
+     "lat": 41.613,
+     "suunta": 132,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 12.363,
+     "lat": 35.288,
+     "suunta": 212,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "valimeri",
+     "lon": 7.813,
+     "lat": 43.563,
+     "suunta": 172,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "valimeri",
+     "lon": 8.463,
+     "lat": 38.762,
+     "suunta": 218,
+     "rannastaKm": 21
+    }
+   ]
+  },
+  "LTU": {
+   "meret": [
+    "itameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 20.663,
+     "lat": 55.838,
+     "suunta": 270,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "LVA": {
+   "meret": [
+    "itameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 21.238,
+     "lat": 57.563,
+     "suunta": 297,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "itameri",
+     "lon": 24.063,
+     "lat": 57.338,
+     "suunta": 270,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "itameri",
+     "lon": 20.538,
+     "lat": 56.188,
+     "suunta": 264,
+     "rannastaKm": 28
+    }
+   ]
+  },
+  "MLT": {
+   "meret": [
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "valimeri",
+     "lon": 14.238,
+     "lat": 35.663,
+     "suunta": 219,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "MNE": {
+   "meret": [
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "valimeri",
+     "lon": 18.963,
+     "lat": 41.787,
+     "suunta": 228,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "NLD": {
+   "meret": [
+    "pohjanmeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "pohjanmeri",
+     "lon": 4.288,
+     "lat": 52.763,
+     "suunta": 290,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 6.238,
+     "lat": 53.763,
+     "suunta": 353,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 3.087,
+     "lat": 51.662,
+     "suunta": 298,
+     "rannastaKm": 29
+    }
+   ]
+  },
+  "NOR": {
+   "meret": [
+    "atlantti",
+    "jaameri",
+    "pohjanmeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "atlantti",
+     "lon": 20.163,
+     "lat": 70.438,
+     "suunta": 48,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "atlantti",
+     "lon": 4.113,
+     "lat": 61.013,
+     "suunta": 265,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "atlantti",
+     "lon": 11.363,
+     "lat": 65.738,
+     "suunta": 293,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "atlantti",
+     "lon": 13.613,
+     "lat": 68.563,
+     "suunta": 334,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "jaameri",
+     "lon": 24.413,
+     "lat": 71.288,
+     "suunta": 332,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "jaameri",
+     "lon": 31.863,
+     "lat": 70.288,
+     "suunta": 90,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "jaameri",
+     "lon": 28.788,
+     "lat": 71.263,
+     "suunta": 41,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 5.488,
+     "lat": 58.338,
+     "suunta": 208,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 10.538,
+     "lat": 58.863,
+     "suunta": 130,
+     "rannastaKm": 26
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 4.388,
+     "lat": 60.488,
+     "suunta": 245,
+     "rannastaKm": 26
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 8.288,
+     "lat": 57.863,
+     "suunta": 160,
+     "rannastaKm": 30
+    }
+   ]
+  },
+  "POL": {
+   "meret": [
+    "itameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 19.113,
+     "lat": 54.787,
+     "suunta": 56,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "itameri",
+     "lon": 14.488,
+     "lat": 54.238,
+     "suunta": 344,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "itameri",
+     "lon": 16.688,
+     "lat": 54.838,
+     "suunta": 341,
+     "rannastaKm": 29
+    }
+   ]
+  },
+  "PRT": {
+   "meret": [
+    "atlantti"
+   ],
+   "kohdat": [
+    {
+     "meri": "atlantti",
+     "lon": -9.187,
+     "lat": 37.238,
+     "suunta": 283,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "atlantti",
+     "lon": -9.212,
+     "lat": 41.713,
+     "suunta": 270,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "atlantti",
+     "lon": -9.437,
+     "lat": 39.563,
+     "suunta": 331,
+     "rannastaKm": 22
+    },
+    {
+     "meri": "atlantti",
+     "lon": -7.512,
+     "lat": 36.863,
+     "suunta": 148,
+     "rannastaKm": 29
+    }
+   ]
+  },
+  "ROU": {
+   "meret": [
+    "mustameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "mustameri",
+     "lon": 29.213,
+     "lat": 44.537,
+     "suunta": 141,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "RUS": {
+   "meret": [
+    "itameri",
+    "jaameri",
+    "mustameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 26.513,
+     "lat": 60.063,
+     "suunta": 270,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "jaameri",
+     "lon": 43.113,
+     "lat": 66.863,
+     "suunta": 56,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "jaameri",
+     "lon": 31.988,
+     "lat": 70.213,
+     "suunta": 0,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "jaameri",
+     "lon": 35.388,
+     "lat": 64.563,
+     "suunta": 66,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "jaameri",
+     "lon": 38.388,
+     "lat": 68.813,
+     "suunta": 47,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "mustameri",
+     "lon": 37.463,
+     "lat": 45.863,
+     "suunta": 332,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "mustameri",
+     "lon": 39.588,
+     "lat": 43.313,
+     "suunta": 213,
+     "rannastaKm": 30
+    },
+    {
+     "meri": "mustameri",
+     "lon": 37.863,
+     "lat": 44.287,
+     "suunta": 228,
+     "rannastaKm": 29
+    }
+   ]
+  },
+  "SWE": {
+   "meret": [
+    "itameri",
+    "pohjanmeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "itameri",
+     "lon": 20.338,
+     "lat": 63.438,
+     "suunta": 174,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "itameri",
+     "lon": 13.063,
+     "lat": 55.113,
+     "suunta": 199,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "itameri",
+     "lon": 19.763,
+     "lat": 58.463,
+     "suunta": 67,
+     "rannastaKm": 28
+    },
+    {
+     "meri": "itameri",
+     "lon": 17.613,
+     "lat": 60.988,
+     "suunta": 98,
+     "rannastaKm": 20
+    },
+    {
+     "meri": "pohjanmeri",
+     "lon": 10.988,
+     "lat": 58.138,
+     "suunta": 270,
+     "rannastaKm": 25
+    }
+   ]
+  },
+  "TUR": {
+   "meret": [
+    "mustameri",
+    "valimeri"
+   ],
+   "kohdat": [
+    {
+     "meri": "mustameri",
+     "lon": 36.338,
+     "lat": 41.763,
+     "suunta": 48,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "mustameri",
+     "lon": 28.313,
+     "lat": 41.713,
+     "suunta": 46,
+     "rannastaKm": 20
+    },
+    {
+     "meri": "mustameri",
+     "lon": 41.113,
+     "lat": 41.488,
+     "suunta": 323,
+     "rannastaKm": 21
+    },
+    {
+     "meri": "mustameri",
+     "lon": 32.313,
+     "lat": 42.013,
+     "suunta": 330,
+     "rannastaKm": 29
+    },
+    {
+     "meri": "valimeri",
+     "lon": 30.763,
+     "lat": 36.238,
+     "suunta": 116,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "valimeri",
+     "lon": 25.763,
+     "lat": 39.788,
+     "suunta": 254,
+     "rannastaKm": 20
+    },
+    {
+     "meri": "valimeri",
+     "lon": 35.638,
+     "lat": 36.137,
+     "suunta": 248,
+     "rannastaKm": 22
+    },
+    {
+     "meri": "valimeri",
+     "lon": 28.788,
+     "lat": 40.762,
+     "suunta": 323,
+     "rannastaKm": 21
+    }
+   ]
+  },
+  "UKR": {
+   "meret": [
+    "mustameri"
+   ],
+   "kohdat": [
+    {
+     "meri": "mustameri",
+     "lon": 31.188,
+     "lat": 46.338,
+     "suunta": 270,
+     "rannastaKm": 25
+    },
+    {
+     "meri": "mustameri",
+     "lon": 37.263,
+     "lat": 46.688,
+     "suunta": 194,
+     "rannastaKm": 23
+    },
+    {
+     "meri": "mustameri",
+     "lon": 30.113,
+     "lat": 45.287,
+     "suunta": 90,
+     "rannastaKm": 29
+    }
+   ]
+  }
+ }
+}

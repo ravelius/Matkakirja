@@ -81,6 +81,18 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
+
+/*
+ * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
+ * avaus aloittaa Livian A–C-jakson (js/linssit/pulu-tervetulo.js): Livia
+ * puhuu, tausta väistyy, kamera pyörähtää ja valokuva aukeaa. Tämä savuke
+ * mittaa muuta, joten jakso merkitään kuulluksi jokaisessa kontekstissa;
+ * jakson oma savuke on tools/savukkeet/savuke-astro-pulu.mjs.
+ */
+const PULUN_TERVETULO_KUULTU = () => {
+  try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
+};
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
@@ -111,19 +123,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8754, r));
 
-/*
- * Playwright kahdesta paikasta (README: älä kirjoita kiinteää
- * ../../node_modules-polkua).
- */
-let paketti = null;
-for (const polku of [process.env.PLAYWRIGHT_JS, join(JUURI, 'node_modules', 'playwright', 'index.js'),
-  '/opt/node22/lib/node_modules/playwright/index.js']) {
-  if (!polku) continue;
-  paketti = await import(polku).catch(() => null);
-  if (paketti) break;
-}
-const chromium = paketti?.chromium ?? paketti?.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 const NAKYMAT = {
   puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true },
@@ -314,11 +314,14 @@ async function avaaPeli(s) {
 /*
  * LINSSI AUKI PELAAJAN OMILLA ELEILLÄ (ks. tiedoston alku, kohta A).
  *
- * Kolme napautusta, samat kuin pelaajalla:
- *   1. #turn-pill avaa matkalaukun (js/ui.js, index.html),
- *   2. button[data-linssi="satelliitti"] valitsee ruudun laukussa
- *      (js/ui.js linssiLiuska) — tämä EI vielä sytytä linssiä,
- *   3. .linssi-aktivoi sytyttää sen ja sulkee laukun (aktivoiLinssi).
+ * Neljä napautusta, samat kuin pelaajalla (pillerivalikkouudistus,
+ * omistaja 29.9.2026: matkalaukku korvautui pillerivalikolla, jonka
+ * päänäkymästä pitää ERIKSEEN avata Linssit-alanäkymä):
+ *   1. #turn-pill avaa pillerivalikon (js/ui.js avaaPilleriValikko),
+ *   2. #pilleri-linssit-btn vaihtaa näkymän Linssit-alanäkymään,
+ *   3. button[data-linssi="satelliitti"] valitsee ruudun (js/ui.js
+ *      esikatseleLinssi) — tämä EI vielä sytytä linssiä,
+ *   4. .linssi-aktivoi sytyttää sen ja sulkee valikon (aktivoiLinssi).
  *
  * Jos jokin näistä puuttuu, savuke kaatuu tähän — ja juuri se on
  * tarkoitus: silloin pelaaja ei pääse linssiin lainkaan, eikä muilla
@@ -326,7 +329,9 @@ async function avaaPeli(s) {
  */
 async function avaaLinssiEleella(s) {
   await s.click('#turn-pill');
-  await s.waitForTimeout(1200);
+  await s.waitForTimeout(600);
+  await s.click('#pilleri-linssit-btn');
+  await s.waitForTimeout(600);
   const ruutu = s.locator('button[data-linssi="satelliitti"]');
   await ruutu.waitFor({ timeout: 15000 });
   await ruutu.scrollIntoViewIfNeeded();
@@ -339,7 +344,10 @@ async function avaaLinssiEleella(s) {
   await s.waitForTimeout(4500);
   return s.evaluate(() => ({
     linssi: window.matkakirja.ui.linssiValittu,
-    laukku: Boolean(document.getElementById('passport-dialog')?.open),
+    // #passport-dialog korvautui pillerivalikolla (omistaja 29.9.2026):
+    // "auki" on nyt #paavalikko ilman hidden-attribuuttia.
+    laukku: document.getElementById('paavalikko')
+      ? !document.getElementById('paavalikko').hidden : false,
   }));
 }
 
@@ -371,6 +379,7 @@ async function vastakoe(s) {
 async function ajaNakyma(nimi) {
   const virheet = [];
   const konteksti = await selain.newContext({ ...NAKYMAT[nimi], serviceWorkers: 'block' });
+  await konteksti.addInitScript(PULUN_TERVETULO_KUULTU);
   const s = await konteksti.newPage();
   s.on('pageerror', (e) => virheet.push(String(e)));
   await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());

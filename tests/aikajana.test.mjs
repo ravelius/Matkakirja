@@ -1139,7 +1139,7 @@ test('jokaisella pysäkillä on generoitu muotokuva omassa kansiossaan', () => {
       const sarja = /kohtaamiset\/isoisa\/isoisa-[a-z]+-aged-r20260905-v\d\.jpg$/;
       assert.ok(t.kuva?.ulkoinen && sarja.test(t.kuva.osoite), 'merkkipaalun muotokuva on isoisä kaukaa (sarja r20260905)');
       assert.equal(t.kuva.asento, '30% top', 'vaakakuvan 4:5-rajaus osuu hahmoon');
-      assert.equal(t.kuva.lahde, 'Kuvaputken generoitu valokuva');
+      assert.equal(t.kuva.lahde, 'Matkakirjan havainnekuva');
       assert.ok(t.ilmio?.ulkoinen && sarja.test(t.ilmio.osoite), 'merkkipaalun ilmiökuva on sarjasta r20260905');
       for (const k of t.ilmioSarja ?? []) assert.ok(sarja.test(k.osoite), 'kuvakierron kuvat ovat sarjasta r20260905');
       for (const k of [t.kuva, t.ilmio, ...(t.ilmioSarja ?? [])]) {
@@ -1788,8 +1788,9 @@ test('rikkinäinen karttalaatta ei maalaa selaimen kysymysmerkkiä kartalle', ()
   // WebKit piirtää saapumattoman <image>-elementin tilalle sinisen
   // laatikon ja kysymysmerkin, venytettynä laatan koko alaan
   // (omistajan kuvakaappaus 4.9.2026). Osoitteen poisto vie merkin.
+  // Ikkuna 2600 (28.9.2026, #3516): väliin tuli virhelaatan uusinnan selitys.
   const PYRAMIDI = readFileSync(new URL('../js/laattapyramidi.js', import.meta.url), 'utf8');
-  assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,1600}kuva\.removeAttribute\('href'\);/);
+  assert.match(PYRAMIDI, /mittarit\.epaonnistui \+= 1;[\s\S]{0,2600}kuva\.removeAttribute\('href'\);/);
 });
 
 

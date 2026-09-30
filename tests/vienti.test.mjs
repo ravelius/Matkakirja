@@ -181,7 +181,6 @@ test('kokoelmat täsmäävät paketteihin ja viittaukset osuvat', () => {
     kohdekartat: avaimia(ns('maakartat.js').KAUPUNKIKARTAT),
     maamerkit: JSON.parse(readFileSync(join(JUURI, 'tools/vienti/maamerkit.json'), 'utf8')).rivit.length,
     aluenimet: ((a) => a.nimet.length + a.valtameret.length)(JSON.parse(readFileSync(join(JUURI, 'assets/data/aluenimet-natiivi.json'), 'utf8'))),
-    maakuntasalaisuudet: Object.keys(ns('maakuntasalaisuudet.js').MAAKUNTASALAISUUDET).length,
     reitit1873: JSON.parse(gunzipSync(readFileSync(join(JUURI, 'tools/vienti/reitit1873.json.gz'))).toString('utf8')).reitit.length,
     merinimet: ns('nimisto-1873.js').NIMISTO_1873.filter((n) => n.luokka === 'meri' && (!n.aika || n.aika === 'pysyva')).length,
     tyohuonetilastot: 7, // mantereet (js/tyohuone-tilastot.js MANTEREET)
@@ -303,6 +302,14 @@ test('muutosloki-natiivi: rivien tarkistus ja järjestys', async () => {
     { versio: '1.0.0 (9)', paiva: '2026-09-24', teksti: 'b' },
   ]);
   assert.deepEqual(j.map((r) => r.versio), ['1.0.0 (10)', '1.0.0 (9)', '0.1.0 (1)']);
+  // Omistaja 30.9.2026: kiinteä versio 1.1 + ordinaali-build on uudempi kuin saman päivän 1.0.72 (aikaleima).
+  assert.deepEqual(tarkistaMuutosloki([{ ...hyva, versio: '1.1 (73)' }]), []);
+  const k = jarjesta([
+    { versio: '1.0.72 (202609301134)', paiva: '2026-09-30', teksti: 'a' },
+    { versio: '1.1 (73)', paiva: '2026-09-30', teksti: 'b' },
+    { versio: '1.1 (74)', paiva: '2026-09-30', teksti: 'c' },
+  ]);
+  assert.deepEqual(k.map((r) => r.versio), ['1.1 (74)', '1.1 (73)', '1.0.72 (202609301134)']);
 });
 
 test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () => {
@@ -331,4 +338,58 @@ test('nimetyt lisätiedostot: lipputankoankkurit kartta/lippu_lonlat.json (löyd
     assert.equal(rivi?.lahde, lahde, tiedosto);
     assert.equal(tiedostot.get(tiedosto), readFileSync(join(JUURI, lahde), 'utf8'));
   }
+});
+
+test('eheysvartija: laattavälit, yhteenveto ja työnkulku ilman puhetta', async () => {
+  const { laatat, yhteenveto } = await import('../tools/vienti/eheysvartija.mjs');
+  assert.deepEqual(laatat(10, [[1, 2, 2, 2], [5, 3, 5, 3]]), ['10/1/2', '10/2/2', '10/5/3']);
+  assert.deepEqual(laatat(9, [0, 0, 1, 0]), ['9/0/0', '9/1/0']);
+  assert.deepEqual(yhteenveto({ puuttuvat: [], orvot: [], lehdetPuuttuu: [], ylitykset: [] }), []);
+  const v = yhteenveto({ puuttuvat: [{ laji: 'pieni' }, { laji: 'pieni' }], orvot: [{}], lehdetPuuttuu: [], ylitykset: [{ iso: 'FRA' }] });
+  assert.equal(v.join('; '), '2 puuttuu (pieni 2); 1 orpoa viittausta; maakatto ylittyy: FRA');
+  const { readFileSync } = await import('node:fs');
+  const koodi = readFileSync(new URL('../tools/vienti/eheysvartija.mjs', import.meta.url), 'utf8');
+  // Fable 27.9.: vartija ei koskaan pyydä puhetta workerilta (maksullinen generointi).
+  assert.ok(!/pollo|workers\.dev|\/puhe\b|tehtava/.test(koodi.replace(/^ \*.*$/gm, '')), 'ei puheworkeria');
+  const tyonkulku = readFileSync(new URL('../.github/workflows/eheysvartija.yml', import.meta.url), 'utf8');
+  assert.match(tyonkulku, /workflows: \['Vie sisältöpaketti ämpäriin'\]/);
+  assert.match(tyonkulku, /cron:/);
+});
+
+test('offline: maasto samasta sarjasta kuin natiivin kohtaus, koot-tiedosto tiivis (Siirtoseppä 28.9.2026)', async () => {
+  const { OFFLINE_LAHTEET, lueKoot, kootTekstina } = await import('../tools/vienti/offline.mjs');
+  const koot = lueKoot();
+  // Natiivi lataa laatat kohtauksen maastosarjasta offline.jsonin väleillä: välit on laskettava samasta sarjasta.
+  assert.equal(koot.maasto.poltto, OFFLINE_LAHTEET.maasto.layer.split('/').at(-2));
+  assert.ok(OFFLINE_LAHTEET.maasto.url.includes(`/${koot.maasto.poltto}/`));
+  const teksti = kootTekstina(koot);
+  assert.deepEqual(JSON.parse(teksti), koot);
+  assert.equal(teksti, readFileSync(new URL('../tools/vienti/offline-koot.json', import.meta.url), 'utf8'));
+  assert.ok(teksti.split('\n').length < 400, 'available yksi taso ja kerrokset yksi maa per rivi');
+});
+
+test('offline 1.56: kerma, reliefi ja yövalot sekä levykoko (Fable 28.9.2026, E2E-offline Tanska + Kroatia)', async () => {
+  const { OFFLINE_KERROKSET, kerrosOsoitteet, kermanValit, lueKoot, lohkoina, LOHKO } = await import('../tools/vienti/offline.mjs');
+  // Globaali: kerma _maailma z3–z5, reliefi kahdesta sarjasta z0–z5, yövalot z0–z5 (koko pallo).
+  const g = kerrosOsoitteet(null);
+  const koko = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => 4 ** (a + i)).reduce((s, n) => s + n, 0);
+  assert.equal(g.kerma.length, koko(3, 5));
+  assert.equal(g.reliefi.length, 2 * koko(0, 5));
+  assert.equal(g.yovalot.length, koko(0, 5));
+  assert.ok(g.kerma.every((u) => u.includes('/_maailma/') && u.endsWith('.webp')));
+  // Maa: oma kermasarja maat.*.kerma-väleillä, muut rasterin väleillä z6–z8 (yövalot z6).
+  const m = { rasteri: { 6: [34, 19, 34, 19], 7: [68, 38, 69, 39], 8: [136, 77, 137, 78], 9: [[272, 154, 272, 154]] },
+    kerma: kermanValit([5.2, 52, 15.6, 60.1]) };
+  const o = kerrosOsoitteet(m, 'DNK');
+  assert.equal(o.yovalot.length, 1);
+  assert.equal(o.reliefi.length, 2 * (1 + 4 + 4));
+  assert.ok(o.kerma.some((u) => u.includes('/DNK/3/')) && o.kerma.some((u) => u.includes('/_maailma/8/')));
+  assert.ok(!o.kerma.some((u) => u.includes('/9/')), 'kaupunkitaso z9 ei kerroksiin');
+  assert.deepEqual(Object.keys(m.kerma).map(Number), [3, 4, 5, 6, 7, 8]);
+  assert.equal(OFFLINE_KERROKSET.kerma.maittainTasot[1], 8);
+  // Koot: kaikille mitatuille maille kerrokset ja levy; lohkot 4 kt.
+  const k = lueKoot().kerrokset;
+  assert.ok(k && Object.keys(k.maat).length > 100 && k.globaali.levy > 0);
+  assert.ok(Object.values(k.maat).every((v) => v.levy >= v.kerma + v.reliefi + v.yovalot));
+  assert.equal(lohkoina(1), LOHKO); assert.equal(lohkoina(LOHKO + 1), 2 * LOHKO); assert.equal(lohkoina(0), 0);
 });

@@ -1,0 +1,623 @@
+[
+  {
+    "tunnus": "pariisi",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Pariisia kutsutaan Valon kaupungiksi?",
+        "vastaus": "Pariisia kutsutaan ranskaksi \"la Ville Lumière\". Nimitys juontuu 1800-luvulta, kun kaupunki oli edelläkävijä katuvalaistuksessa ja valistusajan ajatusten keskuksena, ja se vakiintui erityisesti 1889 ja 1900 maailmannäyttelyiden sähkövalaistuksen myötä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Paris",
+            "title": "Paris – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e789833"
+      },
+      {
+        "kysymys": "Milloin Eiffel-torni valmistui?",
+        "vastaus": "Eiffel-torni valmistui vuonna 1889 Pariisin maailmannäyttelyä varten. Sen rakensi insinööri Gustave Eiffelin yhtiö, ja 312-metrisenä se oli valmistuessaan maailman korkein rakennelma.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+            "title": "Eiffel Tower – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e789833"
+      }
+    ]
+  },
+  {
+    "tunnus": "lontoo",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä joki halkoo Lontoota kahtia?",
+        "vastaus": "Thames-joki virtaa Lontoon läpi ja jakaa kaupungin pohjois- ja etelärannalle. Se on Englannin pisin joki, ja sen varrella sijaitsevat monet Lontoon nähtävyyksistä, kuten Tower Bridge ja parlamenttitalo.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/River_Thames",
+            "title": "River Thames – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0405029"
+      },
+      {
+        "kysymys": "Mikä on Heathrowin merkitys Euroopan lentoliikenteessä?",
+        "vastaus": "Lontoon Heathrow on yksi Euroopan vilkkaimmista lentokentistä matkustajamäärällä mitattuna ja toimii useiden lentoyhtiöiden pääkeskuksena. Se palvelee vuosittain kymmeniä miljoonia matkustajia kahdella kiitoradalla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Heathrow_Airport",
+            "title": "Heathrow Airport – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss074e0405029"
+      }
+    ]
+  },
+  {
+    "tunnus": "rooma",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Roomaa kutsutaan ikuiseksi kaupungiksi?",
+        "vastaus": "Nimitys \"ikuinen kaupunki\" (Roma aeterna) juontuu antiikin ajoilta, kun roomalaiset uskoivat kaupunkinsa säilyvän ikuisesti. Rooma on ollut asutettu yhtäjaksoisesti antiikista nykypäivään, perinteisen tarinan mukaan vuodesta 753 eaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rome",
+            "title": "Rome – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0343840"
+      },
+      {
+        "kysymys": "Mikä on Vatikaanivaltio ja missä se sijaitsee?",
+        "vastaus": "Vatikaanivaltio on maailman pienin itsenäinen valtio, ja se sijaitsee kokonaan Rooman kaupungin sisällä. Se perustettiin vuonna 1929 Lateraanisopimuksella, ja sitä johtaa paavi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Vatican_City",
+            "title": "Vatican City – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0343840"
+      }
+    ]
+  },
+  {
+    "tunnus": "venetsia",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka monesta saaresta Venetsian keskusta koostuu?",
+        "vastaus": "Venetsian historiallinen keskusta on rakennettu noin 118 pienelle saarelle, jotka yhdistävät toisiinsa yli 400 siltaa. Kaupungin halki kulkee myös S-kirjaimen muotoinen pääkanava, Canal Grande.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Venice",
+            "title": "Venice – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e17346"
+      },
+      {
+        "kysymys": "Mikä on MOSE-hanke Venetsiassa?",
+        "vastaus": "MOSE on Venetsian laguunin suulle rakennettu tulvasulkujärjestelmä, joka suojaa kaupunkia \"acqua alta\" -tulvilta nostettavilla patoporteilla. Järjestelmä otettiin käyttöön vuosikymmenten rakentamisen jälkeen 2020-luvulla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/MOSE_Project",
+            "title": "MOSE Project – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e17346"
+      }
+    ]
+  },
+  {
+    "tunnus": "moskova",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä joki virtaa Moskovan halki?",
+        "vastaus": "Moskova-joki (Moskva) virtaa kaupungin läpi, ja kaupunki on saanut nimensä joesta. Joen varrella sijaitsevat monet Moskovan tärkeimmät nähtävyydet, mukaan lukien Kreml.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Moskva_River",
+            "title": "Moskva River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e024687"
+      },
+      {
+        "kysymys": "Mikä on MKAD Moskovassa?",
+        "vastaus": "MKAD on Moskovan uloin kehätie, joka seuraa pitkälti kaupungin virallista rajaa. Se on yksi kaupungin useista konsentrisista kehäteistä keskustan Puutarhakehän lisäksi, ja ne näkyvät selvästi kaupungin säteittäis-rengasmaisessa katuverkossa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Moscow_Ring_Road",
+            "title": "Moscow Ring Road – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e024687"
+      }
+    ]
+  },
+  {
+    "tunnus": "peking",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka monta kehätietä Pekingissä on?",
+        "vastaus": "Pekingin keskustaa ympäröi useita konsentrisia kehäteitä. Ensimmäistä kehätietä ei koskaan rakennettu erillisenä väylänä, joten käytössä on 2.–6. kehätie, ja seitsemättä suunnitellaan kaupungin laajentuessa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Ring_roads_of_Beijing",
+            "title": "Ring roads of Beijing – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e444944"
+      },
+      {
+        "kysymys": "Mikä on Kielletty kaupunki?",
+        "vastaus": "Kielletty kaupunki on Pekingin keskustassa sijaitseva entinen keisarillinen palatsi, joka valmistui vuonna 1420 Ming-dynastian aikana. Se toimi Kiinan keisarien asuinpaikkana noin 500 vuoden ajan ja on nykyisin UNESCOn maailmanperintökohde.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Forbidden_City",
+            "title": "Forbidden City – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e444944"
+      }
+    ]
+  },
+  {
+    "tunnus": "hongkong",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Britannia palautti Hongkongin Kiinalle 1997?",
+        "vastaus": "Britannia oli vuokrannut Hongkongin Uudet alueet Kiinalta 99 vuodeksi vuonna 1898, ja vuokrasopimuksen päättyminen johti koko alueen palauttamiseen. Palautuksesta sovittiin Kiinan ja Britannian yhteisessä julistuksessa 1984, ja luovutus tapahtui 1.7.1997.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Transfer_of_sovereignty_over_Hong_Kong",
+            "title": "Transfer of sovereignty over Hong Kong – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e399613"
+      },
+      {
+        "kysymys": "Mitä tarkoittaa \"yksi maa, kaksi järjestelmää\"?",
+        "vastaus": "Periaate tarkoittaa, että Hongkong säilyttää omat oikeus-, talous- ja hallintojärjestelmänsä osana Kiinaa vuoteen 2047 asti, vaikka kuuluu Kiinan kansantasavaltaan erityishallintoalueena. Periaate on kirjattu Hongkongin perustuslakiin (Basic Law).",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/One_country,_two_systems",
+            "title": "One country, two systems – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e399613"
+      }
+    ]
+  },
+  {
+    "tunnus": "singapore",
+    "kysymykset": [
+      {
+        "kysymys": "Milloin Singaporesta tuli itsenäinen valtio?",
+        "vastaus": "Singapore itsenäistyi 9. elokuuta 1965, kun se erosi kahden vuoden kestäneestä liitosta Malesian kanssa. Päivästä tuli maan kansallispäivä, ja Singaporesta kehittyi nopeasti yksi Aasian vauraimmista kaupunkivaltioista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Singapore",
+            "title": "Singapore – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0763866"
+      },
+      {
+        "kysymys": "Mikä tekee Changin lentokentästä erikoisen?",
+        "vastaus": "Singaporen Changin lentokenttä on toistuvasti valittu maailman parhaaksi lentoasemaksi. Sen Jewel-terminaalissa on maailman korkein sisätiloissa oleva vesiputous ja yli 2000 puun kaupunkimetsä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Singapore_Changi_Airport",
+            "title": "Singapore Changi Airport – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0763866"
+      }
+    ]
+  },
+  {
+    "tunnus": "sydney",
+    "kysymykset": [
+      {
+        "kysymys": "Milloin Sydneyn lentokenttä avattiin?",
+        "vastaus": "Sydneyn Kingsford Smith -lentokenttä on toiminut vuodesta 1920 ja on yksi maailman vanhimmista yhä toimivista kansainvälisistä lentokentistä. Se sijaitsee Botany Bayn rannalla vain noin 8 kilometrin päässä Sydneyn keskustasta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Sydney_Airport",
+            "title": "Sydney Airport – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss055e073720"
+      },
+      {
+        "kysymys": "Miksi Botany Bay on historiallisesti merkittävä?",
+        "vastaus": "Kapteeni James Cook laskeutui Botany Bayhin huhtikuussa 1770 ensimmäisenä eurooppalaisena tutkimusmatkailijana Australian itärannikolla. Lahti nimettiin sen ainutlaatuisen kasvillisuuden mukaan, jota retkikunnan kasvitieteilijät keräsivät.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Botany_Bay",
+            "title": "Botany Bay – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss055e073720"
+      }
+    ]
+  },
+  {
+    "tunnus": "rio",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka pitkä Rio-Niterói-silta on?",
+        "vastaus": "Rio-Niterói-silta on noin 13,3 kilometriä pitkä ja ylittää Guanabaran lahden. Valmistuessaan 1974 se oli pitkään yksi maailman pisimmistä esijännitetyistä betonisiltarakenteista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Rio%E2%80%93Niter%C3%B3i_Bridge",
+            "title": "Rio–Niterói Bridge – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss070e108427"
+      },
+      {
+        "kysymys": "Mikä tekee Guanabaran lahdesta tärkeän Riolle?",
+        "vastaus": "Guanabaran lahti on Brasilian toiseksi suurin merenlahti ja Rio de Janeiron tärkein satama- ja liikenneväylä. Sen rannoilla sijaitsevat myös kaupungin kansainvälinen lentokenttä Galeão ja useita historiallisia saaria.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Guanabara_Bay",
+            "title": "Guanabara Bay – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss070e108427"
+      }
+    ]
+  },
+  {
+    "tunnus": "saopaulo",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka suuri São Paulon metropolialue on?",
+        "vastaus": "São Paulon metropolialueella asuu noin 22 miljoonaa ihmistä, mikä tekee siitä eteläisen pallonpuoliskon väkirikkaimman kaupunkialueen. Kaupunki on Brasilian talouden ja teollisuuden keskus.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo",
+            "title": "São Paulo – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0982063"
+      },
+      {
+        "kysymys": "Miksi São Paulossa on paljon pilvenpiirtäjiä?",
+        "vastaus": "São Paulo on Etelä-Amerikan pilvenpiirtäjärikkain kaupunki nopean 1900-luvun kasvun ja tiiviin kaupunkirakentamisen seurauksena. Keskustassa ja sen ympärillä on tuhansia korkeita rakennuksia.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo",
+            "title": "São Paulo – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0982063"
+      }
+    ]
+  },
+  {
+    "tunnus": "losangeles",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Los Angelesin satama on tärkeä?",
+        "vastaus": "Los Angelesin satama on Yhdysvaltain vilkkain konttisatama, ja se käsittelee suuren osan Aasian ja Pohjois-Amerikan välisestä konttiliikenteestä. Satama sijaitsee San Pedrossa, ja siihen liittyy kiinteästi viereinen Long Beachin satama.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Port_of_Los_Angeles",
+            "title": "Port of Los Angeles – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0513936"
+      },
+      {
+        "kysymys": "Kuinka monta matkustajaa LAX-lentokenttä palvelee?",
+        "vastaus": "Los Angelesin kansainvälinen lentokenttä (LAX) on yksi maailman vilkkaimmista, ja se palveli ennen koronapandemiaa yli 80 miljoonaa matkustajaa vuodessa. Se on Yhdysvaltain länsirannikon tärkein kansainvälinen solmukohta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Los_Angeles_International_Airport",
+            "title": "Los Angeles International Airport – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0513936"
+      }
+    ]
+  },
+  {
+    "tunnus": "sanfrancisco",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka pitkä Golden Gate -silta on?",
+        "vastaus": "Golden Gate -silta ylittää San Franciscon lahden sisäänkäynnin ja on noin 2,7 kilometriä pitkä. Valmistuessaan 1937 se oli maailman pisin riippusilta, ja siitä on tullut San Franciscon tunnetuin maamerkki.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge",
+            "title": "Golden Gate Bridge – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0285002"
+      },
+      {
+        "kysymys": "Miksi Piilaakso syntyi San Franciscon lahdelle?",
+        "vastaus": "Piilaakso kehittyi lahden eteläosaan 1900-luvun puolivälin jälkeen Stanfordin yliopiston ja puolijohdeteollisuuden ympärille. Alueesta tuli myöhemmin maailman johtava teknologiayritysten keskittymä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Silicon_Valley",
+            "title": "Silicon Valley – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0285002"
+      }
+    ]
+  },
+  {
+    "tunnus": "chicago",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Chicago rakennettiin uudelleen 1871 jälkeen?",
+        "vastaus": "Suuri Chicagon tulipalo tuhosi lokakuussa 1871 suuren osan kaupungin keskustasta. Jälleenrakennuksessa otettiin käyttöön paloturvallisempia rakennusmateriaaleja ja -tekniikoita, jotka mahdollistivat myöhemmin pilvenpiirtäjien synnyn.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Great_Chicago_Fire",
+            "title": "Great Chicago Fire – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0080182"
+      },
+      {
+        "kysymys": "Miksi Chicagoa pidetään pilvenpiirtäjien syntypaikkana?",
+        "vastaus": "Chicagossa rakennettiin 1880-luvulla ensimmäisiä teräsrunkoisia pilvenpiirtäjiä, kuten Home Insurance Building vuonna 1885. Kaupungin arkkitehdit kehittivät niin kutsutun Chicagon koulukunnan tyylin, joka vaikutti pilvenpiirtäjien suunnitteluun maailmanlaajuisesti.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Home_Insurance_Building",
+            "title": "Home Insurance Building – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0080182"
+      }
+    ]
+  },
+  {
+    "tunnus": "mexico",
+    "kysymykset": [
+      {
+        "kysymys": "Millä korkeudella Mexico City sijaitsee?",
+        "vastaus": "Mexico City sijaitsee noin 2 240 metrin korkeudessa Meksikon laakson pohjalla, entisen Texcoco-järven paikalla. Se on yksi Amerikan mantereen korkeimmalla sijaitsevista suurkaupungeista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mexico_City",
+            "title": "Mexico City – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0075943"
+      },
+      {
+        "kysymys": "Miksi Mexico City vaipuu vuosi vuodelta?",
+        "vastaus": "Kaupunki on rakennettu entisen Texcoco-järven pohjasedimentin päälle, ja pohjaveden liiallinen pumppaus tiivistää savikerroksia. Osissa kaupungista maaperä vaipuu jopa noin 30 senttiä vuodessa, minkä takia kadut ja rakennukset vinoutuvat.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mexico_City",
+            "title": "Mexico City – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0075943"
+      }
+    ]
+  },
+  {
+    "tunnus": "kapkaupunki",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä on Kapkaupungin asema Etelä-Afrikassa?",
+        "vastaus": "Kapkaupunki on Etelä-Afrikan lainsäädäntöpääkaupunki, jossa maan parlamentti kokoontuu. Muut kaksi pääkaupunkia ovat Pretoria (hallinnollinen) ja Bloemfontein (oikeudellinen).",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cape_Town",
+            "title": "Cape Town – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e038871"
+      },
+      {
+        "kysymys": "Milloin Kapkaupunki perustettiin?",
+        "vastaus": "Alankomaiden Itä-Intian kauppakomppania perusti huoltoaseman Table Bayn rannalle vuonna 1652 Jan van Riebeeckin johdolla. Siitä kehittyi Etelä-Afrikan vanhin eurooppalaisperäinen siirtokunta ja nykyinen Kapkaupunki.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Cape_Town",
+            "title": "Cape Town – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e038871"
+      }
+    ]
+  },
+  {
+    "tunnus": "mumbai",
+    "kysymykset": [
+      {
+        "kysymys": "Millä nimellä Mumbai tunnettiin aiemmin?",
+        "vastaus": "Mumbaita kutsuttiin aiemmin Bombayksi. Osavaltion hallitus muutti kaupungin virallisen nimen Mumbaiksi vuonna 1995 marathinkielisen nimen mukaisesti.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mumbai",
+            "title": "Mumbai – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e08744"
+      },
+      {
+        "kysymys": "Miten Mumbain saaret yhdistyivät toisiinsa?",
+        "vastaus": "Mumbai rakennettiin alun perin seitsemälle erilliselle saarelle Arabianmeren rannikolla. Siirtomaakaudella saaret yhdistettiin toisiinsa maantäytöillä yhdeksi yhtenäiseksi Salsette-niemekkeeksi, jolla nykyinen kaupunki sijaitsee.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mumbai",
+            "title": "Mumbai – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss014e08744"
+      }
+    ]
+  },
+  {
+    "tunnus": "delhi",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka suuri Delhin metropolialue on?",
+        "vastaus": "Delhin kansallinen pääkaupunkialue on väestöltään maailman toiseksi suurin metropolialue, noin 34–35 miljoonaa asukasta. Se on Intian pääkaupunkialue ja yksi maan tärkeimmistä talousalueista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Delhi",
+            "title": "Delhi – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e757452"
+      },
+      {
+        "kysymys": "Mikä UNESCO-kohde sijaitsee Delhissä?",
+        "vastaus": "Delhissä sijaitsee Punainen linnoitus (Lal Qila), 1600-luvulla rakennettu mogulikeisarien linnoitus. UNESCO merkitsi sen maailmanperintökohteeksi vuonna 2007.",
+        "lahteet": [
+          {
+            "url": "https://whc.unesco.org/en/list/231/",
+            "title": "Red Fort Complex, Delhi – UNESCO World Heritage Centre"
+          }
+        ],
+        "havaintoId": "iss072e757452"
+      }
+    ]
+  },
+  {
+    "tunnus": "bangkok",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä joki halkoo Bangkokia?",
+        "vastaus": "Chao Phraya -joki virtaa Bangkokin läpi ja jakaa kaupungin kahtia matkalla Siaminlahteen. Joen suistoalueelle rakennettu kaupunki oli aiemmin tunnettu myös kanavineen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bangkok",
+            "title": "Bangkok – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e757257"
+      },
+      {
+        "kysymys": "Mikä on Bangkokin virallinen täysi nimi?",
+        "vastaus": "Bangkokin täysi seremoniallinen nimi on yksi maailman pisimmistä virallisista paikannimistä. Se sisältää yli 160 kirjainta ja kuvailee kaupungin mytologisena \"enkelien kaupunkina\".",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bangkok",
+            "title": "Bangkok – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e757257"
+      }
+    ]
+  },
+  {
+    "tunnus": "jakarta",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Indonesia rakentaa uuden pääkaupungin?",
+        "vastaus": "Jakarta vajoaa ja kärsii toistuvista tulvista, ja kaupunki on äärimmäisen ruuhkainen. Tästä syystä Indonesia siirtää pääkaupunkinsa Nusantaraan Borneon saarelle Itä-Kalimantaniin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Nusantara_(city)",
+            "title": "Nusantara (city) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e015896"
+      },
+      {
+        "kysymys": "Kuinka paljon Jakarta on vajonnut?",
+        "vastaus": "Pohjaveden liikakäytön vuoksi Pohjois-Jakartan osat ovat vajonneet useita metrejä viime vuosikymmeninä, paikoin jopa noin 10–20 senttiä vuodessa. Vajoaminen on yksi keskeinen syy uuden pääkaupungin rakentamiseen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Jakarta",
+            "title": "Jakarta – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e015896"
+      }
+    ]
+  },
+  {
+    "tunnus": "shanghai",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä on Dishui-järvi Shanghain kuvassa?",
+        "vastaus": "Dishui-järvi on ihmisen rakentama makeanveden allas Shanghain itälaidalla. Se on Kiinan suurin tekoallas, ja kuvassa se erottuu selvänä pyöreänä muotona kaupungin rakennetun alueen keskellä, Pudongin lentokentän lähellä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Shanghai",
+            "title": "Shanghai – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0513927"
+      },
+      {
+        "kysymys": "Miksi meri näyttää kuvassa ruskealta?",
+        "vastaus": "Jangtse-joen suu tuo mereen runsaasti lietettä ja sedimenttiä, joka värjää rannikkoveden vaaleanruskeaksi. Sedimenttipitoinen rannikkovesi erottuu kuvassa selvästi tummansinisestä avomerestä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Yangtze",
+            "title": "Yangtze – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0513927"
+      }
+    ]
+  },
+  {
+    "tunnus": "wien",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä joki halkoo Wienia kuvassa?",
+        "vastaus": "Tonava virtaa Wienin läpi ja erottuu kuvassa pimeänä nauhana valaistun kaupunkialueen keskellä. Joki jakaa kaupungin ja paljastaa sen sijainnin selvästi myös yökuvassa avaruudesta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Vienna",
+            "title": "Vienna – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e005231"
+      },
+      {
+        "kysymys": "Miksi Wienin keskusta näkyy niin kirkkaana?",
+        "vastaus": "Tiheä katuvalaistus ja rakennettu ydinalue tekevät Wienin keskustan kirkkaammaksi kuin ympäröivät pienemmät kunnat. Valojen tiheys ja katuverkon kuvio paljastavat kaupungin rajat selvästi avaruudesta käsin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Vienna",
+            "title": "Vienna – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e005231"
+      }
+    ]
+  },
+  {
+    "tunnus": "soul",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä joki jakaa Soulin kahtia kuvassa?",
+        "vastaus": "Han-joki virtaa Soulin keskustan läpi ja näkyy kuvassa pimeänä, valottomana nauhana kirkkaasti valaistun kaupungin keskellä. Joki on kaupungin tärkein maantieteellinen piirre myös avaruudesta katsottuna.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Seoul",
+            "title": "Seoul – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e757318"
+      },
+      {
+        "kysymys": "Kuinka monta asukasta Soulin alueella on?",
+        "vastaus": "Soulin metropolialueella asuu noin 25 miljoonaa ihmistä, mikä tekee siitä yhden maailman suurimmista kaupunkialueista. Kaupungissa on myös useita UNESCOn maailmanperintökohteita Joseon-dynastian ajalta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Seoul",
+            "title": "Seoul – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss072e757318"
+      }
+    ]
+  }
+]

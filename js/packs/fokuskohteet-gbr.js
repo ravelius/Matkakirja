@@ -126,6 +126,9 @@ export const FOKUSKOHTEET_GBR = [
       selite: 'Christopher Wrenin kupolikirkko Ludgate Hillillä. Se '
         + 'valmistui 1710 palaneen keskiaikaisen edeltäjänsä paikalle.',
       lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:St_Paul\'s_Cathedral_Dome_2020_Exterior_Ground.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
     },
     /*
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
@@ -234,7 +237,7 @@ export const FOKUSKOHTEET_GBR = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg',
       kadonnut: true,
       lyhyt: 'Lapsi näkee Crystal Palacen valosta tehtynä rakennuksena, jonka sisällä on koko maailmannäyttely.',
-      selite: 'Kuvituksen perheen nuorin näkee mäen laelta rakennuksen, joka '
+      selite: 'Kuvan perheen nuorin näkee mäen laelta rakennuksen, joka '
         + 'näyttää olevan tehty lähes kokonaan valosta. Vanhemmille päivä '
         + 'Crystal Palacessa maksaa aikaa ja rahaa, mutta sisällä odottavat '
         + 'Egypti, Assyria, Alhambra ja kokonainen maailmannäyttely samojen '

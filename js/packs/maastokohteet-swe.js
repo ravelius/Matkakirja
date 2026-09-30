@@ -69,6 +69,7 @@ export const MAASTOKOHTEET_SWE = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva Antti Leppänen',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG',
+      viitteet: [{ tekija: 'Antti Leppänen', lisenssi: 'CC BY 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG' }],
       lisenssi: 'CC BY 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
     },
@@ -79,6 +80,7 @@ export const MAASTOKOHTEET_SWE = [
       lahde: 'Valokuva: Antti Leppänen, Wikimedia Commons (CC BY 4.0).',
       tekija: 'Antti Leppänen',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG',
+      viitteet: [{ tekija: 'Antti Leppänen', lisenssi: 'CC BY 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG' }],
       lisenssi: 'CC BY 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
     }],
@@ -234,6 +236,7 @@ export const MAASTOKOHTEET_SWE = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; paikkareferenssi Tubaist',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg',
+      viitteet: [{ tekija: 'Tubaist', lisenssi: 'CC BY-SA 3.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg' }],
       lisenssi: 'CC BY-SA 3.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
     },
@@ -244,6 +247,7 @@ export const MAASTOKOHTEET_SWE = [
       lahde: 'Valokuva: Tubaist, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Tubaist',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg',
+      viitteet: [{ tekija: 'Tubaist', lisenssi: 'CC BY-SA 3.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg' }],
       lisenssi: 'CC BY-SA 3.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
     }],
@@ -294,6 +298,7 @@ export const MAASTOKOHTEET_SWE = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva VisbyStar',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg',
+      viitteet: [{ tekija: 'VisbyStar', lisenssi: 'CC0 1.0', lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg' }],
       lisenssi: 'CC0 1.0',
       lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
     },
@@ -349,6 +354,7 @@ export const MAASTOKOHTEET_SWE = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva Carl L. Thunberg for Föreningen Kulturarvsbilder',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg',
+      viitteet: [{ tekija: 'Carl L. Thunberg for Föreningen Kulturarvsbilder', lisenssi: 'CC BY 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg' }],
       lisenssi: 'CC BY 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
     },
@@ -657,6 +663,7 @@ export const MAASTOKOHTEET_SWE = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva Anders Lagerås',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg',
+      viitteet: [{ tekija: 'Anders Lagerås', lisenssi: 'CC BY-SA 3.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg' }],
       lisenssi: 'CC BY-SA 3.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
     },
@@ -1010,5 +1017,43 @@ export const MAASTOKOHTEET_SWE = [
       + 'rakennettiin tuottamaan vesivoimaa pumppuihin, nostokoneisiin ja sulattoon.',
     lahde: 'en-Wikipedia "Sala Silver Mine", johdanto-osa sekä osiot "Geology" ja "History" '
       + '(tarkistettu 11.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ C, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'marbacka',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/swe-nosto-marbacka-47906494.jpg',
+      lyhyt: 'Mårbackan päärakennus ja nurmikko kesällä.',
+      selite: 'Vaalea, tummakattoinen päärakennus, jossa on pylväsjulkisivu ja parveke. Edessä on nurmikko ja kukkapenkkejä.',
+      lahde: 'Valokuva: Joel Torsson (Leojth), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Joel Torsson (Leojth)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Selma_Lagerlofs_Marbacka_at_Sunne.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    nimi: 'Mårbacka',
+    nimio: 'Mårbacka',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Millä rahalla Lagerlöf osti tilan takaisin?',
+      'Kuka suunnitteli päärakennuksen laajennuksen?',
+    ],
+    korostukset: ['Nobel-palkintorahoillaan|Nobel-palkintorahoillaan'],
+    nappi: 'Nobel-rahoilla takaisin ostettu kotitila',
+    // 13.2336 E / 59.7811 N — en-Wikipedia "Mårbacka", osiot "History", "Building" ja "Present"
+    laudat: {
+      maailmankartta: { x: 6274.5, y: 936.6 },
+    },
+    teksti: 'Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus '
+      + 'valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen '
+      + 'konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan '
+      + '1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina '
+      + '1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. '
+      + 'Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, '
+      + 'puutarha ja kahvila.',
+    lahde: 'en-Wikipedia "Mårbacka", osiot "History", "Building" ja "Present" (tarkistettu '
+      + '30.9.2026).',
   },
 ];

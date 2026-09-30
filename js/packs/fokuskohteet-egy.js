@@ -268,7 +268,7 @@ export const FOKUSKOHTEET_EGY = [
       osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg',
       kadonnut: false,
       lyhyt: 'Kivenhioja viimeistelee saumaa: 2,3 miljoonaa lohkaretta vaati valtavan määrän työtä ja käsiä.',
-      selite: 'Kuvituksen kivenhioja tunnustelee sauman sileyttä samalla kun '
+      selite: 'Kuvan kivenhioja tunnustelee sauman sileyttä samalla kun '
         + 'lapsi tuo hänelle vettä. Näkymä palauttaa jättimäisen luvun '
         + 'ihmisen kokoiseksi: 2,3 miljoonaa lohkaretta on tarkoittanut '
         + 'lukemattomia työvuoroja, aterioita, loukkaantumisia ja '

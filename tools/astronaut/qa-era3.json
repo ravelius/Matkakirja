@@ -1,0 +1,434 @@
+[
+  {
+    "tunnus": "upsala-jaatikko",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka paljon Upsala-jäätikkö on vetäytynyt?",
+        "vastaus": "Vuosien 2002 ja 2013 välillä Upsala-jäätikön reuna vetäytyi keskimäärin 3,6 kilometriä. Tutkijoiden mukaan vetäytyminen liittyy alueen ilmaston lämpenemiseen ja on osa laajempaa suuntausta, joka on havaittu kymmenissä Patagonian jäätiköissä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss037e005104",
+            "title": "Upsala Glacier Retreat – NASA"
+          }
+        ],
+        "havaintoId": "iss037e005104"
+      },
+      {
+        "kysymys": "Mikä on Etelä-Patagonian jäätikköalue?",
+        "vastaus": "Etelä-Patagonian jäätikköalue Argentiinan ja Chilen rajalla on Etelämantereen ja Grönlannin jälkeen maailman kolmanneksi suurin yhtenäinen jäämassa. Upsala on sen kolmanneksi suurin yksittäinen jäätikkö.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Southern_Patagonian_Ice_Field",
+            "title": "Southern Patagonian Ice Field – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss021e015243"
+      }
+    ]
+  },
+  {
+    "tunnus": "poopojarvi",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Poopó-järvi kuivui lähes kokonaan?",
+        "vastaus": "Poopó kuivui lähes kokonaan vuonna 2015 ja uudelleen 2020-luvulla. Sitä ruokkivien jokien vettä on ohjattu yhä enemmän kaivoksille ja maataloudelle, ja ilmaston lämmetessä haihdunta on kiihtynyt.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Poop%C3%B3",
+            "title": "Lake Poopó – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss070e098385"
+      },
+      {
+        "kysymys": "Kuinka korkealla Poopó-järvi sijaitsee?",
+        "vastaus": "Järvi sijaitsee noin 3 700 metrin korkeudessa Bolivian Andeilla. Se on niin matala — yleensä alle kolme metriä — että pienikin sademäärän muutos ylä-Andeilla näkyy suoraan sen pinta-alassa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss012e06469",
+            "title": "Lake Poopo – NASA"
+          }
+        ],
+        "havaintoId": "iss012e06469"
+      }
+    ]
+  },
+  {
+    "tunnus": "etosha",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka pitkä Etosha-tasanko on?",
+        "vastaus": "Etosha-tasanko on noin 120 kilometriä pitkä kuivunut järvenpohja Pohjois-Namibiassa. Se on nykyisin maan suurimman eläinpuiston sydän, jossa elää muun muassa norsuja, sarvikuonoja ja leijonia.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Etosha_Pan",
+            "title": "Etosha Pan – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e234965"
+      },
+      {
+        "kysymys": "Miksi Etosha on yleensä täysin kuiva?",
+        "vastaus": "Tasangolle laskevien jokien vesi imeytyy yleensä uomaan matkalla, joten se ei juuri koskaan yllä pannun pohjalle saakka. Noin 16 000 vuotta sitten nykyistä kosteampi ilmasto täytti koko järven vedellä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss011e09504",
+            "title": "Ekuma River and Etosha Pan – NASA"
+          }
+        ],
+        "havaintoId": "iss011e09504"
+      }
+    ]
+  },
+  {
+    "tunnus": "eyrejarvi",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä sai Eyre-järven veden punaiseksi?",
+        "vastaus": "Punaisen värin tekevät suolaa sietävät mikrobit, jotka lisääntyvät valtavan tiheiksi kun haihtuminen nostaa veden suolapitoisuutta. Niiden solukalvojen karotenoidipigmentti värjää koko lammen punaiseksi tai vaaleanpunaiseksi.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss030e009271",
+            "title": "Lake Eyre Floods – NASA"
+          }
+        ],
+        "havaintoId": "iss030e009271"
+      },
+      {
+        "kysymys": "Miksi Eyre-järvi on yleensä kuiva?",
+        "vastaus": "Eyre on umpialtaan järvi ilman laskua mereen, joten kaikki siihen tuleva vesi vain haihtuu. Vettä nousee pinnalle vain harvoina sadevuosina; suurimman osan ajasta pohja on paljasta valkoista suolaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Lake_Eyre",
+            "title": "Lake Eyre – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss030e009271"
+      }
+    ]
+  },
+  {
+    "tunnus": "sharkbay",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä tekee Shark Baysta ainutlaatuisen?",
+        "vastaus": "Shark Bayssa kasvaa maailman laajin ja vanhin merikaislaniitty. Sen matalissa lahdissa elää eläviä stromatoliitteja — kivimäisiä mikrobimattoja, jotka muistuttavat maapallon varhaisimpia elämänmuotoja yli 3 miljardin vuoden takaa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Shark_Bay",
+            "title": "Shark Bay – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e003722"
+      },
+      {
+        "kysymys": "Miksi Shark Bay on maailmanperintökohde?",
+        "vastaus": "Shark Bay liitettiin Unescon maailmanperintöluetteloon 1991 ainutlaatuisen merikaislakasvillisuutensa ja harvinaisten stromatoliittiensa vuoksi. Alueella elää myös maailman suurin tunnettu dugong-lehmäkalakanta.",
+        "lahteet": [
+          {
+            "url": "https://whc.unesco.org/en/list/578/",
+            "title": "Shark Bay, Western Australia – UNESCO World Heritage"
+          }
+        ],
+        "havaintoId": "iss057e105411"
+      }
+    ]
+  },
+  {
+    "tunnus": "pyramidjarvi",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä Pyramid Lake on saanut nimensä?",
+        "vastaus": "Järvi on saanut nimensä pyramidinmuotoisesta tufakalkkikivipatsaasta rannallaan. Alue kuuluu Pyramid Laken paiute-heimon reservaattiin Nevadassa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Pyramid_Lake_(Nevada)",
+            "title": "Pyramid Lake (Nevada) – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e0919979"
+      },
+      {
+        "kysymys": "Mikä oli muinainen Lahontan-järvi?",
+        "vastaus": "Muinainen Lahontan-järvi peitti viimeisimmän jääkauden huipulla noin 15 000 vuotta sitten suuren osan Nevadaa. Pyramid Lake on sen syvimmän altaan jäljellä oleva jäänne.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss025e005259",
+            "title": "Pyramid Lake, Nevada – NASA"
+          }
+        ],
+        "havaintoId": "iss025e005259"
+      }
+    ]
+  },
+  {
+    "tunnus": "monojarvi",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Mono-järvi on suolainen?",
+        "vastaus": "Mono-järvellä ei ole luonnollista laskujokea, joten sinne virtaavat suolat ja mineraalit jäävät veteen ja haihtuminen väkevöittää niitä. Järvi on noin 2–3 kertaa merivettä suolaisempi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mono_Lake",
+            "title": "Mono Lake – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss069e000859"
+      },
+      {
+        "kysymys": "Mikä on tufa?",
+        "vastaus": "Tufa on kalkkikiveä, joka saostuu kun kalsiumpitoinen lähdevesi kohtaa emäksisen järviveden. Mono-järven tufapatsaat paljastuivat, kun Los Angeles alkoi 1940-luvulla johtaa järven syöttöjokia kaupunkiin ja vedenpinta laski.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Mono_Lake",
+            "title": "Mono Lake – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss069e000859"
+      }
+    ]
+  },
+  {
+    "tunnus": "saltonjarvi",
+    "kysymykset": [
+      {
+        "kysymys": "Miten Salton Sea syntyi?",
+        "vastaus": "Salton Sea syntyi vahingossa vuonna 1905, kun Colorado-joki murtautui kastelukanavan läpi. Vuoto täytti kuivan altaan kahdeksi vuodeksi ennen kuin se saatiin tukittua.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Salton_Sea",
+            "title": "Salton Sea – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss040e011868"
+      },
+      {
+        "kysymys": "Miksi Salton Sea suolaantuu koko ajan?",
+        "vastaus": "Järvellä ei ole luonnollista laskua mereen, ja sen vesi haihtuu jatkuvasti jättäen suolan jälkeensä. Nykyisin Salton Sea on suolaisempi kuin valtameri.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Salton_Sea",
+            "title": "Salton Sea – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss040e011868"
+      }
+    ]
+  },
+  {
+    "tunnus": "etelaalpit-jarvet",
+    "kysymykset": [
+      {
+        "kysymys": "Kuka on Aoraki eli Mount Cook?",
+        "vastaus": "Aoraki eli Mount Cook on Uuden-Seelannin korkein vuori, 3 724 metriä merenpinnasta. Se on maorien pyhä vuori ja Etelä-Alppien jäätiköiden pääsolmukohta.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Aoraki_/_Mount_Cook",
+            "title": "Aoraki / Mount Cook – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss071e073568"
+      },
+      {
+        "kysymys": "Miksi jäätikköjärvet ovat turkoosin värisiä?",
+        "vastaus": "Jäätiköt jauhavat kalliota hienoksi kivijauhoksi, joka jää veteen leijumaan eikä laskeudu pohjaan. Jauho heijastaa auringonvaloa turkoosina, ja väri vaihtelee sen mukaan, kuinka paljon jauhoa syöttöjoki kuljettaa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss071e073568",
+            "title": "Lakes Tekapo, Pukaki, and Ohau – NASA"
+          }
+        ],
+        "havaintoId": "iss071e073568"
+      }
+    ]
+  },
+  {
+    "tunnus": "zion",
+    "kysymykset": [
+      {
+        "kysymys": "Milloin Zion kansallispuisto perustettiin?",
+        "vastaus": "Zion National Park perustettiin vuonna 1919, kymmenen vuotta sen jälkeen kun aluetta oli suojeltu Mukuntuweap-kansallismonumenttina. Uusi tie mahdollisti pääsyn kanjoniin autolla.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Zion_National_Park",
+            "title": "Zion National Park – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss017e005351"
+      },
+      {
+        "kysymys": "Mistä Zionin punainen kivi on peräisin?",
+        "vastaus": "Zionin vaaleanpunertava Navajo-hiekkakivi on noin 200 miljoonaa vuotta vanhan aavikon hiekkadyynien jäänne. Alue muistutti tuolloin nykyistä Saharaa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss017e005351",
+            "title": "Zion National Park, Utah – NASA"
+          }
+        ],
+        "havaintoId": "iss017e005351"
+      }
+    ]
+  },
+  {
+    "tunnus": "volgansuisto",
+    "kysymykset": [
+      {
+        "kysymys": "Mihin Volga laskee?",
+        "vastaus": "Volga on Euroopan pisin joki. Se laskee yli 3 500 kilometrin matkan jälkeen suistonsa kautta Kaspianmereen, joka on maailman suurin järvi.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Volga_River",
+            "title": "Volga River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss005e11203"
+      },
+      {
+        "kysymys": "Mitä kalaa Volgan suistosta pyydystetään?",
+        "vastaus": "Volgan suisto on tärkeä pyyntialue beluga-sammelle, jonka mädistä valmistetaan arvostettua beluga-kaviaaria. Laji on nykyään erittäin uhanalainen liikakalastuksen vuoksi.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss005e11203",
+            "title": "The Volga Delta, Russia – NASA"
+          }
+        ],
+        "havaintoId": "iss005e11203"
+      }
+    ]
+  },
+  {
+    "tunnus": "irrawaddyn-suisto",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka pitkä Irrawaddy-joki on?",
+        "vastaus": "Irrawaddy-joki virtaa noin 2 170 kilometriä Myanmarin halki pohjoisesta etelään. Se on maan tärkein vesiväylä ja elinkeinojen lähde.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Irrawaddy_River",
+            "title": "Irrawaddy River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss073e1197819"
+      },
+      {
+        "kysymys": "Mitä Irrawaddyn suisto tuottaa Myanmarille?",
+        "vastaus": "Suiston mangrovemetsät, riisipellot ja kosteikot tuottavat suuren osan Myanmarin riisistä ja suojaavat rannikkoa myrskyiltä. Vuoden 2008 Nargis-hirmumyrsky tuhosi silti suuren osan aluetta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1197819",
+            "title": "Irrawaddy Delta, Myanmar – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1197819"
+      }
+    ]
+  },
+  {
+    "tunnus": "colorado-suisto",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Colorado-joki ei enää yllä mereen?",
+        "vastaus": "Colorado-joen vesi käytetään lähes kokonaan kasteluun ja kaupunkien vedenjakeluun Yhdysvalloissa ja Meksikossa. Se ehtii nykyään suistoonsa asti enää harvoin.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Colorado_River",
+            "title": "Colorado River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss064e002258"
+      },
+      {
+        "kysymys": "Mikä on Kalifornianlahti?",
+        "vastaus": "Kalifornianlahti erottaa Baja Californian niemimaan Meksikon mantereesta. Sen pohjukkaan laskeva Colorado-joen suisto on nimetty biosfäärialueeksi harvinaisen lajistonsa vuoksi.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss064e002258",
+            "title": "Colorado River Delta Biosphere Reserve – NASA"
+          }
+        ],
+        "havaintoId": "iss064e002258"
+      }
+    ]
+  },
+  {
+    "tunnus": "santorini",
+    "kysymykset": [
+      {
+        "kysymys": "Milloin Santorini purkautui viimeksi rajusti?",
+        "vastaus": "Santorinin suuri purkaus tapahtui noin vuonna 1620 eaa. ja on yksi viimeisten 10 000 vuoden voimakkaimmista. Se romahdutti saaren keskiosan mereen ja loi nykyisen kalderan.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Minoan_eruption",
+            "title": "Minoan eruption – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss017e005037"
+      },
+      {
+        "kysymys": "Missä Santorini sijaitsee Kreikassa?",
+        "vastaus": "Santorini eli Théra on osa Kykladien saariryhmää Egeanmerellä. Se sijaitsee noin 200 kilometriä Kreikan mantereelta kaakkoon ja 118 kilometriä Kreetan saaresta pohjoiseen.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Santorini",
+            "title": "Santorini – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss017e005037"
+      }
+    ]
+  },
+  {
+    "tunnus": "amazonin-suu",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka paljon vettä Amazon tuo mereen?",
+        "vastaus": "Amazon on maailman vesirikkain joki. Se purkaa mereen noin viidenneksen kaikesta maailman makeasta jokivedestä — enemmän kuin seuraavat seitsemän suurinta jokea yhteensä.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Amazon_River",
+            "title": "Amazon River – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss010e13029"
+      },
+      {
+        "kysymys": "Miksi Amazonin suisto muuttaa muotoaan?",
+        "vastaus": "Joki kuljettaa valtavia määriä hiekkaa ja liejua, jotka joko syövät rantaa tai kasaantuvat uusiksi saariksi virtausten mukaan. NASA vertasi vuosien 2000 ja 2005 kuvia ja havaitsi kanavan siirtyneen satoja metrejä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss010e13029",
+            "title": "Perigoso Channel and Amazon River Mouth – NASA"
+          }
+        ],
+        "havaintoId": "iss010e13029"
+      }
+    ]
+  },
+  {
+    "tunnus": "fundynlahti",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka korkealle Fundynlahden vuorovesi nousee?",
+        "vastaus": "Fundynlahdella on maailman suurin vuorovesivaihtelu: vesi voi nousta ja laskea yli 16 metriä kahdesti vuorokaudessa. Vaihtelu paljastaa laajoja punaisia mutatasankoja lahden pohjukoissa.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bay_of_Fundy",
+            "title": "Bay of Fundy – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss059e059149"
+      },
+      {
+        "kysymys": "Missä maissa Fundynlahti sijaitsee?",
+        "vastaus": "Lahti erottaa Kanadan Nova Scotian ja New Brunswickin provinssit. Sen valtavat vuorovedet syntyvät lahden muodon ja Atlantin luonnollisen värähtelyn resonanssista.",
+        "lahteet": [
+          {
+            "url": "https://en.wikipedia.org/wiki/Bay_of_Fundy",
+            "title": "Bay of Fundy – Wikipedia"
+          }
+        ],
+        "havaintoId": "iss059e059149"
+      }
+    ]
+  }
+]

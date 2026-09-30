@@ -9,13 +9,14 @@
  * Sarjan mitta on juuri tuo: KATSOJA ON PAIKALLA, silmien korkeudella,
  * siinä sekunnissa jolloin jotain on tapahtumassa.
  *
- * Hetkiä on 49: H1-pilotin kymmenen meren ja löytöretkien hetkeä,
+ * Hetkiä on 67: H1-pilotin kymmenen meren ja löytöretkien hetkeä,
  * kuvaputken photo-v3-erän mukana saapunut viisikko (Kolumbuksen kaksi
  * rahoitushetkeä ja kolme tiedehistorian hetkeä: Röntgen, Wrightin
  * veljekset, Einstein), H3 45–48:n viisi arkeologian ja tähtitieteen
  * hetkeä sekä kuvaputken 5.9.2026 toimittama 29 hetken erä (H3 51–81:
  * tiede, tekniikka, kaupungit, taide ja politiikka Pompejista Berliinin
  * muuriin). Sama erä uusi Röntgenin ja Einsteinin kuvat photo-v4:ksi.
+ * Vuoden 2026 syyskuun 28. päivän erä toi 13 Euroopan historian hetkeä.
  *
  * ── TEKSTIN SÄÄNTÖ: IHMINEN EDELLÄ ─────────────────────────────────
  *
@@ -438,7 +439,7 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    lehti: { laji: 'maa', avain: 'ESP' },
     visa: {
       kysymys: 'Miksi Kolumbuksen laivat odottivat Palosin suistossa juuri aamun laskuvettä?',
       vaihtoehdot: [
@@ -523,7 +524,7 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    lehti: { laji: 'kaupunki', avain: 'sevilla' },
+    lehti: { laji: 'maa', avain: 'ESP' },
     visa: {
       kysymys: 'Kuinka moni Magalhãesin viidestä laivasta palasi Sanlúcariin syyskuussa 1522?',
       vaihtoehdot: [
@@ -1282,7 +1283,7 @@ export const HISTORIAN_HETKET = [
       },
     ],
     kartalla: true,
-    lehti: { laji: 'kaupunki', avain: 'kobenhavn' },
+    lehti: { laji: 'maa', avain: 'DNK' },
     visa: {
       kysymys: 'Miksi viisi viikinkilaivaa upotettiin Roskildenvuonoon 1000-luvulla?',
       vaihtoehdot: [
@@ -3509,7 +3510,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'lahi',
         tiedosto: 'hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
         lyhyt: 'Pompejilainen kauppias yrittää pelastaa omaisuutensa hohkakivien alkaessa ropista katolle.',
-        kuvateksti: 'Kuvituksen nimetön torikauppias yrittää vielä pelastaa '
+        kuvateksti: 'Havainnekuvan nimetön torikauppias yrittää vielä pelastaa '
           + 'vaa’an ja rahalippaan, kun hänen tyttärensä kuuntelee hohkakivien '
           + 'alkavaa ropinaa katoksella. He eivät tiedä, onko viisaampaa '
           + 'suojautua vai lähteä — juuri tämä epävarmuus jätti osan '
@@ -3616,11 +3617,12 @@ export const HISTORIAN_HETKET = [
       {
         rooli: 'kauko',
         tiedosto: 'hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
-        lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin kuuden viikon piirityksen.',
+        lyhyt: 'Kolmen aallon lopullinen hyökkäys päättää Konstantinopolin reilun seitsemän viikon piirityksen.',
         kuvateksti: 'Viimeinen hyökkäys tulee kolmessa aallossa. Ensimmäiset '
           + 'väsyttävät puolustajia, toiset kasvattavat painetta ja '
-          + 'janitsaarit etenevät viimeisinä. Muurin harjalla kuuden viikon '
-          + 'piiritys on kutistunut yhden sotilaan kysymykseksi: yltääkö '
+          + 'janitsaarit etenevät viimeisinä. Muurin harjalla reilun '
+          + 'seitsemän viikon piiritys on kutistunut yhden sotilaan '
+          + 'kysymykseksi: yltääkö '
           + 'seuraava hyökkääjä tikkaiden päästä hänen eteensä.',
         lahde: 'Matkakirjan havainnekuva. Faktat: Constantinople 1453 — '
           + 'history, tarkistettu 5.9.2026.',
@@ -3691,7 +3693,7 @@ export const HISTORIAN_HETKET = [
         lyhyt: 'Nuori nainen suojaa soitintaan Lontoon suurpalossa veneessä pakenevien tavaroiden joukossa.',
         kuvateksti: 'Samuel Pepys huomasi Thamesilla jotain oudon arkista: '
           + 'lähes joka kolmannessa kotinsa tavaroita kuljettavassa veneessä '
-          + 'oli virginal-soitin. Kuvituksen nuori nainen pitää oman '
+          + 'oli virginal-soitin. Havainnekuvan nuori nainen pitää oman '
           + 'soittimensa kantta kiinni kipinäsateessa — koti saattaa palaa, '
           + 'mutta perhe ei vielä suostu jättämään kaikkia entisen elämän '
           + 'ääniä rannalle.',
@@ -3791,7 +3793,7 @@ export const HISTORIAN_HETKET = [
         tiedosto: 'hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
         lyhyt: 'Berliinin muurin ensimmäisenä päivänä poliisi vetää piikkilangan lähellä olevien sisarusten väliin.',
         kuvateksti: 'Bernauer Straßella talon seinä kuului itään mutta '
-          + 'jalkakäytävä länteen. Kuvituksen sisarukset ovat yhä '
+          + 'jalkakäytävä länteen. Havainnekuvan sisarukset ovat yhä '
           + 'huutoetäisyydellä, kun nuori poliisi kiristää lankaa heidän '
           + 'väliinsä; kukaan heistä ei vielä tiedä, että ovet ja ikkunat '
           + 'muurataan tulevina päivinä.',
@@ -4322,7 +4324,7 @@ export const HISTORIAN_HETKET = [
         rooli: 'lahi',
         tiedosto: 'hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
         lyhyt: 'Pariisilainen etsii yhä ruutia muskettiinsa, kun Bastiljin portti vihdoin avautuu.',
-        kuvateksti: 'Kuvituksen pariisilainen metallityöläinen on kantanut '
+        kuvateksti: 'Havainnekuvan pariisilainen metallityöläinen on kantanut '
           + 'Invalidikirkolta hakemaansa muskettia tuntikausia, mutta ruutia '
           + 'hän etsii yhä. Kun Bastiljin portti viimein avautuu, voitonriemu '
           + 'sekoittuu pelkoon: savun takana odottaa piha, jolta äsken '
@@ -4644,6 +4646,887 @@ export const HISTORIAN_HETKET = [
       oikea: 1,
       fakta: 'Méliès rakensi oman laitteensa ja keksi temppuelokuvan; '
         + 'Lumièret keskittyivät myöhemmin värivalokuvaukseen.',
+    },
+  },
+  /* suuri-piiritys-paattyy-1565 — Heritage Malta, The Great Siege / Victory Day; tarkistettu 27.9.2026. */
+  {
+    id: 'suuri-piiritys-paattyy-1565',
+    otsikko: 'Valletta 1565 — purjeet horisontissa',
+    nimio: 'Apu saapuu 1565',
+    paivays: '7.9.1565',
+    paikka: 'Mellieħan lahti, Malta',
+    iso: 'MLT',
+    lat: 35.9556, lon: 14.3611,
+    kuvaversio: 4,
+    teksti: 'Puolustaja nojaa muurin ampuma-aukkoon, kun toinen tarttuu hänen '
+      + 'olkapäähänsä ja osoittaa merelle — silmät ovat liian väsyneet neljän '
+      + 'kuukauden valvomisesta uskoakseen ensin sitä, mitä näkevät. Purjeet '
+      + 'horisontissa eivät ole uusi osmanien laivue vaan sisilialainen '
+      + 'apulaivasto, jota Don García de Toledo on kerännyt Messinasta kuukausia. '
+      + 'Yli kahdeksantuhatta miestä nousee maihin Mellieħan lahdessa 7. syyskuuta, '
+      + 'ja tieto kulkee muurilta muurille nopeammin kuin kukaan ehtii huutaa sitä '
+      + 'ääneen. Ottomaanien komentaja Mustafa Pasha, jonka joukot ovat menettäneet '
+      + 'paljon miehiä ja suurimman osan kesästä yhteen linnakkeeseen, ei enää usko '
+      + 'voittoon uuden armeijan edessä. Muutaman päivän kuluttua laivasto lastaa '
+      + 'jäljellä olevat joukot ja purjehtii pois — piiritys, joka piti kestää '
+      + 'päiviä, on lopulta kestänyt lähes neljä kuukautta, ja saari on yhä '
+      + 'ritarikunnan. Muurin sisällä kukaan ei vielä riisu panssaria. Sotilaat '
+      + 'seuraavat laivoja, kunnes ne ovat tarpeeksi lähellä, ettei näkyä voi '
+      + 'erehtyä pitämään uuden hyökkäyksen alkuna.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-suuri-piiritys-paattyy-1565-lahi-photo-v4.jpg',
+        lyhyt: 'Birgun puolustajat näkevät merellä apulaivaston purjeet ja tuskin uskovat '
+          + 'silmiään.',
+        kuvateksti: 'Birgun puolustusmuurilla kaksi nääntynyttä puolustajaa näkee horisontissa '
+          + 'Sisiliasta saapuvan avun. Vuonna 1565 Valletta ei ollut vielä rakennettu.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Heritage Malta, The Great Siege / '
+          + 'Victory Day, tarkistettu 27.9.2026.',
+        url: 'https://heritagemalta.mt/news/what-does-victory-taste-like/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-suuri-piiritys-paattyy-1565-kauko-photo-v4.jpg',
+        lyhyt: 'Sisiliasta tullut apulaivasto tuo väkeä maihin Maltan rannikolla.',
+        kuvateksti: 'Mellieħan lahdella apulaivaston veneet kuljettavat sotilaita matalaan '
+          + 'veteen; piirityksen päättyminen alkaa hahmottua.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Heritage Malta, The Great Siege / '
+          + 'Victory Day, tarkistettu 27.9.2026.',
+        url: 'https://heritagemalta.mt/news/what-does-victory-taste-like/',
+      },
+    ],
+    kartalla: true,
+    kattoVapaa: true,
+    lehti: { laji: 'kaupunki', avain: 'valletta' },
+    visa: {
+      kysymys: 'Mistä apulaivasto saapui Maltan avuksi 1565?',
+      vaihtoehdot: ['Sisiliasta', 'Ranskasta', 'Kreikasta'],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Neljä kuukautta kestänyt piiritys päättyi, kun sisilialainen apulaivasto '
+      + 'laski maihin Mellieħan lahdessa syyskuun alussa 1565 — osmaanit '
+      + 'purjehtivat pois muutamassa päivässä.',
+    lehtiTehtava: {
+      kysymys: 'Mistä apulaivasto saapui Maltan avuksi 1565?',
+      vaihtoehdot: ['Sisiliasta', 'Espanjasta', 'Ranskasta', 'Kreikasta'],
+      oikea: 0,
+      fakta: 'Don García de Toledon Sisiliassa kokoama apulaivasto toi lisäjoukkoja '
+        + 'Maltalle syyskuussa 1565.',
+    },
+  },
+  /* siegfried-ostaa-bockin-963 — Luxembourg City Tourist Office, Bock Promontory; tarkistettu 27.9.2026. */
+  {
+    id: 'siegfried-ostaa-bockin-963',
+    otsikko: 'Luxemburg 963 — kallio, josta tuli kaupunki',
+    nimio: 'Bockin kauppa 963',
+    paivays: '963',
+    paikka: 'Bock-kallio, Luxemburg',
+    iso: 'LUX',
+    lat: 49.6117, lon: 6.1369,
+    kuvaversio: 4,
+    teksti: 'Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella '
+      + 'Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. '
+      + 'Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, '
+      + 'yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen '
+      + 'päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta '
+      + 'omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu '
+      + 'vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa '
+      + 'kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", '
+      + 'josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään '
+      + 'louhitaan kilometrikaupalla käytäviä, ja linnan ympärille kasvava kaupunki '
+      + 'kantaa yhä saman nimen johdannaista. Jyrkänne suojaa paikkaa kolmelta '
+      + 'puolelta, ja vain lännestä sinne pääsee helposti. Siegfried kääntää '
+      + 'pergamentin kädessään ja katsoo jokimutkaa vielä kerran: kauppa näyttää '
+      + 'nyt pieneltä, mutta sen seuraukset kasvavat vuosisatoja.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-siegfried-ostaa-bockin-963-lahi-photo-v4.jpg',
+        lyhyt: 'Siegfried tutkii Bock-kalliolta jokilaaksoa kauppakirja kädessään.',
+        kuvateksti: 'Kreivi Siegfried katsoo Bockin jyrkänteeltä Alzetten laaksoon vuonna 963. '
+          + 'Kallion hankkiminen oli kaupungin historian alku.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Luxembourg City Tourist Office, Bock '
+          + 'Promontory, tarkistettu 27.9.2026.',
+        url: 'https://www.luxembourg-city.com/en/place/fortification/bock-promontory',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-siegfried-ostaa-bockin-963-kauko-photo-v4.jpg',
+        lyhyt: 'Paljas Bock-kallio kohoaa Alzetten metsäisen jokimutkan yllä.',
+        kuvateksti: 'Bockin kallioniemi ennen linnan ja kaupungin rakentamista; Alzette kiertää '
+          + 'sen kolmea sivua.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Luxembourg City Tourist Office, Bock '
+          + 'Promontory, tarkistettu 27.9.2026.',
+        url: 'https://www.luxembourg-city.com/en/place/fortification/bock-promontory',
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: 'Bock-kallio on Luxemburgin kaupungin laatan ja '
+      + 'kohdekartan sisällä: hetki avautuu kohdekartan omasta pisteestä, '
+      + 'eikä samaa merkkiä sijoiteta myös pääkartalle.',
+    lehti: { laji: 'kaupunki', avain: 'luxemburg' },
+    lehtiJohdanto: 'Koko Luxemburgin kaupunki syntyi kaupasta: kreivi Siegfried hankki jyrkän '
+      + 'Bock-kallion vuonna 963 ja rakensi sen päälle linnan, jonka ympärille '
+      + 'kaupunki kasvoi.',
+    lehtiTehtava: {
+      kysymys: 'Miten Siegfried sai Bock-kallion vuonna 963?',
+      vaihtoehdot: ['Vaihtamalla maita luostarille', 'Valtaamalla sen sotilaallisesti', 'Perimällä sen suvultaan', 'Ostamalla sen kullalla'],
+      oikea: 0,
+      fakta: 'Siegfried hankki Bock-kallion vaihtamalla maita Trierin Pyhän Maximinin '
+        + 'luostarin kanssa vuonna 963.',
+    },
+  },
+  /* roger-ii-cefalu-lupaus-1131 — Cefalù Visit Sicily, The Cathedral of Cefalù; tarkistettu 27.9.2026. */
+  {
+    id: 'roger-ii-cefalu-lupaus-1131',
+    otsikko: 'Cefalù 1131 — lupaus myrskyävällä merellä',
+    nimio: 'Cefalùn lupaus',
+    paivays: '1131',
+    paikka: 'Cefalùn edusta, Sisilia',
+    iso: 'ITA',
+    lat: 38.0433, lon: 14.0233,
+    kuvaversio: 4,
+    teksti: 'Kuningas Roger II tarrautuu aluksensa kaiteeseen, kun aalto nostaa keulan '
+      + 'pystyyn ja pudottaa sen taas kuiluun — merimiehet huutavat toisilleen '
+      + 'käskyjä, joita tuuli repii palasiksi. Legendan mukaan hän vannoo tässä '
+      + 'hetkessä: jos hän pääsee hengissä maihin, hän rakentaa kiitokseksi '
+      + 'katedraalin siihen paikkaan, johon myrsky hänet ajaa. Alus ajautuu lopulta '
+      + 'Cefalùn kapealle rannalle jylhän kalliovuoren juurelle, ja kuningas astuu '
+      + 'maihin märkänä mutta elossa. Samana vuonna, 1131, rakennustyöt alkavat — '
+      + 'Roger II:n ensimmäinen suuri kirkkohanke kuninkaana. Vuosikymmen myöhemmin '
+      + 'sen apsiksen kattoa hallitsee bysanttilaisten mestarien tekemä valtava '
+      + 'Kristus-mosaiikki, joka katsoo yhä alas tyhjää kirkkosalia. Merimiehet '
+      + 'yrittävät pitää purjeen ehjänä, eikä kukaan voi luvata, minne alus '
+      + 'ajautuu. Myöhemmät kertojat liittävät juuri tähän myrskyyn kirkon '
+      + 'syntymisen, vaikka lupauksen tarkkaa hetkeä ei voida todistaa '
+      + 'säilyneistä historiallisista asiakirjoista.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-roger-ii-cefalu-lupaus-1131-lahi-photo-v4.jpg',
+        lyhyt: 'Roger II pitää laivan kaiteesta kiinni myrskyssä Cefalùn edustalla.',
+        kuvateksti: 'Normannikuningas Roger II pitää kiinni märästä laivan kaiteesta. '
+          + 'Katedraalin syntyä selittävä myrskylupaus on perimätietoa, ei varmistettu '
+          + 'tapahtuma.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Cefalù Visit Sicily, The Cathedral of '
+          + 'Cefalù, tarkistettu 27.9.2026.',
+        url: 'https://cefalu.it/en/travel/palermo/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-roger-ii-cefalu-lupaus-1131-kauko-photo-v4.jpg',
+        lyhyt: 'Pieni normannialus kamppailee aaltoja vastaan La Roccan edustalla.',
+        kuvateksti: 'Myrskyävä meri ja Cefalùn La Rocca muodostavat näyttämön legendalle, jonka '
+          + 'mukaan Roger II lupasi rakentaa katedraalin pelastuttuaan.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Cefalù Visit Sicily, The Cathedral of '
+          + 'Cefalù, tarkistettu 27.9.2026.',
+        url: 'https://cefalu.it/en/travel/palermo/',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'kaupunki', avain: 'sisilia' },
+    visa: {
+      kysymys: 'Minä vuonna Cefalùn katedraalin rakentaminen alkoi?',
+      vaihtoehdot: ['1131', '1174', '963'],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Tarinan mukaan kuningas Roger II lupasi myrskyssä rakentaa katedraalin '
+      + 'sinne, minne pääsisi hengissä rantaan — ja hänen laivansa ajautui '
+      + 'Cefalùhun 1131.',
+    lehtiTehtava: {
+      kysymys: 'Minä vuonna Cefalùn katedraalin rakentaminen alkoi?',
+      vaihtoehdot: ['1131', '1174', '1143', '963'],
+      oikea: 0,
+      fakta: 'Roger II aloitti Cefalùn katedraalin rakennustyöt vuonna 1131; '
+        + 'haaksirikkolupaus kuuluu paikalliseen perimätietoon.',
+    },
+  },
+  /* arkadin-luostarin-rajahdys-1866 — Kreikan kulttuuriministeriö, Arkadi Monastery; tarkistettu 27.9.2026. */
+  {
+    id: 'arkadin-luostarin-rajahdys-1866',
+    otsikko: 'Arkadi 1866 — viimeinen ovi',
+    nimio: 'Arkadi 1866',
+    paivays: '9.11.1866',
+    paikka: 'Arkadin luostari, Kreeta',
+    iso: 'GRC',
+    lat: 35.3072, lon: 24.7683,
+    kuvaversio: 4,
+    teksti: 'Nainen painaa lasta vasten seinää ruutivaraston oven takana, kun '
+      + 'kirveniskut ulkopuolella yltyvät — kaksi päivää kestänyt taistelu on '
+      + 'hävitty, muurit on murrettu, eikä paluuta enää ole. Satoja kapinallisia ja '
+      + 'siviilejä on paennut Arkadin luostariin turvaan marraskuussa 1866, mutta '
+      + 'ottomaanijoukot ovat piirittäneet sen tykistöllä. Igumeni Gabriel on jo '
+      + 'päättänyt, mitä tapahtuu, jos muurit pettävät: ruutivarasto sytytetään '
+      + 'mieluummin kuin antaudutaan. Kun ovi vihdoin murtuu, joku laukaisee liekin '
+      + '— räjähdys tappaa puolustajia ja hyökkääjiä yhdessä, ja luostarin pihalta '
+      + 'löytyy myöhemmin kuulien lävistämä tuulimylly, joka seisoo siellä yhä. '
+      + 'Uutinen tapahtuneesta kulkeutuu nopeasti Eurooppaan ja herättää '
+      + 'myötätuntoa kreetalaisten asialle Pariisista New Yorkiin asti. Käytävässä '
+      + 'aika tuntuu pysähtyvän. Äiti kuulee askeleita pihan suunnalta ja pitää '
+      + 'lapsen lähellään, vaikka ei voi tietää, pääsevätkö he ulos. Myöhemmin '
+      + 'juuri siviilien kohtalo tekee tapahtumasta tunnetun kaukana Kreetan '
+      + 'ulkopuolella.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-arkadin-luostarin-rajahdys-1866-lahi-photo-v4.jpg',
+        lyhyt: 'Äiti pitää lastaan lähellä Arkadin luostarin kivikäytävässä.',
+        kuvateksti: 'Äiti suojaa lastaan Arkadin luostarin käytävässä ennen piirityksen '
+          + 'viimeistä vaihetta. Kuva ei esitä itse räjähdystä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Kreikan kulttuuriministeriö, Arkadi '
+          + 'Monastery, tarkistettu 27.9.2026.',
+        url: 'https://culturalroutes-efareth.culture.gov.gr/en/byzantine-monuments/monasteries/arkadi-monastery/',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-arkadin-luostarin-rajahdys-1866-kauko-photo-v4.jpg',
+        lyhyt: 'Arkadin luostari iltahämärässä marraskuun 1866 piirityksen aikana.',
+        kuvateksti: 'Arkadin luostarin kalkkikivijulkisivu ja lähestyvät ottomaanisotilaat '
+          + 'iltahämärässä; katolta kohoaa savua.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Kreikan kulttuuriministeriö, Arkadi '
+          + 'Monastery, tarkistettu 27.9.2026.',
+        url: 'https://culturalroutes-efareth.culture.gov.gr/en/byzantine-monuments/monasteries/arkadi-monastery/',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'kaupunki', avain: 'kreeta' },
+    visa: {
+      kysymys: 'Mitä Arkadin puolustajat tekivät muurien murruttua 1866?',
+      vaihtoehdot: ['Sytyttivät ruutivaraston', 'Antautuivat ehdoitta', 'Pakenivat vuorille'],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Arkadin luostarin puolustajat räjäyttivät ruutivarastonsa marraskuussa '
+      + '1866 mieluummin kuin antautuivat — tapahtuma, joka herätti Euroopan '
+      + 'myötätunnon kreetalaisten asialle.',
+    lehtiTehtava: {
+      kysymys: 'Mitä Arkadin puolustajat tekivät muurien murruttua 1866?',
+      vaihtoehdot: ['Sytyttivät ruutivaraston', 'Antautuivat ehdoitta', 'Pakenivat vuorille', 'Neuvottelivat aselevon'],
+      oikea: 0,
+      fakta: 'Arkadin luostarin ruutivarasto räjähti 9.11.1866 piirityksen viimeisessä '
+        + 'vaiheessa; tapahtuma herätti kansainvälistä huomiota.',
+    },
+  },
+  /* ensimmainen-juna-rovaniemi-1909 — Rovaniemen kaupunki, rakennetun ympäristön historia; tarkistettu 27.9.2026. */
+  {
+    id: 'ensimmainen-juna-rovaniemi-1909',
+    otsikko: 'Rovaniemi 1909 — ensimmäinen juna',
+    nimio: 'Ensijuna 1909',
+    paivays: '1909',
+    paikka: 'Rovaniemen rautatieasema, Lappi',
+    iso: 'FIN',
+    // Pääkartan symboli väistää kaupungin laattaa; lehti kertoo tarkan paikan.
+    lat: 66.65, lon: 25.7167,
+    kuvaversio: 4,
+    teksti: 'Poika seisoo isänsä käden varassa laiturilla ja tuntee maan tärisevän '
+      + 'jalkojensa alla ennen kuin näkee mitään — sitten savupilvi ilmestyy metsän '
+      + 'takaa ja ääni kasvaa jyskeeksi, jota kukaan paikalla ei ole ennen kuullut '
+      + 'näin läheltä. Rovaniemi on ollut vuosisatoja markkinapaikka joen varrella, '
+      + 'tavoitettavissa veneellä, reellä ja jo vuonna 1839 valmistunutta maantietä '
+      + 'pitkin, mutta rautatie Kemistä pohjoiseen valmistuu 1909 ja tuo veturin '
+      + 'puuvarikon läpi ensimmäistä kertaa. Koko kylä on kokoontunut laiturille '
+      + 'katsomaan, ja moni koskettaa vaunun kylmää metalliseinää kuin '
+      + 'varmistaakseen, että se on totta. Yhtäkkiä Lappi ei ole enää matkan päässä '
+      + 'muusta Suomesta — se on rautatien päässä. Aiemmin matka Kemistä onnistui '
+      + 'maantietä pitkin, ja jokireitit sekä reet palvelivat eri vuodenaikoina. '
+      + 'Juna muuttaa silti matkan mittaa: tavarat ja ihmiset liikkuvat tästä '
+      + 'lähtien etelään ja takaisin säännöllisemmin kuin ennen.',
+    kuvat: [
+      {
+        rooli: 'lahi',
+        tiedosto: 'hetki-ensimmainen-juna-rovaniemi-1909-lahi-photo-v4.jpg',
+        lyhyt: 'Poika ja isä katsovat ensimmäistä Rovaniemelle saapuvaa höyryjunaa.',
+        kuvateksti: 'Poika pitää isänsä kädestä kiinni Rovaniemen puisella asemalaiturilla ja '
+          + 'katsoo lähestyvää höyryveturia.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Rovaniemen kaupunki, rakennetun '
+          + 'ympäristön historia, tarkistettu 27.9.2026.',
+        url: 'https://www.rovaniemi.fi/loader.aspx?id=22de49d8-9203-4744-9602-4d992d7dae4f',
+      },
+      {
+        rooli: 'kauko',
+        tiedosto: 'hetki-ensimmainen-juna-rovaniemi-1909-kauko-photo-v4.jpg',
+        lyhyt: 'Höyryjuna saapuu Rovaniemen puuasemalle vuonna 1909.',
+        kuvateksti: 'Rovaniemen vuoden 1909 rautatieasemalle saapuu höyryjuna; väki odottaa '
+          + 'laiturilla mäntyjen ja jokimaiseman äärellä.',
+        lahde: 'Matkakirjan havainnekuva. Faktat: Rovaniemen kaupunki, rakennetun '
+          + 'ympäristön historia, tarkistettu 27.9.2026.',
+        url: 'https://www.rovaniemi.fi/loader.aspx?id=22de49d8-9203-4744-9602-4d992d7dae4f',
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: 'kaupunki', avain: 'lappi' },
+    visa: {
+      kysymys: 'Mikä uusi yhteys valmistui Rovaniemelle vuonna 1909?',
+      vaihtoehdot: ['Rautatie Kemistä', 'Ensimmäinen lentoreitti', 'Autolautta Ruotsista'],
+      oikea: 0,
+    },
+    lehtiJohdanto: 'Rautatie Rovaniemelle valmistui 1909 ja toi ensimmäisen höyryveturin '
+      + 'markkinakylään, joka oli tähän asti tavoitettu vesitse, reellä ja '
+      + 'maanteitse.',
+    lehtiTehtava: {
+      kysymys: 'Miten Rovaniemelle pääsi ennen rautatietä?',
+      vaihtoehdot: ['Maanteitse, veneellä tai reellä', 'Vain lentäen', 'Höyrylaivalla merta pitkin', 'Ei mitenkään talvisin'],
+      oikea: 0,
+      fakta: 'Maantie Kemistä valmistui jo 1839. Vesireitit ja reet olivat tärkeitä, ja '
+        + 'rautatie Laurilan suunnasta valmistui 1909.',
+    },
+  },
+  /* wienin-porssikrahi-1873 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "wienin-porssikrahi-1873",
+    otsikko: "Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi",
+    nimio: "Wienin krahi 1873",
+    paivays: "9.5.1873",
+    paikka: "Väliaikainen pörssitalo, Schottenring, Wien",
+    iso: "AUT",
+    lat: 48.2166, lon: 16.3648,
+    kuvaversio: 4,
+    teksti: "Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutuu hajottamaan pörssisalin edustalle kerääntyneen väkijoukon. Krahi, jota jälkipolvet kutsuvat nimellä \"Der Krach\", painaa Itävallan talouden vuosien lamaan juuri samaan aikaan kun näyttelyvieraiden mukana kaupunkiin leviää koleraepidemia. Seuraavien viikkojen aikana yli kuusikymmentä pankkia ja rakennusyhtiötä ajautuu vararikkoon, ja moni pieni säästäjä menettää elämänsä säästöt yhden ainoan aamupäivän aikana.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-wienin-porssikrahi-1873-lahi-photo-v4.jpg",
+        lyhyt: "Pörssimeklari tuntee kurssien romahtavan toukokuussa 1873.",
+        kuvateksti: "Pörssimeklari tuntee kurssien romahtavan toukokuussa 1873.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Wiener Börse, pörssin historia; tarkistettu 28.9.2026.",
+        url: "https://www.wienerborse.at/en/about-us/vienna-stock-exchange/250-years-wiener-boerse/future-forum/mini-documentary-from-floor-to-network/",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-wienin-porssikrahi-1873-kauko-photo-v4.jpg",
+        lyhyt: "Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.",
+        kuvateksti: "Wienin väliaikaisessa pörssisalissa puhkeaa paniikki.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Wiener Börse, pörssin historia; tarkistettu 28.9.2026.",
+        url: "https://www.wienerborse.at/en/about-us/vienna-stock-exchange/250-years-wiener-boerse/future-forum/mini-documentary-from-floor-to-network/",
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: "piste on Wienin kohdekartan rajauksessa: hetki kuuluu kaupungin omaan karttaan",
+    lehti: { laji: "kaupunki", avain: "wien" },
+    lehtiJohdanto: "Wienin pörssi romahti 9. toukokuuta 1873 vain viikko maailmannäyttelyn avajaisten jälkeen — \"Der Krach\" painoi Itävallan talouden vuosien lamaan.",
+    lehtiTehtava: {
+      kysymys: "Mikä avattiin Wienissä vain viikkoa ennen pörssiromahdusta 1873?",
+      vaihtoehdot: ["Maailmannäyttely", "Uusi rautatieasema", "Keisarillinen ooppera", "Pörssin uusi rakennus"],
+      oikea: 0,
+      fakta: "Keisari Franz Joseph avasi Wienin maailmannäyttelyn Praterissa 1.5.1873; pörssi romahti kahdeksan päivää myöhemmin 9.5.1873.",
+    },
+  },
+  /* afsluitdijkin-viimeinen-aukko-1932 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "afsluitdijkin-viimeinen-aukko-1932",
+    otsikko: "De Vlieter 1932 — meri lakkaa kahtia jakamasta",
+    nimio: "Vlieter 1932",
+    paivays: "28.5.1932",
+    paikka: "\"De Vlieter\", Afsluitdijk",
+    iso: "NLD",
+    lat: 53.005, lon: 5.1875,
+    kuvaversio: 4,
+    teksti: "Nosturinkuljettaja pitää kättä vivulla ja katsoo alas viimeistä kapeaa vesirakoa, joka erottaa vielä kaksi patoa toisistaan — muutama metri kiveä ja savea, ei enää mitään. Lauantaina 28. toukokuuta 1932 kello 13.02 kolme MUZ-yhtiön kelluvaa nostokurkea laskee viimeisen kivilastin paikalleen \"de Vlieterin\" kohdalla, ja koko Afsluitdijk, jota on rakennettu vuodesta 1927 poikki Zuiderzeen suulle, sulkeutuu. Kaikkien lähellä olevien laivojen höyrypillit soivat yhtä aikaa, ja rannalle kokoontuneet ihmiset huutavat, kun viimeinen aukko katoaa veden alle. Työmaalla on ollut käynnissä kilpajuoksu ajan kanssa, sillä edellisen talven myrskyt olivat jo kerran vaurioittaneet keskeneräistä patoa, ja insinöörit halusivat viimeistellä sulun ennen seuraavaa myrskykautta. Hetki päättää insinööri Cornelis Lelyn vuosikymmeniä vanhan suunnitelman: Pohjanmeren suolainen Zuiderzee lakkaa olemasta ja muuttuu vähitellen makeavetiseksi IJsselmeeriksi, ja Alankomaat saa 32 kilometrin patotien, joka suojaa satojatuhansia ihmisiä tulvilta ja avaa uutta maata pengerryksille.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-afsluitdijkin-viimeinen-aukko-1932-lahi-photo-v4.jpg",
+        lyhyt: "Nosturinkuljettaja valmistelee Afsluitdijkin viimeistä aukkoa.",
+        kuvateksti: "Nosturinkuljettaja valmistelee Afsluitdijkin viimeistä aukkoa.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Nationaal Archief, Afsluitdijkin sulkeminen; tarkistettu 28.9.2026.",
+        url: "https://www.nationaalarchief.nl/onderzoeken/fotocollectie/af3376a8-d0b4-102d-bcf8-003048976d84",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-afsluitdijkin-viimeinen-aukko-1932-kauko-photo-v4.jpg",
+        lyhyt: "Zuiderzeen sulkevan padon viimeinen aukko täytetään 1932.",
+        kuvateksti: "Zuiderzeen sulkevan padon viimeinen aukko täytetään 1932.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Nationaal Archief, Afsluitdijkin sulkeminen; tarkistettu 28.9.2026.",
+        url: "https://www.nationaalarchief.nl/onderzoeken/fotocollectie/af3376a8-d0b4-102d-bcf8-003048976d84",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "NLD" },
+    visa: {
+      kysymys: "Miksi Afsluitdijk rakennettiin?",
+      vaihtoehdot: ["Suojaamaan tulvilta ja luomaan uutta maata", "Sotilaallisena linnoituksena", "Rautatietä varten"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Afsluitdijkin viimeinen aukko suljettiin 28. toukokuuta 1932 kello 13.02 — Zuiderzeestä tuli patojen taakse IJsselmeeri.",
+    lehtiTehtava: {
+      kysymys: "Miksi Afsluitdijk rakennettiin?",
+      vaihtoehdot: ["Suojaamaan tulvilta ja luomaan uutta maata", "Sotilaallisena linnoituksena", "Rautatietä varten", "Kalastussatamaksi"],
+      oikea: 0,
+      fakta: "Afsluitdijk sulki Zuiderzeen mereltä 1932, muutti sen makeavetiseksi IJsselmeeriksi ja suojasi aluetta tulvilta.",
+    },
+  },
+  /* gotthardin-lapimurto-1880 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "gotthardin-lapimurto-1880",
+    otsikko: "Gotthard 1880 — valokuva kulkee kalliossa",
+    nimio: "Läpimurto 1880",
+    paivays: "29.2.1880",
+    paikka: "Gotthardin rautatietunnelin keskikohta, Göschenenin ja Airolon välissä",
+    iso: "CHE",
+    lat: 46.5978, lon: 8.5949,
+    kuvaversio: 4,
+    teksti: "Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle. Kahdeksan vuoden louhinnan aikana yli 200 työmiestä on kuollut onnettomuuksissa ja työtaudeissa, mutta 15 kilometrin tunneli, Euroopan tuolloin pisin, yhdistää pian Sveitsin pohjoisen ja eteläisen puolen ilman vuoristosolaa. Sanomalehdet ympäri Eurooppaa julkaisevat uutisen jo seuraavana aamuna lennättimellä, ja rautatieyhtiöt alkavat heti suunnitella aikatauluja, joissa Milano ja Zürich ovat toisistaan vain tuntien, ei enää päivien, matkan päässä.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-gotthardin-lapimurto-1880-lahi-photo-v4.jpg",
+        lyhyt: "Gotthardin työläiset kohtaavat tunnelin läpimurtoaukolla.",
+        kuvateksti: "Gotthardin työläiset kohtaavat tunnelin läpimurtoaukolla.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Sveitsin kansallismuseo, Gotthardin tunnelin läpimurto; tarkistettu 28.9.2026.",
+        url: "https://blog.nationalmuseum.ch/2019/10/durchbruch-am-gotthard/",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-gotthardin-lapimurto-1880-kauko-photo-v4.jpg",
+        lyhyt: "Gotthardin tunnelin kaksi työryhmää yhdistyvät 1880.",
+        kuvateksti: "Gotthardin tunnelin kaksi työryhmää yhdistyvät 1880.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Sveitsin kansallismuseo, Gotthardin tunnelin läpimurto; tarkistettu 28.9.2026.",
+        url: "https://blog.nationalmuseum.ch/2019/10/durchbruch-am-gotthard/",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "CHE" },
+    visa: {
+      kysymys: "Mitä Gotthardin tunnelin läpimurrossa 1880 tapahtui insinööri Louis Favrelle?",
+      vaihtoehdot: ["Hän oli kuollut jo vuotta aiemmin", "Hän johti juhlaa paikan päällä", "Hän erosi tehtävästään"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Gotthardin rautatietunnelin pohjois- ja eteläpuolen louhijat kohtasivat syvällä kalliossa 29. helmikuuta 1880 — insinööri Louis Favre ei elänyt näkemään sitä.",
+    lehtiTehtava: {
+      kysymys: "Mitä Gotthardin tunnelin läpimurrossa 1880 tapahtui insinööri Louis Favrelle?",
+      vaihtoehdot: ["Hän oli kuollut jo vuotta aiemmin", "Hän johti juhlaa paikan päällä", "Hän erosi tehtävästään", "Hän muutti Italiaan"],
+      oikea: 0,
+      fakta: "Louis Favre kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879; hänen valokuvansa kulki läpimurtoaukosta helmikuussa 1880.",
+    },
+  },
+  /* christiansborgin-palo-1884 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "christiansborgin-palo-1884",
+    otsikko: "Christiansborg 1884 — savu valtaosien alla",
+    nimio: "Linnanpalo 1884",
+    paivays: "3.10.1884",
+    paikka: "Christiansborgin linna, Kööpenhamina",
+    iso: "DNK",
+    lat: 55.6763, lon: 12.5806,
+    kuvaversio: 4,
+    teksti: "Vartija pysähtyy käytävällä ja nuuskii ilmaa — hajussa on jotain, joka ei kuulu perjantai-iltapäivään Christiansborgin linnassa. Se on 3. lokakuuta 1884, ja savu nousee huoneesta aivan Riddersalenin, ritarisalin, alapuolelta, missä vanha kaakeliuuni on juuri sytyttänyt jotain palamaan. Kukaan ei vielä tiedä, että linnan seinien sisällä on vuosikymmenten aikana syntynyt lukemattomia onttoja välitiloja, jotka vetävät liekkiä eteenpäin kuin savupiiput. Palokunta saapuu nopeasti, mutta tuli leviää käytävästä käytävään nopeammin kuin kukaan osaa sitä pysäyttää. Yön aikana koko linnan päärakennus — valtiopäivien, hallituksen ja kuninkaan asuintilojen koti — palaa lähes tyhjäksi kuoreksi; hoviteatteri, ratsastushalli ja linnankirkko selviävät liekeiltä. Tanska on menettänyt toisen Christiansborginsa 90 vuotta ensimmäisen palon jälkeen, ja rauniot seisovat parikymmentä vuotta ennen kuin kolmannen linnan rakentaminen alkaa. Palosta saadaan pelastettua paljon omaisuutta, muun muassa kuninkaan maalauksia, kirjoja ja hopeaesineitä.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-christiansborgin-palo-1884-lahi-photo-v4.jpg",
+        lyhyt: "Linnanvartija havaitsee Christiansborgin palon 1884.",
+        kuvateksti: "Linnanvartija havaitsee Christiansborgin palon 1884.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Folketinget, Christiansborgin historia; tarkistettu 28.9.2026.",
+        url: "https://www.ft.dk/da/folkestyret/folketinget-og-christiansborg/christiansborgs-historie",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-christiansborgin-palo-1884-kauko-photo-v4.jpg",
+        lyhyt: "Kööpenhaminan Christiansborg palaa lokakuussa 1884.",
+        kuvateksti: "Kööpenhaminan Christiansborg palaa lokakuussa 1884.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Folketinget, Christiansborgin historia; tarkistettu 28.9.2026.",
+        url: "https://www.ft.dk/da/folkestyret/folketinget-og-christiansborg/christiansborgs-historie",
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: "piste on Kööpenhaminan kohdekartan rajauksessa: hetki kuuluu kaupungin omaan karttaan",
+    lehti: { laji: "kaupunki", avain: "kobenhavn" },
+    lehtiJohdanto: "Christiansborgin linna paloi lähes maan tasalle 3. lokakuuta 1884 — hoviteatteri, ratsastushalli ja linnankirkko selvisivät, ja kolmannen linnan rakentaminen alkoi vasta parinkymmenen vuoden kuluttua.",
+    lehtiTehtava: {
+      kysymys: "Mitä Christiansborgista säästyi vuoden 1884 palossa?",
+      vaihtoehdot: ["Hoviteatteri, ratsastushalli ja kirkko", "Koko itäsiipi", "Vain kirkko", "Ei mikään osa"],
+      oikea: 0,
+      fakta: "Palo tuhosi lähes koko linnan 3.10.1884, mutta hoviteatteri, ratsastushalli ja linnankirkko jäivät pystyyn.",
+    },
+  },
+  /* belgradin-piiritys-1456 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "belgradin-piiritys-1456",
+    otsikko: "Belgrad 1456 — talonpojat murtavat piirityksen",
+    nimio: "Piiritys 1456",
+    paivays: "21.–22.7.1456",
+    paikka: "Belgradin linnoitus (Kalemegdan)",
+    iso: "SRB",
+    lat: 44.8233, lon: 20.4503,
+    kuvaversio: 4,
+    teksti: "Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemmin, haavoittuu taistelussa ja joutuu perääntymään joukkoineen. Piiritykseen tuotu raskas tykistö ja suuri osa osmanien leirivarusteista jäävät kristittyjen haltuun, kun leiri vallataan yllätyshyökkäyksen jälkeen. Belgrad pysyy kristityn Euroopan käsissä vielä seuraavat seitsemänkymmentä vuotta, ja voitosta kerrotaan tulleen katolisen kirkon keskipäivän kellonsoiton perinteen taustalle useissa maissa.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-belgradin-piiritys-1456-lahi-photo-v4.jpg",
+        lyhyt: "Talonpoika osallistuu Belgradin puolustukseen 1456.",
+        kuvateksti: "Talonpoika osallistuu Belgradin puolustukseen 1456.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Belgradin linnoitus, historia; tarkistettu 28.9.2026.",
+        url: "https://www.beogradskatvrdjava.co.rs/o-kompleksu/?lang=en",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-belgradin-piiritys-1456-kauko-photo-v4.jpg",
+        lyhyt: "Belgradin linnoituksen piiritys päättyy 1456.",
+        kuvateksti: "Belgradin linnoituksen piiritys päättyy 1456.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Belgradin linnoitus, historia; tarkistettu 28.9.2026.",
+        url: "https://www.beogradskatvrdjava.co.rs/o-kompleksu/?lang=en",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "SRB" },
+    visa: {
+      kysymys: "Kuka johti Belgradin puolustusta 1456?",
+      vaihtoehdot: ["János Hunyadi", "Vlad Seivästäjä", "Skanderbeg"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Belgradin piiritys päättyi heinäkuussa 1456 yllättävään talonpoikaisten ristiretkeläisten hyökkäykseen, joka haavoitti sulttaani Mehmed II:n ja pysäytti osmanien etenemisen Euroopassa vuosikymmeniksi.",
+    lehtiTehtava: {
+      kysymys: "Kuka johti Belgradin puolustusta 1456?",
+      vaihtoehdot: ["János Hunyadi", "Vlad Seivästäjä", "Skanderbeg", "Mehmed II"],
+      oikea: 0,
+      fakta: "Unkarilainen sotapäällikkö János Hunyadi ja munkki Giovanni da Capistrano torjuivat Mehmed II:n piirityksen heinäkuussa 1456.",
+    },
+  },
+  /* franz-ferdinandin-salamurha-1914 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "franz-ferdinandin-salamurha-1914",
+    otsikko: "Sarajevo 1914 — auto pysähtyy väärään paikkaan",
+    nimio: "Latin-silta 1914",
+    paivays: "28.6.1914",
+    paikka: "Latin-silta, Sarajevo",
+    iso: "BIH",
+    lat: 43.8579, lon: 18.4289,
+    kuvaversio: 4,
+    teksti: "Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syanidikapselin ja kääntää pistoolin itseään kohti, mutta väkijoukko ehtii ensin lyödä aseen maahan. Molemmat kuolevat tunnin sisällä. Uutinen kulkee lennättimellä Wieniin saman päivän iltana, ja kuukauden kuluessa Itävalta-Unkari julistaa sodan Serbialle — ketju, joka vetää mukaansa koko Euroopan suurvallat ja käynnistää ensimmäisen maailmansodan.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-franz-ferdinandin-salamurha-1914-lahi-photo-v4.jpg",
+        lyhyt: "Autonkuljettaja pysäyttää auton Sarajevossa 1914.",
+        kuvateksti: "Autonkuljettaja pysäyttää auton Sarajevossa 1914.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Heeresgeschichtliches Museum, Sarajevon attentaatti; tarkistettu 28.9.2026.",
+        url: "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/the-sarajevo-assassination",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-franz-ferdinandin-salamurha-1914-kauko-photo-v4.jpg",
+        lyhyt: "Franz Ferdinandin autosaattue Latin-sillan luona.",
+        kuvateksti: "Franz Ferdinandin autosaattue Latin-sillan luona.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Heeresgeschichtliches Museum, Sarajevon attentaatti; tarkistettu 28.9.2026.",
+        url: "https://www.hgm.at/en/visit-our-museums/museum-of-military-history/exhibitions/the-sarajevo-assassination",
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: "piste on Sarajevon kohdekartan rajauksessa: hetki kuuluu kaupungin omaan karttaan",
+    lehti: { laji: "kaupunki", avain: "sarajevo" },
+    lehtiJohdanto: "Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.",
+    lehtiTehtava: {
+      kysymys: "Miksi Franz Ferdinandin auto pysähtyi Latin-sillan luona 1914?",
+      vaihtoehdot: ["Kuljettaja ajoi vahingossa väärään kujaan", "Auto hajosi teknisesti", "Väkijoukko esti tien", "Se oli suunniteltu pysähdyspaikka"],
+      oikea: 0,
+      fakta: "Reittimuutosta ei kerrottu kuljettajalle; auto pysähtyi perääntyessään juuri Gavrilo Principin eteen.",
+    },
+  },
+  /* vloren-itsenaisyys-1912 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "vloren-itsenaisyys-1912",
+    otsikko: "Vlorë 1912 — lippu, joka ommeltiin yöllä",
+    nimio: "Vlorë 1912",
+    paivays: "28.11.1912",
+    paikka: "Ismail Qemalin talo, Vlorë",
+    iso: "ALB",
+    lat: 40.467, lon: 19.4901,
+    kuvaversio: 4,
+    teksti: "Neula pistää kangasta vielä muutama tunti ennen kuin lippu nousee salkoon. Marigo Posio istuu yönsä ompelemassa punaista kangasta ja mustaa kaksipäistä kotkaa, koska lippu, jonka Ismail Qemali oli ensin lainannut, vaadittiin takaisin viime hetkellä. Perjantaina 28. marraskuuta 1912 vanha diplomaatti Qemali seisoo Vlorën satamakaupungin vaatimattomassa talossa, joka toimii samalla sairaalana, ja lukee ääneen julistuksen: Albania on itsenäinen, viiden vuosisadan osmanivallan jälkeen. Balkanin sodat ovat ajaneet Ottomaanien valtakunnan ahtaalle, ja albaanijohtajat ovat kokoontuneet Vlorëen nopeasti, ennen kuin naapurimaat ehtivät jakaa alueen keskenään: Serbian, Montenegron ja Kreikan armeijat ovat jo tunkeutuneet syvälle albaanien asuttamille alueille pohjoisessa ja idässä. Talosta tulee heti hallituksen ensimmäinen istuntopaikka, ja Qemalista maan ensimmäinen pääministeri. Suurvallat tunnustavat itsenäisyyden vasta seuraavana vuonna Lontoon konferenssissa, mutta lippu, joka nousi tuona iltana Vlorën ylle, on sama malli, joka liehuu Albaniassa vielä tänäänkin.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-vloren-itsenaisyys-1912-lahi-photo-v4.jpg",
+        lyhyt: "Vanhempi nainen ompelee Albanian lippua Vlorëssa 1912.",
+        kuvateksti: "Vanhempi nainen ompelee Albanian lippua Vlorëssa 1912.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Albanian kansallinen historiamuseo, itsenäisyys; tarkistettu 28.9.2026.",
+        url: "https://www.mhk.gov.al/portfolio/pavijoni-i-pavaresise-2/",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-vloren-itsenaisyys-1912-kauko-photo-v4.jpg",
+        lyhyt: "Vlorën kadut täyttyvät itsenäisyysjulistuksen päivänä.",
+        kuvateksti: "Vlorën kadut täyttyvät itsenäisyysjulistuksen päivänä.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Albanian kansallinen historiamuseo, itsenäisyys; tarkistettu 28.9.2026.",
+        url: "https://www.mhk.gov.al/portfolio/pavijoni-i-pavaresise-2/",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "ALB" },
+    visa: {
+      kysymys: "Kuka ompeli Albanian itsenäisyyslipun Vlorëssa 1912?",
+      vaihtoehdot: ["Marigo Posio", "Ismail Qemalin vaimo", "Eqrem Vlora itse"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Ismail Qemali julisti Albanian itsenäiseksi Vlorën satamatalossa 28. marraskuuta 1912 — lippu, joka nousi samana iltana, ommeltiin viime hetkellä uudestaan.",
+    lehtiTehtava: {
+      kysymys: "Kuka ompeli Albanian itsenäisyyslipun Vlorëssa 1912?",
+      vaihtoehdot: ["Marigo Posio", "Ismail Qemalin vaimo", "Eqrem Vlora itse", "Tuntematon ompelija Roomasta"],
+      oikea: 0,
+      fakta: "Alkuperäinen lainattu lippu vaadittiin takaisin, joten Marigo Posio ompeli uuden yöllä ennen julistusta 28.11.1912.",
+    },
+  },
+  /* krusevon-tasavalta-1903 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "krusevon-tasavalta-1903",
+    otsikko: "Kruševo 1903 — kymmenen päivän tasavalta",
+    nimio: "Kruševo 1903",
+    paivays: "2.8.1903",
+    paikka: "Kruševo",
+    iso: "MKD",
+    lat: 41.3742, lon: 21.2458,
+    kuvaversio: 4,
+    teksti: "Kirkonkellot soivat kaikkialla Kruševossa samaan aikaan, ja hetken ne peittävät alleen jokaisen muun äänen. On Elian päivä, Ilinden, 2. elokuuta 1903, ja makedonialaiset kapinalliset ovat juuri vallanneet pienen vuoristokaupungin ottomaanihallinnolta. Julistus tasavallasta tehdään Tomalevski-suvun talossa; torilla sen uutinen leviää väkijoukkoon — sekakomitea, jossa istuvat sekä slaavilaiset että kutzovlach-aromanialaiset asukkaat, hallitsee kaupunkia yhdessä. Kapinallisten riveissä taistelee puutteen vuoksi myös naisia ja nuoria poikia, joille on jaettu kivääreitä ilman koulutusta. Kellojen soidessa moni asukas ei vielä tiedä, kuinka lyhyeksi juhla jää: kymmenen päivän kuluttua osmanijoukot palaavat tykistön kanssa, ja Kruševo poltetaan suurelta osin maan tasalle kostoksi. Silti lyhyt tasavalta jää elämään symbolina — ensimmäisenä kertana, kun makedonialaiset kapinalliset hallitsivat kaupunkia omilla säännöillään edes hetken, vuosikymmeniä ennen kuin Makedonia sai koskaan oman valtion.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-krusevon-tasavalta-1903-lahi-photo-v4.jpg",
+        lyhyt: "Torilla kerrotaan Kruševon tasavallasta 1903; julistus tehtiin Tomalevski-suvun talossa.",
+        kuvateksti: "Torilla kerrotaan Kruševon tasavallasta 1903; julistus tehtiin Tomalevski-suvun talossa.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Kruševon museo, Ilindenin kansannousu; tarkistettu 28.9.2026.",
+        url: "https://muzejkrusevo.mk/?lang=en&page_id=1513",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-krusevon-tasavalta-1903-kauko-photo-v4.jpg",
+        lyhyt: "Kruševon vuoristokaupunki lyhyen tasavallan aikana.",
+        kuvateksti: "Kruševon vuoristokaupunki lyhyen tasavallan aikana.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Kruševon museo, Ilindenin kansannousu; tarkistettu 28.9.2026.",
+        url: "https://muzejkrusevo.mk/?lang=en&page_id=1513",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "MKD" },
+    visa: {
+      kysymys: "Kuinka kauan Kruševon tasavalta kesti 1903?",
+      vaihtoehdot: ["Noin kymmenen päivää", "Yhden vuoden", "Kolme kuukautta"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Kruševon kaupunki julistautui tasavallaksi Ilindenin kapinan aikana 2. elokuuta 1903 — se kesti vain kymmenen päivää ennen ottomaanien vastaiskua.",
+    lehtiTehtava: {
+      kysymys: "Kuinka kauan Kruševon tasavalta kesti 1903?",
+      vaihtoehdot: ["Noin kymmenen päivää", "Yhden vuoden", "Kolme kuukautta", "Vain muutaman tunnin"],
+      oikea: 0,
+      fakta: "Nikola Karevin johtama Kruševon tasavalta julistettiin 2.8.1903 ja kukistettiin ottomaanien vastahyökkäyksellä noin kymmenen päivää myöhemmin.",
+    },
+  },
+  /* obodin-kirjapaino-1494 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "obodin-kirjapaino-1494",
+    otsikko: "Obod 1494 — musteen viimeinen arkki",
+    nimio: "Obod 1494",
+    paivays: "4.1.1494",
+    paikka: "Obodin kirjapaino, Rijeka Crnojevića",
+    iso: "MNE",
+    lat: 42.35, lon: 19.033,
+    kuvaversio: 4,
+    teksti: "Munkki Makarijen sormet ovat mustat musteesta, kun hän nostaa viimeisen painetun arkin puristimesta ja tarkistaa kirjainrivit vielä kerran vasten ikkunasta lankeavaa valoa. On 4. tammikuuta 1494, ja Crnojevićien kirjapainossa Cetinjen seudulla valmistuu Oktoih prvoglasnik — ensimmäisen äänilajin oktoehos, kirkkolaulukirja. Ruhtinas Đurađ Crnojević on hankkinut painokoneen ja kirjaimet Venetsiasta vain vuosi aiemmin, ja Makarije on oppinut käyttämään niitä kirkkoslaaviksi, kirjaimet valettuina käsin metallista. Paperi tuodaan laivoilla samaa reittiä Venetsiasta kuin kirjaimetkin, sillä lähialueella ei ole yhtään paperimyllyä. Kirja on ensimmäinen painettu teos, jonka eteläslaavilaiset ovat koskaan tuottaneet omalla kielialueellaan — aikaisemmin kaikki kirjat oli kopioitava käsin munkkien luostareissa vuosikausia. Zeta, pieni ruhtinaskunta Balkanin vuorten keskellä, ehtii painaa vain viisi kirjaa ennen kuin osmanien paine pakottaa Crnojevićin suvun pakenemaan ja painokone katoaa historiasta jäljettömiin.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-obodin-kirjapaino-1494-lahi-photo-v4.jpg",
+        lyhyt: "Munkki käyttää varhaista painokonetta Obodissa 1494.",
+        kuvateksti: "Munkki käyttää varhaista painokonetta Obodissa 1494.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Montenegron kansallismuseo, Oktoih prvoglasnik; tarkistettu 28.9.2026.",
+        url: "https://narodnimuzej.me/2020/11/23/oktoih-prvoglasnik/",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-obodin-kirjapaino-1494-kauko-photo-v4.jpg",
+        lyhyt: "Obodin linnan seutu Rijeka Crnojevićan ympäristössä; kirjapainon tarkka paikka on epävarma.",
+        kuvateksti: "Obodin linnan seutu Rijeka Crnojevićan ympäristössä; kirjapainon tarkka paikka on epävarma.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Montenegron kansallismuseo, Oktoih prvoglasnik; tarkistettu 28.9.2026.",
+        url: "https://narodnimuzej.me/2020/11/23/oktoih-prvoglasnik/",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "MNE" },
+    visa: {
+      kysymys: "Mikä kirja valmistui Obodin painossa 4.1.1494?",
+      vaihtoehdot: ["Oktoih prvoglasnik", "Raamatun ensimmäinen käännös", "Zetan lakikirja"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Obodin kirjapainossa valmistui 4. tammikuuta 1494 Oktoih prvoglasnik — ensimmäinen eteläslaavien oma painettu kirja, tehty vain viisi vuotta ennen painokoneen katoamista osmanien tieltä.",
+    lehtiTehtava: {
+      kysymys: "Mikä kirja valmistui Obodin painossa 4.1.1494?",
+      vaihtoehdot: ["Oktoih prvoglasnik", "Raamatun ensimmäinen käännös", "Zetan lakikirja", "Venetsian kauppasopimus"],
+      oikea: 0,
+      fakta: "Munkki Makarije painoi kirkkoslaavilaisen laulukirjan ruhtinas Đurađ Crnojevićin hankkimalla painokoneella — ensimmäisen eteläslaavien omalla alueella painetun kirjan.",
+    },
+  },
+  /* britannian-lippu-nikosiassa-1878 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "britannian-lippu-nikosiassa-1878",
+    otsikko: "Nikosia 1878 — puolikuu laskee, risti nousee",
+    nimio: "Nikosia 1878",
+    paivays: "12.7.1878",
+    paikka: "Nikosia, Kypros",
+    iso: "CYP",
+    lat: 35.1768, lon: 33.3573,
+    kuvaversio: 4,
+    teksti: "Kaupustelija keskeyttää työnsä, kun väkijoukko kääntyy katsomaan uutta lippua Nikosiassa. On 12. heinäkuuta 1878: saaren hallinto siirtyy Britannialle, ja Union Jack nostetaan vara-amiraali Lord John Hayn läsnä ollessa. Hänen laivastostaan kaupunkiin saapuu merijalkaväkeä ja merimiehiä, mutta uusi hallinto on vasta alkutekijöissään. Britannia ja Osmanien valtakunta olivat sopineet Kyproksen hallinnasta kesäkuussa vastineeksi Britannian tuesta Venäjän uhkaa vastaan. Saari pysyy muodollisesti osmanien valtakunnan osana, vaikka käytännön valta vaihtuu. Ensimmäinen korkea komissaari Garnet Wolseley saapuu Nikosiaan vasta 31. heinäkuuta ja ryhtyy kokoamaan hallintoa. Torin kauppiaalle tämä päivä ei vielä kerro, mitä vuosikymmenet tuovat: hänen edessään muuttuvat ensin sotilaat ja lippu, vasta sitten lait.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-britannian-lippu-nikosiassa-1878-lahi-photo-v4.jpg",
+        lyhyt: "Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.",
+        kuvateksti: "Nikosian kaupustelija näkee hallinnon vaihtuvan 1878.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Nikosian kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.",
+        url: "https://www.um.edu.mt/__data/assets/pdf_file/0010/95563/klearchoskyriakides2006.pdf",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-britannian-lippu-nikosiassa-1878-kauko-photo-v4.jpg",
+        lyhyt: "Nikosian vanhan kaupungin ympäristö Britannian hallinnon alkaessa; tarkka lipunnostopaikka on epävarma.",
+        kuvateksti: "Nikosian vanhan kaupungin ympäristö Britannian hallinnon alkaessa; tarkka lipunnostopaikka on epävarma.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Nikosian kaupunki, brittihallinnon alku; tarkistettu 28.9.2026.",
+        url: "https://www.um.edu.mt/__data/assets/pdf_file/0010/95563/klearchoskyriakides2006.pdf",
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: "piste on Nikosian kohdekartan rajauksessa: hetki kuuluu kaupungin omaan karttaan",
+    lehti: { laji: "kaupunki", avain: "nikosia" },
+    lehtiJohdanto: "Britannia otti Kyproksen hallintaansa Nikosiassa heinäkuussa 1878 kesäkuussa solmitun Kyproksen sopimuksen nojalla — brittihallinto kesti saarella lähes kahdeksankymmentä vuotta.",
+    lehtiTehtava: {
+      kysymys: "Miksi Britannia sai Kyproksen hallinnon 1878?",
+      vaihtoehdot: ["Vastineeksi tuesta Osmanien valtakunnalle Venäjää vastaan", "Sotilaallisella valloituksella", "Ostamalla saaren kullalla", "Kreikan välityksellä"],
+      oikea: 0,
+      fakta: "Britannian ja Osmanien valtakunnan Kyproksen sopimus solmittiin kesäkuussa 1878; hallinto siirtyi virallisesti Nikosiassa vara-amiraali Lord John Haylle 12.7.1878.",
+    },
+  },
+  /* pyhan-elmon-linnake-1565 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "pyhan-elmon-linnake-1565",
+    otsikko: "Pyhä Elmo 1565 — viimeinen aamu muurilla",
+    nimio: "Fort St Elmo 1565",
+    paivays: "23.6.1565",
+    paikka: "Pyhän Elmon linnake, Sciberras-niemi (nyk. Valletta), Malta",
+    iso: "MLT",
+    lat: 35.902, lon: 14.5188,
+    kuvaversio: 4,
+    teksti: "Onko tänä aamuna enää mitään puolustettavaa? Pyhän Elmon linnakkeen viimeiset puolustajat, uupuneita ja lähes kaikki haavoittuneita, ovat taistelleet kaksikymmentäkahdeksan päivää Mustafa Pashan tykistöä ja jatkuvia rynnäköitä vastaan pienellä hiekkakivilinnakkeella Sciberras-niemen kärjessä. Torstaina 23. kesäkuuta 1565 osmanijoukot murtautuvat vihdoin sisään, ja suurmestari Jean de Vallette, joka on yöllä lähettänyt viestejä uimarien mukana linnakkeen ja pääkaupungin Birgun välillä, tietää jo, ettei apua ehdi tulla ajoissa. Lähes koko St Elmon noin 1 500 hengen varuskunta kaatuu tai teloitetaan; muutama ritari onnistuu uimaan yli sataman. Osmaanit menettävät piirityksessä valloittaakseen pienen linnakkeen niin paljon aikaa ja väkeä — arviolta kahdeksan päivää jokaista viikkoa vastaan, jonka Vallette oli laskenut — että koko suuri piiritys lopulta epäonnistuu syyskuussa. Vuosia myöhemmin uusi pääkaupunki nousee samalle niemelle ja saa nimensä suurmestarilta: Valletta.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-pyhan-elmon-linnake-1565-lahi-photo-v4.jpg",
+        lyhyt: "Väsynyt puolustaja odottaa Pyhän Elmon viimeistä hyökkäystä.",
+        kuvateksti: "Väsynyt puolustaja odottaa Pyhän Elmon viimeistä hyökkäystä.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Heritage Malta, Fort St Elmo; tarkistettu 28.9.2026.",
+        url: "https://heritagemalta.mt/mt/explore/fort-st-elmo-national-war-museum/",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-pyhan-elmon-linnake-1565-kauko-photo-v4.jpg",
+        lyhyt: "Pyhän Elmon linnake Maltan suuren piirityksen aikana.",
+        kuvateksti: "Pyhän Elmon linnake Maltan suuren piirityksen aikana.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Heritage Malta, Fort St Elmo; tarkistettu 28.9.2026.",
+        url: "https://heritagemalta.mt/mt/explore/fort-st-elmo-national-war-museum/",
+      },
+    ],
+    kartalla: false,
+    kartanUlkopuolella: true,
+    kartanUlkopuolellaSyy: "piste on Vallettan kohdekartan rajauksessa: hetki kuuluu kaupungin omaan karttaan",
+    lehti: { laji: "kaupunki", avain: "valletta" },
+    lehtiJohdanto: "Pyhän Elmon linnake kaatui 23. kesäkuuta 1565 lähes 28 päivän puolustuksen jälkeen — tappio, joka silti kulutti osmanijoukkoja niin paljon, että koko piiritys epäonnistui.",
+    lehtiTehtava: {
+      kysymys: "Mitä tapahtui Pyhän Elmon linnakkeen puolustajille 23.6.1565?",
+      vaihtoehdot: ["Lähes kaikki kaatuivat tai teloitettiin", "Kaikki pääsivät pakoon veneillä", "He antautuivat ehdoitta", "Apu saapui juuri ajoissa"],
+      oikea: 0,
+      fakta: "St Elmon noin 1 500 hengen varuskunnasta vain muutama selvisi uimalla; linnakkeen puolustus kulutti osmanijoukkoja niin, että Malta pysyi ritarikunnalla.",
+    },
+  },
+  /* bessarabian-liittyminen-1918 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "bessarabian-liittyminen-1918",
+    otsikko: "Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi",
+    nimio: "Chișinău 1918",
+    paivays: "27.3.1918",
+    paikka: "Sfatul Țării -palatsi, Chișinău",
+    iso: "MDA",
+    lat: 47.0222, lon: 28.8172,
+    kuvaversio: 4,
+    teksti: "\"Kahdeksankymmentäkuusi puolesta.\" Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin Bessarabia oli julistautunut itsenäiseksi Moldovan kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii maareformia, paikallista itsehallintoa ja perusoikeuksien kunnioittamista, ehtoja joita ei koskaan täysin lunastettu. Kolme edustajaa äänestää vastaan avoimesti kädet pystyssä, peläten liiton hukuttavan Bessarabian oman kielen ja hallinnon suurempaan naapuriin. Sali, jossa ääni juuri kaikui, on rakennettu vain kolmetoista vuotta aiemmin lukioksi; siitä tulee hetkeksi paikka, jossa uusi raja Euroopan kartalle piirretään ilman yhtään laukausta.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-bessarabian-liittyminen-1918-lahi-photo-v4.jpg",
+        lyhyt: "Sfatul Țării -edustajat äänestävät Chișinăussa 1918.",
+        kuvateksti: "Sfatul Țării -edustajat äänestävät Chișinăussa 1918.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Moldovan kansallinen historiamuseo, suuri unioni; tarkistettu 28.9.2026.",
+        url: "https://www.nationalmuseum.md/en/exhibitions/monuments_of_the_great_union/",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-bessarabian-liittyminen-1918-kauko-photo-v4.jpg",
+        lyhyt: "Sfatul Țării -rakennuksen ympärillä odotetaan päätöstä.",
+        kuvateksti: "Sfatul Țării -rakennuksen ympärillä odotetaan päätöstä.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Moldovan kansallinen historiamuseo, suuri unioni; tarkistettu 28.9.2026.",
+        url: "https://www.nationalmuseum.md/en/exhibitions/monuments_of_the_great_union/",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "MDA" },
+    visa: {
+      kysymys: "Millä äänin Sfatul Țării hyväksyi liittymisen Romaniaan 1918?",
+      vaihtoehdot: ["86 puolesta, 3 vastaan", "Yksimielisesti", "45 puolesta ja 45 vastaan"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Sfatul Țării äänesti Bessarabian liittymisestä Romaniaan Chișinăussa 27. maaliskuuta 1918 äänin 86–3 — päätös, jonka ehdot jäivät osin lunastamatta.",
+    lehtiTehtava: {
+      kysymys: "Millä äänin Sfatul Țării hyväksyi liittymisen Romaniaan 1918?",
+      vaihtoehdot: ["86 puolesta, 3 vastaan", "Yksimielisesti", "45 puolesta ja 45 vastaan", "Vain kolmen äänen enemmistöllä"],
+      oikea: 0,
+      fakta: "Sfatul Țării äänesti Chișinăussa 27.3.1918 (9.4. uutta kalenteria) Bessarabian liittymisestä Romaniaan äänin 86–3, 36 pidättäytyi.",
+    },
+  },
+  /* berezinan-ylitys-1812 — Sisältökirjurin tilaus 28.9.2026; kuvalähteet tarkentuvat tuotantomanifestissa. */
+  {
+    id: "berezinan-ylitys-1812",
+    otsikko: "Berezina 1812 — jäinen vesi polvien yli",
+    nimio: "Berezina 1812",
+    paivays: "26.–28.11.1812",
+    paikka: "Studziankan kahluupaikka, lähellä Borisovia",
+    iso: "BLR",
+    lat: 54.3247, lon: 28.3544,
+    kuvaversio: 4,
+    teksti: "Pontonöörin jalat eivät enää tunne mitään polvien alapuolella, mutta hän pysyy pystyssä jäisessä virrassa, koska hirsipukki, jota hän kannattelee, painaa liikaa pudotettavaksi. Kenraali Jean-Baptiste Éblé on käskenyt insinöörijoukkonsa rakentaa kaksi puista siltaa Berezina-joen yli Studziankan kahluupaikalla 25.–26. marraskuuta 1812, jotta Napoleonin Venäjältä perääntyvä armeija pääsisi yli ennen kuin kolme venäläisarmeijaa sulkee ansan. Miehet seisovat jääkylmässä vedessä tuntikausia rakentaen paaluja ja hirsiä, ja moni heistä kuolee kylmyyteen päivien kuluessa työn jälkeen. Kolmen päivän aikana, 26.–28. marraskuuta, kymmeniätuhansia sotilaita ja siviilejä tunkeutuu kahdelle kapealle sillalle, kun venäläistykistö ampuu itäistä rantaa; osa silloista pettää, ja jäljelle jääneet poltetaan viimeisten joukkojen ehdittyä yli, jotta venäläiset eivät pääsisi perässä. Berezinasta tulee ranskan kielessä sanonta katastrofille — mutta ilman Éblén insinöörejä koko armeija olisi jäänyt loukkuun.",
+    kuvat: [
+      {
+        rooli: "lahi",
+        tiedosto: "hetki-berezinan-ylitys-1812-lahi-photo-v4.jpg",
+        lyhyt: "Éblén pontonööri rakentaa siltaa jäisessä Berezinassa.",
+        kuvateksti: "Éblén pontonööri rakentaa siltaa jäisessä Berezinassa.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Fondation Napoléon, Berezinan ylitys; tarkistettu 28.9.2026.",
+        url: "https://www.napoleon.org/en/history-of-the-two-empires/paintings/the-french-army-crossing-the-berezina-on-28-november-1812/",
+      },
+      {
+        rooli: "kauko",
+        tiedosto: "hetki-berezinan-ylitys-1812-kauko-photo-v4.jpg",
+        lyhyt: "Kaksi puusiltaa vie Napoleonin perääntyvää armeijaa joen yli.",
+        kuvateksti: "Kaksi puusiltaa vie Napoleonin perääntyvää armeijaa joen yli.",
+        lahde: "Matkakirjan havainnekuva (dramatisoitu). Faktat: Fondation Napoléon, Berezinan ylitys; tarkistettu 28.9.2026.",
+        url: "https://www.napoleon.org/en/history-of-the-two-empires/paintings/the-french-army-crossing-the-berezina-on-28-november-1812/",
+      },
+    ],
+    kartalla: true,
+    lehti: { laji: "maa", avain: "BLR" },
+    visa: {
+      kysymys: "Kuka johti siltojen rakentamista Berezinan ylityksessä 1812?",
+      vaihtoehdot: ["Kenraali Jean-Baptiste Éblé", "Napoleon itse", "Marsalkka Ney"],
+      oikea: 0,
+    },
+    lehtiJohdanto: "Napoleonin armeija ylitti Berezina-joen Studziankan kahluupaikalla 26.–28. marraskuuta 1812 kenraali Éblén insinöörien rakentamilla silloilla — pako, josta tuli ranskan kielessä sanonta katastrofille.",
+    lehtiTehtava: {
+      kysymys: "Kuka johti siltojen rakentamista Berezinan ylityksessä 1812?",
+      vaihtoehdot: ["Kenraali Jean-Baptiste Éblé", "Napoleon itse", "Marsalkka Ney", "Kenraali Kutuzov"],
+      oikea: 0,
+      fakta: "Éblén insinöörijoukot rakensivat kaksi puusiltaa jäisessä joessa Studziankalla, mikä pelasti suuren osan Napoleonin perääntyvästä armeijasta.",
     },
   },
 ];

@@ -1048,7 +1048,7 @@ function sahkePaivitaApu(ui) {
   nappi.disabled = Boolean(quiz.kaveriapu);
   nappi.textContent = quiz.kaveriapu
     ? 'Kaverilta kysytty'
-    : `Kysy kaverilta (${KAVERIAPU_HINTA} £)`;
+    : `Kysy kaverilta (${KAVERIAPU_HINTA}\u00a0£)`;
   /*
    * onclick eikä addEventListener: nappi asuu index.html:n pysyvässä
    * kysymysdialogissa ja elää yli pelikertojen, mutta UI-olio vaihtuu

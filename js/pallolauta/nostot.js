@@ -84,9 +84,6 @@ import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { asetaKuorenKatto, nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
-import {
-  kaydytKaupungit, loytosateella, merkitseLoydetyksi, nostoLoydetty, sumuPaalla,
-} from './sumu.js';
 
 /** Reunan hystereesi: oma kylki palaa vasta, kun se on näin syvällä sisällä (px). */
 export const REUNAN_HYSTEREESI_PX = 24;
@@ -1830,20 +1827,6 @@ export function luoNostot({
     const pack = game?.pack;
     const rivit = [];
     /*
-     * LÖYTÄMISEN SUMU (js/pallolauta/sumu.js, prototyyppi): käydyt
-     * kaupungit asteina kerran ladontaa kohti; nosto löytösäteen sisällä
-     * mustataan (merkitseLoydetyksi), muut kohdemaan nostot ovat
-     * luonnoksia (`luonnos`), ykköstaso aina musteena.
-     */
-    const sumu = sumuPaalla();
-    const kaydyt = sumu ? kaydytKaupungit(ui, asteet) : [];
-    const luonnos = (id, taso, lat, lng) => {
-      if (!sumu || taso === 1) return false;
-      if (nostoLoydetty(id)) return false;
-      if (loytosateella({ lat, lon: lng }, kaydyt)) { merkitseLoydetyksi(id); return false; }
-      return true;
-    };
-    /*
      * LADONNAN JÄRJESTYSNUMERO (`ladontaNro`) — aihenoston nimiön
      * ankkuri (PAATOKSET 27 TARKENNUS 2 kohta 8, ks. AIHENOSTON NIMIÖ
      * alempana). Rivit syntyvät DATAN järjestyksessä, joka ei muutu
@@ -2024,8 +2007,6 @@ export function luoNostot({
             ? nostosymKuvamerkki(m.kategoria, m.laji) : null,
           // LÖYDÖS 155: kynnyksen ja täyden koon välissä merkki on pienempi (ruudunKerroin).
           kuvamerkkiPieni: kohde.taso !== 1 && tyyppimerkkiPieni(nostonKarttakerroin),
-          // Löytämisen sumu: luonnos, kunnes löydetty (ks. keraa).
-          luonnos: luonnos(m.id, kohde.taso === 1 ? 1 : 2, a.lat, a.lon),
           /*
            * KAUPUNKIJÄSENYYS (PAATOKSET 27 TARKENNUS 2 kohta 7,
            * js/fokuskohteet.js nostonKaupunkiAvain): saman kaupungin
@@ -2099,6 +2080,9 @@ export function luoNostot({
           nimioNakyy: true,
           kategoria: 'elain',
           symLaji: 'elain',
+          // LÖYDÖS 174b: eläintäky saa eläimen kuvamerkin samalla 155-kynnyksellä kuin muut nostot.
+          kuvamerkki: tyyppimerkitKaytossa(nostonKarttakerroin) ? nostosymKuvamerkki('elain', 'elain') : null,
+          kuvamerkkiPieni: tyyppimerkkiPieni(nostonKarttakerroin),
           puoli: 'oikea',
           aihe: 'elaimet',
           lunastettu: Boolean(game.elaintakyLunastettu?.(t.iso)),
@@ -4186,6 +4170,8 @@ export function luoNostot({
       sisaisia: (sisaisetKaupungeittain.get(r.avain) ?? []).length,
     })),
     /** Auki olevan liuskan kaupunkirivin avain tai null. */
+    /** Kaupungin sisäiset nostot riveinä (id, nimi, aihe, avaa): lehden osiohakemisto (js/lehtiosiot.js). */
+    kaupunginNostoRivit: (cityId) => sisaisetKaupungeittain.get(`lauta:${cityId}`) ?? [],
     liuskaAuki: () => liuska?.avain ?? null,
     /**
      * Auki olevan liuskan KAUPUNGIN tunnus tai null (kohta 14 c).

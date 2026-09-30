@@ -68,6 +68,7 @@ import { onKaupunginSisainen } from '../../js/pallolauta/kaupunkiliuska.js';
 import { NOSTOANKKURIT_FRA } from '../../js/packs/nostoankkurit-fra.js';
 import { paakartanNostot } from '../tarkista-nostopaikat.mjs';
 import { onMaalla } from '../maamaski.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 
@@ -238,7 +239,7 @@ function tallenne(kaupunki) {
 const konttiSelain = '/opt/pw-browsers/chromium';
 const selainPolku = process.env.CHROMIUM
   ?? (existsSync(konttiSelain) ? konttiSelain : chromium.executablePath());
-const selain = await chromium.launch({ executablePath: selainPolku });
+const selain = await avaaChromium({ executablePath: selainPolku });
 
 async function avaaSivu(ruutu) {
   const ctx = await selain.newContext({

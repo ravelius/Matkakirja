@@ -145,8 +145,13 @@ export function nollaaKaiutinmittarinLoki() {
   odotuksestaKerrottu = false;
 }
 
-/** Käynnissä oleva mittari, tai null. */
-let mittariKay = null;
+/*
+ * USEA MITTARI RINNAKKAIN (nostokortin luennan VU-mittari, omistaja
+ * 27.9.2026 klo 09.3x): oletusmittari on isoisän luennan (#fact-kuuntele),
+ * ja luoKaiutinmittari() antaa oman, joka ei pysäytä sitä. Paikka
+ * pitää käynnissä olevan mittarin; `lahde` kertoo vain oletusmittarista.
+ */
+const oletusPaikka = { kay: null };
 
 /**
  * Yhden napin kaaret. Haetaan kerran: nappi ei vaihdu pelin aikana,
@@ -216,11 +221,16 @@ function piirraKaaret(kaaret, n) {
  * @returns {boolean} lähtikö mittari käyntiin tällä kutsulla
  */
 export function kaynnistaKaiutinmittari(nappi, haeMittari = null, asetukset = {}) {
+  return kaynnista(oletusPaikka, nappi, haeMittari, asetukset);
+}
+
+function kaynnista(paikka, nappi, haeMittari, asetukset) {
+  const oletus = paikka === oletusPaikka;
   if (!nappi || typeof globalThis.requestAnimationFrame !== 'function') return false;
   // Paljas kartta (omistaja 23.9.2026): ei omaa rAF-silmukkaa kartan päällä.
   if (voimassaOlevatKokeet().has('eikaiutin')) return false;
-  if (mittariKay?.nappi === nappi) return false;
-  pysaytaKaiutinmittari();
+  if (paikka.kay?.nappi === nappi) return false;
+  pysayta(paikka);
   const kaaret = haeKaaret(nappi);
   if (!kaaret.length) return false;
   const kuvioKielletty = !asetukset.pakotaKuvio && audioContextOlemassa();
@@ -237,10 +247,10 @@ export function kaynnistaKaiutinmittari(nappi, haeMittari = null, asetukset = {}
     nyt: -1,
     puskuri: null,
   };
-  mittariKay = tila;
-  lahde = null;
+  paikka.kay = tila;
+  if (oletus) lahde = null;
   const askel = (aika) => {
-    if (mittariKay !== tila || !nappi.isConnected) return;
+    if (paikka.kay !== tila || !nappi.isConnected) return;
     if (!tila.alku) { tila.alku = aika; tila.edellinen = aika; }
     const dt = Math.max(1, Math.min(250, aika - tila.edellinen));
     tila.edellinen = aika;
@@ -266,7 +276,7 @@ export function kaynnistaKaiutinmittari(nappi, haeMittari = null, asetukset = {}
       const k = 1 - Math.exp(-dt / vakio);
       tila.taso += (mitattu - tila.taso) * k;
       n = tila.taso < HILJAISUUS ? 0 : tasosta(tila.taso, KYNNYKSET);
-      lahde = 'mitattu';
+      if (oletus) lahde = 'mitattu';
     } else if (tila.kuvioKielletty) {
       /*
        * AudioContext on olemassa mutta analysaattoria ei — reititys on
@@ -278,14 +288,14 @@ export function kaynnistaKaiutinmittari(nappi, haeMittari = null, asetukset = {}
       kerroOdotuksesta();
       tila.taso = 0;
       n = 0;
-      lahde = null;
+      if (oletus) lahde = null;
     } else {
       // Ei AudioContextia lainkaan: ajastettu kuvio, ja siitä jää loki.
       kerroKuviosta(asetukset.pakotaKuvio
         ? 'vastakoe pakotti kuvion' : 'AudioContext puuttuu selaimesta');
       tila.taso = kuvionTaso(aika - tila.alku);
       n = tasosta(tila.taso, KUVION_KYNNYKSET);
-      lahde = 'kuvio';
+      if (oletus) lahde = 'kuvio';
     }
     if (n !== tila.nyt) {
       tila.nyt = n;
@@ -305,10 +315,14 @@ export function kaynnistaKaiutinmittari(nappi, haeMittari = null, asetukset = {}
  * @returns {boolean} oliko mittari käynnissä
  */
 export function pysaytaKaiutinmittari() {
-  const tila = mittariKay;
+  return pysayta(oletusPaikka);
+}
+
+function pysayta(paikka) {
+  const tila = paikka.kay;
   if (!tila) return false;
-  mittariKay = null;
-  lahde = null;
+  paikka.kay = null;
+  if (paikka === oletusPaikka) lahde = null;
   globalThis.cancelAnimationFrame?.(tila.kahva);
   piirraKaaret(tila.kaaret, 0);
   return true;
@@ -316,5 +330,19 @@ export function pysaytaKaiutinmittari() {
 
 /** Onko mittari juuri nyt käynnissä? (vartijoita ja testejä varten) */
 export function kaiutinmittariKaynnissa() {
-  return mittariKay !== null;
+  return oletusPaikka.kay !== null;
+}
+
+/**
+ * Oma mittari, joka elää oletusmittarin rinnalla (nostokortin kaiuttimen
+ * VU, js/lukija.js). Sama verhokäyrä ja kynnykset; `nappi` on elementti,
+ * jonka sisällä `.kaiutin-kaari`-polut ovat.
+ */
+export function luoKaiutinmittari() {
+  const paikka = { kay: null };
+  return {
+    kaynnista: (nappi, haeMittari = null, asetukset = {}) => kaynnista(paikka, nappi, haeMittari, asetukset),
+    pysayta: () => pysayta(paikka),
+    kaynnissa: () => paikka.kay !== null,
+  };
 }

@@ -33,11 +33,11 @@ const ODOTETUT_MAARAT = {
   ALB: 12,
   CYP: 5,
   MDA: 39,
-  UKR: 25,
+  UKR: 27, // +2: Krim (Crimea) ja Sevastopol Ukrainalle 30.9.2026 (tools/krim-ukrainalle.mjs)
   BLR: 7,
   ISL: 9,
   TUR: 81,
-  RUS: 86,
+  RUS: 84, // −2: Krim ja Sevastopol Ukrainalle 30.9.2026
   EGY: 27,
   IND: 36,
   ZAF: 9,
@@ -227,7 +227,7 @@ test('97 maakuntaa säilyttää Commons-kuvan ja saa vuoden 1873 havainnekuvan',
         new RegExp(`^https://media\\.matkakirja\\.app/karttanostot/20260922/${iso}-[a-z0-9-]+-1873\\.jpg$`),
         `${iso}:${tunnus} havainnekuvan osoite`);
       assert.equal(havainnekuva.lahde, 'Matkakirjan havainnekuva vuodelta 1873');
-      assert.equal(havainnekuva.lisenssi, 'Matkakirjan oma kuvitus');
+      assert.equal(havainnekuva.lisenssi, 'Matkakirjan oma havainnekuva');
       assert.ok(!osoitteet.has(havainnekuva.osoite), `${iso}:${tunnus} havainnekuvan osoite on kahdesti`);
       osoitteet.add(havainnekuva.osoite);
       maara += 1;

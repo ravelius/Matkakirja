@@ -353,7 +353,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'Hobrecht suunnitteli kahdentoista pääsuunnan säteittäisen '
         + 'järjestelmän, joka johti jätevedet kaupungin laidalle '
         + 'sadetuskentille. Pääputkien rakentaminen alkoi 1873 ja '
-        + 'viimeinen valmistui 1893. Samalta mieheltä tilattiin sen '
+        + 'viimeinen valmistui 1909. Samalta mieheltä tilattiin sen '
         + 'jälkeen viemärit kolmeenkymmeneen saksalaiseen kaupunkiin '
         + 'sekä Moskovaan, Tokioon ja Kairoon.',
       lahde: 'en-Wikipedia "James Hobrecht". Tarkistettu 1.9.2026.',
@@ -697,7 +697,7 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja '
           + 'pitkine liskomaisine häntineen — ja höyhenten painaumat '
           + 'kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin '
-          + 'kahdestatoista löydetystä yksilöstä täydellisin ja ensimmäinen, '
+          + 'tunnetuista yksilöistä täydellisin ja ensimmäinen, '
           + 'jolla on kokonainen pää.',
         'Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. '
           + 'Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille '

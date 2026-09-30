@@ -98,7 +98,7 @@ const JALUSTA_VISA = {
 
 const SUOJATIE_VISA = {
   kysymys: 'Elokuun 8. päivänä 1969 neljä miestä käveli erään lontoolaisen '
-    + 'suojatien yli kahdeksan kertaa peräkkäin. Miksi?',
+    + 'suojatien yli kuusi kertaa peräkkäin. Miksi?',
   vaihtoehdot: [
     'Valokuvaaja tarvitsi kuvan levynkanteen',
     'He mittasivat kadun leveyttä',
@@ -931,6 +931,14 @@ export const FOKUSVIRTA_LONTOO = {
       lahde: 'Lontoon kaupunkilehden nosto "Kupla, joka puhkesi Exchange '
         + 'Alleyssä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
         + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'William Hogarth, The South Sea Scheme, 1721, NGA 30435.jpg',
+        lyhyt: 'Hogarthin pilakuva vuodelta 1721 kuvaa Etelämeren-kuplan uhreja karusellissa kohti tuhoa.',
+        selite: 'William Hogarthin pilakuva Etelämeren-kuplasta (1721) kuvaa '
+          + 'keinottelijoita ratsastamassa karusellissa kohti perikatoa, kun '
+          + 'paisunut osake romahtaa ja Exchange Alleyn kahvilat jäävät tyhjiksi.',
+        lahde: 'William Hogarth 1721, Wikimedia Commons (CC0)',
+      },
       kysymykset: [
         'Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?',
         'Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?',
@@ -1075,7 +1083,7 @@ export const FOKUSVIRTA_LONTOO = {
       symboli: 'kulttuuri',
       lunastus: [
         'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli '
-          + 'kahdeksan kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli '
+          + 'kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli '
           + 'The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman '
           + 'kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen '
           + 'samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. '
@@ -1113,7 +1121,7 @@ export const FOKUSVIRTA_LONTOO = {
           + 'syntyi?',
         vaihtoehdot: [
           'Kuva otettiin salaa parvekkeelta yhtyeen tietämättä',
-          'Suojatie ylitettiin kahdeksan kertaa, ennen kuin kuva onnistui',
+          'Suojatie ylitettiin kuusi kertaa, ennen kuin kuva onnistui',
           'Suojatie maalattiin kuvausta varten uudelleen',
         ],
         oikea: 1,
@@ -1212,7 +1220,7 @@ export const FOKUSVIRTA_LONTOO = {
       otsikko: 'Voimalasta tuli taidesali',
       symboli: 'kulttuuri',
       lunastus: [
-        'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. Sen '
+        'Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen '
           + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
           + 'tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 '
           + 'kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa '

@@ -239,11 +239,9 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
  */
 const NIPUTTAMATTOMAT = new Set([
   // Elävä kartta (26.9.2026): natiivin datapaketit, joita mikään selainmoduuli ei
-  // vielä tuo (kokoluokat ja maakuntasalaisuudet luetaan sisältöpaketin viennissä).
+  // vielä tuo (kokoluokat luetaan sisältöpaketin viennissä).
   // Palautetaan MODULES-listalle, kun webin ensimmäinen tuoja ilmestyy.
   'js/packs/nostojen-kokoluokat.js',
-  'js/packs/maakuntasalaisuudet.js',
-  'js/packs/maakuntasalaisuudet-grc.js',
   // Vanha PNG-B-sovitin säilyy vertailuun; pelissä käytetään pikselikasvoa.
   'js/livia-kasvot.js',
   // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
@@ -611,6 +609,11 @@ test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivou
   assert.equal(swKansio, `${versio}${sarjassaNostot ? '-nostot' : ''}-${tunniste}`,
     'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
     + 'activate siivoaisi juuri käytössä olevat laatat');
+  // Deltasarjan perussarja (js/deltasarja.js): sama kaksoiskappale, muuten activate siivoaisi perussarjan laatat.
+  const swPerus = sw.match(/const LAATTAKANSIO_PERUS = (null|'[^']*');/)?.[1];
+  const palloPerus = pallo.match(/export const PALLO_LAATTAPERUS = (null|'[^']*');/)?.[1];
+  assert.ok(swPerus && palloPerus, 'LAATTAKANSIO_PERUS / PALLO_LAATTAPERUS puuttuu');
+  assert.equal(swPerus, palloPerus, 'sw.js:n LAATTAKANSIO_PERUS ja js/pallo.js:n PALLO_LAATTAPERUS eroavat');
 });
 
 /*

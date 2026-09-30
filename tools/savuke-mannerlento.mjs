@@ -17,6 +17,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
@@ -36,10 +37,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8733, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS
-  ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
 await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
@@ -118,26 +116,34 @@ vaadi('aarre saa mantereensa nimen', /el dorado/i.test(loyto.nimi), loyto.nimi);
 
 await sivu.waitForTimeout(1200);
 
-// 4) Aarnin luettelo: yksi löytynyt, kuusi kateissa.
+/*
+ * 4) Aarnin luettelo: yksi löytynyt, kuusi kateissa.
+ *
+ * PILLERIVALIKKOUUDISTUS 29.9.2026: matkalaukku (#passport-dialog,
+ * #passport-aarteet, .aarre-rivi) on poistettu — Aarnin luettelo on nyt
+ * pillerivalikon Aarteet-näkymässä (js/kokoelmanakyma.js .kokoelma-rivi),
+ * ja otsikon "N / kaikki" korvaa entisen erillisen "Kateissa"-rivin.
+ */
 const luettelo = await sivu.evaluate(() => {
   document.getElementById('turn-pill')?.click();
-  const paneeli = document.getElementById('passport-aarteet')
-    ?? document.querySelector('.aarre-rivi')?.parentElement;
-  if (!paneeli) return { virhe: 'luettelopaneelia ei löydy' };
-  const rivit = [...paneeli.querySelectorAll('.aarre-rivi')].map((r) => r.textContent.trim());
-  return { rivit };
+  document.getElementById('pilleri-aarteet-btn')?.click();
+  const otsikko = [...document.querySelectorAll('.kokoelma-otsikko')]
+    .find((o) => /Aarnin luettelo/.test(o.textContent));
+  const ryhma = otsikko?.nextElementSibling;
+  if (!ryhma) return { virhe: 'Aarnin luettelon ryhmää ei löydy' };
+  const rivit = [...ryhma.querySelectorAll('.kokoelma-rivi-nimi')].map((r) => r.textContent.trim());
+  return { rivit, luku: otsikko.querySelector('.kokoelma-otsikko-luku')?.textContent ?? '' };
 });
-const loytynytRivi = (luettelo.rivit ?? []).find((r) => /löytyi/.test(r));
-const kateissaRivi = (luettelo.rivit ?? []).find((r) => /Kateissa/.test(r));
-vaadi('Aarnin luettelossa löytynyt aarre nimeltä', /El Dorado/i.test(loytynytRivi ?? ''),
+const loytynytRivi = (luettelo.rivit ?? []).find((r) => /El Dorado/i.test(r));
+vaadi('Aarnin luettelossa löytynyt aarre nimeltä', Boolean(loytynytRivi),
   loytynytRivi ?? JSON.stringify(luettelo));
-vaadi('Aarnin luettelo: kateissa 6', /6$/.test(kateissaRivi ?? ''), kateissaRivi ?? '(puuttuu)');
+vaadi('Aarnin luettelon otsikko: 1 / 7', luettelo.luku === '1 / 7', luettelo.luku || '(puuttuu)');
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-aarnin-luettelo.png') });
 
 // 5) Mannerlennon nappi matkavalikon vaiheessa B.
 const lento = await sivu.evaluate(async () => {
-  document.querySelector('#passport-dialog')?.close?.();
+  document.getElementById('paavalikko')?.setAttribute('hidden', '');
   const g = window.matkakirja.game;
   g.phase = 'action';
   g.player.money = 2000;

@@ -91,7 +91,7 @@ const ESINETEKSTIT = {
  * (HAVAINNEKUVA_RE) muuttaa napautettavaksi selitteeksi, ja loppu sanoo
  * pelaajalle suoraan, ettei kuva ole museovalokuva.
  */
-const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähdeperustainen kuvitus, ei museovalokuva.';
+const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähteisiin perustuva, ei museovalokuva.';
 
 test('kaaressa on kaksikymmentä pysäkkiä, tunnukset Fablen listasta', () => {
   assert.equal(IHMISEN_MATKA.length, 20);

@@ -116,3 +116,13 @@ test('puherajat: kuukausikatto voittaa päiväkaton ja nollaraja on pois päält
   // Nolla tarkoittaa "raja pois päältä" — sama sopimus kuin pöllöllä.
   assert.equal(tarkistaPuheRajat({ paiva: 5, paivaraja: 0, kuukausi: 5, kuukausiraja: 0 }).ok, true);
 });
+
+test('Pulun striimivastaus on yksi puheenvuoro: virkeväli, ei kappaleväliä (Fable 27.9.2026)', async () => {
+  const { readFileSync } = await import('node:fs');
+  const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
+  const puhe = readFileSync(new URL('../js/puhe.js', import.meta.url), 'utf8');
+  const virta = lukija.slice(lukija.indexOf('function puheVirtana('));
+  assert.match(virta.slice(0, virta.indexOf('\n}\n')), /yksiPuheenvuoro: true/);
+  // Soitin pitää puheenvuoron samassa kappaleessa (0), jolloin väli on VIRKEVALI.
+  assert.match(puhe, /if \(yksiPuheenvuoro && tila\.kappaleita > 0\)/);
+});

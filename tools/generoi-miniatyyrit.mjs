@@ -48,6 +48,7 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 /*
@@ -1986,8 +1987,7 @@ mkdirSync(resolve(JUURI, 'assets/kartat/miniatyyrit'), { recursive: true });
 /* Pienennys 1024 → 512 ja JPEG-pakkaus Chromiumin kanvaasilla — sama
  * kuin tools/generoi-varustekuvat.mjs. */
 async function avaaPienentaja() {
-  const { chromium } = await import('playwright');
-  const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+  const selain = await avaaChromium({});
   const sivu = await selain.newPage();
   return {
     async pienenna(png) {

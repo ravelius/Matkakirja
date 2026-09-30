@@ -425,7 +425,7 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
 
   // Skeema 1.17 (Natiivi-UI:n Nähtävyydet-rivi): kaupunkien kohdekartat
   // (js/packs/maakartat.js KAUPUNKIKARTAT, js/nahtavyydet.js piirraKaupunkiKartta).
-  const { KAUPUNKIKARTAT } = hae('js/packs/maakartat.js');
+  const { KAUPUNKIKARTAT, kaupunginTarinakohteet, kaupunkikartanKohteet, kohdeKartalla, kohteenTyyppi } = hae('js/packs/maakartat.js');
   const karttakuva = (polku) => (polku ? media(polku, 'polku') : null);
   const kohdekartat = Object.keys(KAUPUNKIKARTAT).sort().map((kaupunki) => {
     const k = KAUPUNKIKARTAT[kaupunki];
@@ -435,10 +435,12 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       kuva: karttakuva(k.varikartta ?? k.polku), juliste: karttakuva(k.polku), varikartta: karttakuva(k.varikartta),
       lahde: k.lahde ?? null, rajat: k.rajat, piirtoRajat: k.piirtoRajat ?? null, kainalot: k.kainalot ?? [],
       numeroympyrat: k.numeroympyrat ?? [], esittely: k.esittely ?? null,
-      kohteet: k.kohteet.map((kohde) => {
+      // Löydös 178: ensin kartan paikat (rakennus, aukio, luonto) samassa järjestyksessä kuin webissä,
+      // sitten tarinakohteet (kartalla: false), jotka ovat vain kaupungin nostoissa (liuska).
+      kohteet: [...kaupunkikartanKohteet(k), ...kaupunginTarinakohteet(k)].map((kohde) => {
         const { x, y } = karttapiste(k, kohde.lat, kohde.lon);
         return {
-          nimi: kohde.nimi, lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
+          nimi: kohde.nimi, tyyppi: kohteenTyyppi(kohde), kartalla: kohdeKartalla(kohde), lat: kohde.lat, lon: kohde.lon, x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100,
           wiki: kohde.wiki ?? null, nosto: kohde.nosto ?? null, nimiPuoli: kohde.nimiPuoli ?? null,
           siirto: kohde.siirto ?? null, aika: kohde.aika ?? null, teksti: kohde.teksti ?? null,
           kappaleet: kohde.teksti ? kohde.teksti.split(/\n\s*\n/).map((t) => t.trim()).filter(Boolean) : [],
@@ -586,7 +588,10 @@ export function rikastaLehdet(kokoelmat, ns, hae, { media: mediaLista = [], taul
       + '{ pohjoinen, etela, lansi, ita }; piirtoRajat = kuvan todellinen alue, jos laajempi. kohteet[].x/y = piste '
       + 'prosentteina kuvasta pelin karttapiste()-funktiolla (kainalot huomioitu). nosto = nähtävyysjutun tunniste '
       + '(nahtavyydet-kokoelma), wiki = Wikipedia-otsikko. teksti/kappaleet/kuvat = kohteen oma juttu, jos on. '
-      + 'nimiPuoli ja siirto = webin nimiön asettelu. lahde = kartan lähde (esim. OpenStreetMap ODbL), näytetään kartan alla.',
+      + 'nimiPuoli ja siirto = webin nimiön asettelu. lahde = kartan lähde (esim. OpenStreetMap ODbL), näytetään kartan alla. '
+      + 'kohteet[].tyyppi (löydös 178) = rakennus | aukio | luonto | taide | esine | henkilo | ilmio; kartalla = piirretäänkö '
+      + 'kartalle (vain rakennus, aukio, luonto; aukio ja luonto kevyellä merkillä). kartalla: false = tarinakohde, jolla on '
+      + 'karttanosto: se on kaupungin nostoissa (kaupunkiliuska), ei kartalla. Kartan kohteet ensin, joten niiden järjestys = webin numerointi.',
     { kaupunki: 'kaupungit' }, kohdekartat);
   // Skeema 1.24: rakentajat (R.kuva) saapumisteksteille (tools/vienti/saapumiset.mjs).
   return R;

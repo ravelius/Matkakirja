@@ -174,6 +174,44 @@ export const LIVIAN_AVAUS = [
  * lasketa sitä uudelleen suodatetusta listasta. Ilman tätä
  * ohitetun kuplan äänite soisi seuraavan kuplan kohdalla.
  */
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KERRAN + OHITA (omistaja 27.9.2026 klo 17.2x)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Koko avausesittely (LIVIAN_AVAUS) näytetään laitteella KERRAN
+ * (livianAvausNahty). Seuraavilla uusilla matkoilla Livia lennähtää
+ * paikalle yhdellä lyhyellä repliikillä, ja kuplassa on Ohita-nappi
+ * (js/pollo.js naytaAvauskupla `ohita`). Repliikit kiertävät
+ * järjestyksessä, jottei sama toistu kahdesti peräkkäin.
+ *
+ * PÄÄTOIMITTAJAN HYVÄKSYMÄT (Fable 27.9.2026 klo 18.3x): Livia on
+ * asiantunteva viestinviejä, ei huutomerkkejä, tavoite on Aarnin luettelo.
+ * Äänitteitä ei ole: kupla puhuu, ääni vaikenee (sama sopimus kuin
+ * puuttuvalla äänitteellä).
+ */
+export const LIVIAN_UUSI_MATKA = [
+  'Taas matkaan? Hyvä. Aarnin luettelossa on vielä rivejä ilman rastia.',
+  'Uusi matka, uudet sähkeet. Valitse lähtö — minä hoidan postin.',
+  'Sinä taas — hyvä. Kartta on sama, mutta tällä kertaa mennään eri järjestyksessä.',
+];
+
+/** Lyhyen tervehdyksen kierto laitteen muistissa (seuraavan repliikin numero). */
+export const LIVIA_UUSI_MATKA_TALLE = 'matkakirja-livia-uusi-matka';
+
+/** Seuraava lyhyt repliikki kierrosta; kirjaa seuraavan numeron talteen. */
+export function livianUudenMatkanRepliikki() {
+  let i = 0;
+  try {
+    i = Number.parseInt(localStorage.getItem(LIVIA_UUSI_MATKA_TALLE) ?? '0', 10) || 0;
+  } catch { /* yksityinen selaus: aina ensimmäinen */ }
+  const indeksi = ((i % LIVIAN_UUSI_MATKA.length) + LIVIAN_UUSI_MATKA.length) % LIVIAN_UUSI_MATKA.length;
+  try {
+    localStorage.setItem(LIVIA_UUSI_MATKA_TALLE, String((indeksi + 1) % LIVIAN_UUSI_MATKA.length));
+  } catch { /* yksityinen selaus */ }
+  return { teksti: LIVIAN_UUSI_MATKA[indeksi], indeksi };
+}
+
 /** Kaanonin järjestysnumero sille kuplalle, joka väistyy usealla reitillä. */
 export const LIVIAN_YHDEN_REITIN_KUPLA = 3;
 
@@ -301,16 +339,14 @@ export function livianKuplanLukuaika(teksti) {
 export function naytaLivianAvaus(ui) {
   if (!ui || ui.dead || ui.katselu) return false;
   if (ui.game?.phase !== 'pickstart') return false;
-  if (avausKesken || livianAvausNahty()) return false;
+  if (avausKesken) return false;
+  // KERRAN + OHITA: koko esittely vain ensimmäisellä kerralla laitteella.
+  if (livianAvausNahty()) return naytaLivianLyhytAvaus(ui);
   avausKesken = true;
   avausLiitoValmis = false;
   avausLiidonJalkeinen = null;
   avauksenUi = ui;
-  if (typeof document !== 'undefined') {
-    avausPiilotus=()=>{if(document.hidden)lopetaAvaus();};
-    document.addEventListener('visibilitychange',avausPiilotus);
-    globalThis.addEventListener?.('pagehide',lopetaAvaus);
-  }
+  kuunteleSivunPiilotusta();
   clearTimeout(avausAjastin);
   const laskeutui=()=>{
     if (!avausKesken || ui.dead || ui.game?.phase !== 'pickstart') return;
@@ -324,6 +360,53 @@ export function naytaLivianAvaus(ui) {
   // Ensimmäinen tuttu repliikki alkaa, kun kaukainen Pulu on jo
   // tunnistettavissa. Reduced motionissa ei tule liikettä eikä viivettä.
   avausAjastin = setTimeout(() => naytaRepliikki(ui, 0), ui.reducedMotion ? 0 : AVAUKSEN_VIIVE);
+  return true;
+}
+
+/** Sarjan kuuntelijat: välilehti taustalle tai sivu pois → sarja pois. */
+function kuunteleSivunPiilotusta() {
+  if (typeof document === 'undefined') return;
+  avausPiilotus = () => { if (document.hidden) lopetaAvaus(); };
+  document.addEventListener('visibilitychange', avausPiilotus);
+  globalThis.addEventListener?.('pagehide', lopetaAvaus);
+}
+
+/**
+ * UUDEN MATKAN LYHYT TERVEHDYS (KERRAN + OHITA): yksi kupla, Livian
+ * lennähdys ja saapumistehoste, Ohita kuplassa. Kupla väistyy lukuajan
+ * jälkeen, napautuksesta, Ohitasta tai pelaajan valinnasta
+ * (peruLivianAvaus) — kuten koko sarja.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @returns {boolean} alkoiko tervehdys
+ */
+export function naytaLivianLyhytAvaus(ui) {
+  if (!ui || ui.dead || ui.katselu) return false;
+  if (ui.game?.phase !== 'pickstart' || avausKesken) return false;
+  avausKesken = true;
+  avausLiitoValmis = true;
+  avausLiidonJalkeinen = null;
+  avauksenUi = ui;
+  kuunteleSivunPiilotusta();
+  clearTimeout(avausAjastin);
+  // Ele: sama sisäänliito kuin koko esittelyssä (Livia lennähtää kuplan
+  // viereen); kupla ei odota laskeutumista, koska repliikkejä on yksi.
+  const liitaa = polloLivianEnsiliito(() => {}, { reducedMotion: ui.reducedMotion });
+  avausAjastin = setTimeout(() => {
+    avausAjastin = null;
+    if (!avausKesken) return;
+    if (ui.dead || ui.game?.phase !== 'pickstart') { lopetaAvaus(); return; }
+    const { teksti } = livianUudenMatkanRepliikki();
+    const nakyi = polloAvauskupla(teksti, {
+      lennahda: !liitaa && !ui.reducedMotion,
+      ohita: true,
+      kuittaus: () => lopetaAvaus(),
+    });
+    if (!nakyi) { lopetaAvaus(); return; }
+    avausNakyi = true;
+    soitaLivianTehoste('saapuu');
+    avausAjastin = setTimeout(() => lopetaAvaus({ vaienna: false }), lukuaika(teksti));
+  }, ui.reducedMotion ? 0 : AVAUKSEN_VIIVE);
   return true;
 }
 
@@ -861,6 +944,62 @@ export function merkitseLehtivinkkiNahdyksi() {
     /* yksityinen selaus: istunnon lippu kantaa loppumatkan */
   }
 }
+
+/* ------------------------------------------------------------------ *
+ * Astronautin kamera ja ISS-kyyti
+ * ------------------------------------------------------------------ */
+
+/**
+ * LIVIAN ISS-REPLIIKIT — KAANONIA (päätoimittajan käsikirjoitus
+ * 28.9.2026, docs/raportit/pulu-iss-kasikirjoitus-20260928.md; omistaja
+ * klo 19.3x: Pulu toivottaa avaruuslinssiin tervetulleeksi, suosittelee,
+ * pyöräyttää pallon, räppäisee väärän näkymän, pahoittelee ja palaa, kun
+ * pelaaja menee ISS:n kyytiin).
+ *
+ * Neljä ryhmää, ja jokainen repliikki on oma äänitteensä
+ * (js/liviapuhe.js lähteet `iss-a` … `iss-d`, avaimet `iss-a-1` …):
+ *   a  tervetulo, vain Astronautin kameran ensimmäisellä avauksella
+ *   b  suositukset ja pallon pyöräytys Venetsian ylle
+ *   c  räppäisy (väärä näkymä) ja anteeksipyyntö; ohjaus pelaajalle
+ *   d  ISS-kyyti: kyytiin tultaessa, ~20 s myöhemmin, ensimmäisellä
+ *      yöpuolella ja poistuessa (js/linssit/pulu-iss.js)
+ *
+ * TEKSTI ON TAGITONTA: tunne- ja tehostetagit ([wings flapping],
+ * [whoosh], [radio static] …) lisätään vasta generoinnissa ankkureihin
+ * (tools/generoi-pulu.mjs TAGIT), eivätkä ne koskaan näy kuplassa.
+ * Faktat: ISS noin 400 km:n korkeudella, kierros noin 90 minuuttia.
+ * Livia puhuu itsestään Liviana. Hionta Livian äänen mukaan
+ * (päätoimittajan valtuutus 28.9.2026): A1 "Astronautin kamera" isolla
+ * (linssin nimi) ja "valokuvia"; D1:n toinen virke selkeämmäksi.
+ */
+export const LIVIAN_ISS = Object.freeze({
+  a: Object.freeze([
+    'Kas, sinäkin täällä! Tervetuloa avaruuteen, tai no, sen reunalle. Tämä on Astronautin '
+      + 'kamera: oikeita valokuvia, jotka astronautit ovat ottaneet Kansainväliseltä avaruusasemalta.',
+    'Ja kaikki tämä noin neljänsadan kilometrin korkeudelta. Minä en ole koskaan lentänyt niin '
+      + 'korkealle. Setäni väittää lentäneensä, mutta setä väittää paljon.',
+  ]),
+  b: Object.freeze([
+    'Katsotaanko ensin jotain? Minulla on kolme suosikkia: Venetsian laguuni, Alpit ja Santorinin '
+      + 'tulivuoren kaldera.',
+    'Venetsia! Pyöräytän pallon valmiiksi… noin. Haluatko katsoa tuonne?',
+  ]),
+  c: Object.freeze([
+    'Hups. Nokka osui väärään kohtaan. Tuo ei todellakaan ole Venetsia. Painottomuus ei sovi '
+      + 'kyyhkyille.',
+    'Anteeksi, anteeksi! Viedään kaikki takaisin alkuun… Kas niin. Pyöritä sinä, minä en enää '
+      + 'koske mihinkään. Lupaan.',
+  ]),
+  d: Object.freeze([
+    'Hei! Täällä Livia, asemalta! Nyt ollaan oikeasti kyydissä: alla on juuri se kohta, jonka '
+      + 'yllä asema lentää nyt. Elävänä.',
+    'Asema kiertää maapallon noin puolessatoista tunnissa. Minä en ehtisi siinä ajassa '
+      + 'Ateenasta edes Delfoihin.',
+    'Katso, kaupunkien valot. Tuo kirkas täplä voi olla Pariisi. Tai Lyon. Yöllä kaikki '
+      + 'kaupungit näyttävät kultaisilta.',
+    'Hyvää matkaa takaisin maahan. Minä jään vielä hetkeksi tänne kellumaan.',
+  ]),
+});
 
 /* ------------------------------------------------------------------ *
  * Mannerivihje

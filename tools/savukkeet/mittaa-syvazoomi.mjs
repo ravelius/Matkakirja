@@ -34,16 +34,19 @@ import { packById } from '../../js/pack.js';
  * siksi "olenko minä se tiedosto, joka nodelle annettiin".
  */
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
   ohitaVanhanKartanSavuke(import.meta.url);
 }
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-
 const JUURI = new URL('../..', import.meta.url).pathname;
+
+/*
+ * Playwright samalla ketjulla kuin savuke-astro-pallo.mjs (README: älä
+ * kirjoita kiinteää polkua): PLAYWRIGHT_JS → juuren node_modules →
+ * paljas paketti (vanha ensimmäinen yritys) → konttiympäristön /opt.
+ */
 const TYYPIT = {
   '.html': 'text/html',
   '.js': 'text/javascript',
@@ -111,7 +114,7 @@ export async function mittaaSyvaZoomi({
   peli.phase = 'action';
   const tallenne = JSON.stringify(peli.toJSON());
 
-  const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+  const selain = await avaaChromium({});
   const ctx = await selain.newContext({
     viewport: ruutu, deviceScaleFactor: dpr, reducedMotion: 'reduce',
   });

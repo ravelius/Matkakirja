@@ -384,6 +384,35 @@ export function asetaSyvyyskontrasti(k) {
   SYVYYS.splice(0, SYVYYS.length, ...monotoninenRamppi(venytetyt, 25));
 }
 
+/*
+ * MATALAN VEDEN VIILEYS (omistaja 27.9.2026 Fablen kautta, Euroopan
+ * laatukierros V1, vaihtoehto a). Resepti 26 teki matalasta vedestä lähes
+ * maan sävyisen, ja saaristot (Tukholma) lukivat maana. Vyöhyke 0…−`syvyys`
+ * m sekoitetaan viileämpään harmaaseen painolla `viileys`, ja sekoitus
+ * häivytetään nollaan syvyyteen 2·`syvyys` mennessä, jotta rampissa ei ole
+ * taitetta. Maan sävy ja muu meri eivät muutu. Ramppiin lisätään metrin
+ * välein pisteet 0…−2·syvyys (monotoninen ramppi on siellä harva), joten
+ * kaikki lukijat näkevät saman. `MATALA_SIIRTO` on 0 m:n sävyn muutos —
+ * järvien täyttö (maailmapiirto.js osio 5) siirtyy sen mukaan, koska järvi
+ * on "matalan meren perhettä". viileys 0 = tavulleen entinen.
+ */
+const MATALA_VIILEA = [196, 205, 206];
+export const MATALA_SIIRTO = [0, 0, 0];
+export function asetaMatalaViileys(viileys, syvyys = 10) {
+  if (!(viileys > 0) || !(syvyys > 0)) return;
+  const alku = SYVYYS[0].v.slice();
+  const loppu = -2 * syvyys;
+  const lisatyt = [];
+  for (let m = 0; m >= loppu; m -= 1) {
+    const v = lerpSyvyysAsteikolla(SYVYYS, m);
+    const w = viileys * (m >= -syvyys ? 1 : (m - loppu) / syvyys);
+    lisatyt.push({ m, v: v.map((c, k) => Math.round(c * (1 - w) + MATALA_VIILEA[k] * w)) });
+  }
+  const syvemmat = SYVYYS.filter((a) => a.m < loppu);
+  SYVYYS.splice(0, SYVYYS.length, ...lisatyt, ...syvemmat);
+  for (let k = 0; k < 3; k += 1) MATALA_SIIRTO[k] = SYVYYS[0].v[k] - alku[k];
+}
+
 /* ------------------------------------------- värillinen topografia */
 
 /*

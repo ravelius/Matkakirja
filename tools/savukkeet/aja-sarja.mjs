@@ -25,6 +25,9 @@
 //   SAVUKE_EI_NAYTTOA  1 = ajuri ilman näyttöistuntoa (WebKit ei käynnisty),
 //                      0 = näyttö on; tyhjä = kokeillaan WebKit kerran
 //                      sarjan alussa (ks. "NÄYTTÖISTUNTO" alla)
+//   SAVUKE_GPU  varattu|vapaa ohittaa GPU-väistön tarkistuksen; tyhjä =
+//               tools/gpu-vapaa.sh kerran sarjan alussa (ks. "GPU-VÄISTÖ"
+//               alla ja tools/savukkeet/gpu-vaisto.mjs)
 //
 // Tuloskansioon syntyy per savuke:
 //   savuke-<nimiTunniste>.log   ajoloki (stdout+stderr)
@@ -50,6 +53,8 @@ import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { rakennaMatriisi } from './rakenna-matriisi.mjs';
+import { gpuTila, gpuVaisto, savukkeenLahde } from './gpu-vaisto.mjs';
+import { paivaAika, webkitChromiumilla } from './paiva-aika.mjs';
 
 const TASSA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TASSA, '..', '..');
@@ -138,14 +143,42 @@ async function webkitKaynnistyy() {
   }
   return true;
 }
-const eiNayttoa = !(await webkitKaynnistyy());
+/*
+ * WEBKIT PÄIVÄLLÄ CHROMIUMILLA (Päätoimittaja 30.9.2026, omistajan pyyntö: testien äänet kuuluivat kaiuttimista, eikä
+ * WebKitille ole --mute-audio-lippua): klo 07–22 Helsingin aikaa WebKit-rivit ajetaan Chromiumilla samalla reitillä
+ * kuin ilman näyttöistuntoa. WEBKIT_PAKOTA=1 = erityinen syy (esim. Safari-vika), ja silloin WebKit ajetaan ja
+ * pakotus mainitaan lokissa. Yöllä WebKit toimii kuten ennen.
+ */
+const webkitPakotettu = process.env.WEBKIT_PAKOTA === '1';
+const paivaChromium = webkitChromiumilla();
+if (paivaAika() && webkitPakotettu) console.log('WEBKIT_PAKOTA=1: WebKit ajetaan päiväsaikaan (erityinen syy, ks. ajon tilaaja).');
+if (paivaChromium) console.log('PÄIVÄ (07–22): WebKit-rivit Chromiumilla (ei ääntä kaiuttimista); WEBKIT_PAKOTA=1 ohittaa.');
+const eiNayttoa = paivaChromium || !(await webkitKaynnistyy());
 const nimet = new Set(matriisi.map((r) => r.nimiTunniste));
 const ohitetaan = (rivi) => eiNayttoa && /-webkit$/.test(rivi.nimiTunniste)
   && nimet.has(rivi.nimiTunniste.replace(/-webkit$/, '-chromium'));
 if (eiNayttoa) {
   const ohi = matriisi.filter(ohitetaan).map((r) => r.nimiTunniste);
-  console.log('EI NÄYTTÖISTUNTOA: WebKit-rivit Chromiumilla (headless-kuori + ANGLE Metal)'
+  console.log(`${paivaChromium ? 'PÄIVÄ' : 'EI NÄYTTÖISTUNTOA'}: WebKit-rivit Chromiumilla (headless-kuori + ANGLE Metal)`
     + `${ohi.length ? `; ohitetaan (Chromium-pari ajetaan): ${ohi.join(', ')}` : ''}.`);
+}
+
+/*
+ * GPU-VÄISTÖ (omistaja 28.9.2026 "GPU-VÄISTÖ AUTOMAATTISEKSI"): kun
+ * omistaja on laittanut koneen kevyeen tilaan (lippu /tmp/matkakirja-kevyt,
+ * tools/gpu-vapaa.sh), Chromium-rivit ajetaan SwiftShaderilla ja WebKit-
+ * ja suorituskykyrivit ohitetaan merkinnällä "GPU varattu (kevyt tila)".
+ * Ohitettu rivi ei ole
+ * punainen (koodi 0, ei väitteitä) — yhteenveto näyttää sen OHITETTU-
+ * tilana. Toiminnalliset Chromium-rivit ajetaan aina.
+ */
+const gpu = gpuTila();
+const gpuPaatos = new Map(matriisi.map((r) => [r.nimiTunniste, gpuVaisto(r, gpu, savukkeenLahde(r.tiedosto))]));
+if (gpu.varattu) {
+  const ohi = matriisi.filter((r) => gpuPaatos.get(r.nimiTunniste).ohita).length;
+  console.log(`GPU varattu: ${gpu.kuvaus} → Chromium SwiftShaderilla, WebKit+suorituskyky ohitettu (${ohi} riviä).`);
+} else {
+  console.log('GPU vapaa.');
 }
 
 console.log(`Savukesarja "${sarja}": ${matriisi.length} savuketta, rinnakkaisuus ${rinnakkain}, aikakatto ${Math.round(aikakattoMs / 1000)} s/savuke.`);
@@ -186,10 +219,17 @@ function ajaYksi(rivi, indeksi) {
       ymparisto.SAVUKE_EI_NAYTTOA = '1';
       ymparisto.SAVUKE_MOOTTORI = 'chromium';
     }
+    const paatos = gpuPaatos.get(rivi.nimiTunniste);
+    if (paatos.ohita) {
+      writeFileSync(lokiPolku, `INFO  OHITETTU: ${paatos.ohita} — WebKit- ja suorituskykyrivit väistävät GPU:ta\n`);
+      valmis({ rivi, kesto: 0, koodi: 0, lokiPolku, katkaistu: false, ohitettu: paatos.ohita });
+      return;
+    }
+    Object.assign(ymparisto, paatos.env);
     if (ohitetaan(rivi)) {
       writeFileSync(lokiPolku, 'INFO  OHITETTU: ajurilla ei näyttöistuntoa, WebKit ei käynnisty; '
         + `sama vartio ajetaan rivillä ${rivi.nimiTunniste.replace(/-webkit$/, '-chromium')}\n`);
-      valmis({ rivi, kesto: 0, koodi: 0, lokiPolku, katkaistu: false, ohitettu: true });
+      valmis({ rivi, kesto: 0, koodi: 0, lokiPolku, katkaistu: false, ohitettu: 'ei näyttöistuntoa' });
       return;
     }
 
@@ -284,9 +324,10 @@ async function tyontekija() {
       join(tuloskansio, `tulos-${rivi.nimiTunniste}.json`),
       // `nimi` on jaetulla rivillä "savuke-x.mjs#osa" — yhteenvedon
       // taulukossa puolikkaat on erotettava toisistaan.
-      JSON.stringify({ tiedosto: rivi.nimi ?? rivi.tiedosto, kesto: ajo.kesto, tulosJson }),
+      // `ohitettu` (syy) → yhteenvedossa OHITETTU-tila, ei OK eikä punainen.
+      JSON.stringify({ tiedosto: rivi.nimi ?? rivi.tiedosto, kesto: ajo.kesto, tulosJson, ...(ajo.ohitettu ? { ohitettu: ajo.ohitettu } : {}) }),
     );
-    const merkki = ajo.ohitettu ? 'OHITETTU (ei näyttöistuntoa)' : tulosJson.uusiaPunaisia > 0 ? 'UUSI PUNAINEN' : (tulosJson.lapi === tulosJson.yhteensa ? 'OK' : 'tunnettu punainen');
+    const merkki = ajo.ohitettu ? `OHITETTU (${ajo.ohitettu})` : tulosJson.uusiaPunaisia > 0 ? 'UUSI PUNAINEN' : (tulosJson.lapi === tulosJson.yhteensa ? 'OK' : 'tunnettu punainen');
     console.log(`[${String(valmiit.length + 1).padStart(2, ' ')}/${matriisi.length}] ${rivi.nimiTunniste}: ${tulosJson.lapi}/${tulosJson.yhteensa} ${merkki}, ${ajo.kesto} s${ajo.katkaistu ? ' (AIKAKATTO)' : ''}`);
     valmiit.push({ rivi, ajo, tuloste, tulosJson });
   }

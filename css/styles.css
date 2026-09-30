@@ -315,6 +315,24 @@ button, .brand, .turn-pill, .fact-card h2 {
   padding: 0.45rem 0.8rem;
   background: linear-gradient(180deg, #3a2a1c, #251b12);
   border-bottom: 1px solid var(--line);
+  /*
+   * #PAAVALIKKO ANKKUROITUU TÄHÄN, EI .topbar-actioniin (omistaja
+   * 29.9.2026, korjaus mitatusta virheestä: paneeli valui 79 px
+   * ruudun vasemman reunan yli 393 px:n puhelimella).
+   *
+   * Puhelimella #turn-pill saa `order: 5` (ks. media-kysely alempana)
+   * ja piirtyy siis VISUAALISESTI .topbar-actionsin JÄLKEEN — mutta
+   * .topbar-actions on silti se DOM-elementti, jonka lapsi paneeli on.
+   * Jos ankkuri olisi .topbar-actionsissa (position: relative), paneeli
+   * kohdistuisi topbar-actionsin OMAAN oikeaan reunaan, joka kapealla
+   * ruudulla ei ole enää ruudun oikeassa laidassa (turn-pill on sen
+   * oikealla puolella) — juuri tästä 79 pikselin virhe tuli.
+   *
+   * .topbar itse on AINA koko leveydeltään ylärivi riippumatta siitä,
+   * mikä lapsi on visuaalisesti viimeinen, joten `right: 0` tässä
+   * osuu aina samaan pikseliin: ylärivin oikeaan sisäreunaan.
+   */
+  position: relative;
 }
 
 /*
@@ -406,6 +424,74 @@ button, .brand, .turn-pill, .fact-card h2 {
  * kirjoituskonetekstiä muun pillerin sävyissä — ei hälytysväriä missään
  * vaiheessa, ei myöskään ennätyksen umpeuduttua.
  */
+/* Rahat lopussa (talouden vaihe 1): kassa punaisena ja jäljellä olevat vuorokaudet vieressä. */
+.turn-pill .kassa.rahaton { color: #c0392b; font-weight: 700; }
+.turn-pill .rahaton-aika { color: #c0392b; font-size: 0.85em; white-space: nowrap; }
+
+/*
+ * RAHATTOMUUSPALKKI (omistaja 27.9.2026 klo 15.1x; js/ui.js
+ * paivitaRahattomuuspalkki): kahdeksan kuuden tunnin lohkoa kartan
+ * yläreunan keskellä. Omistaja 15.2x: PELKÄT PUNAISET NELIÖT — ei
+ * tekstiä, ei kehystä, sama ulkoasu kaikilla laitteilla. 16.1x: heti
+ * yläreunassa, väistää alas kalusteiden alle; napautus avaa miniselitteen.
+ */
+.rahattomuuspalkki {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Näkymätön lisäpinta napautukselle (neliörivi on vain 11 px korkea);
+   * pehmuste on samalla rako yläpuolen kalusteisiin (ui.js asetteleRahattomuuspalkki). */
+  padding: 6px 8px;
+  cursor: pointer;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+.rahattomuuspalkki[hidden] { display: none; }
+.rahattomuuspalkki:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 6px; }
+/* Miniselite: kevyt pergamenttilappu palkin alla (omistaja 16.1x). */
+.rahattomuus-selite {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 7;
+  width: min(260px, calc(100% - 32px));
+  padding: 8px 11px;
+  border: 1px solid rgba(85, 64, 42, 0.45);
+  border-radius: 8px;
+  background: rgba(244, 234, 212, 0.96);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  color: #3a2a1a;
+  font: 400 13px/1.4 var(--font-luku);
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.rahattomuus-selite[hidden] { display: none; }
+.rahattomuus-lohkot { display: flex; gap: 3px; }
+/*
+ * Värit (omistaja 27.9.2026 klo 17.2x): palava lohko pergamentin
+ * palaneen oranssi, viimeiset 18 h (.viimeinen) punainen; sammuneet
+ * vaaleina kuten ennen (reunus ja himmeä täyttö oman värinsä sävystä).
+ */
+.rahattomuus-lohko {
+  width: 9px;
+  height: 9px;
+  border-radius: 1.5px;
+  border: 1px solid rgba(168, 86, 26, 0.45);
+  background: rgba(217, 122, 43, 0.12);
+}
+.rahattomuus-lohko.viimeinen {
+  border-color: rgba(158, 44, 33, 0.45);
+  background: rgba(192, 57, 43, 0.12);
+}
+.rahattomuus-lohko.palaa { border-color: #a8561a; background: #d97a2b; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+.rahattomuus-lohko.viimeinen.palaa { border-color: #9e2c21; background: #c0392b; }
+
 .turn-pill .clock {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
@@ -455,6 +541,17 @@ button, .brand, .turn-pill, .fact-card h2 {
   border: 1px solid var(--line);
   border-radius: 10px;
   box-shadow: 0 10px 28px rgba(15, 10, 5, 0.45);
+  /*
+   * KIINTEÄ LEVEYS (omistaja 29.9.2026, pillerivalikkouudistus,
+   * korjaus mitatusta virheestä): ilman tätä paneeli oli
+   * shrink-to-fit-leveä (max-content), ja Linssit/Aarteet-näkymien
+   * kaksisarakkeinen ruudukko (.kokoelma-runko, grid-template-columns:
+   * auto 1fr) ROMAHTI n. 170 pikseliin, koska `1fr` ei osaa laskea
+   * itseään ilman säiliön OMAA leveyttä. Sama leveys kaikilla kolmella
+   * "kasvolla" (pää, linssit, aarteet) on myös rauhallisempi: paneeli
+   * ei hyppää leveämmäksi/kapeammaksi näkymää vaihdettaessa.
+   */
+  width: min(23rem, calc(100vw - 1.6rem));
   /*
    * VALIKKO VIERITTYY (omistaja 5.9.2026 iPhone-kaappaus: *"Tee valikosta
    * scrollattava. En pääse noihin alempiin enää puhelimella käsiksi
@@ -839,14 +936,42 @@ button, .brand, .turn-pill, .fact-card h2 {
  */
 .turn-pill.laukku-elo {
   animation: laukku-elo 0.9s cubic-bezier(0.34, 1.4, 0.5, 1);
+  /*
+   * JUURISYY (korjaus 29.9.2026, kolmas kierros): omistajan raportoima
+   * "pilleri x137 y-11 w245 h78" EI ollut kaksirivinen sisältö —
+   * .turn-pill on koko ajan white-space: nowrap eikä rivitä. Se oli
+   * TÄMÄN animaation KESKELTÄ mitattu bounding box: alkuperäinen
+   * rotate(±7deg) + scale(1.14) keskipivotilla (oletus) kasvattaa
+   * 226 px leveän pillerin laatikkoa n. 78 px korkeaksi (levossa
+   * 42 px) ja työntää vasenta reunaa n. 17 px vasemmalle — iPadilla
+   * (834×1194) tämä ajoi suoraan logon alueelle (lepotilan väli oli
+   * vain n. 12 px) ja pillerin yläreuna nousi n. 11 px topbarin (ja
+   * ruudun) yläreunan yli. Todennettu mittaamalla koko 0,9 s:n
+   * animaatio 25 ms:n välein (ei vain yhtä satunnaista hetkeä).
+   *
+   * KORJAUS on kaksiosainen, EI koske lepotilaa (omistajan linja:
+   * "iPadin palkki jää nykyiselleen") — vain itse eloonheräämis-
+   * animaatiota pienennetty ja pivotoitu:
+   *   1) transform-origin vasempaan yläkulmaan (logoa lähin reuna) —
+   *      heilahdus kasvaa oikealle/alas, poispäin logosta.
+   *   2) rotate/scale-amplitudi neljäsosaan alkuperäisestä (±7deg/
+   *      1.14 → ±1,75deg/1.06 huipulla) — kulmapivotti ei yksinään
+   *      riitä, koska NEGATIIVINEN kierto nostaa laatikon kaukaisen
+   *      kulman pivotin YLÄPUOLELLE suunnasta riippumatta.
+   * Mitattu (koko animaatio, 834/393/360 px): logon päällekkäisyys
+   * ja ruudun yläreunan ylitys aina < 1,5 px (ei havaittavissa) —
+   * ei osu logon PÄÄLLE millään mitatulla leveydellä. Efekti on yhä
+   * selvästi nähtävissä, vain rauhallisempi.
+   */
+  transform-origin: 0% 0%;
 }
 
 @keyframes laukku-elo {
   0% { transform: none; }
-  14% { transform: rotate(-7deg) scale(1.14); }
-  32% { transform: rotate(6deg) scale(1.1); box-shadow: 0 0 12px rgba(234, 184, 78, 0.55); }
-  52% { transform: rotate(-4deg) scale(1.06); }
-  72% { transform: rotate(2.5deg) scale(1.03); }
+  14% { transform: rotate(-1.75deg) scale(1.06); }
+  32% { transform: rotate(1.5deg) scale(1.045); box-shadow: 0 0 12px rgba(234, 184, 78, 0.55); }
+  52% { transform: rotate(-1deg) scale(1.025); }
+  72% { transform: rotate(0.6deg) scale(1.01); }
   100% { transform: none; }
 }
 
@@ -859,6 +984,13 @@ button, .brand, .turn-pill, .fact-card h2 {
   display: flex;
   gap: 0.4rem;
   flex: 0 0 auto;
+  /*
+   * #paavalikko on tämän DOM-lapsi (index.html), mutta ankkuroituu
+   * .topbaria vasten (ks. .topbar { position: relative }) — EI tätä
+   * elementtiä vasten. Puhelimella #turn-pill piirtyy tämän JÄLKEEN
+   * (order: 5, ks. media-kysely alempana), joten tämän oma oikea reuna
+   * ei enää osu ruudun oikeaan laitaan; vain .topbarin reuna osuu aina.
+   */
 }
 
 /*
@@ -968,6 +1100,36 @@ button, .brand, .turn-pill, .fact-card h2 {
 .kehittaja-kytkin-nimi {
   font-size: 0.92rem;
   letter-spacing: 0.02em;
+}
+
+/*
+ * Striimiäänen pudotusvalikko (omistaja 27.9.2026): sama kolmen
+ * sarakkeen rivi kuin kytkimillä, valitsin tilatekstin paikalla.
+ */
+.kehittaja-valikko .kehittaja-valinta {
+  cursor: default;
+}
+
+/* Lukijamittari: yksi pieni tietorivi striimiäänen alla. */
+.kehittaja-valikko .kehittaja-puhemittari {
+  margin: 0.1rem 0 0.3rem;
+  padding: 0 0.5rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+  font-variant-numeric: tabular-nums;
+}
+
+.kehittaja-valikko .kehittaja-valinta-select {
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(230, 214, 184, 0.35);
+  border-radius: 4px;
+  padding: 0.12rem 0.3rem;
+  max-width: 8.5rem;
 }
 
 /*
@@ -1106,55 +1268,24 @@ button, .brand, .turn-pill, .fact-card h2 {
 /*
  * Linssivalitsin (docs/linssit-suunnitelma.md luku 5).
  *
- * Sama kotelo + absoluuttinen paneeli kuin kertojavalikossa,
- * jotta se käyttäytyy tutulla tavalla eikä vie ylärivistä tilaa ennen
- * kuin ensimmäinen linssi on löytynyt. Paneeli aukeaa oikeasta
- * reunastaan vasemmalle: kotelo on ylärivin oikeassa laidassa, ja
- * vasemmalle aukeava paneeli mahtuu myös 360 px:n puhelimelle.
+ * KOTELO EI OLE ENÄÄ OMA PUDOTUSVALIKKONSA (omistaja 29.9.2026,
+ * pillerivalikkouudistus). #linssi-kotelo/#linssi-valikko olivat
+ * 5.8.–29.9.2026 oma absoluuttisesti asemoitu paneelinsa (ensin
+ * hampurilaisessa, sitten matkalaukussa) — nyt ne ovat tavallista
+ * sisältöä #pilleri-linssit-nakyman SISÄLLÄ, joka on jo itse
+ * #paavalikon oma alanäkymä. Kaksi päällekkäistä "omaa paneelia" olisi
+ * näkynyt korkeuden romahduksena (mitattu: #linssi-kotelo 0 px korkea,
+ * koska ainoa lapsi oli position: absolute eikä siis vienyt tilaa).
  */
-.linssi-kotelo { position: relative; }
+.linssi-kotelo { display: block; }
 
 /* Päällä oleva linssi näkyy napissa kullalla: ylärivistä pitää nähdä
    yhdellä silmäyksellä, katsotaanko karttaa jonkin lasin läpi. */
 #linssi-btn.paalla { color: var(--accent); }
 
 .linssi-valikko {
-  position: absolute;
-  top: calc(100% + 0.35rem);
-  right: 0;
-  z-index: 60;
-  width: max-content;
-  /*
-   * Leveysraja mitattu puhelimella: kotelo on ylärivin oikeassa
-   * laidassa mutta kahden napin päässä reunasta, joten oikeaan
-   * reunaansa kiinnitetty paneeli alkaa noin 7 rem päässä ruudun
-   * oikeasta laidasta. Ilman tätä rajaa 336 px:n paneeli valui 390 px:n
-   * ruudulla vasemman reunan yli ja nimen ensimmäinen kirjain jäi
-   * näkymättömiin (mitattu: paneelin vasen reuna oli -17 px).
-   */
-  /*
-   * PUOLEEN ENTISESTÄ (omistaja 5.8.2026: "kavenna alivalikkonäkymää
-   * puoleen nykyisestä"). 21rem -> 10,5rem.
-   *
-   * Paneeli oli leveä kahdesta syystä, joista toinen oli vika: liuskat
-   * eivät mahtuneet yhdelle riville vaan pinoutuivat neljäksi täysleveäksi
-   * napiksi, koska päävalikon sääntö `.paavalikko button { width: 100% }`
-   * osui myös niihin (korjattu alempana). Mitattu ennen: paneeli 290 px,
-   * jokainen liuska 270 px eli koko leveys yhtä kuvaketta kohti.
-   *
-   * 9rem = 144 px on tasan puolet. Liuskat kiertyvät kahden riveiksi,
-   * mikä on niiden oma suunniteltu käytös (ks. .linssi-liuskat) ja myös
-   * välttämätöntä: linssejä on tulossa yksitoista, eivätkä ne mahtuisi
-   * yhdelle riville millään leveydellä. Kuvaus liuskojen alla kiertyy
-   * useammalle riville, ja se on oikea järjestys — kuvake on valinta,
-   * teksti on selitys.
-   */
-  max-width: min(9rem, calc(100vw - 7rem));
-  padding: 0.45rem 0.55rem 0.55rem;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  box-shadow: 0 10px 28px rgba(15, 10, 5, 0.45);
+  display: block;
+  width: 100%;
 }
 
 /*
@@ -1450,6 +1581,373 @@ button, .brand, .turn-pill, .fact-card h2 {
 .linssi-lahde p { margin: 0 0 0.25rem; }
 .linssi-lahde-lisenssi { color: var(--muted); }
 .linssi-lahde-linkki { color: var(--accent); }
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * PILLERIVALIKKO: LINSSIT- JA AARTEET-NÄKYMÄT (omistaja 29.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Kaikki tämän lohkon värit ja mitat ovat omissa CSS-muuttujissaan
+ * (Perustuslaki, kevyt UI): Codexin matkalaukkunahka kytketään joskus
+ * myöhemmin omistajan hyväksynnällä, ja silloin nahan vaihto on vain
+ * näiden muuttujien uudelleenmäärittely — ei rivi riviltä etsimistä.
+ * Toistaiseksi arvot ovat samat tummat pintavärit kuin muualla
+ * .paavalikko-paneelissa (var(--panel), var(--line), var(--accent)),
+ * jotta näkymä ei erotu omaksi saarekkeekseen.
+ */
+:root {
+  --pilleri-esikatselu-leveys: 42%;
+  --pilleri-rivi-korkeus: 44px;
+  --pilleri-rivi-kuvake: 30px;
+  --pilleri-runko-vali: 0.6rem;
+}
+
+/* Linssit›/Aarteet›-napit ovat samaa riviä kuin Uusi peli / Ehdota
+   sisältöä (.valikko-alarivi), vain omalla pienellä yläraolla. */
+.pilleri-pikanapit { margin-top: 0.3rem; }
+
+/*
+ * PILLERIN TIEDOT: entisen matkalaukun Sijainti/Kukkaro/tietäjätaso ja
+ * Matkan tilastot (ks. index.html kommentti). Sama .passport-finds/
+ * .laukku-lohko-tyyli kuin ennen; ainoa muutos on tumma pinta vaalean
+ * pergamentin sijaan, koska lohko asuu nyt .paavalikossa eikä
+ * .passport-cardissa.
+ */
+.pilleri-tiedot { margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--line); }
+.pilleri-tiedot .passport-count { color: var(--muted); }
+
+/*
+ * ALANÄKYMÄN OTSIKKO: ‹ Takaisin -nappi ja otsikko samalla rivillä.
+ * Sama .paavalikko button -perusasu (leveys 100 %) sopii takaisin-
+ * napille sellaisenaan, joten vain rivin asettelu on omaa.
+ */
+.pilleri-alanakyma-otsikko {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.pilleri-alanakyma-otsikko h2 {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+.pilleri-takaisin {
+  width: auto !important;
+  padding: 0.3rem 0.55rem !important;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.pilleri-takaisin:hover { color: var(--ink-light); }
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * js/kokoelmanakyma.js: YHTEINEN LISTA + ESIKATSELU
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * KAKSI SARAKETTA (omistaja: "paneelin VASEMMALLE puolelle nousee
+ * esikatselukortti"): esikatselu vasemmalla, tiheä lista oikealla.
+ * Kun mitään ei ole esikatseltu, esikatselusarake on `hidden`, ja
+ * `grid-template-columns` romahtaa yhteen sarakkeeseen (`auto 1fr`
+ * antaa piilotetulle (0 px leveälle) sarakkeelle nollan tilan).
+ */
+.kokoelma-runko {
+  display: grid;
+  /*
+   * YKSI SARAKE OLETUKSENA (korjaus 29.9.2026 illalla, toinen kierros:
+   * omistajan havainto: Aarteet-rivit vain n. 150 px leveitä ja nimet
+   * katkesivat, vaikka paneelin oikea puoli oli tyhjä). `grid-template-
+   * columns` varaa tilan MOLEMMILLE sarakkeille aina, VAIKKA
+   * `.kokoelma-esikatselu` on `hidden` ja siis pois ruudukon
+   * asettelusta — piilotettu lapsi ei poista TRACKIA, joten `.kokoelma-
+   * lista` jäi aina toiseen, kapeampaan sarakkeeseen. Kaksisarakkeinen
+   * asettelu tulee siis vain silloin, kun jokin rivi ON esikatseltu
+   * (ks. .kokoelma-esikatselu-auki alla ja js/kokoelmanakyma.js).
+   */
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--pilleri-runko-vali);
+  align-items: start;
+}
+.kokoelma-runko.kokoelma-esikatselu-auki {
+  /*
+   * SARAKKEEN LEVEYS RUUDUKON OMASSA MÄÄRITTELYSSÄ, EI LAPSEN
+   * width-OMINAISUUDESSA (korjaus mitatusta viasta 29.9.2026):
+   * `auto`-sarake mitoittuu lapsensa MAX-CONTENT-leveyteen — tekstin
+   * (esikatseluselite) rivittämätön leveys, EI lapsen `width: 42%`,
+   * joka jäi tehottomaksi ilman kiinteää ruudukon leveyttä. Mitattu
+   * ennen: 255 px vs. tavoiteltu ~143 px. `minmax(7.5rem, 42%)` antaa
+   * ruudukolle suoraan oikean leveyden.
+   */
+  grid-template-columns: minmax(7.5rem, var(--pilleri-esikatselu-leveys)) minmax(0, 1fr);
+}
+
+.kokoelma-esikatselu {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  /* Sama häivytys kuin ennen matkalaukun selitteellä (linssiSelitteenVaihto),
+     omistajan pysyvä linjaus avausliikkeelle. */
+  animation: kokoelmaEsikatseluSisaan 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+}
+.kokoelma-esikatselu[hidden] { display: none; }
+
+@keyframes kokoelmaEsikatseluSisaan {
+  from { opacity: 0; transform: translateX(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kokoelma-esikatselu { animation: none; }
+}
+
+.kokoelma-esikatselu-kuva {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.kokoelma-esikatselu-ikoni {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  color: var(--muted);
+}
+.kokoelma-esikatselu-ikoni svg { width: 60%; height: 60%; }
+.kokoelma-esikatselu-nimi {
+  margin: 0;
+  font-family: var(--font-type);
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+}
+.kokoelma-esikatselu-selite { margin: 0; font-size: 0.8rem; line-height: 1.4; color: var(--ink-light); }
+
+/* Toimintonappi lainaa laukun entisen Aktivoi-napin messinkiasua. */
+.kokoelma-toiminto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--pilleri-rivi-korkeus);
+  margin-top: 0.2rem;
+  padding: 0.3rem 0.8rem;
+  background: linear-gradient(180deg, rgba(255, 249, 232, 0.16), rgba(233, 209, 160, 0.1));
+  border: 1px solid var(--accent-dark);
+  border-radius: 8px;
+  color: var(--accent);
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.kokoelma-toiminto:hover { background: rgba(234, 184, 78, 0.18); }
+.kokoelma-toiminto:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.kokoelma-lista { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.kokoelma-tyhja { padding: 0.3rem 0; }
+
+.kokoelma-otsikko {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.5rem 0 0.15rem;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kokoelma-otsikko:first-child { margin-top: 0; }
+/*
+ * OTSIKKO PYSYY YHDELLÄ RIVILLÄ (korjaus 29.9.2026 illalla: "AARNIN
+ * LUETTELO 1 / 8" rivittyi kahdelle riville kapeassa sarakkeessa).
+ * Nimi typistyy kolmella pisteellä ennemmin kuin rivittyy; laskuri ei
+ * kutistu eikä katkea, koska se on tärkeämpi luku kuin otsikon teksti.
+ */
+.kokoelma-otsikko-nimi {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.kokoelma-otsikko-luku { flex: 0 0 auto; font-variant-numeric: tabular-nums; }
+
+.kokoelma-ryhma { display: flex; flex-direction: column; gap: 0.1rem; }
+
+/*
+ * TIHEÄ RIVILISTA (omistaja: linssien osalta "kuvake (jos on) ja nimi
+ * ilman selitettä"). Rivi ITSE muuttuu toimintonapiksi, kun se on
+ * esikatseltu — ei erillistä toista nappia listassa.
+ */
+.kokoelma-rivi {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: var(--pilleri-rivi-korkeus);
+  padding: 0.25rem 0.5rem;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--ink-light);
+  text-align: left;
+}
+.kokoelma-rivi:hover { background: rgba(234, 184, 78, 0.1); }
+.kokoelma-rivi.esikatselu {
+  border-color: var(--accent-dark);
+  background: rgba(234, 184, 78, 0.12);
+  color: var(--accent);
+  font-weight: 600;
+}
+/* Päällä oleva linssi (eri asia kuin esikatselu — messinkirengas kuvakkeen
+   ympärillä kertoo, mikä on juuri nyt kartalla). */
+.kokoelma-rivi.aktiivinen .kokoelma-rivi-kuvake {
+  box-shadow: 0 0 0 2px var(--accent);
+}
+/*
+ * HIOMASSA OPTIKOLLA: HARMAA RIVI (korjaus 29.9.2026 illalla, item 3 —
+ * omistaja: "harmaa 'hiomassa optikolla' -tila pitää näkyä Linssit-
+ * listassa"). Rivi on olemassa ja napautettavissa (esikatselu selittää
+ * miksi), mutta koko rivi näyttää harmaalta — linssiä ei vielä ole.
+ */
+.kokoelma-rivi.hiomassa {
+  filter: grayscale(1);
+  opacity: 0.72;
+}
+.kokoelma-rivi-kuvake {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: var(--pilleri-rivi-kuvake);
+  height: var(--pilleri-rivi-kuvake);
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--panel-2);
+}
+.kokoelma-rivi-kuvake img { width: 100%; height: 100%; object-fit: cover; }
+.kokoelma-rivi-kuvake svg { width: 70%; height: 70%; }
+/*
+ * NIMI SAA RIVITTYÄ KAHDELLE RIVILLE ENNEN KATKAISUA (korjaus 29.9.2026
+ * illalla: "Vertailulinssi (ke…" katkesi yhdelle riville vaikka
+ * kokonainen nimi olisi mahtunut kahdelle). `-webkit-line-clamp`
+ * (myös standardoitu `line-clamp`) rajaa kahteen riviin ja lisää
+ * kolme pistettä vasta, jos nimi ei mahdu niihinkään — huomattavasti
+ * harvinaisempaa kuin yhden rivin katkaisu.
+ */
+.kokoelma-rivi-nimi {
+  min-width: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  white-space: normal;
+  font-size: 0.86rem;
+  line-height: 1.25;
+}
+
+/*
+ * AARTEEN/TAVARAN KOKO RUUDUN KATSELIN (omistaja: "vielä uudestaan
+ * klikkaamalla ... aarre aukeaa koko sivulle näkyviin"). Julisteella
+ * toinen napautus avaa sen sijaan olemassa olevan julistegallerian
+ * (js/ui.js avaaJulisteGalleria) — omistajan hyväksymä vaihtoehto,
+ * ei siis omaa katselinta.
+ */
+.aarre-suurennos-huntu {
+  position: fixed;
+  inset: 0;
+  z-index: 72;
+  background: rgba(15, 10, 5, 0.78);
+}
+.aarre-suurennos {
+  position: fixed;
+  inset: 0;
+  z-index: 73;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+  pointer-events: none;
+}
+.aarre-suurennos-kuva {
+  max-width: min(92vw, 720px);
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+}
+.aarre-suurennos-ikoni {
+  width: min(60vw, 220px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  pointer-events: auto;
+}
+.aarre-suurennos-ikoni svg { width: 70%; height: 70%; }
+.aarre-suurennos-nimi {
+  margin: 0;
+  padding: 0.4rem 0.9rem;
+  background: rgba(20, 14, 8, 0.7);
+  border-radius: 8px;
+  color: var(--ink-light);
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  text-align: center;
+  pointer-events: auto;
+}
+.aarre-suurennos-sulje {
+  position: absolute;
+  top: calc(0.6rem + env(safe-area-inset-top, 0px));
+  right: 0.6rem;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: rgba(20, 14, 8, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink-light);
+  font-size: 1.3rem;
+  line-height: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .aarre-suurennos-kuva, .aarre-suurennos-ikoni, .aarre-suurennos-nimi {
+    animation: kokoelmaEsikatseluSisaan 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+  }
+}
+
+/* Lähdeikkunan tilannesivunappi (omistaja: "niiden tietojen
+   yläreunassa olisi nappi, mistä pääsisi pelin tilannesivulle"). */
+.lahteet-tilannesivu {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.35rem 0.7rem;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.lahteet-tilannesivu:hover { background: rgba(234, 184, 78, 0.14); }
+.lahteet-tilannesivu:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .stage {
   display: grid;
@@ -5504,6 +6002,19 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
    tilaa alleen. */
 .karttanimi-kohde { fill: rgba(var(--karttamuste), 0.92); }
 /*
+   KOHDEKAUPUNGIN NIMI RANNAN MUSTEELLA, VÄHEMMÄN MUSTA (omistaja 29.9.2026
+   klo 17.3x, sanatarkasti: "Tee kohdekaupunkien pisteistä ja
+   nimitekstistä vähemmän musta."). Muste on rantaviivan ruskea
+   (js/pallovektorit.js RANTA_MUSTE #5a4330) peitolla 0,75 — sama arvo
+   kuin kaupunkipisteellä (js/pallolauta/lauta.js KAUPUNKIPISTEEN_VARI)
+   ja natiivissa (Natiiviseppä, haara kaupunki-sepia). Pelaajan oma
+   kaupunki pitää entisen musteen (.karttanimi-oma), ja siirtokohteen
+   nimi (.target-nimi) on oma asunsa. GL-nimiöt lukevat tämän
+   koettimella (js/pallolauta/nimiorasterit.js lueNimenAsu). */
+:root { --kohdekaupunkimuste: 90, 67, 48; }
+.karttanimi-kaupunki { fill: rgba(var(--kohdekaupunkimuste), 0.75); }
+.karttanimi-kaupunki.karttanimi-oma { fill: rgba(var(--karttamuste), 0.92); }
+/*
    NOSTON VIIVA — merkiltä nimelle. Kartan kevyttä apuviivastoa: ohut,
    haalistunut muste, lyhyet katkot, ei nuolenpäitä. Paksuus ja katkot
    tulevat elementiltä CSS-pikseleinä (js/karttanimet.js NOSTON_VIIVA,
@@ -7634,6 +8145,45 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 
 .start-linkki:hover { color: #f2e2bb; }
 
+/*
+ * APURAHAN ARVIOIJALLE (omistaja 30.9.2026): kevyt, pelin tyylinen
+ * nappi Aloita seikkailu -napin alle — ohut kultareuna ja
+ * kirjoituskone, ei banneria. Irti virrasta kuten ääniviihje, jotta
+ * pääpainike pysyy ruudun keskellä.
+ */
+.start-apuraha {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 0.9rem);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  min-height: 0;
+  padding: 0.42rem 0.95rem;
+  border: 1px solid rgba(232, 214, 172, 0.5);
+  border-radius: 999px;
+  background: rgba(36, 26, 18, 0.35);
+  font-family: var(--font-type);
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  color: #e8d6ac;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+
+.start-apuraha:hover { color: #f2e2bb; border-color: rgba(242, 226, 187, 0.8); }
+
+/* Pysyvä huomautus selainversiosta periaatelinkin yläpuolella. */
+.start-huomautus {
+  margin: 0 auto 0.35rem;
+  max-width: 30rem;
+  font-family: var(--font-type);
+  font-size: 0.76rem;
+  line-height: 1.4;
+  color: #d8c091;
+  opacity: 0.88;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
 /* Periaateikkuna: sama pergamentti kuin muissa lapuissa, mutta pitkä
    teksti saa vierittyä. */
 .periaate-lappu .dialog-card {
@@ -7798,6 +8348,73 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 }
 
 .periaate-otsikko:focus { outline: none; }
+
+/* Apurahan esittelykortti: periaatelappu + matkakirjakortin otsikko
+   (paikka-aika) ja kursiivinen alaotsikko (tunnelma). */
+.apuraha-otsikko {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-type);
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: #7a5514;
+}
+
+.apuraha-otsikko:focus { outline: none; }
+
+.apuraha-alaotsikko {
+  margin: 0 0 0.8rem;
+  font-family: var(--font-type);
+  font-style: italic;
+  font-size: 0.84rem;
+  color: #8a6a2c;
+}
+
+.apuraha-teksti + .apuraha-teksti { margin-top: 0.6rem; }
+
+.apuraha-lista {
+  margin: 0.2rem 0 0;
+  padding-left: 1.3rem;
+  color: var(--map-ink);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.apuraha-lista li + li { margin-top: 0.3rem; }
+
+.apuraha-toiminto {
+  font-family: var(--font-type);
+  font-size: 0.9rem;
+  padding: 0.5rem 1.1rem;
+}
+
+.apuraha-toiminto:disabled { opacity: 0.7; cursor: default; }
+
+/* Kuvarivi (4–5 kuvaa, --apuraha-kuvia): pikkukuvat samankokoisina, napautus suurentaa. */
+.apuraha-kuvat {
+  display: grid;
+  grid-template-columns: repeat(var(--apuraha-kuvia, 4), minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 1.1rem 0 0;
+}
+
+.apuraha-kuva {
+  padding: 0;
+  min-height: 0;
+  border: 1px solid rgba(70, 51, 31, 0.4);
+  border-radius: 4px;
+  background: rgba(70, 51, 31, 0.08);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.apuraha-kuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+}
 
 .periaate-sulje {
   margin-top: 1rem;
@@ -8308,7 +8925,11 @@ body.flight-active .fact-card {
  * pidetään pienenä: nimi on merkintä kartalla, ei otsikko.
  */
 .target-nimi {
-  fill: var(--map-ink);
+  /* Rannan muste peitolla 0,95 (omistaja 29.9.2026 "vähemmän musta"):
+     sama muste kuin kaupungin nimellä, hieman vahvempana, jotta valinta
+     erottuu yhä taustan nimistä (Päätoimittaja: hierarkia säilyy).
+     Natiivissa sama arvo. */
+  fill: rgba(var(--kohdekaupunkimuste), 0.95);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   font-weight: 600;
   letter-spacing: 0.03em;
@@ -8458,71 +9079,13 @@ body.flight-active .fact-card {
 }
 
 /*
- * LAUKKU AUKEAA PILLERIN ALLE (omistajan toive 5.8.2026).
- *
- * <dialog> keskittää itsensä ruudulle, eikä sitä voi asemoida CSS:llä
- * sen napin suhteen joka sen avasi: nappi on ylärivissä ja dialogi on
- * selaimen ylimmässä kerroksessa, eivätkä ne ole sukua toisilleen.
- * Paikan laskee siis js/ui.js (asemoiLaukku) ja kirjoittaa sen
- * inline-tyyliin; tämän luokan tehtävä on vain purkaa keskitys, jotta
- * laskettu paikka pääsee voimaan.
- *
- * Korkeus rajataan ruudun alalaitaan asti: pilleri on ylhäällä, joten
- * täysi 92dvh valuisi ruudun ali.
+ * ISOISÄN MATKALAUKKU (.dialog.pillerin-alla, #laukku-sisus) ON
+ * POISTETTU (omistaja 29.9.2026, pillerivalikkouudistus) — laukun
+ * sisältö asuu nyt #paavalikko-paneelissa, joka ei ole <dialog> eikä
+ * tarvitse asemointia napin suhteen (paneeli on jo napin vanhemman,
+ * .topbar-actionsin, lapsi ja ankkuroituu CSS:llä sellaisenaan). Kaksi
+ * tätä sääntöä käyttänyttä luokkaa lähtivät samalla.
  */
-.dialog.pillerin-alla {
-  margin: 0;
-  max-height: calc(100dvh - 5.5rem);
-}
-
-/*
- * KORKEUSKATTO EI PITÄNYT 6.9.2026 ASTI (omistaja: "Laukku
- * pitää olla skrollattava myös" — linssin selite jäi ruudun alareunan
- * alle).
- *
- * Ylläoleva `max-height` koski VAIN dialogia, ja dialogilla on
- * `overflow: visible`. Kortti sen sisällä sai korkeutensa omasta
- * `.dialog-card { max-height: 92dvh }` -säännöstään, joka on tässä
- * asetelmassa aina isompi kuin dialogin katto — joten kortti kasvoi
- * dialogin ohi ja valui ruudun ali. Mitattu 390×844: kortti 776 px,
- * dialogin katto 72dvh = 608 px.
- *
- * Flexbox korjaa juuri tämän: kun dialogi on pystysuuntainen
- * flex-säiliö, sen `max-height` kutistaa lapsen (`flex-shrink: 1`)
- * kattoon asti, ja kortin sisus saa vieritettävän jäännöksen.
- * `[open]`-ehto on pakollinen — ilman sitä tekijän `display: flex`
- * voittaisi selaimen `dialog:not([open]) { display: none }` -säännön
- * ja suljettu laukku jäisi ruudulle näkyviin.
- */
-.dialog.pillerin-alla[open] {
-  display: flex;
-  flex-direction: column;
-}
-
-.dialog.pillerin-alla > .dialog-card.passport-card {
-  /* 92dvh pois: katon antaa dialogi, ei kortti (kortti on jo pystyflex,
-     ks. .dialog-card.passport-card ylempänä). */
-  max-height: none;
-  min-height: 0;
-  flex: 0 1 auto;
-}
-
-/*
- * VIERIVÄ SISUS. Kortti on kehys (overflow: hidden messinkikulmien
- * takia), joten vieritys kuuluu tälle lapselle. `touch-action: pan-y`
- * ja `overscroll-behavior: contain` ovat samat kuin muissa vierivissä
- * korteissa: sormi vierittää pystyyn eikä ele karkaa kartalle.
- */
-.laukku-sisus {
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  touch-action: pan-y;
-  -webkit-overflow-scrolling: touch;
-  padding: 1.4rem 0 1.6rem;
-}
 
 /*
  * Kapean ruudun laukkusäännöt asuvat lehtiarkin kapea-lohkossa
@@ -8581,7 +9144,8 @@ body.flight-active .fact-card {
   overscroll-behavior: contain;
   touch-action: pan-y;
   overflow-wrap: break-word;
-  animation: card-in 0.32s cubic-bezier(0.2, 1.2, 0.5, 1);
+  /* Avaus ja sulku: js/avausanimaatio.js asennaDialogianimaatiot (omistaja 29.9.2026, 220/200 ms napautuksen
+     suunnasta); vanha card-in (0,32 s kallistuksella, sulku hypyllä) pois. */
 }
 
 /*
@@ -10211,8 +10775,6 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * 5,7vw on entisen tekstilogon mitta: 390 pikselin ruudulla se on
    * 22 px, eli tarkalleen se korkeus, joka logolla oli ennen.
    */
-  .brand { flex: 0 1 auto; }
-  .brand-kuva { height: min(1.47rem, 5.7vw); }
   .turn-pill { font-size: 0.78rem; padding: 0.2rem 0.5rem; gap: 0.3rem; }
   .topbar-actions { gap: 0.15rem; }
   /*
@@ -10229,6 +10791,41 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
     min-height: 40px;
     min-width: 40px;
   }
+
+  /*
+   * PILLERI KORVAA HAMPURILAISEN PUHELIMELLA (omistaja 29.9.2026,
+   * sanatarkasti: *"otetaan vasempaan yläreunaan takaisin matkakirjan
+   * logo ja poistetaan tuo hampurilaiskuvake kokonaan niin, että
+   * siirretään pilleri oikealle puolelle"*).
+   *
+   * Hampurilainen (.valikko-kotelo, sisältää vain #menu-btn nyt) menee
+   * kokonaan pois kapealla ruudulla — SAMA #paavalikko-paneeli on yhä
+   * saatavilla, koska paneeli ei enää ole tämän kotelon lapsi (ks.
+   * .topbar-actions position: relative yllä).
+   *
+   * `order: 5` nostaa pillerin viimeiseksi flex-riville: kehittäjän
+   * ratas (dev-tilassa) jää sen vasemmalle puolelle, ja normaalisti
+   * pilleri on ainoa oikean laidan nappi. iPadin leveämmällä ruudulla
+   * (yli 560px) tätä sääntöä ei ole, joten asettelu on ennallaan —
+   * omistaja: "iPadilla nykyinen palkki säilyy näköjään ennallaan".
+   */
+  .valikko-kotelo { display: none; }
+  .turn-pill { order: 5; }
+
+  /*
+   * LOGO PUHELIMELLA, SAMAA KORKEUTTA KUIN PILLERI (omistaja 29.9.2026:
+   * "logo ... korkeus pillerin korkeus"). Pilleri on rivi, jonka
+   * korkeuden ratkaisevat fontti (0.78rem yllä) ja pystypehmuste
+   * (0.2rem) plus reunus — mitattu Chromiumissa 393 px:n leveydellä
+   * noin 28 px. `flex-shrink: 0` estää logon kutistumasta olemattomiin,
+   * jos rivi joskus ahtautuu (esim. kehittäjätilan ratas + pitkä
+   * pillerin teksti); ennen tätä sääntöä .brandilla ei ollut omaa
+   * flex-shrink-arvoa, ja se peri rivin oletuksen (1) kuten kaikki muut
+   * — vika ei toistunut tässä ympäristössä, mutta sääntö tekee
+   * katoamisesta mahdottoman jatkossakin.
+   */
+  .brand { flex: 0 0 auto; }
+  .brand-kuva { height: 1.75rem; }
 
   .event-toast { font-size: 0.92rem; padding: 0.55rem 0.8rem; top: 10%; }
   .event-toast .toast-icon { font-size: 1.3rem; }
@@ -12812,16 +13409,14 @@ body.kartalento #board { animation: kartalento-sisaan 0.55s ease; }
    * alareunan napautus vierittää päähän (ui.js kytkeTutkiSelaus). */
 
   /*
-   * Laukku kapealla ruudulla (omistaja 18.8.2026): "iphonella
-   * matkalaukku voisi olla hieman matalampi jotta karttaa näkyisi
-   * enemmän. piilota myös karttanapit iphonella siksi aikaa kun
+   * Pillerivalikko kapealla ruudulla (omistaja 18.8.2026, alunperin
+   * matkalaukusta: "piilota myös karttanapit iphonella siksi aikaa kun
    * matkalaukku on auki jotta pelaaja näkee paremmin miten linssi
-   * muuttaa karttaa." Sisältö vierii dialogissa kuten ennenkin;
-   * body.laukku-auki kytketään js/ui.js openPassportissa ja puretaan
-   * close-käsittelijässä.
+   * muuttaa karttaa" — sama linja pätee uuteen paneeliin). Luokka
+   * (body.pilleri-auki, ennen body.laukku-auki) kytketään js/ui.js
+   * avaaPilleriValikossa ja puretaan suljePilleriValikossa.
    */
-  .dialog.pillerin-alla { max-height: 72dvh; }
-  body.laukku-auki .actions { display: none; }
+  body.pilleri-auki .actions { display: none; }
 }
 
 /*
@@ -12991,10 +13586,267 @@ button.lukija-nappi:focus-visible,
   height: 1.35rem;
 }
 
-.lukija-otsikkorivi > .lukija-paneeli {
+
+/*
+ * NOSTOKORTIN LUENNAN SÄÄTIMET (omistaja 27.9.2026 klo 09.3x ja 10.1x;
+ * js/lukija.js varustaKortinSaatimet): [⚙][kaiutin] otsikkorivin oikeassa
+ * reunassa, ratas aivan kaiuttimen vieressä. Kaiuttimen omat kolme kaarta
+ * ovat VU-mittari kuten isoisän luennassa (#fact-kuuntele): luennan aikana
+ * himmeinä ja palavat tasosta, muuten täysinä. Vain läpinäkyvyys (iOS-sääntö).
+ */
+/* Ei kortille itselleen (js/lukija.js KORTTI_KOTINA): kortin oma reunus pysyy. */
+.lukija-otsikkorivi.lukija-saatimin:not(.lukija-kortti-kotina) { padding-right: 3.7rem; }
+
+button.lukija-nappi.lukee .kaiutin-kaari { opacity: 0.2; transition: opacity 120ms linear; }
+button.lukija-nappi.lukee .kaiutin-kaari.palaa { opacity: 1; }
+button.lukija-nappi.mykistetty .kaiutin-kaari { opacity: 0.2; }
+
+@media (prefers-reduced-motion: reduce) {
+  button.lukija-nappi.lukee .kaiutin-kaari { opacity: 1; transition: none; }
+}
+
+/*
+ * ── LUKIJAN VALIKKO (omistaja 28.9.2026) — js/lukija.js avaaValikko ──
+ *
+ * Kaksi nappia kaikissa luentakohdissa: kaiutin ja mini-hampurilainen.
+ * Hampurilainen asettuu absoluuttisen kaiuttimen vasemmalle (entisen
+ * säätörattaan paikalle; JS kopioi kaiuttimen top/right/transform,
+ * luokka .irti) tai rivissä olevan kaiuttimen perään.
+ */
+button.lukija-valikkonappi,
+.dialog button.lukija-valikkonappi {
+  width: 1.9rem;
+  height: 1.9rem;
+  min-width: 1.9rem;
+  min-height: 1.9rem;
+  padding: 0;
+  display: inline-grid;
+  place-items: center;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none;
+  color: rgba(70, 51, 31, 0.55);
+  cursor: pointer;
+}
+
+button.lukija-valikkonappi.irti { position: absolute; z-index: 7; }
+
+/* display: grid voittaisi hidden-attribuutin ilman tätä (kaiutin piilossa → valikko piiloon). */
+button.lukija-valikkonappi[hidden] { display: none; }
+
+button.lukija-valikkonappi:hover,
+button.lukija-valikkonappi:focus-visible,
+button.lukija-valikkonappi[aria-expanded="true"] { color: #46331f; }
+
+button.lukija-valikkonappi .viiva-ikoni svg { width: 1.1rem; height: 1.1rem; }
+
+/*
+ * LATAUSRENGAS (omistaja 28.9.2026): kun luenta on pyydetty mutta ääntä vasta
+ * generoidaan, kaiuttimen ympärillä pyörii hento kaari (js/lukija.js
+ * seuraaLatausta, luokka .lataa 250 ms:n viiveellä). Kaari elää kuvakkeen
+ * sisällä, jottei napin omaa asemointia (absoluuttinen/rivissä) muuteta.
+ */
+button.lukija-nappi .icon-glyph { position: relative; }
+button.lukija-nappi .icon-glyph::after {
+  content: '';
+  position: absolute;
+  inset: -0.28rem;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+button.lukija-nappi.lukee .icon-glyph::after { animation: lukija-lataus 0.9s linear infinite; }
+button.lukija-nappi.lataa .icon-glyph::after { opacity: 0.55; }
+@keyframes lukija-lataus { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  button.lukija-nappi.lukee .icon-glyph::after { animation-duration: 2.4s; }
+}
+
+/* Tekstirivin pari (nähtävyysjutun otsikko): kaiutin ja valikkonappi rivittyvät yhdessä. */
+.lukija-pari {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+#nahtavyys-otsikko .lukija-pari button.lukija-valikkonappi,
+.dialog #nahtavyys-otsikko .lukija-pari button.lukija-valikkonappi {
+  margin-block: -0.5rem;
+  margin-left: 0.1rem;
+  font-size: 1rem;
+}
+
+/* Staattinen koti saa asemoinnin valikon ajaksi (nähtävyysjutun otsikko). */
+.lukija-valikko-koti { position: relative; }
+
+.lukija-valikko {
+  position: absolute;
   top: calc(100% + 0.3rem);
   right: 0;
+  z-index: 8;
+  box-sizing: border-box;
+  width: min(20rem, calc(100vw - 1.5rem));
+  max-height: min(70vh, 32rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.55rem 0.65rem 0.6rem;
+  border-radius: 0.35rem;
+  background: rgba(246, 231, 198, 0.98);
+  box-shadow: 0 3px 14px rgba(40, 28, 14, 0.26);
+  color: #46331f;
+  /* Otsikkorivin versaalit ja harvennus eivät periydy valikkoon. */
+  font: 400 0.9rem/1.3 var(--font-luku);
+  text-transform: none;
+  letter-spacing: normal;
+  text-align: left;
+  white-space: normal;
+  transform-origin: top right;
+  animation: lukija-valikko-auki 170ms ease-out;
 }
+
+@keyframes lukija-valikko-auki {
+  from { opacity: 0; transform: translateY(-4px) scale(0.97); }
+}
+
+.lukija-kappaleet {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.4rem;
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-bottom: 1px solid rgba(70, 51, 31, 0.14);
+}
+
+.lukija-kappaleet[hidden] { display: none; }
+
+.lukija-valikko button.lukija-kappale,
+.dialog .lukija-valikko button.lukija-kappale {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0.32rem 0.4rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lukija-valikko button.lukija-kappale.otsikko { font-weight: 600; }
+
+/* Yksi rivi per kohta: numero + alkusanat, ylivuoto katkaistaan (omistaja 28.9.2026). */
+.lukija-valikko button.lukija-kappale,
+.dialog .lukija-valikko button.lukija-kappale {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.lukija-kappale-nro {
+  flex: 0 0 1.2rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.6;
+}
+.lukija-kappale-alku,
+.lukija-valikko button.lukija-kappale.otsikko,
+.dialog .lukija-valikko button.lukija-kappale.otsikko {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.lukija-valikko button.lukija-kappale.otsikko,
+.dialog .lukija-valikko button.lukija-kappale.otsikko { display: block; text-align: left; }
+.lukija-kappale-alku { min-width: 0; flex: 1 1 auto; }
+
+.lukija-valikko button.lukija-kappale:hover,
+.lukija-valikko button.lukija-kappale:focus-visible { background: rgba(234, 184, 78, 0.18); }
+
+.lukija-valikko button.lukija-kappale.nykyinen {
+  background: rgba(234, 184, 78, 0.3);
+  color: #6f4a0e;
+}
+
+/* Taaksepäin vasemmalla vierekkäin, eteenpäin oikealla (omistaja 28.9.2026). */
+.lukija-kelaus {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.lukija-kelaus-ryhma { display: flex; gap: 0.35rem; }
+
+.lukija-valikko button.lukija-kelausnappi,
+.dialog .lukija-valikko button.lukija-kelausnappi {
+  min-width: 2.5rem;
+  height: 2.1rem;
+  min-height: 0;
+  padding: 0 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(70, 51, 31, 0.22);
+  border-radius: 1.05rem;
+  background: rgba(255, 252, 244, 0.6);
+  box-shadow: none;
+  color: inherit;
+  font: 600 0.82rem/1 var(--font-luku);
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+
+.lukija-valikko button.lukija-kelausnappi:disabled { opacity: 0.35; cursor: default; }
+.lukija-valikko button.lukija-kelausnappi .viiva-ikoni svg { width: 1.05rem; height: 1.05rem; }
+
+.lukija-valikko-saadot { display: grid; gap: 0.4rem; }
+
+.lukija-jatkuva {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.84rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lukija-valikko { animation: none; }
+}
+
+/* Keskeytetty luenta: kaiutin vilkkuu kevyesti, kunnes jatketaan. */
+@keyframes lukija-keskeytetty {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+button.lukija-nappi.keskeytetty { animation: lukija-keskeytetty 1.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  button.lukija-nappi.keskeytetty { animation: none; opacity: 0.6; }
+}
+
+.lukija-saadot-rivi {
+  display: grid;
+  grid-template-columns: 3.4rem 1fr auto;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.lukija-saadot-rivi > select { grid-column: 2 / span 2; font: inherit; }
+.lukija-saadot-rivi > input[type="range"] { width: 100%; accent-color: #a8741a; }
+.lukija-saadot-rivi > output { min-width: 2.8rem; text-align: right; font-variant-numeric: tabular-nums; }
 
 /*
  * MYKISTETTYNÄ VINOVIIVA (Raamattu, LUENTA): sama merkki kuin
@@ -13066,83 +13918,6 @@ button.lukija-nappi.lukee,
 
 .dialog.arkki .lukija-kohdalla {
   scroll-margin-top: calc(var(--arkki-tarttuma, 0px) + 3.4rem);
-}
-
-/* ── Lukijan ohjauspaneeli (omistajan tilaus 14.8.2026) ───────────
- * Aukeaa kaiutinnapin alle luennan ajaksi: tauko/jatka, kappale
- * taakse ja eteen, kappalelaskuri ja lopetus. Sama paperinen sävy
- * kuin kaiuttimella, selvästi napakammat osumapinnat. */
-/* Suorakaide, ei pilleri (omistajan tarkennus 15.8.2026: "Muuta
- * pillerisäädin äänelle suorakaiteen muotoon"). */
-.lukija-paneeli {
-  position: absolute;
-  top: calc(max(0.45rem, env(safe-area-inset-top, 0px)) + 2rem);
-  right: max(0.5rem, env(safe-area-inset-right, 0px));
-  z-index: 6;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.3rem 0.45rem;
-  border-radius: 0.3rem;
-  background: rgba(246, 231, 198, 0.94);
-  box-shadow: 0 3px 12px rgba(40, 28, 14, 0.24);
-}
-
-/* Piiloutunut soitin (automaattinen piilotus / kaiuttimen vipu) —
- * display: flex voittaisi hidden-attribuutin ilman tätä. */
-.lukija-paneeli[hidden] { display: none; }
-
-/* Lehdessä kaiutin istuu tarttuvassa otsikkorivissä, joten paneeli
- * laskeutuu otsikkorivin ALLE eikä ruudun yläkulmaan napin päälle.
- * Mitta kattaa korkeimmankin otsikon (etusivun nimiö ~3.4rem).
- * Oikea reuna samaan linjaan kaiuttimen kanssa (omistajan tarkennus
- * 15.8.2026: "tasaa oikeaan laitaan napin kanssa") — kaiutin istuu
- * sisällön oikeassa reunassa eli --arkki-reunuksen päässä paperin
- * reunasta. */
-#arrival-dialog .lukija-paneeli {
-  top: calc(var(--arkki-tarttuma, 0px) + 3.6rem);
-  right: var(--arkki-reunus, 0.95rem);
-}
-
-.lukija-paneeli .lukija-paneeli-nappi {
-  width: 2.1rem;
-  height: 2.1rem;
-  min-height: 0;
-  padding: 0;
-  display: grid;
-  place-items: center;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: rgba(70, 51, 31, 0.82);
-  box-shadow: none;
-  cursor: pointer;
-  transition: color 0.15s ease, background 0.15s ease;
-}
-
-.lukija-paneeli .lukija-paneeli-nappi:hover:not(:disabled),
-.lukija-paneeli .lukija-paneeli-nappi:focus-visible {
-  background: rgba(234, 184, 78, 0.3);
-  color: rgba(70, 51, 31, 1);
-}
-
-.lukija-paneeli .viiva-ikoni svg { width: 1.2rem; height: 1.2rem; }
-
-/* Jatkuva luenta (omistajan tilaus 15.8.2026): kytkin hehkuu samalla
- * meripihkalla kuin lukeva kaiutin, jotta päällä olo näkyy yhdellä
- * silmäyksellä. */
-.lukija-paneeli .lukija-auto-nappi.aktiivinen {
-  color: #a8741a;
-  background: rgba(234, 184, 78, 0.24);
-}
-
-.lukija-paneeli .lukija-kappalerivi {
-  min-width: 2.3rem;
-  text-align: center;
-  font-size: 0.74rem;
-  font-variant-numeric: tabular-nums;
-  color: rgba(70, 51, 31, 0.72);
-  user-select: none;
 }
 
 /* ── Isoisän sitaatit visassa ja aarteessa ────────────────────────
@@ -17965,6 +18740,16 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   border: 0;
 }
 
+/*
+ * KEVYT MERKKI (löydös 178, omistaja 26.9.2026): aukio ja luonto jäävät
+ * nähtävyyskartalle, mutta rakennusta keveämpinä — piirros pienempi ja
+ * haaleampi, jotta rakennukset kantavat kartan.
+ */
+.maakartta-piste.kohde-kevyt .kohde-piirros-kuva {
+  transform: scale(0.72);
+  opacity: 0.78;
+}
+
 .kartta-suurennos .kartta-kehys img.kohde-piirros-kuva {
   width: 100%;
   height: 100%;
@@ -19052,8 +19837,8 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * kaiutinsäännöissä: dialogien yleissääntö maalaa jokaisen napin
  * pergamenttilaatikoksi ja voittaisi muuten tarkkuudessa.
  */
-#nahtavyys-otsikko > button.lukija-nappi,
-.dialog #nahtavyys-otsikko > button.lukija-nappi {
+#nahtavyys-otsikko button.lukija-nappi,
+.dialog #nahtavyys-otsikko button.lukija-nappi {
   position: static;
   transform: none;
   display: inline-grid;
@@ -19093,29 +19878,29 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * katkaisisi em-ketjun otsikkoon (mitattuna kuvake jäi 18 px:iin
  * 21,6 px:n sijaan). Perintä palauttaa ketjun.
  */
-#nahtavyys-otsikko > button.lukija-nappi .icon-glyph,
-.dialog #nahtavyys-otsikko > button.lukija-nappi .icon-glyph {
+#nahtavyys-otsikko button.lukija-nappi .icon-glyph,
+.dialog #nahtavyys-otsikko button.lukija-nappi .icon-glyph {
   font-size: inherit;
 }
 
-#nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg,
-.dialog #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg {
+#nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg,
+.dialog #nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg {
   width: min(1em, 2rem);
   height: min(1em, 2rem);
 }
 
-#nahtavyys-otsikko > button.lukija-nappi:hover:not(:disabled),
-#nahtavyys-otsikko > button.lukija-nappi:focus-visible,
-.dialog #nahtavyys-otsikko > button.lukija-nappi:hover:not(:disabled),
-.dialog #nahtavyys-otsikko > button.lukija-nappi:focus-visible {
+#nahtavyys-otsikko button.lukija-nappi:hover:not(:disabled),
+#nahtavyys-otsikko button.lukija-nappi:focus-visible,
+.dialog #nahtavyys-otsikko button.lukija-nappi:hover:not(:disabled),
+.dialog #nahtavyys-otsikko button.lukija-nappi:focus-visible {
   background: none;
   color: rgba(70, 51, 31, 1);
 }
 
 /* Luennan tila kerrotaan meripihkaisella musteella, ei taustalla —
    sama linjaus kuin muissa kaiuttimissa. */
-#nahtavyys-otsikko > button.lukija-nappi.lukee,
-.dialog #nahtavyys-otsikko > button.lukija-nappi.lukee {
+#nahtavyys-otsikko button.lukija-nappi.lukee,
+.dialog #nahtavyys-otsikko button.lukija-nappi.lukee {
   background: none;
   box-shadow: none;
   color: #a8741a;
@@ -19479,8 +20264,8 @@ button.opas-nauha:hover { filter: brightness(1.06); }
  * kaiuttimella. Kumoaa yleisen jutturivisäännön (yllä), joka latoo
  * napin otsikkotekstin perään.
  */
-.opas-arkki #nahtavyys-otsikko > button.lukija-nappi,
-.dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi {
+.opas-arkki #nahtavyys-otsikko button.lukija-nappi,
+.dialog.opas-arkki #nahtavyys-otsikko button.lukija-nappi {
   position: absolute;
   top: 50%;
   right: 1.15rem;
@@ -19490,30 +20275,18 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 }
 
 @media (min-width: 700px) {
-  .opas-arkki #nahtavyys-otsikko > button.lukija-nappi,
-  .dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi {
+  .opas-arkki #nahtavyys-otsikko button.lukija-nappi,
+  .dialog.opas-arkki #nahtavyys-otsikko button.lukija-nappi {
     right: 2rem;
   }
 }
 
 /* Kaiuttimen kuvake otsikkorivissä lehden kokoa (24 px) — otsikon
    em-koko (jopa 2.9rem) tekisi siitä rivin hallitsevan merkin. */
-.opas-arkki #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg,
-.dialog.opas-arkki #nahtavyys-otsikko > button.lukija-nappi .viiva-ikoni svg {
+.opas-arkki #nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg,
+.dialog.opas-arkki #nahtavyys-otsikko button.lukija-nappi .viiva-ikoni svg {
   width: 24px;
   height: 24px;
-}
-
-/* Säätöpaneeli laskeutuu tarttuvan otsikkorivin ALLE kaiuttimen
-   linjaan — ei dialogin yläkulmaan otsikon päälle. Mitta kattaa
-   korkeimmankin nimiön (2.9rem + pehmusteet). */
-.opas-arkki .lukija-paneeli {
-  top: 4.6rem;
-  right: 1.15rem;
-}
-
-@media (min-width: 700px) {
-  .opas-arkki .lukija-paneeli { right: 2rem; }
 }
 
 /* Kohde-/vuosirivi on oppaassa osaston nimi, ja se saa saman
@@ -21613,6 +22386,31 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 }
 
 /*
+ * UUDEN MATKAN LYHYT TERVEHDYS: Ohita kuplan oikeassa alakulmassa
+ * (omistaja 27.9.2026 "KERRAN + OHITA"; js/livia.js
+ * naytaLivianLyhytAvaus). Kevyt: pelkkä tekstinappi ilman kehystä,
+ * sama muste kuin kuplan teksti, kosketusalue ≥ 32 px.
+ */
+.pollo-vihje-ohita {
+  display: block;
+  margin: 0.2rem -0.35rem -0.3rem auto;
+  min-height: 2rem;
+  padding: 0.25rem 0.45rem;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.pollo-vihje-ohita:hover,
+.pollo-vihje-ohita:focus-visible { opacity: 1; }
+
+/*
  * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistajan tilaus 29.8.2026;
  * js/livia.js, js/pollo.js naytaAvauskupla).
  *
@@ -22862,17 +23660,29 @@ button.pollo-nappula:disabled { opacity: 0.5; cursor: default; }
  * pergamenttisääntö, joka muuten voittaisi tämän.
  */
 /*
- * Kaiutin päällä: sama täyteinen muoto kuin kuuntelevalla mikillä,
- * mutta ilman sykettä — vipu on päällä, se ei tee juuri nyt mitään.
+ * KAIUTINVIVUN TILA NÄKYY SELVÄSTI (omistaja 27.9.2026). Päällä nappi
+ * on kultainen ja kuvakkeessa on ääniaallot; pois-tilassa nappi on
+ * paperilla, kuvake himmeä ja kaiuttimen yli kulkee vinoviiva. Kulta
+ * erottaa vivun myös kuuntelevasta mikistä, joka on ruskea ja sykkii.
+ *
+ * Päällä-säännössä ovat mukana myös :hover ja :focus-visible:
+ * kosketuslaitteella hover jää napautuksen jälkeen päälle, eikä
+ * yleinen osoitussääntö saa maalata päällä olevaa vipua paperiksi.
  * Valitsin on paneelin luokan alla samasta syystä kuin mikillä:
  * kartan .actions-napeilla on oma pergamenttisääntönsä.
  */
 .pollo-paneeli button.pollo-kaiutin.paalla,
-body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla {
-  background: var(--pollo-korostus);
-  color: #f7f1e2;
+.pollo-paneeli button.pollo-kaiutin.paalla:hover:not(:disabled),
+.pollo-paneeli button.pollo-kaiutin.paalla:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla,
+body[data-mode] .actions .pollo-paneeli button.pollo-kaiutin.paalla:hover:not(:disabled) {
+  background: #e3ad45;
+  color: var(--pollo-muste);
   border-color: var(--pollo-korostus);
 }
+.pollo-kaiutin:not(.paalla) .viiva-ikoni { opacity: 0.55; }
+.pollo-kaiutin:not(.paalla) .pollo-kaiutin-aalto,
+.pollo-kaiutin.paalla .pollo-kaiutin-vino { display: none; }
 
 /* Kehittäjäkoodin kenttä: näkyy vain kehittäjätilassa, ja sen kuuluu
    olla huomaamaton — se on työkalu, ei pelin osa. */
@@ -22939,6 +23749,21 @@ body[data-mode] .actions .pollo-paneeli button.pollo-mikki.kuuntelee {
 }
 
 .pollo-sanelu-tila:empty { display: none; }
+
+/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js). */
+.pollo-realtime-koe {
+  align-self: center;
+  padding: 0.25rem 0.7rem;
+  border: 1px dashed var(--pollo-muste-himmea);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--pollo-muste-himmea);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.pollo-realtime-koe.paalla { border-style: solid; color: inherit; }
+.pollo-realtime-koe[hidden] { display: none; }
 
 .pollo-rivi { display: flex; gap: 0.35rem; }
 
@@ -25471,7 +26296,7 @@ body.infotaulu-auki .toimintorivi .monitoimi-nappi {
 }
 
 /*
- * LÖYTÄMISEN SUMU — LUONNOS (js/pallolauta/sumu.js; omistaja 21.9.2026
+ * LÖYTÄMISEN SUMU — LUONNOS (js/pallolauta/sumu.js poistettu 27.9.2026; omistaja 21.9.2026
  * julkaisuun): löytämätön nosto on haalea lyijykynäluonnos
  * katkoviivarenkaassa (js/pallolauta/nostot.js asetaLuonnosraita), ja
  * löytyessään se mustuu pehmeästi — rengas katoaa samalla.
@@ -25836,6 +26661,34 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 .karttaselite-nappi svg { display: block; }
 
 /*
+ * PELAAJAN NÄKYMÄ -APUNAPPI (kehittäjän maailmatila, omistaja 29.9.2026; js/pelaajanakyma.js): sama laatta kuin
+ * selitenappi, sen alla 8 px:n välillä. Päällä ollessaan tumma (sama kieli kuin kehittäjävalikon kytkimillä).
+ */
+.pelaajanakyma-nappi {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  min-width: 40px;
+  min-height: 40px;
+  margin-top: 8px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(239, 220, 180, 0.9);
+  color: var(--map-ink);
+  cursor: pointer;
+}
+.pelaajanakyma-nappi[hidden] { display: none; }
+.pelaajanakyma-nappi:hover:not(:disabled) { background: rgba(239, 220, 180, 1); color: var(--map-ink); }
+.pelaajanakyma-nappi svg { display: block; }
+.pelaajanakyma-nappi[aria-pressed='true'],
+.pelaajanakyma-nappi[aria-pressed='true']:hover:not(:disabled) {
+  background: var(--map-ink);
+  color: #f3e6c8;
+}
+
+/*
  * HOVER-SÄÄNNÖT TARVITSEVAT `:not(:disabled)`-LISÄN, eivät koristeeksi
  * vaan painoksi: pelin oma yleissääntö on `button:hover:not(:disabled)
  * { background: #43331f; }` (tumma muste), ja sen painoarvo on kaksi
@@ -25865,7 +26718,6 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
  */
 .karttaselite-levy {
   position: absolute;
-  top: calc(100% + 0.35rem);
   right: 0;
   display: flex;
   flex-direction: column;
@@ -25875,7 +26727,14 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   max-height: min(60vh, 26rem);
   overflow-y: auto;
   padding: 0.35rem;
-  transform: translateY(-0.6rem) scaleY(0.86);
+  /*
+   * AVAUS JA SULKU ANIMOIDEN (omistaja 29.9.2026: "Voiko lapun aukeamisen ja sulkeutumisen animoida? Ja jatkossa
+   * myös kaikki vastaavat"): levy kasvaa ja häivyttyy esiin avausnapin kulmasta (oikea yläkulma) ja sulkeutuu
+   * samaa reittiä. Paikka on sama kiinni ja auki (top: 0 molemmissa), ettei levy hyppää; vain mittakaava ja
+   * läpinäkyvyys liikkuvat. Sisään 220 ms pehmeä jarrutus, ulos 200 ms kevyt kiihdytys (samat natiivissa).
+   */
+  top: 0;
+  transform: scale(0.92);
   transform-origin: top right;
   opacity: 0;
   border: 1px solid rgba(70, 51, 31, 0.35);
@@ -25883,7 +26742,8 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   background: #f5f0e2;
   box-shadow: 0 8px 24px rgba(20, 14, 6, 0.35);
   visibility: hidden;
-  transition: transform 220ms ease, opacity 180ms ease, visibility 0s linear 220ms;
+  transition: transform 200ms cubic-bezier(0.4, 0, 1, 1), opacity 200ms cubic-bezier(0.4, 0, 1, 1),
+    visibility 0s linear 200ms;
 }
 
 /*
@@ -25899,17 +26759,17 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   /*
    * PANEELI PEITTÄÄ AVAUSNAPIN (omistajan päätös 22.9.2026): auki
    * levy alkaa täsmälleen kotelon yläreunasta eli napin omasta
-   * yläreunasta, `top: calc(100% + …)` sijaan. Nappi jää sen alle —
+   * yläreunasta (top: 0 perussäännössä, myös kiinni). Nappi jää sen alle —
    * sulku hoidetaan levyn omalla ✕-napilla, kartan napautuksella tai
    * Escapella, joten napin ei tarvitse olla tavoitettavissa sillä
    * välin (sama poikkeus kuin ylapalkki-vaaka.js:n ja tämän napin
    * välillä, css/styles.css `body.ylapalkki-auki .karttaselite`).
    */
-  top: 0;
   transform: none;
   opacity: 1;
   visibility: visible;
-  transition: transform 220ms ease, opacity 180ms ease, visibility 0s;
+  transition: transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1), opacity 180ms cubic-bezier(0, 0, 0.2, 1),
+    visibility 0s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26374,19 +27234,27 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   padding: calc(1rem + var(--turva-yla, 0px)) calc(1rem + var(--turva-oikea, 0px))
     calc(1rem + var(--turva-ala, 0px)) calc(1rem + var(--turva-vasen, 0px));
   background: rgba(18, 12, 4, 0);
-  transition: background 220ms ease-out;
+  transition: background 200ms cubic-bezier(0.4, 0, 1, 1);
 }
 
-.maakunta-kortti-auki { background: rgba(18, 12, 4, 0.3); }
+.maakunta-kortti-auki {
+  background: rgba(18, 12, 4, 0.3);
+  transition: background 220ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Sulkeutuva kortti ei ota napautuksia vastaan: alla oleva kartta ja uusi kortti toimivat heti. */
+.maakunta-kortti-sulkeutuu { pointer-events: none; }
 
 .maakunta-kortti {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: min(30rem, 100%);
-  max-height: min(86vh, 46rem);
+  /* Samat mitat kuin nostokortilla (css/fokusnosto.css .fokusnosto-kortti; omistaja 28.9.2026: "Nosto pitää olla
+     saman kokoinen kuin muut nostot"). */
+  width: min(34rem, 100%);
+  max-height: min(88vh, 52rem);
   overflow-y: auto;
-  padding: 0.7rem 0.8rem 0.9rem;
+  padding: 0.7rem 0.8rem 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
   background: #f5f0e2;
@@ -26394,14 +27262,20 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   color: #211d18;
   font-family: var(--font-luku);
   touch-action: pan-y;
+  /*
+   * AVAUS JA SULKU ANIMOIDEN (omistaja 29.9.2026, ks. .karttaselite-levy): kortti kasvaa ja häivyttyy esiin
+   * avanneen ⊕-napin kohdalta (transform-origin asetetaan avatessa, js/karttatyokalu-maakunnat.js) ja sulkeutuu
+   * samaa reittiä takaisin. Sisään 220 ms, ulos 200 ms; himmennys samoilla kestoilla.
+   */
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 220ms ease-out, transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
+  transform: scale(0.92);
+  transition: opacity 200ms cubic-bezier(0.4, 0, 1, 1), transform 200ms cubic-bezier(0.4, 0, 1, 1);
 }
 
 .maakunta-kortti-auki .maakunta-kortti {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: opacity 180ms cubic-bezier(0, 0, 0.2, 1), transform 220ms cubic-bezier(0.22, 0.9, 0.24, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26424,57 +27298,22 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
 }
 
 .maakunta-kortti-otsikko {
-  margin: 0 1.6rem 0.4rem 0;
-  font-family: var(--font-type);
-  font-size: 1.05rem;
+  /* Nostokortin otsikko (.fokusnosto-kortti-otsikko). */
+  margin: 0 2.2rem 0.5rem 0;
+  font-family: var(--font-luku);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.24;
 }
 
 .maakunta-kortti-teksti {
+  /* Nostokortin leipäteksti (.fokusnosto-teksti p). */
   margin: 0 0 0.6rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
-/* Kaksi kuvaa vierekkäin; useampi vaihtaa vaakakarusellin puolelle. */
-.maakunta-kuvat-ruudukko {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.4rem;
-  margin-bottom: 0.6rem;
-}
-
-.maakunta-kuvat-karuselli {
-  display: flex;
-  gap: 0.4rem;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.2rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.maakunta-kuvat-karuselli .maakunta-kuva {
-  flex: 0 0 80%;
-  scroll-snap-align: start;
-}
-
-.maakunta-kuva {
-  margin: 0;
-}
-
-.maakunta-kuva img {
-  display: block;
-  width: 100%;
-  height: 8rem;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.maakunta-kuva-lahde {
-  margin-top: 0.2rem;
-  color: rgba(70, 51, 31, 0.65);
-  font-size: 0.66rem;
-  line-height: 1.3;
-}
+/* Kuvat piirtää nostokortin komponentti (css/fokusnosto.css .fokusnosto-kuva, .nostosarja-*). */
 
 /* Pulun kysymykset: nappi ikonilla ja tekstillä, vastaus puhekuplana heti alla. */
 .maakunta-pulu {
@@ -28648,6 +29487,40 @@ body.luenta-tekstit-piiloon .pollo-vihje-yksin {
 }
 
 /*
+ * TABLETILLA POIS RUUDUN KESKILINJALTA (omistajan päätös 29.9.2026,
+ * Päätoimittajan kautta: Liiku pysyy läpinäkyvänä — PÄÄTÖKSET 28 kohta 3
+ * ei muutu — mutta paikkaa saa siirtää). Siirtosepän pariteettikatsaus
+ * mittasi 834 × 1194 Kreikalla, että keskilinjalla "Liiku" osui
+ * "KREETANMERI"-nimiöön eikä läpinäkyvä sana erottunut sen päällä.
+ * Nimiöt ovat karttadatan omia tekstejä eri paikoissa joka maalla, eikä
+ * niillä ole ajonaikaista väistömekanismia, jota nappi voisi käyttää
+ * (js/fokuskohteet.js:n "nimiöväistö" ladotaan pakkien
+ * GENEROINTIVAIHEESSA vain kohdemerkkien kesken, kiinteän
+ * ruutukoordinaatin UI-napin ei tarvitse — eikä sen pidä osallistua
+ * siihen). Yksinkertaisin yleinen korjaus on siis siirtää nappi pois
+ * juuri siltä keskilinjalta, jolle useimman maan oletusnäkymä keskittää
+ * rantaviivan ja siten myös meren nimiön: nappi nousee samaan pystyreunaan
+ * kuin Pulu (.pollo-nappi.pollo-kelluu, right: 1.1rem + turva-alue) mutta
+ * jää Pulun ALAPUOLELLE aivan ruudun alalaitaan (Pulu on kartalla 5,3rem
+ * ylhäällä), joten napit eivät voi koskaan osua toisiinsa. Vain PYSTYSSÄ
+ * OLEVA TABLETTI (>= 768px leveä JA `orientation: portrait`, sama
+ * leveysraja kuin maapaneelin kartuschan reunalla rivillä 27617): puhelin
+ * pysyy ennallaan keskellä, koska kapealla ruudulla ei ole sivutilaa
+ * siirtoon (PÄÄTÖKSET 28 kohta 3 kirjaimellisesti), ja TYÖPÖYTÄ/vaaka
+ * pysyy myös ennallaan keskellä, koska leveä maisemaruutu ei ole se
+ * tapaus, jossa Kreetanmeri mitattiin (savuke-maapaneeli.mjs 1400 × 900
+ * -ruutu ja savuke-iphone-tekstit.mjs työpöytäruutu vaativat yhä
+ * keskityksen) — `orientation: portrait` erottaa 834 × 1194:n niistä.
+ */
+@media (min-width: 768px) and (orientation: portrait) {
+  .toimintorivi.rivi-yksi .monitoimi-nappi {
+    left: auto;
+    right: calc(1.1rem + env(safe-area-inset-right, 0px));
+    transform: none;
+  }
+}
+
+/*
  * Rivi varaa yhä napin korkeuden, jottei alapalkki kutistu napin
  * irrotessa ja koko alareuna hypähdä.
  *
@@ -29198,3 +30071,76 @@ body.pallolauta-kallistettu [class^="pallolauta-liuska"] {
 body.lehtikuori > .app,
 body.lehtikuori > .paivitysruutu { display: none !important; }
 body.lehtikuori { background: #2a241c; }
+
+/*
+ * AVAUSKORTIN KUTSU KARTALLA (omistaja 27.9.2026 klo 23.4x): pieni kortti
+ * (herokuva + kaupungin nimi) kaupungin ja nappulan vieressä yläviistossa.
+ * Juurielementti on pallon CSS2D-piste (0 × 0); kortti asemoidaan siitä
+ * (js/pallolauta/lauta.js asetteleKutsu). Napautus kasvattaa sen
+ * avauskortiksi (js/kaupunkinosto.js avaaAvauskortti).
+ */
+.kaupunkikortin-kutsu { position: relative; width: 0; height: 0; }
+.kaupunkikortin-kutsu-kortti {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 2px solid #f5f0e2;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #d9ccb0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  pointer-events: auto;
+  animation: kaupunkikortin-kutsu-esiin 0.35s ease-out;
+  /* Asennon vaihto liukuu eikä hyppää (omistaja 28.9.2026; ensimmäinen asetus ei animoidu, auto → px). */
+  transition: left 0.22s ease-in-out, top 0.22s ease-in-out;
+}
+.kaupunkikortin-kutsu-kortti img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kaupunkikortin-kutsu-nimi {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 1px 3px 2px;
+  background: rgba(33, 29, 24, 0.72); color: #fff8ec;
+  font: 600 10px/1.15 var(--font-luku); text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+@keyframes kaupunkikortin-kutsu-esiin {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) { .kaupunkikortin-kutsu-kortti { animation: none; transition: none; } }
+
+/*
+ * KAUPUNKILEHDEN OSIOHAKEMISTO (omistaja 27.9.2026; js/lehtiosiot.js):
+ * etusivun alla osiot linkkeinä, yksi kuva osiota kohden.
+ * KEVYT RIVI (omistaja 27.9. klo 11.2x, v2296:n palaute; mitat natiivin
+ * hyväksytystä mallista, Natiivi-UI 11a3c43a): kuva 40 × 40, ohut viiva
+ * (.16), nimi Luku 15,5 px #b03a2b + "→", yksi alarivi 13,2 px ellipsillä.
+ * Napit eivät saa lehden yleistä nappityyliä (kehys, konekirjoitus).
+ */
+.lehti-osiohakemisto { margin-top: 1rem; }
+.lehti-osiohakemisto-otsikko {
+  margin: 0 0 0.4rem; padding: 0.3rem 0;
+  border-top: 1px solid rgba(70, 51, 31, 0.6); border-bottom: 1px solid rgba(70, 51, 31, 0.6);
+  font: 700 0.8rem var(--font-type); letter-spacing: 0.14em; text-transform: uppercase; text-align: center;
+}
+.lehti-osio {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 0.75rem; align-items: center;
+  padding: 0.5rem 0; border-bottom: 1px solid rgba(70, 51, 31, 0.16);
+}
+.lehti-osio-kuva { width: 40px; height: 40px; border-radius: 2px; overflow: hidden; background: rgba(70, 51, 31, 0.12); cursor: pointer; }
+.lehti-osio-kuva img { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(0.2); }
+.lehti-osio-tekstit { min-width: 0; }
+.lehti-osiohakemisto button.lehti-osio-linkki, .lehti-osiohakemisto button.lehti-osio-juttu {
+  display: inline; width: auto; margin: 0; padding: 0; border: 0 !important; border-radius: 0; background: none !important;
+  box-shadow: none !important; min-height: 0; color: inherit; font-family: var(--font-luku); font-weight: 400;
+  font-size: inherit; line-height: inherit; letter-spacing: normal; text-transform: none; text-align: left; cursor: pointer;
+}
+.lehti-osiohakemisto button.lehti-osio-linkki { display: block; font-size: 15.5px; line-height: 1.3; color: #b03a2b; }
+.lehti-osiohakemisto .lehti-osio-jutut button.lehti-osio-juttu { color: #8b8173; }
+.lehti-osio-jutut {
+  margin: 0.1rem 0 0; font-family: var(--font-luku); font-size: 13.2px; line-height: 1.3; color: #8b8173;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.lehti-osio-erotin { color: #b3aa9c; }
+.lehti-osio-linkki:hover, .lehti-osio-juttu:hover { text-decoration: underline; }

@@ -70,12 +70,10 @@ import { Game } from '../../js/game.js';
 import { RAJA_MUSTE } from '../../js/pallovektorit.js';
 import { packById } from '../../js/pack.js';
 import { decodePng } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 // Playwrightin paikka vaihtelee koneittain (Mac Studio: naapuriworktree),
 // joten sama PLAYWRIGHT_JS-varatie kuin muissa savukkeissa.
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const arg = (n, d) => (process.argv.find((a) => a.startsWith(`--${n}=`))?.split('=')[1] ?? d);
@@ -199,9 +197,7 @@ const tallenne = JSON.stringify(peli.toJSON());
 // Chromiumin paikka vaihtelee koneittain (kontti /opt/pw-browsers,
 // Mac Studio Playwrightin oma välimuisti): sama CHROMIUM-varatie kuin
 // muissa mittareissa, ja ilman sitä Playwright etsii selaimen itse.
-const selain = await chromium.launch({
-  ...(process.env.CHROMIUM || existsSync('/opt/pw-browsers/chromium')
-    ? { executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' } : {}),
+const selain = await avaaChromium({
   args: ['--disable-dev-shm-usage'],
 });
 

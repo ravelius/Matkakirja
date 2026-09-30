@@ -88,7 +88,7 @@ import {
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { piirraVisanVastaukset } from './fokustehtavat.js';
-import { nostokuvaAloita } from './nostokuva.js';
+import { nostokuvaAloita, nostokuvaVakiokortti } from './nostokuva.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 /*
  * NELJÄN MAAN POOLIT ASUVAT NYT KAUPUNKIEN OMISSA PAKETEISSA (v1301).
@@ -131,12 +131,13 @@ import { FOKUSVIRTA_VILNA } from './packs/fokusvirta-vilna.js';
 import { FOKUSVIRTA_KIOVA } from './packs/fokusvirta-kiova.js';
 import { FOKUSVIRTA_KRAKOVA } from './packs/fokusvirta-krakova.js';
 import { FOKUSVIRTA_PIETARI } from './packs/fokusvirta-pietari.js';
-import { fokusvirtaSisalto } from './fokusvirta.js';
+import { fokusvirtaSisalto, suljeMuutAvoimetLaput } from './fokusvirta.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { animoiAvaus, suljeKerrosAnimoiden } from './avausanimaatio.js';
 /** Kuvan tekijä- tai lisenssirivi (ei tekstin lähde). */
 const KUVAN_TEKIJARIVI = /Wikimedia Commons|Valokuva:|havainnekuva|\bCC[ -](?:BY|0)|public domain/i;
 
@@ -629,7 +630,7 @@ const NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
  * työvaiheen hallussa. Yhden tiedoston versiossa erillistä linkkiä ei
  * ole, koska tyylit ovat jo sivun <style>-lohkossa.
  */
-function nostoLataaTyyli() {
+export function nostoLataaTyyli() {
   if (typeof document === 'undefined') return;
   if (document.getElementById(NOSTO_TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
@@ -1117,6 +1118,13 @@ function avaaNostonKortti(ui, nosto) {
   if (linssiEstaa()) return false;
   nostoLataaTyyli();
   suljeNostonKortti(ui);
+  /*
+   * VAIN YKSI LAPPU KERRALLAAN (Siirtosepän pariteettikatsaus
+   * 29.9.2026, rivi 5): nostokortti ei saa avautua jo auki olevan
+   * maakortin tai kaupunkilehden päälle. Ks. js/fokusvirta.js
+   * suljeMuutAvoimetLaput.
+   */
+  suljeMuutAvoimetLaput(ui);
 
   const kerros = html('div', 'fokusnosto-kerros');
   const kortti = html('div', 'fokusnosto-kortti');
@@ -1178,7 +1186,11 @@ function avaaNostonKortti(ui, nosto) {
     onKuvatta: () => kortti.classList.remove('fokusnosto-pysty'),
   }) : null;
   kuvakehysRef = kaksivaihe?.kehys ?? null;
-  if (!kaksivaihe) latoNosto(sisalto, undefined);
+  if (!kaksivaihe) {
+    latoNosto(sisalto, undefined);
+    // Kuvaton kortti samaan kokoon ja paikkaan kuin kuvallinen (löydös 135).
+    nostokuvaVakiokortti({ kortti, sisalto });
+  }
   nostoSeuraaKuvanSuuntaa(kortti, kaksivaihe?.kehys ?? null);
   // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
   lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
@@ -1233,6 +1245,7 @@ function avaaNostonKortti(ui, nosto) {
   };
   void kerros.offsetWidth;
   kerros.classList.add('fokusnosto-kortti-auki');
+  animoiAvaus(kortti);
   sfx.play('paper');
   return true;
 }
@@ -1277,8 +1290,8 @@ export function suljeNostonKortti(ui) {
     for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) {
       // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
       // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
-      vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
-      vanha.remove();
+      vanha.querySelector('.nostokuva-kortti, .nostokuva-vakiokortti')?.nostokuvaPurku?.();
+      suljeKerrosAnimoiden(vanha, '.fokusnosto-kortti', ['fokusnosto-kerros', 'fokusnosto-kortti-auki']);
     }
   }
 }

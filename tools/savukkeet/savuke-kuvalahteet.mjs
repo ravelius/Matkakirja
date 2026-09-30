@@ -15,6 +15,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const paketinLahde = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -84,9 +85,9 @@ const PINNAT = [
   // = false, avaaFokusvirta palauttaa false), eikä aikajanan avauslaatikon
   // kuvaa (esittely.kuva) käytä yksikään linssi: kumpaakaan ei piirry.
   // Lehden etusivulla on useita kuvia: jokainen näkyvä kuva napautetaan erikseen.
-  { nimi: 'kaupunkilehti Pariisi', avaa: 'lehti:pariisi', kortti: 'dialog.lehti[open]', kuva: 'img', kaikkiKuvat: true },
+  { nimi: 'kaupunkilehti Pariisi', avaa: 'lehti:pariisi', kortti: 'dialog.lehti[open]', kuva: 'img', kaikkiKuvat: true, osiot: true },
 ];
-const selain = await paketti.chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block' });
 await ctx.addInitScript((d) => {
   try { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); } catch { /* */ }
@@ -184,7 +185,8 @@ for (const p of PINNAT.filter((x) => !VAIN || VAIN.test(x.nimi))) {
     };
     const nakyvaKuva = () => [...kortti.querySelectorAll(p.kuva)].find(nakyva) ?? kortti.querySelector(p.kuva);
     if (p.kaikkiKuvat) {
-      const kuvat = [...kortti.querySelectorAll(p.kuva)].filter(nakyva);
+      // Osiohakemiston pikkukuvat ovat osioiden ovia: ne tarkistetaan erikseen (osiotarkistus alla).
+      const kuvat = [...kortti.querySelectorAll(p.kuva)].filter((k) => nakyva(k) && !k.closest('.lehti-osio-kuva'));
       const perKuva = [];
       for (const kuva of kuvat) {
         kuva.scrollIntoView({ block: 'center' });
@@ -235,6 +237,84 @@ for (const p of PINNAT.filter((x) => !VAIN || VAIN.test(x.nimi))) {
   tieto(p.nimi, JSON.stringify(tulos));
   vaadi(`${p.nimi}: kortilla ei lähde- eikä havainnekuvariviä`, !tulos.virhe && tulos.rivit.length === 0, JSON.stringify(tulos.rivit ?? tulos));
   vaadi(`${p.nimi}: suurennoksessa lähderivi on`, !tulos.virhe && tulos.kuvanappi && tulos.suurennoksessa.length > 0, JSON.stringify(tulos));
+  if (p.osiot) {
+    /*
+     * OSIOHAKEMISTON PIKKUKUVAT (omistaja 27.9.2026 #3364; Päätoimittaja
+     * 28.9.2026): napautus on navigointia osioon, ja SAMA KUVA on osiossa
+     * (lehden sivu tai nostokortti), jonka suurennoksessa lähde on. Kuva,
+     * jota osiossa ei ole (nähtävyysjutun varakuva), kantaa lähteen
+     * title-kuvauksessa ja avaa suurennoksen pitkällä painalluksella.
+     * Jokainen pikkukuva ajetaan tuoreesta etusivusta.
+     */
+    const osiot = await s.evaluate(async ({ kaupunki, rivi }) => {
+      const RE = new RegExp(rivi);
+      const odota = (ms) => new Promise((v) => setTimeout(v, ms));
+      const nakyva = (e) => e.getClientRects().length > 0 && getComputedStyle(e).visibility !== 'hidden';
+      const lahderivit = () => [...document.body.querySelectorAll('*')].filter((e) => nakyva(e)
+        && [...e.childNodes].some((c) => c.nodeType === 3 && RE.test(c.textContent)));
+      const tiedosto = (k) => String(k?.currentSrc || k?.src || '').split('/').pop().split('?')[0];
+      const napauta = (el) => {
+        el?.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true, clientX: 0, clientY: 0 }));
+        el?.dispatchEvent(new PointerEvent('pointerup', { bubbles: true, clientX: 0, clientY: 0 }));
+        el?.click();
+      };
+      const { ui, game } = window.matkakirja;
+      const siivoa = async () => {
+        ui.suljeKulttuuriKuva?.();
+        for (let i = 0; i < 3; i += 1) document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+        document.querySelectorAll('dialog[open]').forEach((d) => d.close?.());
+        document.querySelectorAll('.fokuskohde-popup, .fokusnosto').forEach((e) => e.querySelector('[class*="sulje"]')?.click?.());
+        await odota(400);
+      };
+      const avaaEtusivu = async () => {
+        await siivoa();
+        ui.openArrival(game.board.cityById.get(kaupunki), { ohitaLehtilukko: true });
+        await odota(1500);
+        return [...document.querySelectorAll('dialog.lehti[open] .lehti-osio-kuva')];
+      };
+      const n = (await avaaEtusivu()).length;
+      const tulokset = [];
+      for (let i = 0; i < n; i += 1) {
+        const peukalo = (await avaaEtusivu())[i];
+        const img = peukalo?.querySelector('img');
+        if (!img) { tulokset.push({ i, kuva: null, reitti: 'ei kuvaa', osio: peukalo?.closest('.lehti-osio')?.querySelector('.lehti-osio-linkki')?.textContent?.trim() ?? '', rivit: 0, ok: true }); continue; }
+        const nimi = tiedosto(img);
+        const osio = peukalo.closest('.lehti-osio')?.querySelector('.lehti-osio-linkki')?.textContent?.trim() ?? '';
+        if ((peukalo.title ?? '').startsWith('Kuva:')) {
+          const ennen = new Set(lahderivit());
+          peukalo.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
+          await odota(900);
+          peukalo.dispatchEvent(new PointerEvent('pointerup', { bubbles: true }));
+          const rivit = lahderivit().filter((e) => !ennen.has(e)).length;
+          tulokset.push({ i, osio, kuva: nimi, reitti: 'pitkä painallus → suurennos', title: peukalo.title, rivit, ok: rivit > 0 });
+          continue;
+        }
+        napauta(peukalo);
+        await odota(1500);
+        const sama = [...document.querySelectorAll('img')]
+          .find((k) => !k.closest('.lehti-osio-kuva') && nakyva(k) && tiedosto(k) === nimi);
+        if (!sama) { tulokset.push({ i, osio, kuva: nimi, reitti: 'osio → kuvaa ei ole', rivit: 0, ok: false }); continue; }
+        // Kuva edellä -kortissa ensimmäinen napautus voi avata jutun; toinen avaa suurennoksen.
+        let rivit = 0;
+        for (let yritys = 0; yritys < 2 && !rivit; yritys += 1) {
+          const kohde = [...document.querySelectorAll('img')]
+            .find((k) => !k.closest('.lehti-osio-kuva') && nakyva(k) && tiedosto(k) === nimi) ?? sama;
+          kohde.scrollIntoView({ block: 'center' });
+          await odota(200);
+          const ennen = new Set(lahderivit());
+          napauta(kohde);
+          await odota(1000);
+          rivit = lahderivit().filter((e) => !ennen.has(e)).length;
+        }
+        tulokset.push({ i, osio, kuva: nimi, reitti: 'osio → kuva → suurennos', rivit, ok: rivit > 0 });
+      }
+      await siivoa();
+      return tulokset;
+    }, { kaupunki: p.avaa.split(':')[1], rivi: RIVI.source });
+    tieto(`${p.nimi} osiot`, JSON.stringify(osiot));
+    vaadi(`${p.nimi}: jokaisen osiohakemiston pikkukuvan lähde löytyy (osiosta tai pitkällä painalluksella)`,
+      osiot.length > 0 && osiot.every((o) => o.ok), JSON.stringify(osiot.filter((o) => !o.ok)));
+  }
   if (KUVAKANSIO) await s.screenshot({ path: join(KUVAKANSIO, `kuvalahteet-${p.nimi.replace(/[^a-z0-9]+/gi, '-')}.jpg`), type: 'jpeg', quality: 60 }).catch(() => {});
   await s.keyboard.press('Escape');
   await s.waitForTimeout(300);

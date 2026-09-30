@@ -167,6 +167,16 @@
 #
 set -euo pipefail
 
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.31, Raamattu #3527): poltto ajaa
+# täysillä ytimillä nice 15:llä, jolloin omistajan ja käännösten työ menee
+# edelle. Lapset (shardit, node, selain) perivät tason. Kevyt tila
+# /tmp/matkakirja-kevyt (omistaja tarvitsee konetta) lisää Darwinin
+# taustaprioriteetin (taskpolicy -b). Linuxin CI-ajurilla taskpolicya ei ole.
+renice -n 15 -p $$ >/dev/null 2>&1 || true
+if [ -f /tmp/matkakirja-kevyt ] && command -v taskpolicy >/dev/null 2>&1; then
+  taskpolicy -b -p $$ >/dev/null 2>&1 || true
+fi
+
 JUURI="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 # Oma absoluuttinen polku: xargs käynnistää tämän saman skriptin
 # lapsiprosesseina, eikä suhteellinen $0 kelpaa siihen.
@@ -248,6 +258,9 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              tasoittain ja DEM-kaistoittain. Vaatii --sarjat
                              kaikki (tai pallo). DEM-oletukset NAS:ilta:
                              …/Matkakirja-arkisto/dem/copernicus-glo30 ja -glo90.
+  --syva-laatat <json>       syvän sarjan tarkka z10-laattalista suorakaiteen
+                             sijaan (tools/tee-syva-laatat.mjs: kaupungit ±1°
+                             + maat); z9 on sen vanhemmat
   --delta meri|maa           DELTA-POLTTO (tools/delta-luokitin.mjs): pohjasta
                              piirretään vain laatat, joissa on vettä (meri) tai
                              maata (maa); loput kopioidaan --delta-lahde-
@@ -401,7 +414,7 @@ VAHTI_PID=""; RAPORTOI=0; EDISTYMISVAROITUS=0
 DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT=""; NIMIOLIPUT=""
 NIMIOVERSIO=""; NIMIOT=""; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
 # SYVÄT TASOT z9-z10 (Karttaseppä 23.9.2026, ks. SYVÄT TASOT alempana).
-DEM=""; SYVA_ALUE="-5.5,41,9.8,51.5"; PALLO_ALUE=""
+DEM=""; SYVA_ALUE="-5.5,41,9.8,51.5"; SYVA_LAATAT=""; PALLO_ALUE=""
 # NIMETTY RESEPTI (Karttaseppä 25.9.2026, ks. RESEPTI alempana).
 RESEPTI=""; DEM90=""; PALLOLIPUT=""; PALLO_TASOT_ANNETTU=0
 # DELTA-POLTTO (Karttaseppä 26.9.2026, ks. DELTA alempana).
@@ -449,6 +462,7 @@ while [ $# -gt 0 ]; do
     --kuiva) KUIVA="$2"; shift 2 ;;
     --delta-aineisto-sama) DELTA_AINEISTO_SAMA="$2"; shift 2 ;;
     --syva-alue) SYVA_ALUE="$2"; shift 2 ;;
+    --syva-laatat) SYVA_LAATAT="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
     --pallo-luettelo) PALLO_LUETTELO="$2"; shift 2 ;;
@@ -512,6 +526,7 @@ if [ "$LAPSI" -eq 1 ]; then
   [ "$ILMAN_NIMIOITA" -eq 1 ] || ILMAN_NIMIOITA="${POLTTO_ILMAN_NIMIOITA:-0}"
   [ -n "$DEM" ] || DEM="${POLTTO_DEM:-}"
   SYVA_ALUE="${POLTTO_SYVA_ALUE:-$SYVA_ALUE}"
+  SYVA_LAATAT="${POLTTO_SYVA_LAATAT:-$SYVA_LAATAT}"
   [ -n "$PALLO_ALUE" ] || PALLO_ALUE="${POLTTO_PALLO_ALUE:-}"
   # Resepti on jo purettu lippuihin vanhemmassa (POLTTO_POHJALIPUT ym.);
   # lapsi tarvitsee nimen shardilistaan ja tunnukseen, ei purkua uudestaan.
@@ -528,7 +543,7 @@ vie_lapsille () {
   export POLTTO_VIIVALIPUT="$VIIVALIPUT" POLTTO_RANTALIPUT="$RANTALIPUT" POLTTO_NOSTOLIPUT="$NOSTOLIPUT" POLTTO_NIMIOLIPUT="$NIMIOLIPUT"
   export POLTTO_NIMIOVERSIO="$NIMIOVERSIO" POLTTO_NIMIOT="$NIMIOT" POLTTO_PALLOTUNNISTE="$PALLOTUNNISTE"
   export POLTTO_HAHMOTELMAT="$HAHMOTELMAT" POLTTO_ILMAN_NOSTOJA="$ILMAN_NOSTOJA" POLTTO_ILMAN_NIMIOITA="$ILMAN_NIMIOITA"
-  export POLTTO_DEM="$DEM" POLTTO_SYVA_ALUE="$SYVA_ALUE" POLTTO_PALLO_ALUE="$PALLO_ALUE"
+  export POLTTO_DEM="$DEM" POLTTO_SYVA_ALUE="$SYVA_ALUE" POLTTO_SYVA_LAATAT="$SYVA_LAATAT" POLTTO_PALLO_ALUE="$PALLO_ALUE"
   export POLTTO_RESEPTI="$RESEPTI" POLTTO_DEM90="$DEM90" POLTTO_PALLOLIPUT="$PALLOLIPUT"
   export POLTTO_DELTA="$DELTA" POLTTO_DELTA_LAHDE="$DELTA_LAHDE" POLTTO_DELTA_TARKISTUS="$DELTA_TARKISTUS"
   export POLTTO_PALLO_DELTA_LAHDE="$PALLO_DELTA_LAHDE"
@@ -569,9 +584,11 @@ if [ -n "$RESEPTI" ] && [ "$LAPSI" -eq 0 ]; then
   reseptin_liput="$(node "$JUURI/tools/polttoresepti.mjs" liput "$RESEPTI")" \
     || { echo "VIRHE: --resepti $RESEPTI" >&2; exit 2; }
   eval "$reseptin_liput"
-  if [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" != "kaikki" ]; then
-    echo "VIRHE: --resepti $RESEPTI polttaa koko pohjan (--sarjat kaikki)" >&2
-    echo "tai pelkän pallon sarjan (--sarjat pallo / --vain-pallo)." >&2
+  # Syvä sarja (z9-z10, 26.9.2026) saa samat reseptin liput kuin pohja:
+  # muuten z10 olisi eri reseptiä kuin sen alla oleva z8.
+  if [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" != "kaikki" ] && [ "$SARJAT" != "syva" ]; then
+    echo "VIRHE: --resepti $RESEPTI polttaa koko pohjan (--sarjat kaikki), syvän sarjan" >&2
+    echo "(--sarjat syva) tai pelkän pallon sarjan (--sarjat pallo / --vain-pallo)." >&2
     exit 2
   fi
   for kielletty in $R_KIELLETYT; do
@@ -584,7 +601,7 @@ if [ -n "$RESEPTI" ] && [ "$LAPSI" -eq 0 ]; then
   done
   [ -n "$DEM" ] || DEM="$DEM_NAS/copernicus-glo30"
   [ -n "$DEM90" ] || DEM90="$DEM_NAS/copernicus-glo90"
-  if [ "$SARJAT" = "kaikki" ]; then
+  if [ "$SARJAT" = "kaikki" ] || [ "$SARJAT" = "syva" ]; then
     for d in "$DEM" "$DEM90"; do
       [ -d "$d" ] || { echo "VIRHE: DEM-kansio $d puuttuu (NAS irti?)" >&2; exit 2; }
       case "$d" in *" "*) echo "VIRHE: DEM-polussa ei saa olla välilyöntejä: $d" >&2; exit 2 ;; esac
@@ -685,6 +702,20 @@ done
 case "$SYVA_ALUE" in
   *[!0-9.,-]*|'') echo "VIRHE: --syva-alue on muotoa lon0,lat0,lon1,lat1" >&2; exit 2 ;;
 esac
+# SYVÄ LAATTALISTA (--syva-laatat, 26.9.2026): suorakaiteen sijaan tarkka
+# z10-laattajoukko (tools/tee-syva-laatat.mjs), esim. kaupungit ±1° + maat.
+# SYVA_LIPPU on se, mikä generaattorille annetaan kaikissa kolmessa
+# kohdassa (kaistat, shardit, luettelo), ja SYVA_TUNNUS erottaa ajot.
+if [ -n "$SYVA_LAATAT" ]; then
+  [ -s "$SYVA_LAATAT" ] || { echo "VIRHE: --syva-laatat $SYVA_LAATAT puuttuu" >&2; exit 2; }
+  SYVA_LAATAT="$(cd "$(dirname "$SYVA_LAATAT")" && pwd)/$(basename "$SYVA_LAATAT")"
+  case "$SYVA_LAATAT" in *" "*) echo "VIRHE: --syva-laatat-polussa ei saa olla välilyöntejä" >&2; exit 2 ;; esac
+  SYVA_LIPPU="--syva-laatat $SYVA_LAATAT"
+  SYVA_TUNNUS="laatat:$(shasum -a 256 "$SYVA_LAATAT" | cut -c1-16)"
+else
+  SYVA_LIPPU="--syva-alue $SYVA_ALUE"
+  SYVA_TUNNUS="$SYVA_ALUE"
+fi
 if [ "$SARJAT" = "syva" ]; then
   [ -n "$DEM" ] || { echo "VIRHE: --sarjat syva vaatii --dem <GLO-30-kansio>" >&2; exit 2; }
   [ -d "$DEM" ] || { echo "VIRHE: --dem $DEM ei ole kansio" >&2; exit 2; }
@@ -702,7 +733,7 @@ fi
 # täytettäisiin merisävyllä — kaistale merta keskellä maata. Kavennus
 # takaa, että jokaisen syvän pallolaatan jokainen pikseli on poltetulla
 # alalla (z9-laatta ulottuu alan yli 0-0,53°, pallolaatta 0-0,35°).
-if [ -z "$PALLO_ALUE" ] && { [ "$SARJAT" = "syva" ] || [ "$PALLO_MIN" -ge 9 ]; }; then
+if [ -z "$PALLO_ALUE" ] && [ -z "$SYVA_LAATAT" ] && { [ "$SARJAT" = "syva" ] || [ "$PALLO_MIN" -ge 9 ]; }; then
   PALLO_ALUE="$(echo "$SYVA_ALUE" | awk -F, '{ printf "%g,%g,%g,%g", $1 + 0.4, $2 + 0.4, $3 - 0.4, $4 - 0.4 }')"
 fi
 
@@ -717,8 +748,9 @@ fi
 # versioonsa), joten rantaversiota ei vaadita.
 if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ -z "$DELTA" ] && ! { [ -n "$RESEPTI" ] && [ "$VAIN_PALLO" -eq 1 ]; }; then
   case "$SARJAT" in
-    kaikki|z0-z7) ;;
-    *) echo "VIRHE: --ilman-rantaviivaa vaatii --sarjat kaikki (tai z0-z7):" >&2
+    # syva: saman rannattoman pohjan z9-z10 omaan versioonsa (26.9.2026).
+    kaikki|z0-z7|syva) ;;
+    *) echo "VIRHE: --ilman-rantaviivaa vaatii --sarjat kaikki (tai z0-z7, syva):" >&2
        echo "pohjan sisältö muuttuu, joten koko pyramidi on poltettava." >&2
        exit 2 ;;
   esac
@@ -970,17 +1002,20 @@ syva_sarakkeet () {
   local valimuisti="$ULOS/syva-sarakkeet.txt" rivi
   if [ -s "$valimuisti" ]; then
     rivi="$(cat "$valimuisti")"
-    if [ "${rivi%% *}" = "$SYVA_ALUE" ]; then echo "${rivi#* }"; return 0; fi
+    if [ "${rivi%% *}" = "$SYVA_TUNNUS" ]; then echo "${rivi#* }"; return 0; fi
   fi
   node "$JUURI/tools/generoi-laattapyramidi.mjs" "$ULOS/syva-lista" \
-    --tasoja 11 --tasot 10 --syva-alue "$SYVA_ALUE" --vain-lista >/dev/null
+    --tasoja 11 --tasot 10 $SYVA_LIPPU --vain-lista >/dev/null
+  rm -f "$ULOS/syva-sarakkeet-lista.txt" # uusi ala = uusi sarakelista (ks. TYHJÄT KAISTAT POIS)
   rivi="$(node -e '
     const j = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
-    const s = j.laatat.map((l) => l[1]);
-    if (!s.length) process.exit(1);
-    console.log(`${Math.floor(Math.min(...s) / 8) * 8} ${Math.max(...s)}`);
-  ' "$ULOS/syva-lista/laatat.json")" || { echo "VIRHE: syvällä alalla $SYVA_ALUE ei ole z10-laattoja" >&2; return 1; }
-  echo "$SYVA_ALUE $rivi" > "$valimuisti"
+    if (!j.laatat.length) process.exit(1);
+    // Silmukka, ei Math.min(...s): maakuntalista (270 000 laattaa) ylitti pinon.
+    let a = Infinity, b = -Infinity;
+    for (const l of j.laatat) { if (l[1] < a) a = l[1]; if (l[1] > b) b = l[1]; }
+    console.log(`${Math.floor(a / 8) * 8} ${b}`);
+  ' "$ULOS/syva-lista/laatat.json")" || { echo "VIRHE: syvällä alalla $SYVA_TUNNUS ei ole z10-laattoja" >&2; return 1; }
+  echo "$SYVA_TUNNUS $rivi" > "$valimuisti"
   echo "$rivi"
 }
 
@@ -1132,17 +1167,27 @@ shardit () {
       local sarakkeet eka vika a b n
       sarakkeet="$(syva_sarakkeet)" || return 1
       eka="${sarakkeet% *}"; vika="${sarakkeet#* }"
-      local syvaarg="--tasoja 11 --syva-alue $SYVA_ALUE --dem $DEM --kaariminuutit $KORKEUS$pohjaarg"
+      local syvaarg="--tasoja 11 $SYVA_LIPPU --dem $DEM --kaariminuutit $KORKEUS$pohjaarg"
+      # TYHJÄT KAISTAT POIS (26.9.2026): laattalistan (--syva-laatat) kaistoista
+      # iso osa on tyhjiä, ja tyhjänkin shardin alustus (1′-ruudukko, DEM-ikkuna)
+      # vei ~12 min prosessoria. Kaista ajetaan vain, jos siinä on z10-sarake;
+      # numerointi pysyy paikan mukaisena, joten valmis-merkit säilyvät.
+      local sarakelista="$ULOS/syva-sarakkeet-lista.txt"
+      [ -s "$sarakelista" ] || node -e '
+        const j = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
+        console.log([...new Set(j.laatat.map((l) => l[1]))].sort((x, y) => x - y).join("\n"));
+      ' "$ULOS/syva-lista/laatat.json" > "$sarakelista"
+      kaistalla () { awk -v a="$1" -v b="$2" '$1 >= a && $1 <= b { l = 1; exit } END { exit !l }' "$sarakelista"; }
       a="$eka"; n=1
       while [ "$a" -le "$vika" ]; do
         b=$((a + SYVA_KAISTA - 1))
-        printf 'syva-z10-%03d|--tasot 10 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
+        kaistalla "$a" "$b" && printf 'syva-z10-%03d|--tasot 10 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
         a=$((b + 1)); n=$((n + 1))
       done
       a="$eka"; n=1
       while [ "$a" -le "$vika" ]; do
         b=$((a + SYVA_KAISTA * 2 - 1))
-        printf 'syva-z9-%03d|--tasot 9 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
+        kaistalla "$a" "$b" && printf 'syva-z9-%03d|--tasot 9 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$syvaarg"
         a=$((b + 1)); n=$((n + 1))
       done
       ;;
@@ -1203,11 +1248,30 @@ tila_kirjoita () {
 # välein ja otsikossaan "… 341 laattaa → <kansio>". Tehtyjen määrä
 # otetaan kummasta tahansa suuremmasta, koska pallon loki on karkea:
 # levyllä olevat tiedostot kertovat tahdin niiden viidensadan välissä.
+# TAVUINA (LC_ALL=C, 27.9.2026): `tail -c` katkaisee lokin usein kesken
+# monitavuisen merkin (ä, →), ja UTF-8-lokaalissa tr lopetti siihen
+# ("tr: Illegal byte sequence", syvä Z10 -ajo 26.–27.9.) — edistys jäi
+# lukematta. Tavuvertailu löytää "laattaa →" -rivin yhtä hyvin.
+#
+# EI KAADU SULJETTUUN PUTKEEN (koodi 1 ilman kaatunutta shardia, Z10-ketju
+# osa 2, 29.9.2026). Kutsuja on aina `$(lue_edistys …)`, ja tila_vahti
+# (ks. alla) kutsuu tätä taustalla: kun `kill` osuu juuri tähän kutsuun,
+# lukijan puoli (komentosubstituution putki) voi hävitä kesken lopun
+# `echo`-rivin kirjoituksen. `set -euo pipefail` + oletusarvoinen SIGPIPE
+# tappaisi tämän funktion suorittavan alikuoren HETI (koodi 141) tai —
+# jos SIGPIPE on jätetty ohitetuksi perityn asetuksen takia — `echo`
+# palauttaisi koodin 1 pelkän EPIPE:n takia. Kumpikaan ei liity yhdenkään
+# shardin oikeaan onnistumiseen, joten SIGPIPE ohitetaan TÄSSÄ funktiossa
+# (`trap '' PIPE`, koskee vain sen alikuorta) ja lopun echo on suojattu
+# `|| true`:lla, jotta pelkkä katkennut putki ei koskaan ole funktion
+# paluuarvo. Muut virheet (esim. rikkinäinen loki) eivät muutu: awk/tail
+# palauttavat edelleen tyhjän/oletusarvon eivätkä tätä ohitusta käytetä.
 lue_edistys () {
+  trap '' PIPE
   local loki="$1" kansio="${2:-}" pate="${3:-}"
   local parit="0 0" tehty kaikki n
   if [ -s "$loki" ]; then
-    parit="$(tail -c 8000 "$loki" 2>/dev/null | tr '\r' '\n' | awk '
+    parit="$(tail -c 8000 "$loki" 2>/dev/null | LC_ALL=C tr '\r' '\n' | LC_ALL=C awk '
       /laattoja [0-9]+\/[0-9]+/ {
         for (i = 1; i <= NF; i++) if ($i ~ /^[0-9]+\/[0-9]+$/) { split($i, a, "/"); t = a[1]; k = a[2] }
       }
@@ -1221,7 +1285,7 @@ lue_edistys () {
     n="$(find "$kansio" -name "$pate" 2>/dev/null | wc -l | tr -d ' ')"
     [ "$n" -gt "$tehty" ] && tehty="$n"
   fi
-  echo "$tehty $kaikki"
+  echo "$tehty $kaikki" || true
 }
 
 # Kaatuneen shardin luettavin loki: uusinnan loki, jos uusinta ehti
@@ -1231,6 +1295,37 @@ kesken_loki () {
   else echo "$ULOS/lokit/$1.log"; fi
 }
 
+# KESKEN JÄÄNEET = listan shardit ilman .valmis-merkkiä (rivi per shardi).
+# Merkki kirjoitetaan vasta onnistuneen piirron ja viennin jälkeen, joten
+# se ratkaisee eikä xargsin koodi: xargs palauttaa nollasta poikkeavan,
+# jos yksikin lapsi päättyi niin, vaikka työ olisi tehty (ks. lapsi).
+kesken_jaaneet () {
+  local nimi
+  while read -r nimi; do
+    [ -n "$nimi" ] || continue
+    [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))"
+  done < "$1"
+}
+
+# XARGSIN KOODI VS. VALMIS-MERKIT (27.9.2026). Syvä Z10 -ajo 26.–27.9.
+# päättyi "yksi tai useampi shardi kaatui" -virheeseen ja koodiin 1,
+# vaikka kaikki 507 shardia olivat valmiita — luettelo ja eheystarkistus
+# jäivät ajamatta ja tehtiin käsin. Nyt tyhjä kesken-lista on varoitus.
+# Palauttaa 0 (jatka) tai 1 (otsikko ja kesken jääneet tulostettu).
+tarkista_kesken () {
+  local lista="$1" otsikko="$2" kesken
+  kesken="$(kesken_jaaneet "$lista")"
+  if [ -z "$kesken" ]; then
+    echo "VAROITUS: xargs palautti nollasta poikkeavan koodin, mutta kaikki" >&2
+    echo "  $(grep -c . "$lista") shardia ovat valmiita — jatketaan (etsi yltä rivi" >&2
+    echo "  \"VIRHE: lapsi … päättyi koodilla\")." >&2
+    return 0
+  fi
+  echo "$otsikko" >&2
+  echo "$kesken" >&2
+  return 1
+}
+
 # Taustasilmukka shardin sisällä: päivittää tilatiedoston, kunnes
 # piirtoprosessi on ohi ja isäntä tappaa sen.
 tila_vahti () {
@@ -1238,6 +1333,17 @@ tila_vahti () {
   # Taustatyö perii EXIT-ansan; ilman tätä `kill` ajaisi ansan
   # (valmis.json) kesken polton, kerran jokaista shardia kohti.
   trap - EXIT
+  # VAHDIN VIRHEET HILJAA (27.9.2026). Kun shardi valmistuu, `kill` osuu
+  # vahtiin usein kesken `$(lue_edistys …)`-kutsun: orvoksi jäänyt
+  # alikuori saattoi kirjoittaa suljettuun putkeen ja tulostaa "echo:
+  # write error: Broken pipe" (12–13 kertaa syvissä Z10-ajoissa). Tämä
+  # `exec 2>/dev/null` vaimensi viestin, muttei itse EPIPE:tä — juurisyy
+  # (lue_edistys palautti koodin 1 tai kuoli SIGPIPE:hen) on korjattu
+  # lue_edistys-funktiossa 29.9.2026 (trap '' PIPE + `|| true` viimeiseen
+  # echoon), joten viestiäkään ei enää pitäisi syntyä. Rivi on jätetty
+  # yleiseksi suojaksi muulle vahdin taustakohinalle. Funktio ajetaan
+  # aina taustalla (&), joten exec koskee vain vahtia.
+  exec 2>/dev/null
   while :; do
     sleep "$TILAVALI"
     # shellcheck disable=SC2046
@@ -1380,7 +1486,7 @@ ajon_tunnus () {
     "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}"
   # Syvä sarja: ala ja DEM-kansio kuuluvat tunnukseen (eri ala = eri
   # kaistat, uusi DEM = eri laatat). Muille sarjoille tunnus on entinen.
-  if [ "${SARJAT:-}" = "syva" ]; then printf '/s%s/d%s' "$SYVA_ALUE" "$DEM"; fi
+  if [ "${SARJAT:-}" = "syva" ]; then printf '/s%s/d%s' "$SYVA_TUNNUS" "$DEM"; fi
   if [ -n "${PALLO_ALUE:-}" ]; then printf '/a%s' "$PALLO_ALUE"; fi
   # Nimetty resepti: eri resepti = eri laatat (vanhan ajon valmis-merkit
   # eivät kelpaa). Ilman reseptiä tunnus on entinen.
@@ -1472,7 +1578,8 @@ shardin_yritys () {
 aja_shardi () {
   local nimi="$1"
   local rivi args
-  rivi="$(shardit | awk -F'|' -v n="$nimi" '$1 == n { print $2 }')"
+  rivi="$(shardit | awk -F'|' -v n="$nimi" '$1 == n { print $2 }')" \
+    || { echo "VIRHE: shardilistaa ei saatu ($nimi)" >&2; return 2; }
   [ -n "$rivi" ] || { echo "VIRHE: tuntematon shardi $nimi" >&2; exit 2; }
   args="$rivi"
   local kansio="$ULOS/$nimi"
@@ -1866,7 +1973,7 @@ kokoa_luettelo () {
     # Syvä sarja: luettelo z0-z10; syvien tasojen bittikartta tulee
     # syvästä alasta (generoi-laattapyramidi syvaLaatastoBase64) ja
     # korkeus.syvat kirjaa DEM:n lähdemaininnan.
-    syva) tasot="0-10"; tasoja="--tasoja 11 --syva-alue $SYVA_ALUE --dem $DEM" ;;
+    syva) tasot="0-10"; tasoja="--tasoja 11 $SYVA_LIPPU --dem $DEM" ;;
   esac
   local lisa=""
   [ "$PIIRIT" = "ei" ] && lisa="--eipiirit"
@@ -2119,7 +2226,8 @@ aja_pallo_shardi () {
   # jonka luettelo lupaa (laatat.json `ranta`: null = rantaviivaa ei ole
   # laatoissa, koska pallo piirtää sen vektorina).
   if [ -s "$luettelokansio/laatat.json" ]; then
-    rantalippu="$(node -e 'const j = JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8")); process.stdout.write(j.ranta ? "" : "--ilman-rantaa");' "$luettelokansio/laatat.json")"
+    rantalippu="$(node -e 'const j = JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8")); process.stdout.write(j.ranta ? "" : "--ilman-rantaa");' "$luettelokansio/laatat.json")" \
+      || { echo "VIRHE: $luettelokansio/laatat.json: lukeminen epäonnistui ($nimi)" >&2; return 1; }
   fi
   local kansio="$ULOS/$nimi"
   local loki="$ULOS/lokit/$nimi.log"
@@ -2269,11 +2377,8 @@ polta_pallo () {
   local kesto
   kesto=$(( $(date +%s) - alkoi ))
   echo "· pallon laatat: ${kesto} s ($(awk -v k="$kesto" 'BEGIN { printf "%.1f", k / 3600 }') h)"
-  if [ "$virhe" -ne 0 ]; then
-    echo "VIRHE: yksi tai useampi pallon shardi kaatui. Kesken jääneet:" >&2
-    while read -r nimi2; do
-      [ -f "$ULOS/lokit/$nimi2.valmis" ] || echo "  $nimi2 (loki $(kesken_loki "$nimi2"))" >&2
-    done < "$lista"
+  if [ "$virhe" -ne 0 ] && ! tarkista_kesken "$lista" \
+      "VIRHE: yksi tai useampi pallon shardi kaatui. Kesken jääneet:"; then
     echo "Aja uudestaan: tools/polta-paikallisesti.sh --vain-pallo" >&2
     echo "  --pallotunniste $PALLOTUNNISTE --pallo-osia $PALLO_OSIA" >&2
     return 1
@@ -2485,11 +2590,12 @@ EOF
     $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
     < "$lista" || virhe=1
   echo "· nostotaso: $(( $(date +%s) - alkoi )) s"
-  if [ "$virhe" -ne 0 ]; then
-    echo "VIRHE: nostotason shardi kaatui — luetteloa EI viety, ämpäri ennallaan." >&2
-    while read -r nimi; do
-      [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))" >&2
-    done < "$lista"
+  # XARGSIN KOODI VS. VALMIS-MERKIT: sama vahti kuin muissa xargs-ajoissa
+  # (ks. tarkista_kesken) — tämä polku ei käyttänyt sitä ennen 29.9.2026,
+  # joten ohimenevä xargs-lapsen virhe (esim. rikkinäinen putki) vietiin
+  # tässä aina kaatumiseksi, vaikka kaikki shardit olisivat valmiita.
+  if [ "$virhe" -ne 0 ] && ! tarkista_kesken "$lista" \
+      "VIRHE: nostotason shardi kaatui — luetteloa EI viety, ämpäri ennallaan. Kesken jääneet:"; then
     return 1
   fi
 
@@ -2567,7 +2673,7 @@ esac
 # pohjalipuilla kuin versio poltettiin (aja-*.sh: --data, --yhteisliput,
 # --pohjaliput). Rantaviiva on ainoa, jonka luettelo kertoo varmasti:
 # rannaton pohja + rantaviivallinen z9 olisi eri kartta.
-if [ "$SARJAT" = "syva" ] && [ "${A_POHJA_RANTA:-kylla}" = "ei" ]; then
+if [ "$SARJAT" = "syva" ] && [ "${A_POHJA_RANTA:-kylla}" = "ei" ] && [ "$ILMAN_RANTAVIIVAA" -ne 1 ]; then
   case " $POHJALIPUT " in
     *" --ilman-rantaviivaa "*) ;;
     *) echo "VIRHE: ämpärin pohja $VERSIO on rannaton; anna syvälle sarjalle" >&2
@@ -2580,7 +2686,16 @@ fi
 # version alle ei kirjoiteta eri sisältöä (laatat ovat vuoden
 # välimuistissa). Ja koska pohjan versio vaihtuu, pallon sarja on
 # poltettava samasta versiosta tai lepokerros sammuu.
-if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ]; then
+# SYVÄ SARJA (26.9.2026) ei polta viiva-, nosto- eikä pallotasoa eikä vie
+# luetteloa (PELIN_SYVIN_TASO), joten nämä ehdot eivät koske sitä; sen oma
+# versio tarkistetaan samoin (ei ämpärin nykyinen).
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" = "syva" ]; then
+  [ "$VERSIO" != "$A_VERSIO" ] || {
+    echo "VIRHE: --versio $VERSIO on ämpärin nykyinen versio; syvä sarja rannattomalle" >&2
+    echo "pohjalle menee omaan versioonsa (esim. <pohja>s-pohja, z0-z8 palvelinkopiona)." >&2
+    exit 2 ; }
+fi
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" != "syva" ]; then
   [ "$VERSIO" != "$A_VERSIO" ] || {
     echo "VIRHE: --versio $VERSIO on ämpärin nykyinen versio. Rannaton pohja" >&2
     echo "tarvitsee oman polkunsa; anna uusi --versio." >&2
@@ -2625,13 +2740,48 @@ if [ "$LISTA" -eq 1 ]; then
   exit 0
 fi
 
+# RINNAKKAISUUS TIEDOSTOSTA (Fable 26.9.2026: ytimien vaihto ei saa vaatia
+# killiä). Jos POLTTO_YTIMET_TIEDOSTO on asetettu, xargs ajetaan
+# ylärajalla ja jokainen lapsi odottaa ennen shardinsa alkua vapaata
+# paikkaa. Raja luetaan tiedostosta joka yrityksellä, joten polttovahti
+# muuttaa rinnakkaisuutta kirjoittamalla tiedostoon: käynnissä olevat
+# shardit ajetaan loppuun, uudet alkavat vasta, kun paikkoja on vapaana.
+# Paikat ovat mkdir-lukkoja (atominen); vanhempi tyhjentää ne ajon alussa,
+# joten tapetun ajon jäämät eivät vie paikkoja. Ei EXIT-ansaa: shardin
+# taustatyöt perisivät sen ja vapauttaisivat paikan kesken.
+PAIKKA=""
+odota_paikka () {
+  local t="${POLTTO_YTIMET_TIEDOSTO:-}" d="$ULOS/lokit/paikat" raja i
+  [ -n "$t" ] || return 0
+  mkdir -p "$d"
+  while :; do
+    raja="$(tr -dc 0-9 < "$t" 2>/dev/null)"
+    [ -n "$raja" ] && [ "$raja" -ge 1 ] || raja=1
+    i=1
+    while [ "$i" -le "$raja" ]; do
+      if mkdir "$d/$i" 2>/dev/null; then PAIKKA="$d/$i"; return 0; fi
+      i=$((i + 1))
+    done
+    sleep 10
+  done
+}
+
 # Lapsiprosessi (xargs) ajaa yhden shardin ilman esitarkistuksia.
+# KOODI TALTEEN JA PAIKKA AINA VAPAAKSI (27.9.2026). Ennen tätä `set -e`
+# lopetti lapsen heti kaatuneen shardin kohdalla, jolloin paikka jäi
+# varatuksi, ja epäonnistunut rmdir lopetti lapsen koodilla 1 ilman
+# riviäkään lokiin. Syvä Z10 -ajo 26.–27.9. päättyi koodiin 1, vaikka
+# kaikki 507 shardia olivat valmiita — mikä lapsi ja miksi, ei näkynyt.
 if [ "$LAPSI" -eq 1 ] && [ -n "$VAIN" ]; then
+  odota_paikka
+  k=0
   case "$VAIN" in
-    pallo-*) aja_pallo_shardi "$VAIN" ;;
-    *) aja_shardi "$VAIN" ;;
+    pallo-*) aja_pallo_shardi "$VAIN" || k=$? ;;
+    *) aja_shardi "$VAIN" || k=$? ;;
   esac
-  exit $?
+  [ -z "$PAIKKA" ] || rmdir "$PAIKKA" 2>/dev/null || true
+  [ "$k" -eq 0 ] || echo "VIRHE: lapsi $VAIN päättyi koodilla $k" >&2
+  exit "$k"
 fi
 
 [ "$VIE" -eq 1 ] && vaadi_avaimet
@@ -2659,6 +2809,7 @@ trap 'exit 143' TERM
 # vanha lista tekisi raporttiin kymmeniä ikuisesti "jonossa" olevia
 # shardeja, jotka eivät kuulu tähän ajoon lainkaan.
 rm -f "$ULOS/lokit/shardit.txt" "$ULOS/lokit/pallo-shardit.txt"
+rm -rf "$ULOS/lokit/paikat"
 echo poltto > "$ULOS/lokit/vaihe.txt"
 
 echo "Paikallinen poltto — sarjat $SARJAT, ytimiä $YTIMET"
@@ -2801,11 +2952,8 @@ vie_lapsille
 kesto=$(( $(date +%s) - alkoi ))
 echo ""
 echo "Poltto valmis: ${kesto} s ($(awk -v k="$kesto" 'BEGIN { printf "%.1f", k / 3600 }') h)"
-if [ "$virhe" -ne 0 ]; then
-  echo "VIRHE: yksi tai useampi shardi kaatui. Kesken jääneet:" >&2
-  while read -r nimi; do
-    [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))" >&2
-  done < "$lista"
+if [ "$virhe" -ne 0 ] && ! tarkista_kesken "$lista" \
+    "VIRHE: yksi tai useampi shardi kaatui. Kesken jääneet:"; then
   echo "Aja uudestaan: tools/polta-paikallisesti.sh --vain <shardi>" >&2
   exit 1
 fi
@@ -2840,6 +2988,19 @@ if [ "$LUETTELO" -eq 1 ]; then
   tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json"
   # DELTA TODISTAA ITSENSÄ ENNEN LUETTELOA (kopio + tarkistusotos, ks. DELTA).
   if [ -n "$DELTA" ]; then todenna_delta || exit 1; fi
+  # AJO ILMAN NOSTO- TAI NIMIÖSHARDEJA (--ilman-nostoja, --ilman-nimioita;
+  # yöpoltto 28.9.2026): kokoa-nostotasot ei käynnisty, joten väritasot,
+  # erat, nostotasot ja nimiotaso puuttuivat, ja nostotaso väitti
+  # --nostoversion, jota ei poltettu. Kerros, jota ajo ei polttanut, tulee
+  # ämpärin luettelosta (tools/kanna-luettelokentat.mjs). Eheyden jälkeen,
+  # koska ämpärin kerroksilla ei ole tämän ajon shardeja.
+  if [ "$SARJAT" != "nostot" ] && [ -s "$ULOS/ampari-luettelo.json" ]; then
+    node "$JUURI/tools/kanna-luettelokentat.mjs" \
+      --luettelo "$ULOS/luettelo/pyramidi.json" \
+      --ampari "$ULOS/ampari-luettelo.json" \
+      $(grep -q '^nosto-' "$ULOS/lokit/shardit.txt" 2>/dev/null || echo --nostot-amparista) \
+      $(grep -q '^nimio-' "$ULOS/lokit/shardit.txt" 2>/dev/null || echo --nimiot-amparista) || exit 1
+  fi
   # NOSTOTASOAJO TUNTEE VAIN NOSTOTASON (Fable 18.9.2026 klo 20.00):
   # `--sarjat nostot` vei ämpäriin luettelon, jonka `varitasot` oli
   # null ja `erat` puuttui — kerma katosi pelaajilta puoleksi tunniksi

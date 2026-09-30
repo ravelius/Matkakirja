@@ -22,7 +22,7 @@ import {
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { HENKILOLINKIT, HENKILOT } from './packs/henkilot.js';
 import {
-  KAUPUNKIKARTAT, karttaKuvasuhde, karttapiste, mittakaava, ydinAla,
+  KAUPUNKIKARTAT, KEVYET_KOHDETYYPIT, kaupunginTarinakohteet, kaupunkikartanKohteet, kohteenTyyppi, karttaKuvasuhde, karttapiste, mittakaava, ydinAla,
 } from './packs/maakartat.js';
 import { MINIATYYRIT } from './packs/miniatyyrit.js';
 import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
@@ -236,13 +236,35 @@ export function kaupunkikartanSiirretyt(ui, cityId) {
   return laskeKaupunkikartanSiirretyt(ui, cityId, kartta);
 }
 
+/**
+ * TARINAKOHTEET KAUPUNGIN NOSTOIHIN (löydös 178, omistaja 26.9.2026 klo 22.4x):
+ * kartalta poistettu ei-paikka, joka kantaa karttanoston, on kaupunkiliuskan
+ * rivi kuten piirroksettomat kohteet — tunnus on noston oma, joten aihe
+ * (hetket, skandaalit …) tulee noston datasta. Numeroa ei ole: kohde ei ole
+ * kartan järjestyksessä (nuoliselaus kulkee vain kartan kohteissa).
+ */
+function lisaaTarinakohteet(ui, cityId, kartta, ulos) {
+  for (const raaka of kaupunginTarinakohteet(kartta)) {
+    const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
+    const kuvahaku = raaka.wiki ?? raaka.nimi;
+    const k = juttu ? { ...raaka, wiki: undefined, ...juttu, kuvahaku } : { ...raaka, kuvahaku };
+    const avaa = k.teksti
+      ? () => avaaNahtavyys(ui, k, null)
+      : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+    if (!avaa) continue;
+    const tunnus = Array.isArray(raaka.nosto) ? raaka.nosto[0] : raaka.nosto;
+    ulos.push({ avain: `kartta:${cityId}:nosto:${tunnus}`, id: tunnus, nimi: raaka.nimi, avaa });
+  }
+}
+
 /** Varsinainen ladonta (ks. muisti yllä). */
 function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
   const ulos = [];
+  lisaaTarinakohteet(ui, cityId, kartta, ulos);
   // Numeroympyrälliset kartat (Bryssel, Ljubljana) pitävät piirroksettomat
-  // kohteet kartalla, joten liuskaan ei siirry mitään (ks. piirraKaupunkiKartta).
+  // kohteet kartalla, joten liuskaan ei siirry niistä mitään (ks. piirraKaupunkiKartta).
   if (kartta.numeroympyrat) return ulos;
-  (kartta.kohteet ?? []).forEach((raaka, i) => {
+  kaupunkikartanKohteet(kartta).forEach((raaka, i) => {
     if (MINIATYYRIT[cityId]?.[raaka.nimi]) return;
     const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
     const kuvahaku = raaka.wiki ?? raaka.nimi;
@@ -287,7 +309,19 @@ function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
 export function piirraKaupunkiKartta(ui, kohde, {
   cityId = null, esittely = true, selitelista = true, kuvagalleria = true,
   otsikko = true, zoomiNapit = true, opasteet = true, kokoruutuNappi = false,
+  pelkkaKartta = false,
 } = {}) {
+  /*
+   * PELKKÄ KARTTA (kaupungin avauskortti, omistaja 27.9.2026 klo 23.4x):
+   * kortin kartan päällä EI OLE YHTÄÄN TEKSTIÄ — ei legendaa, ei
+   * "Napauta nähtävyyttä" -vihjettä, ei mittakaavaa, ei Kokoruutu-nappia
+   * — ja kartan MINKÄ TAHANSA kohdan napautus (myös piirroksen) avaa
+   * suurennoksen, jossa nähtävyydet avataan. Muut latojat ennallaan.
+   */
+  if (pelkkaKartta) {
+    esittely = false; selitelista = false; kuvagalleria = false; otsikko = false;
+    zoomiNapit = false; opasteet = false; kokoruutuNappi = false;
+  }
   const kaupunkiId = cityId ?? ui.lehtitila.arrivalShownFor;
   const kartta = KAUPUNKIKARTAT[kaupunkiId];
   if (!kartta) return;
@@ -384,6 +418,8 @@ export function piirraKaupunkiKartta(ui, kohde, {
   if (laajennettu) {
     kehys.classList.add('kartta-laajennettu');
     kehys.style.aspectRatio = String(karttaKuvasuhde(kartta.rajat));
+    // Avauskortin kiinteä kaista rajaa kartan tällä suhteella (css/kaupunkinosto.css).
+    kehys.style.setProperty('--kartta-suhde', String(karttaKuvasuhde(kartta.rajat)));
     kotelo.classList.add('kartta-laajennettu');
     kotelo.style.aspectRatio = String(karttaKuvasuhde(kartta.piirtoRajat));
     kotelo.style.width = `${(10000 / ydin.leveys).toFixed(4)}%`;
@@ -422,6 +458,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     const mitoitaKehys = () => {
       if (kuva.naturalWidth && kuva.naturalHeight) {
         kehys.style.aspectRatio = `${kuva.naturalWidth} / ${kuva.naturalHeight}`;
+        kehys.style.setProperty('--kartta-suhde', String(kuva.naturalWidth / kuva.naturalHeight));
       }
     };
     if (kuva.complete) mitoitaKehys();
@@ -453,7 +490,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
    * heti ensimmäisellä kokomuutoksella. Prosentti pitää janan
    * oikeana joka leveydellä.
    */
-  const jana = mittakaava(kartta);
+  const jana = pelkkaKartta ? null : mittakaava(kartta);
   if (jana) {
     const mitta = html('div', 'kartta-mittajana');
     mitta.style.width = `${jana.osuus.toFixed(2)}%`;
@@ -500,7 +537,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
   // Montako kohdetta sai Matkakirjan ihmeen tähden? Selite kartan
   // yläkulmaan syntyy vain, jos tähtiä on (ks. lohkon loppu).
   let ihmeita = 0;
-  (kartta.kohteet ?? []).forEach((raaka, i) => {
+  kaupunkikartanKohteet(kartta).forEach((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     /*
      * `kuvahaku` säilyttää kohteen Wikipedia-otsikon kuvagalleriaa
@@ -571,6 +608,9 @@ export function piirraKaupunkiKartta(ui, kohde, {
      */
     const piste = html(avattava ? 'button' : 'span',
       'maakartta-piste kaupunki-kohde kohde-numero');
+    // LÖYDÖS 178: aukio ja luonto ovat paikkoja mutta eivät rakennuksia —
+    // kartalla kevyempi merkki (js/packs/maakartat.js KEVYET_KOHDETYYPIT).
+    if (KEVYET_KOHDETYYPIT.has(kohteenTyyppi(raaka))) piste.classList.add('kohde-kevyt');
     /*
      * NUMEROYMPYRÄ ILMAN MINIATYYRIÄ (omistajan päätös 20.9.2026,
      * Bryssel ja Ljubljana; kuvat lisätään myöhemmin). Kartan data
@@ -877,6 +917,23 @@ export function piirraKaupunkiKartta(ui, kohde, {
    *     tuplanapautuksen palautukselle;
    *   - useamman sormen ele (nipistys), joka ei ole napautus lainkaan.
    */
+  if (pelkkaKartta) {
+    /*
+     * Kortissa napautus ei valitse piirrosta eikä avaa juttua: se avaa
+     * aina suurennoksen (kaappausvaiheessa, ennen kohteiden omia
+     * kuuntelijoita). Raahaus ei ole napautus (6 px:n raja kuten alla).
+     */
+    lohko.classList.add('kaupunkikartta-pelkka');
+    let alku = null;
+    kehys.addEventListener('pointerdown', (e) => { alku = e.isPrimary ? { x: e.clientX, y: e.clientY } : null; }, true);
+    kehys.addEventListener('click', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (alku && Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > 6) return;
+      sfx.play('paper');
+      avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit: true, kortista: true });
+    }, true);
+  }
   let napautus = null;
   kehys.addEventListener('pointerdown', (e) => {
     if (!e.isPrimary || (e.pointerType === 'mouse' && e.button !== 0)) {
@@ -887,6 +944,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
   });
   kehys.addEventListener('pointercancel', () => { napautus = null; });
   kehys.addEventListener('pointerup', (e) => {
+    if (pelkkaKartta) return;
     const alku = napautus;
     napautus = null;
     if (!alku || !e.isPrimary || alku.valinta) return;
@@ -1432,7 +1490,7 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * vaakakuvan alle — puhelimen pystyruudulla koko kartta ja koko
    * selite näkyvät nyt kerralla ilman vieritystä.
    */
-  const kohteet = kartta.kohteet ?? [];
+  const kohteet = kaupunkikartanKohteet(kartta);
   if (kohteet.length) {
     const selite = html('div', 'kartta-selitteet kartta-suurennos-selitteet');
     kohteet.forEach((k, i) => {
@@ -1490,7 +1548,22 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     e.stopPropagation();
     ui.suljeKulttuuriKuva();
   });
-  ui.suurennosIsanta().appendChild(kortti);
+  /*
+   * AVAUSKORTISTA AVATTU SUURENNOS (omistaja 27.9.2026 klo 23.4x): lähes
+   * koko ruudun popup sumennetun taustan päällä, kartan ulkopuoli
+   * vaalea. Kaupunkikortti ei ole dialogi, joten isäntä on body ja
+   * huntu on oma (suljeKulttuuriKuva purkaa molemmat).
+   */
+  if (asetukset.kortista) {
+    kortti.classList.add('kartta-suurennos-kortista');
+    const huntu = html('div', 'kartta-suurennos-huntu');
+    huntu.addEventListener('click', () => ui.suljeKulttuuriKuva());
+    document.body.appendChild(huntu);
+    ui.lehtitila.kulttuuriHuntuEl = huntu;
+    document.body.appendChild(kortti);
+  } else {
+    ui.suurennosIsanta().appendChild(kortti);
+  }
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
   /*
@@ -2094,8 +2167,10 @@ export function avaaNahtavyys(ui, kohde, numero, {
    *
    *   • KADONNUT kohde: havainnekuva on kuvasarjan ENSIMMÄINEN kuva
    *     nauhoineen, ja sen kuvateksti on havainnekuvan oma lähderivi.
-   *   • YHÄ OLEMASSA oleva: kuvat pysyvät ennallaan (valokuva kertoo,
-   *     mitä paikalla NYT on) ja "Koe ihme" -nappi tulee kuvan alle.
+   *   • YHÄ OLEMASSA oleva (omistaja 27.9.2026 klo 23.4x, "Koe ihme"
+   *     -nappi pois): ihmekuva on samoin ensimmäinen ja iso, ja jutun
+   *     oma ensimmäinen valokuva (mitä paikalla NYT on) kelluu pienenä
+   *     toisen kappaleen kyljessä kuvateksteineen.
    *
    * Ihme haetaan NIMELLÄ fokuskohteista (ui.matkakirjanIhme), joten
    * nähtävyysjuttuihin ei kopioida yhtään kuvaa eikä lähdettä: kun
@@ -2103,7 +2178,8 @@ export function avaaNahtavyys(ui, kohde, numero, {
    */
   const ihme = opas ? null : (ui.matkakirjanIhme?.(kohde.nimi) ?? null);
   const omatKuvat = opas ? [] : (kohde.kuvat ?? []);
-  const kuvat = (ihme?.kadonnut ? [ihme, ...omatKuvat] : omatKuvat).slice(0, 5);
+  const nykykuva = ihme && !ihme.kadonnut ? (omatKuvat[0] ?? null) : null;
+  const kuvat = (ihme ? [ihme, ...(nykykuva ? omatKuvat.slice(1) : omatKuvat)] : omatKuvat).slice(0, 5);
   /*
    * Useampi kuva näytetään KARUSELLINA yhden kehyksen sisällä
    * (omistajan palaute 10.8.2026: peräkkäin ladottuina lisäkuvat
@@ -2126,6 +2202,13 @@ export function avaaNahtavyys(ui, kohde, numero, {
     : (kuvat.length ? nahtavyydenKuva(ui, kuvat[0]) : null);
   // Kappaleindeksi → sen edelle taitettava kelluva kuva.
   const taittokuvat = new Map();
+  // Nykykuva toisen kappaleen kylkeen (iso ihmekuva tulee avauskappaleen
+  // jälkeen); yksikappaleisessa jutussa se päätyy loppuun eikä katoa.
+  if (nykykuva) {
+    const kehys = nahtavyydenKuva(ui, nykykuva);
+    kehys.classList.add('nahtavyys-taittokuva', 'oikea', 'nahtavyys-nykykuva');
+    taittokuvat.set(1, kehys);
+  }
   if (ripoteltu) {
     kuvat.slice(1).forEach((kuva, j, lisat) => {
       const kehys = nahtavyydenKuva(ui, kuva);
@@ -2190,19 +2273,6 @@ export function avaaNahtavyys(ui, kohde, numero, {
   for (const [paikka, kehys] of taittokuvat) {
     if (paikka >= kappaleet.length) sisalto.appendChild(kehys);
   }
-  /*
-   * "KOE IHME" KUVAN ALLE, kuten kortissa (js/fokuskohteet.js
-   * piirraKohdeKuvat): pelaaja näkee ensin sen, mitä paikalla NYT on,
-   * ja nappi lupaa sen viereen loistoajan. Kuvattomassa jutussa nappi
-   * jää tekstin perään — lupaus ei saa kadota siksi, ettei jutussa ole
-   * valokuvaa. Kadonneella kohteella nappia ei ole: sen havainnekuva on
-   * jo kuvasarjan ensimmäisenä.
-   */
-  if (ihme && !ihme.kadonnut) {
-    const nappi = ui.piirraIhmenappi?.(sisalto, ihme);
-    if (nappi && kuvaKehys?.isConnected) kuvaKehys.after(nappi);
-  }
-
   // Jutun ensimmäinen kuva saa oman luokkansa: vaakana se levenee
   // koko palstalle, pystynä se pysyy pienenä (omistajan ohje).
   // Oppaassa EI: siellä jokainen jaksokuva on koko palstan levyinen,
@@ -2320,7 +2390,8 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * nappi löytyy eikä kaksosta synny.
    */
   const otsikko = document.getElementById('nahtavyys-otsikko');
-  if (kaiutin && otsikko && kaiutin.parentElement !== otsikko) {
+  // Lukija voi kääriä kaiuttimen valikkonapin pariksi (.lukija-pari) otsikon sisällä.
+  if (kaiutin && otsikko && !otsikko.contains(kaiutin)) {
     otsikko.appendChild(kaiutin);
   }
 }
@@ -2507,7 +2578,7 @@ export function varustaNahtavyysSelaus(ui, kohde) {
  */
 export function nahtavyysKohteet(ui) {
   const kaupunki = ui.lehtitila.arrivalShownFor;
-  return (KAUPUNKIKARTAT[kaupunki]?.kohteet ?? []).map((raaka, i) => {
+  return kaupunkikartanKohteet(KAUPUNKIKARTAT[kaupunki]).map((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     /*
      * `kuvahaku` säilyttää kohteen Wikipedia-otsikon kuvagalleriaa

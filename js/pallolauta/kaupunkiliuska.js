@@ -18,12 +18,16 @@
  * PAATOKSET 34 nimeää liuskan lähtökohdaksi.
  */
 
-import { aiheenNimi } from './aihemerkit.js';
 import { NAHTAVYYDET_NIMIO, TURISTIOPPAAN_NIMIO } from '../kaupunkiliuska-nimiot.js';
-import { KARTTAVALO_AIHEET } from '../karttavalot.js';
+import { kategoriat } from '../nostokategoriat.js';
 
-/** Onko aihe karttaselitteen oma aihe (ks. MUUT_AIHE). */
-const tunnettuAihe = (aihe) => KARTTAVALO_AIHEET.some((r) => r.aihe === aihe);
+/*
+ * Kategoriat asuvat pallolaudan ulkopuolella (js/nostokategoriat.js),
+ * koska myös kaupunkilehden osiohakemisto (js/lehtiosiot.js) ryhmittelee
+ * nostot niillä, eikä lehti saa tuoda pallolautaa yhden tiedoston
+ * versioon. Uudelleenvienti pitää liuskan rajapinnan ennallaan.
+ */
+export { kategoriat, MUUT_AIHE, MUUT_NIMIO } from '../nostokategoriat.js';
 
 /*
  * Yläryhmän kiinteät nimet (PAATOKSET 34 kohta 8, omistajan sanat)
@@ -124,6 +128,39 @@ const nostonNimiAvain = (nosto) => {
 const ASTE_KM = 111.2;
 
 /**
+ * MAAN NIMINEN KAUPUNKI (Linssisepän löydös 28.9.2026, Fable hyväksyi).
+ *
+ * Laudalla on "kaupunkeja", joiden nimi on koko maan nimi: Islanti
+ * (js/packs/europe.js `{ id: 'islanti', name: 'Islanti' }`),
+ * Luxemburg, Singapore, Kuwait … Niillä nimitesti (noston paikkanimi
+ * === kaupungin nimi) ei kerro, että nosto on KAUPUNGISSA: paikkanimi
+ * "Islanti" tarkoittaa koko saarta, ja Geysir 60 km:n päässä
+ * luokittuisi kaupungin sisäiseksi ja katoaisi pääkartalta (natiivissa
+ * 28/34 Islannin nostoa, koska vienti täyttää puuttuvan paikan maan
+ * nimellä). Niille pätee siksi vain etäisyystesti (KAUPUNGIN_SADE_KM).
+ *
+ * TUNNISTUS DATASTA, YHDESTÄ LÄHTEESTÄ: laudan oma kaupunki → maa
+ * -taulu ja maan suomenkielinen nimi (js/packs/maailmankartta.js
+ * `map.cityCountry` ja `map.countryShapes[iso].nimi`). Kaupunki on
+ * maan niminen, kun sen nimi on OMAN maansa nimi. Mitattu 28.9.2026:
+ * 13 kaupunkia (Islanti, Luxemburg, Sierra Leone, Kamerun, Kongo,
+ * Angola, Mosambik, Madagaskar, Kuwait, Hongkong, Singapore,
+ * Guatemala, Panama). Alue-"kaupungit" (Kreeta, Sisilia, Alpit,
+ * Lappi = Rovaniemi) eivät ole maan nimisiä, eikä yksikään web-noston
+ * paikkanimi ole niiden nimi — sääntö ei koske niitä.
+ *
+ * Puhdas funktio (tests/kaupunkiliuska.test.mjs); `kartta` on laudan
+ * `pack.map`.
+ */
+export function onMaanNiminenKaupunki(kaupunki, kartta) {
+  const iso = kartta?.cityCountry?.[kaupunki?.id];
+  const maanNimi = iso ? kartta?.countryShapes?.[iso]?.nimi : null;
+  if (!maanNimi) return false;
+  const nimi = nimiAvain(kaupunki.nimi ?? kaupunki.name);
+  return nimi !== '' && nimi === nimiAvain(maanNimi);
+}
+
+/**
  * Yhden kaupungin jäsenyystesti valmiiksi laskettuna: palauttaa
  * funktion (nosto) → boolean, joka vastaa `onKaupunginSisainen`ia
  * täsmälleen mutta ei laske kaupungin nimeä eikä keskusta uudestaan.
@@ -131,7 +168,9 @@ const ASTE_KM = 111.2;
  */
 export function luoSisaisyysTesti(kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
   if (!kaupunki) return () => false;
-  const kaupunginNimi = nimiAvain(kaupunki.nimi ?? kaupunki.name);
+  // Maan nimisellä kaupungilla (`maanNimi`, ks. onMaanNiminenKaupunki)
+  // nimitestiä ei ole: vain etäisyys ratkaisee.
+  const kaupunginNimi = kaupunki.maanNimi ? '' : nimiAvain(kaupunki.nimi ?? kaupunki.name);
   const keskus = Number.isFinite(kaupunki.lat) && Number.isFinite(kaupunki.lng)
     ? { lat: kaupunki.lat, lng: kaupunki.lng } : null;
   const latRaja = sadeKm / ASTE_KM;
@@ -162,7 +201,9 @@ export function luoSisaisyysTesti(kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
  * TOINEN, DATAN OMA POLKU: jos noston paikkanimi ON kaupungin nimi
  * (pakkojen `paikka`-kenttä, esim. *"Pariisi"*), nosto on sisäinen
  * ilman mittausta — silloin data itse sanoo sen olevan kaupungissa
- * eikä arvioitu koordinaatti voi kiistää sitä.
+ * eikä arvioitu koordinaatti voi kiistää sitä. POIKKEUS: maan
+ * nimisellä kaupungilla (`kaupunki.maanNimi`, onMaanNiminenKaupunki)
+ * nimi tarkoittaa koko maata, joten sille pätee vain etäisyys.
  */
 export function onKaupunginSisainen(nosto, kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
   if (!nosto || !kaupunki) return false;
@@ -176,49 +217,6 @@ export function kaupunginNostot(rivit, kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
     .filter((r) => r.perhe === 'nosto' && !r.vainNimi && typeof r.avaa === 'function'
       && sisainen(r))
     .sort((a, b) => (a.ladontaNro ?? 0) - (b.ladontaNro ?? 0));
-}
-
-/**
- * KATEGORIAT LUKUMÄÄRINEEN. Ryhmittely on sama aihe kuin aihenostoilla
- * (PAATOKSET 27), jonka kartalta poistuminen on juuri se, mitä
- * PAATOKSET 34 kohta 3 sanoo: *"aihenostot poistuvat kartalta ja
- * niiden aiheet ovat listan otsikoita"*.
- *
- * Järjestys on ensiesiintymän järjestys, jotta lista ei vaihda
- * järjestystä ladonnasta toiseen (sama peruste kuin aihenoston
- * nimiöllä, js/pallolauta/nostot.js TÄRKEIN ON PAKETIN ENSIMMÄINEN).
- */
-export const MUUT_AIHE = '';
-export const MUUT_NIMIO = 'Muut';
-
-export function kategoriat(nostot) {
-  const jarjestys = [];
-  const kasat = new Map();
-  for (const n of nostot ?? []) {
-    /*
-     * AIHEETON NOSTO EI KATOA (PAATOKSET 34 kohta 11, omistaja
-     * sanatarkasti: *"Eikö niille ole kategoriaa joilla ei vielä
-     * ole?"*). Nosto, jolla ei ole aihetta — tai jonka aihe ei vastaa
-     * yhtäkään karttaselitteen aihetta (js/karttavalot.js
-     * KARTTAVALO_AIHEET, luettu `aiheenNimi`illa) — menee yhteen
-     * "Muut"-kasaan. Ilman tätä sen kategoria olisi ollut nimetön tai
-     * aiheita olisi ollut yhtä monta kuin tuntemattomia aiheita, ja
-     * kumpikin rikkoisi säännön *"lukumäärien summa = kaupungin
-     * sisäisten nostojen määrä"*.
-     */
-    const oma = n.aihe ?? '';
-    const aihe = tunnettuAihe(oma) ? oma : MUUT_AIHE;
-    if (!kasat.has(aihe)) { kasat.set(aihe, []); jarjestys.push(aihe); }
-    kasat.get(aihe).push(n);
-  }
-  // "Muut" on aina LISTAN LOPUSSA, muut ensiesiintymän järjestyksessä.
-  jarjestys.sort((x, y) => (x === MUUT_AIHE ? 1 : 0) - (y === MUUT_AIHE ? 1 : 0));
-  return jarjestys.map((aihe) => ({
-    aihe,
-    nimi: tunnettuAihe(aihe) ? aiheenNimi(aihe) : MUUT_NIMIO,
-    jasenet: kasat.get(aihe),
-    maara: kasat.get(aihe).length,
-  }));
 }
 
 /**

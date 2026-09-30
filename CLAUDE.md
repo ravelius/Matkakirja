@@ -11,6 +11,9 @@ Solia, Terraa ja Lunaa (kevyemmät agenttimallit); molemmat pääsessiot delegoi
 rajatut tehtävät kevyimmälle riittävän kyvykkäälle mallille (Raamattu,
 Ydinajatus: CLAUDEN JA CHATGPT/CODEXIN AGENTTISÄÄNNÖT ERIKSEEN).
 
+PÄÄTOIMITTAJA = FABLE (omistaja 28.9.2026): päätoimittajan rooli on nimeltään Päätoimittaja (malli vaihtelee);
+"Fable" on sama rooli vanhalla nimellä kaikissa ohjeissa. Raamattu, Ydinajatus.
+
 # Matkakirja ja unohdettu aarre
 
 Suomenkielinen seikkailupeli, jossa samalla oppii (kohderyhmä
@@ -24,6 +27,10 @@ Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
 AIKA (omistaja 26.9.2026, sitova): kartassa eletään NYKYAJASSA, vain estetiikka
 on vanhaa — nykyajan kohteet (maailmanpyörä, Korintin kanava) ovat sallittuja;
 älä hylkää ideaa "koska sitä ei ollut 1873". Raamattu, Ydinajatus, AIKA.
+
+VAIN EUROOPPA (omistaja 27.9.2026, sitova): uutta sisältöä ja työtä tehdään vain
+Euroopalle, kunnes omistaja toteaa Euroopan valmiiksi; muihin maanosiin ei mitään uutta
+ilman omistajan erillistä päätöstä. Raamattu, Ydinajatus, VAIN EUROOPPA.
 
 ## Lue ensin
 

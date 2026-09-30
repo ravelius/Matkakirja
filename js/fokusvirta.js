@@ -181,6 +181,7 @@ import {
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { suljeKaupunkipopup } from './kaupunkinosto.js';
 /*
  * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄÄN (omistaja 9.9.2026 klo
  * 18.50). Lähderivin oma maininta säilyy ennallaan; tämä on sen rinnalle
@@ -3558,23 +3559,22 @@ function isonKuvanRuutu(kuva, pulusta, jarjestys = 0) {
   img.className = 'fokusvirta-isokuva-kuva';
   img.decoding = 'async';
   img.draggable = false;
-  // Isossa kuvassa lyhyt teksti, kuten kartalla (js/kuvatekstit.js).
+  /*
+   * EI ENÄÄ PAPERIA EIKÄ KUVATEKSTIÄ RUUDULLA (Siirtosepän
+   * pariteettikatsaus 29.9.2026, löydös 138 / build 16, Päätoimittajan
+   * päätös: "kehys ja kuvateksti pois, pelkkä kuva" — natiivissa
+   * saapumisen valokuvakortti on jo pelkkä kuva). Ennen tässä
+   * rakennettiin erillinen `figcaption`-paperi kuvan alle (PAATOKSET 35
+   * kohta 2); sama lyhyt teksti riittää `alt`-attribuuttina, joten se
+   * on yhä saatavilla ruudunlukijalle eikä katoa kokonaan. Tämä poisti
+   * samalla Ohita-napin ja kuvatekstin päällekkäisyyden (pariteetin
+   * rivi 4): kuvassa ei ole enää tekstiä, jonka päälle Ohita voisi
+   * osua.
+   */
   img.alt = kuvatekstiLyhyt(kuva);
   asetaKuva(img, kuvanOsoite(kuva, LUENTAKUVAN_PX), kuvanVara(kuva, LUENTAKUVAN_PX));
   kotelo.appendChild(img);
   if (pulusta) kotelo.appendChild(puluCamMerkki({ luokka: 'pulucam-merkki-iso' }));
-  const teksti = kuvatekstiLyhyt(kuva);
-  if (teksti) {
-    /*
-     * KUVATEKSTI PAPERILLA (omistaja 17.9.2026, PAATOKSET 35 kohta 2).
-     * `figcaption` ON se valkoinen paperi, joka jatkuu kuvan alta;
-     * teksti itse on sen sisällä omana lohkonaan, jotta ladonta
-     * (leveysrajaus, keskitys) ei ole sama asia kuin paperin mitta.
-     */
-    const lappu = html('figcaption', 'fokusvirta-isokuva-teksti');
-    lappu.appendChild(html('span', 'fokusvirta-isokuva-selite', teksti));
-    kotelo.appendChild(lappu);
-  }
   ruutu.appendChild(kotelo);
   return ruutu;
 }
@@ -3598,6 +3598,28 @@ function isokuvanKoti() {
 }
 
 /**
+ * VAIN YKSI LAPPU KERRALLAAN (Siirtosepän pariteettikatsaus 29.9.2026,
+ * rivi 5: "valokuvakortti avautuu jo auki olevan maakortin tai
+ * kaupunkilehden päälle, jolloin kaksi lappua on auki yhtä aikaa ja
+ * alempi jää sumennettuna näkyviin"). Kutsutaan ennen kuin valokuvakortti
+ * (fokusvirran isokuva TAI fokusnoston kortti, ks. js/fokusnosto.js)
+ * nousee kartan päälle: suljetaan kaikki muut mahdolliset auki olevat
+ * laput NIIDEN OMILLA sulkufunktioilla, jotka jo animoivat sulkeutumisen
+ * (maapaneelin oma liuku, kaupunkipopupin ja lehden omat purut). Jos
+ * mikään niistä ei ole auki, funktio ei tee mitään.
+ *
+ * TAHALLISET PÄÄLLEKKÄISYYDET EIVÄT KUULU TÄHÄN: kuvan suurennos kortin
+ * päällä (avaaSuurennos) ja PULU-CAM-pakan omat kortit toistensa päällä
+ * (isonKuvanRuutu) jäävät ennalleen — ne eivät ole eri LAPPUJA vaan
+ * saman lapun sisäistä tilaa.
+ */
+export function suljeMuutAvoimetLaput(ui) {
+  ui?.pallolauta?.maapaneeli?.suljeValikko?.();
+  suljeKaupunkipopup(ui);
+  if (ui?.arrivalDialog?.open) ui.closeArrival?.();
+}
+
+/**
  * Yksi iso keskipäällys: kehys, ajastimet ja kuvanvaihto — ilman
  * sisältöä. Kutsujat päättävät, mitkä kuvat siihen ladotaan: isoisän
  * luentasarja (naytaLuentakuvasarja) tai pulun oma sarja, joka alkaa
@@ -3615,6 +3637,8 @@ function avaaIsokuvaPaallys(ui, city, pohjakuva) {
    */
   if (luentaOhitettu(ui, city)) return null;
   lataaTyyli();
+  // Vain yksi lappu kerrallaan (rivi 5, ks. suljeMuutAvoimetLaput yllä).
+  suljeMuutAvoimetLaput(ui);
   const kehys = html('div', 'fokusvirta-isokuva');
   kehys.setAttribute('role', 'group');
   kehys.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
@@ -5912,9 +5936,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
     const avain = sahkePullaAvain(tehtava, 'vinkki');
     pullaOstosnappi(ui, kotelo, {
       hinta: SAHKE_PULLA_VINKKI_HINTA,
-      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA} £) — vinkki`,
-      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA} £`,
-      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA} £`,
+      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA}\u00a0£) — vinkki`,
+      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA}\u00a0£`,
+      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA}\u00a0£`,
       kelluke: `${nimi} Livialle`,
       tehty: `Livia sai kokonaisen pullan (${nimi}) ja sanoi vinkkinsä.`,
       ostettu: ui.game.pullaOstettu?.(avain) === true,
@@ -5951,9 +5975,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
   const ostettuJo = ui.game.pullaOstettu?.(avain) === true;
   pullaOstosnappi(ui, kotelo, {
     hinta: SAHKE_PULLA_LINKKI_HINTA,
-    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA} £) — suora linkki`,
-    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA} £`,
-    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA} £`,
+    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA}\u00a0£) — suora linkki`,
+    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA}\u00a0£`,
+    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA}\u00a0£`,
     kelluke: `puolikas ${nimi} Livialle`,
     tehty: `Livia sai puolikkaan pullan (${nimi}) ja näytti linkin.`,
     ostettu: ostettuJo,

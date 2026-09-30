@@ -20,12 +20,9 @@
  * katsottu silmin; luettelo docs/raportit/miniatyyrit-kohtauskuvat-
  * 20260925.md.
  *
- * TUNNETUT KOHTAUSKUVAT: 70 kuvaa odottaa kuvaputken (Codexin) leikattua
- * versiota. Kaikki 70 on tilattu 25.9.2026 (Ateenan 6 ensin pilottina
- * build 14:ään, loput 64 kaupungeittain samana päivänä — omistaja
- * hyväksyi kaikki odottamatta pilotin tulosta). Kun kuva on korvattu,
- * se PITÄÄ poistaa alta — toinen testi kaatuu, jos lista kuvaa jo
- * leikattua.
+ * TUNNETUT KOHTAUSKUVAT odottavat kuvaputken (Codexin) leikattua versiota.
+ * Kun kuva on korvattu, se PITÄÄ poistaa alta — toinen testi kaatuu, jos
+ * lista kuvaa jo leikattua.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -38,12 +35,9 @@ const TAYTTO_RAJA = 0.6;
 const REUNA_RAJA = 0.35;
 
 const TUNNETUT_KOHTAUSKUVAT = new Set([
-  'ateena-akropolis-museo.webp',
   'ateena-diogeneen-astia.webp',
   'ateena-elginin-marmorit.webp',
-  'ateena-iliou-melathron.webp',
   'ateena-maratonhuijaus.webp',
-  'ateena-niken-temppeli.webp',
   'pariisi-72-nimea.webp',
   'pariisi-bastilji-1789.webp',
   'pariisi-carmenin-ensi-ilta.webp',

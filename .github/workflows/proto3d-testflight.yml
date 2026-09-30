@@ -42,15 +42,15 @@ on:
         type: string
         default: 'fi.matkakirja.peli'
       versio:
-        description: 'Näkyvä versionumero (MARKETING_VERSION). Tyhjä = 1.0.<build-ordinaali> (omistaja 24.9.2026: TestFlightissa näkyy build-numero)'
+        description: 'Näkyvä versionumero (MARKETING_VERSION). Tyhjä = 1.1 (omistaja 30.9.2026: kiinteä versio, jotta ulkoinen beta-arvio koskee vain version ensimmäistä buildia)'
         type: string
         default: ''
       ordinaali:
-        description: 'Build-ordinaali (build 11 → 1.0.11). Tyhjä = laskuri proto-3d/lokit/testflight-ordinaali.txt + 1'
+        description: 'Build-ordinaali = CFBundleVersion (TF näyttää 1.1 (74)). Tyhjä = laskuri proto-3d/lokit/testflight-ordinaali.txt + 1'
         type: string
         default: ''
       build_numero:
-        description: 'CFBundleVersion — oletus aikaleima (VVVVKKPPTTMM), koska versiolla 1.0.0 on jo aikaleimanumeroita.'
+        description: 'CFBundleVersion — oletus ordinaali. Build-numero on iOS:ssä versiokohtainen: 1.1:n numerot eivät törmää 1.0.x:n aikaleimoihin.'
         type: string
         default: ''
       proto_ref:
@@ -65,18 +65,26 @@ on:
 permissions:
   contents: read
 
-# Sama Mac ajaa myös savukkeet.yml:n ja Karttasepän polttoja — yksi
-# raskas ajo kerrallaan koko koneella (ks. savukkeet.yml:n koko-repon
-# jono, PR #2926/#2947). Tämä työnkulku käyttää samaa jonoryhmää, jotta
-# Unity-käännös ei ala kesken savukesarjan tai polton.
+# TF-ETUSIJA (omistaja hyväksyi 28.9.2026): vienti ajetaan testit-runnerilla
+# (SamiMacStudio2-testit: sama kone, sama käyttäjä koodaus, sama avainnippu)
+# omassa jonoryhmässään, jotta se ei jonota savukerunnerin PR-savukkeiden
+# takana (28.9. TF 1.0.35 ja 1.0.37 odottivat tunteja). Unity-käännösten
+# vuorot jakaa käännöspalvelun lukko (KAANNOSLUKKO) kuten ennenkin.
 concurrency:
-  group: savukkeet-mac-macilla
+  group: proto3d-testflight
   cancel-in-progress: false
+
+# NICE-OLETUS (omistaja 28.9.2026 klo 11.2x, Raamattu #3527): Mac-ajurin
+# raskaat työt ajetaan nice -n 15:llä, jotta omistajan omat työt (käyttäjä
+# Sami Reivinen) menevät edelle; nice toimii käyttäjien yli. Ubuntulla harmiton.
+defaults:
+  run:
+    shell: nice -n 15 bash --noprofile --norc -eo pipefail {0}
 
 jobs:
   vienti_ja_lahetys:
     name: Unity-vienti, arkistointi ja TestFlight-lähetys
-    runs-on: [self-hosted, macOS, ARM64, savukkeet]
+    runs-on: [self-hosted, macOS, ARM64, testit]
     timeout-minutes: 90
 
     env:
@@ -135,29 +143,47 @@ jobs:
           git reset -q --hard
           echo "Käännöskopio: $(git rev-parse --short HEAD) ($PROTO_REF)"
 
-      # Aikaleima buildinumeroksi: App Store Connect hylkää saman
-      # versio+build-parin kahdesti. Unity-viennissä sama numero menee
-      # MATKAKIRJA_BUILDiin, jolloin sovelluksen rakennus.txt = ASC:n numero.
+      # Omistaja 30.9.2026: versio kiinteä 1.1 ja CFBundleVersion = juokseva ordinaali (74, 75, …),
+      # jolloin TF näyttää "1.1 (74)" ja Applen ulkoinen beta-arvio koskee vain version ensimmäistä
+      # buildia (1.0.<ordinaali> + aikaleima vei 24.–30.9. jokaisen buildin täyteen arvioon). ASC
+      # hylkää saman versio+build-parin kahdesti; build-numero on iOS:ssä versiokohtainen. Unity-
+      # viennissä sama numero menee MATKAKIRJA_BUILDiin, jolloin rakennus.txt = ASC:n numero.
       - name: Buildinumero
         run: |
           set -euo pipefail
+          # Laskuri kasvaa vasta onnistuneen latauksen jälkeen.
+          ord="${ORDINAALI_SYOTE:-}"
+          [ -n "$ord" ] || ord=$(( $(cat "$LASKURI" 2>/dev/null || echo 10) + 1 ))
+          versio="${VERSIO_SYOTE:-1.1}"
           build="${{ inputs.build_numero }}"
-          [ -n "$build" ] || build=$(date -u +%Y%m%d%H%M)
+          [ -n "$build" ] || build="$ord"
           echo "BUILD_NUMERO=$build" >> "$GITHUB_ENV"
-          # Näkyvä versio = 1.0.<ordinaali> (build 11 → 1.0.11); CFBundleVersion pysyy aikaleimana,
-          # koska se ei saa pienentyä. Laskuri kasvaa vasta onnistuneen latauksen jälkeen.
-          ord=""
-          if [ -n "${VERSIO_SYOTE:-}" ]; then
-            versio="$VERSIO_SYOTE"
-          else
-            ord="${ORDINAALI_SYOTE:-}"
-            [ -n "$ord" ] || ord=$(( $(cat "$LASKURI" 2>/dev/null || echo 10) + 1 ))
-            versio="1.0.$ord"
-          fi
           echo "VERSIO=$versio" >> "$GITHUB_ENV"
           echo "ORDINAALI=$ord" >> "$GITHUB_ENV"
           echo "Versio $versio (ordinaali ${ord:-–})"
           echo "Buildinumero $build, kansio Build/$VIENTI_KANSIO, Unity-vienti: $VIE_UNITYSTA"
+
+      # Natiivin "Mitä uutta" vertaa asennettua "<versio> (<CFBundleVersion>)" muutoslokin riviin
+      # (Natiivi-UI 27.9.2026: rivit 12–28 puuttuivat → build 11:n teksti näkyi uutena).
+      # Käsivienti hylätään ennen Unity-vientiä, jos riviä ei ole ajon commitissa: Julkaisija
+      # valitsee build_numeron etukäteen ja mergee rivin (tools/vienti/muutosloki-natiivi.mjs) ensin.
+      # Ajastettu yöajo ei tiedä numeroa etukäteen → vain varoitus; rivi lisätään latauksen jälkeen.
+      - name: Muutoslokin rivi
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          haettu=$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github.raw" \
+            "https://api.github.com/repos/${{ github.repository }}/contents/tools/vienti/muutosloki-natiivi.json?ref=${{ github.sha }}")
+          rivi="$VERSIO ($BUILD_NUMERO)"
+          if printf '%s' "$haettu" | python3 -c 'import json,sys; v=sys.argv[1]; sys.exit(0 if any(r.get("versio")==v for r in json.load(sys.stdin).get("rivit",[])) else 1)' "$rivi"; then
+            echo "Muutoslokissa on rivi \"$rivi\"."
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "::warning title=Muutoslokin rivi puuttuu::\"$rivi\" — lisää latauksen jälkeen: node tools/vienti/muutosloki-natiivi.mjs --versio \"$rivi\" --teksti \"…\""
+          else
+            echo "::error title=Muutoslokin rivi puuttuu::\"$rivi\" ei ole tools/vienti/muutosloki-natiivi.json:ssa (${{ github.sha }}). Mergeä rivi ensin ja anna sama build_numero."
+            exit 1
+          fi
 
       - name: Yöajon ohitusehdot
         if: env.VIE_UNITYSTA == 'true'
@@ -218,6 +244,18 @@ jobs:
             mv Build/yo "$sivu" && { rm -rf "$sivu" >/dev/null 2>&1 & }
             echo "::warning::Build/yo ei poistunut viidellä yrityksellä; siirretty sivuun ($sivu)"
           fi
+          # ISS-rata mukaan buildiin (Natiiviseppä 26.9.2026, Linssisepän ISS/SGP4): julkaistu
+          # media.matkakirja.app/data/iss-tle.json (#3334, CI päivittää 6 h välein). Ei pakollinen:
+          # ilman tiedostoa lataaja hakee ämpäristä tai käyttää havainnollista rataa. Palautus alla
+          # (git clean) poistaa tiedoston viennin jälkeen.
+          mkdir -p Assets/StreamingAssets/mukana
+          if curl -fsS --max-time 20 "https://media.matkakirja.app/data/iss-tle.json?t=$(date +%s)" -o Assets/StreamingAssets/mukana/iss-tle.json \
+             && grep -q '"rivi1":"1 25544U' Assets/StreamingAssets/mukana/iss-tle.json; then
+            echo "ISS-TLE mukana: $(grep -o '"haettu":"[^"]*"' Assets/StreamingAssets/mukana/iss-tle.json)"
+          else
+            rm -f Assets/StreamingAssets/mukana/iss-tle.json
+            echo "::warning::ISS-TLE ei saatu ämpäristä; build ilman sitä (lataaja hakee ajossa)"
+          fi
           # Kohtaus generoidaan koodista ennen vientiä kuten käännöspalvelussa (proto-kaanna.sh):
           # masterin Pallo.unity ei ole aina tuore (build 13: kohtausta ei committoitu mergessä),
           # ja IosTestFlight kutsuu LuoPalloa vain, jos kohtaustiedosto puuttuu.
@@ -264,7 +302,7 @@ jobs:
           mkdir -p "$hakemisto"
           chmod 700 "$hakemisto"
           polku="$hakemisto/AuthKey.p8"
-          if printf '%s' "$ASC_KEY_P8" | grep -q "BEGIN PRIVATE KEY"; then
+          if [[ "$ASC_KEY_P8" == *"BEGIN PRIVATE KEY"* ]]; then  # ei putkea: pipefail + grep -q → SIGPIPE (29.9. TF 1.0.57)
             printf '%s\n' "$ASC_KEY_P8" > "$polku"
           else
             printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"

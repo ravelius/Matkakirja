@@ -5,6 +5,7 @@
  *     uusin versio ensin; Jatka sulkee.
  *  3. Toinen lataus samalla versiolla → EI popupia.
  */
+import { lisaaPolloKehittajakoodi } from './pollo-kehittajakoodi.mjs';
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
@@ -13,13 +14,10 @@ import { extname, join } from 'node:path';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
-// Playwright repon node_modulesista, muuten kontin globaalista (README).
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
@@ -35,9 +33,10 @@ const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto) => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi}`); };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const ctx = await selain.newContext({ viewport: { width: 390, height: 844 } });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 
 // 1. Ensikäynti
 await sivu.goto(osoite, { waitUntil: 'load' });

@@ -65,6 +65,17 @@
  *
  * Aja: NODE_USE_ENV_PROXY=1 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
  *      node tools/savukkeet/savuke-kaupunkietusivu.mjs [kuvakansio]
+ *
+ * KAUPUNGIN AVAUSKORTTI KORVASI TÄMÄN NÄKYMÄN (omistaja 27.9.2026 klo
+ * 23.4x, js/pallolauta/lauta.js: "if (!KAUPUNKILIUSKA) { avaaAvauskortti
+ * (ui, city); return true; }"): kaupungin napautus avaa nykyään AINA
+ * avauskortin, ei enää tätä tiivistettyä kaupunkilehden etusivua —
+ * avaaTiivisKaupunkietusivu jää sen jälkeisen liuska-branchin taakse,
+ * joka on KAUPUNKILIUSKA=false:lla kuollutta koodia. Sama havainto ja
+ * sama korjaus kuin savuke-kaupunkipopup.mjs:ssä (LIUSKA_KAYTOSSA):
+ * savuke ohittaa itsensä, kun kytkin on pois, eikä yritä enää napauttaa
+ * kaupunkia auki tätä kehystä varten. Uusi kortti on
+ * tools/savukkeet/savuke-avauskortti.mjs:n vartioima.
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -74,10 +85,12 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { ARTIKKELIT } from '../../js/sisaltotaulut.js';
 import { KULTTUURI_KATEGORIAT } from '../../js/packs/kulttuuri-kategoriat.js';
+import { avaaChromium } from '../selain.mjs';
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+/* Sama kytkintarkistus kuin savuke-kaupunkipopup.mjs:ssä. */
+const LIUSKA_KAYTOSSA = /export const KAUPUNKILIUSKA = true;/.test(
+  readFileSync(new URL('../../js/pallolauta/lauta.js', import.meta.url), 'utf8'));
+
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -165,7 +178,12 @@ const kappaleetDatasta = (nimi) => (ARTIKKELIT[nimi]?.intro ?? '')
   .map((k) => k.replaceAll('**', ''));
 const kansiOsasto = (id) => (KULTTUURI_KATEGORIAT[id] ?? []).find((k) => k.id === 'kaupunki');
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+if (!LIUSKA_KAYTOSSA) {
+  console.log('INFO  OHITUS: kaupungin tiivis etusivu korvattu avauskortilla (savuke-avauskortti.mjs)');
+  palvelin.close();
+  process.exit(0);
+}
+const selain = await avaaChromium({});
 
 for (const ruutu of RUUDUT) {
   for (const kaupunki of KAUPUNGIT) {

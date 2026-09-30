@@ -30,10 +30,12 @@
  * tarkoitettu KATSOTTAVIKSI — mittaukset eivät kerro, näyttääkö kartta
  * hyvältä.
  */
+import { lisaaPolloKehittajakoodi } from './savukkeet/pollo-kehittajakoodi.mjs';
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
@@ -53,9 +55,7 @@ const palvelin = createServer((req, res) => {
 });
 await new Promise((r) => palvelin.listen(8734, r));
 
-const paketti = await import('/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({
   viewport: { width: 900, height: 1000 },
   deviceScaleFactor: 2,
@@ -69,6 +69,7 @@ await ctx.addInitScript(() => {
   try { localStorage.setItem('matkakirja-fokusmoodi', '0'); } catch { /* yksityinen tila */ }
 });
 const sivu = await ctx.newPage();
+await lisaaPolloKehittajakoodi(ctx); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
 
@@ -521,6 +522,7 @@ await puhelin.addInitScript(() => {
   try { localStorage.setItem('matkakirja-fokusmoodi', '0'); } catch { /* yksityinen tila */ }
 });
 const psivu = await puhelin.newPage();
+await lisaaPolloKehittajakoodi(puhelin); // Pulun päiväraja: kehittäjäotsake vain pöllöpalvelimelle
 psivu.on('pageerror', (e) => virheet.push(`puhelin: ${e}`));
 const cdp = await puhelin.newCDPSession(psivu);
 const kosketa = async (tyyppi, pisteet) => {

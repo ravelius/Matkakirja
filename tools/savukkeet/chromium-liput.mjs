@@ -54,6 +54,8 @@ function kokoaLiput(lahde) {
     if (m) m[1].split(',').filter(Boolean).forEach((f) => pois.add(f));
     else muut.push(lippu);
   }
+  // Ääni mykistetty oletuksena (omistaja 30.9.2026, sama kuin tools/selain.mjs aaniLiput); SELAIN_AANI=1 = kuuluu.
+  if (process.env.SELAIN_AANI !== '1' && !muut.includes('--mute-audio')) muut.push('--mute-audio');
   return [...muut, `--disable-features=${[...pois].join(',')}`];
 }
 
@@ -126,7 +128,9 @@ if (process.env.SAVUKE_EI_NAYTTOA === '1') {
     pw.chromium.launch = (asetukset = {}) => {
       if (asetukset.headless === false) return kaynnista(asetukset);
       const args = asetukset.args ?? [];
-      const omaGl = args.some((a) => /^--use-(gl|angle)=/.test(a));
+      // Rivin liput (esim. GPU-väistön SwiftShader) lasketaan omaksi
+      // GL-valinnaksi: Metalia ei lisätä niiden rinnalle.
+      const omaGl = [...args, ...liput].some((a) => /^--use-(gl|angle)=/.test(a));
       const cft = /Google Chrome for Testing/.test(asetukset.executablePath ?? '');
       return kaynnista({
         ...asetukset,

@@ -1,5 +1,20 @@
 # Viisaan Pöllön käyttöönotto (omistajalle, n. 10 min puhelimella)
 
+> **Päivitys 28.9.2026 (Pulun äänikeskustelu, KOE):** uusi reitti
+> `tehtava: 'realtime'` antaa selaimelle lyhytikäisen xAI-tokenin
+> (`POST https://api.x.ai/v1/realtime/client_secrets`) ja valmiin
+> `session.update`-istunnon: sama Pulun kehote kuin chatissa
+> (`worker.js pulunKehote`, muoto `'aani'`), pelin xAI-ääni (`ara` tai
+> pelaajan valinta) ja server VAD. Selain avaa WebSocketin suoraan
+> xAI:hin (`js/pulu-realtime.js`); API-avain ei lähde workerista. Reitti
+> on **vain kehittäjäkoodilla** (403 muuten) eikä natiiville. Päiväkatto
+> minuutteina koko pelille: `REALTIME_PAIVARAJA_MIN` (oletus 30), ja
+> jokainen token varaa istunnon enimmäispituuden `REALTIME_ISTUNTO_MIN`
+> (oletus 3) — kehittäjäkoodikaan ei ohita kattoa (429). Ei uusia
+> salaisuuksia: sama `XAI_API_KEY` kuin striimiluennalla. Mittaus ilman
+> ihmistä: `node tools/pollo/realtime-koe.mjs` (ohje tiedoston alussa).
+> Käyttöönotto vasta Pelikoodarin päätöksellä: "Pöllön julkaisu" -ajo.
+
 > **Päivitys 29.8.2026 (sähketehtävän vapaa vastaus):** sama worker
 > arvioi nyt myös sähketehtävän vapaamuotoiset vastaukset
 > (`tehtava: 'sahke'`). Peli tulkitsee tekstin ensin itse ilmaiseksi ja
@@ -24,6 +39,16 @@
 > ympäristömuuttujasta POLLO_KEHITTAJAKOODI). Turvaraja 60 kuvaa/vrk
 > (`KUVA_PAIVARAJA`). Käyttöönotto: aja "Pöllön julkaisu" -ajo
 > uudelleen, jotta uusi worker-versio menee Cloudflareen.
+>
+> **Päivitys 27.9.2026 (striimiluenta xAI:lla):** omistajan päätös
+> 27.9.2026 klo 00.25 — kaikki striimiluenta luetaan xAI:n Grok TTS:llä
+> äänellä `ara` (ensimmäinen tavu ~0,2 s suomeksi). Viides salaisuus
+> `XAI_API_KEY` (<https://console.x.ai> → API keys); "Pöllön julkaisu"
+> vie sen workerille. Kytkin `PUHE_MOOTTORI` (wrangler.jsonc: `xai` |
+> `openai`); ilman xAI-avainta worker lukee OpenAI:lla kuin ennen, ja
+> xAI:n virhe tai 8 s:n aikakatkaisu putoaa samaan varapolkuun.
+> Kehittäjävalikon *striimiääni*-valitsin kokeilee muita xAI-ääniä
+> (vain kehittäjäkoodilla). Äänilista: worker.js `XAI_AANET`.
 >
 > **Päivitys 14.8.2026 (lukijaääni):** sama worker välittää nyt myös
 > pelin lukijaäänen (OpenAI gpt-4o-mini-tts, `tehtava: 'puhe'`).
@@ -379,3 +404,19 @@ riittää tähän moninkertaisesti.
 
 Workerin lokit näet komennolla `npx wrangler tail` (aja tässä
 kansiossa) — siitä näkee, tuleeko pyyntöjä ylipäätään perille.
+
+## Nimetön kävijälaskuri (30.9.2026)
+
+Peli lähettää kerran istunnossa tehtävän `kaynti` (web `js/kaynti.js`, iOS
+`Kaynti.cs`) ja apurahakortin avauksen sekä esittelylinssit omina
+tapahtumina. Worker (`kaynnit.js`) laskee päivän eri kävijät tiivisteenä
+SHA-256(IP + päivän suola). Suola vanhenee kahdessa vuorokaudessa, eikä
+raakaa IP:tä tallenneta eikä lokiteta. Omistajan laitteet (VAIN
+eksplisiittiset merkit: webissä kerran avattu `?omistaja`, iOS:ssä Pöllön
+kehittäjäkoodi Keychainissa tai `ui omistaja 1`; kehittäjätila ja
+esittelylinssit EIVÄT ole omistajan tunniste, koska arvioijien TF:ssä ne
+voivat olla päällä), paikalliset palvelimet, automaatioselaimet ja
+simulaattorit eivät näy luvuissa.
+
+Luku vain kehittäjäkoodilla: `POLLO_KEHITTAJAKOODI=… node tools/kaynnit.mjs 14`.
+KV-kulutus: uusi kävijä tai uusi tapahtuma = 1 kirjoitus, suola 1/vrk.
