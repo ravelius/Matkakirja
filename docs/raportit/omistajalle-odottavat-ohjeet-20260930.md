@@ -2,7 +2,7 @@
 
 Anna chatissa (lihavoitu ohje + koodilohko), kun kyseinen muutos on omistajan TF-versiossa. Merkitse annetuksi.
 
-## 1. Oma laite pois kävijälaskurista (Pelikoodari 522ec05b / 54c494b3, 99f7d0fc viestikerros)
+## 1. Oma laite pois kävijälaskurista (Pelikoodari 522ec05b / 54c494b3, 99f7d0fc viestikerros) — ANNETTU 30.9. (TF 1.1 (74))
 
 Kummallakin laitteella (iPhone ja M5-iPad), kun uusi versio on asennettu:
 1. Safari → kirjoita osoiteriville `matkakirja://omistaja` → Siirry.
