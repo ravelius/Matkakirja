@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2435, teksti: 'Nostot erä 2: 10 kohdetta BLR, SRB, MDA, DEU' },
+  { v: 2435, teksti: 'Olavinlinna: Blender-tuotokset (#3663)' },
   { v: 2434, teksti: 'Nostot erä 1: 10 kohdetta ALB, MKD, MNE, MDA (#3668)' },
   { v: 2433, teksti: 'RUS erä 4: pitkä + pulu, 7 Euroopan aluetta (#3665)' },
   { v: 2432, teksti: 'Krim ja Sevastopol Ukrainalle kaikissa kartta-a… (#3656)' },

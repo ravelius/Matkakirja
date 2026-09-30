@@ -1980,3 +1980,42 @@ hampurilainen ja neljä kohtaa oikeassa järjestyksessä; Aloita alusta ja
 Poistu valikosta), `savuke-ihmisen-esitys` (pimeässä valikon nappi on
 ainoa näkyvä) ja `savuke-linssin-lappu` (napin paikka ja
 päällekkäisyydet kartan oikeassa yläkulmassa).
+
+## 12. Dioraamalinssi: Blender-tuotokset julkaisuun (Linnanrakentaja 30.9.2026)
+
+**Miksi.** TF 1.0.61 näytti Poikkileikkaus-linssissä proseduraalisen
+palikkalinnan. Fotogrammetriakuori, leivotut tilat ja päivä- ja
+hämäräatlakset olivat vain paikallisessa
+`/Users/Shared/Claude/proto-3d/_valmiit/<rakennus>-blender`-kansiossa ja
+Siirtosepän peilissä, eivät julkaistussa paketissa. **Peili ei ole
+julkaisu.**
+
+**Putki, joka koskee jokaista dioraamaa, jolla on Blender-kuori tai
+leivotut tilat:**
+
+1. Leivonta ja kuori kirjoitetaan kansioon `_valmiit/<id>-blender/`
+   (`ulkokuori/`, `tilat/`, `valot/`).
+2. **Omistaja** ajaa `tools/dioraama/vie-blender.sh --rakennus <id>`
+   (ensin `--kuiva`). Skripti lataa muuttumattoman kansion
+   `dioraama/<id>/blender/<hash>/` ämpäriin ja kirjoittaa tiedoston
+   `js/dioraama/rakennukset/<id>/blender.json`.
+3. `blender.json` commitoidaan, ja Julkaisija mergeää sen. `rakenna.mjs`
+   lukee tiedoston, ja `lisaaBlender()` lisää kentät `tunnelma`,
+   `ulkokuori`, `tilat[].glb` (leivottu) ja `tilat[].valoatlas`.
+4. `vie-dioraama.yml` tarkistaa lähdekansion, kopioi sen palvelimella
+   pakettiin `<hash>/blender/` ja vaihtaa `uusin.json`-osoittimen vasta
+   sen jälkeen.
+5. Siirtoseppä todentaa tuloksen **puhtaalla asennuksella**, ilman
+   peiliä.
+
+Jokainen `_valmiit`-muutos (uusi leivonta, kuori tai atlas) vaatii uuden
+ajon (uusi hash) ja uuden `blender.json`-commitin. Muuten julkaisu jää
+vanhaan.
+
+**Vartijat.** `tarkistaBlenderPaketti()` (`tools/dioraama/rakenna.mjs`)
+hylkää paketin, josta puuttuu ulkokuori tai jonka tila-glb ei ole
+leivottu, jos rakennuksella on `blender.json`. Testi:
+`tests/dioraama-blender.test.mjs`. `rakenna.mjs` varoittaa ajossa, jos
+`_valmiit`-kansio on olemassa mutta `blender.json` puuttuu tai on
+vanhempi kuin kansion uusin tiedosto. CI pysähtyy ennen osoittimen
+vaihtoa, jos ämpärin kansiosta puuttuu tiedostoja.
