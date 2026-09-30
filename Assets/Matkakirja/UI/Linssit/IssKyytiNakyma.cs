@@ -122,7 +122,15 @@ namespace Matkakirja.Natiivi
             var r = n.poyta.Juuri.worldBound;
             var ruutu = n.juuri.panel?.visualTree.layout ?? Rect.zero;
             return $"kytkin: pöytä {(Kytkinpoyta ? "päällä" : "pois")}, {r.width:0} × {r.height:0} pt, peitto {(ruutu.height > 0 ? r.height / ruutu.height * 100 : 0):0.0} % korkeudesta, "
-                 + $"kuvat {(IssKytkimet.KuvatPaikalla ? "Codex" : "paikkamerkit")}, nopeus {n.poyta.Nopeus.Asento}";
+                 + $"kuvat {(IssKytkimet.KuvatPaikalla ? "Codex" : "paikkamerkit")}, nopeus {n.poyta.Nopeus.Asento}, "
+                 + $"kerrokset {n.poyta.Asettelu ?? "ei"}, valosumma piirretty {n.poyta.Piirretty}×";
+        }
+
+        /// <summary>A/B `astro kyyti kerrokset 0|1`: Linnanrakentajan renderikerrokset ↔ paikkamerkit (IssPaneeliKuvat).</summary>
+        public static void KerroksetAB(bool paalla)
+        {
+            IssPaneeliKuvat.Kaytossa = paalla;
+            if (instanssi != null) instanssi.poyta.Asettele(instanssi.poytaLeveys);
         }
 
         string PaneelinMitta()
