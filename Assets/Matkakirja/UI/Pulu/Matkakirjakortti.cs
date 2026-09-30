@@ -128,7 +128,13 @@ namespace Matkakirja.Natiivi
             // pysyy tasaisena (.mk-matkakirja--pieni peittää kuvan).
             Rakenne.Tausta(kortti, KermaValo);
             Kirjasimet.Aseta(kortti, Kirjasin.Kone);
-            kortti.RegisterCallback<PointerDownEvent>(_ => { if (pieni) AsetaPieni(false); });
+            kortti.RegisterCallback<PointerDownEvent>(_ => { if (pieni) Muunna(false); });
+            // Mitat talteen levossa (pehmeä liike päättyy täsmälleen USS:n asetteluun, ks. Muunna).
+            kortti.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                if (muutos != null || !nakyvissa || kortti.layout.width < 1f) return;
+                if (pieni) lappuKoko = kortti.layout.size; else avoinLeveys = kortti.layout.width;
+            });
 
             var ylarivi = Rakenne.El("mk-matkakirja__ylarivi", kortti, PickingMode.Ignore);
             otsikko = Rakenne.Teksti("Matkapäiväkirja", "mk-matkakirja__otsikko", ylarivi);
@@ -198,15 +204,14 @@ namespace Matkakirja.Natiivi
             {
                 kortti.style.top = Ylapalkki.Varaus + 8;
                 kortti.style.left = StyleKeyword.Null;
-                kortti.style.width = StyleKeyword.Null;
+                if (muutos == null) kortti.style.width = StyleKeyword.Null; // pehmeä liike omistaa leveyden
                 return;
             }
             var paikka = kortti.parent.WorldToLocal(ylapilleri.worldBound);
             kortti.style.top = paikka.yMax + 6;
             kortti.style.left = paikka.xMin;
             // Lappu samanlevyisenä kuin rahapilleri; auki oleva kortti omalla leveydellään (USS).
-            if (pieni) kortti.style.width = paikka.width;
-            else kortti.style.width = StyleKeyword.Null;
+            if (muutos == null) kortti.style.width = pieni ? new StyleLength(paikka.width) : new StyleLength(StyleKeyword.Null);
             // Pillerin kaiutin on mittari, ei kytkin: napautus avaa kortin (tekstin) kuten muu pilleri.
             kaiutin.pickingMode = pieni ? PickingMode.Ignore : PickingMode.Position;
         }
@@ -268,12 +273,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Lappu auki (web asetaPaivakirjanKoko(false), lapun napautus); testikomento ui matkakirja auki.</summary>
         public void Avaa()
         {
-            if (Nakyy) AsetaPieni(false);
+            if (Nakyy) Muunna(false);
         }
 
         public void KartanLiike()
         {
-            if (Nakyy && !pieni) Kutista();
+            if (Nakyy && !pieni) Muunna(true);
         }
 
         bool linssiKutisti;
@@ -288,12 +293,12 @@ namespace Matkakirja.Natiivi
             if (paalla)
             {
                 linssiKutisti = Nakyy && !pieni;
-                if (linssiKutisti) Kutista();
+                if (linssiKutisti) Muunna(true);
             }
             else if (linssiKutisti)
             {
                 linssiKutisti = false;
-                if (Nakyy && pieni) AsetaPieni(false);
+                if (Nakyy && pieni) Muunna(false);
             }
         }
 
@@ -307,13 +312,13 @@ namespace Matkakirja.Natiivi
             if (!piiloon) kertojaLoppui = -1f;
             if (piiloon == luentaPiilo) return;
             luentaPiilo = piiloon;
-            if (piiloon && Nakyy && !pieni) Kutista();
+            if (piiloon && Nakyy && !pieni) Muunna(true);
             // Löydös 87: isoisän luennon jälkeen lappu tiivistyy pelkkään kaupungin nimeen.
             if (!piiloon && merkinta != null && merkinta.Kaiutin && !luettu) { luettu = true; PaivitaLyhyt(true); }
         }
 
         bool luettu;
-        IVisualElementScheduledItem lyhytAnimaatio, kutistus;
+        IVisualElementScheduledItem lyhytAnimaatio;
 
         /// <summary>
         /// Lapun teksti: luennan ajan otsikko (ja lyhyt paikkarivi), luennon jälkeen kaupungin nimi. Löydös 97 (SÄÄNTÖ):
@@ -340,26 +345,183 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Löydös 97 (SÄÄNTÖ, omistaja build 13): automaattisesti pienenevä laatikko kutistuu rivi kerrallaan eikä
-        /// kertarysäyksellä. Auki oleva kortti madaltuu rivin (20 pt) 45 ms:n välein ja muuttuu lapuksi, kun jäljellä on
-        /// enää lapun korkeus. Pieni liike pois: suoraan lapuksi.
+        /// PEHMEÄ PIENENNYS JA AVAUS (omistaja 30.9.2026: "Pienennys animaatio pitää olla pehmeämpi"; korvaa löydöksen 97
+        /// portaat, rivi 20 pt 45 ms:n välein). Webin mitat (css/styles.css body[data-mode] .fact-card: max-height 260 ms
+        /// ease; .fact-card &gt; * opacity 160 ms ease): laatikko liukuu kortin ja lapun mittojen välillä 260 ms
+        /// ease-in-out (cubic-bezier(0.42, 0, 0.58, 1)) leveydeltään ja korkeudeltaan vasemmasta yläkulmasta, ja sisältö
+        /// häipyy 160 ms:ssä (pienennys) tai nousee laatikon perässä (avaus). Lapset ovat koko liikkeen ajan lopullisessa
+        /// leveydessään eivätkä kutistu (laatikko leikkaa ne), joten teksti ei rivity uudelleen kesken liikkeen. Lapun teksti
+        /// nousee näkyviin vasta laatikon asetuttua (120 ms). Lapun ja avoimen kortin mitat muistetaan edellisestä kerrasta,
+        /// jotta liike päättyy täsmälleen USS:n asetteluun eikä lopussa hypähdä. Pieni liike: heti.
         /// </summary>
-        void Kutista()
+        public const float MuutosS = 0.26f, SisaltoS = 0.16f, LyhytS = 0.12f, SisaltoViiveS = 0.08f;
+        IVisualElementScheduledItem muutos, lyhytNousu;
+        Vector2 lappuKoko;
+        float avoinLeveys;
+
+        void Muunna(bool pieneksi)
         {
-            if (pieni || !Nakyy) return;
-            float h = kortti.layout.height;
-            if (LinssiUi.VahennettyLiike() || float.IsNaN(h) || h <= 60f) { AsetaPieni(true); return; }
-            kutistus?.Pause();
-            kortti.style.overflow = Overflow.Hidden;
-            kutistus = kortti.schedule.Execute(() =>
+            if (!Nakyy) { AsetaPieni(pieneksi); return; }
+            if (pieneksi == pieni && muutos == null) return;
+            // Nykyinen näkyvä koko (myös kesken vastakkaisen liikkeen: suunta kääntyy siitä).
+            float w0 = kortti.layout.width, h0 = kortti.layout.height;
+            LopetaMuutos();
+            if (LinssiUi.VahennettyLiike() || float.IsNaN(w0) || w0 < 1f || float.IsNaN(h0) || h0 < 1f) { AsetaPieni(pieneksi); return; }
+            Ruudunpaivitys.Herata(MuutosS + 0.15f);
+            if (pieneksi)
             {
-                h -= 20f;
-                if (h > 40f && !pieni) { kortti.style.maxHeight = h; return; }
-                kutistus?.Pause();
-                kortti.style.maxHeight = StyleKeyword.Null;
-                kortti.style.overflow = StyleKeyword.Null;
-                if (!pieni) AsetaPieni(true);
-            }).Every(45);
+                var (w1, h1) = LapunMitat();
+                foreach (var c in kortti.Children()) { c.style.width = c.layout.width; c.style.flexShrink = 0f; }
+                KiinnitaLaatikko(w0, h0);
+                Aja(w0, h0, w1, h1, t =>
+                {
+                    float a = 1f - Mathf.Clamp01(t / SisaltoS);
+                    foreach (var c in kortti.Children()) c.style.opacity = a;
+                }, () =>
+                {
+                    VapautaLapset();
+                    VapautaLaatikko();
+                    AsetaPieni(true);
+                    NostaLyhyt();
+                });
+                return;
+            }
+            // Avaus: avoin asettelu heti, mutta laatikko lapun kokoisena ja lapset näkymättöminä lopullisessa leveydessään.
+            lyhytNousu?.Pause();
+            lyhyt.style.opacity = StyleKeyword.Null;
+            AsetaPieni(false);
+            float leveys = AvoimenLeveys();
+            float sisalto = Mathf.Max(1f, leveys - kortti.resolvedStyle.paddingLeft - kortti.resolvedStyle.paddingRight);
+            foreach (var c in kortti.Children()) { c.style.width = sisalto; c.style.flexShrink = 0f; c.style.opacity = 0f; }
+            KiinnitaLaatikko(w0, h0);
+            // Korkeus seuraavasta asettelusta: lapset ovat jo lopullisessa leveydessään.
+            muutos = kortti.schedule.Execute(() =>
+            {
+                muutos = null;
+                Aja(w0, h0, leveys, AvoimenKorkeus(), t =>
+                {
+                    float a = Mathf.Clamp01((t - SisaltoViiveS) / SisaltoS);
+                    foreach (var c in kortti.Children()) c.style.opacity = a;
+                }, () =>
+                {
+                    VapautaLapset();
+                    VapautaLaatikko();
+                    Asettele();
+                });
+            });
+        }
+
+        void Aja(float w0, float h0, float w1, float h1, Action<float> sisalto, Action valmis)
+        {
+            float kulunut = 0f, edellinen = Time.unscaledTime;
+            muutos = kortti.schedule.Execute(() =>
+            {
+                // Askel enintään 50 ms: raskas ruutu hidastaa liikettä eikä hyppää sen yli (kuten Ponnahdus).
+                float nyt = Time.unscaledTime;
+                kulunut += Mathf.Min(nyt - edellinen, 0.05f);
+                edellinen = nyt;
+                float k = Ponnahdus.Kaari(0.42f, 0f, 0.58f, 1f, kulunut / MuutosS);
+                kortti.style.width = Mathf.Lerp(w0, w1, k);
+                kortti.style.height = Mathf.Lerp(h0, h1, k);
+                sisalto(kulunut);
+                if (kulunut < MuutosS) return;
+                muutos?.Pause();
+                muutos = null;
+                valmis();
+            }).Every(0);
+        }
+
+        void KiinnitaLaatikko(float w, float h)
+        {
+            kortti.style.overflow = Overflow.Hidden;
+            kortti.style.maxHeight = StyleKeyword.None;
+            kortti.style.maxWidth = StyleKeyword.None;
+            kortti.style.width = w;
+            kortti.style.height = h;
+        }
+
+        void VapautaLaatikko()
+        {
+            kortti.style.overflow = StyleKeyword.Null;
+            kortti.style.maxHeight = StyleKeyword.Null;
+            kortti.style.maxWidth = StyleKeyword.Null;
+            kortti.style.width = StyleKeyword.Null;
+            kortti.style.height = StyleKeyword.Null;
+        }
+
+        void VapautaLapset()
+        {
+            foreach (var c in kortti.Children())
+            {
+                c.style.width = StyleKeyword.Null;
+                c.style.flexShrink = StyleKeyword.Null;
+                c.style.opacity = StyleKeyword.Null;
+            }
+        }
+
+        /// <summary>Kesken oleva liike pois ja kortti USS:n varaan (tila ei vaihdu).</summary>
+        void LopetaMuutos()
+        {
+            if (muutos == null) return;
+            muutos.Pause();
+            muutos = null;
+            VapautaLapset();
+            VapautaLaatikko();
+            Asettele();
+        }
+
+        /// <summary>Lapun teksti nousee laatikon asetuttua (120 ms).</summary>
+        void NostaLyhyt()
+        {
+            lyhytNousu?.Pause();
+            lyhyt.style.opacity = 0f;
+            float alku = Time.unscaledTime;
+            lyhytNousu = lyhyt.schedule.Execute(() =>
+            {
+                float a = Mathf.Clamp01((Time.unscaledTime - alku) / LyhytS);
+                lyhyt.style.opacity = a;
+                if (a >= 1f) { lyhyt.style.opacity = StyleKeyword.Null; lyhytNousu?.Pause(); }
+            }).Every(0);
+        }
+
+        /// <summary>
+        /// Lapun mitat: edellisen lapun asettelu (sama kaupunki ja pilleri), muuten USS:n mukaan — iPhonen pilleri rahapillerin
+        /// levyinen ja 36 pt, muuten nimen levyinen (12,5 px:n teksti, pehmuste 10 + 10 pt, kaiutin 6 + 24 pt) ja 32 pt.
+        /// </summary>
+        (float W, float H) LapunMitat()
+        {
+            if (lappuKoko.x > 1f && lappuKoko.y > 1f) return (lappuKoko.x, lappuKoko.y);
+            var pilleri = ylapalkki?.Pilleri;
+            if (Kaupunkipilleri && pilleri != null && pilleri.worldBound.width > 0f) return (pilleri.worldBound.width, 36f);
+            string teksti = lyhyt.text ?? "";
+            float koko = lyhyt.resolvedStyle.fontSize > 0f ? lyhyt.resolvedStyle.fontSize : 12.5f;
+            float w = lyhyt.MeasureTextSize(teksti, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * 12.5f / koko;
+            bool kaiutinNakyy = !kaiutin.ClassListContains("mk-matkakirja__piilo");
+            float leveys = w + 20f + (kaiutinNakyy ? 30f : 0f);
+            float katto = kortti.parent != null ? 0.62f * kortti.parent.layout.width : leveys;
+            return (Mathf.Min(leveys, katto), 32f);
+        }
+
+        /// <summary>Avoimen kortin leveys: edellinen avoin asettelu, muuten USS (340 pt, enintään 62 %, puhelimella 97 %).</summary>
+        float AvoimenLeveys()
+        {
+            if (avoinLeveys > 1f) return avoinLeveys;
+            float isa = kortti.parent != null ? kortti.parent.layout.width : 393f;
+            return Mathf.Min(340f, (Puhelin ? 0.97f : 0.62f) * isa);
+        }
+
+        /// <summary>Avoimen kortin korkeus lasten asettelusta (lopullisessa leveydessään), enintään USS:n 60 % tilasta.</summary>
+        float AvoimenKorkeus()
+        {
+            var s = kortti.resolvedStyle;
+            float h = s.paddingTop + s.paddingBottom + s.borderTopWidth + s.borderBottomWidth;
+            foreach (var c in kortti.Children())
+            {
+                if (c.resolvedStyle.display == DisplayStyle.None) continue;
+                h += c.layout.height + c.resolvedStyle.marginTop + c.resolvedStyle.marginBottom;
+            }
+            float katto = kortti.parent != null ? 0.6f * kortti.parent.layout.height : h;
+            return Mathf.Min(h, katto);
         }
 
         /// <summary>
@@ -393,6 +555,7 @@ namespace Matkakirja.Natiivi
             Piiloon(lahderivi, true);
             pikkukuvat.Clear();
             if (m.Valokuvat.Count > 0) LisaaValokuva(m.Valokuvat);
+            LopetaMuutos();
             AsetaPieni(TekstitPiilossa);
             // Avaus ja sulku animoiden (omistaja 29.9.2026, Raamattu PR #3602; Ponnahdus = webin arvot); jo näkyvä vain päivittyy.
             if (!nakyvissa) Ponnahdus.Avaa(kortti);
@@ -424,6 +587,7 @@ namespace Matkakirja.Natiivi
         public void Piilota()
         {
             kirjoitus?.Pause();
+            LopetaMuutos();
             if (!nakyvissa) { Ponnahdus.Lopeta(kortti); kortti.style.display = DisplayStyle.None; return; }
             nakyvissa = false;
             Ponnahdus.Sulje(kortti);
@@ -495,12 +659,6 @@ namespace Matkakirja.Natiivi
 
         void AsetaPieni(bool p)
         {
-            if (!p && kutistus != null)
-            {
-                kutistus.Pause();
-                kortti.style.maxHeight = StyleKeyword.Null;
-                kortti.style.overflow = StyleKeyword.Null;
-            }
             pieni = p;
             kortti.EnableInClassList("mk-matkakirja--pieni", p);
             kortti.EnableInClassList("mk-matkakirja--nimi", p && VainNimi && !Kaupunkipilleri);
