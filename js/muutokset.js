@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2473, teksti: 'vie-dioraama: blender-kopioon myös png (#3745)' },
   { v: 2472, teksti: 'Maakuntien toinen kuva: BEL, BIH, BGR (#3744)' },
   { v: 2471, teksti: 'Olavinlinna: CC0/PD-äänet kytketty tiloihin, ma… (#3702)' },
   { v: 2470, teksti: 'Olavinlinnan kuori v17: kaakon muurin juuri oma… (#3732)' },
