@@ -42,6 +42,29 @@ namespace Matkakirja.Natiivi
         /// masterissa lisäksi DioraamaLimitteri (−1 dBFS).</summary>
         public const float PuheTaso = 0.708f;
 
+        // --- MIKSERIKOUKUT (Pelikoodarin AaniMikseri, omistajan kehittäjämikseri 30.9.2026) ------------------------------------
+        // AaniMikseri omistaa säätöjen tilan ja tallennuksen ja kirjoittaa kertoimet näihin; tämä luokka vain soittaa.
+        /// <summary>Mikseritila: repliikeistä soi kuiva + kaiku tahdistettuna (jos pankissa on raidat), muuten Tiedosto.</summary>
+        public static bool MikseriTila;
+        /// <summary>Kertoimet 0…2 (puuttuva = 1): huone (tila-id; yleisnäkymä ""), tausta (ääni-id).</summary>
+        public static readonly Dictionary<string, float> HuoneKerroin = new Dictionary<string, float>(), TaustaKerroin = new Dictionary<string, float>();
+        /// <summary>Taustojen väistö puheen alla (tila → 0…1, puuttuva = 1 = nykyinen 0,15-taso) ja kaiun taso (tila → 0…1).</summary>
+        public static readonly Dictionary<string, float> VaistoKerroin = new Dictionary<string, float>(), KaikuKerroin = new Dictionary<string, float>();
+        /// <summary>A/B: kaiku pois (ohittaa KaikuKerroimen). Kaiun pituus "lyhyt" (Kaiku) | "pitka" (KaikuPitka).</summary>
+        public static bool KaikuPois;
+        public static string KaikunPituus = "lyhyt";
+        /// <summary>Kohdistettu huone (null = yleisnäkymä) ja sen vaihtuminen.</summary>
+        public static string NykyinenHuone { get; private set; }
+        public static event Action<string> HuoneVaihtui;
+        /// <summary>Nyt soivat taustat (tila, ääni-id, taso väistön jälkeen); enintään 6.</summary>
+        public static IReadOnlyList<(string Tila, string AaniId, float Taso)> SoivatTaustat => soivatTaustat;
+        static readonly List<(string Tila, string AaniId, float Taso)> soivatTaustat = new List<(string, string, float)>();
+        static DioraamaAanet aktiivinen;
+        static float Kerroin(Dictionary<string, float> d, string avain, float oletus = 1f) =>
+            avain != null && d.TryGetValue(avain, out var v) ? v : oletus;
+        AudioSource puheKuiva, puheKaiku;
+        float puheLoppuu = -1f; // kuunnelman rivi väistää taustoja tähän asti (unscaled)
+
         /// <summary>Tilan silmukat: avain (tilaId, aaniId) — kuten Tila.Aanet-lista, jokainen käyttö oma kahva,
         /// vaikka eri tilat sattuisivat viittaamaan samaan äänitiedostoon (ks. tiedoston alkukommentti).</summary>
         readonly Dictionary<(string Tila, string Aani), ISilmukka> silmukat = new Dictionary<(string, string), ISilmukka>();
@@ -49,6 +72,7 @@ namespace Matkakirja.Natiivi
         /// tämän parin tavoitetaso ensin putosi ≤0,01:een kahvan ollessa auki. Kun t - tämä ≥ 1,5 s, kahva Lopetetaan
         /// ja poistetaan silmukat-sanakirjasta (pooli vapautuu; seuraava tarve avaa uuden kahvan). Ei sisällä avaimia
         /// joiden kahva ei ole auki tai joiden tavoitetaso on tälläkin hetkellä > 0,01.</summary>
+        readonly HashSet<string> aaniNahty = new HashSet<string>();
         readonly Dictionary<(string Tila, string Aani), double> hiljaisuusAlkoi = new Dictionary<(string, string), double>();
         /// <summary>Paivita-kutsun uudelleenkäyttämät puskurit (ei uutta listaa/joukkoa joka ruutu): ehdokkaat =
         /// kaikki tila+ääni-parit tavoitetasoineen tältä ruudulta, sallitut = niistä valitut (kynnys+top 6).</summary>
@@ -88,7 +112,13 @@ namespace Matkakirja.Natiivi
                 kertaAaniLahde = go.AddComponent<AudioSource>();
                 kertaAaniLahde.playOnAwake = false;
                 kertaAaniLahde.spatialBlend = 0;
+                puheKuiva = go.AddComponent<AudioSource>(); puheKuiva.playOnAwake = false; puheKuiva.spatialBlend = 0;
+                puheKaiku = go.AddComponent<AudioSource>(); puheKaiku.playOnAwake = false; puheKaiku.spatialBlend = 0;
             }
+            aktiivinen = this;
+            // Kuunnelman tekstityksen äänikoukut (Natiivi-UI:n KuunnelmaKaistale): sama puheväylä, kaiku ja kertoimet.
+            KuunnelmaKaistale.Soita = id => aktiivinen?.SoitaPuhe(id);
+            KuunnelmaKaistale.AanenKesto = id => aktiivinen?.PuheenKesto(id);
             DioraamaLimitteri.Paalle(true);
             if (rakennus?.Taulu?.Kohdat != null)
                 foreach (var k in rakennus.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
@@ -117,12 +147,17 @@ namespace Matkakirja.Natiivi
                 if (h.Reaktio != null) VarmistaLadattuAaniId(h.Reaktio.Aani);
             }
             if (tila.Taulu?.Kohdat != null) foreach (var k in tila.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
+            foreach (var rivi in tila.Kuunnelma) VarmistaLadattuAaniId(rivi.Aani);
         }
 
         void VarmistaLadattuAaniId(string aaniId)
         {
             if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani)) return;
             VarmistaLadattu(sovitin.AaniUrl(aani.Tiedosto));
+            // Mikseriraidat vain mikseritilassa (kehittäjä; ei turhaa latausta pelaajille).
+            if (MikseriTila)
+                foreach (var p in new[] { aani.Kuiva, aani.Kaiku, aani.KaikuPitka })
+                    if (!string.IsNullOrEmpty(p)) VarmistaLadattu(sovitin.AaniUrl(p));
         }
 
         /// <summary>Joka kehys (DioraamaSovitin.Paivita): tilan silmukoiden tasot, tehosteajastimet ja käsikirjoituksen
@@ -152,7 +187,8 @@ namespace Matkakirja.Natiivi
                 foreach (var ap in tila.Aanet)
                 {
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
-                    double taso01Raw = aanimaisemaPaalla ? tavoite * ap.Voimakkuus * pankinVoimakkuus : 0;
+                    double taso01Raw = aanimaisemaPaalla ? tavoite * ap.Voimakkuus * pankinVoimakkuus
+                        * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) : 0;
                     ehdokkaat.Add((tila.Id, ap.AaniId, taso01Raw));
                 }
                 if (aanimaisemaPaalla)
@@ -169,13 +205,24 @@ namespace Matkakirja.Natiivi
             // suurin ensin -- kynnyksen alle jäävät ovat aina lajittelun lopussa, joten break riittää.
             ehdokkaat.Sort((a, b) => b.Taso.CompareTo(a.Taso));
             sallitut.Clear();
-            for (int i = 0; i < ehdokkaat.Count && i < 6; i++)
+            // Sama ääni useasta tilasta (1.1 (78): linna-tuuli ja tulisija-ratina kolmesti) soi yhtenä kahvana suurimmalla
+            // tasolla: ei päällekkäistä samaa klippiä eikä kuuden paikan tuhlausta.
+            aaniNahty.Clear();
+            for (int i = 0, n = 0; i < ehdokkaat.Count && n < 6; i++)
             {
                 if (ehdokkaat[i].Taso <= 0.01) break;
+                if (!aaniNahty.Add(ehdokkaat[i].Aani)) continue;
                 sallitut.Add((ehdokkaat[i].Tila, ehdokkaat[i].Aani));
+                n++;
             }
 
-            double duck = puhuu ? 0.15 : 1.0; // sovittimen oma duckaus repliikin ajaksi (ehdotusdokumentin mukaan)
+            string huone = nakyma.KohdeTila;
+            if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); }
+            bool puheSoi = puhuu || Time.unscaledTime < puheLoppuu;
+            // Sovittimen duckaus puheen ajaksi (0,15); mikserin VaistoKerroin skaalaa väistön (1 = nykyinen, 0 = ei väistöä).
+            double duck = puheSoi ? 1.0 - 0.85 * Kerroin(VaistoKerroin, huone ?? "") : 1.0;
+            soivatTaustat.Clear();
+            foreach (var e in ehdokkaat) if (sallitut.Contains((e.Tila, e.Aani))) soivatTaustat.Add((e.Tila, e.Aani, (float)(e.Taso * duck)));
             foreach (var e in ehdokkaat)
             {
                 var avainSilmukka = (e.Tila, e.Aani);
@@ -207,7 +254,7 @@ namespace Matkakirja.Natiivi
             {
                 bool uusiAskel = avain != null;
                 bool aaniSoi = uusiAskel && kertojaPaalla && AaniOnValmis(nakyma.AskeleenAani);
-                if (aaniSoi) SoitaKertaAani(nakyma.AskeleenAani, PuheTaso);
+                if (aaniSoi) SoitaPuhe(nakyma.AskeleenAani);
                 if (aaniSoi != puhuu) { y?.Repliikki(aaniSoi); puhuu = aaniSoi; }
                 viimeAskelAvain = avain;
             }
@@ -221,6 +268,10 @@ namespace Matkakirja.Natiivi
             silmukat.Clear();
             hiljaisuusAlkoi.Clear();
             if (kertaAaniLahde != null) kertaAaniLahde.Stop();
+            if (puheKuiva != null) puheKuiva.Stop();
+            if (puheKaiku != null) puheKaiku.Stop();
+            puheLoppuu = -1f;
+            if (aktiivinen == this) aktiivinen = null;
             DioraamaLimitteri.Paalle(false);
             y?.Repliikki(false);
             puhuu = false;
@@ -260,8 +311,56 @@ namespace Matkakirja.Natiivi
         bool AaniOnValmis(string aaniId)
         {
             if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani)) return false;
-            string url = sovitin.AaniUrl(aani.Tiedosto);
-            return url != null && klipit.TryGetValue(url, out var klippi) && klippi != null;
+            if (MikseriTila && Klippi(aani.Kuiva) != null) return true;
+            return Klippi(aani.Tiedosto) != null;
+        }
+
+        AudioClip Klippi(string tiedosto)
+        {
+            if (string.IsNullOrEmpty(tiedosto)) return null;
+            string url = sovitin.AaniUrl(tiedosto);
+            return url != null && klipit.TryGetValue(url, out var k) ? k : null;
+        }
+
+        /// <summary>Repliikki tai kuunnelman rivi puheväylälle (−3 dB). Mikseritilassa kuiva + kaiku (lyhyt/pitkä) kahdelta
+        /// lähteeltä samalla dspTime-hetkellä (PlayScheduled +50 ms); kaiun taso KaikuKerroin[huone] (KaikuPois → 0).
+        /// Muuten Tiedosto kuten ennen. Palauttaa, soiko.</summary>
+        bool SoitaPuhe(string aaniId)
+        {
+            if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani)) return false;
+            if (MikseriTila && !string.IsNullOrEmpty(aani.Kuiva) && puheKuiva != null)
+            {
+                var kuiva = Klippi(aani.Kuiva);
+                string kaikuPolku = KaikunPituus == "pitka" && !string.IsNullOrEmpty(aani.KaikuPitka) ? aani.KaikuPitka : aani.Kaiku;
+                var kaiku = Klippi(kaikuPolku);
+                if (kuiva != null)
+                {
+                    double hetki = AudioSettings.dspTime + 0.05;
+                    puheKuiva.Stop(); puheKaiku.Stop();
+                    puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso; puheKuiva.PlayScheduled(hetki);
+                    float kaikuTaso = KaikuPois ? 0f : Kerroin(KaikuKerroin, NykyinenHuone ?? "", 1f);
+                    if (kaiku != null && kaikuTaso > 0.001f)
+                    { puheKaiku.clip = kaiku; puheKaiku.volume = PuheTaso * kaikuTaso; puheKaiku.PlayScheduled(hetki); }
+                    puheLoppuu = Time.unscaledTime + Math.Max(kuiva.length, kaiku != null ? kaiku.length : 0f) + 0.05f;
+                    return true;
+                }
+                VarmistaLadattu(sovitin.AaniUrl(aani.Kuiva));
+                if (!string.IsNullOrEmpty(kaikuPolku)) VarmistaLadattu(sovitin.AaniUrl(kaikuPolku));
+            }
+            var k = Klippi(aani.Tiedosto);
+            if (k == null) { VarmistaLadattu(sovitin.AaniUrl(aani.Tiedosto)); return false; }
+            kertaAaniLahde.PlayOneShot(k, PuheTaso);
+            puheLoppuu = Time.unscaledTime + k.length;
+            return true;
+        }
+
+        /// <summary>Puheen kesto sekunteina (kuunnelman ajoitus): ladattu klippi, muuten pankin kesto_s, muuten null.</summary>
+        float? PuheenKesto(string aaniId)
+        {
+            if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani)) return null;
+            var k = (MikseriTila ? Klippi(aani.Kuiva) : null) ?? Klippi(aani.Tiedosto);
+            if (k != null) return k.length;
+            return aani.KestoS > 0 ? (float)aani.KestoS : (float?)null;
         }
 
         void VarmistaLadattu(string url)
