@@ -308,6 +308,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Elävä kohde (`elava`); null = vanha AABB-napautus.</summary>
         public Elava Elava;
         public List<EtsintaVaihe> Etsinta = new List<EtsintaVaihe>();
+        /// <summary>Kuunnelma (tila.kuunnelma[]): rivit järjestyksessä, tekstitys huoneeseen tultaessa (UI/Linssit/Kuunnelma.cs).</summary>
+        public List<KuunnelmaRivi> Kuunnelma = new List<KuunnelmaRivi>();
         public List<Esine> Esineet = new List<Esine>();
         /// <summary>Tilaan sijoitetut liekki-instanssit (era 2); tyhjä vanhassa muodossa.</summary>
         public List<LiekkiPaikka> Liekit = new List<LiekkiPaikka>();
@@ -406,6 +408,16 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public string Nimi;
         public List<(string Teksti, string Lahde)> Rivit = new List<(string, string)>();
+    }
+
+    /// <summary>Huoneen kuunnelman rivi (Päätoimittaja 30.9.2026, `tila.kuunnelma[]`): puhuja = tilan hahmon id tai "pulu",
+    /// nimi tekstitykseen, huom (esim. "oven takaa"), aani = tuleva ääni-id (null, kunnes omistaja valitsee äänet).</summary>
+    public sealed class KuunnelmaRivi
+    {
+        public string Id, Puhuja, Nimi, Huom, Teksti, Aani;
+        public bool Pulu => Puhuja == "pulu";
+        /// <summary>Kesto ilman ääntä: 14 merkkiä sekunnissa + 0,6 s tauko (Päätoimittaja 30.9.).</summary>
+        public double TekstinKesto => (Teksti?.Length ?? 0) / 14.0 + 0.6;
     }
 
     /// <summary>Kertojan esittelyjakso (uusi linna 30.9.2026, `kertoja.jaksot[]`): teksti (≤ 3 virkettä) ja kamera,
@@ -823,6 +835,16 @@ namespace Matkakirja.Linssit.Dioraama
                     var ri = MiniJson.ObjektiTaiNull(ro);
                     if (ri != null) t.Infotaulu.Rivit.Add((MiniJson.Teksti(ri, "teksti"), MiniJson.Teksti(ri, "lahde")));
                 }
+            }
+            foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "kuunnelma")))
+            {
+                var k = MiniJson.ObjektiTaiNull(ko);
+                if (k == null || string.IsNullOrEmpty(MiniJson.Teksti(k, "teksti"))) continue;
+                t.Kuunnelma.Add(new KuunnelmaRivi
+                {
+                    Id = MiniJson.Teksti(k, "id"), Puhuja = MiniJson.Teksti(k, "puhuja"), Nimi = MiniJson.Teksti(k, "nimi"),
+                    Huom = MiniJson.Teksti(k, "huom"), Teksti = MiniJson.Teksti(k, "teksti"), Aani = MiniJson.Teksti(k, "aani"),
+                });
             }
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "hahmot")))
             {
