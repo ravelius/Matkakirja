@@ -9405,6 +9405,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Çanakkale': {
       lyhyt: 'Dardanellien yli kulkeva 1915 Çanakkale -silta avattiin 2022, ja sen 2 023 metrin pääjänne on maailman riippusilloista pisin.',
+      pitka: "Gallipolin niemimaa on Turkin Euroopan puolen kaakkoiskulma, ja sen eteläosa kuuluu vuonna 1973 perustettuun historialliseen kansallispuistoon, jonka ala on yli 33 000 hehtaaria. Metsäisten kukkuloiden lomassa on kymmeniä hautausmaita ja muistomerkkejä, sillä Gallipolin kampanja käytiin vuosina 1915–1916 ja siinä taistelivat osmanni- ja liittoutuneiden joukot. Niemen kärjessä kohoaa 41,7 metriä korkea Çanakkalen marttyyrien muistomerkki, joka avattiin vuonna 1960. Anzac Covessa ja Lone Pinella Australian ja Uuden-Seelannin vieraat kokoontuvat 25. huhtikuuta muistopäivään. Turkkilaiset viettävät omaa muistopäiväänsä 18. maaliskuuta. Kilitbahirin linnoitus kohoaa niemen puolella Dardanellien kapeimmalla kohdalla, ja lautat vievät salmen yli Eceabatiin.",
     },
     'Çankiri': {
       lyhyt: 'Çankırın suolaluola on yksi Turkin suurimmista vuorisuolaesiintymistä, ja suolaa on louhittu sieltä antiikin ajoista asti.',
@@ -9423,6 +9424,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Edirne: {
       lyhyt: 'Mimar Sinan piti Edirnen Selimiye-moskeijaa mestariteoksenaan, ja se on ollut Unescon maailmanperintöä vuodesta 2011.',
+      pitka: "Edirne on Turkin luoteiskulman rajakaupunki, jonka lähellä Kreikan ja Bulgarian rajat kohtaavat. Noin 180 000 asukkaan kaupunki toimi Osmanien pääkaupunkina 1360-luvulta vuoteen 1453. Vanhin moskeija Eski Cami rakennettiin vuosina 1403–1422, ja Üç Şerefeli -moskeijan kolmiparvekkeiset minareetit valmistuivat 1440-luvulla. Restauroidussa Karaağaçin rautatieasemassa toimii nykyisin Trakian yliopiston kuvataidetiedekunta, ja ympäröivillä tasangoilla viljellään maissia, sokerijuurikasta ja auringonkukkaa. Kesäkuun lopussa Sarayiçin saarella käydään Kırkpınarin öljypainit, jotka ovat Unescon aineetonta kulttuuriperintöä vuodesta 2010. Ravintoloissa tarjotaan Edirnen tunnetuinta ruokaa, ciğer tavaa eli paistettua maksaa.",
     },
     Elazig: {
       lyhyt: 'Hazarjärvi Elazığin kaakkoispuolella on Tigrisin lähde, ja sen pohjasta on löydetty jälkiä veden alle jääneestä kaupungista.',
@@ -9459,6 +9461,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Istanbul: {
       lyhyt: 'Marmaray-junat sukeltavat Bosporinsalmen alle upotettuun tunneliin, ja vuodesta 2013 raiteet ovat yhdistäneet Euroopan ja Aasian.',
+      pitka: "Istanbulin väestöstä, noin 15,75 miljoonasta asukkaasta, kaksi kolmasosaa asuu Euroopan puolella, ja sen sydän on Sultanahmetin niemellä, jonka Unesco merkitsi maailmanperinnöksi vuonna 1985. Hagia Sofia valmistui vuonna 537 ja toimii nykyisin moskeijana. Konstantinopolin muinaiset Theodosioksen maamuurit kulkevat noin 5,7 kilometrin matkan kaupungin länsilaidalla, ja sisämuurissa oli 96 tornia. Bosporin ensimmäinen silta valmistui vuonna 1973 ja Fatih Sultan Mehmetin silta 1988. Uusi Istanbulin lentoasema Arnavutköyn kaupunginosassa Mustanmeren rannalla avattiin 2018, ja kaikki matkustajaliikenne siirtyi sinne huhtikuussa 2019. Kaupungin nimeksi tuli virallisesti Istanbul vuonna 1930.",
     },
     Izmir: {
       lyhyt: 'İzmirin Konakin aukion kellotorni valmistui 1901, ja sen suunnitteli levantiniranskalainen arkkitehti Raymond Charles Péré.',
@@ -9489,6 +9492,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirklareli: {
       lyhyt: 'İğneadan kansallispuistossa Bulgarian rajalla kasvaa harvinaista longoz-tulvametsää, jota Strandžan vuorilta laskevat purot tulvivat.',
+      pitka: "Kırklareli sijaitsee Turkin Traakiassa, ja sen pohjoisraja Bulgariaan on noin 180 kilometriä pitkä. Yıldızin vuoret halkovat 6 459 neliökilometrin läänin, jossa asuu noin 369 000 ihmistä. Pohjoisessa ja idässä maisemaa hallitsevat metsät, etelän pellot ja viinitarhat tekevät alueesta tärkeän viininviljelyalueen, ja Mustanmeren rannikolla kalastetaan. Demirköyn lähellä sijaitsee Dupnisan luola, 3 200 metriä pitkä tippukiviluolakokonaisuus, joka avattiin kävijöille vuonna 2005 ja joka on Itä-Traakian ainoa esittelyluola. Vizen kaupungissa seisoo Justinianus I:n aikainen bysanttilainen Pikku Hagia Sofia, nykyisin Gazi Süleyman Paşa -moskeija.",
     },
     Kirsehir: {
       lyhyt: 'Bağlaman mestari Neşet Ertaş syntyi 1938 Kırtıllarin kylässä Kırşehirissä.',
@@ -9558,6 +9562,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tekirdag: {
       lyhyt: 'Tekirdağin kuuluisin herkku ovat pienet, mausteiset Tekirdağ köftesi -grillipyörykät.',
+      pitka: "Tekirdağ on Marmaranmeren rannalla sijaitseva satamakaupunki, noin 130 kilometrin päässä Istanbulista länteen, jonka asukasluku on noin 186 000. Sen historia ulottuu antiikin Bisantheen, ja Mimar Sinan suunnitteli kaupungin Rüstem Paşa -moskeijan vuonna 1553. Ympäröivillä pelloilla viljellään syysvehnää, auringonkukkaa, kirsikoita ja viinirypäleitä. Kaupunki tunnetaan myös rakı-tislaamoistaan; seudun rypäleistä valmistettu anistislaus on kaupungin tunnetuin tuote. Vanhassa kaupungissa Rákóczi-museo muistuttaa unkarilaisruhtinaan maanpakolaisuudesta.",
     },
     Tokat: {
       lyhyt: 'Tokatin Zilessä Caesar voitti taistelun 47 eaa. ja kuittasi voittonsa sanoilla veni, vidi, vici.',
@@ -9662,9 +9667,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Belgorod: {
       lyhyt: 'Belgorod tarkoittaa valkoista kaupunkia, ja nimi viittaa seudun vaaleisiin liitu- ja kalkkikiviesiintymiin.',
+      pitka: "Belgorod perustettiin rajalinnakkeeksi vuonna 1596 Severski-Donetsin rannalle, ja nykyään noin 380 000 asukkaan kaupungissa on useita yliopistoja, filharmonia ja taidemuseo. Piispa Joasaf (1705–1754), jonka kirkko julisti pyhimykseksi vuonna 1911, on seudun kunnioitetuimpia hahmoja. Koillisessa sijaitseva Vanha Oskol on noin 220 000 asukkaan kaupunki, ja sen ympäristössä louhitaan rautamalmia Kurskin magneettisen anomalian reunalla. Belogorje-luonnonsuojelualue jakautuu useaan erilliseen osaan ja kattaa yhteensä noin 2 100 hehtaaria kalkkikivipohjaista maata. Alueen perinteisiin kuuluvat puunveisto ja kirjaillut rushnyk-pyyhkeet. Insinööri Vladimir Šuhov, jonka verkkomaiset hyperboloiditornit tunnetaan maailmalla, syntyi Grajvoronin kaupungissa.",
     },
     Bryansk: {
       lyhyt: 'Brjanskin metsän mänty- ja tammimetsät ja Nerussajoen suot on suojeltu, ja ne kuuluvat Unescon biosfäärialueeseen.',
+      pitka: "Brjanskin kaupunki Desna-joen varrella laskee perustamisvuodekseen 985, vaikka ensimmäinen kirjallinen maininta (Debrjansk) on vuodelta 1146. Pokrovan mäellä kohoaa vuonna 1698 valmistunut Pokrovan katedraali, joka yhdistää venäläistä muuraustraditiota Naryshkin-barokin piirteisiin. Kaupungin lähellä sijaitseva Svenin luostari perustettiin joidenkin lähteiden mukaan 1288, ja sen Svenskajan markkinat olivat 1600–1700-luvuilla Euroopan-Venäjän suurimpia. Runoilija Fjodor Tjuttšev syntyi 5. joulukuuta 1803 Ovstugin sukukartanossa, jossa toimii nykyään hänen muistokirjallisuusmuseonsa. Desnan yläpuolella Trubtševskin Kolminaisuuden katedraali seisoo kukkulalla; kaupunki mainitaan ensimmäisen kerran 1164.",
     },
     Buryat: {
       lyhyt: 'Selenga tuo Burjatiasta lähes puolet Baikaliin laskevien jokien vedestä, ja sen suisto on satojen lintulajien levähdyspaikka.',
@@ -9695,18 +9702,21 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ivanovo: {
       lyhyt: 'Ivanovo on vanha tekstiilikaupunki, ja koska kutomoissa työskenteli enimmäkseen naisia, sitä kutsutaan morsiamien kaupungiksi.',
+      pitka: "Ivanovon oblasti on yksi Venäjän pienimmistä, mutta väkeä on silti 927 828 (vuoden 2021 väestölaskenta), ja Volga virtaa alueen pohjoisosan halki. Ivanovon kaupungissa kannattaa katsoa ylös: 1920–30-luvun konstruktivismi on jättänyt katukuvaan Laivatalon, joka valmistui 1929–1930, sekä hevosenkengän muotoisen asuinkorttelin. Dmitri Burylinin nimeä kantavaan museokokonaisuuteen kuuluu Teollisuuden ja taiteen museo, joka avattiin 26. joulukuuta 1914, ja Burylinin perheen jugend-talossa toimiva Ivanovon painokankaan museo. Volgan rannalla Plyosin kaupungissa asuu enää alle kaksi tuhatta ihmistä, mutta sen kirkot ja mäkiset kadut vetävät kävijöitä Kultaisen renkaan reitille.",
     },
     'Kabardin-Balkar': {
       lyhyt: 'Baksanin laakson vuoren alla on neutriinolaboratorio, jonka ilmaisin tallensi vuonna 1987 kaukaisesta supernovasta tulleita neutriinoja.',
     },
     Kaliningrad: {
       lyhyt: 'Kaliningradin alueen Jantarnyissa on maailman suurin meripihkaesiintymä, ja meripihkaa kaivetaan siellä avolouhoksesta.',
+      pitka: "Kaliningradin kaupungissa asuu noin 500 000 ihmistä, ja sen sydän on Pregolja-joen Kantin saari. Siellä kohoaa 1300-luvulla rakennettu tiiligoottilainen tuomiokirkko, jonka katto ja huippu palautettiin 1990-luvulla; kello soittaa tasatunnein Beethovenin viidennen sinfonian alkutahdit. Maailmanmeren museo esittelee tutkimusalus Vitjazin sekä vuonna 2000 tuodun sukellusvene B-413:n, jonka sisällä voi kävellä. Länsipuolella Kuurinkynnäs, 98 kilometrin pituinen hiekkaniemi, on ollut Unescon maailmanperintökohde vuodesta 2000. Venäjän puolella se on kapeimmillaan vain 400 metriä leveä, ja liikkuvat dyynit nousevat jopa 60 metriin. Kesäisin Zelenogradskin ja Svetlogorskin rannat täyttyvät lomailijoista.",
     },
     Kalmyk: {
       lyhyt: 'Kalmukian pääkaupungissa Elistassa on Euroopan suurin buddhalainen temppeli, Buddha Šakjamunin kultainen asumus.',
     },
     Kaluga: {
       lyhyt: 'Kalugassa asui avaruuslentojen uranuurtaja Konstantin Tsiolkovski, ja kaupungin kosmonautiikan historian museo kantaa hänen nimeään.',
+      pitka: "Kaluga kohoaa Okan rannalla noin 150 kilometriä Moskovasta lounaaseen, ja sen ensimmäinen maininta on vuodelta 1371; nykyään kaupungissa on noin 330 000 asukasta ja Volkswagenin autotehdas vuodesta 2007. Alueen kulttuurikärki on maaseudulla: Ugran kansallispuiston (perustettu 1997) sisällä Nikola-Lenivetsin taidepuistossa taiteilija Nikolai Polissky ja Archstoyanie-festivaalin osallistujat ovat rakentaneet maisemaveistoksia vuodesta 2006. Okan vasemmalla rannalla Tarusa on tunnettu jo vuodesta 1246. Siellä on Tsvetajevan perheen museo, avattu 1992, ja Konstantin Paustovskin hauta Vanhalla hautausmaalla. Borovskin piirissä Etnomir esittelee eri kansojen rakennuksia ja käsitöitä.",
     },
     Kamchatka: {
       lyhyt: 'Kamtšatkan Kljutševskaja Sopka, noin 4 750 metriä, on Euraasian korkein toimiva tulivuori, ja se purkautuu yhä usein.',
@@ -9716,6 +9726,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Karelia: {
       lyhyt: 'Äänisen ja Vienanmeren rantakallioihin on hakattu tuhansia kivikautisia kalliopiirroksia, ja ne ovat Unescon maailmanperintöä.',
+      pitka: "Karjalan tasavallassa on noin 60 000 järveä, ja Euroopan suurimmat järvet, Laatokka ja Äänisjärvi, ulottuvat sen rajoille. Äänisen Kižin saarella seisova pogosta on ollut Unescon maailmanperintökohde vuodesta 1990. Sen Kirkastuskirkko on 37 metriä korkea ja siinä on 22 kupolia. Ruskealan entinen marmorilouhos, jota on louhittu vuodesta 1769, on täyttynyt kirkkaalla vedellä, ja sen kiveä on käytetty esimerkiksi Pietarin Iisakinkirkossa. Paikka kuului ennen talvisotaa Suomeen Ruskealan kuntana. Laatokan Valamon luostarin munkit muuttivat 1940 Heinävedelle, mutta luostari on nykyään jälleen toiminnassa.",
     },
     Kemerovo: {
       lyhyt: 'Kemerovon alue on Kuzbass eli Kuznetskin hiiliallas, Venäjän suurin kivihiilen louhinta-alue.',
@@ -9725,12 +9736,15 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirov: {
       lyhyt: 'Kirovin lähellä Dymkovossa muovaillaan yhä savileluja, jotka kalkitaan valkoisiksi ja maalataan kirkkain värein.',
+      pitka: "Kirov nousee Vjatka-joen rannalle, 896 kilometriä Moskovasta koilliseen, ja noin 470 000 asukkaan kaupungin ensimmäinen maininta on vuodelta 1374. Aiemmin se on tunnettu nimillä Vjatka ja Hlynov; nykyisen nimensä se sai joulukuussa 1934 Sergei Kirovin mukaan. Kaupungin tunnusmerkkejä ovat Aleksanterin puiston valkoiset rotundat, vuonna 1580 perustettu Trifonin luostari ja vuonna 1763 valmistunut Spasski-katedraali. Kaupungissa on lukuisia museoita, teattereita ja oppilaitoksia. Kirov on Volga-Vjatkan alueen teollisuuden ja koulutuksen keskus.",
     },
     Komi: {
       lyhyt: 'Komin Manpupunerin ylängöllä seisoo seitsemän 30–42-metristä kivipylvästä, joita kutsutaan seitsemäksi voimamieheksi.',
+      pitka: "Komin tasavalta on noin 416 000 neliökilometrin laajuinen, ja yli 70 prosenttia sen alasta on metsää. Pohjois-Uralin Komin neitseelliset metsät, 32 800 neliökilometrin alue, tulivat 1995 Venäjän ensimmäiseksi luonnon maailmanperintökohteeksi ja ovat Euroopan laajin koskematon boreaalinen metsä. Alueeseen kuuluvat Petšora-Ilytšin luonnonsuojelualue vuodelta 1930 ja Jugyd Va -kansallispuisto. Uralin korkein huippu Narodnaja, noin 1 900 metriä, kohoaa tasavallan puolella. Metsissä elää muun muassa poroja, soopeleita ja metsoja. Komit muodostavat tasavallan asukkaista noin neljänneksen.",
     },
     Kostroma: {
       lyhyt: 'Kostromaa pidetään Snegurotškan, Pakkasukon lumityttären, kotikaupunkina, ja Volgan rannalla on hänen puinen satutalonsa.',
+      pitka: "Kostroman kaupunki, noin 267 000 asukasta, sijaitsee Volgan ja Kostroma-joen yhtymäkohdassa, ja sen perustamisvuotena pidetään perinteisesti 1152. Kaupunki kuuluu Venäjän Kultaiseen renkaaseen: klassistiset Krasnyje rjady eli kauppa-arkadit nousivat entisen kremlin paikalle, ja Bogojavlenskin katedraali valmistui 1559–1565 kaupungin ensimmäisenä kivirakennuksena. Ipatjevin luostari Kostroma-joen rannalla perustettiin noin 1330; sinne oli majoittunut Mihail Romanov, kun kansankokous julisti hänet tsaariksi 14. maaliskuuta 1613. Luostarista löydettiin myös Hypatioksen kronikka. Alueen pinta-ala on noin 60 200 neliökilometriä, ja se on tärkeä puuntuotannon alue sekä perinteinen pellavan ja korutyön seutu.",
     },
     Krasnodar: {
       lyhyt: 'Krasnodarin aluepiirin Sotši on subtrooppinen lomakaupunki, jonka yläpuolisilla vuorilla ajettiin 2014 talviolympialaisten alppilajit.',
@@ -9743,39 +9757,50 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kursk: {
       lyhyt: 'Kurskin alueen maaperässä on niin paljon rautamalmia, että kompassi näyttää väärin – ilmiö tunnetaan Kurskin magneettisena anomaliana.',
+      pitka: "Kurskin kaupunki seisoo kolmen joen risteyksessä, ja sen nimi mainitaan kronikoissa jo vuonna 1032. Noin 435 000 asukkaan kaupungista lähtee perinteisesti kesällä alueen tunnetuin kulkue: Znamenskin luostarin ikoni kannetaan pääsiäisen jälkeisenä yhdeksäntenä perjantaina noin 30 kilometrin päähän Korennaja-erakkolaan ja palautetaan kaupunkiin syyskuun 13. päivänä. Rylskin pikkukaupunki (noin 15 000 asukasta, ensimmäinen maininta 1152) on kotikaupunki kauppias Grigori Šelihoville, joka kävi kauppaa Alaskassa. Kurskin lähellä Keski-Tšernozjom-luonnonsuojelualue (perustettu 1935) suojelee arojen mustamultaa ja kuuluu UNESCOn biosfäärialueiden verkostoon vuodesta 1978. Runoilija Afanasi Fetin kartano Vorobjovka on nykyään museo.",
     },
     Leningrad: {
       lyhyt: 'Leningradin alueella on suuri osa Laatokasta, Euroopan suurimmasta järvestä, josta Neva virtaa kohti Pietaria.',
+      pitka: "Leningradin alue kietoutuu Pietarin ympärille: yli 83 000 neliökilometrin alueella asuu noin kaksi miljoonaa ihmistä, ja hallinnollinen keskus on Gatšina. Pohjoisessa Viipuri eli Vyborg syntyi ruotsalaisten linnaksi 1293. Kaupungissa, jossa asuu nykyään noin 72 500 ihmistä, ovat nähtävinä keskiaikainen linna, Monrepos'n maisemapuisto ja Alvar Aallon kirjasto, joka valmistui 1935 ja kunnostettiin 2013. Viipuri oli 1917–1940 Suomen toiseksi suurin kaupunki. Volhov-joen varrella Staraja Ladoga ajoitetaan puuvuosirenkaiden mukaan perustetuksi 753, ja sen Yrjön kirkon freskot ovat 1100-luvulta.",
     },
     Lipetsk: {
       lyhyt: 'Lipetskin nimi tulee lehmuksesta, venäjäksi lipa, mutta nykyään kaupunki tunnetaan ennen kaikkea suuresta terästehtaastaan.',
+      pitka: "Lipetsk, noin 510 000 asukkaan kaupunki Voronež-joen varrella, syntyi vuonna 1703, kun Pietari Suuri määräsi valurautatehtaan rakennettavaksi rautamalmin lähelle. Kaupungin lieta- ja kivennäisvesikylpylä on yksi Venäjän vanhimmista. Lounaassa Don-joen rannalla, noin 90 kilometrin päässä, on Zadonsk (noin 9 900 asukasta): sen luostari perustettiin vuonna 1610, ja pyhiinvaeltajat tulevat yhä pyhän Tihonin haudalle; hän kuoli vuonna 1783. Jeletsissä, noin 100 000 asukkaan kaupungissa, jonka ensimmäinen maininta on 1146, kuuluisa pitsi on yhä kaupungin tuntomerkki, ja kirjailija Ivan Bunin kävi siellä lukiota. Zadonskin lähellä Galitšja Gora -suojelualue on vain 230 hehtaarin kokoinen, mutta sen osissa kohtaavat metsät, aro ja jokilaakson kosteikot; suojelu alkoi vuonna 1925.",
     },
     'Maga Buryatdan': {
       lyhyt: 'Magadanin alue on pinta-alaltaan Saksaa suurempi, mutta asukkaita on vain noin 136 000, ja lähes kaikki asuvat kaupungeissa.',
     },
     'Mariy-El': {
       lyhyt: 'Moni mari harjoittaa yhä vanhaa luonnonuskontoaan, ja yhteisiä rukoushetkiä pidetään pyhissä lehdoissa.',
+      pitka: "Joškar-Olan nimi tarkoittaa marin kielellä punaista kaupunkia (joškar ’punainen’, ola ’kaupunki’), ja nimi vahvistui vuonna 1927, vaikka kaupunki perustettiin linnoitukseksi jo 1584. Nyt pääkaupungissa asuu 281 000 ihmistä ja koko Marin tasavallassa noin 672 000, joista maria on noin 40 prosenttia. Kirjakieliä on kaksi, niittymari ja vuorimari, ja mari kuuluu suomen sukukieliin. Kaupungin ulkopuolella metsää riittää: vuonna 1985 perustettu Mari Chodran kansallispuisto peittää noin 366 neliökilometriä metsiä ja järviä.",
     },
     Mordovia: {
       lyhyt: 'Mordvassa puhutaan kahta suomalais-ugrilaista kieltä, ersää ja mokšaa, jotka ovat tasavallan virallisia kieliä venäjän rinnalla.',
+      pitka: "Saranskissa Insar-joen itärannalla kohoaa Mordovia Arena, jonka kirkkaanväriset metallipaneelit viittaavat mordvalaisten kansanperinteen aurinkosymboliikkaan. Stadion valmistui vuonna 2018, ja jalkapallon MM-kisojen aikana siihen mahtui 44 442 katsojaa. Kaupungissa toimii Erzja-taidemuseo, jossa on yli 200 kuvanveistäjä Stepan Erzjan teosta. Tasavallassa asuu noin 780 000 ihmistä, ja pohjoisessa, Moksa-joen oikealla rannalla, on vuonna 1935 perustettu Mordovan luonnonsuojelualue: noin 32 000 hehtaaria lähes kokonaan metsää. Alueelle pääsee vain luvalla.",
     },
     Moskva: {
       lyhyt: 'Moskovan Ostankinon televisiotorni kohoaa 540 metriin, ja se on Euroopan korkein vapaasti seisova rakennelma.',
+      pitka: "Moskova mainitaan kronikoissa ensi kerran 1147, ja nykyään Moskovajoen varrella asuu noin 13 miljoonaa ihmistä. Kreml ja Punainen tori ovat Unescon maailmanperintöä vuodesta 1990, ja torin laidalla kohoaa Vasili Autuaan katedraali, joka rakennettiin 1555–1561. Pohjoisessa VDNKh avattiin 1939 maatalousnäyttelynä, ja peruskorjauksen jälkeen alueella on nykyään paviljonkeja, jäärata ja 2015 avattu Moskvarium-akvaario. Tretjakovin galleria, Bolšoi ja lukemattomat puistot pitävät kaupungin kulttuurielämän vireänä läpi vuoden.",
     },
     Moskovskaya: {
       lyhyt: 'Moskovan alueen Sergijev Posadissa on Kolminaisuuden lavra, Venäjän ortodoksisen kirkon tärkeimpiä luostareita.',
+      pitka: "Moskovan alue ympäröi pääkaupunkia ja on noin 8,5 miljoonan asukkaan kotiseutu. Kolomnassa Moskovajoki ja Oka yhtyvät; kaupunki mainitaan ensi kerran 1177, sen punatiilinen kremli valmistui 1525–1531, ja pastilamuseossa maistuu paikallinen hedelmäkarkki. Tähtikaupungissa eli Zvjozdnyi gorodokissa toimii Juri Gagarinin mukaan nimetty kosmonauttien koulutuskeskus. Tiedekaupunki Dubnassa Volgan varrella on vuonna 1956 perustettu ydintutkimuslaitos JINR. Kultaisen renkaan kaupunkeihin kuuluvat alueella myös Dmitrov ja Zvenigorod.",
     },
     Murmansk: {
       lyhyt: 'Murmansk on maailman suurin kaupunki napapiirin pohjoispuolella, ja talvella aurinko pysyy siellä horisontin alla noin kuusi viikkoa.',
+      pitka: "Kuolan niemimaan pohjoisrannalla luonto ja raskas teollisuus elävät rinnakkain. Entisen Petsamon alueella Zapoljarnyin lähellä porattiin vuosina 1970–1989 Kuolan supersyväreikä, joka yltää 12 262 metriin ja on yhä syvin ihmisen tekemä reikä. Hibiinien tunturimassiivin korkein huippu Judytšvumtšorr on 1 201 metriä, ja sen juurella Kirovskissa lasketellaan; Hibiinien kansallispuisto perustettiin 2018. Barentsinmeren rannalla Teriberkan kalastajakylässä asuu enää muutama sata ihmistä, mutta rantojen hylätyt puuveneet ja elokuva Leviathan (2014) ovat tehneet siitä matkailukohteen. Kuolan alkuperäiskansa saamelaiset ovat nykyään pieni vähemmistö.",
     },
     Nenets: {
       lyhyt: 'Nenetsian tundralla nenetsit paimentavat yhä poroja, ja pääkaupungin Narjan-Marin nimi tarkoittaa nenetsiksi punaista kaupunkia.',
+      pitka: "Nenetsian autonominen piirikunta on Venäjän asukasluvultaan pienimpiä alueita: vuoden 2021 väestölaskennassa asukkaita oli noin 41 400, vaikka pinta-alaa on noin 177 000 neliökilometriä, eli reilut puolet Suomen alasta. Nenetsit ovat nykyään noin viidesosa asukkaista. Tundra jatkuu Barentsinmeren rannikolle, ja merellä ovat Kolgujevin ja Vaigatšin saaret. Naryan-Mar, jossa asuu noin 24 000 ihmistä eli suunnilleen puolet piirikunnan väestöstä, sijaitsee Petšora-joen varrella. Tieyhteydet ovat vähäisiä, ja liikenne kulkee paljolti lentäen ja kesällä joen kautta. Piirikunnan talous perustuu öljyyn ja poronhoitoon.",
     },
     Nizhegorod: {
       lyhyt: 'Nižni Novgorodin alueen Semjonovissa maalataan hohlomaa, puuastioita, joiden kukkakuviot hohtavat punaisena, mustana ja kultaisena.',
+      pitka: "Nižni Novgorod, perustettu vuonna 1221, on levittäytynyt korkealle rinteelle Volgan ja Okan yhtymäkohtaan, ja noin 1,2 miljoonan asukkaan kaupungissa katse hakeutuu ensimmäisenä kivikremliin. Sen noin kahden kilometrin mittaista muuria vartioi 13 tornia, ja 22,7 hehtaarin alueella toimii nykyisin taidemuseo. Arkkienkeli Mikaelin katedraalissa on Kuzma Minin hauta. Noin 185 kilometrin päässä kaupungista on Diveevo, jonka luostarissa säilytetään Serafim Sarovilaisen pyhäinjäännöksiä ja jossa pyhiinvaeltajat kulkevat 775 metrin pituisen Pyhän Kanavkan.",
     },
     Novgorod: {
       lyhyt: 'Novgorodin kosteasta maasta on kaivettu esiin yli tuhat keskiaikaista tuohikirjettä, tavallisten kaupunkilaisten arkisia viestejä.',
+      pitka: "Novgorodin alueella on 54 500 neliökilometriä metsiä, soita ja järviä, mutta sen sydän on yksi kaupunki Volhov-joen varrella. Veliki Novgorodin Detinets eli kremlin muurit kiertävät 1 487 metriä, ja yhdeksän alkuperäisestä kahdestatoista tornista on yhä pystyssä. Muurien sisällä seisoo Sofian katedraali, rakennettu 1045–1050 ja Venäjän vanhimpia kirkkoja, sekä vuonna 1862 paljastettu Venäjän tuhatvuotismuistomerkki. Juurjevin luostarin katedraali on vuodelta 1119, ja Vitoslavlitsyn ulkomuseoon on koottu yli kaksikymmentä puurakennusta. Valdain kansallispuisto, perustettu 1990, ympäröi 76 järveä ja on ollut Unescon biosfäärialue vuodesta 2004.",
     },
     Novosibirsk: {
       lyhyt: 'Novosibirskin Akademgorodok on 1950-luvulla metsän keskelle rakennettu tiedekaupunki, jossa toimii kymmeniä tutkimuslaitoksia.',
@@ -9785,6 +9810,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Orel: {
       lyhyt: 'Orjolissa syntyi kirjailija Ivan Turgenev, ja hänen sukunsa kartano Spasskoje-Lutovinovo on nykyään museo.',
+      pitka: "Orjol perustettiin 1566 Ivan IV:n käskystä linnoitukseksi Okan ja Orlik-joen yhtymäkohtaan, ja nykyään se kutsuu itseään kirjalliseksi pääkaupungiksi. Turgenevin kirjallisuusmuseo on perustettu 1918, ja lähellä toimivat Leskovin kartanomuseo, Orjolin kirjailijoiden museo sekä Buninin museo; Ivan Bunin sai 1933 ensimmäisenä venäläisenä kirjallisuuden Nobel-palkinnon. Nikolai Leskov syntyi 1831 Gorohovon kylässä, ja runoilija Afanasi Fet syntyi Novosjolkin kylässä Mtsenskin seudulla. Turgenevin sukukartano Spasskoje-Lutovinovo Mtsenskin lähellä on museona, ja sen puistossa kasvoi kuuluisa tammi.",
     },
     Orenburg: {
       lyhyt: 'Orenburgin untuvahuivit neulotaan vuohenuntuvasta niin ohuiksi, että hienoimman huivin voi pujottaa sormuksen läpi.',
@@ -9797,6 +9823,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'City of St. Petersburg': {
       lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
+      pitka: "Pietari perustettiin 27. toukokuuta 1703 Nevan suistoon, ja nykyään siellä asuu noin 5,6 miljoonaa ihmistä. Kesäisin valkeat yöt pitävät taivaan valoisana lähes kuukauden. Eremitaasin kokoelmassa on noin kolme miljoonaa esinettä, ja museo jakautuu kuuteen historialliseen rakennukseen, joihin kuuluvat Talvipalatsin lisäksi myös entinen Yleisesikunnan talo. Pietari-Paavalin linnoitus perustettiin kaupungin ytimeksi 1703, ja Marian teatterissa esiintyvät maailman huippubaletit. Suomenlahden rannalla nousee Lahta-keskus: 462 metriä ja 87 kerrosta korkea pilvenpiirtäjä, valmistunut 2019 ja Euroopan korkein rakennus.",
     },
     'North Ossetia': {
       lyhyt: 'Pohjois-Ossetian Dargavsin laakson rinteellä on vanha kuolleiden kaupunki, lähes sata kivistä hautahuonetta rivissä.',
@@ -9806,6 +9833,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pskov: {
       lyhyt: 'Puškinin sukutila Mihailovskoje Pihkovan alueella on museona, ja runoilija on haudattu läheiseen Svjatogorskin luostariin.',
+      pitka: "Pihkovan alue on Venäjän läntisimpiä alueita, ja sen pinta-ala on noin 55 400 neliökilometriä ja asukasluku noin 600 000. Pihkovan kaupunki mainitaan aikakirjoissa jo vuonna 903. Sen Krom-linnake seisoo Velikaja- ja Pihkovanjoen yhtymäkohdassa. Kaupungista noin 30 kilometriä länteen Izborskin linnoitus kohoaa kukkulalla lähellä Viron rajaa, ja sen kivimuurit ovat keskiaikaiset. Peipsijärvi, jonka pinta-ala on noin 3 555 neliökilometriä, on Euroopan suurin rajat ylittävä järvi. Sen jäällä kävi 1242 Jäätaistelu, ja nykyään rannoilla kalastetaan ja levähtää muuttolintuja.",
     },
     Rostov: {
       lyhyt: 'Donin suistossa Rostovin lähellä on Tanaisin kaivausalue, antiikin kreikkalaisten kauppakaupungin rauniot, jotka ovat nyt ulkomuseo.',
@@ -9830,6 +9858,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Smolensk: {
       lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
+      pitka: "Smolenskin kaupunki seisoo Dneprin kummallakin rannalla noin 360 kilometriä Moskovasta länteen, ja kaupunki mainitaan kronikassa ensi kerran 863. Pyhän Mikaelin (Svirskaja) kirkko on vuosilta 1180–1197 ja kuuluu harvoihin mongolivaltaa edeltäneisiin rakennuksiin Venäjällä. Kaupungissa asuu noin 317 000 ihmistä, koko alueella noin 888 000. Alueen luoteisosassa Smolenskin Järviseudun kansallispuisto, perustettu 1992, kattaa yli 146 000 hehtaaria metsää ja soita, ja siellä on 35 järveä; se on ollut Unescon biosfäärialue vuodesta 2002.",
     },
     "Stavropol'": {
       lyhyt: 'Stavropolin aluepiirin Kislovodskista pulppuaa narzan-kivennäisvettä, ja sen kylpylöihin tullaan yhä parantumaan.',
@@ -9839,6 +9868,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tambov: {
       lyhyt: 'Säveltäjä Sergei Rahmaninov vietti kesiään Tambovin alueen Ivanovkassa, ja kartano on nykyään hänen museonsa.',
+      pitka: "Tambov perustettiin 17. huhtikuuta 1636 linnoitukseksi, ja nykyään noin 255 000 asukkaan kaupunki levittäytyy Tsna- ja Studenets-jokien yhtymäkohtaan. Joen rantaa seuraa noin 2,5 kilometrin pituinen kaksitasoinen rantapuisto suihkulähteineen. Kulttuurin pohjan loi runoilija Gavriil Deržavin, joka kuvernöörinä 1780-luvun lopulla perusti kaupunkiin teatterin, koulun ja sanomalehden. Michurinsk, aiemmin Kozlov (perustettu 1635), sai nykyisen nimensä vuonna 1932 hedelmänjalostaja Ivan Mitšurinin mukaan; noin 88 000 asukkaan tiedekaupunki on yhä hedelmäntutkimuksen keskus. Alueella asuu noin miljoona ihmistä, ja metsäaromaisemaa halkovat Tsna, Vorona ja Lesnoi Voronež.",
     },
     Tatarstan: {
       lyhyt: 'Tatarstanin kesäjuhlassa sabantuissa kiivetään liukkaaseen salkoon ja painitaan perinteistä vyöpainia.',
@@ -9854,9 +9884,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chuvash: {
       lyhyt: 'Tšuvassin kieli on ainoa elossa oleva oguurien turkkilaiskieli, ja se eroaa paljon muista turkkilaiskielistä.',
+      pitka: "Tšeboksary, jonka nimi mainitaan lähteissä ensimmäisen kerran vuonna 1469, on Tšuvassian tasavallan pääkaupunki Volgan rannalla, noin 500 000 asukkaan kaupunki. Volgaa padottava Tšeboksaryn tekoallas on 2 274 neliökilometrin laajuinen, ja voimala tuottaa jopa 1 404 megawattia. Tšeboksarynlahden rantoja on kunnostettu kävelyreiteiksi ja hiekkarannoiksi, ja kaupungissa toimivat Tšuvassian kansallismuseo sekä Venäjän ainoa olutmuseo. Tasavallassa on noin 1,19 miljoonaa asukasta. Tšuvassit puhuvat turkkilaista kieltä, ja heidän vaatteitaan ja liinojaan koristaa omaleimainen kirjonta.",
     },
     Tula: {
       lyhyt: 'Tulan prjanikit ovat hunajaisia piparkakkulevyjä, jotka painetaan kaiverrettuihin puumuotteihin ja täytetään usein hillolla.',
+      pitka: "Tulan kremlin kiviset muurit nousivat vuosina 1514–1520 Vasili III:n käskystä, ja noin kuuden hehtaarin alueella on Uspenskin katedraali (1762–1766) ja Epifanian katedraali (1855–1863); nykyään kompleksi on museo. Tulan samovaarimuseo esittelee satoja samovaareja 1700-luvun lopulta nykypäivään. Kaupungista 12 kilometriä lounaaseen sijaitsee Jasnaja Poljana, jossa Leo Tolstoi syntyi 1828 ja kirjoitti Sodan ja rauhan (1862–1869) sekä Anna Kareninan (1873–1877). Okan korkealla oikealla rannalla Polenovon museokartanossa on maalari Vasili Polenovin itse suunnittelema valkoinen talo, joka valmistui 1892.",
     },
     Tuva: {
       lyhyt: 'Tuvassa lauletaan kurkkulaulua, jossa laulaja tuottaa yhtä aikaa matalan pohjasävelen ja sen yllä viheltävän yläsävelen.',
@@ -9875,15 +9907,18 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vladimir: {
       lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
+      pitka: "Vladimirin alue on pinta-alaltaan pieni, 29 084 neliökilometriä, mutta asukkaita on noin 1,35 miljoonaa. Aluekeskus Vladimir, noin 350 000 asukasta, on 190 kilometrin päässä Moskovasta idässä. Unesco merkitsi Vladimirin ja Suzdalin valkoiset monumentit maailmanperintökohteeksi vuonna 1992. Uspenskin katedraali rakennettiin 1158–1160 ja laajennettiin 1185–1189, ja sen seinille Andrei Rublev maalasi freskoja 1408. Dmitrin katedraali valmistui 1194–1197, ja sen seinien valkokivi on koristeltu tiheällä veistoskuvituksella. Kultainen portti on rakennettu 1100-luvulla mutta rakennettiin osin uudelleen 1700-luvun lopulla. Alueen itäosassa Meštšjoran kansallispuisto, perustettu 1992, suojaa noin 119 000 hehtaaria soita ja mäntymetsiä.",
     },
     Volgograd: {
       lyhyt: 'Volgogradin alueen Eltonjärvi on Euroopan suurin mineraalijärvi, ja levät värjäävät sen suolaisen veden punertavaksi.',
     },
     Vologda: {
       lyhyt: 'Vologdan nypläyspitsi on alueen tunnetuin käsityö, ja kaupungissa on sille oma museonsa.',
+      pitka: "Vologdan alue on 144 500 neliökilometrin laajuudessaan harvaan asuttu: asukkaita on runsaat 1,1 miljoonaa. Vologdan kaupungin Sofian katedraali rakennettiin 1568–1570 Ivan IV:n käskystä, ja kaupunki on yksi Venäjän harvoista, joissa on säilynyt puuarkkitehtuuria. Pohjoisempana Kirillo-Belozerskin luostari perustettiin 1397 Siverskoje-järven rannalle, ja sen Uspenskin katedraali valmistui 1497. Ferapontovin luostarin Neitsyt Marian syntymän katedraalin seinät maalasi ikonimaalari Dionisi poikineen vuonna 1502, ja noin 600 neliömetriä freskoja on säilynyt; luostari on Unescon maailmanperintökohde vuodesta 2000. Cherepovetsissa toimii Severstalin terästehdas, ja Volga–Itämeri-vesitie kulkee alueen halki.",
     },
     Voronezh: {
       lyhyt: 'Voronežin alueen Kostjonkissa on kaivettu esiin kymmeniä kivikautisia asuinpaikkoja, joista osa on rakennettu mammutinluista.',
+      pitka: "Voronež, noin miljoonan asukkaan kaupunki, perustettiin linnoitukseksi vuonna 1586, ja sen laivastohistoria näkyy yhä: Pietari Suuren telakalla vesille laskettiin vuonna 1700 Goto Predestinatsija, Venäjän ensimmäinen 58-tykkinen linjalaiva, jonka tarkka jäljennös on museona Admiraliteettiaukiolla. Kaupungin eteläpuolella Divnogorjen museosuojelualueella noin 11 neliökilometrin alueella kohoavat liitupylväät ja luolakirkot. Khopjorin luonnonsuojelualue (perustettu 1935, noin 16 000 hehtaaria) suojaa 50 kilometrin jokiosuutta ja harvinaista venäläistä desmania. Talovajan piirissä Kamennaja Stepin koeasema on peräisin maaperätieteen isän Vasili Dokutšajevin 1890-luvun tutkimuksista.",
     },
     'Yamal-Nenets': {
       lyhyt: 'Salehard on rakennettu aivan napapiirille, ja kaupungissa napapiirin kohtaa merkitsee oma muistomerkki.',

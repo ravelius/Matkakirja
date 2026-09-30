@@ -13,6 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2430, teksti: 'RUS erä 2: pitkä + pulu, 15 aluetta (#3661)' },
+  { v: 2429, teksti: 'RUS erä 1: pitkä + pulu, 15 aluetta (#3659)' },
+  { v: 2428, teksti: 'Olavinlinna: voudin sinetin löytökortin kuva uu… (#3657)' },
+  { v: 2427, teksti: 'TUR: Euroopan puoli, pitkä + pulu, 5 aluetta (#3655)' },
+  { v: 2426, teksti: 'Olavinlinna: pystykamerat – sinettiarkku ja vih… (#3654)' },
   { v: 2425, teksti: 'EST, LVA, LTU, SVN: pulu, 42 aluetta (#3652)' },
   { v: 2424, teksti: 'Olavinlinna: elävä linna kohta 3 – keskushalli,… (#3651)' },
   { v: 2423, teksti: 'BLR + SVK: pitkä + pulu, 15 aluetta (#3647)' },

@@ -79,3 +79,24 @@ test('yhteensopivuus natiivi 1.0.57: ei elava.reittiä; elävän linnan kävelij
     assert.ok(h?.lyhty === true && h.reitti?.pisteet?.length >= 2 && h.silmukka, `${tid}/${hid}: kävelijä lyhdyn kanssa`);
   }
 });
+
+// Pystykuva (Siirtosepän 1.0.60-löydös 30.9.): etsintäkohteen pitää näkyä vapaalla alueella (taulukortti peittää alimman
+// 45 %, reunat 10 %), eikä Pulu saa laskeutua sen päälle. Projektio kuten speksin asentoSijainti, fov pystysuunnassa.
+function ruutu(k, p, aspect) {
+  const R = Math.PI / 180, kk = k.korkeus * R, a = k.atsimuutti * R, e = k.etaisyys;
+  const c = [k.kohde[0] + e * Math.cos(kk) * Math.sin(a), k.kohde[1] + e * Math.sin(kk), k.kohde[2] - e * Math.cos(kk) * Math.cos(a)];
+  const n = (v) => { const l = Math.hypot(...v); return v.map((x) => x / l); };
+  const f = n(k.kohde.map((v, i) => v - c[i])), r = n([-f[2], 0, f[0]]), u = [r[1] * f[2] - r[2] * f[1], r[2] * f[0] - r[0] * f[2], r[0] * f[1] - r[1] * f[0]];
+  const d = p.map((v, i) => v - c[i]), dot = (x, y) => x[0] * y[0] + x[1] * y[1] + x[2] * y[2], t = Math.tan(k.fov * R / 2), z = dot(d, f);
+  return [0.5 + dot(d, r) / (z * t * aspect) / 2, 0.5 - dot(d, u) / (z * t) / 2];
+}
+test('pystykuva: etsintäkohde vapaalla alueella ja Pulu ei sen päällä (iPhone 0,46)', () => {
+  for (const t of RAKENNUS.tilat) {
+    for (const v of t.etsinta ?? []) {
+      const [x, y] = ruutu(t.kameraPysty, v.kohde, 0.46);
+      assert.ok(x > 0.1 && x < 0.9 && y > 0.05 && y < 0.55, `${t.id}: etsintä v${v.vaihe} ruudulla (${x.toFixed(2)}, ${y.toFixed(2)})`);
+      const [px, py] = ruutu(t.kameraPysty, t.pulu.laskeutuminen, 0.46);
+      assert.ok(Math.hypot(px - x, (py - y) * 0.46) > 0.12, `${t.id}: Pulu (${px.toFixed(2)}, ${py.toFixed(2)}) peittää etsintäkohteen`);
+    }
+  }
+});
