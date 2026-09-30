@@ -3,6 +3,7 @@
 // Portin napin (Jatka matkaa / Uusi matka / Aloita seikkailu) alla kevyt nappi "Apurahahakemus – katso tämä ensin",
 // joka avaa esittelykortin: otsikko, kursiivinen alaotsikko, kappaleet (väliotsikko, teksti, numeroitu lista,
 // linkki) ja viiden kuvan rivi. Kuva avautuu kokoruutuun (reunat selaavat, muu napautus sulkee).
+// Kappaleen ja listarivin webTeksti on selaimen versio; natiivi näyttää teksti-kentän.
 // Sisältö on YHDESSÄ tiedostossa webin repossa (assets/apuraha/esittely.json), jonka Päätoimittaja päivittää:
 // natiivi hakee sen sivustolta joka käynnistyksessä, joten tekstimuutos ei vaadi TF-buildia. Viimeisin onnistunut
 // haku säilyy laitteella (offline-käynnistys näyttää sen); jos haku ei ole koskaan onnistunut, nappia ei ole.
@@ -49,7 +50,8 @@ namespace Matkakirja.Natiivi
                 if (o == null) continue;
                 var k = new Kappale { Otsikko = S(o, "otsikko"), Teksti = S(o, "teksti") };
                 var lista = Rakenne.Lista(o.TryGetValue("lista", out var lv) ? lv : null);
-                if (lista != null) foreach (var r in lista) if (r is string rs) k.Lista.Add(rs);
+                // Rivi on teksti tai {teksti, webTeksti}; natiivi näyttää teksti-kentän (webTeksti on selaimen versio).
+                if (lista != null) foreach (var r in lista) { var rt = r as string ?? S(Rakenne.Olio(r), "teksti"); if (rt != null) k.Lista.Add(rt); }
                 var linkki = Rakenne.Olio(o.TryGetValue("linkki", out var li) ? li : null);
                 k.LinkkiUrl = S(linkki, "url");
                 k.LinkkiTeksti = S(linkki, "teksti") ?? k.LinkkiUrl;
