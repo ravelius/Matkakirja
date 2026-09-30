@@ -348,6 +348,23 @@ namespace Matkakirja.Natiivi
             }
             var infoTila = nakyma.KohdeTila != null ? rakennus.Tila(nakyma.KohdeTila) : null;
             if (infoTila?.Infotaulu != null) { PaivitaInfotaulu(linssi, infoTila, nakyma, tNyt); return; }
+            // Uusi linna, yleisnäkymä (Natiivi-UI:n katselmus 30.9.): Pulu vasempaan alakulmaan, ei linnan päälle; napautus
+            // näyttää linnan pulu.teksti-kuplan, jos sellainen on.
+            if (nakyma.KohdeTila == null && rakennus.Kertoja != null && rakennus.Kertoja.Count > 0)
+            {
+                for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+                lauta.style.display = DisplayStyle.None;
+                float ph2 = juuri.layout.height; if (float.IsNaN(ph2) || ph2 <= 0) ph2 = Screen.height;
+                const float koko2 = 64f;
+                pulu.style.display = DisplayStyle.Flex;
+                pulu.MiniKorkeus(koko2);
+                pulu.style.left = 18; pulu.style.top = ph2 - koko2 - 96;
+                puluKupla = rakennus.PuluTeksti;
+                bool kupla = !string.IsNullOrEmpty(puluKupla);
+                puluAlue.style.display = kupla ? DisplayStyle.Flex : DisplayStyle.None;
+                if (kupla) { puluAlue.style.left = 12; puluAlue.style.top = ph2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
+                return;
+            }
             LopetaKuunnelma();
             puluAlue.style.display = DisplayStyle.None;
 
