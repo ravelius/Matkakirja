@@ -450,7 +450,7 @@ namespace Matkakirja.Natiivi
                 if (lista.parent != turva) turva.Add(lista);
                 lista.style.position = Position.Absolute;
                 lista.style.left = poyta.Juuri.layout.x; lista.style.width = poyta.Juuri.layout.width;
-                lista.style.bottom = turva.layout.height - poyta.Juuri.layout.y + 6f;
+                lista.style.bottom = turva.layout.height - poyta.Juuri.layout.y - poyta.YlaReuna + 6f;
                 poyta.Kohde.Tila = IssKytkimet.Tila.Aktiivinen;
             }
             else if (lista.parent != sivut[1])

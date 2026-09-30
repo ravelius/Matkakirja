@@ -78,6 +78,7 @@ namespace Matkakirja.Natiivi
         public void Asettele(float turvanLeveys)
         {
             if (!(turvanLeveys > 0)) return;
+            poytaLeveys = turvanLeveys;
             string a = IssPaneeliKuvat.Asettelu(turvanLeveys);
             if (!IssPaneeliKuvat.Paikalla(a)) a = null;
             if (a != asettelu) { if (asettelu != null) PurraKerrokset(); if (a != null) RakennaKerrokset(a); }
@@ -105,6 +106,11 @@ namespace Matkakirja.Natiivi
         Vector4 painotA = new Vector4(-1, 0, 0, 0), painotB;
         IVisualElementScheduledItem pulssi;
         static readonly string[] ValoJarjestys = { "avain", "paneeli", "live-vihrea", "live-meripihka", "kohde", "poistu" };
+
+        /// <summary>Pöydän näkyvän yläreunan etäisyys Juuren yläreunasta (pt, skaalattuna): renderin kupu alkaa y 36:sta.</summary>
+        public float YlaReuna => asettelu != null && IssPaneeliKuvat.Osa(asettelu, "kupu") is Rect k
+            ? k.yMin * Mathf.Min(1f, poytaLeveys / IssPaneeliKuvat.Ryhma(asettelu).x) : 0f;
+        float poytaLeveys = 1e6f;
 
         /// <summary>Kerrostilan asettelu (puhelin | tabletti) tai null (paikkamerkit / kehys).</summary>
         public string Asettelu => asettelu;
