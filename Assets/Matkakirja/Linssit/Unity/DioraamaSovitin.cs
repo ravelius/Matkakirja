@@ -161,6 +161,7 @@ namespace Matkakirja.Natiivi
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
+                AloitaKuoriOdotus(ymparisto.Aika);
             }
             o.Kirjaa(Tilaraportti());
         }
@@ -170,6 +171,20 @@ namespace Matkakirja.Natiivi
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
+            if (kuoriOdotusAlku >= 0f)
+            {
+                float odotettu = Time.realtimeSinceStartup - kuoriOdotusAlku;
+                bool kuoriValmis = nayttamo.Ulkokuori?.Lahitaso != null;
+                if (kuoriValmis || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
+                {
+                    kuoriOdotusAlku = -1f;
+                    nayttamo.Odota(false);
+                    linssi.Avaa(rakennus, y.Aika, SaapuminenNahty); // kaari alusta tästä hetkestä
+                    t = pysaytettyT ?? y.Aika;
+                    o.Kirjaa($"poikki: saapuminen alkaa ({(kuoriValmis ? "kuori valmis" : "kuori ei ehtinyt")}, odotettiin {odotettu:F1} s)");
+                }
+                else { nayttamo.Odota(true); t = kuoriOdotusT; }
+            }
             bool pysty = y.Kuvasuhde < 1.0;
             if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             var nakyma = linssi.NakymaHetkella(t, pysty);
@@ -206,6 +221,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             linssi.Sulje();
+            kuoriOdotusAlku = -1f; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
@@ -316,7 +332,23 @@ namespace Matkakirja.Natiivi
                 TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
+                AloitaKuoriOdotus(y.Aika);
             }
+        }
+
+        // Saapumiskaari odottaa kevyttä kuorta (enintään KuoriOdotusMax s): 1.0.64-puhdasajossa kaaren 3. sekunnilla
+        // kuorta ei vielä ollut ja harmaat tilapalikat näkyivät veden päällä. Odotuksen ajan aika on jäädytetty kaaren
+        // alkuun (kamera kaukana järvellä), ja näyttämö piilottaa kaiken paitsi veden (DioraamaNayttamo.Odota).
+        const float KuoriOdotusMax = 10f;
+        float kuoriOdotusAlku = -1f;
+        double kuoriOdotusT;
+
+        void AloitaKuoriOdotus(double t)
+        {
+            kuoriOdotusAlku = -1f;
+            if (rakennus?.Saapuminen == null || rakennus.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
+            if (nayttamo.Ulkokuori.Lahitaso != null) return;
+            kuoriOdotusAlku = Time.realtimeSinceStartup; kuoriOdotusT = t;
         }
 
         const string SaapuminenAvain = "dioraama-saapuminen-nahty";
