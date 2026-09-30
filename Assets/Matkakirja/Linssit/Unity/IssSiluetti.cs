@@ -14,8 +14,8 @@ namespace Matkakirja.Linssit
     public static class IssSiluetti
     {
         public static bool Paalla;
-        public static Vector4 Asettelu = new Vector4(-0.12f, -0.06f, 24f, 0.105f);
-        public static float Pituus = 0.62f;
+        public static Vector4 Asettelu = new Vector4(-0.1f, -0.05f, 22f, 0.08f);
+        public static float Pituus = 0.5f;
 
         static readonly int IdPeitto = Shader.PropertyToID("_Peitto"), IdRuutu = Shader.PropertyToID("_Ruutu"),
             IdAurinko = Shader.PropertyToID("_AurinkoRuutu"), IdAsettelu = Shader.PropertyToID("_Asettelu"), IdPituus = Shader.PropertyToID("_Pituus");

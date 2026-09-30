@@ -2,8 +2,8 @@
 // siluetti aidommalta"). Koko ruudun neliö kameran edessä (IssSiluetti.cs, kuten CupolaKerros), laskennallinen aurinkopaneelin
 // siipi ilman tekstuuria: siipi tulee ruudun kulmasta vinosti, kaksi kennomattoa maston molemmin puolin, paneelilohkojen raot
 // ja hienot kennoviivat, kehysputki kärjessä. Kamera on tarkennettu äärettömään, joten reunat ovat hieman pehmeät (_Sumeus).
-// Valo: aurinko kameran koordinaateissa (_AurinkoRuutu); auringon puoleinen reuna saa kapean kirkkaan reunuksen ja matto
-// hennon kiillon, varjon puoli jää tummaksi. Esikerrottu alfa, Overlay-jono, ZTest Always: kohteen edessä aina.
+// Valo: musta vastavalosiluetti (omistaja 30.9.): runko ja matto lähes mustia, auringon puoleisessa reunassa ja kärjessä ohut
+// lämmin reunavalo (aurinko kameran koordinaateissa, _AurinkoRuutu). Esikerrottu alfa, Overlay-jono, ZTest Always.
 Shader "Matkakirja/Linssit/IssSiluetti"
 {
     Properties
@@ -11,8 +11,8 @@ Shader "Matkakirja/Linssit/IssSiluetti"
         _Peitto("Peitto", Range(0, 1)) = 1
         _Ruutu("Ruudun kuvasuhde w/h", Float) = 0.46
         _AurinkoRuutu("Aurinko kamerassa (x, y, z; w = näkyy)", Vector) = (0.3, 0.5, 0.4, 1)
-        _Asettelu("Siiven alku x, y, kulma (°), leveys", Vector) = (-0.12, -0.06, 24, 0.105)
-        _Pituus("Siiven pituus", Float) = 0.62
+        _Asettelu("Siiven alku x, y, kulma (°), leveys", Vector) = (-0.1, -0.05, 22, 0.08)
+        _Pituus("Siiven pituus", Float) = 0.5
         _Sumeus("Reunan pehmeys", Float) = 0.006
     }
     SubShader
@@ -80,24 +80,16 @@ Shader "Matkakirja/Linssit/IssSiluetti"
                 half a = saturate(max(max(sisalla * (1 - rako * (1 - masto)), putki), masto * step(0, t) * step(t, _Pituus)));
                 if (a <= 0.001) return 0;
 
-                // Matto: tumma sinivioletti, lohkojen raot ja hienot kennoviivat.
-                half3 matto = half3(0.020, 0.024, 0.040);
+                // Musta vastavalosiluetti (omistaja 30.9.2026 Päätoimittajan kautta: "musta siluetti"): matto ja runko lähes
+                // mustia, rakenne erottuu vain aavistuksena; auringon puoleisessa reunassa ohut lämmin reunavalo.
                 half lohko = Viiva(t, 0.052, 0.0022);
-                half kenno = max(Viiva(t, 0.0105, 0.0007), Viiva(s, 0.0105, 0.0007));
-                matto = lerp(matto, half3(0.055, 0.04, 0.022), lohko * 0.7);
-                matto = lerp(matto, half3(0.045, 0.045, 0.06), kenno * 0.35);
-
-                // Valo: kiilto (aurinko kameran edessä tai sivulla) ja auringon puoleinen reunus.
+                half3 vari = half3(0.006, 0.007, 0.010) + half3(0.012, 0.010, 0.008) * lohko;
                 float3 aur = normalize(_AurinkoRuutu.xyz);
                 half nakyy = saturate(_AurinkoRuutu.w);
-                half kiilto = pow(saturate(dot(normalize(float2(aur.x, aur.y) + 1e-4), normalize(d + n * 0.3)) * 0.5 + 0.5), 6) * nakyy;
-                matto += half3(0.10, 0.09, 0.13) * kiilto * (0.4 + 0.6 * saturate(t / _Pituus));
                 float puoli = sign(dot(float2(aur.x, aur.y), n));      // kummalla puolella aurinko on
-                half reunus = (1 - smoothstep(0.0, 0.006, w - s * puoli)) * sisalla * nakyy;
-                half3 vari = matto + half3(0.75, 0.62, 0.42) * reunus * 0.45;
-                // Masto ja putki metallinharmaat, aurinkoon päin vaaleammat.
-                half metalli = saturate(max(masto, putki));
-                vari = lerp(vari, half3(0.07, 0.07, 0.075) + half3(0.20, 0.17, 0.13) * nakyy * 0.5, metalli * 0.85);
+                half reunus = (1 - smoothstep(0.0, 0.0022, w - s * puoli)) * sisalla * nakyy;
+                half karki = (1 - smoothstep(0.0, 0.003, abs(t - _Pituus))) * step(0, s * puoli) * nakyy;
+                vari += half3(0.55, 0.45, 0.32) * saturate(reunus + karki * 0.6) * 0.7;
                 a *= _Peitto;
                 return half4(vari * a, a);
             }
