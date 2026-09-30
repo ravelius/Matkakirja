@@ -276,9 +276,11 @@ namespace Matkakirja.Natiivi
         float seuraavaLippuSiirto;
         const float PaneelinVaraPt = 8f;
 
+        readonly Dictionary<string, List<(double Lat, double Lon)>> sisamaat = new Dictionary<string, List<(double Lat, double Lon)>>();
+
         void LippuVaisto()
         {
-            if (iso == null || Lipputanko.Maa != iso || kortti.panel == null) return;
+            if (iso == null || Lipputanko.Maa != iso || kortti.panel == null || kiinnitettyLippu == null) return;
             var yla = Rect.zero;
             var mk = UiNakymat.Hae().Matkakirja;
             if (mk != null && mk.Nakyy) yla = mk.Rajat;
@@ -289,26 +291,48 @@ namespace Matkakirja.Natiivi
                 yla = yla.height > 0f ? Rect.MinMaxRect(Mathf.Min(yla.xMin, r.xMin), Mathf.Min(yla.yMin, r.yMin),
                     Mathf.Max(yla.xMax, r.xMax), Mathf.Max(yla.yMax, r.yMax)) : r;
             }
-            if (yla.height <= 0f)
+            // PALUU KULMAAN (Laitetestaaja 1.0.66: kortti suljettiin lapuksi, tanko jäi siirtoon): heti, kun paneelia ei ole tai
+            // kulman paikka näkyy taas kokonaan (puhelimella suljettu matkakirja on yläreunan lappu, joka ei peitä kulmaa).
+            if (lippuSiirretty && lipunOletus.HasValue)
             {
-                if (lippuSiirretty && lipunOletus.HasValue && kiinnitettyLippu != null)
+                var o = lipunOletus.Value;
+                if (yla.height <= 0f || (Lipputanko.Ennuste(o.Lat, o.Lon, out var ro) && !PeittaaLipun(ro, yla) && Ruudulla(ro)))
                 {
                     lippuSiirretty = false;
-                    Lipputanko.Aseta(iso, lipunOletus.Value.Lat, lipunOletus.Value.Lon, kiinnitettyLippu);
+                    Lipputanko.Aseta(iso, o.Lat, o.Lon, kiinnitettyLippu);
+                    Debug.Log("MATKAKIRJA ui lipputanko: takaisin kulmaan");
+                    return;
                 }
-                return;
             }
+            if (yla.height <= 0f) return;
             var ala = Lipputanko.RuutuAlue;
             if (!ala.HasValue || !PeittaaLipun(ala.Value, yla)) return;
-            if (Time.realtimeSinceStartup < seuraavaLippuSiirto || kiinnitettyLippu == null) return;
+            if (Time.realtimeSinceStartup < seuraavaLippuSiirto) return;
             seuraavaLippuSiirto = Time.realtimeSinceStartup + 1f;
-            if (!(LinssiOhjain.MaatAineisto?.Hae(iso) is Matkakirja.Linssit.Maat.Maa rajat)) return;
-            var uusi = Matkakirja.Linssit.Maat.Lippukulma.Laske(rajat, Kaupungit(iso),
-                (la, lo) => Lipputanko.Ennuste(la, lo, out var r) && !PeittaaLipun(r, yla) && Ruudulla(r));
-            if (!uusi.HasValue) return;
+            if (!sisamaat.TryGetValue(iso, out var pisteet))
+            {
+                if (!(LinssiOhjain.MaatAineisto?.Hae(iso) is Matkakirja.Linssit.Maat.Maa rajat)) return;
+                pisteet = Matkakirja.Linssit.Maat.Lippukulma.Sisamaa(rajat, 4);
+                sisamaat[iso] = pisteet;
+            }
+            // RUUDUN OIKEA YLÄKULMA PANEELIN ALLA (Laitetestaaja 1.0.66, kuva n3: maan koilliskulmaa lähin näkyvä paikka osui
+            // lähelle ruudun keskustaa, jossa liioiteltu perspektiivi näyttää tangon suoraan ylhäältä litteänä). Valitaan ruudulla
+            // oikeaa reunaa ja paneelin alareunaa lähin paikka: siellä tanko kallistuu ulospäin ja näkyy pystyssä kuten kulmassa.
+            float k = Screen.width / Mathf.Max(1f, kortti.panel.visualTree.layout.width);
+            float alaraja = Screen.height - (yla.yMax + PaneelinVaraPt) * k;   // paneelin alareuna ruutupikseleinä (y ylös)
+            (double Lat, double Lon)? paras = null;
+            float parasPisteet = float.MaxValue;
+            foreach (var (la, lo) in pisteet)
+            {
+                if (!Lipputanko.Ennuste(la, lo, out var r) || !Ruudulla(r) || PeittaaLipun(r, yla)) continue;
+                float dx = (Screen.width - r.xMax) / Screen.width, dy = Mathf.Max(0f, alaraja - r.yMax) / Screen.height;
+                float pis = dx * dx + dy * dy;
+                if (pis < parasPisteet) { parasPisteet = pis; paras = (la, lo); }
+            }
+            if (!paras.HasValue) return;
             lippuSiirretty = true;
-            Lipputanko.Aseta(iso, uusi.Value.Lat, uusi.Value.Lon, kiinnitettyLippu);
-            Debug.Log($"MATKAKIRJA ui lipputanko: yläpaneelin alle ({uusi.Value.Lat:0.00}, {uusi.Value.Lon:0.00})");
+            Lipputanko.Aseta(iso, paras.Value.Lat, paras.Value.Lon, kiinnitettyLippu);
+            Debug.Log($"MATKAKIRJA ui lipputanko: yläpaneelin alle ({paras.Value.Lat:0.00}, {paras.Value.Lon:0.00}), {pisteet.Count} ehdokasta");
         }
 
         /// <summary>Osuuko tangon ala (ruutupikselit, y ylös) yläpaneeliin (paneelikoordinaatit, y alas) varalla.</summary>

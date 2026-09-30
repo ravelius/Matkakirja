@@ -69,6 +69,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Lippukulma.Laske(m, null, (lat, lon) => false) == null);
         }
 
+        [Testi] static void SisamaaHarvennettuna()
+        {
+            var ita = Lippukulma.Sisamaa(A().Hae("ITA"), 4);
+            Oleta.Tosi(ita.Count > 200 && ita.Count < 20000, ita.Count.ToString());
+            var osuma = new MaaOsuma(new[] { A().Hae("ITA") });
+            foreach (var p in ita) Oleta.Tosi(osuma.Hae(p.Lat, p.Lon) == "ITA", $"{p}");
+        }
+
         [Testi] static void TyhjaMaa() => Oleta.Tosi(Lippukulma.Laske(new Maa { Id = "X" }) == null);
     }
 }
