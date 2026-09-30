@@ -959,4 +959,41 @@ export const MAASTOKOHTEET_CHE = [
     lahde: 'en-Wikipedia "Rhine Falls", johdanto-osa ja osio "Geology" '
       + '(tarkistettu 11.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ A, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'augusta-raurica',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-augusta-raurica-fc85fdae.jpg',
+      lyhyt: 'Augusta Rauricasin roomalaisen teatterin katsomo ja näyttämö.',
+      selite: 'Kuvassa on puoliympyrän muotoinen roomalaisteatteri, jonka punertavat penkkirivit nousevat kivisten muurien välissä.',
+      lahde: 'Valokuva: Wladyslaw, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Wladyslaw',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Theater_Kaiseraugst.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    nimi: 'Augusta Raurica',
+    nimio: 'A. Raurica',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka monta paikkaa teatterissa oli?',
+      'Mikä löytyi Kaiseraugstista vuosina 1961–1962?',
+    ],
+    korostukset: ['hopea-aarre|hopea-aarre'],
+    nappi: 'Roomalaiskaupunki Reinin rannalla',
+    // 7.7214 E / 47.5339 N — en-Wikipedia "Augusta Raurica"
+    laudat: {
+      maailmankartta: { x: 6090.7, y: 1496 },
+    },
+    teksti: 'Augusta Raurica on roomalaisen kaupungin raunioalue Augstin ja Kaiseraugstin '
+      + 'kohdalla Sveitsissä. Lähteen mukaan kaupunki perustettiin noin vuonna 44 eaa. Lucius '
+      + 'Munatius Plancuksen toimesta, ja menestyksen huippuaikana 200-luvulla asukkaita '
+      + 'arvioidaan olleen noin 20 000. Teatterissa oli 8000–10 000 paikkaa, ja sitä kuvataan '
+      + 'Alppien pohjoispuolen suurimmaksi roomalaiseksi teatteriksi. Linnoituksen alueelta '
+      + 'löytyi vuosina 1961–1962 Kaiseraugstin hopea-aarre. Alueella on roomalaismuseo, '
+      + 'rekonstruoitu roomalaistalo ja ulkoilmamuseo.',
+    lahde: 'en-Wikipedia "Augusta Raurica" (tarkistettu 30.9.2026).',
+  },
 ];
