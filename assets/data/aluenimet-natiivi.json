@@ -1,5 +1,5 @@
 {
- "kuvaus": "Aluenimet natiiville elävinä, pinnalle painettuina (Fable 24.9.2026, löydös 38 b). Paikat ovat webin nimiötason törmäyksenväistön jälkeiset ankkurit tasoittain; tasot = pyramidin z, pallotasot = Mercator Z = z + 1. korkeus_m = kirjainkorkeus metreinä (Millerin pystymittakaava), leveys_m = koko nimen leveys harvennuksineen. Teksti versaalein; nykyalueilla sanan ensimmäinen kirjain täysikokoinen, muut pienkapiteeli-kertoimella. Ei haloa.",
+ "kuvaus": "Aluenimet natiiville elävinä, pinnalle painettuina (Fable 24.9.2026, löydös 38 b). Paikat ovat webin nimiötason törmäyksenväistön jälkeiset ankkurit tasoittain; tasot = pyramidin z, pallotasot = Mercator Z = z + 1. korkeus_px / korkeus_m = fonttikoko (em, kuten canvasin ctx.font), ei versaalin korkeus; metreinä Millerin pystymittakaavalla. leveys_m = koko nimen leveys harvennuksineen. Teksti versaalein; nykyalueilla sanan ensimmäinen kirjain täysikokoinen, muut pienkapiteeli-kertoimella. Ei haloa.",
  "versio": "2026-09-24a",
  "lahde": {
   "pyramidi": "2026-09-23a-pohja",
