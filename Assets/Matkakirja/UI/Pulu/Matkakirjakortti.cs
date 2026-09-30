@@ -478,7 +478,9 @@ namespace Matkakirja.Natiivi
             int n = Mathf.Min(naytetty, sanat.Length);
             string nakyva = Osa(0, n);
             string loput = Osa(n, sanat.Length);
-            teksti.text = loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput : nakyva;
+            // Webin riviväli (.fact-text line-height 1,45, puhelimella 1,35; natiivin fontin oma ~1,14).
+            string rivivali = Puhelin ? "<line-height=1.35em>" : "<line-height=1.45em>";
+            teksti.text = rivivali + (loput.Length > 0 ? nakyva + (n > 0 ? " " : "") + "<alpha=#00>" + loput : nakyva);
         }
 
         void Kirjoitettu()
