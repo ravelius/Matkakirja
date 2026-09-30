@@ -21,6 +21,14 @@
 // leijuu webin CSS-animaation tavoin (5 s, 5 pt, ±3°, keskipiste 72 % 84 %),
 // ja leijunta pysähtyy puheen ajaksi (livia-astronautti-puhuu).
 //
+// Avaruuskävelyasu (Päätoimittaja 30.9.2026, omistajan tilaus; Codexin haara codex-pulu-avaruuskavely e09b4467):
+// astronauttina kokopulu piirretään Codexin viidestä 2×-kerroskuvasta (Resources/LiviaEva, 304 × 608 = viewBox 152 × 304
+// ilman omaa siirtoa tai skaalaa) järjestyksessä turvaköysi, perus, kasvovalo, kypärälamput, maavalo. Kolmen valokerroksen
+// peittävyys tulee tilasta (EvaValo: yöllä kasvovalo ja lamput vahvoina, päivällä maan valo). Perus on lepoasento, joten
+// asussa ei ole eleitä eikä nokan liikettä; leijunta ja puhetauko ovat koko sisuksen liikettä kuten ennen. Kun Codex
+// korjaa kuvat, samat tiedostot vaihdetaan sekä webiin (assets/livia/livia-eva-*-2x.png) että tänne. A/B EvaPois
+// (`astro eva pois|paalla`) palauttaa kypäräpulun.
+//
 // Minipulun peilaus (webin suunta 'oikea') hoituu kutsujan style.scale = (−1, 1).
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -33,6 +41,10 @@ namespace Matkakirja.Natiivi
         public const string KyparaUrl = "https://matkakirja.app/assets/livia/livia-astronauttikypara-2x.png";
 
         static Texture2D kyparaKuva;
+        static readonly string[] EvaKerrokset = { "turvakoysi", "perus", "kasvovalo", "kyparalamput", "maavalo" };
+        static Texture2D[] evaKuvat;
+        /// <summary>A/B: avaruuskävelyasu pois (vanha kypäräpulu).</summary>
+        public static bool EvaPois;
         static bool kyparaHaussa;
         static float kyparaVirhe = float.NegativeInfinity;
 
@@ -42,6 +54,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement sisus;
         readonly Kerros pohja, etu;
         readonly Kypara kypara;
+        readonly Eva eva;
         Rect viewBox = new Rect(0, 0, 152, 304);
         Rect sisusAla;
         bool ylivuoto;
@@ -74,9 +87,11 @@ namespace Matkakirja.Natiivi
             pohja = new Kerros(this, true);
             kypara = new Kypara(this);
             etu = new Kerros(this, false);
+            eva = new Eva(this);
             sisus.Add(pohja);
             sisus.Add(kypara);
             sisus.Add(etu);
+            sisus.Add(eva);
             Rakenna();
             RegisterCallback<GeometryChangedEvent>(_ => Sovita());
             RegisterCallback<DetachFromPanelEvent>(_ => leijunta?.Pause());
@@ -110,6 +125,22 @@ namespace Matkakirja.Natiivi
             pohja.MarkDirtyRepaint();
             kypara.MarkDirtyRepaint();
             etu.MarkDirtyRepaint();
+            eva.MarkDirtyRepaint();
+        }
+
+        /// <summary>Asu näkyy: kokopulu astronauttina ja kerroskuvat ladattu.</summary>
+        bool EvaNakyy
+        {
+            get
+            {
+                if (mini || !tila.Astronautti || EvaPois) return false;
+                if (evaKuvat == null)
+                {
+                    evaKuvat = new Texture2D[EvaKerrokset.Length];
+                    for (int i = 0; i < EvaKerrokset.Length; i++) evaKuvat[i] = Resources.Load<Texture2D>("LiviaEva/" + EvaKerrokset[i]);
+                }
+                return evaKuvat[1] != null;
+            }
         }
 
         /// <summary>Sisus = viewBox sovitettuna sisältöalueeseen (kuvasuhde säilyy).</summary>
@@ -206,6 +237,7 @@ namespace Matkakirja.Natiivi
             {
                 var r = contentRect;
                 if (r.width <= 0 || r.height <= 0) return;
+                if (kuva.EvaNakyy) return;
                 var k = kuva.kuvaaja;
                 int raja = kuva.kuvaaja.KyparaIndeksi >= 0 ? kuva.kuvaaja.KyparaIndeksi : k.K.Osat.Count;
                 if (alku) LiviaMaalari.Piirra(mgc.painter2D, k.K, 0, raja, kuva.Nakyma(r));
@@ -233,7 +265,7 @@ namespace Matkakirja.Natiivi
             {
                 var r = contentRect;
                 if (r.width <= 0 || r.height <= 0) return;
-                if (kuva.kuvaaja.KyparaIndeksi < 0 || kyparaKuva == null) return;
+                if (kuva.kuvaaja.KyparaIndeksi < 0 || kyparaKuva == null || kuva.EvaNakyy) return;
                 var m = kuva.Nakyma(r) * kuva.kuvaaja.KyparaMatriisi;
                 const float X = -7, Y = -10, W = 126, H = 126;
                 var md = mgc.Allocate(4, 6, kyparaKuva);
@@ -251,6 +283,52 @@ namespace Matkakirja.Natiivi
                 Kulma(X, Y + H, 0, 0);
                 // Peilattu muunnos kääntää kiertosuunnan: kolmiot aina myötäpäivään.
                 md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
+            }
+        }
+
+        /// <summary>Avaruuskävelyasun kerroskuvat viewBoxin 0 0 152 304 päälle; valokerrokset tilan peittävyydellä.</summary>
+        sealed class Eva : VisualElement
+        {
+            static readonly ushort[] Kolmiot = { 0, 1, 2, 0, 2, 3 };
+            static readonly ushort[] KolmiotPeili = { 0, 2, 1, 0, 3, 2 };
+            readonly LiviaKuva kuva;
+
+            public Eva(LiviaKuva kuva)
+            {
+                this.kuva = kuva;
+                pickingMode = PickingMode.Ignore;
+                style.position = Position.Absolute;
+                style.left = 0; style.top = 0; style.right = 0; style.bottom = 0;
+                generateVisualContent += Piirra;
+            }
+
+            void Piirra(MeshGenerationContext mgc)
+            {
+                var r = contentRect;
+                if (r.width <= 0 || r.height <= 0 || !kuva.EvaNakyy) return;
+                var m = kuva.Nakyma(r);
+                var t = kuva.tila;
+                for (int i = 0; i < evaKuvat.Length; i++)
+                {
+                    var kuvaI = evaKuvat[i];
+                    if (kuvaI == null) continue;
+                    float alfa = i == 2 ? t.EvaKasvo : i == 3 ? t.EvaLamput : i == 4 ? t.EvaMaa : 1f;
+                    if (alfa <= 0.004f) continue;
+                    var md = mgc.Allocate(4, 6, kuvaI);
+                    if (md.vertexCount == 0) continue;
+                    var savy = new Color(1, 1, 1, Mathf.Clamp01(alfa));
+                    void Kulma(float x, float y, float u, float v)
+                    {
+                        var p = m.Kuvaa(new Vector2(x, y));
+                        md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = savy, uv = new Vector2(u, v) });
+                    }
+                    // Tekstuurin v kasvaa ylöspäin, kuvan y alaspäin.
+                    Kulma(0, 0, 0, 1);
+                    Kulma(152, 0, 1, 1);
+                    Kulma(152, 304, 1, 0);
+                    Kulma(0, 304, 0, 0);
+                    md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
+                }
             }
         }
     }
