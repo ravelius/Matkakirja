@@ -74,6 +74,12 @@ namespace Matkakirja
         /// lämpö); 0 = näytön taajuus, oletus 60 Hz (Fable 26.9., LiikeKattoOletus). Verhon aikana ei kattoa (Cesium etenee kehys kerrallaan).
         /// Komento `ruutu liike 120|60|pois` (Komennot.cs); KehysMittari kirjaa sen riville ("liikeKatto").
         /// </summary>
+        /// <summary>
+        /// Näkymän oma katto (Hz, 0 = ei): raskas koko ruudun näkymä pyytää tasaisen taajuuden (Linssiseppä 30.9.2026, ISS-laitemittaus:
+        /// Cupola on GPU:n rajalla ja heilui 40–60 fps:n välillä ja kuumensi iPadin; Päätoimittaja: Cupolaan tasainen 30 fps).
+        /// Asettaja nollaa sen poistuessaan (IssKyytiNakyma).
+        /// </summary>
+        public static int NakymanKatto;
         public static int LiikeKatto = LiikeKattoOletus;   // kehittäjäasetus luetaan Awakessa (PlayerPrefs ei staattisessa alustuksessa)
 
         /// <summary>
@@ -114,7 +120,7 @@ namespace Matkakirja
         public static void Vierita() => vieritysAsti = Time.unscaledTime + VieritysPitoS;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = vieritysAsti = 0; LiikeKatto = LiikeKattoOletus; }
+        static void Nollaa() { Instanssi = null; UiRauhassa = null; Aktiivinen.Clear(); herattyAsti = vieritysAsti = 0; LiikeKatto = LiikeKattoOletus; NakymanKatto = 0; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Kaynnista()
@@ -197,6 +203,7 @@ namespace Matkakirja
             paikallaanHaut = haut;
 
             int katto = Lampo.Taso == Lampotaso.Kriittinen ? KriittinenFps : Lampo.Taso == Lampotaso.Kuuma ? KuumaFps : Naytto;
+            if (NakymanKatto > 0) katto = Math.Min(katto, NakymanKatto);
             // Vieritys 120 Hz (Fablen ehdot 27.9.): ProMotion, kartta pois piirrosta, lämpö normaali — muuten liikkeen katto.
             bool vieritys120 = syy == "vieritys" && kameraPois && Naytto > 60
                 && Lampo.Taso == Lampotaso.Normaali && Lampo.ThermalState < 2;
@@ -259,7 +266,7 @@ namespace Matkakirja
         /// <summary>Tila testikomennolle `ruutu`.</summary>
         public string Kuvaus() =>
             $"tila {Nyt} ({Syy}), fps {Application.targetFrameRate}, piirtoväli {OnDemandRendering.renderFrameInterval}, " +
-            $"näyttö {Naytto} Hz, liikkeen katto {(LiikeKatto > 0 ? LiikeKatto + " Hz" : "ei")}, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
+            $"näyttö {Naytto} Hz, liikkeen katto {(LiikeKatto > 0 ? LiikeKatto + " Hz" : "ei")}, näkymän katto {(NakymanKatto > 0 ? NakymanKatto + " Hz" : "ei")}, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
             $"kamera {(kameraPois ? "pois" : "päällä")}, renderScale {(asetus != null ? asetus.renderScale : -1f):0.##}";
     }
 }
