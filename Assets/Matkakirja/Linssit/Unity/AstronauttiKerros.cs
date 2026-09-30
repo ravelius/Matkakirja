@@ -565,8 +565,9 @@ namespace Matkakirja.Natiivi
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 // Kyydissä (seuranta tai siirtymä sinne) ISS on 3D-malli, ikkunassa ei kumpikaan (ollaan sisällä).
-                bool malli = kyyti == KyydinTila.Seuranta && issMalli != null;
-                bool piste = kyyti == KyydinTila.Kauko || (kyyti == KyydinTila.Seuranta && issMalli == null);
+                bool vertailu = Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue;
+                bool malli = kyyti == KyydinTila.Seuranta && issMalli != null && !vertailu;
+                bool piste = !vertailu && (kyyti == KyydinTila.Kauko || (kyyti == KyydinTila.Seuranta && issMalli == null));
                 // Kaukonäkymässä merkki näkyy vain pallon kiekon sisällä (web issKiekonSisalla): reunan takana horisontin yllä
                 // oleva asema projisoituisi kiekon ulkopuolelle.
                 if (piste && kyyti == KyydinTila.Kauko) piste = KiekonSisalla(paikka, kerroin);

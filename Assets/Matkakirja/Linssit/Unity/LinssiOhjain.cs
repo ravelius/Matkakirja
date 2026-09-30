@@ -1679,6 +1679,8 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
+                        else if (a == "vertailu" && osat.Length > 3)
+                            Kirjaa("astro kyyti vertailu: " + KyydinVertailu(osat.Skip(3).ToArray()));
                         else if (a == "yohon")   // kuvapari (30.9.): kelaa seuraavaan hetkeen, jolloin aurinko on alapisteessä ≥ 15° horisontin alla
                         {
                             var t0 = Matkakirja.Linssit.Iss.IssNyt.Kello(); DateTime? yo = null;
@@ -1900,6 +1902,32 @@ namespace Matkakirja.Natiivi
         /// palauttaa oikean kellon. Kello kulkee siirron jälkeen. Siirto asettaa simuloidun kellon LIVE-hetken (IssNyt.Simu):
         /// kello hyppää hetkeen LIVE:nä, nopeutus (astro kyyti nopeus) juoksee siitä ja Palaa LIVE palaa siihen.
         /// </summary>
+        /// <summary>
+        /// `astro kyyti vertailu <nadirLat> <nadirLon> <korkeusKm> <keskiLat> <keskiLon> <polttoväliMm> <UTC yyyy-MM-ddTHH:mm:ss>`
+        /// | `pois`: NASA-astronauttikuvan kuvakulma ja hetki (Gateway to Astronaut Photography: nadir, korkeus, keskipiste,
+        /// polttoväli täyskennolla 36 × 24 mm → pystykenttä 2 atan(12 / f)). Kyydin UI ja ISS-malli piiloon, kello kuvan hetkeen.
+        /// </summary>
+        static string KyydinVertailu(string[] a)
+        {
+            Func<double, double, double, double, double, Matkakirja.Linssit.Kuvakulma> L = Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VertailuKulma;
+            if (a[0] == "pois")
+            {
+                Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu = null;
+                Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(TimeSpan.Zero);
+                return "pois";
+            }
+            var ic = System.Globalization.CultureInfo.InvariantCulture;
+            double D(int i) => double.Parse(a[i].Replace(',', '.'), System.Globalization.NumberStyles.Float, ic);
+            if (a.Length < 7) return "anna nadirLat nadirLon korkeusKm keskiLat keskiLon mm UTC";
+            var k = L(D(0), D(1), D(2), D(3), D(4));
+            double f = D(5);
+            Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VertailuKentta = 2 * Math.Atan(12.0 / Math.Max(8, f)) * 180 / Math.PI;
+            Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu = k;
+            if (DateTime.TryParse(a[6], ic, System.Globalization.DateTimeStyles.AdjustToUniversal | System.Globalization.DateTimeStyles.AssumeUniversal, out var utc))
+                Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(utc - DateTime.UtcNow);
+            return $"{k}, kenttä {Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VertailuKentta:0.0}°, hetki {Matkakirja.Linssit.Iss.IssNyt.Kello():yyyy-MM-dd HH:mm:ss} UTC";
+        }
+
         static string KyydinKello(string arvo)
         {
             if (arvo == "pois") { Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(TimeSpan.Zero); return "oikea aika"; }

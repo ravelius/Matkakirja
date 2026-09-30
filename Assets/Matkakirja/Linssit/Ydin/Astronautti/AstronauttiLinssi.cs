@@ -288,6 +288,17 @@ namespace Matkakirja.Linssit.Astronautti
         /// palauttaa todellisen hetken, jolloin yöpuolella lukemassa on rivi "ISS on nyt Maan yöpuolella". A/B `astro kyyti paiva 0|1`.
         /// </summary>
         public static bool CupolaPaivanvaloon = true;
+
+        /// <summary>
+        /// NASA-VERTAILU (fotorealismi, Päätoimittaja 30.9.): kamera Gateway to Astronaut Photography -kuvan tiedoista (nadir,
+        /// korkeus, kuvan keskipiste, polttoväli → pystykenttä) ja kello kuvan UTC-hetkeen; null = kyydin oma asento.
+        /// </summary>
+        public static Kuvakulma? Vertailu;
+        public static double VertailuKentta = 27;
+
+        /// <summary>Vertailukamera: silmä nadirin yllä <paramref name="korkeusKm"/>, katse kuvan keskipisteeseen.</summary>
+        public static Kuvakulma VertailuKulma(double nadirLat, double nadirLon, double korkeusKm, double lat, double lon) =>
+            Iss.IssKuvakulma.KohteenKulma(new Iss.IssHetki(new LatLon(nadirLat, nadirLon), korkeusKm * 1000, 0), lat, lon);
         /// <summary>Kello siirretty päivänvaloon (kilpi PÄIVÄ); päättyy, kun aika palaa LIVE:ksi tai kyydistä poistutaan.</summary>
         public bool PaivanvaloSiirto { get; private set; }
         int paivaKelaus;
@@ -349,6 +360,8 @@ namespace Matkakirja.Linssit.Astronautti
             if (kavely.Kaynnissa) kavely.Paivita(nyt, utc);
             double perus = double.IsNaN(kentta0) ? y.Nakokulma : kentta0;
             if (!kyyti.Paivita(nyt, Hetki(utc, paikka), perus, out var asento, out double kentta, out bool paluuValmis)) return;
+            // NASA-vertailu (fotorealismi 30.9.): kamera astronauttikuvan paikkaan, suuntaan ja objektiiviin (astro kyyti vertailu).
+            if (Vertailu.HasValue) { asento = Vertailu.Value; kentta = VertailuKentta; }
             y.Kuvaa(asento);
             y.Kenttakulma(kentta);
             kuvataan = true;
