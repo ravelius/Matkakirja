@@ -135,6 +135,13 @@ namespace Matkakirja
         /// </summary>
         public static Rect? RuutuAlue => instanssi != null && instanssi.nakyi ? instanssi.ruutuAlue : (Rect?)null;
 
+        /// <summary>
+        /// Siirretty tanko (Kartuscha: yläpaneelin alle) kallistuu kuin ruudun oikeassa yläkulmassa: liioitellun perspektiivin
+        /// säteittäinen kallistus tekee ruudun keskellä tai oikealla sivulla seisovasta tangosta litteän tai kyljellään olevan
+        /// (Laitetestaaja 1.0.66b, kuva p2-tanko-zoom), kulmassa se nousee ylös ja ulos kuten saapumisnäkymässä.
+        /// </summary>
+        public static bool KulmanKallistus;
+
         /// <summary>Tangon nykyinen paikka (lat, lon), tai null.</summary>
         public static (double Lat, double Lon)? Paikka => instanssi != null && instanssi.asetettu ? (instanssi.lat, instanssi.lon) : ((double, double)?)null;
 
@@ -342,6 +349,7 @@ namespace Matkakirja
             if (Perspektiivi)
             {
                 Vector3 sp = kamera.WorldToScreenPoint(p);
+                if (KulmanKallistus) sp = new Vector3(Screen.width * 0.92f, Screen.height * 0.88f, sp.z);
                 var (k, dx, dy) = Matkakirja.Linssit.Kamera.LiioiteltuPerspektiivi.Kallistus(sp.x, sp.y, Screen.width, Screen.height,
                     kierto != null ? kierto.KaytettyKallistus : 0.0);
                 Vector3 oikeaT = Vector3.ProjectOnPlane(kamera.transform.right, n).normalized;

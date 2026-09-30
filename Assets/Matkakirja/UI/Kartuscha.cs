@@ -249,6 +249,7 @@ namespace Matkakirja.Natiivi
                 if (iso != maa) return;
                 lipunOletus = a;
                 lippuSiirretty = false;
+                Lipputanko.KulmanKallistus = false;
                 if (a.HasValue) Lipputanko.Aseta(maa, a.Value.Lat, a.Value.Lon, lippu);
                 else Lipputanko.Pois();
             }));
@@ -296,9 +297,13 @@ namespace Matkakirja.Natiivi
             if (lippuSiirretty && lipunOletus.HasValue)
             {
                 var o = lipunOletus.Value;
-                if (yla.height <= 0f || (Lipputanko.Ennuste(o.Lat, o.Lon, out var ro) && !PeittaaLipun(ro, yla) && Ruudulla(ro)))
+                // Kulman paikka ei ole paneelin alla (myös ruudun ulkopuolella tai pallon takana: silloin tanko on piilossa kuten
+                // ilman paneelia; Laitetestaaja 1.0.66b: lähizoomissa Alsace oli ruudun ulkopuolella, eikä tanko palannut).
+                bool vapaa = yla.height <= 0f || !Lipputanko.Ennuste(o.Lat, o.Lon, out var ro) || !PeittaaLipun(ro, yla);
+                if (vapaa)
                 {
                     lippuSiirretty = false;
+                    Lipputanko.KulmanKallistus = false;
                     Lipputanko.Aseta(iso, o.Lat, o.Lon, kiinnitettyLippu);
                     Debug.Log("MATKAKIRJA ui lipputanko: takaisin kulmaan");
                     return;
@@ -331,6 +336,7 @@ namespace Matkakirja.Natiivi
             }
             if (!paras.HasValue) return;
             lippuSiirretty = true;
+            Lipputanko.KulmanKallistus = true;
             Lipputanko.Aseta(iso, paras.Value.Lat, paras.Value.Lon, kiinnitettyLippu);
             Debug.Log($"MATKAKIRJA ui lipputanko: yläpaneelin alle ({paras.Value.Lat:0.00}, {paras.Value.Lon:0.00}), {pisteet.Count} ehdokasta");
         }
