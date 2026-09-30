@@ -119,12 +119,11 @@ namespace Matkakirja.Natiivi
 
             Valitsin.Valittu += Valitse;   // (kuvan taustan sumennus: KuvaTaustaSumea alla)
             Valitsin.Suljettava += SuljeLinssi;
-            Astronautti.KuvaAuki += auki =>
-            {
-                kuvaPeittaa = auki; PaivitaSulku();
-                // Pallo taustalla kevyesti sumeaksi kuvanäkymän ajaksi (omistaja 1.10.): 8 pt ≈ 8 px 1x-tasolla.
+            Astronautti.KuvaAuki += auki => { kuvaPeittaa = auki; PaivitaSulku(); };
+            // Pallo taustalla kevyesti sumeaksi kuvanäkymän ajaksi (omistaja 1.10.): 8 pt ≈ 8 px 1x-tasolla. Vain kuvanäkymä:
+            // KuvaAuki laukeaa myös ISS-kyydistä, jonka näkymä ei saa sumentua.
+            Astronautti.Kuva.AukiMuuttui += auki =>
                 PalloKierto.LinssiKuvaSumennusPt = auki && KuvaTaustaSumea ? KuvaTaustanSumennusPt : 0f;
-            };
             // Cupola ja avaruuskävely (omistaja 29.9.2026): "ei mitään peliin liittyviä elementtejä: ei 3D-nostoja, ei merkkejä,
             // nimiöitä tms. — pelkkä kartta efekteineen (pilvet, valo, yö)".
             Astronautti.Kyyti.TilaMuuttui += tila =>
