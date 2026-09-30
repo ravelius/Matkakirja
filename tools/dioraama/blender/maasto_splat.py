@@ -11,7 +11,7 @@
 # splat-normaali-0.png ja maasto.json.
 import json, math, os, sys
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 A = sys.argv[1:]; DEM, K = A[:2]
 def lippu(n, o): return float(A[A.index(n) + 1]) if n in A else o
 ALUE = lippu('--alue', 800.0); N = int(lippu('--koko', 2048)); AVOIN = lippu('--avoin', 350.0)
@@ -61,7 +61,8 @@ avoin = s(AVOIN + 100 - et_linna + 40 * kk, 0, 100)
 w[2] = avoin * s(kk, -1.2, 0.2)                                                                      # niitty (avoin ranta: puut harvennettu, latvusmallista riippumatta)
 metsa = (1 - avoin) * s(lat, 2, 5)
 w[3] = metsa * s(lat + 4 * kk, 17, 22)                                                               # neulaset (tiheä, varjoisa)
-w[1] = np.maximum(metsa * (1 - w[3]), (1 - avoin) * (1 - s(lat, 2, 5)) * 0.9) + 0.25 * avoin * s(kk, 0.3, 1.2)  # sammal/varpu
+w[1] = np.maximum(metsa * (1 - w[3]), (1 - avoin) * (1 - s(lat, 2, 5)) * 0.9) + 0.55 * avoin * s(k2, 0.4, 1.4)  # sammal/varpu (v2: laikkuina niitylle)
+k3 = kohina(40); w[0] = np.maximum(w[0], avoin * s(k3 + 0.3 * k2, 1.3, 1.8))  # v2: avokalliota niityn keskellä
 for i in (1, 2, 3): w[i] *= 1 - np.maximum(w[0], np.maximum(w[4], w[5]))
 vesi = ~maa  # veden alla: pohja kivikkoa rannan lähellä (< 6 m), sitten hiekkaa (näkyy veden läpi matalikossa)
 et_maa = etaisyys(maa, int(20 / px))
@@ -102,31 +103,47 @@ def korkeus(x, y):
     ix, iy = fx.astype(int), fy.astype(int); tx, ty = fx - ix, fy - iy
     return zz[iy, ix] * (1 - tx) * (1 - ty) + zz[iy, ix + 1] * tx * (1 - ty) + zz[iy + 1, ix] * (1 - tx) * ty + zz[iy + 1, ix + 1] * tx * ty
 metsa_w = (1 - avoin) * s(lat, 2, 5)
+# v2 (Päätoimittaja 1.10.): ruoko vain lahdissa tupsuryhminä, kivet tummat ja uponneet, heinätupsut, risut, katajat,
+# nuoret männyt ja koivut niityn ja metsän reunoille.
+def laatikkokeski(x, r):
+    I = np.pad(x.astype(np.float64).cumsum(0).cumsum(1), ((1, 0), (1, 0))); ii = np.arange(N)
+    a0 = np.clip(ii - r, 0, N); a1 = np.clip(ii + r + 1, 0, N)
+    return ((I[a1][:, a1] - I[a0][:, a1] - I[a1][:, a0] + I[a0][:, a0]) / ((a1 - a0)[:, None] * (a1 - a0)[None])).astype(np.float32)
+maata_ymp = laatikkokeski(maa, int(40 / px))  # maan osuus 40 m:n säteellä
+lahti = s(maata_ymp, 0.35, 0.55)                                   # vesi, jota maa ympäröi (lahti, salmen poukama)
+ryhma = s(kohina(10), 0.5, 1.2)                                    # tupsuryhmät
+reuna_m = avoin * s(lat, 1, 4) + (1 - avoin) * (1 - s(lat, 4, 10))  # niityn ja metsän raja
 tiheys = np.stack([
-    w[1] * (1 - 0.6 * metsa_w) * 0.35 + w[0] * 0.20 * s(3 - rinne / 10, 0, 1) + w[2] * 0.09 * s(kk, -0.5, 0.8),  # kanerva
-    (w[1] * metsa_w + 0.5 * w[3]) * 0.14 + w[2] * 0.02,                              # mustikka (niityn reunoilla harvakseen)
-    w[4] * 0.15 + w[2] * 0.03 + w[0] * 0.05,                                         # kivi
-    np.where(vesi, s(et_maa, 1.5, 3) * (1 - s(et_maa, 7, 9)), 0) * 0.30 * s(8 - rinne, 0, 4),  # ruoko
+    w[1] * (1 - 0.6 * metsa_w) * 0.35 + w[0] * 0.20 * s(3 - rinne / 10, 0, 1) + w[2] * 0.06 * s(kk, -0.5, 0.8),  # 0 kanerva
+    (w[1] * metsa_w + 0.5 * w[3]) * 0.14 + w[2] * 0.02,                                                  # 1 mustikka
+    w[4] * 0.12 + w[2] * 0.02 + w[0] * 0.06,                                                             # 2 kivi
+    np.zeros_like(w[0]),                                                                                 # 3 ruoko (alla)
+    w[2] * 0.7 * s(kohina(3), -0.8, 0.6),                                                                # 4 heinä (laikuittain)
+    (w[1] + w[3]) * 0.03 + w[2] * 0.01,                                                                  # 5 risut
+    (w[2] + w[0]) * 0.004 * avoin,                                                                       # 6 kataja
+    reuna_m * 0.004 + w[0] * 0.002 * avoin,                                                              # 7 nuori mänty
+    reuna_m * 0.003,                                                                                     # 8 nuori koivu
 ]) * maa[None].astype(np.float32)
-tiheys[3] = np.where(vesi, (s(et_maa, 1.5, 3) * (1 - s(et_maa, 7, 9)) * 0.30 * s(8 - rinne, 0, 4)), 0)
+tiheys[3] = np.where(vesi, s(et_maa, 1.5, 3) * (1 - s(et_maa, 7, 9)) * lahti * ryhma * 0.9 * s(8 - rinne, 0, 4), 0)
 sisalla = (et_linna < SADE_AK) & ~((np.abs(X) < 94) & (np.abs(Y) < 53))  # ei kuoren päälle
 tiheys *= sisalla[None]
 rng_ak = np.random.default_rng(51); rivit = []
-for laji in range(4):
+for laji in range(tiheys.shape[0]):
     odotus = tiheys[laji] * px * px; lkm = rng_ak.poisson(odotus)
     iy, ix = np.nonzero(lkm)
     for jy, jx in zip(iy, ix):
         for _ in range(lkm[jy, jx]):
             x = X[jy, jx] + rng_ak.uniform(-px / 2, px / 2); y = Y[jy, jx] + rng_ak.uniform(-px / 2, px / 2)
-            koko = {0: rng_ak.uniform(0.3, 0.55), 1: rng_ak.uniform(0.3, 0.5), 2: rng_ak.uniform(0.2, 0.7), 3: rng_ak.uniform(1.3, 2.1)}[laji]
+            koko = {0: rng_ak.uniform(0.25, 0.45), 1: rng_ak.uniform(0.3, 0.5), 2: rng_ak.uniform(0.25, 0.8), 3: rng_ak.uniform(1.0, 2.2),
+                    4: rng_ak.uniform(0.15, 0.35), 5: rng_ak.uniform(0.3, 0.5), 6: rng_ak.uniform(1.0, 2.8), 7: rng_ak.uniform(2.5, 5.0), 8: rng_ak.uniform(2.5, 5.0)}[laji]
             rivit.append((x, y, laji, koko))
 R_ = np.array(rivit); jarj = np.argsort(np.hypot(R_[:, 0], R_[:, 1])); R_ = R_[jarj]
-zt = np.where(R_[:, 2] == 3, -7.0, korkeus(R_[:, 0], R_[:, 1]))
+zt = np.where(R_[:, 2] == 3, -7.0, korkeus(R_[:, 0], R_[:, 1]) - np.where(R_[:, 2] == 2, 0.12 * R_[:, 3], 0.02))  # kivet uponneet
 ak = [[round(float(x), 2), round(float(y), 2), round(float(z), 2), int(l), round(float(k), 2)] for (x, y, l, k), z in zip(R_, zt)]
 json.dump({'lahde': 'Linnanrakentaja 1.10.2026: kerrospainoista (maasto_splat.py), omat proseduraaliset kortit (aluskasvit.py)',
-           'sarakkeet': ['x', 'y', 'z', 'laji (0 kanerva, 1 mustikka, 2 kivi, 3 ruoko)', 'koko'], 'atlas': 'aluskasvit.json',
-           'tasot': {'kevyt': 0, 'normaali': 8000, 'huippu': 20000}, 'aluskasvit': ak},
+           'sarakkeet': ['x', 'y', 'z', 'laji (aluskasvit.json lajit)', 'koko'], 'atlas': 'aluskasvit.json',
+           'tasot': {'kevyt': 0, 'normaali': 8000, 'huippu': 20000}, 'kasvit': ak},
           open(os.path.join(K, 'aluskasvit-lista.json'), 'w'), separators=(',', ':'), ensure_ascii=False)
 d_ = np.hypot(R_[:, 0], R_[:, 1])
-print(f'ALUSKASVIT: {len(ak)} kpl {SADE_AK:.0f} m:n säteellä, lajit', np.bincount(R_[:, 2].astype(int), minlength=4).tolist(),
+print(f'ALUSKASVIT: {len(ak)} kpl {SADE_AK:.0f} m:n säteellä, lajit', np.bincount(R_[:, 2].astype(int), minlength=9).tolist(),
       '8000. säde', round(float(d_[min(7999, len(d_) - 1)])), 'm, 20000. säde', round(float(d_[min(19999, len(d_) - 1)])), 'm')
