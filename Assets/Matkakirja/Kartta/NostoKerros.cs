@@ -156,6 +156,12 @@ namespace Matkakirja
         /// päästää taso 3:n nostot ja ryhmämerkkien nimiöt (web aihenostonNimioNakyy). Linssinimissä aina auki.</summary>
         public bool Lahella { get; private set; }
         /// <summary>
+        /// NOSTOJEN NIMIÖT NÄKYVÄT (pariteetti 30.9.2026, web nostot.js lehtiNakyvissa / pisteetVain): false = maan lehti
+        /// ei täytä näkymää (webin mitassa osuus &lt; 0,5, tai &lt; 0,3 / maa ei kokonaan ruudulla), jolloin Natiivi-UI piirtää
+        /// nostot pelkkinä merkkeinä ilman nimiöitä. Linssinimissä aina tosi.
+        /// </summary>
+        public bool NimetNakyvat { get; private set; } = true;
+        /// <summary>
         /// Näkymän osuus uloimmasta sallitusta (web lauta.js uloimmanOsuus): kameran korkeus / maan saapumisnäkymän
         /// korkeus. Saapuessa 1, yksi porras sisään 0,5. 0 = raja tuntematon (rajat lataamatta tai maa saapuu
         /// kaupunkinäkymään, web uloszoomausRaja null), jolloin lähizoomi on kiinni.
@@ -461,6 +467,7 @@ namespace Matkakirja
             // Osuus (web lehdenOsuus): max(pohjan leveys / näkyvä leveys, pohjan korkeus / näkyvä korkeus), asteina.
             double nakyvaLeveys = NakyvaLeveysAsteina(), nakyvaKorkeus = NakyvaKorkeusAsteina();
             Osuus = 0;
+            bool nimet = true;
             if (maa != null)
             {
                 double4 bb;
@@ -468,7 +475,11 @@ namespace Matkakirja
                 double leveys = math.abs(bb.z - bb.x) * math.cos(math.radians((bb.y + bb.w) * 0.5));
                 double korkeus = math.abs(bb.w - bb.y);
                 Osuus = (float)math.max(nakyvaLeveys > 0 ? leveys / nakyvaLeveys : 0, nakyvaKorkeus > 0 ? korkeus / nakyvaKorkeus : 0);
+                // Pariteetti 30.9.2026 (web nostot.js lehtiNakyvissa / pisteetVain): loitonnettaessa nostot jäävät
+                // pisteiksi ilman nimiöitä, kunnes maan lehti täyttää näkymän (NostoSaannot.LehtiNakyvissa).
+                nimet = linssiNimet || LehtiNakyvissa(bb, nakyvaLeveys, nakyvaKorkeus);
             }
+            if (nimet != NimetNakyvat) { NimetNakyvat = nimet; muuttui = true; }
 
             // Lähizoomin mitta ja kartan mittakerroin (web uloimmanOsuus ja nostonKarttakerroin).
             PaivitaSaapumisKorkeus(maa);
@@ -667,6 +678,38 @@ namespace Matkakirja
             double pysty = math.radians(kamera.fieldOfView) * 0.5;
             return math.degrees(math.min(math.PI, 2.0 * kierto.korkeus * math.tan(pysty) / 6371000.0));
         }
+
+        /// <summary>
+        /// Web lehtiNakyvissa (nostot.js:743) natiivin kamerasta, pariteetti 30.9.2026. Näkymä muunnetaan webin kotelon
+        /// mittaan (Saapumisnakyma.WebinKotelo: sama mittakaava, kotelo ruutua pienempi), ja osuus lasketaan webin
+        /// laudan asteina (NostoSaannot.LehdenOsuus). Kokonaisuus (osuus 0,3–0,5) katsotaan bboxin kulmien ruutupisteistä
+        /// 4 %:n reunavaralla (web lehtiKokonaanRuudulla). Tuntematon bbox tai näkymä = tosi (ei muutosta ennalleen).
+        /// </summary>
+        bool LehtiNakyvissa(double4 bb, double nakyvaLeveys, double nakyvaKorkeus)
+        {
+            if (!(bb.z > bb.x) || !(bb.w > bb.y) || !(nakyvaLeveys > 0) || !(nakyvaKorkeus > 0)) return true;
+            var kamera = kierto.GetComponent<Camera>();
+            int pw = kamera != null ? kamera.pixelWidth : Screen.width, ph = kamera != null ? kamera.pixelHeight : Screen.height;
+            if (pw != koteloPw || ph != koteloPh)
+            {
+                koteloPw = pw; koteloPh = ph;
+                double k = PalloKierto.Pistekerroin, w = pw / k, h = ph / k;
+                var kotelo = Saapumisnakyma.WebinKotelo(w, h);
+                koteloSuhdeW = w > 0 && kotelo.W > 0 ? kotelo.W / w : 1;
+                koteloSuhdeH = h > 0 && kotelo.H > 0 ? kotelo.H / h : 1;
+            }
+            double osuus = NostoSaannot.LehdenOsuus(bb.x, bb.y, bb.z, bb.w, nakyvaLeveys * koteloSuhdeW, nakyvaKorkeus * koteloSuhdeH);
+            if (osuus >= NostoSaannot.LehdenVahinOsuus) return true;
+            if (osuus < NostoSaannot.LehdenKokonaisenaOsuus) return false;
+            float vara = (float)(NostoSaannot.LehdenReunavara * Screen.width);
+            return KulmaRuudulla(bb.y, bb.x, vara) && KulmaRuudulla(bb.y, bb.z, vara)
+                && KulmaRuudulla(bb.w, bb.x, vara) && KulmaRuudulla(bb.w, bb.z, vara);
+        }
+        int koteloPw = -1, koteloPh = -1;
+        double koteloSuhdeW = 1, koteloSuhdeH = 1;
+
+        bool KulmaRuudulla(double lat, double lon, float vara) =>
+            kierto.RuutuPiste(lat, lon, out var r) && r.x >= -vara && r.y >= -vara && r.x <= Screen.width + vara && r.y <= Screen.height + vara;
 
         static double4 PisteidenBbox(List<Nosto> l)
         {

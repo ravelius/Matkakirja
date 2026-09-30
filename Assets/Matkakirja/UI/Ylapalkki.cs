@@ -76,6 +76,8 @@ namespace Matkakirja.Natiivi
             {
                 if (Pakota.HasValue) return Pakota.Value;
                 if (Screen.width <= Screen.height) return false;
+                // iPad: palkki näkyy myös vaaka-asennossa (omistaja 30.9.2026 klo 12.28); vaakapiilo vain iPhonella.
+                if (!Puhelin) return false;
                 float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
                 float w = Screen.width / skaala, h = Screen.height / skaala;
                 return h <= 520f || (Touchscreen.current != null && w <= 1366f);
@@ -279,16 +281,22 @@ namespace Matkakirja.Natiivi
             rahaton = Rakenne.Teksti("", "mk-pilleri__rahaton", pilleri);
             rahaton.style.display = DisplayStyle.None;
             kello = Rakenne.Teksti("", "mk-pilleri__kello", pilleri);
-            // Pillerivalikko puhelimella (web mitat.md 29.9.): kaksirivinen pilleri, ikoni vasemmalla ja rahat + päivä allekkain,
-            // jotta "400 ₰" ja "Päivä 1, aamu" mahtuvat saaren oikealle puolelle.
+            // Pillerivalikko puhelimella: kaksirivinen pilleri saaren oikealla puolella. Omistaja 30.9.2026 klo 12.28: päiväys
+            // "1/80, keskipäivä" ylärivillä ja rahasaldo pillerin oikeaan reunaan alariville. iPadilla sama järjestys yhdellä rivillä.
             if (PilleriOikealla)
             {
                 var pino = Rakenne.El("mk-pilleri__pino", pilleri, PickingMode.Ignore);
-                var rivi1 = Rakenne.El("mk-pilleri__rivi1", pino, PickingMode.Ignore);
-                rivi1.Add(raha);
-                rivi1.Add(rahaton);
                 pino.Add(kello);
+                var rivi1 = Rakenne.El("mk-pilleri__rivi1", pino, PickingMode.Ignore);
+                rivi1.Add(rahaton);
+                rivi1.Add(raha);
                 pilleri.AddToClassList("mk-pilleri--kaksirivinen");
+            }
+            else if (IpadNahka)
+            {
+                kello.SendToBack();
+                pilleri.Q(className: "mk-ikoni")?.SendToBack();
+                pilleri.AddToClassList("mk-pilleri--paiva-ensin");
             }
             pilleri.style.display = DisplayStyle.None;
             pilleri.RegisterCallback<GeometryChangedEvent>(_ => { SovitaPilleri(); PilleriMuuttui?.Invoke(); });
@@ -546,7 +554,10 @@ namespace Matkakirja.Natiivi
             if (matala) pilleri.style.borderTopLeftRadius = pilleri.style.borderTopRightRadius =
                 pilleri.style.borderBottomLeftRadius = pilleri.style.borderBottomRightRadius = rivi / 2f;
             float keski = saari.height > 0 ? (ylakulma.y + alakulma.y) / 2f : 0f;
-            float yla = Mathf.Max(4f * yksikko, keski - rivi / 2f);
+            // Omistaja 30.9.2026 klo 12.28: pilleri ja logo hieman alemmas, saaren akselin alapuolelle (nahkapalkki).
+            bool nahka = matala && PilleriOikealla && palkki.ClassListContains("mk-ylapalkki--nahka");
+            float alemmas = nahka && saari.height > 0 ? RiviAlemmas * yksikko : 0f;
+            float yla = Mathf.Max(4f * yksikko, keski - rivi / 2f + alemmas);
             palkki.EnableInClassList("mk-ylapalkki--saari", !matala);
             palkki.EnableInClassList("mk-ylapalkki--matala", matala);
             palkki.style.paddingTop = yla;
@@ -561,7 +572,10 @@ namespace Matkakirja.Natiivi
                 // Omistaja 29.9.2026 (1.0.50, palaute 5): nahkaa yhtä paljon saaren ylä- ja alapuolella, sitten tikkauskaista.
                 // Laitteen saaren mukaan; kuva rajautuu alareunasta (scale-and-crop), joten tikkaus ei veny.
                 korkeus = saariAla + saariYla + P(Screen.width / pp, 0f).x * NahkaTikkausOsuus;
+                // Omistaja 30.9.2026 klo 12.28: yläpalkista hieman korkeampi (rivi laskee saaren akselin alle).
+                korkeus += alemmas + PalkkiKorkeampi * yksikko;
             }
+            AsetaSaariMusta(nahka && saari.width > 0 ? Rect.MinMaxRect(ylakulma.x, saariYla, alakulma.x, saariAla) : Rect.zero, yksikko);
             palkki.style.height = korkeus;
             // Löydös 73: palkki keskittää rivin pystysuunnassa, joten turva-alueen korkuinen palkki valutti pillerin
             // ja ☰:n 5,6 pt saaren alapuolelle (iPhone 17: pilleri y 19,6, saari y 14). Loppu alatäytteeksi.
@@ -599,6 +613,74 @@ namespace Matkakirja.Natiivi
             kelluvaVaraus = Mathf.Max(0f, korkeus - r.y);
             SovitaPilleri();
             return true;
+        }
+
+        /// <summary>Rivin lasku saaren akselin alle ja palkin lisäkorkeus (pt; omistaja 30.9.2026 klo 12.28 "hieman").</summary>
+        const float RiviAlemmas = 6f, PalkkiKorkeampi = 4f;
+        /// <summary>Mustan saarialueen pehmeä reuna (pt): liukuma mustasta nahkaan heti saaren ulkopuolella.</summary>
+        const float SaariLiukuma = 14f, SaariVara = 2f;
+        VisualElement saariMusta;
+        string saariMustaAvain;
+        Texture2D saariMustaTex;
+
+        /// <summary>
+        /// DYNAMIC ISLAND KATOAA (omistaja 30.9.2026 klo 12.28: "yläpalkin keskusta täysin mustaksi, jotta Dynamic Island katoaa;
+        /// heti saaren ulkopuolella liukuma mustasta takaisin nahkapintaan"): musta alue ruudun yläreunasta saaren alareunaan
+        /// saaren levyisenä (+ 2 pt), pyöristetyt alakulmat saaren kaarella ja 14 pt:n pehmeä reuna sivuille ja alas.
+        /// Kuvio lasketaan saaren mitoista (paneelin yksiköt, 2 px / yksikkö); saari = Rect.zero piilottaa.
+        /// </summary>
+        void AsetaSaariMusta(Rect saari, float yksikko)
+        {
+            if (saari.width <= 0f)
+            {
+                if (saariMusta != null) saariMusta.style.display = DisplayStyle.None;
+                return;
+            }
+            if (saariMusta == null)
+            {
+                saariMusta = Rakenne.El("mk-ylapalkki__saarimusta", palkki, PickingMode.Ignore);
+                // Nahan ja keskivarjon päälle, logon ja pillerin alle.
+                var varjo = palkki.Q(className: "mk-ylapalkki__varjo");
+                if (varjo != null) saariMusta.PlaceInFront(varjo);
+                else saariMusta.SendToBack();
+            }
+            float f = SaariLiukuma * yksikko, v = SaariVara * yksikko;
+            float w = saari.width + 2f * (v + f), h = saari.yMax + v + f;
+            var s = saariMusta.style;
+            s.display = DisplayStyle.Flex;
+            s.left = saari.xMin - v - f;
+            s.top = 0f;
+            s.width = w;
+            s.height = h;
+            string avain = $"{w:0.#}x{h:0.#}:{f:0.#}:{saari.height:0.#}";
+            if (avain == saariMustaAvain) return;
+            saariMustaAvain = avain;
+            int tw = Mathf.Clamp(Mathf.RoundToInt(w * 2f), 8, 1024), th = Mathf.Clamp(Mathf.RoundToInt(h * 2f), 8, 512);
+            var t = new Texture2D(tw, th, TextureFormat.RGBA32, false) { name = "ylapalkki-saarimusta", wrapMode = TextureWrapMode.Clamp };
+            var px = new Color32[tw * th];
+            // Sisäalue (musta): x f..w−f, y 0..h−f; alakulmien säde saaren puolikorkeus + vara.
+            float r = saari.height / 2f + v, x0 = f, x1 = w - f, y1 = h - f;
+            for (int j = 0; j < th; j++)
+            for (int i = 0; i < tw; i++)
+            {
+                float x = (i + 0.5f) * w / tw, y = h - (j + 0.5f) * h / th; // y alas (tekstuurin rivi 0 = alareuna)
+                float dx = Mathf.Max(x0 - x, 0f, x - x1), dy = Mathf.Max(y - y1, 0f);
+                // Pyöristetty alakulma: etäisyys kulman kaaren keskipisteestä.
+                if (y > y1 - r && (x < x0 + r || x > x1 - r))
+                {
+                    float cx = x < x0 + r ? x0 + r : x1 - r, cy = y1 - r;
+                    float d0 = Mathf.Sqrt((x - cx) * (x - cx) + (y - cy) * (y - cy)) - r;
+                    dx = Mathf.Max(d0, 0f); dy = 0f;
+                }
+                float d = Mathf.Sqrt(dx * dx + dy * dy);
+                float a = 1f - Mathf.SmoothStep(0f, 1f, d / f);
+                px[j * tw + i] = new Color32(0, 0, 0, (byte)Mathf.RoundToInt(a * 255f));
+            }
+            t.SetPixels32(px);
+            t.Apply(false, true);
+            s.backgroundImage = new StyleBackground(t);
+            if (saariMustaTex != null) UnityEngine.Object.Destroy(saariMustaTex);
+            saariMustaTex = t;
         }
 
         float pilleriMax;
@@ -865,7 +947,12 @@ namespace Matkakirja.Natiivi
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
                 if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
-                string uusiKello = (Linssivalitsin.PilleriValikko && !PilleriOikealla ? "· " : "") + Iso(osat[1]) + ", " + osat[2];
+                // Pillerivalikko (omistaja 30.9.2026 klo 12.28): "1/80, keskipäivä" = päivä / isoisän ennätys ja vuorokaudenaika
+                // pelin omalla sanalla; rahat pillerin oikeassa reunassa. Muuten webin "Päivä 1, aamu".
+                var pv = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
+                string uusiKello = Linssivalitsin.PilleriValikko && pv.Success
+                    ? pv.Value + "/" + Matkakirja.Peli.LaattaVakiot.EnnatysPaivat + ", " + osat[2]
+                    : Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;

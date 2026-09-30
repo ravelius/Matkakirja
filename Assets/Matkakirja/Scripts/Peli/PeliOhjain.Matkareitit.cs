@@ -142,6 +142,9 @@ namespace Matkakirja.Natiivi
                 if (t.Vaihe == Vaihe.Siirto) foreach (var k in siirtoKohteet) if (k.Kaupunki != null) kohteet.Add(k.Kaupunki);
                 if (lentoKohteet != null) kohteet.AddRange(lentoKohteet);
             }
+            // Pariteetti 30.9.2026 (web nimet.js OMAN_KAUPUNGIN_TARKEYS / KOHTEEN_TARKEYS): oma kaupunki ja matkan kohteet
+            // ohittavat zoomtason nimibudjetin (KaupunkiMerkit.Etusija; ei muutosta = ei työtä).
+            merkit.Etusija(oma, kohteet);
             string avain = vapaa ? "" : iso + "|" + oma + "|" + string.Join(",", kohteet) + (himmeat ? "|himmeat" : "");
             if (avain == peliSuodatinAvain) return;
             peliSuodatinAvain = avain;

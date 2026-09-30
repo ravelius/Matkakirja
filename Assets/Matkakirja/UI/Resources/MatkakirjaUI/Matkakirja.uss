@@ -4399,15 +4399,31 @@
     min-width: 0;
 }
 
+/* Omistaja 30.9.2026 klo 12.28: päiväys "1/80, keskipäivä" ylärivillä, rahat alarivillä pillerin oikeassa reunassa. */
 .mk-pilleri__rivi1 {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    margin-top: -2px;
 }
 
 .mk-pilleri--kaksirivinen .mk-pilleri__kello {
     margin-left: 0;
-    margin-top: -2px;
     font-size: 11px;
+}
+
+/* iPad: sama järjestys yhdellä rivillä (ikoni, päiväys, rahat oikealla). */
+.mk-pilleri--paiva-ensin .mk-pilleri__kello {
+    margin-left: 0;
+}
+
+.mk-pilleri--paiva-ensin .mk-pilleri__raha {
+    margin-left: 10px;
+}
+
+.mk-ylapalkki__saarimusta {
+    position: absolute;
+    -unity-background-scale-mode: stretch-to-fill;
 }
 
 /* MATKALAUKKUNAHKA (omistaja 29.9.2026, Codex iphone-v1): kaistale rajattuna matalaan palkkiin alareuna (tikkaus) edellä,
