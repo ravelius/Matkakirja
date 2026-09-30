@@ -9658,9 +9658,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Arkhangel'sk": {
       lyhyt: 'Arkangelin alueeseen kuuluu myös Frans Joosefin maa, arktinen saaristo, jonka saaret ovat suurelta osin jäätiköiden peitossa.',
+      pitka: "Arkangelin alueen sydän on Pohjois-Dvinan varsi, jonka rannalle Arkangelin kaupunki perustettiin vuonna 1584 Mikael-arkkienkelin luostarin ympärille. Kaupungin lähellä Malyje Korelyn ulkoilmamuseoon on koottu pohjoisen puukirkkoja, tuulimyllyjä ja talonpoikaistaloja. Etelämpänä Kargopol on mainittu kronikoissa jo 1146, ja pieni kaupunki on tunnettu valkoisista kivikirkoistaan sekä käsin muovatuista savileluistaan. Kenozeron kansallispuisto kattaa 140 000 hehtaaria taigaa, lampia ja järviä; alue on ollut Unescon biosfäärialue vuodesta 2004. Alueen pinta-ala on yli 400 000 neliökilometriä, mutta asukkaita on alle miljoona.",
     },
     "Astrakhan'": {
       lyhyt: 'Volga laskee Astrahanin alueella Kaspianmereen Euroopan suurimpana jokisuistona, ja kesällä suiston lahdet peittyvät lootuksen kukkiin.',
+      pitka: "Astrahanin kaupunki sijaitsee Volgan saarilla, ja sen valkoinen kreml on noin 11 hehtaarin kokoinen linnoitus, jonka muurit nousivat 1500-luvulla. Kremlin sisällä Uspenskin katedraalin viisikupolinen rakennus aloitettiin 1699, ja työ kesti noin kaksitoista vuotta. Volgan suistossa Astrahanin biosfäärialue perustettiin jo 1919; siellä on havaittu yli 200 lintulajia, ja kiharapelikaanit pesivät alueella. Kaupungissa asuu noin 520 000 ihmistä ja koko alueella noin miljoona, ja idän ja etelän vaikutus näkyy ruoassa ja rakennuksissa.",
     },
     Bashkortostan: {
       lyhyt: 'Baškortostanin Šulgan-Tašin eli Kapovan luolan seinillä on kivikautisia maalauksia mammuteista ja hevosista.',
@@ -9825,6 +9827,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Perm'": {
       lyhyt: 'Maapallon historian permikausi on nimetty Permin mukaan, sillä brittigeologi Murchison tutki kauden kerrostumia täällä 1841.',
+      pitka: "Perm kasvoi Kaman rannalle vuonna 1723 perustetusta kuparisulatosta noin miljoonan asukkaan kaupungiksi. Baletti-impressario Sergei Djagilev kasvoi täällä, ja Permin ooppera ja baletti on Venäjän tunnetuimpia. Permin taidegalleria toimii entisessä katedraalissa, ja sen erikoisuus on Permin jumalten puuveistokset, kansantaiteellisia Kristus-hahmoja. Joen entiseen terminaalirakennukseen avattiin 2009 nykytaiteen museo PERMM. Kaupungista noin 85 kilometriä etelään, Belaja Goran kukkulalla, sijaitsee Belogorjen luostari, jonka kivikirkko rakennettiin 1902–1917.",
     },
     'City of St. Petersburg': {
       lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
@@ -9849,6 +9852,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Ryazan'": {
       lyhyt: 'Runoilija Sergei Jesenin syntyi Rjazanin alueen Konstantinovon kylässä Okan rannalla, ja hänen kotitalonsa on museo.',
+      pitka: "Rjazanin kreml on kaupungin vanhin osa, ja siellä kohoaa Uspenskin katedraali, joka rakennettiin vuosina 1693–1702. Sen kellotorni on yli 80 metriä korkea ja erottuu kauas Oka-joen yli. Rjazan oli 1097–1521 itsenäinen ruhtinaskunta, ja sen pääkaupunki sijaitsi alun perin noin 50 kilometrin päässä nykyisestä kaupungista. Tiedemies Ivan Pavlov, ehdollisten refleksien tutkija ja Nobel-palkittu, syntyi Rjazanissa 1849, ja hänen vanha kotitalonsa on nyt museo. Alue on Okan laaksoa, jossa viljellään ja pidetään mehiläisiä.",
     },
     'Sakha (Yakutia)': {
       lyhyt: 'Sahan Oimjakonin kylässä on mitattu lähes 68 asteen pakkanen, yksi pohjoisen pallonpuoliskon kylmimmistä koskaan mitatuista lukemista.',
@@ -9904,6 +9908,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Tver'": {
       lyhyt: 'Volgan lähde on Tverin alueen Valdain ylängöllä, ja pienen lähteen päälle on rakennettu kappeli.',
+      pitka: "Tverin alue ulottuu Moskovan ja Pietarin välille, ja sen pinta-ala on noin 84 200 neliökilometriä. Läntistä osaa peittää Valdain ylänkö, jolta saavat alkunsa Volga ja Läntinen Dvina. Alueen helmi on Seliger-järvi, jonka pinta-ala on noin 212 neliökilometriä ja jossa on noin 160 saarta. Kalastajien ja melojien suosimaa järveä kutsutaan Euroopan Baikaliksi. Sen rannalla sijaitseva Ostashkov on lomakohde, ja Stolobnyin saarella seisoo Nilo-Stolobenskin luostari. Torzhok mainitaan kirjoituksissa ensi kerran 1139. Vanha kauppakaupunki sijaitsee Moskovan ja Pietarin välisen tien varrella, ja se tunnetaan yhä kultalangalla kirjotuista töistä ja uusklassisesta rakennuskannastaan.",
     },
     "Tyumen'": {
       lyhyt: 'Tjumen perustettiin 1586, ja sitä pidetään ensimmäisenä venäläisenä kaupunkina Siperiassa.',
@@ -9914,6 +9919,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Ul'yanovsk": {
       lyhyt: 'Oblomovin kirjoittaja Ivan Gontšarov syntyi nykyisessä Uljanovskissa, ja kaupungissa on hänen museonsa.',
+      pitka: "Uljanovskin alue on noin 37 200 neliökilometrin kokoinen ja siellä asuu noin 1,2 miljoonaa ihmistä. Volga jakaa maan kahtia: läntinen ranta on kumpuilevaa ylänköä ja itäpuoli tasaisempaa. Aluekeskus Simbirsk perustettiin linnoitukseksi 1648, ja vuonna 1924 se sai nimekseen Uljanovsk. Kaupungissa syntyi Vladimir Lenin, ja se on myös kirjailija Ivan Gontšarovin kotikaupunki. Unesco nimesi sen kirjallisuuden kaupungiksi 2015. Volgan yli kulkee 2009 avattu Presidentin silta, jonka pituus on yli viisi kilometriä. Kaupungin siviili-ilmailumuseossa on noin 40 lentokonetta, muun muassa yliääninen Tu-144. Alueen teollisuuteen kuuluvat autonvalmistus ja lentokonetehdas.",
     },
     Vladimir: {
       lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
@@ -9936,6 +9942,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Yaroslavl'": {
       lyhyt: 'Jaroslavlin vaakunassa on kirvestä kantava karhu, sillä tarun mukaan kaupungin perustaja Jaroslav Viisas kaatoi karhun juuri täällä.',
+      pitka: "Jaroslavlin alue kuuluu Venäjän Kultaiseen renkaaseen, ja siellä asuu noin 1,2 miljoonaa ihmistä. Aluekeskus Jaroslavl, jonka perustamisvuotena pidetään 1010, sijaitsee Volgan ja Kotorosl-joen yhtymäkohdassa. Se kasvoi 1600-luvulla vauraaksi kauppakaupungiksi, ja sen värikkäät kirkot ovat tuolta ajalta. Spasso-Preobrazhenskin luostarin rakennustyöt alkoivat 1506. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon 2005, ja kaupunki vietti 1000-vuotisjuhlaansa 2010. Alueella on myös Uglichin vanha Volga-kaupunki, jossa tsaarin nuori poika Dmitri kuoli 1591, sekä Rybinskin tekoallas, joka täytettiin 1941–1947.",
     },
     Yevrey: {
       lyhyt: 'Juutalaisen autonomisen alueen pääkaupungin Birobidžanin pääkatu on nimetty jiddišiksi kirjoittaneen Šolem Aleichemin mukaan.',
