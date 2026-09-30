@@ -404,3 +404,17 @@ riittää tähän moninkertaisesti.
 
 Workerin lokit näet komennolla `npx wrangler tail` (aja tässä
 kansiossa) — siitä näkee, tuleeko pyyntöjä ylipäätään perille.
+
+## Nimetön kävijälaskuri (30.9.2026)
+
+Peli lähettää kerran istunnossa tehtävän `kaynti` (web `js/kaynti.js`, iOS
+`Kaynti.cs`) ja apurahakortin avauksen sekä esittelylinssit omina
+tapahtumina. Worker (`kaynnit.js`) laskee päivän eri kävijät tiivisteenä
+SHA-256(IP + päivän suola). Suola vanhenee kahdessa vuorokaudessa, eikä
+raakaa IP:tä tallenneta eikä lokiteta. Omistajan laitteet (kehittäjätila,
+Pöllön kehittäjäkoodi, webissä kerran avattu `?omistaja`, iOS:ssä
+`ui omistaja 1`), paikalliset palvelimet, automaatioselaimet ja
+simulaattorit eivät näy luvuissa.
+
+Luku vain kehittäjäkoodilla: `POLLO_KEHITTAJAKOODI=… node tools/kaynnit.mjs 14`.
+KV-kulutus: uusi kävijä tai uusi tapahtuma = 1 kirjoitus, suola 1/vrk.
