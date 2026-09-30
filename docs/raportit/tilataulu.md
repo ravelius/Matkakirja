@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 18:29:** Levy 53 Gi (vakaa; hälytys < 45), wt/ 30 (raja 20), muisti 73 % vapaa, kuorma 4/5/9, sim 0, työtilat ok. Viikko 66 % (5 h 5 %). Konteksti: PÄÄTOIMITTAJA 82 % (ennallaan; ilmoitus estetty viestirajan takia). Kävijälaskuri 18.29: n=2 (ennallaan; FI 1, US 1), seuraava ~19.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 30.9. 18:14:** Levy 53 Gi (vakaa; hälytys < 45), wt/ 30 (raja 20), muisti 75 % vapaa, kuorma 4/5/17 (rauhallinen), sim 0, työtilat ok. Viikko 66 % (5 h 4 %). Konteksti: PÄÄTOIMITTAJA 82 % (kasvaa; ilmoitus estetty viestirajan takia). Kävijälaskuri: 17.42 n=2, seuraava ~18.42. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 30.9. 17:58:** Levy 53 Gi (vakaa; hälytys < 45), wt/ 30 (raja 20), muisti 76 % vapaa, kuorma 11/34/44, sim 0, työtilat ok. Viikko 65 % (5 h 3 %, nollattu 17.50). Konteksti: PÄÄTOIMITTAJA 81 % (kasvaa; hälytys ei mene viestirajan takia). Kävijälaskuri: 17.42 n=2 (FI 1, US 1), seuraava ~18.42. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Viestiraja päällä.
