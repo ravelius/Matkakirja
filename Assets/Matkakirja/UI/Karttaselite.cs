@@ -321,7 +321,11 @@ namespace Matkakirja.Natiivi
         bool MaakuntaSallittu()
         {
             if (!nappiSallittu || LinssiPaalla || Aloitusnakyma.AloitusAuki || Maakunnat.KorttiAuki) return false;
+            // Luennan aikana ei lappua (savukierros 1.0.73, omistajan linja 88fe1265): matkakirjakortti pysyy auki koko luennan,
+            // mutta lapun avaus väistäisi sen (SeliteVaisto). Maakunta avautuu napautuksesta vasta luennan jälkeen.
+            if (Aanet.KertojaPuhuu) return false;
             var o = PeliOhjain.Instanssi;
+            if (o != null && o.SaapumisluentaKesken) return false;
             return o == null || !o.Kaytossa || o.Tila == SilmukanTila.Kartta;
         }
 
