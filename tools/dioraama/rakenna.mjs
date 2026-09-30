@@ -705,11 +705,13 @@ export async function rakennaData(rakennus, {
   rakennusJson.aanet = {};
   for (const id of [...kaytetytAanet].sort()) {
     if (!Object.hasOwn(AANET, id)) throw new Error(`rakenna: käytetty ääni '${id}' puuttuu AANET-pankista`);
-    const { silmukka, voimakkuus, kesto_s: kestoS, versio } = AANET[id];
+    const { silmukka, voimakkuus, kesto_s: kestoS, versio, kuiva, kaiku, kaikuPitka } = AANET[id];
     // `tiedosto` on suhteessa rakennuksen juureen (ei hash-kansioon) — vakio polku riippumatta
     // siitä, kopioitiinko paikallinen mp3 tässä ajossa (`--aanet`); ämpäri tarjoaa sen julkaisussa.
     // v<versio>-alikansio: ks. aanetVersiot yllä (natiivin URL-välimuisti).
     rakennusJson.aanet[id] = { tiedosto: `aanet/v${versio ?? 1}/${id}.mp3`, silmukka, voimakkuus, kesto_s: kestoS };
+    // Mikseritilan valinnaiset otot (kehittäjätila; Pelikoodari 30.9.): '/'-alkuinen polku median juuresta.
+    for (const [k, v] of Object.entries({ kuiva, kaiku, kaikuPitka })) if (v !== undefined) rakennusJson.aanet[id][k] = v;
   }
   // era2b kohta 4 (3D-hahmot, ali-agentti P4b): liikesilmukkapankki LIIKKEET rakennus.json:iin SELLAISENAAN
   // (sama muoto kuin js/dioraama/pankit/liikkeet.js — ei rakennuskohtaista suodatusta, koska mikä silmukka
