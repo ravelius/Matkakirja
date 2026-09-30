@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Astronautin kameran kuvanäkymä: pallo taustalla sumeaksi (omistaja 1.10.); A/B `ui linssi kuvasumennus 0|1|<pt>`.</summary>
         public static bool KuvaTaustaSumea = true;
-        public static float KuvaTaustanSumennusPt = 8f;
+        public static float KuvaTaustanSumennusPt = 4f;   // Päätoimittaja 1.10.: 8 pt hävitti Maan, 4 pt mantereet erottuvat pehmeinä
 
         public const int Kerros = 25, SumuKerros = 5, MustaKerros = 24, Ylakerros = 37, SulkuKerros = 38;
         /// <summary>
@@ -120,7 +120,7 @@ namespace Matkakirja.Natiivi
             Valitsin.Valittu += Valitse;   // (kuvan taustan sumennus: KuvaTaustaSumea alla)
             Valitsin.Suljettava += SuljeLinssi;
             Astronautti.KuvaAuki += auki => { kuvaPeittaa = auki; PaivitaSulku(); };
-            // Pallo taustalla kevyesti sumeaksi kuvanäkymän ajaksi (omistaja 1.10.): 8 pt ≈ 8 px 1x-tasolla. Vain kuvanäkymä:
+            // Pallo taustalla kevyesti sumeaksi kuvanäkymän ajaksi (omistaja 1.10.): 4 pt ≈ 4 px 1x-tasolla. Vain kuvanäkymä:
             // KuvaAuki laukeaa myös ISS-kyydistä, jonka näkymä ei saa sumentua.
             Astronautti.Kuva.AukiMuuttui += auki =>
                 PalloKierto.LinssiKuvaSumennusPt = auki && KuvaTaustaSumea ? KuvaTaustanSumennusPt : 0f;
