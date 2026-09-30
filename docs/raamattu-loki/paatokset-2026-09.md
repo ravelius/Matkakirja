@@ -9459,3 +9459,7 @@ Omistaja 30.9.2026: Pulun ja nostojen luennan striimi ElevenLabsilla on eleven_v
 ## OMISTAJA: OLAVINLINNA KUVALLISESTI MAHDOLLISIMMAN LAADUKKAAKSI — TAVOITEKUVA ENSIN, SITTEN HYBRIDIMALLI, LEIVOTTU VALO JA HEIJASTAVA VESI (30.9.2026 klo 16.23)
 
 Omistaja 30.9.2026: 'miksi osa linnasta on niin huono laatuinen … miksi vesi näyttää niin huonolta?' ja 'tee linnasta mahdollisimman laadukas kuvallisesti. miten se onnistuisi?' Päätoimittajan linja: 1) Linnanrakentaja renderöi Blenderissä (Cycles) tavoitekuvat pelin kamerakulmista, omistaja hyväksyy ilmeen; 2) hybridimalli: terävät fotogrammetriaosat suurimmalla lähdetarkkuudella, heikot osat (katot, piha, puurakenteet, rantakalliot) mallinnettuina CC0 PBR -materiaaleilla, fotogrammetriasta leivottu valo pois; 3) hämärän valo leivottuna, soihdut ja ikkunat hehkuineen, reflection probet ja jälkikäsittely; 4) heijastava mobiilivesi ja ympäristö (Siirtoseppä); 5) laatutasot laitteittain, tarkempi taso lähizoomissa. Diagnoosi (miksi osa heikko) ja vaiheittainen työmäärä ennen reaaliaikatyötä.
+
+## OMISTAJA: KONE VAPAASSA KÄYTÖSSÄ (30.9. ILTAPÄIVÄSTÄ) (30.9.2026 klo 16.27)
+
+Omistaja 30.9.2026: 'en tarvitse konetta niin saat käyttää resursseja vapaasti.' Toistaiseksi (kunnes omistaja toisin sanoo tai /tmp/matkakirja-kevyt-lippu tulee): Karttasepän polton 4 ytimen katto pois (vahti enintään 16, nice 15), kaksi simulaattorivuoroa rinnakkain Julkaisijan jonossa, linnan pakettirakennus ja Cycles-renderit ilman kuormarajaa; muistipainetta seurataan (swap korkealla iltapäivän huipuista).
