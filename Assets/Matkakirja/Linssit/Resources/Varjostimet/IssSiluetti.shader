@@ -13,7 +13,7 @@ Shader "Matkakirja/Linssit/IssSiluetti"
         _AurinkoRuutu("Aurinko kamerassa (x, y, z; w = näkyy)", Vector) = (0.3, 0.5, 0.4, 1)
         _Asettelu("Siiven alku x, y, kulma (°), leveys", Vector) = (-0.12, -0.06, 24, 0.105)
         _Pituus("Siiven pituus", Float) = 0.62
-        _Sumeus("Reunan pehmeys", Float) = 0.004
+        _Sumeus("Reunan pehmeys", Float) = 0.006
     }
     SubShader
     {
@@ -66,7 +66,8 @@ Shader "Matkakirja/Linssit/IssSiluetti"
                 float2 q = p - _Asettelu.xy;
                 float t = dot(q, d);          // siiven pituussuunta
                 float s = dot(q, n);          // poikkisuunta, maston kohdalla 0
-                float w = _Asettelu.w;
+                // Perspektiivi: siiven tyvi (kulmassa) on lähempänä kameraa ja leveämpi, kärki kapenee.
+                float w = _Asettelu.w * lerp(1.35, 0.8, saturate(t / _Pituus));
                 float reuna = _Sumeus;
                 half sisalla = smoothstep(-reuna, reuna, t) * (1 - smoothstep(_Pituus - reuna, _Pituus + reuna, t))
                              * (1 - smoothstep(w - reuna, w + reuna, abs(s)));
@@ -83,7 +84,7 @@ Shader "Matkakirja/Linssit/IssSiluetti"
                 half3 matto = half3(0.020, 0.024, 0.040);
                 half lohko = Viiva(t, 0.052, 0.0022);
                 half kenno = max(Viiva(t, 0.0105, 0.0007), Viiva(s, 0.0105, 0.0007));
-                matto = lerp(matto, half3(0.09, 0.065, 0.035), lohko * 0.8);
+                matto = lerp(matto, half3(0.055, 0.04, 0.022), lohko * 0.7);
                 matto = lerp(matto, half3(0.045, 0.045, 0.06), kenno * 0.35);
 
                 // Valo: kiilto (aurinko kameran edessä tai sivulla) ja auringon puoleinen reunus.
@@ -93,10 +94,10 @@ Shader "Matkakirja/Linssit/IssSiluetti"
                 matto += half3(0.10, 0.09, 0.13) * kiilto * (0.4 + 0.6 * saturate(t / _Pituus));
                 float puoli = sign(dot(float2(aur.x, aur.y), n));      // kummalla puolella aurinko on
                 half reunus = (1 - smoothstep(0.0, 0.006, w - s * puoli)) * sisalla * nakyy;
-                half3 vari = matto + half3(0.75, 0.62, 0.42) * reunus * 0.9;
+                half3 vari = matto + half3(0.75, 0.62, 0.42) * reunus * 0.45;
                 // Masto ja putki metallinharmaat, aurinkoon päin vaaleammat.
                 half metalli = saturate(max(masto, putki));
-                vari = lerp(vari, half3(0.16, 0.16, 0.17) + half3(0.35, 0.30, 0.24) * nakyy * 0.5, metalli * 0.85);
+                vari = lerp(vari, half3(0.07, 0.07, 0.075) + half3(0.20, 0.17, 0.13) * nakyy * 0.5, metalli * 0.85);
                 a *= _Peitto;
                 return half4(vari * a, a);
             }
