@@ -316,6 +316,19 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        bool kysymysAuki;
+
+        /// <summary>
+        /// Kysymys auki (pariteetti 30.9.2026, Päätoimittaja): visa pienentää kortin aina lapuksi, myös luennan aikana
+        /// (web: kortti lappuna visan yllä). Sulkeutuessa kortti palaa auki vain, jos luenta yhä jatkuu.
+        /// </summary>
+        public void Kysymys(bool auki)
+        {
+            kysymysAuki = auki;
+            if (auki) { if (Nakyy && !pieni) Muunna(true); }
+            else if (luentaPiilo && Nakyy && pieni) Muunna(false);
+        }
+
         void Luentavahti()
         {
             KytkeKartta();
@@ -326,7 +339,7 @@ namespace Matkakirja.Natiivi
             if (!piiloon) kertojaLoppui = -1f;
             if (piiloon == luentaPiilo) return;
             luentaPiilo = piiloon;
-            if (piiloon && Nakyy && pieni) Muunna(false);
+            if (piiloon && Nakyy && pieni && !kysymysAuki) Muunna(false);
             // Löydös 87: isoisän luennon jälkeen lappu tiivistyy pelkkään kaupungin nimeen.
             if (!piiloon && merkinta != null && merkinta.Kaiutin && !luettu) { luettu = true; PaivitaLyhyt(true); }
         }
