@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 22:54:** Levy 67 Gi (63→67 nousi), wt/ 41 (raja 20, kasvaa), muisti 66 % vapaa, kuorma 14/34/68, sim 1 (iPhone 18 Pro; ≤1 ok), työtilat ok. Viikko 77 % (5 h 2 %, nollattu 22.50). Konteksti: Päätoimittaja 41 %. Viestirajan hook: OK (#3734 auki). Kävijälaskuri: 22.23 n=2, seuraava ~23.23. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 30.9. 22:39:** Levy 63 Gi (68→63 16 min:ssa; tavoite > 60 yöksi täynnä mutta laskee; hälytys < 50), wt/ 40 (raja 20), muisti 79 % vapaa, kuorma 86/113/129, sim 1 (iPhone 17 FB234D08; ≤1 ok), työtilat ok. Viikko 76 % (5 h 43 %). Konteksti: Päätoimittaja 32 %. Kävijälaskuri: 22.23 n=2, seuraava ~23.23. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Viestiraja edelleen päällä (kierto toisella kanavalla kielletty käyttäjän ohjeella).
 
 **Päivitetty 30.9. 22:23:** Levy 68 Gi (tavoite yöksi > 60 saavutettu: Natiiviseppä 9,3 G, Linssiseppä 3,2 G), wt/ 39 (raja 20), muisti 56 % vapaa, kuorma 44/57/104, sim 1 (iPhone 18 Pro; ≤1 ok), työtilat ok. Viikko 75 % (5 h 40 %). Konteksti: Päätoimittaja 12 % (nollattu 22.16, aloitusviesti toimitettu ~22.20). Kävijälaskuri 22.23: n=2 (ennallaan), seuraava ~23.23. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Siivouspyyntö (PRB sammutetut, .app lokit, wt) lähetetty: Julkaisija, Linnanrakentaja, Linssiseppä, Linssiseppä 2, Siirtoseppä, Natiiviseppä, Karttaseppä (jonossa), Laitetestaaja (jonossa); Pelikoodari + Natiivi-UI EI lähtenyt (viestiraja 11). Kuittaukset: Natiiviseppä, Linssiseppä.
