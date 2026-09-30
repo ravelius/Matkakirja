@@ -162,7 +162,13 @@ namespace Matkakirja.Natiivi
             if (vesiMat == null || kamera == null) return;
             float skaala = HeijastusSkaala(DioraamaUlkokuori.Valittu);
             bool heijastus = skaala > 0f && PiirraHeijastus(kamera, skaala);
-            Shader.SetGlobalVector(IdParam, new Vector4(Time.time, heijastus ? 1f : 0f, 0.35f, 0.03f));
+            // 1.10. ensimmäinen kuva: linnan heijastus jäi pintakuvion alle → fresnel-bias 0,03 → 0,10 ja pintanormaali 0,35 → 0,22.
+            Shader.SetGlobalVector(IdParam, new Vector4(Time.time, heijastus ? 1f : 0f, 0.22f, 0.10f));
+            // Taivaan liukuma (kevyt taso ja heijastuksen tausta) tunnelman mukaan: horisontti = kameran tausta (sumun väri),
+            // lakipiste hieman tummempi ja sinisempi (hämärässä ennen vaalea liukuma näkyi tummaa taivasta vasten).
+            var tausta = kamera.backgroundColor;
+            Shader.SetGlobalColor(IdTaivasAla, tausta);
+            Shader.SetGlobalColor(IdTaivasYla, new Color(tausta.r * 0.75f, tausta.g * 0.82f, Mathf.Min(1f, tausta.b * 0.95f + 0.04f)));
         }
 
         bool PiirraHeijastus(Camera kamera, float skaala)

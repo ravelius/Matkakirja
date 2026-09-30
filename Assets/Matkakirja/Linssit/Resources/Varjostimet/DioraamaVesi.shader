@@ -125,7 +125,7 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
                 half3 heijastus;
                 float2 ruutu = i.ruutu.xy / i.ruutu.w;
                 if (_VesiParam.y > 0.5)
-                    heijastus = SAMPLE_TEXTURE2D(_VesiHeijastus, sampler_VesiHeijastus, ruutu + n.zx * float2(0.02, 0.06)).rgb;
+                    heijastus = SAMPLE_TEXTURE2D(_VesiHeijastus, sampler_VesiHeijastus, ruutu + n.zx * float2(0.012, 0.03)).rgb;
                 else
                 {
                     half3 r = reflect(-V, (half3)n);
