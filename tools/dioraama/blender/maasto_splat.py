@@ -166,7 +166,11 @@ zt = np.where(R_[:, 2] == 3, -7.0, korkeus(R_[:, 0], R_[:, 1]) - np.where(R_[:, 
 # Korkeat (kataja, nuoret puut) vasta 1 m vedenpinnan yläpuolella: matalan kallioniemen kärjen nuori mänty heijastui
 # oletuskamerassa niemen alle "roikkuvaksi puuksi" (Päätoimittaja 1.10.).
 zm = korkeus(R_[:, 0], R_[:, 1]); korkea = np.isin(R_[:, 2], (6, 7, 8))
-pida = (R_[:, 2] == 3) | ((R_[:, 2] == 2) & (zm > -7.0)) | ((zm >= -6.6) & ~korkea) | (korkea & (zm >= -6.0))
+# v3: korkeat eivät kapeille niemille ja luodoille (maata < 55 % 40 m:n säteellä): tuulen pieksemä kallio pysyy matalana,
+# eikä oletuskameran niemen kärjen kataja heijastu "roikkuvaksi puuksi" (pienmuodot nostivat niemen yli 1 m:n rajan).
+jx_ = np.clip(((R_[:, 0] + ALUE) / px).astype(int), 0, N - 1); jy_ = np.clip(((ALUE - R_[:, 1]) / px).astype(int), 0, N - 1)
+leveaa = maata_ymp[jy_, jx_] >= 0.55
+pida = (R_[:, 2] == 3) | ((R_[:, 2] == 2) & (zm > -7.0)) | ((zm >= -6.6) & ~korkea) | (korkea & (zm >= -6.0) & leveaa)
 R_, zt = R_[pida], zt[pida]
 ak = [[round(float(x), 2), round(float(y), 2), round(float(z), 2), int(l), round(float(k), 2)] for (x, y, l, k), z in zip(R_, zt)]
 json.dump({'lahde': 'Linnanrakentaja 1.10.2026: kerrospainoista (maasto_splat.py), omat proseduraaliset kortit (aluskasvit.py)',
