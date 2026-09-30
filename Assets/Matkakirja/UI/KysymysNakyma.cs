@@ -140,6 +140,9 @@ namespace Matkakirja.Natiivi
             kerros.TurvaMuuttui += Asettele;
         }
 
+        /// <summary>Testikomento ui kysymys vastaa &lt;n&gt;: kuin vaihtoehdon n (0–) napautus.</summary>
+        public string TestaaVastaa(int i) { Vastaa(i); return "vastattu " + i; }
+
         /// <summary>Testikomento ui kysymys suurenna: napautus näkyvään kätkö-, kysymys- tai lippukuvaan; tila lokiin.</summary>
         public string TestaaSuurennos()
         {

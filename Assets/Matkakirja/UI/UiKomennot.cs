@@ -9,7 +9,7 @@
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
 //                                             kuva, lippu, pulma [id],
 //                                             tulos [laattatyyppi], kohtaaminen,
-//                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs); suurenna = kuvan napautus
+//                                             kohtaaminen-tervehdys (KysymysEsimerkki.cs); suurenna = kuvan napautus, vastaa <n> = vaihtoehto n
 //                                             (kätkö, kysymyskuva tai lippu → kokoruutu)
 //   ui selite                                 karttaselite auki (Nostot-välilehti)
 //   ui aloitus [portti|avaus|valinta|kortti|lento|jatka]  aloitusnäkymä ilman peliä (avaus = avausteksti ruudullaan, valinta kartalla, kortti = vara, lento = lennon kaistale)
@@ -1088,6 +1088,7 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "kysymys" when loput == "suurenna": return ui.Kysymys.TestaaSuurennos();
+                case "kysymys" when loput.StartsWith("vastaa ") && int.TryParse(loput.Substring(7), out int kv): return ui.Kysymys.TestaaVastaa(kv);
                 case "kysymys": return ui.Esimerkkikysymys(loput);
                 case "heitto": ui.Matkavalinta.NaytaHeitto(loput.Length > 0 ? loput : "Heitä noppaa · Lontoo", () => ui.Tilarivi.Viesti("Noppa: 4")); return null;
                 case "viesti": ui.Tilarivi.Viesti(loput, 4f); return null;
