@@ -289,15 +289,40 @@ namespace Matkakirja.Natiivi
                 // ETTÄ kaikki samaa silmukkaa toistavat hahmot eivät nyki tahdissa. Jatkuva (ei kvantisoitu
                 // fps:ään, toisin kuin 2D-atlaksen ruutu) -- kohdan 4 "asettaa ... joka ruutu" TULKITTU jatkuvana.
                 double kestoS = liike.KestoS > 0 ? liike.KestoS : 1.0;
+                // Omistaja 30.9. (TF 1.1 (81), Linnanrakentajan juurisyy): vartija "käveli oudosti". Reittihahmon
+                // kävelytahti seuraa reitin nopeutta (silmukka on mitoitettu ~1,4 m/s:iin; 0,8 m/s:lla jalat liukuivat
+                // ~45 %), ja päiden tauoilla kävely vaihtuu idleen 0,25 s:ssa (ei paikallaan kävelyä).
+                bool kavelee = e.Hahmo.Reitti != null && (silmukkaNimi == "kavely" || silmukkaNimi == "kanto");
+                double kavelyPaino = 1;
+                if (kavelee)
+                {
+                    double nopeus = e.Hahmo.Reitti.Nopeus > 0 ? e.Hahmo.Reitti.Nopeus : 1.0;
+                    kestoS *= KavelyNopeus / nopeus;
+                    kavelyPaino = ReittiPaikkaJaSuunta(e, t).kavely;
+                }
                 double t01 = Mod(t + VaiheYksikko(e.HahmoId) * kestoS, kestoS) / kestoS;
                 var kulmat = Liikkeet.NivelKulmat(liike, t01);
+                double nousu = Liikkeet.JuuriNousu(liike, t01);
+                Dictionary<string, double[]> lepoKulmat = null;
+                if (kavelyPaino < 1 && rakennus.Liikkeet.TryGetValue("idle", out var idle))
+                {
+                    double idleS = idle.KestoS > 0 ? idle.KestoS : 1.0;
+                    double i01 = Mod(t + VaiheYksikko(e.HahmoId) * idleS, idleS) / idleS;
+                    lepoKulmat = Liikkeet.NivelKulmat(idle, i01);
+                    nousu = Liikkeet.JuuriNousu(idle, i01) + (nousu - Liikkeet.JuuriNousu(idle, i01)) * kavelyPaino;
+                }
                 var solmut = e.Malli.Glb.Solmut;
                 for (int i = 0; i < solmut.Count; i++)
                 {
                     var kulma = kulmat.TryGetValue(solmut[i].Nimi, out var k) ? k : Lepo;
+                    if (lepoKulmat != null)
+                    {
+                        var l = lepoKulmat.TryGetValue(solmut[i].Nimi, out var lk) ? lk : Lepo;
+                        kulma = new[] { l[0] + (kulma[0] - l[0]) * kavelyPaino, l[1] + (kulma[1] - l[1]) * kavelyPaino, l[2] + (kulma[2] - l[2]) * kavelyPaino };
+                    }
                     e.SolmuT[i].localRotation = NivelKierto(kulma[0], kulma[1], kulma[2]);
                 }
-                PaivitaSijainti(e, t, Liikkeet.JuuriNousu(liike, t01));
+                PaivitaSijainti(e, t, nousu);
             }
         }
 
@@ -306,7 +331,7 @@ namespace Matkakirja.Natiivi
         void PaivitaSijainti(Esiintyma e, double t, double juuriNousuM = 0)
         {
             V3 paikkaKanoninen; Vector3 kasvot;
-            if (e.Hahmo.Reitti != null) (paikkaKanoninen, kasvot) = ReittiPaikkaJaSuunta(e, t);
+            if (e.Hahmo.Reitti != null) (paikkaKanoninen, kasvot, _) = ReittiPaikkaJaSuunta(e, t);
             else { paikkaKanoninen = e.Hahmo.Paikka; kasvot = SuunnastaKasvot(e.Hahmo.Suunta); }
 
             Vector3 paikka = DioraamaNayttamo.UnityPiste(paikkaKanoninen);
@@ -356,16 +381,16 @@ namespace Matkakirja.Natiivi
         /// JA sen päätepysähdyksellä (juuri saavuttu, kasvot yhä menosuuntaan), −1 paluumatkalla JA LÄHTÖPISTEEN
         /// pysähdyksellä (juuri palattu paluusuunnasta) -- pysähdyksissä matka on VAKIO (0 tai ReitinMatka), joten
         /// segmentinhaku antaa aina saman segmentin kuin sen suunnan viimeinen askel.</summary>
-        static (V3 paikka, Vector3 suunta) ReittiPaikkaJaSuunta(Esiintyma e, double t)
+        static (V3 paikka, Vector3 suunta, double kavely) ReittiPaikkaJaSuunta(Esiintyma e, double t)
         {
             var reitti = e.Hahmo.Reitti;
             var pisteet = reitti.Pisteet;
-            if (pisteet == null || pisteet.Count == 0) return (e.Hahmo.Paikka, Vector3.zero);
-            if (pisteet.Count == 1 || e.ReitinMatka <= 0) return (pisteet[0], Vector3.zero);
+            if (pisteet == null || pisteet.Count == 0) return (e.Hahmo.Paikka, Vector3.zero, 0);
+            if (pisteet.Count == 1 || e.ReitinMatka <= 0) return (pisteet[0], Vector3.zero, 0);
 
             double tauko = Math.Max(0, reitti.Tauko);
             double kierto = 2 * e.ReitinKulkuS + 2 * tauko;
-            if (kierto <= 0) return (pisteet[0], Vector3.zero);
+            if (kierto <= 0) return (pisteet[0], Vector3.zero, 0);
             double vaihe = Mod(t + e.ReitinVaihe * kierto, kierto);
             double nopeus = reitti.Nopeus > 0 ? reitti.Nopeus : 1.0;
             double matka; int merkki;
@@ -373,6 +398,12 @@ namespace Matkakirja.Natiivi
             else if (vaihe < e.ReitinKulkuS + tauko) { matka = e.ReitinMatka; merkki = 1; }
             else if (vaihe < 2 * e.ReitinKulkuS + tauko) { matka = e.ReitinMatka - (vaihe - e.ReitinKulkuS - tauko) * nopeus; merkki = -1; }
             else { matka = 0; merkki = -1; }
+            // Tauolla: aika tauon alusta (−1 = liikkeellä). Kävelypaino laskee 0,25 s:ssa idleen ja nousee tauon
+            // viimeisellä 0,25 s:lla takaisin; kasvot kääntyvät 180° tauon alussa 0,6 s:ssa (ennen: napsahdus heti).
+            double taukoaika = vaihe >= e.ReitinKulkuS && vaihe < e.ReitinKulkuS + tauko ? vaihe - e.ReitinKulkuS
+                : vaihe >= 2 * e.ReitinKulkuS + tauko ? vaihe - 2 * e.ReitinKulkuS - tauko : -1;
+            double kavely = taukoaika < 0 ? 1
+                : Math.Max(1 - Math.Clamp(taukoaika / SiirtymaS, 0, 1), Math.Clamp((taukoaika - (tauko - SiirtymaS)) / SiirtymaS, 0, 1));
 
             int seg = 0;
             while (seg < e.Kumulatiivinen.Length - 2 && e.Kumulatiivinen[seg + 1] < matka) seg++;
@@ -381,8 +412,19 @@ namespace Matkakirja.Natiivi
             double osuus = segLoppu > segAlku ? Math.Clamp((matka - segAlku) / (segLoppu - segAlku), 0.0, 1.0) : 0;
             V3 piste = V3.Lerp(pisteet[seg], pisteet[segSeur], osuus);
             V3 segSuunta = (pisteet[segSeur] - pisteet[seg]) * merkki;
-            return (piste, DioraamaNayttamo.UnityPiste(segSuunta));
+            Vector3 suunta = DioraamaNayttamo.UnityPiste(segSuunta);
+            if (taukoaika >= 0)
+            {
+                float k = Mathf.SmoothStep(0f, 1f, (float)Math.Clamp(taukoaika / KaannosS, 0, 1));
+                suunta = Quaternion.AngleAxis(180f * k, Vector3.up) * suunta;
+            }
+            return (piste, suunta, kavely);
         }
+
+        /// <summary>Kävelysilmukan luonnollinen nopeus (1 s = 2 askelta, lonkka ±25° → askel ~0,72 m, Linnanrakentaja 30.9.).</summary>
+        const double KavelyNopeus = 1.4;
+        /// <summary>Kävely ↔ idle -siirtymä tauon päissä ja kasvojen 180° käännöksen kesto (Linnanrakentaja 30.9.).</summary>
+        const double SiirtymaS = 0.25, KaannosS = 0.6;
 
         static double Mod(double a, double m) => a - m * Math.Floor(a / m);
 
