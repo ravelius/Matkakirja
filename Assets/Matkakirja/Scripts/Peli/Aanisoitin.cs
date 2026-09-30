@@ -151,6 +151,9 @@ namespace Matkakirja.Natiivi
         {
             var s = Instanssi;
             if (s == null) return;
+            // Linssiseppä 1.10. (savuke 1.1 (83) FAIL): ISS-humina (CupolaAani) korvaa astro-huminan koko linssin ajan. Linssi
+            // asettaa taustansa CupolaAanin jälkeen, joten korvaus tehdään tässä eikä kutsujärjestys ratkaise.
+            if (tunnus != null && Matkakirja.Natiivi.CupolaAani.KorvaaLinssinTaustan(tunnus)) tunnus = null;
             if (tunnus == null) { s.Tila.LinssiTausta(null, 0, 0); return; }
             if (!LinssiTaustat.TryGetValue(tunnus, out var t)) { Debug.Log("MATKAKIRJA aani: tuntematon linssin taustaääni " + tunnus); return; }
             s.Tila.LinssiTausta(t.Url, t.Voima, t.NousuMs);

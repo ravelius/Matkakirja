@@ -63,6 +63,10 @@ namespace Matkakirja.Natiivi
         int vuoro;
         string viimeVirhe;
 
+        /// <summary>Korvataanko linssin taustaääni (astro-humina) ISS-huminalla nyt: humina soi (linssissä tai Cupolassa).</summary>
+        public static bool KorvaaLinssinTaustan(string tunnus) =>
+            instanssi != null && instanssi.paalla && tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina;
+
         static CupolaAani Varmista()
         {
             if (instanssi == null)
