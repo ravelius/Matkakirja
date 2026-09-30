@@ -17,18 +17,18 @@
   },
   {
    "id": "varpukangas",
+   "lahde": "forest_leaves_02",
+   "toisto_m": 3.0
+  },
+  {
+   "id": "niitty",
    "lahde": "forrest_ground_01",
    "toisto_m": 2.0
   },
   {
-   "id": "niitty",
-   "lahde": "sparse_grass",
-   "toisto_m": 2.0
-  },
-  {
    "id": "neulaset",
-   "lahde": "forest_leaves_04",
-   "toisto_m": 1.5
+   "lahde": "forrest_ground_03",
+   "toisto_m": 2.0
   },
   {
    "id": "rantakivikko",

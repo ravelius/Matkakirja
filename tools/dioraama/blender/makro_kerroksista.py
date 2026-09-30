@@ -45,7 +45,7 @@ lat = C[iy][:, ix].astype(np.float32); q = np.pad(lat, 3, mode='edge'); lat = su
 avoin = 1 - np.clip((lat - 3) / 5, 0, 1)
 t = (t * avoin)[..., None]
 kerros = kerros * 0.75  # ylhäältä katsottuna pinta tummempi kuin lähikuvatekstuurin keskiarvo (varjot, kosteus)
-uusi = kerros * (1 + 0.3 * (vaihtelu - 1))[..., None]
+uusi = kerros * (1 + 0.15 * (vaihtelu - 1))[..., None]  # v3: ilmakuvan laikut puolitettu (tummat läiskät lähellä)
 tulos = osa * (1 - t) + np.clip(uusi, 0, 1) * t
 kuva = np.asarray(im).copy(); kuva[r0:r1, c0:c1] = (tulos * 255).round().astype(np.uint8)
 ulos = Image.fromarray(kuva)
