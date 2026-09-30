@@ -129,11 +129,12 @@ jobs:
                 --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable'
             fi
             if [ -f "$bj" ]; then
-              kohteessa=$(aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" | wc -l | tr -d ' ')
+              # aws s3 ls palauttaa 1, kun kansiota ei vielä ole; pipefail + set -e katkaisi ajon hiljaa (30.9. ajo 36671228175).
+              kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
               if [ "$kohteessa" != "$bn" ]; then
                 aws s3 cp "s3://$AMPARI/$bk" "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" \
                   --no-progress --only-show-errors --exclude 'blender.json'
-                kohteessa=$(aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" | wc -l | tr -d ' ')
+                kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
               fi
               [ "$kohteessa" = "$bn" ] || { echo "::error::$kohde/blender/: $kohteessa/$bn tiedostoa kopion jälkeen, osoitinta ei vaihdettu"; exit 1; }
               echo "  - blender → $kohde/blender/ ($bn tiedostoa, palvelinkopio)" >> "$GITHUB_STEP_SUMMARY"
