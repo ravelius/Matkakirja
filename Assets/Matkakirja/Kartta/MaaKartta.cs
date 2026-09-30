@@ -285,7 +285,9 @@ namespace Matkakirja
             if (!RuutuPallolle(ruutu, out double lat, out double lon)) { Debug.Log($"MATKAKIRJA maat: napautus {ruutu} ohi pallon"); return; }
             var iso3 = osuma.Hae(lat, lon, toleranssi);
             Debug.Log($"MATKAKIRJA maat: napautus {lat:0.00} {lon:0.00} → {iso3 ?? "meri"}");
-            if (iso3 != null) MaaNapautettu?.Invoke(iso3);
+            if (iso3 == null || MaaNapautettu == null) return;
+            PalloKierto.Osui(); // maan napautuksella on kuuntelija (linssi): ei maakuntalappua (omistaja 30.9.2026)
+            MaaNapautettu.Invoke(iso3);
         }
 
         /// <summary>Näytön piste (pikseleinä, origo vasen alakulma) → leveys ja pituus ellipsoidilla.</summary>

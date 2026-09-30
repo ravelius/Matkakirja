@@ -279,6 +279,8 @@ namespace Matkakirja.Natiivi
             // Radio: maakuntanappi piiloon linssin ajaksi (omistaja 29.9.2026: "poista maakunta nappi näkyvistä").
             bool selitePiiloon = vuosi || radio || id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id);
             ui.Karttaselite.NaytaNappi(!selitePiiloon);
+            // Maakunta automaattisesti (omistaja 30.9.2026): linssi omistaa kartan napautukset, maakuntalappu ei aukea.
+            ui.Karttaselite.LinssiPaalla = paalla;
             if (paalla) ui.Karttaselite.Sulje();
             // Löydös S3 (Laitetestaaja b18): linssin avaus sulkee kartan kortit (nosto, kaupunkikortti, matkakirjan
             // postikortit), muuten laajennettu nostokortti jäi linssin päälle auki.

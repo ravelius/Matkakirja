@@ -417,10 +417,29 @@ namespace Matkakirja
         /// </summary>
         public static Func<Vector2, bool> Sieppaaja;
 
+        /// <summary>
+        /// NAPAUTUKSEN OSUMA (maakunta automaattisesti, omistaja 30.9.2026 klo 12.28): karttakohde (kaupunki, nostovalo,
+        /// karttapiste, siirtokohde, maa) tai napautuksen käyttänyt näkymä (matkakirjan kutistus, liukuvalikon sulku)
+        /// ilmoittaa käsitelleensä napautuksen. <see cref="NapautusKasitelty"/> kertoo Napautettu-kuuntelijoiden jälkeen,
+        /// osuiko napautus johonkin; ei osumaa = tyhjä kohta (Natiivi-UI:n maakuntalappu).
+        /// </summary>
+        public static void Osui() => osui = true;
+        static bool osui;
+
+        /// <summary>Napautus käsitelty (ruutu, osui). Sieppaajan nielemistä napautuksista ei kerrota.</summary>
+        public static event Action<Vector2, bool> NapautusKasitelty;
+
+        /// <summary>Viimeisimmän kosketuksen alkuruutu (Time.frameCount): UI tunnistaa, sulkiko painallus kortin.</summary>
+        public static int PainallusRuutu { get; private set; } = -1;
+
         void IlmoitaNapautus(Vector2 ruutu)
         {
             if (Sieppaaja != null && Sieppaaja(ruutu)) return;
+            osui = false;
             Napautettu?.Invoke(ruutu);
+            bool o = osui;
+            osui = false;
+            NapautusKasitelty?.Invoke(ruutu, o);
         }
 
         /// <summary>
@@ -433,10 +452,18 @@ namespace Matkakirja
         /// <summary>IKamera: kaupunkia napautettiin (KaupunkiMerkit ilmoittaa).</summary>
         public event Action<string> KaupunkiNapautettu;
 
-        public void IlmoitaKaupunki(string id) => KaupunkiNapautettu?.Invoke(id);
+        public void IlmoitaKaupunki(string id)
+        {
+            osui = true;
+            KaupunkiNapautettu?.Invoke(id);
+        }
 
         /// <summary>Synteettinen napautus näytön pikseleinä (testikomento "napauta x y").</summary>
-        public void Napauta(Vector2 ruutu) => IlmoitaNapautus(ruutu);
+        public void Napauta(Vector2 ruutu)
+        {
+            PainallusRuutu = Time.frameCount;
+            IlmoitaNapautus(ruutu);
+        }
 
         /// <summary>
         /// Kosketusten esto (dialogi, lehti, linssin oma ele): kun tosi, pallo ei lue
@@ -1068,6 +1095,7 @@ namespace Matkakirja
                 ajo = null; // sormi keskeyttää kamera-ajon
                 if (edellinenSormia == 0)
                 {
+                    PainallusRuutu = Time.frameCount;
                     kosketusAlku = keski;
                     kosketusAika = 0;
                     kosketusMatka = 0;

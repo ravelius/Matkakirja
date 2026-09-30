@@ -19,6 +19,14 @@
 // kokonaan. Päällä: rajat ilman täyttöä, kartan napautus valitsee maakunnan (vain se värjätty, MaaKartta.VainKorostetut)
 // eikä avaa kaupunkeja tai valoja (PalloKierto.Sieppaaja); nostomerkit piilossa tilan ajan; paneeli on vain isompi
 // kuvausruutu (nimi, kuva, lyhyt teksti, Lue lisää → kortti). Vanha välilehtipolku jää koodiin palautusta varten.
+//
+// MAAKUNTA AUTOMAATTISESTI (omistaja 30.9.2026 klo 12.28, Päätoimittajan kautta; Automaattinen = true): nappi pois, ja
+// kartan napautus tyhjään kohtaan (ei kaupunkia, nostoa, karttapistettä, siirtokohdetta tai muuta osumaa, eikä
+// painallus sulkenut korttia tai paneelia) valitsee kohdan maakunnan ja avaa lapun yläkulmaan. Toinen napautus samaan
+// maakuntaan sulkee lapun (kuten 28.9. klo 20.3x), napautus toiseen maakuntaan vaihtaa sisällön, napautus mereen tai
+// maakunnattomaan kohtaan sulkee, ja kohteen napautus sulkee lapun kohteen oman toiminnon tieltä. Kaupungit ja nostot
+// toimivat lapun aikana tavalliseen tapaan (ei sieppaajaa). Maakuntakerros tuntee pelaajan nykyisen maan maakunnat.
+// Linssin, aloitusnäkymän ja muun kuin karttatilan aikana maakuntaa ei valita.
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -44,6 +52,12 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Maakuntakartta-kytkin Nostot|Maakunnat-paneelin tilalla (omistaja 28.9. klo 17.1x).</summary>
         public const bool MaakuntaKartta = true;
+
+        /// <summary>Maakunta kartan tyhjästä napautuksesta ilman nappia (omistaja 30.9.2026 klo 12.28).</summary>
+        public const bool Automaattinen = true;
+
+        /// <summary>Linssi päällä (LinssiUi): linssi omistaa kartan napautukset, maakuntaa ei valita.</summary>
+        public bool LinssiPaalla { get; set; }
 
         public Karttaselite(UiKerros kerros)
         {
@@ -127,6 +141,8 @@ namespace Matkakirja.Natiivi
             Ylapalkki.PalkkiPiilossaMuuttui += PaivitaNappi;
             // Napautus paneelin ohi (myös pallolle, jota UI ei näe) sulkee.
             kerros.JokaRuutu += TarkistaOhiNapautus;
+            if (Automaattinen) PalloKierto.NapautusKasitelty += Napautettiin;
+            PaivitaNappi();
         }
 
         /// <summary>Välilehti vaihtuu (web vaihdaValilehti); valinta muistetaan laitteella.</summary>
@@ -228,7 +244,8 @@ namespace Matkakirja.Natiivi
             if (MaakuntaKartta)
             {
                 Maakunnat.AsetaKarttatila(true);
-                PalloKierto.Sieppaaja = MaakuntaNapautus;
+                // Automaattisessa tilassa ei sieppaajaa: kaupungit ja nostot aukeavat lapun aikana (Napautettiin).
+                if (!Automaattinen) PalloKierto.Sieppaaja = MaakuntaNapautus;
                 MaakuntaKerros()?.AsetaTilaRajat(true);
                 // Nostot pysyvät kartalla maakuntatilassa (omistaja 29.9.2026: "saisi näkyä edelleen kaikki nostot myös
                 // kartalla"); maakuntakerros on 3D-pallossa niiden alla.
@@ -291,10 +308,48 @@ namespace Matkakirja.Natiivi
         /// <summary>Linssi ei päällä eikä aloitusnäkymä auki (web: aloituksessa ei selitteen nappia).</summary>
         void PaivitaNappi()
         {
-            // Palkki piilossa (vaaka, iPhonen veto): vain ☰ näkyy (omistaja 24.9.).
-            bool nakyy = nappiSallittu && !Aloitusnakyma.AloitusAuki && !Ylapalkki.PalkkiPiilossa;
-            if (!nakyy) Sulje();
-            nappi.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            // Palkki piilossa (vaaka, iPhonen veto): vain ☰ näkyy (omistaja 24.9.). Automaattisessa tilassa nappia ei ole,
+            // ja lappu saa näkyä piilotetun palkin aikanakin (se on kartan omaa sisältöä).
+            bool sallittu = nappiSallittu && !Aloitusnakyma.AloitusAuki && (Automaattinen || !Ylapalkki.PalkkiPiilossa);
+            if (!sallittu) Sulje();
+            nappi.style.display = sallittu && !Automaattinen ? DisplayStyle.Flex : DisplayStyle.None;
+            // Maakuntadata valmiiksi kartan tullessa näkyviin, jotta ensimmäinen napautus avaa maakunnan heti.
+            if (Automaattinen && sallittu) Maakunnat.Esilataa();
+        }
+
+        /// <summary>Automaattinen maakunta sallittu: ei linssiä, ei aloitusnäkymää, peli karttatilassa, maakuntakortti kiinni.</summary>
+        bool MaakuntaSallittu()
+        {
+            if (!nappiSallittu || LinssiPaalla || Aloitusnakyma.AloitusAuki || Maakunnat.KorttiAuki) return false;
+            var o = PeliOhjain.Instanssi;
+            return o == null || !o.Kaytossa || o.Tila == SilmukanTila.Kartta;
+        }
+
+        /// <summary>
+        /// PalloKierto.NapautusKasitelty (automaattinen tila): osuma sulkee lapun kohteen tieltä; tyhjä kohta päätetään vasta
+        /// seuraavalla ruudulla, koska kortin ohinapautuksen sulkija (esim. KaupunkiKortti irrotuksessa) voi toimia samalla
+        /// ruudulla napautuksen jälkeen.
+        /// </summary>
+        void Napautettiin(Vector2 ruutu, bool osui)
+        {
+            if (osui) { Sulje(); return; }
+            int painallus = PalloKierto.PainallusRuutu;
+            paneeli.schedule.Execute(() => TyhjaNapautus(ruutu, painallus)).StartingIn(20);
+        }
+
+        void TyhjaNapautus(Vector2 ruutu, int painallus)
+        {
+            if (!MaakuntaSallittu()) return;
+            // Painallus sulki kortin tai paneelin (ohinapautus): se oli sulkeminen, ei maakunnan valinta.
+            if (painallus >= 0 && UiKerros.OhiSulkuRuutu >= painallus) return;
+            var mk = MaakuntaKerros();
+            string avain = null;
+            if (mk != null && mk.RuutuPallolle(ruutu, out double lat, out double lon)) avain = mk.MaaPisteessa(lat, lon);
+            Debug.Log($"MATKAKIRJA ui maakunta: tyhjä napautus → {avain ?? "ei maakuntaa"}{(Auki ? ", lappu auki " + Maakunnat.ValittuAvain : "")}");
+            // Meri tai maakunnaton kohta sulkee; saman maakunnan uusi napautus sulkee (omistaja 28.9. klo 20.3x).
+            if (avain == null || !Maakunnat.Tunnettu(avain) || (Auki && avain == Maakunnat.ValittuAvain)) { Sulje(); return; }
+            if (!Auki) Avaa();
+            Maakunnat.ValitseKunValmis(avain);
         }
 
         void KytkePalvelu()

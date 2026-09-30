@@ -313,6 +313,7 @@ namespace Matkakirja.Natiivi
             bool napautus = (p - ohiAlku).magnitude < 6f && Time.unscaledTime - ohiAika < 0.7f;
             ohiAika = -1f;
             if (!napautus) return;
+            UiKerros.OhiSulki();  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
             string k = kaupunki;
             alue.schedule.Execute(() => { if (Auki && kaupunki == k) Sulje(); }).StartingIn(50);
         }

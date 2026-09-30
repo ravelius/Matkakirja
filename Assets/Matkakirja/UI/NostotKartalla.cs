@@ -940,6 +940,7 @@ namespace Matkakirja.Natiivi
             foreach (var m in merkit)
                 if (m.El.resolvedStyle.display == DisplayStyle.Flex
                     && (m.El.worldBound.Contains(p) || m.Nimio.pickingMode == PickingMode.Position && m.Nimio.worldBound.Contains(p))) return;
+            UiKerros.OhiSulki();  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
             SuljeViuhka();
         }
 
