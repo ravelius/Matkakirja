@@ -1699,6 +1699,32 @@ namespace Matkakirja.Natiivi
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "valotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Valotus = (float)Luku(osat[3]); Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "bloom" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.BloomPois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "filmi" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Filmi = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }   // ISS-kamera
+                        else if (a == "siluetti" && osat.Length > 3)   // ISS-kamera: siluetti 0|1, siluetti asettelu x y kulma leveys pituus
+                        {
+                            if (osat[3] == "asettelu" && osat.Length > 8)
+                            {
+                                Matkakirja.Linssit.IssSiluetti.Asettelu = new Vector4((float)Luku(osat[4]), (float)Luku(osat[5]), (float)Luku(osat[6]), (float)Luku(osat[7]));
+                                Matkakirja.Linssit.IssSiluetti.Pituus = (float)Luku(osat[8]);
+                            }
+                            else Matkakirja.Linssit.IssSiluetti.Paalla = osat[3] != "0";
+                            Kirjaa("astro kyyti " + Matkakirja.Linssit.IssSiluetti.Tila());
+                        }
+                        else if (a == "pinta" && osat.Length > 3)   // ISS-kamera: pinta 1|2 <url {z}/{x}/{y}> <min> <max>, pinta pois (kuukausi 0 ensin: kaksi paikkaa)
+                        {
+                            var pintaKerrokset = KarttaKerrokset.Instanssi;
+                            if (pintaKerrokset == null) Kirjaa("astro kyyti pinta: ei karttakerroksia");
+                            else if (osat[3] == "pois") { pintaKerrokset.PoistaRasteri("iss-pinta-1"); pintaKerrokset.PoistaRasteri("iss-pinta-2"); Kirjaa("astro kyyti pinta pois"); }
+                            else if (osat.Length > 6)
+                            {
+                                string pintaAvain = "iss-pinta-" + osat[3];
+                                // {docs} = sovelluksen Documents (laatat devicectl:llä laitteelle, file://).
+                                string pintaUrl = osat[4].Replace("{docs}", "file://" + Application.persistentDataPath);
+                                string pintaTulos = pintaKerrokset.LisaaRasteri(pintaAvain, pintaUrl, CesiumUrlTemplateRasterOverlayProjection.WebMercator,
+                                    (int)Luku(osat[5]), (int)Luku(osat[6]), 1f);
+                                Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")} {pintaUrl} z{osat[5]}–{osat[6]}");
+                            }
+                        }
                         else if (a == "vertailu" && osat.Length > 3)
                             Kirjaa("astro kyyti vertailu: " + KyydinVertailu(osat.Skip(3).ToArray()));
                         else if (a == "yohon")   // kuvapari (30.9.): kelaa seuraavaan hetkeen, jolloin aurinko on alapisteessä ≥ 15° horisontin alla
