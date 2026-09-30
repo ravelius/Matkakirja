@@ -866,8 +866,12 @@ namespace Matkakirja.Natiivi
             AudioClip klippi;
             using (var r = UnityWebRequestMultimedia.GetAudioClip("file://" + tiedosto, TyyppiPaatteesta(tiedosto)))
             {
-                // Pakattuna muistiin: ei koko luennan purkua pääsäikeessä (LoadFMODSound-piikki).
-                ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;
+                // PCM MUISTIIN (kärki 30.9.2026, omistajan tallenne: isoisä kuului laitteella heti äänitteen kohdasta 6,6 s,
+                // vaikka Unity ilmoitti kohdaksi 0,04 s): pakattu mp3 puretaan laitteella soiton aikana, ja kohdan asetus
+                // (timeSamples) pakattuun klippiin voi osua muualle kuin alkuun. Puhe puretaan kokonaan jo avauksessa, jolloin
+                // soitto ja kohta ovat näytetarkkoja. Kustannus: purku avausruudussa (22 s ≈ 2 Mt, mitattu lokiin).
+                // Pakattu = true palauttaa vanhan polun vertailua varten (peli-komento "puhe pakattu 1|0").
+                ((DownloadHandlerAudioClip)r.downloadHandler).compressed = Pakattu;
                 yield return r.SendWebRequest();
                 if (oma != tunnus) yield break;
                 if (r.result != UnityWebRequest.Result.Success)
@@ -878,7 +882,11 @@ namespace Matkakirja.Natiivi
                     LatausPetti();
                     yield break;
                 }
+                float purku0 = Time.realtimeSinceStartup;
                 klippi = DownloadHandlerAudioClip.GetContent(r);
+                float purkuMs = (Time.realtimeSinceStartup - purku0) * 1000f;
+                if (purkuMs > 20f || Verho) Debug.Log($"MATKAKIRJA puhe: klippi avattu {(Pakattu ? "pakattuna" : "PCM:nä")} {purkuMs:0} ms, "
+                    + $"{klippi?.length:0.0} s, {klippi?.frequency} Hz, {klippi?.loadType} {Path.GetFileName(url.Split('?')[0])}");
             }
             // Näyte ei jää laitteelle (web: sailio null). Pakattu klippi on jo muistissa.
             if (!sailo) { try { File.Delete(tiedosto); } catch { } }
@@ -1193,6 +1201,9 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: 1. soiva kohta {ekaKohta:0.000} s, jumi {jumi:0} ms, {ruutuja} ruutua, soittokohta {edellinen:0.000} s, "
                 + $"hiljaa (< 50 %) soitettu {hiljaa:0.000} s {klippi?.name}");
         }
+
+        /// <summary>Puhe pakattuna muistiin (vanha polku) vai PCM:nä (oletus 30.9.2026), peli-komento "puhe pakattu 1|0".</summary>
+        public static bool Pakattu;
 
         /// <summary>Verhomittari (peli-komento "puhe verho 1|0"): jokaisen klipin alku lokiin, ks. VerhoMittari.</summary>
         public static bool Verho = true;
