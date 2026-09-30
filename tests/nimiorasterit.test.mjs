@@ -44,7 +44,9 @@ test('nimen rasteri: mitat kirjaimista ja välistä, ankkuri text-anchorin mukaa
 });
 
 test('nimen avain: teksti, koko, ankkuri, tyylitys, väli ja dpr', () => {
-  assert.equal(nimenAvain({ teksti: 'Marseille', koko: 13.5, ank: 'middle', tyylitys: 'small-caps', vali: 1.89 }, 2), 'nimi|Marseille|13.50|middle|small-caps|1.89|2');
+  assert.equal(nimenAvain({ teksti: 'Marseille', koko: 13.5, ank: 'middle', tyylitys: 'small-caps', vali: 1.89 }, 2), 'nimi|Marseille|13.50|middle|small-caps|1.89||2');
+  // Pelaajan oma kaupunki saa oman rasterinsa (eri muste, .karttanimi-oma).
+  assert.notEqual(nimenAvain({ teksti: 'A', koko: 13, oma: true }, 1), nimenAvain({ teksti: 'A', koko: 13 }, 1));
   assert.notEqual(nimenAvain({ teksti: 'A', koko: 13 }, 1), nimenAvain({ teksti: 'A', koko: 13 }, 2));
 });
 
