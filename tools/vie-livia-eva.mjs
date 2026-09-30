@@ -2,7 +2,8 @@
 // läpinäkyvää 2×-PNG:tä (304 × 608) samasta SVG:stä kuin webin astronauttipulu (js/livia-svg.js livianEvaKerrosSvg,
 // lepoasento), jotta web ja natiivi pysyvät samana. Kypäräkuva upotetaan data-URI:ksi (ei palvelinta).
 //   PLAYWRIGHT_JS=…/node_modules/playwright/index.js node tools/vie-livia-eva.mjs [kohdekansio]
-// Natiivi: kopioi tulokset protoon Assets/Matkakirja/UI/Resources/LiviaEva/<kerros>.png.
+// Natiivi: kopioi tulokset protoon Assets/Matkakirja/UI/Resources/LiviaEva/<kerros>.png. Peruskerroksen alfa ≥ 240 → 255 ennen
+// kopiointia (lineaarinen väriavaruus vuotaa kartan läpi 240–254:llä, muisti ui-kuvien-alfa-255): 30.9. tehty PIL:llä.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
