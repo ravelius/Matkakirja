@@ -297,6 +297,9 @@ def nakyvyys(kamera=(), sieppaaja=(), piiloon=()):
         o.hide_render = True
 
 
+VAIN_VALOT = '--vain-valot' in ARGS   # uusii vain valokerrokset (sprites.json ennallaan)
+
+
 def sarja(nimi, T, G, S):
     ulos = os.path.join(ULOS, nimi)
     os.makedirs(ulos, exist_ok=True)
@@ -310,12 +313,13 @@ def sarja(nimi, T, G, S):
         if o.type == 'LIGHT':
             o.hide_render = o not in YLEISVALOT
     kehys(0, Tp, 0, 168, S)
-    kuva = renderoi('pohja')
-    v = int(ip.PAATY * S)
-    tallenna_kuva(f'{nimi}/pohja-vasen', kuva[:, :v])
-    tallenna_kuva(f'{nimi}/pohja-oikea', kuva[:, -v:])
-    k0 = kuva.shape[1] // 2 - 32
-    tallenna_kuva(f'{nimi}/pohja-keski', kuva[:, k0:k0 + 64])
+    if not VAIN_VALOT:
+        kuva = renderoi('pohja')
+        v = int(ip.PAATY * S)
+        tallenna_kuva(f'{nimi}/pohja-vasen', kuva[:, :v])
+        tallenna_kuva(f'{nimi}/pohja-oikea', kuva[:, -v:])
+        k0 = kuva.shape[1] // 2 - 32
+        tallenna_kuva(f'{nimi}/pohja-keski', kuva[:, k0:k0 + 64])
     tiedot['pohja'] = {'paaty_pt': ip.PAATY, 'keski_px': 64}
     for o in p['pohja']:
         bpy.data.objects.remove(o)
@@ -329,7 +333,8 @@ def sarja(nimi, T, G, S):
     rx0, rx1 = max(0.0, rx0 - 6), min(T, rx1 + 6)   # varjoille tilaa
     kehys(rx0, rx1, 0, 168, S)
     nakyvyys(kamera=t['ryhma'], sieppaaja=t['pohja'], piiloon=osat)
-    tallenna_kuva(f'{nimi}/ryhma', renderoi('ryhma'))
+    if not VAIN_VALOT:
+        tallenna_kuva(f'{nimi}/ryhma', renderoi('ryhma'))
     leveys = rx1 - rx0
     tiedot['ryhma'] = {'leveys_pt': leveys, 'keskitetty': True}
 
@@ -360,6 +365,8 @@ def sarja(nimi, T, G, S):
             round((px1 - px0) / S, 2), round((py1 - py0) / S, 2)]}
 
     tiedot['osat'] = {}
+    if VAIN_VALOT:
+        osa_kuva = lambda *a: {}  # noqa: E731
     ob = t['osat']['nopeus'][0]
     x, y = t['paikat']['nopeus'][:2]
     for i, k in enumerate(NOPEUS_KULMAT):
@@ -429,7 +436,7 @@ def sarja(nimi, T, G, S):
              [(leg, (0.55, 1.0, 0.6), 1.1), (tek, (0.55, 1.0, 0.6), 0.9)], 5, 0.5)
     for vari in ('valkoinen', 'meripihka'):
         valo(f'legendat-{vari}', [], [(levyt, VALOVARIT[vari], 0.8)], 3, 0.3)
-    valo('paneeli', [valaisin(f'paneeli_{i}', x_, y_, z_, (1.0, 0.93, 0.82), 550000, 14.0, kohti=(0, -1, -0.8),
+    valo('paneeli', [valaisin(f'paneeli_{i}', x_, y_, z_, (1.0, 0.93, 0.82), 260000, 18.0, kohti=(0, -1, -0.8),
                               kartio=120) for i, (x_, y_, z_) in enumerate(t['valot']['paneeli'])],
          [(lyhty, (1.0, 0.93, 0.82), 0.45)], 5, 0.08)
     for o in kaikki:
@@ -446,5 +453,6 @@ if '--sarja' in ARGS:
     for a in valitut:
         kaikki_tiedot['asettelut'][a] = sarja(a, *ASETTELUT[a])
         print('SARJA valmis:', a)
-    with open(os.path.join(ULOS, 'sprites.json'), 'w') as f:
-        json.dump(kaikki_tiedot, f, ensure_ascii=False, indent=1)
+    if not VAIN_VALOT:
+        with open(os.path.join(ULOS, 'sprites.json'), 'w') as f:
+            json.dump(kaikki_tiedot, f, ensure_ascii=False, indent=1)
