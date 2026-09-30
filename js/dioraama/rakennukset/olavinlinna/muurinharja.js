@@ -149,13 +149,15 @@ export const TILA = {
   ],
   hahmot: HAHMOT,
   // Ulkotila: tuuli taustana, tulikorin rätinä, satunnaiset lokit ja askeleet kivellä.
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
   aanet: [
-    { aani: 'linna-tuuli' },
-    { aani: 'tulisija-ratina' },
+    { aani: 'muuri-tuuli', voimakkuus: 0.8 },
+    { aani: 'soihtu-ratina', voimakkuus: 0.45 },
+    { aani: 'jarvi-laineet', voimakkuus: 0.25 },
   ],
   tehosteet: [
-    { aanet: ['lokit'], valit_s: [18, 40] },
-    { aanet: ['askel-puu', 'askel-kivi'], valit_s: [10, 22] },
+    { aanet: ['lokit'], valit_s: [20, 40], voimakkuus: 0.5 },
+    { aanet: ['askel-kivi'], valit_s: [6, 12], voimakkuus: 0.5 },
   ],
   liekit: [
     // Tulikorin liekki hiilloksen päällä (KY + 0,25 + 0,21 = 13,56).

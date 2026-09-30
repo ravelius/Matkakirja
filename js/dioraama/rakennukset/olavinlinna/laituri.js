@@ -142,9 +142,12 @@ export const TILA = {
     ...SOIHDUT,
   ],
   hahmot: HAHMOT,
-  aanet: [{ aani: 'jarvi-laineet' }, { aani: 'linna-tuuli' }],
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [{ aani: 'laituri-laineet', voimakkuus: 0.8 }, { aani: 'linna-tuuli', voimakkuus: 0.4 }],
   tehosteet: [
-    { aanet: ['lokit'], valit_s: [15, 35] },
+    { aanet: ['lokit'], valit_s: [20, 40], voimakkuus: 0.5 },
+    { aanet: ['airot'], valit_s: [15, 30], voimakkuus: 0.5 },
+    { aanet: ['koysi-narina'], valit_s: [10, 25], voimakkuus: 0.4 },
     { aanet: ['askel-puu'], valit_s: [8, 18] },
   ],
   // Soihtuliekit paalujen soihtujen päässä (liekin alapiste seinasoihtu-reseptin mukaan ≈ [0, 0,47, 0,26] paikallisesti).

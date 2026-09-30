@@ -60,6 +60,11 @@ Noin 90 repliikkiä × 5 s × 8 kt/s on noin 3,6 Mt.
 
 ## 4. Lähteet ja lisenssit
 
+**Alkuperä (omistajan ehto 30.9.: ei tekoälyllä luotuja):** jokaisen Freesound-sivun kuvaus on tarkistettu 30.9.
+Yksikään ei ole tekoälyllä tai generatiivisella työkalulla tuotettu. 20 on äänitetty mainitulla laitteella (Zoom, EM172,
+Sony, Tascam ym.), ja muissa ei ole laitemainintaa mutta ne ovat kenttä- tai studioäänitteitä. Kappelin laulu on
+Membethin oma äänite. Tänään ei ole generoitu mitään ElevenLabsilla, xAI:lla tai muulla.
+
 Freesound-lähteet ovat **CC0 1.0**. Lisenssi on tarkistettu jokaisen äänisivun lähdekoodista
 (creativecommons.org/publicdomain/zero/1.0), ja käytetty tiedosto on sivun HQ-esikuuntelu (cdn.freesound.org/previews).
 Kopiot ovat kansiossa `proto-3d/_lahteet/aanet-linna/freesound/<id>.mp3`. CC0 ei vaadi mainintaa, mutta tekijät
@@ -67,12 +72,12 @@ luetellaan tässä.
 
 | Oma id | Lähde (tekijä, Freesound-id) | URL | Käsittely |
 |---|---|---|---|
-| keskushalli-ambienssi | kyles 451600 + hz37 393689 | https://freesound.org/people/kyles/sounds/451600/ · https://freesound.org/people/hz37/sounds/393689/ | alipäästö 1,8 kHz (sanat eivät erotu), kivikaiku |
-| takka-ratina | SilverIllusionist 766540 | https://freesound.org/people/SilverIllusionist/sounds/766540/ | sellaisenaan |
+| keskushalli-ambienssi | kyles 451600 | https://freesound.org/people/kyles/sounds/451600/ | kaukainen väkijoukko isossa tilassa, alipäästö 900 Hz (vain vokaalien sointi jää, sanat eivät erotu), holvikaiku. hz37 393689 poistettu 30.9., koska tekijän mukaan puhe erottuu osittain |
+| takka-ratina | schulmancreative 414298 (eri jakso kuin soihtu-ratinassa) | https://freesound.org/people/schulmancreative/sounds/414298/ | sellaisenaan. 766540 poistettu 30.9., koska se on koostettu kahdesta muusta näytteestä, joiden lisenssejä ei tarkistettu |
 | soihtu-ratina | schulmancreative 414298 | https://freesound.org/people/schulmancreative/sounds/414298/ | ylipäästö 250 Hz, kaksivaiheinen kompressori naksahduksille |
 | kynttila-ratina | NickTayloe 813328 | https://freesound.org/people/NickTayloe/sounds/813328/ | ylipäästö 400 Hz |
 | kappeli-ambienssi | AAEPGranollers 157375 | https://freesound.org/people/AAEPGranollers/sounds/157375/ | kirkon hiljaisuus, ylipäästö 60 Hz |
-| vartiotupa-ambienssi | Vrymaa 770108 + craigsmith 675177 | https://freesound.org/people/Vrymaa/sounds/770108/ · https://freesound.org/people/craigsmith/sounds/675177/ | tulisija + hiljainen puhe −14 dB, sumennettu |
+| vartiotupa-ambienssi | Vrymaa 770108 | https://freesound.org/people/Vrymaa/sounds/770108/ | tulisija kivikaiulla, ei puhetta. 675177 poistettu 30.9. (puhetta, digitoitu elokuva-arkisto) |
 | fatabuuri-ambienssi | leonelmail 427862 + xkeril 628404 | https://freesound.org/people/leonelmail/sounds/427862/ · https://freesound.org/people/xkeril/sounds/628404/ | huonesävy + pisarat −10 dB holvikaiulla |
 | porras-kaiku | Tonmeister88 557380 | https://freesound.org/people/Tonmeister88/sounds/557380/ | tuuli tyhjässä kivikirkossa, alipäästö 3,5 kHz |
 | muuri-tuuli | xkeril 708747 | https://freesound.org/people/xkeril/sounds/708747/ | tornin tuuli |
@@ -81,7 +86,7 @@ luetellaan tässä.
 | askel-porras-1 / -2 | TRP 616615 · Sadiquecat 811375 | https://freesound.org/people/TRP/sounds/616615/ · https://freesound.org/people/Sadiquecat/sounds/811375/ | voimakkain 3 s:n ikkuna |
 | tippa | LordFluffeh 478547 | https://freesound.org/people/LordFluffeh/sounds/478547/ | linnan viemärin pisara |
 | noppa-1 / -2 | ekfink 235489 · H_Botha 764367 | https://freesound.org/people/ekfink/sounds/235489/ · https://freesound.org/people/H_Botha/sounds/764367/ |  |
-| airot | craigsmith 438846 | https://freesound.org/people/craigsmith/sounds/438846/ |  |
+| airot | bruno.auzet 525030 | https://freesound.org/people/bruno.auzet/sounds/525030/ | Schoeps ORTF + Tascam DAP1, Marne 2007. 438846 poistettu 30.9. (digitoitu elokuva-arkisto) |
 | koysi-narina | Rmutt 145721 | https://freesound.org/people/Rmutt/sounds/145721/ |  |
 | pikari-1 / -2 | Jae-Aye 528898 | https://freesound.org/people/Jae-Aye/sounds/528898/ | kaksi eri kolahdusta, kivikaiku |
 | penkki | kyles 637357 | https://freesound.org/people/kyles/sounds/637357/ | vanha puutuoli, kivikaiku |

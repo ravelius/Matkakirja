@@ -279,8 +279,12 @@ export const TILA = {
   ],
   palikat: PALIKAT,
   hahmot: HAHMOT,
-  aanet: [{ aani: 'tulisija-ratina' }],
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [{ aani: 'keskushalli-ambienssi', voimakkuus: 0.7 }, { aani: 'takka-ratina', voimakkuus: 0.6 }],
   tehosteet: [
+    { aanet: ['pikari-1', 'pikari-2'], valit_s: [6, 14], voimakkuus: 0.5 },
+    { aanet: ['noppa-1', 'noppa-2'], valit_s: [10, 20], voimakkuus: 0.5 },
+    { aanet: ['penkki'], valit_s: [15, 30], voimakkuus: 0.4 },
     { aanet: ['askel-puu', 'askel-kivi'], valit_s: [8, 18] },
     { aanet: ['ovi-puu'], valit_s: [25, 50] },
   ],

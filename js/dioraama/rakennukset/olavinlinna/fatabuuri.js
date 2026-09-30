@@ -231,8 +231,12 @@ export const TILA = {
       kansi: 'arkun-kansi', esine: 'sinetti', pulu: 'Tässä se on, kankaiden välissä! Vouti vaihtoi viitan iltamessun jälkeen, ja sormus luiskahti mukaan.' },
   ],
   hahmot: HAHMOT,
-  aanet: [],
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [{ aani: 'fatabuuri-ambienssi', voimakkuus: 0.6 }],
   tehosteet: [
+    { aanet: ['tippa'], valit_s: [6, 14], voimakkuus: 0.35 },
+    { aanet: ['arkku-kansi'], valit_s: [30, 60], voimakkuus: 0.4 },
+    { aanet: ['sivu-kaanto'], valit_s: [15, 30], voimakkuus: 0.35 },
     { aanet: ['askel-kivi'], valit_s: [10, 22] },
     { aanet: ['ovi-puu'], valit_s: [30, 60] },
   ],
