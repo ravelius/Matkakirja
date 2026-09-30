@@ -785,6 +785,9 @@ namespace Matkakirja.Natiivi
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.AvaaKokoruutu(ap.Nykyinen.Kuvat, la.Length > 1 ? int.Parse(la[1]) - 1 : 0); return null;
                         case "sulje": ap.Sulje(); return null;
+                        case "linssit":
+                            return $"esittelylinssit {LinssiOhjain.EsittelylinssitAuki}, kehittäjätila {Asetukset.Kehittaja}, valittavissa: "
+                                + string.Join(", ", LinssiUi.Rekisteri?.Valittavat.Select(l => l.Tiedot.Id) ?? Enumerable.Empty<string>());
                         case "tiedosto":
                         {
                             var polku = System.IO.Path.Combine(Application.persistentDataPath, la.Length > 1 ? la[1] : "apuraha.json");
@@ -794,7 +797,7 @@ namespace Matkakirja.Natiivi
                         case "tila":
                             return ap.Nykyinen == null ? "ei ladattu"
                                 : $"ladattu: {ap.Nykyinen.Kappaleet.Count} kappaletta, {ap.Nykyinen.Kuvat.Count} kuvaa, auki {ap.Auki}, kokoruutu {ap.KokoruutuAuki}";
-                        default: return "ui apuraha auki|loppuun|kuva <n>|sulje|tila|tiedosto [nimi]";
+                        default: return "ui apuraha auki|loppuun|kuva <n>|sulje|tila|linssit|tiedosto [nimi]";
                     }
                 }
                 case "ohitalento":

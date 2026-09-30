@@ -147,6 +147,23 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.Save();
         }
 
+        /// <summary>PlayerPrefs-avain esittelylinsseille (apurahan kortti, Pelikoodari 30.9.2026).</summary>
+        public const string EsittelyAvain = "linssi.esittelylinssit";
+
+        /// <summary>
+        /// ESITTELYLINSSIT (omistaja 30.9.2026, apurahan arvioijan kortti): kaikki rekisterin linssit auki heti, myös
+        /// kokeilut (Poikkileikkaus, Tähtitaivas, Yökartta), ilman pisteitä ja ilman muuta kehittäjätilaa (Asetukset.Kehittaja
+        /// ei muutu). Muistetaan; toimii myös App Store -käännöksessä, koska kortti on arvioijaa varten.
+        /// </summary>
+        public static void AvaaEsittelylinssit()
+        {
+            Linssirekisteri.Kehittajatila = true;
+            PlayerPrefs.SetInt(EsittelyAvain, 1);
+            PlayerPrefs.Save();
+        }
+
+        public static bool EsittelylinssitAuki => PlayerPrefs.GetInt(EsittelyAvain, 0) == 1;
+
         /// <summary>Asettaa ja muistaa astronautin reliefin kylläisyyden (0,8 tai 1,0); vaikuttaa seuraavaan avaukseen.</summary>
         public static void AsetaAstronautinKyllaisyys(float arvo)
         {
@@ -188,6 +205,7 @@ namespace Matkakirja.Natiivi
 #else
             Linssirekisteri.Kehittajatila = PlayerPrefs.GetInt(KehittajatilaAvain, KehittajatilaOletus ? 1 : 0) == 1;
 #endif
+            if (EsittelylinssitAuki) Linssirekisteri.Kehittajatila = true;   // apurahan kortin esittelylinssit
             // Radiotila (web luentaSallittu): kaupungin napautus on play-nappi eikä avaa korttia,
             // ja luennat vaikenevat (Pelikoodarin koukut, pelikoodari/linssikytkennat).
             // Linssin portti (web linssikarttaEstaa) estää myös kaupungin napautuksen.
