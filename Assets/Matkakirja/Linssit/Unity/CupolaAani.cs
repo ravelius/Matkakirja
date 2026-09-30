@@ -51,6 +51,9 @@ namespace Matkakirja.Natiivi
         static CupolaAani instanssi;
         bool paalla, soi;
         readonly float[] taso = new float[2];
+        /// <summary>Tavoitetaso ilman testimykistystä (mittaus: väistö näkyy myös mykistetyssä simulaattorissa).</summary>
+        readonly float[] tavoite = new float[2];
+        bool puheNyt;
         int vuoro;
         string viimeVirhe;
 
@@ -154,8 +157,12 @@ namespace Matkakirja.Natiivi
             bool kuuluu = paalla && !TestiMykistys.Paalla && (tila?.Aanimaisema ?? true);
             float tausta = (float)(tila?.TaustanKerroin ?? 1);
             bool puhe = tila != null && tila.Voimassa < 0.999;
-            float h = kuuluu ? HuminaVoima * tausta * (puhe ? HuminaVaisto : 1f) : 0f;
-            float r = kuuluu ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;
+            bool kuuluisi = paalla && (tila?.Aanimaisema ?? true);
+            tavoite[Humina] = kuuluisi ? HuminaVoima * tausta * (puhe ? HuminaVaisto : 1f) : 0f;
+            tavoite[Radio] = kuuluisi ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;
+            puheNyt = puhe;
+            float h = kuuluu && !TestiMykistys.Paalla ? tavoite[Humina] : 0f;
+            float r = kuuluu && !TestiMykistys.Paalla ? tavoite[Radio] : 0f;
             Liu(Humina, h, puhe ? VaistoS : NousuS);
             Liu(Radio, r, puhe ? VaistoS : NousuS);
         }
@@ -173,8 +180,8 @@ namespace Matkakirja.Natiivi
         {
             var i = instanssi;
             if (i == null) return "cupola-aani: ei käynnistetty";
-            string K(int k) => $"tila {MatkakirjaSilmukka_Tila(k)} taso {i.taso[k]:0.00} aika {MatkakirjaSilmukka_Aika(k):0.0} s";
-            return $"cupola-aani: päällä {i.paalla}, soi {i.soi}, mykistys {TestiMykistys.Paalla}; humina {K(Humina)}; radio {K(Radio)}"
+            string K(int k) => $"tila {MatkakirjaSilmukka_Tila(k)} taso {i.taso[k]:0.00} tavoite {i.tavoite[k]:0.00} aika {MatkakirjaSilmukka_Aika(k):0.0} s";
+            return $"cupola-aani: päällä {i.paalla}, soi {i.soi}, mykistys {TestiMykistys.Paalla}, puhe {i.puheNyt}; humina {K(Humina)}; radio {K(Radio)}"
                 + (i.viimeVirhe != null ? $"; virhe {i.viimeVirhe}" : "");
         }
     }
