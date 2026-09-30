@@ -446,3 +446,29 @@ test('Olavinlinna: jokaisessa kohdistettavassa huoneessa infotaulu (nimi + 1–2
   assert.deepEqual(vihjeet.map((e) => e.vaihe).sort(), [1, 2, 3]);
   for (const e of vihjeet) assert.ok(e.rivi && e.rivi.length <= 80, `sinetin vaihe ${e.vaihe}: infotaulun rivi`);
 });
+
+test('Olavinlinna: kuunnelmat (kohtaus = rivijono), puhujat ratkeavat, Pulu viimeisenä, ei ääntä ennen lupaa', async () => {
+  const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
+  const idt = new Set();
+  for (const t of RAKENNUS.tilat.filter((x) => x.kohdistettava)) {
+    const k = t.kuunnelma;
+    assert.ok(Array.isArray(k) && k.length >= 3 && k.length <= 6, `${t.id}: kuunnelma`);
+    const hahmot = new Set((t.hahmot ?? []).map((h) => h.id));
+    for (const r of k) {
+      assert.ok(r.puhuja === 'pulu' || hahmot.has(r.puhuja) || r.huom, `${t.id}/${r.id}: puhuja ${r.puhuja}`);
+      assert.ok(r.teksti.length > 10 && r.teksti.length <= 160, `${t.id}/${r.id}: teksti`);
+      assert.equal(r.aani, null, `${t.id}/${r.id}: ääni vasta omistajan luvalla`);
+      assert.ok(!idt.has(r.id), `kaksois-id ${r.id}`);
+      idt.add(r.id);
+    }
+    assert.equal(k.at(-1).puhuja, 'pulu', `${t.id}: Pulu lopuksi`);
+  }
+});
+
+test('Olavinlinna: ei anakronismia "iltamessu" (keskiajalla iltarukous)', async () => {
+  const { readFileSync, readdirSync } = await import('node:fs');
+  const juuri = new URL('../js/dioraama/rakennukset/olavinlinna/', import.meta.url);
+  for (const f of readdirSync(juuri).filter((x) => x.endsWith('.js'))) {
+    assert.ok(!/iltamess/i.test(readFileSync(new URL(f, juuri), 'utf8')), f);
+  }
+});

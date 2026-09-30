@@ -104,6 +104,19 @@ export const TILA = {
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
   infotaulu: { nimi: 'Kierreportaat', rivit: [{ teksti: 'Kapeat portaat yhdistävät tornin viisi kerrosta.', lahde: 'Savon historia: Olavinlinnan suojassa' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'kierreportaat-k1', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: null,
+      teksti: 'Kolmas kerros, neljäs kerros… Ilman voudin sinettiä ei yksikään kirje lähde linnasta, ja minä juoksen näitä portaita edestakaisin.' },
+    { id: 'kierreportaat-k2', puhuja: 'renki', nimi: 'Renki', aani: null,
+      teksti: 'Varovasti, herra kirjuri, näissä portaissa ei ohiteta ketään. Kapeaa ja ahdasta – vihollisellekin, kiitos siitä.' },
+    { id: 'kierreportaat-k3', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: null,
+      teksti: 'Viisi kerrosta, ja ylin asuttu on kolmas. Neljännellä vain tuuli ja vartijat. Minä en ole kumpaakaan.' },
+    { id: 'kierreportaat-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Portaat ylös, portaat alas, ja sinetti yhä hukassa. Siivet olisivat tässä linnassa kova sana.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).

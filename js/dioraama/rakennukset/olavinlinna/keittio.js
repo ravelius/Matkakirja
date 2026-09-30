@@ -59,6 +59,21 @@ export const TILA = {
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
   infotaulu: { nimi: 'Keittiö', rivit: [{ teksti: 'Linnan keittiö pienellä linnanpihalla: avotuli paloi aamusta iltaan.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420); Apu: Suomen keskiaikaiset kivilinnat 6/6' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'keittio-k1', puhuja: 'kokki', nimi: 'Kokki', aani: null,
+      teksti: 'Kalaa ja naurista, naurista ja kalaa! Jos vouti vielä kerran kysyy, mitä tänään syödään, sanon: samaa mitä järvi ja pelto antaa.' },
+    { id: 'keittio-k2', puhuja: 'vesipoika', nimi: 'Vesipoika', aani: null,
+      teksti: 'Kaksi sankoa lisää. Tuli on palanu aamusta asti – kohta tää keittiö kiehuu itekin.' },
+    { id: 'keittio-k3', puhuja: 'kokki', nimi: 'Kokki', aani: null,
+      teksti: 'Vie tää vati Linnantupaan sotilaille. Yläsaliin mä vien itse – siellä ei kelpaa sankonkantajan likaiset sormet.' },
+    { id: 'keittio-k4', puhuja: 'vouti', nimi: 'Vouti', huom: 'oven takaa', aani: null,
+      teksti: 'Kokki, en ehdi aterioimaan. Iltarukous alkaa, ja minun on vielä pistäydyttävä kappelissa.' },
+    { id: 'keittio-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Kalaa aamulla, kalaa illalla, ja voutikin karkaa kappeliin. Minä jään muruvahdiksi.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): todellinen paikka fotogrammetriakuoressa. Keittiö
   // itäsiiven alakerrassa Pienen linnanpihan laidalla (tulkinta, Sisältökirjuri 29.9.: ikkunat pihalle, hormit
@@ -227,9 +242,9 @@ export const TILA = {
   // etsintään (Päätoimittaja hyväksyi 29.9.); kohde kokin pään yllä.
   etsinta: [
     { etsinta: 'voudin-sinetti', vaihe: 1, tyyppi: 'repliikki', hahmo: 'kokki', kohde: [13.1, 1.8, 6.1], sade: 1.2,
-      repliikki: { id: 'kokki-sinetti', teksti: 'Vouti kävi maistamassa keittoa ja kiirehti sitten kappeliin ennen iltamessua.' },
-      pulu: 'Keitto ja iltamessu – vouti hoiti sekä vatsan että sielun. Kappeliin siis!',
-      rivi: 'Kokki: vouti kiirehti kappeliin ennen iltamessua.' },
+      repliikki: { id: 'kokki-sinetti', teksti: 'Vouti kävi maistamassa keittoa ja kiirehti sitten kappeliin ennen iltarukousta.' },
+      pulu: 'Keitto ja iltarukous – vouti hoiti sekä vatsan että sielun. Kappeliin siis!',
+      rivi: 'Kokki: vouti kiirehti kappeliin ennen iltarukousta.' },
   ],
   hahmot: KEITTIO_HAHMOT,
   // Keittiön äänisilmukat: ambienssi + tulisija + pata + vaivaaminen, kaikki päällekkäin (era2 kohta 2 "AANET").

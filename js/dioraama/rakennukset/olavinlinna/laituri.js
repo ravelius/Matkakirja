@@ -116,6 +116,19 @@ export const TILA = {
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
   infotaulu: { nimi: 'Laituri', rivit: [{ teksti: 'Saarilinnaan tultiin vesitse; 1550-luvulla linnalla oli yhdeksän kavassia.', lahde: 'mas.fi; Savon historia; Riihisaari' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'laituri-k1', puhuja: 'soutaja', nimi: 'Soutaja', aani: null,
+      teksti: 'Kaikki tulee vesitse: kivi, kalkki, kala ja vouti. Ilman venettä tämä linna olisi pelkkä kivikasa saaressa.' },
+    { id: 'laituri-k2', puhuja: 'renki', nimi: 'Renki', aani: null,
+      teksti: 'Isoisä souti kiveä, kun linnaa rakennettiin. Proomuissa istui toista kymmentä haarniskamiestä vahdissa.' },
+    { id: 'laituri-k3', puhuja: 'soutaja', nimi: 'Soutaja', aani: null,
+      teksti: 'Ja tänään vouti kysyi, onko joku vienyt jotain veneellä yli salmen. Kukaan ei ole vienyt mitään – paitsi minun hermoni.' },
+    { id: 'laituri-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Myöhemmin, 1550-luvulla, linnalla oli peräti yhdeksän suurta venettä, kavassia, ja Riihisaarta kutsuttiin Kavassisaareksi. Airoilla, ilman moottoria!' },
+  ],
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,

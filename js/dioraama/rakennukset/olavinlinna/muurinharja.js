@@ -78,6 +78,19 @@ export const TILA = {
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
   infotaulu: { nimi: 'Muurinharja', rivit: [{ teksti: 'Avoin puolustuskäytävä, josta hyökkääjät torjuttiin vuonna 1495.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'muurinharja-k1', puhuja: 'vartija', nimi: 'Muurin vartija', aani: null,
+      teksti: 'Tuuli viiltää, ja silti täällä harjalla ei nukuta. Itäraja on lähempänä kuin luulisi.' },
+    { id: 'muurinharja-k2', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: null,
+      teksti: 'Minä seisoin tällä samalla harjalla vuonna 1495, kun ne tulivat. Kiviä ja nuolia alas, ja piiritysportaat perään.' },
+    { id: 'muurinharja-k3', puhuja: 'vartija', nimi: 'Muurin vartija', aani: null,
+      teksti: 'Silloin vouti Kylliäinen komensi kuin olisi syntynyt haarniska päällä. Nykyisestä voudista en tiedä – se etsii jotain kaikista kolmesta tornista.' },
+    { id: 'muurinharja-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Neljännen kerroksen avoin puolustuskäytävä: maisemat upeat, mutta vetoista. Minä istuisin mieluummin katolla.' },
+  ],
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,

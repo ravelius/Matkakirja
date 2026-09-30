@@ -128,6 +128,21 @@ export const TILA = {
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
   infotaulu: { nimi: 'Kappeli', rivit: [{ teksti: 'Kirkkotornin kappeli: kaksitoista vihkimäristiä ja harvinainen hagioskooppi.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'kappeli-k1', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
+      teksti: 'Dominus vobiscum… Voudin herra, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien.' },
+    { id: 'kappeli-k2', puhuja: 'vouti', nimi: 'Vouti', aani: null,
+      teksti: 'Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina.' },
+    { id: 'kappeli-k3', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
+      teksti: 'Laskekaa mieluummin syntinne. Ja siirtykää: tuon pienen aukon takana sairaat odottavat näkevänsä alttarin.' },
+    { id: 'kappeli-k4', puhuja: 'vouti', nimi: 'Vouti', huom: 'hiljaa', aani: null,
+      teksti: 'Fatabuurin avain… missä minä sitä pitelinkään?' },
+    { id: 'kappeli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Reikä seinässä messun seuraamiseen – Suomessa harvinaista herkkua. Ja voudilta näyttää puuttuvan muutakin kuin hartautta.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−15,4, 14,6) (kartiokaton
   // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella; torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.

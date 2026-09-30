@@ -259,6 +259,21 @@ export const TILA = {
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
   infotaulu: { nimi: 'Keskushalli ja väentupa', rivit: [{ teksti: 'Alakerrassa sotaväen ruokasali, yläkerrassa voudin asunto.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Kansallismuseo: Keskushalli' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'keskushalli-k1', puhuja: 'apulainen', nimi: 'Tarjoilija', aani: null,
+      teksti: 'Tietä, tietä! Kalakeittoa väentupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota.' },
+    { id: 'keskushalli-k2', puhuja: 'vartija', nimi: 'Vartija', aani: null,
+      teksti: 'Kolme kuutosta! Maksa, kun vielä kehtaat.' },
+    { id: 'keskushalli-k3', puhuja: 'vartija2', nimi: 'Vartija 2', aani: null,
+      teksti: 'Puhu hiljempaa. Vouti ravaa tänään portaissa kuin kana ilman päätä – jotain on hukassa.' },
+    { id: 'keskushalli-k4', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: null,
+      teksti: 'Ja me lämmitellään täällä alhaalla. Hormeja myöten paras lämpö nousee voudin kamariin.' },
+    { id: 'keskushalli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Sataviisikymmentä, jopa kaksisataa asukasta samassa linnassa. Ei ihme, ettei täällä kukaan kuule omia ajatuksiaan.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
