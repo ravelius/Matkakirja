@@ -130,6 +130,8 @@
 //   ui liiku                                  Liiku-napin napautus: kulkutapaliuku auki (peli käynnissä)
 //   ui voiceover [paalle|pois|puu]           VoiceOver-silta pakolla päälle / laitteen mukaan / solmut → voiceover-puu.txt
 //   ui saavutettavuus [nimi]                  VoiceOver-nimet, 44 pt:n kosketusalat, kontrasti → Documents/saavutettavuus[-nimi].json
+//   ui mac tila|pakota|veto dx dy [x y]|rulla dy [x y]|nipistys s [x y]  Mac-syöte (MacSyote.cs): ohjauslevyn veto, rulla ja
+//                                             nipistys ilman Macia (pikselit, UIKitin suunta, osoitin yläkulmasta)
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui matkamuisto <id>                       matkamuiston löytö kuten dioraamasta (voudin-sinetti); tila lokiin
@@ -613,7 +615,18 @@ namespace Matkakirja.Natiivi
                     if (loput == "mikki") { ui.Chat.MikkiTesti(); Kirjaa("ui chat mikki: " + ui.Chat.PuheTilaTeksti); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
-                case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "tietoja": ui.Aloitus.Apuraha.Sulje(); ui.Tietoja.Avaa(); return null; // kortti (kerros 45) jäi tietojen päälle
+                // Lukijan moottori (omistaja 30.9.2026, ElevenLabs v4 Turbo -vertailu): "ui moottori eleven|xai [ääni-id]".
+                case "moottori":
+                {
+                    var mo = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (mo.Length > 0) Striimiaani.Moottori = mo[0];
+                    if (mo.Length > 1) Striimiaani.ElevenAani = mo[1];
+                    return $"=moottori {Striimiaani.Moottori}, ääni {Striimiaani.ElevenAani}, sallittu {Striimiaani.MoottoriSallittu}, pyynnössä {(Striimiaani.MoottoriValinta()?.Moottori ?? "xai")}";
+                }
+                case "kaynti":
+                    // Kävijälaskurin kuivaharjoitus (Natiiviseppä 30.9.): ping-runko ja ehdot, EI lähetetä (simulaattori ohittaa aina).
+                    return Kaynti.Kuivaharjoitus(loput.Length > 0 ? loput : "avaus");
                 case "piikit":
                 {
                     if (loput == "pois") { KehysPiikit.Lopeta(); return null; }
@@ -719,6 +732,26 @@ namespace Matkakirja.Natiivi
                         : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
                     return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
                 }
+                case "mac":
+                {
+                    // Mac-syöte (MacSyote.cs): ui mac tila | pakota | veto dx dy [x y] | rulla dy [x y] | nipistys s [x y]
+                    // (pikselit, UIKitin suunta: y alas, osoitin yläkulmasta; ilman osoitinta ruudun keskeltä).
+                    var m = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    float L(int i, float oletus) => m.Length > i && float.TryParse(m[i], System.Globalization.NumberStyles.Float,
+                        System.Globalization.CultureInfo.InvariantCulture, out var v) ? v : oletus;
+                    string laji = m.Length > 0 ? m[0] : "tila";
+                    if (laji == "tila") { Kirjaa("mac: " + MacSyote.Tila()); return null; }
+                    if (laji == "pakota") { Kirjaa("mac pakota: " + MacSyote.Pakota()); return null; }
+                    int o = laji == "veto" ? 3 : 2;
+                    var os = new Vector2(L(o, Screen.width / 2f), L(o + 1, Screen.height / 2f));
+                    string tulos = laji == "veto" ? MacSyote.Testi(new Vector2(L(1, 0), L(2, 0)), Vector2.zero, 1f, os)
+                        : laji == "rulla" ? MacSyote.Testi(Vector2.zero, new Vector2(0, L(1, 0)), 1f, os)
+                        : laji == "nipistys" ? MacSyote.Testi(Vector2.zero, Vector2.zero, L(1, 1f), os)
+                        : null;
+                    if (tulos == null) return "käyttö: ui mac tila|pakota|veto dx dy [x y]|rulla dy [x y]|nipistys s [x y]";
+                    Kirjaa($"mac {loput} → {tulos}");
+                    return null;
+                }
                 case "kierto":
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
@@ -770,6 +803,40 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "omistaja":
+                    // Kävijälaskurin omistajamerkki (Kaynti.cs): 1 = tämä laite on omistajan, ei lasketa kävijäksi.
+                    if (loput == "1" || loput == "0") { PlayerPrefs.SetInt(Kaynti.OmistajaAvain, loput == "1" ? 1 : 0); PlayerPrefs.Save(); }
+                    return $"omistaja {Kaynti.Omistaja} (merkki {PlayerPrefs.GetInt(Kaynti.OmistajaAvain, 0)}, testiympäristö {Kaynti.Testiymparisto})";
+                case "apuraha":
+                {
+                    // Apurahan esittelykortti: auki | loppuun | kuva <n> | sulje | tila.
+                    var ap = ui.Aloitus.Apuraha;
+                    var la = loput.Split(' ');
+                    switch (la[0].Length > 0 ? la[0] : "auki")
+                    {
+                        case "auki":
+                            if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
+                            ap.Avaa(); return null;
+                        case "loppuun": ap.VieritaLoppuun(); return null;
+                        case "kuva":
+                            if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
+                            ap.AvaaKokoruutu(ap.Nykyinen.Kuvat, la.Length > 1 ? int.Parse(la[1]) - 1 : 0); return null;
+                        case "sulje": ap.Sulje(); return null;
+                        case "linssit":
+                            return $"esittelylinssit {LinssiOhjain.EsittelylinssitAuki}, kehittäjätila {Asetukset.Kehittaja}, valittavissa: "
+                                + string.Join(", ", LinssiUi.Rekisteri?.Valittavat.Select(l => l.Tiedot.Id) ?? Enumerable.Empty<string>());
+                        case "tiedosto":
+                        {
+                            var polku = System.IO.Path.Combine(Application.persistentDataPath, la.Length > 1 ? la[1] : "apuraha.json");
+                            if (!System.IO.File.Exists(polku)) return "ei tiedostoa " + polku;
+                            return ap.KaytaTekstia(System.IO.File.ReadAllText(polku));
+                        }
+                        case "tila":
+                            return ap.Nykyinen == null ? "ei ladattu"
+                                : $"ladattu: {ap.Nykyinen.Kappaleet.Count} kappaletta, {ap.Nykyinen.Kuvat.Count} kuvaa, auki {ap.Auki}, kokoruutu {ap.KokoruutuAuki}";
+                        default: return "ui apuraha auki|loppuun|kuva <n>|sulje|tila|linssit|tiedosto [nimi]";
+                    }
+                }
                 case "ohitalento":
                     // Löydös 83: aloituslennon Ohita-napin painallus.
                     if (!ui.Aloitus.OhitaNakyy) return "Ohita-nappi ei ole näkyvissä";

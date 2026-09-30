@@ -46,12 +46,22 @@ namespace Matkakirja.Natiivi
 
         public bool Nakyy => kortit.Count > 0;
 
+        /// <summary>Arvioijakierros 30.9. (1.1 (75)): Ohita näkyy vain luennan aikana (Saapumisesitys.Alkoi → tosi,
+        /// Loppui → epätosi). Livian kommentin PuluCam-kuvat eivät tuo Ohitaa takaisin.</summary>
+        public bool LuentoKaynnissa
+        {
+            get => luentoKaynnissa;
+            set { luentoKaynnissa = value; if (!value) ohita.style.display = DisplayStyle.None; }
+        }
+        bool luentoKaynnissa;
+
         /// <summary>Uusi kuva pakan päälle (lataa ensin; kuva, joka ei lataudu, jää pois).</summary>
         public void Lisaa(VirtaKuva k)
         {
             if (k == null) return;
             loppu?.Pause();
-            ohita.style.display = DisplayStyle.Flex;
+            ohita.style.display = luentoKaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
+            AsetaPaikka(); // Ohita heti oikeaan reunaan, ei ensin alas keskelle
             Natiivi.Kuvat.Hae(k.Osoite, t =>
             {
                 if (t == null) return;
@@ -110,12 +120,22 @@ namespace Matkakirja.Natiivi
             float yla = m.height > 0f ? m.yMax - p.yMin + 12f : p.height * 0.28f;
             // Kortit ovat absoluuttisia: paikka suoraan kortille (1.0.70-kuva: säiliön täyte ei siirtänyt niitä, kuva
             // painui ruudun reunaan). 28 pt oikealta: pinon siirto (enintään 21 pt) ja kallistus jäävät ruudun sisään.
+            float korkeus = 0f;
             foreach (var k in kortit)
             {
                 k.style.top = Mathf.Max(0f, yla);
                 k.style.right = 28f;
                 k.style.left = StyleKeyword.Auto;
+                float h = k.layout.height;
+                if (!float.IsNaN(h)) korkeus = Mathf.Max(korkeus, h);
             }
+            // Ohita kuvan alle oikeaan reunaan (Päätoimittaja 30.9.: 1.0.71:ssä Ohita peitti alhaalla Liiku-napin).
+            // Pakka ja Ohita ovat samassa turva-säiliössä, joten pakan koordinaatit käyvät sellaisenaan.
+            ohita.style.left = StyleKeyword.Auto;
+            ohita.style.bottom = StyleKeyword.Auto;
+            ohita.style.translate = new Translate(0, 0);
+            ohita.style.right = 28f;
+            ohita.style.top = Mathf.Max(0f, yla) + (korkeus > 0f ? korkeus : 120f) + 18f; // kallistus ja pinon siirto mukaan
         }
         IVisualElementScheduledItem paikanSeuranta;
         /// <summary>Matkakirjakaistaleen laatikko paneelissa (Matkakirjakortti.Rajat), tyhjä jos kaistale ei näy.</summary>

@@ -506,6 +506,33 @@ namespace Matkakirja
         public const double PanoroinninKerroin = 1.3;
 
         /// <summary>
+        /// SAARTEN LISÄIKKUNAT (Karttaseppä 30.9.2026, Päätoimittajan hyväksymä; web js/packs/fokus-grc.js lisaikkunat):
+        /// mantereen ulkopuoliset saaret panorointirajaan laudan yksiköissä (0,1–0,2°:n marginaali). Saapumisnäkymä ja
+        /// uloszoomauksen katto pysyvät mantereessa, vain panorointiraja laajenee unionilla.
+        /// </summary>
+        static readonly System.Collections.Generic.Dictionary<string, Laatikko[]> LisaIkkunat =
+            new System.Collections.Generic.Dictionary<string, Laatikko[]>
+            {
+                // Azorit (lon −31,4…−24,8, lat 36,8…39,9) ja Madeira + Porto Santo (lon −17,4…−16,1, lat 32,3…33,2).
+                ["PRT"] = new[] { new Laatikko(4779, 1799, 236, 136), new Laatikko(5245, 2055, 59, 49) },
+                // Kanariansaaret (lon −18,3…−13,2, lat 27,5…29,5).
+                ["ESP"] = new[] { new Laatikko(5215, 2191, 186, 88) },
+            };
+
+        /// <summary>Maan panorointilaatikko saarten lisäikkunoineen (unioni); muille maille laatikko sellaisenaan.</summary>
+        public static Laatikko Lisaikkunoineen(Laatikko l, string maa)
+        {
+            if (maa == null || !LisaIkkunat.TryGetValue(maa.ToUpperInvariant(), out var ikkunat)) return l;
+            double x0 = l.X, y0 = l.Y, x1 = l.X + l.W, y1 = l.Y + l.H;
+            foreach (var i in ikkunat)
+            {
+                x0 = Math.Min(x0, i.X); y0 = Math.Min(y0, i.Y);
+                x1 = Math.Max(x1, i.X + i.W); y1 = Math.Max(y1, i.Y + i.H);
+            }
+            return new Laatikko(x0, y0, x1 - x0, y1 - y0);
+        }
+
+        /// <summary>
         /// ULOSZOOMAUKSEN KATTO (web kamera.js:1059 uloszoomausRaja, lauta.js:1690 maanZoomiraja): sama kaava kuin
         /// saapumisella kertoimella 1 + 2 · 0,01 (ULOSZOOMAUKSEN_KERROIN), joten uloin sallittu näkymä on
         /// saapumisnäkymä. Ei kattoa kaupunkinäkymässä (laatikko ei mahdu, esim. RUS, USA) eikä, jos katto olisi

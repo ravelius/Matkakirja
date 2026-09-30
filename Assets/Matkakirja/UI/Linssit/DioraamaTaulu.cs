@@ -33,6 +33,12 @@ namespace Matkakirja.Natiivi
         readonly VisualElement etsintaKortti;
         readonly Label etsintaOtsikko, etsintaTeksti;
         float etsintaLoppuu;
+        // UUSI LINNA (omistaja 30.9.2026): kertojan tekstilaatikko (ihmisen matkan / aikajanojen tyyli), ↻-uusinta ja
+        // Pulun napautusalue (huoneen infotaulun kulmassa; napautus näyttää pulu.teksti-kuplan etsintäkortin paikalla).
+        readonly VisualElement kertojaKehys, kertojaLaatikko, puluAlue;
+        readonly Label kertojaTeksti;
+        readonly Button uusintaNappi;
+        string puluKupla;
 
         public DioraamaTaulu(UiKerros kerros)
         {
@@ -124,7 +130,8 @@ namespace Matkakirja.Natiivi
             // napautus kiertää auto → huippu → normaali → kevyt; valinta muistetaan laitteeseen (DioraamaUlkokuori).
             kuoriNappi = Rakenne.Nappi(DioraamaUlkokuori.ValintaTeksti(), "mk-dioraama__kuoritaso", DioraamaUlkokuori.SeuraavaPakotus, juuri);
             kuoriNappi.style.position = Position.Absolute;
-            kuoriNappi.style.left = 12; kuoriNappi.style.bottom = 24;
+            // Oikeaan yläkulmaan sulkunapin alle (Päätoimittaja 30.9.: vasemmassa alakulmassa se peitti kertojan laatikon ja infotaulun).
+            kuoriNappi.style.right = 14; kuoriNappi.style.top = 110;
             kuoriNappi.style.backgroundColor = new Color(0.1f, 0.08f, 0.06f, 0.6f);
             kuoriNappi.style.color = Color.white;
             kuoriNappi.style.fontSize = 12;
@@ -133,7 +140,7 @@ namespace Matkakirja.Natiivi
             kuoriNappi.style.borderBottomLeftRadius = 8; kuoriNappi.style.borderBottomRightRadius = 8;
             var kuoriTeksti = kuoriNappi.Q<Label>();
             if (kuoriTeksti != null) { kuoriTeksti.style.color = Color.white; kuoriTeksti.style.fontSize = 12; }
-            kuoriNappi.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             DioraamaUlkokuori.PakotusVaihtui += () =>
             {
                 var l = kuoriNappi?.Q<Label>();
@@ -151,6 +158,44 @@ namespace Matkakirja.Natiivi
             var paluuTeksti = paluuNappi.Q<Label>();
             if (paluuTeksti != null) { paluuTeksti.style.fontSize = 24; paluuTeksti.style.color = Teksti; paluuTeksti.style.unityTextAlign = TextAnchor.MiddleCenter; }
             paluuNappi.style.display = DisplayStyle.None;
+
+            // Uusintanappi (↻) samaan kulmaan kuin ‹: näkyy yleisnäkymässä, kun kertojan kierros on käyty.
+            // ↻-merkkiä ei ole kirjasimessa (1.1 (73) -kuva: laatikko), joten ikoni: Ikonit.PaivitaVersio (kaareva nuoli).
+            uusintaNappi = Rakenne.Nappi(null, "mk-dioraama__uusinta", () => DioraamaSovitin.Linssi?.KertojaUudelleen(DioraamaSovitin.ViimeisinT), juuri, Ikonit.PaivitaVersio);
+            uusintaNappi.style.position = Position.Absolute;
+            uusintaNappi.style.left = 14; uusintaNappi.style.top = 58;
+            uusintaNappi.style.width = 44; uusintaNappi.style.height = 44;
+            uusintaNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.9f);
+            uusintaNappi.style.borderTopLeftRadius = 22; uusintaNappi.style.borderTopRightRadius = 22;
+            uusintaNappi.style.borderBottomLeftRadius = 22; uusintaNappi.style.borderBottomRightRadius = 22;
+            uusintaNappi.style.color = Teksti;
+            uusintaNappi.style.alignItems = Align.Center; uusintaNappi.style.justifyContent = Justify.Center;
+            uusintaNappi.tooltip = "Kertoja uudelleen";
+            uusintaNappi.style.display = DisplayStyle.None;
+
+            // Kertojan teksti (Linssit.uss .mk-aikajana-kertomus): tumma läpikuultava laatikko alareunaan, häivytys 380 ms.
+            // Ei ota kosketuksia: napautus menee dioraamalle (DioraamaSyote → seuraava jakso).
+            kertojaKehys = Rakenne.El("mk-aikajana-kertomus", juuri, PickingMode.Ignore);
+            kertojaKehys.style.bottom = 44;
+            kertojaLaatikko = Rakenne.El("mk-aikajana-kertomus__laatikko", kertojaKehys, PickingMode.Ignore);
+            kertojaTeksti = Rakenne.Teksti("", "mk-aikajana-kertomus__teksti", kertojaLaatikko);
+            kertojaTeksti.pickingMode = PickingMode.Ignore;
+            Kirjasimet.Aseta(kertojaTeksti, Kirjasin.Luku);
+
+            // Pulun napautusalue (LiviaKuva ei ota kosketuksia): sama laatikko kuin Pulun kuva infotaulun kulmassa.
+            puluAlue = Rakenne.El("mk-dioraama__pulualue", juuri, PickingMode.Position);
+            puluAlue.style.position = Position.Absolute;
+            puluAlue.style.display = DisplayStyle.None;
+            puluAlue.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (string.IsNullOrEmpty(puluKupla)) return;
+                etsintaOtsikko.text = "Pulu";
+                etsintaTeksti.text = puluKupla;
+                etsintaKortti.style.display = DisplayStyle.Flex;
+                etsintaKortti.style.opacity = 1f;
+                etsintaLoppuu = Time.unscaledTime + 9f;
+                e.StopPropagation();
+            });
 
             // Etsintäkortti (voudin sinetti, DioraamaEtsinta.Nayta): pergamenttilappu yläosaan 7 s, napautus sulkee.
             etsintaKortti = Rakenne.El("mk-dioraama__etsinta", juuri);
@@ -208,7 +253,7 @@ namespace Matkakirja.Natiivi
         void Kytke(PoikkileikkausLinssi uusi)
         {
             kytketty = uusi != null;
-            if (kuoriNappi != null) kuoriNappi.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kuoriNappi != null) kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
             nakyma.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
             // Kulman Pulu piiloon linssin ajaksi: dioraamassa Pulu liitää näyttämöllä (oma LiviaKuva).
@@ -225,9 +270,10 @@ namespace Matkakirja.Natiivi
                 && etsintaKortti.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(etsintaKortti.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                 return true;
             // ‹-nappi ei saa välittää napautusta dioraamalle (muuten sama napautus voisi kohdistaa tilan uudelleen).
-            if (paluuNappi != null && paluuNappi.resolvedStyle.display != DisplayStyle.None && paluuNappi.panel != null
-                && paluuNappi.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(paluuNappi.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
-                return true;
+            foreach (var el in new VisualElement[] { paluuNappi, uusintaNappi, puluAlue })
+                if (el != null && el.resolvedStyle.display != DisplayStyle.None && el.panel != null
+                    && el.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(el.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
+                    return true;
             if (juuri.style.display == DisplayStyle.None || lauta.resolvedStyle.display == DisplayStyle.None) return false;
             var paneelipiste = RuntimePanelUtils.ScreenToPanel(lauta.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
             return lauta.worldBound.Contains(paneelipiste);
@@ -247,9 +293,34 @@ namespace Matkakirja.Natiivi
             {
                 lauta.style.display = DisplayStyle.None;
                 pulu.style.display = DisplayStyle.None;
+                puluAlue.style.display = DisplayStyle.None;
+                uusintaNappi.style.display = DisplayStyle.None;
+                kertojaLaatikko.RemoveFromClassList("mk-nakyy");
                 return;
             }
             Nakyma nakyma = nakymaTaiEi.Value;
+            double tNyt = DioraamaSovitin.ViimeisinT;
+
+            // UUSI LINNA: kertojan kierros — vain teksti ja kamera; Pulu, taulu ja laput pois.
+            bool kierros = nakyma.KertojaJakso >= 0 || linssi.KertojaKaynnissa(tNyt);
+            // Kehittäjän kuorinappi: ei esittelylinssien reitillä eikä kertojan tai infotaulun aikana (Päätoimittaja 30.9.).
+            bool infoAuki = nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila)?.Infotaulu != null;
+            kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki && !kierros && !infoAuki
+                ? DisplayStyle.Flex : DisplayStyle.None;
+            if (nakyma.KertojaTeksti != null) kertojaTeksti.text = nakyma.KertojaTeksti;
+            kertojaLaatikko.EnableInClassList("mk-nakyy", nakyma.KertojaTeksti != null);
+            uusintaNappi.style.display = nakyma.KohdeTila == null && linssi.KertojaUusittavissa(tNyt) ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kierros)
+            {
+                lauta.style.display = DisplayStyle.None;
+                pulu.style.display = DisplayStyle.None;
+                puluAlue.style.display = DisplayStyle.None;
+                for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+                return;
+            }
+            var infoTila = nakyma.KohdeTila != null ? rakennus.Tila(nakyma.KohdeTila) : null;
+            if (infoTila?.Infotaulu != null) { PaivitaInfotaulu(linssi, infoTila, nakyma, tNyt); return; }
+            puluAlue.style.display = DisplayStyle.None;
 
             // Pulu: 3D-laskeutumispiste → ruutupiste → paneelikoordinaatit (MaapallonVuosiSovitin-kommentin malli).
             Vector3 puluMaailma = DioraamaNayttamo.UnityPiste(nakyma.Pulu);
@@ -329,6 +400,66 @@ namespace Matkakirja.Natiivi
             string seuraavaRivi = SeuraavaRivi(rakennus, nakyma, taulu.Kohdat.Count);
             seuraava.text = seuraavaRivi ?? "";
             seuraava.style.display = seuraavaRivi != null ? DisplayStyle.Flex : DisplayStyle.None;
+        }
+
+        /// <summary>
+        /// UUSI LINNA (omistaja 30.9.2026): huoneen infotaulu ruudun alaosaan (nimi, 1–2 riviä, lähteet) ja aktiivisen
+        /// etsintävaiheen rivi korostettuna; Pulu istuu taulun vasemmassa yläkulmassa, napautus näyttää pulu.teksti-kuplan.
+        /// Näkyy, kun tilaan on lennetty perille (leikkausikkuna auki).
+        /// </summary>
+        void PaivitaInfotaulu(PoikkileikkausLinssi linssi, Tila tila, Nakyma nakyma, double t)
+        {
+            for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+            bool perilla = linssi.LeikkausHetkella(t).osuus >= 0.99;
+            var info = tila.Infotaulu;
+            lauta.style.display = perilla ? DisplayStyle.Flex : DisplayStyle.None;
+            lauta.style.opacity = perilla ? 1f : 0f;
+            lauta.style.translate = new Translate(0, perilla ? 0 : 8);
+            if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; return; }
+
+            float pw = juuri.layout.width, ph = juuri.layout.height;
+            if (float.IsNaN(pw) || pw <= 0) { pw = Screen.width; ph = Screen.height; }
+            lauta.style.width = Mathf.Max(220f, pw * (ph > pw ? 0.82f : 0.40f));
+            float tauluLeveys = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 300f : lauta.layout.width;
+            float tauluKorkeus = float.IsNaN(lauta.layout.height) || lauta.layout.height <= 0 ? 140f : lauta.layout.height;
+            float x = (pw - tauluLeveys) * 0.5f, y = ph - tauluKorkeus - Mathf.Max(24f, ph * 0.05f);
+            lauta.style.left = x; lauta.style.top = y;
+
+            laskuri.text = "";
+            otsikko.text = info.Nimi ?? tila.Nimi ?? "";
+            var rivit = new List<string>(); var lahteet = new List<string>();
+            foreach (var (rt, rl) in info.Rivit)
+            {
+                if (!string.IsNullOrEmpty(rt)) rivit.Add(rt);
+                if (!string.IsNullOrEmpty(rl) && rl != "TARKISTAMATTA" && !lahteet.Contains(rl)) lahteet.Add(rl);
+            }
+            teksti.text = string.Join("\n", rivit);
+            teksti.style.display = rivit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            lahde.text = string.Join(" · ", lahteet);
+            lahde.style.display = lahteet.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            // Etsinnän vihje riviksi (korostettuna kursiivilla); muuten hahmon repliikki kuten ennen.
+            string vihje = DioraamaEtsinta.AktiivinenRivi;
+            // Pulun vanhat käsikirjoitusrivit eivät kuulu infotauluun (Pulu kertoo lisää kuplassa napautuksesta); vain
+            // hahmon repliikki (1.1 (74) -kuva: "Pulu: …" toisti tekstiä taulussa).
+            string puhe = !string.IsNullOrEmpty(vihje) ? vihje
+                : !string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu"
+                    ? PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma) + ": ”" + nakyma.Repliikki + "”" : null;
+            lainaus.text = puhe ?? "";
+            lainaus.style.display = puhe != null ? DisplayStyle.Flex : DisplayStyle.None;
+            seuraava.style.display = DisplayStyle.None;
+
+            puluKupla = tila.PuluTeksti;
+            bool puluNakyy = !string.IsNullOrEmpty(puluKupla);
+            pulu.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            puluAlue.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!puluNakyy) return;
+            const float koko = 64f;
+            float puluLeveys = koko * (58f / 70f);
+            pulu.MiniKorkeus(koko);
+            float px = x + 6f, py = y - koko + 12f; // istuu taulun yläreunalla vasemmassa kulmassa
+            pulu.style.left = px; pulu.style.top = py;
+            puluAlue.style.left = px - 6f; puluAlue.style.top = py - 6f;
+            puluAlue.style.width = puluLeveys + 12f; puluAlue.style.height = koko + 12f;
         }
 
         /// <summary>Kiertue (era 3 kohta 5): rivi taulun alaosaan, kun tilan viimeinen kohta näkyy tai käsikirjoitus on

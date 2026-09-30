@@ -252,15 +252,18 @@ namespace Matkakirja.Natiivi
         static bool Puhelin => Application.platform == RuntimePlatform.IPhonePlayer
             ? !UiKerros.Tabletti : Screen.width < Screen.height;
 
-        /// <summary>Web tekstitPiilossa: puhelin tai kertojan luenta.</summary>
-        bool TekstitPiilossa => Puhelin || luentaPiilo;
+        /// <summary>Puhelimessa merkintä alkaa lappuna, paitsi kertojan luennan aikana: omistaja 30.9.2026 (TF 1.0.68,
+        /// Päätoimittaja): "otetaan isoisän matkakirja näkyviin automaattisesti luennan ajan" — kumoaa 15.9.:n linjan
+        /// "TEKSTIT PIILOON KAIKILLA LAITTEILLA" (web tekstitPiilossa, PAATOKSET 38/1).</summary>
+        bool TekstitPiilossa => Puhelin && !luentaPiilo;
 
         /// <summary>Testikomentoa varten: miksi kortti on lappu (ui matkakirja).</summary>
         public string Tila => $"pieni {pieni}, puhelin {Puhelin} (tabletti {UiKerros.Tabletti}, malli {SystemInfo.deviceModel}), luentapiilo {luentaPiilo}, kertoja {Aanet.KertojaPuhuu}";
 
         /// <summary>
-        /// Webin luentavahti: kertojan alkaessa auki oleva kortti kutistuu lapuksi; puheenvuorojen
-        /// välissä piilo pysyy välirauhan ajan (ei välähdystä). Loppu ei avaa korttia millään laitteella.
+        /// Luentavahti (omistaja 30.9.2026): kertojan alkaessa kortti AUKEAA (lappu → auki) ja pysyy auki luennan ajan;
+        /// puheenvuorojen välissä tila pysyy välirauhan ajan (ei välähdystä). Luennan loppu ei kutista korttia; pelaajan
+        /// kartan liike kutistaa sen tavalliseen tapaan vasta luennan jälkeen. (Ennen 30.9.: kertoja kutisti kortin.)
         /// </summary>
         PalloKierto kierto;
 
@@ -287,7 +290,9 @@ namespace Matkakirja.Natiivi
 
         public void KartanLiike()
         {
-            if (Nakyy && !pieni) Muunna(true);
+            // Luennan ajan kortti pysyy auki, vaikka pelaaja tutkii karttaa (omistaja 30.9.2026). Kutistukseen käytetty
+            // napautus ei avaa maakuntalappua (omistaja 30.9.2026, maakunta automaattisesti).
+            if (Nakyy && !pieni && !luentaPiilo) { Muunna(true); PalloKierto.Osui(); }
         }
 
         bool linssiKutisti;
@@ -311,6 +316,19 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        bool kysymysAuki;
+
+        /// <summary>
+        /// Kysymys auki (pariteetti 30.9.2026, Päätoimittaja): visa pienentää kortin aina lapuksi, myös luennan aikana
+        /// (web: kortti lappuna visan yllä). Sulkeutuessa kortti palaa auki vain, jos luenta yhä jatkuu.
+        /// </summary>
+        public void Kysymys(bool auki)
+        {
+            kysymysAuki = auki;
+            if (auki) { if (Nakyy && !pieni) Muunna(true); }
+            else if (luentaPiilo && Nakyy && pieni) Muunna(false);
+        }
+
         void Luentavahti()
         {
             KytkeKartta();
@@ -321,7 +339,7 @@ namespace Matkakirja.Natiivi
             if (!piiloon) kertojaLoppui = -1f;
             if (piiloon == luentaPiilo) return;
             luentaPiilo = piiloon;
-            if (piiloon && Nakyy && !pieni) Muunna(true);
+            if (piiloon && Nakyy && pieni && !kysymysAuki) Muunna(false);
             // Löydös 87: isoisän luennon jälkeen lappu tiivistyy pelkkään kaupungin nimeen.
             if (!piiloon && merkinta != null && merkinta.Kaiutin && !luettu) { luettu = true; PaivitaLyhyt(true); }
         }
@@ -876,7 +894,7 @@ namespace Matkakirja.Natiivi
                 // Aito äänitaso: kertojan oma AudioSource, kun luenta soi siitä; muuten (Pelikoodarin Puhe) kuulijan miksaus.
                 var lahde = Aanet.Kertojasoitin;
                 if (lahde != null && lahde.isPlaying) lahde.GetOutputData(naytteet, 0);
-                else AudioListener.GetOutputData(naytteet, 0);
+                else Natiivi.TestiMykistys.Lahto(naytteet, 0);
                 double s = 0;
                 for (int i = 0; i < naytteet.Length; i++) s += naytteet[i] * naytteet[i];
                 rms = Mathf.Sqrt((float)(s / naytteet.Length));

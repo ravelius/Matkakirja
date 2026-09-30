@@ -100,6 +100,8 @@ namespace Matkakirja.Natiivi
                     k => { PlayerPrefs.DeleteKey(k); PlayerPrefs.Save(); });
                 // Kehittäjäkoodi vain Keychainista (Asetukset.PolloKoodi); vanhat PlayerPrefs-kopiot pois.
                 saadot.Koodilahde = () => Asetukset.PolloKoodi;
+                // Lukijan moottori (xAI / ElevenLabs v4 Turbo, omistaja 30.9.2026): valinta vain omistajan laitteilla ja kehittäjätilassa.
+                saadot.MoottoriLahde = Striimiaani.MoottoriValinta;
                 saadot.PoistaVanhatKoodit();
                 saadot.Muuttui += () =>
                 {
@@ -1231,7 +1233,7 @@ namespace Matkakirja.Natiivi
                 yield return null;
                 if (lahde.clip != klippi) break;
                 if (lahde.isPlaying) { lahde.GetOutputData(verhoNaytteet, 0); oma += Rms(verhoNaytteet); }
-                AudioListener.GetOutputData(verhoNaytteet, 0);
+                TestiMykistys.Lahto(verhoNaytteet, 0);
                 kaikki += Rms(verhoNaytteet);
                 n++;
                 float t = Time.unscaledTime - t0;

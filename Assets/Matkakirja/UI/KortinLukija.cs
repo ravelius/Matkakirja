@@ -501,17 +501,53 @@ namespace Matkakirja.Natiivi
             return nappi.Q<Label>(className: "mk-nappi__teksti");
         }
 
-        /// <summary>Kertojan ääni-valitsin valikkoon (pelinimet; oletus ensin).</summary>
+        /// <summary>
+        /// Kertojan ääni-valitsin valikkoon (pelinimet; oletus ensin). Omistajan laitteella ja kehittäjätilassa yläpuolella on
+        /// Moottori-rivi (xAI / ElevenLabs v4 Turbo, omistaja 30.9.2026), ja äänilista näyttää vain valitun moottorin äänet.
+        /// </summary>
         static void RakennaAaniValinta(VisualElement saadot)
+        {
+            if (Striimiaani.MoottoriSallittu)
+            {
+                var moottoriRivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
+                Kirjasimet.Aseta(Rakenne.Teksti("Moottori", "mk-lukija-saadot__nimi", moottoriRivi), Kirjasin.Luku);
+                var moottorit = new List<string>();
+                foreach (var m in Striimiaani.Moottorit) moottorit.Add(m.Nimi);
+                int mi = Striimiaani.Moottori == Striimiaani.Eleven ? 1 : 0;
+                var moottori = new DropdownField(moottorit, mi);
+                moottori.AddToClassList("mk-lukija-saadot__valinta");
+                Kirjasimet.Aseta(moottori, Kirjasin.Luku);
+                moottoriRivi.Add(moottori);
+                VisualElement aaniRivi = null;
+                moottori.RegisterValueChangedCallback(_ =>
+                {
+                    Striimiaani.Moottori = Striimiaani.Moottorit[moottori.index].Tunnus;
+                    Debug.Log("MATKAKIRJA lukija: moottori " + Striimiaani.Moottori);
+                    // Äänilista vaihtuu moottorin mukaan samaan kohtaan.
+                    int paikka = aaniRivi != null ? saadot.IndexOf(aaniRivi) : -1;
+                    aaniRivi?.RemoveFromHierarchy();
+                    aaniRivi = AaniRivi(saadot);
+                    if (paikka >= 0) { aaniRivi.RemoveFromHierarchy(); saadot.Insert(paikka, aaniRivi); }
+                });
+                aaniRivi = AaniRivi(saadot);
+                return;
+            }
+            AaniRivi(saadot);
+        }
+
+        /// <summary>Äänirivi valitun moottorin äänistä (ElevenLabs vain sallitulla laitteella).</summary>
+        static VisualElement AaniRivi(VisualElement saadot)
         {
             var aaniRivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("Ääni", "mk-lukija-saadot__nimi", aaniRivi), Kirjasin.Luku);
+            bool eleven = Striimiaani.MoottoriSallittu && Striimiaani.Moottori == Striimiaani.Eleven;
+            var lista = eleven ? Striimiaani.ElevenAanet : Striimiaani.Pelinimet;
             // Pelinimet: näytössä nimi, pyynnössä tunnus (web AANTEN_PELINIMET). Oletus ensin "Aino (oletus)".
-            var nimet = new List<string> { Striimiaani.Pelinimet[0].Nimi + " (oletus)" };
-            for (int i = 1; i < Striimiaani.Pelinimet.Count; i++) nimet.Add(Striimiaani.Pelinimet[i].Nimi);
-            string valittu = Striimiaani.Valittu;
+            var nimet = new List<string> { lista[0].Nimi + " (oletus)" };
+            for (int i = 1; i < lista.Count; i++) nimet.Add(lista[i].Nimi);
+            string valittu = eleven ? Striimiaani.ElevenAani : Striimiaani.Valittu;
             int indeksi = 0;
-            for (int i = 1; i < Striimiaani.Pelinimet.Count; i++) if (Striimiaani.Pelinimet[i].Tunnus == valittu) indeksi = i;
+            for (int i = 1; i < lista.Count; i++) if (lista[i].Tunnus == valittu) indeksi = i;
             var valinta = new DropdownField(nimet, indeksi);
             valinta.AddToClassList("mk-lukija-saadot__valinta");
             Kirjasimet.Aseta(valinta, Kirjasin.Luku);
@@ -519,8 +555,10 @@ namespace Matkakirja.Natiivi
             valinta.RegisterValueChangedCallback(_ =>
             {
                 int k = valinta.index;
-                Striimiaani.Aseta(k > 0 ? Striimiaani.Pelinimet[k].Tunnus : null);
+                if (eleven) Striimiaani.ElevenAani = lista[k].Tunnus;
+                else Striimiaani.Aseta(k > 0 ? lista[k].Tunnus : null);
             });
+            return aaniRivi;
         }
 
         int nykyinenRivi = -1;
@@ -648,6 +686,7 @@ namespace Matkakirja.Natiivi
                 if (puu != null) Niele(puu, e.pointerId, nappi);
                 return;
             }
+            UiKerros.OhiSulki();  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
             SuljePaneeli();
             e.StopPropagation();
             if (puu != null) Niele(puu, e.pointerId, null);

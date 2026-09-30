@@ -81,12 +81,18 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Kuluvan tilan (tai avauksessa linnan) käsikirjoitus on kokonaan läpi ja taulu jää näkyviin
         /// (era 3 kohta 5, Kiertue): seuraava napautus siirtää kiertueella eteenpäin.</summary>
         public readonly bool KasikirjoitusLopussa;
+        /// <summary>UUSI LINNA (30.9.2026): kertojan kierroksen jakso (−1 = ei kierrosta) ja sen teksti, kun teksti
+        /// näkyy (lennon loppuosa ja pysähdys); null lennon alussa ja kierroksen ulkopuolella.</summary>
+        public readonly int KertojaJakso;
+        public readonly string KertojaTeksti;
 
         public Nakyma(Asento kamera, Dictionary<string, int> tasot, List<HahmoNakyma> hahmot, V3 pulu,
             bool puluLentaa, bool tauluAuki, int kohta, string kohdeTila, string puhuja = null, string repliikki = null,
-            int askel = -1, string askeleenAani = null, bool kasikirjoitusLopussa = false)
+            int askel = -1, string askeleenAani = null, bool kasikirjoitusLopussa = false, int kertojaJakso = -1,
+            string kertojaTeksti = null)
         {
             KasikirjoitusLopussa = kasikirjoitusLopussa;
+            KertojaJakso = kertojaJakso; KertojaTeksti = kertojaTeksti;
             Kamera = kamera; Tasot = tasot; Hahmot = hahmot; Pulu = pulu;
             PuluLentaa = puluLentaa; TauluAuki = tauluAuki; Kohta = kohta; KohdeTila = kohdeTila;
             Puhuja = puhuja; Repliikki = repliikki; Askel = askel; AskeleenAani = askeleenAani;
@@ -152,9 +158,52 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Onko saapumiskaari kesken (napautus ohittaa eikä kohdista).</summary>
         public bool SaapuminenKaynnissa(double t) => SaapuminenOsuus(t) < 1 && tapahtumat.Count == 1;
 
+        // --- KUVASUHTEEN SOVITUS (arvioijakierros 30.9., 1.1 (75): linna rajautui iPhonella oikeasta reunasta) --------------
+        // Laajat kuvat (yleisnäkymä ja kertojan jaksot, joiden etäisyys ≥ 0,8 × yleisnäkymän) keskitetään linnan tilojen
+        // pohjapiirroksen (tilojen rajat, massa pois) keskelle kameran sivusuunnassa ja vedetään niin kauas, että koko
+        // leveys (+10 %) mahtuu todelliseen vaakakenttään: tan(h/2) = tan(fov/2) · kuvasuhde. Etäisyys vain kasvaa.
+        /// <summary>Näkymän leveys/korkeus (Unity asettaa joka ruutu); 0 = ei sovitusta (Ydin-testit).</summary>
+        public double Kuvasuhde { get; set; }
+        double pohjaMinX, pohjaMaxX, pohjaMinZ, pohjaMaxZ;
+        bool pohjaOn;
+
+        void LaskePohja()
+        {
+            pohjaOn = false;
+            pohjaMinX = pohjaMinZ = double.MaxValue; pohjaMaxX = pohjaMaxZ = double.MinValue;
+            foreach (var t in Rakennus.Tilat)
+            {
+                if (t.Id == Aanimaisema.MassaTilaId) continue;
+                if (t.RajaMin.X == 0 && t.RajaMax.X == 0 && t.RajaMin.Z == 0 && t.RajaMax.Z == 0) continue;
+                pohjaMinX = Math.Min(pohjaMinX, Math.Min(t.RajaMin.X, t.RajaMax.X)); pohjaMaxX = Math.Max(pohjaMaxX, Math.Max(t.RajaMin.X, t.RajaMax.X));
+                pohjaMinZ = Math.Min(pohjaMinZ, Math.Min(t.RajaMin.Z, t.RajaMax.Z)); pohjaMaxZ = Math.Max(pohjaMaxZ, Math.Max(t.RajaMin.Z, t.RajaMax.Z));
+                pohjaOn = true;
+            }
+        }
+
+        Asento SovitaKuvasuhteeseen(Asento a)
+        {
+            if (Kuvasuhde <= 0 || !pohjaOn || a.Fov <= 0 || a.Etaisyys <= 0) return a;
+            var (sij, koh) = Kameraliike.AsentoSijainti(a);
+            double dx = koh.X - sij.X, dz = koh.Z - sij.Z, pit = Math.Sqrt(dx * dx + dz * dz);
+            if (pit < 1e-6) return a;
+            double rx = dz / pit, rz = -dx / pit; // kameran sivusuunta vaakatasossa
+            double l = double.MaxValue, r = double.MinValue;
+            foreach (var (x, z) in new[] { (pohjaMinX, pohjaMinZ), (pohjaMinX, pohjaMaxZ), (pohjaMaxX, pohjaMinZ), (pohjaMaxX, pohjaMaxZ) })
+            {
+                double p = (x - koh.X) * rx + (z - koh.Z) * rz;
+                l = Math.Min(l, p); r = Math.Max(r, p);
+            }
+            double keski = (l + r) / 2, puoli = (r - l) / 2 * 1.1;
+            double h = Math.Atan(Math.Tan(a.Fov * Math.PI / 360.0) * Kuvasuhde);
+            double tarve = h > 1e-4 ? puoli / Math.Tan(h) : a.Etaisyys;
+            var kohde = new V3(a.Kohde.X + rx * keski, a.Kohde.Y, a.Kohde.Z + rz * keski);
+            return new Asento(kohde, a.Atsimuutti, a.Korkeus, Math.Max(a.Etaisyys, tarve), a.Fov, a.Aukko, a.Kierto);
+        }
+
         Asento AsentoFor(string kohde, bool pysty)
         {
-            if (kohde == null) return pysty ? Rakennus.YleisPysty : Rakennus.YleisVaaka;
+            if (kohde == null) return SovitaKuvasuhteeseen(pysty ? Rakennus.YleisPysty : Rakennus.YleisVaaka);
             var tila = Rakennus.Tila(kohde);
             return pysty && tila.KameraPysty.HasValue ? tila.KameraPysty.Value : tila.Kamera;
         }
@@ -181,6 +230,85 @@ namespace Matkakirja.Linssit.Dioraama
             ohitusT = -1; ohitusU = 0;
             tapahtumat.Add(new Kameratapahtuma(t, null, saapumisKesto));
             napautukset.Clear();
+            kertojaAlku = -1; kertojaLahto = null; kertojaOhitukset.Clear();
+            LaskePohja();
+            // Toisella käynnillä (lyhyt) kierros ei ala itsestään; ↻ (KertojaUudelleen) toistaa sen.
+            kertojaVainUusintana = lyhyt;
+        }
+        bool kertojaVainUusintana;
+
+        // --- UUSI LINNA: kertojan esittely ja kamerakierros (omistaja 30.9.2026; Siirtosepän toteutus) ---------------------
+        // Saapumisen (lyhyt) jälkeen kamera lentää jaksosta toiseen (Rakennus.Kertoja): lento 1,2–2,5 s ja pysähdys jakson keston
+        // ajan, teksti näkyy lennon viimeisestä 40 %:sta pysähdyksen loppuun. Napautus päättää jakson heti (seuraava lento alkaa),
+        // huoneen kohdistus (Kohdista) katkaisee kierroksen, ja lopuksi kamera palaa yleisnäkymään. Kaikki johdetaan ajasta ja
+        // tallennetuista napautuksista (sama t → sama näkymä), kuten muukin linssi.
+        double kertojaAlku = -1;           // −1 = ensimmäinen kierros alkaa saapumisen lopussa (seuraa saapumisen ohitusta)
+        string kertojaLahto;               // uusinnan lähtötila (null = yleisnäkymä)
+        readonly List<double> kertojaOhitukset = new List<double>();
+        public const double KertojaLentoMin = 1.2, KertojaLentoMax = 2.5, KertojaTekstiOsuus = 0.6;
+
+        double KertojaAlku => kertojaAlku >= 0 ? kertojaAlku
+            : tapahtumat.Count > 0 ? tapahtumat[0].Hetki + tapahtumat[0].Kesto : double.PositiveInfinity;
+
+        /// <summary>Onko kertojan kierros käynnissä hetkellä t (napautus ohittaa jakson, ei kohdista).</summary>
+        public bool KertojaKaynnissa(double t) => Auki && Kierros(t, false).Kaynnissa;
+
+        /// <summary>Onko linnalla kierros, joka ei ole käynnissä (UI:n uusintanappi näkyy).</summary>
+        public bool KertojaUusittavissa(double t) => Auki && Rakennus?.Kertoja != null && Rakennus.Kertoja.Count > 0
+            && t >= KertojaAlku && !Kierros(t, false).Kaynnissa;
+
+        /// <summary>Uusinta (↻-nappi): kierros alusta nykyisestä kamerasta; aiemmat jaksojen ohitukset unohtuvat.</summary>
+        public void KertojaUudelleen(double t)
+        {
+            if (Rakennus?.Kertoja == null || Rakennus.Kertoja.Count == 0) return;
+            kertojaLahto = tapahtumat.Count > 0 ? tapahtumat[ViimeisinIndeksi(t)].Kohde : null;
+            kertojaAlku = t;
+            kertojaOhitukset.Clear();
+        }
+
+        Asento JaksonAsento(KertojaJakso j, bool pysty)
+        {
+            var a = pysty && j.KameraPysty.HasValue ? j.KameraPysty.Value : j.Kamera;
+            var yleis = pysty ? Rakennus.YleisPysty : Rakennus.YleisVaaka;
+            return j.Tila == null && a.Etaisyys >= 0.8 * yleis.Etaisyys ? SovitaKuvasuhteeseen(a) : a; // vain laajat kuvat
+        }
+
+        static double KertojaLento(Asento a, Asento b) =>
+            Math.Max(KertojaLentoMin, Math.Min(KertojaLentoMax, Kameraliike.SiirtymanKesto(a, b)));
+
+        /// <summary>Kierroksen tila hetkellä t: käynnissä, kamera, jakso (−1 = paluulento yleisnäkymään) ja näkyvä teksti.</summary>
+        (bool Kaynnissa, Asento Kamera, int Jakso, string Teksti, double U) Kierros(double t, bool pysty)
+        {
+            var jaksot = Rakennus?.Kertoja;
+            if (jaksot == null || jaksot.Count == 0) return (false, default, -1, null, 0);
+            if (kertojaVainUusintana && kertojaAlku < 0) return (false, default, -1, null, 0);
+            double s = KertojaAlku;
+            if (t < s || double.IsInfinity(s)) return (false, default, -1, null, 0);
+            // Huoneen kohdistus kierroksen alun jälkeen katkaisee kierroksen.
+            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return (false, default, -1, null, 0);
+            var edellinen = AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
+            double kursori = s;
+            int ohitus = 0; // kukin napautus päättää täsmälleen yhden jakson
+            while (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < s) ohitus++;
+            for (int j = 0; j < jaksot.Count; j++)
+            {
+                var kohde = JaksonAsento(jaksot[j], pysty);
+                double lento = KertojaLento(edellinen, kohde), loppu = kursori + lento + jaksot[j].Kesto;
+                if (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < loppu) loppu = Math.Max(kursori, kertojaOhitukset[ohitus++]);
+                if (t < loppu)
+                {
+                    double u = lento > 0 ? (t - kursori) / lento : 1;
+                    var kamera = u < 1 ? Kameraliike.SiirtymaAsento(edellinen, kohde, u) : kohde;
+                    return (true, kamera, j, u >= KertojaTekstiOsuus ? jaksot[j].Teksti : null, u);
+                }
+                double uLoppu = lento > 0 ? (loppu - kursori) / lento : 1;
+                edellinen = uLoppu < 1 ? Kameraliike.SiirtymaAsento(edellinen, kohde, uLoppu) : kohde;
+                kursori = loppu;
+            }
+            var yleis = AsentoFor(null, pysty);
+            double paluu = KertojaLento(edellinen, yleis);
+            if (t < kursori + paluu) return (true, Kameraliike.SiirtymaAsento(edellinen, yleis, (t - kursori) / paluu), -1, null, (t - kursori) / paluu);
+            return (false, default, -1, null, 0);
         }
 
         public void Sulje()
@@ -215,6 +343,8 @@ namespace Matkakirja.Linssit.Dioraama
                 tapahtumat[0] = new Kameratapahtuma(e0.Hetki, null, t + SaapumisOhitusS - e0.Hetki);
                 return;
             }
+            // Kertojan kierroksella napautus päättää jakson (seuraava lento alkaa heti).
+            if (Rakennus != null && Kierros(t, false).Kaynnissa) { kertojaOhitukset.Add(t); kertojaOhitukset.Sort(); return; }
             var nyt = Auki && Rakennus != null && tapahtumat.Count > 0 ? NakymaHetkella(t, false) : default(Nakyma);
             if (nyt.KasikirjoitusLopussa)
             {
@@ -250,6 +380,20 @@ namespace Matkakirja.Linssit.Dioraama
         /// </summary>
         public (string tila, double osuus) LeikkausHetkella(double t)
         {
+            // Kertojan kierros: jakson tila (esim. laituri kuoren sisällä) aukeaa lennon jälkipuoliskolla ja sulkeutuu
+            // seuraavan lennon alkupuoliskolla (1.1 (74) -kuva: laiturijakso näytti vain kuoren muurin).
+            var kierros = Kierros(t, false);
+            if (kierros.Kaynnissa)
+            {
+                double Pehmea(double x) { x = Math.Max(0, Math.Min(1, x)); return x * x * (3 - 2 * x); }
+                var jaksot = Rakennus.Kertoja;
+                string tama = kierros.Jakso >= 0 ? jaksot[kierros.Jakso].Tila : null;
+                string edellinenTila = kierros.Jakso > 0 ? jaksot[kierros.Jakso - 1].Tila
+                    : kierros.Jakso < 0 && jaksot.Count > 0 ? jaksot[jaksot.Count - 1].Tila : null;
+                if (kierros.U < 0.5 && edellinenTila != null && edellinenTila != tama) return (edellinenTila, 1 - Pehmea(kierros.U * 2));
+                if (tama != null) return (tama, edellinenTila == tama ? 1.0 : Pehmea((kierros.U - 0.5) * 2));
+                return (null, 0.0);
+            }
             int i = ViimeisinIndeksi(t);
             var e = tapahtumat[i];
             string edellinen = i > 0 ? tapahtumat[i - 1].Kohde : null;
@@ -308,6 +452,9 @@ namespace Matkakirja.Linssit.Dioraama
                 kamera = Kameraliike.SiirtymaAsento(p0, p1, paikallinenT);
             }
 
+            var kierros = Kierros(t, pysty);
+            if (kierros.Kaynnissa) kamera = kierros.Kamera;
+
             var tasot = new Dictionary<string, int>();
             var hahmot = new List<HahmoNakyma>();
             foreach (var tila in Rakennus.Tilat)
@@ -329,7 +476,9 @@ namespace Matkakirja.Linssit.Dioraama
             string askeleenAani = null;
             bool lopussa = false;
 
-            bool avaus = kohdeTila == null && i == 0 && Rakennus.Taulu?.Kohdat != null && Rakennus.Taulu.Kohdat.Count > 0;
+            // Uusi linna: kertojan kierros korvaa linnan avaustaulun (Pulun kohdat 1/3).
+            bool avaus = kohdeTila == null && i == 0 && Rakennus.Taulu?.Kohdat != null && Rakennus.Taulu.Kohdat.Count > 0
+                && (Rakennus.Kertoja == null || Rakennus.Kertoja.Count == 0);
             if (kohdeTila == null && !avaus)
             {
                 pulu = EdellinenLaskeutuminen(i + 1);
@@ -388,7 +537,7 @@ namespace Matkakirja.Linssit.Dioraama
             }
 
             return new Nakyma(kamera, tasot, hahmot, pulu, puluLentaa, tauluAuki, kohta, kohdeTila, puhuja, repliikki,
-                askel, askeleenAani, lopussa);
+                askel, askeleenAani, lopussa, kierros.Kaynnissa ? kierros.Jakso : -1, kierros.Kaynnissa ? kierros.Teksti : null);
         }
 
         /// <summary>Puheaskeleen puhuja, teksti ja äänipankin id (kohta, repliikki, reaktio); muut askeleet

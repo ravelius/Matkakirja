@@ -46,6 +46,8 @@
 //                             lykätty) ja viimeisin päättyminen "kaupunki (syy)" peli-lokiin
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
 //                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
+//   aani mykistys 1|0|tila    testimykistys: lopullinen ulostulo nollaan, aani mittaa näkee signaalin (oletus päällä
+//                             simulaattorissa, pois laitteella; PlayerPrefs testi.mykistys, TestiMykistys.cs)
 //   aani aihe aloituslento|loppu|ratkaisu|epaonnistuminen|kaupunki <id>   musiikkiaihe ilman pelitilannetta
 //                             (lokiin "MATKAKIRJA aani: aihe <osoite>|ei soi")
 //   aani tila kohtaaminen|lehti|matkalaukku paalle|pois   musiikkitila (tilaraita) ilman näkymää (lokiin tilat ja pohja)
@@ -294,6 +296,10 @@ namespace Matkakirja.Natiivi
                     Destroy(go, 2.5f);
                     return null;
                 }
+                case "aani" when A(1) == "mykistys":
+                    // Testimykistys (TestiMykistys.cs): 1 = lopullinen ulostulo nollaan (oletus simulaattorissa), 0 = kuuluu.
+                    if (A(2) == "1" || A(2) == "0") TestiMykistys.Paalla = A(2) == "1";
+                    return $"=mykistys {(TestiMykistys.Paalla ? "päällä" : "pois")} (simulaattori {TestiMykistys.Simulaattori})";
                 case "aani" when A(1) == "istunto":
                     // aani istunto playback|puhe|ambient: istunnon vaihto mittausta varten (AaniIstunto.Vaihda).
                     return AaniIstunto.Vaihda(A(2));
@@ -587,7 +593,7 @@ namespace Matkakirja.Natiivi
             {
                 for (int k = 0; k < 2; k++)
                 {
-                    AudioListener.GetOutputData(naytteet, k);
+                    TestiMykistys.Lahto(naytteet, k);
                     foreach (var x in naytteet) { summa += x * x; huippu = Mathf.Max(huippu, Mathf.Abs(x)); }
                     lkm += naytteet.Length;
                 }

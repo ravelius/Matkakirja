@@ -490,6 +490,8 @@ namespace Matkakirja.Natiivi
             if (!((kelluvaNyt == true || matala) && Screen.height > Screen.width && !Piilossa && AsetaSaaririvi(r, matala)))
             {
                 kelluvaVaraus = null;
+                // Vaaka (1.0.71-kuva): pystyn saarimusta (66 pt) ulottui piilotetun palkin alle ja näkyi yläreunassa.
+                AsetaSaariMusta(Rect.zero, 1f);
                 palkki.EnableInClassList("mk-ylapalkki--saari", false);
                 palkki.EnableInClassList("mk-ylapalkki--matala", false);
                 pilleri.style.maxWidth = StyleKeyword.Null;
@@ -898,7 +900,7 @@ namespace Matkakirja.Natiivi
             if (PudotusAuki != null && PudotusAuki()) return;
             var ruutu = osoitin.position.ReadValue();
             var pp = RuntimePanelUtils.ScreenToPanel(palkki.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            if (!palkki.worldBound.Contains(pp) && !vakasnappi.worldBound.Contains(pp)) Sulje();
+            if (!palkki.worldBound.Contains(pp) && !vakasnappi.worldBound.Contains(pp)) { UiKerros.OhiSulki(); Sulje(); }  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
         }
 
         /// <summary>Näkyvän palkin alareuna paneelin pisteinä, piilossa 0 (näkymäpeiton tarkistus: palkki on läpinäkymätön).</summary>

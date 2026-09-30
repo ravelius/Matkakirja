@@ -319,6 +319,11 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Tilan satunnaisten kertaäänien tehostejaksot (era 2, koordinaattorin lisäys 29.9.); tyhjä
         /// vanhassa muodossa ja tiloissa, joilla ei ole tehosteita.</summary>
         public List<TehosteJakso> Tehosteet = new List<TehosteJakso>();
+        /// <summary>UUSI LINNA (omistaja 30.9.2026): huoneen infotaulu (`infotaulu: { nimi, rivit: [{ teksti, lahde }] }`,
+        /// 1–2 riviä); null = vanha taulu (Taulu, kohdat 1/3).</summary>
+        public Infotaulu Infotaulu;
+        /// <summary>Pulun lisäkerronta (`pulu.teksti`): reunan Pulun kuvan napautus näyttää tämän kuplana; null = ei kuvaa.</summary>
+        public string PuluTeksti;
     }
 
     /// <summary>Auringon (päävalon) asetukset rakennuksen valaistuksessa (era 2b, kohta 1
@@ -396,10 +401,32 @@ namespace Matkakirja.Linssit.Dioraama
         public List<(string Teksti, string Lahde)> Kortti = new List<(string, string)>();
     }
 
+    /// <summary>Huoneen infotaulu (uusi linna 30.9.2026): nimi ja 1–2 riviä lähteineen.</summary>
+    public sealed class Infotaulu
+    {
+        public string Nimi;
+        public List<(string Teksti, string Lahde)> Rivit = new List<(string, string)>();
+    }
+
+    /// <summary>Kertojan esittelyjakso (uusi linna 30.9.2026, `kertoja.jaksot[]`): teksti (≤ 3 virkettä) ja kamera,
+    /// johon kierros lentää; kesto valinnainen (oletus max(6, merkit / 14) s).</summary>
+    public sealed class KertojaJakso
+    {
+        public string Id, Teksti, Aani;
+        /// <summary>Tila, jonka leikkausikkuna avataan jakson ajaksi (`tila`, esim. laituri kuoren sisällä); null = ei leikkausta.</summary>
+        public string Tila;
+        public Asento Kamera;
+        public Asento? KameraPysty;
+        public double? KestoS;
+        public double Kesto => KestoS ?? Math.Max(6.0, (Teksti?.Length ?? 0) / 14.0);
+    }
+
     /// <summary>Tilan etsintävaihe (tila.etsinta[]): repliikki (hahmo kertoo), vihje (esine/kaiverrus) tai löytö (kansi + esine).</summary>
     public sealed class EtsintaVaihe
     {
         public string Etsinta, Tyyppi, Teksti, Hahmo, Kansi, Esine, Pulu;
+        /// <summary>Vihjeen lyhyt rivi infotauluun (uusi linna 30.9.2026, `rivi`); null = ei riviä.</summary>
+        public string Rivi;
         public int Vaihe;
         public V3 Kohde;
         public double Sade = 0.8;
@@ -425,6 +452,17 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Järven pinnan korkeus metreinä (`vesi`, oletus −7): fotogrammetriasta vesi on poistettu, ja natiivi
         /// piirtää järven pinnan "vesi" tälle korkeudelle.</summary>
         public double VesiY = -7;
+        /// <summary>Lähidetalji (menetelmä B, 30.9.2026; `detalji`); null = ei detaljia.</summary>
+        public KuoriDetalji Detalji;
+    }
+
+    /// <summary>Kuoren lähidetalji: UV0-maski (R muuri, G katto, B maa, A kallio) ja neljä laattaavaa sarjaa samassa
+    /// järjestyksessä (`kanavat[]`: diff, nor, toisto_m); voimakkuus (kirkkaus) ja normaali (valon kallistus).</summary>
+    public sealed class KuoriDetalji
+    {
+        public string Maski;
+        public double Voimakkuus = 0.8, Normaali = 0.7;
+        public List<(string Diff, string Nor, double ToistoM)> Kanavat = new List<(string, string, double)>();
     }
 
     public sealed class Rakennus
@@ -458,6 +496,11 @@ namespace Matkakirja.Linssit.Dioraama
         public Dictionary<string, Liike> Liikkeet = new Dictionary<string, Liike>();
         /// <summary>Pulun kiertue (era 3 kohta 5): kohdistettavien tilojen id:t järjestyksessä; puuttuva = tyhjä lista.</summary>
         public List<string> Kiertue = new List<string>();
+        /// <summary>UUSI LINNA (omistaja 30.9.2026): kertojan esittely ja kamerakierros saapumisen jälkeen (`kertoja.jaksot`);
+        /// tyhjä = ei kierrosta (vanha avaustaulu).</summary>
+        public List<KertojaJakso> Kertoja = new List<KertojaJakso>();
+        /// <summary>Linnan oma Pulun lisäkerronta yleisnäkymään (`pulu.teksti`); null = ei.</summary>
+        public string PuluTeksti;
 
         /// <summary>Tila id:llä, tai null jos ei löydy (kuten js:n loydaTila).</summary>
         public Tila Tila(string id)
@@ -515,6 +558,21 @@ namespace Matkakirja.Linssit.Dioraama
                     Kevyt = MiniJson.Teksti(kuori, "kevyt"),
                 };
             if (r.Ulkokuori != null && MiniJson.Luku(kuori, "vesi") is double vesiY) r.Ulkokuori.VesiY = vesiY;
+            var detalji = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuori, "detalji"));
+            if (r.Ulkokuori != null && detalji != null)
+            {
+                var kd = new KuoriDetalji
+                {
+                    Maski = MiniJson.Teksti(detalji, "maski"),
+                    Voimakkuus = MiniJson.Luku(detalji, "voimakkuus") ?? 0.8, Normaali = MiniJson.Luku(detalji, "normaali") ?? 0.7,
+                };
+                foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(detalji, "kanavat")))
+                {
+                    var k = MiniJson.ObjektiTaiNull(ko);
+                    if (k != null) kd.Kanavat.Add((MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                }
+                if (kd.Maski != null && kd.Kanavat.Count > 0) r.Ulkokuori.Detalji = kd;
+            }
             var kuoriTekstuurit = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuori, "tekstuurit"));
             if (r.Ulkokuori != null && kuoriTekstuurit != null)
             {
@@ -533,6 +591,20 @@ namespace Matkakirja.Linssit.Dioraama
             r.YleisPysty = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "pysty")));
             var pulu = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "pulu"));
             r.PuluLaskeutuminen = LueV3(MiniJson.Kentta(pulu, "laskeutuminen"));
+            r.PuluTeksti = MiniJson.Teksti(pulu, "teksti");
+            foreach (var jo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "kertoja")), "jaksot")))
+            {
+                var j = MiniJson.ObjektiTaiNull(jo);
+                if (j == null) continue;
+                r.Kertoja.Add(new KertojaJakso
+                {
+                    Id = MiniJson.Teksti(j, "id"), Teksti = MiniJson.Teksti(j, "teksti"), Aani = MiniJson.Teksti(j, "aani"), Tila = MiniJson.Teksti(j, "tila"),
+                    Kamera = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "kamera"))),
+                    KameraPysty = MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "kameraPysty")) is Dictionary<string, object> jkp
+                        ? LueAsento(jkp) : (Asento?)null,
+                    KestoS = MiniJson.Luku(j, "kesto_s"),
+                });
+            }
             r.Taulu = LueTaulu(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "taulu")));
             r.Valaistus = LueValaistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "valaistus")));
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(juuri, "kiertue")))
@@ -766,6 +838,18 @@ namespace Matkakirja.Linssit.Dioraama
             var pulu = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "pulu"));
             t.PuluLaskeutuminen = LueV3(MiniJson.Kentta(pulu, "laskeutuminen"));
             t.Taulupuoli = MiniJson.Teksti(pulu, "taulupuoli");
+            t.PuluTeksti = MiniJson.Teksti(pulu, "teksti");
+            var info = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "infotaulu"));
+            if (info != null)
+            {
+                t.Infotaulu = new Infotaulu { Nimi = MiniJson.Teksti(info, "nimi") };
+                foreach (var ro in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(info, "rivit")))
+                {
+                    if (ro is string rs) { t.Infotaulu.Rivit.Add((rs, null)); continue; }
+                    var ri = MiniJson.ObjektiTaiNull(ro);
+                    if (ri != null) t.Infotaulu.Rivit.Add((MiniJson.Teksti(ri, "teksti"), MiniJson.Teksti(ri, "lahde")));
+                }
+            }
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "hahmot")))
             {
                 var h = MiniJson.ObjektiTaiNull(rivi);
@@ -788,7 +872,7 @@ namespace Matkakirja.Linssit.Dioraama
                     Kohde = LueV3(MiniJson.Kentta(v, "kohde")), Sade = MiniJson.Luku(v, "sade") ?? 0.8,
                     Teksti = MiniJson.Teksti(v, "teksti") ?? MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "repliikki")), "teksti"),
                     Hahmo = MiniJson.Teksti(v, "hahmo"), Kansi = MiniJson.Teksti(v, "kansi"), Esine = MiniJson.Teksti(v, "esine"),
-                    Pulu = MiniJson.Teksti(v, "pulu"),
+                    Pulu = MiniJson.Teksti(v, "pulu"), Rivi = MiniJson.Teksti(v, "rivi"),
                 });
             }
             foreach (var eo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "esineet")))

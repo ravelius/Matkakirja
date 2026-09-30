@@ -417,10 +417,29 @@ namespace Matkakirja
         /// </summary>
         public static Func<Vector2, bool> Sieppaaja;
 
+        /// <summary>
+        /// NAPAUTUKSEN OSUMA (maakunta automaattisesti, omistaja 30.9.2026 klo 12.28): karttakohde (kaupunki, nostovalo,
+        /// karttapiste, siirtokohde, maa) tai napautuksen käyttänyt näkymä (matkakirjan kutistus, liukuvalikon sulku)
+        /// ilmoittaa käsitelleensä napautuksen. <see cref="NapautusKasitelty"/> kertoo Napautettu-kuuntelijoiden jälkeen,
+        /// osuiko napautus johonkin; ei osumaa = tyhjä kohta (Natiivi-UI:n maakuntalappu).
+        /// </summary>
+        public static void Osui() => osui = true;
+        static bool osui;
+
+        /// <summary>Napautus käsitelty (ruutu, osui). Sieppaajan nielemistä napautuksista ei kerrota.</summary>
+        public static event Action<Vector2, bool> NapautusKasitelty;
+
+        /// <summary>Viimeisimmän kosketuksen alkuruutu (Time.frameCount): UI tunnistaa, sulkiko painallus kortin.</summary>
+        public static int PainallusRuutu { get; private set; } = -1;
+
         void IlmoitaNapautus(Vector2 ruutu)
         {
             if (Sieppaaja != null && Sieppaaja(ruutu)) return;
+            osui = false;
             Napautettu?.Invoke(ruutu);
+            bool o = osui;
+            osui = false;
+            NapautusKasitelty?.Invoke(ruutu, o);
         }
 
         /// <summary>
@@ -433,10 +452,18 @@ namespace Matkakirja
         /// <summary>IKamera: kaupunkia napautettiin (KaupunkiMerkit ilmoittaa).</summary>
         public event Action<string> KaupunkiNapautettu;
 
-        public void IlmoitaKaupunki(string id) => KaupunkiNapautettu?.Invoke(id);
+        public void IlmoitaKaupunki(string id)
+        {
+            osui = true;
+            KaupunkiNapautettu?.Invoke(id);
+        }
 
         /// <summary>Synteettinen napautus näytön pikseleinä (testikomento "napauta x y").</summary>
-        public void Napauta(Vector2 ruutu) => IlmoitaNapautus(ruutu);
+        public void Napauta(Vector2 ruutu)
+        {
+            PainallusRuutu = Time.frameCount;
+            IlmoitaNapautus(ruutu);
+        }
 
         /// <summary>
         /// Kosketusten esto (dialogi, lehti, linssin oma ele): kun tosi, pallo ei lue
@@ -1068,6 +1095,7 @@ namespace Matkakirja
                 ajo = null; // sormi keskeyttää kamera-ajon
                 if (edellinenSormia == 0)
                 {
+                    PainallusRuutu = Time.frameCount;
                     kosketusAlku = keski;
                     kosketusAika = 0;
                     kosketusMatka = 0;
@@ -1187,6 +1215,41 @@ namespace Matkakirja
             }
         }
 
+        // ---- MAC-SYÖTE (UI/MacSyote.cs, iPad-sovellus Macilla; omistaja 30.9.2026) ----
+        // Ohjauslevyn kahden sormen veto panoroi kuten yhden sormen veto, nipistys ja hiiren rulla zoomaavat osoittimen
+        // kohtaan. Pikselit Unityn ruudussa (origo vasen alakulma). Samat rajat kuin sormilla (EleKatto, RajaaMaahan).
+        float macEle = -10f;
+
+        void MacKosketus()
+        {
+            ajo = null;
+            liuku = 0;
+            kosketettu = true;
+            if (Time.unscaledTime - macEle > 0.3f) PelaajanEle?.Invoke();
+            macEle = Time.unscaledTime;
+        }
+
+        /// <summary>Panorointi pikseleinä (maa seuraa sormia kuten vedossa). False, jos syöte on estetty.</summary>
+        public bool MacPanoroi(float2 pikselit)
+        {
+            if (syoteEstetty) return false;
+            MacKosketus();
+            Kierra(pikselit, 0);
+            return true;
+        }
+
+        /// <summary>Zoomaus osoittimen kohtaan: kerroin > 1 lähemmäs. Osoittimen alla oleva maa pysyy paikallaan.</summary>
+        public bool MacZoomaa(double kerroin, float2 piste)
+        {
+            if (syoteEstetty || !(kerroin > 0) || !(korkeus > 0)) return false;
+            MacKosketus();
+            double ennen = korkeus;
+            korkeus = math.clamp(korkeus / kerroin, MinKorkeus(), EleKatto());
+            var keski = new float2(Screen.width, Screen.height) * 0.5f;
+            Kierra((piste - keski) * (float)(1.0 - ennen / korkeus), 0);
+            return true;
+        }
+
         void Siirra(double2 muutos)
         {
             pituus = Kiedo(pituus + muutos.x);
@@ -1244,10 +1307,11 @@ namespace Matkakirja
         double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
 
         /// <summary>Asettaa maan rajat saapumisnäkymästä (AjaSaapumisnakymaan) tai poistaa ne (laatikoton saapuminen).</summary>
-        void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng)
+        void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng, string maa)
         {
             var katto = Saapumisnakyma.Uloszoomauskatto(t);
-            maanLaatikko = katto.HasValue ? t.Laatikko : null;
+            // Saaret (PRT Azorit ja Madeira, ESP Kanariat) panorointirajaan; katto pysyy mantereen saapumisnäkymässä.
+            maanLaatikko = katto.HasValue ? Saapumisnakyma.Lisaikkunoineen(t.Laatikko.Value, maa) : (Saapumisnakyma.Laatikko?)null;
             maanKatto = katto.HasValue ? katto.Value * CesiumWgs84Ellipsoid.GetMaximumRadius() : 0;
             maanToiveLng = toiveLng;
             webSuhde = t.Korkeus > 0 ? t.WebKorkeus / t.Korkeus : 1;
@@ -1367,7 +1431,7 @@ namespace Matkakirja
             bool maaRajaus = true)
         {
             var t = SaapumisNakyma(maa, lat, lon, maaRajaus);
-            AsetaMaanRajat(t, lon);
+            AsetaMaanRajat(t, lon, maa);
             PaataSaapuminen(true);
             Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, () =>
             {

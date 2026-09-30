@@ -173,6 +173,7 @@ namespace Matkakirja
             }
             if (osuma == null) return;
             Debug.Log("MATKAKIRJA karttapiste: napautus " + osuma);
+            PalloKierto.Osui(); // ei tyhjä kohta: maakuntalappu ei aukea (omistaja 30.9.2026)
             Napautettu?.Invoke(osuma);
         }
     }

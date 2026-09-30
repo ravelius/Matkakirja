@@ -173,6 +173,7 @@ namespace Matkakirja.Natiivi
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
+            linssi.Kuvasuhde = y.Kuvasuhde; // laajat kuvat sovitetaan todelliseen kuvasuhteeseen (iPhone pysty)
             if (kuoriOdotusAlku >= 0f)
             {
                 float odotettu = Time.realtimeSinceStartup - kuoriOdotusAlku;
@@ -197,7 +198,8 @@ namespace Matkakirja.Natiivi
                 double osuus = linssi.SaapuminenOsuus(t);
                 nayttamo.Liekit?.Syttyminen(osuus, DioraamaNayttamo.UnityPiste((pysty ? rakennus.YleisPysty : rakennus.YleisVaaka).Kohde));
                 if (osuus >= 1 && !SaapuminenNahty) SaapuminenNahty = true;
-                nayttamo.Syke?.Paivita(rakennus, nakyma.KohdeTila == null && osuus >= 1, nakyma.KohdeTila != null, t, y.VahennettyLiike);
+                // Uusi linna: kertojan kierroksen aikana ei elävien kohteiden sykkeitä (1.1 (73) -kuva: renkaat jaksojen päällä).
+                nayttamo.Syke?.Paivita(rakennus, nakyma.KohdeTila == null && osuus >= 1 && nakyma.KertojaJakso < 0 && !linssi.KertojaKaynnissa(t), nakyma.KohdeTila != null, t, y.VahennettyLiike);
                 // Etsintä: vaihe näkyy vasta perillä tilassa (ei kesken lennon).
                 bool perilla = nakyma.KohdeTila != null && linssi.LeikkausHetkella(t).osuus >= 1;
                 nayttamo.Etsinta?.Paivita(rakennus, perilla ? nakyma.KohdeTila : null, t, y.VahennettyLiike);
@@ -661,6 +663,15 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"poikki: tunnelma {(DioraamaTunnelma.Hamara(rakennus) ? "hämärä" : "päivä")} ({(DioraamaTunnelma.Pakotettu.HasValue ? "pakotettu" : "rakennuksen oletus " + (rakennus?.Tunnelma ?? "paiva"))})");
                 return;
             }
+            // "poikki detalji [0|1|auto]": kuoren lähidetalji päälle/pois vertailua varten (menetelmä B, 30.9.2026).
+            if (mita == "detalji")
+            {
+                DioraamaUlkokuori.DetaljiPakotettu = arvo == "0" ? false : arvo == "1" ? true : (bool?)null;
+                nayttamo?.Ulkokuori?.AsetaDetaljiParam();
+                o.Kirjaa($"poikki: detalji {(DioraamaUlkokuori.DetaljiPakotettu.HasValue ? (DioraamaUlkokuori.DetaljiPakotettu.Value ? "päällä" : "pois") : "auto")}, " +
+                         $"data {(rakennus?.Ulkokuori?.Detalji != null ? "on" : "ei")}, {DioraamaLaatu.Kuvaus}");
+                return;
+            }
             // "poikki kuori [auto|huippu|normaali|kevyt]": ulkokuoren laatutaso (kehittäjän valitsin, muistetaan).
             if (mita == "kuori")
             {
@@ -795,7 +806,8 @@ namespace Matkakirja.Natiivi
         /// SystemInfo.systemMemorySize (Mt) alle 6000. Kumpi tahansa riittää: pieninäyttöinen laite voi olla
         /// muistiltaan iso (silti täysi näyttö turhaa), ja iso näyttö voi olla muistiltaan pieni (silti
         /// vanhempi/halvempi laite). "poikki mittaus" (Mittausraportti) näyttää kumman tämän laite valitsi.</summary>
-        static bool PieniLaite() => (long)Screen.width * Screen.height < 4_000_000L || SystemInfo.systemMemorySize < 6000;
+        // Omistaja 30.9.2026: täyden laadun laitteilla (DioraamaLaatu.Taysi, A17 Proa uudemmat) aina täydet tekstuurit ja 4k-atlakset.
+        static bool PieniLaite() => !DioraamaLaatu.Taysi && ((long)Screen.width * Screen.height < 4_000_000L || SystemInfo.systemMemorySize < 6000);
 
         string Tilaraportti()
         {
@@ -827,7 +839,7 @@ namespace Matkakirja.Natiivi
             // Era 2b (tekstuurimuisti): kertoo kumman pintakoon PieniLaite valitsi ja MIKSI (näyttöpikselit,
             // muisti) -- omistajan pyyntö "kertoo kumpi ja muistin".
             long naytonPikselit = (long)Screen.width * Screen.height;
-            string pintakoko = PieniLaite() ? "puolikas" : "täysi";
+            string pintakoko = (PieniLaite() ? "puolikas" : "täysi") + ", " + DioraamaLaatu.Kuvaus;
             return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {(rakennus3D?.Kolmiot ?? 0) + hahmo3dKolmiot} (3d-hahmot {hahmo3dKolmiot}), " +
                    $"kärkiä {rakennus3D?.Karjet ?? 0}, rendereitä {(rakennus3D?.Renderereita ?? 0) + (hahmot3D?.Maara ?? 0)}, " +
                    $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, " +

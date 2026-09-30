@@ -138,6 +138,8 @@ namespace Matkakirja.Natiivi
             // Elävä linna: saapumiskaaren aikana napautus ohittaa kaaren (loppuun 1 s:ssa), ei kohdista.
             var linssi = DioraamaSovitin.Linssi;
             if (linssi != null && linssi.SaapuminenKaynnissa(t)) { linssi.Napauta(t); return; }
+            // Uusi linna (30.9.): kertojan kierroksella napautus siirtää seuraavaan jaksoon, ei kohdista huonetta.
+            if (linssi != null && linssi.KertojaKaynnissa(t)) { linssi.Napauta(t); return; }
             // Etsintä (voudin sinetti): aktiivisen vaiheen kimallus ensin.
             if (nayttamo?.Etsinta != null && nayttamo.Etsinta.Napauta(rakennus, ruutu, kamera)) return;
             // Elävä kohde (tila.elava): lähin kohde ruudulla, kun napautus osuu sen säteen (metreinä, ruudulle

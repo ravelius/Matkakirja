@@ -206,9 +206,14 @@ namespace Matkakirja.Natiivi
                     break;
                 }
             }
+            AktiivinenRivi = aktiivinen?.Rivi;
             PaivitaKimallus(t, vahennettyLiike);
             AnimoiLoyto();
         }
+
+        /// <summary>Uusi linna (30.9.2026): kohdistetun tilan aktiivisen etsintävaiheen lyhyt rivi (`etsinta[].rivi`)
+        /// infotauluun (DioraamaTaulu); null = ei aktiivista vaihetta tai riviä.</summary>
+        public static string AktiivinenRivi { get; private set; }
 
         void PaivitaKimallus(double t, bool vahennettyLiike)
         {
@@ -329,7 +334,7 @@ namespace Matkakirja.Natiivi
             if (kimallusM != null) UnityEngine.Object.Destroy(kimallusM);
             if (kimallusMesh != null) UnityEngine.Object.Destroy(kimallusMesh);
             kimallus = null; kimallusM = null; kimallusMesh = null;
-            avautuva = null; nouseva = null; loytoAlku = -1f; aktiivinen = null;
+            avautuva = null; nouseva = null; loytoAlku = -1f; aktiivinen = null; AktiivinenRivi = null;
         }
     }
 }

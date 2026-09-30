@@ -107,6 +107,8 @@ namespace Matkakirja.Natiivi
                 Kappale(Teksti(peli, "englanniksi"), "mk-tietoja__alaotsikko");
                 Kappale(Teksti(peli, "copyright"), "mk-tietoja__copyright");
                 foreach (var k in new[] { "tekija", "apu", "ehdot", "johdanto" }) Kappale(Teksti(peli, k), null);
+                // Nimetön kävijälaskuri (Kaynti.cs): web PELI.yksityisyys, vanhemmassa paketissa koodin vara.
+                Kappale(Teksti(peli, "yksityisyys") ?? Kaynti.Tekijatietorivi, null);
                 var h = Rakenne.Teksti("LÄHTEET JA AINEISTOT", "mk-tietoja__otsikko", sisus);
                 Kirjasimet.Aseta(h, Kirjasin.KoneLihava);
                 Kappale(Teksti(peli, "kolmannet"), null);

@@ -167,6 +167,25 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(Lataa());
         }
 
+        /// <summary>Data valmiiksi taustalla (automaattinen maakunta, Karttaselite): ei tee mitään, jos jo haettu tai haussa.</summary>
+        public void Esilataa()
+        {
+            if (!rakennettu && !haussa) Avautui();
+        }
+
+        string odottava;
+
+        /// <summary>
+        /// Valinta heti tai heti datan latauduttua (automaattinen maakunta: ensimmäinen napautus voi ehtiä ennen latausta).
+        /// Odottava valinta tehdään vain, jos maakuntakartta on yhä auki (Karttatila).
+        /// </summary>
+        public void ValitseKunValmis(string avain)
+        {
+            if (rakennettu) { odottava = null; Valitse(avain); return; }
+            odottava = avain;
+            Avautui();
+        }
+
         public void SuljeKortti() => kortti.Sulje();
 
         /// <summary>
@@ -267,6 +286,9 @@ namespace Matkakirja.Natiivi
 
         bool Kelpaa(string avain) => avain != null && rivit.ContainsKey(avain);
 
+        /// <summary>Avain kelpaa valinnaksi, tai dataa ei ole vielä ladattu (automaattinen maakunta päättää latauksen jälkeen).</summary>
+        public bool Tunnettu(string avain) => avain != null && (!rakennettu || Kelpaa(avain));
+
         Luonnehdinta HaeLuonnehdinta(string avain)
         {
             var (iso, tunnus) = Jaa(avain);
@@ -351,6 +373,10 @@ namespace Matkakirja.Natiivi
             peukalo.BringToFront();
             PaivitaLuonnehdinta();
             if (ValittuAvain != null && !OnPois(ValittuAvain)) Valittu?.Invoke(ValittuAvain);
+            // Automaattinen maakunta: latauksen aikana napautettu maakunta valitaan nyt, jos lappu on yhä auki.
+            var odotettu = odottava;
+            odottava = null;
+            if (odotettu != null && Karttatila) Valitse(odotettu);
         }
 
         /// <summary>
@@ -532,6 +558,7 @@ namespace Matkakirja.Natiivi
             bool muuttui = Pois;
             bool oliValinta = ValittuAvain != null;
             ValittuAvain = null;
+            odottava = null;
             Pois = false;
             kortti.Sulje();
             MerkitsePois();

@@ -33,11 +33,12 @@ namespace Matkakirja.Natiivi
                 if (x == 1 && y == 1) break;
             }
             if (t.Length - 16 != tavuja) { syy = $"koko {t.Length - 16} ≠ {tavuja}"; return null; }
-            var raaka = new byte[tavuja];
-            Buffer.BlockCopy(t, 16, raaka, 0, (int)tavuja);
             var kuva = new Texture2D(w, h, muoto, tasoja, false)
             { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = kaari, anisoLevel = 4 };
-            kuva.LoadRawTextureData(raaka);
+            // Suoraan ladatusta puskurista otsakkeen jälkeen (8k-atlas 89 Mt: erillinen kopio tuplasi huippumuistin).
+            var kahva = System.Runtime.InteropServices.GCHandle.Alloc(t, System.Runtime.InteropServices.GCHandleType.Pinned);
+            try { kuva.LoadRawTextureData(kahva.AddrOfPinnedObject() + 16, (int)tavuja); }
+            finally { kahva.Free(); }
             kuva.Apply(false, true);
             return kuva;
         }

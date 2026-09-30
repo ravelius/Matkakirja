@@ -313,6 +313,8 @@ namespace Matkakirja.Natiivi
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);
             OfflineTila.Kortti = Matkakirja;
+            Kysymys.Avattu += () => Matkakirja.Kysymys(true);
+            Kysymys.Piilotettu += () => Matkakirja.Kysymys(false);
             Pulu = Natiivi.Pulu.Hae();
             Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
             Chat = new PuluChat(kerros, Pulu);
@@ -845,6 +847,8 @@ namespace Matkakirja.Natiivi
             Aanentasot.Sulje();
             Matkalaukku.Sulje();
             Huipennus.Sulje();
+            // Apurahan kortti ja sen kokoruutu (Laitetestaaja 9a9cc8080: ui sulje jätti kortin auki).
+            Aloitus.Apuraha.Sulje();
             // Aloitus (kerros 45) jäi muuten kaiken päälle: ui sulje ja pelin tilanvaihdot sulkevat sen.
             Aloitus.Piilota();
             Nostokortti.Sulje();

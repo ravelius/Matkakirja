@@ -327,6 +327,7 @@ namespace Matkakirja.Natiivi
         {
             if (!liukuAuki || noppaLiussa) return;
             Debug.Log("MATKAKIRJA ui liiku: liuku suljettu ulkopuolelta");
+            PalloKierto.Osui(); // napautus sulki liu'un: ei maakuntalappua samasta napautuksesta (omistaja 30.9.2026)
             SuljeLiuku();
         }
 
