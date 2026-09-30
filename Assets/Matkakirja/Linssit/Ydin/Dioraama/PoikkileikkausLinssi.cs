@@ -207,7 +207,7 @@ namespace Matkakirja.Linssit.Dioraama
             double fx = dx / pit, fz = dz / pit, lahin = double.MaxValue, kaukaisin = double.MinValue;
             foreach (var (x, z) in new[] { (pohjaMinX, pohjaMinZ), (pohjaMinX, pohjaMaxZ), (pohjaMaxX, pohjaMinZ), (pohjaMaxX, pohjaMaxZ) })
             { double q = (x - koh.X) * fx + (z - koh.Z) * fz; lahin = Math.Min(lahin, q); kaukaisin = Math.Max(kaukaisin, q); }
-            double keski = (l + r) / 2, puoli = (r - l) / 2 * 1.08;
+            double keski = (l + r) / 2, puoli = (r - l) / 2 * 1.15; // 1.1 (79) pysty: oikea reuna kosketti ruudun reunaa
             double kulma = a.Korkeus * Math.PI / 180.0;
             double puoliPysty = ((kaukaisin - lahin) * Math.Sin(kulma) + 20.0 * Math.Cos(kulma)) / 2 * 1.08;
             double v = a.Fov * Math.PI / 360.0, h = Math.Atan(Math.Tan(v) * Kuvasuhde);
@@ -223,7 +223,64 @@ namespace Matkakirja.Linssit.Dioraama
         {
             if (kohde == null) return SovitaKuvasuhteeseen(pysty ? Rakennus.YleisPysty : Rakennus.YleisVaaka);
             var tila = Rakennus.Tila(kohde);
-            return pysty && tila.KameraPysty.HasValue ? tila.KameraPysty.Value : tila.Kamera;
+            if (pysty && tila.KameraPysty.HasValue) return tila.KameraPysty.Value;
+            return Kuvasuhde > 1.05 ? SovitaTilaLeveyteen(tila.Kamera, tila) : tila.Kamera;
+        }
+
+        /// <summary>Vaakakuvan tila täyttää näkymän leveyden (1.1 (80): keittiön leikkausikkuna ≈73 % leveydestä,
+        /// sivuilla tummaa ja naapurirakennuksia; Päätoimittaja: tavoite 100 %). Tilan rajalaatikon kahdeksan kulmaa
+        /// projisoidaan kameraan; kohde keskitetään sivusuunnassa ja etäisyys haetaan puolitushaulla niin, että
+        /// laatikko täyttää leveyden (1,0). Vain lähemmäs, enintään 0,5 × datan etäisyys; suunta, korkeus ja fov ennallaan.</summary>
+        Asento SovitaTilaLeveyteen(Asento a, Tila tila)
+        {
+            if (a.Fov <= 0 || a.Etaisyys <= 0) return a;
+            var mn = tila.RajaMin; var mx = tila.RajaMax;
+            if (mn.X == mx.X && mn.Z == mx.Z) return a;
+            double k = a.Korkeus * Math.PI / 180, at = a.Atsimuutti * Math.PI / 180, ck = Math.Cos(k);
+            double sx = ck * Math.Sin(at), sy = Math.Sin(k), sz = -ck * Math.Cos(at); // kohteesta kameraan (Kameraliike.AsentoSijainti)
+            double rx = Math.Cos(at), rz = Math.Sin(at);                            // sivusuunta vaakatasossa
+            double ux = -Math.Sin(k) * Math.Sin(at), uy = ck, uz = Math.Sin(k) * Math.Cos(at); // kameran ylös
+            double tanV = Math.Tan(a.Fov * Math.PI / 360.0), tanH = tanV * Kuvasuhde;
+            var kulmat = new V3[8];
+            for (int i = 0; i < 8; i++)
+                kulmat[i] = new V3((i & 1) == 0 ? mn.X : mx.X, (i & 2) == 0 ? mn.Y : mx.Y, (i & 4) == 0 ? mn.Z : mx.Z);
+            var kohde = a.Kohde;
+            // (vasen, oikea) kulmien sivusuhde x/z ja suurin |y/z| etäisyydellä d; null jos kulma on liian lähellä.
+            (double l, double r, double y)? Suhteet(double d)
+            {
+                double l = double.MaxValue, r = double.MinValue, ym = 0;
+                foreach (var c in kulmat)
+                {
+                    double wx = c.X - kohde.X, wy = c.Y - kohde.Y, wz = c.Z - kohde.Z;
+                    double z = d - (wx * sx + wy * sy + wz * sz);
+                    if (z < 1.0) return null;
+                    double x = (wx * rx + wz * rz) / z;
+                    l = Math.Min(l, x); r = Math.Max(r, x);
+                    ym = Math.Max(ym, Math.Abs(wx * ux + wy * uy + wz * uz) / z);
+                }
+                return (l, r, ym);
+            }
+            // Vain lähemmäs: tila, joka jo datan etäisyydellä täyttää leveyden tai korkeuden, pysyy datan asennossa.
+            // Pystyssä laatikko saa ylittää ruudun 5 % (tornit, kierreportaat eivät leikkaudu).
+            bool Mahtuu((double l, double r, double y)? s) => s != null && (s.Value.r - s.Value.l) / 2 <= tanH && s.Value.y <= tanV * 1.05;
+            var alku = Suhteet(a.Etaisyys);
+            if (!Mahtuu(alku)) return a;
+            double ala = 0.5 * a.Etaisyys, yla = a.Etaisyys, etaisyys = a.Etaisyys;
+            for (int kierros = 0; kierros < 3; kierros++)
+            {
+                double lo = ala, hi = yla;
+                for (int i = 0; i < 40; i++)
+                {
+                    double m = (lo + hi) / 2;
+                    if (Mahtuu(Suhteet(m))) hi = m; else lo = m;
+                }
+                etaisyys = hi;
+                var sv = Suhteet(etaisyys);
+                if (sv == null) return a;
+                double keski = (sv.Value.l + sv.Value.r) / 2 * etaisyys; // sivusiirto kohteen syvyydellä
+                kohde = new V3(kohde.X + rx * keski, kohde.Y, kohde.Z + rz * keski);
+            }
+            return new Asento(kohde, a.Atsimuutti, a.Korkeus, etaisyys, a.Fov, a.Aukko, a.Kierto);
         }
 
         /// <summary>Avaa dioraaman hetkellä t: kamera yleisnäkymässä, ei tapahtumia eikä napautuksia vielä.</summary>
