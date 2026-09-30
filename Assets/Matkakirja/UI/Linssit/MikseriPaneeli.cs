@@ -58,7 +58,8 @@ namespace Matkakirja.Natiivi
 
         public MikseriPaneeli(UiKerros kerros)
         {
-            juuri = Rakenne.El("mk-mikseri", kerros.Juuri(Kerros), PickingMode.Ignore);
+            // Turva-alueen sisään (44f3a13f-vaakakuva: nappi jäi Dynamic Islandin alle vasempaan reunaan).
+            juuri = Rakenne.El("mk-mikseri", kerros.Turva(Kerros), PickingMode.Ignore);
             juuri.style.position = Position.Absolute;
             juuri.style.left = 0; juuri.style.right = 0; juuri.style.top = 0; juuri.style.bottom = 0;
             juuri.style.display = DisplayStyle.None;
@@ -94,15 +95,15 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(otsikko, Kirjasin.KoneBold);
             otsikko.style.color = Kulta; otsikko.style.fontSize = 13; otsikko.style.flexGrow = 1;
             otsikko.pickingMode = PickingMode.Ignore;
-            var kiinni = Rakenne.Nappi("✕", "mk-mikseri__kiinni", () => Avaa(false), yla);
+            var kiinni = Rakenne.Nappi("×", "mk-mikseri__kiinni", () => Avaa(false), yla); // ✕ puuttuu kirjasimesta (laatikko)
             kiinni.style.backgroundColor = new Color(0, 0, 0, 0);
             var kt = kiinni.Q<Label>();
-            if (kt != null) { kt.style.color = Paperi; kt.style.fontSize = 16; }
+            if (kt != null) { kt.style.color = Paperi; kt.style.fontSize = 22; }
             yla.RegisterCallback<PointerDownEvent>(e => { vedetaan = true; vetoAlku = e.position; paikkaAlku = paikka; yla.CapturePointer(e.pointerId); });
             yla.RegisterCallback<PointerMoveEvent>(e => { if (!vedetaan) return; paikka = paikkaAlku + (Vector2)e.position - vetoAlku; Sijoita(); });
             yla.RegisterCallback<PointerUpEvent>(e => { vedetaan = false; yla.ReleasePointer(e.pointerId); });
 
-            var vieritys = new ScrollView(ScrollViewMode.Vertical);
+            var vieritys = new ScrollView(ScrollViewMode.Vertical) { verticalScrollerVisibility = ScrollerVisibility.Hidden };
             vieritys.style.flexShrink = 1;
             paneeli.Add(vieritys);
             rivit = vieritys.contentContainer;
