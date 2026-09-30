@@ -391,9 +391,10 @@ namespace Matkakirja.Natiivi
             kohde.RegisterCallback<PointerDownEvent>(e => { osoitin = e.pointerId; alku = e.position; kulutettu = false; }, TrickleDown.TrickleDown);
             kohde.RegisterCallback<PointerUpEvent>(Ylos, TrickleDown.TrickleDown);
             kohde.RegisterCallback<ClickEvent>(e => { if (kulutettu) { kulutettu = false; e.StopPropagation(); } }, TrickleDown.TrickleDown);
-            // Näppäimistö (omistaja 30.9.): ← → selaa kuten pyyhkäisy, kun sarja on näkyvissä (koko ruudun suurennos voittaa).
+            // Näppäimistö (omistaja 30.9.): ← → selaa kuten pyyhkäisy, kun sarja on näkyvissä; prioriteetti 40 = lehden sivutus (50) ja
+            // koko ruudun suurennos (100) voittavat (2fbbe518: lehdessä ← → selasi herokuvaa eikä sivua).
             object avain = null;
-            void Liita() { if (avain == null) avain = Nappaimisto.Rekisteroi("kuvasarja", 60, Nakyvissa, d => { if (maara() > 1) askel(d); }); }
+            void Liita() { if (avain == null) avain = Nappaimisto.Rekisteroi("kuvasarja", 40, Nakyvissa, d => { if (maara() > 1) askel(d); }); }
             kohde.RegisterCallback<AttachToPanelEvent>(_ => Liita());
             kohde.RegisterCallback<DetachFromPanelEvent>(_ => { Nappaimisto.Poista(avain); avain = null; });
             if (kohde.panel != null) Liita();
