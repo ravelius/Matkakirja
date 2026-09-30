@@ -701,7 +701,7 @@ namespace Matkakirja.Natiivi
                     if (string.IsNullOrEmpty(e.linkID)) return;
                     // Löydös 136: nosto jää taustalle, chat aukeaa sen päälle (UiNakymat.ChatinKerros).
                     lukija.Pysayta();
-                    UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})");
+                    UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})", aihe: PuluChat.NostonAihe(n));
                 });
             }
             var kappaleet = Kappaleet(n.Teksti).Select(k => Korosta(k, jaljella)).ToList();
@@ -805,7 +805,8 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n.Kysymykset.Count; i++)
             {
                 string kk = n.Kysymykset[i];
-                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk); };
+                // Kortin aihe kysymyksen mukana (omistajan löydös 30.9.2026: pulu ei tiennyt, mistä akveduktista on kyse).
+                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk, aihe: PuluChat.NostonAihe(n)); };
                 var b = Rakenne.Nappi(kk, "mk-nosto__kysymys", kysy, isa);
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
                 napit["kysy" + i] = kysy;
