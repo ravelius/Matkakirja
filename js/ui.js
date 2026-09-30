@@ -18733,6 +18733,7 @@ export class UI {
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.apu));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.ehdot));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.johdanto));
+      if (PELI.yksityisyys) sisus.appendChild(html('p', 'lahteet-teksti', PELI.yksityisyys));
 
       sisus.appendChild(html('h3', 'lahteet-otsikko', 'Lähteet ja aineistot'));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.kolmannet));
