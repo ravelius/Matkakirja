@@ -132,8 +132,37 @@ if ALBEDO:
             ruutu = sum(q[dy:dy + n[1], dx:dx + n[0]] for dy in range(3) for dx in range(3)) / 9
             kc = np.clip(((kp - lo) / R).astype(int), 0, n - 1)
             L[ky[ks], kx[ks], :3] = ruutu[kc[:, 1], kc[:, 0]]
+        # Pystysuorat siivotut tekselit (v17: muurin juuren uudet pinnat): valo samansuuntaisesta muurista aukon
+        # yläpuolelta (sektori 30°, syvyys 1 m:n kerroksina), muuten raon varjo piirsi tummia piikkejä.
+        pysty = ~ylos & (np.hypot(nor[..., 0], nor[..., 1]) > 0.2)  # myös vinot (ramppi muurin juurella)
+        vk = m & pysty & peitto; vl = ~m & pysty & peitto
+        sek = lambda n: np.round(np.degrees(np.arctan2(n[..., 0], n[..., 1])) / 30).astype(int) % 12
+        vy, vx = np.nonzero(vk); wy, wx = np.nonzero(vl)
+        vs = sek(nor[vy, vx]); ws = sek(nor[wy, wx]); nk = 0
+        for s_ in np.unique(vs):
+            c = np.radians(s_ * 30); t_ = np.array([np.cos(c), -np.sin(c)]); n_ = np.array([np.sin(c), np.cos(c)])
+            ks = vs == s_; ls = ws == s_
+            kp = np.stack([pos[vy[ks], vx[ks], :2] @ t_, pos[vy[ks], vx[ks], 2]], -1); ksyv = pos[vy[ks], vx[ks], :2] @ n_
+            lp = np.stack([pos[wy[ls], wx[ls], :2] @ t_, pos[wy[ls], wx[ls], 2]], -1); lsyv = pos[wy[ls], wx[ls], :2] @ n_
+            for d in np.unique(np.floor(ksyv)):
+                kk = np.flatnonzero(np.floor(ksyv) == d); ll = np.flatnonzero(np.abs(lsyv - (d + 0.5)) < 1.5)
+                if len(ll) < 20: continue
+                # Sarakkeittain (0,5 m muurin suunnassa): valo muurista heti aukon yläpuolelta (0,2–2,5 m), mediaani;
+                # sarakkeiden välillä lineaarisesti. Aukon vieressä oleva muuri on raon varjossa, joten sitä ei käytetä.
+                sar = np.floor(kp[kk, 0] / 0.5).astype(int); lsar = np.floor(lp[ll, 0] / 0.5).astype(int)
+                keski = []; arvot = []
+                for c_ in np.unique(sar):
+                    zmax = kp[kk[sar == c_], 1].max()
+                    ok = ll[(lsar == c_) & (lp[ll, 1] > zmax + 0.2) & (lp[ll, 1] < zmax + 2.5)]
+                    if len(ok) >= 5:
+                        keski.append((c_ + 0.5) * 0.5); arvot.append(np.median(L[wy[ls][ok], wx[ls][ok], :3], 0))
+                if not keski: continue
+                keski = np.array(keski); arvot = np.array(arvot)
+                for j in range(3):
+                    L[vy[ks][kk], vx[ks][kk], j] = np.interp(kp[kk, 0], keski, arvot[:, j])
+                nk += len(kk)
         kuva.pixels.foreach_set(L.ravel()); kuva.update()
-        print('HAMARA: tasoitettu', int(kohde.sum()), 'tekseliä')
+        print('HAMARA: tasoitettu', int(kohde.sum()), 'vaakatekseliä ja', nk, 'pystytekseliä')
     ims = sc.render.image_settings; ims.file_format = 'OPEN_EXR'; ims.color_depth = '16'; ims.exr_codec = 'DWAA'
     kuva.save_render(os.path.join(ULOS, f'ulkokuori-valokartta-{KOKO // 1024}k.exr'), scene=sc)  # lineaarinen, puolitarkkuus
     alb = bpy.data.images.load(ALBEDO); A = alb.size[0]
