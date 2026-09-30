@@ -21,6 +21,8 @@
  *
  * Lähde: Natural Earth 10m (Kelso & Patterson) — public domain.
  */
+// Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
+import { poistaKriminRaja } from './krim-ukrainalle.mjs';
 import { writeFileSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 
@@ -71,6 +73,10 @@ for (const f of geo.features ?? []) {
   else if (g.type === 'MultiLineString') for (const l of g.coordinates) lisaa(l);
 }
 
+// Perekopin ja Arabatin kannaksen de facto -viiva ei ole valtioiden raja.
+const krim = poistaKriminRaja(viivat);
+viivat.length = 0; viivat.push(...krim.viivat);
+if (krim.poistettu) console.log(`Krimin kannaksen viivoja poistettu: ${krim.poistettu}`);
 const ulos = {
   setti: SETTI,
   kuvaus: 'Nykyiset valtioiden väliset maarajat',

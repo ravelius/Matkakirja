@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2432, teksti: 'RUS erä 4: 7 Euroopan aluetta lisää' },
+  { v: 2432, teksti: 'Krim ja Sevastopol Ukrainalle kaikissa kartta-a… (#3656)' },
   { v: 2431, teksti: 'RUS erä 3: pitkä + pulu, 11 aluetta (#3662)' },
   { v: 2430, teksti: 'RUS erä 2: pitkä + pulu, 15 aluetta (#3661)' },
   { v: 2429, teksti: 'RUS erä 1: pitkä + pulu, 15 aluetta (#3659)' },
