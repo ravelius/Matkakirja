@@ -17662,8 +17662,8 @@ export class UI {
    * Apurahan arvioijan esittelykortti (omistaja 30.9.2026): sama
    * pergamenttilappu kuin periaatteilla, matkakirjakortin otsikko ja
    * kursiivinen alaotsikko, kappaleet ja viiden kuvan rivi. Kuva avautuu
-   * kokoruutuun openLightboxilla (isäntä on tämä dialogi). Video tulee
-   * kortin alkuun, kun esittely.json saa video-kentän.
+   * kokoruutuun openLightboxilla (isäntä on tämä dialogi). Ei videota
+   * (omistaja 30.9.2026 klo 15.06); kuvarivin sarakkeet = kuvien määrä.
    */
   naytaApuraha(esittely) {
     sfx.play('paper');
@@ -17671,16 +17671,6 @@ export class UI {
     const lappu = html('dialog', 'dialog periaate-lappu apuraha-lappu');
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
-
-    if (esittely.video) {
-      const video = html('video', 'apuraha-video');
-      video.src = esittely.video.url;
-      if (esittely.video.kuva) video.poster = esittely.video.kuva;
-      video.controls = true;
-      video.playsInline = true;
-      video.preload = 'metadata';
-      kortti.appendChild(video);
-    }
 
     const otsikko = html('h2', 'apuraha-otsikko', esittely.otsikko);
     kortti.appendChild(otsikko);
@@ -17725,6 +17715,7 @@ export class UI {
 
     if (esittely.kuvat.length) {
       const rivi = html('div', 'apuraha-kuvat');
+      rivi.style.setProperty('--apuraha-kuvia', String(esittely.kuvat.length));
       const lista = esittely.kuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
       esittely.kuvat.forEach((k, i) => {
         const b = html('button', 'apuraha-kuva');

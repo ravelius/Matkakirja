@@ -1,10 +1,9 @@
 {
-  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. video: null = ei videota; myöhemmin {\"url\": \"…mp4\", \"kuva\": \"…jpg\"} kortin alkuun. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän.",
+  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän. Kuvarivi: 4 kuvaa (omistaja 30.9. klo 15.06: 1 karttanäkymä + 3 linssiä), sarakkeet mukautuvat määrään. Ei videota.",
   "versio": 4,
   "nappi": "Apurahahakemus – katso tämä ensin",
   "otsikko": "Apurahan arvioijalle",
   "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 30.9.2026",
-  "video": null,
   "kappaleet": [
     {
       "teksti": "Matkakirja ja unohdettu aarre on suomenkielinen seikkailupeli 13 vuotta täyttäneille ja aikuisille. Nuori Fogg seuraa isoisänsä vuoden 1873 matkapäiväkirjaa halki nykyajan Euroopan ja etsii kadonneen luettelon unohdettuja aarteita. Maailmasta oppii matkustamalla: jokaisella kaupungilla on oma matkakirjansa, kartan nostot johdattavat nähtävyyksiin ja tarinoihin, ja isoisän ääni lukee matkakirjan ääneen."
