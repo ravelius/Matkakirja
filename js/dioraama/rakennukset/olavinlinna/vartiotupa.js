@@ -25,7 +25,7 @@ const VARTIOTUPA_HAHMOT = [
       { id: 'portinvartija-1', teksti: 'Portti aukeaa aamulla ja sulkeutuu illalla, eikä väliin päästetä ketään ilman asiaa.' },
       { id: 'portinvartija-2', teksti: 'Viisi vuotta sitten venäläiset tulivat tänne asti. Portti pysyi kiinni ja linna piti.' },
     ],
-    reaktio: { id: 'pulu-portinvartija-r1', teksti: 'Portti, jonka avaa vain asiallinen vieras? Meillä sitä sanotaan ovipuhelimeksi.' },
+    reaktio: { id: 'pulu-portinvartija-r1', teksti: 'Portti, joka aukeaa vain asialliselle vieraalle? Meillä sitä sanotaan ovipuhelimeksi.' },
   },
   {
     id: 'vartija', henkilo: 'vartija-1500', paikka: [-29.3, 0, 8.7], suunta: 90, peilattu: false,

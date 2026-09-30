@@ -264,11 +264,11 @@ export const TILA = {
   // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
   kuunnelma: [
     { id: 'keskushalli-k1', puhuja: 'apulainen', nimi: 'Tarjoilija', aani: null,
-      teksti: 'Tietä, tietä! Kalakeittoa väentupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota.' },
-    { id: 'keskushalli-k2', puhuja: 'vartija', nimi: 'Vartija', aani: null,
+      teksti: 'Tietä, tietä! Kalakeittoa Linnantupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota.' },
+    { id: 'keskushalli-k2', puhuja: 'vartija2', nimi: 'Vartija 2', aani: null,
       teksti: 'Kolme kuutosta! Maksa, kun vielä kehtaat.' },
-    { id: 'keskushalli-k3', puhuja: 'vartija2', nimi: 'Vartija 2', aani: null,
-      teksti: 'Puhu hiljempaa. Vouti ravaa tänään portaissa kuin kana ilman päätä – jotain on hukassa.' },
+    { id: 'keskushalli-k3', puhuja: 'vartija', nimi: 'Vartija', aani: null,
+      teksti: 'Puhu hiljempaa. Vouti ravaa tänään portaissa kuin päätön kana – jotain on hukassa.' },
     { id: 'keskushalli-k4', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: null,
       teksti: 'Ja me lämmitellään täällä alhaalla. Hormeja myöten paras lämpö nousee voudin kamariin.' },
     { id: 'keskushalli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
@@ -287,7 +287,7 @@ export const TILA = {
      atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
   pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea',
     // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni vasta omistajan luvalla.
-    teksti: 'Alakerrassa oli väentupa, sotaväen ruokasali, ja toisessa kerroksessa asui vouti. Linnaa lämmitettiin avotakoilla, ja lämpö johdettiin hormien kautta. 1500-luvun tilikirjojen mukaan linnassa asui 150–200 henkeä – ei ihme, että täällä on hälinää.', aani: null },
+    teksti: 'Alakerrassa oli Linnantupa, sotaväen ruokasali, ja toisessa kerroksessa asui vouti. Linnaa lämmitettiin avotakoilla, ja lämpö johdettiin hormien kautta. 1500-luvun tilikirjojen mukaan linnassa asui 150–200 henkeä – ei ihme, että täällä on hälinää.', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): pohjoissiiven pihajulkisivu (ikkunoista valo ja sorina).
   elava: { kohde: [-14.75, 3.5, -9.2], sade: 6 },

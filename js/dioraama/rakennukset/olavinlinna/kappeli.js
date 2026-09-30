@@ -133,7 +133,7 @@ export const TILA = {
   // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
   kuunnelma: [
     { id: 'kappeli-k1', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
-      teksti: 'Dominus vobiscum… Voudin herra, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien.' },
+      teksti: 'Dominus vobiscum… Herra vouti, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien.' },
     { id: 'kappeli-k2', puhuja: 'vouti', nimi: 'Vouti', aani: null,
       teksti: 'Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina.' },
     { id: 'kappeli-k3', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
