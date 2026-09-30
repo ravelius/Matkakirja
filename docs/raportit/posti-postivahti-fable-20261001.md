@@ -16,3 +16,6 @@ LEVY 41 Gi (< 45; 47→41 21 min:ssa; kova raja 30; push käyttäjälle < 38), w
 
 ## 02.05 lisäys
 Levy 40 Gi (Karttasepän yöpoltto pysähtyy < 40 Gt!), wt/ 58 (raja 20), kuorma 53/161/184, muisti 66 %. Kävijälaskuri 02.05 n=3 ennallaan (FI 1, US 2, apurahakortti 2). Päätoimittajan konteksti 35 %. Hook OK, #3734 auki.
+
+## 02.16 lisäys
+LEVY 36 Gi (< 38; kova raja 30; Karttasepän yöpoltto pysähtyy < 40 → todennäköisesti pysähtynyt), wt/ 58 (raja 20), kuorma 23, muisti 46 %. Push-ilmoitus käyttäjälle lähetetty 02.16. Päätoimittajan konteksti 35 %. Hook OK.
