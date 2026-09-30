@@ -100,6 +100,7 @@ namespace Matkakirja.Natiivi
         {
             y = ymparisto;
             rakennus = rak;
+            AaniMikseri.LinnaTila(true); // mikseritila ennen esilatausta (Pelikoodarin AaniMikseri)
             aanimaisema = new Aanimaisema();
             silmukat.Clear();
             hiljaisuusAlkoi.Clear();
@@ -272,6 +273,7 @@ namespace Matkakirja.Natiivi
             if (puheKaiku != null) puheKaiku.Stop();
             puheLoppuu = -1f;
             if (aktiivinen == this) aktiivinen = null;
+            AaniMikseri.LinnaTila(false);
             DioraamaLimitteri.Paalle(false);
             y?.Repliikki(false);
             puhuu = false;

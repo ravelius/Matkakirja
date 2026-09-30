@@ -74,6 +74,7 @@ namespace Matkakirja.Natiivi
             // Linssin oma humina pois Cupolan ajaksi; takaisin vain, jos linssi jatkuu (Pois ei palauta).
             Aanisoitin.LinssiTausta(cupolassa ? null : Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina);
             if (cupolassa) Kaynnista(); else Lopeta();
+            AaniMikseri.CupolaTila(cupolassa);
             Debug.Log($"MATKAKIRJA cupola-aani: {(cupolassa ? "Cupolassa" : "pois")}");
         }
 
@@ -83,6 +84,7 @@ namespace Matkakirja.Natiivi
             if (instanssi == null || !instanssi.paalla) return;
             instanssi.paalla = false;
             instanssi.Lopeta();
+            AaniMikseri.CupolaTila(false);
         }
 
         void Kaynnista()

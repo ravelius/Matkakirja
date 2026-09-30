@@ -829,6 +829,9 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "aanimikseri":
+                    // Kehittäjän äänimikserin äänipuoli (AaniMikseri.cs): tila | cupola | linna | aseta <id> <arvo> | b 0|1 | tallenna.
+                    return AaniMikseri.Komento(loput);
                 case "cupolaaani":
                     // Cupolan äänikerrokset ilman kyytiä: paalle | pois | tila (CupolaAani.cs).
                     if (loput == "paalle") CupolaAani.Tila(true);
