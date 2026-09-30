@@ -207,7 +207,7 @@ namespace Matkakirja.Linssit.Dioraama
             double fx = dx / pit, fz = dz / pit, lahin = double.MaxValue, kaukaisin = double.MinValue;
             foreach (var (x, z) in new[] { (pohjaMinX, pohjaMinZ), (pohjaMinX, pohjaMaxZ), (pohjaMaxX, pohjaMinZ), (pohjaMaxX, pohjaMaxZ) })
             { double q = (x - koh.X) * fx + (z - koh.Z) * fz; lahin = Math.Min(lahin, q); kaukaisin = Math.Max(kaukaisin, q); }
-            double keski = (l + r) / 2, puoli = (r - l) / 2 * 1.08;
+            double keski = (l + r) / 2, puoli = (r - l) / 2 * 1.15; // 1.1 (79) pysty: oikea reuna kosketti ruudun reunaa
             double kulma = a.Korkeus * Math.PI / 180.0;
             double puoliPysty = ((kaukaisin - lahin) * Math.Sin(kulma) + 20.0 * Math.Cos(kulma)) / 2 * 1.08;
             double v = a.Fov * Math.PI / 360.0, h = Math.Atan(Math.Tan(v) * Kuvasuhde);
