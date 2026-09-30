@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 05:38:** Levy 52 Gi (50→52, vaihtelee jokipolton mukana; hälytys < 45), swap 17,9/19,5 Gt, muisti 79 % vapaa, kuorma 15/11/13, sim 0, ei kevyttä tilaa. Viikko 37 % (5 h 13 %). Konteksti ennallaan: Linnanrakentaja 66 %, Natiivi-UI 38 %, Päätoimittaja 48 %, oma ~61 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: BUILD 64 ennallaan. Posti: ei uutta.
+
 **Päivitetty 30.9. 05:27:** Levy 50 Gi (52→50 15 min; swap ei kasva 17,9 Gt → lasku jokipolton tiedostoista; ennakkoilmoitus Päätoimittajalle 05.26, hälytys < 45, seuranta 10 min), muisti 75 % vapaa, kuorma 11/9/15, sim 0, ei kevyttä tilaa. Viikko 37 % (5 h 13 %). Konteksti ennallaan: Linnanrakentaja 66 %, Natiivi-UI 38 %, Päätoimittaja 48 %, oma ~60 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: BUILD 64 ennallaan. Posti: ei uutta.
 
 **Päivitetty 30.9. 05:11:** Levy 52 Gi (vakaa 51→52; hälytys < 45; /private/tmp 32 Gt), swap 18,0/19,5 Gt, muisti 79 % vapaa, kuorma 12/28/32, sim 0, ei kevyttä tilaa. Viikko 37 % (5 h 13 %). Konteksti ennallaan: Linnanrakentaja 66 %, Natiivi-UI 38 %, Päätoimittaja 48 %, oma ~59 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: BUILD 64 = master 01051a6f (juna cfd33712, käännös e413c6f3; Laitetestaaja 0e96952c3 PASS). Posti: ei uutta.
