@@ -582,6 +582,16 @@ export const MAASTOKOHTEET_GBR = [
    * ============================================================== */
   {
     id: 'jurassic-coast-durdle-door',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/gbr-nosto-jurassic-coast-durdle-door-dbeda20e.jpg',
+      lyhyt: 'Durdle Doorin luonnonkaari kohoaa merestä Dorsetin rannikolla.',
+      selite: 'Kuvassa näkyy Durdle Doorin kalkkikiviholvi, joka nousee turkoosin ja sinisen meren yläpuolelle.',
+      lahde: 'Valokuva: Balon Greyjoy, Wikimedia Commons (CC0).',
+      tekija: 'Balon Greyjoy',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20210528_Durdle_Door-1.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
     nimi: 'Jurassic Coast ja Durdle Door',
     nimio: 'Durdle Door',
     tyyppi: 'meri',
@@ -607,6 +617,16 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'canterburyn-katedraali',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/gbr-nosto-canterburyn-katedraali-bc8b876d.jpg',
+      lyhyt: 'Canterburyn katedraalin goottilaiset tornit ja etelänpuoleinen julkisivu.',
+      selite: 'Kuvassa näkyy Canterburyn katedraali viistosti sivulta: länsipään tornit vasemmalla ja korkea keskustorni oikealla.',
+      lahde: 'Valokuva: Peter S, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Peter S',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Canterbury_Cathedral_-_geograph.org.uk_-_8018782.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
     nimi: 'Canterburyn katedraali',
     nimio: 'Canterbury',
     tyyppi: 'historia',

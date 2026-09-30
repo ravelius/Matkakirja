@@ -255,6 +255,16 @@ export const MAASTOKOHTEET_ITA = [
    * ============================================================== */
   {
     id: 'aquileia',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-aquileia-fb6febcd.jpg',
+      lyhyt: 'Aquileian patriarkaalisen basilikan kellotorni ja sypressit nurmikon takana.',
+      selite: 'Kuvassa näkyy Aquileian basilikan kivinen ulkopuoli, korkea kellotorni ja rivi sypressejä.',
+      lahde: 'Valokuva: ThePhotografer, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'ThePhotografer',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Basilica_Patriarcale_(Aquileia)_-_Exterior.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Aquileia',
     tyyppi: 'historia',
     kysymykset: [
@@ -279,6 +289,16 @@ export const MAASTOKOHTEET_ITA = [
   },
   {
     id: 'amalfin-rannikko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-amalfin-rannikko-33112cec.jpg',
+      lyhyt: 'Amalfin kaupunki ja jyrkkä vuoristorannikko näkyvät mereltä katsottuna.',
+      selite: 'Kuvassa näkyy Amalfin valkoisten talojen ryhmä jyrkän, terassoidun rinteen juurella sekä rannikon jatkuminen kaukaisuuteen.',
+      lahde: 'Valokuva: Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Wolfgang Moroder',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Amalfi_vista_dal_mare_2_Campania.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Amalfin rannikko',
     nimio: 'Amalfi',
     tyyppi: 'meri',

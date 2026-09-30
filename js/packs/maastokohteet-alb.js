@@ -18,6 +18,16 @@ export const MAASTOKOHTEET_ALB = [
    * ============================================================== */
   {
     id: 'rozafan-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-rozafan-linna-9379d57f.jpg',
+      lyhyt: 'Rozafan linnan muurit ja rauniot vihreän rinteen ja vuorten edessä.',
+      selite: 'Kuvassa näkyy Rozafan linnan pitkä kivimuuri ja hammastettu suojus. Taustalla on linnan raunioita ja vehreitä vuoria.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castillo_de_Rozafa,_Shkodra,_Albania,_2014-04-18,_DD_08.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Rozafan linna',
     nimio: 'Rozafa',
     tyyppi: 'historia',
@@ -44,6 +54,16 @@ export const MAASTOKOHTEET_ALB = [
   },
   {
     id: 'beratin-vanhakaupunki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-beratin-vanhakaupunki-369acd77.jpg',
+      lyhyt: 'Beratin valkoiset talot nousevat rinnettä jokilaakson yllä.',
+      selite: 'Kuvassa valkoiset, punakattoiset ja moni-ikkunaiset kivitalot kerrostuvat jyrkkää rinnettä pitkin, ja alhaalla virtaa joki.',
+      lahde: 'Valokuva: Julianruizp, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Julianruizp',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Berat,_known_as_%E2%80%9Cthe_city_of_a_thousand_windows.%E2%80%9D.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Beratin vanhakaupunki',
     nimio: 'Berat',
     tyyppi: 'kulttuuri',
@@ -71,6 +91,16 @@ export const MAASTOKOHTEET_ALB = [
   },
   {
     id: 'valbonan-laakso',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-valbonan-laakso-618c3a41.jpg',
+      lyhyt: 'Valbonan laakso ja jyrkät vuorenhuiput syysvalossa.',
+      selite: 'Kuvassa näkyy leveä, soraisen jokiuoman halkoma laakso, jota reunustavat metsäiset rinteet ja rosoiset kalkkikivihuiput.',
+      lahde: 'Valokuva: Alexkom000, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Alexkom000',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2024-10-14_Valbona_Valley_5.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
     nimi: 'Valbonan laakso',
     nimio: 'Valbona',
     tyyppi: 'vuori',

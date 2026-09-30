@@ -18,6 +18,16 @@ export const MAASTOKOHTEET_MNE = [
    * ============================================================== */
   {
     id: 'kotorinlahti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-kotorinlahti-db0a77b6.jpg',
+      lyhyt: 'Tyyni Kotorinlahti ja jyrkät vuoret, keskellä pieni kirkkosaari.',
+      selite: 'Kuvassa näkyy Kotorinlahden tyyni vesi ja sen ympärillä kohoavat vuoret. Keskellä lahtea on pieni kirkkosaari.',
+      lahde: 'Valokuva: Alexkom000, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Alexkom000',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2024-01-31_Bay_of_Kotor_seen_from_Lepetani.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
     nimi: 'Kotorinlahti',
     tyyppi: 'meri',
     kysymykset: [
@@ -44,6 +54,16 @@ export const MAASTOKOHTEET_MNE = [
   },
   {
     id: 'ostrogin-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-ostrogin-luostari-2445012d.jpg',
+      lyhyt: 'Valkoinen luostari kallioseinämän onkalossa kellotorneineen.',
+      selite: 'Kuvassa on Ostrogin luostarin valkoinen rakennus, jonka kellotorni ja ikkunarivit nojaavat pystysuoraan kallioseinään.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Monasterio_de_Ostrog,_Montenegro,_2014-04-14,_DD_14.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Ostrogin luostari',
     nimio: 'Ostrog',
     tyyppi: 'kulttuuri',
@@ -70,6 +90,16 @@ export const MAASTOKOHTEET_MNE = [
   },
   {
     id: 'taran-kanjoni',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-taran-kanjoni-286a34c1.jpg',
+      lyhyt: 'Syvä metsäinen Taran kanjoni ja kaukana siintävät vuoret.',
+      selite: 'Kuvassa on ylhäältä kuvattu Taran kanjoni, jonka jyrkät metsäiset rinteet painuvat kapeaksi uomaksi.',
+      lahde: 'Valokuva: Milan Radovic, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Milan Radovic',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kanjon_reke_Tare.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Taran kanjoni',
     nimio: 'Tara',
     tyyppi: 'joki',

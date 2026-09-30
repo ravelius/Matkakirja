@@ -849,6 +849,16 @@ export const MAASTOKOHTEET_RUS = [
    * ============================================================== */
   {
     id: 'kaliningradin-tuomiokirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/rus-nosto-kaliningradin-tuomiokirkko-0d7455ee.jpg',
+      lyhyt: 'Punatiilinen goottilainen tuomiokirkko, jonka torni kohoaa nurmikon yllä.',
+      selite: 'Kaliningradin tuomiokirkko sivulta kuvattuna: pitkä punatiilinen kirkkosali jyrkkine tummine kattoineen ja teräväkärkinen kellotorni.',
+      lahde: 'Valokuva: Perituss, Wikimedia Commons (CC0).',
+      tekija: 'Perituss',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Konigsberg_Cathedral_2012_1.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
     nimi: 'Kaliningradin tuomiokirkko',
     nimio: 'Tuomiokirkko',
     tyyppi: 'historia',

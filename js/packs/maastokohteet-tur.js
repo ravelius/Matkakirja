@@ -189,6 +189,16 @@ export const MAASTOKOHTEET_TUR = [
    * ============================================================== */
   {
     id: 'selimiyen-moskeija',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/tur-nosto-selimiyen-moskeija-63ac3142.jpg',
+      lyhyt: 'Selimiyen moskeijan minareetit ja kupolit kohoavat tiilimuurin takaa sinisellä taivaalla.',
+      selite: 'Edirnen Selimiyen moskeija ulkoa: korkeita minareetteja, keskikupoli ja pienemmät kupolit sekä raidallinen tiili- ja kivimuuri etualalla.',
+      lahde: 'Valokuva: Ali Osman Dilekoğlu, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ali Osman Dilekoğlu',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Selimiye_Camii_IMG_4328.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Selimiyen moskeija',
     nimio: 'Selimiye',
     tyyppi: 'historia',

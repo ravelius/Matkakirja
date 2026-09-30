@@ -741,6 +741,16 @@ export const MAASTOKOHTEET_UKR = [
    * ============================================================== */
   {
     id: 'tsernivtsin-yliopisto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-nosto-tsernivtsin-yliopisto-da7e83c2.jpg',
+      lyhyt: 'Punatiilinen residenssirakennus kellotorneineen puiden ja kukkien takana.',
+      selite: 'Bukovinan ja Dalmatian metropoliittojen residenssi Tšernivtsissä: punatiilinen, koristeellisesti kuvioitu rakennus, jonka kellotorni kohoaa keskellä.',
+      lahde: 'Valokuva: Posterrr, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Posterrr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Residence_of_Bukovinian_and_Dalmatian_Metropolitans_in_Chernivtsi_DSC_9710.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto)',
     nimio: 'Tšernivtsi',
     tyyppi: 'kulttuuri',

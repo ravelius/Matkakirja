@@ -674,6 +674,16 @@ export const MAASTOKOHTEET_NOR = [
    * ============================================================== */
   {
     id: 'kjerag',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/nor-nosto-kjerag-f8defe63.jpg',
+      lyhyt: 'Jyrkkä kallioseinämä putoaa syvään Lysefjordiin pilvisellä säällä.',
+      selite: 'Näkymä Kjeragilta Lysefjordille: pystysuora harmaa kallioseinämä ja kapea sinivihreä fjordi, joka jatkuu kaukaisuuteen vuorten lomassa.',
+      lahde: 'Valokuva: Giuseppe Milo, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Giuseppe Milo',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lysefjord_(from_Kjerag)_-_Norway_-_Landscape_photography.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
     nimi: 'Kjerag',
     tyyppi: 'vuori',
     kysymykset: [

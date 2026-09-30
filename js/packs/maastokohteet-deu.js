@@ -18,6 +18,16 @@ export const MAASTOKOHTEET_DEU = [
    * ============================================================== */
   {
     id: 'schwerinin-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/deu-nosto-schwerinin-linna-8f990146.jpg',
+      lyhyt: 'Schwerinin linna tornteineen kohoaa järven rannalla puiden takaa.',
+      selite: 'Kuvassa on Schwerinin linna järven yli katsottuna: hiekanvärinen, useita kärkitorneja ja kultakoristeita sisältävä rakennus. Etualalla on järven vesi ja rantanurmea.',
+      lahde: 'Valokuva: Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Krzysztof Golik',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Schwerin_Castle_(25).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Schwerinin linna',
     nimio: 'Schwerin',
     tyyppi: 'historia',
@@ -44,6 +54,16 @@ export const MAASTOKOHTEET_DEU = [
   },
   {
     id: 'bambergin-vanhakaupunki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/deu-nosto-bambergin-vanhakaupunki-0625d84e.jpg',
+      lyhyt: 'Regnitzin rannan punakattoiset kalastajatalot ja hiekkakivinen vanha talo Bambergissa.',
+      selite: 'Kuvassa on Bambergin vanhankaupungin Pikku-Venetsia Regnitz-joen rannalla: punakattoisia ja ristikkorakenteisia taloja sekä suuri hiekkakivirakennus.',
+      lahde: 'Valokuva: Ermell, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ermell',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bamberg_klein_Venedig-20200421-RM-160802.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Bambergin vanhakaupunki',
     nimio: 'Bamberg',
     tyyppi: 'kulttuuri',
@@ -69,6 +89,16 @@ export const MAASTOKOHTEET_DEU = [
   },
   {
     id: 'naumburgin-tuomiokirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/deu-nosto-naumburgin-tuomiokirkko-baa9d5b3.jpg',
+      lyhyt: 'Naumburgin tuomiokirkon kaksi vihertävää tornia ja ristikäytävä kirkkaana kesäpäivänä.',
+      selite: 'Kuvassa on Naumburgin tuomiokirkko ulkoa sisäpihan puolelta: kaksi kupari-huippuista tornia, punatiilinen katto ja hiekkakiviseinät.',
+      lahde: 'Valokuva: Thaler Tamas, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Thaler Tamas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Naumburger_Dom_FotoThaler1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Naumburgin tuomiokirkko',
     nimio: 'Naumburg',
     tyyppi: 'kulttuuri',

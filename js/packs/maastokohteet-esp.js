@@ -828,6 +828,16 @@ export const MAASTOKOHTEET_ESP = [
    * ============================================================== */
   {
     id: 'teide',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-nosto-teide-01a13907.jpg',
+      lyhyt: 'Teiden tulivuoren kartiomainen huippu kohoaa sinistä taivasta vasten.',
+      selite: 'Kuvassa näkyy Teiden rinteet laavavirtoineen ja köysiradan asema huipun lähellä.',
+      lahde: 'Valokuva: Ireneusz Jerzy Borysiewicz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ireneusz Jerzy Borysiewicz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:El_Teide_Mount.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Teide',
     tyyppi: 'vuori',
     kysymykset: [
@@ -849,6 +859,16 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'serra-de-tramuntana',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/esp-nosto-serra-de-tramuntana-219a15c5.jpg',
+      lyhyt: 'Metsäisiä vuorenrinteitä ja kaukana korkeampia huippuja Mallorcan pohjoisosassa.',
+      selite: 'Näkymä Puig de Galatzón huipulta Serra de Tramuntanan vuoristoon: männikköisiä harjanteita ja kaukana sinistä merta.',
+      lahde: 'Valokuva: Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Christoph Strässler',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_from_Puig_de_Galatz%C3%B3_along_the_Serra_de_Tramuntana.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
     nimi: 'Serra de Tramuntana',
     nimio: 'Tramuntana',
     tyyppi: 'vuori',
