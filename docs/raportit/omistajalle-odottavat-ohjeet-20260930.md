@@ -19,8 +19,8 @@ Huom: kehittäjätila näyttää myös Kehittäjätyökalut Asetuksissa.
 
 ## 3. Olavinlinnan tarkempi kuori ämpäriin (Linnanrakentaja, kun PR #3711 on mainissa)
 
-Omistaja ajaa itse (isot binäärit hash-kansioon, 80 tiedostoa, 786 Mt, hash 112dbb5f):
+Omistaja ajaa itse (isot binäärit hash-kansioon, 89 tiedostoa, 815 Mt; päivitetty 30.9. klo 17):
 ```bash
-cd /Users/Shared/Claude/wt/linnanrakentaja-linna-laatu && zsh tools/dioraama/vie-blender.sh
+cd /Users/Shared/Claude/wt/linnanrakentaja-linna-laatu && git pull && zsh tools/dioraama/vie-blender.sh
 ```
 Sen jälkeen Linnanrakentaja commitoi blender.json:n ja Julkaisija mergeää. Täyden laadun laite lataa kerran noin 89 Mt enemmän.
