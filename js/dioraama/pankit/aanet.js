@@ -40,8 +40,10 @@ export const AANET = {
   // --- Puhe: kokki, apulainen, vesipoika (repliikit) ---
   'kokki-1': { silmukka: false, voimakkuus: 1, kesto_s: 4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
   'kokki-2': { silmukka: false, voimakkuus: 1, kesto_s: 4.88, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'apulainen-1': { silmukka: false, voimakkuus: 1, kesto_s: 4.08, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'apulainen-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.2, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
+  // Apulaisen ääni vaihdettu 1.10.2026 (omistajan valinta 30.9. klo 23.3x: fi-merkattu Esko → C "Adam - Engaging,
+  // Friendly and Bright", eleven_v4, −17,2 LUFS); versio 2 = uusi tiedosto ohi natiivin välimuistin.
+  'apulainen-1': { silmukka: false, voimakkuus: 1, kesto_s: 4.16, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 2 },
+  'apulainen-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.12, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 2 },
   'vesipoika-1': { silmukka: false, voimakkuus: 1, kesto_s: 4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
   'vesipoika-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.04, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
 
