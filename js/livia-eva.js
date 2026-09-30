@@ -21,6 +21,17 @@
  * ne vaihdetaan molempiin. Puku ja valot ovat omaa vektoripiirrosta, eikä niissä ole tekstiä tai
  * kolmannen osapuolen kuvia. */
 
+/*
+ * KORJAUKSET MOOTTORISSA (omistaja 30.9.2026 klo 23.5x: "codex ei näytä saavan hyvää versiota aikaiseksi"): hahmo leikkautui
+ * oikeasta reunasta (viewBox x = 152) → koko asu ja köysi siirtyvät 10 yksikköä vasemmalle (LIVIAN_EVA_SIIRTO); varjossa oleva
+ * hahmo tummemmaksi (livianEvaVarjoDef: kirkkaus 0,68, hieman kylmempi); Maan valo pehmeäksi (sumennus 1,8 ja himmeämpi väri).
+ * Natiivin 2×-kerroskuvat viedään samoista SVG:istä (tools/vie-livia-eva.mjs).
+ */
+export const LIVIAN_EVA_SIIRTO = 'translate(-10 0)';
+
+/** Varjossa olevan hahmon tummennus (puku, pää ja kypärä; valot jäävät sen päälle kirkkaina). */
+export const livianEvaVarjoDef = prefix => `<defs><filter id="${prefix}-eva-varjo" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope=".64"/><feFuncG type="linear" slope=".68"/><feFuncB type="linear" slope=".76"/></feComponentTransfer></filter></defs>`;
+
 export const LIVIAN_EVA_KERROKSET = Object.freeze(['perus', 'kasvovalo', 'kypärälamput', 'maavalo', 'turvaköysi']);
 
 export function livianEvaPuku() {
@@ -72,13 +83,14 @@ export function livianEvaTether() {
 const evaValoDef = prefix => `<defs>
   <radialGradient id="${prefix}-eva-face"><stop stop-color="#ffe6b8" stop-opacity=".8"/><stop offset=".43" stop-color="#ffd5a0" stop-opacity=".34"/><stop offset="1" stop-color="#ffd0a0" stop-opacity="0"/></radialGradient>
   <radialGradient id="${prefix}-eva-lamp"><stop stop-color="#fff" stop-opacity=".88"/><stop offset=".18" stop-color="#f1faff" stop-opacity=".55"/><stop offset="1" stop-color="#daeefa" stop-opacity="0"/></radialGradient>
-  <linearGradient id="${prefix}-eva-earth" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#80c9fa" stop-opacity=".73"/><stop offset="1" stop-color="#80c9fa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="${prefix}-eva-earth" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#8cc6ee" stop-opacity=".5"/><stop offset="1" stop-color="#8cc6ee" stop-opacity="0"/></linearGradient>
+  <filter id="${prefix}-eva-pehmea" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="1.8"/></filter>
   <clipPath id="${prefix}-eva-visor"><ellipse cx="100" cy="113" rx="41" ry="40"/></clipPath>
 </defs>`;
 
 export function livianEvaValo(kerros, prefix='livia') {
   if (kerros === 'kasvovalo') return `${evaValoDef(prefix)}<g data-part="eva-kasvovalo" clip-path="url(#${prefix}-eva-visor)"><ellipse cx="93" cy="105" rx="49" ry="43" fill="url(#${prefix}-eva-face)"/><path d="M62 126Q93 145 126 127" fill="none" stroke="#f4d5aa" stroke-opacity=".3" stroke-width="3"/></g>`;
   if (kerros === 'kypärälamput') return `${evaValoDef(prefix)}<g data-part="eva-kyparalamput"><circle cx="52" cy="110" r="10" fill="url(#${prefix}-eva-lamp)"/><circle cx="149" cy="109" r="10" fill="url(#${prefix}-eva-lamp)"/><circle cx="52" cy="110" r="3" fill="#f9fcfc"/><circle cx="149" cy="109" r="3" fill="#f9fcfc"/><circle cx="52" cy="110" r="1.5" fill="#fff"/><circle cx="149" cy="109" r="1.5" fill="#fff"/></g>`;
-  if (kerros === 'maavalo') return `${evaValoDef(prefix)}<g data-part="eva-maavalo" fill="none" stroke="url(#${prefix}-eva-earth)" stroke-linecap="round"><path d="M72 165Q82 181 95 187M108 190Q130 192 150 178M61 132Q58 151 68 162M138 138Q145 151 150 164" stroke-width="4"/><path d="M77 170Q87 183 99 187M116 187Q134 187 147 177" stroke-width="2"/></g>`;
+  if (kerros === 'maavalo') return `${evaValoDef(prefix)}<g data-part="eva-maavalo" filter="url(#${prefix}-eva-pehmea)" fill="none" stroke="url(#${prefix}-eva-earth)" stroke-linecap="round"><path d="M72 165Q82 181 95 187M108 190Q130 192 150 178M61 132Q58 151 68 162M138 138Q145 151 150 164" stroke-width="4"/><path d="M77 170Q87 183 99 187M116 187Q134 187 147 177" stroke-width="2"/></g>`;
   return '';
 }
