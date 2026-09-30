@@ -1813,12 +1813,15 @@
     -unity-text-align: middle-center;
 }
 
+/* Omistaja 30.9. (TF 1.0.68): nuolet kortin reunoille kuvan ulkopuolelle (web .nahtavyys-nuoli.edellinen
+ * left: -1rem): kortin reunan päällä puoliksi ulkona. Kuva alkaa 18 pt:n täytteen jälkeen, joten 32 pt:n nuoli
+ * (−16…+16) ei osu kuvaan. Puhelimessa kortti 90 % leveydestä → reunaan jää ≥ 19 pt, nuoli mahtuu ruudulle. */
 .mk-nahtavyys__nuoli--vasen {
-    left: 4px;
+    left: -16px;
 }
 
 .mk-nahtavyys__nuoli--oikea {
-    right: 4px;
+    right: -16px;
 }
 
 /* Listaryhmän otsikko ja sen pieni reaktionappi samalla rivillä (web h4.vinkki-ryhma + .reaktiot-otsikko). */
