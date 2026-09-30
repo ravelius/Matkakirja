@@ -9487,3 +9487,7 @@ Omistaja 30.9.2026: 'Miten ISS:n maapallonäkymästä saisi vielä fotorealistis
 ## OMISTAJA: ISS-FOTOREALISMI MAKSUTTOMILLA KEINOILLA; SENTINEL-2-PINTA PIDOSSA (30.9.2026 klo 18.10)
 
 Omistaja 30.9.2026 Karttasepän selvityksen jälkeen (Sentinel-2 cloudless 2016 CC BY 4.0: noin 2,6 M laattaa, 75 Gt, R2 noin 12 $ + 1,1 $/kk, massalataus vaatii EOX:n vahvistuksen tai oston): 'Tee ne ilmaiset.' Linssiseppä toteuttaa ilmakehän sironnan, sunglintin ja Fresnelin, DEM-korkeusvarjostuksen, pilvien varjot ja valaistuksen, yöpuolen (Black Marble, airglow) ja filmisen sävytyksen nykyisellä BMNG-pinnalla; suunnitelma Päätoimittajalle tiedoksi, NASA-vertailupari ilmakehän jälkeen. Sentinel-2 pidossa, kunnes omistaja päättää EOX-yhteydenotosta.
+
+## OMISTAJA: PÄÄTOIMITTAJALLE KAIKKI OIKEUDET ÄMPÄRIN KÄYTTÖÖN (VIENNIT), KUTEN AIEMMIN (30.9.2026 klo 18.54)
+
+Omistaja 30.9.2026 illalla Päätoimittajan sessiossa: 'annetaan sinulle kaikki oikeudet ämpärin käyttöön. niin se on aiemminkin ollut. jostain syystä muuttunut jotenkin, niin palautetaan kaikki oikeudet sinulle.' Päätoimittaja saa ajaa ämpäriviennit (vie-blender.sh, vie-aanet.sh, vastaavat hash-kansioviennit) itse; osoitin vaihtuu pelaajille silti vasta Siirtosepän puhtaan asennuksen kuittauksen jälkeen. Ehdotettu pysyvä ratkaisu roolien vienneille (CI-työnkulku tällä Macilla, avaimet salaisuuksina) odottaa omistajan päätöstä.
