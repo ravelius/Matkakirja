@@ -32,8 +32,8 @@ isoisän ääni lukee matkakirjan ääneen.
 2. Napauta kartalta nostoa: kuva ja lyhyt tarina nähtävyydestä.
 3. Kysy Pulu-kyyhkyltä kaupungista mitä tahansa. Vastaus tulee noin puolessa minuutissa.
 4. Linssit aukeavat pelissä pisteillä. Tämän kortin napista "Avaa esittelylinssit" saat heti
-   käyttöösi ihmisen matkan, keksinnöt, maailman radiot ja astronautin kameran. [OMISTAJAN PÄÄTÖS
-   ODOTTAA: esittelylinssien nappi]
+   käyttöösi kaikki linssit, myös kehitteillä olevat: esimerkiksi astronautin kameran, maailman
+   radiot ja Olavinlinnan poikkileikkauksen.
 
 **Kappale 3 – missä mennään**
 
@@ -41,7 +41,7 @@ Kehitys tapahtuu nyt iOS-sovelluksessa, joka rakennettiin syyskuussa uudelleen n
 on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. Uusi testiversio
 ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja
 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan
-perinteiset pelit ja kolmiulotteiset kohteet, joista ensimmäinen, Olavinlinna, on jo sisäisessä testissä.
+perinteiset pelit ja kolmiulotteiset kohteet; ensimmäisen, Olavinlinnan, voi jo kokeilla esittelylinsseistä.
 
 **Kappale 4 – keskeneräisyys ja lisätiedot**
 

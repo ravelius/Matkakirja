@@ -9375,3 +9375,7 @@ Omistaja 30.9.2026 klo 11.0x ja 11.1x chatissa. 1) KORVAA 23.9. säännön 'julk
 ## TARKENNUS: OMAN HAVAINNEKUVAN COMMONS-LÄHDE MAINITAAN AINA (30.9.2026 klo 11.1x) (30.9.2026 klo 11.11)
 
 Päätoimittaja 30.9.2026 (Sisältökirjurin kuvalisenssiauditointi, kohta G): jos pelin omalla havainnekuvalla on datassa Commons-lähde-URL, viitekuvan tekijä, lisenssi ja URL näytetään viitteet-kentässä kuten tekoälyjohdannaisilla (auditoinnin ryhmä F), vaikka pohjakuvan käyttöä ei voisi enää varmistaa. Ensimmäisinä FIN maastokohteet [0], [1], [3] ja [6] erässä 3.
+
+## OMISTAJA: APURAHAN ESITTELYKORTTIIN 'AVAA ESITTELYLINSSIT' — KAIKKI KEHITTÄJÄLINSSIT (30.9.2026 klo 11.2x) (30.9.2026 klo 11.27)
+
+Omistaja 30.9.2026 kortilla (Laitetestaajan löydös: uudella pelaajalla linssilista tyhjä, linssit aukeavat pisteillä 400/800/1400/2200): apurahan esittelykortin nappi 'Avaa esittelylinssit' avaa heti KAIKKI kehittäjätilan linssit, myös kokeilut (Olavinlinnan Poikkileikkaus, Tähtitaivas, Yökartta), ei vain neljää valmista pistelinssiä. Päätoimittajan suositus (vain valmiit neljä) hylättiin.
