@@ -284,6 +284,12 @@ namespace Matkakirja.Natiivi
             klipit[url] = DownloadHandlerAudioClip.GetContent(p);
         }
 
+        /// <summary>Soivien silmukoiden tunnukset "tila/ääni" (Laitetestaajan ehdotus 30.9.: laineet näkyviin raportissa).</summary>
+        IEnumerable<string> SilmukkaIdt()
+        {
+            foreach (var k in silmukat.Keys) yield return k.Item1 + "/" + k.Item2;
+        }
+
         /// <summary>Tila lokiin ("poikki aanet"): ladatut klipit, jonossa olevat, soivat silmukat, puhuja.</summary>
         public string Tilaraportti()
         {
@@ -291,7 +297,7 @@ namespace Matkakirja.Natiivi
             foreach (var s in silmukat.Values) if (s != null) soivia++;
             return $"poikki aanet: {(Paalla ? "päällä" : "pois")}, äänimaisema-kytkin {(Asetukset.Paalla(Kytkin.Aanimaisema) ? "päällä" : "POIS (silmukat hiljaa)")}, " +
                    $"kertoja-kytkin {(Asetukset.Paalla(Kytkin.Kertoja) ? "päällä" : "pois")}, klippejä ladattu {klipit.Count} (jonossa {klipitJonossa.Count}), " +
-                   $"silmukoita {silmukat.Count} (kahvoja {soivia}), puhuja {(puhuu ? "kyllä" : "ei")}, " +
+                   $"silmukoita {silmukat.Count} (kahvoja {soivia}: {string.Join(", ", SilmukkaIdt())}), puhuja {(puhuu ? "kyllä" : "ei")}, " +
                    $"limitteri {(DioraamaLimitteri.Instanssi != null && DioraamaLimitteri.Instanssi.enabled ? "päällä, pienin vahvistus " + DioraamaLimitteri.Instanssi.PieninVahvistusJaNollaa().ToString("0.000") : "pois")}";
         }
     }
