@@ -3013,5 +3013,60 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mitä Kotelnitšin liepeiltä on löytynyt?", a: "Vjatkan oikealla rannalla on permikautisia fossiileja, joiden ikä on 250–260 miljoonaa vuotta. Tunnetuimpia löytöjä ovat noin kolmemetriset pareiasaurukset, ja paikallinen paleontologinen museo avattiin vuonna 1994." },
       { q: "Kuinka suuri Kirovin alue on?", a: "Alueen pinta-ala on 120 374 neliökilometriä eli noin kolmannes Suomesta, ja siellä asuu vajaat 1,2 miljoonaa ihmistä. Metsä on enimmäkseen havupuuta." },
     ],
+    "Penza": [
+      { q: "Miksi runoilija Lermontov on haudattu Penzan alueelle?", a: "Hänen isoäitinsä Jelizaveta Arsenjeva osti Tarhanyn kartanon vuonna 1794, ja runoilija (1814–1841) vietti siellä lapsuutensa. Hän lepää kartanon sukuhaudassa, ja paikka on ollut museo-reservaatti vuodesta 1939." },
+      { q: "Mikä on Yhden taulun museo?", a: "Penzalainen museo, jossa on vuodesta 1983 ollut esillä aina vain yksi maalaus kerrallaan. Katsomiskerta kestää noin 45 minuuttia, ja sitä edeltää lyhyt elokuva taulun ajasta." },
+      { q: "Mitä Volgan metsäaroreservaatissa suojellaan?", a: "Reservaatti perustettiin vuonna 1989 Kuznetskin piirissä, ja sen viidellä osa-alueella on noin 8 400 hehtaaria pohjoisen aron ja lehtimetsän vaihettumisvyöhykettä." },
+    ],
+    "Tatarstan": [
+      { q: "Mitä chak-chak on, ja milloin sitä syödään?", a: "Friteerattuja taikinapaloja kuumassa hunajasiirapissa, kasattuna kekoon tai pyramidiksi. Se on tataarien juhlaherkku, jota tarjotaan häissä, juhlissa ja vieraan tullessa." },
+      { q: "Miksi Kazanin kremlin Söyembikän torni oli vinossa?", a: "Kuusikerroksinen, 58-metrinen torni kallistui 1990-luvulle mennessä noin kaksi metriä. Vakautustöiden jälkeen se ei enää kallistu, ja legenda yhdistää sen nimen Kazanin viimeiseen hallitsijattareen." },
+      { q: "Kuka maalasi Kaman metsät Jelabugassa?", a: "Maisemamaalari Ivan Šiškin syntyi Jelabugassa 1830-luvulla, ja Jelabugan metsät inspiroivat hänen tunnetuinpiin töihinsä, kuten Aamu mäntymetsässä. Kaupungissa on hänen sukukotinsa museona sekä Nadežda Durovan kartanomuseo." },
+    ],
+    "Udmurt": [
+      { q: "Mikä on perepech?", a: "Udmurttilaisen keittiön tunnetuimpia ruokia: pieni avopiirakka, jonka täytteenä on lihaa, kananmunaa, sieniä tai kasviksia. Päälle levitetään yleensä muna- tai maitoseos." },
+      { q: "Mikä on lud?", a: "Udmurttien perinteisessä uskonnossa lud on pyhä lehto, jossa suvut ja kylät viettivät riittejä. Kodin oma pyhäkkö oli kuala." },
+      { q: "Onko udmurtti sukua suomelle?", a: "On, mutta kaukaista sukua: molemmat ovat uralilaisia kieliä. Suomi kuuluu itämerensuomalaisiin, udmurtti permiläisiin kuten komi." },
+    ],
+    "Bashkortostan": [
+      { q: "Mikä on šihan?", a: "Baškiriassa šihaneiksi kutsutaan permikauden riuttakalkkikiven jäänteitä: Toratau, Kušatau ja Jurakatau kohoavat Belajan oikealla rannalla Sterlitamakista itään. Ne ovat osa noin 290–299 miljoonaa vuotta sitten vallinnutta valtavaa riuttajärjestelmää." },
+      { q: "Miksi Jangantau on 'palava vuori'?", a: "Vuoren rinteillä kohoaa höyryä ja kaasua, vaikka tulivuoritoimintaa ei ole. Syytä tutkijat ovat selittäneet monella teorialla." },
+      { q: "Mikä on burzjanin mehiläinen?", a: "Erillisenä rotuna 2011 rekisteröity metsämehiläinen, joka pesii puiden onkaloissa Uralin länsirinteillä. Baškiirien vanha puumehiläishoito on satoja vuosia vanha." },
+    ],
+    "Orenburg": [
+      { q: "Miksi Puškin matkusti Orenburgiin?", a: "Hän keräsi vuonna 1833 aineistoa Pugatšovin kapinaa koskevaan historiateokseensa ja romaaniin Kapteenin tytär. Orenburgissa hän tapasi ystävänsä Vladimir Dalin, josta tuli myöhemmin venäjän sanakirjan tekijä." },
+      { q: "Miksi Razval-järvessä kellutaan?", a: "Sol-Iletskin Razval-järven vesi on niin suolaista, että keho nousee pintaan lähes kuten Kuolleessameressä. Paikka on tunnettu kylpylähoidoistaan." },
+      { q: "Mitä Talovskajan aro suojelee?", a: "Talovskaja on Orenburgin luonnonsuojelualueen läntisin osa, noin 3 200 hehtaaria aroa ilman pysyviä jokia." },
+    ],
+    "Samara": [
+      { q: "Miksi Zhigulevskoje-olut kantaa vuoriston nimeä, vaikka panimo oli itävaltalainen?", a: "Panimon perusti Samaraan vuonna 1881 itävaltalainen Alfred von Vacano, ja ensimmäinen tuote oli wieniläistyylinen lager. Legendan mukaan nimi vaihdettiin Zhigulevskojeksi vuonna 1934, koska \"wieniläinen\" kuulosti liian porvarilliselta." },
+      { q: "Kuinka syvällä Samaran bunkkerimuseo on?", a: "Noin 37 metrin syvyydessä eli 192 askelman alla, mikä vastaa 12-kerroksisen talon korkeutta. Suoja rakennettiin vuonna 1942 varapääkaupungin johdolle, ja nykyään siinä toimii siviilipuolustuksen museo." },
+      { q: "Miksi avaruusmuseon julkisivussa törröttää oikea raketti?", a: "Samarassa rakennetaan Sojuz-kantoraketteja, ja museo kertoo kaupungin roolista avaruusteollisuudessa. Julkisivuun kiinnitetty Sojuz on aito, noin 50 metrin mittainen raketti, ja monumentti paljastettiin vuonna 2001." },
+    ],
+    "Saratov": [
+      { q: "Mitä nykyisen Saratovin kohdalla oli ennen kaupunkia?", a: "Kultaisen hordan kaupunki Uvek, joka perustettiin 1240-luvulla ja jonka Timurin joukot tuhosivat 1395. Nykyisen Saratovin perustamisajankohdaksi arvellaan noin vuotta 1590." },
+      { q: "Miksi Saratovin taidemuseo kantaa kirjailija Radishchevin nimeä?", a: "Museon perusti 1885 taidemaalari Aleksei Bogoljubov, Radishchevin pojanpoika." },
+      { q: "Missä Juri Gagarin laskeutui maahan?", a: "Saratovin alueella Engelsin seudulla Volgan itäpuolella. Gagarin irtautui Vostok-kapselista noin seitsemän kilometrin korkeudessa 12. huhtikuuta 1961 ja laskeutui laskuvarjolla; paikalle on pystytetty muistomerkki." },
+    ],
+    "Volgograd": [
+      { q: "Miksi Volgogradissa raitiovaunu painuu keskustassa maan alle?", a: "Kaupunki on pitkä kaista Volgan rannalla, joten yksi nopea linja palvelee sitä hyvin. Maanalaista osuutta on 7,1 kilometriä ja kuusi asemaa keskustassa, ja loppu matkasta kulkee tavallisena raitiotienä." },
+      { q: "Mistä Venäjän tunnetuin sinappi on kotoisin?", a: "Sareptasta Volgogradin eteläosasta, jossa saksalaiset siirtolaiset perustivat maan ensimmäisen sinapintuotantolaitoksen 1800-luvun alussa. Museoalueen myymälästä sinappia saa yhä." },
+      { q: "Miksi Kamyshinia kutsutaan Venäjän vesimelonipääkaupungiksi?", a: "Kamyshin Volgan varrella on tunnettu meloneistaan, ja tarinan mukaan Pietari Suuri kiitteli paikallista vesimelonia vuonna 1722. Kaupunki järjestää elokuun lopulla vesimelonifestivaalin." },
+    ],
+    "Rostov": [
+      { q: "Miksi Rostovin Gorkin teatteri näyttää ylhäältä katsottuna traktorilta?", a: "Arkkitehdit Vladimir Shtshuko ja Vladimir Gelfreih suunnittelivat vuonna 1935 valmistuneen rakennuksen traktorin hahmoiseksi: pitkät sivusiivet ja korkea keskiosa piirtyvät ilmakuvassa koneen muotoon." },
+      { q: "Miksi Starotšerkasskaja on \"vanha\", ja mikä oli sen entinen asema?", a: "Kaupunki oli Donin kasakkojen pääkaupunki vuoteen 1805, jolloin asema siirrettiin Novotšerkasskiin, ja vanha kaupunki sai nimen Starotšerkasskaja. Sen Kristuksen ylösnousemuksen katedraali valmistui 1719, ja koko paikka on ollut museoalue vuodesta 1970." },
+      { q: "Mistä Aasovanmeren rannalla sijaitseva Taganrog tunnetaan?", a: "Pietari Suuri perusti Taganrogin vuonna 1698 Venäjän laivaston ensimmäiseksi tukikohdaksi. Kirjailija Anton Tšehov syntyi kaupungissa vuonna 1860, ja hänen syntymäkotinsa on museona." },
+    ],
+    "Krasnodar": [
+      { q: "Miksi Sotshin seudulla kasvatetaan teetä?", a: "Sotshin teen sanotaan olevan maailman pohjoisimpia; kylmää kestävän lajikkeen kehitti 1900-luvun alussa Judas Koshman, ja Dagomysin teeviljelmät ovat yhä vierailukohde." },
+      { q: "Mikä Abrau-Djurso on?", a: "Novorossijskin lähellä sijaitseva kuohuviinitila, jonka keisari Aleksanteri II määräsi perustettavaksi vuonna 1870; nimi tulee kahdesta purosta, joista toinen muodostaa alueen suurimman luonnonjärven." },
+      { q: "Miksi Fisht-stadion on saanut nimensä ja millainen se on?", a: "Vuoden 2014 olympialaisten pääareena kantaa nimeä 2 857 metrin korkuisen Fisht-vuoren mukaan. Stadionin ympärillä sijaitseva Olympiapuisto toimi myöhemmin myös Formula 1 -radan paikkana." },
+    ],
+    "Kalmyk": [
+      { q: "Miksi kalmukkilainen tee on suolaista ja siinä on voita?", a: "Kalmukkilainen tee eli jomba keitetään vihreästä teestä maidon, voin, suolan ja muskottipähkinän kanssa, ja se muistuttaa lähes keittoa. Paimentolaiskansalle maito on aina ollut ruoan perusta, ja ravitseva, lämmin juoma antaa voimia kylmässä." },
+      { q: "Mikä saigan nenässä on niin erikoista?", a: "Saigan sieraimet ovat turvonneet ja osoittavat alaspäin, mikä antaa antilooppi-paralle sen omalaatuisen ilmeen. Rakenteen uskotaan auttavan suodattamaan pölyä aroilla vaelluksen aikana." },
+      { q: "Mitä lamppuja Zul-juhlana sytytetään?", a: "Zul muistaa gelug-koulukunnan perustajaa Tsongkhapaa (1357–1419). Perinteen mukaan jokainen tekee taikinasta pienen lampun ja asettaa siihen sydämiä oman ikänsä verran. Lamput sytytetään, kun ensimmäiset tähdet ilmestyvät taivaalle." },
+    ],
   },
 };
