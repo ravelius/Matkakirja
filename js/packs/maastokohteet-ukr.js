@@ -736,4 +736,43 @@ export const MAASTOKOHTEET_UKR = [
     lahde: 'en-Wikipedia "Derzhprom", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'tsernivtsin-yliopisto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ukr-nosto-tsernivtsin-yliopisto-da7e83c2.jpg',
+      lyhyt: 'Punatiilinen residenssirakennus kellotorneineen puiden ja kukkien takana.',
+      selite: 'Bukovinan ja Dalmatian metropoliittojen residenssi Tšernivtsissä: punatiilinen, koristeellisesti kuvioitu rakennus, jonka kellotorni kohoaa keskellä.',
+      lahde: 'Valokuva: Posterrr, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Posterrr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Residence_of_Bukovinian_and_Dalmatian_Metropolitans_in_Chernivtsi_DSC_9710.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto)',
+    nimio: 'Tšernivtsi',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?',
+      'Kuka suunnitteli Bukovinan metropoliittojen residenssin?',
+    ],
+    korostukset: ['Alhambra|Alhambra'],
+    nappi: 'Alhambran henkeä Bukovinassa',
+    // 25.9244 E / 48.2969 N — en-Wikipedia "Residence of Bukovinian and Dalmatian Metropolitans" ja "Chernivtsi National University", osiot "History" ja "Campuses and buildings"
+    laudat: {
+      maailmankartta: { x: 6697.5, y: 1463.6 },
+    },
+    teksti: 'Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian '
+      + 'metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi '
+      + 'rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä '
+      + 'yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 '
+      + 'metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi '
+      + 'vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin '
+      + 'tiloissa.',
+    lahde: 'en-Wikipedia "Residence of Bukovinian and Dalmatian Metropolitans" ja "Chernivtsi '
+      + 'National University", osiot "History" ja "Campuses and buildings" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];

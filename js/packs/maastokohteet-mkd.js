@@ -18,6 +18,16 @@ export const MAASTOKOHTEET_MKD = [
    * ============================================================== */
   {
     id: 'ohridinjarvi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-ohridinjarvi-1240f347.jpg',
+      lyhyt: 'Ohridinjärven turkoosi vesi, kalliorantaa ja Ohridin kaupunki taustalla.',
+      selite: 'Kuvassa näkyy Ohridinjärven kirkkaan turkoosi vesi, etualalla kalliorantaa ja vastarannalla Ohridin kaupunki vuorten edessä.',
+      lahde: 'Valokuva: Elen Schurova, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Elen Schurova',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:29_1_%D0%B2%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4_%D0%BE%D1%82_%D0%9A%D0%B0%D0%BD%D0%B5%D0%BE.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
     nimi: 'Ohridinjärvi',
     tyyppi: 'jarvi',
     kysymykset: [
@@ -43,6 +53,16 @@ export const MAASTOKOHTEET_MKD = [
   },
   {
     id: 'matkan-kanjoni',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-matkan-kanjoni-e46fcbe7.jpg',
+      lyhyt: 'Jyrkät kalliot ja vihreä metsä nousevat Matkan kanjonin tyynen veden yllä.',
+      selite: 'Kuvassa näkyy Matkan kanjonin tyyni vesi ja jyrkät, metsän peittämät kalliot.',
+      lahde: 'Valokuva: Geoff, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Geoff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Matka_Canyon_01.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
     nimi: 'Matkan kanjoni',
     nimio: 'Matka',
     tyyppi: 'vuori',
@@ -68,6 +88,16 @@ export const MAASTOKOHTEET_MKD = [
   },
   {
     id: 'stobi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-stobi-91e0fade.jpg',
+      lyhyt: 'Stobin suuren kylpylän tiili- ja kivimuurit avoimella kaivausalueella.',
+      selite: 'Kuvassa on Stobin antiikkikaupungin suuren kylpylän raunioita: punatiilisiä ja kivisiä muureja ja laattalattia.',
+      lahde: 'Valokuva: Ajta, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ajta',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Large_bath_at_Stobi.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Stobi',
     tyyppi: 'historia',
     kysymykset: [

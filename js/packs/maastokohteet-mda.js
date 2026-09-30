@@ -18,6 +18,16 @@ export const MAASTOKOHTEET_MDA = [
    * ============================================================== */
   {
     id: 'sorokan-linnoitus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-sorokan-linnoitus-6e893692.jpg',
+      lyhyt: 'Sorokan pyöreistä torneista ja rintavarustuksista koostuva kivilinnoitus.',
+      selite: 'Kuvassa on Sorokan linnoitus ulkoa: pyöreät kivitornit teräväkärkisine kattoineen ja muurit nurmikon takana.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fuerte_de_Soroca,_Soroca,_Moldavia,_2023-11-01,_DD_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Sorokan linnoitus',
     nimio: 'Soroca',
     tyyppi: 'historia',
@@ -46,6 +56,16 @@ export const MAASTOKOHTEET_MDA = [
    * ============================================================== */
   {
     id: 'milestii-mici',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-milestii-mici-55e1363a.jpg',
+      lyhyt: 'Viinipulloilla täytetty maanalainen käytävä Mileștii Micissä.',
+      selite: 'Kuvassa näkyy pitkä maanalainen käytävä, jonka seinillä on holvattuja koloja täynnä makaavia viinipulloja.',
+      lahde: 'Valokuva: Z thomas, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Z thomas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mile%C8%99tii_Mici_20250406_1.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
     nimi: 'Mileștii Mici',
     tyyppi: 'ruoka',
     kysymykset: [

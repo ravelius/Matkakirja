@@ -18,6 +18,16 @@ export const MAASTOKOHTEET_BLR = [
    * ============================================================== */
   {
     id: 'mirin-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-mirin-linna-36e0a73c.jpg',
+      lyhyt: 'Mirin linna punatiilitorneineen kohoaa järven rannalla pilvisen taivaan alla.',
+      selite: 'Kuvassa näkyy Mirin linnan punatiiliset kulmatornit teräväkärkisine punakattoineen ja vesi, joka heijastaa linnaa.',
+      lahde: 'Valokuva: Mike1979 Russia, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Mike1979 Russia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mir_Castle_2023-07-02_5838.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Mirin linna',
     nimio: 'Mir',
     tyyppi: 'historia',
@@ -43,6 +53,16 @@ export const MAASTOKOHTEET_BLR = [
   },
   {
     id: 'njasvizin-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-njasvizin-linna-48bfb4b5.jpg',
+      lyhyt: 'Njasvižin linnan sisäpiha keltaisine siipirakennuksineen ja kellotorneineen.',
+      selite: 'Kuvassa näkyy Njasvižin linnan mukulakivipäällysteinen sisäpiha, jonka perällä on keltavalkoinen päärakennus ja tummakattoinen torni.',
+      lahde: 'Valokuva: Alexxx1979, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alexxx1979',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Belarus_Nesvizh_Castle_7255_2050.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Njasvižin linna',
     nimio: 'Njasviž',
     tyyppi: 'historia',
@@ -67,6 +87,16 @@ export const MAASTOKOHTEET_BLR = [
   },
   {
     id: 'braslavin-jarvet',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-braslavin-jarvet-e729baf9.jpg',
+      lyhyt: 'Ruokoinen Drivjaty-järven ranta pilvisen taivaan alla Braslavin järvillä.',
+      selite: 'Kuvassa näkyy Drivjaty-järven laaja tyyni vesi, jonka rannalla on ruokoa ja matalaa vesikasvillisuutta.',
+      lahde: 'Valokuva: Tess Mattew, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Tess Mattew',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2023.07.10_Dryviaty_Lake,_Braslaw_Lakes_National_Park.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Braslavin järvet',
     nimio: 'Braslav',
     tyyppi: 'jarvi',

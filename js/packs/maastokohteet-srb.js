@@ -18,6 +18,16 @@ export const MAASTOKOHTEET_SRB = [
    * ============================================================== */
   {
     id: 'belgradin-linnoitus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-belgradin-linnoitus-4eaa24bf.jpg',
+      lyhyt: 'Kalemegdanin kivinen linnoitusmuuri torneineen kohoaa vihreän rinteen yllä.',
+      selite: 'Kuvassa näkyy Belgradin linnoituksen kivinen muuri ja kaksi nelikulmaista tornia ruohoisen rinteen päällä.',
+      lahde: 'Valokuva: Dekanski, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Dekanski',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2014-04-06_17-43-32_Kalemegdan.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Belgradin linnoitus (Kalemegdan)',
     nimio: 'Kalemegdan',
     tyyppi: 'historia',
@@ -41,6 +51,16 @@ export const MAASTOKOHTEET_SRB = [
   },
   {
     id: 'studenican-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-studenican-luostari-2dd470a7.jpg',
+      lyhyt: 'Studenican valkomarmorinen Neitsyt Marian kirkko kupoleineen puiston keskellä.',
+      selite: 'Kuvassa on Studenican luostarin Neitsyt Marian kirkko ulkoa: vaalea marmoripintainen rakennus, tiilenpunainen kupolitorni ja kaari-ikkunat.',
+      lahde: 'Valokuva: BrankaVV, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'BrankaVV',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bogorodi%C4%8Dina_crkva_u_Studenici_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Studenican luostari',
     nimio: 'Studenica',
     tyyppi: 'kulttuuri',
@@ -66,6 +86,16 @@ export const MAASTOKOHTEET_SRB = [
   },
   {
     id: 'djavolja-varos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-djavolja-varos-adc6f348.jpg',
+      lyhyt: 'Ruskeat, teräväkärkiset maapylväät nousevat rinteestä Pirunkaupungissa.',
+      selite: 'Kuvassa on Đavolja varoš: rinteestä nousevia ruskeita maapylväitä, joista osan päällä on kivilaki. Pylväiden ympärillä on vihreää pensaikkoa.',
+      lahde: 'Valokuva: Mickey Mystique, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Mickey Mystique',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C4%90avolja_varo%C5%A1_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Đavolja varoš (Pirunkaupunki)',
     nimio: 'Pirunkaupunki',
     tyyppi: 'vuori',
