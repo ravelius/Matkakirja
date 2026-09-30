@@ -105,3 +105,23 @@ M5-iPad) ovat uudempaa sukupolvea. Unity varoittaa itse, että pakatun raidan il
 todellista kohtaa, koska paketti voi olla 2–3 s ([AudioSource.time](https://docs.unity3d.com/ScriptReference/AudioSource-time.html)).
 Sisäinen "1. soiva kohta 0,043 s" ei siksi todista laitteen purkukohtaa. PCM-klipillä ilmoitettu ja todellinen kohta
 ovat samat. Aineisto: proto-3d/lokit/linssiseppa2-ipad-ab-20260930/k5-pakattu/ (ipad.mov, -16k.wav, kohdistus, konsoli).
+
+## TF 1.0.67 samalla iPadilla klo 11.36–11.43 (omistaja pelasi käsin): vika ei toistunut
+
+Uusi peli Ateenasta ja bussilla Sofiaan, musiikki ja maisema päällä. Laitteistotallenne k6 (150 s) ja k7 (240 s):
+
+| Klippi | Kuuluva alku | Kohdistus |
+|---|---|---|
+| Ateenan luenta (aloitussaapuminen) | 11.37.22,1 | kohdasta 0,06 s loppuun (30,8 s) yhdellä viiveellä, r 0,96 |
+| Sofian iskulause | 11.38.29,2 | alusta (r 0,92) |
+| Sofian luenta | 11.38.38,6 | kohdasta 0,00 s (r 0,98); 1,2 s:n tauon jälkeen sama nollakohta (r 0,98), ei hyppyä |
+
+Omistajan havainto "äänilähde vaihtui iPadin sisäiseen kaiuttimeen, kun saavuttiin Sofiaan" oli tallenteen loppu. k6 päättyi
+11.38.43, 4,7 s Sofian luennon alun jälkeen, ja iPad palautti äänen omaan kaiuttimeensa. k7 sai vain maiseman (huippu
+−41 dBFS), koska peli oli jo levossa. Peli ei vaihtanut reittiä itse.
+
+**Johtopäätös:** kolme luentoa M1-iPadilla (kehitysversio ja TF 1.0.67) alkoivat laitteistotasolla alusta. TF:n ja
+kehitysversion välillä ei ole eroa, ja äänikoodi on sama. Vika näkyy omistajan uudemmilla laitteilla (iPhone 17 Pro, M5-iPad
+Pro) tai niiden istuntotilassa. 1.0.68 (PCM + istuntovahti) on korjausehdokas, ja omistaja todentaa sen omalla laitteellaan.
+Jos hyppy toistuu 1.0.68:ssa, seuraava askel on kehitysversio M5-iPadilla (omistajan lupa) IpadTallenteen ja
+verhomittarin kanssa. Aineisto: proto-3d/lokit/linssiseppa2-ipad-ab-20260930/k6-tf-1067/ ja k7-tf-sofia/.
