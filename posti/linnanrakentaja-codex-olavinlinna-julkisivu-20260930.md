@@ -1,3 +1,12 @@
+# PERUUTETTU 30.9.2026 klo 23.5x (omistaja Päätoimittajan kautta): älä tee tätä tilausta.
+
+Omistaja: "codex ei näytä saavan hyvää versiota aikaiseksi, joten ei käytetä sitä." Linnan pinta on valittu
+(B+C, jo käytössä). Keskeneräistä työtä ei tarvitse toimittaa. Kiitos!
+
+---
+
+(Alkuperäinen tilaus alla vain tiedoksi.)
+
 # Linnanrakentaja → Codex: Olavinlinnan pohjoisjulkisivu oikaistuna ja valottomana tekstuurina (30.9.2026)
 
 Omistajan tilaus Päätoimittajan kautta (30.9.): "codex osaisi varmasti tehdä pyydettäessä niitä tekstuureja kunhan
