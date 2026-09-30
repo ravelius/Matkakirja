@@ -119,10 +119,12 @@ def main():
     else:
         kirjaa(f'::warning::Ryhmän buildeja ei saatu: {tila}')
 
-    for mittari in ('publicLinkUsages', 'betaTesterUsages'):
-        tila, d = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/metrics/{mittari}')
+    # betaTesterUsages vaatii groupBy=betaTesters (ilman sitä 400, ajo 36689621711).
+    for mittari, kysely in (('publicLinkUsages', ''), ('betaTesterUsages', '?groupBy=betaTesters&period=P365D')):
+        tila, d = kutsu('GET', f'/v1/betaGroups/{ryhma_id}/metrics/{mittari}{kysely}')
         if tila != 200:
-            kirjaa(f'- {mittari}: ei saatu ({tila})')
+            syy = '; '.join(e.get('detail') or e.get('title', '') for e in d.get('errors', [])) if isinstance(d, dict) else ''
+            kirjaa(f'- {mittari}: ei saatu ({tila}) {syy[:200]}')
             continue
         yhteensa = {}
         for sarja in d.get('data', []):
