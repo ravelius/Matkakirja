@@ -9583,3 +9583,7 @@ Omistaja 30.9.2026 klo 22.4x Mac-appin kuvasta (Länsi-Makedonian "Lue lisää" 
 ## OMISTAJA (KORTTI): PULUN KEHOTTEESEEN YKSI LAUSE — KÄSITEMERKINNÄT JA OHJEET EIVÄT NÄY VASTAUKSESSA (30.9.2026 klo 22.51)
 
 Pelikoodarin löydös 30.9.2026 klo 22.5x (natiivin Pulu-kontekstikorjauksen 59117878 todennus, Segovia "Miten akveduktin ikä selvitettiin?"): vastauksen lopussa malli puhui ohjeistaan ("Tässä tekstissä on Géza Alföldy, pronssikirjaimet, Domitianus ja Traianus avainkäsitteinä…"), eli worker-kehotteen käsitemerkintäohje vuotaa vastaukseen. Pulun malli ja kehote ovat lukittuja (VASTAUSKAAVA, muutokset vain omistajan luvalla) → kortti klo 22.5x: "Kyllä, korjaa". Pelikoodari lisää yhden lauseen, kolmiosainen vastauskaava ennallaan, 3–5 kysymyksen ennen/jälkeen-vertailu kehittäjäkoodilla ja deploy heti puhtaalla vertailulla.
+
+## OMISTAJA: ELEVENLABS-LUKIJAAN ENEMMÄN TOIMIVIA ÄÄNIÄ, OMISTAJA VALITSEE PARHAAN (30.9.2026 klo 23.06)
+
+Omistaja 30.9.2026 klo 23.0x (TF, #3710 tuotannossa) sanatarkasti: "elevenlabs turbon kaikki äänet eivät toimi ja niitä on liian vähän. saisiko lukija ääniä enemmän listaan niin valkkaan parhaimman". Linssiseppä 2: rikkinäisten äänten syy (voice_id, tili, malli/suomi), testi yhdellä lyhyellä lauseella per ääni (yhteensä < 2 000 merkkiä), lista 15–25 suomella toimivaan ääneen ensisijaisesti tilin valmiista äänistä, suomenkieliset kuvaavat nimet; kirjaston jakoäänten lisäys omistajan ElevenLabs-tilille on tilimuutos ja kysytään ensin.
