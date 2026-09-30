@@ -66,6 +66,25 @@ namespace Matkakirja.Natiivi
         static readonly int IdKajo = Shader.PropertyToID("_Kajo");
         /// <summary>1873 (valosaasteeton taivas) vai nyt; pelaajan kaupunki (web: suurkaupungin raja); pisteet oikeasta vastauksesta.</summary>
         public bool Vuosi1873 { get; private set; }
+
+        /// <summary>
+        /// TÄMÄN ILLAN TAIVAS (Päätoimittaja 30.9.2026, esittelylinssien katselmus: arvioija avaa linssin päivällä ja näki
+        /// tyhjän sinisen taivaan): jos aurinko on avaushetkellä yli −6° (päivä tai porvarillinen hämärä), taivas siirretään
+        /// samaan iltaan paikalliseen aurinkoaikaan klo 22. Tilarivi kertoo "Tämän illan taivas"; Nyt-vipu palaa todelliseen hetkeen.
+        /// </summary>
+        public bool Ilta => iltaSiirto > 0;
+        double iltaSiirto;   // vuorokausina
+        bool iltaPaatos;
+        public const double IltaKello = 22.0, IltaRaja = -6.0;
+
+        /// <summary>Siirto (vrk) hetkestä jd paikalliseen aurinkoaikaan IltaKello samana tai seuraavana iltana.</summary>
+        public static double IltaanSiirto(double jd, double lon)
+        {
+            double tunti = ((jd + 0.5 + lon / 360.0) % 1.0 + 1.0) % 1.0 * 24.0;
+            double d = IltaKello - tunti;
+            if (d < 0) d += 24.0;
+            return d / 24.0;
+        }
         public string Kaupunki;
         public System.Action<int> PisteetAnnettu;
         public double MagRaja => magRaja;
@@ -423,11 +442,14 @@ namespace Matkakirja.Natiivi
             gyroTasattu = Quaternion.identity;
             AsetaGyro(true);
             paneeli = new TaivasPaneeli();
-            paneeli.TilaValittu += AsetaVuosi;
+            // Nyt-vipu vie tämän illan taivaalta todelliseen hetkeen (1873 pitää saman illan).
+            paneeli.TilaValittu += v => { if (!v) iltaSiirto = 0; AsetaVuosi(v); };
             paneeli.KysyPainettu += Kysy;
             paneeli.VastausValittu += Vastaa;
             paneeli.KorttiSuljettu += () => { if (kysymys != null) { kysymys = null; liviaKuvio = null; PaivitaViivat(); } };
             AsetaVuosi(false);
+            iltaSiirto = 0;
+            iltaPaatos = true;
         }
 
         bool alkuKatse;
@@ -435,6 +457,13 @@ namespace Matkakirja.Natiivi
         public void Paivita(double jd)
         {
             if (!auki) return;
+            if (iltaPaatos)
+            {
+                iltaPaatos = false;
+                if (Taivaslaskenta.Aurinko(jd, lat, lon).Korkeus > IltaRaja) iltaSiirto = IltaanSiirto(jd, lon);
+                if (iltaSiirto > 0) Debug.Log($"MATKAKIRJA taivas: tämän illan taivas (+{iltaSiirto * 24:0.0} h)");
+            }
+            jd += iltaSiirto;
             double lst = Taivaslaskenta.Lst(jd, lon);
             var (e, u, n) = Taivaslaskenta.Rivit(lat, lst);
             // Sarakkeet: ECI-akseli → maailma (x itä, y ylös, z pohjoinen), kuten KyydinTahdet-varjostin odottaa.
@@ -493,10 +522,11 @@ namespace Matkakirja.Natiivi
             foreach (var t in aineisto.Tahdet)
                 if (t.Mag <= magRaja && Taivaslaskenta.Horisonttiin(t.Eci, lat, lst).Korkeus >= aineisto.HorisontinVara) n++;
             nakyviaTahtia = n;
-            var kello = Matkakirja.Linssit.Iss.IssNyt.Kello().AddHours(lon / 15.0);   // paikallinen aurinkoaika (web: kaupungin oma aika)
+            var kello = Matkakirja.Linssit.Iss.IssNyt.Kello().AddHours(lon / 15.0 + iltaSiirto * 24.0);   // paikallinen aurinkoaika (web: kaupungin oma aika)
             string paikka = !string.IsNullOrEmpty(Kaupunki) ? char.ToUpper(Kaupunki[0]) + Kaupunki.Substring(1)
                 : $"{System.Math.Abs(lat):0.0}° {(lat >= 0 ? "P" : "E")}";
-            paneeli?.Tila($"{paikka} · {(Vuosi1873 ? "1873" : "nyt")} · {kello:HH.mm} · {n} tähteä", Vuosi1873);
+            string hetki = Vuosi1873 ? "1873" : Ilta ? "Tämän illan taivas" : "nyt";
+            paneeli?.Tila($"{paikka} · {hetki} · {kello:HH.mm} · {n} tähteä", Vuosi1873);
         }
 
         public int NakyviaTahtia => nakyviaTahtia;

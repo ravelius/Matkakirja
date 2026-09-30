@@ -199,7 +199,15 @@ namespace Matkakirja.Natiivi
             {
                 Nosto n = null;
                 yield return Hae(id, x => n = x);
-                if (n == null) continue;
+                if (n == null)
+                {
+                    // Lisäkaupungin kortti (kohde:nakyva-kaupunki-*) ei ole nosto: herokuva erikseen (pariteetti 30.9.:
+                    // Lyonin 3,3 Mt:n kuva haettiin vasta kortin auetessa, ja kehys oli harmaa yli 6 s).
+                    Lisakaupunki lk = null;
+                    if (id.StartsWith("kohde:nakyva-kaupunki-", StringComparison.Ordinal)) yield return HaeLisakaupunki(id, x => lk = x);
+                    if (!string.IsNullOrEmpty(lk?.Hero?.Lahde)) ensin.Add(lk.Hero.Lahde);
+                    continue;
+                }
                 var kuvat = n.Kuvat.Append(n.Nykykuva).Append(n.Valokuva).Select(k => k?.Lahde)
                     .Where(l => !string.IsNullOrEmpty(l)).Distinct().ToList();
                 if (kuvat.Count == 0) continue;

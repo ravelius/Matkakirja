@@ -313,6 +313,8 @@ namespace Matkakirja.Natiivi
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);
             OfflineTila.Kortti = Matkakirja;
+            Kysymys.Avattu += () => Matkakirja.Kysymys(true);
+            Kysymys.Piilotettu += () => Matkakirja.Kysymys(false);
             Pulu = Natiivi.Pulu.Hae();
             Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
             Chat = new PuluChat(kerros, Pulu);

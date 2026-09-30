@@ -52,8 +52,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Laitteen mukainen taso (SystemInfo.systemMemorySize, Mt).</summary>
         public static Laatu Automaattinen()
         {
+            // Omistaja 30.9.2026: huippu kaikille A17 Proa uudemmille (DioraamaLaatu.Taysi); iPhone 15 Pro ja heikommat muistin mukaan.
+            if (DioraamaLaatu.Taysi) return Laatu.Huippu;
             int mt = SystemInfo.systemMemorySize;
-            return mt >= 7000 ? Laatu.Huippu : mt >= 3500 ? Laatu.Normaali : Laatu.Kevyt;
+            return mt >= 3500 ? Laatu.Normaali : Laatu.Kevyt;
         }
 
         public static Laatu Valittu => Pakotettu ?? Automaattinen();

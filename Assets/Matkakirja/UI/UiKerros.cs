@@ -295,6 +295,34 @@ namespace Matkakirja.Natiivi
             return false;
         }
 
+        /// <summary>
+        /// Ylimmän kerroksen ScrollView ruudun pisteessä (Input Systemin pikselit, origo vasen alakulma) tai null (Mac-syöte:
+        /// ohjauslevyn veto ja hiiren rulla vierittävät tekstiä). k = ruudun pikseleitä paneelin yksikköä kohden.
+        /// </summary>
+        public ScrollView VieritettavaPisteessa(Vector2 ruutu, out float k)
+        {
+            k = 1f;
+            if (!nakyvissa) return null;
+            var ylhaalta = new Vector2(ruutu.x, Screen.height - ruutu.y);
+            foreach (var kv in dokumentit.OrderByDescending(kv => kv.Key))
+            {
+                var juuri = kv.Value.rootVisualElement;
+                var paneeli = juuri?.panel;
+                if (paneeli == null) continue;
+                var osuma = paneeli.PickAll(RuntimePanelUtils.ScreenToPanel(paneeli, ylhaalta), null);
+                if (osuma == null || osuma == juuri) continue;
+                for (var e = osuma; e != null; e = e.parent)
+                    if (e is ScrollView sv)
+                    {
+                        float leveys = paneeli.visualTree.layout.width;
+                        k = leveys > 0 ? Screen.width / leveys : 1f;
+                        return sv;
+                    }
+                return null; // ylin osuma ei ole vieritettävä: alempi kerros ei saa vieriä sen alta
+            }
+            return null;
+        }
+
         /// <summary>Staattinen oikotie (PalloKierron UiPeittaa-koukulle).</summary>
         public static bool Peittaa(Vector2 ruutu) => instanssi != null && instanssi.PeittaaPisteen(ruutu);
 

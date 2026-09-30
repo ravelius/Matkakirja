@@ -316,6 +316,19 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        bool kysymysAuki;
+
+        /// <summary>
+        /// Kysymys auki (pariteetti 30.9.2026, Päätoimittaja): visa pienentää kortin aina lapuksi, myös luennan aikana
+        /// (web: kortti lappuna visan yllä). Sulkeutuessa kortti palaa auki vain, jos luenta yhä jatkuu.
+        /// </summary>
+        public void Kysymys(bool auki)
+        {
+            kysymysAuki = auki;
+            if (auki) { if (Nakyy && !pieni) Muunna(true); }
+            else if (luentaPiilo && Nakyy && pieni) Muunna(false);
+        }
+
         void Luentavahti()
         {
             KytkeKartta();
@@ -326,7 +339,7 @@ namespace Matkakirja.Natiivi
             if (!piiloon) kertojaLoppui = -1f;
             if (piiloon == luentaPiilo) return;
             luentaPiilo = piiloon;
-            if (piiloon && Nakyy && pieni) Muunna(false);
+            if (piiloon && Nakyy && pieni && !kysymysAuki) Muunna(false);
             // Löydös 87: isoisän luennon jälkeen lappu tiivistyy pelkkään kaupungin nimeen.
             if (!piiloon && merkinta != null && merkinta.Kaiutin && !luettu) { luettu = true; PaivitaLyhyt(true); }
         }
@@ -881,7 +894,7 @@ namespace Matkakirja.Natiivi
                 // Aito äänitaso: kertojan oma AudioSource, kun luenta soi siitä; muuten (Pelikoodarin Puhe) kuulijan miksaus.
                 var lahde = Aanet.Kertojasoitin;
                 if (lahde != null && lahde.isPlaying) lahde.GetOutputData(naytteet, 0);
-                else AudioListener.GetOutputData(naytteet, 0);
+                else Natiivi.TestiMykistys.Lahto(naytteet, 0);
                 double s = 0;
                 for (int i = 0; i < naytteet.Length; i++) s += naytteet[i] * naytteet[i];
                 rms = Mathf.Sqrt((float)(s / naytteet.Length));

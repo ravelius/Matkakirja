@@ -1215,6 +1215,41 @@ namespace Matkakirja
             }
         }
 
+        // ---- MAC-SYÖTE (UI/MacSyote.cs, iPad-sovellus Macilla; omistaja 30.9.2026) ----
+        // Ohjauslevyn kahden sormen veto panoroi kuten yhden sormen veto, nipistys ja hiiren rulla zoomaavat osoittimen
+        // kohtaan. Pikselit Unityn ruudussa (origo vasen alakulma). Samat rajat kuin sormilla (EleKatto, RajaaMaahan).
+        float macEle = -10f;
+
+        void MacKosketus()
+        {
+            ajo = null;
+            liuku = 0;
+            kosketettu = true;
+            if (Time.unscaledTime - macEle > 0.3f) PelaajanEle?.Invoke();
+            macEle = Time.unscaledTime;
+        }
+
+        /// <summary>Panorointi pikseleinä (maa seuraa sormia kuten vedossa). False, jos syöte on estetty.</summary>
+        public bool MacPanoroi(float2 pikselit)
+        {
+            if (syoteEstetty) return false;
+            MacKosketus();
+            Kierra(pikselit, 0);
+            return true;
+        }
+
+        /// <summary>Zoomaus osoittimen kohtaan: kerroin > 1 lähemmäs. Osoittimen alla oleva maa pysyy paikallaan.</summary>
+        public bool MacZoomaa(double kerroin, float2 piste)
+        {
+            if (syoteEstetty || !(kerroin > 0) || !(korkeus > 0)) return false;
+            MacKosketus();
+            double ennen = korkeus;
+            korkeus = math.clamp(korkeus / kerroin, MinKorkeus(), EleKatto());
+            var keski = new float2(Screen.width, Screen.height) * 0.5f;
+            Kierra((piste - keski) * (float)(1.0 - ennen / korkeus), 0);
+            return true;
+        }
+
         void Siirra(double2 muutos)
         {
             pituus = Kiedo(pituus + muutos.x);
@@ -1272,10 +1307,11 @@ namespace Matkakirja
         double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
 
         /// <summary>Asettaa maan rajat saapumisnäkymästä (AjaSaapumisnakymaan) tai poistaa ne (laatikoton saapuminen).</summary>
-        void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng)
+        void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng, string maa)
         {
             var katto = Saapumisnakyma.Uloszoomauskatto(t);
-            maanLaatikko = katto.HasValue ? t.Laatikko : null;
+            // Saaret (PRT Azorit ja Madeira, ESP Kanariat) panorointirajaan; katto pysyy mantereen saapumisnäkymässä.
+            maanLaatikko = katto.HasValue ? Saapumisnakyma.Lisaikkunoineen(t.Laatikko.Value, maa) : (Saapumisnakyma.Laatikko?)null;
             maanKatto = katto.HasValue ? katto.Value * CesiumWgs84Ellipsoid.GetMaximumRadius() : 0;
             maanToiveLng = toiveLng;
             webSuhde = t.Korkeus > 0 ? t.WebKorkeus / t.Korkeus : 1;
@@ -1395,7 +1431,7 @@ namespace Matkakirja
             bool maaRajaus = true)
         {
             var t = SaapumisNakyma(maa, lat, lon, maaRajaus);
-            AsetaMaanRajat(t, lon);
+            AsetaMaanRajat(t, lon, maa);
             PaataSaapuminen(true);
             Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, () =>
             {

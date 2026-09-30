@@ -82,6 +82,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kutsutaan Piilotan yhteydessä (testikomentojen esimerkkiajastin pysähtyy).</summary>
         public event Action Piilotettu;
 
+        /// <summary>Kysymys aukesi (kiinni → auki); Matkakirjakortti pienenee lapuksi kuten webissä.</summary>
+        public event Action Avattu;
+
         public KysymysNakyma(UiKerros kerros)
         {
             this.kerros = kerros;
@@ -223,6 +226,7 @@ namespace Matkakirja.Natiivi
             {
                 Auki = true;
                 Rakenne.Nayta(himmennys, true, 320);
+                Avattu?.Invoke();
             }
         }
 
