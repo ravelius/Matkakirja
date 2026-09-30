@@ -174,6 +174,7 @@ namespace Matkakirja.Natiivi
             foreach (var k in l.Saatimet)
             {
                 var kuvaus = k;
+                if (k.Min == 0f && k.Max == 1f && k.Desimaalit == 0) { Kytkin(k); continue; } // 0/1 (esim. kaiku-ab) kytkimenä
                 var rivi = Rakenne.El("mk-saadinrivi", rivit);
                 var nimi = Rakenne.Teksti(k.Nimi ?? k.Id, "mk-saadinrivi__nimi", rivi);
                 nimi.style.color = Paperi;
@@ -191,6 +192,27 @@ namespace Matkakirja.Natiivi
                 saatimet[k.Id] = (s, arvo, k);
             }
             tila.text = "";
+        }
+
+        /// <summary>0/1-säädin (Pelikoodari: Min 0, Max 1, Desimaalit 0, esim. "kaiku-ab") kytkimenä: napautus vaihtaa.</summary>
+        void Kytkin(MikseriSaadin k)
+        {
+            var rivi = Rakenne.El("mk-saadinrivi", rivit);
+            rivi.style.flexDirection = FlexDirection.Row; rivi.style.alignItems = Align.Center; rivi.style.minHeight = 40;
+            var nimi = Rakenne.Teksti(k.Nimi ?? k.Id, "mk-saadinrivi__nimi", rivi);
+            nimi.style.color = Paperi; nimi.style.flexGrow = 1;
+            Button nappi = null;
+            void Nayta() { var l = nappi.Q<Label>(); if (l != null) l.text = k.Arvo >= 0.5f ? "päällä" : "pois";
+                nappi.style.backgroundColor = k.Arvo >= 0.5f ? Kulta : new Color(1f, 1f, 1f, 0.08f); }
+            nappi = Nappi("", rivi, () =>
+            {
+                k.Arvo = k.Arvo >= 0.5f ? 0f : 1f;
+                kytketty?.Aseta(k.Id, k.Arvo);
+                if (kytketty != null && !kytketty.B) kytketty.B = true;
+                Nayta();
+            });
+            nappi.style.minWidth = 76; nappi.style.marginRight = 0;
+            Nayta();
         }
 
         static string Muoto(MikseriSaadin k, float v) =>
@@ -227,7 +249,8 @@ namespace Matkakirja.Natiivi
         {
             readonly List<MikseriSaadin> s = new List<MikseriSaadin>
             {
-                new MikseriSaadin { Id = "kaiku", Nimi = "Kaiku", Min = 0, Max = 1, Arvo = 0.35f, Desimaalit = 2 },
+                new MikseriSaadin { Id = "kaiku-ab", Nimi = "Kaiku", Min = 0, Max = 1, Arvo = 1, Desimaalit = 0 },
+                new MikseriSaadin { Id = "kaiku", Nimi = "Kaiun määrä", Min = 0, Max = 2, Arvo = 0.7f, Desimaalit = 2 },
                 new MikseriSaadin { Id = "jalkikaiku", Nimi = "Jälkikaiku", Min = 0.2f, Max = 4f, Arvo = 1.6f, Yksikko = "s" },
                 new MikseriSaadin { Id = "tausta", Nimi = "Taustaäänet", Min = -30, Max = 6, Arvo = -8, Yksikko = "dB", Desimaalit = 0 },
                 new MikseriSaadin { Id = "tuli", Nimi = "Tulisija", Min = -30, Max = 6, Arvo = -4, Yksikko = "dB", Desimaalit = 0 },
