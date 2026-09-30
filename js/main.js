@@ -88,6 +88,7 @@ import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
  */
 import { kytkePulunPaikannus } from './pulu-paikka.js';
 import { animoiAvaus, asennaDialogianimaatiot, haamuSulku } from './avausanimaatio.js';
+import { lahetaKaynti, merkitseOmistajaOsoitteesta } from './kaynti.js';
 
 // Dialogien avaus ja sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js erä B).
 asennaDialogianimaatiot();
@@ -1433,6 +1434,9 @@ const versioPaivitys = document.getElementById('versio-paivitys');
 versioPaivitys?.addEventListener('click', () => haeUusinVersio(versioPaivitys));
 
 document.getElementById('app-version').textContent = APP_VERSION;
+// Nimetön kävijälaskuri (js/kaynti.js): ?omistaja merkitsee laitteen, sitten kerran istunnossa 'avaus'.
+merkitseOmistajaOsoitteesta();
+lahetaKaynti('avaus', APP_VERSION);
 
 /*
  * Kulmaan lyhyt muoto ("v39") — koko päivämäärä on sääntöjen
@@ -1538,6 +1542,7 @@ const nollaaDialog = document.getElementById('nollaa-dialog');
  */
 const SAILYVAT_ASETUKSET = new Set([
   'matkakirja-kehittaja',
+  'matkakirja-omistaja',
   'matkakirja-pollo-kehittajakoodi',
   'matkakirja-puhe-kehittaja',
   'matkakirja-puhe-voima',
