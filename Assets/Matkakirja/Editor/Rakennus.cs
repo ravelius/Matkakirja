@@ -538,6 +538,8 @@ namespace Matkakirja.Editori
             PlayerSettings.iOS.appleDeveloperTeamID = string.IsNullOrEmpty(tiimi) ? Tiimi : tiimi;
             PlayerSettings.iOS.appleEnableAutomaticSigning = true;
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.AutoRotation;
+            // URL-skeema matkakirja:// (Pelikoodari 30.9.2026): omistajan kertamerkintä matkakirja://omistaja (Kaynti.cs).
+            PlayerSettings.iOS.iOSUrlSchemes = new[] { "matkakirja" };
             Kuvake();
             Aloitusruutu();
         }
