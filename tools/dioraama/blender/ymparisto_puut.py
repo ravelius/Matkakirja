@@ -40,6 +40,18 @@ maa = (d[iy0, ix0] * (1 - tx) * (1 - ty) + d[iy0, ix0 + 1] * tx * (1 - ty) + d[i
 chm = np.where(np.isfinite(ylin), ylin - maa, 0).astype(np.float32); chm = np.clip(chm, 0, 45)
 q = np.pad(chm, 1, mode='edge'); chm_s = sum(q[a:a + n, b:b + n] for a in range(3) for b in range(3)) / 9  # 3 × 3 -tasoitus
 
+# --- aikakerros n1500 (ymparisto_n1500.py): kaupunkimaskissa ei laserin "puita" (katot, pihapuut) vaan
+# synteettinen vanha metsä: latvuskorkeus 14–24 m pehmeänä kohinana, puut värisevään ruudukkoon (4,5 m).
+N1500 = A[A.index('--n1500') + 1] if '--n1500' in A else None
+if N1500:
+    MK = np.load(N1500)['maski'][:n, :n]
+    rng0 = np.random.default_rng(15); koh = rng0.standard_normal((n // 16 + 2, n // 16 + 2)).astype(np.float32)
+    koh = np.kron(koh, np.ones((16, 16), np.float32))[:n, :n]
+    for _ in range(3):
+        q = np.pad(koh, 4, mode='edge'); koh = sum(q[a:a + n, b:b + n] for a in range(0, 9, 4) for b in range(0, 9, 4)) / 9
+    synt = np.clip(19 + 5 * koh / (koh.std() + 1e-6), 12, 26)
+    chm_s = np.where(MK & (maa > VESI_H + 0.1), synt, chm_s).astype(np.float32)
+    print(f'PUUT: n1500-maski {MK.mean():.3f}, synteettinen latvus', flush=True)
 # --- latvat: paikallinen maksimi muuttuvassa ikkunassa (0,6 + 0,06·h m) ---
 ehd = np.argwhere((chm_s >= HMIN) & (maa > VESI_H + 0.1))
 h = chm_s[ehd[:, 0], ehd[:, 1]]; jarj = np.argsort(-h); ehd = ehd[jarj]; h = h[jarj]
@@ -53,6 +65,7 @@ for (iy, ix), hh in zip(ehd, h):
 L = np.array(latvat, np.float64)
 px = E0 + (L[:, 1] + 0.5) * R - ORIGO[0]; py = N0 + (L[:, 0] + 0.5) * R - ORIGO[1]
 pois = (px > KUORI[0]) & (px < KUORI[1]) & (py > KUORI[2]) & (py < KUORI[3])
+if N1500: pois |= MK[L[:, 0].astype(int), L[:, 1].astype(int)]  # kaupunkimaskin "latvat" (katot, pihapuut) pois
 L = L[~pois]; px = px[~pois]; py = py[~pois]
 zmaa = maa[L[:, 0].astype(int), L[:, 1].astype(int)] - VESI_H - 7.0
 # latvuksen säde: puolet etäisyydestä lähimpään korkeampaan (järjestyksessä aiempaan) latvaan, 0,15–0,25·h
@@ -78,6 +91,7 @@ sis = np.hypot(GX, GY) < TIHENNYS_R
 GX, GY = GX[sis], GY[sis]
 jx = ((GX + ORIGO[0] - E0) / R).astype(int); jy = ((GY + ORIGO[1] - N0) / R).astype(int)
 hc = chm_s[jy, jx]; ok = (hc > 5) & (maa[jy, jx] > VESI_H + 0.3) & ~((GX > KUORI[0]) & (GX < KUORI[1]) & (GY > KUORI[2]) & (GY < KUORI[3]))
+if N1500: ok &= ~MK[np.clip(jy, 0, n - 1), np.clip(jx, 0, n - 1)]  # kaupunkimaskiin tulevat synteettiset puut erikseen
 GX, GY, jx, jy, hc = GX[ok], GY[ok], jx[ok], jy[ok], hc[ok]
 lahella = np.zeros((n, n), bool); r_ = int(math.ceil(TIHEYS_M / R))
 for iy, ix in L[:, :2].astype(int):
@@ -86,6 +100,15 @@ uus = ~lahella[jy, jx]
 lisa_x, lisa_y, lisa_h = GX[uus], GY[uus], 0.9 * hc[uus]
 lisa_z = maa[jy[uus], jx[uus]] - VESI_H - 7.0
 print(f'PUUT: tihennys {len(lisa_x)} lisäpuuta {TIHENNYS_R:.0f} m:n säteellä', flush=True)
+if N1500:  # maskin alueelle synteettiset puut (paikalliset maksimit jäävät synteettisen latvuksen kohinan huipuiksi)
+    sx = np.arange(0, 2 * SADE, 4.5) - SADE; SX, SY = np.meshgrid(sx, sx); rng1 = np.random.default_rng(16)
+    SX = SX.ravel() + rng1.uniform(-2, 2, SX.size); SY = SY.ravel() + rng1.uniform(-2, 2, SY.size)
+    kx_ = np.clip(((SX + ORIGO[0] - E0) / R).astype(int), 0, n - 1); ky_ = np.clip(((SY + ORIGO[1] - N0) / R).astype(int), 0, n - 1)
+    ok = MK[ky_, kx_] & (np.hypot(SX, SY) < TIHENNYS_R) & (maa[ky_, kx_] > VESI_H + 0.3) & ~((SX > KUORI[0]) & (SX < KUORI[1]) & (SY > KUORI[2]) & (SY < KUORI[3]))
+    hs = chm_s[ky_[ok], kx_[ok]] * rng1.uniform(0.75, 1.05, int(ok.sum()))
+    px = np.concatenate([px, SX[ok]]); py = np.concatenate([py, SY[ok]]); zmaa = np.concatenate([zmaa, maa[ky_[ok], kx_[ok]] - VESI_H - 7.0])
+    L = np.concatenate([L, np.stack([np.zeros_like(hs), np.zeros_like(hs), hs], 1)]); rad = np.concatenate([rad, 0.2 * hs])
+    print(f'PUUT: n1500 synteettisiä puita {int(ok.sum())}', flush=True)
 px = np.concatenate([px, lisa_x]); py = np.concatenate([py, lisa_y]); zmaa = np.concatenate([zmaa, lisa_z])
 L = np.concatenate([L, np.stack([np.zeros_like(lisa_h), np.zeros_like(lisa_h), lisa_h], 1)]); rad = np.concatenate([rad, 0.18 * lisa_h])
 
@@ -100,6 +123,9 @@ if ORTO != '-':
     rgb = np.stack([a[oy - oy.min() + 3 + dy, ox - ox.min() + 3 + dx] for dy in (-2, 0, 2) for dx in (-2, 0, 2)]).mean(0)
     kirk = rgb.mean(1); vih = rgb[:, 1] - (rgb[:, 0] + rgb[:, 2]) / 2
     laji = np.where((vih > 12) & (kirk > 70), 2, np.where(kirk < 45, 1, 0))
+if N1500:
+    kaup = MK[np.clip(((py + ORIGO[1] - N0) / R).astype(int), 0, n - 1), np.clip(((px + ORIGO[0] - E0) / R).astype(int), 0, n - 1)]
+    rng2 = np.random.default_rng(17); laji = np.where(kaup, rng2.choice([0, 1, 2], len(laji), p=[0.55, 0.38, 0.07]), laji)
 puut = [[round(float(x), 2), round(float(y), 2), round(float(z), 2), round(float(hh), 1), round(float(r), 1), int(l)]
         for x, y, z, hh, r, l in zip(px, py, zmaa, L[:, 2], rad, laji)]
 json.dump({'lahde': 'Maanmittauslaitos, laserkeilaus 2011 ja korkeusmalli 2 m (CC BY 4.0), ortokuva 2024 (CC BY 4.0)',

@@ -10,6 +10,12 @@ PUUT, DEM, ULOS = A[:3]
 ORIGO = (599993.0, 6860483.0); LEHTI = (596000.0, 6858000.0, 602000.0, 6864000.0); SADE = 2000.0; VESI_H = 75.7
 TASOT = {'kevyt': 3500, 'normaali': 10000, 'huippu': 25000}
 j = json.load(open(PUUT)); P = np.array(j['puut'])
+mz = os.path.join(os.path.dirname(PUUT), 'maasto-z.npz')
+if os.path.exists(mz):  # juuret maaston lopulliselle pinnalle (rantavyöhyke laskettu, ymparisto.py)
+    g = np.load(mz); zz = g['z']; fx = np.clip((P[:, 0] - float(g['x0'])) / float(g['res']), 0, zz.shape[1] - 1.001); fy = np.clip((float(g['y0']) - P[:, 1]) / float(g['res']), 0, zz.shape[0] - 1.001)
+    ix, iy = fx.astype(int), fy.astype(int); tx, ty = fx - ix, fy - iy
+    P[:, 2] = zz[iy, ix] * (1 - tx) * (1 - ty) + zz[iy, ix + 1] * tx * (1 - ty) + zz[iy + 1, ix] * (1 - tx) * ty + zz[iy + 1, ix + 1] * tx * ty
+    P = P[P[:, 2] > -6.9]  # vedenrajaan jääneet pois
 et = np.hypot(P[:, 0], P[:, 1]); P = P[np.argsort(et)]
 j['puut'] = [[round(float(v), 2) if i < 5 else int(v) for i, v in enumerate(r)] for r in P]
 j['tasot'] = TASOT; j['atlas'] = 'puukortit.json'

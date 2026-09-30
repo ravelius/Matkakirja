@@ -17,6 +17,7 @@ KOLMIOT = [int(x) for x in (A[A.index('--kolmiot') + 1] if '--kolmiot' in A else
 # (lähemmät puut ovat kortteja; 1.10.). Latvuspinta = 0,85 × latvuskorkeus 4 m:n maksimi + tasoitus.
 LATVUS = A[A.index('--latvus') + 1] if '--latvus' in A else None
 LATVUS_R = float(A[A.index('--latvus-r') + 1]) if '--latvus-r' in A else 520.0
+N1500 = A[A.index('--n1500') + 1] if '--n1500' in A else None  # ymparisto_n1500.py: kaupunki metsäksi
 LOHKOT = 2   # 2 × 2 lohkoa normaalissa ja huipussa (Siirtoseppä: näkymärajaus), kevyessä yksi
 NIMET = ['huippu', 'normaali', 'kevyt']
 LEHTI = (596000.0, 6858000.0, 602000.0, 6864000.0)   # N5311A: E0, N0, E1, N1
@@ -41,7 +42,36 @@ xs = LEHTI[0] + (np.arange(c0, c1 + 1) + 0.5) * RES - ORIGO[0]
 ys = LEHTI[3] - (np.arange(r0, r1 + 1) + 0.5) * RES - ORIGO[1]
 X, Y = np.meshgrid(xs, ys)
 maa = Z > VESI_H + 0.05
-z = np.where(maa, Z - VESI_H + VESI_Z, VESI_Z - 1.2)  # ranta viettää veden alle: vedenpinta leikkaa pehmeän rantaviivan (ei 2 m:n portaita)
+if N1500:
+    # Aikakerros n1500: kaupunkimaskin kapeat maakaistaleet (pengertiet, siltojen maatuet, laiturit) vedeksi:
+    # avaus 10 m (kaventaa ja levittää maata), vain maskin sisällä.
+    MKd = np.load(N1500)['maski'][::-1]  # 1 m, rivi 0 = pohjoinen
+    iyy = np.clip((np.arange(r0, r1 + 1) - int((LEHTI[3] - (ORIGO[1] + SADE)) / RES)) * int(RES), 0, MKd.shape[0] - 1)
+    ixx = np.clip((np.arange(c0, c1 + 1) - int((ORIGO[0] - SADE - LEHTI[0]) / RES)) * int(RES), 0, MKd.shape[1] - 1)
+    mk2 = MKd[iyy][:, ixx]
+    def _morf(m, k, ja):
+        for _ in range(k):
+            q = np.pad(m, 1, constant_values=ja); nb = [q[a:a + m.shape[0], b:b + m.shape[1]] for a in range(3) for b in range(3)]
+            m = np.logical_and.reduce(nb) if ja else np.logical_or.reduce(nb)
+        return m
+    avattu = _morf(_morf(maa, 5, True), 5, False)
+    ennen = maa.sum(); maa = np.where(mk2, avattu & maa, maa)
+    print(f'YMP: n1500 kapeat maakaistaleet vedeksi {int(ennen - maa.sum())} ruutua')
+# Ranta (1.10., Päätoimittajan havainnot): järven rantatörmä (1–2 m) putosi lähes pystysuoraan ja näytti paksulta laatalta.
+# Etäisyys rantaan molemmin puolin (8-naapurin laajennus, ruutuina): maalla RANTA_M m:n vyöhyke laskee pehmeästi
+# (smoothstep) vedenpinnan tasolle, vedessä pohja viettää loivasti (0,25 m/m, enintään 3 m).
+def etaisyys(m, n_max):
+    et = np.where(m, 0, n_max + 1).astype(np.float32); r = m.copy(); ny_, nx_ = m.shape
+    for k in range(1, n_max + 1):
+        q = np.pad(r, 1); uusi = np.logical_or.reduce([q[a:a + ny_, b:b + nx_] for a in range(3) for b in range(3)]) & ~r
+        et[uusi] = k; r |= uusi
+    return et
+RANTA_M = 10.0
+d_maa = etaisyys(~maa, int(RANTA_M / RES)) * RES      # maaruudun etäisyys veteen
+d_vesi = etaisyys(maa, 6) * RES                         # vesiruudun etäisyys maahan
+t = np.clip(d_maa / RANTA_M, 0, 1); t = t * t * (3 - 2 * t)
+z_maa = VESI_Z + 0.05 + (Z - VESI_H - 0.05) * t
+z = np.where(maa, z_maa, VESI_Z - np.minimum(3.0, 0.25 * d_vesi))
 if LATVUS:
     C = np.load(LATVUS)  # 1 m, rivi 0 = etelä (N0), sarake 0 = länsi (E0), E0/N0 = ORIGO − SADE
     k = int(round(RES)); C = C[:C.shape[0] // k * k, :C.shape[1] // k * k].reshape(C.shape[0] // k, k, C.shape[1] // k, k).max((1, 3))
@@ -55,6 +85,7 @@ if LATVUS:
     print(f'YMP: latvuspinta yli {LATVUS_R:.0f} m, keskikorkeus metsässä {np.mean(C[(C > 3) & maa]):.1f} m')
 print(f'YMP: DEM {nx}×{ny} ruutua ({RES} m), maata {maa.mean():.2f}, korkeus {Z.max() - VESI_H:.1f} m vedestä')
 
+np.savez_compressed(os.path.join(ULOS, 'maasto-z.npz'), z=np.where(maa, z_maa, VESI_Z - 0.5).astype(np.float32), x0=xs[0], y0=ys[0], res=RES)  # puiden juuret (jalki)
 # --- pinnat: ruutu mukaan, jos jokin kulma on maata (rannan reuna jatkuu veden alle) ja ruutu ei ole kuoren alueella ---
 kulma_maa = maa[:-1, :-1] | maa[1:, :-1] | maa[:-1, 1:] | maa[1:, 1:]
 cx = (X[:-1, :-1] + X[1:, 1:]) / 2; cy = (Y[:-1, :-1] + Y[1:, 1:]) / 2
@@ -87,13 +118,62 @@ oy0 = int(round((LEHTI[3] - (N1 + ORIGO[1])) / ORES)); oy1 = int(round((LEHTI[3]
 op = np.empty(ow * oh * 4, np.float32); oim.pixels.foreach_get(op); op = op.reshape(oh, ow, 4)[::-1]  # rivi 0 = pohjoinen
 raj = op[oy0:oy1, ox0:ox1]; del op; bpy.data.images.remove(oim)
 print(f'YMP: ortokuva {raj.shape[1]}×{raj.shape[0]} px ({ORES} m/px)')
+# Vesipikselit täytetään lähimmän maan värillä (push-pull): rannan loiva vyöhyke ulottuu veteen, ja ortokuvan tumma
+# vesi piirsi siihen paksun tumman reunan (1.10.). Maa-maski DEM:stä, rannalta 1,5 m sisään (sekapikselit pois).
+import sys as _s; _s.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from kuori_tex import push_pull
+K = 8192
+k8 = bpy.data.images.new('ymparisto-8k', raj.shape[1], raj.shape[0]); k8.pixels.foreach_set(np.ascontiguousarray(raj[::-1]).ravel()); k8.scale(K, K)
+del raj
+px8 = np.empty(K * K * 4, np.float32); k8.pixels.foreach_get(px8); px8 = px8.reshape(K, K, 4)[::-1]  # rivi 0 = pohjoinen
+iy = np.clip((np.arange(K) + 0.5) / K * ny, 0, ny - 1).astype(int); ix = np.clip((np.arange(K) + 0.5) / K * nx, 0, nx - 1).astype(int)
+mm = maa[iy][:, ix]
+for _ in range(3):
+    q = np.pad(mm, 1, constant_values=True); mm = np.logical_and.reduce([q[a:a + K, b:b + K] for a in range(3) for b in range(3)])
+px8[..., :3] = np.where(mm[..., None], px8[..., :3], push_pull(px8[..., :3], mm)); px8[..., 3] = 1
+if N1500:
+    # Kaupunkimaskin alue metsäksi: ortokuvan luonnonmetsästä (latvus > 12 m, ei maskissa) 48 m:n laattoja
+    # satunnaisin siirroin ja 6 m:n sulautuksella; reuna sulautetaan 5 m:n matkalla.
+    g = np.load(N1500); MK = g['maski']  # 1 m, rivi 0 = etelä
+    Ck = np.load(LATVUS) if LATVUS else None
+    jy = np.clip(((np.arange(K) + 0.5) / K * MK.shape[0]).astype(int), 0, MK.shape[0] - 1)
+    mk8 = MK[::-1][jy][:, jy]  # rivi 0 = pohjoinen, K × K
+    lahde = mm & ~mk8
+    if Ck is not None: lahde &= (Ck[::-1][jy][:, jy] > 6)
+    T = int(48 / (4000.0 / K)); F = int(6 / (4000.0 / K)); rng = np.random.default_rng(21); TT = T + 2 * F
+    kirkas = px8[..., :3].mean(-1) > 0.42  # mökkien katot ym. vaaleat pisteet lähdemetsästä pois
+    ok_l = (lahde & ~kirkas).astype(np.int32); I = np.pad(ok_l.cumsum(0).cumsum(1), ((1, 0), (1, 0)))
+    ly, lx = np.mgrid[0:K - TT:16, 0:K - TT:16]; ly = ly.ravel(); lx = lx.ravel()
+    tays = (I[ly + TT, lx + TT] - I[ly, lx + TT] - I[ly + TT, lx] + I[ly, lx]) >= 0.9 * TT * TT  # laatta lähes kokonaan metsää
+    ly, lx = ly[tays], lx[tays]
+    print(f'YMP: n1500 lähdelaattoja {len(ly)}')
+    synt = np.zeros((K, K, 3), np.float32); wsum = np.zeros((K, K), np.float32)
+    ramp = np.minimum(1, np.minimum(np.arange(T + 2 * F) + 1, np.arange(T + 2 * F)[::-1] + 1) / F).astype(np.float32); wt = ramp[:, None] * ramp[None, :]
+    nb = K // T; lohko = mk8[:nb * T, :nb * T].reshape(nb, T, nb, T).any((1, 3))  # laatta jokaiseen lohkoon, jossa on maskia
+    yy, xx = np.nonzero(lohko); yy *= T; xx *= T
+    kuva8 = px8  # rivi 0 = pohjoinen (vesipikselit jo täytetty)
+    for y0, x0 in zip(yy, xx):
+        i = rng.integers(len(ly)); sy, sx = ly[i], lx[i]
+        ty0, tx0 = y0 - F, x0 - F; a0, b0 = max(ty0, 0), max(tx0, 0); a1, b1 = min(ty0 + T + 2 * F, K), min(tx0 + T + 2 * F, K)
+        pala = kuva8[sy + (a0 - ty0):sy + (a1 - ty0), sx + (b0 - tx0):sx + (b1 - tx0), :3]; w_ = wt[a0 - ty0:a1 - ty0, b0 - tx0:b1 - tx0]
+        synt[a0:a1, b0:b1] += pala * w_[..., None]; wsum[a0:a1, b0:b1] += w_
+    synt /= np.maximum(wsum, 1e-6)[..., None]
+    reuna = mk8.astype(np.float32)
+    for _ in range(int(5 / (4000.0 / K))):
+        q = np.pad(reuna, 1, mode='edge'); reuna = sum(q[a:a + K, b:b + K] for a in range(3) for b in range(3)) / 9
+    reuna = np.where(mk8, np.maximum(reuna, 0.999), reuna)
+    kuva8[..., :3] = kuva8[..., :3] * (1 - reuna[..., None]) + synt * reuna[..., None]
+    del synt
+    print(f'YMP: n1500 kaupunki metsäksi ({mk8.mean():.2f} tekstuurista, {len(yy)} laattaa)')
+k8.pixels.foreach_set(np.ascontiguousarray(px8[::-1]).ravel()); del px8
+print(f'YMP: vesipikselit täytetty maan värillä ({(~mm).mean():.2f})')
 kuvat = {}
 for koko in (8192, 4096, 2048):
-    k = bpy.data.images.new(f'ymparisto-{koko // 1024}k', raj.shape[1], raj.shape[0])
-    k.pixels.foreach_set(np.ascontiguousarray(raj[::-1]).ravel()); k.scale(koko, koko)
+    k = k8 if koko == K else k8.copy()
+    if koko != K: k.scale(koko, koko)
+    k.name = f'ymparisto-{koko // 1024}k'
     k.filepath_raw = os.path.join(ULOS, f'ymparisto-{koko // 1024}k.jpg'); k.file_format = 'JPEG'; k.save(quality=90)
     kuvat[koko] = k
-del raj
 mat = bpy.data.materials.new('ymparisto'); mat.use_nodes = True; nt = mat.node_tree
 bsdf = nt.nodes['Principled BSDF']; tex = nt.nodes.new('ShaderNodeTexImage'); tex.image = kuvat[4096]
 nt.links.new(tex.outputs['Color'], bsdf.inputs['Base Color']); bsdf.inputs['Roughness'].default_value = 0.9
