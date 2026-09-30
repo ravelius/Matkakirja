@@ -820,6 +820,11 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "cupolaaani":
+                    // Cupolan äänikerrokset ilman kyytiä: paalle | pois | tila (CupolaAani.cs).
+                    if (loput == "paalle") CupolaAani.Tila(true);
+                    else if (loput == "pois") CupolaAani.Tila(false);
+                    return CupolaAani.Raportti();
                 case "omistaja":
                     // Kävijälaskurin omistajamerkki (Kaynti.cs): 1 = tämä laite on omistajan, ei lasketa kävijäksi.
                     if (loput == "1" || loput == "0") { PlayerPrefs.SetInt(Kaynti.OmistajaAvain, loput == "1" ? 1 : 0); PlayerPrefs.Save(); }
