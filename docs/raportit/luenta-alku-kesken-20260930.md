@@ -68,3 +68,23 @@ Päähypoteesi: laitteella pakattu mp3 puretaan soiton aikana (mahdollisesti lai
 purkukohta eroaa Unityn ilmoittamasta. Ehdokaskorjaus linssiseppa2/luenta-pcm (4426b7a6): puhe PCM:ksi jo avauksessa
 (compressed = false), vertailu `puhe pakattu 1`. Todennus: iPadin laitteistoääni USB:llä (Pelikoodarin IpadTallenne,
 omistajan TCC-lupa) tai omistajan laite + kehitysversio (asennuslupa Natiivisepälle).
+
+## Päivitys klo 11.30 — pakattu mp3 pääepäiltynä, FMOD-tason mittari
+
+- **Aikajärjestys:** puhe ja soitin siirtyivät pakattuun muistiin (`DownloadHandlerAudioClip.compressed = true`) proto-commitissa
+  4879c355 24.9. (build 22). Kaikki omistajan kohta-oireet ovat sen jälkeen: 27.9. TF 1.0.32 "luenta pomppasi kohtien
+  yli", 28.9. 1.0.39 "noin 15 s päästä hyppää alkuun" (isPlaying yhden ruudun epätosi), 29.9. noston 1. napautus alkoi
+  virkkeen puolivälistä ja 30.9. 1.0.64 isoisän alusta puuttuu 1–2 virkettä.
+- **Hyppy ei ole virkeraja:** Edinburghin kohta 6,63 s osuu keskelle sanaa "myyneet" (aikaleimat 6,30–6,70), eli
+  palalogiikka ja jatkokohta eivät selitä sitä. Iskulause (trailerin saapumispuhe) soi samalla Puhe-lähteellä ennen
+  luentoa, joten luennan Play on iskulauseen jälkeen, ja kohta 6,63 s kuuluu heti Play-hetkestä. Puhe-lähteen prioriteetti
+  on 0, joten virtuaaliääneksi siirtyminen on poissuljettu. Äänite on CBR 128 kbps ja ID3-otsake 45 tavua, joten kelausarvion
+  virhe on poissuljettu.
+- **FMOD-tason mittari ilman laitteistotallennetta:** verhomittarin puheväylän oma RMS (`AudioSource.GetOutputData` = FMOD:n
+  purkama sisältö) kohdistetaan äänitteen RMS-verhoon (`verho_kohdistus.py`). Simulaattorissa pakattuna: Barcelona r 0,99
+  siirtymällä 0 s ja Marseille (400 ms:n ruudut) r 0,84 siirtymällä +0,14 s, eli purin soittaa ilmoitettua kohtaa.
+- **Laitteistotason mittari:** `kohdistus.py` (10 ms:n dB-verhot, Pearson) toistaa omistajan tallenteen tuloksen (isoisä
+  kohdasta 6,63 s, iskulause alusta).
+- **Seuraavaksi:** PCM on 1.0.68-junassa (de11ce65). iPad Pro 13 -laitekäännös 4426b7a6 (Natiiviseppä) → A/B `puhe pakattu 1`
+  vs `0` Lontoo → Edinburgh, musiikki ja maisema päällä, ABAB. FMOD-tason tulos tulee verhoriviltä. Laitteistotaso saadaan
+  IpadTallenteella, kun iPad on kytketty suoraan Maciin (USB 2 -keskittimen takana '!dev').
