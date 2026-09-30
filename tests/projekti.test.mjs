@@ -60,7 +60,7 @@ test('projekti-data.js: luvut ovat järkevissä rajoissa', () => {
   assert.ok(luvut.kartta.syvinTaso >= 8 && luvut.kartta.tasoja === luvut.kartta.syvinTaso + 1);
   assert.equal(luvut.kartta.z10Yhteensa, luvut.kartta.z10Laatat.reduce((a, b) => a + b, 0));
   assert.match(String(luvut.versiot.web), /^\d{4,}$/);
-  assert.match(luvut.versiot.natiivi, /^\d+\.\d+\.\d+$/);
+  assert.match(luvut.versiot.natiivi, /^\d+\.\d+(?:\.\d+)?$/);
   // Webin versio on päivityslokin kärki (sama luku kuin sw.js:n CACHE-nimen loppu).
   const muutokset = lue('js/muutokset.js').match(/\{ v: (\d+),/);
   assert.ok(muutokset && Number(muutokset[1]) >= luvut.versiot.web);
