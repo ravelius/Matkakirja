@@ -3068,5 +3068,40 @@ export const MAAKUNTIEN_PULU = {
       { q: "Mikä saigan nenässä on niin erikoista?", a: "Saigan sieraimet ovat turvonneet ja osoittavat alaspäin, mikä antaa antilooppi-paralle sen omalaatuisen ilmeen. Rakenteen uskotaan auttavan suodattamaan pölyä aroilla vaelluksen aikana." },
       { q: "Mitä lamppuja Zul-juhlana sytytetään?", a: "Zul muistaa gelug-koulukunnan perustajaa Tsongkhapaa (1357–1419). Perinteen mukaan jokainen tekee taikinasta pienen lampun ja asettaa siihen sydämiä oman ikänsä verran. Lamput sytytetään, kun ensimmäiset tähdet ilmestyvät taivaalle." },
     ],
+    "Arkhangel'sk": [
+      { q: "Miksi Arkangelin kaupunki oli aikoinaan niin tärkeä?", a: "Arkangelin kautta kulki 1500-luvun lopulta 1700-luvun alkuun Venäjän tärkein meriyhteys Länsi-Eurooppaan, ja satamassa kävi englantilaisia ja hollantilaisia kauppalaivoja. Pietarin perustaminen siirsi merikaupan Itämerelle." },
+      { q: "Mitä ovat Kenozeron maalatut taivaat?", a: "Kenozeron seudun puukirkkojen ja -kappelien katot on koristeltu maalatuilla taivailla, joissa on pyhimyksiä ja enkeleitä." },
+      { q: "Kuka on Arkangelin seudun tunnetuin poika?", a: "Mihail Lomonosov syntyi vuonna 1711 pomorikalastajan poikana Denisovkan kylässä Holmogorin lähellä. Hänestä tuli yksi Venäjän ensimmäisistä suurista tiedemiehistä, ja Holmogorissa on hänelle omistettu museo." },
+    ],
+    "Astrakhan'": [
+      { q: "Miksi Baskunchak-järven vesi on niin suolaista?", a: "Järven alla on suolakupoli, ja vesi on lähes kyllästynyttä suolasta. Järvi on noin 21 metriä merenpinnan alapuolella, ja sen vieressä kohoaa noin 150 metrin Bolshoje Bogdo -vuori." },
+      { q: "Mikä on Selitrennoje?", a: "Se on Volgan varrella Harabalin seudulla sijaitseva arkeologinen kohde, jonka uskotaan olleen Kultaisen ordan pääkaupunki Saray-Batu. Kaivauksia on tehty vuodesta 1965 alkaen." },
+      { q: "Kenen hallussa Astrahan oli ennen Venäjää?", a: "Alue kuului Kultaiselle ordalle ja sen jälkeen Astrahanin khaanikunnalle, kunnes Ivan Julma valtasi Astrahanin 1556. Nykyisessä muodossaan alue perustettiin 1943." },
+    ],
+    "Perm'": [
+      { q: "Kuinka pitkä on Kungurin jääluola?", a: "Luolaa on kartoitettu noin kuusi kilometriä, ja siinä on kymmeniä saleja ja järviä. Retkeilijöille avoinna on vain osa reitistä, ja salien lämpötila on keskimäärin noin viisi astetta." },
+      { q: "Mikä on Khokhlovka?", a: "Se on Kaman rannalla lähellä Permiä sijaitseva puuarkkitehtuurin ulkoilmamuseo, joka avattiin yleisölle 1980. Siellä on siirrettyjä puurakennuksia, muun muassa vuoden 1702 Kirkastumisen kirkko." },
+      { q: "Miksi Ust-Kachkassa hoidetaan ihmisiä suolaisella vedellä?", a: "Alueella on louhittu suolaa Stroganovien ajoista 1500-luvulta, ja maasta nousee bromia ja jodia sisältävää suolavettä. Ust-Kachkan kylpyläkeskus sijaitsee noin 50 kilometriä Permistä länteen." },
+    ],
+    "Ryazan'": [
+      { q: "Mitä Vanhalle Rjazanille tapahtui?", a: "Ruhtinaskunnan vanha pääkaupunki hävitettiin talvella 1237 Batu-kaanin joukkojen hyökkäyksessä eikä sitä koskaan rakennettu uudelleen. Pääkaupunki siirtyi myöhemmin nykyiselle paikalleen." },
+      { q: "Missä Venäjällä voi nähdä kaikki kurkilajit?", a: "Okan biosfäärialueella Rjazanin alueella, jonne perustettiin 1935 luonnonsuojelualue. Sen kurkien kasvatuslaitoksessa on Venäjän kurkilajit, ja siellä on pelastettu uhanalaista siperiankurkea." },
+      { q: "Onko Rjazanin alueella tataarikaupunki?", a: "On, Kasimov Oka-joen rannalla. Kaupunki oli 1400-luvulta Kasimovin khaanikunnan keskus, ja sen minareetti on vuodelta 1467. Khaanin moskeija ja Shah-Alin mausoleumi kuuluvat vanhaan tataarikortteliin." },
+    ],
+    "Tver'": [
+      { q: "Miksi Seliger-järveä kutsutaan Euroopan Baikaliksi?", a: "Seliger on iso, luonnonkaunis järvijärjestelmä, jossa on noin 160 saarta ja kanavilla yhdistettyjä vesiä. Nimi viittaa ihailuun, ei kokoon: Seliger on noin 212 neliökilometriä, siis paljon pienempi kuin Baikal." },
+      { q: "Mistä Torzhok on tunnettu matkailijoille?", a: "Torzhok on vanha kauppakaupunki Tvertsa-joen varrella. Se tunnetaan kultalangalla tehdystä kirjonnasta ja uusklassisista rakennuksistaan." },
+      { q: "Miksi Tverin nimi oli aikoinaan Kalinin?", a: "Neuvostoliitossa kaupunki ja alue nimettiin Mihail Kalininin mukaan. Vanha Tverin nimi palasi 1990-luvun alussa." },
+    ],
+    "Ul'yanovsk": [
+      { q: "Miksi Simbirskin nimi vaihtui Uljanovskiksi?", a: "Kaupunki nimettiin uudelleen 1924 Vladimir Leninin kunniaksi. Lenin syntyi siellä nimellä Vladimir Uljanov, ja Uljanov on hänen oikea sukunimensä." },
+      { q: "Kuinka pitkä silta Volgan yli on Uljanovskissa?", a: "Presidentin silta avattiin 2009, ja sen pituus on yli viisi kilometriä. Volga on siinä kohdassa hyvin leveä." },
+      { q: "Onko Uljanovskissa jotain lentokoneista kiinnostuneille?", a: "On: siviili-ilmailumuseo aukesi 1983 lentokoulun yhteyteen. Siellä on noin 40 konetta, ja yksi tunnetuimmista on Neuvostoliiton yliääninen matkustajakone Tu-144." },
+    ],
+    "Yaroslavl'": [
+      { q: "Mikä on Kultainen rengas ja miksi Jaroslavl kuuluu siihen?", a: "Kultainen rengas on Moskovan ympärillä olevien vanhojen kaupunkien matkailureitti. Jaroslavl kuuluu siihen, koska sen luostarit ja kirkot ovat säilyneet hyvin." },
+      { q: "Mitä Jaroslavlissa on Unescon listalla?", a: "Kaupungin historiallinen keskusta hyväksyttiin Unescon maailmanperintökohteeksi 2005. Erityisesti 1600-luvun kirkot ovat tunnettuja koristeellisista, värikkäistä julkisivuistaan." },
+      { q: "Miksi Uglich on tunnettu historiassa?", a: "Uglichissa löydettiin 15. toukokuuta 1591 kuolleena tsaarin nuori poika Dmitri. Tapaus liittyy Venäjän myöhempään sekaannusten aikaan, ja paikalla on nykyään kirkko ja museo." },
+    ],
   },
 };
