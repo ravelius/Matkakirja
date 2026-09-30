@@ -390,6 +390,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>"Ei linssiä" -rivin tunnus rivilistassa (web linssiRivi(null)).</summary>
         const string EiLinssia = "";
+        /// <summary>Yliviivatut taikalasit ("Ei linssiä": rivi ja esikatseluikkunan kuvake).</summary>
+        static string EiLinssiaIkoni => Ikonit.Viiva["taikalasit"] + "<path d=\"M5.4 5.4 20 20\"/>";
+        /// <summary>Linssin viivakuvake (rivi ja esikatseluikkuna, kun kuvaa ei ole).</summary>
+        static string LinssinIkoni(LinssiTiedot t) => string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni;
 
         /// <summary>Web linssiRivi(null, 'Ei linssiä'): yliviivatut taikalasit, esikatselu ilman kuvaa, toiminto sulkee linssin.</summary>
         void LuoEiLinssia()
@@ -401,7 +405,7 @@ namespace Matkakirja.Natiivi
                 if (esiId != EiLinssia)
                 {
                     Esikatsele(EiLinssia, b, tila, null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.",
-                        aukiId == null ? "Ota pois" : "Aktivoi", () => { Sulje(); Suljettava?.Invoke(); });
+                        aukiId == null ? "Ota pois" : "Aktivoi", () => { Sulje(); Suljettava?.Invoke(); }, EiLinssiaIkoni);
                     return;
                 }
                 Sulje();
@@ -409,7 +413,7 @@ namespace Matkakirja.Natiivi
             }, lista);
             b.tooltip = "Ei linssiä";
             b.AddToClassList("mk-linssirivi--aktivoi");
-            var ikoni = new SvgIkoni(Ikonit.Viiva["taikalasit"] + "<path d=\"M5.4 5.4 20 20\"/>");
+            var ikoni = new SvgIkoni(EiLinssiaIkoni);
             ikoni.AddToClassList("mk-linssirivi__ikoni");
             b.Add(ikoni);
             var nimirivi = Rakenne.El("mk-linssirivi__nimirivi", Rakenne.El("mk-linssirivi__tekstit", b, PickingMode.Ignore), PickingMode.Ignore);
@@ -435,7 +439,7 @@ namespace Matkakirja.Natiivi
                     // Aktiivisen linssin rivi: "Ota pois" (palaute 6, web).
                     bool paalla = id == aukiId;
                     Esikatsele(id, b, tila, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), paalla ? "Ota pois" : "Aktivoi",
-                        paalla ? () => { Sulje(); Suljettava?.Invoke(); } : () => { Sulje(); Valittu?.Invoke(id); });
+                        paalla ? () => { Sulje(); Suljettava?.Invoke(); } : () => { Sulje(); Valittu?.Invoke(id); }, LinssinIkoni(t));
                     return;
                 }
                 Sulje();
