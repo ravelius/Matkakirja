@@ -87,9 +87,10 @@ export const RAKENNUS = {
         teksti: 'Linnaa johti vouti, joka hoiti kuninkaan puolesta veroja, oikeutta ja puolustusta. Arki kulki tulisijojen, vahtivuorojen ja veneiden tahdissa.' },
       // tila: kierroksen aikana laiturin leikkausikkuna aukeaa lennon jälkipuoliskolla (laituri on kuoren sisällä; Siirtoseppä 1.1 (74)).
       { id: 'laituri', tila: 'laituri', kesto_s: 12, aani: null,
-        // Siirtoseppä 1.1 (73): elava.kohteesta laituri jäi kuoren taakse → laituri-tilan oma kamera, etäisyys × 1,6.
-        kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 23.2, fov: 38 },
-        kameraPysty: { kohde: [-19.5, -9.2, 39.5], atsimuutti: 200, korkeus: 26, etaisyys: 51.2, fov: 38 },
+        // Siirtoseppä 1.1 (75): tila-kenttä avaa leikkauksen, joten laituri-tilan kamerat sellaisinaan (× 1,6 jätti
+        // naapuritilojen geometriaa eteen).
+        kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 14.5, fov: 38, aukko: 0.8 },
+        kameraPysty: { kohde: [-19.5, -9.2, 39.5], atsimuutti: 200, korkeus: 26, etaisyys: 32, fov: 38, aukko: 0.8 },
         teksti: 'Linna jäi Turun rauhassa 1743 Venäjälle, ja vuonna 1812 Vanha Suomi liitettiin Suomen suuriruhtinaskuntaan. Nykyään Savonlinnan oopperajuhlat pidetään linnassa joka heinäkuu. Tutki linnaa: napauta huonetta.' },
     ],
   },
