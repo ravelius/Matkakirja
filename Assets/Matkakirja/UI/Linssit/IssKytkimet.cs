@@ -327,7 +327,7 @@ namespace Matkakirja.Natiivi
             /// <summary>Asento pelin tilasta (ei kutsu valittu-toimintoa); −1 = ei asentoa (kelaus).</summary>
             public void Aseta(int i, string teksti = null)
             {
-                if (i == asento && teksti == null) return;
+                if (i == asento && teksti == null && i >= 0 && i < asennot.Length && arvo.text == asennot[i]) return;
                 asento = i; PaivitaNuppi();
                 if (teksti != null) arvo.text = teksti;
             }

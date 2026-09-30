@@ -505,6 +505,42 @@ namespace Matkakirja.Linssit.Testit
             finally { Palauta(); }
         }
 
+        [Testi] static void CupolaYopuoleltaPaivanvaloonJaLiveTakaisin()
+        {
+            // Arvioija 1.1 (75), Päätoimittaja 30.9.: Cupola LIVEnä yöpuolella → kelaus päivänvaloon (PÄIVÄ), LIVE palauttaa yön.
+            try
+            {
+                var (l, y, n) = AvaaValekellolla();
+                for (int i = 0; i < 240 && !Avaruuskavely.Yopuolella(valeUtc); i++) valeUtc = valeUtc.AddMinutes(1);
+                Oleta.Tosi(Avaruuskavely.Yopuolella(valeUtc), "yöpuolen hetki löytyi");
+                var yo = valeUtc;
+                l.NapautaIss();
+                AjaUtc(l, y, 3.5);
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti);
+                Oleta.Tosi(!l.PaivanvaloSiirto, "seurannassa ei siirretä");
+                l.NapautaIss();
+                Oleta.Sama(KyydinTila.Ikkuna, l.Kyyti);
+                Oleta.Tosi(l.PaivanvaloSiirto && IssNyt.Simu.Kelaa, "Cupola: kelaus päivänvaloon");
+                AjaUtc(l, y, Simukello.KelausMaxS + 0.5);
+                var t = IssNyt.Kello();
+                Oleta.Tosi(Avaruuskavely.MaanAurinko(t, IssNyt.Paikka(t)) >= Avaruuskavely.PaivaRaja - 0.01, "perillä päivänvalossa");
+                Oleta.Tosi(n.Aika.Paiva && n.Aika.Nopeutettu && !n.Aika.Kelaa, "kilpi PÄIVÄ, PALAA meripihka");
+                Oleta.Tosi(l.PaivanvaloSiirto, "siirto jatkuu 1×:llä");
+                // LIVE-kytkin: todellinen hetki (yö), rivi kertoo yöpuolesta.
+                Oleta.Tosi(l.AsetaNopeus(1), "Palaa LIVE");
+                AjaUtc(l, y, Simukello.PaluuMaxS + 0.3);
+                Oleta.Tosi(IssNyt.Simu.Live && !l.PaivanvaloSiirto && !n.Aika.Paiva, "LIVE, ei siirtoa");
+                Oleta.Tosi(Math.Abs((IssNyt.Kello() - yo).TotalSeconds) < 30, "todellinen hetki");
+                Oleta.Sama("ISS on nyt Maan yöpuolella", n.Aika.Ylilento);
+                // A/B pois: ei siirtoa.
+                AstronauttiLinssi.CupolaPaivanvaloon = false;
+                l.NapautaIss(); AjaUtc(l, y, IssKyyti.IkkunaanS + 0.2);
+                l.NapautaIss();
+                Oleta.Tosi(!l.PaivanvaloSiirto && IssNyt.Simu.Live, "A/B 0: yö sellaisenaan");
+            }
+            finally { AstronauttiLinssi.CupolaPaivanvaloon = true; Palauta(); }
+        }
+
         [Testi] static void AvaruuskavelyKyydista()
         {
             // Avaruuskävely (29.9.): kyydistä ilmalukkoon, ulos kaiteelle (Ulkona), köysi, kelaus seuraavaan auringonnousuun

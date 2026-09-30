@@ -504,18 +504,20 @@ namespace Matkakirja.Linssit.Iss
         public readonly double Nopeus;
         /// <summary>Ylilennon rivi ("Venetsia · Ylilento klo 14.32, 3 h 12 min päästä") tai null (rivi piiloon).</summary>
         public readonly string Ylilento;
+        /// <summary>Cupola siirretty yöpuolelta päivänvaloon (kilpi PÄIVÄ, PALAA meripihka; LIVE palauttaa todellisen hetken).</summary>
+        public readonly bool Paiva;
 
-        public KyydinAika(bool nopeutettu, bool kelaa, int porras, double nopeus, string ylilento)
-        { Nopeutettu = nopeutettu; Kelaa = kelaa; Porras = porras; Nopeus = nopeus; Ylilento = ylilento; }
+        public KyydinAika(bool nopeutettu, bool kelaa, int porras, double nopeus, string ylilento, bool paiva = false)
+        { Nopeutettu = nopeutettu; Kelaa = kelaa; Porras = porras; Nopeus = nopeus; Ylilento = ylilento; Paiva = paiva; }
 
         /// <summary>Portaan valittu kerroin (web valittu): null kelauksen aikana, LIVE:nä 1.</summary>
         public int? Valittu => Kelaa ? (int?)null : Nopeutettu ? Math.Max(1, Porras) : 1;
 
         /// <summary>Kellon tila nyt (Nopeus lukee kellon ensin, jolloin juuri päättynyt kelaus näkyy jo).</summary>
-        public static KyydinAika Kellosta(Simukello s, string ylilento)
+        public static KyydinAika Kellosta(Simukello s, string ylilento, bool paiva = false)
         {
             double nopeus = s.Nopeus();
-            return new KyydinAika(!s.Live, s.Kelaa, (int)Math.Round(s.Kerroin), nopeus, ylilento);
+            return new KyydinAika(!s.Live, s.Kelaa, (int)Math.Round(s.Kerroin), nopeus, ylilento, paiva && !s.Live);
         }
     }
 

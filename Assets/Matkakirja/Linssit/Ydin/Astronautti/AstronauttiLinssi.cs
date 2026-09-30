@@ -277,7 +277,29 @@ namespace Matkakirja.Linssit.Astronautti
             var utc = Iss.IssNyt.Kello();
             if (!kyyti.Kyydissa) kentta0 = y.Nakokulma;
             kyyti.Napauta(Nykyinen(), Hetki(utc, Iss.IssNyt.Paikka(utc)), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
+            if (kyyti.Tila == Iss.KyydinTila.Ikkuna) PaivanvaloonJosYo(utc);
             tietoAika = -1;
+        }
+
+        /// <summary>
+        /// CUPOLA PÄIVÄNVALOON (arvioijan ensivaikutelma 1.1 (75), Päätoimittaja 30.9.2026: LIVE-hetken yöpuolella ikkunasta näkyi
+        /// vain harmaita pilvilaikkuja mustaa vasten): kun Cupola avataan LIVEnä ISS:n ollessa yöpuolella, kello kelaa lähimpään
+        /// päivänvaloon (Avaruuskavely.SeuraavaPaivanvalo, ≤ 3,6 s) ja jää 1×:ään: PALAA meripihkana, kilpi PÄIVÄ. LIVE-kytkin
+        /// palauttaa todellisen hetken, jolloin yöpuolella lukemassa on rivi "ISS on nyt Maan yöpuolella". A/B `astro kyyti paiva 0|1`.
+        /// </summary>
+        public static bool CupolaPaivanvaloon = true;
+        /// <summary>Kello siirretty päivänvaloon (kilpi PÄIVÄ); päättyy, kun aika palaa LIVE:ksi tai kyydistä poistutaan.</summary>
+        public bool PaivanvaloSiirto { get; private set; }
+        int paivaKelaus;
+
+        void PaivanvaloonJosYo(DateTime utc)
+        {
+            var simu = Iss.IssNyt.Simu;
+            if (!CupolaPaivanvaloon || !simu.Live || lento != null || !Iss.Avaruuskavely.Yopuolella(utc)) return;
+            var hetki = Iss.Avaruuskavely.SeuraavaPaivanvalo(Iss.IssNyt.Paikka, utc);
+            if (!hetki.HasValue) return;
+            paivaKelaus = simu.KelaaHetkeen(hetki.Value, vahennetty: y.VahennettyLiike);
+            PaivanvaloSiirto = true;
         }
 
         /// <summary>
@@ -335,6 +357,10 @@ namespace Matkakirja.Linssit.Astronautti
             // kun kelaus palaa LIVE:ksi (webissä pilleri jäi sekunniksi kertoimeen).
             var simu = Iss.IssNyt.Simu;
             bool live = simu.Live;
+            // Päivänvalosiirto päättyy, kun aika palaa LIVE:ksi, pelaaja valitsee nopeuden tai ylilennon, tai Cupola suljetaan.
+            if (PaivanvaloSiirto && (live || lento != null || (simu.Kelaa && simu.KelausId != paivaKelaus)
+                || (!simu.Kelaa && Math.Abs(simu.Kerroin - 1) > 1e-9) || kyyti.Tila != Iss.KyydinTila.Ikkuna))
+            { PaivanvaloSiirto = false; tietoAika = -1; }
             if (ilmoitettu != kyyti.Tila || live != ilmoitettuLive || nyt - tietoAika >= (live ? 1 : 0.25) || tietoAika < 0)
             {
                 ilmoitettu = kyyti.Tila;
@@ -342,9 +368,13 @@ namespace Matkakirja.Linssit.Astronautti
                 tietoAika = nyt;
                 double h = Iss.IssNyt.KorkeusKm(utc);
                 nakyma.Kyyti(kyyti.Tila, h, Iss.IssNyt.NopeusKmh(h), Iss.IssNyt.Laatu(utc) != Iss.RadanLaatu.Tarkka,
-                    Iss.KyydinAika.Kellosta(simu, YlilennonRivi()));
+                    Iss.KyydinAika.Kellosta(simu, YlilennonRivi() ?? YopuolenRivi(utc, live), PaivanvaloSiirto));
             }
         }
+
+        /// <summary>LIVEnä yöpuolella Cupolassa pieni rivi (Päätoimittaja 30.9.), muuten null.</summary>
+        string YopuolenRivi(DateTime utc, bool live) =>
+            live && kyyti.Tila == Iss.KyydinTila.Ikkuna && Iss.Avaruuskavely.Yopuolella(utc) ? "ISS on nyt Maan yöpuolella" : null;
 
         void LopetaKyyti()
         {

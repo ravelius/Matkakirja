@@ -1623,6 +1623,7 @@ namespace Matkakirja.Natiivi
                         }
                         // Läpikuulon kontrollikoe (Natiiviseppä 28.9.): kehys pelkkänä mustana taustana ilman kuvaa.
                         else if (a == "kehysmusta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.KehysMustana = osat[3] != "0";
+                        else if (a == "paiva" && osat.Length > 3) Matkakirja.Linssit.Astronautti.AstronauttiLinssi.CupolaPaivanvaloon = osat[3] != "0"; // A/B (30.9.)
                         else if (a == "horisonttikulma" && osat.Length > 3) Matkakirja.Linssit.Iss.IssKuvakulma.Horisonttikulma = osat[3] != "0"; // A/B (30.9.)
                         else if (a == "katse" && osat.Length > 3)   // katse <astetta vaakatason alapuolelle> | pois (tilan mukaan)
                             Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = double.TryParse(osat[3].Replace(',', '.'),

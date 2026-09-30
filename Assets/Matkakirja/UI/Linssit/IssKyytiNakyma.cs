@@ -564,7 +564,7 @@ namespace Matkakirja.Natiivi
                 poyta.Live.Meripihka = aika.Nopeutettu;
                 poyta.Live.Nimi.text = aika.Nopeutettu ? "PALAA" : "LIVE";
                 int ix = Array.IndexOf(Simukello.Nopeudet, aika.Porras);
-                poyta.Nopeus.Aseta(ix >= 0 && !aika.Kelaa ? ix : 0, aika.Kelaa ? "…" : null);
+                poyta.Nopeus.Aseta(ix >= 0 && !aika.Kelaa ? ix : 0, aika.Kelaa ? "…" : aika.Paiva ? "PÄIVÄ" : null);
                 // Arvokilvet (renderipaneeli; Päätoimittaja 30.9.): kohde, oma paikka, näkymä.
                 bool lennossa = tila == KyydinTila.Kohde;
                 if (!lennossa) omaLento = false;
