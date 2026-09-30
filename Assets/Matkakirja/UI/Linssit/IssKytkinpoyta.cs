@@ -81,15 +81,20 @@ namespace Matkakirja.Natiivi
             if (!(turvanLeveys > 0)) return;
             poytaLeveys = turvanLeveys;
             if (!float.IsNaN(alaReuna)) this.alaReuna = alaReuna;
-            string a = IssPaneeliKuvat.Asettelu(turvanLeveys);
+            // Asettelu laitteen lyhyemmästä sivusta: puhelin vaakana käyttää puhelimen @3x-kerroksia (ei tabletin @2x).
+            string a = IssPaneeliKuvat.Asettelu(RuudunKorkeus > 1f ? Mathf.Min(turvanLeveys, RuudunKorkeus) : turvanLeveys);
             if (!IssPaneeliKuvat.Paikalla(a)) a = null;
             if (a != asettelu) { if (asettelu != null) PurraKerrokset(); if (a != null) RakennaKerrokset(a); }
             if (asettelu != null)
             {
                 var g = IssPaneeliKuvat.Ryhma(asettelu);
                 // Ryhmä saa ylittää ruudun 8 pt kummaltakin puolelta (puhelimen olkapäät); kapeammalla ruudulla skaalataan.
+                // Matalalla vaakaruudulla (puhelin vaakana, korkeus < 520 pt) enintään 30 % korkeudesta, jotta horisontti ja
+                // ikkuna jäävät näkyviin (omistaja 30.9.: "jos on vaakanäyttö, niin saisiko horisonttia näkyviin").
                 float k = Mathf.Min(1f, turvanLeveys / (g.x - 16f));
-                float w = turvanLeveys / k;
+                if (RuudunKorkeus > 1f && RuudunKorkeus < 520f) k = Mathf.Min(k, 0.3f * RuudunKorkeus / g.y);
+                skaala = k;
+                float w = Mathf.Max(turvanLeveys / k, g.x);
                 Juuri.style.width = w; Juuri.style.height = g.y;
                 Juuri.style.left = (turvanLeveys - w) * 0.5f;
                 Juuri.style.bottom = -this.alaReuna;
@@ -121,8 +126,12 @@ namespace Matkakirja.Natiivi
         public string Asettelu => asettelu;
 
         /// <summary>Pöydän näkyvän yläreunan (kupu) etäisyys Juuren yläreunasta (pt, skaalattuna).</summary>
+        /// <summary>Ruudun (juuren) korkeus pt; asettaja IssKyytiNakyma ennen Asettelea.</summary>
+        public float RuudunKorkeus;
+
         public float YlaReuna => asettelu != null && IssPaneeliKuvat.Osa(asettelu, "kupu") is Rect k
-            ? Mathf.Max(0f, k.yMin) * Mathf.Min(1f, poytaLeveys / (IssPaneeliKuvat.Ryhma(asettelu).x - 16f)) : 0f;
+            ? Mathf.Max(0f, k.yMin) * skaala : 0f;
+        float skaala = 1f;
 
         static VisualElement Kuvakerros(VisualElement isa, Rect r, string nimi)
         {

@@ -375,6 +375,7 @@ namespace Matkakirja.Natiivi
                 // Horisonttikulma (IssKuvakulma.IkkunanKatse): ikkunaympyrän koko riippuu ruudun kuvasuhteesta.
                 if (juuri.layout.height > 1f) IssKuvakulma.RuudunSuhde = juuri.layout.width / juuri.layout.height;
                 AsetteleOhjaimet();
+                poyta.RuudunKorkeus = juuri.layout.height;
                 poyta.Asettele(poytaLeveys, r.w);
                 PaivitaKupu();   // ruutu kääntyi: pyöreän rajauksen kupu vaakaan tai pystyyn heti
                 PaivitaPulu();
