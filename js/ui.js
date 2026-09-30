@@ -17725,6 +17725,8 @@ export class UI {
         img.src = k.tiedosto;
         img.alt = k.teksti || '';
         img.loading = 'lazy';
+        // Pikkukuvan painopiste (esittely.json "rajaus", esim. radion paneeli alhaalla: "50% 90%").
+        if (typeof k.rajaus === 'string' && /^\d{1,3}% \d{1,3}%$/.test(k.rajaus)) img.style.objectPosition = k.rajaus;
         b.appendChild(img);
         b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
         rivi.appendChild(b);
