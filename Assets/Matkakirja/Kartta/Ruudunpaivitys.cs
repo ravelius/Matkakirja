@@ -70,16 +70,16 @@ namespace Matkakirja
         public static readonly List<Func<bool>> Aktiivinen = new List<Func<bool>>();
 
         /// <summary>
-        /// LÖYDÖS S10 (Natiiviseppä 26.9.2026): TÄYDEN tilan katto hertseinä liikkeen A/B-mittaukseen (120 vs 60 Hz,
-        /// lämpö); 0 = näytön taajuus, oletus 60 Hz (Fable 26.9., LiikeKattoOletus). Verhon aikana ei kattoa (Cesium etenee kehys kerrallaan).
-        /// Komento `ruutu liike 120|60|pois` (Komennot.cs); KehysMittari kirjaa sen riville ("liikeKatto").
-        /// </summary>
-        /// <summary>
         /// Näkymän oma katto (Hz, 0 = ei): raskas koko ruudun näkymä pyytää tasaisen taajuuden (Linssiseppä 30.9.2026, ISS-laitemittaus:
         /// Cupola on GPU:n rajalla ja heilui 40–60 fps:n välillä ja kuumensi iPadin; Päätoimittaja: Cupolaan tasainen 30 fps).
         /// Asettaja nollaa sen poistuessaan (IssKyytiNakyma).
         /// </summary>
         public static int NakymanKatto;
+        /// <summary>
+        /// LÖYDÖS S10 (Natiiviseppä 26.9.2026): TÄYDEN tilan katto hertseinä liikkeen A/B-mittaukseen (120 vs 60 Hz,
+        /// lämpö); 0 = näytön taajuus, oletus 60 Hz (Fable 26.9., LiikeKattoOletus). Verhon aikana ei kattoa (Cesium etenee kehys kerrallaan).
+        /// Komento `ruutu liike 120|60|pois` (Komennot.cs); KehysMittari kirjaa sen riville ("liikeKatto").
+        /// </summary>
         public static int LiikeKatto = LiikeKattoOletus;   // kehittäjäasetus luetaan Awakessa (PlayerPrefs ei staattisessa alustuksessa)
 
         /// <summary>
