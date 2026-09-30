@@ -9447,3 +9447,7 @@ Omistaja 30.9.2026: 'äänet ja taustamusiikki voisivat jäädä automaattisesti
 ## OMISTAJA: NOSTOJEN LUENTAAN MOOTTORIVALINTA xAI / ELEVENLABS-STRIIMI VERTAILUA VARTEN (30.9.2026 klo 16.13)
 
 Omistaja 30.9.2026: 'voisiko nostojen lukijaääniksi lisätä vaihtoehtoisesti myös elevenlabsin striimivaihtoehdot? pelissä voisi olla valinta samassa kohtaa missä puheääni valitaan että kumpaa moottoria käytetään ja sitten peli näyttäisi vain sen moottorin äänet valikossa. haluaisin vertailla pelissä kumpi on parempi.' Toteutus (Linssiseppä 2, natiivi ensin): puheäänen valintaan moottorivalinta (xAI nykyinen; ElevenLabs Flash v2.5 ja Multilingual v2 striimattuina Pöllö-workerin kautta, avain workerin salaisuutena), äänilista moottorin mukaan. Kustannusrajaus Päätoimittajan: ElevenLabs-moottori näkyy aluksi vain omistajan merkityillä laitteilla ja kehittäjätilassa, workerissa päiväkatto; arvioijat ja pelaajat pysyvät xAI:ssa, kunnes omistaja päättää vertailun jälkeen. Omistajan pyytämä ajonaikainen toiminto, ei erillistä generointilupaa per luenta.
+
+## TARKENNUS: LUENNAN ELEVENLABS-MOOTTORI VAIN v4 TURBO -STRIIMI (30.9.2026 klo 16.15)
+
+Omistaja 30.9.2026: 'käytä elevenlabsilta vain sitä v4 turbo striimiä, eikös se ole se uusin ja paras ja nyt vielä halvin kun on tarjous?' Moottorivalinta on xAI / ElevenLabs v4 Turbo (ei Flash v2.5:tä eikä Multilingual v2:ta). Linssiseppä 2 tarkistaa tarkan malli-id:n ja striimaus- ja suomituen ElevenLabsin models-rajapinnasta ennen käyttöönottoa.
