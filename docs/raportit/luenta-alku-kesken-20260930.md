@@ -43,3 +43,28 @@ Ratkaiseva koe omistajalle: sama saapuminen äänetön tila pois. Jos alku kuulu
 - Uusi puhe alkaa vasta, kun DSP-kello etenee (FMOD:n ulostulon uudelleenkäynnistys taustasiirtymän jälkeen); seisahdus
   lokiin "ulostulo seisoi … ms ennen soittoa".
 - Verhomittari (puhe verho 1|0) ja testikomento puhe hidas jäävät mittareiksi.
+
+## Päivitys klo 11 — omistajan tallenne: hyppy eteenpäin, ei mykkä jakso
+
+Omistaja kokeili äänetön tila pois: ei auta, joten Ambient + äänetön tila EI ole juurisyy. Istuntokorjaus
+(linssiseppa2/istunto) on silti oikea ja menee junaan.
+
+Omistajan näyttötallenne (iPhone 17 Pro, TF 1.0.64, kaiutin, Lontoo → Edinburgh, 39 s) ristikorrelaatiolla (10 ms verhot
+ja aaltomuoto) sekä 10 fps kehyksillä:
+
+| Tapahtuma | Tallenne | Näyttö |
+|---|---|---|
+| Iskulause | 10,12–15,71 s, kohdasta 0 loppuun (r 0,76–0,95) | traileri |
+| Hiljaisuus | 15,75–19,25 s (−66…−94 dBFS) | trailerin kuvat ja kirjaimet 18,8 s asti |
+| Kortti Edinburghiin | — | 19,2 s (verhon alla "Lontoo" 18,95 s asti) |
+| Isoisä kuuluu | 19,5 s → **äänitteen kohta 6,63 s** (r 0,84–0,99) | luentakuva 19,5 s |
+
+Isoisä käynnistyi noin 19,4 s ja kuului heti, mutta kohdasta 6,6 s: soittokohta hyppää alussa eteenpäin. Äänitteen
+alusta ei ole jälkeäkään tallenteessa (r ≈ 0). M5-iPadilla sama noin 20 s ("vain viimeiset sanat").
+Omassa iPad Pro 13:ssa (kehitysappi 1.0.61, Edinburgh kahdesti) ja simulaattorissa Unity ilmoittaa kohdan oikein
+(1. soiva 0,043 s, 1,5 s:n kohdalla 1,49), eikä sisäinen mittaus näe purkukohtaa.
+
+Päähypoteesi: laitteella pakattu mp3 puretaan soiton aikana (mahdollisesti laitteistopurkimella), ja todellinen
+purkukohta eroaa Unityn ilmoittamasta. Ehdokaskorjaus linssiseppa2/luenta-pcm (4426b7a6): puhe PCM:ksi jo avauksessa
+(compressed = false), vertailu `puhe pakattu 1`. Todennus: iPadin laitteistoääni USB:llä (Pelikoodarin IpadTallenne,
+omistajan TCC-lupa) tai omistajan laite + kehitysversio (asennuslupa Natiivisepälle).
