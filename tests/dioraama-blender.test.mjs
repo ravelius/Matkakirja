@@ -98,3 +98,26 @@ test('kuoren detalji (hybridi-PBR, menetelmä B): vain jos maski ja 4 kirjastoma
   assert.deepEqual(d.kanavat.map((k) => k.id), idt);
   for (const k of d.kanavat) assert.ok(k.diff.startsWith('blender/kirjasto/') && k.nor.endsWith('_nor_gl.jpg') && k.toisto_m > 0, k.id);
 });
+
+test('ympäristö (vaihe 5, n1500): vain jos kaikki tiedostot ovat blender.json:ssa; Siirtosepän kenttänimet', () => {
+  const perus = B.tiedostot.filter((t) => !t.polku.startsWith('ymparisto/'));
+  const ilman = kopio(RAKENNUS);
+  lisaaBlender(ilman, { ...B, tiedostot: perus });
+  assert.equal(ilman.ymparisto, undefined);
+  const tiedostot = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`])]
+    .map((p) => ({ polku: `ymparisto/${p}`, sha256: 'c'.repeat(64), tavuja: 1 }));
+  const vajaa = kopio(RAKENNUS);
+  lisaaBlender(vajaa, { ...B, tiedostot: [...perus, ...tiedostot.slice(1)] });
+  assert.equal(vajaa.ymparisto, undefined, 'osittainen ympäristö ei kelpaa');
+  const kanssa = kopio(RAKENNUS);
+  lisaaBlender(kanssa, { ...B, tiedostot: [...perus, ...tiedostot] });
+  const y = kanssa.ymparisto;
+  assert.deepEqual(Object.keys(y).sort(), ['hamara', 'horisontti', 'horisontti_kuva', 'huippu', 'kevyt', 'normaali', 'orto', 'puukortit',
+    'puukortit_tiedot', 'puut', 'syvyys'].sort());
+  assert.match(y.orto.huippu, /ymparisto-8k-4x4\.astcm$/); assert.match(y.orto.kevyt, /ymparisto-2k-4x4\.astcm$/);
+  assert.match(y.hamara.puukortit, /puukortit-hamara\.png$/);
+  assert.ok(y.syvyys.kuva.startsWith('blender/ymparisto/') && y.syvyys.pikseli_m > 1 && y.syvyys.kerroin_m > 0 && y.syvyys.origo.length === 2);
+  for (const t of ['huippu', 'normaali', 'kevyt']) assert.ok(y[t].startsWith('blender/ymparisto/'), t);
+});

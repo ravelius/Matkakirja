@@ -18,6 +18,10 @@ KOLMIOT = [int(x) for x in (A[A.index('--kolmiot') + 1] if '--kolmiot' in A else
 LATVUS = A[A.index('--latvus') + 1] if '--latvus' in A else None
 LATVUS_R = float(A[A.index('--latvus-r') + 1]) if '--latvus-r' in A else 520.0
 N1500 = A[A.index('--n1500') + 1] if '--n1500' in A else None  # ymparisto_n1500.py: kaupunki metsäksi
+# --avoin R --niitty <kuva>: linnan lähirannat R m:n säteellä niittyä (Päätoimittaja 1.10.: linnan ympäristö pidettiin
+# puuttomana puolustuksen, polttopuun ja laidunten vuoksi); siirtymä 100 m, kalliot (MTK 34100) säilyvät.
+AVOIN = float(A[A.index('--avoin') + 1]) if '--avoin' in A else 0.0
+NIITTY = A[A.index('--niitty') + 1] if '--niitty' in A else None
 LOHKOT = 2   # 2 × 2 lohkoa normaalissa ja huipussa (Siirtoseppä: näkymärajaus), kevyessä yksi
 NIMET = ['huippu', 'normaali', 'kevyt']
 LEHTI = (596000.0, 6858000.0, 602000.0, 6864000.0)   # N5311A: E0, N0, E1, N1
@@ -165,6 +169,27 @@ if N1500:
     kuva8[..., :3] = kuva8[..., :3] * (1 - reuna[..., None]) + synt * reuna[..., None]
     del synt
     print(f'YMP: n1500 kaupunki metsäksi ({mk8.mean():.2f} tekstuurista, {len(yy)} laattaa)')
+if AVOIN > 0 and NIITTY:
+    ni = bpy.data.images.load(NIITTY); nw = ni.size[0]; pn = np.empty(nw * nw * 4, np.float32); ni.pixels.foreach_get(pn)
+    pn = pn.reshape(nw, nw, 4)[::-1, :, :3]; MM = 4000.0 / K; LAATTA_M = 40.0  # niittylaatta 40 m (lähde 15 m, väljempi rakenne)
+    yyk, xxk = np.mgrid[0:K, 0:K].astype(np.float32)
+    xm = xxk * MM - SADE; ym = SADE - yyk * MM  # kuoren koordinaatit (rivi 0 = pohjoinen)
+    u = ((xm / LAATTA_M) % 1.0 * nw).astype(int); v = ((ym / LAATTA_M) % 1.0 * nw).astype(int)
+    niitty = pn[v, u]
+    rng = np.random.default_rng(31); kk = rng.standard_normal((K // 64 + 2, K // 64 + 2)).astype(np.float32)
+    kk = np.kron(kk, np.ones((64, 64), np.float32))[:K, :K]
+    for _ in range(3):
+        q = np.pad(kk, 16, mode='edge'); kk = sum(q[a:a + K, b:b + K] for a in range(0, 33, 16) for b in range(0, 33, 16)) / 9
+    niitty = niitty * (1 + 0.12 * kk / (kk.std() + 1e-6))[..., None]  # laikukkuus (laidun, kaski)
+    # sävy ortokuvan luonnonalueiden (niitty, kallio) mukaiseksi: vähemmän keltaista, hieman tummempi
+    harmaa = niitty.mean(-1, keepdims=True); niitty = (0.55 * niitty + 0.45 * harmaa) * np.array([0.78, 0.86, 0.80], np.float32)
+    et = np.hypot(xm, ym); w_ = np.clip((AVOIN + 100 - et) / 100, 0, 1) * mm
+    if N1500:  # kalliot (MTK 34100): harmaa kallio niityn sijaan, sama siirtymä
+        ka = np.load(N1500)['kallio'][::-1]; jyk = np.clip(((np.arange(K) + 0.5) / K * ka.shape[0]).astype(int), 0, ka.shape[0] - 1)
+        kal = ka[jyk][:, jyk]; niitty = np.where(kal[..., None], harmaa * np.array([0.95, 0.95, 0.92], np.float32) * 0.9, niitty)
+    px8[..., :3] = px8[..., :3] * (1 - w_[..., None]) + np.clip(niitty, 0, 1) * w_[..., None]
+    print(f'YMP: avoin vyöhyke {AVOIN:.0f} m niityksi ({(w_ > 0.5).mean():.3f} tekstuurista)')
+    del niitty, yyk, xxk, xm, ym, u, v
 k8.pixels.foreach_set(np.ascontiguousarray(px8[::-1]).ravel()); del px8
 print(f'YMP: vesipikselit täytetty maan värillä ({(~mm).mean():.2f})')
 kuvat = {}

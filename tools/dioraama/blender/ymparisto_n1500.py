@@ -35,7 +35,8 @@ M = np.zeros((n, n), bool)
 def polku(pts):  # metreistä ruutuihin (x → sarake, y → rivi etelästä)
     return np.stack([(pts[:, 0] - E0) / R, (pts[:, 1] - N0) / R], 1)
 
-def tayta(renkaat):  # even-odd -monikulmiotäyttö rivikeskipisteillä (reiät mukana)
+def tayta(renkaat, kohde=None):  # even-odd -monikulmiotäyttö rivikeskipisteillä (reiät mukana)
+    kohde = M if kohde is None else kohde
     kaikki = [polku(r) for r in renkaat]; yy = np.concatenate(kaikki)
     y0, y1 = max(int(yy[:, 1].min()), 0), min(int(yy[:, 1].max()) + 1, n)
     for y in range(y0, y1):
@@ -46,7 +47,7 @@ def tayta(renkaat):  # even-odd -monikulmiotäyttö rivikeskipisteillä (reiät 
         xs = np.sort(np.concatenate(xs))
         for x0, x1 in zip(xs[0::2], xs[1::2]):
             c0, c1 = max(int(math.ceil(x0 - 0.5)), 0), min(int(math.floor(x1 - 0.5)) + 1, n)
-            if c1 > c0: M[y, c0:c1] = True
+            if c1 > c0: kohde[y, c0:c1] = True
 
 def viiva(pts, lev):
     p = polku(pts); r = max(1, int(math.ceil(lev / 2 / R)))
@@ -90,5 +91,12 @@ def kavenna(m, k):
     return m
 M = kavenna(laajenna(M, 12), 12)
 M = laajenna(M, 1)
-np.savez_compressed(ULOS, maski=M, e0=E0, n0=N0, res=R)
+# Avoimen vyöhykkeen lähteet (Päätoimittaja 1.10.: linnan lähirannat niittyä ja harvaa mäntyä): pellot ja niityt
+# (32611, 32800) niittytekstuurin lähteeksi, kallioalueet (34100) säilyvät kalliona.
+NIITTY = np.zeros((n, n), bool); KALLIO = np.zeros((n, n), bool)
+for luokka, tyyppi, osat in lue(os.path.join(MTK, 'm_N5311L_p.shp')):
+    if luokka in ('32611', '32800'): tayta(osat, NIITTY)
+    elif luokka == '34100': tayta(osat, KALLIO)
+np.savez_compressed(ULOS, maski=M, niitty=NIITTY, kallio=KALLIO, e0=E0, n0=N0, res=R)
+print(f'N1500: niittylähde {NIITTY.mean():.3f}, kallio {KALLIO.mean():.3f}')
 print(f'N1500: kaupunkimaski {M.mean():.3f} ruuduista ({int(M.sum()) / 1e6:.2f} km²), kohteita {maara}', ULOS)

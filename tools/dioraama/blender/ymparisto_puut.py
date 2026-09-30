@@ -112,6 +112,16 @@ if N1500:  # maskin alueelle synteettiset puut (paikalliset maksimit jäävät s
 px = np.concatenate([px, lisa_x]); py = np.concatenate([py, lisa_y]); zmaa = np.concatenate([zmaa, lisa_z])
 L = np.concatenate([L, np.stack([np.zeros_like(lisa_h), np.zeros_like(lisa_h), lisa_h], 1)]); rad = np.concatenate([rad, 0.18 * lisa_h])
 
+# --- avoin vyöhyke (Päätoimittaja 1.10.): linnan lähirannat niittyä ja harvaa mäntyä. R m:n sisällä säilyy 6 % puista
+# (etusijalla korkeat männyt), siirtymä R…R+100 m lineaarisesti.
+AVOIN = lippu('--avoin', 0.0)
+if AVOIN > 0:
+    et_ = np.hypot(px, py); rng3 = np.random.default_rng(33)
+    pito = np.clip((et_ - AVOIN) / 100.0, 0, 1) * 0.94 + 0.06
+    pid = rng3.random(len(px)) < pito
+    L, px, py, zmaa, rad = L[pid], px[pid], py[pid], zmaa[pid], rad[pid]
+    print(f'PUUT: avoin vyöhyke {AVOIN:.0f} m, puita jäi {int(pid.sum())}/{len(pid)}', flush=True)
+
 # --- laji ortokuvan latvan väristä (kevät 2024: koivu vaalean vihreä, kuusi tumma, mänty väliltä) ---
 laji = np.zeros(len(L), np.int32)
 if ORTO != '-':
@@ -126,6 +136,7 @@ if ORTO != '-':
 if N1500:
     kaup = MK[np.clip(((py + ORIGO[1] - N0) / R).astype(int), 0, n - 1), np.clip(((px + ORIGO[0] - E0) / R).astype(int), 0, n - 1)]
     rng2 = np.random.default_rng(17); laji = np.where(kaup, rng2.choice([0, 1, 2], len(laji), p=[0.55, 0.38, 0.07]), laji)
+if AVOIN > 0: laji = np.where(np.hypot(px, py) < AVOIN, 0, laji)  # harvat puut niityllä mäntyjä
 puut = [[round(float(x), 2), round(float(y), 2), round(float(z), 2), round(float(hh), 1), round(float(r), 1), int(l)]
         for x, y, z, hh, r, l in zip(px, py, zmaa, L[:, 2], rad, laji)]
 json.dump({'lahde': 'Maanmittauslaitos, laserkeilaus 2011 ja korkeusmalli 2 m (CC BY 4.0), ortokuva 2024 (CC BY 4.0)',

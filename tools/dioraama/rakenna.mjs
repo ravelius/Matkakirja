@@ -349,6 +349,28 @@ export function lisaaBlender(rakennusJson, blender) {
         toisto_m: kirjasto[`materiaali/${id}`].toisto_m })),
     };
   }
+  // Ympäristö (laatusuunnitelman vaihe 5, aikakerros n1500; Siirtosepän kenttänimet 1.10.): Kyrönsalmen maasto
+  // laatutasoittain, ortokuva ASTC:nä (hämärä erikseen), puulista + korttiatlakset, horisonttirengas ja veden
+  // syvyyskartta. Vain jos kaikki ympäristön tiedostot ovat blender.json:ssa (vanha paketti ei muutu).
+  const Y = (p) => `ymparisto/${p}`;
+  const YMP = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`])];
+  if (YMP.every((p) => on.has(Y(p)))) {
+    const yt = { huippu: '8k', normaali: '4k', kevyt: '2k' };
+    const syv = JSON.parse(readFileSync(new URL('../../js/dioraama/rakennukset/olavinlinna/ymparisto-syvyys.json', import.meta.url), 'utf8'));
+    rakennusJson.ymparisto = {
+      ...Object.fromEntries(Object.keys(yt).map((t) => [t, B(Y(`ymparisto_${t}.glb`))])),
+      orto: Object.fromEntries(Object.entries(yt).map(([t, k]) => [t, B(Y(`ymparisto-${k}-4x4.astcm`))])),
+      puut: B(Y('puut.json')), puukortit: B(Y('puukortit.png')), puukortit_tiedot: B(Y('puukortit.json')),
+      horisontti: B(Y('horisontti.glb')), horisontti_kuva: B(Y('horisontti-1k.jpg')),
+      hamara: {
+        orto: Object.fromEntries(Object.entries(yt).map(([t, k]) => [t, B(Y(`ymparisto-hamara-${k}-4x4.astcm`))])),
+        puukortit: B(Y('puukortit-hamara.png')), horisontti_kuva: B(Y('horisontti-hamara-1k.jpg')),
+      },
+      syvyys: { kuva: B(Y('syvyys.png')), pikseli_m: syv.pikseli_m, kerroin_m: syv.kerroin_m, origo: syv.origo },
+    };
+  }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
