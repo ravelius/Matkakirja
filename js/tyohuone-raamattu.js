@@ -88,7 +88,11 @@ export const RAAMATTU = {
           + 'älä käytä niitä … aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä"): ElevenLabsilla '
           + 'käytetään aina v4-mallia (kaikki äänet toimivat sillä suomeksi), EI koskaan suomeksi merkattuja ääniä '
           + '(kirjaston language/accent = fi/finnish), ja äänet valitaan ensisijaisesti ElevenLabsin eniten '
-          + 'käytetyistä äänistä. Koskee lukijaa, Pulua, hahmoääniä ja kaikkia tulevia äänieriä.',
+          + 'käytetyistä äänistä. Koskee lukijaa, Pulua, hahmoääniä ja kaikkia tulevia äänieriä. POIKKEUS '
+          + 'KERTOJA (omistaja 30.9.2026 klo 23.5x: "kertoja on aina sama, eli isoisän ääni. se on suomi ääni, '
+          + 'mutta se toimii paremmin kuin muut. se pitää vain ajaa sillä vanhemmalla mallilla ei v4"): kertoja '
+          + 'on aina isoisän ääni (Viisas Kertoja) mallilla eleven_v3 — luennat, linssien ja linnan kertoja, '
+          + 'lukijan oletusääni. Omistajan erikseen valitsemat keittiön kokki ja vesipoika (30.9.) säilyvät.',
         'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
           + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
           + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '
