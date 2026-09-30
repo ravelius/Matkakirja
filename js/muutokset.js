@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2459, teksti: 'Raamattu: äänten generointi vain omistajan luva… (#3699)' },
   { v: 2458, teksti: 'Hahmojen ääninäytteet CI:ssä (#3703)' },
   { v: 2457, teksti: 'Olavinlinna, uusi rakenne: kertoja, infotaulut,… (#3701)' },
   { v: 2456, teksti: 'vie-dioraama: osoitin vain erillisellä käsiajol… (#3716)' },
