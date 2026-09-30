@@ -9359,3 +9359,7 @@ Päätoimittaja 30.9.2026 klo 01.49: RUS-maakuntasisältöön Uralin länsipuoli
 ## TARKENNUS: KOKORUUTU MYÖS VISAN KUVILLE (30.9.2026 klo 03.28)
 
 Päätoimittaja 30.9.2026 klo 03.28 (Laitetestaajan BUILD 61 -savuke, Pelikoodarin kysymys): visan kätkökuva, kysymyskuva ja lippu avautuvat samaan kokoruutuun kuin nostokortin kuva (web openLightbox). Täsmentää 26.9. linjausta A: kokoruutu kaikille kuville, joilla ei ole omaa selitettä; paperikehys tyhjällä selitealueella näyttää keskeneräiseltä.
+
+## TARKENNUS: ÄMPÄRISISÄLLÖN TODENNUS PUHTAALLA ASENNUKSELLA (30.9.2026 klo 03.44)
+
+Päätoimittaja 30.9.2026 klo 03.44 (omistajan löydös TF 1.0.61: Poikkileikkaus-linssissä vanha palikkadioraama): juurisyy Siirtoseppä — tuotannon olavinlinna-paketti oli rakenna.mjs:n palikkapaketti; Blender-toimitus (kuori, atlakset, hämärä, glb:t) oli vain paikallisessa peilissä, jota kaikki simulaattorikuvat käyttivät. Linja: ämpäristä tuleva sisältö todennetaan aina puhtaalla asennuksella ilman paikallisia peilejä; isot binäärit (Blender-kuori, glb, atlakset) eivät mene gittiin vaan vientiskriptillä uuteen muuttumattomaan hash-kansioon, osoitin viimeisenä askeleena, omistaja ajaa; fotogrammetrian CC BY 4.0 -tekijätieto (Senaatti-kiinteistöt) pelin tekijätietoihin ennen vientiä.
