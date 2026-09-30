@@ -13,6 +13,21 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2470, teksti: 'Olavinlinnan kuori v17: kaakon muurin juuri oma… (#3732)' },
+  { v: 2469, teksti: 'Dioraama: keittiön repliikkien mikseriotot aane… (#3727)' },
+  { v: 2468, teksti: 'Olavinlinna: kertojan laiturijakson vanhat kame… (#3726)' },
+  { v: 2467, teksti: 'Olavinlinnan kuori v16: romusiivous 26 aluetta… (#3724)' },
+  { v: 2466, teksti: 'TestFlight: ulkoisen ryhmän työnkulkuun vanhenn… (#3718)' },
+  { v: 2465, teksti: 'Pöllö-worker: lukijoille ElevenLabs v4 Turbo -v… (#3710)' },
+  { v: 2464, teksti: 'Apurahakortti: video pois ja neljän kuvan rivi (#3708)' },
+  { v: 2463, teksti: 'Maalehdet: 6 maata, artikkelit ja aihesivut (#3706)' },
+  { v: 2462, teksti: 'Kohdekaupunkien pisteet ja nimet rannan musteel… (#3630)' },
+  { v: 2461, teksti: 'Savukesarja: WebKit-rivit päivällä Chromiumilla (#3705)' },
+  { v: 2460, teksti: 'Testiselaimet mykistettyinä oletuksena (#3704)' },
+  { v: 2459, teksti: 'Raamattu: äänten generointi vain omistajan luva… (#3699)' },
+  { v: 2458, teksti: 'Hahmojen ääninäytteet CI:ssä (#3703)' },
+  { v: 2457, teksti: 'Olavinlinna, uusi rakenne: kertoja, infotaulut,… (#3701)' },
+  { v: 2456, teksti: 'vie-dioraama: osoitin vain erillisellä käsiajol… (#3716)' },
   { v: 2455, teksti: 'Olavinlinna: laatudiagnoosi ja -suunnitelma + t… (#3711)' },
   { v: 2454, teksti: 'Testi: iOS-testiversio saa olla kaksiosainen (#3713)' },
   { v: 2453, teksti: 'TestFlight: versio 1.1 + juokseva build-numero (#3700)' },

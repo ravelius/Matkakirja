@@ -38,12 +38,20 @@ export const AANET = {
   'kellot-kaukaa': { silmukka: false, voimakkuus: 1, kesto_s: 4.48, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Sound Effects)', versio: 1 },
 
   // --- Puhe: kokki, apulainen, vesipoika (repliikit) ---
-  'kokki-1': { silmukka: false, voimakkuus: 1, kesto_s: 4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'kokki-2': { silmukka: false, voimakkuus: 1, kesto_s: 4.88, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'apulainen-1': { silmukka: false, voimakkuus: 1, kesto_s: 4.08, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'apulainen-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.2, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'vesipoika-1': { silmukka: false, voimakkuus: 1, kesto_s: 4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
-  'vesipoika-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.04, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
+  // kuiva/kaiku/kaikuPitka (valinnaiset, Pelikoodari 30.9.): kehittäjätilan mikseritilan vaihtoehtoiset otot; '/'-alkuinen
+  // polku luetaan median juuresta (natiivi DioraamaData.cs). Pelaajan ääni ei muutu.
+  'kokki-1': { silmukka: false, voimakkuus: 1, kesto_s: 4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+    kuiva: '/aanet/mikseri/v1/kokki-1.kuiva.mp3', kaiku: '/aanet/mikseri/v1/kokki-1.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v1/kokki-1.kaiku-pitka.mp3' },
+  'kokki-2': { silmukka: false, voimakkuus: 1, kesto_s: 4.88, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+    kuiva: '/aanet/mikseri/v1/kokki-2.kuiva.mp3', kaiku: '/aanet/mikseri/v1/kokki-2.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v1/kokki-2.kaiku-pitka.mp3' },
+  'apulainen-1': { silmukka: false, voimakkuus: 1, kesto_s: 4.08, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+    kuiva: '/aanet/mikseri/v2/apulainen-1.kuiva.mp3', kaiku: '/aanet/mikseri/v2/apulainen-1.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v2/apulainen-1.kaiku-pitka.mp3' },
+  'apulainen-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.2, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+    kuiva: '/aanet/mikseri/v2/apulainen-2.kuiva.mp3', kaiku: '/aanet/mikseri/v2/apulainen-2.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v2/apulainen-2.kaiku-pitka.mp3' },
+  'vesipoika-1': { silmukka: false, voimakkuus: 1, kesto_s: 4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+    kuiva: '/aanet/mikseri/v1/vesipoika-1.kuiva.mp3', kaiku: '/aanet/mikseri/v1/vesipoika-1.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v1/vesipoika-1.kaiku-pitka.mp3' },
+  'vesipoika-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.04, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+    kuiva: '/aanet/mikseri/v1/vesipoika-2.kuiva.mp3', kaiku: '/aanet/mikseri/v1/vesipoika-2.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v1/vesipoika-2.kaiku-pitka.mp3' },
 
   // --- Puhe: Pulun reaktiot (yksi per hahmo) ---
   'pulu-kokki-r1': { silmukka: false, voimakkuus: 1, kesto_s: 4.16, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1 },
