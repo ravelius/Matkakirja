@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 19:01:** Levy 49 Gi (laskee 52→49; hälytys < 45; kierros 10 min), wt/ 33 (raja 20), muisti 73 % vapaa, kuorma 9/16/21, sim 0, työtilat ok. Viikko 67 % (5 h 9 %). Konteksti: oma 23 %. PÄÄTOIMITTAJA nollattu ~18.55 ja jatkaa omilla viesteillään (185 viestiä transkriptissä; Postivahdin aloitusviesti ei mennyt viestirajan takia, ei tarvita). Kävijälaskuri: 18.29 n=2, seuraava ~19.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Muistutus: ilmoita Päätoimittajalle hänen oman kontekstinsa ylittäessä 60 %.
+
 **Päivitetty 30.9. 18:45:** Levy 52 Gi (vakaa; hälytys < 45), wt/ 33 (raja 20, kasvaa 30→33), muisti 75 % vapaa, kuorma 21/27/18, sim 0, työtilat ok. Viikko 66 % (5 h 6 %). Konteksti: PÄÄTOIMITTAJA 84 % (kasvaa; ilmoitus estetty viestirajan takia). Kävijälaskuri: 18.29 n=2, seuraava ~19.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 30.9. 18:29:** Levy 53 Gi (vakaa; hälytys < 45), wt/ 30 (raja 20), muisti 73 % vapaa, kuorma 4/5/9, sim 0, työtilat ok. Viikko 66 % (5 h 5 %). Konteksti: PÄÄTOIMITTAJA 82 % (ennallaan; ilmoitus estetty viestirajan takia). Kävijälaskuri 18.29: n=2 (ennallaan; FI 1, US 1), seuraava ~19.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
