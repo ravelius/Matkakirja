@@ -283,6 +283,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Siirrossa paneelin alareunaan lisättävä kasvuvara (kaksi tekstiriviä).</summary>
         const float KasvuvaraPt = 40f;
         Rect edellinenYla;
+        bool lippuPeitossa;
         float ylaVakaaAlkaen;
 
         readonly Dictionary<string, List<(double Lat, double Lon)>> sisamaat = new Dictionary<string, List<(double Lat, double Lon)>>();
@@ -331,7 +332,14 @@ namespace Matkakirja.Natiivi
             // kasvulle, jotta tanko ei siirry kasvun aikana uudelleen.
             yla = Rect.MinMaxRect(yla.xMin, yla.yMin, yla.xMax, yla.yMax + KasvuvaraPt);
             var ala = Lipputanko.RuutuAlue;
-            if (!ala.HasValue || !PeittaaLipun(ala.Value, yla)) return;
+            bool peitossa = ala.HasValue && PeittaaLipun(ala.Value, yla);
+            if (peitossa != lippuPeitossa)
+            {
+                lippuPeitossa = peitossa;
+                Debug.Log($"MATKAKIRJA ui lipputanko: {(peitossa ? "paneelin alla" : "näkyvissä")} (paneeli {yla.xMin:0}–{yla.xMax:0} × {yla.yMin:0}–{yla.yMax:0} pt"
+                          + (ala.HasValue ? $", tanko {ala.Value.xMin:0}–{ala.Value.xMax:0} × {ala.Value.yMin:0}–{ala.Value.yMax:0} px)" : ", tanko piilossa)"));
+            }
+            if (!peitossa) return;
             if (Time.realtimeSinceStartup < seuraavaLippuSiirto) return;
             seuraavaLippuSiirto = Time.realtimeSinceStartup + 1f;
             if (!sisamaat.TryGetValue(iso, out var pisteet))
