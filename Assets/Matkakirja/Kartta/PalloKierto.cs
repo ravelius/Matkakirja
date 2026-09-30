@@ -150,6 +150,13 @@ namespace Matkakirja
         public static KuvaSumennus KuvaTaso { get; set; }
 
         /// <summary>
+        /// LINSSIN KUVASUMENNUS (Linssiseppä 1.10.2026; omistaja klo 00.0x Päätoimittajan kautta: "iss kuvien taustalla näkyvä
+        /// maapallo saisi olla vähän sumennettu"): astronautin kameran kuvanäkymän ajan pallo sumeaksi tällä hajonnalla (pt),
+        /// jotta kuva erottuu; 0 = pois. Toisin kuin <see cref="KuvaSumea"/>, toimii linssin aikana (LinssiAuki). Ei tummennusta.
+        /// </summary>
+        public static float LinssiKuvaSumennusPt;
+
+        /// <summary>
         /// Kokoruudun pysäytyskuva (sumea pallo jälkikäsittelyn jälkeen, pieni RenderTexture) tai null. UI näyttää sen
         /// kokoruudun näkymän taustana (scale-and-crop) <see cref="PysaytysValmis"/>-tapahtumasta
         /// <see cref="PysaytysPoistui"/>-tapahtumaan asti; tekstuuri vapautetaan heti PysaytysPoistuin jälkeen.
@@ -685,7 +692,8 @@ namespace Matkakirja
             // sumensi myös koneen, kun lento-alun luenta näytti isoisän kuvan (Laitetestaaja 24.9., iPhone, f6de924).
             // Kokoruudun kuva (löydös 132) vahvemmin kuin kortti.
             float kuvaPt = KuvaTaso == KuvaSumennus.Kokoruutu ? kokoruutuSumennusPt : kuvaSumennusPt;
-            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea && !vapaaKuvaus && !LinssiAuki ? kuvaPt : 0f;
+            float tavoite = porttiTila ? porttiSumennusPt : KuvaSumea && !vapaaKuvaus && !LinssiAuki ? kuvaPt
+                : LinssiAuki && LinssiKuvaSumennusPt > 0f ? LinssiKuvaSumennusPt : 0f;
             if (tavoite > 0f)
             {
                 sumennus ??= new PalloSumennus(GetComponent<Camera>(), sumennusMateriaali);

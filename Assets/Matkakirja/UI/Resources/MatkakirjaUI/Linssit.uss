@@ -586,19 +586,14 @@
 }
 
 .mk-astrokuva__kohdenappi {
-    width: 38px;
-    height: 38px;
-    min-height: 38px;
-    margin: 0 7px;
+    /* Omistaja 1.10.: kiekko 30 pt (oli 38) ja väkänen keskelle (Kuvanakyma.PiirraKohdenappi). Osuma-ala 44 pt, kiekko piirretään. */
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    margin: 0;
     padding: 0;
-    border-width: 1px;
-    border-radius: 19px;
-    border-color: rgba(93, 255, 168, 0.35);
-    background-color: rgba(6, 13, 10, 0.6);
-}
-
-.mk-astrokuva__kohdenappi:active {
-    background-color: rgba(93, 255, 168, 0.22);
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .mk-astrokuva__kohdenappi .mk-nappi__teksti {
