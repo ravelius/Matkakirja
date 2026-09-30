@@ -34,3 +34,16 @@ Natiivin aloitusportti ilman yläpalkkia, nahkapalkki ja pillerivalikko (natiivi
 3. Liiku: ei korjata nyt. Se on aiemmin kirjattu tietoinen poikkeama (turva-alue, Liiku +38 pt).
 4. Matkakirjan pikkukuvat neljäksi kuten webissä: Natiivi-UI yläpalkin jälkeen.
 5. Isot maan ja alueen nimet: Päätoimittaja välittää Karttasepälle polton jälkeen.
+
+## Uusinta 30.9. klo 14.10 (natiivi 1.0.71, iPhone 17, Marseille; `paapolku2.sh`)
+
+Kuvaparit: `/Users/Shared/Claude/proto-3d/lokit/natiivi-ui-paapolku/parit2/<näkymä>.png` (web vasemmalla).
+
+| Näkymä | Tulos |
+|---|---|
+| matkakirjakortti-auki | Täsmää: 4 pikkukuvaa kuten webissä. Laitetestaajan kolme kuvaa tulivat Pariisista, jonka merkinnässä on 3 kuvaa. |
+| kaupunkilehti-kansi | Täsmää: sää kahdella rivillä ikonin kanssa. Ateenan lyhyt rivi mahtuu yhdelle riville kuten webissäkin. |
+| kohtaaminen | Täsmää: alkukortti ja Aloita peli. |
+| visa | EROAA: natiivissa matkakirjan kortti jää auki visan taakse, ja sen teksti leikkautuu visakortin alle. Webissä kortti on pienennetty yhden rivin lapuksi. |
+| kaupunkikortti (`ui lisakaupunki lyon`) | EROAA: natiivissa Lyonin kuvan paikalla on harmaa laatikko 6 s jälkeen, kun webissä näkyy kaupungintalon kuva. Loki: "kuvia 1", valmis 19 ms. Syy selvitettävä. |
+| nostovisa | Sisältö täsmää. Natiivin kuvassa lukijan kysymys jää alareunaan, koska kappaletta ei vieritetty (web vierittää scrollIntoView'lla). Kyse on kaappauksesta, ei erosta. |
