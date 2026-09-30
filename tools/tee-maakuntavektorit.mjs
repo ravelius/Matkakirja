@@ -73,6 +73,8 @@
  * voi eriytyä. luettelo.json: maat, tiedostot, koot ja tarkistukset
  * (koko maailma 50 kt); mitat.json: sama taulukkona.
  */
+// Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
+import { krimUkrainalleAdmin0, krimUkrainalleAdmin1 } from './krim-ukrainalle.mjs';
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -716,6 +718,9 @@ export function lueNimet(kansio) {
 export function teeMaakuntavektorit(a) {
   const kerro = a.kerro ?? (() => {});
   const ne = JSON.parse(readFileSync(a.ne, 'utf8'));
+  // Admin-1: UA-43/UA-40 UKR:lle; admin-0-tila: Krimin monikulmio UKR:n renkaaseen.
+  if (ne.features.some((f) => f.properties.iso_3166_2)) krimUkrainalleAdmin1(ne);
+  else krimUkrainalleAdmin0(ne);
   const maittain = new Map();
   for (const f of ne.features) {
     const iso = piirteenIso(f.properties);
