@@ -678,5 +678,77 @@ export const MAASTOKOHTEET_PRT = [
     lahde: 'en-Wikipedia "Aveiro, Portugal", johdanto-osa sekä osiot "History", '
       + '"Geography", "Economy" ja "Architecture" (tarkistettu 11.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ C, 30.9.2026 — 2 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'sete-cidades',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-nosto-sete-cidades-4aee5c4b.jpg',
+      lyhyt: 'Vihreä ja sininen järvi Sete Cidadesin kalderassa.',
+      selite: 'Ylhäältä otetussa kuvassa vihreä järvi on etualalla ja sininen järvi taustalla kalderan seinämien ympäröimänä.',
+      lahde: 'Valokuva: Zappinggg2, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Zappinggg2',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lagoa_verde_e_Lagoa_azul.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Sete Cidades',
+    nimio: 'Sete Cidades',
+    tyyppi: 'jarvi',
+    kysymykset: [
+      'Mistä kahden järven värit tarun mukaan tulevat?',
+      'Kuinka suuri kaldera on?',
+    ],
+    korostukset: ['kaldera|kaldera'],
+    nappi: 'Vihreä ja sininen järvi tulivuoren sylissä',
+    // -25.7864 E / 37.855 N — en-Wikipedia "Lagoa das Sete Cidades" ja "Sete Cidades Massif", osiot "Geography", "Legend" ja "Caldera"
+    laudat: {
+      maailmankartta: { x: 4973.8, y: 1886.4 },
+    },
+    teksti: 'Sete Cidades on São Miguelin saaren länsiosassa Azoreilla sijaitseva kaldera, jonka '
+      + 'pohjalla on kaksi järveä. Kaldera on noin 6 x 5 kilometrin kokoinen, ja sen syvyys '
+      + 'vaihtelee lännen 200 metristä idän 500 metriin. Paikallisen taruston mukaan järvet, '
+      + 'Lagoa Verde ja Lagoa Azul, syntyivät vihreäsilmäisen prinsessan ja sinisilmäisen '
+      + 'paimenpojan kyynelistä. Järvi on 259 metrin korkeudella ja enimmillään 33 metriä '
+      + 'syvä.',
+    lahde: 'en-Wikipedia "Lagoa das Sete Cidades" ja "Sete Cidades Massif", osiot "Geography", '
+      + '"Legend" ja "Caldera" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'madeiran-laurisilva',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/prt-nosto-madeiran-laurisilva-b307a18d.jpg',
+      lyhyt: 'Sammaleiset laakeripuut sumussa Fanalin metsässä.',
+      selite: 'Sumuisessa metsässä kasvaa mutkaisia, sammaleen peittämiä puita nurmikkoisella rinteellä. Kuva on Fanalin metsästä.',
+      lahde: 'Valokuva: Artur Sienkiewicz \'85, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Artur Sienkiewicz \'85',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Laurisilva_of_Madeira.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Madeiran laurisilva',
+    nimio: 'Laurisilva',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka paljon laurisilvaa on jäljellä?',
+      'Milloin alue tuli maailmanperintökohteeksi?',
+    ],
+    korostukset: ['laurisilva|laurisilva'],
+    nappi: 'Sumuinen laakerimetsä Atlantin saarella',
+    // -17 E / 32.7667 N — en-Wikipedia "Laurisilva of Madeira", osiot "Distribution", "Ecology" ja "World Heritage Site"
+    laudat: {
+      maailmankartta: { x: 5266.7, y: 2079 },
+    },
+    teksti: 'Madeiran laurisilva on laakeripuiden hallitsema ikivihreä metsä, jota kasvaa saaren '
+      + 'pohjoisrinteillä 300–1 300 metrin ja eteläpuolella 700–1 600 metrin korkeudessa. '
+      + 'Jäljellä on noin 15 000 hehtaaria, enimmäkseen saaren pohjoispuolella. Kosteassa '
+      + 'metsässä kasvavat muun muassa Ocotea foetens ja Laurus novocanariensis, ja '
+      + 'kasvistoon kuuluu 66 kotoperäistä putkilokasvia. Paleobotaanisten tietojen mukaan '
+      + 'metsä on ollut saarella vähintään 1,8 miljoonaa vuotta. Unesco hyväksyi alueen '
+      + 'maailmanperintökohteeksi vuonna 1999.',
+    lahde: 'en-Wikipedia "Laurisilva of Madeira", osiot "Distribution", "Ecology" ja "World '
+      + 'Heritage Site" (tarkistettu 30.9.2026).',
+  },
 ];
 

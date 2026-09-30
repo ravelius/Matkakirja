@@ -161,4 +161,75 @@ export const MAASTOKOHTEET_MKD = [
     lahde: 'en-Wikipedia "Heraclea Lyncestis", osiot "History" ja "Archaeology" (tarkistettu '
       + '30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ C, 30.9.2026 — 2 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'mavrovon-jarvi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-mavrovon-jarvi-9e3ba21b.jpg',
+      lyhyt: 'Puoliksi veden peitossa oleva kirkko Mavrovon järvessä, taustalla rinteen taloja.',
+      selite: 'Kuvassa kirkon katto ja kellotorni nousevat tyynestä järvestä, ja veteen heijastuvat rannan rinteelle rakennetut talot.',
+      lahde: 'Valokuva: Ggia, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Ggia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20090714_Mavrovo_lake_church_summer.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    nimi: 'Mavrovon järvi ja Pyhän Nikolain kirkko',
+    nimio: 'Mavrovo',
+    tyyppi: 'jarvi',
+    kysymykset: [
+      'Kuinka syvä Mavrovon järvi on enimmillään?',
+      'Mikä kirkko on järvessä puoliksi veden peitossa?',
+    ],
+    korostukset: ['Pyhän Nikolain kirkko|Pyhän Nikolain kirkko'],
+    nappi: 'Kirkko, joka seisoo järvessä',
+    // 20.75 E / 41.68 N — en-Wikipedia "Mavrovo Lake", johdanto ja infolaatikko
+    laudat: {
+      maailmankartta: { x: 6525, y: 1736.4 },
+    },
+    teksti: 'Mavrovon järvi on tekojärvi Pohjois-Makedonian länsiosassa, alle sadan kilometrin '
+      + 'päässä Skopjesta. Sen pinta-ala on 1 370 hehtaaria, pisimmillään järvi on noin 10 '
+      + 'kilometriä ja syvimmillään 50 metriä. Pohjoisessa kohoavat Šar-vuoret ja etelässä '
+      + 'Bistran vuoret, joiden huiput ylittävät 2 500 metriä. Rannan tunnetuin nähtävyys on '
+      + 'Pyhän Nikolain kirkko, joka seisoo järvessä vain puoliksi veden peitossa. Alue on '
+      + 'kuulunut Mavrovon kansallispuistoon vuodesta 1952, ja kesällä järvellä uidaan, '
+      + 'soudetaan ja kalastetaan taimenia.',
+    lahde: 'en-Wikipedia "Mavrovo Lake", johdanto ja infolaatikko (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'kokinon-observatorio',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mkd-nosto-kokinon-observatorio-47e48a75.jpg',
+      lyhyt: 'Kivinen harjanne Kokinon huipulla, polku kallioiden välissä.',
+      selite: 'Kuvassa nousee jäkälän peittämä kallioharjanne, jonka lomassa kulkee polku, ja huipulla näkyy muutama kävijä.',
+      lahde: 'Valokuva: BrankaVV, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'BrankaVV',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ancient_observatory_Kokino,_Macedonia.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Kokino',
+    nimio: 'Kokino',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miltä ajalta Kokinon löydöt ovat?',
+      'Miksi observatoriotulkinta on kiistanalainen?',
+    ],
+    korostukset: ['aurinko-observatorioksi|aurinko-observatorioksi'],
+    nappi: 'Aurinko-observatorio vai sattumaa?',
+    // 21.9539 E / 42.2631 N — en-Wikipedia "Kokino", johdanto ja infolaatikko
+    laudat: {
+      maailmankartta: { x: 6565.1, y: 1713 },
+    },
+    teksti: 'Kokino on pronssikautinen arkeologinen kohde Tatićev Kamen -huipulla '
+      + 'Pohjois-Makedoniassa, noin 30 kilometrin päässä Kumanovosta. Alue sijaitsee 1 010–1 '
+      + '030 metrin korkeudessa, ja löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa. '
+      + 'Kahdella tasanteella sijaitseva kalliokohde tulkitaan pronssikautiseksi '
+      + 'aurinko-observatorioksi, ja alemmalla tasanteella on neljä kiviistuinta. Tulkinta on '
+      + 'kuitenkin kiistanalainen: asiantuntijoiden mukaan tähtäyspisteitä ja merkkejä on '
+      + 'niin paljon, että suuntaukset voivat olla sattumaa.',
+    lahde: 'en-Wikipedia "Kokino", johdanto ja infolaatikko (tarkistettu 30.9.2026).',
+  },
 ];

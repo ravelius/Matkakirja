@@ -711,5 +711,42 @@ export const MAASTOKOHTEET_NOR = [
     lahde: 'en-Wikipedia "Kjerag", osiot "Kjeragbolten", "Hiking" ja "BASE jumping" (tarkistettu '
       + '30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ C, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'lyngenin-alpit',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/nor-nosto-lyngenin-alpit-c72658a6.jpg',
+      lyhyt: 'Lumipeitteiset Kjostindane-huiput kohoavat Lyngenvuonon yllä.',
+      selite: 'Kuvassa lumen peittämät vuorenhuiput kohoavat tummansinisen vuonon takana kirkkaan sinistä taivasta vasten.',
+      lahde: 'Valokuva: Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ximonic (Simo Räsänen)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kjostindane_over_Lyngen_fjord,_2012_March.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Lyngenin Alpit',
+    nimio: 'Lyngenin Alpit',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka pitkä Lyngenin Alppien vuoristo on?',
+      'Mikä on vuoriston korkein huippu?',
+    ],
+    korostukset: ['Jiehkkevárri|Jiehkkevárri'],
+    nappi: 'Jäätiköitä pohjoisen vuonojen yllä',
+    // 20.1694 E / 69.7903 N — en-Wikipedia "Lyngen Alps", johdanto, "Geography" ja "Glaciers"
+    laudat: {
+      maailmankartta: { x: 6505.6, y: 394.9 },
+    },
+    teksti: 'Lyngenin Alpit on vuoristo Tromssan maakunnassa Pohjois-Norjassa, Tromssan '
+      + 'kaupungista itään. Se on noin 90 kilometriä pitkä ja 15–20 kilometriä leveä, ja se '
+      + 'ulottuu neljän kunnan alueelle. Vuoristoa rajaavat idässä Lyngenvuono ja lännessä '
+      + 'Ullsfjord. Korkein huippu Jiehkkevárri kohoaa 1 834 metriin, ja alueella on 140 '
+      + 'jäätikköä, joiden yhteispinta-ala on noin 141 neliökilometriä. Jäätikköjen ruokkima '
+      + 'Blåvatnet-järvi erottuu kirkkaan turkoosista väristään.',
+    lahde: 'en-Wikipedia "Lyngen Alps", johdanto, "Geography" ja "Glaciers" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];
 
