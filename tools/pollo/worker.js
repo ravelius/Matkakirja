@@ -171,8 +171,9 @@ export function puluElevenMalli(env) {
  * nostojen ja matkakirjan lukija voi pyytää moottoria 'eleven' (runko.moottori). Sama reitti ja malli kuin Pululla
  * (kutsuElevenPuhetta, eleven_v4_turbo, malli-id tarkistettu /v1/models 30.9.: suomi, TTS, 10 000 mrk/pyyntö).
  * Ääni suomea äidinkielenään puhuvien listalta (LUKIJA_ELEVEN_AANET; jaetun kirjaston äänet toimivat tunnisteella).
- * KUSTANNUSRAJA: globaali päiväkatto merkkeinä (ELEVEN_LUKIJA_PAIVARAJA, oletus 20 000); katon ylittyessä pyyntö
- * luetaan xAI:lla. Natiivi näyttää valinnan vain omistajan laitteilla ja kehittäjätilassa.
+ * KUSTANNUSRAJA: vain kehittäjäkoodilla (x-pollo-kehittaja, kehittajaOhitus; Päätoimittaja 30.9.2026: raja palvelimella,
+ * ei sovelluksessa), ja lisäksi globaali päiväkatto merkkeinä (ELEVEN_LUKIJA_PAIVARAJA, oletus 20 000). Ilman koodia tai
+ * katon ylittyessä pyyntö luetaan xAI:lla.
  */
 export const LUKIJA_ELEVEN_AANET = Object.freeze({
   Sz0tRTEpybtDJ9ru2kgD: 'Viisas kertoja',
@@ -187,9 +188,12 @@ export const LUKIJA_ELEVEN_AANET = Object.freeze({
 export const LUKIJA_ELEVEN_OLETUS = 'Sz0tRTEpybtDJ9ru2kgD';
 export const LUKIJA_ELEVEN_MALLI = 'eleven_v4_turbo';
 
-/** Pyytääkö lukija (ei Pulu) ElevenLabsia, ja onko avain workerissa. Päiväkatto tarkistetaan erikseen. */
-export function lukijaElevenPyydetty(env, persoonaNimi, runko) {
-  if (persoonaNimi === 'pollo' || !env?.ELEVEN_API_KEY) return false;
+/**
+ * Pyytääkö lukija (ei Pulu) ElevenLabsia, onko avain workerissa ja onko pyynnössä kehittäjäkoodi (kehittaja =
+ * kehittajaOhitus). Päiväkatto tarkistetaan erikseen.
+ */
+export function lukijaElevenPyydetty(env, persoonaNimi, runko, kehittaja = false) {
+  if (!kehittaja || persoonaNimi === 'pollo' || !env?.ELEVEN_API_KEY) return false;
   return String(runko?.moottori ?? '').trim().toLowerCase() === 'eleven';
 }
 
@@ -1303,7 +1307,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const persoona = PUHE_PERSOONAT[persoonaNimi];
   const puluEleven = puluElevenKaytossa(env, persoonaNimi);
   // Lukijan ElevenLabs vain päiväkaton sisällä (globaali laskuri); muuten xAI kuten ennen.
-  let lukijaEleven = lukijaElevenPyydetty(env, persoonaNimi, runko);
+  let lukijaEleven = lukijaElevenPyydetty(env, persoonaNimi, runko, kehittajaOhitus(pyynto, env));
   if (lukijaEleven) {
     const kaytetty = await lueLaskuri(env.POLLO_KV ?? null, lukijaElevenPaivaAvain(new Date()));
     const katto = lueLuku(env.ELEVEN_LUKIJA_PAIVARAJA, ELEVEN_LUKIJA_PAIVARAJA_OLETUS);
@@ -1350,7 +1354,9 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
     }
     const omaOhje = xai || eleven ? '' : siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
     if (omaOhje) ohje = omaOhje;
-    saadetty = aani !== oletusAani || ohje !== oletusOhje;
+    // ElevenLabs-lukijan ääni on säilöavaimessa (puheenAvain), joten äänen valinta ei estä säilöntää: sama nosto
+    // generoidaan kerran per ääni (kustannus). xAI:lla kehittäjän äänisäätö ohittaa säilön kuten ennen.
+    saadetty = (aani !== oletusAani && !lukijaEleven) || ohje !== oletusOhje;
   }
 
   /*

@@ -111,10 +111,11 @@ test('Lukijat ElevenLabs v4 Turbolla: moottorivalinta, äänilista ja päiväkat
   assert.equal(LUKIJA_ELEVEN_MALLI, 'eleven_v4_turbo');
   assert.ok(Object.keys(LUKIJA_ELEVEN_AANET).length >= 6 && Object.keys(LUKIJA_ELEVEN_AANET).length <= 8);
   assert.ok(Object.hasOwn(LUKIJA_ELEVEN_AANET, LUKIJA_ELEVEN_OLETUS));
-  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', { moottori: 'eleven' }), true);
-  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', {}), false, 'oletus xAI');
-  assert.equal(lukijaElevenPyydetty({}, 'merkinnat', { moottori: 'eleven' }), false, 'ilman avainta xAI');
-  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'pollo', { moottori: 'eleven' }), false, 'Pulu omalla reitillään');
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', { moottori: 'eleven' }, true), true);
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', { moottori: 'eleven' }, false), false, 'ilman kehittäjäkoodia xAI');
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', {}, true), false, 'oletus xAI');
+  assert.equal(lukijaElevenPyydetty({}, 'merkinnat', { moottori: 'eleven' }, true), false, 'ilman avainta xAI');
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'pollo', { moottori: 'eleven' }, true), false, 'Pulu omalla reitillään');
 
   const kutsut = [];
   const alkuperainen = globalThis.fetch;
@@ -124,14 +125,17 @@ test('Lukijat ElevenLabs v4 Turbolla: moottorivalinta, äänilista ja päiväkat
   };
   const kvData = new Map();
   const kv = { get: async (a) => kvData.get(a) ?? null, put: async (a, v) => { kvData.set(a, v); } };
-  const env = { ELEVEN_API_KEY: 'e', XAI_API_KEY: 'x', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, ELEVEN_LUKIJA_PAIVARAJA: '40' };
+  const env = { ELEVEN_API_KEY: 'e', XAI_API_KEY: 'x', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, ELEVEN_LUKIJA_PAIVARAJA: '40', POLLO_KEHITTAJAKOODI: 'salainen' };
   const aani = Object.keys(LUKIJA_ELEVEN_AANET).find((a) => a !== LUKIJA_ELEVEN_OLETUS);
-  const pyynto = (runko) => worker.default.fetch(new Request('https://pollo.example/', {
+  const pyynto = (runko, koodi = 'salainen') => worker.default.fetch(new Request('https://pollo.example/', {
     method: 'POST',
-    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'cf-connecting-ip': '203.0.113.9' },
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'cf-connecting-ip': '203.0.113.9',
+      ...(koodi ? { 'x-pollo-kehittaja': koodi } : {}) },
     body: JSON.stringify({ tehtava: 'puhe', persoona: 'merkinnat', ...runko }),
   }), env, {});
   try {
+    const ilman = await pyynto({ teksti: 'Ilman koodia.', moottori: 'eleven' }, null);
+    assert.equal(ilman.headers.get('x-puhe-moottori'), 'xai', 'ilman kehittäjäkoodia ei maksullista moottoria');
     const a = await pyynto({ teksti: 'Marathonin tasanko. [pause] Kumpu.', moottori: 'eleven', aani });
     assert.equal(a.headers.get('x-puhe-moottori'), 'eleven');
     const b = await pyynto({ teksti: 'Toinen pala, joka ylittää katon.', moottori: 'eleven' });
@@ -141,11 +145,12 @@ test('Lukijat ElevenLabs v4 Turbolla: moottorivalinta, äänilista ja päiväkat
   } finally {
     globalThis.fetch = alkuperainen;
   }
-  assert.match(kutsut[0].osoite, new RegExp(`api\\.elevenlabs\\.io/v1/text-to-speech/${aani}/stream`));
-  assert.equal(kutsut[0].runko.model_id, 'eleven_v4_turbo');
-  assert.equal(kutsut[0].runko.text, 'Marathonin tasanko. <break time="0.4s" /> Kumpu.');
-  assert.match(kutsut[1].osoite, /api\.x\.ai/);
+  assert.match(kutsut[0].osoite, /api\.x\.ai/, 'ilman koodia xAI');
+  assert.match(kutsut[1].osoite, new RegExp(`api\\.elevenlabs\\.io/v1/text-to-speech/${aani}/stream`));
+  assert.equal(kutsut[1].runko.model_id, 'eleven_v4_turbo');
+  assert.equal(kutsut[1].runko.text, 'Marathonin tasanko. <break time="0.4s" /> Kumpu.');
   assert.match(kutsut[2].osoite, /api\.x\.ai/);
+  assert.match(kutsut[3].osoite, /api\.x\.ai/);
   const laskuri = [...kvData.entries()].find(([k]) => k.startsWith('eleven:lukija:p:'));
   assert.ok(laskuri && Number(laskuri[1]) > 0, 'globaali eleven-laskuri kasvoi');
 });
