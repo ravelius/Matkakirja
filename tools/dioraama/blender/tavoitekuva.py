@@ -67,15 +67,61 @@ if uv: nt.links.new(uv.outputs[0], ham.inputs['Vector'])
 sep = nt.nodes.new('ShaderNodeSeparateColor'); nt.links.new(ham.outputs['Color'], sep.inputs['Color'])
 ero = nt.nodes.new('ShaderNodeMath'); ero.operation = 'SUBTRACT'
 nt.links.new(sep.outputs[0], ero.inputs[0]); nt.links.new(sep.outputs[2], ero.inputs[1])
-maski = nt.nodes.new('ShaderNodeMapRange'); maski.inputs['From Min'].default_value = 0.12; maski.inputs['From Max'].default_value = 0.3
+maski = nt.nodes.new('ShaderNodeMapRange'); maski.inputs['From Min'].default_value = 0.2; maski.inputs['From Max'].default_value = 0.35
 nt.links.new(ero.outputs[0], maski.inputs['Value'])
+kirkas = nt.nodes.new('ShaderNodeMapRange'); kirkas.inputs['From Min'].default_value = 0.45; kirkas.inputs['From Max'].default_value = 0.7
+nt.links.new(sep.outputs[0], kirkas.inputs['Value'])      # vain kirkkaat lämpimät alueet (ikkunat), ei yksittäisiä pisteitä
+maski2 = nt.nodes.new('ShaderNodeMath'); maski2.operation = 'MULTIPLY'
+nt.links.new(maski.outputs['Result'], maski2.inputs[0]); nt.links.new(kirkas.outputs['Result'], maski2.inputs[1])
 nt.links.new(ham.outputs['Color'], bsdf.inputs['Emission Color'])
 em = nt.nodes.new('ShaderNodeMath'); em.operation = 'MULTIPLY'; em.inputs[1].default_value = float(os.environ.get('IKKUNA', 6))
-nt.links.new(maski.outputs['Result'], em.inputs[0]); nt.links.new(em.outputs[0], bsdf.inputs['Emission Strength'])
+nt.links.new(maski2.outputs[0], em.inputs[0]); nt.links.new(em.outputs[0], bsdf.inputs['Emission Strength'])
 
 # Yksityiskohtapinnat (hybridin esikuva): seinä = kivimuuri, katot (vaaka + korkealla) = liuskekatto, maa = kivetys.
 YKS = os.environ.get('YKSITYISKOHDAT', '1') == '1'
-if YKS:
+KIRJ = os.environ.get('KIRJASTO', '0') == '1'   # v2: sama kuin reaaliaika (maski + kirjaston materiaalit)
+if YKS and KIRJ:
+    KV = '/Users/Shared/Claude/proto-3d/_kirjasto/valmiit/materiaali'
+    MAN = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../js/dioraama/kirjasto/lahteet.json')))
+    mk = nt.nodes.new('ShaderNodeTexImage'); mk.image = bpy.data.images.load(f'{K}/hybridi/kuori-materiaali-2k.png')
+    mk.image.colorspace_settings.name = 'Non-Color'
+    if uv: nt.links.new(uv.outputs[0], mk.inputs['Vector'])
+    mks = nt.nodes.new('ShaderNodeSeparateColor'); nt.links.new(mk.outputs['Color'], mks.inputs[0])
+    painot = [mks.outputs[0], mks.outputs[1], mks.outputs[2], mk.outputs['Alpha']]
+    idt = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio']
+    vari_s, nor_s = None, None
+    for w_, i_ in zip(painot, idt):
+        mitta = 1.0 / MAN[f'materiaali/{i_}']['toisto_m']
+        d = kuvasolmu(f'{KV}/{i_}/{i_}_diff.jpg', mitta=mitta); nn = kuvasolmu(f'{KV}/{i_}/{i_}_nor_gl.jpg', 'Non-Color', mitta=mitta)
+        for kanava, lahde in (('v', d.outputs['Color']), ('n', nn.outputs['Color'])):
+            kerto = nt.nodes.new('ShaderNodeMix'); kerto.data_type = 'RGBA'; kerto.blend_type = 'MULTIPLY'
+            kerto.inputs[0].default_value = 1.0
+            cc = nt.nodes.new('ShaderNodeCombineColor')
+            for j in range(3): nt.links.new(w_, cc.inputs[j])
+            nt.links.new(lahde, kerto.inputs[6]); nt.links.new(cc.outputs[0], kerto.inputs[7])
+            if kanava == 'v':
+                if vari_s is None: vari_s = kerto.outputs[2]
+                else:
+                    ad = nt.nodes.new('ShaderNodeMix'); ad.data_type = 'RGBA'; ad.blend_type = 'ADD'; ad.inputs[0].default_value = 1
+                    nt.links.new(vari_s, ad.inputs[6]); nt.links.new(kerto.outputs[2], ad.inputs[7]); vari_s = ad.outputs[2]
+            else:
+                if nor_s is None: nor_s = kerto.outputs[2]
+                else:
+                    ad = nt.nodes.new('ShaderNodeMix'); ad.data_type = 'RGBA'; ad.blend_type = 'ADD'; ad.inputs[0].default_value = 1
+                    nt.links.new(nor_s, ad.inputs[6]); nt.links.new(kerto.outputs[2], ad.inputs[7]); nor_s = ad.outputs[2]
+    bw = nt.nodes.new('ShaderNodeRGBToBW'); nt.links.new(vari_s, bw.inputs[0])
+    kerroin = nt.nodes.new('ShaderNodeMapRange'); kerroin.inputs['From Max'].default_value = 0.7
+    kerroin.inputs['To Min'].default_value = 0.45; kerroin.inputs['To Max'].default_value = 1.55
+    nt.links.new(bw.outputs[0], kerroin.inputs['Value'])
+    kerro = nt.nodes.new('ShaderNodeMix'); kerro.data_type = 'RGBA'; kerro.blend_type = 'MULTIPLY'
+    kerro.inputs[0].default_value = float(os.environ.get('YKS_VOIMA', 0.8))
+    nt.links.new(kuva.outputs['Color'], kerro.inputs[6])
+    yh = nt.nodes.new('ShaderNodeCombineColor')
+    for j in range(3): nt.links.new(kerroin.outputs['Result'], yh.inputs[j])
+    nt.links.new(yh.outputs[0], kerro.inputs[7]); nt.links.new(kerro.outputs[2], bsdf.inputs['Base Color'])
+    nk = nt.nodes.new('ShaderNodeNormalMap'); nk.inputs['Strength'].default_value = 0.7
+    nt.links.new(nor_s, nk.inputs['Color']); nt.links.new(nk.outputs[0], bsdf.inputs['Normal'])
+elif YKS:
     geo = nt.nodes.new('ShaderNodeNewGeometry')
     sepn = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(geo.outputs['Normal'], sepn.inputs[0])
     absz = nt.nodes.new('ShaderNodeMath'); absz.operation = 'ABSOLUTE'; nt.links.new(sepn.outputs[2], absz.inputs[0])
