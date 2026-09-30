@@ -157,6 +157,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Vesuviuksen kraaterin reunaa. Vuori purkautui viimeksi '
         + 'vuonna 1944.',
       lahde: 'Norbert Nagel, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Crater_rim_volcano_Vesuvius_-_Campania_-_Italy_-_July_9th_2013_-_08.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Minä vuonna Vesuvius purkautui viimeksi?',
@@ -214,6 +217,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Pompejin Forum ja sen takana Vesuvius. Kaivaukset saivat '
         + 'nykyisen tapansa Giuseppe Fiorellilta 1860-luvulla.',
       lahde: 'Commonists, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Forum_(Pompeii)_and_the_Vesuvio.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Minä vuonna Giuseppe Fiorelli otti Pompejin kaivaukset johtoonsa?',
@@ -261,6 +267,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Napoli, sen satama ja Vesuvius Castel Sant\'Elmon '
         + 'kukkulalta nähtynä.',
       lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Naples_from_the_Castello_Sant_Elmo_with_Abbazia_San_Martino_the_port_and_the_Vesuv.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     visa: {
       kysymys: 'Mitä kreikkalainen nimi Neápolis tarkoittaa?',
@@ -313,6 +322,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Piazza dei Miracoli Pisassa: tuomiokirkko, kastekappeli '
         + 'ja kalteva kellotorni.',
       lahde: 'PaestumPaestum, Wikimedia Commons (CC BY 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Piazza_dei_Miracoli_(Pisa)_2023.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
     },
   },
   {
@@ -373,6 +385,7 @@ export const FOKUSKOHTEET_ITA = [
         + 'runsaat kymmenen vuotta ennen isoisän matkaa.',
       lahde: 'Albert Bierstadt, Walters Art Museum, Wikimedia Commons '
         + '(public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_The_Blue_Grotto,_Capri_-_Walters_371565.jpg',
     },
   },
   {
@@ -418,6 +431,7 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Vernazza, yksi Cinque Terren viidestä kylästä, '
         + 'rannikkopolulta nähtynä.',
       lahde: 'СССР, Wikimedia Commons (CC BY-SA 2.5)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vernazza_dal_Sentiero_Azzurro.jpg',
     },
   },
   {
@@ -455,6 +469,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Materan Sassit rotkon reunalla. Luolakodit nousevat '
         + 'kalliossa noin kahdellatoista tasolla.',
       lahde: 'Jules Verne Times Two, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Sassi_di_Matera,_Matera,_Italy_(PPL2-Enhanced)_julesvernex2.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -496,6 +513,9 @@ export const FOKUSKOHTEET_ITA = [
       tiedosto: 'Drei Zinnen Tre Cime di Lavaredo Dolomites.jpg',
       selite: 'Tre Cime di Lavaredon kolme huippua Dolomiiteilla.',
       lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Drei_Zinnen_Tre_Cime_di_Lavaredo_Dolomites.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -535,6 +555,7 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Lumihuippuinen Etna Sisiliassa. Vuoren korkeus muuttuu '
         + 'purkausten mukana.',
       lahde: 'Jeanne boleyn, Wikimedia Commons (public domain)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mount_Etna_snow-toppd.jpg',
     },
   },
   {
@@ -573,6 +594,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Milanon Duomo ja Galleria Vittorio Emanuele II '
         + 'tuomiokirkon aukiolla.',
       lahde: 'Steffen Schmitz, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Milano,_Duomo_with_Milan_Cathedral_and_Galleria_Vittorio_Emanuele_II,_2016.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -606,6 +630,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Mole Antonelliana Torinossa. Rakennus aloitettiin 1863 ja '
         + 'valmistui vasta 1889.',
       lahde: 'Wikibusters, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mole_Antonelliana_in_Turin.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -643,6 +670,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Bellagion kylä Comojärvellä, juuri siinä kohdassa jossa '
         + 'järven Y-muoto haarautuu.',
       lahde: 'Ray Swi-hymn, Wikimedia Commons (CC BY-SA 2.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Town_of_Bellagio_(Lake_Como)_seen_from_the_lake_(36722979021).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
     },
   },
   {
@@ -681,6 +711,9 @@ export const FOKUSKOHTEET_ITA = [
       tiedosto: 'Po River Delta aerial 1.jpg',
       selite: 'Pon suisto Adrianmerellä ilmasta kuvattuna.',
       lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Po_River_Delta_aerial_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     visa: {
       kysymys: 'Kuka oli mukana suunnittelemassa Milanon kanavaverkkoa?',
@@ -731,6 +764,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Su Nuraxin nuraghe Baruminissa. Kivitorneja seisoo yhä '
         + 'ympäri Sardiniaa.',
       lahde: 'Norbert Nagel, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nuraghe_Su_Nuraxi_-_Barumini_-_Sardinia_-_Italy_-_07.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   /*
@@ -803,6 +839,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Forum Capitoliumilta katsottuna: vasemmalla Septimius '
         + 'Severuksen riemukaari, taustalla Colosseum.',
       lahde: 'Blackcat, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2012-02-17_Foro_Romano_da_Palazzo_Senatorio_1.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
     /*
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
@@ -916,6 +955,9 @@ export const FOKUSKOHTEET_ITA = [
       selite: 'Colosseumin luoteissivu: vasemmalla säilynyt ulkomuuri, '
         + 'oikealla paljaaksi riisuttu sisämuuri.',
       lahde: 'FeaturedPics, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     /*
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/

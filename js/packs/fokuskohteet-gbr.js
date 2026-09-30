@@ -126,6 +126,9 @@ export const FOKUSKOHTEET_GBR = [
       selite: 'Christopher Wrenin kupolikirkko Ludgate Hillillä. Se '
         + 'valmistui 1710 palaneen keskiaikaisen edeltäjänsä paikalle.',
       lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:St_Paul\'s_Cathedral_Dome_2020_Exterior_Ground.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
     },
     /*
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
