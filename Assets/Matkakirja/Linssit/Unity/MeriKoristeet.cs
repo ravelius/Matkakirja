@@ -104,8 +104,18 @@ namespace Matkakirja.Natiivi
                 Animoi = MeriJaavuori.Animoi, Aikataulu = MeriJaavuori.Aikataulu, Seepia = true, VahintaanLat = 63 },
         };
 
-        /// <summary>Kytkin (komento "elava elementit meri 0|1", oletus päällä): pois = ei meren koristeita.</summary>
-        public static bool Paalla = true;
+        /// <summary>
+        /// Kytkin (komento "elava elementit meri 0|1"). OLETUS POIS (omistaja 30.9.2026 klo 12.35 Päätoimittajan kautta, TF 1.0.68
+        /// Bulgaria: laiva kulki maan päällä lipun vieressä ja rannikolla): kaikki meren 3D-koristeet pois, koodi jää kytkimen
+        /// taakse myöhempää uutta yritystä varten.
+        /// MIKSI MAALLE (juurisyy seuraavaa yritystä varten): lajien koko ja siirrot ovat RUUTUPISTEINÄ, eivät kilometreinä
+        /// (KokoPt 280, SamaKohtaSiirtoPt 140, VahintaanPt 120), ja ankkuri on yksi merikohta rannan tuntumassa
+        /// (merikohdat.json: piste + suunta merelle). Maan mittakaavassa 280 pt on satoja kilometrejä, joten malli ja sen reitti
+        /// rannikon suuntaan (+z = suunta merelle + 90°, suora viiva) ulottuvat kaarevalla rannikolla (Mustanmeren lahdet)
+        /// maalle; mallin jalanjälkeä tai reittiä ei tarkisteta maamaskia (Kartta/Maamaski) vasten. Korjaus: koko kilometreinä
+        /// ja enintään etäisyys rantaan, reitti rannikon tangenttia pitkin maskista, ja jalanjälki maskia vasten ennen näyttöä.
+        /// </summary>
+        public static bool Paalla = false;
 
         static Dictionary<string, List<Kohta>> kohdat;
         static bool ladataan;
