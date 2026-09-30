@@ -7,7 +7,7 @@
 // Sisältö on YHDESSÄ tiedostossa webin repossa (assets/apuraha/esittely.json), jonka Päätoimittaja päivittää:
 // natiivi hakee sen sivustolta joka käynnistyksessä, joten tekstimuutos ei vaadi TF-buildia. Viimeisin onnistunut
 // haku säilyy laitteella (offline-käynnistys näyttää sen); jos haku ei ole koskaan onnistunut, nappia ei ole.
-// video (myöhemmin): {url, kuva} → kortin alkuun esikatselukuva, joka avaa videon selaimeen.
+// Ei videota (omistaja 30.9.2026 klo 15.06); kuvarivin pikkukuvien leveys kuvien määrän mukaan (4: kartta + 3 linssiä).
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,10 +25,10 @@ namespace Matkakirja.Natiivi
         const string Muisti = "matkakirja-apuraha-esittely";
 
         public sealed class Kappale { public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public List<string> Lista = new List<string>(); }
-        public sealed class Kuva { public string Url, Teksti; }
+        public sealed class Kuva { public string Url, Teksti; public float RajausX = 50f, RajausY = 20f; }
         public sealed class Esittely
         {
-            public string Nappi, Otsikko, Alaotsikko, VideoUrl, VideoKuva;
+            public string Nappi, Otsikko, Alaotsikko;
             public List<Kappale> Kappaleet = new List<Kappale>();
             public List<Kuva> Kuvat = new List<Kuva>();
         }
@@ -68,11 +68,12 @@ namespace Matkakirja.Natiivi
                     var o = Rakenne.Olio(ko);
                     var t = S(o, "tiedosto");
                     if (string.IsNullOrEmpty(t)) continue;
-                    e.Kuvat.Add(new Kuva { Url = Url(t), Teksti = S(o, "teksti") ?? "" });
+                    var kuva = new Kuva { Url = Url(t), Teksti = S(o, "teksti") ?? "" };
+                    // Pikkukuvan painopiste "x% y%" (web object-position; radion paneeli alhaalla 50% 90%).
+                    var m = System.Text.RegularExpressions.Regex.Match(S(o, "rajaus") ?? "", @"^(\d{1,3})% (\d{1,3})%$");
+                    if (m.Success) { kuva.RajausX = float.Parse(m.Groups[1].Value); kuva.RajausY = float.Parse(m.Groups[2].Value); }
+                    e.Kuvat.Add(kuva);
                 }
-            var video = Rakenne.Olio(d.TryGetValue("video", out var vv) ? vv : null);
-            e.VideoUrl = S(video, "url");
-            e.VideoKuva = S(video, "kuva") is string vk ? Url(vk) : null;
             return e;
         }
 
@@ -149,13 +150,6 @@ namespace Matkakirja.Natiivi
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
-            if (!string.IsNullOrEmpty(e.VideoUrl))
-            {
-                // Esittelyvideo kortin alkuun: esikatselukuva ja toistomerkki, napautus avaa videon.
-                var video = Rakenne.Nappi(null, "mk-apuraha__video", () => Application.OpenURL(e.VideoUrl), vieritys);
-                if (e.VideoKuva != null) Kuvat.Hae(e.VideoKuva, t => { if (t != null) video.style.backgroundImage = new StyleBackground(t); });
-                Kirjasimet.Aseta(Rakenne.Teksti("▶  Esittelyvideo", "mk-apuraha__videoteksti", video), Kirjasin.KoneLihava);
-            }
             var o = Rakenne.Teksti(e.Otsikko, "mk-kortti__otsikko mk-apuraha__otsikko", vieritys);
             Kirjasimet.Aseta(o, Kirjasin.KoneLihava);
             if (e.Alaotsikko.Length > 0)
@@ -204,6 +198,10 @@ namespace Matkakirja.Natiivi
                 {
                     int n = i;
                     var b = Rakenne.Nappi(null, "mk-apuraha__kuva", () => AvaaKokoruutu(e.Kuvat, n), kuvarivi);
+                    // Leveys kuvien määrän mukaan (4 kuvaa, omistaja 30.9. klo 15.06; rako 2 %).
+                    b.style.width = Length.Percent((100f - 2f * (e.Kuvat.Count - 1)) / e.Kuvat.Count);
+                    b.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left, Length.Percent(e.Kuvat[i].RajausX));
+                    b.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(e.Kuvat[i].RajausY));
                     Kuvat.Hae(e.Kuvat[i].Url, t => { if (t != null) b.style.backgroundImage = new StyleBackground(t); });
                 }
             }

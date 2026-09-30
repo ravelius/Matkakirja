@@ -157,6 +157,27 @@ namespace Matkakirja.Kartta.Testit
             Lahella(2, lon2, 1e-9, "kierto"); Lahella(46, lat2, 1e-9, "sisällä ennallaan");
         }
 
+        [Testi] static void SaarenLisaikkunatPanorajaan()
+        {
+            // Karttaseppä 30.9.2026: Azorit ja Madeira (PRT), Kanariat (ESP) panorointirajaan; muut maat ennallaan.
+            var l = Ranska();
+            var fra = Saapumisnakyma.Lisaikkunoineen(l, "FRA");
+            Oleta.Tosi(fra.X == l.X && fra.Y == l.Y && fra.W == l.W && fra.H == l.H, "FRA ennallaan");
+            // Ikkunoiden kulmat speksin asteina (0,1–0,2°:n marginaali): Azorit luoteiskulma −31,4 / 39,9.
+            var az = Saapumisnakyma.LaudaltaAsteiksi(4779, 1799);
+            // Lautayksiköt (webin lisaikkunat) ovat asteita hieman väljemmät (x 4779 = −31,63°): ikkuna sisältää speksin.
+            Oleta.Tosi(az.Lon <= -31.4 && az.Lon > -31.8 && az.Lat >= 39.9 && az.Lat < 40.2, $"Azorien luoteiskulma {az.Lon:0.##} / {az.Lat:0.##}");
+            var ka = Saapumisnakyma.LaudaltaAsteiksi(5215 + 186, 2191 + 88);
+            Oleta.Tosi(ka.Lon >= -13.2 && ka.Lon < -12.8 && ka.Lat <= 27.5 && ka.Lat > 27.2, $"Kanarian kaakkoiskulma {ka.Lon:0.##} / {ka.Lat:0.##}");
+            foreach (var (maa, lat, lon, nimi) in new[] { ("PRT", 37.74, -25.67, "Ponta Delgada"), ("PRT", 32.65, -16.91, "Funchal"),
+                                                          ("ESP", 28.12, -15.43, "Las Palmas") })
+            {
+                var r = Saapumisnakyma.MaanPanoraja(Saapumisnakyma.Lisaikkunoineen(l, maa), 1400, 900, 5.4, 0).Value;
+                var (rl, ro) = Saapumisnakyma.RajaaPanorointi(r, lat, lon);
+                Lahella(lat, rl, 1e-9, nimi + " lat rajan sisällä"); Lahella(lon, ro, 1e-9, nimi + " lon rajan sisällä");
+            }
+        }
+
         static void Lahella(double odotettu, double saatu, double vara, string viesti) =>
             Oleta.Tosi(System.Math.Abs(odotettu - saatu) <= vara, $"{viesti}: {odotettu} ≠ {saatu}");
 

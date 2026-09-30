@@ -284,7 +284,8 @@ namespace Matkakirja.Peli.Testit
             var a = O(Jalki["arvonta"]);
             var r = new Satunnainen((long)MiniJson.Luku(a, "siemen").Value);
             int arpoja = 0;
-            var tila = new AaniTila(Taulut(), () => { arpoja++; return r.Seuraava(); });
+            // Webin käytös (arvottu aloituskohta): natiivin KERRAN LÄPI -oletus pois (omistaja 30.9.2026).
+            var tila = new AaniTila(Taulut(), () => { arpoja++; return r.Seuraava(); }) { KerranLapi = false };
             foreach (var s in L(a["askeleet"]).Select(O))
             {
                 arpoja = 0;
@@ -358,7 +359,8 @@ namespace Matkakirja.Peli.Testit
             var kone = O(Jalki["kone"]);
             var r = new Satunnainen((long)MiniJson.Luku(kone, "siemen").Value);
             int arpoja = 0;
-            var tila = new AaniTila(taulut, () => { arpoja++; return r.Seuraava(); });
+            // Kultainen jälki on webin käytös (silmukat, arvottu alku): KERRAN LÄPI pois tässä vertailussa.
+            var tila = new AaniTila(taulut, () => { arpoja++; return r.Seuraava(); }) { KerranLapi = false };
             int i = 0;
             foreach (var e in L(kone["askeleet"]).Select(O))
             {
@@ -387,6 +389,51 @@ namespace Matkakirja.Peli.Testit
                 i++;
             }
             Oleta.Tosi(i > 100, "askelia " + i);
+        }
+
+        /// <summary>
+        /// KERRAN LÄPI (omistaja 30.9.2026): kaupunkimaisema ja taustamusiikki alusta, kerran läpi, sitten hiljaisuus
+        /// seuraavaan laukaisuun (paikan vaihto) asti. Linssin taustaääni silmukoi yhä.
+        /// </summary>
+        [Testi] static void KerranLapiMaisemaJaMusiikki()
+        {
+            var tila = new AaniTila(Taulut(), () => 0.5);
+            tila.Paikka("lontoo", "kaupunki");
+            var m = tila.Toive(Kanava.Maisema);
+            var p = tila.Toive(Kanava.Pohja);
+            Oleta.Tosi(m.Url != null, "maisema soi");
+            Oleta.Sama(0.0, m.Alku, "maisema alkaa alusta");
+            Oleta.Tosi(m.Kerran && !m.Silmukka, "maisema kerran läpi");
+            Oleta.Tosi(p.Url != null && !p.Silmukka, "pohja soi ilman silmukkaa");
+            tila.KestoTiedossa(400);
+            Oleta.Sama(0.0, tila.Toive(Kanava.Maisema).Alku, "ei arvottua aloituskohtaa");
+            // Kierroksen loppu: lyhyt häivytys ja hiljaisuus; sama paikka ei käynnistä uudelleen.
+            tila.SilmukkaVaihtuu();
+            Oleta.Sama(null, tila.Toive(Kanava.Maisema).Url, "maisema hiljaa lopun jälkeen");
+            Oleta.Sama(AaniVakiot.SilmukkaRistiMs, tila.Toive(Kanava.Maisema).PoisMs ?? -1, "loppuhäivytys");
+            tila.Paikka("lontoo", "kaupunki");
+            Oleta.Sama(null, tila.Toive(Kanava.Maisema).Url, "sama paikka ei soi uudelleen");
+            tila.PohjaLoppui();
+            Oleta.Sama(null, tila.Toive(Kanava.Pohja).Url, "pohja hiljaa lopun jälkeen");
+            tila.Paikka("lontoo", "kaupunki");
+            Oleta.Sama(null, tila.Toive(Kanava.Pohja).Url, "sama laukaisu ei soita pohjaa uudelleen");
+            // Uusi laukaisu (paikka vaihtuu): molemmat soivat taas alusta.
+            tila.Paikka("jalkamatka", "metsa");
+            Oleta.Tosi(tila.Toive(Kanava.Maisema).Url != null && tila.Toive(Kanava.Maisema).Alku == 0, "uusi paikka alusta");
+            Oleta.Tosi(tila.Toive(Kanava.Pohja).Url != null, "pohja uudessa paikassa");
+        }
+
+        [Testi] static void KerranLapiEiKoskeLinssinTaustaa()
+        {
+            var tila = new AaniTila(Taulut(), () => 0.5);
+            tila.Paikka("lontoo", "kaupunki");
+            const string url = "https://media.matkakirja.app/aanet/linssi-testi.mp3";
+            tila.LinssiTausta(url, 1, 500);
+            var ennen = tila.Toive(Kanava.Maisema);
+            Oleta.Tosi(ennen.Url != null && !ennen.Kerran, "linssin tausta ei ole kerran-soitin");
+            tila.SilmukkaVaihtuu();
+            var jalkeen = tila.Toive(Kanava.Maisema);
+            Oleta.Tosi(jalkeen.Url != null && jalkeen.Uusi, "linssin tausta vaihtaa kierroksen ristiin");
         }
 
         [Testi] static void KoneKutenWebLasketuillaKoreilla() => KoneKutenWeb(Taulut());

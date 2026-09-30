@@ -489,7 +489,7 @@ namespace Matkakirja.Natiivi
             var p = RuntimePanelUtils.ScreenToPanel(paneeli.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
             if (!paneeli.worldBound.Contains(p) && !nappi.worldBound.Contains(p) && !(MuutAuki && muut.worldBound.Contains(p))
                 && !EsikatseluSisaltaa(p) && (Avaaja == null || !Avaaja.worldBound.Contains(p))
-                && !Avaajat.Exists(a => a != null && a.panel != null && a.worldBound.Contains(p))) Sulje();
+                && !Avaajat.Exists(a => a != null && a.panel != null && a.worldBound.Contains(p))) { UiKerros.OhiSulki(); Sulje(); }  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
         }
     }
 }

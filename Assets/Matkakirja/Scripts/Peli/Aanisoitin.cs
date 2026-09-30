@@ -3,7 +3,9 @@
 // AaniTila (Peli/Aani/AaniTila.cs, puhdas C#) päättää, mitä soi ja millä tasolla; tämä soitin
 // toteuttaa sen Toiveet kanavittain ja kertoo takaisin, mitä laitteella tapahtui:
 //   KestoTiedossa(s)   maiseman klippi latautui → arvottu aloituskohta (§2.6)
-//   SilmukkaVaihtuu()  maiseman kierros on 2,6 s:n päässä lopusta (tai loppui) → uusi kierros ristiin
+//   SilmukkaVaihtuu()  maiseman kierros on 2,6 s:n päässä lopusta (tai loppui) → kaupunkimaisema häipyy (kerran läpi),
+//                      linssin taustaääni vaihtaa kierroksen ristiin
+//   PohjaLoppui()      taustamusiikki soi kerran loppuun (omistaja 30.9.2026: ei silmukkaa)
 //   Puuttuu(kanava)    HTTP-virhe, purkuvirhe tai latausvahti (§2.7)
 //   AarreLoppui()      aarreaihe soi loppuun
 //
@@ -215,7 +217,7 @@ namespace Matkakirja.Natiivi
             public readonly Tasoramppi Taso = new Tasoramppi(0);
             public double Tavoite, Alku;
             public int NousuMs;
-            public bool Silmukka, Tauko = true;
+            public bool Silmukka, Kerran, Tauko = true;
             public bool Ladattu, Kaynnistetty, Soi, Tauotettu, Poistuva, Vapautettu;
             public bool SilmukkaPyydetty, LoppuIlmoitettu, OdottaaVerkkoa;
             public float KaynnistysAika, Uusinta;
@@ -428,6 +430,7 @@ namespace Matkakirja.Natiivi
             nyk.Tavoite = w.Tavoite;
             nyk.Alku = w.Alku;
             nyk.Silmukka = w.Silmukka;
+            nyk.Kerran = w.Kerran;
             nyk.Tauko = w.Tauko;
             if (w.KestoMs.HasValue)
             {
@@ -443,7 +446,7 @@ namespace Matkakirja.Natiivi
             var l = new Lahde
             {
                 Kanava = k, A = a, Komp = KompressoriLahteelle(k, a), Url = w.Url, Tavoite = w.Tavoite, Alku = w.Alku,
-                Silmukka = w.Silmukka, Tauko = w.Tauko, NousuMs = w.KestoMs ?? 0,
+                Silmukka = w.Silmukka, Kerran = w.Kerran, Tauko = w.Tauko, NousuMs = w.KestoMs ?? 0,
             };
             if (l.Komp != null) l.Komp.Ohita = w.IlmanKompressoria;
             elavat.Add(l);
@@ -567,7 +570,8 @@ namespace Matkakirja.Natiivi
             var a = l.A;
             var c = l.K.Clip;
             a.clip = c;
-            a.loop = l.Silmukka || (l.Kanava == Kanava.Maisema && Silmukka.Liianlyhyt(c.length));
+            // Kerran läpi soiva kaupunkimaisema ei silmukoi lyhyttäkään klippiä (omistaja 30.9.2026).
+            a.loop = l.Silmukka || (l.Kanava == Kanava.Maisema && !l.Kerran && Silmukka.Liianlyhyt(c.length));
             a.pitch = 1f;
             AsetaTaso(l, 0);
             l.Komp?.Nollaa(); // uusi klippi: kompressori alkutilaan ennen ensimmäistä puskuria
@@ -639,6 +643,11 @@ namespace Matkakirja.Natiivi
                 {
                     l.LoppuIlmoitettu = true;
                     Tee(() => Tila.AarreLoppui());
+                }
+                else if (l.Kanava == Kanava.Pohja && !a.loop && !a.isPlaying && !l.LoppuIlmoitettu)
+                {
+                    l.LoppuIlmoitettu = true;
+                    Tee(() => Tila.PohjaLoppui());
                 }
             }
             if (teot != null) foreach (var t in teot) { try { t(); } catch (Exception e) { Debug.LogException(e); } }
@@ -983,6 +992,9 @@ namespace Matkakirja.Natiivi
                   .Append(",\"soi\":").Append(l != null && l.Soi ? "true" : "false")
                   .Append(",\"ladattu\":").Append(l != null && l.Ladattu ? "true" : "false")
                   .Append(",\"tauko\":").Append(w.Tauko ? "true" : "false")
+                  .Append(",\"alku\":").Append(w.Alku.ToString("0.#", CultureInfo.InvariantCulture))
+                  .Append(",\"silmukka\":").Append(l != null && l.A != null ? (l.A.loop ? "true" : "false") : (w.Silmukka ? "true" : "false"))
+                  .Append(",\"kerran\":").Append(w.Kerran ? "true" : "false")
                   .Append(",\"aika\":").Append(l != null && l.Kaynnistetty && l.A != null ? l.A.time.ToString("0.0", CultureInfo.InvariantCulture) : "0");
                 if (l?.Komp != null) sb.Append(",\"kompressori\":").Append(l.Komp.Vahvistus.ToString("0.####", CultureInfo.InvariantCulture));
                 sb.Append('}');

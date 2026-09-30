@@ -30,6 +30,7 @@ namespace Matkakirja.Natiivi
             DontDestroyOnLoad(go);
             go.AddComponent<AaniIstunto>();
             VarmistaKuuntelija(go);
+            TestiMykistys.Kiinnita();
             Aseta("käynnistys");
             Vahti();
             AudioSettings.OnAudioConfigurationChanged += _ =>

@@ -1231,7 +1231,7 @@ namespace Matkakirja.Natiivi
                 yield return null;
                 if (lahde.clip != klippi) break;
                 if (lahde.isPlaying) { lahde.GetOutputData(verhoNaytteet, 0); oma += Rms(verhoNaytteet); }
-                AudioListener.GetOutputData(verhoNaytteet, 0);
+                TestiMykistys.Lahto(verhoNaytteet, 0);
                 kaikki += Rms(verhoNaytteet);
                 n++;
                 float t = Time.unscaledTime - t0;

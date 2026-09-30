@@ -131,6 +131,8 @@
 //   ui voiceover [paalle|pois|puu]           VoiceOver-silta pakolla päälle / laitteen mukaan / solmut → voiceover-puu.txt
 //   ui saavutettavuus [nimi]                  VoiceOver-nimet, 44 pt:n kosketusalat, kontrasti → Documents/saavutettavuus[-nimi].json
 //   ui kuunnelma [tila]|ohita|alusta         Olavinlinnan huoneen kuunnelman tekstitys (KuunnelmaKaistale): rivi, ohitus, alusta
+//   ui mac tila|pakota|veto dx dy [x y]|rulla dy [x y]|nipistys s [x y]  Mac-syöte (MacSyote.cs): ohjauslevyn veto, rulla ja
+//                                             nipistys ilman Macia (pikselit, UIKitin suunta, osoitin yläkulmasta)
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui matkamuisto <id>                       matkamuiston löytö kuten dioraamasta (voudin-sinetti); tila lokiin
@@ -614,7 +616,10 @@ namespace Matkakirja.Natiivi
                     if (loput == "mikki") { ui.Chat.MikkiTesti(); Kirjaa("ui chat mikki: " + ui.Chat.PuheTilaTeksti); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
-                case "tietoja": ui.Tietoja.Avaa(); return null;
+                case "tietoja": ui.Aloitus.Apuraha.Sulje(); ui.Tietoja.Avaa(); return null; // kortti (kerros 45) jäi tietojen päälle
+                case "kaynti":
+                    // Kävijälaskurin kuivaharjoitus (Natiiviseppä 30.9.): ping-runko ja ehdot, EI lähetetä (simulaattori ohittaa aina).
+                    return Kaynti.Kuivaharjoitus(loput.Length > 0 ? loput : "avaus");
                 case "piikit":
                 {
                     if (loput == "pois") { KehysPiikit.Lopeta(); return null; }
@@ -729,6 +734,26 @@ namespace Matkakirja.Natiivi
                     if (km == "ohita") Kirjaa("kuunnelma ohita: " + (dt.KuunnelmaOhita() ? "ok" : "ei käynnissä") + " · " + dt.KuunnelmaTila);
                     else if (km == "alusta") { dt.KuunnelmaAlusta(); Kirjaa("kuunnelma alusta: " + dt.KuunnelmaTila); }
                     else Kirjaa("kuunnelma: " + dt.KuunnelmaTila);
+                    return null;
+                }
+                case "mac":
+                {
+                    // Mac-syöte (MacSyote.cs): ui mac tila | pakota | veto dx dy [x y] | rulla dy [x y] | nipistys s [x y]
+                    // (pikselit, UIKitin suunta: y alas, osoitin yläkulmasta; ilman osoitinta ruudun keskeltä).
+                    var m = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    float L(int i, float oletus) => m.Length > i && float.TryParse(m[i], System.Globalization.NumberStyles.Float,
+                        System.Globalization.CultureInfo.InvariantCulture, out var v) ? v : oletus;
+                    string laji = m.Length > 0 ? m[0] : "tila";
+                    if (laji == "tila") { Kirjaa("mac: " + MacSyote.Tila()); return null; }
+                    if (laji == "pakota") { Kirjaa("mac pakota: " + MacSyote.Pakota()); return null; }
+                    int o = laji == "veto" ? 3 : 2;
+                    var os = new Vector2(L(o, Screen.width / 2f), L(o + 1, Screen.height / 2f));
+                    string tulos = laji == "veto" ? MacSyote.Testi(new Vector2(L(1, 0), L(2, 0)), Vector2.zero, 1f, os)
+                        : laji == "rulla" ? MacSyote.Testi(Vector2.zero, new Vector2(0, L(1, 0)), 1f, os)
+                        : laji == "nipistys" ? MacSyote.Testi(Vector2.zero, Vector2.zero, L(1, 1f), os)
+                        : null;
+                    if (tulos == null) return "käyttö: ui mac tila|pakota|veto dx dy [x y]|rulla dy [x y]|nipistys s [x y]";
+                    Kirjaa($"mac {loput} → {tulos}");
                     return null;
                 }
                 case "kierto":

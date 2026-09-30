@@ -2434,7 +2434,6 @@
 }
 
 .mk-apuraha__kuva {
-    width: 18.5%;
     min-height: 0;
     padding: 0;
     border-width: 1px;
@@ -2442,21 +2441,6 @@
     border-radius: 4px;
     background-color: rgba(70, 51, 31, 0.08);
     -unity-background-scale-mode: scale-and-crop;
-}
-
-.mk-apuraha__video {
-    height: 180px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    background-color: #1c140d;
-    -unity-background-scale-mode: scale-and-crop;
-    align-items: center;
-    justify-content: center;
-}
-
-.mk-apuraha__videoteksti {
-    font-size: 16px;
-    color: #f2e2bb;
 }
 
 /* Kokoruutu (web .lightbox): tumma verho, kuva sovitettuna, kuvateksti ja laskuri alla. */

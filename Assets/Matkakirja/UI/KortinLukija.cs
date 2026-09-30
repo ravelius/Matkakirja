@@ -648,6 +648,7 @@ namespace Matkakirja.Natiivi
                 if (puu != null) Niele(puu, e.pointerId, nappi);
                 return;
             }
+            UiKerros.OhiSulki();  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
             SuljePaneeli();
             e.StopPropagation();
             if (puu != null) Niele(puu, e.pointerId, null);
