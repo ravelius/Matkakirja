@@ -126,6 +126,7 @@ namespace Matkakirja.Natiivi
 
         public void Avaus(AvauksenVaihe vaihe)
         {
+            CupolaAani.Linssi(true);   // Linssiseppä 30.9.: aseman humina kaikissa linssin näkymissä (omistaja)
             // Kertasyke paljastuksen jälkeen (web: paljastus 'paljastettu' → kalvo.syke()), vain kerran avausta kohden.
             if (vaihe == AvauksenVaihe.Pois && !sykeSoi) { sykeSoi = true; sykeAlkoi = Time.unscaledTime; }
             AvausKasittelija?.Invoke(vaihe);

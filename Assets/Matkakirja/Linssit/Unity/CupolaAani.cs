@@ -8,6 +8,12 @@
 //           kohdasta, sisäänhäivytys; 6 dB huminaa hiljempänä, väistää Pulun ja luennan (AaniTila.Voimassa) selvästi.
 // Linssin oma humina (astro-humina) vaiennetaan Cupolan ajaksi ja palautetaan, kun kyyti jatkuu muualla.
 //
+// HUMINA KAIKISSA LINSSIN NÄKYMISSÄ (Linssiseppä 30.9.2026; omistaja klo 23.5x Päätoimittajan kautta: "iss:n taustakohinan saisi
+// muuten lisätä sitten kaikkiin linssin näkymiin tausta ääneksi"): humina soi koko astronautin kameran ajan (kaukonäkymä,
+// kohdekuvat, seuranta, yönäkymät, Cupola), samalla tasolla ja väistöllä; se korvaa linssin oman astro-huminan koko linssin
+// ajaksi. Radio vain Cupolassa (häivytys sisään ja ulos, soittokohta jatkuu). Koukut: AstronauttiKerros.Avaus (Linssi(true)),
+// Kyyti (Tila), Pois (LinssiPois).
+//
 // Soitto natiivin AVAudioEngine-moottorin kautta (Plugins/iOS/MatkakirjaSilmukat.mm), ei Unityn pakattuna klippinä
 // (luennan hyppyongelma). Tiedostot ladataan kerran laitteen välimuistiin. Muualla kuin iOS-laitteella/simulaattorissa
 // (editori) kerrokset eivät soi. Testimykistys (simulaattori) ja Äänimaisema-kytkin vaientavat myös nämä, ja sovellus
@@ -49,7 +55,7 @@ namespace Matkakirja.Natiivi
 #endif
 
         static CupolaAani instanssi;
-        bool paalla, soi;
+        bool paalla, soi, linssissa, cupolassa;
         readonly float[] taso = new float[2];
         /// <summary>Tavoitetaso ilman testimykistystä (mittaus: väistö näkyy myös mykistetyssä simulaattorissa).</summary>
         readonly float[] tavoite = new float[2];
@@ -57,33 +63,52 @@ namespace Matkakirja.Natiivi
         int vuoro;
         string viimeVirhe;
 
-        /// <summary>Cupolassa (true) vai ei (AstronauttiKerros.Kyyti: tila == Ikkuna; Pois: false).</summary>
-        public static void Tila(bool cupolassa)
+        static CupolaAani Varmista()
         {
             if (instanssi == null)
             {
-                if (!cupolassa) return;
                 var go = new GameObject("CupolaAani");
                 DontDestroyOnLoad(go);
                 instanssi = go.AddComponent<CupolaAani>();
             }
-            instanssi.Aseta(cupolassa);
+            return instanssi;
         }
 
-        void Aseta(bool cupolassa)
+        /// <summary>Cupolassa (true) vai ei (AstronauttiKerros.Kyyti: tila == Ikkuna): radio vain Cupolassa.</summary>
+        public static void Tila(bool cupolassa)
         {
-            if (cupolassa == paalla) return;
-            paalla = cupolassa;
-            // Linssin oma humina pois Cupolan ajaksi; takaisin vain, jos linssi jatkuu (Pois ei palauta).
-            Aanisoitin.LinssiTausta(cupolassa ? null : Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina);
-            if (cupolassa) Kaynnista(); else Lopeta();
-            Debug.Log($"MATKAKIRJA cupola-aani: {(cupolassa ? "Cupolassa" : "pois")}");
+            if (instanssi == null && !cupolassa) return;
+            var i = Varmista();
+            i.cupolassa = cupolassa;
+            i.Aseta();
+        }
+
+        /// <summary>Astronautin kamera auki (AstronauttiKerros.Avaus): humina kaikissa linssin näkymissä.</summary>
+        public static void Linssi(bool auki)
+        {
+            if (instanssi == null && !auki) return;
+            var i = Varmista();
+            i.linssissa = auki;
+            i.Aseta();
+        }
+
+        void Aseta()
+        {
+            bool uusi = linssissa || cupolassa;
+            if (uusi == paalla) return;
+            paalla = uusi;
+            // Linssin oma humina (astro-humina) on korvattu tällä koko linssin ajaksi; Pois ei palauta.
+            if (uusi) Aanisoitin.LinssiTausta(null);
+            if (uusi) Kaynnista(); else Lopeta();
+            Debug.Log($"MATKAKIRJA cupola-aani: {(uusi ? (cupolassa ? "Cupolassa" : "linssissä (humina)") : "pois")}");
         }
 
         /// <summary>Linssi suljettiin (AstronauttiKerros.Pois): kerrokset pois eikä linssin huminaa palauteta.</summary>
         public static void LinssiPois()
         {
-            if (instanssi == null || !instanssi.paalla) return;
+            if (instanssi == null) return;
+            instanssi.linssissa = instanssi.cupolassa = false;
+            if (!instanssi.paalla) return;
             instanssi.paalla = false;
             instanssi.Lopeta();
         }
@@ -159,7 +184,7 @@ namespace Matkakirja.Natiivi
             bool puhe = tila != null && tila.Voimassa < 0.999;
             bool kuuluisi = paalla && (tila?.Aanimaisema ?? true);
             tavoite[Humina] = kuuluisi ? HuminaVoima * tausta * (puhe ? HuminaVaisto : 1f) : 0f;
-            tavoite[Radio] = kuuluisi ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;
+            tavoite[Radio] = kuuluisi && cupolassa ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;   // radio vain Cupolassa
             puheNyt = puhe;
             float h = kuuluu && !TestiMykistys.Paalla ? tavoite[Humina] : 0f;
             float r = kuuluu && !TestiMykistys.Paalla ? tavoite[Radio] : 0f;
