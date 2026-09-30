@@ -34,6 +34,14 @@ namespace Matkakirja.Natiivi
             ["muurinharja"] = "Muurinharja", ["kappeli"] = "Kappeli", ["keskushalli"] = "Keskushalli", ["keittio"] = "Keittiö",
         };
 
+        static readonly Dictionary<string, string> RaitaNimet = new Dictionary<string, string>
+        {
+            ["jarvi-laineet"] = "Järven laineet", ["linna-tuuli"] = "Tuuli", ["tulisija-ratina"] = "Tulisija",
+            ["keittio-ambienssi"] = "Keittiön hälinä", ["pata-poreilu"] = "Pata", ["vaivaaminen"] = "Vaivaaminen",
+        };
+        static string RaidanNimi(string id) => RaitaNimet.TryGetValue(id, out var n) ? n
+            : id.Length > 0 ? char.ToUpperInvariant(id[0]) + id.Substring(1).Replace('-', ' ') : id;
+
         /// <summary>Tallennetut (A) ja muokatut (B) arvot avaimella "cupola|humina", "linna|keittio|huone",
         /// "linna|*|tausta:&lt;ääni-id&gt;" jne. Puuttuva = oletus.</summary>
         static readonly Dictionary<string, float> tallennettu = new Dictionary<string, float>(), muokattu = new Dictionary<string, float>();
@@ -185,8 +193,8 @@ namespace Matkakirja.Natiivi
             {
                 S("humina", "Humina", 0, 110, Arvo(muokattu, "cupola|humina", 100f)),
                 S("radio", "Radio", 0, 200, Arvo(muokattu, "cupola|radio", 100f)),
-                S("humina-vaisto", "Huminan väistö puheen alla", 0, 200, Arvo(muokattu, "cupola|humina-vaisto", 100f)),
-                S("radio-vaisto", "Radion väistö puheen alla", 0, 100, Arvo(muokattu, "cupola|radio-vaisto", 100f)),
+                S("humina-vaisto", "Huminan väistö", 0, 200, Arvo(muokattu, "cupola|humina-vaisto", 100f)),
+                S("radio-vaisto", "Radion väistö", 0, 100, Arvo(muokattu, "cupola|radio-vaisto", 100f)),
             };
             public void Aseta(string id, float arvo) => AsetaMuokattu("cupola|" + id, arvo);
             public bool B { get => b; set => AsetaB(value); }
@@ -230,8 +238,8 @@ namespace Matkakirja.Natiivi
             {
                 float A(string id, float oletus) => Arvo(muokattu, Avain(id), oletus);
                 var l = new List<MikseriSaadin> { S("huone", "Taustat yhteensä", 0, 200, A("huone", 100f)) };
-                foreach (var t in taustat) l.Add(S("tausta:" + t, t, 0, 200, A("tausta:" + t, 100f)));
-                l.Add(S("vaisto", "Taustojen väistö puheen alla", 0, 100, A("vaisto", 100f)));
+                foreach (var t in taustat) l.Add(S("tausta:" + t, RaidanNimi(t), 0, 200, A("tausta:" + t, 100f)));
+                l.Add(S("vaisto", "Väistö puheessa", 0, 100, A("vaisto", 100f)));
                 if (KaikuHuoneet.Contains(huone))
                 {
                     l.Add(S("kaiku-ab", "Kaiku", 0, 1, A("kaiku-ab", 1f), "", 0));
