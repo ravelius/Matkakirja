@@ -29,7 +29,27 @@ const VENEET = [[-74, -9.5, 130], [-60, -29, 130], [-67.5, -14, 132]];
 // Piippujen savu katoilta: [x, y, katon z].
 const SAVUT = [[-3.6, 9.1, 10.88], [1.2, 17.8, 12.28], [8.1, 12.1, 9.97], [-2.1, -4.4, 6.84]];
 
+// Aikakerros n1500 (omistaja 1.10.: "Linnan ympäristö saisi mukailla linnan kultakauden aikaa"; Päätoimittajan
+// suunnitelma): läntisen saaren rannalla puulaituri linnaa kohti (linnaan tultiin veneellä), venevaja ja kaksi
+// hirsiaittaa niityllä. Pääpiirteet, ei rekonstruktio. Paikat ja maan korkeus ympäristön maastosta
+// (tools/dioraama/blender/ymparisto_putki.sh → maasto-z.npz), Blender-koordinaatit kuten yllä.
+const RANTA = [
+  // [resepti, x, y, z (maa / vesi), suunta (etusuunta: 90 = itään, linnaa kohti), parametrit]
+  ['hirsiaitta', -150, 45, -4.3, 100, { leveys: 3.4, syvyys: 3.8, siemen: 1501 }],
+  ['hirsiaitta', -158, 20, -5.2, 80, { leveys: 3.0, syvyys: 3.4, seina: 2.0, siemen: 1502 }],
+  ['venevaja', -91.5, 45, -7.0, 90, { leveys: 3.8, pituus: 7.0, siemen: 1503 }],
+];
+const RANTALAITURI = { x0: -125, x1: -109, y: 18, kansi: -6.45 };  // lautakansi paaluilla rannasta itään
+
 const palikat = [];
+RANTA.forEach(([resepti, x, y, z, suunta, p]) => palikat.push({ resepti, paikka: g(x, y, z), suunta, ...p }));
+{
+  const { x0, x1, y, kansi } = RANTALAITURI;
+  palikat.push({ resepti: 'laiturikansi', paikka: g((x0 + x1) / 2, y, kansi), suunta: 90, leveys: 2.2, pituus: x1 - x0, paksuus: 0.12, siemen: 1504 });
+  for (let x = x0 + 1; x <= x1; x += 3) for (const dy of [-1.0, 1.0]) {
+    palikat.push({ resepti: 'paalu', paikka: g(x, y + dy, -7.8), suunta: 0, sade: 0.12, korkeus: 1.25 });
+  }
+}
 const liekit = [];
 const valot = [];
 SOIHDUT.forEach(([x, y, z, s], i) => {

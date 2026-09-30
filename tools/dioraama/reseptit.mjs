@@ -11,6 +11,7 @@
 //   reseptit-kalusteet2.mjs linnan tilojen kalusteet ja rekvisiitta (erä 3, kohta 2)
 //   reseptit-etsinta.mjs   sinettisormus, kaiverrus (voudin sinetti -etsintä 29.9.)
 //   reseptit-aitta.mjs     kangaspakka, vaatepino, vaateorsi (fatabuuri vaateaitaksi 29.9.)
+//   reseptit-rannat.mjs    hirsiaitta, venevaja (ympäristö n1500, 1.10.)
 // Jokainen resepti tuottaa kolmiot paikallisessa kehyksessä (u, y, w) oikeakätisenä (reseptit-apu.mjs).
 import * as rakenne from './reseptit-rakenne.mjs';
 import * as maasto from './reseptit-maasto.mjs';
@@ -21,14 +22,15 @@ import * as linna from './reseptit-linna.mjs';
 import * as kalusteet2 from './reseptit-kalusteet2.mjs';
 import * as etsinta from './reseptit-etsinta.mjs';
 import * as aitta from './reseptit-aitta.mjs';
+import * as rannat from './reseptit-rannat.mjs';
 
 export const RESEPTIT = {
   ...rakenne.RESEPTIT, ...maasto.RESEPTIT, ...kalusteet.RESEPTIT, ...lattiat.RESEPTIT, ...rekvisiitta.RESEPTIT,
-  ...linna.RESEPTIT, ...kalusteet2.RESEPTIT, ...etsinta.RESEPTIT, ...aitta.RESEPTIT,
+  ...linna.RESEPTIT, ...kalusteet2.RESEPTIT, ...etsinta.RESEPTIT, ...aitta.RESEPTIT, ...rannat.RESEPTIT,
 };
 export const OLETUSPINNAT = {
   ...rakenne.OLETUSPINNAT, ...maasto.OLETUSPINNAT, ...kalusteet.OLETUSPINNAT, ...lattiat.OLETUSPINNAT,
-  ...rekvisiitta.OLETUSPINNAT, ...linna.OLETUSPINNAT, ...kalusteet2.OLETUSPINNAT, ...etsinta.OLETUSPINNAT, ...aitta.OLETUSPINNAT,
+  ...rekvisiitta.OLETUSPINNAT, ...linna.OLETUSPINNAT, ...kalusteet2.OLETUSPINNAT, ...etsinta.OLETUSPINNAT, ...aitta.OLETUSPINNAT, ...rannat.OLETUSPINNAT,
 };
 
 const RAD = Math.PI / 180;
