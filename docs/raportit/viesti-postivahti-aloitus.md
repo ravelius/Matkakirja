@@ -16,3 +16,6 @@ Aja: `git archive origin/main tools/kaynnit.mjs js/packs/pollo-asetukset.js | ta
 
 ## Pariteettisääntö (Päätoimittaja välitti 30.9. klo 22.3x, ilmoittaa omistajan linjauksen)
 Kukaan ei muuta mitään sillä perusteella, että web ja natiivi eroavat, ennen omistajan lupaa; ero ilmoitetaan Päätoimittajalle yhdellä rivillä. Sääntö liitetään kierroksen aloitusviestipohjiin.
+
+## Viestirajan hook -tarkistus (Päätoimittaja välitti 30.9. klo 22.4x, joka kierros)
+Kunnes PR #3734 on mainissa: `jq -e '.hooks.PostToolUse[]? | select(.matcher == "SendMessage")' ~/.claude/settings.json >/dev/null && echo OK`. Mainiin tultua: `bash tools/hooks/asenna-viestiraja-hook.sh --tarkista`. Puute → yksi rivi Päätoimittajalle; ÄLÄ asenna itse. Ensimmäinen tarkistus 22.4x: OK (#3734 auki).
