@@ -56,8 +56,9 @@ const TAULU = {
   // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). P1–P3; oikeakätisyys-myytti poistettu
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Linnan päätornissa oli viisi kerrosta: 3. krs ylin asuttu, 4. krs avoin puolustuskäytävä.', lahde: 'Savon historia: Olavinlinnan suojassa (torninimi epävarma)' },
-    { teksti: 'Kapeissa kierreportaissa vain yksi mies mahtui kerrallaan.', lahde: 'Yleinen linnatieto (ei Olavinlinnan omaa lähdettä)' },
+    // Sisältökirjuri 30.9. (5684d5d81): "päätorni" epävarma, "vain yksi mies" ilman lähdettä → korjattu.
+    { teksti: 'Tornissa oli viisi kerrosta: kolmas oli ylin asuttu, neljännessä kulki avoin puolustuskäytävä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { teksti: 'Kierreportaat olivat kapeat ja ahtaat – hyökkääjälle hankala paikka.', lahde: 'Savon historia: Olavinlinnan suojassa' },
     { teksti: 'Kehämuurit ja esilinnan muurit kohosivat 13 metrin korkeuteen.', lahde: 'Savon historia: Olavinlinnan suojassa' },
   ],
 };
@@ -100,6 +101,22 @@ const LAMMIN = '#ff9a4a';
 export const TILA = {
   id: 'kierreportaat',
   nimi: 'Kierreportaat',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Kierreportaat', rivit: [{ teksti: 'Kapeat portaat yhdistävät tornin viisi kerrosta.', lahde: 'Savon historia: Olavinlinnan suojassa' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'kierreportaat-k1', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: null,
+      teksti: 'Kolmas kerros, neljäs kerros… Ilman voudin sinettiä ei yksikään kirje lähde linnasta, ja minä juoksen näitä portaita edestakaisin.' },
+    { id: 'kierreportaat-k2', puhuja: 'renki', nimi: 'Renki', aani: null,
+      teksti: 'Varovasti, herra kirjuri, näissä portaissa ei ohiteta ketään. Kapeaa ja ahdasta – vihollisellekin, kiitos siitä.' },
+    { id: 'kierreportaat-k3', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: null,
+      teksti: 'Viisi kerrosta, ja ylin asuttu on kolmas. Neljännellä vain tuuli ja vartijat. Minä en ole kumpaakaan.' },
+    { id: 'kierreportaat-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Portaat ylös, portaat alas, ja sinetti yhä hukassa. Siivet olisivat tässä linnassa kova sana.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
@@ -113,7 +130,9 @@ export const TILA = {
   kameraPysty: { kohde: [-30, 3.6, -20], atsimuutti: 160, korkeus: 18, etaisyys: 68, fov: 40, aukko: 0.8 },
   kierto: { atsimuutti: [-40, 40], korkeus: [8, 50], etaisyys: [0.7, 1.4] },
   // Pulu laskeutuu 4. kerroksen tasanteen tynnyrin kanteen (P(3,1; 183°), tynnyri 0,9 m).
-  pulu: { laskeutuminen: P(3.1, 183, +(Y2 + 0.9).toFixed(2)), taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: P(3.1, 183, +(Y2 + 0.9).toFixed(2)), taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
+    teksti: 'Tornissa oli viisi kerrosta: kolmas oli ylin asuttu kerros, ja neljännessä kulki puolustuskäytävä. Kierreportaat olivat kapeat ja ahtaat – hyökkääjälle hankala paikka. Kehä- ja esilinnan muurit kohosivat jopa 13 metrin korkeuteen.', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): Kellotornin kylki portaiden korkeudella kameran puolella (lyhty ampumaraoissa).
   elava: { kohde: [-27.4, 11, -12.8], sade: 6 },
@@ -193,8 +212,13 @@ export const TILA = {
     { resepti: 'sakki', paikka: P(3.3, 156, Y2), suunta: 0, sade: 0.26, korkeus: 0.5, siemen: 37 },
   ],
   hahmot: HAHMOT,
-  aanet: [{ aani: 'linna-tuuli' }],
-  tehosteet: [{ aanet: ['askel-kivi'], valit_s: [9, 18] }],
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [
+    { aani: 'porras-kaiku', voimakkuus: 0.6 },
+    { aani: 'linna-tuuli', voimakkuus: 0.3 },
+    { aani: 'soihtu-ratina', voimakkuus: 0.3 },
+  ],
+  tehosteet: [{ aanet: ['askel-porras-1', 'askel-porras-2'], valit_s: [5, 10], voimakkuus: 0.6 }],
   liekit: [
     { liekki: 'soihtu', paikka: soihtuLiekki(270, 9.4), koko: 1, vaihe: 0 },
     { liekki: 'soihtu', paikka: soihtuLiekki(335, 10.9), koko: 1, vaihe: 0.35 },

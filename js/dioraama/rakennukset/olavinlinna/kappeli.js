@@ -12,8 +12,9 @@ const TAULU = {
   // Sisältökirjurin tarkistus 29.9. (docs/raportit/sisaltokirjuri-olavinlinna-era4-tarkistus-20260929.md, K1–K3).
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Kappelin seinää kiertää 12 vihkimisristiä; Savon historian mukaan kappeli mainitaan jo 1499.', lahde: 'Kansallismuseo: Pyhä Olavi; Savon historia: Olavinlinnan suojassa' },
-    { teksti: 'Suomessa ainutlaatuinen hagioskooppi: rikolliset ja sairaat seurasivat messua pienestä aukosta.', lahde: 'Kansallismuseo: Pyhä Olavi; Wikipedia: Olavinlinna; Apu' },
+    // Sisältökirjuri 30.9. (5684d5d81): vuosiluku 1499 ja "ainutlaatuinen" ilman lähdettä → korjattu.
+    { teksti: 'Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' },
+    { teksti: 'Seinän pieni aukko on hagioskooppi: rikolliset ja sairaat seurasivat messua sen kautta.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' },
     { teksti: 'Kattomaalausten jäänteistä erottaa vielä lehti- ja kukkakuvioita sekä vaakunoita.', lahde: 'Kansallismuseo: Pyhä Olavi' },
   ],
 };
@@ -105,7 +106,7 @@ const KAPPELI_HAHMOT = [
     id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.35, LATTIA, -20.8], suunta: 90, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'kappalainen-1', teksti: 'Introibo ad altare Dei. Menen Jumalan alttarille, ja ääni alas, jos sallitte.' },
+      { id: 'kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
       { id: 'kappalainen-2', teksti: 'Vahakynttilä on kallis, siksi ne palavat vain messun ajan, eivät päivän mittaa.' },
     ],
     reaktio: { id: 'pulu-kappalainen-r1', teksti: 'Latinaa! En ymmärrä sanaakaan, mutta kaiku tekee siitä aivan taivaallista.' },
@@ -124,6 +125,24 @@ const KAPPELI_HAHMOT = [
 export const TILA = {
   id: 'kappeli',
   nimi: 'Kappeli',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Kappeli', rivit: [{ teksti: 'Kirkkotornin kappeli: kaksitoista vihkimäristiä ja harvinainen hagioskooppi.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'kappeli-k1', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
+      teksti: 'Dominus vobiscum… Voudin herra, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien.' },
+    { id: 'kappeli-k2', puhuja: 'vouti', nimi: 'Vouti', aani: null,
+      teksti: 'Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina.' },
+    { id: 'kappeli-k3', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
+      teksti: 'Laskekaa mieluummin syntinne. Ja siirtykää: tuon pienen aukon takana sairaat odottavat näkevänsä alttarin.' },
+    { id: 'kappeli-k4', puhuja: 'vouti', nimi: 'Vouti', huom: 'hiljaa', aani: null,
+      teksti: 'Fatabuurin avain… missä minä sitä pitelinkään?' },
+    { id: 'kappeli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Reikä seinässä messun seuraamiseen – Suomessa harvinaista herkkua. Ja voudilta näyttää puuttuvan muutakin kuin hartautta.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−15,4, 14,6) (kartiokaton
   // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella; torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.
@@ -140,7 +159,9 @@ export const TILA = {
   },
   kierto: { atsimuutti: [-40, 40], korkeus: [8, 45], etaisyys: [0.7, 1.4] },
   // Pulu pulpetin yläreunalle (30.9.): penkin selkänojalla se peitti vihjeen 2 kaiverruksen pystykuvassa (x 0,33 vs 0,30).
-  pulu: { laskeutuminen: [PULPETTI[0], LATTIA + 1.12, PULPETTI[2] + 0.05], taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: [PULPETTI[0], LATTIA + 1.12, PULPETTI[2] + 0.05], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
+    teksti: 'Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä. Katossa on säilynyt katkelmia maalauksista, muun muassa lehti- ja kukkakuvioita ja vaakunoita. Seinän pieni aukko on hagioskooppi, josta rikolliset ja sairaat seurasivat messua – Suomessa harvinainen ratkaisu.', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): Kirkkotornin kylki kappelin kerroksessa kameran puolella (kynttilänvalo ikkunoissa).
   elava: { kohde: [1.9, 11.5, -12.8], sade: 6 },
@@ -189,12 +210,16 @@ export const TILA = {
   etsinta: [
     { etsinta: 'voudin-sinetti', vaihe: 2, tyyppi: 'vihje', kohde: [-1.68, 10.24, -19.4], sade: 0.6,
       teksti: 'Penkin selkänojassa on tuore naarmu: raskas avainnippu on raapaissut puuta. Painaumasta erottuu ison avaimen parta – fatabuurin avaimen.',
-      pulu: 'Ensin rukous, sitten aittaan. Vouti oli järjestelmällinen mies – paitsi sormuksensa kanssa.' },
+      pulu: 'Ensin rukous, sitten aittaan. Vouti oli järjestelmällinen mies – paitsi sormuksensa kanssa.',
+      rivi: 'Penkissä on tuore jälki – fatabuurin avaimen parta.' },
   ],
   hahmot: KAPPELI_HAHMOT,
-  aanet: [], // kappelin äänet (kaiku, kynttilän rätinä, kaukainen laulu) tulevat Pelikoodarin tilauksesta
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [{ aani: 'kappeli-ambienssi', voimakkuus: 0.6 }, { aani: 'kynttila-ratina', voimakkuus: 0.3 }],
   tehosteet: [
-    { aanet: ['kellot-kaukaa'], valit_s: [40, 80] },
+    { aanet: ['laulu-kaukaa'], valit_s: [20, 40], voimakkuus: 0.35 },
+    { aanet: ['kello-kappeli'], valit_s: [60, 120], voimakkuus: 0.4 },
+    { aanet: ['askel-kivi'], valit_s: [25, 50], voimakkuus: 0.3 },
   ],
   liekit: LIEKIT,
   kasikirjoitus: [

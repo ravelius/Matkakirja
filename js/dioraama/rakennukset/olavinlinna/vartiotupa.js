@@ -141,8 +141,12 @@ export const TILA = {
     { resepti: 'yrttinippu', paikka: [-28.4, 3.25, 8.3], suunta: 0, korkeus: 0.26 },
   ],
   hahmot: VARTIOTUPA_HAHMOT,
-  aanet: [],
-  tehosteet: [],
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [{ aani: 'vartiotupa-ambienssi', voimakkuus: 0.7 }],
+  tehosteet: [
+    { aanet: ['noppa-1', 'noppa-2'], valit_s: [8, 16], voimakkuus: 0.5 },
+    { aanet: ['keihas-kolahdus'], valit_s: [20, 40], voimakkuus: 0.4 },
+  ],
   liekit: [
     // Tulisijan hiillos (palikka [-25, 0, 6.05], korkeus 0,7) ja seinäsoihdun liekki (ks. seinäsoihtu alla).
     { liekki: 'tulisija', paikka: [-25, 0.7, 6.05], koko: 1, vaihe: 0 },

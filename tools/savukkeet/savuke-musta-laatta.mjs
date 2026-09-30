@@ -248,7 +248,7 @@ const selain = await (MOOTTORI === 'webkit'
   ? moottori.launch()
   : moottori.launch({
     executablePath: process.env.CHROMIUM || undefined,
-    args: ['--disable-dev-shm-usage'],
+    args: ['--disable-dev-shm-usage', '--mute-audio'],
   }));
 
 const LEVEYS = 390;

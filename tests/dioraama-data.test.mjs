@@ -409,6 +409,89 @@ test('elävä linna: RAKENNUS.saapuminen ja nimilaput ovat oikeamuotoiset', () =
   assert.ok(s && s.alku, 'saapuminen.alku puuttuu');
   for (const k of ['atsimuutti', 'etaisyys', 'korkeus']) assert.ok(Number.isFinite(s.alku[k]), `saapuminen.alku.${k}`);
   assert.ok(s.alku.atsimuutti >= 0 && s.alku.atsimuutti < 360);
-  assert.ok(s.kesto >= 15 && s.kesto <= 20, `saapuminen.kesto ${s.kesto} s (käsikirjoitus 15–20 s)`);
-  assert.ok(s.lyhyt > 0 && s.lyhyt < s.kesto, 'saapuminen.lyhyt < kesto');
+  // Uusi rakenne (omistaja 30.9.): lyhyt saapuminen aina (6 s), sitten kertojan kierros.
+  assert.ok(s.kesto >= 4 && s.kesto <= 8, `saapuminen.kesto ${s.kesto} s (uusi rakenne: lyhyt)`);
+  assert.ok(s.lyhyt > 0 && s.lyhyt <= s.kesto, 'saapuminen.lyhyt ≤ kesto');
+});
+
+// Olavinlinnan uusi rakenne (omistaja 30.9. klo 15.28): kertoja 4 jaksoa, infotaulu + Pulun kertomus joka huoneessa,
+// sinetin vihjeet infotaulun riveinä. Tekstit Päätoimittajalta; äänet vasta omistajan luvalla (aani: null).
+test('Olavinlinna: kertoja 4 jaksoa (≤ 3 virkettä, ≤ 240 merkkiä), kamera, ei ääntä ennen lupaa; lyhyt saapuminen', async () => {
+  const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
+  const j = RAKENNUS.kertoja.jaksot;
+  assert.deepEqual(j.map((x) => x.id), ['jarvelta', 'tornit', 'piha', 'laituri']);
+  for (const x of j) {
+    assert.ok(x.teksti.length <= 240, `${x.id}: ${x.teksti.length} merkkiä`);
+    assert.ok((x.teksti.match(/[.!?](\s|$)/g) ?? []).length <= 3, `${x.id}: yli 3 virkettä`);
+    // Tila-jakso (laituri) käyttää tilan omaa kameraa (natiivi, Siirtoseppä 1.1 (75)); muilla jaksoilla oma kamera.
+    const kamerat = x.tila ? [RAKENNUS.tilat.find((t) => t.id === x.tila)?.kamera] : [x.kamera, x.kameraPysty];
+    for (const k of kamerat) assert.ok(Array.isArray(k?.kohde) && k.kohde.length === 3 && k.etaisyys > 0, x.id);
+    assert.equal(x.aani, null, `${x.id}: ääni vasta omistajan luvalla`);
+  }
+  const yht = j.reduce((a, x) => a + x.kesto_s, 0);
+  assert.ok(yht >= 40 && yht <= 50, `kertoja ${yht} s (tavoite noin 45 s)`);
+  assert.ok(RAKENNUS.saapuminen.kesto <= 8, 'saapuminen on lyhyt');
+});
+
+test('Olavinlinna: jokaisessa kohdistettavassa huoneessa infotaulu (nimi + 1–2 riviä) ja Pulun kertomus ilman ääntä', async () => {
+  const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
+  const huoneet = RAKENNUS.tilat.filter((t) => t.kohdistettava);
+  assert.equal(huoneet.length, 7);
+  for (const t of huoneet) {
+    assert.ok(t.infotaulu?.nimi && t.infotaulu.rivit.length >= 1 && t.infotaulu.rivit.length <= 2, t.id);
+    for (const r of t.infotaulu.rivit) assert.ok(r.teksti && r.lahde, `${t.id}: rivi { teksti, lahde }`);
+    assert.ok(Array.isArray(t.pulu.laskeutuminen), `${t.id}: vanha pulu.laskeutuminen säilyy`);
+    assert.ok(t.pulu?.teksti?.length > 100, `${t.id}: Pulun kertomus`);
+    assert.equal(t.pulu.aani, null, `${t.id}: ääni vasta omistajan luvalla`);
+  }
+  const vihjeet = huoneet.flatMap((t) => t.etsinta ?? []).filter((e) => e.etsinta === 'voudin-sinetti');
+  assert.deepEqual(vihjeet.map((e) => e.vaihe).sort(), [1, 2, 3]);
+  for (const e of vihjeet) assert.ok(e.rivi && e.rivi.length <= 80, `sinetin vaihe ${e.vaihe}: infotaulun rivi`);
+});
+
+test('Olavinlinna: kuunnelmat (kohtaus = rivijono), puhujat ratkeavat, Pulu viimeisenä, ei ääntä ennen lupaa', async () => {
+  const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
+  const idt = new Set();
+  for (const t of RAKENNUS.tilat.filter((x) => x.kohdistettava)) {
+    const k = t.kuunnelma;
+    assert.ok(Array.isArray(k) && k.length >= 3 && k.length <= 6, `${t.id}: kuunnelma`);
+    const hahmot = new Set((t.hahmot ?? []).map((h) => h.id));
+    for (const r of k) {
+      assert.ok(r.puhuja === 'pulu' || hahmot.has(r.puhuja) || r.huom, `${t.id}/${r.id}: puhuja ${r.puhuja}`);
+      assert.ok(r.teksti.length > 10 && r.teksti.length <= 160, `${t.id}/${r.id}: teksti`);
+      assert.equal(r.aani, null, `${t.id}/${r.id}: ääni vasta omistajan luvalla`);
+      assert.ok(!idt.has(r.id), `kaksois-id ${r.id}`);
+      idt.add(r.id);
+    }
+    assert.equal(k.at(-1).puhuja, 'pulu', `${t.id}: Pulu lopuksi`);
+  }
+});
+
+test('Olavinlinna: ei asia-anakronismeja (iltamessu → iltarukous, Introibo → Dominus vobiscum, Kuninkaan sali → yläsali)', async () => {
+  const { readFileSync, readdirSync } = await import('node:fs');
+  const juuri = new URL('../js/dioraama/rakennukset/olavinlinna/', import.meta.url);
+  for (const f of readdirSync(juuri).filter((x) => x.endsWith('.js'))) {
+    const teksti = readFileSync(new URL(f, juuri), 'utf8');
+    for (const kielletty of [/iltamess/i, /introibo/i, /kuninkaan sali/i]) assert.ok(!kielletty.test(teksti), `${f}: ${kielletty}`);
+  }
+});
+
+test('Olavinlinna: kertojan jakson valinnainen tila viittaa olemassa olevaan kohdistettavaan tilaan', async () => {
+  const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
+  const tilat = new Set(RAKENNUS.tilat.filter((t) => t.kohdistettava).map((t) => t.id));
+  for (const j of RAKENNUS.kertoja.jaksot) if (j.tila !== undefined) assert.ok(tilat.has(j.tila), `${j.id}: tila ${j.tila}`);
+  assert.equal(RAKENNUS.kertoja.jaksot.find((j) => j.id === 'laituri').tila, 'laituri');
+});
+
+// Mikseritilan otot (Pelikoodari 30.9.): keittiön kuudella repliikillä kuiva/kaiku/kaikuPitka median juuresta ('/').
+test('AANET: keittiön repliikkien mikseriotot ovat median juuren polkuja, muilla äänillä ei kenttiä', () => {
+  const ottajat = ['kokki-1', 'kokki-2', 'apulainen-1', 'apulainen-2', 'vesipoika-1', 'vesipoika-2'];
+  for (const [id, a] of Object.entries(AANET)) {
+    const kentat = ['kuiva', 'kaiku', 'kaikuPitka'].filter((k) => a[k] !== undefined);
+    if (!ottajat.includes(id)) { assert.deepEqual(kentat, [], id); continue; }
+    const v = id.startsWith('apulainen') ? 'v2' : 'v1';  // apulaisen uusi ääni (omistaja, #3740)
+    assert.equal(a.kuiva, `/aanet/mikseri/${v}/${id}.kuiva.mp3`);
+    assert.equal(a.kaiku, `/aanet/mikseri/${v}/${id}.kaiku.mp3`);
+    assert.equal(a.kaikuPitka, `/aanet/mikseri/${v}/${id}.kaiku-pitka.mp3`);
+  }
 });

@@ -3,7 +3,8 @@
 # lämpimän hehkun pystypinnoilla valituissa rakennuslaatikoissa (glTF-koordinaatit, sijoitettu rakennus.json).
 #   nice -n 15 Blender -b -P kuori_ikkunat.py -- <kuori.glb> <kuori-valokuva.jpg> <kuori-hamara-4k.jpg> <ulos-kansio>
 #     [--laatikot itasiipi,keittio,keskushalli,kappelikerros | --kaikki] [--rakennus rakennus-sijoitettu.json] [--voima 1.0] [--kynnys 1.1]
-# Tulos: <ulos>/ulkokuori-hamara-{4k,2k}.jpg (+ ikkunamaski.png tarkistukseen). Laskenta 2k:ssa, maski skaalataan 4k:hon.
+# Tulos: <ulos>/ulkokuori-hamara-{8k,4k,2k}.jpg syötteen koosta alaspäin (+ ikkunamaski.png tarkistukseen). Laskenta 2k:ssa,
+# maski skaalataan syötteen kokoon (4k tai 8k).
 import bpy, json, os, sys
 import numpy as np
 a = sys.argv[sys.argv.index('--') + 1:]
@@ -148,16 +149,25 @@ for sk in range(12):
             tk.filepath_raw = os.path.join(ULOS, f'julkisivu-{sk * 30}-{int(kerros)}.png'); tk.file_format = 'PNG'; tk.save()
 print('IKKUNAT: tekseleitä', int((maski > 0.5).sum()), '/', int((peitto & sisalla).sum()), 'laatikoissa')
 
-H = lataa(HAMARA, 4096)
-m4 = np.repeat(np.repeat(maski, 2, 0), 2, 1)[..., None]; h4 = np.repeat(np.repeat(hehku, 2, 0), 2, 1)[..., None]
+_h = bpy.data.images.load(HAMARA); KH = _h.size[0]; bpy.data.images.remove(_h)  # 4k tai 8k (vaihe 4: 8k-albedo)
+H = lataa(HAMARA, KH); f = KH // N
+def suurenna(x):  # 2k-maski syötteen kokoon pehmeästi (pelkkä toisto näkyi 8k:ssa porrastuksena)
+    y = np.repeat(np.repeat(x.astype(np.float32), f, 0), f, 1)
+    return laatikkosumennus(y, f // 2).astype(np.float32)[..., None] if f > 1 else y[..., None]
+m4 = suurenna(maski); h4 = suurenna(hehku)
 # JPEG-pikselit ovat sRGB-arvoja (tavukuva): aukko korvautuu lämpimällä hehkulla (ei tummemmaksi kuin ennen).
 ulos = H * (1 - m4) + m4 * np.maximum(H, LAMMIN * 0.9 * VOIMA) + h4 * LAMMIN * 0.22 * VOIMA
+del H, m4, h4
 def tallenna(arr, nimi, koko):
     k = bpy.data.images.new(nimi, koko, koko)  # tavukuva: arvot tallentuvat sRGB:nä sellaisenaan
     k.pixels.foreach_set(np.concatenate([np.clip(arr, 0, 1), np.ones((koko, koko, 1), np.float32)], -1).ravel())
     k.filepath_raw = os.path.join(ULOS, nimi); k.file_format = 'JPEG' if nimi.endswith('jpg') else 'PNG'
     k.save(quality=90) if nimi.endswith('jpg') else k.save()
-tallenna(ulos, 'ulkokuori-hamara-4k.jpg', 4096)
-tallenna(ulos.reshape(2048, 2, 2048, 2, 3).mean((1, 3)), 'ulkokuori-hamara-2k.jpg', 2048)
+    bpy.data.images.remove(k)
+koko = KH
+while koko >= 2048:
+    tallenna(ulos, f'ulkokuori-hamara-{koko // 1024}k.jpg', koko)
+    if koko > 2048: ulos = ulos.reshape(koko // 2, 2, koko // 2, 2, 3).mean((1, 3))
+    koko //= 2
 tallenna(np.repeat(maski[..., None], 3, -1), 'ikkunamaski.png', N)
 print('IKKUNAT: valmis', ULOS)

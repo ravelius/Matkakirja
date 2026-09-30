@@ -1,0 +1,60 @@
+# HAHMOJEN ÄÄNINÄYTTEET (Pelikoodari 30.9.2026): hahmoäänien valinta ilman, että avain käy kenenkään sessiossa.
+# haku = ILMAINEN kirjastohaku (omat + jaetut äänet hahmokohtaisin suodattimin), kuiva = syötteen tarkistus,
+# generoi = MAKSULLINEN (eleven_v4, 192 kbit/s; vain omistajan luvalla, syötteen lupa-kentässä lokiviite).
+# Tulokset artefaktina hahmonaytteet-<ajo>: haku.md/json tai naytteet/*.mp3, kooste.mp3, lista.md/json. Ks. tools/hahmonaytteet.mjs.
+name: Hahmojen ääninäytteet
+run-name: Hahmonäytteet ${{ inputs.toiminto }}
+on:
+  workflow_dispatch:
+    inputs:
+      toiminto:
+        description: haku (ilmainen) | kuiva (tarkistus) | generoi (maksullinen, omistajan lupa)
+        required: true
+        type: choice
+        default: haku
+        options: [haku, kuiva, generoi]
+      syote:
+        description: JSON (ks. tools/hahmonaytteet.mjs otsikkokommentti)
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: hahmonaytteet
+  cancel-in-progress: false
+jobs:
+  naytteet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Tarkista syöte ennen avaimia
+        if: ${{ inputs.toiminto != 'haku' }}
+        env:
+          SYOTE: ${{ inputs.syote }}
+          TOIMINTO: kuiva
+        run: node tools/hahmonaytteet.mjs
+      - name: ffmpeg
+        if: ${{ inputs.toiminto == 'generoi' }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Aja
+        if: ${{ inputs.toiminto != 'kuiva' }}
+        env:
+          TOIMINTO: ${{ inputs.toiminto }}
+          SYOTE: ${{ inputs.syote }}
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node tools/hahmonaytteet.mjs
+      - name: Artefakti
+        if: ${{ always() && inputs.toiminto != 'kuiva' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: hahmonaytteet-${{ github.run_id }}
+          path: hahmonaytteet-output/
+          if-no-files-found: ignore
+          retention-days: 90

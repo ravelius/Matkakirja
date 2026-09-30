@@ -15,9 +15,10 @@ const TAULU = {
   // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). M1–M3
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Päätornin neljännessä kerroksessa oli avoin puolustuskäytävä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    // Sisältökirjuri 30.9. (5684d5d81): "päätorni" epävarma nimitys → "tornin"; Kylliäisen nimi ja asema tarkistettu.
+    { teksti: 'Tornin neljännessä kerroksessa oli avoin puolustuskäytävä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
     { teksti: 'Muurin harjalta torjuttiin nuolet, kivet ja piiritysportaat.', lahde: 'Tiedetuubi: Linnarakennustekninen balladi Olavinlinnasta' },
-    { teksti: 'Vuonna 1495 Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikaisen nostoväen turvin.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen, Vanha viha' },
+    { teksti: 'Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen' },
   ],
 };
 
@@ -74,6 +75,22 @@ const HAHMOT = [
 export const TILA = {
   id: 'muurinharja',
   nimi: 'Muurinharja',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Muurinharja', rivit: [{ teksti: 'Avoin puolustuskäytävä, josta hyökkääjät torjuttiin vuonna 1495.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'muurinharja-k1', puhuja: 'vartija', nimi: 'Muurin vartija', aani: null,
+      teksti: 'Tuuli viiltää, ja silti täällä harjalla ei nukuta. Itäraja on lähempänä kuin luulisi.' },
+    { id: 'muurinharja-k2', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: null,
+      teksti: 'Minä seisoin tällä samalla harjalla vuonna 1495, kun ne tulivat. Kiviä ja nuolia alas, ja piiritysportaat perään.' },
+    { id: 'muurinharja-k3', puhuja: 'vartija', nimi: 'Muurin vartija', aani: null,
+      teksti: 'Silloin vouti Kylliäinen komensi kuin olisi syntynyt haarniska päällä. Nykyisestä voudista en tiedä – se etsii jotain kaikista kolmesta tornista.' },
+    { id: 'muurinharja-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Neljännen kerroksen avoin puolustuskäytävä: maisemat upeat, mutta vetoista. Minä istuisin mieluummin katolla.' },
+  ],
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,
@@ -90,7 +107,9 @@ export const TILA = {
   kameraPysty: { kohde: [-16.21, 8.8, -19.68], // pysty 30.9.: vartijan reitin pää ei reunaan
      atsimuutti: 165, korkeus: 28, etaisyys: 40, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-35, 35], korkeus: [14, 45], etaisyys: [0.7, 1.4] },
-  pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
+    teksti: 'Tornin neljännessä kerroksessa kulki avoin puolustuskäytävä muurin harjalla. Täältä torjuttiin nuolet, kivet ja piiritysportaat. Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla. Pidä pääsi muurin suojassa!', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): napautuskohde kannen keskellä; lyhdyllinen vartija on hahmot[]-listassa (reitti kannen päästä päähän).
   elava: { kohde: [-14.75, 14.2, -19.75], sade: 6 },
@@ -149,13 +168,15 @@ export const TILA = {
   ],
   hahmot: HAHMOT,
   // Ulkotila: tuuli taustana, tulikorin rätinä, satunnaiset lokit ja askeleet kivellä.
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
   aanet: [
-    { aani: 'linna-tuuli' },
-    { aani: 'tulisija-ratina' },
+    { aani: 'muuri-tuuli', voimakkuus: 0.8 },
+    { aani: 'soihtu-ratina', voimakkuus: 0.45 },
+    { aani: 'jarvi-laineet', voimakkuus: 0.25 },
   ],
   tehosteet: [
-    { aanet: ['lokit'], valit_s: [18, 40] },
-    { aanet: ['askel-puu', 'askel-kivi'], valit_s: [10, 22] },
+    { aanet: ['lokit'], valit_s: [20, 40], voimakkuus: 0.5 },
+    { aanet: ['askel-kivi'], valit_s: [6, 12], voimakkuus: 0.5 },
   ],
   liekit: [
     // Tulikorin liekki hiilloksen päällä (KY + 0,25 + 0,21 = 13,56).

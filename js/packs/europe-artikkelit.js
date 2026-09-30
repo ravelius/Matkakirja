@@ -4083,4 +4083,166 @@ export const EUROPE_ARTIKKELIT = {
               + 'maailman suurin lelunvalmistaja.',
     lahde: 'Wikipedia (CC BY-SA)',
   },
+  Albania: {
+    intro: 'Albania on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva valtio, '
+      + 'jonka pinta-ala on 28 748 neliökilometriä. Se rajoittuu Montenegroon, '
+      + 'Kosovoon, Pohjois-Makedoniaan ja Kreikkaan, ja sen länsirannikkoa '
+      + 'huuhtovat Adrianmeri ja Joonianmeri. Maisema vaihtelee lyhyillä '
+      + 'etäisyyksillä: sisämaassa kohoavat lumihuippuiset Albanian Alpit ja '
+      + 'Korabin vuoristo, rannikolla levittäytyvät hedelmälliset tasangot. '
+      + 'Pääkaupunki ja suurin kaupunki on Tirana, ja muita tärkeitä kaupunkeja '
+      + 'ovat Durrës, Vlorë ja Shkodër. Virallinen kieli on albania. Vuoden '
+      + '2023 väestönlaskennan mukaan asukkaista noin 96 prosenttia on etnisiä '
+      + 'albaaneja, ja loput kuuluvat kreikkalaiseen ja muihin vähemmistöihin. '
+      + 'Maan ilmasto, kivilajit, vesistöt ja maanmuodot ovat poikkeuksellisen '
+      + 'kirjavia.',
+    teksti: 'Alueella asuivat antiikin aikana illyyrialaiset heimot, ja roomalaiset '
+      + 'valtasivat sen noin vuonna 167 eaa. Bysantin vallan jälkeen alueelle '
+      + 'syntyi vuonna 1190 Arbanonin ruhtinaskunta. Osmanien hallinta alkoi '
+      + '1400-luvulla ja kesti itsenäisyyden julistamiseen 28. marraskuuta '
+      + '1912, jolloin Albaniasta tuli itsenäinen valtio. 1900-luvun '
+      + 'jälkipuoliskolla maata hallitsi kommunistinen Enver Hoxha, ja siirtymä '
+      + 'demokratiaan tapahtui 1990-luvulla. Nykyään Albania on ylemmän '
+      + 'keskitulotason kehittyvä maa, jonka väestö ja talous ovat muuttuneet '
+      + 'paljon vuosikymmenten aikana. Se on Euroopan unionin jäsenehdokas, ja '
+      + 'liittymisneuvottelut alkoivat vuonna 2022. Kulttuurin ja maiseman '
+      + 'rikkaus tekee maasta kiehtovan matkakohteen.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+  'Valko-Venäjä': {
+    intro: 'Valko-Venäjä on Itä-Euroopan sisämaavaltio, jonka naapureita ovat '
+      + 'Venäjä, Ukraina, Puola, Liettua ja Latvia. Sen pinta-ala on noin 207 '
+      + '600 neliökilometriä ja asukkaita arvioidaan olevan 9,1 miljoonaa. Maa '
+      + 'on enimmäkseen matalaa tasankoa: korkein kohta, Dzjaržynskaja-vuori, '
+      + 'yltää vain 346 metriin. Metsää on noin 43 prosenttia maa-alasta, '
+      + 'järviä noin 4 000, ja Länsi-Väinä ja Nemunas virtaavat kohti länttä '
+      + 'sekä Dnepr sivujokineen etelään. Etelän Polesien alavaa suoseutua '
+      + 'leimaavat laajat kosteikot. Viralliset kielet ovat valkovenäjä ja '
+      + 'venäjä, ja vuoden 2019 laskennassa valkovenäläisiä oli 84,9 prosenttia '
+      + 'asukkaista. Pääkaupunki ja suurin kaupunki on Minsk, jolla on oma '
+      + 'hallinnollinen asemansa. Ilmasto on hemiboreaalinen, ja tammikuun '
+      + 'keskilämpötila on noin −6 astetta.',
+    teksti: 'Keskiajalla alueella oli itsenäisiä ruhtinaskuntia ja kaupunkeja, '
+      + 'kuten Polotsk. Noin vuonna 1300 alue liitettiin Liettuan '
+      + 'suuriruhtinaskuntaan, ja vuonna 1569 se tuli osaksi Puolan–Liettuan '
+      + 'yhteisvaltiota. Yhteisvaltion jaoissa 1792–1795 alue siirtyi Venäjän '
+      + 'keisarikuntaan, ja vuonna 1922 Valko-Venäjä oli perustamassa '
+      + 'Neuvostoliittoa. Maa julisti itsenäisyytensä 25. elokuuta 1991. '
+      + 'Uskonnollisesti maa on suurelta osin kristitty: vuoden 2020 tietojen '
+      + 'mukaan kristittyjä on 91 prosenttia ja ortodokseja 83,3 prosenttia '
+      + 'väestöstä. Venäläisiä on 7,5, puolalaisia 3,1 ja ukrainalaisia 1,7 '
+      + 'prosenttia asukkaista. Maan luonnossa vuorottelevat metsät, järvet ja '
+      + 'suot, ja Narachin kansallispuisto sekä Berezinan biosfäärialue ovat '
+      + 'sen tunnetuimpia suojelualueita.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+  Moldova: {
+    intro: 'Moldova on sisämaavaltio Itä-Euroopassa Romanian ja Ukrainan välissä. '
+      + 'Lännessä rajana virtaa Prut ja idässä Dnestr, ja niiden välissä '
+      + 'levittäytyy kumpuilevaa tasankoa, jonka korkein kohta, '
+      + 'Bălănești-kukkula, yltää 430 metriin. Maan pinta-ala on noin 33 800 '
+      + 'neliökilometriä ja asukkaita on noin 2,4 miljoonaa. Ilmasto on '
+      + 'lauhkean mannermainen: tammikuun keskilämpötila on noin −4 ja kesän '
+      + 'noin 20 astetta. Pääkaupunki Chișinău on noin 695 000 asukkaan '
+      + 'kaupunki. Virallinen kieli on romania, ja rinnalla kuullaan venäjää, '
+      + 'ukrainaa, gagauzia ja bulgariaa. Vuoden 2024 väestönlaskennassa '
+      + 'moldovalaisiksi ilmoittautui 76,7 prosenttia, romanialaisiksi 8,0, '
+      + 'ukrainalaisiksi 5,1 ja gagauzeiksi 4,0 prosenttia; luvuissa ei ole '
+      + 'mukana Transnistrian aluetta. Hedelmällinen musta multa on tehnyt '
+      + 'maasta viljelyseudun.',
+    teksti: 'Moldovan ruhtinaskunta syntyi Karpaattien itäpuolelle 1300-luvulla. '
+      + 'Stefan Suuri hallitsi sitä vuosina 1457–1504 ja puolustautui '
+      + 'menestyksekkäästi Unkaria, Puolaa ja osmaneja vastaan. Vuodesta 1538 '
+      + 'ruhtinaskunta oli osmanien vasalli mutta piti sisäisen '
+      + 'itsehallintonsa. Vuonna 1812 sen itäpuolisko, Bessarabia, siirtyi '
+      + 'Venäjän keisarikunnalle. Moldovan demokraattinen tasavalta '
+      + 'julistettiin joulukuussa 1917, ja huhtikuussa 1918 alue liittyi '
+      + 'Romaniaan. Kesäkuussa 1940 Neuvostoliitto liitti Bessarabian itseensä. '
+      + 'Itsenäisyys julistettiin 27. elokuuta 1991. Nykyään taloudessa '
+      + 'painavat maatalous ja viini: viinitarhoja on 148 500 hehtaaria, ja '
+      + 'noin kahden miljoonan hehtolitran tuotanto oli vuonna 2018 Euroopan '
+      + 'yhdenneksitoista suurin.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+  'Pohjois-Makedonia': {
+    intro: 'Pohjois-Makedonia on sisämaavaltio Kaakkois-Euroopassa, Balkanin '
+      + 'niemimaalla. Sen pinta-ala on 25 436 neliökilometriä, ja '
+      + 'rajanaapureita ovat Kosovo ja Serbia pohjoisessa, Bulgaria idässä, '
+      + 'Kreikka etelässä sekä Albania lännessä. Maa on vuoristoinen: korkein '
+      + 'huippu Korab nousee 2 764 metriin, ja Vardar-joki virtaa maan halki '
+      + '388 kilometrin matkan kerätessään vetensä noin 80 prosentilta maan '
+      + 'alasta. Suurimmat järvet ovat Ohrid, Prespa ja Dojran, ja Ohrid on '
+      + 'Balkanin syvin, 288 metriä. Ilmasto on etelässä välimerellinen ja '
+      + 'pohjoisessa mannermainen. Vuoden 2021 väestölaskennassa asukkaita oli '
+      + '1 836 713, ja pääkaupunki Skopje on suurin kaupunki: siellä asuu noin '
+      + 'neljännes väestöstä. Makedonialaisia on 58,4 prosenttia ja albaaneja '
+      + '24,3 prosenttia. Virallinen kieli on makedonia, ja albania on toinen '
+      + 'virallinen kieli.',
+    teksti: 'Alueella eli antiikissa paionialaisia, ja myöhemmin se liitettiin '
+      + 'Makedonian kuningaskuntaan Filippos II:n aikana. Slaavit asettuivat '
+      + 'seudulle 500-luvulla, ja 800-luvulla Ohridista tuli oppineisuuden '
+      + 'keskus: kirjoituskoulussa kerrotaan opiskelleen yli 3 000 oppilasta. '
+      + 'Ottomaanien valta alkoi 1300-luvun lopussa ja kesti vuoteen 1912. '
+      + 'Balkanin sotien jälkeen alue kuului Serbialle, ja vuonna 1945 siitä '
+      + 'tuli yksi Jugoslavian osavaltioista. Itsenäisyysäänestys pidettiin 8. '
+      + 'syyskuuta 1991, ja 95,26 prosenttia äänesti itsenäisyyden puolesta. '
+      + 'Arjessa historia näkyy vanhoina kaupunkeina, viinitarhoina ja '
+      + 'ruokakulttuurina, jossa ottomaanien ja balkanilaiset vaikutteet elävät '
+      + 'rinnakkain.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+  Montenegro: {
+    intro: 'Montenegro on Balkanin niemimaalla Kaakkois-Euroopassa sijaitseva '
+      + 'pieni valtio, jonka pinta-ala on noin 13 900 neliökilometriä. Sen '
+      + 'naapureita ovat Serbia, Bosnia ja Hertsegovina, Kosovo, Albania ja '
+      + 'Kroatia, ja lounaassa maa avautuu Adrianmerelle. Maisema vaihtelee '
+      + 'rannikosta Skutarijärven kosteikkoihin ja pohjoisen kalkkikivivuoriin, '
+      + 'joiden korkein huippu Zla Kolata yltää 2 534 metriin. Pääkaupunki ja '
+      + 'suurin kaupunki on Podgorica, ja vanha kuninkaallinen pääkaupunki '
+      + 'Cetinje on maan kulttuurikeskus. Vuoden 2023 väestölaskennassa '
+      + 'asukkaita oli noin 624 000. Suurimmat ryhmät ovat montenegrolaiset (41 '
+      + 'prosenttia) ja serbit (33 prosenttia), ja mukana on myös bosniakkeja, '
+      + 'albaaneja ja muita ryhmiä. Virallinen kieli on montenegro, ja maan '
+      + 'valuutta on euro.',
+    teksti: 'Nykyisen Montenegron alueella oli varhaiskeskiajalla ruhtinaskuntia, '
+      + 'kuten Duklja, ja Zetan ruhtinaskunta nousi esiin 1300–1400-luvuilla. '
+      + 'Osmanien valta alkoi vuonna 1496, ja 1500-luvulta alkaen maata '
+      + 'johtivat Petrović-Njegošin suvun ruhtinaspiispat. Berliinin kongressi '
+      + 'tunnusti Montenegron itsenäisyyden vuonna 1878, ja vuonna 1910 siitä '
+      + 'tuli kuningaskunta. Vuonna 1918 maa liittyi Jugoslaviaan, ja vuodesta '
+      + '1945 se kuului sosialistiseen Jugoslaviaan. Montenegro julistautui '
+      + 'itsenäiseksi vuoden 2006 kansanäänestyksen jälkeen, liittyi Natoon '
+      + 'vuonna 2017 ja on ollut EU:n jäsenehdokas vuodesta 2012. Nykyään se on '
+      + 'parlamentaarinen tasavalta, jonka talous nojaa palveluihin. Matkailua '
+      + 'tukevat rannikko ja viisi kansallispuistoa, jotka peittävät noin '
+      + 'kymmenesosan maan pinta-alasta.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+  Serbia: {
+    intro: 'Serbia on sisämaavaltio Kaakkois- ja Keski-Euroopan rajalla, Balkanin '
+      + 'niemimaan pohjoisosassa. Maa rajoittuu Unkariin, Romaniaan, '
+      + 'Bulgariaan, Pohjois-Makedoniaan, Kroatiaan, Bosnia ja Hertsegovinaan '
+      + 'sekä Montenegroon. Pohjoisessa Vojvodinan tasangoilla virtaavat '
+      + 'Tonava, Sava ja Tisza, ja etelässä maasto kohoaa vuoristoksi, jonka '
+      + 'korkein huippu Midžor yltää 2 169 metriin. Väkeä oli vuoden 2022 '
+      + 'laskennan mukaan noin 6,6 miljoonaa, ja asukastiheys on noin 84 '
+      + 'asukasta neliökilometrillä. Pääkaupunki Belgrad sijaitsee Savan ja '
+      + 'Tonavan yhtymäkohdassa. Serbit muodostavat 80,6 prosenttia väestöstä, '
+      + 'ja suurimpia vähemmistöjä ovat unkarilaiset, bosniakit ja romanit. '
+      + 'Virallinen kieli on serbia, ja ortodoksikristittyjä on noin 81 '
+      + 'prosenttia asukkaista.',
+    teksti: 'Serbian historian alkupäätä leimaa keskiaikainen valtio: kuningaskunta '
+      + 'julistettiin vuonna 1217, ja Stefan Dušanin aikana vuonna 1346 se oli '
+      + 'laajimmillaan valtakuntana. Vuoteen 1459 mennessä alue oli siirtynyt '
+      + 'osmanien hallintaan. Vuosina 1804–1835 käynnissä ollut serbien '
+      + 'vallankumous johti ruhtinaskunnan itsehallintoon, Berliinin kongressi '
+      + 'tunnusti itsenäisyyden 1878 ja maa julistautui kuningaskunnaksi 1882. '
+      + 'Vuonna 1918 Serbia liittyi Jugoslavian kuningaskuntaan, vuodesta 1945 '
+      + 'se oli sosialistisen Jugoslavian tasavalta, ja Montenegron erottua '
+      + 'vuonna 2006 se on ollut täysin itsenäinen. Nykyään Serbia on '
+      + 'parlamentaarinen tasavalta, jonka valuutta on dinaari ja joka '
+      + 'neuvottelee EU-jäsenyydestä. Kirjallisuuden Nobel-palkinnon saanut Ivo '
+      + 'Andrić ja keksijä Nikola Tesla kuuluvat maan tunnetuimpiin nimiin.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
 };
