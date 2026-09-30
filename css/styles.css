@@ -8368,6 +8368,14 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 
 .apuraha-lista li + li { margin-top: 0.3rem; }
 
+.apuraha-toiminto {
+  font-family: var(--font-type);
+  font-size: 0.9rem;
+  padding: 0.5rem 1.1rem;
+}
+
+.apuraha-toiminto:disabled { opacity: 0.7; cursor: default; }
+
 .apuraha-video {
   display: block;
   width: 100%;

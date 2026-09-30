@@ -43,3 +43,26 @@ test('lataus epäonnistuu hiljaa ja tehdään kerran', async () => {
   assert.ok(await lataaApuraha(async () => ({ ok: true, json: async () => raaka })));
   nollaaApuraha();
 });
+
+test('esittelylinssit avaavat kehittäjätilan linssijoukon ilman kehittäjätilaa', async () => {
+  const varasto = new Map();
+  globalThis.localStorage = {
+    getItem: (k) => (varasto.has(k) ? varasto.get(k) : null),
+    setItem: (k, v) => { varasto.set(k, String(v)); },
+    removeItem: (k) => { varasto.delete(k); },
+  };
+  const { omistetut } = await import('../js/linssit/omistus.js');
+  const { avaaEsittelylinssit, esittelylinssitAuki } = await import('../js/apuraha.js');
+  const pelaaja = { linssit: [] };
+  const ennen = omistetut(null, pelaaja).size;
+  varasto.set('matkakirja-kehittaja', '1');
+  const kehittaja = omistetut(null, pelaaja).size;
+  varasto.delete('matkakirja-kehittaja');
+  assert.equal(esittelylinssitAuki(), false);
+  avaaEsittelylinssit();
+  assert.equal(esittelylinssitAuki(), true);
+  assert.equal(varasto.get('matkakirja-kehittaja'), undefined, 'kehittäjätila ei saa kytkeytyä');
+  assert.ok(kehittaja > ennen);
+  assert.equal(omistetut(null, pelaaja).size, kehittaja);
+  delete globalThis.localStorage;
+});

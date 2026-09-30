@@ -24,7 +24,7 @@ export function tarkistaApuraha(d) {
   if (!d || typeof d !== 'object') return null;
   if (typeof d.nappi !== 'string' || !d.nappi.trim()) return null;
   if (typeof d.otsikko !== 'string' || !Array.isArray(d.kappaleet)) return null;
-  const kappaleet = d.kappaleet.filter((k) => k && (k.teksti || k.lista?.length || k.otsikko));
+  const kappaleet = d.kappaleet.filter((k) => k && (k.teksti || k.lista?.length || k.otsikko || k.nappi));
   const kuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');
   const video = d.video && typeof d.video.url === 'string' ? d.video : null;
   return {
@@ -48,6 +48,27 @@ export function lataaApuraha(hae = globalThis.fetch) {
       .catch(() => null);
   }
   return lataus;
+}
+
+/*
+ * ESITTELYLINSSIT (omistaja 30.9.2026): kortin nappi avaa kaikki toimivat
+ * linssit ilman pisteitä — sama joukko kuin kehittäjätilassa, mutta muu
+ * kehittäjätila jää pois. Oma avain, jotta kehittäjätilan kytkin ei avaa
+ * tai sulje tätä. js/linssit/omistus.js lukee tämän (linssit ladataan
+ * laiskasti, joten avain asuu tässä kevyessä moduulissa).
+ */
+const ESITTELYLINSSIT_AVAIN = 'matkakirja-esittelylinssit';
+
+export function esittelylinssitAuki() {
+  try {
+    return globalThis.localStorage?.getItem(ESITTELYLINSSIT_AVAIN) === '1';
+  } catch {
+    return false; // yksityinen selaus
+  }
+}
+
+export function avaaEsittelylinssit() {
+  try { globalThis.localStorage?.setItem(ESITTELYLINSSIT_AVAIN, '1'); } catch { /* yksityinen selaus */ }
 }
 
 /** Testeille: seuraava lataaApuraha hakee uudelleen. */

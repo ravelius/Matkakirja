@@ -193,7 +193,7 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
-import { lataaApuraha } from './apuraha.js';
+import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apuraha.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
@@ -17689,6 +17689,23 @@ export class UI {
         const ol = html('ol', 'apuraha-lista');
         for (const r of k.lista) ol.appendChild(html('li', null, r));
         kortti.appendChild(ol);
+      }
+      if (k.nappi?.toiminto === 'esittelylinssit') {
+        // Kaikki selaimen toimivat linssit heti käyttöön ilman pisteitä (js/apuraha.js → js/linssit/omistus.js).
+        const rivi = html('p', 'periaate-linkit');
+        const b = html('button', 'ghost apuraha-toiminto');
+        b.type = 'button';
+        const valmis = () => { b.textContent = k.nappi.valmis || k.nappi.teksti; b.disabled = true; };
+        b.textContent = k.nappi.teksti;
+        if (esittelylinssitAuki()) valmis();
+        b.addEventListener('click', () => {
+          avaaEsittelylinssit();
+          sfx.play('paper');
+          valmis();
+          this.render?.();
+        });
+        rivi.appendChild(b);
+        kortti.appendChild(rivi);
       }
       if (k.linkki?.url) {
         const p = html('p', 'periaate-linkit');
