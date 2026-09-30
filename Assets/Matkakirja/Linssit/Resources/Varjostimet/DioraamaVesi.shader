@@ -39,6 +39,8 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
             float4 _VesiParam;        // x aika, y heijastus käytössä (0/1), z pintanormaalin voimakkuus, w fresnel-bias
             float4 _SyvyysParam;      // xy kuvan vasen alakulma (Unity x, z), z 1 / alueen koko m, w suurin syvyys m (0 = ei karttaa)
             half4 _VesiMata, _VesiSyva, _VesiTaivasYla, _VesiTaivasAla, _VesiAurinko;
+            half4 _VesiHehku;         // horisontin kajo (hämärässä vaaleanpunainen/oranssi) viistossa katseessa
+            float4 _VesiKiiltoSuunta; // matalan auringon suunta kiilloille (xyz), w = kiillon voima
             TEXTURE2D(_VesiHeijastus); SAMPLER(sampler_VesiHeijastus);
 
             TEXTURE2D(_Pinta); SAMPLER(sampler_Pinta);
@@ -105,14 +107,21 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
                 }
                 half tyyni = (half)saturate(syvyys * 0.1 + 0.05); // Boat Attack: opacity = saturate(depth · 0,1 + 0,05)
 
-                // Aallot + pintanormaali (Boat Attack: uv.zw = xz · 0,1 + t · 0,05, uv.xy = xz · 0,4 − t · 0,1).
+                // Isompi mittakaava (Päätoimittaja 1.10.: kuvio toistui tasaisena): tuulenpuuskat ja tyynet laikut 60–250 m
+                // pintakartan kahdesta hyvin harvasta, eri suuntiin liukuvasta näytteestä. Tyynissä kohdissa aallot ~20 %.
+                half puuska = SAMPLE_TEXTURE2D(_Pinta, sampler_Pinta, p.xz * 0.0041 + aika * float2(0.0021, 0.0013)).x
+                            + SAMPLE_TEXTURE2D(_Pinta, sampler_Pinta, p.zx * 0.0107 - aika * float2(0.0017, 0.0029)).y;
+                half tuuli = lerp(0.18h, 1.0h, smoothstep(0.75h, 1.15h, puuska));
+                // Aallot + pintanormaali (Boat Attack: uv.zw = xz · 0,1 + t · 0,05, uv.xy = xz · 0,4 − t · 0,1; toinen näyte
+                // kierrettynä 37°, ettei laatoitus toistu samassa suunnassa).
                 float3 n = float3(0, 0, 0);
                 [unroll] for (int k = 0; k < 4; k++)
                     n += GerstnerNormaali(p.xz, _VesiAallot[k].x, _VesiAallot[k].y, _VesiAallot[k].z, aika);
-                n.xz *= tyyni;
+                n.xz *= tyyni * tuuli;
+                float2 kierretty = float2(p.x * 0.7986 - p.z * 0.6018, p.x * 0.6018 + p.z * 0.7986);
                 half2 d1 = SAMPLE_TEXTURE2D(_Pinta, sampler_Pinta, p.xz * 0.1 + aika * 0.05).xy * 2 - 1;
-                half2 d2 = SAMPLE_TEXTURE2D(_Pinta, sampler_Pinta, p.xz * 0.4 - aika * 0.1).xy * 2 - 1;
-                half2 detalji = (d1 + d2 * 0.5h) * (half)_VesiParam.z * tyyni;
+                half2 d2 = SAMPLE_TEXTURE2D(_Pinta, sampler_Pinta, kierretty * 0.37 - aika * 0.1).xy * 2 - 1;
+                half2 detalji = (d1 + d2 * 0.5h) * (half)_VesiParam.z * tyyni * tuuli;
                 n += float3(detalji.x, 0, detalji.y);
                 // Kaukana pinta tasoittuu (Boat Attack distanceBlend), ettei kaukovesi välky.
                 n = normalize(lerp(n, float3(0, 1, 0), saturate(etaisyys * 0.002 - 0.25)));
@@ -132,12 +141,14 @@ Shader "Matkakirja/Linssit/DioraamaVesi"
                     heijastus = lerp(_VesiTaivasAla.rgb, _VesiTaivasYla.rgb, saturate(r.y * 1.6h + 0.1h));
                 }
 
-                // Veden runko syvyyden mukaan + auringon sironta (Boat Attack SSS, yksinkertaistettu).
-                half3 L = (half3)normalize(_DioraamaValo.xyz);
+                // Veden runko on tumma (järvi peilaa taivasta, Päätoimittaja 1.10.): syvyyden mukaan, tunnelman valolla.
                 half3 runko = lerp(_VesiMata.rgb, _VesiSyva.rgb, saturate((half)syvyys / 6.0h));
-                runko *= 0.75h + 0.25h * saturate(L.y);
+                // Horisontin kajo viistossa katseessa (hämärän vaaleanpunainen/oranssi), heijastuksen päälle.
+                heijastus += _VesiHehku.rgb * pow(1 - NoV, 3) * (0.6h + 0.4h * tuuli);
                 half3 vari = lerp(runko, heijastus, fresnel);
-                vari += Kiilto((half3)n, L, V, 0.08h) * _VesiAurinko.rgb * 0.35h;
+                // Matalan auringon kiillot (GGX, karheus pieni) aaltojen harjoilla; tyynissä kohdissa peilimäinen kiilto.
+                half3 Lk = (half3)normalize(_VesiKiiltoSuunta.xyz);
+                vari += Kiilto((half3)n, Lk, V, lerp(0.05h, 0.12h, tuuli)) * _VesiAurinko.rgb * (half)_VesiKiiltoSuunta.w;
 
                 half sumu = (half)saturate((etaisyys - _DioraamaSumu.x) / max(1e-3, _DioraamaSumu.y - _DioraamaSumu.x));
                 return half4(lerp(vari, _DioraamaSumuVari.rgb, sumu), 1);

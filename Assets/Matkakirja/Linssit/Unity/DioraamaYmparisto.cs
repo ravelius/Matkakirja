@@ -33,7 +33,8 @@ namespace Matkakirja.Natiivi
             IdSyva = Shader.PropertyToID("_VesiSyva"), IdTaivasYla = Shader.PropertyToID("_VesiTaivasYla"),
             IdTaivasAla = Shader.PropertyToID("_VesiTaivasAla"), IdAurinko = Shader.PropertyToID("_VesiAurinko"),
             IdHeijastus = Shader.PropertyToID("_VesiHeijastus"), IdKuva = Shader.PropertyToID("_Kuva"),
-            IdPinta = Shader.PropertyToID("_Pinta"), IdSyvyys = Shader.PropertyToID("_Syvyys");
+            IdPinta = Shader.PropertyToID("_Pinta"), IdSyvyys = Shader.PropertyToID("_Syvyys"),
+            IdHehku = Shader.PropertyToID("_VesiHehku"), IdKiiltoSuunta = Shader.PropertyToID("_VesiKiiltoSuunta");
 
         // Järven aallot (amplitudi m, suunta °, aallonpituus m): tyyni Saimaa, lounaistuuli.
         static readonly Vector4[] Aallot =
@@ -102,8 +103,9 @@ namespace Matkakirja.Natiivi
             }
             Shader.SetGlobalVectorArray(IdAallot, Aallot);
             Shader.SetGlobalVector(IdSyvyysParam, Vector4.zero);
-            Shader.SetGlobalColor(IdMata, new Color(0.31f, 0.37f, 0.33f));
-            Shader.SetGlobalColor(IdSyva, new Color(0.13f, 0.20f, 0.23f));
+            // Tumma järvi (Saimaan ruskehtava vesi): runko vain varjoissa, pinta peilaa taivasta.
+            Shader.SetGlobalColor(IdMata, new Color(0.11f, 0.12f, 0.10f));
+            Shader.SetGlobalColor(IdSyva, new Color(0.035f, 0.055f, 0.065f));
             Shader.SetGlobalColor(IdTaivasYla, new Color(0.56f, 0.64f, 0.74f));
             Shader.SetGlobalColor(IdTaivasAla, DioraamaNayttamo.TaustaVari);
             Shader.SetGlobalColor(IdAurinko, new Color(1f, 0.85f, 0.62f));
@@ -169,6 +171,14 @@ namespace Matkakirja.Natiivi
             var tausta = kamera.backgroundColor;
             Shader.SetGlobalColor(IdTaivasAla, tausta);
             Shader.SetGlobalColor(IdTaivasYla, new Color(tausta.r * 0.75f, tausta.g * 0.82f, Mathf.Min(1f, tausta.b * 0.95f + 0.04f)));
+            // Hämärä (DioraamaTunnelma): horisontin vaaleanpunainen kajo ja matalan auringon oranssit kiillot lounaasta
+            // (valaistus.aurinko atsimuutti 225°, korkeus 6°); päivällä heikko kajo ja kirkas kiilto korkeammalta.
+            bool hamara = DioraamaValot.TunnelmaTaivas < 0.99f;
+            Shader.SetGlobalColor(IdHehku, hamara ? new Color(0.62f, 0.34f, 0.36f) : new Color(0.22f, 0.24f, 0.26f));
+            Shader.SetGlobalColor(IdAurinko, hamara ? new Color(1f, 0.55f, 0.30f) : new Color(1f, 0.90f, 0.72f));
+            float az = 225f * Mathf.Deg2Rad, kork = (hamara ? 6f : 30f) * Mathf.Deg2Rad;
+            var kiilto = DioraamaNayttamo.UnityPiste(new Matkakirja.Linssit.Dioraama.V3(Mathf.Sin(az) * Mathf.Cos(kork), Mathf.Sin(kork), -Mathf.Cos(az) * Mathf.Cos(kork)));
+            Shader.SetGlobalVector(IdKiiltoSuunta, new Vector4(kiilto.x, kiilto.y, kiilto.z, hamara ? 0.9f : 0.5f));
         }
 
         bool PiirraHeijastus(Camera kamera, float skaala)
