@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 16:36:** Levy 71 Gi (75→71), wt/ 27 (raja 20, kasvaa), muisti 68 % vapaa, kuorma 219/243/211 (raskas), sim 1 (siirtoseppa-iPad13 D5900D45; ≤1 ok), työtilat ok. Viikko 62 % (5 h 39 %). Konteksti: PÄÄTOIMITTAJA 73 % (≥70 → hälytysyritys 16.36), oma 19 %. Kävijälaskuri: 15.48 n=1, seuraava ~16.48. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 30.9. 16:20:** Levy 75 Gi (80→75), wt/ 26 (raja 20; kasvaa 20→22→26), muisti 66 % vapaa, kuorma 72/192/165, sim 1 (iPhone 18 Pro 1572C658; ≤1 ok), työtilat ok. Viikko 61 % (5 h 33 %). Konteksti: Päätoimittaja 68 % (lähellä 70), oma 19 %. Kävijälaskuri: 15.48 n=1, seuraava ~16.48. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Viestiraja edelleen päällä (Päätoimittajalle ei voi ilmoittaa).
 
 **Päivitetty 30.9. 16:04:** Levy 80 Gi, wt/ 22 (raja 20), muisti 68 % vapaa, kuorma 159/124/87, sim 1 (siirtoseppa-iPhone; ≤1 ok), työtilat ok. Viikko 60 % (5 h 29 %). Konteksti: Päätoimittaja 63 %, Natiivi-UI 27 %, oma 18 %. Kävijälaskuri: edellinen 15.48 n=1 (ei ilmoitettu perille: viestiraja), seuraava ~16.48. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Viestiraja edelleen päällä.
