@@ -17,6 +17,7 @@ def lippu(n, oletus=None):
         i = a.index(n); v = a[i + 1]; del a[i:i + 2]; return v
     return oletus
 ALBEDO = lippu('--albedo')
+TASOITA = lippu('--tasoita')  # siivousmaski.png (ulkokuori.py --siivoa): siivottujen maatekselien valo ympäristöstä
 TAVOITE = '--tavoite' in a
 if TAVOITE: a.remove('--tavoite')
 GLB, RAK, ULOS = a[0], a[1], a[2]
@@ -88,6 +89,51 @@ if ALBEDO:
     b = sc.render.bake; b.use_pass_direct = True; b.use_pass_indirect = True; b.use_pass_color = False
     bpy.ops.object.bake(type='DIFFUSE')
     print('HAMARA: valoleivonta', round(time.time() - t0, 1), 's')
+    if TASOITA:
+        # Litistetty romu on päällekkäisinä kerroksina 5 cm:n välein, ja kerrokset varjostavat toisiaan reunoiltaan:
+        # leivottu valo piirsi siivottuun maahan romun ääriviivat (v16). Siivottujen ylöspäin osoittavien tekselien valo
+        # otetaan puhtaasta maasta maailmankoordinaateissa (0,25 m:n ruudukko, korkeuskerroksittain, push-pull-täyttö).
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from kuori_tex import push_pull
+        def leivo_vektori(nimi, siirto, skaala):
+            k = bpy.data.images.new('v_' + nimi, KOKO, KOKO, float_buffer=True)
+            for sl in kuori.material_slots:
+                nt = sl.material.node_tree
+                g = nt.nodes.new('ShaderNodeNewGeometry'); vm = nt.nodes.new('ShaderNodeVectorMath'); vm.operation = 'MULTIPLY_ADD'
+                vm.inputs[1].default_value = (1 / skaala,) * 3; vm.inputs[2].default_value = (siirto / skaala,) * 3
+                e = nt.nodes.new('ShaderNodeEmission'); o = nt.nodes.new('ShaderNodeOutputMaterial'); t = nt.nodes.new('ShaderNodeTexImage')
+                t.image = k
+                nt.links.new(g.outputs[nimi], vm.inputs[0]); nt.links.new(vm.outputs[0], e.inputs['Color'])
+                nt.links.new(e.outputs[0], o.inputs['Surface']); nt.nodes.active = t; o.is_active_output = True
+            bpy.ops.object.bake(type='EMIT')
+            p = np.empty(KOKO * KOKO * 4, np.float32); k.pixels.foreach_get(p)
+            return p.reshape(KOKO, KOKO, 4)[..., :3] * skaala - siirto
+        pos = leivo_vektori('Position', 200.0, 400.0); nor = leivo_vektori('Normal', 1.0, 2.0)
+        mk = bpy.data.images.load(TASOITA)
+        if mk.size[0] != KOKO: mk.scale(KOKO, KOKO)
+        pm = np.empty(KOKO * KOKO * 4, np.float32); mk.pixels.foreach_get(pm); m = pm.reshape(KOKO, KOKO, 4)[..., 0] > 0.5
+        peitto = np.abs(pos + 200.0).sum(-1) > 1e-3; ylos = nor[..., 2] > 0.7
+        kohde = m & ylos & peitto; lahde = ~m & ylos & peitto
+        L = np.empty(KOKO * KOKO * 4, np.float32); kuva.pixels.foreach_get(L); L = L.reshape(KOKO, KOKO, 4)
+        R = 0.25; ky, kx = np.nonzero(kohde); ly, lx = np.nonzero(lahde)
+        kz = np.floor(pos[ky, kx, 2]); lz = pos[ly, lx, 2]
+        for z in np.unique(kz):
+            ks = kz == z; ls = np.abs(lz - (z + 0.5)) < 1.5
+            kp = pos[ky[ks], kx[ks], :2]; lp = pos[ly[ls], lx[ls], :2]
+            lo = kp.min(0) - 3.0; n = np.ceil((kp.max(0) + 3.0 - lo) / R / 16).astype(int) * 16
+            sis = np.all((lp >= lo) & (lp < lo + n * R), 1)
+            if sis.sum() < 20: continue
+            c = ((lp[sis] - lo) / R).astype(int); i = c[:, 1] * n[0] + c[:, 0]
+            arvo = L[ly[ls][sis], lx[ls][sis], :3]
+            summa = np.stack([np.bincount(i, arvo[:, j], n[0] * n[1]) for j in range(3)], -1).reshape(n[1], n[0], 3)
+            lkm = np.bincount(i, None, n[0] * n[1]).reshape(n[1], n[0])
+            ruutu = push_pull((summa / np.maximum(lkm, 1)[..., None]).astype(np.float32), lkm > 0)
+            q = np.pad(ruutu, ((1, 1), (1, 1), (0, 0)), mode='edge')
+            ruutu = sum(q[dy:dy + n[1], dx:dx + n[0]] for dy in range(3) for dx in range(3)) / 9
+            kc = np.clip(((kp - lo) / R).astype(int), 0, n - 1)
+            L[ky[ks], kx[ks], :3] = ruutu[kc[:, 1], kc[:, 0]]
+        kuva.pixels.foreach_set(L.ravel()); kuva.update()
+        print('HAMARA: tasoitettu', int(kohde.sum()), 'tekseliä')
     ims = sc.render.image_settings; ims.file_format = 'OPEN_EXR'; ims.color_depth = '16'; ims.exr_codec = 'DWAA'
     kuva.save_render(os.path.join(ULOS, f'ulkokuori-valokartta-{KOKO // 1024}k.exr'), scene=sc)  # lineaarinen, puolitarkkuus
     alb = bpy.data.images.load(ALBEDO); A = alb.size[0]

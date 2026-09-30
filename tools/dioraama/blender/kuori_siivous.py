@@ -99,8 +99,22 @@ def siivoa(o, kuva, log=print):
     H, W = kuva.size[1], kuva.size[0]
     pix = np.empty(H * W * 4, np.float32); kuva.pixels.foreach_get(pix); pix = pix.reshape(H, W, 4)
     rgb = pix[..., :3].copy()
+    nl = len(me.loops); kn = np.empty(nl * 3, np.float32); me.corner_normals.foreach_get('vector', kn); kn = kn.reshape(nl, 3)
+    vanha = co.copy()
     co, poista = siivoa_np(co, tv, uv, rgb, log)
     me.vertices.foreach_set('co', co.ravel()); me.update()
+    # OBJ:n omat kulmanormaalit jäivät siirrettyihin kärkiin (entisten seinien normaalit sivulle), jolloin litistetty
+    # romu näkyi hämärän leivonnassa tummina kuvioina (v16, 30.9.): siirrettyjen kärkien kulmille uuden pinnan normaali.
+    siirretty = np.abs(co - vanha).max(1) > 1e-4
+    lv = np.empty(nl, np.int32); me.loops.foreach_get('vertex_index', lv)
+    pn = np.empty(len(me.polygons) * 3, np.float32); me.polygons.foreach_get('normal', pn); pn = pn.reshape(-1, 3)
+    lp = np.empty(nl, np.int32)
+    ls = np.empty(len(me.polygons), np.int32); me.polygons.foreach_get('loop_start', ls)
+    lt = np.empty(len(me.polygons), np.int32); me.polygons.foreach_get('loop_total', lt)
+    lp = np.repeat(np.arange(len(me.polygons)), lt)
+    m = siirretty[lv]; kn[m] = pn[lp[m]]
+    me.normals_split_custom_set(kn.tolist()); me.update()
+    log(f'SIIVOUS: normaalit uusittu {int(m.sum())} kulmaan ({int(siirretty.sum())} siirrettyä kärkeä)')
     if poista.any():
         import bmesh
         pi = np.empty(nt, np.int32); me.loop_triangles.foreach_get('polygon_index', pi)
@@ -193,7 +207,17 @@ def siivoa_np(co, tv, uv, rgb, log=print):
         log(f'SIIVOUS: ryhmä {ryhma}: {len(K)} pintaa maalattu, puhdasta maata {puhdas.mean():.2f}, tekseleitä {int(M.sum())}')
     sauma = reunat(rgb, uvp, M_kaikki, np.concatenate(K_kaikki), LAAJENNUS)
     log(f'SIIVOUS: valmis {time.time()-t0:.1f} s, saumavara {sauma} px')
+    global MASKI
+    MASKI = M_kaikki  # maalatut tekselit (kuvan rivijärjestys), hämärän valon tasoitukseen (tallenna_maski)
     return co, poista
+
+
+def tallenna_maski(polku):
+    """Tallentaa viimeisimmän siivouksen maalatut tekselit (valkoinen) PNG:ksi: kuori_hamara.py --tasoita."""
+    import bpy
+    H, W = MASKI.shape; k = bpy.data.images.new('siivousmaski', W, H)
+    p = np.zeros((H, W, 4), np.float32); p[..., :3] = MASKI[..., None]; p[..., 3] = 1
+    k.pixels.foreach_set(p.ravel()); k.filepath_raw = polku; k.file_format = 'PNG'; k.save()
 
 
 def tallenna_kuva(kuva, polku):

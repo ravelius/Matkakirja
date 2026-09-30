@@ -46,7 +46,8 @@ if vaihe esrgan; then
   rm -f $ULOS/raaka/albedo-16k.png
 fi
 if vaihe hamara; then
-  bl $H/kuori_hamara.py -- $U/ulkokuori_huippu.glb $RAK $ULOS/hamara 128 4096 --tavoite --albedo $ULOS/raaka/albedo-8k.png
+  bl $H/kuori_hamara.py -- $U/ulkokuori_huippu.glb $RAK $ULOS/hamara 128 4096 --tavoite --albedo $ULOS/raaka/albedo-8k.png \
+    --tasoita $ULOS/raaka/siivousmaski.png
 fi
 if vaihe ikkunat; then
   bl $H/kuori_ikkunat.py -- $U/ulkokuori_normaali.glb $U/ulkokuori-4k.jpg $ULOS/hamara/ulkokuori-hamara-8k.jpg $U
