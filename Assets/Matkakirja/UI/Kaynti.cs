@@ -45,10 +45,18 @@ namespace Matkakirja.Natiivi
             catch (System.Exception e) { Debug.Log("MATKAKIRJA kaynti: ohitettiin (" + e.Message + ")"); }
         }
 
+        public static string Runko(string tapahtuma, bool omistaja) =>
+            "{\"tehtava\":\"kaynti\",\"alusta\":\"ios\",\"versio\":\"" + Application.version
+            + "\",\"tapahtuma\":\"" + tapahtuma + "\",\"omistaja\":" + (omistaja ? "true" : "false") + "}";
+
+        /// <summary>Testi (ui kaynti [tapahtuma]): mitä lähtisi ja lähtisikö, ilman lähetystä.</summary>
+        public static string Kuivaharjoitus(string tapahtuma) =>
+            $"{Runko(tapahtuma, Omistaja)} lähtisi {(!Testiymparisto && !lahetetyt.Contains(tapahtuma))} "
+            + $"(testiympäristö {Testiymparisto}, jo lähetetty {lahetetyt.Contains(tapahtuma)}, omistaja {Omistaja})";
+
         static IEnumerator Laheta(string tapahtuma, bool omistaja)
         {
-            string runko = "{\"tehtava\":\"kaynti\",\"alusta\":\"ios\",\"versio\":\"" + Application.version
-                + "\",\"tapahtuma\":\"" + tapahtuma + "\",\"omistaja\":" + (omistaja ? "true" : "false") + "}";
+            string runko = Runko(tapahtuma, omistaja);
             using var r = new UnityWebRequest(PuluChat.Palvelin, "POST")
             {
                 uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" },

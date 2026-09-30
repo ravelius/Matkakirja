@@ -845,6 +845,8 @@ namespace Matkakirja.Natiivi
             Aanentasot.Sulje();
             Matkalaukku.Sulje();
             Huipennus.Sulje();
+            // Apurahan kortti ja sen kokoruutu (Laitetestaaja 9a9cc8080: ui sulje jätti kortin auki).
+            Aloitus.Apuraha.Sulje();
             // Aloitus (kerros 45) jäi muuten kaiken päälle: ui sulje ja pelin tilanvaihdot sulkevat sen.
             Aloitus.Piilota();
             Nostokortti.Sulje();
