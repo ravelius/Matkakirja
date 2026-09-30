@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 20:48:** !!! LEVY 29 Gi (kova raja 30 ALITTU; 30→29 8 min:ssa hidastuu; push-ilmoitukset 20.03 ja 20.40, uusi lähetetty 20.48; viestiraja estää Päätoimittajan hälytyksen) !!! wt/ 39 (raja 20), muisti 65 % vapaa, kuorma 21/46/58, sim 0, työtilat ok. Viikko 71 % (5 h 27 %). Konteksti: Päätoimittaja 45 %. Kävijälaskuri: 20.29 n=2, seuraava ~21.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 30.9. 20:40:** !!! LEVY 30 Gi = KOVA RAJA (33→30 10 min:ssa; push-ilmoitus käyttäjälle 20.03 ja uusi 20.40; viestiraja estää Päätoimittajan hälytyksen) !!! wt/ 38 (raja 20), muisti 66 % vapaa, kuorma 26/39/60, sim 1 (linssiseppa2-iPad13 4CE6C737; ≤1 ok), työtilat ok. Viikko 71 % (5 h 25 %). Konteksti: Päätoimittaja 43 %. Kävijälaskuri: 20.29 n=2, seuraava ~21.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 30.9. 20:29:** LEVY 33 Gi (vakaa 32→33; kova raja 30; push-ilmoitus 20.03), wt/ 37 (raja 20), muisti 68 % vapaa, kuorma 47/41/75, sim 1 (iPhone 18 Pro 1572C658; ≤1 ok), työtilat ok. Viikko 71 % (5 h 23 %). Konteksti: Päätoimittaja 42 %. Kävijälaskuri 20.29: n=2 (ennallaan; FI 1, US 1), seuraava ~21.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
