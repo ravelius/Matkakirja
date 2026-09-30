@@ -42,8 +42,8 @@ ALUEET = [
     ('laatikko_piha_ita', _laatikko(43.2, 44.6, 17.2, 18.6), 0.6, 'koillinen'),
     ('putki_piha_koillinen', _laatikko(40.6, 42.8, 19.6, 23.4), 0.6, 'koillinen'),
     # Pihan itäreuna: telineputkipino portaiden vieressä ja putket itäportaan muurin vieressä.
-    ('putkipino_portaan_vieri', _laatikko(47.6, 49.4, -0.2, 9.0), 1.2, 'piha', -2.8),
-    ('putket_itaportaan_vieri', [(37.6, -8.4), (49.2, -0.7), (49.2, 2.4), (37.6, -5.2)], 1.2, 'piha', -2.6),
+    ('putkipino_portaan_vieri', _laatikko(47.6, 49.4, -0.2, 9.0), 1.2, 'itaportas', -2.8),
+    ('putket_itaportaan_vieri', [(37.6, -8.4), (49.2, -0.7), (49.2, 2.4), (37.6, -5.2)], 1.2, 'itaportas', -2.6),
     # Koillisbastionin piha (maa −5,5): suursäkit ja valkoinen laatikko tornin juurella.
     ('saekit_bastioni', [(53.0, 37.7), (56.8, 38.2), (58.7, 39.1), (58.7, 41.5), (56.5, 41.6), (53.6, 40.9)], 2.0, 'koillisbastioni', -5.55),
     # Kaakon kenttä: musta puuaitaus kahdella katoksella, koppi, tynnyrit, renkaat ja lava, kaksi henkilönostinta.
@@ -83,7 +83,7 @@ ALAVARA = 0.6   # näin paljon maanpinnan alapuolella olevat (urat romun alla) n
 VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jäi yli tämän maasta
 # Venyneiden kolmioiden käsittely ryhmittäin: 'poista' (vapaa piha), 'jata' (muurin vieri: takana ei ole pintaa) tai
 # 'paikkaa' (v16: jätetään ja maalataan muurin kivellä edestä kloonaten, kuori_orto.seinapaikka).
-RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'poista', 'koillinen_kansi': 'poista', 'kaakko': 'paikkaa', 'koillisbastioni': 'poista',
+RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'paikkaa', 'koillisbastioni': 'poista',
           'lansipiha': 'poista', 'etela': 'poista', 'itabastioni': 'poista', 'ita_harja': 'poista', 'etela_katto': 'poista',
           'etela_alakatto': 'poista'}
 
