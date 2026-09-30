@@ -244,6 +244,30 @@ namespace Matkakirja.Natiivi
         /// t (oletus 0): liekkien ruutu ajasta (DioraamaLiekit.Paivita) -- DioraamaSovitin voi jatkossa antaa
         /// tähän Ydin-ajan (pysaytettyT ?? y.Aika), jotta "poikki aika" pysäyttää liekkienkin ruudun kuten hahmot;
         /// oletuksella 0 liekit näkyvät paikallaan (billboard-kääntö toimii silti), poikkeama raportoitu.</summary>
+        // SAAPUMISEN ODOTUS (Päätoimittaja 30.9.): kaari alkaa vasta kun kevyt kuori on valmis; sitä ennen näkyy vain hämärä
+        // järvi (kamera, syvyys ja vesi jäävät), ei harmaita tilapalikoita. Piilotetut merkitään, jotta palautus ei herätä
+        // tarkoituksella piilotettuja (esim. löydetty sinetti). Kutsutaan joka ruutu odotuksen aikana: odotuksen kuluessa
+        // syntyvät uudet lapset (tilat, liekit) piiloutuvat samalla.
+        readonly System.Collections.Generic.HashSet<GameObject> odotusPiilossa = new System.Collections.Generic.HashSet<GameObject>();
+        public void Odota(bool paalla)
+        {
+            if (paalla)
+            {
+                foreach (Transform lapsi in transform)
+                {
+                    var g = lapsi.gameObject;
+                    if (!g.activeSelf || (Kamera != null && g == Kamera.gameObject) || g.name == "DioraamaSyvyys" || g.name == "Ulkokuori:vesi") continue;
+                    g.SetActive(false);
+                    odotusPiilossa.Add(g);
+                }
+            }
+            else
+            {
+                foreach (var g in odotusPiilossa) if (g != null) g.SetActive(true);
+                odotusPiilossa.Clear();
+            }
+        }
+
         public void Paivita(Asento kameranAsento, bool vahennettyLiike, double t = 0)
         {
             VarmistaKuva();
