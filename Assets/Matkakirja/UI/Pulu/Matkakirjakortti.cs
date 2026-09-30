@@ -373,7 +373,7 @@ namespace Matkakirja.Natiivi
                 var (w1, h1) = LapunMitat();
                 foreach (var c in kortti.Children()) { c.style.width = c.layout.width; c.style.flexShrink = 0f; }
                 KiinnitaLaatikko(w0, h0);
-                Aja(w0, h0, w1, h1, t =>
+                Aja(w0, h0, w1, () => h1, t =>
                 {
                     float a = 1f - Mathf.Clamp01(t / SisaltoS);
                     foreach (var c in kortti.Children()) c.style.opacity = a;
@@ -398,7 +398,9 @@ namespace Matkakirja.Natiivi
             muutos = kortti.schedule.Execute(() =>
             {
                 muutos = null;
-                Aja(w0, h0, leveys, AvoimenKorkeus(), t =>
+                // Tavoitekorkeus joka ruudulla asettelusta (laite mk3: ensimmäisellä ruudulla lapset eivät olleet vielä
+                // asettuneet, laatikko kasvoi vain rivin korkuiseksi ja hyppäsi lopussa täyteen mittaan).
+                Aja(w0, h0, leveys, AvoimenKorkeus, t =>
                 {
                     float a = Mathf.Clamp01((t - SisaltoViiveS) / SisaltoS);
                     foreach (var c in kortti.Children()) c.style.opacity = a;
@@ -411,7 +413,7 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        void Aja(float w0, float h0, float w1, float h1, Action<float> sisalto, Action valmis)
+        void Aja(float w0, float h0, float w1, Func<float> h1, Action<float> sisalto, Action valmis)
         {
             float kulunut = 0f, edellinen = Time.unscaledTime;
             muutos = kortti.schedule.Execute(() =>
@@ -422,7 +424,7 @@ namespace Matkakirja.Natiivi
                 edellinen = nyt;
                 float k = Ponnahdus.Kaari(0.42f, 0f, 0.58f, 1f, kulunut / MuutosS);
                 kortti.style.width = Mathf.Lerp(w0, w1, k);
-                kortti.style.height = Mathf.Lerp(h0, h1, k);
+                kortti.style.height = Mathf.Lerp(h0, h1(), k);
                 sisalto(kulunut);
                 if (kulunut < MuutosS) return;
                 muutos?.Pause();
