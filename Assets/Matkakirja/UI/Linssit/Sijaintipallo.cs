@@ -1,7 +1,7 @@
 // SIJAINTIPALLO (Linssiseppä 1.10.2026; omistaja klo 00.1x Päätoimittajan kautta: "pystyisikö näytölle tekemään ilman pilviä ja
 // muuta ylimääräistä pienen maapallon, joka näyttäisi pisteellä aina kyseisen kuvan maapallolla? se saisi pyörähtää pehmeästi
 // aina uuteen paikkaa jos nuolinäppäimillä selataan kohteita."): astronautin kameran kuvanäkymän vasemmassa alakulmassa
-// (pikkukuvanauhan yllä) 100 pt:n pallo. Pinta BMNG Z1 (4 tiiltä, kuukausi kuten kyydissä), meripihkan piste kohteessa, joka
+// (pikkukuvanauhan yllä) pieni pallo (puhelin 72 pt, tabletti 96 pt). Pinta BMNG Z1 (4 tiiltä, kuukausi kuten kyydissä), meripihkan piste kohteessa, joka
 // on pallon keskellä. Selatessa (‹ ›, nuolinäppäimet, pyyhkäisy) pallo kiertyy lyhintä reittiä 0,7 s ease-in-out.
 // Toteutus: oma kerros 12 ja ortokamera RenderTextureen (320², MSAA 4), piirto vain liikkeen aikana (kamera päällä liikkeen
 // ja yhden kehyksen ajan) → levossa ei kustannusta. Pääkamera ei piirrä kerrosta 12. A/B `ui linssi sijaintipallo 0|1`.
@@ -17,7 +17,9 @@ namespace Matkakirja.Natiivi
     {
         public const int Kerros = 12;
         public static bool Paalla = true;
-        const float KokoPt = 100f, KestoS = 0.7f, Sade = 1000f;
+        /// <summary>Koko (pt): puhelimella 72, tabletilla 96 (omistaja: "pienen maapallon"; 100 pt vei iPhonella neljänneksen leveydestä).</summary>
+        static float KokoPt => UiKerros.Tabletti ? 96f : 72f;
+        const float KestoS = 0.7f, Sade = 1000f;
         const string PintaJuuri = "https://media.matkakirja.app/julisteet/pallo/bmng/";
 
         readonly VisualElement el;
@@ -37,7 +39,7 @@ namespace Matkakirja.Natiivi
         {
             el = new VisualElement { name = "mk-astrokuva__sijaintipallo", pickingMode = PickingMode.Ignore };
             var s = el.style;
-            s.position = Position.Absolute; s.left = 12; s.bottom = 66; s.width = KokoPt; s.height = KokoPt;
+            s.position = Position.Absolute; s.left = 12; s.bottom = 62; s.width = KokoPt; s.height = KokoPt;
             s.display = DisplayStyle.None;
             isa.Add(el);
         }
