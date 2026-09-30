@@ -888,33 +888,41 @@ test('kuplan aika venyy äänitteen kestoon, ei koskaan lyhene', () => {
   assert.equal(livianKuplanAika(3200, () => null), 3200);
 });
 
-test('kuplan ajastin odottaa äänitteen loppuun, vaikka kesto selviää myöhässä', async () => {
+test('kuplan ajastin odottaa äänitteen loppuun, vaikka kesto selviää myöhässä', (t) => {
   /*
    * Metatiedot tulevat vasta soiton käynnistyttyä, joten aikaa ei voi
    * laskea kerralla valmiiksi: ajastin herää kuplan lukuajan kohdalla
    * ja odottaa vasta silloin tietoon tulleen puheen loput.
+   *
+   * Näennäinen kello (node:test mock.timers), ei seinäkelloa: junan
+   * kuormassa (~95) oikea setTimeout myöhästyi ja rajat kaatuivat,
+   * vaikka logiikka oli oikein (Julkaisija 30.9.2026, #3675).
    */
+  t.mock.timers.enable({ apis: ['setTimeout'] });
   const soitin = { duration: NaN };
-  const alku = Date.now();
+  let laukesi = false;
   let kahva = null;
-  const kulunut = await new Promise((valmis) => {
-    kahva = livianKuplanAjastin(
-      80, soitin, () => valmis(Date.now() - alku), (id) => { kahva = id; },
-    );
-    setTimeout(() => { soitin.duration = 0.6; }, 20);
-  });
+  kahva = livianKuplanAjastin(80, soitin, () => { laukesi = true; }, (id) => { kahva = id; });
+  t.mock.timers.tick(20);
+  soitin.duration = 0.6; // kesto selviää vasta soiton alettua
+  t.mock.timers.tick(60); // lukuaika 80 ms täynnä: ajastin jatkaa puheen loppuun
+  assert.equal(laukesi, false, 'ajastin ei venynyt puheen mittaan');
   // 600 ms puhetta + 400 ms häntä = 1000 ms, ei 80 ms.
-  assert.ok(kulunut >= 900, `ajastin ei venynyt puheen mittaan: ${kulunut} ms`);
-  assert.ok(kulunut < 2500, `ajastin venyi liikaa: ${kulunut} ms`);
+  t.mock.timers.tick(919);
+  assert.equal(laukesi, false, 'ajastin laukesi ennen puheen loppua');
+  t.mock.timers.tick(1);
+  assert.equal(laukesi, true, 'ajastin ei lauennut puheen lopussa');
   assert.ok(kahva !== null, 'kahva jäi antamatta kutsupaikalle');
 });
 
-test('ilman äänitettä ajastin laukeaa kuplan lukuajalla', async () => {
-  const alku = Date.now();
-  const kulunut = await new Promise((valmis) => {
-    livianKuplanAjastin(60, null, () => valmis(Date.now() - alku));
-  });
-  assert.ok(kulunut < 500, `hiljainen kupla odotti turhaan: ${kulunut} ms`);
+test('ilman äänitettä ajastin laukeaa kuplan lukuajalla', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  let laukesi = false;
+  livianKuplanAjastin(60, null, () => { laukesi = true; });
+  t.mock.timers.tick(59);
+  assert.equal(laukesi, false, 'laukesi ennen lukuaikaa');
+  t.mock.timers.tick(1);
+  assert.equal(laukesi, true, 'hiljainen kupla odotti turhaan');
 });
 
 test('peruttu ajastin ei laukea: napautus jatkaa heti', async () => {
