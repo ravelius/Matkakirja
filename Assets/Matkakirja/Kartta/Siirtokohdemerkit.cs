@@ -231,7 +231,9 @@ namespace Matkakirja
                 float d = Vector2.Distance(ruutu, p);
                 if (d < raja && d < parasD) { parasD = d; paras = m; }
             }
-            if (paras != null) Napautettu?.Invoke(paras.kohde.Avain);
+            if (paras == null) return;
+            PalloKierto.Osui(); // ei tyhjä kohta: maakuntalappu ei aukea (omistaja 30.9.2026)
+            Napautettu?.Invoke(paras.kohde.Avain);
         }
 
         /// <summary>

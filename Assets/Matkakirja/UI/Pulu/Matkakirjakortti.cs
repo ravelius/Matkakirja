@@ -290,8 +290,9 @@ namespace Matkakirja.Natiivi
 
         public void KartanLiike()
         {
-            // Luennan ajan kortti pysyy auki, vaikka pelaaja tutkii karttaa (omistaja 30.9.2026).
-            if (Nakyy && !pieni && !luentaPiilo) Muunna(true);
+            // Luennan ajan kortti pysyy auki, vaikka pelaaja tutkii karttaa (omistaja 30.9.2026). Kutistukseen käytetty
+            // napautus ei avaa maakuntalappua (omistaja 30.9.2026, maakunta automaattisesti).
+            if (Nakyy && !pieni && !luentaPiilo) { Muunna(true); PalloKierto.Osui(); }
         }
 
         bool linssiKutisti;
