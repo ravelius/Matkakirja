@@ -131,18 +131,21 @@ namespace Matkakirja.Natiivi
             seuraava.style.whiteSpace = WhiteSpace.Normal;
             seuraava.style.display = DisplayStyle.None;
 
-            // Kuuntele uudelleen: infotaulun oikeaan yläkulmaan (ei sekoitu yleisnäkymän ↻-kertojaan vasemmassa yläkulmassa).
+            // Kuuntele uudelleen: infotaulun oikean yläkulman yläpuolelle kaistaleen paikalle (kaistale on silloin poissa;
+            // laudan sisällä nappi peitti tekstirivin, 357bce14-kuva). Ei sekoitu yleisnäkymän ↻-kertojaan vasemmassa yläkulmassa.
             kuunteleNappi = Rakenne.Nappi("Kuuntele", "mk-dioraama__kuuntele", () => { if (kuunnelmaTila != null) kuunnelma.Aloita(kuunnelmaTila, true); },
-                lauta, Ikonit.PaivitaVersio);
+                juuri, Ikonit.PaivitaVersio);
             kuunteleNappi.style.position = Position.Absolute;
-            kuunteleNappi.style.right = 6; kuunteleNappi.style.top = 4;
             kuunteleNappi.style.flexDirection = FlexDirection.Row; kuunteleNappi.style.alignItems = Align.Center;
-            kuunteleNappi.style.backgroundColor = new Color(0, 0, 0, 0);
+            kuunteleNappi.style.height = 34;
+            kuunteleNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.92f);
+            kuunteleNappi.style.borderTopLeftRadius = 17; kuunteleNappi.style.borderTopRightRadius = 17;
+            kuunteleNappi.style.borderBottomLeftRadius = 17; kuunteleNappi.style.borderBottomRightRadius = 17;
             kuunteleNappi.style.color = Teksti;
-            kuunteleNappi.style.paddingLeft = 6; kuunteleNappi.style.paddingRight = 6; kuunteleNappi.style.paddingTop = 4; kuunteleNappi.style.paddingBottom = 4;
+            kuunteleNappi.style.paddingLeft = 10; kuunteleNappi.style.paddingRight = 12; kuunteleNappi.style.paddingTop = 4; kuunteleNappi.style.paddingBottom = 4;
             var kuunteleTeksti = kuunteleNappi.Q<Label>();
             if (kuunteleTeksti != null) { Kirjasimet.Aseta(kuunteleTeksti, Kirjasin.Kone); kuunteleTeksti.style.fontSize = 11; kuunteleTeksti.style.color = Teksti; kuunteleTeksti.style.marginLeft = 4; }
-            kuunteleNappi.RegisterCallback<PointerDownEvent>(e => e.StopPropagation()); // ei laudan Napauta-toimintoa
+            kuunteleNappi.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kuunteleNappi.style.display = DisplayStyle.None;
 
             // Kehittäjätilan kuoren laatutasovalitsin (Olavinlinna, omistajan toive 29.9.: "kehittäjätilaan tasovalitsin"):
@@ -293,7 +296,7 @@ namespace Matkakirja.Natiivi
                 && etsintaKortti.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(etsintaKortti.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                 return true;
             // ‹-nappi ei saa välittää napautusta dioraamalle (muuten sama napautus voisi kohdistaa tilan uudelleen).
-            foreach (var el in new VisualElement[] { paluuNappi, uusintaNappi, puluAlue, kuunnelma?.Juuri })
+            foreach (var el in new VisualElement[] { paluuNappi, uusintaNappi, puluAlue, kuunnelma?.Juuri, kuunteleNappi })
                 if (el != null && el.resolvedStyle.display != DisplayStyle.None && el.panel != null
                     && el.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(el.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                     return true;
@@ -484,8 +487,14 @@ namespace Matkakirja.Natiivi
             else if (!kuunneltava) LopetaKuunnelma();
             float kuunnelmaVasen = puluNakyy ? x + 70f : x;
             kuunnelma.Paivita(kuunnelmaVasen, Mathf.Max(160f, x + tauluLeveys - kuunnelmaVasen), y - 8f);
-            kuunteleNappi.style.display = kuunneltava && !kuunnelma.Kaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
-            otsikko.style.paddingRight = kuunneltava && !kuunnelma.Kaynnissa ? 88f : 0f; // otsikko ei jää napin alle
+            bool kuuntele = kuunneltava && !kuunnelma.Kaynnissa;
+            kuunteleNappi.style.display = kuuntele ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kuuntele)
+            {
+                float nl = float.IsNaN(kuunteleNappi.layout.width) || kuunteleNappi.layout.width <= 0 ? 110f : kuunteleNappi.layout.width;
+                kuunteleNappi.style.left = x + tauluLeveys - nl;
+                kuunteleNappi.style.top = y - 8f - 34f;
+            }
             pulu.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             puluAlue.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (!puluNakyy) return;
@@ -504,7 +513,6 @@ namespace Matkakirja.Natiivi
             if (kuunnelma.TilaId != null) kuunnelma.Lopeta();
             kuunnelmaTila = null;
             kuunteleNappi.style.display = DisplayStyle.None;
-            otsikko.style.paddingRight = 0f;
         }
 
         /// <summary>Testikomennot (ui kuunnelma tila|ohita|alusta): viimeksi luotu taulu.</summary>
