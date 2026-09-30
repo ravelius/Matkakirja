@@ -22,8 +22,8 @@ namespace Matkakirja.Natiivi
 {
     public sealed class CupolaAani : MonoBehaviour
     {
-        public const string HuminaUrl = "https://media.matkakirja.app/aanet/cupola/cupola-humina-90s.wav";
-        public const string RadioUrl = "https://media.matkakirja.app/aanet/cupola/cupola-radio-eva38-23min.mp3";
+        public const string HuminaUrl = "https://media.matkakirja.app/aanet/cupola/v1/cupola-humina-90s.wav";
+        public const string RadioUrl = "https://media.matkakirja.app/aanet/cupola/v1/cupola-radio-eva38-23min.mp3";
         public const float RadioPituusS = 1380f;
         const int Humina = 0, Radio = 1;
         /// <summary>Perustasot (humina −26 LUFS, radio −20 LUFS tiedostossa → radio 6 dB huminaa hiljempänä).</summary>
