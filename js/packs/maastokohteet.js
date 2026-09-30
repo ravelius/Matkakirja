@@ -70,6 +70,7 @@ import { MAASTOKOHTEET_ARG } from './maastokohteet-arg.js';
 import { MAASTOKOHTEET_AUS } from './maastokohteet-aus.js';
 import { MAASTOKOHTEET_AUT } from './maastokohteet-aut.js';
 import { MAASTOKOHTEET_BIH } from './maastokohteet-bih.js';
+import { MAASTOKOHTEET_BLR } from './maastokohteet-blr.js';
 import { MAASTOKOHTEET_BOL } from './maastokohteet-bol.js';
 import { MAASTOKOHTEET_BRA } from './maastokohteet-bra.js';
 import { MAASTOKOHTEET_CAN } from './maastokohteet-can.js';
@@ -82,6 +83,7 @@ import { MAASTOKOHTEET_COL } from './maastokohteet-col.js';
 import { MAASTOKOHTEET_CUB } from './maastokohteet-cub.js';
 import { MAASTOKOHTEET_CYP } from './maastokohteet-cyp.js';
 import { MAASTOKOHTEET_CZE } from './maastokohteet-cze.js';
+import { MAASTOKOHTEET_DEU } from './maastokohteet-deu.js';
 import { MAASTOKOHTEET_DNK } from './maastokohteet-dnk.js';
 import { MAASTOKOHTEET_DZA } from './maastokohteet-dza.js';
 import { MAASTOKOHTEET_ECU } from './maastokohteet-ecu.js';
@@ -153,6 +155,7 @@ import { MAASTOKOHTEET_SHN } from './maastokohteet-shn.js';
 import { MAASTOKOHTEET_SLB } from './maastokohteet-slb.js';
 import { MAASTOKOHTEET_SLE } from './maastokohteet-sle.js';
 import { MAASTOKOHTEET_SOM } from './maastokohteet-som.js';
+import { MAASTOKOHTEET_SRB } from './maastokohteet-srb.js';
 import { MAASTOKOHTEET_SWE } from './maastokohteet-swe.js';
 import { MAASTOKOHTEET_SYR } from './maastokohteet-syr.js';
 import { MAASTOKOHTEET_TCD } from './maastokohteet-tcd.js';
@@ -185,6 +188,7 @@ export const MAASTOKOHTEET = {
   AUS: MAASTOKOHTEET_AUS,
   AUT: MAASTOKOHTEET_AUT,
   BIH: MAASTOKOHTEET_BIH,
+  BLR: MAASTOKOHTEET_BLR,
   BOL: MAASTOKOHTEET_BOL,
   BRA: MAASTOKOHTEET_BRA,
   CAN: MAASTOKOHTEET_CAN,
@@ -197,6 +201,7 @@ export const MAASTOKOHTEET = {
   CUB: MAASTOKOHTEET_CUB,
   CYP: MAASTOKOHTEET_CYP,
   CZE: MAASTOKOHTEET_CZE,
+  DEU: MAASTOKOHTEET_DEU,
   DNK: MAASTOKOHTEET_DNK,
   DZA: MAASTOKOHTEET_DZA,
   ECU: MAASTOKOHTEET_ECU,
@@ -268,6 +273,7 @@ export const MAASTOKOHTEET = {
   SLB: MAASTOKOHTEET_SLB,
   SLE: MAASTOKOHTEET_SLE,
   SOM: MAASTOKOHTEET_SOM,
+  SRB: MAASTOKOHTEET_SRB,
   SWE: MAASTOKOHTEET_SWE,
   SYR: MAASTOKOHTEET_SYR,
   TCD: MAASTOKOHTEET_TCD,

@@ -41,4 +41,30 @@ export const MAASTOKOHTEET_MDA = [
     lahde: 'en-Wikipedia "Soroca Fort", osiot "History" ja "Architecture" (tarkistettu '
       + '30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 2, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'milestii-mici',
+    nimi: 'Mileștii Mici',
+    tyyppi: 'ruoka',
+    kysymykset: [
+      'Kuinka pitkä on viinikellarin tunnelien verkosto?',
+      'Miten viinit kerrotaan säilyneen, kun ne käskettiin tuhota?',
+    ],
+    korostukset: ['250 kilometriä|250 kilometriä'],
+    nappi: 'Kaksi miljoonaa pulloa maan alla',
+    // 28.7959 E / 46.9008 N — en-Wikipedia "Mileștii Mici", osiot "History" ja "Wine cellars"
+    laudat: {
+      maailmankartta: { x: 6793.2, y: 1522.7 },
+    },
+    teksti: 'Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin '
+      + 'päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan '
+      + '250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin '
+      + 'ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi '
+      + 'viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka '
+      + 'taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.',
+    lahde: 'en-Wikipedia "Mileștii Mici", osiot "History" ja "Wine cellars" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];
