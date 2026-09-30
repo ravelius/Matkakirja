@@ -9363,3 +9363,7 @@ Päätoimittaja 30.9.2026 klo 03.28 (Laitetestaajan BUILD 61 -savuke, Pelikoodar
 ## TARKENNUS: ÄMPÄRISISÄLLÖN TODENNUS PUHTAALLA ASENNUKSELLA (30.9.2026 klo 03.44)
 
 Päätoimittaja 30.9.2026 klo 03.44 (omistajan löydös TF 1.0.61: Poikkileikkaus-linssissä vanha palikkadioraama): juurisyy Siirtoseppä — tuotannon olavinlinna-paketti oli rakenna.mjs:n palikkapaketti; Blender-toimitus (kuori, atlakset, hämärä, glb:t) oli vain paikallisessa peilissä, jota kaikki simulaattorikuvat käyttivät. Linja: ämpäristä tuleva sisältö todennetaan aina puhtaalla asennuksella ilman paikallisia peilejä; isot binäärit (Blender-kuori, glb, atlakset) eivät mene gittiin vaan vientiskriptillä uuteen muuttumattomaan hash-kansioon, osoitin viimeisenä askeleena, omistaja ajaa; fotogrammetrian CC BY 4.0 -tekijätieto (Senaatti-kiinteistöt) pelin tekijätietoihin ennen vientiä.
+
+## OMISTAJA: PORTTI PYSYY SOVELLUKSESSA (30.9.2026 klo 06.51)
+
+Omistaja 30.9.2026 klo 06.51 kortilla (Pelikoodarin kuvapari natiivi vs web): tallennetulle matkalle palatessa sovellus näyttää portin (juliste, Jatka matkaa, Uusi matka); web jatkaa suoraan saapumiskuvaan. Natiivin portti pysyy ennallaan (natiivi ensin; webin muutos ei tarpeen). Samalla Päätoimittaja hyväksyi Sisältökirjurin 30 nostoehdotusta Euroopan ohuisiin maihin ja nolla-alueisiin ehdoin: ei kaksoiskappaleita naapurimaiden kanssa, pelin kaupunkien sisäiset kohteet pois (kuuluvat kaupunkeihin).
