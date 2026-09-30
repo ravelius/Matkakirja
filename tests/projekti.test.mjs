@@ -60,7 +60,7 @@ test('projekti-data.js: luvut ovat järkevissä rajoissa', () => {
   assert.ok(luvut.kartta.syvinTaso >= 8 && luvut.kartta.tasoja === luvut.kartta.syvinTaso + 1);
   assert.equal(luvut.kartta.z10Yhteensa, luvut.kartta.z10Laatat.reduce((a, b) => a + b, 0));
   assert.match(String(luvut.versiot.web), /^\d{4,}$/);
-  assert.match(luvut.versiot.natiivi, /^\d+\.\d+\.\d+$/);
+  assert.match(luvut.versiot.natiivi, /^\d+\.\d+(?:\.\d+)?$/);
   // Webin versio on päivityslokin kärki (sama luku kuin sw.js:n CACHE-nimen loppu).
   const muutokset = lue('js/muutokset.js').match(/\{ v: (\d+),/);
   assert.ok(muutokset && Number(muutokset[1]) >= luvut.versiot.web);
@@ -69,7 +69,7 @@ test('projekti-data.js: luvut ovat järkevissä rajoissa', () => {
 test('iOS-testiversio luetaan natiivin muutoslokin uusimmalta riviltä', () => {
   const loki = JSON.parse(lue('tools/vienti/muutosloki-natiivi.json'));
   const { versio, paiva } = uusinNatiivi(loki);
-  assert.match(versio, /^\d+\.\d+\.\d+$/);
+  assert.match(versio, /^\d+\.\d+(?:\.\d+)?$/); // omistaja 30.9.2026: kiinteä versio 1.1
   assert.match(paiva, /^\d{4}-\d{2}-\d{2}$/);
   assert.equal(versio, loki.rivit[0].versio.split(' ')[0]);
 });
