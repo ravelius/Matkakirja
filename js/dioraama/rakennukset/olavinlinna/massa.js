@@ -40,11 +40,18 @@ export const TILA = {
   naapurit: ['tunnelma', 'laituri', 'fatabuuri', 'kierreportaat', 'muurinharja', 'kappeli', 'keskushalli', 'keittio'],
   hahmot: [],
   // Massan äänisilmukat: tuuli linnan muureilla + järven laineet rannassa (era2 kohta 2 "AANET").
-  aanet: [{ aani: 'linna-tuuli' }, { aani: 'jarvi-laineet' }],
-  // Satunnaiset kertaäänet (era2 kohta 2 "AANET"): lokit ja kaukaiset kellot, harvakseltaan.
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  // Yleisnäkymä: ulkoilma + soihdut, keskushallin sorina ja kappelin laulu vuotavat hiljaa ulos (käsikirjoitus kohta 2).
+  aanet: [
+    { aani: 'linna-tuuli', voimakkuus: 0.45 },
+    { aani: 'jarvi-laineet', voimakkuus: 0.35 },
+    { aani: 'soihtu-ratina', voimakkuus: 0.15 },
+    { aani: 'keskushalli-ambienssi', voimakkuus: 0.08 },
+  ],
   tehosteet: [
-    { aanet: ['lokit'], valit_s: [15, 30] },
-    { aanet: ['kellot-kaukaa'], valit_s: [40, 80] },
+    { aanet: ['lokit'], valit_s: [20, 45], voimakkuus: 0.5 },
+    { aanet: ['laulu-kaukaa'], valit_s: [45, 90], voimakkuus: 0.18 },
+    { aanet: ['kellot-kaukaa'], valit_s: [90, 180], voimakkuus: 0.3 },
   ],
   kasikirjoitus: [],
   palikat: [

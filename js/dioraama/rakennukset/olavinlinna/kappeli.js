@@ -214,9 +214,12 @@ export const TILA = {
       rivi: 'Penkissä on tuore jälki – fatabuurin avaimen parta.' },
   ],
   hahmot: KAPPELI_HAHMOT,
-  aanet: [], // kappelin äänet (kaiku, kynttilän rätinä, kaukainen laulu) tulevat Pelikoodarin tilauksesta
+  // Äänet (Linnanrakentaja 30.9., CC0/PD, suunnitelma docs/raportit/linna-aanet-suunnitelma-20260930.md kohta 2).
+  aanet: [{ aani: 'kappeli-ambienssi', voimakkuus: 0.6 }, { aani: 'kynttila-ratina', voimakkuus: 0.3 }],
   tehosteet: [
-    { aanet: ['kellot-kaukaa'], valit_s: [40, 80] },
+    { aanet: ['laulu-kaukaa'], valit_s: [20, 40], voimakkuus: 0.35 },
+    { aanet: ['kello-kappeli'], valit_s: [60, 120], voimakkuus: 0.4 },
+    { aanet: ['askel-kivi'], valit_s: [25, 50], voimakkuus: 0.3 },
   ],
   liekit: LIEKIT,
   kasikirjoitus: [
