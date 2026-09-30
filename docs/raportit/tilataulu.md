@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 17:00:** Levy 63 Gi (61→63; ei sim-poistoja, raja 60), wt/ 29 (raja 20, kasvaa), muisti 81 % vapaa, kuorma 19/46/128, sim 0, työtilat ok. Viikko 63 % (5 h 42 %). Konteksti: PÄÄTOIMITTAJA 76 %, oma ~20 %. Kävijälaskuri: 16.49 n=1, seuraava ~17.49. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: uusi Codex-viesti posti/linnanrakentaja-codex-olavinlinna-julkisivu-20260930.md (Linnanrakentaja→Codex). Viestiraja: yhteenvetoyritys Päätoimittajalle 17.00.
+
 **Päivitetty 30.9. 16:49:** Levy 61 Gi (laskee ~5 Gi/13 min; 75→71→61; sim-poistot lähtevät < 60 Gi jos viestiraja sallii), wt/ 28 (raja 20, kasvaa), muisti 71 % vapaa, kuorma 117/186/229, sim 0, työtilat ok. Viikko 63 % (5 h 41 %). Konteksti: PÄÄTOIMITTAJA 75 % (hälytys 16.36 ei mennyt perille: viestiraja), oma 20 %. Kävijälaskuri 16.49: n=1 (ennallaan, ei uusia). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 30.9. 16:36:** Levy 71 Gi (75→71), wt/ 27 (raja 20, kasvaa), muisti 68 % vapaa, kuorma 219/243/211 (raskas), sim 1 (siirtoseppa-iPad13 D5900D45; ≤1 ok), työtilat ok. Viikko 62 % (5 h 39 %). Konteksti: PÄÄTOIMITTAJA 73 % (≥70 → hälytysyritys 16.36), oma 19 %. Kävijälaskuri: 15.48 n=1, seuraava ~16.48. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
