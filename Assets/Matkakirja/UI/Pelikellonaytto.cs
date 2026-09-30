@@ -66,7 +66,10 @@ namespace Matkakirja.Natiivi
             valinnassa = valinta;
             Pelikello.Valinnassa = valinta; // v3f: päivän ja yön raja valinnasta asti (Kartta/Paivanvalo.cs)
             if (valinta && !Pelikello.Lennossa) Pelikello.Etene(Time.unscaledDeltaTime);
-            bool nayta = valinta || Pelikello.Lennossa;
+            // Linssi auki (esim. Olavinlinna avattu aloitusvalinnasta): kello pois, ettei se jää linssin "Sulje linssi"
+            // -napin alle oikeaan yläkulmaan (Laitetestaaja 1.1 (76) 83763fc7: × osui "Päivä 1/80" -riviin). Kello etenee silti.
+            bool linssi = ui != null && ui.Linssit != null && ui.Linssit.Auki != null;
+            bool nayta = (valinta || Pelikello.Lennossa) && !linssi;
 
             // Häivytys 250 ms (lennon kiihtyvä kello herättää piirron joka tapauksessa).
             float tavoite = nayta ? 1f : 0f;
