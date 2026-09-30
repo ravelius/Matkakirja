@@ -41,24 +41,20 @@
   ],
   "kuvat": [
     {
-      "tiedosto": "assets/apuraha/01-saapuminen-matkakirja-ateena.jpg",
-      "teksti": "Ateenan matkakirja ja kartta"
+      "tiedosto": "assets/apuraha/1-kartta.jpg",
+      "teksti": "Käsin piirretty kartta: Kreikka nostoineen"
     },
     {
-      "tiedosto": "assets/apuraha/02-euroopan-kartta-kaukaa.jpg",
-      "teksti": "Eurooppa kaukaa"
+      "tiedosto": "assets/apuraha/2-astronautin-kamera.jpg",
+      "teksti": "Astronautin kamera: maapallo avaruudesta"
     },
     {
-      "tiedosto": "assets/apuraha/03-nosto-marathon.jpg",
-      "teksti": "Nosto: Marathon"
+      "tiedosto": "assets/apuraha/3-olavinlinna.jpg",
+      "teksti": "Olavinlinna aukileikattuna iltavalaistuksessa"
     },
     {
-      "tiedosto": "assets/apuraha/04-pulu-chat-kysymys-ja-vastaus.jpg",
-      "teksti": "Pulu-chat: kysymys ja vastaus"
-    },
-    {
-      "tiedosto": "assets/apuraha/05-linssi-astronautin-kamera-cupola.jpg",
-      "teksti": "Astronautin kamera (Cupola)"
+      "tiedosto": "assets/apuraha/4-radio.jpg",
+      "teksti": "Radiolinssi: Ateenan asema soi"
     }
   ],
   "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Suosittelemme iOS-sovellusta (App Store -testiversion linkki on apurahahakemuksessa)."
