@@ -299,7 +299,8 @@ namespace Matkakirja.Natiivi
                 var o = lipunOletus.Value;
                 // Kulman paikka ei ole paneelin alla (myös ruudun ulkopuolella tai pallon takana: silloin tanko on piilossa kuten
                 // ilman paneelia; Laitetestaaja 1.0.66b: lähizoomissa Alsace oli ruudun ulkopuolella, eikä tanko palannut).
-                bool vapaa = yla.height <= 0f || !Lipputanko.Ennuste(o.Lat, o.Lon, out var ro) || !PeittaaLipun(ro, yla);
+                // Hystereesi: paluu vaatii kaksinkertaisen varan (muuten raja-asemassa tanko hyppisi sekunnin välein).
+                bool vapaa = yla.height <= 0f || !Lipputanko.Ennuste(o.Lat, o.Lon, out var ro) || !PeittaaLipun(ro, yla, 3f * PaneelinVaraPt);
                 if (vapaa)
                 {
                     lippuSiirretty = false;
@@ -341,13 +342,20 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA ui lipputanko: yläpaneelin alle ({paras.Value.Lat:0.00}, {paras.Value.Lon:0.00}), {pisteet.Count} ehdokasta");
         }
 
-        /// <summary>Osuuko tangon ala (ruutupikselit, y ylös) yläpaneeliin (paneelikoordinaatit, y alas) varalla.</summary>
-        bool PeittaaLipun(Rect ruutu, Rect yla)
+        /// <summary>
+        /// Osuuko tangon ala (ruutupikselit, y ylös) yläpaneeliin (paneelikoordinaatit, y alas) varalla. Ruudun reunaan ulottuva
+        /// paneeli jatkuu reunan yli (simulaattori 30.9.: kulman paikka oli ruudun oikean reunan takana koko levyisen matkakirjan
+        /// korkeudella, jolloin se ei "osunut" paneeliin, tanko palasi ja siirtyi taas sekunnin välein).
+        /// </summary>
+        bool PeittaaLipun(Rect ruutu, Rect yla, float vara = PaneelinVaraPt)
         {
             var a = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.xMin, Screen.height - ruutu.yMax));
             var b = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.xMax, Screen.height - ruutu.yMin));
             var alaPaneelissa = Rect.MinMaxRect(a.x, a.y, b.x, b.y);
-            var v = new Rect(yla.x - PaneelinVaraPt, yla.y - PaneelinVaraPt, yla.width + 2 * PaneelinVaraPt, yla.height + 2 * PaneelinVaraPt);
+            float leveys = kortti.panel.visualTree.layout.width;
+            float x0 = yla.xMin <= 2f ? float.MinValue / 4 : yla.xMin - vara;
+            float x1 = yla.xMax >= leveys - 2f ? float.MaxValue / 4 : yla.xMax + vara;
+            var v = Rect.MinMaxRect(x0, yla.yMin - vara, x1, yla.yMax + vara);
             return alaPaneelissa.Overlaps(v);
         }
 
