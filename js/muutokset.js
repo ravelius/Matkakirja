@@ -13,7 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2450, teksti: 'Nostot kierros 3 erä C: 10 kohdetta (MKD, UKR, PRT ym.)' },
+  { v: 2451, teksti: 'Olavinlinnan äänimaisema: suunnitelma, CC0/PD-l… (#3698)' },
+  { v: 2450, teksti: 'ISS-kytkinpöytä: Blender-malli ja Cycles-kerros… (#3695)' },
   { v: 2449, teksti: 'Nostot kierros 3, erä B: 10 kohdetta kuvineen M… (#3694)' },
   { v: 2448, teksti: 'Nimetön kävijälaskuri: Pöllön kaynti/kaynnit, s… (#3692)' },
   { v: 2447, teksti: 'Nostot kierros 3, erä A: 10 kohdetta kuvineen M… (#3691)' },
