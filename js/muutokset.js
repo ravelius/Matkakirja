@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2461, teksti: 'Savukesarja: WebKit-rivit päivällä Chromiumilla (#3705)' },
   { v: 2460, teksti: 'Testiselaimet mykistettyinä oletuksena (#3704)' },
   { v: 2459, teksti: 'Raamattu: äänten generointi vain omistajan luva… (#3699)' },
   { v: 2458, teksti: 'Hahmojen ääninäytteet CI:ssä (#3703)' },
