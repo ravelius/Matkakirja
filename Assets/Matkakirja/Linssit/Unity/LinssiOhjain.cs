@@ -1679,6 +1679,17 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
+                        else if (a == "yohon")   // kuvapari (30.9.): kelaa seuraavaan hetkeen, jolloin aurinko on alapisteessä ≥ 15° horisontin alla
+                        {
+                            var t0 = Matkakirja.Linssit.Iss.IssNyt.Kello(); DateTime? yo = null;
+                            for (int s = 20; s <= 3 * 3600 && yo == null; s += 20)
+                            {
+                                var t = t0.AddSeconds(s);
+                                if (Matkakirja.Linssit.Iss.Avaruuskavely.MaanAurinko(t, Matkakirja.Linssit.Iss.IssNyt.Paikka(t)) < -0.26) yo = t;
+                            }
+                            if (yo.HasValue) Matkakirja.Linssit.Iss.IssNyt.Simu.KelaaHetkeen(yo.Value.AddMinutes(3));
+                            Kirjaa("astro kyyti yohon: " + (yo.HasValue ? $"{(yo.Value - t0).TotalMinutes:0} min" : "ei yötä 3 h:ssa"));
+                        }
                         else if (a == "pilvet" && osat.Length > 3)
                         {
                             AstronauttiKerros.PilvetKyydissa = osat[3];
