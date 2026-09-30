@@ -101,6 +101,56 @@ namespace Matkakirja.Natiivi
 
         public bool Auki { get; private set; }
 
+        /// <summary>
+        /// LINSSITILA (omistaja 30.9.2026 klo 23.5x, astronautin kamera: "pululla saisi olla myös tässä striimiluenta. tee
+        /// pululle aina samat napit kaikkialle peliin"). Linssin minipulu avaa TÄMÄN chatin (MinipulunKortti on sovitin):
+        /// samat napit samassa järjestyksessä (puhekupla, kynä | ≡, kaiutin; alarivi näppäimistö, mikki), vain teema
+        /// vaihtuu (mk-chat--linssi: tumma lasi, vihreä reuna) ja paikka on minipulun yläpuolella. Kohteen valmiit
+        /// kysymykset näkyvät sirunappeina ja kulkevat mallille kuten vapaa kysymys (web vastaaKysymykseen 17.9.).
+        /// </summary>
+        public bool Linssissa { get; private set; }
+        Func<Rect> linssiAnkkuri;
+        string linssiTunnus;
+
+        public void AvaaLinssissa(Func<Rect> ankkuri, string tunnus, IReadOnlyList<string> valmiit)
+        {
+            linssiAnkkuri = ankkuri;
+            if (!Linssissa)
+            {
+                Linssissa = true;
+                paneeli.AddToClassList("mk-chat--linssi");
+                paneeli.style.backgroundImage = StyleKeyword.None; // paperikohina pois lasiteemasta
+            }
+            bool uusi = tunnus != linssiTunnus;
+            linssiTunnus = tunnus;
+            if (!Auki) Avaa(false);
+            if (uusi) NaytaKohteenValmiit(valmiit);
+            Asettele();
+        }
+
+        void PoistuLinssista()
+        {
+            if (!Linssissa) return;
+            Linssissa = false;
+            linssiAnkkuri = null;
+            paneeli.RemoveFromClassList("mk-chat--linssi");
+            Kuviot.AsetaArkki(paneeli);
+            foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
+        }
+
+        void NaytaKohteenValmiit(IReadOnlyList<string> valmiit)
+        {
+            foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
+            if (valmiit == null || valmiit.Count == 0) return;
+            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", virta, PickingMode.Ignore);
+            foreach (var q in valmiit)
+            {
+                string kysymys = q;
+                Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => Kysy(kysymys), ryhma), Kirjasin.Kone);
+            }
+            Vierita(ryhma);
+        }
+
         /// <summary>Pulun äänikeskustelun koenappi (vain kehittäjätilassa; UI/Pulu/PuluRealtimeNappi.cs).</summary>
         readonly PuluRealtimeNappi realtime;
 
@@ -210,6 +260,7 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             var r = kerros.Reunat(UiKerros.Valikot);
+            if (Linssissa && AsetteleLinssiin(r)) return;
             palaa.style.top = Ylapalkki.Varaus + 56;
             var koko = paneeli.parent?.layout ?? default;
             float w = koko.width, h = koko.height;
@@ -231,6 +282,28 @@ namespace Matkakirja.Natiivi
             st.minHeight = 0f;
             st.maxHeight = korkeus;
             AsetaKorkeus();
+        }
+
+        /// <summary>Linssitila: paneelin oikea reuna minipulun oikeaan reunaan, alareuna 8 pt minipulun yläpuolelle.</summary>
+        bool AsetteleLinssiin(Vector4 r)
+        {
+            var par = paneeli.parent;
+            var a = linssiAnkkuri?.Invoke() ?? default;
+            var koko = par?.layout ?? default;
+            if (par == null || a.width <= 0 || float.IsNaN(koko.width) || koko.width <= 0) return false;
+            var l = par.WorldToLocal(a);
+            float lev = Mathf.Min(360f, koko.width - 24f);
+            float ala = l.yMin - 8f, yla = Mathf.Max(r.y + 12f, 12f);
+            korkeus = Mathf.Max(0f, Mathf.Min(520f, ala - yla));
+            var st = paneeli.style;
+            st.left = Mathf.Clamp(l.xMax - lev, 12f, Mathf.Max(12f, koko.width - lev - 12f));
+            st.right = StyleKeyword.Auto;
+            st.width = lev;
+            st.bottom = koko.height - ala;
+            st.minHeight = 0f;
+            st.maxHeight = korkeus;
+            AsetaKorkeus();
+            return true;
         }
 
         /// <summary>Tuore keskustelu sisällön mittainen (web .livia-chat-tila.pollo-alku height auto), muuten täysi korkeus.</summary>
@@ -347,6 +420,8 @@ namespace Matkakirja.Natiivi
             Auki = false;
             sulkija.style.display = DisplayStyle.None;
             Ponnahdus.Sulje(paneeli);
+            // Linssiteema pois vasta sulkuanimaation jälkeen (ei väriväläystä), jos chat ei avautunut uudelleen.
+            if (Linssissa) paneeli.schedule.Execute(() => { if (!Auki) { PoistuLinssista(); Asettele(); } }).ExecuteLater(260);
             SyoteLukko.Vapauta(this);
             Aanisoitin.Hiljennys("pollo", false);
             pulu.Tilanne("chatClose");

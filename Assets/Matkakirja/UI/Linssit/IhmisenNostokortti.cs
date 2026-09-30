@@ -2,7 +2,7 @@
 // css/ihmisen-tutkimus.css .ihmisen-nostokortti. Löytökuvan napautus avaa kortin palkin alle vasempaan
 // reunaan: ✕ (Sulje nosto), ajoitus pilkun kanssa, otsikko, "paikka — maa", kuvat (kuvitus, esine,
 // aito kuva), löytöteksti ja "Kysy viisaalta pöllöltä pululta" -kysymykset. Valmis vastaus tulee
-// kortin sisään lähteineen (LinssiKysymykset), muuten kysymys kulkee pululle (PuluChat.KysyUlkoisesti).
+// kortin sisään lähteineen (LinssiKysymykset), muuten kysymys avaa Pulun yhteisen chatin (PuluChat.Kysy, 1.10.2026).
 // Esitys menee kortin ajaksi tauolle ja jatkuu sulkiessa, jos se oli käynnissä.
 //
 // Kuvatekstit (KuvaSelite, EsineSelite, AitoSelite), aidon kuvan suurennos lähderivillä (web
@@ -54,6 +54,7 @@ namespace Matkakirja.Natiivi
             if (p == null) return false;
             if (Auki == p.Tunnus) { Sulje(); return false; }
             Auki = p.Tunnus;
+            paikka = p;
             kupla = null;
             foreach (var b in kortti.Children().OfType<Button>().ToList()) b.RemoveFromHierarchy();
             var s = vieritys.contentContainer;
@@ -157,9 +158,28 @@ namespace Matkakirja.Natiivi
             Kuvat.Hae(url, t => { if (t == null) kehys.RemoveFromHierarchy(); else k.style.backgroundImage = new StyleBackground(t); });
         }
 
+        Loytopaikka paikka;
+
         void KysyPululta(LinssiKysymys valmiit, string kysymys, Button nappi, VisualElement ryhma)
         {
             if (kysymysKesken || !nappi.enabledSelf) return;
+            // Ilman valmista vastausta kysymys menee Pulun yhteiseen chattiin samoine nappeineen (kaiutin/striimiluenta,
+            // ≡, puhekupla, kynä; omistaja 30.9.2026 klo 23.5x: "tee pululle aina samat napit kaikkialle peliin"; web
+            // ihmisen-matka-kortti polloKysy). Kortin aihe kulkee kontekstissa (PuluChat.Aihe).
+            if (valmiit == null || !valmiit.Vastaukset.ContainsKey(kysymys.Trim()))
+            {
+                var c = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+                if (c == null || c.Kysyy) return;
+                nappi.AddToClassList("mk-ihmisnosto__kysymys--lahetetty");
+                c.Kysy(kysymys, aihe: paikka == null ? null : new PuluChat.Aihe
+                {
+                    Otsake = "Ihmisen matkan löytö, josta pelaaja kysyy",
+                    Nimi = string.Join(", ", new[] { paikka.Otsikko, paikka.Paikka, paikka.Maa }.Where(x => !string.IsNullOrWhiteSpace(x))),
+                    Tyyppi = paikka.Ajoitus,
+                    Teksti = paikka.Loyto,
+                });
+                return;
+            }
             nappi.AddToClassList("mk-ihmisnosto__kysymys--lahetetty");
             nappi.SetEnabled(false);
             if (kupla == null)
