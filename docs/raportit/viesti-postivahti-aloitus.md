@@ -10,3 +10,6 @@ Olet Postivahti. Lue CLAUDE.md ja tämä viesti kokonaan, jatka kiertoa suoraan 
 4. Aja normaali kierros heti ja jatka `ScheduleWakeup`-ketjulla 15 min välein (10 min jos levy < 49 Gi tai konteksti lähellä 70 %).
 
 Päätoimittaja (ent. Fable) session id: local_593b89a1-2514-4d74-b956-2a73db862382.
+
+## Kävijälaskuri (Päätoimittajan ohje 30.9. klo 14.4x, kerran tunnissa)
+Aja: `git archive origin/main tools/kaynnit.mjs js/packs/pollo-asetukset.js | tar -x -C <scratchpad>/kaynnit`, sitten siellä `source ~/.matkakirja-avaimet-koodaus.zsh >/dev/null 2>&1; NODE_USE_ENV_PROXY=1 node tools/kaynnit.mjs 14`. Älä koskaan tulosta avainta. Kun viimeisen rivin "ULKOPUOLISIA KÄVIJÖITÄ n" kasvaa → yksi rivi Päätoimittajalle: päivä, maa, alusta, apurahakortin avaukset. Ensimmäinen ajo 14.45: n = 0.
