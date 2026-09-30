@@ -139,6 +139,8 @@ namespace Matkakirja.Natiivi
             var ylarivi = Rakenne.El("mk-matkakirja__ylarivi", kortti, PickingMode.Ignore);
             otsikko = Rakenne.Teksti("Matkapäiväkirja", "mk-matkakirja__otsikko", ylarivi);
             lyhyt = Rakenne.Teksti("", "mk-matkakirja__lyhyt", ylarivi);
+            // Webin lappu: otsikko lihavoituna (#fact-voice h2.paikka-aika, font-weight 700).
+            Kirjasimet.Aseta(lyhyt, Kirjasin.KoneLihava);
             kaiutin = Rakenne.Nappi(null, "mk-matkakirja__kaiutin", VaihdaKertoja, ylarivi);
             kaiutin.tooltip = "Kertoja";
             var kuvake = Rakenne.El("mk-kaiutin", kaiutin, PickingMode.Ignore);
@@ -211,7 +213,8 @@ namespace Matkakirja.Natiivi
             kortti.style.top = paikka.yMax + 6;
             kortti.style.left = paikka.xMin;
             // Lappu samanlevyisenä kuin rahapilleri; auki oleva kortti omalla leveydellään (USS).
-            if (muutos == null) kortti.style.width = pieni ? new StyleLength(paikka.width) : new StyleLength(StyleKeyword.Null);
+            // Lappu sisältönsä levyinen kuten webissä (ennen iPhonella rahapillerin levyinen pilleri, löydös 20).
+            if (muutos == null) kortti.style.width = StyleKeyword.Null;
             // Pillerin kaiutin on mittari, ei kytkin: napautus avaa kortin (tekstin) kuten muu pilleri.
             kaiutin.pickingMode = pieni ? PickingMode.Ignore : PickingMode.Position;
         }
@@ -321,18 +324,28 @@ namespace Matkakirja.Natiivi
         IVisualElementScheduledItem lyhytAnimaatio;
 
         /// <summary>
-        /// Lapun teksti: luennan ajan otsikko (ja lyhyt paikkarivi), luennon jälkeen kaupungin nimi. Löydös 97 (SÄÄNTÖ):
-        /// automaattisesti lyhenevä teksti sulaa lopusta alkuun (0,6 s, smoothstep), ei kertarysäyksellä.
+        /// Lapun teksti WEBIN MALLIN MUKAAN (omistaja 30.9.2026; css .fact-card.pieni: #fact-voice + .fact-place-lyhyt,
+        /// js/ui.js asetaPaikkarivi): matkakirjan merkinnällä (paikka ja aika otsikkona) pelkkä otsikko ("Edinburgh,
+        /// elokuussa 1873") — lyhyt muoto jää tyhjäksi, koska otsikossa on jo kaupungin nimi (omistaja 8.9.2026); muilla
+        /// merkinnöillä otsikko ja sen perässä lyhyt muoto himmeämpänä. Ennen luennon jälkeen pelkkä kaupungin nimi
+        /// (löydös 87) ja iPhonella aina nimi (löydös 20). Löydös 97 (SÄÄNTÖ): lyhenevä teksti sulaa lopusta alkuun (0,6 s).
         /// </summary>
+        string LapunTeksti(Merkinta m)
+        {
+            string o = otsikko.text ?? "";
+            if (m.PaikkaAika) return o;
+            string ly = m.Lyhyt ?? m.Paikkarivi ?? KaupunginNimi(m);
+            return string.IsNullOrEmpty(ly) ? o : o + "  <color=#8a6c46>" + ly + "</color>";
+        }
+
         void PaivitaLyhyt(bool animoi)
         {
             var m = merkinta;
             if (m == null) return;
-            string ly = m.Lyhyt ?? m.Paikkarivi;
-            string uusi = Kaupunkipilleri || luettu ? KaupunginNimi(m) : otsikko.text + (string.IsNullOrEmpty(ly) ? "" : " · " + ly);
+            string uusi = LapunTeksti(m);
             lyhytAnimaatio?.Pause();
             string vanha = lyhyt.text ?? "";
-            if (!animoi || LinssiUi.VahennettyLiike() || !vanha.StartsWith(uusi) || vanha.Length <= uusi.Length) { lyhyt.text = uusi; return; }
+            if (!animoi || LinssiUi.VahennettyLiike() || uusi.Contains('<') || vanha.Contains('<') || !vanha.StartsWith(uusi) || vanha.Length <= uusi.Length) { lyhyt.text = uusi; return; }
             float alku = Time.unscaledTime;
             lyhytAnimaatio = lyhyt.schedule.Execute(() =>
             {
@@ -373,10 +386,11 @@ namespace Matkakirja.Natiivi
                 var (w1, h1) = LapunMitat();
                 foreach (var c in kortti.Children()) { c.style.width = c.layout.width; c.style.flexShrink = 0f; }
                 KiinnitaLaatikko(w0, h0);
-                Aja(w0, h0, w1, () => h1, t =>
+                Aja(w0, h0, w1, () => h1, (t, k) =>
                 {
                     float a = 1f - Mathf.Clamp01(t / SisaltoS);
                     foreach (var c in kortti.Children()) c.style.opacity = a;
+                    Tausta(k);
                 }, () =>
                 {
                     VapautaLapset();
@@ -400,10 +414,11 @@ namespace Matkakirja.Natiivi
                 muutos = null;
                 // Tavoitekorkeus joka ruudulla asettelusta (laite mk3: ensimmäisellä ruudulla lapset eivät olleet vielä
                 // asettuneet, laatikko kasvoi vain rivin korkuiseksi ja hyppäsi lopussa täyteen mittaan).
-                Aja(w0, h0, leveys, AvoimenKorkeus, t =>
+                Aja(w0, h0, leveys, AvoimenKorkeus, (t, k) =>
                 {
                     float a = Mathf.Clamp01((t - SisaltoViiveS) / SisaltoS);
                     foreach (var c in kortti.Children()) c.style.opacity = a;
+                    Tausta(1f - k);
                 }, () =>
                 {
                     VapautaLapset();
@@ -413,7 +428,7 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        void Aja(float w0, float h0, float w1, Func<float> h1, Action<float> sisalto, Action valmis)
+        void Aja(float w0, float h0, float w1, Func<float> h1, Action<float, float> sisalto, Action valmis)
         {
             float kulunut = 0f, edellinen = Time.unscaledTime;
             muutos = kortti.schedule.Execute(() =>
@@ -425,7 +440,7 @@ namespace Matkakirja.Natiivi
                 float k = Ponnahdus.Kaari(0.42f, 0f, 0.58f, 1f, kulunut / MuutosS);
                 kortti.style.width = Mathf.Lerp(w0, w1, k);
                 kortti.style.height = Mathf.Lerp(h0, h1(), k);
-                sisalto(kulunut);
+                sisalto(kulunut, k);
                 if (kulunut < MuutosS) return;
                 muutos?.Pause();
                 muutos = null;
@@ -442,8 +457,23 @@ namespace Matkakirja.Natiivi
             kortti.style.height = h;
         }
 
+        // Webin kaistale (USS .mk-matkakirja--pieni) ja kermavalo liukuvat toisiinsa liikkeen mukana: 0 = avattu kortti
+        // (kermavalo, kulmat 12 px), 1 = lappu (pergamentti rgba(244, 231, 202, 0,86) ilman kermavaloa, kulmat 6 px).
+        static readonly Color Kaistale = new Color(244f / 255f, 231f / 255f, 202f / 255f, 0.86f);
+
+        void Tausta(float lappu)
+        {
+            kortti.style.backgroundColor = new Color(Kaistale.r, Kaistale.g, Kaistale.b, Kaistale.a * lappu);
+            kortti.style.unityBackgroundImageTintColor = new Color(1f, 1f, 1f, 1f - lappu);
+            float r = Mathf.Lerp(12f, 6f, lappu);
+            kortti.style.borderTopLeftRadius = kortti.style.borderTopRightRadius = kortti.style.borderBottomLeftRadius = kortti.style.borderBottomRightRadius = r;
+        }
+
         void VapautaLaatikko()
         {
+            kortti.style.backgroundColor = StyleKeyword.Null;
+            kortti.style.unityBackgroundImageTintColor = StyleKeyword.Null;
+            kortti.style.borderTopLeftRadius = kortti.style.borderTopRightRadius = kortti.style.borderBottomLeftRadius = kortti.style.borderBottomRightRadius = StyleKeyword.Null;
             kortti.style.overflow = StyleKeyword.Null;
             kortti.style.maxHeight = StyleKeyword.Null;
             kortti.style.maxWidth = StyleKeyword.Null;
@@ -493,15 +523,16 @@ namespace Matkakirja.Natiivi
         (float W, float H) LapunMitat()
         {
             if (lappuKoko.x > 1f && lappuKoko.y > 1f) return (lappuKoko.x, lappuKoko.y);
-            var pilleri = ylapalkki?.Pilleri;
-            if (Kaupunkipilleri && pilleri != null && pilleri.worldBound.width > 0f) return (pilleri.worldBound.width, 36f);
-            string teksti = lyhyt.text ?? "";
-            float koko = lyhyt.resolvedStyle.fontSize > 0f ? lyhyt.resolvedStyle.fontSize : 12.5f;
-            float w = lyhyt.MeasureTextSize(teksti, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * 12.5f / koko;
+            // Webin kaistale (USS .mk-matkakirja--pieni): rivi 1,5 × --pieni-rivi (iPad 12,8 px, puhelin 11,2 px), pehmuste
+            // 0,2rem ja 0,5em, kaiutin 18 / 16 px + 5 px.
+            float rivi = Puhelin ? 11.2f : 12.8f;
+            string teksti = LapunTeksti(merkinta ?? new Merkinta());
+            float koko = lyhyt.resolvedStyle.fontSize > 0f ? lyhyt.resolvedStyle.fontSize : rivi;
+            float w = lyhyt.MeasureTextSize(teksti, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * rivi / koko;
             bool kaiutinNakyy = !kaiutin.ClassListContains("mk-matkakirja__piilo");
-            float leveys = w + 20f + (kaiutinNakyy ? 30f : 0f);
-            float katto = kortti.parent != null ? 0.62f * kortti.parent.layout.width : leveys;
-            return (Mathf.Min(leveys, katto), 32f);
+            float leveys = w + 2f * rivi * 0.5f + (kaiutinNakyy ? (Puhelin ? 21f : 23f) : 0f);
+            float katto = kortti.parent != null ? 0.96f * kortti.parent.layout.width : leveys;
+            return (Mathf.Min(leveys, katto), 1.5f * rivi + 6.4f);
         }
 
         /// <summary>Avoimen kortin leveys: edellinen avoin asettelu, muuten USS (340 pt, enintään 62 %, puhelimella 97 %).</summary>
@@ -663,7 +694,7 @@ namespace Matkakirja.Natiivi
         {
             pieni = p;
             kortti.EnableInClassList("mk-matkakirja--pieni", p);
-            kortti.EnableInClassList("mk-matkakirja--nimi", p && VainNimi && !Kaupunkipilleri);
+            kortti.EnableInClassList("mk-matkakirja--nimi", p && VainNimi);
             PaivitaPalkkipiilo();
             Asettele();
         }
