@@ -332,6 +332,10 @@ namespace Matkakirja.Natiivi
                         case "jumi":
                             Puhe.JumiMs = int.TryParse(A(2), out int jumi) ? Mathf.Clamp(jumi, 0, 3000) : 0;
                             return $"=jumi {Puhe.JumiMs} ms ensimmäisessä soivassa ruudussa";
+                        // Puheväylän verho (kärki 30.9.): klipin alku 8 s lokiin, "puhe verho 1|0".
+                        case "verho":
+                            if (A(2) == "1") Puhe.Verho = true; else if (A(2) == "0") Puhe.Verho = false;
+                            return $"=verho {(Puhe.Verho ? "päällä" : "pois")}";
                         // Palaloki (TF 1.0.32 ohitukset): soitetut/jatketut/uusitut palat ja viimeiset rivit (soi s/kesto, lähde, worker).
                         case "palat":
                             if (A(2) == "nollaa") { Puhe.NollaaPalaloki(); return "=palaloki nollattu"; }
