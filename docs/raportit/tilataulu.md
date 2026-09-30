@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 21:23:** Levy 47 Gi (vakaa 21.12:sta; hälytys < 45), wt/ 40 (raja 20), muisti 73 % vapaa, kuorma 90/115/101, sim 1 (natiivi-ui-iPad11 AD119F7B; ≤1 ok), työtilat ok. Viikko 73 % (5 h 32 %). Konteksti: Päätoimittaja 54 %. Kävijälaskuri 21.23: n=2 (ennallaan), seuraava ~22.23. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. PRB-poistokielto ei lähtenyt rooleille (viestiraja).
+
 **Päivitetty 30.9. 21:12:** Levy 47 Gi (52→47 16 min:ssa; hälytys < 45 lähellä → kierros 10 min), wt/ 40 (raja 20, kasvaa), muisti 77 % vapaa, kuorma 59/54/55, sim 1 (linssiseppa-iPhone D0D2CD1E; ≤1 ok), työtilat ok. Viikko 72 % (5 h 31 %). Konteksti: Päätoimittaja 52 %. Kävijälaskuri: 20.29 n=2, seuraava ~21.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Muistutukset Pelikoodarille/Natiivi-UI:lle (wt) EIVÄT lähteneet (viestiraja); PRB-poistokielto (Päätoimittajan peruutus) ei lähtenyt kenellekään. Linssiseppä 2 kuitannut (PRB 4CE6C737 1,1 G, F2D9B022 0,3 G poistettu ennen kieltoa).
 
 **Päivitetty 30.9. 21:0x — PÄÄTOIMITTAJAN PERUUTUS:** ÄLÄ muistuta rooleja poistamaan PRB-välimuisteja; pyydä rooleja OLEMAAN poistamatta niitä (simulaattorit kaatuvat käynnistyksessä 'system shell crashed', selvitetään johtuuko PRB-poistoista). Worktree-muistutus voimassa. Viesti rooleille EI lähtenyt (viestiraja 13); jo poistaneet: Natiiviseppä (0,3 G), Laitetestaaja (1572C658, 3B4CDACB), Linssiseppä (D0D2CD1E, 903C2B91), Siirtoseppä (F989814A, D5900D45).
