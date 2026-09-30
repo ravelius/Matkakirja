@@ -1,4 +1,4 @@
-# Apurahan arvioijalle – esittelykortti (Päätoimittaja 30.9.2026, luonnos v2)
+# Apurahan arvioijalle – esittelykortti (Päätoimittaja 30.9.2026, luonnos v4)
 
 Omistajan pyyntö 30.9.2026 klo 11.0x: pelin aloitusnäkymään (natiivi + web) nappi
 **"Apurahahakemus – katso tämä ensin"**, joka avaa esittelykortin (kuvat + teksti, luettavissa
@@ -31,9 +31,13 @@ isoisän ääni lukee matkakirjan ääneen.
    lukee sen ääneen.
 2. Napauta kartalta nostoa: kuva ja lyhyt tarina nähtävyydestä.
 3. Kysy Pulu-kyyhkyltä kaupungista mitä tahansa. Vastaus tulee noin puolessa minuutissa.
-4. Linssit aukeavat pelissä pisteillä. Tämän kortin napista "Avaa esittelylinssit" saat heti
-   käyttöösi kaikki linssit, myös kehitteillä olevat: esimerkiksi astronautin kameran, maailman
-   radiot ja Olavinlinnan poikkileikkauksen.
+4. Kokeile linssejä: ne näyttävät maailman eri aiheen kautta, esimerkiksi astronautin kamera,
+   maailman radiot ja Olavinlinnan poikkileikkaus. Jos linssilista on tyhjä, tämän kortin nappi
+   "Avaa esittelylinssit" avaa kaikki, myös kehitteillä olevat.
+
+   WEB (webTeksti): 4. Kokeile linssejä: ne näyttävät maailman eri aiheen kautta, esimerkiksi
+   maailman radiot ja ihmisen matka. Jos linssilista on tyhjä, tämän kortin nappi "Avaa
+   esittelylinssit" avaa kaikki. Kolmiulotteiset linssit ovat vain iOS-sovelluksessa.
 
 **Kappale 3 – missä mennään**
 
@@ -42,6 +46,9 @@ on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. U
 ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja
 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan
 perinteiset pelit ja kolmiulotteiset kohteet; ensimmäisen, Olavinlinnan, voi jo kokeilla esittelylinsseistä.
+
+WEB (webTeksti, loppu): … kolmiulotteiset kohteet; ensimmäistä, Olavinlinnaa, voi jo kokeilla
+iOS-sovelluksessa.
 
 **Kappale 4 – keskeneräisyys ja lisätiedot**
 
