@@ -3863,8 +3863,7 @@
     width: 300px;
     max-width: 94%;
     --map-ink: #2e2011;
-    transition-property: opacity, translate, scale, width;
-    transition-duration: 0.18s, 0.22s, 0.22s, 0.2s;
+    /* Leveys vaihtuu ilman siirtymää: välileveydet sovittivat valikkonappien fontit liian pieniksi (1.0.62-savuke). */
 }
 
 .mk-linssivalitsin.mk-linssivalitsin--valikko.mk-linssivalitsin--kapea {
