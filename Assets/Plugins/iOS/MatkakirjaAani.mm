@@ -77,7 +77,16 @@ static BOOL KorjaaMykistyva(NSString* syy)
     static int korjauksia = 0;
     CFAbsoluteTime nyt = CFAbsoluteTimeGetCurrent();
     if (nyt - ikkuna > 2.0) { ikkuna = nyt; korjauksia = 0; }
-    if (++korjauksia > 8) { if (korjauksia == 9) NSLog(@"MATKAKIRJA ääni-istunto: vahti pysähtyy (yli 8 korjausta 2 s:ssa, %@)", syy); return NO; }
+    if (++korjauksia > 8)
+    {
+        // Jälkitarkistus, kun ikkuna on ohi: Playback voittaa, kun vaihtelu on tasaantunut.
+        if (korjauksia == 9)
+        {
+            NSLog(@"MATKAKIRJA ääni-istunto: vahti tauolla (yli 8 korjausta 2 s:ssa, %@), jälkitarkistus 2,5 s", syy);
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), VahtiJono(), ^{ KorjaaMykistyva(@"jälkitarkistus"); });
+        }
+        return NO;
+    }
     NSString* ennen = istunto.category;
     NSError* virhe = nil;
     BOOL ok = [istunto setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeSpokenAudio
@@ -101,7 +110,15 @@ extern "C" void MatkakirjaAani_Vahti(void)
                 for (AVAudioSessionPortDescription* p in istunto.currentRoute.outputs) [ulos addObject:p.portType];
                 NSLog(@"MATKAKIRJA ääni-istunto: reitti vaihtui (syy %lu): %@ / %@ / %lu, ulos %@", (unsigned long)syy,
                     istunto.category, istunto.mode, (unsigned long)istunto.categoryOptions, [ulos componentsJoinedByString:@"+"]);
-                KorjaaMykistyva([NSString stringWithFormat:@"reitti %lu", (unsigned long)syy]);
+                // Korjaus 0,4 s:n päästä yhdistettynä: ei vaihdeta luokkaa kesken FMOD:n oman nollauksen (samasta
+                // nollauksesta voi tulla useita ilmoituksia), ja vain, jos luokka on silloinkin mykistyvä.
+                static BOOL ajastettu = NO;
+                if (!Mykistyva(istunto) || ajastettu) return;
+                ajastettu = YES;
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), VahtiJono(), ^{
+                    ajastettu = NO;
+                    KorjaaMykistyva([NSString stringWithFormat:@"reitti %lu", (unsigned long)syy]);
+                });
             });
         }];
         [nc addObserverForName:AVAudioSessionInterruptionNotification object:nil queue:nil usingBlock:^(NSNotification* n) {
