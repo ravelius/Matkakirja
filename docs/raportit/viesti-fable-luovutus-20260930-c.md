@@ -1,57 +1,65 @@
-# Päätoimittajan luovutus 30.9.2026 ilta (c)
+# Päätoimittajan luovutus 30.9.2026 klo 22.5x (c, oma nollaus 62 %:ssa)
 
-Sessio "Päätoimittaja (Opus, xhigh)", haara claude/bold-ride-vow4ki, RC päällä. Edellinen: viesti-fable-luovutus-20260930-b.md.
-Kaikki illan päätökset lokissa: docs/raamattu-loki/paatokset-2026-09.md (grep "30.9.2026 klo 19" ja "klo 2").
-OPPI: nollaa itse 65 %:ssa (get_usage noin 10 vuoron välein).
+Sessio "Päätoimittaja (Opus, xhigh)" local_593b89a1-2514-4d74-b956-2a73db862382 (id säilyy), haara claude/bold-ride-vow4ki, RC päällä.
+Edellinen: viesti-fable-luovutus-20260930-b.md. Illan päätökset lokissa docs/raamattu-loki/paatokset-2026-09.md (grep "30.9.2026 klo 19", "klo 2").
 
-## Omistajan odottavat asiat (kysytty, vastaus puuttuu)
+## ⚠️ AVOIN KYSYMYS OMISTAJALLE (kysytty 22.4x)
 
-1. **Kuunnelmien ja kertojan tekstit:** kysytty, liitetäänkö tekstit chattiin nyt (kuunnelmat noin 970 sanaa, kertoja + Pulu noin 440) vai kokeileeko omistaja
-   linnan ensin 1.1 (77+):lla. Kaikki 11 hahmoääntä on valittu (loki 20.07 ja 20.41; Pelikoodarin aanikartta.json). Kokonaiset kuunnelmat vasta tekstihyväksynnän jälkeen.
-2. **Kaiun määrä:** keittiödemo v2 (CC BY -vasteet) lähetetty; omistajan kommentti puuttuu.
-3. **Senaatin tarkempi aineisto** (linnan laatusuunnitelman vaihe 1): kysytty "kirjoitanko viestiluonnoksen?", ei vastausta.
-4. **Helsingin ISS-kameran esimerkkikuva:** Linssiseppä 2 kuvasi 21.16–21.22 (50/85 mm, filmi 0/1, siluetti 0/1); vie omistajalle, sitten päätös pilotista
-   (25 paikkaa), julisteesta ja maksullisuudesta (suositus: 1 ilmainen kuva + euromääräiset paketit, ei krediittivaluuttaa; painettu juliste IAP:n ulkopuolella).
-5. **Euroopan oma S2 L2A -mosaiikki z10 (~100 m):** Karttaseppä tekee työkalun + Alppikokeen (lon 5,5–13,5, lat 43,3–48,2); Linssiseppä kuvaa Cupolassa
-   BMNG vs. S2 vs. NASA ISS067-E-286475 → omistaja päättää koko Euroopan yöajosta (6–8 h, 0,7–1 Gt).
-6. **Pulun EVA-asu:** Codex e09b4467 + korjauspyyntö (posti/fable-codex-pulu-avaruuskavely-korjaus-20260930.md); Linssiseppä 2:n web #3728 ja natiivi 67d1b8e4
-   luonnoksina; Cupola-kuvapari omistajalle korjattujen kuvien jälkeen, junaan vasta omistajan nähtyä.
-7. **ElevenLabs v4 Turbo -ohje** (omistajalle-odottavat-ohjeet-20260930.md kohta 2): anna, kun worker #3710 on mainissa (76+ jo TF:ssä).
-8. Vanhat avoimet: roolien viennit CI:hin (ehdotus), aloituksesta ensimmäiseen luentaan 49 s, linnan tavoitekuvat v2:n ilme.
+**Jos omistaja vastaa "ok", se tarkoittaa: aloitetaan KOKO EUROOPAN oma Sentinel-2 L2A -kesämosaiikki tänä yönä** (z10 noin 100 m,
+noin 35 000 laattaa, 0,7–1 Gt, 4–7 h kahdella säikeellä nice 15:llä polton rinnalla; työkalu tyokalu/euromosaiikki.mjs).
+→ SendMessage Karttasepälle: "omistaja ok, aja koko Eurooppa; vesipikseleiden tiilikohtainen tasosovitus ensin (MGRS-portaat merellä)".
+Alppikoe: /Users/Shared/Claude/pyramidi-poltto/iss-maanpinta/eurooppa-koe-alpit/ (707 laattaa, 15 Mt) on Linssisepällä Cupola-vertailuun
+(BMNG vs S2 vs NASA ISS067-E-286475) → vie omistajalle, kun tulee.
 
-## Julkaisu ja junat
+## Muut omistajan odottavat
 
-- TF 1.1 (76), (77) ja (78) sisäisessä; 1.1 (75) Applen beta-arviossa (WAITING_FOR_REVIEW), 1.0.67–72 vanhennettu; Julkaisija lähettää uusimman, kun 75 on käsitelty.
-- Juna 79 (Natiiviseppä niputtaa): Linssisepän horisontti + 3D-paneeli + vaakakorjaus ilman sivulevyjä (d3c18f16, fotorealismi A/B pois), pilvet 0 %,
-  pölyt pois; Siirtosepän linnan kamerat a1abfa48; Natiivi-UI:n Kuori-nappi 8fb69ffd. Web #3721 (pilvet pois webissä) Julkaisijalle.
-- Juna 80: Pelikoodarin Cupolan ääni (cupola-aani b735dbc0, todennus simulaattorissa ensin), mikseri (Pelikoodari aanimikseri + Natiivi-UI 50798bce + Siirtosepän koukut).
-- Web-juna: #3710 (ElevenLabs-worker), #3702, #3714, #3706 (maalehdet → Sisältökirjuri odottaa), #3718, #3717 (detaljiosoitin, 691e2620 on 77:ssä), #3724 (kuori v16b).
-- Olavinlinnan kuori v16b viety (Päätoimittaja): dioraama/olavinlinna/blender/7c470d2e110344eb/; osoitin PR #3724:n mergen ja Siirtosepän kuittauksen jälkeen. v17 = kaakon muurin juuri.
+1. Kuunnelmien ja kertojan tekstit: kysytty, liitetäänkö chattiin (kuunnelmat noin 970 sanaa, kertoja + Pulu noin 440) vai kokeileeko ensin linnan.
+   Kaikki 11 hahmoääntä valittu (Pelikoodarin aanikartta.json). Kokonaiset kuunnelmat vasta tekstihyväksynnän jälkeen.
+2. Kaiun määrä: keittiödemo v2 (CC BY -vasteet: Aalto OK5, ChurchIR) lähetetty, ei kommenttia.
+3. Senaatin tarkempi aineisto linnaan (laatusuunnitelman vaihe 1): "kirjoitanko viestiluonnoksen?" — ei vastausta.
+4. Helsingin ISS-kameran esimerkki: Linssiseppä 2 kuvaa uudelleen (valotus + kontrasti, meri tummaksi + kimallus, muutama kumpupilvi,
+   ISS 800–900 km etelään 50 mm, LISÄKSI teleobjektiivin lähikuva 400 mm Helsingistä, siluetti mustaksi vastavaloon) → omistajalle;
+   sitten päätökset: pilotti 25 paikkaa, juliste, maksullisuus (suositus 1 ilmainen + euromääräiset paketit, ei krediittivaluuttaa).
+5. Pulun EVA-asu: Codex e09b4467; korjauspyyntö (reuna, pehmeä Maan valo, tummempi varjo) + työjärjestys: Codex tekee ENSIN linnan
+   julkisivun E (posti/linnanrakentaja-codex-olavinlinna-julkisivu-20260930.md), sitten EVA-korjaukset. Linssiseppä 2:n web #3728 ja natiivi 67d1b8e4 luonnoksina.
+6. Linnan tekstuurikoe A–D näytetty omistajalle (valinta B+C on kuoressa); E puuttuu (Codex) → näytä kun tulee.
+7. ElevenLabs v4 Turbo: omistaja kokeili TF:ssä, lukee yhä xAI:lla, koska worker #3710 ei ole mainissa → Julkaisija ottaa sen junaan #3708:n jälkeen;
+   kun julkaistu, kerro omistajalle, että toimii (ohje omistajalle-odottavat-ohjeet-20260930.md kohta 2).
+8. Vanhat avoimet: roolien viennit CI:hin, aloituksesta luentaan 49 s, linnan tavoitekuvat v2:n ilme.
 
-## Ämpäri (Päätoimittaja vei tänään, omistajan lupa 18.54)
+## Junat ja TF
 
-aanet/cupola/v1/ (humina 90 s + EVA 38 -radio 23 min), aanet/mikseri/v1/ (18 keittiöstemiä), linssit/astronautin-kamera/iss-yovalot-20260930/
-(Black Marble 2016 500 m, 2 × 2 × 4096²), dioraama/olavinlinna/blender/7c470d2e110344eb/. Kaikki immutable; muutokset uuteen versiokansioon.
+- TF sisäisessä: 1.1 (76), (77), (78), (79) (79 = Cupolan horisontti + 3D-paneeli ilman sivulevyjä, pilvet 0 %, linnan pystykamerat). 1.1 (75) Applen beta-arviossa.
+- Juna 80 kääntyy (22.07–): Natiivi-UI:n Kuori-nappi 8fb69ffd ym. **Ei TF:ään, jos 81 valmistuu noin 23.30 mennessä** (Julkaisijalle kerrottu).
+- Juna 81: Pulun kontekstikorjaus natiivi 59117878 (PuluChat.Konteksti ei lukenut avointa nostokorttia; omistajan löydös Segovia), Cupolan ääni
+  (cupola-aani b735dbc0 + 46f60183; väistö todennettu tavoitetasoista radio 0,45→0,07, humina 0,90→0,63), Siirtosepän vaakakuvasuhde d343722a (+ f7b40be9).
+- Web-juna: #3708 → #3710 (ElevenLabs) → #3730 (Pulun konteksti täkynostossa) ja #3724 (kuori v16b, osoitin Siirtosepän kuittauksen jälkeen; #3717 suljettu,
+  v16b sisältää sen), #3721, #3723, #3726, #3727 (keittiön mikseriotot), #3718, #3714, #3702, #3706 (maalehdet → ilmoita Sisältökirjurille).
 
-## Roolit (SendMessage nimellä)
+## Ämpäri (Päätoimittaja vei tänään; omistajan lupa 18.54)
+
+aanet/cupola/v1/, aanet/mikseri/v1/ (18 keittiöstemiä), linssit/astronautin-kamera/iss-yovalot-20260930/ (Black Marble 2016 500 m, kytketty Linssisepällä
+7186658c), dioraama/olavinlinna/blender/7c470d2e110344eb/ (kuori v16b). Kaikki immutable; muutokset uuteen versiokansioon.
+
+## Roolit
 
 | Rooli | Nyt |
 |---|---|
-| Julkaisija | TF-jono, junat 79/80, web-juna; simulaattorivuorot yksi kerrallaan |
-| Natiiviseppä | juna 79 |
-| Linssiseppä | Cupola: fotorealismin viritys (ilmakehä 3,5, monisironta 0,45 a02c23e4), Black Marble 500 m kytketty (7186658c), NASA-parit pilvet 0 % + sama polttoväli; Alppikoe |
-| Linssiseppä 2 | Helsingin kuvat → Päätoimittajalle; Pulun EVA (odottaa Codexia) |
-| Pelikoodari | Cupolan äänen todennus → juna 80; äänimikseri (stemit, AaniMikseri-rajapinta) |
-| Natiivi-UI | pariteettikatsaus 3 (web vs 1.1 (78), lista ≤ 8 riviä ensin); mikserin viimeistely äänien tultua |
-| Siirtoseppä | linnan kamerat (juna 79), mikserin huonekoukut, kuoren puhtaan asennuksen kuittaukset |
-| Linnanrakentaja | kuori v17 (kaakon muurin juuri: aukon täyttö, oma UV) |
-| Karttaseppä | S2-mosaiikkityökalu + Alppikoe; raeton poltto taustalla |
-| Sisältökirjuri | odottaa #3706:n mergeä, sitten luentojen PR |
+| Julkaisija | junat 80/81, web-juna (järjestys yllä), simulaattorivuorot yksi kerrallaan |
+| Natiiviseppä | juna 80 → 81 |
+| Linssiseppä | fotorealismin viritys (a02c23e4), NASA-parit pilvet 0 % + NASA:n polttoväli, Alppien S2-vertailu; Black Marble 500 m kytketty |
+| Linssiseppä 2 | Helsingin uusintakuvaus (yllä); EVA odottaa Codexia |
+| Pelikoodari | juna 81 (Pulu + Cupola); mikseri (#3727); matala web-jono: Pulun chatin ikonit (omistaja 29.9.), linssivalikon "(keskeneräinen)"-pääte pois |
+| Natiivi-UI | pariteetti 3 (docs/raportit/pariteetti-3-20260930.md): 2, 3, 4, 7 = natiivi oikein (omistajan löydökset 34, 133, 29.9.); tarkistaa 1, 5, 6 + apurahakortti |
+| Siirtoseppä | linnan vaakakamerat (81), v16b:n puhtaan asennuksen kuittaus, mikserin huonekoukut |
+| Linnanrakentaja | kuori v17 (kaakon muurin juuri, aukon täyttö + oma UV) |
+| Karttaseppä | odottaa omistajan ok:ta Euroopan S2-ajoon; raeton poltto (syvä 56 %, pysähtyy < 40 Gt) |
+| Sisältökirjuri | odottaa #3706 |
 | Laitetestaaja | savukkeet |
-| Postivahti | kierto; worktree-muistutus (raja 20), PRB-poistot EI (levy > 35 Gt) |
+| Postivahti | siivouspyyntö rooleille (PRB omista sammutetuista simuista, käyttämättömät .app lokit/-kansiosta, mergatut worktreet); tavoite > 60 Gt yöksi |
 
-## Illan tekniset havainnot
+## Illan havainnot
 
-- Simulaattorikaatumiset ("system shell crashed"): vain iPad Pro 11 M5 503000D1 (SpringBoard FBSDisplayMonitor), ei PRB eikä CoreSimulator;
-  tilalle AD119F7B (Natiivi-UI), vanha jää käyttämättä (poisto vaatisi omistajan luvan).
-- Levy: TF vaatii ≥ 30 Gt; illalla siivottu → noin 50 Gt. Lokisiivous (yli 48 h kansiot, yli 24 h .app) on Päätoimittajan pysyvä oikeus (omistaja 26.9.).
+- Simulaattorikaatumiset: vain iPad Pro 11 M5 503000D1 (SpringBoard FBSDisplayMonitor), ei PRB eikä CoreSimulator; tilalle AD119F7B; vanha jää käyttämättä.
+- ÄLÄ ehdota "aani mykistys 0" mittauksiin: soittaa omistajan Scarlett-kaiuttimiin (kielletty 30.9.); AVAudioEngine-kerrokset ohittavat Unityn mikserin.
+- Levy: TF vaatii ≥ 30 Gt, polttovahti ≥ 40 Gt. Lokisiivous (yli 48 h kansiot, yli 24 h .app) on Päätoimittajan pysyvä oikeus.
