@@ -85,7 +85,8 @@ export const RAKENNUS = {
         kamera: { kohde: [-14.75, 3.5, -9.2], atsimuutti: 160, korkeus: 42, etaisyys: 85, fov: 32 },
         kameraPysty: { kohde: [-14.75, 2, -9.2], atsimuutti: 160, korkeus: 48, etaisyys: 150, fov: 40 },
         teksti: 'Linnaa johti vouti, joka hoiti kuninkaan puolesta veroja, oikeutta ja puolustusta. Arki kulki tulisijojen, vahtivuorojen ja veneiden tahdissa.' },
-      { id: 'laituri', kesto_s: 12, aani: null,
+      // tila: kierroksen aikana laiturin leikkausikkuna aukeaa lennon jälkipuoliskolla (laituri on kuoren sisällä; Siirtoseppä 1.1 (74)).
+      { id: 'laituri', tila: 'laituri', kesto_s: 12, aani: null,
         // Siirtoseppä 1.1 (73): elava.kohteesta laituri jäi kuoren taakse → laituri-tilan oma kamera, etäisyys × 1,6.
         kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 23.2, fov: 38 },
         kameraPysty: { kohde: [-19.5, -9.2, 39.5], atsimuutti: 200, korkeus: 26, etaisyys: 51.2, fov: 38 },

@@ -473,3 +473,10 @@ test('Olavinlinna: ei asia-anakronismeja (iltamessu → iltarukous, Introibo →
     for (const kielletty of [/iltamess/i, /introibo/i, /kuninkaan sali/i]) assert.ok(!kielletty.test(teksti), `${f}: ${kielletty}`);
   }
 });
+
+test('Olavinlinna: kertojan jakson valinnainen tila viittaa olemassa olevaan kohdistettavaan tilaan', async () => {
+  const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
+  const tilat = new Set(RAKENNUS.tilat.filter((t) => t.kohdistettava).map((t) => t.id));
+  for (const j of RAKENNUS.kertoja.jaksot) if (j.tila !== undefined) assert.ok(tilat.has(j.tila), `${j.id}: tila ${j.tila}`);
+  assert.equal(RAKENNUS.kertoja.jaksot.find((j) => j.id === 'laituri').tila, 'laituri');
+});
