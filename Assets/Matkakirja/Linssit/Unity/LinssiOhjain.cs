@@ -1540,7 +1540,14 @@ namespace Matkakirja.Natiivi
                     // Kuvaselain (Linssisepän suositus 28.9.): "astro kuva <tunnus|n>" avaa astronautin linssin kuvan
                     // (napautuksen reitti), "astro naapuri 1|-1 [galleria]" viereiseen kohteeseen, "astro kierros" kertoo järjestyksen.
                     var l = FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
-                    if (l == null) Kirjaa("astro: linssi ei auki (linssi satelliitti)");
+                    // Pulun avaruuskävelyasu (30.9.): astro eva yo|paiva|auto (valot kuvapariin), astro eva pois|paalla (A/B kypäräpulu).
+                    if (osat[1] == "eva" && osat.Length > 2)
+                    {
+                        if (osat[2] == "pois" || osat[2] == "paalla") LiviaKuva.EvaPois = osat[2] == "pois";
+                        else Pulu.EvaYo = osat[2] == "yo" ? true : osat[2] == "paiva" ? (bool?)false : null;
+                        Kirjaa($"astro eva: asu {(LiviaKuva.EvaPois ? "pois" : "päällä")}, valot {(Pulu.EvaYo == true ? "yö" : Pulu.EvaYo == false ? "päivä" : "ISS:n valo")}");
+                    }
+                    else if (l == null) Kirjaa("astro: linssi ei auki (linssi satelliitti)");
                     else if (osat[1] == "kuva" && osat.Length > 2)
                     {
                         var kohteet = l.Kohteet;

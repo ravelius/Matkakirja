@@ -190,6 +190,14 @@ namespace Matkakirja.Natiivi
             tila.Puhe = puhuu ? ((nyt - puheAlkoi) % 1500f) / 1500f : -1f;
             tila.Leiju = 0;
             tila.Astronautti = Astronautti;
+            // Avaruuskävelyasun valot ISS:n valon mukaan (EvaValo), kahdesti sekunnissa (varjon raja ohittuu ~10 s:ssa).
+            if (Astronautti && nyt - evaValoAika >= 500f)
+            {
+                evaValoAika = nyt;
+                var v = EvaYo.HasValue ? (EvaYo.Value ? Matkakirja.Linssit.Iss.EvaValo.Valot(0, 0.15) : Matkakirja.Linssit.Iss.EvaValo.Valot(1, 1))
+                    : Matkakirja.Linssit.Iss.EvaValo.Nyt(Matkakirja.Linssit.Iss.IssNyt.Kello());
+                tila.EvaKasvo = v.kasvo; tila.EvaLamput = v.lamput; tila.EvaMaa = v.maa;
+            }
             kuva.Aseta(tila);
             Leiju(puhuu);
 
@@ -209,6 +217,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Astronautin kamera (Linssiseppä asettaa): kypärä päähän.</summary>
         public bool Astronautti { get; set; }
+
+        /// <summary>Kuvaparin A/B (`astro eva yo|paiva|auto`): EVA-valot pakotetusti yöksi tai päiväksi, null = ISS:n valo.</summary>
+        public static bool? EvaYo;
+        float evaValoAika = float.NegativeInfinity;
 
         /// <summary>
         /// ISS:n Cupolassa Pulu on ulkona avaruuskävelyllä (omistaja 29.9.2026): alueen oikea alakulma tähän (pt, ruudun vasen

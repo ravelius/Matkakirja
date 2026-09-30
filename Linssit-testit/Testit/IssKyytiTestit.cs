@@ -260,6 +260,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(r.y - 0.6) < 1e-9 && Math.Abs(r.z - 0.8) < 1e-9, "yksikkövektori");
         }
 
+        [Testi] static void PulunEvaValotYollaJaPaivalla()
+        {
+            var yo = EvaValo.Valot(0, 0.15);
+            var paiva = EvaValo.Valot(1, 1);
+            Oleta.Tosi(yo.kasvo > 0.99f && yo.lamput > 0.99f && yo.maa < 0.11f, "yö: kasvovalo ja lamput täysillä, maa hämärä");
+            Oleta.Tosi(paiva.kasvo < 0.4f && paiva.lamput < 0.3f && paiva.maa > 0.99f, "päivä: maan valo vahva, omat valot hillityt");
+            var h = EvaValo.Valot(0.5, 0.5);
+            Oleta.Tosi(h.kasvo < yo.kasvo && h.kasvo > paiva.kasvo, "hämärä välissä");
+        }
+
         // ---- AstronauttiLinssi ----
 
         sealed class Nakyma : IAstronautinNakyma

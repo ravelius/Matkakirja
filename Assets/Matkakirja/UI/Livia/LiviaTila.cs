@@ -26,6 +26,11 @@ namespace Matkakirja.Natiivi
         public float Hengitys;
         /// <summary>Astronautin kameran kypärä ja leijunta.</summary>
         public bool Astronautti;
+        /// <summary>
+        /// Avaruuskävelyasun valokerrokset 0…1 (EvaValo: kasvovalo, kypärälamput, maavalo); vain astronauttina. Asu korvaa
+        /// astronauttina vektorilinnun Codexin kerroskuvilla (LiviaKuva.Eva), paitsi kun LiviaKuva.EvaPois.
+        /// </summary>
+        public float EvaKasvo = 1f, EvaLamput = 1f, EvaMaa = 1f;
         /// <summary>Lisäleveys oikealle kuten webin `right` (viewBox 152 + Oikealle).</summary>
         public float Oikealle;
 
@@ -53,13 +58,15 @@ namespace Matkakirja.Natiivi
             Ele == t.Ele && P.Equals(t.P) && Puhe.Equals(t.Puhe) && Leiju.Equals(t.Leiju) && Hengitys.Equals(t.Hengitys)
             && Astronautti == t.Astronautti && Oikealle.Equals(t.Oikealle) && Voimakkuus.Equals(t.Voimakkuus)
             && LeijuVaihe.Equals(t.LeijuVaihe) && CueKestoMs.Equals(t.CueKestoMs) && Toistonopeus.Equals(t.Toistonopeus)
-            && Lasit.Equals(t.Lasit) && KatseYlos == t.KatseYlos && RekvisiittaOikealla == t.RekvisiittaOikealla && Kapea == t.Kapea;
+            && Lasit.Equals(t.Lasit) && KatseYlos == t.KatseYlos && RekvisiittaOikealla == t.RekvisiittaOikealla && Kapea == t.Kapea
+            && EvaKasvo.Equals(t.EvaKasvo) && EvaLamput.Equals(t.EvaLamput) && EvaMaa.Equals(t.EvaMaa);
 
         public void Kopioi(LiviaTila t)
         {
             Ele = t.Ele; P = t.P; Puhe = t.Puhe; Leiju = t.Leiju; Hengitys = t.Hengitys; Astronautti = t.Astronautti;
             Oikealle = t.Oikealle; Voimakkuus = t.Voimakkuus; LeijuVaihe = t.LeijuVaihe; CueKestoMs = t.CueKestoMs;
             Toistonopeus = t.Toistonopeus; Lasit = t.Lasit; KatseYlos = t.KatseYlos; RekvisiittaOikealla = t.RekvisiittaOikealla; Kapea = t.Kapea;
+            EvaKasvo = t.EvaKasvo; EvaLamput = t.EvaLamput; EvaMaa = t.EvaMaa;
         }
     }
 
