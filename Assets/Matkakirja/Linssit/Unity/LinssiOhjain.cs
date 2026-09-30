@@ -1704,6 +1704,8 @@ namespace Matkakirja.Natiivi
                             var pintaKerrokset = KarttaKerrokset.Instanssi;
                             if (pintaKerrokset == null) Kirjaa("astro kyyti pinta: ei karttakerroksia");
                             else if (osat[3] == "pois") { pintaKerrokset.PoistaRasteri("iss-pinta-1"); pintaKerrokset.PoistaRasteri("iss-pinta-2"); Kirjaa("astro kyyti pinta pois"); }
+                            // Linssin oma reliefi pois (BMNG peittää sen kyydissä): kaksi paikkaa vapautuu BMNG:lle alle ja pinnalle päälle.
+                            else if (osat[3] == "pohja") { pintaKerrokset.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros); Kirjaa("astro kyyti pinta: linssin reliefi pois"); }
                             else if (osat.Length > 6)
                             {
                                 string pintaAvain = "iss-pinta-" + osat[3];
