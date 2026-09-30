@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 08:46:** UUSI VIKA: varmuuskopio-VIKA 08.44 "juna/b13 ei fast-forward" + vahti 08.34 unity-sim käännös Failed (12 s, 1 virhe, Matkakirja-proto-kaannos/tulokset/sim.log) → ilmoitettu Natiivisepälle ja Päätoimittajalle 08.45. Levy 59 Gi (hälytys < 45), swap 17,0/18,4 Gt, muisti 75 % vapaa, kuorma 25/22/23, sim 0, ei kevyttä tilaa. Viikko 42 % (5 h 8 %). Konteksti: Linnanrakentaja 13 %, Natiivi-UI 41 %, Päätoimittaja 55 %, oma 58 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: b13 7277ae63 (08.23). Posti: ei uutta.
+
 **Päivitetty 30.9. 08:29:** Levy 56 Gi (58→56; hälytys < 45), swap 17,1/18,4 Gt, muisti 71 % vapaa, kuorma 16/33/35, sim 0, ei kevyttä tilaa. Viikko 42 % (5 h 6 %). Konteksti: Linnanrakentaja 12 %, Natiivi-UI 41 %, Päätoimittaja 54 %, oma 57 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: b13 7277ae63 uusi, odottaa niputusta (08.23). Posti: ei uutta.
 
 **Päivitetty 30.9. 08:13:** Levy 58 Gi (vakaa hidas lasku; hälytys < 45), swap 17,1/18,4 Gt, muisti 72 % vapaa, kuorma 7/10/24, sim 0, ei kevyttä tilaa. Viikko 41 % (5 h 3 %). Konteksti: Linnanrakentaja 12 %, Natiivi-UI 40 %, Päätoimittaja 54 %, oma 57 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: b13 db36df86 ennallaan 08.00. Posti: ei uutta.
