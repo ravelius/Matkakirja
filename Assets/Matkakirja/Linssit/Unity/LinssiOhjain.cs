@@ -1713,7 +1713,10 @@ namespace Matkakirja.Natiivi
                                 string pintaUrl = osat[4].Replace("{docs}", "file://" + Application.persistentDataPath);
                                 string pintaTulos = pintaKerrokset.LisaaRasteri(pintaAvain, pintaUrl, CesiumUrlTemplateRasterOverlayProjection.WebMercator,
                                     (int)Luku(osat[5]), (int)Luku(osat[6]), 1f);
-                                Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")} {pintaUrl} z{osat[5]}–{osat[6]}");
+                                // Valinnainen rajattu jako: … W S E N rx ry (KarttaKerrokset.RasterinJako).
+                                bool jaettu = pintaTulos != null && osat.Length > 12 && pintaKerrokset.RasterinJako(pintaAvain,
+                                    Luku(osat[7]), Luku(osat[8]), Luku(osat[9]), Luku(osat[10]), (int)Luku(osat[11]), (int)Luku(osat[12]));
+                                Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")}{(jaettu ? " (rajattu jako)" : "")} {pintaUrl} z{osat[5]}–{osat[6]}");
                             }
                         }
                         else if (a == "vertailu" && osat.Length > 3)
