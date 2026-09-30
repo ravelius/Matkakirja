@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 1.10. 00:32:** Levy 49 Gi (48→49 vakaa; hälytys < 50 tehty 00.21; push < 38), wt/ 56 (raja 20, kasvaa 54→56), muisti 67 % vapaa, kuorma 61/102/157, sim 1 (iPhone 18 Pro 1572C658; yö 00–07 ei rajaa), työtilat ok. Viikko 83 % (5 h 27 %). Konteksti: Päätoimittaja 21 %. Kävijälaskuri: 00.10 n=3, seuraava ~01.10. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 1.10. 00:21:** LEVY 48 Gi (< 50 → hälytys Päätoimittajalle posti-tiedostossa, SendMessage estyi; 52→48 11 min:ssa; kova 30; push < 38), wt/ 54 (raja 20, kasvaa), muisti 62 % vapaa, kuorma 217/306/255, sim 0, työtilat ok. Viikko 83 % (5 h 25 %). Konteksti: Päätoimittaja 17 %. Kävijälaskuri: 00.10 n=3, seuraava ~01.10. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 1.10. 00:10:** Levy 52 Gi (56→52; hälytys < 50 lähellä → kierros 10 min), wt/ 53 (raja 20, kasvaa 48→53), muisti 66 % vapaa, kuorma 161/242/186, sim 1 (siirtoseppa-iPad13; ok), työtilat ok. Viikko 82 % (5 h 22 %). Konteksti: Päätoimittaja 7 % (nollaus toteutui ~00.10; aloitusviesti EI lähtenyt, SendMessage estyi → posti/tiedosto docs/raportit/posti-postivahti-fable-20261001.md). Kävijälaskuri 00.10: n=3 (ennallaan; FI 1, US 2, apurahakortti 2), seuraava ~01.10. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
