@@ -9599,3 +9599,7 @@ Kortti 30.9.2026 klo 23.1x (Natiivi-UI:n pariteetti 3 -havainnot 1.1 (81):llä, 
 ## OMISTAJA (KORTTI): KEITTIÖN KOLME SUOMEKSI MERKATTUA ÄÄNTÄ VAIHTOON, NÄYTTEET ENSIN (30.9.2026 klo 23.14)
 
 Pelikoodarin tarkistus 30.9.2026 klo 23.1x (CI-haun metatiedot, ei generointia): linnan 16 äänestä suomeksi merkattuja kolme, kaikki keittiössä 29.9. kierrokselta: kokki (Ville - Serious and Condescending), vesipoika (Matias - Kind and youthful), apulainen (Esko - Energetic and bright); muut en/de. Kortti klo 23.2x: "Kyllä, näytteet ensin". Lupa: kullekin kolmelle 3 ehdokasta eniten käytetyistä ei-suomeksi-merkatuista äänistä, yksi repliikin näyte v4:llä per ehdokas (yhteensä ~1 000 merkkiä); omistaja valitsee kuunneltuaan; hahmojen repliikkien uudelleengenerointi vasta erillisellä luvalla tekstit näytettyinä.
+
+## OMISTAJA: ISOISÄN TEKSTI PIENENEE LUENNAN JÄLKEEN; OHITA-TEKSTI PUUTTUU MACILTA (30.9.2026 klo 23.15)
+
+Omistaja 30.9.2026 klo 23.1x–23.2x sanatarkasti: "macin ipadilla ei näy luennan aikaista ohita tekstiä. se voi olla hukkunut myös muista. tarkista" ja "isoisän teksti saisi pienentyä automaattisesti luennan jälkeen". Siirtoseppä (30.9. luentanäkymän tekijä) yhtenä eränä junaan 82: Ohita-tekstin tarkistus ja palautus kaikille alustoille; luennan päätyttyä (luonnollisesti tai ohitettuna) tekstipaneeli pienenee animoiden noin 1,5 s kuluttua kaupunkipilleriksi ja pilleri avaa sen uudelleen. Web-jonoon rivi.
