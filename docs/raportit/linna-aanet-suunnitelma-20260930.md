@@ -103,25 +103,35 @@ Skripti: `tools/dioraama/linna-aanet.mjs` (`--keittio` uudelleenkoodaa keittiön
 Ääniä ei ole kuunneltu Clauden toimesta: tasot on mitattu, mutta sisältö (sanojen erottuvuus sorinassa ja
 kaikujen luonnollisuus) tarkistetaan korvalla koosteista.
 
-## 5. Pulun repliikit: hetket Päätoimittajalle
+## 5. Pulun repliikit
 
 Nykyinen data (`js/dioraama/rakennukset/olavinlinna/*.js`): jokaisessa tilassa on 3 tarkistettua taulun kohtaa
-(Pulun kertomina) ja yksi Pulun reaktio hahmoa kohden, yhteensä 19 reaktiota (keittiö 3, keskushalli 4, muut 2).
-Nämä ovat jo tekstinä ja tarvitsevat vain äänen. **Puuttuvat hetket**, joille tarvitaan uusi repliikki:
+(Pulun kertomina) ja yksi Pulun reaktio hahmoa kohden, yhteensä 19 reaktiota. Ne tarvitsevat vain äänen.
 
-| # | Hetki käsikirjoituksessa | Tilanne | Enint. |
-|---|---|---|---|
-| P1 | 1. Saapuminen, lennon loppu (vain ensimmäinen käynti) | kamera pysähtyy yleisnäkymään hämärässä, soihdut ovat juuri syttyneet | 6 s |
-| P2 | 1. Toinen käynti | lyhyt lento, tervetuloa takaisin | 3 s |
-| P3 | 2. Yleisnäkymä, ensimmäinen kerta | yksi kohde sykkii, eikä tekstiopastusta ole: houkutus napauttaa ilman ohjetta | 5 s |
-| P4–P11 | 3. Huoneeseen tulo, ensimmäinen kerta (keittiö, kappeli, keskushalli, vartiotupa, fatabuuri, kierreportaat, muurinharja, laituri) | kamera laskeutuu leikkausikkunasta ja hahmot ovat työssään: tunnelmalause, ei faktaa (faktat ovat taulussa) | 4 s kukin |
-| P12 | 4. Etsinnän alku | kokin sinetti-repliikki kuultu ("vouti kiirehti kappeliin"): Pulu tarttuu vihjeeseen | 5 s |
-| P13 | 4. Vihje 2, kappeli | penkin naarmu ja fatabuurin avaimen painauma löytyvät | 5 s |
-| P14 | 4. Löytö, fatabuuri | sinetti vaatearkun kankaiden välistä, ennen löytökorttia | 6 s |
-| P15 | 4. Löytökortti suljettu | matkamuisto meni Aarteisiin (tietäjäpisteet) | 4 s |
-| P16 | 3. Paluu yleisnäkymään, ensimmäinen kerta | kamera nousee, ja muut kohteet odottavat | 3 s |
-| P17 | Linnasta poistuminen | linssin sulku, hyvästi linnalle | 4 s |
+**Uudet hetket (Päätoimittaja 30.9.):** Pulu sinuttelee Foggia, ja tunnelma välittyy ilman faktoja. Tagi suluissa,
+yksi tagi virkettä kohden, ei softly/whispers. Puheet generoidaan vasta omistajan linnakatselmoinnin jälkeen, ja
+säästösyistä vain säilöttävät tekstit Pulun oletusäänellä. Id:t ovat ehdotuksia Pelikoodarin kytkentää varten.
 
-**Huomio datasta:** keskushallin hahmolla on repliikkien id:t `apulainen-1/2` ja `pulu-apulainen-r1`, samat kuin
-keittiön apulaisella. Kun äänet kytketään, id:t törmäävät pankissa. Ehdotan keskushalliin id:t `tarjoilija-1/2` ja
-`pulu-tarjoilija-r1`. Pelikoodari tai Sisältökirjuri vaihtaa ne ennen puheen generointia.
+| # | Id | Hetki | Enint. | Teksti (tagi) |
+|---|---|---|---|---|
+| P1 | pulu-saapuminen | saapumislennon loppu, 1. käynti | 6 s | (warmly) Olavinlinna hämärässä. Soihdut sytytettiin juuri meitä varten! |
+| P2 | pulu-paluu-linnaan | toinen käynti | 3 s | (amused) Taas täällä! Muurit muistavat. |
+| P3 | pulu-yleis-vihje | yleisnäkymä, kohde sykkii, 1. kerta | 5 s | (mischievously) Tuolla jokin sykkii. Minä en kurkistaisi… mutta sinä voit. |
+| P4 | pulu-tulo-keittio | huoneeseen tulo, 1. kerta | 4 s | (amused) Täällä tuoksuu savu, leipä ja kiire. |
+| P5 | pulu-tulo-kappeli | 〃 | 4 s | (warmly) Täällä jopa minä lasken ääntäni. |
+| P6 | pulu-tulo-keskushalli | 〃 | 4 s | (amused) Hälinää, kolinaa ja joku nauraa aina liian kovaa. |
+| P7 | pulu-tulo-vartiotupa | 〃 | 4 s | (warmly) Vartijoilla on kylmät jalat ja tarkat silmät. |
+| P8 | pulu-tulo-fatabuuri | 〃 | 4 s | (mischievously) Kankaiden keskellä voisi piillä mitä tahansa. |
+| P9 | pulu-tulo-kierreportaat | 〃 | 4 s | (amused) Ylös, alas, ympäri – onneksi minulla on siivet. |
+| P10 | pulu-tulo-muurinharja | 〃 | 4 s | (warmly) Tuuli tuo järven tuoksun. Tästä näkee kauas. |
+| P11 | pulu-tulo-laituri | 〃 | 4 s | (warmly) Laineet ja airot – linnaan tullaan vettä pitkin. |
+| P12 | pulu-sinetti-keittio | etsinnän alku (kokin sinetti-repliikin jälkeen) | 5 s | datassa jo: "Keitto ja iltamessu – vouti hoiti sekä vatsan että sielun. Kappeliin siis!". Jos se venyy yli 5,5 s:n: "Vouti kiirehti kappeliin? Seurataan jälkiä!" |
+| P13 | pulu-sinetti-kappeli | vihje 2, penkin naarmu | 5 s | (amused) Avaimen jälki penkissä – se sopii fatabuurin lukkoon! |
+| P14 | pulu-sinetti-loyto | löytö fatabuurissa, ennen korttia | 6 s | (mischievously) Tuolla, kankaiden välissä! Voudin sinetti – piilossa kaikkien nenän edessä. |
+| P15 | pulu-sinetti-aarteisiin | löytökortti suljettu | 4 s | (warmly) Sinetti on nyt Aarteissasi. Hieno löytö! |
+| P16 | pulu-paluu-yleis | paluu yleisnäkymään, 1. kerta | 3 s | (amused) Muutkin huoneet odottavat. |
+| P17 | pulu-hyvasti | linssin sulku | 4 s | (warmly) Hyvästi, Olavinlinna. Muurit pitävät salaisuutensa. |
+
+**Id-muutos (hyväksytty 30.9.):** keskushallin hahmon repliikit `apulainen-1/2` → `tarjoilija-1/2` ja reaktio
+`pulu-apulainen-r1` → `pulu-tarjoilija-r1`, jotteivät ne törmää keittiön apulaisen ääniin pankissa. Hahmon id
+(`apulainen`, henkilö `apulainen-1500`) pysyy ennallaan.
