@@ -50,7 +50,8 @@ if vaihe hamara; then
     --tasoita $ULOS/raaka/siivousmaski.png
 fi
 if vaihe ikkunat; then
-  bl $H/kuori_ikkunat.py -- $U/ulkokuori_normaali.glb $U/ulkokuori-4k.jpg $ULOS/hamara/ulkokuori-hamara-8k.jpg $U
+  bl $H/kuori_ikkunat.py -- $U/ulkokuori_huippu.glb $U/ulkokuori-4k.jpg $ULOS/hamara/ulkokuori-hamara-8k.jpg $U \
+    --luettelo $H/olavinlinna-ikkunat.json --kaikki
   cp $ULOS/hamara/ulkokuori-valokartta-4k.exr $U/
 fi
 if vaihe astc; then
