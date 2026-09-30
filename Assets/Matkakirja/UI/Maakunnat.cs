@@ -374,9 +374,9 @@ namespace Matkakirja.Natiivi
             PaivitaLuonnehdinta();
             if (ValittuAvain != null && !OnPois(ValittuAvain)) Valittu?.Invoke(ValittuAvain);
             // Automaattinen maakunta: latauksen aikana napautettu maakunta valitaan nyt, jos lappu on yhä auki.
-            var a = odottava;
+            var odotettu = odottava;
             odottava = null;
-            if (a != null && Karttatila) Valitse(a);
+            if (odotettu != null && Karttatila) Valitse(odotettu);
         }
 
         /// <summary>
