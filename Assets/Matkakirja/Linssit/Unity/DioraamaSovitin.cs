@@ -796,7 +796,8 @@ namespace Matkakirja.Natiivi
         /// SystemInfo.systemMemorySize (Mt) alle 6000. Kumpi tahansa riittää: pieninäyttöinen laite voi olla
         /// muistiltaan iso (silti täysi näyttö turhaa), ja iso näyttö voi olla muistiltaan pieni (silti
         /// vanhempi/halvempi laite). "poikki mittaus" (Mittausraportti) näyttää kumman tämän laite valitsi.</summary>
-        static bool PieniLaite() => (long)Screen.width * Screen.height < 4_000_000L || SystemInfo.systemMemorySize < 6000;
+        // Omistaja 30.9.2026: täyden laadun laitteilla (DioraamaLaatu.Taysi, A17 Proa uudemmat) aina täydet tekstuurit ja 4k-atlakset.
+        static bool PieniLaite() => !DioraamaLaatu.Taysi && ((long)Screen.width * Screen.height < 4_000_000L || SystemInfo.systemMemorySize < 6000);
 
         string Tilaraportti()
         {
@@ -828,7 +829,7 @@ namespace Matkakirja.Natiivi
             // Era 2b (tekstuurimuisti): kertoo kumman pintakoon PieniLaite valitsi ja MIKSI (näyttöpikselit,
             // muisti) -- omistajan pyyntö "kertoo kumpi ja muistin".
             long naytonPikselit = (long)Screen.width * Screen.height;
-            string pintakoko = PieniLaite() ? "puolikas" : "täysi";
+            string pintakoko = (PieniLaite() ? "puolikas" : "täysi") + ", " + DioraamaLaatu.Kuvaus;
             return $"poikki mittaus: tiloja {rakennus3D?.TilojaLadattu ?? 0}/{rakennus?.Tilat?.Count ?? 0}, kolmioita {(rakennus3D?.Kolmiot ?? 0) + hahmo3dKolmiot} (3d-hahmot {hahmo3dKolmiot}), " +
                    $"kärkiä {rakennus3D?.Karjet ?? 0}, rendereitä {(rakennus3D?.Renderereita ?? 0) + (hahmot3D?.Maara ?? 0)}, " +
                    $"materiaaleja {(rakennus3D?.Materiaaleja ?? 0) + (hahmot3D?.AtlaksiaLadattu ?? 0)}, tekstuurimuisti (arvio) {tekstuuriMt:F1} Mt, " +
