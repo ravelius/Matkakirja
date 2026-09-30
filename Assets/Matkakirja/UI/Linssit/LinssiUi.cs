@@ -54,6 +54,8 @@ namespace Matkakirja.Natiivi
         public readonly MaapallonVuosiNakyma Vuosi;
         /// <summary>Poikkileikkaus-linssin opetustaulu ja Pulu (Linnanrakentaja, DioraamaSovitin.Vaihtui).</summary>
         public readonly DioraamaTaulu Dioraama;
+        /// <summary>Kehittäjän mikseripaneeli (linnan ja Cupolan kaiut, MikseriPaneeli.Lahde = Pelikoodari).</summary>
+        public readonly MikseriPaneeli Mikseri;
         readonly Button sulje;
         Linssirekisteri kuunneltu;
         // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
@@ -84,6 +86,7 @@ namespace Matkakirja.Natiivi
             Radio.SuljePyynto = SuljeLinssi;   // virtakytkin (omistaja 28.9.2026)
             Vuosi = new MaapallonVuosiNakyma(kerros);
             Dioraama = new DioraamaTaulu(kerros);
+            Mikseri = new MikseriPaneeli(kerros);
 
             // Pieni pilleri oikeassa yläkulmassa, taikalasien vasemmalla puolella.
             var turva = kerros.Turva(SulkuKerros);
