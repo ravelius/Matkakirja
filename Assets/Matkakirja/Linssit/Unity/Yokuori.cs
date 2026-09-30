@@ -48,6 +48,16 @@ namespace Matkakirja.Natiivi
         public static bool KiiltoPois, VarjoPois;
         public const float KiillonVoima = 6f, VarjonVoima = 0.55f;
         Texture2D valotEu, valotMaa;
+        readonly Texture2D[] tarkat = new Texture2D[4];
+        /// <summary>
+        /// FOTOREALISMI (yövalot tarkemmiksi, Päätoimittaja 30.9.): NASA Black Marble 2016 500 m Euroopalle Karttasepältä 8192² 2 × 2
+        /// -tiilinä (eurooppa-8192-<sarake><rivi>.jpg, 00 länsi-ylä, 10 itä-ylä, 01 länsi-ala, 11 itä-ala; sama rajaus kuin
+        /// eurooppa-2048). null = ei tarkkoja (nykyinen Z6 2048²). Kevyillä laitteilla (≤ iPhone 15 Pro) ei ladata.
+        /// A/B `astro kyyti yovalot <juuri>|pois`.
+        /// </summary>
+        public static string TarkatValotJuuri;
+        public static bool TarkatPaalla => tarkatLadattu;
+        static bool tarkatLadattu;
         MeshRenderer piirto;
 
         CesiumGeoreference g;
@@ -127,9 +137,40 @@ namespace Matkakirja.Natiivi
             }
             if (valotEu != null) materiaali.SetTexture(IdValotEu, valotEu);
             if (valotMaa != null) materiaali.SetTexture(IdValotMaa, valotMaa);
+            yield return HaeTarkat();
             Debug.Log($"MATKAKIRJA linssit: yövalot eurooppa {(lEu != null ? "ok" : "puuttuu")}, maailma {(lMaa != null ? "ok" : "puuttuu")}; " +
                       $"vesi eurooppa {(vEu != null ? "ok" : "puuttuu")}, maailma {(vMaa != null ? "ok" : "puuttuu")}");
         }
+
+        /// <summary>Tarkat Euroopan yövalot 2 × 2 -tiilinä (R8, mipit) _ValotT00…T11:een; _TarkatOn 1 vasta kun kaikki neljä on.</summary>
+        IEnumerator HaeTarkat()
+        {
+            materiaali.SetFloat("_TarkatOn", 0f);
+            tarkatLadattu = false;
+            string juuri = TarkatValotJuuri;
+            if (string.IsNullOrEmpty(juuri) || Matkakirja.Linssit.Kyytipino.KevytLaite) yield break;
+            string[] nimet = { "00", "10", "01", "11" };
+            for (int i = 0; i < 4; i++)
+            {
+                byte[] l = null; int w = 0, h = 0;
+                string tiedosto = "iss-yovalot-8192-" + nimet[i] + "-" + juuri.GetHashCode().ToString("x8") + ".jpg";
+                yield return Hae(juuri.TrimEnd('/') + "/eurooppa-8192-" + nimet[i] + ".jpg", tiedosto, (k, kw, kh) => { l = k; w = kw; h = kh; });
+                if (l == null) { Debug.LogWarning("MATKAKIRJA yövalot: tarkka tiili " + nimet[i] + " puuttuu, jäädään 2048²:een"); yield break; }
+                if (tarkat[i] != null) Destroy(tarkat[i]);
+                var t = new Texture2D(w, h, TextureFormat.R8, true, true)
+                    { name = "iss-valot-8192-" + nimet[i], wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear, anisoLevel = 2 };
+                t.GetPixelData<byte>(0).CopyFrom(l);
+                t.Apply(true, true);
+                tarkat[i] = t;
+                materiaali.SetTexture("_ValotT" + nimet[i], t);
+            }
+            materiaali.SetFloat("_TarkatOn", 1f);
+            tarkatLadattu = true;
+            Debug.Log("MATKAKIRJA linssit: tarkat yövalot 8192² (2 × 2) ladattu");
+        }
+
+        /// <summary>Testikomento: tarkkojen yövalojen juuri vaihdettu → lataus uudelleen.</summary>
+        public void LataaTarkat() { if (materiaali != null) StartCoroutine(HaeTarkat()); }
 
         /// <summary>Maailman vesimaski 1024² (Web Mercator, rivi 0 alhaalla kuten Unityssä) tai null; testejä varten.</summary>
         public static byte[] VesiMaailma;

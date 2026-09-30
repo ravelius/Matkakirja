@@ -1681,6 +1681,12 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
+                        else if (a == "yovalot" && osat.Length > 3)   // tarkat yövalot: juuri-URL | pois (fotorealismi 30.9.)
+                        {
+                            Matkakirja.Natiivi.Yokuori.TarkatValotJuuri = osat[3] == "pois" ? null : osat[3];
+                            FindAnyObjectByType<Matkakirja.Natiivi.Yokuori>()?.LataaTarkat();
+                            Kirjaa("astro kyyti yovalot: " + (Matkakirja.Natiivi.Yokuori.TarkatValotJuuri ?? "pois"));
+                        }
                         else if (a == "fresnel" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.TaivasHeijastusPois = osat[3] == "0";   // fotorealismi 2
                         else if (a == "pilvivalo" && osat.Length > 3) Matkakirja.Natiivi.Pilvikuori.ValoPois = osat[3] == "0";   // fotorealismi 3
                         else if (a == "pilvivarjo" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.PilviVarjoPois = osat[3] == "0";   // fotorealismi 3
