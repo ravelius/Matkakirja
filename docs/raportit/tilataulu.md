@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 14:45:** Levy 48 Gi (hälytys < 45; kierros 10 min), swap 12,9/14,0 Gt, muisti 68 % vapaa, kuorma 66/88/83, sim 1 (linssiseppa2-iPhone F2D9B022; ≤1 ok), ei kevyttä tilaa. Viikko 55 % (5 h 13 %). Konteksti: Natiivi-UI 22 %, oma 15 %. Kävijälaskuri (14.4x): ulkopuolisia 0. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Jokipoltto karttaseppa-poltto-20260930 käynnissä (23 prosessia). Posti: ei uutta.
+
 **Päivitetty 30.9. 14:34:** Levy 49 Gi (hälytys < 45; kierros 10 min), swap 12,9/14,0 Gt, muisti 59 % vapaa, kuorma 80/47/59, sim 0, ei kevyttä tilaa. Viikko 55 % (5 h 11 %). Konteksti: Natiivi-UI 22 %, oma 14 %. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Jokipoltto karttaseppa-poltto-20260930 käynnissä (23 prosessia). Posti: ei uutta.
 
 **Päivitetty 30.9. 14:18:** Levy 51 Gi (hälytys < 45), swap 12,9/14,0 Gt (vapaata 1,1 Gt), muisti 41 % vapaa (yli 25 %), kuorma 77/120/108, sim 1 (iPhone 18 Pro 1572C658; ≤1 ok), ei kevyttä tilaa. Viikko 54 % (5 h 9 %). Konteksti: Päätoimittaja 38 %, oma 14 %. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Jokipoltto karttaseppa-poltto-20260930 käynnissä (23 prosessia). Posti: ei uutta.
