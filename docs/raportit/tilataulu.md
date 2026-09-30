@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 21:50:** Levy 44 Gi (43→44; hälytys < 45 voimassa; kova 30), wt/ 39 (raja 20; Linnanrakentaja siivonnut 3), muisti 68 % vapaa, kuorma 228/98/105, sim 1 (linssiseppa2-iPad13 4CE6C737; ≤1 ok), työtilat ok. Viikko 74 % (5 h 35 %). Konteksti: Päätoimittaja 57 % (ennallaan). Kävijälaskuri: 21.23 n=2, seuraava ~22.23. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Linnanrakentaja kuitannut siivouksen (6 wt jäljellä, kaikki auki). PRB-poistokielto ei lähtenyt rooleille (viestiraja).
+
 **Päivitetty 30.9. 21:39:** LEVY 43 Gi (< 45 → hälytysyritys Päätoimittajalle 21.39; 47→43 16 min:ssa; kova raja 30), wt/ 40 (raja 20), muisti 74 % vapaa, kuorma 214/137/135, sim 1 (iPhone 18 Pro 1572C658; ≤1 ok), työtilat ok. Viikko 73 % (5 h 34 %). Konteksti: Päätoimittaja 57 %. Kävijälaskuri: 21.23 n=2, seuraava ~22.23. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. PRB-poistokielto ei lähtenyt rooleille (viestiraja).
 
 **Päivitetty 30.9. 21:23:** Levy 47 Gi (vakaa 21.12:sta; hälytys < 45), wt/ 40 (raja 20), muisti 73 % vapaa, kuorma 90/115/101, sim 1 (natiivi-ui-iPad11 AD119F7B; ≤1 ok), työtilat ok. Viikko 73 % (5 h 32 %). Konteksti: Päätoimittaja 54 %. Kävijälaskuri 21.23: n=2 (ennallaan), seuraava ~22.23. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. PRB-poistokielto ei lähtenyt rooleille (viestiraja).
