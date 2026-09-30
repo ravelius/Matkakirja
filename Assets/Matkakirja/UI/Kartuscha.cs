@@ -100,6 +100,7 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += TarkistaOhiNapautus;
             // Pelaajan maa tarkistetaan harvakseltaan (kaupunki vaihtuu vain saapuessa).
             kortti.schedule.Execute(Seuraa).Every(400);
+            kortti.schedule.Execute(LippuVaisto).Every(250);
             UiSisalto.Lataa(null);
         }
 
@@ -246,6 +247,8 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(LippuPaikka(maa, a =>
             {
                 if (iso != maa) return;
+                lipunOletus = a;
+                lippuSiirretty = false;
                 if (a.HasValue) Lipputanko.Aseta(maa, a.Value.Lat, a.Value.Lon, lippu);
                 else Lipputanko.Pois();
             }));
@@ -261,6 +264,72 @@ namespace Matkakirja.Natiivi
             if (m != null && kiinnitettyLippu != null) AsetaLipputanko(m, kiinnitettyLippu);
         }
 
+        // ---- YLÄPANEELIEN VÄISTÖ (Päätoimittaja 30.9.2026: matkakirjakortti peitti Ranskan lipun; omistajan linja "lippu näkyy
+        //      aina"). Kun yläpaneeli (matkakirja tai YlaPaneelit) peittää tangon, tanko siirtyy maan koilliskulmaa lähimpään
+        //      kohtaan, jossa se näkyy kokonaan paneelin alla (Lippukulma kelpaa-ehdolla, Lipputanko.Ennuste); paneelin sulkeutuessa
+        //      takaisin kulmaan. Tarkistus 4 kertaa sekunnissa, siirto enintään kerran sekunnissa (kamera voi liikkua). ----
+
+        /// <summary>Muut yläpaneelit, jotka lippu väistää: palauttaa rajat paneelikoordinaateissa tai Rect.zero, kun kiinni.</summary>
+        public static readonly List<Func<Rect>> YlaPaneelit = new List<Func<Rect>>();
+        (double Lat, double Lon)? lipunOletus;
+        bool lippuSiirretty;
+        float seuraavaLippuSiirto;
+        const float PaneelinVaraPt = 8f;
+
+        void LippuVaisto()
+        {
+            if (iso == null || Lipputanko.Maa != iso || kortti.panel == null) return;
+            var yla = Rect.zero;
+            var mk = UiNakymat.Hae().Matkakirja;
+            if (mk != null && mk.Nakyy) yla = mk.Rajat;
+            foreach (var f in YlaPaneelit)
+            {
+                var r = f();
+                if (r.height <= 0f) continue;
+                yla = yla.height > 0f ? Rect.MinMaxRect(Mathf.Min(yla.xMin, r.xMin), Mathf.Min(yla.yMin, r.yMin),
+                    Mathf.Max(yla.xMax, r.xMax), Mathf.Max(yla.yMax, r.yMax)) : r;
+            }
+            if (yla.height <= 0f)
+            {
+                if (lippuSiirretty && lipunOletus.HasValue && kiinnitettyLippu != null)
+                {
+                    lippuSiirretty = false;
+                    Lipputanko.Aseta(iso, lipunOletus.Value.Lat, lipunOletus.Value.Lon, kiinnitettyLippu);
+                }
+                return;
+            }
+            var ala = Lipputanko.RuutuAlue;
+            if (!ala.HasValue || !PeittaaLipun(ala.Value, yla)) return;
+            if (Time.realtimeSinceStartup < seuraavaLippuSiirto || kiinnitettyLippu == null) return;
+            seuraavaLippuSiirto = Time.realtimeSinceStartup + 1f;
+            if (!(LinssiOhjain.MaatAineisto?.Hae(iso) is Matkakirja.Linssit.Maat.Maa rajat)) return;
+            var uusi = Matkakirja.Linssit.Maat.Lippukulma.Laske(rajat, Kaupungit(iso),
+                (la, lo) => Lipputanko.Ennuste(la, lo, out var r) && !PeittaaLipun(r, yla) && Ruudulla(r));
+            if (!uusi.HasValue) return;
+            lippuSiirretty = true;
+            Lipputanko.Aseta(iso, uusi.Value.Lat, uusi.Value.Lon, kiinnitettyLippu);
+            Debug.Log($"MATKAKIRJA ui lipputanko: yläpaneelin alle ({uusi.Value.Lat:0.00}, {uusi.Value.Lon:0.00})");
+        }
+
+        /// <summary>Osuuko tangon ala (ruutupikselit, y ylös) yläpaneeliin (paneelikoordinaatit, y alas) varalla.</summary>
+        bool PeittaaLipun(Rect ruutu, Rect yla)
+        {
+            var a = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.xMin, Screen.height - ruutu.yMax));
+            var b = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.xMax, Screen.height - ruutu.yMin));
+            var alaPaneelissa = Rect.MinMaxRect(a.x, a.y, b.x, b.y);
+            var v = new Rect(yla.x - PaneelinVaraPt, yla.y - PaneelinVaraPt, yla.width + 2 * PaneelinVaraPt, yla.height + 2 * PaneelinVaraPt);
+            return alaPaneelissa.Overlaps(v);
+        }
+
+        static bool Ruudulla(Rect r) => r.xMin >= 0f && r.yMin >= 0f && r.xMax <= Screen.width && r.yMax <= Screen.height;
+
+        static List<(double Lat, double Lon)> Kaupungit(string maa)
+        {
+            var k = new List<(double Lat, double Lon)>();
+            foreach (var c in UiSisalto.Kaikki) if (c.Maa == maa) k.Add((c.Lat, c.Lon));
+            return k;
+        }
+
         static readonly Dictionary<string, (double Lat, double Lon)?> lippukulmat = new Dictionary<string, (double Lat, double Lon)?>();
 
         /// <summary>Koilliskulma maarajoista (odottaa latausta enintään 5 s), muuten vanha ankkuri.</summary>
@@ -271,9 +340,7 @@ namespace Matkakirja.Natiivi
             while (LinssiOhjain.MaatAineisto == null && Time.realtimeSinceStartup < raja) yield return null;
             if (!lippukulmat.TryGetValue(maa, out var p) && LinssiOhjain.MaatAineisto?.Hae(maa) is Matkakirja.Linssit.Maat.Maa rajat)
             {
-                var kaupungit = new List<(double Lat, double Lon)>();
-                foreach (var k in UiSisalto.Kaikki) if (k.Maa == maa) kaupungit.Add((k.Lat, k.Lon));
-                p = Matkakirja.Linssit.Maat.Lippukulma.Laske(rajat, kaupungit);
+                p = Matkakirja.Linssit.Maat.Lippukulma.Laske(rajat, Kaupungit(maa));
                 lippukulmat[maa] = p;
             }
             if (p.HasValue) { valmis(p); yield break; }

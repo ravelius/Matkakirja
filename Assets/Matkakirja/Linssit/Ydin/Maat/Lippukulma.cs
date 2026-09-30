@@ -18,8 +18,11 @@ namespace Matkakirja.Linssit.Maat
         public const double SisamaastaKm = 15, KohteistaKm = 25, KohteenVara = 0.03;
         const double Rad = Math.PI / 180;
 
-        /// <summary>Paikka (lat, lon) tai null, jos maalla ei ole renkaita. <paramref name="kohteet"/> = pelin kaupungit (lat, lon).</summary>
-        public static (double Lat, double Lon)? Laske(Maa maa, IEnumerable<(double Lat, double Lon)> kohteet = null)
+        /// <summary>Paikka (lat, lon) tai null, jos maalla ei ole renkaita. <paramref name="kohteet"/> = pelin kaupungit (lat, lon).
+        /// <paramref name="kelpaa"/> (valinnainen) rajaa ehdokkaat, esim. näkyvissä yläpaneelin alla (Kartuscha 30.9.2026); jos mikään
+        /// ehdokas ei kelpaa, tulos on null.</summary>
+        public static (double Lat, double Lon)? Laske(Maa maa, IEnumerable<(double Lat, double Lon)> kohteet = null,
+            Func<double, double, bool> kelpaa = null)
         {
             if (maa?.Renkaat == null || maa.Renkaat.Count == 0) return null;
             var manner = Suurin(maa.Renkaat);
@@ -52,6 +55,21 @@ namespace Matkakirja.Linssit.Maat
                     ehdot.Add(((1 - u) * (1 - u) + (1 - v) * (1 - v), lat, lon));
                 }
             ehdot.Sort((a, b) => a.Pisteet.CompareTo(b.Pisteet));
+            if (kelpaa != null)
+            {
+                // Laiska suodatus: ensimmäinen kelpaava ja sen jälkeen vain kaupunkivaran sisällä olevat (ennuste on kallis).
+                var suodatetut = new List<(double Pisteet, double Lat, double Lon)>();
+                double raja = double.MaxValue;
+                foreach (var ed in ehdot)
+                {
+                    if (ed.Pisteet > raja) break;
+                    if (!kelpaa(ed.Lat, ((ed.Lon % 360) + 540) % 360 - 180)) continue;
+                    if (suodatetut.Count == 0) raja = ed.Pisteet + KohteenVara;
+                    suodatetut.Add(ed);
+                }
+                if (suodatetut.Count == 0) return null;
+                ehdot = suodatetut;
+            }
             var paras = ehdot[0];
             var lista = new List<(double Lat, double Lon)>();
             if (kohteet != null) foreach (var k in kohteet) if (!double.IsNaN(k.Lat) && !double.IsNaN(k.Lon)) lista.Add(k);
