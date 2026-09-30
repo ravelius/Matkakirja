@@ -149,8 +149,8 @@ jobs:
                 tb=$(mktemp -d)
                 aws s3 cp "s3://$AMPARI/$bk" "$tb/" --recursive --endpoint-url "$PAATE" \
                   --no-progress --only-show-errors --exclude 'blender.json'
-                # png mukana 1.10.2026: kuori v17:n blender.json listaa yhden png:n, ja vienti jäi 88/89:ään.
-                for tyyppi in 'glb model/gltf-binary' 'jpg image/jpeg' 'png image/png' 'astcm application/octet-stream'; do
+                # png ja json mukana 1.10.2026: v17 listaa png:n (vienti jäi 88/89:ään), ympäristövienti tuo json-tiedostoja (blender.json itse suljetaan pois latauksessa).
+                for tyyppi in 'glb model/gltf-binary' 'jpg image/jpeg' 'png image/png' 'json application/json' 'astcm application/octet-stream'; do
                   aws s3 cp "$tb/" "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" \
                     --no-progress --only-show-errors --exclude '*' --include "*.${tyyppi%% *}" \
                     --content-type "${tyyppi#* }" --cache-control 'public, max-age=31536000, immutable'
