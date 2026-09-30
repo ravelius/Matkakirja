@@ -1303,6 +1303,9 @@ namespace Matkakirja
             }
         }
 
+        /// <summary>Kamera maan saapumisnäkymän korkeudella tai lähempänä (maan rajat voimassa; Kutsuminiatyyri).</summary>
+        public bool MaanNakymassa => maanLaatikko.HasValue && maanKatto > 0 && korkeus <= maanKatto * 1.05;
+
         /// <summary>Eleen loitonnuksen katto metreinä: maan katto, jos rajat ovat voimassa, muuten koko pallo.</summary>
         double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
 
