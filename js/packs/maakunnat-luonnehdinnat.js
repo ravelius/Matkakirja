@@ -8956,6 +8956,14 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       ],
       pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
     },
+    Crimea: {
+      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
+      pitka: "Krimin niemimaan eteläisellä rannikolla Mustameri ja vuoret ovat lähes kosketusetäisyydellä: noin 150 kilometriä pitkän Krimin vuoriston korkein huippu Roman-Kosh nousee 1 545 metriin. Rannikon puutarhojen keskellä Livadian valkoinen kalkkikivipalatsi valmistui vuonna 1911 uusrenessanssin tyyliin, ja siinä on 116 huonetta. Jaltan tuntumassa Massandran viinikellarit ovat kypsyttäneet muskottiviinejä vuodesta 1894 graniittiin louhituissa tunneleissa. Vuorten pohjoispuolella Bahtšisarain kaanien palatsi, jonka rakennutti 1500-luvulla Sahib I Giray, kätkee sisäpihalleen Kyynelten lähteen, josta Aleksandr Pushkin sai aiheen runoonsa.",
+    },
+    Sevastopol: {
+      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+      pitka: "Sevastopolin kalliorannikolla antiikki, luostarit ja merihistoria kulkevat rinnakkain. Taurisen Khersonesoksen kaupungin perustivat kreikkalaiset siirtolaiset noin 2 500 vuotta sitten, ja sen viininviljelyalue eli khora kuuluu vuonna 2013 UNESCOn maailmanperintöluetteloon hyväksyttyyn kohteeseen. Kaupunki eli aina 1400-luvun tienoille. Sevastopolinlahti ulottuu noin 7,5 kilometrin mittaisena sisämaahan kohti Inkermanin luolaluostaria, jonka kalliokirkot ovat varhaiskeskiajalta. Etelämpänä Balaklavan pieni lahti kätkeytyy kallioiden suojaan; genovalaisten Cembalo-linnakkeen vanhimmat rakennuskirjoitukset ovat vuodelta 1357, ja antiikissa paikka tunnettiin nimellä Symbolon.",
+    },
   },
   /*
    * VALKO-VENÄJÄ (BLR) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A),
@@ -9650,12 +9658,15 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Arkhangel'sk": {
       lyhyt: 'Arkangelin alueeseen kuuluu myös Frans Joosefin maa, arktinen saaristo, jonka saaret ovat suurelta osin jäätiköiden peitossa.',
+      pitka: "Arkangelin alueen sydän on Pohjois-Dvinan varsi, jonka rannalle Arkangelin kaupunki perustettiin vuonna 1584 Mikael-arkkienkelin luostarin ympärille. Kaupungin lähellä Malyje Korelyn ulkoilmamuseoon on koottu pohjoisen puukirkkoja, tuulimyllyjä ja talonpoikaistaloja. Etelämpänä Kargopol on mainittu kronikoissa jo 1146, ja pieni kaupunki on tunnettu valkoisista kivikirkoistaan sekä käsin muovatuista savileluistaan. Kenozeron kansallispuisto kattaa 140 000 hehtaaria taigaa, lampia ja järviä; alue on ollut Unescon biosfäärialue vuodesta 2004. Alueen pinta-ala on yli 400 000 neliökilometriä, mutta asukkaita on alle miljoona.",
     },
     "Astrakhan'": {
       lyhyt: 'Volga laskee Astrahanin alueella Kaspianmereen Euroopan suurimpana jokisuistona, ja kesällä suiston lahdet peittyvät lootuksen kukkiin.',
+      pitka: "Astrahanin kaupunki sijaitsee Volgan saarilla, ja sen valkoinen kreml on noin 11 hehtaarin kokoinen linnoitus, jonka muurit nousivat 1500-luvulla. Kremlin sisällä Uspenskin katedraalin viisikupolinen rakennus aloitettiin 1699, ja työ kesti noin kaksitoista vuotta. Volgan suistossa Astrahanin biosfäärialue perustettiin jo 1919; siellä on havaittu yli 200 lintulajia, ja kiharapelikaanit pesivät alueella. Kaupungissa asuu noin 520 000 ihmistä ja koko alueella noin miljoona, ja idän ja etelän vaikutus näkyy ruoassa ja rakennuksissa.",
     },
     Bashkortostan: {
       lyhyt: 'Baškortostanin Šulgan-Tašin eli Kapovan luolan seinillä on kivikautisia maalauksia mammuteista ja hevosista.',
+      pitka: "Baškortostan levittyy Volgan ja Uralin välille, ja tasavallan 143 600 neliökilometrillä asuu noin 4,1 miljoonaa ihmistä: venäläisiä on 37 prosenttia, baškiireja 31 ja tataareja 24. Baškiirin kieli on turkkilainen ja virallinen venäjän rinnalla. Pääkaupunki Ufa perustettiin vuonna 1574 Belaja-joen korkealle rannalle, jossa seisoo vuonna 1967 paljastettu Salavat Julajevin ratsastajapatsas: noin kymmenmetrinen pronssiveistos painaa 40 tonnia. Lala Tulpan -moskeijan turkoosi kupoli ja 53 metriä korkeat minareetit valmistuivat 1998, ja Aksakovin muistomuseo (1991) toimii kaupungin vanhimmassa puurakennuksessa. Uralin länsirinteillä Baškiria-kansallispuisto (1986) kuuluu vuonna 2012 Unescon biosfäärialueeksi hyväksyttyyn Baškiirien Uralin alueeseen.",
     },
     Belgorod: {
       lyhyt: 'Belgorod tarkoittaa valkoista kaupunkia, ja nimi viittaa seudun vaaleisiin liitu- ja kalkkikiviesiintymiin.',
@@ -9673,9 +9684,6 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chita: {
       lyhyt: 'Taka-Baikalin Daurian arot ja Toreijärvet ovat Unescon maailmanperintöä, ja niillä vaeltaa mongoliangaselleja.',
-    },
-    Crimea: {
-      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
     },
     Dagestan: {
       lyhyt: 'Dagestanin Sulakin kanjoni on lähes kaksi kilometriä syvä, syvempi kuin Coloradon Grand Canyon.',
@@ -9708,6 +9716,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kalmyk: {
       lyhyt: 'Kalmukian pääkaupungissa Elistassa on Euroopan suurin buddhalainen temppeli, Buddha Šakjamunin kultainen asumus.',
+      pitka: "Kalmukia levittäytyy Volgan alangon ja Kaspianmeren rannikon aroilla noin 74 700 neliökilometrin alalla. Alueella asuu runsaat 267 000 ihmistä, ja noin 63 prosenttia heistä on kalmukkeja. Heidän esi-isänsä, länsimongolialaiset oiraatit, saapuivat Siperiasta Volgan alajuoksulle noin vuonna 1630. He toivat mukanaan tiibetiläisen gelug-koulukunnan buddhalaisuuden, joka on täällä yhä alueen yleisin uskonto. Vuoden suuriin juhliin kuuluvat Tsagaan Sar eli valkoinen kuu ja Zul. Vuonna 1990 perustettu Mustien maiden biosfäärialue suojelee saigaantilooppeja. Huhtikuussa aro kukkii: Punaiseen kirjaan kuuluvat luonnonvaraiset tulppaanit houkuttelevat väkeä Elistasta arolle omaan tulppaanijuhlaansa.",
     },
     Kaluga: {
       lyhyt: 'Kalugassa asui avaruuslentojen uranuurtaja Konstantin Tsiolkovski, ja kaupungin kosmonautiikan historian museo kantaa hänen nimeään.',
@@ -9743,6 +9752,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Krasnodar: {
       lyhyt: 'Krasnodarin aluepiirin Sotši on subtrooppinen lomakaupunki, jonka yläpuolisilla vuorilla ajettiin 2014 talviolympialaisten alppilajit.',
+      pitka: "Krasnodarin aluepiirin pohjoisosa on Kubanin tasankoa, jonka mustamultaisilla pelloilla viljellään vehnää, riisiä, auringonkukkaa ja sokerijuurikasta, ja alue on jatkuvasti Venäjän johtavia maatalouskeskuksia. Aluepiirin keskus Krasnodar syntyi 1790-luvulla Mustanmeren kasakkojen Jekaterinodar-linnoituksena, ja kasakkaperinnettä vaalii vuonna 1811 perustettu Kubanin kasakkakuoro. Kaupungissa toimii myös FK Krasnodarin stadion, joka avattiin vuonna 2016 ja jonka kapasiteetti on noin 35 000, ja sen ympärillä on ihmisille avoin puisto. Etelässä Länsi-Kaukasus, UNESCOn maailmanperintökohde vuodesta 1999, kattaa noin 299 000 hehtaaria vuoristoa ja alppiniittyjä.",
     },
     Krasnoyarsk: {
       lyhyt: 'Krasnojarskin aluepiiriin kuuluu Tšeljuskininniemi Taimyrin niemimaalla, Euraasian mantereen pohjoisin kärki.',
@@ -9809,12 +9819,15 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Orenburg: {
       lyhyt: 'Orenburgin untuvahuivit neulotaan vuohenuntuvasta niin ohuiksi, että hienoimman huivin voi pujottaa sormuksen läpi.',
+      pitka: "Orenburg nousi vuonna 1743 nykyiselle paikalleen Ural-joen ja Sakmaran yhtymäkohtaan, ja noin 544 000 asukkaan kaupunki on perinteinen Euroopan ja Aasian rajakaupunki: Ural-joen yli kulkee kävelysilta, jota pidetään symbolisena mannerrajana. Vuosina 1837–1844 rakennetussa Karavaanisaarassa arkkitehti Aleksandr Brjullov teki baškiirikylän tyylisen kokonaisuuden, jonka keskellä kahdeksankulmainen moskeija muistuttaa jurttaa; tataarimoskeija oli avattu jo 1805. Alueen pinta-ala on noin 124 000 neliökilometriä, ja väestöstä tataareja on 6,3 ja kazakkeja 5,8 prosenttia. Luoteessa kohoaa Buzulukin mäntymetsän kansallispuisto, noin 106 000 hehtaaria: se on suuri aron ympäröimä yhtenäinen mäntymetsä, ja puolet siitä on Orenburgin alueella.",
     },
     Penza: {
       lyhyt: 'Penzan alueen Tarhanyssa kasvoi runoilija Mihail Lermontov isoäitinsä kartanossa, joka on nyt hänen museonsa.',
+      pitka: "Penza kohoaa Sura-joen rannoille Volgan ylängölle, ja kaupunki perustettiin linnakkeeksi vuonna 1663 Villin kentän eli aron rajalle. Nykyään sen ympärillä on noin 1,27 miljoonan asukkaan Penzan alue, joka erotettiin Tambovin alueesta vuonna 1939 ja jonka pinta-ala on runsaat 43 000 neliökilometriä. Penzassa vietti lapsuutensa teatteriohjaaja Vsevolod Meyerhold (s. 1874), ja siellä toimii nyt hänen muistomuseonsa sekä Tohtori Dapertutto -teatteri. Alueen suurin joki on Hopjor, 979 kilometriä, ja historioitsija Vasili Kljutševski syntyi Penzan alueella vuonna 1841. Venäläisten rinnalla alueella asuu tataareja (vuoden 2010 väestönlaskennassa 6,4 %) ja mordvalaisia (4,1 %): tataarin kieli on turkkilainen, mordvan suomalais-ugrilainen.",
     },
     "Perm'": {
       lyhyt: 'Maapallon historian permikausi on nimetty Permin mukaan, sillä brittigeologi Murchison tutki kauden kerrostumia täällä 1841.',
+      pitka: "Perm kasvoi Kaman rannalle vuonna 1723 perustetusta kuparisulatosta noin miljoonan asukkaan kaupungiksi. Baletti-impressario Sergei Djagilev kasvoi täällä, ja Permin ooppera ja baletti on Venäjän tunnetuimpia. Permin taidegalleria toimii entisessä katedraalissa, ja sen erikoisuus on Permin jumalten puuveistokset, kansantaiteellisia Kristus-hahmoja. Joen entiseen terminaalirakennukseen avattiin 2009 nykytaiteen museo PERMM. Kaupungista noin 85 kilometriä etelään, Belaja Goran kukkulalla, sijaitsee Belogorjen luostari, jonka kivikirkko rakennettiin 1902–1917.",
     },
     'City of St. Petersburg': {
       lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
@@ -9832,12 +9845,14 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Rostov: {
       lyhyt: 'Donin suistossa Rostovin lähellä on Tanaisin kaivausalue, antiikin kreikkalaisten kauppakaupungin rauniot, jotka ovat nyt ulkomuseo.',
+      pitka: "Rostov-on-Don on Donin rannalla sijaitseva miljoonakaupunki, jota kutsutaan Kaukasuksen portiksi. Joen vasemmalla puolella seisoo Rostov Arena, jossa pelattiin viisi jalkapallon MM-kisojen 2018 ottelua ja jonka MM-kapasiteetti oli noin 43 500 katsojaa. Alue jatkuu pohjoiseen Donin kasakkojen maille, ja Vjoshenskajan kylässä toimii museoalue kirjailija Mihail Sholohovin kunniaksi; hän sai kirjallisuuden Nobelin palkinnon vuonna 1965, ja hänen Hiljaa virtaa Don -romaaninsa sijoittuu Donin kasakoiden elämään. Rostovin alue ulottuu lännessä Aasovanmeren rannikolle, jonka satamakaupungeissa on pitkä merenkulkuperinne.",
     },
     'RUS+99?': {
       lyhyt: 'Tämä pieni saari on Karanmeren Bajdaratskajanlahdella, jonka pohjaan laskettiin 2014 kaasuputket Jamalin niemimaalta.',
     },
     "Ryazan'": {
       lyhyt: 'Runoilija Sergei Jesenin syntyi Rjazanin alueen Konstantinovon kylässä Okan rannalla, ja hänen kotitalonsa on museo.',
+      pitka: "Rjazanin kreml on kaupungin vanhin osa, ja siellä kohoaa Uspenskin katedraali, joka rakennettiin vuosina 1693–1702. Sen kellotorni on yli 80 metriä korkea ja erottuu kauas Oka-joen yli. Rjazan oli 1097–1521 itsenäinen ruhtinaskunta, ja sen pääkaupunki sijaitsi alun perin noin 50 kilometrin päässä nykyisestä kaupungista. Tiedemies Ivan Pavlov, ehdollisten refleksien tutkija ja Nobel-palkittu, syntyi Rjazanissa 1849, ja hänen vanha kotitalonsa on nyt museo. Alue on Okan laaksoa, jossa viljellään ja pidetään mehiläisiä.",
     },
     'Sakha (Yakutia)': {
       lyhyt: 'Sahan Oimjakonin kylässä on mitattu lähes 68 asteen pakkanen, yksi pohjoisen pallonpuoliskon kylmimmistä koskaan mitatuista lukemista.',
@@ -9847,12 +9862,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Samara: {
       lyhyt: 'Samaran alueen Toljatissa on AvtoVAZin tehdas, jonka linjoilta Lada-autoja on vierinyt vuodesta 1970.',
+      pitka: "Samaran rantabulevardi kulkee noin viisi kilometriä Volgan vartta, ja se on kaupunkilaisten suosituin ulkoilupaikka. Keskustan Kuibyshevin aukio on yli 15 hehtaaria, joten se lasketaan Euroopan suurimpiin kaupunkiaukioihin, ja sen laidalla seisoo oopperatalo. Aivan kaupungin vieressä Volga kiertää Zhigulin vuoret jyrkässä mutkassa, jota kutsutaan Samarskaja Lukaksi. Mutkan kansallispuisto ja noin 23 000 hehtaarin Zhigulin luonnonsuojelualue muodostavat yhdessä biosfäärialueen, jonka UNESCO on hyväksynyt. Kaupunki tunnettiin vuosina 1935–1991 nimellä Kuibyshev, ja lokakuussa 1941 se määrättiin Neuvostoliiton varapääkaupungiksi.",
     },
     Saratov: {
       lyhyt: 'Saratovin harmonikan kannessa on kaksi pientä kelloa, jotka helähtävät bassonappien tahdissa tanssikappaleissa.',
-    },
-    Sevastopol: {
-      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+      pitka: "Saratov on lähes 900 000 asukkaan kaupunki Volgan oikealla rannalla. Sen keskeinen kävelykatu, noin kilometrin mittainen Kirovin katu, on täynnä 1800- ja 1900-lukujen taitteen kartanoita ja päättyy Lipki-puistoon ja vuonna 1912 avattuun konservatorioon. Radishchev-taidemuseo avattiin yleisölle jo vuonna 1885, ja sen kokoelmiin kuuluu yli 20 000 esinettä. Volgan yli Engelsiin kulkee vuonna 1965 avattu 2,8 kilometrin mittainen maantiesilta, joka oli valmistuessaan Neuvostoliiton pisin. Saratovin alue on myös Venäjän johtavia auringonkukan viljelyalueita.",
     },
     Smolensk: {
       lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
@@ -9870,6 +9884,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tatarstan: {
       lyhyt: 'Tatarstanin kesäjuhlassa sabantuissa kiivetään liukkaaseen salkoon ja painitaan perinteistä vyöpainia.',
+      pitka: "Tatarstan on noin nelimiljoonainen tasavalta Volgan ja Kaman varrella, ja siellä on kolme Unescon maailmanperintökohdetta. Kazanin kreml merkittiin listalle vuonna 2000, ja sen muurien sisällä kohoaa Qolşärif-moskeija, joka avattiin kesäkuussa 2005 kaupungin tuhatvuotisjuhlien alkajaisiksi. Bolgarin muinaiskaupunki hyväksyttiin listalle vuonna 2014: siellä muistetaan Volgan bolgaarien siirtymistä islamiin vuonna 922, ja paikka on yhä tatarimuslimien pyhiinvaelluskohde. Kolmas, Svijažskin saarikaupunki, otettiin mukaan 2017; sen linnoitus rakennettiin Volgan, Svijagan ja Štšukan yhtymäkohtaan vuonna 1551 vain neljässä viikossa. Tataarit ovat noin 54 prosenttia ja venäläiset 40 prosenttia asukkaista, ja tataari kuuluu turkkilaisiin kieliin.",
     },
     Tomsk: {
       lyhyt: 'Tomskia kutsutaan Siperian Ateenaksi, sillä kaupungissa on Siperian vanhin yliopisto ja suuri joukko opiskelijoita.',
@@ -9893,15 +9908,18 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Tver'": {
       lyhyt: 'Volgan lähde on Tverin alueen Valdain ylängöllä, ja pienen lähteen päälle on rakennettu kappeli.',
+      pitka: "Tverin alue ulottuu Moskovan ja Pietarin välille, ja sen pinta-ala on noin 84 200 neliökilometriä. Läntistä osaa peittää Valdain ylänkö, jolta saavat alkunsa Volga ja Läntinen Dvina. Alueen helmi on Seliger-järvi, jonka pinta-ala on noin 212 neliökilometriä ja jossa on noin 160 saarta. Kalastajien ja melojien suosimaa järveä kutsutaan Euroopan Baikaliksi. Sen rannalla sijaitseva Ostashkov on lomakohde, ja Stolobnyin saarella seisoo Nilo-Stolobenskin luostari. Torzhok mainitaan kirjoituksissa ensi kerran 1139. Vanha kauppakaupunki sijaitsee Moskovan ja Pietarin välisen tien varrella, ja se tunnetaan yhä kultalangalla kirjotuista töistä ja uusklassisesta rakennuskannastaan.",
     },
     "Tyumen'": {
       lyhyt: 'Tjumen perustettiin 1586, ja sitä pidetään ensimmäisenä venäläisenä kaupunkina Siperiassa.',
     },
     Udmurt: {
       lyhyt: 'Udmurtialaisen Buranovon kylän mummokuoro lauloi Euroviisuissa 2012 toiseksi, osin udmurtiksi.',
+      pitka: "Udmurtia sijaitsee Uralin länsipuolella Kaman ja sen sivujoen Vjatkan välissä, 42 000 neliökilometrin alueella, jossa asuu noin 1,45 miljoonaa ihmistä. Pääkaupunki Izhevsk sai alkunsa vuonna 1760 rautatehtaasta, ja tehtaan patoallas, Izhin lampi, on noin 22 neliökilometrin kokoinen. Udmurttien osuus asukkaista on noin 24 prosenttia, ja udmurtin kieli on venäjän rinnalla tasavallan virallinen kieli; se kuuluu suomalais-ugrilaisten kielten permiläiseen ryhmään. Votkinskissa syntyi vuonna 1840 säveltäjä Pjotr Tšaikovski, ja hänen lapsuudenkotinsa on ollut museona vuodesta 1940. Sarapulin museo on tasavallan vanhin, perustettu 1909. Kaman varrella Nechkinskin kansallispuisto (perustettu 1997) suojelee metsää ja tulvaniittyjä, ja Ludorvai-ulkomuseossa tutustuu udmurttien, venäläisten ja beserjaanien arkeen.",
     },
     "Ul'yanovsk": {
       lyhyt: 'Oblomovin kirjoittaja Ivan Gontšarov syntyi nykyisessä Uljanovskissa, ja kaupungissa on hänen museonsa.',
+      pitka: "Uljanovskin alue on noin 37 200 neliökilometrin kokoinen ja siellä asuu noin 1,2 miljoonaa ihmistä. Volga jakaa maan kahtia: läntinen ranta on kumpuilevaa ylänköä ja itäpuoli tasaisempaa. Aluekeskus Simbirsk perustettiin linnoitukseksi 1648, ja vuonna 1924 se sai nimekseen Uljanovsk. Kaupungissa syntyi Vladimir Lenin, ja se on myös kirjailija Ivan Gontšarovin kotikaupunki. Unesco nimesi sen kirjallisuuden kaupungiksi 2015. Volgan yli kulkee 2009 avattu Presidentin silta, jonka pituus on yli viisi kilometriä. Kaupungin siviili-ilmailumuseossa on noin 40 lentokonetta, muun muassa yliääninen Tu-144. Alueen teollisuuteen kuuluvat autonvalmistus ja lentokonetehdas.",
     },
     Vladimir: {
       lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
@@ -9909,6 +9927,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Volgograd: {
       lyhyt: 'Volgogradin alueen Eltonjärvi on Euroopan suurin mineraalijärvi, ja levät värjäävät sen suolaisen veden punertavaksi.',
+      pitka: "Volgograd venyy Volgan länsirannalla kymmeniä kilometrejä pitkänä, vain muutaman kilometrin leveänä kaistaleena, ja se perustettiin Tsaritsynin linnoituksena vuonna 1589. Kaupungin muotoon sopii Metrotram, osin maan alla kulkeva raitiotie: linja avattiin 1984, se on 17,3 kilometriä pitkä ja siinä on 22 asemaa. Etelässä Volgan ja Donin yhdistää vuonna 1952 avattu, 101 kilometrin pituinen kanava, jossa on 13 sulkua. Kaupungin eteläosassa on Vanha Sarepta, vuonna 1765 herrnhutilaisten perustama siirtokunta, joka on museoalueena. Padon alapuolella Volga haarautuu, ja väliin jää laaja Volga-Ahtuba-tulva-alue.",
     },
     Vologda: {
       lyhyt: 'Vologdan nypläyspitsi on alueen tunnetuin käsityö, ja kaupungissa on sille oma museonsa.',
@@ -9923,6 +9942,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Yaroslavl'": {
       lyhyt: 'Jaroslavlin vaakunassa on kirvestä kantava karhu, sillä tarun mukaan kaupungin perustaja Jaroslav Viisas kaatoi karhun juuri täällä.',
+      pitka: "Jaroslavlin alue kuuluu Venäjän Kultaiseen renkaaseen, ja siellä asuu noin 1,2 miljoonaa ihmistä. Aluekeskus Jaroslavl, jonka perustamisvuotena pidetään 1010, sijaitsee Volgan ja Kotorosl-joen yhtymäkohdassa. Se kasvoi 1600-luvulla vauraaksi kauppakaupungiksi, ja sen värikkäät kirkot ovat tuolta ajalta. Spasso-Preobrazhenskin luostarin rakennustyöt alkoivat 1506. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon 2005, ja kaupunki vietti 1000-vuotisjuhlaansa 2010. Alueella on myös Uglichin vanha Volga-kaupunki, jossa tsaarin nuori poika Dmitri kuoli 1591, sekä Rybinskin tekoallas, joka täytettiin 1941–1947.",
     },
     Yevrey: {
       lyhyt: 'Juutalaisen autonomisen alueen pääkaupungin Birobidžanin pääkatu on nimetty jiddišiksi kirjoittaneen Šolem Aleichemin mukaan.',

@@ -109,6 +109,8 @@
  * silmukka (js/maatummennus.js `puraMaa`).
  */
 
+// Krim ja Sevastopol Ukrainalle lähteessä (tools/krim-ukrainalle.mjs, Päätoimittaja 30.9.2026).
+import { krimUkrainalleAdmin0 } from './krim-ukrainalle.mjs';
 import {
   readFileSync, writeFileSync, existsSync, mkdirSync,
 } from 'node:fs';
@@ -236,6 +238,13 @@ function todennaProjektio(p) {
 /* ---------------------------------------------------------------- aineisto */
 
 async function lueLahde() {
+  const k = await lueLahdeRaaka();
+  const r = krimUkrainalleAdmin0(k);
+  console.log(`Krim → UKR: ${r.siirretty ? `siirretty (${r.karkia} kärkeä)` : 'ei muutosta'}`);
+  return k;
+}
+
+async function lueLahdeRaaka() {
   if (existsSync(PAIKALLINEN)) {
     console.log(`Lähde: ${PAIKALLINEN.pathname} (välimuisti)`);
     return JSON.parse(readFileSync(PAIKALLINEN, 'utf8'));

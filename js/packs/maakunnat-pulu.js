@@ -1762,6 +1762,16 @@ export const MAAKUNTIEN_PULU = {
   { q: "Kuka oli Sergei Koroljov ja miksi hän on niin tärkeä?", a: "Koroljov syntyi Žytomyrissa 1907 ja hänestä tuli myöhemmin Neuvostoliiton avaruusohjelman johtava suunnittelija. Hän vastasi muun muassa ensimmäisen satelliitin Sputnikin ja ensimmäisen ihmisen avaruuslennon teknisestä toteutuksesta." },
   { q: "Kuka oli Vasili Grossman?", a: "Grossman syntyi Berdytšivissä 1905 ja työskenteli myöhemmin sotakirjeenvaihtajana toisessa maailmansodassa. Hänen kirjoituksiaan pidetään yhtenä ajan tärkeimmistä silminnäkijäkuvauksista, ja hänen myöhempi romaaninsa Elämä ja kohtalo on yksi 1900-luvun merkittävimmistä venäjänkielisistä teoksista." },
 ],
+    "Crimea": [
+      { q: "Mitä Bahtšisarai tarkoittaa, ja mikä on Kyynelten lähde?", a: "Nimi tulee krimintataarin sanoista bahçe (puutarha) ja saray (palatsi). Kyynelten lähde on kaanien palatsin marmorinen suihkukaivo, jonka legendan mukaan kaani Kırım Giray teetti kaipaamansa Marian muistoksi; Pushkin vieraili palatsissa 1820 ja julkaisi aiheesta runon 1824." },
+      { q: "Mitä krimintataarien perinneruokaa kannattaisi maistaa ensimmäiseksi?", a: "Çiberekiä eli chiburekkia: rapeaksi paistettua taikinataskua, jonka täytteenä on jauhelihaa ja sipulia. Sen grillattu versio on yantıq, ja juhlaruokana tunnetaan köbete, riisistä ja kanasta tehty piirakka kahden taikinakerroksen välissä." },
+      { q: "Mikä on örnek, jota näkee krimintataarien kirjonnoissa ja koruissa?", a: "Örnek on krimintataarien koristekuviojärjestelmä, jossa on noin 35 symbolia, ja jokaisella on oma merkityksensä. Sitä käytetään kirjonnassa, keramiikassa, puunveistossa ja koruissa, ja se hyväksyttiin UNESCOn aineettoman kulttuuriperinnön luetteloon joulukuussa 2021." },
+    ],
+    "Sevastopol": [
+      { q: "Mitä khora tarkoittaa Khersonesoksen yhteydessä?", a: "Khora oli antiikin kaupungin maaseutualue, jonka pellot ja viinitarhat jaettiin satoihin suorakulmaisiin, samankokoisiin tontteihin. Viinistä tuli Khersonesoksen vientituote." },
+      { q: "Mistä Balaklavan nimi tulee?", a: "Antiikin kreikkalaiset kutsuivat paikkaa nimellä Symbolon, ja genovalaisten aikana se oli Cembalo. Nykyisen nimen selitetään yleensä tulevan turkkilaisesta muodosta Balık-yuva eli kalanpesä." },
+      { q: "Millainen paikka Inkermanin luolaluostari on?", a: "Se on kallioseinämään louhittu luostarikompleksi Tšornaja-joen suulla, jossa on kalliokirkkoja ja asuinluolia. Vanhimmat kirkot ajoitetaan tavallisesti vähintään 700-luvulle." },
+    ],
   },
   BGR: {
     Blagoevgrad: [
@@ -3012,6 +3022,96 @@ export const MAAKUNTIEN_PULU = {
       { q: "Miksi Kirovin taidemuseo on nimetty Vasnetsovin veljesten mukaan?", a: "Maalarit Viktor ja Apollinari Vasnetsov syntyivät Vjatkan seudun kylissä, ja he auttoivat museon perustamisessa vuonna 1910. Kokoelmassa on kymmeniä tuhansia teoksia." },
       { q: "Mitä Kotelnitšin liepeiltä on löytynyt?", a: "Vjatkan oikealla rannalla on permikautisia fossiileja, joiden ikä on 250–260 miljoonaa vuotta. Tunnetuimpia löytöjä ovat noin kolmemetriset pareiasaurukset, ja paikallinen paleontologinen museo avattiin vuonna 1994." },
       { q: "Kuinka suuri Kirovin alue on?", a: "Alueen pinta-ala on 120 374 neliökilometriä eli noin kolmannes Suomesta, ja siellä asuu vajaat 1,2 miljoonaa ihmistä. Metsä on enimmäkseen havupuuta." },
+    ],
+    "Penza": [
+      { q: "Miksi runoilija Lermontov on haudattu Penzan alueelle?", a: "Hänen isoäitinsä Jelizaveta Arsenjeva osti Tarhanyn kartanon vuonna 1794, ja runoilija (1814–1841) vietti siellä lapsuutensa. Hän lepää kartanon sukuhaudassa, ja paikka on ollut museo-reservaatti vuodesta 1939." },
+      { q: "Mikä on Yhden taulun museo?", a: "Penzalainen museo, jossa on vuodesta 1983 ollut esillä aina vain yksi maalaus kerrallaan. Katsomiskerta kestää noin 45 minuuttia, ja sitä edeltää lyhyt elokuva taulun ajasta." },
+      { q: "Mitä Volgan metsäaroreservaatissa suojellaan?", a: "Reservaatti perustettiin vuonna 1989 Kuznetskin piirissä, ja sen viidellä osa-alueella on noin 8 400 hehtaaria pohjoisen aron ja lehtimetsän vaihettumisvyöhykettä." },
+    ],
+    "Tatarstan": [
+      { q: "Mitä chak-chak on, ja milloin sitä syödään?", a: "Friteerattuja taikinapaloja kuumassa hunajasiirapissa, kasattuna kekoon tai pyramidiksi. Se on tataarien juhlaherkku, jota tarjotaan häissä, juhlissa ja vieraan tullessa." },
+      { q: "Miksi Kazanin kremlin Söyembikän torni oli vinossa?", a: "Kuusikerroksinen, 58-metrinen torni kallistui 1990-luvulle mennessä noin kaksi metriä. Vakautustöiden jälkeen se ei enää kallistu, ja legenda yhdistää sen nimen Kazanin viimeiseen hallitsijattareen." },
+      { q: "Kuka maalasi Kaman metsät Jelabugassa?", a: "Maisemamaalari Ivan Šiškin syntyi Jelabugassa 1830-luvulla, ja Jelabugan metsät inspiroivat hänen tunnetuinpiin töihinsä, kuten Aamu mäntymetsässä. Kaupungissa on hänen sukukotinsa museona sekä Nadežda Durovan kartanomuseo." },
+    ],
+    "Udmurt": [
+      { q: "Mikä on perepech?", a: "Udmurttilaisen keittiön tunnetuimpia ruokia: pieni avopiirakka, jonka täytteenä on lihaa, kananmunaa, sieniä tai kasviksia. Päälle levitetään yleensä muna- tai maitoseos." },
+      { q: "Mikä on lud?", a: "Udmurttien perinteisessä uskonnossa lud on pyhä lehto, jossa suvut ja kylät viettivät riittejä. Kodin oma pyhäkkö oli kuala." },
+      { q: "Onko udmurtti sukua suomelle?", a: "On, mutta kaukaista sukua: molemmat ovat uralilaisia kieliä. Suomi kuuluu itämerensuomalaisiin, udmurtti permiläisiin kuten komi." },
+    ],
+    "Bashkortostan": [
+      { q: "Mikä on šihan?", a: "Baškiriassa šihaneiksi kutsutaan permikauden riuttakalkkikiven jäänteitä: Toratau, Kušatau ja Jurakatau kohoavat Belajan oikealla rannalla Sterlitamakista itään. Ne ovat osa noin 290–299 miljoonaa vuotta sitten vallinnutta valtavaa riuttajärjestelmää." },
+      { q: "Miksi Jangantau on 'palava vuori'?", a: "Vuoren rinteillä kohoaa höyryä ja kaasua, vaikka tulivuoritoimintaa ei ole. Syytä tutkijat ovat selittäneet monella teorialla." },
+      { q: "Mikä on burzjanin mehiläinen?", a: "Erillisenä rotuna 2011 rekisteröity metsämehiläinen, joka pesii puiden onkaloissa Uralin länsirinteillä. Baškiirien vanha puumehiläishoito on satoja vuosia vanha." },
+    ],
+    "Orenburg": [
+      { q: "Miksi Puškin matkusti Orenburgiin?", a: "Hän keräsi vuonna 1833 aineistoa Pugatšovin kapinaa koskevaan historiateokseensa ja romaaniin Kapteenin tytär. Orenburgissa hän tapasi ystävänsä Vladimir Dalin, josta tuli myöhemmin venäjän sanakirjan tekijä." },
+      { q: "Miksi Razval-järvessä kellutaan?", a: "Sol-Iletskin Razval-järven vesi on niin suolaista, että keho nousee pintaan lähes kuten Kuolleessameressä. Paikka on tunnettu kylpylähoidoistaan." },
+      { q: "Mitä Talovskajan aro suojelee?", a: "Talovskaja on Orenburgin luonnonsuojelualueen läntisin osa, noin 3 200 hehtaaria aroa ilman pysyviä jokia." },
+    ],
+    "Samara": [
+      { q: "Miksi Zhigulevskoje-olut kantaa vuoriston nimeä, vaikka panimo oli itävaltalainen?", a: "Panimon perusti Samaraan vuonna 1881 itävaltalainen Alfred von Vacano, ja ensimmäinen tuote oli wieniläistyylinen lager. Legendan mukaan nimi vaihdettiin Zhigulevskojeksi vuonna 1934, koska \"wieniläinen\" kuulosti liian porvarilliselta." },
+      { q: "Kuinka syvällä Samaran bunkkerimuseo on?", a: "Noin 37 metrin syvyydessä eli 192 askelman alla, mikä vastaa 12-kerroksisen talon korkeutta. Suoja rakennettiin vuonna 1942 varapääkaupungin johdolle, ja nykyään siinä toimii siviilipuolustuksen museo." },
+      { q: "Miksi avaruusmuseon julkisivussa törröttää oikea raketti?", a: "Samarassa rakennetaan Sojuz-kantoraketteja, ja museo kertoo kaupungin roolista avaruusteollisuudessa. Julkisivuun kiinnitetty Sojuz on aito, noin 50 metrin mittainen raketti, ja monumentti paljastettiin vuonna 2001." },
+    ],
+    "Saratov": [
+      { q: "Mitä nykyisen Saratovin kohdalla oli ennen kaupunkia?", a: "Kultaisen hordan kaupunki Uvek, joka perustettiin 1240-luvulla ja jonka Timurin joukot tuhosivat 1395. Nykyisen Saratovin perustamisajankohdaksi arvellaan noin vuotta 1590." },
+      { q: "Miksi Saratovin taidemuseo kantaa kirjailija Radishchevin nimeä?", a: "Museon perusti 1885 taidemaalari Aleksei Bogoljubov, Radishchevin pojanpoika." },
+      { q: "Missä Juri Gagarin laskeutui maahan?", a: "Saratovin alueella Engelsin seudulla Volgan itäpuolella. Gagarin irtautui Vostok-kapselista noin seitsemän kilometrin korkeudessa 12. huhtikuuta 1961 ja laskeutui laskuvarjolla; paikalle on pystytetty muistomerkki." },
+    ],
+    "Volgograd": [
+      { q: "Miksi Volgogradissa raitiovaunu painuu keskustassa maan alle?", a: "Kaupunki on pitkä kaista Volgan rannalla, joten yksi nopea linja palvelee sitä hyvin. Maanalaista osuutta on 7,1 kilometriä ja kuusi asemaa keskustassa, ja loppu matkasta kulkee tavallisena raitiotienä." },
+      { q: "Mistä Venäjän tunnetuin sinappi on kotoisin?", a: "Sareptasta Volgogradin eteläosasta, jossa saksalaiset siirtolaiset perustivat maan ensimmäisen sinapintuotantolaitoksen 1800-luvun alussa. Museoalueen myymälästä sinappia saa yhä." },
+      { q: "Miksi Kamyshinia kutsutaan Venäjän vesimelonipääkaupungiksi?", a: "Kamyshin Volgan varrella on tunnettu meloneistaan, ja tarinan mukaan Pietari Suuri kiitteli paikallista vesimelonia vuonna 1722. Kaupunki järjestää elokuun lopulla vesimelonifestivaalin." },
+    ],
+    "Rostov": [
+      { q: "Miksi Rostovin Gorkin teatteri näyttää ylhäältä katsottuna traktorilta?", a: "Arkkitehdit Vladimir Shtshuko ja Vladimir Gelfreih suunnittelivat vuonna 1935 valmistuneen rakennuksen traktorin hahmoiseksi: pitkät sivusiivet ja korkea keskiosa piirtyvät ilmakuvassa koneen muotoon." },
+      { q: "Miksi Starotšerkasskaja on \"vanha\", ja mikä oli sen entinen asema?", a: "Kaupunki oli Donin kasakkojen pääkaupunki vuoteen 1805, jolloin asema siirrettiin Novotšerkasskiin, ja vanha kaupunki sai nimen Starotšerkasskaja. Sen Kristuksen ylösnousemuksen katedraali valmistui 1719, ja koko paikka on ollut museoalue vuodesta 1970." },
+      { q: "Mistä Aasovanmeren rannalla sijaitseva Taganrog tunnetaan?", a: "Pietari Suuri perusti Taganrogin vuonna 1698 Venäjän laivaston ensimmäiseksi tukikohdaksi. Kirjailija Anton Tšehov syntyi kaupungissa vuonna 1860, ja hänen syntymäkotinsa on museona." },
+    ],
+    "Krasnodar": [
+      { q: "Miksi Sotshin seudulla kasvatetaan teetä?", a: "Sotshin teen sanotaan olevan maailman pohjoisimpia; kylmää kestävän lajikkeen kehitti 1900-luvun alussa Judas Koshman, ja Dagomysin teeviljelmät ovat yhä vierailukohde." },
+      { q: "Mikä Abrau-Djurso on?", a: "Novorossijskin lähellä sijaitseva kuohuviinitila, jonka keisari Aleksanteri II määräsi perustettavaksi vuonna 1870; nimi tulee kahdesta purosta, joista toinen muodostaa alueen suurimman luonnonjärven." },
+      { q: "Miksi Fisht-stadion on saanut nimensä ja millainen se on?", a: "Vuoden 2014 olympialaisten pääareena kantaa nimeä 2 857 metrin korkuisen Fisht-vuoren mukaan. Stadionin ympärillä sijaitseva Olympiapuisto toimi myöhemmin myös Formula 1 -radan paikkana." },
+    ],
+    "Kalmyk": [
+      { q: "Miksi kalmukkilainen tee on suolaista ja siinä on voita?", a: "Kalmukkilainen tee eli jomba keitetään vihreästä teestä maidon, voin, suolan ja muskottipähkinän kanssa, ja se muistuttaa lähes keittoa. Paimentolaiskansalle maito on aina ollut ruoan perusta, ja ravitseva, lämmin juoma antaa voimia kylmässä." },
+      { q: "Mikä saigan nenässä on niin erikoista?", a: "Saigan sieraimet ovat turvonneet ja osoittavat alaspäin, mikä antaa antilooppi-paralle sen omalaatuisen ilmeen. Rakenteen uskotaan auttavan suodattamaan pölyä aroilla vaelluksen aikana." },
+      { q: "Mitä lamppuja Zul-juhlana sytytetään?", a: "Zul muistaa gelug-koulukunnan perustajaa Tsongkhapaa (1357–1419). Perinteen mukaan jokainen tekee taikinasta pienen lampun ja asettaa siihen sydämiä oman ikänsä verran. Lamput sytytetään, kun ensimmäiset tähdet ilmestyvät taivaalle." },
+    ],
+    "Arkhangel'sk": [
+      { q: "Miksi Arkangelin kaupunki oli aikoinaan niin tärkeä?", a: "Arkangelin kautta kulki 1500-luvun lopulta 1700-luvun alkuun Venäjän tärkein meriyhteys Länsi-Eurooppaan, ja satamassa kävi englantilaisia ja hollantilaisia kauppalaivoja. Pietarin perustaminen siirsi merikaupan Itämerelle." },
+      { q: "Mitä ovat Kenozeron maalatut taivaat?", a: "Kenozeron seudun puukirkkojen ja -kappelien katot on koristeltu maalatuilla taivailla, joissa on pyhimyksiä ja enkeleitä." },
+      { q: "Kuka on Arkangelin seudun tunnetuin poika?", a: "Mihail Lomonosov syntyi vuonna 1711 pomorikalastajan poikana Denisovkan kylässä Holmogorin lähellä. Hänestä tuli yksi Venäjän ensimmäisistä suurista tiedemiehistä, ja Holmogorissa on hänelle omistettu museo." },
+    ],
+    "Astrakhan'": [
+      { q: "Miksi Baskunchak-järven vesi on niin suolaista?", a: "Järven alla on suolakupoli, ja vesi on lähes kyllästynyttä suolasta. Järvi on noin 21 metriä merenpinnan alapuolella, ja sen vieressä kohoaa noin 150 metrin Bolshoje Bogdo -vuori." },
+      { q: "Mikä on Selitrennoje?", a: "Se on Volgan varrella Harabalin seudulla sijaitseva arkeologinen kohde, jonka uskotaan olleen Kultaisen ordan pääkaupunki Saray-Batu. Kaivauksia on tehty vuodesta 1965 alkaen." },
+      { q: "Kenen hallussa Astrahan oli ennen Venäjää?", a: "Alue kuului Kultaiselle ordalle ja sen jälkeen Astrahanin khaanikunnalle, kunnes Ivan Julma valtasi Astrahanin 1556. Nykyisessä muodossaan alue perustettiin 1943." },
+    ],
+    "Perm'": [
+      { q: "Kuinka pitkä on Kungurin jääluola?", a: "Luolaa on kartoitettu noin kuusi kilometriä, ja siinä on kymmeniä saleja ja järviä. Retkeilijöille avoinna on vain osa reitistä, ja salien lämpötila on keskimäärin noin viisi astetta." },
+      { q: "Mikä on Khokhlovka?", a: "Se on Kaman rannalla lähellä Permiä sijaitseva puuarkkitehtuurin ulkoilmamuseo, joka avattiin yleisölle 1980. Siellä on siirrettyjä puurakennuksia, muun muassa vuoden 1702 Kirkastumisen kirkko." },
+      { q: "Miksi Ust-Kachkassa hoidetaan ihmisiä suolaisella vedellä?", a: "Alueella on louhittu suolaa Stroganovien ajoista 1500-luvulta, ja maasta nousee bromia ja jodia sisältävää suolavettä. Ust-Kachkan kylpyläkeskus sijaitsee noin 50 kilometriä Permistä länteen." },
+    ],
+    "Ryazan'": [
+      { q: "Mitä Vanhalle Rjazanille tapahtui?", a: "Ruhtinaskunnan vanha pääkaupunki hävitettiin talvella 1237 Batu-kaanin joukkojen hyökkäyksessä eikä sitä koskaan rakennettu uudelleen. Pääkaupunki siirtyi myöhemmin nykyiselle paikalleen." },
+      { q: "Missä Venäjällä voi nähdä kaikki kurkilajit?", a: "Okan biosfäärialueella Rjazanin alueella, jonne perustettiin 1935 luonnonsuojelualue. Sen kurkien kasvatuslaitoksessa on Venäjän kurkilajit, ja siellä on pelastettu uhanalaista siperiankurkea." },
+      { q: "Onko Rjazanin alueella tataarikaupunki?", a: "On, Kasimov Oka-joen rannalla. Kaupunki oli 1400-luvulta Kasimovin khaanikunnan keskus, ja sen minareetti on vuodelta 1467. Khaanin moskeija ja Shah-Alin mausoleumi kuuluvat vanhaan tataarikortteliin." },
+    ],
+    "Tver'": [
+      { q: "Miksi Seliger-järveä kutsutaan Euroopan Baikaliksi?", a: "Seliger on iso, luonnonkaunis järvijärjestelmä, jossa on noin 160 saarta ja kanavilla yhdistettyjä vesiä. Nimi viittaa ihailuun, ei kokoon: Seliger on noin 212 neliökilometriä, siis paljon pienempi kuin Baikal." },
+      { q: "Mistä Torzhok on tunnettu matkailijoille?", a: "Torzhok on vanha kauppakaupunki Tvertsa-joen varrella. Se tunnetaan kultalangalla tehdystä kirjonnasta ja uusklassisista rakennuksistaan." },
+      { q: "Miksi Tverin nimi oli aikoinaan Kalinin?", a: "Neuvostoliitossa kaupunki ja alue nimettiin Mihail Kalininin mukaan. Vanha Tverin nimi palasi 1990-luvun alussa." },
+    ],
+    "Ul'yanovsk": [
+      { q: "Miksi Simbirskin nimi vaihtui Uljanovskiksi?", a: "Kaupunki nimettiin uudelleen 1924 Vladimir Leninin kunniaksi. Lenin syntyi siellä nimellä Vladimir Uljanov, ja Uljanov on hänen oikea sukunimensä." },
+      { q: "Kuinka pitkä silta Volgan yli on Uljanovskissa?", a: "Presidentin silta avattiin 2009, ja sen pituus on yli viisi kilometriä. Volga on siinä kohdassa hyvin leveä." },
+      { q: "Onko Uljanovskissa jotain lentokoneista kiinnostuneille?", a: "On: siviili-ilmailumuseo aukesi 1983 lentokoulun yhteyteen. Siellä on noin 40 konetta, ja yksi tunnetuimmista on Neuvostoliiton yliääninen matkustajakone Tu-144." },
+    ],
+    "Yaroslavl'": [
+      { q: "Mikä on Kultainen rengas ja miksi Jaroslavl kuuluu siihen?", a: "Kultainen rengas on Moskovan ympärillä olevien vanhojen kaupunkien matkailureitti. Jaroslavl kuuluu siihen, koska sen luostarit ja kirkot ovat säilyneet hyvin." },
+      { q: "Mitä Jaroslavlissa on Unescon listalla?", a: "Kaupungin historiallinen keskusta hyväksyttiin Unescon maailmanperintökohteeksi 2005. Erityisesti 1600-luvun kirkot ovat tunnettuja koristeellisista, värikkäistä julkisivuistaan." },
+      { q: "Miksi Uglich on tunnettu historiassa?", a: "Uglichissa löydettiin 15. toukokuuta 1591 kuolleena tsaarin nuori poika Dmitri. Tapaus liittyy Venäjän myöhempään sekaannusten aikaan, ja paikalla on nykyään kirkko ja museo." },
     ],
   },
 };
