@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2467, teksti: 'Olavinlinnan kuori v16: romusiivous 26 aluetta… (#3724)' },
   { v: 2466, teksti: 'TestFlight: ulkoisen ryhmän työnkulkuun vanhenn… (#3718)' },
   { v: 2465, teksti: 'Pöllö-worker: lukijoille ElevenLabs v4 Turbo -v… (#3710)' },
   { v: 2464, teksti: 'Apurahakortti: video pois ja neljän kuvan rivi (#3708)' },
