@@ -101,7 +101,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float a = SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(ll.x / 6.2831853 + 0.5, ll.y / 3.1415927 + 0.5), 0).a;
                 if (_Karsinta > 0.0)
                 {
-                    float k0 = max(0.0, _Karsinta - 0.12), r = saturate((a - k0) / max(1.0 - k0, 1e-3));
+                    float k0 = max(0.0, _Karsinta - 0.12 * saturate((1.0 - _Karsinta) / 0.3)), r = saturate((a - k0) / max(1.0 - k0, 1e-3));
                     a = r * r * (3.0 - 2.0 * r);   // sama pehmeä kynnys kuin Pilvet.Karsi
                 }
                 return a;
@@ -172,7 +172,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 // Pilvipeiton säädin kuten Pilvet.shader: karsitut pilvet eivät himmennä kaupunkien valoja.
                 if (_Karsinta > 0.0)
                 {
-                    float k0 = max(0.0, _Karsinta - 0.12), r = saturate((pilviA - k0) / max(1.0 - k0, 1e-3));
+                    float k0 = max(0.0, _Karsinta - 0.12 * saturate((1.0 - _Karsinta) / 0.3)), r = saturate((pilviA - k0) / max(1.0 - k0, 1e-3));
                     pilviA = r * r * (3.0 - 2.0 * r);
                 }
                 half pilvi = (half)(_PilvetOn * _PilviPeitto * pilviA);
