@@ -881,7 +881,7 @@ namespace Matkakirja.Natiivi
                 // Aito äänitaso: kertojan oma AudioSource, kun luenta soi siitä; muuten (Pelikoodarin Puhe) kuulijan miksaus.
                 var lahde = Aanet.Kertojasoitin;
                 if (lahde != null && lahde.isPlaying) lahde.GetOutputData(naytteet, 0);
-                else AudioListener.GetOutputData(naytteet, 0);
+                else Natiivi.TestiMykistys.Lahto(naytteet, 0);
                 double s = 0;
                 for (int i = 0; i < naytteet.Length; i++) s += naytteet[i] * naytteet[i];
                 rms = Mathf.Sqrt((float)(s / naytteet.Length));
