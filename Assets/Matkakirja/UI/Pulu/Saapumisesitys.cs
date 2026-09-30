@@ -35,6 +35,7 @@
 // joilla kommentti on; kaupungeilla ilman fokusvirtaa rivejä ei ole. Natiivi on aina
 // fokusmoodissa (LehtiTila.Fokusmoodi), joten taulu ei tuo tähän yhtään kuplaa.
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using Matkakirja.Peli;
 using UnityEngine.UIElements;
@@ -292,6 +293,8 @@ namespace Matkakirja.Natiivi
                 {
                     if (pakota || kortti.Avain != m.Avain || !kortti.Nakyy) kortti.Nayta(m);
                     else kortti.Kirjoita();
+                    // Merkinnän kuvat heti kortin loppuun (web renderFact → paivitaMatkakirjanPikkukuvat: luentakuvat + Pulun kuvat).
+                    kortti.AsetaPikkukuvat(v.Luentakuvat.Concat(v.PuluKuvat));
                 }
                 kortti.Kuvat.Tyhjenna(false);
                 if (v.Luentakuvat.Count > 0) kortti.Kuvat.Lisaa(v.Luentakuvat[0]);
@@ -465,6 +468,9 @@ namespace Matkakirja.Natiivi
                 if (m == null) { tulos(k + ": ei merkintää (" + (laji.Length > 0 ? laji : "saapuminen") + ")"); return; }
                 luentoOdotus?.Pause();
                 kortti.Nayta(m);
+                // Fokusvirran merkinnällä kuvat heti kuten pelissä (Alkoi): luentakuvat + Pulun kuvat.
+                if (v != null && (laji == "fokus" || laji == "aarre" || m.Avain == Matkakirjamerkinnat.Fokus(v)?.Avain))
+                    kortti.AsetaPikkukuvat(v.Luentakuvat.Concat(v.PuluKuvat));
                 tulos(m.Laji + " · " + m.Otsikko + " · " + m.Paikkarivi + (m.Wiki != null ? " · kuva: " + m.Wiki : "")
                       + (m.Lahteet.Count > 0 ? " · lähde: " + string.Join(", ", m.Lahteet) : "")
                       + (m.Valokuvat.Count > 0 ? " · valokuvia " + m.Valokuvat.Count : "")
