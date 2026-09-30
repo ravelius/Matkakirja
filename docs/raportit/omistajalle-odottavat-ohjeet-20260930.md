@@ -10,7 +10,7 @@ Kummallakin laitteella (iPhone ja M5-iPad), kun uusi versio on asennettu:
 3. Peli näyttää viestin "Tämä laite on merkitty omistajan laitteeksi: sen käyntejä ei lasketa."
 Poisto: `matkakirja://omistaja/pois`. Selaimissa: `https://matkakirja.app/?omistaja` kerran jokaisella selaimella (annettu 30.9.).
 
-## 2. ElevenLabs v4 Turbo -luenta vertailuun (Linssiseppä 2: PR #3710 4cc37e449, natiivi 09d681d3)
+## 2. ElevenLabs v4 Turbo -luenta vertailuun (Linssiseppä 2: PR #3710 4cc37e449, natiivi 09d681d3) — ANNETTU 30.9. klo 22.5x (#3710 mainissa 22.55, worker julkaistu)
 
 1. Päävalikko (☰) → Kehittäjä-kytkin → kirjoita kehittäjäkoodi (sama kuin Pöllön koodi) → Kytke päälle.
 2. Noston lukijan valikko (kaiuttimen vieressä) → Moottori → ElevenLabs v4 Turbo → Ääni (esim. Viisas kertoja).
