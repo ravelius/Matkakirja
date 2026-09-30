@@ -251,7 +251,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(t, Kirjasin.KoneLihava);
             // Nimi aina kokonaan (1.0.55-laitekuvat: "Äänimai…" 12,5 px:llä ja "Äänimaise…" vielä 11,5 px:llä): vapaa tila luetaan
             // asettelusta ja fonttia pienennetään vain tarvittaessa 0,25 px:n portain (vähintään 9,5 px), kuten RadioNakyma.SovitaNimi.
-            float perus = 0f;
+            float perus = 0f, tulossa = -1f;
             void Sovita()
             {
                 if (perus <= 0f) perus = t.resolvedStyle.fontSize;
@@ -267,14 +267,17 @@ namespace Matkakirja.Natiivi
                 float nyt = ts.fontSize > 0f ? ts.fontSize : perus;
                 float leveys = t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * perus / nyt;
                 float koko = leveys > tila ? Mathf.Max(9.5f, Mathf.Floor(perus * tila / leveys * 4f) / 4f) : perus;
-                if (Mathf.Abs(nyt - koko) <= 0.01f) return;
-                t.style.fontSize = koko;
-                Debug.Log($"MATKAKIRJA ui valikkonappi: {nimi} {perus:0.##} → {koko:0.##} px (tila {tila:0.#}, teksti {leveys:0.#})");
+                if (Mathf.Abs(nyt - koko) <= 0.01f || Mathf.Abs(koko - tulossa) <= 0.01f) return;
+                // Seuraavaan ruutuun (1.0.62-savuke: asetus kesken asettelun toi "Layout update is struggling" -varoituksen).
+                tulossa = koko;
+                t.schedule.Execute(() =>
+                {
+                    t.style.fontSize = tulossa;
+                    Debug.Log($"MATKAKIRJA ui valikkonappi: {nimi} {perus:0.##} → {tulossa:0.##} px (tila {tila:0.#}, teksti {leveys:0.#})");
+                });
             }
-            // Napin koko (paneelin leveys) ja labelin oma asettelu (kirjasin latautuu, teksti vaihtuu) sovittavat uudelleen;
-            // sama koko ei muutu toisella kierroksella, joten silmukkaa ei synny.
+            // Vain napin oma koko (paneelin leveys) sovittaa: labelin koko muuttuu sovituksesta itsestään, eikä sitä kuunnella.
             b.RegisterCallback<GeometryChangedEvent>(_ => Sovita());
-            t.RegisterCallback<GeometryChangedEvent>(_ => Sovita());
             return b;
         }
 

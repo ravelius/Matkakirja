@@ -286,13 +286,18 @@ namespace Matkakirja.Natiivi
             string uusin = null;
             yield return HaeTeksti(peili(AmpariJuuri + "uusin.json"), t => uusin = t);
             paketinJuuri = AmpariJuuri;
+            DioraamaLevyvalimuisti.Aseta(AmpariJuuri, null);
             if (uusin != null)
             {
                 try
                 {
                     var o = Matkakirja.Peli.MiniJson.Jasenna(uusin) as Dictionary<string, object>;
                     string polku = o != null && o.TryGetValue("polku", out var p) ? p as string : null;
-                    if (!string.IsNullOrEmpty(polku)) paketinJuuri = AmpariJuuri + polku.TrimEnd('/') + "/";
+                    if (!string.IsNullOrEmpty(polku))
+                    {
+                        paketinJuuri = AmpariJuuri + polku.TrimEnd('/') + "/";
+                        DioraamaLevyvalimuisti.Aseta(AmpariJuuri, polku.Trim('/'));
+                    }
                 }
                 catch (Exception e) { o.Kirjaa("poikki: uusin.json: " + e.Message); }
             }
@@ -572,13 +577,9 @@ namespace Matkakirja.Natiivi
             valmis(p.result == UnityWebRequest.Result.Success ? p.downloadHandler.text : null);
         }
 
-        static IEnumerator HaeTavut(string url, Action<byte[]> valmis)
-        {
-            using var p = UnityWebRequest.Get(url);
-            p.timeout = 30;
-            yield return p.SendWebRequest();
-            valmis(p.result == UnityWebRequest.Result.Success ? p.downloadHandler.data : null);
-        }
+        // Hash-paketin tiedostot levyvälimuistin kautta. Aikakatkaisu 120 s: 1.0.61:n Blender-paketin 22 Mt:n
+        // ASTC-atlakset eivät ehtineet 30 sekunnissa mobiiliverkossa.
+        static IEnumerator HaeTavut(string url, Action<byte[]> valmis) => DioraamaLevyvalimuisti.Hae(url, 120, valmis);
 
         // --- testikomento "poikki …" --------------------------------------------------------------------------
 
@@ -768,7 +769,7 @@ namespace Matkakirja.Natiivi
             string kohde = viimeNakyma?.KohdeTila ?? "yleisnäkymä";
             return $"poikki: {rakennus.Nimi}, kohde {kohde}, tiloja {rakennus3D.TilojaLadattu}/{rakennus.Tilat.Count}, " +
                    $"hahmoja {hahmot3D.Maara}+{nayttamo.Hahmot3D?.Maara ?? 0} 3d ({nayttamo.Hahmot3D?.MallejaLadattu ?? 0} mallia), " +
-                   $"peili {peiliKuvaus}, aika {(pysaytettyT.HasValue ? pysaytettyT.Value.ToString("F1", CultureInfo.InvariantCulture) : "elää")}";
+                   $"peili {peiliKuvaus}, aika {(pysaytettyT.HasValue ? pysaytettyT.Value.ToString("F1", CultureInfo.InvariantCulture) : "elää")}, " + DioraamaLevyvalimuisti.Raportti();
         }
 
         string Mittausraportti()

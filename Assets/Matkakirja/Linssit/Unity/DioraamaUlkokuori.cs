@@ -102,12 +102,12 @@ namespace Matkakirja.Natiivi
             string AstcHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraHuippu : l == Laatu.Normaali ? kuori.HamaraNormaali : kuori.HamaraKevyt;
             string JpgHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraJpgHuippu : l == Laatu.Normaali ? kuori.HamaraJpgNormaali : kuori.HamaraJpgKevyt;
             string AstcPolku(Laatu l) => hamara && !string.IsNullOrEmpty(AstcHamara(l)) ? AstcHamara(l) : AstcPaiva(l);
-            // Nopea ensimmäinen taso: HUIPPU-laitteellakin normaali ensin, ettei 66 Mt:n lataus pidä kuorta poissa.
+            // Kevyt ensin (12,7 Mt + 2k-tekstuuri): nopea esikatselu ja joka tapauksessa kaukotaso; sitten laitteen oma taso.
+            // 30.9. (Linnanrakentajan havainto): aiempi järjestys normaali → kevyt → huippu latasi huippu-laitteella 162 Mt,
+            // josta normaali-taso ja 4k-tekstuurin toinen lataus turhia; nyt huippu 107 Mt, normaali 74 Mt, kevyt 18 Mt.
             var jarjestys = new List<Laatu>();
-            Laatu ensin = tavoite == Laatu.Huippu && !string.IsNullOrEmpty(kuori.Normaali) ? Laatu.Normaali : tavoite;
-            jarjestys.Add(ensin);
-            if (ensin != Laatu.Kevyt) jarjestys.Add(Laatu.Kevyt);
-            if (tavoite == Laatu.Huippu && ensin != Laatu.Huippu) jarjestys.Add(Laatu.Huippu);
+            if (!string.IsNullOrEmpty(kuori.Kevyt) || tavoite == Laatu.Kevyt) jarjestys.Add(Laatu.Kevyt);
+            if (tavoite != Laatu.Kevyt) jarjestys.Add(tavoite);
 
             foreach (var taso in jarjestys)
             {
@@ -115,12 +115,7 @@ namespace Matkakirja.Natiivi
                 if (string.IsNullOrEmpty(polku)) { kirjaa?.Invoke($"poikki: kuori {taso} puuttuu paketista"); continue; }
                 byte[] tavut = null;
                 float alku = Time.realtimeSinceStartup;
-                using (var p = UnityWebRequest.Get(url(polku)))
-                {
-                    p.timeout = 180;
-                    yield return p.SendWebRequest();
-                    if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data;
-                }
+                yield return DioraamaLevyvalimuisti.Hae(url(polku), 180, t => tavut = t);
                 if (oma != kerta) yield break;
                 if (tavut == null) { kirjaa?.Invoke($"poikki: kuori {taso} ei latautunut"); continue; }
 
@@ -146,12 +141,7 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(astc))
                 {
                     byte[] astcTavut = null;
-                    using (var p = UnityWebRequest.Get(url(astc)))
-                    {
-                        p.timeout = 120;
-                        yield return p.SendWebRequest();
-                        if (p.result == UnityWebRequest.Result.Success) astcTavut = p.downloadHandler.data;
-                    }
+                    yield return DioraamaLevyvalimuisti.Hae(url(astc), 120, t => astcTavut = t);
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
                     kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
                     if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
@@ -159,12 +149,7 @@ namespace Matkakirja.Natiivi
                 if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
                 {
                     byte[] jpg = null;
-                    using (var p = UnityWebRequest.Get(url(JpgHamara(taso))))
-                    {
-                        p.timeout = 120;
-                        yield return p.SendWebRequest();
-                        if (p.result == UnityWebRequest.Result.Success) jpg = p.downloadHandler.data;
-                    }
+                    yield return DioraamaLevyvalimuisti.Hae(url(JpgHamara(taso)), 120, t => jpg = t);
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
                     if (jpg != null) koottu.Kuva = jpg; // sama JPEG-polku alla
                     else kirjaa?.Invoke($"poikki: kuori {taso} hämärä-JPEG ei latautunut, päivätekstuuri");
