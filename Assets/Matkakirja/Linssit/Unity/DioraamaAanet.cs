@@ -146,6 +146,9 @@ namespace Matkakirja.Natiivi
                 // SilmukanTavoitetaso on TILALLINEN (liuku/alkoi per tilaId) -- kutsutaan AINA, myös Paalla=false,
                 // ettei sen sisäinen liuku jää jälkeen; vain lopputulos (ehdokkaan Taso) nollataan kytkimellä.
                 double tavoite = aanimaisema.SilmukanTavoitetaso(tila.Id, taso, nakyma.KohdeTila, t);
+                // Yleisnäkymässä huoneiden silmukat vaimeina (× 0,3): linnan yleisäänet (massa: tuuli, laineet) johtavat, eikä
+                // kuuden kahvan raja pudota niitä (1.1 (75) -mittaus: jarvi-laineet 0,35 jäi keittiön silmukoiden alle).
+                if (nakyma.KohdeTila == null && tila.Id != Aanimaisema.MassaTilaId) tavoite *= 0.3;
                 foreach (var ap in tila.Aanet)
                 {
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
