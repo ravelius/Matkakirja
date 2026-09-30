@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 19:40:** LEVY 42 Gi (< 45 → HÄLYTYS; 46→42 11 min:ssa; kova raja 30), wt/ 37 (raja 20, kasvaa), muisti 57 % vapaa, kuorma 61/210/204 (laskee), sim 1 (siirtoseppa-iPhone F989814A; ≤1 ok), työtilat ok. Viikko 68 % (5 h 15 %). Konteksti: Päätoimittaja 30 %. Kävijälaskuri: 19.29 n=2, seuraava ~20.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Hälytysyritys Päätoimittajalle 19.40 (viestiraja).
+
 **Päivitetty 30.9. 19:29:** LEVY 46 Gi (49→46 17 min:ssa; hälytys < 45, lähellä → kierros 10 min), wt/ 36 (raja 20, kasvaa 33→36), muisti 57 % vapaa, KUORMA 612/238/109 (piikki), sim 1 (linssiseppa-iPad11 903C2B91; ≤1 ok), työtilat ok. Viikko 68 % (5 h 13 %). Konteksti: Päätoimittaja 27 %. Kävijälaskuri 19.29: n=2 (ennallaan). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta (vain Fablen omia). Hälytysyritys Päätoimittajalle 19.29 (viestiraja).
 
 **Päivitetty 30.9. 19:12:** Levy 49 Gi (vakaa 19.01:stä; hälytys < 45), wt/ 34 (raja 20, kasvaa), muisti 71 % vapaa, kuorma 11/22/22, sim 1 (iPhone 17 FB234D08; ≤1 ok), työtilat ok. Viikko 67 % (5 h 10 %). Konteksti: Päätoimittaja 18 % (nollattu), oma ~23 %. Kävijälaskuri: 18.29 n=2, seuraava ~19.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
