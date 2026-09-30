@@ -100,7 +100,10 @@ namespace Matkakirja.Natiivi
                 if (vaaka) k = Mathf.Min(k, 0.24f * RuudunKorkeus / korkeus);
                 skaala = k;
                 Juuri.style.overflow = vaaka ? Overflow.Hidden : Overflow.Visible;
-                float w = Mathf.Max(turvanLeveys / k, g.x);
+                // Pöytä vain kytkinryhmän levyinen omine päätyineen (omistaja 30.9. vaakaparista: "miksi sivuilla on niin pitkät tyhjät
+                // levyt?"): ikkuna ja maa näkyvät molemmin puolin. Puhelimella pystyssä ryhmä (418) on ruutua leveämpi kuten ennen.
+                // A/B `astro kyyti sivulevyt 1` = entinen koko leveys.
+                float w = Sivulevyt ? Mathf.Max(turvanLeveys / k, g.x) : g.x;
                 Juuri.style.width = w; Juuri.style.height = korkeus;
                 Juuri.style.left = (turvanLeveys - w) * 0.5f;
                 Juuri.style.bottom = -this.alaReuna;
@@ -134,6 +137,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pöydän näkyvän yläreunan (kupu) etäisyys Juuren yläreunasta (pt, skaalattuna).</summary>
         /// <summary>A/B `astro kyyti vaakarajaus 0|1`: 0 = vaakana kuten 1.1 (koko pöytä, ei korkeusrajaa) kuvapariin.</summary>
         public static bool VaakaRajaus = true;
+        /// <summary>A/B `astro kyyti sivulevyt 0|1`: 1 = pohja koko ruudun leveydeltä (ennen 30.9. iltaa).</summary>
+        public static bool Sivulevyt;
 
         /// <summary>Ruudun (juuren) korkeus pt; asettaja IssKyytiNakyma ennen Asettelea.</summary>
         public float RuudunKorkeus;
