@@ -118,8 +118,13 @@ namespace Matkakirja.Natiivi
             // Kuvapakka ensin: se jää kortin alle (webin z-index 3 < rail 4).
             Kuvat = new Luentakuvasarja(kerros, turva);
             // Kuvien lennon maali (web lennataKuvatMatkakirjaan: .fact-card): näkyvän kortin laatikko, muuten ei lentoa.
-            Kuvat.Maali = () => kortti.panel != null && kortti.resolvedStyle.display != DisplayStyle.None
-                && kortti.resolvedStyle.opacity > 0.01f ? kortti.worldBound : default;
+            // Kun pikkukuvarivi on jo kortissa (merkinnän kuvat heti), lento laskeutuu sen kohdalle (rivin ensimmäisen kuvan keskelle).
+            Kuvat.Maali = () =>
+            {
+                if (kortti.panel == null || kortti.resolvedStyle.display == DisplayStyle.None || kortti.resolvedStyle.opacity <= 0.01f) return default;
+                var eka = pikkukuvat.childCount > 0 ? pikkukuvat[0].worldBound : default;
+                return eka.width > 0f ? new Rect(eka.xMin, eka.center.y, kortti.worldBound.width, eka.height) : kortti.worldBound;
+            };
 
             kortti = Rakenne.El("mk-matkakirja", turva);
             kortti.style.display = DisplayStyle.None;
@@ -733,9 +738,22 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Luennan jälkeen: pikkukuvat kortin loppuun (webin paivitaMatkakirjanPikkukuvat).</summary>
+        /// <summary>
+        /// Merkinnän kuvat kortin loppuun heti merkinnän tullessa (web paivitaMatkakirjanPikkukuvat renderFactissa: isoisän
+        /// luentakuvat ja Pulun kuvat; Päätoimittaja 30.9.2026, omistajan web-kaappaus Pariisista). Luennan lento laskeutuu
+        /// samoihin kuviin (LisaaPikkukuva ei lisää samaa kahdesti).
+        /// </summary>
+        public void AsetaPikkukuvat(IEnumerable<VirtaKuva> kuvat)
+        {
+            if (kuvat == null) return;
+            foreach (var k in kuvat) LisaaPikkukuva(k);
+        }
+
+        /// <summary>Pikkukuva kortin loppuun (webin paivitaMatkakirjanPikkukuvat); sama osoite vain kerran.</summary>
         public void LisaaPikkukuva(VirtaKuva k)
         {
+            if (k == null || string.IsNullOrEmpty(k.Osoite)) return;
+            foreach (var c in pikkukuvat.Children()) if (c.userData is VirtaKuva v && v.Osoite == k.Osoite) return;
             var el = Rakenne.El("mk-matkakirja__pikkukuva", pikkukuvat);
             // Web .fact-pikkukuva: rotate(-1.4deg), parilliset +1.4deg (valokuvat pöydällä).
             el.style.rotate = new Rotate(pikkukuvat.childCount % 2 == 0 ? 1.4f : -1.4f);
