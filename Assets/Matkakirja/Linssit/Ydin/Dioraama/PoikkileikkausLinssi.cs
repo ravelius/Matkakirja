@@ -203,11 +203,20 @@ namespace Matkakirja.Linssit.Dioraama
                 double p = (x - koh.X) * rx + (z - koh.Z) * rz;
                 l = Math.Min(l, p); r = Math.Max(r, p);
             }
-            double keski = (l + r) / 2, puoli = (r - l) / 2 * 1.1;
-            double h = Math.Atan(Math.Tan(a.Fov * Math.PI / 360.0) * Kuvasuhde);
-            double tarve = h > 1e-4 ? puoli / Math.Tan(h) : a.Etaisyys;
+            // Syvyys kameran suunnassa (pystykentän tarve: pohja kallistuneena + muurien korkeus noin 20 m).
+            double fx = dx / pit, fz = dz / pit, lahin = double.MaxValue, kaukaisin = double.MinValue;
+            foreach (var (x, z) in new[] { (pohjaMinX, pohjaMinZ), (pohjaMinX, pohjaMaxZ), (pohjaMaxX, pohjaMinZ), (pohjaMaxX, pohjaMaxZ) })
+            { double q = (x - koh.X) * fx + (z - koh.Z) * fz; lahin = Math.Min(lahin, q); kaukaisin = Math.Max(kaukaisin, q); }
+            double keski = (l + r) / 2, puoli = (r - l) / 2 * 1.08;
+            double kulma = a.Korkeus * Math.PI / 180.0;
+            double puoliPysty = ((kaukaisin - lahin) * Math.Sin(kulma) + 20.0 * Math.Cos(kulma)) / 2 * 1.08;
+            double v = a.Fov * Math.PI / 360.0, h = Math.Atan(Math.Tan(v) * Kuvasuhde);
+            double tarve = Math.Max(h > 1e-4 ? puoli / Math.Tan(h) : 0, v > 1e-4 ? puoliPysty / Math.Tan(v) : 0);
+            // Natiivi-UI:n katselmus 30.9.: linna täyttää ruudun (etäisyys myös lyhenee), rajattuna 0,4…2,5 × datan etäisyys.
+            double etaisyys = tarve > 0 ? Math.Max(0.4 * a.Etaisyys, Math.Min(2.5 * a.Etaisyys, tarve)) : a.Etaisyys;
             var kohde = new V3(a.Kohde.X + rx * keski, a.Kohde.Y, a.Kohde.Z + rz * keski);
-            return new Asento(kohde, a.Atsimuutti, a.Korkeus, Math.Max(a.Etaisyys, tarve), a.Fov, a.Aukko, a.Kierto);
+            kohde = new V3(kohde.X + fx * (lahin + kaukaisin) / 2, kohde.Y, kohde.Z + fz * (lahin + kaukaisin) / 2);
+            return new Asento(kohde, a.Atsimuutti, a.Korkeus, etaisyys, a.Fov, a.Aukko, a.Kierto);
         }
 
         Asento AsentoFor(string kohde, bool pysty)
