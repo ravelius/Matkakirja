@@ -1683,6 +1683,8 @@ namespace Matkakirja.Natiivi
                         else if (a == "pilvivalo" && osat.Length > 3) Matkakirja.Natiivi.Pilvikuori.ValoPois = osat[3] == "0";   // fotorealismi 3
                         else if (a == "pilvivarjo" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.PilviVarjoPois = osat[3] == "0";   // fotorealismi 3
                         else if (a == "kuunvalo" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.KuunvaloPois = osat[3] == "0";      // fotorealismi 4
+                        else if (a == "ilmatila")
+                            Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
                         else if (a == "ilmavoima" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanVoima = (float)Luku(osat[3]);
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }

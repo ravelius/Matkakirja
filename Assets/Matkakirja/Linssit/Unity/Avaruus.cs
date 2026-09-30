@@ -255,6 +255,30 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Vianetsintä (`astro kyyti ilmatila [debug 0–3]`): kameran etäisyys keskipisteestä, LUT-näytteet ja tila.</summary>
+        public static string Tila(float? debug)
+        {
+            var a = FindAnyObjectByType<Avaruus>();
+            if (a == null || a.kaari2 == null) return "ilmakeha2: ei materiaalia";
+            if (debug.HasValue) a.kaari2.SetFloat("_Debug", debug.Value);
+            var cam = Camera.main;
+            Vector4 k = a.kaari2.GetVector("_Keskus");
+            float et = cam != null ? Vector3.Distance(cam.transform.position, k) : -1f;
+            string lut = "ei LUT:ia";
+            if (a.lapinakyvyys != null && a.lapinakyvyys.IsCreated())
+            {
+                var t = new Texture2D(256, 64, TextureFormat.RGBAHalf, false);
+                var ed = RenderTexture.active; RenderTexture.active = a.lapinakyvyys;
+                t.ReadPixels(new Rect(0, 0, 256, 64), 0, 0); t.Apply(); RenderTexture.active = ed;
+                Color c0 = t.GetPixel(255, 0), c1 = t.GetPixel(128, 0), c2 = t.GetPixel(255, 32);
+                lut = $"T(h0, μ1) ({c0.r:0.000}, {c0.g:0.000}, {c0.b:0.000}), T(h0, μ0) ({c1.r:0.000}, {c1.g:0.000}, {c1.b:0.000}), T(h25k, μ1) ({c2.r:0.000}, {c2.g:0.000}, {c2.b:0.000})";
+                Destroy(t);
+            }
+            return $"ilmakeha2 {(Ilmakeha2 ? "päällä" : "pois")}, piirto {(a.kaariPiirto != null && a.kaariPiirto.enabled)}, materiaali {(a.kaariPiirto != null ? a.kaariPiirto.sharedMaterial?.name : "-")}, "
+                + $"_R {a.kaari2.GetFloat("_R"):0}, yläraja {a.kaari2.GetFloat("_Ylaraja"):0}, kamera–keskus {et:0} m (h {et - a.kaari2.GetFloat("_R"):0}), "
+                + $"keskus {(Vector3)k}, lossy {a.transform.lossyScale}, voima {a.kaari2.GetFloat("_Voima"):0.0}, peitto {a.kaari2.GetFloat("_Peitto"):0.00}; {lut}";
+        }
+
         void OnDestroy()
         {
             KarttaKerrokset.Instanssi?.Taustavari(null);

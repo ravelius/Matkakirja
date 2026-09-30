@@ -32,12 +32,13 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _Hehku("Ilmahehku", Float) = 0.12
         _HehkuVari("Ilmahehkun sävy", Color) = (0.55, 0.95, 0.5, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
+        _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
     }
     HLSLINCLUDE
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         CBUFFER_START(UnityPerMaterial)
-            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku;
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug;
             float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
         CBUFFER_END
         TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
@@ -190,6 +191,10 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 L += _HehkuVari.rgb * hehku;
 
                 float alfa = 1.0 - dot(T, float3(1.0, 1.0, 1.0) / 3.0);
+                // Vianetsintä (laite 30.9.: päivän vertailu tasaisen sininen): läpinäkymätön näkymä arvoista.
+                if (_Debug > 0.5 && _Debug < 1.5) return float4(T, 1);
+                if (_Debug > 1.5 && _Debug < 2.5) return float4((loppu - alku) / 3.0e6, (length(o + d * alku) - _R) / 2.0e5, maa ? 1 : 0, 1);
+                if (_Debug > 2.5) return float4(AurinkoPisteeseen(0, dot(normalize(o + d * alku), s)), 1);
                 return float4(L, alfa) * _Peitto;
             }
             ENDHLSL
