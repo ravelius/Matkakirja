@@ -57,6 +57,18 @@ namespace Matkakirja
 
         static void NollaaTasot23() { Taso23 = true; }
 
+        /// <summary>
+        /// Tasojen 2–3 instanssit samoin ehdoin kuin muut 3D-mallit (Linssiseppä 30.9.2026, omistaja NASA-vertailusta: "iss kuvissa
+        /// näkyy noita 3d nostoja mitkä piti olla pois jo normaalista kartastakin"): ennen vain Taso23-kytkin, joten instanssit
+        /// piirtyivät Paalla = false -tilassakin (29.9. päätös 3D pois) ja linssien, myös ISS-kyydin, aikana.
+        /// </summary>
+        static bool Taso23Sallittu()
+        {
+            if (!Taso23 || !Paalla) return false;
+            var kk = KarttaKerrokset.Instanssi;
+            return !(kk != null && kk.LinssiPaalla);
+        }
+
         static readonly Vector2[] arkkiPuoli = new Vector2[ArkkityyppiKartoitus.Lukumaara];
         static readonly bool[] arkkiPuoliLaskettu = new bool[ArkkityyppiKartoitus.Lukumaara];
 
@@ -76,7 +88,7 @@ namespace Matkakirja
         /// <summary>Piirretäänkö tason 2–3 nostolle arkkityyppi nyt (OnMalli ja Laske23 käyttävät samaa ehtoa).</summary>
         static bool Taso23Kaytossa(Tieto t)
         {
-            if (!Taso23 || VainErikoismallit || t == null || t.Taso < 2 || instanssi == null || !instanssi.instansointi || !KulmaSallii(t)) return false;
+            if (!Taso23Sallittu() || VainErikoismallit || t == null || t.Taso < 2 || instanssi == null || !instanssi.instansointi || !KulmaSallii(t)) return false;
             var nk = NostoKerros.Instanssi;
             return nk != null && NostoSaannot.KuvamerkkiKaytossa(t.Taso, nk.ZoomKerroin);
         }
@@ -181,7 +193,7 @@ namespace Matkakirja
                 if (nk != null) nk.Paivittyi += NostotPaivittyivat;
                 nostoVersio++;
             }
-            if (nk == null || !Taso23 || VainErikoismallit)
+            if (nk == null || !Taso23Sallittu() || VainErikoismallit)
             {
                 if (animoi23 || piirtokutsuja > 0 || tasoittain[0] + tasoittain[1] > 0) Tyhjenna23();
                 // Erikoismallin alla -tilat nollaan (instansseja ei piirretä, UI:n reunapisteet pois).
