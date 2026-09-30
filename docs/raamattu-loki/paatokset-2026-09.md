@@ -9463,3 +9463,7 @@ Omistaja 30.9.2026: 'miksi osa linnasta on niin huono laatuinen … miksi vesi n
 ## OMISTAJA: KONE VAPAASSA KÄYTÖSSÄ (30.9. ILTAPÄIVÄSTÄ) (30.9.2026 klo 16.27)
 
 Omistaja 30.9.2026: 'en tarvitse konetta niin saat käyttää resursseja vapaasti.' Toistaiseksi (kunnes omistaja toisin sanoo tai /tmp/matkakirja-kevyt-lippu tulee): Karttasepän polton 4 ytimen katto pois (vahti enintään 16, nice 15), kaksi simulaattorivuoroa rinnakkain Julkaisijan jonossa, linnan pakettirakennus ja Cycles-renderit ilman kuormarajaa; muistipainetta seurataan (swap korkealla iltapäivän huipuista).
+
+## KORJAUS: SIMULAATTOREITA TAAS YKSI KERRALLAAN (SPRINGBOARD-KAATUMISET SWAPIN TÄYTTYESSÄ) (30.9.2026 klo 16.31)
+
+Päätoimittaja 30.9.2026: kahden rinnakkaisen simulaattorin lupa (loki klo 16.27) peruttu. Omistajan ruudulle tuli kuusi 'SpringBoard lopetti yllättäen' -ikkunaa klo 16.29.05–16.29.10, kun kaksi simulaattoria oli käynnissä (D0D2CD1E, FBBD41D7) ja swap oli täynnä (14,06/14,34 Gt). Enintään yksi simulaattori kerrallaan Julkaisijan vuorolla, ja se sammutetaan (vain oma UDID) heti ajon jälkeen. Muu vapaa käyttö (poltto väistäen, Blender, käännökset nice 15) jatkuu.
