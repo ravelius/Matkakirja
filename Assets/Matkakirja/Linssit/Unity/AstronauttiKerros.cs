@@ -351,6 +351,7 @@ namespace Matkakirja.Natiivi
                 : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
+            CupolaAani.Tila(tila == KyydinTila.Ikkuna); // Pelikoodari: Cupolan humina ja NASA:n radiosilmukka
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio, aika);
         }
 
@@ -445,6 +446,7 @@ namespace Matkakirja.Natiivi
 
         public void Pois()
         {
+            CupolaAani.LinssiPois(); // Pelikoodari: Cupolan äänikerrokset pois linssin mukana
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, false);
             if (cupola != null) Destroy(cupola.gameObject);
             KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false, default);
