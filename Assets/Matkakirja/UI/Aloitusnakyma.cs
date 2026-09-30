@@ -220,6 +220,8 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(apurahaNappi, Kirjasin.Kone);
             PaivitaApurahaNappi();
             Apuraha.Ladattu += PaivitaApurahaNappi;
+            // Nimetön kävijälaskuri (Kaynti.cs): kerran käynnistyksessä.
+            Kaynti.Laheta("avaus");
             var linkki = porttiLinkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
             Kirjasimet.Aseta(linkki, Kirjasin.Kone);
 

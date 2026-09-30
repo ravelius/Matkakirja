@@ -770,6 +770,10 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "omistaja":
+                    // Kävijälaskurin omistajamerkki (Kaynti.cs): 1 = tämä laite on omistajan, ei lasketa kävijäksi.
+                    if (loput == "1" || loput == "0") { PlayerPrefs.SetInt(Kaynti.OmistajaAvain, loput == "1" ? 1 : 0); PlayerPrefs.Save(); }
+                    return $"omistaja {Kaynti.Omistaja} (merkki {PlayerPrefs.GetInt(Kaynti.OmistajaAvain, 0)}, testiympäristö {Kaynti.Testiymparisto})";
                 case "apuraha":
                 {
                     // Apurahan esittelykortti: auki | loppuun | kuva <n> | sulje | tila.
