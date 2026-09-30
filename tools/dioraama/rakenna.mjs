@@ -299,7 +299,7 @@ export function tihennysraja(palikka, tila) {
 }
 
 export async function rakennaData(rakennus, {
-  ulos = 'dist/dioraama', saateita = 48, assetsJuuri = OLETUS_ASSETS_JUURI, aanetKansio = null,
+  ulos = 'dist/dioraama', saateita = 48, assetsJuuri = OLETUS_ASSETS_JUURI, aanetKansio = null, blender = null,
 } = {}) {
   if (!rakennus || typeof rakennus.id !== 'string' || rakennus.id.length === 0) {
     throw new Error('rakennaData: rakennus.id puuttuu tai ei ole merkkijono');
@@ -635,6 +635,42 @@ export async function rakennaData(rakennus, {
   // pysyy tyhjänä, kuten Liekit/Aanet vanhassa muodossa).
   if (hahmo3dTulokset.length > 0) rakennusJson.liikkeet = LIIKKEET;
 
+  // Blender-tuotokset (Linnanrakentaja 30.9., TF 1.0.61:n palikkalinna): tools/dioraama/vie-blender.sh lataa kuoren,
+  // leivotut tilat ja valoatlakset muuttumattomaan kansioon dioraama/<id>/blender/<hash>/ ja kirjoittaa blender.json:n.
+  // Paketissa ne ovat alikansiossa blender/ (vie-dioraama.yml kopioi ne palvelimella), rakennus.json saa Siirtosepän
+  // peilin kentät (tunnelma, ulkokuori, tilat[].glb → leivottu, tilat[].valoatlas) ja tilat rajataan niihin, joilla on
+  // leivottu glb (massa korvautuu kuorella, kuten peilissä).
+  const blenderRivit = [];
+  if (blender) {
+    const on = new Map(blender.tiedostot.map((t) => [t.polku, t]));
+    const B = (p) => { if (!on.has(p)) throw new Error(`blender.json: puuttuu ${p}`); return `blender/${p}`; };
+    const tasot = { huippu: '4k', normaali: '4k', kevyt: '2k' };
+    rakennusJson.tunnelma = 'hamara';
+    rakennusJson.ulkokuori = {
+      ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
+      vesi: -7,
+      tekstuurit: {
+        ...Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-${k}-4x4.astcm`)])),
+        hamara: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}-4x4.astcm`)])),
+        hamaraJpg: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}.jpg`)])),
+      },
+    };
+    const atlas = (id, v) => ({
+      tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
+      astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
+    });
+    rakennusJson.tilat = rakennusJson.tilat.filter((t) => on.has(`tilat/${t.id}.glb`));
+    for (const t of rakennusJson.tilat) {
+      const g = on.get(`tilat/${t.id}.glb`);
+      t.glb = { tiedosto: B(`tilat/${t.id}.glb`), sha256: g.sha256, tavuja: g.tavuja };
+      if (on.has(`valot/${t.id}.jpg`)) {
+        t.valoatlas = atlas(t.id, '');
+        if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
+      }
+    }
+    for (const t of blender.tiedostot) blenderRivit.push({ polku: `blender/${t.polku}`, sha256: t.sha256, tavuja: t.tavuja });
+  }
+
   // Matkamuistojen kuvat (voudin sinetti 29.9., Pelikoodarin löytökortti): <assets>/<rakennus>/matkamuistot/<etsinta.id>.jpg
   // pakettiin samaan polkuun, etsintään kenttä `kuva` ja manifestiin. Puuttuva kuva ei ole virhe (kortti ilman kuvaa).
   const matkamuistoTulokset = [];
@@ -668,6 +704,7 @@ export async function rakennaData(rakennus, {
     ...aanetTulokset.map((a) => ({ polku: a.polku, sha256: a.sha256, tavuja: a.tavuja })),
     ...[...esineTulokset.values()].flat().map((e) => ({ polku: e.tiedosto, sha256: e.sha256, tavuja: e.tavuja })),
     ...matkamuistoTulokset,
+    ...blenderRivit,
     { polku: rakennusJsonPolku, sha256: rakennusJsonSha, tavuja: rakennusJsonBuf.length },
   ].sort((a, b) => (a.polku < b.polku ? -1 : (a.polku > b.polku ? 1 : 0)));
 
@@ -729,7 +766,10 @@ async function main() {
   const moduulinUrl = new URL(`../../js/dioraama/rakennukset/${rakennusId}.js`, import.meta.url);
   const { RAKENNUS } = await import(moduulinUrl.href);
 
-  const tulos = await rakennaData(RAKENNUS, { ulos, saateita, aanetKansio });
+  const blenderPolku = new URL(`../../js/dioraama/rakennukset/${RAKENNUS.id}/blender.json`, import.meta.url);
+  const blender = existsSync(blenderPolku) ? JSON.parse(readFileSync(blenderPolku, 'utf8')) : null;
+  if (blender) console.log(`  blender.json: ${blender.tiedostot.length} tiedostoa, kansio ${blender.kansio}`);
+  const tulos = await rakennaData(RAKENNUS, { ulos, saateita, aanetKansio, blender });
 
   console.log(`${RAKENNUS.otsikko ?? RAKENNUS.nimi} (${RAKENNUS.id}): ${tulos.tilat.length} tilaa\n`);
   let kolmioKaikki = 0; let karkiKaikki = 0; let tavuaKaikki = 0;

@@ -301,6 +301,18 @@ export const LAHTEET = [
         tekija: 'Pelin omaa aineistoa (Sami Reivinen / VVI)',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
+      {
+        nimi: 'Olavinlinna — fotogrammetriamalli (Poikkileikkaus-linssin ulkokuori)',
+        tekija: 'Senaatti-kiinteistöt – Senate Properties (mittaus Tietoa Finland 2021), Sketchfab',
+        lisenssi: 'CC BY 4.0',
+        huom: 'Muokattu: vesi poistettu, restauroinnin työmaaromu siivottu, laatutasot harvennettu ja halkeamat '
+          + 'umpeutettu, iltahämärä ja lämpimät ikkunat leivottu tekstuuriin (Linnanrakentaja 29.9.2026).',
+      },
+      {
+        nimi: 'Poly Haven — dioraaman pintatekstuurit (kivi, puu, kangas, metalli) leivottuina valoatlaksiin',
+        tekija: 'Poly Haven -yhteisö (polyhaven.com)',
+        lisenssi: 'CC0 1.0',
+      },
     ],
   },
   {
