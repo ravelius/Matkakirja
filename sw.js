@@ -406,6 +406,7 @@ const SHELL = [
   './js/linssit/pulu-taulu.js',
   './js/linssit/iss-rata.js',
   './js/linssit/iss-kyyti.js',
+  './js/linssit/cupola-aani.js',
   './js/linssit/iss-kyyti-nakyma.js',
   './js/linssit/iss-realismi.js',
   './js/linssit/iss-realismi-kerrokset.js',
