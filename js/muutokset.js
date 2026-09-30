@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2454, teksti: 'Lukijalle vertailtava ElevenLabs-puheääni kehittäjäkäyttöön' },
   { v: 2452, teksti: 'Nostot kierros 3, erä C: 10 kohdetta kuvineen M… (#3697)' },
   { v: 2451, teksti: 'Olavinlinnan äänimaisema: suunnitelma, CC0/PD-l… (#3698)' },
   { v: 2450, teksti: 'ISS-kytkinpöytä: Blender-malli ja Cycles-kerros… (#3695)' },
