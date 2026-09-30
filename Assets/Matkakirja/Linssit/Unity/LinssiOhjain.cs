@@ -1689,6 +1689,7 @@ namespace Matkakirja.Natiivi
                             Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
                         else if (a == "ilmavoima" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanVoima = (float)Luku(osat[3]);
+                        else if (a == "ilmamoni" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanMoni = (float)Luku(osat[3]);
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "valotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Valotus = (float)Luku(osat[3]); Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "bloom" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.BloomPois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
