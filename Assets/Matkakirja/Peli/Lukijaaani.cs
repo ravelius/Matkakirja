@@ -413,6 +413,18 @@ namespace Matkakirja.Peli
         /// </summary>
         public Func<string> Koodilahde;
 
+        /// <summary>
+        /// LUKIJAN PUHEMOOTTORI (omistaja 30.9.2026, ElevenLabs v4 Turbo -vertailu): (moottori, ääni) tai null = xAI kuten ennen.
+        /// UI (Striimiaani) asettaa; Pulu (persoona pollo) pysyy aina omalla reitillään. Worker lukee kentät moottori ja aani.
+        /// </summary>
+        public Func<(string Moottori, string Aani)?> MoottoriLahde;
+
+        (string Moottori, string Aani)? Moottori(string persoona)
+        {
+            if (persoona == "pollo") return null;
+            try { return MoottoriLahde?.Invoke(); } catch { return null; }
+        }
+
         /// <summary>Kehittäjäkoodi (js/puhe.js kehittajaKoodi) Koodilahteestä; tyhjä = ei.</summary>
         public string Kehittajakoodi
         {
@@ -449,11 +461,19 @@ namespace Matkakirja.Peli
             sb.Append(",\"persoona\":");
             JsonTeksti(sb, persoona ?? "");
             if (!string.IsNullOrEmpty(lohko)) { sb.Append(",\"lohko\":"); JsonTeksti(sb, lohko); }
-            if (saadot?.Aani != null) { sb.Append(",\"aani\":"); JsonTeksti(sb, saadot.Value.Aani); }
+            var moottori = Moottori(persoona);
+            if (moottori != null)
+            {
+                // ElevenLabs: moottori ja sen oma ääni korvaavat xAI-äänen (säädöt eivät koske sitä).
+                sb.Append(",\"moottori\":"); JsonTeksti(sb, moottori.Value.Moottori);
+                if (!string.IsNullOrEmpty(moottori.Value.Aani)) { sb.Append(",\"aani\":"); JsonTeksti(sb, moottori.Value.Aani); }
+            }
+            else if (saadot?.Aani != null) { sb.Append(",\"aani\":"); JsonTeksti(sb, saadot.Value.Aani); }
             if (saadot?.Ohje != null) { sb.Append(",\"ohje\":"); JsonTeksti(sb, saadot.Value.Ohje); }
             if (nopeus != 1) sb.Append(",\"nopeus\":").Append(JsLuku(nopeus));
             sb.Append('}');
-            return (sb.ToString(), saadot != null ? Kehittajakoodi : null);
+            // Kehittäjäkoodi myös ElevenLabs-pyynnöille: worker hyväksyy maksullisen moottorin vain koodilla (Päätoimittaja 30.9.2026).
+            return (sb.ToString(), saadot != null || moottori != null ? Kehittajakoodi : null);
         }
 
         /// <summary>
@@ -466,6 +486,9 @@ namespace Matkakirja.Peli
             double nopeus = Nopeus;
             string saato = (s != null ? (s.Value.Aani ?? "") + "|" + (s.Value.Ohje ?? "") : "")
                 + (nopeus != 1 ? "|" + JsLuku(nopeus) : "");
+            // Eri moottorin pala ei saa soida xAI-välimuistista (eikä päinvastoin).
+            var m = Moottori(persoona);
+            if (m != null) saato += "|" + m.Value.Moottori + ":" + (m.Value.Aani ?? "");
             return persoona + "|" + saato + "|" + teksti;
         }
 

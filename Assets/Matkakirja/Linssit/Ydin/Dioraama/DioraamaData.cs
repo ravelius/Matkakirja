@@ -452,6 +452,17 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Järven pinnan korkeus metreinä (`vesi`, oletus −7): fotogrammetriasta vesi on poistettu, ja natiivi
         /// piirtää järven pinnan "vesi" tälle korkeudelle.</summary>
         public double VesiY = -7;
+        /// <summary>Lähidetalji (menetelmä B, 30.9.2026; `detalji`); null = ei detaljia.</summary>
+        public KuoriDetalji Detalji;
+    }
+
+    /// <summary>Kuoren lähidetalji: UV0-maski (R muuri, G katto, B maa, A kallio) ja neljä laattaavaa sarjaa samassa
+    /// järjestyksessä (`kanavat[]`: diff, nor, toisto_m); voimakkuus (kirkkaus) ja normaali (valon kallistus).</summary>
+    public sealed class KuoriDetalji
+    {
+        public string Maski;
+        public double Voimakkuus = 0.8, Normaali = 0.7;
+        public List<(string Diff, string Nor, double ToistoM)> Kanavat = new List<(string, string, double)>();
     }
 
     public sealed class Rakennus
@@ -547,6 +558,21 @@ namespace Matkakirja.Linssit.Dioraama
                     Kevyt = MiniJson.Teksti(kuori, "kevyt"),
                 };
             if (r.Ulkokuori != null && MiniJson.Luku(kuori, "vesi") is double vesiY) r.Ulkokuori.VesiY = vesiY;
+            var detalji = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuori, "detalji"));
+            if (r.Ulkokuori != null && detalji != null)
+            {
+                var kd = new KuoriDetalji
+                {
+                    Maski = MiniJson.Teksti(detalji, "maski"),
+                    Voimakkuus = MiniJson.Luku(detalji, "voimakkuus") ?? 0.8, Normaali = MiniJson.Luku(detalji, "normaali") ?? 0.7,
+                };
+                foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(detalji, "kanavat")))
+                {
+                    var k = MiniJson.ObjektiTaiNull(ko);
+                    if (k != null) kd.Kanavat.Add((MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                }
+                if (kd.Maski != null && kd.Kanavat.Count > 0) r.Ulkokuori.Detalji = kd;
+            }
             var kuoriTekstuurit = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuori, "tekstuurit"));
             if (r.Ulkokuori != null && kuoriTekstuurit != null)
             {

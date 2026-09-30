@@ -173,6 +173,7 @@ namespace Matkakirja.Natiivi
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
+            linssi.Kuvasuhde = y.Kuvasuhde; // laajat kuvat sovitetaan todelliseen kuvasuhteeseen (iPhone pysty)
             if (kuoriOdotusAlku >= 0f)
             {
                 float odotettu = Time.realtimeSinceStartup - kuoriOdotusAlku;
@@ -660,6 +661,15 @@ namespace Matkakirja.Natiivi
             {
                 if (arvo != null) DioraamaTunnelma.Pakotettu = arvo == "hamara" ? true : arvo == "paiva" ? false : (bool?)null;
                 o.Kirjaa($"poikki: tunnelma {(DioraamaTunnelma.Hamara(rakennus) ? "hämärä" : "päivä")} ({(DioraamaTunnelma.Pakotettu.HasValue ? "pakotettu" : "rakennuksen oletus " + (rakennus?.Tunnelma ?? "paiva"))})");
+                return;
+            }
+            // "poikki detalji [0|1|auto]": kuoren lähidetalji päälle/pois vertailua varten (menetelmä B, 30.9.2026).
+            if (mita == "detalji")
+            {
+                DioraamaUlkokuori.DetaljiPakotettu = arvo == "0" ? false : arvo == "1" ? true : (bool?)null;
+                nayttamo?.Ulkokuori?.AsetaDetaljiParam();
+                o.Kirjaa($"poikki: detalji {(DioraamaUlkokuori.DetaljiPakotettu.HasValue ? (DioraamaUlkokuori.DetaljiPakotettu.Value ? "päällä" : "pois") : "auto")}, " +
+                         $"data {(rakennus?.Ulkokuori?.Detalji != null ? "on" : "ei")}, {DioraamaLaatu.Kuvaus}");
                 return;
             }
             // "poikki kuori [auto|huippu|normaali|kevyt]": ulkokuoren laatutaso (kehittäjän valitsin, muistetaan).
