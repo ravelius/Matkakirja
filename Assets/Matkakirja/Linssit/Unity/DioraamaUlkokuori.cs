@@ -369,8 +369,16 @@ namespace Matkakirja.Natiivi
             return k;
         }
 
+        /// <summary>Kuoren rajat dioraaman koordinaateissa (x, z käännettynä takaisin: UnityPiste z → −z); null ennen tasoa.</summary>
+        public (double minX, double maxX, double minZ, double maxZ)? Pohja { get; private set; }
+
         void AsetaTaso(Laatu taso, Mesh mesh, Texture2D kuva)
         {
+            if (mesh != null)
+            {
+                var b = mesh.bounds; // kuori on juuren alla ilman muunnosta (go ja tasot origossa)
+                Pohja = (b.min.x, b.max.x, -b.max.z, -b.min.z);
+            }
             int i = (int)taso;
             PoistaTaso(i);
             var m = new Material(varjostin) { name = "Ulkokuori:" + taso };

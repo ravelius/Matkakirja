@@ -174,6 +174,7 @@ namespace Matkakirja.Natiivi
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
             linssi.Kuvasuhde = y.Kuvasuhde; // laajat kuvat sovitetaan todelliseen kuvasuhteeseen (iPhone pysty)
+            if (nayttamo.Ulkokuori?.Pohja is { } po) linssi.AsetaPohja(po.minX, po.maxX, po.minZ, po.maxZ);
             if (kuoriOdotusAlku >= 0f)
             {
                 float odotettu = Time.realtimeSinceStartup - kuoriOdotusAlku;
