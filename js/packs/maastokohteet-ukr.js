@@ -742,7 +742,7 @@ export const MAASTOKOHTEET_UKR = [
   {
     id: 'tsernivtsin-yliopisto',
     nimi: 'Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto)',
-    nimio: 'Tšernivtsin yliopisto',
+    nimio: 'Tšernivtsi',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?',
