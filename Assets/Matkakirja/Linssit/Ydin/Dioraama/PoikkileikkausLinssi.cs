@@ -165,10 +165,19 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Näkymän leveys/korkeus (Unity asettaa joka ruutu); 0 = ei sovitusta (Ydin-testit).</summary>
         public double Kuvasuhde { get; set; }
         double pohjaMinX, pohjaMaxX, pohjaMinZ, pohjaMaxZ;
-        bool pohjaOn;
+        bool pohjaOn, pohjaKuoresta;
+
+        /// <summary>Ulkokuoren todelliset rajat (Unity: kuoren meshin bounds dioraaman koordinaateissa) korvaavat tilojen
+        /// rajat (1.1 (76): tunnelma-tilan −80…60 ja laituri vetivät keskipisteen sivuun, linna painui oikealle).</summary>
+        public void AsetaPohja(double minX, double maxX, double minZ, double maxZ)
+        {
+            if (maxX <= minX || maxZ <= minZ) return;
+            pohjaMinX = minX; pohjaMaxX = maxX; pohjaMinZ = minZ; pohjaMaxZ = maxZ; pohjaOn = pohjaKuoresta = true;
+        }
 
         void LaskePohja()
         {
+            if (pohjaKuoresta) return; // kuoren rajat säilyvät uudelleenavauksen yli (sama rakennus)
             pohjaOn = false;
             pohjaMinX = pohjaMinZ = double.MaxValue; pohjaMaxX = pohjaMaxZ = double.MinValue;
             foreach (var t in Rakennus.Tilat)
