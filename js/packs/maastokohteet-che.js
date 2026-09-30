@@ -996,4 +996,249 @@ export const MAASTOKOHTEET_CHE = [
       + 'rekonstruoitu roomalaistalo ja ulkoilmamuseo.',
     lahde: 'en-Wikipedia "Augusta Raurica" (tarkistettu 30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ B, 30.9.2026 — 7 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'habsburgin-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-habsburgin-linna-fd304194.jpg',
+      lyhyt: 'Habsburgin linna kohoaa puiden ja kattojen takaa.',
+      selite: 'Kivinen linna ja sen torni harjanteella, Sveitsin lippu liehuu huipulla.',
+      lahde: 'Valokuva: WillYs Fotowerkstatt, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'WillYs Fotowerkstatt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Schloss_Habsburg-1.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    nimi: 'Habsburgin linna',
+    nimio: 'Habsburg',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka rakennutti linnan noin vuonna 1020?',
+      'Kuka omistaa linnan nykyään?',
+    ],
+    korostukset: ['Radbot|Radbot'],
+    nappi: 'Hallitsijasuvun kotikukkula',
+    // 8.181 E / 47.4627 N — en-Wikipedia "Habsburg Castle", osio "History"
+    laudat: {
+      maailmankartta: { x: 6106, y: 1499 },
+    },
+    teksti: 'Habsburgin linna kohoaa Aargaun kantonissa Aare-joen lähellä, ja siitä sai alkunsa '
+      + 'Habsburgien hallitsijasuvun nimi. Linnan rakennutti noin vuonna 1020 kreivi Radbot '
+      + 'yhdessä Strasbourgin piispa Wernerin kanssa. Radbotin pojanpoika Otto II alkoi '
+      + 'käyttää arvonimessään lisäystä "von Habsburg", ja Rudolf I siirsi suvun '
+      + 'valtakeskuksen Itävaltaan vuonna 1276. Linna pysyi suvun omistuksessa vuoteen 1415, '
+      + 'jolloin Aargau joutui sveitsiläiselle valaliitolle; nykyään sen omistaa Aargaun '
+      + 'kantoni. Länsiosa on kunnostettu ja siellä toimii ravintola sekä pieni näyttely, kun '
+      + 'itäosat ovat raunioina.',
+    lahde: 'en-Wikipedia "Habsburg Castle", osio "History" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'saint-ursanne',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-saint-ursanne-cc7848c6.jpg',
+      lyhyt: 'Vanhankaupungin talot Doubs-joen rannalla.',
+      selite: 'Värikkäitä vanhoja taloja seisoo Doubs-joen rannalla, ja oikealla näkyy kivisilta kaupunginportin luona.',
+      lahde: 'Valokuva: JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'JoachimKohler-HB',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Altstadt_am_Doubs_-_St._Ursanne.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Saint-Ursanne',
+    nimio: 'Saint-Ursanne',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kenen mukaan kaupunki on nimetty?',
+      'Mikä joki kiertää kaupunkia?',
+    ],
+    korostukset: ['Ursicinukseen|Ursicinukseen'],
+    nappi: 'Munkin luostarista kasvanut joenmutka',
+    // 7.15 E / 47.367 N — en-Wikipedia "Saint-Ursanne", johdanto
+    laudat: {
+      maailmankartta: { x: 6071.7, y: 1503 },
+    },
+    teksti: 'Saint-Ursanne on keskiaikainen pikkukaupunki Jurassa, Doubs-joen mutkassa ennen joen '
+      + 'virtaamista Ranskaan. Nimi viittaa 600-luvun munkki Ursicinukseen, joka perusti '
+      + 'paikalle luostarin. Vuodesta 2009 kaupunki on kuulunut Clos du Doubsin kuntaan. '
+      + 'Vanhassa kaupungissa on romaaninen luostarikirkko, kollegiaattikirkko, keskiaikaisia '
+      + 'taloja, erakkomaja ja 1700-luvun silta. Kaupunki on saanut YK:n matkailujärjestö '
+      + 'UNWTO:n tunnustuksen yhtenä maailman parhaista matkailukylistä.',
+    lahde: 'en-Wikipedia "Saint-Ursanne", johdanto (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'solothurnin-katedraali',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-solothurnin-katedraali-1475fb18.jpg',
+      lyhyt: 'Katedraali kupoleineen kohoaa Aare-joen yllä.',
+      selite: 'Vaalea katedraali vihreine kupoleineen ja torneineen nousee talojen takaa Aare-joen rannalla.',
+      lahde: 'Valokuva: JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'JoachimKohler-HB',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aare_und_St._Ursen_Kathedrale_in_Solothurn_(2014).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Solothurnin Pyhän Ursuksen katedraali',
+    nimio: 'Solothurn',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Milloin katedraali vihittiin käyttöön?',
+      'Keiden patsaat reunustavat portaikkoa?',
+    ],
+    korostukset: ['Pisoni|Pisoni'],
+    nappi: 'Portaikko, kaksi patsasta ja kupoli',
+    // 7.5395 E / 47.2083 N — en-Wikipedia "Solothurn Cathedral", osiot "History" ja "Building exterior"
+    laudat: {
+      maailmankartta: { x: 6084.7, y: 1509.7 },
+    },
+    teksti: 'Pyhän Ursuksen katedraali on uusklassinen kirkko Solothurnin vanhassakaupungissa '
+      + 'Aare-joen rannalla. Rakennustyöt alkoivat vuonna 1763, ja Lausannen piispa Joseph '
+      + 'Niklaus von Montenach vihki kirkon 26. syyskuuta 1773. Suunnittelijana toimi '
+      + 'asconalainen Gaetano Matteo Pisoni, ja hänen veljenpoikansa Paolo Antonio Pisoni '
+      + 'otti työn johdon vuonna 1772. Länsijulkisivulle johtavan monumentaalisen portaikon '
+      + 'reunustavat Mooseksen ja Gideonin patsaat roomalaistyylisten suihkukaivojen päällä. '
+      + 'Kirkko on edelleen toimiva katedraali ja Sveitsin kansallisesti merkittävä '
+      + 'kulttuuriperintökohde.',
+    lahde: 'en-Wikipedia "Solothurn Cathedral", osiot "History" ja "Building exterior" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'titlis',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-titlis-e7646f3e.jpg',
+      lyhyt: 'Titlisin kallioseinämä ja lumiset rinteet Fürenalpilta.',
+      selite: 'Jyrkkä harmaa kallioseinämä nousee sinistä taivasta vasten, ja sen juurella näkyy lumikenttä sekä jäätikön reunaa.',
+      lahde: 'Valokuva: W. Bulach, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'W. Bulach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:00_2047_Engelberg_-_Titlis.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Titlis',
+    nimio: 'Titlis',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka korkea Titlis on?',
+      'Milloin köysirata Klein Titlisille avattiin?',
+    ],
+    korostukset: ['Rotair|Rotair'],
+    nappi: 'Jäätikköjen ja Rotairin huippu',
+    // 8.4372 E / 46.7725 N — en-Wikipedia "Titlis", osio "History"
+    laudat: {
+      maailmankartta: { x: 6114.6, y: 1528.1 },
+    },
+    teksti: 'Titlis on 3 238 metriä korkea vuori Uri-Alpeilla Obwaldenin ja Bernin kantonien '
+      + 'rajalla. Ensimmäinen nousu tehtiin vuonna 1739, kun Ignaz Hess, J. E. Waser ja kaksi '
+      + 'muuta engelbergiläistä kiipesivät huipulle. Nykyään Engelbergistä (996 m) pääsee '
+      + 'kolmella osuudella köysiradalla Klein Titlisille (3 028 m), ja yhdellä osuudella '
+      + 'kulkee pyörivä Rotair-hytti. Rata vihittiin käyttöön maaliskuussa 1967, ja Titlis '
+      + 'Cliff Walk -riippusilta avattiin joulukuussa 2012. Pohjoisrinteellä on '
+      + 'Titlis-jäätikkö ja etelärinteellä Wenden-jäätikkö.',
+    lahde: 'en-Wikipedia "Titlis", osio "History" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'arenenberg',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-arenenberg-dec41109.jpg',
+      lyhyt: 'Arenenbergin linna syysvärien ja viinitarhan yläpuolella.',
+      selite: 'Vaaleankeltainen päärakennus ja sen viereinen sivurakennus seisovat rinteellä syksyisten puiden takana.',
+      lahde: 'Valokuva: JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'JoachimKohler-HB',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Schloss_Arenenberg_am_Untersee.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Arenenbergin linna',
+    nimio: 'Arenenberg',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka osti tilan vuonna 1817?',
+      'Mitä linnassa on nykyään?',
+    ],
+    korostukset: ['Hortense de Beauharnais|Hortense de Beauharnais'],
+    nappi: 'Napoleon III:n nuoruuden koti',
+    // 9.0592 E / 47.6728 N — en-Wikipedia "Arenenberg", osio "History"
+    laudat: {
+      maailmankartta: { x: 6135.3, y: 1490.1 },
+    },
+    teksti: 'Arenenbergin linna seisoo Thurgaun kantonissa Salensteinin kunnassa Bodenjärven '
+      + 'Untersee-osan rannalla. Rakennuksen alkuperä on 1500-luvun alussa, ja sen tunnetaan '
+      + 'rakentaneen Konstanzin pormestari Sebastian Geissberg. Vuonna 1817 Hortense de '
+      + 'Beauharnais osti tilan, muutti sinne 1818 ja piti siellä pariisilaistyylisiä '
+      + 'salonkeja. Hänen poikansa Louis Napoléon, tuleva Napoleon III, vietti paikalla '
+      + 'nuoruuttaan ja sai Sveitsin kansalaisuuden. Nykyään linnassa toimii Napoleon-museo, '
+      + 'ja kohde on Sveitsin kansallisesti merkittävä kulttuuriperintökohde.',
+    lahde: 'en-Wikipedia "Arenenberg", osio "History" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'ebenalp-wildkirchli',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-ebenalp-wildkirchli-4f88fadf.jpg',
+      lyhyt: 'Äscherin vuorimajatalo nojaa jyrkkään kalliojyrkänteeseen.',
+      selite: 'Puuverhoiltu vuorimajatalo, jonka takana kohoaa kalliojyrkänne.',
+      lahde: 'Valokuva: Benreis, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Benreis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Berggasthaus_%C3%84scher_2023_(5).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Ebenalp ja Wildkirchli',
+    nimio: 'Ebenalp',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Milloin Ebenalpin köysirata avattiin?',
+      'Kuka perusti erakkomajan Wildkirchlin yläluolaan?',
+    ],
+    korostukset: ['Wildkirchlin|Wildkirchlin'],
+    nappi: 'Luolat, erakot ja neandertalilaiset',
+    // 9.4108 E / 47.2842 N — en-Wikipedia "Ebenalp" ja "Wildkirchli", osiot "Cable car", "Paleolithic" ja "Religious history"
+    laudat: {
+      maailmankartta: { x: 6147, y: 1506.5 },
+    },
+    teksti: 'Ebenalp on Appenzellin Alpeilla, Sveitsin Appenzell Innerrhodenin kantonissa '
+      + 'sijaitseva 1 640 metrin huippu, Alpstein-vuoriston pohjoisin. Wasserauenista sinne '
+      + 'kulkee köysirata, joka on toiminut vuodesta 1955. Jyrkänteen alla on Wildkirchlin '
+      + 'luolasto, jonka Altarhöhle-luolasta on löytynyt piikivityökaluja neandertalinihmisen '
+      + 'ajalta, noin 40 000 vuoden takaa. Vuonna 1658 pappi Paulus Ulmann perusti alaluolaan '
+      + 'kappelin ja yläluolaan erakkomajan, ja luolat toimivat pyhiinvaelluskohteena erakon '
+      + 'kuolemaan 1851 asti. Nyt kalliolla on Äscherin vuorimajatalo.',
+    lahde: 'en-Wikipedia "Ebenalp" ja "Wildkirchli", osiot "Cable car", "Paleolithic" ja '
+      + '"Religious history" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'stanserhorn',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/che-nosto-stanserhorn-dd70ab63.jpg',
+      lyhyt: 'Stanserhorn nousee Luzernin järven rannan takaa.',
+      selite: 'Lumiharjainen vuori kohoaa metsäisen ja rakennetun rannan takana. Etualalla on purjevene sinisellä järvellä.',
+      lahde: 'Valokuva: Paradise Chronicle, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Paradise Chronicle',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stanserhorn_from_Lake_Lucerne.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Stanserhorn',
+    nimio: 'Stanserhorn',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Minä vuonna CabriO-köysirata avattiin?',
+      'Kuinka monta järveä huipulta näkyy selkeällä säällä?',
+    ],
+    korostukset: ['CabriO|CabriO'],
+    nappi: 'Avokattoinen köysirata Nidwaldenin yllä',
+    // 8.3403 E / 46.9297 N — en-Wikipedia "Stanserhorn", osiot "Funicular", "CabriO" ja "Summit"
+    laudat: {
+      maailmankartta: { x: 6111.3, y: 1521.5 },
+    },
+    teksti: 'Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea '
+      + 'huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen '
+      + 'köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. '
+      + 'kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 '
+      + 'matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä '
+      + 'ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa '
+      + 'erottuu kymmenen järveä.',
+    lahde: 'en-Wikipedia "Stanserhorn", osiot "Funicular", "CabriO" ja "Summit" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];
