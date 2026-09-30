@@ -179,19 +179,30 @@ namespace Matkakirja.Natiivi
             {
                 var v = Fokusvirrat.Hae(k);
                 var m = aarreLippu == k ? Matkakirjamerkinnat.Aarre(v) : null;
-                bool fokus = false;
+                bool aarre = m != null, fokus = false;
                 if (m == null && (m = Matkakirjamerkinnat.Fokus(v)) != null) fokus = true;
                 m ??= Matkakirjamerkinnat.Saapuminen(k) ?? Matkakirjamerkinnat.Havainto(k);
                 if (m == null) return;
                 // Sama merkintä jo kortissa (web factKey): ei kirjoiteta uudelleen.
                 if (kortti.Avain == m.Avain && kortti.Nakyy) return;
                 luentoOdotus?.Pause();
-                if (!fokus) { kortti.Nayta(m); LueSaapuminen(m); return; }
+                if (!fokus && !aarre) { kortti.Nayta(m); LueSaapuminen(m); return; }
+                if (aarre)
+                {
+                    // Aarremerkintä on fokusvirran merkintä (web renderFact): kuvat heti kortin loppuun.
+                    kortti.Nayta(m);
+                    kortti.AsetaPikkukuvat(v.Luentakuvat.Concat(v.PuluKuvat));
+                    LueSaapuminen(m);
+                    return;
+                }
                 // Fokusmerkintä odottaa luentoa (web aloitaMerkinta): otsikko heti, teksti luennan alkaessa.
                 kaupunki = k;
                 bool luentoTulossa = ohjain?.Luennat?.Luento(k) != null && !luentoAlkanut.Contains(k)
                     && Asetukset.Paalla(Kytkin.Kertoja);
                 kortti.Nayta(m, kirjoita: false);
+                // Kuvat heti merkinnän tullessa myös ilman luentaa (web renderFact → paivitaMatkakirjanPikkukuvat; pariteetti 30.9.:
+                // kertoja pois → vain lennon 2 kuvaa, webissä 4).
+                kortti.AsetaPikkukuvat(v.Luentakuvat.Concat(v.PuluKuvat));
                 if (!luentoTulossa) { KirjoitaIlmanLuentoa(k); return; }
                 // C16: ensisaapumisen luenta odottaa pulun paljastusta (PeliOhjain.LuentaLykatty) — odotus jatkuu,
                 // kunnes lykkäys on purettu (luenta alkoi → Alkoi, tai ei alkanut → kirjoitus ilman sitä).
