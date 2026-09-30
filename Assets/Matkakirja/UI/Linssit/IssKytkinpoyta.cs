@@ -93,7 +93,7 @@ namespace Matkakirja.Natiivi
                 // alemmas"): pöytä rajataan kuvun alareunaan (säleikkökaista ja alakehys pois, overflow hidden) ja skaalataan
                 // enintään 24 %:iin ruudun korkeudesta; napit ruudun alareunassa (bottom −alaReuna). Osuma-alat ovat kerroksissa
                 // vähintään 64 pt, jolloin skaalattunakin ≥ 44 pt.
-                bool vaaka = RuudunKorkeus > 1f && turvanLeveys > RuudunKorkeus;
+                bool vaaka = VaakaRajaus && RuudunKorkeus > 1f && turvanLeveys > RuudunKorkeus;
                 float korkeus = g.y;
                 if (vaaka && IssPaneeliKuvat.Osa(asettelu, "kupu") is Rect kupu) korkeus = Mathf.Min(g.y, kupu.yMax + 2f);
                 float k = Mathf.Min(1f, turvanLeveys / (g.x - 16f));
@@ -132,6 +132,9 @@ namespace Matkakirja.Natiivi
         public string Asettelu => asettelu;
 
         /// <summary>Pöydän näkyvän yläreunan (kupu) etäisyys Juuren yläreunasta (pt, skaalattuna).</summary>
+        /// <summary>A/B `astro kyyti vaakarajaus 0|1`: 0 = vaakana kuten 1.1 (koko pöytä, ei korkeusrajaa) kuvapariin.</summary>
+        public static bool VaakaRajaus = true;
+
         /// <summary>Ruudun (juuren) korkeus pt; asettaja IssKyytiNakyma ennen Asettelea.</summary>
         public float RuudunKorkeus;
 

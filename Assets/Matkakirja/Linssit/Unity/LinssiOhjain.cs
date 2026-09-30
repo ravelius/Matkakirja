@@ -1604,6 +1604,7 @@ namespace Matkakirja.Natiivi
                         else if (a == "polyt" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Polyt = osat[3] != "0"; // A/B pölyhiukkaset auringonsäteessä
                         else if (a == "kytkin") Kirjaa("astro " + Matkakirja.Natiivi.IssKyytiNakyma.KytkinTesti(osat.Skip(3).ToArray()));
                         else if (a == "poyta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Kytkinpoyta = osat[3] != "0"; // A/B kytkinpöytä (30.9.)
+                        else if (a == "vaakarajaus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.VaakaAB(osat[3] != "0"); // A/B vaakapöytä (30.9.)
                         else if (a == "kerrokset" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.KerroksetAB(osat[3] != "0"); // A/B renderikerrokset (30.9.)
                         else if (a == "kytkinkuvat" && osat.Length > 3) Matkakirja.Natiivi.IssKytkimet.KaytaKuvia = osat[3] != "0"; // A/B Codexin kuvat
                         else if (a == "katto30" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.CupolaKatto30 = osat[3] != "0"; // A/B Cupolan 30 fps (30.9.)
