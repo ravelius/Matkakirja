@@ -422,6 +422,7 @@ namespace Matkakirja.Natiivi
             if (instanssi == this) instanssi = null;
         }
 
+        static bool LinssiAuki() { var kk = KarttaKerrokset.Instanssi; return kk != null && kk.LinssiPaalla; }
         bool Liikkuu() => Paalla && !ElavaKerros.Staattinen && !(ohjain != null && ohjain.VahennettyLiike);
 
         void LateUpdate()
@@ -472,7 +473,9 @@ namespace Matkakirja.Natiivi
                 Vector3 pohjoinen = Vector3.ProjectOnPlane(napa, ylos).normalized;
                 // Näkyy: korkeusikkuna, juuri kameran puolella (ei horisontin takana) ja ruudulla reunavaralla (simulaattori
                 // 26.9.: ruudun ulkopuolinen aihe piti elävän kerroksen käynnissä turhaan).
-                float p = !meriPois && Paalla && korkeus >= NakyyAlkaenM && korkeus <= NakyyAstiM && Vector3.Dot(kameraL - juuri, ylos) > 0
+                // Ei linssien (ISS-kyyti, astronautin kamera) aikana: näkyivät 600 km:iin asti, joten Venetsian gondolit piirtyivät
+                // ISS:n kuviin (omistaja 30.9.: "iss kuvissa näkyy noita 3d nostoja", Linssiseppä 1.10.).
+                float p = !meriPois && Paalla && !LinssiAuki() && korkeus >= NakyyAlkaenM && korkeus <= NakyyAstiM && Vector3.Dot(kameraL - juuri, ylos) > 0
                     && Ruudulla(gt.TransformPoint(juuri))
                     ? Mathf.Clamp01((float)((NakyyAstiM - korkeus) / (NakyyAstiM - HaipyyAlkaenM))) : 0f;
                 if (a.Naytos != null)
