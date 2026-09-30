@@ -63,6 +63,8 @@ namespace Matkakirja.Natiivi
 
         public Kuvasuurennos(VisualElement isa)
         {
+            // Näppäimistö (omistaja 30.9.): ← → selaa kuvia kuten ‹ › ja pyyhkäisy, Esc sulkee.
+            Nappaimisto.Rekisteroi("kuvasuurennos", 100, () => Auki, d => { if (sarja.Count > 1) Nayta(i + d); }, null, Sulje);
             kerros = Rakenne.El("mk-nosto__suurennos mk-suurennos", isa);
             kerros.style.display = DisplayStyle.None;
             // Löydös 132: kokoruudun taustaksi pallon sumennettu pysäytyskuva (Natiiviseppä, PalloKierto.Pysaytyskuva)

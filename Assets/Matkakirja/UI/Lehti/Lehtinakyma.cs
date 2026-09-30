@@ -108,6 +108,9 @@ namespace Matkakirja.Natiivi
 
         public Lehtinakyma(UiKerros ui)
         {
+            // Näppäimistö (omistaja 30.9.): ← → sivu kuten Edellinen/Seuraava ja pyyhkäisy, ↑ ↓ vierittää, Esc sulkee.
+            Nappaimisto.Rekisteroi("lehti", 50, () => Auki, d => Kaanna(nyt + d),
+                d => { if (sivu != null) sivu.scrollOffset += new Vector2(0f, d * 160f); }, Sulje);
             var juuri = ui.Juuri(Kerros);
             peite = Rakenne.El("mk-lehti__peite", juuri);
             peite.style.display = DisplayStyle.None;
