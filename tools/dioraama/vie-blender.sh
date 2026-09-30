@@ -11,6 +11,12 @@
 #   Osoitin (uusin.json) EI vaihdu tässä: kun blender.json on mainissa, vie-dioraama.yml kopioi kansion palvelimella
 #   uuteen paketin hash-kansioon (<hash>/blender/) ja vaihtaa osoittimen vasta sitten.
 #
+# PEILI EI OLE JULKAISU (sääntö kaikille dioraamoille): jokainen _valmiit/<rakennus>-blender-muutos (uusi leivonta,
+# kuori, atlas) vaatii uuden ajon tällä skriptillä (uusi hash) ja blender.json-commitin mainiin. Ilman sitä julkaistu
+# paketti jää vanhaan tai on proseduraalinen palikkamalli. Koko putki (leivonta → vienti → merge → CI-kopio →
+# todennus puhtaalla asennuksella): tools/dioraama/rakenna.mjs:n alkukommentti BLENDER-PUTKI ja docs/moduulit/linssit.md
+# osio 12. tests/dioraama-blender.test.mjs hylkää paketin, josta puuttuu ulkokuori, kun blender.json on olemassa.
+#
 # Käyttö:  tools/dioraama/vie-blender.sh [--kuiva] [--lahde <kansio>] [--rakennus olavinlinna]
 #   --kuiva  vain lista, koko, PUT-arvio ja blender.json, ei latausta.
 # Avaimet VAIN ympäristöstä: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AMPARI (tai R2_BUCKET), PAATE (tai R2_ACCOUNT_ID).

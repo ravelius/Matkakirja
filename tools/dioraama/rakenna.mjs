@@ -24,11 +24,24 @@
  * mediatiedosto EI ole virhe: tulostaa `ei lähdettä: <polku>` ja käyttää
  * paikkamerkkiä / jättää kentän pois.
  *
+ * BLENDER-PUTKI (Linnanrakentaja 30.9.2026; TF 1.0.61 näytti palikkalinnan, koska Blender-tuotokset olivat vain
+ * paikallisessa _valmiit-kansiossa ja Siirtosepän peilissä). PEILI EI OLE JULKAISU. Jokaisella dioraamalla, jolla on
+ * Blender-kuori tai leivotut tilat, julkaisu kulkee näin:
+ *   1. Leivonta/kuori → /Users/Shared/Claude/proto-3d/_valmiit/<id>-blender/ (ulkokuori/, tilat/, valot/).
+ *   2. OMISTAJA ajaa tools/dioraama/vie-blender.sh [--rakennus <id>] (ensin --kuiva): muuttumaton kansio
+ *      dioraama/<id>/blender/<hash>/ ämpäriin ja js/dioraama/rakennukset/<id>/blender.json repoon.
+ *   3. blender.json commitoidaan ja mergetään (Julkaisijan juna). Tämä tiedosto lukee sen main():ssa ja lisää
+ *      kentät lisaaBlender():lla; tarkistaBlenderPaketti() hylkää paketin ilman ulkokuorta (tests/dioraama-blender).
+ *   4. vie-dioraama.yml tarkistaa lähdekansion, kopioi sen palvelimella pakettiin <hash>/blender/ ja vaihtaa
+ *      osoittimen vasta sitten. 5. Siirtoseppä todentaa PUHTAALLA asennuksella (ei peiliä).
+ *   Jokainen _valmiit-muutos = uusi vie-blender.sh-ajo (uusi hash) + uusi blender.json-commit, muuten julkaisu jää
+ *   vanhaan. main() varoittaa, jos _valmiit-kansio on olemassa mutta blender.json puuttuu tai on sitä vanhempi.
+ *
  * EI UUSIA NPM-RIIPPUVUUKSIA. B1:n (glb.mjs) ja B2:n (reseptit.mjs) tiedostoja
  * ei muokata tästä — vain käytetään niiden dokumentoitua rajapintaa.
  */
 
-import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -296,6 +309,60 @@ export function tihennysraja(palikka, tila) {
   if (palikka.resepti === 'vesi') return Infinity;
   if (palikka.resepti === 'kallio') return 4;
   return tila.kohdistettava === false ? 2 : 0.5;
+}
+
+/**
+ * Blender-tuotokset rakennus.json:iin (Linnanrakentaja 30.9., TF 1.0.61:n palikkalinna): tools/dioraama/vie-blender.sh
+ * lataa kuoren, leivotut tilat ja valoatlakset muuttumattomaan kansioon dioraama/<id>/blender/<hash>/ ja kirjoittaa
+ * blender.json:n. Paketissa ne ovat alikansiossa blender/ (vie-dioraama.yml kopioi ne palvelimella), rakennus.json saa
+ * Siirtosepän peilin kentät (tunnelma, ulkokuori, tilat[].glb → leivottu, tilat[].valoatlas) ja tilat rajataan niihin,
+ * joilla on leivottu glb (massa korvautuu kuorella, kuten peilissä). Muokkaa rakennusJsonia paikallaan, palauttaa
+ * manifestin rivit. Puuttuva kuoritiedosto blender.json:ssa on virhe.
+ */
+export function lisaaBlender(rakennusJson, blender) {
+  const on = new Map(blender.tiedostot.map((t) => [t.polku, t]));
+  const B = (p) => { if (!on.has(p)) throw new Error(`blender.json: puuttuu ${p}`); return `blender/${p}`; };
+  const tasot = { huippu: '4k', normaali: '4k', kevyt: '2k' };
+  rakennusJson.tunnelma = 'hamara';
+  rakennusJson.ulkokuori = {
+    ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
+    vesi: -7,
+    tekstuurit: {
+      ...Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-${k}-4x4.astcm`)])),
+      hamara: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}-4x4.astcm`)])),
+      hamaraJpg: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}.jpg`)])),
+    },
+  };
+  const atlas = (id, v) => ({
+    tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
+    astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
+  });
+  rakennusJson.tilat = rakennusJson.tilat.filter((t) => on.has(`tilat/${t.id}.glb`));
+  for (const t of rakennusJson.tilat) {
+    const g = on.get(`tilat/${t.id}.glb`);
+    t.glb = { tiedosto: B(`tilat/${t.id}.glb`), sha256: g.sha256, tavuja: g.tavuja };
+    if (on.has(`valot/${t.id}.jpg`)) {
+      t.valoatlas = atlas(t.id, '');
+      if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
+    }
+  }
+  return blender.tiedostot.map((t) => ({ polku: `blender/${t.polku}`, sha256: t.sha256, tavuja: t.tavuja }));
+}
+
+/**
+ * Palikkapaketin vartija (TF 1.0.61): kun rakennuksella on blender.json, rakennus.json EI saa lähteä ilman ulkokuorta
+ * tai proseduraalisilla tila-glb:illä. Heittää virheen, jolloin rakennus ja vie-dioraama.yml pysähtyvät ennen latausta.
+ */
+export function tarkistaBlenderPaketti(rakennusJson, blender) {
+  if (!blender) return;
+  const k = rakennusJson.ulkokuori;
+  if (!k || !['huippu', 'normaali', 'kevyt'].every((t) => typeof k[t] === 'string' && k[t].startsWith('blender/'))) {
+    throw new Error(`${rakennusJson.id}: blender.json on olemassa, mutta rakennus.json:sta puuttuu ulkokuori (palikkapaketti)`);
+  }
+  if (!rakennusJson.tilat?.length) throw new Error(`${rakennusJson.id}: blender.json on olemassa, mutta tiloja ei ole`);
+  for (const t of rakennusJson.tilat) {
+    if (!t.glb?.tiedosto?.startsWith('blender/')) throw new Error(`${rakennusJson.id}/${t.id}: tila-glb ei ole leivottu (blender/)`);
+  }
 }
 
 export async function rakennaData(rakennus, {
@@ -635,41 +702,9 @@ export async function rakennaData(rakennus, {
   // pysyy tyhjänä, kuten Liekit/Aanet vanhassa muodossa).
   if (hahmo3dTulokset.length > 0) rakennusJson.liikkeet = LIIKKEET;
 
-  // Blender-tuotokset (Linnanrakentaja 30.9., TF 1.0.61:n palikkalinna): tools/dioraama/vie-blender.sh lataa kuoren,
-  // leivotut tilat ja valoatlakset muuttumattomaan kansioon dioraama/<id>/blender/<hash>/ ja kirjoittaa blender.json:n.
-  // Paketissa ne ovat alikansiossa blender/ (vie-dioraama.yml kopioi ne palvelimella), rakennus.json saa Siirtosepän
-  // peilin kentät (tunnelma, ulkokuori, tilat[].glb → leivottu, tilat[].valoatlas) ja tilat rajataan niihin, joilla on
-  // leivottu glb (massa korvautuu kuorella, kuten peilissä).
-  const blenderRivit = [];
-  if (blender) {
-    const on = new Map(blender.tiedostot.map((t) => [t.polku, t]));
-    const B = (p) => { if (!on.has(p)) throw new Error(`blender.json: puuttuu ${p}`); return `blender/${p}`; };
-    const tasot = { huippu: '4k', normaali: '4k', kevyt: '2k' };
-    rakennusJson.tunnelma = 'hamara';
-    rakennusJson.ulkokuori = {
-      ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
-      vesi: -7,
-      tekstuurit: {
-        ...Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-${k}-4x4.astcm`)])),
-        hamara: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}-4x4.astcm`)])),
-        hamaraJpg: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}.jpg`)])),
-      },
-    };
-    const atlas = (id, v) => ({
-      tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
-      astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
-    });
-    rakennusJson.tilat = rakennusJson.tilat.filter((t) => on.has(`tilat/${t.id}.glb`));
-    for (const t of rakennusJson.tilat) {
-      const g = on.get(`tilat/${t.id}.glb`);
-      t.glb = { tiedosto: B(`tilat/${t.id}.glb`), sha256: g.sha256, tavuja: g.tavuja };
-      if (on.has(`valot/${t.id}.jpg`)) {
-        t.valoatlas = atlas(t.id, '');
-        if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
-      }
-    }
-    for (const t of blender.tiedostot) blenderRivit.push({ polku: `blender/${t.polku}`, sha256: t.sha256, tavuja: t.tavuja });
-  }
+  // Blender-tuotokset (ks. alkukommentin BLENDER-PUTKI): kentät lisaaBlender(), tarkistus ennen rakennus.json:n kirjoitusta.
+  const blenderRivit = blender ? lisaaBlender(rakennusJson, blender) : [];
+  tarkistaBlenderPaketti(rakennusJson, blender);
 
   // Matkamuistojen kuvat (voudin sinetti 29.9., Pelikoodarin löytökortti): <assets>/<rakennus>/matkamuistot/<etsinta.id>.jpg
   // pakettiin samaan polkuun, etsintään kenttä `kuva` ja manifestiin. Puuttuva kuva ei ole virhe (kortti ilman kuvaa).
@@ -769,6 +804,13 @@ async function main() {
   const blenderPolku = new URL(`../../js/dioraama/rakennukset/${RAKENNUS.id}/blender.json`, import.meta.url);
   const blender = existsSync(blenderPolku) ? JSON.parse(readFileSync(blenderPolku, 'utf8')) : null;
   if (blender) console.log(`  blender.json: ${blender.tiedostot.length} tiedostoa, kansio ${blender.kansio}`);
+  const valmiit = `/Users/Shared/Claude/proto-3d/_valmiit/${RAKENNUS.id}-blender`;
+  const uusinValmis = existsSync(valmiit)
+    ? Math.max(0, ...readdirSync(valmiit, { recursive: true }).map((f) => statSync(join(valmiit, f)).mtimeMs)) : 0;
+  if (uusinValmis > 0 && (!blender || uusinValmis > statSync(blenderPolku).mtimeMs)) {
+    console.warn(`  VAROITUS: ${valmiit} on ${blender ? 'uudempi kuin blender.json' : 'olemassa, mutta blender.json puuttuu'}`
+      + ' — peili ei ole julkaisu: omistaja ajaa tools/dioraama/vie-blender.sh ja blender.json commitoidaan.');
+  }
   const tulos = await rakennaData(RAKENNUS, { ulos, saateita, aanetKansio, blender });
 
   console.log(`${RAKENNUS.otsikko ?? RAKENNUS.nimi} (${RAKENNUS.id}): ${tulos.tilat.length} tilaa\n`);
