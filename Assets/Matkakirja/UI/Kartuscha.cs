@@ -389,10 +389,11 @@ namespace Matkakirja.Natiivi
         /// </summary>
         bool PeittaaLipun(Rect ruutu, Rect yla, float vara = PaneelinVaraPt)
         {
-            var a = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.xMin, Screen.height - ruutu.yMax));
-            var b = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.xMax, Screen.height - ruutu.yMin));
-            var alaPaneelissa = Rect.MinMaxRect(a.x, a.y, b.x, b.y);
+            // Muunnos suoraan paneelin mittakaavalla (simulaattori 30.9.: RuntimePanelUtils.ScreenToPanel antoi y-käännetyn tai
+            // skaalaamattoman laatikon, jolloin Overlaps oli aina epätosi, vaikka kortti peitti tangon: `ui kartuscha lippu tila`).
             float leveys = kortti.panel.visualTree.layout.width;
+            float k = Screen.width / Mathf.Max(1f, leveys);
+            var alaPaneelissa = Rect.MinMaxRect(ruutu.xMin / k, (Screen.height - ruutu.yMax) / k, ruutu.xMax / k, (Screen.height - ruutu.yMin) / k);
             float x0 = yla.xMin <= ReunaPt ? float.MinValue / 4 : yla.xMin - vara;
             float x1 = yla.xMax >= leveys - ReunaPt ? float.MaxValue / 4 : yla.xMax + vara;
             var v = Rect.MinMaxRect(x0, yla.yMin - vara, x1, yla.yMax + vara);
