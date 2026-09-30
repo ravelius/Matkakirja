@@ -46,12 +46,21 @@ namespace Matkakirja.Natiivi
 
         public bool Nakyy => kortit.Count > 0;
 
+        /// <summary>Arvioijakierros 30.9. (1.1 (75)): Ohita näkyy vain luennan aikana (Saapumisesitys.Alkoi → tosi,
+        /// Loppui → epätosi). Livian kommentin PuluCam-kuvat eivät tuo Ohitaa takaisin.</summary>
+        public bool LuentoKaynnissa
+        {
+            get => luentoKaynnissa;
+            set { luentoKaynnissa = value; if (!value) ohita.style.display = DisplayStyle.None; }
+        }
+        bool luentoKaynnissa;
+
         /// <summary>Uusi kuva pakan päälle (lataa ensin; kuva, joka ei lataudu, jää pois).</summary>
         public void Lisaa(VirtaKuva k)
         {
             if (k == null) return;
             loppu?.Pause();
-            ohita.style.display = DisplayStyle.Flex;
+            ohita.style.display = luentoKaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
             AsetaPaikka(); // Ohita heti oikeaan reunaan, ei ensin alas keskelle
             Natiivi.Kuvat.Hae(k.Osoite, t =>
             {

@@ -308,6 +308,7 @@ namespace Matkakirja.Natiivi
                     kortti.AsetaPikkukuvat(v.Luentakuvat.Concat(v.PuluKuvat));
                 }
                 kortti.Kuvat.Tyhjenna(false);
+                kortti.Kuvat.LuentoKaynnissa = true;
                 if (v.Luentakuvat.Count > 0) kortti.Kuvat.Lisaa(v.Luentakuvat[0]);
                 vaihto?.Pause();
                 if (v.Luentakuvat.Count > 1)
@@ -325,6 +326,10 @@ namespace Matkakirja.Natiivi
             if (Lennolla) return;
             vaihto?.Pause();
             if (string.IsNullOrEmpty(k) || k != kaupunki) return;
+            // Arvioijakierros 30.9.: luennan kuvat ja Ohita pois heti luennan päättyessä (kuvat lentävät matkakirjaan);
+            // Livian kommentin PuluCam-kuvat tulevat tämän jälkeen ilman Ohitaa ja häipyvät hiljaisuuden jälkeen.
+            kortti.Kuvat.LuentoKaynnissa = false;
+            kortti.Kuvat.Tyhjenna(true);
             var v = Fokusvirrat.Hae(k);
             // Ohita tai lähtö (PeliOhjain.LuentoOhitettu, web luennanOhitus): pulun kommenttia ei aloiteta.
             if (v == null || kommentoitu.Contains(k) || v.PuluKommentit.Count == 0 || ohjain?.LuentoOhitettu == true)
