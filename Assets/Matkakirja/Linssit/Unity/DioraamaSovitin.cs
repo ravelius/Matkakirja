@@ -709,6 +709,12 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: kamera " + (pakotettuKamera.HasValue ? $"{pakotettuKamera.Value.Atsimuutti:F0}° {pakotettuKamera.Value.Korkeus:F0}° {pakotettuKamera.Value.Etaisyys:F0} m" : "pois"));
                 return;
             }
+            // "poikki aluskasvit 0|1": linnan aluskasvit piiloon/näkyviin (Linssiseppä 2, 1.10., kuvapari samasta kohdasta).
+            if (mita == "aluskasvit")
+            {
+                o.Kirjaa("poikki: " + DioraamaAluskasvit.Kytke(arvo != "0"));
+                return;
+            }
             // "poikki vesi [heijastus 0|1|auto]": järven planaariheijastus (Boat Attack -vesi, 1.10.2026) ja ympäristön tila.
             if (mita == "vesi")
             {

@@ -24,6 +24,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Kivilaji: ei heiluntaa eikä juuri–latva-varjostusta.</summary>
         const string Kivi = "kivi";
         static readonly int IdKuva = Shader.PropertyToID("_Kuva");
+        static MeshRenderer piirto;
+        /// <summary>A/B kuvapariin (`poikki aluskasvit 0|1`): aluskasvit piiloon tai näkyviin lataamatta uudelleen.</summary>
+        public static bool Pois;
+
+        /// <summary>A/B-kytkin: näkyvyys heti; palauttaa tilarivin.</summary>
+        public static string Kytke(bool paalla)
+        {
+            Pois = !paalla;
+            if (piirto != null) piirto.enabled = paalla;
+            return $"aluskasvit {(paalla ? "näkyvissä" : "piilossa")}{(piirto == null ? " (ei ladattu)" : "")}";
+        }
 
         sealed class Kortti { public float U0, U1, V0, V1, KorttiPerKoko = 1.9f, LeveysPerKorkeus = 1f; public bool Kivi; }
 
@@ -160,6 +171,8 @@ namespace Matkakirja.Natiivi
             rr.sharedMaterial = mat;
             rr.shadowCastingMode = ShadowCastingMode.Off;
             rr.receiveShadows = false;
+            rr.enabled = !Pois;
+            piirto = rr;
             kirjaa?.Invoke($"poikki: ympäristö: aluskasvit {kasveja} ({kolmiot.Length / 3} kolmiota, {atlas.width}×{atlas.height} {atlas.format}), {Time.realtimeSinceStartup - alku:F1} s");
         }
     }
