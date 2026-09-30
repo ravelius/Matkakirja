@@ -89,13 +89,19 @@ namespace Matkakirja.Natiivi
             {
                 var g = IssPaneeliKuvat.Ryhma(asettelu);
                 // Ryhmä saa ylittää ruudun 8 pt kummaltakin puolelta (puhelimen olkapäät); kapeammalla ruudulla skaalataan.
-                // Matalalla vaakaruudulla (puhelin vaakana, korkeus < 520 pt) enintään 30 % korkeudesta, jotta horisontti ja
-                // ikkuna jäävät näkyviin (omistaja 30.9.: "jos on vaakanäyttö, niin saisiko horisonttia näkyviin").
+                // VAAKA (omistaja 30.9. ilta: "vaakanäkymässä napit vievät liikaa tilaa. ota alhaalta turhat pois ja laske nappeja
+                // alemmas"): pöytä rajataan kuvun alareunaan (säleikkökaista ja alakehys pois, overflow hidden) ja skaalataan
+                // enintään 24 %:iin ruudun korkeudesta; napit ruudun alareunassa (bottom −alaReuna). Osuma-alat ovat kerroksissa
+                // vähintään 64 pt, jolloin skaalattunakin ≥ 44 pt.
+                bool vaaka = RuudunKorkeus > 1f && turvanLeveys > RuudunKorkeus;
+                float korkeus = g.y;
+                if (vaaka && IssPaneeliKuvat.Osa(asettelu, "kupu") is Rect kupu) korkeus = Mathf.Min(g.y, kupu.yMax + 2f);
                 float k = Mathf.Min(1f, turvanLeveys / (g.x - 16f));
-                if (RuudunKorkeus > 1f && RuudunKorkeus < 520f) k = Mathf.Min(k, 0.3f * RuudunKorkeus / g.y);
+                if (vaaka) k = Mathf.Min(k, 0.24f * RuudunKorkeus / korkeus);
                 skaala = k;
+                Juuri.style.overflow = vaaka ? Overflow.Hidden : Overflow.Visible;
                 float w = Mathf.Max(turvanLeveys / k, g.x);
-                Juuri.style.width = w; Juuri.style.height = g.y;
+                Juuri.style.width = w; Juuri.style.height = korkeus;
                 Juuri.style.left = (turvanLeveys - w) * 0.5f;
                 Juuri.style.bottom = -this.alaReuna;
                 Juuri.style.scale = new Scale(new Vector3(k, k, 1f));
@@ -211,8 +217,8 @@ namespace Matkakirja.Natiivi
                 if (!r.HasValue) { m.style.display = DisplayStyle.None; continue; }
                 var o = r.Value;
                 var osuma = m is IssKytkimet.Lukema ? o
-                    : Rect.MinMaxRect(Mathf.Min(o.xMin, o.center.x - 24f), Mathf.Min(o.yMin, o.center.y - 24f),
-                                      Mathf.Max(o.xMax, o.center.x + 24f), Mathf.Max(o.yMax, o.center.y + 24f));
+                    : Rect.MinMaxRect(Mathf.Min(o.xMin, o.center.x - 32f), Mathf.Min(o.yMin, o.center.y - 32f),
+                                      Mathf.Max(o.xMax, o.center.x + 32f), Mathf.Max(o.yMax, o.center.y + 32f));   // 64 pt: vaakaskaalassa ≥ 44
                 ryhmaEl.Add(m);
                 m.Kerros = true;
                 var ms = m.style;
@@ -326,7 +332,7 @@ namespace Matkakirja.Natiivi
             kaari?.RemoveFromHierarchy();
             osat.Clear(); kerrosPohja = ryhmaEl = tekstiEl = valot = legendat = kaari = null;
             Juuri.Kerros = false;
-            Juuri.style.height = StyleKeyword.Null; Juuri.style.scale = StyleKeyword.Null; Juuri.style.bottom = 8;
+            Juuri.style.height = StyleKeyword.Null; Juuri.style.scale = StyleKeyword.Null; Juuri.style.bottom = 8; Juuri.style.overflow = StyleKeyword.Null;
             Juuri.style.paddingLeft = 10; Juuri.style.paddingRight = 10; Juuri.style.paddingTop = 8; Juuri.style.paddingBottom = 6;
             ylarivi.style.display = DisplayStyle.Flex; saatimet.style.display = DisplayStyle.Flex;
             ylarivi.Add(Live); ylarivi.Add(Lukema);

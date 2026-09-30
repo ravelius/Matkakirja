@@ -238,11 +238,11 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static float PilvienMaara = PilvienOletus;
         /// <summary>
-        /// PILVET-nupin oletus kyydissä (omistaja 30.9. Päätoimittajan kautta: "varmasti tuota pilvipeittoa kannattaa pitää aika
-        /// pienenä vakiosäädöillä"): 0,3 = vain tiheimmät pilvet (karsintakynnys 0,7), noin kolmannes todellisesta peitosta;
-        /// pelaaja nostaa nupista, 1 = NYT. Aiempi oletus 1 (28.9.).
+        /// PILVET-nupin oletus kyydissä: omistaja 30.9. ilta Päätoimittajan kautta: "pilvet saisivat olla pois oletuksena, tosin
+        /// saattaa muuttua sitten kun tulee niitä visuaalisia parannuksia" → 0 (aiemmin samana päivänä 0,3, 28.9. 1). Pelaaja
+        /// nostaa nupista, 1 = NYT; arvioidaan uudelleen fotorealististen pilvien jälkeen.
         /// </summary>
-        public const float PilvienOletus = 0.3f;
+        public const float PilvienOletus = 0f;
 
         /// <summary>
         /// Terävät pilvet kyydissä (omistaja 28.9. "Vielä liikaa blurrina"; Cupolasta 4096 px:n pilvikuvan tekseli on ruudulla

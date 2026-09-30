@@ -1099,9 +1099,10 @@ namespace Matkakirja.Natiivi
         /// Keila tulee auringon suunnasta ruudulla (Valo.xy; suoraan edessä tai takana oletusvinous ylävasemmalta), joten se
         /// kääntyy hitaasti ISS:n kiertäessä. Hiukkanen on pehmeä säteittäinen hehku (PolyKuva, isommat epätarkempia) ja
         /// välähtää kääntyessään (tuike). Liike 0,6–2 pt/s ja kevyt pyörre; vähennetyllä liikkeellä paikallaan.
-        /// A/B `astro kyyti polyt 0|1`.
+        /// A/B `astro kyyti polyt 0|1`. POIS 30.9. (omistaja: "nykyiset pölyhiukkaset ovat keinotekoisen näköisiä ja ne voi
+        /// ottaa pois"): ei piirretä eikä ajeta; koodi jää A/B:ksi mahdollista uutta toteutusta varten.
         /// </summary>
-        public static bool Polyt = true;
+        public static bool Polyt = false;
         const int PolyMaara = 34;
         /// <summary>Keilan puolileveys (σ) osuutena ruudun lyhyemmästä sivusta ja hiukkasen suurin peitto.</summary>
         const float KeilaOsuus = 0.2f, PolyPeitto = 0.65f;

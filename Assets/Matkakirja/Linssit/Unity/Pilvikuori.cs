@@ -21,7 +21,7 @@ namespace Matkakirja.Natiivi
         const int Sarakkeet = 128, Rivit = 64;
 
         /// <summary>Fotorealismi osa 3: pilvien auringonvalo kyydissä (Pilvet.shader _Valaistus); A/B `astro kyyti pilvivalo 0|1`.</summary>
-        public static bool ValoPois;
+        public static bool ValoPois = true;   // junassa pois (fotorealismi A/B)
 
         /// <summary>Kyydin auringonvalo pilviin: voimakkuus 0…1, auringon suunta ja maan keskipiste maailmassa.</summary>
         public void Valaistus(float voima, Vector3 aurinko, Vector3 keskus)

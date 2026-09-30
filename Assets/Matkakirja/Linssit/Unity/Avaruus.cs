@@ -47,7 +47,7 @@ namespace Matkakirja.Natiivi
         /// Fotorealismi osa 1 (30.9.2026): fysikaalinen ilmakehä (Ilmakeha2.shader, Rayleigh + Mie + otsoni, transmittanssi-LUT)
         /// Ilmakaaren analyyttisen kaaren ja usvan tilalle. A/B `astro kyyti ilmakeha2 0|1`.
         /// </summary>
-        public static bool Ilmakeha2 = true;
+        public static bool Ilmakeha2 = false;   // junassa pois, kunnes ilmakehävika on korjattu (Päätoimittaja 30.9.)
         /// <summary>
         /// Auringon valaistus HDR:nä (Ilmakeha2 _Voima). 4,5 = BMNG-maan kirkkaus vastaa albedoa ~0,1 (maa ~0,07 lineaarisena
         /// auringon 57°:ssä); Pythonin rinnakkaislaskenta 30.9.: nadirissa usva (0,02, 0,04, 0,10), reunalla 10 km:ssä
@@ -185,6 +185,19 @@ namespace Matkakirja.Natiivi
             kaari.SetFloat("_Korkeus", KaarenKorkeus);
             kaari.SetFloat("_Peitto", 0);
             kr.sharedMaterial = kaari;
+            kr.shadowCastingMode = ShadowCastingMode.Off;
+            kr.enabled = false;
+            ilmanSade = sade;
+        }
+
+        double ilmanSade;
+        bool ilma2Yritetty;
+
+        /// <summary>Fysikaalinen ilmakehä vasta ensimmäisellä käytöllä (A/B päälle): materiaali ja transmittanssi-LUT.</summary>
+        void LuoIlmakeha2()
+        {
+            ilma2Yritetty = true;
+            double sade = ilmanSade;
             var v2 = Resources.Load<Shader>("Varjostimet/Ilmakeha2");
             if (v2 != null && v2.isSupported)
             {
@@ -200,8 +213,6 @@ namespace Matkakirja.Natiivi
                 kaari2.SetTexture("_Lapinakyvyys", lapinakyvyys);
             }
             else Debug.LogWarning("MATKAKIRJA linssit: Ilmakeha2-varjostin puuttuu tai ei tuettu, Ilmakaari käytössä");
-            kr.shadowCastingMode = ShadowCastingMode.Off;
-            kr.enabled = false;
         }
 
         void Update()
@@ -226,6 +237,7 @@ namespace Matkakirja.Natiivi
             bool nakyy = kyyti > 0.001f;
             if (kaariPiirto.enabled != nakyy) kaariPiirto.enabled = nakyy;
             // Fysikaalinen ilmakehä (A/B): sama kuori, eri materiaali; LUT voi kadota (laite: taustalle ja takaisin) → uudelleen.
+            if (Ilmakeha2 && kaari2 == null && !ilma2Yritetty) { LuoIlmakeha2(); aurinkoPaivitetty = -10f; }
             bool uusi = Ilmakeha2 && kaari2 != null;
             var m = uusi ? kaari2 : kaari;
             if (kaariPiirto.sharedMaterial != m) kaariPiirto.sharedMaterial = m;

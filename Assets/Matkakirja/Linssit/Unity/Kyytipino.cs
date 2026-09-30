@@ -15,7 +15,8 @@ namespace Matkakirja.Linssit
 {
     public static class Kyytipino
     {
-        public static bool Pois;
+        /// <summary>Oletuksena pois junassa, kunnes fotorealismi on hyväksytty (Päätoimittaja 30.9.).</summary>
+        public static bool Pois = true;
         /// <summary>Valotus (EV): ACES tummentaa keskisävyjä noin 0,8:aan, joten lähtötaso +0,5 (säädetään NASA-vertailusta).</summary>
         public static float Valotus = 0.5f;
         public static bool BloomPois;
