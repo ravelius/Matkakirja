@@ -9411,3 +9411,7 @@ Päätoimittaja 30.9.2026 (omistajan kysymys valmiista ratkaisuista 3D-ohjaimiin
 ## TARKENNUS: ISS-PANEELIN KIINTEÄT OTSIKOT PAINATETAAN RENDERIIN (30.9.2026) (30.9.2026 klo 14.07)
 
 Päätoimittaja 30.9.2026 (Linnanrakentajan kysymys, testi 2): Cupolan kytkinpaneelin kiinteät otsikot (NOPEUS, PILVET, KUUKAUSI, KOHDE, OMA PAIKKA, POISTU, LIVE/PALAA) painatetaan Blender-renderiin ISS:n tapaan valkoisena painatuksena mustalle ja taustavalaistujen painikkeiden legendat valokerrokseen, koska aitous on omistajan pääpyyntö ja teksti istuu samaan valoon; peli piirtää vain vaihtuvat tekstit (lukemanäyttö, kohteen nimi) ja VoiceOver-nimet. Avoimen lisenssin fontti (esim. Barlow Condensed / Roboto Condensed), lisenssi kirjataan. Poikkeus aiempaan Codex-tilauksen sääntöön 'tekstit piirtää peli' koskee vain renderöityjä paneeleita.
+
+## OMISTAJA: TESTFLIGHT-VERSIO KIINTEÄ 1.1, JUOKSEVA NUMERO BUILD-NUMEROON — '1.1 (73)' (30.9.2026 klo 15.0x) (30.9.2026 klo 14.59)
+
+Omistaja 30.9.2026 kortilla (Julkaisijan selvitys: Apple arvioi täysimääräisesti kunkin version ensimmäisen buildin, joten versionnosto joka buildissa pitää ulkoisen arvioijaryhmän noin vuorokauden jäljessä): KORVAA 24.9. linjauksen 'TF:ssä 1.0.<ordinaali>'. MARKETING_VERSION kiinteä 1.1 ja CFBundleVersion juokseva ordinaali (73, 74, …): TestFlight näyttää '1.1 (73)', omistaja viittaa buildiin numerolla. Muutoslokirivit ja pelin Mitä uutta muodossa '1.1 (BUILD)'; vanhat 1.0.67–1.0.72 jäävät arviojonoon ja irrotetaan ryhmästä, kun 1.1 on hyväksytty.
