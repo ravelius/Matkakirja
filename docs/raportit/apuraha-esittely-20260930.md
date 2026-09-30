@@ -2,8 +2,7 @@
 
 Omistajan pyyntö 30.9.2026 klo 11.0x: pelin aloitusnäkymään (natiivi + web) nappi
 **"Apurahahakemus – katso tämä ensin"**, joka avaa esittelykortin (kuvat + teksti, luettavissa
-noin kahdessa minuutissa). Myöhemmin (lähiviikkoina) kortin alkuun lyhyt esittelyvideo pelin
-huippukohdista ja kehityksen tilanteesta. Webiin lisäksi pysyvä huomautus App Store -versiosta
+noin kahdessa minuutissa). Video poistettu omistajan päätöksellä 30.9. (vain kuvat ja teksti). Webiin lisäksi pysyvä huomautus App Store -versiosta
 (ks. loppu).
 
 Merkinnät [TARKISTA] Laitetestaaja varmistaa TF-versiosta ennen julkaisua; Päätoimittaja
@@ -81,22 +80,7 @@ Linkkiä ei julkaista sivulla; se on vain hakemuksessa.
 
 ---
 
-## Esittelyvideo, käsikirjoitus v1 (Päätoimittaja 30.9.2026)
+## Kuvat v2 (omistaja 30.9.2026: video pois)
 
-Omistaja 30.9.: "nopea esittelyvideo, missä näkyisi pelin huippujutut sekä nykyisen kehityksen tilanne".
-Muoto: 60–75 s, pysty 9:16 iPhonen ruutuna (laitekehys ei), pelin omat äänet (isoisän luenta, radio, Pulu),
-ei erillistä kertojaa. Lyhyet tekstitykset suomeksi alareunaan pelin fontilla, 1 rivi / kohtaus. Tulee esittelykortin
-alkuun (paikka varattu) ja ladataan erikseen (ei pakettiin).
-
-| # | Aika | Kuva | Tekstitys |
-| ---: | --- | --- | --- |
-| 1 | 0–6 s | Portti: juliste, Uusi matka | Seikkailupeli, jossa maailmasta oppii matkustamalla |
-| 2 | 6–16 s | Lento Euroopan yli ja saapuminen Ateenaan; matkakirja auki, isoisä lukee (ääni ~5 s) | Isoisän vuoden 1873 matkakirja luetaan ääneen |
-| 3 | 16–26 s | Kartta: maasta kaupunkiin, nosto auki (Marathon) | Oma kartta koko maapallolle, kaupunkitasolle asti |
-| 4 | 26–34 s | Pulu-chat: kysymys ja vastaus | Pulu vastaa kysymyksiin |
-| 5 | 34–44 s | ISS:n Cupola: maa ikkunasta, kytkinpaneeli, nopeus 100× | Linssit näyttävät maailman uusista kulmista |
-| 6 | 44–54 s | Olavinlinna aukileikattuna (vasta omistajan katselmoinnin jälkeen; muuten Tähtitaivas) | Kolmiulotteiset kohteet: Olavinlinna sisältä |
-| 7 | 54–62 s | Radio: asema soi, VU-mittari | Maailman radiot suorana |
-| 8 | 62–72 s | Loppukuva: logo | Uusi testiversio lähes päivittäin. Seuraavaksi: Euroopan perinteiset pelit, lisää 3D-kohteita, App Store |
-
-Ei sisäisiä tietoja (roolit, mallit, id:t). Kuvat vain pelistä (ei kehittäjänappeja).
+Video ja videopaikka poistetaan. Kuvarivissä 4 kuvaa: 1 karttanäkymä + 3 eri linssiä (valitaan Linssiseppä 2:n
+esittelylinssien kierroksen kuvista, uusimmalla junalla, arvioijan polulta ilman kehittäjänappeja).

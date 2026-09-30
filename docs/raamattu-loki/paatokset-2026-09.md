@@ -9415,3 +9415,7 @@ Päätoimittaja 30.9.2026 (Linnanrakentajan kysymys, testi 2): Cupolan kytkinpan
 ## OMISTAJA: TESTFLIGHT-VERSIO KIINTEÄ 1.1, JUOKSEVA NUMERO BUILD-NUMEROON — '1.1 (73)' (30.9.2026 klo 15.0x) (30.9.2026 klo 14.59)
 
 Omistaja 30.9.2026 kortilla (Julkaisijan selvitys: Apple arvioi täysimääräisesti kunkin version ensimmäisen buildin, joten versionnosto joka buildissa pitää ulkoisen arvioijaryhmän noin vuorokauden jäljessä): KORVAA 24.9. linjauksen 'TF:ssä 1.0.<ordinaali>'. MARKETING_VERSION kiinteä 1.1 ja CFBundleVersion juokseva ordinaali (73, 74, …): TestFlight näyttää '1.1 (73)', omistaja viittaa buildiin numerolla. Muutoslokirivit ja pelin Mitä uutta muodossa '1.1 (BUILD)'; vanhat 1.0.67–1.0.72 jäävät arviojonoon ja irrotetaan ryhmästä, kun 1.1 on hyväksytty.
+
+## OMISTAJA: APURAHAN ESITTELYSTÄ VIDEO POIS — NELJÄ KUVAKAAPPAUSTA (KARTTA + KOLME LINSSIÄ) JA TEKSTI (30.9.2026 klo 15.1x) (30.9.2026 klo 15.06)
+
+Omistaja 30.9.2026: 'Ota video pois. Tehdään vain kuvakaappauksia ja sitten tekstimuodossa kerrotaan. Sopiva määrä voisi olla 4 kuvakaappausta niin, että yksi karttanäkymästä ja loput eri linsseistä.' Esittelykortin videopaikka ja esittelyvideon työ lopetetaan (Linssiseppä 2:n työkalut jäävät proto-3d/tyokalut/esittelyvideo/). Kortin kuvarivi: 4 kuvaa = yksi karttanäkymä ja kolme eri linssiä (valitaan esittelylinssien kierroksen kuvista; Päätoimittaja valitsee, omistaja näkee kuvaparin ennen julkaisua).
