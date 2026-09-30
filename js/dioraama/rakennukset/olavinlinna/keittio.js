@@ -7,8 +7,9 @@ const TAULU_KEITTIO = {
   otsikko: 'Linnan keittiö',
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Keittiön avotuli paloi lähes taukoamatta — sen sammuminen tiesi kylmää ruokaa koko linnalle.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-0' },
-    { teksti: 'Ruokana oli kalaa, viljaa ja suolattua lihaa; talven varalle säilöttiin mitä vain saatiin.', lahde: 'Kansallismuseo ja Yle: keittiö sijaitsi pienessä linnanpihassa, jonka liedenpohja on säilynyt.', aani: 'keittio-kohta-1' },
+    // Sisältökirjuri 30.9. (5684d5d81): korjattu lähteelliseksi, vanha ääni ei vastaa tekstiä → aani pois.
+    { teksti: 'Keittiö oli pienellä linnanpihalla; valtavassa liedessä paloi avotuli aamusta iltaan.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420)' },
+    { teksti: 'Ruoka valmistettiin isoissa padoissa, ja linnassa syötiin paljon kalaa ja kasviksia.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420); Apu: Suomen keskiaikaiset kivilinnat 6/6' },
     // Sisältökirjuri 29.9. (era4): entinen "ruokki koko linnaväen" oli tulkinta; ääni tehdään uudelleen hyväksynnän jälkeen.
     { teksti: 'Vouti ja seurue söivät ylhäällä Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420)' },
   ],
@@ -55,6 +56,8 @@ const KEITTIO_HAHMOT = [
 export const TILA = {
   id: 'keittio',
   nimi: 'Keittiö',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
+  infotaulu: { nimi: 'Keittiö', rivit: [{ teksti: 'Avotuli palaa lähes taukoamatta, ja padoissa porisee ilta-ateria.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): todellinen paikka fotogrammetriakuoressa. Keittiö
   // itäsiiven alakerrassa Pienen linnanpihan laidalla (tulkinta, Sisältökirjuri 29.9.: ikkunat pihalle, hormit
@@ -69,7 +72,9 @@ export const TILA = {
   // peittää alimman 45 %, joten huone rajataan lähelle ja nostetaan näkyvän yläosan keskelle.
   kameraPysty: { kohde: [13.05, -0.8, 7.08], // pysty 30.9.: kokki ja vihje 1 keskelle (x 0,52)
      atsimuutti: 174, korkeus: 24, etaisyys: 24, fov: 38, aukko: 0.8 },
-  pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: [11.9, 0.8, 9], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
+    teksti: 'Keittiö oli pienellä linnanpihalla. Valtavassa liedessä paloi avotuli aamusta iltaan, ja ruoka valmistettiin isoissa padoissa. Linnassa syötiin paljon kalaa ja kasviksia; vouti seurueineen söi ylhäällä Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa. Minä olisin tyytynyt muruihin.', aani: null },
   taulu: TAULU_KEITTIO,
   // Elävä linna (29.9.): yleisnäkymän napautuskohde pihan puolen julkisivulla (ikkunasta kajastaa tuli); ensimmäisen
   // käynnin sykkivä vihje on tässä.
@@ -222,7 +227,8 @@ export const TILA = {
   etsinta: [
     { etsinta: 'voudin-sinetti', vaihe: 1, tyyppi: 'repliikki', hahmo: 'kokki', kohde: [13.1, 1.8, 6.1], sade: 1.2,
       repliikki: { id: 'kokki-sinetti', teksti: 'Vouti kävi maistamassa keittoa ja kiirehti sitten kappeliin ennen iltamessua.' },
-      pulu: 'Keitto ja iltamessu – vouti hoiti sekä vatsan että sielun. Kappeliin siis!' },
+      pulu: 'Keitto ja iltamessu – vouti hoiti sekä vatsan että sielun. Kappeliin siis!',
+      rivi: 'Kokki: vouti kiirehti kappeliin ennen iltamessua.' },
   ],
   hahmot: KEITTIO_HAHMOT,
   // Keittiön äänisilmukat: ambienssi + tulisija + pata + vaivaaminen, kaikki päällekkäin (era2 kohta 2 "AANET").

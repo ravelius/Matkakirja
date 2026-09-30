@@ -256,6 +256,8 @@ const KRUUNU_LIEKIT = [0, 1, 2, 3, 4].map((i) => {
 export const TILA = {
   id: 'keskushalli',
   nimi: 'Keskushalli',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
+  infotaulu: { nimi: 'Keskushalli ja väentupa', rivit: [{ teksti: 'Sotaväen ruokasalissa on hälinää, ja vartijat heittävät noppaa.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
@@ -267,7 +269,9 @@ export const TILA = {
   kamera: { kohde: [-14.75, 1.6, -13.8], atsimuutti: 170, korkeus: 22, etaisyys: 17, fov: 38, aukko: 0.8 },
   kameraPysty: { kohde: [-13.02, -4, -14.04], // pysty 30.9.: noppapeli ja apulainen näkyviin (x 0,63–0,86)
      atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
-  pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni vasta omistajan luvalla.
+    teksti: 'Alakerrassa oli väentupa, sotaväen ruokasali, ja toisessa kerroksessa asui vouti. Linnaa lämmitettiin avotakoilla, ja lämpö johdettiin hormien kautta. 1500-luvun tilikirjojen mukaan linnassa asui 150–200 henkeä – ei ihme, että täällä on hälinää.', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): pohjoissiiven pihajulkisivu (ikkunoista valo ja sorina).
   elava: { kohde: [-14.75, 3.5, -9.2], sade: 6 },

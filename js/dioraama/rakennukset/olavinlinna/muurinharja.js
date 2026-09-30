@@ -15,9 +15,10 @@ const TAULU = {
   // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). M1–M3
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Päätornin neljännessä kerroksessa oli avoin puolustuskäytävä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    // Sisältökirjuri 30.9. (5684d5d81): "päätorni" epävarma nimitys → "tornin"; Kylliäisen nimi ja asema tarkistettu.
+    { teksti: 'Tornin neljännessä kerroksessa oli avoin puolustuskäytävä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
     { teksti: 'Muurin harjalta torjuttiin nuolet, kivet ja piiritysportaat.', lahde: 'Tiedetuubi: Linnarakennustekninen balladi Olavinlinnasta' },
-    { teksti: 'Vuonna 1495 Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikaisen nostoväen turvin.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen, Vanha viha' },
+    { teksti: 'Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen' },
   ],
 };
 
@@ -74,6 +75,8 @@ const HAHMOT = [
 export const TILA = {
   id: 'muurinharja',
   nimi: 'Muurinharja',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
+  infotaulu: { nimi: 'Muurinharja', rivit: [{ teksti: 'Vartija kulkee lyhdyn kanssa muurin harjalla.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,
@@ -90,7 +93,9 @@ export const TILA = {
   kameraPysty: { kohde: [-16.21, 8.8, -19.68], // pysty 30.9.: vartijan reitin pää ei reunaan
      atsimuutti: 165, korkeus: 28, etaisyys: 40, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-35, 35], korkeus: [14, 45], etaisyys: [0.7, 1.4] },
-  pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
+    teksti: 'Tornin neljännessä kerroksessa kulki avoin puolustuskäytävä muurin harjalla. Täältä torjuttiin nuolet, kivet ja piiritysportaat. Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla. Pidä pääsi muurin suojassa!', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): napautuskohde kannen keskellä; lyhdyllinen vartija on hahmot[]-listassa (reitti kannen päästä päähän).
   elava: { kohde: [-14.75, 14.2, -19.75], sade: 6 },

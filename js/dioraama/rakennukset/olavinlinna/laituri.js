@@ -113,6 +113,8 @@ const HAHMOT = [
 export const TILA = {
   id: 'laituri',
   nimi: 'Laituri',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
+  infotaulu: { nimi: 'Laituri', rivit: [{ teksti: 'Soutaja kiristää köyttä, ja lyhty palaa paalussa.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,
@@ -124,7 +126,9 @@ export const TILA = {
   kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 14.5, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-40, 40], korkeus: [10, 50], etaisyys: [0.6, 1.5] },
   kameraPysty: { kohde: [-19.5, -9.2, 39.5], atsimuutti: 200, korkeus: 26, etaisyys: 32, fov: 38, aukko: 0.8 },
-  pulu: { laskeutuminen: [-21.0, -5.35, 35.2], taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: [-21.0, -5.35, 35.2], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni vasta omistajan luvalla.
+    teksti: 'Linna on saarella, joten kaikki tuli vesitse. 1550-luvulla linnalla oli peräti yhdeksän suurta venettä, kavassia, ja niiden kotirantaa Riihisaarta kutsuttiin Kavassisaareksi. Rakennusaikana kiveä ja kalkkia kuljettavia proomuja suojasi 12–15 haarniskoitua miestä.', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): kohde paalun lyhdyssä; kannella kävelee lyhdyllinen renki (hahmot[]).
   elava: { kohde: [-17.82, -4.03, 36], sade: 6 },
