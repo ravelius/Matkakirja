@@ -86,8 +86,12 @@ Kaikki puuttuvat URL:t ovat pelin **käsin kirjoitetuissa** paketeissa (fokuskoh
 
 **E. Pieni:** (i) FIN maastokohteet-fin.js 3 riviä, joilla lähdeteksti ei sisällä sanaa "Wikimedia Commons" → linkki ei renderöidy (lisätään sana). (ii) 160 riviä, joissa lisenssinimen kirjainkoko ("Public domain" vs "public domain") estää lisenssilinkin renderöinnin: PD ei vaadi linkkiä, ei vaikutusta lisenssiehtoihin (ei korjata ilman erillistä päätöstä; korjaus olisi taytaLahderivi-vertailun tekeminen kirjainkoosta riippumattomaksi, Pelikoodarin tiedosto).
 
+**F. Tekoälyjohdannaiset ilman näkyvää viitekuvan attribuutiota (31 kuvaa, korjaus erä 3)** — 246 "omasta" havainnekuvasta 48 on johdettu Commons-valokuvista (datassa `tekija`, `lisenssi` ja `lahdeUrl` viitekuvalle), ja 31:llä viitekuvan tekijä ja CC BY / BY-SA / CC0 -lisenssi olivat vain datassa: pelaajalle näkyi pelkkä "Matkakirjan havainnekuva — lähdeperusteinen johdannainen". Pelillä on jo mekanismi (`viitteet: [{tekija, lisenssi, lisenssiUrl, sivu}]`, js/tekijakortti.js lisaaPohjaviitteet, käytössä kaupunkilehtien herokuvissa): lisätään kenttä, ja rivin perään tulee "Pohjana Wikimedia Commons -kuvat: Tekijä (CC BY-SA 3.0); havainnekuva CC BY-SA 4.0". Maat: CZE 4, FIN 6, FRA 3, NOR 3, POL 6, SWE 5, UKR 4. Ei koodimuutosta.
+
+**G. Avoin kysymys (ei korjata ennen päätöstäsi):** FIN maastokohteet[0], [1], [3], [6] ("Matkakirjan oma havainnekuva", lisenssi "oma") mainitsevat Commons-tiedoston lähde-URL:ksi (Ridnitšohkka, Svedjehamn, Timber floating, Old Rauma). Jos tiedostoa on käytetty pohjakuvana (ei pelkkä paikkatieto), sama BY-SA-attribuutio kuin F:ssä tarvitaan; jos vain paikan viite, nykyinen merkintä riittää. EST 7 ja ISL 1 viittaavat matkailusivustojen URL:eihin (ei Commons), ei lisenssiongelmaa.
+
 ## 5. Päätökset / rajaukset
 
-1. **Korjausjärjestys (ehdotus):** erä 1 = A + B + C + E(i) (~15 riviä, nopea); erä 2 = D (~220 riviä, skripti + testit). Aloitan erä 1:stä, ellet muuta.
+1. **Korjausjärjestys:** erä 1 = A + B + C + E(i) (PR #3681, junassa); erä 2 = D (203 lähde-URL + 180 lisenssi-URL, 12 pakettia); erä 3 = F (31 viitteet-kenttää). Kaikki datariviä, ei koodimuutosta.
 2. **Ei kosketa:** 246 havainnekuvaa (oma tuotanto), Euroopan ulkopuoliset kuvat, muita kuin nosto/maakuntapaketteja (maa-artikkelit, kulttuuri-kategoriat, linssit).
 3. **Kuvia ei vaihdeta.** Rikkinäisissä URL:issa korjataan vain osoite (kuva ja lisenssi ovat verkossa todennettu kunnossa).
