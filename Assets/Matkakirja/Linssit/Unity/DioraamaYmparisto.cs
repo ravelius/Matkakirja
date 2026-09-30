@@ -75,7 +75,7 @@ namespace Matkakirja.Natiivi
 
             string maasto = taso == DioraamaUlkokuori.Laatu.Huippu ? y.Huippu : taso == DioraamaUlkokuori.Laatu.Normaali ? y.Normaali : y.Kevyt;
             string orto = taso == DioraamaUlkokuori.Laatu.Huippu ? y.OrtoHuippu : taso == DioraamaUlkokuori.Laatu.Normaali ? y.OrtoNormaali : y.OrtoKevyt;
-            if (!string.IsNullOrEmpty(maasto)) yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma);
+            if (!string.IsNullOrEmpty(maasto)) yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
             if (oma != kerta) yield break;
             if (!string.IsNullOrEmpty(y.Horisontti)) yield return LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma);
             if (oma != kerta) yield break;
@@ -235,7 +235,8 @@ namespace Matkakirja.Natiivi
 
         // --- MAASTO JA HORISONTTI -------------------------------------------------------------------------------------
 
-        IEnumerator LataaMalli(string nimi, string polku, string kuvaPolku, Func<string, string> url, Action<string> kirjaa, int oma)
+        IEnumerator LataaMalli(string nimi, string polku, string kuvaPolku, Func<string, string> url, Action<string> kirjaa, int oma,
+            MaastoKerrokset splat = null, DioraamaUlkokuori.Laatu taso = DioraamaUlkokuori.Laatu.Kevyt)
         {
             byte[] tavut = null;
             float alku = Time.realtimeSinceStartup;
@@ -269,14 +270,15 @@ namespace Matkakirja.Natiivi
             foreach (var o in malli.Osat)
             {
                 int n = o.Paikat.Length / 3;
-                var p = new Vector3[n]; var uv = new Vector2[n];
+                var p = new Vector3[n]; var uv = new Vector2[n]; var nr = new Vector3[n];
                 for (int i = 0; i < n; i++)
                 {
                     p[i] = new Vector3(o.Paikat[i * 3], o.Paikat[i * 3 + 1], o.Paikat[i * 3 + 2]);
+                    nr[i] = o.Normaalit != null && o.Normaalit.Length >= (i + 1) * 3 ? new Vector3(o.Normaalit[i * 3], o.Normaalit[i * 3 + 1], o.Normaalit[i * 3 + 2]) : Vector3.up;
                     uv[i] = o.Uv != null && o.Uv.Length >= (i + 1) * 2 ? new Vector2(o.Uv[i * 2], 1f - o.Uv[i * 2 + 1]) : Vector2.zero;
                 }
                 var mesh = new Mesh { name = "Ymparisto:" + nimi, indexFormat = n > 65000 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
-                mesh.SetVertices(p); mesh.SetUVs(0, uv); mesh.SetTriangles(o.Kolmiot, 0);
+                mesh.SetVertices(p); mesh.SetNormals(nr); mesh.SetUVs(0, uv); mesh.SetTriangles(o.Kolmiot, 0);
                 mesh.RecalculateBounds();
                 mesh.UploadMeshData(true);
                 luodut.Add(mesh);
@@ -291,6 +293,80 @@ namespace Matkakirja.Natiivi
             }
             kirjaa?.Invoke($"poikki: ympäristö: {nimi} {malli.Osat.Count} lohkoa, {kolmiot} kolmiota, " +
                            $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s");
+            if (splat != null && taso != DioraamaUlkokuori.Laatu.Kevyt) yield return LataaSplat(mat, splat, taso, url, kirjaa, oma);
+        }
+
+        // --- MAANPINNAN KERROKSET (splat) -----------------------------------------------------------------------------
+
+        static readonly int IdSplatAlue = Shader.PropertyToID("_SplatAlue"), IdSplatParam = Shader.PropertyToID("_SplatParam"),
+            IdSplatToisto0 = Shader.PropertyToID("_SplatToisto0"), IdSplatToisto1 = Shader.PropertyToID("_SplatToisto1"),
+            IdSplatKeski0 = Shader.PropertyToID("_SplatKeski0"), IdSplatKeski1 = Shader.PropertyToID("_SplatKeski1");
+        /// <summary>Kehittäjä: "poikki vesi maasto 0|1|auto" (null = laatutason mukaan).</summary>
+        public static bool? SplatPakotettu;
+
+        /// <summary>Huippu: 6 kerrosta + normaalit, maski [splat-0, splat-1]; normaali: 4 kerrosta ilman normaaleja,
+        /// maski_normaali. Jokaisen kerroksen keskikirkkaus lasketaan pienestä mipistä ennen pakkausta.</summary>
+        IEnumerator LataaSplat(Material mat, MaastoKerrokset s, DioraamaUlkokuori.Laatu taso, Func<string, string> url, Action<string> kirjaa, int oma)
+        {
+            if (SplatPakotettu == false) yield break;
+            float alku = Time.realtimeSinceStartup;
+            bool huippu = taso == DioraamaUlkokuori.Laatu.Huippu;
+            int kerroksia = Math.Min(huippu ? 6 : 4, s.Kerrokset.Count);
+            var maskit = huippu ? s.Maski : new List<string> { s.MaskiNormaali ?? (s.Maski.Count > 0 ? s.Maski[0] : null) };
+            for (int i = 0; i < maskit.Count && i < 2; i++)
+            {
+                if (string.IsNullOrEmpty(maskit[i])) continue;
+                byte[] t = null;
+                yield return DioraamaLevyvalimuisti.Hae(url(maskit[i]), 60, b => t = b);
+                if (oma != kerta) yield break;
+                var mk = Kuva(t, true, "Ymparisto:splat-maski" + i, false, out _);
+                if (mk == null) { kirjaa?.Invoke($"poikki: ympäristö: splat-maski {i} ei latautunut, pelkkä ilmakuva"); yield break; }
+                mk.wrapMode = TextureWrapMode.Clamp;
+                mat.SetTexture(i == 0 ? "_SplatMaski0" : "_SplatMaski1", mk);
+            }
+            var toisto = new float[8]; var keski = new float[8];
+            for (int k = 0; k < kerroksia; k++)
+            {
+                var (id, diff, nor, toistoM) = s.Kerrokset[k];
+                byte[] d = null, n = null;
+                yield return DioraamaLevyvalimuisti.Hae(url(diff), 60, b => d = b);
+                if (huippu && !string.IsNullOrEmpty(nor)) yield return DioraamaLevyvalimuisti.Hae(url(nor), 60, b => n = b);
+                if (oma != kerta) yield break;
+                var dk = Kuva(d, false, "Ymparisto:splat-" + id, true, out float kirkkaus);
+                if (dk == null) { kirjaa?.Invoke($"poikki: ympäristö: kerros {id} ei latautunut, pelkkä ilmakuva"); yield break; }
+                mat.SetTexture("_SplatDiff" + k, dk);
+                if (n != null) { var nk = Kuva(n, true, "Ymparisto:splat-nor-" + id, false, out _); if (nk != null) mat.SetTexture("_SplatNor" + k, nk); }
+                toisto[k] = 1f / Mathf.Max(0.1f, (float)toistoM);
+                keski[k] = 1f / Mathf.Max(0.05f, kirkkaus);
+                yield return null;
+            }
+            mat.SetVector(IdSplatAlue, new Vector4((float)s.MinX, (float)s.MinZ, (float)(1.0 / (s.MaxX - s.MinX)), (float)(1.0 / (s.MaxZ - s.MinZ))));
+            mat.SetVector(IdSplatToisto0, new Vector4(toisto[0], toisto[1], toisto[2], toisto[3]));
+            mat.SetVector(IdSplatToisto1, new Vector4(toisto[4], toisto[5], 0, 0));
+            mat.SetVector(IdSplatKeski0, new Vector4(keski[0], keski[1], keski[2], keski[3]));
+            mat.SetVector(IdSplatKeski1, new Vector4(keski[4], keski[5], 0, 0));
+            mat.SetVector(IdSplatParam, new Vector4(kerroksia, (float)s.LahiM, huippu ? 1f : 0f, 0.8f));
+            kirjaa?.Invoke($"poikki: ympäristö: maanpinta {kerroksia} kerrosta{(huippu ? " + normaalit" : "")}, {Time.realtimeSinceStartup - alku:F1} s");
+        }
+
+        /// <summary>JPEG/PNG → pakattu mip-tekstuuri (linear = normaalit/maskit). kirkkaus = keskimääräinen luminanssi
+        /// (lineaarinen, 16² mipistä) ennen pakkausta; maskia ei pakata (painojen tarkkuus).</summary>
+        Texture2D Kuva(byte[] tavut, bool lineaarinen, string nimi, bool pakkaa, out float kirkkaus)
+        {
+            kirkkaus = 0.5f;
+            if (tavut == null) return null;
+            var t = new Texture2D(2, 2, TextureFormat.RGBA32, true, lineaarinen)
+            { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Repeat, anisoLevel = 4 };
+            if (!t.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(t); return null; }
+            int mip = Mathf.Max(0, t.mipmapCount - 5);
+            var px = t.GetPixels(mip);
+            double summa = 0;
+            foreach (var c in px) summa += 0.2126 * c.linear.r + 0.7152 * c.linear.g + 0.0722 * c.linear.b;
+            if (px.Length > 0) kirkkaus = (float)(summa / px.Length);
+            if (pakkaa || lineaarinen && !nimi.Contains("maski")) t.Compress(true);
+            t.Apply(true, true);
+            luodut.Add(t);
+            return t;
         }
 
         // --- PUUT -----------------------------------------------------------------------------------------------------

@@ -473,6 +473,20 @@ namespace Matkakirja.Linssit.Dioraama
         public string SyvyysKuva;
         public double SyvyysPikseliM = 1.953125, SyvyysKerroinM = 0.1176;
         public double SyvyysOrigoX = -2000, SyvyysOrigoY = 2000;
+        /// <summary>Maanpinnan kerrosvarjostin (splat, Päätoimittaja 1.10.2026): lähialueen CC0-kerrokset maskilla; null = pelkkä ilmakuva.</summary>
+        public MaastoKerrokset Maasto;
+        /// <summary>Aluskasvillisuus korttipareina: atlas (json kuten puukortit) ja lista [x, y, z, laji, koko]; null = ei aluskasveja.</summary>
+        public string AluskasvitAtlas, AluskasvitLista;
+    }
+
+    /// <summary>`ymparisto.maasto`: alue [minX, minZ, maxX, maxZ] (Unity x/z = Blender x/y), maski (huippu, RGBA × 2 = kerrokset
+    /// 0–7), maski_normaali (RGBA = 0–3), kerrokset [{ id, diff, nor, toisto_m }], lahi_m (detalji häipyy makroon).</summary>
+    public sealed class MaastoKerrokset
+    {
+        public double MinX, MinZ, MaxX, MaxZ, LahiM = 400;
+        public List<string> Maski = new List<string>();
+        public string MaskiNormaali;
+        public List<(string Id, string Diff, string Nor, double ToistoM)> Kerrokset = new List<(string, string, string, double)>();
     }
 
     public sealed class Ulkokuori
@@ -605,6 +619,24 @@ namespace Matkakirja.Linssit.Dioraama
                 if (MiniJson.Luku(syv, "kerroin_m") is double km) y.SyvyysKerroinM = km;
                 var origo = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(syv, "origo"));
                 if (origo.Count >= 2 && origo[0] is double ox && origo[1] is double oy) { y.SyvyysOrigoX = ox; y.SyvyysOrigoY = oy; }
+                var maasto = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "maasto"));
+                if (maasto != null)
+                {
+                    var mk = new MaastoKerrokset { MaskiNormaali = MiniJson.Teksti(maasto, "maski_normaali"), LahiM = MiniJson.Luku(maasto, "lahi_m") ?? 400 };
+                    var alue = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(maasto, "alue"));
+                    if (alue.Count >= 4 && alue[0] is double a0 && alue[1] is double a1 && alue[2] is double a2 && alue[3] is double a3)
+                    { mk.MinX = a0; mk.MinZ = a1; mk.MaxX = a2; mk.MaxZ = a3; }
+                    foreach (var m in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(maasto, "maski"))) if (m is string ms) mk.Maski.Add(ms);
+                    foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(maasto, "kerrokset")))
+                    {
+                        var k = MiniJson.ObjektiTaiNull(ko);
+                        if (k != null) mk.Kerrokset.Add((MiniJson.Teksti(k, "id"), MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                    }
+                    if (mk.MaxX > mk.MinX && mk.MaxZ > mk.MinZ && mk.Kerrokset.Count > 0) y.Maasto = mk;
+                }
+                var alus = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "aluskasvit"));
+                y.AluskasvitAtlas = MiniJson.Teksti(alus, "atlas");
+                y.AluskasvitLista = MiniJson.Teksti(alus, "lista");
                 r.Ymparisto = y;
             }
             var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));
