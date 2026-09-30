@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2463, teksti: 'Maalehdet: 6 maata, artikkelit ja aihesivut (#3706)' },
   { v: 2462, teksti: 'Kohdekaupunkien pisteet ja nimet rannan musteel… (#3630)' },
   { v: 2461, teksti: 'Savukesarja: WebKit-rivit päivällä Chromiumilla (#3705)' },
   { v: 2460, teksti: 'Testiselaimet mykistettyinä oletuksena (#3704)' },
