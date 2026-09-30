@@ -302,6 +302,14 @@ test('muutosloki-natiivi: rivien tarkistus ja järjestys', async () => {
     { versio: '1.0.0 (9)', paiva: '2026-09-24', teksti: 'b' },
   ]);
   assert.deepEqual(j.map((r) => r.versio), ['1.0.0 (10)', '1.0.0 (9)', '0.1.0 (1)']);
+  // Omistaja 30.9.2026: kiinteä versio 1.1 + ordinaali-build on uudempi kuin saman päivän 1.0.72 (aikaleima).
+  assert.deepEqual(tarkistaMuutosloki([{ ...hyva, versio: '1.1 (73)' }]), []);
+  const k = jarjesta([
+    { versio: '1.0.72 (202609301134)', paiva: '2026-09-30', teksti: 'a' },
+    { versio: '1.1 (73)', paiva: '2026-09-30', teksti: 'b' },
+    { versio: '1.1 (74)', paiva: '2026-09-30', teksti: 'c' },
+  ]);
+  assert.deepEqual(k.map((r) => r.versio), ['1.1 (74)', '1.1 (73)', '1.0.72 (202609301134)']);
 });
 
 test('ämpäritarkistus: manifestin polut, puuttuva ja väärä koko', async () => {
