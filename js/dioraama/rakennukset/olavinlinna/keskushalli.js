@@ -31,10 +31,10 @@ const HAHMOT = [
       nopeus: 0.9, tauko: 2,
     },
     repliikit: [
-      { id: 'apulainen-1', teksti: 'Antakaa tietä, antakaa tietä! Tämä vati polttaa jo sormiani.' },
-      { id: 'apulainen-2', teksti: 'Ylhäällä vouti syö omassa pöydässään. Täällä riittää puuroa, kalaa ja leipää.' },
+      { id: 'tarjoilija-1', teksti: 'Antakaa tietä, antakaa tietä! Tämä vati polttaa jo sormiani.' },
+      { id: 'tarjoilija-2', teksti: 'Ylhäällä vouti syö omassa pöydässään. Täällä riittää puuroa, kalaa ja leipää.' },
     ],
-    reaktio: { id: 'pulu-apulainen-r1', teksti: 'Kolme vatia yhdellä kädellä! Nykyajan ravintolassa hän saisi vakituisen paikan.' },
+    reaktio: { id: 'pulu-tarjoilija-r1', teksti: 'Kolme vatia yhdellä kädellä! Nykyajan ravintolassa hän saisi vakituisen paikan.' },
   },
   {
     // Erä 3 (elävä linna, käsikirjoitus kohta 2–3): vartijat noppapelissä pelilaudan ääressä (pöydän B eteläpään edessä kasvot pohjoiseen; penkit ovat pöydän kyljillä).
