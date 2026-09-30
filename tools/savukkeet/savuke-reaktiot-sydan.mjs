@@ -38,6 +38,7 @@ import { fileURLToPath } from 'node:url';
 
 import { aiheAvain } from '../../js/pollopoiminnat.js';
 import { otsikkoAvain, REAKTIO_AANET_TALLE } from '../../js/reaktiot.js';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.argv[2] ?? process.env.KAAPPAUSKANSIO
@@ -60,16 +61,7 @@ const palvelin = createServer((req, res) => {
 const PORTTI = 8749;
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
-let paketti = null;
-for (const polku of [process.env.PLAYWRIGHT_JS, join(JUURI, 'node_modules', 'playwright', 'index.js'),
-  '/opt/node22/lib/node_modules/playwright/index.js']) {
-  if (!polku) continue;
-  // eslint-disable-next-line no-await-in-loop
-  paketti = await import(polku).catch(() => null);
-  if (paketti) break;
-}
-const chromium = paketti?.chromium ?? paketti?.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+const selain = await avaaChromium();
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {

@@ -100,6 +100,19 @@ jobs:
             {
               echo "- **$r** → \`$kohde/\` (jo ämpärissä: $olemassa), $(find "$d" -type f | wc -l | tr -d ' ') tiedostoa, $(du -sh "$d" | cut -f1)"
             } >> "$GITHUB_STEP_SUMMARY"
+            # Blender-tuotokset (Linnanrakentaja 30.9.): omistajan tools/dioraama/vie-blender.sh:lla lataama muuttumaton kansio
+            # kopioidaan PALVELIMELLA paketin alikansioon blender/. Lähdekansio tarkistetaan ENNEN mitään latausta, ja kohde
+            # täydennetään myös uusintaajossa: osoitin ei koskaan osoita pakettiin, jonka Blender-tiedostot puuttuvat.
+            bj="js/dioraama/rakennukset/$r/blender.json"
+            if [ -f "$bj" ]; then
+              bk=$(node -p "require('./$bj').kansio"); bn=$(node -p "require('./$bj').tiedostot.length")
+              loytyi=$(aws s3 ls "s3://$AMPARI/$bk" --recursive --endpoint-url "$PAATE" | grep -vc 'blender.json$' || true)
+              echo "  - blender: $bk ($loytyi/$bn tiedostoa ämpärissä)" >> "$GITHUB_STEP_SUMMARY"
+              if [ "$loytyi" != "$bn" ]; then
+                [ "$KUIVA" = "true" ] && { echo "::warning::$bk: ämpärissä $loytyi/$bn tiedostoa (kuiva-ajo)"; continue; }
+                echo "::error::$bk: ämpärissä $loytyi/$bn tiedostoa — omistaja ajaa ensin tools/dioraama/vie-blender.sh"; exit 1
+              fi
+            fi
             [ "$KUIVA" = "true" ] && continue
             if [ "$olemassa" = "ei" ]; then
               aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
@@ -114,6 +127,27 @@ jobs:
               aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
                 --exclude '*' --include '*.jpg' \
                 --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable'
+            fi
+            if [ -f "$bj" ]; then
+              # aws s3 ls palauttaa 1, kun kansiota ei vielä ole; pipefail + set -e katkaisi ajon hiljaa (30.9. ajo 36671228175).
+              kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
+              if [ "$kohteessa" != "$bn" ]; then
+                # EI palvelinkopiota: R2 ei toteuta S3:n tagikutsuja (GetObjectTagging, x-amz-tagging-directive), joita
+                # aws s3 cp s3→s3 käyttää kaikilla --copy-props-arvoilla (ajot 36672278230 ja 36673568641). Kansio ladataan
+                # ajokoneelle ja lähetetään tyypeittäin samoilla otsakkeilla kuin vie-blender.sh ne asetti.
+                tb=$(mktemp -d)
+                aws s3 cp "s3://$AMPARI/$bk" "$tb/" --recursive --endpoint-url "$PAATE" \
+                  --no-progress --only-show-errors --exclude 'blender.json'
+                for tyyppi in 'glb model/gltf-binary' 'jpg image/jpeg' 'astcm application/octet-stream'; do
+                  aws s3 cp "$tb/" "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" \
+                    --no-progress --only-show-errors --exclude '*' --include "*.${tyyppi%% *}" \
+                    --content-type "${tyyppi#* }" --cache-control 'public, max-age=31536000, immutable'
+                done
+                rm -rf "$tb"
+                kohteessa=$( { aws s3 ls "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" || true; } | wc -l | tr -d ' ')
+              fi
+              [ "$kohteessa" = "$bn" ] || { echo "::error::$kohde/blender/: $kohteessa/$bn tiedostoa kopion jälkeen, osoitinta ei vaihdettu"; exit 1; }
+              echo "  - blender → $kohde/blender/ ($bn tiedostoa, lataus ja lähetys)" >> "$GITHUB_STEP_SUMMARY"
             fi
             koodi=$(curl -s -o /dev/null -w '%{http_code}' "$JULKINEN/$kohde/rakennus.json")
             [ "$koodi" = "200" ] || { echo "::error::$JULKINEN/$kohde/rakennus.json vastasi $koodi, osoitinta ei vaihdettu"; exit 1; }

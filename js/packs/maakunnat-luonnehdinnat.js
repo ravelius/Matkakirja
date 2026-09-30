@@ -2658,7 +2658,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/nld-maakunta-noord-brabant-a02068cb.jpg',
-          lahde: 'Stefan Scheer, Wikimedia Commons (CC BY 2.5)',
+          lahde: 'Stefan Scheer, Wikimedia Commons (CC BY 2.5), rajattu',
           tekija: 'Stefan Scheer',
           lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Efteling_Entrance.jpg',
           lisenssi: 'CC BY 2.5',
@@ -4392,7 +4392,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Koroška': {
       lyhyt: 'Pecan vuoren luolaan on asetettu pronssinen kuningas Matjaž, sillä tarun mukaan hän nukkuu vuoren uumenissa Itävallan rajalla.',
-      pitka: `Koroška on Slovenian pohjoisin kolkka, ahdas ja vuoristoinen kaista Itävallan rajaa vasten – niin syrjäinen, että sitä pidetään yhä huonoiten muuhun Sloveniaan yhteydessä olevana alueena. Suurin kaupunki on Slovenj Gradec, mutta laaksoja on vuosisatoja hallinnut raskas teollisuus: Pecan juurella sijaitsevasta Mežican kaivoksesta louhittiin lyijyä ja sinkkiä yli vuosisadan ajan, ja kaivostoiminta muovasi koko seudun maisemaa. Legenda uinuvasta kuningas Matjažista syntyi juuri tässä ahtaudessa: tarinan mukaan hän vetäytyi satapäisine sotureineen Pecan luoliin hävittyään sodan, ja hänen sanotaan heräävän vasta kun hänen partansa on kiertänyt yhdeksän kertaa kivipöydän ympäri. Vaikka moni kaivos on jo sammunut, tarina elää yhä matkailuesitteissä ja lasten iltasaduissa koko Sloveniassa.`,
+      pitka: `Koroška on Slovenian pohjoisin kolkka, ahdas ja vuoristoinen kaista Itävallan rajaa vasten – niin syrjäinen, että sitä pidetään yhä huonoiten muuhun Sloveniaan yhteydessä olevana alueena. Suurin kaupunki on Slovenj Gradec, mutta laaksoja on vuosisatoja hallinnut raskas teollisuus: Pecan juurella sijaitsevasta Mežican kaivoksesta louhittiin lyijyä ja sinkkiä yli kolmen vuosisadan ajan, ja kaivostoiminta muovasi koko seudun maisemaa. Legenda uinuvasta kuningas Matjažista syntyi juuri tässä ahtaudessa: tarinan mukaan hän vetäytyi satapäisine sotureineen Pecan luoliin hävittyään sodan, ja hänen sanotaan heräävän vasta kun hänen partansa on kiertänyt yhdeksän kertaa kivipöydän ympäri. Vaikka moni kaivos on jo sammunut, tarina elää yhä matkailuesitteissä ja lasten iltasaduissa koko Sloveniassa.`,
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/svn-maakunta-koroska-ecb34565.jpg',
@@ -5466,6 +5466,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   LUX: {
     Diekirch: {
       lyhyt: 'Viandenin linna kohoaa Our-joen laakson yllä, ja joen varrella on talo, jossa Victor Hugo asui maanpaossa 1871.',
+      pitka: "Diekirch on Sauer-joen varrella oleva noin 7 300 asukkaan pikkukaupunki, joka on pohjoisten Ardennien arkinen keskus. Sen museossa on esillä roomalaisen huvilan mosaiikkia: huvila hylättiin 400-luvun alussa. Vanhan panimon tiloissa toimii kansallinen sotahistoriamuseo, jossa Ardennien taistelun tapahtumat on rakennettu eläväkokoisiksi dioraamoiksi. Naapurikaupungissa Ettelbruckissa on kenraali Pattonin muistomuseo, ja siellä laulettiin ensimmäisen kerran julkisesti kansallislaulu Ons Heemecht vuonna 1864. Pohjoisempana Clervaux'n kylässä on linna ja luostari, ja joulukuussa 1944 kylän ympärillä käytiin ankaria taisteluja.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-diekirch-e55c720f.jpg",
@@ -5480,6 +5481,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Grevenmacher: {
       lyhyt: 'Schengenin viinikylän edustalla allekirjoitettiin 1985 rajasopimus laivalla Mosel-joella, jossa Luxemburg, Saksa ja Ranska kohtaavat.',
+      pitka: "Grevenmacher on noin 5 300 asukkaan kaupunki Moselin vasemmalla rannalla, ja sen ympärillä rinteet on istutettu viiniköynnöksellä. Luxemburgin viinialue ulottuu joen varrella noin 40 kilometrin matkalle Schengenistä Wasserbilligiin, ja Grevenmacherissa on Vinsmoselle-osuuskunnan tuotantolaitos sekä Bernard-Massardin kuohuviinikellarit. Etelämpänä Remich on pinta-alaltaan maan pienin kunta. Alueen pohjoisosassa Echternachissa on luostari, jonka Willibrord perusti 698 maalahjoituksen turvin. Luostarikirkko sai paavilta basilikan arvon 1939, ja Willibrordin hauta on sen alla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-grevenmacher-1c3c5dfb.jpg",
@@ -5494,6 +5496,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Luxembourg: {
       lyhyt: 'Luxemburgissa bussit, junat ja raitiovaunut ovat olleet maksuttomia koko maassa helmikuusta 2020 lähtien.',
+      pitka: "Luxemburgin kaupungissa asuu noin 138 000 ihmistä, ja noin 70 prosenttia heistä on ulkomaalaisia, joten kadulla kuulee harvoin vain yhtä kieltä. Alzette ja Pétrusse ovat kaivaneet kallioon syvät rotkot, joita ylittävät sillat. Pont Adolphe valmistui 1903, ja sen 84,65 metrin kaari oli sen aikaan maailman suurin kivikaari. Vanhakaupunki ja linnoitukset ovat Unescon maailmanperintökohde vuodesta 1994, ja Bock-kallion alla kulkee noin 17 kilometriä kasemattikäytäviä, joiden rakentaminen alkoi espanjalaisten aikana 1644. Kirchbergin tasangolla Philharmonie avattiin 2005 ja Mudam 2006 entisen Fort Thüngenin paikalle I. M. Pein suunnittelemana. Kaupunki oli Euroopan kulttuuripääkaupunki 1995 ja 2007.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/lux-maakunta-luxembourg-6f0ca08c.jpg",
@@ -5524,6 +5527,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MLT: {
     'Southern Harbour': {
       lyhyt: 'Vallettan Upper Barrakka -puutarhan alla Saluting Battery laukaisee tykin joka päivä keskipäivällä Suuren sataman yli.',
+      pitka: "Suuren sataman ympärillä sykkii Maltan historiallinen ydin. Vallettan peruskivi muurattiin 28. maaliskuuta 1566, pian Suuren piirityksen jälkeen, ja kaupungin nimi tulee suurmestari Jean de Valettesta; koko kaupunki on ollut Unescon maailmanperintökohde vuodesta 1980. Vuonna 2012 avattu 58-metrinen Barrakka-hissi nostaa kävijät satamasta ylös kaupungin keskustaan, ja vuonna 2018 Valletta oli Euroopan kulttuuripääkaupunki. Paolan katujen alta löytyy vielä vanhempaa: vuonna 1902 vahingossa löydetty Ħal Saflieni -hypogeum on kolmikerroksinen esihistoriallinen hautakammio, jota käytettiin noin 3600 eaa. alkaen.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-southern-harbour-e9f048ea.jpg",
@@ -5538,6 +5542,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Northern Harbour': {
       lyhyt: 'Maltalla kulki 1883–1931 rautatie Vallettasta Mdinaan, ja sen Birkirkaran asemarakennus on nyt rautatiemuseo.',
+      pitka: "Suuren sataman pohjoispuolella Sliemasta St Julian'siin ja Msidaan ulottuu Maltan tiheimmin asuttu ja vilkkain kaupunkiseutu. Sliemasta pääsee lautalla Vallettaan Marsamxettin sataman yli, ja rantakatu täyttyy iltaisin kävelijöistä. Gżiran edustalla Manoelin saarella seisoo Fort Manoel, tähtilinnake, jonka rakennuttaminen aloitettiin 1723 ja joka valmistui 1733. St Julian'sin pienessä Spinolan lahdessa veneet keinuvat värikkäiden talojen edessä, ja aivan vieressä Paceville on saaren yöelämän keskus. Msidan kampuksella toimii Maltan yliopisto.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-harbour-1864cedc.jpg",
@@ -5552,6 +5557,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'South Eastern': {
       lyhyt: 'Marsaxlokkin satamassa keinuvat kirjavat luzzu-kalastusveneet, joiden keulaan on maalattu suojeleva silmä.',
+      pitka: "Saaren kaakkoisosassa muinaisuus ja moderni maailmankauppa ovat naapureita. Birżebbuġan Għar Dalamin luolasta on löytynyt jääkauden eläinten luita sekä merkkejä noin 7 400 vuotta sitten alkaneesta ihmisasutuksesta, ja kaupungin satama-alueella toimii vuonna 1988 perustettu Malta Freeport, Välimeren ensimmäinen konttien jälleenlaivauskeskus. Qrendin lähellä kallioiden reunalla seisovat Ħaġar Qimin ja Mnajdran temppelit, jotka rakennettiin noin 3600–3200 eaa. Marsaxlokkin satamassa pidetään sunnuntaisin kalatori, ja Delimaran niemen kärjessä on kallioon muodostunut St Peter's Pool -uimapaikka.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-south-eastern-32366c7b.jpg",
@@ -5566,6 +5572,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Western: {
       lyhyt: 'Muurien ympäröimää Mdinaa kutsutaan Hiljaiseksi kaupungiksi, sillä sen kapeille kujille saavat ajaa vain asukkaiden autot.',
+      pitka: "Maltan länsiosassa kohoaa saaren korkein maasto. Dingli Cliffsin jyrkänteillä sijaitseva Ta' Dmejrek on Maltan korkein kohta, 253 metriä merenpinnan yläpuolella. Mdinan kukkulalla on kaupunkia ollut foinikialaisista lähtien, ja kaupunki toimi saaren pääkaupunkina aina siihen asti, kun ritarikunta saapui 1530. Naapurikaupungin Rabatin alta löytyvät St Paulin katakombit, roomalaisia hautakammioita, jotka olivat käytössä 300-luvulle jKr. asti ja joiden pinta-ala on noin 2 000 neliömetriä. Ne ovat Maltan varhaisin ja laajin todiste kristinuskon leviämisestä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-western-b688f8c2.jpg",
@@ -5580,6 +5587,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Northern: {
       lyhyt: 'Mostan kirkon kupolin läpi putosi huhtikuussa 1942 saksalainen pommi, joka ei räjähtänyt – sen kopio on esillä kirkossa.',
+      pitka: "Maltan pohjoisosassa historia ja rantaelämä kulkevat rinnakkain. Mostan Rotundan kupolin sisähalkaisija on 39,6 metriä, ja sitä on pitkään pidetty maailman kolmanneksi suurimpana tukemattomana kupolina; kirkko on mallinnettu Rooman Pantheonin mukaan. Mellieħassa ritarikunnan rakennuttama Punainen torni valmistui 1649, ja kallioon louhittu ilmasuojatunneli muistuttaa sota-ajasta. Kaupungin liepeillä Għadiran luonnonsuojelualue on vain seitsemän hehtaarin kokoinen suolakosteikko, jolla käy muuttolintuja. Ċirkewwan satamasta lähtee lautta Gozolle, ja matka Mġarrin satamaan kestää noin 25 minuuttia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-northern-c455ab1c.jpg",
@@ -5594,6 +5602,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Gozo and Comino': {
       lyhyt: 'Gozon kuuluisa Azure Window -kivikaari romahti mereen myrskyssä maaliskuussa 2017, ja sen paikalla on nyt vain avomerta.',
+      pitka: "Gozolla asuu noin 39 000 ihmistä (2021). Rabatin eli Victorian keskustan yllä kohoaa Cittadella, jonka linnoituksen ritarit uudistivat noin 1599–1622 ja jonka barokkikatedraali rakennettiin 1697–1711. Għarbin peltojen keskellä seisova Ta' Pinun basilika on kansallinen pyhiinvaelluskohde: Karmni Grima kertoi kuulleensa kappelin luona äänen kesäkuussa 1883, ja nykyinen kirkko vihittiin 1932. Xwejnin suola-altaat pohjoisrannikolla ovat noin 350 vuotta vanhat. Comino, Gozon ja Maltan välinen pieni saari, on saanut nimensä kuminasta, ja siellä asuu vakituisesti vain muutama ihminen; sen Pyhän Marian torni valmistui 1618.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mlt-maakunta-gozo-and-comino-37224a77.jpg",
@@ -6464,6 +6473,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MNE: {
     Andrijevica: {
       lyhyt: 'Andrijevica jakaa Kolašinin kanssa Komovin vuoriston, jonka korkein huippu Kom Kučki kohoaa 2 487 metriin.',
+      pitka: "Andrijevica sijaitsee 740 metrin korkeudessa Limin ja Zlorečican yhtymäkohdassa, ja koko kunnassa asuu vain noin 4 000 ihmistä. Kaupunki on Komovin vuoriston epävirallinen retkeilytukikohta: korkeimman huipun lisäksi lähellä kohoavat Ljevorijecki Kom ja Vasojevićki Kom, joista jälkimmäiselle nousee kokonaisessa päiväretkessä. Kolašinin suuntaan johtaa 1 568 metrin korkeudessa kulkeva Trešnjevikin solatie, jota pidetään yhtenä Montenegron näyttävimmistä vuoristoteistä. Sekä Beraneen että Kolašiniin on noin 30 kilometriä, joten kaupunki on solmukohta Komovin, Bjelasican ja Prokletijen vuorimaisemien välissä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-andrijevica-a0c0a228.jpg",
@@ -6478,6 +6488,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bar: {
       lyhyt: 'Stari Barin lähellä kasvaa oliivipuu Stara maslina, jonka arvellaan olevan yli 2 000 vuotta vanha – yksi maailman vanhimmista.',
+      pitka: "Bar on Montenegron tärkein satamakaupunki, jonka satamasta lähtee yön yli kulkeva lautta Italian Bariin. Satama ja Belgradiin johtava 435 kilometrin rata, joka avattiin 1976, tekivät kaupungista maan portin merelle. Koko kunnassa asuu noin 46 000 ihmistä. Sutomoren pitkä hiekkaranta houkuttaa kotimaisia lomailijoita, ja Skadarjärven Virpazarin kylään on noin puoli tuntia ajomatkaa. Kaupungin takana Rumija-vuori kohoaa jyrkästi rannikon yläpuolelle, ja Topolicassa kuningas Nikolan kesäpalatsi toimii nykyään Barin kotiseutumuseona.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bar-151e1eb7.jpg",
@@ -6492,6 +6503,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Berane: {
       lyhyt: 'Limin varrella Beranen laidalla kohoaa Đurđevi Stupovin luostari, joka rakennettiin jo 1100-luvun lopulla.',
+      pitka: "Berane on Limin varren kaupunki, jossa asuu noin 9 500–10 000 ihmistä; koko kunnassa asukkaita on noin 25 000. Keskustassa toimii Polimski-museo, jonka kokoelmiin kuuluu useita tuhansia esineitä arkeologiasta, etnografiasta ja aseista. Seudun arkeologia yltää kauas: Ylä-Polimlen mesoliittisia asuinpaikkoja on ajoitettu vuosiin 9 000–6 000 eaa. Perhokalastajat tuntevat Limin, ja etelässä kohoaa Bjelasican vuoristo. Museo perustettiin 1950-luvulla, ja kaupungin lukio on toiminut jo vuodesta 1913.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-berane-fef33b0b.jpg",
@@ -6506,6 +6518,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bijelo Polje': {
       lyhyt: 'Limin varren Bijelo Polje on Pohjois-Montenegron keskus, jonka asukkaista lähes puolet on muslimeja ja lähes puolet ortodokseja.',
+      pitka: "Bijelo Polje, suomeksi Valkoinen kenttä, on Limin varren kaupunki, jonka kunnassa on yli 130 asutusta ja 38 662 asukasta (2023). Kaupungin vanhin maamerkki on Pyhien Pietarin ja Paavalin kirkko, jonka ruhtinas Miroslav Hum rakennutti sisäänkäynnin kirjoituksen mukaan vuonna 1196. Kirkko liittyy Miroslavin evankeliumiin, vanhimpaan säilyneeseen serbialaiseen kyrilliseen käsikirjoitukseen, joka tehtiin 1100-luvun lopulla ja kuuluu UNESCOn Muisti maailmasta -rekisteriin. Alkuteos säilytetään Belgradissa. Heinäkuisin kaupungissa pidetään White Field Jazz Festival, ja Lim on tunnettu taimenestaan ja harjuksestaan.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-bijelo-polje-441da6da.jpg",
@@ -6520,6 +6533,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Budva: {
       lyhyt: 'Sveti Stefanin kalastajakylä on pieni saari hiekkakannaksen päässä, ja koko kylä muutettiin Jugoslavian aikana luksushotelliksi.',
+      pitka: "Budvan pieni vanhakaupunki kalkkikiviniemellä on ollut asuttu yhtäjaksoisesti noin 2 500 vuotta, ja sen juuret ulottuvat kreikkalais-illyrialaiseen asutukseen 400-luvulla eaa. Vuoden 1979 maanjäristys vaurioitti kaupunkia pahoin, ja jälleenrakennus kesti vuoteen 1987. Muurien sisällä on neljä kirkkoa, muun muassa vuodelta 840 peräisin oleva Santa Maria in Punta, ja Citadelan ulkoteatteri toimii kesän Grad Teatar -festivaalin näyttämönä. Kaupungin ulkopuolella Slovenska plaža on noin 1,6 kilometriä pitkä, ja kunnassa asuu noin 26 700 ihmistä, joista noin 17 500 kaupungissa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-budva-ceca849d.jpg",
@@ -6534,6 +6548,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cetinje: {
       lyhyt: 'Cetinje on virallisesti Montenegron vanha kuninkaallinen pääkaupunki, ja presidentin virka-asunto Sininen palatsi on yhä siellä.',
+      pitka: "Cetinje perustettiin vuonna 1482, kun Ivan Crnojević siirsi valtansa Lovćenin juurelle helpommin puolustettavaan paikkaan. Kaupunki sijaitsee noin 650 metrin korkeudessa, ja kunnassa asuu noin 14 500 ihmistä. Täällä painettiin Crnojevićin kirjapainossa 1494 Oktoih, ensimmäinen eteläslaavien kyrillisin kirjaimin painettu kirja. Cetinjeen rakennettiin aikanaan suurvaltojen lähetystöjä, ja venäläinen, 1903 valmistunut lähetystörakennus kuuluu nykyään Taidekorkeakoululle. UNESCO otti Cetinjen mukaan Luovien kaupunkien verkostoon vuonna 2023 muotoilukaupunkina.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-cetinje-61df0219.jpg",
@@ -6548,6 +6563,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Danilovgrad: {
       lyhyt: 'Ostrogin luostari on rakennettu pystysuoraan kallioseinään, ja sinne nousee vuosittain yli miljoona pyhiinvaeltajaa.',
+      pitka: "Danilovgrad levittäytyy Zeta-joen hedelmällisellä Bjelopavlićin tasangolla noin 25 kilometrin päässä Podgoricasta, päätien varrella Nikšićin ja pääkaupungin välissä. Kaupunki perustettiin vuonna 1870 suunnitelmakaupungiksi ja nimettiin ruhtinas Danilon mukaan. Kunnassa on 103 asutusta, ala noin 501 neliökilometriä ja 18 617 asukasta (2023). Spužin kukkulalla kohoaa ottomaanien vuonna 1704 valmistama linnoitus, joka valvoi keskisen Montenegron kulkuteitä. Ždrebaonikin luostari ja Glava Zeten lähteet ovat tasangon reunoilla, ja tasangon lämmin, kostea subtrooppinen ilmasto tekee kesistä kuumia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-danilovgrad-29098384.jpg",
@@ -6562,6 +6578,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Herceg Novi': {
       lyhyt: 'Herceg Novissa keltaiset mimosat kukkivat jo talvella, ja kaupunki juhlii niitä joka vuosi omalla mimosajuhlallaan.',
+      pitka: "Herceg Novi on rakentunut portaikoiksi: vanhakaupunki laskeutuu rinnettä pitkin Kotorinlahden länsiportilta merelle, ja rantaa myötäilevä Pet Danican kävelyreitti yhdistää Škverin sataman ja Forte Maren. Linnake perustettiin kaupungin ytimeksi vuonna 1382 Bosnian kuningas Tvrtko I:n aikana. Sittemmin kaupunkia ovat hallinneet espanjalaiset (1538–1539), osmanit noin kaksisataa vuotta, venetsialaiset ja itävaltalaiset, ja jokainen on jättänyt jälkensä muureihin. Lähellä olevan Savinan luostarin suuri kirkko rakennettiin vuosina 1777–1799, ja sen ikonostaasin maalasi vuonna 1795 Simeon Lazović. Aurinkoisia päiviä on noin 200 vuodessa, joten rantakävelyllä viihtyy lähes ympäri vuoden.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-herceg-novi-7aea1a37.jpg",
@@ -6576,6 +6593,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Kolašin': {
       lyhyt: 'Kolašinin Biogradska Gorassa on yksi Euroopan viimeisistä aarniometsistä, ja osa sen puista on yli 500 vuotta vanhoja.',
+      pitka: "Kolašin on Morača-joen kaupunki noin 950 metrin korkeudessa Bjelasican ja Sinjajevinan vuorten juurella. Kaupungissa asuu vajaat 2 500 ihmistä ja koko kunnassa noin 10 000. Belgrad–Bar-rautatie pysähtyy täällä, ja Podgorican lentokenttä on noin 80 kilometrin päässä. Ympäristössä on Kolašin 1450 -hiihtokeskus Bjelasican rinteillä. Morača-kanjonin läpi noin puolen tunnin ajomatkan päässä etelässä on Morača-luostari, jonka Stefan Vukanović perusti vuonna 1252. Se on yksi Montenegron tunnetuimmista keskiaikaisista kohteista, ja siinä yhdistyy romaaninen ja raškalainen rakennustyyli.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kolasin-4432bfd2.jpg",
@@ -6590,6 +6608,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kotor: {
       lyhyt: 'Kotorin vanhassakaupungissa kissoja on niin paljon, että niistä on tullut kaupungin symboli – niillä on oma aukionsa ja museonsa.',
+      pitka: "Kotor on kätkeytynyt Kotorinlahden syvimpään sopukkaan, ja sen vanhakaupunki on kuulunut UNESCOn maailmanperintöön vuodesta 1979. Nykyinen ilme on peräisin venetsialaisilta, jotka hallitsivat kaupunkia vuosina 1420–1797 ja kutsuivat sitä nimellä Cattaro. Pyhän Tryphonin katedraali on vuodelta 1166. Kaupungin yllä nousevat muurit ovat noin 4,5 kilometriä pitkät, ja Pyhän Johanneksen linnoitukselle vie noin 1 350 askelmaa. Vuonna 2017 Kotorin puolustusrakennelmat liitettiin myös Venetsian 1500–1600-lukujen puolustusrakennelmien maailmanperintökokonaisuuteen. Kunnassa asuu noin 22 000 ihmistä, ja risteilylaivojen suosiman kaupungin kapeat kujat täyttyvät kesäisin vierailijoista.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-kotor-ce21ec2a.jpg",
@@ -6604,6 +6623,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mojkovac: {
       lyhyt: 'Mojkovacin yllä leviää Sinjajevinan ylänkö, jonka laajoilla kesälaitumilla paimenet pitävät yhä lampaitaan.',
+      pitka: "Mojkovac on Tara-joen itärannalla sijaitseva pieni kaupunki, jossa on runsaat 2 500 asukasta, ja koko kunnassa noin 6 800. Kaupunki on tunnettu Mojkovacin taistelusta 6.–7. tammikuuta 1916: noin 6 500 montenegrolaissotilasta piti asemansa selvästi suurempaa Itävalta-Unkarin joukkoa vastaan suojatakseen Serbian armeijan perääntymistä Albanian halki Korfulle. Kunnan alueella sijaitsee Brskovo, keskiajan kaivos- ja kauppapaikka, joka mainitaan ensi kertaa 1200-luvun alun kauppakirjassa. Kaivostoimintaa Brskovossa jatkettiin uudelleen 1900-luvulla, ja kaupungissa on asema Belgrad–Bar-radalla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-mojkovac-9997941d.jpg",
@@ -6618,6 +6638,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Nikšic': {
       lyhyt: 'Nikšićin Trebjesan panimo on Montenegron suurin, ja kaupungissa on pantu olutta 1800-luvun lopulta asti.',
+      pitka: "Nikšić on Montenegron toiseksi suurin kaupunki, ja sen kaupunkialueella asuu noin 66 700 ihmistä (2023). Se levittäytyy noin 640 metrin korkeudessa karstiselle Nikšićin kentälle Trebjesa-kukkulan juurelle. Alueen historia on kerroksellinen: roomalaisaikana paikalla oli Anagastum-linnoitus, keskiajalla slaavien Onogošt, ja nykyinen nimi vakiintui 1400-luvun puolivälissä. Bedemin linnoitus sai nykyisen muotonsa osmanien aikana 1700-luvulla, ja Berliinin sopimus vuonna 1878 vahvisti kaupungin kuulumisen Montenegrolle. Jugoslavian aikana Nikšićistä kasvoi teollisuuskaupunki, jossa oli terästehtaita ja bauksiittikaivoksia. Kaupungin lähellä ovat vesivoimatuotantoa varten rakennetut tekojärvet Krupac, Slano ja Vrtac.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-niksic-ab3345fe.jpg",
@@ -6632,6 +6653,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Plav: {
       lyhyt: 'Kirottujen vuorten juurella Plavin järvi on Montenegron suurin jäätikköjärvi, ja sitä ruokkivat maan alta pulppuavat lähteet.',
+      pitka: "Plav on noin 3 700 asukkaan kaupunki Lim-joen alkulähteillä lähes kilometrin korkeudessa. Järvi on pinta-alaltaan noin kaksi neliökilometriä ja enimmillään yhdeksän metriä syvä, ja sieltä Lim lähtee virtaamaan. Paikka mainitaan ensi kertaa vuonna 1330 Dečanin luostarin asiakirjoissa nimellä Hotina Gora, ja osmanien väestölaskennassa 1582–1583 Plaviin kuului 18 kylää. Alue liitettiin Montenegroon ensimmäisen Balkanin sodan jälkeen 1912. Seutu on suosittu patikointi- ja kalastuskohde, ja järvestä sekä vuoristopuroista pyydetään taimenta.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-plav-bdb42b39.jpg",
@@ -6646,6 +6668,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pljevlja: {
       lyhyt: 'Pljevljan Husein-pašan moskeija valmistui 1500-luvun lopulla, ja sen 42-metrinen minareetti on Balkanin korkeimpia.',
+      pitka: "Pljevlja on noin 770 metrin korkeudessa Ćehotina-joen varrella, ja sen kunta on pinta-alaltaan 1 346 neliökilometriä Montenegron toiseksi suurin. Kunnassa asuu noin 24 000 ihmistä (2023), kaupungissa noin 16 000. Täällä on maan ainoa hiilivoimala, ja Montenegron hiili louhitaan Pljevljan kaivoksesta. Kominin kaupunginosassa sijaitsevat roomalaisen Municipium S:n jäänteet, joista löytyneitä esineitä on nähtävillä kotiseutumuseossa. Kaupunki joutui osmanien haltuun vuonna 1465 ja vapautui 26. lokakuuta 1912. Pyhän Kolminaisuuden luostarin kirkko ja sen esikirkko freskattiin vuosina 1592–1595. Talvet ovat kylmiä, ja lunta on kuukausikaupalla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pljevlja-ae434d02.jpg",
@@ -6660,6 +6683,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Plužine': {
       lyhyt: 'Pivan luostari siirrettiin kivi kiveltä uuteen paikkaan padon tieltä, ja yli tuhat freskon kappaletta irrotettiin ja kiinnitettiin takaisin.',
+      pitka: "Plužinen kunta on pinta-alaltaan suuri, noin 850 neliökilometriä, mutta asukkaita on siellä vain muutamia neliökilometrillä. Paikka tunnetaan jo 1300-luvulta, ja Montenegroon se liitettiin vasta Berliinin kongressin jälkeen 1878. Alueen ylle kohoaa Mratinjen holvipato: 220 metriä korkea betonirakennelma valmistui 1975 ja on yksi Euroopan korkeimmista padoista. Sen luoma Pivanjärvi täyttää kanjonin, jonka rinteitä pitkin tie kulkee lukuisten tunneleiden läpi. Plužine on tienristeys, joka yhdistää Nikšićin ja Podgorican Bosnia-Hertsegovinan suuntaan, ja Durmitorin kansallispuisto on lähellä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-pluzine-926974b6.jpg",
@@ -6674,6 +6698,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Podgorica: {
       lyhyt: 'Montenegron pääkaupunki Podgorica kantoi 1946–1992 nimeä Titograd, ja se on rakentunut Ribnica- ja Morača-jokien yhtymäkohtaan.',
+      pitka: "Podgoricassa asuu noin 172 000 ihmistä, ja itsenäisen Montenegron pääkaupunkina se on toiminut vuodesta 2006. Morača-joen yli kaartuu heinäkuussa 2005 avattu Millennium-silta. Toinen maamerkki on Kristuksen ylösnousemuksen katedraali, joka vihittiin käyttöön 2013 ja näkyy kauas yli kaupungin. Ottomaanien ajan Stara Varošia edustaa 1600-luvun kellotorni, yksi harvoista rakennuksista, jotka selvisivät toisen maailmansodan pommituksista. Kesäisin kaupunki on maan kuumimpia paikkoja: Montenegron lämpöennätys 44,8 astetta mitattiin täällä elokuussa 2007.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-podgorica-6c21eb06.jpg",
@@ -6688,6 +6713,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Rožaje': {
       lyhyt: 'Rožaje on noin kilometrin korkeudessa vuorten keskellä, ja kaupungin luota alkava Ibar-joki halkaisee sen kahtia.',
+      pitka: "Rožajen kaupungissa asuu noin 13 600 ihmistä ja koko kunnassa noin 27 600, ja se on Montenegron bosniakkien kulttuurinen keskus. Kaupungin suurin moskeija, Sulttaani Murad II:n moskeija, uudistettiin perusteellisesti 2008. Pääaukiolta on parin minuutin kävely Ganićin torniin, joka rakennettiin 1797 kula-tyylisenä asuintornina ja toimii nykyään kotiseutumuseona: siellä esitellään pukuja, käsitöitä ja arjen esineitä. Rajaseudulla kohoaa Hajlan vuoristo, ja lähellä kaupunkia toimii hiihtokeskus.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-rozaje-6a4d5fb5.jpg",
@@ -6702,6 +6728,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Šavnik': {
       lyhyt: 'Kolmen joen yhtymäkohtaan 1861 perustetussa Šavnikissa asuu vain noin 360 ihmistä – se on Montenegron pienimpiä kaupunkeja.',
+      pitka: "Šavnikin kunta kattaa noin 550 neliökilometriä ja 27 asutusta, mutta koko kunnassa asuu alle 1 600 ihmistä eli vain noin viisi neliökilometrillä. Jugoslavian aikaisen teollistumisen ohittama seutu on jäänyt hiljaiseksi: ihmiset kävelevät jokien rannoilla tai kalastavat Bukovicassa ja Bijela-joessa. Žabljakiin on noin 15 kilometriä ja Nikšiciin noin 45. Ympäristö on suojeltu Dragišnican ja Komarnican luonnonpuistona, joka kattaa kanjoneita ja vuoristoa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-savnik-fa98eb13.jpg",
@@ -6716,6 +6743,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tivat: {
       lyhyt: 'Tivatin vanha, 1889 rakennettu laivastoarsenaali on muutettu Porto Montenegroksi, luksusjahtien satamaksi ja lomakyläksi.',
+      pitka: "Tivatissa asuu noin 10 700 ihmistä, mutta lentokenttä käsittelee moninkertaisen määrän: 2019 se palveli noin 1,37 miljoonaa matkustajaa. Kaupunki on rakentunut Vrmac-harjun ja lahden väliin, ja sen edustalla on kolme pientä saarta. Yksi niistä on Gospa od Milosti, noin 160 metriä pitkä ja 60 metriä leveä saari, jolla on Neitsyt Marian kappeli. Rannalla seisoo Buća-Lukovićin kartano, jonka linnoitettu torni on vuodelta 1548 ja jonka museo perustettiin 2017.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-tivat-1a6ca9dc.jpg",
@@ -6730,6 +6758,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ulcinj: {
       lyhyt: 'Ulcinjin Velika plaža on 12 kilometriä pitkä, Montenegron pisin hiekkaranta, ja kesätuulet tekevät siitä leijalautailijoiden suosikin.',
+      pitka: "Ulcinj perustettiin viidennellä vuosisadalla eaa., joten se on yksi Adrianmeren rannikon vanhimmista asutuksista; roomalaiset valtasivat sen 163 eaa. Osmanien valtakunta hallitsi kaupunkia yli kolmesataa vuotta, kunnes se liitettiin Montenegroon 1880 suurvaltojen painostuksen jälkeen. Kaupungin lähellä levittäytyy Ulcinjin suola-allas, noin 1 500 hehtaarin kosteikko, jossa on havaittu noin 250 lintulajia; alue julistettiin luonnonpuistoksi 2019. Sen matalissa altaissa ruokailevat flamingot, pitkäjalat ja harvinaiset kähäräpelikaanit, ja Adrianmeren lintureitillä se on tärkeä levähdyspaikka.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-ulcinj-90060bbd.jpg",
@@ -6744,6 +6773,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Žabljak': {
       lyhyt: 'Durmitorin juurella 1 456 metrin korkeudessa Žabljak on Balkanin korkeimmalla sijaitseva kaupunki, ja Mustajärvelle pääsee kävellen.',
+      pitka: "Žabljakissa asuu vain noin 1 700 ihmistä, ja kaupunki perustettiin 1871. Se on kasvanut Durmitorin kansallispuiston portiksi. Puisto perustettiin 1952 ja otettiin Unescon maailmanperintöluetteloon 1980; sen pinta-ala on noin 32 000 hehtaaria. Vuoristossa kohoaa Bobotov Kuk, 2 523 metriä korkea huippu, ja lunta on rinteillä noin 120 päivänä vuodessa. Kesällä kävijöitä tuovat vaellus, pyöräily ja koskenlasku, talvella laskettelu. Durmitorin vuoristossa on kymmeniä yli 2 000 metrin huippuja, ja kaupungin keskustasta pääsee kävellen Mustajärven rannalle.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mne-maakunta-zabljak-2402297e.jpg",
@@ -7502,6 +7532,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MKD: {
     Eastern: {
       lyhyt: 'Bregalnica-joen varren Kočanin laakso on Pohjois-Makedonian suurin riisinviljelyalue, ja sadonkorjuuta juhlitaan joka syksy.',
+      pitka: "Berovon tekojärvi lepää 990 metrin korkeudessa metsäisten rinteiden keskellä. Se on 75 hehtaarin kokoinen ja 2,5 kilometriä pitkä, ja paikalliset uivat, soutavat ja kalastavat siinä kesäisin. Štipin kaupunki kohoaa Isar-kukkulan linnoituksen juurella, ja kivinen Bezisten, entinen katettu basaari, toimii nykyään taidegalleriana. Štip on maan tekstiili- ja muotiteollisuuden keskus, ja kaupungissa järjestetään Kulttuurikesä-tapahtumasarjaa vuodesta 1987.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-eastern-dfd3cc5e.jpg",
@@ -7516,6 +7547,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Southeastern: {
       lyhyt: 'Strumican karnevaalista kirjoitti jo turkkilainen matkailija Evliya Çelebi 1670, ja naamiaiskulkue täyttää kadut yhä joka kevättalvi.',
+      pitka: "Dojranjärvi on pieni ja matala: pinta-alaa 43,1 neliökilometriä, pituutta noin 9 kilometriä ja syvyyttä enimmillään kymmenen metriä. Rannat jaetaan Kreikan kanssa, ja Pohjois-Makedonian osuus on 27,3 neliökilometriä. Ruovikot ovat tärkeä lintualue, jolla pesivät esimerkiksi kiharapelikaanit. Belasican vuoren rinteellä Novo Selon Smolare-vesiputous putoaa 39,5 metriä satavuotiaiden pyökkien keskellä, ja sinne pääsee noin 300 kiviportaan kautta. Valandovon lähellä Marvincin Isar-kukkulalla on kaivettu esiin yli 200 hautaa pronssikaudelta myöhäisantiikkiin, ja Strumican liepeillä Banskossa seisovat 300–400-luvun roomalaiskylpylän kivimuurit.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southeastern-71080379.jpg",
@@ -7530,6 +7562,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Northeastern: {
       lyhyt: 'Kratovo on rakennettu sammuneen tulivuoren kraatteriin, ja kaupungissa on yhä kuusi vanhaa kivitornia ja kaarevia kivisiltoja.',
+      pitka: "Kumanovo on maan toiseksi suurin kaupunki, vuoden 2021 väestölaskennan mukaan 75 051 asukasta. Noin 30 kilometrin päässä koilliseen, Tatićev Kamenin harjanteella 1 010–1 030 metrin korkeudessa, on Kokino. Arkeologi Jovica Stankovski löysi paikan vuonna 2001, ja sen vanhimmat löydöt ovat 1800-luvulta eaa. Kivi-istuimet ja merkkikivet on tulkittu muinaiseksi observatorioksi, joka seurasi Auringon ja Kuun paikkoja horisontissa, mutta tulkinta on tutkijoiden kesken kiistanalainen. Kratovon lähellä Kriva-joen laaksossa puolestaan kohoaa kivipilareiden metsä, ja Osogovon vuorilla Kriva Palankan lähellä on luostari lähellä Bulgarian rajaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-northeastern-983a946c.jpg",
@@ -7544,6 +7577,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Southwestern: {
       lyhyt: 'Ohridinjärvi on yli miljoona vuotta vanha, ja sen vedessä elää ohridintaimen, jota ei tavata luonnonvaraisena missään muualla.',
+      pitka: "Ohridinjärvi on 36 kilometriä pitkä, 358 neliökilometrin kokoinen ja enimmillään 288 metriä syvä. Noin puolet sen vedestä tihkuu itärannan maanalaisista lähteistä, ja yli viidennes tulee Prespanjärveltä, joka on 150 metriä ylempänä. Alue on kuulunut Unescon maailmanperintöluetteloon vuodesta 1979. Peštanin rannalla Luiden lahdella (Bay of Bones) on rakennettu kopio pronssikauden paalukylästä, jonka arkeologit ajoittavat vuosiin 1200–700 eaa.; jälleenrakennus tehtiin 2007–2008. Strugassa Drim-joen sillalla päättyy joka vuosi Strugan runousillat, jotka alkoivat 1961 ja joiden Kultaisen seppeleen ovat saaneet muun muassa Pablo Neruda (1972) ja Tomas Tranströmer (2003).",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-southwestern-fb820c3a.jpg",
@@ -7558,6 +7592,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pelagonia: {
       lyhyt: 'Bitolan laidalla on Heraclea Lyncestis, Makedonian Filippos II:n perustama kaupunki, jonka basilikoiden lattiamosaiikit ovat säilyneet.',
+      pitka: "Bitola, jossa on vuoden 2021 väestölaskennan mukaan 69 287 asukasta, tunnettiin osmanien aikana konsulien kaupunkina, ja yhä kaupungissa on konsulaatteja. Pitkän Širok Sokakin kävelykadun kahvilat täyttyvät iltaisin. Kaupungin takana kohoaa Pelisterin kansallispuisto, joka oli Jugoslavian ensimmäinen, perustettu 30.11.1948; sen pinta-ala on 171,5 neliökilometriä ja huippu 2 601 metriä. Puiston rinteillä kasvaa molika-mäntyä, jonka metsät ulottuvat 1 200–1 600 metrin korkeuteen. Prilepissä Markovi Kulin linnoituksen rauniot ovat 120–180-metrisellä kukkulalla, ja sen muurit rakennettiin 1200–1300-luvuilla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-pelagonia-26d30929.jpg",
@@ -7572,6 +7607,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Polog: {
       lyhyt: 'Mavrovonjärvestä nousee kuivina kesinä esiin Pyhän Nikolaoksen kirkko, joka jäi veden alle, kun tekojärvi padottiin 1950-luvulla.',
+      pitka: "Vardar-joki alkaa Gostivarin lähellä Vrutokin lähteestä 683 metrin korkeudesta ja virtaa Egeanmereen asti 388 kilometrin matkan. Tetovossa Šarena-moskeija on rakennettu 1438 kahden sisaruksen lahjoituksena ja saanut nykyisen kirjavan ilmeensä 1833, kun Abdurrahman-pasha laajensi sen; seiniä koristavat kukkakuviot ja maisemat. Kaupungin yläpuolella Šar-vuorilla on Popova Šapkan hiihtokeskus. Mavrovon kansallispuisto perustettiin 1949 ja on maan suurin; puiston Korab-vuori, 2 764 metriä, on Pohjois-Makedonian korkein huippu. Radikan rotko on yli 25 kilometriä pitkä ja sen jyrkänteet ovat yli 300 metriä korkeita.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-polog-08567e22.jpg",
@@ -7586,6 +7622,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Skopje: {
       lyhyt: 'Skopjen laidalla on Matkan kanjoni – nimi tarkoittaa kohtua – ja sen tekojärveltä pääsee veneellä Vrelon luolaan.',
+      pitka: "Skopje syntyi uudelleen 26. heinäkuuta 1963 kello 5.17 tapahtuneen maanjäristyksen jälkeen: noin tuhat ihmistä kuoli, ja 75–80 prosenttia kaupungista tuhoutui. Vanhan rautatieaseman kello pysähtyi silloin, ja asemasta tuli kaupunginmuseo ja muistomerkki. Japanilainen Kenzo Tange voitti 60 prosenttia kansainvälisen kilpailun palkinnosta ja laati vuonna 1965 keskustan yleissuunnitelman. Kaupungin nykytaiteen museo perustettiin helmikuussa 1964 lahjoitusten varaan, ja sen puolalaisten suunnittelema talo avattiin 1970. Vanhan basaarin kupeessa kulkee Vardarin yli kivisilta, joka on 214 metriä pitkä ja 12 kaarta; sen rakennutti Mehmed II 1451–1469. Lähellä on Daut-pashan hamam, jonka 13 kupolin alla on vuodesta 1948 toiminut taidegalleria.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-skopje-7407cee9.jpg",
@@ -7600,6 +7637,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vardar: {
       lyhyt: 'Gradskon lähellä on Stobi, antiikin kaupunki Vardarin ja Crna-joen yhtymäkohdassa, jonka teatterin ja basilikoiden rauniot näkyvät yhä.',
+      pitka: "Tikveš on Pohjois-Makedonian suurin viinialue, ja sen viinitarhat, noin 11 000 hehtaaria, ulottuvat Kavadarcin ja Negotinon ympäristössä 110 metristä 800 metrin korkeuteen. Rypäleistä tunnetuin on tumma Vranec. Demir Kapijan rotkossa, jonka nimi tarkoittaa turkiksi Rautaporttia, Vardar puskee kalkkikivikallioiden läpi; antiikissa paikka tunnettiin nimellä Stenae, ja siellä on noin 3 000 vuotta vanhoja paionialaisia linnoituksia. Velesissä, jossa asuu vuoden 2021 väestölaskennassa 40 664 ihmistä, Vardar halkoo kaupunkia, ja sieltä on kotoisin runoilija Kočo Racin.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mkd-maakunta-vardar-791f8908.jpg",
@@ -7638,6 +7676,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ALB: {
     Berat: {
       lyhyt: 'Beratia kutsutaan tuhannen ikkunan kaupungiksi, sillä sen valkoiset talot nousevat rinnettä ikkunarivi ikkunarivin yllä.',
+      pitka: "Berat ei ole pelkkä museo: linnoituksen muurien sisällä, 214 metrin korkeudessa Osum-joen yllä, asutaan yhä, ja kivikujien varrella on koteja, kahviloita ja parikymmentä kirkkoa. Neitsyt Marian kuolonuneen entisessä katedraalissa toimii Onufrin ikonimuseo, jossa on esillä 173 esinettä 1300-luvulta 1900-luvun alkuun. Onufri oli 1500-luvun maalari, joka tunnetaan omasta hehkuvasta punaisestaan. Linnasta laskeudutaan Mangalemin talojen kautta joelle ja 129 metriä pitkälle Gorican kivisillalle: sen seitsemän kaarta yhdistävät Mangalemin perinteisesti kristittyjen perheiden Goricaan, ja puusilta tässä oli jo 1780. Berat liitettiin Unescon maailmanperintökohteeseen Gjirokastërin rinnalle 2008. Keväällä sulamisvedet täyttävät Osumin 26 kilometrin kanjonin, jossa lasketaan koskia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-berat-3641295d.jpg",
@@ -7652,6 +7691,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Dibër': {
       lyhyt: 'Dibërin itärajalla kohoaa 2 764 metrin Korab, joka on sekä Albanian että Pohjois-Makedonian korkein vuori.',
+      pitka: "Dibërin maakunta on Albanian koillisnurkan vuoristoa: korkeusero on 380 metristä 2 700 metriin, ja noin 107 000 asukasta jakaa lähes 2 600 neliökilometrin alueen. Maakuntakeskus Peshkopi, 651 metrin korkeudessa Mustan Drinin varrella, on alle 15 000 asukkaan kaupunki, jonka laidalla kohoaa höyryä rikkilähteistä: vesi purkautuu maasta 35–43,5-asteisena. Ensimmäinen kylpylä rakennettiin 1964, ja nykyinen 50 kylpyhuoneen rakennus avattiin 1990. Maakunnan länsiosassa Lurë–Dejën kansallispuisto, 20 242 hehtaaria, kätkee kaksitoista jääkauden jälkeen syntynyttä järveä, pyökki-, kuusi- ja mäntymetsiä sekä karhuja, ilveksiä ja susia. Korabille nousevat lähtevät usein Radomiran kylästä, johon pääsee autolla ilman rajoituksia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-diber-273ba90e.jpg",
@@ -7666,6 +7706,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Durrës': {
       lyhyt: 'Durrësin keskustasta löydettiin 1966 talojen alta roomalainen amfiteatteri, Balkanin niemimaan suurin.',
+      pitka: "Durrës on Albanian vilkkain rantakaupunki ja yksi Adrianmeren suurimmista satamista, josta kulkee yli 1,5 miljoonaa matkustajaa vuodessa. Korinttolaiset ja korfulaiset siirtolaiset perustivat kaupungin 627 eaa., ja roomalaisille se oli Via Egnatian länsipää. Aivan rannan tuntumassa on maan suurin arkeologinen museo, perustettu 1951, jossa on 3 204 esinettä muinaisesta Dyrrhachiumista. Vanhan kaupungin bysanttilaisista muureista, 400–500-luvulta, on jäljellä noin kolmannes, ja niiden kulmassa on 1400-luvun venetsialaistorni, halkaisijaltaan 16 metriä. Se restauroitiin 2022–2023 Albanian ensimmäiseksi perintökeskukseksi, jossa on VR-laseja, äänioppaita ja kupoliprojektio. Satamasta pääsee yölaivalla Italian Bariin: matka kestää 8,5–10 tuntia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-durres-218d275a.jpg",
@@ -7680,6 +7721,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Elbasan: {
       lyhyt: 'Elbasanissa juhlitaan 14. maaliskuuta Kesän päivää, ja silloin kaupungissa leivotaan ballokume-keksejä.',
+      pitka: "Elbasanin keskustaa hallitsee linna, jonka sulttaani Mehmed II rakennutti 1466 Scampan roomalaisen ja bysanttilaisen linnoituksen paikalle. Muurissa oli 26 yhdeksän metrin tornia, syvä vallihauta ja kolme porttia, ja Via Egnatia kulki linnan läpi. Linnan tuntumassa seisoo Naziresha-moskeija vuodelta 1599, ja Pyhän Marian ortodoksikirkko on vuodelta 1830. Kaupungissa on Aleksandër Xhuvanin yliopisto, ja Elbasanissa toimi Albanian ensimmäinen opettajakoulu. 1970-luvulla kiinalaisten avulla rakennettu valtava terästehdas, Puolueen teräs, työllisti kerran noin 10 000 ihmistä. Nyt vain kymmenesosa tekee töitä yksityistetyissä tehtaissa, joista Kurumin terästehdas on toiminut 1998 lähtien, ja alue kantaa raskasta saastumisen perintöä. Kaupunkilaisia on noin 115 000.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-elbasan-1520bd09.jpg",
@@ -7693,6 +7735,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Fier: {
       lyhyt: 'Fierin lähellä on muinainen Apollonia, kreikkalaisten perustama kaupunki, jossa nuori Octavianus – tuleva keisari Augustus – opiskeli.',
+      pitka: "Fierin maakunnassa asuu 240 377 ihmistä, ja se on Albanian kolmanneksi asutuin. Menneisyys näkyy joka kukkulalla. Byllisin kukkulakaupungin 2,25 kilometrin muuri rakennettiin noin 350 eaa., ja sen teatteriin mahtui 7 500 katsojaa. Apollonia oli huippuaikoinaan noin 60 000 asukkaan kaupunki; ranskalaiset kaivoivat sitä 1924–1938 ja kuudennen vuosisadan temppeli löydettiin vasta 2006. Ardenican luostari on vuodelta 1282, ja sen kirkon seinillä ovat Zografi-veljesten 1740-luvun freskot. Luostari suljettiin 1969 ja avattiin uudelleen 1992. Divjakë–Karavastan kansallispuisto kattaa 22 230 hehtaaria, ja Ramsar-kosteikko on ollut suojeltuna 1994. Fierin itäpuolella Patos-Marinza on Euroopan suurin maalla sijaitseva öljykenttä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-fier-572dc708.jpg",
@@ -7707,6 +7750,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Gjirokastër': {
       lyhyt: 'Gjirokastërin kivitalojen katot on ladottu harmaista liuskekivistä, ja kaupungissa syntyi kirjailija Ismail Kadare.',
+      pitka: "Gjirokastërin linnoitus kohoaa 336 metrin korkeuteen, ja sen alkuperä on 1100-luvulla. Sisällä on sotamuseo, kellotorni, kaksi tekkeä, vesisäiliö sekä amfiteatteri, jossa kansallinen folklorefestivaali on pidetty viiden vuoden välein vuodesta 1968. Alapuolella vanha basaari on 1600-luvulta ja basaarin moskeija vuodelta 1757. Kaupunki on tunnettu tornitaloistaan: Zekate-talo on rakennettu 1811–1812, ja sen kaksi tornia kehystävät keskikaarta. Kaupungin alla on 1970-luvun alussa louhittu kylmän sodan tunneli, noin 800 metriä pitkä ja 59 huonetta, ja se avattiin vierailijoille 2014. Gjirokastër kuuluu Unescon maailmanperintöön vuodesta 2005, ja kunnassa on noin 23 300 asukasta.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-gjirokaster-b919118d.jpg",
@@ -7721,6 +7765,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Korçë': {
       lyhyt: 'Korçëssa avattiin 1887 ensimmäinen albaniankielinen koulu, ja nykyään kaupungin nimi tunnetaan koko maassa Birra Korça -oluesta.',
+      pitka: "Korçë on korkealla, noin 850 metrin korkeudessa Moravan vuorten kupeessa, ja sen 60 000 asukkaan tahti tuntuu hitaammalta kuin muualla Albaniassa. Iltaisin ihmiset kävelevät Shën Gjergji -bulevardia pitkin kahviloihin, ja Vanhan basaarin kivikadut on viime vuosina korjattu kortteli kortteliksi kauppojen ja majataloiden käyttöön. Kaupungin sydän on museo: Keskiaikaisen taiteen kansallismuseossa on yli 7 000 esinettä, enimmäkseen ikoneja, ja seinillä ovat muun muassa Onufrin ja David Selenican työt. Museo avattiin 1980 ja sen rakennus uudistettiin 2016. Elokuussa kaupunki täyttyy Festa e Birrës -oluttapahtumasta, jota järjestäjät sanovat alueen suurimmaksi.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-korce-39cfa8f7.jpg",
@@ -7735,6 +7780,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Kukës': {
       lyhyt: 'Kukësin vanha kaupunki jäi 1976 Fierzan tekojärven alle, ja uusi Kukës rakennettiin järven yläpuoliselle tasanteelle.',
+      pitka: "Kukësissa, noin 15 600 asukkaan kaupungissa, huomaa heti, että vuoret ja vesi ovat lähellä: idässä kohoaa Gjallica, 2 468 metriä, ja edessä levittäytyy Fierzan tekojärvi, jonka pinta-ala on noin 72,5 neliökilometriä ja syvyys enimmillään 128 metriä. Järven sulkee Drin-joella 167-metrinen kivitäyttöpato, jonka ensimmäinen voimalayksikkö käynnistyi 1978. Se tuottaa noin kolmanneksen koko Drinin voimalaitosketjun sähköstä. Kaupungin läpi kulkee A1-tie Kosovoon, ja Kukësin maakuntaan kuuluu myös Valbonan laakso ja sen vaellusreitit Albanian Alpeilla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-kukes-5eec596f.jpg",
@@ -7749,6 +7795,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Lezhë': {
       lyhyt: 'Lezhën Pyhän Nikolauksen kirkon raunioissa on Skanderbegin muistomerkki, sillä kansallissankari haudattiin sinne 1468.',
+      pitka: "Lezhë on noin 15 000 asukkaan pikkukaupunki Drinin tasangolla, mutta sen historia on paksu. Kaupungin yllä 172 metrin kukkulalla seisoo linna, ja alhaalla, muistomerkin kohdalla, kokoontuivat 2. maaliskuuta 1444 Albanian ruhtinaat Lezhën liittoon. Pyhän Nikolauksen kirkon rauniot muutettiin muistomerkiksi 1981. Muutaman kilometrin päässä Shëngjinin satamakylä tarjoaa hiekkarannat ja kalaravintolat. Drinin suistossa Kunë-Vainin suojelualue on 44 neliökilometrin kokoinen ja siellä on laskettu 196 lintulajia. Alue sai suojelun jo 1940 metsästysreservaattina, ensimmäisenä Albaniassa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-lezhe-624ea869.jpg",
@@ -7763,6 +7810,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Shkodër': {
       lyhyt: 'Shkodërjärvi on Balkanin suurin järvi, ja sen rannalla kohoaa Rozafan linna, jonka muuriin tarun mukaan muurattiin nuori äiti.',
+      pitka: "Shkodërin vanhassa keskustassa kannattaa kävellä hitaasti, sillä pienet kadut ja vanhat talot kertovat kaupungin taiteilijoista ja kauppiaista. Kolë Idromeno (1860–1939) oli maalari, arkkitehti ja valokuvaaja, ja hänen käsialaansa on kymmeniä kaupungin rakennuksia sekä Albanian ensimmäisiä elokuvaesityksiä. Marubin kansallinen valokuvamuseo hoitaa Pietro Marubin 1856 perustaman studion arkistoa, satojatuhansia lasi- ja filminegatiiveja Albanian 1800-luvun lopulta 1900-luvun puoliväliin. Museo avattiin nykyisessä muodossaan 9. toukokuuta 2016, ja se oli ehdolla Euroopan vuoden museoksi 2017. Kaupungin ulkopuolella Ura e Mesit -silta ylittää Kirin 13 kivikaarella ja yli sadan metrin matkalla, valmistuneena 1770.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-shkoder-4130051d.jpg",
@@ -7777,6 +7825,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Tiranë': {
       lyhyt: "Tiranan Bunk'Art on museo Enver Hoxhan viisikerroksisessa maanalaisessa bunkkerissa, jossa on 106 huonetta.",
+      pitka: "Tirana on yllättävän nuori pääkaupunki: Sulejman Pasha Bargjini perusti sen 1614 vanhan moskeijan ympärille, ja Albanian pääkaupungiksi se tuli väliaikaisesti 1920 ja pysyvästi 1925. Kaupungin keskus on Skanderbegin aukio, joka uudistettiin 2016–2017 belgialaisen 51N4E-toimiston suunnitelmalla noin 40 000 neliömetrin kävelyalueeksi ja palkittiin 2018 Euroopan julkisen kaupunkitilan palkinnolla. Aukion reunalla seisovat 35-metrinen Kellotorni ja Et'hem Bey -moskeija, joka valmistui 1821. Kaupungin vieressä on Suuri puisto tekojärvineen, joka tehtiin 1955, ja idässä kohoaa Dajtin kansallispuisto.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-tirane-e3dea515.jpg",
@@ -7791,6 +7840,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vlorë': {
       lyhyt: 'Vlorëssa julistettiin Albanian itsenäisyys 28. marraskuuta 1912, ja Lipun aukiolla seisoo itsenäisyyden muistomerkki.',
+      pitka: "Vlorë on Albanian kolmanneksi suurin kaupunki, noin 84 000 asukasta, ja sen edustalla Adrianmeri kohtaa Joonianmeren. Kaupungin pohjoispuolella Narta-laguuni on 41,8 neliökilometrin kokoinen suolaisen veden allas, jossa oli 2020 noin 3 000 flamingoa. Laguunin keskellä on Zvërnecin saari, jonne pääsee puisella kävelysillalla ja jossa seisoo 1200-luvun bysanttilainen luostari. Lounaassa Karaburun-Sazanin meripuisto kattaa reilut 124 neliökilometriä ja on ollut suojeltu vuodesta 2010. Sisämaassa Kaninën linna kohoaa noin 380 metrin korkeuteen ja antaa näköalan lahdelle.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/alb-maakunta-vlore-fbc77cf7.jpg",
@@ -7821,18 +7871,23 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   CYP: {
     Famagusta: {
       lyhyt: 'Kap Grecon niemellä meri on kovertanut kalkkikiveen luolia ja kallioportteja, ja sen kirkkaassa vedessä sukelletaan.',
+      pitka: "Famagustan piiri on jakautunut maisema: eteläosassa Ayia Napan ja Protaraksen lomakohteet täyttyvät kesäisin, pohjoisempana taas ovat Famagustan muurien ympäröimä vanhakaupunki ja Salamiin rauniot. Ayia Napan luostari on rakennettu venetsialaisaikana noin vuonna 1500, ja sen portin edessä kasvaa noin 600-vuotias metsäviikuna. Pernera-rannan edustalla, kahdeksan–kymmenen metrin syvyydessä, on vuonna 2021 avattu vedenalainen veistosmuseo MUSAN, jossa on 93 Jason deCaires Taylorin teosta. Famagustan vanhassa kaupungissa Lala Mustafa Pashan moskeija on alun perin Pyhän Nikolauksen katedraali, jonka rakentaminen alkoi vuonna 1298. Lähellä sijaitseva Varosha oli ennen vuotta 1974 noin 39 000 asukkaan lomakaupunki, ja sen osia on avattu vierailijoille lokakuusta 2020.",
     },
     Larnaca: {
       lyhyt: 'Larnakan suolajärvelle saapuu talvisin tuhansia flamingoja, ja sen rannalla seisoo Hala Sultan Tekke -moskeija.',
+      pitka: "Larnaca tunnetaan lentokentästä, mutta kaupungin alla lepää muinainen Kition, joka perustettiin 1200-luvulla eaa. Pyhän Lasaruksen kirkko rakennettiin 800-luvun lopulla sen jälkeen, kun kaupungista löytyi vuonna 890 hauta, jossa oli kirjoitus \"Lasarus, neljä päivää kuollut\". Kamaresin akvedukti, jossa on 75 kaarta, rakennettiin 1700-luvun puolivälissä tuomaan kaupunkiin vettä. Ulkomerellä makaa 42 metrin syvyydessä Zenobia-lautta, joka kaatui vuonna 1980 ja on nykyään yksi maailman suosituimmista hylkysukelluskohteista. Sisämaassa Choirokoitian neoliittinen kylä, perustettu noin 7000 eaa., kuuluu Unescon maailmanperintöluetteloon vuodesta 1998.",
     },
     Limassol: {
       lyhyt: 'Limassolin vuoristokylissä tehdään makeaa Commandaria-viiniä, jota pidetään maailman vanhimpana yhä valmistettavana nimettynä viininä.',
+      pitka: "Limassol on Kyproksen väkirikkain kunta: siellä asuu noin 108 000 ihmistä ja koko piirissä noin 262 000 (vuoden 2021 väestölaskenta). Kaupungin keskustan Limassolin linnassa toimii nykyään Kyproksen keskiaikamuseo. Syyskuussa Kunnallispuiston täyttää yhdeksänpäiväinen viinifestivaali, jota on järjestetty vuodesta 1961, ja helmikuussa kaupungissa vietetään karnevaalia, jonka päätöskulkueessa marssii kymmeniä vaunuja. Kaupungin länsipuolella Kolossin linnan nykyinen torni on rakennettu vuonna 1454 johanniittojen aikana. Vielä pidemmälle länteen, Episkopin lähellä, muinaisen Kourionin kreikkalais-roomalaiseen teatteriin mahtuu noin 3 500 katsojaa.",
     },
     Nicosia: {
       lyhyt: 'Troodoksen rinteillä Kykkosin luostari vaalii Neitsyt Marian ikonia, jonka perimätieto sanoo evankelista Luukkaan maalaamaksi.',
+      pitka: "Nikosia on pääkaupunki, jota halkoo YK:n valvoma puskurivyöhyke, ja vanhakaupunki jakautuu sen molemmin puolin. Venetsialaiset rakensivat kaupungin ympärille vuodesta 1567 alkaen noin viiden kilometrin mittaisen kehämuurin, jossa on yksitoista bastionia ja kolme porttia. Ledran kadun ylityspaikka avattiin jalankulkijoille 3. huhtikuuta 2008, ja Kyproksen museo on toiminut kaupungissa vuodesta 1882. Piirin vuoristossa Troodoksella sijaitsee yhdeksän kymmenestä Unescon maailmanperintökohteeksi vuonna 1985 hyväksytystä maalatusta kirkosta. Niiden joukossa ovat Kakopetrian 1000-luvun Agios Nikolaos tis Stegis ja Nikitarin lähellä oleva Asinoun 1100-luvun kirkko.",
     },
     Paphos: {
       lyhyt: 'Paphosin rannikolla Petra tou Romioun kallio on tarun mukaan paikka, jossa Afrodite nousi merenvaahdosta.',
+      pitka: "Paphosin Kato Pafosin arkeologinen puisto kuuluu Unescon maailmanperintöön vuodesta 1980, ja sen roomalaisten huviloiden lattiamosaiikit löytyivät vuonna 1962, kun maanviljelijä kynsi peltoaan. Dionysoksen talon mosaiikit peittävät 556 neliömetriä. Kuninkaiden hautojen kallioon hakattuja hautakammioita on osin 300-luvulta eaa., vaikka yhtään kuningasta ei niihin haudattu. Paphos oli vuoden 2017 Euroopan kulttuuripääkaupunki yhdessä Aarhusin kanssa, ja Paphos Aphrodite -festivaali on tuonut oopperaa keskiaikaisen linnan aukiolle vuodesta 1999.",
     },
   },
   /*
@@ -7905,6 +7960,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   MDA: {
     'Anenii Noi': {
       lyhyt: 'Varnițan kylässä Benderin pohjoispuolella leireili Ruotsin kuningas Kaarle XII vuosina 1711–1713, kunnes osmanien joukot hyökkäsivät leiriin.',
+      pitka: "Anenii Noi on noin 40 kilometrin päässä Chișinăusta kaakkoon, ja kaupungissa asuu runsaat 10 000 ihmistä. Vuoden 2014 väestönlaskennassa moldovalaisia oli 6 756, ukrainalaisia 1 894 ja venäläisiä 1 427. Keskustan maamerkkejä ovat Pyhän Dumitrun kirkko ja Stefan Suuren muistomerkki, mutta tunnetuin kohde on lähellä Bulboacan kylässä: Castel Mimi. Ranskalaisen mallin mukaan rakennetun viinilinnan betonirakenne oli aikanaan uutuus, ja sen kellariin mahtui noin 300 000 litraa viiniä. Rakennuttaja Constantin Mimi oli opiskellut viininviljelyä Montpellier'ssa. Nykyisin linnassa on museo, hotelli, kylpylä ja ravintola.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-anenii-noi-8b1e0b46.jpg",
@@ -7919,6 +7975,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Bălţi': {
       lyhyt: 'Bălți tarkoittaa romaniaksi lätäköitä – kaupunki sai nimensä kosteikoista mäen juurella, jossa Răuțel-puro laskee Răut-jokeen.',
+      pitka: "Bălți on Moldovan kolmanneksi suurin kaupunki, noin 127 kilometriä Chișinăusta pohjoiseen Răut-joen varrella. Se on rakentunut kolmelle kukkulalle ja kahteen pieneen laaksoon, ja ympäristön maaperä on hedelmällistä mustaa multaa. Vuoden 2024 väestönlaskennassa kaupungissa oli 94 546 asukasta, kun huippulukema vuonna 1989 oli lähes 161 500. Elinkeinoelämän ytimessä ovat elintarvike- ja jauhoteollisuus, sokeri, maatalouskoneet ja huonekalut. Alecu Russon valtionyliopisto on toiminut vuodesta 1945, ja sen opetus on pääosin romaniankielistä. Keskustan Itsenäisyydenaukion ja kaupungintalon symmetriset julkisivut ovat tyypillistä 1950-luvun arkkitehtuuria.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-balti-518257be.jpg",
@@ -7933,6 +7990,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Basarabeasca: {
       lyhyt: 'Basarabeasca sai alkunsa 1846 juutalaisesta maanviljelyssiirtokunnasta nimeltä Romanovka, ja nykyisen nimensä kaupunki sai vasta 1957.',
+      pitka: "Basarabeasca on noin 94 kilometriä Chișinăusta etelään aivan Ukrainan rajalla, ja Cogâlnic-joki virtaa sen piirin läpi. Kaupungissa oli vuoden 2014 väestönlaskennassa 8 471 asukasta, kymmenen vuotta aiemmin 11 192. Suurin ryhmä olivat moldovalaiset ja romanialaiset (39,8 %), sitten gagauzit (17,3 %) ja venäläiset (16,3 %). Rautatiesolmuna kaupunki sai uutta virtaa, kun Berezynen ja Basarabeascan välinen rata avattiin elokuussa 2022 uudelleen ja rajanylityspaikka 25. maaliskuuta 2023. Radalla ukrainalaista rahtia kuljetetaan Tonavan satamiin Reniin, Giurgiulești'iin ja Galațiin.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-basarabeasca-f3a84a5a.jpg",
@@ -7947,6 +8005,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Bender: {
       lyhyt: 'Benderin linnoituksen Dnestrin rannalla rakennutti uudelleen sulttaani Süleyman Suuri 1500-luvulla, ja sen muureissa on kymmenen bastionia.',
+      pitka: "Bender on Dnestrin oikealla rannalla vain noin kymmenen kilometrin päässä Tiraspolista. Kansainvälisesti kaupunki katsotaan Moldovan osaksi, mutta vuodesta 1992 sitä on tosiasiassa hallinnut Transnistrian hallinto. Kaupunki mainitaan asiakirjoissa ensi kerran 1408 tullipaikkana. Ottomaanit valtasivat linnoituksen 1538, ja arkkitehti Mimar Sinanin suunnitelman mukaan kivilinnoitus valmistui 1541. Linnoitus entisöitiin vuosina 2008–2012, ja nykyään sen alueella on museo, jonka gallerioissa kerrotaan linnoituksen sotahistoriasta. Aivan vieressä on Aleksanteri Nevskin kirkko.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-bender-98d42d40.jpg",
@@ -7961,6 +8020,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Briceni: {
       lyhyt: 'Crivan kylän kipsilouhoksesta avautui 1959 Emil Racovițăn luola, jonka maanalaisia käytäviä on kartoitettu noin 90 kilometriä.',
+      pitka: "Briceni on Moldovan luoteiskulmassa, piirin pohjoispuolella on Ukraina ja Prut-joen takana lännessä Romania. Kaupungissa asui vuoden 2014 väestönlaskennassa 7 314 ihmistä ja koko 814 neliökilometrin piirissä 46 894 vuonna 2024. Talous nojaa maatalouteen: sokerijuurikasta ja tupakkaa viljellään viljan rinnalla, ja tarhoissa kasvaa omenoita, kirsikoita ja luumuja. Lopatnic-joen valuma-alueella on geologisesti ja paleontologisesti merkittäviä muodostumia. Ilmasto on lauhkean mannermainen, ja piirin sademäärä kuuluu Moldovan korkeimpiin.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-briceni-e9e8115d.jpg",
@@ -7975,6 +8035,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cahul: {
       lyhyt: 'Giurgiuleștissa Moldova ulottuu Tonavalle vain noin 480 metrin matkalta, ja siihen on mahtunut maan ainoa Tonavan satama.',
+      pitka: "Cahul on Etelä-Moldovan keskus lähellä Romanian rajaa. Vuoden 2024 väestönlaskennassa siellä oli 22 223 asukasta, kymmenessä vuodessa reilut 7 800 vähemmän kuin vuonna 2014, ja kaupunki on maan kahdeksanneksi suurin. Paikka mainitaan asiakirjoissa ensi kerran vuonna 1502 nimellä Scheia. Nykyään teitä johtaa Oanceaan Romaniaan ja Reniin Ukrainaan. Bogdan Petriceicu Hasdeun yliopisto avattiin 1999. Vuonna 1958 perustetussa historiamuseossa on kymmeniä tuhansia esineitä, ja alueen kivennäisvedet sisältävät bromia ja jodia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cahul-d58fefdf.jpg",
@@ -7989,6 +8050,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Călărași': {
       lyhyt: 'Hîrjaucan luostari Codrun metsissä perustettiin 1740, kun sinne asettui kaksi munkkia Romanian puolella sijaitsevasta Neamțin luostarista.',
+      pitka: "Călărași on noin 10 800 asukkaan kaupunki Moldovan keskiosassa, Codrin kumpuilevien metsämaiden alueella; vuonna 2004 asukkaita oli vielä 14 660. Koko piirin pinta-ala on 753,5 neliökilometriä, ja noin 31 prosenttia siitä on metsää, jossa kasvaa valkopyökkiä, pyökkiä, saarnia, jalavia ja tammia. Piirin maatalousmaata on 25 801 hehtaaria, ja siitä viinitarhoja on 6 020 hehtaaria. Alueella tuotetaan punaviiniä, valkoviiniä ja konjakkia. Piirin luostarit ovat osa Codrun metsäisten kukkuloiden pyhiinvaellusmaisemaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-calarasi-14a0c098.jpg",
@@ -8003,6 +8065,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Camenca: {
       lyhyt: 'Camencan Dnestr-parantolassa joen rannalla hoidetaan vieraita ampeloterapialla eli rypälemehulla ja viinillä.',
+      pitka: "Camenca on pikkukaupunki Dnestrin rannalla Transnistrian pohjoisimmassa piirissä. Kansainvälisesti alue katsotaan Moldovan osaksi, mutta käytännössä sitä hallinnoi Transnistrian hallinto. Asutus mainitaan ensi kerran 1600-luvun alussa. Kaupungin asukasluku oli vuonna 2019 noin 8 700, kun se vuonna 1989 oli 13 689. Ympäröivä Camencan piiri on pinta-alaltaan 434,5 neliökilometriä, ja siihen kuuluvat kaupungin lisäksi 12 kuntaa ja 23 asuinpaikkaa. Ilmasto on lauhkean mannermainen, ja kesät ovat kuumia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-camenca-ee7bb0e5.jpg",
@@ -8017,6 +8080,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Cantemir: {
       lyhyt: 'Cantemirin kaupunki sai nimensä 1973 ruhtinas Dimitrie Cantemirin 300-vuotispäivänä – hän oli Moldovan hallitsija ja oppinut kirjailija.',
+      pitka: "Cantemir on pieni piirikaupunki Moldovan lounaiskulmassa, noin 120 kilometrin päässä Chișinăusta. Sen länsipuolella virtaa Prut, jonka takana alkaa Romania. Vuoden 2014 väestölaskennassa kaupungissa oli 3 429 asukasta, kun luku oli vuonna 1989 vielä 5 320. Ympäröivä piiri on huomattavasti suurempi: siellä on noin 33 000 asukasta 51 paikkakunnassa, ja yli 90 prosenttia heistä asuu maaseudulla. Maisema on kumpuilevaa tasankoa. Yli puolet maasta on viljelyksessä, ja viinitarhoja on noin 5 660 hehtaaria. Väestö on enimmäkseen moldovalaista, mutta mukana on myös romanialaisia ja noin neljä prosenttia bulgarialaisia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cantemir-bb635cce.jpg",
@@ -8031,6 +8095,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Causeni: {
       lyhyt: 'Căușenin 1600-luvun Neitsyt Marian kirkon lattia on yli 90 senttiä maanpinnan alapuolella, ja seinillä on Moldovan ainoa keskiaikainen fresko.',
+      pitka: "Căușeni on Botna-joen varrella Etelä-Moldovassa, vuoden 2024 väestölaskennan mukaan noin 13 500 asukkaan kaupunki. Ottomaanien aikana se oli tärkeä paikallinen keskus. Nykyään kaupunki on ympäristönsä hallintokeskus: Căușenin piirissä asuu noin 57 000 ihmistä 1 185 neliökilometrin alueella. Maatalous on pääelinkeino, ja piirissä on noin 5 200 hehtaaria viinitarhoja ja 4 300 hehtaaria hedelmätarhoja. Kaupungin tunnetuin nähtävyys, Neitsyt Marian kuolonuneen kirkko, kunnostettiin vuosina 2017–2023 kansainvälisellä tuella, ja se avattiin uudelleen vierailijoille vuonna 2024.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-causeni-61162f0f.jpg",
@@ -8045,6 +8110,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Chişinău': {
       lyhyt: 'Chișinăun pohjoislaidalla Cricovan viinikellareissa kulkee noin 120 kilometriä maanalaisia teitä entisissä kalkkikivilouhoksissa.',
+      pitka: "Chișinău on Moldovan pääkaupunki ja selvästi maan suurin kaupunki: vuoden 2024 väestölaskennan mukaan kaupunkikunnassa asuu 720 128 ihmistä, ja suuri osa maan taloudesta syntyy täällä. Ensimmäinen kirjallinen maininta on päivätty 14. lokakuuta 1436, jolloin paikka oli luostarikylä. Vuonna 1940 voimakas maanjäristys iski kaupunkiin. Keskustassa sijaitseva Ștefan cel Mare -puisto on noin seitsemän hehtaarin kokoinen ja sitä pidetään Moldovan vanhimpana puistona. Sitä kutsutaan myös rakastavaisten puistoksi, koska pariskunnat tapaavat siellä. Joka lokakuu kaupungissa juhlitaan kansallista viinifestivaalia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-chisinau-a8e27317.jpg",
@@ -8059,6 +8125,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Cimişlia': {
       lyhyt: 'Cimișlian rotkoista on kaivettu 1929 lähtien yli 40 selkärankaislajin fossiileja 6–8 miljoonan vuoden takaa, muun muassa mastodontteja.',
+      pitka: "Cimișlia on Etelä-Moldovan kaupunki Cogâlnic-joen varrella, noin 70 kilometrin päässä Chișinăusta ja pääkaupungin ja Gagauzian välissä. Vanhin kirjallinen maininta on päivätty 4. heinäkuuta 1620, ja kaupunkioikeudet se sai 1995. Koko Cimișlian piirissä asuu noin 31 000 ihmistä 924 neliökilometrin alueella, ja väestö on pääosin maaseudulla. Pohjoisosassa Keski-Moldovan ylänkö kohoaa noin 250 metriin, ja viinitarhoja on noin 6 400 hehtaaria, joten viininviljely on seudun tärkeimpiä elinkeinoja. Kaupungista on kotoisin muun muassa Iurie Leancă, joka toimi Moldovan pääministerinä 2010-luvulla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-cimislia-6f47cc96.jpg",
@@ -8073,6 +8140,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Comrat: {
       lyhyt: 'Comrat on Gagauzian pääkaupunki, ja gagauusit puhuvat turkkilaista kieltä mutta ovat valtaosin ortodoksikristittyjä.',
+      pitka: "Comrat on Gagauzian pääkaupunki, ja vuoden 2024 väestölaskennan mukaan siellä asuu 19 120 ihmistä. Autonomian perustava laki hyväksyttiin vuonna 1994 ja se tuli voimaan 14. tammikuuta 1995, ja alue koostuu useasta erillisestä osasta. Gagauzeja on kaupungin asukkaista noin kolme neljännestä (73,5 prosenttia vuoden 2014 laskennassa). Comratin yliopisto perustettiin vuonna 1991 Gagauzian kansalliseksi yliopistoksi, ja valtion yliopistoksi se muuttui vuonna 2002. Kaupunki on Moldovan eteläisellä viinialueella, ja täällä tuotetaan punaviiniä ja muskottiviiniä. Vuonna 1906 kaupunki julisti viiden päivän ajaksi oman tasavaltansa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-comrat-cf169ffe.jpg",
@@ -8087,6 +8155,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Criuleni: {
       lyhyt: 'Criulenin lähellä Dnestrin rantametsässä on Yllätysten luola, 1 700 metriä pitkä kalkkikiviluola ja Moldovan toiseksi pisin.',
+      pitka: "Criuleni sijaitsee Dnestrin oikealla rannalla, noin 40 kilometrin päässä Chișinăusta. Kaupungissa on vuoden 2024 laskennan mukaan noin 5 800 asukasta, ja kaupunkistatuksen se sai 1995. Koko Criulenin piirissä asuu 52 926 ihmistä 688 neliökilometrin alueella, ja siihen kuuluu 43 paikkakuntaa. Piiri on maatalousvaltainen, sillä 63 prosenttia pinta-alasta on maatalouskäytössä ja pääkasveja ovat peltokasvit, hedelmät ja viinirypäleet. Alueella on kalkkikivi- sekä hiekka- ja soralouhoksia, ja Dnestrin rantametsissä on luolia ja luonnonsuojelualueita.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-criuleni-867237a0.jpg",
@@ -8101,6 +8170,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Donduseni: {
       lyhyt: 'Țaulin kylässä vain viiden kilometrin päässä Dondușenista on puisto, jota pidetään Moldovan suurimpana.',
+      pitka: "Dondușeni kasvoi rautatien ympärille: vielä vuoden 1930 väestölaskennassa paikan nimi oli Dondoșani-Gară, eli Dondoșanin asema, ja siellä asui vain 953 ihmistä. Vuoteen 1959 mennessä asukkaita oli 5 129 ja vuoden 2014 laskennassa 7 101. Aseman punatiili- ja graniittirakennukset sekä linnamainen vesitorni ovat yli sadan vuoden takaa ja lasketaan historiallisiksi rakennusmuistomerkeiksi. Kaupunkioikeudet paikka sai vuonna 1957. Piirissä asuu noin 28 000 ihmistä 644 neliökilometrin alueella; siitä 532 neliökilometriä on maatalousmaata, jossa kasvaa muun muassa vehnää, ohraa, maissia, sokerijuurikasta, auringonkukkaa ja rypsiä. Piiri rajoittuu koillisessa Ukrainaan.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-donduseni-a217853c.jpg",
@@ -8115,6 +8185,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Drochia: {
       lyhyt: 'Drochiassa toimii Moldovan suurin sokeritehdas, ja piirin maaperästä noin 80 prosenttia on hedelmällistä mustaamultaa.',
+      pitka: "Drochia on pohjoismoldovalainen kaupunki, noin 174 kilometrin päässä Chișinăusta ja noin 67 kilometrin päässä Romanian Iașista. Nimi tulee paikallisesta linnusta, isotrapista, jota paikallisella kielellä kutsutaan sanalla dropie. Ensimmäinen maininta on vuodelta 1777, ja kaupunkioikeudet paikka sai 1973. Väkiluku oli huipussaan vuonna 1989, 21 298 asukasta, ja on sittemmin laskenut noin 12 900:aan vuoden 2024 laskennassa. Kaupungin katedraali, Neitsyt Marian kuolonuneen kirkko, aloitettiin vuonna 1988, ja sen on maalannut romanialainen taiteilija Petre Achițenie. Lyseon lähellä on Mihai Eminescun patsas.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-drochia-eced1f01.jpg",
@@ -8129,6 +8200,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Edineţ': {
       lyhyt: 'Edinețin toltry-kukkulat ovat 15–20 miljoonaa vuotta vanhoja muinaisen meren riuttoja, ja Brînzenin kallioihin on syöpynyt luolia.',
+      pitka: "Edineţ on Pohjois-Moldovan viljelyseudun keskus, noin 200 kilometrin päässä pääkaupungista. Vuoden 2024 väestönlaskennassa kaupungissa asui 12 369 ihmistä, kun kymmenen vuotta aiemmin heitä oli 15 520. Keskustassa seisoo Tapani Suuren patsas, ja kaupungissa toimivat sekä seudun museo että käsityöläisten museo. Ennen toista maailmansotaa kaupunki oli merkittävä kauppapaikka, jonka asukkaista suuri osa oli juutalaisia. Koko piirissä asuu noin 50 000 ihmistä 933 neliökilometrin alueella, ja väkiluku on laskenut selvästi viime vuosikymmeninä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-edinet-e8f069c5.jpg",
@@ -8143,6 +8215,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Făleşti': {
       lyhyt: 'Făleștin piiristä lähtöisin oleva taiteilija Gheorghe Vrabie piirsi Moldovan vaakunan, ja häntä kutsutaan Moldovan leun isäksi.',
+      pitka: "Făleşti on Prut-joen tuntumassa sijaitseva piirikeskus, jossa asui vuoden 2024 laskennassa 11 946 ihmistä. Nykyään se on ennen kaikkea maatalouden ja elintarviketeollisuuden kaupunki. Kaupungin oma museo, Lazăr Dubinovschin nimeä kantava historia- ja etnografiamuseo, avattiin 1979 uusromanialaistyylisessä entisessä tyttökoulussa, ja siinä on tuhansia etnografisia esineitä. Ennen toista maailmansotaa merkittävä osa asukkaista oli juutalaisia. Koko piirissä asuu 56 039 ihmistä 1 073 neliökilometrin alueella, ja sen länsirajana virtaa Prut.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-falesti-da911cad.jpg",
@@ -8157,6 +8230,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Floreşti': {
       lyhyt: 'Dnestrin rannalla seisova Japcan luostari oli Bessarabian ainoa luostari, jota neuvostovalta ei koskaan sulkenut.',
+      pitka: "Floreşti sijaitsee Răut-joen varrella noin 130 kilometrin päässä Chişinăusta. Väkiluku oli huipussaan 1989, 18 228 asukasta, mutta vuoden 2024 laskennassa heitä oli enää 10 925. Kaupungin tunnetuin teollisuuslaitos oli lasitehdas Cristal-Flor. Kaupungin piiristä ovat kotoisin kaksi Moldovan itsenäisyyden ajan presidenttiä. Ympäröivässä piirissä asuu 53 264 ihmistä 1 108 neliökilometrin alueella. Piirin maisema on Dnestrin ylätasangon pirstaloitua kumpumaata, ja Dnestr virtaa sen itärajalla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-floresti-cc48a8b2.jpg",
@@ -8171,6 +8245,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Glodeni: {
       lyhyt: 'Pădurea Domneascăn suojelualueelle tuotiin 2006 Puolasta visenttejä, ja sen metsissä on yli 3 500 arvoituksellista muinaista kumpua.',
+      pitka: "Glodeni on noin 170 kilometrin päässä Chişinăusta pohjoisessa, ja sen ensimmäinen asiakirjamaininta on vuodelta 1668. Kaupunki sai kaupunkioikeudet 1995, ja tuoreimman laskennan mukaan siellä asuu 7 284 ihmistä, kun vuonna 2004 heitä oli vielä 10 785. Elinkeinoelämä nojaa maatalouden jalostukseen. Kaupungin suojelupyhimys on arkkienkeli Mikael, jonka mukaan pääkirkko on nimetty. Ystävyyskaupunkeja on Romaniassa, Ukrainassa ja Puolassa. Koko piirissä asuu 35 829 ihmistä 754 neliökilometrin alueella, ja sen länsirajana virtaa Prut.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-glodeni-0400c990.jpg",
@@ -8185,6 +8260,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Grigoriopol: {
       lyhyt: 'Grigoriopol perustettiin 1792 armenialaisten siirtokunnaksi Dnestrin vasemmalle rannalle.',
+      pitka: "Grigoriopol sijaitsee Dnestrin vasemmalla rannalla, Ciorna-puron yhtymäkohdassa, ja siellä asuu noin 11 000 ihmistä. Kansainvälisesti alue katsotaan Moldovan osaksi, mutta käytännössä sitä hallinnoivat Transnistrian viranomaiset. Kaupungin talous nojaa maatalouteen, säilyketehtaaseen ja soranottoon, ja keskustan rakennukset ovat pääosin kolme–nelikerroksisia. Koillispuolella on Valea Seacă Tamaşlîc -maisemansuojelualue. Piirin pinta-ala on 822 neliökilometriä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-grigoriopol-10fde0a0.jpg",
@@ -8199,6 +8275,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Hîncesti': {
       lyhyt: 'Hînceștin tiluksille vetäytyi elämänsä lopulla armenialainen kauppias ja diplomaatti Manuc Bei, ja hänen poikansa rakennutti sinne palatsin.',
+      pitka: "Hînceşti on Cogâlnic-joen laaksossa noin 35 kilometrin päässä Chişinăusta lounaaseen, ja sen 11 391 asukasta tekevät siitä piirin keskuksen. Nimi juontuu todennäköisesti Hâncu-bojaarisuvusta. Neuvostoaikana kaupunkia kutsuttiin Kotovskiksi, ja nykyinen nimi palautettiin 1990. Kaupungissa on kenkä- ja viinitehtaita, ja piirin tuotteisiin kuuluvat viini, leipomotuotteet ja hedelmät. Piiri on suurimpia: 1 472 neliökilometriä ja 69 462 asukasta, ja sen maisema jakautuu Codru-metsäkukkuloihin, metsäaroon ja avoaroon Prutin rajajoen lähellä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-hincesti-6422161e.jpg",
@@ -8213,6 +8290,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ialoveni: {
       lyhyt: 'Mileștii Micin viinikellareissa on lähes kaksi miljoonaa pulloa – Guinness kirjasi sen 2005 maailman suurimmaksi viinikokoelmaksi.',
+      pitka: "Ialoveni on vain noin 10 kilometrin päässä Chişinăusta, ja se on sekä piirin että Moldovan keskisen kehitysalueen hallintokeskus. Kaupungin väkiluku kasvoi vuosien 2014 ja 2024 välillä 12 515:stä 14 665:een, vaikka monessa muussa pikkukaupungissa luvut ovat laskeneet. Kaupungissa toimii viinintuottaja Vinuri-Ialoveni sekä jäätelö-, leipomo- ja tekstiiliyrityksiä. Piirissä asuu 74 458 ihmistä 783,5 neliökilometrin alueella, ja noin 80 prosenttia heistä asuu maaseudulla. Piirin maasta 42,7 prosenttia on peltoa ja 10,2 prosenttia viinitarhoja.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ialoveni-679b7234.jpg",
@@ -8227,6 +8305,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Leova: {
       lyhyt: 'Leovan seudun halki kulkee Traianuksen valliksi kutsuttu muinainen maavalli, ja piirin länsilaitaa seuraa Romanian rajajoki Prut.',
+      pitka: "Leova sijaitsee Prutin varrella, Romanian rajan tuntumassa noin sadan kilometrin päässä Chişinăusta lounaaseen. Väkiluku on laskenut: vuoden 2014 laskennassa asukkaita oli 7 443, ja 2024 noin 6 400. Kaupungin pääyritys on viinintuottaja Leovin. Luonnon helmiä ovat 30 hehtaarin Lebăda albă eli Valkoinen joutsen -vesiekosysteemialue sekä kirjaston takana kasvava yli kaksisataavuotias tammi, joka on suojeltu luonnonmuistomerkkinä. Pyhän Paraskevan kirkko on vuodelta 1818. Piirissä asuu 28 835 ihmistä 764,6 neliökilometrin alueella. Piirin toinen kaupunki on Iargara.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-leova-aa11a759.jpg",
@@ -8241,6 +8320,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Nisporeni: {
       lyhyt: 'Nisporenin piirissä kohoava Bălăneștin kukkula on noin 430 metrin korkeudellaan Moldovan korkein kohta.',
+      pitka: "Nisporenin kaupungissa asuu noin 10 000 ihmistä (2014), ja 629 neliökilometrin piirissä on 39 asutusta ja runsaat 36 000 asukasta (2024). Piiri kuuluu Codrun, Moldovan keskiylängön metsävyöhykkeeseen: noin kolmannes maasta on tammi-, pyökki-, valkopyökki- ja vaahterametsää, ja viljelmiin kuuluu myös noin 3 900 hehtaaria hedelmätarhoja, joissa kasvaa persikoita, omenoita ja luumuja. Zghihaian kukkulalla Vărzărești'n kylän lähellä kohoaa vuonna 2011 vihitty noin 35 metrin risti, jota pidetään Moldovan suurimpana ja joka on valaistu yöllä LED-valoin. Sen vierellä ovat kappeli ja kellotorni sekä sankarihautausmaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-nisporeni-83be8503.jpg",
@@ -8255,6 +8335,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ocniţa': {
       lyhyt: 'Naslavcean kylä Dnestrin rannalla on Moldovan pohjoisin kohta, ja sen kalkkikivirinteiltä avautuu näkymä joen mutkiin.',
+      pitka: "Ocnița on Moldovan pohjoisen piirin keskus: kaupungissa asui 2014 noin 7 300 ihmistä ja 599 neliökilometrin piirissä 2024 noin 31 600. Dnestrin rannalla oleva Otaci on vastarannan ukrainalaisen Mohyliv-Podilskyin naapuri. Lipnicin kylässä muistetaan Tapani Suuren joukkojen voittoa tataarijoukoista 1400-luvulla, ja paikan Cadânein lähde on valtion suojelema muistomerkki. Kirjailija Constantin Stamati (1786–1869) kuoli Ocnițassa, ja hänen talomuseonsa avattiin 1988. Piirin pohjoisimmassa osassa Naslavcean lähellä Chisărău-joen laaksossa on maisemansuojelualue, jossa on vanhojen vesimyllyjen kahlaamoita.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ocnita-1e087f73.jpg",
@@ -8269,6 +8350,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Orhei: {
       lyhyt: 'Răut-joen mutkassa Orheiul Vechin kalkkikivikallioon on kaiverrettu luolaluostari, jossa asuu yhä kourallinen munkkeja.',
+      pitka: "Orheissa asuu 22 183 ihmistä (2024), ja se on Moldovan yhdeksänneksi suurin kaupunki, noin 40 kilometriä Chișinăusta pohjoiseen. Piiri kattaa 1 228 neliökilometriä, 75 asutusta ja noin 79 000 asukasta; kaksi kolmasosaa maasta on viljelyksessä, ja alue tunnetaan viinistä sekä vanhasta tupakkateollisuudesta. Orheiul Vechin ympärille perustettiin vuonna 2013 noin 338 neliökilometrin kansallispuisto, ensimmäinen Moldovassa. Kohde on ollut UNESCOn maailmanperintöehdokkaana. Kaupungin jalkapalloseura Milsami voitti Moldovan mestaruuden 2015.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-orhei-21c2c9f0.jpg",
@@ -8283,6 +8365,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Rezina: {
       lyhyt: 'Saharnan luostari on Moldovan suurimpia pyhiinvaelluspaikkoja, ja tarun mukaan sen yllä kohoavalla kalliolla on Neitsyt Marian jalanjälki.',
+      pitka: "Rezina levittäytyy Dnestrin oikealle rannalle kolmelle terassille noin 100 kilometrin päähän Chișinăusta. Kaupungissa oli 2014 noin 11 000 asukasta ja 622 neliökilometrin piirissä 2024 noin 30 200. Kaupungin lähettyviltä löydettiin 1946 getodakialaisten asuinpaikka 300- tai 200-luvulta eaa. Piirin kalkkikivinen ylänkö on rosoista, ja siellä on kaksi luonnonsuojelualuetta, Saharna (noin 670 hehtaaria) ja Țipova. Saharnajoen rotkossa on kaksikymmentä vesiputousta.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-rezina-0eb6cc45.jpg",
@@ -8297,6 +8380,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Rîşcani': {
       lyhyt: 'Prutille Costeștiin valmistui 1978 yhdessä Romanian kanssa rakennettu pato ja vesivoimala, jonka tekojärvessä on noin 1,3 miljardia kuutiota vettä.',
+      pitka: "Rîșcanin piiri kattaa 936 neliökilometriä Romanian rajan tuntumassa. Asukkaita on 2024 laskennan mukaan noin 43 700, ja piirissä on 55 asutusta, joista kaupunkeja ovat Rîșcani ja Costești. Rîșcanin kaupungin väkiluku oli huipussaan 1989 (17 650) ja 2014 enää 9 259. Yli 80 prosenttia maasta on viljelyksessä: viljaa, auringonkukkaa ja tupakkaa. Piirissä on rotko- ja luonnonsuojelualueita, kuten Pociumbeni ja Șaptebani. Duruitoarea Veche -luolan ympärille rakennettiin 2016–2017 museokokonaisuus, johon kuuluvat myös luolamuistomerkki ja Duruitoarean rotkon suojelualue.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-riscani-6b8458c4.jpg",
@@ -8311,6 +8395,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Sîngerei': {
       lyhyt: 'Sîngerein piirin halki virtaa Răut, pisin kokonaan Moldovan rajojen sisällä virtaava joki, matkallaan kohti Dnestriä.',
+      pitka: "Sîngereissä asui 2024 noin 9 950 ihmistä, kun väkiluku oli huipussaan 1989 noin 15 000. Koko piirissä on noin 55 900 asukasta 1 034 neliökilometrin alueella ja 70 asutusta. Maisema on Bălțin aroa, pehmeästi kumpuilevaa tasankoa, jonka korkeimmat kohdat ovat 190–240 metrissä. Yli puolet maasta on viljelyksessä: viljaa, vihanneksia, tupakkaa ja auringonkukkaa. Metsää on vain noin 11 prosenttia, ja eläimistöön kuuluvat jänikset, ketut, villisiat ja haikarat.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-singerei-00cf0ad5.jpg",
@@ -8325,6 +8410,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Şoldăneşti': {
       lyhyt: 'Șoldăneștin piiristä lähes viidennes on tammi-, saarni- ja lehmusmetsää, jonka kätköissä elää susia ja villisikoja.',
+      pitka: "Șoldănești on noin 5 900 asukkaan (2014) kaupunki 145 metrin korkeudessa Ciorna-joen laaksossa; 598 neliökilometrin piirissä on noin 25 400 asukasta (2024) ja 33 asutusta. Alueen korkein kohta, Zahornan kukkula, kohoaa 338 metriin, ja maaperästä löytyy kalkkikiveä, soraa, savea ja hiekkaa. Dnestrin oikealla rannalla Vadul-Rașcovin kylässä on runoilija ja näytelmäkirjailija Dumitru Matcovschin (1939–2013) talomuseo. Lähellä sijaitsevassa Climăuții de Josin kylässä on maisemansuojelualue, jonka punertavat kukkulat rajaavat Dnestrin rantaa.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soldanesti-e585f35b.jpg",
@@ -8339,6 +8425,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Soroca: {
       lyhyt: 'Sorocan linnoitus Dnestrin rannalla on täydellinen ympyrä, jossa on viisi tasavälein sijoitettua bastionia; kivisenä se valmistui 1540-luvulla.',
+      pitka: "Soroca on Dnestrin rannalla noin 160 kilometriä Chișinăusta pohjoiseen, ja siellä asui 2024 laskennan mukaan 21 135 ihmistä; koko piirissä 58 600. Nykyisen kivilinnoituksen edeltäjä oli puinen linnake, jonka Tapani Suuren kerrotaan perustaneen 1499 suojaamaan joen kahlaamoa. Dnestrin osuus piirin itärajasta on 93 kilometriä. Kaupunkia kutsutaan usein Moldovan romanien pääkaupungiksi, sillä romaneja on noin neljä prosenttia asukkaista. Cosăuțin kylän lähellä kaksi geologista luonnonmuistomerkkiä ovat Dnestrin kosket sekä hiekkakiven ja graniitin paljastumat, ja kylä tunnetaan kivenveistäjien työpajoistaan.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-soroca-259df16b.jpg",
@@ -8353,6 +8440,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Ștefan Vodă': {
       lyhyt: 'Purcarin viinitila sai 1827 keisarin asetuksella Bessarabian ensimmäisen erikoistuneen viinitilan aseman, ja siellä tehdään tummaa Negru de Purcaria.',
+      pitka: "Ștefan Vodă on Moldovan kaakkoiskulmassa, noin sadan kilometrin päässä sekä Chișinăusta että Odesasta. Piirissä asuu noin 42 000 ihmistä, lähes yhdeksän kymmenestä maaseudulla, ja maisemaa hallitsevat viljelmät: viinitarhoja on lähes 5 000 hehtaaria ja hedelmätarhoja yli 3 000. Crocmazin kylässä viinitilan naapurina on etnografinen museo, joka perustettiin 1986 ja jonka kokoelmissa on tuhansia esineitä paikallisista perinteistä ja tavoista. Cioburciun kylän ympäröimät metsät kuuluvat Moldovan kauneimpiin: siellä soudetaan, onkitaan ja opitaan punomaan pajusta. Nistrun rannalla Palancan kylä on tullut tunnetuksi rajastaan, sillä kansainvälinen rajanylityspaikka sijaitsee Ukrainan puolella.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stefan-voda-22545d5c.jpg",
@@ -8367,6 +8455,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Stîngă Nistrului': {
       lyhyt: 'Dnestrin itärannalla Dubăsarin pato ja vesivoimala valmistuivat 1954, ja padon taakse syntyi Dubăsarin tekojärvi.',
+      pitka: "Nistrun vasemmalla rannalla Moldovan hallintojaossa on Dubăsarin piiri, jonka keskus on Cocieri ja joka perustettiin 2023. Sen 309 neliökilometrillä asuu runsaat 21 000 ihmistä 11 kunnassa, joihin kuuluu yhteensä 15 asutusta. Piirin halki virtaava Nistru on padottu Dubăsarin tekojärveksi, joka on noin 128 kilometriä pitkä ja pinta-alaltaan noin 67,5 neliökilometriä; sen vesivoimalan teho on 48 megawattia. Rannoilla kohoaa paikoin jyrkkää kalkkikiveä ja tiheää metsää, ja tyyni vesi houkuttelee veneilijöitä ja onkijoita. Kylien arki kulkee peltojen ja veden ehdoilla.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-stinga-nistrului-8c382a9d.jpg",
@@ -8381,6 +8470,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Străşeni': {
       lyhyt: 'Lozovan lähellä Codrun luonnonsuojelualueella on suojeltu vuodesta 1971 yli 5 000 hehtaaria tiheää tammi- ja pyökkimetsää.',
+      pitka: "Străşeni on Moldovan keskiosassa Chișinăun länsipuolella. Piirin noin 61 000 asukkaan maisema on kukkulaista, ja noin 37 prosenttia pinta-alasta on metsää. Keskuskaupungissa asuu vajaat 14 500 ihmistä. Căprianan luostari, jonka ensimmäinen kirjallinen maininta on vuodelta 1429, on yksi Moldovan vanhimpia; sen Neitsyt Marian kuolonuinumisen kirkko rakennettiin 1491–1496 kivestä. Dolnan kylässä seisoo varakkaan kreikkalaissyntyisen Zamfirache Rallin (1769–1831) kartano, jossa runoilija Aleksandr Pushkin vieraili karkotuksensa aikana; siitä tehtiin museo, joka avattiin yleisölle 6. kesäkuuta 1949, ja kartanolla vietetään Pushkin-juhlaa kesäkuun ensimmäisenä sunnuntaina.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-strasani-8f1af1e0.jpg",
@@ -8395,6 +8485,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Taraclia: {
       lyhyt: 'Taraclian asukkaista yli kolme neljäsosaa on bulgarialaisia, ja kaupungin yliopistossa opetetaan bulgariaksi ja romaniaksi.',
+      pitka: "Taraclia on Moldovan eteläosan pieni kaupunki, jossa asuu noin 10 000 ihmistä ja jota pidetään Bessarabian bulgarialaisten keskuksena. Yli kaksisataavuotias asutus näkyy arjessa: kaupungissa toimii bulgarialainen teatteri, ja piirin kouluissa opiskellaan bulgariaa. Kaupungin viinitehdas perustettiin 1955. Etno Fest Taraclia -festivaali on järjestetty jo 25 kertaa: sillä nähdään kymmeniä esiintyjäryhmiä ja perinnekäsityöläisiä, ja vieraita saapuu Bulgariasta, Romaniasta ja Ukrainasta. Piiri koostuu kahdesta erillisestä osasta, ja toisessa niistä sijaitsee Tvardița, jossa on noin 3 100 asukasta ja lähes 90 prosenttia heistä on bulgarialaisia.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-taraclia-b4edd728.jpg",
@@ -8409,6 +8500,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Teleneşti': {
       lyhyt: 'Teleneștissä syntyi 1898 Nachum Gutman, josta tuli tunnettu israelilainen taidemaalari – hänen taidemuseonsa on Tel Avivissa.',
+      pitka: "Telenești on Moldovan keskiosassa noin 90 kilometriä Chișinăusta pohjoiseen. Piirin noin 850 neliökilometristä peltoa on lähes kolme neljäsosaa, ja väkiluku oli 2024 väestönlaskennassa 41 452, runsaat neljännes vähemmän kuin kymmenen vuotta aiemmin. Piirin läpi virtaavat Răut ja Ciuluc. Kaupungissa kohoaa uusi Pyhän Eliaan katedraali, jonka rakennus alkoi 2006, ja Eminescun patsas on ollut paikallaan vuodesta 1989. Vanhimmat kirjalliset maininnat seudun kylistä ulottuvat 1400-luvulle.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-telenesti-f193ec0e.jpg",
@@ -8423,6 +8515,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Transnistria: {
       lyhyt: 'Dnestrin itärannalla olevan Dubăsarin nimi tulee vanhasta sanasta dubăsar, joka tarkoitti veneentekijää tai lauttamiestä.',
+      pitka: "Transnistria on kapea, noin 4 160 neliökilometrin alue Nistrun itärannalla Moldovan ja Ukrainan välissä, ja siellä asuu arviolta noin 370 000 ihmistä. Kansainvälisesti alue katsotaan osaksi Moldovaa, mutta käytännössä sitä hallinnoivat omat viranomaiset Tiraspolista käsin. Tiraspol on alueen suurin kaupunki, noin 126 000 asukasta; sen perusti 1792 Aleksandr Suvorov, ja Suvorovin patsas seisoo edelleen keskusaukiolla. Länsirannalla Benderissä kohoaa Tighinan linnoitus, jonka osmanit rakennuttivat kiveksi vuosina 1538–1541 arkkitehti Sinanin suunnitelmien mukaan ja jonka entisöinti kesti 2008–2012. Chițcanin kylän Noul Neamț -luostari suljettiin 1962 ja muutettiin sairaalaksi, mutta sen kirkko avattiin uudelleen 1989.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-transnistria-4e1fa202.jpg",
@@ -8437,6 +8530,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ungheni: {
       lyhyt: 'Unghenin rautatiesilta Prutin yli tunnetaan Eiffelin siltana; se avattiin 1877, ja sitä pitkin kulkevat yhä junat Romaniaan.',
+      pitka: "Ungheni on Moldovan länsiportti: Prut virtaa kaupungin kohdalla noin kahdeksan kilometriä, ja toisella rannalla alkaa Romania. Kaupunki mainitaan asiakirjoissa ensi kerran 20. elokuuta 1462, ja nykyään siellä asuu noin 27 000 ihmistä. Rajalla vaihtuu myös raideleveys: Neuvostoliitosta peritty leveä 1 520 millimetriä kohtaa Euroopan normaalin 1 435 millimetriä. Historian ja etnografian museo, perustettu 1967, säilyttää yli 10 000 esinettä, joista vanhimmat ovat noin 100 000 vuoden takaa. Kaupungin katuja ja puistoja koristaa noin 33 veistosta kolmelta kuvanveistäjäleiriltä, ja kastanjakuja kulkee noin neljä kilometriä. Vuonna 2014 avattiin kaasuputki Unghenin ja Romanian Iașin välille.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/mda-maakunta-ungheni-a7821b69.jpg",
@@ -8862,6 +8956,14 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       ],
       pikkukuva: "https://media.matkakirja.app/karttanostot/20260926/ukr-maakunta-zhytomyr-342b137f.jpg",
     },
+    Crimea: {
+      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
+      pitka: "Krimin niemimaan eteläisellä rannikolla Mustameri ja vuoret ovat lähes kosketusetäisyydellä: noin 150 kilometriä pitkän Krimin vuoriston korkein huippu Roman-Kosh nousee 1 545 metriin. Rannikon puutarhojen keskellä Livadian valkoinen kalkkikivipalatsi valmistui vuonna 1911 uusrenessanssin tyyliin, ja siinä on 116 huonetta. Jaltan tuntumassa Massandran viinikellarit ovat kypsyttäneet muskottiviinejä vuodesta 1894 graniittiin louhituissa tunneleissa. Vuorten pohjoispuolella Bahtšisarain kaanien palatsi, jonka rakennutti 1500-luvulla Sahib I Giray, kätkee sisäpihalleen Kyynelten lähteen, josta Aleksandr Pushkin sai aiheen runoonsa.",
+    },
+    Sevastopol: {
+      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+      pitka: "Sevastopolin kalliorannikolla antiikki, luostarit ja merihistoria kulkevat rinnakkain. Taurisen Khersonesoksen kaupungin perustivat kreikkalaiset siirtolaiset noin 2 500 vuotta sitten, ja sen viininviljelyalue eli khora kuuluu vuonna 2013 UNESCOn maailmanperintöluetteloon hyväksyttyyn kohteeseen. Kaupunki eli aina 1400-luvun tienoille. Sevastopolinlahti ulottuu noin 7,5 kilometrin mittaisena sisämaahan kohti Inkermanin luolaluostaria, jonka kalliokirkot ovat varhaiskeskiajalta. Etelämpänä Balaklavan pieni lahti kätkeytyy kallioiden suojaan; genovalaisten Cembalo-linnakkeen vanhimmat rakennuskirjoitukset ovat vuodelta 1357, ja antiikissa paikka tunnettiin nimellä Symbolon.",
+    },
   },
   /*
    * VALKO-VENÄJÄ (BLR) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A),
@@ -8882,6 +8984,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   BLR: {
     Brest: {
       lyhyt: 'Belovežin aarniometsässä, jonka Valko-Venäjä jakaa Puolan kanssa, elää yli 800 visenttiä – Euroopan painavinta maaeläintä.',
+      pitka: "Brest on Valko-Venäjän länsiportti: Bug-joen rannalla, aivan Puolan rajalla, noin 340 000 asukkaan kaupungissa junien telit vaihdetaan, koska raideleveys muuttuu 1520 millistä Euroopan 1435 milliin. Brestin linnoitus, jonka rakentaminen alkoi 1830-luvulla, on nykyään muistomerkkialue, jossa muistetaan vuoden 1941 puolustustaisteluja; sen Rohkeus-veistos on 33,5 metriä korkea. Samassa linnoituksessa allekirjoitettiin myös vuoden 1918 Brest-Litovskin rauhansopimus. Kaupungin vanhempi kerros on maan alla: Berestje-museon suojakatoksen alla on 1200-luvun puukaupungin hirsitaloja, jotka kaivettiin esiin vuosina 1968–1981. Museo avattiin 1982.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-brest-530d8b42.jpg",
@@ -8896,6 +8999,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Gomel: {
       lyhyt: 'Homelin palatsin ympärille Sož-joen rannalle perusti ruhtinas Ivan Paskevitš 1800-luvulla englantilaisen puiston, joka on yhä paikallaan.',
+      pitka: "Gomelin alue on Valko-Venäjän eteläisin ja yksi suurimmista, noin 40 400 neliökilometriä, ja sen keskus Gomel on maan toiseksi suurin kaupunki, noin 500 000 asukasta. Etelässä avautuu Polesjen metsä- ja suoseutu. Polesjen radioekologinen luonnonsuojelualue perustettiin 18. heinäkuuta 1988, ja se kattaa yli 2 000 neliökilometriä, jolla liikkuvat visentit, hirvet, ruskeakarhut ja Przewalskin hevoset. Vetkan museossa Gomelin liepeillä on yli 10 000 esinettä: vanhauskoisten ikoneita, 1500-luvulta 1800-luvulle ulottuvia käsinkirjoitettuja ja painettuja kirjoja sekä alueen kansanomaisia tekstiilejä. Pripjatin rannalla Mazyrin ensimmäinen maininta on vuodelta 1155.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-gomel-19a2bfdd.jpg",
@@ -8910,6 +9014,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Grodno: {
       lyhyt: 'Mirin linnaa alettiin rakentaa 1500-luvun alussa goottilaiseksi linnoitukseksi, ja se on Unescon maailmanperintöä vuodesta 2000.',
+      pitka: "Grodno makaa Njemen-joen korkealla rannalla vain noin 15 kilometrin päässä Puolan rajasta, ja sen noin 360 000 asukasta asuvat kaupungissa, jonka historiallisten rakennusten kokonaisuutta pidetään maan laajimpana. Kaupunki mainitaan ensimmäisen kerran 1127, ja kuningas Stefan Báthory asui täällä 1580-luvulla ja kuoli 1586. Vanha ja Uusi linna seisovat vierekkäin joen töyräällä; Uusi linna valmistui 1789 ja toimii nykyään historia- ja arkeologiamuseona. Alueen asukkaista noin neljännes on puolalaisia, ja se näkyy katolisissa kirkoissa ja juhlissa. Lidan linna rakennettiin Gediminasin käskystä 1300-luvun alussa kivistä ja tiilestä, ja siellä järjestetään joka vuosi keskiaikainen turnaus.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-grodno-cec8f35d.jpg",
@@ -8924,6 +9029,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Mogilev: {
       lyhyt: 'Mahiljoun Pyhän Nikolauksen luostarin katedraali valmistui 1668, ja sen alkuperäinen ikonostaasi on säilynyt.',
+      pitka: "Mogilev on Dneprin rannalla noin 350 000 asukkaan kaupunki, maan kolmanneksi suurin, ja sen ensimmäinen maininta on vuodelta 1267. Kaupungin tunnettuihin rakennuksiin kuuluu katolinen konkatedraali, joka on omistettu Neitsyt Marian taivaaseenastumiselle ja pyhälle Stanislaukselle. Alueen pinta-ala on noin 29 100 neliökilometriä, noin 14 prosenttia maasta, ja sen läpi virtaavat Dnepr, Berezina, Sož, Drut ja Pronja. Alueen toiseksi suurin kaupunki Babruisk, noin 210 000 asukasta, sijaitsee Berezinan rannalla. Maisema on tasaista: korkeuserot ovat vain noin 126–239 metriä merenpinnasta.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-mogilev-572f581f.jpg",
@@ -8938,6 +9044,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Minsk: {
       lyhyt: 'Njasvižin linna oli vuosisatoja Radziwiłłien suvun kotilinna, ja se on Unescon maailmanperintöä vuodesta 2005.',
+      pitka: "Minskin alue on Valko-Venäjän ainoa, joka ei rajoitu mihinkään ulkomaahan: noin 39 900 neliökilometriä, lähes viidennes maasta ja noin 1,46 miljoonaa asukasta. Maan suurin järvi, Narač, on 79,6 neliökilometriä ja enimmillään noin 25 metriä syvä; sen ympärille perustettiin 1999 Narač-kansallispuisto, jonka alueella on 43 järveä. Alueella on myös Svir, Mjadel, Sjaljava ja Mjastro, jotka luetaan suurimpiin järviin. Zaslauljen historiallinen museoalue kokoaa satojen vuosien kerrostumat, kuten 1500-luvun lopulla rakennetun kirkon.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-minsk-1ea51a04.jpg",
@@ -8952,6 +9059,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'City of Minsk': {
       lyhyt: 'Minskin kansalliskirjasto on 73,6 metriä korkea rombikuboktaedri, kuin timantiksi hiottu talo, ja se avattiin 2006.',
+      pitka: "Minsk mainitaan ensimmäisen kerran 1067, ja nykyään siellä asuu lähes kaksi miljoonaa ihmistä. Svislatš-joki virtaa kaupungin halki luoteesta kaakkoon, ja sen rannalla Troitskoje-esikaupunki on säilyttänyt vanhan kaupunginosan tunnelman aivan keskustan vieressä. Kaupungin pääkatu, Itsenäisyyden prospekti, on noin 15 kilometriä pitkä. Njamiha-katu, 1,8 kilometriä, on nimetty samannimisen joen mukaan. Kansallinen ooppera- ja balettiteatteri, jonka nykyinen talo valmistui 1939, on osa suurkaupungin kulttuurielämää.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-city-of-minsk-835329e5.jpg",
@@ -8966,6 +9074,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vitebsk: {
       lyhyt: 'Vitsebskin Pokrovskaja-kadulla on talo, jossa Marc Chagall vietti lapsuutensa – nykyään siinä toimii hänen kotimuseonsa.',
+      pitka: "Vitebsk sijaitsee kohdassa, jossa Vitba laskee Väinäjokeen, ja noin 359 000 asukkaallaan se on maan neljänneksi suurin kaupunki. Virallinen perustamisvuosi on 974, mutta kirjallinen maininta on vuodelta 1021. Kaupunki oli avantgarden keskus: Marc Chagall johti täällä taidekoulua, ja Kazimir Malevitš saapui marraskuussa 1919 ja synnytti UNOVIS-ryhmän. Nykyään kaupungissa järjestetään vuodesta 1992 Slaavilainen basaari -musiikkifestivaali. Alue kattaa noin 40 000 neliökilometriä ja on maan harvimmin asuttu, 27 asukasta neliökilometrillä. Asveja-järvi on maan toiseksi suurin, 52,8 neliökilometriä, ja Braslaun järvien kansallispuistossa on 74 järveä.",
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/blr-maakunta-vitebsk-100bbcd2.jpg",
@@ -8998,6 +9107,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
   ISL: {
     Austurland: {
       lyhyt: 'Hallormsstaðurin koivikko suojeltiin 1905, ja siitä tuli Islannin ensimmäinen kansallismetsä – nyt se on maan suurimpia metsiä.',
+      pitka: 'Austurlandin vuonot pistävät syvälle sisämaahan, ja alueen ainoat villit peurat Islannissa – noin 6 000–7 000 eläintä – polveutuvat 1780-luvulla Norjasta tuoduista laumoista, joista vain Vopnafjörðuriin päästetty ryhmä selvisi hengissä. Jökuldalurin laaksossa Stuðlagilin kanjoni paljastui vasta 2009, kun Kárahnjúkarin vesivoimalaitos ohjasi suuren osan joen vedestä toisaalle ja pudotti vedenpinnan niin paljon, että tuhansia vuosia veden alla piilleet, tiiviisti pakkautuneet basalttipylväät nousivat näkyviin turkoosin joen molemmin puolin. Seyðisfjörðurin kirjava pääkatu ja vuonon ympäröimä taiteilijayhteisö ovat tehneet pikkukaupungista alueen kulttuurikeskuksen, ja sieltä lähtee yhä lautta Tanskaan ja Färsaarille. Stöðvarfjörðurissa Petra Sveinsdóttirin elämänmittainen kivikokoelma – hän aloitti keräämisen seitsemänvuotiaana ja avasi kotinsa yleisölle 1974 – täyttää nykyään sekä pihan että talon kymmenillätuhansilla kivillä ja mineraaleilla.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-austurland-7d1dac43.jpg",
@@ -9012,6 +9122,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Höfuðborgarsvæði': {
       lyhyt: 'Bessastaðir Álftanesin niemellä on ollut Islannin presidentin virka-asunto vuodesta 1941; 1200-luvulla sen omisti Snorri Sturluson.',
+      pitka: 'Pääkaupunkiseudulla asuu nykyään lähes kaksi kolmasosaa koko Islannin väestöstä, vaikka alue koostuu muodollisesti erillisistä kunnista – Kópavogurista, Hafnarfjörðurista, Garðabæristä, Mosfellsbæristä ja Seltjarnarnesista – jotka ovat vuosikymmenten kuluessa kasvaneet yhteen Reykjavíkin kanssa yhtenäiseksi kaupunkialueeksi. Hafnarfjörðuria kutsutaan Islannin piilokansan pääkaupungiksi: kaupungin sydämessä sijaitseva, 1923 avattu Hellisgerðin sammaleinen laavapuisto on täynnä tarinoita haltioista ja peikoista, ja tuoreiden kyselyjen mukaan yli puolet asukkaista pitää haltioiden olemassaoloa mahdollisena tai todennäköisenä. Bessastaðirin niemellä presidentti asuu yhä samassa paikassa, jota Snorri Sturluson hallitsi 1200-luvulla, mutta ympäröivä seutu on muuttunut rauhallisesta maatilamaisemasta vilkkaaksi esikaupunkialueeksi. Kaupunkien rajat sulautuvat toisiinsa niin saumattomasti, ettei matkailija useinkaan huomaa siirtyvänsä kunnasta toiseen.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-hofudborgarsvaedi-9def4fe5.jpg",
@@ -9026,6 +9137,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Vestfirðir': {
       lyhyt: 'Látrabjarg on Islannin läntisin kohta: 14 kilometriä pitkä ja paikoin 440 metriä korkea lintuvuori, jonka jyrkänteillä pesii lunneja.',
+      pitka: 'Vestfirðirin vuonoihin pääsee vieläkin paikoin vain hitaita, mutkittelevia vuoristoteitä tai tunneleita pitkin, ja seutu on koko Islannin harvimmin asuttu ja syrjäisin osa. Arnarfjörðurin perukassa Dynjandi putoaa noin sata metriä portaittain leveästä, 60-metrisestä alaosastaan kapeampaan 30-metriseen yläosaan – nimi tarkoittaa suunnilleen "jylisevää", ja putouksen kohina kuuluu kauas vuonolle. Ísafjörður, alueen suurin kaupunki, kyyristelee jyrkkien vuorten alla, ja 1990-luvun tuhoisien lumivyöryjen, muun muassa Flateyrin 1995 onnettomuuden, jälkeen sen yläpuolelle rakennettiin massiiviset betoniset ohjausvallit suojaamaan asutusta. Hólmavíkissa Strandagaldur-museo kertoo 1600-luvun "poltettujen vuosisadan" noitavainoista, jolloin alueella tuomittiin roviolle 21 ihmistä – enemmän kuin missään muualla Islannissa.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vestfirdir-4f8cbc1f.jpg",
@@ -9040,6 +9152,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Norðurland eystra': {
       lyhyt: 'Húsavíkin lahdelle tulee usein valaita, ja kaupungin ympäristössä harjoittelivat 1960-luvulla Apollo-lentojen astronautit.',
+      pitka: 'Akureyri, usein "Pohjolan pääkaupungiksi" kutsuttu, on Islannin toiseksi suurin taajama ja Eyjafjörðurin vuonon perukassa sijaitseva elävä yliopisto- ja kulttuurikaupunki. Sen kasvitieteellinen puutarha Lystigarðurinn on yksi maailman pohjoisimmista, ja siellä kasvaa nykyään yli 7 000 kasvilajia vain runsaat 50 kilometriä napapiiriltä etelään. Kaupungin liikennevaloissa on palanut sydämen muotoisia valoja vuodesta 2008 lähtien – ne ilmestyivät alun perin vain kuukausia ennen Islannin finanssikriisiä, ja kriisin jälkeen niistä tuli symboli yhteisöllisyydelle ja toivolle vaikeina aikoina. Húsavíkin edustalla, missä valaita nähdään lähes ympäri vuoden, entinen kalastuskaupunki on muuttunut vähitellen valassafarien keskukseksi, ja samalla rannikolla harjoittelivat 1960-luvulla myös Apollo-ohjelman astronautit kuun pintaa muistuttavassa laavamaisemassa.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-eystra-72883732.jpg",
@@ -9054,6 +9167,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Norðurland vestra': {
       lyhyt: 'Vatnsnesin rannalla seisova Hvítserkur on 15-metrinen kivipaasi; tarun mukaan se on peikko, jonka nouseva aurinko muutti kiveksi.',
+      pitka: 'Skagafjörðurin laakso tunnetaan islanninhevosten kasvatuksesta, ja alueen vihreillä niityillä laiduntavat hevoslaumat ovat yhtä tuttu näky kuin vuonon jäätikköhuiput taustalla. Glaumbæjrin turvekattoinen kyläkeskus pysyi asuttuna aina vuoteen 1947 asti, ja sen kolmetoista toisiinsa käytävin yhdistettyä turve- ja puurakennusta – keittiöstä pajaan – kertovat nykyään museona 1700–1800-lukujen maalaiselämästä. Vuonon suulla kohoava Drangeyn saari, jyrkkäseinäinen kalliosaareke keskellä merta, tunnetaan saagakirjallisuudesta paikkana, jonne lainsuojaton Grettir Ásmundarson pakeni viimeisiksi vuosikseen. Skagaströndin ja Sauðárkrókurin kaltaiset pienet kalastuskaupungit elävät nykyään yhtä lailla merestä kuin matkailusta, joka tuo alueelle väkeä katsomaan hylkeitä Vatnsnesin niemellä.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-nordurland-vestra-7e152ac6.jpg",
@@ -9068,6 +9182,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Reykjavík': {
       lyhyt: 'Reykjavíkin taloja lämmitetään kuumalla maalämpövedellä, jota johdetaan putkia pitkin muun muassa Nesjavellirin voimalasta.',
+      pitka: 'Hallgrímskirkjan 74-metrinen torni hallitsee Reykjavíkin siluettia ja on suunniteltu muistuttamaan Islannin luonnon basalttipylväitä; kirkko valmistui lopulta vasta 1986, ja sen huipulle pääsee nykyään hississä katsomaan koko kaupunkia ja ympäröiviä vuoria. Satamanrannassa siintävä Harpa-konserttitalo, valmistunut 2011 finanssikriisin jälkimainingeissa kesken jääneenä hankkeena, kimaltelee lasijulkisivullaan kuin basalttia muistuttava taideteos, ja siitä on tullut kaupungin uusi maamerkki. Rannan tuntumassa seisova Sólfar – Auringonlaiva – on Jón Gunnar Árnasonin 1990 paljastama teräsveistos, joka ei kuvaa mitään tiettyä matkaa vaan unelmaa ja toivoa paremmasta tulevaisuudesta. Kaupungin sydämessä Laugavegurin kauppakatu täyttyy iltaisin baareista ja live-musiikista, sillä Reykjavík tunnetaan pienestä koostaan huolimatta vilkkaasta yöelämästään.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-reykjavik-97da3fc8.jpg",
@@ -9082,6 +9197,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Suðurland': {
       lyhyt: 'Þingvellirin laaksossa kokoontui Islannin Alþingi ensimmäisen kerran 930, ja paikka on Unescon maailmanperintöä vuodesta 2004.',
+      pitka: 'Etelärannikon mustat hiekkarannat syntyvät jäätiköiden alta purkautuneiden tulivuorten laavasta, ja Reynisfjaran basalttipylväsmuurit sekä merestä nousevat Reynisdrangarin kalliopaadet ovat niistä tunnetuimmat – helmikuussa 2026 osa pylväsmuurista sortui rantaa vuosia kuluttaneen aallokon vuoksi, muistutuksena siitä, miten nopeasti tämä rannikko yhä muuttuu. Vuonna 2010 Eyjafjallajökullin jäätikön alla purkautunut tulivuori lähetti hienojakoisen tuhkapilven Euroopan ilmatilaan ja pysäytti yli 100 000 lentoa viikossa – suurimman ilmaliikenteen seisokin sitten toisen maailmansodan – ja jäätikkö näkyy yhä matkalla kohti Víkin kylää. Seljalandsfoss ja Skógafoss putoavat molemmat entisiltä rantajyrkänteiltä, jotka merenpinta on jättänyt taakseen tuhansia vuosia sitten, ja Seljalandsfossin taakse pääsee kävelemään aivan putouksen verhon sisäpuolelle. Sisämaassa Landmannalaugarin värikkäät riolitivuoret ja lämpimät lähteet houkuttelevat kesäisin vaeltajia yhdelle Islannin tunnetuimmista reiteistä, Laugaveguriin.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurland-16add566.jpg",
@@ -9096,6 +9212,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Suðurnes': {
       lyhyt: 'Reykjanesin niemimaalla 15-metrinen kävelysilta ylittää railon, joka erottaa Pohjois-Amerikan ja Euraasian mannerlaatat.',
+      pitka: 'Sinisen lagúunin kuumat, piidioksidipitoiset vedet ovat alun perin Svartsengin geotermisen voimalan jätevettä: kun laitos alkoi 1976 johtaa käytettyä vettä läheiselle laavakentälle, piidioksidi tiivisti maaperän vedenpitäväksi altaaksi, ja vasta myöhemmin huomattiin veden miellyttävyys iholle – ensimmäinen virallinen uimapaikka avattiin 1987. Niemenkärjessä seisova Reykjanesviti on Islannin vanhin majakka: ensimmäinen versio valmistui 1878, mutta maanjäristys vaurioitti sen korjauskelvottomaksi jo kahdeksan vuotta myöhemmin, ja nykyinen, vuosina 1907–1908 rakennettu betonimajakka on seissyt siitä lähtien lähes muuttumattomana. Vuodesta 2021 alkaen Reykjanesin niemimaa on herännyt kahdeksan vuosisadan hiljaiselon jälkeen uuteen tulivuoritoimintaan, ja Grindavíkin kalastuskaupunki jouduttiin evakuoimaan marraskuussa 2023 usean peräkkäisen purkauksen vuoksi; kaupunkia suojaavat nykyään kilometrien pituiset, jopa 25 metriä korkeat laavavallit. Niemi sijaitsee suoraan Pohjois-Amerikan ja Euraasian mannerlaattojen rajalla, mikä selittää sekä jatkuvan maanjäristystoiminnan että alueen lukuisat kuumat lähteet.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-sudurnes-edb71def.jpg",
@@ -9110,6 +9227,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Vesturland: {
       lyhyt: 'Snæfellsjökull on 1 446-metrinen jäätikön peittämä tulivuori – Jules Vernen romaanissa matka maan keskipisteeseen alkaa sen kraaterista.',
+      pitka: 'Deildartunguhver pulppuaa maan alta 180 litraa lähes kiehuvaa vettä sekunnissa – enemmän kuin mikään muu lähde Euroopassa – ja se lämmittää nykyään paitsi lähiseudun myös Borgarnesin ja Akranesin kaupungit, joihin kuuma vesi virtaa 64 kilometrin pituista putkea pitkin, Islannin pisintä. Lähistöllä Hraunfossar-putoukset eivät virtaa yhdestä joesta vaan valuvat lukemattomina pieninä suihkuina suoraan laavakentän alta Hvítá-jokeen usean sadan metrin matkalla – vesi on suodattunut vuosia maan alla ennen kuin se ilmestyy näkyviin. Breiðafjörðurin lahdella Bjarnarhöfnin tilalla käsitellään yhä perinteiseen tapaan jäämerihain lihaa hákarl-herkuksi mätättämällä ja kuivattamalla sitä kuukausien ajan, ja ammoniakintuoksuinen lopputulos tarjoillaan nykyään uteliaille matkailijoille paikan omassa museossa. Stykkishólmurin satamakaupungin värikkäät puutalot ja tuhansien saarien pirstoma lahti tekevät siitä suositun lähtöpisteen lautoille, jotka kulkevat Vestfirðirin suuntaan Breiðafjörðurin poikki.',
       kuva: [
         {
           osoite: "https://media.matkakirja.app/karttanostot/20260926/isl-maakunta-vesturland-0020c602.jpg",
@@ -9287,6 +9405,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     'Çanakkale': {
       lyhyt: 'Dardanellien yli kulkeva 1915 Çanakkale -silta avattiin 2022, ja sen 2 023 metrin pääjänne on maailman riippusilloista pisin.',
+      pitka: "Gallipolin niemimaa on Turkin Euroopan puolen kaakkoiskulma, ja sen eteläosa kuuluu vuonna 1973 perustettuun historialliseen kansallispuistoon, jonka ala on yli 33 000 hehtaaria. Metsäisten kukkuloiden lomassa on kymmeniä hautausmaita ja muistomerkkejä, sillä Gallipolin kampanja käytiin vuosina 1915–1916 ja siinä taistelivat osmanni- ja liittoutuneiden joukot. Niemen kärjessä kohoaa 41,7 metriä korkea Çanakkalen marttyyrien muistomerkki, joka avattiin vuonna 1960. Anzac Covessa ja Lone Pinella Australian ja Uuden-Seelannin vieraat kokoontuvat 25. huhtikuuta muistopäivään. Turkkilaiset viettävät omaa muistopäiväänsä 18. maaliskuuta. Kilitbahirin linnoitus kohoaa niemen puolella Dardanellien kapeimmalla kohdalla, ja lautat vievät salmen yli Eceabatiin.",
     },
     'Çankiri': {
       lyhyt: 'Çankırın suolaluola on yksi Turkin suurimmista vuorisuolaesiintymistä, ja suolaa on louhittu sieltä antiikin ajoista asti.',
@@ -9305,6 +9424,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Edirne: {
       lyhyt: 'Mimar Sinan piti Edirnen Selimiye-moskeijaa mestariteoksenaan, ja se on ollut Unescon maailmanperintöä vuodesta 2011.',
+      pitka: "Edirne on Turkin luoteiskulman rajakaupunki, jonka lähellä Kreikan ja Bulgarian rajat kohtaavat. Noin 180 000 asukkaan kaupunki toimi Osmanien pääkaupunkina 1360-luvulta vuoteen 1453. Vanhin moskeija Eski Cami rakennettiin vuosina 1403–1422, ja Üç Şerefeli -moskeijan kolmiparvekkeiset minareetit valmistuivat 1440-luvulla. Restauroidussa Karaağaçin rautatieasemassa toimii nykyisin Trakian yliopiston kuvataidetiedekunta, ja ympäröivillä tasangoilla viljellään maissia, sokerijuurikasta ja auringonkukkaa. Kesäkuun lopussa Sarayiçin saarella käydään Kırkpınarin öljypainit, jotka ovat Unescon aineetonta kulttuuriperintöä vuodesta 2010. Ravintoloissa tarjotaan Edirnen tunnetuinta ruokaa, ciğer tavaa eli paistettua maksaa.",
     },
     Elazig: {
       lyhyt: 'Hazarjärvi Elazığin kaakkoispuolella on Tigrisin lähde, ja sen pohjasta on löydetty jälkiä veden alle jääneestä kaupungista.',
@@ -9341,6 +9461,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Istanbul: {
       lyhyt: 'Marmaray-junat sukeltavat Bosporinsalmen alle upotettuun tunneliin, ja vuodesta 2013 raiteet ovat yhdistäneet Euroopan ja Aasian.',
+      pitka: "Istanbulin väestöstä, noin 15,75 miljoonasta asukkaasta, kaksi kolmasosaa asuu Euroopan puolella, ja sen sydän on Sultanahmetin niemellä, jonka Unesco merkitsi maailmanperinnöksi vuonna 1985. Hagia Sofia valmistui vuonna 537 ja toimii nykyisin moskeijana. Konstantinopolin muinaiset Theodosioksen maamuurit kulkevat noin 5,7 kilometrin matkan kaupungin länsilaidalla, ja sisämuurissa oli 96 tornia. Bosporin ensimmäinen silta valmistui vuonna 1973 ja Fatih Sultan Mehmetin silta 1988. Uusi Istanbulin lentoasema Arnavutköyn kaupunginosassa Mustanmeren rannalla avattiin 2018, ja kaikki matkustajaliikenne siirtyi sinne huhtikuussa 2019. Kaupungin nimeksi tuli virallisesti Istanbul vuonna 1930.",
     },
     Izmir: {
       lyhyt: 'İzmirin Konakin aukion kellotorni valmistui 1901, ja sen suunnitteli levantiniranskalainen arkkitehti Raymond Charles Péré.',
@@ -9371,6 +9492,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirklareli: {
       lyhyt: 'İğneadan kansallispuistossa Bulgarian rajalla kasvaa harvinaista longoz-tulvametsää, jota Strandžan vuorilta laskevat purot tulvivat.',
+      pitka: "Kırklareli sijaitsee Turkin Traakiassa, ja sen pohjoisraja Bulgariaan on noin 180 kilometriä pitkä. Yıldızin vuoret halkovat 6 459 neliökilometrin läänin, jossa asuu noin 369 000 ihmistä. Pohjoisessa ja idässä maisemaa hallitsevat metsät, etelän pellot ja viinitarhat tekevät alueesta tärkeän viininviljelyalueen, ja Mustanmeren rannikolla kalastetaan. Demirköyn lähellä sijaitsee Dupnisan luola, 3 200 metriä pitkä tippukiviluolakokonaisuus, joka avattiin kävijöille vuonna 2005 ja joka on Itä-Traakian ainoa esittelyluola. Vizen kaupungissa seisoo Justinianus I:n aikainen bysanttilainen Pikku Hagia Sofia, nykyisin Gazi Süleyman Paşa -moskeija.",
     },
     Kirsehir: {
       lyhyt: 'Bağlaman mestari Neşet Ertaş syntyi 1938 Kırtıllarin kylässä Kırşehirissä.',
@@ -9440,6 +9562,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tekirdag: {
       lyhyt: 'Tekirdağin kuuluisin herkku ovat pienet, mausteiset Tekirdağ köftesi -grillipyörykät.',
+      pitka: "Tekirdağ on Marmaranmeren rannalla sijaitseva satamakaupunki, noin 130 kilometrin päässä Istanbulista länteen, jonka asukasluku on noin 186 000. Sen historia ulottuu antiikin Bisantheen, ja Mimar Sinan suunnitteli kaupungin Rüstem Paşa -moskeijan vuonna 1553. Ympäröivillä pelloilla viljellään syysvehnää, auringonkukkaa, kirsikoita ja viinirypäleitä. Kaupunki tunnetaan myös rakı-tislaamoistaan; seudun rypäleistä valmistettu anistislaus on kaupungin tunnetuin tuote. Vanhassa kaupungissa Rákóczi-museo muistuttaa unkarilaisruhtinaan maanpakolaisuudesta.",
     },
     Tokat: {
       lyhyt: 'Tokatin Zilessä Caesar voitti taistelun 47 eaa. ja kuittasi voittonsa sanoilla veni, vidi, vici.',
@@ -9535,18 +9658,23 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     "Arkhangel'sk": {
       lyhyt: 'Arkangelin alueeseen kuuluu myös Frans Joosefin maa, arktinen saaristo, jonka saaret ovat suurelta osin jäätiköiden peitossa.',
+      pitka: "Arkangelin alueen sydän on Pohjois-Dvinan varsi, jonka rannalle Arkangelin kaupunki perustettiin vuonna 1584 Mikael-arkkienkelin luostarin ympärille. Kaupungin lähellä Malyje Korelyn ulkoilmamuseoon on koottu pohjoisen puukirkkoja, tuulimyllyjä ja talonpoikaistaloja. Etelämpänä Kargopol on mainittu kronikoissa jo 1146, ja pieni kaupunki on tunnettu valkoisista kivikirkoistaan sekä käsin muovatuista savileluistaan. Kenozeron kansallispuisto kattaa 140 000 hehtaaria taigaa, lampia ja järviä; alue on ollut Unescon biosfäärialue vuodesta 2004. Alueen pinta-ala on yli 400 000 neliökilometriä, mutta asukkaita on alle miljoona.",
     },
     "Astrakhan'": {
       lyhyt: 'Volga laskee Astrahanin alueella Kaspianmereen Euroopan suurimpana jokisuistona, ja kesällä suiston lahdet peittyvät lootuksen kukkiin.',
+      pitka: "Astrahanin kaupunki sijaitsee Volgan saarilla, ja sen valkoinen kreml on noin 11 hehtaarin kokoinen linnoitus, jonka muurit nousivat 1500-luvulla. Kremlin sisällä Uspenskin katedraalin viisikupolinen rakennus aloitettiin 1699, ja työ kesti noin kaksitoista vuotta. Volgan suistossa Astrahanin biosfäärialue perustettiin jo 1919; siellä on havaittu yli 200 lintulajia, ja kiharapelikaanit pesivät alueella. Kaupungissa asuu noin 520 000 ihmistä ja koko alueella noin miljoona, ja idän ja etelän vaikutus näkyy ruoassa ja rakennuksissa.",
     },
     Bashkortostan: {
       lyhyt: 'Baškortostanin Šulgan-Tašin eli Kapovan luolan seinillä on kivikautisia maalauksia mammuteista ja hevosista.',
+      pitka: "Baškortostan levittyy Volgan ja Uralin välille, ja tasavallan 143 600 neliökilometrillä asuu noin 4,1 miljoonaa ihmistä: venäläisiä on 37 prosenttia, baškiireja 31 ja tataareja 24. Baškiirin kieli on turkkilainen ja virallinen venäjän rinnalla. Pääkaupunki Ufa perustettiin vuonna 1574 Belaja-joen korkealle rannalle, jossa seisoo vuonna 1967 paljastettu Salavat Julajevin ratsastajapatsas: noin kymmenmetrinen pronssiveistos painaa 40 tonnia. Lala Tulpan -moskeijan turkoosi kupoli ja 53 metriä korkeat minareetit valmistuivat 1998, ja Aksakovin muistomuseo (1991) toimii kaupungin vanhimmassa puurakennuksessa. Uralin länsirinteillä Baškiria-kansallispuisto (1986) kuuluu vuonna 2012 Unescon biosfäärialueeksi hyväksyttyyn Baškiirien Uralin alueeseen.",
     },
     Belgorod: {
       lyhyt: 'Belgorod tarkoittaa valkoista kaupunkia, ja nimi viittaa seudun vaaleisiin liitu- ja kalkkikiviesiintymiin.',
+      pitka: "Belgorod perustettiin rajalinnakkeeksi vuonna 1596 Severski-Donetsin rannalle, ja nykyään noin 380 000 asukkaan kaupungissa on useita yliopistoja, filharmonia ja taidemuseo. Piispa Joasaf (1705–1754), jonka kirkko julisti pyhimykseksi vuonna 1911, on seudun kunnioitetuimpia hahmoja. Koillisessa sijaitseva Vanha Oskol on noin 220 000 asukkaan kaupunki, ja sen ympäristössä louhitaan rautamalmia Kurskin magneettisen anomalian reunalla. Belogorje-luonnonsuojelualue jakautuu useaan erilliseen osaan ja kattaa yhteensä noin 2 100 hehtaaria kalkkikivipohjaista maata. Alueen perinteisiin kuuluvat puunveisto ja kirjaillut rushnyk-pyyhkeet. Insinööri Vladimir Šuhov, jonka verkkomaiset hyperboloiditornit tunnetaan maailmalla, syntyi Grajvoronin kaupungissa.",
     },
     Bryansk: {
       lyhyt: 'Brjanskin metsän mänty- ja tammimetsät ja Nerussajoen suot on suojeltu, ja ne kuuluvat Unescon biosfäärialueeseen.',
+      pitka: "Brjanskin kaupunki Desna-joen varrella laskee perustamisvuodekseen 985, vaikka ensimmäinen kirjallinen maininta (Debrjansk) on vuodelta 1146. Pokrovan mäellä kohoaa vuonna 1698 valmistunut Pokrovan katedraali, joka yhdistää venäläistä muuraustraditiota Naryshkin-barokin piirteisiin. Kaupungin lähellä sijaitseva Svenin luostari perustettiin joidenkin lähteiden mukaan 1288, ja sen Svenskajan markkinat olivat 1600–1700-luvuilla Euroopan-Venäjän suurimpia. Runoilija Fjodor Tjuttšev syntyi 5. joulukuuta 1803 Ovstugin sukukartanossa, jossa toimii nykyään hänen muistokirjallisuusmuseonsa. Desnan yläpuolella Trubtševskin Kolminaisuuden katedraali seisoo kukkulalla; kaupunki mainitaan ensimmäisen kerran 1164.",
     },
     Buryat: {
       lyhyt: 'Selenga tuo Burjatiasta lähes puolet Baikaliin laskevien jokien vedestä, ja sen suisto on satojen lintulajien levähdyspaikka.',
@@ -9556,9 +9684,6 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chita: {
       lyhyt: 'Taka-Baikalin Daurian arot ja Toreijärvet ovat Unescon maailmanperintöä, ja niillä vaeltaa mongoliangaselleja.',
-    },
-    Crimea: {
-      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
     },
     Dagestan: {
       lyhyt: 'Dagestanin Sulakin kanjoni on lähes kaksi kilometriä syvä, syvempi kuin Coloradon Grand Canyon.',
@@ -9580,18 +9705,22 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Ivanovo: {
       lyhyt: 'Ivanovo on vanha tekstiilikaupunki, ja koska kutomoissa työskenteli enimmäkseen naisia, sitä kutsutaan morsiamien kaupungiksi.',
+      pitka: "Ivanovon oblasti on yksi Venäjän pienimmistä, mutta väkeä on silti 927 828 (vuoden 2021 väestölaskenta), ja Volga virtaa alueen pohjoisosan halki. Ivanovon kaupungissa kannattaa katsoa ylös: 1920–30-luvun konstruktivismi on jättänyt katukuvaan Laivatalon, joka valmistui 1929–1930, sekä hevosenkengän muotoisen asuinkorttelin. Dmitri Burylinin nimeä kantavaan museokokonaisuuteen kuuluu Teollisuuden ja taiteen museo, joka avattiin 26. joulukuuta 1914, ja Burylinin perheen jugend-talossa toimiva Ivanovon painokankaan museo. Volgan rannalla Plyosin kaupungissa asuu enää alle kaksi tuhatta ihmistä, mutta sen kirkot ja mäkiset kadut vetävät kävijöitä Kultaisen renkaan reitille.",
     },
     'Kabardin-Balkar': {
       lyhyt: 'Baksanin laakson vuoren alla on neutriinolaboratorio, jonka ilmaisin tallensi vuonna 1987 kaukaisesta supernovasta tulleita neutriinoja.',
     },
     Kaliningrad: {
       lyhyt: 'Kaliningradin alueen Jantarnyissa on maailman suurin meripihkaesiintymä, ja meripihkaa kaivetaan siellä avolouhoksesta.',
+      pitka: "Kaliningradin kaupungissa asuu noin 500 000 ihmistä, ja sen sydän on Pregolja-joen Kantin saari. Siellä kohoaa 1300-luvulla rakennettu tiiligoottilainen tuomiokirkko, jonka katto ja huippu palautettiin 1990-luvulla; kello soittaa tasatunnein Beethovenin viidennen sinfonian alkutahdit. Maailmanmeren museo esittelee tutkimusalus Vitjazin sekä vuonna 2000 tuodun sukellusvene B-413:n, jonka sisällä voi kävellä. Länsipuolella Kuurinkynnäs, 98 kilometrin pituinen hiekkaniemi, on ollut Unescon maailmanperintökohde vuodesta 2000. Venäjän puolella se on kapeimmillaan vain 400 metriä leveä, ja liikkuvat dyynit nousevat jopa 60 metriin. Kesäisin Zelenogradskin ja Svetlogorskin rannat täyttyvät lomailijoista.",
     },
     Kalmyk: {
       lyhyt: 'Kalmukian pääkaupungissa Elistassa on Euroopan suurin buddhalainen temppeli, Buddha Šakjamunin kultainen asumus.',
+      pitka: "Kalmukia levittäytyy Volgan alangon ja Kaspianmeren rannikon aroilla noin 74 700 neliökilometrin alalla. Alueella asuu runsaat 267 000 ihmistä, ja noin 63 prosenttia heistä on kalmukkeja. Heidän esi-isänsä, länsimongolialaiset oiraatit, saapuivat Siperiasta Volgan alajuoksulle noin vuonna 1630. He toivat mukanaan tiibetiläisen gelug-koulukunnan buddhalaisuuden, joka on täällä yhä alueen yleisin uskonto. Vuoden suuriin juhliin kuuluvat Tsagaan Sar eli valkoinen kuu ja Zul. Vuonna 1990 perustettu Mustien maiden biosfäärialue suojelee saigaantilooppeja. Huhtikuussa aro kukkii: Punaiseen kirjaan kuuluvat luonnonvaraiset tulppaanit houkuttelevat väkeä Elistasta arolle omaan tulppaanijuhlaansa.",
     },
     Kaluga: {
       lyhyt: 'Kalugassa asui avaruuslentojen uranuurtaja Konstantin Tsiolkovski, ja kaupungin kosmonautiikan historian museo kantaa hänen nimeään.',
+      pitka: "Kaluga kohoaa Okan rannalla noin 150 kilometriä Moskovasta lounaaseen, ja sen ensimmäinen maininta on vuodelta 1371; nykyään kaupungissa on noin 330 000 asukasta ja Volkswagenin autotehdas vuodesta 2007. Alueen kulttuurikärki on maaseudulla: Ugran kansallispuiston (perustettu 1997) sisällä Nikola-Lenivetsin taidepuistossa taiteilija Nikolai Polissky ja Archstoyanie-festivaalin osallistujat ovat rakentaneet maisemaveistoksia vuodesta 2006. Okan vasemmalla rannalla Tarusa on tunnettu jo vuodesta 1246. Siellä on Tsvetajevan perheen museo, avattu 1992, ja Konstantin Paustovskin hauta Vanhalla hautausmaalla. Borovskin piirissä Etnomir esittelee eri kansojen rakennuksia ja käsitöitä.",
     },
     Kamchatka: {
       lyhyt: 'Kamtšatkan Kljutševskaja Sopka, noin 4 750 metriä, on Euraasian korkein toimiva tulivuori, ja se purkautuu yhä usein.',
@@ -9601,6 +9730,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Karelia: {
       lyhyt: 'Äänisen ja Vienanmeren rantakallioihin on hakattu tuhansia kivikautisia kalliopiirroksia, ja ne ovat Unescon maailmanperintöä.',
+      pitka: "Karjalan tasavallassa on noin 60 000 järveä, ja Euroopan suurimmat järvet, Laatokka ja Äänisjärvi, ulottuvat sen rajoille. Äänisen Kižin saarella seisova pogosta on ollut Unescon maailmanperintökohde vuodesta 1990. Sen Kirkastuskirkko on 37 metriä korkea ja siinä on 22 kupolia. Ruskealan entinen marmorilouhos, jota on louhittu vuodesta 1769, on täyttynyt kirkkaalla vedellä, ja sen kiveä on käytetty esimerkiksi Pietarin Iisakinkirkossa. Paikka kuului ennen talvisotaa Suomeen Ruskealan kuntana. Laatokan Valamon luostarin munkit muuttivat 1940 Heinävedelle, mutta luostari on nykyään jälleen toiminnassa.",
     },
     Kemerovo: {
       lyhyt: 'Kemerovon alue on Kuzbass eli Kuznetskin hiiliallas, Venäjän suurin kivihiilen louhinta-alue.',
@@ -9610,15 +9740,19 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kirov: {
       lyhyt: 'Kirovin lähellä Dymkovossa muovaillaan yhä savileluja, jotka kalkitaan valkoisiksi ja maalataan kirkkain värein.',
+      pitka: "Kirov nousee Vjatka-joen rannalle, 896 kilometriä Moskovasta koilliseen, ja noin 470 000 asukkaan kaupungin ensimmäinen maininta on vuodelta 1374. Aiemmin se on tunnettu nimillä Vjatka ja Hlynov; nykyisen nimensä se sai joulukuussa 1934 Sergei Kirovin mukaan. Kaupungin tunnusmerkkejä ovat Aleksanterin puiston valkoiset rotundat, vuonna 1580 perustettu Trifonin luostari ja vuonna 1763 valmistunut Spasski-katedraali. Kaupungissa on lukuisia museoita, teattereita ja oppilaitoksia. Kirov on Volga-Vjatkan alueen teollisuuden ja koulutuksen keskus.",
     },
     Komi: {
       lyhyt: 'Komin Manpupunerin ylängöllä seisoo seitsemän 30–42-metristä kivipylvästä, joita kutsutaan seitsemäksi voimamieheksi.',
+      pitka: "Komin tasavalta on noin 416 000 neliökilometrin laajuinen, ja yli 70 prosenttia sen alasta on metsää. Pohjois-Uralin Komin neitseelliset metsät, 32 800 neliökilometrin alue, tulivat 1995 Venäjän ensimmäiseksi luonnon maailmanperintökohteeksi ja ovat Euroopan laajin koskematon boreaalinen metsä. Alueeseen kuuluvat Petšora-Ilytšin luonnonsuojelualue vuodelta 1930 ja Jugyd Va -kansallispuisto. Uralin korkein huippu Narodnaja, noin 1 900 metriä, kohoaa tasavallan puolella. Metsissä elää muun muassa poroja, soopeleita ja metsoja. Komit muodostavat tasavallan asukkaista noin neljänneksen.",
     },
     Kostroma: {
       lyhyt: 'Kostromaa pidetään Snegurotškan, Pakkasukon lumityttären, kotikaupunkina, ja Volgan rannalla on hänen puinen satutalonsa.',
+      pitka: "Kostroman kaupunki, noin 267 000 asukasta, sijaitsee Volgan ja Kostroma-joen yhtymäkohdassa, ja sen perustamisvuotena pidetään perinteisesti 1152. Kaupunki kuuluu Venäjän Kultaiseen renkaaseen: klassistiset Krasnyje rjady eli kauppa-arkadit nousivat entisen kremlin paikalle, ja Bogojavlenskin katedraali valmistui 1559–1565 kaupungin ensimmäisenä kivirakennuksena. Ipatjevin luostari Kostroma-joen rannalla perustettiin noin 1330; sinne oli majoittunut Mihail Romanov, kun kansankokous julisti hänet tsaariksi 14. maaliskuuta 1613. Luostarista löydettiin myös Hypatioksen kronikka. Alueen pinta-ala on noin 60 200 neliökilometriä, ja se on tärkeä puuntuotannon alue sekä perinteinen pellavan ja korutyön seutu.",
     },
     Krasnodar: {
       lyhyt: 'Krasnodarin aluepiirin Sotši on subtrooppinen lomakaupunki, jonka yläpuolisilla vuorilla ajettiin 2014 talviolympialaisten alppilajit.',
+      pitka: "Krasnodarin aluepiirin pohjoisosa on Kubanin tasankoa, jonka mustamultaisilla pelloilla viljellään vehnää, riisiä, auringonkukkaa ja sokerijuurikasta, ja alue on jatkuvasti Venäjän johtavia maatalouskeskuksia. Aluepiirin keskus Krasnodar syntyi 1790-luvulla Mustanmeren kasakkojen Jekaterinodar-linnoituksena, ja kasakkaperinnettä vaalii vuonna 1811 perustettu Kubanin kasakkakuoro. Kaupungissa toimii myös FK Krasnodarin stadion, joka avattiin vuonna 2016 ja jonka kapasiteetti on noin 35 000, ja sen ympärillä on ihmisille avoin puisto. Etelässä Länsi-Kaukasus, UNESCOn maailmanperintökohde vuodesta 1999, kattaa noin 299 000 hehtaaria vuoristoa ja alppiniittyjä.",
     },
     Krasnoyarsk: {
       lyhyt: 'Krasnojarskin aluepiiriin kuuluu Tšeljuskininniemi Taimyrin niemimaalla, Euraasian mantereen pohjoisin kärki.',
@@ -9628,39 +9762,50 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Kursk: {
       lyhyt: 'Kurskin alueen maaperässä on niin paljon rautamalmia, että kompassi näyttää väärin – ilmiö tunnetaan Kurskin magneettisena anomaliana.',
+      pitka: "Kurskin kaupunki seisoo kolmen joen risteyksessä, ja sen nimi mainitaan kronikoissa jo vuonna 1032. Noin 435 000 asukkaan kaupungista lähtee perinteisesti kesällä alueen tunnetuin kulkue: Znamenskin luostarin ikoni kannetaan pääsiäisen jälkeisenä yhdeksäntenä perjantaina noin 30 kilometrin päähän Korennaja-erakkolaan ja palautetaan kaupunkiin syyskuun 13. päivänä. Rylskin pikkukaupunki (noin 15 000 asukasta, ensimmäinen maininta 1152) on kotikaupunki kauppias Grigori Šelihoville, joka kävi kauppaa Alaskassa. Kurskin lähellä Keski-Tšernozjom-luonnonsuojelualue (perustettu 1935) suojelee arojen mustamultaa ja kuuluu UNESCOn biosfäärialueiden verkostoon vuodesta 1978. Runoilija Afanasi Fetin kartano Vorobjovka on nykyään museo.",
     },
     Leningrad: {
       lyhyt: 'Leningradin alueella on suuri osa Laatokasta, Euroopan suurimmasta järvestä, josta Neva virtaa kohti Pietaria.',
+      pitka: "Leningradin alue kietoutuu Pietarin ympärille: yli 83 000 neliökilometrin alueella asuu noin kaksi miljoonaa ihmistä, ja hallinnollinen keskus on Gatšina. Pohjoisessa Viipuri eli Vyborg syntyi ruotsalaisten linnaksi 1293. Kaupungissa, jossa asuu nykyään noin 72 500 ihmistä, ovat nähtävinä keskiaikainen linna, Monrepos'n maisemapuisto ja Alvar Aallon kirjasto, joka valmistui 1935 ja kunnostettiin 2013. Viipuri oli 1917–1940 Suomen toiseksi suurin kaupunki. Volhov-joen varrella Staraja Ladoga ajoitetaan puuvuosirenkaiden mukaan perustetuksi 753, ja sen Yrjön kirkon freskot ovat 1100-luvulta.",
     },
     Lipetsk: {
       lyhyt: 'Lipetskin nimi tulee lehmuksesta, venäjäksi lipa, mutta nykyään kaupunki tunnetaan ennen kaikkea suuresta terästehtaastaan.',
+      pitka: "Lipetsk, noin 510 000 asukkaan kaupunki Voronež-joen varrella, syntyi vuonna 1703, kun Pietari Suuri määräsi valurautatehtaan rakennettavaksi rautamalmin lähelle. Kaupungin lieta- ja kivennäisvesikylpylä on yksi Venäjän vanhimmista. Lounaassa Don-joen rannalla, noin 90 kilometrin päässä, on Zadonsk (noin 9 900 asukasta): sen luostari perustettiin vuonna 1610, ja pyhiinvaeltajat tulevat yhä pyhän Tihonin haudalle; hän kuoli vuonna 1783. Jeletsissä, noin 100 000 asukkaan kaupungissa, jonka ensimmäinen maininta on 1146, kuuluisa pitsi on yhä kaupungin tuntomerkki, ja kirjailija Ivan Bunin kävi siellä lukiota. Zadonskin lähellä Galitšja Gora -suojelualue on vain 230 hehtaarin kokoinen, mutta sen osissa kohtaavat metsät, aro ja jokilaakson kosteikot; suojelu alkoi vuonna 1925.",
     },
     'Maga Buryatdan': {
       lyhyt: 'Magadanin alue on pinta-alaltaan Saksaa suurempi, mutta asukkaita on vain noin 136 000, ja lähes kaikki asuvat kaupungeissa.',
     },
     'Mariy-El': {
       lyhyt: 'Moni mari harjoittaa yhä vanhaa luonnonuskontoaan, ja yhteisiä rukoushetkiä pidetään pyhissä lehdoissa.',
+      pitka: "Joškar-Olan nimi tarkoittaa marin kielellä punaista kaupunkia (joškar ’punainen’, ola ’kaupunki’), ja nimi vahvistui vuonna 1927, vaikka kaupunki perustettiin linnoitukseksi jo 1584. Nyt pääkaupungissa asuu 281 000 ihmistä ja koko Marin tasavallassa noin 672 000, joista maria on noin 40 prosenttia. Kirjakieliä on kaksi, niittymari ja vuorimari, ja mari kuuluu suomen sukukieliin. Kaupungin ulkopuolella metsää riittää: vuonna 1985 perustettu Mari Chodran kansallispuisto peittää noin 366 neliökilometriä metsiä ja järviä.",
     },
     Mordovia: {
       lyhyt: 'Mordvassa puhutaan kahta suomalais-ugrilaista kieltä, ersää ja mokšaa, jotka ovat tasavallan virallisia kieliä venäjän rinnalla.',
+      pitka: "Saranskissa Insar-joen itärannalla kohoaa Mordovia Arena, jonka kirkkaanväriset metallipaneelit viittaavat mordvalaisten kansanperinteen aurinkosymboliikkaan. Stadion valmistui vuonna 2018, ja jalkapallon MM-kisojen aikana siihen mahtui 44 442 katsojaa. Kaupungissa toimii Erzja-taidemuseo, jossa on yli 200 kuvanveistäjä Stepan Erzjan teosta. Tasavallassa asuu noin 780 000 ihmistä, ja pohjoisessa, Moksa-joen oikealla rannalla, on vuonna 1935 perustettu Mordovan luonnonsuojelualue: noin 32 000 hehtaaria lähes kokonaan metsää. Alueelle pääsee vain luvalla.",
     },
     Moskva: {
       lyhyt: 'Moskovan Ostankinon televisiotorni kohoaa 540 metriin, ja se on Euroopan korkein vapaasti seisova rakennelma.',
+      pitka: "Moskova mainitaan kronikoissa ensi kerran 1147, ja nykyään Moskovajoen varrella asuu noin 13 miljoonaa ihmistä. Kreml ja Punainen tori ovat Unescon maailmanperintöä vuodesta 1990, ja torin laidalla kohoaa Vasili Autuaan katedraali, joka rakennettiin 1555–1561. Pohjoisessa VDNKh avattiin 1939 maatalousnäyttelynä, ja peruskorjauksen jälkeen alueella on nykyään paviljonkeja, jäärata ja 2015 avattu Moskvarium-akvaario. Tretjakovin galleria, Bolšoi ja lukemattomat puistot pitävät kaupungin kulttuurielämän vireänä läpi vuoden.",
     },
     Moskovskaya: {
       lyhyt: 'Moskovan alueen Sergijev Posadissa on Kolminaisuuden lavra, Venäjän ortodoksisen kirkon tärkeimpiä luostareita.',
+      pitka: "Moskovan alue ympäröi pääkaupunkia ja on noin 8,5 miljoonan asukkaan kotiseutu. Kolomnassa Moskovajoki ja Oka yhtyvät; kaupunki mainitaan ensi kerran 1177, sen punatiilinen kremli valmistui 1525–1531, ja pastilamuseossa maistuu paikallinen hedelmäkarkki. Tähtikaupungissa eli Zvjozdnyi gorodokissa toimii Juri Gagarinin mukaan nimetty kosmonauttien koulutuskeskus. Tiedekaupunki Dubnassa Volgan varrella on vuonna 1956 perustettu ydintutkimuslaitos JINR. Kultaisen renkaan kaupunkeihin kuuluvat alueella myös Dmitrov ja Zvenigorod.",
     },
     Murmansk: {
       lyhyt: 'Murmansk on maailman suurin kaupunki napapiirin pohjoispuolella, ja talvella aurinko pysyy siellä horisontin alla noin kuusi viikkoa.',
+      pitka: "Kuolan niemimaan pohjoisrannalla luonto ja raskas teollisuus elävät rinnakkain. Entisen Petsamon alueella Zapoljarnyin lähellä porattiin vuosina 1970–1989 Kuolan supersyväreikä, joka yltää 12 262 metriin ja on yhä syvin ihmisen tekemä reikä. Hibiinien tunturimassiivin korkein huippu Judytšvumtšorr on 1 201 metriä, ja sen juurella Kirovskissa lasketellaan; Hibiinien kansallispuisto perustettiin 2018. Barentsinmeren rannalla Teriberkan kalastajakylässä asuu enää muutama sata ihmistä, mutta rantojen hylätyt puuveneet ja elokuva Leviathan (2014) ovat tehneet siitä matkailukohteen. Kuolan alkuperäiskansa saamelaiset ovat nykyään pieni vähemmistö.",
     },
     Nenets: {
       lyhyt: 'Nenetsian tundralla nenetsit paimentavat yhä poroja, ja pääkaupungin Narjan-Marin nimi tarkoittaa nenetsiksi punaista kaupunkia.',
+      pitka: "Nenetsian autonominen piirikunta on Venäjän asukasluvultaan pienimpiä alueita: vuoden 2021 väestölaskennassa asukkaita oli noin 41 400, vaikka pinta-alaa on noin 177 000 neliökilometriä, eli reilut puolet Suomen alasta. Nenetsit ovat nykyään noin viidesosa asukkaista. Tundra jatkuu Barentsinmeren rannikolle, ja merellä ovat Kolgujevin ja Vaigatšin saaret. Naryan-Mar, jossa asuu noin 24 000 ihmistä eli suunnilleen puolet piirikunnan väestöstä, sijaitsee Petšora-joen varrella. Tieyhteydet ovat vähäisiä, ja liikenne kulkee paljolti lentäen ja kesällä joen kautta. Piirikunnan talous perustuu öljyyn ja poronhoitoon.",
     },
     Nizhegorod: {
       lyhyt: 'Nižni Novgorodin alueen Semjonovissa maalataan hohlomaa, puuastioita, joiden kukkakuviot hohtavat punaisena, mustana ja kultaisena.',
+      pitka: "Nižni Novgorod, perustettu vuonna 1221, on levittäytynyt korkealle rinteelle Volgan ja Okan yhtymäkohtaan, ja noin 1,2 miljoonan asukkaan kaupungissa katse hakeutuu ensimmäisenä kivikremliin. Sen noin kahden kilometrin mittaista muuria vartioi 13 tornia, ja 22,7 hehtaarin alueella toimii nykyisin taidemuseo. Arkkienkeli Mikaelin katedraalissa on Kuzma Minin hauta. Noin 185 kilometrin päässä kaupungista on Diveevo, jonka luostarissa säilytetään Serafim Sarovilaisen pyhäinjäännöksiä ja jossa pyhiinvaeltajat kulkevat 775 metrin pituisen Pyhän Kanavkan.",
     },
     Novgorod: {
       lyhyt: 'Novgorodin kosteasta maasta on kaivettu esiin yli tuhat keskiaikaista tuohikirjettä, tavallisten kaupunkilaisten arkisia viestejä.',
+      pitka: "Novgorodin alueella on 54 500 neliökilometriä metsiä, soita ja järviä, mutta sen sydän on yksi kaupunki Volhov-joen varrella. Veliki Novgorodin Detinets eli kremlin muurit kiertävät 1 487 metriä, ja yhdeksän alkuperäisestä kahdestatoista tornista on yhä pystyssä. Muurien sisällä seisoo Sofian katedraali, rakennettu 1045–1050 ja Venäjän vanhimpia kirkkoja, sekä vuonna 1862 paljastettu Venäjän tuhatvuotismuistomerkki. Juurjevin luostarin katedraali on vuodelta 1119, ja Vitoslavlitsyn ulkomuseoon on koottu yli kaksikymmentä puurakennusta. Valdain kansallispuisto, perustettu 1990, ympäröi 76 järveä ja on ollut Unescon biosfäärialue vuodesta 2004.",
     },
     Novosibirsk: {
       lyhyt: 'Novosibirskin Akademgorodok on 1950-luvulla metsän keskelle rakennettu tiedekaupunki, jossa toimii kymmeniä tutkimuslaitoksia.',
@@ -9670,18 +9815,23 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Orel: {
       lyhyt: 'Orjolissa syntyi kirjailija Ivan Turgenev, ja hänen sukunsa kartano Spasskoje-Lutovinovo on nykyään museo.',
+      pitka: "Orjol perustettiin 1566 Ivan IV:n käskystä linnoitukseksi Okan ja Orlik-joen yhtymäkohtaan, ja nykyään se kutsuu itseään kirjalliseksi pääkaupungiksi. Turgenevin kirjallisuusmuseo on perustettu 1918, ja lähellä toimivat Leskovin kartanomuseo, Orjolin kirjailijoiden museo sekä Buninin museo; Ivan Bunin sai 1933 ensimmäisenä venäläisenä kirjallisuuden Nobel-palkinnon. Nikolai Leskov syntyi 1831 Gorohovon kylässä, ja runoilija Afanasi Fet syntyi Novosjolkin kylässä Mtsenskin seudulla. Turgenevin sukukartano Spasskoje-Lutovinovo Mtsenskin lähellä on museona, ja sen puistossa kasvoi kuuluisa tammi.",
     },
     Orenburg: {
       lyhyt: 'Orenburgin untuvahuivit neulotaan vuohenuntuvasta niin ohuiksi, että hienoimman huivin voi pujottaa sormuksen läpi.',
+      pitka: "Orenburg nousi vuonna 1743 nykyiselle paikalleen Ural-joen ja Sakmaran yhtymäkohtaan, ja noin 544 000 asukkaan kaupunki on perinteinen Euroopan ja Aasian rajakaupunki: Ural-joen yli kulkee kävelysilta, jota pidetään symbolisena mannerrajana. Vuosina 1837–1844 rakennetussa Karavaanisaarassa arkkitehti Aleksandr Brjullov teki baškiirikylän tyylisen kokonaisuuden, jonka keskellä kahdeksankulmainen moskeija muistuttaa jurttaa; tataarimoskeija oli avattu jo 1805. Alueen pinta-ala on noin 124 000 neliökilometriä, ja väestöstä tataareja on 6,3 ja kazakkeja 5,8 prosenttia. Luoteessa kohoaa Buzulukin mäntymetsän kansallispuisto, noin 106 000 hehtaaria: se on suuri aron ympäröimä yhtenäinen mäntymetsä, ja puolet siitä on Orenburgin alueella.",
     },
     Penza: {
       lyhyt: 'Penzan alueen Tarhanyssa kasvoi runoilija Mihail Lermontov isoäitinsä kartanossa, joka on nyt hänen museonsa.',
+      pitka: "Penza kohoaa Sura-joen rannoille Volgan ylängölle, ja kaupunki perustettiin linnakkeeksi vuonna 1663 Villin kentän eli aron rajalle. Nykyään sen ympärillä on noin 1,27 miljoonan asukkaan Penzan alue, joka erotettiin Tambovin alueesta vuonna 1939 ja jonka pinta-ala on runsaat 43 000 neliökilometriä. Penzassa vietti lapsuutensa teatteriohjaaja Vsevolod Meyerhold (s. 1874), ja siellä toimii nyt hänen muistomuseonsa sekä Tohtori Dapertutto -teatteri. Alueen suurin joki on Hopjor, 979 kilometriä, ja historioitsija Vasili Kljutševski syntyi Penzan alueella vuonna 1841. Venäläisten rinnalla alueella asuu tataareja (vuoden 2010 väestönlaskennassa 6,4 %) ja mordvalaisia (4,1 %): tataarin kieli on turkkilainen, mordvan suomalais-ugrilainen.",
     },
     "Perm'": {
       lyhyt: 'Maapallon historian permikausi on nimetty Permin mukaan, sillä brittigeologi Murchison tutki kauden kerrostumia täällä 1841.',
+      pitka: "Perm kasvoi Kaman rannalle vuonna 1723 perustetusta kuparisulatosta noin miljoonan asukkaan kaupungiksi. Baletti-impressario Sergei Djagilev kasvoi täällä, ja Permin ooppera ja baletti on Venäjän tunnetuimpia. Permin taidegalleria toimii entisessä katedraalissa, ja sen erikoisuus on Permin jumalten puuveistokset, kansantaiteellisia Kristus-hahmoja. Joen entiseen terminaalirakennukseen avattiin 2009 nykytaiteen museo PERMM. Kaupungista noin 85 kilometriä etelään, Belaja Goran kukkulalla, sijaitsee Belogorjen luostari, jonka kivikirkko rakennettiin 1902–1917.",
     },
     'City of St. Petersburg': {
       lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
+      pitka: "Pietari perustettiin 27. toukokuuta 1703 Nevan suistoon, ja nykyään siellä asuu noin 5,6 miljoonaa ihmistä. Kesäisin valkeat yöt pitävät taivaan valoisana lähes kuukauden. Eremitaasin kokoelmassa on noin kolme miljoonaa esinettä, ja museo jakautuu kuuteen historialliseen rakennukseen, joihin kuuluvat Talvipalatsin lisäksi myös entinen Yleisesikunnan talo. Pietari-Paavalin linnoitus perustettiin kaupungin ytimeksi 1703, ja Marian teatterissa esiintyvät maailman huippubaletit. Suomenlahden rannalla nousee Lahta-keskus: 462 metriä ja 87 kerrosta korkea pilvenpiirtäjä, valmistunut 2019 ja Euroopan korkein rakennus.",
     },
     'North Ossetia': {
       lyhyt: 'Pohjois-Ossetian Dargavsin laakson rinteellä on vanha kuolleiden kaupunki, lähes sata kivistä hautahuonetta rivissä.',
@@ -9691,15 +9841,18 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Pskov: {
       lyhyt: 'Puškinin sukutila Mihailovskoje Pihkovan alueella on museona, ja runoilija on haudattu läheiseen Svjatogorskin luostariin.',
+      pitka: "Pihkovan alue on Venäjän läntisimpiä alueita, ja sen pinta-ala on noin 55 400 neliökilometriä ja asukasluku noin 600 000. Pihkovan kaupunki mainitaan aikakirjoissa jo vuonna 903. Sen Krom-linnake seisoo Velikaja- ja Pihkovanjoen yhtymäkohdassa. Kaupungista noin 30 kilometriä länteen Izborskin linnoitus kohoaa kukkulalla lähellä Viron rajaa, ja sen kivimuurit ovat keskiaikaiset. Peipsijärvi, jonka pinta-ala on noin 3 555 neliökilometriä, on Euroopan suurin rajat ylittävä järvi. Sen jäällä kävi 1242 Jäätaistelu, ja nykyään rannoilla kalastetaan ja levähtää muuttolintuja.",
     },
     Rostov: {
       lyhyt: 'Donin suistossa Rostovin lähellä on Tanaisin kaivausalue, antiikin kreikkalaisten kauppakaupungin rauniot, jotka ovat nyt ulkomuseo.',
+      pitka: "Rostov-on-Don on Donin rannalla sijaitseva miljoonakaupunki, jota kutsutaan Kaukasuksen portiksi. Joen vasemmalla puolella seisoo Rostov Arena, jossa pelattiin viisi jalkapallon MM-kisojen 2018 ottelua ja jonka MM-kapasiteetti oli noin 43 500 katsojaa. Alue jatkuu pohjoiseen Donin kasakkojen maille, ja Vjoshenskajan kylässä toimii museoalue kirjailija Mihail Sholohovin kunniaksi; hän sai kirjallisuuden Nobelin palkinnon vuonna 1965, ja hänen Hiljaa virtaa Don -romaaninsa sijoittuu Donin kasakoiden elämään. Rostovin alue ulottuu lännessä Aasovanmeren rannikolle, jonka satamakaupungeissa on pitkä merenkulkuperinne.",
     },
     'RUS+99?': {
       lyhyt: 'Tämä pieni saari on Karanmeren Bajdaratskajanlahdella, jonka pohjaan laskettiin 2014 kaasuputket Jamalin niemimaalta.',
     },
     "Ryazan'": {
       lyhyt: 'Runoilija Sergei Jesenin syntyi Rjazanin alueen Konstantinovon kylässä Okan rannalla, ja hänen kotitalonsa on museo.',
+      pitka: "Rjazanin kreml on kaupungin vanhin osa, ja siellä kohoaa Uspenskin katedraali, joka rakennettiin vuosina 1693–1702. Sen kellotorni on yli 80 metriä korkea ja erottuu kauas Oka-joen yli. Rjazan oli 1097–1521 itsenäinen ruhtinaskunta, ja sen pääkaupunki sijaitsi alun perin noin 50 kilometrin päässä nykyisestä kaupungista. Tiedemies Ivan Pavlov, ehdollisten refleksien tutkija ja Nobel-palkittu, syntyi Rjazanissa 1849, ja hänen vanha kotitalonsa on nyt museo. Alue on Okan laaksoa, jossa viljellään ja pidetään mehiläisiä.",
     },
     'Sakha (Yakutia)': {
       lyhyt: 'Sahan Oimjakonin kylässä on mitattu lähes 68 asteen pakkanen, yksi pohjoisen pallonpuoliskon kylmimmistä koskaan mitatuista lukemista.',
@@ -9709,15 +9862,15 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Samara: {
       lyhyt: 'Samaran alueen Toljatissa on AvtoVAZin tehdas, jonka linjoilta Lada-autoja on vierinyt vuodesta 1970.',
+      pitka: "Samaran rantabulevardi kulkee noin viisi kilometriä Volgan vartta, ja se on kaupunkilaisten suosituin ulkoilupaikka. Keskustan Kuibyshevin aukio on yli 15 hehtaaria, joten se lasketaan Euroopan suurimpiin kaupunkiaukioihin, ja sen laidalla seisoo oopperatalo. Aivan kaupungin vieressä Volga kiertää Zhigulin vuoret jyrkässä mutkassa, jota kutsutaan Samarskaja Lukaksi. Mutkan kansallispuisto ja noin 23 000 hehtaarin Zhigulin luonnonsuojelualue muodostavat yhdessä biosfäärialueen, jonka UNESCO on hyväksynyt. Kaupunki tunnettiin vuosina 1935–1991 nimellä Kuibyshev, ja lokakuussa 1941 se määrättiin Neuvostoliiton varapääkaupungiksi.",
     },
     Saratov: {
       lyhyt: 'Saratovin harmonikan kannessa on kaksi pientä kelloa, jotka helähtävät bassonappien tahdissa tanssikappaleissa.',
-    },
-    Sevastopol: {
-      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+      pitka: "Saratov on lähes 900 000 asukkaan kaupunki Volgan oikealla rannalla. Sen keskeinen kävelykatu, noin kilometrin mittainen Kirovin katu, on täynnä 1800- ja 1900-lukujen taitteen kartanoita ja päättyy Lipki-puistoon ja vuonna 1912 avattuun konservatorioon. Radishchev-taidemuseo avattiin yleisölle jo vuonna 1885, ja sen kokoelmiin kuuluu yli 20 000 esinettä. Volgan yli Engelsiin kulkee vuonna 1965 avattu 2,8 kilometrin mittainen maantiesilta, joka oli valmistuessaan Neuvostoliiton pisin. Saratovin alue on myös Venäjän johtavia auringonkukan viljelyalueita.",
     },
     Smolensk: {
       lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
+      pitka: "Smolenskin kaupunki seisoo Dneprin kummallakin rannalla noin 360 kilometriä Moskovasta länteen, ja kaupunki mainitaan kronikassa ensi kerran 863. Pyhän Mikaelin (Svirskaja) kirkko on vuosilta 1180–1197 ja kuuluu harvoihin mongolivaltaa edeltäneisiin rakennuksiin Venäjällä. Kaupungissa asuu noin 317 000 ihmistä, koko alueella noin 888 000. Alueen luoteisosassa Smolenskin Järviseudun kansallispuisto, perustettu 1992, kattaa yli 146 000 hehtaaria metsää ja soita, ja siellä on 35 järveä; se on ollut Unescon biosfäärialue vuodesta 2002.",
     },
     "Stavropol'": {
       lyhyt: 'Stavropolin aluepiirin Kislovodskista pulppuaa narzan-kivennäisvettä, ja sen kylpylöihin tullaan yhä parantumaan.',
@@ -9727,9 +9880,11 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Tambov: {
       lyhyt: 'Säveltäjä Sergei Rahmaninov vietti kesiään Tambovin alueen Ivanovkassa, ja kartano on nykyään hänen museonsa.',
+      pitka: "Tambov perustettiin 17. huhtikuuta 1636 linnoitukseksi, ja nykyään noin 255 000 asukkaan kaupunki levittäytyy Tsna- ja Studenets-jokien yhtymäkohtaan. Joen rantaa seuraa noin 2,5 kilometrin pituinen kaksitasoinen rantapuisto suihkulähteineen. Kulttuurin pohjan loi runoilija Gavriil Deržavin, joka kuvernöörinä 1780-luvun lopulla perusti kaupunkiin teatterin, koulun ja sanomalehden. Michurinsk, aiemmin Kozlov (perustettu 1635), sai nykyisen nimensä vuonna 1932 hedelmänjalostaja Ivan Mitšurinin mukaan; noin 88 000 asukkaan tiedekaupunki on yhä hedelmäntutkimuksen keskus. Alueella asuu noin miljoona ihmistä, ja metsäaromaisemaa halkovat Tsna, Vorona ja Lesnoi Voronež.",
     },
     Tatarstan: {
       lyhyt: 'Tatarstanin kesäjuhlassa sabantuissa kiivetään liukkaaseen salkoon ja painitaan perinteistä vyöpainia.',
+      pitka: "Tatarstan on noin nelimiljoonainen tasavalta Volgan ja Kaman varrella, ja siellä on kolme Unescon maailmanperintökohdetta. Kazanin kreml merkittiin listalle vuonna 2000, ja sen muurien sisällä kohoaa Qolşärif-moskeija, joka avattiin kesäkuussa 2005 kaupungin tuhatvuotisjuhlien alkajaisiksi. Bolgarin muinaiskaupunki hyväksyttiin listalle vuonna 2014: siellä muistetaan Volgan bolgaarien siirtymistä islamiin vuonna 922, ja paikka on yhä tatarimuslimien pyhiinvaelluskohde. Kolmas, Svijažskin saarikaupunki, otettiin mukaan 2017; sen linnoitus rakennettiin Volgan, Svijagan ja Štšukan yhtymäkohtaan vuonna 1551 vain neljässä viikossa. Tataarit ovat noin 54 prosenttia ja venäläiset 40 prosenttia asukkaista, ja tataari kuuluu turkkilaisiin kieliin.",
     },
     Tomsk: {
       lyhyt: 'Tomskia kutsutaan Siperian Ateenaksi, sillä kaupungissa on Siperian vanhin yliopisto ja suuri joukko opiskelijoita.',
@@ -9742,42 +9897,52 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
     },
     Chuvash: {
       lyhyt: 'Tšuvassin kieli on ainoa elossa oleva oguurien turkkilaiskieli, ja se eroaa paljon muista turkkilaiskielistä.',
+      pitka: "Tšeboksary, jonka nimi mainitaan lähteissä ensimmäisen kerran vuonna 1469, on Tšuvassian tasavallan pääkaupunki Volgan rannalla, noin 500 000 asukkaan kaupunki. Volgaa padottava Tšeboksaryn tekoallas on 2 274 neliökilometrin laajuinen, ja voimala tuottaa jopa 1 404 megawattia. Tšeboksarynlahden rantoja on kunnostettu kävelyreiteiksi ja hiekkarannoiksi, ja kaupungissa toimivat Tšuvassian kansallismuseo sekä Venäjän ainoa olutmuseo. Tasavallassa on noin 1,19 miljoonaa asukasta. Tšuvassit puhuvat turkkilaista kieltä, ja heidän vaatteitaan ja liinojaan koristaa omaleimainen kirjonta.",
     },
     Tula: {
       lyhyt: 'Tulan prjanikit ovat hunajaisia piparkakkulevyjä, jotka painetaan kaiverrettuihin puumuotteihin ja täytetään usein hillolla.',
+      pitka: "Tulan kremlin kiviset muurit nousivat vuosina 1514–1520 Vasili III:n käskystä, ja noin kuuden hehtaarin alueella on Uspenskin katedraali (1762–1766) ja Epifanian katedraali (1855–1863); nykyään kompleksi on museo. Tulan samovaarimuseo esittelee satoja samovaareja 1700-luvun lopulta nykypäivään. Kaupungista 12 kilometriä lounaaseen sijaitsee Jasnaja Poljana, jossa Leo Tolstoi syntyi 1828 ja kirjoitti Sodan ja rauhan (1862–1869) sekä Anna Kareninan (1873–1877). Okan korkealla oikealla rannalla Polenovon museokartanossa on maalari Vasili Polenovin itse suunnittelema valkoinen talo, joka valmistui 1892.",
     },
     Tuva: {
       lyhyt: 'Tuvassa lauletaan kurkkulaulua, jossa laulaja tuottaa yhtä aikaa matalan pohjasävelen ja sen yllä viheltävän yläsävelen.',
     },
     "Tver'": {
       lyhyt: 'Volgan lähde on Tverin alueen Valdain ylängöllä, ja pienen lähteen päälle on rakennettu kappeli.',
+      pitka: "Tverin alue ulottuu Moskovan ja Pietarin välille, ja sen pinta-ala on noin 84 200 neliökilometriä. Läntistä osaa peittää Valdain ylänkö, jolta saavat alkunsa Volga ja Läntinen Dvina. Alueen helmi on Seliger-järvi, jonka pinta-ala on noin 212 neliökilometriä ja jossa on noin 160 saarta. Kalastajien ja melojien suosimaa järveä kutsutaan Euroopan Baikaliksi. Sen rannalla sijaitseva Ostashkov on lomakohde, ja Stolobnyin saarella seisoo Nilo-Stolobenskin luostari. Torzhok mainitaan kirjoituksissa ensi kerran 1139. Vanha kauppakaupunki sijaitsee Moskovan ja Pietarin välisen tien varrella, ja se tunnetaan yhä kultalangalla kirjotuista töistä ja uusklassisesta rakennuskannastaan.",
     },
     "Tyumen'": {
       lyhyt: 'Tjumen perustettiin 1586, ja sitä pidetään ensimmäisenä venäläisenä kaupunkina Siperiassa.',
     },
     Udmurt: {
       lyhyt: 'Udmurtialaisen Buranovon kylän mummokuoro lauloi Euroviisuissa 2012 toiseksi, osin udmurtiksi.',
+      pitka: "Udmurtia sijaitsee Uralin länsipuolella Kaman ja sen sivujoen Vjatkan välissä, 42 000 neliökilometrin alueella, jossa asuu noin 1,45 miljoonaa ihmistä. Pääkaupunki Izhevsk sai alkunsa vuonna 1760 rautatehtaasta, ja tehtaan patoallas, Izhin lampi, on noin 22 neliökilometrin kokoinen. Udmurttien osuus asukkaista on noin 24 prosenttia, ja udmurtin kieli on venäjän rinnalla tasavallan virallinen kieli; se kuuluu suomalais-ugrilaisten kielten permiläiseen ryhmään. Votkinskissa syntyi vuonna 1840 säveltäjä Pjotr Tšaikovski, ja hänen lapsuudenkotinsa on ollut museona vuodesta 1940. Sarapulin museo on tasavallan vanhin, perustettu 1909. Kaman varrella Nechkinskin kansallispuisto (perustettu 1997) suojelee metsää ja tulvaniittyjä, ja Ludorvai-ulkomuseossa tutustuu udmurttien, venäläisten ja beserjaanien arkeen.",
     },
     "Ul'yanovsk": {
       lyhyt: 'Oblomovin kirjoittaja Ivan Gontšarov syntyi nykyisessä Uljanovskissa, ja kaupungissa on hänen museonsa.',
+      pitka: "Uljanovskin alue on noin 37 200 neliökilometrin kokoinen ja siellä asuu noin 1,2 miljoonaa ihmistä. Volga jakaa maan kahtia: läntinen ranta on kumpuilevaa ylänköä ja itäpuoli tasaisempaa. Aluekeskus Simbirsk perustettiin linnoitukseksi 1648, ja vuonna 1924 se sai nimekseen Uljanovsk. Kaupungissa syntyi Vladimir Lenin, ja se on myös kirjailija Ivan Gontšarovin kotikaupunki. Unesco nimesi sen kirjallisuuden kaupungiksi 2015. Volgan yli kulkee 2009 avattu Presidentin silta, jonka pituus on yli viisi kilometriä. Kaupungin siviili-ilmailumuseossa on noin 40 lentokonetta, muun muassa yliääninen Tu-144. Alueen teollisuuteen kuuluvat autonvalmistus ja lentokonetehdas.",
     },
     Vladimir: {
       lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
+      pitka: "Vladimirin alue on pinta-alaltaan pieni, 29 084 neliökilometriä, mutta asukkaita on noin 1,35 miljoonaa. Aluekeskus Vladimir, noin 350 000 asukasta, on 190 kilometrin päässä Moskovasta idässä. Unesco merkitsi Vladimirin ja Suzdalin valkoiset monumentit maailmanperintökohteeksi vuonna 1992. Uspenskin katedraali rakennettiin 1158–1160 ja laajennettiin 1185–1189, ja sen seinille Andrei Rublev maalasi freskoja 1408. Dmitrin katedraali valmistui 1194–1197, ja sen seinien valkokivi on koristeltu tiheällä veistoskuvituksella. Kultainen portti on rakennettu 1100-luvulla mutta rakennettiin osin uudelleen 1700-luvun lopulla. Alueen itäosassa Meštšjoran kansallispuisto, perustettu 1992, suojaa noin 119 000 hehtaaria soita ja mäntymetsiä.",
     },
     Volgograd: {
       lyhyt: 'Volgogradin alueen Eltonjärvi on Euroopan suurin mineraalijärvi, ja levät värjäävät sen suolaisen veden punertavaksi.',
+      pitka: "Volgograd venyy Volgan länsirannalla kymmeniä kilometrejä pitkänä, vain muutaman kilometrin leveänä kaistaleena, ja se perustettiin Tsaritsynin linnoituksena vuonna 1589. Kaupungin muotoon sopii Metrotram, osin maan alla kulkeva raitiotie: linja avattiin 1984, se on 17,3 kilometriä pitkä ja siinä on 22 asemaa. Etelässä Volgan ja Donin yhdistää vuonna 1952 avattu, 101 kilometrin pituinen kanava, jossa on 13 sulkua. Kaupungin eteläosassa on Vanha Sarepta, vuonna 1765 herrnhutilaisten perustama siirtokunta, joka on museoalueena. Padon alapuolella Volga haarautuu, ja väliin jää laaja Volga-Ahtuba-tulva-alue.",
     },
     Vologda: {
       lyhyt: 'Vologdan nypläyspitsi on alueen tunnetuin käsityö, ja kaupungissa on sille oma museonsa.',
+      pitka: "Vologdan alue on 144 500 neliökilometrin laajuudessaan harvaan asuttu: asukkaita on runsaat 1,1 miljoonaa. Vologdan kaupungin Sofian katedraali rakennettiin 1568–1570 Ivan IV:n käskystä, ja kaupunki on yksi Venäjän harvoista, joissa on säilynyt puuarkkitehtuuria. Pohjoisempana Kirillo-Belozerskin luostari perustettiin 1397 Siverskoje-järven rannalle, ja sen Uspenskin katedraali valmistui 1497. Ferapontovin luostarin Neitsyt Marian syntymän katedraalin seinät maalasi ikonimaalari Dionisi poikineen vuonna 1502, ja noin 600 neliömetriä freskoja on säilynyt; luostari on Unescon maailmanperintökohde vuodesta 2000. Cherepovetsissa toimii Severstalin terästehdas, ja Volga–Itämeri-vesitie kulkee alueen halki.",
     },
     Voronezh: {
       lyhyt: 'Voronežin alueen Kostjonkissa on kaivettu esiin kymmeniä kivikautisia asuinpaikkoja, joista osa on rakennettu mammutinluista.',
+      pitka: "Voronež, noin miljoonan asukkaan kaupunki, perustettiin linnoitukseksi vuonna 1586, ja sen laivastohistoria näkyy yhä: Pietari Suuren telakalla vesille laskettiin vuonna 1700 Goto Predestinatsija, Venäjän ensimmäinen 58-tykkinen linjalaiva, jonka tarkka jäljennös on museona Admiraliteettiaukiolla. Kaupungin eteläpuolella Divnogorjen museosuojelualueella noin 11 neliökilometrin alueella kohoavat liitupylväät ja luolakirkot. Khopjorin luonnonsuojelualue (perustettu 1935, noin 16 000 hehtaaria) suojaa 50 kilometrin jokiosuutta ja harvinaista venäläistä desmania. Talovajan piirissä Kamennaja Stepin koeasema on peräisin maaperätieteen isän Vasili Dokutšajevin 1890-luvun tutkimuksista.",
     },
     'Yamal-Nenets': {
       lyhyt: 'Salehard on rakennettu aivan napapiirille, ja kaupungissa napapiirin kohtaa merkitsee oma muistomerkki.',
     },
     "Yaroslavl'": {
       lyhyt: 'Jaroslavlin vaakunassa on kirvestä kantava karhu, sillä tarun mukaan kaupungin perustaja Jaroslav Viisas kaatoi karhun juuri täällä.',
+      pitka: "Jaroslavlin alue kuuluu Venäjän Kultaiseen renkaaseen, ja siellä asuu noin 1,2 miljoonaa ihmistä. Aluekeskus Jaroslavl, jonka perustamisvuotena pidetään 1010, sijaitsee Volgan ja Kotorosl-joen yhtymäkohdassa. Se kasvoi 1600-luvulla vauraaksi kauppakaupungiksi, ja sen värikkäät kirkot ovat tuolta ajalta. Spasso-Preobrazhenskin luostarin rakennustyöt alkoivat 1506. Historiallinen keskusta liitettiin Unescon maailmanperintöluetteloon 2005, ja kaupunki vietti 1000-vuotisjuhlaansa 2010. Alueella on myös Uglichin vanha Volga-kaupunki, jossa tsaarin nuori poika Dmitri kuoli 1591, sekä Rybinskin tekoallas, joka täytettiin 1941–1947.",
     },
     Yevrey: {
       lyhyt: 'Juutalaisen autonomisen alueen pääkaupungin Birobidžanin pääkatu on nimetty jiddišiksi kirjoittaneen Šolem Aleichemin mukaan.',

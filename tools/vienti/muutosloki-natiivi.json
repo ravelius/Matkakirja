@@ -2,6 +2,116 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.0.72 (202609301134)",
+   "paiva": "2026-09-30",
+   "teksti": "Aloitusnäkymässä on apurahan arvioijan esittelykortti, ja matkakirja pysyy auki koko luennan ajan."
+  },
+  {
+   "versio": "1.0.71 (202609301053)",
+   "paiva": "2026-09-30",
+   "teksti": "Uusi yläpalkki, selkeämmät kaupunkien nimet, kaupunkilehden säärivit mahtuvat sivulle ja ISS-kyydissä on uusi kytkinpöytä."
+  },
+  {
+   "versio": "1.0.70 (202609301007)",
+   "paiva": "2026-09-30",
+   "teksti": "Laivat eivät enää seilaa maalla, ja luentakuva ja matkakirja eivät peitä karttaa."
+  },
+  {
+   "versio": "1.0.69 (202609300924)",
+   "paiva": "2026-09-30",
+   "teksti": "Pienennetty matkakirja on nyt kapea kaistale, ja kuvat löytyvät kortin lopusta."
+  },
+  {
+   "versio": "1.0.68 (202609300835)",
+   "paiva": "2026-09-30",
+   "teksti": "Lippu väistää matkakirjaa, ja isoisän luennan alkuun on tehty korjaus."
+  },
+  {
+   "versio": "1.0.67 (202609300748)",
+   "paiva": "2026-09-30",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.0.66 (202609300646)",
+   "paiva": "2026-09-30",
+   "teksti": "Isoisän matkakirja pienenee ja avautuu pehmeästi."
+  },
+  {
+   "versio": "1.0.65 (202609300437)",
+   "paiva": "2026-09-30",
+   "teksti": "Isoisän matkakirjan sivut on uudistettu."
+  },
+  {
+   "versio": "1.0.64 (202609300202)",
+   "paiva": "2026-09-30",
+   "teksti": "Visan kätkökuvat avautuvat nyt ilman kehystä."
+  },
+  {
+   "versio": "1.0.63 (202609300142)",
+   "paiva": "2026-09-30",
+   "teksti": "Valikko avautuu sujuvammin, ja astronautin kameran Cupola-näkymä on kevyempi laitteelle."
+  },
+  {
+   "versio": "1.0.62 (202609300107)",
+   "paiva": "2026-09-30",
+   "teksti": "Valikko on uudistettu: napit ovat tiiviisti, äänet ylimpänä ja linsseillä on oma esikatselu."
+  },
+  {
+   "versio": "1.0.61 (202609292327)",
+   "paiva": "2026-09-30",
+   "teksti": "Lehden kuvat latautuvat nyt valmiiksi, joten lehti avautuu nopeammin."
+  },
+  {
+   "versio": "1.0.60 (202609292204)",
+   "paiva": "2026-09-30",
+   "teksti": "Tähtitaivas näkyy nyt ilman kartan painikkeita ja ilmansuuntia."
+  },
+  {
+   "versio": "1.0.59 (202609292137)",
+   "paiva": "2026-09-30",
+   "teksti": "Kartan nostot näkyvät taas kuvina, ja isoisän luenta alkaa alusta."
+  },
+  {
+   "versio": "1.0.58 (202609292100)",
+   "paiva": "2026-09-30",
+   "teksti": "Kartta ei enää hyppää taustalta palatessa, ja maailmaa voi selata hunnun kanssa."
+  },
+  {
+   "versio": "1.0.57 (202609292010)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartta ei enää katoa, kun peliin palaa toisesta sovelluksesta tai lukituksen jälkeen."
+  },
+  {
+   "versio": "1.0.56 (202609291937)",
+   "paiva": "2026-09-29",
+   "teksti": "Radio on nyt alempana eikä peitä karttaa, ja valikkojen nimet mahtuvat näkyviin."
+  },
+  {
+   "versio": "1.0.55 (202609291906)",
+   "paiva": "2026-09-29",
+   "teksti": "Luenta alkaa oikeasta kohdasta, valikot ovat pergamentilla, ja radiossa on kartta koko maapallosta."
+  },
+  {
+   "versio": "1.0.54 (202609291824)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartalla maiden rajat ja rannat saarineen näkyvät selkeämmin. iPadin yläpalkki on nyt nahkaa, ja radio ja linssilista on uudistettu."
+  },
+  {
+   "versio": "1.0.53 (202609291722)",
+   "paiva": "2026-09-29",
+   "teksti": "Astronautin kamera seuraa ISS:ää, ja Pulu on hiljaa ISS-kohtauksessa."
+  },
+  {
+   "versio": "1.0.52 (202609291625)",
+   "paiva": "2026-09-29",
+   "teksti": "Kartan kaupungit ja niiden nimet nyt ruskealla sepiamusteella."
+  },
+  {
+   "versio": "1.0.51 (202609291446)",
+   "paiva": "2026-09-29",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
    "versio": "1.0.50 (202609291251)",
    "paiva": "2026-09-29",
    "teksti": "Puhelimen yläpalkki on nyt nahkainen kuin vanha matkalaukku."

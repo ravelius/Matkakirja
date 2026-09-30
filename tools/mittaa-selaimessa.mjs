@@ -15,20 +15,15 @@
  * lohkoissa. Pelkkä RMS antaisi bassovoittoisille äänille (meri, tuuli)
  * liian ison lukeman, jolloin ne jäisivät pelissä liian hiljaisiksi.
  */
+import { avaaChromium } from './selain.mjs';
 
-const SELAIN = process.env.CHROMIUM ?? '/opt/pw-browsers/chromium';
 
 /** Avaa selaimen mittausta varten. Palauttaa sivun ja sulkijan. */
 export async function avaaSelain() {
   // Suoraan polusta tuotuna Playwright on CommonJS-paketti, jolloin
   // kaikki on default-avaimen takana; nimettynä pakettina se purkautuu
   // suoraan. Kelpuutetaan kumpikin muoto.
-  const paketti = await import('playwright')
-    .catch(() => import(process.env.PLAYWRIGHT_JS
-      ?? '/opt/node22/lib/node_modules/playwright/index.js'));
-  const chromium = paketti.chromium ?? paketti.default?.chromium;
-  if (!chromium) throw new Error('Playwrightia ei löydy; anna polku PLAYWRIGHT_JS-muuttujassa');
-  const selain = await chromium.launch({ executablePath: SELAIN });
+  const selain = await avaaChromium();
   const sivu = await (await selain.newContext()).newPage();
   await sivu.goto('about:blank');
   return { sivu, sulje: () => selain.close() };

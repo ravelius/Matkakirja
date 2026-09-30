@@ -38,6 +38,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * PULUN TERVETULO ON JO KUULTU (28.9.2026): Astronautin kameran ensimmäinen
@@ -48,9 +49,6 @@ const PULUN_TERVETULO_KUULTU = () => {
   try { localStorage.setItem('matkakirja-pulu-astro-tervetulo', '1'); } catch { /* yksityinen tila */ }
 };
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -102,7 +100,7 @@ peli.visitCity?.(peli.player);
 peli.tokens.delete('lontoo');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--disable-dev-shm-usage'] });
+const selain = await avaaChromium({ args: ['--disable-dev-shm-usage'] });
 
 /** Avaa pelin Pariisiin; `ohitaKuvat` = painaa Ohita-nappia heti kun se ilmestyy. */
 async function avaa(ohitaKuvat) {

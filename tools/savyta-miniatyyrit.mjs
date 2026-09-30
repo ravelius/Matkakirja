@@ -23,6 +23,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const KANSIO = resolve(JUURI, 'assets/kartat/miniatyyrit');
@@ -38,10 +39,7 @@ if (!tiedostot.length) {
   process.exit(1);
 }
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 const sivu = await selain.newPage();
 
 for (const nimi of tiedostot) {

@@ -51,6 +51,7 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 /*
  * PULUN TERVETULO ON JO KUULTU (28.9.2026). Astronautin kameran ensimmäinen
@@ -94,8 +95,6 @@ const palvelin = createServer((req, res) => {
 const PORTTI = Number(process.env.PORTTI ?? 8759);
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
-const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 /*
  * AUTOPLAY AUKI SELAIMEN LIPULLA. Peli käynnistää äänikontekstin
  * käyttäjän eleestä, ja savuke napauttaa "Aloita seikkailu" — mutta
@@ -104,8 +103,7 @@ const chromium = paketti.chromium ?? paketti.default?.chromium;
  * oma väitteensä (soitin odottaa vahtia eikä kirjoita konsoliin), ja se
  * mitataan lähdekoodista tests/satelliitti.test.mjs:ssä.
  */
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
 

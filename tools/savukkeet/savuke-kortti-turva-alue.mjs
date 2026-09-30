@@ -29,6 +29,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const paketinLahde = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -113,7 +114,7 @@ const KORTIT = [
 
 const selain = MOOTTORI === 'webkit'
   ? await paketti.webkit.launch()
-  : await paketti.chromium.launch({ executablePath: process.env.CHROMIUM || undefined });
+  : await avaaChromium({});
 for (const asento of ASENNOT) {
   const ctx = await selain.newContext({ viewport: asento.viewport, deviceScaleFactor: 2, hasTouch: true, isMobile: true, serviceWorkers: 'block' });
   await ctx.addInitScript((d) => {

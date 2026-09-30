@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2410';
+const CACHE = 'matkakirja-2026-09-21.2450';
 const SHELL = [
   './',
   './index.html',
@@ -48,6 +48,7 @@ const SHELL = [
   './js/kartta-lataus.js',
   './js/karttamittari.js',
   './js/fokusmitat.js',
+  './js/deltasarja.js',
   './js/laattapyramidi.js',
   './js/karttanimet.js',
   './js/packs/fokus-grc.js',
@@ -177,6 +178,8 @@ const SHELL = [
   './js/passport.js',
   './js/natiivi.js',
   './js/lahteet.js',
+  './js/apuraha.js',
+  './js/kaynti.js',
   './js/wiki.js',
   './js/media.js',
   // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
@@ -692,6 +695,7 @@ const SHELL = [
   // (omistajan päätös). Hakemisto viimeisenä, se tuo maakohtaiset.
   './js/packs/maastokohteet-afg.js',
   './js/packs/maastokohteet-ago.js',
+  './js/packs/maastokohteet-alb.js',
   './js/packs/maastokohteet-are.js',
   './js/packs/maastokohteet-arg.js',
   './js/packs/maastokohteet-ark.js',
@@ -699,6 +703,7 @@ const SHELL = [
   './js/packs/maastokohteet-aus.js',
   './js/packs/maastokohteet-aut.js',
   './js/packs/maastokohteet-bih.js',
+  './js/packs/maastokohteet-blr.js',
   './js/packs/maastokohteet-bol.js',
   './js/packs/maastokohteet-bra.js',
   './js/packs/maastokohteet-can.js',
@@ -711,6 +716,7 @@ const SHELL = [
   './js/packs/maastokohteet-cub.js',
   './js/packs/maastokohteet-cyp.js',
   './js/packs/maastokohteet-cze.js',
+  './js/packs/maastokohteet-deu.js',
   './js/packs/maastokohteet-dnk.js',
   './js/packs/maastokohteet-dza.js',
   './js/packs/maastokohteet-ecu.js',
@@ -746,10 +752,13 @@ const SHELL = [
   './js/packs/maastokohteet-ltu.js',
   './js/packs/maastokohteet-lva.js',
   './js/packs/maastokohteet-mar.js',
+  './js/packs/maastokohteet-mda.js',
   './js/packs/maastokohteet-mdg.js',
   './js/packs/maastokohteet-mex.js',
+  './js/packs/maastokohteet-mkd.js',
   './js/packs/maastokohteet-mli.js',
   './js/packs/maastokohteet-mmr.js',
+  './js/packs/maastokohteet-mne.js',
   './js/packs/maastokohteet-mng.js',
   './js/packs/maastokohteet-moz.js',
   './js/packs/maastokohteet-nam.js',
@@ -780,6 +789,7 @@ const SHELL = [
   './js/packs/maastokohteet-slb.js',
   './js/packs/maastokohteet-sle.js',
   './js/packs/maastokohteet-som.js',
+  './js/packs/maastokohteet-srb.js',
   './js/packs/maastokohteet-swe.js',
   './js/packs/maastokohteet-syr.js',
   './js/packs/maastokohteet-tcd.js',
@@ -2129,7 +2139,13 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
 const LAATTAKANSIO = '2026-09-27-pohja-20260927';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
 const LAATTAKANSIO_SYVA = '2026-09-27-pohja';
-const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
+/**
+ * DELTASARJAN PERUSSARJA (js/pallo.js PALLO_LAATTAPERUS, js/deltasarja.js):
+ * muuttumattomat laatat haetaan perussarjan kansiosta, joten activate ei
+ * saa siivota niitä. null = tuotantosarja ei ole delta.
+ */
+const LAATTAKANSIO_PERUS = null;
+const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA, ...(LAATTAKANSIO_PERUS ? [LAATTAKANSIO_PERUS] : [])];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;
 /** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */

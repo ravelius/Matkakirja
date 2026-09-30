@@ -26,6 +26,7 @@ import { extname, join } from 'node:path';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 // LUKIJAN VALIKKO (omistaja 28.9.2026) poisti ohjauspaneelin (.lukija-paneeli):
 // kohdat 4, 5 ja 7 viittaavat siihen. Kappalehypyt, kelaus ja pysäytys
@@ -33,9 +34,6 @@ import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
 // savuke herätetään pallolaudalle, paneelivalitsimet vaihdetaan valikkoon.
 ohitaVanhanKartanSavuke(import.meta.url);
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp' };
@@ -66,8 +64,7 @@ const hiljainenWav = () => {
   return b;
 };
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required'],
 });
 const konteksti = await selain.newContext({ viewport: { width: 390, height: 844 } });

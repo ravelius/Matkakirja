@@ -66,6 +66,7 @@ import { packById } from '../../js/pack.js';
 import { NAPAKALOTTI, NAPAKALOTTI_PAATE, NAPAKALOTTI_RENDER_ORDER } from '../../js/pallo.js';
 import { VEKTORIT_RENDER_ORDER } from '../../js/pallovektorit.js';
 import { decodePng } from './pallon-liike-mittarit.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 const arg = (n, d) => (process.argv.find((a) => a.startsWith(`--${n}=`))?.split('=')[1] ?? d);
 const ULOS = arg('ulos', process.env.ULOS ?? '/tmp/matkakirja-kaappaukset/napakalotit');
@@ -95,9 +96,6 @@ const KARTTA_RAJA = 1.5;
 const ASKEL = 0.25;
 const MERIDIAANEJA = 48;
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const TYYPIT = {
@@ -143,8 +141,7 @@ peli.phase = 'action';
 peli.tokens.delete('ateena');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
-  executablePath: '/opt/pw-browsers/chromium',
+const selain = await avaaChromium({
   args: ['--disable-dev-shm-usage'],
 });
 const ctx = await selain.newContext({

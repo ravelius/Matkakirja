@@ -762,4 +762,284 @@ export const MAASTOKOHTEET_IRL = [
       + 'luostariraunioiden ohi.',
     lahde: 'en-Wikipedia "Glendalough" (tarkistettu 11.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ B, 30.9.2026 — 3 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'brownshillin-dolmen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-brownshillin-dolmen-e2214f16.jpg',
+      lyhyt: 'Valtava kansikivi lepää neljän pystykiven varassa.',
+      selite: 'Jäkälän peittämä graniittinen kansikivi kohoaa nurmikon yllä pystykivien päällä.',
+      lahde: 'Valokuva: Digital Eye, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Digital Eye',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Digital_Eye%E2%80%932015%E2%80%93Brownshill_Dolmen.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Brownshillin dolmen',
+    nimio: 'Brownshill',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka paljon kansikiven arvioidaan painavan?',
+      'Mihin aikaan dolmen rakennettiin?',
+    ],
+    korostukset: ['kansikivi|kansikivi'],
+    nappi: 'Kivi, jonka sanotaan olevan Euroopan painavin',
+    // -6.881 E / 52.8373 N — en-Wikipedia "Brownshill dolmen", osiot "Description" ja "Dating"
+    laudat: {
+      maailmankartta: { x: 5604, y: 1264.6 },
+    },
+    teksti: 'Brownshillin dolmen on kolmen kilometrin päässä Carlowin kaupungista itään, Irlannin '
+      + 'Carlowin kreivikunnassa sijaitseva portaalihauta. Se rakennettiin arviolta 4000–3000 '
+      + 'eaa., ja sen graniittinen kansikivi painaa arviolta 150 tonnia, minkä sanotaan '
+      + 'olevan Euroopan painavin. Rakenteen korkeus on 3,5 metriä. Sisäänkäynnin pystykivet '
+      + 'ja portinkivi ovat yhä alkuperäisillä paikoillaan, ja kansikivi lepää niiden päällä '
+      + 'kallistuen poispäin sisäänkäynnistä kohti maata. Hautaa ei ole kaivettu. Dolmen on '
+      + 'suojeltu kansallismonumentti.',
+    lahde: 'en-Wikipedia "Brownshill dolmen", osiot "Description" ja "Dating" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'rock-of-dunamase',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-rock-of-dunamase-1bc46392.jpg',
+      lyhyt: 'Ilmakuva Dunamasen rauniolinnasta metsäisen kummun päällä.',
+      selite: 'Ylhäältä kuvassa näkyvät kummun laella olevat kiviraunioiden seinät ja polku, joka kiertää huippua.',
+      lahde: 'Valokuva: Robfitz85, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Robfitz85',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dunamase_Castle_from_above.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Rock of Dunamase',
+    nimio: 'Dunamase',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka korkealle kallio kohoaa ympäristöään?',
+      'Mitä linnalle tapahtui vuonna 1650?',
+    ],
+    korostukset: ['kalliokumpu|kalliokumpu'],
+    nappi: 'Rauniolinna kalliokummun päällä',
+    // -7.2103 E / 53.0317 N — en-Wikipedia "Rock of Dunamase", osiot "History" ja "Castle"
+    laudat: {
+      maailmankartta: { x: 5593, y: 1255.8 },
+    },
+    teksti: 'Rock of Dunamase on Laoisin kreivikunnassa Irlannissa oleva kalliokumpu, joka kohoaa '
+      + 'noin 46 metriä ympäröivän tasangon yläpuolelle. Paikalla oli linnoitus 800-luvulla, '
+      + 'ja kivilinna rakennettiin 1100-luvun jälkipuoliskolla. Myöhemmin linna siirtyi '
+      + 'Marshalin suvulle. Vuonna 1650 linnan puolustusrakenteet tuhottiin. Nykyisin '
+      + 'raunioinen linna on Irlannin kansallismonumentti.',
+    lahde: 'en-Wikipedia "Rock of Dunamase", osiot "History" ja "Castle" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'hill-of-uisneach',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-hill-of-uisneach-eeb0339d.jpg',
+      lyhyt: 'Puuveistos kukkulalla: parrakas kasvo ja kaksi pölkkyistuinta.',
+      selite: 'Puupölkkyyn veistetty parrakas kasvo ja spiraali seisoo niityllä kahden koristeellisen pölkkyistuimen välissä.',
+      lahde: 'Valokuva: Abi Skipp, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Abi Skipp',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Site_of_Celtic_Festival_of_Bealtaine.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Uisneachin kukkula',
+    nimio: 'Uisneach',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuinka monta muinaismuistoa alueella arvioidaan olevan?',
+      'Mikä on Ail na Míreann?',
+    ],
+    korostukset: ['Ail na Míreann|Ail na Míreann'],
+    nappi: 'Irlannin symbolinen ja pyhä keskus',
+    // -7.5619 E / 53.49 N — en-Wikipedia "Hill of Uisneach", osiot "Description" ja "Archaeology"
+    laudat: {
+      maailmankartta: { x: 5581.3, y: 1235.1 },
+    },
+    teksti: 'Uisneachin kukkula sijaitsee Westmeathin kreivikunnassa Irlannissa, ja sen huippu on '
+      + '182 metriä merenpinnan yläpuolella. Perinteessä sitä kutsutaan saaren symboliseksi '
+      + 'ja pyhäksi keskukseksi. Noin kahden neliökilometrin alueella on arviolta 40 '
+      + 'muinaismuistoa, joista noin puolet näkyy maan päällä, ja ihmistoimintaa on ollut '
+      + 'noin 5 000 vuotta. Tunnetuin kohde on kivimöhkäle Ail na Míreann, "jakojen kivi", '
+      + 'jota pidetään maakuntien kohtaamispaikkana. Alue on kansallismonumentti.',
+    lahde: 'en-Wikipedia "Hill of Uisneach", osiot "Description" ja "Archaeology" (tarkistettu '
+      + '30.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ C, 30.9.2026 — 5 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'rathcroghan',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-rathcroghan-e2d8c8d7.png',
+      lyhyt: 'Ruohoinen Rathcroghanin kumpu sinisen taivaan alla.',
+      selite: 'Matala ruohon peittämä kumpu kohoaa laakean laitumen yllä. Taivas on pilvetön.',
+      lahde: 'Valokuva: Sawyer777, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Sawyer777',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rathcroghan_Mound.png',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Rathcroghan',
+    nimio: 'Rathcroghan',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka kuningatar liitetään Rathcroghaniin?',
+      'Kuinka leveä alueen kumpu on?',
+    ],
+    korostukset: ['Cruachan|Cruachan'],
+    nappi: 'Connachtien muinainen kuninkaankartano',
+    // -8.304 E / 53.802 N — en-Wikipedia "Rathcroghan", osiot "Rathcroghan Complex", "Oweynagat" ja "Cruachan"
+    laudat: {
+      maailmankartta: { x: 5556.5, y: 1220.9 },
+    },
+    teksti: 'Rathcroghan on Roscommonin kreivikunnassa Tulskin lähellä sijaitseva arkeologinen '
+      + 'kokonaisuus, jossa on yli 240 muinaisjäännöstä noin kuuden neliökilometrin alueella. '
+      + 'Paikan tunnistetaan olevan Cruachan, connachtien perinteinen pääkaupunki ja Irlannin '
+      + 'kuninkaallinen keskus. Alueen kumpu on 89 metriä leveä ja 5,5 metriä korkea. '
+      + 'Oweynagatin luolan ogham-kirjoituksessa mainitaan Fraech, kuningatar Medbin poika, '
+      + 'ja Táin Bó Cúailnge -eepoksen kerrotaan alkavan ja päättyvän täällä. Alue on '
+      + 'suurelta osin kaivamatta, ja Tulskissa on ollut vierailukeskus vuodesta 1999.',
+    lahde: 'en-Wikipedia "Rathcroghan", osiot "Rathcroghan Complex", "Oweynagat" ja "Cruachan" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'skerriesin-myllyt',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-skerriesin-myllyt-54f1cddf.jpg',
+      lyhyt: 'Tuulimylly kukkulalla ja kivisiä myllyrakennuksia.',
+      selite: 'Kuvassa valkoinen tuulimylly siipineen vasemmalla ja harmaita kivisiä myllyrakennuksia oikealla, taustalla Skerriesin kaupungin kirkontornit ja meri.',
+      lahde: 'Valokuva: Patrick O\'Leary, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Patrick O\'Leary',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Old_and_new_mills_Skerries.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Skerriesin myllyt',
+    nimio: 'Skerries Mills',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Mitä kaikkea Skerries Mills -kokonaisuuteen kuuluu?',
+      'Mikä vaurioitti toisen tuulimyllyn siipiä tammikuussa 2007?',
+    ],
+    korostukset: ['tuulimyllyä|tuulimyllyä'],
+    nappi: 'Kaksi tuulimyllyä ja vesimylly',
+    // -6.1083 E / 53.5828 N — en-Wikipedia "Skerries, Dublin", osiot "Geography" ja "Late 20th century"
+    laudat: {
+      maailmankartta: { x: 5629.7, y: 1230.8 },
+    },
+    teksti: 'Skerries Mills on myllykokonaisuus Skerriesin rannikkokaupungissa Irlannin Fingalin '
+      + 'alueella, noin 30 kilometrin päässä Dublinista pohjoiseen. Kokonaisuus entisöitiin '
+      + '1900-luvun lopulla alkaneessa hankkeessa: siihen kuuluu kaksi entisöityä ja toimivaa '
+      + 'tuulimyllyä, vesimylly, museo ja kahvila. Tammikuun 2007 myrskyissä toisen '
+      + 'tuulimyllyn siivet vaurioituivat, mutta ne korjattiin myöhemmin. Nykyisin paikka '
+      + 'toimii paikallisena virkistys- ja matkailukohteena.',
+    lahde: 'en-Wikipedia "Skerries, Dublin", osiot "Geography" ja "Late 20th century" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'glencarin-vesiputous',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-glencarin-vesiputous-62e329c3.jpg',
+      lyhyt: 'Vesiputous putoaa kalliojyrkänteeltä metsän keskellä.',
+      selite: 'Vesi putoaa kerrostuneelta kallioseinämältä pieneen altaaseen. Ympärillä on sammalta ja puita.',
+      lahde: 'Valokuva: Nogwater, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Nogwater',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glencar_Waterfall_2.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    nimi: 'Glencarin vesiputous',
+    nimio: 'Glencar',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Minkä runoilijan runossa vesiputous mainitaan?',
+      'Mikä joki laskee Glencar Loughiin sen itäpäässä?',
+    ],
+    korostukset: ['The Stolen Child|The Stolen Child'],
+    nappi: 'Yeatsin runosta tunnettu putous',
+    // -8.3667 E / 54.35 N — en-Wikipedia "Glencar Lough" ja "County Leitrim" sekä "The Stolen Child"
+    laudat: {
+      maailmankartta: { x: 5554.4, y: 1195.8 },
+    },
+    teksti: 'Glencarin vesiputous sijaitsee Leitrimin kreivikunnassa Glencar Loughin pohjarannan '
+      + 'lähellä, noin 11 kilometrin päässä Manorhamiltonista. Vesiputous on yksi järven '
+      + 'pääasiallisista vesilähteistä, toinen on Diffreen-joki, joka laskee järveen sen '
+      + 'itäpäässä. Järvi on 2,5 kilometriä pitkä, 0,6 kilometriä leveä ja pinta-alaltaan '
+      + '1,15 neliökilometriä. Vesiputous tunnetaan W. B. Yeatsin runosta The Stolen Child, '
+      + 'jonka hän kirjoitti vuonna 1886 ja joka julkaistiin vuonna 1889 kokoelmassa The '
+      + 'Wanderings of Oisin and Other Poems.',
+    lahde: 'en-Wikipedia "Glencar Lough" ja "County Leitrim" sekä "The Stolen Child" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'corlean-puupolku',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-corlean-puupolku-347bda8e.jpg',
+      lyhyt: 'Lankkupolku kulkee nummen halki vierailukeskukselle.',
+      selite: 'Puinen lankkupolku kaartuu kanervaisen suon poikki kohti kaukana siintävää rakennusta.',
+      lahde: 'Valokuva: Kevin King, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Kevin King',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Corlea_Bog_Trackway.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Corlea Trackway',
+    nimio: 'Corlea',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Minä vuosina tammet dendrokronologian mukaan kaadettiin?',
+      'Miksi tie säilyi suossa noin kaksi vuosituhatta?',
+    ],
+    korostukset: ['Dendrokronologia|Dendrokronologia'],
+    nappi: 'Rautakautinen tie suon yli',
+    // -7.8533 E / 53.6267 N — en-Wikipedia "Corlea Trackway"
+    laudat: {
+      maailmankartta: { x: 5571.6, y: 1228.8 },
+    },
+    teksti: 'Corlea Trackway on Longfordin kreivikunnassa Keenaghin lähellä sijaitseva '
+      + 'rautakautinen puutie suon yli. Dendrokronologia ajoittaa käytetyt tammet vuosiin '
+      + '148–147 eaa. Tie oli noin kilometrin pituinen ja 3,2 metriä leveä, ja sen '
+      + 'poikkipuihin tarvittiin noin 300 suurta tammea. Suo peitti tien kymmenen vuoden '
+      + 'kuluessa, ja se säilyi noin kaksi vuosituhatta. Vuoden 1984 radiohiiliajoitus '
+      + 'osoitti sen rautakautiseksi, ei pronssikautiseksi. Nykyään se on '
+      + 'kansallismonumentti, jota hoitaa Office of Public Works, ja paikalla on '
+      + 'vierailukeskus.',
+    lahde: 'en-Wikipedia "Corlea Trackway" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'devils-bit',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-devils-bit-2d125be5.jpg',
+      lyhyt: 'Devil\'s Bitin kallioharjanne ja huipun risti.',
+      selite: 'Metsäisten rinteiden yllä kohoaa kalliopaljastumia sisältävä harjanne, ja oikeanpuoleisella huipulla erottuu risti.',
+      lahde: 'Valokuva: Wanfried-Dublin, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Wanfried-Dublin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:DevilsbitMountain.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    nimi: 'Devil\'s Bit',
+    nimio: 'Devil\'s Bit',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Minkä kuuluisan kallion paholainen taru sanoo sylkeneen vuoresta?',
+      'Minä vuosina huipun risti pystytettiin?',
+    ],
+    korostukset: ['Cashelin kallion|Cashelin kallion'],
+    nappi: 'Paholaisen puraisema vuori',
+    // -7.9147 E / 52.8209 N — en-Wikipedia "Devil's Bit"
+    laudat: {
+      maailmankartta: { x: 5569.5, y: 1265.3 },
+    },
+    teksti: 'Devil\'s Bit on 480 metriä korkea vuori Tipperaryn kreivikunnassa Templemoren '
+      + 'luoteispuolella. Sen harjanteessa on ainutlaatuinen lovi, josta vuori on saanut '
+      + 'nimensä; iiriksi nimi on Bearnán Éile, "Éilen pieni loveva kukkula". Kansantarinan '
+      + 'mukaan paholainen puraisi palan vuoresta, mursi hampaansa ja sylki Cashelin kallion '
+      + 'nykyiselle paikalleen. Huipulla on vuosina 1953–1954 pystytetty 45 jalan korkuinen '
+      + 'risti.',
+    lahde: 'en-Wikipedia "Devil\'s Bit" (tarkistettu 30.9.2026).',
+  },
 ];

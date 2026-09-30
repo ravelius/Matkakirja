@@ -42,12 +42,10 @@ import { extname, join } from 'node:path';
 // ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
 // tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
 import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+import { avaaChromium } from '../selain.mjs';
 
 ohitaVanhanKartanSavuke(import.meta.url);
 
-const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 
@@ -90,7 +88,7 @@ const AMPARI_TOIMII = kirjasto?.status === 200;
 tieto('vendor/tuna-1.1.3.js', AMPARI_TOIMII ? `${kirjasto.body.length} tavua` : 'ei saatavilla');
 if (!AMPARI_TOIMII) console.log('HUOM  ämpäri ei vastaa — ajetaan vain virhehaaran vartiot');
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium();
 
 /** Uusi sivu: kehittäjätila ja äänet päällä, ämpäri reititetty (tai katkaistu). */
 async function avaaSivu({ ampari }) {

@@ -40,6 +40,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
+import { avaaChromium } from './selain.mjs';
 
 const argv = process.argv.slice(2);
 const valitsin = (nimi, oletus) => {
@@ -123,7 +124,7 @@ function tallenne(kaupunki) {
 const konttiSelain = '/opt/pw-browsers/chromium';
 const selainPolku = process.env.CHROMIUM
   ?? (existsSync(konttiSelain) ? konttiSelain : chromium.executablePath());
-const selain = await chromium.launch({ executablePath: selainPolku });
+const selain = await avaaChromium({ executablePath: selainPolku });
 
 /**
  * Avaa pelin annetussa ruudussa, ajaa saapumisen loppuun ja lukee

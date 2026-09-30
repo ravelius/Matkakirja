@@ -3011,6 +3011,27 @@ export class Pollo {
   }
 
   /**
+   * PUHE ILMAN KUPLAA (omistaja 29.9.2026, Pulun ISS-tervetulo): Pulu
+   * puhuu, mutta ruudulle ei tule kuplaa, koska Pulun taulu on silloin
+   * auki. Portit ovat samat kuin saapumiskuplalla: Pulu on ruudulla
+   * eikä chatti ole auki. Repliikki kirjataan chattiin kuten kuplakin,
+   * ja kasvo saa saman eleen kuin kuplasta.
+   *
+   * @param {string} teksti repliikki; tyhjä ei tee mitään.
+   * @returns {boolean} saako Pulu puhua (false: mitään ei soiteta).
+   */
+  puheIlmanKuplaa(teksti) {
+    if (!teksti || this.nappi.hidden) return false;
+    this.kirjaaKuplaViestiin(teksti);
+    if (this.auki) return false;
+    this.peruPuheenvuoro();
+    try {
+      this.kasvoEleet?.kupla(teksti, { saapuu: false });
+    } catch { /* ele on koriste */ }
+    return true;
+  }
+
+  /**
    * LIVIAN AVAUSKUPLA ALOITUSVALINNASSA (omistaja 29.8.2026: *"Livia
    * lennähtää mukaan jo aloitusvalinnassa"*).
    *
@@ -7673,6 +7694,17 @@ export function polloPuheenvuoro(osat, asetukset = {}) {
  */
 export function polloLinssikupla(osat, asetukset = {}) {
   return Boolean(nykyinenPollo?.naytaPuheenvuoro(osat, { ...asetukset, linssinOma: true }));
+}
+
+/**
+ * LINSSIN PUHE ILMAN KUPLAA (Pollo.puheIlmanKuplaa): Astronautin kameran
+ * tervetulo puhuu Pulun taulun aikana (omistaja 29.9.2026).
+ *
+ * @param {string} teksti repliikki
+ * @returns {boolean} saako Pulu puhua
+ */
+export function polloPuheIlmanKuplaa(teksti) {
+  return Boolean(nykyinenPollo?.puheIlmanKuplaa(String(teksti ?? '').trim()));
 }
 
 /**

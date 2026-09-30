@@ -184,5 +184,43 @@ export const MAASTOKOHTEET_TUR = [
       fakta: 'Fırat on Länsi-Aasian pisin joki ja saa alkunsa Turkista.',
     },
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'selimiyen-moskeija',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/tur-nosto-selimiyen-moskeija-63ac3142.jpg',
+      lyhyt: 'Selimiyen moskeijan minareetit ja kupolit kohoavat tiilimuurin takaa sinisellä taivaalla.',
+      selite: 'Edirnen Selimiyen moskeija ulkoa: korkeita minareetteja, keskikupoli ja pienemmät kupolit sekä raidallinen tiili- ja kivimuuri etualalla.',
+      lahde: 'Valokuva: Ali Osman Dilekoğlu, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ali Osman Dilekoğlu',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Selimiye_Camii_IMG_4328.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Selimiyen moskeija',
+    nimio: 'Selimiye',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka leveä on Selimiyen kupoli?',
+      'Mitä Sinan kertomuksen mukaan väitti Hagia Sofiasta?',
+    ],
+    korostukset: ['kupoli|kupoli'],
+    nappi: 'Sinanin mestariteos Edirnessä',
+    // 26.5594 E / 41.6781 N — en-Wikipedia "Selimiye Mosque, Edirne", yleiskuvaus, arkkitehtuuri ja kompleksi
+    laudat: {
+      maailmankartta: { x: 6718.6, y: 1736.4 },
+    },
+    teksti: 'Selimiyen moskeija Edirnessä on arkkitehti Sinanin suunnittelema ja sulttaani Selim '
+      + 'II:lle rakennettu. Työ alkoi vuonna 1568, ja valmistumisvuodeksi mainitaan 1574 tai '
+      + '1575. Rukoussalia peittää yksi kupoli, jonka halkaisija on 31,28 metriä ja jota '
+      + 'tukee kahdeksan pilaria, ja rakennuksen kulmissa on neljä 70,89-metristä '
+      + 'minareettia. Kertomuksen mukaan Sinan väitti rakentaneensa Hagia Sofiaa korkeamman '
+      + 'ja leveämmän kupolin. UNESCO hyväksyi kohteen maailmanperintöön vuonna 2011 '
+      + 'sosiaalisen kompleksin kanssa, ja medresat toimivat nykyisin museoina.',
+    lahde: 'en-Wikipedia "Selimiye Mosque, Edirne", yleiskuvaus, arkkitehtuuri ja kompleksi '
+      + '(tarkistettu 30.9.2026).',
+  },
 ];
 

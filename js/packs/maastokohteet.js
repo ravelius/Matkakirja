@@ -64,11 +64,13 @@
  */
 import { MAASTOKOHTEET_AFG } from './maastokohteet-afg.js';
 import { MAASTOKOHTEET_AGO } from './maastokohteet-ago.js';
+import { MAASTOKOHTEET_ALB } from './maastokohteet-alb.js';
 import { MAASTOKOHTEET_ARE } from './maastokohteet-are.js';
 import { MAASTOKOHTEET_ARG } from './maastokohteet-arg.js';
 import { MAASTOKOHTEET_AUS } from './maastokohteet-aus.js';
 import { MAASTOKOHTEET_AUT } from './maastokohteet-aut.js';
 import { MAASTOKOHTEET_BIH } from './maastokohteet-bih.js';
+import { MAASTOKOHTEET_BLR } from './maastokohteet-blr.js';
 import { MAASTOKOHTEET_BOL } from './maastokohteet-bol.js';
 import { MAASTOKOHTEET_BRA } from './maastokohteet-bra.js';
 import { MAASTOKOHTEET_CAN } from './maastokohteet-can.js';
@@ -81,6 +83,7 @@ import { MAASTOKOHTEET_COL } from './maastokohteet-col.js';
 import { MAASTOKOHTEET_CUB } from './maastokohteet-cub.js';
 import { MAASTOKOHTEET_CYP } from './maastokohteet-cyp.js';
 import { MAASTOKOHTEET_CZE } from './maastokohteet-cze.js';
+import { MAASTOKOHTEET_DEU } from './maastokohteet-deu.js';
 import { MAASTOKOHTEET_DNK } from './maastokohteet-dnk.js';
 import { MAASTOKOHTEET_DZA } from './maastokohteet-dza.js';
 import { MAASTOKOHTEET_ECU } from './maastokohteet-ecu.js';
@@ -115,10 +118,13 @@ import { MAASTOKOHTEET_LKA } from './maastokohteet-lka.js';
 import { MAASTOKOHTEET_LTU } from './maastokohteet-ltu.js';
 import { MAASTOKOHTEET_LVA } from './maastokohteet-lva.js';
 import { MAASTOKOHTEET_MAR } from './maastokohteet-mar.js';
+import { MAASTOKOHTEET_MDA } from './maastokohteet-mda.js';
 import { MAASTOKOHTEET_MDG } from './maastokohteet-mdg.js';
 import { MAASTOKOHTEET_MEX } from './maastokohteet-mex.js';
+import { MAASTOKOHTEET_MKD } from './maastokohteet-mkd.js';
 import { MAASTOKOHTEET_MLI } from './maastokohteet-mli.js';
 import { MAASTOKOHTEET_MMR } from './maastokohteet-mmr.js';
+import { MAASTOKOHTEET_MNE } from './maastokohteet-mne.js';
 import { MAASTOKOHTEET_MNG } from './maastokohteet-mng.js';
 import { MAASTOKOHTEET_MOZ } from './maastokohteet-moz.js';
 import { MAASTOKOHTEET_NAM } from './maastokohteet-nam.js';
@@ -149,6 +155,7 @@ import { MAASTOKOHTEET_SHN } from './maastokohteet-shn.js';
 import { MAASTOKOHTEET_SLB } from './maastokohteet-slb.js';
 import { MAASTOKOHTEET_SLE } from './maastokohteet-sle.js';
 import { MAASTOKOHTEET_SOM } from './maastokohteet-som.js';
+import { MAASTOKOHTEET_SRB } from './maastokohteet-srb.js';
 import { MAASTOKOHTEET_SWE } from './maastokohteet-swe.js';
 import { MAASTOKOHTEET_SYR } from './maastokohteet-syr.js';
 import { MAASTOKOHTEET_TCD } from './maastokohteet-tcd.js';
@@ -175,11 +182,13 @@ import { MAASTOKOHTEET_ZWE } from './maastokohteet-zwe.js';
 export const MAASTOKOHTEET = {
   AFG: MAASTOKOHTEET_AFG,
   AGO: MAASTOKOHTEET_AGO,
+  ALB: MAASTOKOHTEET_ALB,
   ARE: MAASTOKOHTEET_ARE,
   ARG: MAASTOKOHTEET_ARG,
   AUS: MAASTOKOHTEET_AUS,
   AUT: MAASTOKOHTEET_AUT,
   BIH: MAASTOKOHTEET_BIH,
+  BLR: MAASTOKOHTEET_BLR,
   BOL: MAASTOKOHTEET_BOL,
   BRA: MAASTOKOHTEET_BRA,
   CAN: MAASTOKOHTEET_CAN,
@@ -192,6 +201,7 @@ export const MAASTOKOHTEET = {
   CUB: MAASTOKOHTEET_CUB,
   CYP: MAASTOKOHTEET_CYP,
   CZE: MAASTOKOHTEET_CZE,
+  DEU: MAASTOKOHTEET_DEU,
   DNK: MAASTOKOHTEET_DNK,
   DZA: MAASTOKOHTEET_DZA,
   ECU: MAASTOKOHTEET_ECU,
@@ -226,10 +236,13 @@ export const MAASTOKOHTEET = {
   LTU: MAASTOKOHTEET_LTU,
   LVA: MAASTOKOHTEET_LVA,
   MAR: MAASTOKOHTEET_MAR,
+  MDA: MAASTOKOHTEET_MDA,
   MDG: MAASTOKOHTEET_MDG,
   MEX: MAASTOKOHTEET_MEX,
+  MKD: MAASTOKOHTEET_MKD,
   MLI: MAASTOKOHTEET_MLI,
   MMR: MAASTOKOHTEET_MMR,
+  MNE: MAASTOKOHTEET_MNE,
   MNG: MAASTOKOHTEET_MNG,
   MOZ: MAASTOKOHTEET_MOZ,
   NAM: MAASTOKOHTEET_NAM,
@@ -260,6 +273,7 @@ export const MAASTOKOHTEET = {
   SLB: MAASTOKOHTEET_SLB,
   SLE: MAASTOKOHTEET_SLE,
   SOM: MAASTOKOHTEET_SOM,
+  SRB: MAASTOKOHTEET_SRB,
   SWE: MAASTOKOHTEET_SWE,
   SYR: MAASTOKOHTEET_SYR,
   TCD: MAASTOKOHTEET_TCD,

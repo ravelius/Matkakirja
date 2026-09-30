@@ -60,6 +60,7 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -7103,9 +7104,8 @@ writeFileSync(svgPolku, svg);
 // selaimelle raskas joka avauksella — PNG piirtyy heti.
 const pngPolku = resolve(JUURI, `assets/kartat/${tiedosto}.png`);
 const skripti = `
-const { chromium } = require('playwright');
 (async () => {
-  const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+  const selain = await avaaChromium({});
   const sivu = await (await selain.newContext({ viewport: { width: 10, height: 10 } })).newPage();
   await sivu.goto('file://${svgPolku}');
   const koko = await sivu.evaluate(() => {

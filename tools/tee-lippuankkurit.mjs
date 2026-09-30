@@ -1,21 +1,21 @@
 #!/usr/bin/env node
-// LIPPUANKKURIT (Karttaseppä 26.9.2026, omistajan 161-tarkennus Natiivisepän kautta): kohdemaan
-// lipputanko maan OIKEAAN (itäiseen) reunaan maalle, ei pääkaupunkiin.
+// LIPPUANKKURIT (Karttaseppä 26.9.2026, löydös 161; koilliskulma Linssiseppä 29.9.2026): kohdemaan lipputanko maan
+// OIKEAAN YLÄKULMAAN maalle, ei pääkaupunkiin. Omistaja 29.9.2026 klo 23.2x (iPad-kuva Italiasta, lippu Puglian keskellä):
+// "Lippu pitää olla aina maan oik. yläkulmassa. Muuten se näkyy huonosti kun koko maa on näytöllä."
 //
 //   node tools/tee-lippuankkurit.mjs <ne_10m_admin_0_countries.geojson> <kaupungit.json> \
 //     <takynostot.json> <ulos.json> <perustelut.json> [ISO3 …]
 //
-// SÄÄNNÖT (Natiiviseppä 26.9.2026):
-//   1. mantere = maan suurin yhtenäinen maapolygoni (Natural Earth 10m admin-0), ei saaria;
-//      alue = sen itäisin viidennes pituusasteista;
-//   2. piste vähintään LAIDASTA_KM sisämaassa rannasta ja valtionrajasta (NE:n ulkorengas on
-//      kumpaakin) — alueen etäisin piste reunoista (pole of inaccessibility rasterilla);
-//   3. vähintään KOHTEISTA_KM lähimmästä kaupungista ja nostosta, jos mahdollista;
-//   4. jos itäisin viidennes on liian kapea (ehto 2 ei täyty missään), alue laajenee länteen
-//      5 %:n askelin, kunnes täyttyy.
+// SÄÄNNÖT (samat kuin natiivin Linssit/Ydin/Maat/Lippukulma.cs, joka laskee paikan maarajoista):
+//   1. mantere = maan suurin yhtenäinen maapolygoni (Natural Earth 10m admin-0), reiät mukana, ei saaria;
+//   2. piste vähintään LAIDASTA_KM sisämaassa rannasta ja valtionrajasta (pienessä maassa puolet syvimmästä);
+//      etäisyyskenttä rasterina (chamfer);
+//   3. ehdoista lähin mantereen rajalaatikon koilliskulmaa laatikkoon suhteutettuna: u = itä 0…1, v = pohjoinen 0…1,
+//      pisteet (1 − u)² + (1 − v)²;
+//   4. vähintään KOHTEISTA_KM lähimmästä kaupungista ja nostosta, jos sellainen piste on enintään KOHTEEN_VARA
+//      huonompi kuin paras.
 // Kohteet: pelin kaupungit (sisältöpaketin kaupungit.json, kaikki tärkeysluokat), täkynostojen
-// paikat (takynostot.json) ja lukitut nostoankkurit (js/packs/nostoankkurit-*.js). Tasoa ei ole
-// kaikille nostoille saatavilla, joten kaikki nostot lasketaan — ehto on tiukempi, ei väljempi.
+// paikat (takynostot.json) ja lukitut nostoankkurit (js/packs/nostoankkurit-*.js).
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -24,7 +24,7 @@ import { gunzipSync } from 'node:zlib';
 const TAMA = dirname(fileURLToPath(import.meta.url));
 export const LAIDASTA_KM = 15;
 export const KOHTEISTA_KM = 25;
-export const ITAOSUUS = 0.2;
+export const KOHTEEN_VARA = 0.03;
 const RAD = Math.PI / 180;
 
 const ulkorenkaat = (g) => (g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : []);
@@ -82,33 +82,24 @@ const kmValilla = ([lon1, lat1], [lon2, lat2]) => {
 export function lippuankkuri(piirre, kohteet) {
   const renkaat = mantere(piirre);
   const lons = renkaat[0].map((p) => p[0]); const lonMin = Math.min(...lons); const lonMax = Math.max(...lons);
-  const lats = renkaat[0].map((p) => p[1]);
-  const laajuus = Math.max(lonMax - lonMin, Math.max(...lats) - Math.min(...lats));
+  const lats = renkaat[0].map((p) => p[1]); const latMin = Math.min(...lats); const latMax = Math.max(...lats);
+  const laajuus = Math.max(lonMax - lonMin, latMax - latMin);
   const solu = Math.max(0.004, laajuus / 900);
   const k = etaisyyskentta(renkaat, solu);
-  const lahella = kohteet.filter(([lon, lat]) => lon > lonMin - 1 && lon < lonMax + 1 && lat > Math.min(...lats) - 1 && lat < Math.max(...lats) + 1);
+  const lahella = kohteet.filter(([lon, lat]) => lon > lonMin - 1 && lon < lonMax + 1 && lat > latMin - 1 && lat < latMax + 1);
   const lahinKohde = (p) => lahella.reduce((b, q) => { const km = kmValilla(p, q); return km < b.km ? { km, nimi: q[2] } : b; }, { km: Infinity, nimi: null });
-  let osuus = ITAOSUUS; let ehdokkaat = [];
-  for (; osuus <= 1.0001 && !ehdokkaat.length; osuus += 0.05) {
-    const raja = lonMax - osuus * (lonMax - lonMin);
-    ehdokkaat = [];
-    for (let r = 0; r < k.H; r += 1) for (let c = 0; c < k.W; c += 1) {
-      const i = r * k.W + c; if (!k.sisalla[i] || k.d[i] < LAIDASTA_KM || k.lon(c) < raja) continue;
-      ehdokkaat.push(i);
-    }
-  }
-  osuus -= 0.05;
-  let ehto2 = true;
-  if (!ehdokkaat.length) { // pieni maa: koko manner, syvin piste
-    ehto2 = false; osuus = 1;
-    for (let i = 0; i < k.W * k.H; i += 1) if (k.sisalla[i]) ehdokkaat.push(i);
-  }
+  let syvin = 0; for (let i = 0; i < k.W * k.H; i += 1) if (k.sisalla[i]) syvin = Math.max(syvin, k.d[i]);
+  const kynnys = Math.min(LAIDASTA_KM, 0.5 * syvin);
   const piste = (i) => [k.lon(i % k.W), k.lat(Math.floor(i / k.W))];
-  // Syvin ensin; ehto 3 karsii, jos yksikin syvä piste täyttää sen.
-  ehdokkaat.sort((a, b) => k.d[b] - k.d[a]);
-  let valinta = null; let ehto3 = false;
-  for (const i of ehdokkaat.slice(0, 20000)) { if (lahinKohde(piste(i)).km >= KOHTEISTA_KM) { valinta = i; ehto3 = true; break; } }
-  if (valinta === null) valinta = ehdokkaat[0];
+  const kulma = (i) => { const [lon, lat] = piste(i); const u = (lon - lonMin) / Math.max(1e-9, lonMax - lonMin); const v = (lat - latMin) / Math.max(1e-9, latMax - latMin); return (1 - u) ** 2 + (1 - v) ** 2; };
+  const ehdokkaat = [];
+  for (let i = 0; i < k.W * k.H; i += 1) if (k.sisalla[i] && k.d[i] >= kynnys) ehdokkaat.push([i, kulma(i)]);
+  ehdokkaat.sort((a, b) => a[1] - b[1]);
+  let [valinta, paras] = ehdokkaat[0]; let ehto3 = false;
+  for (const [i, pis] of ehdokkaat) {
+    if (pis > paras + KOHTEEN_VARA) break;
+    if (lahinKohde(piste(i)).km >= KOHTEISTA_KM) { valinta = i; paras = pis; ehto3 = true; break; }
+  }
   const p = piste(valinta).map((v) => Math.round(v * 1e4) / 1e4);
   const lk = lahinKohde(p);
   return {
@@ -116,9 +107,10 @@ export function lippuankkuri(piirre, kohteet) {
     perustelu: {
       reunastaKm: Math.round(k.d[valinta] * 10) / 10,
       lahinKohdeKm: Number.isFinite(lk.km) ? Math.round(lk.km * 10) / 10 : null, lahinKohde: lk.nimi,
-      alue: { lonAlkaen: Math.round((lonMax - osuus * (lonMax - lonMin)) * 1e3) / 1e3, lonMax: Math.round(lonMax * 1e3) / 1e3, osuus: Math.round(osuus * 100) / 100 },
+      kulma: Math.round(paras * 1e4) / 1e4,
+      laatikko: [lonMin, latMin, lonMax, latMax].map((v) => Math.round(v * 1e3) / 1e3),
       mantereenAlaKm2: Math.round(alaKm2(renkaat[0])), soluAst: Math.round(solu * 1e4) / 1e4,
-      ehdot: { itaosa: osuus <= ITAOSUUS + 1e-9, reuna15km: ehto2, kohteet25km: ehto3 },
+      ehdot: { reuna15km: kynnys >= LAIDASTA_KM, kohteet25km: ehto3 },
     },
   };
 }
@@ -152,8 +144,9 @@ if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
     const { piste, perustelu } = lippuankkuri(f, kohteet);
     tulos[iso] = piste; perustelut.maat[iso] = perustelu;
   }
-  writeFileSync(ulosP, `${JSON.stringify(tulos)}\n`);
+  // Yksi maa per rivi (diffattava, kuten 26.9.2026 käsin muotoiltu tiedosto).
+  writeFileSync(ulosP, `{\n${Object.keys(tulos).sort().map((i) => `${JSON.stringify(i)}:${JSON.stringify(tulos[i])}`).join(',\n')}\n}\n`);
   writeFileSync(perusP, `${JSON.stringify(perustelut, null, 1)}\n`);
   const eh = Object.values(perustelut.maat);
-  console.log(`${eh.length} maata; itäosa ${eh.filter((x) => x.ehdot.itaosa).length}, reuna≥15 ${eh.filter((x) => x.ehdot.reuna15km).length}, kohteet≥25 ${eh.filter((x) => x.ehdot.kohteet25km).length}`);
+  console.log(`${eh.length} maata; reuna≥15 ${eh.filter((x) => x.ehdot.reuna15km).length}, kohteet≥25 ${eh.filter((x) => x.ehdot.kohteet25km).length}`);
 }

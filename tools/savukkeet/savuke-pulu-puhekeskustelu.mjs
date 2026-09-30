@@ -24,6 +24,7 @@ import { Readable } from 'node:stream';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { avaaChromium } from '../selain.mjs';
 
 const JUURI = resolve(join(dirname(fileURLToPath(import.meta.url)), '..', '..'));
 const ULOS = '/Users/Shared/Claude/proto-3d/lokit/pulu-puhekeskustelu';
@@ -86,9 +87,7 @@ const pelipalvelin = await kaynnista((req, res) => {
 });
 PELI = `http://127.0.0.1:${pelipalvelin.address().port}`;
 
-const pw = await import('playwright').catch(() => import(process.env.PLAYWRIGHT_JS));
-const paketti = pw.chromium ? pw : (pw.default ?? pw);
-const selain = await paketti.chromium.launch({
+const selain = await avaaChromium({
   args: ['--autoplay-policy=no-user-gesture-required', '--disable-features=AudioServiceOutOfProcess'],
 });
 const tulokset = [];

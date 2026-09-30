@@ -157,6 +157,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Mostarin vanhaakaupunkia ja Neretvan yli kaartuva Vanha '
         + 'silta.',
       lahde: 'Ramirez, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mostar_Old_Town_Panorama_2007.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -203,6 +206,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Blagajin tekija ja Bunan lähde pystysuoran kallioseinän '
         + 'alla.',
       lahde: 'Bosancica by MK, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Blagaj_Tekke,_the_spring_of_the_Buna_river,_Bosnia_and_Herzegovina_01.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -257,6 +263,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Štrbački buk on Unan suurin putous, ja se sijaitsee '
         + 'Bihaćista etelään.',
       lahde: 'Julian Nyča, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C5%A0trba%C4%8Dki_buk_1.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -292,6 +301,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Pliva Waterfall, Jajce, 2022.jpg',
       selite: 'Plivan putous keskellä Jajcen vanhaakaupunkia.',
       lahde: 'YxMb, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pliva_Waterfall,_Jajce,_2022.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -332,6 +344,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Mehmed Paša Sokolović Bridge, Višegrad.JPG',
       selite: 'Mehmed-pasha Sokolovićin silta Drinan yli Višegradissa.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mehmed_Pa%C5%A1a_Sokolovi%C4%87_Bridge,_Vi%C5%A1egrad.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -374,6 +389,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Bosnia IMG 9590 Konjic Neretva river.JPG',
       selite: 'Neretva Konjicin kohdalla Bosnian puolella.',
       lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bosnia_IMG_9590_Konjic_Neretva_river.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -419,6 +437,9 @@ export const FOKUSKOHTEET_BIH = [
       selite: 'Maglić Sutjeskan kansallispuistossa on maan korkein '
         + 'huippu.',
       lahde: 'Darko Gavrić, Wikimedia Commons (CC BY-SA 3.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Np_sutjeska_maglic.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
     },
   },
   {
@@ -453,6 +474,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Travnik western panorama.jpg',
       selite: 'Travnikin vanhaakaupunkia linnan portilta katsottuna.',
       lahde: 'Dans, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Travnik_western_panorama.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -496,6 +520,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Neum, costa.jpg',
       selite: 'Neumin rannikko on maan ainoa kosketus Adrianmereen.',
       lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Neum,_costa.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -532,6 +559,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Vrbas from Kastel Banja Luka 2019.jpg',
       selite: 'Vrbas Kastelin muurilta katsottuna Banja Lukassa.',
       lahde: '130309p, Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vrbas_from_Kastel_Banja_Luka_2019.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
   {
@@ -576,6 +606,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Vjetrenica Cave Inside 2024.jpg',
       selite: 'Vjetrenican luolakäytävää Itä-Hertsegovinassa.',
       lahde: 'Bdx, Wikimedia Commons (CC0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vjetrenica_Cave_Inside_2024.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
     },
   },
   {
@@ -615,6 +648,9 @@ export const FOKUSKOHTEET_BIH = [
       tiedosto: 'Hutovo Blato Wetlands 01.jpg',
       selite: 'Hutovo Blaton kosteikkoa Neretvan alajuoksulla.',
       lahde: 'CV1958 (Colin Viney), Wikimedia Commons (CC BY-SA 4.0)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hutovo_Blato_Wetlands_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
   },
 ];

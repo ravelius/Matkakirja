@@ -383,6 +383,7 @@ export const LINSSI = {
 
   nimi: 'Topografialinssi',
   lyhyt: 'Maailma maastona: väri kertoo korkeuden, varjo kertoo muodon.',
+  esittely: 'Maailma maastona: väri kertoo korkeuden, varjo kertoo muodon.',
   /*
    * Kaksihuippuinen vuorijono ja lumiraja. Ei kompassia eikä karttalehteä:
    * kuvakkeen on kerrottava mitä linssi NÄYTTÄÄ, ja tämä linssi näyttää

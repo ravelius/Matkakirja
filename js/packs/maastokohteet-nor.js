@@ -73,6 +73,7 @@ export const MAASTOKOHTEET_NOR = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva Sindre Skrede (Commons user SinWin)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg',
+      viitteet: [{ tekija: 'Sindre Skrede (Commons user SinWin)', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
@@ -83,6 +84,7 @@ export const MAASTOKOHTEET_NOR = [
       lahde: 'Valokuva: Sindre Skrede (Commons user SinWin), Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Sindre Skrede (Commons user SinWin)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg',
+      viitteet: [{ tekija: 'Sindre Skrede (Commons user SinWin)', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     }],
@@ -227,6 +229,7 @@ export const MAASTOKOHTEET_NOR = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; paikkareferenssi Bjoertvedt',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg',
+      viitteet: [{ tekija: 'Bjoertvedt', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
@@ -237,6 +240,7 @@ export const MAASTOKOHTEET_NOR = [
       lahde: 'Valokuva: Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Bjoertvedt',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg',
+      viitteet: [{ tekija: 'Bjoertvedt', lisenssi: 'CC BY-SA 4.0', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/', sivu: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg' }],
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     }],
@@ -293,6 +297,7 @@ export const MAASTOKOHTEET_NOR = [
       lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
       tekija: 'OpenAI; referenssikuva Concierge.2C',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG',
+      viitteet: [{ tekija: 'Concierge.2C', lisenssi: 'CC BY-SA 3.0 NO', lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/no/deed.en', sivu: 'https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG' }],
       lisenssi: 'CC BY-SA 3.0 NO',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/no/deed.en',
     },
@@ -668,6 +673,43 @@ export const MAASTOKOHTEET_NOR = [
       + '200-vuotisjuhlaan 2014.',
     lahde: 'en-Wikipedia "Eidsvollsbygningen", johdanto-osa sekä osiot "History" ja '
       + '"Renovations" (tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'kjerag',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/nor-nosto-kjerag-f8defe63.jpg',
+      lyhyt: 'Jyrkkä kallioseinämä putoaa syvään Lysefjordiin pilvisellä säällä.',
+      selite: 'Näkymä Kjeragilta Lysefjordille: pystysuora harmaa kallioseinämä ja kapea sinivihreä fjordi, joka jatkuu kaukaisuuteen vuorten lomassa.',
+      lahde: 'Valokuva: Giuseppe Milo, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Giuseppe Milo',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lysefjord_(from_Kjerag)_-_Norway_-_Landscape_photography.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Kjerag',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Miten iso kivi on juuttunut kahden kallion väliin?',
+      'Kuinka pitkä vaellus Kjeragboltenille on?',
+    ],
+    korostukset: ['Kjeragbolten|Kjeragbolten'],
+    nappi: 'Kivi kahden kallion välissä',
+    // 6.5878 E / 59.0225 N — en-Wikipedia "Kjerag", osiot "Kjeragbolten", "Hiking" ja "BASE jumping"
+    laudat: {
+      maailmankartta: { x: 6052.9, y: 974 },
+    },
+    teksti: 'Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen '
+      + 'pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin '
+      + 'kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut '
+      + 'kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 '
+      + 'metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa '
+      + 'Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on '
+      + 'hypätty base-hyppyjä vuodesta 1994.',
+    lahde: 'en-Wikipedia "Kjerag", osiot "Kjeragbolten", "Hiking" ja "BASE jumping" (tarkistettu '
+      + '30.9.2026).',
   },
 ];
 

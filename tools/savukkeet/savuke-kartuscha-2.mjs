@@ -38,13 +38,10 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { RADIOT } from '../../js/packs/radiot.js';
+import { avaaChromium } from '../selain.mjs';
 
 // Playwright repon node_modulesista, muuten ympäristön osoittamasta
 // (Mac Studio: PLAYWRIGHT_JS; kontti: /opt/node22).
-const paketti = await import('playwright')
-  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'))
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
@@ -118,10 +115,9 @@ peli.phase = 'action';
 peli.tokens.delete('pariisi');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
+const selain = await avaaChromium({
   // CHROMIUM kuten muissa savukkeissa (aja-sarja.mjs periyttää sen); PW_CHROMIUM jää varaksi.
-  executablePath: process.env.CHROMIUM ?? process.env.PW_CHROMIUM ?? '/opt/pw-browsers/chromium',
-});
+  });
 
 /** Yksi ajo: konteksti, peli Pariisissa, pallolauta auki. */
 async function avaaPeli({ leveys, korkeus }) {

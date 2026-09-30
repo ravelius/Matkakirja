@@ -24,11 +24,24 @@
  * mediatiedosto EI ole virhe: tulostaa `ei lähdettä: <polku>` ja käyttää
  * paikkamerkkiä / jättää kentän pois.
  *
+ * BLENDER-PUTKI (Linnanrakentaja 30.9.2026; TF 1.0.61 näytti palikkalinnan, koska Blender-tuotokset olivat vain
+ * paikallisessa _valmiit-kansiossa ja Siirtosepän peilissä). PEILI EI OLE JULKAISU. Jokaisella dioraamalla, jolla on
+ * Blender-kuori tai leivotut tilat, julkaisu kulkee näin:
+ *   1. Leivonta/kuori → /Users/Shared/Claude/proto-3d/_valmiit/<id>-blender/ (ulkokuori/, tilat/, valot/).
+ *   2. OMISTAJA ajaa tools/dioraama/vie-blender.sh [--rakennus <id>] (ensin --kuiva): muuttumaton kansio
+ *      dioraama/<id>/blender/<hash>/ ämpäriin ja js/dioraama/rakennukset/<id>/blender.json repoon.
+ *   3. blender.json commitoidaan ja mergetään (Julkaisijan juna). Tämä tiedosto lukee sen main():ssa ja lisää
+ *      kentät lisaaBlender():lla; tarkistaBlenderPaketti() hylkää paketin ilman ulkokuorta (tests/dioraama-blender).
+ *   4. vie-dioraama.yml tarkistaa lähdekansion, kopioi sen palvelimella pakettiin <hash>/blender/ ja vaihtaa
+ *      osoittimen vasta sitten. 5. Siirtoseppä todentaa PUHTAALLA asennuksella (ei peiliä).
+ *   Jokainen _valmiit-muutos = uusi vie-blender.sh-ajo (uusi hash) + uusi blender.json-commit, muuten julkaisu jää
+ *   vanhaan. main() varoittaa, jos _valmiit-kansio on olemassa mutta blender.json puuttuu tai on sitä vanhempi.
+ *
  * EI UUSIA NPM-RIIPPUVUUKSIA. B1:n (glb.mjs) ja B2:n (reseptit.mjs) tiedostoja
  * ei muokata tästä — vain käytetään niiden dokumentoitua rajapintaa.
  */
 
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -37,6 +50,7 @@ import { performance } from 'node:perf_hooks';
 import { kirjoitaGlb, kirjoitaMonisolmuGlb } from './glb.mjs';
 import { teeHahmo3d } from './hahmot3d.mjs';
 import { sijoita } from './reseptit.mjs';
+import { sijoitaTila } from './sijoitus.mjs';
 import { mulberry32 } from './reseptit-apu.mjs';
 import { luoBvh, leivoAO, lampo } from './ao.mjs';
 import {
@@ -250,6 +264,12 @@ export function tihenna(kolmiot, maxReuna) {
     const s = [d2(a, b), d2(b, c), d2(c, a)];
     const i = s[0] >= s[1] && s[0] >= s[2] ? 0 : s[1] >= s[2] ? 1 : 2;
     if (s[i] <= raja) { tulos.push(t); continue; }
+    // Erä 3 (kolmiobudjetti): kapeita kaistaleita (korkeus pisintä sivua vasten < KAISTALE_M, esim. lattian
+    // 1 cm:n viisteet ja lankkujen sivut) ja alaspäin osoittavia pintoja (pohjat) ei tihennetä — niiden AO:n
+    // vaihtelu ei näy, mutta pitkinä ne tuottivat kymmeniätuhansia kolmioita (keskushallin lattia 187 k).
+    if (maxReuna < KAISTALE_TIHENNYS_RAJA && (kaistale(a, b, c, s[i]) || alaspain(t, a, b, c))) {
+      tulos.push(t); continue;
+    }
     // Kierrä niin, että puolitettava sivu on p0–p1.
     const j = [i, (i + 1) % 3, (i + 2) % 3];
     const P = j.map((k) => t.p[k]), N = t.n ? j.map((k) => t.n[k]) : null;
@@ -268,6 +288,22 @@ export function tihenna(kolmiot, maxReuna) {
   return tulos;
 }
 
+const KAISTALE_M = 0.15; // tihennetään vain, jos kolmion korkeus pisintä sivua vasten on ≥ tämä
+const KAISTALE_TIHENNYS_RAJA = 1; // sääntö koskee hienoa tihennystä (kohdistettavat tilat, 0,5 m)
+/** Kolmion korkeus pisintä sivua vasten (2 · ala / pisin sivu) < KAISTALE_M. */
+function kaistale(a, b, c, pisin2) {
+  const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]], v = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
+  const x = u[1] * v[2] - u[2] * v[1], y = u[2] * v[0] - u[0] * v[2], z = u[0] * v[1] - u[1] * v[0];
+  return Math.hypot(x, y, z) / Math.sqrt(pisin2) < KAISTALE_M;
+}
+/** Pinta osoittaa alas (normaalin y < −0,7): pohjat eivät näy dioraaman kameroista. */
+function alaspain(t, a, b, c) {
+  if (t.n) return (t.n[0][1] + t.n[1][1] + t.n[2][1]) / 3 < -0.7;
+  const u = [b[0] - a[0], b[1] - a[1], b[2] - a[2]], v = [c[0] - a[0], c[1] - a[1], c[2] - a[2]];
+  const x = u[1] * v[2] - u[2] * v[1], y = u[2] * v[0] - u[0] * v[2], z = u[0] * v[1] - u[1] * v[0];
+  return y / (Math.hypot(x, y, z) || 1) < -0.7;
+}
+
 /** Tihennyksen sivuraja palikalle (m): vesi ei tarvitse AO:ta, kallio on iso ja karkea. */
 export function tihennysraja(palikka, tila) {
   if (palikka.resepti === 'vesi') return Infinity;
@@ -275,8 +311,62 @@ export function tihennysraja(palikka, tila) {
   return tila.kohdistettava === false ? 2 : 0.5;
 }
 
+/**
+ * Blender-tuotokset rakennus.json:iin (Linnanrakentaja 30.9., TF 1.0.61:n palikkalinna): tools/dioraama/vie-blender.sh
+ * lataa kuoren, leivotut tilat ja valoatlakset muuttumattomaan kansioon dioraama/<id>/blender/<hash>/ ja kirjoittaa
+ * blender.json:n. Paketissa ne ovat alikansiossa blender/ (vie-dioraama.yml kopioi ne palvelimella), rakennus.json saa
+ * Siirtosepän peilin kentät (tunnelma, ulkokuori, tilat[].glb → leivottu, tilat[].valoatlas) ja tilat rajataan niihin,
+ * joilla on leivottu glb (massa korvautuu kuorella, kuten peilissä). Muokkaa rakennusJsonia paikallaan, palauttaa
+ * manifestin rivit. Puuttuva kuoritiedosto blender.json:ssa on virhe.
+ */
+export function lisaaBlender(rakennusJson, blender) {
+  const on = new Map(blender.tiedostot.map((t) => [t.polku, t]));
+  const B = (p) => { if (!on.has(p)) throw new Error(`blender.json: puuttuu ${p}`); return `blender/${p}`; };
+  const tasot = { huippu: '4k', normaali: '4k', kevyt: '2k' };
+  rakennusJson.tunnelma = 'hamara';
+  rakennusJson.ulkokuori = {
+    ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
+    vesi: -7,
+    tekstuurit: {
+      ...Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-${k}-4x4.astcm`)])),
+      hamara: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}-4x4.astcm`)])),
+      hamaraJpg: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}.jpg`)])),
+    },
+  };
+  const atlas = (id, v) => ({
+    tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
+    astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
+  });
+  rakennusJson.tilat = rakennusJson.tilat.filter((t) => on.has(`tilat/${t.id}.glb`));
+  for (const t of rakennusJson.tilat) {
+    const g = on.get(`tilat/${t.id}.glb`);
+    t.glb = { tiedosto: B(`tilat/${t.id}.glb`), sha256: g.sha256, tavuja: g.tavuja };
+    if (on.has(`valot/${t.id}.jpg`)) {
+      t.valoatlas = atlas(t.id, '');
+      if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
+    }
+  }
+  return blender.tiedostot.map((t) => ({ polku: `blender/${t.polku}`, sha256: t.sha256, tavuja: t.tavuja }));
+}
+
+/**
+ * Palikkapaketin vartija (TF 1.0.61): kun rakennuksella on blender.json, rakennus.json EI saa lähteä ilman ulkokuorta
+ * tai proseduraalisilla tila-glb:illä. Heittää virheen, jolloin rakennus ja vie-dioraama.yml pysähtyvät ennen latausta.
+ */
+export function tarkistaBlenderPaketti(rakennusJson, blender) {
+  if (!blender) return;
+  const k = rakennusJson.ulkokuori;
+  if (!k || !['huippu', 'normaali', 'kevyt'].every((t) => typeof k[t] === 'string' && k[t].startsWith('blender/'))) {
+    throw new Error(`${rakennusJson.id}: blender.json on olemassa, mutta rakennus.json:sta puuttuu ulkokuori (palikkapaketti)`);
+  }
+  if (!rakennusJson.tilat?.length) throw new Error(`${rakennusJson.id}: blender.json on olemassa, mutta tiloja ei ole`);
+  for (const t of rakennusJson.tilat) {
+    if (!t.glb?.tiedosto?.startsWith('blender/')) throw new Error(`${rakennusJson.id}/${t.id}: tila-glb ei ole leivottu (blender/)`);
+  }
+}
+
 export async function rakennaData(rakennus, {
-  ulos = 'dist/dioraama', saateita = 48, assetsJuuri = OLETUS_ASSETS_JUURI, aanetKansio = null,
+  ulos = 'dist/dioraama', saateita = 48, assetsJuuri = OLETUS_ASSETS_JUURI, aanetKansio = null, blender = null,
 } = {}) {
   if (!rakennus || typeof rakennus.id !== 'string' || rakennus.id.length === 0) {
     throw new Error('rakennaData: rakennus.id puuttuu tai ei ole merkkijono');
@@ -284,6 +374,9 @@ export async function rakennaData(rakennus, {
   if (!Array.isArray(rakennus.tilat) || rakennus.tilat.length === 0) {
     throw new Error(`rakennaData: rakennuksella '${rakennus.id}' ei ole yhtään tilaa`);
   }
+  // Tilakohtainen sijoitus (sijoitus.mjs, speksi rajapinnat-blender kohta 2): muunnetaan ENNEN kaikkea muuta, jolloin
+  // glb:t, AO ja rakennus.json (JSON-kopio alempana) saavat sijoitetut arvot. Ei muuta alkuperäistä.
+  rakennus = { ...rakennus, tilat: rakennus.tilat.map(sijoitaTila) };
   const aikaAlku = performance.now();
   const kansio = join(ulos, rakennus.id);
   mkdirSync(join(kansio, 'tilat'), { recursive: true });
@@ -424,6 +517,45 @@ export async function rakennaData(rakennus, {
     });
   }
 
+  // Irtoesineet (elävä linna, voudin sinetti 29.9.): tilan `esineet[]` ovat palikan muotoisia (resepti, paikka, suunta,
+  // parametrit), mutta niitä EI yhdistetä tilan verkkoon eikä valoatlakseen, koska natiivi liikuttaa niitä (arkun kansi
+  // aukeaa saranastaan, sinetti nousee käteen). Jokainen omaksi glb:kseen esineet/<tila>-<id>.glb (maailmakoordinaatit
+  // kuten tilat; COLOR_0: AO 1, lämpö = pinnan hehku). Valinnainen `sarana: [u, y, w]` (esineen paikallinen) viedään
+  // maailmapisteeksi ja `akseli` esineen u-suunnaksi, jonka ympäri natiivi kääntää `avaa`-asteen verran.
+  const esineTulokset = new Map();
+  for (const tila of rakennus.tilat) {
+    for (const e of tila.esineet ?? []) {
+      mkdirSync(join(kansio, 'esineet'), { recursive: true });
+      const raw = sijoita(e);
+      for (const k of raw) k.osa = `${tila.id}:${e.id}`;
+      const ryhmat = ryhmitteleJaHitsaa(raw);
+      const osat = [];
+      for (const pinta of [...ryhmat.keys()].sort()) {
+        const r = ryhmat.get(pinta); kaytetytPinnat.add(pinta);
+        const karkia = r.positions.length / 3, varit = new Uint8Array(karkia * 4);
+        const g = Math.round(Math.min(1, PINNAT[pinta]?.hehku ?? 0) * 255);
+        for (let i = 0; i < karkia; i++) varit.set([255, g, Math.round(osanSatunnaisluku(r.osaTunnisteet[i]) * 255), 255], i * 4);
+        osat.push({
+          pinta, vari: PINNAT[pinta].vari, paikat: Float32Array.from(r.positions), normaalit: Float32Array.from(r.normals),
+          uv: Float32Array.from(r.uvs), varit, kolmiot: Uint32Array.from(r.indices),
+        });
+      }
+      const buf = kirjoitaGlb({ nimi: `${tila.id}-${e.id}`, osat });
+      const tiedosto = `esineet/${tila.id}-${e.id}.glb`;
+      writeFileSync(join(kansio, tiedosto), buf);
+      const tulos = { tiedosto, sha256: createHash('sha256').update(buf).digest('hex'), tavuja: buf.length };
+      if (Array.isArray(e.sarana)) {
+        const s = (e.suunta || 0) * Math.PI / 180, r = [Math.cos(s), 0, Math.sin(s)], f = [Math.sin(s), 0, -Math.cos(s)];
+        const [u, y, w] = e.sarana, [px, py, pz] = e.paikka;
+        const pyor = (x) => Math.round(x * 1e6) / 1e6;
+        tulos.sarana = [pyor(px + u * r[0] + w * f[0]), pyor(py + y), pyor(pz + u * r[2] + w * f[2])];
+        tulos.akseli = r.map(pyor);
+      }
+      if (!esineTulokset.has(tila.id)) esineTulokset.set(tila.id, []);
+      esineTulokset.get(tila.id).push({ id: e.id, ...tulos });
+    }
+  }
+
   // RAKENNUS-tason taulun äänet (era2 kohta 2 "AANET"): eri taulu kuin tilojen omat (esim.
   // 'massa'-tilalla ei ole omaa taulua — se käyttää tätä yhteistä linnan taulua).
   for (const kohta of rakennus.taulu?.kohdat ?? []) {
@@ -510,6 +642,10 @@ export async function rakennaData(rakennus, {
     // Rekvisiitan valot (era2b kohta 3) tilan OMAN valot-listan jatkoksi — sama muoto
     // (paikka, sade, voima, vari), lisänä lahde: 'rekvisiitta' ja lepatus (ks. valotPerTila yllä).
     t.valot = [...(t.valot ?? []), ...valotPerTila.get(t.id)];
+    if (t.esineet) {
+      const et = esineTulokset.get(t.id) ?? [];
+      t.esineet = t.esineet.map((e) => ({ ...e, ...et.find((x) => x.id === e.id) }));
+    }
   }
   rakennusJson.pinnat = {};
   for (const id of [...kaytetytPinnat].sort()) {
@@ -566,6 +702,23 @@ export async function rakennaData(rakennus, {
   // pysyy tyhjänä, kuten Liekit/Aanet vanhassa muodossa).
   if (hahmo3dTulokset.length > 0) rakennusJson.liikkeet = LIIKKEET;
 
+  // Blender-tuotokset (ks. alkukommentin BLENDER-PUTKI): kentät lisaaBlender(), tarkistus ennen rakennus.json:n kirjoitusta.
+  const blenderRivit = blender ? lisaaBlender(rakennusJson, blender) : [];
+  tarkistaBlenderPaketti(rakennusJson, blender);
+
+  // Matkamuistojen kuvat (voudin sinetti 29.9., Pelikoodarin löytökortti): <assets>/<rakennus>/matkamuistot/<etsinta.id>.jpg
+  // pakettiin samaan polkuun, etsintään kenttä `kuva` ja manifestiin. Puuttuva kuva ei ole virhe (kortti ilman kuvaa).
+  const matkamuistoTulokset = [];
+  for (const e of rakennusJson.etsinnat ?? []) {
+    const polku = `matkamuistot/${e.id}.jpg`, lahde = join(assetsJuuri, rakennus.id, polku);
+    if (!existsSync(lahde)) { console.log(`  ei lähdettä: ${lahde}`); continue; }
+    mkdirSync(join(kansio, 'matkamuistot'), { recursive: true });
+    copyFileSync(lahde, join(kansio, polku));
+    const buf = readFileSync(lahde);
+    matkamuistoTulokset.push({ polku, sha256: createHash('sha256').update(buf).digest('hex'), tavuja: buf.length });
+    e.kuva = polku;
+  }
+
   const rakennusJsonBuf = Buffer.from(`${JSON.stringify(rakennusJson, null, 2)}\n`, 'utf8');
   const rakennusJsonPolku = 'rakennus.json';
   writeFileSync(join(kansio, rakennusJsonPolku), rakennusJsonBuf);
@@ -584,6 +737,9 @@ export async function rakennaData(rakennus, {
     ...hahmo3dTulokset.map((h) => ({ polku: h.polku, sha256: h.sha256, tavuja: h.tavuja })),
     ...liekkiTulokset.map((l) => ({ polku: l.polku, sha256: l.sha256, tavuja: l.tavuja })),
     ...aanetTulokset.map((a) => ({ polku: a.polku, sha256: a.sha256, tavuja: a.tavuja })),
+    ...[...esineTulokset.values()].flat().map((e) => ({ polku: e.tiedosto, sha256: e.sha256, tavuja: e.tavuja })),
+    ...matkamuistoTulokset,
+    ...blenderRivit,
     { polku: rakennusJsonPolku, sha256: rakennusJsonSha, tavuja: rakennusJsonBuf.length },
   ].sort((a, b) => (a.polku < b.polku ? -1 : (a.polku > b.polku ? 1 : 0)));
 
@@ -645,7 +801,17 @@ async function main() {
   const moduulinUrl = new URL(`../../js/dioraama/rakennukset/${rakennusId}.js`, import.meta.url);
   const { RAKENNUS } = await import(moduulinUrl.href);
 
-  const tulos = await rakennaData(RAKENNUS, { ulos, saateita, aanetKansio });
+  const blenderPolku = new URL(`../../js/dioraama/rakennukset/${RAKENNUS.id}/blender.json`, import.meta.url);
+  const blender = existsSync(blenderPolku) ? JSON.parse(readFileSync(blenderPolku, 'utf8')) : null;
+  if (blender) console.log(`  blender.json: ${blender.tiedostot.length} tiedostoa, kansio ${blender.kansio}`);
+  const valmiit = `/Users/Shared/Claude/proto-3d/_valmiit/${RAKENNUS.id}-blender`;
+  const uusinValmis = existsSync(valmiit)
+    ? Math.max(0, ...readdirSync(valmiit, { recursive: true }).map((f) => statSync(join(valmiit, f)).mtimeMs)) : 0;
+  if (uusinValmis > 0 && (!blender || uusinValmis > statSync(blenderPolku).mtimeMs)) {
+    console.warn(`  VAROITUS: ${valmiit} on ${blender ? 'uudempi kuin blender.json' : 'olemassa, mutta blender.json puuttuu'}`
+      + ' — peili ei ole julkaisu: omistaja ajaa tools/dioraama/vie-blender.sh ja blender.json commitoidaan.');
+  }
+  const tulos = await rakennaData(RAKENNUS, { ulos, saateita, aanetKansio, blender });
 
   console.log(`${RAKENNUS.otsikko ?? RAKENNUS.nimi} (${RAKENNUS.id}): ${tulos.tilat.length} tilaa\n`);
   let kolmioKaikki = 0; let karkiKaikki = 0; let tavuaKaikki = 0;

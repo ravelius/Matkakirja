@@ -15,6 +15,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { avaaChromium } from '../selain.mjs';
 
 const paketinLahde = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -86,7 +87,7 @@ const PINNAT = [
   // Lehden etusivulla on useita kuvia: jokainen näkyvä kuva napautetaan erikseen.
   { nimi: 'kaupunkilehti Pariisi', avaa: 'lehti:pariisi', kortti: 'dialog.lehti[open]', kuva: 'img', kaikkiKuvat: true, osiot: true },
 ];
-const selain = await paketti.chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await avaaChromium({});
 const ctx = await selain.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block' });
 await ctx.addInitScript((d) => {
   try { localStorage.setItem('matkakirja-save-v1', d); localStorage.removeItem('matkakirja-lauta'); } catch { /* */ }

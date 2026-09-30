@@ -257,11 +257,13 @@ const MODULES = [
    */
   'js/packs/maastokohteet-afg.js',
   'js/packs/maastokohteet-ago.js',
+  'js/packs/maastokohteet-alb.js',
   'js/packs/maastokohteet-are.js',
   'js/packs/maastokohteet-arg.js',
   'js/packs/maastokohteet-aus.js',
   'js/packs/maastokohteet-aut.js',
   'js/packs/maastokohteet-bih.js',
+  'js/packs/maastokohteet-blr.js',
   'js/packs/maastokohteet-bol.js',
   'js/packs/maastokohteet-bra.js',
   'js/packs/maastokohteet-can.js',
@@ -274,6 +276,7 @@ const MODULES = [
   'js/packs/maastokohteet-cub.js',
   'js/packs/maastokohteet-cyp.js',
   'js/packs/maastokohteet-cze.js',
+  'js/packs/maastokohteet-deu.js',
   'js/packs/maastokohteet-dnk.js',
   'js/packs/maastokohteet-dza.js',
   'js/packs/maastokohteet-ecu.js',
@@ -308,10 +311,13 @@ const MODULES = [
   'js/packs/maastokohteet-ltu.js',
   'js/packs/maastokohteet-lva.js',
   'js/packs/maastokohteet-mar.js',
+  'js/packs/maastokohteet-mda.js',
   'js/packs/maastokohteet-mdg.js',
   'js/packs/maastokohteet-mex.js',
+  'js/packs/maastokohteet-mkd.js',
   'js/packs/maastokohteet-mli.js',
   'js/packs/maastokohteet-mmr.js',
+  'js/packs/maastokohteet-mne.js',
   'js/packs/maastokohteet-mng.js',
   'js/packs/maastokohteet-moz.js',
   'js/packs/maastokohteet-nam.js',
@@ -342,6 +348,7 @@ const MODULES = [
   'js/packs/maastokohteet-slb.js',
   'js/packs/maastokohteet-sle.js',
   'js/packs/maastokohteet-som.js',
+  'js/packs/maastokohteet-srb.js',
   'js/packs/maastokohteet-swe.js',
   'js/packs/maastokohteet-syr.js',
   'js/packs/maastokohteet-tcd.js',
@@ -438,6 +445,8 @@ const MODULES = [
   // passport ennen omistusta: omistus.js tuo sen staattisesti.
   'js/passport.js',
   'js/linssit/rekisteri.js',
+  // Apurahan kortti ja esittelylinssien avain (omistus.js ja ui.js tuovat).
+  'js/apuraha.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
@@ -529,6 +538,8 @@ const MODULES = [
   // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
   // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
   'js/lahteet.js',
+  // Nimetön kävijälaskuri (main.js tuo; tarvitsee pollo-asetukset.js:n).
+  'js/kaynti.js',
   'js/aani-ehdokkaat.js',
   /*
    * Taustavahti ENNEN kaikkea ääntä: jokainen äänimoduuli (sound,
@@ -894,6 +905,8 @@ const MODULES = [
    * versiossa moduulit ajetaan listan järjestyksessä, eikä tuoja saa
    * olla ennen tuotua.
    */
+  // Deltasarjan laattakartta (29.9.2026): js/pallo.js ja js/laattapyramidi.js tuovat tämän.
+  'js/deltasarja.js',
   'js/reliefipyramidi.js',
   'js/laattapyramidi.js',
   /*

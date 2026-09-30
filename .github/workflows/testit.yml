@@ -39,7 +39,16 @@
 name: Testit
 
 on:
+  # Docs-pikatie (omistaja 29.9.2026 klo 19.2x, NATIIVI ENSIN): PR, joka
+  # muuttaa vain dokumentteja, raportteja tai natiivin muutoslokia, ei aja
+  # testejä (paths-ignore ohittaa ajon vain, jos KAIKKI muutokset osuvat
+  # listaan). Mainia ei ole haarasuojattu, joten puuttuva tarkistus ei estä
+  # mergeä; Julkaisija mergee muutosloki-PR:n suoraan ilman junaa.
   pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '**/*.md'
+      - 'tools/vienti/muutosloki-natiivi.json'
   push:
     branches:
       - main

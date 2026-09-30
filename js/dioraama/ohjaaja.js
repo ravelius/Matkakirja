@@ -136,3 +136,19 @@ export function puluLento(alku, loppu, t01) {
     p0 * alku[2] + p1 * huippu[2] + p2 * loppu[2],
   ];
 }
+
+/**
+ * seuraavaKiertueella(rakennus, tilaId) → tilaId | null (era 3 kohta 5, Pulun kiertue).
+ * rakennus.kiertue on kohdistettavien tilojen id:t järjestyksessä (puuttuva = tyhjä).
+ * Säännöt: tyhjä kiertue → null; tilaId null/undefined tai 'massa' → ensimmäinen;
+ * tilaId kiertueella → seuraava, viimeinen → null (= yleisnäkymä);
+ * tilaId ei kiertueella → ensimmäinen. C#-pari: Ohjaaja.SeuraavaKiertueella.
+ */
+export function seuraavaKiertueella(rakennus, tilaId) {
+  const kiertue = (rakennus && rakennus.kiertue) || [];
+  if (kiertue.length === 0) return null;
+  if (tilaId == null || tilaId === 'massa') return kiertue[0];
+  const i = kiertue.indexOf(tilaId);
+  if (i < 0) return kiertue[0];
+  return i + 1 < kiertue.length ? kiertue[i + 1] : null;
+}
