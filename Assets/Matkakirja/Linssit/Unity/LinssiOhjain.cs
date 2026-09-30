@@ -1707,9 +1707,11 @@ namespace Matkakirja.Natiivi
                             else if (osat.Length > 6)
                             {
                                 string pintaAvain = "iss-pinta-" + osat[3];
-                                string pintaTulos = pintaKerrokset.LisaaRasteri(pintaAvain, osat[4], CesiumUrlTemplateRasterOverlayProjection.WebMercator,
+                                // {docs} = sovelluksen Documents (laatat devicectl:llä laitteelle, file://).
+                                string pintaUrl = osat[4].Replace("{docs}", "file://" + Application.persistentDataPath);
+                                string pintaTulos = pintaKerrokset.LisaaRasteri(pintaAvain, pintaUrl, CesiumUrlTemplateRasterOverlayProjection.WebMercator,
                                     (int)Luku(osat[5]), (int)Luku(osat[6]), 1f);
-                                Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")} {osat[4]} z{osat[5]}–{osat[6]}");
+                                Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")} {pintaUrl} z{osat[5]}–{osat[6]}");
                             }
                         }
                         else if (a == "vertailu" && osat.Length > 3)
