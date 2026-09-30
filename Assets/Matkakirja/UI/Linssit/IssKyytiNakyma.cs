@@ -122,7 +122,27 @@ namespace Matkakirja.Natiivi
             var r = n.poyta.Juuri.worldBound;
             var ruutu = n.juuri.panel?.visualTree.layout ?? Rect.zero;
             return $"kytkin: pöytä {(Kytkinpoyta ? "päällä" : "pois")}, {r.width:0} × {r.height:0} pt, peitto {(ruutu.height > 0 ? r.height / ruutu.height * 100 : 0):0.0} % korkeudesta, "
-                 + $"kuvat {(IssKytkimet.KuvatPaikalla ? "Codex" : "paikkamerkit")}, nopeus {n.poyta.Nopeus.Asento}";
+                 + $"kuvat {(IssKytkimet.KuvatPaikalla ? "Codex" : "paikkamerkit")}, nopeus {n.poyta.Nopeus.Asento}, "
+                 + $"kerrokset {n.poyta.Asettelu ?? "ei"}, valosumma piirretty {n.poyta.Piirretty}×";
+        }
+
+        /// <summary>A/B `astro kyyti kerrokset 0|1`: Linnanrakentajan renderikerrokset ↔ paikkamerkit (IssPaneeliKuvat).</summary>
+        public static void SivulevytAB(bool paalla)
+        {
+            IssKytkinpoyta.Sivulevyt = paalla;
+            if (instanssi != null) { instanssi.poyta.Asettele(instanssi.poytaLeveys); instanssi.PaivitaPulu(); }
+        }
+
+        public static void VaakaAB(bool paalla)
+        {
+            IssKytkinpoyta.VaakaRajaus = paalla;
+            if (instanssi != null) { instanssi.poyta.Asettele(instanssi.poytaLeveys); instanssi.PaivitaPulu(); }
+        }
+
+        public static void KerroksetAB(bool paalla)
+        {
+            IssPaneeliKuvat.Kaytossa = paalla;
+            if (instanssi != null) instanssi.poyta.Asettele(instanssi.poytaLeveys);
         }
 
         string PaneelinMitta()
@@ -364,8 +384,11 @@ namespace Matkakirja.Natiivi
                 turva.style.left = r.x; turva.style.top = r.y; turva.style.right = r.z; turva.style.bottom = r.w;
                 // Ohjauspöydän leveys: ruutu − 24, enintään 560 pt, keskellä (kutistettuna vain nappi vasemmalla).
                 poytaLeveys = juuri.layout.width - r.x - r.z;
+                // Horisonttikulma (IssKuvakulma.IkkunanKatse): ikkunaympyrän koko riippuu ruudun kuvasuhteesta.
+                if (juuri.layout.height > 1f) IssKuvakulma.RuudunSuhde = juuri.layout.width / juuri.layout.height;
                 AsetteleOhjaimet();
-                poyta.Asettele(poytaLeveys);
+                poyta.RuudunKorkeus = juuri.layout.height;
+                poyta.Asettele(poytaLeveys, r.w);
                 PaivitaKupu();   // ruutu kääntyi: pyöreän rajauksen kupu vaakaan tai pystyyn heti
                 PaivitaPulu();
             });
@@ -408,9 +431,17 @@ namespace Matkakirja.Natiivi
             // Pyöreä ikkuna täyttää ~94 % lyhyemmästä sivusta keskellä; linnun keskipiste (0,25 R, 0,3 R) keskeltä, jolloin se
             // mahtuu aukkoon myös puhelimella. Alueen oikea alakulma on linnun keskipisteestä noin (66, 55) pt (Pulu.Oikea).
             float R = 0.46f * Mathf.Min(W, H);
-            p.IkkunanTakana = ikkunassa ? new Vector2(W * 0.5f + 0.25f * R + 66f, H * 0.5f + 0.3f * R + 55f) : (Vector2?)null;
             var pe = Poyta;
             bool poytaNakyy = Tila != KyydinTila.Kauko && pe.resolvedStyle.display != DisplayStyle.None && pe.worldBound.height > 0;
+            var kulma = new Vector2(W * 0.5f + 0.25f * R + 66f, H * 0.5f + 0.3f * R + 55f);
+            // Vaakana pöytä peittää ikkunan alaosan (Päätoimittaja 30.9.: iPhone vaakana vain kypärä pilkisti pöydän takaa):
+            // linnun alue pöydän näkyvän yläreunan (kupu) yläpuolelle 6 pt:n välillä.
+            if (ikkunassa && poytaNakyy)
+            {
+                float yla = pe.worldBound.yMin - juuri.worldBound.yMin + (Kytkinpoyta ? poyta.YlaReuna : 0f) - 6f;
+                kulma.y = Mathf.Min(kulma.y, yla);
+            }
+            p.IkkunanTakana = ikkunassa ? kulma : (Vector2?)null;
             p.AlaVara = poytaNakyy && !ikkunassa ? H - pe.worldBound.yMin + 6f : 0f;
         }
 
@@ -428,12 +459,13 @@ namespace Matkakirja.Natiivi
                 if (kohteet == null || kohteet.Count == 0) return;
                 listaTaytetty = true;
                 // Oma sijainti ensin (karkea: maan keskipiste IP:n maasta, ilman lupakyselyä; OmaSijaintiHaku).
-                omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); LennaOmaan(); }, lista);
+                omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); omaLento = true; LennaOmaan(); }, lista);
                 omaNappi.AddToClassList("mk-isskyyti__kohde--oma");
                 foreach (var k in kohteet)
                 {
                     string tunnus = k.Tunnus;
-                    Rakenne.Nappi(k.Nimi, "mk-isskyyti__kohde", () => { SuljeLista(); Linssi()?.LennaKohteeseen(tunnus); }, lista);
+                    string kohdeNimi = k.Nimi;
+                    Rakenne.Nappi(k.Nimi, "mk-isskyyti__kohde", () => { SuljeLista(); viimeKohde = kohdeNimi; omaLento = false; Linssi()?.LennaKohteeseen(tunnus); }, lista);
                 }
             }
             // Kytkinpöydällä lista on turva-alueen lapsi pöydän yläpuolella (pöydän levyinen); välilehtipaneelissa Kohde-sivulla.
@@ -442,7 +474,7 @@ namespace Matkakirja.Natiivi
                 if (lista.parent != turva) turva.Add(lista);
                 lista.style.position = Position.Absolute;
                 lista.style.left = poyta.Juuri.layout.x; lista.style.width = poyta.Juuri.layout.width;
-                lista.style.bottom = turva.layout.height - poyta.Juuri.layout.y + 6f;
+                lista.style.bottom = turva.layout.height - poyta.Juuri.layout.y - poyta.YlaReuna + 6f;
                 poyta.Kohde.Tila = IssKytkimet.Tila.Aktiivinen;
             }
             else if (lista.parent != sivut[1])
@@ -459,6 +491,10 @@ namespace Matkakirja.Natiivi
             lista.style.display = DisplayStyle.Flex;
             peite.style.display = DisplayStyle.Flex;
         }
+
+        /// <summary>Renderipaneelin kilvet: viimeksi valittu kohde ja onko lento omaan paikkaan (OMA PAIKKA PÄÄLLÄ/POIS).</summary>
+        static string viimeKohde;
+        static bool omaLento;
 
         /// <summary>"Oma sijainti": lento maan keskipisteen ylle; jos maa ei ole vielä tiedossa, haku ja lento perään.</summary>
         static void LennaOmaan()
@@ -481,7 +517,9 @@ namespace Matkakirja.Natiivi
             {
                 poyta.Pilvet.Aseta(m, m <= 0.01f ? "0 %" : m >= 0.99f ? "NYT" : $"{Mathf.RoundToInt(m * 100)} %");
                 string nimi = Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1];
-                poyta.Vuodenaika.Aseta(kk, (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kk == nyt ? " •" : ""));
+                // Renderipaneelin kilvessä koko nimi (tarrakirjoitin), kehyksessä lyhenne.
+                poyta.Vuodenaika.Aseta(kk, poyta.Asettelu != null ? nimi.ToUpperInvariant()
+                    : (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kk == nyt ? " •" : ""));
             }
         }
 
@@ -515,7 +553,7 @@ namespace Matkakirja.Natiivi
             bool oliAuki = Tila != KyydinTila.Kauko;
             Tila = tila;
             bool auki = tila != KyydinTila.Kauko;
-            juuri.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            juuri.style.display = auki && !Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue ? DisplayStyle.Flex : DisplayStyle.None;
             // Nopeutettuna (web tietorivi kertoimella): "● 100× · ISS · …" ilman LIVE-sanaa, piste harmaa eikä syki.
             var rivi = KyydinTeksti.Tietorivi(korkeusKm, nopeusKmh, arvio, aika.Nopeutettu ? aika.Nopeus : (double?)null);
             if (auki) { tieto.text = rivi.Teksti; live.text = rivi.Merkki ?? ""; }
@@ -547,7 +585,14 @@ namespace Matkakirja.Natiivi
                 poyta.Live.Meripihka = aika.Nopeutettu;
                 poyta.Live.Nimi.text = aika.Nopeutettu ? "PALAA" : "LIVE";
                 int ix = Array.IndexOf(Simukello.Nopeudet, aika.Porras);
-                poyta.Nopeus.Aseta(ix >= 0 && !aika.Kelaa ? ix : 0, aika.Kelaa ? "…" : null);
+                // Kilpi: kelaus "…", päivänvalosiirto PÄIVÄ, muu ei-LIVE 1×:llä "1×" (laite 30.9.: PALAA-valo ja kilpi LIVE yhtä aikaa).
+                poyta.Nopeus.Aseta(ix >= 0 && !aika.Kelaa ? ix : 0, aika.Kelaa ? "…" : aika.Paiva ? "PÄIVÄ" : aika.Nopeutettu && ix <= 0 ? "1×" : null);
+                // Arvokilvet (renderipaneeli; Päätoimittaja 30.9.): kohde, oma paikka, näkymä.
+                bool lennossa = tila == KyydinTila.Kohde;
+                if (!lennossa) omaLento = false;
+                poyta.Kohde.Kilpi.text = lennossa && !omaLento && viimeKohde != null ? viimeKohde.ToUpperInvariant() : "VALITSE";
+                poyta.Oma.Kilpi.text = lennossa && omaLento ? "PÄÄLLÄ" : "POIS";
+                poyta.Sulku.Kilpi.text = tila == KyydinTila.Ikkuna ? "CUPOLA" : tila == KyydinTila.Seuranta ? "SEURANTA" : lennossa ? "LENTO" : "KYYTI";
             }
             if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;
@@ -1066,9 +1111,10 @@ namespace Matkakirja.Natiivi
         /// Keila tulee auringon suunnasta ruudulla (Valo.xy; suoraan edessä tai takana oletusvinous ylävasemmalta), joten se
         /// kääntyy hitaasti ISS:n kiertäessä. Hiukkanen on pehmeä säteittäinen hehku (PolyKuva, isommat epätarkempia) ja
         /// välähtää kääntyessään (tuike). Liike 0,6–2 pt/s ja kevyt pyörre; vähennetyllä liikkeellä paikallaan.
-        /// A/B `astro kyyti polyt 0|1`.
+        /// A/B `astro kyyti polyt 0|1`. POIS 30.9. (omistaja: "nykyiset pölyhiukkaset ovat keinotekoisen näköisiä ja ne voi
+        /// ottaa pois"): ei piirretä eikä ajeta; koodi jää A/B:ksi mahdollista uutta toteutusta varten.
         /// </summary>
-        public static bool Polyt = true;
+        public static bool Polyt = false;
         const int PolyMaara = 34;
         /// <summary>Keilan puolileveys (σ) osuutena ruudun lyhyemmästä sivusta ja hiukkasen suurin peitto.</summary>
         const float KeilaOsuus = 0.2f, PolyPeitto = 0.65f;

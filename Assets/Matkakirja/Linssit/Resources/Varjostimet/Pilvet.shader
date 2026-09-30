@@ -11,6 +11,9 @@
 // liikkuu vain reunavyöhykkeellä, joten pilvien paikat ja peitto pysyvät kuvan mukaisina. Kahden alimman oktaavin kohina
 // antaa pilvien pinnalle ±5 %:n kirkkausvaihtelun. Alle kahden pikselin oktaavit häivytetään. Kun kohinasta ei näy mitään
 // (kaukaa, horisontissa), tulos palaa pelkkään kuvaan.
+// PILVIEN VALAISTUS KYYDISSÄ (fotorealismi osa 3, Linssiseppä 30.9.2026; _Valaistus > 0): auringon korkeus pilven kohdalla
+// himmentää pilven terminaattoria kohti ja punertaa sen matalassa valossa (aurinko 0…12°), ohuet pilvet harmaampia kuin
+// paksut (valo siroaa läpi); yön tummennus on edelleen Yokuorilla. A/B `astro kyyti pilvivalo 0|1`.
 Shader "Matkakirja/Linssit/Pilvet"
 {
     Properties
@@ -28,6 +31,8 @@ Shader "Matkakirja/Linssit/Pilvet"
         _KeilaAsisa("Pääkeila: cos sisäreuna, voimakkuus", Vector) = (2, 0, 0, 0)
         _KeilaB("Toinen keila: suunta, cos ulkoreuna", Vector) = (0, 0, 1, 2)
         _KeilaBsisa("Toinen keila: cos sisäreuna, voimakkuus", Vector) = (2, 0, 0, 0)
+        _Valaistus("Auringon valaistus kyydissä (0 = pois)", Range(0, 1)) = 0
+        _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
     }
     SubShader
     {
@@ -61,6 +66,8 @@ Shader "Matkakirja/Linssit/Pilvet"
                 half _Tasainen;
                 float4 _Keskus;
                 float4 _KeilaA, _KeilaAsisa, _KeilaB, _KeilaBsisa;
+                half _Valaistus;
+                float4 _Aurinko;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -112,7 +119,17 @@ Shader "Matkakirja/Linssit/Pilvet"
 
             // Pilvipeiton säädin (omistaja 28.9. TF 1.0.39: "Pilvet peittävät aika paljon"): kynnys alfasta heti näytteen jälkeen,
             // joten ohuet pilvet katoavat ensin ja paksut jäävät (tasainen alfakerroin tekisi kaikista harsoa). K = 0 ennallaan.
-            float Karsi(float a) { return _Karsinta > 0.0 ? saturate((a - _Karsinta) / max(1.0 - _Karsinta, 1e-3)) : a; }
+            // Pehmeä kynnys (Päätoimittaja 30.9.: 30 %:n peitolla pilvet litteitä ja teräväreunaisia kuin paperi, koska
+            // kynnys 0,7 venytti alfan 0,7…1 koko väliin): liuku 0,12 kynnyksen alapuolelta ja smoothstep, jolloin reunat häipyvät.
+            float Karsi(float a)
+            {
+                if (_Karsinta <= 0.0) return a;
+                // Liuku kapenee täyteen karsintaan: 0 % = ei yhtään pilveä (laite 30.9.: kilpi 0 % ja tiheimmät pilvet näkyivät).
+                if (_Karsinta >= 0.999) return 0.0;
+                float k0 = max(0.0, _Karsinta - 0.12 * saturate((1.0 - _Karsinta) / 0.3));
+                float r = saturate((a - k0) / max(1.0 - k0, 1e-3));
+                return r * r * (3.0 - 2.0 * r);
+            }
 
             half4 TarkatPilvet(Vali i, out half vaihtelu)
             {
@@ -164,7 +181,7 @@ Shader "Matkakirja/Linssit/Pilvet"
                     const float Sigma = 0.39;
                     float fn = summa * rsqrt(max(nakyva, 1e-4)) / Sigma;
                     float t = 0.5 + 0.36 * tanh(0.8 * fn);
-                    aTarkka = smoothstep(t - 0.08, t + 0.08, a0);
+                    aTarkka = smoothstep(t - 0.16, t + 0.16, a0);   // ± 0,16 (oli 0,08: paperireuna)
                     vaihtelu = (half)(0.05 * clamp(ala / Sigma, -2.5, 2.5) * nak);
                 }
                 c.a = lerp(a0, aTarkka, nak);
@@ -186,6 +203,14 @@ Shader "Matkakirja/Linssit/Pilvet"
                     c.a = max(c.a, _Tasainen);
                 }
                 half valo = 1.0h;
+                if (_Valaistus > 0.0h)
+                {
+                    float mu = dot(normalize(i.maailma - _Keskus.xyz), normalize(_Aurinko.xyz));
+                    half paiva = (half)smoothstep(-0.12, 0.3, mu);
+                    half3 matala = lerp(half3(1.0h, 0.58h, 0.36h), 1.0h, (half)smoothstep(0.0, 0.21, mu));
+                    half paksuus = lerp(0.8h, 1.0h, saturate(c.a * 1.4h));
+                    c.rgb *= lerp(1.0h, matala * lerp(0.35h, 1.0h, paiva) * paksuus, _Valaistus);
+                }
                 if (_Hamara > 0.0h)
                 {
                     // Keilat maan keskipisteestä katsottuina (cos-kulmat): pilvi on keilassa yhtä kirkas kuin pallo.

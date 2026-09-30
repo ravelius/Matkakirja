@@ -18,7 +18,7 @@ Shader "Matkakirja/Linssit/Revontulet"
     }
     SubShader
     {
-        Tags { "RenderType" = "Transparent" "Queue" = "Transparent-45" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" }
+        Tags { "RenderType" = "Transparent" "Queue" = "Transparent-36" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" }
         Pass
         {
             Name "Forward"
