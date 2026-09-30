@@ -88,3 +88,20 @@ omistajan TCC-lupa) tai omistajan laite + kehitysversio (asennuslupa Natiivisep�
 - **Seuraavaksi:** PCM on 1.0.68-junassa (de11ce65). iPad Pro 13 -laitekäännös 4426b7a6 (Natiiviseppä) → A/B `puhe pakattu 1`
   vs `0` Lontoo → Edinburgh, musiikki ja maisema päällä, ABAB. FMOD-tason tulos tulee verhoriviltä. Laitteistotaso saadaan
   IpadTallenteella, kun iPad on kytketty suoraan Maciin (USB 2 -keskittimen takana '!dev').
+
+## A-ajo klo 11.29 — iPadin laitteistoääni, pakattu mp3: vika ei toistunut
+
+iPad Pro 12,9" (5. sukupolvi, M1, iOS 26.4.1), kehitysversio (release, 8f04fa16: ääni- ja puhekoodi sama kuin TF 1.0.64:n
+01051a6f), musiikki ja maisema päällä, kaiutin, Lontoo → Edinburgh bussilla. Pelikoodarin IpadTallenne 90 s (48 kHz),
+kohdistus 10 ms:n verhoilla:
+
+| Klippi | Unityn Play (loki) | Äänitteen 0-kohta tallenteessa | Kuuluva alku |
+|---|---|---|---|
+| Iskulause (3526c02a) | 11.29.23,232 | +0,58 s (hiljaisuus 4,0–7,0 s, ääni alkaa 0-kohdassa) | alusta |
+| Isoisä, Edinburgh | 11.29.32,754 | +0,56 s | kohta 0,21 s, r 0,99–1,00 loppuun asti yhdellä viiveellä |
+
+Vakio +0,56–0,58 s on lokin ja kaappauksen viive. Tällä laitteella pakattu mp3 soi alusta. Omistajan laitteet (iPhone 17 Pro,
+M5-iPad) ovat uudempaa sukupolvea. Unity varoittaa itse, että pakatun raidan ilmoitettu kohta ei välttämättä vastaa
+todellista kohtaa, koska paketti voi olla 2–3 s ([AudioSource.time](https://docs.unity3d.com/ScriptReference/AudioSource-time.html)).
+Sisäinen "1. soiva kohta 0,043 s" ei siksi todista laitteen purkukohtaa. PCM-klipillä ilmoitettu ja todellinen kohta
+ovat samat. Aineisto: proto-3d/lokit/linssiseppa2-ipad-ab-20260930/k5-pakattu/ (ipad.mov, -16k.wav, kohdistus, konsoli).
