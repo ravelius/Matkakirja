@@ -2349,6 +2349,141 @@
     -unity-text-align: middle-center;
 }
 
+/* Apurahan arvioijalle (omistaja 30.9.2026; web .start-apuraha): kevyt, ohut kultareuna, ei banneria. */
+.mk-aloitus__apuraha {
+    min-height: 34px;
+    margin-top: 16px;
+    padding: 6px 16px;
+    border-width: 1px;
+    border-color: rgba(232, 214, 172, 0.5);
+    border-radius: 17px;
+    background-color: rgba(36, 26, 18, 0.35);
+    color: #e8d6ac;
+}
+
+.mk-aloitus__apuraha .mk-nappi__teksti {
+    font-size: 14px;
+    color: #e8d6ac;
+}
+
+/* Esittelykortti: periaatelappu + matkakirjakortin otsikko ja kursiivinen alaotsikko (web .apuraha-*). */
+.mk-apuraha {
+    max-width: 560px;
+}
+
+.mk-apuraha__otsikko {
+    font-size: 19px;
+    color: #7a5514;
+    margin-bottom: 2px;
+}
+
+.mk-apuraha__alaotsikko {
+    margin-bottom: 10px;
+    font-size: 14px;
+    white-space: normal;
+    color: #8a6a2c;
+}
+
+.mk-apuraha__valiotsikko {
+    margin-top: 14px;
+    margin-bottom: 3px;
+    font-size: 12px;
+    letter-spacing: 7.69px; /* web 0.12em */
+    color: #8a6a2c;
+}
+
+.mk-apuraha__teksti {
+    white-space: normal;
+    margin-bottom: 6px;
+}
+
+.mk-apuraha__rivi {
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+
+.mk-apuraha__numero {
+    width: 22px;
+    flex-shrink: 0;
+    -unity-text-align: upper-right;
+    margin-right: 6px;
+}
+
+.mk-apuraha__riviteksti {
+    flex-shrink: 1;
+    flex-grow: 1;
+    white-space: normal;
+}
+
+.mk-apuraha__linkki {
+    align-self: center;
+    margin: 10px 0 0 0;
+}
+
+.mk-apuraha__kuvat {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+.mk-apuraha__kuva {
+    width: 18.5%;
+    min-height: 0;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.4);
+    border-radius: 4px;
+    background-color: rgba(70, 51, 31, 0.08);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-apuraha__video {
+    height: 180px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    background-color: #1c140d;
+    -unity-background-scale-mode: scale-and-crop;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-apuraha__videoteksti {
+    font-size: 16px;
+    color: #f2e2bb;
+}
+
+/* Kokoruutu (web .lightbox): tumma verho, kuva sovitettuna, kuvateksti ja laskuri alla. */
+.mk-apuraha__kokoruutu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 56px 12px 28px 12px;
+    background-color: rgba(18, 12, 8, 0.94);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-apuraha__kokoruutu.mk-auki {
+    opacity: 1;
+}
+
+.mk-apuraha__kokokuva {
+    flex-grow: 1;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-apuraha__kokoteksti {
+    margin-top: 10px;
+    font-size: 15px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: #f2e2bb;
+}
+
 .mk-aloitus__valintakortti {
     max-width: 520px;
     max-height: 86%;
