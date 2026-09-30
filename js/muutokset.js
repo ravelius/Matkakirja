@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2444, teksti: 'Kuvalisenssikorjaus 3: viitekuvien attribuutio 35 kuvalle' },
   { v: 2443, teksti: 'Kuvalisenssikorjaus 2: lähde- ja lisenssi-URLit… (#3683)' },
   { v: 2442, teksti: 'Kuvalisenssikorjaus 1: 3 rikkinäistä URLia, 8 r… (#3681)' },
   { v: 2441, teksti: 'Nostot kierros 2, erä C: 10 kohdetta kuvineen I… (#3679)' },
