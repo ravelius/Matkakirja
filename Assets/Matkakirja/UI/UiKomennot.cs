@@ -569,6 +569,8 @@ namespace Matkakirja.Natiivi
                 {
                     // Web asetaPaivakirjanKoko(false): puhelimella merkintä alkaa lappuna, "auki" avaa sen.
                     if (loput.Trim().ToLowerInvariant() == "auki") { ui.Matkakirja.Avaa(); Kirjaa("matkakirja auki: " + ui.Matkakirja.Tila); return null; }
+                    // Pehmeä pienennys kuten kartan liike (omistaja 30.9.2026; video ja kuvapari): "ui matkakirja pieni".
+                    if (loput.Trim().ToLowerInvariant() == "pieni") { ui.Matkakirja.KartanLiike(); Kirjaa("matkakirja pieni: " + ui.Matkakirja.Tila); return null; }
                     var mk = loput.Split(' ');
                     string kaup = mk[0].Length > 0 ? mk[0].ToLowerInvariant() : "tanger";
                     string laji = mk.Length > 1 ? mk[1].ToLowerInvariant() : "";
