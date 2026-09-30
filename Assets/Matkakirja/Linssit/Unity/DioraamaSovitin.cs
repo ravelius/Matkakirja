@@ -662,6 +662,15 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"poikki: tunnelma {(DioraamaTunnelma.Hamara(rakennus) ? "hämärä" : "päivä")} ({(DioraamaTunnelma.Pakotettu.HasValue ? "pakotettu" : "rakennuksen oletus " + (rakennus?.Tunnelma ?? "paiva"))})");
                 return;
             }
+            // "poikki detalji [0|1|auto]": kuoren lähidetalji päälle/pois vertailua varten (menetelmä B, 30.9.2026).
+            if (mita == "detalji")
+            {
+                DioraamaUlkokuori.DetaljiPakotettu = arvo == "0" ? false : arvo == "1" ? true : (bool?)null;
+                nayttamo?.Ulkokuori?.AsetaDetaljiParam();
+                o.Kirjaa($"poikki: detalji {(DioraamaUlkokuori.DetaljiPakotettu.HasValue ? (DioraamaUlkokuori.DetaljiPakotettu.Value ? "päällä" : "pois") : "auto")}, " +
+                         $"data {(rakennus?.Ulkokuori?.Detalji != null ? "on" : "ei")}, {DioraamaLaatu.Kuvaus}");
+                return;
+            }
             // "poikki kuori [auto|huippu|normaali|kevyt]": ulkokuoren laatutaso (kehittäjän valitsin, muistetaan).
             if (mita == "kuori")
             {
