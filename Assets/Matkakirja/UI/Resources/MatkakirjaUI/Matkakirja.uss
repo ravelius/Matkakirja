@@ -922,10 +922,10 @@
     color: #3a2812;
 }
 
-/* Asetukset leveämpänä (omistaja 29.9.2026, 1.0.50: "liian kapea, jotta äänitasoja voi säätää"): pillerivalikon levyinen
- * (web min(23rem, 100vw − 1,6rem) = 367 pt, Pelikoodari 29.9.). */
+/* Retkikunta ja Kehittäjätyökalut pillerivalikon levyisinä: 367 → 300 pt (omistaja 29.9.2026 klo 23.0x, 1.0.56: "koko valikosta
+ * kapeampi"; Linssit.uss .mk-linssivalitsin--valikko). */
 .mk-paavalikko.mk-paavalikko--asetukset {
-    width: 367px;
+    width: 300px;
     max-width: 94%;
 }
 

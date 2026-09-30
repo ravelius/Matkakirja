@@ -3165,11 +3165,12 @@
  * "Äänimaisema" ja "Kehittäjä" katkesivat iPhonella (300 pt paneeli, ~55 pt tekstille) → napit nimensä levyisiksi
  * (flex-basis auto) ja ylijäävä tila tasan; kapeampi sisäreunus, ikoni 15 px ja nimi 12 px (12,5 px:llä rivi 1 ylitti ~10 pt). */
 /* VALIKOT YHTENÄ JÄRJESTELMÄNÄ (omistaja 29.9.2026 klo 20.2x, Päätoimittajan malli): yksi pergamentti, kolme nappityyppiä
-   samalla muodolla ja korkeudella 48 pt, raot 12 pt, sama kulma (10) ja reuna. Rivin reunimmaisilla napeilla ei ole ulkoreunan
-   rakoa: rivi ulottuu 6 pt yli, napit 6 pt sisään. */
+   samalla muodolla ja korkeudella, sama kulma (10) ja reuna. Omistaja 29.9.2026 klo 23.0x (1.0.56): napit kiinni toisissaan
+   ja matalammiksi, 48 → 38 pt; rivien väli 8 pt. Yhtenäisessä rivissä (pillerivalikko) napeilla on yhteinen reuna ja pyöristys
+   vain rivin päissä (Linssivalitsin.PaivitaNappirivit: --eka ja --vika). */
 .mk-valikkorivi {
     flex-direction: row;
-    margin: 0 -6px 12px -6px;
+    margin: 0 0 8px 0;
 }
 
 .mk-valikkonappi {
@@ -3178,9 +3179,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    min-height: 48px;
-    margin: 0 6px;
-    padding: 0 6px;
+    min-height: 38px;
+    margin: 0;
+    padding: 0 5px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.3);
     border-radius: 10px;
@@ -3192,6 +3193,22 @@
     background-color: rgba(225, 204, 160, 0.7);
 }
 
+.mk-valikkorivi--yhtenainen > .mk-valikkonappi {
+    border-radius: 0;
+    border-left-width: 0;
+}
+
+.mk-valikkorivi--yhtenainen > .mk-valikkonappi--eka {
+    border-left-width: 1px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.mk-valikkorivi--yhtenainen > .mk-valikkonappi--vika {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 .mk-valikkonappi__ikoni {
     width: 16px;
     height: 16px;
@@ -3201,19 +3218,20 @@
 }
 
 .mk-valikkonappi__nimi {
-    /* 3 nappia rivissä 367 pt:n paneelissa (~109 pt): "Äänimaisema" mahtuu kuvakkeen kanssa (1.0.55-laitekuva). */
+    /* 3 nappia rivissä; pitkä nimi ("Äänimaisema") pienenee mahtuakseen (Linssivalitsin.ValikkoNappi). Teksti tummempi
+       (omistaja 29.9.2026 klo 23.0x, 1.0.56). */
     font-size: 11.5px;
-    color: #3a2812;
+    color: #24180a;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    flex-shrink: 1;
+    /* Ei katkaisupisteitä (1.0.56-laitekuvat: UI Toolkit katkaisi "Äänimaise…" vaikka tilaa oli): nimi on aina kokonainen,
+       ja ValikkoNappi pienentää fonttia, jos se ei muuten mahdu. */
+    flex-shrink: 0;
 }
 
 /* KYTKIN: päällä meripihka, pois pergamentti ja himmeä teksti (ei muuta meripihkaa valikoissa). */
 .mk-valikkonappi--kytkin .mk-valikkonappi__nimi,
 .mk-valikkonappi--kytkin .mk-valikkonappi__ikoni {
-    color: rgba(58, 40, 18, 0.5);
+    color: rgba(40, 27, 10, 0.6);
 }
 
 .mk-valikkonappi--kytkin.mk-valittu {
@@ -3255,6 +3273,7 @@
     justify-content: flex-start;
     min-height: 40px;
     margin: 2px 0;
+    border-radius: 10px;
     padding: 6px 10px;
 }
 
@@ -3280,7 +3299,7 @@
     margin: 4px 2px 8px 2px;
     font-size: 10.5px;
     letter-spacing: 12px; /* web 0.12em (natiivi ensin, em/100) */
-    color: rgba(70, 51, 31, 0.7);
+    color: rgba(46, 32, 17, 0.8);
     -unity-text-align: middle-left;
 }
 
@@ -3838,9 +3857,22 @@
    paneelissa, esikatselu paneelin sisällä vasempana sarakkeena (web mitat.md). Nahka myöhemmin (Codex). */
 /* Web (Pelikoodari mitat.md 29.9.): paneeli kiinteä 367 pt kaikissa näkymissä, rivi 44 pt, kuvake 30, nimi 13,76 kahdelle
    riville; esikatselu paneelin sisällä vasempana sarakkeena (42 %, vähintään 120 pt), lista oikealla. */
+/* Omistaja 29.9.2026 klo 23.0x (1.0.56): koko valikosta kapeampi, 367 → 300 pt; Linssit ja Aarteet kapeana listana (232 pt,
+   Linssivalitsin.KapeaLeveys), esikatselu omana ikkunanaan vasemmalla. Teksti tummempi (--map-ink). */
 .mk-linssivalitsin.mk-linssivalitsin--valikko {
-    width: 367px;
+    width: 300px;
     max-width: 94%;
+    --map-ink: #2e2011;
+    transition-property: opacity, translate, scale, width;
+    transition-duration: 0.18s, 0.22s, 0.22s, 0.2s;
+}
+
+.mk-linssivalitsin.mk-linssivalitsin--valikko.mk-linssivalitsin--kapea {
+    width: 232px;
+}
+
+.mk-linssivalitsin--valikko .mk-linssirivi__nimi {
+    color: #24180a;
 }
 
 .mk-linssivalitsin__runko {
@@ -3907,7 +3939,21 @@
     margin: 0 4px 6px 4px;
 }
 
+/* Matka-sivu (omistaja 29.9.2026 klo 23.0x, 1.0.56): tietäjätason muotokuva selvästi isompi, tekstille isompi marginaali. */
+.mk-linssivalitsin__tiedot .mk-laukku__tietaja .mk-laukku__muotokuva {
+    width: 64px;
+    height: 64px;
+    margin-right: 14px;
+    border-radius: 32px;
+}
+
+.mk-linssivalitsin__tiedot .mk-laukku__tietaja {
+    margin: 4px 0 8px 0;
+}
+
 .mk-linssivalitsin__tiedot {
+    padding-left: 10px;
+    padding-right: 10px;
     margin-top: 6px;
     padding-top: 6px;
     border-top-width: 1px;
@@ -3935,13 +3981,15 @@
 }
 
 .mk-linssivalitsin__esikatselu {
-    width: 42%;
-    min-width: 120px;
-    flex-shrink: 0;
-    margin: 4px 8px 4px 0;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: rgba(122, 85, 20, 0.08);
+    position: absolute;
+    max-height: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #2e2011;
+}
+
+.mk-linssivalitsin__esivieritys {
+    flex-shrink: 1;
 }
 
 .mk-linssivalitsin__esinappi {
@@ -3956,7 +4004,7 @@
 
 .mk-linssivalitsin__esikuva {
     height: 125px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     border-radius: 6px;
     -unity-background-scale-mode: scale-and-crop;
 }
@@ -3971,7 +4019,7 @@
     margin-top: 4px;
     font-size: 13px;
     white-space: normal;
-    color: rgba(70, 51, 31, 0.92);
+    color: #2e2011;
 }
 
 /* Linssit (omistaja 29.9.2026, 1.0.50 palaute 6): linssin nimen kohta muuttuu oranssiksi Aktivoi-napiksi (sama kulta kuin
