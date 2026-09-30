@@ -73,6 +73,7 @@ namespace Matkakirja.Natiivi
             kaytossa = MatkakirjaMacSyote_Asenna(pakotettu ? 1 : 0) != 0;
 #endif
             if (kaytossa) Debug.Log("MATKAKIRJA mac-syöte: tunnistimet käytössä" + (pakotettu ? " (pakotettu)" : ""));
+            if (kaytossa && UiKerros.Olemassa) UiKerros.Hae().PakotaTurva(); // yläpalkin Mac-mitat (logo) seuraavassa ruudussa
         }
 
         void Update()

@@ -58,7 +58,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         // iPadin nahkapalkki turva-alue + 57 pt (Pelikoodari 29.9., web) → 72 pt (omistaja 29.9.2026 klo 23.0x, 1.0.56: "liian matala").
         public static float Korkeus => Puhelin ? 57f : IpadNahka ? IpadKorkeus : 65f;
-        const float IpadKorkeus = 72f;
+        const float IpadKorkeus = 72f, MacLogoKorkeus = 32f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
         /// <summary>Palkin täyte (pysty, sivut). Löydös 88 (omistaja build 13): logo ja ☰ sisemmäs kuin webissä (12,8 → 22 pt).</summary>
         static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 14f) : new Vector2(7.2f, 22f);
@@ -512,6 +512,8 @@ namespace Matkakirja.Natiivi
                     palkki.style.paddingBottom = IpadTikkaus;
                     palkki.style.paddingLeft = Mathf.Max(r.x, 0f) + IpadReuna;
                     palkki.style.paddingRight = Mathf.Max(r.z, 0f) + IpadReuna;
+                    // Mac (omistaja 30.9. klo 22.4x): "matkakirja logoa saisi vähän suurentaa" — 28 → 32 pt (+14 %), vain Macilla.
+                    if (MacSyote.Kaytossa) { logo.style.height = MacLogoKorkeus; logo.style.width = MacLogoKorkeus * logoSuhde; }
                 }
             }
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
