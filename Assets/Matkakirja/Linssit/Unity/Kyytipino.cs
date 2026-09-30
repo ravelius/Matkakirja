@@ -7,6 +7,7 @@
 // koska URP karsii käännöksestä variantit, joita mikään mukana oleva profiili ei käytä.
 // Kevennys vain ≤ iPhone 15 Pro (omistajan linja: täysi laatu muille): bloom pois. A/B `astro kyyti savytys 0|1`,
 // `astro kyyti valotus <EV>`, `astro kyyti bloom 0|1`.
+// ISS-kamera (Linssiseppä 2, 30.9.): filmirae ja polttovälin vinjetti samaan profiiliin, oletuksena pois, `astro kyyti filmi 0|1`.
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -19,10 +20,14 @@ namespace Matkakirja.Linssit
         /// <summary>Valotus (EV): ACES tummentaa keskisävyjä noin 0,8:aan, joten lähtötaso +0,5 (säädetään NASA-vertailusta).</summary>
         public static float Valotus = 0.5f;
         public static bool BloomPois;
+        /// <summary>Filmirae ja vinjetti (ISS-kameran valokuvatuntu), oletuksena pois.</summary>
+        public static bool Filmi;
 
         static Volume volyymi;
         static ColorAdjustments vari;
         static Bloom hehku;
+        static FilmGrain rae;
+        static Vignette vinjetti;
         static bool paalla, haettu;
 
         /// <summary>Kevyt laite: iPhone, jonka mallitunnus on ≤ iPhone16,x (iPhone 15 Pro ja vanhemmat).</summary>
@@ -56,6 +61,8 @@ namespace Matkakirja.Linssit
             if (vari != null && !Mathf.Approximately(vari.postExposure.value, Valotus)) vari.postExposure.Override(Valotus);
             bool bloom = !BloomPois && !KevytLaite;
             if (hehku != null && hehku.active != bloom) hehku.active = bloom;
+            if (rae != null && rae.active != Filmi) rae.active = Filmi;
+            if (vinjetti != null && vinjetti.active != Filmi) vinjetti.active = Filmi;
         }
 
         static bool Hae()
@@ -75,11 +82,13 @@ namespace Matkakirja.Linssit
             // Ajonaikainen kopio (profile): valotuksen säätö ei kirjoita assetiin editorissa.
             volyymi.profile.TryGet(out vari);
             volyymi.profile.TryGet(out hehku);
+            volyymi.profile.TryGet(out rae);
+            volyymi.profile.TryGet(out vinjetti);
             return true;
         }
 
         public static string Tila() =>
-            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV, bloom {(hehku != null && hehku.active ? "päällä" : "pois")}"
+            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV, bloom {(hehku != null && hehku.active ? "päällä" : "pois")}, filmi {(Filmi ? "päällä" : "pois")}"
             + (KevytLaite ? " (kevyt laite)" : "");
     }
 }

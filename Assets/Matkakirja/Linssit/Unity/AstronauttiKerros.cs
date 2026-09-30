@@ -446,6 +446,7 @@ namespace Matkakirja.Natiivi
         public void Pois()
         {
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, false);
+            Matkakirja.Linssit.IssSiluetti.Paivita(kamera, georeferenssi, false);
             if (cupola != null) Destroy(cupola.gameObject);
             KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false, default);
             AvausKasittelija?.Invoke(AvauksenVaihe.Pois);
@@ -516,6 +517,7 @@ namespace Matkakirja.Natiivi
         {
             if (kamera == null) return;
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, kyyti != KyydinTila.Kauko);
+            Matkakirja.Linssit.IssSiluetti.Paivita(kamera, georeferenssi, kyyti != KyydinTila.Kauko && AstronauttiLinssi.Vertailu.HasValue);
             nimijono.Aja();
             taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
             var kt = kamera.transform;
