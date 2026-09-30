@@ -87,8 +87,9 @@ PAINUMA = 0.05  # painetun romun etäisyys maanpinnan alla (m)
 ALAVARA = 0.6   # näin paljon maanpinnan alapuolella olevat (urat romun alla) nostetaan maahan
 VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jäi yli tämän maasta
 # Venyneiden kolmioiden käsittely ryhmittäin: 'poista' (vapaa piha), 'jata' (muurin vieri: takana ei ole pintaa) tai
-# 'paikkaa' (v16: jätetään ja maalataan muurin kivellä edestä kloonaten, kuori_orto.seinapaikka).
-RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'paikkaa', 'koillisbastioni': 'poista',
+# 'paikkaa' (v16: jätetään ja maalataan muurin kivellä edestä kloonaten, kuori_orto.seinapaikka) tai 'tayta' (v17:
+# pilkotaan ja saavat oman UV:n atlaksen vapaasta tilasta, sitten sama maalaus; kuori_tayte).
+RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'tayta', 'koillisbastioni': 'poista',
           'lansipiha': 'poista', 'etela': 'poista', 'itabastioni': 'poista', 'ita_harja': 'poista', 'etela_katto': 'poista',
           'etela_alakatto': 'poista', 'vene': 'poista'}
 
@@ -120,15 +121,37 @@ def siivoa(o, kuva, log=print):
     m = siirretty[lv]; kn[m] = pn[lp[m]]
     me.normals_split_custom_set(kn.tolist()); me.update()
     log(f'SIIVOUS: normaalit uusittu {int(m.sum())} kulmaan ({int(siirretty.sum())} siirrettyä kärkeä)')
-    if poista.any():
+    if poista.any() or TAYTTO.any():
         import bmesh
         pi = np.empty(nt, np.int32); me.loop_triangles.foreach_get('polygon_index', pi)
         pois = set(np.unique(pi[poista]).tolist())
-        bm = bmesh.new(); bm.from_mesh(me); bm.faces.ensure_lookup_table()
+        tpois = set(np.unique(pi[TAYTTO]).tolist()) - pois
+        bm = bmesh.new(); bm.from_mesh(me)
+        lay = bm.faces.layers.int.new('tayte'); bm.faces.ensure_lookup_table()  # kerros ennen viittauksia
+        for i in tpois: bm.faces[i][lay] = 1
         bmesh.ops.delete(bm, geom=[bm.faces[i] for i in pois], context='FACES_ONLY')
+        uusia = 0
+        if tpois:
+            import kuori_tayte
+            from kuori_tex import rasteri
+            varattu = kuori_tayte.varaus(uv, poista | np.isin(pi, list(tpois)), W, rasteri)
+            uusia = kuori_tayte.tayta(bm, varattu, W, log)
         bm.to_mesh(me); bm.free(); me.update()
-        log(f'SIIVOUS: poistettu {len(pois)} venynyttä pintaa')
-    pix[..., :3] = rgb; kuva.pixels.foreach_set(pix.ravel()); kuva.update()
+        log(f'SIIVOUS: poistettu {len(pois)} venynyttä pintaa, uusi UV {uusia} pinnalle')
+        if uusia:
+            # Pilkottujen pintojen uusilla kulmilla ei ole kelvollista omaa normaalia (hämärässä tummat piikit):
+            # kulmanormaali = pinnan normaali, muut ennallaan.
+            a = me.attributes['tayte']; t = np.empty(len(me.polygons), np.int32); a.data.foreach_get('value', t)
+            nl = len(me.loops); kn = np.empty(nl * 3, np.float32); me.corner_normals.foreach_get('vector', kn); kn = kn.reshape(nl, 3)
+            pn = np.empty(len(me.polygons) * 3, np.float32); me.polygons.foreach_get('normal', pn); pn = pn.reshape(-1, 3)
+            lt = np.empty(len(me.polygons), np.int32); me.polygons.foreach_get('loop_total', lt)
+            lp = np.repeat(np.arange(len(me.polygons)), lt); m = t[lp] == 1
+            kn[m] = pn[lp[m]]; me.normals_split_custom_set(kn.tolist()); me.update()
+            global MASKI
+            MASKI = MASKI | kuori_tayte.maalaa(me, rgb, log)
+    # Alfa 1 kaikkialle: atlaksen tyhjät kohdat ovat läpinäkyviä, ja JPEG-vienti teki sinne maalatut uudet UV-kartat
+    # valkoisiksi (v17).
+    pix[..., :3] = rgb; pix[..., 3] = 1; kuva.pixels.foreach_set(pix.ravel()); kuva.update()
 
 
 def siivoa_np(co, tv, uv, rgb, log=print):
@@ -139,7 +162,7 @@ def siivoa_np(co, tv, uv, rgb, log=print):
     kp = co[tv].mean(1)
     nrm = np.cross(co[tv[:, 1]] - co[tv[:, 0]], co[tv[:, 2]] - co[tv[:, 0]])
     ylos = np.abs(nrm[:, 2]) > 0.6 * np.linalg.norm(nrm, axis=1)
-    M_kaikki = np.zeros((H, W), bool); K_kaikki = []; poista = np.zeros(len(tv), bool)
+    M_kaikki = np.zeros((H, W), bool); K_kaikki = []; poista = np.zeros(len(tv), bool); taytto = np.zeros(len(tv), bool)
     for ryhma, tapa in RYHMAT.items():
         osat = [(a[0], np.asarray(a[1], float), a[2], a[4] if len(a) > 4 else None) for a in ALUEET if a[3] == ryhma]
         polyt = [o[1] for o in osat]; pk = np.vstack(polyt)
@@ -197,6 +220,7 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             ven = ((zv - co[:, 2])[tv] > VENYMA).any(1) & ylhaalla[tv].any(1)
             if tapa == 'poista': poista |= ven
             if tapa == 'paikkaa': venyneet |= ven
+            if tapa == 'tayta': taytto |= ven
             # Maalataan kaikki alueen maanpinnan kolmiot (myös urat) ja painetut; venyneitä ei (muurin vieri jää ennalleen).
             maassa = alue[tv].all(1) & (np.abs(co[tv, 2] - gk[tv]) < ALAVARA + 0.05).all(1)
             Kr |= (maassa | siirr[tv].any(1)) & ~ven
@@ -213,7 +237,8 @@ def siivoa_np(co, tv, uv, rgb, log=print):
         log(f'SIIVOUS: ryhmä {ryhma}: {len(K)} pintaa maalattu, puhdasta maata {puhdas.mean():.2f}, tekseleitä {int(M.sum())}')
     sauma = reunat(rgb, uvp, M_kaikki, np.concatenate(K_kaikki), LAAJENNUS)
     log(f'SIIVOUS: valmis {time.time()-t0:.1f} s, saumavara {sauma} px')
-    global MASKI
+    global MASKI, TAYTTO
+    TAYTTO = taytto  # 'tayta'-ryhmien venyneet kolmiot: siivoa() poistaa ja täyttää (kuori_tayte)
     MASKI = M_kaikki  # maalatut tekselit (kuvan rivijärjestys), hämärän valon tasoitukseen (tallenna_maski)
     return co, poista
 

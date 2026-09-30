@@ -65,8 +65,19 @@ test('jokainen js/dioraama/rakennukset/<id>/blender.json tuottaa hyväksytyn pak
     const rivit = lisaaBlender(json, blender);
     assert.doesNotThrow(() => tarkistaBlenderPaketti(json, blender), id);
     assert.equal(rivit.length, blender.tiedostot.length, id);
-    assert.ok(json.tilat.length > 0 && json.tilat.every((t) => t.glb.tiedosto.startsWith('blender/tilat/')), id);
+    assert.ok(json.tilat.length > 0 && json.tilat.every((t) => t.glb?.tiedosto.startsWith('blender/tilat/') || (t.kohdistettava === false && !t.glb)), id);
   }
+});
+
+test('äänitila: massa jää Blender-pakettiin ilman glb:tä vain äänikentin (yleisnäkymän taustaäänet, Siirtoseppä 30.9.)', () => {
+  const json = kopio(RAKENNUS);
+  lisaaBlender(json, B);
+  const massa = json.tilat.find((t) => t.id === 'massa');
+  assert.ok(massa, 'massa puuttuu');
+  assert.deepEqual(Object.keys(massa).sort(), ['aanet', 'id', 'kohdistettava', 'nimi', 'rajat', 'tehosteet']);
+  assert.ok(massa.aanet.length > 0);
+  assert.doesNotThrow(() => tarkistaBlenderPaketti(json, B));
+  for (const t of json.tilat.filter((x) => x.kohdistettava !== false)) assert.ok(t.glb.tiedosto.startsWith('blender/'), t.id);
 });
 
 test('kuoren huippu-taso: 8k-atlas vain jos se on blender.json:ssa, muuten 4k (laatusuunnitelma 30.9.)', () => {
