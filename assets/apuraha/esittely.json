@@ -1,6 +1,6 @@
 {
-  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. video: null = ei videota; myöhemmin {\"url\": \"…mp4\", \"kuva\": \"…jpg\"} kortin alkuun. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa.",
-  "versio": 3,
+  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. video: null = ei videota; myöhemmin {\"url\": \"…mp4\", \"kuva\": \"…jpg\"} kortin alkuun. Kappaleen nappi {teksti, toiminto: \"esittelylinssit\"} avaa kaikki toimivat linssit ilman pisteitä (web: selaimen linssit; natiivi: kaikki kehittäjätilan linssit, myös kokeilut) ilman muuta kehittäjätilaa. webTeksti: kappaleen tai listarivin ({teksti, webTeksti}) selainversio; natiivi näyttää teksti-kentän.",
+  "versio": 4,
   "nappi": "Apurahahakemus – katso tämä ensin",
   "otsikko": "Apurahan arvioijalle",
   "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 30.9.2026",
@@ -15,7 +15,10 @@
         "Aloita uusi matka ja valitse ensimmäinen kohde. Perillä avautuu isoisän matkakirja, ja isoisä lukee sen ääneen.",
         "Napauta kartalta nostoa: kuva ja lyhyt tarina nähtävyydestä.",
         "Kysy Pulu-kyyhkyltä kaupungista mitä tahansa. Vastaus tulee noin puolessa minuutissa.",
-        "Linssit aukeavat pelissä pisteillä. Tämän kortin napista \"Avaa esittelylinssit\" saat heti käyttöösi kaikki linssit, myös kehitteillä olevat: esimerkiksi astronautin kameran, maailman radiot ja Olavinlinnan poikkileikkauksen."
+        {
+          "teksti": "Kokeile linssejä: ne näyttävät maailman eri aiheen kautta, esimerkiksi astronautin kamera, maailman radiot ja Olavinlinnan poikkileikkaus. Jos linssilista on tyhjä, tämän kortin nappi \"Avaa esittelylinssit\" avaa kaikki, myös kehitteillä olevat.",
+          "webTeksti": "Kokeile linssejä: ne näyttävät maailman eri aiheen kautta, esimerkiksi maailman radiot ja ihmisen matka. Jos linssilista on tyhjä, tämän kortin nappi \"Avaa esittelylinssit\" avaa kaikki. Kolmiulotteiset linssit ovat vain iOS-sovelluksessa."
+        }
       ],
       "nappi": {
         "teksti": "Avaa esittelylinssit",
@@ -25,7 +28,8 @@
     },
     {
       "otsikko": "Missä mennään",
-      "teksti": "Kehitys tapahtuu nyt iOS-sovelluksessa, joka rakennettiin syyskuussa uudelleen natiivina. Kartta on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. Uusi testiversio ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan perinteiset pelit ja kolmiulotteiset kohteet; ensimmäisen, Olavinlinnan, voi jo kokeilla esittelylinsseistä."
+      "teksti": "Kehitys tapahtuu nyt iOS-sovelluksessa, joka rakennettiin syyskuussa uudelleen natiivina. Kartta on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. Uusi testiversio ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan perinteiset pelit ja kolmiulotteiset kohteet; ensimmäisen, Olavinlinnan, voi jo kokeilla esittelylinsseistä.",
+      "webTeksti": "Kehitys tapahtuu nyt iOS-sovelluksessa, joka rakennettiin syyskuussa uudelleen natiivina. Kartta on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. Uusi testiversio ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan perinteiset pelit ja kolmiulotteiset kohteet; ensimmäistä, Olavinlinnaa, voi jo kokeilla iOS-sovelluksessa."
     },
     {
       "otsikko": "Keskeneräisyys ja lisätiedot",

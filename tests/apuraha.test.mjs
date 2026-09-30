@@ -14,6 +14,10 @@ test('esittely.json on kelvollinen ja siinä on neljä kappaletta ja viisi kuvaa
   assert.equal(d.kappaleet.length, 4);
   assert.equal(d.kuvat.length, 5);
   assert.ok(d.webHuomautus.startsWith('Selainpeli ei sisällä kaikkia ominaisuuksia.'));
+  // Selain saa webTekstit: ei lupauksia iOS:n kolmiulotteisista linsseistä.
+  const kaikki = d.kappaleet.flatMap((k) => [k.teksti ?? '', ...(k.lista ?? [])]).join(' ');
+  assert.ok(!/poikkileikkaus|esittelylinsseistä/.test(kaikki), kaikki);
+  assert.ok(/vain iOS-sovelluksessa/.test(kaikki));
 });
 
 test('paikalliset kuvat ovat repossa ja tekstissä ei ole muistiinpanoja', () => {

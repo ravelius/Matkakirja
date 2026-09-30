@@ -24,7 +24,15 @@ export function tarkistaApuraha(d) {
   if (!d || typeof d !== 'object') return null;
   if (typeof d.nappi !== 'string' || !d.nappi.trim()) return null;
   if (typeof d.otsikko !== 'string' || !Array.isArray(d.kappaleet)) return null;
-  const kappaleet = d.kappaleet.filter((k) => k && (k.teksti || k.lista?.length || k.otsikko || k.nappi));
+  // Selainversio: webTeksti korvaa tekstin (kappale tai listarivi {teksti, webTeksti}).
+  const web = (x) => (x && typeof x === 'object' ? (x.webTeksti ?? x.teksti) : x);
+  const kappaleet = d.kappaleet
+    .filter((k) => k && (k.teksti || k.lista?.length || k.otsikko || k.nappi))
+    .map((k) => ({
+      ...k,
+      teksti: k.webTeksti ?? k.teksti,
+      lista: Array.isArray(k.lista) ? k.lista.map(web).filter((r) => typeof r === 'string') : k.lista,
+    }));
   const kuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');
   const video = d.video && typeof d.video.url === 'string' ? d.video : null;
   return {
