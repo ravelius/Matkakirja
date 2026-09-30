@@ -102,12 +102,12 @@ namespace Matkakirja.Natiivi
             string AstcHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraHuippu : l == Laatu.Normaali ? kuori.HamaraNormaali : kuori.HamaraKevyt;
             string JpgHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraJpgHuippu : l == Laatu.Normaali ? kuori.HamaraJpgNormaali : kuori.HamaraJpgKevyt;
             string AstcPolku(Laatu l) => hamara && !string.IsNullOrEmpty(AstcHamara(l)) ? AstcHamara(l) : AstcPaiva(l);
-            // Nopea ensimmäinen taso: HUIPPU-laitteellakin normaali ensin, ettei 66 Mt:n lataus pidä kuorta poissa.
+            // Kevyt ensin (12,7 Mt + 2k-tekstuuri): nopea esikatselu ja joka tapauksessa kaukotaso; sitten laitteen oma taso.
+            // 30.9. (Linnanrakentajan havainto): aiempi järjestys normaali → kevyt → huippu latasi huippu-laitteella 162 Mt,
+            // josta normaali-taso ja 4k-tekstuurin toinen lataus turhia; nyt huippu 107 Mt, normaali 74 Mt, kevyt 18 Mt.
             var jarjestys = new List<Laatu>();
-            Laatu ensin = tavoite == Laatu.Huippu && !string.IsNullOrEmpty(kuori.Normaali) ? Laatu.Normaali : tavoite;
-            jarjestys.Add(ensin);
-            if (ensin != Laatu.Kevyt) jarjestys.Add(Laatu.Kevyt);
-            if (tavoite == Laatu.Huippu && ensin != Laatu.Huippu) jarjestys.Add(Laatu.Huippu);
+            if (!string.IsNullOrEmpty(kuori.Kevyt) || tavoite == Laatu.Kevyt) jarjestys.Add(Laatu.Kevyt);
+            if (tavoite != Laatu.Kevyt) jarjestys.Add(tavoite);
 
             foreach (var taso in jarjestys)
             {
