@@ -487,8 +487,9 @@ test('AANET: keittiön repliikkien mikseriotot ovat median juuren polkuja, muill
   for (const [id, a] of Object.entries(AANET)) {
     const kentat = ['kuiva', 'kaiku', 'kaikuPitka'].filter((k) => a[k] !== undefined);
     if (!ottajat.includes(id)) { assert.deepEqual(kentat, [], id); continue; }
-    assert.equal(a.kuiva, `/aanet/mikseri/v1/${id}.kuiva.mp3`);
-    assert.equal(a.kaiku, `/aanet/mikseri/v1/${id}.kaiku.mp3`);
-    assert.equal(a.kaikuPitka, `/aanet/mikseri/v1/${id}.kaiku-pitka.mp3`);
+    const v = id.startsWith('apulainen') ? 'v2' : 'v1';  // apulaisen uusi ääni (omistaja, #3740)
+    assert.equal(a.kuiva, `/aanet/mikseri/${v}/${id}.kuiva.mp3`);
+    assert.equal(a.kaiku, `/aanet/mikseri/${v}/${id}.kaiku.mp3`);
+    assert.equal(a.kaikuPitka, `/aanet/mikseri/${v}/${id}.kaiku-pitka.mp3`);
   }
 });
