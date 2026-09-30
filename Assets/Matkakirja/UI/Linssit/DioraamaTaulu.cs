@@ -159,15 +159,16 @@ namespace Matkakirja.Natiivi
             paluuNappi.style.display = DisplayStyle.None;
 
             // Uusintanappi (↻) samaan kulmaan kuin ‹: näkyy yleisnäkymässä, kun kertojan kierros on käyty.
-            uusintaNappi = Rakenne.Nappi("↻", "mk-dioraama__uusinta", () => DioraamaSovitin.Linssi?.KertojaUudelleen(DioraamaSovitin.ViimeisinT), juuri);
+            // ↻-merkkiä ei ole kirjasimessa (1.1 (73) -kuva: laatikko), joten ikoni: Ikonit.PaivitaVersio (kaareva nuoli).
+            uusintaNappi = Rakenne.Nappi(null, "mk-dioraama__uusinta", () => DioraamaSovitin.Linssi?.KertojaUudelleen(DioraamaSovitin.ViimeisinT), juuri, Ikonit.PaivitaVersio);
             uusintaNappi.style.position = Position.Absolute;
             uusintaNappi.style.left = 14; uusintaNappi.style.top = 58;
             uusintaNappi.style.width = 44; uusintaNappi.style.height = 44;
             uusintaNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.9f);
             uusintaNappi.style.borderTopLeftRadius = 22; uusintaNappi.style.borderTopRightRadius = 22;
             uusintaNappi.style.borderBottomLeftRadius = 22; uusintaNappi.style.borderBottomRightRadius = 22;
-            var uusintaTeksti = uusintaNappi.Q<Label>();
-            if (uusintaTeksti != null) { uusintaTeksti.style.fontSize = 22; uusintaTeksti.style.color = Teksti; uusintaTeksti.style.unityTextAlign = TextAnchor.MiddleCenter; }
+            uusintaNappi.style.color = Teksti;
+            uusintaNappi.style.alignItems = Align.Center; uusintaNappi.style.justifyContent = Justify.Center;
             uusintaNappi.tooltip = "Kertoja uudelleen";
             uusintaNappi.style.display = DisplayStyle.None;
 

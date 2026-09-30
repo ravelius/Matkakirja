@@ -197,7 +197,8 @@ namespace Matkakirja.Natiivi
                 double osuus = linssi.SaapuminenOsuus(t);
                 nayttamo.Liekit?.Syttyminen(osuus, DioraamaNayttamo.UnityPiste((pysty ? rakennus.YleisPysty : rakennus.YleisVaaka).Kohde));
                 if (osuus >= 1 && !SaapuminenNahty) SaapuminenNahty = true;
-                nayttamo.Syke?.Paivita(rakennus, nakyma.KohdeTila == null && osuus >= 1, nakyma.KohdeTila != null, t, y.VahennettyLiike);
+                // Uusi linna: kertojan kierroksen aikana ei elävien kohteiden sykkeitä (1.1 (73) -kuva: renkaat jaksojen päällä).
+                nayttamo.Syke?.Paivita(rakennus, nakyma.KohdeTila == null && osuus >= 1 && nakyma.KertojaJakso < 0 && !linssi.KertojaKaynnissa(t), nakyma.KohdeTila != null, t, y.VahennettyLiike);
                 // Etsintä: vaihe näkyy vasta perillä tilassa (ei kesken lennon).
                 bool perilla = nakyma.KohdeTila != null && linssi.LeikkausHetkella(t).osuus >= 1;
                 nayttamo.Etsinta?.Paivita(rakennus, perilla ? nakyma.KohdeTila : null, t, y.VahennettyLiike);
