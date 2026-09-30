@@ -9379,3 +9379,7 @@ Päätoimittaja 30.9.2026 (Sisältökirjurin kuvalisenssiauditointi, kohta G): j
 ## OMISTAJA: APURAHAN ESITTELYKORTTIIN 'AVAA ESITTELYLINSSIT' — KAIKKI KEHITTÄJÄLINSSIT (30.9.2026 klo 11.2x) (30.9.2026 klo 11.27)
 
 Omistaja 30.9.2026 kortilla (Laitetestaajan löydös: uudella pelaajalla linssilista tyhjä, linssit aukeavat pisteillä 400/800/1400/2200): apurahan esittelykortin nappi 'Avaa esittelylinssit' avaa heti KAIKKI kehittäjätilan linssit, myös kokeilut (Olavinlinnan Poikkileikkaus, Tähtitaivas, Yökartta), ei vain neljää valmista pistelinssiä. Päätoimittajan suositus (vain valmiit neljä) hylättiin.
+
+## OMISTAJA: NIMETÖN KÄVIJÄLASKURI (WEB + NATIIVI), OMISTAJAN LAITTEET POIS, EI RAAKOJA IP-OSOITTEITA (30.9.2026 klo 11.3x) (30.9.2026 klo 11.30)
+
+Omistaja 30.9.2026 chatissa: halutaan nähdä, milloin joku muu kuin omistaja käyttää peliä (apurahan arvioijat). Päätoimittajan malli (Pelikoodari apurahakortin jälkeen): istunnon avauspingi Pollo-workerille (alusta, versio, maa, apurahakortin ja esittelylinssien avaus), päivän eri kävijät SHA-256(IP + päivittäin vaihtuva suola) -tiivisteinä, raakaa IP:tä ei tallenneta; omistajan laitteet merkitään kerran ja jätetään pois; suojattu lukuendpoint; Postivahti ilmoittaa Päätoimittajalle ensimmäisestä ulkopuolisesta kävijästä; tekijätietoihin rivi nimettömästä laskennasta.
