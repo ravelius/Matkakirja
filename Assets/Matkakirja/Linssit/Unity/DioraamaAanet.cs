@@ -49,6 +49,7 @@ namespace Matkakirja.Natiivi
         /// tämän parin tavoitetaso ensin putosi ≤0,01:een kahvan ollessa auki. Kun t - tämä ≥ 1,5 s, kahva Lopetetaan
         /// ja poistetaan silmukat-sanakirjasta (pooli vapautuu; seuraava tarve avaa uuden kahvan). Ei sisällä avaimia
         /// joiden kahva ei ole auki tai joiden tavoitetaso on tälläkin hetkellä > 0,01.</summary>
+        readonly HashSet<string> aaniNahty = new HashSet<string>();
         readonly Dictionary<(string Tila, string Aani), double> hiljaisuusAlkoi = new Dictionary<(string, string), double>();
         /// <summary>Paivita-kutsun uudelleenkäyttämät puskurit (ei uutta listaa/joukkoa joka ruutu): ehdokkaat =
         /// kaikki tila+ääni-parit tavoitetasoineen tältä ruudulta, sallitut = niistä valitut (kynnys+top 6).</summary>
@@ -169,10 +170,15 @@ namespace Matkakirja.Natiivi
             // suurin ensin -- kynnyksen alle jäävät ovat aina lajittelun lopussa, joten break riittää.
             ehdokkaat.Sort((a, b) => b.Taso.CompareTo(a.Taso));
             sallitut.Clear();
-            for (int i = 0; i < ehdokkaat.Count && i < 6; i++)
+            // Sama ääni useasta tilasta (1.1 (78): linna-tuuli ja tulisija-ratina kolmesti) soi yhtenä kahvana suurimmalla
+            // tasolla: ei päällekkäistä samaa klippiä eikä kuuden paikan tuhlausta.
+            aaniNahty.Clear();
+            for (int i = 0, n = 0; i < ehdokkaat.Count && n < 6; i++)
             {
                 if (ehdokkaat[i].Taso <= 0.01) break;
+                if (!aaniNahty.Add(ehdokkaat[i].Aani)) continue;
                 sallitut.Add((ehdokkaat[i].Tila, ehdokkaat[i].Aani));
+                n++;
             }
 
             double duck = puhuu ? 0.15 : 1.0; // sovittimen oma duckaus repliikin ajaksi (ehdotusdokumentin mukaan)
