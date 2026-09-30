@@ -298,6 +298,35 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>
+        /// MAAKUNTAKORTIN KYSYMYS (omistajan kortti 30.9.2026 klo 22.5x): kortin Pulun kysymys pelaajan viestinä ja valmis
+        /// vastaus heti ilman tekoälykutsua (sama malli kuin Ihmisen matka -linssin valmiskysymykset, VastaaLinssinValmiilla).
+        /// Chat avautuu kortin päälle (UiNakymat.ChatinKerros), ja jatkokysymykset kulkevat kortin aiheella, kunnes chat
+        /// suljetaan (keskustelunAihe).
+        /// </summary>
+        public void VastaaValmiilla(string kysymys, string vastaus, Aihe aihe)
+        {
+            kysymys = (kysymys ?? "").Trim();
+            if (kysymys.Length == 0 || kysyy) return;
+            if (string.IsNullOrWhiteSpace(vastaus)) { Kysy(kysymys, aihe: aihe); keskustelunAihe = aihe; return; }
+            if (!Auki) Avaa(false);
+            keskustelunAihe = aihe;
+            lukija.Vaihtui();
+            PoistaSirut();
+            ehdotusPoletti++;
+            Alku(false);
+            Viesti("mk-chat__pelaaja", kysymys);
+            var kupla = Viesti("mk-chat__livia mk-chat__valmisvastaus", Lukijaaani.PoistaPuhetagit(vastaus));
+            kupla.enableRichText = false;
+            LopetaPuheVuoro();
+            AsetaLukijalle(vastaus);
+            if (AaniPaalla) Puhe.Hae()?.Lue(vastaus, "pollo");
+            historia.Add(("kayttaja", kysymys));
+            historia.Add(("pollo", vastaus));
+            Debug.Log("MATKAKIRJA ui chat: valmis vastaus (" + (aihe?.Nimi ?? "-") + "): " + kysymys);
+            Vierita(kupla);
+        }
+
         void VastaaLinssinValmiilla(LinssiKysymys lk, string kysymys)
         {
             if (kysyy) return;
@@ -332,6 +361,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            keskustelunAihe = null;
             LopetaSanelu();
             // Web sulje: luenta pysähtyy ja puhevuoro päättyy. PUHE LOPPUU CHATIN MUKANA (omistaja TF 1.0.37: "se ei lopettanut
             // puhumista, vaikka lähdin pois pulun chatista"): kesken oleva vastaus ei aloita eikä jatka luentaa suljetussa
@@ -436,6 +466,8 @@ namespace Matkakirja.Natiivi
         }
 
         Aihe kysymyksenAihe;
+        /// <summary>Kortin aihe, joka jatkuu saman keskustelun jatkokysymyksissä (VastaaValmiilla); pois chatin sulkeutuessa.</summary>
+        Aihe keskustelunAihe;
         const int KohteenKatto = 900;
 
         /// <param name="puhe">saneltu kysymys = puhevuoro (web kysy { puhe: true }): vastaus luetaan aina</param>
@@ -444,7 +476,7 @@ namespace Matkakirja.Natiivi
         {
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
-            kysymyksenAihe = aihe;
+            kysymyksenAihe = aihe ?? keskustelunAihe;
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki) Avaa(false);
             LopetaPuheVuoro();

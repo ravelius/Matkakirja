@@ -48,9 +48,10 @@ namespace Matkakirja.Natiivi
         /// varusta = jokaiselle luodulle kappaleelle (linkkien kuuntelu).
         /// </summary>
         public static VisualElement Luo(VisualElement isa, IReadOnlyList<string> kappaleet, string alku, string luokka,
-            Kirjasin kirjasin, Action<Label> varusta, VisualElement kylki = null, bool palstoita = true)
+            Kirjasin kirjasin, Action<Label> varusta, VisualElement kylki = null, bool palstoita = true,
+            float kylkiOsuus = KylkiOsuus, float kylkiKatto = KylkiKatto)
         {
-            if (kylki != null) return LuoKylkikuvalla(isa, kappaleet, alku, luokka, kirjasin, varusta, kylki, palstoita);
+            if (kylki != null) return LuoKylkikuvalla(isa, kappaleet, alku, luokka, kirjasin, varusta, kylki, palstoita, kylkiOsuus, kylkiKatto);
             var kotelo = Rakenne.El("mk-palstat", isa, PickingMode.Ignore);
             // Mittari kantaa kappaleen tyylin (koko, fontti, kappaleväli) ja pysyy piilossa.
             var mittari = Rakenne.Teksti("", luokka, kotelo);
@@ -162,7 +163,7 @@ namespace Matkakirja.Natiivi
         /// kaksi palstaa ja anfangi, kuva ensimmäisen palstan oikeassa yläkulmassa; muuten yksi palsta ilman anfangia.
         /// </summary>
         static VisualElement LuoKylkikuvalla(VisualElement isa, IReadOnlyList<string> kappaleet, string alku, string luokka,
-            Kirjasin kirjasin, Action<Label> varusta, VisualElement kylki, bool palstoita)
+            Kirjasin kirjasin, Action<Label> varusta, VisualElement kylki, bool palstoita, float kylkiOsuus, float kylkiKatto)
         {
             var kotelo = Rakenne.El("mk-palstat mk-palstat--kylki", isa, PickingMode.Ignore);
             var mittari = Rakenne.Teksti("", luokka, kotelo);
@@ -212,7 +213,8 @@ namespace Matkakirja.Natiivi
                 if (w <= 0 || float.IsNaN(w)) return;
                 bool kaksi = palstoita && w >= Raja;
                 float palsta = kaksi ? Mathf.Floor((w - Rako) / 2f) : w;
-                float kw = Mathf.Round(Mathf.Min(KylkiOsuus * palsta, KylkiKatto) * 10f) / 10f;
+                // Kylkikuvan leveys: oletus web min(42 %, 180 pt); maakuntakortin minikartta 30 % (Pelikoodari 30.9.2026).
+                float kw = Mathf.Round(Mathf.Min(kylkiOsuus * palsta, kylkiKatto) * 10f) / 10f;
                 // Verrataan asetettuun arvoon, ei resolvedStyleen: asettelu pyöristää leveyden pikseliruutuun, jolloin
                 // vertailu ei koskaan täsmäisi ja ladonta jäisi odottamaan (f0e77501: Olympian teksti puuttui).
                 if (Mathf.Abs(kylkiLeveys - kw) > 0.05f)
