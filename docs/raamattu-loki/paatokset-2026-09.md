@@ -9523,3 +9523,7 @@ Omistaja 30.9.2026 kortilla Linssisepän kuvapareista (6724cc7f, iPhone pysty p�
 ## OMISTAJA: CUPOLAN PILVET OLETUKSENA POIS (0 %), PÖLYHIUKKASET POIS (30.9.2026 klo 19.47)
 
 Omistaja 30.9.2026 sanatarkasti: 'pilvet saisivat olla pois oletuksena, tosin saattaa muuttua sitten kun tulee niitä visuaalisia parannuksia. nykyiset pölyhiukkaset ovat keinotekoisen näköisiä ja ne voi ottaa pois.' → PILVET-nupin oletus 0 % (korvaa 30.9. päätöksen 'pilvet 30 %'; pelaaja voi lisätä; arvioidaan uudelleen fotorealististen pilvien jälkeen); Cupolan pölyhiukkaset poistetaan kokonaan; sama webin ISS-kyytiin, jos siellä samat asetukset. Linssiseppä samaan käännökseen vaakapaneelin korjauksen kanssa.
+
+## TILA: TF 1.1 (76) = 1a878e67 SISÄISESSÄ RYHMÄSSÄ 19.49; ELEVENLABS-LUKIJA ODOTTAA #3710:N MERGEÄ; ULKOINEN ARVIO ODOTTAA 1.1 (75):N KÄSITTELYÄ (30.9.2026 klo 19.51)
+
+Julkaisija 30.9.2026 klo 19.5x: TF 1.1 (76) (1a878e67) sisäisessä ryhmässä klo 19.49. 76:n ElevenLabs-lukija toimii vasta, kun worker #3710 on mainissa (junassa); omistajan ohje 2 annetaan vasta sen jälkeen. Ulkoinen: 76 liitetty Arvioijat-ryhmään, mutta Apple ei ota uutta arvioon ennen kuin 1.1 (75) on käsitelty (ANOTHER_BUILD_IN_REVIEW); 75:n hyväksynnän jälkeen Julkaisija lähettää uusimman heti, eikä saman version myöhempiä tarvitse arvioida täysimääräisesti.
