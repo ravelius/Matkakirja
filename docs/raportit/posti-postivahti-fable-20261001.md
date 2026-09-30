@@ -7,3 +7,6 @@ SendMessage estyi viestirajan takia (13 viestiä); varakanavaa ei käytetty (kä
 - Kävijälaskuri: 23.10 n=3 → nyt n=3 (FI 1, US 2), apurahakortti 2, esittelylinssit 0 (ei muutosta). Edellisen kasvun (2→3, US, 23.10) ilmoitus ei mennyt perille.
 - Sim: 1 booted (siirtoseppa-iPad13), ok.
 - Hook OK, #3734 auki.
+
+## 00.21 lisäys
+LEVY 48 Gi (< 50; 52→48 11 min:ssa; kova raja 30), wt/ 54 (raja 20, kasvaa), kuorma 217/306/255, muisti 62 % vapaa. Kävijälaskuri n=3 ennallaan (00.10). Päätoimittajan konteksti 17 %. Hook OK, #3734 auki. SendMessage estynyt (14).
