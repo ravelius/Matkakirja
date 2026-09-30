@@ -16,3 +16,11 @@ Poisto: `matkakirja://omistaja/pois`. Selaimissa: `https://matkakirja.app/?omist
 2. Noston lukijan valikko (kaiuttimen vieressä) → Moottori → ElevenLabs v4 Turbo → Ääni (esim. Viisas kertoja).
 3. Päiväkatto 20 000 merkkiä, sen jälkeen luenta palaa xAI:hin.
 Huom: kehittäjätila näyttää myös Kehittäjätyökalut Asetuksissa.
+
+## 3. Olavinlinnan tarkempi kuori ämpäriin (Linnanrakentaja, kun PR #3711 on mainissa)
+
+Omistaja ajaa itse (isot binäärit hash-kansioon, 80 tiedostoa, 786 Mt, hash 112dbb5f):
+```bash
+cd /Users/Shared/Claude/wt/linnanrakentaja-linna-laatu && zsh tools/dioraama/vie-blender.sh
+```
+Sen jälkeen Linnanrakentaja commitoi blender.json:n ja Julkaisija mergeää. Täyden laadun laite lataa kerran noin 89 Mt enemmän.
