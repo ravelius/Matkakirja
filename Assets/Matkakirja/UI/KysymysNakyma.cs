@@ -48,8 +48,10 @@ namespace Matkakirja.Natiivi
         readonly UiKerros kerros;
         readonly VisualElement himmennys, paa, aika, napit;
         readonly Kortti kortti;
-        // Kuvan, lipun ja kohtaamiskuvan napautus → suurennos (web openLightbox, omistaja 30.8.2026).
-        readonly Kuvasuurennos suurennos;
+        // Kuvan, lipun ja kohtaamiskuvan napautus → kokoruudun suurennos (web openLightbox, omistaja 30.8.2026; kokoruutu 30.9.2026).
+        readonly Kuvasuurennos suurennos, kokoruutu;
+        /// <summary>Viimeksi piirretyn suurennettavan kuvan avaus (testikomento ui kysymys suurenna).</summary>
+        Action viimeisinSuurennus;
         readonly Label leima, kaupunki, sekunnit, viesti;
         readonly Tiimalasi tiimalasi;
         readonly ScrollView vieritys;
@@ -129,8 +131,29 @@ namespace Matkakirja.Natiivi
             // Napautus missä tahansa kortissa näyttää kirjoitettavan tekstin heti kokonaan.
             sisus.RegisterCallback<PointerDownEvent>(_ => KirjoitusValmiiksi(), TrickleDown.TrickleDown);
 
+            // KOKORUUTU (Päätoimittaja 30.9.2026, täsmennys Fablen linjaukseen A 26.9.: kokoruutu kaikille kuville, joilla ei
+            // ole omaa selitettä): kysymyskuva, lippu ja kätkökuva avautuvat samaan kokoruutuun kuin nostokortin kuva (web
+            // openLightbox), ei paperikehykseen, jonka selitealue jäi tyhjäksi. Samalla kerroksella kuin nostokortin suurennos.
+            // Oma pitkä selite (havainnekuva) jää paperikehykseen, jotta selite näkyy.
             suurennos = new Kuvasuurennos(juuri);
+            kokoruutu = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
             kerros.TurvaMuuttui += Asettele;
+        }
+
+        /// <summary>Testikomento ui kysymys suurenna: napautus näkyvään kätkö-, kysymys- tai lippukuvaan; tila lokiin.</summary>
+        public string TestaaSuurennos()
+        {
+            if (viimeisinSuurennus == null) return "ei kuvaa";
+            viimeisinSuurennus();
+            return kokoruutu.Auki ? "suurennos auki kokoruudulla" : suurennos.Auki ? "suurennos auki kehyksessä" : "suurennos kiinni";
+        }
+
+        /// <summary>Kuvan napautus → kokoruutu, tai kehys, kun kuvalla on oma pitkä selite (havainnekuva).</summary>
+        void Suurennettava(VisualElement e, LehtiKuva k, bool omaSelite = false)
+        {
+            Action avaa = () => (omaSelite ? suurennos : kokoruutu).Avaa(new List<LehtiKuva> { k });
+            viimeisinSuurennus = avaa;
+            e.AddManipulator(new Clickable(avaa));
         }
 
         void Asettele()
@@ -224,6 +247,8 @@ namespace Matkakirja.Natiivi
         public void Piilota()
         {
             suurennos.Sulje();
+            kokoruutu.Sulje();
+            viimeisinSuurennus = null;
             toiminnot = null;
             aikaraja = null;
             viestiPiiloon?.Pause();
@@ -352,10 +377,8 @@ namespace Matkakirja.Natiivi
             var kuva = Rakenne.El("mk-kysymys__muotokuvakuva", kuvio);
             // Suurennokseen pitkä kuvateksti ja lähde (web quizKohtaaminenKuva, js/kuvatekstit.js).
             string url = d.MuotokuvaUrl, pitka = d.MuotokuvaKuvateksti ?? d.MuotokuvaLyhyt;
-            kuva.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
-            {
-                new LehtiKuva { Lahde = url, Selite = pitka, LahdeRivi = string.IsNullOrEmpty(pitka) ? null : "Matkakirjan havainnekuva" },
-            })));
+            Suurennettava(kuva, new LehtiKuva { Lahde = url, Selite = pitka, LahdeRivi = string.IsNullOrEmpty(pitka) ? null : "Matkakirjan havainnekuva" },
+                omaSelite: !string.IsNullOrEmpty(pitka));
             if (iso)
             {
                 var teksti = Rakenne.El("mk-kysymys__muotokuvateksti", kuvio, PickingMode.Ignore);
@@ -412,10 +435,7 @@ namespace Matkakirja.Natiivi
             var kehys = Rakenne.El("mk-kysymys__kuvakehys", s);
             if (lippu) kehys.AddToClassList("mk-kysymys__kuvakehys--lippu");
             // Vain kysymyksen oma kuva suurena, ei artikkeligalleriaa (paljastaisi vastauksen).
-            kehys.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
-            {
-                new LehtiKuva { Lahde = url, Selite = lippu ? "Tullimiehen näyttämä lippu" : "Matkavalokuvaajan vedos" },
-            })));
+            Suurennettava(kehys, new LehtiKuva { Lahde = url, Selite = lippu ? "Tullimiehen näyttämä lippu" : "Matkavalokuvaajan vedos" });
             var kuva = Rakenne.El("mk-kysymys__kuva", kehys, PickingMode.Ignore);
             Label lahdeRivi = null;
             // Tekijä ja lisenssi Commonsista, jos lähteestä puuttuu (web ui.js kuvalahde taytaLahderivi, #3438).
@@ -560,10 +580,7 @@ namespace Matkakirja.Natiivi
             // Web js/visa.js (katko.addEventListener('click') → ui.openLightbox(null, 'Kätkö', src)): napautus avaa kuvan
             // koko ruudulle samalla suurennoksella kuin kysymyskuva (Kuva-metodi).
             var katko = Rakenne.El("mk-kysymys__katko", isa);
-            katko.AddManipulator(new Clickable(() => suurennos.Avaa(new List<LehtiKuva>
-            {
-                new LehtiKuva { Lahde = url, Selite = "Kätkö" },
-            })));
+            Suurennettava(katko, new LehtiKuva { Lahde = url, Selite = "Kätkö" });
             string odotettu = avain;
             Kuvat.Hae(url, t =>
             {
