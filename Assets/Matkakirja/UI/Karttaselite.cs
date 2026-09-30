@@ -347,7 +347,7 @@ namespace Matkakirja.Natiivi
             if (mk != null && mk.RuutuPallolle(ruutu, out double lat, out double lon)) avain = mk.MaaPisteessa(lat, lon);
             Debug.Log($"MATKAKIRJA ui maakunta: tyhjä napautus → {avain ?? "ei maakuntaa"}{(Auki ? ", lappu auki " + Maakunnat.ValittuAvain : "")}");
             // Meri tai maakunnaton kohta sulkee; saman maakunnan uusi napautus sulkee (omistaja 28.9. klo 20.3x).
-            if (avain == null || (Auki && avain == Maakunnat.ValittuAvain)) { Sulje(); return; }
+            if (avain == null || !Maakunnat.Tunnettu(avain) || (Auki && avain == Maakunnat.ValittuAvain)) { Sulje(); return; }
             if (!Auki) Avaa();
             Maakunnat.ValitseKunValmis(avain);
         }

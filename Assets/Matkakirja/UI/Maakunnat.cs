@@ -286,6 +286,9 @@ namespace Matkakirja.Natiivi
 
         bool Kelpaa(string avain) => avain != null && rivit.ContainsKey(avain);
 
+        /// <summary>Avain kelpaa valinnaksi, tai dataa ei ole vielä ladattu (automaattinen maakunta päättää latauksen jälkeen).</summary>
+        public bool Tunnettu(string avain) => avain != null && (!rakennettu || Kelpaa(avain));
+
         Luonnehdinta HaeLuonnehdinta(string avain)
         {
             var (iso, tunnus) = Jaa(avain);
