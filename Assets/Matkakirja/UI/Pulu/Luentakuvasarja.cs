@@ -52,6 +52,7 @@ namespace Matkakirja.Natiivi
             if (k == null) return;
             loppu?.Pause();
             ohita.style.display = DisplayStyle.Flex;
+            AsetaPaikka(); // Ohita heti oikeaan reunaan, ei ensin alas keskelle
             Natiivi.Kuvat.Hae(k.Osoite, t =>
             {
                 if (t == null) return;
@@ -71,6 +72,9 @@ namespace Matkakirja.Natiivi
                 naytetyt.Add(k);
                 Rakenne.Nayta(kortti, true, 400);
                 while (kortit.Count > Katto) { kortit[0].RemoveFromHierarchy(); kortit.RemoveAt(0); }
+                AsetaPaikka();
+                paikanSeuranta ??= pakka.schedule.Execute(AsetaPaikka).Every(250);
+                paikanSeuranta.Resume();
             });
         }
 
@@ -85,11 +89,48 @@ namespace Matkakirja.Natiivi
             float w = float.IsNaN(r.width) || r.width <= 0f ? Screen.width : r.width;
             float h = float.IsNaN(r.height) || r.height <= 0f ? Screen.height : r.height;
             float kerroin = w >= 700f && w <= 1400f ? 1.5f : 1f;
-            float leveys = Mathf.Min(0.8f * w, 352f) * kerroin;
-            float katto = Mathf.Min(0.34f * h, 240f) * kerroin;
+            // Omistaja 30.9. (TF 1.0.68): puolet pienempi kuin webin keskikuva (kuva kaistaleen alla oikeassa reunassa).
+            float leveys = Mathf.Min(0.8f * w, 352f) * kerroin * 0.5f;
+            float katto = Mathf.Min(0.34f * h, 240f) * kerroin * 0.5f;
             if (suhde > 0f && leveys / suhde > katto) leveys = katto * suhde;
             return Mathf.Round(leveys);
         }
+
+        /// <summary>
+        /// Omistaja 30.9. (TF 1.0.68): kuva ei enää keskellä ruutua, vaan puolikkaana matkakirjakaistaleen tekstin alla
+        /// selvästi oikeassa reunassa, jotta kartta jää tutkittavaksi. Kaistaleen laatikko tulee Matkakirjakortilta
+        /// (Kaistale = Rajat); kaistale kasvaa tekstin kirjoittuessa, joten paikka päivitetään 250 ms välein pakan näkyessä.
+        /// Ilman näkyvää kaistaletta kuva asettuu oikeaan reunaan 28 % korkeudelle.
+        /// </summary>
+        void AsetaPaikka()
+        {
+            if (kortit.Count == 0 && paikanSeuranta != null) { paikanSeuranta.Pause(); }
+            var p = pakka.worldBound;
+            if (float.IsNaN(p.height) || p.height <= 0f) return;
+            var m = Kaistale?.Invoke() ?? default;
+            float yla = m.height > 0f ? m.yMax - p.yMin + 12f : p.height * 0.28f;
+            // Kortit ovat absoluuttisia: paikka suoraan kortille (1.0.70-kuva: säiliön täyte ei siirtänyt niitä, kuva
+            // painui ruudun reunaan). 28 pt oikealta: pinon siirto (enintään 21 pt) ja kallistus jäävät ruudun sisään.
+            float korkeus = 0f;
+            foreach (var k in kortit)
+            {
+                k.style.top = Mathf.Max(0f, yla);
+                k.style.right = 28f;
+                k.style.left = StyleKeyword.Auto;
+                float h = k.layout.height;
+                if (!float.IsNaN(h)) korkeus = Mathf.Max(korkeus, h);
+            }
+            // Ohita kuvan alle oikeaan reunaan (Päätoimittaja 30.9.: 1.0.71:ssä Ohita peitti alhaalla Liiku-napin).
+            // Pakka ja Ohita ovat samassa turva-säiliössä, joten pakan koordinaatit käyvät sellaisenaan.
+            ohita.style.left = StyleKeyword.Auto;
+            ohita.style.bottom = StyleKeyword.Auto;
+            ohita.style.translate = new Translate(0, 0);
+            ohita.style.right = 28f;
+            ohita.style.top = Mathf.Max(0f, yla) + (korkeus > 0f ? korkeus : 120f) + 18f; // kallistus ja pinon siirto mukaan
+        }
+        IVisualElementScheduledItem paikanSeuranta;
+        /// <summary>Matkakirjakaistaleen laatikko paneelissa (Matkakirjakortti.Rajat), tyhjä jos kaistale ei näy.</summary>
+        public Func<Rect> Kaistale;
 
         /// <summary>Luento tai kommentti loppui: kuvat häipyvät 6 s hiljaisuuden jälkeen.</summary>
         public void Hiljeni(int viiveMs = LoppuMs)

@@ -442,6 +442,29 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku, "mahtuu: näkyy oikealla");
         }
 
+        [Testi] static void NimibudjettiNakymanKorkeudesta()
+        {
+            // Pariteetti 30.9.2026, web nimet.js nimibudjetti ja sen taulukko (32,1° → 25 … 133,6° → 6).
+            Oleta.Tosi(NimiLadonta.Nimibudjetti(20) == 40 && NimiLadonta.Nimibudjetti(10) == 40, "saapuminen ja lähempää 40");
+            Oleta.Tosi(NimiLadonta.Nimibudjetti(32.1) == 25 && NimiLadonta.Nimibudjetti(40.1) == 20 && NimiLadonta.Nimibudjetti(53.4) == 15
+                       && NimiLadonta.Nimibudjetti(64.1) == 12 && NimiLadonta.Nimibudjetti(85.5) == 9 && NimiLadonta.Nimibudjetti(133.6) == 6,
+                       "webin taulukko");
+            Oleta.Tosi(NimiLadonta.Nimibudjetti(0) == 6 && NimiLadonta.Nimibudjetti(double.NaN) == 6, "tuntematon = lattia");
+            Oleta.Tosi(NimiLadonta.LiikevaranKatto(6, 0.5f) == 24 && NimiLadonta.LiikevaranKatto(int.MaxValue, 0.5f) == int.MaxValue,
+                       "liikevaran ala (1 + 2 · 0,5)²");
+        }
+
+        [Testi] static void NimibudjettiRajaaLadonnan()
+        {
+            // Web ladoRuutunimet katto: budjetin jälkeen ei nimeä eikä varausta; pakollinen ei kuluta budjettia.
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            var pakko = KE(100, 700); pakko.Pakko = true; pakko.Nimio = new Ruutulaatikko(100, 695, 160, 705);
+            var lista = new List<NimiLadonta.KaupunkiEhdokas> { pakko, KE(100, 100), KE(100, 300), KE(100, 500) };
+            NimiLadonta.LadoKaupungit(lista, null, Ruutu, 1f, v, nayta, paikat, 0f, 2);
+            Oleta.Tosi(nayta[0] && nayta[1] && nayta[2] && !nayta[3], string.Join(",", nayta));
+        }
+
         [Testi] static void NappulanPinoVaistetaanYlos()
         {
             // Web VÄISTÖKEHÄ PELIMERKIN YMPÄRI: piste pinon sisällä → ensin ylös pinon yläpuolelle.

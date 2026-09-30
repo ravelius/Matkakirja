@@ -1813,12 +1813,15 @@
     -unity-text-align: middle-center;
 }
 
+/* Omistaja 30.9. (TF 1.0.68): nuolet kortin reunoille kuvan ulkopuolelle (web .nahtavyys-nuoli.edellinen
+ * left: -1rem): kortin reunan päällä puoliksi ulkona. Kuva alkaa 18 pt:n täytteen jälkeen, joten 32 pt:n nuoli
+ * (−16…+16) ei osu kuvaan. Puhelimessa kortti 90 % leveydestä → reunaan jää ≥ 19 pt, nuoli mahtuu ruudulle. */
 .mk-nahtavyys__nuoli--vasen {
-    left: 4px;
+    left: -16px;
 }
 
 .mk-nahtavyys__nuoli--oikea {
-    right: 4px;
+    right: -16px;
 }
 
 /* Listaryhmän otsikko ja sen pieni reaktionappi samalla rivillä (web h4.vinkki-ryhma + .reaktiot-otsikko). */
@@ -1845,10 +1848,13 @@
     color: rgba(70, 51, 31, 0.85);
 }
 
+/* Pariteetti 30.9.2026 (Päätoimittaja): rivi ei saa ylittää sivua. Leveys enintään sivun levyinen ja teksti kutistuu
+   rivittyen kahdelle riville ikonin viereen kuten webissä (ennen "änään 26° … VUOSIENNU" leikkautui kummastakin reunasta). */
 .mk-lehti__saa {
     flex-direction: row;
     align-items: center;
     align-self: center;
+    max-width: 100%;
     min-height: 26px;
     margin: -7.2px 0 11.2px 0;
     padding: 2.4px 4.8px;
@@ -1861,9 +1867,13 @@
     width: 18px;
     height: 18px;
     margin-right: 6px;
+    flex-shrink: 0;
 }
 
 .mk-lehti__saateksti {
+    flex-shrink: 1;
+    min-width: 0;
+    -unity-text-align: middle-center;
     font-size: 12.5px;
     letter-spacing: 4px; /* web 0.5px */
     white-space: normal;
@@ -1871,6 +1881,7 @@
 }
 
 .mk-lehti__saavihje {
+    flex-shrink: 0;
     margin-left: 6.4px;
     font-size: 10.9px;
     letter-spacing: 10.09px; /* web 1.1px */

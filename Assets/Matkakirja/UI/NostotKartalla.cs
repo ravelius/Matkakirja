@@ -1073,6 +1073,9 @@ namespace Matkakirja.Natiivi
             // Meren nimiö (web NOSTOSYM_NIMIO_ASUT.meri): lyhennys, sitten versaali ja harvennus 0,28 em.
             bool meri = !ryhma && NostoSaannot.OnMerenNimio(s.Laji);
             string nimi = loydetty ? nimio ?? Lyhenna(s.Nimio ?? "") : ""; // löytämätön ilman nimeä
+            // Pariteetti 30.9.2026 (web nostot.js pisteetVain): loitonnettaessa, kun maan lehti ei täytä näkymää, nosto on
+            // pelkkä merkki ilman nimiötä (NostoKerros.NimetNakyvat), jotta nostonimet eivät täytä karttaa.
+            if (lahde != null && !lahde.NimetNakyvat) nimi = "";
             AsetaMuste(m, s, loydetty, ryhma, ruutuPx);
             if (meri) nimi = nimi.ToUpperInvariant();
             if (m.Nimio.text != nimi) m.Nimio.text = nimi;

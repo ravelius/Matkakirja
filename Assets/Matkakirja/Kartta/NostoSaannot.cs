@@ -231,6 +231,38 @@ namespace Matkakirja
         public static bool ElaintaytNakyvat(double nakyvaKorkeusAsteina, bool nappulaLiikkuu) =>
             !nappulaLiikkuu && nakyvaKorkeusAsteina > 0 && nakyvaKorkeusAsteina <= ElaintakyNakyyKorkeus;
 
+        // ==== NOSTOJEN NIMIÖT VAIN LEHDEN PORTISSA (pariteetti 30.9.2026, web nostot.js lehtiNakyvissa / pisteetVain) ====
+        //
+        // Webissä kohdemaan nostot ovat kartalla PELKKINÄ PISTEINÄ (nimioNakyy false), kun maan lehti ei täytä näkymää:
+        // nimiöt palaavat vasta, kun lehdenOsuus ≥ LEHDEN_VAHIN_OSUUS 0,5 tai maa on kokonaan ruudulla ja osuus ≥
+        // LEHDEN_KOKONAISENA_OSUUS 0,3. Näin loitonnettaessa pienet nostonimet eivät täytä karttaa kaupunkien nimien
+        // tieltä. Osuus lasketaan WEBIN MITASSA (laudan yksiköt): leveys pituusasteina ilman cos-korjausta ja korkeus
+        // Millerin y:nä, näkymä kameran kaarena asteina webin kotelossa (natiivin koko ruutu × kotelon osuus).
+
+        /// <summary>Web LEHDEN_VAHIN_OSUUS (fokuskohteet.js) ja LEHDEN_KOKONAISENA_OSUUS (nostot.js:730).</summary>
+        public const double LehdenVahinOsuus = 0.5, LehdenKokonaisenaOsuus = 0.3;
+        /// <summary>Web LEHDEN_REUNAVARA (nostot.js:732): reunavara suhteessa näkymän leveyteen.</summary>
+        public const double LehdenReunavara = 0.04;
+
+        /// <summary>Millerin y asteina (laudan yksiköt · 360 / 12000; web fokusmitat.js teeProjektionKaavat).</summary>
+        public static double MillerAsteina(double lat) => -1.25 * Math.Log(Math.Tan(Math.PI / 4.0 + 0.4 * lat * Rad)) / Rad;
+
+        /// <summary>
+        /// Web lehdenOsuus (nostot.js:706) natiivin mitoista: max(Δpituus / näkyvä leveys, ΔMiller-y / näkyvä korkeus),
+        /// kaikki webin asteina. länsi, etelä, itä, pohjoinen = maan bbox; 0, jos näkymä tuntematon.
+        /// </summary>
+        public static double LehdenOsuus(double lansi, double etela, double ita, double pohjoinen,
+            double nakyvaLeveysAst, double nakyvaKorkeusAst)
+        {
+            double w = Math.Abs(ita - lansi), h = Math.Abs(MillerAsteina(etela) - MillerAsteina(pohjoinen));
+            double a = nakyvaLeveysAst > 0 ? w / nakyvaLeveysAst : 0, b = nakyvaKorkeusAst > 0 ? h / nakyvaKorkeusAst : 0;
+            return Math.Max(a, b);
+        }
+
+        /// <summary>Web lehtiNakyvissa: osuus ≥ 0,5, tai ≥ 0,3 kun maa on kokonaan ruudulla.</summary>
+        public static bool LehtiNakyvissa(double osuus, bool kokonaanRuudulla) =>
+            osuus >= LehdenVahinOsuus || (osuus >= LehdenKokonaisenaOsuus && kokonaanRuudulla);
+
         // ==== SYMBOLIT (löydös 125, web js/fokusnosto-symbolit.js; mitattu proto-3d/lokit/nostot-125/web) ====
 
         /// <summary>

@@ -273,7 +273,8 @@ namespace Matkakirja.Natiivi
         void PaivitaKuvaSumea()
         {
             // Kaikilla laitteilla (Fable 24.9.: omistajan ohje koski karttaa yleisesti, ei vain iPhonea).
-            bool s = PakotaKuvaSumea ?? (Matkakirja.Kuvat.Nakyy || Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki
+            // Omistaja 30.9. (TF 1.0.68): luennan kuva ei enää pehmennä karttaa (pieni kuva kaistaleen alla, kartta tutkittavissa).
+            bool s = PakotaKuvaSumea ?? (Nostokortti.Auki || Kysymys.Auki || Chat.KuvakorttiAuki
                 || Kohdekartan.KortistaAuki);
             // Löydös 132 (Natiivi-UI): Kokoruutu, kun noston kuva on kokoruudulla (löydös 150); muut näkymät Kortti.
             // Vierityslöydös (omistaja 27.9. klo 17.0x): kun opas tai linssipaneeli peittää ≥ 70 % ruudusta (iPhone 17: opas 77 %), kartta

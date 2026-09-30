@@ -99,9 +99,35 @@ namespace Matkakirja.Natiivi
             return $"paneeli: välilehti {Valilehti}, kutistettu {Kutistettu}, nahka {IssOhjaus.Nahka.Nimi} (mitta 150 ms päästä)";
         }
 
+        /// <summary>
+        /// KYTKINPÖYTÄ (Linssiseppä 30.9.2026, IssKytkinpoyta/IssKytkimet): avaruusaluksen kytkimet alareunan pöytänä; Codexin kuvat
+        /// vaihtuvat paikkamerkkien tilalle Resources/IssKytkimet/-kansiosta. A/B `astro kyyti poyta 0|1` (0 = välilehtipaneeli).
+        /// </summary>
+        public static bool Kytkinpoyta = true;
+        readonly IssKytkinpoyta poyta;
+        readonly VisualElement ylariviEl, sulkuVanha;
+
+        VisualElement Poyta => Kytkinpoyta ? poyta.Juuri : ohjaimet;
+
+        /// <summary>Testikomento `astro kyyti kytkin lista|kansi|nopeus <i>|tila` (kuvaparit ilman kosketusta).</summary>
+        public static string KytkinTesti(string[] a)
+        {
+            var n = instanssi;
+            if (n == null) return "kytkin: ei kyytinäkymää";
+            string k = a.Length > 0 ? a[0] : "tila";
+            if (k == "lista") n.VaihdaLista();
+            else if (k == "kansi") n.poyta.Oma.AvaaKansi();
+            else if (k == "nopeus" && a.Length > 1 && int.TryParse(a[1], out int i) && i >= 0 && i < Simukello.Nopeudet.Length)
+                Linssi()?.AsetaNopeus(Simukello.Nopeudet[i]);
+            var r = n.poyta.Juuri.worldBound;
+            var ruutu = n.juuri.panel?.visualTree.layout ?? Rect.zero;
+            return $"kytkin: pöytä {(Kytkinpoyta ? "päällä" : "pois")}, {r.width:0} × {r.height:0} pt, peitto {(ruutu.height > 0 ? r.height / ruutu.height * 100 : 0):0.0} % korkeudesta, "
+                 + $"kuvat {(IssKytkimet.KuvatPaikalla ? "Codex" : "paikkamerkit")}, nopeus {n.poyta.Nopeus.Asento}";
+        }
+
         string PaneelinMitta()
         {
-            var r = ohjaimet.worldBound;
+            var r = Poyta.worldBound;
             var ruutu = juuri.panel?.visualTree.layout ?? Rect.zero;
             float peitto = ruutu.width > 0 ? r.width * r.height / (ruutu.width * ruutu.height) : 0;
             return $"paneeli: välilehti {Valilehti}, kutistettu {Kutistettu}, nahka {IssOhjaus.Nahka.Nimi}, {r.width:0} × {r.height:0} pt, " +
@@ -250,6 +276,7 @@ namespace Matkakirja.Natiivi
             // Säätöpaneeli (IssOhjaus-osat Codexin nahalla).
             // Lukema vasemmassa yläkulmassa omana kilpenään, ohjauspöytä alareunassa.
             var ylarivi = Rakenne.El("mk-isskyyti__ylarivi mk-isskyyti__lukemarivi", turva);
+            ylariviEl = ylarivi;
             ohjaimet = IssOhjaus.Paneeli(turva);
             ohjaimet.AddToClassList("mk-isskyyti__ohjaimet");
             pilleri = IssOhjaus.Lukema(ylarivi);
@@ -318,6 +345,19 @@ namespace Matkakirja.Natiivi
 
             var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", Poistu, turva);
             sulku.tooltip = "Pois kyydistä";
+            sulkuVanha = sulku;
+            poyta = new IssKytkinpoyta(turva,
+                k => Linssi()?.AsetaNopeus(k),
+                v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
+                v =>
+                {
+                    int kk = Mathf.RoundToInt(v);
+                    AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
+                    PaivitaSaatimet();
+                },
+                VaihdaLista, LennaOmaan, Poistu,
+                () => { if (nopeutettu) Linssi()?.AsetaNopeus(1); });
+            PaivitaPoydat(KyydinTila.Kauko);
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
             {
                 var r = kerros.Reunat(LinssiUi.Kerros);
@@ -325,6 +365,7 @@ namespace Matkakirja.Natiivi
                 // Ohjauspöydän leveys: ruutu − 24, enintään 560 pt, keskellä (kutistettuna vain nappi vasemmalla).
                 poytaLeveys = juuri.layout.width - r.x - r.z;
                 AsetteleOhjaimet();
+                poyta.Asettele(poytaLeveys);
                 PaivitaKupu();   // ruutu kääntyi: pyöreän rajauksen kupu vaakaan tai pystyyn heti
                 PaivitaPulu();
             });
@@ -342,6 +383,17 @@ namespace Matkakirja.Natiivi
             ohjaimet.style.left = (poytaLeveys - w) * 0.5f;
         }
 
+        /// <summary>Kytkinpöytä tai välilehtipaneeli (A/B) ja niiden mukana lukemakilpi ja sulkunappi; kävelyllä ei pöytää.</summary>
+        void PaivitaPoydat(KyydinTila tila)
+        {
+            bool ulkona = tila == KyydinTila.Ulkona;
+            bool uusi = Kytkinpoyta && !ulkona;
+            poyta.Juuri.style.display = uusi ? DisplayStyle.Flex : DisplayStyle.None;
+            ohjaimet.style.display = !Kytkinpoyta && !ulkona ? DisplayStyle.Flex : DisplayStyle.None;
+            ylariviEl.style.display = uusi ? DisplayStyle.None : DisplayStyle.Flex;
+            sulkuVanha.style.display = uusi ? DisplayStyle.None : DisplayStyle.Flex;
+        }
+
         /// <summary>
         /// Pulu kyydissä (omistaja 29.9.2026): Cupolassa ulkona avaruuskävelyllä ikkunan aukossa (alue oikealle alas keskeltä,
         /// kerros kehyksen alla, AstronautinNakyma), muissa tiloissa ohjauspöydän yläpuolella.
@@ -357,8 +409,9 @@ namespace Matkakirja.Natiivi
             // mahtuu aukkoon myös puhelimella. Alueen oikea alakulma on linnun keskipisteestä noin (66, 55) pt (Pulu.Oikea).
             float R = 0.46f * Mathf.Min(W, H);
             p.IkkunanTakana = ikkunassa ? new Vector2(W * 0.5f + 0.25f * R + 66f, H * 0.5f + 0.3f * R + 55f) : (Vector2?)null;
-            bool poyta = Tila != KyydinTila.Kauko && ohjaimet.resolvedStyle.display != DisplayStyle.None && ohjaimet.worldBound.height > 0;
-            p.AlaVara = poyta && !ikkunassa ? H - ohjaimet.worldBound.yMin + 6f : 0f;
+            var pe = Poyta;
+            bool poytaNakyy = Tila != KyydinTila.Kauko && pe.resolvedStyle.display != DisplayStyle.None && pe.worldBound.height > 0;
+            p.AlaVara = poytaNakyy && !ikkunassa ? H - pe.worldBound.yMin + 6f : 0f;
         }
 
         static AstronauttiLinssi Linssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
@@ -383,9 +436,24 @@ namespace Matkakirja.Natiivi
                     Rakenne.Nappi(k.Nimi, "mk-isskyyti__kohde", () => { SuljeLista(); Linssi()?.LennaKohteeseen(tunnus); }, lista);
                 }
             }
+            // Kytkinpöydällä lista on turva-alueen lapsi pöydän yläpuolella (pöydän levyinen); välilehtipaneelissa Kohde-sivulla.
+            if (Kytkinpoyta)
+            {
+                if (lista.parent != turva) turva.Add(lista);
+                lista.style.position = Position.Absolute;
+                lista.style.left = poyta.Juuri.layout.x; lista.style.width = poyta.Juuri.layout.width;
+                lista.style.bottom = turva.layout.height - poyta.Juuri.layout.y + 6f;
+                poyta.Kohde.Tila = IssKytkimet.Tila.Aktiivinen;
+            }
+            else if (lista.parent != sivut[1])
+            {
+                sivut[1].Add(lista);
+                lista.style.position = StyleKeyword.Null; lista.style.left = StyleKeyword.Null;
+                lista.style.width = StyleKeyword.Null; lista.style.bottom = StyleKeyword.Null;
+            }
             // Korkeus: pöydän yläpuolelle turva-alueen yläreunaan asti (12 pt:n marginaali, lukeman alle), vähintään neljä riviä.
             float tarve = lista.contentContainer.childCount * RiviPt + 2;
-            float tila = sivut[1].worldBound.yMin - 6 - (turva.worldBound.yMin + 64);
+            float tila = (Kytkinpoyta ? poyta.Juuri.worldBound.yMin : sivut[1].worldBound.yMin) - 6 - (turva.worldBound.yMin + (Kytkinpoyta ? 12 : 64));
             lista.style.height = float.IsNaN(tila) ? tarve : Mathf.Min(tarve, Mathf.Max(4 * RiviPt, tila));
             lista.scrollOffset = Vector2.zero;
             lista.style.display = DisplayStyle.Flex;
@@ -409,6 +477,12 @@ namespace Matkakirja.Natiivi
             pilviSaadin.Aseta(m, m <= 0.01f ? "selkeä" : m >= 0.99f ? "nyt" : $"{Mathf.RoundToInt(m * 100)} %");
             int nyt = IssNyt.Kello().Month, kk = AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12 ? AstronauttiKerros.KuukausiPakotettu : nyt;
             kuukausiSaadin.Aseta(kk, Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1] + (kk == nyt ? " (nyt)" : ""));
+            if (poyta != null)
+            {
+                poyta.Pilvet.Aseta(m, m <= 0.01f ? "0 %" : m >= 0.99f ? "NYT" : $"{Mathf.RoundToInt(m * 100)} %");
+                string nimi = Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1];
+                poyta.Vuodenaika.Aseta(kk, (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kk == nyt ? " •" : ""));
+            }
         }
 
         /// <summary>Välilehti ja kutistus näkyviin (segmenttien tila, sivut, kutistusnapin asento).</summary>
@@ -432,6 +506,7 @@ namespace Matkakirja.Natiivi
         {
             lista.style.display = DisplayStyle.None;
             peite.style.display = DisplayStyle.None;
+            if (poyta != null) poyta.Kohde.Tila = IssKytkimet.Tila.Perus;
         }
 
         /// <summary>AstronauttiKerros.KyytiKasittelija.</summary>
@@ -464,7 +539,16 @@ namespace Matkakirja.Natiivi
             ylilentoKilpi.style.display = auki && aika.Ylilento != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (auki) PaivitaSaatimet();
             // Avaruuskävelyllä ei nopeutusta eikä ylilentoa (tilakone kelaa itse auringonnousuun).
-            ohjaimet.style.display = tila == KyydinTila.Ulkona ? DisplayStyle.None : DisplayStyle.Flex;
+            PaivitaPoydat(tila);
+            if (auki && Kytkinpoyta)
+            {
+                poyta.Lukema.Aseta(rivi.Teksti, aika.Ylilento);
+                poyta.Live.Tila = IssKytkimet.Tila.Aktiivinen;
+                poyta.Live.Meripihka = aika.Nopeutettu;
+                poyta.Live.Nimi.text = aika.Nopeutettu ? "PALAA" : "LIVE";
+                int ix = Array.IndexOf(Simukello.Nopeudet, aika.Porras);
+                poyta.Nopeus.Aseta(ix >= 0 && !aika.Kelaa ? ix : 0, aika.Kelaa ? "…" : null);
+            }
             if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;
             if (ikkuna && !kuvatHaettu && CupolaKerros.Vanha) HaeKuvat();

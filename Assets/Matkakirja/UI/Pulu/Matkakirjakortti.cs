@@ -126,6 +126,7 @@ namespace Matkakirja.Natiivi
                 return eka.width > 0f ? new Rect(eka.xMin, eka.center.y, kortti.worldBound.width, eka.height) : kortti.worldBound;
             };
 
+            Kuvat.Kaistale = () => Rajat; // luentakuva kaistaleen alle oikeaan reunaan (omistaja 30.9.)
             kortti = Rakenne.El("mk-matkakirja", turva);
             kortti.style.display = DisplayStyle.None;
             // Avattu matkakirja paperina (omistaja 29.9.2026: "pohja on natiivissa yksivärinen, pitää olla paperin värinen ja
@@ -251,15 +252,18 @@ namespace Matkakirja.Natiivi
         static bool Puhelin => Application.platform == RuntimePlatform.IPhonePlayer
             ? !UiKerros.Tabletti : Screen.width < Screen.height;
 
-        /// <summary>Web tekstitPiilossa: puhelin tai kertojan luenta.</summary>
-        bool TekstitPiilossa => Puhelin || luentaPiilo;
+        /// <summary>Puhelimessa merkintä alkaa lappuna, paitsi kertojan luennan aikana: omistaja 30.9.2026 (TF 1.0.68,
+        /// Päätoimittaja): "otetaan isoisän matkakirja näkyviin automaattisesti luennan ajan" — kumoaa 15.9.:n linjan
+        /// "TEKSTIT PIILOON KAIKILLA LAITTEILLA" (web tekstitPiilossa, PAATOKSET 38/1).</summary>
+        bool TekstitPiilossa => Puhelin && !luentaPiilo;
 
         /// <summary>Testikomentoa varten: miksi kortti on lappu (ui matkakirja).</summary>
         public string Tila => $"pieni {pieni}, puhelin {Puhelin} (tabletti {UiKerros.Tabletti}, malli {SystemInfo.deviceModel}), luentapiilo {luentaPiilo}, kertoja {Aanet.KertojaPuhuu}";
 
         /// <summary>
-        /// Webin luentavahti: kertojan alkaessa auki oleva kortti kutistuu lapuksi; puheenvuorojen
-        /// välissä piilo pysyy välirauhan ajan (ei välähdystä). Loppu ei avaa korttia millään laitteella.
+        /// Luentavahti (omistaja 30.9.2026): kertojan alkaessa kortti AUKEAA (lappu → auki) ja pysyy auki luennan ajan;
+        /// puheenvuorojen välissä tila pysyy välirauhan ajan (ei välähdystä). Luennan loppu ei kutista korttia; pelaajan
+        /// kartan liike kutistaa sen tavalliseen tapaan vasta luennan jälkeen. (Ennen 30.9.: kertoja kutisti kortin.)
         /// </summary>
         PalloKierto kierto;
 
@@ -286,8 +290,9 @@ namespace Matkakirja.Natiivi
 
         public void KartanLiike()
         {
-            // Napautus käytettiin kortin kutistamiseen: ei maakuntalappua samasta napautuksesta (omistaja 30.9.2026).
-            if (Nakyy && !pieni) { Muunna(true); PalloKierto.Osui(); }
+            // Luennan ajan kortti pysyy auki, vaikka pelaaja tutkii karttaa (omistaja 30.9.2026). Kutistukseen käytetty
+            // napautus ei avaa maakuntalappua (omistaja 30.9.2026, maakunta automaattisesti).
+            if (Nakyy && !pieni && !luentaPiilo) { Muunna(true); PalloKierto.Osui(); }
         }
 
         bool linssiKutisti;
@@ -321,7 +326,7 @@ namespace Matkakirja.Natiivi
             if (!piiloon) kertojaLoppui = -1f;
             if (piiloon == luentaPiilo) return;
             luentaPiilo = piiloon;
-            if (piiloon && Nakyy && !pieni) Muunna(true);
+            if (piiloon && Nakyy && pieni) Muunna(false);
             // Löydös 87: isoisän luennon jälkeen lappu tiivistyy pelkkään kaupungin nimeen.
             if (!piiloon && merkinta != null && merkinta.Kaiutin && !luettu) { luettu = true; PaivitaLyhyt(true); }
         }
@@ -713,6 +718,22 @@ namespace Matkakirja.Natiivi
         /// Valo on kortin laatikkoa suurempi (inset −46 % −22 %, farthest-corner) ja kortti leikkaa sen: reunoilla ~0,55,
         /// kulmissa ~0,3, joten kartta kuultaa läpi. Laskettu kortin suhteellisissa koordinaateissa (venyy kortin mukana).
         /// </summary>
+        /// <summary>
+        /// Webin sRGB-alfa lineaarisen väriavaruuden sekoitukseen (Päätoimittaja 30.9.2026: "webissä kartan nimet näkyvät
+        /// tekstin alta, natiivin kermavalo on lähes peittävä"). Unity sekoittaa lineaarisesti, jolloin sama alfa peittää
+        /// tumman musteen selvästi enemmän kuin selaimen sRGB-sekoitus: mitattu omistajan kaappauksesta Pariisin merkki
+        /// kortin alla alfa 0,70 (web-kaava), natiivissa sama alfa näkyi noin 0,85:nä. Alfa valitaan niin, että kartan
+        /// muste (sRGB noin 70/255) kuultaa kerman läpi samalla sävyllä kuin webissä.
+        /// </summary>
+        static float LineaarinenAlfa(float a)
+        {
+            if (a <= 0f || QualitySettings.activeColorSpace != ColorSpace.Linear) return a;
+            const float muste = 70f / 255f, kerma = 238f / 255f;
+            float kohde = Mathf.GammaToLinearSpace(a * kerma + (1f - a) * muste);
+            float m = Mathf.GammaToLinearSpace(muste), k = Mathf.GammaToLinearSpace(kerma);
+            return Mathf.Clamp01((kohde - m) / (k - m));
+        }
+
         static Texture2D KermaValo
         {
             get
@@ -731,7 +752,7 @@ namespace Matkakirja.Natiivi
                     float d = Mathf.Sqrt(dx * dx + dy * dy);
                     float a = d <= 0.30f ? 0.9f : d <= 0.46f ? Mathf.Lerp(0.9f, 0.62f, (d - 0.30f) / 0.16f)
                         : d <= 0.62f ? Mathf.Lerp(0.62f, 0.28f, (d - 0.46f) / 0.16f) : d <= 0.78f ? Mathf.Lerp(0.28f, 0f, (d - 0.62f) / 0.16f) : 0f;
-                    px[y * N + x] = new Color(vari.r, vari.g, vari.b, a);
+                    px[y * N + x] = new Color(vari.r, vari.g, vari.b, LineaarinenAlfa(a));
                 }
                 kermaValo.SetPixels(px);
                 kermaValo.Apply(false, true);
