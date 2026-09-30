@@ -124,6 +124,7 @@ namespace Matkakirja.Natiivi
         public void Avaa()
         {
             if (Nykyinen == null) return;
+            Kaynti.Laheta("apuraha");
             if (himmennys == null) himmennys = Rakenna(Nykyinen);
             vieritys.scrollOffset = Vector2.zero;
             Rakenne.Nayta(himmennys, true, 250);
@@ -177,6 +178,7 @@ namespace Matkakirja.Natiivi
                     b = Rakenne.Nappi(k.NappiTeksti, "mk-nappi--haamu mk-apuraha__toiminto", () =>
                     {
                         LinssiOhjain.AvaaEsittelylinssit();
+                        Kaynti.Laheta("esittelylinssit");
                         Debug.Log($"MATKAKIRJA apuraha: esittelylinssit auki, valittavissa {LinssiUi.Rekisteri?.Valittavat.Count ?? -1}");
                         Valmis();
                     }, vieritys);
