@@ -278,8 +278,10 @@ namespace Matkakirja.Natiivi
         const float PaneelinVaraPt = 8f;
         /// <summary>Paneeli "ulottuu reunaan", jos sen reuna on tätä lähempänä ruudun reunaa (matkakirjan sivumarginaali 8–12 pt).</summary>
         const float ReunaPt = 24f;
-        /// <summary>Paneelin pitää pysyä paikallaan näin kauan ennen siirtoa tai paluuta (avausanimaatio kasvattaa korttia).</summary>
+        /// <summary>Paneelin pitää pysyä paikallaan näin kauan ennen paluuta kulmaan (avaus kasvattaa korttia).</summary>
         const float VakaaS = 0.5f;
+        /// <summary>Siirrossa paneelin alareunaan lisättävä kasvuvara (kaksi tekstiriviä).</summary>
+        const float KasvuvaraPt = 40f;
         Rect edellinenYla;
         float ylaVakaaAlkaen;
 
@@ -305,10 +307,10 @@ namespace Matkakirja.Natiivi
                 edellinenYla = yla;
                 ylaVakaaAlkaen = Time.realtimeSinceStartup;
             }
-            if (Time.realtimeSinceStartup - ylaVakaaAlkaen < VakaaS) return;
+            bool vakaa = Time.realtimeSinceStartup - ylaVakaaAlkaen >= VakaaS;
             // PALUU KULMAAN (Laitetestaaja 1.0.66: kortti suljettiin lapuksi, tanko jäi siirtoon): heti, kun paneelia ei ole tai
             // kulman paikka näkyy taas kokonaan (puhelimella suljettu matkakirja on yläreunan lappu, joka ei peitä kulmaa).
-            if (lippuSiirretty && lipunOletus.HasValue)
+            if (lippuSiirretty && lipunOletus.HasValue && (vakaa || yla.height <= 0f))
             {
                 var o = lipunOletus.Value;
                 // Kulman paikka ei ole paneelin alla (myös ruudun ulkopuolella tai pallon takana: silloin tanko on piilossa kuten
@@ -325,6 +327,9 @@ namespace Matkakirja.Natiivi
                 }
             }
             if (yla.height <= 0f) return;
+            // Siirto heti (matkakirja kirjoittaa tekstin sana kerrallaan ja kasvaa sekunteja), mutta paneelin alareunaan varaa
+            // kasvulle, jotta tanko ei siirry kasvun aikana uudelleen.
+            yla = Rect.MinMaxRect(yla.xMin, yla.yMin, yla.xMax, yla.yMax + KasvuvaraPt);
             var ala = Lipputanko.RuutuAlue;
             if (!ala.HasValue || !PeittaaLipun(ala.Value, yla)) return;
             if (Time.realtimeSinceStartup < seuraavaLippuSiirto) return;
