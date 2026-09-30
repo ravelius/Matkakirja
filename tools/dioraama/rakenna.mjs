@@ -337,6 +337,18 @@ export function lisaaBlender(rakennusJson, blender) {
       hamaraJpg: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}.jpg`)])),
     },
   };
+  // Hybridi-PBR (menetelmä B, Siirtosepän muoto 30.9.): maski + kirjaston 4 materiaalia maskin kanavajärjestyksessä,
+  // vain jos viety blender.json:iin. Toisto metreinä kirjaston manifestista (js/dioraama/kirjasto/lahteet.json).
+  const DETALJI = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio'];
+  const kp = (id, k) => `kirjasto/materiaali/${id}/${id}_${k}`;
+  if (on.has('ulkokuori/hybridi/kuori-materiaali-2k.png') && DETALJI.every((id) => on.has(kp(id, 'diff.jpg')) && on.has(kp(id, 'nor_gl.jpg')))) {
+    const kirjasto = JSON.parse(readFileSync(new URL('../../js/dioraama/kirjasto/lahteet.json', import.meta.url), 'utf8'));
+    rakennusJson.ulkokuori.detalji = {
+      maski: B('ulkokuori/hybridi/kuori-materiaali-2k.png'), voimakkuus: 0.8, normaali: 0.7,
+      kanavat: DETALJI.map((id) => ({ id, diff: B(kp(id, 'diff.jpg')), nor: B(kp(id, 'nor_gl.jpg')),
+        toisto_m: kirjasto[`materiaali/${id}`].toisto_m })),
+    };
+  }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
