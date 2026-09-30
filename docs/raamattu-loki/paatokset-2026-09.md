@@ -9483,3 +9483,7 @@ Omistaja 30.9.2026: 'Voisiko tuota ISS:n kuvaa myös kääntää niin, että sii
 ## OMISTAJA: ISS:N MAAPALLONÄKYMÄ FOTOREALISTISEMMAKSI (30.9.2026 klo 18.03)
 
 Omistaja 30.9.2026: 'Miten ISS:n maapallonäkymästä saisi vielä fotorealistisemman?' Päätoimittajan linja (Linssiseppä horisonttierän jälkeen): 1) fysikaalinen ilmakehän sironta (Rayleigh + Mie, esilasketut LUT:t: horisontin usva, aerial perspective, terminaattorin sävy); 2) meren sunglint ja Fresnel, maaston kevyt korkeusvarjostus DEM:stä; 3) pilvien varjot, parallaksi ja valaistus; 4) yöpuolelle Black Marble -valot, airglow ja kuunvalo; 5) filminen sävytys ja valotus. Laaduntarkistus NASA:n astronauttikuvien (PD) vertailupareilla. Karttaseppä selvittää tarkemman maanpintakuvan (Sentinel-2 cloudless 2016 CC BY 4.0, VIIRS/MODIS, Landsat) laattamäärän ja kustannuksen. Täysi laatu kaikilla laitteilla, kevennys vain iPhone 15 Pro:lla tai heikommalla.
+
+## OMISTAJA: ISS-FOTOREALISMI MAKSUTTOMILLA KEINOILLA; SENTINEL-2-PINTA PIDOSSA (30.9.2026 klo 18.10)
+
+Omistaja 30.9.2026 Karttasepän selvityksen jälkeen (Sentinel-2 cloudless 2016 CC BY 4.0: noin 2,6 M laattaa, 75 Gt, R2 noin 12 $ + 1,1 $/kk, massalataus vaatii EOX:n vahvistuksen tai oston): 'Tee ne ilmaiset.' Linssiseppä toteuttaa ilmakehän sironnan, sunglintin ja Fresnelin, DEM-korkeusvarjostuksen, pilvien varjot ja valaistuksen, yöpuolen (Black Marble, airglow) ja filmisen sävytyksen nykyisellä BMNG-pinnalla; suunnitelma Päätoimittajalle tiedoksi, NASA-vertailupari ilmakehän jälkeen. Sentinel-2 pidossa, kunnes omistaja päättää EOX-yhteydenotosta.
