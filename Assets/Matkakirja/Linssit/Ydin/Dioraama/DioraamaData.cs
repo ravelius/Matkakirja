@@ -413,6 +413,8 @@ namespace Matkakirja.Linssit.Dioraama
     public sealed class KertojaJakso
     {
         public string Id, Teksti, Aani;
+        /// <summary>Tila, jonka leikkausikkuna avataan jakson ajaksi (`tila`, esim. laituri kuoren sisällä); null = ei leikkausta.</summary>
+        public string Tila;
         public Asento Kamera;
         public Asento? KameraPysty;
         public double? KestoS;
@@ -570,7 +572,7 @@ namespace Matkakirja.Linssit.Dioraama
                 if (j == null) continue;
                 r.Kertoja.Add(new KertojaJakso
                 {
-                    Id = MiniJson.Teksti(j, "id"), Teksti = MiniJson.Teksti(j, "teksti"), Aani = MiniJson.Teksti(j, "aani"),
+                    Id = MiniJson.Teksti(j, "id"), Teksti = MiniJson.Teksti(j, "teksti"), Aani = MiniJson.Teksti(j, "aani"), Tila = MiniJson.Teksti(j, "tila"),
                     Kamera = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "kamera"))),
                     KameraPysty = MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "kameraPysty")) is Dictionary<string, object> jkp
                         ? LueAsento(jkp) : (Asento?)null,
