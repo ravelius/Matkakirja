@@ -344,5 +344,19 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("Hei, kysy", Lukijaaani.PoistaKeskenTagi("Hei, kysy"));
             Oleta.Sama("Pulu? [[Kaar", Lukijaaani.PoistaKeskenTagi("Pulu? [[Kaar"), "keskeneräinen käsitelinkki hoidetaan muualla");
         }
+        [Testi] static void MoottoriElevenPyynnossaJaAvaimessa()
+        {
+            // Omistaja 30.9.2026: lukijan ElevenLabs v4 Turbo -vertailu. Moottori ja sen ääni kulkevat pyynnössä, Pulu ei vaihdu.
+            var (l, _) = Uusi();
+            string ennen = l.Valimuistiavain("merkinnat", "Marathon");
+            Oleta.Tosi(!l.Pyynto("Marathon", "merkinnat", "merkinnat").Runko.Contains("moottori"), "oletus xAI ilman kenttää");
+            l.MoottoriLahde = () => ("eleven", "Sz0tRTEpybtDJ9ru2kgD");
+            string runko = l.Pyynto("Marathon", "merkinnat", "merkinnat").Runko;
+            Oleta.Tosi(runko.Contains("\"moottori\":\"eleven\"") && runko.Contains("\"aani\":\"Sz0tRTEpybtDJ9ru2kgD\""), runko);
+            Oleta.Tosi(l.Valimuistiavain("merkinnat", "Marathon") != ennen, "eri moottori = eri välimuistiavain");
+            Oleta.Tosi(!l.Pyynto("Hei", "pollo", null).Runko.Contains("moottori"), "Pulu pysyy omalla reitillään");
+            l.MoottoriLahde = () => null;
+            Oleta.Sama(ennen, l.Valimuistiavain("merkinnat", "Marathon"), "null = xAI kuten ennen");
+        }
     }
 }

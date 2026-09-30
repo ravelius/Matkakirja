@@ -614,6 +614,14 @@ namespace Matkakirja.Natiivi
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
                 case "tietoja": ui.Aloitus.Apuraha.Sulje(); ui.Tietoja.Avaa(); return null; // kortti (kerros 45) jäi tietojen päälle
+                // Lukijan moottori (omistaja 30.9.2026, ElevenLabs v4 Turbo -vertailu): "ui moottori eleven|xai [ääni-id]".
+                case "moottori":
+                {
+                    var mo = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (mo.Length > 0) Striimiaani.Moottori = mo[0];
+                    if (mo.Length > 1) Striimiaani.ElevenAani = mo[1];
+                    return $"=moottori {Striimiaani.Moottori}, ääni {Striimiaani.ElevenAani}, sallittu {Striimiaani.MoottoriSallittu}, pyynnössä {(Striimiaani.MoottoriValinta()?.Moottori ?? "xai")}";
+                }
                 case "kaynti":
                     // Kävijälaskurin kuivaharjoitus (Natiiviseppä 30.9.): ping-runko ja ehdot, EI lähetetä (simulaattori ohittaa aina).
                     return Kaynti.Kuivaharjoitus(loput.Length > 0 ? loput : "avaus");
