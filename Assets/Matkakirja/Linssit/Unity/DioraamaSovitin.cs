@@ -173,7 +173,10 @@ namespace Matkakirja.Natiivi
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
-            linssi.Kuvasuhde = y.Kuvasuhde; // laajat kuvat sovitetaan todelliseen kuvasuhteeseen (iPhone pysty)
+            // Laajat kuvat sovitetaan todelliseen kuvasuhteeseen: näyttämön kameran oma (kuvan) suhde, ei ympäristön arvo
+            // (1.1 (79) vaaka: kierron jälkeen sovitus käytti vielä pystyn suhdetta ja linna jäi pieneksi).
+            float kameranSuhde = nayttamo.Kamera != null ? nayttamo.Kamera.aspect : 0f;
+            linssi.Kuvasuhde = kameranSuhde > 0.05f ? kameranSuhde : y.Kuvasuhde;
             if (nayttamo.Ulkokuori?.Pohja is { } po) linssi.AsetaPohja(po.minX, po.maxX, po.minZ, po.maxZ);
             if (kuoriOdotusAlku >= 0f)
             {
@@ -190,7 +193,7 @@ namespace Matkakirja.Natiivi
                 else { nayttamo.Odota(true); t = kuoriOdotusT; }
             }
             SaapumisOdotus = kuoriOdotusAlku >= 0f;
-            bool pysty = y.Kuvasuhde < 1.0;
+            bool pysty = linssi.Kuvasuhde < 1.0; // kameran oma suhde (ks. yllä)
             if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             var nakyma = linssi.NakymaHetkella(t, pysty);
             // Elävä linna: saapumiskaaren eteneminen → soihtujen syttyminen; kaari nähty → seuraavalla kerralla lyhyt.
