@@ -55,9 +55,6 @@ namespace Matkakirja.Natiivi
             Natiivi.Kuvat.Hae(k.Osoite, t =>
             {
                 if (t == null) return;
-                AsetaPaikka();
-                paikanSeuranta ??= pakka.schedule.Execute(AsetaPaikka).Every(250);
-                paikanSeuranta.Resume();
                 int n = kortit.Count;
                 var kortti = Rakenne.El("mk-kuvakortti", pakka, PickingMode.Ignore);
                 var kuva = Rakenne.El("mk-kuvakortti__kuva", kortti, PickingMode.Ignore);
@@ -74,6 +71,9 @@ namespace Matkakirja.Natiivi
                 naytetyt.Add(k);
                 Rakenne.Nayta(kortti, true, 400);
                 while (kortit.Count > Katto) { kortit[0].RemoveFromHierarchy(); kortit.RemoveAt(0); }
+                AsetaPaikka();
+                paikanSeuranta ??= pakka.schedule.Execute(AsetaPaikka).Every(250);
+                paikanSeuranta.Resume();
             });
         }
 
@@ -108,10 +108,14 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(p.height) || p.height <= 0f) return;
             var m = Kaistale?.Invoke() ?? default;
             float yla = m.height > 0f ? m.yMax - p.yMin + 12f : p.height * 0.28f;
-            pakka.style.alignItems = Align.FlexEnd;
-            pakka.style.justifyContent = Justify.FlexStart;
-            pakka.style.paddingTop = Mathf.Max(0f, yla);
-            pakka.style.paddingRight = 24f; // pinon siirto (enintään 21 pt) ja kallistus eivät vie kuvaa ruudun yli
+            // Kortit ovat absoluuttisia: paikka suoraan kortille (1.0.70-kuva: säiliön täyte ei siirtänyt niitä, kuva
+            // painui ruudun reunaan). 28 pt oikealta: pinon siirto (enintään 21 pt) ja kallistus jäävät ruudun sisään.
+            foreach (var k in kortit)
+            {
+                k.style.top = Mathf.Max(0f, yla);
+                k.style.right = 28f;
+                k.style.left = StyleKeyword.Auto;
+            }
         }
         IVisualElementScheduledItem paikanSeuranta;
         /// <summary>Matkakirjakaistaleen laatikko paneelissa (Matkakirjakortti.Rajat), tyhjä jos kaistale ei näy.</summary>
