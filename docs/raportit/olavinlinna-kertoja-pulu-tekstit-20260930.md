@@ -21,7 +21,7 @@ ja Kansallismuseon Olavinlinna-sivut.
 
 - **Keittiö:** Keittiö oli pienellä linnanpihalla. Valtavassa liedessä paloi avotuli aamusta iltaan, ja ruoka
   valmistettiin isoissa padoissa. Linnassa syötiin paljon kalaa ja kasviksia; vouti seurueineen söi ylhäällä
-  Kuninkaan salissa, sotilaat ja käsityöläiset Linnantuvassa. Minä olisin tyytynyt muruihin.
+  yläsalissa, sotilaat ja käsityöläiset Linnantuvassa. Minä olisin tyytynyt muruihin.
 - **Kappeli:** Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä.
   Katossa on säilynyt katkelmia maalauksista, muun muassa lehti- ja kukkakuvioita ja vaakunoita. Seinän pieni
   aukko on hagioskooppi, josta rikolliset ja sairaat seurasivat messua – Suomessa harvinainen ratkaisu.
