@@ -136,6 +136,8 @@ namespace Matkakirja.Natiivi
                 n.RegisterCallback<PointerCaptureOutEvent>(_ => { n.userData = null; n.MarkDirtyRepaint(); });
             }
 
+            sijaintipallo = new Sijaintipallo(turva);
+
             // Web .satelliitti-pulukulma (löydös 96): sarake oikeassa alakulmassa, kortti pulun yläpuolella 8 pt:n välein.
             pulukulma = Rakenne.El("mk-astrokuva__pulu", turva, PickingMode.Ignore);
             pulukortti = new MinipulunKortti(pulukulma);
@@ -177,6 +179,8 @@ namespace Matkakirja.Natiivi
         }
 
         readonly VisualElement pulunappi;
+        /// <summary>Pieni sijaintipallo vasemmassa alakulmassa (omistaja 1.10.).</summary>
+        readonly Sijaintipallo sijaintipallo;
         float leijunta;
 
         static void AsetaTurva(VisualElement turva, UiKerros kerros)
@@ -220,6 +224,7 @@ namespace Matkakirja.Natiivi
                 else if (selaus && !Vanha) Korosta();
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
+                sijaintipallo.Kohteeseen(k.Lat, k.Lon, selaus && !LinssiUi.VahennettyLiike());
             }
             PaivitaVanha();
             Valitse(Mathf.Clamp(i, 0, Math.Max(0, k.Havainnot.Count - 1)));
@@ -236,6 +241,7 @@ namespace Matkakirja.Natiivi
             }
             if (!Auki) return;
             Auki = false;
+            sijaintipallo.Piilota();
             LopetaLuenta();
             kelaus?.Pause();
             riveittain?.Pause();
