@@ -67,6 +67,11 @@ namespace Matkakirja.Natiivi
         public static bool VanhaAlku;
         /// <summary>Testi (peli-komento "puhe jumi ms"): pääsäie seisoo seuraavan Play():n jälkeen, kuten raskaassa ruudussa.</summary>
         public static int JumiMs;
+        /// <summary>Testi (peli-komento "puhe hidas ms s"): seuraavan uuden puheen alusta s sekunnin ajan jokainen ruutu kestää
+        /// vähintään ms (laitteen raskaat saapumisruudut simulaattorissa; ruuduittaiset rampit hidastuvat, ääni ei).</summary>
+        public static int HidasMs;
+        public static float HidasS;
+        static float hidasLoppu;
 
         public static Puhe Instanssi { get; private set; }
 
@@ -1124,6 +1129,7 @@ namespace Matkakirja.Natiivi
             if (!jatko) lahde.timeSamples = 0;
             StartCoroutine(AlkuMittari(klippi, Kohdetaso, !jatko));
             if (Verho) StartCoroutine(VerhoMittari(klippi, synteesi ? PalaNyt : null));
+            if (!jatko && HidasMs > 0 && HidasS > 0f) { hidasLoppu = Time.unscaledTime + HidasS; HidasS = 0f; Debug.Log($"MATKAKIRJA puhe: hidas {HidasMs} ms/ruutu alkaa"); }
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
             // saman puheen jatkoa: ei loppua eikä alkua väliin (lataus-kahva kuuluu yhä SoitaPalat-korutiinille).
@@ -1287,6 +1293,7 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
+            if (HidasMs > 0 && Time.unscaledTime < hidasLoppu) System.Threading.Thread.Sleep(HidasMs);
             if (puhuu && haivytys == null && lahde.isPlaying)
             {
                 float kohde = Kohdetaso;
