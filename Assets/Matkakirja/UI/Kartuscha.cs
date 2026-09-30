@@ -276,6 +276,12 @@ namespace Matkakirja.Natiivi
         bool lippuSiirretty;
         float seuraavaLippuSiirto;
         const float PaneelinVaraPt = 8f;
+        /// <summary>Paneeli "ulottuu reunaan", jos sen reuna on tätä lähempänä ruudun reunaa (matkakirjan sivumarginaali 8–12 pt).</summary>
+        const float ReunaPt = 24f;
+        /// <summary>Paneelin pitää pysyä paikallaan näin kauan ennen siirtoa tai paluuta (avausanimaatio kasvattaa korttia).</summary>
+        const float VakaaS = 0.5f;
+        Rect edellinenYla;
+        float ylaVakaaAlkaen;
 
         readonly Dictionary<string, List<(double Lat, double Lon)>> sisamaat = new Dictionary<string, List<(double Lat, double Lon)>>();
 
@@ -292,6 +298,14 @@ namespace Matkakirja.Natiivi
                 yla = yla.height > 0f ? Rect.MinMaxRect(Mathf.Min(yla.xMin, r.xMin), Mathf.Min(yla.yMin, r.yMin),
                     Mathf.Max(yla.xMax, r.xMax), Mathf.Max(yla.yMax, r.yMax)) : r;
             }
+            // Avaus- ja sulkuanimaation aikana paneeli kasvaa tai kutistuu: toimitaan vasta, kun sen rajat ovat pysyneet 0,5 s.
+            if (Mathf.Abs(yla.yMax - edellinenYla.yMax) > 2f || Mathf.Abs(yla.xMin - edellinenYla.xMin) > 2f
+                || Mathf.Abs(yla.xMax - edellinenYla.xMax) > 2f || (yla.height > 0f) != (edellinenYla.height > 0f))
+            {
+                edellinenYla = yla;
+                ylaVakaaAlkaen = Time.realtimeSinceStartup;
+            }
+            if (Time.realtimeSinceStartup - ylaVakaaAlkaen < VakaaS) return;
             // PALUU KULMAAN (Laitetestaaja 1.0.66: kortti suljettiin lapuksi, tanko jäi siirtoon): heti, kun paneelia ei ole tai
             // kulman paikka näkyy taas kokonaan (puhelimella suljettu matkakirja on yläreunan lappu, joka ei peitä kulmaa).
             if (lippuSiirretty && lipunOletus.HasValue)
@@ -353,8 +367,8 @@ namespace Matkakirja.Natiivi
             var b = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.xMax, Screen.height - ruutu.yMin));
             var alaPaneelissa = Rect.MinMaxRect(a.x, a.y, b.x, b.y);
             float leveys = kortti.panel.visualTree.layout.width;
-            float x0 = yla.xMin <= 2f ? float.MinValue / 4 : yla.xMin - vara;
-            float x1 = yla.xMax >= leveys - 2f ? float.MaxValue / 4 : yla.xMax + vara;
+            float x0 = yla.xMin <= ReunaPt ? float.MinValue / 4 : yla.xMin - vara;
+            float x1 = yla.xMax >= leveys - ReunaPt ? float.MaxValue / 4 : yla.xMax + vara;
             var v = Rect.MinMaxRect(x0, yla.yMin - vara, x1, yla.yMax + vara);
             return alaPaneelissa.Overlaps(v);
         }
