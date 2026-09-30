@@ -83,7 +83,12 @@ export const RAAMATTU = {
           + 'ja lisenssi kirjattuna) ja jo hyväksyttyjen äänien uudelleenkoodaus eivät ole generointia. Pelin '
           + 'jo hyväksytyt ajonaikaiset puhetoiminnot (pelaajan käynnistämä luenta ja Pulun chat-puhe) jatkuvat '
           + 'ennallaan. Taustatapaus: Olavinlinnan keittiön 31 ElevenLabs-ääntä 29.9. tehtiin ilman lupaa; '
-          + 'ne jäävät peliin, kunnes omistaja on kuunnellut ne ja päättää.',
+          + 'ne jäävät peliin, kunnes omistaja on kuunnellut ne ja päättää. ÄÄNIVALINTA (omistaja 30.9.2026 '
+          + 'klo 23.1x: "v4 äänet kaikki toimivat suomella. mutta suomeksi merkatut äänet ovat yleensä huonoja, '
+          + 'älä käytä niitä … aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä"): ElevenLabsilla '
+          + 'käytetään aina v4-mallia (kaikki äänet toimivat sillä suomeksi), EI koskaan suomeksi merkattuja ääniä '
+          + '(kirjaston language/accent = fi/finnish), ja äänet valitaan ensisijaisesti ElevenLabsin eniten '
+          + 'käytetyistä äänistä. Koskee lukijaa, Pulua, hahmoääniä ja kaikkia tulevia äänieriä.',
         'AIKA: KARTASSA ELETÄÄN NYKYAJASSA, VAIN ESTETIIKKA ON VANHAA (omistaja '
           + '26.9.2026 klo 10.0x, sitova; yleinen sekaannus, joka toistuu koko ajan): '
           + 'pelin maailma on nykyaika — Fogg matkustaa tänään isoisänsä vuoden 1873 '
