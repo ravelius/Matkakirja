@@ -70,23 +70,24 @@ export const RAKENNUS = {
   // napautus ohittaa, uusinta napista. Kamera kuten yleiskamera (kohde + atsimuutti/korkeus/etäisyys, fov). Tekstit v2
   // Päätoimittajalta (faktat Sisältökirjuri 30.9., 5684d5d81) (docs/raportit/olavinlinna-kertoja-pulu-tekstit-20260930.md), odottavat omistajaa ja Sisältökirjuria.
   // Kamerapaikat: kohteet tilojen elava.kohde-pisteistä; kameraPysty iPhonen pystyasentoon (kuten tiloissa). Siirtoseppä
-  // hioo kulmat natiivissa. Vanhat kentät (taulu, pulu, kasikirjoitus) säilyvät TF 1.0.57–72:n yhteensopivuutta varten. Ei ääntä ennen lupaa.
+  // hioo kulmat natiivissa. Vanhat kentät (taulu, pulu, kasikirjoitus) säilyvät TF 1.0.57–72:n yhteensopivuutta varten. Ääni 1.10.2026: isoisä
+  // (Viisas Kertoja, eleven_v3; omistaja 30.9. klo 23.5x), kesto_s vähintään äänen kesto + 0,5 s.
   kertoja: {
     jaksot: [
-      { id: 'jarvelta', kesto_s: 11, aani: null,
+      { id: 'jarvelta', kesto_s: 13, aani: 'linna-kertoja-jarvelta',
         kamera: { kohde: [0, 2, 0], atsimuutti: 200, korkeus: 10, etaisyys: 230, fov: 32 },
         kameraPysty: { kohde: [0, 0, 2], atsimuutti: 200, korkeus: 14, etaisyys: 420, fov: 40 },
         teksti: 'Olavinlinna nousee kalliosaarelta Kyrönsalmessa. Sen rakentaminen alkoi vuonna 1475, ja linnan tehtävä oli vartioida valtakunnan itärajaa.' },
-      { id: 'tornit', kesto_s: 11, aani: null,
+      { id: 'tornit', kesto_s: 13, aani: 'linna-kertoja-tornit',
         kamera: { kohde: [-27.4, 11, -12.8], atsimuutti: 230, korkeus: 16, etaisyys: 95, fov: 32 },
         kameraPysty: { kohde: [-27.4, 9, -12.8], atsimuutti: 230, korkeus: 20, etaisyys: 170, fov: 40 },
         teksti: 'Linnan perusti ritari Erik Akselinpoika Tott, ja se sai nimensä Pyhän Olavin mukaan. Sen kolme tornia ovat Kirkkotorni, Kellotorni ja Kijlin torni.' },
-      { id: 'piha', kesto_s: 11, aani: null,
+      { id: 'piha', kesto_s: 13, aani: 'linna-kertoja-piha',
         kamera: { kohde: [-14.75, 3.5, -9.2], atsimuutti: 160, korkeus: 42, etaisyys: 85, fov: 32 },
         kameraPysty: { kohde: [-14.75, 2, -9.2], atsimuutti: 160, korkeus: 48, etaisyys: 150, fov: 40 },
         teksti: 'Linnaa johti vouti, joka hoiti kuninkaan puolesta veroja, oikeutta ja puolustusta. Arki kulki tulisijojen, vahtivuorojen ja veneiden tahdissa.' },
       // tila: kierroksen aikana laiturin leikkausikkuna aukeaa lennon jälkipuoliskolla (laituri on kuoren sisällä; Siirtoseppä 1.1 (74)).
-      { id: 'laituri', tila: 'laituri', kesto_s: 12, aani: null,
+      { id: 'laituri', tila: 'laituri', kesto_s: 21, aani: 'linna-kertoja-laituri',
         // Siirtoseppä 1.1 (75): tila-kenttä avaa leikkauksen, joten laituri-tilan kamerat sellaisinaan (× 1,6 jätti
         // naapuritilojen geometriaa eteen).
         kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 14.5, fov: 38, aukko: 0.8 },

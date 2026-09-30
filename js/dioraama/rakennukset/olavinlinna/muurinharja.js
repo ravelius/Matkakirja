@@ -16,9 +16,9 @@ const TAULU = {
   tila: 'tarkistettu',
   kohdat: [
     // Sisältökirjuri 30.9. (5684d5d81): "päätorni" epävarma nimitys → "tornin"; Kylliäisen nimi ja asema tarkistettu.
-    { teksti: 'Tornin neljännessä kerroksessa oli avoin puolustuskäytävä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
-    { teksti: 'Muurin harjalta torjuttiin nuolet, kivet ja piiritysportaat.', lahde: 'Tiedetuubi: Linnarakennustekninen balladi Olavinlinnasta' },
-    { teksti: 'Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen' },
+    { aani: 'muurinharja-kohta-0', teksti: 'Tornin neljännessä kerroksessa oli avoin puolustuskäytävä muurin harjalla.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { aani: 'muurinharja-kohta-1', teksti: 'Muurin harjalta torjuttiin nuolet, kivet ja piiritysportaat.', lahde: 'Tiedetuubi: Linnarakennustekninen balladi Olavinlinnasta' },
+    { aani: 'muurinharja-kohta-2', teksti: 'Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen' },
   ],
 };
 
@@ -56,19 +56,19 @@ const HAHMOT = [
     silmukka: 'kavely', heraa: 2, lyhty: true,
     reitti: { pisteet: [[-21.0, KY, -19.75], [-9.0, KY, -19.75], [-21.0, KY, -19.75]], nopeus: 0.8, tauko: 2 },
     repliikit: [
-      { id: 'vartija-1', teksti: 'Vahtivuoro on pitkä, mutta rajalta ei saa silmää siirtää hetkeksikään.' },
-      { id: 'vartija-2', teksti: 'Itäraja on lähellä, ja sieltä on tultu ennenkin. Siksi harjalla ei nukuta.' },
+      { id: 'vartija-1', aani: 'muurinharja-vartija-1', teksti: 'Vahtivuoro on pitkä, mutta rajalta ei saa silmää siirtää hetkeksikään.' },
+      { id: 'vartija-2', aani: 'muurinharja-vartija-2', teksti: 'Itäraja on lähellä, ja sieltä on tultu ennenkin. Siksi harjalla ei nukuta.' },
     ],
-    reaktio: { id: 'pulu-vartija-r1', teksti: 'Yötäkö tässä tuulessa? Minä kaipaisin jo kolmen minuutin jälkeen katon alle.' },
+    reaktio: { id: 'pulu-vartija-r1', aani: 'muurinharja-pulu-vartija-r1', teksti: 'Yötäkö tässä tuulessa? Minä kaipaisin jo kolmen minuutin jälkeen katon alle.' },
   },
   {
     id: 'talonpoika', henkilo: 'talonpoika-1500', paikka: [-17.8, KY, -20.35], suunta: 180, peilattu: false,
     silmukka: 'idle', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'talonpoika-1', teksti: 'Kun hyökkäys tuli, koko kylä juoksi linnan suojaan – minä keihäs kädessä.' },
-      { id: 'talonpoika-2', teksti: 'Tuuli viiltää täällä ylhäällä, mutta muurin takana on sentään turvassa.' },
+      { id: 'talonpoika-1', aani: 'muurinharja-talonpoika-1', teksti: 'Kun hyökkäys tuli, koko kylä juoksi linnan suojaan – minä keihäs kädessä.' },
+      { id: 'talonpoika-2', aani: 'muurinharja-talonpoika-2', teksti: 'Tuuli viiltää täällä ylhäällä, mutta muurin takana on sentään turvassa.' },
     ],
-    reaktio: { id: 'pulu-talonpoika-r1', teksti: 'Koko kylä yhteen linnaan yhdessä yössä. Nykyään siitä tulisi jono ja kolme lomaketta.' },
+    reaktio: { id: 'pulu-talonpoika-r1', aani: 'muurinharja-pulu-talonpoika-r1', teksti: 'Koko kylä yhteen linnaan yhdessä yössä. Nykyään siitä tulisi jono ja kolme lomaketta.' },
   },
 ];
 
@@ -82,13 +82,13 @@ export const TILA = {
   // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
   // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
   kuunnelma: [
-    { id: 'muurinharja-k1', puhuja: 'vartija', nimi: 'Muurin vartija', aani: null,
+    { id: 'muurinharja-k1', puhuja: 'vartija', nimi: 'Muurin vartija', aani: 'muurinharja-k1',
       teksti: 'Tuuli viiltää, ja silti täällä harjalla ei nukuta. Itäraja on lähempänä kuin luulisi.' },
-    { id: 'muurinharja-k2', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: null,
+    { id: 'muurinharja-k2', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: 'muurinharja-k2',
       teksti: 'Minä seisoin tällä samalla harjalla vuonna 1495, kun ne tulivat. Kiviä ja nuolia alas, ja piiritysportaat perään.' },
-    { id: 'muurinharja-k3', puhuja: 'vartija', nimi: 'Muurin vartija', aani: null,
+    { id: 'muurinharja-k3', puhuja: 'vartija', nimi: 'Muurin vartija', aani: 'muurinharja-k3',
       teksti: 'Silloin vouti Kylliäinen komensi kuin olisi syntynyt haarniska päällä. Nykyisestä voudista en tiedä – se etsii jotain kaikista kolmesta tornista.' },
-    { id: 'muurinharja-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+    { id: 'muurinharja-k4', puhuja: 'pulu', nimi: 'Pulu', aani: 'muurinharja-k4',
       teksti: 'Neljännen kerroksen avoin puolustuskäytävä: maisemat upeat, mutta vetoista. Minä istuisin mieluummin katolla.' },
   ],
   kohdistettava: true,
@@ -107,9 +107,9 @@ export const TILA = {
   kameraPysty: { kohde: [-16.21, 8.8, -19.68], // pysty 30.9.: vartijan reitin pää ei reunaan
      atsimuutti: 165, korkeus: 28, etaisyys: 40, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-35, 35], korkeus: [14, 45], etaisyys: [0.7, 1.4] },
-  pulu: { laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea',
-    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
-    teksti: 'Tornin neljännessä kerroksessa kulki avoin puolustuskäytävä muurin harjalla. Täältä torjuttiin nuolet, kivet ja piiritysportaat. Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla. Pidä pääsi muurin suojassa!', aani: null },
+  pulu: { aani: 'muurinharja-pulu', laskeutuminen: [-13.6, 14.05, -20.5], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni 1.10.2026 (omistajan lupa 30.9. klo 23.4x).
+    teksti: 'Tornin neljännessä kerroksessa kulki avoin puolustuskäytävä muurin harjalla. Täältä torjuttiin nuolet, kivet ja piiritysportaat. Vuonna 1495 linnan vouti Pietari Niilonpoika Kylliäinen torjui hyökkäyksen linnaväen ja talonpoikien avulla. Pidä pääsi muurin suojassa!' },
   taulu: TAULU,
   // Elävä linna (29.9.): napautuskohde kannen keskellä; lyhdyllinen vartija on hahmot[]-listassa (reitti kannen päästä päähän).
   elava: { kohde: [-14.75, 14.2, -19.75], sade: 6 },
