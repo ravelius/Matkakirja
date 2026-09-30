@@ -30,7 +30,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _Moni("Monisironnan osuus", Float) = 0.25
         _MieG("Mie g", Float) = 0.8
         _Hehku("Ilmahehku", Float) = 0.12
-        _HehkuVari("Ilmahehkun sävy", Color) = (0.55, 0.95, 0.5, 1)
+        _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
         _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
     }
@@ -195,7 +195,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);
                 float aalto = 0.75 + 0.25 * sin(nl.x * 23.0 + nl.y * 17.0) * sin(nl.z * 29.0 - nl.x * 11.0);
-                float hehku = (exp(-dh * dh / (9000.0 * 9000.0)) + 0.35 * exp(-dh * dh / (22000.0 * 22000.0))) * 0.75 * aalto
+                float hehku = (exp(-dh * dh / (14000.0 * 14000.0)) + 0.4 * exp(-dh * dh / (35000.0 * 35000.0))) * 0.5 * aalto
                     * _Hehku * yo * (maa ? 0.0 : 1.0);
                 L += _HehkuVari.rgb * hehku;
 

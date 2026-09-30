@@ -545,7 +545,8 @@ namespace Matkakirja.Natiivi
                 float etaisyys = kohti.magnitude;
                 // Ikkunassa, kohteen yllä ja ulkona silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
                 // Valokuvauskulmassa (astro kyyti vertailu, ISS-kamera) kuva on puhdas: ei havaintopisteitä.
-                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde && kyyti != KyydinTila.Ulkona
+                bool edessa = !Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue   // NASA-vertailussa ei merkkejä
+                    && kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde && kyyti != KyydinTila.Ulkona
                     && !AstronauttiLinssi.Vertailu.HasValue
                     && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
                 if (p.juuri.gameObject.activeSelf != edessa) p.juuri.gameObject.SetActive(edessa);

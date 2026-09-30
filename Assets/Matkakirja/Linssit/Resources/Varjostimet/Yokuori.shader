@@ -183,7 +183,8 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half l = lerp(sMaa.r * (half)_MaaVoima, sEu.r, euPaino);
                 half vesi = lerp(sMaa.g, sEu.g, euPaino);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
-                half3 savy = lerp(half3(1.0, 0.52, 0.2), half3(1.0, 0.88, 0.7), saturate(l * 1.6h));
+                // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
+                half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
                 // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
                 float pilviA = SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a;
                 // Pilvipeiton säädin kuten Pilvet.shader: karsitut pilvet eivät himmennä kaupunkien valoja.

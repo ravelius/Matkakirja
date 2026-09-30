@@ -55,7 +55,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static float IlmanVoima = 3.5f;   // NASA-vertailu 30.9. (foto5): 4,5 sinersi maan liikaa (NASA ruskeanvihreä)
         /// <summary>Monisironnan osuus (Ilmakeha2 _Moni): 0,45 paksuntaa horisontin sinistä reunavyötä (0,25 oli ohut ja himmeä).</summary>
-        public static float IlmanMoni = 0.45f;
+        public static float IlmanMoni = 0.3f;   // NASA-vertailu vaakana 30.9. (foto6): 0,45 sinersi päivän maan ja vaalensi meren
         Mesh kuori, kaariKuori;
         float peitto, kyyti, kyytiTavoite, aurinkoPaivitetty = -10f;
         DateTime aurinkoUtc;

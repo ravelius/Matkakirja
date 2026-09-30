@@ -1961,6 +1961,7 @@ namespace Matkakirja.Natiivi
             {
                 Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu = null;
                 Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(TimeSpan.Zero);
+                Matkakirja.Natiivi.Pulu.Hae().Nayta(true);
                 return "pois";
             }
             var ic = System.Globalization.CultureInfo.InvariantCulture;
@@ -1970,6 +1971,7 @@ namespace Matkakirja.Natiivi
             double f = D(5);
             Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VertailuKentta = 2 * Math.Atan(12.0 / Math.Max(8, f)) * 180 / Math.PI;
             Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu = k;
+            Matkakirja.Natiivi.Pulu.Hae().Nayta(false);   // vertailukuvassa ei Pulua (30.9.)
             if (DateTime.TryParse(a[6], ic, System.Globalization.DateTimeStyles.AdjustToUniversal | System.Globalization.DateTimeStyles.AssumeUniversal, out var utc))
                 Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(utc - DateTime.UtcNow);
             return $"{k}, kenttä {Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VertailuKentta:0.0}°, hetki {Matkakirja.Linssit.Iss.IssNyt.Kello():yyyy-MM-dd HH:mm:ss} UTC";
