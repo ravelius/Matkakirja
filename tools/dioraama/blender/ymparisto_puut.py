@@ -67,6 +67,28 @@ for i, (x, y) in enumerate(zip(px, py)):
                 lahin = min(lahin, math.hypot(x - px[j], y - py[j]))
     rad[i] = max(0.15 * L[i, 2], min(rad[i], lahin / 2)); ruudukko.setdefault(k, []).append(i)
 
+# --- tihennys (1.10.): vuoden 2011 harva laserdata (noin 0,5 pistettä/m²) löytää vain valtapuut, joten metsäruutuihin
+# (latvuskorkeus > 5 m), joissa ei ole latvaa TIHEYS_M m:n säteellä, lisätään puita värisevään ruudukkoon (korkeus =
+# latvusmalli × 0,9, latvus 0,18·h). Vain TIHENNYS_R m:n säteellä linnasta (kauempana metsä on maaston latvuspintana).
+TIHEYS_M = lippu('--tiheys', 3.5); TIHENNYS_R = lippu('--tihennys-r', 1300.0)
+rng = np.random.default_rng(1)
+askel = TIHEYS_M; gx = np.arange(-TIHENNYS_R, TIHENNYS_R, askel); GX, GY = np.meshgrid(gx, gx)
+GX = GX.ravel() + rng.uniform(-askel / 2, askel / 2, GX.size); GY = GY.ravel() + rng.uniform(-askel / 2, askel / 2, GY.size)
+sis = np.hypot(GX, GY) < TIHENNYS_R
+GX, GY = GX[sis], GY[sis]
+jx = ((GX + ORIGO[0] - E0) / R).astype(int); jy = ((GY + ORIGO[1] - N0) / R).astype(int)
+hc = chm_s[jy, jx]; ok = (hc > 5) & (maa[jy, jx] > VESI_H + 0.3) & ~((GX > KUORI[0]) & (GX < KUORI[1]) & (GY > KUORI[2]) & (GY < KUORI[3]))
+GX, GY, jx, jy, hc = GX[ok], GY[ok], jx[ok], jy[ok], hc[ok]
+lahella = np.zeros((n, n), bool); r_ = int(math.ceil(TIHEYS_M / R))
+for iy, ix in L[:, :2].astype(int):
+    lahella[max(iy - r_, 0):iy + r_ + 1, max(ix - r_, 0):ix + r_ + 1] = True
+uus = ~lahella[jy, jx]
+lisa_x, lisa_y, lisa_h = GX[uus], GY[uus], 0.9 * hc[uus]
+lisa_z = maa[jy[uus], jx[uus]] - VESI_H - 7.0
+print(f'PUUT: tihennys {len(lisa_x)} lisäpuuta {TIHENNYS_R:.0f} m:n säteellä', flush=True)
+px = np.concatenate([px, lisa_x]); py = np.concatenate([py, lisa_y]); zmaa = np.concatenate([zmaa, lisa_z])
+L = np.concatenate([L, np.stack([np.zeros_like(lisa_h), np.zeros_like(lisa_h), lisa_h], 1)]); rad = np.concatenate([rad, 0.18 * lisa_h])
+
 # --- laji ortokuvan latvan väristä (kevät 2024: koivu vaalean vihreä, kuusi tumma, mänty väliltä) ---
 laji = np.zeros(len(L), np.int32)
 if ORTO != '-':
