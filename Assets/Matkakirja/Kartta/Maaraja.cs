@@ -102,14 +102,14 @@ namespace Matkakirja
         /// VARA, jos <see cref="MaamaaPolku"/> ei lataudu, ja komento "maaraja rengas paalle". Myös offline-latauksen
         /// "maailma"-alueessa (Alueet.Polut).
         /// </summary>
-        public const string GeojsonPolku = "julisteet/pallo/vektorit/maapolygonit-2026-09-24/maapolygonit.geojson";
+        public const string GeojsonPolku = "julisteet/pallo/vektorit/maapolygonit-2026-09-30/maapolygonit.geojson";
         /// <summary>
         /// Maa–maa-rajat (löydös 127, Karttaseppä 25.9.2026, PR #3248; tools/maarajat-maamaa.mjs): FeatureCollection,
         /// properties.iso = ISO3, MultiLineString lon/lat, samat kärjet kuin <see cref="GeojsonPolku"/>issa mutta vain
         /// osuudet, joiden toisella puolella on toinen maa (myös pelin ulkopuoliset naapurit). Gzip, 307 kt. Myös
-        /// offline-latauksen "maailma"-alueessa.
+        /// offline-latauksen "maailma"-alueessa. 2026-09-30: Krim ja Sevastopol Ukrainalle (Karttaseppä, Päätoimittaja).
         /// </summary>
-        public const string MaamaaPolku = "julisteet/pallo/vektorit/maarajat-2026-09-26/maamaa.geojson";
+        public const string MaamaaPolku = "julisteet/pallo/vektorit/maarajat-2026-09-30/maamaa.geojson";
 
         /// <summary>Kehä sallittu (komento "maaraja pois" = false; oletus true).</summary>
         public static bool Sallittu = true;
