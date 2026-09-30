@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         const string Muisti = "matkakirja-apuraha-esittely";
 
         public sealed class Kappale { public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public List<string> Lista = new List<string>(); }
-        public sealed class Kuva { public string Url, Teksti; }
+        public sealed class Kuva { public string Url, Teksti; public float RajausX = 50f, RajausY = 20f; }
         public sealed class Esittely
         {
             public string Nappi, Otsikko, Alaotsikko;
@@ -68,7 +68,11 @@ namespace Matkakirja.Natiivi
                     var o = Rakenne.Olio(ko);
                     var t = S(o, "tiedosto");
                     if (string.IsNullOrEmpty(t)) continue;
-                    e.Kuvat.Add(new Kuva { Url = Url(t), Teksti = S(o, "teksti") ?? "" });
+                    var kuva = new Kuva { Url = Url(t), Teksti = S(o, "teksti") ?? "" };
+                    // Pikkukuvan painopiste "x% y%" (web object-position; radion paneeli alhaalla 50% 90%).
+                    var m = System.Text.RegularExpressions.Regex.Match(S(o, "rajaus") ?? "", @"^(\d{1,3})% (\d{1,3})%$");
+                    if (m.Success) { kuva.RajausX = float.Parse(m.Groups[1].Value); kuva.RajausY = float.Parse(m.Groups[2].Value); }
+                    e.Kuvat.Add(kuva);
                 }
             return e;
         }
@@ -196,6 +200,8 @@ namespace Matkakirja.Natiivi
                     var b = Rakenne.Nappi(null, "mk-apuraha__kuva", () => AvaaKokoruutu(e.Kuvat, n), kuvarivi);
                     // Leveys kuvien määrän mukaan (4 kuvaa, omistaja 30.9. klo 15.06; rako 2 %).
                     b.style.width = Length.Percent((100f - 2f * (e.Kuvat.Count - 1)) / e.Kuvat.Count);
+                    b.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left, Length.Percent(e.Kuvat[i].RajausX));
+                    b.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Top, Length.Percent(e.Kuvat[i].RajausY));
                     Kuvat.Hae(e.Kuvat[i].Url, t => { if (t != null) b.style.backgroundImage = new StyleBackground(t); });
                 }
             }
