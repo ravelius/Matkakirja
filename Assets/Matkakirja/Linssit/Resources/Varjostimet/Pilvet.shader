@@ -124,7 +124,9 @@ Shader "Matkakirja/Linssit/Pilvet"
             float Karsi(float a)
             {
                 if (_Karsinta <= 0.0) return a;
-                float k0 = max(0.0, _Karsinta - 0.12);
+                // Liuku kapenee täyteen karsintaan: 0 % = ei yhtään pilveä (laite 30.9.: kilpi 0 % ja tiheimmät pilvet näkyivät).
+                if (_Karsinta >= 0.999) return 0.0;
+                float k0 = max(0.0, _Karsinta - 0.12 * saturate((1.0 - _Karsinta) / 0.3));
                 float r = saturate((a - k0) / max(1.0 - k0, 1e-3));
                 return r * r * (3.0 - 2.0 * r);
             }
