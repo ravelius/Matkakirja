@@ -411,9 +411,11 @@ Peli lähettää kerran istunnossa tehtävän `kaynti` (web `js/kaynti.js`, iOS
 `Kaynti.cs`) ja apurahakortin avauksen sekä esittelylinssit omina
 tapahtumina. Worker (`kaynnit.js`) laskee päivän eri kävijät tiivisteenä
 SHA-256(IP + päivän suola). Suola vanhenee kahdessa vuorokaudessa, eikä
-raakaa IP:tä tallenneta eikä lokiteta. Omistajan laitteet (kehittäjätila,
-Pöllön kehittäjäkoodi, webissä kerran avattu `?omistaja`, iOS:ssä
-`ui omistaja 1`), paikalliset palvelimet, automaatioselaimet ja
+raakaa IP:tä tallenneta eikä lokiteta. Omistajan laitteet (VAIN
+eksplisiittiset merkit: webissä kerran avattu `?omistaja`, iOS:ssä Pöllön
+kehittäjäkoodi Keychainissa tai `ui omistaja 1`; kehittäjätila ja
+esittelylinssit EIVÄT ole omistajan tunniste, koska arvioijien TF:ssä ne
+voivat olla päällä), paikalliset palvelimet, automaatioselaimet ja
 simulaattorit eivät näy luvuissa.
 
 Luku vain kehittäjäkoodilla: `POLLO_KEHITTAJAKOODI=… node tools/kaynnit.mjs 14`.

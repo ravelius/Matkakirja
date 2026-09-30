@@ -7,8 +7,10 @@
  * Ei lähetetä lainkaan: paikallinen palvelin (localhost, 127.0.0.1,
  * file:), automaatioselain (navigator.webdriver: savukkeet ja
  * kuvaajat). Omistajan laite lähettää merkin omistaja: true, jolloin
- * worker ei laske sitä: kehittäjätila tai kerran avattu ?omistaja
- * (tallentuu laitteelle). Ping ei koskaan heitä eikä odota vastausta.
+ * worker ei laske sitä: VAIN kerran avattu ?omistaja (tallentuu
+ * laitteelle). Kehittäjätila tai esittelylinssit eivät ole omistajan
+ * tunniste (Päätoimittaja 30.9.2026: arvioijilla voi olla kumpi tahansa
+ * päällä). Ping ei koskaan heitä eikä odota vastausta.
  */
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 
@@ -30,7 +32,7 @@ export function merkitseOmistajaOsoitteesta(sijainti = globalThis.location, vara
 }
 
 export function onOmistaja(varasto = globalThis.localStorage) {
-  return lue(varasto, OMISTAJA_AVAIN) === '1' || lue(varasto, 'matkakirja-kehittaja') === '1';
+  return lue(varasto, OMISTAJA_AVAIN) === '1';
 }
 
 /** Lähetetäänkö tästä ympäristöstä lainkaan (ei paikallista eikä automaatiota). */

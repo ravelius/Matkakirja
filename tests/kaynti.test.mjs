@@ -20,12 +20,10 @@ test('kerran istunnossa per tapahtuma, runko ilman henkilötietoja', () => {
   assert.equal(lahetetyt.length, 2);
 });
 
-test('omistaja merkitään osoitteesta ja kehittäjätilasta', () => {
+test('omistaja merkitään vain osoitteesta', () => {
   const v = varasto();
   merkitseOmistajaOsoitteesta({ search: '?omistaja' }, v);
   assert.equal(onOmistaja(v), true);
-  const k = varasto(); k.setItem('matkakirja-kehittaja', '1');
-  assert.equal(onOmistaja(k), true);
   const lahetetyt = [];
   lahetaKaynti('avaus', '', { laheta: (r) => lahetetyt.push(r), istunto: varasto(), varasto: v, sijainti: julkinen, nav: {} });
   assert.equal(lahetetyt[0].omistaja, true);
@@ -44,4 +42,15 @@ test('lähetysvirhe ei heitä', () => {
 
 test('tekijätiedoissa rivi nimettömästä laskennasta', () => {
   assert.equal(PELI.yksityisyys, 'Peli laskee nimettömiä käyntikertoja; IP-osoitteita ei tallenneta.');
+});
+
+test('kehittäjätila ja esittelylinssit eivät tee omistajaa (arvioija lasketaan ulkopuoliseksi)', () => {
+  const v = varasto();
+  v.setItem('matkakirja-kehittaja', '1');
+  v.setItem('matkakirja-esittelylinssit', '1');
+  merkitseOmistajaOsoitteesta({ search: '?lauta=pallo' }, v);
+  assert.equal(onOmistaja(v), false);
+  const lahetetyt = [];
+  lahetaKaynti('esittelylinssit', 'v2500', { laheta: (r) => lahetetyt.push(r), istunto: varasto(), varasto: v, sijainti: julkinen, nav: {} });
+  assert.equal(lahetetyt[0].omistaja, false);
 });
