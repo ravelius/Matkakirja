@@ -423,7 +423,9 @@ test('Olavinlinna: kertoja 4 jaksoa (≤ 3 virkettä, ≤ 240 merkkiä), kamera,
   for (const x of j) {
     assert.ok(x.teksti.length <= 240, `${x.id}: ${x.teksti.length} merkkiä`);
     assert.ok((x.teksti.match(/[.!?](\s|$)/g) ?? []).length <= 3, `${x.id}: yli 3 virkettä`);
-    for (const k of [x.kamera, x.kameraPysty]) assert.ok(Array.isArray(k?.kohde) && k.kohde.length === 3 && k.etaisyys > 0, x.id);
+    // Tila-jakso (laituri) käyttää tilan omaa kameraa (natiivi, Siirtoseppä 1.1 (75)); muilla jaksoilla oma kamera.
+    const kamerat = x.tila ? [RAKENNUS.tilat.find((t) => t.id === x.tila)?.kamera] : [x.kamera, x.kameraPysty];
+    for (const k of kamerat) assert.ok(Array.isArray(k?.kohde) && k.kohde.length === 3 && k.etaisyys > 0, x.id);
     assert.equal(x.aani, null, `${x.id}: ääni vasta omistajan luvalla`);
   }
   const yht = j.reduce((a, x) => a + x.kesto_s, 0);
