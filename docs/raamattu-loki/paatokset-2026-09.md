@@ -9595,3 +9595,7 @@ Omistaja 30.9.2026 klo 23.1x sanatarkasti: "v4 äänet kaikki toimivat suomella.
 ## OMISTAJA (KORTTI): PARITEETTI 3 — SAAPUMISKAUPUNGIN KUVAMERKKI TAKAISIN, ZOOMI ENNALLAAN; TOPOGRAFIASELITE AUKI 3 s (30.9.2026 klo 23.12)
 
 Kortti 30.9.2026 klo 23.1x (Natiivi-UI:n pariteetti 3 -havainnot 1.1 (81):llä, kuvaparit natiivi-ui-pariteetti3/parit/kartta.png ja linssi-selite.png): 1) saapumisen jälkeen natiivista katoaa saapumiskaupungin kuvamerkki luennan jälkeen → selvitetään ja palautetaan; natiivin kauempi zoomi säilyy (webissä lähempi). 5) topografialinssin värien selite auki 3 s avauksessa, sitten pilleriksi; pilleri avaa selitteen uudelleen (webissä aina auki). 6) ei eroa (komennon indeksointi). Natiivi-UI toteuttaa yhtenä eränä.
+
+## OMISTAJA (KORTTI): KEITTIÖN KOLME SUOMEKSI MERKATTUA ÄÄNTÄ VAIHTOON, NÄYTTEET ENSIN (30.9.2026 klo 23.14)
+
+Pelikoodarin tarkistus 30.9.2026 klo 23.1x (CI-haun metatiedot, ei generointia): linnan 16 äänestä suomeksi merkattuja kolme, kaikki keittiössä 29.9. kierrokselta: kokki (Ville - Serious and Condescending), vesipoika (Matias - Kind and youthful), apulainen (Esko - Energetic and bright); muut en/de. Kortti klo 23.2x: "Kyllä, näytteet ensin". Lupa: kullekin kolmelle 3 ehdokasta eniten käytetyistä ei-suomeksi-merkatuista äänistä, yksi repliikin näyte v4:llä per ehdokas (yhteensä ~1 000 merkkiä); omistaja valitsee kuunneltuaan; hahmojen repliikkien uudelleengenerointi vasta erillisellä luvalla tekstit näytettyinä.
