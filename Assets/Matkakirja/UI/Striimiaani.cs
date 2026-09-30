@@ -55,12 +55,20 @@ namespace Matkakirja.Natiivi
         public const string Eleven = "eleven";
         public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Moottorit = new[] { ("xai", "xAI"), (Eleven, "ElevenLabs v4 Turbo") };
 
-        /// <summary>ElevenLabsin suomenkieliset lukijaäänet (workerin LUKIJA_ELEVEN_AANET-näyttökopio); oletus ensin.</summary>
+        /// <summary>
+        /// ElevenLabsin lukijaäänet (workerin LUKIJA_ELEVEN_AANET-näyttökopio, oletus ensin): omistaja 30.9.2026 klo 23.1x "aina v4
+        /// ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä" — jaetun kirjaston 23 eniten käytettyä, ei suomeksi merkattuja.
+        /// </summary>
         public static readonly IReadOnlyList<(string Tunnus, string Nimi)> ElevenAanet = new[]
         {
-            ("Sz0tRTEpybtDJ9ru2kgD", "Viisas kertoja"), ("Gp43kq9FsSlavD7esRtx", "Väinö"), ("3OArekHEkHv5XvmZirVD", "Christoffer"),
-            ("YSabzCJMvEHDduIDMdwV", "Aurora"), ("RiWFFlzYFZuu4lPMig3i", "Soili"), ("2Yg0KQ858zsEJOsoPmT2", "Kaisa"),
-            ("uNijH7qDIRQQ2u6S2c21", "Vilhelm"), ("dlbXHgJnwobU5JdZ8F5M", "Jussi"),
+            ("MFZUKuGQUsGJPQjTS4wC", "Lämmin mieskertoja"), ("G17SuINrv2H9FC6nvetn", "Lempeä brittimies"), ("UgBBYS2sOqTuMpoF3BR0", "Rento keskustelija, mies"),
+            ("6OzrBCQf8cjERkYgzSg8", "Nuori rento mies"), ("ZthjuvLPty3kTMaNKVKb", "Varma mieskertoja"), ("EkK5I93UQWFDigLMpZcX", "Käheä syvä mies"),
+            ("uju3wxzG5OhpWcoi3SMy", "Ilmeikäs mieskertoja"), ("NNl6r8mD7vthiJatiJt1", "Eloisa brittikertoja"), ("NFG5qt843uXKj4pFvR7C", "Syvä rauhallinen mies"),
+            ("j9jfwdrw7BRfcR43Qohk", "Samettinen brittimies"), ("XjLkpWUlnhS8i7gGz3lZ", "Uutistenlukija, mies"), ("wBXNqKUATyqu0RtYt25i", "Radiokuuluttaja, mies"),
+            ("Se2Vw1WbHmGbBbyWTuu4", "Samettinen naiskertoja"), ("tnSpp4vdxKPjI9w0GnoV", "Pirteä kirkas nainen"), ("jqcCZkN6Knx8BJ5TBdYR", "Lämmin arkinen nainen"),
+            ("ZF6FPAbjXT4488VcRRnw", "Innostunut brittinainen"), ("g6xIsTj2HwM6VR4iXFCw", "Juttuseura, nainen"), ("lxYfHSkYm1EzQzGhdbfc", "Ammattilukija, nainen"),
+            ("yj30vwTGJxSHezdAGsv9", "Rento naiskertoja"), ("19STyYD15bswVz51nqLf", "Tyylikäs brittinainen"), ("Z3R5wn05IrDiVCyEkUrK", "Salaperäinen naiskertoja"),
+            ("DLsHlh26Ugcm6ELvS0qi", "Rauhoittava etelän nainen"), ("wJqPPQ618aTW29mptyoc", "Pehmeä brittinainen"),
         };
 
         /// <summary>
