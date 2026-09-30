@@ -375,6 +375,14 @@ export function lisaaBlender(rakennusJson, blender) {
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
   });
+  // Äänitilat (Linnanrakentaja 30.9., Siirtosepän kuittaus): yleisnäkymän taustaäänet soivat massa-tilasta
+  // (natiivin Aanimaisema.MassaTilaId), joten kohdistamaton tila, jolla on ääniä mutta ei leivottua glb:tä, jää
+  // pakettiin ILMAN glb:tä ja vain kentillä id, nimi, kohdistettava, rajat, aanet ja tehosteet (lataaja ohittaa
+  // piirron; hahmot, palikat, valot, liekit ja käsikirjoitus pois, etteivät ne ilmesty kuoren päälle).
+  const aanitilat = rakennusJson.tilat
+    .filter((t) => !on.has(`tilat/${t.id}.glb`) && t.kohdistettava === false && (t.aanet?.length || t.tehosteet?.length))
+    .map((t) => ({ id: t.id, nimi: t.nimi, kohdistettava: false, rajat: t.rajat, aanet: t.aanet ?? [],
+      tehosteet: t.tehosteet ?? [] }));
   rakennusJson.tilat = rakennusJson.tilat.filter((t) => on.has(`tilat/${t.id}.glb`));
   for (const t of rakennusJson.tilat) {
     const g = on.get(`tilat/${t.id}.glb`);
@@ -384,6 +392,7 @@ export function lisaaBlender(rakennusJson, blender) {
       if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
     }
   }
+  rakennusJson.tilat.push(...aanitilat);
   return blender.tiedostot.map((t) => ({ polku: `blender/${t.polku}`, sha256: t.sha256, tavuja: t.tavuja }));
 }
 
@@ -399,6 +408,7 @@ export function tarkistaBlenderPaketti(rakennusJson, blender) {
   }
   if (!rakennusJson.tilat?.length) throw new Error(`${rakennusJson.id}: blender.json on olemassa, mutta tiloja ei ole`);
   for (const t of rakennusJson.tilat) {
+    if (t.glb === undefined && t.kohdistettava === false && !t.hahmot && !t.palikat && !t.valot && !t.liekit) continue;   // äänitila
     if (!t.glb?.tiedosto?.startsWith('blender/')) throw new Error(`${rakennusJson.id}/${t.id}: tila-glb ei ole leivottu (blender/)`);
   }
 }
