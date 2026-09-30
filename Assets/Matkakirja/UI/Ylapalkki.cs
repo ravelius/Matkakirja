@@ -57,8 +57,13 @@ namespace Matkakirja.Natiivi
         /// hyväksytty poikkeama webin 60 pt:stä, Fable). iPhonen matala palkki: MatalaLisa.
         /// </summary>
         // iPadin nahkapalkki turva-alue + 57 pt (Pelikoodari 29.9., web) → 72 pt (omistaja 29.9.2026 klo 23.0x, 1.0.56: "liian matala").
-        public static float Korkeus => Puhelin ? 57f : IpadNahka ? IpadKorkeus : 65f;
-        const float IpadKorkeus = 72f;
+        public static float Korkeus => Puhelin ? 57f : IpadNahka ? (MacSyote.Kaytossa ? MacKorkeus : IpadKorkeus) : 65f;
+        const float IpadKorkeus = 72f, MacLogoKorkeus = 32f;
+        // Mac (omistaja 30.9. klo 22.4x: "yläpalkki on aavistuksen liian korkea, koska alhaalla on enemmän tilaa"): Macilla ei ole
+        // tilarivin turva-aluetta, joten iPadin 24 pt ylhäällä ei tasapainota tikkausnauhaa. Nauhan näkyvä yläreuna on ~4 pt
+        // alatäytteen alla (omistajan kuva: ylä ~9 pt, ala ~13,5 pt) → alatäyte 19 → 15 ja palkki 72 → 68: pillerin ylä- ja
+        // alaväli 9,5 pt kumpikin.
+        const float MacKorkeus = 68f, MacTikkaus = 15f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
         /// <summary>Palkin täyte (pysty, sivut). Löydös 88 (omistaja build 13): logo ja ☰ sisemmäs kuin webissä (12,8 → 22 pt).</summary>
         static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 14f) : new Vector2(7.2f, 22f);
@@ -509,9 +514,11 @@ namespace Matkakirja.Natiivi
                 {
                     // Rivi tikkauksen yläpuolisen nahan keskelle; reunat 36 pt (Codex ipad-v1), turva-alue ja kulmakaari mukana.
                     palkki.style.paddingTop = r.y;
-                    palkki.style.paddingBottom = IpadTikkaus;
+                    palkki.style.paddingBottom = MacSyote.Kaytossa ? MacTikkaus : IpadTikkaus;
                     palkki.style.paddingLeft = Mathf.Max(r.x, 0f) + IpadReuna;
                     palkki.style.paddingRight = Mathf.Max(r.z, 0f) + IpadReuna;
+                    // Mac (omistaja 30.9. klo 22.4x): "matkakirja logoa saisi vähän suurentaa" — 28 → 32 pt (+14 %), vain Macilla.
+                    if (MacSyote.Kaytossa) { logo.style.height = MacLogoKorkeus; logo.style.width = MacLogoKorkeus * logoSuhde; }
                 }
             }
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);

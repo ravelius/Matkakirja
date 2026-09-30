@@ -27,6 +27,12 @@ namespace Matkakirja.Natiivi
         string viimeKohde = "–";
         int tapahtumia;
         readonly float[] luku = new float[8];
+        // TEKSTIN LIUKU (omistaja 30.9. klo 22.4x: "liun myös tekstien vierittämiseen"): ohjauslevyn vedon nopeus mitataan
+        // (50 ms keskiarvo), ja vedon loputtua (TaukoS) vieritys jatkuu ja vaimenee kuten kartan liuku (0,35 s).
+        const float TaukoS = 0.08f, LiukuAika = 0.35f;
+        ScrollView liukuSv;
+        Vector2 liukuNopeus;
+        float viimeVeto = -10f;
 
         /// <summary>Tunnistimet asennettu (Mac tai pakotettu testi).</summary>
         public static bool Kaytossa => instanssi != null && instanssi.kaytossa;
@@ -67,6 +73,7 @@ namespace Matkakirja.Natiivi
             kaytossa = MatkakirjaMacSyote_Asenna(pakotettu ? 1 : 0) != 0;
 #endif
             if (kaytossa) Debug.Log("MATKAKIRJA mac-syöte: tunnistimet käytössä" + (pakotettu ? " (pakotettu)" : ""));
+            if (kaytossa && UiKerros.Olemassa) UiKerros.Hae().PakotaTurva(); // yläpalkin Mac-mitat (logo) seuraavassa ruudussa
         }
 
         void Update()
@@ -82,20 +89,33 @@ namespace Matkakirja.Natiivi
             MatkakirjaMacSyote_Lue(a);
             tapahtumia = (int)a[7];
             if (a[0] != 0 || a[1] != 0 || a[2] != 0 || a[3] != 0 || a[4] != 1f)
-                Kasittele(new Vector2(a[0], a[1]), new Vector2(a[2], a[3]), a[4], new Vector2(a[5], a[6]));
+                Kasittele(new Vector2(a[0], a[1]), new Vector2(a[2], a[3]), a[4], new Vector2(a[5], a[6]), Time.unscaledDeltaTime);
 #endif
+            LiuTeksti(Time.unscaledDeltaTime);
+        }
+
+        void LiuTeksti(float dt)
+        {
+            if (liukuSv == null || Time.unscaledTime - viimeVeto < TaukoS) return;
+            if (liukuSv.panel == null || liukuNopeus.sqrMagnitude < 25f) { liukuSv = null; liukuNopeus = Vector2.zero; return; }
+            var ennen = liukuSv.scrollOffset;
+            liukuSv.scrollOffset = ennen - liukuNopeus * dt;
+            // Reunaan osuessa liuku pysähtyy (offset ei enää muutu).
+            if ((liukuSv.scrollOffset - ennen).sqrMagnitude < 0.01f) { liukuSv = null; liukuNopeus = Vector2.zero; return; }
+            liukuNopeus *= Mathf.Exp(-dt / LiukuAika);
+            Ruudunpaivitys.Herata(0.1f);
         }
 
         /// <summary>Testikomento: sama käsittely kuin tunnistimilta (pikselit, origo vasen yläkulma kuten UIKitissä).</summary>
         public static string Testi(Vector2 veto, Vector2 rulla, float nipistys, Vector2 osoitin)
         {
             if (instanssi == null) Pakota();
-            instanssi.Kasittele(veto, rulla, nipistys, osoitin);
+            instanssi.Kasittele(veto, rulla, nipistys, osoitin, 0.1f); // testi: ele 0,1 s:ssa (liuku mitattavissa)
             return instanssi.viimeKohde;
         }
 
         /// <summary>veto ja rulla UIKitin suunnassa (y alas), osoitin yläkulmasta; negatiivinen osoitin = hiiren paikka.</summary>
-        void Kasittele(Vector2 veto, Vector2 rulla, float nipistys, Vector2 osoitin)
+        void Kasittele(Vector2 veto, Vector2 rulla, float nipistys, Vector2 osoitin, float dt)
         {
             Vector2 ruutu = osoitin.x >= 0 && osoitin.y >= 0
                 ? new Vector2(osoitin.x, Screen.height - osoitin.y)
@@ -109,16 +129,16 @@ namespace Matkakirja.Natiivi
                 if (uiPeittaa)
                 {
                     if (unityRullaa) vetoUnitylle = true;
-                    viimeKohde = vetoUnitylle ? "veto: teksti Unitylle" : "veto: " + Vierita(ruutu, veto);
+                    viimeKohde = vetoUnitylle ? "veto: teksti Unitylle" : "veto: " + Vierita(ruutu, veto, dt, true);
                 }
-                else viimeKohde = kierto != null && kierto.MacPanoroi(new float2(veto.x, -veto.y)) ? "veto: kartta" : "veto: kartta estetty";
+                else viimeKohde = kierto != null && kierto.MacPanoroi(new float2(veto.x, -veto.y), dt) ? "veto: kartta" : "veto: kartta estetty";
             }
             if (rulla != Vector2.zero)
             {
                 if (uiPeittaa)
                 {
                     if (unityRullaa) rullaUnitylle = true;
-                    viimeKohde = rullaUnitylle ? "rulla: teksti Unitylle" : "rulla: " + Vierita(ruutu, rulla);
+                    viimeKohde = rullaUnitylle ? "rulla: teksti Unitylle" : "rulla: " + Vierita(ruutu, rulla, dt, false);
                 }
                 else
                 {
@@ -129,15 +149,23 @@ namespace Matkakirja.Natiivi
             }
             if (nipistys > 0f && nipistys != 1f)
                 viimeKohde = uiPeittaa ? "nipistys: UI (ohitettu)"
-                    : kierto != null && kierto.MacZoomaa(nipistys, ruutu) ? $"nipistys: zoomi {nipistys:0.###}" : "nipistys: kartta estetty";
+                    : kierto != null && kierto.MacZoomaa(nipistys, ruutu, dt, nipistys: true) ? $"nipistys: zoomi {nipistys:0.###}" : "nipistys: kartta estetty";
         }
 
         /// <summary>Osoittimen alla olevan ScrollViewn vieritys: sisältö seuraa sormia (UIKitin y alas).</summary>
-        static string Vierita(Vector2 ruutu, Vector2 pikselit)
+        string Vierita(Vector2 ruutu, Vector2 pikselit, float dt, bool liuku)
         {
             var sv = UiKerros.Hae().VieritettavaPisteessa(ruutu, out float k);
             if (sv == null) return "ei vieritettävää";
-            sv.scrollOffset -= pikselit / k;
+            var d = pikselit / k;
+            sv.scrollOffset -= d;
+            if (liuku && dt > 0f)
+            {
+                if (liukuSv != sv) liukuNopeus = Vector2.zero;
+                liukuSv = sv;
+                liukuNopeus = Vector2.Lerp(liukuNopeus, d / dt, 1f - Mathf.Exp(-dt / 0.05f));
+                viimeVeto = Time.unscaledTime;
+            }
             return "teksti " + (sv.name ?? sv.GetType().Name) + $" {sv.scrollOffset.y:0}";
         }
 

@@ -198,6 +198,11 @@ namespace Matkakirja.Natiivi
                 v.LisaKytkin(kartta, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
             }
             var huntu = v.LisaNappirivi(a);
+            // Macilla (omistaja 30.9. klo 22.3x): "maailma ja näytä huntu saisivat olla vierekkäin siinä kohtaa missä on nyt huntu
+            // nappi" — kehittäjän Maailma-kytkin Näytä huntu -napin vasemmalle puolelle (iPhone/iPad ennallaan: Maailma vain
+            // Kehittäjätyökaluissa, päätös 29.9.).
+            v.LisaKytkin(huntu, "Maailma", Paavalikko.Maapallo, () => Paavalikko.Maailma,
+                () => Paavalikko.AsetaMaailma(!Paavalikko.Maailma), () => Asetukset.Kehittaja && MacSyote.Kaytossa);
             v.LisaKytkin(huntu, "Näytä huntu", Ikonit.Viiva["silma"], () => Paavalikko.PelaajanNakyma,
                 () => Paavalikko.AsetaPelaajanNakyma(!Paavalikko.PelaajanNakyma), () => Paavalikko.Maailma);
             v.LisaOsioOtsikko("Muut", a);

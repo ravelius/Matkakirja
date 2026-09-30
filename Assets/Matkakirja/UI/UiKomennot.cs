@@ -133,6 +133,7 @@
 //   ui kuunnelma [tila]|ohita|alusta         Olavinlinnan huoneen kuunnelman tekstitys (KuunnelmaKaistale): rivi, ohitus, alusta
 //   ui mac tila|pakota|veto dx dy [x y]|rulla dy [x y]|nipistys s [x y]  Mac-syöte (MacSyote.cs): ohjauslevyn veto, rulla ja
 //                                             nipistys ilman Macia (pikselit, UIKitin suunta, osoitin yläkulmasta)
+//   ui nappain vasen|oikea|ylos|alas|esc     näppäimistökerros (Nappaimisto): selaa, vierittää, sulkee kuin fyysinen näppäin
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui matkamuisto <id>                       matkamuiston löytö kuten dioraamasta (voudin-sinetti); tila lokiin
@@ -764,6 +765,10 @@ namespace Matkakirja.Natiivi
                     Kirjaa($"mac {loput} → {tulos}");
                     return null;
                 }
+                case "nappain":
+                    // Näppäimistökerros (Nappaimisto): ui nappain vasen|oikea|ylos|alas|esc (kuin fyysinen näppäin).
+                    Kirjaa("nappain: " + Nappaimisto.Paina(loput.Trim()));
+                    return null;
                 case "kierto":
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
