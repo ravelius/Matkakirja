@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 20:12:** !!! LEVY 32 Gi (35→32 9 min:ssa; KOVA RAJA 30 ~6 min päässä; ei hälytysreittiä: viestiraja; push-ilmoitus käyttäjälle 20.03, uusi jos < 30) !!! wt/ 39 (raja 20, kasvaa), muisti 65 % vapaa, kuorma 168/118/117, sim 1 (linssiseppa-iPhone; ≤1 ok), työtilat ok. Viikko 70 % (5 h 20 %). Konteksti: Päätoimittaja 38 %. Kävijälaskuri: 19.29 n=2, seuraava ~20.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 30.9. 20:03:** !!! LEVY 35 Gi (40→35 11 min:ssa; KOVA RAJA 30 ~20 min päässä; hälytykset EIVÄT mene viestirajan takia → push-ilmoitus käyttäjälle lähetetty 20.03) !!! wt/ 38 (raja 20), muisti 61 % vapaa, kuorma 29/90/119, sim 1 (iPhone 18 Pro; ≤1 ok), työtilat ok. Viikko 69 % (5 h 18 %). Konteksti: Päätoimittaja 36 %. Kävijälaskuri: 19.29 n=2, seuraava ~20.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta (Pulu-EVA ilmoitettu).
 
 **Päivitetty 30.9. 19:52:** LEVY 40 Gi (42→40 12 min:ssa; < 45 hälytys 19.40 EI PERILLE; kova raja 30; ~10 Gi/h jos jatkuu → kova raja ~20.50), wt/ 37 (raja 20), muisti 65 % vapaa, kuorma 34/67/131, sim 0, työtilat ok. Viikko 69 % (5 h 17 %). Konteksti: Päätoimittaja 34 %. Kävijälaskuri: 19.29 n=2, seuraava ~20.29. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: uusi Codex-viesti posti/codex-fable-pulu-avaruuskavely-20260930.md (Pulun EVA-asu ja valokerrokset). Viestiraja päällä: ilmoitukset EIVÄT mene.
