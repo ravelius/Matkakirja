@@ -229,7 +229,7 @@ namespace Matkakirja.Natiivi
             yokuori?.PilvienPeitto(pilvienPeitto);
         }
 
-        float pilvienPeitto, pilviValoAika;
+        float pilvienPeitto, pilviValoAika, valotusAika;
 
         /// <summary>
         /// KYYDIN SÄÄTIMET (omistaja 28.9. TF 1.0.39 -kaappaus: "Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle
@@ -516,6 +516,16 @@ namespace Matkakirja.Natiivi
         void LateUpdate()
         {
             if (kamera == null) return;
+            // Automaattivalotukseen auringon korkeus kameran alapisteessä (maan keskipiste georeferenssin origossa).
+            if (kyyti != KyydinTila.Kauko && georeferenssi != null && Time.unscaledTime - valotusAika > 0.5f)
+            {
+                valotusAika = Time.unscaledTime;
+                var gtv = georeferenssi.transform;
+                Vector3 keski = gtv.TransformPoint((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(Unity.Mathematics.double3.zero));
+                Vector3 au = gtv.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                Matkakirja.Linssit.Kyytipino.AurinkoSin = Vector3.Dot((kamera.transform.position - keski).normalized, au);
+            }
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, kyyti != KyydinTila.Kauko);
             Matkakirja.Linssit.IssSiluetti.Paivita(kamera, georeferenssi, kyyti != KyydinTila.Kauko && AstronauttiLinssi.Vertailu.HasValue);
             nimijono.Aja();

@@ -20,6 +20,21 @@ namespace Matkakirja.Linssit
         public static bool Pois = true;
         /// <summary>Valotus (EV): ACES tummentaa keskisävyjä noin 0,8:aan, joten lähtötaso +0,5 (säädetään NASA-vertailusta).</summary>
         public static float Valotus = 0.5f;
+        /// <summary>
+        /// Automaattivalotus auringon mukaan (Linssiseppä 2:n Helsinki-kuva 30.9.: aurinko 9° → noin 1 EV alivalottunut): kamera
+        /// valottaa maan kirkkauden mukaan kuten astronautin kamera. Lisä = 1,1 EV × (0,5 − sin korkeus) / 0,5, kun aurinko on
+        /// 0…30° kameran alla olevassa pisteessä; yöllä +0,3 (kaupunkien valot), hämärässä liuku. A/B `astro kyyti autovalotus 0|1`.
+        /// </summary>
+        public static bool AutoValotus = true;
+        static float autoLisa;
+        /// <summary>Auringon korkeuden sini kameran alapisteessä (AstronauttiKerros joka kehys; NaN = ei tiedossa).</summary>
+        public static float AurinkoSin = float.NaN;
+        static float AutoLisa(float s)
+        {
+            if (float.IsNaN(s)) return 0f;
+            float paiva = 1.1f * Mathf.Clamp01((0.5f - s) / 0.5f);
+            return s >= 0f ? paiva : Mathf.Lerp(0.3f, 1.1f, Mathf.Clamp01((s + 0.1f) / 0.1f));
+        }
         public static bool BloomPois;
         /// <summary>Filmirae ja vinjetti (ISS-kameran valokuvatuntu), oletuksena pois.</summary>
         public static bool Filmi;
@@ -59,7 +74,10 @@ namespace Matkakirja.Linssit
             // Filmipino tai muu voi kytkeä jälkikäsittelyn pois kesken kyydin: palautetaan.
             var d = kamera.GetUniversalAdditionalCameraData();
             if (d != null && !d.renderPostProcessing) d.renderPostProcessing = true;
-            if (vari != null && !Mathf.Approximately(vari.postExposure.value, Valotus)) vari.postExposure.Override(Valotus);
+            // Automaattivalotus liukuu 1 EV/s, ettei valotus hypi kelauksessa.
+            autoLisa = Mathf.MoveTowards(autoLisa, AutoValotus ? AutoLisa(AurinkoSin) : 0f, Time.unscaledDeltaTime);
+            float ev = Valotus + autoLisa;
+            if (vari != null && Mathf.Abs(vari.postExposure.value - ev) > 0.005f) vari.postExposure.Override(ev);
             bool bloom = !BloomPois && !KevytLaite;
             if (hehku != null && hehku.active != bloom) hehku.active = bloom;
             if (rae != null && rae.active != Filmi) rae.active = Filmi;
@@ -89,7 +107,7 @@ namespace Matkakirja.Linssit
         }
 
         public static string Tila() =>
-            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV, bloom {(hehku != null && hehku.active ? "päällä" : "pois")}, filmi {(Filmi ? "päällä" : "pois")}"
+            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV + auto {autoLisa:+0.00;-0.00} (sin {AurinkoSin:0.00}), bloom {(hehku != null && hehku.active ? "päällä" : "pois")}, filmi {(Filmi ? "päällä" : "pois")}"
             + (KevytLaite ? " (kevyt laite)" : "");
     }
 }
