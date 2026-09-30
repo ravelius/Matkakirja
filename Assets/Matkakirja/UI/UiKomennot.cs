@@ -130,6 +130,7 @@
 //   ui liiku                                  Liiku-napin napautus: kulkutapaliuku auki (peli käynnissä)
 //   ui voiceover [paalle|pois|puu]           VoiceOver-silta pakolla päälle / laitteen mukaan / solmut → voiceover-puu.txt
 //   ui saavutettavuus [nimi]                  VoiceOver-nimet, 44 pt:n kosketusalat, kontrasti → Documents/saavutettavuus[-nimi].json
+//   ui kuunnelma [tila]|ohita|alusta         Olavinlinnan huoneen kuunnelman tekstitys (KuunnelmaKaistale): rivi, ohitus, alusta
 //   ui mac tila|pakota|veto dx dy [x y]|rulla dy [x y]|nipistys s [x y]  Mac-syöte (MacSyote.cs): ohjauslevyn veto, rulla ja
 //                                             nipistys ilman Macia (pikselit, UIKitin suunta, osoitin yläkulmasta)
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
@@ -731,6 +732,17 @@ namespace Matkakirja.Natiivi
                     Lehtinakyma.TasausTagi = t == "pois" ? "" : t == "ilman" ? "<align=justified>" : t == "flush" ? "<align=\"flush\">"
                         : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
                     return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
+                }
+                case "kuunnelma":
+                {
+                    // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.
+                    var dt = DioraamaTaulu.Viimeisin;
+                    if (dt == null) return "dioraamataulua ei ole";
+                    string km = loput.Trim();
+                    if (km == "ohita") Kirjaa("kuunnelma ohita: " + (dt.KuunnelmaOhita() ? "ok" : "ei käynnissä") + " · " + dt.KuunnelmaTila);
+                    else if (km == "alusta") { dt.KuunnelmaAlusta(); Kirjaa("kuunnelma alusta: " + dt.KuunnelmaTila); }
+                    else Kirjaa("kuunnelma: " + dt.KuunnelmaTila);
+                    return null;
                 }
                 case "mac":
                 {

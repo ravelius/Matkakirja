@@ -39,6 +39,11 @@ namespace Matkakirja.Natiivi
         readonly Label kertojaTeksti;
         readonly Button uusintaNappi;
         string puluKupla;
+        // KUUNNELMA (Päätoimittaja 30.9.2026): tekstityskaistale infotaulun yläpuolella Pulun oikealla puolella ja
+        // infotaulun "Kuuntele"-nappi (alusta uudelleen).
+        readonly KuunnelmaKaistale kuunnelma;
+        readonly Button kuunteleNappi;
+        Tila kuunnelmaTila;
 
         public DioraamaTaulu(UiKerros kerros)
         {
@@ -125,6 +130,23 @@ namespace Matkakirja.Natiivi
             seuraava.style.marginTop = 8;
             seuraava.style.whiteSpace = WhiteSpace.Normal;
             seuraava.style.display = DisplayStyle.None;
+
+            // Kuuntele uudelleen: infotaulun oikean yläkulman yläpuolelle kaistaleen paikalle (kaistale on silloin poissa;
+            // laudan sisällä nappi peitti tekstirivin, 357bce14-kuva). Ei sekoitu yleisnäkymän ↻-kertojaan vasemmassa yläkulmassa.
+            kuunteleNappi = Rakenne.Nappi("Kuuntele", "mk-dioraama__kuuntele", () => { if (kuunnelmaTila != null) kuunnelma.Aloita(kuunnelmaTila, true); },
+                juuri, Ikonit.PaivitaVersio);
+            kuunteleNappi.style.position = Position.Absolute;
+            kuunteleNappi.style.flexDirection = FlexDirection.Row; kuunteleNappi.style.alignItems = Align.Center;
+            kuunteleNappi.style.height = 34;
+            kuunteleNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.92f);
+            kuunteleNappi.style.borderTopLeftRadius = 17; kuunteleNappi.style.borderTopRightRadius = 17;
+            kuunteleNappi.style.borderBottomLeftRadius = 17; kuunteleNappi.style.borderBottomRightRadius = 17;
+            kuunteleNappi.style.color = Teksti;
+            kuunteleNappi.style.paddingLeft = 10; kuunteleNappi.style.paddingRight = 12; kuunteleNappi.style.paddingTop = 4; kuunteleNappi.style.paddingBottom = 4;
+            var kuunteleTeksti = kuunteleNappi.Q<Label>();
+            if (kuunteleTeksti != null) { Kirjasimet.Aseta(kuunteleTeksti, Kirjasin.Kone); kuunteleTeksti.style.fontSize = 11; kuunteleTeksti.style.color = Teksti; kuunteleTeksti.style.marginLeft = 4; }
+            kuunteleNappi.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            kuunteleNappi.style.display = DisplayStyle.None;
 
             // Kehittäjätilan kuoren laatutasovalitsin (Olavinlinna, omistajan toive 29.9.: "kehittäjätilaan tasovalitsin"):
             // napautus kiertää auto → huippu → normaali → kevyt; valinta muistetaan laitteeseen (DioraamaUlkokuori).
@@ -225,6 +247,10 @@ namespace Matkakirja.Natiivi
                 etsintaLoppuu = Time.unscaledTime + 7f;
             };
 
+            // Tekstityskaistale viimeisenä: laudan ja Pulun päällä piirtojärjestyksessä (sijoitus ei kuitenkaan peitä niitä).
+            kuunnelma = new KuunnelmaKaistale(juuri);
+            Viimeisin = this;
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -270,7 +296,7 @@ namespace Matkakirja.Natiivi
                 && etsintaKortti.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(etsintaKortti.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                 return true;
             // ‹-nappi ei saa välittää napautusta dioraamalle (muuten sama napautus voisi kohdistaa tilan uudelleen).
-            foreach (var el in new VisualElement[] { paluuNappi, uusintaNappi, puluAlue })
+            foreach (var el in new VisualElement[] { paluuNappi, uusintaNappi, puluAlue, kuunnelma?.Juuri, kuunteleNappi })
                 if (el != null && el.resolvedStyle.display != DisplayStyle.None && el.panel != null
                     && el.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(el.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                     return true;
@@ -296,6 +322,7 @@ namespace Matkakirja.Natiivi
                 puluAlue.style.display = DisplayStyle.None;
                 uusintaNappi.style.display = DisplayStyle.None;
                 kertojaLaatikko.RemoveFromClassList("mk-nakyy");
+                LopetaKuunnelma();
                 return;
             }
             Nakyma nakyma = nakymaTaiEi.Value;
@@ -316,10 +343,12 @@ namespace Matkakirja.Natiivi
                 pulu.style.display = DisplayStyle.None;
                 puluAlue.style.display = DisplayStyle.None;
                 for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+                LopetaKuunnelma();
                 return;
             }
             var infoTila = nakyma.KohdeTila != null ? rakennus.Tila(nakyma.KohdeTila) : null;
             if (infoTila?.Infotaulu != null) { PaivitaInfotaulu(linssi, infoTila, nakyma, tNyt); return; }
+            LopetaKuunnelma();
             puluAlue.style.display = DisplayStyle.None;
 
             // Pulu: 3D-laskeutumispiste → ruutupiste → paneelikoordinaatit (MaapallonVuosiSovitin-kommentin malli).
@@ -415,7 +444,7 @@ namespace Matkakirja.Natiivi
             lauta.style.display = perilla ? DisplayStyle.Flex : DisplayStyle.None;
             lauta.style.opacity = perilla ? 1f : 0f;
             lauta.style.translate = new Translate(0, perilla ? 0 : 8);
-            if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; return; }
+            if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; LopetaKuunnelma(); return; }
 
             float pw = juuri.layout.width, ph = juuri.layout.height;
             if (float.IsNaN(pw) || pw <= 0) { pw = Screen.width; ph = Screen.height; }
@@ -450,6 +479,22 @@ namespace Matkakirja.Natiivi
 
             puluKupla = tila.PuluTeksti;
             bool puluNakyy = !string.IsNullOrEmpty(puluKupla);
+
+            // Kuunnelma alkaa, kun tilaan on tultu perille (kierroksen aikana tänne ei tulla); kaistale laudan yläpuolelle
+            // Pulun oikealle puolelle (Pulu 64 pt laudan vasemmassa yläkulmassa, x + 6 … x + 59).
+            bool kuunneltava = tila.Kuunnelma != null && tila.Kuunnelma.Count > 0;
+            if (kuunneltava && kuunnelma.TilaId != tila.Id) { kuunnelmaTila = tila; kuunnelma.Aloita(tila); }
+            else if (!kuunneltava) LopetaKuunnelma();
+            float kuunnelmaVasen = puluNakyy ? x + 70f : x;
+            kuunnelma.Paivita(kuunnelmaVasen, Mathf.Max(160f, x + tauluLeveys - kuunnelmaVasen), y - 8f);
+            bool kuuntele = kuunneltava && !kuunnelma.Kaynnissa;
+            kuunteleNappi.style.display = kuuntele ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kuuntele)
+            {
+                float nl = float.IsNaN(kuunteleNappi.layout.width) || kuunteleNappi.layout.width <= 0 ? 110f : kuunteleNappi.layout.width;
+                kuunteleNappi.style.left = x + tauluLeveys - nl;
+                kuunteleNappi.style.top = y - 8f - 34f;
+            }
             pulu.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             puluAlue.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (!puluNakyy) return;
@@ -461,6 +506,20 @@ namespace Matkakirja.Natiivi
             puluAlue.style.left = px - 6f; puluAlue.style.top = py - 6f;
             puluAlue.style.width = puluLeveys + 12f; puluAlue.style.height = koko + 12f;
         }
+
+        void LopetaKuunnelma()
+        {
+            if (kuunnelma == null) return;
+            if (kuunnelma.TilaId != null) kuunnelma.Lopeta();
+            kuunnelmaTila = null;
+            kuunteleNappi.style.display = DisplayStyle.None;
+        }
+
+        /// <summary>Testikomennot (ui kuunnelma tila|ohita|alusta): viimeksi luotu taulu.</summary>
+        public static DioraamaTaulu Viimeisin { get; private set; }
+        public string KuunnelmaTila => kuunnelma.Tila;
+        public void KuunnelmaAlusta() { if (kuunnelmaTila != null) kuunnelma.Aloita(kuunnelmaTila, true); }
+        public bool KuunnelmaOhita() => kuunnelma.OhitaRivi();
 
         /// <summary>Kiertue (era 3 kohta 5): rivi taulun alaosaan, kun tilan viimeinen kohta näkyy tai käsikirjoitus on
         /// lopussa ja kiertue on olemassa; muuten null. Yleisnäkymässä (linnan avaustaulu) "Aloita kierros: …", kiertueen
