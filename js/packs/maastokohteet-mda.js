@@ -87,4 +87,146 @@ export const MAASTOKOHTEET_MDA = [
     lahde: 'en-Wikipedia "Mileștii Mici", osiot "History" ja "Wine cellars" (tarkistettu '
       + '30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ A, 30.9.2026 — 4 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'cricovan-viinikellarit',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-cricovan-viinikellarit-83af5c9a.jpg',
+      lyhyt: 'Kuohuviinipulloja kaltevissa telineissä kalkkikivitunnelissa.',
+      selite: 'Kalkkikivitunnelin molemmin puolin on rivejä kaltevissa telineissä lepääviä tummia pulloja.',
+      lahde: 'Valokuva: Visem, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Visem',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cricova_winery_(Oct_2025)_3.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    nimi: 'Cricovan viinikellarit',
+    nimio: 'Cricova',
+    tyyppi: 'ruoka',
+    kysymykset: [
+      'Kuinka pitkä on Cricovan tunneliverkosto?',
+      'Minkä lämpötilan kellarit pitävät ympäri vuoden?',
+    ],
+    korostukset: ['120 kilometriä|120 kilometriä'],
+    nappi: 'Kilometrien mittainen kalkkikivikaupunki',
+    // 28.85 E / 47.133 N — en-Wikipedia "Cricova (winery)", osiot "Winery" ja "Wine production"
+    laudat: {
+      maailmankartta: { x: 6795, y: 1512.9 },
+    },
+    teksti: 'Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin '
+      + 'päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja '
+      + '1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 '
+      + 'kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on '
+      + 'varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin '
+      + 'varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä '
+      + 'samppanjamenetelmällä.',
+    lahde: 'en-Wikipedia "Cricova (winery)", osiot "Winery" ja "Wine production" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'tipovan-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-tipovan-luostari-0ad234d9.jpg',
+      lyhyt: 'Kallioseinämään louhittuja huoneita ja rakennettu julkisivu.',
+      selite: 'Kalkkikivikallion seinämään on louhittu useita aukkoja, joiden edessä on valkoiseksi rapattu rakennuksen osa ja puuportaat.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Monasterio_de_%C8%9Aipova,_%C8%9Aipova,_Moldavia,_2023-11-01,_DD_25.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Țipovan luolaluostari',
+    nimio: 'Țipova',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuinka monta luolaa Țipovan luostariin kuuluu?',
+      'Minkä joen rannalla luostari sijaitsee?',
+    ],
+    korostukset: ['18 luolaa|18 luolaa'],
+    nappi: 'Luostari kaiverrettu kallion sisään',
+    // 28.9848 E / 47.6031 N — en-Wikipedia "Rezina District", osiot "History" ja "Geography"
+    laudat: {
+      maailmankartta: { x: 6799.5, y: 1493.1 },
+    },
+    teksti: 'Țipovan luostari sijaitsee Rezinan piirissä Dnestrin (moldovaksi Nistru) jyrkällä '
+      + 'rantakalliolla. Lähteen mukaan luostari rakennettiin 900–1100-luvuilla suureen '
+      + 'kalkkikivikallioon kaiverrettuna, ja siihen kuuluu 18 luolaa, joita yhdistävät '
+      + 'sisäiset käytävät. Kiinnostava yksityiskohta on ympäristö: Țipovan suojelualue '
+      + 'kattaa 430 hehtaaria jokiterasseja ja puron rotkolaaksoa, jossa on useita 10–16 '
+      + 'metrin putouksia.',
+    lahde: 'en-Wikipedia "Rezina District", osiot "History" ja "Geography" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'caprianan-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-caprianan-luostari-6d89e8a2.jpg',
+      lyhyt: 'Luostarin rakennuksia, tiiliaita ja kupolikirkko nurmikon takana.',
+      selite: 'Nurmikentän takana kohoaa valkoinen kupolikirkko, jonka vasemmalla puolella on keltainen kaksikerroksinen rakennus ja oikealla punatiilinen muuri.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Monasterio_de_C%C4%83priana,_C%C4%83priana,_Moldavia,_2023-11-02,_DD_36.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Căprianan luostari',
+    nimio: 'Căpriana',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Minä vuonna Căprianan luostari sai ensimmäisen merkittävän maininnan?',
+      'Milloin luostarin kivinen pääkirkko rakennettiin?',
+    ],
+    korostukset: ['1491–1496|1491–1496'],
+    nappi: 'Metsän keskellä 1400-luvun kirkko',
+    // 28.5106 E / 47.1166 N — en-Wikipedia "Căpriana monastery", osiot "Overview" ja "Churches"
+    laudat: {
+      maailmankartta: { x: 6783.7, y: 1513.6 },
+    },
+    teksti: 'Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, '
+      + 'jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen '
+      + 'merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen '
+      + 'aseman. Sen nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina '
+      + '1491–1496 Stefan Suuren aikana moldavialaiseen tyyliin. Lisäksi alueella on '
+      + '1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian '
+      + 'kuolonuneen kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta.',
+    lahde: 'en-Wikipedia "Căpriana monastery", osiot "Overview" ja "Churches" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'castel-mimi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mda-nosto-castel-mimi-d6859b87.jpg',
+      lyhyt: 'Castel Mimin vaalea julkisivu ja sorapolku pensasaitojen välissä.',
+      selite: 'Kaksikerroksinen vaalea kivirakennus, jossa on punatiilikoristeita ja keskellä suuri holvattu ovi.',
+      lahde: 'Valokuva: Helgie12, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Helgie12',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castel_Mimi_fa%C8%9Bada.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Castel Mimi',
+    nimio: 'Castel Mimi',
+    tyyppi: 'ruoka',
+    kysymykset: [
+      'Kuka rakennutti Castel Mimin?',
+      'Minä vuonna Castel Mimin kunnostus valmistui?',
+    ],
+    korostukset: ['Constantin Mimi|Constantin Mimi'],
+    nappi: 'Ranskalaisin mallein rakennettu viinilinna',
+    // 29.2919 E / 46.8917 N — en-Wikipedia "Mimi Castle", osiot "History" ja "Castel Mimi tourist complex"
+    laudat: {
+      maailmankartta: { x: 6809.7, y: 1523.1 },
+    },
+    teksti: 'Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin '
+      + 'piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi '
+      + 'rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin '
+      + 'lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen '
+      + 'kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan '
+      + 'uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 '
+      + 'ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.',
+    lahde: 'en-Wikipedia "Mimi Castle", osiot "History" ja "Castel Mimi tourist complex" '
+      + '(tarkistettu 30.9.2026).',
+  },
 ];

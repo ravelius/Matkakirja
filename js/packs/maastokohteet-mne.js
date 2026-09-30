@@ -123,4 +123,40 @@ export const MAASTOKOHTEET_MNE = [
     lahde: 'en-Wikipedia "Tara River Canyon", "Tara (Drina)" ja "Đurđevića Tara Bridge" '
       + '(tarkistettu 30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ A, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'biogradska-gora',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/mne-nosto-biogradska-gora-01a9d626.jpg',
+      lyhyt: 'Biogradskojärvi metsäisten vuorten ympäröimänä.',
+      selite: 'Tyyni järvi peilaa pilviä, ja rinteet nousevat metsän peittäminä molemmin puolin.',
+      lahde: 'Valokuva: Javier Sánchez Portero, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Javier Sánchez Portero',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Biogradsko_jezero_in_July.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Biogradska Gora',
+    nimio: 'Biogradska',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka vanhoja aarniometsän puut ovat?',
+      'Mikä on puiston suurin jääkausijärvi?',
+    ],
+    korostukset: ['aarniometsää|aarniometsää'],
+    nappi: 'Aarniometsä ja jääkausijärvi',
+    // 19.6019 E / 42.8981 N — en-Wikipedia "Biogradska Gora National Park", johdanto
+    laudat: {
+      maailmankartta: { x: 6486.7, y: 1687.5 },
+    },
+    teksti: 'Biogradska Gora on kansallispuisto Montenegron keskiosassa Bjelasican vuoristossa, '
+      + 'Taran ja Limin jokien välissä. Se julistettiin kansallispuistoksi 1952, ja Unescon '
+      + 'Ihminen ja biosfääri -ohjelman suoja lisättiin 1977. Puiston pinta-ala on 54 '
+      + 'neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jossa kasvaa yli '
+      + 'viisisataa vuotta vanhoja puita. Metsän keskellä on Biogradskojärvi, puiston suurin '
+      + 'jääkausijärvi; viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa.',
+    lahde: 'en-Wikipedia "Biogradska Gora National Park", johdanto (tarkistettu 30.9.2026).',
+  },
 ];
