@@ -101,7 +101,12 @@ export const RAAMATTU = {
           + 'kanava, nykyiset rautatiet) — vain ULKOASU on vanhaa (pergamentti, muste, '
           + '1873-rajat ja -lippu tyylinä, isoisän ääni). Vuoden 1873 tarkistusta ei tehdä '
           + 'nykyajan kohteille; vain isoisän päiväkirjan ja 1873-reittien sisältö on '
-          + 'aikakauden mukaista. Kukaan rooli ei hylkää ideaa "koska sitä ei ollut 1873".',
+          + 'aikakauden mukaista. Kukaan rooli ei hylkää ideaa "koska sitä ei ollut 1873". '
+          + 'LINNAN DIORAAMA (omistaja 1.10.2026: "Linnan ympäristö saisi mukailla linnan '
+          + 'kultakauden aikaa"): linnan ympäristö mukailee dioraaman omaa aikakerrosta '
+          + '(Olavinlinna n1500 = 1500-luvun alku, ennen Savonlinnan kaupunkia 1639) — '
+          + 'nykykaupunki, sillat, tiet, katot ja moottoriveneet pois, tilalle luonnonranta, '
+          + 'vanha metsä ja harkiten ajan puurakennukset; linna itse, maasto ja vesi ennallaan.',
         'PELIT, TALOUS JA LUENTA (omistaja 27.9.2026 klo 09.2x–10.4x, sitova; ideat '
           + 'omistajan 12-vuotiaalta tyttäreltä): 1) PELIT ovat yhtä merkittävä osa kuin '
           + 'linssit — oma kehittämissivu docs/pelikatalogi.md (+ pelikatalogi.html) samalla '
