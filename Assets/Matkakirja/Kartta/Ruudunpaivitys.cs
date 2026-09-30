@@ -266,7 +266,7 @@ namespace Matkakirja
         /// <summary>Tila testikomennolle `ruutu`.</summary>
         public string Kuvaus() =>
             $"tila {Nyt} ({Syy}), fps {Application.targetFrameRate}, piirtoväli {OnDemandRendering.renderFrameInterval}, " +
-            $"näyttö {Naytto} Hz, liikkeen katto {(LiikeKatto > 0 ? LiikeKatto + " Hz" : "ei")}, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
+            $"näyttö {Naytto} Hz, liikkeen katto {(LiikeKatto > 0 ? LiikeKatto + " Hz" : "ei")}, näkymän katto {(NakymanKatto > 0 ? NakymanKatto + " Hz" : "ei")}, lämpö {Lampo.Taso} (thermalState {Lampo.ThermalState}, virransäästö {Lampo.Virransaasto}), " +
             $"kamera {(kameraPois ? "pois" : "päällä")}, renderScale {(asetus != null ? asetus.renderScale : -1f):0.##}";
     }
 }
