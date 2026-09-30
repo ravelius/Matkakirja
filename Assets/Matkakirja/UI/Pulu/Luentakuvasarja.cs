@@ -51,7 +51,18 @@ namespace Matkakirja.Natiivi
         public bool LuentoKaynnissa
         {
             get => luentoKaynnissa;
-            set { luentoKaynnissa = value; if (!value) ohita.style.display = DisplayStyle.None; }
+            set
+            {
+                luentoKaynnissa = value;
+                if (!value) { ohita.style.display = DisplayStyle.None; return; }
+                // Omistaja 30.9. (TF 1.1 (81)): Ohita koko luennon ajan, myös kaupungeissa ilman luentakuvia (Bryssel,
+                // Košice, Ljubljana, Luxemburg, Valletta: ennen Ohita ilmestyi vain ensimmäisen kuvan mukana). Paikka
+                // seuraa kasvavaa kaistaletta.
+                ohita.style.display = DisplayStyle.Flex;
+                AsetaPaikka();
+                paikanSeuranta ??= pakka.schedule.Execute(AsetaPaikka).Every(250);
+                paikanSeuranta.Resume();
+            }
         }
         bool luentoKaynnissa;
 
@@ -113,7 +124,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void AsetaPaikka()
         {
-            if (kortit.Count == 0 && paikanSeuranta != null) { paikanSeuranta.Pause(); }
+            if (kortit.Count == 0 && !luentoKaynnissa && paikanSeuranta != null) { paikanSeuranta.Pause(); }
             var p = pakka.worldBound;
             if (float.IsNaN(p.height) || p.height <= 0f) return;
             var m = Kaistale?.Invoke() ?? default;
@@ -130,7 +141,7 @@ namespace Matkakirja.Natiivi
             // koko luentotekstin ja kasvaa pitkäksi, jolloin kuva ja Ohita sen alla valuivat ruudun alareunan yli. Kuva ja
             // Ohita pysyvät nyt ruudun sisällä: paikka kaistaleen alla, mutta nostetaan niin, että Ohita mahtuu alareunaan.
             float ohitaKorkeus = float.IsNaN(ohita.layout.height) || ohita.layout.height <= 0f ? 44f : ohita.layout.height;
-            float kuvanKorkeus = korkeus > 0f ? korkeus : 120f;
+            float kuvanKorkeus = kortit.Count == 0 ? -18f : korkeus > 0f ? korkeus : 120f; // ilman kuvaa Ohita kaistaleen alle
             float alin = p.height - AlaVara - ohitaKorkeus - 18f - kuvanKorkeus;
             yla = Mathf.Max(0f, Mathf.Min(yla, alin));
             foreach (var k in kortit)
