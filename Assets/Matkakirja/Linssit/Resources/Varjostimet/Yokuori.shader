@@ -52,6 +52,7 @@ Shader "Matkakirja/Linssit/Yokuori"
         _PilviKorkeus("Pilvikerroksen korkeus (m)", Float) = 8000
         _Kuu("Kuun suunta (xyz) ja valaistu osuus (w)", Vector) = (0, 0, 1, 0)
         _KuuVoima("Kuunvalon voimakkuus (0 = pois)", Float) = 0.35
+        _TaivasHeijastus("Taivaan Fresnel-heijastus vesiltä (0 = pois)", Float) = 0.3
     }
     SubShader
     {
@@ -82,7 +83,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float _R, _Litistys, _Valot, _MaaVoima, _Kiilto, _Aalto;
                 half _Varjo, _YoVesi;
                 float _PilvetOn, _PilviPeitto, _Karsinta;
-                float _PilviVarjo, _PilviKorkeus, _KuuVoima;
+                float _PilviVarjo, _PilviKorkeus, _KuuVoima, _TaivasHeijastus;
                 float4 _Kuu;
             CBUFFER_END
 
@@ -190,6 +191,11 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half kiilto = (half)(vesi * osuu * saturate(nl * 12.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto) * lapi;
                 half3 kiiltoVari = lerp(half3(1.0, 0.55, 0.25), half3(1.0, 0.96, 0.88), (half)saturate(nl * 4.0));
                 c += kiiltoVari * kiilto * (1.0h - a);
+                // Fotorealismi osa 2 (30.9.): taivaan Fresnel-heijastus vesiltä. Katsekulman Fresnel (Schlick, F0 0,02) kasvaa
+                // horisonttia kohti, jolloin meri hopeoituu reunalla kuten ISS:n kuvissa; vain päiväpuolella, pilvien alla heikkenee.
+                half fres = (half)(0.02 + 0.98 * pow(1.0 - nv, 5.0));
+                half taivas = (half)(vesi * osuu * saturate(nl * 4.0) * _TaivasHeijastus) * fres * lapi;
+                c += half3(0.42h, 0.58h, 0.82h) * taivas * (1.0h - a);
                 // Yöllä vesi tummemmaksi kuin maa (laite cl4: reliefin vaalea vesi jäi 0,82-peiton läpi maata kirkkaammaksi):
                 // vedellä peitto _YoVesi, joten rannat erottuvat kuin kuutamossa. Lisäys esikerrottuna (väri yön väristä).
                 half lisa = (half)(vesi * osuu) * yoKuori * saturate(_YoVesi - a);

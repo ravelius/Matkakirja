@@ -212,6 +212,16 @@ namespace Matkakirja.Natiivi
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
             pilvet?.Tarkkuus(kyyti != KyydinTila.Kauko && !TarkatPilvetPois ? 1f : 0f, TarkkojenPilvienKm);
+            // Fotorealismi 3: pilvien auringonvalo kyydissä (suunta kerran sekunnissa riittää, aurinko 0,25°/min).
+            if (pilvet != null && georeferenssi != null && (kyyti != KyydinTila.Kauko) && Time.unscaledTime - pilviValoAika > 1f)
+            {
+                pilviValoAika = Time.unscaledTime;
+                var gt = georeferenssi.transform;
+                var au = gt.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                pilvet.Valaistus(1f, au, pilvet.transform.position);
+            }
+            else if (pilvet != null && kyyti == KyydinTila.Kauko && pilviValoAika > 0f) { pilvet.Valaistus(0f, Vector3.forward, Vector3.zero); pilviValoAika = 0f; }
             // Pilvipeiton säädin vain kyydissä (kaukonäkymä ennallaan): kynnys 1 − määrä.
             float maara = kyyti != KyydinTila.Kauko ? Mathf.Clamp01(PilvienMaara) : 1f;
             pilvet?.Karsinta(1f - maara);
@@ -219,7 +229,7 @@ namespace Matkakirja.Natiivi
             yokuori?.PilvienPeitto(pilvienPeitto);
         }
 
-        float pilvienPeitto;
+        float pilvienPeitto, pilviValoAika;
 
         /// <summary>
         /// KYYDIN SÄÄTIMET (omistaja 28.9. TF 1.0.39 -kaappaus: "Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle

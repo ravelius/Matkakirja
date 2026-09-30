@@ -1679,6 +1679,8 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
+                        else if (a == "fresnel" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.TaivasHeijastusPois = osat[3] == "0";   // fotorealismi 2
+                        else if (a == "pilvivalo" && osat.Length > 3) Matkakirja.Natiivi.Pilvikuori.ValoPois = osat[3] == "0";   // fotorealismi 3
                         else if (a == "pilvivarjo" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.PilviVarjoPois = osat[3] == "0";   // fotorealismi 3
                         else if (a == "kuunvalo" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.KuunvaloPois = osat[3] == "0";      // fotorealismi 4
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
