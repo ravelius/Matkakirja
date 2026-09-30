@@ -130,7 +130,8 @@ namespace Matkakirja.Natiivi
             // napautus kiertää auto → huippu → normaali → kevyt; valinta muistetaan laitteeseen (DioraamaUlkokuori).
             kuoriNappi = Rakenne.Nappi(DioraamaUlkokuori.ValintaTeksti(), "mk-dioraama__kuoritaso", DioraamaUlkokuori.SeuraavaPakotus, juuri);
             kuoriNappi.style.position = Position.Absolute;
-            kuoriNappi.style.left = 12; kuoriNappi.style.bottom = 24;
+            // Oikeaan yläkulmaan sulkunapin alle (Päätoimittaja 30.9.: vasemmassa alakulmassa se peitti kertojan laatikon ja infotaulun).
+            kuoriNappi.style.right = 14; kuoriNappi.style.top = 110;
             kuoriNappi.style.backgroundColor = new Color(0.1f, 0.08f, 0.06f, 0.6f);
             kuoriNappi.style.color = Color.white;
             kuoriNappi.style.fontSize = 12;
@@ -139,7 +140,7 @@ namespace Matkakirja.Natiivi
             kuoriNappi.style.borderBottomLeftRadius = 8; kuoriNappi.style.borderBottomRightRadius = 8;
             var kuoriTeksti = kuoriNappi.Q<Label>();
             if (kuoriTeksti != null) { kuoriTeksti.style.color = Color.white; kuoriTeksti.style.fontSize = 12; }
-            kuoriNappi.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             DioraamaUlkokuori.PakotusVaihtui += () =>
             {
                 var l = kuoriNappi?.Q<Label>();
@@ -252,7 +253,7 @@ namespace Matkakirja.Natiivi
         void Kytke(PoikkileikkausLinssi uusi)
         {
             kytketty = uusi != null;
-            if (kuoriNappi != null) kuoriNappi.style.display = Asetukset.Kehittaja ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kuoriNappi != null) kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
             nakyma.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
             // Kulman Pulu piiloon linssin ajaksi: dioraamassa Pulu liitää näyttämöllä (oma LiviaKuva).
@@ -302,6 +303,10 @@ namespace Matkakirja.Natiivi
 
             // UUSI LINNA: kertojan kierros — vain teksti ja kamera; Pulu, taulu ja laput pois.
             bool kierros = nakyma.KertojaJakso >= 0 || linssi.KertojaKaynnissa(tNyt);
+            // Kehittäjän kuorinappi: ei esittelylinssien reitillä eikä kertojan tai infotaulun aikana (Päätoimittaja 30.9.).
+            bool infoAuki = nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila)?.Infotaulu != null;
+            kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki && !kierros && !infoAuki
+                ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyma.KertojaTeksti != null) kertojaTeksti.text = nakyma.KertojaTeksti;
             kertojaLaatikko.EnableInClassList("mk-nakyy", nakyma.KertojaTeksti != null);
             uusintaNappi.style.display = nakyma.KohdeTila == null && linssi.KertojaUusittavissa(tNyt) ? DisplayStyle.Flex : DisplayStyle.None;
