@@ -50,7 +50,7 @@ namespace Matkakirja.Natiivi
             // Leveys pillerivalikon mukaan (.mk-paavalikko--asetukset, 367 pt).
             Paneeli.AddToClassList("mk-paavalikko--pergamentti");
             Paneeli.AddToClassList("mk-paavalikko--asetukset");
-            Rakenne.Tausta(Paneeli, Kuviot.Pergamentti);
+            Rakenne.Tausta(Paneeli, Kuviot.PergamenttiVaalea);
             Paneeli.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
             AukiMuuttui += auki => { if (!auki) Asetukset.Tallenna(); };
             // ‹ Takaisin palaa pillerivalikkoon (UiNakymat).

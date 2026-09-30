@@ -70,7 +70,8 @@ namespace Matkakirja.Natiivi
 
             paneeli = Rakenne.El("mk-linssivalitsin", turva);
             paneeli.style.display = DisplayStyle.None;
-            Rakenne.Tausta(paneeli, Kuviot.Pergamentti);
+            // Valikoiden vaaleampi paperi (omistaja 29.9.2026 klo 23.0x, 1.0.56).
+            Rakenne.Tausta(paneeli, Kuviot.PergamenttiVaalea);
             paneeli.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
 
@@ -99,7 +100,7 @@ namespace Matkakirja.Natiivi
             // Muut-paneeli: sama pergamentti ja kehys, ‹ takaisin ja ✕, rivit (Valikkona).
             muut = Rakenne.El("mk-linssivalitsin mk-linssivalitsin--valikko mk-linssivalitsin--muut", turva);
             muut.style.display = DisplayStyle.None;
-            Rakenne.Tausta(muut, Kuviot.Pergamentti);
+            Rakenne.Tausta(muut, Kuviot.PergamenttiVaalea);
             muut.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
             Kirjasimet.Aseta(muut, Kirjasin.Kone);
             var muutYla = Rakenne.El("mk-selite__ylarivi", muut, PickingMode.Ignore);
@@ -125,6 +126,7 @@ namespace Matkakirja.Natiivi
             nappi.style.top = yla;
             // iPhonen valikkona suoraan saaren rivin alle (turva-alueen yläreuna + 8).
             paneeli.style.top = Valikkona ? Ylapalkki.Varaus + 8 : yla + 48;
+            AsetteleEsikatselu();
         }
 
         /// <summary>Nappi näkyviin, kun rekisterissä on valittavia linssejä (kutsutaan harvakseltaan).</summary>
@@ -186,6 +188,7 @@ namespace Matkakirja.Natiivi
             lisaosa.style.display = v ? DisplayStyle.Flex : DisplayStyle.None;
             foreach (var (rivi, nakyy) in lisarivit) rivi.style.display = nakyy == null || nakyy() ? DisplayStyle.Flex : DisplayStyle.None;
             PaivitaKytkimet();
+            PaivitaNappirivit();
             Asettele();
             Rakenna();
             if (PilleriValikko) { NaytaNakyma(Nakyma.Paa); Avautuu?.Invoke(); PaivitaSaatimet(); }
@@ -210,8 +213,32 @@ namespace Matkakirja.Natiivi
         //   rivi 2: Uusi peli · Muut · Kehittäjä (vain kehittäjätilassa)
         //   Muut avaa samannäköisen paneelin päälle: loput toiminnot ja ‹ Takaisin.
 
-        /// <summary>Uusi nappirivi pääsivulle tai annettuun osaan (Asetukset).</summary>
-        public VisualElement LisaNappirivi(VisualElement isa = null) => Rakenne.El("mk-valikkorivi", isa ?? lisaosa, PickingMode.Ignore);
+        /// <summary>
+        /// Uusi nappirivi pääsivulle tai annettuun osaan (Asetukset). Rivin napit ovat kiinni toisissaan (omistaja 29.9.2026 klo
+        /// 23.0x, 1.0.56): yhteinen reuna, pyöristys vain rivin päissä (PaivitaNappirivit merkitsee näkyvistä ensimmäisen ja viimeisen).
+        /// </summary>
+        public VisualElement LisaNappirivi(VisualElement isa = null) =>
+            Rakenne.El("mk-valikkorivi mk-valikkorivi--yhtenainen", isa ?? lisaosa, PickingMode.Ignore);
+
+        /// <summary>Yhtenäisten rivien päät näkyvien nappien mukaan (piilotettu Retkikunta tai Kehittäjätyökalut ei jätä kulmaa).</summary>
+        void PaivitaNappirivit()
+        {
+            paneeli.Query<VisualElement>(className: "mk-valikkorivi--yhtenainen").ForEach(rivi =>
+            {
+                VisualElement eka = null, vika = null;
+                foreach (var c in rivi.Children())
+                {
+                    if (c.style.display == DisplayStyle.None) continue;
+                    eka ??= c;
+                    vika = c;
+                }
+                foreach (var c in rivi.Children())
+                {
+                    c.EnableInClassList("mk-valikkonappi--eka", c == eka);
+                    c.EnableInClassList("mk-valikkonappi--vika", c == vika);
+                }
+            });
+        }
 
         Button ValikkoNappi(VisualElement isa, string nimi, string ikoni, Action painettu, string luokka = "mk-valikkonappi")
         {
@@ -225,21 +252,29 @@ namespace Matkakirja.Natiivi
             // Nimi aina kokonaan (1.0.55-laitekuvat: "Äänimai…" 12,5 px:llä ja "Äänimaise…" vielä 11,5 px:llä): vapaa tila luetaan
             // asettelusta ja fonttia pienennetään vain tarvittaessa 0,25 px:n portain (vähintään 9,5 px), kuten RadioNakyma.SovitaNimi.
             float perus = 0f;
-            b.RegisterCallback<GeometryChangedEvent>(_ =>
+            void Sovita()
             {
                 if (perus <= 0f) perus = t.resolvedStyle.fontSize;
                 if (perus <= 0f || string.IsNullOrEmpty(t.text)) return;
-                float muut = t.resolvedStyle.marginLeft + t.resolvedStyle.marginRight;
+                // Labelin oma reunus ja sisäreunus mukaan (1.0.56-palautteen laitekuva: ilman niitä "Äänimaise…" 300 pt:n valikossa).
+                var ts = t.resolvedStyle;
+                float muut = ts.marginLeft + ts.marginRight + ts.paddingLeft + ts.paddingRight + ts.borderLeftWidth + ts.borderRightWidth;
                 foreach (var c in b.Children())
                     if (c != t && c.resolvedStyle.display != DisplayStyle.None)
                         muut += c.layout.width + c.resolvedStyle.marginLeft + c.resolvedStyle.marginRight;
-                float tila = (b.contentRect.width - muut) * 0.97f;
+                float tila = (b.contentRect.width - muut) * 0.95f;
                 if (float.IsNaN(tila) || tila <= 0f) return;
-                float nyt = t.resolvedStyle.fontSize > 0f ? t.resolvedStyle.fontSize : perus;
+                float nyt = ts.fontSize > 0f ? ts.fontSize : perus;
                 float leveys = t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x * perus / nyt;
                 float koko = leveys > tila ? Mathf.Max(9.5f, Mathf.Floor(perus * tila / leveys * 4f) / 4f) : perus;
-                if (Mathf.Abs(nyt - koko) > 0.01f) t.style.fontSize = koko;
-            });
+                if (Mathf.Abs(nyt - koko) <= 0.01f) return;
+                t.style.fontSize = koko;
+                Debug.Log($"MATKAKIRJA ui valikkonappi: {nimi} {perus:0.##} → {koko:0.##} px (tila {tila:0.#}, teksti {leveys:0.#})");
+            }
+            // Napin koko (paneelin leveys) ja labelin oma asettelu (kirjasin latautuu, teksti vaihtuu) sovittavat uudelleen;
+            // sama koko ei muutu toisella kierroksella, joten silmukkaa ei synny.
+            b.RegisterCallback<GeometryChangedEvent>(_ => Sovita());
+            t.RegisterCallback<GeometryChangedEvent>(_ => Sovita());
             return b;
         }
 
@@ -334,14 +369,15 @@ namespace Matkakirja.Natiivi
             if (PilleriValikko && tiedot.Count > 0)
             {
                 // Web (js/ui.js paivitaLinssiTiedot, pariteetti-2 rivi 12): "Ei linssiä" ja valmiit, sitten otsikko
-                // KESKENERÄISET ja keskeneräiset nimellä "(keskeneräinen)".
+                // KESKENERÄISET ja keskeneräiset sen alla.
                 LuoEiLinssia();
                 foreach (var t in tiedot) if (!t.Kesken) LuoRivi(t);
                 if (tiedot.Exists(t => t.Kesken))
                 {
                     var o = Rakenne.Teksti("KESKENERÄISET", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
                     Kirjasimet.Aseta(o, Kirjasin.Kone);
-                    foreach (var t in tiedot) if (t.Kesken) LuoRivi(t, " (keskeneräinen)");
+                    // Maininta vain otsikossa, ei linssin nimessä (omistaja 29.9.2026 klo 23.0x, 1.0.56).
+                    foreach (var t in tiedot) if (t.Kesken) LuoRivi(t);
                 }
             }
             else foreach (var t in tiedot) LuoRivi(t);
@@ -354,6 +390,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>"Ei linssiä" -rivin tunnus rivilistassa (web linssiRivi(null)).</summary>
         const string EiLinssia = "";
+        /// <summary>Yliviivatut taikalasit ("Ei linssiä": rivi ja esikatseluikkunan kuvake).</summary>
+        static string EiLinssiaIkoni => Ikonit.Viiva["taikalasit"] + "<path d=\"M5.4 5.4 20 20\"/>";
+        /// <summary>Linssin viivakuvake (rivi ja esikatseluikkuna, kun kuvaa ei ole).</summary>
+        static string LinssinIkoni(LinssiTiedot t) => string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni;
 
         /// <summary>Web linssiRivi(null, 'Ei linssiä'): yliviivatut taikalasit, esikatselu ilman kuvaa, toiminto sulkee linssin.</summary>
         void LuoEiLinssia()
@@ -365,7 +405,7 @@ namespace Matkakirja.Natiivi
                 if (esiId != EiLinssia)
                 {
                     Esikatsele(EiLinssia, b, tila, null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.",
-                        aukiId == null ? "Ota pois" : "Aktivoi", () => { Sulje(); Suljettava?.Invoke(); });
+                        aukiId == null ? "Ota pois" : "Aktivoi", () => { Sulje(); Suljettava?.Invoke(); }, EiLinssiaIkoni);
                     return;
                 }
                 Sulje();
@@ -373,7 +413,7 @@ namespace Matkakirja.Natiivi
             }, lista);
             b.tooltip = "Ei linssiä";
             b.AddToClassList("mk-linssirivi--aktivoi");
-            var ikoni = new SvgIkoni(Ikonit.Viiva["taikalasit"] + "<path d=\"M5.4 5.4 20 20\"/>");
+            var ikoni = new SvgIkoni(EiLinssiaIkoni);
             ikoni.AddToClassList("mk-linssirivi__ikoni");
             b.Add(ikoni);
             var nimirivi = Rakenne.El("mk-linssirivi__nimirivi", Rakenne.El("mk-linssirivi__tekstit", b, PickingMode.Ignore), PickingMode.Ignore);
@@ -399,7 +439,7 @@ namespace Matkakirja.Natiivi
                     // Aktiivisen linssin rivi: "Ota pois" (palaute 6, web).
                     bool paalla = id == aukiId;
                     Esikatsele(id, b, tila, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), paalla ? "Ota pois" : "Aktivoi",
-                        paalla ? () => { Sulje(); Suljettava?.Invoke(); } : () => { Sulje(); Valittu?.Invoke(id); });
+                        paalla ? () => { Sulje(); Suljettava?.Invoke(); } : () => { Sulje(); Valittu?.Invoke(id); }, LinssinIkoni(t));
                     return;
                 }
                 Sulje();

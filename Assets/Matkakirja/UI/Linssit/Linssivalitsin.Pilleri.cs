@@ -2,8 +2,9 @@
 // yläpalkin pilleri avaa yhden pudotuspaneelin, jonka pääsivu on ylhäältä alas Äänet (kytkimet ja tasot) → Kartta →
 // toiminnot (Uusi peli, Ehdota, Offline-kartat, Asetukset, Retkikunta, Kehittäjä) → Linssit › → Aarteet › → pillerin
 // tiedot (matkalaukun Matka ja Matkan tilastot) → versiorivi. Linssit ja Aarteet vaihtavat saman paneelin sisällön
-// (‹ Takaisin ja otsikko), tiheä lista ilman selitettä; 1. napautus nostaa esikatselun paneelin vasemmalle puolelle
-// (kuva ja lyhyt selite, avausanimaatio rivin suunnasta) ja rivi muuttuu samassa kohdassa toimintonapiksi (Aktivoi /
+// (‹ Takaisin ja otsikko), tiheä lista ilman selitettä; 1. napautus nostaa esikatselun omaan ikkunaansa paneelin vasemmalle
+// puolelle (kuva ja selite, avausanimaatio rivin suunnasta; omistaja 29.9.2026 klo 23.0x, 1.0.56: erillinen ikkuna, valikko
+// kapeampi) ja rivi muuttuu samassa kohdassa toimintonapiksi (Aktivoi /
 // Näytä), 2. napautus tekee toiminnon. Toisen rivin napautus vaihtaa esikatselun. Aarteet: Aarnin luettelo, Tavarat ja
 // Julisteet otsikoittain, otsikossa "N / kaikki", ei tyhjiä rivejä; Näytä = kuva koko ruudulle (juliste: galleria).
 // Ulkoasu (matkalaukkunahka) vasta omistajan hyväksymästä Codexin kuvasta; siihen asti nykyinen pergamentti.
@@ -35,6 +36,7 @@ namespace Matkakirja.Natiivi
         Button esiNappi;
         Button alaTakaisin;
         Kuvasuurennos suurennos;
+        SvgIkoni esiIkoni;
         string esiId;
         string esiTilaEnnen;
         Action esiToiminto;
@@ -51,12 +53,11 @@ namespace Matkakirja.Natiivi
 
         void LuoPilleriOsat(VisualElement turva, UiKerros kerros)
         {
-            // Web (Pelikoodari, mitat.md 29.9.): Linssit ja Aarteet samassa kiinteän levyisessä paneelissa; runko on yksi
-            // sarake (lista koko levyltä) ja kaksisarakkeinen vasta esikatselussa: vasemmalla esikatselu (42 %, vähintään
-            // 120 pt: neliökuva, nimi, selite ja toimintonappi), oikealla lista.
+            // Linssit ja Aarteet: runko on pelkkä lista (paneeli kapeana, .mk-linssivalitsin--kapea); esikatselu on OMA IKKUNANSA
+            // paneelin vasemmalla puolella samalla pergamentilla ja kehyksellä (omistaja 29.9.2026 klo 23.0x, 1.0.56): kuva,
+            // nimi ja selite. Ikkunan paikka ja leveys luetaan turva-alueesta (AsetteleEsikatselu).
             runko = Rakenne.El("mk-linssivalitsin__runko", null, PickingMode.Ignore);
             vieritys.contentContainer.Insert(vieritys.contentContainer.IndexOf(lista), runko);
-            esikatselu = Rakenne.El("mk-linssivalitsin__esikatselu", runko, PickingMode.Ignore);
             var oikea = Rakenne.El("mk-linssivalitsin__oikea", runko, PickingMode.Ignore);
             oikea.Add(lista);
             aarteet = Rakenne.El("mk-linssivalitsin__aarteet", oikea, PickingMode.Ignore);
@@ -65,15 +66,49 @@ namespace Matkakirja.Natiivi
             pohja = Rakenne.El("mk-pudotus__pohjarivi mk-linssivalitsin__pohja", vieritys, PickingMode.Ignore);
             tiedot.style.display = aarteet.style.display = pohja.style.display = runko.style.display = asetukset.style.display = DisplayStyle.None;
 
-            esiKuva = Rakenne.El("mk-linssivalitsin__esikuva", esikatselu, PickingMode.Ignore);
-            esiOtsikko = Rakenne.Teksti("", "mk-linssivalitsin__esiotsikko", esikatselu);
+            esikatselu = Rakenne.El("mk-linssivalitsin__esikatselu", turva);
+            Rakenne.Tausta(esikatselu, Kuviot.PergamenttiVaalea);
+            esikatselu.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
+            Kirjasimet.Aseta(esikatselu, Kirjasin.Kone);
+            var esiVieritys = new ScrollView(ScrollViewMode.Vertical);
+            esiVieritys.AddToClassList("mk-linssivalitsin__esivieritys");
+            esiVieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            esiVieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+            esikatselu.Add(esiVieritys);
+            var esiSisus = esiVieritys.contentContainer;
+            esiKuva = Rakenne.El("mk-linssivalitsin__esikuva", esiSisus, PickingMode.Ignore);
+            esiIkoni = new SvgIkoni();
+            esiIkoni.AddToClassList("mk-linssivalitsin__esiikoni");
+            esiIkoni.pickingMode = PickingMode.Ignore;
+            esiKuva.Add(esiIkoni);
+            esiOtsikko = Rakenne.Teksti("", "mk-linssivalitsin__esiotsikko", esiSisus);
             Kirjasimet.Aseta(esiOtsikko, Kirjasin.LukuLihava);
-            esiTeksti = Rakenne.Teksti("", "mk-linssivalitsin__esiteksti", esikatselu);
+            esiTeksti = Rakenne.Teksti("", "mk-linssivalitsin__esiteksti", esiSisus);
             Kirjasimet.Aseta(esiTeksti, Kirjasin.Luku);
-            esiNappi = Rakenne.Nappi("", "mk-linssivalitsin__esinappi", () => esiToiminto?.Invoke(), esikatselu);
+            esiNappi = Rakenne.Nappi("", "mk-linssivalitsin__esinappi", () => esiToiminto?.Invoke(), esiSisus);
             Kirjasimet.Aseta(esiNappi, Kirjasin.KoneLihava);
             esikatselu.style.display = DisplayStyle.None;
+            turva.RegisterCallback<GeometryChangedEvent>(_ => AsetteleEsikatselu());
             suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
+        }
+
+        /// <summary>Kapean paneelin (Linssit, Aarteet) leveys; sama kuin Linssit.uss .mk-linssivalitsin--kapea.</summary>
+        const float KapeaLeveys = 232f;
+        /// <summary>Paneelin oikea reuna (Linssit.uss .mk-linssivalitsin right) ja rako esikatseluikkunaan.</summary>
+        const float PaneelinOikea = 10f, IkkunanRako = 8f, IkkunaMax = 280f;
+
+        /// <summary>Esikatseluikkuna kapean paneelin vasemmalle puolelle samaan yläreunaan; kuva ikkunan levyinen (4:3).</summary>
+        void AsetteleEsikatselu()
+        {
+            if (esikatselu == null || esikatselu.parent == null) return;
+            float tila = esikatselu.parent.resolvedStyle.width;
+            if (float.IsNaN(tila) || tila <= 0f) return;
+            float oikea = PaneelinOikea + Mathf.Min(KapeaLeveys, tila * 0.94f) + IkkunanRako;
+            float leveys = Mathf.Clamp(tila - oikea - PaneelinOikea, 0f, IkkunaMax);
+            esikatselu.style.right = oikea;
+            esikatselu.style.width = leveys;
+            esikatselu.style.top = paneeli.style.top;
+            esiKuva.style.height = Mathf.Round(Mathf.Max(0f, leveys - 20f) * 0.75f);
         }
 
         // --- pääsivun osat (UiNakymat.RakennaPuhelinvalikko) -------------------------------------
@@ -138,6 +173,7 @@ namespace Matkakirja.Natiivi
             asetukset.style.display = D(n == Nakyma.Asetukset);
             pohja.style.display = D(paa);
             lista.style.display = D(n == Nakyma.Linssit);
+            paneeli.EnableInClassList("mk-linssivalitsin--kapea", n == Nakyma.Linssit || n == Nakyma.Aarteet);
             runko.style.display = D(n == Nakyma.Linssit || n == Nakyma.Aarteet);
             aarteet.style.display = D(n == Nakyma.Aarteet);
             alaTakaisin.style.display = D(!paa);
@@ -149,9 +185,10 @@ namespace Matkakirja.Natiivi
                 PaivitaKytkimet();
                 PaivitaSaatimet();
                 AsetuksetAvautuu?.Invoke();
+                PaivitaNappirivit();
             }
-            // Omistaja 29.9.2026 (1.0.50, palaute 6): Linssit-lista on heti oikealla ja esikatselun paikka valmiina vasemmalla,
-            // jottei teksti hyppää ensimmäisellä valinnalla; Aarteet ennallaan.
+            // Linssit ja Aarteet: esikatseluikkuna auki heti (aktiivinen linssi tai ensimmäinen aarre), palaute 6–7.
+            AsetteleEsikatselu();
             VaraaEsikatselu();
             vieritys.scrollOffset = Vector2.zero;
         }
@@ -159,7 +196,7 @@ namespace Matkakirja.Natiivi
         // --- esikatselu ------------------------------------------------------------------------------
 
         void Esikatsele(string id, VisualElement rivi, Label tila, string kuvaUrl, string otsikkoTeksti, string teksti,
-            string toimintoNimi, Action toiminto)
+            string toimintoNimi, Action toiminto, string ikoni = null)
         {
             // Edellisen rivin tila takaisin.
             if (esiTila != null) esiTila.text = esiTilaEnnen ?? "";
@@ -174,8 +211,7 @@ namespace Matkakirja.Natiivi
             esiNappi.text = toimintoNimi;
             // Ainoa Aktivoi / Näytä on rivin oranssi nappi nimen kohdalla (omistaja 29.9.2026, palautteet 6 ja 7).
             esiNappi.style.display = DisplayStyle.None;
-            TaytaEsikatselu(id, kuvaUrl, otsikkoTeksti, teksti);
-            runko.AddToClassList("mk-linssivalitsin__runko--esikatselu");
+            TaytaEsikatselu(id, kuvaUrl, otsikkoTeksti, teksti, ikoni);
             Ponnahdus.Avaa(esikatselu, rivi != null ? rivi.worldBound.center : (Vector2?)null);
         }
 
@@ -187,12 +223,16 @@ namespace Matkakirja.Natiivi
             esiTila = null;
             esiToiminto = null;
             if (esikatselu != null && esikatselu.style.display == DisplayStyle.Flex && esikatselu.resolvedStyle.visibility == Visibility.Visible)
-                Ponnahdus.Sulje(esikatselu, () => { esikatselu.style.display = DisplayStyle.None; runko.RemoveFromClassList("mk-linssivalitsin__runko--esikatselu"); VaraaEsikatselu(); });
+                Ponnahdus.Sulje(esikatselu, () => { esikatselu.style.display = DisplayStyle.None; VaraaEsikatselu(); });
         }
 
         string taytetty;
 
-        void TaytaEsikatselu(string id, string kuvaUrl, string otsikkoTeksti, string teksti)
+        /// <summary>
+        /// Ikkunan sisältö: kuva tekstin yläpuolella AINA (Päätoimittaja 30.9.2026, omistajan 1.0.56-kohta 5 "linssin kuva ja
+        /// selite"): kuva, tai jos sitä ei ole tai se ei lataudu, kohteen viivakuvake isona samassa kehyksessä.
+        /// </summary>
+        void TaytaEsikatselu(string id, string kuvaUrl, string otsikkoTeksti, string teksti, string ikoni = null)
         {
             taytetty = id;
             esiOtsikko.text = otsikkoTeksti ?? "";
@@ -200,54 +240,61 @@ namespace Matkakirja.Natiivi
             esiTeksti.style.display = string.IsNullOrEmpty(teksti) ? DisplayStyle.None : DisplayStyle.Flex;
             esikatselu.style.visibility = StyleKeyword.Null;
             esiKuva.style.backgroundImage = StyleKeyword.Null;
-            esiKuva.style.display = string.IsNullOrEmpty(kuvaUrl) ? DisplayStyle.None : DisplayStyle.Flex;
-            if (string.IsNullOrEmpty(kuvaUrl)) return;
+            void Kuvake(bool nakyy)
+            {
+                bool on = nakyy && !string.IsNullOrEmpty(ikoni);
+                if (on) esiIkoni.Polku = ikoni;
+                esiIkoni.style.display = on ? DisplayStyle.Flex : DisplayStyle.None;
+                esiKuva.EnableInClassList("mk-linssivalitsin__esikuva--kuvake", on);
+                esiKuva.style.display = on || !nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            }
+            if (string.IsNullOrEmpty(kuvaUrl)) { Kuvake(true); return; }
+            Kuvake(false);
             Kuvat.Hae(kuvaUrl, tex =>
             {
                 if (taytetty != id) return;
                 if (tex != null) esiKuva.style.backgroundImage = new StyleBackground(tex);
-                else esiKuva.style.display = DisplayStyle.None;
+                else Kuvake(true);
             });
         }
 
         /// <summary>
-        /// Linssit-näkymässä vasemmalla on avauksesta asti aktiivisen linssin esikatselu (tai "Ei linssiä"), joten lista ei
-        /// siirry valinnassa (palaute 6, sama kuin web).
+        /// Linssit-näkymässä ikkunassa on avauksesta asti aktiivisen linssin esikatselu (tai "Ei linssiä"), Aarteissa ensimmäinen
+        /// kerätty rivi (Aarnin luettelo → Tavarat → Julisteet); ilman kerättyjä ikkuna on kiinni. Muissa näkymissä ja valikon
+        /// ollessa kiinni ikkuna on piilossa.
         /// </summary>
         void VaraaEsikatselu()
         {
             if (esikatselu == null || esiId != null) return;
-            if (NykyinenNakyma == Nakyma.Linssit && Valikkona)
+            (string Id, string Kuva, string Nimi, string Selite, string Ikoni)? sisalto = null;
+            if (Auki && Valikkona && NykyinenNakyma == Nakyma.Linssit)
+                sisalto = aukiId != null && linssiTiedot.TryGetValue(aukiId, out var t)
+                    ? ("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), LinssinIkoni(t))
+                    : ("aktiivinen:", null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.", EiLinssiaIkoni);
+            else if (Auki && Valikkona && NykyinenNakyma == Nakyma.Aarteet)
             {
-                Ponnahdus.Lopeta(esikatselu);
-                esikatselu.style.display = DisplayStyle.Flex;
-                esiNappi.style.display = DisplayStyle.None;
-                if (aukiId != null && linssiTiedot.TryGetValue(aukiId, out var t))
-                    TaytaEsikatselu("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t));
-                else TaytaEsikatselu("aktiivinen:", null, "Ei linssiä", null);
-            }
-            else if (NykyinenNakyma == Nakyma.Aarteet && Valikkona)
-            {
-                // Palaute 7 (web malli, Pelikoodari): Aarteissa lista heti oikealla ja kortissa ensimmäinen kerätty rivi
-                // (Aarnin luettelo → Tavarat → Julisteet); ilman kerättyjä kortin paikka on tyhjä.
-                Ponnahdus.Lopeta(esikatselu);
-                esikatselu.style.display = DisplayStyle.Flex;
-                esiNappi.style.display = DisplayStyle.None;
+                // Tyhjissä Aarteissakin ikkuna (Päätoimittaja 30.9.2026): laukku ja lyhyt selite, kunnes jotain löytyy.
                 if (ensimmainenAarre.HasValue)
                 {
                     var a = ensimmainenAarre.Value;
-                    TaytaEsikatselu("ensimmainen:" + a.Id, a.Kuva, a.Nimi, a.Selite);
+                    sisalto = (a.Id, a.Kuva, a.Nimi, a.Selite, Ikonit.Laukku);
                 }
-                else esikatselu.style.visibility = Visibility.Hidden;
+                else sisalto = ("aarteet:tyhja", null, "Laukku on vielä tyhjä", "Löydetyt aarteet, tavarat ja julisteet kertyvät tänne.", Ikonit.Laukku);
             }
-            else
+            if (sisalto == null)
             {
-                esikatselu.style.visibility = StyleKeyword.Null;
                 if (!Ponnahdus.Kaynnissa(esikatselu)) esikatselu.style.display = DisplayStyle.None;
+                return;
             }
+            esiNappi.style.display = DisplayStyle.None;
+            var s = sisalto.Value;
+            TaytaEsikatselu(s.Id, s.Kuva, s.Nimi, s.Selite, s.Ikoni);
+            // Ikkuna kasvaa paneelin puoleisesta yläkulmasta (oikea yläkulma).
+            if (esikatselu.style.display != DisplayStyle.Flex)
+                Ponnahdus.Avaa(esikatselu, null, new TransformOrigin(Length.Percent(100), Length.Percent(0), 0));
         }
 
-        bool EsikatseluSisaltaa(Vector2 p) => esiId != null && esikatselu.worldBound.Contains(p);
+        bool EsikatseluSisaltaa(Vector2 p) => esikatselu != null && esikatselu.style.display == DisplayStyle.Flex && esikatselu.worldBound.Contains(p);
 
         // --- Aarteet ---------------------------------------------------------------------------------
 
@@ -301,7 +348,7 @@ namespace Matkakirja.Natiivi
             Label tila = null;
             b = Rakenne.Nappi(null, "mk-linssirivi mk-linssivalitsin__aarrerivi mk-linssirivi--aktivoi", () =>
             {
-                if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, "Näytä", nayta); return; }
+                if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, "Näytä", nayta, Ikonit.Laukku); return; }
                 nayta?.Invoke();
             }, aarteet);
             b.tooltip = nimi;
