@@ -126,6 +126,7 @@ namespace Matkakirja.Natiivi
                 return eka.width > 0f ? new Rect(eka.xMin, eka.center.y, kortti.worldBound.width, eka.height) : kortti.worldBound;
             };
 
+            Kuvat.Kaistale = () => Rajat; // luentakuva kaistaleen alle oikeaan reunaan (omistaja 30.9.)
             kortti = Rakenne.El("mk-matkakirja", turva);
             kortti.style.display = DisplayStyle.None;
             // Avattu matkakirja paperina (omistaja 29.9.2026: "pohja on natiivissa yksivärinen, pitää olla paperin värinen ja
