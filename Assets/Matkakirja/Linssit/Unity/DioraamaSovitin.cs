@@ -381,11 +381,13 @@ namespace Matkakirja.Natiivi
             nayttamo?.AsetaTunnelma(DioraamaTunnelma.Hamara(rakennus));
             if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
             o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa, DioraamaTunnelma.Hamara(rakennus)));
-            // Ympäristö (maasto, puut, horisontti) ja Boat Attack -järvi, kun paketissa on ympäristö; muuten maalattu järvi.
-            if (rakennus.Ymparisto != null && nayttamo.Ymparisto != null)
+            // Boat Attack -järvi aina kuoren kanssa (Päätoimittaja 1.10.: vesi toimii myös ilman ympäristöpakettia, tuotannossa v17);
+            // maasto, puut, horisontti ja syvyyskartta vain, kun paketissa on ympäristö (#3749 jälkeen). Maalattu järvi vain,
+            // jos näyttämöllä ei ole ympäristöä (varjostin puuttuu tms.).
+            if (nayttamo.Ymparisto != null)
             {
                 nayttamo.Ulkokuori.LisaaVesi(null, 0, 1);
-                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto, (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa));
+                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto ?? new Ymparisto(), (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa));
                 return;
             }
             // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).
