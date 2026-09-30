@@ -42,5 +42,31 @@
       "Bash(xcrun simctl erase:*)",
       "Bash(xcrun simctl delete:*)"
     ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "SendMessage",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f \"$CLAUDE_PROJECT_DIR/tools/hooks/viestiraja-muistutus.sh\" ] && bash \"$CLAUDE_PROJECT_DIR/tools/hooks/viestiraja-muistutus.sh\" || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "SendMessage",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f \"$CLAUDE_PROJECT_DIR/tools/hooks/viestiraja-muistutus.sh\" ] && bash \"$CLAUDE_PROJECT_DIR/tools/hooks/viestiraja-muistutus.sh\" || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }
