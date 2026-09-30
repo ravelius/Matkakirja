@@ -309,6 +309,17 @@ namespace Matkakirja.Natiivi
         {
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
+            // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).
+            if (kuoriNappi != null && kuoriNappi.resolvedStyle.display != DisplayStyle.None)
+            {
+                var sr = UiNakymat.Hae()?.Linssit?.SulkuRajat ?? Rect.zero;
+                var jr = juuri.worldBound;
+                if (sr.height > 0 && jr.width > 0)
+                {
+                    kuoriNappi.style.top = sr.yMax - jr.yMin + 8f;
+                    kuoriNappi.style.right = Mathf.Max(8f, jr.xMax - sr.xMax);
+                }
+            }
             var kamera = DioraamaSovitin.AktiivinenKamera;
             var nakymaTaiEi = DioraamaSovitin.ViimeisinNakyma;
             if (etsintaKortti != null && etsintaKortti.style.display == DisplayStyle.Flex && Time.unscaledTime > etsintaLoppuu)
