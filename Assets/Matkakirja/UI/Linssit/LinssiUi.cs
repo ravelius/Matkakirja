@@ -138,6 +138,10 @@ namespace Matkakirja.Natiivi
         public static Linssirekisteri Rekisteri => LinssiOhjain.Rekisteri;
 
         /// <summary>Asetuksista: "Pieni liike" pois = vähennetty liike.</summary>
+        /// <summary>"Sulje linssi" -napin laatikko paneelin koordinaateissa (tyhjä, kun nappi ei näy): DioraamaTaulun
+        /// kehittäjän Kuori-nappi asettuu sen alle (Päätoimittaja 30.9.: nappi oli ×:n päällä).</summary>
+        public Rect SulkuRajat => sulje == null || sulje.resolvedStyle.display == DisplayStyle.None ? Rect.zero : sulje.worldBound;
+
         public static bool VahennettyLiike() => !Asetukset.Paalla(Kytkin.PieniLiike);
 
         bool astroTila;
