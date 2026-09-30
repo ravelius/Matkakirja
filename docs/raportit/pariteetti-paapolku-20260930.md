@@ -26,3 +26,11 @@ Päätoimittajan tilaus 30.9.: aloitus → lento → saapuminen → nosto → vi
 ## Sallitut erot (ei listalla)
 
 Natiivin aloitusportti ilman yläpalkkia, nahkapalkki ja pillerivalikko (natiivi ensin), aarteen sisältö (satunnainen).
+
+## Päätoimittajan päätökset (30.9.2026)
+
+1. Aloitusvalinnan yökartta, kellopaneeli ja Livia: ei korjata. Ne ovat omistajan 28.9. hyväksymä natiivin oma ratkaisu (v3f, päivän ja yön raja), natiivi ensin.
+2. Kaupunkilehden sääriviä: korjataan kahdelle riville ikonin kanssa kuten webissä. Tekijä on Natiivi-UI kohdan 4 jälkeen.
+3. Liiku: ei korjata nyt. Se on aiemmin kirjattu tietoinen poikkeama (turva-alue, Liiku +38 pt).
+4. Matkakirjan pikkukuvat neljäksi kuten webissä: Natiivi-UI yläpalkin jälkeen.
+5. Isot maan ja alueen nimet: Päätoimittaja välittää Karttasepälle polton jälkeen.
