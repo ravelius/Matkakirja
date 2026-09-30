@@ -9547,3 +9547,7 @@ Omistaja 30.9.2026 sanatarkasti: 'Saisiko pelissä säädettyä kaiut ja tausta 
 ## OMISTAJA: OLAVINLINNAN KAIKKI 11 HAHMOÄÄNTÄ VALITTU (TALONPOIKA C, KIRJURI C) (30.9.2026 klo 20.41)
 
 Omistaja 30.9.2026 uusista ehdokkaista (CI-ajo 36749396928): 'Kummastakin äänestä c oli paras.' → Talonpoika C Scott – Low, Soft, and Calm (6Xb9dRSSm1t1OLWvzT1T), Kirjuri C Mr. Doppelgänger – The Clerk & Snarky Bureaucrat (5EuW3ornwqE66qGtnlMI). Yhdessä klo 20.07 valintojen kanssa kaikki 11 hahmoa lukittu Pelikoodarin äänikarttaan. Kokonaisten kuunnelmien generointi odottaa omistajan tekstihyväksyntää.
+
+## OMISTAJA: ÄÄNIMIKSERI NAPIN TAAKSE (30.9.2026 klo 20.43)
+
+Omistaja 30.9.2026 sanatarkasti: 'Tee mikseri napin taakse jotta voin ottaa sen näkyviin ja piiloon helposti.' → Natiivi-UI: kehittäjätilaan pieni mikserinappi reunaan (ei muiden nappien päälle), napautus avaa ja sulkee paneelin, säädöt säilyvät ja soivat myös paneelin ollessa kiinni; vain kehittäjäkoodilla Olavinlinnassa ja Cupolassa. Keittiön stemit ämpärissä aanet/mikseri/v1/ (18 tiedostoa, Päätoimittajan vienti, 206 + CORS todennettu); linnan repliikkiparit soittaa Siirtosepän DioraamaAanet PlayScheduledilla samalla dspTime-hetkellä.
