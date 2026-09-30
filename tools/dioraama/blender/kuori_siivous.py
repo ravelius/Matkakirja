@@ -49,6 +49,7 @@ ALUEET = [
     # Kaakon kenttä: musta puuaitaus kahdella katoksella, koppi, tynnyrit, renkaat ja lava, kaksi henkilönostinta.
     ('aitaus_kopit_nostimet', [(42.6, -25.8), (45.9, -28.0), (52.2, -24.6), (54.0, -22.2), (56.7, -22.3), (60.3, -21.2),
                                (60.3, -18.8), (49.5, -14.9), (48.5, -16.2), (46.8, -20.1), (43.3, -25.3)], 4.0, 'kaakko', -5.45),
+    ('ovi_kentalla', _laatikko(49.5, 53.8, -26.4, -23.8), 1.0, 'kaakko', -5.6),  # v16b: aitauksen ovi rajan päällä
     ('lankut_ja_lava_kaakko', [(38.6, -32.9), (44.8, -32.9), (44.8, -29.6), (40.5, -27.6), (38.6, -27.6)], 1.5, 'kaakko', -5.7),
     # Etelä: kärry eteläportaiden vieressä.
     ('karry_portaiden_vieri', _laatikko(26.5, 29.3, -12.1, -10.0), 1.5, 'etela'),
@@ -61,6 +62,8 @@ ALUEET = [
     ('lankku_nurmella', _laatikko(-14.2, -9.3, -36.9, -35.3), 0.6, 'lounas'),
     # Itäbastionin sorakatto (11,9 m): kohdevalo ja kaapeli.
     ('kohdevalo_sorakatto', _laatikko(63.4, 65.6, -2.2, -0.6), 0.8, 'itabastioni'),
+    # Portin edustan moottorivene (v16b, Päätoimittaja): painetaan vedenpinnan (−7) alle, pelin vesi peittää.
+    ('moottorivene', _laatikko(-67.9, -64.1, -16.5, -12.9), 1.2, 'vene', -7.0),
     # Korkeat kannet (maakenttä putoaisi alapihalle, siksi kiinteä taso): itämuurin harjan kävelykansi 12 m,
     # eteläinen yläkansi 5,7 m ja alakatto 2,8 m.
     ('ita_harja_telineet', [(40.6, 34.5), (41.5, 30.0), (44.9, 24.0), (46.3, 20.0), (49.4, 14.4), (51.2, 9.5),
@@ -78,6 +81,8 @@ RES = 0.03       # ortokuvan ruutu (m)
 MARG = 18.0      # ortokuvan reunus alueen ympärillä (m): kloonauslähteet
 LAAJENNUS = 3    # UV-saumavara pikseleinä (vain vapaisiin pikseleihin)
 PUHDAS_VALI = 1.0  # puhtaan maan etäisyys mistä tahansa alueesta (m)
+LAHDE_VALI = 6.0  # kiinteän tason alueen kloonauslähteet näin kaukaa tasolta (m); 15 m toi harjan kannelle muurin kiveä
+PUHDAS_VALI_KANSI = 0.3  # kansiryhmän puhdas kansi näin lähellä alueita (kapea kansi: 1 m jätti harjalle harmaan laikun)
 PAINUMA = 0.05  # painetun romun etäisyys maanpinnan alla (m)
 ALAVARA = 0.6   # näin paljon maanpinnan alapuolella olevat (urat romun alla) nostetaan maahan
 VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jäi yli tämän maasta
@@ -85,7 +90,7 @@ VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jä
 # 'paikkaa' (v16: jätetään ja maalataan muurin kivellä edestä kloonaten, kuori_orto.seinapaikka).
 RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'paikkaa', 'koillisbastioni': 'poista',
           'lansipiha': 'poista', 'etela': 'poista', 'itabastioni': 'poista', 'ita_harja': 'poista', 'etela_katto': 'poista',
-          'etela_alakatto': 'poista'}
+          'etela_alakatto': 'poista', 'vene': 'poista'}
 
 
 def siivoa(o, kuva, log=print):
@@ -146,11 +151,12 @@ def siivoa_np(co, tv, uv, rgb, log=print):
         ehd = np.flatnonzero((kp[:, 0] > lo[0] - 1) & (kp[:, 0] < lo[0] + Wg * RES + 1) & (kp[:, 1] > lo[1] - 1) & (kp[:, 1] < lo[1] + Hg * RES + 1))
         maa_t = np.zeros(len(tv), bool); maa_t[ehd] = ylos[ehd] & (kp[ehd, 2] - g(kp[ehd, :2]) < 0.35)
         tasot = {nimi: tasomaa(kp, ylos, p, maa) for nimi, p, _, maa in osat if maa is not None}
-        if len(tasot) == len(osat):  # kansiryhmä: lähteet vain kannelta (maakentän alapiha näkyy ortokuvassa kannen ohi)
+        kansi = len(tasot) == len(osat)
+        if kansi:  # kansiryhmä: lähteet vain kannelta (maakentän alapiha näkyy ortokuvassa kannen ohi)
             maa_t[:] = False
-        for nimi, p, _, maa in osat:  # kiinteän tason alueiden ympäristön maa kloonauslähteiksi (6 m)
+        for nimi, p, _, maa in osat:  # kiinteän tason alueiden ympäristön maa kloonauslähteiksi (LAHDE_VALI)
             if maa is None: continue
-            e = ehd[(np.abs(kp[ehd, 0] - p[:, 0].mean()) < np.ptp(p[:, 0]) / 2 + 6) & (np.abs(kp[ehd, 1] - p[:, 1].mean()) < np.ptp(p[:, 1]) / 2 + 6)]
+            e = ehd[(np.abs(kp[ehd, 0] - p[:, 0].mean()) < np.ptp(p[:, 0]) / 2 + LAHDE_VALI) & (np.abs(kp[ehd, 1] - p[:, 1].mean()) < np.ptp(p[:, 1]) / 2 + LAHDE_VALI)]
             maa_t[e] |= ylos[e] & (np.abs(kp[e, 2] - tasot[nimi](kp[e, :2])) < 0.35)
         orto, maa = ortokuva(co, tv, uvp, rgb, ehd, maa_t, lo, RES, Hg, Wg)
         gy, gx = np.mgrid[0:Hg, 0:Wg]; gxy = np.stack([(gx.ravel() + 0.5) * RES + lo[0], (gy.ravel() + 0.5) * RES + lo[1]], 1)
@@ -158,9 +164,9 @@ def siivoa_np(co, tv, uv, rgb, log=print):
         for q in polyt: oma |= sisalla(gxy, q)
         for q in muiden: muut |= sisalla(gxy, q)
         P = laajenna(oma.reshape(Hg, Wg), int(0.3 / RES)); muut = laajenna(muut.reshape(Hg, Wg), int(PUHDAS_VALI / RES))
-        puhdas = maa & ~muut & ~laajenna(P, int(PUHDAS_VALI / RES))
+        puhdas = maa & ~muut & ~laajenna(P, int((PUHDAS_VALI_KANSI if kansi else PUHDAS_VALI) / RES))
         rengas = maa & ~muut & laajenna(P, int(2.5 / RES)) & ~P
-        tayt = kloonaa(orto, puhdas, P, RES, rengas)
+        tayt = kloonaa(orto, puhdas, P, RES, rengas, askel_m=1.0 if kansi else 3.0)  # kapea kansi: 6 m:n ikkuna ei mahdu
         # Geometria: alueiden maanläheiset vertexit maahan (kukin oman korkeusrajansa mukaan).
         lahi = np.flatnonzero((co[:, 0] > pk[:, 0].min() - 3) & (co[:, 0] < pk[:, 0].max() + 3) & (co[:, 1] > pk[:, 1].min() - 3) & (co[:, 1] < pk[:, 1].max() + 3))
         gk = np.zeros(len(co), np.float32); gk[lahi] = g(co[lahi, :2])
