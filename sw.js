@@ -178,6 +178,7 @@ const SHELL = [
   './js/passport.js',
   './js/natiivi.js',
   './js/lahteet.js',
+  './js/apuraha.js',
   './js/wiki.js',
   './js/media.js',
   // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
