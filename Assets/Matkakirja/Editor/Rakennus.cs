@@ -287,6 +287,7 @@ namespace Matkakirja.Editori
             volyymi.priority = 10;
             volyymi.weight = 0f;
             volyymi.sharedProfile = FilmipinoProfiili();
+            KyytipinoProfiili();
             pino.volyymi = volyymi;
             RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Flat;
             RenderSettings.ambientLight = new Color(0.45f, 0.42f, 0.38f);
@@ -460,6 +461,36 @@ namespace Matkakirja.Editori
         }
 
         const string FilmipinoPolku = "Assets/Matkakirja/Asetukset/Filmipino.asset";
+        const string KyytipinoPolku = "Assets/Matkakirja/Linssit/Resources/Kyytipino.asset";
+
+        /// <summary>
+        /// ISS-kyydin sävytysprofiili (Linssit/Unity/Kyytipino.cs, fotorealismi osa 0): ACES, valotus (ajonaikana), hillitty
+        /// bloom. Resourcesissa, jotta profiili (ja sen jälkikäsittelyvariantit) on käännöksessä, vaikka mikään kohtaus ei viittaa.
+        /// </summary>
+        static void KyytipinoProfiili()
+        {
+            AssetDatabase.DeleteAsset(KyytipinoPolku);
+            var p = ScriptableObject.CreateInstance<UnityEngine.Rendering.VolumeProfile>();
+            AssetDatabase.CreateAsset(p, KyytipinoPolku);
+            T Lisaa<T>() where T : UnityEngine.Rendering.VolumeComponent
+            {
+                var k = p.Add<T>(false);
+                k.name = typeof(T).Name;
+                AssetDatabase.AddObjectToAsset(k, p);
+                return k;
+            }
+            Lisaa<UnityEngine.Rendering.Universal.Tonemapping>().mode.Override(UnityEngine.Rendering.Universal.TonemappingMode.ACES);
+            var vari = Lisaa<UnityEngine.Rendering.Universal.ColorAdjustments>();
+            vari.postExposure.Override(0.5f);
+            var hehku = Lisaa<UnityEngine.Rendering.Universal.Bloom>();
+            hehku.threshold.Override(1.1f);
+            hehku.intensity.Override(0.35f);
+            hehku.scatter.Override(0.55f);
+            hehku.highQualityFiltering.Override(false);
+            hehku.maxIterations.Override(4);
+            EditorUtility.SetDirty(p);
+            AssetDatabase.SaveAssets();
+        }
 
         /// <summary>
         /// Lennon jälkikäsittelyprofiili (Filmipino.cs). Arvot hillittyjä: filmin tuntu, ei suodinta. Syväterävyys

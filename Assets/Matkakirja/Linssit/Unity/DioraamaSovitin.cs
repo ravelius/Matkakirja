@@ -271,7 +271,13 @@ namespace Matkakirja.Natiivi
         /// kohta 1 ja 2 "AANET": äänet asuvat ämpärissä polussa dioraama/&lt;r&gt;/aanet/v&lt;versio&gt;/). Peili-ajossa
         /// juuret ovat samat. Löydös 29.9. PEILI=pois-ajosta: paketinJuuri antoi 404 kaikille äänille.</summary>
         public string AaniUrl(string tiedostoRelPolku) =>
-            string.IsNullOrEmpty(tiedostoRelPolku) ? null : peili(AmpariJuuri + tiedostoRelPolku);
+            string.IsNullOrEmpty(tiedostoRelPolku) ? null
+            // "/…" = median juuresta (Pelikoodarin mikseristemit aanet/mikseri/v1/ ovat ämpärin juuressa, 30.9.2026),
+            // "https://…" sellaisenaan; muuten rakennuksen juuresta kuten ennen.
+            : tiedostoRelPolku.StartsWith("https://", StringComparison.Ordinal) ? tiedostoRelPolku
+            : tiedostoRelPolku.StartsWith("/", StringComparison.Ordinal) ? MediaJuuri + tiedostoRelPolku
+            : peili(AmpariJuuri + tiedostoRelPolku);
+        const string MediaJuuri = "https://media.matkakirja.app";
 
         IEnumerator PeiteHetkeksi(float sekuntia)
         {
@@ -662,6 +668,21 @@ namespace Matkakirja.Natiivi
             {
                 if (arvo != null) DioraamaTunnelma.Pakotettu = arvo == "hamara" ? true : arvo == "paiva" ? false : (bool?)null;
                 o.Kirjaa($"poikki: tunnelma {(DioraamaTunnelma.Hamara(rakennus) ? "hämärä" : "päivä")} ({(DioraamaTunnelma.Pakotettu.HasValue ? "pakotettu" : "rakennuksen oletus " + (rakennus?.Tunnelma ?? "paiva"))})");
+                return;
+            }
+            // "poikki mikseri 1|0 | kaiku lyhyt|pitka|pois|<0…1>": mikseritilan testaus ilman AaniMikseri-paneelia (30.9.2026).
+            if (mita == "mikseri")
+            {
+                if (arvo == "1" || arvo == "0") DioraamaAanet.MikseriTila = arvo == "1";
+                else if (arvo == "kaiku" && osat.Length > 3)
+                {
+                    string k = osat[3];
+                    if (k == "pois") DioraamaAanet.KaikuPois = true;
+                    else if (k == "lyhyt" || k == "pitka") { DioraamaAanet.KaikuPois = false; DioraamaAanet.KaikunPituus = k; }
+                    else if (float.TryParse(k.Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out var kt))
+                        DioraamaAanet.KaikuKerroin[DioraamaAanet.NykyinenHuone ?? ""] = kt;
+                }
+                o.Kirjaa($"poikki: mikseri {(DioraamaAanet.MikseriTila ? "päällä" : "pois")}, kaiku {(DioraamaAanet.KaikuPois ? "pois" : DioraamaAanet.KaikunPituus)}, huone {DioraamaAanet.NykyinenHuone ?? "(yleis)"}");
                 return;
             }
             // "poikki detalji [0|1|auto]": kuoren lähidetalji päälle/pois vertailua varten (menetelmä B, 30.9.2026).

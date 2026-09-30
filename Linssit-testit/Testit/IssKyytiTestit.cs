@@ -36,9 +36,13 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void IkkunanRajaukset()
         {
-            // Omistaja 28.9. klo 22.5x: oletuksena pyöreä kattoikkuna tiiviisti rajattuna, katse 55° kuten ennen.
+            // Omistaja 28.9. klo 22.5x: oletuksena pyöreä kattoikkuna tiiviisti rajattuna. 30.9.: katse horisonttikulmaan
+            // (HorisonttikulmaTestit); A/B pois = 55° kuten ennen.
             Oleta.Tosi(IssKuvakulma.Rajaus == IssKuvakulma.IkkunanRajaus.Pyorea && double.IsNaN(IssKuvakulma.KatseAlasPakotettu), "oletus pyöreä");
-            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "pyöreä 55°");
+            Oleta.Tosi(IssKuvakulma.Horisonttikulma && IssKuvakulma.IkkunanKatseNyt < 35, "pyöreä: horisonttikulma");
+            IssKuvakulma.Horisonttikulma = false;
+            try { Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "pyöreä A/B pois 55°"); }
+            finally { IssKuvakulma.Horisonttikulma = true; }
             // Horisontti (A/B, omistaja 21.5x): katse sivuikkunasta 36°, maan reuna 20,3° alapuolella eli 15,7° kuvan keskikohdan
             // yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
             IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Horisontti;
@@ -499,6 +503,42 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(IssNyt.Simu.Live && IssNyt.Kello() == valeUtc, "sulku: LIVE heti");
             }
             finally { Palauta(); }
+        }
+
+        [Testi] static void CupolaYopuoleltaPaivanvaloonJaLiveTakaisin()
+        {
+            // Arvioija 1.1 (75), Päätoimittaja 30.9.: Cupola LIVEnä yöpuolella → kelaus päivänvaloon (PÄIVÄ), LIVE palauttaa yön.
+            try
+            {
+                var (l, y, n) = AvaaValekellolla();
+                for (int i = 0; i < 240 && !Avaruuskavely.Yopuolella(valeUtc); i++) valeUtc = valeUtc.AddMinutes(1);
+                Oleta.Tosi(Avaruuskavely.Yopuolella(valeUtc), "yöpuolen hetki löytyi");
+                var yo = valeUtc;
+                l.NapautaIss();
+                AjaUtc(l, y, 3.5);
+                Oleta.Sama(KyydinTila.Seuranta, l.Kyyti);
+                Oleta.Tosi(!l.PaivanvaloSiirto, "seurannassa ei siirretä");
+                l.NapautaIss();
+                Oleta.Sama(KyydinTila.Ikkuna, l.Kyyti);
+                Oleta.Tosi(l.PaivanvaloSiirto && IssNyt.Simu.Kelaa, "Cupola: kelaus päivänvaloon");
+                AjaUtc(l, y, Simukello.KelausMaxS + 0.5);
+                var t = IssNyt.Kello();
+                Oleta.Tosi(Avaruuskavely.MaanAurinko(t, IssNyt.Paikka(t)) >= Avaruuskavely.PaivaRaja - 0.01, "perillä päivänvalossa");
+                Oleta.Tosi(n.Aika.Paiva && n.Aika.Nopeutettu && !n.Aika.Kelaa, "kilpi PÄIVÄ, PALAA meripihka");
+                Oleta.Tosi(l.PaivanvaloSiirto, "siirto jatkuu 1×:llä");
+                // LIVE-kytkin: todellinen hetki (yö), rivi kertoo yöpuolesta.
+                Oleta.Tosi(l.AsetaNopeus(1), "Palaa LIVE");
+                AjaUtc(l, y, Simukello.PaluuMaxS + 0.3);
+                Oleta.Tosi(IssNyt.Simu.Live && !l.PaivanvaloSiirto && !n.Aika.Paiva, "LIVE, ei siirtoa");
+                Oleta.Tosi(Math.Abs((IssNyt.Kello() - yo).TotalSeconds) < 30, "todellinen hetki");
+                Oleta.Sama("ISS on nyt Maan yöpuolella", n.Aika.Ylilento);
+                // A/B pois: ei siirtoa.
+                AstronauttiLinssi.CupolaPaivanvaloon = false;
+                l.NapautaIss(); AjaUtc(l, y, IssKyyti.IkkunaanS + 0.2);
+                l.NapautaIss();
+                Oleta.Tosi(!l.PaivanvaloSiirto && IssNyt.Simu.Live, "A/B 0: yö sellaisenaan");
+            }
+            finally { AstronauttiLinssi.CupolaPaivanvaloon = true; Palauta(); }
         }
 
         [Testi] static void AvaruuskavelyKyydista()

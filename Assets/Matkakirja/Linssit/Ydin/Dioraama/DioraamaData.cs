@@ -165,6 +165,9 @@ namespace Matkakirja.Linssit.Dioraama
         public string Id, Tiedosto;
         public bool Silmukka;
         public double Voimakkuus, KestoS;
+        /// <summary>Mikseritilan raidat (Pelikoodarin AaniMikseri 30.9.2026; valinnaisia): kuiva, kaiku (lyhyt vaste) ja
+        /// kaikuPitka, näytetarkasti samanpituiset. Ilman mikseritilaa soi Tiedosto (poltettu versio).</summary>
+        public string Kuiva, Kaiku, KaikuPitka;
     }
 
     /// <summary>Liekkipankin (js/dioraama/pankit/liekit.js) rivi + rakennuskoneen atlas-polku (era 2 kohta 2
@@ -659,7 +662,8 @@ namespace Matkakirja.Linssit.Dioraama
                 if (o != null)
                     r.Aanet[pari.Key] = new Aani { Id = pari.Key, Tiedosto = MiniJson.Teksti(o, "tiedosto"),
                         Silmukka = MiniJson.Totuus(o, "silmukka"), Voimakkuus = MiniJson.Luku(o, "voimakkuus") ?? 1,
-                        KestoS = MiniJson.Luku(o, "kesto_s") ?? 0 };
+                        KestoS = MiniJson.Luku(o, "kesto_s") ?? 0, Kuiva = MiniJson.Teksti(o, "kuiva"),
+                        Kaiku = MiniJson.Teksti(o, "kaiku"), KaikuPitka = MiniJson.Teksti(o, "kaikuPitka") };
             }
             foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "liikkeet")) ?? new Dictionary<string, object>())
             {

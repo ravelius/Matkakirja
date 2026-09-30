@@ -123,7 +123,8 @@ namespace Matkakirja.Natiivi
 
                 // Jäsennys ja kärkitaulukot taustasäikeessä.
                 Koottu koottu = null; string virhe = null;
-                var tehtava = Task.Run(() => { try { koottu = Kokoa(DioraamaGlb.Lue(tavut, true)); } catch (Exception e) { virhe = e.Message; } });
+                float vesiY = (float)kuori.VesiY;
+                var tehtava = Task.Run(() => { try { koottu = Kokoa(DioraamaGlb.Lue(tavut, true)); koottu.Pohja = LinnanPohja(koottu.Paikat, vesiY); } catch (Exception e) { virhe = e.Message; } });
                 while (!tehtava.IsCompleted) yield return null;
                 tavut = null;
                 if (oma != kerta) yield break;
@@ -167,6 +168,7 @@ namespace Matkakirja.Natiivi
                 }
                 if (oma != kerta) { UnityEngine.Object.Destroy(mesh); if (kuva != null) UnityEngine.Object.Destroy(kuva); yield break; }
 
+                if (koottu.Pohja.HasValue) Pohja = koottu.Pohja;
                 AsetaTaso(taso, mesh, kuva);
                 kirjaa?.Invoke($"poikki: kuori {taso.ToString().ToLowerInvariant()} valmis ({koottu.Kolmiot.Length / 3} kolmiota, " +
                                $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s)");
@@ -266,6 +268,16 @@ namespace Matkakirja.Natiivi
             float laajennus = (float)t.LeikkausLaajennus, osuus = Mathf.Clamp01((float)leikkaus.osuus);
             // Alaspäin vain 0,2 m (1.0.55-kuvat): täysi laajennus kaivoi kallion lattian alta ja järvi näkyi tilan alla.
             Vector3 lo = Vector3.Min(a, b) - new Vector3(laajennus, Mathf.Min(laajennus, 0.2f), laajennus), hi = Vector3.Max(a, b) + Vector3.one * laajennus;
+            // Vaakakuva (Päätoimittaja 30.9., keittiö vaakana: kamera katsoi seiniä): leikkausta levennetään vaakasuunnassa niin,
+            // että se kattaa noin 90 % näkymän leveydestä tilan kohdalla (pystyssä ennallaan).
+            if (kamera != null && kamera.aspect > 1.05f)
+            {
+                var kk = (lo + hi) * 0.5f;
+                float hf = Mathf.Atan(Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) * kamera.aspect);
+                float tarve = Vector3.Distance(kamera.transform.position, kk) * Mathf.Tan(hf) * 0.9f;
+                float lisaX = Mathf.Max(0f, tarve - (hi.x - lo.x) * 0.5f), lisaZ = Mathf.Max(0f, tarve - (hi.z - lo.z) * 0.5f);
+                lo.x -= lisaX; hi.x += lisaX; lo.z -= lisaZ; hi.z += lisaZ;
+            }
             Vector3 keski = (lo + hi) * 0.5f, puoli = (hi - lo) * 0.5f * osuus;
             lo = keski - puoli; hi = keski + puoli;
             LeikkausLaatikko = new Bounds((lo + hi) * 0.5f, hi - lo); LeikkausTila = t.Id; LeikkausOsuus = osuus;
@@ -341,8 +353,27 @@ namespace Matkakirja.Natiivi
             public Vector3[] Paikat;
             public Vector2[] Uv;
             public Vector3[] Normaalit;
+            public (double, double, double, double)? Pohja;
             public int[] Kolmiot;
             public byte[] Kuva;
+        }
+
+        /// <summary>
+        /// Linnan pohja kuoren pisteistä (Natiivi-UI:n katselmus 1.1 (78): koko meshin rajat sisälsivät rannat ja veden reunan,
+        /// joten linna jäi pieneksi ja sivuun). Vain pisteet vähintään 3 m vedenpinnan yläpuolella, ja x/z 3 %:n ja 97 %:n
+        /// persentiilit (enintään 40 000 näytettä) → dioraaman koordinaatit (z käännettynä).
+        /// </summary>
+        static (double, double, double, double)? LinnanPohja(Vector3[] p, float vesiY)
+        {
+            if (p == null || p.Length == 0) return null;
+            int askel = Math.Max(1, p.Length / 40000);
+            var xs = new List<float>(); var zs = new List<float>();
+            for (int i = 0; i < p.Length; i += askel)
+                if (p[i].y > vesiY + 3f) { xs.Add(p[i].x); zs.Add(-p[i].z); }
+            if (xs.Count < 100) return null;
+            xs.Sort(); zs.Sort();
+            float P(List<float> l, float q) => l[Mathf.Clamp((int)(q * (l.Count - 1)), 0, l.Count - 1)];
+            return (P(xs, 0.03f), P(xs, 0.97f), P(zs, 0.03f), P(zs, 0.97f));
         }
 
         static Koottu Kokoa(GlbMalli malli)
@@ -376,11 +407,7 @@ namespace Matkakirja.Natiivi
 
         void AsetaTaso(Laatu taso, Mesh mesh, Texture2D kuva)
         {
-            if (mesh != null)
-            {
-                var b = mesh.bounds; // kuori on juuren alla ilman muunnosta (go ja tasot origossa)
-                Pohja = (b.min.x, b.max.x, -b.max.z, -b.min.z);
-            }
+
             int i = (int)taso;
             PoistaTaso(i);
             var m = new Material(varjostin) { name = "Ulkokuori:" + taso };
