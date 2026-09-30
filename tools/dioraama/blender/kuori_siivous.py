@@ -139,6 +139,14 @@ def siivoa(o, kuva, log=print):
         bm.to_mesh(me); bm.free(); me.update()
         log(f'SIIVOUS: poistettu {len(pois)} venynyttä pintaa, uusi UV {uusia} pinnalle')
         if uusia:
+            # Pilkottujen pintojen uusilla kulmilla ei ole kelvollista omaa normaalia (hämärässä tummat piikit):
+            # kulmanormaali = pinnan normaali, muut ennallaan.
+            a = me.attributes['tayte']; t = np.empty(len(me.polygons), np.int32); a.data.foreach_get('value', t)
+            nl = len(me.loops); kn = np.empty(nl * 3, np.float32); me.corner_normals.foreach_get('vector', kn); kn = kn.reshape(nl, 3)
+            pn = np.empty(len(me.polygons) * 3, np.float32); me.polygons.foreach_get('normal', pn); pn = pn.reshape(-1, 3)
+            lt = np.empty(len(me.polygons), np.int32); me.polygons.foreach_get('loop_total', lt)
+            lp = np.repeat(np.arange(len(me.polygons)), lt); m = t[lp] == 1
+            kn[m] = pn[lp[m]]; me.normals_split_custom_set(kn.tolist()); me.update()
             global MASKI
             MASKI = MASKI | kuori_tayte.maalaa(me, rgb, log)
     # Alfa 1 kaikkialle: atlaksen tyhjät kohdat ovat läpinäkyviä, ja JPEG-vienti teki sinne maalatut uudet UV-kartat
