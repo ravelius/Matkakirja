@@ -1,0 +1,198 @@
+// FYSIKAALINEN ILMAKEHÄ ISS:n kyytiin (fotorealismi osa 1, Linssiseppä 30.9.2026; omistaja Päätoimittajan kautta: "Miten ISS:n
+// maapallonäkymästä saisi vielä fotorealistisemman?"; suunnitelma docs/raportit/iss-fotorealismi-suunnitelma-20260930.md).
+// Korvaa Ilmakaaren analyyttisen kaaren ja usvan (A/B `astro kyyti ilmakeha2 0|1`). Malli Hillaire 2020 ("A Scalable and
+// Production Ready Sky and Atmosphere Rendering Technique", EGSR) avaruudesta katsottuna: kamera on aina ilmakehän yläpuolella
+// (ISS 400 km, yläraja 100 km), joten kuoren etupinnat kattavat jokaisen säteen, joka kulkee ilman läpi, ja säde marssitaan
+// pikselissä (Hillaire: avaruusnäkymä ilman sky-view-LUT:ia).
+//   Passi 0 "Lapinakyvyys": transmittanssi-LUT 256 × 64 (korkeus √h/H, auringon kulma μ lineaarisesti), 40 askelta ylärajaan;
+//     lasketaan kerran (Avaruus.RakennaKaari).
+//   Passi 1 "Ilma": säde kuoren ja maan (tai toisen reunan) välillä 16 askelta (maahan osuva) tai 20 (reunan ohi), Rayleigh
+//     (β = 5,802 / 13,558 / 33,1 · 10⁻⁶ m⁻¹, H 8 km), Mie (sironta 3,996 · 10⁻⁶, ekstinktio 4,44 · 10⁻⁶, H 1,2 km, g 0,8) ja
+//     otsoni (absorptio 0,650 / 1,881 / 0,085 · 10⁻⁶, teltta 25 ± 15 km); auringon valo pisteeseen LUT:sta, sironta
+//     energiansäilyttävästi ((S − S e^(−σΔ)) / σ, Hillaire), monisironta isotrooppisena lisänä (_Moni). Tulos: sironnut valo
+//     (rgb, lisätään) ja keskimääräinen transmittanssi (alfa: maa ja tähdet himmenevät 1 − T). Värillinen ekstinktio olisi
+//     kaksilähdesekoitusta; avaruudesta T on maan päällä lähes harmaa, joten keskiarvo riittää (punerrus tulee sironnasta).
+//   Yöllä ohut vihreä ilmahehku 95 km:ssä kuten Ilmakaaressa (_Hehku). Jono Transparent-38: pilvien (−50) ja yökuoren (−40) päälle,
+//   jolloin usva peittää myös pilvet, kiillon ja kaupunkien valot (Ilmakaari oli −55, pilvien alla); revontulet (−36) ovat
+//   ilmakehän yläpuolella ja piirtyvät sen jälkeen.
+Shader "Matkakirja/Linssit/Ilmakeha2"
+{
+    Properties
+    {
+        _Peitto("Peitto", Range(0, 1)) = 0
+        _R("Päiväntasaajan säde (m)", Float) = 6378137
+        _Litistys("a / b", Float) = 1.0033640898
+        _Ylaraja("Ilmakehän yläraja (m)", Float) = 100000
+        _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
+        _Akseli("Napa-akseli (maailma)", Vector) = (0, 1, 0, 0)
+        _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
+        _Voima("Auringon valaistus (HDR)", Float) = 4.5
+        _Moni("Monisironnan osuus", Float) = 0.25
+        _MieG("Mie g", Float) = 0.8
+        _Hehku("Ilmahehku", Float) = 0.12
+        _HehkuVari("Ilmahehkun sävy", Color) = (0.55, 0.95, 0.5, 1)
+        _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
+    }
+    HLSLINCLUDE
+        #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+
+        CBUFFER_START(UnityPerMaterial)
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku;
+            float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
+        CBUFFER_END
+        TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
+
+        static const float3 BetaR = float3(5.802e-6, 13.558e-6, 33.1e-6);
+        static const float BetaMs = 3.996e-6, BetaMe = 4.40e-6;
+        static const float3 BetaO = float3(0.650e-6, 1.881e-6, 0.085e-6);
+        static const float HR = 8000.0, HM = 1200.0;
+
+        // Tiheydet korkeudella h (m): Rayleigh, Mie, otsoni (teltta 25 km ± 15 km).
+        float3 Tiheys(float h)
+        {
+            return float3(exp(-h / HR), exp(-h / HM), max(0.0, 1.0 - abs(h - 25000.0) / 15000.0));
+        }
+        float3 Ekstinktio(float3 t) { return BetaR * t.x + BetaMe * t.y + BetaO * t.z; }
+
+        // Säteen ja pallon (säde r, keskipiste origo) leikkaukset; false = ohi.
+        bool Leikkaa(float3 o, float3 d, float r, out float t0, out float t1)
+        {
+            float b = dot(o, d), c = dot(o, o) - r * r, q = b * b - c;
+            t0 = t1 = 0;
+            if (q < 0) return false;
+            q = sqrt(q);
+            t0 = -b - q; t1 = -b + q;
+            return true;
+        }
+
+        // LUT: uv.x = (μ + 1) / 2, uv.y = √(h / H).
+        float2 LutUv(float h, float mu) { return float2(saturate(mu * 0.5 + 0.5), sqrt(saturate(h / _Ylaraja))); }
+        float3 AurinkoPisteeseen(float h, float mu)
+        {
+            return SAMPLE_TEXTURE2D_LOD(_Lapinakyvyys, sampler_Lapinakyvyys, LutUv(h, mu), 0).rgb;
+        }
+
+        // Litistyksen korjaus: napa-akselin suuntainen komponentti venytetään, jolloin ellipsoidista tulee pallo (säde _R).
+        float3 Pallolle(float3 v)
+        {
+            float3 a = normalize(_Akseli.xyz);
+            return v + a * dot(v, a) * (_Litistys - 1.0);
+        }
+    ENDHLSL
+
+    SubShader
+    {
+        Tags { "RenderType" = "Transparent" "Queue" = "Transparent-38" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" }
+
+        // Passi 0: transmittanssi-LUT (Graphics.Blit kerran).
+        Pass
+        {
+            Name "Lapinakyvyys"
+            ZTest Always ZWrite Off Cull Off Blend Off
+            HLSLPROGRAM
+            #pragma vertex vertLut
+            #pragma fragment fragLut
+            struct SyoteL { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
+            struct ValiL { float4 paikka : SV_POSITION; float2 uv : TEXCOORD0; };
+            ValiL vertLut(SyoteL i) { ValiL o; o.paikka = TransformObjectToHClip(i.paikka.xyz); o.uv = i.uv; return o; }
+            float4 fragLut(ValiL i) : SV_Target
+            {
+                float mu = i.uv.x * 2.0 - 1.0;
+                float h = i.uv.y * i.uv.y * _Ylaraja;
+                float r = _R + h;
+                float3 o = float3(0, r, 0), d = float3(sqrt(saturate(1.0 - mu * mu)), mu, 0);
+                float g0, g1, t0, t1;
+                // Aurinko maan takana: ei suoraa valoa.
+                if (Leikkaa(o, d, _R, g0, g1) && g0 > 0) return float4(0, 0, 0, 1);
+                Leikkaa(o, d, _R + _Ylaraja, t0, t1);
+                float pituus = max(0, t1);
+                float3 syvyys = 0;
+                const int N = 40;
+                float ds = pituus / N;
+                for (int k = 0; k < N; k++)
+                {
+                    float3 p = o + d * ((k + 0.5) * ds);
+                    syvyys += Ekstinktio(Tiheys(length(p) - _R)) * ds;
+                }
+                return float4(exp(-syvyys), 1);
+            }
+            ENDHLSL
+        }
+
+        // Passi 1: sironta ja transmittanssi kuoren etupinnoilta (kamera ilmakehän yläpuolella).
+        Pass
+        {
+            Name "Ilma"
+            Tags { "LightMode" = "UniversalForward" }
+            Blend One OneMinusSrcAlpha
+            ZWrite Off
+            ZTest LEqual
+            Cull Back
+
+            HLSLPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+
+            struct Syote { float4 paikka : POSITION; };
+            struct Vali { float4 paikka : SV_POSITION; float3 maailma : TEXCOORD0; };
+
+            Vali vert(Syote i)
+            {
+                Vali o;
+                o.maailma = TransformObjectToWorld(i.paikka.xyz);
+                o.paikka = TransformWorldToHClip(o.maailma);
+                return o;
+            }
+
+            float4 frag(Vali i) : SV_Target
+            {
+                float3 o = Pallolle(_WorldSpaceCameraPos - _Keskus.xyz);
+                float3 d = normalize(Pallolle(i.maailma - _WorldSpaceCameraPos));
+                float3 s = normalize(_Aurinko.xyz);
+                float t0, t1, g0, g1;
+                if (!Leikkaa(o, d, _R + _Ylaraja, t0, t1) || t1 <= 0) discard;
+                bool maa = Leikkaa(o, d, _R, g0, g1) && g0 > 0;
+                float alku = max(0, t0), loppu = maa ? g0 : t1;
+                int N = maa ? 16 : 20;
+                float ds = (loppu - alku) / N;
+
+                float c = dot(d, s);
+                float pr = 3.0 / (16.0 * PI) * (1.0 + c * c);
+                float g = _MieG, g2 = g * g;
+                float pm = 3.0 / (8.0 * PI) * (1.0 - g2) * (1.0 + c * c) / ((2.0 + g2) * pow(max(1e-4, 1.0 + g2 - 2.0 * g * c), 1.5));
+
+                float3 T = 1, L = 0;
+                [loop] for (int k = 0; k < N; k++)
+                {
+                    float3 p = o + d * (alku + (k + 0.5) * ds);
+                    float r = length(p);
+                    float h = r - _R;
+                    float3 tih = Tiheys(h);
+                    float3 sigmaT = Ekstinktio(tih);
+                    float3 sR = BetaR * tih.x, sM = BetaMs * tih.y;
+                    float mus = dot(p / r, s);
+                    float3 aurinko = AurinkoPisteeseen(h, mus);
+                    // Monisironta (Hillaire ψ_ms karkeasti): isotrooppinen osuus auringon valosta, hämärässä himmenee.
+                    float3 moni = (sR + sM) * _Moni * (aurinko * 0.7 + 0.3 * saturate(mus * 4.0 + 0.4)) / (4.0 * PI);
+                    float3 S = (sR * pr + sM * pm) * aurinko + moni;
+                    float3 askelT = exp(-sigmaT * ds);
+                    L += T * (S - S * askelT) / max(sigmaT, 1e-12);
+                    T *= askelT;
+                }
+                L *= _Voima;
+
+                // Ilmahehku yöllä (95 km, σ 4,5 km) säteen lähimmällä korkeudella, kuten Ilmakaaressa.
+                float tl = -dot(o, d);
+                float3 lahin = tl > 0 ? o + d * tl : o;
+                float hmin = length(lahin) - _R;
+                float yo = 1.0 - smoothstep(-0.105, 0.0, dot(normalize(lahin), s));
+                float hehku = exp(-((hmin - 95000.0) * (hmin - 95000.0)) / (4500.0 * 4500.0)) * _Hehku * yo * (maa ? 0.0 : 1.0);
+                L += _HehkuVari.rgb * hehku;
+
+                float alfa = 1.0 - dot(T, float3(1.0, 1.0, 1.0) / 3.0);
+                return float4(L, alfa) * _Peitto;
+            }
+            ENDHLSL
+        }
+    }
+}

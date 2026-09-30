@@ -41,7 +41,19 @@ namespace Matkakirja.Natiivi
         static readonly Color Ilmakeha = new Color32(127, 182, 255, 255);
         const int Sektorit = 96, Kehat = 48;
 
-        Material hehku, kaari;
+        Material hehku, kaari, kaari2;
+        RenderTexture lapinakyvyys;
+        /// <summary>
+        /// Fotorealismi osa 1 (30.9.2026): fysikaalinen ilmakehä (Ilmakeha2.shader, Rayleigh + Mie + otsoni, transmittanssi-LUT)
+        /// Ilmakaaren analyyttisen kaaren ja usvan tilalle. A/B `astro kyyti ilmakeha2 0|1`.
+        /// </summary>
+        public static bool Ilmakeha2 = true;
+        /// <summary>
+        /// Auringon valaistus HDR:nä (Ilmakeha2 _Voima). 4,5 = BMNG-maan kirkkaus vastaa albedoa ~0,1 (maa ~0,07 lineaarisena
+        /// auringon 57°:ssä); Pythonin rinnakkaislaskenta 30.9.: nadirissa usva (0,02, 0,04, 0,10), reunalla 10 km:ssä
+        /// (0,25, 0,27, 0,45) ja ekstinktio 89 %. Säädetään NASA-vertailusta (A/B `astro kyyti ilmavoima <x>`).
+        /// </summary>
+        public static float IlmanVoima = 4.5f;
         Mesh kuori, kaariKuori;
         float peitto, kyyti, kyytiTavoite, aurinkoPaivitetty = -10f;
         DateTime aurinkoUtc;
@@ -173,6 +185,21 @@ namespace Matkakirja.Natiivi
             kaari.SetFloat("_Korkeus", KaarenKorkeus);
             kaari.SetFloat("_Peitto", 0);
             kr.sharedMaterial = kaari;
+            var v2 = Resources.Load<Shader>("Varjostimet/Ilmakeha2");
+            if (v2 != null && v2.isSupported)
+            {
+                kaari2 = new Material(v2) { name = "Ilmakeha2" };
+                kaari2.SetFloat("_R", (float)sade);
+                kaari2.SetFloat("_Litistys", (float)(sade / CesiumWgs84Ellipsoid.GetMinimumRadius()));
+                kaari2.SetFloat("_Peitto", 0);
+                // Transmittanssi-LUT kerran (256 × 64, puolitarkka): auringon valo mihin tahansa ilmakehän pisteeseen.
+                lapinakyvyys = new RenderTexture(256, 64, 0, RenderTextureFormat.ARGBHalf)
+                    { name = "IlmakehanLapinakyvyys", filterMode = FilterMode.Bilinear, wrapMode = TextureWrapMode.Clamp, hideFlags = HideFlags.HideAndDontSave };
+                lapinakyvyys.Create();
+                Graphics.Blit(null, lapinakyvyys, kaari2, 0);
+                kaari2.SetTexture("_Lapinakyvyys", lapinakyvyys);
+            }
+            else Debug.LogWarning("MATKAKIRJA linssit: Ilmakeha2-varjostin puuttuu tai ei tuettu, Ilmakaari käytössä");
             kr.shadowCastingMode = ShadowCastingMode.Off;
             kr.enabled = false;
         }
@@ -198,6 +225,12 @@ namespace Matkakirja.Natiivi
             if (kaariPiirto == null) return;
             bool nakyy = kyyti > 0.001f;
             if (kaariPiirto.enabled != nakyy) kaariPiirto.enabled = nakyy;
+            // Fysikaalinen ilmakehä (A/B): sama kuori, eri materiaali; LUT voi kadota (laite: taustalle ja takaisin) → uudelleen.
+            bool uusi = Ilmakeha2 && kaari2 != null;
+            var m = uusi ? kaari2 : kaari;
+            if (kaariPiirto.sharedMaterial != m) kaariPiirto.sharedMaterial = m;
+            if (uusi && lapinakyvyys != null && !lapinakyvyys.IsCreated()) { lapinakyvyys.Create(); Graphics.Blit(null, lapinakyvyys, kaari2, 0); }
+            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); }
             kaari.SetFloat("_Peitto", kyyti);
             // Ilmahehku himmeämmäksi ja ohuemmaksi (laite cl4 28.9.: 0,32 piirsi kirkkaan vihreän viivan; ISS:n yökuvissa se on
             // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).
@@ -212,9 +245,14 @@ namespace Matkakirja.Natiivi
             aurinkoUtc = utc;
             var gt = g.transform;
             double3 keskus = g.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
-            kaari.SetVector("_Keskus", gt.TransformPoint((Vector3)(float3)keskus));
-            kaari.SetVector("_Akseli", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
-            kaari.SetVector("_Aurinko", gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(utc))).normalized);
+            var kp = gt.TransformPoint((Vector3)(float3)keskus);
+            var ak = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized;
+            var au = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(utc))).normalized;
+            foreach (var mm in new[] { kaari, kaari2 })
+            {
+                if (mm == null) continue;
+                mm.SetVector("_Keskus", kp); mm.SetVector("_Akseli", ak); mm.SetVector("_Aurinko", au);
+            }
         }
 
         void OnDestroy()
@@ -222,6 +260,8 @@ namespace Matkakirja.Natiivi
             KarttaKerrokset.Instanssi?.Taustavari(null);
             KarttaKerrokset.PallonSavy(null);
             if (hehku != null) Destroy(hehku);
+            if (kaari2 != null) Destroy(kaari2);
+            if (lapinakyvyys != null) { lapinakyvyys.Release(); Destroy(lapinakyvyys); }
             if (kuori != null) Destroy(kuori);
             if (kaari != null) Destroy(kaari);
             if (kaariKuori != null) Destroy(kaariKuori);
