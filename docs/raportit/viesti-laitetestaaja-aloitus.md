@@ -6,6 +6,17 @@ Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetesta
 sinun docs-muutoksiisi, peruuta merge ja pushaa suoraan omaan haaraasi, ks. luovutuksen kohta
 tästä jos epäselvää).
 
+## PÄIVITYS 30.9.2026 klo 16.2x — ÄÄNI (kumoaa vanhan ohjeen)
+- **ÄLÄ KOSKAAN vaihda Macin oletusulostuloa** (ei `SwitchAudioSource -s "Mac Studio-kaiuttimet"`, ei palautusta jälkeen).
+  Omistaja kuuntelee koodaus-käyttäjän oletusulostulon (Scarlett Solo USB) kautta. Vanha ohje "vaihda output Mac
+  Studio-kaiuttimiin ennen kierrosta" on KUMOTTU (Päätoimittaja 30.9.). Simulator.app:ia ei ole tällä koneella eikä
+  `simctl` valitse ääniulostuloa, joten ääni menee aina järjestelmän oletukseen.
+- Kun ääntä ei mitata: mykistä pelin ääni (`puhe pois` peli-komento.txt:hen tai valikosta Äänet pois). `aani mittaa` mittaa
+  Unityn oman mixerin, joten se toimii vaikka ulostulo on mykistetty. Natiiviseppä lisää kehitysbuildeihin testimykistyksen
+  (mykistää vain lopullisen ulostulon) ja siitä tulee oletus automaattisiin ajoihin.
+- Uusin luovutus/tila: kierrokset 1.0.42 … 1.1 (73) raportoitu, docs/raportit/savukierros-*-2026093*.md; viimeisin savukierros
+  `savukierros-1173-20260930.md` (5/5 PASS).
+
 ## PÄIVITYS 29.9.2026 klo 16.1x — LUE TÄMÄ ENSIN (tilinvaihto, Päätoimittajan käsky)
 - **docs/raportit/viesti-laitetestaaja-luovutus-20260929-b.md** on uusin luovutus. Kärki:
   `laitetestaaja-savukierros-b13` @ **e4ef21d55**, ei avoimia PR:jä, ei käynnissä olevia ajoja,
