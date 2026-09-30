@@ -38,6 +38,9 @@ namespace Matkakirja.Natiivi
         ILinssiYmparisto y;
         Rakennus rakennus;
         AudioSource kertaAaniLahde;
+        /// <summary>Puheväylän taso −3 dB (Päätoimittaja 30.9.: puhetiedostot −0,2 dBTP, silmukoiden päällä pelivaraa);
+        /// masterissa lisäksi DioraamaLimitteri (−1 dBFS).</summary>
+        public const float PuheTaso = 0.708f;
 
         /// <summary>Tilan silmukat: avain (tilaId, aaniId) — kuten Tila.Aanet-lista, jokainen käyttö oma kahva,
         /// vaikka eri tilat sattuisivat viittaamaan samaan äänitiedostoon (ks. tiedoston alkukommentti).</summary>
@@ -86,6 +89,7 @@ namespace Matkakirja.Natiivi
                 kertaAaniLahde.playOnAwake = false;
                 kertaAaniLahde.spatialBlend = 0;
             }
+            DioraamaLimitteri.Paalle(true);
             if (rakennus?.Taulu?.Kohdat != null)
                 foreach (var k in rakennus.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
         }
@@ -200,7 +204,7 @@ namespace Matkakirja.Natiivi
             {
                 bool uusiAskel = avain != null;
                 bool aaniSoi = uusiAskel && kertojaPaalla && AaniOnValmis(nakyma.AskeleenAani);
-                if (aaniSoi) SoitaKertaAani(nakyma.AskeleenAani, 1f);
+                if (aaniSoi) SoitaKertaAani(nakyma.AskeleenAani, PuheTaso);
                 if (aaniSoi != puhuu) { y?.Repliikki(aaniSoi); puhuu = aaniSoi; }
                 viimeAskelAvain = avain;
             }
@@ -214,6 +218,7 @@ namespace Matkakirja.Natiivi
             silmukat.Clear();
             hiljaisuusAlkoi.Clear();
             if (kertaAaniLahde != null) kertaAaniLahde.Stop();
+            DioraamaLimitteri.Paalle(false);
             y?.Repliikki(false);
             puhuu = false;
             viimeAskelAvain = null;
@@ -282,7 +287,8 @@ namespace Matkakirja.Natiivi
             int soivia = 0;
             foreach (var s in silmukat.Values) if (s != null) soivia++;
             return $"poikki aanet: {(Paalla ? "päällä" : "pois")}, klippejä ladattu {klipit.Count} (jonossa {klipitJonossa.Count}), " +
-                   $"silmukoita {silmukat.Count} (kahvoja {soivia}), puhuja {(puhuu ? "kyllä" : "ei")}";
+                   $"silmukoita {silmukat.Count} (kahvoja {soivia}), puhuja {(puhuu ? "kyllä" : "ei")}, " +
+                   $"limitteri {(DioraamaLimitteri.Instanssi != null && DioraamaLimitteri.Instanssi.enabled ? "päällä, pienin vahvistus " + DioraamaLimitteri.Instanssi.PieninVahvistusJaNollaa().ToString("0.000") : "pois")}";
         }
     }
 }
