@@ -770,6 +770,36 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "apuraha":
+                {
+                    // Apurahan esittelykortti: auki | loppuun | kuva <n> | sulje | tila.
+                    var ap = ui.Aloitus.Apuraha;
+                    var la = loput.Split(' ');
+                    switch (la[0].Length > 0 ? la[0] : "auki")
+                    {
+                        case "auki":
+                            if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
+                            ap.Avaa(); return null;
+                        case "loppuun": ap.VieritaLoppuun(); return null;
+                        case "kuva":
+                            if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
+                            ap.AvaaKokoruutu(ap.Nykyinen.Kuvat, la.Length > 1 ? int.Parse(la[1]) - 1 : 0); return null;
+                        case "sulje": ap.Sulje(); return null;
+                        case "linssit":
+                            return $"esittelylinssit {LinssiOhjain.EsittelylinssitAuki}, kehittäjätila {Asetukset.Kehittaja}, valittavissa: "
+                                + string.Join(", ", LinssiUi.Rekisteri?.Valittavat.Select(l => l.Tiedot.Id) ?? Enumerable.Empty<string>());
+                        case "tiedosto":
+                        {
+                            var polku = System.IO.Path.Combine(Application.persistentDataPath, la.Length > 1 ? la[1] : "apuraha.json");
+                            if (!System.IO.File.Exists(polku)) return "ei tiedostoa " + polku;
+                            return ap.KaytaTekstia(System.IO.File.ReadAllText(polku));
+                        }
+                        case "tila":
+                            return ap.Nykyinen == null ? "ei ladattu"
+                                : $"ladattu: {ap.Nykyinen.Kappaleet.Count} kappaletta, {ap.Nykyinen.Kuvat.Count} kuvaa, auki {ap.Auki}, kokoruutu {ap.KokoruutuAuki}";
+                        default: return "ui apuraha auki|loppuun|kuva <n>|sulje|tila|linssit|tiedosto [nimi]";
+                    }
+                }
                 case "ohitalento":
                     // Löydös 83: aloituslennon Ohita-napin painallus.
                     if (!ui.Aloitus.OhitaNakyy) return "Ohita-nappi ei ole näkyvissä";

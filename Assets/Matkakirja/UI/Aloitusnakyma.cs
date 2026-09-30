@@ -214,6 +214,12 @@ namespace Matkakirja.Natiivi
             aloitaNappi = Rakenne.Nappi("Aloita seikkailu", "mk-nappi--kulta mk-aloitus__aloita", PortistaKartalle, keskus);
             Rakenne.Tausta(aloitaNappi, Kuviot.Kulta);
             Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
+            // Apurahan arvioijalle (omistaja 30.9.2026, Apuraha.cs): kevyt nappi päänappien alle, näkyy kun esittely on ladattu.
+            Apuraha = new Apuraha(juuri);
+            apurahaNappi = Rakenne.Nappi("", "mk-aloitus__apuraha", Apuraha.Avaa, keskus);
+            Kirjasimet.Aseta(apurahaNappi, Kirjasin.Kone);
+            PaivitaApurahaNappi();
+            Apuraha.Ladattu += PaivitaApurahaNappi;
             var linkki = porttiLinkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
             Kirjasimet.Aseta(linkki, Kirjasin.Kone);
 
@@ -292,6 +298,16 @@ namespace Matkakirja.Natiivi
         Label porttiLause, aaniTeksti;
         /// <summary>Portin napit ja alalinkki (löydös 118: häipyvät, kun avausteksti alkaa portin ruudulla).</summary>
         VisualElement porttiKeskus, porttiLinkki, porttiYla;
+        /// <summary>Apurahan esittelykortti (Apuraha.cs); testikomento ui apuraha.</summary>
+        public readonly Apuraha Apuraha;
+        readonly Button apurahaNappi;
+
+        void PaivitaApurahaNappi()
+        {
+            var e = Apuraha.Nykyinen;
+            apurahaNappi.style.display = e != null ? DisplayStyle.Flex : DisplayStyle.None;
+            if (e != null) apurahaNappi.Q<Label>().text = e.Nappi;
+        }
         /// <summary>Löydös 118: avausteksti kirjoittuu portin ruudulle (portti, pallo ja juliste jäävät).</summary>
         bool avausPortissa;
         Button aaniNappi;
