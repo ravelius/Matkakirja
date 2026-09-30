@@ -20,7 +20,7 @@ ja Kansallismuseon Olavinlinna-sivut.
 ## Pulu, huoneiden infotaulut (7 × noin 300 merkkiä)
 
 - **Keittiö:** Keittiö oli pienellä linnanpihalla. Valtavassa liedessä paloi avotuli aamusta iltaan, ja ruoka
-  valmistettiin isoissa padoissa. Linnassa syötiin paljon kalaa ja kasviksia; vouti seurueineen söi ylhäällä
+  valmistettiin isoissa padoissa. Linnassa syötiin paljon kalaa ja kasviksia; vouti seurueineen söi
   yläsalissa, sotilaat ja käsityöläiset Linnantuvassa. Minä olisin tyytynyt muruihin.
 - **Kappeli:** Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä.
   Katossa on säilynyt katkelmia maalauksista, muun muassa lehti- ja kukkakuvioita ja vaakunoita. Seinän pieni
