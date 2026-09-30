@@ -31,10 +31,10 @@ const HAHMOT = [
       nopeus: 0.9, tauko: 2,
     },
     repliikit: [
-      { id: 'apulainen-1', teksti: 'Antakaa tietä, antakaa tietä! Tämä vati polttaa jo sormiani.' },
-      { id: 'apulainen-2', teksti: 'Ylhäällä vouti syö omassa pöydässään. Täällä riittää puuroa, kalaa ja leipää.' },
+      { id: 'tarjoilija-1', teksti: 'Antakaa tietä, antakaa tietä! Tämä vati polttaa jo sormiani.' },
+      { id: 'tarjoilija-2', teksti: 'Ylhäällä vouti syö omassa pöydässään. Täällä riittää puuroa, kalaa ja leipää.' },
     ],
-    reaktio: { id: 'pulu-apulainen-r1', teksti: 'Kolme vatia yhdellä kädellä! Nykyajan ravintolassa hän saisi vakituisen paikan.' },
+    reaktio: { id: 'pulu-tarjoilija-r1', teksti: 'Kolme vatia yhdellä kädellä! Nykyajan ravintolassa hän saisi vakituisen paikan.' },
   },
   {
     // Erä 3 (elävä linna, käsikirjoitus kohta 2–3): vartijat noppapelissä pelilaudan ääressä (pöydän B eteläpään edessä kasvot pohjoiseen; penkit ovat pöydän kyljillä).
@@ -256,6 +256,24 @@ const KRUUNU_LIEKIT = [0, 1, 2, 3, 4].map((i) => {
 export const TILA = {
   id: 'keskushalli',
   nimi: 'Keskushalli',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Keskushalli ja väentupa', rivit: [{ teksti: 'Alakerrassa sotaväen ruokasali, yläkerrassa voudin asunto.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Kansallismuseo: Keskushalli' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'keskushalli-k1', puhuja: 'apulainen', nimi: 'Tarjoilija', aani: null,
+      teksti: 'Tietä, tietä! Kalakeittoa väentupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota.' },
+    { id: 'keskushalli-k2', puhuja: 'vartija', nimi: 'Vartija', aani: null,
+      teksti: 'Kolme kuutosta! Maksa, kun vielä kehtaat.' },
+    { id: 'keskushalli-k3', puhuja: 'vartija2', nimi: 'Vartija 2', aani: null,
+      teksti: 'Puhu hiljempaa. Vouti ravaa tänään portaissa kuin kana ilman päätä – jotain on hukassa.' },
+    { id: 'keskushalli-k4', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: null,
+      teksti: 'Ja me lämmitellään täällä alhaalla. Hormeja myöten paras lämpö nousee voudin kamariin.' },
+    { id: 'keskushalli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Sataviisikymmentä, jopa kaksisataa asukasta samassa linnassa. Ei ihme, ettei täällä kukaan kuule omia ajatuksiaan.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
@@ -267,7 +285,9 @@ export const TILA = {
   kamera: { kohde: [-14.75, 1.6, -13.8], atsimuutti: 170, korkeus: 22, etaisyys: 17, fov: 38, aukko: 0.8 },
   kameraPysty: { kohde: [-13.02, -4, -14.04], // pysty 30.9.: noppapeli ja apulainen näkyviin (x 0,63–0,86)
      atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
-  pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni vasta omistajan luvalla.
+    teksti: 'Alakerrassa oli väentupa, sotaväen ruokasali, ja toisessa kerroksessa asui vouti. Linnaa lämmitettiin avotakoilla, ja lämpö johdettiin hormien kautta. 1500-luvun tilikirjojen mukaan linnassa asui 150–200 henkeä – ei ihme, että täällä on hälinää.', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): pohjoissiiven pihajulkisivu (ikkunoista valo ja sorina).
   elava: { kohde: [-14.75, 3.5, -9.2], sade: 6 },

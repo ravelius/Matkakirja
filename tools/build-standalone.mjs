@@ -262,6 +262,7 @@ const MODULES = [
   'js/packs/maastokohteet-arg.js',
   'js/packs/maastokohteet-aus.js',
   'js/packs/maastokohteet-aut.js',
+  'js/packs/maastokohteet-bgr.js',
   'js/packs/maastokohteet-bih.js',
   'js/packs/maastokohteet-blr.js',
   'js/packs/maastokohteet-bol.js',

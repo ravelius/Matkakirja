@@ -54,6 +54,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { rakennaMatriisi } from './rakenna-matriisi.mjs';
 import { gpuTila, gpuVaisto, savukkeenLahde } from './gpu-vaisto.mjs';
+import { paivaAika, webkitChromiumilla } from './paiva-aika.mjs';
 
 const TASSA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TASSA, '..', '..');
@@ -142,13 +143,23 @@ async function webkitKaynnistyy() {
   }
   return true;
 }
-const eiNayttoa = !(await webkitKaynnistyy());
+/*
+ * WEBKIT PÄIVÄLLÄ CHROMIUMILLA (Päätoimittaja 30.9.2026, omistajan pyyntö: testien äänet kuuluivat kaiuttimista, eikä
+ * WebKitille ole --mute-audio-lippua): klo 07–22 Helsingin aikaa WebKit-rivit ajetaan Chromiumilla samalla reitillä
+ * kuin ilman näyttöistuntoa. WEBKIT_PAKOTA=1 = erityinen syy (esim. Safari-vika), ja silloin WebKit ajetaan ja
+ * pakotus mainitaan lokissa. Yöllä WebKit toimii kuten ennen.
+ */
+const webkitPakotettu = process.env.WEBKIT_PAKOTA === '1';
+const paivaChromium = webkitChromiumilla();
+if (paivaAika() && webkitPakotettu) console.log('WEBKIT_PAKOTA=1: WebKit ajetaan päiväsaikaan (erityinen syy, ks. ajon tilaaja).');
+if (paivaChromium) console.log('PÄIVÄ (07–22): WebKit-rivit Chromiumilla (ei ääntä kaiuttimista); WEBKIT_PAKOTA=1 ohittaa.');
+const eiNayttoa = paivaChromium || !(await webkitKaynnistyy());
 const nimet = new Set(matriisi.map((r) => r.nimiTunniste));
 const ohitetaan = (rivi) => eiNayttoa && /-webkit$/.test(rivi.nimiTunniste)
   && nimet.has(rivi.nimiTunniste.replace(/-webkit$/, '-chromium'));
 if (eiNayttoa) {
   const ohi = matriisi.filter(ohitetaan).map((r) => r.nimiTunniste);
-  console.log('EI NÄYTTÖISTUNTOA: WebKit-rivit Chromiumilla (headless-kuori + ANGLE Metal)'
+  console.log(`${paivaChromium ? 'PÄIVÄ' : 'EI NÄYTTÖISTUNTOA'}: WebKit-rivit Chromiumilla (headless-kuori + ANGLE Metal)`
     + `${ohi.length ? `; ohitetaan (Chromium-pari ajetaan): ${ohi.join(', ')}` : ''}.`);
 }
 

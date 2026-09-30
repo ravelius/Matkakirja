@@ -54,6 +54,8 @@ function kokoaLiput(lahde) {
     if (m) m[1].split(',').filter(Boolean).forEach((f) => pois.add(f));
     else muut.push(lippu);
   }
+  // Ääni mykistetty oletuksena (omistaja 30.9.2026, sama kuin tools/selain.mjs aaniLiput); SELAIN_AANI=1 = kuuluu.
+  if (process.env.SELAIN_AANI !== '1' && !muut.includes('--mute-audio')) muut.push('--mute-audio');
   return [...muut, `--disable-features=${[...pois].join(',')}`];
 }
 

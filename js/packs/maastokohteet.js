@@ -69,6 +69,7 @@ import { MAASTOKOHTEET_ARE } from './maastokohteet-are.js';
 import { MAASTOKOHTEET_ARG } from './maastokohteet-arg.js';
 import { MAASTOKOHTEET_AUS } from './maastokohteet-aus.js';
 import { MAASTOKOHTEET_AUT } from './maastokohteet-aut.js';
+import { MAASTOKOHTEET_BGR } from './maastokohteet-bgr.js';
 import { MAASTOKOHTEET_BIH } from './maastokohteet-bih.js';
 import { MAASTOKOHTEET_BLR } from './maastokohteet-blr.js';
 import { MAASTOKOHTEET_BOL } from './maastokohteet-bol.js';
@@ -187,6 +188,7 @@ export const MAASTOKOHTEET = {
   ARG: MAASTOKOHTEET_ARG,
   AUS: MAASTOKOHTEET_AUS,
   AUT: MAASTOKOHTEET_AUT,
+  BGR: MAASTOKOHTEET_BGR,
   BIH: MAASTOKOHTEET_BIH,
   BLR: MAASTOKOHTEET_BLR,
   BOL: MAASTOKOHTEET_BOL,
