@@ -115,7 +115,7 @@ test('alpha0: alfaton konteksti itse luotuna ja läpinäkymätön tausta', () =>
 test('vahemmandc: tuki- ja ennakkolaatat piiloon vain täydellä peitolla', () => {
   const laatat = readFileSync(new URL('../js/pallolaatat.js', import.meta.url), 'utf8');
   assert.match(laatat, /const vahemmanDc = laattakerroksenKokeet\(\)\.has\('vahemmandc'\);/);
-  assert.match(laatat, /const taysi = mittarit\.peittoOsuus === 1;/);
+  assert.match(laatat, /const taysi = mittarit\.peittoTaso === 1;/);
   // Häipyvä laatta on kesken olevaa ristihäivytystä: sitä ei saa piilottaa.
   assert.match(laatat, /const piiloon = taysi && !t\.nakyva && !t\.haipyy;/);
 });
