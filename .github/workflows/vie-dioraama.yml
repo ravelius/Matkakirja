@@ -2,9 +2,14 @@
 #
 # Päätoimittajan erä 29.9.2026 (Linnanrakentajan ehdotus): CI rakentaa
 # paketin tools/dioraama/rakenna.mjs:llä (pelkkä Node, deterministinen) ja vie
-# sen hash-kansioon dioraama/<rakennus>/<hash>/, jonka jälkeen osoitin
-# dioraama/<rakennus>/uusin.json vaihdetaan. Natiivi lukee osoittimen ja hakee
-# paketin sen polusta, joten puolikas vienti ei koskaan näy.
+# sen hash-kansioon dioraama/<rakennus>/<hash>/. Natiivi lukee osoittimen
+# dioraama/<rakennus>/uusin.json ja hakee paketin sen polusta, joten puolikas
+# vienti ei koskaan näy.
+#
+# OSOITIN (omistaja 30.9.2026): push mainiin rakentaa ja vie hash-kansion, mutta
+# EI vaihda osoitinta. Osoitin vaihtuu vain käsiajolla osoitin=true (kuiva=false),
+# kun Siirtoseppä on kuitannut paketin puhtaalla asennuksella. #3698:n merge vaihtoi
+# osoittimen 30.9. ilman kuittausta, koska push-ajo kirjoitti sen aina.
 #
 # hash = sha256(manifest.json) 16 ensimmäistä heksamerkkiä; manifest listaa
 # jokaisen tiedoston sha256:n, joten hash kattaa koko paketin.
@@ -32,6 +37,10 @@ on:
         description: 'Kuiva-ajo: rakenna ja listaa, ei kirjoitusta ämpäriin'
         type: boolean
         default: true
+      osoitin:
+        description: 'Vaihda osoitin uusin.json tähän pakettiin (vain Siirtosepän puhtaan asennuksen kuittauksen jälkeen)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -58,6 +67,8 @@ jobs:
       RAKENNUS: ${{ inputs.rakennus }}
       # Push-ajo vie aina; käsiajo on oletuksena kuiva.
       KUIVA: ${{ github.event_name == 'workflow_dispatch' && inputs.kuiva || 'false' }}
+      # Osoitin vaihtuu vain käsiajolla osoitin=true; push-ajo vie pelkän hash-kansion.
+      OSOITIN: ${{ github.event_name == 'workflow_dispatch' && inputs.osoitin || 'false' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -151,6 +162,10 @@ jobs:
             fi
             koodi=$(curl -s -o /dev/null -w '%{http_code}' "$JULKINEN/$kohde/rakennus.json")
             [ "$koodi" = "200" ] || { echo "::error::$JULKINEN/$kohde/rakennus.json vastasi $koodi, osoitinta ei vaihdettu"; exit 1; }
+            if [ "$OSOITIN" != "true" ]; then
+              echo "  - osoitinta EI vaihdettu (vaihto: käsiajo osoitin=true, kuiva=false, rakennus=$r → $hash/)" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
             aws s3 cp "uusin-$r.json" "s3://$AMPARI/dioraama/$r/uusin.json" --endpoint-url "$PAATE" \
               --content-type application/json --cache-control 'public, max-age=60'
             echo "  - osoitin dioraama/$r/uusin.json → $hash/" >> "$GITHUB_STEP_SUMMARY"
