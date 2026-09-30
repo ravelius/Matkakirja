@@ -9603,3 +9603,7 @@ Pelikoodarin tarkistus 30.9.2026 klo 23.1x (CI-haun metatiedot, ei generointia):
 ## OMISTAJA: ISOISÄN TEKSTI PIENENEE LUENNAN JÄLKEEN; OHITA-TEKSTI PUUTTUU MACILTA (30.9.2026 klo 23.15)
 
 Omistaja 30.9.2026 klo 23.1x–23.2x sanatarkasti: "macin ipadilla ei näy luennan aikaista ohita tekstiä. se voi olla hukkunut myös muista. tarkista" ja "isoisän teksti saisi pienentyä automaattisesti luennan jälkeen". Siirtoseppä (30.9. luentanäkymän tekijä) yhtenä eränä junaan 82: Ohita-tekstin tarkistus ja palautus kaikille alustoille; luennan päätyttyä (luonnollisesti tai ohitettuna) tekstipaneeli pienenee animoiden noin 1,5 s kuluttua kaupunkipilleriksi ja pilleri avaa sen uudelleen. Web-jonoon rivi.
+
+## OMISTAJA: KEITTIÖN APULAINEN ÄÄNEEN C, KOKKI JA VESIPOIKA ALKUPERÄISINÄ (POIKKEUS fi-SÄÄNTÖÖN) (30.9.2026 klo 23.29)
+
+Omistaja 30.9.2026 klo 23.3x näytteiden (keittion-aanet-yhdessa-nimetty.mp3) jälkeen sanatarkasti: "muuta vain apulainen versioon C. pidä muut alkuperäisinä". Apulainen = C (Adam - Engaging, Friendly and Bright, eleven_v4); kokki (Ville, fi) ja vesipoika (Matias, fi) säilyvät omistajan valinnalla — poikkeus ÄÄNIVALINTA-sääntöön vain näille kahdelle. Kortti: lupa generoida apulaisen kaksi repliikkiä (keittio.js apulainen-1 ja -2, ~134 merkkiä) C-äänellä; Pelikoodari tasaa −17,2 LUFS ja vie normaalisti.
