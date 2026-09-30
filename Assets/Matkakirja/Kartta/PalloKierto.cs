@@ -1307,10 +1307,11 @@ namespace Matkakirja
         double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
 
         /// <summary>Asettaa maan rajat saapumisnäkymästä (AjaSaapumisnakymaan) tai poistaa ne (laatikoton saapuminen).</summary>
-        void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng)
+        void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng, string maa)
         {
             var katto = Saapumisnakyma.Uloszoomauskatto(t);
-            maanLaatikko = katto.HasValue ? t.Laatikko : null;
+            // Saaret (PRT Azorit ja Madeira, ESP Kanariat) panorointirajaan; katto pysyy mantereen saapumisnäkymässä.
+            maanLaatikko = katto.HasValue ? Saapumisnakyma.Lisaikkunoineen(t.Laatikko.Value, maa) : (Saapumisnakyma.Laatikko?)null;
             maanKatto = katto.HasValue ? katto.Value * CesiumWgs84Ellipsoid.GetMaximumRadius() : 0;
             maanToiveLng = toiveLng;
             webSuhde = t.Korkeus > 0 ? t.WebKorkeus / t.Korkeus : 1;
@@ -1430,7 +1431,7 @@ namespace Matkakirja
             bool maaRajaus = true)
         {
             var t = SaapumisNakyma(maa, lat, lon, maaRajaus);
-            AsetaMaanRajat(t, lon);
+            AsetaMaanRajat(t, lon, maa);
             PaataSaapuminen(true);
             Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, () =>
             {
