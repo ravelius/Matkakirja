@@ -13,6 +13,11 @@
 // tapahtuman lopussa samassa järjestyksessä kuin webin lupausketjut (mikrotehtävät).
 // Kultainen jälki 10 (Kultaiset/aanijalki.json, kone) vartioi jokaisen tapahtuman tuloksen.
 //
+// KERRAN LÄPI (omistaja 30.9.2026, palaute-erä): kaupunkimaisema ja taustamusiikki alkavat aina alusta (ei arvottua
+// aloituskohtaa eikä #alku-hyppyä) ja soivat kerran läpi jokaisen laukaisun (paikan tai musiikkiketjun vaihto) jälkeen;
+// sen jälkeen hiljaisuus seuraavaan laukaisuun asti. Maiseman loppu häivytetään lyhyesti (SilmukkaRistiMs). Linssin
+// taustaääni, visamusiikki, väistö ja dioraaman huoneäänet pysyvät ennallaan (silmukka).
+//
 // Poikkeamat webistä (natiivin omat, §2.7–§2.10):
 //   - maiseman toinen virhe (peili → alkuperäinen → virhe) on hiljaisuus: webin CORS-kierros ja
 //     synteesi eivät kuulu natiiviin;
@@ -48,9 +53,11 @@ namespace Matkakirja.Peli
         public bool Silmukka;
         /// <summary>Linssin taustaääni: ei maiseman kompressoria (web satelliitti-aani soittaa suoraan gainiin).</summary>
         public bool IlmanKompressoria;
+        /// <summary>Soi kerran läpi (kaupunkimaisema): ei natiivia silmukkaa lyhyellekään klipille.</summary>
+        public bool Kerran;
 
         public override string ToString() =>
-            $"{Kanava}: {Url ?? "-"} taso {Tavoite} kesto {KestoMs?.ToString() ?? "-"} uusi {Uusi} pois {PoisMs?.ToString() ?? "-"} tauko {Tauko} alku {Alku}";
+            $"{Kanava}: {Url ?? "-"} taso {Tavoite} kesto {KestoMs?.ToString() ?? "-"} uusi {Uusi} pois {PoisMs?.ToString() ?? "-"} tauko {Tauko} alku {Alku} silmukka {Silmukka} kerran {Kerran}";
     }
 
     public sealed class AaniTila
@@ -71,6 +78,7 @@ namespace Matkakirja.Peli
             public bool Hypatty, ArvottuAlku, Soinut, VarareittiKokeiltu, TaustaTauolla;
             public bool Vapautettu, Kuollut;
             public bool IlmanKompressoria;             // linssin taustaääni (LinssiTausta)
+            public bool Kerran;                        // kaupunkimaisema: kerran läpi, ei silmukkaa
             public string Polku;                       // pohja: ketjun polku; siirtymä: laji; visa: alkuperäinen
         }
 
@@ -124,6 +132,14 @@ namespace Matkakirja.Peli
         readonly HashSet<string> puuttuvat = new HashSet<string>();
         readonly HashSet<string> puuttuvatLajit = new HashSet<string>();
         string arvottuPaikka, arvottuUrl;
+        /// <summary>Kerran loppuun soinut pohjaraita: ei uudelleen ennen kuin paikka tai ketju vaihtuu (KERRAN LÄPI).</summary>
+        string soinutPolku;
+
+        /// <summary>
+        /// KERRAN LÄPI (omistaja 30.9.2026; oletus). false = webin käytös (arvottu aloituskohta, #alku, silmukat):
+        /// kultaiset webvertailut (AaniTestit) ajetaan sillä.
+        /// </summary>
+        public bool KerranLapi { get; set; } = true;
 
         MaisemaOma nykyinen;
         Soitin pohja;
@@ -158,6 +174,7 @@ namespace Matkakirja.Peli
         /// </summary>
         public void Paikka(string paikka, string tyyppi) => Tee(() =>
         {
+            if (paikka != this.paikka) soinutPolku = null; // uusi laukaisu: musiikki saa soida uudelleen
             this.paikka = paikka;
             paikanTyyppi = paikka == null ? null : tyyppi;
             SoitaPaikka();
@@ -174,12 +191,22 @@ namespace Matkakirja.Peli
             if (kohta != 0) a.Alku = kohta;
         });
 
-        /// <summary>Maiseman kierros lähestyy loppua (duration − 2,6 s): uusi kierros ristiin kohdasta #alku.</summary>
+        /// <summary>
+        /// Maiseman kierros lähestyy loppua (duration − 2,6 s). Kaupunkimaisema (KERRAN LÄPI): loppu häivytetään lyhyesti
+        /// ja paikka on hiljaa seuraavaan laukaisuun asti. Linssin taustaääni: uusi kierros ristiin kohdasta #alku.
+        /// </summary>
         public void SilmukkaVaihtuu() => Tee(() =>
         {
             var oma = nykyinen;
             var a = oma?.Audio;
             if (a == null || !a.Soinut) return;
+            if (KerranLapi && !oma.Linssi)
+            {
+                oma.Audio = null; // nykyinen jää: sama paikka ei käynnisty uudelleen (SoitaPaikka)
+                Ramppi(a, 0, AaniVakiot.SilmukkaRistiMs);
+                Vapauta(a);
+                return;
+            }
             oma.Vaistyva = a;
             var uusi = LuoMaisemaSoitin(oma, false, AaniVakiot.SilmukkaRistiMs);
             oma.Audio = uusi;
@@ -285,6 +312,7 @@ namespace Matkakirja.Peli
         /// <summary>Musiikki-kytkin (web kaannaMusiikki).</summary>
         public void MusiikkiPaalle(bool paalla) => Tee(() =>
         {
+            if (paalla) soinutPolku = null; // pelaajan oma kytkentä on uusi laukaisu
             if (paalla != Musiikki) { Musiikki = paalla; MusiikkitilaMuuttui(); }
             if (!paalla)
             {
@@ -300,6 +328,7 @@ namespace Matkakirja.Peli
         public void AanimaisemaPaalle(bool paalla) => Tee(() =>
         {
             Aanimaisema = paalla;
+            if (paalla) soinutPolku = null;
             if (!paalla)
             {
                 LopetaMaisema(); LopetaVisaSoitin(); LopetaPohja(); LopetaSiirtyma(); PysaytaAarre();
@@ -405,6 +434,18 @@ namespace Matkakirja.Peli
             AarreOhi(a);
         });
 
+        /// <summary>Pohjaraita soi loppuun (KERRAN LÄPI): hiljaisuus, kunnes paikka tai musiikkiketju vaihtuu.</summary>
+        public void PohjaLoppui() => Tee(() =>
+        {
+            var s = pohja;
+            if (s == null) return;
+            soinutPolku = s.Polku;
+            pohja = null;
+            pohjaPolku = null;
+            s.Tauko = true; // ended → paused
+            Vapauta(s);
+        });
+
         /// <summary>Portin "Aloita seikkailu" (true) ja intron loppu / eteneminen kartalle (false).</summary>
         public void Avaus(bool alkaa) => Tee(() =>
         {
@@ -423,6 +464,7 @@ namespace Matkakirja.Peli
         {
             LopetaMaisema(); LopetaVisaSoitin(); LopetaPohja(); LopetaSiirtyma();
             VisaAuki = false;
+            soinutPolku = null;
         });
 
         // --- tapahtuman runko -----------------------------------------------------
@@ -453,6 +495,7 @@ namespace Matkakirja.Peli
                 w.Alku = s?.Alku ?? 0;
                 w.Silmukka = s?.Silmukka ?? false;
                 w.IlmanKompressoria = s?.IlmanKompressoria ?? false;
+                w.Kerran = s?.Kerran ?? false;
             }
         }
 
@@ -603,11 +646,12 @@ namespace Matkakirja.Peli
             if (!Aanimaisema || !Musiikki || pito) { LopetaPohja(); return; }
             var polku = Musiikkivalitsin.Valitse(valitsin.Ketju(tilat, cityId, maa, VisaAuki), puuttuvat);
             if (polku == null || (pohja != null && pohjaPolku == polku)) return;
+            if (pohja == null && polku == soinutPolku) return; // soi jo kerran läpi tässä laukaisussa
             var vaistyva = pohja;
             pohja = null;
             pohjaPolku = null;
             if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.PohjaVaihtoMs); Vapauta(vaistyva); }
-            var s = Uusi(Kanava.Pohja, AaniOsoite.Url(polku), true);
+            var s = Uusi(Kanava.Pohja, AaniOsoite.Url(polku), !KerranLapi); // KERRAN LÄPI: ei silmukkaa (PohjaLoppui)
             s.Polku = polku;
             pohja = s;
             pohjaPolku = polku;
@@ -656,10 +700,11 @@ namespace Matkakirja.Peli
                 : cityId == "jalkamatka" ? AaniVakiot.JalkamatkanVoima : 1;
             var oma = new MaisemaOma
             {
-                CityId = cityId, Url = url, Osoite = jako.Url, Alku = jako.Alku,
+                // KERRAN LÄPI: aina alusta (ei #alku-hyppyä eikä arvottua aloituskohtaa).
+                CityId = cityId, Url = url, Osoite = jako.Url, Alku = KerranLapi ? 0 : jako.Alku,
                 Vaimennus = Voimassa,
                 Tavoite = AaniVakiot.MaisemanVoima * jako.Voima * paikanVoima,
-                ArvoAlku = !t.Vakiopaikat.Contains(cityId),
+                ArvoAlku = !KerranLapi && !t.Vakiopaikat.Contains(cityId),
                 Nouse = cityId == "lentomatka" ? AaniVakiot.LennonNousuMs
                     : cityId == "jalkamatka" ? AaniVakiot.JalkamatkanNousuMs : AaniVakiot.HaivytysMs,
             };
@@ -685,6 +730,7 @@ namespace Matkakirja.Peli
             var s = Uusi(Kanava.Maisema, AaniOsoite.Url(oma.Osoite), false);
             s.ArvottuAlku = arvottuAlku;
             s.IlmanKompressoria = oma.Linssi;
+            s.Kerran = KerranLapi && !oma.Linssi;
             SoitaMaisema(oma, s, nouse);
             return s;
         }
@@ -708,6 +754,7 @@ namespace Matkakirja.Peli
             // Linssin taustaääni laskee webin tahtiin (satelliitti-aani LASKU_MS 600), maisema omaansa.
             int lasku = vanha.Linssi ? LinssinTaustanLaskuMs : AaniVakiot.HaivytysMs;
             if (vanha.Vaistyva != null) { Ramppi(vanha.Vaistyva, 0, lasku); Vapauta(vanha.Vaistyva); }
+            if (vanha.Audio == null) return; // kerran läpi soinut maisema on jo hiljaa
             Ramppi(vanha.Audio, 0, lasku);
             Vapauta(vanha.Audio);
         }
