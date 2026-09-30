@@ -9435,3 +9435,7 @@ Omistaja 30.9.2026: 'Voisiko se Olavinlinna toimia ennemmin niin, että kertojan
 ## TARKENNUS: LUENNAN NÄKYMÄ NATIIVISSA — KUMOAA 15.9. 'TEKSTIT PIILOSSA KUNNES NAPAUTETAAN' JA 'KARTTATAUSTA LUENNAN AIKANA TUMMEMPI JA PEHMEÄ' (30.9.2026 klo 15.44)
 
 Päätoimittaja 30.9.2026 (Siirtosepän PASS BUILD 72, 88fe1265, omistajan palaute 30.9.): natiivissa isoisän luennan aikana matkakirjakaistale aukeaa itse ja pysyy auki, luentakuva puolikokoisena kaistaleen alla oikeassa reunassa (toinen kuva pinoutuu), Ohita kuvan alla oikealla, kartta terävä ja tutkittava; luennan aikana tyhjä napautus ei avaa maakuntaa. Kumoaa natiivissa KARTTAUUDISTUKSEN PAATOKSET 38 (15.9.: tekstit piilossa kunnes napautetaan) ja 'karttatausta luennan aikana tummempi ja pehmeä'. Web seuraa vanhaa linjaa, kunnes web-jonon erä tehdään.
+
+## OMISTAJA: OLAVINLINNAN KUUNNELMAT — LUPA VAIN ÄÄNINÄYTTEISIIN (30.9.2026 klo 15.56)
+
+Omistaja 30.9.2026 luettuaan hahmokirjan ja seitsemän huoneen kuunnelmat v1 (docs/raportit/olavinlinna-kuunnelmat-20260930.md): 'tee vain ääninäytteet'. Lupa koskee vain näytteitä: 11 uutta hahmoa × 2 ehdokasääntä, yksi näytelause kullekin, eleven_v4, noin 1 650 merkkiä (Pelikoodari). Kokki ja vesipoika 29.9. äänillä, Pulu Flicker, kertoja ihmisen matkan ääni. Koko kuunnelmaerä vasta omistajan äänivalinnan ja erillisen luvan jälkeen; Sisältökirjuri tarkistaa kuunnelmien faktat.
