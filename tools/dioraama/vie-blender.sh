@@ -41,6 +41,22 @@ lisaa() { [ -f "$LAHDE/$2" ] || { echo "PUUTTUU: $LAHDE/$2" >&2; exit 1; }; LIST
 for t in huippu normaali kevyt; do lisaa "ulkokuori/ulkokuori_$t.glb" "ulkokuori/ulkokuori_$t.glb"; done
 for f in ulkokuori-4k-4x4.astcm ulkokuori-2k-4x4.astcm ulkokuori-hamara-4k-4x4.astcm ulkokuori-hamara-2k-4x4.astcm \
          ulkokuori-hamara-4k.jpg ulkokuori-hamara-2k.jpg; do lisaa "ulkokuori/$f" "ulkokuori/$f"; done
+# 8k-atlakset (laatusuunnitelma 30.9.: Real-ESRGAN ×4 → 8k täyden laadun laitteille), mukaan jos lähteessä on.
+for f in ulkokuori-8k-4x4.astcm ulkokuori-hamara-8k-4x4.astcm ulkokuori-hamara-8k.jpg; do
+  if [ -f "$LAHDE/ulkokuori/$f" ]; then lisaa "ulkokuori/$f" "ulkokuori/$f"; fi
+done
+# Hybridi-PBR (laatusuunnitelma 30.9., menetelmä B): materiaalimaski + kirjaston 4 materiaalia (diff + nor_gl), maskin
+# kanavajärjestyksessä R graniittilohkomuuri, G paanukatto, B kivilaatta, A kallio. Mukaan, jos lähteissä on.
+KIRJASTO=${KIRJASTO:-/Users/Shared/Claude/proto-3d/_kirjasto/valmiit}
+if [ -f "$LAHDE/ulkokuori/hybridi/kuori-materiaali-2k.png" ]; then
+  lisaa "ulkokuori/hybridi/kuori-materiaali-2k.png" "ulkokuori/hybridi/kuori-materiaali-2k.png"
+  for id in graniittilohkomuuri paanukatto kivilaatta kallio; do
+    for k in diff.jpg nor_gl.jpg; do
+      [ -f "$KIRJASTO/materiaali/$id/${id}_$k" ] || { echo "PUUTTUU: $KIRJASTO/materiaali/$id/${id}_$k" >&2; exit 1; }
+      LISTA+=("kirjasto/materiaali/$id/${id}_$k|@$KIRJASTO/materiaali/$id/${id}_$k")
+    done
+  done
+fi
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
   for v in "" "-hamara"; do
@@ -53,8 +69,8 @@ done
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 YHT=0
 for r in "${LISTA[@]}"; do
-  p=${r%%|*}; l=${r#*|}; s=$(shasum -a 256 "$LAHDE/$l" | cut -d' ' -f1); b=$(stat -f %z "$LAHDE/$l")
-  YHT=$((YHT + b)); echo "$p $s $b" >> "$TMP/rivit"
+  p=${r%%|*}; l=${r#*|}; [[ $l == @* ]] && f=${l#@} || f="$LAHDE/$l"; s=$(shasum -a 256 "$f" | cut -d' ' -f1); b=$(stat -f %z "$f")
+  YHT=$((YHT + b)); echo "$p $s $b" >> "$TMP/rivit"; echo "$p $f" >> "$TMP/lahteet"
 done
 sort -o "$TMP/rivit" "$TMP/rivit"
 HASH=$(cut -d' ' -f1,2 "$TMP/rivit" | shasum -a 256 | cut -c1-16)
@@ -80,10 +96,10 @@ if aws s3 ls "s3://$AMPARI/$KOHDE/blender.json" --endpoint-url "$PAATE" >/dev/nu
 else
   i=0
   while read -r p s b; do
-    i=$((i + 1)); l=$p
-    case "$p" in *.glb) ct=model/gltf-binary ;; *.jpg) ct=image/jpeg ;; *) ct=application/octet-stream ;; esac
+    i=$((i + 1)); f=$(awk -v p="$p" '$1 == p { print $2; exit }' "$TMP/lahteet")
+    case "$p" in *.glb) ct=model/gltf-binary ;; *.jpg) ct=image/jpeg ;; *.png) ct=image/png ;; *) ct=application/octet-stream ;; esac
     printf '   [%d/%d] %s (%d Mt)\n' $i $N "$p" $((b / 1048576))
-    aws s3 cp "$LAHDE/$l" "s3://$AMPARI/$KOHDE/$p" --endpoint-url "$PAATE" --no-progress --only-show-errors \
+    aws s3 cp "$f" "s3://$AMPARI/$KOHDE/$p" --endpoint-url "$PAATE" --no-progress --only-show-errors \
       --content-type "$ct" --cache-control 'public, max-age=31536000, immutable'
   done < "$TMP/rivit"
   aws s3 cp "$TMP/blender.json" "s3://$AMPARI/$KOHDE/blender.json" --endpoint-url "$PAATE" --only-show-errors \

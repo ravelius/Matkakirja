@@ -18,6 +18,10 @@
 //   5. Mediapaneeli pois kuten tools/savukkeet/chromium-liput.mjs (kaikki --disable-features yhteen lippuun,
 //      koska Chromium lukee vain viimeisen).
 //
+//   6. ÄÄNI MYKISTETTY OLETUKSENA (omistaja 30.9.2026: testien äänet kuuluivat omistajan kaiuttimista): --mute-audio.
+//      Äänimittaukset käyttävät currentTimea ja Web Audion solmuja, jotka etenevät mykistettynäkin
+//      (muistiinpano aanimittaus-currenttime). Kuultava ääni vain pyydettäessä: { aani: true } tai SELAIN_AANI=1.
+//
 // chromium-liput.mjs (NODE_OPTIONS --import, aja-sarja.mjs) toimii yhä: se lisää rivin omat liput perään.
 
 import { existsSync } from 'node:fs';
@@ -73,14 +77,21 @@ export function piirtoLiput(annetut = [], { cpu = false } = {}) {
   return GPU_LIPUT;
 }
 
+/** Äänilippu: --mute-audio, ellei kuultavaa ääntä pyydetty (valinnat.aani tai SELAIN_AANI=1). */
+export function aaniLiput(annetut = [], { aani = false } = {}) {
+  if (aani || process.env.SELAIN_AANI === '1' || annetut.includes('--mute-audio')) return [];
+  return ['--mute-audio'];
+}
+
 /**
  * Chromium Playwrightilla, GPU oletuksena Macilla.
  * @param {object} [asetukset] chromium.launch-asetukset (args, headless, executablePath …)
- * @param {{cpu?: boolean}} [valinnat] cpu: true = ohjelmallinen piirto (suorituskykymittaus)
+ * @param {{cpu?: boolean, aani?: boolean}} [valinnat] cpu: true = ohjelmallinen piirto (suorituskykymittaus);
+ *   aani: true = kuultava ääni (oletus mykistetty)
  */
 export async function avaaChromium(asetukset = {}, valinnat = {}) {
   const { chromium } = await lataaPlaywright();
   const omat = asetukset.args ?? [];
-  const args = yhdistaLiput([...omat, ...piirtoLiput(omat, valinnat)]);
+  const args = yhdistaLiput([...omat, ...piirtoLiput(omat, valinnat), ...aaniLiput(omat, valinnat)]);
   return chromium.launch({ ...asetukset, executablePath: selainPolku(asetukset.executablePath), args });
 }

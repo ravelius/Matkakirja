@@ -13,7 +13,18 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2454, teksti: 'Lukijalle vertailtava ElevenLabs-puheääni kehittäjäkäyttöön' },
+  { v: 2464, teksti: 'Lukijalle vertailtava ElevenLabs-puheääni kehittäjäkäyttöön' },
+  { v: 2463, teksti: 'Maalehdet: 6 maata, artikkelit ja aihesivut (#3706)' },
+  { v: 2462, teksti: 'Kohdekaupunkien pisteet ja nimet rannan musteel… (#3630)' },
+  { v: 2461, teksti: 'Savukesarja: WebKit-rivit päivällä Chromiumilla (#3705)' },
+  { v: 2460, teksti: 'Testiselaimet mykistettyinä oletuksena (#3704)' },
+  { v: 2459, teksti: 'Raamattu: äänten generointi vain omistajan luva… (#3699)' },
+  { v: 2458, teksti: 'Hahmojen ääninäytteet CI:ssä (#3703)' },
+  { v: 2457, teksti: 'Olavinlinna, uusi rakenne: kertoja, infotaulut,… (#3701)' },
+  { v: 2456, teksti: 'vie-dioraama: osoitin vain erillisellä käsiajol… (#3716)' },
+  { v: 2455, teksti: 'Olavinlinna: laatudiagnoosi ja -suunnitelma + t… (#3711)' },
+  { v: 2454, teksti: 'Testi: iOS-testiversio saa olla kaksiosainen (#3713)' },
+  { v: 2453, teksti: 'TestFlight: versio 1.1 + juokseva build-numero (#3700)' },
   { v: 2452, teksti: 'Nostot kierros 3, erä C: 10 kohdetta kuvineen M… (#3697)' },
   { v: 2451, teksti: 'Olavinlinnan äänimaisema: suunnitelma, CC0/PD-l… (#3698)' },
   { v: 2450, teksti: 'ISS-kytkinpöytä: Blender-malli ja Cycles-kerros… (#3695)' },
