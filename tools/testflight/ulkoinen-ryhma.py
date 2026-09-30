@@ -8,6 +8,11 @@ Tila (aina): ulkoiset ryhmät, julkinen linkki ja sen raja, testaajien määrä,
 ryhmän uusimmat buildit sekä käyttötilastot (publicLinkUsages,
 betaTesterUsages) GitHubin yhteenvetoon.
 
+--vanhenna <b1,b2,…>: vanhentaa (expired=true) luetellut buildit ennen muuta,
+jolloin niiden odottavat beta-arviot vapauttavat Applen lähetysrajan (omistaja
+30.9.2026: 1.0.67–1.0.72, SUBMISSION_LIMIT_REACHED). Poistaa ne myös sisäisestä
+testauksesta.
+
 --build <CFBundleVersion>: odottaa käsittelyä (VALID), liittää buildin
 ulkoiseen ryhmään ja lähettää sen Applen beta-arvioon, ellei se ole jo
 arviossa tai hyväksytty.
@@ -45,6 +50,7 @@ def main():
     p.add_argument('--build', default='')
     p.add_argument('--ryhma', default='', help='ulkoisen ryhmän nimi (tyhjä = ainoa tai julkisen linkin ryhmä)')
     p.add_argument('--odota-min', type=int, default=45)
+    p.add_argument('--vanhenna', default='', help='pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin')
     a = p.parse_args()
 
     kid = os.environ['ASC_KEY_ID']
@@ -133,6 +139,21 @@ def main():
                     if isinstance(v, (int, float)):
                         yhteensa[k] = yhteensa.get(k, 0) + v
         kirjaa(f"- {mittari}: {', '.join(f'{k} {v}' for k, v in sorted(yhteensa.items())) or 'ei käyttöä'}")
+
+    for vb in [x.strip() for x in a.vanhenna.split(',') if x.strip()]:
+        tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={vb}&limit=5')
+        loydetyt = d.get('data', []) if tila == 200 else []
+        if len(loydetyt) != 1:
+            virhe('Vanhennettavaa buildia ei löydy yksiselitteisesti', f'{vb}: {tila}, {len(loydetyt)} osumaa')
+        b = loydetyt[0]
+        if b['attributes'].get('expired'):
+            kirjaa(f'Build {vb}: jo vanhennettu.')
+            continue
+        tila, d = kutsu('PATCH', f"/v1/builds/{b['id']}", {'data': {
+            'type': 'builds', 'id': b['id'], 'attributes': {'expired': True}}})
+        if tila != 200:
+            virhe('Vanhennus epäonnistui', f'{vb}: {tila}: {d}')
+        kirjaa(f'Build {vb}: vanhennettu.')
 
     if not a.build:
         return
