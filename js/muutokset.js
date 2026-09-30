@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2457, teksti: 'Olavinlinna, uusi rakenne: kertoja, infotaulut,… (#3701)' },
   { v: 2456, teksti: 'vie-dioraama: osoitin vain erillisellä käsiajol… (#3716)' },
   { v: 2455, teksti: 'Olavinlinna: laatudiagnoosi ja -suunnitelma + t… (#3711)' },
   { v: 2454, teksti: 'Testi: iOS-testiversio saa olla kaksiosainen (#3713)' },
