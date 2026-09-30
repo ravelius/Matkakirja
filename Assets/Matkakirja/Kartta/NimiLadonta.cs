@@ -699,6 +699,33 @@ namespace Matkakirja
         /// <summary>Laatikon rako tekstin ympärillä pisteinä (vaaka, pysty).</summary>
         public const float NimenRakoX = 2f, NimenRakoY = 2f;
 
+        // ---- NIMIBUDJETTI ZOOMTASON MUKAAN (pariteetti 30.9.2026, web nimet.js nimibudjetti) -------------------
+        /// <summary>Web NIMIEN_KATTO: kaupunkien nimiä enintään kerrallaan.</summary>
+        public const int NimienKatto = 40;
+        /// <summary>Web NIMIEN_VAHIN: nimiä vähintään, vaikka koko maailma olisi ruudulla.</summary>
+        public const int NimienVahin = 6;
+        /// <summary>Web NIMIBUDJETIN_KORKEUS: näkymän korkeus asteina (saapumisnäkymä 19,8°), jossa budjetti on täysi.</summary>
+        public const double NimibudjetinKorkeus = 20.0;
+
+        /// <summary>
+        /// Web nimibudjetti (js/pallolauta/nimet.js): round(40 · 20° / näkymän korkeus °) rajattuna [6, 40]. Nimiä on
+        /// karkeasti vakiomäärä kartan pinta-alaa kohden; tuntematon näkymä (≤ 0 tai NaN) saa lattian.
+        /// </summary>
+        public static int Nimibudjetti(double korkeusAst)
+        {
+            if (!(korkeusAst > 0)) return NimienVahin;
+            double luku = Math.Round(NimienKatto * (NimibudjetinKorkeus / korkeusAst), MidpointRounding.AwayFromZero);
+            return (int)Math.Min(NimienKatto, Math.Max(NimienVahin, luku));
+        }
+
+        /// <summary>
+        /// Web nostot.js liikevaranKatto (nimet.js lado `katto`): liikevaran ala on (1 + 2 · osuus)²-kertainen ruutuun
+        /// nähden, joten budjetti kasvaa samassa suhteessa, kun ladonta latoo myös liikevaran vyöhön.
+        /// </summary>
+        public static int LiikevaranKatto(int katto, float liikevaraOsuus) =>
+            katto <= 0 || !(liikevaraOsuus > 0) || katto == int.MaxValue ? katto
+                : (int)Math.Round(katto * Math.Pow(1.0 + 2.0 * liikevaraOsuus, 2.0), MidpointRounding.AwayFromZero);
+
         /// <summary>
         /// KAUPUNGIN NIMEN EHDOKKAAT (web js/karttanimet.js sijoitaKaupunginNimi) järjestyksessä: (laudan oma
         /// asettelu lisätään kutsujassa eteen, <see cref="OmaPaikka"/>) pelimerkkipinon väistökehä, jos piste on
@@ -779,10 +806,15 @@ namespace Matkakirja
         /// juuri tullut kaupunki saa saman kyljen kuin keskellä. Jos valittu paikka vuotaa todellisen ruudun yli
         /// (web NIMI EI SAA LEIKKAUTUA RUUDUN REUNASTA), nimi ei näy tällä kertaa eikä lukitu (paikka varataan silti,
         /// kuten webissä ennen reunapudotusta); se ladotaan uudestaan, kun se mahtuu.
+        ///
+        /// NIMIBUDJETTI (pariteetti 30.9.2026, web karttanimet.js ladoRuutunimet `katto`): kun
+        /// <paramref name="katto"/> nimeä on ladottu (paikka löytyi, myös reunapudotetut kuten webissä), loput
+        /// ehdokkaat jäävät ilman nimeä eivätkä varaa mitään. Pakolliset (valittava) eivät kuluta budjettia.
+        /// Järjestys ratkaisee, ketkä mahtuvat: kutsuja antaa oman kaupungin ja matkan kohteet ensin.
         /// </summary>
         public static void LadoKaupungit(List<KaupunkiEhdokas> ehdokkaat, IReadOnlyList<Ruutulaatikko> pinot, Ruutulaatikko ruutu,
                                          float kerroin, Ruutuvaraukset varaukset, List<bool> naytetaan, List<NimenPaikka> paikat,
-                                         float liikevara = 0f)
+                                         float liikevara = 0f, int katto = int.MaxValue)
         {
             naytetaan.Clear();
             paikat.Clear();
@@ -791,10 +823,17 @@ namespace Matkakirja
             float sieto = kerroin;
             var sisalla = ruutu.Laajenna(sieto);
             var laaja = ruutu.Laajenna(sieto + Math.Max(0f, liikevara));
+            int ladottu = 0;
             foreach (var e in ehdokkaat)
             {
                 var paikka = e.Lukko;
                 bool nakyy;
+                if (!e.Pakko && e.Sallittu && ladottu >= katto)
+                {
+                    naytetaan.Add(false);
+                    paikat.Add(paikka);
+                    continue;
+                }
                 if (e.Pakko) nakyy = true;
                 else if (!e.Sallittu) nakyy = false;
                 else if (e.Leveys <= 0) nakyy = !varaukset.OsuuPaitsi(e.Nimio, e.Piste);
@@ -828,6 +867,7 @@ namespace Matkakirja
                     {
                         var l = NimenLaatikko(e.X, e.Y, paikka, e.Leveys, e.Korkeus, kerroin);
                         varaukset.Varaa(l);
+                        ladottu++;
                         if (l.X0 < sisalla.X0 || l.Y0 < sisalla.Y0 || l.X1 > sisalla.X1 || l.Y1 > sisalla.Y1) nakyy = false;
                         naytetaan.Add(nakyy);
                         paikat.Add(paikka);
@@ -835,7 +875,10 @@ namespace Matkakirja
                     }
                 }
                 if (nakyy)
+                {
                     varaukset.Varaa(e.Pakko || e.Leveys <= 0 ? e.Nimio : NimenLaatikko(e.X, e.Y, paikka, e.Leveys, e.Korkeus, kerroin));
+                    if (!e.Pakko) ladottu++;
+                }
                 naytetaan.Add(nakyy);
                 paikat.Add(paikka);
             }

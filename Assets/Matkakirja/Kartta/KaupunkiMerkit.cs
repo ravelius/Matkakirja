@@ -107,9 +107,14 @@ namespace Matkakirja
             m.pisteT.localScale = new Vector3(pk * kasvu, pk * kasvu, 1);
             var n = m.nimio;
             n.fontSize = l ? (tarkea ? linssiTarkeaKirjain : linssiKirjain) : (tarkea ? tarkeaKirjain : kirjain);
-            n.fontStyle = l ? FontStyles.SmallCaps : m.tyyli == 2 ? FontStyles.Bold : FontStyles.Normal;
+            // KARTTANIMEN ASU (pariteetti 30.9.2026, web karttanimet.js PAAKAUPUNGIN_ASU / KOHDEKAUPUNGIN_ASU): myös pelin
+            // kaupunkinimet harvennettuna kapiteelina (small-caps, kirjainväli 0,14 em); tärkein (tyyli 2) lisäksi lihava.
+            n.fontStyle = l ? FontStyles.SmallCaps : m.tyyli == 2 ? FontStyles.SmallCaps | FontStyles.Bold : FontStyles.SmallCaps;
             // TMP:n characterSpacing on em/100.
-            n.characterSpacing = l ? linssiValistysEm * 100f : 0f;
+            n.characterSpacing = (l ? linssiValistysEm : KarttanimenValistysEm) * 100f;
+            // Kartan mittakerroin (AsetaMitta) palautuu 1:een; LateUpdate asettaa sen uudelleen, mitat mitataan peruskoossa.
+            m.mitta = 1f;
+            n.transform.localScale = Vector3.one * 10f;
             n.color = l ? linssiMuste : musteenVari;
             m.nimiPeitto = l ? 1f : musteenVari.a; // LateUpdate kertoo häivytyksen tällä (sepia, palaute 3)
             m.usva = -1f;   // väri nollautui: horisonttiusvan peitto uudelleen (LateUpdate)
@@ -119,6 +124,7 @@ namespace Matkakirja
                 // yläpuolella (ks. ValintaNimenY). Nimi on kehotus toimia, joten se ei harvennu (LateUpdate).
                 n.fontSize = valintaKirjain;
                 n.fontStyle = FontStyles.Bold;
+                n.characterSpacing = 0f; // valittavan asu ennallaan (web .target-nimi)
                 n.color = valintaMuste;
                 m.nimiPeitto = valintaMuste.a;
                 n.alignment = TextAlignmentOptions.Bottom;
@@ -136,8 +142,35 @@ namespace Matkakirja
             m.teksti = koko;
             m.lukittu = false; // uudet mitat: paikka lasketaan uudestaan (web: KOKO ON OSA LUKKOA)
             m.piirrettyAsetettu = false;
-            m.koko = m.valintamerkki && !l ? new Vector2(koko.x, koko.y)
-                                            : new Vector2(koko.x + pk * 0.5f + valistys, math.max(koko.y, pk));
+            PaivitaKoko(m);
+        }
+
+        /// <summary>Nimiön ja pisteen yhteinen koko pisteinä nykyisellä mittakertoimella (NimenAla).</summary>
+        void PaivitaKoko(Merkki m)
+        {
+            var t = m.teksti * m.mitta;
+            m.koko = m.valintamerkki && !LinssiTila ? t
+                : new Vector2(t.x + m.pisteKoko * 0.5f + valistys, math.max(t.y, m.pisteKoko));
+        }
+
+        /// <summary>
+        /// NIMIKYLTTI ON KARTAN MITTA (pariteetti 30.9.2026, web nimet.js nimenKarttakerroin ja ZOOMI SKAALAA LUKON):
+        /// nimiön mittakaava × <paramref name="f"/> (TMP-teksti skaalataan transformilla, ei fonttikokoa: ei uutta
+        /// mittausta kehyksessä). Lukittu paikka kasvaa samassa suhteessa, joten nimi ei vaihda kylkeä zoomatessa.
+        /// </summary>
+        void AsetaMitta(Merkki m, float f, float kerroin)
+        {
+            float s = f / m.mitta;
+            m.mitta = f;
+            m.nimio.transform.localScale = Vector3.one * (10f * f);
+            if (m.lukittu) { m.lukko.Dx *= s; m.lukko.Dy *= s; }
+            PaivitaKoko(m);
+            if (m.piirrettyAsetettu)
+            {
+                // Ankkuri ei muutu: vain siirto (ei TMP:n tasausta eikä pivotia kehyksessä).
+                m.piirretty.Dx *= s; m.piirretty.Dy *= s;
+                m.nimio.transform.localPosition = new Vector3(m.piirretty.Dx / kerroin, m.piirretty.Dy / kerroin, 0);
+            }
         }
 
         /// <summary>
@@ -405,13 +438,52 @@ namespace Matkakirja
                 rengasLohko.SetFloat("_Koko", sivu);
                 m.rengas.GetComponent<MeshRenderer>().SetPropertyBlock(rengasLohko);
             }
-            jarjestys.Clear();
-            valintamerkkeja = 0;
-            foreach (var m in merkit) if (m.valintamerkki) { jarjestys.Add(m); valintamerkkeja++; }
-            if (valintamerkkeja > 0) foreach (var m in merkit) if (!m.valintamerkki) jarjestys.Add(m);
+            PaivitaJarjestys();
         }
 
-        /// <summary>Valittavien järjestys LateUpdatessa: valintamerkit ensin, jotta niiden nimet varaavat tilansa.</summary>
+        /// <summary>
+        /// Ladontajärjestys (<see cref="jarjestys"/>): valintamerkit, lennon renkaat, oma kaupunki ja matkan kohteet
+        /// ennen muita (web OMAN_KAUPUNGIN_TARKEYS / KOHTEEN_TARKEYS); muiden kesken merkit-lista (tärkeys). Tyhjä =
+        /// ei etuoikeutettuja, LateUpdate käy merkit-listan. Vain muutoksissa (renkaat, etusija), ei kehyksessä.
+        /// </summary>
+        void PaivitaJarjestys()
+        {
+            jarjestys.Clear();
+            valintamerkkeja = 0;
+            foreach (var m in merkit)
+            {
+                string id = m.kaupunki.id;
+                m.etuoikeus = m.valintamerkki ? EtuValinta
+                    : !LinssiTila && rengasIdt.Contains(id) ? EtuRengas
+                    : id == omaKaupunki ? EtuOma
+                    : etusija.Contains(id) ? EtuKohde : EtuMuut;
+                if (m.valintamerkki) valintamerkkeja++;
+            }
+            for (int e = EtuValinta; e < EtuMuut; e++)
+                foreach (var m in merkit) if (m.etuoikeus == e) jarjestys.Add(m);
+            if (jarjestys.Count > 0) foreach (var m in merkit) if (m.etuoikeus == EtuMuut) jarjestys.Add(m);
+        }
+
+        /// <summary>
+        /// PELAAJAN KAUPUNKI JA MATKAN KOHTEET NIMIBUDJETIN EDELLE (pariteetti 30.9.2026, web nimet.js lado `oma` ja
+        /// `etusija` = lauta.js matkanKohteet): oma kaupunki ja tarjotut siirto- ja lentokohteet ladotaan ennen muita,
+        /// joten zoomtason nimibudjetti ei pudota niitä. PeliOhjain kutsuu samalla kuin <see cref="PeliSuodatin"/>.
+        /// </summary>
+        public void Etusija(string oma, ICollection<string> kohteet)
+        {
+            bool sama = oma == omaKaupunki && (kohteet?.Count ?? 0) == etusija.Count;
+            if (sama && kohteet != null) foreach (var k in kohteet) if (!etusija.Contains(k)) { sama = false; break; }
+            if (sama) return;
+            omaKaupunki = oma;
+            etusija.Clear();
+            if (kohteet != null) foreach (var k in kohteet) if (!string.IsNullOrEmpty(k)) etusija.Add(k);
+            PaivitaJarjestys();
+            PallonLepo.Muuttui("kaupungit");
+        }
+        string omaKaupunki;
+        readonly HashSet<string> etusija = new HashSet<string>();
+
+        /// <summary>Ladontajärjestys LateUpdatessa (valintamerkit ja etuoikeutetut ensin, ks. PaivitaJarjestys).</summary>
         readonly List<Merkki> jarjestys = new List<Merkki>();
         int valintamerkkeja;
         MaterialPropertyBlock kohdeLohko;
@@ -542,8 +614,12 @@ namespace Matkakirja
         [Header("Koot näytön pisteinä (iOS point, 1/163 tuumaa)")]
         public float piste = 9f;
         public float tarkeaPiste = 13f;
-        public float kirjain = 13f;
+        [Tooltip("Tavallisen kaupungin nimi saapumisnäkymässä (pt): web KARTTANIMI_KOOT.kaupunki 13,5 (pariteetti 30.9.2026).")]
+        public float kirjain = 13.5f;
+        [Tooltip("Tärkeän kaupungin nimi saapumisnäkymässä (pt): web KARTTANIMI_KOOT.isoKaupunki 15.")]
         public float tarkeaKirjain = 15f;
+        /// <summary>Karttanimen kirjainväli em-yksikköinä (web PAAKAUPUNGIN_ASU.vali 0,14; TMP characterSpacing 14).</summary>
+        public const float KarttanimenValistysEm = 0.14f;
         public float valistys = 3f;
 
         [Tooltip("Merkin korkeus pinnan (maasto tai ellipsoidi) yläpuolella, metreinä.")]
@@ -584,7 +660,13 @@ namespace Matkakirja
             public NimiLadonta.NimenPaikka lukko; // pikseleinä
             public NimiLadonta.NimenPaikka piirretty; // nimiön nykyinen paikka pikseleinä (asetetaan vain muuttuessa)
             public bool piirrettyAsetettu;
+            public float mitta = 1f; // kartan mittakerroin nimiölle (AsetaMitta; web nimenKarttakerroin), 1 = peruskoko
+            public int etuoikeus = EtuMuut; // ladontajärjestys (PaivitaJarjestys): valittava, rengas, oma, matkan kohde, muut
         }
+
+        // Ladonnan etuoikeus (pariteetti 30.9.2026, web nimet.js OMAN_KAUPUNGIN_TARKEYS 1000 ja KOHTEEN_TARKEYS 500):
+        // valittavat ensin (pakko), sitten lennon renkaat, oma kaupunki ja matkan kohteet — nimibudjetti ei pudota niitä.
+        const int EtuValinta = 0, EtuRengas = 1, EtuOma = 2, EtuKohde = 3, EtuMuut = 4;
 
         /// <summary>Osuus etäisyydestä, jonka verran merkki tuodaan pinnan eteen.</summary>
         const float Etuna = 0.3f;
@@ -871,10 +953,22 @@ namespace Matkakirja
                 NostoIkoneita = Varaukset.Maara;
             }
 
-            // 2) Paikat ja ehdokkaat tärkeysjärjestyksessä (valintamerkit ensin: jarjestys, muuten merkit).
+            // KARTAN MITTA JA NIMIBUDJETTI (pariteetti 30.9.2026, web nimet.js nimenKarttakerroin ja nimibudjetti):
+            //  - mittakerroin = NostoKerros.ZoomKerroin (saapumisnäkymän korkeus / kameran korkeus, [0,2; 64], porras
+            //    1,005; sama kuin nostoilla). Vertailu on laitteen oma saapumisnäkymä (PalloKierto.SaapumisNakyma), joten
+            //    perillä nimi on peruskoossa 13,5 / 15 pt; tuntematon vertailu (ei maata, rajat lataamatta) = 1.
+            //  - kerroin lattiassa (0,2: kamera kaukana, maailmanäkymä) → nimet pois kuten webissä (LATTIAKERTOIMELLA
+            //    LADOTTUA NIMEÄ EI NÄYTETÄ); valittavat ja lennon renkaat jäävät.
+            //  - budjetti = round(40 · 20° / näkymän korkeus °) [6, 40] × liikevaran ala (NimiLadonta.Nimibudjetti).
+            float zoom = LinssiTila || nk == null ? 1f : nk.ZoomKerroin;
+            bool lattialla = zoom <= (float)NostoSaannot.KarttakerroinMin / 1.0025f;
+            int katto = LinssiTila || valintamerkkeja > 0 || kierto == null ? int.MaxValue
+                : NimiLadonta.LiikevaranKatto(NimiLadonta.Nimibudjetti(NakymanKorkeusAsteina(tanPuoli)), NimiLadonta.LiikevaraOsuus);
+
+            // 2) Paikat ja ehdokkaat tärkeysjärjestyksessä (valintamerkit ja etuoikeutetut ensin: jarjestys, muuten merkit).
             nakyvat.Clear();
             ehdokkaat.Clear();
-            foreach (var m in valintamerkkeja > 0 ? jarjestys : merkit)
+            foreach (var m in jarjestys.Count > 0 ? jarjestys : merkit)
             {
                 // Korkeuskerroin nostaa maastoa: merkki nousee saman verran (paketin pintakorkeudesta).
                 Vector3 paikka = gt.TransformPoint(m.pinta + m.normaali * KorkeusKerroin.Lisays(m.kaupunki.korkeus));
@@ -906,6 +1000,10 @@ namespace Matkakirja
                 if (ruutu.x < 0 || ruutu.y < 0 || ruutu.x > Screen.width || ruutu.y > Screen.height) m.lukittu = false;
                 // Valittavan nimi näkyy aina (web kohdeElementti piirtää nimen joka merkille).
                 bool valinta = m.valintamerkki && !LinssiTila;
+                // Nimikyltti kartan mitassa (AsetaMitta); valittava ja linssinimet peruskoossa, lennon renkaan nimi ei
+                // pienene peruskoosta (kaukaa katsottu lento, ennallaan).
+                float mitta = valinta || LinssiTila ? 1f : m.etuoikeus == EtuRengas ? Mathf.Max(zoom, 1f) : zoom;
+                if (mitta != m.mitta) AsetaMitta(m, mitta, kerroin);
                 // Horisonttiusva (löydös 153): webin paperiusva peittää GL-pisteet ja -nimet; sumu ei koske näitä varjostimia.
                 float nak = valinta ? 1f : 1f - Horisonttiusva.Peitto(1f - ruutu.y / Mathf.Max(1f, Screen.height));
                 if (Mathf.Abs(nak - m.usva) > 0.01f || (nak >= 1f && m.usva < 1f))
@@ -925,14 +1023,16 @@ namespace Matkakirja
                     // Siirtokohteen nimen piirtää kohdemerkki (Siirtokohdemerkit.NimeaaKaupungin): nimi kerran kuten webissä.
                     // UI-pariteetti rivi 2 (Fable 26.9., web on malli): aloitusvalinnan aikana vain valittavien nimet.
                     Sallittu = valinta || (valintamerkkeja == 0 && (nimiotNakyvat || LinssiTila) && !m.himmea
+                                           && (!lattialla || m.etuoikeus == EtuRengas)
                                            && !(Siirtokohdemerkit.Instanssi?.NimeaaKaupungin(m.kaupunki.id) ?? false)),
                     X = ruutu.x, Y = ruutu.y,
-                    Leveys = valinta ? 0 : m.teksti.x * kerroin, Korkeus = m.teksti.y * kerroin,
-                    Kirjain = m.nimio.fontSize * kerroin,
+                    Leveys = valinta ? 0 : m.teksti.x * m.mitta * kerroin, Korkeus = m.teksti.y * m.mitta * kerroin,
+                    Kirjain = m.nimio.fontSize * m.mitta * kerroin,
                     Sivu = (pp * 0.5f + valistys * kerroin),
                     Lukittu = m.lukittu, Lukko = m.lukko,
                     OnOma = NimiLadonta.OmaPaikka(m.kaupunki.nimionAnkkuri?.tasaus, m.kaupunki.nimionAnkkuri?.dx ?? 0f,
-                                                   m.kaupunki.nimionAnkkuri?.dy ?? 0f, m.nimio.fontSize * kerroin, kerroin, out var oma),
+                                                   m.kaupunki.nimionAnkkuri?.dy ?? 0f, m.nimio.fontSize * m.mitta * kerroin,
+                                                   kerroin * m.mitta, out var oma), // web: lx/ly kasvavat kyltin mukana
                     Oma = oma,
                 });
             }
@@ -943,7 +1043,8 @@ namespace Matkakirja
             if (nappula == null) nappula = FindAnyObjectByType<Nappula>();
             if (nappula != null && !LinssiTila && nappula.Pino(kamera, kerroin, NimiLadonta.PelimerkinVara, out var pino)) pinot.Add(pino);
             NimiLadonta.LadoKaupungit(ehdokkaat, pinot, new Ruutulaatikko(0, 0, Screen.width, Screen.height), kerroin,
-                                      Varaukset, naytetaan, nimenPaikat, NimiLadonta.LiikevaraOsuus * Mathf.Max(Screen.width, Screen.height));
+                                      Varaukset, naytetaan, nimenPaikat, NimiLadonta.LiikevaraOsuus * Mathf.Max(Screen.width, Screen.height),
+                                      katto);
             bool levossa = kierto == null || kierto.Levossa;
             for (int i = 0; i < nakyvat.Count; i++)
             {
@@ -974,6 +1075,28 @@ namespace Matkakirja
             }
             Naytetty = naytetty;
         }
+
+        /// <summary>
+        /// Näkymän korkeus asteina WEBIN MITASSA (web lauta.js korkeusAst = nakyva.h · 360 / laudan leveys): kameran
+        /// pystykaari 2 · h · tan(fov/2) / R, kerrottuna webin kotelon osuudella ruudun korkeudesta (natiivin kamera kattaa
+        /// koko ruudun samalla mittakaavalla, Saapumisnakyma.WebinKotelo). Saapumisnäkymässä ~20° kuten webissä. 0 = tuntematon.
+        /// </summary>
+        float NakymanKorkeusAsteina(float tanPuoli)
+        {
+            double h = kierto.korkeus;
+            if (!(h > 0)) return 0f;
+            int pw = kamera.pixelWidth, ph = kamera.pixelHeight;
+            if (pw != koteloPw || ph != koteloPh)
+            {
+                koteloPw = pw; koteloPh = ph;
+                double k = PalloKierto.Pistekerroin, hPt = ph / k;
+                var kotelo = Saapumisnakyma.WebinKotelo(pw / k, hPt);
+                koteloSuhde = hPt > 0 && kotelo.H > 0 ? (float)(kotelo.H / hPt) : 1f;
+            }
+            return (float)math.degrees(math.min(math.PI, 2.0 * h * tanPuoli / Saapumisnakyma.Sade)) * koteloSuhde;
+        }
+        int koteloPw = -1, koteloPh = -1;
+        float koteloSuhde = 1f;
 
         /// <summary>Nimen tulon ja lähdön kesto (web #3540, 220 ms smoothstep).</summary>
         const float NimenHaiveS = 0.22f;
@@ -1016,7 +1139,7 @@ namespace Matkakirja
                 return new Rect(p.x - koko.x * 0.5f, p.y + ValintaNimenY * kerroin, koko.x, koko.y);
             if (m.piirrettyAsetettu)
             {
-                var l = NimiLadonta.NimenLaatikko(p.x, p.y, m.piirretty, m.teksti.x * kerroin, m.teksti.y * kerroin, kerroin);
+                var l = NimiLadonta.NimenLaatikko(p.x, p.y, m.piirretty, m.teksti.x * m.mitta * kerroin, m.teksti.y * m.mitta * kerroin, kerroin);
                 return Rect.MinMaxRect(l.X0, l.Y0, l.X1, l.Y1);
             }
             return new Rect(p.x, p.y - koko.y * 0.5f, koko.x, koko.y);

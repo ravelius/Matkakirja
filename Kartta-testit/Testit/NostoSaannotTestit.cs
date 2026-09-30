@@ -257,6 +257,18 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(0, luontoPisteena, "yksikään luontonosto ei ole enää harmaa piste");
         }
 
+        /// <summary>Pariteetti 30.9.2026: nostojen nimiöt vain lehden portissa (web nostot.js lehtiNakyvissa).</summary>
+        [Testi]
+        static void LehdenPorttiNimioille()
+        {
+            // Ranska ~(-5,1; 42,3)–(8,2; 51,1): Miller-y 8,8° leveysasteesta → ~11,2 webin astetta.
+            double h = NostoSaannot.LehdenOsuus(-5.1, 42.3, 8.2, 51.1, 100, 20);
+            Oleta.Tosi(h > 0.5 && h < 0.65, "korkeus Millerinä: " + h);
+            Oleta.Tosi(Math.Abs(NostoSaannot.LehdenOsuus(-5.1, 42.3, 8.2, 51.1, 13.3, 1000) - 1.0) < 1e-6, "leveys pituusasteina ilman cos");
+            Oleta.Tosi(NostoSaannot.LehtiNakyvissa(0.5, false) && !NostoSaannot.LehtiNakyvissa(0.49, false), "0,5 raja");
+            Oleta.Tosi(NostoSaannot.LehtiNakyvissa(0.3, true) && !NostoSaannot.LehtiNakyvissa(0.29, true), "kokonaisena 0,3");
+        }
+
         /// <summary>Koepaketin v50 ankkurit: Versailles ja Iraklion piirtyvät omaan paikkaansa (web mitat kohta 4).</summary>
         [Testi]
         static void KoepaketinAnkkurit()
