@@ -8,7 +8,7 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260930-j.md`** (uusin: #3702 äänet pidossa, #3701 uusi rakenne;
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20260930-k.md`** (uusin: laatutyö B+C, #3711; edellinen -j: #3702 äänet pidossa, #3701 uusi rakenne;
    SITOVA: ei äänigenerointia ilman omistajan lupaa), edellinen `…-20260930-i.md`
    sekä `…-20260929-h.md` ja `…-g.md` (uusin: omistajan 22.28 päätös, työnjako
    Siirtosepän kanssa, tehtävät 1–5) ja sen säännöt `…-f.md`:stä.
