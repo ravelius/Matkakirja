@@ -409,11 +409,42 @@ namespace Matkakirja.Natiivi
 
         // --- kysymys ------------------------------------------------------------------
 
+        /// <summary>Kortin aihe kysymyksen mukana (web polloKysy { aihe }, js/fokusnosto.js nostonAihe).</summary>
+        public sealed class Aihe
+        {
+            public string Otsake, Nimi, Tyyppi, Teksti;
+        }
+
+        /// <summary>
+        /// KORTIN AIHE KONTEKSTIIN (omistajan löydös 30.9.2026, TF 1.1 (78/79), iPad: Segovian akvedukti → "Miten
+        /// akveduktin ikä selvitettiin?" → pulu: "Kysymyksessä ei kerrota, mistä akveduktista on kyse"). Nostokortin
+        /// kysymykset ja korostetut sanat antavat kortin otsikon ja tekstin; ne kulkevat vain tämän kysymyksen
+        /// kontekstissa (jatkot nojaavat historiaan, jossa ensimmäinen vastaus jo nimeää aiheen).
+        /// </summary>
+        public static Aihe NostonAihe(Nosto n)
+        {
+            if (n == null || string.IsNullOrWhiteSpace(n.Otsikko)) return null;
+            string teksti = string.Join(" ", new[] { n.Ingressi, n.Teksti }.Where(t => !string.IsNullOrWhiteSpace(t)));
+            bool kohde = n.Laji == NostoLaji.Kohde;
+            return new Aihe
+            {
+                Otsake = kohde ? "Kartalla auki oleva kohdetietoruutu" : "Kortti, josta pelaaja kysyy",
+                Nimi = n.Otsikko,
+                Tyyppi = kohde && !string.IsNullOrWhiteSpace(n.Luokka) ? n.Luokka.ToLowerInvariant() : null,
+                Teksti = teksti.Length > 0 ? teksti : null,
+            };
+        }
+
+        Aihe kysymyksenAihe;
+        const int KohteenKatto = 900;
+
         /// <param name="puhe">saneltu kysymys = puhevuoro (web kysy { puhe: true }): vastaus luetaan aina</param>
-        public void Kysy(string kysymys, bool jatko = false, bool puhe = false)
+        /// <param name="aihe">kortti, josta kysytään (NostonAihe); null = ei korttia</param>
+        public void Kysy(string kysymys, bool jatko = false, bool puhe = false, Aihe aihe = null)
         {
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
+            kysymyksenAihe = aihe;
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki) Avaa(false);
             LopetaPuheVuoro();
@@ -459,8 +490,16 @@ namespace Matkakirja.Natiivi
         /// <param name="raaka">striimin kertymä sellaisenaan (käsite- ja puhetagit mukana) virkevirran luennalle</param>
         IEnumerator Laheta(string kysymys, bool jatko, Action<Tulos> valmis, Action<string> osittain = null, Action<string> raaka = null)
         {
+            string konteksti = Konteksti(HaeAineisto(kysymys));
+            // Todennus (kehittäjä): kontekstin alku lokiin, aineisto-osio pois (kortin aihe näkyy näkymärivin perässä).
+            if (Asetukset.Kehittaja)
+            {
+                int aineistoAlkaa = konteksti.IndexOf("\n\nPELIN", StringComparison.Ordinal);
+                var lokiin = (aineistoAlkaa > 0 ? konteksti.Substring(0, aineistoAlkaa) : konteksti).Replace("\n", " | ");
+                Debug.Log("MATKAKIRJA pulu konteksti: " + (lokiin.Length > 500 ? lokiin.Substring(0, 500) + "…" : lokiin));
+            }
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
-                .Append(",\"konteksti\":").Append(PeliApu.Json(Konteksti(HaeAineisto(kysymys))))
+                .Append(",\"konteksti\":").Append(PeliApu.Json(konteksti))
                 .Append(",\"kehys\":").Append(PeliApu.Json(Kehys(kysymys, jatko)))
                 // Äänitagit (omistaja 27.9. klo 23.1x): tämä versio siivoaa ne näytöltä (Nakyva), joten worker saa liittää
                 // kehotteeseen tagisäännön; vanhat versiot eivät lähetä kenttää eivätkä saa tageja (web PR #3513).
@@ -926,6 +965,7 @@ namespace Matkakirja.Natiivi
             if (kysymys.Length == 0 || kysyy) return false;
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             kysyy = true;
+            kysymyksenAihe = null;
             UiKerros.Hae().StartCoroutine(Laheta(kysymys, false, t =>
             {
                 kysyy = false;
@@ -1210,6 +1250,18 @@ namespace Matkakirja.Natiivi
                 }
                 sb.Append("\nMatkapäivä: ").Append(o.Matka.Tila.Paiva());
                 sb.Append("\nNäkymä: ").Append(o.LehtiAuki ? "kaupunkilehti" : o.KorttiKaupunki != null ? "kaupunkikortti: " + (UiSisalto.Kaupunki(o.KorttiKaupunki)?.Nimi ?? o.KorttiKaupunki) : "kartta");
+            }
+            // Kortin aihe (web kokoaKonteksti kohde) vain kysymyksen omassa pyynnössä (aineisto != null), ei ehdotuksissa.
+            var aihe = aineisto != null ? kysymyksenAihe : null;
+            if (aihe?.Nimi != null)
+            {
+                sb.Append('\n').Append(aihe.Otsake).Append(": ").Append(aihe.Nimi.Trim());
+                if (aihe.Tyyppi != null) sb.Append(" (").Append(aihe.Tyyppi).Append(')');
+                if (aihe.Teksti != null)
+                {
+                    var t0 = aihe.Teksti.Trim();
+                    sb.Append("\nTietoruudun teksti: ").Append(t0.Length > KohteenKatto ? t0.Substring(0, KohteenKatto - 1) + "…" : t0);
+                }
             }
             var v = avaruudessa ? null : Fokusvirrat.Hae(kaupunki);
             if (v?.Teksti != null)
