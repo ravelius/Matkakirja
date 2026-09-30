@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2435';
+const CACHE = 'matkakirja-2026-09-21.2436';
 const SHELL = [
   './',
   './index.html',
@@ -701,6 +701,7 @@ const SHELL = [
   './js/packs/maastokohteet-aus.js',
   './js/packs/maastokohteet-aut.js',
   './js/packs/maastokohteet-bih.js',
+  './js/packs/maastokohteet-blr.js',
   './js/packs/maastokohteet-bol.js',
   './js/packs/maastokohteet-bra.js',
   './js/packs/maastokohteet-can.js',
@@ -713,6 +714,7 @@ const SHELL = [
   './js/packs/maastokohteet-cub.js',
   './js/packs/maastokohteet-cyp.js',
   './js/packs/maastokohteet-cze.js',
+  './js/packs/maastokohteet-deu.js',
   './js/packs/maastokohteet-dnk.js',
   './js/packs/maastokohteet-dza.js',
   './js/packs/maastokohteet-ecu.js',
@@ -785,6 +787,7 @@ const SHELL = [
   './js/packs/maastokohteet-slb.js',
   './js/packs/maastokohteet-sle.js',
   './js/packs/maastokohteet-som.js',
+  './js/packs/maastokohteet-srb.js',
   './js/packs/maastokohteet-swe.js',
   './js/packs/maastokohteet-syr.js',
   './js/packs/maastokohteet-tcd.js',
