@@ -124,4 +124,42 @@ export const MAASTOKOHTEET_DEU = [
     lahde: 'en-Wikipedia "Naumburg Cathedral", osiot "History", "Description" ja "Today" '
       + '(tarkistettu 30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ C, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'bremenin-raatihuone',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/deu-nosto-bremenin-raatihuone-7af99c63.jpg',
+      lyhyt: 'Rolandin patsas ja raatihuoneen koristeellinen julkisivu.',
+      selite: 'Alhaalta kuvassa Rolandin patsas miekkoineen ja kotkakilpineen nousee vasemmalla. Oikealla näkyy raatihuoneen runsaasti koristeltu renessanssijulkisivu isoine ikkunoineen.',
+      lahde: 'Valokuva: Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Dietmar Rabich',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bremen,_Rathaus_--_2021_--_6357.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Bremenin raatihuone',
+    nimio: 'Bremenin raati',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Minä vuonna raatihuone ja Roland liitettiin UNESCOn maailmanperintöön?',
+      'Kuinka korkea Roland-patsas on?',
+    ],
+    korostukset: ['Roland|Roland'],
+    nappi: 'Roland vartioi kaupungin vapautta',
+    // 8.8075 E / 53.076 N — en-Wikipedia "Bremen Town Hall" ja "Bremen Roland", osiot "History" ja "Architecture"
+    laudat: {
+      maailmankartta: { x: 6126.9, y: 1253.8 },
+    },
+    teksti: 'Bremenin raatihuone seisoo kaupungin torilla, ja sen edessä on Roland-patsas. '
+      + 'Gootilainen alkuperäisrakennus suunniteltiin noin vuonna 1400, ja sen mitat ovat '
+      + '41,5 × 15,8 metriä. Torin puoleinen julkisivu uudistettiin vuosina 1608–1612 Weserin '
+      + 'renessanssin tyyliin. Roland vuodelta 1404 on 5,47 metriä korkea, ja sen kilvessä on '
+      + 'kaksipäinen kotka. Sisällä Güldenkammer sisustettiin vuonna 1905 Heinrich Vogelerin '
+      + 'jugendtyylillä. Legendan mukaan kaupunki pysyy vapaana, kunhan Roland vartioi. '
+      + 'Raatihuone ja patsas otettiin UNESCOn maailmanperintöluetteloon vuonna 2004.',
+    lahde: 'en-Wikipedia "Bremen Town Hall" ja "Bremen Roland", osiot "History" ja '
+      + '"Architecture" (tarkistettu 30.9.2026).',
+  },
 ];

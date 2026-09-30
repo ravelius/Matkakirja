@@ -321,5 +321,145 @@ export const MAASTOKOHTEET_ITA = [
     lahde: 'en-Wikipedia "Amalfi Coast", johdanto ja osiot "Geography", "History" ja '
       + '"Agriculture" (tarkistettu 30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ C, 30.9.2026 — 4 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'tropea',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-tropea-abe039c8.jpg',
+      lyhyt: 'Santa Maria dell\'Isola kohoaa kalliolla meren edessä.',
+      selite: 'Vaalea, raidallinen kirkkorakennus kellotorneineen seisoo kalliolla ja puiden reunustamana. Taustalla levittäytyy tyyni sininen meri.',
+      lahde: 'Valokuva: Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Benjamin Smith',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tropea_-_Santa_Maria_dell\'Isola_-_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Tropea',
+    nimio: 'Tropea',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Millä rannikolla Tropea sijaitsee?',
+      'Millaisella kalliolla Santa Maria dell\'Isola on?',
+    ],
+    korostukset: ['Santa Maria dell\'Isola|Santa Maria dell\'Isola'],
+    nappi: 'Kirkko melkein saarella meren äärellä',
+    // 15.8948 E / 38.6754 N — en-Wikipedia "Tropea", osiot "Main sights" ja "Beaches"
+    laudat: {
+      maailmankartta: { x: 6363.2, y: 1854.7 },
+    },
+    teksti: 'Tropea on noin 5 700 asukkaan kaupunki Calabrian Tyrrhenanmeren rannikolla, '
+      + 'Sant\'Eufemian lahden reunalla. Sen tunnetuin näkymä on Santa Maria dell\'Isola, '
+      + 'kirkko ja luostari kallionkielekkeellä, joka näyttää melkein saarelta. Paikka '
+      + 'liitetään benediktiiniläisiin, ja kirkolle pääsee kaupungin korkealta rannikolta. '
+      + 'Kaupungin muita nähtävyyksiä ovat tuomiokirkko ja 1600–1700-lukujen palatsit. Tropea '
+      + 'valittiin vuonna 2021 Italian kauneimmaksi kyläksi, ja se kuuluu Italian kauneimpien '
+      + 'kylien yhdistykseen.',
+    lahde: 'en-Wikipedia "Tropea", osiot "Main sights" ja "Beaches" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'gerace',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-gerace-b09010cb.jpg',
+      lyhyt: 'Geracen tuomiokirkon keskilaiva pylväsriveineen.',
+      selite: 'Pitkän laivan molemmin puolin kulkee kaaria kannattavia pylväitä, ja katossa näkyvät tummat puupalkit.',
+      lahde: 'Valokuva: Jacopo Werther, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jacopo Werther',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cattedrale_di_Gerace_(Reggio_Calabria)_-_Italy_-_6_June_2009.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Gerace',
+    nimio: 'Gerace',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mistä Geracen tuomiokirkon 13 pylvästä on peräisin?',
+      'Minkä valloittajan käsiin kaupunki joutui vuonna 1059?',
+    ],
+    korostukset: ['tuomiokirkko|tuomiokirkko'],
+    nappi: 'Vuoristokaupunki ja antiikin pylväät',
+    // 16.217 E / 38.267 N — en-Wikipedia "Gerace", osiot "History" ja "Main sights"
+    laudat: {
+      maailmankartta: { x: 6373.9, y: 1870.5 },
+    },
+    teksti: 'Gerace on Calabrian vuoristokaupunki noin 500 metrin korkeudessa, kymmenisen '
+      + 'kilometriä sisämaahan Locrista. Perimätiedon mukaan rannikon asukkaat pakenivat '
+      + 'vuonna 915 saraseenien hyökkäyksiä vuorille, ja haukka johdatti heidät paikalle. '
+      + 'Normannit valloittivat kaupungin vuonna 1059. Kaupungin tunnetuin rakennus on '
+      + 'normannityylinen tuomiokirkko, joka kuuluu Calabrian suurimpiin uskonnollisiin '
+      + 'rakennuksiin. Sen laivaa jakavat 13 pylvästä, jotka on tuotu Locrin muinaisista '
+      + 'temppeleistä. Kirkon kryptaan pääsee alas, ja vuonna 1996 perustettu museo täydentää '
+      + 'kokonaisuutta.',
+    lahde: 'en-Wikipedia "Gerace", osiot "History" ja "Main sights" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'saepinum',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-saepinum-b00de52a.jpg',
+      lyhyt: 'Porta Bojanon kaari Saepinumin muurissa.',
+      selite: 'Kiviverhoiltu kaari avautuu muurissa, ja sen läpi jatkuu kivetty tie.',
+      lahde: 'Valokuva: Stapinium, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Stapinium',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:PortaBoiano(Saepinum-Altilia)outside.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    nimi: 'Saepinum (Altilia)',
+    nimio: 'Saepinum',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Minä vuonna roomalaiset valtasivat Saepinumin?',
+      'Millä tekniikalla Saepinumin alakaupungin muurit rakennettiin?',
+    ],
+    korostukset: ['Porta Bojano|Porta Bojano'],
+    nappi: 'Roomalaiskaupunki Molisen sisämaassa',
+    // 14.6167 E / 41.4333 N — en-Wikipedia "Saepinum", osiot "History", "City walls" ja "Excavations"
+    laudat: {
+      maailmankartta: { x: 6320.6, y: 1746.2 },
+    },
+    teksti: 'Saepinum on muinainen roomalainen kaupunki Molisessa, noin 15 kilometriä '
+      + 'Campobassosta etelään lähellä nykyistä Sepinon kylää. Roomalaiset valtasivat paikan '
+      + 'vuonna 293 eaa., ja alakaupungin muurit rakennettiin opus reticulatum -tekniikalla '
+      + 'vuosien 2 eaa. ja 4 jaa. välillä. Muuri ympäröi noin 12 hehtaaria, ja siinä on 19 '
+      + 'säilynyttä pyöreää tornia sekä neljä porttia, kuten Porta Bojano. Kaupunkiin kuului '
+      + 'muun muassa teatteri ja foorumi.',
+    lahde: 'en-Wikipedia "Saepinum", osiot "History", "City walls" ja "Excavations" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'termolin-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/ita-nosto-termolin-linna-99e0dd87.jpg',
+      lyhyt: 'Termolin linnan kivimuurit ja kellotorni sinistä taivasta vasten.',
+      selite: 'Alhaalta kuvattu linna nousee jyrkkään kaltevana kivimuurina, ja sen päällä on kellolla varustettu torni.',
+      lahde: 'Valokuva: C.lapia, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'C.lapia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castello_Svevo_di_Termoli.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Termolin linna',
+    nimio: 'Termolin linna',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka rakennutti linnan 1000-luvulla?',
+      'Mikä vahingoitti linnaa ennen vuoden 1240 kunnostusta?',
+    ],
+    korostukset: ['Castello Svevo|Castello Svevo'],
+    nappi: 'Adrianmeren rannan vanha linna',
+    // 14.9833 E / 42 N — en-Wikipedia "Termoli", osiot "History" ja "Main sights"
+    laudat: {
+      maailmankartta: { x: 6332.8, y: 1723.6 },
+    },
+    teksti: 'Termolin linna eli Castello Svevo hallitsee Adrianmeren rannalla sijaitsevan '
+      + 'Termolin vanhaa kaupunkia. Normannikauden linnan rakennutti 1000-luvulla Loritellon '
+      + 'kreivi Robert I. Fredrik II:n aikana linnaa kunnostettiin vuonna 1240 sen jälkeen, '
+      + 'kun venetsialaisten laivasto oli vahingoittanut sitä. Kaupungin ympäri kulki '
+      + 'aikanaan muuri, ja siitä on jäljellä yksi torni. Kaupunki koki vuonna 1566 '
+      + 'turkkilaisten ryöstön. Vanha kaupunki on kunnostettu, ja sen talot on maalattu '
+      + 'värikkäiksi, mutta linna on yhä sen näkyvin maamerkki.',
+    lahde: 'en-Wikipedia "Termoli", osiot "History" ja "Main sights" (tarkistettu 30.9.2026).',
+  },
 ];
 

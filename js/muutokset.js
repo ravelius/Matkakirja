@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2441, teksti: 'Nostot kierros 2 erä C: 10 kohdetta IRL, ITA, DEU' },
   { v: 2440, teksti: 'Nostot kierros 2, erä B: 10 kohdetta kuvineen C… (#3677)' },
   { v: 2439, teksti: 'Testi: Livian kuplan ajastin näennäisellä kello… (#3676)' },
   { v: 2438, teksti: 'Nostot kierros 2, erä A: 10 kohdetta kuvineen R… (#3675)' },
