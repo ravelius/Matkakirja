@@ -175,10 +175,10 @@ Shader "Matkakirja/Linssit/Yokuori"
                     float2 e = saturate(eu);
                     float2 tt = e * 2.0;
                     float2 tuv = float2(frac(min(tt.x, 1.9999)), 1.0 - frac(min(tt.y, 1.9999)));
-                    half r;
-                    if (tt.x < 1.0) r = tt.y < 1.0 ? SAMPLE_TEXTURE2D(_ValotT00, sampler_ValotT00, tuv).r : SAMPLE_TEXTURE2D(_ValotT01, sampler_ValotT00, tuv).r;
-                    else            r = tt.y < 1.0 ? SAMPLE_TEXTURE2D(_ValotT10, sampler_ValotT00, tuv).r : SAMPLE_TEXTURE2D(_ValotT11, sampler_ValotT00, tuv).r;
-                    sEu.r = r;
+                    half2 rg;   // R = valot, G = vesi (GSHHG, tarkempi kuin 2048²:n vesimaski)
+                    if (tt.x < 1.0) rg = tt.y < 1.0 ? SAMPLE_TEXTURE2D(_ValotT00, sampler_ValotT00, tuv).rg : SAMPLE_TEXTURE2D(_ValotT01, sampler_ValotT00, tuv).rg;
+                    else            rg = tt.y < 1.0 ? SAMPLE_TEXTURE2D(_ValotT10, sampler_ValotT00, tuv).rg : SAMPLE_TEXTURE2D(_ValotT11, sampler_ValotT00, tuv).rg;
+                    sEu = rg;
                 }
                 half l = lerp(sMaa.r * (half)_MaaVoima, sEu.r, euPaino);
                 half vesi = lerp(sMaa.g, sEu.g, euPaino);

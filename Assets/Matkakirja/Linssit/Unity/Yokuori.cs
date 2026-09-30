@@ -152,14 +152,15 @@ namespace Matkakirja.Natiivi
             string[] nimet = { "00", "10", "01", "11" };
             for (int i = 0; i < 4; i++)
             {
-                byte[] l = null; int w = 0, h = 0;
+                byte[] rg = null; int w = 0, h = 0;
                 string tiedosto = "iss-yovalot-8192-" + nimet[i] + "-" + juuri.GetHashCode().ToString("x8") + ".jpg";
-                yield return Hae(juuri.TrimEnd('/') + "/eurooppa-8192-" + nimet[i] + ".jpg", tiedosto, (k, kw, kh) => { l = k; w = kw; h = kh; });
-                if (l == null) { Debug.LogWarning("MATKAKIRJA yövalot: tarkka tiili " + nimet[i] + " puuttuu, jäädään 2048²:een"); yield break; }
+                // Karttasepän tiilet: R = valot, G = vesi (GSHHG), B = 0 → suoraan RG16 (ei luminanssia, joka sekoittaisi kanavat).
+                yield return Hae(juuri.TrimEnd('/') + "/eurooppa-8192-" + nimet[i] + ".jpg", tiedosto, (k, kw, kh) => { rg = k; w = kw; h = kh; }, true);
+                if (rg == null) { Debug.LogWarning("MATKAKIRJA yövalot: tarkka tiili " + nimet[i] + " puuttuu, jäädään 2048²:een"); yield break; }
                 if (tarkat[i] != null) Destroy(tarkat[i]);
-                var t = new Texture2D(w, h, TextureFormat.R8, true, true)
+                var t = new Texture2D(w, h, TextureFormat.RG16, true, true)
                     { name = "iss-valot-8192-" + nimet[i], wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear, anisoLevel = 2 };
-                t.GetPixelData<byte>(0).CopyFrom(l);
+                t.GetPixelData<byte>(0).CopyFrom(rg);
                 t.Apply(true, true);
                 tarkat[i] = t;
                 materiaali.SetTexture("_ValotT" + nimet[i], t);
@@ -203,7 +204,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kuva ämpäristä tai välimuistista luminanssiksi (tavu pikseliä kohden, rivi 0 alhaalla); null = ei saatu.</summary>
-        static IEnumerator Hae(string url, string tiedosto, Action<byte[], int, int> valmis)
+        static IEnumerator Hae(string url, string tiedosto, Action<byte[], int, int> valmis, bool rgKanavat = false)
         {
             string polku = Path.Combine(Application.persistentDataPath, "kuvat", tiedosto);
             byte[] tavut = null;
@@ -224,8 +225,17 @@ namespace Matkakirja.Natiivi
             var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, false);
             if (!kuva.LoadImage(tavut, false)) { Destroy(kuva); valmis(null, 0, 0); yield break; }
             var px = kuva.GetPixels32();
-            var l = new byte[px.Length];
-            for (int i = 0; i < px.Length; i++) l[i] = (byte)((px[i].r * 54 + px[i].g * 183 + px[i].b * 19) >> 8);
+            byte[] l;
+            if (rgKanavat)
+            {
+                l = new byte[px.Length * 2];
+                for (int i = 0; i < px.Length; i++) { l[2 * i] = px[i].r; l[2 * i + 1] = px[i].g; }
+            }
+            else
+            {
+                l = new byte[px.Length];
+                for (int i = 0; i < px.Length; i++) l[i] = (byte)((px[i].r * 54 + px[i].g * 183 + px[i].b * 19) >> 8);
+            }
             int kw = kuva.width, kh = kuva.height;
             Destroy(kuva);
             valmis(l, kw, kh);
