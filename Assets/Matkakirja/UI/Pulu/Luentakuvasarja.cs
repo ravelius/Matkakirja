@@ -123,11 +123,21 @@ namespace Matkakirja.Natiivi
             float korkeus = 0f;
             foreach (var k in kortit)
             {
-                k.style.top = Mathf.Max(0f, yla);
-                k.style.right = 28f;
-                k.style.left = StyleKeyword.Auto;
                 float h = k.layout.height;
                 if (!float.IsNaN(h)) korkeus = Mathf.Max(korkeus, h);
+            }
+            // Omistaja 30.9. (TF 1.1 (81), Macin iPad): Ohita ei näkynyt luennan aikana. iPadilla ja Macilla kaistale näyttää
+            // koko luentotekstin ja kasvaa pitkäksi, jolloin kuva ja Ohita sen alla valuivat ruudun alareunan yli. Kuva ja
+            // Ohita pysyvät nyt ruudun sisällä: paikka kaistaleen alla, mutta nostetaan niin, että Ohita mahtuu alareunaan.
+            float ohitaKorkeus = float.IsNaN(ohita.layout.height) || ohita.layout.height <= 0f ? 44f : ohita.layout.height;
+            float kuvanKorkeus = korkeus > 0f ? korkeus : 120f;
+            float alin = p.height - AlaVara - ohitaKorkeus - 18f - kuvanKorkeus;
+            yla = Mathf.Max(0f, Mathf.Min(yla, alin));
+            foreach (var k in kortit)
+            {
+                k.style.top = yla;
+                k.style.right = 28f;
+                k.style.left = StyleKeyword.Auto;
             }
             // Ohita kuvan alle oikeaan reunaan (Päätoimittaja 30.9.: 1.0.71:ssä Ohita peitti alhaalla Liiku-napin).
             // Pakka ja Ohita ovat samassa turva-säiliössä, joten pakan koordinaatit käyvät sellaisenaan.
@@ -135,8 +145,10 @@ namespace Matkakirja.Natiivi
             ohita.style.bottom = StyleKeyword.Auto;
             ohita.style.translate = new Translate(0, 0);
             ohita.style.right = 28f;
-            ohita.style.top = Mathf.Max(0f, yla) + (korkeus > 0f ? korkeus : 120f) + 18f; // kallistus ja pinon siirto mukaan
+            ohita.style.top = yla + kuvanKorkeus + 18f; // kallistus ja pinon siirto mukaan
         }
+        /// <summary>Ohitan alareunan vara: sama kuin USS:n alkuperäinen bottom 110 (Liiku-napin yläpuolella).</summary>
+        const float AlaVara = 110f;
         IVisualElementScheduledItem paikanSeuranta;
         /// <summary>Matkakirjakaistaleen laatikko paneelissa (Matkakirjakortti.Rajat), tyhjä jos kaistale ei näy.</summary>
         public Func<Rect> Kaistale;
