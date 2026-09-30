@@ -68,3 +68,33 @@ test('jokainen js/dioraama/rakennukset/<id>/blender.json tuottaa hyväksytyn pak
     assert.ok(json.tilat.length > 0 && json.tilat.every((t) => t.glb.tiedosto.startsWith('blender/tilat/')), id);
   }
 });
+
+test('kuoren huippu-taso: 8k-atlas vain jos se on blender.json:ssa, muuten 4k (laatusuunnitelma 30.9.)', () => {
+  const ilman = kopio(RAKENNUS);
+  lisaaBlender(ilman, { ...B, tiedostot: B.tiedostot.filter((t) => !t.polku.includes('-8k')) });
+  assert.match(ilman.ulkokuori.tekstuurit.huippu, /ulkokuori-4k-4x4\.astcm$/);
+  const lisa = ['ulkokuori/ulkokuori-8k-4x4.astcm', 'ulkokuori/ulkokuori-hamara-8k-4x4.astcm', 'ulkokuori/ulkokuori-hamara-8k.jpg']
+    .map((polku) => ({ polku, sha256: 'a'.repeat(64), tavuja: 1 }));
+  const kanssa = kopio(RAKENNUS);
+  lisaaBlender(kanssa, { ...B, tiedostot: [...B.tiedostot.filter((t) => !t.polku.includes('-8k')), ...lisa] });
+  assert.match(kanssa.ulkokuori.tekstuurit.huippu, /ulkokuori-8k-4x4\.astcm$/);
+  assert.match(kanssa.ulkokuori.tekstuurit.hamara.huippu, /ulkokuori-hamara-8k-4x4\.astcm$/);
+  assert.match(kanssa.ulkokuori.tekstuurit.normaali, /ulkokuori-4k-4x4\.astcm$/);
+});
+
+test('kuoren detalji (hybridi-PBR, menetelmä B): vain jos maski ja 4 kirjastomateriaalia ovat blender.json:ssa', () => {
+  const ilman = kopio(RAKENNUS);
+  const perus = B.tiedostot.filter((t) => !t.polku.startsWith('kirjasto/') && !t.polku.includes('hybridi/'));
+  lisaaBlender(ilman, { ...B, tiedostot: perus });
+  assert.equal(ilman.ulkokuori.detalji, undefined);
+  const idt = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio'];
+  const lisa = ['ulkokuori/hybridi/kuori-materiaali-2k.png',
+    ...idt.flatMap((id) => [`kirjasto/materiaali/${id}/${id}_diff.jpg`, `kirjasto/materiaali/${id}/${id}_nor_gl.jpg`])]
+    .map((polku) => ({ polku, sha256: 'b'.repeat(64), tavuja: 1 }));
+  const kanssa = kopio(RAKENNUS);
+  lisaaBlender(kanssa, { ...B, tiedostot: [...perus, ...lisa] });
+  const d = kanssa.ulkokuori.detalji;
+  assert.equal(d.maski, 'blender/ulkokuori/hybridi/kuori-materiaali-2k.png');
+  assert.deepEqual(d.kanavat.map((k) => k.id), idt);
+  for (const k of d.kanavat) assert.ok(k.diff.startsWith('blender/kirjasto/') && k.nor.endsWith('_nor_gl.jpg') && k.toisto_m > 0, k.id);
+});
