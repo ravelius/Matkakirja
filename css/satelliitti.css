@@ -246,6 +246,18 @@ body.livia-astronautti-paalla .livia-lentonayttamo.livia-astronautti-puhuu {
   animation-play-state: paused;
 }
 
+/* EVA-valot pysyvät omissa SVG-ryhmissään: Cupolan päivä/yö-tila voi
+ * säätää voimakkuutta muuttamatta Pulun varjossa olevaa peruskuvaa. */
+.livia-lentonayttamo [data-part="eva-kasvovalo"] {
+  opacity: var(--livia-eva-kasvovalo, 1);
+}
+.livia-lentonayttamo [data-part="eva-kyparalamput"] {
+  opacity: var(--livia-eva-kyparalamput, 1);
+}
+.livia-lentonayttamo [data-part="eva-maavalo"] {
+  opacity: var(--livia-eva-maavalo, 1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.livia-astronautti-paalla .livia-lentonayttamo:not([hidden]) {
     animation: none;
