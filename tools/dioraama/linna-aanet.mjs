@@ -158,14 +158,9 @@ writeFileSync(join(ULOS, 'aanet.json'), JSON.stringify({
   aanet: tulos }, null, 2) + '\n');
 writeFileSync(join(ULOS, 'kestot.json'), JSON.stringify(Object.fromEntries(Object.entries(tulos).map(([k, v]) => [k, v.kesto_s])), null, 2) + '\n');
 
-// --- Keittiön 29.9. toimitus (31 kpl, mp3 192 kbit/s) → mono 64 kbit/s samaan kansioon (pankissa versio 2). ---
-const KEITTIO = '/Users/Shared/Claude/proto-3d/lokit/linna-keittio-aanet/dioraama/olavinlinna/aanet';
-if (process.argv.includes('--keittio')) {
-  for (const f of execFileSync('ls', [KEITTIO]).toString().trim().split('\n')) {
-    aja(['-i', join(KEITTIO, f), '-ac', '1', '-c:a', 'libmp3lame', '-b:a', '64k', join(ULOS, 'dioraama/olavinlinna/aanet', f)]);
-  }
-  console.log('keittiö uudelleenkoodattu');
-}
+// Puhetta (hahmot, Pulu, kertoja) EI koodata uudelleen (Päätoimittaja 30.9., omistaja kuuli säröä): alkuperäinen
+// eleven_v4 192 kbit/s tai vähintään 128 kbit/s mono. Vain silmukat ja tehosteet pakataan 64–96 kbit/s:iin.
+// (Keittiön äänien 64k-uudelleenkoodaus poistettu; kopiot eivät koskaan päätyneet ämpäriin.)
 
 // --- Kuuntelukoosteet omistajalle: 30 s per tila suunnitelman kohdan 2 kertoimilla (silmukat + kerta-äänet). ---
 const KOOSTEET = {

@@ -19,9 +19,9 @@ PD-lisenssillä, ja kunkin lisenssi ja URL on kohdassa 4. mp3- ja AAC-tiedostot 
   vertailukelpoisia keittiön äänien kanssa.
 - **Silmukat:** 20–30 s, saumaton (loppu ristihäivytetään alkuun 1,5 s, ffmpeg `acrossfade`), ja alku ja loppu
   leikataan nollakohtaan.
-- **Mobiilikoodaus:** mono, AAC-LC 64 kbit/s (`.m4a`) tai mp3 64 kbit/s, jos natiivin toistin vaatii mp3:n.
-  Kappelin laulu on stereona 96 kbit/s. Keittiön 31 nykyistä ääntä (mp3 192 kbit/s, 4,2 Mt) koodataan samaan
-  64 kbit/s:iin, ja niiden `versio` nousee arvoon 2.
+- **Mobiilikoodaus:** silmukat ja tehosteet mono mp3 64 kbit/s. Puhe säilyy alkuperäisenä (ks. alla).
+  Kappelin laulu on stereona 96 kbit/s. **Puhetta (hahmot, Pulu, kertoja) ei koodata uudelleen** (Päätoimittaja 30.9.):
+  alkuperäinen 192 kbit/s tai vähintään 128 kbit/s mono. Keittiön 31 ääntä pysyvät ämpärissä alkuperäisinä.
 
 ## 2. Äänimaisema huoneittain
 
@@ -32,7 +32,7 @@ hiotaan laitteella.
 |---|---|---|---|
 | Saapuminen (18 s) | jarvi-laineet 0,7 · linna-tuuli 0,5 | lokit t = 4 ja 11 s (0,6) · kellot-kaukaa t = 9 s (0,4) · **soihtu-syttyy** ×3 soihtujen tahdissa (0,4) | laineet nousevat 3 s:ssa, ja lopussa tuuli laskee yleisnäkymän tasolle 2 s:ssa |
 | Yleisnäkymä | linna-tuuli 0,45 · jarvi-laineet 0,35 · **soihtu-ratina** 0,15 · **keskushalli-ambienssi** 0,08 | lokit 20–45 (0,5) · **laulu-kaukaa** 45–90 (0,18) · kellot-kaukaa 90–180 (0,3) | "hiljainen laulu kaukaa" ja "valo ja sorina" käsikirjoituksen taulukosta vuotavat hiljaa ulos |
-| Keittiö | keittio-ambienssi 1 · tulisija-ratina 0,8 · pata-poreilu 0,6 · vaivaaminen 0,5 | nykyiset (pilkkominen 4–9, askel/ovi/sanko 12–25) | valmis, vain uudelleenkoodaus |
+| Keittiö | keittio-ambienssi 1 · tulisija-ratina 0,8 · pata-poreilu 0,6 · vaivaaminen 0,5 | nykyiset (pilkkominen 4–9, askel/ovi/sanko 12–25) | valmis, alkuperäiset 192 kbit/s säilyvät |
 | Kappeli | **kappeli-ambienssi** 0,6 · **kynttila-ratina** 0,3 | **laulu-kaukaa** 20–40 (0,35) · **kello-kappeli** 60–120 (0,4) · askel-kivi 25–50 (0,3) | pitkä kaiku lähteessä. Laulu on PD-äänite (kohta 4), ei generoitu |
 | Keskushalli ja väentupa | **keskushalli-ambienssi** 0,7 · **takka-ratina** 0,6 | **pikari-1/2** 6–14 (0,5) · **noppa-1/2** 10–20 (0,5) · **penkki** 15–30 (0,4) · askel-puu/kivi 8–18 · ovi-puu 25–50 | sorina ilman erottuvia sanoja. Repliikit duckaavat |
 | Vartiotupa | **vartiotupa-ambienssi** 0,7 | **noppa-1/2** 8–16 (0,5) · **keihas-kolahdus** 20–40 (0,4) | pieni tulisija ja hiljainen puhe |
@@ -52,8 +52,8 @@ kerta-ääni, noin 30–45 s, soitetaan väleissä), soihtu-ratina (silmukka) ja
 | 10 uutta silmukkaa (sis. soihtu-ratina) × noin 25 s | 250 s | 2,0 Mt |
 | laulu-kaukaa, stereo 96 kbit/s, 40 s | 40 s | 0,5 Mt |
 | 15 uutta kerta-ääntä × noin 2,5 s | 38 s | 0,3 Mt |
-| Keittiön 31 ääntä uudelleenkoodattuna (koko nyt 4,2 Mt) | noin 150 s | 1,4 Mt |
-| **Yhteensä (mitattu)** | | **4,2 Mt** (tavoite ≤ 5 Mt) |
+| Keittiön 31 ääntä alkuperäisinä (192 kbit/s, ei uudelleenkoodausta) | noin 150 s | 4,2 Mt |
+| **Uudet yhteensä (mitattu)** | | **2,8 Mt**; keittiön äänet ovat jo ämpärissä |
 
 Puhe (taulujen kohdat, repliikit ja Pulu) ei sisälly tähän, vaan tulee omana eränään, kun tekstit ovat valmiit.
 Noin 90 repliikkiä × 5 s × 8 kt/s on noin 3,6 Mt.
@@ -96,15 +96,15 @@ luetellaan tässä.
 | soihtu-syttyy | DanielVega 479338 | https://freesound.org/people/DanielVega/sounds/479338/ | Torch.wav |
 | laulu-kaukaa | Membeth: *Ecce lignum Crucis* (gregoriaaninen, VI sävelmä), Wikimedia Commons, **{{PD-self}}** | https://commons.wikimedia.org/wiki/File:Ecce.lignum.Crucis.ogg | kolme kerrosta (±0,4 % vire, 38 ja 71 ms viive) → pieni schola, alipäästö 2,2–2,6 kHz ja holvikaiku, häivytys 2 s + 4 s |
 
-Keittiön 29.9. äänet (31 kpl, ElevenLabs, oma tuotanto, pankissa merkintä "CC0 (oma tuotanto)") pysyvät ennallaan ja
-on koodattu uudelleen mono 64 kbit/s:iin.
+Keittiön 29.9. äänet (31 kpl, ElevenLabs, oma tuotanto, pankissa merkintä "CC0 (oma tuotanto)") pysyvät ennallaan
+alkuperäisinä 192 kbit/s:n tiedostoina (ämpäri tarkistettu 30.9.: md5 = toimitus).
 
 Varalla (ladattu, ei käytössä): kyles 450347 (vanha puuovi, lukko ja salpa), Commonsin Membeth *Rorate* ja
 *Veni creator* (PD-self) sekä Bautsch *Factus est repente* (CC0).
 
-**Tuotos:** `proto-3d/_valmiit/linna-aanet/v1/`, jossa `dioraama/olavinlinna/aanet/` sisältää 57 mp3:ta (4,2 Mt),
+**Tuotos:** `proto-3d/_valmiit/linna-aanet/v1/`, jossa `dioraama/olavinlinna/aanet/` sisältää 26 uutta mp3:ta (2,8 Mt),
 `aanet.json` ja `kestot.json` 26 uudesta äänestä, ja `kuuntelu/` sisältää 9 tilan 30 s:n koosteet omistajalle.
-Skripti: `tools/dioraama/linna-aanet.mjs` (`--keittio` uudelleenkoodaa keittiön äänet, `--koosteet` tekee koosteet).
+Skripti: `tools/dioraama/linna-aanet.mjs` (`--koosteet` tekee koosteet).
 Ääniä ei ole kuunneltu Clauden toimesta: tasot on mitattu, mutta sisältö (sanojen erottuvuus sorinassa ja
 kaikujen luonnollisuus) tarkistetaan korvalla koosteista.
 
