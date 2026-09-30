@@ -369,6 +369,19 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA ui lipputanko: yläpaneelin alle ({paras.Value.Lat:0.00}, {paras.Value.Lon:0.00}), {pisteet.Count} ehdokasta");
         }
 
+        /// <summary>Testikomento `ui kartuscha lippu tila`: väistön ehdot (simulaattoridiagnostiikka 30.9.2026).</summary>
+        public string LipunVaistonTila()
+        {
+            var mk = UiNakymat.Hae().Matkakirja;
+            var yla = mk != null && mk.Nakyy ? mk.Rajat : Rect.zero;
+            var ala = Lipputanko.RuutuAlue;
+            string p = kortti.panel != null && ala.HasValue ? PeittaaLipun(ala.Value, Rect.MinMaxRect(yla.xMin, yla.yMin, yla.xMax, yla.yMax + KasvuvaraPt)).ToString() : "-";
+            return $"iso {iso ?? "-"}, tanko {Lipputanko.Maa ?? "-"} {Lipputanko.Paikka}, lippu {(kiinnitettyLippu != null ? "ok" : "null")}, "
+                 + $"paneeli {(kortti.panel != null ? "ok" : "null")} leveys {(kortti.panel != null ? kortti.panel.visualTree.layout.width : 0):0}, "
+                 + $"matkakirja nakyy {mk?.Nakyy} rajat {yla}, ala {(ala.HasValue ? ala.Value.ToString() : "-")}, ruutu {Screen.width}×{Screen.height}, "
+                 + $"peittää {p}, siirretty {lippuSiirretty}, oletus {lipunOletus}";
+        }
+
         /// <summary>
         /// Osuuko tangon ala (ruutupikselit, y ylös) yläpaneeliin (paneelikoordinaatit, y alas) varalla. Ruudun reunaan ulottuva
         /// paneeli jatkuu reunan yli (simulaattori 30.9.: kulman paikka oli ruudun oikean reunan takana koko levyisen matkakirjan

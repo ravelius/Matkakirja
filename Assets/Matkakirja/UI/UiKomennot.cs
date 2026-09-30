@@ -1063,6 +1063,7 @@ namespace Matkakirja.Natiivi
                     var ks = loput.Split(' ');
                     if (ks[0] == "pois") { ui.Kartuscha.Testaa(null, false); return null; }
                     if (ks[0] == "kiinni") { ui.Kartuscha.Sulje(); return null; } // sulkuanimaatio videolle (29.9.)
+                    if (ks[0] == "lippu" && ks.Length > 1 && ks[1] == "tila") return "=" + ui.Kartuscha.LipunVaistonTila();
                     if (ks[0] == "lippu" && ks.Length > 1) // tangon paikka: vanha itäreuna | kulma (oikea yläkulma, 29.9.)
                     {
                         Kartuscha.VanhaLippupaikka = ks[1] == "vanha";
