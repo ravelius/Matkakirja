@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2454, teksti: 'Hahmojen ääninäytteet CI:ssä (#3703)' },
   { v: 2453, teksti: 'TestFlight: versio 1.1 + juokseva build-numero (#3700)' },
   { v: 2452, teksti: 'Nostot kierros 3, erä C: 10 kohdetta kuvineen M… (#3697)' },
   { v: 2451, teksti: 'Olavinlinnan äänimaisema: suunnitelma, CC0/PD-l… (#3698)' },
