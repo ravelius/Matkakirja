@@ -11,6 +11,7 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen
   (↻-ikoni, DioraamaLaatu piirin mukaan), pelikoodari/aani-kerran 62eb8ac9 (maisema/musiikki kerran läpi; savukkeeseen
   Aanisoitin-JSON: maisema "alku":0,"kerran":true,"silmukka":false, pohja "silmukka":false), pelikoodari/apuraha-rajaus
   90412d84 (todennus vasta web #3708:n jälkeen), natiiviseppa/testimykistys 3ab222b4.
+  Avaus irrotettuna (nohup, pid 25701): proto-3d/lokit/natiiviseppa-skriptit/avaa-1075.sh, loki avaa-1075.log.
   KÄÄNNETTY → savukeohje Laitetestaajalle (yllä olevat + regressio) → PASS → BUILD 75 → SHA + muutosrivi Julkaisijalle.
 - **Testimykistys** (TestiMykistys.cs): simulaattorissa lopullinen ulostulo nollaan oletuksena, `aani mittaa` näkee signaalin
   (todennettu FBBD41D7: sini rms 0,124 mykistettynä ja ilman). Peli-komento `aani mykistys 1|0|tila`. KUN BUILD 75 on tehty:
