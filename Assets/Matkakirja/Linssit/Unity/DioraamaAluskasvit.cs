@@ -137,7 +137,10 @@ namespace Matkakirja.Natiivi
             var atlas = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
             { name = "Ymparisto:aluskasvit", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
             if (!atlas.LoadImage(atlasTavut, false)) { UnityEngine.Object.Destroy(atlas); kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei jäsentynyt"); yield break; }
-            atlas.Compress(true);
+            // ETC/ASTC-pakkaus vaatii mip-tasoilta 4:n monikerrat: 1280 × 512 -atlas (5 × 2 solua) ei kelpaa (laite 1.10.: "mip level 7
+            // with dimensions 10×4"), joten pakataan vain kahden potenssin atlas. Pakkaamaton 1280 × 512 on ~3,5 Mt mipeineen.
+            bool pot = Mathf.IsPowerOfTwo(atlas.width) && Mathf.IsPowerOfTwo(atlas.height);
+            if (pot) atlas.Compress(true);
             atlas.Apply(true, true);
             luodut.Add(atlas);
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaPuu");
