@@ -86,3 +86,26 @@ asti ulottuva maa. Hypoteesi on, että näkyvien laattojen määrä ja ilmakehä
 - **Korjaus** (proto linssiseppa/cupola-fps 28f3e947): varjostin `CupolaValot` yhdistää kolme valoa painoineen puolikokoiseen
   RT:hen vain painojen muuttuessa, ja UI piirtää yhden kerroksen. Kompositio on sama. A/B-komento on `astro kyyti valot1 0|1`.
   Laitemittaus odottaa laite-release-käännöstä (Natiiviseppä).
+
+## KORJAUS EDELLISEEN: juurisyy ei ollutkaan reunavalot (ajo 6, klo 03.36–03.46, korjauskäännös 28f3e947)
+
+Vuorotellen tehty A/B korjauskäännöksellä (`iss-cupola-valot1-20260930`, 20 s jaksot, thermal 0 koko ajan):
+
+| Jakso (järjestyksessä) | Mediaani |
+|---|---|
+| yksi kerros (korjaus) | 16,8 ms |
+| kolme kerrosta (ennen) | 18,5 ms |
+| yksi | 23,3 ms |
+| kolme | 24,7 ms |
+| yksi | 23,0 ms |
+| reunavalo kokonaan pois | 23,7 ms |
+| yksi | 24,8 ms |
+
+- **Yhdistetty kerros säästää noin 1,5 ms** (7 %) samalla ulkonäöllä. Se on pieni, mutta johdonmukainen molemmissa pareissa.
+- **Päätelmä "reunavalo = 8 ms" oli ajan sekoittama.** Kaikissa ajoissa Cupola on 30–40 s nopea (~17 ms) ja hidastuu sitten
+  noin 24 ms:iin riippumatta kytkimistä: reunavalo pois myöhään = 23,7 ms. Aiemmat nopeat jaksot sattuivat alkuun.
+- **Syy on Cupolan kokonaiskuorma lähellä GPU:n rajaa.** Kun SoC lämpenee (kellotaajuus laskee jo ennen kuin thermalState
+  muuttuu), Cupola putoaa 60:stä noin 40 fps:iin ja lopulta kuristukseen 30 fps. Seuranta pysyy samassa lämmössä 60 fps:ssä,
+  koska sen näkymä on kevyempi. Piirtokutsuja on tasaisesti noin 107, eli laattoja ei kerry.
+- Suositus ja päätös, ks. viesti Päätoimittajalle: Cupolaan 30 fps:n tavoite (tasainen ja viileä, näkymä liikkuu hitaasti)
+  ja yhdistetty kerros mukaan.
