@@ -17,7 +17,7 @@ Poisto: `matkakirja://omistaja/pois`. Selaimissa: `https://matkakirja.app/?omist
 3. Päiväkatto 20 000 merkkiä, sen jälkeen luenta palaa xAI:hin.
 Huom: kehittäjätila näyttää myös Kehittäjätyökalut Asetuksissa.
 
-## 3. Olavinlinnan tarkempi kuori ämpäriin (Linnanrakentaja, kun PR #3711 on mainissa)
+## 3. Olavinlinnan tarkempi kuori ämpäriin (Linnanrakentaja, kun PR #3711 on mainissa) — AJETTU 30.9. klo 18.4x (9168ff621805ac7f)
 
 Omistaja ajaa itse (isot binäärit hash-kansioon, 89 tiedostoa, 815 Mt; päivitetty 30.9. klo 17):
 ```bash
