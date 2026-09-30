@@ -394,8 +394,10 @@ namespace Matkakirja.Natiivi
             float leveys = kortti.panel.visualTree.layout.width;
             float k = Screen.width / Mathf.Max(1f, leveys);
             var alaPaneelissa = Rect.MinMaxRect(ruutu.xMin / k, (Screen.height - ruutu.yMax) / k, ruutu.xMax / k, (Screen.height - ruutu.yMin) / k);
-            float x0 = yla.xMin <= ReunaPt ? float.MinValue / 4 : yla.xMin - vara;
-            float x1 = yla.xMax >= leveys - ReunaPt ? float.MaxValue / 4 : yla.xMax + vara;
+            // Reunan yli jatkuva paneeli: äärellinen raja (float.MinValue / 4 + leveys pyöristyi nollaksi, jolloin xMax ≈ 0 eikä
+            // mikään osunut; simulaattori 30.9.).
+            float x0 = yla.xMin <= ReunaPt ? -100000f : yla.xMin - vara;
+            float x1 = yla.xMax >= leveys - ReunaPt ? 100000f : yla.xMax + vara;
             var v = Rect.MinMaxRect(x0, yla.yMin - vara, x1, yla.yMax + vara);
             return alaPaneelissa.Overlaps(v);
         }
