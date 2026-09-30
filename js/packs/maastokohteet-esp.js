@@ -823,5 +823,54 @@ export const MAASTOKOHTEET_ESP = [
     lahde: 'en-Wikipedia "University of Salamanca", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 2 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'teide',
+    nimi: 'Teide',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka korkealla Teiden huippu on merenpinnasta?',
+      'Minkä kalderan sisään Teide syntyi?',
+    ],
+    korostukset: ['Las Cañadasin kalderan|Las Cañadasin kalderan'],
+    nappi: 'Espanjan katto meren keskellä',
+    // -16.6394 E / 28.2731 N — en-Wikipedia "Mount Teide", johdanto ja osiot "Geology", "Teide National Park" ja "Cable car"
+    laudat: {
+      maailmankartta: { x: 5278.7, y: 2243.6 },
+    },
+    teksti: 'Teide on Teneriffalla Kanariansaarilla sijaitseva tulivuori ja Espanjan korkein '
+      + 'kohta: 3 715 metriä merenpinnan yläpuolella. Kerrostulivuori syntyi noin 170 000 '
+      + 'vuotta sitten Las Cañadasin kalderan sisään. Köysirata kuljettaa matkustajia lähelle '
+      + 'huippua. Teiden kansallispuisto kirjattiin Unescon maailmanperintöön vuonna 2007.',
+    lahde: 'en-Wikipedia "Mount Teide", johdanto ja osiot "Geology", "Teide National Park" ja '
+      + '"Cable car" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'serra-de-tramuntana',
+    nimi: 'Serra de Tramuntana',
+    nimio: 'Tramuntana',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Kuinka korkea on Baleaarien korkein vuori?',
+      'Miksi viljelyterassit ja vesimyllyt tekivät alueesta maailmanperintökohteen?',
+    ],
+    korostukset: ['Puig Major|Puig Major'],
+    nappi: 'Mallorcan vuoristoinen selkäranka',
+    // 2.6947 E / 39.7308 N — en-Wikipedia "Serra de Tramuntana", osiot "Geography", "Environmental protection" ja "Sustainable Tourism"
+    laudat: {
+      maailmankartta: { x: 5923.2, y: 1813.5 },
+    },
+    teksti: 'Serra de Tramuntana on vuoristo Mallorcan pohjoisrannikolla, ja se muodostaa saaren '
+      + 'pohjoisen selkärangan. Korkein huippu Puig Major nousee 1 436 metriin, ja se on '
+      + 'Baleaarien korkein vuori. UNESCO liitti alueen maailmanperintöluetteloon '
+      + 'kulttuurimaisemana vuonna 2011, sillä vuosituhansien maanviljely niukassa '
+      + 'ympäristössä on synnyttänyt viljelyterasseja, vesimyllyjä ja vedenhallinnan '
+      + 'verkoston. Nykyisin alueella kannustetaan kestävään matkailuun: vaeltamiseen, '
+      + 'pyöräilyyn ja lintujen katseluun.',
+    lahde: 'en-Wikipedia "Serra de Tramuntana", osiot "Geography", "Environmental protection" ja '
+      + '"Sustainable Tourism" (tarkistettu 30.9.2026).',
+  },
 ];
 

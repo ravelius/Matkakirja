@@ -669,5 +669,32 @@ export const MAASTOKOHTEET_NOR = [
     lahde: 'en-Wikipedia "Eidsvollsbygningen", johdanto-osa sekä osiot "History" ja '
       + '"Renovations" (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'kjerag',
+    nimi: 'Kjerag',
+    tyyppi: 'vuori',
+    kysymykset: [
+      'Miten iso kivi on juuttunut kahden kallion väliin?',
+      'Kuinka pitkä vaellus Kjeragboltenille on?',
+    ],
+    korostukset: ['Kjeragbolten|Kjeragbolten'],
+    nappi: 'Kivi kahden kallion välissä',
+    // 6.5878 E / 59.0225 N — en-Wikipedia "Kjerag", osiot "Kjeragbolten", "Hiking" ja "BASE jumping"
+    laudat: {
+      maailmankartta: { x: 6052.9, y: 974 },
+    },
+    teksti: 'Kjerag on 1 132 metriä korkea vuori Lysefjordin eteläreunalla Rogalandissa, ja sen '
+      + 'pohjoispuolella jyrkänne putoaa 984 metriä lähes pystysuoraan fjordiin. Tunnetuin '
+      + 'kohde on Kjeragbolten, noin viiden kuutiometrin kivenlohkare, joka on juuttunut '
+      + 'kahden kallion väliin. Sen päälle voi kävellä ilman varusteita, vaikka alla on 241 '
+      + 'metrin pudotus ja sen jälkeen vielä 735 metrin rinne fjordiin. Vaellus alkaa '
+      + 'Øygardsstølenista ja kestää kumpaankin suuntaan 2,5–3 tuntia. Kallioseinämältä on '
+      + 'hypätty base-hyppyjä vuodesta 1994.',
+    lahde: 'en-Wikipedia "Kjerag", osiot "Kjeragbolten", "Hiking" ja "BASE jumping" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];
 

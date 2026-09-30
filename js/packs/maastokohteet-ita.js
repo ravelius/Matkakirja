@@ -250,5 +250,56 @@ export const MAASTOKOHTEET_ITA = [
       fakta: 'Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä.',
     },
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 2 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'aquileia',
+    nimi: 'Aquileia',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi pikkukaupungissa on niin suuri basilika?',
+      'Milloin roomalaiset perustivat Aquileian?',
+    ],
+    korostukset: ['mosaiikkilattia|mosaiikkilattia'],
+    nappi: 'Roomalainen suurkaupunki ja mosaiikit',
+    // 13.3712 E / 45.7697 N — en-Wikipedia "Aquileia", johdanto ja osiot "History", "Demographics" ja "Basilica"
+    laudat: {
+      maailmankartta: { x: 6279, y: 1569.9 },
+    },
+    teksti: 'Aquileia on Koillis-Italian Friuli-Venezia Giulian pikkukaupunki, jonka roomalaiset '
+      + 'perustivat sotilassiirtokunnaksi vuosina 180–181 eaa. Toisella vuosisadalla jKr. '
+      + 'siellä asui arviolta noin 100 000 ihmistä, kun nykyään asukkaita on runsaat 3 300. '
+      + 'Patriarkka Poppo rakennutti nykyisen basilikan, Santa Maria Assunta, vuonna 1031, ja '
+      + 'patriarkka Marquard of Randeck uudisti sen goottilaiseen tyyliin vuosina 1365–1381. '
+      + 'Basilikassa on varhaiskristillinen mosaiikkilattia. Aquileian patriarkaatti '
+      + 'lakkautettiin 1751. Unesco kirjasi alueen maailmanperintöön vuonna 1998.',
+    lahde: 'en-Wikipedia "Aquileia", johdanto ja osiot "History", "Demographics" ja "Basilica" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'amalfin-rannikko',
+    nimi: 'Amalfin rannikko',
+    nimio: 'Amalfi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mistä limoncellon sitruunat tulevat?',
+      'Kuka ryösti Amalfin vuonna 1137?',
+    ],
+    korostukset: ['sitruunoita|sitruunoita'],
+    nappi: 'Sitruunaterassit meren yllä',
+    // 14.6 E / 40.65 N — en-Wikipedia "Amalfi Coast", johdanto ja osiot "Geography", "History" ja "Agriculture"
+    laudat: {
+      maailmankartta: { x: 6320, y: 1777.3 },
+    },
+    teksti: 'Amalfin rannikko on noin 40 kilometrin pituinen Tyrrhenanmeren rantavyöhyke Salernon '
+      + 'maakunnassa Campaniassa. Alueeseen kuuluu 13 kuntaa, muun muassa Amalfi, Positano, '
+      + 'Ravello ja Vietri sul Mare. Unesco kirjasi rannikon maailmanperintöön vuonna 1997, '
+      + 'ja suojeltu alue on 11 231 hehtaaria. Terassipuutarhoissa viljellään sfusato '
+      + 'amalfitano -sitruunoita, joista valmistetaan limoncelloa. Amalfin herttuakunta oli '
+      + 'vaikutusvaltainen 900- ja 1000-luvuilla, kunnes pisalaiset ryöstivät kaupungin 1137.',
+    lahde: 'en-Wikipedia "Amalfi Coast", johdanto ja osiot "Geography", "History" ja '
+      + '"Agriculture" (tarkistettu 30.9.2026).',
+  },
 ];
 

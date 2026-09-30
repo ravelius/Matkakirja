@@ -844,5 +844,34 @@ export const MAASTOKOHTEET_RUS = [
     lahde: 'en-Wikipedia "Yasnaya Polyana", johdanto-osa sekä osiot "Early history" ja '
       + '"Leo Tolstoy at Yasnaya Polyana" (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT ERÄ 3, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'kaliningradin-tuomiokirkko',
+    nimi: 'Kaliningradin tuomiokirkko',
+    nimio: 'Tuomiokirkko',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Missä filosofi Immanuel Kant lepää?',
+      'Miten kirkon uusi torni saatiin paikalleen vuonna 1994?',
+    ],
+    korostukset: ['Kantin|Kantin'],
+    nappi: 'Kantin hauta Pregolja-joen saarella',
+    // 20.5117 E / 54.7064 N — en-Wikipedia "Königsberg Cathedral", osiot "Kant's Tomb", "Restoration" ja "Museum and current use"
+    laudat: {
+      maailmankartta: { x: 6517.1, y: 1179.4 },
+    },
+    teksti: 'Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen '
+      + 'alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin '
+      + 'vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen '
+      + 'mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. '
+      + 'Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja '
+      + 'kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla '
+      + 'vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, '
+      + 'ja siellä pidetään konsertteja.',
+    lahde: 'en-Wikipedia "Königsberg Cathedral", osiot "Kant\'s Tomb", "Restoration" ja "Museum '
+      + 'and current use" (tarkistettu 30.9.2026).',
+  },
 ];
 
