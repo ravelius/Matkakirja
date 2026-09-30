@@ -45,6 +45,9 @@ nt = mat.node_tree
 bsdf = next(n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED')
 kuva = next(n for n in nt.nodes if n.type == 'TEX_IMAGE')
 uv = kuva.inputs['Vector'].links[0].from_node if kuva.inputs['Vector'].is_linked else None
+if os.environ.get('TEKSTUURI'):   # vertailukoe C: korvaava atlas (esim. tekoälyskaalattu), sama UV
+    kuva.image = bpy.data.images.load(os.environ['TEKSTUURI'])
+    kuva.interpolation = 'Cubic'
 
 
 def kuvasolmu(polku, varitila='sRGB', box=True, mitta=0.7):
@@ -199,6 +202,8 @@ KUVAT = {
     'yleis-vaaka': ([0, 2, 0], 165, 30, 250, 32, 1600, 900),
     'yleis-pysty': ([0, 0, 2], 160, 38, 330, 40, 900, 1600),
     'lahi-muuri': ([-16, 12, -18], 150, 22, 45, 38, 1600, 900),
+    # Vertailukoe A–D (Päätoimittaja 30.9.): tornin lähikuva pelin hämärävalossa, huonekameran etäisyys.
+    'torni-vertailu': ([-19, 14, -21], 150, 12, 26, 34, 1200, 1200),
 }
 for nimi, (kohde, at, ko, et, fov, lw, kh) in KUVAT.items():
     if VAIN and nimi not in VAIN:
