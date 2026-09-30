@@ -490,6 +490,8 @@ namespace Matkakirja.Natiivi
             if (!((kelluvaNyt == true || matala) && Screen.height > Screen.width && !Piilossa && AsetaSaaririvi(r, matala)))
             {
                 kelluvaVaraus = null;
+                // Vaaka (1.0.71-kuva): pystyn saarimusta (66 pt) ulottui piilotetun palkin alle ja näkyi yläreunassa.
+                AsetaSaariMusta(Rect.zero, 1f);
                 palkki.EnableInClassList("mk-ylapalkki--saari", false);
                 palkki.EnableInClassList("mk-ylapalkki--matala", false);
                 pilleri.style.maxWidth = StyleKeyword.Null;
