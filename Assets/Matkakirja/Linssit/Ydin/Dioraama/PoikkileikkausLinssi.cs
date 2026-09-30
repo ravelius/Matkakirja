@@ -228,15 +228,15 @@ namespace Matkakirja.Linssit.Dioraama
             Math.Max(KertojaLentoMin, Math.Min(KertojaLentoMax, Kameraliike.SiirtymanKesto(a, b)));
 
         /// <summary>Kierroksen tila hetkellä t: käynnissä, kamera, jakso (−1 = paluulento yleisnäkymään) ja näkyvä teksti.</summary>
-        (bool Kaynnissa, Asento Kamera, int Jakso, string Teksti) Kierros(double t, bool pysty)
+        (bool Kaynnissa, Asento Kamera, int Jakso, string Teksti, double U) Kierros(double t, bool pysty)
         {
             var jaksot = Rakennus?.Kertoja;
-            if (jaksot == null || jaksot.Count == 0) return (false, default, -1, null);
-            if (kertojaVainUusintana && kertojaAlku < 0) return (false, default, -1, null);
+            if (jaksot == null || jaksot.Count == 0) return (false, default, -1, null, 0);
+            if (kertojaVainUusintana && kertojaAlku < 0) return (false, default, -1, null, 0);
             double s = KertojaAlku;
-            if (t < s || double.IsInfinity(s)) return (false, default, -1, null);
+            if (t < s || double.IsInfinity(s)) return (false, default, -1, null, 0);
             // Huoneen kohdistus kierroksen alun jälkeen katkaisee kierroksen.
-            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return (false, default, -1, null);
+            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return (false, default, -1, null, 0);
             var edellinen = AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
             double kursori = s;
             int ohitus = 0; // kukin napautus päättää täsmälleen yhden jakson
@@ -250,7 +250,7 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     double u = lento > 0 ? (t - kursori) / lento : 1;
                     var kamera = u < 1 ? Kameraliike.SiirtymaAsento(edellinen, kohde, u) : kohde;
-                    return (true, kamera, j, u >= KertojaTekstiOsuus ? jaksot[j].Teksti : null);
+                    return (true, kamera, j, u >= KertojaTekstiOsuus ? jaksot[j].Teksti : null, u);
                 }
                 double uLoppu = lento > 0 ? (loppu - kursori) / lento : 1;
                 edellinen = uLoppu < 1 ? Kameraliike.SiirtymaAsento(edellinen, kohde, uLoppu) : kohde;
@@ -258,8 +258,8 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var yleis = AsentoFor(null, pysty);
             double paluu = KertojaLento(edellinen, yleis);
-            if (t < kursori + paluu) return (true, Kameraliike.SiirtymaAsento(edellinen, yleis, (t - kursori) / paluu), -1, null);
-            return (false, default, -1, null);
+            if (t < kursori + paluu) return (true, Kameraliike.SiirtymaAsento(edellinen, yleis, (t - kursori) / paluu), -1, null, (t - kursori) / paluu);
+            return (false, default, -1, null, 0);
         }
 
         public void Sulje()
@@ -331,6 +331,20 @@ namespace Matkakirja.Linssit.Dioraama
         /// </summary>
         public (string tila, double osuus) LeikkausHetkella(double t)
         {
+            // Kertojan kierros: jakson tila (esim. laituri kuoren sisällä) aukeaa lennon jälkipuoliskolla ja sulkeutuu
+            // seuraavan lennon alkupuoliskolla (1.1 (74) -kuva: laiturijakso näytti vain kuoren muurin).
+            var kierros = Kierros(t, false);
+            if (kierros.Kaynnissa)
+            {
+                double Pehmea(double x) { x = Math.Max(0, Math.Min(1, x)); return x * x * (3 - 2 * x); }
+                var jaksot = Rakennus.Kertoja;
+                string tama = kierros.Jakso >= 0 ? jaksot[kierros.Jakso].Tila : null;
+                string edellinenTila = kierros.Jakso > 0 ? jaksot[kierros.Jakso - 1].Tila
+                    : kierros.Jakso < 0 && jaksot.Count > 0 ? jaksot[jaksot.Count - 1].Tila : null;
+                if (kierros.U < 0.5 && edellinenTila != null && edellinenTila != tama) return (edellinenTila, 1 - Pehmea(kierros.U * 2));
+                if (tama != null) return (tama, edellinenTila == tama ? 1.0 : Pehmea((kierros.U - 0.5) * 2));
+                return (null, 0.0);
+            }
             int i = ViimeisinIndeksi(t);
             var e = tapahtumat[i];
             string edellinen = i > 0 ? tapahtumat[i - 1].Kohde : null;

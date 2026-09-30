@@ -286,7 +286,8 @@ namespace Matkakirja.Natiivi
         {
             int soivia = 0;
             foreach (var s in silmukat.Values) if (s != null) soivia++;
-            return $"poikki aanet: {(Paalla ? "päällä" : "pois")}, klippejä ladattu {klipit.Count} (jonossa {klipitJonossa.Count}), " +
+            return $"poikki aanet: {(Paalla ? "päällä" : "pois")}, äänimaisema-kytkin {(Asetukset.Paalla(Kytkin.Aanimaisema) ? "päällä" : "POIS (silmukat hiljaa)")}, " +
+                   $"kertoja-kytkin {(Asetukset.Paalla(Kytkin.Kertoja) ? "päällä" : "pois")}, klippejä ladattu {klipit.Count} (jonossa {klipitJonossa.Count}), " +
                    $"silmukoita {silmukat.Count} (kahvoja {soivia}), puhuja {(puhuu ? "kyllä" : "ei")}, " +
                    $"limitteri {(DioraamaLimitteri.Instanssi != null && DioraamaLimitteri.Instanssi.enabled ? "päällä, pienin vahvistus " + DioraamaLimitteri.Instanssi.PieninVahvistusJaNollaa().ToString("0.000") : "pois")}";
         }

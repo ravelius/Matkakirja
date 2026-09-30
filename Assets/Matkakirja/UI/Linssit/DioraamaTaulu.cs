@@ -434,8 +434,11 @@ namespace Matkakirja.Natiivi
             lahde.style.display = lahteet.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             // Etsinnän vihje riviksi (korostettuna kursiivilla); muuten hahmon repliikki kuten ennen.
             string vihje = DioraamaEtsinta.AktiivinenRivi;
+            // Pulun vanhat käsikirjoitusrivit eivät kuulu infotauluun (Pulu kertoo lisää kuplassa napautuksesta); vain
+            // hahmon repliikki (1.1 (74) -kuva: "Pulu: …" toisti tekstiä taulussa).
             string puhe = !string.IsNullOrEmpty(vihje) ? vihje
-                : !string.IsNullOrEmpty(nakyma.Repliikki) ? PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma) + ": ”" + nakyma.Repliikki + "”" : null;
+                : !string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu"
+                    ? PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma) + ": ”" + nakyma.Repliikki + "”" : null;
             lainaus.text = puhe ?? "";
             lainaus.style.display = puhe != null ? DisplayStyle.Flex : DisplayStyle.None;
             seuraava.style.display = DisplayStyle.None;
