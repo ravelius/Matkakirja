@@ -7,12 +7,13 @@ import { tarkistaApuraha, lataaApuraha, nollaaApuraha, APURAHA_OSOITE } from '..
 
 const raaka = JSON.parse(readFileSync(new URL(`../${APURAHA_OSOITE}`, import.meta.url), 'utf8'));
 
-test('esittely.json on kelvollinen ja siinä on neljä kappaletta ja viisi kuvaa', () => {
+test('esittely.json on kelvollinen: neljä kappaletta, 4–5 kuvaa, ei videota', () => {
   const d = tarkistaApuraha(raaka);
   assert.ok(d, 'tarkistus hylkäsi tiedoston');
   assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
   assert.equal(d.kappaleet.length, 4);
-  assert.equal(d.kuvat.length, 5);
+  assert.ok(d.kuvat.length >= 4 && d.kuvat.length <= 5, `kuvia ${d.kuvat.length}`);
+  assert.equal('video' in raaka, false, 'video poistettiin (omistaja 30.9. klo 15.06)');
   assert.ok(d.webHuomautus.startsWith('Selainpeli ei sisällä kaikkia ominaisuuksia.'));
   // Selain saa webTekstit: ei lupauksia iOS:n kolmiulotteisista linsseistä.
   const kaikki = d.kappaleet.flatMap((k) => [k.teksti ?? '', ...(k.lista ?? [])]).join(' ');

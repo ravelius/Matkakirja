@@ -8376,18 +8376,10 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 
 .apuraha-toiminto:disabled { opacity: 0.7; cursor: default; }
 
-.apuraha-video {
-  display: block;
-  width: 100%;
-  margin: 0 0 0.9rem;
-  border-radius: 6px;
-  background: #1c140d;
-}
-
-/* Viiden kuvan rivi: pikkukuvat samankokoisina, napautus suurentaa. */
+/* Kuvarivi (4–5 kuvaa, --apuraha-kuvia): pikkukuvat samankokoisina, napautus suurentaa. */
 .apuraha-kuvat {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--apuraha-kuvia, 4), minmax(0, 1fr));
   gap: 0.4rem;
   margin: 1.1rem 0 0;
 }
