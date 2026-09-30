@@ -62,6 +62,7 @@
  * datan muutos herättävät.
  */
 
+import { FOKUS_POHJAT, laatikkoLisaikkunoilla } from '../packs/fokus-grc.js';
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   kytkePallonKehys,
@@ -1789,8 +1790,16 @@ export async function avaaPallolauta(ui) {
      * ruudulla X-raja riippuu zoomista (kamera.js panoraja), joten se
      * lasketaan joka kysymyksellä; muut rajat ovat yhä laatikon omia.
      */
+    /*
+     * MERENTAKAISET SAARET MUKAAN (Päätoimittaja 30.9.2026): panorointiraja
+     * lasketaan maan laatikon ja sen lisäikkunoiden (js/packs/fokus-grc.js
+     * `lisaikkunat`: Azorit, Madeira, Kanariat) unionista, jotta pelaaja
+     * pääsee saarille. Saapumisnäkymä ja uloszoomauksen raja pysyvät maan
+     * omassa laatikossa (maanLaatikko).
+     */
     if (panorajaMuisti.laatikko !== maanLaatikko || panorajaMuisti.raja?.elava) {
-      panorajaMuisti = { laatikko: maanLaatikko, raja: kamera.panoraja(maanLaatikko) };
+      const pohja = FOKUS_POHJAT[kohteidenNykyinenIso(ui)] ?? null;
+      panorajaMuisti = { laatikko: maanLaatikko, raja: kamera.panoraja(laatikkoLisaikkunoilla(maanLaatikko, pohja)) };
     }
     return panorajaMuisti.raja;
   };

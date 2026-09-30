@@ -99,7 +99,7 @@ import {
 // Sähketehtävän sisältöhakemisto tarvitsee maan kohdelistan (ks.
 // asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
 import { asetaKohdeavaus, asetaKohdehakemisto } from './fokusvirta.js';
-import { FOKUS_LISANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
+import { FOKUS_LISANIMET, FOKUS_POHJAT, pohjanAllaLisineen } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
 // vain kerran kartalle, ks. maastonimenPari ja maastoParit.
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
@@ -3881,8 +3881,8 @@ function ladoMaanTynka(pack, iso, pohja) {
   const lauta = pack.id;
   const taulu = pack.map?.cityCountry ?? {};
   const kaupungit = (pack.cities ?? []).filter((k) => taulu[k.id] === iso);
-  const pohjanAlla = (x, y) => x >= bbox.x && x <= bbox.x + bbox.w
-    && y >= bbox.y && y <= bbox.y + bbox.h;
+  // Maan ikkuna JA sen lisäikkunat (merentakaiset saaret, js/packs/fokus-grc.js).
+  const pohjanAlla = (x, y) => pohjanAllaLisineen(pohja, x, y);
   const lisat = [];
   for (const { hae } of KOHDE_MAALAHTEET) {
     for (const rivi of hae(iso, lauta, kaupungit, taulu) ?? []) lisat.push(rivi);

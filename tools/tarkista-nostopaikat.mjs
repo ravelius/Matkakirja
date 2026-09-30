@@ -84,7 +84,7 @@
  * Paluuarvo 1, jos yksikin nosto on ilman karttapaikkaa.
  */
 import { KAUPUNGIN_KOHDALLA_SADE, kohdeKarttarivit } from '../js/fokuskohteet.js';
-import { FOKUS_LAUTAPROJEKTIOT, FOKUS_POHJAT } from '../js/packs/fokus-grc.js';
+import { FOKUS_LAUTAPROJEKTIOT, FOKUS_POHJAT, pohjanAllaLisineen } from '../js/packs/fokus-grc.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { nostoKarttarivit, nostoKaupunginPooli } from '../js/fokusnosto.js';
 import { skandaaliKarttarivit } from '../js/skandaalit.js';
@@ -186,8 +186,8 @@ export function paakartanNostot(pack = MAAILMANKARTTA) {
     const { bbox } = pohja;
     if (!bbox) continue;
     const kaupungit = (pack.cities ?? []).filter((k) => cc[k.id] === iso);
-    const pohjanAlla = (x, y) => x >= bbox.x && x <= bbox.x + bbox.w
-      && y >= bbox.y && y <= bbox.y + bbox.h;
+    // Maan ikkuna ja lisäikkunat (saaret), sama kuin pallon ladonnassa.
+    const pohjanAlla = (x, y) => pohjanAllaLisineen(pohja, x, y);
     const takyPooli = kaupungit.length ? nostoKaupunginPooli(iso, kaupungit[0].id) : [];
     const lisat = [
       ...syvennysKarttarivit(iso, pack.id, cc),

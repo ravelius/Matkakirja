@@ -137,7 +137,7 @@ import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
 import {
   NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste, onKaupunkipiste,
 } from '../../js/nostoladonta.js';
-import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
+import { FOKUS_POHJAT, pohjanAllaLisineen } from '../../js/packs/fokus-grc.js';
 import { kytkeFokusnosto, nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
 import { elaintakyKarttarivit, elaintakyNimioKylki } from '../../js/elaintaky-rivit.js';
 import { hetkiKarttarivit, kytkeHistorianHetket } from '../../js/historian-hetket.js';
@@ -274,8 +274,8 @@ function nostoladontaMerkit({
   if (!(s > 0) || !bbox || !pack) return { s: 0, merkit: [] };
   const taulu = pack.map?.cityCountry ?? {};
   const kaupungit = (pack.cities ?? []).filter((k) => taulu[k.id] === iso);
-  const pohjanAlla = (x, y) => x >= bbox.x && x <= bbox.x + bbox.w
-    && y >= bbox.y && y <= bbox.y + bbox.h;
+  // Maan ikkuna ja lisäikkunat (saaret), sama kuin pallon ladonnassa.
+  const pohjanAlla = (x, y) => pohjanAllaLisineen(pohja, x, y);
   const rivit = kohdeKarttarivit({
     iso, lauta: pack.id, kaupungit, pohjanAlla, lisat,
   });

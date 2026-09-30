@@ -179,6 +179,8 @@ export const FOKUS_POHJAT = {
     lauta: 'maailmankartta',
     bbox: { x: 5272.63, y: 1518.56, w: 956.25, h: 597.66 },
     rajaus: { x: 5441.83, y: 1587.52, w: 617.85, h: 459.74 },
+    // Kanariansaaret (lon −18,3…−13,2, lat 27,5…29,5), ks. LISÄIKKUNAT alla.
+    lisaikkunat: [{ x: 5215, y: 2191, w: 186, h: 88 }],
   },
   EST: {
     lauta: 'maailmankartta',
@@ -308,6 +310,9 @@ export const FOKUS_POHJAT = {
     lauta: 'maailmankartta',
     bbox: { x: 5284.09, y: 1638.37, w: 575.03, h: 359.39 },
     rajaus: { x: 5495.58, y: 1679.84, w: 152.05, h: 276.46 },
+    // Azorit (lon −31,4…−24,8, lat 36,8…39,9) ja Madeira + Porto Santo
+    // (lon −17,4…−16,1, lat 32,3…33,2), ks. LISÄIKKUNAT alla.
+    lisaikkunat: [{ x: 4779, y: 1799, w: 236, h: 136 }, { x: 5245, y: 2055, w: 59, h: 49 }],
   },
   ROU: {
     lauta: 'maailmankartta',
@@ -1715,3 +1720,26 @@ export const FOKUS_LISANIMET = {
     ],
   },
 };
+
+/*
+ * LISÄIKKUNAT — MERENTAKAISET SAARET (Päätoimittaja 30.9.2026, Sisältökirjurin
+ * löydös): pallotila näyttää nostot vain maan ikkunan (bbox) sisällä, ja
+ * PRT:n ja ESP:n ikkunat rajasivat pois Azorit, Madeiran ja Kanariansaaret.
+ * Pääikkuna ja rajaus pysyvät ennallaan (saapumisnäkymä, lehden osuus -portti
+ * ja tasokartta eivät muutu); `lisaikkunat` laajentaa vain sen, mitkä nostot
+ * ladotaan pallolle, ja pallon panorointirajan (js/pallolauta/lauta.js).
+ * Natiivin kamera: sama alue lon/lat-muodossa Natiivi-UI:lla.
+ */
+/** Onko laudan piste maan ikkunassa tai jossakin sen lisäikkunassa? */
+export function pohjanAllaLisineen(pohja, x, y) {
+  const sisalla = (b) => b && x >= b.x && x <= b.x + b.w && y >= b.y && y <= b.y + b.h;
+  return sisalla(pohja?.bbox) || (pohja?.lisaikkunat ?? []).some(sisalla);
+}
+/** Laatikko laajennettuna maan lisäikkunoilla (unioni); ilman lisäikkunoita sama laatikko. */
+export function laatikkoLisaikkunoilla(laatikko, pohja) {
+  const lisat = pohja?.lisaikkunat ?? [];
+  if (!laatikko || !lisat.length) return laatikko;
+  let x0 = laatikko.x; let y0 = laatikko.y; let x1 = laatikko.x + laatikko.w; let y1 = laatikko.y + laatikko.h;
+  for (const b of lisat) { x0 = Math.min(x0, b.x); y0 = Math.min(y0, b.y); x1 = Math.max(x1, b.x + b.w); y1 = Math.max(y1, b.y + b.h); }
+  return { ...laatikko, x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+}
