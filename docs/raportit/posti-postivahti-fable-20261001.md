@@ -10,3 +10,6 @@ SendMessage estyi viestirajan takia (13 viestiä); varakanavaa ei käytetty (kä
 
 ## 00.21 lisäys
 LEVY 48 Gi (< 50; 52→48 11 min:ssa; kova raja 30), wt/ 54 (raja 20, kasvaa), kuorma 217/306/255, muisti 62 % vapaa. Kävijälaskuri n=3 ennallaan (00.10). Päätoimittajan konteksti 17 %. Hook OK, #3734 auki. SendMessage estynyt (14).
+
+## 01.41 lisäys
+LEVY 41 Gi (< 45; 47→41 21 min:ssa; kova raja 30; push käyttäjälle < 38), wt/ 57 (raja 20, kasvaa), kuorma 150/164/128, muisti 68 % vapaa. Kävijälaskuri n=3 ennallaan (01.04). Päätoimittajan konteksti 31 %. Hook OK, #3734 auki. SendMessage estynyt (14).
