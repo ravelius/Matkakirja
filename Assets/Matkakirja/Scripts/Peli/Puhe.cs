@@ -100,6 +100,8 @@ namespace Matkakirja.Natiivi
                     k => { PlayerPrefs.DeleteKey(k); PlayerPrefs.Save(); });
                 // Kehittäjäkoodi vain Keychainista (Asetukset.PolloKoodi); vanhat PlayerPrefs-kopiot pois.
                 saadot.Koodilahde = () => Asetukset.PolloKoodi;
+                // Lukijan moottori (xAI / ElevenLabs v4 Turbo, omistaja 30.9.2026): valinta vain omistajan laitteilla ja kehittäjätilassa.
+                saadot.MoottoriLahde = Striimiaani.MoottoriValinta;
                 saadot.PoistaVanhatKoodit();
                 saadot.Muuttui += () =>
                 {
