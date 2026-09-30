@@ -762,4 +762,109 @@ export const MAASTOKOHTEET_IRL = [
       + 'luostariraunioiden ohi.',
     lahde: 'en-Wikipedia "Glendalough" (tarkistettu 11.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 2 ERÄ B, 30.9.2026 — 3 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'brownshillin-dolmen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-brownshillin-dolmen-e2214f16.jpg',
+      lyhyt: 'Valtava kansikivi lepää neljän pystykiven varassa.',
+      selite: 'Jäkälän peittämä graniittinen kansikivi kohoaa nurmikon yllä pystykivien päällä.',
+      lahde: 'Valokuva: Digital Eye, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Digital Eye',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Digital_Eye%E2%80%932015%E2%80%93Brownshill_Dolmen.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Brownshillin dolmen',
+    nimio: 'Brownshill',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka paljon kansikiven arvioidaan painavan?',
+      'Mihin aikaan dolmen rakennettiin?',
+    ],
+    korostukset: ['kansikivi|kansikivi'],
+    nappi: 'Kivi, jonka sanotaan olevan Euroopan painavin',
+    // -6.881 E / 52.8373 N — en-Wikipedia "Brownshill dolmen", osiot "Description" ja "Dating"
+    laudat: {
+      maailmankartta: { x: 5604, y: 1264.6 },
+    },
+    teksti: 'Brownshillin dolmen on kolmen kilometrin päässä Carlowin kaupungista itään, Irlannin '
+      + 'Carlowin kreivikunnassa sijaitseva portaalihauta. Se rakennettiin arviolta 4000–3000 '
+      + 'eaa., ja sen graniittinen kansikivi painaa arviolta 150 tonnia, minkä sanotaan '
+      + 'olevan Euroopan painavin. Rakenteen korkeus on 3,5 metriä. Sisäänkäynnin pystykivet '
+      + 'ja portinkivi ovat yhä alkuperäisillä paikoillaan, ja kansikivi lepää niiden päällä '
+      + 'kallistuen poispäin sisäänkäynnistä kohti maata. Hautaa ei ole kaivettu. Dolmen on '
+      + 'suojeltu kansallismonumentti.',
+    lahde: 'en-Wikipedia "Brownshill dolmen", osiot "Description" ja "Dating" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'rock-of-dunamase',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-rock-of-dunamase-1bc46392.jpg',
+      lyhyt: 'Ilmakuva Dunamasen rauniolinnasta metsäisen kummun päällä.',
+      selite: 'Ylhäältä kuvassa näkyvät kummun laella olevat kiviraunioiden seinät ja polku, joka kiertää huippua.',
+      lahde: 'Valokuva: Robfitz85, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Robfitz85',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dunamase_Castle_from_above.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Rock of Dunamase',
+    nimio: 'Dunamase',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka korkealle kallio kohoaa ympäristöään?',
+      'Mitä linnalle tapahtui vuonna 1650?',
+    ],
+    korostukset: ['kalliokumpu|kalliokumpu'],
+    nappi: 'Rauniolinna kalliokummun päällä',
+    // -7.2103 E / 53.0317 N — en-Wikipedia "Rock of Dunamase", osiot "History" ja "Castle"
+    laudat: {
+      maailmankartta: { x: 5593, y: 1255.8 },
+    },
+    teksti: 'Rock of Dunamase on Laoisin kreivikunnassa Irlannissa oleva kalliokumpu, joka kohoaa '
+      + 'noin 46 metriä ympäröivän tasangon yläpuolelle. Paikalla oli linnoitus 800-luvulla, '
+      + 'ja kivilinna rakennettiin 1100-luvun jälkipuoliskolla. Myöhemmin linna siirtyi '
+      + 'Marshalin suvulle. Vuonna 1650 linnan puolustusrakenteet tuhottiin. Nykyisin '
+      + 'raunioinen linna on Irlannin kansallismonumentti.',
+    lahde: 'en-Wikipedia "Rock of Dunamase", osiot "History" ja "Castle" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'hill-of-uisneach',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/irl-nosto-hill-of-uisneach-eeb0339d.jpg',
+      lyhyt: 'Puuveistos kukkulalla: parrakas kasvo ja kaksi pölkkyistuinta.',
+      selite: 'Puupölkkyyn veistetty parrakas kasvo ja spiraali seisoo niityllä kahden koristeellisen pölkkyistuimen välissä.',
+      lahde: 'Valokuva: Abi Skipp, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Abi Skipp',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Site_of_Celtic_Festival_of_Bealtaine.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Uisneachin kukkula',
+    nimio: 'Uisneach',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuinka monta muinaismuistoa alueella arvioidaan olevan?',
+      'Mikä on Ail na Míreann?',
+    ],
+    korostukset: ['Ail na Míreann|Ail na Míreann'],
+    nappi: 'Irlannin symbolinen ja pyhä keskus',
+    // -7.5619 E / 53.49 N — en-Wikipedia "Hill of Uisneach", osiot "Description" ja "Archaeology"
+    laudat: {
+      maailmankartta: { x: 5581.3, y: 1235.1 },
+    },
+    teksti: 'Uisneachin kukkula sijaitsee Westmeathin kreivikunnassa Irlannissa, ja sen huippu on '
+      + '182 metriä merenpinnan yläpuolella. Perinteessä sitä kutsutaan saaren symboliseksi '
+      + 'ja pyhäksi keskukseksi. Noin kahden neliökilometrin alueella on arviolta 40 '
+      + 'muinaismuistoa, joista noin puolet näkyy maan päällä, ja ihmistoimintaa on ollut '
+      + 'noin 5 000 vuotta. Tunnetuin kohde on kivimöhkäle Ail na Míreann, "jakojen kivi", '
+      + 'jota pidetään maakuntien kohtaamispaikkana. Alue on kansallismonumentti.',
+    lahde: 'en-Wikipedia "Hill of Uisneach", osiot "Description" ja "Archaeology" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];
