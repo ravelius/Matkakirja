@@ -286,7 +286,8 @@ namespace Matkakirja.Natiivi
 
         public void KartanLiike()
         {
-            if (Nakyy && !pieni) Muunna(true);
+            // Napautus käytettiin kortin kutistamiseen: ei maakuntalappua samasta napautuksesta (omistaja 30.9.2026).
+            if (Nakyy && !pieni) { Muunna(true); PalloKierto.Osui(); }
         }
 
         bool linssiKutisti;

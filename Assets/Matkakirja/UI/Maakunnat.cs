@@ -167,6 +167,25 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(Lataa());
         }
 
+        /// <summary>Data valmiiksi taustalla (automaattinen maakunta, Karttaselite): ei tee mitään, jos jo haettu tai haussa.</summary>
+        public void Esilataa()
+        {
+            if (!rakennettu && !haussa) Avautui();
+        }
+
+        string odottava;
+
+        /// <summary>
+        /// Valinta heti tai heti datan latauduttua (automaattinen maakunta: ensimmäinen napautus voi ehtiä ennen latausta).
+        /// Odottava valinta tehdään vain, jos maakuntakartta on yhä auki (Karttatila).
+        /// </summary>
+        public void ValitseKunValmis(string avain)
+        {
+            if (rakennettu) { odottava = null; Valitse(avain); return; }
+            odottava = avain;
+            Avautui();
+        }
+
         public void SuljeKortti() => kortti.Sulje();
 
         /// <summary>
@@ -351,6 +370,10 @@ namespace Matkakirja.Natiivi
             peukalo.BringToFront();
             PaivitaLuonnehdinta();
             if (ValittuAvain != null && !OnPois(ValittuAvain)) Valittu?.Invoke(ValittuAvain);
+            // Automaattinen maakunta: latauksen aikana napautettu maakunta valitaan nyt, jos lappu on yhä auki.
+            var a = odottava;
+            odottava = null;
+            if (a != null && Karttatila) Valitse(a);
         }
 
         /// <summary>
@@ -532,6 +555,7 @@ namespace Matkakirja.Natiivi
             bool muuttui = Pois;
             bool oliValinta = ValittuAvain != null;
             ValittuAvain = null;
+            odottava = null;
             Pois = false;
             kortti.Sulje();
             MerkitsePois();

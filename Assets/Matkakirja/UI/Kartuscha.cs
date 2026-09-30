@@ -828,7 +828,7 @@ namespace Matkakirja.Natiivi
             if (osoitin == null || !osoitin.press.wasPressedThisFrame || kortti.panel == null) return;
             var ruutu = osoitin.position.ReadValue();
             var p = RuntimePanelUtils.ScreenToPanel(kortti.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            if (!kortti.worldBound.Contains(p)) Sulje();
+            if (!kortti.worldBound.Contains(p)) { UiKerros.OhiSulki(); Sulje(); }  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
         }
     }
 }

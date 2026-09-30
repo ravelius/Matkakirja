@@ -307,6 +307,14 @@ namespace Matkakirja.Natiivi
             lock (paasaie) paasaie.Enqueue(a);
         }
 
+        /// <summary>
+        /// OHINAPAUTUS SULKI (maakunta automaattisesti, omistaja 30.9.2026 klo 12.28): kortin tai paneelin ohinapautuksen
+        /// sulkija kirjaa ruudun, jolla se tunnisti sulkevan napautuksen. Karttaselite ei silloin avaa maakuntalappua samasta
+        /// kosketuksesta (<see cref="PalloKierto.PainallusRuutu"/> … tämä ruutu).
+        /// </summary>
+        public static int OhiSulkuRuutu { get; private set; } = -1;
+        public static void OhiSulki() => OhiSulkuRuutu = Time.frameCount;
+
         /// <summary>Joka ruudussa (esim. napautus paneelin ohi pallolle, jota UI ei näe).</summary>
         public event Action JokaRuutu;
 
