@@ -31,6 +31,7 @@ namespace Matkakirja.Natiivi
             go.AddComponent<AaniIstunto>();
             VarmistaKuuntelija(go);
             Aseta("käynnistys");
+            Vahti();
             AudioSettings.OnAudioConfigurationChanged += _ =>
             {
                 // Istunnon vaihto voi itse laukaista kokoonpanon muutoksen: enintään kerran sekunnissa, ettei synny kehää.
@@ -62,6 +63,27 @@ namespace Matkakirja.Natiivi
         [DllImport("__Internal")] static extern string MatkakirjaAani_Tila();
         [DllImport("__Internal")] static extern string MatkakirjaAani_Vaihda(string luokka);
         [DllImport("__Internal")] static extern bool MatkakirjaAani_Bluetooth();
+        [DllImport("__Internal")] static extern void MatkakirjaAani_Vahti();
+        [DllImport("__Internal")] static extern bool MatkakirjaAani_Varmista();
+
+        /// <summary>
+        /// ISTUNTOVAHTI (kärki 30.9.2026, omistaja äänettömässä tilassa: luennan alusta puuttui 1–2 virkettä): Unityn FMOD
+        /// palauttaa istunnon Ambientiin taustasiirtymässä ja äänen uudelleenkäynnistyksessä, ja äänetön tila mykistää
+        /// Ambientin. Natiivi vahti (MatkakirjaAani.mm) palauttaa Playbackin heti luokan vaihtuessa, keskeytyksen loputtua,
+        /// mediapalveluiden nollauduttua ja etualalle palatessa.
+        /// </summary>
+        static void Vahti()
+        {
+            try { MatkakirjaAani_Vahti(); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ääni-istunto: vahti: " + e.Message); }
+        }
+
+        /// <summary>Juuri ennen soittoa (Puhe, Aanisoitin): Ambient → Playback, jos vahti ei ole vielä ehtinyt. true = korjattiin.</summary>
+        public static bool Varmista()
+        {
+            try { return MatkakirjaAani_Varmista(); }
+            catch (Exception) { return false; }
+        }
 
         /// <summary>Soiko ääni Bluetoothin kautta (AirPods): Puhe esilämmittää linkin ennen uutta klippiä.</summary>
         public static bool Bluetooth()
@@ -95,6 +117,8 @@ namespace Matkakirja.Natiivi
         public static string Tila() => "ei iOS";
         public static string Vaihda(string luokka) => "ei iOS";
         public static bool Bluetooth() => BluetoothTesti;
+        static void Vahti() { }
+        public static bool Varmista() => false;
 #endif
         /// <summary>Testikomento (puhe bt 1|0): esilämmitys ilman oikeaa Bluetooth-reittiä (editori ja simulaattori).</summary>
         public static bool BluetoothTesti;

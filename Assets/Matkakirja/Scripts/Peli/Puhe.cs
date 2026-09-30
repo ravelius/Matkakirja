@@ -1121,6 +1121,9 @@ namespace Matkakirja.Natiivi
             vahvistin.Nollaa();
             // BLUETOOTH-ESILÄMMITYS (omistaja 29.9.2026: AirPodseilla luennan alku jäi kuulematta): uusi klippi alkaa
             // Esilammitys-viiveellä, jotta hiljaisuuden jälkeen heräävä Bluetooth-linkki ehtii auki ennen ensimmäistä tavua.
+            // ISTUNTO KUNTOON JUURI ENNEN SOITTOA (kärki 30.9.2026): FMOD voi palauttaa Ambientin taustalta paluun jälkeen, ja
+            // äänetön tila mykistää sen — ennen tätä luokka tarkistettiin vain sovelluksen ensimmäisestä puheesta.
+            if (AaniIstunto.Varmista()) Debug.Log($"MATKAKIRJA puhe: istunto oli Ambient ennen soittoa, Playback palautettu ({klippi?.name})");
             bool esilammitys = !jatko && AaniIstunto.Bluetooth();
             if (esilammitys) { lahde.PlayDelayed(Esilammitys); Debug.Log($"MATKAKIRJA puhe: Bluetooth-esilämmitys {Esilammitys:0.0} s {klippi?.name}"); }
             else lahde.Play();
@@ -1331,15 +1334,9 @@ namespace Matkakirja.Natiivi
         }
 
 #if UNITY_IOS && !UNITY_EDITOR
-        [DllImport("__Internal")] static extern void MatkakirjaAani_Toisto();
-        static bool istuntoAsetettu;
-        static void AsetaIstunto()
-        {
-            if (istuntoAsetettu) return;
-            istuntoAsetettu = true;
-            try { MatkakirjaAani_Toisto(); }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA puhe: ääni-istunto: " + e.Message); }
-        }
+        // Jokaisen puheen alussa (ennen: vain sovelluksen ensimmäisestä puheesta, staattinen lippu — kärki 30.9.2026):
+        // kevyt luokan tarkistus, korjaus vain Ambientista (AaniIstunto.Varmista, MatkakirjaAani.mm).
+        static void AsetaIstunto() => AaniIstunto.Varmista();
 #else
         static void AsetaIstunto() { }
 #endif

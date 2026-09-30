@@ -996,15 +996,9 @@ namespace Matkakirja.Natiivi
         // --- iOS: ääni-istunto (MatkakirjaAani.mm, sama kuin Puhe) -----------------
 
 #if UNITY_IOS && !UNITY_EDITOR
-        [DllImport("__Internal")] static extern void MatkakirjaAani_Toisto();
-        static bool istuntoAsetettu;
-        static void AsetaIstunto()
-        {
-            if (istuntoAsetettu) return;
-            istuntoAsetettu = true;
-            try { MatkakirjaAani_Toisto(); }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ääni: ääni-istunto: " + e.Message); }
-        }
+        // Jokaisen raidan alussa (ennen: vain kerran sovelluksen elinaikana — kärki 30.9.2026): kevyt luokan tarkistus,
+        // korjaus vain Ambientista (AaniIstunto.Varmista, MatkakirjaAani.mm).
+        static void AsetaIstunto() => AaniIstunto.Varmista();
 #else
         static void AsetaIstunto() { }
 #endif

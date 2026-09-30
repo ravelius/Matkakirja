@@ -12,6 +12,7 @@
 // Puhe.cs ja Aanisoitin.cs kutsuvat samaa varmuuden vuoksi. MatkakirjaAani_Tila kertoo istunnon mittaukseen.
 
 #import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
 
 extern "C" void MatkakirjaAani_Toisto(void)
 {
@@ -39,6 +40,96 @@ extern "C" void MatkakirjaAani_Toisto(void)
     }
     if (![istunto setActive:YES error:&virhe])
         NSLog(@"MATKAKIRJA puhe: setActive epäonnistui: %@", virhe);
+}
+
+// ISTUNTOVAHTI (kärki 30.9.2026; omistaja TF 1.0.64 kaiuttimella ja ÄÄNETTÖMÄSSÄ TILASSA: "isoisän luenta alkaa vieläkin
+// kesken kappaleen", alusta puuttuu 1–2 virkettä, myös nostoissa). Juurisyy: Unity 6000.3:n FMOD
+// (FMOD::OutputCoreAudio::reset, Unityn regressio 6000.0.73f1 alkaen) palauttaa istunnon Playbackista Ambientiin
+// taustasiirtymässä ja äänen uudelleenkäynnistyksessä. Ambient noudattaa äänetöntä tilaa, joten kaikki peliääni mykistyy,
+// kunnes joku asettaa Playbackin uudelleen — ennen sitä vain fokus-, tauko- ja kokoonpanotapahtumat (AaniIstunto.cs) ja
+// sovelluksen ensimmäinen puhe. Vahti palauttaa Playbackin heti, kun luokka vaihtuu Ambientiin tai SoloAmbientiin
+// (reitin vaihto, syy CategoryChange), keskeytys loppuu, mediapalvelut nollautuvat tai sovellus palaa etualalle (FMOD
+// käynnistää äänensä uudelleen omassa keskeytyskäsittelijässään, joten tarkistus myös 0,3 ja 1,5 s myöhemmin).
+// PlayAndRecord (Pulun äänikeskustelu, sanelu) ja Playback-tilat jätetään rauhaan: vain äänettömän tilan mykistämät
+// luokat korjataan. Kutsut omassa sarjajonossaan (ei synkronisia äänipalvelinkutsuja pääsäikeessä, vrt. MatkakirjaRadio.mm).
+
+static dispatch_queue_t VahtiJono(void)
+{
+    static dispatch_queue_t jono;
+    static dispatch_once_t kerta;
+    dispatch_once(&kerta, ^{ jono = dispatch_queue_create("app.matkakirja.aani-istunto", DISPATCH_QUEUE_SERIAL); });
+    return jono;
+}
+
+static BOOL Mykistyva(AVAudioSession* istunto)
+{
+    return [istunto.category isEqualToString:AVAudioSessionCategoryAmbient]
+        || [istunto.category isEqualToString:AVAudioSessionCategorySoloAmbient];
+}
+
+/// Palauttaa Playbackin, jos luokka on äänettömän tilan mykistämä (Ambient / SoloAmbient). Palauttaa YES, jos korjattiin.
+static BOOL KorjaaMykistyva(NSString* syy)
+{
+    AVAudioSession* istunto = [AVAudioSession sharedInstance];
+    if (!Mykistyva(istunto)) return NO;
+    // Vastavaihtojen kehä (FMOD nollaa uudelleen korjauksen jälkeen) katkaistaan: enintään 8 korjausta 2 s:ssa.
+    static CFAbsoluteTime ikkuna = 0;
+    static int korjauksia = 0;
+    CFAbsoluteTime nyt = CFAbsoluteTimeGetCurrent();
+    if (nyt - ikkuna > 2.0) { ikkuna = nyt; korjauksia = 0; }
+    if (++korjauksia > 8) { if (korjauksia == 9) NSLog(@"MATKAKIRJA ääni-istunto: vahti pysähtyy (yli 8 korjausta 2 s:ssa, %@)", syy); return NO; }
+    NSString* ennen = istunto.category;
+    NSError* virhe = nil;
+    BOOL ok = [istunto setCategory:AVAudioSessionCategoryPlayback mode:AVAudioSessionModeSpokenAudio
+                           options:AVAudioSessionCategoryOptionMixWithOthers error:&virhe]
+        && [istunto setActive:YES error:&virhe];
+    NSLog(@"MATKAKIRJA ääni-istunto: vahti (%@): %@ → Playback / SpokenAudio / MixWithOthers %@", syy, ennen,
+        ok ? @"ok" : [NSString stringWithFormat:@"VIRHE %@", virhe]);
+    return ok;
+}
+
+extern "C" void MatkakirjaAani_Vahti(void)
+{
+    static dispatch_once_t kerta;
+    dispatch_once(&kerta, ^{
+        NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+        [nc addObserverForName:AVAudioSessionRouteChangeNotification object:nil queue:nil usingBlock:^(NSNotification* n) {
+            NSUInteger syy = [n.userInfo[AVAudioSessionRouteChangeReasonKey] unsignedIntegerValue];
+            dispatch_async(VahtiJono(), ^{
+                AVAudioSession* istunto = [AVAudioSession sharedInstance];
+                NSMutableArray* ulos = [NSMutableArray array];
+                for (AVAudioSessionPortDescription* p in istunto.currentRoute.outputs) [ulos addObject:p.portType];
+                NSLog(@"MATKAKIRJA ääni-istunto: reitti vaihtui (syy %lu): %@ / %@ / %lu, ulos %@", (unsigned long)syy,
+                    istunto.category, istunto.mode, (unsigned long)istunto.categoryOptions, [ulos componentsJoinedByString:@"+"]);
+                KorjaaMykistyva([NSString stringWithFormat:@"reitti %lu", (unsigned long)syy]);
+            });
+        }];
+        [nc addObserverForName:AVAudioSessionInterruptionNotification object:nil queue:nil usingBlock:^(NSNotification* n) {
+            NSUInteger laji = [n.userInfo[AVAudioSessionInterruptionTypeKey] unsignedIntegerValue];
+            NSLog(@"MATKAKIRJA ääni-istunto: keskeytys %@", laji == AVAudioSessionInterruptionTypeBegan ? @"alkoi" : @"loppui");
+            if (laji == AVAudioSessionInterruptionTypeBegan) return;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), VahtiJono(), ^{ KorjaaMykistyva(@"keskeytys loppui"); });
+        }];
+        [nc addObserverForName:AVAudioSessionMediaServicesWereResetNotification object:nil queue:nil usingBlock:^(NSNotification* n) {
+            NSLog(@"MATKAKIRJA ääni-istunto: mediapalvelut nollautuivat");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), VahtiJono(), ^{ KorjaaMykistyva(@"mediapalvelut"); });
+        }];
+        [nc addObserverForName:UIApplicationDidBecomeActiveNotification object:nil queue:nil usingBlock:^(NSNotification* n) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), VahtiJono(), ^{ KorjaaMykistyva(@"etualalle"); });
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), VahtiJono(), ^{ KorjaaMykistyva(@"etualalle 1,5 s"); });
+        }];
+        dispatch_async(VahtiJono(), ^{ KorjaaMykistyva(@"käynnistys"); });
+    });
+}
+
+/// Kevyt tarkistus juuri ennen soittoa (Puhe.AloitaKlippi, Aanisoitin): vain luokan luku; korjaus vain, jos Ambient.
+/// Synkroninen, jotta ensimmäinen tavu ei osu mykistettyyn istuntoon (korjaus on harvinainen: vahti ehtii yleensä ensin).
+extern "C" bool MatkakirjaAani_Varmista(void)
+{
+    // Vahdin jonossa (laskurit ja vastavaihtojen raja yhdessä säikeessä); pääsäie odottaa vain, jos jono on kesken.
+    __block BOOL korjattiin = NO;
+    dispatch_sync(VahtiJono(), ^{ korjattiin = KorjaaMykistyva(@"ennen soittoa"); });
+    return korjattiin;
 }
 
 // Bluetooth-reitti (omistaja 29.9.2026: luennan alku jäi kuulematta AirPodseilla): Puhe esilämmittää linkin lyhyellä
