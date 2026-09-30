@@ -329,6 +329,8 @@ namespace Matkakirja.Linssit.Dioraama
         public Infotaulu Infotaulu;
         /// <summary>Pulun lisäkerronta (`pulu.teksti`): reunan Pulun kuvan napautus näyttää tämän kuplana; null = ei kuvaa.</summary>
         public string PuluTeksti;
+        /// <summary>Pulun kertomuksen puheääni (`pulu.aani`, Pelikoodari 1.10.2026, #3742); null = vain teksti.</summary>
+        public string PuluAani;
     }
 
     /// <summary>Auringon (päävalon) asetukset rakennuksen valaistuksessa (era 2b, kohta 1
@@ -516,6 +518,8 @@ namespace Matkakirja.Linssit.Dioraama
         public List<KertojaJakso> Kertoja = new List<KertojaJakso>();
         /// <summary>Linnan oma Pulun lisäkerronta yleisnäkymään (`pulu.teksti`); null = ei.</summary>
         public string PuluTeksti;
+        /// <summary>Pulun kertomuksen puheääni (`pulu.aani`, Pelikoodari 1.10.2026, #3742); null = vain teksti.</summary>
+        public string PuluAani;
 
         /// <summary>Tila id:llä, tai null jos ei löydy (kuten js:n loydaTila).</summary>
         public Tila Tila(string id)
@@ -607,6 +611,7 @@ namespace Matkakirja.Linssit.Dioraama
             var pulu = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "pulu"));
             r.PuluLaskeutuminen = LueV3(MiniJson.Kentta(pulu, "laskeutuminen"));
             r.PuluTeksti = MiniJson.Teksti(pulu, "teksti");
+            r.PuluAani = MiniJson.Teksti(pulu, "aani");
             foreach (var jo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "kertoja")), "jaksot")))
             {
                 var j = MiniJson.ObjektiTaiNull(jo);
@@ -855,6 +860,7 @@ namespace Matkakirja.Linssit.Dioraama
             t.PuluLaskeutuminen = LueV3(MiniJson.Kentta(pulu, "laskeutuminen"));
             t.Taulupuoli = MiniJson.Teksti(pulu, "taulupuoli");
             t.PuluTeksti = MiniJson.Teksti(pulu, "teksti");
+            t.PuluAani = MiniJson.Teksti(pulu, "aani");
             var info = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "infotaulu"));
             if (info != null)
             {

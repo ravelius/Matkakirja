@@ -340,6 +340,10 @@ namespace Matkakirja.Natiivi
             if (piiloon == luentaPiilo) return;
             luentaPiilo = piiloon;
             if (piiloon && Nakyy && pieni && !kysymysAuki) Muunna(false);
+            // Omistaja 30.9. klo 23.2x (TF 1.1 (81)): "isoisän teksti saisi pienentyä automaattisesti luennan jälkeen".
+            // Kun kertoja vaikenee (luenta loppuu tai Ohita) ja välirauha (1,3 s) on kulunut, kortti pienenee pehmeästi
+            // lapuksi ("Ateena, elokuussa 1873" + kaiutin) ja kartta vapautuu; lapun napautus avaa tekstin (Avaa).
+            if (!piiloon && Nakyy && !pieni && !kysymysAuki) Muunna(true);
             // Löydös 87: isoisän luennon jälkeen lappu tiivistyy pelkkään kaupungin nimeen.
             if (!piiloon && merkinta != null && merkinta.Kaiutin && !luettu) { luettu = true; PaivitaLyhyt(true); }
         }
