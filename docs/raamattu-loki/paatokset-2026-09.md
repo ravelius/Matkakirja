@@ -9439,3 +9439,7 @@ Päätoimittaja 30.9.2026 (Siirtosepän PASS BUILD 72, 88fe1265, omistajan palau
 ## OMISTAJA: OLAVINLINNAN KUUNNELMAT — LUPA VAIN ÄÄNINÄYTTEISIIN (30.9.2026 klo 15.56)
 
 Omistaja 30.9.2026 luettuaan hahmokirjan ja seitsemän huoneen kuunnelmat v1 (docs/raportit/olavinlinna-kuunnelmat-20260930.md): 'tee vain ääninäytteet'. Lupa koskee vain näytteitä: 11 uutta hahmoa × 2 ehdokasääntä, yksi näytelause kullekin, eleven_v4, noin 1 650 merkkiä (Pelikoodari). Kokki ja vesipoika 29.9. äänillä, Pulu Flicker, kertoja ihmisen matkan ääni. Koko kuunnelmaerä vasta omistajan äänivalinnan ja erillisen luvan jälkeen; Sisältökirjuri tarkistaa kuunnelmien faktat.
+
+## OMISTAJA: TAUSTAMUSIIKKI JA MAISEMAÄÄNI SOIVAT KERRAN LÄPI JA JÄÄVÄT TAUOLLE; MAISEMA ALKAA AINA ALUSTA (EI ARVOTTUA ALOITUSKOHTAA) (30.9.2026 klo 16.12)
+
+Omistaja 30.9.2026: 'äänet ja taustamusiikki voisivat jäädä automaattisesti tauolle sen jälkeen kun ovat soineet kerran läpi. taustaääni voisi alkaa aina alusta. nyt sen aloituskohta taidetaan arpoa?' (Natiivin AaniTila/Maisemakori arpoi maiseman aloituskohdan ja silmukoi ristihäivytyksellä; musiikki silmukoi saumattomasti.) Linja natiiviin: maisema ja taustamusiikki alkavat aina alusta ja soivat kerran läpi uuden laukaisun (saapuminen, näkymän tai kaupungin vaihto) jälkeen, sitten hiljaisuus seuraavaan laukaisuun asti; ei silmukointia eikä arvottua alkukohtaa. Linssien ja dioraaman omat huoneäänimaisemat (Olavinlinna) eivät kuulu tähän. Web seuraa web-jonon kautta.
