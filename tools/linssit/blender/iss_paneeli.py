@@ -305,6 +305,7 @@ OTSIKOT = {'nopeus': 'NOPEUS', 'pilvet': 'PILVET', 'kuukausi': 'KUUKAUSI', 'kohd
            'poistu': 'POISTU'}
 PAINIKE_LEGENDA = {'kohde': 'LENNÄ', 'poistu': 'POISTU'}
 OTSIKKO_KOKO, ASTEIKKO_KOKO = 7.2, 5.0
+KIERTO_K = 0.8   # NOPEUS-kiertokytkimen mittakaava (v1: 1.0 ylitti ryhmäkehyksen)
 
 
 # ---------------------------------------------------------------- pohja: konsolin runko (keski X:ssä tasainen)
@@ -546,7 +547,7 @@ def rakenna(T, G, rungot=True):
         legendalevy(ku, x, 51.5, lev)
     for k, txt in zip((-60, -20, 20, 60), ('LIVE', '10×', '100×', '1000×')):   # NOPEUS-asteikko
         a_ = math.radians(k)
-        r_ = 24.0 if abs(k) < 40 else 25.5
+        r_ = (24.0 if abs(k) < 40 else 25.5) * KIERTO_K + 1.2
         teksti(ku, txt, kx[0] + r_ * math.sin(a_), RIVI2 + r_ * math.cos(a_) - 0.6, PINTA, ASTEIKKO_KOKO - 0.4)
     kilpi(ku, g0 + G / 2, 130.5, 20, 4.6, PINTA)
     lyhdyt = []
@@ -565,8 +566,9 @@ def rakenna(T, G, rungot=True):
     tulos['ryhma'].append(lukema(b - a - 12).valmis(((a + b) / 2, RIVI1, PINTA)))
     tulos['paikat'].update(live=(lx, RIVI1, 16, 16), lukema=((a + b) / 2, RIVI1, b - a - 22, 20))
     kr, kn = kierto()
-    tulos['ryhma'].append(kr.valmis((kx[0], RIVI2, PINTA)))
-    tulos['osat']['nopeus'] = [kn.valmis((kx[0], RIVI2, PINTA))]
+    k3 = (KIERTO_K,) * 3   # v2: kytkin kehyksensä sisään (Päätoimittaja 30.9.)
+    tulos['ryhma'].append(kr.valmis((kx[0], RIVI2, PINTA), k3))
+    tulos['osat']['nopeus'] = [kn.valmis((kx[0], RIVI2, PINTA), k3)]
     for j, nimi in ((1, 'pilvet'), (2, 'kuukausi')):
         nr, nk = nuppi()
         nr.nimi, nk.nimi = f'nuppi_runko_{nimi}', f'nuppi_korkki_{nimi}'
