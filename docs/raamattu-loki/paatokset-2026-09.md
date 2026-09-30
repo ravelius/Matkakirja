@@ -9451,3 +9451,7 @@ Omistaja 30.9.2026: 'voisiko nostojen lukijaääniksi lisätä vaihtoehtoisesti 
 ## TARKENNUS: LUENNAN ELEVENLABS-MOOTTORI VAIN v4 TURBO -STRIIMI (30.9.2026 klo 16.15)
 
 Omistaja 30.9.2026: 'käytä elevenlabsilta vain sitä v4 turbo striimiä, eikös se ole se uusin ja paras ja nyt vielä halvin kun on tarjous?' Moottorivalinta on xAI / ElevenLabs v4 Turbo (ei Flash v2.5:tä eikä Multilingual v2:ta). Linssiseppä 2 tarkistaa tarkan malli-id:n ja striimaus- ja suomituen ElevenLabsin models-rajapinnasta ennen käyttöönottoa.
+
+## TARKENNUS: ELEVENLABS-MALLIT — STRIIMI eleven_v4_turbo, SÄILÖTTÄVÄT eleven_v4 (30.9.2026 klo 16.17)
+
+Omistaja 30.9.2026: Pulun ja nostojen luennan striimi ElevenLabsilla on eleven_v4_turbo (Pulu käyttää sitä jo 28.9. alkaen Pöllö-workerissa: 'pulun pitäisi käyttää sitä jo striimiäänenä'), ja 'myös generoidut äänet tulevat v4:stä': kaikki säilöttävät generoidut äänet (hahmojen kuunnelmat, kertoja, Pulun huonetekstit, ääninäytteet) mallilla eleven_v4, 192 kbit/s. Generointi edelleen vain omistajan erikseen hyväksymille erille.
