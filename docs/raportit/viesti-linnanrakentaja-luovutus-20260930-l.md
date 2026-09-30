@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 30.9.2026 klo 23.0x (-l): kuori v16b ja v17 viety, vaihe 4 tehty
+# Linnanrakentajan luovutus 30.9.2026 klo 22.4x (-l): kuori v16b ja v17 viety, vaihe 4 tehty
 
 Rooli: **Linnanrakentaja (Opus, high)**. Edellinen `…-20260930-k.md` (säännöt pätevät). Olavinlinna on koko tiimin
 ykköstyö. Omistajan laatulinja: älä pudota laatua; kevennys vain iPhone 15 Pro tai heikompi.
