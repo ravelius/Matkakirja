@@ -901,6 +901,19 @@ namespace Matkakirja.Natiivi
             // Palavirran välissä tauotettu puhe ei jatku itsestään: odotetaan jatkoa (Jatka purkaa tauon).
             while (jatko && tauolla && oma == tunnus) yield return null;
             if (oma != tunnus) { Destroy(klippi); yield break; }
+            // ULOSTULO KÄYNNISSÄ ENNEN SOITTOA (kärki 30.9.2026): FMOD käynnistää ulostulonsa uudelleen taustasiirtymän ja
+            // keskeytyksen jälkeen (FMOD::OutputCoreAudio::reset). Uusi puhe alkaa vasta, kun DSP-kello etenee (enintään 2 s),
+            // jottei alku soi pysähtyneeseen ulostuloon. Tavallisesti kello etenee seuraavalla ruudulla (puskuri 21 ms).
+            if (!jatko)
+            {
+                double dsp0 = AudioSettings.dspTime;
+                float ulos0 = Time.unscaledTime;
+                while (oma == tunnus && AudioSettings.dspTime <= dsp0 && Time.unscaledTime - ulos0 < 2f) yield return null;
+                if (oma != tunnus) { Destroy(klippi); yield break; }
+                float seisoi = Time.unscaledTime - ulos0;
+                if (seisoi > 0.15f) Debug.LogWarning($"MATKAKIRJA puhe: ulostulo seisoi {seisoi * 1000:0} ms ennen soittoa"
+                    + $"{(AudioSettings.dspTime <= dsp0 ? " (ei käynnistynyt 2 s:ssa, soitetaan silti)" : "")} {Path.GetFileName(url.Split('?')[0])}");
+            }
             if (synteesi && klippiLoppui >= 0f && Time.unscaledTime - klippiLoppui < 5f) raot.Add((Time.unscaledTime - klippiLoppui) * 1000.0);
             AloitaKlippi(klippi, synteesi, jatko);
             if (synteesi && mittaaEka) { ViimeEkaAaniMs = (Time.unscaledTime - ekaAlku) * 1000.0; mittaaEka = false; }
