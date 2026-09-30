@@ -1,4 +1,4 @@
-# Olavinlinna: hahmokirja ja huoneiden kuunnelmat v1 (Päätoimittaja 30.9.2026)
+# Olavinlinna: hahmokirja ja huoneiden kuunnelmat v2 (Päätoimittaja 30.9.2026, faktantarkistus bd1c6b208)
 
 Omistaja 30.9.2026: faktat tarinan lomaan, kieli ronskista hienostuneeseen puhujan mukaan, aito, luonteva ja hauska
 ("hyvä, tee tekstit tuon ehdotelmasi mukaan"). Jokainen huone = pieni kuunnelma (15–25 s), enintään yksi fakta
@@ -13,7 +13,7 @@ Ei generointia ennen omistajan tekstilupaa. Äänet valitaan 3D-hahmojen mukaan 
 | Kokki | keittiö | ronski puhekieli, kiivas mutta hyväsydäminen, kyllästynyt kalaan |
 | Vesipoika | keittiö | nuori, hengästynyt, puhekieli |
 | Vouti | kappeli (keittiössä oven takaa) | hienostunut kirjakieli, kohtelias, hermostunut – sinetti hukassa, yrittää salata sen |
-| Kappalainen | kappeli | juhlallinen, latinaa, kuiva huumori |
+| Pappi | kappeli | juhlallinen, latinaa, kuiva huumori |
 | Tarjoilija | keskushalli | hätäinen, aina kiire |
 | Vartija ja vartija 2 | keskushalli | ronski sotilashuumori; kakkonen on juoruilija |
 | Talonpoika | keskushalli, muurinharja | juro savolainen, vähäeleinen ironia; muurilla 1495 |
@@ -30,18 +30,18 @@ Ei generointia ennen omistajan tekstilupaa. Äänet valitaan 3D-hahmojen mukaan 
 1. **Kokki:** Kalaa ja naurista, naurista ja kalaa! Jos vouti vielä kerran kysyy, mitä tänään syödään, sanon: samaa
    mitä järvi ja pelto antaa.
 2. **Vesipoika:** Kaksi sankoa lisää. Tuli on palanu aamusta asti – kohta tää keittiö kiehuu itekin.
-3. **Kokki:** Vie tää vati Linnantupaan sotilaille. Kuninkaan saliin mä vien itse – siellä ei kelpaa sankonkantajan
-   sormenjäljet.
-4. **Vouti** *(oven takaa)*: Kokki, en ehdi aterioimaan. Iltamessu alkaa, ja minun on vielä pistäydyttävä kappelissa.
+3. **Kokki:** Vie tää vati Linnantupaan sotilaille. Yläsaliin mä vien itse – siellä ei kelpaa sankonkantajan
+   likaiset sormet.
+4. **Vouti** *(oven takaa)*: Kokki, en ehdi aterioimaan. Iltarukous alkaa, ja minun on vielä pistäydyttävä kappelissa.
 5. **Pulu:** Kalaa aamulla, kalaa illalla, ja voutikin karkaa kappeliin. Minä jään muruvahdiksi.
 
-*Faktat:* kala ja kasvikset; tuli aamusta iltaan; sotilaat Linnantuvassa, vouti Kuninkaan salissa. *Vihje:* vouti kappeliin.
+*Faktat:* kala ja kasvikset; tuli aamusta iltaan; sotilaat Linnantuvassa, vouti yläsalissa. *Vihje:* vouti kappeliin.
 
 ### Kappeli
-1. **Kappalainen:** Introibo ad altare Dei… Voudin herra, messu alkaa, ja te seisotte käytävällä kuin kadonnutta
+1. **Pappi:** Dominus vobiscum… Voudin herra, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta
    lammasta etsien.
 2. **Vouti:** Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina.
-3. **Kappalainen:** Laskekaa mieluummin syntinne. Ja siirtykää: tuon pienen aukon takana sairaat odottavat
+3. **Pappi:** Laskekaa mieluummin syntinne. Ja siirtykää: tuon pienen aukon takana sairaat odottavat
    näkevänsä alttarin.
 4. **Vouti** *(hiljaa)*: Fatabuurin avain… missä minä sitä pitelinkään?
 5. **Pulu:** Reikä seinässä messun seuraamiseen – Suomessa harvinaista herkkua. Ja voudilta näyttää puuttuvan
@@ -111,3 +111,11 @@ hankala paikka.
 
 7 kohtausta, yhteensä noin 3 000 merkkiä (keskimäärin noin 430 merkkiä, 18–25 s / huone). Pulun infotaulutekstit
 (noin 2 100 merkkiä) voi lyhentää, koska osa faktoista kuuluu jo kohtauksissa – omistaja päättää.
+
+## Faktantarkistuksen linja (Päätoimittaja 30.9.2026)
+
+Dialogi on nykysuomeksi "käännettyä" 1500-luvun puhetta: korjataan ASIA-anakronismit (esim. iltamessu, jota
+keskiajalla ei vietetty → iltarukous; Introibo messun alkusanoina → Dominus vobiscum; nimitys Kuninkaan sali, jonka
+ikä on auki → yläsali), mutta EI sanojen kirjallisten ensiesiintymien vuosia (sanko, tusina, röijy säilyvät), koska
+suomen kirjakieltä ei 1500-luvun alussa vielä ollut ja luontevuus on omistajan tavoite.
+
