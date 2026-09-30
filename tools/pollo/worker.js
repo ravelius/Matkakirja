@@ -18,6 +18,7 @@
  * Käyttöönotto: ks. OHJE.md tässä kansiossa.
  */
 
+import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   HISTORIAN_KATTO,
   KONTEKSTIN_KATTO,
@@ -2509,6 +2510,28 @@ export default {
      */
     if (runko?.tehtava === 'puhe') {
       return hoidaPuhe(pyynto, env, kors, runko, ctx);
+    }
+
+    /*
+     * Nimetön kävijälaskuri (kaynnit.js): ping ei koskaan kaada pyyntöä ja
+     * vastaa aina 200. Kehittäjäkoodilla tehty käynti on omistajan, eikä sitä
+     * lasketa. Luku ('kaynnit') vain kehittäjäkoodilla.
+     */
+    if (runko?.tehtava === 'kaynti') {
+      const tulos = await kirjaaKaynti({
+        kv: env.POLLO_KV ?? null,
+        ip: pyynto.headers.get('cf-connecting-ip'),
+        maa: pyynto.cf?.country ?? null,
+        runko,
+        omistaja: kehittajaOhitus(pyynto, env),
+      });
+      return vastaa({ ok: true, laskettu: tulos.laskettu }, kors);
+    }
+    if (runko?.tehtava === 'kaynnit') {
+      if (!kehittajaOhitus(pyynto, env)) {
+        return vastaa({ virhe: 'koodi', viesti: 'Vain kehittäjälle.' }, { status: 403, ...kors });
+      }
+      return vastaa({ paivat: await lueKaynnit({ kv: env.POLLO_KV ?? null, paivia: runko?.paivia }) }, kors);
     }
 
     // Kuvagenerointi: kehittäjän eräajot (ks. hoidaKuva yllä).

@@ -62,6 +62,8 @@ export const PELI = {
     + 'Kokoaminen peliin ei muuta niiden lisenssejä.',
   johdanto: 'Peli on saanut inspiraationsa Jules Vernen teoksista, mutta se '
     + 'ei jäljittele niitä eikä sillä ole yhteyttä niiden oikeudenhaltijoihin.',
+  // Nimetön kävijälaskuri (omistaja 30.9.2026, js/kaynti.js + tools/pollo/kaynnit.js).
+  yksityisyys: 'Peli laskee nimettömiä käyntikertoja; IP-osoitteita ei tallenneta.',
 };
 
 /*

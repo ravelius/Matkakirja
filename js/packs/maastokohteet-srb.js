@@ -119,4 +119,180 @@ export const MAASTOKOHTEET_SRB = [
     lahde: 'en-Wikipedia "Đavolja Varoš", johdanto, geologia, legenda ja suojelu (tarkistettu '
       + '30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ A, 30.9.2026 — 5 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'golubacin-linnoitus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-golubacin-linnoitus-c8f662b5.jpg',
+      lyhyt: 'Golubacin linnoituksen tornit ja muurit kalliolla Tonavan rannalla.',
+      selite: 'Kivitornit ja muurit nousevat kalliorinteelle, ja etualalla on nurmikenttä ja pensaat.',
+      lahde: 'Valokuva: Petar Milošević, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Petar Milošević',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Golubac_Fortress_(%D0%B3%D1%80%D0%B0%D0%B4_%D0%93%D0%BE%D0%BB%D1%83%D0%B1%D0%B0%D1%86).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Golubacin linnoitus',
+    nimio: 'Golubac',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuinka monta tornia Golubacin linnoituksessa on?',
+      'Milloin linnoitus avattiin kunnostuksen jälkeen yleisölle?',
+    ],
+    korostukset: ['kymmenen tornia|kymmenen tornia'],
+    nappi: 'Tonavan rotkon tornilinnoitus',
+    // 21.6785 E / 44.6612 N — en-Wikipedia "Golubac Fortress", osiot "Location", "History", "Architecture" ja "2014-2019 Reconstruction"
+    laudat: {
+      maailmankartta: { x: 6555.9, y: 1615.7 },
+    },
+    teksti: 'Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä '
+      + 'alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus '
+      + 'rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, '
+      + 'joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: '
+      + 'vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina '
+      + '2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle '
+      + 'huhtikuussa 2019.',
+    lahde: 'en-Wikipedia "Golubac Fortress", osiot "Location", "History", "Architecture" ja '
+      + '"2014-2019 Reconstruction" (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'gamzigrad',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-gamzigrad-d55df952.jpg',
+      lyhyt: 'Kivi- ja tiilimuurien jäänteitä Felix Romulianan alueella.',
+      selite: 'Nurmikentän ympäröimiä kivilohkoperustuksia ja restauroituja kivi- ja tiilimuurien osia Felix Romulianan raunioilla.',
+      lahde: 'Valokuva: Institute for the Study of the Ancient World, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Institute for the Study of the Ancient World',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Palace_at_Felix_Romuliana_(XXXVI)_(5446807014).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    nimi: 'Gamzigrad',
+    nimio: 'Gamzigrad',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka rakennutti Felix Romulianan ja miksi se sai nimensä?',
+      'Mitä Magura-kukkulalla on?',
+    ],
+    korostukset: ['Galerius|Galerius'],
+    nappi: 'Keisarin unohdettu palatsi',
+    // 22.185 E / 43.8992 N — en-Wikipedia "Gamzigrad" (Felix Romuliana), johdanto
+    laudat: {
+      maailmankartta: { x: 6572.8, y: 1646.9 },
+    },
+    teksti: 'Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä '
+      + 'Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan '
+      + 'Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien '
+      + 'sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt '
+      + 'Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi '
+      + 'mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa '
+      + 'slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on '
+      + 'vuodesta 2007.',
+    lahde: 'en-Wikipedia "Gamzigrad" (Felix Romuliana), johdanto (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'petrovaradinin-linnoitus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-petrovaradinin-linnoitus-1e507bec.jpg',
+      lyhyt: 'Petrovaradinin linnoitus ja kellotorni kohoavat Tonavan rannalla.',
+      selite: 'Illansuun valossa näkyy linnoituksen muuri ja keltaisia rakennuksia kukkulan päällä sekä valkoinen kellotorni vasemmalla.',
+      lahde: 'Valokuva: BojanPavlukovic, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'BojanPavlukovic',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gornja_i_donja_Petrovaradinska_tvr%C4%91ava_sa_podgra%C4%91em_-_Petrovaradin_Fortress_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Petrovaradinin linnoitus',
+    nimio: 'Petrovaradin',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Milloin linnoituksen peruskivi laskettiin?',
+      'Miksi kellotornin viisarit ovat päinvastoin?',
+    ],
+    korostukset: ['viisarit|viisarit'],
+    nappi: 'Tonavan linnoitus ja nurinkurinen kello',
+    // 19.8625 E / 45.2525 N — en-Wikipedia "Petrovaradin Fortress", johdanto
+    laudat: {
+      maailmankartta: { x: 6495.4, y: 1591.4 },
+    },
+    teksti: 'Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin '
+      + 'kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset '
+      + 'rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt '
+      + 'yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä '
+      + 'valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää '
+      + 'minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään '
+      + 'linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin '
+      + 'Exit-musiikkifestivaali.',
+    lahde: 'en-Wikipedia "Petrovaradin Fortress", johdanto (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'sarganin-kahdeksikko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-sarganin-kahdeksikko-c54f1331.jpg',
+      lyhyt: 'Mokra Goran asema ja museojunan vaunuja metsäisten vuorten edessä.',
+      selite: 'Mokra Goran asemalla seisoo vanhoja vihreitä ja punaisia junavaunuja kapeilla raiteilla.',
+      lahde: 'Valokuva: Whitepixels, Wikimedia Commons (CC0).',
+      tekija: 'Whitepixels',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sargan_Eight_-_Mokra_Gora_station_1.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    nimi: 'Šarganin kahdeksikko',
+    nimio: 'Šarganin 8',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Minkä muotoinen rata on ja miksi?',
+      'Kuinka leveä raide on?',
+    ],
+    korostukset: ['kahdeksikon|kahdeksikon'],
+    nappi: 'Junarata, joka kiertää kahdeksikon',
+    // 19.5219 E / 43.8 N — en-Wikipedia "Šargan Eight", johdanto
+    laudat: {
+      maailmankartta: { x: 6484.1, y: 1650.9 },
+    },
+    teksti: 'Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran '
+      + 'kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan '
+      + 'aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. '
+      + 'tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, '
+      + 'ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon '
+      + 'ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata '
+      + 'avattiin uudelleen 1. syyskuuta 2003.',
+    lahde: 'en-Wikipedia "Šargan Eight", johdanto (tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'manasijan-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/srb-nosto-manasijan-luostari-d0e9a1fd.jpg',
+      lyhyt: 'Manasijan linnoitusmuurin tornit ja kirkon kupoli niiden takana.',
+      selite: 'Kaksi hammastettua kivitornia ja niiden välinen muuri sateisessa säässä.',
+      lahde: 'Valokuva: Laslovarga, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Laslovarga',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:03Monastery_Manasia_in_Serbia.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Manasijan luostari',
+    nimio: 'Manasija',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuka rakennutti Manasijan luostarin?',
+      'Kuinka paljon seinämaalauksista on säilynyt?',
+    ],
+    korostukset: ['despootin torni|despootin torni'],
+    nappi: 'Despootin linnoitettu luostari',
+    // 21.4694 E / 44.1006 N — en-Wikipedia "Manasija Monastery", johdanto
+    laudat: {
+      maailmankartta: { x: 6549, y: 1638.7 },
+    },
+    teksti: 'Manasijan luostari sijaitsee Despotovacin lähellä Serbiassa. Despootti Stefan '
+      + 'Lazarević rakennutti sen vuosina 1406–1418, ja kirkko vihittiin käyttöön helluntaina '
+      + '1418. Luostaria ympäröi vahva muuri, jossa on 11 tornia; suurin niistä on kirkon '
+      + 'pohjoispuolella oleva despootin torni. Kirkon seinille maalattiin vuoden 1413 '
+      + 'jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes on säilynyt: '
+      + 'ottomaanien aikana poistettu lyijykatto päästi veden seinille. Kohde julistettiin '
+      + 'poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979.',
+    lahde: 'en-Wikipedia "Manasija Monastery", johdanto (tarkistettu 30.9.2026).',
+  },
 ];

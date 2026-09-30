@@ -124,4 +124,113 @@ export const MAASTOKOHTEET_ALB = [
     lahde: 'en-Wikipedia "Valbona Valley National Park", osiot "Geography", "Fauna" ja '
       + '"Settlements" (tarkistettu 30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ B, 30.9.2026 — 3 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'gjirokastern-vanhakaupunki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-gjirokastern-vanhakaupunki-d11facdd.jpg',
+      lyhyt: 'Vanhankaupungin harmaat kivikatot ylhäältä nähtynä.',
+      selite: 'Ylhäältä kuvattu vanhakaupunki, jonka valkoiset talot on katettu harmailla kivilaattakatoilla.',
+      lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Pudelek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gjirokast%D1%91r_-_roofs.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Gjirokastërin vanhakaupunki',
+    nimio: 'Gjirokastër',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Miksi Gjirokastëria kutsutaan kivikaupungiksi?',
+      'Minkä toisen kaupungin kanssa se on maailmanperintökohde?',
+    ],
+    korostukset: ['kivikaupungiksi|kivikaupungiksi'],
+    nappi: 'Kivikaupunki Drinon rinteellä',
+    // 20.133 E / 40.067 N — en-Wikipedia "Gjirokastër" ja "Historic Centres of Berat and Gjirokastra"
+    laudat: {
+      maailmankartta: { x: 6504.4, y: 1800.3 },
+    },
+    teksti: 'Gjirokastër on Etelä-Albanian kaupunki, joka levittyy Drinon laakson jyrkälle '
+      + 'rinteelle noin 300 metrin korkeuteen. Sitä kutsutaan kivikaupungiksi, sillä sen '
+      + 'tornitalot ovat kivestä ja kivikattoisia ja voivat olla jopa viisikerroksisia. '
+      + 'Kaupungin nimi mainitaan ensimmäisen kerran vuonna 1336, ja ottomaanien vallan alle '
+      + 'se joutui 1418 alkaen. Yli 500 taloa on nimetty kulttuurimonumenteiksi. '
+      + 'Historiallinen keskusta on ollut yhdessä Beratin kanssa UNESCOn maailmanperintökohde '
+      + 'vuodesta 2005, ja kaupunkia hallitsee linnake.',
+    lahde: 'en-Wikipedia "Gjirokastër" ja "Historic Centres of Berat and Gjirokastra" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'krujen-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-krujen-linna-f37aa4c4.jpg',
+      lyhyt: 'Krujën linnan torni ja museo kalliorinteen päällä.',
+      selite: 'Kalliorinteen päällä kohoavat linnan muuri, tornimainen rakennus ja vaalea museorakennus.',
+      lahde: 'Valokuva: AgronBeqiriPh, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'AgronBeqiriPh',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalaja_e_Krujes_8.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Krujën linna',
+    nimio: 'Krujën linna',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka johti vastarintaa Krujën linnasta ottomaaneja vastaan?',
+      'Milloin ottomaanit valtasivat linnan?',
+    ],
+    korostukset: ['Skanderbeg|Skanderbeg'],
+    nappi: 'Skanderbegin linnoitus vuorella',
+    // 19.7939 E / 41.5069 N — en-Wikipedia "Krujë Castle", osiot "Lead", "History" ja "Museums"
+    laudat: {
+      maailmankartta: { x: 6493.1, y: 1743.3 },
+    },
+    teksti: 'Krujën linna kohoaa 557 metrin korkeudessa Albaniassa, ja Wikipedian mukaan se on '
+      + 'rakennettu 400- tai 500-luvuilla. Gjergj Kastriot Skanderbeg johti täältä '
+      + 'vastarintaa ottomaaneja vastaan vuodesta 1443. Linnaa piiritettiin muun muassa '
+      + 'vuosina 1450 ja 1466–1467, ja sulttaani Mehmed II valtasi sen 1478, vuosikymmen '
+      + 'Skanderbegin kuoleman jälkeen. Alueella on Skanderbegin kansallismuseo, jonka '
+      + 'arkkitehdit Pranvera Masha ja Pirro Vaso rakensivat 1980-luvun alussa, sekä '
+      + 'etnografinen museo. Linna on kuvattu Albanian 1000 ja 5000 lekin seteleissä.',
+    lahde: 'en-Wikipedia "Krujë Castle", osiot "Lead", "History" ja "Museums" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'apollonia',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/alb-nosto-apollonia-b5c6e70a.jpg',
+      lyhyt: 'Agonothetesin monumentin pylväikkö Apollonian arkeologisessa puistossa.',
+      selite: 'Kuvassa on Agonothetesin monumentin pylväikkö ja päätykolmio, jonka ympärillä on tiiliraunioita ja puita.',
+      lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Pudelek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Apollonia,_Albania_(by_Pudelek)_-_Monument_of_Agonothetes.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Apollonia',
+    nimio: 'Apollonia',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka johti Apollonian perustajia?',
+      'Minkä tulevan keisarin kerrotaan opiskelleen kaupungissa?',
+    ],
+    korostukset: ['Augustus|Augustus'],
+    nappi: 'Korinttolaisten perustama kaupunki Adrialla',
+    // 19.4725 E / 40.7219 N — en-Wikipedia "Apollonia (Illyria)", osiot "History" ja "Archaeology"
+    laudat: {
+      maailmankartta: { x: 6482.4, y: 1774.4 },
+    },
+    teksti: 'Apollonia on antiikin kaupungin rauniot lähellä Pojanin kylää Fierin alueella '
+      + 'Albaniassa, noin kymmenen kilometrin päässä Adrianmeren rannikosta. Kaupungin '
+      + 'perustivat noin vuonna 600 eaa. korinttolaiset uudisasukkaat, joita johti Gylax, ja '
+      + 'hellenistisellä kaudella asukkaita arvioidaan olleen jopa 60 000. Kaupunki taantui '
+      + '200-luvulla jkr., kun maanjäristys johti sataman liettymiseen, ja se autioitui '
+      + '300-luvulle tultaessa. Nuori Gaius Octavius, myöhempi Augustus, opiskeli täällä '
+      + 'vuonna 44 eaa. ja sai tiedon Caesarin murhasta Apolloniassa. Alue on nykyään '
+      + 'arkeologinen puisto, jossa toimii myös museo.',
+    lahde: 'en-Wikipedia "Apollonia (Illyria)", osiot "History" ja "Archaeology" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];
