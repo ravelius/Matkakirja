@@ -1018,4 +1018,42 @@ export const MAASTOKOHTEET_SWE = [
     lahde: 'en-Wikipedia "Sala Silver Mine", johdanto-osa sekä osiot "Geology" ja "History" '
       + '(tarkistettu 11.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ C, 30.9.2026 — 1 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'marbacka',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/swe-nosto-marbacka-47906494.jpg',
+      lyhyt: 'Mårbackan päärakennus ja nurmikko kesällä.',
+      selite: 'Vaalea, tummakattoinen päärakennus, jossa on pylväsjulkisivu ja parveke. Edessä on nurmikko ja kukkapenkkejä.',
+      lahde: 'Valokuva: Joel Torsson (Leojth), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Joel Torsson (Leojth)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Selma_Lagerlofs_Marbacka_at_Sunne.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    nimi: 'Mårbacka',
+    nimio: 'Mårbacka',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Millä rahalla Lagerlöf osti tilan takaisin?',
+      'Kuka suunnitteli päärakennuksen laajennuksen?',
+    ],
+    korostukset: ['Nobel-palkintorahoillaan|Nobel-palkintorahoillaan'],
+    nappi: 'Nobel-rahoilla takaisin ostettu kotitila',
+    // 13.2336 E / 59.7811 N — en-Wikipedia "Mårbacka", osiot "History", "Building" ja "Present"
+    laudat: {
+      maailmankartta: { x: 6274.5, y: 936.6 },
+    },
+    teksti: 'Mårbacka on Selma Lagerlöfin kotitila Sunnen kunnassa Värmlandissa. Päärakennus '
+      + 'valmistui vuonna 1793, ja tila siirtyi Lagerlöfin suvulle 1801. Perhe menetti sen '
+      + 'konkurssissa 1889, mutta Lagerlöf osti päärakennuksen takaisin 1907 ja koko tilan '
+      + '1910 Nobel-palkintorahoillaan. Arkkitehti Isak Gustaf Clason suunnitteli vuosina '
+      + '1921–1923 talon muutoksen: siihen tuli uusi kerros, ullakko ja edustava julkisivu. '
+      + 'Kirjailijan testamentin mukaan tila on museo, jossa on opastettuja kierroksia, '
+      + 'puutarha ja kahvila.',
+    lahde: 'en-Wikipedia "Mårbacka", osiot "History", "Building" ja "Present" (tarkistettu '
+      + '30.9.2026).',
+  },
 ];

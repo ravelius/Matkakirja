@@ -1,0 +1,439 @@
+{
+ "materiaali/graniittilohkomuuri": {
+  "nimi": "Broken Wall",
+  "lahde": "https://polyhaven.com/a/broken_wall",
+  "tekijat": [
+   "Rob Tuytel"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 2.4,
+  "huom": "Vaaleanharmaa laastattu kivimuuri (ei puhdasta graniittilohkoa).",
+  "tiedostot": [
+   {
+    "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_arm.png",
+    "sha256": "c74c1a857a1dbb14488022ef2404fa79b9003423f216d21bdcd6d14117347bab",
+    "tavuja": 7138337
+   },
+   {
+    "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_diff.jpg",
+    "sha256": "35615ed619b14ab8991205e887a24cadcf8edffdf15b36b153421604b9ba29ce",
+    "tavuja": 2382913
+   },
+   {
+    "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_nor_gl.jpg",
+    "sha256": "ce7935ef7b418a7e20ade08311443deb0b30a0f77559879780bba2e2e07f5a44",
+    "tavuja": 3578159
+   }
+  ]
+ },
+ "materiaali/kalkkirappaus": {
+  "nimi": "White Rough Plaster",
+  "lahde": "https://polyhaven.com/a/white_rough_plaster",
+  "tekijat": [
+   "Rob Tuytel"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 2.5,
+  "tiedostot": [
+   {
+    "polku": "materiaali/kalkkirappaus/kalkkirappaus_arm.png",
+    "sha256": "11a4d2b8fe4cf00f19f5d92d5ddff50ab8c2d5d29199124c64e2a03b575d3b6c",
+    "tavuja": 6957484
+   },
+   {
+    "polku": "materiaali/kalkkirappaus/kalkkirappaus_diff.jpg",
+    "sha256": "4fb1f54ac26b28b23c8f8efa708d3062684fe6122e3f001b18bcd268027fcb17",
+    "tavuja": 2828405
+   },
+   {
+    "polku": "materiaali/kalkkirappaus/kalkkirappaus_nor_gl.jpg",
+    "sha256": "75668cb16a244c3647e78fd3dd4601616a15bf59e90bb090655b19a8095da71c",
+    "tavuja": 2551147
+   }
+  ]
+ },
+ "materiaali/kallio": {
+  "nimi": "Lichen Rock",
+  "lahde": "https://polyhaven.com/a/lichen_rock",
+  "tekijat": [
+   "Rico Cilliers"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 3.0,
+  "tiedostot": [
+   {
+    "polku": "materiaali/kallio/kallio_arm.png",
+    "sha256": "a609e25b8ad823f6b3053013ed77b61f040d24c5d860a8b9ee800606e4fc02ec",
+    "tavuja": 7087024
+   },
+   {
+    "polku": "materiaali/kallio/kallio_diff.jpg",
+    "sha256": "f2ec7a10c6cb929653278e00dcfb0e7e07aea178136a37eac7478d2b9cdd5e96",
+    "tavuja": 4010129
+   },
+   {
+    "polku": "materiaali/kallio/kallio_nor_gl.jpg",
+    "sha256": "89b28336282a07492080a20725d18c7649ae69b1d8e10187ffe143c804bd6d2c",
+    "tavuja": 4844348
+   }
+  ]
+ },
+ "materiaali/kivilaatta": {
+  "nimi": "Grey Stone Path",
+  "lahde": "https://polyhaven.com/a/grey_stone_path",
+  "tekijat": [
+   "Amal Kumar"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 2.0,
+  "tiedostot": [
+   {
+    "polku": "materiaali/kivilaatta/kivilaatta_arm.png",
+    "sha256": "3f90504a75d254805d9d01129b62523b6bb3129b5b6fdd35596b691cc835b2bb",
+    "tavuja": 7721892
+   },
+   {
+    "polku": "materiaali/kivilaatta/kivilaatta_diff.jpg",
+    "sha256": "bf405e4e8a2d720976f710c4bb6de7734bc0bea613657e6c9362d3716418cc51",
+    "tavuja": 3569941
+   },
+   {
+    "polku": "materiaali/kivilaatta/kivilaatta_nor_gl.jpg",
+    "sha256": "b4c84fd11853cceab87aa1d9e5fbe5699e12993bc2abbf06908a35b0dbf0c548",
+    "tavuja": 3947495
+   }
+  ]
+ },
+ "materiaali/kuparikatto": {
+  "nimi": "Metal 058 C",
+  "lahde": "https://ambientcg.com/a/Metal058C",
+  "tekijat": [
+   "ambientCG (Lennart Demes)"
+  ],
+  "lisenssi": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+  "palvelu": "ambientCG",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 2.0,
+  "huom": "Täysin patinoitunut (verdigris); Metalness-kartta mukana.",
+  "tiedostot": [
+   {
+    "polku": "materiaali/kuparikatto/kuparikatto_arm.png",
+    "sha256": "2b5d78bb19c9f8d73dfc5701bdc289ab22708bdd9417ead1fade5a5d28995393",
+    "tavuja": 7728599
+   },
+   {
+    "polku": "materiaali/kuparikatto/kuparikatto_diff.jpg",
+    "sha256": "be0e8af48979ca04207f1503c6e9292851157229deadb2ad6dfc0df9cbd2a30e",
+    "tavuja": 6393911
+   },
+   {
+    "polku": "materiaali/kuparikatto/kuparikatto_nor_gl.jpg",
+    "sha256": "fedf5dc7f8c043ec503a1977ec40e9cc3b9b3474ba892ec7c6c0a9669a00014a",
+    "tavuja": 4730733
+   }
+  ]
+ },
+ "materiaali/lankku": {
+  "nimi": "Old Wood Floor",
+  "lahde": "https://polyhaven.com/a/old_wood_floor",
+  "tekijat": [
+   "Guillaume Monsergent"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 2.0,
+  "tiedostot": [
+   {
+    "polku": "materiaali/lankku/lankku_arm.png",
+    "sha256": "2da78081a44963731bf7b317aa22eacfb6cf6130ce38d04829dd31efc4c4c66d",
+    "tavuja": 6762627
+   },
+   {
+    "polku": "materiaali/lankku/lankku_diff.jpg",
+    "sha256": "5f07d01e98599d2cd90355145ef71733afda8f3756c94e0d0de26aa92f826400",
+    "tavuja": 3116403
+   },
+   {
+    "polku": "materiaali/lankku/lankku_nor_gl.jpg",
+    "sha256": "17765f0cfc94a8e38cba2e8de29de25f0b0bd7dd6e940b385ea15989751fbfe3",
+    "tavuja": 2927156
+   }
+  ]
+ },
+ "materiaali/liuskekatto": {
+  "nimi": "Roof Slates 03",
+  "lahde": "https://polyhaven.com/a/roof_slates_03",
+  "tekijat": [
+   "Rob Tuytel"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 1.4,
+  "tiedostot": [
+   {
+    "polku": "materiaali/liuskekatto/liuskekatto_arm.png",
+    "sha256": "6ae6e039b83a20c6cbd47e6cd8aa596b7d7b94ce01bc547087011a48b4410fcd",
+    "tavuja": 4713802
+   },
+   {
+    "polku": "materiaali/liuskekatto/liuskekatto_diff.jpg",
+    "sha256": "955eb467fc609e4509c2354f0b88755ffa137dac352b651efed95026f4a6aa5c",
+    "tavuja": 2083015
+   },
+   {
+    "polku": "materiaali/liuskekatto/liuskekatto_nor_gl.jpg",
+    "sha256": "f797ad9756e6584736831cf07f79872440a6a4811c80f9bcedd3b20b05c7596d",
+    "tavuja": 2741713
+   }
+  ]
+ },
+ "materiaali/paanukatto": {
+  "nimi": "Grey Roof 01",
+  "lahde": "https://polyhaven.com/a/grey_roof_01",
+  "tekijat": [
+   "Rob Tuytel"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 1.2,
+  "huom": "Tummat pienet paanut/laatat (Poly Havenissa ei varsinaista puupaanua paitsi vara).",
+  "tiedostot": [
+   {
+    "polku": "materiaali/paanukatto/paanukatto_arm.png",
+    "sha256": "3af42df5e7e1cd385e0b1800c92d755c6e8f9df956878510309bd6b672b75d29",
+    "tavuja": 6070467
+   },
+   {
+    "polku": "materiaali/paanukatto/paanukatto_diff.jpg",
+    "sha256": "880583ff7508599b1dd6e83a6c70604120ad35f7ad187b1e98457c1a9d7b54ed",
+    "tavuja": 1388588
+   },
+   {
+    "polku": "materiaali/paanukatto/paanukatto_nor_gl.jpg",
+    "sha256": "2e2dbd57a8a1a09936b2a92373408c7658033966ffee25eddfe98b5988491da3",
+    "tavuja": 1750511
+   }
+  ]
+ },
+ "materiaali/rauta": {
+  "nimi": "Rusty Metal 04",
+  "lahde": "https://polyhaven.com/a/rusty_metal_04",
+  "tekijat": [
+   "Amal Kumar"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 1.0,
+  "huom": "Tumma ruosteinen rautapinta.",
+  "tiedostot": [
+   {
+    "polku": "materiaali/rauta/rauta_arm.png",
+    "sha256": "41b2b1a5d7bc0f3506b7050750aa25f92b8386ddda2702e1bd049ac43d3fb6b0",
+    "tavuja": 6114988
+   },
+   {
+    "polku": "materiaali/rauta/rauta_diff.jpg",
+    "sha256": "dc17baa7c113af0a8db59a7166dbebd1d8bc842e69b1f07b89d9e90531ebbd22",
+    "tavuja": 3463347
+   },
+   {
+    "polku": "materiaali/rauta/rauta_nor_gl.jpg",
+    "sha256": "b230568d198778afbf3d104d2951e2e2306ddb276bc1ed2f441b9040c58af537",
+    "tavuja": 3582694
+   }
+  ]
+ },
+ "materiaali/tervattu-puu": {
+  "nimi": "Dark Planks",
+  "lahde": "https://polyhaven.com/a/dark_planks",
+  "tekijat": [
+   "Rob Tuytel"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 2.0,
+  "huom": "Tumma vaakalautaseinä.",
+  "tiedostot": [
+   {
+    "polku": "materiaali/tervattu-puu/tervattu-puu_arm.png",
+    "sha256": "c2ef8de15e4fa3ea80a4a23358914311a132a0ec9cb010051c4bacb51e65e981",
+    "tavuja": 6184451
+   },
+   {
+    "polku": "materiaali/tervattu-puu/tervattu-puu_diff.jpg",
+    "sha256": "ec61c4917a389a7b164acc4a5aae4db5120c85f38da84acabca008f1f3681011",
+    "tavuja": 1681749
+   },
+   {
+    "polku": "materiaali/tervattu-puu/tervattu-puu_nor_gl.jpg",
+    "sha256": "a4d4f9d9ebffadece0b7d1aebbf69c86df579b42c8c800acf3cd5c1725201f70",
+    "tavuja": 2119724
+   }
+  ]
+ },
+ "materiaali/tiili": {
+  "nimi": "Medieval Red Brick",
+  "lahde": "https://polyhaven.com/a/medieval_red_brick",
+  "tekijat": [
+   "Rob Tuytel"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [
+   "ARM-pakkaus (R AO, G karheus, B metalli)"
+  ],
+  "toisto_m": 1.6,
+  "tiedostot": [
+   {
+    "polku": "materiaali/tiili/tiili_arm.png",
+    "sha256": "46f20ece041d7e4dbe5d278e23eddc7e99e75e4a7e82e7bf80c7cc9aff730ff7",
+    "tavuja": 6866647
+   },
+   {
+    "polku": "materiaali/tiili/tiili_diff.jpg",
+    "sha256": "6115ef3edd7c27a68dce57606ac6050b60313262565dcdc473c9a2ba8fd421e7",
+    "tavuja": 3392093
+   },
+   {
+    "polku": "materiaali/tiili/tiili_nor_gl.jpg",
+    "sha256": "bdb1e04f5e4d4b7e5716749ef597ae709766a9961f501e3af5da327c4467ca01",
+    "tavuja": 4720254
+   }
+  ]
+ },
+ "tarra/halkeama": {
+  "nimi": "Asphalt Damage 001",
+  "lahde": "https://ambientcg.com/a/AsphaltDamage001",
+  "tekijat": [
+   "ambientCG (Lennart Demes)"
+  ],
+  "lisenssi": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+  "palvelu": "ambientCG",
+  "muokkaukset": [],
+  "toisto_m": 2.0,
+  "huom": "Heikko vastine: asfaltin vauriotarra (Opacity mukana), ei kivihalkeamaa. Kummassakaan kirjastossa ei ole halkeamatarraa.",
+  "tiedostot": [
+   {
+    "polku": "tarra/halkeama/halkeama_diff.png",
+    "sha256": "9e64efe5f365630acfcb06f767ae266264616767c115b4b8b7fef6ac24cf4183",
+    "tavuja": 9414774
+   },
+   {
+    "polku": "tarra/halkeama/halkeama_nor_gl.jpg",
+    "sha256": "4ef95ba459b02412130ecbfddb1cac81bdd3846b66c46139d41fe444dfd363ab",
+    "tavuja": 7689523
+   }
+  ]
+ },
+ "tarra/noki": {
+  "nimi": "Leaking 019 B",
+  "lahde": "https://ambientcg.com/a/Leaking019B",
+  "tekijat": [
+   "ambientCG (Lennart Demes)"
+  ],
+  "lisenssi": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+  "palvelu": "ambientCG",
+  "muokkaukset": [
+   "alfa = 1 − harmaa (lähteessä ei opacity-karttaa)"
+  ],
+  "toisto_m": 1.5,
+  "huom": "Ei nokitarraa kummassakaan kirjastossa; lähin: tumma valumajälki/tahra. Ei Opacity-karttaa, käytä Color multiply-maskina.",
+  "tiedostot": [
+   {
+    "polku": "tarra/noki/noki_diff.png",
+    "sha256": "f8f326b9ad276dee089a331ecfc385f0239b55495ceedb29b30832951fc87981",
+    "tavuja": 3343826
+   },
+   {
+    "polku": "tarra/noki/noki_nor_gl.jpg",
+    "sha256": "cdba80d81db34cf731ce2caba7d91e518b375c8026086e3b89ae3eb9e01bf3d2",
+    "tavuja": 1893729
+   }
+  ]
+ },
+ "tarra/sammal": {
+  "nimi": "Moss 002",
+  "lahde": "https://ambientcg.com/a/Moss002",
+  "tekijat": [
+   "ambientCG (Lennart Demes)"
+  ],
+  "lisenssi": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+  "palvelu": "ambientCG",
+  "muokkaukset": [
+   "alfa = 1 − harmaa (lähteessä ei opacity-karttaa)"
+  ],
+  "toisto_m": 2.0,
+  "huom": "EI alfallinen tarra: tiilautuva sammalmateriaali (ei Opacity-karttaa); kummassakaan kirjastossa ei ole sammaltarraa. Tarvitsee maskin.",
+  "tiedostot": [
+   {
+    "polku": "tarra/sammal/sammal_diff.png",
+    "sha256": "c14695a73deec361c4992bfde9f66ce16414948c3f34be45b50d72ed1430aa6a",
+    "tavuja": 11747649
+   },
+   {
+    "polku": "tarra/sammal/sammal_nor_gl.jpg",
+    "sha256": "c74daa9810de11b97702267125f061f8540bb04f915fc778e80b7d703f7e8b7a",
+    "tavuja": 10653102
+   }
+  ]
+ },
+ "tarra/vesijalki": {
+  "nimi": "Leaking 016 C",
+  "lahde": "https://ambientcg.com/a/Leaking016C",
+  "tekijat": [
+   "ambientCG (Lennart Demes)"
+  ],
+  "lisenssi": "CC0 1.0 (https://docs.ambientcg.com/license/)",
+  "palvelu": "ambientCG",
+  "muokkaukset": [
+   "alfa = 1 − harmaa (lähteessä ei opacity-karttaa)"
+  ],
+  "toisto_m": 1.5,
+  "huom": "Ei erillistä Opacity-karttaa: Color on harmaasävy (valkoinen = ei vaikutusta), käytä kerto-/multiply-sekoituksena tai johda alfa = 1 - Color. Metalness=255 koko kuvassa.",
+  "tiedostot": [
+   {
+    "polku": "tarra/vesijalki/vesijalki_diff.png",
+    "sha256": "7b10b0de8ece919d807c53b5ca9ce57ae0f8e8173dac155f259686f5d8925cf1",
+    "tavuja": 1019405
+   },
+   {
+    "polku": "tarra/vesijalki/vesijalki_nor_gl.jpg",
+    "sha256": "7327bd902e3aa76b772a89efd605ccdb0599c976276d2a2823db78524b892a29",
+    "tavuja": 622068
+   }
+  ]
+ }
+}

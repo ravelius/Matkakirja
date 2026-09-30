@@ -322,7 +322,11 @@ export function tihennysraja(palikka, tila) {
 export function lisaaBlender(rakennusJson, blender) {
   const on = new Map(blender.tiedostot.map((t) => [t.polku, t]));
   const B = (p) => { if (!on.has(p)) throw new Error(`blender.json: puuttuu ${p}`); return `blender/${p}`; };
-  const tasot = { huippu: '4k', normaali: '4k', kevyt: '2k' };
+  // Huippu-taso käyttää 8k-atlasta (Real-ESRGAN ×4 → 8k, laatusuunnitelma 30.9., täyden laadun laitteet), jos se on
+  // viety blender.json:iin; muuten 4k kuten ennen (vanha blender.json ei riko rakennusta).
+  const on8k = on.has('ulkokuori/ulkokuori-8k-4x4.astcm') && on.has('ulkokuori/ulkokuori-hamara-8k-4x4.astcm')
+    && on.has('ulkokuori/ulkokuori-hamara-8k.jpg');
+  const tasot = { huippu: on8k ? '8k' : '4k', normaali: '4k', kevyt: '2k' };
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
@@ -333,6 +337,18 @@ export function lisaaBlender(rakennusJson, blender) {
       hamaraJpg: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}.jpg`)])),
     },
   };
+  // Hybridi-PBR (menetelmä B, Siirtosepän muoto 30.9.): maski + kirjaston 4 materiaalia maskin kanavajärjestyksessä,
+  // vain jos viety blender.json:iin. Toisto metreinä kirjaston manifestista (js/dioraama/kirjasto/lahteet.json).
+  const DETALJI = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio'];
+  const kp = (id, k) => `kirjasto/materiaali/${id}/${id}_${k}`;
+  if (on.has('ulkokuori/hybridi/kuori-materiaali-2k.png') && DETALJI.every((id) => on.has(kp(id, 'diff.jpg')) && on.has(kp(id, 'nor_gl.jpg')))) {
+    const kirjasto = JSON.parse(readFileSync(new URL('../../js/dioraama/kirjasto/lahteet.json', import.meta.url), 'utf8'));
+    rakennusJson.ulkokuori.detalji = {
+      maski: B('ulkokuori/hybridi/kuori-materiaali-2k.png'), voimakkuus: 0.8, normaali: 0.7,
+      kanavat: DETALJI.map((id) => ({ id, diff: B(kp(id, 'diff.jpg')), nor: B(kp(id, 'nor_gl.jpg')),
+        toisto_m: kirjasto[`materiaali/${id}`].toisto_m })),
+    };
+  }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
