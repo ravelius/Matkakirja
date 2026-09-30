@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Viimeisin NakymaHetkella-tulos ja sen ajanhetki (DioraamaTaulu lukee näitä joka ruutu; ei
         /// vielä kytketty LinssiUi.cs:ään tässä erässä, ks. luovutusraportti).</summary>
         public static DioraamaNakyma? ViimeisinNakyma { get; private set; }
+        /// <summary>Saapumiskaari odottaa kuorta: DioraamaTaulu piilottaa Pulun ja taulun (Päätoimittaja 30.9.: pelkkä hämärä järvi).</summary>
+        public static bool SaapumisOdotus { get; private set; }
         public static double ViimeisinT { get; private set; }
         /// <summary>Näyttämön kamera (DioraamaTaulu: Pulun 3D-paikka → ruutupiste), null kun linssi on kiinni.</summary>
         public static Camera AktiivinenKamera { get; private set; }
@@ -185,6 +187,7 @@ namespace Matkakirja.Natiivi
                 }
                 else { nayttamo.Odota(true); t = kuoriOdotusT; }
             }
+            SaapumisOdotus = kuoriOdotusAlku >= 0f;
             bool pysty = y.Kuvasuhde < 1.0;
             if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             var nakyma = linssi.NakymaHetkella(t, pysty);
@@ -221,7 +224,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             linssi.Sulje();
-            kuoriOdotusAlku = -1f; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
+            kuoriOdotusAlku = -1f; SaapumisOdotus = false; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;

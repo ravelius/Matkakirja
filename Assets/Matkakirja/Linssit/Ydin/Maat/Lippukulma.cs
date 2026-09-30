@@ -18,8 +18,11 @@ namespace Matkakirja.Linssit.Maat
         public const double SisamaastaKm = 15, KohteistaKm = 25, KohteenVara = 0.03;
         const double Rad = Math.PI / 180;
 
-        /// <summary>Paikka (lat, lon) tai null, jos maalla ei ole renkaita. <paramref name="kohteet"/> = pelin kaupungit (lat, lon).</summary>
-        public static (double Lat, double Lon)? Laske(Maa maa, IEnumerable<(double Lat, double Lon)> kohteet = null)
+        /// <summary>Paikka (lat, lon) tai null, jos maalla ei ole renkaita. <paramref name="kohteet"/> = pelin kaupungit (lat, lon).
+        /// <paramref name="kelpaa"/> (valinnainen) rajaa ehdokkaat, esim. näkyvissä yläpaneelin alla (Kartuscha 30.9.2026); jos mikään
+        /// ehdokas ei kelpaa, tulos on null.</summary>
+        public static (double Lat, double Lon)? Laske(Maa maa, IEnumerable<(double Lat, double Lon)> kohteet = null,
+            Func<double, double, bool> kelpaa = null)
         {
             if (maa?.Renkaat == null || maa.Renkaat.Count == 0) return null;
             var manner = Suurin(maa.Renkaat);
@@ -52,6 +55,21 @@ namespace Matkakirja.Linssit.Maat
                     ehdot.Add(((1 - u) * (1 - u) + (1 - v) * (1 - v), lat, lon));
                 }
             ehdot.Sort((a, b) => a.Pisteet.CompareTo(b.Pisteet));
+            if (kelpaa != null)
+            {
+                // Laiska suodatus: ensimmäinen kelpaava ja sen jälkeen vain kaupunkivaran sisällä olevat (ennuste on kallis).
+                var suodatetut = new List<(double Pisteet, double Lat, double Lon)>();
+                double raja = double.MaxValue;
+                foreach (var ed in ehdot)
+                {
+                    if (ed.Pisteet > raja) break;
+                    if (!kelpaa(ed.Lat, ((ed.Lon % 360) + 540) % 360 - 180)) continue;
+                    if (suodatetut.Count == 0) raja = ed.Pisteet + KohteenVara;
+                    suodatetut.Add(ed);
+                }
+                if (suodatetut.Count == 0) return null;
+                ehdot = suodatetut;
+            }
             var paras = ehdot[0];
             var lista = new List<(double Lat, double Lon)>();
             if (kohteet != null) foreach (var k in kohteet) if (!double.IsNaN(k.Lat) && !double.IsNaN(k.Lon)) lista.Add(k);
@@ -65,6 +83,37 @@ namespace Matkakirja.Linssit.Maat
                 }
             double lo = ((paras.Lon % 360) + 540) % 360 - 180;
             return (Math.Round(paras.Lat, 4), Math.Round(lo, 4));
+        }
+
+        /// <summary>
+        /// Mantereen sisämaan pisteet (vähintään kynnyksen verran rannasta ja rajasta, kuten <see cref="Laske"/>) harvennettuna joka
+        /// <paramref name="askel"/>:nteen ruutuun: Kartuscha valitsee niistä ruudun mukaan paikan yläpaneelin alle (30.9.2026).
+        /// </summary>
+        public static List<(double Lat, double Lon)> Sisamaa(Maa maa, int askel = 4)
+        {
+            var ulos = new List<(double Lat, double Lon)>();
+            if (maa?.Renkaat == null || maa.Renkaat.Count == 0) return ulos;
+            var manner = Suurin(maa.Renkaat);
+            if (manner == null) return ulos;
+            double w = double.MaxValue, e = double.MinValue, s = double.MaxValue, n = double.MinValue;
+            foreach (var (lon, lat) in manner) { w = Math.Min(w, lon); e = Math.Max(e, lon); s = Math.Min(s, lat); n = Math.Max(n, lat); }
+            var renkaat = new List<(double Lon, double Lat)[]> { manner };
+            foreach (var r in maa.Renkaat)
+                if (r != manner && r.Length > 2 && r[0].Lon > w && r[0].Lon < e && r[0].Lat > s && r[0].Lat < n && Sisalla(manner, r[0].Lon, r[0].Lat))
+                    renkaat.Add(r);
+            double solu = Math.Max(0.01, Math.Max(e - w, n - s) / 300);
+            double w0 = w - solu, n0 = n + solu;
+            int W = (int)Math.Ceiling((e - w) / solu) + 3, H = (int)Math.Ceiling((n - s) / solu) + 3;
+            var d = Etaisyys(renkaat, w0, n0, solu, W, H);
+            double syvin = 0;
+            for (int i = 0; i < d.Length; i++) syvin = Math.Max(syvin, d[i]);
+            double kynnys = Math.Min(SisamaastaKm, 0.5 * syvin);
+            askel = Math.Max(1, askel);
+            for (int r = 0; r < H; r += askel)
+                for (int c = 0; c < W; c += askel)
+                    if (d[r * W + c] >= kynnys && syvin > 0)
+                        ulos.Add((n0 - (r + 0.5) * solu, ((w0 + (c + 0.5) * solu) % 360 + 540) % 360 - 180));
+            return ulos;
         }
 
         static (double Lon, double Lat)[] Suurin(List<(double Lon, double Lat)[]> renkaat)

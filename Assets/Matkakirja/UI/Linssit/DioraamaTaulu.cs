@@ -243,7 +243,7 @@ namespace Matkakirja.Natiivi
                 etsintaKortti.style.display = DisplayStyle.None;
             if (paluuNappi != null)
                 paluuNappi.style.display = rakennus?.Saapuminen != null && nakymaTaiEi?.KohdeTila != null ? DisplayStyle.Flex : DisplayStyle.None;
-            if (linssi == null || rakennus == null || kamera == null || nakymaTaiEi == null)
+            if (linssi == null || rakennus == null || kamera == null || nakymaTaiEi == null || DioraamaSovitin.SaapumisOdotus)
             {
                 lauta.style.display = DisplayStyle.None;
                 pulu.style.display = DisplayStyle.None;

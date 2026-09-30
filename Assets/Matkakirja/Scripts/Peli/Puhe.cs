@@ -67,6 +67,11 @@ namespace Matkakirja.Natiivi
         public static bool VanhaAlku;
         /// <summary>Testi (peli-komento "puhe jumi ms"): pääsäie seisoo seuraavan Play():n jälkeen, kuten raskaassa ruudussa.</summary>
         public static int JumiMs;
+        /// <summary>Testi (peli-komento "puhe hidas ms s"): seuraavan uuden puheen alusta s sekunnin ajan jokainen ruutu kestää
+        /// vähintään ms (laitteen raskaat saapumisruudut simulaattorissa; ruuduittaiset rampit hidastuvat, ääni ei).</summary>
+        public static int HidasMs;
+        public static float HidasS;
+        static float hidasLoppu;
 
         public static Puhe Instanssi { get; private set; }
 
@@ -861,8 +866,12 @@ namespace Matkakirja.Natiivi
             AudioClip klippi;
             using (var r = UnityWebRequestMultimedia.GetAudioClip("file://" + tiedosto, TyyppiPaatteesta(tiedosto)))
             {
-                // Pakattuna muistiin: ei koko luennan purkua pääsäikeessä (LoadFMODSound-piikki).
-                ((DownloadHandlerAudioClip)r.downloadHandler).compressed = true;
+                // PCM MUISTIIN (kärki 30.9.2026, omistajan tallenne: isoisä kuului laitteella heti äänitteen kohdasta 6,6 s,
+                // vaikka Unity ilmoitti kohdaksi 0,04 s): pakattu mp3 puretaan laitteella soiton aikana, ja kohdan asetus
+                // (timeSamples) pakattuun klippiin voi osua muualle kuin alkuun. Puhe puretaan kokonaan jo avauksessa, jolloin
+                // soitto ja kohta ovat näytetarkkoja. Kustannus: purku avausruudussa (22 s ≈ 2 Mt, mitattu lokiin).
+                // Pakattu = true palauttaa vanhan polun vertailua varten (peli-komento "puhe pakattu 1|0").
+                ((DownloadHandlerAudioClip)r.downloadHandler).compressed = Pakattu;
                 yield return r.SendWebRequest();
                 if (oma != tunnus) yield break;
                 if (r.result != UnityWebRequest.Result.Success)
@@ -873,7 +882,11 @@ namespace Matkakirja.Natiivi
                     LatausPetti();
                     yield break;
                 }
+                float purku0 = Time.realtimeSinceStartup;
                 klippi = DownloadHandlerAudioClip.GetContent(r);
+                float purkuMs = (Time.realtimeSinceStartup - purku0) * 1000f;
+                if (purkuMs > 20f || Verho) Debug.Log($"MATKAKIRJA puhe: klippi avattu {(Pakattu ? "pakattuna" : "PCM:nä")} {purkuMs:0} ms, "
+                    + $"{klippi?.length:0.0} s, {klippi?.frequency} Hz, {klippi?.loadType} {Path.GetFileName(url.Split('?')[0])}");
             }
             // Näyte ei jää laitteelle (web: sailio null). Pakattu klippi on jo muistissa.
             if (!sailo) { try { File.Delete(tiedosto); } catch { } }
@@ -896,6 +909,19 @@ namespace Matkakirja.Natiivi
             // Palavirran välissä tauotettu puhe ei jatku itsestään: odotetaan jatkoa (Jatka purkaa tauon).
             while (jatko && tauolla && oma == tunnus) yield return null;
             if (oma != tunnus) { Destroy(klippi); yield break; }
+            // ULOSTULO KÄYNNISSÄ ENNEN SOITTOA (kärki 30.9.2026): FMOD käynnistää ulostulonsa uudelleen taustasiirtymän ja
+            // keskeytyksen jälkeen (FMOD::OutputCoreAudio::reset). Uusi puhe alkaa vasta, kun DSP-kello etenee (enintään 2 s),
+            // jottei alku soi pysähtyneeseen ulostuloon. Tavallisesti kello etenee seuraavalla ruudulla (puskuri 21 ms).
+            if (!jatko)
+            {
+                double dsp0 = AudioSettings.dspTime;
+                float ulos0 = Time.unscaledTime;
+                while (oma == tunnus && AudioSettings.dspTime <= dsp0 && Time.unscaledTime - ulos0 < 2f) yield return null;
+                if (oma != tunnus) { Destroy(klippi); yield break; }
+                float seisoi = Time.unscaledTime - ulos0;
+                if (seisoi > 0.15f) Debug.LogWarning($"MATKAKIRJA puhe: ulostulo seisoi {seisoi * 1000:0} ms ennen soittoa"
+                    + $"{(AudioSettings.dspTime <= dsp0 ? " (ei käynnistynyt 2 s:ssa, soitetaan silti)" : "")} {Path.GetFileName(url.Split('?')[0])}");
+            }
             if (synteesi && klippiLoppui >= 0f && Time.unscaledTime - klippiLoppui < 5f) raot.Add((Time.unscaledTime - klippiLoppui) * 1000.0);
             AloitaKlippi(klippi, synteesi, jatko);
             if (synteesi && mittaaEka) { ViimeEkaAaniMs = (Time.unscaledTime - ekaAlku) * 1000.0; mittaaEka = false; }
@@ -1116,6 +1142,9 @@ namespace Matkakirja.Natiivi
             vahvistin.Nollaa();
             // BLUETOOTH-ESILÄMMITYS (omistaja 29.9.2026: AirPodseilla luennan alku jäi kuulematta): uusi klippi alkaa
             // Esilammitys-viiveellä, jotta hiljaisuuden jälkeen heräävä Bluetooth-linkki ehtii auki ennen ensimmäistä tavua.
+            // ISTUNTO KUNTOON JUURI ENNEN SOITTOA (kärki 30.9.2026): FMOD voi palauttaa Ambientin taustalta paluun jälkeen, ja
+            // äänetön tila mykistää sen — ennen tätä luokka tarkistettiin vain sovelluksen ensimmäisestä puheesta.
+            if (AaniIstunto.Varmista()) Debug.Log($"MATKAKIRJA puhe: istunto oli Ambient ennen soittoa, Playback palautettu ({klippi?.name})");
             bool esilammitys = !jatko && AaniIstunto.Bluetooth();
             if (esilammitys) { lahde.PlayDelayed(Esilammitys); Debug.Log($"MATKAKIRJA puhe: Bluetooth-esilämmitys {Esilammitys:0.0} s {klippi?.name}"); }
             else lahde.Play();
@@ -1123,6 +1152,8 @@ namespace Matkakirja.Natiivi
             // keskeytetyn jälkeen): uusi klippi soi aina näytteestä 0; palan jatko (jatko) kelaa itse.
             if (!jatko) lahde.timeSamples = 0;
             StartCoroutine(AlkuMittari(klippi, Kohdetaso, !jatko));
+            if (Verho) StartCoroutine(VerhoMittari(klippi, synteesi ? PalaNyt : null));
+            if (!jatko && HidasMs > 0 && HidasS > 0f) { hidasLoppu = Time.unscaledTime + HidasS; HidasS = 0f; Debug.Log($"MATKAKIRJA puhe: hidas {HidasMs} ms/ruutu alkaa"); }
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun. Palavirran jatkopala on
             // saman puheen jatkoa: ei loppua eikä alkua väliin (lataus-kahva kuuluu yhä SoitaPalat-korutiinille).
@@ -1169,6 +1200,61 @@ namespace Matkakirja.Natiivi
             }
             Debug.Log($"MATKAKIRJA puhe: alku {(VanhaAlku ? "vanha" : "uusi")}: 1. soiva kohta {ekaKohta:0.000} s, jumi {jumi:0} ms, {ruutuja} ruutua, soittokohta {edellinen:0.000} s, "
                 + $"hiljaa (< 50 %) soitettu {hiljaa:0.000} s {klippi?.name}");
+        }
+
+        /// <summary>Puhe pakattuna muistiin (vanha polku) vai PCM:nä (oletus 30.9.2026), peli-komento "puhe pakattu 1|0".</summary>
+        public static bool Pakattu;
+
+        /// <summary>Verhomittari (peli-komento "puhe verho 1|0"): jokaisen klipin alku lokiin, ks. VerhoMittari.</summary>
+        public static bool Verho = true;
+        public const float VerhoS = 8f, VerhoJakso = 0.25f;
+        readonly float[] verhoNaytteet = new float[512];
+
+        /// <summary>
+        /// PUHEVÄYLÄN VERHO (kärki 30.9.2026, omistaja TF 1.0.64 kaiuttimella: "isoisän luenta alkaa vieläkin kesken kappaleen",
+        /// alusta puuttuu 1–2 virkettä eli noin 3–8 s, myös nostoissa): klipin ensimmäiset 8 s 0,25 s:n jaksoina —
+        /// soittokohta, Puhe-lähteen oma RMS (lahde.GetOutputData, ei masteria), koko miksauksen RMS (kuuntelija) ja DSP-kellon
+        /// eteneminen. Oma RMS > 0 heti = puhe soi ääneen alusta; kaikki ≫ oma = musiikki tai tausta peittää; DSP ei etene =
+        /// miksaus seisoo. Muut soivat lähteet (nimi@voimakkuus) ensimmäisen jakson lopussa. Yksi rivi per klippi.
+        /// </summary>
+        IEnumerator VerhoMittari(AudioClip klippi, string pala)
+        {
+            var sb = new StringBuilder(1200);
+            sb.Append($"MATKAKIRJA puhe: verho {klippi?.name} [{pala ?? "äänite"}] {klippi?.loadState} {klippi?.frequency} Hz, voim. {lahde.volume:0.00}, "
+                + "t kohta/oma/kaikki/dsp:");
+            float t0 = Time.unscaledTime, jaksonLoppu = VerhoJakso;
+            double dspEd = AudioSettings.dspTime, oma = 0, kaikki = 0;
+            int n = 0;
+            bool muutKirjattu = false;
+            while (lahde.clip == klippi && Time.unscaledTime - t0 < VerhoS)
+            {
+                yield return null;
+                if (lahde.clip != klippi) break;
+                if (lahde.isPlaying) { lahde.GetOutputData(verhoNaytteet, 0); oma += Rms(verhoNaytteet); }
+                AudioListener.GetOutputData(verhoNaytteet, 0);
+                kaikki += Rms(verhoNaytteet);
+                n++;
+                float t = Time.unscaledTime - t0;
+                if (t < jaksonLoppu) continue;
+                double dsp = AudioSettings.dspTime;
+                sb.Append($" {t:0.00}:{lahde.time:0.00}/{oma / n:0.000}/{kaikki / n:0.000}/{dsp - dspEd:0.00}");
+                dspEd = dsp; oma = kaikki = 0; n = 0;
+                jaksonLoppu = t + VerhoJakso;
+                if (muutKirjattu) continue;
+                muutKirjattu = true;
+                var muut = new List<string>();
+                foreach (var a in FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+                    if (a != lahde && a.isPlaying && a.volume > 0.01f) muut.Add($"{a.gameObject.name}@{a.volume:0.00}");
+                sb.Append($" (muut: {(muut.Count > 0 ? string.Join(", ", muut) : "-")})");
+            }
+            Debug.Log(sb.ToString());
+        }
+
+        static float Rms(float[] d)
+        {
+            double s = 0;
+            for (int i = 0; i < d.Length; i++) s += d[i] * d[i];
+            return Mathf.Sqrt((float)(s / d.Length));
         }
 
         /// <summary>Valmiin virran tavut välimuistitiedostoon (atominen siirto). false, jos tavuja ei saatu.</summary>
@@ -1234,6 +1320,7 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
+            if (HidasMs > 0 && Time.unscaledTime < hidasLoppu) System.Threading.Thread.Sleep(HidasMs);
             if (puhuu && haivytys == null && lahde.isPlaying)
             {
                 float kohde = Kohdetaso;
@@ -1271,15 +1358,9 @@ namespace Matkakirja.Natiivi
         }
 
 #if UNITY_IOS && !UNITY_EDITOR
-        [DllImport("__Internal")] static extern void MatkakirjaAani_Toisto();
-        static bool istuntoAsetettu;
-        static void AsetaIstunto()
-        {
-            if (istuntoAsetettu) return;
-            istuntoAsetettu = true;
-            try { MatkakirjaAani_Toisto(); }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA puhe: ääni-istunto: " + e.Message); }
-        }
+        // Jokaisen puheen alussa (ennen: vain sovelluksen ensimmäisestä puheesta, staattinen lippu — kärki 30.9.2026):
+        // kevyt luokan tarkistus, korjaus vain Ambientista (AaniIstunto.Varmista, MatkakirjaAani.mm).
+        static void AsetaIstunto() => AaniIstunto.Varmista();
 #else
         static void AsetaIstunto() { }
 #endif

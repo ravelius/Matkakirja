@@ -332,6 +332,19 @@ namespace Matkakirja.Natiivi
                         case "jumi":
                             Puhe.JumiMs = int.TryParse(A(2), out int jumi) ? Mathf.Clamp(jumi, 0, 3000) : 0;
                             return $"=jumi {Puhe.JumiMs} ms ensimmäisessä soivassa ruudussa";
+                        // Puhe pakattuna vai PCM:nä (kärki 30.9.): "puhe pakattu 1|0".
+                        case "pakattu":
+                            if (A(2) == "1") Puhe.Pakattu = true; else if (A(2) == "0") Puhe.Pakattu = false;
+                            return $"=puhe {(Puhe.Pakattu ? "pakattuna" : "PCM:nä")}";
+                        // Hitaat ruudut seuraavan puheen alkuun (kärki 30.9.): "puhe hidas <ms> <s>", 0 = pois.
+                        case "hidas":
+                            Puhe.HidasMs = int.TryParse(A(2), out int hms) ? Mathf.Clamp(hms, 0, 2000) : 0;
+                            Puhe.HidasS = float.TryParse(A(3), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var hs) ? Mathf.Clamp(hs, 0f, 30f) : 0f;
+                            return $"=hidas {Puhe.HidasMs} ms/ruutu {Puhe.HidasS:0.0} s seuraavan puheen alusta";
+                        // Puheväylän verho (kärki 30.9.): klipin alku 8 s lokiin, "puhe verho 1|0".
+                        case "verho":
+                            if (A(2) == "1") Puhe.Verho = true; else if (A(2) == "0") Puhe.Verho = false;
+                            return $"=verho {(Puhe.Verho ? "päällä" : "pois")}";
                         // Palaloki (TF 1.0.32 ohitukset): soitetut/jatketut/uusitut palat ja viimeiset rivit (soi s/kesto, lähde, worker).
                         case "palat":
                             if (A(2) == "nollaa") { Puhe.NollaaPalaloki(); return "=palaloki nollattu"; }

@@ -59,6 +59,24 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(kanssa.Lat - ilman.Lat) + Math.Abs(kanssa.Lon - ilman.Lon) > 0.2, $"{kanssa}");
         }
 
+        [Testi] static void KelpaaRajaa()
+        {
+            var m = new Maa { Id = "KOE" };
+            m.Renkaat.Add(new[] { (0.0, 40.0), (10.0, 40.0), (10.0, 45.0), (0.0, 45.0), (0.0, 40.0) });
+            // Yläpaneeli peittää leveydet > 43,5°: paikka koilliskulmaa lähimpänä sen alapuolella.
+            var p = Lippukulma.Laske(m, null, (lat, lon) => lat <= 43.5).Value;
+            Oleta.Tosi(p.Lat <= 43.5 && p.Lat > 43.0 && p.Lon > 9.5, $"{p}");
+            Oleta.Tosi(Lippukulma.Laske(m, null, (lat, lon) => false) == null);
+        }
+
+        [Testi] static void SisamaaHarvennettuna()
+        {
+            var ita = Lippukulma.Sisamaa(A().Hae("ITA"), 4);
+            Oleta.Tosi(ita.Count > 200 && ita.Count < 20000, ita.Count.ToString());
+            var osuma = new MaaOsuma(new[] { A().Hae("ITA") });
+            foreach (var p in ita) Oleta.Tosi(osuma.Hae(p.Lat, p.Lon) == "ITA", $"{p}");
+        }
+
         [Testi] static void TyhjaMaa() => Oleta.Tosi(Lippukulma.Laske(new Maa { Id = "X" }) == null);
     }
 }
