@@ -96,12 +96,23 @@ def nuori_manty(rng):  # nuori mänty 3–5 m: latvus alhaalta asti, harva
         k.append(mottu((r * math.cos(a), r * math.sin(a), z), rng.uniform(0.25, 0.45), 0.5, m, rng, 0.35, 2))
     return k, 4.5
 
-def nuori_koivu(rng):  # nuori koivu 3–5 m
-    k = []; kuori = mat('nkrunko', (0.80, 0.78, 0.72), 0.3); m = mat('nklehva', (0.25, 0.36, 0.10), 0.35)
-    bpy.ops.mesh.primitive_cone_add(vertices=8, radius1=0.06, radius2=0.015, depth=4.0, location=(0, 0, 2.0)); o = bpy.context.object; o.data.materials.append(kuori); k.append(o)
-    for _ in range(60):
-        z = rng.uniform(1.4, 4.4); r = 0.9 * math.sin(math.pi * (z - 1.2) / 3.4) * rng.uniform(0.3, 1); a = rng.uniform(0, 2 * math.pi)
-        k.append(mottu((r * math.cos(a), r * math.sin(a), z), rng.uniform(0.15, 0.3), 0.8, m, rng, 0.4, 2))
+def nuori_koivu(rng):  # v2b: hento runko mustin laikuin, riippuvat oksat ja pienet lehdet (ei möykkyjä)
+    k = []; m = mat('nklehva', (0.22, 0.32, 0.09), 0.35); oksa = mat('nkoksa', (0.18, 0.14, 0.11), 0.2)
+    kuori = bpy.data.materials.new('nkrunko'); kuori.use_nodes = True; ntk = kuori.node_tree; bk = ntk.nodes['Principled BSDF']
+    nk = ntk.nodes.new('ShaderNodeTexNoise'); nk.inputs['Scale'].default_value = 30; rk = ntk.nodes.new('ShaderNodeValToRGB')
+    rk.color_ramp.elements[0].position = 0.56; rk.color_ramp.elements[1].position = 0.59
+    rk.color_ramp.elements[0].color = (0.78, 0.76, 0.70, 1); rk.color_ramp.elements[1].color = (0.06, 0.05, 0.05, 1)
+    ntk.links.new(nk.outputs['Fac'], rk.inputs['Fac']); ntk.links.new(rk.outputs['Color'], bk.inputs['Base Color'])
+    bpy.ops.mesh.primitive_cone_add(vertices=8, radius1=0.045, radius2=0.01, depth=4.2, location=(0, 0, 2.1)); o = bpy.context.object; o.data.materials.append(kuori); k.append(o)
+    for _ in range(24):  # riippuvat oksat
+        z0 = rng.uniform(1.4, 4.1); a = rng.uniform(0, 2 * math.pi); L = 0.9 * (1 - (z0 - 1.6) / 3.0) + 0.3
+        x1, y1 = L * math.cos(a), L * math.sin(a); z1 = z0 - rng.uniform(0.2, 0.7)
+        bpy.ops.mesh.primitive_cylinder_add(vertices=4, radius=0.008, depth=math.dist((0, 0, z0), (x1, y1, z1)),
+                                            location=(x1 / 2, y1 / 2, (z0 + z1) / 2))
+        o = bpy.context.object; o.rotation_euler = Vector((x1, y1, z1 - z0)).to_track_quat('Z', 'Y').to_euler(); o.data.materials.append(oksa); k.append(o)
+        for _ in range(70):  # lehtitupsut oksan varrella, painuvat alas (kortin 256 px:ssä lehti ≥ 2 px)
+            t = rng.uniform(0.15, 1); px = x1 * t + rng.uniform(-0.2, 0.2); py = y1 * t + rng.uniform(-0.2, 0.2); pz = z0 + (z1 - z0) * t - rng.uniform(0, 0.5) * t
+            k.append(mottu((px, py, pz), rng.uniform(0.04, 0.07), 0.45, m, rng, 0.2, 1))
     return k, 4.5
 
 w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
