@@ -23108,6 +23108,35 @@ body[data-mode] .actions .pollo-paneeli button.pollo-ehdota:hover {
 }
 
 /*
+ * IKONEINA (omistaja 29.9.2026: *"näytä puhekuplat sekä ehdota sisältöä
+ * napit ikoneiksi"*; natiivi PuluChat.cs mk-chat__ikoninappi on malli):
+ * paljas viivaikoni ilman pilleriä, rivin vasemmassa laidassa, osuma-ala
+ * 36 px. Nimi kulkee title- ja aria-label-määreissä.
+ */
+.pollo-ylarivi { justify-content: flex-start; }
+.pollo-paneeli button.pollo-ylaikoni,
+body[data-mode] .actions .pollo-paneeli button.pollo-ylaikoni {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--pollo-korostus);
+  font-size: 1.15rem;
+}
+.pollo-paneeli button.pollo-ylaikoni:hover,
+.pollo-paneeli button.pollo-ylaikoni:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-ylaikoni:hover {
+  background: rgba(122, 85, 20, 0.12);
+  color: var(--pollo-muste);
+}
+.pollo-paneeli button.pollo-ylaikoni[hidden] { display: none; }
+
+/*
  * ── VALMISKYSYMYKSET KESKUSTELUVIRRASSA (omistajan tilaus 18.8.2026:
  * "kaikki saisi olla samalla yhdellä sivulla") ────────────────────────
  *

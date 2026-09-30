@@ -19367,7 +19367,9 @@ export class UI {
     const esittely = typeof linssi?.esittely === 'string' ? linssi.esittely : null;
     return {
       id: hiomassa ? `hiomassa:${tunnus}` : tunnus,
-      nimi: kesken ? `${nimi} (keskeneräinen)` : nimi,
+      // Keskeneräisyys näkyy vain Keskeneräiset-väliotsikossa, ei nimessä (omistaja 29.9.2026 klo 23.0x,
+      // 1.0.56: "Maininta vain otsikossa, ei linssin nimessä"; natiivi Linssivalitsin.cs).
+      nimi,
       kuva,
       kuvaPieni: kuva,
       selite: hiomassa

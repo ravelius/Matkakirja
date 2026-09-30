@@ -1227,6 +1227,20 @@ const VALMIITA_ENINTAAN = 5;
 const VALMISKYSYMYKSET_KAYTOSSA = false;
 
 /**
+ * CHATIN YLÄRIVIN IKONIT (omistaja 29.9.2026: *"näytä puhekuplat sekä
+ * ehdota sisältöä napit ikoneiksi"*; natiivin PuluChat.cs Ikonit.Puhekupla
+ * ja Ikonit.Kyna ovat malli). Sama viivakynä kuin kaiuttimessa.
+ */
+const POLLO_PUHEKUPLA_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<path d="M4.5 5.5h15v10h-8.2l-4.3 3.6v-3.6H4.5z"/>'
+  + '<path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01"/>'
+  + '</svg>';
+const POLLO_KYNA_IKONI = '<svg viewBox="0 0 24 24" aria-hidden="true">'
+  + '<path d="M5 19l1-4.2L15.8 5a1.9 1.9 0 0 1 2.7 0l.5.5a1.9 1.9 0 0 1 0 2.7L9.2 18z"/>'
+  + '<path d="M14.2 6.6l3.2 3.2"/>'
+  + '</svg>';
+
+/**
  * Kaiutin samalla viivakynällä kuin muutkin pöllön kuvakkeet.
  *
  * Piirto on sama kuin lukijan napissa (js/lukija.js KAIUTIN_PIIRTO),
@@ -2029,8 +2043,9 @@ export class Pollo {
      * päällä kelluva nappi peittäisi vieritettävää tekstiä.
      */
     const ylarivi = polloElementti('div', 'pollo-ylarivi');
-    const ehdota = polloElementti('button', 'pollo-ehdota', 'Ehdota sisältöä');
+    const ehdota = polloElementti('button', 'pollo-ehdota pollo-ylaikoni');
     ehdota.type = 'button';
+    ehdota.innerHTML = `<span class="icon-glyph viiva-ikoni">${POLLO_KYNA_IKONI}</span>`;
     ehdota.title = 'Ehdota sisältöä tähän kohtaan peliä';
     ehdota.setAttribute('aria-label', 'Ehdota sisältöä — avaa ehdotuslomake');
     ehdota.addEventListener('click', () => {
@@ -2055,8 +2070,9 @@ export class Pollo {
      * (omistajan kohta 20 c). Näkyvyyden ainoa lähde on
      * paivitaKuplanPalautus, joka lukee saman muistin kuin palautus.
      */
-    const naytaKuplat = polloElementti('button', 'pollo-naytakuplat', 'Näytä puhekuplat');
+    const naytaKuplat = polloElementti('button', 'pollo-naytakuplat pollo-ylaikoni');
     naytaKuplat.type = 'button';
+    naytaKuplat.innerHTML = `<span class="icon-glyph viiva-ikoni">${POLLO_PUHEKUPLA_IKONI}</span>`;
     naytaKuplat.hidden = true;
     naytaKuplat.title = 'Tuo ohi menneet puhekuplat takaisin näkyviin';
     naytaKuplat.setAttribute('aria-label', 'Näytä Pulun puhekuplat uudelleen');
