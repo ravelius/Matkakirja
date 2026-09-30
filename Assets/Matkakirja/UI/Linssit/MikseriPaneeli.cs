@@ -1,7 +1,9 @@
 // KEHITTÄJÄN MIKSERIPANEELI (Natiivi-UI 30.9.2026, Päätoimittaja: omistaja säätää linnan ja Cupolan kaiut ja taustaäänet
 // itse laitteella). Pelikoodari tuo äänipuolen (IMikseriLahde) ja asettaa MikseriPaneeli.Lahde; paneeli on pelkkä UI:
 // huonekohtaiset liukusäätimet lähteen kuvauksista, A/B-kytkin (A = tallennettu, B = muokattu) ja Tallenna.
-// Kevyt ja siirrettävä: kiinni pieni "Mikseri"-lappu vasemmassa reunassa; auki 300 pt leveä lasi, jota vedetään otsikosta,
+// Omistaja 30.9.2026: "Tee mikseri napin taakse jotta voin ottaa sen näkyviin ja piiloon helposti." Pyöreä säädinkuvakenappi
+// (44 pt) vasemmassa reunassa 38 % korkeudella (ei ‹/↻-nappien, ×:n eikä infotaulun kohdalla) avaa ja sulkee paneelin; arvot
+// ja A/B säilyvät suljettaessa (ääni soi säädetyillä arvoilla). Auki 300 pt leveä lasi, jota vedetään otsikosta,
 // korkeus enintään 45 % ruudusta (linna jää näkyviin). Vain kehittäjätilassa ja kun lähde on olemassa.
 // Testi: ui mikseri [tila] | auki | kiinni | demo (demolähde ilman ääntä simulaattorikuviin).
 using System;
@@ -49,7 +51,7 @@ namespace Matkakirja.Natiivi
         bool auki;
         int versio = int.MinValue;
         IMikseriLahde kytketty;
-        Vector2 paikka = new Vector2(12f, 120f), vetoAlku, paikkaAlku;
+        Vector2 paikka = new Vector2(62f, 120f), vetoAlku, paikkaAlku;
         bool vedetaan;
 
         public static MikseriPaneeli Viimeisin { get; private set; }
@@ -61,14 +63,17 @@ namespace Matkakirja.Natiivi
             juuri.style.left = 0; juuri.style.right = 0; juuri.style.top = 0; juuri.style.bottom = 0;
             juuri.style.display = DisplayStyle.None;
 
-            lappu = Rakenne.Nappi("Mikseri", "mk-mikseri__lappu", () => Avaa(true), juuri);
+            lappu = Rakenne.Nappi(null, "mk-mikseri__nappi-auki", () => Avaa(!auki), juuri, Ikonit.Mikseri);
             lappu.style.position = Position.Absolute;
-            lappu.style.left = 0; lappu.style.top = Length.Percent(38);
+            lappu.style.left = 8; lappu.style.top = Length.Percent(38);
+            lappu.style.width = 44; lappu.style.height = 44;
             lappu.style.backgroundColor = Lasi;
-            lappu.style.paddingLeft = 10; lappu.style.paddingRight = 12; lappu.style.paddingTop = 8; lappu.style.paddingBottom = 8;
-            lappu.style.borderTopRightRadius = 10; lappu.style.borderBottomRightRadius = 10;
-            var lt = lappu.Q<Label>();
-            if (lt != null) { Kirjasimet.Aseta(lt, Kirjasin.Kone); lt.style.color = Kulta; lt.style.fontSize = 12; }
+            lappu.style.borderTopLeftRadius = 22; lappu.style.borderTopRightRadius = 22;
+            lappu.style.borderBottomLeftRadius = 22; lappu.style.borderBottomRightRadius = 22;
+            lappu.style.alignItems = Align.Center; lappu.style.justifyContent = Justify.Center;
+            lappu.style.color = Kulta;
+            lappu.tooltip = "Mikseri";
+            lappu.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
 
             paneeli = Rakenne.El("mk-mikseri__paneeli", juuri, PickingMode.Position);
             paneeli.style.position = Position.Absolute;
@@ -153,7 +158,8 @@ namespace Matkakirja.Natiivi
             juuri.style.display = l != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (l == null) { kytketty = null; return; }
             if (!ReferenceEquals(l, kytketty) || l.Versio != versio) Rakenna(l);
-            lappu.style.display = auki ? DisplayStyle.None : DisplayStyle.Flex;
+            lappu.style.backgroundColor = auki ? new Color(Kulta.r, Kulta.g, Kulta.b, 0.9f) : Lasi;
+            lappu.style.color = auki ? Lasi : Kulta;
             paneeli.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             if (!auki) return;
             otsikko.text = l.Otsikko ?? "Mikseri";
