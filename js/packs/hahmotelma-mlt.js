@@ -1191,7 +1191,7 @@ export const HAHMOTELMA_MLT = [
         selite: 'Kapea laakso avautuu vähitellen kohti avomerta, ja rannassa uivat pienet ihmishahmot antavat mittakaavan jyrkille kallioseinille.',
         lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Diego Delso',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wied_Il-%C4%9Easri,_isla_de_Gozo,_Malta,_2021-08-23,_DD_07.jpg',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wied_Il-G%C4%A7asri,_isla_de_Gozo,_Malta,_2021-08-23,_DD_07.jpg',
         lisenssi: 'CC BY-SA 4.0',
         lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
       },

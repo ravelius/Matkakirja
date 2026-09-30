@@ -969,7 +969,7 @@ export const HAHMOTELMA_IRL = [
       selite: 'Kuvassa on Cairn T, Loughcrewn käytävähauta, jonka kumpu on tehty kivistä. Etualalla on pienempi satelliittihauta, luultavasti Cairn S, ja taustalla avautuu Irlannin tasankomaisema.',
       lahde: 'Valokuva: Rob Hurson, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Rob Hurson',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cairns_S(?)_and_T,_Loughcrew.jpg',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cairns_S(%3F)_and_T,_Loughcrew.jpg',
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
