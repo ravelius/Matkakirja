@@ -9467,3 +9467,7 @@ Omistaja 30.9.2026: 'en tarvitse konetta niin saat käyttää resursseja vapaast
 ## KORJAUS: SIMULAATTOREITA TAAS YKSI KERRALLAAN (SPRINGBOARD-KAATUMISET SWAPIN TÄYTTYESSÄ) (30.9.2026 klo 16.31)
 
 Päätoimittaja 30.9.2026: kahden rinnakkaisen simulaattorin lupa (loki klo 16.27) peruttu. Omistajan ruudulle tuli kuusi 'SpringBoard lopetti yllättäen' -ikkunaa klo 16.29.05–16.29.10, kun kaksi simulaattoria oli käynnissä (D0D2CD1E, FBBD41D7) ja swap oli täynnä (14,06/14,34 Gt). Enintään yksi simulaattori kerrallaan Julkaisijan vuorolla, ja se sammutetaan (vain oma UDID) heti ajon jälkeen. Muu vapaa käyttö (poltto väistäen, Blender, käännökset nice 15) jatkuu.
+
+## OMISTAJA: LINNAN TEKSTUURIT — CODEX CC-KUVIEN POHJALTA TAI PAREMPI MENETELMÄ, VALINTA DELEGOITU (30.9.2026 klo 16.36)
+
+Omistaja 30.9.2026: 'codex osaisi varmasti tehdä pyydettäessä niitä tekstuureja kunhan speksaa sille että käyttää niitä cc kuvia pohjana. mutta jos keksit paremman metodin niin toteuta vain sillä.' Linnanrakentaja vertaa yhdellä tornilla: A nykyinen 4k-atlas, B CC0-materiaalien triplanaarinen lähidetalji, C paikallinen tekoälyskaalaus ×4, D Commons-kuvan kamerasovitettu projisointi (CC BY/BY-SA/PD, lisenssit kirjataan), E Codexin oikaistu valoton julkisivutekstuuri samoista CC-kuvista (tilaus postilaatikkoon). Paras menetelmä valitaan vertailun perusteella ja toteutetaan koko linnaan; omistaja näkee vertailukuvan ja valinnan. Senaatti-kysymys on omistajan erillinen päätös.
