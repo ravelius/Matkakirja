@@ -13,3 +13,6 @@ Päätoimittaja (ent. Fable) session id: local_593b89a1-2514-4d74-b956-2a73db862
 
 ## Kävijälaskuri (Päätoimittajan ohje 30.9. klo 14.4x, kerran tunnissa)
 Aja: `git archive origin/main tools/kaynnit.mjs js/packs/pollo-asetukset.js | tar -x -C <scratchpad>/kaynnit`, sitten siellä `source ~/.matkakirja-avaimet-koodaus.zsh >/dev/null 2>&1; NODE_USE_ENV_PROXY=1 node tools/kaynnit.mjs 14`. Älä koskaan tulosta avainta. Kun viimeisen rivin "ULKOPUOLISIA KÄVIJÖITÄ n" kasvaa → yksi rivi Päätoimittajalle: päivä, maa, alusta, apurahakortin avaukset. Ensimmäinen ajo 14.45: n = 0.
+
+## Pariteettisääntö (Päätoimittaja välitti 30.9. klo 22.3x, ilmoittaa omistajan linjauksen)
+Kukaan ei muuta mitään sillä perusteella, että web ja natiivi eroavat, ennen omistajan lupaa; ero ilmoitetaan Päätoimittajalle yhdellä rivillä. Sääntö liitetään kierroksen aloitusviestipohjiin.
