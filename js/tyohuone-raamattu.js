@@ -2708,7 +2708,11 @@ export const RAAMATTU = {
           + '#NAPPULAN HYPPY TAKAISIN, AUTOMAATTINEN NOPANHEITTO, REITTI KATOAA - '
           + 'KORJAUS, #MAAT ILMAN PELIKAUPUNKIA SAAVAT PELIKAUPUNGIN, #ASTROPULU JA '
           + 'LENTONAKYMA TEHTY.',
-        'ASTRONAUTIN KAMERA -LINSSI (15.–20.9.2026, uusin voimassa): pallon '
+        'ASTRONAUTIN KAMERA -LINSSI (15.–20.9.2026, uusin voimassa): NASA-KUVIEN VALKOINEN PALKKI '
+          + '(omistaja 20.9. ja 30.9.2026 klo 23.5x: "jos tulee lisää kuvia joskus myöhemmin peliin, niin '
+          + 'niistä pitää poistaa se jo lisäämisvaiheessa"): alareunan valkoinen tunnuspalkki rajataan pois '
+          + 'kaikista ISS-/NASA-kuvista jo lisäysvaiheessa (lisäystyökalun tarkistus + testi hylkää palkillisen '
+          + 'kuvan); tunnus ja lähde säilyvät metatiedoissa. Pallon '
           + 'reliefi renderoidaan koko maapallolle tarkasta korkeusdatasta omistajan '
           + 'Macilla (tools/tee-reliefikartta.mjs; puhelimella 4k, muuten 8k), '
           + 'saturaatio hieman alas, pallo tummempi, auringon sivuvalo (P28-sarja '
