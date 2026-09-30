@@ -96,7 +96,7 @@ export function venevaja({ leveys = 3.8, pituus = 7.0, seina = 1.8, harja = 1.4,
 }
 
 export const OLETUSPINNAT = {
-  hirsiaitta: { hirsi: 'puu', katto: 'lankku', kivi: 'kivi', ovi: 'lankku' },
-  venevaja: { hirsi: 'puu', katto: 'lankku', paalu: 'puu' },
+  hirsiaitta: { hirsi: 'hirsi', katto: 'hirsi', kivi: 'kivi', ovi: 'lankku' },
+  venevaja: { hirsi: 'hirsi', katto: 'hirsi', paalu: 'puu' },
 };
 export const RESEPTIT = { hirsiaitta, venevaja };
