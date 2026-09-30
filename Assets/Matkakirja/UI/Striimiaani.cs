@@ -58,9 +58,11 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// ElevenLabsin lukijaäänet (workerin LUKIJA_ELEVEN_AANET-näyttökopio, oletus ensin): omistaja 30.9.2026 klo 23.1x "aina v4
         /// ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä" — jaetun kirjaston 23 eniten käytettyä, ei suomeksi merkattuja.
+        /// Poikkeus (omistaja 23.5x): isoisän ääni Viisas kertoja ensimmäisenä ja oletuksena; worker ajaa sen v3:lla (LUKIJA_ELEVEN_MALLIT).
         /// </summary>
         public static readonly IReadOnlyList<(string Tunnus, string Nimi)> ElevenAanet = new[]
         {
+            ("Sz0tRTEpybtDJ9ru2kgD", "Viisas kertoja (isoisä)"),
             ("MFZUKuGQUsGJPQjTS4wC", "Lämmin mieskertoja"), ("G17SuINrv2H9FC6nvetn", "Lempeä brittimies"), ("UgBBYS2sOqTuMpoF3BR0", "Rento keskustelija, mies"),
             ("6OzrBCQf8cjERkYgzSg8", "Nuori rento mies"), ("ZthjuvLPty3kTMaNKVKb", "Varma mieskertoja"), ("EkK5I93UQWFDigLMpZcX", "Käheä syvä mies"),
             ("uju3wxzG5OhpWcoi3SMy", "Ilmeikäs mieskertoja"), ("NNl6r8mD7vthiJatiJt1", "Eloisa brittikertoja"), ("NFG5qt843uXKj4pFvR7C", "Syvä rauhallinen mies"),
