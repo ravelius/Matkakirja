@@ -474,6 +474,30 @@ namespace Matkakirja.Natiivi
             PaivitaPulu();
             if (tila != edellinenTila) { edellinenTila = tila; TilaMuuttui?.Invoke(tila); }
             if (auki != oliAuki) AukiMuuttui?.Invoke(auki);
+            PaivitaCupolanKatto(auki && ikkuna);
+        }
+
+        /// <summary>
+        /// CUPOLA 30 FPS (Päätoimittaja 30.9.2026 ISS-laitemittauksen jälkeen, docs/raportit/iss-laitemittaus-20260930.md): Cupola on
+        /// iPad Pro 12.9:llä GPU:n rajalla (alussa ~17 ms, lämmetessä ~24 ms, sitten kuristus), joten tavoite on tasainen 30 fps.
+        /// Seuranta, kauko ja kävely pysyvät 60:ssä. Katto asettuu vasta, kun siirtymä ikkunaan on ohi (IkkunaanS + 0,2 s), ja
+        /// poistuu heti tilan vaihtuessa, jotta siirtymät pyörivät täydellä taajuudella eikä vaihto näy nykäyksenä.
+        /// A/B `astro kyyti katto30 0|1`.
+        /// </summary>
+        public static bool CupolaKatto30 = true;
+        float ikkunaanAika = -1f;
+
+        void PaivitaCupolanKatto(bool ikkunassa)
+        {
+            if (!ikkunassa) { ikkunaanAika = -1f; if (Matkakirja.Ruudunpaivitys.NakymanKatto == 30) Matkakirja.Ruudunpaivitys.NakymanKatto = 0; return; }
+            if (ikkunaanAika < 0f)
+            {
+                ikkunaanAika = Time.unscaledTime;
+                // Aseta kutsutaan sekunnin välein; katto asetetaan siirtymän jälkeen ajastettuna, ei vasta seuraavalla kutsulla.
+                juuri.schedule.Execute(() => PaivitaCupolanKatto(ikkuna)).ExecuteLater((long)((IssKyyti.IkkunaanS + 0.25) * 1000));
+            }
+            bool perilla = Time.unscaledTime - ikkunaanAika >= IssKyyti.IkkunaanS + 0.2;
+            Matkakirja.Ruudunpaivitys.NakymanKatto = CupolaKatto30 && perilla ? 30 : 0;
         }
 
         KyydinTila edellinenTila = KyydinTila.Kauko;
