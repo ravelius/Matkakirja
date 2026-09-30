@@ -100,6 +100,7 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += TarkistaOhiNapautus;
             // Pelaajan maa tarkistetaan harvakseltaan (kaupunki vaihtuu vain saapuessa).
             kortti.schedule.Execute(Seuraa).Every(400);
+            kortti.schedule.Execute(LippuVaisto).Every(250);
             UiSisalto.Lataa(null);
         }
 
@@ -246,6 +247,9 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(LippuPaikka(maa, a =>
             {
                 if (iso != maa) return;
+                lipunOletus = a;
+                lippuSiirretty = false;
+                Lipputanko.KulmanKallistus = false;
                 if (a.HasValue) Lipputanko.Aseta(maa, a.Value.Lat, a.Value.Lon, lippu);
                 else Lipputanko.Pois();
             }));
@@ -261,6 +265,152 @@ namespace Matkakirja.Natiivi
             if (m != null && kiinnitettyLippu != null) AsetaLipputanko(m, kiinnitettyLippu);
         }
 
+        // ---- YLÄPANEELIEN VÄISTÖ (Päätoimittaja 30.9.2026: matkakirjakortti peitti Ranskan lipun; omistajan linja "lippu näkyy
+        //      aina"). Kun yläpaneeli (matkakirja tai YlaPaneelit) peittää tangon, tanko siirtyy maan koilliskulmaa lähimpään
+        //      kohtaan, jossa se näkyy kokonaan paneelin alla (Lippukulma kelpaa-ehdolla, Lipputanko.Ennuste); paneelin sulkeutuessa
+        //      takaisin kulmaan. Tarkistus 4 kertaa sekunnissa, siirto enintään kerran sekunnissa (kamera voi liikkua). ----
+
+        /// <summary>Muut yläpaneelit, jotka lippu väistää: palauttaa rajat paneelikoordinaateissa tai Rect.zero, kun kiinni.</summary>
+        public static readonly List<Func<Rect>> YlaPaneelit = new List<Func<Rect>>();
+        (double Lat, double Lon)? lipunOletus;
+        bool lippuSiirretty;
+        float seuraavaLippuSiirto;
+        const float PaneelinVaraPt = 8f;
+        /// <summary>Paneeli "ulottuu reunaan", jos sen reuna on tätä lähempänä ruudun reunaa (matkakirjan sivumarginaali 8–12 pt).</summary>
+        const float ReunaPt = 24f;
+        /// <summary>Paneelin pitää pysyä paikallaan näin kauan ennen paluuta kulmaan (avaus kasvattaa korttia).</summary>
+        const float VakaaS = 0.5f;
+        /// <summary>Siirrossa paneelin alareunaan lisättävä kasvuvara (kaksi tekstiriviä).</summary>
+        const float KasvuvaraPt = 40f;
+        Rect edellinenYla;
+        bool lippuPeitossa;
+        float ylaVakaaAlkaen;
+
+        readonly Dictionary<string, List<(double Lat, double Lon)>> sisamaat = new Dictionary<string, List<(double Lat, double Lon)>>();
+
+        void LippuVaisto()
+        {
+            if (iso == null || Lipputanko.Maa != iso || kortti.panel == null || kiinnitettyLippu == null) return;
+            var yla = Rect.zero;
+            var mk = UiNakymat.Hae().Matkakirja;
+            if (mk != null && mk.Nakyy) yla = mk.Rajat;
+            foreach (var f in YlaPaneelit)
+            {
+                var r = f();
+                if (r.height <= 0f) continue;
+                yla = yla.height > 0f ? Rect.MinMaxRect(Mathf.Min(yla.xMin, r.xMin), Mathf.Min(yla.yMin, r.yMin),
+                    Mathf.Max(yla.xMax, r.xMax), Mathf.Max(yla.yMax, r.yMax)) : r;
+            }
+            // Avaus- ja sulkuanimaation aikana paneeli kasvaa tai kutistuu: toimitaan vasta, kun sen rajat ovat pysyneet 0,5 s.
+            if (Mathf.Abs(yla.yMax - edellinenYla.yMax) > 2f || Mathf.Abs(yla.xMin - edellinenYla.xMin) > 2f
+                || Mathf.Abs(yla.xMax - edellinenYla.xMax) > 2f || (yla.height > 0f) != (edellinenYla.height > 0f))
+            {
+                edellinenYla = yla;
+                ylaVakaaAlkaen = Time.realtimeSinceStartup;
+            }
+            bool vakaa = Time.realtimeSinceStartup - ylaVakaaAlkaen >= VakaaS;
+            // PALUU KULMAAN (Laitetestaaja 1.0.66: kortti suljettiin lapuksi, tanko jäi siirtoon): heti, kun paneelia ei ole tai
+            // kulman paikka näkyy taas kokonaan (puhelimella suljettu matkakirja on yläreunan lappu, joka ei peitä kulmaa).
+            if (lippuSiirretty && lipunOletus.HasValue && (vakaa || yla.height <= 0f))
+            {
+                var o = lipunOletus.Value;
+                // Kulman paikka ei ole paneelin alla (myös ruudun ulkopuolella tai pallon takana: silloin tanko on piilossa kuten
+                // ilman paneelia; Laitetestaaja 1.0.66b: lähizoomissa Alsace oli ruudun ulkopuolella, eikä tanko palannut).
+                // Hystereesi: paluu vaatii kaksinkertaisen varan (muuten raja-asemassa tanko hyppisi sekunnin välein).
+                bool vapaa = yla.height <= 0f || !Lipputanko.Ennuste(o.Lat, o.Lon, out var ro) || !PeittaaLipun(ro, yla, 3f * PaneelinVaraPt);
+                if (vapaa)
+                {
+                    lippuSiirretty = false;
+                    Lipputanko.KulmanKallistus = false;
+                    Lipputanko.Aseta(iso, o.Lat, o.Lon, kiinnitettyLippu);
+                    Debug.Log("MATKAKIRJA ui lipputanko: takaisin kulmaan");
+                    return;
+                }
+            }
+            if (yla.height <= 0f) return;
+            // Siirto heti (matkakirja kirjoittaa tekstin sana kerrallaan ja kasvaa sekunteja), mutta paneelin alareunaan varaa
+            // kasvulle, jotta tanko ei siirry kasvun aikana uudelleen.
+            yla = Rect.MinMaxRect(yla.xMin, yla.yMin, yla.xMax, yla.yMax + KasvuvaraPt);
+            var ala = Lipputanko.RuutuAlue;
+            bool peitossa = ala.HasValue && PeittaaLipun(ala.Value, yla);
+            if (peitossa != lippuPeitossa)
+            {
+                lippuPeitossa = peitossa;
+                Debug.Log($"MATKAKIRJA ui lipputanko: {(peitossa ? "paneelin alla" : "näkyvissä")} (paneeli {yla.xMin:0}–{yla.xMax:0} × {yla.yMin:0}–{yla.yMax:0} pt"
+                          + (ala.HasValue ? $", tanko {ala.Value.xMin:0}–{ala.Value.xMax:0} × {ala.Value.yMin:0}–{ala.Value.yMax:0} px)" : ", tanko piilossa)"));
+            }
+            if (!peitossa) return;
+            if (Time.realtimeSinceStartup < seuraavaLippuSiirto) return;
+            seuraavaLippuSiirto = Time.realtimeSinceStartup + 1f;
+            if (!sisamaat.TryGetValue(iso, out var pisteet))
+            {
+                if (!(LinssiOhjain.MaatAineisto?.Hae(iso) is Matkakirja.Linssit.Maat.Maa rajat)) return;
+                pisteet = Matkakirja.Linssit.Maat.Lippukulma.Sisamaa(rajat, 4);
+                sisamaat[iso] = pisteet;
+            }
+            // RUUDUN OIKEA YLÄKULMA PANEELIN ALLA (Laitetestaaja 1.0.66, kuva n3: maan koilliskulmaa lähin näkyvä paikka osui
+            // lähelle ruudun keskustaa, jossa liioiteltu perspektiivi näyttää tangon suoraan ylhäältä litteänä). Valitaan ruudulla
+            // oikeaa reunaa ja paneelin alareunaa lähin paikka: siellä tanko kallistuu ulospäin ja näkyy pystyssä kuten kulmassa.
+            float k = Screen.width / Mathf.Max(1f, kortti.panel.visualTree.layout.width);
+            float alaraja = Screen.height - (yla.yMax + PaneelinVaraPt) * k;   // paneelin alareuna ruutupikseleinä (y ylös)
+            (double Lat, double Lon)? paras = null;
+            float parasPisteet = float.MaxValue;
+            foreach (var (la, lo) in pisteet)
+            {
+                if (!Lipputanko.Ennuste(la, lo, out var r) || !Ruudulla(r) || PeittaaLipun(r, yla)) continue;
+                float dx = (Screen.width - r.xMax) / Screen.width, dy = Mathf.Max(0f, alaraja - r.yMax) / Screen.height;
+                float pis = dx * dx + dy * dy;
+                if (pis < parasPisteet) { parasPisteet = pis; paras = (la, lo); }
+            }
+            if (!paras.HasValue) return;
+            lippuSiirretty = true;
+            Lipputanko.KulmanKallistus = true;
+            Lipputanko.Aseta(iso, paras.Value.Lat, paras.Value.Lon, kiinnitettyLippu);
+            Debug.Log($"MATKAKIRJA ui lipputanko: yläpaneelin alle ({paras.Value.Lat:0.00}, {paras.Value.Lon:0.00}), {pisteet.Count} ehdokasta");
+        }
+
+        /// <summary>Testikomento `ui kartuscha lippu tila`: väistön ehdot (simulaattoridiagnostiikka 30.9.2026).</summary>
+        public string LipunVaistonTila()
+        {
+            var mk = UiNakymat.Hae().Matkakirja;
+            var yla = mk != null && mk.Nakyy ? mk.Rajat : Rect.zero;
+            var ala = Lipputanko.RuutuAlue;
+            string p = kortti.panel != null && ala.HasValue ? PeittaaLipun(ala.Value, Rect.MinMaxRect(yla.xMin, yla.yMin, yla.xMax, yla.yMax + KasvuvaraPt)).ToString() : "-";
+            return $"iso {iso ?? "-"}, tanko {Lipputanko.Maa ?? "-"} {Lipputanko.Paikka}, lippu {(kiinnitettyLippu != null ? "ok" : "null")}, "
+                 + $"paneeli {(kortti.panel != null ? "ok" : "null")} leveys {(kortti.panel != null ? kortti.panel.visualTree.layout.width : 0):0}, "
+                 + $"matkakirja nakyy {mk?.Nakyy} rajat {yla}, ala {(ala.HasValue ? ala.Value.ToString() : "-")}, ruutu {Screen.width}×{Screen.height}, "
+                 + $"peittää {p}, siirretty {lippuSiirretty}, oletus {lipunOletus}";
+        }
+
+        /// <summary>
+        /// Osuuko tangon ala (ruutupikselit, y ylös) yläpaneeliin (paneelikoordinaatit, y alas) varalla. Ruudun reunaan ulottuva
+        /// paneeli jatkuu reunan yli (simulaattori 30.9.: kulman paikka oli ruudun oikean reunan takana koko levyisen matkakirjan
+        /// korkeudella, jolloin se ei "osunut" paneeliin, tanko palasi ja siirtyi taas sekunnin välein).
+        /// </summary>
+        bool PeittaaLipun(Rect ruutu, Rect yla, float vara = PaneelinVaraPt)
+        {
+            // Muunnos suoraan paneelin mittakaavalla (simulaattori 30.9.: RuntimePanelUtils.ScreenToPanel antoi y-käännetyn tai
+            // skaalaamattoman laatikon, jolloin Overlaps oli aina epätosi, vaikka kortti peitti tangon: `ui kartuscha lippu tila`).
+            float leveys = kortti.panel.visualTree.layout.width;
+            float k = Screen.width / Mathf.Max(1f, leveys);
+            var alaPaneelissa = Rect.MinMaxRect(ruutu.xMin / k, (Screen.height - ruutu.yMax) / k, ruutu.xMax / k, (Screen.height - ruutu.yMin) / k);
+            // Reunan yli jatkuva paneeli: äärellinen raja (float.MinValue / 4 + leveys pyöristyi nollaksi, jolloin xMax ≈ 0 eikä
+            // mikään osunut; simulaattori 30.9.).
+            float x0 = yla.xMin <= ReunaPt ? -100000f : yla.xMin - vara;
+            float x1 = yla.xMax >= leveys - ReunaPt ? 100000f : yla.xMax + vara;
+            var v = Rect.MinMaxRect(x0, yla.yMin - vara, x1, yla.yMax + vara);
+            return alaPaneelissa.Overlaps(v);
+        }
+
+        static bool Ruudulla(Rect r) => r.xMin >= 0f && r.yMin >= 0f && r.xMax <= Screen.width && r.yMax <= Screen.height;
+
+        static List<(double Lat, double Lon)> Kaupungit(string maa)
+        {
+            var k = new List<(double Lat, double Lon)>();
+            foreach (var c in UiSisalto.Kaikki) if (c.Maa == maa) k.Add((c.Lat, c.Lon));
+            return k;
+        }
+
         static readonly Dictionary<string, (double Lat, double Lon)?> lippukulmat = new Dictionary<string, (double Lat, double Lon)?>();
 
         /// <summary>Koilliskulma maarajoista (odottaa latausta enintään 5 s), muuten vanha ankkuri.</summary>
@@ -271,9 +421,7 @@ namespace Matkakirja.Natiivi
             while (LinssiOhjain.MaatAineisto == null && Time.realtimeSinceStartup < raja) yield return null;
             if (!lippukulmat.TryGetValue(maa, out var p) && LinssiOhjain.MaatAineisto?.Hae(maa) is Matkakirja.Linssit.Maat.Maa rajat)
             {
-                var kaupungit = new List<(double Lat, double Lon)>();
-                foreach (var k in UiSisalto.Kaikki) if (k.Maa == maa) kaupungit.Add((k.Lat, k.Lon));
-                p = Matkakirja.Linssit.Maat.Lippukulma.Laske(rajat, kaupungit);
+                p = Matkakirja.Linssit.Maat.Lippukulma.Laske(rajat, Kaupungit(maa));
                 lippukulmat[maa] = p;
             }
             if (p.HasValue) { valmis(p); yield break; }

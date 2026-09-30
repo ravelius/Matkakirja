@@ -128,6 +128,44 @@ namespace Matkakirja
         /// <summary>Tanko pois (maa vaihtuu tai kartta sulkeutuu).</summary>
         public static void Pois() { if (instanssi != null) instanssi.PoisNyt(); }
 
+        /// <summary>
+        /// Tangon ja kankaan ala ruudulla (Unityn ruutupikselit, y ylös) viimeisimmästä piirrosta, tai null, kun tanko ei näy.
+        /// Natiivi-UI:n yläpaneelien väistö (Linssiseppä 30.9.2026: matkakirjakortti peitti Ranskan lipun; omistajan linja
+        /// "lippu näkyy aina"): Kartuscha siirtää tangon paneelin alle, jos ala osuu paneeliin.
+        /// </summary>
+        public static Rect? RuutuAlue => instanssi != null && instanssi.nakyi ? instanssi.ruutuAlue : (Rect?)null;
+
+        /// <summary>
+        /// Siirretty tanko (Kartuscha: yläpaneelin alle) kallistuu kuin ruudun oikeassa yläkulmassa: liioitellun perspektiivin
+        /// säteittäinen kallistus tekee ruudun keskellä tai oikealla sivulla seisovasta tangosta litteän tai kyljellään olevan
+        /// (Laitetestaaja 1.0.66b, kuva p2-tanko-zoom), kulmassa se nousee ylös ja ulos kuten saapumisnäkymässä.
+        /// </summary>
+        public static bool KulmanKallistus;
+
+        /// <summary>Tangon nykyinen paikka (lat, lon), tai null.</summary>
+        public static (double Lat, double Lon)? Paikka => instanssi != null && instanssi.asetettu ? (instanssi.lat, instanssi.lon) : ((double, double)?)null;
+
+        /// <summary>
+        /// Ennuste: missä tangon ala olisi ruudulla, jos jalka olisi pisteessä (lat, lon), nykyisellä kameralla ja koolla (nykyinen
+        /// ala siirrettynä jalan ruutupisteen verran). false, jos tanko ei nyt näy tai piste on kameran takana tai pallon takana.
+        /// </summary>
+        public static bool Ennuste(double lat, double lon, out Rect ala)
+        {
+            ala = default;
+            var t = instanssi;
+            if (t == null || !t.nakyi || t.kamera == null) return false;
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, 0));
+            var gt = t.georeferenssi.transform;
+            Vector3 w = gt.TransformPoint((Vector3)(float3)t.georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef));
+            Vector3 n = gt.TransformDirection((Vector3)(float3)t.georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
+                CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(ecef))).normalized;
+            if (Vector3.Dot(n, (t.kamera.transform.position - w).normalized) <= 0.12f) return false;
+            Vector3 sp = t.kamera.WorldToScreenPoint(w);
+            if (sp.z <= 0f) return false;
+            ala = new Rect(t.ruutuAlue.position + ((Vector2)sp - t.jalkaRuudulla), t.ruutuAlue.size);
+            return true;
+        }
+
         /// <summary>Tila lokiin.</summary>
         public static string Tila() => instanssi == null ? "ei luotu" : instanssi.Kuvaus();
 
@@ -177,6 +215,8 @@ namespace Matkakirja
         Texture lahde;
         string maa;
         bool asetettu, nakyi;
+        Rect ruutuAlue;
+        Vector2 jalkaRuudulla;
         double lat, lon, korkeus;
         Vector3 normaaliPaikallinen, itaPaikallinen, pohjoinenPaikallinen, perusPaikka;
 
@@ -309,6 +349,7 @@ namespace Matkakirja
             if (Perspektiivi)
             {
                 Vector3 sp = kamera.WorldToScreenPoint(p);
+                if (KulmanKallistus) sp = new Vector3(Screen.width * 0.92f, Screen.height * 0.88f, sp.z);
                 var (k, dx, dy) = Matkakirja.Linssit.Kamera.LiioiteltuPerspektiivi.Kallistus(sp.x, sp.y, Screen.width, Screen.height,
                     kierto != null ? kierto.KaytettyKallistus : 0.0);
                 Vector3 oikeaT = Vector3.ProjectOnPlane(kamera.transform.right, n).normalized;
@@ -372,6 +413,24 @@ namespace Matkakirja
             if ((transform.position - paikka).sqrMagnitude > piste * piste * 0.01f) transform.position = paikka;
             var s = Vector3.one * koko;
             if ((transform.localScale - s).sqrMagnitude > 1e-6f * koko * koko) transform.localScale = s;
+            PaivitaRuutuAlue(p);
+        }
+
+        /// <summary>Tangon ja kankaan rajalaatikon kulmat ruudulle (yläpaneelien väistö, <see cref="RuutuAlue"/>).</summary>
+        void PaivitaRuutuAlue(Vector3 jalka)
+        {
+            var b = tanko.bounds;
+            if (lippu.enabled) b.Encapsulate(lippu.bounds);
+            b.Encapsulate(nuppi.bounds);
+            float x0 = float.MaxValue, y0 = float.MaxValue, x1 = float.MinValue, y1 = float.MinValue;
+            for (int i = 0; i < 8; i++)
+            {
+                var c = b.center + Vector3.Scale(b.extents, new Vector3((i & 1) == 0 ? -1 : 1, (i & 2) == 0 ? -1 : 1, (i & 4) == 0 ? -1 : 1));
+                var sp = kamera.WorldToScreenPoint(c);
+                x0 = Mathf.Min(x0, sp.x); x1 = Mathf.Max(x1, sp.x); y0 = Mathf.Min(y0, sp.y); y1 = Mathf.Max(y1, sp.y);
+            }
+            ruutuAlue = Rect.MinMaxRect(x0, y0, x1, y1);
+            jalkaRuudulla = kamera.WorldToScreenPoint(jalka);
         }
 
         string Kuvaus() =>
