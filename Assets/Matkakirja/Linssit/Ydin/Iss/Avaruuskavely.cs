@@ -206,6 +206,46 @@ namespace Matkakirja.Linssit.Iss
             return null;
         }
 
+        // ---- Cupola päivänvaloon (arvioija 1.1 (75), Päätoimittaja 30.9.: yöpuolen Cupola näytti rikkinäiseltä) ----
+
+        /// <summary>Auringon korkeuskulman sini ISS:n alapisteessä (maa ISS:n alla: &gt; 0 = päivä).</summary>
+        public static double MaanAurinko(DateTime utc, LatLon alapiste)
+        {
+            Aurinko.Alihajapiste(Aika.Jd(utc), out double alat, out double alon);
+            const double r = Math.PI / 180;
+            return Math.Sin(alapiste.Lat * r) * Math.Sin(alat * r)
+                + Math.Cos(alapiste.Lat * r) * Math.Cos(alat * r) * Math.Cos((alapiste.Lon - alon) * r);
+        }
+
+        /// <summary>Yöpuoli: aurinko alapisteessä horisontin alla. Päivänvalo: aurinko vähintään ~14,5° (sini 0,25), jolloin
+        /// maa on valoisa myös ikkunan horisonttia kohti eikä ilta tule heti (aamupuolelta haettuna valo vain kasvaa).</summary>
+        public const double YoRaja = 0, PaivaRaja = 0.25, PaivaAskelS = 20, PaivaHakuS = 3 * 3600;
+
+        public static bool Yopuolella(DateTime utc) => MaanAurinko(utc, IssNyt.Paikka(utc)) < YoRaja;
+
+        /// <summary>
+        /// Seuraava hetki <paramref name="alku"/>:sta, jolloin maa ISS:n alla on päivänvalossa (MaanAurinko ≥ PaivaRaja):
+        /// 20 s:n askelin enintään 3 h, sitten puolitus 1 s:iin. Jo valoisassa = alku. null = ei valoa hakuajassa (napayö).
+        /// </summary>
+        public static DateTime? SeuraavaPaivanvalo(Func<DateTime, LatLon> paikka, DateTime alku, double hakuS = PaivaHakuS)
+        {
+            double A(DateTime t) => MaanAurinko(t, paikka(t));
+            if (A(alku) >= PaivaRaja) return alku;
+            for (double s = PaivaAskelS; s <= hakuS; s += PaivaAskelS)
+            {
+                var t = alku.AddSeconds(s);
+                if (A(t) < PaivaRaja) continue;
+                DateTime a = alku.AddSeconds(s - PaivaAskelS), b = t;
+                while ((b - a).TotalSeconds > 1)
+                {
+                    var m = a.AddTicks((b - a).Ticks / 2);
+                    if (A(m) >= PaivaRaja) b = m; else a = m;
+                }
+                return b;
+            }
+            return null;
+        }
+
         /// <summary>SeuraavaNousu ISS:n todellisella radalla (IssNyt: SGP4 tai havainnollinen rata).</summary>
         public static DateTime? SeuraavaNousu(DateTime alku) => SeuraavaNousu(IssNyt.Paikka, IssNyt.KorkeusKm, alku);
 

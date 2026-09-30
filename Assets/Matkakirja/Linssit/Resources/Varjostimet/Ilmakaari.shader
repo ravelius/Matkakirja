@@ -111,7 +111,10 @@ Shader "Matkakirja/Linssit/Ilmakaari"
                 a *= max(Aurinko(n), hamara * 0.8h);
                 // Ilmahehku yöllä: ohut kerros noin 95 km:ssä (σ 4,5 km; laite cl4: 6 km oli paksu), häipyy päivällä.
                 half yo = 1.0h - (half)smoothstep(-0.105, 0.0, s);
-                half hehku = (half)(exp(-((h - 95000.0) * (h - 95000.0)) / (4500.0 * 4500.0)) * _Hehku) * yo;
+                // Pehmeä vyö (Päätoimittaja 30.9.: terävä viiva): σ 9 km + leveä heikko helma, kirkkaus vaihtelee hieman (± 25 %).
+                float dh = h - 95000.0;
+                float aalto = 0.75 + 0.25 * sin(n.x * 23.0 + n.y * 17.0) * sin(n.z * 29.0 - n.x * 11.0);
+                half hehku = (half)((exp(-dh * dh / (9000.0 * 9000.0)) + 0.35 * exp(-dh * dh / (22000.0 * 22000.0))) * 0.75 * aalto * _Hehku) * yo;
                 a = saturate(a * 1.15h);
                 half yht = a + hehku - a * hehku;
                 vari = (vari * a + _HehkuVari.rgb * hehku) / max(a + hehku, 1e-3h);

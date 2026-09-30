@@ -82,18 +82,29 @@ namespace Matkakirja.Natiivi
             public Tila Tila
             {
                 get => tila;
-                set { if (tila == value) return; tila = value; PaivitaKuva(); MarkDirtyRepaint(); OnTila(); SetEnabled(value != Tila.Pois); }
+                set { if (tila == value) return; tila = value; PaivitaKuva(); MarkDirtyRepaint(); OnTila(); SetEnabled(value != Tila.Pois); Ilmoita(); }
             }
+            /// <summary>Renderikerrostila (IssPaneeliKuvat): moduuli on vain näkymätön osuma-ala + dynaamiset tekstit; kuvat piirtää pöytä.</summary>
+            public bool Kerros
+            {
+                get => kerros;
+                set { if (kerros == value) return; kerros = value; PaivitaKuva(); MarkDirtyRepaint(); OnKerros(value); }
+            }
+            bool kerros;
+            protected virtual void OnKerros(bool paalla) { }
+            /// <summary>Näkyvä tila muuttui (asento, arvo, painallus, kansi): pöytä vaihtaa kerroskuvat ja valopainot.</summary>
+            public event Action Muuttui;
+            protected void Ilmoita() => Muuttui?.Invoke();
             protected virtual void OnTila() { }
             protected Texture2D Kuva() => IssKytkimet.Kuva(moduuli, tila);
             protected void PaivitaKuva()
             {
-                var k = Kuva();
+                var k = kerros ? null : Kuva();
                 style.backgroundImage = k != null ? new StyleBackground(k) : new StyleBackground(StyleKeyword.None);
             }
             void Piirra(MeshGenerationContext mgc)
             {
-                if (Kuva() != null) return;
+                if (kerros || Kuva() != null) return;
                 Paikkamerkki(mgc.painter2D, contentRect);
             }
             /// <summary>Paikkamerkkigrafiikka (Codexin kuvan puuttuessa).</summary>
@@ -162,7 +173,7 @@ namespace Matkakirja.Natiivi
             readonly VisualElement lamppu;
             public readonly Label Nimi;
             /// <summary>Palaessa: vihreä (LIVE) tai meripihka (nopeutettu).</summary>
-            public bool Meripihka { get => meripihka; set { meripihka = value; lamppu.MarkDirtyRepaint(); } }
+            public bool Meripihka { get => meripihka; set { if (meripihka == value) return; meripihka = value; lamppu.MarkDirtyRepaint(); Ilmoita(); } }
             bool meripihka;
             public Merkkivalo(string nimi) : base(Moduuli.Merkkivalo)
             {
@@ -181,6 +192,7 @@ namespace Matkakirja.Natiivi
                 Nimi.style.marginTop = 2;
             }
             protected override void OnTila() => lamppu.MarkDirtyRepaint();
+            protected override void OnKerros(bool paalla) => lamppu.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
             protected override void Paikkamerkki(Painter2D p, Rect r) { }
         }
 
@@ -220,7 +232,20 @@ namespace Matkakirja.Natiivi
                 Add(Laatta);
                 Otsikko = Nimio(this, otsikko, 8.5f);
                 Otsikko.style.marginTop = 2;
+                Kilpi = Nimio(this, "", 6.5f);
+                Kilpi.style.display = DisplayStyle.None;
             }
+            /// <summary>Arvokilpi (kerrostilassa renderin levyllä, tarrakirjoitintyyliin): painikkeiden ja vivun nykyinen arvo.</summary>
+            public readonly Label Kilpi;
+            protected override void OnKerros(bool paalla)
+            {
+                Laatta.style.display = paalla ? DisplayStyle.None : DisplayStyle.Flex;
+                // Linnanrakentajan testirenderissä (30.9.) otsikoita ei ole kaiverrettu: peli piirtää ne, kunnes kerrokset tuovat ne.
+                Otsikko.style.display = paalla && IssPaneeliKuvat.KaiverretutTekstit ? DisplayStyle.None : DisplayStyle.Flex;
+                if (paalla) Add(Otsikko);   // osuma-alan alareunaan (Laatta piilossa)
+            }
+            /// <summary>Arvon tai legendan teksti (kerrostilassa osan levylle): kiertokytkimen asento, nupin lukema, painikkeen legenda.</summary>
+            public virtual Label Arvo => Kilpi;
         }
 
         // ---- Kiertokytkin ----
@@ -291,6 +316,7 @@ namespace Matkakirja.Natiivi
                 nuppi.style.backgroundImage = k != null ? new StyleBackground(k) : new StyleBackground(StyleKeyword.None);
                 arvo.text = asento >= 0 && asento < asennot.Length ? asennot[asento] : "";
                 nuppi.MarkDirtyRepaint();
+                Ilmoita();
             }
             protected override void OnTila() => PaivitaNuppi();
             void Valitse(int i)
@@ -301,10 +327,12 @@ namespace Matkakirja.Natiivi
             /// <summary>Asento pelin tilasta (ei kutsu valittu-toimintoa); −1 = ei asentoa (kelaus).</summary>
             public void Aseta(int i, string teksti = null)
             {
+                if (i == asento && teksti == null && i >= 0 && i < asennot.Length && arvo.text == asennot[i]) return;
                 asento = i; PaivitaNuppi();
                 if (teksti != null) arvo.text = teksti;
             }
             public int Asento => asento;
+            public override Label Arvo => arvo;
         }
 
         // ---- Nuppi (jatkuva) ----
@@ -369,11 +397,16 @@ namespace Matkakirja.Natiivi
                 korkki.style.rotate = new Rotate(-Kaari * 0.5f + Kaari * t);
                 var k = IssKytkimet.Kuva(Moduuli.NupinNuppi, NykyTila);
                 korkki.style.backgroundImage = k != null ? new StyleBackground(k) : new StyleBackground(StyleKeyword.None);
+                Ilmoita();
             }
+            public override Label Arvo => arvo;
+            /// <summary>Osoittimen kulma asteina myötäpäivään ylhäältä (−135…135).</summary>
+            public float Kulma => -Kaari * 0.5f + Kaari * (max > min ? (arvoNyt - min) / (max - min) : 0f);
             /// <summary>Arvo ja näkyvä lukema pelin tilasta (ei kutsu muuttui-toimintoa).</summary>
             public void Aseta(float v, string teksti)
             {
-                arvoNyt = Mathf.Clamp(v, min, max); PaivitaKorkki();
+                v = Mathf.Clamp(v, min, max);
+                if (Mathf.Abs(v - arvoNyt) > 1e-4f) { arvoNyt = v; PaivitaKorkki(); }
                 arvo.text = teksti ?? "";
             }
         }
@@ -388,6 +421,21 @@ namespace Matkakirja.Natiivi
                 Legenda = Nimio(Laatta, legenda, 10f);
                 Legenda.style.whiteSpace = WhiteSpace.Normal;
                 this.AddManipulator(new Clickable(() => { if (NykyTila != Tila.Pois) painettu?.Invoke(); }));
+                // Painallus näkyy kerrostilassa (osa-painike-alas + kirkkaampi valo); Clickable kaappaa osoittimen, siksi TrickleDown.
+                RegisterCallback<PointerDownEvent>(_ => AsetaPainettu(NykyTila != Tila.Pois), TrickleDown.TrickleDown);
+                RegisterCallback<PointerUpEvent>(_ => AsetaPainettu(false), TrickleDown.TrickleDown);
+                RegisterCallback<PointerCancelEvent>(_ => AsetaPainettu(false), TrickleDown.TrickleDown);
+                RegisterCallback<PointerCaptureOutEvent>(_ => AsetaPainettu(false));
+            }
+            void AsetaPainettu(bool p) { if (Painettu == p) return; Painettu = p; Ilmoita(); }
+            /// <summary>Sormi painikkeella juuri nyt.</summary>
+            public bool Painettu { get; private set; }
+            protected override void OnKerros(bool paalla)
+            {
+                base.OnKerros(paalla);
+                // Legenda näkyy painikkeen lasissa: kerrostilassa se siirtyy suoraan moduuliin (Laatta piilossa).
+                if (paalla) { Insert(0, Legenda); Legenda.style.flexGrow = 1; } else { Laatta.Add(Legenda); Legenda.style.flexGrow = 0; }
+                Legenda.style.display = paalla && IssPaneeliKuvat.KaiverretutTekstit ? DisplayStyle.None : DisplayStyle.Flex;
             }
             protected override void OnTila() => Legenda.style.color = NykyTila == Tila.Aktiivinen ? new Color(0.14f, 0.1f, 0.05f) : Teksti;
             protected override void Paikkamerkki(Painter2D p, Rect r)
@@ -445,6 +493,18 @@ namespace Matkakirja.Natiivi
                 paluu = schedule.Execute(Palauta).StartingIn(2000);
             }
             void Palauta() { kansiAuki = false; alhaalla = false; PaivitaOsat(); }
+            /// <summary>Suojakannen renderikehys 0 (kiinni) … 5 (110° auki); liukuu 40 ms/kehys kohti tavoitetta.</summary>
+            public int KansiKehys { get; private set; }
+            public const int KansiKehyksia = 6;
+            IVisualElementScheduledItem kansiAjo;
+            void LiikutaKantta()
+            {
+                int kohde = kansiAuki ? KansiKehyksia - 1 : 0;
+                if (KansiKehys == kohde) { kansiAjo?.Pause(); return; }
+                KansiKehys += kohde > KansiKehys ? 1 : -1;
+                Ilmoita();
+            }
+            public bool Alhaalla => alhaalla;
             /// <summary>Testi: sama kuin ensimmäinen napautus (kansi auki).</summary>
             public void AvaaKansi() => Napautus();
             void PaivitaOsat()
@@ -456,6 +516,12 @@ namespace Matkakirja.Natiivi
                 var kk = IssKytkimet.Kuva(Moduuli.Suojakansi, kansiAuki ? Tila.Aktiivinen : Tila.Perus);
                 kansi.style.backgroundImage = kk != null ? new StyleBackground(kk) : new StyleBackground(StyleKeyword.None);
                 vipu.MarkDirtyRepaint(); kansi.MarkDirtyRepaint();
+                if (KansiKehys != (kansiAuki ? KansiKehyksia - 1 : 0))
+                {
+                    if (kansiAjo == null) kansiAjo = schedule.Execute(LiikutaKantta).Every(40);
+                    else kansiAjo.Resume();
+                }
+                Ilmoita();
             }
             protected override void Paikkamerkki(Painter2D p, Rect r) { }
             public bool KansiAuki => kansiAuki;

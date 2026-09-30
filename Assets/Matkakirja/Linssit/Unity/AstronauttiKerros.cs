@@ -212,6 +212,16 @@ namespace Matkakirja.Natiivi
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
             pilvet?.Tarkkuus(kyyti != KyydinTila.Kauko && !TarkatPilvetPois ? 1f : 0f, TarkkojenPilvienKm);
+            // Fotorealismi 3: pilvien auringonvalo kyydissä (suunta kerran sekunnissa riittää, aurinko 0,25°/min).
+            if (pilvet != null && georeferenssi != null && (kyyti != KyydinTila.Kauko) && Time.unscaledTime - pilviValoAika > 1f)
+            {
+                pilviValoAika = Time.unscaledTime;
+                var gt = georeferenssi.transform;
+                var au = gt.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                pilvet.Valaistus(1f, au, pilvet.transform.position);
+            }
+            else if (pilvet != null && kyyti == KyydinTila.Kauko && pilviValoAika > 0f) { pilvet.Valaistus(0f, Vector3.forward, Vector3.zero); pilviValoAika = 0f; }
             // Pilvipeiton säädin vain kyydissä (kaukonäkymä ennallaan): kynnys 1 − määrä.
             float maara = kyyti != KyydinTila.Kauko ? Mathf.Clamp01(PilvienMaara) : 1f;
             pilvet?.Karsinta(1f - maara);
@@ -219,14 +229,20 @@ namespace Matkakirja.Natiivi
             yokuori?.PilvienPeitto(pilvienPeitto);
         }
 
-        float pilvienPeitto;
+        float pilvienPeitto, pilviValoAika;
 
         /// <summary>
         /// KYYDIN SÄÄTIMET (omistaja 28.9. TF 1.0.39 -kaappaus: "Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle
         /// sekä vuodenajalle?"): pilvien määrä 0 (selkeä) … 1 (nykyinen, oletus); vuodenaika = KuukausiPakotettu (0 = kuluva
         /// kuukausi). Molemmat palaavat oletukseen, kun kyydistä poistutaan kaukonäkymään (IssKyytiNakyma näyttää säätimet).
         /// </summary>
-        public static float PilvienMaara = 1f;
+        public static float PilvienMaara = PilvienOletus;
+        /// <summary>
+        /// PILVET-nupin oletus kyydissä: omistaja 30.9. ilta Päätoimittajan kautta: "pilvet saisivat olla pois oletuksena, tosin
+        /// saattaa muuttua sitten kun tulee niitä visuaalisia parannuksia" → 0 (aiemmin samana päivänä 0,3, 28.9. 1). Pelaaja
+        /// nostaa nupista, 1 = NYT; arvioidaan uudelleen fotorealististen pilvien jälkeen.
+        /// </summary>
+        public const float PilvienOletus = 0f;
 
         /// <summary>
         /// Terävät pilvet kyydissä (omistaja 28.9. "Vielä liikaa blurrina"; Cupolasta 4096 px:n pilvikuvan tekseli on ruudulla
@@ -306,7 +322,7 @@ namespace Matkakirja.Natiivi
         public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
         {
             // Kyydin säätimet palaavat oletukseen kaukonäkymässä (pilvet nyt, kuluva kuukausi).
-            if (tila == KyydinTila.Kauko) { PilvienMaara = 1f; KuukausiPakotettu = 0; }
+            if (tila == KyydinTila.Kauko) { PilvienMaara = PilvienOletus; KuukausiPakotettu = 0; }
             else OmaSijaintiHaku.Aloita();
             kyyti = tila;
             if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();
@@ -335,6 +351,7 @@ namespace Matkakirja.Natiivi
                 : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
+            CupolaAani.Tila(tila == KyydinTila.Ikkuna); // Pelikoodari: Cupolan humina ja NASA:n radiosilmukka
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio, aika);
         }
 
@@ -429,6 +446,8 @@ namespace Matkakirja.Natiivi
 
         public void Pois()
         {
+            CupolaAani.LinssiPois(); // Pelikoodari: Cupolan äänikerrokset pois linssin mukana
+            Matkakirja.Linssit.Kyytipino.Paivita(kamera, false);
             if (cupola != null) Destroy(cupola.gameObject);
             KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false, default);
             AvausKasittelija?.Invoke(AvauksenVaihe.Pois);
@@ -498,6 +517,7 @@ namespace Matkakirja.Natiivi
         void LateUpdate()
         {
             if (kamera == null) return;
+            Matkakirja.Linssit.Kyytipino.Paivita(kamera, kyyti != KyydinTila.Kauko);
             nimijono.Aja();
             taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
             var kt = kamera.transform;
@@ -559,8 +579,9 @@ namespace Matkakirja.Natiivi
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 // Kyydissä (seuranta tai siirtymä sinne) ISS on 3D-malli, ikkunassa ei kumpikaan (ollaan sisällä).
-                bool malli = kyyti == KyydinTila.Seuranta && issMalli != null;
-                bool piste = kyyti == KyydinTila.Kauko || (kyyti == KyydinTila.Seuranta && issMalli == null);
+                bool vertailu = Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue;
+                bool malli = kyyti == KyydinTila.Seuranta && issMalli != null && !vertailu;
+                bool piste = !vertailu && (kyyti == KyydinTila.Kauko || (kyyti == KyydinTila.Seuranta && issMalli == null));
                 // Kaukonäkymässä merkki näkyy vain pallon kiekon sisällä (web issKiekonSisalla): reunan takana horisontin yllä
                 // oleva asema projisoituisi kiekon ulkopuolelle.
                 if (piste && kyyti == KyydinTila.Kauko) piste = KiekonSisalla(paikka, kerroin);

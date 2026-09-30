@@ -145,6 +145,9 @@ namespace Matkakirja.Natiivi
                 new Rivi { Nimi = "Radion yövalot", Tekija = "NASA Earth Observatory (Black Marble)", EiLisenssia = true },
                 new Rivi { Nimi = "Lennon pinta, pilvetön",Tekija = "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)", EiLisenssia = true },
                 new Rivi { Nimi = "Lentokone (DC-3-tyyppinen potkurikone)", Tekija = "Pelin oma malli", Lisenssi = "CC0 (public domain)" },
+                // ISS-kytkinpaneelin painetut otsikot ja legendat (Linnanrakentajan Cycles-renderit 30.9., Päätoimittaja).
+                new Rivi { Nimi = "Barlow Condensed (ISS-kytkinpaneelin tekstit)", Tekija = "© 2017 The Barlow Project Authors (github.com/jpt/barlow)",
+                    Lisenssi = "SIL Open Font License 1.1" },
                 new Rivi { Nimi = "EB Garamond (varafontti)", Tekija = "Georg Duffner ja Octavio Pardo", Lisenssi = "SIL Open Font License 1.1",
                     Huom = "American Typewriter, Iowan Old Style ja Snell Roundhand ovat iOS:n järjestelmäfontteja." },
             });
