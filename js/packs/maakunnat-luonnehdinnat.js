@@ -2658,7 +2658,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       kuva: [
         {
           osoite: 'https://media.matkakirja.app/karttanostot/20260926/nld-maakunta-noord-brabant-a02068cb.jpg',
-          lahde: 'Stefan Scheer, Wikimedia Commons (CC BY 2.5)',
+          lahde: 'Stefan Scheer, Wikimedia Commons (CC BY 2.5), rajattu',
           tekija: 'Stefan Scheer',
           lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Efteling_Entrance.jpg',
           lisenssi: 'CC BY 2.5',

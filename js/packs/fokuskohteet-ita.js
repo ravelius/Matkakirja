@@ -534,7 +534,7 @@ export const FOKUSKOHTEET_ITA = [
       tiedosto: 'Mount Etna snow-toppd.jpg',
       selite: 'Lumihuippuinen Etna Sisiliassa. Vuoren korkeus muuttuu '
         + 'purkausten mukana.',
-      lahde: 'Wikimedia Commons (public domain)',
+      lahde: 'Jeanne boleyn, Wikimedia Commons (public domain)',
     },
   },
   {
