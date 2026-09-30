@@ -322,7 +322,11 @@ export function tihennysraja(palikka, tila) {
 export function lisaaBlender(rakennusJson, blender) {
   const on = new Map(blender.tiedostot.map((t) => [t.polku, t]));
   const B = (p) => { if (!on.has(p)) throw new Error(`blender.json: puuttuu ${p}`); return `blender/${p}`; };
-  const tasot = { huippu: '4k', normaali: '4k', kevyt: '2k' };
+  // Huippu-taso käyttää 8k-atlasta (Real-ESRGAN ×4 → 8k, laatusuunnitelma 30.9., täyden laadun laitteet), jos se on
+  // viety blender.json:iin; muuten 4k kuten ennen (vanha blender.json ei riko rakennusta).
+  const on8k = on.has('ulkokuori/ulkokuori-8k-4x4.astcm') && on.has('ulkokuori/ulkokuori-hamara-8k-4x4.astcm')
+    && on.has('ulkokuori/ulkokuori-hamara-8k.jpg');
+  const tasot = { huippu: on8k ? '8k' : '4k', normaali: '4k', kevyt: '2k' };
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),

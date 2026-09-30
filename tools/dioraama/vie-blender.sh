@@ -41,6 +41,10 @@ lisaa() { [ -f "$LAHDE/$2" ] || { echo "PUUTTUU: $LAHDE/$2" >&2; exit 1; }; LIST
 for t in huippu normaali kevyt; do lisaa "ulkokuori/ulkokuori_$t.glb" "ulkokuori/ulkokuori_$t.glb"; done
 for f in ulkokuori-4k-4x4.astcm ulkokuori-2k-4x4.astcm ulkokuori-hamara-4k-4x4.astcm ulkokuori-hamara-2k-4x4.astcm \
          ulkokuori-hamara-4k.jpg ulkokuori-hamara-2k.jpg; do lisaa "ulkokuori/$f" "ulkokuori/$f"; done
+# 8k-atlakset (laatusuunnitelma 30.9.: Real-ESRGAN ×4 → 8k täyden laadun laitteille), mukaan jos lähteessä on.
+for f in ulkokuori-8k-4x4.astcm ulkokuori-hamara-8k-4x4.astcm ulkokuori-hamara-8k.jpg; do
+  if [ -f "$LAHDE/ulkokuori/$f" ]; then lisaa "ulkokuori/$f" "ulkokuori/$f"; fi
+done
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
   for v in "" "-hamara"; do

@@ -68,3 +68,16 @@ test('jokainen js/dioraama/rakennukset/<id>/blender.json tuottaa hyväksytyn pak
     assert.ok(json.tilat.length > 0 && json.tilat.every((t) => t.glb.tiedosto.startsWith('blender/tilat/')), id);
   }
 });
+
+test('kuoren huippu-taso: 8k-atlas vain jos se on blender.json:ssa, muuten 4k (laatusuunnitelma 30.9.)', () => {
+  const ilman = kopio(RAKENNUS);
+  lisaaBlender(ilman, { ...B, tiedostot: B.tiedostot.filter((t) => !t.polku.includes('-8k')) });
+  assert.match(ilman.ulkokuori.tekstuurit.huippu, /ulkokuori-4k-4x4\.astcm$/);
+  const lisa = ['ulkokuori/ulkokuori-8k-4x4.astcm', 'ulkokuori/ulkokuori-hamara-8k-4x4.astcm', 'ulkokuori/ulkokuori-hamara-8k.jpg']
+    .map((polku) => ({ polku, sha256: 'a'.repeat(64), tavuja: 1 }));
+  const kanssa = kopio(RAKENNUS);
+  lisaaBlender(kanssa, { ...B, tiedostot: [...B.tiedostot.filter((t) => !t.polku.includes('-8k')), ...lisa] });
+  assert.match(kanssa.ulkokuori.tekstuurit.huippu, /ulkokuori-8k-4x4\.astcm$/);
+  assert.match(kanssa.ulkokuori.tekstuurit.hamara.huippu, /ulkokuori-hamara-8k-4x4\.astcm$/);
+  assert.match(kanssa.ulkokuori.tekstuurit.normaali, /ulkokuori-4k-4x4\.astcm$/);
+});
