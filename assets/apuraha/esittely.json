@@ -1,0 +1,39 @@
+{
+  "_ohje": "Apurahan arvioijan esittelykortti: YKSI lähde webille (js/apuraha.js) ja natiiville (Apuraha.cs lukee https://matkakirja.app/assets/apuraha/esittely.json). Päätoimittaja päivittää tekstin vain tähän; natiivi näkee muutoksen ilman TF-buildia heti Pages-julkaisun jälkeen. Kuvat: tiedosto on polku sivuston juuresta (assets/…) tai täysi https-osoite. video: null = ei videota; myöhemmin {\"url\": \"…mp4\", \"kuva\": \"…jpg\"} kortin alkuun. paikkamerkki: true = Laitetestaajan TF-kuva puuttuu vielä.",
+  "versio": 1,
+  "nappi": "Apurahahakemus – katso tämä ensin",
+  "otsikko": "Apurahan arvioijalle",
+  "alaotsikko": "Matkakirja ja unohdettu aarre · tilanne 30.9.2026",
+  "video": null,
+  "kappaleet": [
+    {
+      "teksti": "Matkakirja ja unohdettu aarre on suomenkielinen seikkailupeli 13 vuotta täyttäneille ja aikuisille. Nuori Fogg seuraa isoisänsä vuoden 1873 matkapäiväkirjaa halki nykyajan Euroopan ja etsii kadonneen luettelon unohdettuja aarteita. Maailmasta oppii matkustamalla: jokaisella kaupungilla on oma matkakirjansa, kartan nostot johdattavat nähtävyyksiin ja tarinoihin, ja isoisän ääni lukee matkakirjan ääneen."
+    },
+    {
+      "otsikko": "Kokeile kolmessa minuutissa",
+      "lista": [
+        "Aloita uusi matka ja valitse ensimmäinen kohde. Perillä avautuu isoisän matkakirja, ja isoisä lukee sen ääneen.",
+        "Napauta kartalta nostoa: kuva ja lyhyt tarina nähtävyydestä.",
+        "Kysy Pulu-kyyhkyltä kaupungista mitä tahansa.",
+        "Avaa linssi, esimerkiksi astronauttien valokuvat tai maailman radiot."
+      ]
+    },
+    {
+      "otsikko": "Missä mennään",
+      "teksti": "Kehitys tapahtuu nyt iOS-sovelluksessa, joka rakennettiin syyskuussa uudelleen natiivina. Kartta on pelin oma, itse poltettu, ja se tarkentuu koko maapallolta kaupunkitasolle. Uusi testiversio ilmestyy lähes päivittäin, ja tämä testiryhmä saa aina uusimman. Sisältöä on 266 kaupungista ja 117 maasta; työn alla on Euroopan viimeistely. Seuraavaksi tulevat ensimmäiset Euroopan perinteiset pelit ja kolmiulotteiset kohteet, joista ensimmäinen, Olavinlinna, on jo testissä."
+    },
+    {
+      "otsikko": "Keskeneräisyys ja lisätiedot",
+      "teksti": "Testiversio on keskeneräinen, joten siinä voi näkyä kokeiluja ja paikkamerkkejä. Selainpeli osoitteessa matkakirja.app on suppeampi versio. Koko tilannekatsaus osa-alueittain on projektisivulla.",
+      "linkki": { "teksti": "Projektisivu", "url": "https://matkakirja.app/projekti.html" }
+    }
+  ],
+  "kuvat": [
+    { "tiedosto": "assets/projekti/ios-kaupunkikortti.jpg", "teksti": "Saapuminen ja matkakirja", "paikkamerkki": true },
+    { "tiedosto": "assets/projekti/pallokartta.jpg", "teksti": "Pelin oma kartta", "paikkamerkki": true },
+    { "tiedosto": "assets/projekti/kaupunkilehti-pariisi.jpg", "teksti": "Kaupunkilehti", "paikkamerkki": true },
+    { "tiedosto": "assets/projekti/lehti-chartres.jpg", "teksti": "Nosto kuvineen", "paikkamerkki": true },
+    { "tiedosto": "assets/projekti/linssi-yovalot-radio.jpg", "teksti": "Linssi: yövalot ja radio", "paikkamerkki": true }
+  ],
+  "webHuomautus": "Selainpeli ei sisällä kaikkia ominaisuuksia. Suosittelemme iOS-sovellusta (App Store -testiversion linkki on apurahahakemuksessa)."
+}

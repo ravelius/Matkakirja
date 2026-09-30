@@ -193,6 +193,7 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
+import { lataaApuraha } from './apuraha.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
@@ -16895,7 +16896,7 @@ export class UI {
      * avautui juuri näin tyhjän päälle: quizDialog puuttui listalta.
      * Visa on listan kärjessä, koska se avataan aina muiden päälle.
      */
-    const parent = [this.quizDialog, this.wikiDialog, this.arrivalDialog]
+    const parent = [this.quizDialog, this.wikiDialog, this.arrivalDialog, this.apurahaDialog]
       .find((d) => d?.open) ?? document.body;
     const overlay = html('div', 'lightbox');
     const img = html('img', 'lightbox-img');
@@ -17633,8 +17634,104 @@ export class UI {
     alaosa.appendChild(linkki);
     portti.appendChild(alaosa);
 
+    /*
+     * APURAHAN ARVIOIJALLE (omistaja 30.9.2026): kevyt nappi Aloita
+     * seikkailu -napin alle ja pysyvä huomautus iOS-sovelluksesta
+     * alareunaan. Molemmat tulevat esittelytiedostosta (js/apuraha.js);
+     * jos se ei lataudu, portti on ennallaan.
+     */
+    lataaApuraha().then((esittely) => {
+      if (!esittely || this.aloitusportti !== portti) return;
+      const apuraha = html('button', 'start-apuraha', esittely.nappi);
+      apuraha.type = 'button';
+      apuraha.addEventListener('click', () => this.naytaApuraha(esittely));
+      keskus.appendChild(apuraha);
+      if (esittely.webHuomautus) {
+        alaosa.insertBefore(html('p', 'start-huomautus', esittely.webHuomautus), linkki);
+      }
+    });
+
     this.mapPane.appendChild(portti);
     this.aloitusportti = portti;
+  }
+
+  /**
+   * Apurahan arvioijan esittelykortti (omistaja 30.9.2026): sama
+   * pergamenttilappu kuin periaatteilla, matkakirjakortin otsikko ja
+   * kursiivinen alaotsikko, kappaleet ja viiden kuvan rivi. Kuva avautuu
+   * kokoruutuun openLightboxilla (isäntä on tämä dialogi). Video tulee
+   * kortin alkuun, kun esittely.json saa video-kentän.
+   */
+  naytaApuraha(esittely) {
+    sfx.play('paper');
+    const lappu = html('dialog', 'dialog periaate-lappu apuraha-lappu');
+    const kortti = html('div', 'dialog-card');
+    lappu.appendChild(kortti);
+
+    if (esittely.video) {
+      const video = html('video', 'apuraha-video');
+      video.src = esittely.video.url;
+      if (esittely.video.kuva) video.poster = esittely.video.kuva;
+      video.controls = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      kortti.appendChild(video);
+    }
+
+    const otsikko = html('h2', 'apuraha-otsikko', esittely.otsikko);
+    kortti.appendChild(otsikko);
+    if (esittely.alaotsikko) kortti.appendChild(html('p', 'apuraha-alaotsikko', esittely.alaotsikko));
+
+    for (const k of esittely.kappaleet) {
+      if (k.otsikko) kortti.appendChild(html('h3', 'periaate-valiotsikko', k.otsikko));
+      if (k.teksti) kortti.appendChild(html('p', 'periaate-teksti apuraha-teksti', k.teksti));
+      if (k.lista?.length) {
+        const ol = html('ol', 'apuraha-lista');
+        for (const r of k.lista) ol.appendChild(html('li', null, r));
+        kortti.appendChild(ol);
+      }
+      if (k.linkki?.url) {
+        const p = html('p', 'periaate-linkit');
+        const a = html('a', 'periaate-linkki', k.linkki.teksti || k.linkki.url);
+        a.href = k.linkki.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        p.appendChild(a);
+        kortti.appendChild(p);
+      }
+    }
+
+    if (esittely.kuvat.length) {
+      const rivi = html('div', 'apuraha-kuvat');
+      const lista = esittely.kuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
+      esittely.kuvat.forEach((k, i) => {
+        const b = html('button', 'apuraha-kuva');
+        b.type = 'button';
+        b.setAttribute('aria-label', k.teksti || `Kuva ${i + 1}`);
+        const img = html('img');
+        img.src = k.tiedosto;
+        img.alt = k.teksti || '';
+        img.loading = 'lazy';
+        b.appendChild(img);
+        b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
+        rivi.appendChild(b);
+      });
+      kortti.appendChild(rivi);
+    }
+
+    const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
+    sulje.type = 'button';
+    sulje.addEventListener('click', () => lappu.close());
+    kortti.appendChild(sulje);
+
+    lappu.addEventListener('close', () => { lappu.remove(); if (this.apurahaDialog === lappu) this.apurahaDialog = null; });
+    lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
+    document.body.appendChild(lappu);
+    this.apurahaDialog = lappu;
+    lappu.showModal();
+    kortti.scrollTop = 0;
+    otsikko.setAttribute('tabindex', '-1');
+    otsikko.focus({ preventScroll: true });
   }
 
   /**

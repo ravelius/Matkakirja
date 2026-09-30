@@ -1,0 +1,45 @@
+// Apurahan esittelykortti (js/apuraha.js + assets/apuraha/esittely.json):
+// sama tiedosto webille ja natiiville, joten sen muoto tarkistetaan tässä.
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync, existsSync } from 'node:fs';
+import { tarkistaApuraha, lataaApuraha, nollaaApuraha, APURAHA_OSOITE } from '../js/apuraha.js';
+
+const raaka = JSON.parse(readFileSync(new URL(`../${APURAHA_OSOITE}`, import.meta.url), 'utf8'));
+
+test('esittely.json on kelvollinen ja siinä on neljä kappaletta ja viisi kuvaa', () => {
+  const d = tarkistaApuraha(raaka);
+  assert.ok(d, 'tarkistus hylkäsi tiedoston');
+  assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
+  assert.equal(d.kappaleet.length, 4);
+  assert.equal(d.kuvat.length, 5);
+  assert.ok(d.webHuomautus.startsWith('Selainpeli ei sisällä kaikkia ominaisuuksia.'));
+});
+
+test('paikalliset kuvat ovat repossa ja tekstissä ei ole muistiinpanoja', () => {
+  for (const k of raaka.kuvat) {
+    if (k.tiedosto.startsWith('https://')) continue;
+    assert.ok(existsSync(new URL(`../${k.tiedosto}`, import.meta.url)), `puuttuu ${k.tiedosto}`);
+  }
+  const teksti = JSON.stringify({ ...raaka, _ohje: '' });
+  assert.ok(!/\[TARKISTA/.test(teksti), 'TARKISTA-merkintä näkyisi arvioijalle');
+  assert.ok(!/App Store[^"]*https?:/.test(raaka.webHuomautus), 'testiversion linkkiä ei julkaista sivulla');
+});
+
+test('puutteellinen esittely ei näytä nappia', () => {
+  assert.equal(tarkistaApuraha(null), null);
+  assert.equal(tarkistaApuraha({ otsikko: 'x', kappaleet: [] }), null);
+  assert.equal(tarkistaApuraha({ nappi: ' ', otsikko: 'x', kappaleet: [] }), null);
+});
+
+test('lataus epäonnistuu hiljaa ja tehdään kerran', async () => {
+  nollaaApuraha();
+  let kutsut = 0;
+  const hae = async () => { kutsut += 1; return { ok: false }; };
+  assert.equal(await lataaApuraha(hae), null);
+  await lataaApuraha(hae);
+  assert.equal(kutsut, 1);
+  nollaaApuraha();
+  assert.ok(await lataaApuraha(async () => ({ ok: true, json: async () => raaka })));
+  nollaaApuraha();
+});
