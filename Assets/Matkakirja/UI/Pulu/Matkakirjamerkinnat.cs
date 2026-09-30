@@ -238,13 +238,14 @@ namespace Matkakirja.Natiivi
         {
             if (v == null || string.IsNullOrEmpty(v.Teksti)) return null;
             string nimi = Nimi(v.Kaupunki);
-            // Löydös 86 (omistaja build 13): tunnelmarivi ("Pölyä ja puhetta kullasta") ei näy kirjassa; otsikko on
-            // "Ateena, elokuussa 1873". Data ennallaan (Pelikoodarin selvitys).
-            var (o, _) = MatkakirjanOtsikko(v.Paikkarivi ?? nimi, nimi);
+            // Otsikko "Ateena, elokuussa 1873" ja sen alla sään ja tunnelman virke kursiivina (web asetaMatkakirjanOtsikko;
+            // omistaja 30.9.2026: "Tee isoisän matkakirjan tekstistä ja taustasta samanlainen natiiviin", mallina webin
+            // "Pariisi, lokakuussa 1873 / Sateen jälkeen kirkasta; puntari nousee").
+            var (o, tunnelma) = MatkakirjanOtsikko(v.Paikkarivi ?? nimi, nimi);
             return new Merkinta
             {
                 Avain = "fokus:" + v.Kaupunki, Kaupunki = v.Kaupunki, Laji = "fokus",
-                Otsikko = o, PaikkaAika = true, Paikkarivi = null, Tunnelma = true, Lyhyt = "",
+                Otsikko = o, PaikkaAika = true, Paikkarivi = string.IsNullOrEmpty(tunnelma) ? null : tunnelma, Tunnelma = true, Lyhyt = "",
                 Teksti = v.Teksti, Kaiutin = true,
             };
         }
@@ -254,11 +255,11 @@ namespace Matkakirja.Natiivi
         {
             if (v?.AarreTeksti == null) return null;
             string nimi = Nimi(v.Kaupunki);
-            var (o, _) = MatkakirjanOtsikko(v.AarrePaikkarivi ?? "Isoisän merkintä · " + nimi, nimi);
+            var (o, tunnelma) = MatkakirjanOtsikko(v.AarrePaikkarivi ?? "Isoisän merkintä · " + nimi, nimi);
             return new Merkinta
             {
                 Avain = "fokusaarre:" + v.Kaupunki, Kaupunki = v.Kaupunki, Laji = "aarre",
-                Otsikko = o, PaikkaAika = true, Paikkarivi = null, Tunnelma = true, Lyhyt = "",
+                Otsikko = o, PaikkaAika = true, Paikkarivi = string.IsNullOrEmpty(tunnelma) ? null : tunnelma, Tunnelma = true, Lyhyt = "",
                 Teksti = v.AarreTeksti,
             };
         }
