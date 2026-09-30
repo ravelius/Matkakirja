@@ -4,8 +4,8 @@
 // IP-osoitteita ei tallenneta.
 //
 // Ei lähetetä: editori ja simulaattori (SIMULATOR_DEVICE_NAME-ympäristömuuttuja: testiajot ja kuvaukset).
-// Omistajan laite lähettää omistaja: true (kehittäjätila, Pöllön kehittäjäkoodi Keychainissa tai PlayerPrefs-merkki
-// matkakirja-omistaja), jolloin worker ei laske sitä. Ping ei koskaan kaada eikä odota mitään.
+// Omistajan laite lähettää omistaja: true (vain Pöllön kehittäjäkoodi Keychainissa tai PlayerPrefs-merkki
+// matkakirja-omistaja, ui omistaja 1), jolloin worker ei laske sitä. Ping ei koskaan kaada eikä odota mitään.
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -24,8 +24,13 @@ namespace Matkakirja.Natiivi
         public static bool Testiymparisto =>
             Application.isEditor || !string.IsNullOrEmpty(System.Environment.GetEnvironmentVariable("SIMULATOR_DEVICE_NAME"));
 
+        /// <summary>
+        /// VAIN eksplisiittiset merkit (Päätoimittaja 30.9.2026): ui omistaja 1 tai Pöllön kehittäjäkoodi Keychainissa.
+        /// Kehittäjätila, linssien kehittäjätila ja esittelylinssit EIVÄT ole omistajan tunniste: arvioijien TF:ssä ne voivat
+        /// olla päällä, ja silloin laskuri näyttäisi nollaa juuri kun sitä tarvitaan.
+        /// </summary>
         public static bool Omistaja =>
-            Asetukset.Kehittaja || PlayerPrefs.GetInt(OmistajaAvain, 0) == 1 || !string.IsNullOrEmpty(Asetukset.PolloKoodi);
+            PlayerPrefs.GetInt(OmistajaAvain, 0) == 1 || !string.IsNullOrEmpty(Asetukset.PolloKoodi);
 
         /// <summary>Lähettää tapahtuman (avaus | apuraha | esittelylinssit) kerran käynnistyksessä.</summary>
         public static void Laheta(string tapahtuma)
