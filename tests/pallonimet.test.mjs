@@ -242,7 +242,7 @@ test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat 
   // Nimen elementti käyttää samaa kirjasinta ja luokkia kuin kartta.
   const nimet = lue('../js/pallolauta/nimet.js');
   assert.match(nimet, /teksti\.style\.fontFamily = KARTTANIMI_FONTTI;/);
-  assert.match(nimet, /'karttanimi karttanimi-kaupunki'/);
+  assert.match(nimet, /`karttanimi karttanimi-kaupunki\$\{d\.oma \? ' karttanimi-oma' : ''\}`/);
   assert.match(lue('../css/styles.css'), /\.pallolauta-nimi-siirto \{ transition: transform 250ms ease-in-out; \}/);
 });
 
