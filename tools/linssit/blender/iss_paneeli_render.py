@@ -320,7 +320,9 @@ def sarja(nimi, T, G, S):
     for o in p['pohja']:
         bpy.data.objects.remove(o)
 
-    # 2) ryhmä: kiinteät osat, pohja varjonsieppaajana
+    # 2) ryhmä: kiinteät osat, pohja varjonsieppaajana. Pöytä renderöidään 400 pt leveämpänä, jotta päätykehykset
+    #    (kahvat) jäävät kuvan ulkopuolelle eivätkä puhkaise ryhmään reikiä; oikeat päädyt tulevat pohja-kuvista.
+    T = T + 400
     t = ip.rakenna(T, G)
     osat = [o for v_ in t['osat'].values() for o in v_]
     rx0, rx1 = t['paikat']['ryhma']
@@ -370,13 +372,14 @@ def sarja(nimi, T, G, S):
         ob.rotation_euler = (0, math.radians(i * NUPPI_ASKEL), 0)
         tiedot['osat'][f'nuppi-{i:02d}'] = osa_kuva(f'nuppi-{i:02d}', [ob], x, y, 44)
     ob.rotation_euler = (0, 0, 0)
-    ob = t['osat']['kohde'][0]
-    x, y = t['paikat']['kohde'][:2]
-    z0 = ob.location.y
-    for tila, dz in (('ylos', 0.0), ('alas', 3.0)):
-        ob.location.y = z0 + dz
-        tiedot['osat'][f'painike-{tila}'] = osa_kuva(f'painike-{tila}', [ob], x, y, 42)
-    ob.location.y = z0
+    for nappi in ('kohde', 'poistu'):   # kannessa oma legenda (LENNÄ / POISTU)
+        ob = t['osat'][nappi][0]
+        x, y = t['paikat'][nappi][:2]
+        z0 = ob.location.y
+        for tila, dz in (('ylos', 0.0), ('alas', 3.0)):
+            ob.location.y = z0 + dz
+            tiedot['osat'][f'{nappi}-{tila}'] = osa_kuva(f'{nappi}-{tila}', [ob], x, y, 42)
+        ob.location.y = z0
     vv, vc = t['osat']['vipu'][0], t['osat']['kaari'][0]
     x, y = t['paikat']['oma'][:2]
     vc.hide_render = True
@@ -389,7 +392,7 @@ def sarja(nimi, T, G, S):
         tiedot['osat'][f'kaari-{i}'] = osa_kuva(f'kaari-{i}', [vc], x, y + 4, 60)
     ip.kaanna(vc, ip.KAARI_KIINNI)
     tiedot['osat_kaytto'] = {'nopeus': 'nopeus-0…3 (LIVE, 10×, 100×, 1000×)', 'pilvet_kuukausi': 'nuppi-00…23, 15°/askel',
-                             'kohde_poistu': 'painike-ylos/alas', 'oma': 'vipu-ylos/alas + kaari-0 (kiinni) … 5 (auki)'}
+                             'kohde_poistu': 'kohde-ylos/alas, poistu-ylos/alas', 'oma': 'vipu-ylos/alas + kaari-0 (kiinni) … 5 (auki)'}
 
     # 4) valot: puolikoko, kaikki kappaleet näkyvissä (perusasennot), vain yksi valo kerrallaan
     nakyvyys(kamera=t['pohja'] + t['ryhma'] + osat)
@@ -425,8 +428,8 @@ def sarja(nimi, T, G, S):
         valo(tunnus, [valaisin(tunnus, xx, yy, ip.PINTA + 10, (0.55, 1.0, 0.6), 30000, 10.0)],
              [(leg, (0.55, 1.0, 0.6), 1.1), (tek, (0.55, 1.0, 0.6), 0.9)], 5, 0.5)
     for vari in ('valkoinen', 'meripihka'):
-        valo(f'legendat-{vari}', [], [(levyt, VALOVARIT[vari], 1.4)], 3, 0.35)
-    valo('paneeli', [valaisin(f'paneeli_{i}', x_, y_, z_, (1.0, 0.93, 0.82), 1000000, 6.0, kohti=(0, -1, -0.5),
+        valo(f'legendat-{vari}', [], [(levyt, VALOVARIT[vari], 0.8)], 3, 0.3)
+    valo('paneeli', [valaisin(f'paneeli_{i}', x_, y_, z_, (1.0, 0.93, 0.82), 550000, 14.0, kohti=(0, -1, -0.8),
                               kartio=120) for i, (x_, y_, z_) in enumerate(t['valot']['paneeli'])],
          [(lyhty, (1.0, 0.93, 0.82), 0.45)], 5, 0.08)
     for o in kaikki:

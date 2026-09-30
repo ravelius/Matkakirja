@@ -371,7 +371,8 @@ def kierto():
     n.sylinteri(0, 0, 5.0, 13.5, 11.2, 'nuppi_harmaa', r2=8.6, n=48, viiste=1.2, osat=3)
     sateittain(n, 10.6, [2 * math.pi * (i + 0.5) / 8 for i in range(8)], (3.2, 5.0, 8.0), 8.8, 'nuppi_harmaa',
                viiste=1.2, kallistus=math.radians(-12))
-    n.laatikko(-0.8, 0.8, 1.5, 12.8, 13.3, 13.8, 'maali_valkoinen', viiste=0.2, osat=1)
+    n.laatikko(-0.9, 0.9, 1.2, 8.0, 13.3, 13.8, 'maali_valkoinen', viiste=0.2, osat=1)
+    n.laatikko(-0.9, 0.9, 10.2, 12.2, 11.0, 12.6, 'maali_valkoinen', viiste=0.3, osat=1)   # osoitin hameessa
     return r, n
 
 
