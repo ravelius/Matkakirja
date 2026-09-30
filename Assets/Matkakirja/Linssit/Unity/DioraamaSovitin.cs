@@ -381,6 +381,13 @@ namespace Matkakirja.Natiivi
             nayttamo?.AsetaTunnelma(DioraamaTunnelma.Hamara(rakennus));
             if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
             o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa, DioraamaTunnelma.Hamara(rakennus)));
+            // Ympäristö (maasto, puut, horisontti) ja Boat Attack -järvi, kun paketissa on ympäristö; muuten maalattu järvi.
+            if (rakennus.Ymparisto != null && nayttamo.Ymparisto != null)
+            {
+                nayttamo.Ulkokuori.LisaaVesi(null, 0, 1);
+                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto, (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa));
+                return;
+            }
             // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).
             double toisto = rakennus.Pinnat != null && rakennus.Pinnat.TryGetValue("vesi", out var vp) && vp.ToistoU > 0 ? vp.ToistoU : 8;
             nayttamo.Ulkokuori.LisaaVesi(rakennus3D?.PinnanMateriaali(rakennus, "vesi"), (float)rakennus.Ulkokuori.VesiY, (float)toisto);
@@ -715,7 +722,7 @@ namespace Matkakirja.Natiivi
                 rakennus = null; latausKaynnissa = false;
                 NollaaNakymanLataukset();
                 rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
-                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
+                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Ymparisto?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
