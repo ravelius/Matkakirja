@@ -147,8 +147,8 @@ namespace Matkakirja.Natiivi
             for (int x = 0; x < 2; x++)
                 for (int y = 0; y < 2; y++)
                 {
-                    // XYZ y = 0 pohjoisessa; ämpärin polku on {reverseY} (TMS) → 1 − y. Unityn rivi 0 alhaalla: pohjoinen ylös.
-                    string url = $"{PintaJuuri}{kk:00}/1/{x}/{1 - y}.jpg";
+                    // XYZ y = 0 pohjoisessa, ämpärin polku samoin (ei reverseY, tarkistettu curlilla 1.10.). Unityn rivi 0 alhaalla: pohjoinen ylös.
+                    string url = $"{PintaJuuri}{kk:00}/1/{x}/{y}.jpg";
                     using var r = UnityWebRequestTexture.GetTexture(url);
                     yield return r.SendWebRequest();
                     if (r.result != UnityWebRequest.Result.Success) { Debug.LogWarning("MATKAKIRJA sijaintipallo: " + url + " " + r.error); continue; }
