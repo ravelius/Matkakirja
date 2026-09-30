@@ -2070,8 +2070,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss014e17346/iss014e17346~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss014e17346/iss014e17346~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e17346~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e17346~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss014e17346"
       }
     ]
@@ -2408,8 +2408,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss014e08744/iss014e08744~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss014e08744/iss014e08744~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08744~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08744~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss014e08744"
       }
     ]
@@ -2631,8 +2631,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss007e14361/iss007e14361~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss007e14361/iss007e14361~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e14361~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e14361~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss007e14361"
       }
     ]
@@ -2683,8 +2683,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1314
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss023e029806/iss023e029806~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss023e029806/iss023e029806~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e029806~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e029806~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss023e029806"
       }
     ]
@@ -2802,8 +2802,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1312
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss002e7758/iss002e7758~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss002e7758/iss002e7758~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss002e7758~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss002e7758~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss002e7758"
       },
       {
@@ -2817,8 +2817,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss014e08138/iss014e08138~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss014e08138/iss014e08138~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08138~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e08138~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss014e08138"
       }
     ]
@@ -2884,8 +2884,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1311
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss019e007720/iss019e007720~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss019e007720/iss019e007720~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss019e007720~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss019e007720~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss019e007720"
       }
     ]
@@ -2951,8 +2951,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1311
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss021e026475/iss021e026475~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss021e026475/iss021e026475~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e026475~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e026475~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss021e026475"
       }
     ]
@@ -3137,8 +3137,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss013e77377/iss013e77377~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss013e77377/iss013e77377~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77377~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77377~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss013e77377"
       }
     ]
@@ -3297,8 +3297,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1311
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss021e015243/iss021e015243~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss021e015243/iss021e015243~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e015243~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss021e015243~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss021e015243"
       },
       {
@@ -3338,8 +3338,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss012e06469/iss012e06469~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss012e06469/iss012e06469~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss012e06469~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss012e06469~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss012e06469"
       },
       {
@@ -3487,8 +3487,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1311
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss025e005259/iss025e005259~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss025e005259/iss025e005259~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss025e005259~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss025e005259~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss025e005259"
       },
       {
@@ -3606,8 +3606,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1310
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss017e005351/iss017e005351~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss017e005351/iss017e005351~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005351~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005351~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss017e005351"
       }
     ]
@@ -3632,8 +3632,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss005e11203/iss005e11203~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss005e11203/iss005e11203~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss005e11203~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss005e11203~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss005e11203"
       },
       {
@@ -3647,8 +3647,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss013e77351/iss013e77351~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss013e77351/iss013e77351~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77351~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss013e77351~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss013e77351"
       }
     ]
@@ -3725,8 +3725,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss017e005037/iss017e005037~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss017e005037/iss017e005037~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005037~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss017e005037~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss017e005037"
       }
     ]
@@ -3896,8 +3896,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss010e13393/iss010e13393~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss010e13393/iss010e13393~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss010e13393~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss010e13393~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss010e13393"
       }
     ]
@@ -4130,8 +4130,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss016e010784/iss016e010784~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss016e010784/iss016e010784~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010784~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010784~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss016e010784"
       }
     ]
@@ -4156,8 +4156,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss015e08920/iss015e08920~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss015e08920/iss015e08920~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e08920~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e08920~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss015e08920"
       }
     ]
@@ -4223,8 +4223,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1314
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss023e027737/iss023e027737~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss023e027737/iss023e027737~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e027737~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e027737~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss023e027737"
       }
     ]
@@ -4431,8 +4431,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1314
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss027e034290/iss027e034290~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss027e034290/iss027e034290~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss027e034290~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss027e034290~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss027e034290"
       }
     ]
@@ -4691,8 +4691,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss007e08259/iss007e08259~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss007e08259/iss007e08259~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e08259~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss007e08259~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss007e08259"
       }
     ]
@@ -4769,8 +4769,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss014e15732/iss014e15732~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss014e15732/iss014e15732~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e15732~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss014e15732~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss014e15732"
       }
     ]
@@ -4795,8 +4795,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1314
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss023e035670/iss023e035670~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss023e035670/iss023e035670~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e035670~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss023e035670~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss023e035670"
       },
       {
@@ -4929,8 +4929,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1314
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss026e006255/iss026e006255~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss026e006255/iss026e006255~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss026e006255~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss026e006255~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss026e006255"
       }
     ]
@@ -5059,8 +5059,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1311
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss022e019513/iss022e019513~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss022e019513/iss022e019513~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss022e019513~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss022e019513~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss022e019513"
       }
     ]
@@ -5204,8 +5204,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss015e05624/iss015e05624~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss015e05624/iss015e05624~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e05624~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss015e05624~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss015e05624"
       }
     ]
@@ -5282,8 +5282,8 @@ export const SATELLIITTI_KOHTEET = [
           1920,
           1307
         ],
-        "kuva": "https://images-assets.nasa.gov/image/iss016e010894/iss016e010894~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/iss016e010894/iss016e010894~small.jpg",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010894~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261001/iss016e010894~small.jpg",
         "sivu": "https://images.nasa.gov/details/iss016e010894"
       }
     ]
