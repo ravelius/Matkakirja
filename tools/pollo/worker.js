@@ -170,22 +170,40 @@ export function puluElevenMalli(env) {
  * LUKIJAT ELEVENLABS V4 TURBOLLA (omistaja 30.9.2026, Päätoimittajan erä: vertailu xAI:hin, "vain v4 Turbo"):
  * nostojen ja matkakirjan lukija voi pyytää moottoria 'eleven' (runko.moottori). Sama reitti ja malli kuin Pululla
  * (kutsuElevenPuhetta, eleven_v4_turbo, malli-id tarkistettu /v1/models 30.9.: suomi, TTS, 10 000 mrk/pyyntö).
- * Ääni suomea äidinkielenään puhuvien listalta (LUKIJA_ELEVEN_AANET; jaetun kirjaston äänet toimivat tunnisteella).
+ * ÄÄNILISTA (omistaja 30.9.2026 klo 23.1x: "aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä"): ElevenLabsin
+ * jaetun kirjaston eniten käytetyt äänet (usage_character_count_1y, 30.9.), 12 miestä ja 11 naista eri sävyin, ei yhtään
+ * suomeksi merkattua (verified_languages fi); v4 lukee kaikilla suomea. Jaetun kirjaston äänet toimivat tunnisteella ilman
+ * tilille lisäämistä (testattu 30.9.), joten tilin äänipaikkoja ei kulu. Nimet ovat pelaajalle näkyviä kuvauksia.
  * KUSTANNUSRAJA: vain kehittäjäkoodilla (x-pollo-kehittaja, kehittajaOhitus; Päätoimittaja 30.9.2026: raja palvelimella,
  * ei sovelluksessa), ja lisäksi globaali päiväkatto merkkeinä (ELEVEN_LUKIJA_PAIVARAJA, oletus 20 000). Ilman koodia tai
  * katon ylittyessä pyyntö luetaan xAI:lla.
  */
 export const LUKIJA_ELEVEN_AANET = Object.freeze({
-  Sz0tRTEpybtDJ9ru2kgD: 'Viisas kertoja',
-  Gp43kq9FsSlavD7esRtx: 'Väinö',
-  '3OArekHEkHv5XvmZirVD': 'Christoffer',
-  YSabzCJMvEHDduIDMdwV: 'Aurora',
-  RiWFFlzYFZuu4lPMig3i: 'Soili',
-  '2Yg0KQ858zsEJOsoPmT2': 'Kaisa',
-  uNijH7qDIRQQ2u6S2c21: 'Vilhelm',
-  dlbXHgJnwobU5JdZ8F5M: 'Jussi',
+  MFZUKuGQUsGJPQjTS4wC: 'Lämmin mieskertoja',
+  G17SuINrv2H9FC6nvetn: 'Lempeä brittimies',
+  UgBBYS2sOqTuMpoF3BR0: 'Rento keskustelija, mies',
+  '6OzrBCQf8cjERkYgzSg8': 'Nuori rento mies',
+  ZthjuvLPty3kTMaNKVKb: 'Varma mieskertoja',
+  EkK5I93UQWFDigLMpZcX: 'Käheä syvä mies',
+  uju3wxzG5OhpWcoi3SMy: 'Ilmeikäs mieskertoja',
+  NNl6r8mD7vthiJatiJt1: 'Eloisa brittikertoja',
+  NFG5qt843uXKj4pFvR7C: 'Syvä rauhallinen mies',
+  j9jfwdrw7BRfcR43Qohk: 'Samettinen brittimies',
+  XjLkpWUlnhS8i7gGz3lZ: 'Uutistenlukija, mies',
+  wBXNqKUATyqu0RtYt25i: 'Radiokuuluttaja, mies',
+  Se2Vw1WbHmGbBbyWTuu4: 'Samettinen naiskertoja',
+  tnSpp4vdxKPjI9w0GnoV: 'Pirteä kirkas nainen',
+  jqcCZkN6Knx8BJ5TBdYR: 'Lämmin arkinen nainen',
+  ZF6FPAbjXT4488VcRRnw: 'Innostunut brittinainen',
+  g6xIsTj2HwM6VR4iXFCw: 'Juttuseura, nainen',
+  lxYfHSkYm1EzQzGhdbfc: 'Ammattilukija, nainen',
+  yj30vwTGJxSHezdAGsv9: 'Rento naiskertoja',
+  '19STyYD15bswVz51nqLf': 'Tyylikäs brittinainen',
+  Z3R5wn05IrDiVCyEkUrK: 'Salaperäinen naiskertoja',
+  DLsHlh26Ugcm6ELvS0qi: 'Rauhoittava etelän nainen',
+  wJqPPQ618aTW29mptyoc: 'Pehmeä brittinainen',
 });
-export const LUKIJA_ELEVEN_OLETUS = 'Sz0tRTEpybtDJ9ru2kgD';
+export const LUKIJA_ELEVEN_OLETUS = 'MFZUKuGQUsGJPQjTS4wC';
 export const LUKIJA_ELEVEN_MALLI = 'eleven_v4_turbo';
 
 /**

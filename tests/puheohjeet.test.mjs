@@ -109,7 +109,7 @@ test('Lukijat ElevenLabs v4 Turbolla: moottorivalinta, äänilista ja päiväkat
   const worker = await import('../tools/pollo/worker.js');
   const { LUKIJA_ELEVEN_AANET, LUKIJA_ELEVEN_OLETUS, LUKIJA_ELEVEN_MALLI, lukijaElevenPyydetty } = worker;
   assert.equal(LUKIJA_ELEVEN_MALLI, 'eleven_v4_turbo');
-  assert.ok(Object.keys(LUKIJA_ELEVEN_AANET).length >= 6 && Object.keys(LUKIJA_ELEVEN_AANET).length <= 8);
+  assert.ok(Object.keys(LUKIJA_ELEVEN_AANET).length >= 15 && Object.keys(LUKIJA_ELEVEN_AANET).length <= 25);
   assert.ok(Object.hasOwn(LUKIJA_ELEVEN_AANET, LUKIJA_ELEVEN_OLETUS));
   assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', { moottori: 'eleven' }, true), true);
   assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', { moottori: 'eleven' }, false), false, 'ilman kehittäjäkoodia xAI');
