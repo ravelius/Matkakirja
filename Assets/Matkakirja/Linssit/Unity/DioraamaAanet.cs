@@ -122,6 +122,16 @@ namespace Matkakirja.Natiivi
             DioraamaLimitteri.Paalle(true);
             if (rakennus?.Taulu?.Kohdat != null)
                 foreach (var k in rakennus.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
+            EsilataaKertoja();
+            viimeJakso = -1;
+        }
+
+        /// <summary>Kertojan jaksojen ja rakennuksen Pulun puheäänet ladataan heti (kierros alkaa saapumisen jälkeen).</summary>
+        void EsilataaKertoja()
+        {
+            if (rakennus == null) return;
+            foreach (var j in rakennus.Kertoja) VarmistaLadattuAaniId(j.Aani);
+            VarmistaLadattuAaniId(rakennus.PuluAani);
         }
 
         /// <summary>Rakennus.json valmistui vasta linssin ollessa auki (DioraamaSovitin.LataaRakennus): sama
@@ -131,6 +141,7 @@ namespace Matkakirja.Natiivi
             rakennus = rak;
             if (rakennus?.Taulu?.Kohdat != null)
                 foreach (var k in rakennus.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
+            EsilataaKertoja();
         }
 
         /// <summary>Yhden tilan data valmistui (DioraamaSovitin.TaydennaLataamattomat, sama hetki kuin glb/atlas-
@@ -148,6 +159,7 @@ namespace Matkakirja.Natiivi
             }
             if (tila.Taulu?.Kohdat != null) foreach (var k in tila.Taulu.Kohdat) VarmistaLadattuAaniId(k.Aani);
             foreach (var rivi in tila.Kuunnelma) VarmistaLadattuAaniId(rivi.Aani);
+            VarmistaLadattuAaniId(tila.PuluAani);
         }
 
         void VarmistaLadattuAaniId(string aaniId)
@@ -249,6 +261,17 @@ namespace Matkakirja.Natiivi
             // DUCKAUS ILMAN ÄÄNTÄ -korjaus (löydös, katselmointi 29.9.2026): puhujaksi merkitään (ja silmukoita
             // duckataan) VAIN kun repliikki OIKEASTI soi -- Kertoja-kytkin päällä JA klippi jo ladattu, ei pelkkä
             // askeleen vaihto. Askel (ei teksti) yksilöi vaihtumisen -- ks. Nakyma.Askel-kommentti.
+            // Kertojan kierros (Pelikoodari 1.10.2026, #3742: kertoja.jaksot[].aani, isoisä): jakson vaihtuessa edellinen
+            // puhe katkeaa ja uusi alkaa; kierroksen katketessa (huoneen kohdistus, paluu) puhe loppuu.
+            // Puhe alkaa tekstin kanssa (teksti nousee lennon 60 %:ssa), ei lennon alussa.
+            int jaksoNyt = nakyma.KertojaTeksti != null ? nakyma.KertojaJakso : -1;
+            if (jaksoNyt != viimeJakso)
+            {
+                if (viimeJakso >= 0) LopetaErillinen();
+                viimeJakso = jaksoNyt;
+                if (viimeJakso >= 0 && viimeJakso < rak.Kertoja.Count && kertojaPaalla) SoitaErillinen(rak.Kertoja[viimeJakso].Aani);
+            }
+
             string avain = nakyma.Puhuja == null ? null : nakyma.KohdeTila + "|" + nakyma.Askel;
             if (avain != viimeAskelAvain)
             {
@@ -354,6 +377,34 @@ namespace Matkakirja.Natiivi
             puheLoppuu = Time.unscaledTime + k.length;
             return true;
         }
+
+        int viimeJakso = -1;
+
+        /// <summary>Kertojan jakso tai Pulun kertomus omalta, pysäytettävältä lähteeltä (puheväylä −3 dB, taustat väistävät
+        /// puheen ajan). Katkaisee edellisen erillisen puheen. Lataamaton klippi jää soittamatta (esiladattu avatessa).</summary>
+        bool SoitaErillinen(string aaniId)
+        {
+            if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani) || puheKuiva == null) return false;
+            var k = Klippi(aani.Tiedosto);
+            if (k == null) { VarmistaLadattu(sovitin.AaniUrl(aani.Tiedosto)); return false; }
+            puheKuiva.Stop(); puheKaiku.Stop();
+            puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
+            puheLoppuu = Time.unscaledTime + k.length;
+            Debug.Log($"MATKAKIRJA linssit: poikki: erillinen puhe {aaniId} {k.length:F1} s");
+            return true;
+        }
+
+        void LopetaErillinen()
+        {
+            if (puheKuiva != null && puheKuiva.isPlaying) { puheKuiva.Stop(); puheKaiku.Stop(); puheLoppuu = -1f; }
+        }
+
+        /// <summary>Pulun kertomus (DioraamaTaulu: Pulun napautus), Kertoja-kytkimen mukaan.</summary>
+        public static bool SoitaPulu(string aaniId) =>
+            aktiivinen != null && aktiivinen.Paalla && Asetukset.Paalla(Kytkin.Kertoja) && aktiivinen.SoitaErillinen(aaniId);
+
+        /// <summary>Pulun kertomuksen kesto (kuplan näyttöaika), null = tuntematon.</summary>
+        public static float? PuluKesto(string aaniId) => aktiivinen?.PuheenKesto(aaniId);
 
         /// <summary>Puheen kesto sekunteina (kuunnelman ajoitus): ladattu klippi, muuten pankin kesto_s, muuten null.</summary>
         float? PuheenKesto(string aaniId)

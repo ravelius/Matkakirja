@@ -38,7 +38,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kertojaKehys, kertojaLaatikko, puluAlue;
         readonly Label kertojaTeksti;
         readonly Button uusintaNappi;
-        string puluKupla;
+        string puluKupla, puluAani;
         // KUUNNELMA (Päätoimittaja 30.9.2026): tekstityskaistale infotaulun yläpuolella Pulun oikealla puolella ja
         // infotaulun "Kuuntele"-nappi (alusta uudelleen).
         readonly KuunnelmaKaistale kuunnelma;
@@ -216,6 +216,9 @@ namespace Matkakirja.Natiivi
                 etsintaKortti.style.display = DisplayStyle.Flex;
                 etsintaKortti.style.opacity = 1f;
                 etsintaLoppuu = Time.unscaledTime + 9f;
+                // Pulun kertomus ääneen (Pelikoodari 1.10.2026, #3742: pulu.aani 12–22 s): kupla näkyy puheen ajan.
+                if (DioraamaAanet.SoitaPulu(puluAani))
+                    etsintaLoppuu = Time.unscaledTime + Mathf.Max(9f, (DioraamaAanet.PuluKesto(puluAani) ?? 0f) + 1f);
                 e.StopPropagation();
             });
 
@@ -359,7 +362,7 @@ namespace Matkakirja.Natiivi
                 pulu.style.display = DisplayStyle.Flex;
                 pulu.MiniKorkeus(koko2);
                 pulu.style.left = 18; pulu.style.top = ph2 - koko2 - 96;
-                puluKupla = rakennus.PuluTeksti;
+                puluKupla = rakennus.PuluTeksti; puluAani = rakennus.PuluAani;
                 bool kupla = !string.IsNullOrEmpty(puluKupla);
                 puluAlue.style.display = kupla ? DisplayStyle.Flex : DisplayStyle.None;
                 if (kupla) { puluAlue.style.left = 12; puluAlue.style.top = ph2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
@@ -494,7 +497,7 @@ namespace Matkakirja.Natiivi
             lainaus.style.display = puhe != null ? DisplayStyle.Flex : DisplayStyle.None;
             seuraava.style.display = DisplayStyle.None;
 
-            puluKupla = tila.PuluTeksti;
+            puluKupla = tila.PuluTeksti; puluAani = tila.PuluAani;
             bool puluNakyy = !string.IsNullOrEmpty(puluKupla);
 
             // Kuunnelma alkaa, kun tilaan on tultu perille (kierroksen aikana tänne ei tulla); kaistale laudan yläpuolelle
