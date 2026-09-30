@@ -16,6 +16,12 @@
 // σ² = _Aalto, Cox–Munk-luokkaa) ja Schlickin Fresnelillä (F0 0,02), matalalla auringolla oranssimpi. Päiväpuolen
 // varjostus auringon korkeuden mukaan: alle 30°:n korkeudella pinta tummuu pehmeästi (0° → 1 − _Varjo), ja yön kaista
 // jatkaa siitä. Kaikki esikerrottuna samaan kuoreen, joten valot ja kiilto lisätään valon päälle, eivät tummu.
+//
+// FOTOREALISMI OSAT 3–4 (Linssiseppä 30.9.2026): PILVIEN VARJOT maahan: pinnan pisteestä auringon suuntaan pilvikerroksen
+// korkeudelle (_PilviKorkeus / sin(auringon korkeus)) ja siitä pilvikuvan toinen näyte; varjo vain pilvettömälle maalle
+// (pilven yläpinta ei tummu) ja päiväpuolella, matalalla auringolla varjo pitenee itsestään. KUUNVALO: yön peitto kevenee Kuun
+// valaistun osuuden ja Kuun korkeuden mukaan (_Kuu.xyz suunta, w valaistu 0…1), ja kuunvalossa pilvet hohtavat (niiden
+// yötummennus kevenee kaksinkertaisesti). A/B `astro kyyti pilvivarjo 0|1`, `astro kyyti kuunvalo 0|1`.
 Shader "Matkakirja/Linssit/Yokuori"
 {
     Properties
@@ -42,6 +48,10 @@ Shader "Matkakirja/Linssit/Yokuori"
         _PilvetOn("Pilvet käytössä (0/1)", Float) = 0
         _PilviPeitto("Pilvikuoren peitto (0…1)", Float) = 1
         _Karsinta("Pilvipeiton säädin (sama kynnys kuin Pilvet)", Range(0, 1)) = 0
+        _PilviVarjo("Pilvien varjon tummuus (0 = pois)", Float) = 0.5
+        _PilviKorkeus("Pilvikerroksen korkeus (m)", Float) = 8000
+        _Kuu("Kuun suunta (xyz) ja valaistu osuus (w)", Vector) = (0, 0, 1, 0)
+        _KuuVoima("Kuunvalon voimakkuus (0 = pois)", Float) = 0.35
     }
     SubShader
     {
@@ -72,7 +82,25 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float _R, _Litistys, _Valot, _MaaVoima, _Kiilto, _Aalto;
                 half _Varjo, _YoVesi;
                 float _PilvetOn, _PilviPeitto, _Karsinta;
+                float _PilviVarjo, _PilviKorkeus, _KuuVoima;
+                float4 _Kuu;
             CBUFFER_END
+
+            // Pallotilan piste → (pituus, leveys) radiaaneina (ellipsoidille ja geodeettiseksi kuten valojen haussa).
+            float2 PituusLeveys(float3 p)
+            {
+                float3 z = normalize(_Akseli.xyz), x = normalize(_Nolla.xyz), y = normalize(_Ita.xyz);
+                float3 pe = p + z * dot(p, z) * (1.0 / _Litistys - 1.0);
+                float ex = dot(pe, x), ey = dot(pe, y), ez = dot(pe, z);
+                float e2 = 1.0 - 1.0 / (_Litistys * _Litistys);
+                return float2(atan2(ey, ex), atan(ez / max(1.0, (1.0 - e2) * sqrt(ex * ex + ey * ey))));
+            }
+            float PilviNaytteesta(float2 ll)
+            {
+                float a = SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(ll.x / 6.2831853 + 0.5, ll.y / 3.1415927 + 0.5), 0).a;
+                if (_Karsinta > 0.0) a = saturate((a - _Karsinta) / max(1.0 - _Karsinta, 1e-3));
+                return a;
+            }
 
             struct Syote { float4 paikka : POSITION; };
             struct Vali { float4 paikka : SV_POSITION; float3 maailma : TEXCOORD0; };
@@ -93,7 +121,9 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float3 n = normalize(i.maailma - _Keskus.xyz);
                 float3 aur = normalize(_Aurinko.xyz);
                 half yoKuori = Yo(n);
-                half a = _Peitto * yoKuori;
+                // Kuunvalo: yön peitto kevenee Kuun valaistun osuuden ja korkeuden mukaan.
+                half kuuValo = (half)(_KuuVoima * _Kuu.w * saturate(dot(n, normalize(_Kuu.xyz)) * 3.0));
+                half a = _Peitto * yoKuori * (1.0h - kuuValo);
                 half3 c = _Vari.rgb * a;
                 // Päiväpuolen varjostus: sin(korkeus) 0,5 (30°) → 0; 0 → _Varjo; neutraali tumma, ei yön sinistä.
                 half matala = (half)saturate(1.0 - dot(n, aur) / 0.5);
@@ -138,6 +168,15 @@ Shader "Matkakirja/Linssit/Yokuori"
                 if (_Karsinta > 0.0) pilviA = saturate((pilviA - _Karsinta) / max(1.0 - _Karsinta, 1e-3));
                 half pilvi = (half)(_PilvetOn * _PilviPeitto * pilviA);
                 half lapi = 1.0h - 0.85h * pilvi;
+                // Pilvien varjot: auringon suuntaan pilvikerrokseen ja siitä pilvikuvasta (vain pilvetön maa, päiväpuoli).
+                float nlv = dot(normalize(p), aur);
+                if (_PilviVarjo > 0.0 && _PilvetOn > 0.5 && nlv > 0.0 && osuu > 0.5)
+                {
+                    float3 pv = p + aur * (_PilviKorkeus / max(nlv, 0.08));
+                    half pvarjo = (half)(_PilviVarjo * _PilviPeitto * PilviNaytteesta(PituusLeveys(pv)) * saturate(nlv * 8.0))
+                        * (1.0h - pilvi) * (1.0h - yoKuori);
+                    a = a + pvarjo * (1.0h - a);
+                }
                 half valo = l * (half)_Valot * Yo(normalize(p)) * (half)osuu * lapi;
                 c += savy * valo;
 
@@ -158,7 +197,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 a += lisa;
                 // Yöllä pilvet yhtä tummiksi kuin vesi (laite cl7 28.9.: valkoiset pilvet jäivät 0,82-peiton läpi maitomaisen
                 // harmaiksi; ISS:n yökuvissa pilvet ovat tummia, ellei kuu valaise).
-                half lisaPilvi = pilvi * (half)osuu * yoKuori * saturate(_YoVesi - a);
+                half lisaPilvi = pilvi * (half)osuu * yoKuori * saturate(_YoVesi - a) * saturate(1.0h - 2.0h * kuuValo);
                 c += _Vari.rgb * lisaPilvi;
                 a += lisaPilvi;
                 return half4(c, a);

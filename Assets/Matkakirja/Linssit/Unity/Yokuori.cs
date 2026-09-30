@@ -241,7 +241,23 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima * ValojenOsuus);
             materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
             materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);
+            // Fotorealismi 3–4 (30.9.): pilvien varjot ja kuunvalo.
+            materiaali.SetFloat("_PilviVarjo", PilviVarjoPois ? 0f : PilviVarjonVoima);
+            materiaali.SetFloat("_PilviKorkeus", PilviKorkeusM);
+            double jd = Matkakirja.Linssit.Iss.Aika.Jd(utc);
+            var kuu = Matkakirja.Linssit.Iss.Kuu.Suunta(jd);
+            var ke = Matkakirja.Linssit.Iss.Kuu.Ecef((kuu.x, kuu.y, kuu.z), jd);
+            var kd = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(ke.x, ke.y, ke.z))).normalized;
+            materiaali.SetVector("_Kuu", new Vector4(kd.x, kd.y, kd.z, (float)Matkakirja.Linssit.Iss.Kuu.Vaihe(jd).valaistu));
+            materiaali.SetFloat("_KuuVoima", KuunvaloPois ? 0f : KuunvalonVoima);
         }
+
+        /// <summary>Fotorealismi osa 3: pilvien varjot maahan (A/B `astro kyyti pilvivarjo 0|1`); korkeus = kyydin pilvikuori 8 km.</summary>
+        public static bool PilviVarjoPois;
+        public static float PilviVarjonVoima = 0.5f, PilviKorkeusM = 8000f;
+        /// <summary>Fotorealismi osa 4: kuunvalo yöpuolelle ja pilviin (A/B `astro kyyti kuunvalo 0|1`).</summary>
+        public static bool KuunvaloPois;
+        public static float KuunvalonVoima = 0.35f;
 
         void OnDestroy()
         {
