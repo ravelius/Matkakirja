@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 07:09:** Levy 63 Gi (Karttaseppä siirsi ~13 Gt T7:lle symlinkeillä; jokipoltto ei kuluta paikallista levyä; ~1 Gi/10 min kuluu muualta, hälytys < 45), swap 17,8/19,5 Gt, muisti 68 % vapaa, kuorma 66/96/58 (junakäännös), sim 0 (klo 07 → ≤1 ok), ei kevyttä tilaa. Viikko 38 % (5 h 20 %, nollautuu 07.50 EEST). Konteksti: Linnanrakentaja nollautunut 66 %→11 % (vahdit 70 %/85 %), Natiivi-UI 38 %, Päätoimittaja 51 %, OMA 54 % (mitattu get_usage; aiempi arvio 66 % oli liian korkea). Jokipoltto karttaseppa-poltto-20260930 käynnissä. Juna: BUILD 64 ennallaan. Posti: ei uutta.
+
 **Päivitetty 30.9. 06:53:** Levy 52 Gi (vaihtelee 49–52; hälytys < 45), swap 17,8/19,5 Gt, muisti 78 % vapaa, kuorma 8/9/9, sim 0, ei kevyttä tilaa. Viikko 37 % (5 h 15 %, nollautuu 07.50 EEST... 04.50 UTC = 07.50). Konteksti ennallaan: Linnanrakentaja 66 %, Natiivi-UI 38 %, Päätoimittaja 49 %, oma ~66 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: BUILD 64 ennallaan. Posti: ei uutta. Klo 07 alkaen: sim ≤1 -tarkistus.
 
 **Päivitetty 30.9. 06:37:** Levy 50 Gi (vaihtelee 49–52; hälytys < 45), swap 17,8/19,5 Gt, muisti 78 % vapaa, kuorma 8/8/8, sim 0, ei kevyttä tilaa. Viikko 37 % (5 h 14 %). Konteksti ennallaan: Linnanrakentaja 66 %, Natiivi-UI 38 %, Päätoimittaja 48 %, oma ~65 %. Jokipoltto karttaseppa-poltto-20260930 (polta-paikallisesti) käynnissä. Juna: BUILD 64 ennallaan. Posti: ei uutta.
