@@ -31,13 +31,13 @@ et[~reuna] = k + 1
 syv = np.minimum(30.0, 0.12 * et * px)
 KERROIN = 30.0 / 255
 img = np.clip(np.round(syv / KERROIN), 0, 255).astype(np.uint8)
-try:
-    import bpy
-    im = bpy.data.images.new('syvyys', N, N); b = np.ones((N, N, 4), np.float32); b[..., :3] = (img[::-1] / 255.0)[..., None]
-    im.pixels.foreach_set(b.ravel()); im.filepath_raw = os.path.join(ULOS, 'syvyys.png'); im.file_format = 'PNG'
-    im.colorspace_settings.name = 'Non-Color'; im.save()
-except ImportError:
-    from PIL import Image; Image.fromarray(img, 'L').save(os.path.join(ULOS, 'syvyys.png'))
+# 8-bit harmaa (L) PIL:llä: Blenderin kuvaksi tallennettu PNG jäi nollaksi (väriavaruuden vaihto tyhjensi pikselit, 1.10.).
+# Blenderin Pythonissa ei ole PIL:iä, joten raakatavut kirjoitetaan ja muunnetaan järjestelmän python3:lla.
+raaka = os.path.join(ULOS, 'syvyys.raw'); img.tofile(raaka)
+import subprocess
+subprocess.run(['python3', '-c', f"from PIL import Image; Image.frombytes('L', ({N}, {N}), open({raaka!r}, 'rb').read())"
+                f".save({os.path.join(ULOS, 'syvyys.png')!r})"], check=True)
+os.remove(raaka)
 json.dump({'kuva': 'syvyys.png', 'koko': N, 'pikseli_m': px, 'kerroin_m': KERROIN,
            'origo': [-SADE, SADE], 'huom': 'origo = kuvan vasen yläkulma kuoren koordinaatistossa (Blender x itä, y pohjoinen; '
            'glTF x, −z). 0 = ranta/maa. Syvyys arvioitu etäisyydestä rantaan (0,12 m/m, max 30 m); MML:n korkeusmallissa järvi on tasainen.'},

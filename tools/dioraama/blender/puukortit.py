@@ -6,7 +6,9 @@
 # (solujen uv-rajat, kortin leveys/korkeus-suhde, rungon juuren kohta).
 import bpy, bmesh, json, math, os, random, sys
 from mathutils import Vector, noise
-A = sys.argv[sys.argv.index('--') + 1:]; ULOS = A[0]; SOLU = int(A[1]) if len(A) > 1 else 512
+A = sys.argv[sys.argv.index('--') + 1:]; ULOS = A[0]; SOLU = int(A[1]) if len(A) > 1 and A[1].isdigit() else 512
+# --hamara: hämäräversio (sama malli, valona kuoren hämärän taivas) → puukortit-hamara.png
+HAMARA = '--hamara' in A; LOPPU = '-hamara' if HAMARA else ''
 os.makedirs(ULOS, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True); sc = bpy.context.scene
 sc.render.engine = 'CYCLES'; sc.cycles.samples = 64; sc.render.film_transparent = True
@@ -77,6 +79,15 @@ w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
 w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.55, 0.65, 0.8, 1); w.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.8
 su = bpy.data.lights.new('aur', 'SUN'); su.energy = 3.0; so = bpy.data.objects.new('aur', su); sc.collection.objects.link(so)
 so.rotation_euler = (math.radians(55), 0, math.radians(-35))
+if HAMARA:  # hämärän taivas valona, ei aurinkoa; valotus kuten kuoren hämärässä (AgX + VALOTUS)
+    # sama taivas kuin kuoren hämärässä (kuori_hamara.py --tavoite): kirkkaus täsmää linnaan
+    su.energy = 0.0; st = w.node_tree.nodes.new('ShaderNodeTexSky'); st.sky_type = 'MULTIPLE_SCATTERING'
+    st.sun_elevation = math.radians(-1.5); st.sun_rotation = math.radians(225 - 90); st.air_density = 1.2
+    if hasattr(st, 'aerosol_density'): st.aerosol_density = 2.5
+    w.node_tree.links.new(st.outputs['Color'], w.node_tree.nodes['Background'].inputs['Color'])
+    w.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.9
+    sc.view_settings.view_transform = 'AgX'; sc.view_settings.look = 'AgX - Medium High Contrast'
+    sc.view_settings.exposure = float(os.environ.get('VALOTUS', 0.6))
 cd = bpy.data.cameras.new('k'); cd.type = 'ORTHO'; kam = bpy.data.objects.new('k', cd); sc.collection.objects.link(kam); sc.camera = kam
 kam.rotation_euler = (math.radians(90), 0, 0)
 sc.render.resolution_x = SOLU; sc.render.resolution_y = 2 * SOLU
@@ -87,7 +98,7 @@ for i, (nimi, f, siemen) in enumerate([('manty', mänty, 3), ('kuusi', kuusi, 5)
     lev = max(max(abs((o.matrix_world @ Vector(c)).x) for c in o.bound_box) for o in kohteet) * 2 * 1.05
     kork = H * 1.04; mitta = max(lev * 2, kork)  # solu on 1:2
     cd.ortho_scale = mitta; kam.location = (0, -50, mitta / 2)
-    sc.render.filepath = os.path.join(ULOS, f'kortti-{nimi}.png'); bpy.ops.render.render(write_still=True)
+    sc.render.filepath = os.path.join(ULOS, f'kortti-{nimi}{LOPPU}.png'); bpy.ops.render.render(write_still=True)
     tiedot[nimi] = {'solu': i, 'u': [i / 4, (i + 1) / 4], 'v': [0, 1], 'kortti_per_puu': round(mitta / H, 4),
                     'leveys_per_korkeus': 0.5, 'juuri_v': 0.0}
     print('KORTTI', nimi, 'puun korkeus', H, 'solun korkeus', round(mitta, 1))
@@ -96,10 +107,11 @@ at = bpy.data.images.new('puukortit', 4 * SOLU, 2 * SOLU, alpha=True)
 import numpy as np
 pix = np.zeros((2 * SOLU, 4 * SOLU, 4), np.float32)
 for nimi, t in tiedot.items():
-    k = bpy.data.images.load(os.path.join(ULOS, f'kortti-{nimi}.png')); a = np.empty(SOLU * 2 * SOLU * 4, np.float32); k.pixels.foreach_get(a)
+    k = bpy.data.images.load(os.path.join(ULOS, f'kortti-{nimi}{LOPPU}.png')); a = np.empty(SOLU * 2 * SOLU * 4, np.float32); k.pixels.foreach_get(a)
     pix[:, t['solu'] * SOLU:(t['solu'] + 1) * SOLU] = a.reshape(2 * SOLU, SOLU, 4)
-at.pixels.foreach_set(pix.ravel()); at.filepath_raw = os.path.join(ULOS, 'puukortit.png'); at.file_format = 'PNG'; at.save()
-json.dump({'atlas': 'puukortit.png', 'solut': 4, 'lajit': {'0': 'manty', '1': 'kuusi', '2': 'koivu'}, 'kortit': tiedot,
+at.pixels.foreach_set(pix.ravel()); at.filepath_raw = os.path.join(ULOS, f'puukortit{LOPPU}.png'); at.file_format = 'PNG'; at.save()
+if HAMARA: print('KORTIT hämärä valmis'); sys.exit(0)
+json.dump({'atlas': 'puukortit.png', 'atlas_hamara': 'puukortit-hamara.png', 'solut': 4, 'lajit': {'0': 'manty', '1': 'kuusi', '2': 'koivu'}, 'kortit': tiedot,
            'huom': 'Kortin korkeus = puun korkeus × kortti_per_puu, leveys = korkeus × leveys_per_korkeus; juuri solun alareunassa (juuri_v 0) ja keskellä vaakasuunnassa. Kaksi korttia ristiin 90°.'},
           open(os.path.join(ULOS, 'puukortit.json'), 'w'), ensure_ascii=False, indent=1)
 print('KORTIT valmis', ULOS)

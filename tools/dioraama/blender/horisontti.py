@@ -27,7 +27,7 @@ maa = Z > VESI_H + 0.05
 vesi = ~maa; lahi = vesi.copy()
 for _ in range(4):
     q = np.pad(lahi, 1); lahi = np.logical_or.reduce([q[a:a + n, b:b + n] for a in range(3) for b in range(3)])
-z = np.where(maa, Z - VESI_H + VESI_Z + np.where(lahi, 0, 12.0), VESI_Z - 0.5)
+z = np.where(maa, Z - VESI_H + VESI_Z + np.where(lahi, 0, 12.0), VESI_Z - 3.0)
 kulma = maa[:-1, :-1] | maa[1:, :-1] | maa[:-1, 1:] | maa[1:, 1:]
 cx = (X[:-1, :-1] + X[1:, 1:]) / 2; cy = (Y[:-1, :-1] + Y[1:, 1:]) / 2
 mukana = kulma & ~((np.abs(cx) < SISA) & (np.abs(cy) < SISA))
@@ -54,6 +54,9 @@ metsa = np.array([0.105, 0.14, 0.085]); kallio = np.array([0.36, 0.35, 0.31]); v
 rgb = np.where(mt[..., None], np.where(lt[..., None] & mt[..., None], 0.5 * metsa + 0.5 * kallio, metsa) * (valo * koh)[..., None], vesi_v)
 im = bpy.data.images.new('horisontti-1k', T, T); p = np.ones((T, T, 4), np.float32); p[..., :3] = np.clip(rgb, 0, 1)  # värit ovat jo sRGB-arvoja
 im.pixels.foreach_set(p[::-1].ravel()); im.filepath_raw = os.path.join(ULOS, 'horisontti-1k.jpg'); im.file_format = 'JPEG'; im.save(quality=90)
+# hämäräversio: sama tekstuuri himmennettynä ja sinertävänä (kuoren hämärän taivaan kaukaiset metsät)
+hm = bpy.data.images.new('horisontti-hamara-1k', T, T); ph = p.copy(); ph[..., :3] = np.clip(p[..., :3] * np.array([0.30, 0.34, 0.46]), 0, 1)
+hm.pixels.foreach_set(ph[::-1].ravel()); hm.filepath_raw = os.path.join(ULOS, 'horisontti-hamara-1k.jpg'); hm.file_format = 'JPEG'; hm.save(quality=90)
 mat = bpy.data.materials.new('horisontti'); mat.use_nodes = True; nt = mat.node_tree; tx = nt.nodes.new('ShaderNodeTexImage'); tx.image = im
 nt.links.new(tx.outputs['Color'], nt.nodes['Principled BSDF'].inputs['Base Color']); me.materials.append(mat)
 for pp in me.polygons: pp.use_smooth = True

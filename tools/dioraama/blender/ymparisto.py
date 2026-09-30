@@ -41,7 +41,7 @@ xs = LEHTI[0] + (np.arange(c0, c1 + 1) + 0.5) * RES - ORIGO[0]
 ys = LEHTI[3] - (np.arange(r0, r1 + 1) + 0.5) * RES - ORIGO[1]
 X, Y = np.meshgrid(xs, ys)
 maa = Z > VESI_H + 0.05
-z = np.where(maa, Z - VESI_H + VESI_Z, VESI_Z - 0.3)
+z = np.where(maa, Z - VESI_H + VESI_Z, VESI_Z - 1.2)  # ranta viettää veden alle: vedenpinta leikkaa pehmeän rantaviivan (ei 2 m:n portaita)
 if LATVUS:
     C = np.load(LATVUS)  # 1 m, rivi 0 = etelä (N0), sarake 0 = länsi (E0), E0/N0 = ORIGO − SADE
     k = int(round(RES)); C = C[:C.shape[0] // k * k, :C.shape[1] // k * k].reshape(C.shape[0] // k, k, C.shape[1] // k, k).max((1, 3))
