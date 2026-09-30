@@ -127,6 +127,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>A/B `astro kyyti kerrokset 0|1`: Linnanrakentajan renderikerrokset ↔ paikkamerkit (IssPaneeliKuvat).</summary>
+        public static void SivulevytAB(bool paalla)
+        {
+            IssKytkinpoyta.Sivulevyt = paalla;
+            if (instanssi != null) { instanssi.poyta.Asettele(instanssi.poytaLeveys); instanssi.PaivitaPulu(); }
+        }
+
         public static void VaakaAB(bool paalla)
         {
             IssKytkinpoyta.VaakaRajaus = paalla;
