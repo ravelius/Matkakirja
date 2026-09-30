@@ -320,7 +320,7 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Poggin terassi': 'firenze-poggin-terassi-vari2',
+    'Poggin terassi': 'firenze-poggin-terassi-vari3',
     Porcellino: 'firenze-porcellino-vari2',
   },
   bagdad: {

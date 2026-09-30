@@ -4751,17 +4751,18 @@ export function luoLaattakerros({
     mittarit.tukia = tuet.size;
     /*
      * KOELIPPU `?koe=vahemmandc` (Fable 22.9.2026): kun näkyvä ala on
-     * TÄYSIN peitetty (peittoOsuus === 1), tuki- ja ennakkolaatat eivät
+     * TÄYSIN peitetty nykyisellä tasolla (peittoTaso === 1), tuki- ja ennakkolaatat eivät
      * näy mistään — ne ovat varalla tasonvaihtoa ja panorointia varten.
      * Kokeessa ne piilotetaan scenestä, jolloin piirtokutsuja on
      * vähemmän eikä kuvassa muutu mitään. Häipyvää laattaa ei koskaan
      * piiloteta: se on kesken olevaa ristihäivytystä.
      *
-     * Mittaus, ei oletus: jos peitto arvioi väärin, kokeessa vilahtaa
-     * pohja. Siksi näkyvyys palautetaan heti, kun peitto ei ole täysi.
+     * Kaikkien tasojen yhteinen peitto ei riitä: juuri tukilaatta voi
+     * peittää puuttuvan nykyisen tason laatan. Sen piilottaminen tekisi
+     * aukon. Näkyvyys palautetaan heti, kun nykyinen taso ei peitä ruutua.
      */
     if (vahemmanDc) {
-      const taysi = mittarit.peittoOsuus === 1;
+      const taysi = mittarit.peittoTaso === 1;
       let piilossa = 0;
       for (const t of laatat.values()) {
         if (!t.scenessa || !t.verkko) continue;

@@ -19,8 +19,9 @@
  *   P3  VÄHEMMÄN PIIRTOKUTSUJA: `?koe=vahemmandc` piilottaa tuki- ja
  *       ennakkolaatat täydellä peitolla (piilotettuja > 0) ja
  *       piirtokutsuja on vähemmän kuin ilman lippua.
- *   P4  KUVA EI HÄVIÄ: peitto on kokeessa yhä täysi (peittoOsuus === 1)
- *       eikä näkyviä laattoja ole piilotettu.
+ *   P4  KUVA EI HÄVIÄ: ruudun näytepisteet ovat yhä näkyvien,
+ *       läpinäkymättömien laattaverkkojen peitossa piilotuksen jälkeen.
+ *   P5  VAJAA TARKKA TASO: tukilaatat säilyvät, kun ne peittävät aukkoja.
  *
  *   PLAYWRIGHT_JS=<polku> node tools/savukkeet/savuke-piirtokokeet.mjs [--webkit]
  */
@@ -108,9 +109,14 @@ const sivu = await ctx.newPage();
 sivu.setDefaultTimeout(120000);
 const konsoli = [];
 sivu.on('console', (m) => { if (m.type() === 'error') konsoli.push(m.text().slice(0, 300)); });
+let estaTarkatLaatat = false;
 await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
 await sivu.route(/wikimedia\.org/, (r) => r.abort());
 await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
+  if (estaTarkatLaatat && /\/z9\//.test(route.request().url())) {
+    await route.abort();
+    return;
+  }
   const vastaus = await ampariHaku(route.request().url());
   if (!vastaus || vastaus.status !== 200) { route.abort().catch(() => {}); return; }
   route.fulfill({
@@ -141,16 +147,51 @@ const avaa = async (koe) => {
 
 /* ── mittaus ─────────────────────────────────────────────────────── */
 
-const lue = () => sivu.evaluate(() => {
+const lue = () => sivu.evaluate(async () => {
   const ui = window.matkakirja.ui;
   const pallo = ui.pallonInstanssi;
   const m = ui.pallolauta.lepokerros?.()?.mittarit?.() ?? {};
   const maareet = pallo.renderer().getContext().getContextAttributes?.() ?? {};
+  // Mittarin peitto sisältää myös piilotetut verkot. Tarkistetaan lisäksi
+  // rendererin scene: 11 x 11 ruutupistettä ja oikeasti näkyvät laattaverkot.
+  const { laattakerroksenOsuma } = await import('/js/pallolaatat.js');
+  const pov = pallo.pointOfView();
+  const kamera = pallo.camera();
+  const alueet = [];
+  pallo.scene().traverse((verkko) => {
+    if (!verkko.userData.laattakerros || verkko.material?.opacity < 0.98) return;
+    for (let v = verkko; v; v = v.parent) if (!v.visible) return;
+    const paikat = verkko.geometry.getAttribute('position');
+    const piste = kamera.position.clone();
+    let lat0 = Infinity; let lat1 = -Infinity; let lon0 = Infinity; let lon1 = -Infinity;
+    for (let i = 0; i < paikat.count; i += 1) {
+      piste.fromBufferAttribute(paikat, i).applyMatrix4(verkko.matrixWorld);
+      const lat = Math.atan2(piste.y, Math.hypot(piste.x, piste.z)) * 180 / Math.PI;
+      let lon = Math.atan2(piste.x, piste.z) * 180 / Math.PI;
+      lon -= 360 * Math.floor((lon - pov.lng + 180) / 360);
+      lat0 = Math.min(lat0, lat); lat1 = Math.max(lat1, lat);
+      lon0 = Math.min(lon0, lon); lon1 = Math.max(lon1, lon);
+    }
+    alueet.push({ lat0, lat1, lon0, lon1 });
+  });
+  let naytteita = 0; let peitetty = 0;
+  for (let y = 0; y <= 10; y += 1) {
+    for (let x = 0; x <= 10; x += 1) {
+      const n = laattakerroksenOsuma(pov, x / 5 - 1, 1 - y / 5,
+        { fov: kamera.fov, kuvasuhde: kamera.aspect, sade: pallo.getGlobeRadius() });
+      if (!n) continue;
+      naytteita += 1;
+      const lon = n.lng - 360 * Math.floor((n.lng - pov.lng + 180) / 360);
+      if (alueet.some((a) => n.lat >= a.lat0 && n.lat <= a.lat1 && lon >= a.lon0 && lon <= a.lon1)) peitetty += 1;
+    }
+  }
   return {
     alpha: maareet.alpha,
     antialias: maareet.antialias,
     tausta: pallo.backgroundColor?.() ?? null,
     peitto: m.peittoOsuus ?? null,
+    peittoTaso: m.peittoTaso ?? null,
+    peittoPiirretty: naytteita ? peitetty / naytteita : null,
     scenessa: m.scenessa ?? null,
     nakyvia: m.nakyvia ?? null,
     nakyviaScenessa: m.nakyviaScenessa ?? null,
@@ -160,8 +201,8 @@ const lue = () => sivu.evaluate(() => {
 });
 
 /** Kamera samaan paikkaan joka kierroksella: vertailu vaatii saman kuvan. */
-const asetu = async () => {
-  await sivu.evaluate(() => window.matkakirja.ui.pallonInstanssi.pointOfView({ lat: 43.7, lng: 4.6, altitude: 0.05 }, 0));
+const asetu = async (altitude = 0.1) => {
+  await sivu.evaluate((a) => window.matkakirja.ui.pallonInstanssi.pointOfView({ lat: 43.7, lng: 4.6, altitude: a }, 0), altitude);
   await sivu.waitForTimeout(5000);
   return lue();
 };
@@ -186,9 +227,19 @@ tieto(`${MOOTTORI} vahemmandc`, JSON.stringify(vahemman));
 vaadi(`P3 ${MOOTTORI}: tuki- ja ennakkolaatat piiloon, piirtokutsuja vähemmän`,
   vahemman.piilotettuja > 0 && vahemman.dc < perus.dc,
   `piilotettuja ${vahemman.piilotettuja}, dc ${vahemman.dc} vs ${perus.dc}`);
-vaadi(`P4 ${MOOTTORI}: kuva ei häviä (peitto täysi, näkyvät laatat scenessä)`,
-  vahemman.peitto === 1 && vahemman.nakyviaScenessa >= vahemman.nakyvia,
-  JSON.stringify({ peitto: vahemman.peitto, nakyvia: vahemman.nakyvia, scenessa: vahemman.nakyviaScenessa }));
+vaadi(`P4 ${MOOTTORI}: näkyvien laattaverkkojen peitto pysyy täytenä`,
+  perus.peittoPiirretty === 1 && vahemman.peittoPiirretty === 1,
+  JSON.stringify({ perus: perus.peittoPiirretty, koe: vahemman.peittoPiirretty }));
+
+// Estetään tarkat z9-laatat uudessa näkymässä: koe ei saa piilottaa
+// aukkoja peittävää tukitasoa edes kuvapalvelun virhetilanteessa.
+estaTarkatLaatat = true;
+vaadi('pallolauta avautuu (tarkkojen laattojen lataus estetty)', await avaa('mittaus,vahemmandc'));
+const vajaa = await asetu(0.05);
+tieto(`${MOOTTORI} vajaa tarkka taso`, JSON.stringify(vajaa));
+vaadi(`P5 ${MOOTTORI}: tukilaatat säilyvät tarkkojen laattojen aukoissa`,
+  vajaa.peittoTaso < 1 && vajaa.piilotettuja === 0 && vajaa.peittoPiirretty === 1,
+  JSON.stringify(vajaa));
 
 console.log(`\n${lapi}/${kaikki} väitettä läpi (${MOOTTORI})`);
 await selain.close();
