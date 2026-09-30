@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 30.9. 17:26:** Levy 54 Gi (vakaa 17.15:stä; hälytys < 45), wt/ 31 (raja 20, kasvaa), muisti 73 % vapaa, kuorma 16/30/51, sim 1 (iPhone 18 Pro; ≤1 ok), työtilat ok. Viikko 64 % (5 h 45 %). Konteksti: PÄÄTOIMITTAJA 78 %. Kävijälaskuri: 16.49 n=1, seuraava ~17.49. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Viestiraja päällä (18 viestiä): sim-pyynnöt Natiivisepälle/Laitetestaajalle EIVÄT mene läpi.
+
 **Päivitetty 30.9. 17:15:** LEVY 54 Gi (63→54 15 min:ssa; < 60 → sim-poistoyritykset; hälytys < 45), wt/ 30 (raja 20, kasvaa), muisti 68 % vapaa, kuorma 15/39/78, sim 1 (iPhone 18 Pro 1572C658; ≤1 ok), työtilat ok. Viikko 64 % (5 h 44 %). Konteksti: PÄÄTOIMITTAJA 77 %, oma 21 %. Kävijälaskuri: 16.49 n=1, seuraava ~17.49. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Viestiraja edelleen päällä; sim-pyyntö Laitetestaajalle yritetty, Natiivisepälle ei (estetty).
 
 **Päivitetty 30.9. 17:00:** Levy 63 Gi (61→63; ei sim-poistoja, raja 60), wt/ 29 (raja 20, kasvaa), muisti 81 % vapaa, kuorma 19/46/128, sim 0, työtilat ok. Viikko 63 % (5 h 42 %). Konteksti: PÄÄTOIMITTAJA 76 %, oma ~20 %. Kävijälaskuri: 16.49 n=1, seuraava ~17.49. Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: uusi Codex-viesti posti/linnanrakentaja-codex-olavinlinna-julkisivu-20260930.md (Linnanrakentaja→Codex). Viestiraja: yhteenvetoyritys Päätoimittajalle 17.00.
