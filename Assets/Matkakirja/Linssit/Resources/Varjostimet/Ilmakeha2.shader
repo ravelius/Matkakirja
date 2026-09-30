@@ -89,6 +89,9 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         Pass
         {
             Name "Lapinakyvyys"
+            // Oma LightMode, jota URP ei piirrä (laite 30.9.: ilman tagia passi oli SRPDefaultUnlit, ja URP piirsi sen kuoren
+            // päälle joka ruutu ZTest Always -läpinäkymättömänä → maa katosi ja vain sironta näkyi). Graphics.Blit(…, 0) ajaa sen silti.
+            Tags { "LightMode" = "IlmaLut" }
             ZTest Always ZWrite Off Cull Off Blend Off
             HLSLPROGRAM
             #pragma vertex vertLut
