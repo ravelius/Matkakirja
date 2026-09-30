@@ -69,7 +69,7 @@ test('projekti-data.js: luvut ovat järkevissä rajoissa', () => {
 test('iOS-testiversio luetaan natiivin muutoslokin uusimmalta riviltä', () => {
   const loki = JSON.parse(lue('tools/vienti/muutosloki-natiivi.json'));
   const { versio, paiva } = uusinNatiivi(loki);
-  assert.match(versio, /^\d+\.\d+\.\d+$/);
+  assert.match(versio, /^\d+\.\d+(?:\.\d+)?$/); // omistaja 30.9.2026: kiinteä versio 1.1
   assert.match(paiva, /^\d{4}-\d{2}-\d{2}$/);
   assert.equal(versio, loki.rivit[0].versio.split(' ')[0]);
 });

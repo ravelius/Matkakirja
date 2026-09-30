@@ -30,7 +30,8 @@ const TAULU = {
   kohdat: [
     { teksti: 'Kellotornin fatabuuri: suojainen, vaikeapääsyinen varasto – holvikatto kertoo muurareiden taidosta.', lahde: 'Kansallismuseo: Kellotornin fatabuuri' },
     { teksti: 'Sana fatabuuri tulee ruotsista: se oli vaate- ja tavara-aitta, arvotavaran varasto.', lahde: 'Kotimaisten kielten keskus / SKES: fatabuuri' },
-    { teksti: 'Hämeen linnan fatabuurissa säilytettiin vaatteita ja kalustoa; naisväki kutoi ja hoiti sitä.', lahde: 'Ailio: Hämeen linnan asukkaista ja oloista (1500-luku, analogia)' },
+    // Sisältökirjuri 30.9. (5684d5d81): Hämeen linnan analogia poistettu (Olavinlinnan lähde sanoo vain varasto).
+    { teksti: 'Fatabuuri on Kellotornissa, linnan suojaisimmassa ja vaikeapääsyisimmässä osassa.', lahde: 'Kansallismuseo: Kellotornin fatabuuri' },
   ],
 };
 
@@ -188,6 +189,22 @@ const soihduLiekki = (a, y) => lok(pol(a, 5.455, 0), a + 180, 0, y + 0.47, 0.262
 export const TILA = {
   id: 'fatabuuri',
   nimi: 'Fatabuuri',
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Fatabuuri', rivit: [{ teksti: 'Kellotornin vaate- ja tavara-aitta, linnan arvotavaran varasto.', lahde: 'Kansallismuseo: Kellotornin fatabuuri; SKES' }] },
+  // Kuunnelma (Päätoimittaja 30.9., v2 faktantarkistettu, docs/raportit/olavinlinna-kuunnelmat-20260930.md d22082f88):
+  // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
+  // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
+  kuunnelma: [
+    { id: 'fatabuuri-k1', puhuja: 'hoitaja', nimi: 'Aitan hoitaja', aani: null,
+      teksti: 'Kolme viittaa, kaksi verkaröijyä, tusina tinakannuja. Kaikki kirjaan – muuten vouti kysyy.' },
+    { id: 'fatabuuri-k2', puhuja: 'renki', nimi: 'Renki', aani: null,
+      teksti: 'Arkun kansi oli raollaan, kun tulin. Joku on käynyt täällä ilman lupaa.' },
+    { id: 'fatabuuri-k3', puhuja: 'hoitaja', nimi: 'Aitan hoitaja', aani: null,
+      teksti: 'Ilman lupaa? Kellotornin holviin ei tulla kuin avaimella. Tämä on linnan arvotavaran varasto, ei mikään ruokakellari.' },
+    { id: 'fatabuuri-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+      teksti: 'Fatabuuri on ruotsia ja tarkoittaa vaate- ja tavara-aittaa. Ja jos minä olisin sinetti, piiloutuisin juuri tuonne kankaiden väliin.' },
+  ],
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).
@@ -203,7 +220,9 @@ export const TILA = {
   kameraPysty: { kohde: [-32.05, -1.2, -16.09], atsimuutti: 160, korkeus: 19, etaisyys: 28, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-40, 40], korkeus: [10, 40], etaisyys: [0.8, 1.3] },
   // Pulu pohjoisen hyllyn päälle (pysty x 0,80 / vaaka x 0,36): ei peitä sinettiarkkua kummassakaan asennossa.
-  pulu: { laskeutuminen: pol(340, 5.05, Y + 2.02), taulupuoli: 'oikea' },
+  pulu: { laskeutuminen: pol(340, 5.05, Y + 2.02), taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
+    teksti: 'Fatabuuri on ruotsia ja tarkoittaa vaate- ja tavara-aittaa. Kellotornin suojaisessa, vaikeapääsyisessä holvihuoneessa säilytettiin arvotavaraa. Holvikatto kertoo muurareiden taidosta. Tänne ei päässyt kuka tahansa – paitsi ehkä kyyhky.', aani: null },
   taulu: TAULU,
   // Elävä linna (29.9.): Kellotornin juuri kameran puolella (ovi raollaan, viileä hämärä).
   elava: { kohde: [-28.2, 1.5, -13.2], sade: 6 },
@@ -228,7 +247,8 @@ export const TILA = {
   // Voudin sinetin etsintä, vaihe 3 (löytö): napautus arkkuun avaa kannen ja nostaa sormuksen → PeliOhjain.LoydaMatkamuisto.
   etsinta: [
     { etsinta: 'voudin-sinetti', vaihe: 3, tyyppi: 'loyto', kohde: [P_SORMUS[0], SINETTI_Y + 0.05, P_SORMUS[2]], sade: 0.8,
-      kansi: 'arkun-kansi', esine: 'sinetti', pulu: 'Tässä se on, kankaiden välissä! Vouti vaihtoi viitan iltamessun jälkeen, ja sormus luiskahti mukaan.' },
+      kansi: 'arkun-kansi', esine: 'sinetti', pulu: 'Tässä se on, kankaiden välissä! Vouti vaihtoi viitan iltarukouksen jälkeen, ja sormus luiskahti mukaan.',
+      rivi: 'Voudin sinetti löytyi vaatearkusta kankaiden välistä.' },
   ],
   hahmot: HAHMOT,
   aanet: [],
