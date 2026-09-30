@@ -372,6 +372,8 @@ namespace Matkakirja.Natiivi
                 turva.style.left = r.x; turva.style.top = r.y; turva.style.right = r.z; turva.style.bottom = r.w;
                 // Ohjauspöydän leveys: ruutu − 24, enintään 560 pt, keskellä (kutistettuna vain nappi vasemmalla).
                 poytaLeveys = juuri.layout.width - r.x - r.z;
+                // Horisonttikulma (IssKuvakulma.IkkunanKatse): ikkunaympyrän koko riippuu ruudun kuvasuhteesta.
+                if (juuri.layout.height > 1f) IssKuvakulma.RuudunSuhde = juuri.layout.width / juuri.layout.height;
                 AsetteleOhjaimet();
                 poyta.Asettele(poytaLeveys, r.w);
                 PaivitaKupu();   // ruutu kääntyi: pyöreän rajauksen kupu vaakaan tai pystyyn heti

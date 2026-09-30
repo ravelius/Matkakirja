@@ -226,7 +226,13 @@ namespace Matkakirja.Natiivi
         /// sekä vuodenajalle?"): pilvien määrä 0 (selkeä) … 1 (nykyinen, oletus); vuodenaika = KuukausiPakotettu (0 = kuluva
         /// kuukausi). Molemmat palaavat oletukseen, kun kyydistä poistutaan kaukonäkymään (IssKyytiNakyma näyttää säätimet).
         /// </summary>
-        public static float PilvienMaara = 1f;
+        public static float PilvienMaara = PilvienOletus;
+        /// <summary>
+        /// PILVET-nupin oletus kyydissä (omistaja 30.9. Päätoimittajan kautta: "varmasti tuota pilvipeittoa kannattaa pitää aika
+        /// pienenä vakiosäädöillä"): 0,3 = vain tiheimmät pilvet (karsintakynnys 0,7), noin kolmannes todellisesta peitosta;
+        /// pelaaja nostaa nupista, 1 = NYT. Aiempi oletus 1 (28.9.).
+        /// </summary>
+        public const float PilvienOletus = 0.3f;
 
         /// <summary>
         /// Terävät pilvet kyydissä (omistaja 28.9. "Vielä liikaa blurrina"; Cupolasta 4096 px:n pilvikuvan tekseli on ruudulla
@@ -306,7 +312,7 @@ namespace Matkakirja.Natiivi
         public void Kyyti(KyydinTila tila, double korkeusKm, double nopeusKmh, bool arvio, KyydinAika aika)
         {
             // Kyydin säätimet palaavat oletukseen kaukonäkymässä (pilvet nyt, kuluva kuukausi).
-            if (tila == KyydinTila.Kauko) { PilvienMaara = 1f; KuukausiPakotettu = 0; }
+            if (tila == KyydinTila.Kauko) { PilvienMaara = PilvienOletus; KuukausiPakotettu = 0; }
             else OmaSijaintiHaku.Aloita();
             kyyti = tila;
             if (tila != KyydinTila.Kauko && issMalli == null) LuoIssMalli();

@@ -36,9 +36,13 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void IkkunanRajaukset()
         {
-            // Omistaja 28.9. klo 22.5x: oletuksena pyöreä kattoikkuna tiiviisti rajattuna, katse 55° kuten ennen.
+            // Omistaja 28.9. klo 22.5x: oletuksena pyöreä kattoikkuna tiiviisti rajattuna. 30.9.: katse horisonttikulmaan
+            // (HorisonttikulmaTestit); A/B pois = 55° kuten ennen.
             Oleta.Tosi(IssKuvakulma.Rajaus == IssKuvakulma.IkkunanRajaus.Pyorea && double.IsNaN(IssKuvakulma.KatseAlasPakotettu), "oletus pyöreä");
-            Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "pyöreä 55°");
+            Oleta.Tosi(IssKuvakulma.Horisonttikulma && IssKuvakulma.IkkunanKatseNyt < 35, "pyöreä: horisonttikulma");
+            IssKuvakulma.Horisonttikulma = false;
+            try { Oleta.Tosi(IssKuvakulma.IkkunanKatseNyt == IssKuvakulma.IkkunanKatseAlas, "pyöreä A/B pois 55°"); }
+            finally { IssKuvakulma.Horisonttikulma = true; }
             // Horisontti (A/B, omistaja 21.5x): katse sivuikkunasta 36°, maan reuna 20,3° alapuolella eli 15,7° kuvan keskikohdan
             // yläpuolella: näkyy (kenttä 65,7°, puolikas 32,8°) ja avaruus sen yllä.
             IssKuvakulma.Rajaus = IssKuvakulma.IkkunanRajaus.Horisontti;

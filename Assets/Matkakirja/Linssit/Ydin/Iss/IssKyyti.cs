@@ -128,8 +128,35 @@ namespace Matkakirja.Linssit.Iss
         }
         /// <summary>Ikkunan katse nyt (A/B `astro kyyti katse &lt;astetta&gt;` ohittaa; NaN = rajauksen mukaan).</summary>
         public static double KatseAlasPakotettu = double.NaN;
-        public static double IkkunanKatseNyt => !double.IsNaN(KatseAlasPakotettu) ? KatseAlasPakotettu
-            : Horisontti ? HorisontinKatseAlas : IkkunanKatseAlas;
+        public static double IkkunanKatseNyt => IkkunanKatse(420_000);
+
+        /// <summary>
+        /// HORISONTTIKULMA (omistaja 30.9. Päätoimittajan kautta: "Voisiko tuota ISS:n kuvaa myös kääntää niin, että siinä näkyisi
+        /// maapallon horisontti"): pyöreässä rajauksessa katse lasketaan niin, että maan reuna osuu ikkunaympyrän ylimpään
+        /// kolmannekseen (maa täyttää ~2/3 ikkunasta, musta avaruus ja ilmakehän kaistale yllä). Ympyrä täyttää 94 % ruudun
+        /// lyhyemmästä sivusta keskellä (IssKyytiNakyma), joten horisontin paikka pystyakselilla (NDC, yläreuna +1) on
+        /// r / 3, r = 0,94 · lyhyempi / korkeus; katse = horisontin painuma acos(R / (R + h)) + atan(NDC · tan(kenttä / 2)).
+        /// 420 km: painuma 20,3°; iPhone 402 × 874: katse 25,6°, iPad pysty 28,3°, vaaka 31,6° (entinen 55° = maa ikkunan täydeltä).
+        /// A/B `astro kyyti horisonttikulma 0|1`.
+        /// </summary>
+        public static bool Horisonttikulma = true;
+        /// <summary>Ruudun kuvasuhde leveys / korkeus (UI asettaa; oletus iPhone 402 / 874).</summary>
+        public static double RuudunSuhde = 402.0 / 874.0;
+        public const double IkkunaympyranOsuus = 0.94;
+
+        /// <summary>Katse vaakatason alapuolelle (°) ISS:n korkeudella <paramref name="korkeusM"/> rajauksen ja A/B:n mukaan.</summary>
+        public static double IkkunanKatse(double korkeusM)
+        {
+            if (!double.IsNaN(KatseAlasPakotettu)) return KatseAlasPakotettu;
+            if (Horisontti) return HorisontinKatseAlas;
+            if (!Horisonttikulma || Rajaus != IkkunanRajaus.Pyorea) return IkkunanKatseAlas;
+            double h = Math.Max(1000, korkeusM);
+            double painuma = Math.Acos(MaanSadeM / (MaanSadeM + h)) / Deg;
+            double suhde = RuudunSuhde > 0 ? RuudunSuhde : 402.0 / 874.0;
+            double sade = IkkunaympyranOsuus * Math.Min(suhde, 1.0);   // ympyrän säde NDC:nä pystyakselilla
+            double ndc = sade / 3.0;
+            return painuma + Math.Atan(ndc * Math.Tan(IkkunanKentta * 0.5 * Deg)) / Deg;
+        }
         /// <summary>Cupolan keskilasin kenttäkulma pystyyn ilman zoomia (lasi 80 cm, silmä 45 cm:n päässä; 1.0.37).</summary>
         public const double IkkunanPerusKentta = 80;
         /// <summary>
@@ -157,7 +184,7 @@ namespace Matkakirja.Linssit.Iss
         /// keskuskulma θ = ζ − η ja etäisyys ρ = R sin θ / sin η (420 km, 55°: θ 2,69°, ρ 521 km, ζ 37,7°). Kallistus on ζ ja
         /// suuntima kohteessa isoympyrän loppusuunta, jolloin silmä osuu ISS:ään.
         /// </summary>
-        public static Kuvakulma Ikkuna(in IssHetki iss) => Ikkuna(iss, IkkunanKatseNyt);
+        public static Kuvakulma Ikkuna(in IssHetki iss) => Ikkuna(iss, IkkunanKatse(iss.KorkeusM));
 
         public static Kuvakulma Ikkuna(in IssHetki iss, double alas)
         {
