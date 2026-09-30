@@ -132,6 +132,7 @@ namespace Matkakirja.Natiivi
                 var mesh = new Mesh { name = "Ulkokuori:" + taso, indexFormat = IndexFormat.UInt32 };
                 mesh.SetVertices(koottu.Paikat);
                 mesh.SetUVs(0, koottu.Uv);
+                mesh.SetNormals(koottu.Normaalit);
                 mesh.SetTriangles(koottu.Kolmiot, 0);
                 mesh.RecalculateBounds();
                 mesh.UploadMeshData(true); // kärjet vain GPU:lle, CPU-kopio vapautuu
@@ -143,7 +144,7 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(astc))
                 {
                     byte[] astcTavut = null;
-                    yield return DioraamaLevyvalimuisti.Hae(url(astc), 120, t => astcTavut = t);
+                    yield return DioraamaLevyvalimuisti.Hae(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
                     kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
                     if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
@@ -171,6 +172,79 @@ namespace Matkakirja.Natiivi
                                $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s)");
                 yield return null;
             }
+            if (kuori.Detalji != null) yield return LataaDetalji(kuori.Detalji, url, kirjaa, oma);
+        }
+
+        // --- LÄHIDETALJI (menetelmä B, Päätoimittaja 30.9.2026; DioraamaKuori.shader) -------------------------------------
+        static readonly int IdDetaljiMaski = Shader.PropertyToID("_DetaljiMaski"), IdDetaljiToisto = Shader.PropertyToID("_DetaljiToisto"),
+            IdDetaljiKeski = Shader.PropertyToID("_DetaljiKeski"), IdDetaljiParam = Shader.PropertyToID("_DetaljiParam");
+        static readonly int[] IdDetaljiDiff = { Shader.PropertyToID("_DetaljiDiff0"), Shader.PropertyToID("_DetaljiDiff1"), Shader.PropertyToID("_DetaljiDiff2"), Shader.PropertyToID("_DetaljiDiff3") };
+        static readonly int[] IdDetaljiNor = { Shader.PropertyToID("_DetaljiNor0"), Shader.PropertyToID("_DetaljiNor1"), Shader.PropertyToID("_DetaljiNor2"), Shader.PropertyToID("_DetaljiNor3") };
+        readonly List<Texture2D> detaljiKuvat = new List<Texture2D>();
+        /// <summary>Kehittäjän vertailu: "poikki detalji 0|1" (null = datan mukaan).</summary>
+        public static bool? DetaljiPakotettu;
+
+        IEnumerator LataaDetalji(KuoriDetalji d, Func<string, string> url, Action<string> kirjaa, int oma)
+        {
+            float alku = Time.realtimeSinceStartup;
+            Texture2D Kuva(byte[] tavut, bool lineaarinen, string nimi, bool pakkaa)
+            {
+                if (tavut == null) return null;
+                var k = new Texture2D(2, 2, TextureFormat.RGBA32, true, lineaarinen)
+                { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Repeat, anisoLevel = 4 };
+                if (!k.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(k); return null; }
+                if (pakkaa) k.Compress(true);
+                return k;
+            }
+            byte[] maskiTavut = null;
+            yield return DioraamaLevyvalimuisti.Hae(url(d.Maski), 120, t => maskiTavut = t);
+            if (oma != kerta) yield break;
+            var maski = Kuva(maskiTavut, true, "Detalji:maski", false);
+            if (maski == null) { kirjaa?.Invoke("poikki: detalji: maski ei latautunut, detalji pois"); yield break; }
+            maski.wrapMode = TextureWrapMode.Clamp;
+            maski.Apply(true, true);
+            detaljiKuvat.Add(maski);
+            var toisto = new Vector4(2, 2, 2, 2); var keski = new Vector4(0.5f, 0.5f, 0.5f, 0.5f);
+            for (int c = 0; c < 4; c++)
+            {
+                var (diff, nor, toistoM) = c < d.Kanavat.Count ? d.Kanavat[c] : (null, null, 2.0);
+                toisto[c] = (float)Math.Max(0.2, toistoM);
+                byte[] dt = null, nt = null;
+                if (diff != null) yield return DioraamaLevyvalimuisti.Hae(url(diff), 120, t => dt = t);
+                if (nor != null && DioraamaLaatu.Taysi) yield return DioraamaLevyvalimuisti.Hae(url(nor), 120, t => nt = t);
+                if (oma != kerta) yield break;
+                var dk = Kuva(dt, false, "Detalji:diff" + c, false);
+                if (dk != null)
+                {
+                    // Keskikirkkaus pienimmästä mip-tasosta ennen pakkausta (kirkkaussuhteen nimittäjä).
+                    var p = dk.GetPixels(dk.mipmapCount - 1);
+                    float l = 0; foreach (var v in p) l += v.r * 0.299f + v.g * 0.587f + v.b * 0.114f;
+                    keski[c] = Mathf.Max(0.05f, l / Mathf.Max(1, p.Length));
+                    dk.Compress(true); dk.Apply(false, true);
+                    detaljiKuvat.Add(dk);
+                }
+                var nk = Kuva(nt, true, "Detalji:nor" + c, true);
+                if (nk != null) { nk.Apply(false, true); detaljiKuvat.Add(nk); }
+                Shader.SetGlobalTexture(IdDetaljiDiff[c], dk != null ? (Texture)dk : Texture2D.grayTexture);
+                Shader.SetGlobalTexture(IdDetaljiNor[c], nk != null ? (Texture)nk : Texture2D.normalTexture);
+                yield return null;
+            }
+            Shader.SetGlobalTexture(IdDetaljiMaski, maski);
+            Shader.SetGlobalVector(IdDetaljiToisto, toisto);
+            Shader.SetGlobalVector(IdDetaljiKeski, keski);
+            detaljiData = d;
+            AsetaDetaljiParam();
+            kirjaa?.Invoke($"poikki: detalji valmis ({d.Kanavat.Count} sarjaa, normaali {(DioraamaLaatu.Taysi ? "päällä" : "pois (kevennetty)")}, {Time.realtimeSinceStartup - alku:F1} s)");
+        }
+
+        KuoriDetalji detaljiData;
+
+        public void AsetaDetaljiParam()
+        {
+            bool paalla = detaljiData != null && (DetaljiPakotettu ?? true);
+            Shader.SetGlobalVector(IdDetaljiParam, paalla
+                ? new Vector4((float)detaljiData.Voimakkuus, DioraamaLaatu.Taysi ? (float)detaljiData.Normaali : 0f, 1f, 0f)
+                : Vector4.zero);
         }
 
         static readonly int IdLeikkausMin = Shader.PropertyToID("_DioraamaLeikkausMin"),
@@ -264,6 +338,7 @@ namespace Matkakirja.Natiivi
         {
             public Vector3[] Paikat;
             public Vector2[] Uv;
+            public Vector3[] Normaalit;
             public int[] Kolmiot;
             public byte[] Kuva;
         }
@@ -272,7 +347,7 @@ namespace Matkakirja.Natiivi
         {
             int kv = 0, ki = 0;
             foreach (var o in malli.Osat) { kv += o.Paikat.Length / 3; ki += o.Kolmiot.Length; }
-            var k = new Koottu { Paikat = new Vector3[kv], Uv = new Vector2[kv], Kolmiot = new int[ki] };
+            var k = new Koottu { Paikat = new Vector3[kv], Uv = new Vector2[kv], Normaalit = new Vector3[kv], Kolmiot = new int[ki] };
             int v0 = 0, i0 = 0, kuvaI = -1;
             foreach (var o in malli.Osat)
             {
@@ -282,6 +357,9 @@ namespace Matkakirja.Natiivi
                     k.Paikat[v0 + i] = new Vector3(o.Paikat[i * 3], o.Paikat[i * 3 + 1], o.Paikat[i * 3 + 2]);
                     // glTF:n UV-origo on vasen yläkulma, Unityn vasen alakulma.
                     k.Uv[v0 + i] = o.Uv != null && o.Uv.Length >= (i + 1) * 2 ? new Vector2(o.Uv[i * 2], 1f - o.Uv[i * 2 + 1]) : Vector2.zero;
+                    // Normaalit lähidetaljin projektiota ja valon kallistusta varten (DioraamaKuori.shader).
+                    k.Normaalit[v0 + i] = o.Normaalit != null && o.Normaalit.Length >= (i + 1) * 3
+                        ? new Vector3(o.Normaalit[i * 3], o.Normaalit[i * 3 + 1], o.Normaalit[i * 3 + 2]) : Vector3.up;
                 }
                 for (int i = 0; i < o.Kolmiot.Length; i++) k.Kolmiot[i0 + i] = o.Kolmiot[i] + v0;
                 if (kuvaI < 0) kuvaI = o.Kuva;
@@ -347,6 +425,10 @@ namespace Matkakirja.Natiivi
         {
             kerta++;
             Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero);
+            Shader.SetGlobalVector(IdDetaljiParam, Vector4.zero);
+            detaljiData = null;
+            foreach (var k in detaljiKuvat) if (k != null) UnityEngine.Object.Destroy(k);
+            detaljiKuvat.Clear();
             for (int i = 0; i < 3; i++) PoistaTaso(i);
             if (go != null) UnityEngine.Object.Destroy(go);
             go = null; lodit = null; Lahitaso = null; Kolmiot = 0;
