@@ -48,9 +48,9 @@ namespace Matkakirja.Natiivi
         static readonly string[] Persoonat = { "kertoja", "merkinnat", "pollo" };
 
         // --- MOOTTORI: xAI / ElevenLabs v4 Turbo (omistaja 30.9.2026, Päätoimittajan erä; worker LUKIJA_ELEVEN_AANET) ------
-        // Vertailu nostojen ja matkakirjan luentaan. Valinta näkyy ja vaikuttaa vain omistajan laitteilla (Kaynti.Omistaja:
-        // matkakirja://omistaja tai Pöllön koodi) ja kehittäjätilassa; arvioijat ja pelaajat pysyvät xAI:ssa. Workerin
-        // päiväkatto (20 000 mrk) vaihtaa xAI:hin katon täyttyessä. Pulu pysyy omalla äänellään.
+        // Vertailu nostojen ja matkakirjan luentaan. Valinta näkyy ja vaikuttaa vain laitteilla, joilla on Pöllön koodi
+        // (omistaja), ja kehitysversioissa; arvioijat ja pelaajat pysyvät xAI:ssa. Worker vaatii kehittäjäkoodin ja pitää
+        // päiväkaton (20 000 mrk), jonka täyttyessä luetaan xAI:lla. Pulu pysyy omalla äänellään.
         public const string MoottoriAvain = "matkakirja-puhe-moottori", ElevenAaniAvain = "matkakirja-puhe-eleven-aani";
         public const string Eleven = "eleven";
         public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Moottorit = new[] { ("xai", "xAI"), (Eleven, "ElevenLabs v4 Turbo") };
@@ -63,8 +63,12 @@ namespace Matkakirja.Natiivi
             ("uNijH7qDIRQQ2u6S2c21", "Vilhelm"), ("dlbXHgJnwobU5JdZ8F5M", "Jussi"),
         };
 
-        /// <summary>Saako laitteella valita moottorin (omistajan laite tai kehittäjätila).</summary>
-        public static bool MoottoriSallittu => Kaynti.Omistaja || Asetukset.Kehittaja;
+        /// <summary>
+        /// Saako laitteella valita moottorin: Pöllön koodi Keychainissa (omistajan kehittäjätila täydellä koodilla) tai
+        /// kehitysversio. Worker hyväksyy ElevenLabsin vain koodilla (Päätoimittaja 30.9.2026), joten pelkällä
+        /// matkakirja://omistaja-linkillä merkitty laite ei näe valintaa, joka ei toimisi.
+        /// </summary>
+        public static bool MoottoriSallittu => Asetukset.PolloKoodi != null || UnityEngine.Debug.isDebugBuild;
 
         /// <summary>Tallennettu moottori ("xai" tai "eleven"); ei huomioi oikeutta.</summary>
         public static string Moottori

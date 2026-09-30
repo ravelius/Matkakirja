@@ -354,6 +354,8 @@ namespace Matkakirja.Peli.Testit
             string runko = l.Pyynto("Marathon", "merkinnat", "merkinnat").Runko;
             Oleta.Tosi(runko.Contains("\"moottori\":\"eleven\"") && runko.Contains("\"aani\":\"Sz0tRTEpybtDJ9ru2kgD\""), runko);
             Oleta.Tosi(l.Valimuistiavain("merkinnat", "Marathon") != ennen, "eri moottori = eri välimuistiavain");
+            l.Koodilahde = () => "K";
+            Oleta.Sama("K", l.Pyynto("Marathon", "merkinnat", "merkinnat").Koodi, "ElevenLabs-pyyntö kantaa kehittäjäkoodin (workerin raja)");
             Oleta.Tosi(!l.Pyynto("Hei", "pollo", null).Runko.Contains("moottori"), "Pulu pysyy omalla reitillään");
             l.MoottoriLahde = () => null;
             Oleta.Sama(ennen, l.Valimuistiavain("merkinnat", "Marathon"), "null = xAI kuten ennen");

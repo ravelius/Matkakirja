@@ -472,7 +472,8 @@ namespace Matkakirja.Peli
             if (saadot?.Ohje != null) { sb.Append(",\"ohje\":"); JsonTeksti(sb, saadot.Value.Ohje); }
             if (nopeus != 1) sb.Append(",\"nopeus\":").Append(JsLuku(nopeus));
             sb.Append('}');
-            return (sb.ToString(), saadot != null ? Kehittajakoodi : null);
+            // Kehittäjäkoodi myös ElevenLabs-pyynnöille: worker hyväksyy maksullisen moottorin vain koodilla (Päätoimittaja 30.9.2026).
+            return (sb.ToString(), saadot != null || moottori != null ? Kehittajakoodi : null);
         }
 
         /// <summary>
