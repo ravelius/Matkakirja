@@ -538,6 +538,8 @@ const MODULES = [
   // Matkalaukun "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
   // Pelkkää dataa, jonka js/ui.js tuo staattisesti.
   'js/lahteet.js',
+  // Nimetön kävijälaskuri (main.js tuo; tarvitsee pollo-asetukset.js:n).
+  'js/kaynti.js',
   'js/aani-ehdokkaat.js',
   /*
    * Taustavahti ENNEN kaikkea ääntä: jokainen äänimoduuli (sound,

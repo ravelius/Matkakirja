@@ -194,6 +194,9 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
 import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apuraha.js';
+import { lahetaKaynti } from './kaynti.js';
+// Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
+const APURAHA_VERSIO = () => globalThis.document?.getElementById('app-version')?.textContent ?? '';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
@@ -17664,6 +17667,7 @@ export class UI {
    */
   naytaApuraha(esittely) {
     sfx.play('paper');
+    lahetaKaynti('apuraha', APURAHA_VERSIO());
     const lappu = html('dialog', 'dialog periaate-lappu apuraha-lappu');
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
@@ -17700,6 +17704,7 @@ export class UI {
         if (esittelylinssitAuki()) valmis();
         b.addEventListener('click', () => {
           avaaEsittelylinssit();
+          lahetaKaynti('esittelylinssit', APURAHA_VERSIO());
           sfx.play('paper');
           valmis();
           this.render?.();
@@ -18733,6 +18738,7 @@ export class UI {
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.apu));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.ehdot));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.johdanto));
+      if (PELI.yksityisyys) sisus.appendChild(html('p', 'lahteet-teksti', PELI.yksityisyys));
 
       sisus.appendChild(html('h3', 'lahteet-otsikko', 'Lähteet ja aineistot'));
       sisus.appendChild(html('p', 'lahteet-teksti', PELI.kolmannet));

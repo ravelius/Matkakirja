@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2448, teksti: 'Nimetön kävijälaskuri: Pöllön kaynti/kaynnit, s… (#3692)' },
   { v: 2447, teksti: 'Nostot kierros 3, erä A: 10 kohdetta kuvineen M… (#3691)' },
   { v: 2446, teksti: 'Apurahan arvioijan esittelykortti ja selainvers… (#3688)' },
   { v: 2445, teksti: 'Kemijoen viitekuva: Commons-tiedosto luokan til… (#3689)' },
