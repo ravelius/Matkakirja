@@ -149,3 +149,15 @@ Tilaus: Päätoimittaja 30.9. (Euroopan viimeistely, kohta 1). Sisältökirjuri 
 | Bergen | NOR | 4 | 19697 | 24 | 14 | 2095 | 58 | kyllä | 0.81 |
 | Lissabon | PRT | 5 | 20574 | 27 | 11 | 2641 | 66 | kyllä | 0.82 |
 | Sevilla | ESP | 4 | 22507 | 27 | 17 | 2092 | 65 | kyllä | 0.89 |
+
+## 6. Nostot, jotka odottavat fokusikkunaa (päätös 30.9.)
+
+Pallotila piirtää maan nostot vain maan fokuspohjan (FOKUS_POHJAT, js/packs/fokus-grc.js) ikkunan sisällä. Kolme nostoa on datassa mutta **ikkunan ulkopuolella, eikä niitä siksi näy kartalla** (mitattu pallolla 30.9.: kartanRivit ei sisällä niitä, kamera saarella → 0 riviä):
+
+| Nosto | Maa | Laudan piste (x, y) | Ikkuna (bbox x, y) | Tila |
+| --- | --- | --- | --- | --- |
+| Sete Cidades (Azorit) | PRT | 4 974, 1 886 | 5 284–5 859, 1 638–1 997 | **odottaa fokusikkunaa** |
+| Madeiran laurisilva | PRT | 5 267, 2 079 | sama | **odottaa fokusikkunaa** |
+| Teide (Kanariansaaret) | ESP | 5 279, 2 244 | 5 273–6 229, 1 519–2 116 | **odottaa fokusikkunaa** |
+
+Päätös (Päätoimittaja 30.9.): kolme nostoa jää dataan; Karttaseppä laajentaa PRT:n ja ESP:n fokusikkunat kattamaan Azorit, Madeiran ja Kanariansaaret polton jälkeisessä jonossa. Kaikki muut kierrosten 1–3 nostot (88 kpl) ovat ikkunoiden sisällä.
