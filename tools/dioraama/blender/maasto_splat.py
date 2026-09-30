@@ -62,7 +62,13 @@ w[2] = avoin * s(kk, -1.2, 0.2)                                                 
 metsa = (1 - avoin) * s(lat, 2, 5)
 w[3] = metsa * s(lat + 4 * kk, 17, 22)                                                               # neulaset (tiheä, varjoisa)
 w[1] = np.maximum(metsa * (1 - w[3]), (1 - avoin) * (1 - s(lat, 2, 5)) * 0.9) + 0.55 * avoin * s(k2, 0.4, 1.4)  # sammal/varpu (v2: laikkuina niitylle)
-k3 = kohina(40); w[0] = np.maximum(w[0], avoin * s(k3 + 0.3 * k2, 1.3, 1.8))  # v2: avokalliota niityn keskellä
+k3 = kohina(40)
+if os.path.exists(os.path.join(K, 'kohouma.npz')):  # v3: kalliokerros kallion kupuihin (samat laikut kuin muodoissa)
+    _g = np.load(os.path.join(K, 'kohouma.npz')); _kp = _g['kallio'].astype(np.float32) / 255; _kr = float(_g['res'])
+    jx = np.clip(((X - float(_g['x0'])) / _kr).round().astype(int), 0, _kp.shape[1] - 1); jy = np.clip(((float(_g['y0']) - Y) / _kr).round().astype(int), 0, _kp.shape[0] - 1)
+    sis_ = (np.abs(X) < float(_g['lahi'])) & (np.abs(Y) < float(_g['lahi']))
+    w[0] = np.maximum(w[0], np.where(sis_, _kp[jy, jx], avoin * s(k3 + 0.3 * k2, 1.3, 1.8)))
+else: w[0] = np.maximum(w[0], avoin * s(k3 + 0.3 * k2, 1.3, 1.8))  # v2: avokalliota niityn keskellä
 for i in (1, 2, 3): w[i] *= 1 - np.maximum(w[0], np.maximum(w[4], w[5]))
 vesi = ~maa  # veden alla: pohja kivikkoa rannan lähellä (< 6 m), sitten hiekkaa (näkyy veden läpi matalikossa)
 et_maa = etaisyys(maa, int(20 / px))
@@ -82,8 +88,11 @@ b0 = np.asarray(Image.open(os.path.join(K, 'splat-0.png'))).astype(np.int32); b1
 b0[..., 0] = np.clip(255 - b0[..., 1:].sum(-1) - b1.sum(-1), 0, 255)
 Image.fromarray(b0.astype(np.uint8), 'RGBA').save(os.path.join(K, 'splat-0.png'))
 tallenna([w[0] + w[4], w[1], w[2] + w[5], w[3]], 'splat-normaali-0.png', N // 2)
-KERR = [('kallio', 'mossy_rock', 3.0), ('varpukangas', 'forrest_ground_01', 2.0), ('niitty', 'sparse_grass', 2.0),
-        ('neulaset', 'forest_leaves_04', 1.5), ('rantakivikko', 'dry_river_pebbles', 2.0), ('hiekka', 'coast_sand_04', 3.94)]
+# v3 (1.10.): varpukankaalle sammallaikkuinen forest_leaves_02 (3 m), niitylle vihreä forrest_ground_01 (ennen
+# varpukankaalla) ja neulasille männynneulaset forrest_ground_03; sparse_grass oli lähes ruskeaa multaa ja
+# forest_leaves_04 oranssia syyslehteä (Poly Haven, CC0; toisto = kuvan todellinen koko).
+KERR = [('kallio', 'mossy_rock', 3.0), ('varpukangas', 'forest_leaves_02', 3.0), ('niitty', 'forrest_ground_01', 2.0),
+        ('neulaset', 'forrest_ground_03', 2.0), ('rantakivikko', 'dry_river_pebbles', 2.0), ('hiekka', 'coast_sand_04', 3.94)]
 json.dump({'alue': [-ALUE, -ALUE, ALUE, ALUE], 'koko': N, 'pikseli_m': px, 'lahi_m': 400,
            'huom': 'alue [minX, minZ, maxX, maxZ] = Blender [minX, minY, maxX, maxY]; kuvan rivi 0 = maxY (pohjoinen), sarake 0 = minX. '
                    'splat-0 RGBA = kerrokset 0–3, splat-1 RG = 4–5 (yhteissumma 255); splat-normaali-0 (1024²) = 0+4, 1, 2+5, 3.',
@@ -102,6 +111,15 @@ def korkeus(x, y):
     fx = np.clip((x - float(mz['x0'])) / float(mz['res']), 0, zz.shape[1] - 1.001); fy = np.clip((float(mz['y0']) - y) / float(mz['res']), 0, zz.shape[0] - 1.001)
     ix, iy = fx.astype(int), fy.astype(int); tx, ty = fx - ix, fy - iy
     return zz[iy, ix] * (1 - tx) * (1 - ty) + zz[iy, ix + 1] * tx * (1 - ty) + zz[iy + 1, ix] * (1 - tx) * ty + zz[iy + 1, ix + 1] * tx * ty
+_kz = os.path.join(K, 'kohouma.npz')
+if os.path.exists(_kz):  # v3: pienmuodot (maasto_kohouma.py) juurien korkeuteen
+    _g = np.load(_kz); _dz = _g['dz']; _kx0, _ky0, _kr = float(_g['x0']), float(_g['y0']), float(_g['res'])
+    _korkeus2 = korkeus
+    def korkeus(x, y):
+        fx = np.clip((x - _kx0) / _kr, 0, _dz.shape[1] - 1.001); fy = np.clip((_ky0 - y) / _kr, 0, _dz.shape[0] - 1.001)
+        ix, iy = fx.astype(int), fy.astype(int); tx, ty = fx - ix, fy - iy
+        d_ = _dz[iy, ix] * (1 - tx) * (1 - ty) + _dz[iy, ix + 1] * tx * (1 - ty) + _dz[iy + 1, ix] * (1 - tx) * ty + _dz[iy + 1, ix + 1] * tx * ty
+        return _korkeus2(x, y) + np.where((np.abs(x) < float(_g['lahi'])) & (np.abs(y) < float(_g['lahi'])), d_, 0)
 metsa_w = (1 - avoin) * s(lat, 2, 5)
 # v2 (Päätoimittaja 1.10.): ruoko vain lahdissa tupsuryhminä, kivet tummat ja uponneet, heinätupsut, risut, katajat,
 # nuoret männyt ja koivut niityn ja metsän reunoille.
@@ -124,6 +142,11 @@ tiheys = np.stack([
     reuna_m * 0.004 + w[0] * 0.002 * avoin,                                                              # 7 nuori mänty
     reuna_m * 0.003,                                                                                     # 8 nuori koivu
 ]) * maa[None].astype(np.float32)
+# v3 (Päätoimittaja 1.10., "maan tasaisuus lähellä"): varvut mattoina (laikut 3–5 m, välissä paljaampaa) ja linnan
+# kameroiden näkemällä lähirannalla (< 150 m) nelinkertaisina, 260 m:ssä ennallaan; heinä kaksinkertaisena lähellä.
+matto = s(0.75 * kohina(5) + 0.25 * kohina(2), -0.3, 0.8)  # ruudut à 0,78 m: ~4 m ja ~1,6 m
+lahella = 1 - s(et_linna, 150, 260)
+tiheys[0] *= matto * 1.8 * (1 + 3 * lahella); tiheys[1] *= matto * 1.8 * (1 + 3 * lahella); tiheys[4] *= 1 + lahella
 tiheys[3] = np.where(vesi, s(et_maa, 1.5, 3) * (1 - s(et_maa, 7, 9)) * lahti * ryhma * 0.9 * s(8 - rinne, 0, 4), 0)
 sisalla = (et_linna < SADE_AK) & ~((np.abs(X) < 94) & (np.abs(Y) < 53))  # ei kuoren päälle
 tiheys *= sisalla[None]
@@ -134,7 +157,7 @@ for laji in range(tiheys.shape[0]):
     for jy, jx in zip(iy, ix):
         for _ in range(lkm[jy, jx]):
             x = X[jy, jx] + rng_ak.uniform(-px / 2, px / 2); y = Y[jy, jx] + rng_ak.uniform(-px / 2, px / 2)
-            koko = {0: rng_ak.uniform(0.25, 0.45), 1: rng_ak.uniform(0.3, 0.5), 2: rng_ak.uniform(0.25, 0.8), 3: rng_ak.uniform(1.0, 2.2),
+            koko = {0: rng_ak.uniform(0.3, 0.6), 1: rng_ak.uniform(0.35, 0.6), 2: rng_ak.uniform(0.25, 0.8), 3: rng_ak.uniform(1.0, 2.2),
                     4: rng_ak.uniform(0.15, 0.35), 5: rng_ak.uniform(0.3, 0.5), 6: rng_ak.uniform(1.0, 2.8), 7: rng_ak.uniform(2.5, 5.0), 8: rng_ak.uniform(2.5, 5.0)}[laji]
             rivit.append((x, y, laji, koko))
 R_ = np.array(rivit); jarj = np.argsort(np.hypot(R_[:, 0], R_[:, 1])); R_ = R_[jarj]
