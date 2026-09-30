@@ -126,6 +126,7 @@ namespace Matkakirja.Natiivi
                 return eka.width > 0f ? new Rect(eka.xMin, eka.center.y, kortti.worldBound.width, eka.height) : kortti.worldBound;
             };
 
+            Kuvat.Kaistale = () => Rajat; // luentakuva kaistaleen alle oikeaan reunaan (omistaja 30.9.)
             kortti = Rakenne.El("mk-matkakirja", turva);
             kortti.style.display = DisplayStyle.None;
             // Avattu matkakirja paperina (omistaja 29.9.2026: "pohja on natiivissa yksivärinen, pitää olla paperin värinen ja
@@ -712,6 +713,22 @@ namespace Matkakirja.Natiivi
         /// Valo on kortin laatikkoa suurempi (inset −46 % −22 %, farthest-corner) ja kortti leikkaa sen: reunoilla ~0,55,
         /// kulmissa ~0,3, joten kartta kuultaa läpi. Laskettu kortin suhteellisissa koordinaateissa (venyy kortin mukana).
         /// </summary>
+        /// <summary>
+        /// Webin sRGB-alfa lineaarisen väriavaruuden sekoitukseen (Päätoimittaja 30.9.2026: "webissä kartan nimet näkyvät
+        /// tekstin alta, natiivin kermavalo on lähes peittävä"). Unity sekoittaa lineaarisesti, jolloin sama alfa peittää
+        /// tumman musteen selvästi enemmän kuin selaimen sRGB-sekoitus: mitattu omistajan kaappauksesta Pariisin merkki
+        /// kortin alla alfa 0,70 (web-kaava), natiivissa sama alfa näkyi noin 0,85:nä. Alfa valitaan niin, että kartan
+        /// muste (sRGB noin 70/255) kuultaa kerman läpi samalla sävyllä kuin webissä.
+        /// </summary>
+        static float LineaarinenAlfa(float a)
+        {
+            if (a <= 0f || QualitySettings.activeColorSpace != ColorSpace.Linear) return a;
+            const float muste = 70f / 255f, kerma = 238f / 255f;
+            float kohde = Mathf.GammaToLinearSpace(a * kerma + (1f - a) * muste);
+            float m = Mathf.GammaToLinearSpace(muste), k = Mathf.GammaToLinearSpace(kerma);
+            return Mathf.Clamp01((kohde - m) / (k - m));
+        }
+
         static Texture2D KermaValo
         {
             get
@@ -730,7 +747,7 @@ namespace Matkakirja.Natiivi
                     float d = Mathf.Sqrt(dx * dx + dy * dy);
                     float a = d <= 0.30f ? 0.9f : d <= 0.46f ? Mathf.Lerp(0.9f, 0.62f, (d - 0.30f) / 0.16f)
                         : d <= 0.62f ? Mathf.Lerp(0.62f, 0.28f, (d - 0.46f) / 0.16f) : d <= 0.78f ? Mathf.Lerp(0.28f, 0f, (d - 0.62f) / 0.16f) : 0f;
-                    px[y * N + x] = new Color(vari.r, vari.g, vari.b, a);
+                    px[y * N + x] = new Color(vari.r, vari.g, vari.b, LineaarinenAlfa(a));
                 }
                 kermaValo.SetPixels(px);
                 kermaValo.Apply(false, true);
