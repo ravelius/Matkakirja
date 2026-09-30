@@ -419,9 +419,17 @@ namespace Matkakirja.Natiivi
             // Pyöreä ikkuna täyttää ~94 % lyhyemmästä sivusta keskellä; linnun keskipiste (0,25 R, 0,3 R) keskeltä, jolloin se
             // mahtuu aukkoon myös puhelimella. Alueen oikea alakulma on linnun keskipisteestä noin (66, 55) pt (Pulu.Oikea).
             float R = 0.46f * Mathf.Min(W, H);
-            p.IkkunanTakana = ikkunassa ? new Vector2(W * 0.5f + 0.25f * R + 66f, H * 0.5f + 0.3f * R + 55f) : (Vector2?)null;
             var pe = Poyta;
             bool poytaNakyy = Tila != KyydinTila.Kauko && pe.resolvedStyle.display != DisplayStyle.None && pe.worldBound.height > 0;
+            var kulma = new Vector2(W * 0.5f + 0.25f * R + 66f, H * 0.5f + 0.3f * R + 55f);
+            // Vaakana pöytä peittää ikkunan alaosan (Päätoimittaja 30.9.: iPhone vaakana vain kypärä pilkisti pöydän takaa):
+            // linnun alue pöydän näkyvän yläreunan (kupu) yläpuolelle 6 pt:n välillä.
+            if (ikkunassa && poytaNakyy)
+            {
+                float yla = pe.worldBound.yMin - juuri.worldBound.yMin + (Kytkinpoyta ? poyta.YlaReuna : 0f) - 6f;
+                kulma.y = Mathf.Min(kulma.y, yla);
+            }
+            p.IkkunanTakana = ikkunassa ? kulma : (Vector2?)null;
             p.AlaVara = poytaNakyy && !ikkunassa ? H - pe.worldBound.yMin + 6f : 0f;
         }
 

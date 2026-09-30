@@ -187,7 +187,13 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 float3 lahin = tl > 0 ? o + d * tl : o;
                 float hmin = length(lahin) - _R;
                 float yo = 1.0 - smoothstep(-0.105, 0.0, dot(normalize(lahin), s));
-                float hehku = exp(-((hmin - 95000.0) * (hmin - 95000.0)) / (4500.0 * 4500.0)) * _Hehku * yo * (maa ? 0.0 : 1.0);
+                // Pehmeä vyö (Päätoimittaja 30.9.: terävä viiva): σ 9 km ja leveämpi heikko helma, kirkkaus vaihtelee hieman
+                // sivuamispisteen suunnan mukaan (hitaat aallot, ± 25 %), kuten ISS:n yökuvissa.
+                float dh = hmin - 95000.0;
+                float3 nl = normalize(lahin);
+                float aalto = 0.75 + 0.25 * sin(nl.x * 23.0 + nl.y * 17.0) * sin(nl.z * 29.0 - nl.x * 11.0);
+                float hehku = (exp(-dh * dh / (9000.0 * 9000.0)) + 0.35 * exp(-dh * dh / (22000.0 * 22000.0))) * 0.75 * aalto
+                    * _Hehku * yo * (maa ? 0.0 : 1.0);
                 L += _HehkuVari.rgb * hehku;
 
                 float alfa = 1.0 - dot(T, float3(1.0, 1.0, 1.0) / 3.0);

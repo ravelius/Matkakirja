@@ -119,7 +119,15 @@ Shader "Matkakirja/Linssit/Pilvet"
 
             // Pilvipeiton säädin (omistaja 28.9. TF 1.0.39: "Pilvet peittävät aika paljon"): kynnys alfasta heti näytteen jälkeen,
             // joten ohuet pilvet katoavat ensin ja paksut jäävät (tasainen alfakerroin tekisi kaikista harsoa). K = 0 ennallaan.
-            float Karsi(float a) { return _Karsinta > 0.0 ? saturate((a - _Karsinta) / max(1.0 - _Karsinta, 1e-3)) : a; }
+            // Pehmeä kynnys (Päätoimittaja 30.9.: 30 %:n peitolla pilvet litteitä ja teräväreunaisia kuin paperi, koska
+            // kynnys 0,7 venytti alfan 0,7…1 koko väliin): liuku 0,12 kynnyksen alapuolelta ja smoothstep, jolloin reunat häipyvät.
+            float Karsi(float a)
+            {
+                if (_Karsinta <= 0.0) return a;
+                float k0 = max(0.0, _Karsinta - 0.12);
+                float r = saturate((a - k0) / max(1.0 - k0, 1e-3));
+                return r * r * (3.0 - 2.0 * r);
+            }
 
             half4 TarkatPilvet(Vali i, out half vaihtelu)
             {
@@ -171,7 +179,7 @@ Shader "Matkakirja/Linssit/Pilvet"
                     const float Sigma = 0.39;
                     float fn = summa * rsqrt(max(nakyva, 1e-4)) / Sigma;
                     float t = 0.5 + 0.36 * tanh(0.8 * fn);
-                    aTarkka = smoothstep(t - 0.08, t + 0.08, a0);
+                    aTarkka = smoothstep(t - 0.16, t + 0.16, a0);   // ± 0,16 (oli 0,08: paperireuna)
                     vaihtelu = (half)(0.05 * clamp(ala / Sigma, -2.5, 2.5) * nak);
                 }
                 c.a = lerp(a0, aTarkka, nak);
