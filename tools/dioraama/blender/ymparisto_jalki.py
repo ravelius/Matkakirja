@@ -15,7 +15,7 @@ if os.path.exists(mz):  # juuret maaston lopulliselle pinnalle (rantavyöhyke la
     g = np.load(mz); zz = g['z']; fx = np.clip((P[:, 0] - float(g['x0'])) / float(g['res']), 0, zz.shape[1] - 1.001); fy = np.clip((float(g['y0']) - P[:, 1]) / float(g['res']), 0, zz.shape[0] - 1.001)
     ix, iy = fx.astype(int), fy.astype(int); tx, ty = fx - ix, fy - iy
     P[:, 2] = zz[iy, ix] * (1 - tx) * (1 - ty) + zz[iy, ix + 1] * tx * (1 - ty) + zz[iy + 1, ix] * (1 - tx) * ty + zz[iy + 1, ix + 1] * tx * ty
-    P = P[P[:, 2] > -6.9]  # vedenrajaan jääneet pois
+    P = P[P[:, 2] > -6.6]  # vedenrajaan jääneet pois (maa ≥ vesi + 0,4 m; Siirtoseppä 1.10.: rantapuut seisoivat vedessä)
 et = np.hypot(P[:, 0], P[:, 1]); P = P[np.argsort(et)]
 j['puut'] = [[round(float(v), 2) if i < 5 else int(v) for i, v in enumerate(r)] for r in P]
 j['tasot'] = TASOT; j['atlas'] = 'puukortit.json'

@@ -370,6 +370,22 @@ export function lisaaBlender(rakennusJson, blender) {
       },
       syvyys: { kuva: B(Y('syvyys.png')), pikseli_m: syv.pikseli_m, kerroin_m: syv.kerroin_m, origo: syv.origo },
     };
+    // Lähimaaston kerrosmaskit (Siirtosepän splat-rajapinta 1.10.) ja aluskasvit (Linssiseppä 2), jos viety.
+    const MAA = JSON.parse(readFileSync(new URL('../../js/dioraama/rakennukset/olavinlinna/ymparisto-maasto.json', import.meta.url), 'utf8'));
+    const maaTied = ['splat-0.png', 'splat-1.png', 'splat-normaali-0.png',
+      ...MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k.jpg`, `maasto/${k.lahde}_nor_gl_1k.jpg`])];
+    if (maaTied.every((p) => on.has(Y(p)))) {
+      rakennusJson.ymparisto.maasto = {
+        alue: MAA.alue, lahi_m: MAA.lahi_m,
+        maski: [B(Y('splat-0.png')), B(Y('splat-1.png'))], maski_normaali: B(Y('splat-normaali-0.png')),
+        kerrokset: MAA.kerrokset.map((k) => ({ id: k.id, diff: B(Y(`maasto/${k.lahde}_diff_1k.jpg`)),
+          nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m })),
+      };
+    }
+    if (['aluskasvit.png', 'aluskasvit-hamara.png', 'aluskasvit.json', 'aluskasvit-lista.json'].every((p) => on.has(Y(p)))) {
+      rakennusJson.ymparisto.aluskasvit = { atlas: B(Y('aluskasvit.png')), atlas_hamara: B(Y('aluskasvit-hamara.png')),
+        kortit: B(Y('aluskasvit.json')), lista: B(Y('aluskasvit-lista.json')) };
+    }
   }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),

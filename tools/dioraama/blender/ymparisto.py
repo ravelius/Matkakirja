@@ -90,8 +90,11 @@ if LATVUS:
 print(f'YMP: DEM {nx}×{ny} ruutua ({RES} m), maata {maa.mean():.2f}, korkeus {Z.max() - VESI_H:.1f} m vedestä')
 
 np.savez_compressed(os.path.join(ULOS, 'maasto-z.npz'), z=np.where(maa, z_maa, VESI_Z - 0.5).astype(np.float32), x0=xs[0], y0=ys[0], res=RES)  # puiden juuret (jalki)
-# --- pinnat: ruutu mukaan, jos jokin kulma on maata (rannan reuna jatkuu veden alle) ja ruutu ei ole kuoren alueella ---
-kulma_maa = maa[:-1, :-1] | maa[1:, :-1] | maa[:-1, 1:] | maa[1:, 1:]
+# --- pinnat: ruutu mukaan, jos jokin kulma on maata tai enintään 12 m rannasta (pohja viettää veden alle 3 m:iin) ja ruutu
+# ei ole kuoren alueella. 1.10.: pelkkä 2 m:n vedenalainen reunus näkyi läpinäkyvän veden läpi terävänä tummana
+# muotona ("puu roikkuu niemen alla" oletuskamerassa); 12 m:n loivassa pohjassa reuna jää syvälle ja häipyy.
+lahella = maa | (d_vesi <= 12.0)
+kulma_maa = lahella[:-1, :-1] | lahella[1:, :-1] | lahella[:-1, 1:] | lahella[1:, 1:]
 cx = (X[:-1, :-1] + X[1:, 1:]) / 2; cy = (Y[:-1, :-1] + Y[1:, 1:]) / 2
 kuori = (cx > KUORI[0]) & (cx < KUORI[1]) & (cy > KUORI[2]) & (cy < KUORI[3])
 mukana = kulma_maa & ~kuori

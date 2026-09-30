@@ -139,6 +139,12 @@ for laji in range(tiheys.shape[0]):
             rivit.append((x, y, laji, koko))
 R_ = np.array(rivit); jarj = np.argsort(np.hypot(R_[:, 0], R_[:, 1])); R_ = R_[jarj]
 zt = np.where(R_[:, 2] == 3, -7.0, korkeus(R_[:, 0], R_[:, 1]) - np.where(R_[:, 2] == 2, 0.12 * R_[:, 3], 0.02))  # kivet uponneet
+# Siirtoseppä 1.10.: ei kasveja veteen — maa ≥ vesi + 0,4 m (kivet saavat olla rantavedessä, ruoko on vesikasvi)
+# Korkeat (kataja, nuoret puut) vasta 1 m vedenpinnan yläpuolella: matalan kallioniemen kärjen nuori mänty heijastui
+# oletuskamerassa niemen alle "roikkuvaksi puuksi" (Päätoimittaja 1.10.).
+zm = korkeus(R_[:, 0], R_[:, 1]); korkea = np.isin(R_[:, 2], (6, 7, 8))
+pida = (R_[:, 2] == 3) | ((R_[:, 2] == 2) & (zm > -7.0)) | ((zm >= -6.6) & ~korkea) | (korkea & (zm >= -6.0))
+R_, zt = R_[pida], zt[pida]
 ak = [[round(float(x), 2), round(float(y), 2), round(float(z), 2), int(l), round(float(k), 2)] for (x, y, l, k), z in zip(R_, zt)]
 json.dump({'lahde': 'Linnanrakentaja 1.10.2026: kerrospainoista (maasto_splat.py), omat proseduraaliset kortit (aluskasvit.py)',
            'sarakkeet': ['x', 'y', 'z', 'laji (aluskasvit.json lajit)', 'koko'], 'atlas': 'aluskasvit.json',
