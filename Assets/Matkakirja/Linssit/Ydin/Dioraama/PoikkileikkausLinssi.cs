@@ -165,10 +165,19 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Näkymän leveys/korkeus (Unity asettaa joka ruutu); 0 = ei sovitusta (Ydin-testit).</summary>
         public double Kuvasuhde { get; set; }
         double pohjaMinX, pohjaMaxX, pohjaMinZ, pohjaMaxZ;
-        bool pohjaOn;
+        bool pohjaOn, pohjaKuoresta;
+
+        /// <summary>Ulkokuoren todelliset rajat (Unity: kuoren meshin bounds dioraaman koordinaateissa) korvaavat tilojen
+        /// rajat (1.1 (76): tunnelma-tilan −80…60 ja laituri vetivät keskipisteen sivuun, linna painui oikealle).</summary>
+        public void AsetaPohja(double minX, double maxX, double minZ, double maxZ)
+        {
+            if (maxX <= minX || maxZ <= minZ) return;
+            pohjaMinX = minX; pohjaMaxX = maxX; pohjaMinZ = minZ; pohjaMaxZ = maxZ; pohjaOn = pohjaKuoresta = true;
+        }
 
         void LaskePohja()
         {
+            if (pohjaKuoresta) return; // kuoren rajat säilyvät uudelleenavauksen yli (sama rakennus)
             pohjaOn = false;
             pohjaMinX = pohjaMinZ = double.MaxValue; pohjaMaxX = pohjaMaxZ = double.MinValue;
             foreach (var t in Rakennus.Tilat)
@@ -268,6 +277,9 @@ namespace Matkakirja.Linssit.Dioraama
 
         Asento JaksonAsento(KertojaJakso j, bool pysty)
         {
+            // Tilaan sidottu jakso käyttää tilan omaa kameraa (1.1 (75): laiturijakson kopioidut arvot olivat vanhasta
+            // sijoituksesta 58 m sivussa, ja kuvassa oli pelkkä muuri ja vesi); jakson oma kamera vain ilman tilaa.
+            if (j.Tila != null && Rakennus.Tila(j.Tila) != null) return AsentoFor(j.Tila, pysty);
             var a = pysty && j.KameraPysty.HasValue ? j.KameraPysty.Value : j.Kamera;
             var yleis = pysty ? Rakennus.YleisPysty : Rakennus.YleisVaaka;
             return j.Tila == null && a.Etaisyys >= 0.8 * yleis.Etaisyys ? SovitaKuvasuhteeseen(a) : a; // vain laajat kuvat

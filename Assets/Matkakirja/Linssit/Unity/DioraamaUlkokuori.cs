@@ -218,7 +218,9 @@ namespace Matkakirja.Natiivi
                 {
                     // Keskikirkkaus pienimmästä mip-tasosta ennen pakkausta (kirkkaussuhteen nimittäjä).
                     var p = dk.GetPixels(dk.mipmapCount - 1);
-                    float l = 0; foreach (var v in p) l += v.r * 0.299f + v.g * 0.587f + v.b * 0.114f;
+                    // GetPixels antaa sRGB-arvot, mutta varjostin näytteistää sRGB-tekstuurin lineaarisena (lineaarinen
+                    // väriavaruus): keskiarvo lineaarisena, muuten kirkkaussuhde ~0,4 ja kuori tummui (1.1 (76) -kuva).
+                    float l = 0; foreach (var v in p) { var li = v.linear; l += li.r * 0.299f + li.g * 0.587f + li.b * 0.114f; }
                     keski[c] = Mathf.Max(0.05f, l / Mathf.Max(1, p.Length));
                     dk.Compress(true); dk.Apply(false, true);
                     detaljiKuvat.Add(dk);
@@ -369,8 +371,16 @@ namespace Matkakirja.Natiivi
             return k;
         }
 
+        /// <summary>Kuoren rajat dioraaman koordinaateissa (x, z käännettynä takaisin: UnityPiste z → −z); null ennen tasoa.</summary>
+        public (double minX, double maxX, double minZ, double maxZ)? Pohja { get; private set; }
+
         void AsetaTaso(Laatu taso, Mesh mesh, Texture2D kuva)
         {
+            if (mesh != null)
+            {
+                var b = mesh.bounds; // kuori on juuren alla ilman muunnosta (go ja tasot origossa)
+                Pohja = (b.min.x, b.max.x, -b.max.z, -b.min.z);
+            }
             int i = (int)taso;
             PoistaTaso(i);
             var m = new Material(varjostin) { name = "Ulkokuori:" + taso };

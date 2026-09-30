@@ -827,6 +827,44 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(6.0, Ohjaaja.AskeleenKesto(new Askel { Tee = "repliikki", HahmoId = "h", N = 1 }, tila, rak), "N=1 -> toinen repliikki");
         }
 
+        [Testi] static void KuunnelmaJasentyyJaEteneeRiviKerrallaan()
+        {
+            // Olavinlinnan keittiön kuunnelma (#3701): puhuja, nimi, huom, aani null; tyhjä teksti ohitetaan.
+            const string json = @"{
+              ""tilat"": [
+                { ""id"":""keittio"",""rajat"":{""min"":[0,0,0],""max"":[1,1,1]},
+                  ""kuunnelma"":[
+                    {""id"":""keittio-k1"",""puhuja"":""kokki"",""nimi"":""Kokki"",""aani"":null,""teksti"":""Kalaa ja naurista, naurista ja kalaa!""},
+                    {""id"":""keittio-k4"",""puhuja"":""vouti"",""nimi"":""Vouti"",""huom"":""oven takaa"",""aani"":null,""teksti"":""Iltarukous alkaa.""},
+                    {""id"":""tyhja"",""puhuja"":""kokki"",""teksti"":""""},
+                    {""id"":""keittio-k5"",""puhuja"":""pulu"",""nimi"":""Pulu"",""aani"":null,""teksti"":""Minä jään muruvahdiksi.""}
+                  ] },
+                { ""id"":""massa"",""rajat"":{""min"":[0,0,0],""max"":[1,1,1]} }
+              ]
+            }";
+            var r = DioraamaData.Lue(json);
+            var k = r.Tila("keittio").Kuunnelma;
+            Oleta.Sama(3, k.Count, "tyhjä rivi ohitetaan");
+            Oleta.Sama("Kokki", k[0].Nimi);
+            Oleta.Sama("oven takaa", k[1].Huom);
+            Oleta.Tosi(k[1].Aani == null, "aani null");
+            Oleta.Tosi(k[2].Pulu && !k[0].Pulu, "Pulun rivi tunnistetaan");
+            Oleta.Sama(0, r.Tila("massa").Kuunnelma.Count, "puuttuva kuunnelma -> tyhjä lista");
+
+            // Kesto tekstistä: 37 merkkiä / 14 + 0,6 s; ääni (2 s) + 0,6 s tauko.
+            var toisto = new KuunnelmaToisto(k);
+            Oleta.Sama(37 / 14.0 + 0.6, toisto.Kesto(k[0]), "kesto tekstistä");
+            Oleta.Tosi(toisto.Aloita(10) && toisto.Indeksi == 0, "alkaa ensimmäisestä");
+            Oleta.Tosi(!toisto.Paivita(10 + toisto.Kesto(k[0]) - 0.01) && toisto.Indeksi == 0, "rivi pysyy kestonsa");
+            Oleta.Tosi(toisto.Paivita(10 + toisto.Kesto(k[0]) + 0.01) && toisto.Indeksi == 1, "seuraava rivi");
+            Oleta.Tosi(toisto.Ohita(20) && toisto.Indeksi == 2 && toisto.Rivi.Pulu, "napautus ohittaa");
+            Oleta.Tosi(toisto.Ohita(21) && !toisto.Kaynnissa && toisto.Rivi == null, "viimeisen jälkeen loppu");
+            var aanella = new KuunnelmaToisto(k, rivi => rivi.Id == "keittio-k1" ? 2.0 : (double?)null);
+            Oleta.Sama(2.6, aanella.Kesto(k[0]), "kesto äänestä + tauko");
+            Oleta.Sama(k[1].TekstinKesto, aanella.Kesto(k[1]), "ilman ääntä tekstistä");
+            Oleta.Tosi(!new KuunnelmaToisto(new List<KuunnelmaRivi>()).Aloita(0), "tyhjä kuunnelma ei ala");
+        }
+
         [Testi] static void TehosteJaksotJasentyvatJaPuuttuvaOnTyhjaLista()
         {
             const string json = @"{
