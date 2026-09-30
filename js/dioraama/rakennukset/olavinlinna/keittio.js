@@ -56,8 +56,9 @@ const KEITTIO_HAHMOT = [
 export const TILA = {
   id: 'keittio',
   nimi: 'Keittiö',
-  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
-  infotaulu: { nimi: 'Keittiö', rivit: [{ teksti: 'Avotuli palaa lähes taukoamatta, ja padoissa porisee ilta-ateria.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Keittiö', rivit: [{ teksti: 'Linnan keittiö pienellä linnanpihalla: avotuli paloi aamusta iltaan.', lahde: 'Yle: Olavinlinnan keittiö (yle.fi/a/3-6618420); Apu: Suomen keskiaikaiset kivilinnat 6/6' }] },
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): todellinen paikka fotogrammetriakuoressa. Keittiö
   // itäsiiven alakerrassa Pienen linnanpihan laidalla (tulkinta, Sisältökirjuri 29.9.: ikkunat pihalle, hormit

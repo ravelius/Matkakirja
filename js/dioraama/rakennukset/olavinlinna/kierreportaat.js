@@ -101,8 +101,9 @@ const LAMMIN = '#ff9a4a';
 export const TILA = {
   id: 'kierreportaat',
   nimi: 'Kierreportaat',
-  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
-  infotaulu: { nimi: 'Kierreportaat', rivit: [{ teksti: 'Kapeat kiviportaat kiertävät tornin kerroksesta toiseen.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Kierreportaat', rivit: [{ teksti: 'Kapeat portaat yhdistävät tornin viisi kerrosta.', lahde: 'Savon historia: Olavinlinnan suojassa' }] },
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).

@@ -75,8 +75,9 @@ const HAHMOT = [
 export const TILA = {
   id: 'muurinharja',
   nimi: 'Muurinharja',
-  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
-  infotaulu: { nimi: 'Muurinharja', rivit: [{ teksti: 'Vartija kulkee lyhdyn kanssa muurin harjalla.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Muurinharja', rivit: [{ teksti: 'Avoin puolustuskäytävä, josta hyökkääjät torjuttiin vuonna 1495.', lahde: 'Savon historia; Wikipedia: Pietari Niilonpoika Kylliäinen' }] },
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,

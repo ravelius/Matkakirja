@@ -125,8 +125,9 @@ const KAPPELI_HAHMOT = [
 export const TILA = {
   id: 'kappeli',
   nimi: 'Kappeli',
-  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
-  infotaulu: { nimi: 'Kappeli', rivit: [{ teksti: 'Kynttilät palavat messun ajan, ja kaiku kantaa laulun holveihin.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Kappeli', rivit: [{ teksti: 'Kirkkotornin kappeli: kaksitoista vihkimäristiä ja harvinainen hagioskooppi.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' }] },
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): Kirkkotorni kuoressa mallin (−15,4, 14,6) (kartiokaton
   // huippu säteellä, 29.9. klo 21) eli glTF z −14,6; seinä ja lattia säteellä 6,6 kuoren sisäpuolella; torni seisoo pihan tasolla −3,0, joten 3. krs lattia ≈ 6,4.

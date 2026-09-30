@@ -189,8 +189,9 @@ const soihduLiekki = (a, y) => lok(pol(a, 5.455, 0), a + 180, 0, y + 0.47, 0.262
 export const TILA = {
   id: 'fatabuuri',
   nimi: 'Fatabuuri',
-  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
-  infotaulu: { nimi: 'Fatabuuri', rivit: [{ teksti: 'Vaate- ja tavara-aitta: arkkuja, kangaspakkoja ja kirjanpitoa.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Fatabuuri', rivit: [{ teksti: 'Kellotornin vaate- ja tavara-aitta, linnan arvotavaran varasto.', lahde: 'Kansallismuseo: Kellotornin fatabuuri; SKES' }] },
   kohdistettava: true,
   // Uusi tapa (dioraama-rajapinnat-blender-20260929.md kohta 2): pohjoismuurin muunnos Kellotornin (−30, −20) → kuoren
   // Kellotorni (−44,4; −4,6) ja lähteen +x → Kirkkotornia kohti (suunta 341), iso linnanpiha y 2,9 (säteet 29.9. klo 21).

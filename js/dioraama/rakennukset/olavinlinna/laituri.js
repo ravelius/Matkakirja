@@ -113,8 +113,9 @@ const HAHMOT = [
 export const TILA = {
   id: 'laituri',
   nimi: 'Laituri',
-  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + 1–2 riviä, muoto kuten taulu.kohdat (rivi paikkamerkki).
-  infotaulu: { nimi: 'Laituri', rivit: [{ teksti: 'Soutaja kiristää köyttä, ja lyhty palaa paalussa.', lahde: 'Olavinlinnan elävä linna: käsikirjoitus 29.9.2026 (tulkinta)' }] },
+  // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
+  // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
+  infotaulu: { nimi: 'Laituri', rivit: [{ teksti: 'Saarilinnaan tultiin vesitse; 1550-luvulla linnalla oli yhdeksän kavassia.', lahde: 'mas.fi; Savon historia; Riihisaari' }] },
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,
