@@ -104,6 +104,17 @@ namespace Matkakirja.Natiivi
             Ladattu?.Invoke();
         }
 
+        /// <summary>Testi (ui apuraha tiedosto): esittely paikallisesta JSONista ennen kuin se on sivustolla. Ei tallennu muistiin.</summary>
+        public string KaytaTekstia(string json)
+        {
+            var e = Jasenna(json);
+            if (e == null) return "esittely ei kelpaa";
+            Nykyinen = e;
+            if (himmennys != null) { himmennys.RemoveFromHierarchy(); himmennys = null; }
+            Ladattu?.Invoke();
+            return null;
+        }
+
         public void Avaa()
         {
             if (Nykyinen == null) return;

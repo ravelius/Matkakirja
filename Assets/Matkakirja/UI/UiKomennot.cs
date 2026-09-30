@@ -785,10 +785,16 @@ namespace Matkakirja.Natiivi
                             if (ap.Nykyinen == null) return "esittelyä ei ole ladattu";
                             ap.AvaaKokoruutu(ap.Nykyinen.Kuvat, la.Length > 1 ? int.Parse(la[1]) - 1 : 0); return null;
                         case "sulje": ap.Sulje(); return null;
+                        case "tiedosto":
+                        {
+                            var polku = System.IO.Path.Combine(Application.persistentDataPath, la.Length > 1 ? la[1] : "apuraha.json");
+                            if (!System.IO.File.Exists(polku)) return "ei tiedostoa " + polku;
+                            return ap.KaytaTekstia(System.IO.File.ReadAllText(polku));
+                        }
                         case "tila":
                             return ap.Nykyinen == null ? "ei ladattu"
                                 : $"ladattu: {ap.Nykyinen.Kappaleet.Count} kappaletta, {ap.Nykyinen.Kuvat.Count} kuvaa, auki {ap.Auki}, kokoruutu {ap.KokoruutuAuki}";
-                        default: return "ui apuraha auki|loppuun|kuva <n>|sulje|tila";
+                        default: return "ui apuraha auki|loppuun|kuva <n>|sulje|tila|tiedosto [nimi]";
                     }
                 }
                 case "ohitalento":
