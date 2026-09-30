@@ -445,6 +445,8 @@ namespace Matkakirja.Natiivi
                 paluu = schedule.Execute(Palauta).StartingIn(2000);
             }
             void Palauta() { kansiAuki = false; alhaalla = false; PaivitaOsat(); }
+            /// <summary>Testi: sama kuin ensimmäinen napautus (kansi auki).</summary>
+            public void AvaaKansi() => Napautus();
             void PaivitaOsat()
             {
                 Tila = alhaalla ? Tila.Aktiivinen : NykyTila == Tila.Pois ? Tila.Pois : Tila.Perus;

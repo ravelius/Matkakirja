@@ -56,7 +56,7 @@ namespace Matkakirja.Natiivi
             Vuodenaika = new IssKytkimet.Nuppi("KUUKAUSI", 1f, 12f, v => kuukausi?.Invoke(v), kokonaisluku: true);
             Kohde = new IssKytkimet.Painike("KOHDE", "LENNÄ", () => kohde?.Invoke());
             Oma = new IssKytkimet.Vipu("OMA PAIKKA", () => oma?.Invoke());
-            Sulku = new IssKytkimet.Painike("POISTU", "✕", () => sulku?.Invoke(), leveys: 52f);
+            Sulku = new IssKytkimet.Painike("POISTU", "×", () => sulku?.Invoke(), leveys: 52f);   // ✕ puuttuu fontista (□)
             foreach (var m in new VisualElement[] { Nopeus, Pilvet, Vuodenaika, Kohde, Oma, Sulku }) saatimet.Add(m);
         }
 

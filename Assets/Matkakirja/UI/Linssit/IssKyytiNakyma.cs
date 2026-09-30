@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
             if (n == null) return "kytkin: ei kyytinäkymää";
             string k = a.Length > 0 ? a[0] : "tila";
             if (k == "lista") n.VaihdaLista();
-            else if (k == "kansi") n.poyta.Oma.Tila = IssKytkimet.Tila.Aktiivinen;
+            else if (k == "kansi") n.poyta.Oma.AvaaKansi();
             else if (k == "nopeus" && a.Length > 1 && int.TryParse(a[1], out int i) && i >= 0 && i < Simukello.Nopeudet.Length)
                 Linssi()?.AsetaNopeus(Simukello.Nopeudet[i]);
             var r = n.poyta.Juuri.worldBound;
