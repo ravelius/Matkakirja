@@ -117,4 +117,111 @@ export const MAASTOKOHTEET_BLR = [
       + 'viidenneksi suurin järvi. Puistossa on havu- ja lehtimetsiä sekä suoalueita.',
     lahde: 'en-Wikipedia "Braslaw Lakes" (tarkistettu 30.9.2026).',
   },
+  /* ================================================================
+   * SISÄLTÖKIRJURI NOSTOT KIERROS 3 ERÄ B, 30.9.2026 — 3 KOHDETTA.
+   * ============================================================== */
+  {
+    id: 'brestin-linnoitus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-brestin-linnoitus-485bebbc.jpg',
+      lyhyt: 'Kholmin portti, punatiilinen porttirakennus kulmatorneineen.',
+      selite: 'Kuvassa on Brestin linnoituksen Kholmin portti, punatiilinen holvattu porttirakennus, jossa on kaksi kulmatornia ja hammastettu yläreuna.',
+      lahde: 'Valokuva: Zala, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Zala',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Brze%C5%9B%C4%87_Twierdza_Brama_Che%C5%82mska_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Brestin linnoitus',
+    nimio: 'Brestin linna',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Minä vuonna linnoituksen rakentaminen alkoi?',
+      'Mitkä kolme linnoitettua saarta citadellia ympäröi?',
+    ],
+    korostukset: ['Opperman|Opperman'],
+    nappi: '1800-luvun tiilinen tähtilinnoitus',
+    // 23.6581 E / 52.0819 N — en-Wikipedia "Brest Fortress", osiot "Construction" ja "Design"
+    laudat: {
+      maailmankartta: { x: 6621.9, y: 1298.5 },
+    },
+    teksti: 'Brestin linnoitus on Bug-joen ja Muhavets-joen haarojen ympäröimä linnoituskompleksi '
+      + 'Brestin kaupungissa Valko-Venäjällä. Rakennustyöt alkoivat vuonna 1833 Brestin '
+      + 'vanhan ruhtinaslinnan tilalle, ja suunnittelijana oli sotainsinööri Karl Opperman. '
+      + 'Keskussaarella sijaitsevaa citadellia ympäröi kolme linnoitettua saarta: Kobrin, '
+      + 'Terespol ja Volyn. Punatiilinen kasarmirakennus käsitti 500 huonetta, ja sen '
+      + 'kerrotaan majoittaneen 12 000 sotilasta. Alkuperäisestä neljästä portista näkyvissä '
+      + 'ovat nykyään enää Kholmin ja Terespolin portit.',
+    lahde: 'en-Wikipedia "Brest Fortress", osiot "Construction" ja "Design" (tarkistettu '
+      + '30.9.2026).',
+  },
+  {
+    id: 'polotskin-sofian-katedraali',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-polotskin-sofian-katedraali-6af582d4.jpg',
+      lyhyt: 'Valkoinen barokkikatedraali kahdella tornilla sinistä taivasta vasten.',
+      selite: 'Kuvassa on Pyhän Sofian katedraalin valkoinen julkisivu, jossa on kaksi vihreäkattoista tornia.',
+      lahde: 'Valokuva: Alex Zelenko, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alex Zelenko',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Belarus-Polatsk-Cathedral_of_Sophia-3.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Polotskin Pyhän Sofian katedraali',
+    nimio: 'Polotsk Sofia',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuka rakennutti alkuperäisen katedraalin?',
+      'Millä tavalla rakennusta käytetään nykyään?',
+    ],
+    korostukset: ['Vilnan barokin|Vilnan barokin'],
+    nappi: 'Barokkitornit vanhan pyhäkön paikalla',
+    // 28.7586 E / 55.4864 N — en-Wikipedia "Saint Sophia Cathedral, Polotsk", osiot "History" ja "Reconstruction"
+    laudat: {
+      maailmankartta: { x: 6792, y: 1143.2 },
+    },
+    teksti: 'Pyhän Sofian katedraali kohoaa Polotskissa Valko-Venäjällä Polota- ja '
+      + 'Länsi-Väinäjoen yhtymäkohdassa. Sen edeltäjän rakennutti ruhtinas Vseslav vuosina '
+      + '1044–1066, ja siinä oli aluksi seitsemän kupolia, joiden määrä väheni viiteen vuoden '
+      + '1447 tulipalon jälkeen. Vuosina 1738–1750 rakennus rakennettiin uudelleen Vilnan '
+      + 'barokin tyyliin, ja työn urakoi varsovalainen muurari Błażej Kosiński. Kupoleita ei '
+      + 'rakennettu uudelleen, mutta rakennukseen tuli tornit. Nykyään katedraali toimii '
+      + 'Polotskin museoalueella konserttisalina, ja siellä on urut.',
+    lahde: 'en-Wikipedia "Saint Sophia Cathedral, Polotsk", osiot "History" ja "Reconstruction" '
+      + '(tarkistettu 30.9.2026).',
+  },
+  {
+    id: 'gomelin-palatsi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260930/blr-nosto-gomelin-palatsi-1d14486e.jpg',
+      lyhyt: 'Palatsin torniosa parvekkeineen ja valkoinen pylväikkö puiden välissä.',
+      selite: 'Kuvassa on Gomelin palatsin keltainen torniosa, jossa on valkoinen parveke ja vihreä kupoli. Etualalla on valkoinen pylväikkö.',
+      lahde: 'Valokuva: Hanna782, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Hanna782',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B4%D0%B2%D0%BE%D1%80%D1%86%D0%B0_%D0%B2_%D0%BF%D0%B0%D1%80%D0%BA%D0%B5_%D0%A0%D1%83%D0%BC%D1%8F%D0%BD%D1%86%D0%B5%D0%B2%D1%8B%D1%85-%D0%9F%D0%B0%D1%81%D0%BA%D0%B5%D0%B2%D0%B8%D1%87%D0%B5%D0%B9_7.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Gomelin Rumjantsev-Paskevitš-palatsi',
+    nimio: 'Gomel-palatsi',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka suunnitteli palatsin alkuperäisen uusklassisen version?',
+      'Mitä Paskevitš lisäsi palatsiin?',
+    ],
+    korostukset: ['Paskevitšille|Paskevitšille'],
+    nappi: 'Kenttämarsalkkojen kotina Sozhin rannalla',
+    // 31.0164 E / 52.4222 N — en-Wikipedia "Gomel Palace", osiot "History" ja "Park"
+    laudat: {
+      maailmankartta: { x: 6867.2, y: 1283.2 },
+    },
+    teksti: 'Rumjantsev-Paskevitš-palatsi sijaitsee Gomelissa Valko-Venäjällä Sozh-joen rannalla. '
+      + 'Kenttämarsalkka Pjotr Rumjantsev rakennutti sen vuosina 1777–1796, ja uusklassisen '
+      + 'alkuperäissuunnitelman laati Ivan Starov. Vuonna 1834 kruunu osti kiinteistön, ja se '
+      + 'siirtyi kenttämarsalkka Ivan Paskevitšille, joka lisäsi palatsiin nelikerroksisen '
+      + 'tornin ja kolmikerroksisen siiven. Palatsia ympäröivä puisto ulottuu noin 800 metrin '
+      + 'matkalle joen varrella, ja sen alueella on Pietarin ja Paavalin kirkko, joka '
+      + 'vihittiin käyttöön vuonna 1824. Nykyään rakennuksessa toimii museo.',
+    lahde: 'en-Wikipedia "Gomel Palace", osiot "History" ja "Park" (tarkistettu 30.9.2026).',
+  },
 ];
