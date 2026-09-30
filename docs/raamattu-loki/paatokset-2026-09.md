@@ -9355,3 +9355,7 @@ Päätoimittaja 30.9.2026 klo 01.04 (Sisältökirjurin maakuntajono valmis): TUR
 ## TARKENNUS: VENÄJÄN EUROOPAN RAJA JA KRIM (30.9.2026 klo 01.49)
 
 Päätoimittaja 30.9.2026 klo 01.49: RUS-maakuntasisältöön Uralin länsipuoli (myös Krasnodar, Rostov, Volgograd, Samara, Saratov, Penza, Tatarstan, Udmurtia, Baškortostan, Orenburg) ja Kalmukia (Kuma–Manytš-linjan pohjoispuoli); Pohjois-Kaukasian tasavallat pois. Krim ja Sevastopol eivät koskaan Venäjän sisältöön: pelissä ne ovat Ukrainaa (kansainvälinen tunnustus, Suomen kanta) — sisältö UKR-avaimilla; Karttaseppä tarkistaa, että maa- ja maakuntadata (rajat, huntu, korostus, nostojen maa-avaimet) näyttää Krimin UKR:nä.
+
+## TARKENNUS: KOKORUUTU MYÖS VISAN KUVILLE (30.9.2026 klo 03.28)
+
+Päätoimittaja 30.9.2026 klo 03.28 (Laitetestaajan BUILD 61 -savuke, Pelikoodarin kysymys): visan kätkökuva, kysymyskuva ja lippu avautuvat samaan kokoruutuun kuin nostokortin kuva (web openLightbox). Täsmentää 26.9. linjausta A: kokoruutu kaikille kuville, joilla ei ole omaa selitettä; paperikehys tyhjällä selitealueella näyttää keskeneräiseltä.
