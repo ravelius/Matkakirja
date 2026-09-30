@@ -269,12 +269,13 @@ namespace Matkakirja.Natiivi
             // Alaspäin vain 0,2 m (1.0.55-kuvat): täysi laajennus kaivoi kallion lattian alta ja järvi näkyi tilan alla.
             Vector3 lo = Vector3.Min(a, b) - new Vector3(laajennus, Mathf.Min(laajennus, 0.2f), laajennus), hi = Vector3.Max(a, b) + Vector3.one * laajennus;
             // Vaakakuva (Päätoimittaja 30.9., keittiö vaakana: kamera katsoi seiniä): leikkausta levennetään vaakasuunnassa niin,
-            // että se kattaa noin 90 % näkymän leveydestä tilan kohdalla (pystyssä ennallaan).
+            // että se kattaa koko näkymän leveyden (Päätoimittaja 30.9.: build 79:n 0,9 näkyi perspektiivin vuoksi ~75 %:na,
+            // tavoite 100 %; kerroin 1,2 tilan keskikohdan syvyydellä). Pystyssä ennallaan.
             if (kamera != null && kamera.aspect > 1.05f)
             {
                 var kk = (lo + hi) * 0.5f;
                 float hf = Mathf.Atan(Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad) * kamera.aspect);
-                float tarve = Vector3.Distance(kamera.transform.position, kk) * Mathf.Tan(hf) * 0.9f;
+                float tarve = Vector3.Distance(kamera.transform.position, kk) * Mathf.Tan(hf) * 1.2f;
                 float lisaX = Mathf.Max(0f, tarve - (hi.x - lo.x) * 0.5f), lisaZ = Mathf.Max(0f, tarve - (hi.z - lo.z) * 0.5f);
                 lo.x -= lisaX; hi.x += lisaX; lo.z -= lisaZ; hi.z += lisaZ;
             }
