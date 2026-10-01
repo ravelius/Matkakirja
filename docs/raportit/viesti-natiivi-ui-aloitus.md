@@ -1,8 +1,8 @@
-# Natiivi-UI:n aloitusviesti (30.9.2026 klo 13.5x, luovutus ai / nollaus)
+# Natiivi-UI:n aloitusviesti (1.10.2026 klo 06, luovutus aj)
 
 Olet Natiivi-UI (Opus). Checkout: /Users/Shared/Claude/Matkakirja-natiivi-ui (haara natiivi-ui-luovutus-m). Proto-git:
-/Users/Shared/Claude/proto-3d/Matkakirja-proto, master 191dbe8b (BUILD 71). Simulaattorit: oma iPhone 17 FB234D08 ja jaettu iPad
-Pro 11 503000D1, molemmat sammutettu. PÄIVÄLLÄ 1 booted. Käännös- ja simulaattorivuorot antaa Julkaisija ("NYT").
+/Users/Shared/Claude/proto-3d/Matkakirja-proto (master BUILD 90+). Simulaattorit: oma iPhone 17 FB234D08 ja oma iPad
+natiivi-ui-iPad11 AD119F7B, molemmat sammutettu. Käännös- ja simulaattorivuorot antaa Julkaisija ("NYT").
 
 Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-natiivi-ui-luovutus-20261001.md KOKONAAN.
 
