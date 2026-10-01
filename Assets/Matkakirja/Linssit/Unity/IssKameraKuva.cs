@@ -132,11 +132,12 @@ namespace Matkakirja.Natiivi
                     }
                 }
                 foreach (var ru in ruudut) if (tci.TryGetValue(ru.Tunnus, out var o)) ty.Data.Ruudut.Add((ru, o));
+                ty.Suunnittele(naytteet);   // laattajoukko ensin: haku lehtilaattojen alueesta
 
                 // 4) laatat: TCI näkymän tasoilta, SCL karkeimmalta tasolta
                 var haku = new List<(string url, CogTaso taso, long alku, long pit, Action<byte[]> valmis)>();
                 foreach (var (ru, o) in ty.Data.Ruudut)
-                    foreach (var (taso, tx, tyy) in Kuvasuunnitelma.Laatat(ru, o, naytteet))
+                    foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, o))
                     {
                         var (alku, pit) = o.Tasot[taso].Alue(tx, tyy); var avain = (ru.Tunnus, taso, tx, tyy); var tt = o.Tasot[taso];
                         haku.Add((ru.Url, tt, alku, pit, d => ty.Data.Pakatut[avain] = (tt, d)));   // puretaan piirrossa (Valimuistikatto)
@@ -183,21 +184,45 @@ namespace Matkakirja.Natiivi
                 Tila = "työstö";
                 foreach (var ru in ruudut)
                     if (scl.TryGetValue(ru.Tunnus, out var so)) ty.LisaaMaamaski(ru, so, (x, y) => sclPuretut.TryGetValue((ru.Tunnus, x, y), out var l) ? l : null);
-                ty.Suunnittele(naytteet);
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
-                var tyot = Task.Run(() => Parallel.ForEach(lista, new ParallelOptions { MaxDegreeOfParallelism = ytimia }, l =>
+                // Avomeri (ei S2-ruutua): TCI:n tyypillinen meri tci_lutin läpi, ettei täyttö erotu tummana kaistana (laitekoe 2).
+                byte[] meri = { 14, 22, 30 };
+                if (ty.Data.Lut != null) for (int c = 0; c < 3; c++) meri[c] = ty.Data.Lut[meri[c]];
+                // Tasot tarkimmasta juureen: lehti piirretään datasta, isä kootaan lapsistaan (sama sisältö ja pilvet kaikilla tasoilla).
+                var nelj = new ConcurrentDictionary<(int, int, int), byte[]>();
+                var tyot = Task.Run(() =>
                 {
-                    var rgba = new byte[256 * 256 * 4];
-                    ty.Piirra(l.z, l.x, l.y, rgba);
-                    for (int i = 0; i < rgba.Length; i += 4) if (rgba[i + 3] == 0) { rgba[i] = 18; rgba[i + 1] = 30; rgba[i + 2] = 38; rgba[i + 3] = 255; }   // avomeri
-                    var png = ImageConversion.EncodeArrayToPNG(rgba, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
-                    var polku = Path.Combine(laatat, ty.Polku(l.z, l.x, l.y) + ".png");
-                    Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, png);
-                    System.Threading.Interlocked.Increment(ref kirjoitettu);
-                }));
+                    foreach (var taso in lista.GroupBy(l => l.z).OrderByDescending(g => g.Key))
+                    {
+                        var seuraavat = new ConcurrentDictionary<(int, int, int), byte[]>();
+                        Parallel.ForEach(taso, new ParallelOptions { MaxDegreeOfParallelism = ytimia }, l =>
+                        {
+                            var rgba = new byte[256 * 256 * 4];
+                            var lapset = new byte[4][]; bool kaikki = true;
+                            for (int k = 0; k < 4; k++) if (!nelj.TryGetValue((l.z + 1, 2 * l.x + k % 2, 2 * l.y + k / 2), out lapset[k])) kaikki = false;
+                            if (kaikki) KuvanTyosto.Kokoa(lapset, rgba);
+                            else
+                            {
+                                ty.Piirra(l.z, l.x, l.y, rgba);
+                                for (int k = 0; k < 4; k++) if (lapset[k] != null)   // osa lapsista: niiden neljännekset päälle
+                                {
+                                    int ox = (k % 2) * 128, oy = (k / 2) * 128;
+                                    for (int y = 0; y < 128; y++) Buffer.BlockCopy(lapset[k], y * 512, rgba, ((oy + y) * 256 + ox) * 4, 512);
+                                }
+                            }
+                            for (int i = 0; i < rgba.Length; i += 4) if (rgba[i + 3] == 0) { rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 255; }
+                            seuraavat[l] = KuvanTyosto.Puolita(rgba);
+                            var png = ImageConversion.EncodeArrayToPNG(rgba, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
+                            var polku = Path.Combine(laatat, ty.Polku(l.z, l.x, l.y) + ".png");
+                            Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, png);
+                            System.Threading.Interlocked.Increment(ref kirjoitettu);
+                        });
+                        nelj = seuraavat;
+                    }
+                });
                 while (!tyot.IsCompleted) { Edistyminen = 0.6f + 0.25f * kirjoitettu / Math.Max(1, lista.Count); yield return null; }
                 if (tyot.IsFaulted) { Loki("työstö: " + tyot.Exception?.GetBaseException().Message); yield break; }
                 int zmax = lista.Max(l => l.z);
@@ -267,7 +292,10 @@ namespace Matkakirja.Natiivi
         static string Tiedot(string id, DateTime utc, KuvaKamera kk, List<Nayte> naytteet, string muoto, double az, double korkeus,
             List<S2Ruutu> ruudut, List<S2IndeksiRuutu> ehdokkaat, long tavut)
         {
-            var iss = IssNyt.Paikka(utc); double km = IssNyt.KorkeusKm(utc);
+            // Kameran paikka (kuvauskulma voi poiketa todellisesta radasta, laitekoe 2: JSONissa oli todellinen paikka).
+            var (iLat, iLon) = Kuvasuunnitelma.Geodeettinen(kk.Paikka); var pinta = Kuvasuunnitelma.Ecef(iLat, iLon);
+            double km = Math.Sqrt(Math.Pow(kk.Paikka.x - pinta.x, 2) + Math.Pow(kk.Paikka.y - pinta.y, 2) + Math.Pow(kk.Paikka.z - pinta.z, 2)) / 1000;
+            var iss = (Lat: iLat, Lon: iLon);
             var keski = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
             double mm = 12 / Math.Tan(kk.PystykenttaAst * Math.PI / 360);
             var ic = System.Globalization.CultureInfo.InvariantCulture;

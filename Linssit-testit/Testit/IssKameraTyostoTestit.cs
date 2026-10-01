@@ -42,7 +42,7 @@ namespace Matkakirja.Linssit.Testit
             var ru = new S2Ruutu { Tunnus = "35VLG", Url = url, W = 23.3, S = 59.4, E = 25.3, N = 60.45 };
             var ty = new KuvanTyosto(); ty.Data.Ruudut.Add((ru, tci)); ty.Suunnittele(naytteet);
             long tavut = 0;
-            foreach (var (taso, tx, ty2) in Kuvasuunnitelma.Laatat(ru, tci, naytteet))
+            foreach (var (taso, tx, ty2) in ty.HaettavatLaatat(ru, tci))
             {
                 var (a, n) = tci.Tasot[taso].Alue(tx, ty2); tavut += n;
                 ty.Data.Laatat[("35VLG", taso, tx, ty2)] = CogOtsake.PuraLaatta(tci.Tasot[taso], Curl(url, a, n));
@@ -64,6 +64,17 @@ namespace Matkakirja.Linssit.Testit
                 for (int py = 0; py < 256; py++) for (int px = 0; px < 256; px++) for (int c = 0; c < 3; c++)
                     kuva[(((y - y0) * 256 + py) * W + (x - x0) * 256 + px) * 3 + c] = rgba[(py * 256 + px) * 4 + c];
             }
+            // Lehtien peitto: ruudun sisällä ei aukkoja (laitekoe 2: solupohjainen haku jätti tummia kaistoja).
+            int aukot = 0, sisalla = 0; var l2 = new byte[256 * 256 * 4];
+            foreach (var (z, x, y) in ty.Lehdet())
+            {
+                var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
+                if (w0 < ru.W + 0.05 || e0 > ru.E - 0.05 || s0 < ru.S + 0.05 || n0 > ru.N - 0.05) continue;   // kokonaan ruudun sisällä
+                Uudelleenprojisointi.Laatta(ty.Data, z, x, y, l2); sisalla++;
+                for (int i = 3; i < l2.Length; i += 4) if (l2[i] == 0) aukot++;
+            }
+            Console.WriteLine($"  lehdet ruudun sisällä {sisalla}, läpinäkyviä pikseleitä {aukot}");
+            Oleta.Tosi(aukot < sisalla * 65536 * 0.001, "aukkoja lehdissä");
             Console.WriteLine($"  400 mm: {ty.Laatat.Count} laattaa (juuri {ty.Rx}×{ty.Ry}, z{ty.Laatat.Min(l => l.z)}–{zmax}), haku {tavut / 1e6:0.0} Mt {haku} ms, z{zmax - 1} {huiput.Count} laattaa {kello.ElapsedMilliseconds} ms");
             using var f = File.Create(ppm); var h = System.Text.Encoding.ASCII.GetBytes($"P6 {W} {H} 255\n"); f.Write(h, 0, h.Length); f.Write(kuva, 0, kuva.Length);
         }

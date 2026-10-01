@@ -59,6 +59,66 @@ namespace Matkakirja.Linssit.IssKamera
             N = LaatanLat(JuuriZ, Y0); S = LaatanLat(JuuriZ, Y0 + Ry);
         }
 
+        /// <summary>Lehtilaatat: joukon laatat, joilla ei ole lapsia joukossa (niiden data haetaan, isät kootaan lapsista).</summary>
+        public List<(int z, int x, int y)> Lehdet()
+        {
+            var r = new List<(int, int, int)>();
+            foreach (var (z, x, y) in Laatat)
+                if (!Laatat.Contains((z + 1, 2 * x, 2 * y)) && !Laatat.Contains((z + 1, 2 * x + 1, 2 * y))
+                    && !Laatat.Contains((z + 1, 2 * x, 2 * y + 1)) && !Laatat.Contains((z + 1, 2 * x + 1, 2 * y + 1))) r.Add((z, x, y));
+            return r;
+        }
+
+        /// <summary>
+        /// COG-laatat ruudulle lehtilaattojen alueesta (laitekoe 2, 1.10.: solupohjainen haku jätti Mercator-laattojen reunoille
+        /// aukkoja → tummat kaistat): jokainen lehti tasolla, jonka pikseli ≤ lehden pikseli, rajaus 9 reunapisteestä.
+        /// </summary>
+        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o)
+        {
+            var r = new HashSet<(int, int, int)>(); int v = ru.Vyohyke;
+            foreach (var (z, x, y) in Lehdet())
+            {
+                var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
+                if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
+                int taso = o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2));
+                var t = o.Tasot[taso]; double pm = o.TasonPikseliM(taso);
+                double xmin = double.MaxValue, xmax = double.MinValue, ymin = double.MaxValue, ymax = double.MinValue;
+                for (int i = 0; i <= 2; i++) for (int j = 0; j <= 2; j++)
+                {
+                    var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, i * 128, j * 128);
+                    var (e, no) = Utm.Eteen(la, lo, v);
+                    double px = (e - o.Ita0) / pm, py = (o.Pohjoinen0 - no) / pm;
+                    xmin = Math.Min(xmin, px - 2); xmax = Math.Max(xmax, px + 2); ymin = Math.Min(ymin, py - 2); ymax = Math.Max(ymax, py + 2);
+                }
+                int tx0 = Math.Max(0, (int)Math.Floor(xmin / t.LaattaL)), tx1 = Math.Min(t.LaattojaX - 1, (int)Math.Floor(xmax / t.LaattaL));
+                int ty0 = Math.Max(0, (int)Math.Floor(ymin / t.LaattaK)), ty1 = Math.Min(t.LaattojaY - 1, (int)Math.Floor(ymax / t.LaattaK));
+                for (int tx = tx0; tx <= tx1; tx++) for (int ty = ty0; ty <= ty1; ty++) r.Add((taso, tx, ty));
+            }
+            return r;
+        }
+
+        /// <summary>RGBA 256² → neljännes 128² (2 × 2 -keskiarvo) isälaatan koontiin.</summary>
+        public static byte[] Puolita(byte[] rgba)
+        {
+            var o = new byte[128 * 128 * 4];
+            for (int y = 0; y < 128; y++) for (int x = 0; x < 128; x++) for (int c = 0; c < 4; c++)
+            {
+                int a = ((2 * y) * 256 + 2 * x) * 4 + c;
+                o[(y * 128 + x) * 4 + c] = (byte)((rgba[a] + rgba[a + 4] + rgba[a + 1024] + rgba[a + 1028] + 2) / 4);
+            }
+            return o;
+        }
+
+        /// <summary>Isälaatta neljästä neljänneksestä (järjestys: vasen ylä, oikea ylä, vasen ala, oikea ala).</summary>
+        public static void Kokoa(byte[][] nelj, byte[] rgba)
+        {
+            for (int k = 0; k < 4; k++)
+            {
+                int ox = (k % 2) * 128, oy = (k / 2) * 128;
+                for (int y = 0; y < 128; y++) Buffer.BlockCopy(nelj[k], y * 128 * 4, rgba, ((oy + y) * 256 + ox) * 4, 128 * 4);
+            }
+        }
+
         /// <summary>Laatan tiedostopolku rajatussa jaossa: "{t}/{x'}/{y'}" (Cesiumin {z}/{x}/{reverseY} ei käytössä: y pohjoisesta).</summary>
         public string Polku(int z, int x, int y)
         {
