@@ -219,6 +219,9 @@ namespace Matkakirja.Natiivi
             LinssiKysymykset.AvoinNosto = () => tila == Tila.Ihminen ? nostokortti.Auki : null;
             // Kortin tila tutkimusvaiheen muistiin (web tallennaMuisti: kortti auki / kiinni).
             nostokortti.Muuttui += () => LinssiUi.IhmisenMatka?.Tutkimus?.KorttiAuki(nostokortti.Auki);
+            // NOSTOKORTTI-pohja: löytökuva (juurikerroksessa kortin yläpuolella) piiloon kortin ajaksi, ettei se peitä kortin
+            // kapiteelia ja otsikkoa (käsitesti 953fe5bb); kortti näyttää saman kuvan heroina.
+            nostokortti.Muuttui += () => kertomuskuva.style.visibility = nostokortti.Auki != null ? Visibility.Hidden : StyleKeyword.Null;
             // Virtanapit palkkiin kellon ja ohjainten väliin (web .aikajana.kertomus .ihmisen-vananapit margin 0 auto).
             tutkimus = new IhmisenTutkimusNakyma(kerros, ylarivi, 2, nostokortti);
             // Virtanappien rivi tulee ja menee tutkimusvaiheen mukana: saaririvin korkeus uudelleen (löydös 74).
