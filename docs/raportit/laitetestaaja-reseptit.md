@@ -477,4 +477,4 @@ echo "ui ylapalkki napautus" > ui-komento.txt  # takaisin
 - A (kylmä verho -uusinta rauhallisemmassa kuormassa): ei uusittu.
 
 ## Ihmisen matka -testikomennot (Pelikoodari 1.10.)
-`ui linssi matka <x>` (esim. `nosto 20`) käynnistää testitilan ilman linssiä; `matka pois` EI ole alikomento. Poistu `ui linssi pois` / `ui linssi sulje`, ei `ui linssi matka pois` (jättää mustan intro-ruudun).
+`ui linssi matka <x>` (esim. `nosto 20`) käynnistää testitilan ilman linssiä; `matka pois` EI ole alikomento. Linssin sulkee `ui linssi sulje` (ei `ui linssi pois`). Testitilasta poistuu BUILD 98:sta `ui linssi matka pois` (aiemmin jätti mustan intro-ruudun).
