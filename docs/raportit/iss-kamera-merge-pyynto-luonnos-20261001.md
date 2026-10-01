@@ -1,7 +1,8 @@
 # ISS-kamera, pelaajan kuva — merge-pyynnön luonnos Natiivisepälle (Linssiseppä 2, 1.10.2026)
 
-**Haara:** proto `linssiseppa2/iss-kamera-kuva` (28 committia), pohja Linssiseppä 1:n `linssiseppa/iss-fotorealismi`
-(S2-erä mergetään ensin, tämä sen päälle). Viimeisin yhdistelmäkäännös 3b4b4caa (87dff28a), kuvat Päätoimittajalla.
+**Haara:** proto `linssiseppa2/iss-kamera-kuva-2` (5a785a33; lineaarinen: Linssiseppä 1:n `linssiseppa/iss-fotorealismi` →
+kaarisäätimet 44085dd0 + 2fee56df + 5e430ef7 → kamera 32 committia). S2-erä mergetään ensin, tämä sen päälle. Hyväksytyt kuvat
+lopullinen3 (0b69f6d2) Päätoimittajalla 1.10. 21.3x; asetukset oletuksina 5a785a33 (todennus laitteella ennen merge-pyyntöä).
 
 ## Mitä tulee
 - **KUVAA-nappi** kytkinpöytään OMA PAIKKA -vivun tilalle (omistajan päätös 1.10., A). Pohja: Linnanrakentajan ISS-paneeli v3
@@ -36,5 +37,4 @@ Omistajan raja ~100 Mt/kuva (1.10.). Muisti: laatat pakattuina, purku rajattuun 
 ## Avoinna ennen junaa
 - Fyysisen iPadin (00008103) muisti ja aika (Natiivisepän ehto) — ei vielä mitattu.
 - Rajausruutu, muotovalinta ja edistymisilmaisin: Natiivi-UI:n kameran päällyspohja (omistaja hyväksyy).
-- Pilvet: peitto kasvaa etäisyyden mukaan (59c9bbe2), kaukana isot kirkkaat kentät (ca6fdee6); lopulliset arvot Päätoimittajan
-  hyväksynnällä (omistajan Cupola-mallikuva) → oletuksiksi kameraan ennen merge-pyyntöä.
+- Oletusasetusten (5a785a33) todennus ilman testikomentoja: yksi kuva laitteella/simulaattorilla ennen merge-pyyntöä.
