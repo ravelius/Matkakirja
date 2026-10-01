@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2506, teksti: 'Ihmisen matka: vuosiluvun liike-epäterävyys myö… (#3790)' },
   { v: 2505, teksti: 'ISS-kytkinpöytä v4: VUOROKAUSI-nuppi, NOPEUS-as… (#3794)' },
   { v: 2504, teksti: 'UI-pohjat webiin, vaihe 1: NOSTOKORTTI ja KORTT… (#3782)' },
   { v: 2503, teksti: 'ISS-kytkinpöytä v3: KUVAA-painike ja VUODENAIKA… (#3773)' },
