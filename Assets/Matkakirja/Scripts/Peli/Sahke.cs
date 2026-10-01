@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         public const string Osoite = "https://matkakirja-sahke.samireivinen.workers.dev";
         /// <summary>Verkkokutsun katto (web SAHKE_AIKAKATKO_MS = 12 000).</summary>
         public const int AikakatkoS = 12;
+        /// <summary>Jäsenavaimen otsake (worker/sahke AVAIN_OTSAKE; 1.10.2026: avain ei enää osoitteessa).</summary>
+        public const string AvainOtsake = "x-sahke-avain";
         /// <summary>Liittymiskoodin pituus (web SAHKE_KOODIN_PITUUS; sitova).</summary>
         public const int KoodinPituus = 6;
         /// <summary>Koodin aakkosto: ei O/0, I/1, S/5 (web SAHKE_KOODIN_MERKIT; sitova).</summary>
@@ -382,9 +384,10 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Yksi kutsu: metodi "GET", "POST" tai "HEAD"; polku alkaa "/" (juuri = ""); runko JSON tai null.
         /// <paramref name="valmis"/> kutsutaan tasan kerran (pääsäikeessä); katkos ja aikakatkaisu = Tila 0.
-        /// Toteutus ei heitä poikkeusta.
+        /// Toteutus ei heitä poikkeusta. <paramref name="avain"/> (jäsenavain tai null) kulkee otsakkeessa
+        /// SahkeVakiot.AvainOtsake, ei osoitteessa (1.10.2026, tietoturvakorjaus: ?avain= jäi palvelinlokeihin).
         /// </summary>
-        void Kutsu(string metodi, string polku, string runko, Action<SahkeVastaus> valmis);
+        void Kutsu(string metodi, string polku, string runko, string avain, Action<SahkeVastaus> valmis);
     }
 
     // =====================================================================
@@ -624,13 +627,13 @@ namespace Matkakirja.Natiivi
 
         // --- verkko (web kohta 7) ----------------------------------------------
 
-        void Kutsu(string metodi, string polku, string runko, Action<SahkeVastaus> valmis)
+        void Kutsu(string metodi, string polku, string runko, Action<SahkeVastaus> valmis, string avain = null)
         {
             if (yhteys == null || string.IsNullOrEmpty(SahkeVakiot.Osoite)) { valmis(SahkeVastaus.Katkos()); return; }
             bool kutsuttu = false;
             try
             {
-                yhteys.Kutsu(metodi, polku, runko, v =>
+                yhteys.Kutsu(metodi, polku, runko, avain, v =>
                 {
                     if (kutsuttu) return;
                     kutsuttu = true;
@@ -660,8 +663,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Web sahkeHaeTila: tilakyselyn polku.</summary>
         public static string TilaPolku(RetkikuntaTunnus t) =>
-            "/retkikunta/tila?koodi=" + SahkeTeksti.LomakeKoodaa(t.Koodi) + "&jasenId=" + SahkeTeksti.LomakeKoodaa(t.JasenId)
-            + "&avain=" + SahkeTeksti.LomakeKoodaa(t.Avain);
+            "/retkikunta/tila?koodi=" + SahkeTeksti.LomakeKoodaa(t.Koodi) + "&jasenId=" + SahkeTeksti.LomakeKoodaa(t.JasenId);
 
         // --- terveystarkistus ja pollaus (web kohdat 8, 13, 17) ---------------
 
@@ -687,7 +689,7 @@ namespace Matkakirja.Natiivi
                     if (v.Ok) Paata(true);
                     else if (v.Tila == 401 || v.Tila == 404) { AsetaTunnus(null); Paata(true); }
                     else Paata(false);
-                });
+                }, t.Avain);
             }
             else Kutsu("HEAD", "", null, v => Paata(v.Tila != 0 && v.Tila != 403));
         }
@@ -722,7 +724,7 @@ namespace Matkakirja.Natiivi
                 if (v.Ok && nyt != null && nyt.Koodi == t.Koodi && nyt.JasenId == t.JasenId) KasitteleTila(v.Data);
                 ViritaPollaus();
                 valmis?.Invoke();
-            });
+            }, t.Avain);
         }
 
         /// <summary>

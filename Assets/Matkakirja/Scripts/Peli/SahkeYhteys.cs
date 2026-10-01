@@ -23,7 +23,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Workerin juuri; oletus SahkeVakiot.Osoite (testikomento voi ohjata muualle).</summary>
         public string Osoite = SahkeVakiot.Osoite;
 
-        public void Kutsu(string metodi, string polku, string runko, Action<SahkeVastaus> valmis)
+        public void Kutsu(string metodi, string polku, string runko, string avain, Action<SahkeVastaus> valmis)
         {
             if (string.IsNullOrEmpty(Osoite)) { valmis?.Invoke(SahkeVastaus.Katkos()); return; }
             UnityWebRequest r;
@@ -39,6 +39,7 @@ namespace Matkakirja.Natiivi
                     r.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(runko)) { contentType = "application/json" };
                     r.SetRequestHeader("Content-Type", "application/json");
                 }
+                if (!string.IsNullOrEmpty(avain)) r.SetRequestHeader(SahkeVakiot.AvainOtsake, avain);
                 r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
                 r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             }
