@@ -4339,8 +4339,10 @@ test('uusi peli tyhjentää muistit vasta varmistuksen jälkeen', () => {
   // pakollinen, koska passin leimat ja laukun tavarat ovat pelin ainoa
   // pysyvä kertymä eikä niitä saa takaisin.
   const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
-  assert.match(main, /newgame-btn'\)\.addEventListener\('click', \(\) => nollaaDialog\.showModal\(\)\)/,
+  // Varmistus on KORTTI-pohja (modaali, UI-pohjat 1.10.2026) tai lipulla vanha dialogi; tyhjennys vain Aloita alusta -napista.
+  assert.match(main, /newgame-btn'\)\.addEventListener\('click', \(\) => \{\s*if \(vahvistusPohjalla\(\)\) avaaNollausKortti\(\);\s*else nollaaDialog\.showModal\(\);/,
     'uusi peli tyhjentää ilman varmistusta');
+  assert.match(main, /modaali: true,[\s\S]{0,200}aloita: \(_nappi, pohja\) => \{[\s\S]{0,300}tyhjennaMuistit\(\);/);
   // Avaimet poistetaan etuliitteen perusteella, jotta myöhemmin lisätty
   // asetus ei jää siivouksen ulkopuolelle.
   assert.match(main, /startsWith\('matkakirja'\)/);
