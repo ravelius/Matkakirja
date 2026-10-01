@@ -393,6 +393,15 @@ export function lisaaBlender(rakennusJson, blender) {
       rakennusJson.ymparisto.aluskasvit = { atlas: B(Y('aluskasvit.png')), atlas_hamara: B(Y('aluskasvit-hamara.png')),
         kortit: B(Y('aluskasvit.json')), lista: B(Y('aluskasvit-lista.json')) };
     }
+    // ASTC-mipketjut (Siirtoseppä 1.10., ensilataus v2: iPadin LoadImage-purkupiikit pois). png/jpg-kentät jäävät
+    // (simulaattori ja vanhat natiivit); *_astc vain, jos .astcm on viety. Lohko 4×4, alfa säilyy, normaalikartta lineaarisena.
+    const ya = rakennusJson.ymparisto;
+    const astc = (o, k, p) => { if (o && on.has(Y(p))) o[k] = B(Y(p)); };
+    astc(ya, 'puukortit_astc', 'puukortit-4x4.astcm'); astc(ya.hamara, 'puukortit_astc', 'puukortit-hamara-4x4.astcm');
+    if (ya.puukortit_normaali) astc(ya, 'puukortit_normaali_astc', 'puukortit-normaali-4x4.astcm');
+    astc(ya, 'horisontti_kuva_astc', 'horisontti-1k-4x4.astcm'); astc(ya.hamara, 'horisontti_kuva_astc', 'horisontti-hamara-1k-4x4.astcm');
+    if (ya.taivas) { astc(ya, 'taivas_astc', 'taivas-2k-4x4.astcm'); astc(ya, 'taivas_hamara_astc', 'taivas-hamara-2k-4x4.astcm'); }
+    astc(ya.aluskasvit, 'atlas_astc', 'aluskasvit-4x4.astcm'); astc(ya.aluskasvit, 'atlas_hamara_astc', 'aluskasvit-hamara-4x4.astcm');
   }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
