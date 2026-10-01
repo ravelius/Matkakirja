@@ -50,12 +50,16 @@ namespace Matkakirja.Natiivi
             else if (k.upArrowKey.wasPressedThisFrame) Paina("ylos");
             else if (k.downArrowKey.wasPressedThisFrame) Paina("alas");
             else if (k.escapeKey.wasPressedThisFrame) Paina("esc");
+            // (d) Mac-tuntuma: + / − zoomaavat karttaa ruudun keskeltä, kun mikään näkymä ei ole auki.
+            else if (k.equalsKey.wasPressedThisFrame || k.numpadPlusKey.wasPressedThisFrame) Paina("plus");
+            else if (k.minusKey.wasPressedThisFrame || k.numpadMinusKey.wasPressedThisFrame) Paina("miinus");
         }
 
-        /// <summary>Näppäin nimellä (myös testikomento): vasen | oikea | ylos | alas | esc.</summary>
+        /// <summary>Näppäin nimellä (myös testikomento): vasen | oikea | ylos | alas | esc | plus | miinus.</summary>
         public static string Paina(string nappain)
         {
-            foreach (var h in kasittelijat.ToArray()) // kopio: sulkeminen voi poistaa käsittelijän kesken silmukan
+            bool zoomi = nappain == "plus" || nappain == "miinus";
+            if (!zoomi) foreach (var h in kasittelijat.ToArray()) // kopio: sulkeminen voi poistaa käsittelijän kesken silmukan
             {
                 bool auki;
                 try { auki = h.Auki(); } catch (Exception) { auki = false; }
@@ -73,6 +77,13 @@ namespace Matkakirja.Natiivi
                 return Viimeisin = nappain + " → " + h.Nimi;
             }
             if (nappain == "esc") { UiNakymat.Hae()?.SuljeKaikki(); return Viimeisin = "esc → sulje kaikki"; }
+            if (nappain == "plus" || nappain == "miinus")
+            {
+                var kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+                if (kierto == null || UiKerros.Peittaa(new Vector2(Screen.width / 2f, Screen.height / 2f))) return Viimeisin = nappain + " → ei karttaa";
+                bool ok = kierto.MacZoomaa(nappain == "plus" ? 1.35 : 1 / 1.35, new Unity.Mathematics.float2(Screen.width / 2f, Screen.height / 2f));
+                return Viimeisin = nappain + (ok ? " → kartta" : " → kartta estetty");
+            }
             return Viimeisin = nappain + " → ei vastaanottajaa";
         }
     }

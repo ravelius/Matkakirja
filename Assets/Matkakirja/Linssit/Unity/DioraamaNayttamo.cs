@@ -89,6 +89,8 @@ namespace Matkakirja.Natiivi
         public DioraamaIkkunat Ikkunat { get; private set; }
         /// <summary>Fotogrammetrinen ulkokuori laatutasoineen (Olavinlinna, Siirtoseppä 29.9.2026).</summary>
         public DioraamaUlkokuori Ulkokuori { get; private set; }
+        /// <summary>Linnan ympäristö ja järvi (Boat Attack -vesi, maasto, puut, horisontti; Siirtoseppä 1.10.2026).</summary>
+        public DioraamaYmparisto Ymparisto { get; private set; }
         /// <summary>Lokkiparvet lokit:-tyhjistä (tunnelma).</summary>
         public DioraamaLokit Lokit { get; private set; }
         /// <summary>Sykkivä vihje ensimmäisellä käynnillä (elävä linna).</summary>
@@ -129,6 +131,7 @@ namespace Matkakirja.Natiivi
             n.Savu = new DioraamaSavu(n.transform);
             n.Ikkunat = new DioraamaIkkunat(n.transform);
             n.Ulkokuori = new DioraamaUlkokuori(n.transform);
+            n.Ymparisto = new DioraamaYmparisto(n.transform);
             n.Lokit = new DioraamaLokit(n.transform);
             n.Syke = new DioraamaSyke(n.transform);
             n.Etsinta = new DioraamaEtsinta(n.transform);
@@ -283,8 +286,15 @@ namespace Matkakirja.Natiivi
             float d = (float)kameranAsento.Etaisyys;
             // Elävä linna (1.0.57): kaukaa saavuttaessa (600 m) järven taso katkesi kaukoleikkaukseen (2000 m) näkyvänä
             // reunana. Sumu on aina täysi ennen kaukotasoa, jolloin järvi häipyy taustaan saumatta.
-            float sumuLoppu = Mathf.Min(d * SumuLoppuKerroin, Kamera != null ? Kamera.farClipPlane * 0.9f : 1800f);
-            Shader.SetGlobalVector(IdSumu, new Vector4(Mathf.Min(d * SumuAlkuKerroin, sumuLoppu * 0.6f), sumuLoppu, 0, 0));
+            // Ympäristö (1.10.2026): rannat 2 km ja horisontti 10 km näkyvät, joten kaukotaso 16 km ja ilmaperspektiivin
+            // usva alkaa vasta kolminkertaisen katseluetäisyyden jälkeen ja on täysi 9 km:ssä (horisonttirengas häipyy taustaan).
+            bool ymparisto = DioraamaYmparisto.Kaytossa;
+            Kamera.nearClipPlane = ymparisto ? 0.5f : 0.3f;
+            Kamera.farClipPlane = ymparisto ? 16000f : 2000f;
+            float sumuLoppu = ymparisto ? 9000f : Mathf.Min(d * SumuLoppuKerroin, Kamera != null ? Kamera.farClipPlane * 0.9f : 1800f);
+            float sumuAlku = ymparisto ? Mathf.Max(d * 3f, 300f) : Mathf.Min(d * SumuAlkuKerroin, sumuLoppu * 0.6f);
+            Shader.SetGlobalVector(IdSumu, new Vector4(sumuAlku, sumuLoppu, 0, 0));
+            Ymparisto?.Paivita(Kamera);
             if (syvyys != null)
             {
                 // Aukko 0..1 (0,3 yleisnäkymä loiva -- 0,8 huone voimakas taustan sumennus, ks. DioraamaData.Asento).
@@ -341,6 +351,8 @@ namespace Matkakirja.Natiivi
             Ikkunat = null;
             Ulkokuori?.Tyhjenna();
             Ulkokuori = null;
+            Ymparisto?.Tyhjenna();
+            Ymparisto = null;
             Lokit?.Tyhjenna();
             Lokit = null;
             Syke?.Tyhjenna();

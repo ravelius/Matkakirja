@@ -180,6 +180,7 @@ namespace Matkakirja.Natiivi
             var juuri = d.rootVisualElement;
             juuri.pickingMode = PickingMode.Ignore;
             juuri.AddToClassList("mk-juuri");
+            if (MacSyote.Kaytossa) juuri.AddToClassList("mk-mac"); // Mac-hover (MacSyote), myös myöhemmin luotuihin kerroksiin
             if (!nakyvissa) juuri.style.display = DisplayStyle.None;
             juuri.RegisterCallback<TransitionRunEvent>(TransitioAlkoi, TrickleDown.TrickleDown);
             // Vierityslöydös (omistaja 27.9. klo 17.0x): iOS-tuntumainen kosketusvieritys kaikkiin pystysivuihin.

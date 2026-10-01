@@ -458,6 +458,41 @@ namespace Matkakirja.Linssit.Dioraama
     }
 
     /// <summary>Ulkokuoren glb-polut laatutasoittain (puuttuva taso = seuraava kevyempi käytössä).</summary>
+    /// <summary>
+    /// Linnan ympäristö (omistajan hyväksymä ympäristösuunnitelma 1.10.2026; Linnanrakentajan aineisto, MML CC BY 4.0):
+    /// `ymparisto: { huippu, normaali, kevyt (glb), orto: { huippu, normaali, kevyt } (jpg/astcm), puut (puut.json),
+    /// puukortit (puukortit.json), horisontti (glb), horisontti_kuva, syvyys: { kuva, pikseli_m, kerroin_m, origo } }`.
+    /// Koordinaatit kuten kuoressa (vesi −7, origo = kuoren origo).
+    /// </summary>
+    public sealed class Ymparisto
+    {
+        public string Huippu, Normaali, Kevyt;
+        public string OrtoHuippu, OrtoNormaali, OrtoKevyt;
+        public string Puut, Puukortit, Horisontti, HorisonttiKuva;
+        /// <summary>Veden syvyyskartta (8 bit, 0 = ranta): kuva, pikselin koko, metriä/arvo ja kuvan vasen yläkulma (Blender x, y).</summary>
+        public string SyvyysKuva;
+        public double SyvyysPikseliM = 1.953125, SyvyysKerroinM = 0.1176;
+        public double SyvyysOrigoX = -2000, SyvyysOrigoY = 2000;
+        /// <summary>Maanpinnan kerrosvarjostin (splat, Päätoimittaja 1.10.2026): lähialueen CC0-kerrokset maskilla; null = pelkkä ilmakuva.</summary>
+        public MaastoKerrokset Maasto;
+        /// <summary>Aluskasvillisuus korttipareina: atlas (json kuten puukortit) ja lista [x, y, z, laji, koko]; null = ei aluskasveja.</summary>
+        public string AluskasvitAtlas, AluskasvitLista;
+        /// <summary>Taivas equirect-kuvana (Linnanrakentajan Poly Haven -HDRI sävykartoitettuna): päivä, hämärä ja
+        /// atsimuutti (°), johon kuvan u = 0 osoittaa; null = liukuväri.</summary>
+        public string Taivas, TaivasHamara;
+        public double TaivasSuunta;
+    }
+
+    /// <summary>`ymparisto.maasto`: alue [minX, minZ, maxX, maxZ] (Unity x/z = Blender x/y), maski (huippu, RGBA × 2 = kerrokset
+    /// 0–7), maski_normaali (RGBA = 0–3), kerrokset [{ id, diff, nor, toisto_m }], lahi_m (detalji häipyy makroon).</summary>
+    public sealed class MaastoKerrokset
+    {
+        public double MinX, MinZ, MaxX, MaxZ, LahiM = 400;
+        public List<string> Maski = new List<string>();
+        public string MaskiNormaali;
+        public List<(string Id, string Diff, string Nor, double ToistoM)> Kerrokset = new List<(string, string, string, double)>();
+    }
+
     public sealed class Ulkokuori
     {
         public string Huippu, Normaali, Kevyt;
@@ -494,6 +529,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>LINNA (Siirtoseppä 29.9.2026): fotogrammetrinen ulkokuori kolmella laatutasolla
         /// (`ulkokuori: { huippu, normaali, kevyt }`, glb-polut paketin juuresta); null = ei kuorta.</summary>
         public Ulkokuori Ulkokuori;
+        /// <summary>Linnan ympäristö (maasto, puut, horisontti, veden syvyys); null = ei ympäristöä.</summary>
+        public Ymparisto Ymparisto;
         /// <summary>Oletustunnelma (`tunnelma`: "paiva" | "hamara"); puuttuva = päivä.</summary>
         public string Tunnelma;
         /// <summary>Yleisnäkymän nimilaput (`nimilaput`, oletus true). Elävän linnan käsikirjoitus 29.9.: ei nimilappuja —
@@ -568,6 +605,46 @@ namespace Matkakirja.Linssit.Dioraama
                     Kohde = MiniJson.Kentta(alku, "kohde") != null ? LueV3(MiniJson.Kentta(alku, "kohde")) : (V3?)null,
                     Kesto = MiniJson.Luku(saap, "kesto") ?? 18, Lyhyt = MiniJson.Luku(saap, "lyhyt") ?? 6,
                 };
+            }
+            var ymp = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ymparisto"));
+            if (ymp != null)
+            {
+                var orto = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "orto"));
+                var syv = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "syvyys"));
+                var y = new Ymparisto
+                {
+                    Huippu = MiniJson.Teksti(ymp, "huippu"), Normaali = MiniJson.Teksti(ymp, "normaali"), Kevyt = MiniJson.Teksti(ymp, "kevyt"),
+                    OrtoHuippu = MiniJson.Teksti(orto, "huippu"), OrtoNormaali = MiniJson.Teksti(orto, "normaali"), OrtoKevyt = MiniJson.Teksti(orto, "kevyt"),
+                    Puut = MiniJson.Teksti(ymp, "puut"), Puukortit = MiniJson.Teksti(ymp, "puukortit"),
+                    Horisontti = MiniJson.Teksti(ymp, "horisontti"), HorisonttiKuva = MiniJson.Teksti(ymp, "horisontti_kuva"),
+                    SyvyysKuva = MiniJson.Teksti(syv, "kuva"),
+                };
+                if (MiniJson.Luku(syv, "pikseli_m") is double pm) y.SyvyysPikseliM = pm;
+                if (MiniJson.Luku(syv, "kerroin_m") is double km) y.SyvyysKerroinM = km;
+                var origo = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(syv, "origo"));
+                if (origo.Count >= 2 && origo[0] is double ox && origo[1] is double oy) { y.SyvyysOrigoX = ox; y.SyvyysOrigoY = oy; }
+                var maasto = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "maasto"));
+                if (maasto != null)
+                {
+                    var mk = new MaastoKerrokset { MaskiNormaali = MiniJson.Teksti(maasto, "maski_normaali"), LahiM = MiniJson.Luku(maasto, "lahi_m") ?? 400 };
+                    var alue = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(maasto, "alue"));
+                    if (alue.Count >= 4 && alue[0] is double a0 && alue[1] is double a1 && alue[2] is double a2 && alue[3] is double a3)
+                    { mk.MinX = a0; mk.MinZ = a1; mk.MaxX = a2; mk.MaxZ = a3; }
+                    foreach (var m in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(maasto, "maski"))) if (m is string ms) mk.Maski.Add(ms);
+                    foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(maasto, "kerrokset")))
+                    {
+                        var k = MiniJson.ObjektiTaiNull(ko);
+                        if (k != null) mk.Kerrokset.Add((MiniJson.Teksti(k, "id"), MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                    }
+                    if (mk.MaxX > mk.MinX && mk.MaxZ > mk.MinZ && mk.Kerrokset.Count > 0) y.Maasto = mk;
+                }
+                var alus = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "aluskasvit"));
+                y.AluskasvitAtlas = MiniJson.Teksti(alus, "atlas");
+                y.AluskasvitLista = MiniJson.Teksti(alus, "lista");
+                y.Taivas = MiniJson.Teksti(ymp, "taivas");
+                y.TaivasHamara = MiniJson.Teksti(ymp, "taivas_hamara");
+                y.TaivasSuunta = MiniJson.Luku(ymp, "taivas_suunta") ?? 0;
+                r.Ymparisto = y;
             }
             var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));
             if (kuori != null)
