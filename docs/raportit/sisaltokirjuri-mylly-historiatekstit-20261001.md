@@ -11,8 +11,8 @@ vain se, mikä löytyi.
 Mylly oli 1800-luvun Euroopassa tuttu peli majataloissa ja kodeissa, ja saksaksi sitä kutsutaan nimellä Mühle.
 Pelilauta on yksinkertainen: kolme sisäkkäistä neliötä, joita yhdistävät viivat.
 
-**Luostari n. 1300**
-Belgian Koksijden Duinenabdij-luostarin tiileen on 1200–1300-luvulla piirretty myllylauta märkään saveen ennen polttoa.
+**Luostari 1200-l.**
+Belgian Koksijden Duinenabdij-luostarin tiileen on 1200-luvulla piirretty myllylauta märkään saveen ennen polttoa.
 Laudassa on kolme sisäkkäistä neliötä ja neljä viivaa, jotka muodostavat 24 pistettä.
 
 **Viikinkilaiva noin 900**
@@ -35,7 +35,7 @@ Usein kerrotaan, että myllyn vanhin lauta on Egyptin Kurnan temppelin kattolaat
 
 **Keskiajan lautoja ja kirja vuodelta 1283**
 
-Varmempaa maata on keskiaika. Belgiassa Koksijden Duinenabdij-luostarin 1200–1300-luvun tiileen on piirretty myllylauta märkään saveen ennen polttoa, ja tiili on yhä museossa. Englannin katedraalien ristikäytävien kivipenkkeihin on raaputettu pelilautoja Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä ja Westminster Abbeyssa, mutta ne ovat lähisukuista "nine holes" -peliä: laudat on tehty reikinä, eikä vinorivi tuonut voittoa. Gokstadin viikinkilaivasta noin vuoden 900 paikkeilta on löytynyt lauta, jonka toisella puolella on hnefatafl ja toisella mylly. Kastilian kuningas Alfonso X:n *Libro de los juegos* (Pelien kirja, valmistunut Toledossa 1283) kuvaa pelin nimellä *alquerque de nueve* ("yhdeksän alquerque") ja esittelee sen myös nopalla pelattavan version. Saksalaisen Wikipedian mukaan se on pelin varhaisin kuvaus jollakin eurooppalaisella kielellä.
+Varmempaa maata on keskiaika. Belgiassa Koksijden Duinenabdij-luostarin 1200-luvun tiileen on piirretty myllylauta märkään saveen ennen polttoa, ja tiili on yhä museossa. Englannin katedraalien ristikäytävien kivipenkkeihin on raaputettu pelilautoja Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä ja Westminster Abbeyssa, mutta ne ovat lähisukuista "nine holes" -peliä: laudat on tehty reikinä, eikä vinorivi tuonut voittoa. Gokstadin viikinkilaivasta noin vuoden 900 paikkeilta on löytynyt lauta, jonka toisella puolella on hnefatafl ja toisella mylly. Kastilian kuningas Alfonso X:n *Libro de los juegos* (Pelien kirja, valmistunut Toledossa 1283) kuvaa pelin nimellä *alquerque de nueve* ("yhdeksän alquerque") ja esittelee sen myös nopalla pelattavan version. Saksalaisen Wikipedian mukaan se on pelin varhaisin kuvaus jollakin eurooppalaisella kielellä.
 
 **Shakespearen mutaa**
 
@@ -81,8 +81,8 @@ Jokaiselle laudalle 2–3 lausetta: mikä aito esikuva on, missä se nyt on, mil
 **Majatalo 1873 — alkuperä**
 Lauta perustuu yleiseen 1800-luvun saksalaiseen Mühle-lautaan: kolme sisäkkäistä neliötä, joita yhdistävät viivat. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kotien ja majatalojen pelilautaa.
 
-**Luostari n. 1300 — alkuperä**
-Esikuvana on tiili Belgian Koksijden Duinenabdij-luostarista, ajoitettu 1200–1300-luvulle. Myllylauta on tehty tiileen märkään saveen ennen polttoa, ja siinä on kolme neliötä ja neljä viivaa, jotka muodostavat 24 pistettä. Tiili on luostarin museon (Abdijmuseum Ten Duinen) kokoelmassa, inventaarionumero 033880, mutta sen tarkkaa löytöpaikkaa luostarialueella ei tunneta.
+**Luostari 1200-l. — alkuperä**
+Esikuvana on tiili Belgian Koksijden Duinenabdij-luostarista, ajoitettu 1200-luvulle. Myllylauta on tehty tiileen märkään saveen ennen polttoa, ja siinä on kolme neliötä ja neljä viivaa, jotka muodostavat 24 pistettä. Tiili on luostarin museon (Abdijmuseum Ten Duinen) kokoelmassa, inventaarionumero 033880, mutta sen tarkkaa löytöpaikkaa luostarialueella ei tunneta.
 
 **Viikinkilaiva noin 900 — alkuperä**
 Esikuvana on Gokstadin laivahaudasta Norjasta löytynyt puinen pelilauta ja yksi sarvesta tehty pelinappula. Laudan toisella puolella on 13×13 ruutua (hnefatafl) ja toisella mylly; haudan laiva on rakennettu noin vuonna 890 kaadetuista puista, ja kaivaukset tehtiin vuonna 1880. Lauta on Oslon yliopiston Kulttuurihistoriallisen museon kokoelmissa; laudasta on säilynyt vain osa, eikä siinä ole merkintöjä, jotka tunnistaisivat sen peliksi epäilyksettä, joten tulkinta perustuu sen kokoon ja muotoon.
@@ -126,3 +126,7 @@ Päätoimittajan lukema on osin oikea: Wikipedia kirjoittaa katedraalien ristik�
 - **Toinen lähde löytyi — museon oma sivu:** Abdijmuseum Ten Duinen, "Bakstenen met een hoek af", <https://www.tenduinen.be/nl/bakstenen-met-een-hoek-af>. Vahvistaa: inventaarionumero 033880 (= Commonsin 33880), huone 11 "De spelende mens in de middeleeuwen", kolme neliötä + neljä viivaa = 24 pistettä, viivojen nousseet reunat osoittavat laudan tehdyn märkään saveen ennen polttoa, tarkka löytöpaikka luostarialueella tuntematon.
 - **VARAUS (ajoitus):** museon sivu sanoo "13e eeuw" (**1200-luku**), Commons sanoo **1200–1300-luku**. Tekstissä on Päätoimittajan ohjeen mukaan "1200–1300-luvun"; se kattaa molemmat, mutta museon oma ajoitus on tiukemmin 1200-luku. Pillerin "n. 1300" on silti perusteltu (1200-luvun loppu/1300-luvun alku). Jos haluat kiinni museon omaan ajoitukseen: "1200-luvun".
 - Käytetty myös: Wikimedia Commons -kuvasivu, <https://commons.wikimedia.org/wiki/File:Brick_with_Nine_Men's_Morris_(the_mill_game),_inv.nr._33880.jpg> (1200–1300-luku, Koksijde, kuvan lisenssi CC BY-SA 4.0).
+
+## 8. PÄIVITYS 1.10. (viimeinen): museon ajoitus voittaa
+
+Päätoimittajan päätös: museon oma ajoitus (1200-luku) voittaa Commonsin. **Otsikko "Luostari 1200-l."**; teksteissä "1200-luvulla/-luvun/-luvulle" (osiot 1, 3, 4 päivitetty; osioiden 7 maininnat "n. 1300" ja "1200–1300-luvun" ovat vanhentuneita). **Ensisijainen lähde:** Abdijmuseum Ten Duinen, <https://www.tenduinen.be/nl/bakstenen-met-een-hoek-af> (inv. 033880); **toissijainen:** Wikimedia Commons, <https://commons.wikimedia.org/wiki/File:Brick_with_Nine_Men's_Morris_(the_mill_game),_inv.nr._33880.jpg>.
