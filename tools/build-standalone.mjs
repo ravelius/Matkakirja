@@ -448,6 +448,8 @@ const MODULES = [
   'js/linssit/rekisteri.js',
   // Apurahan kortti ja esittelylinssien avain (omistus.js ja ui.js tuovat).
   'js/apuraha.js',
+  // PANEELI-pohjan tietomalli: ennen js/pohjat/pohjat.js:ää, joka tuo sen.
+  'js/pohjat/paneelidata.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
@@ -969,6 +971,8 @@ const MODULES = [
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
    * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
+  // PANEELI-lippu ja pillerivalikon puku: ennen js/karttaselite.js:ää (sama lippu) ja js/main.js:ää.
+  'js/pilleri-paneeli.js',
   'js/karttaselite.js',
   'js/vakasikoni.js',
   'js/ylapalkki-vaaka.js',
@@ -1114,6 +1118,8 @@ const MODULES = [
   'js/pelaajanakyma.js',
   'js/kokoelmanakyma.js',
   'js/pilleri-animaatio.js',
+  // Visa KORTTI-pohjalla (versio B): js/ui.js puee #quiz-dialogin.
+  'js/visa-pohja.js',
   'js/ui.js',
 
   'js/muutokset.js',

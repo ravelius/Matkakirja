@@ -87,6 +87,8 @@ import {
   karttavalotLaskurit, karttavalotSovita, karttavaloValitse, karttavaloValinta,
 } from './karttavalot.js';
 import { luoPeukalolevy } from './karttaselite-levy.js';
+import { paneeliPohjalla } from './pilleri-paneeli.js';
+import { pohjatLataaTyyli } from './pohjat/pohjat.js';
 
 /*
  * RIVIJÄRJESTYS — YKSI PAIKKA KOKO VALIKOLLE (omistajan päätös
@@ -249,6 +251,12 @@ export function kaynnistaKarttaselite(ui) {
   const levy = html('div', 'karttaselite-levy');
   levy.setAttribute('role', 'group');
   levy.setAttribute('aria-label', 'Karttaselitteet');
+  // PANEELI-pohja (Päätoimittaja 1.10.2026): vain ulkoasu vaihtuu; välilehdet, ✕, peukalolevy ja valot ennallaan.
+  // Peruttava ?paneeli=vanha (sama lippu kuin pillerivalikossa, js/pilleri-paneeli.js).
+  if (paneeliPohjalla()) {
+    pohjatLataaTyyli();
+    levy.classList.add('tk-paneeli-selite', 'tk-teema-paperi');
+  }
 
   /*
    * VÄLILEHDET "NOSTOT | MAAKUNNAT" (omistajan päätös 22.9.2026)

@@ -635,6 +635,17 @@ function avoinAvaruuskuva(doc) {
   return { nimi, seutu: seutu || null, teksti: teksti || null };
 }
 
+/**
+ * Avoimen linssin nimi Pulun kontekstiin (esim. "Ihmisen matka"), tai null.
+ * Astronautin kamera käsitellään erikseen (astronautinKameraPaalla).
+ */
+export function avoinLinssi(ui = null) {
+  const tunnus = ui?.linssiValittu ?? ui?.pallolinssi?.tunnus ?? null;
+  if (!tunnus) return null;
+  const nimi = ui?.linssiTuki?.kaikki?.find?.((l) => l?.tunnus === tunnus)?.nimi;
+  return polloSiisti(nimi ?? tunnus);
+}
+
 export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [], aihe = null } = {}) {
   const tila = pelinTila(game);
   /*
@@ -688,15 +699,20 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
    * polloKysy-kutsussa; avoin kohdetietoruutu voittaa sen.
    */
   const kohde = avoin ?? (aihe?.nimi ? aihe : null);
-  let nakyma = 'kartta';
+  /*
+   * AVOIN LINSSI NÄKYMÄRIVILLE (Päätoimittaja 1.10.2026, bugikorjaus webiin
+   * ja natiiviin): Ihmisen matkan aikana konteksti sanoi "kartta", vaikka
+   * pelaaja katsoo linssiä. Linssi kartan tilalle; lehti ja tietoruutu
+   * voittavat sen kuten ennenkin (ne ovat linssin päällä).
+   */
+  const linssi = avoinLinssi(ui);
+  let nakyma = linssi ? `linssi auki: ${linssi}` : 'kartta';
   if (lehtiAuki && maalehtiIso) {
     nakyma = lehdenMaa ? `maan lehti auki (${lehdenMaa})` : 'maan lehti auki';
   } else if (lehtiAuki) {
     nakyma = 'kaupungin lehti auki';
   } else if (avoin) {
     nakyma = 'kartta, kohteen tietoruutu auki';
-  } else if (kohde) {
-    nakyma = 'kartta';
   }
   return kokoaKonteksti({
     ...tila,
@@ -7565,6 +7581,21 @@ export function kysyPollolta(valinta) {
  *   käytettävissä (peliä ei ole, pöllöä ei ole löydetty, tai edellinen
  *   vastaus on kesken) — kutsuja saa jättää sen huomiotta.
  */
+/**
+ * CHAT AUKI KYSYMYSEHDOTUKSIN (UI-pohjat 1.10.2026: NOSTOKORTIN Kysy-nappi). Paneeli avautuu, ja kortin kysymykset
+ * näkyvät ehdotussiruina (sama naytaEhdotukset kuin jatkokysymyksillä); pelaaja valitsee itse. Epätosi, jos pulua ei
+ * ole käytettävissä (kuten polloKysy).
+ * @param {string[]} kysymykset
+ */
+export function polloEhdota(kysymykset = []) {
+  const pollo = nykyinenPollo;
+  if (!pollo || !pollo.nakyyko()) return false;
+  if (!pollo.auki) pollo.avaa();
+  const lista = (Array.isArray(kysymykset) ? kysymykset : []).map((k) => String(k ?? '').trim()).filter(Boolean);
+  if (lista.length && !pollo.kesken) pollo.naytaEhdotukset(lista);
+  return true;
+}
+
 export function polloKysy(kysymys, { aihe = null } = {}) {
   const pollo = nykyinenPollo;
   if (!pollo) return false;

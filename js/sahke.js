@@ -105,20 +105,23 @@ const SAHKE_AIKAKATKO_MS = 12000;
  * "Adjektiivi Substantiivi".
  */
 
-/** 24 adjektiivia (sitova lista; sama workerille). */
+/**
+ * 24 adjektiivia: TÄSMÄLLEEN worker/sahke/nimimerkit.js:n ADJEKTIIVIT samassa järjestyksessä (1.10.2026: lista oli
+ * erkaantunut, ja worker hylkäsi osan arvotuista nimistä "Nimimerkki ei ole sanalistoilta"; tests/sahke.test.mjs valvoo).
+ */
 const SAHKE_ADJEKTIIVIT = [
-  'Utelias', 'Höyryävä', 'Vaitelias', 'Ripeä', 'Uskalias', 'Verkkainen',
-  'Tarkkanäköinen', 'Kärsivällinen', 'Salaperäinen', 'Kohtelias', 'Sitkeä', 'Valpas',
-  'Rohkea', 'Huolellinen', 'Levoton', 'Sinnikäs', 'Oivaltava', 'Vakaa',
-  'Nokkela', 'Hiljainen', 'Iloinen', 'Peloton', 'Tarmokas', 'Viisas',
+  'Utelias', 'Höyryävä', 'Rohkea', 'Salaperäinen', 'Vaitelias', 'Sitkeä',
+  'Nokinen', 'Tarkkasilmäinen', 'Kärsivällinen', 'Vikkelä', 'Tyyni', 'Uljas',
+  'Ovela', 'Väsymätön', 'Hajamielinen', 'Ripeä', 'Ponteva', 'Verkkainen',
+  'Peloton', 'Juhlallinen', 'Kohtelias', 'Räiskyvä', 'Vankka', 'Iloinen',
 ];
 
 /** 24 substantiivia: eläimiä ja 1873-matkan esineitä (sitova lista). */
 const SAHKE_SUBSTANTIIVIT = [
-  'Ilves', 'Majakka', 'Kompassi', 'Näätä', 'Höyrylaiva', 'Kurki',
-  'Lennätin', 'Ahma', 'Kiikari', 'Peltosirkku', 'Postivaunu', 'Saukko',
-  'Tiimalasi', 'Kärppä', 'Kartturi', 'Merikotka', 'Ankkuri', 'Mursu',
-  'Karavaani', 'Naali', 'Sekstantti', 'Haikara', 'Matkalaukku', 'Sorsa',
+  'Ilves', 'Majakka', 'Kompassi', 'Hylje', 'Kurki', 'Höyryveturi',
+  'Ankkuri', 'Näätä', 'Merikotka', 'Sekstantti', 'Karhu', 'Priki',
+  'Karttapallo', 'Susi', 'Peura', 'Lyhty', 'Kirjekyyhky', 'Taskukello',
+  'Saukko', 'Huuhkaja', 'Postivaunu', 'Kiikari', 'Mursu', 'Villihanhi',
 ];
 
 /** Yksi satunnainen nimimerkki generaattorista. */

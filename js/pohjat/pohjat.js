@@ -1,5 +1,5 @@
 /**
- * UI-POHJAT WEBISSÄ: NOSTOKORTTI ja KORTTI (omistaja 1.10.2026, UI-pohjat kohdat 1–3, 5, 6 ja 9).
+ * UI-POHJAT WEBISSÄ: NOSTOKORTTI, KORTTI ja PANEELI (omistaja 1.10.2026, UI-pohjat kohdat 1–3, 5, 6 ja 9).
  *
  * Uusi pinta valitsee pohjan yhdellä kutsulla eikä tee omia mittoja (sitova sääntö "pohjat pelin perustana"):
  *
@@ -15,6 +15,7 @@
  * ei-modaali KORTTI Takaisin + ohinapautus + Esc, modaali KORTTI vain napeilla. Animaatiot ≤ 250 ms (kohta 6).
  */
 import { tarkistaKorttiData } from './korttidata.js';
+import { tarkistaPaneeliData } from './paneelidata.js';
 
 const POHJA_TYYLIN_TUNNUS = 'pohjat-tyyli';
 const POHJA_VETO_PX = 40;
@@ -58,6 +59,8 @@ function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
   }
   kehys.appendChild(img);
   if (kuva.kuvateksti) kehys.appendChild(pohjaSolmu('figcaption', 'tk-kuvateksti', kuva.kuvateksti));
+  // Kuvan tekijä ja lisenssi kuvan alle (CC BY vaatii maininnan siellä, missä kuva näkyy).
+  if (kuva.lahde) kehys.appendChild(pohjaSolmu('div', 'tk-lahde', kuva.lahde));
   return kehys;
 }
 
@@ -171,6 +174,9 @@ export function luoPohjaNostokortti(data, {
   const el = pohjaSolmu('section', `tk-nostokortti tk-teema-${teema ?? d.teema} tk-piilossa`);
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-label', d.otsikko || d.yla || 'Nosto');
+  // Kortin painallus ei kuulu kartalle (kartan napautus sulkisi kortin ennen napin klikkausta): sama kuin vanhoilla
+  // korteilla. Oma ohinapautus kuuntelee dokumenttia kaappausvaiheessa, joten tämä ei estä sitä.
+  el.addEventListener('pointerdown', (e) => e.stopPropagation());
   const kahva = pohjaSolmu('button', 'tk-nostokortti__kahva');
   kahva.type = 'button';
   kahva.setAttribute('aria-label', 'Laajenna tai pienennä');
@@ -291,5 +297,166 @@ export function luoPohjaKortti(data, {
   if (napit) kortti.appendChild(napit);
   tausta.appendChild(kortti);
   if (!modaali) tausta.addEventListener('click', (e) => { if (e.target === tausta) pohja.sulje(); });
+  return pohja;
+}
+
+/** PANEELIN ikoni: kutsujan SVG-solmu kloonataan, merkkijono (koodin oma SVG) jäsennetään. */
+function paneeliIkoni(ikoni) {
+  if (!ikoni) return null;
+  const kehys = pohjaSolmu('span', 'tk-paneeli-ikoni');
+  kehys.setAttribute('aria-hidden', 'true');
+  if (typeof ikoni === 'string') kehys.innerHTML = ikoni;
+  else if (ikoni.cloneNode) kehys.appendChild(ikoni.cloneNode(true));
+  return kehys;
+}
+
+/** Yksi PANEELIN rivi (38 pt): NAVIGOINTI, KYTKIN, TOIMINTO tai SÄÄDIN. */
+function paneeliRivi(r, pohja) {
+  if (r.tyyppi === 'saadin') {
+    const rivi = pohjaSolmu('label', 'tk-paneeli-rivi tk-paneeli-rivi--saadin');
+    const yla = pohjaSolmu('span', 'tk-paneeli-rivi__yla');
+    const ikoni = paneeliIkoni(r.ikoni);
+    if (ikoni) yla.appendChild(ikoni);
+    yla.appendChild(pohjaSolmu('span', 'tk-paneeli-rivi__nimi', r.nimi));
+    const arvo = pohjaSolmu('span', 'tk-paneeli-rivi__arvo', r.muotoile(r.arvo));
+    yla.appendChild(arvo);
+    const liuku = pohjaSolmu('input', 'tk-paneeli-liuku');
+    Object.assign(liuku, { type: 'range', min: String(r.min), max: String(r.max), step: String(r.askel), value: String(r.arvo) });
+    liuku.setAttribute('aria-label', r.nimi);
+    liuku.addEventListener('input', () => {
+      r.arvo = Number(liuku.value);
+      arvo.textContent = r.muotoile(r.arvo);
+      r.toiminto?.(r.arvo, r, pohja);
+    });
+    rivi.append(yla, liuku);
+    return rivi;
+  }
+  const rivi = pohjaSolmu('button', `tk-paneeli-rivi tk-paneeli-rivi--${r.tyyppi}`);
+  rivi.type = 'button';
+  if (r.tunnus) rivi.dataset.tunnus = r.tunnus;
+  const ikoni = paneeliIkoni(r.ikoni);
+  if (ikoni) rivi.appendChild(ikoni);
+  rivi.appendChild(pohjaSolmu('span', 'tk-paneeli-rivi__nimi', r.nimi));
+  if (r.tyyppi === 'kytkin') {
+    const tila = pohjaSolmu('span', 'tk-paneeli-rivi__tila');
+    rivi.setAttribute('role', 'switch');
+    const nayta = () => {
+      rivi.classList.toggle('tk-paalla', r.paalla);
+      rivi.setAttribute('aria-checked', String(r.paalla));
+      tila.textContent = r.paalla ? 'Päällä' : 'Pois';
+    };
+    nayta();
+    rivi.appendChild(tila);
+    rivi.addEventListener('click', () => {
+      r.paalla = !r.paalla;
+      nayta();
+      r.toiminto?.(r.paalla, r, pohja);
+    });
+    return rivi;
+  }
+  if (r.tyyppi === 'navigointi') {
+    if (r.arvo) rivi.appendChild(pohjaSolmu('span', 'tk-paneeli-rivi__arvo', r.arvo));
+    rivi.appendChild(pohjaSolmu('span', 'tk-paneeli-rivi__nuoli', '›'));
+  }
+  rivi.addEventListener('click', () => r.toiminto?.(r, pohja));
+  return rivi;
+}
+
+/** PANEELIN sisältö: ylärivi (‹ Takaisin, kapiteeli), ryhmät ja alarivi. */
+function paneeliSisalto(el, d, pohja) {
+  el.textContent = '';
+  el.setAttribute('aria-label', d.kapiteeli || 'Valikko');
+  if (d.takaisin || d.kapiteeli) {
+    const yla = pohjaSolmu('div', 'tk-paneeli__yla');
+    if (d.takaisin) {
+      const takaisin = pohjaSolmu('button', 'tk-paneeli__takaisin', '‹ Takaisin');
+      takaisin.type = 'button';
+      takaisin.addEventListener('click', () => d.takaisin(pohja));
+      yla.appendChild(takaisin);
+    }
+    if (d.kapiteeli) yla.appendChild(pohjaSolmu('p', 'tk-kapiteeli', d.kapiteeli));
+    el.appendChild(yla);
+  }
+  for (const r of d.ryhmat) {
+    if (r.erotin) el.appendChild(pohjaSolmu('div', 'tk-paneeli__erotin'));
+    if (r.otsikko) el.appendChild(pohjaSolmu('p', 'tk-kapiteeli tk-paneeli__ryhmaotsikko', r.otsikko));
+    const ryhma = pohjaSolmu('div', `tk-paneeli__ryhma${r.vierekkain ? ' tk-paneeli__ryhma--vierekkain' : ''}`);
+    for (const rivi of r.rivit) ryhma.appendChild(paneeliRivi(rivi, pohja));
+    el.appendChild(ryhma);
+  }
+  if (d.alarivi) {
+    const ala = pohjaSolmu('div', 'tk-paneeli__alarivi');
+    ala.append(pohjaSolmu('span', '', d.alarivi.vasen), pohjaSolmu('span', '', d.alarivi.oikea));
+    el.appendChild(ala);
+  }
+}
+
+/**
+ * PANEELI: valikko avaajansa alla (pillerivalikko, karttaselite; 2. erässä linssivalitsin LASI-teemalla).
+ * Leveys min(350, ruutu − 24), korkeus enintään 70 % ja vierii sisältä, ei kuvia. Avaus ponnahtaa avaajan kohdalta
+ * (220/200 ms). Sulku: ohinapautus, Esc tai avaajan uusi napautus (kutsuja kutsuu `sulje()`; avaajan napautus ei
+ * ole ohinapautus). Alinäkymä: `nayta(uusiData)`, jonka `takaisin` palaa.
+ *
+ * @param {object} data PaneeliData (js/pohjat/paneelidata.js)
+ * @param {{teema?: string, avaaja?: Element, sulje?: Function, esikatselu?: boolean}} [asetukset]
+ */
+export function luoPohjaPaneeli(data, { teema, avaaja = null, sulje = null, esikatselu = false } = {}) {
+  let d = tarkistaPaneeliData(data, { teema: teema ?? 'paperi' });
+  if (!d) return null;
+  pohjatLataaTyyli();
+  const el = pohjaSolmu('section', `tk-paneeli tk-teema-${d.teema} tk-piilossa`);
+  el.setAttribute('role', 'dialog');
+  let auki = false;
+  const pohja = {
+    el,
+    get data() { return d; },
+    modaali: false,
+    get auki() { return auki; },
+    /** Alinäkymä tai päivitetty data samaan paneeliin (paikka ja sulkupino säilyvät). */
+    nayta(uusi) {
+      const t = tarkistaPaneeliData(uusi, { teema: d.teema });
+      if (!t) return pohja;
+      d = t;
+      paneeliSisalto(el, d, pohja);
+      el.scrollTop = 0;
+      return pohja;
+    },
+    asemoi() {
+      if (!avaaja || esikatselu) return;
+      const r = avaaja.getBoundingClientRect();
+      el.style.setProperty('--tk-paneeli-yla', `${Math.round(r.bottom)}px`);
+      el.style.setProperty('--tk-paneeli-oikea', `${Math.max(0, Math.round(window.innerWidth - r.right))}px`);
+    },
+    avaa() {
+      if (auki) return pohja;
+      auki = true;
+      pohja.asemoi();
+      requestAnimationFrame(() => el.classList.remove('tk-piilossa'));
+      if (!esikatselu) {
+        pohjaPinoon(pohja);
+        setTimeout(() => document.addEventListener('pointerdown', ohi, true), 0);
+        window.addEventListener('resize', pohja.asemoi);
+      }
+      avaaja?.setAttribute?.('aria-expanded', 'true');
+      return pohja;
+    },
+    sulje() {
+      if (!auki) return;
+      auki = false;
+      el.classList.add('tk-piilossa');
+      pohjaPinosta(pohja);
+      document.removeEventListener('pointerdown', ohi, true);
+      window.removeEventListener('resize', pohja.asemoi);
+      avaaja?.setAttribute?.('aria-expanded', 'false');
+      sulje?.(pohja);
+    },
+  };
+  function ohi(e) {
+    // Avaajan napautus kuuluu kutsujalle (se sulkee paneelin itse); muut pohjat ovat paneelin jatke.
+    if (el.contains(e.target) || avaaja?.contains?.(e.target) || e.target?.closest?.(POHJA_EI_OHINAPAUTUS)) return;
+    pohja.sulje();
+  }
+  if (esikatselu) el.classList.add('tk-paneeli--esikatselu');
+  paneeliSisalto(el, d, pohja);
   return pohja;
 }
