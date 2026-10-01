@@ -22,6 +22,10 @@ N1500 = A[A.index('--n1500') + 1] if '--n1500' in A else None  # ymparisto_n1500
 # puuttomana puolustuksen, polttopuun ja laidunten vuoksi); siirtymä 100 m, kalliot (MTK 34100) säilyvät.
 AVOIN = float(A[A.index('--avoin') + 1]) if '--avoin' in A else 0.0
 NIITTY = A[A.index('--niitty') + 1] if '--niitty' in A else None
+# --kohouma <kohouma.npz> (maasto_kohouma.py, v3 1.10.): lähialueen pienmuodot (silokalliot, mättäät) 0,5 m:n verkkona;
+# lähialueen 2 m:n ruudut jaetaan 4 × 4:ään ja harvennus säästää niitä (painoryhmä 'lahi').
+KOHOUMA = A[A.index('--kohouma') + 1] if '--kohouma' in A else None
+LAHI_OSUUS = float(A[A.index('--lahi-osuus') + 1]) if '--lahi-osuus' in A else 0.45
 LOHKOT = 2   # 2 × 2 lohkoa normaalissa ja huipussa (Siirtoseppä: näkymärajaus), kevyessä yksi
 NIMET = ['huippu', 'normaali', 'kevyt']
 LEHTI = (596000.0, 6858000.0, 602000.0, 6864000.0)   # N5311A: E0, N0, E1, N1
@@ -90,8 +94,11 @@ if LATVUS:
 print(f'YMP: DEM {nx}×{ny} ruutua ({RES} m), maata {maa.mean():.2f}, korkeus {Z.max() - VESI_H:.1f} m vedestä')
 
 np.savez_compressed(os.path.join(ULOS, 'maasto-z.npz'), z=np.where(maa, z_maa, VESI_Z - 0.5).astype(np.float32), x0=xs[0], y0=ys[0], res=RES)  # puiden juuret (jalki)
-# --- pinnat: ruutu mukaan, jos jokin kulma on maata (rannan reuna jatkuu veden alle) ja ruutu ei ole kuoren alueella ---
-kulma_maa = maa[:-1, :-1] | maa[1:, :-1] | maa[:-1, 1:] | maa[1:, 1:]
+# --- pinnat: ruutu mukaan, jos jokin kulma on maata tai enintään 12 m rannasta (pohja viettää veden alle 3 m:iin) ja ruutu
+# ei ole kuoren alueella. 1.10.: pelkkä 2 m:n vedenalainen reunus näkyi läpinäkyvän veden läpi terävänä tummana
+# muotona ("puu roikkuu niemen alla" oletuskamerassa); 12 m:n loivassa pohjassa reuna jää syvälle ja häipyy.
+lahella = maa | (d_vesi <= 12.0)
+kulma_maa = lahella[:-1, :-1] | lahella[1:, :-1] | lahella[:-1, 1:] | lahella[1:, 1:]
 cx = (X[:-1, :-1] + X[1:, 1:]) / 2; cy = (Y[:-1, :-1] + Y[1:, 1:]) / 2
 kuori = (cx > KUORI[0]) & (cx < KUORI[1]) & (cy > KUORI[2]) & (cy < KUORI[3])
 mukana = kulma_maa & ~kuori
@@ -112,6 +119,24 @@ uvl = me.uv_layers.new(name='UVMap'); lv = np.empty(len(me.loops), np.int32); me
 co = V[lv]; uv = np.stack([(co[:, 0] - E0) / (E1 - E0), (co[:, 1] - N0) / (N1 - N0)], 1)
 uvl.data.foreach_set('uv', uv.astype(np.float32).ravel())
 ob = bpy.data.objects.new('ymparisto', me); sc.collection.objects.link(ob)
+if KOHOUMA:
+    import bmesh
+    g = np.load(KOHOUMA); dzk = g['dz']; kx0, ky0, kres, LAHI = float(g['x0']), float(g['y0']), float(g['res']), float(g['lahi'])
+    def bilin(arr, fx, fy):
+        fx = np.clip(fx, 0, arr.shape[1] - 1.001); fy = np.clip(fy, 0, arr.shape[0] - 1.001); ix, iy = fx.astype(int), fy.astype(int); tx, ty = fx - ix, fy - iy
+        return arr[iy, ix] * (1 - tx) * (1 - ty) + arr[iy, ix + 1] * tx * (1 - ty) + arr[iy + 1, ix] * (1 - tx) * ty + arr[iy + 1, ix + 1] * tx * ty
+    bm = bmesh.new(); bm.from_mesh(me)
+    lahella = [f for f in bm.faces if abs(f.calc_center_median().x) < LAHI - RES and abs(f.calc_center_median().y) < LAHI - RES]
+    reunat = list({e for f in lahella for e in f.edges})
+    bmesh.ops.subdivide_edges(bm, edges=reunat, cuts=int(round(RES / kres)) - 1, use_grid_fill=True)
+    bm.to_mesh(me); bm.free()
+    co = np.empty(len(me.vertices) * 3, np.float32); me.vertices.foreach_get('co', co); co = co.reshape(-1, 3)
+    sis = (np.abs(co[:, 0]) < LAHI) & (np.abs(co[:, 1]) < LAHI)
+    # 2 m:n pinta (sama kuin ennen: z-ruudukon bilineaarinen) + pienmuodot
+    zc = bilin(z, (co[sis, 0] - xs[0]) / RES, (ys[0] - co[sis, 1]) / RES)
+    co[sis, 2] = zc + bilin(dzk, (co[sis, 0] - kx0) / kres, (ky0 - co[sis, 1]) / kres)
+    me.vertices.foreach_set('co', co.ravel()); me.update()
+    print(f'YMP: pienmuodot {LAHI:.0f} m:n säteellä, verkossa nyt {len(me.polygons)} pintaa')
 for p in me.polygons: p.use_smooth = True
 print(f'YMP: verkko {len(me.polygons)} nelikulmiota, {time.time() - t0:.0f} s')
 
@@ -208,8 +233,27 @@ me.materials.append(mat)
 tex.image = kuvat[2048]
 for nimi, kohde in zip(NIMET, KOLMIOT):
     k = ob.copy(); k.data = ob.data.copy(); sc.collection.objects.link(k)
-    nyt = len(k.data.polygons) * 2
-    if kohde < nyt:
+    nyt = sum(len(q.vertices) - 2 for q in k.data.polygons)
+    if KOHOUMA and nimi != 'kevyt' and kohde < nyt:
+        # Lähi- ja kaukoalue harvennetaan erikseen valintoina (muokkaustila): valinnan reunan särmät eivät romahda, joten
+        # sauma pysyy yhtenäisenä. Lähialueelle LAHI_OSUUS kolmiobudjetista.
+        import bmesh
+        bpy.ops.object.select_all(action='DESELECT'); k.select_set(True); bpy.context.view_layer.objects.active = k
+        bpy.ops.object.mode_set(mode='EDIT'); bm = bmesh.from_edit_mesh(k.data)
+        for _kierros in range(5):  # operaattori jää valinnan reunan vuoksi yli tavoitteen: toistetaan, kunnes ≤ 3 % yli
+            bm = bmesh.from_edit_mesh(k.data)
+            sis = [abs(f.calc_center_median().x) < LAHI and abs(f.calc_center_median().y) < LAHI for f in bm.faces]
+            n_l = sum(len(f.verts) - 2 for f, v in zip(bm.faces, sis) if v); n_k = sum(len(f.verts) - 2 for f, v in zip(bm.faces, sis) if not v)
+            if n_l <= kohde * LAHI_OSUUS * 1.03 and n_k <= kohde * (1 - LAHI_OSUUS) * 1.03: break
+            for alue, n_a, osuus in ((True, n_l, LAHI_OSUUS), (False, n_k, 1 - LAHI_OSUUS)):
+                if n_a <= kohde * osuus * 1.03: continue
+                bpy.ops.mesh.select_all(action='DESELECT'); bm = bmesh.from_edit_mesh(k.data)
+                for f in bm.faces:
+                    c = f.calc_center_median()
+                    if (abs(c.x) < LAHI and abs(c.y) < LAHI) == alue: f.select_set(True)
+                bmesh.update_edit_mesh(k.data); bpy.ops.mesh.decimate(ratio=kohde * osuus / n_a)
+        bpy.ops.object.mode_set(mode='OBJECT')
+    elif kohde < nyt:
         m = k.modifiers.new('kevennys', 'DECIMATE'); m.ratio = kohde / nyt
         bpy.ops.object.select_all(action='DESELECT'); k.select_set(True); bpy.context.view_layer.objects.active = k
         bpy.ops.object.modifier_apply(modifier=m.name)

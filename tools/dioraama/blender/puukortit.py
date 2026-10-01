@@ -46,11 +46,25 @@ def mottu(keski, sade, litteys, m, rng, kohina=0.35):
     for f in o.data.polygons: f.use_smooth = True
     o.data.materials.append(m); return o
 
+def mantykuori(nimi='mrunko'):
+    # Männyn kuori (v2, Päätoimittaja 1.10.): tyvellä paksu harmaanruskea kaarnaa, latvassa ohut oranssi kuori;
+    # sävy vaihtuu korkeuden mukaan (z / H), pinnassa kaarnan uurteet kohinana.
+    m = bpy.data.materials.new(nimi); m.use_nodes = True; nt = m.node_tree; b = nt.nodes['Principled BSDF']
+    tk = nt.nodes.new('ShaderNodeTexCoord'); sep = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(tk.outputs['Generated'], sep.inputs[0])
+    r = nt.nodes.new('ShaderNodeValToRGB'); r.color_ramp.elements[0].position = 0.35; r.color_ramp.elements[1].position = 0.75
+    r.color_ramp.elements[0].color = (0.16, 0.13, 0.10, 1); r.color_ramp.elements[1].color = (0.52, 0.26, 0.12, 1)
+    nt.links.new(sep.outputs['Z'], r.inputs['Fac'])
+    n = nt.nodes.new('ShaderNodeTexNoise'); n.inputs['Scale'].default_value = 40; n.inputs['Detail'].default_value = 8
+    mx = nt.nodes.new('ShaderNodeMix'); mx.data_type = 'RGBA'; mx.blend_type = 'MULTIPLY'; mx.inputs[0].default_value = 0.6
+    nt.links.new(r.outputs['Color'], mx.inputs[6]); nt.links.new(n.outputs['Color'], mx.inputs[7]); nt.links.new(mx.outputs[2], b.inputs['Base Color'])
+    b.inputs['Roughness'].default_value = 0.9
+    return m
+
 def mänty(rng):
-    H = 20.0; kohteet = [runko(H * 0.86, 0.32, 0.08, mat('mrunko', (0.55, 0.30, 0.16), 0.25))]
+    H = 20.0; kohteet = [runko(H * 0.9, 0.34, 0.06, mantykuori())]
     lehvä = mat('mlehva', (0.09, 0.15, 0.06), 0.35, aukot=0.42)
-    for _ in range(45):
-        z = rng.uniform(H * 0.62, H * 0.97); a = rng.uniform(0, 2 * math.pi); r = rng.uniform(0.3, 2.4) * (1.15 - (z - H * 0.62) / (H * 0.4))
+    for _ in range(70):  # latvus isompi ja alempana (v2: rungot näyttivät pylväiltä)
+        z = rng.uniform(H * 0.45, H * 0.98); a = rng.uniform(0, 2 * math.pi); r = rng.uniform(0.3, 3.0) * (1.2 - (z - H * 0.45) / (H * 0.6))
         kohteet.append(mottu((r * math.cos(a), r * math.sin(a), z), rng.uniform(1.0, 1.9), 0.45, lehvä, rng))
     return kohteet, H
 
