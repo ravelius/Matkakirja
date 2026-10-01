@@ -6,7 +6,7 @@
   (TF:ssä omistajalta tai Laitetestaajalta): (a) Ihmisen matkan kysymys ILMAN valmista vastausta avaa chatin kortin
   aiheella; (b) kartan chat palaa paperiteemaan, kun linssi suljetaan chatin ollessa auki. Todennuskuvat:
   `proto-3d/lokit/pelikoodari-yhdistetty-20261001/` (ennen/jälkeen iPhone + iPad) ja `…/pelikoodari-tarkistus88-20261001/`.
-  Uusin käännös todennukseen: `proto-3d/lokit/juna-1.1.90-27c449e4/` (BUILD 90 PASS).
+  Uusin käännös todennukseen: uusin `proto-3d/lokit/juna-1.1.<n>-*/` (Natiiviseppä poistaa vanhat; 1.10. 05.4x: 91 = 23041f6f PASS).
 - **Äänimikseri TF 89:ssä** (juna-mikseri 6d3bd51f): vain kehittäjätilassa, Olavinlinna ja Cupola. Omistajan 5 rivin ohje on
   Päätoimittajalla. Laitetodennus keittiön kaikustemmeillä, kun ne ovat ämpärissä (#3727 + apulaisen v2-vienti
   `lokit/pelikoodari-keittio-aanet-20261001/vienti/`, odottaa omistajan "Jauhosäkki"-kuuntelua). Omistajan Tallenna-JSON tulee
