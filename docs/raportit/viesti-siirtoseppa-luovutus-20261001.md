@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 1.10.2026 klo 05.5x (Opus)
+# Siirtosepän luovutus 1.10.2026 klo 06.0x (Opus)
 
 ## Tila yhdellä silmäyksellä
 
@@ -11,7 +11,8 @@
 - **Juna 1.1 (90) = 27c449e4** (sis. 3a28322a + aluskasvit), savuke PASS.
 - **19f1ff3246be7386 (v18 + lähimaasto v3c) KUITATTU** juna 90 .appilla (lokit/siirtoseppa-ymparisto-kuittaus-90/):
   maasto 4 lohkoa, splat, 25k puuta, 20k aluskasvia, aitat maalla, virheitä 0. Osoitin vasta TF 90 julki + omistajan lupa.
-- **Seuraava osoitinkohde: v19-paketti** (#3759 mainissa; Julkaisija antaa hashin ~06.00). Kuittaa juna 90 .appilla:
+- **OSOITINKOHDE 02987940f6567fd2 (v19 + v3c + taivas) KUITATTU 06.04** juna 90 .appilla (lokit/siirtoseppa-v19-kuittaus/),
+  virheitä 0. Osoitin vaihtuu, kun TF 90 julki + omistajan lupa (Julkaisija). Uusien pakettien kuittaus samalla kaavalla:
   `HASH=<hash> APP=/Users/Shared/Claude/proto-3d/lokit/juna-1.1.90-27c449e4/Matkakirja3D.app L=…/siirtoseppa-v19-kuittaus
   zsh /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/ajo-ymparisto-kuittaus.sh` → tarkista M4 (puulaituri vesiportilla, ponttonisilta poissa), M0 (taivas-
   kuva, ei liukuväri), M1/M2 (aitat maalla), virheitä 0. Puukortit #3763 pidossa.
@@ -42,7 +43,7 @@
 
 ## Avoimet
 
-1. v19-paketin kuittaus (yllä) → yksi rivi Päätoimittajalle ja Julkaisijalle.
+1. Puukortit #3763 (pidossa): kun paketti tulee, natiivin puukortit v3 -lukija (kohta 3) ennen kuittausta.
 2. Worktree proto-siirtoseppa-kertoja voi poistaa (kaikki junassa 85); proto-siirtoseppa-vesi jää (linna-vesi = juna 90).
 3. Puukortit v3 (Linnanrakentaja): rajapinta sovittu — puut.json 7. sarake muunnos, `muunnokset[laji][muunnos]` →
    `kortit[nimi]`, atlas 2048 × 4096 (POT!), valinnainen `puukortit_normaali` (TBN-valo DioraamaPuu-varjostimeen).
