@@ -9779,3 +9779,7 @@ Omistaja 1.10.2026 klo 18.2x Cupolan päiväkoonnista sanatarkasti: 'Onko tuo pu
 ## OMISTAJA: UUTTA LINNAA EI ALOITETA VIELÄ — ENSIN MUUT TYÖT VALMIIKSI (1.10.2026) (1.10.2026 klo 18.56)
 
 Linnanrakentajan Ranskan kartoitus valmistui (docs/raportit/linna-ranska-kartoitus-20261001.md, haara linnanrakentaja-tyo-20260929 5fd399ddf): suositus Château des Allymes (VirtualPhoto3D, CC BY 4.0 — Päätoimittaja todensi Sketchfabin API:sta, 5 936 401 kolmiota, 1 × 8k, arviolta 2–3 cm/tekseli), varalla Haut-Kœnigsbourg. Omistaja 1.10.2026 klo 19.0x sanatarkasti: 'Ei aloiteta uutta linnaa vielä. Tehdään näitä muita ensin valmiiksi.' → Toista linnaa ei aloiteta eikä mallia ladata; kartoitus jää odottamaan. Linnanrakentaja viimeistelee Olavinlinnan (v24-kuori, kuvapari, mikseri) ja muut avoimet työt.
+
+## OMISTAJA: ALLYMES MUISTIIN SEURAAVAKSI LINNAKSI (1.10.2026) (1.10.2026 klo 18.56)
+
+Omistaja 1.10.2026 klo 19.0x edellisen päätöksen perään sanatarkasti: 'Mutta säilytetään muistissa, että tuo olisi hyvä seuraava kohde.' → Château des Allymes (VirtualPhoto3D, CC BY 4.0, docs/raportit/linna-ranska-kartoitus-20261001.md) on Poikkileikkaus-linssin seuraava linna, kun nykyiset työt ovat valmiit; Päätoimittaja ehdottaa sitä silloin omistajalle.
