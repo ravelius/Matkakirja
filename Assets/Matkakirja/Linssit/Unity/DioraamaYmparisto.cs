@@ -353,6 +353,8 @@ namespace Matkakirja.Natiivi
             Action<string> kirjaa, List<UnityEngine.Object> luodut, Action<Texture2D> tulos)
         {
             if (string.IsNullOrEmpty(polku)) { tulos(null); yield break; }
+            // Tukematon laite (simulaattori): ei turhaa latausta, suoraan png/jpg.
+            if (!SystemInfo.SupportsTextureFormat(TextureFormat.ASTC_4x4)) { tulos(null); yield break; }
             byte[] tavut = null;
             yield return DioraamaLevyvalimuisti.Hae(url(polku), 120, b => tavut = b);
             if (tavut == null) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei latautunut, png/jpg varalla"); tulos(null); yield break; }
