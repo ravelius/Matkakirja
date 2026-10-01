@@ -32,6 +32,11 @@ VAIN EUROOPPA (omistaja 27.9.2026, sitova): uutta sisältöä ja työtä tehdä�
 Euroopalle, kunnes omistaja toteaa Euroopan valmiiksi; muihin maanosiin ei mitään uutta
 ilman omistajan erillistä päätöstä. Raamattu, Ydinajatus, VAIN EUROOPPA.
 
+UI-POHJAT (omistaja 1.10.2026, sitova): jokainen uusi ominaisuus, linssi, ikkuna, kortti,
+nosto ja paneeli käyttää olemassa olevia tyylimäärittelyjä ja pohjia. Jos jotain tarvittavaa
+puuttuu, omaa ratkaisua ei tehdä: kysy ensin Päätoimittajalta, joka kysyy omistajalta,
+miten se toteutetaan. Raamattu, Ydinajatus kohta 2, UI-POHJAT JA TYYLIMÄÄRITTELYT.
+
 ## Lue ensin
 
 - **Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT"** (sitova

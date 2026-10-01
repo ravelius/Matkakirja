@@ -73,7 +73,7 @@
  */
 
 import { html } from './ui-apurit.js';
-import { EHDOTUS_OSOITE, ehdotusKaytossa, lahetaEhdotus } from './ehdotukset.js';
+import { EHDOTUS_OSOITE, avainOtsakkeet, ehdotusKaytossa, lahetaEhdotus } from './ehdotukset.js';
 import { avaaMinipopup, suljeMinipopup } from './minipopup.js';
 
 /* ------------------------------------------------------------------ *
@@ -904,9 +904,7 @@ export function piirraOtsikonReaktio(otsikkoRivi, sivunAvain, otsikko) {
  * @returns {Promise<Array<object>>} kohteet laskureineen
  */
 export async function haeReaktiolista(avain) {
-  const vastaus = await fetch(
-    `${EHDOTUS_OSOITE}/reaktio-lista?avain=${encodeURIComponent(avain)}`,
-  );
+  const vastaus = await fetch(`${EHDOTUS_OSOITE}/reaktio-lista`, { headers: avainOtsakkeet(avain) });
   if (vastaus.status === 401) throw new Error('Avain ei kelpaa.');
   if (!vastaus.ok) throw new Error(`HTTP ${vastaus.status}`);
   const data = await vastaus.json();
@@ -922,14 +920,11 @@ export async function haeReaktiolista(avain) {
  * @returns {Promise<object>} workerin vastaus
  */
 export async function merkitseVirheKorjatuksi(avain, kohde) {
-  const vastaus = await fetch(
-    `${EHDOTUS_OSOITE}/reaktio-korjattu?avain=${encodeURIComponent(avain)}`,
-    {
-      method: 'PUT',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ kohde }),
-    },
-  );
+  const vastaus = await fetch(`${EHDOTUS_OSOITE}/reaktio-korjattu`, {
+    method: 'PUT',
+    headers: avainOtsakkeet(avain, { 'content-type': 'application/json' }),
+    body: JSON.stringify({ kohde }),
+  });
   let data = null;
   try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
   if (vastaus.status === 401) throw new Error('Avain ei kelpaa.');
