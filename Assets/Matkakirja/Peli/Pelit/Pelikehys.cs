@@ -6,7 +6,7 @@
 //     pelikatalogin linjauksen mukaan ("vaikeustaso säädetään hakusyvyydellä ja satunnaisilla ei-optimaaleilla siirroilla").
 //   - Vastustaja: botti (helppo / normaali / vaikea) tai kaveri samalla laitteella (hotseat-vuorottelu).
 //   - PeliTulos + Pelikehys: tulos matkakirjaan (rivi), pelistreak (pelattu peli on pelipäivän teko,
-//     Matka.KirjaaPelipaiva) ja talous (kortin palkkio: rahapalkkio tai Aarnin luettelon vihje).
+//     Matka.KirjaaPelipaiva) ja talous (rahapalkkio botin voitosta; ei Aarnin vihjeitä, kaanonkorjaus 1.10.).
 // Puhdas C# (ei UnityEngineä): Peli-testit ajaa säännöt ja botin ilman editoria. Satunnaisuus aina Satunnainen-
 // lähteestä (siemen ulkoa), joten botin siirrot ovat testeissä toistettavia.
 using System;
@@ -109,33 +109,35 @@ namespace Matkakirja.Peli.Pelit
         public bool PelaajaVoitti => Voittaja == 0;
     }
 
-    /// <summary>Pelin talousmalli pelikatalogin kortista (talous-suunnitelma-20260927.md): ilmainen kohtaaminen vihjeellä
-    /// tai huvipuistotyyppinen panos/voitto. Kortti päättää; kehys vain laskee.</summary>
+    /// <summary>Pelin talousmalli (docs/raportit/talous-suunnitelma-20260927.md kohta 3: "Peli (minipeli) 40–80 £"):
+    /// rahapalkkio vain voitosta bottia vastaan, porrastettuna botin tason mukaan. Aarnin luettelon vihjeitä peleistä EI
+    /// anneta (Päätoimittajan kaanonkorjaus 1.10.2026: Raamatun AARREVIHJEET — vihjeet ovat harvoja sivuhuomioita, eivät
+    /// järjestelmä). Panos (huvipuistopelit) veloitetaan pelin alussa, ei kehyksessä.</summary>
     public sealed class PelinTalous
     {
-        /// <summary>Pääsy/panos ennen peliä (£, 0 = ilmainen) ja rahapalkkio botin voittamisesta.</summary>
-        public int Panos, Voittopalkkio;
-        /// <summary>Botin voitto antaa Aarnin luettelon vihjeen (vihjeen teksti kohteen datasta).</summary>
-        public bool VihjeVoitosta;
-        /// <summary>Alin bottitaso, jonka voitto palkitsee (helppo = kaikki).</summary>
-        public Vastustaja AlinPalkittava = Vastustaja.BottiHelppo;
+        public int Panos;
+        /// <summary>Palkkio botin voitosta: helppo, normaali, vaikea (£).</summary>
+        public int Helppo, Normaali, Vaikea;
 
-        public static readonly PelinTalous IlmainenVihjeella = new PelinTalous { VihjeVoitosta = true };
+        /// <summary>Minipeli ilman panosta (Mylly ym. kohtaamiset): 40 / 60 / 80 £.</summary>
+        public static readonly PelinTalous Minipeli = new PelinTalous { Helppo = 40, Normaali = 60, Vaikea = 80 };
+
+        public int Palkkio(Vastustaja v) => v switch
+        {
+            Vastustaja.BottiHelppo => Helppo,
+            Vastustaja.BottiNormaali => Normaali,
+            Vastustaja.BottiVaikea => Vaikea,
+            _ => 0,
+        };
     }
 
     public static class Pelikehys
     {
-        /// <summary>Saako tulos palkinnon: vain botin voitto vähintään alimmalla palkittavalla tasolla. Kaveripeli ei palkitse
-        /// (hotseat: molemmat kädet ovat samassa laitteessa, palkinto olisi ilmainen).</summary>
-        public static bool Palkitaan(PeliTulos t, PelinTalous talous) =>
-            t.Botti && t.PelaajaVoitti && (int)t.Vastustaja >= (int)talous.AlinPalkittava;
+        /// <summary>Palkkio vain botin voitosta millä tahansa tasolla (Päätoimittaja 1.10.2026). Kaveripeli samalla laitteella
+        /// kirjataan matkakirjaan ja pelipäiväksi, mutta ei palkitse (molemmat kädet samassa laitteessa).</summary>
+        public static bool Palkitaan(PeliTulos t) => t.Botti && t.PelaajaVoitti;
 
-        public static int Rahapalkkio(PeliTulos t, PelinTalous talous) => Palkitaan(t, talous) ? talous.Voittopalkkio : 0;
-
-        /// <summary>Aarnin vihje: botin voitosta millä tahansa tasolla, KERRAN per peli (Päätoimittaja 1.10.2026, loki);
-        /// jo saatu = pelaajalla on jo tämän pelin (PeliId) vihje. Kaveripeli kirjataan matkakirjaan ja pelipäiväksi,
-        /// mutta ei palkitse.</summary>
-        public static bool Vihje(PeliTulos t, PelinTalous talous, bool joSaatu = false) => !joSaatu && talous.VihjeVoitosta && Palkitaan(t, talous);
+        public static int Rahapalkkio(PeliTulos t, PelinTalous talous) => Palkitaan(t) ? talous.Palkkio(t.Vastustaja) : 0;
 
         public static string VastustajanNimi(Vastustaja v) => v switch
         {

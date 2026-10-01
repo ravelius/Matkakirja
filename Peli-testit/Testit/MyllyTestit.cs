@@ -231,20 +231,17 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void PelikehysPalkitseeVainBotinVoiton()
         {
             var t = new PeliTulos { PeliId = "DEU-2", Nimi = "Mylly", PaikallinenNimi = "Mühle", Paikka = "Leipzig", Vastustaja = Vastustaja.BottiNormaali, Voittaja = 0, Siirtoja = 31, Paiva = "2026-10-01" };
-            var talous = PelinTalous.IlmainenVihjeella;
-            Oleta.Tosi(Pelikehys.Vihje(t, talous), "botin voitto → vihje");
-            Oleta.Tosi(!Pelikehys.Vihje(t, talous, joSaatu: true), "vihje kerran per peli");
-            Oleta.Tosi(Pelikehys.Vihje(new PeliTulos { Vastustaja = Vastustaja.BottiHelppo, Voittaja = 0 }, talous), "myös helppo botti");
-            Oleta.Sama(0, Pelikehys.Rahapalkkio(t, talous), "mylly: ei rahaa");
+            var talous = PelinTalous.Minipeli;
+            Oleta.Sama(60, Pelikehys.Rahapalkkio(t, talous), "normaali 60 £");
+            Oleta.Sama("40,60,80", string.Join(",", new[] { Vastustaja.BottiHelppo, Vastustaja.BottiNormaali, Vastustaja.BottiVaikea }
+                .Select(v => Pelikehys.Rahapalkkio(new PeliTulos { Vastustaja = v, Voittaja = 0 }, talous))), "minipeli 40–80 £");
             Oleta.Sama("Mylly (Mühle), Leipzig: voitit botin (normaali) 31 siirrossa.", Pelikehys.Matkakirjarivi(t));
             var kaveri = new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.Kaveri, Voittaja = 0, Siirtoja = 40 };
-            Oleta.Tosi(!Pelikehys.Vihje(kaveri, talous), "kaveripeli ei palkitse");
+            Oleta.Sama(0, Pelikehys.Rahapalkkio(kaveri, talous), "kaveripeli ei palkitse");
             Oleta.Sama("Mylly: aloittaja voitti kaveripelin 40 siirrossa.", Pelikehys.Matkakirjarivi(kaveri));
             var havio = new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.BottiVaikea, Voittaja = 1, Siirtoja = 52 };
+            Oleta.Sama(0, Pelikehys.Rahapalkkio(havio, talous));
             Oleta.Sama("Mylly: hävisit, vastassa botti (vaikea) 52 siirrossa.", Pelikehys.Matkakirjarivi(havio));
-            var raha = new PelinTalous { Voittopalkkio = 30, AlinPalkittava = Vastustaja.BottiNormaali };
-            Oleta.Sama(0, Pelikehys.Rahapalkkio(new PeliTulos { Vastustaja = Vastustaja.BottiHelppo, Voittaja = 0 }, raha), "helppo alle rajan");
-            Oleta.Sama(30, Pelikehys.Rahapalkkio(new PeliTulos { Vastustaja = Vastustaja.BottiVaikea, Voittaja = 0 }, raha));
         }
 
         [Testi] static void PelikehysKirjaaPelipaivanJaPalkkion()
@@ -252,13 +249,16 @@ namespace Matkakirja.Peli.Testit
             var m = Matka.Luo(ValeVerkko.Pieni(), new Satunnainen(1), "Fogg", "ala");
             m.AloitaVuoro();
             int alku = m.Tila.Pelaaja.Raha;
-            var raha = new PelinTalous { Voittopalkkio = 30 };
+            var raha = PelinTalous.Minipeli;
             var t = new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.BottiNormaali, Voittaja = 0, Siirtoja = 20, Paiva = "2026-10-01" };
             var (streak, palkkio) = Pelikehys.Kirjaa(m, t, raha);
             Oleta.Tosi(streak.HasValue && streak.Value.Pituus == 1, "pelattu peli = pelipäivän teko");
-            Oleta.Sama(30, palkkio);
-            Oleta.Sama(alku + 30, m.Tila.Pelaaja.Raha);
-            Oleta.Tosi(Pelikehys.Kirjaa(m, t, PelinTalous.IlmainenVihjeella).Streak == null, "sama päivä ei kirjaa uudelleen");
+            Oleta.Sama(60, palkkio);
+            Oleta.Sama(alku + 60, m.Tila.Pelaaja.Raha);
+            Oleta.Tosi(Pelikehys.Kirjaa(m, t, raha).Streak == null, "sama päivä ei kirjaa pelipäivää uudelleen");
+            // Kaveripeli: pelipäivä kyllä (uusi päivä), raha ei.
+            var k = Pelikehys.Kirjaa(m, new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.Kaveri, Voittaja = 1, Siirtoja = 9, Paiva = "2026-10-02" }, raha);
+            Oleta.Tosi(k.Streak.HasValue && k.Palkkio == 0, "kaveripeli on pelipäivä, ei palkkiota");
         }
     }
 }
