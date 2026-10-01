@@ -43,6 +43,8 @@ export const FOKUSVIRTA_LUXEMBURG = {
       + 'aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee '
       + 'täältä käsin, mutta asuu Haagissa — en ole vielä tavannut '
       + 'ketään, joka olisi nähnyt hänet täällä.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääntä EI ole generoitu, omistajan lupa vaaditaan). */
+    luenta: "[curious] Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. [softly] Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.",
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

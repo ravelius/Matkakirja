@@ -13,6 +13,10 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2487, teksti: 'Raamattu: pariteettimuutokset vain omistajan lu… (#3735)' },
+  { v: 2486, teksti: 'Web natiivin malliin: Pulun ylärivin ikonit ja… (#3731)' },
+  { v: 2485, teksti: 'Maakuntien toinen kuva: GRC, ALB, AUT (#3738)' },
+  { v: 2484, teksti: 'Luentatekstit: 5 kaupunkia, ei ääntä (#3733)' },
   { v: 2483, teksti: 'Olavinlinna v19: ponttonisilta pois kuoresta, p… (#3759)' },
   { v: 2482, teksti: 'TestFlight: Unity-askeleen virhepolku palauttaa… (#3720)' },
   { v: 2481, teksti: 'Olavinlinnan lähimaasto v3c: splat-maasto, pien… (#3755)' },
