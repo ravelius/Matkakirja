@@ -43,12 +43,32 @@ iy = np.clip(((a[3] - (np.arange(n) + 0.5) * (a[3] - a[1]) / n) + SADE).astype(i
 ix = np.clip(((a[0] + (np.arange(n) + 0.5) * (a[2] - a[0]) / n) + SADE).astype(int), 0, C.shape[1] - 1)
 lat = C[iy][:, ix].astype(np.float32); q = np.pad(lat, 3, mode='edge'); lat = sum(q[a_:a_ + n, b_:b_ + n] for a_ in range(0, 7, 3) for b_ in range(0, 7, 3)) / 9
 avoin = 1 - np.clip((lat - 3) / 5, 0, 1)
-t = (t * avoin)[..., None]
-# ylhäältä katsottuna pinta tummempi kuin lähikuvatekstuurin keskiarvo (varjot, kosteus); kallio v3b: jäkälä ja
-# rapautunut graniitti vaaleina (0,95), ettei harmaa kallio sekoitu järven väriin (natiivi 1.10.)
-kerroin = np.full(len(keski), 0.75, np.float32); kerroin[0] = 0.95
-kerros = w @ (keski * kerroin[:, None])
-uusi = kerros * (1 + 0.15 * (vaihtelu - 1))[..., None]  # v3: ilmakuvan laikut puolitettu (tummat läiskät lähellä)
+# v3c (Siirtoseppä ja Päätoimittaja 1.10.): korttipuiden alueella (< 380 m, latvuspinta alkaa 440 m:stä) makro on
+# metsänpohja eikä latvus: muuten n1500-täytön tasaiset laatat (harmaa kallio, oliivinen kangas) näkyivät natiivissa
+# yli 50 m:n päästä "vetenä" puiden alla.
+yy = (a[3] - (np.arange(n) + 0.5) * (a[3] - a[1]) / n)[:, None]; xx = (a[0] + (np.arange(n) + 0.5) * (a[2] - a[0]) / n)[None, :]
+korttialue = 1 - np.clip((np.hypot(xx, yy) - 380) / 60, 0, 1)
+# metsän alla puolet n1500-täytön omaa vaihtelua; harmaat (kylläisyys < 0,12) täyttölaatat korvataan kokonaan
+kyl = (osa.max(-1) - osa.min(-1)) / np.maximum(osa.max(-1), 1e-3)
+harmaa = 1 - np.clip((kyl - 0.08) / 0.08, 0, 1)
+t = (t * np.maximum(avoin, korttialue * (0.5 + 0.5 * harmaa)))[..., None]
+# v3c: kaukosävyt kerroksittain (sRGB), ei tekstuurien keskiarvoja: forest_leaves_02:n keskiarvo on oranssi (neulaset),
+# vaikka kangas näyttää kaukaa oliivinvihreältä (sammal, puolukka). Kallio jäkälän vaaleana, ettei se sekoitu järveen.
+KAUKO = np.array([[0.50, 0.49, 0.43],   # kallio
+                  [0.36, 0.37, 0.22],   # varpukangas
+                  [0.45, 0.47, 0.26],   # niitty
+                  [0.41, 0.33, 0.22],   # neulaset
+                  [0.45, 0.43, 0.38],   # rantakivikko
+                  [0.62, 0.56, 0.42]], np.float32)  # hiekka
+kerros = w @ KAUKO
+# v3c: sävyvaihtelu kahdessa mittakaavassa (12 m ja 40 m, ±6 %), ettei kerrosten keskiväri näy tasaisena täyttönä
+rng = np.random.default_rng(97)
+def kohina(solu_px):
+    m_ = n // solu_px + 3; k = rng.standard_normal((m_, m_)).astype(np.float32)
+    k = np.asarray(Image.fromarray(k, 'F').resize((m_ * solu_px, m_ * solu_px), Image.BICUBIC))[:n, :n]
+    return (k - k.mean()) / (k.std() + 1e-6)
+savy = 1 + 0.06 * (0.5 * kohina(max(2, int(12 / m_px))) + 0.5 * kohina(max(2, int(40 / m_px))))
+uusi = kerros * ((1 + 0.15 * (vaihtelu - 1)) * savy)[..., None]  # v3: ilmakuvan laikut puolitettu (tummat läiskät lähellä)
 tulos = osa * (1 - t) + np.clip(uusi, 0, 1) * t
 kuva = np.asarray(im).copy(); kuva[r0:r1, c0:c1] = (tulos * 255).round().astype(np.uint8)
 ulos = Image.fromarray(kuva)
