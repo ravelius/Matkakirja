@@ -488,6 +488,16 @@ namespace Matkakirja.Editori
             hehku.scatter.Override(0.55f);
             hehku.highQualityFiltering.Override(false);
             hehku.maxIterations.Override(4);
+            // ISS-kamera (Linssiseppä 2, 30.9.): filmirae ja polttovälin vinjetti, oletuksena pois (Kyytipino.Filmi, `astro kyyti filmi`).
+            var rae = Lisaa<UnityEngine.Rendering.Universal.FilmGrain>();
+            rae.type.Override(UnityEngine.Rendering.Universal.FilmGrainLookup.Thin1);
+            rae.intensity.Override(0.22f);
+            rae.response.Override(0.8f);
+            rae.active = false;
+            var vinjetti = Lisaa<UnityEngine.Rendering.Universal.Vignette>();
+            vinjetti.intensity.Override(0.2f);
+            vinjetti.smoothness.Override(0.45f);
+            vinjetti.active = false;
             EditorUtility.SetDirty(p);
             AssetDatabase.SaveAssets();
         }

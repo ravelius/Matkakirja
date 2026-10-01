@@ -27,7 +27,7 @@ Shader "Matkakirja/Linssit/Ilmakaari"
         _Akseli("Napa-akseli (maailma)", Vector) = (0, 1, 0, 0)
         _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
         _Hamara("Hämärän sävy", Color) = (1, 0.42, 0.14, 1)
-        _HehkuVari("Ilmahehkun sävy", Color) = (0.55, 0.95, 0.5, 1)
+        _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Hehku("Ilmahehkun voimakkuus (0 = pois)", Float) = 0.12
         _HamaraVoima("Hämärän sävyn voimakkuus (0 = pois)", Float) = 1
     }
@@ -114,7 +114,7 @@ Shader "Matkakirja/Linssit/Ilmakaari"
                 // Pehmeä vyö (Päätoimittaja 30.9.: terävä viiva): σ 9 km + leveä heikko helma, kirkkaus vaihtelee hieman (± 25 %).
                 float dh = h - 95000.0;
                 float aalto = 0.75 + 0.25 * sin(n.x * 23.0 + n.y * 17.0) * sin(n.z * 29.0 - n.x * 11.0);
-                half hehku = (half)((exp(-dh * dh / (9000.0 * 9000.0)) + 0.35 * exp(-dh * dh / (22000.0 * 22000.0))) * 0.75 * aalto * _Hehku) * yo;
+                half hehku = (half)((exp(-dh * dh / (14000.0 * 14000.0)) + 0.4 * exp(-dh * dh / (35000.0 * 35000.0))) * 0.5 * aalto * _Hehku) * yo;
                 a = saturate(a * 1.15h);
                 half yht = a + hehku - a * hehku;
                 vari = (vari * a + _HehkuVari.rgb * hehku) / max(a + hehku, 1e-3h);

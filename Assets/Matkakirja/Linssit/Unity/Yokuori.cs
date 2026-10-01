@@ -46,8 +46,21 @@ namespace Matkakirja.Natiivi
         public static float ValojenOsuus = 1f;
         /// <summary>A/B (`astro kyyti kiilto 0|1`, `astro kyyti varjo 0|1`): heijastus ja päiväpuolen varjostus pois.</summary>
         public static bool KiiltoPois, VarjoPois;
-        public const float KiillonVoima = 6f, VarjonVoima = 0.55f;
+        public const float VarjonVoima = 0.55f;
+        /// <summary>Kiillon voima ja aallokon kaltevuus σ² (A/B `astro kyyti kiiltovoima x`, `astro kyyti aalto x`; Linssiseppä 2:n
+        /// juliste 1.10.: matalan auringon heijastuspolun reuna näytti ylivalottuneena pystysuoralta seinältä).</summary>
+        public static float KiillonVoima = 6f, Aallokko = 0.02f;
         Texture2D valotEu, valotMaa;
+        readonly Texture2D[] tarkat = new Texture2D[4];
+        /// <summary>
+        /// FOTOREALISMI (yövalot tarkemmiksi, Päätoimittaja 30.9.): NASA Black Marble 2016 500 m Euroopalle Karttasepältä 8192² 2 × 2
+        /// -tiilinä (eurooppa-8192-<sarake><rivi>.jpg, 00 länsi-ylä, 10 itä-ylä, 01 länsi-ala, 11 itä-ala; sama rajaus kuin
+        /// eurooppa-2048). null = ei tarkkoja (nykyinen Z6 2048²). Kevyillä laitteilla (≤ iPhone 15 Pro) ei ladata.
+        /// A/B `astro kyyti yovalot <juuri>|pois`.
+        /// </summary>
+        public static string TarkatValotJuuri;
+        public static bool TarkatPaalla => tarkatLadattu;
+        static bool tarkatLadattu;
         MeshRenderer piirto;
 
         CesiumGeoreference g;
@@ -127,9 +140,41 @@ namespace Matkakirja.Natiivi
             }
             if (valotEu != null) materiaali.SetTexture(IdValotEu, valotEu);
             if (valotMaa != null) materiaali.SetTexture(IdValotMaa, valotMaa);
+            yield return HaeTarkat();
             Debug.Log($"MATKAKIRJA linssit: yövalot eurooppa {(lEu != null ? "ok" : "puuttuu")}, maailma {(lMaa != null ? "ok" : "puuttuu")}; " +
                       $"vesi eurooppa {(vEu != null ? "ok" : "puuttuu")}, maailma {(vMaa != null ? "ok" : "puuttuu")}");
         }
+
+        /// <summary>Tarkat Euroopan yövalot 2 × 2 -tiilinä (R8, mipit) _ValotT00…T11:een; _TarkatOn 1 vasta kun kaikki neljä on.</summary>
+        IEnumerator HaeTarkat()
+        {
+            materiaali.SetFloat("_TarkatOn", 0f);
+            tarkatLadattu = false;
+            string juuri = TarkatValotJuuri;
+            if (string.IsNullOrEmpty(juuri) || Matkakirja.Linssit.Kyytipino.KevytLaite) yield break;
+            string[] nimet = { "00", "10", "01", "11" };
+            for (int i = 0; i < 4; i++)
+            {
+                byte[] rg = null; int w = 0, h = 0;
+                string tiedosto = "iss-yovalot-8192-" + nimet[i] + "-" + juuri.GetHashCode().ToString("x8") + ".jpg";
+                // Karttasepän tiilet: R = valot, G = vesi (GSHHG), B = 0 → suoraan RG16 (ei luminanssia, joka sekoittaisi kanavat).
+                yield return Hae(juuri.TrimEnd('/') + "/eurooppa-8192-" + nimet[i] + ".jpg", tiedosto, (k, kw, kh) => { rg = k; w = kw; h = kh; }, true);
+                if (rg == null) { Debug.LogWarning("MATKAKIRJA yövalot: tarkka tiili " + nimet[i] + " puuttuu, jäädään 2048²:een"); yield break; }
+                if (tarkat[i] != null) Destroy(tarkat[i]);
+                var t = new Texture2D(w, h, TextureFormat.RG16, true, true)
+                    { name = "iss-valot-8192-" + nimet[i], wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear, anisoLevel = 2 };
+                t.GetPixelData<byte>(0).CopyFrom(rg);
+                t.Apply(true, true);
+                tarkat[i] = t;
+                materiaali.SetTexture("_ValotT" + nimet[i], t);
+            }
+            materiaali.SetFloat("_TarkatOn", 1f);
+            tarkatLadattu = true;
+            Debug.Log("MATKAKIRJA linssit: tarkat yövalot 8192² (2 × 2) ladattu");
+        }
+
+        /// <summary>Testikomento: tarkkojen yövalojen juuri vaihdettu → lataus uudelleen.</summary>
+        public void LataaTarkat() { if (materiaali != null) StartCoroutine(HaeTarkat()); }
 
         /// <summary>Maailman vesimaski 1024² (Web Mercator, rivi 0 alhaalla kuten Unityssä) tai null; testejä varten.</summary>
         public static byte[] VesiMaailma;
@@ -162,7 +207,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kuva ämpäristä tai välimuistista luminanssiksi (tavu pikseliä kohden, rivi 0 alhaalla); null = ei saatu.</summary>
-        static IEnumerator Hae(string url, string tiedosto, Action<byte[], int, int> valmis)
+        static IEnumerator Hae(string url, string tiedosto, Action<byte[], int, int> valmis, bool rgKanavat = false)
         {
             string polku = Path.Combine(Application.persistentDataPath, "kuvat", tiedosto);
             byte[] tavut = null;
@@ -183,8 +228,17 @@ namespace Matkakirja.Natiivi
             var kuva = new Texture2D(2, 2, TextureFormat.RGBA32, false);
             if (!kuva.LoadImage(tavut, false)) { Destroy(kuva); valmis(null, 0, 0); yield break; }
             var px = kuva.GetPixels32();
-            var l = new byte[px.Length];
-            for (int i = 0; i < px.Length; i++) l[i] = (byte)((px[i].r * 54 + px[i].g * 183 + px[i].b * 19) >> 8);
+            byte[] l;
+            if (rgKanavat)
+            {
+                l = new byte[px.Length * 2];
+                for (int i = 0; i < px.Length; i++) { l[2 * i] = px[i].r; l[2 * i + 1] = px[i].g; }
+            }
+            else
+            {
+                l = new byte[px.Length];
+                for (int i = 0; i < px.Length; i++) l[i] = (byte)((px[i].r * 54 + px[i].g * 183 + px[i].b * 19) >> 8);
+            }
             int kw = kuva.width, kh = kuva.height;
             Destroy(kuva);
             valmis(l, kw, kh);
@@ -240,6 +294,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdIta, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 1, 0))).normalized);
             materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima * ValojenOsuus);
             materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
+            materiaali.SetFloat("_Aalto", Aallokko);
             materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);
             // Fotorealismi 3–4 (30.9.): pilvien varjot ja kuunvalo.
             materiaali.SetFloat("_PilviVarjo", PilviVarjoPois ? 0f : PilviVarjonVoima);
@@ -254,12 +309,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Fotorealismi osa 3: pilvien varjot maahan (A/B `astro kyyti pilvivarjo 0|1`); korkeus = kyydin pilvikuori 8 km.</summary>
-        public static bool PilviVarjoPois = true;   // junassa pois (fotorealismi A/B)
+        public static bool PilviVarjoPois = false;   // fotorealismi oletuksena päällä (Päätoimittaja 1.10.)
         public static float PilviVarjonVoima = 0.5f, PilviKorkeusM = 8000f;
         /// <summary>Fotorealismi osa 4: kuunvalo yöpuolelle ja pilviin (A/B `astro kyyti kuunvalo 0|1`).</summary>
-        public static bool KuunvaloPois = true;   // junassa pois (fotorealismi A/B)
+        public static bool KuunvaloPois = false;   // fotorealismi oletuksena päällä (Päätoimittaja 1.10.)
         /// <summary>Fotorealismi osa 2: taivaan Fresnel-heijastus vesiltä (A/B `astro kyyti fresnel 0|1`).</summary>
-        public static bool TaivasHeijastusPois = true;   // junassa pois (fotorealismi A/B)
+        public static bool TaivasHeijastusPois = false;   // fotorealismi oletuksena päällä (Päätoimittaja 1.10.)
         public static float KuunvalonVoima = 0.35f;
 
         void OnDestroy()

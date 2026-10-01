@@ -21,6 +21,10 @@
 # Päivä ja yö (aloituslento v3f, 28.9.2026): _aurinko = (auringon suunta maailmassa, voimakkuus); yöpuoli (porvarillinen
 # hämärä, auringon korkeus −6…+2° pikselissä) tummuu kuten radion hämärä ja yövalot palavat painolla max(hämärä, yö)
 # (Kartta/Paivanvalo.cs). w = 0 → ennallaan.
+# S2-reuna (Linssiseppä 1.10.2026): paikan 2 sekoituspaino liukuu nollaan _s2Reuna-suorakulmion (länsi, etelä, itä, pohjoinen)
+# 1,5°:n reunalla (S2-mosaiikki sulautuu BMNG:hen, peiton ulkopuolen venyneet reunatekselit eivät näy). pohjoinen = 0 → ennallaan.
+# S2-sävy (Linssiseppä 1.10.2026, S2-erä): _s2Savy sävyttää perusvärin (kontrasti, kylläisyys, lämpö) vain Euroopan
+# S2-mosaiikin suorakulmiossa 1,5°:n pehmeällä reunalla (Kyytipino.AsetaS2Savy, vain kyydissä S2:n ollessa päällä). w = 0 → ennallaan.
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
 import json, sys, uuid, os
 
@@ -125,6 +129,17 @@ SEKOITUS_RUNKO = (
     "    float w = max(paljastusReuna.x, 1e-6);\n"
     "    peitto = smoothstep(paljastus.w - 0.5 * w, paljastus.w + 0.5 * w, c + kohina * paljastusReuna.y);\n"
     "}\n"
+    "// S2 edge (Linssiseppa 1.10.2026, AstronauttiKerros.PaivitaS2): s2Reuna = (west, south, east, north) in degrees; the slot\n"
+    "// weight fades to 0 over 1.5 deg inside the rectangle, so the Sentinel-2 mosaic blends into BMNG and clamped edge texels\n"
+    "// outside it never show. north = 0 -> off (other layers in this slot unchanged).\n"
+    "if (s2Reuna.w != 0.0)\n"
+    "{\n"
+    "    float3 rn = normalize(pos.xyz - keski.xyz);\n"
+    "    float rlat = degrees(asin(clamp(dot(rn, akseli.xyz), -1.0, 1.0)));\n"
+    "    float rlon = degrees(atan2(dot(rn, ita.xyz), dot(rn, nolla.xyz)));\n"
+    "    peitto *= smoothstep(s2Reuna.x, s2Reuna.x + 1.5, rlon) * (1.0 - smoothstep(s2Reuna.z - 1.5, s2Reuna.z, rlon))\n"
+    "            * smoothstep(s2Reuna.y, s2Reuna.y + 1.5, rlat) * (1.0 - smoothstep(s2Reuna.w - 1.5, s2Reuna.w, rlat));\n"
+    "}\n"
     "ulos = lerp(base, s, (s.a * alfa * peitto).xxxx);\n")
 # Alikaavion uudet syötteet: (nimi, viite, tyyppi, kiinteä GUID, solmun paikka-id pääkaaviossa)
 ALI_SYOTTEET = [("varaVari", "_varaVari", "v4", "b2e5c8d1-4f6a-4b7c-9d0e-1f2a3b4c5d6e", 710000),
@@ -135,9 +150,14 @@ ALI_SYOTTEET = [("varaVari", "_varaVari", "v4", "b2e5c8d1-4f6a-4b7c-9d0e-1f2a3b4
                 ("paljastus", "_paljastus", "v4", "a7d0b3c6-9ebf-4a01-8c5d-6e7f8091a2b3", 710005),
                 ("paljastusReuna", "_paljastusReuna", "v4", "b8e1c4d7-afc0-4b12-9d6e-7f8091a2b3c4", 710006),
                 ("keski", "_keski", "v4", "c9f2d5e8-b0d1-4c23-8e7f-8091a2b3c4d5", 710007),
-                ("pos", "_pos", "v4", "d0a3e6f9-c1e2-4d34-9f80-91a2b3c4d5e6", 710008)]
+                ("pos", "_pos", "v4", "d0a3e6f9-c1e2-4d34-9f80-91a2b3c4d5e6", 710008),
+                # S2-reuna (Linssiseppä 1.10.2026): maan akselit lat/lon-maskiin ja S2-suorakulmio (vain paikka 2).
+                ("akseli", "_akseli", "v4", "e1b4f7a0-d2f3-4e45-8a91-a2b3c4d5e6f7", 710009),
+                ("nolla", "_nolla", "v4", "f2c5a8b1-e3a4-4f56-9ba2-b3c4d5e6f708", 710010),
+                ("ita", "_ita", "v4", "a3d6b9c2-f4b5-4a67-8cb3-c4d5e6f70819", 710011),
+                ("s2Reuna", "_s2Reuna", "v4", "b4e7cad3-a5c6-4b78-9dc4-d5e6f708192a", 710012)]
 # Sekoitusfunktion syöttöpaikat ALI_SYOTTEET-järjestyksessä (7 = ulos, 8 = ts, 10 = ouv).
-ALI_CF_PAIKAT = [3, 4, 5, 6, 9, 11, 12, 13, 14]
+ALI_CF_PAIKAT = [3, 4, 5, 6, 9, 11, 12, 13, 14, 15, 16, 17, 18]
 
 def ali_ominaisuus(nimi, viite, tyyppi, guid):
     o = {"m_SGVersion": 1, "m_ObjectId": uusi_id(), "m_Guid": {"m_GuidSerialized": guid}, "m_Name": nimi,
@@ -191,7 +211,9 @@ sf_paikat = [sf_paikka("Vector4MaterialSlot", 0, "base", 0), sf_paikka("Vector4M
              sf_paikka("Vector4MaterialSlot", 8, "ts", 0), sf_paikka("Vector1MaterialSlot", 9, "varaTaso", 0),
              sf_paikka("Vector2MaterialSlot", 10, "ouv", 0), sf_paikka("Vector4MaterialSlot", 11, "paljastus", 0),
              sf_paikka("Vector4MaterialSlot", 12, "paljastusReuna", 0), sf_paikka("Vector4MaterialSlot", 13, "keski", 0),
-             sf_paikka("Vector4MaterialSlot", 14, "pos", 0)]
+             sf_paikka("Vector4MaterialSlot", 14, "pos", 0), sf_paikka("Vector4MaterialSlot", 15, "akseli", 0),
+             sf_paikka("Vector4MaterialSlot", 16, "nolla", 0), sf_paikka("Vector4MaterialSlot", 17, "ita", 0),
+             sf_paikka("Vector4MaterialSlot", 18, "s2Reuna", 0)]
 sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", "m_ObjectId": uusi_id(), "m_Group": {"m_Id": ""},
       "m_Name": "MatkakirjaSekoitus (Custom Function)", "m_DrawState": {"m_Expanded": True, "m_Position": {
       "serializedVersion": "2", "x": 1100.0, "y": -415.0, "width": 208.0, "height": 200.0}},
@@ -510,6 +532,17 @@ for om in (palj_om, preuna_om):
 for o in (palj_solmu, preuna_solmu, keski4_solmu, ppos_solmu):
     G["m_Nodes"].append({"m_Id": o["m_ObjectId"]})
 lisat += [palj_om, preuna_om, palj_solmu, palj_ulos, preuna_solmu, preuna_ulos, keski4_solmu, keski4_ulos, ppos_solmu, ppos_ulos]
+# S2-reuna paikkaan 2 (Linssiseppä 1.10.2026): maan akselit ja _s2Reuna (AstronauttiKerros.PaivitaS2; 0 = pois).
+s2reuna_om = vektori_ominaisuus("s2Reuna", "_s2Reuna")
+rsolmut = []
+for i, (om_, pid) in enumerate(((akseli_om, 710009), (nolla_om, 710010), (ita_om, 710011), (s2reuna_om, 710012))):
+    rs, ru = vektori_ominaisuussolmu(om_, PX, PY + 240.0 + 60.0 * i)
+    G["m_Edges"].append(reuna(rs["m_ObjectId"], 0, p2, pid))
+    G["m_Nodes"].append({"m_Id": rs["m_ObjectId"]})
+    rsolmut += [rs, ru]
+G["m_Properties"].append({"m_Id": s2reuna_om["m_ObjectId"]})
+KAT["m_ChildObjectList"].append({"m_Id": s2reuna_om["m_ObjectId"]})
+lisat += [s2reuna_om] + rsolmut
 for om in (vara_om, varataso_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
@@ -556,6 +589,22 @@ HAMARA_RUNKO = (
     "// Base map tone (owner 27.9.2026 17.2x, Kartta/Pohjasavy.cs): pohjaSavy.x = contrast change around the paper tone 0.78\n"
     "// (0 = as before, -0.3 = softer), pohjaSavy.y = black lift towards white 0..1 ('milky'); in sRGB space.\n"
     "float3 pv = vari.rgb;\n"
+    "// S2 TONE (Linssiseppa 1.10.2026, AstronauttiKerros.PaivitaS2 / Kyytipino.AsetaS2Savy): the Sentinel-2 Europe mosaic is\n"
+    "// graded towards NASA ISS photos only inside its rectangle (lon -28..45, lat 31.95..72.4) with a soft 1.5 deg edge, so\n"
+    "// the rest of the globe (BMNG) keeps its colours. s2Savy = (contrast %, saturation %, warmth, weight); w = 0 -> unchanged.\n"
+    "if (s2Savy.w > 0.0)\n"
+    "{\n"
+    "    float3 sn = normalize(pos - keski.xyz);\n"
+    "    float slat = degrees(asin(clamp(dot(sn, akseli.xyz), -1.0, 1.0)));\n"
+    "    float slon = degrees(atan2(dot(sn, ita.xyz), dot(sn, nolla.xyz)));\n"
+    "    float sm = smoothstep(-28.0, -26.5, slon) * (1.0 - smoothstep(43.5, 45.0, slon))\n"
+    "             * smoothstep(31.95, 33.45, slat) * (1.0 - smoothstep(70.9, 72.4, slat)) * saturate(s2Savy.w);\n"
+    "    float3 sg = pow(max(pv, 1e-6), 0.4545);\n"
+    "    sg = (sg - 0.46) * (1.0 + s2Savy.x * 0.01) + 0.46;   // contrast around mid grey (as URP ColorAdjustments)\n"
+    "    sg = lerp(dot(sg, float3(0.2126, 0.7152, 0.0722)).xxx, sg, 1.0 + s2Savy.y * 0.01);   // saturation\n"
+    "    sg *= float3(1.0 + 0.06 * s2Savy.z, 1.0, 1.0 - 0.10 * s2Savy.z);   // warmth: redder, less blue\n"
+    "    pv = lerp(pv, pow(saturate(sg), 2.2), sm);\n"
+    "}\n"
     "bool savyOn = pohjaSavy.x != 0.0 || pohjaSavy.y != 0.0;\n"
     "bool patinaOn = pohjaRae.x > 0.0 || pohjaPatina.x > 0.0 || pohjaPatina.y > 0.0 || pohjaPatina.z > 0.0;\n"
     "if (savyOn || patinaOn)\n"
@@ -736,6 +785,10 @@ ham_slotit += [slotti("Vector4MaterialSlot", 23, "pohjaRae", 0, v4()), slotti("V
                slotti("Vector4MaterialSlot", 25, "ruutu", 0, v4())]
 # Päivä ja yö (aloituslento v3f, 28.9.2026): 26 = _aurinko (xyz auringon suunta maailmassa, w voimakkuus; 0 = ennallaan).
 ham_slotit.append(slotti("Vector4MaterialSlot", 26, "aurinko", 0, v4()))
+# S2-sävy (Linssiseppä 1.10.2026): 27 = _s2Savy (kontrasti %, kylläisyys %, lämpö, paino; w = 0 = ennallaan), 28–30 maan
+# akselit lat/lon-maskiin (_maaAkseli, _maaNolla, _maaIta); keskipiste on syöte 15 (_maaKeski).
+ham_slotit += [slotti("Vector4MaterialSlot", 27, "s2Savy", 0, v4()), slotti("Vector4MaterialSlot", 28, "akseli", 0, v4()),
+               slotti("Vector4MaterialSlot", 29, "nolla", 0, v4()), slotti("Vector4MaterialSlot", 30, "ita", 0, v4())]
 for s in ham_slotit: s["m_StageCapability"] = 2
 ham_cf = solmupohja("CustomFunctionNode", "RadioHamara (Custom Function)", FX, FY, ham_slotit, m_SGVersion=1,
                     synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="RadioHamara", m_FunctionSource="",
@@ -756,6 +809,7 @@ savy_om = vektori_ominaisuus("pohjaSavy", "_pohjaSavy")
 rae_om = vektori_ominaisuus("pohjaRae", "_pohjaRae")
 patina_om = vektori_ominaisuus("pohjaPatina", "_pohjaPatina")
 aurinko_om = vektori_ominaisuus("aurinko", "_aurinko")
+s2savy_om = vektori_ominaisuus("s2Savy", "_s2Savy")
 keski3_solmu, keski3_ulos = vektori_ominaisuussolmu(keski_om, FX - 300.0, FY + 1060.0)
 keila_solmut, keila_ulot = [], []
 for i, om in enumerate((keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om)):
@@ -766,6 +820,10 @@ savy_solmu, savy_ulos = vektori_ominaisuussolmu(savy_om, FX - 300.0, FY + 1480.0
 rae_solmu, rae_ulos = vektori_ominaisuussolmu(rae_om, FX - 300.0, FY + 1540.0)
 patina_solmu, patina_ulos = vektori_ominaisuussolmu(patina_om, FX - 300.0, FY + 1600.0)
 aurinko_solmu, aurinko_ulos = vektori_ominaisuussolmu(aurinko_om, FX - 300.0, FY + 1720.0)
+s2savy_solmu, s2savy_ulos = vektori_ominaisuussolmu(s2savy_om, FX - 300.0, FY + 1780.0)
+akseli3_solmu, akseli3_ulos = vektori_ominaisuussolmu(akseli_om, FX - 300.0, FY + 1840.0)
+nolla3_solmu, nolla3_ulos = vektori_ominaisuussolmu(nolla_om, FX - 300.0, FY + 1900.0)
+ita3_solmu, ita3_ulos = vektori_ominaisuussolmu(ita_om, FX - 300.0, FY + 1960.0)
 ruutu_ulos = slotti("Vector4MaterialSlot", 0, "Out", 1, v4())
 ruutu_solmu = solmupohja("ScreenPositionNode", "Screen Position", FX - 300.0, FY + 1660.0, [ruutu_ulos], m_DismissedVersion=0,
                          m_ScreenSpaceType=0)
@@ -801,23 +859,27 @@ G["m_Edges"] += [reuna(uv_solmut[i]["m_ObjectId"], 0, H, 10 + i) for i in range(
 G["m_Edges"] += [reuna(keski3_solmu["m_ObjectId"], 0, H, 15), reuna(khamaryys_solmu["m_ObjectId"], 0, H, 21),
                  reuna(savy_solmu["m_ObjectId"], 0, H, 22), reuna(rae_solmu["m_ObjectId"], 0, H, 23),
                  reuna(patina_solmu["m_ObjectId"], 0, H, 24), reuna(ruutu_solmu["m_ObjectId"], 0, H, 25),
-                 reuna(aurinko_solmu["m_ObjectId"], 0, H, 26)]
+                 reuna(aurinko_solmu["m_ObjectId"], 0, H, 26), reuna(s2savy_solmu["m_ObjectId"], 0, H, 27),
+                 reuna(akseli3_solmu["m_ObjectId"], 0, H, 28), reuna(nolla3_solmu["m_ObjectId"], 0, H, 29),
+                 reuna(ita3_solmu["m_ObjectId"], 0, H, 30)]
 G["m_Edges"] += [reuna(keila_solmut[i]["m_ObjectId"], 0, H, 16 + i) for i in range(5)]
 for om in (ham_om, maavalo_om, maavari_om, yon_om, yovalot_om, tumma_om, keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om,
-           khamaryys_om, savy_om, rae_om, patina_om, aurinko_om):
+           khamaryys_om, savy_om, rae_om, patina_om, aurinko_om, s2savy_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
 hsolmut = [ham_cf, ham_solmu, tumma_solmu, maavalo_solmu, maavari_solmu, yon_solmu, yovalot_solmu, hpaikka_solmu] + uv_solmut
 hsolmut += [keski3_solmu, khamaryys_solmu, savy_solmu, rae_solmu, patina_solmu, ruutu_solmu, aurinko_solmu] + keila_solmut
+hsolmut += [s2savy_solmu, akseli3_solmu, nolla3_solmu, ita3_solmu]
 for s in hsolmut:
     G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
 lisat += [ham_om, tumma_om, tumma_ulos, maavalo_om, maavari_om, yon_om, yovalot_om, ham_ulos, maavalo_ulos, maavari_ulos, yon_ulos, yovalot_ulos,
           hpaikka_ulos] + uv_ulot + hsolmut + ham_slotit
 lisat += [keila0_om, keila1_om, krajat_om, kvari0_om, kvari1_om, khamaryys_om, keski3_ulos, khamaryys_ulos] + keila_ulot
 lisat += [savy_om, savy_ulos, rae_om, rae_ulos, patina_om, patina_ulos, ruutu_ulos, aurinko_om, aurinko_ulos]
+lisat += [s2savy_om, s2savy_ulos, akseli3_ulos, nolla3_ulos, ita3_ulos]
 print("fragmentti → RadioHamara (_radioHamara, _radioMaavalo, _radioMaavaloVari, _radioYonValot, _radioYovalot + UV 0–3,"
       " valokeila _keila0/1, _keilaRajat, _keila0Vari/_keila1Vari, _keilaHamaryys, pohjan sävy _pohjaSavy, rae _pohjaRae,"
-      " patina _pohjaPatina + ruudun paikka, päivä ja yö _aurinko)")
+      " patina _pohjaPatina + ruudun paikka, päivä ja yö _aurinko, S2-sävy _s2Savy + maan akselit)")
 
 kaavio += lisat
 kirjoita(os.path.join(kohde, "MatkakirjaTileset.shadergraph"), kaavio)
