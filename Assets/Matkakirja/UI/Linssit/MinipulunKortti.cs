@@ -1,249 +1,41 @@
-// MINIPULUN KYSYMYSKORTTI (Natiivi-UI): webin .satelliitti-pulukortti
-// (js/linssit/satelliitti.js, css/satelliitti.css) astronautin valokuvanäkymässä.
+// MINIPULUN KYSYMYKSET (Natiivi-UI 16.9.2026; Pelikoodari 1.10.2026): astronautin valokuvanäkymän minipulu avaa
+// PULUN YHTEISEN CHATIN (PuluChat.AvaaLinssissa) eikä enää omaa korttia.
 //
-// Omistaja 16.9.2026: "Pulun chatti pitäisi toimia normaalisti vaikka itse pulu
-// olisi pienemmän kokoinen." Kortti kasvaa minipulun yläpuolelle oikeaan
-// alakulmaan (tumma lasi, vihreä reuna):
-//   Kysy viisaalta pöllöltä pululta:        ×
-//   [kohteen valmis kysymys] [toinen]       ← osa virtaa, vierivät pois kuten chatissa
-//   pelaajan kysymys (oikealla) / Livian vastaus (vasemmalla)
-//   [ Kysy mitä tahansa…            ] [↑]
-// Valmiit ovat vain KYSYMYKSIÄ: pilleri lähettää kysymyksen samaa reittiä kuin vapaa
-// kysymys ja kartan pulu (PuluChat.KysyUlkoisesti: sama konteksti, historia ja lukko).
-// Webin sääntö 17.9. (js/linssit/satelliitti.js vastaaKysymykseen, Raamattu ASTRONAUTIN
-// KAMERA LISAYS 14); esikirjoitetut vastaukset poistettu (omistajan build 9 -löydös 35).
-// Ei striimiä (kuten natiivin chatissa): vastaus tulee kerralla, ja virta kelataan
-// niin, että sen alku näkyy (web: vastaus luetaan alusta).
-using System;
+// Omistaja 30.9.2026 klo 23.5x (Bahaman matalikot, vihreä paneeli ilman kaiutinta): "pululla saisi olla myös tässä
+// striimiluenta. tee pululle aina samat napit kaikkialle peliin". Sama PuluChat kuin kartalla: puhekupla, kynä, ≡,
+// kaiutin (striimiluenta Pulun äänellä), näppäimistö ja mikki samassa järjestyksessä; linssissä vain teema vaihtuu
+// (mk-chat--linssi: tumma lasi, vihreä reuna kuten entinen kortti) ja chat nousee minipulun yläpuolelle oikeaan
+// alakulmaan. Kohteen valmiit kysymykset ovat sirunappeja, jotka kulkevat mallille kuten vapaa kysymys (web
+// vastaaKysymykseen, Raamattu ASTRONAUTIN KAMERA LISAYS 14; esikirjoitetut vastaukset poistettu löydöksessä 35).
+// Luokka säilyy sovittimena, jotta Kuvanakyma ja testikomennot pysyvät ennallaan.
 using System.Collections.Generic;
-using System.Linq;
-using Matkakirja.Linssit;
 using Matkakirja.Linssit.Astronautti;
-using Matkakirja.Peli;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
     public sealed class MinipulunKortti
     {
-        const int KysymysKatto = 300;
+        static readonly IReadOnlyList<string> Tyhja = new List<string>();
+        readonly VisualElement kulma;
 
-        readonly VisualElement kortti, ehdotukset;
-        readonly ScrollView virta;
-        readonly TextField kentta;
-        readonly Button laheta;
-        string tunnus;
-        /// <summary>Kysymys matkalla (web kysymysKesken): ↑ pois käytöstä, minipulun leijunta tauolla.</summary>
-        public bool Kesken { get; private set; }
-        public bool Auki { get; private set; }
-        public event Action<bool> AukiMuuttui;
+        static PuluChat Chat => UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
 
-        public MinipulunKortti(VisualElement isa)
-        {
-            kortti = Rakenne.El("mk-minipuluKortti", isa);
-            kortti.style.display = DisplayStyle.None;
-            // Kosketukset eivät valu kuvan zoomaukseen.
-            kortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+        /// <summary>Kysymys matkalla (Kuvanakyma pysäyttää minipulun leijunnan).</summary>
+        public bool Kesken => Chat?.Kysyy ?? false;
+        public bool Auki => Chat != null && Chat.Auki && Chat.Linssissa;
 
-            var ylarivi = Rakenne.El("mk-minipuluKortti__ylarivi", kortti, PickingMode.Ignore);
-            // Webin polloNimilappu: "Kysy ~~viisaalta pöllöltä~~ pululta:".
-            var otsikko = Rakenne.Teksti("Kysy <s>viisaalta pöllöltä</s> pululta:", "mk-minipuluKortti__otsikko", ylarivi);
-            otsikko.enableRichText = true;
-            Kirjasimet.Aseta(otsikko, Kirjasin.KoneLihava);
-            var sulje = Rakenne.Nappi("×", "mk-minipuluKortti__sulje", Sulje, ylarivi);
-            sulje.tooltip = "Sulje kysymykset";
-
-            virta = new ScrollView(ScrollViewMode.Vertical);
-            virta.AddToClassList("mk-minipuluKortti__virta");
-            virta.verticalScrollerVisibility = ScrollerVisibility.Hidden;
-            virta.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
-            kortti.Add(virta);
-            ehdotukset = Rakenne.El("mk-minipuluKortti__ehdotukset", virta, PickingMode.Ignore);
-
-            var syote = Rakenne.El("mk-minipuluKortti__syote", kortti, PickingMode.Ignore);
-            kentta = new TextField { maxLength = KysymysKatto };
-            kentta.AddToClassList("mk-minipuluKortti__kentta");
-            kentta.textEdition.placeholder = "Kysy mitä tahansa…";
-            kentta.RegisterCallback<KeyDownEvent>(e =>
-            {
-                if (e.keyCode != KeyCode.Return && e.keyCode != KeyCode.KeypadEnter) return;
-                KysyVapaasti(kentta.value);
-                e.StopPropagation();
-            });
-            syote.Add(kentta);
-            // Löydös 96: näppäimistön sulkeuduttua kosketukset osuvat taas pilleriin, ↑:hen ja ✕:ään.
-            Rakenne.VapautaNappaimistonSulkeutuessa(kentta);
-            Kirjasimet.Aseta(kentta, Kirjasin.Luku);
-            laheta = Rakenne.Nappi(null, "mk-minipuluKortti__laheta", () => KysyVapaasti(kentta.value), syote, Ikonit.NuoliYlos);
-            laheta.tooltip = "Lähetä kysymys";
-        }
+        /// <param name="kulma">minipulun sarake (web .satelliitti-pulukulma): chat asettuu sen yläpuolelle</param>
+        public MinipulunKortti(VisualElement kulma) => this.kulma = kulma;
 
         public void Vaihda(Havaintokohde k) { if (Auki) Sulje(); else Avaa(k); }
 
-        /// <summary>Kortti auki kohteen kysymyksillä; kohteen vaihtuessa virta alkaa alusta.</summary>
-        public void Avaa(Havaintokohde k)
-        {
-            if (k?.Tunnus != tunnus) Tyhjenna(k);
-            if (Auki) return;
-            Auki = true;
-            // Kasvaa esiin minipulun kulmasta (Raamattu AVAUS JA SULKU AINA ANIMOIDEN, omistaja 29.9.2026; Natiivi-UI:n huomio).
-            Ponnahdus.Avaa(kortti, null, new TransformOrigin(Length.Percent(100), Length.Percent(100), 0));
-            AukiMuuttui?.Invoke(true);
-        }
+        /// <summary>Chat auki kohteen kysymyksillä; kohteen vaihtuessa sirut vaihtuvat (keskustelu jatkuu).</summary>
+        public void Avaa(Havaintokohde k) => Chat?.AvaaLinssissa(() => kulma.worldBound, k?.Tunnus, k?.Kysymykset ?? Tyhja);
 
-        public void Sulje()
-        {
-            if (!Auki) return;
-            Auki = false;
-            kentta.Blur();
-            // Sulkeutuu samaa reittiä (Ponnahdus, 200 ms).
-            Ponnahdus.Sulje(kortti);
-            AukiMuuttui?.Invoke(false);
-        }
+        public void Sulje() { if (Auki) Chat.Sulje(); }
 
-        void Tyhjenna(Havaintokohde k)
-        {
-            tunnus = k?.Tunnus;
-            foreach (var c in virta.contentContainer.Children().Where(c => c != ehdotukset).ToList()) c.RemoveFromHierarchy();
-            ehdotukset.Clear();
-            kentta.value = "";
-            if (k == null) return;
-            string oma = tunnus;
-            foreach (var kysymys in k.Kysymykset)
-            {
-                Button pilleri = null;
-                pilleri = Rakenne.Nappi(null, "mk-minipuluKortti__kysymys", () => KysyValmis(pilleri, oma, kysymys), ehdotukset);
-                var t = Rakenne.Teksti(kysymys, "mk-minipuluKortti__kysymysteksti", pilleri);
-                Kirjasimet.Aseta(t, Kirjasin.Luku);
-            }
-            ehdotukset.style.display = k.Kysymykset.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-        }
-
-        // --- kysymykset ------------------------------------------------------------------
-
-        /// <summary>Valmis kysymys: pilleri valituksi ja kysymys mallille kuten vapaa kysymys.</summary>
-        void KysyValmis(Button pilleri, string kohde, string kysymys)
-        {
-            if (kohde != tunnus || Kesken) return;
-            foreach (var b in ehdotukset.Children()) b.RemoveFromClassList("mk-valittu");
-            pilleri.AddToClassList("mk-valittu");
-            Kupla(false, kysymys);
-            Laheta(kysymys);
-        }
-
-        void KysyVapaasti(string teksti)
-        {
-            teksti = (teksti ?? "").Trim();
-            if (teksti.Length == 0 || Kesken) return;
-            kentta.value = "";
-            Kupla(false, teksti);
-            Laheta(teksti);
-        }
-
-        void Laheta(string kysymys)
-        {
-            var odottaa = Kupla(true, "…", odottaa: true);
-            var chat = UiNakymat.Hae()?.Chat;
-            string oma = tunnus;
-            AsetaKesken(true);
-            bool lahti = chat != null && chat.KysyUlkoisesti(kysymys, vastaus =>
-            {
-                AsetaKesken(false);
-                if (oma != tunnus || odottaa.parent == null) return;
-                Valmis(odottaa, vastaus);
-            });
-            // Web lahetaKysymys: virheen tekstit sanatarkasti.
-            if (!lahti)
-            {
-                AsetaKesken(false);
-                Valmis(odottaa, chat == null ? "Pulu ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen." : "Pulu vastaa vielä edelliseen. Hetki vain.");
-            }
-        }
-
-        void AsetaKesken(bool k)
-        {
-            Kesken = k;
-            laheta.SetEnabled(!k);
-        }
-
-        /// <summary>
-        /// Web .satelliitti-pulukortti: leveys min(320, ruutu − 24), korkeus min(62vh, 500); pienellä ruudulla (≤ 620 × 500)
-        /// leveys min(280, ruutu − 24) ja virta enintään min(38vh, 240).
-        /// </summary>
-        public void Mitoita(float leveys, float korkeus)
-        {
-            if (float.IsNaN(leveys) || float.IsNaN(korkeus) || leveys <= 0 || korkeus <= 0) return;
-            bool pieni = leveys <= 620f || korkeus <= 500f;
-            kortti.style.width = Mathf.Min(pieni ? 280f : 320f, leveys - 24f);
-            kortti.style.maxHeight = Mathf.Min(korkeus * 0.62f, 500f);
-            virta.style.maxHeight = pieni ? Mathf.Min(korkeus * 0.38f, 240f) : StyleKeyword.Null;
-            kortti.EnableInClassList("mk-minipuluKortti--pieni", pieni);
-        }
-
-        Label Kupla(bool livia, string teksti, bool odottaa = false)
-        {
-            // Edellisen vastauksen tyhjä tila pois, jotta pohja on aito pohja (web lisaaKupla 'oma').
-            tila?.RemoveFromHierarchy();
-            var k = Rakenne.Teksti(teksti ?? "", livia ? "mk-minipuluKortti__vastaus" : "mk-minipuluKortti__oma", virta);
-            Kirjasimet.Aseta(k, livia ? Kirjasin.Luku : Kirjasin.Kone);
-            k.EnableInClassList("mk-odottaa", odottaa);
-            if (livia) Aanet.PulunTehoste("pulu.kujerrus");
-            if (livia) Ankkuroi(k);
-            else Rakenne.Vierita(virta, k);
-            return k;
-        }
-
-        /// <summary>
-        /// Löydös 96 b (Linssisepän havainto): web satelliitti.js ankkuroiVastaukseen. Vastauskuplan alle lisätään virran
-        /// näkyvän korkuinen tyhjä tila, ja kupla kelataan kerran ylimmäksi. Käytetyt kysymyspillerit vierivät pois
-        /// näkyvistä, ja kasvava vastaus täyttää tilan alta. ScrollView ei vieritä pohjaa pidemmälle, joten ilman tilaa
-        /// lyhyt vastaus jäi pillereiden alle.
-        /// </summary>
-        VisualElement tila;
-
-        void Ankkuroi(Label kupla)
-        {
-            tila ??= Rakenne.El("mk-minipuluKortti__tila", null, PickingMode.Ignore);
-            // Virta kasvaa tilan myötä maksimikorkeuteensa (enintään 500 pt), joten odotuksen ajaksi tila on vähintään
-            // sen verran; VapautaTila kutistaa sen vastauksen tultua.
-            float nakyva = virta.contentViewport.layout.height;
-            tila.style.height = Mathf.Max(float.IsNaN(nakyva) ? 0f : nakyva, 500f);
-            virta.Add(tila);
-            Kelaa(kupla);
-        }
-
-        /// <summary>
-        /// Kupla virran ylimmäksi vasta asettelun jälkeen: ScrollView rajaa scrollOffsetin sen hetkiseen sisällön
-        /// korkeuteen, joten heti seuraavassa tikissä tyhjä tila ei ollut vielä mitoitettu ja kupla jäi pillerien alle.
-        /// </summary>
-        void Kelaa(Label kupla)
-        {
-            void Aja() { if (kupla.parent != null) virta.scrollOffset = new Vector2(0, Mathf.Max(0, kupla.layout.y - 4)); }
-            virta.schedule.Execute(Aja).StartingIn(60);
-            virta.schedule.Execute(Aja).StartingIn(250);
-        }
-
-        /// <summary>Web vapautaTila: tila kutistuu pienimpään, jolla kuplan alku pysyy ylimpänä.</summary>
-        void VapautaTila(Label kupla)
-        {
-            virta.schedule.Execute(() =>
-            {
-                if (tila == null || tila.parent == null) return;
-                if (kupla.parent == null) { tila.RemoveFromHierarchy(); return; }
-                float tarve = Mathf.Ceil(virta.contentViewport.layout.height - kupla.layout.height);
-                if (tarve > 0f) tila.style.height = tarve;
-                else tila.RemoveFromHierarchy();
-                Kelaa(kupla);
-            }).StartingIn(60);
-        }
-
-        void Valmis(Label kupla, string vastaus)
-        {
-            kupla.RemoveFromClassList("mk-odottaa");
-            kupla.text = vastaus ?? "";
-            // Vastaus luetaan alusta: kupla pysyy ylimpänä, ja ylimääräinen tyhjä tila poistetaan sen alta.
-            VapautaTila(kupla);
-        }
+        /// <summary>Entinen kortin mitoitus; chat mitoittaa itsensä minipulun kohdalle (PuluChat.AsetteleLinssiin).</summary>
+        public void Mitoita(float leveys, float korkeus) { }
     }
 }

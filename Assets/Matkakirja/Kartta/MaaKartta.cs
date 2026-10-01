@@ -171,6 +171,9 @@ namespace Matkakirja
         void Awake() => kaikki.Add(this);
 
         static readonly int SaapuminenId = Shader.PropertyToID("_Saapuminen");
+        /// <summary>Maan maakunta-alueet avaimella "ISO:tunnus" (Pelikoodarin maakuntakortin minikartta); null, jos ei ladattu.</summary>
+        public Maakuntajako.MaanAlueet MaanAlueet(string avain) => jako?.Hae(Maakuntajako.MaaTunnuksesta(avain));
+
         /// <summary>
         /// Maakunnan keskipiste (Natiivi-UI:n elävä kartussi, käsialanimi kartalla): Maakuntajako-alueen KeskusLat/KeskusLon
         /// avaimella "ISO:tunnus". false, jos aineisto ei ole ladattu, aluetta ei löydy tai keskus puuttuu.

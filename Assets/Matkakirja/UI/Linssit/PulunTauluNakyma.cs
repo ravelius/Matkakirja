@@ -406,15 +406,19 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// "KYSY PULULTA": linssin ainoa chatti on valokuvan Pululla (kohteen kaksi valmista kysymystä + vapaa kenttä),
-        /// joten linkki vie kuvamoodiin (lähimmän kohteen kuva, kyydistä ensin pois) ja avaa siellä minipulun kortin.
+        /// "KYSY PULULTA" (Pelikoodari 1.10.2026; omistaja 30.9. klo 23.5x: "tee pululle aina samat napit kaikkialle
+        /// peliin", Päätoimittaja: linjaus koskee kaikkia näkymiä, myös ISS:ää ja Cupolaa): Pulun yhteinen chat avautuu
+        /// PAIKALLAAN linssin teemalla. Kuvamoodissa minipulun kohdalle kohteen valmiine kysymyksineen (MinipulunKortti),
+        /// muissa moodeissa (Maapallo, ISS:n rinnalla, Cupola) Pulun kohdalle ilman moodin vaihtoa. Ennen linkki vei aina
+        /// kuvamoodiin, koska linssin ainoa chatti oli valokuvan minipulun kortti.
         /// </summary>
         void KysyPululta()
         {
             loki.Add("kysy");
             Sulje("kysy");
-            if (Nykyinen(Linssi()) == AstroMoodi.Kuvat) astro.Kuva.AvaaPulukortti();
-            else SiirryMoodiin(AstroMoodi.Kuvat, () => astro.Kuva.AvaaPulukortti());
+            if (Nykyinen(Linssi()) == AstroMoodi.Kuvat) { astro.Kuva.AvaaPulukortti(); return; }
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            chat?.AvaaLinssissa(() => Pulu.Hae().Nakyvissa ? Pulu.Hae().Lintu : default, "astro:" + Nykyinen(Linssi()), null);
         }
 
         void PeruVaihto() { vaihto?.Ajo?.Pause(); vaihto = null; }

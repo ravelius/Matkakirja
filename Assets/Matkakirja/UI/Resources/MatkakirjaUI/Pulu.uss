@@ -671,6 +671,59 @@
     /* Avaus ja sulku: Ponnahdus (PuluChat.Avaa/Sulje), web pollo.js animoiAvaus 220/200 ms. */
 }
 
+/* LINSSITILA (omistaja 30.9.2026 klo 23.5x: "tee pululle aina samat napit kaikkialle peliin"): sama chat, teemana entisen
+   minipulun kortin tumma lasi ja vihreä reuna (Linssit.uss .mk-minipuluKortti). Napit ja järjestys ennallaan. */
+.mk-chat.mk-chat--linssi {
+    border-color: rgba(93, 255, 168, 0.28);
+    background-color: rgba(4, 12, 9, 0.9);
+    color: #eafff3;
+}
+
+.mk-chat--linssi .mk-chat__viesti,
+.mk-chat--linssi .mk-chat__livia {
+    color: #eafff3;
+}
+
+.mk-chat--linssi .mk-chat__pelaaja {
+    background-color: rgba(93, 255, 168, 0.12);
+    color: #eafff3;
+}
+
+.mk-chat--linssi .mk-chat__odottaa,
+.mk-chat--linssi .mk-chat__paikkarivi {
+    color: rgba(234, 255, 243, 0.65);
+}
+
+.mk-chat--linssi .mk-chat__siru {
+    border-color: rgba(93, 255, 168, 0.4);
+    background-color: rgba(93, 255, 168, 0.08);
+    color: #5dffa8;
+}
+
+.mk-chat--linssi .mk-chat__ikoninappi,
+.mk-chat--linssi .mk-lukija,
+.mk-chat--linssi .mk-chat__nappula,
+.mk-chat--linssi .mk-chat__laheta {
+    color: #5dffa8;
+    -unity-background-image-tint-color: #5dffa8;
+}
+
+.mk-chat--linssi .mk-chat__kentta {
+    color: #eafff3;
+}
+
+/* Alarivin napit ja kenttä lasille (1.10. simulaattorikuva: napit jäivät paperinvärisiksi). */
+.mk-chat--linssi .mk-chat__nappula,
+.mk-chat--linssi .mk-chat__kentta,
+.mk-chat--linssi .mk-chat__laheta {
+    background-color: rgba(93, 255, 168, 0.08);
+    border-color: rgba(93, 255, 168, 0.35);
+}
+
+.mk-chat--linssi .mk-chat__syote {
+    border-color: rgba(93, 255, 168, 0.2);
+}
+
 /* Tuore keskustelu: korkeus sisällön mukaan (webin .pollo-alku). */
 .mk-chat.mk-chat--alku {
     height: auto;

@@ -119,6 +119,17 @@ namespace Matkakirja.Natiivi
             nappi.style.scale = StyleKeyword.Null;
         }
 
+        /// <summary>
+        /// Omistaja 30.9.2026 klo 23.1x (pariteetti 3): saapumiskaupungin kuvamerkki näkyy myös natiivin kauemmalla
+        /// saapumiszoomilla (joka säilyy). Nostojen kerroin jäi sen alle (&lt; 0,95), ja merkki katosi kameran asetuttua
+        /// luennan jälkeen. Maan saapumisnäkymä tai lähempänä = näkyy; maailman loitonnus piilottaa kuten ennen.
+        /// </summary>
+        bool MaanNakymassa()
+        {
+            if (kierto == null) kierto = Object.FindAnyObjectByType<PalloKierto>();
+            return kierto != null && kierto.MaanNakymassa;
+        }
+
         void Paivita()
         {
             Hiivu();
@@ -126,7 +137,7 @@ namespace Matkakirja.Natiivi
             var o = PeliOhjain.Instanssi;
             string id = o != null && o.Kaytossa && o.Tila == SilmukanTila.Kartta ? o.PelaajanKaupunki : null;
             if (ui == null || id == null || ui.Linssit?.Auki != null || ui.Kaupunkikortti.Nakyvissa || !Kutsuttava(id)
-                || !(ui.Nostot.Karttakerroin >= Kerroin))
+                || !(ui.Nostot.Karttakerroin >= Kerroin || MaanNakymassa()))
             { Nayta(false); return; }
             var k = UiSisalto.Kaupunki(id);
             if (k == null) { Nayta(false); return; }

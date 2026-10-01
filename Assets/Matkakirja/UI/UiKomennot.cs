@@ -944,7 +944,8 @@ namespace Matkakirja.Natiivi
                 case "kutsu":
                     // ui kutsu [napauta]: avauskortin kutsuminiatyyrin tila / napautus.
                     if (loput == "napauta") return ui.Kutsu.Napauta();
-                    Kirjaa("kutsu " + (ui.Kutsu.Nakyy ? "näkyy " + ui.Kutsu.Laatikko : "piilossa") + ", nostojen kerroin " + ui.Nostot.Karttakerroin.ToString("0.00", CultureInfo.InvariantCulture));
+                    Kirjaa("kutsu " + (ui.Kutsu.Nakyy ? "näkyy " + ui.Kutsu.Laatikko : "piilossa") + ", nostojen kerroin " + ui.Nostot.Karttakerroin.ToString("0.00", CultureInfo.InvariantCulture)
+                        + ", maan näkymässä " + (Object.FindAnyObjectByType<PalloKierto>()?.MaanNakymassa ?? false));
                     return null;
                 case "avauskortti":
                 {
@@ -1113,6 +1114,9 @@ namespace Matkakirja.Natiivi
                     // Sulkuanimaation video (omistaja 29.9.): auki oleva kortti, muuten lappu (kuten ✕).
                     if (ui.Karttaselite.Maakunnat.KorttiAuki) ui.Karttaselite.Maakunnat.SuljeKortti(); else ui.Karttaselite.Sulje();
                     return null;
+                case "maakunnat" when loput.StartsWith("kartta"):
+                    // Minikartta suureksi / takaisin (omistajan kortti 30.9.2026 klo 22.5x): "ui maakunnat kartta [pois]".
+                    return "=" + ui.Karttaselite.Maakunnat.TestiKartta(!loput.Contains("pois"));
                 case "maakunnat" when loput.StartsWith("kysymys"):
                 {
                     // Kortin kysymys auki/kiinni (omistaja 29.9.: koko ei saa muuttua): kortin reunat ja vieritys lokiin.
