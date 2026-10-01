@@ -13,6 +13,21 @@ namespace Matkakirja.Linssit.IssKamera
         public const int JuuriZ = 6, MaksimiZ = 14;
         public readonly KuvaData Data = new KuvaData();
         public Pilvikentta Pilvet;
+        /// <summary>Kameran paikka ECEF (m); pilvipeitto kasvaa etäisyyden mukaan (null = kerroin 1).</summary>
+        public (double x, double y, double z)? Kamera;
+
+        /// <summary>
+        /// Pilvipeiton kerroin etäisyydestä (omistaja 1.10. 19.5x Cupola-mallikuvasta: "pilvikenttiä horisonttiin asti, valkoisen ja
+        /// syvän sinisen kontrasti suuri"; lähialueen litteät läiskät harvemmiksi): ≤ 600 km 0,5 … ≥ 1 600 km 1,85. Jatkuva
+        /// funktio paikasta, joten tasojen ja laattojen rajoille ei tule saumaa.
+        /// </summary>
+        double PeittoK(double lat, double lon)
+        {
+            if (Kamera == null) return 1;
+            var p = Kuvasuunnitelma.Ecef(lat, lon); var c = Kamera.Value;
+            double d = Math.Sqrt((p.x - c.x) * (p.x - c.x) + (p.y - c.y) * (p.y - c.y) + (p.z - c.z) * (p.z - c.z)) / 1000;
+            return Math.Max(0.5, Math.Min(1.85, 0.5 + (d - 600) / 1000 * 1.35));
+        }
         /// <summary>z6-juurijako: vasen yläkulma (X0, Y0), koko Rx × Ry, ja rajaus asteina (W, S, E, N).</summary>
         public int X0, Y0, Rx, Ry;
         public double W, S, E, N;
@@ -326,15 +341,13 @@ namespace Matkakirja.Linssit.IssKamera
                 for (int i = 0; i <= G; i++)
                 {
                     var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, i * 256.0 / G, j * 256.0 / G);
-                    var (pa, pk, pv) = Pilvet.Nayte(la, lo);
+                    var (pa, pk, pv) = Pilvet.Nayte(la, lo, PeittoK(la, lo));
                     int q = j * (G + 1) + i; a[q] = (float)pa; kk[q] = (float)pk; v[q] = (float)pv;
                 }
             var (laK, _) = Uudelleenprojisointi.Pikseli(z, x, y, 128, 128);
             double pm = Uudelleenprojisointi.PikseliM(z, laK);
             bool lahi = pm <= 40;   // 400 mm: pilvien reunat pikselikohtaisesti
-            // Etäisyyshäivytys: maahan piirretty pilvi näyttää viistosta lumiläikältä (juliste 1.10.), joten karkeilla tasoilla
-            // (kaukana, viistossa) alfa ja varjo häivytetään: ≤ 40 m/px täysi, 80 m 0,75, 160 m 0,5, ≥ 320 m 0,25.
-            float haivytys = (float)Math.Max(0.25, Math.Min(1, 1 - 0.25 * Math.Log(Math.Max(1, pm / 40), 2)));
+            float haivytys = 1f;
             for (int py = 0; py < 256; py++)
                 for (int px = 0; px < 256; px++)
                 {
@@ -344,7 +357,7 @@ namespace Matkakirja.Linssit.IssKamera
                     float tx = gx - ix, ty = gy - iy;
                     float H(float[] f) { int q = iy * (G + 1) + ix; return (f[q] * (1 - tx) + f[q + 1] * tx) * (1 - ty) + (f[q + G + 1] * (1 - tx) + f[q + G + 2] * tx) * ty; }
                     float al, ki, va = H(v) * haivytys;
-                    if (lahi) { var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo); al = (float)pa; ki = (float)pk; }
+                    if (lahi) { var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo, PeittoK(la, lo)); al = (float)pa; ki = (float)pk; }
                     else { al = H(a); ki = H(kk); }
                     al *= haivytys;
                     for (int c = 0; c < 3; c++)

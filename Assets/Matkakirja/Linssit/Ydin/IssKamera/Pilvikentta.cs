@@ -52,14 +52,14 @@ namespace Matkakirja.Linssit.IssKamera
             => (lon * Math.PI / 180 * 6371000 * Math.Cos(lat * Math.PI / 180), lat * Math.PI / 180 * 6371000);
 
         /// <summary>Pilven alfa (0…1), kirkkaus (0,6…1) ja maan varjo (0…1) pisteessä.</summary>
-        public (double alfa, double kirkkaus, double varjo) Nayte(double lat, double lon)
+        public (double alfa, double kirkkaus, double varjo) Nayte(double lat, double lon, double peittoK = 1)
         {
             var (x, y) = Metrit(lat, lon);
-            double d = Tiheys(x, y, lat, lon);
+            double d = Tiheys(x, y, lat, lon, true, peittoK);
             double alfa = Askel(0, 0.55, d) * 0.97;
             // aurinkoa kohti 2,5 × 153 m: jos tiheys kasvaa aurinkoa kohti, olemme varjopuolella
             double az = AurinkoAz * Math.PI / 180, sx = Math.Sin(az), sy = Math.Cos(az);
-            double dk = Tiheys(x + sx * 380, y + sy * 380, lat, lon);
+            double dk = Tiheys(x + sx * 380, y + sy * 380, lat, lon, true, peittoK);
             double kirkkaus = Math.Max(0.70, Math.Min(1.0, 0.95 - 0.55 * (dk - d)));
             double varjo = 0;
             double tanEl = Math.Tan(Math.Max(3, AurinkoKorkeus) * Math.PI / 180);
@@ -68,7 +68,7 @@ namespace Matkakirja.Linssit.IssKamera
             {
                 double L = (1200 + i * 100) / tanEl;
                 // Varjo pehmeästä kentästä (ilman hienorakennetta): ohuet piirteet piirsivät kampamaisia viivoja.
-                double dv = Tiheys(x + sx * L, y + sy * L, lat, lon, false);
+                double dv = Tiheys(x + sx * L, y + sy * L, lat, lon, false, peittoK);
                 varjo = Math.Max(varjo, Askel(-0.25, 0.65, dv));
             }
             return (alfa, kirkkaus, varjo * VarjonVoima);
@@ -78,24 +78,24 @@ namespace Matkakirja.Linssit.IssKamera
         /// Lähikuvan pilvi (400 mm, laatan pikseli ≤ 40 m; laitekoe 2: pilvet pehmeinä möykkyinä): alfa ja kirkkaus pikselikohtaisesti
         /// kahdella lisäoktaavilla (200 m ja 80 m) — kumpupilven reunan kukkakaalirakenne ja kirkkaat huiput; varjo hilasta.
         /// </summary>
-        public (double alfa, double kirkkaus) Lahi(double lat, double lon)
+        public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1)
         {
             var (x, y) = Metrit(lat, lon);
-            double d0 = Tiheys(x, y, lat, lon);
+            double d0 = Tiheys(x, y, lat, lon, true, peittoK);
             if (d0 < -1.2) return (0, 1);   // kaukana pilvestä: lisäoktaavit eivät nosta kynnyksen yli
             double yksi = Kohina(x / 200, y / 200, 31), kaksi = Kohina(x / 80, y / 80, 32);
             double d = d0 + 0.22 * yksi + 0.10 * kaksi;
             double alfa = Askel(-0.05, 0.30, d) * 0.97;
             double az = AurinkoAz * Math.PI / 180, sx = Math.Sin(az), sy = Math.Cos(az);
-            double dk = Tiheys(x + sx * 380, y + sy * 380, lat, lon) + 0.22 * Kohina((x + sx * 120) / 200, (y + sy * 120) / 200, 31);
+            double dk = Tiheys(x + sx * 380, y + sy * 380, lat, lon, true, peittoK) + 0.22 * Kohina((x + sx * 120) / 200, (y + sy * 120) / 200, 31);
             double kirkkaus = Math.Max(0.66, Math.Min(1.0, 0.96 - 0.45 * (dk - d) + 0.04 * kaksi));
             return (alfa, kirkkaus);
         }
 
-        double Tiheys(double x, double y, double lat, double lon, bool hieno = true)
+        double Tiheys(double x, double y, double lat, double lon, bool hieno = true, double peittoK = 1)
         {
             double ranta = MaaOsuus == null ? 1 : Askel(0.80, 0.97, MaaOsuus(lat, lon));
-            double peitto = Math.Max(0, Math.Min(0.42, 0.20 + 0.11 * Kohina(x / Iso, y / Iso, 11) + 0.07 * Kohina(x / Meso, y / Meso, 12))) * ranta * PeittoKerroin;
+            double peitto = Math.Max(0, Math.Min(0.42 * Math.Max(1, peittoK), (0.20 + 0.11 * Kohina(x / Iso, y / Iso, 11) + 0.07 * Kohina(x / Meso, y / Meso, 12)) * peittoK)) * ranta * PeittoKerroin;
             if (peitto <= 0.001) return -10;
             double k = peitto * 200; int i = (int)k; double t = k - i;
             double T = i >= 200 ? kynnys[200] : kynnys[i] * (1 - t) + kynnys[i + 1] * t;

@@ -272,6 +272,7 @@ namespace Matkakirja.Natiivi
                     if (scl.TryGetValue(ru.Tunnus, out var so)) ty.LisaaMaamaski(ru, so, (x, y) => sclPuretut.TryGetValue((ru.Tunnus, x, y), out var l) ? l : null);
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
+                ty.Kamera = kk.Paikka;   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
                 // Avomeri (ei S2-ruutua): TCI:n tyypillinen meri tci_lutin läpi, ettei täyttö erotu tummana kaistana (laitekoe 2).
