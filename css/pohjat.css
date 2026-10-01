@@ -177,7 +177,9 @@
 
 .tk-nostokortti {
   position: fixed;
-  z-index: 60;
+  /* Pulun chatin (41) alla: Kysy avaa chatin kortin päälle, ja kortti paljastuu taas chatin sulkeutuessa. Karttojen
+     merkkien ja kartussin (≤ 10) yllä. */
+  z-index: 40;
   left: var(--tk-vali-m);
   right: var(--tk-vali-m);
   bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
