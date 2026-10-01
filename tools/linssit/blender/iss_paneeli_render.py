@@ -387,7 +387,7 @@ def sarja(nimi, T, G, S):
             ob.location.y = z0 + dz
             tiedot['osat'][f'{nappi}-{tila}'] = osa_kuva(f'{nappi}-{tila}', [ob], x, y, 42)
         ob.location.y = z0
-    tiedot['osat_kaytto'] = {'nopeus': 'nopeus-0…3 (LIVE, 10×, 100×, 1000×)', 'pilvet_kuukausi': 'nuppi-00…23, 15°/askel',
+    tiedot['osat_kaytto'] = {'nopeus': 'nopeus-0…3 (LIVE, 10×, 100×, 1000×)', 'pilvet_kuukausi_vuorokausi': 'nuppi-00…23, 15°/askel (renderöity PILVET-paikalle, siirrä ankkuriin)',
                              'kohde_kuvaa_poistu': 'kohde-ylos/alas, kuvaa-ylos/alas, poistu-ylos/alas'}
 
     # 4) valot: puolikoko, kaikki kappaleet näkyvissä (perusasennot), vain yksi valo kerrallaan
