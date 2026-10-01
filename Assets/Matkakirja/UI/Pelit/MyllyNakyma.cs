@@ -74,8 +74,8 @@ namespace Matkakirja.Natiivi
             korttiTaso = Rakenne.El("mk-himmennys mk-himmennys--tumma", juuri);
             korttiTaso.style.display = DisplayStyle.None;
 
+            // Kortit lisätään himmennykseen yksi kerrallaan (NaytaKortti): Rakenne.Nayta ponnauttaa kaikki Kortti-lapset.
             valintaKortti = new Kortti("mk-peli__kortti", pohja: true);
-            korttiTaso.Add(valintaKortti);
             var vk = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-peli__valinta-kapiteeli", valintaKortti.Sisus);
             Kirjasimet.Aseta(vk, Tyylikirja.Kirjain.Kapiteeli);
             Kirjasimet.Aseta(Rakenne.Teksti("Pelataanko myllyä?", "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
@@ -95,7 +95,6 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Nappi("Aloita peli", "mk-nappi--kulta", AloitaPeli, vn), Kirjasin.KoneLihava);
 
             tulosKortti = new Kortti("mk-peli__kortti", pohja: true);
-            korttiTaso.Add(tulosKortti);
             tulosKapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", tulosKortti.Sisus);
             Kirjasimet.Aseta(tulosKapiteeli, Tyylikirja.Kirjain.Kapiteeli);
             tulosOtsikko = Rakenne.Teksti("", "mk-kortti__otsikko", tulosKortti.Sisus);
@@ -134,6 +133,7 @@ namespace Matkakirja.Natiivi
             if (paikka != null) Paikka = paikka;
             Auki = true;
             SyoteLukko.Esta(this);
+            UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = Visibility.Hidden;
             peli ??= new Mylly();
             Paivita();
             peliTaso.style.display = DisplayStyle.Flex;
@@ -150,12 +150,17 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(korttiTaso, false, Tyylikirja.Kesto.Sulku);
             Rakenne.Nayta(peliTaso, false, Tyylikirja.Kesto.Sulku);
             SyoteLukko.Vapauta(this);
+            UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = StyleKeyword.Null;
         }
 
         void NaytaKortti(Kortti k)
         {
-            valintaKortti.style.display = k == valintaKortti ? DisplayStyle.Flex : DisplayStyle.None;
-            tulosKortti.style.display = k == tulosKortti ? DisplayStyle.Flex : DisplayStyle.None;
+            if (k.parent != korttiTaso)
+            {
+                korttiTaso.Clear();
+                korttiTaso.Add(k);
+                korttiTaso.RemoveFromClassList("mk-auki"); // uusi kortti ponnahtaa (Rakenne.Nayta: muutos kiinni → auki)
+            }
             if (k == valintaKortti)
             {
                 valintaKortti.Q<Label>(className: "mk-peli__valinta-kapiteeli").text = (Maa ?? "") + (Paikka != null ? " · " + Paikka : " · kohtaaminen");
