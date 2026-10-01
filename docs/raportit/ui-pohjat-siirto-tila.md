@@ -29,6 +29,8 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 
 ## Avoimet
 
+- Vetokahvan veto: korjaus `natiivi-ui/kahva-veto` cd3f9946 (osoittimen kaappaus) junassa 100 (73669b8f), huomisen TF = BUILD 100; todennus proto-3d/lokit/natiivi-ui-pohjat/vetotesti/.
+
 - Ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus): tyylikirjan kontrastiehto poistettu (web a5b06c422 #3783, natiivi `natiivi-ui/tyylikirja-2` 850be8c8 seuraavaan junaan).
 
 - Webin `--kulta` on määrittelemätön (var(--kulta, #eab84e) / #d9a13b / ilman varaa): Pelikoodari yhtenäistää KORTTI-siirrossa.
