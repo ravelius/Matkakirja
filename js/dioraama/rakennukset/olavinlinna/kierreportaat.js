@@ -57,9 +57,9 @@ const TAULU = {
   tila: 'tarkistettu',
   kohdat: [
     // Sisältökirjuri 30.9. (5684d5d81): "päätorni" epävarma, "vain yksi mies" ilman lähdettä → korjattu.
-    { teksti: 'Tornissa oli viisi kerrosta: kolmas oli ylin asuttu, neljännessä kulki avoin puolustuskäytävä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
-    { teksti: 'Kierreportaat olivat kapeat ja ahtaat – hyökkääjälle hankala paikka.', lahde: 'Savon historia: Olavinlinnan suojassa' },
-    { teksti: 'Kehämuurit ja esilinnan muurit kohosivat 13 metrin korkeuteen.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { aani: 'kierreportaat-kohta-0', teksti: 'Tornissa oli viisi kerrosta: kolmas oli ylin asuttu, neljännessä kulki avoin puolustuskäytävä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { aani: 'kierreportaat-kohta-1', teksti: 'Kierreportaat olivat kapeat ja ahtaat – hyökkääjälle hankala paikka.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { aani: 'kierreportaat-kohta-2', teksti: 'Kehämuurit ja esilinnan muurit kohosivat 13 metrin korkeuteen.', lahde: 'Savon historia: Olavinlinnan suojassa' },
   ],
 };
 
@@ -80,19 +80,19 @@ const HAHMOT = [
     silmukka: 'kavely', heraa: 2, lyhty: true,
     reitti: { pisteet: KIRJURI_REITTI, nopeus: 1.3, tauko: 2.5 },
     repliikit: [
-      { id: 'kirjuri-1', teksti: 'Jyrkät nämä portaat: joka askel on kuin pieni kallio, ja niitä riittää.' },
-      { id: 'kirjuri-2', teksti: 'Viestit voudille eivät odota, vaikka jalat jo huutaisivat armoa.' },
+      { id: 'kirjuri-1', aani: 'kierreportaat-kirjuri-1', teksti: 'Jyrkät nämä portaat: joka askel on kuin pieni kallio, ja niitä riittää.' },
+      { id: 'kirjuri-2', aani: 'kierreportaat-kirjuri-2', teksti: 'Viestit voudille eivät odota, vaikka jalat jo huutaisivat armoa.' },
     ],
-    reaktio: { id: 'pulu-kirjuri-r1', teksti: 'Ei hissiä, ei rullaportaita. Siivet ovat kyllä erinomainen keksintö.' },
+    reaktio: { id: 'pulu-kirjuri-r1', aani: 'kierreportaat-pulu-kirjuri-r1', teksti: 'Ei hissiä, ei rullaportaita. Siivet ovat kyllä erinomainen keksintö.' },
   },
   {
     id: 'renki', henkilo: 'renki-1500', paikka: P(2.7, 160, Y2), suunta: 110, peilattu: false,
     silmukka: 'idle', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'renki-1', teksti: 'Raoista käy kylmä veto, eikä tämä lyhty saa sitä kuriin.' },
-      { id: 'renki-2', teksti: 'Näissä portaissa ei ohiteta ketään. Vastaantulija odottaa tasanteella, halusi tai ei.' },
+      { id: 'renki-1', aani: 'kierreportaat-renki-1', teksti: 'Raoista käy kylmä veto, eikä tämä lyhty saa sitä kuriin.' },
+      { id: 'renki-2', aani: 'kierreportaat-renki-2', teksti: 'Näissä portaissa ei ohiteta ketään. Vastaantulija odottaa tasanteella, halusi tai ei.' },
     ],
-    reaktio: { id: 'pulu-renki-r1', teksti: 'Veto raoista? Höyhenpuku pitää lämpimänä – lyhdyn liekkiä vain säälin.' },
+    reaktio: { id: 'pulu-renki-r1', aani: 'kierreportaat-pulu-renki-r1', teksti: 'Veto raoista? Höyhenpuku pitää lämpimänä – lyhdyn liekkiä vain säälin.' },
   },
 ];
 
@@ -108,13 +108,13 @@ export const TILA = {
   // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
   // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
   kuunnelma: [
-    { id: 'kierreportaat-k1', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: null,
+    { id: 'kierreportaat-k1', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: 'kierreportaat-k1',
       teksti: 'Kolmas kerros, neljäs kerros… Ilman voudin sinettiä ei yksikään kirje lähde linnasta, ja minä juoksen näitä portaita edestakaisin.' },
-    { id: 'kierreportaat-k2', puhuja: 'renki', nimi: 'Renki', aani: null,
+    { id: 'kierreportaat-k2', puhuja: 'renki', nimi: 'Renki', aani: 'kierreportaat-k2',
       teksti: 'Varovasti, herra kirjuri, näissä portaissa ei ohiteta ketään. Kapeaa ja ahdasta – vihollisellekin, kiitos siitä.' },
-    { id: 'kierreportaat-k3', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: null,
+    { id: 'kierreportaat-k3', puhuja: 'kirjuri', nimi: 'Kirjuri', aani: 'kierreportaat-k3',
       teksti: 'Viisi kerrosta, ja ylin asuttu on kolmas. Neljännellä vain tuuli ja vartijat. Minä en ole kumpaakaan.' },
-    { id: 'kierreportaat-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+    { id: 'kierreportaat-k4', puhuja: 'pulu', nimi: 'Pulu', aani: 'kierreportaat-k4',
       teksti: 'Portaat ylös, portaat alas, ja sinetti yhä hukassa. Siivet olisivat tässä linnassa kova sana.' },
   ],
   kohdistettava: true,
@@ -130,9 +130,9 @@ export const TILA = {
   kameraPysty: { kohde: [-30, 3.6, -20], atsimuutti: 160, korkeus: 18, etaisyys: 68, fov: 40, aukko: 0.8 },
   kierto: { atsimuutti: [-40, 40], korkeus: [8, 50], etaisyys: [0.7, 1.4] },
   // Pulu laskeutuu 4. kerroksen tasanteen tynnyrin kanteen (P(3,1; 183°), tynnyri 0,9 m).
-  pulu: { laskeutuminen: P(3.1, 183, +(Y2 + 0.9).toFixed(2)), taulupuoli: 'oikea',
-    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
-    teksti: 'Tornissa oli viisi kerrosta: kolmas oli ylin asuttu kerros, ja neljännessä kulki puolustuskäytävä. Kierreportaat olivat kapeat ja ahtaat – hyökkääjälle hankala paikka. Kehä- ja esilinnan muurit kohosivat jopa 13 metrin korkeuteen.', aani: null },
+  pulu: { aani: 'kierreportaat-pulu', laskeutuminen: P(3.1, 183, +(Y2 + 0.9).toFixed(2)), taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni 1.10.2026 (omistajan lupa 30.9. klo 23.4x).
+    teksti: 'Tornissa oli viisi kerrosta: kolmas oli ylin asuttu kerros, ja neljännessä kulki puolustuskäytävä. Kierreportaat olivat kapeat ja ahtaat – hyökkääjälle hankala paikka. Kehä- ja esilinnan muurit kohosivat jopa 13 metrin korkeuteen.' },
   taulu: TAULU,
   // Elävä linna (29.9.): Kellotornin kylki portaiden korkeudella kameran puolella (lyhty ampumaraoissa).
   elava: { kohde: [-27.4, 11, -12.8], sade: 6 },
