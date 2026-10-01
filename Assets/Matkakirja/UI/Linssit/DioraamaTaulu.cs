@@ -29,8 +29,6 @@ namespace Matkakirja.Natiivi
         readonly List<(Label Lappu, Rect Rect)> sijoitukset = new List<(Label, Rect)>();
 
         bool puluPiilotettu;
-        string puluTurvaLoki;
-        float puluTurvaAika = -10f;
         readonly Button kuoriNappi, paluuNappi;
         readonly VisualElement etsintaKortti;
         readonly Label etsintaOtsikko, etsintaTeksti;
@@ -374,11 +372,19 @@ namespace Matkakirja.Natiivi
                 const float koko2 = 64f;
                 pulu.style.display = DisplayStyle.Flex;
                 pulu.MiniKorkeus(koko2);
-                pulu.style.left = 18; pulu.style.top = ph2 - koko2 - 96;
+                // Turva-alueen sisään (linnakatselmus 1.10.: iPhone vaaka, kiinteä 18 pt jäi Dynamic Islandin alle).
+                float pw2 = juuri.layout.width, vasen2 = 0f, ala2 = 0f;
+                if (!float.IsNaN(pw2) && pw2 > 0 && Screen.width > 0)
+                {
+                    float sk2 = pw2 / Screen.width;
+                    vasen2 = Screen.safeArea.xMin * sk2;
+                    ala2 = Screen.safeArea.yMin * sk2;
+                }
+                pulu.style.left = vasen2 + 18; pulu.style.top = ph2 - ala2 - koko2 - 96;
                 puluKupla = rakennus.PuluTeksti; puluAani = rakennus.PuluAani;
                 bool kupla = !string.IsNullOrEmpty(puluKupla);
                 puluAlue.style.display = kupla ? DisplayStyle.Flex : DisplayStyle.None;
-                if (kupla) { puluAlue.style.left = 12; puluAlue.style.top = ph2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
+                if (kupla) { puluAlue.style.left = vasen2 + 12; puluAlue.style.top = ph2 - ala2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
                 return;
             }
             LopetaKuunnelma();
@@ -405,11 +411,8 @@ namespace Matkakirja.Natiivi
                         var sa = Screen.safeArea;
                         float vasen = sa.xMin * sk + 4f, oikea = jw - (Screen.width - sa.xMax) * sk - 4f;
                         float yla = (Screen.height - sa.yMax) * sk + 4f, ala = jh - sa.yMin * sk - 4f;
-                        var ennen = paneeliste;
                         paneeliste.x = Mathf.Clamp(paneeliste.x, vasen + puluLeveys * 0.5f, Mathf.Max(vasen + puluLeveys * 0.5f, oikea - puluLeveys * 0.5f));
                         paneeliste.y = Mathf.Clamp(paneeliste.y, yla + koko, Mathf.Max(yla + koko, ala));
-                        string loki = $"safeArea {sa}, ruutu {Screen.width}x{Screen.height}, paneeli {jw:0}x{jh:0}, rajat x {vasen:0}–{oikea:0} y {yla:0}–{ala:0}, piste {ennen.x:0},{ennen.y:0} → {paneeliste.x:0},{paneeliste.y:0}";
-                        if (loki != puluTurvaLoki && Mathf.Abs(Time.unscaledTime - puluTurvaAika) > 2f) { puluTurvaLoki = loki; puluTurvaAika = Time.unscaledTime; Debug.Log("MATKAKIRJA dioraama pulu turva: " + loki); }
                     }
                 }
                 pulu.style.left = paneeliste.x - puluLeveys * 0.5f;
