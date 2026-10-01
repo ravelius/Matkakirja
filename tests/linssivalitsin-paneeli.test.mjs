@@ -16,3 +16,8 @@ test('Linssit: rivi 38, päällä kapiteelina, valittu pergamentilla ja toiminto
   assert.match(CSS, /#pilleri-linssit-nakyma \.kokoelma-otsikko \{[\s\S]*?border-bottom: 1px solid var\(--tk-reunus\);/);
   assert.match(CSS, /#pilleri-linssit-nakyma \.kokoelma-esikatselu-selite \{[\s\S]*?font-style: italic;/);
 });
+
+test('kapea sarake (esikatselu auki): PÄÄLLÄ nimen alle omalle rivilleen', () => {
+  assert.match(CSS, /\.kokoelma-esikatselu-auki \.kokoelma-rivi\.aktiivinen \{\n {2}flex-wrap: wrap;/);
+  assert.match(CSS, /\.kokoelma-esikatselu-auki \.kokoelma-rivi\.aktiivinen::after \{\n {2}flex-basis: 100%;/);
+});

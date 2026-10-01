@@ -716,3 +716,16 @@
   letter-spacing: 0;
   text-transform: none;
 }
+/* Kapea listasarake (esikatselu auki): PÄÄLLÄ nimen alle omalle rivilleen, nimi ei lyhene eikä tila piiloudu
+   (Natiivi-UI 1.10.2026); rivi saa kasvaa (min 38). Leveässä tila pysyy oikealla. */
+#pilleri-linssit-nakyma .kokoelma-esikatselu-auki .kokoelma-rivi.aktiivinen {
+  flex-wrap: wrap;
+  row-gap: 0;
+  padding-top: var(--tk-vali-xs);
+  padding-bottom: var(--tk-vali-xs);
+}
+#pilleri-linssit-nakyma .kokoelma-esikatselu-auki .kokoelma-rivi.aktiivinen::after {
+  flex-basis: 100%;
+  margin-top: var(--tk-vali-xs);
+  padding-left: calc(var(--tk-vali-xl) + var(--tk-vali-xs) + var(--tk-vali-s));
+}
