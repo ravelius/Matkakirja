@@ -726,6 +726,7 @@ namespace Matkakirja.Natiivi
         IVisualElementScheduledItem vieritys;
         /// <summary>Kuvan korkeuskatto (Mitoita; sama kaava kuin Nostokortti: turva-alue − 150 pt, vähintään 28 %).</summary>
         float kuvaKatto;
+        float avattu;
         int kuvaIndeksi;
         string avain;
         PuluChat.Aihe aihe;
@@ -773,6 +774,12 @@ namespace Matkakirja.Natiivi
             kuvat = Rakenne.El("mk-maakuntaKortti__kuvat", sisalto, PickingMode.Ignore);
             tekstiPaikka = Rakenne.El("mk-maakuntaKortti__tekstit", sisalto, PickingMode.Ignore);
             puluLohko = Rakenne.El("mk-maakuntaKortti__pulu", sisalto, PickingMode.Ignore);
+            // Teksti (Lehtipalstat) ja kuva asettuvat vasta muutaman asettelun jälkeen: lukitaan korkeus uudelleen, kun
+            // sisältö kasvaa avauksen jälkeen (1.10. simulaattorikuva: kortti lukittui pelkän kuvan korkeuteen).
+            sisalto.contentContainer.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                if (Auki && Time.realtimeSinceStartup - avattu < 2f && e.newRect.height > e.oldRect.height + 0.5f) Lukitse();
+            });
             // Kuvan napautus kokoruudulle (omistaja 28.9.2026): sama Kuvasuurennos-komponentti kuin Nostokortti.
             suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
         }
@@ -824,6 +831,7 @@ namespace Matkakirja.Natiivi
             TaytaPulu(kysymykset);
             vieritys?.Pause();
             sisalto.scrollOffset = Vector2.zero;
+            avattu = Time.realtimeSinceStartup;
             Lukitse();
             if (Auki) return;
             Auki = JokinAuki = true;
