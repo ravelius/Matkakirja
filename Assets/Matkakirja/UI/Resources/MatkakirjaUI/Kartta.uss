@@ -2344,6 +2344,13 @@
     -unity-text-align: middle-center;
 }
 
+.mk-nostoselain__avaajaikoni {
+    width: 16px;
+    height: 16px;
+    margin-left: var(--tk-vali-xs);
+    color: var(--tk-paperi-korostus);
+}
+
 .mk-nostoselain__avaaja.mk-valittu {
     background-color: var(--tk-paperi-toiminto);
 }

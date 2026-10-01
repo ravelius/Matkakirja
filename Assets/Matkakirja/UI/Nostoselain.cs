@@ -72,7 +72,9 @@ namespace Matkakirja.Natiivi
             rivi = Rakenne.El("mk-nostoselain", null, PickingMode.Ignore);
             kortti.Insert(kortti.IndexOf(ennen), rivi);
             edellinen = Rakenne.Nappi("‹", "mk-nostoselain__askel", () => Askel(-1), rivi);
-            avaaja = Rakenne.Nappi("Nostot ▾", "mk-nappi--toiminto mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
+            avaaja = Rakenne.Nappi("Nostot", "mk-nappi--toiminto mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
+            // ▾ piirroksena (Kone-kirjasimesta puuttuu merkki: laitteella neliö).
+            Rakenne.Ikoni("<path class=\"taytto\" d=\"M7.5 10h9L12 15z\"/>", "mk-nostoselain__avaajaikoni", avaaja);
             seuraava = Rakenne.Nappi("›", "mk-nostoselain__askel", () => Askel(1), rivi);
             edellinen.tooltip = "Edellinen nosto";
             seuraava.tooltip = "Seuraava nosto";
