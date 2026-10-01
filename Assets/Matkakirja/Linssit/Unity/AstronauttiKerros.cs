@@ -371,11 +371,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento `astro kyyti kuukausi m&lt;1–12&gt;` (m0 = pois): kuukausi pakotettuna kuvapareihin (talvi | kesä
         /// samasta paikasta ilman testikellon siirtoa, joka muuttaisi myös auringon ja ISS:n paikan).</summary>
         public static int KuukausiPakotettu;
-        /// <summary>BMNG-kerroksen alfa reliefin päällä (KarttaKerrokset.RasterinAlfa): 1 = pelkkä BMNG; alle 1 päästää reliefin
-        /// rinnevarjostuksen läpi (laite taivas1 28.9.: BMNG ilman varjostusta näytti latteammalta). Testikomento
-        /// `astro kyyti kuukausi a&lt;0–1&gt;`. Oletus 0,75 (Päätoimittaja 28.9. laite taivas2:n kuvaparista: vuoret erottuvat, meri
-        /// sinertävä eikä musta, Alppien tammikuun lumi näkyy yhä; 0,6 heikensi lunta).</summary>
-        public static float KuukaudenAlfa = 0.75f;
+        /// <summary>BMNG-kerroksen alfa (KarttaKerrokset.RasterinAlfa). 1 (Päätoimittaja 1.10.): reliefi on kyydissä pois BMNG:n alta
+        /// (Cupolan yön suorakulmiot), joten alle 1 näyttäisi vain pohjan. Aiemmin 0,75 reliefin päällä (28.9.). Testikomento
+        /// `astro kyyti kuukausi a&lt;0–1&gt;`.</summary>
+        public static float KuukaudenAlfa = 1f;
         float kuukausiAlfaAsetettu = -1f;
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
@@ -427,16 +426,7 @@ namespace Matkakirja.Natiivi
             if (halutaan == s2Lisatty) return;
             if (halutaan)
             {
-                if (!reliefPoissa)
-                {
-                    kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros);
-                    reliefPoissa = true;
-                    // BMNG paikkaan 1 (alle): poisto ja uudelleenlisäys, alfa 1 (reliefiä ei ole alla).
-                    kk.PoistaRasteri(KuukausiKerros);
-                    kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausiLisatty.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
-                        CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
-                    kuukausiAlfaAsetettu = 1f;
-                }
+                // BMNG on jo paikassa 1 ilman reliefiä (PaivitaKuukaudenPintaBmng), S2 paikkaan 2.
                 string url = haluttu.Replace("{docs}", "file://" + Application.persistentDataPath);
                 // Kuvan pinta (ISS-kamera) aina täydellä laadulla; muuten muistiraja laiteluokan mukaan (Natiivisepän ehto 1.10.:
                 // iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
@@ -458,19 +448,7 @@ namespace Matkakirja.Natiivi
                 kk.PoistaRasteri(S2Kerros);
                 s2Lisatty = false;
                 kk.PallonValimuisti(null);
-                if (reliefPoissa)
-                {
-                    // Alkuperäinen järjestys: reliefi paikkaan 1 ja BMNG sen päälle paikkaan 2 (lisätään seuraavalla kierroksella).
-                    // Ilman tätä kesken kyydin `s2 0` antoi reliefille S2:n paikan 2 BMNG:n päältä täydellä alfalla
-                    // (S2-esitodennus 1.10.: Egypti reliefin korkeusväreissä). Kyydin päättyessä BMNG on jo poistettu.
-                    kk.PoistaRasteri(KuukausiKerros);
-                    kuukausiLisatty = -1;
-                    kk.LisaaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros, Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
-                        CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, 1f);
-                    reliefPoissa = false;
-                }
-                kuukausiAlfaAsetettu = -1f;
-                Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois, reliefi palautettu");
+                Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois");
             }
             AsetaS2Savy();
         }
@@ -498,6 +476,15 @@ namespace Matkakirja.Natiivi
         {
             PaivitaKuukaudenPintaBmng(kyydissa);
             PaivitaS2(kyydissa);
+            // Reliefi palaa vasta, kun BMNG ja S2 ovat poissa (kyydin loppu tai BMNG puuttuu ämpäristä): paikka 1 on silloin vapaa.
+            if (reliefPoissa && kuukausiLisatty < 0 && !s2Lisatty)
+            {
+                KarttaKerrokset.Instanssi?.LisaaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros,
+                    Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(), CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0,
+                    Matkakirja.Linssit.Topografia.ReliefiMaxTaso, 1f);
+                reliefPoissa = false;
+                Debug.Log("MATKAKIRJA linssit: kyydin pinta: reliefi palautettu");
+            }
         }
 
         void PaivitaKuukaudenPintaBmng(bool kyydissa)
@@ -515,7 +502,7 @@ namespace Matkakirja.Natiivi
             if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
             if (kuukausi == kuukausiLisatty)
             {
-                float alfa = s2Lisatty ? 1f : KuukaudenAlfa;
+                float alfa = KuukaudenAlfa;
                 if (kuukausi > 0 && kuukausiAlfaAsetettu != alfa && kk.RasterinAlfa(KuukausiKerros, alfa) >= 0)
                     kuukausiAlfaAsetettu = alfa;
                 return;
@@ -527,6 +514,9 @@ namespace Matkakirja.Natiivi
                 kuukausiLisatty = -1;
                 return;
             }
+            // Reliefi pois kyydin ajaksi aina, kun BMNG on ladattu (Päätoimittaja 1.10.: Cupolan yön harmaat suorakulmiot olivat
+            // reliefin laattoja BMNG:n alla; korvaa 28.9. linjan alfa 0,75): BMNG paikkaan 1, S2 paikkaan 2.
+            if (!reliefPoissa) { kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros); reliefPoissa = true; }
             kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausi.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
                 CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
             kuukausiLisatty = kuukausi;
