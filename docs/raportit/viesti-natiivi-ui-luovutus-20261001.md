@@ -26,9 +26,8 @@ Raportit: docs/raportit/pariteetti-3-20260930.md (natiivi-ui-luovutus-m). Kuvapa
 
 ## KESKEN
 
-- natiivi-ui/pelaajan-nakyma-2 75fc37f5: testikomento `ui pelaaja 1|0` (Asetukset.PakotaPelaaja) + todennus, että mikserinappi
-  ja "Kuori: auto" ovat piilossa linnassa ja Cupolassa pelaajalla. Käännös + 5 min simulaattori pyydetty Julkaisijalta,
-  skripti proto-3d/lokit/natiivi-ui-1035/skriptit/pelaaja.sh. Sitten merge-pyyntö Natiivisepälle ja viesti Päätoimittajalle.
+- Ei kesken. Viimeisin: natiivi-ui/pelaajan-nakyma-2 e59ed8a1 Natiivisepällä junaan (testikomento `ui pelaaja 1|0` todennettu
+  dccb82a5:llä; kuunnelman lopetus yleisnäkymässä vain käännetty, Laitetestaaja todentaa savukkeessa).
 
 ## SITOVAT LINJAUKSET (tältä jaksolta)
 
