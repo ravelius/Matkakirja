@@ -1,4 +1,4 @@
-# Natiivisepän aloitusviesti (1.10.2026 klo 06.3x, BUILD 91; luovutus -20261001)
+# Natiivisepän aloitusviesti (1.10.2026 klo 07.5x tilinvaihto, BUILD 91; luovutus -20261001)
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutus (ensin TILA HETI):
@@ -8,7 +8,7 @@ jaettu-kaannospalvelu-luokitin, burst-linkkeri-ohimeneva.
 Päätoimittajan sessio: "Päätoimittaja (Opus, xhigh)". Vertaisille SendMessage NIMELLÄ (ListAgents).
 
 ## KÄRKI
-1. BUILD 91 = 23041f6f valmis; juna 92 tyhjä — seuraava merge-pyyntö avaa sen (juna/b13 a84f649c pohjana).
+1. 1.1 (92) = juna/b13 b24c0702 (Siirtosepän ensilataus 894d16a4) auki → käännös → savuke → BUILD 92 → SHA Julkaisijalle.
 2. Uudet merge-pyynnöt: 4 testisarjaa, kärkeen jos käännös ei alkanut, muuten seuraava sivuhaara natiiviseppa/juna-10NN.
 3. Linssiseppä 2:n S2-mosaiikki: kuitattu ehdoin (luovutuksessa), tarkista ehdot merge-pyynnöstä.
 

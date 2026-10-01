@@ -1,12 +1,16 @@
-# Natiivisepän luovutus 1.10.2026 klo 05.5x (viikkokiintiö 95 %)
+# Natiivisepän luovutus 1.10.2026 klo 07.5x (tilinvaihto, Päätoimittajan käsky)
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20260930-b.md (käytännöt voimassa, ellei tässä toisin).
-
-## TILA HETI
-
-- **proto master 23041f6f = BUILD 91** (TF 1.1 (91), 06.29). juna/b13 = a84f649c (käännetty f42339ca). **Juna 92 tyhjä**,
-  seuraava pyyntö avaa sen (update-ref juna/b13 <uusi> a84f649c). .app talteen proto-3d/lokit/juna-1.1.91-f42339ca/
-  (Pelikoodari todentaa Pulun ja maakunnan sillä).
+- **proto master 23041f6f = BUILD 91** (TF 1.1 (91)).
+- **JONON KÄRKI: 1.1 (92) AUKI = juna/b13 b24c0702** (07.52; BUILD 91 -juna a84f649c + siirtoseppa/linna-vesi 894d16a4:
+  ympäristön ensilataus — ympäristö odottaa kuoren kevyen tason, kevyt maasto ensin + oma taso taustalla, puhelimessa
+  4k-orto; Siirtosepän mittaus maasto 23,1 → 10,8 s, kuori 12,1 → 8,3 s; kuvapari
+  proto-3d/lokit/siirtoseppa-ensilataus2-jalkeen/ensilataus-kuvapari.png; testit 0/414/365/526). EI VIELÄ KÄÄNNETTY
+  (vahti kääntää ~20 min avauksesta). Seuraavaksi: KÄÄNNETTY → .app talteen proto-3d/lokit/juna-1.1.92-<käännös>/ →
+  savuke Laitetestaajalle (linnan avaus: kuori ja järvi kuten 90:ssä, ei poikkeuksia, `poikki vesi`; ympäristö näkyy vasta
+  #3755:llä + regressio) → PASS → BUILD 92 (commit-tree, -p 23041f6f -p b24c0702) → SHA Julkaisijalle.
+  .app 1.1.91 kansiossa proto-3d/lokit/juna-1.1.91-f42339ca/ (Pelikoodari todentaa sillä).
+kunnan sillä).
 - **S2-mosaiikki astronautin kameraan (Linssiseppä 2) KUITATTU lisäysversiona** ehdoin: S2-laatat Laattapalvelimen
   kautta (Kartta/Laattapalvelin.cs, localhost-proxy, LRU valimuistiMt 600, temporaryCachePath/laatat), ei Cesiumin
   omaa välimuistia; ei viidettä porttia (LaattaPortit, iOS:n yhteysraja); S2-alikatto 200 Mt samaan Karsi-kierrokseen
