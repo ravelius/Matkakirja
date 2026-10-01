@@ -22,7 +22,11 @@
 2. #3756 `linnanrakentaja-v19` (80c445b78) — #3755:n perään.
 3. #3758 `linnanrakentaja-puukortit-v3` (eadbafa38) — #3756:n perään.
 
-## Kesken — tee nämä ensin
+## Päivitys 05.1x
+- #3755 mainissa 05.11 (paketti 19f1ff3246be7386, osoitin ei vaihtunut). v19 rebasettu: #3759 (`linnanrakentaja-v19-2`, 82e055e0b), #3756 suljettu.
+- Kun #3759 squashataan (worktree wt/linnanrakentaja-v19-kuori): `git checkout -b linnanrakentaja-puukortit-v3-2 origin/linnanrakentaja-puukortit-v3` ja `git rebase --onto origin/main 80c445b78` → uusi PR, sulje #3758.
+
+## Kesken — tee nämä ensin (alkuperäinen)
 - KUN #3755 squashataan mainiin: worktree `/Users/Shared/Claude/wt/linnanrakentaja-v19-kuori` →
   `git checkout -b linnanrakentaja-v19-2 <#3756:n kärki>` → `git rebase --onto origin/main d7061369b` →
   push uuteen haaraan (pakkopush on estetty) → uusi PR, sulje #3756 → numero ja kärki Julkaisijalle. Sama #3758:lle
