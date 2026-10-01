@@ -1132,6 +1132,8 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
+  // Pillerivalikko PANEELI-pohjalla: js/main.js puee #paavalikon käynnistyksessä.
+  'js/pilleri-paneeli.js',
   'js/main.js',
 ];
 
