@@ -4603,3 +4603,52 @@
     transition-property: scale;
     transition-duration: 0.12s;
 }
+
+/* KORTTI-pohja (UI-pohjat, web #3793 .tk-kortti): paperipinta, pergamenttirengas 4 pt, ohut reunus, kulma 12; otsikko
+   alaviivalla, kapiteeli, korostuskappale; napit TOIMINTO (ohut reunus) ja ensisijainen kulta, 38 pt. */
+.mk-kortti-kehys--pohja {
+    padding: 4px;
+    border-radius: 16px;
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-kortti--pohja {
+    padding: var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-m) var(--tk-vali-l);
+    border-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-kortti--pohja .mk-kortti__otsikko {
+    margin-bottom: var(--tk-vali-s);
+    padding-bottom: var(--tk-vali-xs);
+    border-bottom-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+}
+
+.mk-kortti__kapiteeli {
+    margin-bottom: var(--tk-vali-xs);
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-kortti--pohja .mk-kortti__teksti {
+    margin-bottom: var(--tk-vali-s);
+}
+
+.mk-nappi--toiminto {
+    min-height: var(--tk-nappi-korkeus);
+    padding: 0 var(--tk-vali-m);
+    border-color: var(--tk-paperi-reunus);
+    background-color: initial; /* läpinäkyvä (oletus) */
+    color: var(--tk-paperi-muste);
+}
+
+.mk-kortti--pohja .mk-nappi--kulta {
+    min-height: var(--tk-nappi-korkeus);
+    padding: 0 var(--tk-vali-m);
+    background-color: var(--tk-paperi-toiminto);
+}
