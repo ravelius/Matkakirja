@@ -9739,3 +9739,7 @@ Omistaja ei tarvitse konetta ennen maanantaita 5.10. ja pyytää polttamaan nyt 
 ## OMISTAJA: ISS-KYTKINPÖYTÄÄN VUOROKAUDENAIKA JA LIVE-NAPPI (1.10.2026) (1.10.2026 klo 13.26)
 
 Omistajan ehdotus, Päätoimittaja suosittelee: VUODENAIKA-valitsimen rinnalle VUOROKAUDENAIKA (AAMU · PÄIVÄ · ILTA · YÖ). Valittu aika pitää auringon ISS:n alla samassa paikallisessa aurinkoajassa, kun asema kulkee: aamu = aurinko idässä noin 10°, päivä = keskipäivä, ilta = kultainen tunti lännessä noin 5°, yö = alle −18° ja kaupunkivalot. Lisäksi LIVE-nappi palauttaa oikean hetken, ISS:n todellisen paikan ja kuluvan vuodenajan. Pohja on ISS:n kytkinpöytä (IssKytkimet). Logiikan tekee Linssiseppä, paneelin kuvat Linnanrakentaja kuoren korjauksen jälkeen.
+
+## OMISTAJA: CUPOLAN IKKUNA ISOMMAKSI — VAAKA 2,0, PYSTY 1,25 (1.10.2026) (1.10.2026 klo 17.03)
+
+Omistaja valitsi Linssisepän kokeilusta (haara linssiseppa/cupola-iso-ikkuna, koonti-cupola-vuorokausi-ikkuna.jpg) Cupolan ikkunan suurennokseksi vaakatilassa 2,0, jolloin aukko täyttää leveyden lähes reunasta reunaan, ja pystytilassa 1,25. Kytkinpöytä ei peitä maata enempää kuin ennen. iPadin arvo vastaavalla periaatteella Linssisepän ehdotuksesta. Toteuttaa Linssiseppä, merge seuraavaan junaan.
