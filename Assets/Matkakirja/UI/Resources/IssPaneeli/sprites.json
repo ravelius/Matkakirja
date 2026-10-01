@@ -42,7 +42,7 @@
       52.95
      ],
      "koko_pt": [
-      24.78,
+      30.82,
       7.73
      ]
     },
@@ -56,13 +56,13 @@
       7.73
      ]
     },
-    "oma-otsikko": {
+    "kuvaa-otsikko": {
      "keski_pt": [
       303.5,
       52.95
      ],
      "koko_pt": [
-      29.43,
+      17.88,
       7.73
      ]
     },
@@ -176,7 +176,7 @@
       8.69
      ]
     },
-    "oma": {
+    "kuvaa": {
      "keski_pt": [
       303.5,
       80.19
@@ -186,7 +186,7 @@
       46.36
      ]
     },
-    "oma-levy": {
+    "kuvaa-levy": {
      "keski_pt": [
       303.5,
       115.44
@@ -224,16 +224,6 @@
      "koko_pt": [
       22.0,
       32.84
-     ]
-    },
-    "oma-kaari": {
-     "keski_pt": [
-      303.5,
-      74.39
-     ],
-     "koko_pt": [
-      30.0,
-      38.64
      ]
     },
     "kupu": {
@@ -552,6 +542,26 @@
       42.0
      ]
     },
+    "kuvaa-ylos": {
+     "keski_pt": [
+      303.33,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "kuvaa-alas": {
+     "keski_pt": [
+      303.33,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
     "poistu-ylos": {
      "keski_pt": [
       366.33,
@@ -571,93 +581,12 @@
       42.0,
       42.0
      ]
-    },
-    "vipu-ylos": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      52.0,
-      52.0
-     ]
-    },
-    "vipu-alas": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      52.0,
-      52.0
-     ]
-    },
-    "kaari-0": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-1": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-2": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-3": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-4": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-5": {
-     "keski_pt": [
-      303.33,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
     }
    },
    "osat_kaytto": {
     "nopeus": "nopeus-0…3 (LIVE, 10×, 100×, 1000×)",
     "pilvet_kuukausi": "nuppi-00…23, 15°/askel",
-    "kohde_poistu": "kohde-ylos/alas, poistu-ylos/alas",
-    "oma": "vipu-ylos/alas + kaari-0 (kiinni) … 5 (auki)"
+    "kohde_kuvaa_poistu": "kohde-ylos/alas, kuvaa-ylos/alas, poistu-ylos/alas"
    },
    "valot": {
     "live-vihrea": {
@@ -667,6 +596,9 @@
      "skaala": 1.5
     },
     "kohde": {
+     "skaala": 1.5
+    },
+    "kuvaa": {
      "skaala": 1.5
     },
     "poistu": {
@@ -722,7 +654,7 @@
       52.95
      ],
      "koko_pt": [
-      24.78,
+      30.82,
       7.73
      ]
     },
@@ -736,13 +668,13 @@
       7.73
      ]
     },
-    "oma-otsikko": {
+    "kuvaa-otsikko": {
      "keski_pt": [
       440.0,
       52.95
      ],
      "koko_pt": [
-      29.43,
+      17.88,
       7.73
      ]
     },
@@ -856,7 +788,7 @@
       8.69
      ]
     },
-    "oma": {
+    "kuvaa": {
      "keski_pt": [
       440.0,
       80.19
@@ -866,7 +798,7 @@
       46.36
      ]
     },
-    "oma-levy": {
+    "kuvaa-levy": {
      "keski_pt": [
       440.0,
       115.44
@@ -904,16 +836,6 @@
      "koko_pt": [
       22.0,
       32.84
-     ]
-    },
-    "oma-kaari": {
-     "keski_pt": [
-      440.0,
-      74.39
-     ],
-     "koko_pt": [
-      30.0,
-      38.64
      ]
     },
     "kupu": {
@@ -1232,6 +1154,26 @@
       42.0
      ]
     },
+    "kuvaa-ylos": {
+     "keski_pt": [
+      440.0,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
+    "kuvaa-alas": {
+     "keski_pt": [
+      440.0,
+      80.0
+     ],
+     "koko_pt": [
+      42.0,
+      42.0
+     ]
+    },
     "poistu-ylos": {
      "keski_pt": [
       533.0,
@@ -1251,93 +1193,12 @@
       42.0,
       42.0
      ]
-    },
-    "vipu-ylos": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      52.0,
-      52.0
-     ]
-    },
-    "vipu-alas": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      52.0,
-      52.0
-     ]
-    },
-    "kaari-0": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-1": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-2": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-3": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-4": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
-    },
-    "kaari-5": {
-     "keski_pt": [
-      440.0,
-      76.0
-     ],
-     "koko_pt": [
-      60.0,
-      60.0
-     ]
     }
    },
    "osat_kaytto": {
     "nopeus": "nopeus-0…3 (LIVE, 10×, 100×, 1000×)",
     "pilvet_kuukausi": "nuppi-00…23, 15°/askel",
-    "kohde_poistu": "kohde-ylos/alas, poistu-ylos/alas",
-    "oma": "vipu-ylos/alas + kaari-0 (kiinni) … 5 (auki)"
+    "kohde_kuvaa_poistu": "kohde-ylos/alas, kuvaa-ylos/alas, poistu-ylos/alas"
    },
    "valot": {
     "live-vihrea": {
@@ -1347,6 +1208,9 @@
      "skaala": 1.0
     },
     "kohde": {
+     "skaala": 1.0
+    },
+    "kuvaa": {
      "skaala": 1.0
     },
     "poistu": {
