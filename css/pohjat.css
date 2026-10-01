@@ -430,3 +430,82 @@
   font-size: var(--tk-koko-kapiteeli);
   letter-spacing: 0.08em;
 }
+
+/* ── PANEELI puettuna pillerivalikkoon (#paavalikko, js/pilleri-paneeli.js; peruttava ?paneeli=vanha) ─────────── */
+
+/* Paikka pohjan omalla kiinteällä asemoinnilla: yläpalkin toimintorivin alla oikeassa reunassa (js asettaa ankkurin). */
+.paavalikko.tk-paneeli--paikallaan {
+  z-index: 60;
+  display: block;
+  width: min(var(--tk-leveys-paneeli), 100vw - var(--tk-vali-xl));
+  padding: var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-s);
+  /* Vanhat alinäkymät (tiedot, Aarteet, Linssit) lukevat kehyksen muuttujia: paperin arvot pohjan tokeneista. */
+  --ink: var(--tk-muste);
+  --muted: var(--tk-muste-pehmea);
+  --line: var(--tk-reunus);
+  --panel: var(--tk-pinta);
+}
+.paavalikko.tk-paneeli--paikallaan[hidden] { display: none; }
+.tk-paneeli--paikallaan .pilleri-alanakyma, .tk-paneeli--paikallaan #pilleri-paanakyma { display: block; }
+.tk-paneeli--paikallaan .pilleri-alanakyma[hidden], .tk-paneeli--paikallaan #pilleri-paanakyma[hidden] { display: none; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhmaotsikko:first-child { margin-top: 0 !important; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__ryhma,
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__erotin + .tk-paneeli__ryhma { margin-top: var(--tk-vali-m); }
+/* Vanhan kytkimen tila (aria-checked) ajaa päällä-asun samoin kuin pohjan oma kytkin. */
+.tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.tk-paneeli-rivi--kytkin[aria-checked="true"] .tk-paneeli-rivi__tila { color: var(--tk-korostus); font-weight: 700; }
+/* Kolme kytkintä vierekkäin: väri kertoo tilan, PÄÄLLÄ/POIS-sana ei mahdu kolmanneksen levyiseen soluun. */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { gap: var(--tk-vali-xs); padding: 0 var(--tk-vali-xs); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__tila { display: none; }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin[aria-checked="true"] + .tk-paneeli-rivi { border-left-color: var(--tk-toiminto); }
+/* Säädin: vanha rivi (nimi, liuku, arvo) kahdelle riville kuten pohjan SÄÄDIN. */
+.aanivoima.tk-paneeli-rivi--saadin {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "nimi arvo" "liuku liuku";
+  row-gap: var(--tk-vali-xs);
+  min-height: 0;
+}
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-nimi { grid-area: nimi; color: var(--tk-muste); font: inherit; }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-liuku { grid-area: liuku; width: 100%; margin: 0; accent-color: var(--tk-toiminto); }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-arvo {
+  grid-area: arvo;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.tk-paneeli--paikallaan .tk-paneeli__alarivi { align-items: center; }
+.tk-paneeli--paikallaan .tk-paneeli__alarivi button { color: inherit; font-size: var(--tk-koko-kapiteeli); }
+/* Vanha `.paavalikko button` (0,1,1) nollaisi reunuksen, kulman ja välit: pohjan rivi samalla tarkkuudella. */
+.paavalikko.tk-paneeli .tk-paneeli-rivi {
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+}
+.paavalikko.tk-paneeli .tk-paneeli-rivi--toiminto { border-color: var(--tk-muste-pehmea); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--saadin { padding: var(--tk-vali-s) var(--tk-vali-m); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi:hover:not([aria-checked="true"]) { background: transparent; }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi { padding: 0 var(--tk-vali-xs); border: 0; border-radius: 0; }
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi + .tk-paneeli-rivi { border-left: 1px solid var(--tk-muste-pehmea); }
+/* Alinäkymän otsikko on kapiteeli (vanha h2-sääntö teki siitä kultaisen). */
+.paavalikko.tk-paneeli .tk-paneeli__yla .tk-kapiteeli {
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Matka-alinäkymä: otsikko on jo ylärivillä, joten tietojen oma Matka-nimiö ja yläviiva jäävät pois. */
+#pilleri-matka-nakyma .pilleri-tiedot { margin-top: 0; padding-top: 0; border-top: 0; }
+#pilleri-matka-nakyma .pilleri-tiedot > .passport-count:first-child { display: none; }
