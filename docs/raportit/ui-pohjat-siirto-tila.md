@@ -20,6 +20,7 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 | PANEELI 1. erä (web) | #3801, #3804 pillerivalikko, #3809 karttaselite (Pelikoodari) | ei muutosta (natiivissa ei selitenappia); pillerivalikko seuraa | web valmis |
 | PANEELI 2. erä | määrittely Pelikoodarille 1.10. ~19.2x: linssivalitsin (PAPERI, rivi 38, valittu pergamentti + toiminto-reunus, KESKENERÄISET kapiteelina) ja linssin hampurilainen (LASI, Poistu · Aloita alusta TOIMINTO, viiva, Kertoja · Taustamusiikki KYTKIN) | natiivi webin perässä | web työn alla |
 | KENTTÄ-pohjaosa | #3808 lomakekenttä + palautelomake (Pelikoodari) | `pohja-kentta` b1058f04 (KORTTI-lomakkeissa; työhuone ennallaan) | käännösjonossa visan kanssa |
+| Juna 108–109 (1.10. ilta) | – | 108: ihmiskortti-3 b5337960 (löytökuva piiloon joka ruudun asettelussakin). 109: vetokahva kortin tasolle 3dc8648b (käsiveto toimii, 58afbe5b), linssivalikko LASI b50952f5 + z c4bcc9a4, visa B cd55dccc (+ tyylikirja-3), lappu-nostoluennassa 7b48749d, kentta-2 afddd9f1 | todennettu iPhone 17 (f4f47679, 58afbe5b) |
 
 ## Pinnat pohjiin (natiivi)
 
