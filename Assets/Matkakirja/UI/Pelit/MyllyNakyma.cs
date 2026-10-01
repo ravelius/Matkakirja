@@ -32,7 +32,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Uusintapeli Aarteiden Pelit-riviltä (ei paikkaa eikä maata).</summary>
         public static void AvaaPeli(string id)
         {
-            // id = "mylly" tai ansaitun laudan rivi "mylly:katedraali" (avaa valinnan sillä laudalla).
+            // id = "mylly" tai ansaitun laudan rivi "mylly:luostari" (avaa valinnan sillä laudalla).
             var osat = (id ?? "").Split(':');
             if (osat[0] != Peliluettelo.Mylly.Id) return;
             var n = Hae();
@@ -537,7 +537,7 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        /// <summary>Valitun laudan tunnus (majatalo / katedraali / viikinkilaiva): Blender-kerrokset tulevat tämän mukaan.</summary>
+        /// <summary>Valitun laudan tunnus (majatalo / luostari / viikinkilaiva): Blender-kerrokset tulevat tämän mukaan.</summary>
         public string LautaId { get; private set; } = "majatalo";
         public void AsetaLauta(string id) { LautaId = id; MarkDirtyRepaint(); }
 

@@ -48,14 +48,19 @@ namespace Matkakirja.Peli.Pelit
         {
             Id = "mylly", Nimi = "Mylly", Nappi = "Pelaa myllyä", KatalogiId = "DEU-2", Koti = "berliini",
             Maat = new[] { new PeliMaa { Maa = "DEU", MaanNimi = "Saksa", PaikallinenNimi = "Mühle" } },
+            // Tekstit: Sisältökirjuri, docs/raportit/sisaltokirjuri-mylly-historiatekstit-20261001.md (haara sisalto-pelikatalogi-20260927),
+            // osiot 1 (historia), 4 (alkuperä) ja 6 (keskiaika: Ten Duinen -luostarin tiili, Päätoimittaja 1.10.: "Luostari n. 1300").
             Laudat = new[]
             {
                 new PeliLauta { Id = "majatalo", Nimi = "Majatalo 1873", Esine = "Majatalon myllylauta (voitit isännältä)",
-                    Historia = "[Majatalon laudan historia: Sisältökirjuri.]", Alkupera = "[Majatalon laudan esikuva: Sisältökirjuri.]" },
-                new PeliLauta { Id = "katedraali", Nimi = "Katedraali 1300-l.", Esine = "Katedraalin myllylauta", Avautuu = Vastustaja.BottiNormaali,
-                    Historia = "[Katedraalin laudan historia: Sisältökirjuri.]", Alkupera = "[Katedraalin laudan esikuva: Sisältökirjuri.]" },
+                    Historia = "Mylly oli 1800-luvun Euroopassa tuttu peli majataloissa ja kodeissa, ja saksaksi sitä kutsutaan nimellä Mühle. Pelilauta on yksinkertainen: kolme sisäkkäistä neliötä, joita yhdistävät viivat.",
+                    Alkupera = "Lauta perustuu yleiseen 1800-luvun saksalaiseen Mühle-lautaan: kolme sisäkkäistä neliötä, joita yhdistävät viivat. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kotien ja majatalojen pelilautaa." },
+                new PeliLauta { Id = "luostari", Nimi = "Luostari n. 1300", Esine = "Luostarin myllylauta", Avautuu = Vastustaja.BottiNormaali,
+                    Historia = "Keskiajan rakentajat jättivät myllylautoja rakennusmateriaaleihin: Belgian Koksijden Duinenabdij-luostarin tiileen lauta on piirretty märkään saveen ennen polttoa, ja Newcastlen linnassa se on kaiverrettu kivilohkoon. Molemmissa on myllyn tuttu kuvio, kolme sisäkkäistä neliötä ja 24 pistettä.",
+                    Alkupera = "Esikuvana on tiili Koksijden Duinenabdij-luostarista Belgiasta, ajoitettu 1200–1300-luvuille. Myllylauta, jossa on 24 pistettä, on piirretty tiileen sen ollessa vielä märkää savea, ennen polttoa. Tiili on luostarin museon (Abbey Museum of the Dunes) kokoelmissa, inventaarionumero 33880." },
                 new PeliLauta { Id = "viikinkilaiva", Nimi = "Viikinkilaiva n. 900", Esine = "Viikinkilaivan myllylauta", Avautuu = Vastustaja.BottiVaikea,
-                    Historia = "[Viikinkilaivan laudan historia: Sisältökirjuri.]", Alkupera = "[Viikinkilaivan laudan esikuva: Sisältökirjuri.]" },
+                    Historia = "Norjan Gokstadin laivahaudasta löytyi pelilauta, jonka toisella puolella on hnefatafl-peli ja toisella mylly. Laiva on rakennettu noin vuonna 890 kaadetuista puista, ja se on nykyään esillä Oslon Viikinkilaivamuseossa.",
+                    Alkupera = "Esikuvana on Gokstadin laivahaudasta Norjasta löytynyt puinen pelilauta ja yksi sarvesta tehty pelinappula. Laudan toisella puolella on 13×13 ruutua (hnefatafl) ja toisella mylly; haudan laiva on rakennettu noin vuonna 890 kaadetuista puista, ja kaivaukset tehtiin vuonna 1880. Lauta on Oslon yliopiston Kulttuurihistoriallisen museon kokoelmissa; laudasta on säilynyt vain osa, eikä siinä ole merkintöjä, jotka tunnistaisivat sen peliksi epäilyksettä, joten tulkinta perustuu sen kokoon ja muotoon." },
             },
         };
 

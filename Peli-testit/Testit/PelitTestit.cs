@@ -86,10 +86,10 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!m.Tallenna().Contains("\"pelit\""), "tyhjää ei kirjoiteta");
             Peliluettelo.Kirjaa(m.Tila.Pelaaja, "mylly", Vastustaja.BottiNormaali, true);
             var json = m.Tallenna();
-            const string Pelit = "\"pelit\":[{\"id\":\"mylly\",\"pelattu\":1,\"voitot\":1,\"laudat\":[\"majatalo\",\"katedraali\"]}]";
+            const string Pelit = "\"pelit\":[{\"id\":\"mylly\",\"pelattu\":1,\"voitot\":1,\"laudat\":[\"majatalo\",\"luostari\"]}]";
             Oleta.Tosi(json.Contains(Pelit), "kirjoitettu");
             var l = Matka.Lataa(Verkko(), json);
-            Oleta.Sama("mylly 1/1 majatalo+katedraali", string.Join(",", l.Tila.Pelaaja.Pelit.Select(g => $"{g.Id} {g.Pelattu}/{g.Voitot} {string.Join("+", g.Laudat)}")), "luettu takaisin");
+            Oleta.Sama("mylly 1/1 majatalo+luostari", string.Join(",", l.Tila.Pelaaja.Pelit.Select(g => $"{g.Id} {g.Pelattu}/{g.Voitot} {string.Join("+", g.Laudat)}")), "luettu takaisin");
             // Migraatio 8 → 9: versio 8 ilman pelit-kenttää latautuu, Pelit tyhjä.
             var vanha = Matka.Lataa(Verkko(), json.Replace("," + Pelit, "")
                 .Replace("\"versio\":" + Pelitila.TallennusVersio, "\"versio\":8"));
@@ -107,14 +107,14 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("", string.Join(",", Peliluettelo.Kirjaa(p, "mylly", Vastustaja.Kaveri, true).Select(x => x.Id)), "kaveripeli ei avaa");
             Oleta.Sama("", string.Join(",", Peliluettelo.Kirjaa(p, "mylly", Vastustaja.BottiVaikea, false).Select(x => x.Id)), "häviö ei avaa");
             Oleta.Sama("majatalo", string.Join(",", Peliluettelo.Kirjaa(p, "mylly", Vastustaja.BottiHelppo, true).Select(x => x.Id)), "ensimmäinen voitto: majatalo esineeksi");
-            Oleta.Sama("katedraali", string.Join(",", Peliluettelo.Kirjaa(p, "mylly", Vastustaja.BottiNormaali, true).Select(x => x.Id)));
-            Oleta.Sama("majatalo,katedraali", Kaytossa());
+            Oleta.Sama("luostari", string.Join(",", Peliluettelo.Kirjaa(p, "mylly", Vastustaja.BottiNormaali, true).Select(x => x.Id)));
+            Oleta.Sama("majatalo,luostari", Kaytossa());
             Oleta.Sama("viikinkilaiva", string.Join(",", Peliluettelo.Kirjaa(p, "mylly", Vastustaja.BottiVaikea, true).Select(x => x.Id)));
             Oleta.Sama("", string.Join(",", Peliluettelo.Kirjaa(p, "mylly", Vastustaja.BottiVaikea, true).Select(x => x.Id)), "kerran");
-            Oleta.Sama("majatalo,katedraali,viikinkilaiva", Kaytossa());
+            Oleta.Sama("majatalo,luostari,viikinkilaiva", Kaytossa());
             // Vaikean voitto ensimmäisenä avaa myös helpommat.
             var (m2, _) = Uusi("berliini");
-            Oleta.Sama("majatalo,katedraali,viikinkilaiva", string.Join(",", Peliluettelo.Kirjaa(m2.Tila.Pelaaja, "mylly", Vastustaja.BottiVaikea, true).Select(x => x.Id)));
+            Oleta.Sama("majatalo,luostari,viikinkilaiva", string.Join(",", Peliluettelo.Kirjaa(m2.Tila.Pelaaja, "mylly", Vastustaja.BottiVaikea, true).Select(x => x.Id)));
         }
 
         [Testi] static void LaukkuListaaPelatut()
