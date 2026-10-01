@@ -1,0 +1,287 @@
+/*
+ * UI-POHJAT: NOSTOKORTTI ja KORTTI (omistaja 1.10.2026, UI-pohjat kohdat 1–3 ja 9; Natiivi-UI:n kartoitus
+ * docs/raportit/ui-pohjat-kartoitus-20261001.md). Webiin tulevat vain nämä kaksi pohjaa; natiivi tekee saman
+ * tyylikirja.json-lähteestä (Pohja.cs). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json →
+ * tools/tyylikirja.mjs → css/styles.css TYYLIKIRJA-lohko); fonttipinot --font-luku ja --font-type ovat
+ * tyylikirjan fontit.web-osion nimet. Rakenne ja logiikka: js/pohjat/.
+ *
+ * Yhteiset osat (.tk-…) ovat molemmille pohjille: kapiteeli, otsikko, apuri, leipä, kuvat, lähde, napit.
+ */
+
+/* ── Yhteiset tekstiportaat (typografia 7 porrasta) ───────────────────────── */
+
+.tk-kapiteeli {
+  margin: 0 0 var(--tk-vali-xs);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tk-muste-pehmea);
+}
+.tk-otsikko {
+  margin: 0 0 var(--tk-vali-xs);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-otsikko);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--tk-muste);
+}
+.tk-apuri {
+  margin: 0 0 var(--tk-vali-s);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-apuri);
+  font-style: italic;
+  color: var(--tk-muste-pehmea);
+}
+.tk-leipa {
+  margin: 0 0 var(--tk-vali-s);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+  line-height: 1.45;
+  color: var(--tk-muste);
+}
+.tk-leipa--korostus { font-weight: 700; }
+.tk-valiotsikko {
+  margin: var(--tk-vali-m) 0 var(--tk-vali-xs);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-valiotsikko);
+  font-weight: 700;
+  color: var(--tk-korostus);
+}
+.tk-lahde {
+  margin: var(--tk-vali-xs) 0 0;
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  color: var(--tk-muste-pehmea);
+}
+.tk-viiva {
+  height: 1px;
+  margin: var(--tk-vali-s) 0;
+  border: 0;
+  background: var(--tk-reunus);
+}
+@media (min-width: 600px) {
+  .tk-otsikko { font-size: calc(var(--tk-koko-otsikko) + var(--tk-koko-leveaLisa)); }
+  .tk-leipa { font-size: calc(var(--tk-koko-leipa) + var(--tk-koko-leveaLisa)); }
+}
+
+/* ── Kuvasäännöt (0 / 1 hero 2:1 / 2 hero + upotus 4:3 40 % / 3+ hero + galleria 64 px) ─────── */
+
+.tk-kuva {
+  margin: 0 0 var(--tk-vali-s);
+}
+.tk-kuva img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--tk-kulma-pieni);
+  border: 1px solid var(--tk-reunus);
+  background: var(--tk-reunus);
+}
+.tk-kuva--hero img { aspect-ratio: 2 / 1; }
+.tk-kuva--upotus {
+  float: right;
+  width: var(--tk-kuva-upotus-leveys);
+  margin: var(--tk-vali-xs) 0 var(--tk-vali-s) var(--tk-vali-m);
+}
+.tk-kuva--upotus img { aspect-ratio: 4 / 3; }
+.tk-kuvateksti {
+  margin-top: var(--tk-vali-xs);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-kapiteeli);
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--tk-muste-pehmea);
+}
+/* Runko pitää upotuksen sisällään; teksti kiertää kuvan. */
+.tk-runko { display: flow-root; }
+.tk-galleria {
+  display: flex;
+  gap: var(--tk-vali-xs);
+  margin: 0 0 var(--tk-vali-s);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tk-galleria button {
+  flex: none;
+  height: var(--tk-kuva-galleria-korkeus);
+  aspect-ratio: 3 / 2;
+  padding: 0;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-pieni);
+  overflow: hidden;
+  background: var(--tk-reunus);
+  cursor: zoom-in;
+}
+.tk-galleria img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── Napit: TOIMINTO (ohut reunus), ensisijainen (kulta), haamu; 38 pt, osuma ≥ 44 pt ───────── */
+
+.tk-napit {
+  display: flex;
+  gap: var(--tk-vali-s);
+}
+.tk-nappi {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  height: var(--tk-nappi-korkeus);
+  min-height: 0;
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+/* Näkymätön osuma-alan laajennus 38 → 44 pt. */
+.tk-nappi::after {
+  content: '';
+  position: absolute;
+  inset: calc((var(--tk-nappi-korkeus) - var(--tk-nappi-osuma)) / 2) 0;
+}
+.tk-nappi--ensisijainen {
+  border-color: var(--tk-toiminto);
+  background: var(--tk-toiminto);
+  color: var(--tk-paperi-muste);
+}
+.tk-nappi--haamu { border-color: transparent; }
+.tk-nappi:focus-visible { outline: 2px solid var(--tk-toiminto); outline-offset: 2px; }
+
+/* ── NOSTOKORTTI: KAPEA alareunaan ≤ 45 % (veto ylös 85 %), KESKI/LEVEÄ sivukortti oikealle ────── */
+
+.tk-nostokortti {
+  position: fixed;
+  z-index: 60;
+  left: var(--tk-vali-m);
+  right: var(--tk-vali-m);
+  bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: column;
+  /* Kiinnitetyn elementin prosentti on näkymän korkeudesta. */
+  max-height: var(--tk-peitto-max);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 8px 26px var(--tk-himmennys-kevyt);
+  transition:
+    max-height var(--tk-kesto-avaus) var(--liike-sisaan),
+    opacity var(--tk-kesto-avaus) var(--liike-sisaan),
+    transform var(--tk-kesto-avaus) var(--liike-sisaan);
+}
+.tk-nostokortti.tk-laajennettu { max-height: var(--tk-peitto-laajennettu); }
+.tk-nostokortti.tk-piilossa {
+  opacity: 0;
+  transform: translateY(var(--tk-vali-l));
+  pointer-events: none;
+  transition-duration: var(--tk-kesto-sulku);
+}
+.tk-nostokortti__kahva {
+  flex: none;
+  align-self: center;
+  width: var(--tk-nappi-osuma);
+  height: var(--tk-vali-l);
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+}
+.tk-nostokortti__kahva::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 4px;
+  margin: 6px auto 0;
+  border-radius: var(--tk-kulma-pilleri);
+  background: var(--tk-reunus);
+}
+.tk-nostokortti__vieritys {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--tk-vali-xs) var(--tk-vali-l) var(--tk-vali-s);
+}
+.tk-nostokortti__napit {
+  flex: none;
+  padding: var(--tk-vali-s) var(--tk-vali-l) var(--tk-vali-m);
+  border-top: 1px solid var(--tk-reunus);
+}
+@media (min-width: 600px) {
+  .tk-nostokortti {
+    left: auto;
+    top: calc(var(--tk-vali-xl) * 3);
+    bottom: auto;
+    width: var(--tk-leveys-sivukortti);
+    max-height: calc(100dvh - var(--tk-vali-xl) * 4);
+  }
+  .tk-nostokortti.tk-laajennettu { max-height: calc(100dvh - var(--tk-vali-xl) * 4); }
+  .tk-nostokortti__kahva { display: none; }
+}
+
+/* ── KORTTI: keskitetty max 420 pt (minipopup 320), himmennys, napit oikealle ───────────────── */
+
+.tk-kortti-tausta {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tk-vali-l);
+  background: var(--tk-himmennys-tumma);
+  transition: opacity var(--tk-kesto-avaus) ease-out;
+}
+.tk-kortti-tausta.tk-piilossa { opacity: 0; pointer-events: none; transition-duration: var(--tk-kesto-sulku); }
+.tk-kortti {
+  width: 100%;
+  max-width: var(--tk-leveys-kortti);
+  max-height: calc(100dvh - var(--tk-vali-xl) * 2);
+  overflow-y: auto;
+  padding: var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 0 0 4px var(--tk-pergamentti, transparent), 0 10px 30px var(--tk-himmennys-kevyt);
+  transition: transform var(--tk-kesto-avaus) var(--liike-sisaan);
+}
+.tk-kortti--mini { max-width: var(--tk-leveys-minipopup); }
+.tk-kortti-tausta.tk-piilossa .tk-kortti { transform: scale(0.96); }
+.tk-kortti .tk-otsikko { padding-bottom: var(--tk-vali-xs); border-bottom: 1px solid var(--tk-reunus); }
+.tk-kortti .tk-napit {
+  justify-content: flex-end;
+  margin-top: var(--tk-vali-m);
+}
+.tk-kortti .tk-nappi { flex: 0 1 auto; }
+.tk-kortti .tk-napit--pysty { flex-direction: column; align-items: stretch; }
+.tk-kortti .tk-napit--pysty .tk-nappi { flex: none; text-align: left; font-family: var(--font-luku); font-size: var(--tk-koko-leipa); }
+
+/* ── Esikatselu (tyylikirjasivu): pohja paikallaan virrassa, ei kiinnitettynä ───────────────── */
+
+.tk-esikatselu .tk-nostokortti,
+.tk-esikatselu .tk-kortti-tausta {
+  position: relative;
+  inset: auto;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  z-index: auto;
+}
+.tk-esikatselu .tk-nostokortti { width: 100%; max-height: 420px; }
+.tk-esikatselu .tk-kortti-tausta { min-height: 260px; border-radius: var(--tk-kulma-kortti); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-nostokortti, .tk-kortti, .tk-kortti-tausta { transition: none; }
+}
