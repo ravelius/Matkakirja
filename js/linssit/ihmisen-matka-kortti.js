@@ -432,9 +432,24 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
       kehys.appendChild(vara);
       kuvat.appendChild(kehys);
     }
-    kortti.appendChild(kuvat);
-
-    kortti.appendChild(solmu('p', 'ihmisen-nostokortti-teksti', nosto.teksti ?? ''));
+    /*
+     * KAKSI KUVAA (omistaja 1.10.2026 klo 09.2x, pariteettiparin perusteella):
+     * vasen (maisema)kuva koko kortin levyiseksi ylös, oikea (esine)kuva
+     * leipätekstin oikealle puolelle — teksti kiertää kuvan, kuvateksti
+     * kuvan alla. Sama natiivissa (IhmisenNostokortti.cs).
+     */
+    const teksti = solmu('p', 'ihmisen-nostokortti-teksti', nosto.teksti ?? '');
+    if (kuvat.childElementCount === 2) {
+      const sivukuva = kuvat.lastElementChild;
+      sivukuva.classList.add('kellu');
+      kortti.appendChild(kuvat);
+      const runko = solmu('div', 'ihmisen-nostokortti-runko');
+      runko.append(sivukuva, teksti);
+      kortti.appendChild(runko);
+    } else {
+      kortti.appendChild(kuvat);
+      kortti.appendChild(teksti);
+    }
     if (nosto.lahde) kortti.appendChild(solmu('div', 'ihmisen-nostokortti-lahde', nosto.lahde));
 
     if (nosto.juttu && typeof ajo.avaaNostonJuttu === 'function') {
