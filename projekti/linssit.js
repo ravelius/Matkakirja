@@ -74,6 +74,7 @@ const RUNKO = `
     <button type="button" class="valilehti-nappi" data-ala="pelissa">Pelissä nyt</button>
     <button type="button" class="valilehti-nappi" data-ala="seuraavat">Seuraavat</button>
     <button type="button" class="valilehti-nappi" data-ala="katalogi"><span class="pitka">Koko katalogi</span><span class="lyhyt">Katalogi</span></button>
+    <a class="valilehti-nappi" href="tyylikirja.html" title="Kehittäjäsivu: tokenit ja UI-pohjat">Tyylikirja</a>
   </nav>
 
   <div class="valilehti" data-ala-paneeli="moottorit">
