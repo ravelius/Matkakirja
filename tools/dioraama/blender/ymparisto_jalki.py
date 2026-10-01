@@ -24,6 +24,9 @@ if os.path.exists(mz):  # juuret maaston lopulliselle pinnalle (rantavyöhyke la
         P[:, 2] += np.where((np.abs(P[:, 0]) < LH) & (np.abs(P[:, 1]) < LH), d_, 0)
     P = P[P[:, 2] > -6.6]  # vedenrajaan jääneet pois (maa ≥ vesi + 0,4 m; Siirtoseppä 1.10.: rantapuut seisoivat vedessä)
 et = np.hypot(P[:, 0], P[:, 1]); P = P[np.argsort(et)]
+# Puukortit v3 (1.10.): 7. sarake muunnos 0–2 paikasta (toistettava, naapurit vaihtelevat); natiivi: puuttuu = 0.
+mu = ((np.floor(P[:, 0] * 7.3).astype(np.int64) * 31 + np.floor(P[:, 1] * 5.1).astype(np.int64) * 17) % 3).astype(float)
+P = np.column_stack([P[:, :6], mu])
 j['puut'] = [[round(float(v), 2) if i < 5 else int(v) for i, v in enumerate(r)] for r in P]
 j['tasot'] = TASOT; j['atlas'] = 'puukortit.json'
 j['huom'] = 'Lista on etäisyysjärjestyksessä linnasta: tason puut = N ensimmäistä. Kauempana metsä on maaston latvuspinnassa.'

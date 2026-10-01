@@ -73,6 +73,12 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
     done
     for f in "$LAHDE"/ymparisto/maasto/*_1k.jpg; do lisaa "ymparisto/maasto/${f:t}" "ymparisto/maasto/${f:t}"; done
   fi
+  # Puukorttien normaalikartta (v3), jos lähteessä.
+  [ -f "$LAHDE/ymparisto/puukortit-normaali.png" ] && lisaa ymparisto/puukortit-normaali.png ymparisto/puukortit-normaali.png
+  # Taivas (LDR-equirect päivä + hämärä, 1.10.2026), jos lähteessä.
+  if [ -f "$LAHDE/ymparisto/taivas-2k.jpg" ] && [ -f "$LAHDE/ymparisto/taivas-hamara-2k.jpg" ]; then
+    lisaa ymparisto/taivas-2k.jpg ymparisto/taivas-2k.jpg; lisaa ymparisto/taivas-hamara-2k.jpg ymparisto/taivas-hamara-2k.jpg
+  fi
 fi
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"

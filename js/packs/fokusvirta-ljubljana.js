@@ -42,6 +42,8 @@ export const FOKUSVIRTA_LJUBLJANA = {
       + 'kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat '
       + 'nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; '
       + 'isoisäni aikaan matka kesti viikon.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääntä EI ole generoitu, omistajan lupa vaaditaan). */
+    luenta: "[curious] Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: sisällä on vankila, ei ruhtinaita. [softly] Ljubljanica kiertää vanhan kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat nahalta ja tervalta. [warmly] Juna toi minut Wienistä yhdessä päivässä; isoisäni aikaan matka kesti viikon.",
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

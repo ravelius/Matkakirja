@@ -149,4 +149,11 @@ test('ympäristön lähimaasto ja aluskasvit: mukana vain jos tiedostot ovat ble
   assert.equal(m.maski.length, 2); assert.equal(m.kerrokset.length, 6); assert.equal(m.alue.length, 4); assert.ok(m.lahi_m > 0);
   assert.match(m.maski_normaali, /splat-normaali-0\.png$/);
   assert.match(kanssa.ymparisto.aluskasvit.lista, /aluskasvit-lista\.json$/);
+  assert.ok(!kanssa.ymparisto.taivas, 'taivas vain jos kuvat viety');
+  const taivas = kopio(RAKENNUS); lisaaBlender(taivas, { ...B, tiedostot: [...perus, ...t(Y), ...t(['taivas-2k.jpg', 'taivas-hamara-2k.jpg'])] });
+  assert.match(taivas.ymparisto.taivas, /taivas-2k\.jpg$/); assert.match(taivas.ymparisto.taivas_hamara, /taivas-hamara-2k\.jpg$/);
+  assert.equal(taivas.ymparisto.taivas_suunta, 270);
+  assert.ok(!taivas.ymparisto.puukortit_normaali);
+  const nor = kopio(RAKENNUS); lisaaBlender(nor, { ...B, tiedostot: [...perus, ...t(Y), ...t(['puukortit-normaali.png'])] });
+  assert.match(nor.ymparisto.puukortit_normaali, /puukortit-normaali\.png$/);
 });

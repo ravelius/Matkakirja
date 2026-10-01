@@ -221,6 +221,33 @@ for o in tilan + esineet + ([] if KUORI else massa):
                 valmiit[perus] = pbr(perus, **MATERIAALIT.get(perus, dict(vari=srgb(rak.get('pinnat', {}).get(perus, {}).get('vari', '#8a8580')))))
         s.material = valmiit[perus]
 
+# --- Säänkestävä puu ulkotiloissa (Päätoimittaja 1.10., v19): Poly Haven -puut (rough_wood, wood_table_worn) ovat
+# kirkkaan oransseja ja näyttivät uusilta peliaseteilta kuoren vieressä. Ulkona (tila.ulkona tai tunnelma, --saa)
+# puu harmaannutetaan aittojen hirren sävyyn (#6f6a61) ja himmennetään, ja vesirajassa (z < −6,0) se tummuu märkänä.
+SAA = '--saa' in argv or tila.get('ulkona') or TILA == 'tunnelma'
+if SAA:
+    for perus in ('lankku', 'puu', 'hirsi', 'paalu', 'esine-puu'):
+        m = valmiit.get(perus)
+        if not m: continue
+        nt = m.node_tree; b = next(n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED')
+        lahde = b.inputs['Base Color'].links[0].from_socket if b.inputs['Base Color'].links else None
+        hs = solmu(nt, 'ShaderNodeHueSaturation', 250, 450); hs.inputs['Saturation'].default_value = 0.15; hs.inputs['Value'].default_value = 0.75
+        if lahde: nt.links.new(lahde, hs.inputs['Color'])
+        else: hs.inputs['Color'].default_value = b.inputs['Base Color'].default_value
+        harmaa = solmu(nt, 'ShaderNodeMix', 420, 450); harmaa.data_type = 'RGBA'; harmaa.blend_type = 'MIX'
+        harmaa.inputs['Factor'].default_value = 0.6; harmaa.inputs[7].default_value = (*srgb('#6f6a61'), 1)
+        nt.links.new(hs.outputs['Color'], harmaa.inputs[6])
+        geo = solmu(nt, 'ShaderNodeNewGeometry', 250, 700); sep = solmu(nt, 'ShaderNodeSeparateXYZ', 420, 700)
+        nt.links.new(geo.outputs['Position'], sep.inputs[0])
+        marka = solmu(nt, 'ShaderNodeMapRange', 560, 700)  # z −6,0 → 0, −6,6 → 1 (märkä)
+        marka.inputs['From Min'].default_value = -6.0; marka.inputs['From Max'].default_value = -6.6
+        nt.links.new(sep.outputs['Z'], marka.inputs['Value'])
+        tumma = solmu(nt, 'ShaderNodeMix', 600, 450); tumma.data_type = 'RGBA'; tumma.blend_type = 'MULTIPLY'
+        tumma.inputs[7].default_value = (0.45, 0.45, 0.45, 1)
+        nt.links.new(marka.outputs['Result'], tumma.inputs['Factor']); nt.links.new(harmaa.outputs[2], tumma.inputs[6])
+        nt.links.new(tumma.outputs[2], b.inputs['Base Color'])
+    print('LEIVO: säänkestävä puu (harmaa, märkä vesiraja)')
+
 # --- Maailma: tumma taivas (omistajan linjaus: tumma yleisvalo) + aurinko valaistus.json:sta ---
 maailma = bpy.data.worlds.new('taivas'); sc.world = maailma; maailma.use_nodes = True
 tausta = maailma.node_tree.nodes['Background']
@@ -242,6 +269,8 @@ if TAVOITE:
     maailma.node_tree.links.new(st.outputs['Color'], tausta.inputs['Color']); tausta.inputs['Strength'].default_value = 0.9
     sc.view_settings.view_transform = 'AgX'; sc.view_settings.look = 'AgX - Medium High Contrast'; sc.view_settings.exposure = 0.6
     a = dict(a, voima=0.0)
+if SAA and not HAMARA:  # ulkotila päivällä: neutraali päivänvalo kuten kuoren valokuvissa (lämmin #ffd29a teki puusta oranssin)
+    a = dict(a, vari='#fff2e0'); tausta.inputs['Strength'].default_value = 0.8
 aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 2.2 * a.get('voima', 1.5)
 aur.color = srgb(a.get('vari', '#ffd29a')); aur.angle = math.radians(1.5)
 ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
