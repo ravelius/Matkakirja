@@ -649,6 +649,71 @@
 .tk-visa .quiz-aloita { width: 100%; margin: var(--tk-vali-s) 0 var(--tk-vali-m); }
 .tk-visa .quiz-kohtaaminen-kuva { border-radius: var(--tk-kulma-pieni); }
 
+/* ── PANEELI puettuna karttaselitteeseen (js/karttaselite.js; Päätoimittaja 1.10.2026: vain ulkoasu, toiminta
+   ennallaan: välilehdet, ✕, peukalolevy ja valot; peruttava ?paneeli=vanha) ─────────────────────────────────────── */
+
+.karttaselite-levy.tk-paneeli-selite {
+  width: min(var(--tk-leveys-paneeli), 100vw - var(--tk-vali-xl));
+  max-width: none;
+  padding: var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 0 0 4px var(--tk-pergamentti, transparent), 0 10px 30px var(--tk-himmennys-kevyt);
+}
+.tk-paneeli-selite .karttaselite-ylarivi { gap: var(--tk-vali-s); padding: 0 0 var(--tk-vali-s); border-bottom: 1px solid var(--tk-reunus); }
+/* Välilehdet PANEELIN segmenttirivinä (yhteinen reunus, rako 0, valittu toimintovärillä). */
+.tk-paneeli-selite .karttaselite-valilehdet {
+  gap: 0;
+  border: 1px solid var(--tk-muste-pehmea);
+  border-radius: var(--tk-kulma-nappi);
+  overflow: hidden;
+}
+.tk-paneeli-selite .karttaselite-valilehti {
+  flex: 1 1 0;
+  height: var(--tk-nappi-korkeus);
+  padding: 0 var(--tk-vali-s);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.tk-paneeli-selite .karttaselite-valilehti + .karttaselite-valilehti { border-left: 1px solid var(--tk-muste-pehmea); }
+.tk-paneeli-selite .karttaselite-valilehti[aria-selected='true'] {
+  border-color: var(--tk-muste-pehmea);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+  color: var(--tk-muste);
+}
+.tk-paneeli-selite .karttaselite-sulje {
+  min-width: var(--tk-nappi-osuma);
+  min-height: var(--tk-nappi-osuma);
+  color: var(--tk-muste-pehmea);
+  font-size: var(--tk-koko-valiotsikko);
+}
+/* Rivit 38 pt PANEELIN typografialla; luku kapiteelina. */
+.tk-paneeli-selite .karttaselite-rivi {
+  min-height: var(--tk-nappi-korkeus);
+  padding: 0 var(--tk-vali-s);
+  border-radius: var(--tk-kulma-nappi);
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+}
+.tk-paneeli-selite .karttaselite-luku {
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
 /* ── NOSTOKORTTI-osa AUTO (js/pohjat/auto.js; natiivi Nostoselain.cs, malli 23) ───────────────────────────────────
    Kytkin "● AUTO" pillerinä; päällä toimintovärillä. Siirtolappu TUMMA "Seuraava: <nimi> 3 s · Pysäytä" palkilla. */
 

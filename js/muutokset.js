@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2527, teksti: 'Karttaselite PANEELI-pohjalla (#3809)' },
+  { v: 2526, teksti: 'Uuden pelin vahvistus KORTTI-pohjalla (#3793)' },
+  { v: 2525, teksti: 'Maakuntien toinen kuva: NOR, POL, PRT (#3816)' },
   { v: 2524, teksti: 'Maakuntakortti NOSTOKORTTI-pohjalla (#3791)' },
   { v: 2523, teksti: 'Ihmisen matkan nostokortti NOSTOKORTTI-pohjalla (#3789)' },
   { v: 2522, teksti: 'Kohdekortti NOSTOKORTTI-pohjalla (#3788)' },
