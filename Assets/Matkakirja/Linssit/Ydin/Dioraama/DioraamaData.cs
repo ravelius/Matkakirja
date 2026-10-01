@@ -477,6 +477,10 @@ namespace Matkakirja.Linssit.Dioraama
         public MaastoKerrokset Maasto;
         /// <summary>Aluskasvillisuus korttipareina: atlas (json kuten puukortit) ja lista [x, y, z, laji, koko]; null = ei aluskasveja.</summary>
         public string AluskasvitAtlas, AluskasvitLista;
+        /// <summary>Taivas equirect-kuvana (Linnanrakentajan Poly Haven -HDRI sävykartoitettuna): päivä, hämärä ja
+        /// atsimuutti (°), johon kuvan u = 0 osoittaa; null = liukuväri.</summary>
+        public string Taivas, TaivasHamara;
+        public double TaivasSuunta;
     }
 
     /// <summary>`ymparisto.maasto`: alue [minX, minZ, maxX, maxZ] (Unity x/z = Blender x/y), maski (huippu, RGBA × 2 = kerrokset
@@ -637,6 +641,9 @@ namespace Matkakirja.Linssit.Dioraama
                 var alus = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "aluskasvit"));
                 y.AluskasvitAtlas = MiniJson.Teksti(alus, "atlas");
                 y.AluskasvitLista = MiniJson.Teksti(alus, "lista");
+                y.Taivas = MiniJson.Teksti(ymp, "taivas");
+                y.TaivasHamara = MiniJson.Teksti(ymp, "taivas_hamara");
+                y.TaivasSuunta = MiniJson.Luku(ymp, "taivas_suunta") ?? 0;
                 r.Ymparisto = y;
             }
             var kuori = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ulkokuori"));

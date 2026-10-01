@@ -714,6 +714,8 @@ namespace Matkakirja.Natiivi
             {
                 if (arvo == "heijastus" && osat.Length > 3)
                     DioraamaYmparisto.HeijastusPakotettu = osat[3] == "0" ? false : osat[3] == "1" ? true : (bool?)null;
+                // "poikki vesi siirto <m>": vedenpinta alas/ylös vianetsintään (näkyykö maa veden alla), 0 = datan taso.
+                if (arvo == "siirto" && osat.Length > 3) nayttamo?.Ymparisto?.SiirraVesi((float)Luku(osat[3]));
                 o.Kirjaa($"poikki: vesi: ympäristö {nayttamo?.Ymparisto?.Tila ?? "-"}, heijastus {(DioraamaYmparisto.HeijastusPakotettu.HasValue ? (DioraamaYmparisto.HeijastusPakotettu.Value ? "päällä" : "pois") : "auto")}");
                 return;
             }

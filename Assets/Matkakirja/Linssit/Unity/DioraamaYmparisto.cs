@@ -34,7 +34,10 @@ namespace Matkakirja.Natiivi
             IdTaivasAla = Shader.PropertyToID("_VesiTaivasAla"), IdAurinko = Shader.PropertyToID("_VesiAurinko"),
             IdHeijastus = Shader.PropertyToID("_VesiHeijastus"), IdKuva = Shader.PropertyToID("_Kuva"),
             IdPinta = Shader.PropertyToID("_Pinta"), IdSyvyys = Shader.PropertyToID("_Syvyys"),
-            IdHehku = Shader.PropertyToID("_VesiHehku"), IdKiiltoSuunta = Shader.PropertyToID("_VesiKiiltoSuunta");
+            IdHehku = Shader.PropertyToID("_VesiHehku"), IdKiiltoSuunta = Shader.PropertyToID("_VesiKiiltoSuunta"),
+            IdTaivasHorisontti = Shader.PropertyToID("_TaivasHorisontti"), IdTaivasLaki = Shader.PropertyToID("_TaivasLaki"),
+            IdTaivasKajo = Shader.PropertyToID("_TaivasKajo"), IdTaivasAurinko = Shader.PropertyToID("_TaivasAurinko"),
+            IdTaivasParam = Shader.PropertyToID("_TaivasParam"), IdTaivasKuva = Shader.PropertyToID("_TaivasKuva");
 
         // Järven aallot (amplitudi m, suunta °, aallonpituus m): tyyni Saimaa, lounaistuuli.
         static readonly Vector4[] Aallot =
@@ -44,7 +47,9 @@ namespace Matkakirja.Natiivi
         };
 
         readonly Transform juuri;
-        GameObject go, vesiGo;
+        GameObject go, vesiGo, taivasGo;
+        Material taivasMat;
+        float taivasSuunta;
         Renderer vesiRenderer;
         Material vesiMat;
         Camera heijastusKamera;
@@ -68,7 +73,11 @@ namespace Matkakirja.Natiivi
             go.transform.SetParent(juuri, false);
             float alku = Time.realtimeSinceStartup;
             LuoVesi();
+            LuoTaivas();
             var taso = DioraamaUlkokuori.Valittu;
+            string taivasKuva = DioraamaValot.TunnelmaTaivas < 0.99f && !string.IsNullOrEmpty(y.TaivasHamara) ? y.TaivasHamara : y.Taivas;
+            if (!string.IsNullOrEmpty(taivasKuva)) yield return LataaTaivas(taivasKuva, (float)y.TaivasSuunta, url, kirjaa, oma);
+            if (oma != kerta) yield break;
             Tila = "vesi";
 
             if (!string.IsNullOrEmpty(y.SyvyysKuva)) yield return LataaSyvyys(y, url, kirjaa, oma);
@@ -158,6 +167,9 @@ namespace Matkakirja.Natiivi
             return taso == DioraamaUlkokuori.Laatu.Huippu ? 0.5f : taso == DioraamaUlkokuori.Laatu.Normaali ? 0.33f : 0f;
         }
 
+        /// <summary>Vianetsintä ("poikki vesi siirto"): vedenpinnan pystysiirto metreinä datan tasosta.</summary>
+        public void SiirraVesi(float m) { if (vesiGo != null) vesiGo.transform.localPosition = new Vector3(0, m, 0); }
+
         /// <summary>Joka ruutu pääkameran asettamisen jälkeen (DioraamaNayttamo.Paivita): aika ja planaariheijastus.</summary>
         public void Paivita(Camera kamera)
         {
@@ -179,6 +191,18 @@ namespace Matkakirja.Natiivi
             float az = 225f * Mathf.Deg2Rad, kork = (hamara ? 6f : 30f) * Mathf.Deg2Rad;
             var kiilto = DioraamaNayttamo.UnityPiste(new Matkakirja.Linssit.Dioraama.V3(Mathf.Sin(az) * Mathf.Cos(kork), Mathf.Sin(kork), -Mathf.Cos(az) * Mathf.Cos(kork)));
             Shader.SetGlobalVector(IdKiiltoSuunta, new Vector4(kiilto.x, kiilto.y, kiilto.z, hamara ? 0.5f : 0.4f));
+            // Taivas (Päätoimittaja 1.10.): liukuväri hämärässä tummasta lakipisteestä sumun väriseen horisonttiin, auringon
+            // puolella vaaleanpunainen/oranssi kajo (sama suunta kuin veden kiilloilla); kuva ohittaa liukuvärin.
+            if (taivasGo != null)
+            {
+                taivasGo.transform.position = kamera.transform.position;
+                Shader.SetGlobalColor(IdTaivasHorisontti, tausta);
+                Shader.SetGlobalColor(IdTaivasLaki, hamara ? new Color(0.055f, 0.07f, 0.13f) : new Color(0.40f, 0.53f, 0.74f));
+                Shader.SetGlobalColor(IdTaivasKajo, hamara ? new Color(0.78f, 0.45f, 0.42f, 0.85f) : new Color(1f, 0.93f, 0.82f, 0.35f));
+                Shader.SetGlobalVector(IdTaivasAurinko, kiilto);
+                bool kuva = taivasMat != null && taivasMat.GetTexture(IdTaivasKuva) != null;
+                Shader.SetGlobalVector(IdTaivasParam, new Vector4(kuva ? 1f : 0f, -taivasSuunta / 360f, 0, 0));
+            }
         }
 
         bool PiirraHeijastus(Camera kamera, float skaala)
@@ -247,6 +271,59 @@ namespace Matkakirja.Natiivi
             r.m20 = -2f * t.z * t.x; r.m21 = -2f * t.z * t.y; r.m22 = 1f - 2f * t.z * t.z; r.m23 = -2f * t.w * t.z;
             r.m30 = 0f; r.m31 = 0f; r.m32 = 0f; r.m33 = 1f;
             return r;
+        }
+
+        // --- TAIVAS ---------------------------------------------------------------------------------------------------
+
+        void LuoTaivas()
+        {
+            var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaTaivas");
+            if (varjostin == null) return;
+            taivasMat = new Material(varjostin) { name = "Ymparisto:taivas" };
+            luodut.Add(taivasMat);
+            // Pallo 32 × 16 (sisäpinta näkyy, Cull Off), säde 12 km (kaukotaso 16 km).
+            const int S = 32, K = 16; const float R = 12000f;
+            var p = new List<Vector3>(); var t = new List<int>();
+            for (int k = 0; k <= K; k++)
+            {
+                float fi = Mathf.PI * k / K - Mathf.PI * 0.5f;
+                for (int s = 0; s <= S; s++)
+                {
+                    float th = 2f * Mathf.PI * s / S;
+                    p.Add(new Vector3(Mathf.Cos(fi) * Mathf.Sin(th), Mathf.Sin(fi), Mathf.Cos(fi) * Mathf.Cos(th)) * R);
+                }
+            }
+            for (int k = 0; k < K; k++)
+                for (int s = 0; s < S; s++)
+                {
+                    int a = k * (S + 1) + s, b = a + S + 1;
+                    t.Add(a); t.Add(b); t.Add(a + 1); t.Add(a + 1); t.Add(b); t.Add(b + 1);
+                }
+            var m = new Mesh { name = "Ymparisto:taivas" };
+            m.SetVertices(p); m.SetTriangles(t, 0);
+            m.bounds = new Bounds(Vector3.zero, Vector3.one * 2 * R);
+            luodut.Add(m);
+            taivasGo = new GameObject("Ymparisto:taivas") { layer = DioraamaNayttamo.Kerros };
+            taivasGo.transform.SetParent(go.transform, false);
+            taivasGo.AddComponent<MeshFilter>().sharedMesh = m;
+            var r = taivasGo.AddComponent<MeshRenderer>();
+            r.sharedMaterial = taivasMat;
+            r.shadowCastingMode = ShadowCastingMode.Off;
+            r.receiveShadows = false;
+        }
+
+        IEnumerator LataaTaivas(string polku, float suunta, Func<string, string> url, Action<string> kirjaa, int oma)
+        {
+            byte[] tavut = null;
+            yield return DioraamaLevyvalimuisti.Hae(url(polku), 60, b => tavut = b);
+            if (oma != kerta || taivasMat == null) yield break;
+            var k = new Texture2D(2, 2, TextureFormat.RGBA32, false, false) { name = "Ymparisto:taivas", wrapMode = TextureWrapMode.Repeat, filterMode = FilterMode.Bilinear };
+            if (tavut == null || !k.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(k); kirjaa?.Invoke("poikki: ympäristö: taivas ei latautunut, liukuväri"); yield break; }
+            k.Compress(true); k.Apply(false, true);
+            luodut.Add(k);
+            taivasMat.SetTexture(IdTaivasKuva, k);
+            taivasSuunta = suunta;
+            kirjaa?.Invoke($"poikki: ympäristö: taivas {k.width}×{k.height}");
         }
 
         // --- MAASTO JA HORISONTTI -------------------------------------------------------------------------------------
@@ -520,7 +597,7 @@ namespace Matkakirja.Natiivi
             foreach (var o in luodut) if (o != null) UnityEngine.Object.Destroy(o);
             luodut.Clear();
             if (go != null) UnityEngine.Object.Destroy(go);
-            go = null; vesiGo = null; vesiRenderer = null; vesiMat = null; heijastusKamera = null;
+            go = null; vesiGo = null; vesiRenderer = null; vesiMat = null; heijastusKamera = null; taivasGo = null; taivasMat = null;
         }
     }
 }
