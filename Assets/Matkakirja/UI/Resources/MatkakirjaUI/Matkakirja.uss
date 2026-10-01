@@ -486,9 +486,10 @@
     justify-content: flex-end;
 }
 
+/* KORTTI-POHJA (UI-pohjat, omistaja 1.10.2026): mitat, värit ja typografia tyylikirjasta (Tyylikirja.uss). */
 .mk-kortti-kehys {
     width: 100%;
-    max-width: 420px;
+    max-width: var(--tk-leveys-kortti);
     /* Avaus ja sulku: Ponnahdus Rakenne.Naytan kautta (web .dialog-card: js/avausanimaatio.js, 220/200 ms, 0,92 ↔ 1
      * napautuksen kohdalta; vanha card-in 0,32 s kallistuksineen poistui webistä 29.9.2026). */
 }
@@ -524,25 +525,25 @@
     border-top-right-radius: 12px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 14px;
-    background-color: #ecd8ae;
-    color: var(--map-ink);
+    background-color: var(--tk-paperi-pergamentti);
+    color: var(--tk-paperi-muste);
 }
 
 .mk-kortti__otsikko {
-    font-size: 23px;
+    font-size: var(--tk-koko-otsikko);
     white-space: normal;
     margin-bottom: 4px;
 }
 
 .mk-kortti__alaotsikko {
-    font-size: 14.5px;
-    color: var(--map-ink-soft);
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
     white-space: normal;
     margin-bottom: 14px;
 }
 
 .mk-kortti__teksti {
-    font-size: 16px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
     margin-bottom: 12px;
 }
@@ -555,6 +556,7 @@
 
 .mk-kortti__napit > .mk-nappi {
     margin-left: 10px;
+    min-height: var(--tk-nappi-korkeus);
 }
 
 /* --- matkavalinta ------------------------------------------------------- */
@@ -2359,24 +2361,24 @@
 }
 
 .mk-apuraha__otsikko {
-    font-size: 19px;
-    color: #7a5514;
+    font-size: var(--tk-koko-otsikko);
+    color: var(--tk-paperi-muste);
     margin-bottom: 2px;
 }
 
 .mk-apuraha__alaotsikko {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: #8a6a2c;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-apuraha__valiotsikko {
     margin-top: 14px;
     margin-bottom: 3px;
-    font-size: 12px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 7.69px; /* web 0.12em */
-    color: #8a6a2c;
+    color: var(--tk-paperi-korostus);
 }
 
 .mk-apuraha__teksti {
@@ -3990,7 +3992,7 @@
 .mk-palaute__valiotsikko {
     margin-top: 16px;
     margin-bottom: 4px;
-    font-size: 12.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 12px; /* web 1.5px */
     white-space: normal;
     color: #8a6a2c;
