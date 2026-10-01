@@ -82,12 +82,14 @@ ALUEET = [
     ('moottorivene', _laatikko(-67.9, -64.1, -16.5, -12.9), 1.2, 'vene', -7.0),
     # v19 (Päätoimittaja 1.10., aikakerros n1500): nykyinen ponttonisilta, sen kellukkeet ja portin teräsluiska pois;
     # tilalle laituri.js:n puulaituri suoraan vesiportilta. Raja kulkee 0,75 m kallion ja muurin juuren ulkopuolella
-    # (kuoren ylhäältä säteillä mitattu kallioviiva 1.10.) ja 1,2 m ennen portin kynnystä; kaiteet (≤ 2,6 m vedestä)
+    # (kuoren ylhäältä säteillä mitattu kallioviiva 1.10.) ja 0,3 m ennen portin ovea (luiskan tolpat mukaan); kaiteet (≤ 2,6 m vedestä)
     # mukaan. Kaikki painuu vedenpinnan alle (maa −7,0); venyneet reunakolmiot jäävät verhoksi kallion juurelle.
     ('ponttonisilta', [(-100.0, 3.0), (-80.5, 3.0), (-79.0, 1.0), (-76.3, -2.0), (-72.0, -5.0), (-67.5, -8.0),
-                       (-63.3, -10.0), (-61.5, -12.0), (-60.3, -13.0), (-59.0, -14.0), (-58.4, -16.2), (-54.8, -16.2),
+                       (-63.3, -10.0), (-61.5, -12.0), (-60.3, -13.0), (-59.0, -14.0), (-58.6, -15.2), (-55.0, -15.2),
                        (-54.3, -18.0), (-53.0, -19.0), (-52.3, -21.0), (-52.3, -22.0), (-53.5, -24.0), (-54.5, -26.0),
                        (-56.0, -28.0), (-56.5, -30.0), (-56.3, -33.0), (-55.8, -36.0), (-100.0, -36.0)], 2.6, 'ponttoni', -7.0),
+    # v19: luoteiskärjen moottorivene ja keltainen merkkipaalu (kallio alkaa y < 12,6 ja x > −70)
+    ('vene_ja_merkki_luode', [(-82.0, 12.8), (-71.5, 12.8), (-70.5, 14.5), (-70.5, 19.5), (-82.0, 19.5)], 3.0, 'ponttoni', -7.0),
     # Korkeat kannet (maakenttä putoaisi alapihalle, siksi kiinteä taso): itämuurin harjan kävelykansi 12 m,
     # eteläinen yläkansi 5,7 m ja alakatto 2,8 m.
     ('ita_harja_telineet', [(40.6, 34.5), (41.5, 30.0), (44.9, 24.0), (46.3, 20.0), (49.4, 14.4), (51.2, 9.5),
