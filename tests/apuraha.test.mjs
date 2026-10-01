@@ -7,11 +7,15 @@ import { tarkistaApuraha, lataaApuraha, nollaaApuraha, APURAHA_OSOITE } from '..
 
 const raaka = JSON.parse(readFileSync(new URL(`../${APURAHA_OSOITE}`, import.meta.url), 'utf8'));
 
-test('esittely.json on kelvollinen: neljä kappaletta, 4–5 kuvaa, ei videota', () => {
+test('esittely.json on kelvollinen: korostettu alkukappale + neljä kappaletta, 4–5 kuvaa, ei videota', () => {
   const d = tarkistaApuraha(raaka);
   assert.ok(d, 'tarkistus hylkäsi tiedoston');
   assert.equal(d.nappi, 'Apurahahakemus – katso tämä ensin');
-  assert.equal(d.kappaleet.length, 4);
+  assert.equal(d.kappaleet.length, 5);
+  // Omistaja 1.10.2026: ensimmäinen kappale korostettuna (kaksi ohjelmapohjaa), muut ilman korostusta.
+  assert.equal(d.kappaleet[0].korostus, true);
+  assert.match(d.kappaleet[0].teksti, /^Tärkeä muutos, jota hakemuksessa ei mainita/);
+  assert.ok(d.kappaleet.slice(1).every((k) => k.korostus === false));
   assert.ok(d.kuvat.length >= 4 && d.kuvat.length <= 5, `kuvia ${d.kuvat.length}`);
   assert.equal('video' in raaka, false, 'video poistettiin (omistaja 30.9. klo 15.06)');
   for (const k of raaka.kuvat) if (k.rajaus != null) assert.match(k.rajaus, /^\d{1,3}% \d{1,3}%$/, `rajaus ${k.tiedosto}`);

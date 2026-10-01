@@ -1072,7 +1072,17 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       kuva.decoding = 'async';
       kuva.draggable = false;
       kuva.alt = kuvatekstiLyhyt(nosto) || nosto.otsikko || 'Lukijan lähettämä kuva';
-      kuva.src = nosto.kuvaUrl;
+      if (nosto.kuvaOtsakkeet) {
+        // Avaimellinen kuva (Lukijoilta, 1.10.2026): avain otsakkeessa, ei
+        // osoitteessa — img ei lähetä otsakkeita, joten haku fetchillä.
+        const img = kuva;
+        fetch(nosto.kuvaUrl, { headers: nosto.kuvaOtsakkeet })
+          .then((v) => (v.ok ? v.blob() : null))
+          .then((b) => { if (b) img.src = URL.createObjectURL(b); })
+          .catch(() => { /* kuva jää tyhjäksi kuten ennenkin */ });
+      } else {
+        kuva.src = nosto.kuvaUrl;
+      }
       lohko.appendChild(kuva);
     }
     /*
