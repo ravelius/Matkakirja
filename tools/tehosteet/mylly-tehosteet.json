@@ -1,0 +1,38 @@
+{
+  "kuvaus": "Myllyn (lautapeli) nappulaäänet. Päätoimittajan erä, omistaja hyväksyi Myllyn visuaalisen parannuksen 1.10.2026; Siirtosepän tilaus. Vain CC0, ensisijaisesti Kenneyn paketit (impact, casino); ei generointia.",
+  "amparinKansio": "aanet/tehosteet/mylly",
+  "manifesti": "manifesti.json",
+  "tavoiteLufs": -14,
+  "peliavainEtuliite": "mylly",
+  "tehosteet": [
+    {
+      "tunnus": "mylly-asetus",
+      "peliavain": "mylly.asetus",
+      "kuvaus": "Puunappula laudalle: lyhyt, kuiva napsahdus",
+      "hakusanat": [
+        "impact wood light",
+        "chip lay",
+        "wood click piece board"
+      ],
+      "kestoMin": 0.05,
+      "kestoMax": 0.8,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    },
+    {
+      "tunnus": "mylly-poisto",
+      "peliavain": "mylly.poisto",
+      "kuvaus": "Nappula pois laudalta: pehmeämpi kopsahdus",
+      "hakusanat": [
+        "impact soft medium",
+        "soft wood knock"
+      ],
+      "kestoMin": 0.05,
+      "kestoMax": 1.0,
+      "lisenssit": [
+        "Creative Commons 0"
+      ]
+    }
+  ]
+}
