@@ -80,17 +80,17 @@ def mänty(rng, muunnos):
     k = [putki((0, 0, 0), kallistus + Vector((0, 0, H * 0.94)), 0.34, 0.07,
                kuori('mrunko', (0.17, 0.14, 0.11), (0.58, 0.30, 0.14)), 10)]
     oksa_m = kuori('moksa', (0.30, 0.20, 0.12), (0.45, 0.25, 0.13)); lehva = mat('mlehva', (0.08, 0.14, 0.055), 0.35, aukot=0.40)
-    ala = H * rng.uniform(0.48, 0.6); n_oksa = rng.randint(11, 16)
+    ala = H * rng.uniform(0.42, 0.52); n_oksa = rng.randint(14, 19)  # v3b: täyteläisempi latvus (kohtauksessa pylväitä)
     for i in range(n_oksa):
         t = (i + rng.uniform(0, 0.8)) / n_oksa; z = ala + (H * 0.97 - ala) * t
-        a = rng.uniform(0, 2 * math.pi); pituus = (2.8 + rng.uniform(-0.8, 1.6)) * (1.05 - 0.75 * t ** 1.4)
+        a = rng.uniform(0, 2 * math.pi); pituus = (3.8 + rng.uniform(-0.8, 1.8)) * (1.05 - 0.65 * t ** 1.4)
         if rng.random() < 0.15 * (1 - t): continue  # puuttuvia oksia: aukkoja latvukseen
         tyvi = kallistus * (z / H) + Vector((0, 0, z)); nousu = rng.uniform(0.15, 0.55)
         karki = tyvi + Vector((math.cos(a) * pituus, math.sin(a) * pituus, pituus * nousu))
         k.append(putki(tyvi, karki, 0.07 * (1 - 0.5 * t) + 0.03, 0.02, oksa_m, 6))
-        for j in range(rng.randint(3, 6)):  # neulaslevyt oksan ulko-osalle (vaakasuorat, litteät)
+        for j in range(rng.randint(5, 9)):  # neulaslevyt oksan ulko-osalle (vaakasuorat, litteät)
             u = rng.uniform(0.45, 1.0); p_ = tyvi.lerp(karki, u) + Vector((rng.uniform(-0.4, 0.4), rng.uniform(-0.4, 0.4), rng.uniform(-0.1, 0.25)))
-            k.append(tupsu(p_, rng.uniform(0.55, 1.05) * (0.7 + 0.3 * pituus / 3), 0.32, lehva, rng))
+            k.append(tupsu(p_, rng.uniform(0.7, 1.3) * (0.7 + 0.3 * pituus / 3), 0.36, lehva, rng))
     return k, H
 
 def kuusi(rng, muunnos):
@@ -124,9 +124,9 @@ def koivu(rng, muunnos):
                kuori('korunko', (0.25, 0.22, 0.20), (0.86, 0.84, 0.78), raja=(0.04, 0.14), laikut=0.6), 10)]
     oksa_m = kuori('kooksa', (0.30, 0.25, 0.22), (0.35, 0.30, 0.27)); lehva = mat('kolehva', (0.26, 0.37, 0.10), 0.4, aukot=0.46, mitta=30)
     ala = H * rng.uniform(0.32, 0.45)
-    for i in range(rng.randint(9, 13)):
+    for i in range(rng.randint(12, 16)):
         t = rng.uniform(0, 1); z = ala + (H * 0.92 - ala) * t; a = rng.uniform(0, 2 * math.pi)
-        pituus = 3.6 * math.sin(math.pi * min(1, 0.15 + 0.85 * t)) * rng.uniform(0.7, 1.15) + 0.6
+        pituus = 4.6 * math.sin(math.pi * min(1, 0.15 + 0.85 * t)) * rng.uniform(0.75, 1.15) + 0.8
         tyvi = kal * (z / H) + Vector((0, 0, z)); karki = tyvi + Vector((math.cos(a) * pituus * 0.8, math.sin(a) * pituus * 0.8, pituus * 0.75))
         k.append(putki(tyvi, karki, 0.06, 0.02, oksa_m, 6))
         for j in range(rng.randint(3, 5)):  # sivuhaarat, jotka kaartuvat alas (riippukoivu)
@@ -134,7 +134,7 @@ def koivu(rng, muunnos):
             loppu = s_ + Vector((math.cos(b2) * l2, math.sin(b2) * l2, -l2 * rng.uniform(0.3, 0.9)))
             k.append(putki(s_, loppu, 0.02, 0.008, oksa_m, 4))
             for v in (0.4, 0.75, 1.0):
-                k.append(tupsu(s_.lerp(loppu, v), rng.uniform(0.35, 0.6), 0.75, lehva, rng, 0.5, 2))
+                k.append(tupsu(s_.lerp(loppu, v), rng.uniform(0.45, 0.75), 0.75, lehva, rng, 0.5, 2))
         k.append(tupsu(karki, rng.uniform(0.6, 0.9), 0.8, lehva, rng, 0.5, 2))
     return k, H
 
