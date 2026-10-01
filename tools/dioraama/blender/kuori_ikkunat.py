@@ -3,7 +3,9 @@
 # lämpimän hehkun pystypinnoilla valituissa rakennuslaatikoissa (glTF-koordinaatit, sijoitettu rakennus.json).
 #   nice -n 15 Blender -b -P kuori_ikkunat.py -- <kuori.glb> <kuori-valokuva.jpg> <kuori-hamara-4k.jpg> <ulos-kansio>
 #     [--laatikot itasiipi,keittio,keskushalli,kappelikerros | --kaikki] [--rakennus rakennus-sijoitettu.json] [--voima 1.0] [--kynnys 1.1]
-# Tulos: <ulos>/ulkokuori-hamara-{4k,2k}.jpg (+ ikkunamaski.png tarkistukseen). Laskenta 2k:ssa, maski skaalataan 4k:hon.
+#     [--luettelo olavinlinna-ikkunat.json] (v18: todelliset aukot luettelosta, ei tunnistusta; oletus kuori_putki.sh:ssa)
+# Tulos: <ulos>/ulkokuori-hamara-{8k,4k,2k}.jpg syötteen koosta alaspäin (+ ikkunamaski.png tarkistukseen). Laskenta 2k:ssa,
+# maski skaalataan syötteen kokoon (4k tai 8k).
 import bpy, json, os, sys
 import numpy as np
 a = sys.argv[sys.argv.index('--') + 1:]
@@ -20,6 +22,10 @@ RAK = lippu('--rakennus', '/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-bl
 KAIKKI = '--kaikki' in a
 if KAIKKI: a.remove('--kaikki')
 VOIMA = float(lippu('--voima', '1.0')); KYNNYS = float(lippu('--kynnys', '1.1'))  # z-arvo: hajontaa ympäristöä tummempi
+# --tapa syvennys (v18, 30.9.): ikkuna = julkisivusta taaksepäin painunut aukko geometriassa (ei valokuvan tumma läiskä).
+TAPA = lippu('--tapa', 'tumma'); SYV_KYNNYS = float(lippu('--syvyys', '0.12'))
+# --luettelo <ikkunat.json> (v18, 30.9.): todelliset ikkuna-aukot käsin tarkistettuna (julkisivujen ortokuvista), ks. alla.
+LUETTELO = lippu('--luettelo', None)
 GLB, KUVA, HAMARA, ULOS = a[:4]
 os.makedirs(ULOS, exist_ok=True)
 N = 2048  # laskentaresoluutio
@@ -109,7 +115,7 @@ def maksimi(x, ru, rv):
     x = y.copy()
     for d in range(1, rv + 1): y[d:] = np.maximum(y[d:], x[:-d]); y[:-d] = np.maximum(y[:-d], x[d:])
     return y
-for sk in range(12):
+for sk in range(0 if LUETTELO else 12):
     ss = np.nonzero(sektori == sk)[0]
     if len(ss) < 400: continue
     c = np.radians(sk * 30); n_ = np.array([np.sin(c), np.cos(c)]); t_ = np.array([np.cos(c), -np.sin(c)])
@@ -129,10 +135,19 @@ for sk in range(12):
         sisus = (sumenna(ok, 4) > 0.55) & (sumenna(ok, 1) > 0.3)  # julkisivun reunat (räystäs, nurkat) eivät ole ikkunoita
         yla = np.zeros_like(sisus); yla[:-7] = sumenna(ok, 2)[7:] > 0.3; sisus &= yla  # räystään varjo: seinää oltava 0,8 m yllä
         z = (iso - pieni) / hajonta * sisus  # kuinka monta hajontaa ympäristöä tummempi
-        # Paikalliset huiput (ikkunaväli ≥ 1,3 m) ja niiden ympärille aukon kokoinen suorakaide 1,08 × 1,32 m.
-        huippu = ((z >= maksimi(z, 5, 5)) & (z > KYNNYS)).astype(np.float32)
+        if TAPA == 'syvennys':
+            # Aukko = julkisivun pinta painuu taaksepäin (syvyys syv kasvaa ulospäin): 0,6 m:n keskiarvo on yli
+            # SYV_KYNNYS m 3 m:n keskiarvon takana. Ikkunan muoto tulee geometriasta, ei suorakaiteesta.
+            ssum = np.bincount(solu, syv[np.floor(syv / 3) == kerros], H_ * W_).reshape(H_, W_)
+            syvennys = (sumenna(ssum, 12) / np.maximum(sumenna(lkm, 12), 1e-4) - sumenna(ssum, 1) / np.maximum(sumenna(lkm, 1), 1e-4)) * sisus
+            ikkuna = np.clip((syvennys - SYV_KYNNYS) / SYV_KYNNYS, 0, 1) * (lkm > 0)
+            ikkuna = np.clip(sumenna(ikkuna, 1) * 1.5, 0, 1)
+            huippu = ikkuna > 0.5
+        else:
+            # Paikalliset huiput (ikkunaväli ≥ 1,3 m) ja niiden ympärille aukon kokoinen suorakaide 1,08 × 1,32 m.
+            huippu = ((z >= maksimi(z, 5, 5)) & (z > KYNNYS)).astype(np.float32)
         if os.environ.get('IKKUNAT_NPY'): print('IKKUNAT: ryhmä', sk * 30, int(kerros), W_, H_, 'z max', round(float(z.max()), 2), 'huippuja', int(huippu.sum()), 'hajonta', round(float(np.median(hajonta)), 3), 'iso', round(float(np.median(iso)), 3))
-        ikkuna = np.clip(sumenna(maksimi(huippu, 4, 5), 1) * 1.3, 0, 1)
+        if TAPA != 'syvennys': ikkuna = np.clip(sumenna(maksimi(huippu, 4, 5), 1) * 1.3, 0, 1)
         kaje = sumenna(ikkuna, 5)  # valon kajo seinälle aukon ympärille (≈ 0,6 m)
         # Aukon kaikki tekselit (myös syvennyksen pielet ja kohinaiset normaalit) julkisivun syvyydeltä ±0,8 m.
         syv_k = syv[np.floor(syv / 3) == kerros]
@@ -146,18 +161,53 @@ for sk in range(12):
             kuva = np.stack([pieni / max(float(iso.max()), 1e-3), ikkuna, ikkuna * 0], -1)[::-1]
             tk = bpy.data.images.new('g', W_, H_); tk.pixels.foreach_set(np.concatenate([np.clip(kuva[::-1], 0, 1), np.ones((H_, W_, 1))], -1).astype(np.float32).ravel())
             tk.filepath_raw = os.path.join(ULOS, f'julkisivu-{sk * 30}-{int(kerros)}.png'); tk.file_format = 'PNG'; tk.save()
+if LUETTELO:
+    # Luettelo: [{akseli: 'x'|'y', u: [a, b], z: [a, b], suunta: ulkonormaalin atsimuutti°, alue: [x0, x1, y0, y1]}]
+    # (Blender: x itä, y pohjoinen, z ylös). Lasi = aukon suorakaiteen tekselit, joiden vaakanormaali on ±70° suunnasta,
+    # ja niistä vallitsevan pinnan tekselit (±0,6 m aukon mediaanisyvyydestä: edessä tai takana olevat samansuuntaiset
+    # pinnat eivät hehku). Kajo 0,6 m.
+    ik = json.load(open(LUETTELO)); ok_t = peitto & pysty
+    ty, tx = np.nonzero(ok_t); Pp = pos[ty, tx]; Nh = nor[ty, tx, :2]
+    az = np.degrees(np.arctan2(Nh[:, 0], Nh[:, 1])) % 360
+    for w in ik:
+        c = np.radians(w['suunta']); ulos = np.array([np.sin(c), np.cos(c)])
+        u = Pp[:, 0] if w['akseli'] == 'x' else Pp[:, 1]; muu = Pp[:, 1] if w['akseli'] == 'x' else Pp[:, 0]
+        a0, a1 = (w['alue'][2], w['alue'][3]) if w['akseli'] == 'x' else (w['alue'][0], w['alue'][1])
+        kulma = np.abs((az - w['suunta'] + 180) % 360 - 180) < 70
+        du = np.maximum(np.maximum(w['u'][0] - u, u - w['u'][1]), 0); dz = np.maximum(np.maximum(w['z'][0] - Pp[:, 2], Pp[:, 2] - w['z'][1]), 0)
+        lahella = kulma & (muu >= a0 - 1) & (muu <= a1 + 1) & (np.hypot(du, dz) < 0.6)
+        if not lahella.any():
+            if os.environ.get('IKKUNAT_NPY'): print('IKKUNA', w.get('id'), 'ei lähellä', int(kulma.sum()), int(((muu >= a0 - 1) & (muu <= a1 + 1)).sum()), int((np.hypot(du, dz) < 0.6).sum()))
+            continue
+        syv = Pp[:, :2] @ ulos; sisa = lahella & (du == 0) & (dz == 0)
+        if not sisa.any(): continue
+        pinta = np.median(syv[sisa]); etu = np.abs(syv - pinta) < 0.6  # julkisivu = aukon vallitseva pinta (vino julkisivu, edessä rakenteita)
+        lasi = sisa & etu; kaje = lahella & etu
+        maski[ty[lasi], tx[lasi]] = 1.0
+        if os.environ.get('IKKUNAT_NPY'): print('IKKUNA', w.get('id'), int(lasi.sum()), int(sisa.sum()), int(lahella.sum()), 'syv', np.round(np.percentile(syv[sisa], [5, 25, 50, 75, 95]), 2), 'muu', np.round(np.percentile(muu[sisa], [5, 50, 95]), 2))
+        hehku[ty[kaje], tx[kaje]] = np.maximum(hehku[ty[kaje], tx[kaje]], 1 - np.hypot(du, dz)[kaje] / 0.6)
+    print('IKKUNAT: luettelosta', len(ik), 'ikkunaa')
 print('IKKUNAT: tekseleitä', int((maski > 0.5).sum()), '/', int((peitto & sisalla).sum()), 'laatikoissa')
 
-H = lataa(HAMARA, 4096)
-m4 = np.repeat(np.repeat(maski, 2, 0), 2, 1)[..., None]; h4 = np.repeat(np.repeat(hehku, 2, 0), 2, 1)[..., None]
+_h = bpy.data.images.load(HAMARA); KH = _h.size[0]; bpy.data.images.remove(_h)  # 4k tai 8k (vaihe 4: 8k-albedo)
+H = lataa(HAMARA, KH); f = KH // N
+def suurenna(x):  # 2k-maski syötteen kokoon pehmeästi (pelkkä toisto näkyi 8k:ssa porrastuksena)
+    y = np.repeat(np.repeat(x.astype(np.float32), f, 0), f, 1)
+    return laatikkosumennus(y, f // 2).astype(np.float32)[..., None] if f > 1 else y[..., None]
+m4 = suurenna(maski); h4 = suurenna(hehku)
 # JPEG-pikselit ovat sRGB-arvoja (tavukuva): aukko korvautuu lämpimällä hehkulla (ei tummemmaksi kuin ennen).
 ulos = H * (1 - m4) + m4 * np.maximum(H, LAMMIN * 0.9 * VOIMA) + h4 * LAMMIN * 0.22 * VOIMA
+del H, m4, h4
 def tallenna(arr, nimi, koko):
     k = bpy.data.images.new(nimi, koko, koko)  # tavukuva: arvot tallentuvat sRGB:nä sellaisenaan
     k.pixels.foreach_set(np.concatenate([np.clip(arr, 0, 1), np.ones((koko, koko, 1), np.float32)], -1).ravel())
     k.filepath_raw = os.path.join(ULOS, nimi); k.file_format = 'JPEG' if nimi.endswith('jpg') else 'PNG'
     k.save(quality=90) if nimi.endswith('jpg') else k.save()
-tallenna(ulos, 'ulkokuori-hamara-4k.jpg', 4096)
-tallenna(ulos.reshape(2048, 2, 2048, 2, 3).mean((1, 3)), 'ulkokuori-hamara-2k.jpg', 2048)
+    bpy.data.images.remove(k)
+koko = KH
+while koko >= 2048:
+    tallenna(ulos, f'ulkokuori-hamara-{koko // 1024}k.jpg', koko)
+    if koko > 2048: ulos = ulos.reshape(koko // 2, 2, koko // 2, 2, 3).mean((1, 3))
+    koko //= 2
 tallenna(np.repeat(maski[..., None], 3, -1), 'ikkunamaski.png', N)
 print('IKKUNAT: valmis', ULOS)

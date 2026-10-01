@@ -88,6 +88,8 @@ export const PINNAT = {
   leipa: { vari: '#c9995f', toisto_m: 0.3, kuvio: { tyyppi: 'rappaus', koko_m: [0.25, 0.25], vaihtelu: 0.25 } },
   kala: { vari: '#9aa8ad', toisto_m: 0.3, kuvio: { tyyppi: 'metalli', koko_m: [0.15, 0.15], vaihtelu: 0.2 } },
   vihannes: { vari: '#8a9a52', toisto_m: 0.3, kuvio: { tyyppi: 'tasainen' } },
+  // Harmaantunut hirsi (1.10., rannan aitat ja venevaja n1500): vanhan hirren hopeanharmaa, puun syy kuviona.
+  hirsi: { vari: '#6f6a61', toisto_m: 1.0, kuvio: { tyyppi: 'puu', koko_m: [0.3, 0.3], vaihtelu: 0.3 } },
   olki: { vari: '#d8c27a', toisto_m: 0.3, kuvio: { tyyppi: 'olki', koko_m: [0.15, 0.15], vaihtelu: 0.3 } },
   kupari: { vari: '#b3702e', toisto_m: 0.4, kuvio: { tyyppi: 'metalli', koko_m: [0.3, 0.3], vaihtelu: 0.25 } },
   rauta: { vari: '#524f4a', toisto_m: 0.4, kuvio: { tyyppi: 'metalli', koko_m: [0.3, 0.3], vaihtelu: 0.25 } },

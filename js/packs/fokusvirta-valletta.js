@@ -40,6 +40,8 @@ export const FOKUSVIRTA_VALLETTA = {
       + 'Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden '
       + 'purkamisesta on puhuttu täällä useaan otteeseen — paikallinen '
       + 'upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääntä EI ole generoitu, omistajan lupa vaaditaan). */
+    luenta: "[warmly] Valletta, syyskuussa 1873. Koko kaupunki on veistetty samasta vaaleasta kalkkikivestä, ja iltarusko polttaa muurit melkein kullankeltaisiksi. Grand Harbourissa kyljettäin makaa laivaston mustia runkoja kuin tikkuja laatikossa. [curious] Ritarikunnan paksut muurit ovat yhä pystyssä, vaikka niiden purkamisesta on puhuttu täällä useaan otteeseen — [softly] paikallinen upseeri vannoi, ettei kivi anna periksi ennen tuomiopäivää.",
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
