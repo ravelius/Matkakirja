@@ -9679,3 +9679,7 @@ Omistaja ajoi 08.38 komennon, joka lisäsi Julkaisijan kansion .claude/settings.
 ## OMISTAJA: IHMISEN MATKAN TEKSTITYS NATIIVISSA KUTEN WEBISSÄ; APURAHAKORTIN LIHAVOITU MUUTOSILMOITUS; NÄYTTÖ AINA AUKI; CHATTIIN VAIN OLENNAINEN (1.10.2026 klo 09.11)
 
 Omistaja 1.10.2026 kortilla klo 09.2x: Ihmisen matkan tekstitys natiivissa kuten webissä (nostokortti peittää tekstityksen kortin ollessa auki) → Pelikoodari. Apurahakortin alkuun lihavoitu kappale kahdesta ohjelmapohjasta (Unity-sovellus jo iPhonelle ja iPadille, Mac, Android ja Windows myöhemmin, selainpeli jatkuu suppeampana) → PR #3769 (korostus-kenttä, versio 5), natiivin lihavointi Natiivi-UI:lta. Omistaja: koodaus-näyttö aina auki (LaunchAgent fi.matkakirja.naytto-auki, caffeinate -d -i). Omistaja: komennot aina yksirivisinä bash-lohkoina (Run-nappi) ja chattiin vain omistajaa koskevat asiat, roolien tilaraportit pois tai yhteen lauseeseen.
+
+## OMISTAJA: IHMISEN MATKAN NOSTOKORTIT — VASEN KUVA KOKO LEVEYDELLE, OIKEA KUVA TEKSTIN VIEREEN OIKEALLE (1.10.2026 klo 09.11)
+
+Omistaja 1.10.2026 klo 09.2x tekstitysparin kuvasta: 'tuo oikeanpuolimmainen kuva kulkemaan tekstin viereen sen oikealle puolelle, jotta vasemmanpuolimmainen kuva näkyisi koko leveydeltä. Tämän voisi muuttaa kaikkiin vastaaviin kohtiin linssissä.' → Pelikoodari: kaikki Ihmisen matkan kahden kuvan nostokortit, web ja natiivi samoin (pariteetti säilyy); kuvapari ennen PR:ää ja merge-pyyntöä.
