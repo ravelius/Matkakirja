@@ -1,6 +1,7 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
+import { visaPohjalla, pueVisaKortiksi } from './visa-pohja.js';
 import {
   ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, ENNAKON_JATKOT, HYPYN_TAUKO_MS,
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
@@ -2919,6 +2920,8 @@ export class UI {
 
     this.winnerDialog = document.getElementById('winner-dialog');
     this.quizDialog = document.getElementById('quiz-dialog');
+    // Visa KORTTI-pohjalla, versio B (peruttava ?kortti=vanha; js/visa-pohja.js).
+    if (visaPohjalla()) pueVisaKortiksi(this.quizDialog);
     this.quizCity = document.getElementById('quiz-city');
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
