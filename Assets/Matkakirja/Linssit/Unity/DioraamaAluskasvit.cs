@@ -54,14 +54,15 @@ namespace Matkakirja.Natiivi
             if (y == null || string.IsNullOrEmpty(y.AluskasvitLista) || string.IsNullOrEmpty(y.AluskasvitAtlas)) yield break;
             if (taso == DioraamaUlkokuori.Laatu.Kevyt) { kirjaa?.Invoke("poikki: ympäristö: aluskasvit pois (kevyt)"); yield break; }
             byte[] atlasJson = null, listaJson = null, atlasTavut = null;
-            yield return DioraamaLevyvalimuisti.Hae(url(y.AluskasvitAtlas), 60, t => atlasJson = t);
+            string tiedot = y.AluskasvitKortit ?? y.AluskasvitAtlas; // uusi muoto: atlas = png, kortit = json (Siirtoseppä 1.10.)
+            yield return DioraamaLevyvalimuisti.Hae(url(tiedot), 60, t => atlasJson = t);
             yield return DioraamaLevyvalimuisti.Hae(url(y.AluskasvitLista), 120, t => listaJson = t);
             if (!voimassa()) yield break;
             if (atlasJson == null || listaJson == null) { kirjaa?.Invoke("poikki: ympäristö: aluskasvit eivät latautuneet"); yield break; }
             string atlasNimi = null;
             try { atlasNimi = MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(atlasJson))), "atlas"); } catch { }
-            string kansio = y.AluskasvitAtlas.Contains("/") ? y.AluskasvitAtlas.Substring(0, y.AluskasvitAtlas.LastIndexOf('/') + 1) : "";
-            yield return DioraamaLevyvalimuisti.Hae(url(kansio + (atlasNimi ?? "aluskasvit.png")), 60, t => atlasTavut = t);
+            string kansio = tiedot.Contains("/") ? tiedot.Substring(0, tiedot.LastIndexOf('/') + 1) : "";
+            yield return DioraamaLevyvalimuisti.Hae(url(y.AluskasvitKortit != null ? y.AluskasvitAtlas : kansio + (atlasNimi ?? "aluskasvit.png")), 60, t => atlasTavut = t);
             if (!voimassa()) yield break;
             if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei latautunut"); yield break; }
 
