@@ -448,6 +448,8 @@ const MODULES = [
   'js/linssit/rekisteri.js',
   // Apurahan kortti ja esittelylinssien avain (omistus.js ja ui.js tuovat).
   'js/apuraha.js',
+  // PANEELI-pohjan tietomalli: ennen js/pohjat/pohjat.js:ää, joka tuo sen.
+  'js/pohjat/paneelidata.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
@@ -1130,6 +1132,8 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
+  // Pillerivalikko PANEELI-pohjalla: js/main.js puee #paavalikon käynnistyksessä.
+  'js/pilleri-paneeli.js',
   'js/main.js',
 ];
 

@@ -31,7 +31,7 @@
     "kerma": "#faf4d6"
   },
   "teemat": {
-    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Jokaisessa teemassa muste ja muste-pehmea ≥ 4,5:1 pintaa vasten (tests/tyylikirja.test.mjs).",
+    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus).",
     "paperi": {
       "pinta": "#f5f0e2",
       "pergamentti": "#ecd8ae",
@@ -73,6 +73,25 @@
     "kevyt": "rgba(14, 9, 4, 0.35)",
     "kuva": "rgba(14, 9, 4, 0.92)"
   },
+  "tila": {
+    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana.",
+    "onnistuminen": "#2f6b3f",
+    "virhe": "#b03a2b"
+  },
+  "kentta": {
+    "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026; arvot omistajan mallikuvasta, Pelikoodari): tekstikenttä, alue ja valinta lomakkeissa. Korkeus = osuma-ala, alue 2 × korkeus; teksti Luku 16, vihje kursiivina.",
+    "korkeus": 44,
+    "alue": 88,
+    "kulma": 10,
+    "vali-pysty": 8,
+    "vali-vaaka": 12,
+    "koko": 16,
+    "pinta": "#f5f0e2",
+    "reunus": "rgba(70, 51, 31, 0.3)",
+    "fokus": "#d9a13b",
+    "muste": "#211d18",
+    "vihje": "#5c4a32"
+  },
   "typografia": {
     "_selite": "Seitsemän porrasta (pt). LEVEÄ- ja KESKI-luokassa portaat leipa…arkki +2 (leveaLisa). Kirjasin = natiivin Kirjasin-enum ja webin fonttipino.",
     "kapiteeli": { "koko": 12, "kirjasin": "Kone", "harvennus": 0.12 },
@@ -108,11 +127,11 @@
     "kulma": { "pieni": 6, "nappi": 10, "kortti": 12, "pilleri": 999 },
     "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64 },
     "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
-    "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85 },
+    "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85, "paneeli": 70 },
     "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
   },
   "liike": {
-    "_selite": "ms. Mikään avaus tai sulku ei ylitä maksimia (UI-pohjat kohta 6). Käyrät webin cubic-bezier; natiivi Ponnahdus.cs käyttää samaa sisaan-käyrää.",
+    "_selite": "ms. Mikään UI-siirtymä (avaus, sulku, siirto, ponnahdus) ei ylitä maksimia (UI-pohjat kohta 6); ei koske jatkuvia sisältöanimaatioita kuten matkamittaria, kartan liikettä tai linssien omaa liikettä (omistaja 1.10.2026 klo 11.37). Käyrät webin cubic-bezier; natiivi Ponnahdus.cs käyttää samaa sisaan-käyrää.",
     "avaus": 220,
     "sulku": 200,
     "liuku": 240,
@@ -123,13 +142,16 @@
   },
   "pohjat": {
     "_selite": "Hyväksytyt pohjat (omistaja 1.10.2026). Uusi pinta valitsee näistä; merge-pyynnössä rivi 'Pohja: …'.",
-    "NOSTOKORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)" },
+    "NOSTOKORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
     "LUKUARKKI": { "teemat": ["paperi"], "kuvat": "vapaa", "sulku": "POISTU, Esc, veto oikealle" },
     "KORTTI": { "teemat": ["paperi"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc" },
     "PANEELI": { "teemat": ["paperi", "lasi"], "kuvat": "0", "sulku": "ohinapautus, Esc, avaaja" },
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
     "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi-avaruus"], "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)" },
-    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus"] }
+    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus"] },
+    "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
+    "LAUTAPELI": { "koostuu": ["KUVANÄKYMÄ (lauta)", "PANEELI (ohjaimet)", "KORTTI (valinta ja voitto)"], "teemat": ["paperi", "tumma"], "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli)" },
+    "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }
 }

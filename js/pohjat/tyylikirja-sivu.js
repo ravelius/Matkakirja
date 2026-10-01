@@ -9,7 +9,7 @@
  * 4. Tallenna ehdotus: muuttuneet tokenit JSONina palautekanavaan sivulla "Tyylikirja" (sama reitti kuin
  *    äänimikserin Tallenna). Rooli vie hyväksytyt arvot tyylikirja.json:iin ja ajaa generaattorin.
  */
-import { luoPohjaNostokortti, luoPohjaKortti } from './pohjat.js';
+import { luoPohjaNostokortti, luoPohjaKortti, luoPohjaPaneeli } from './pohjat.js';
 import { PEILI_JUURI, peiliKuvaPolku } from '../media.js';
 
 // Pelin kuvapeili (sama reitti kuin nostojen kuvilla).
@@ -38,6 +38,43 @@ const TKS_KUVAT = [
   { url: TKS_KUVA('Little owl (Athene noctua),.jpg'), kuvateksti: 'Minervanpöllö, Athenen lintu.' },
   { url: TKS_KUVA('Marathon Tomb of the Athenians 1.jpg'), kuvateksti: 'Ateenalaisten hautakumpu Marathonilla.' },
 ];
+
+/** Esimerkkipaneelin viivaikonit (24 × 24, viiva currentColor). */
+const TKS_IKONI = (polku) => `<svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${polku}</svg>`;
+const TKS_PANEELI = {
+  ryhmat: [
+    { vierekkain: true, rivit: [
+      { tyyppi: 'navigointi', nimi: 'Linssit', ikoni: TKS_IKONI('<circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 4.5 4.5"/>') },
+      { tyyppi: 'navigointi', nimi: 'Aarteet', ikoni: TKS_IKONI('<path d="M4 11h16v7H4zM4 11a8 5 0 0 1 16 0M10.5 13.5h3"/>') },
+      { tyyppi: 'navigointi', nimi: 'Matka', ikoni: TKS_IKONI('<circle cx="7" cy="7" r="2"/><path d="M9 7h6a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h8"/>') },
+    ] },
+    { otsikko: 'Äänet', rivit: [
+      { tyyppi: 'kytkin', nimi: 'Kertoja', paalla: true, ikoni: TKS_IKONI('<path d="M4 6c3-1 6-1 8 1 2-2 5-2 8-1v12c-3-1-6-1-8 1-2-2-5-2-8-1zM12 7v12"/>') },
+      { tyyppi: 'kytkin', nimi: 'Musiikki', paalla: true, ikoni: TKS_IKONI('<path d="M9 17V6l10-2v11"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="15" r="2"/>') },
+      { tyyppi: 'kytkin', nimi: 'Äänimaisema', paalla: false, ikoni: TKS_IKONI('<path d="M5 10h3l4-4v12l-4-4H5zM16 9a4 4 0 0 1 0 6M18.5 7a7 7 0 0 1 0 10"/>') },
+    ] },
+    { erotin: true, vierekkain: true, rivit: [
+      { tyyppi: 'toiminto', nimi: 'Uusi peli' },
+      { tyyppi: 'toiminto', nimi: 'Retkikunta' },
+      { tyyppi: 'navigointi', nimi: 'Asetukset' },
+    ] },
+  ],
+  alarivi: { vasen: 'Matkakirja', oikea: 'versio 2505' },
+};
+const TKS_PANEELI_ASETUKSET = {
+  kapiteeli: 'Asetukset',
+  takaisin: () => {},
+  ryhmat: [
+    { otsikko: 'Äänentasot', rivit: [
+      { tyyppi: 'saadin', nimi: 'Kertoja', arvo: 80, muotoile: (v) => `${v} %` },
+      { tyyppi: 'saadin', nimi: 'Musiikki', arvo: 45, muotoile: (v) => `${v} %` },
+    ] },
+    { rivit: [
+      { tyyppi: 'kytkin', nimi: 'Automaattiheitto', paalla: false },
+      { tyyppi: 'navigointi', nimi: 'Lukijaääni', arvo: 'Isoisä' },
+    ] },
+  ],
+};
 
 const TKS_POHJAT = [
   { nimi: 'NOSTOKORTTI · 0 kuvaa · PAPERI', luo: () => luoPohjaNostokortti(TKS_PERUS, { esikatselu: true }) },
@@ -69,6 +106,9 @@ const TKS_POHJAT = [
       ],
     }, { modaali: true, esikatselu: true }),
   },
+  { nimi: 'PANEELI · pillerivalikon pääsivu · PAPERI (malli 09)', luo: () => luoPohjaPaneeli(TKS_PANEELI, { esikatselu: true }) },
+  { nimi: 'PANEELI · alinäkymä: Asetukset (säätimet) · PAPERI', luo: () => luoPohjaPaneeli(TKS_PANEELI_ASETUKSET, { esikatselu: true }) },
+  { nimi: 'PANEELI · LASI (linssin päällä)', luo: () => luoPohjaPaneeli({ ...TKS_PANEELI, teema: 'lasi' }, { esikatselu: true }) },
 ];
 
 function tksSolmu(tagi, luokka, teksti) {
@@ -143,7 +183,7 @@ function tksTypografia(isa, tk) {
 
 function tksPohjat(isa) {
   isa.appendChild(tksSolmu('h2', null, 'Pohjat'));
-  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Esimerkkidata Ateena/Akropolis (sama nosto kuin natiivin kuvaparissa). Webissä vain NOSTOKORTTI ja KORTTI; natiivissa kaikki pohjat.'));
+  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Esimerkkidata Ateena/Akropolis (sama nosto kuin natiivin kuvaparissa). Webissä NOSTOKORTTI, KORTTI ja PANEELI; natiivissa kaikki pohjat.'));
   const ruudukko = tksSolmu('div', 'tks-pohjat');
   for (const p of TKS_POHJAT) {
     const lohko = tksSolmu('div', 'tks-pohja');
