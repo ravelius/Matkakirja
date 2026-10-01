@@ -184,17 +184,17 @@ Mietelause lukijan luettavaksi (Platonin mukaan, ks. osio 2); elämänkokemus he
 
 **Kierros 1 — sotilas**
 Mietelause (Puolustuspuhe 38a): *Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.* (52 merkkiä)
-Elämänkokemus: *Sokrates oli myös sotilas. Platonin kertomuksen mukaan hän käveli talvella jäällä paljain jaloin ja seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena. Hän pelasti haavoittuneen Alkibiadeen taistelussa.* (226 merkkiä)
+Elämänkokemus: *Platonin mukaan sotilas Sokrates käveli talvella jäällä paljain jaloin ja seisoi kerran aamusta seuraavaan aamuun ajatuksiinsa vaipuneena. Taistelussa hän pelasti haavoittuneen Alkibiadeen.* (189 merkkiä)
 Lähteet: Platon, *Puolustuspuhe* 28e (palvelus Potidaiassa, Amfipoliksessa ja Delionissa; Perseus); Platon, *Symposion* 220b–e (paljain jaloin jäällä, seisoi aamuun, Alkibiadeen pelastus; Alkibiadeen puheenvuoro dialogissa — siksi "Platonin kertomuksen mukaan"; tarkistus ja varaus osiossa 6).
 
 **Kierros 2 — oraakkeli**
 Mietelause (Puolustuspuhe 21d): *Mitä en tiedä, en luulekaan tietäväni.* (38 merkkiä)
-Elämänkokemus: *Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ihmetteli vastausta ja lähti kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.* (208 merkkiä)
+Elämänkokemus: *Delfoin oraakkeli vastasi Sokrateen ystävälle, ettei kukaan ole Sokratesta viisaampi. Hämmästynyt Sokrates lähti kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.* (174 merkkiä)
 Lähteet: Platon, *Puolustuspuhe* 21a (Khairefon, oraakkeli, "ei ketään viisaampaa"; Perseus), jatko 21b–22a (Sokrates ihmettelee ja lähtee tutkimaan; tuttu tapahtumakulku, kohtaa en avannut erikseen — ks. varaus 2 osiossa 6).
 
 **Kierros 3 — oikeudenkäynti**
 Mietelause (Kriton 49b): *Vääryyttä ei siis saa tehdä koskaan.* (36 merkkiä)
-Elämänkokemus: *Vuonna 399 ennen ajanlaskun alkua Sokrates tuomittiin kuolemaan jumalattomuudesta ja nuorison turmelemisesta. Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi. Hän perusteli, ettei vääryyttä saa vastata vääryydellä.* (239 merkkiä)
+Elämänkokemus: *Vuonna 399 ennen ajanlaskun alkua Sokrates tuomittiin kuolemaan jumalattomuudesta ja nuorison turmelemisesta. Ystävät tarjosivat hänelle pakotietä vankilasta, mutta hän kieltäytyi, koska vääryyttä ei saa vastata vääryydellä.* (224 merkkiä)
 Lähteet: Socrates, Wikipedia (tuomio 399 eaa., syytteet, tarjottu pakoa, kieltäytyi); Platon, *Kriton* 49b (Perseus: "οὐδαμῶς ἄρα δεῖ ἀδικεῖν", "οὐδὲ ἀδικούμενον ἄρα ἀνταδικεῖν" — vääryyttä ei vastata vääryydellä).
 Huom.: kuolemaa ei kuvata; viimeisiä sanoja ja myrkkykatkoa ei käytetä tässä kohtauksessa.
 
@@ -212,13 +212,13 @@ Pulun kysymyspohjan mukaisia (nostokorttien käsinkirjoitetut kysymykset ovat 30
 
 ### 7.4 Lukijan tekstien merkkimäärä (ääntä EI generoida)
 
-Nimi, elinvuodet ja kysymys "Miten pitäisi elää?" ovat vain tekstiä; lukija ei lue niitä. Lukija lukee vain kierrokset:
+Nimi, elinvuodet ja kysymys "Miten pitäisi elää?" ovat vain tekstiä; lukija ei lue niitä. Lukija lukee vain kierrokset (omistajan 1.10. ~23.0x pyytämä lyhennys: elämän kuvaus yhden lauseen lyhyemmäksi kohtaan, Päätoimittajan sanatarkat versiot):
 
 | Osa | Merkkiä (välilyönteineen) |
 |---|---|
 | Mietelauseet (3) | 52 + 38 + 36 = 126 |
-| Elämänkokemukset (3) | 226 + 208 + 239 = 673 |
-| **Lukijan tekstit yhteensä** | **799** (noin 800) |
+| Elämänkokemukset (3) | 189 + 174 + 224 = 587 |
+| **Lukijan tekstit yhteensä** | **713** |
 
 Pulun kysymykset (215 merkkiä) ovat tekstiä eivätkä kuulu tähän. Ääntä ei ole generoitu; ääniluvan pyytäminen (palvelu, tekstit sanatarkasti, merkkimäärä/hinta) tulee omistajalle Raamatun UUSIA ÄÄNIÄ -säännön mukaan.
 
