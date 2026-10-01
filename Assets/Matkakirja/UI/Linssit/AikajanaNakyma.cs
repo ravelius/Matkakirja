@@ -1882,9 +1882,11 @@ namespace Matkakirja.Natiivi
                     case "loppu": IhmisenLoppu(); break;
                     case "aloitus": NaytaIhmisenAloitus(); break;
                     // "linssi matka nosto <n> [kysy k]" (Pelikoodari 1.10.2026, Pulun yhteisen chatin kuvat): n:nnen löydön
-                    // nostokortti auki; i ≥ 1000 = kortin kysymys (i − 1000) kuten napautus.
+                    // nostokortti auki; i ≥ 1000 = kortin kysymys (i − 1000) kuten napautus. n ≥ löytöpaikkojen määrä (20) =
+                    // tutkimusvaiheen lisänosto, jolla ei ole valmiita vastauksia (kysymys → Pulun yhteinen chat).
                     case "nosto":
-                        var q = ihminen.Paikat.Count > 0 ? ihminen.Paikat[Mathf.Clamp(i % 1000, 0, ihminen.Paikat.Count - 1)] : null;
+                        var nostot = ihminen.Paikat.Concat(ihminen.Lisanostot).ToList();
+                        var q = nostot.Count > 0 ? nostot[Mathf.Clamp(i % 1000, 0, nostot.Count - 1)] : null;
                         if (q == null) break;
                         Valot(0); NaytaLoytopaikka(q.Tunnus); AsetaIhmisenKello(q.VuosiaSitten);
                         if (nostokortti.Auki != q.Tunnus) nostokortti.Avaa(q);
