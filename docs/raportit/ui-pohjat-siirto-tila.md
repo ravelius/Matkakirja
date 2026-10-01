@@ -12,12 +12,14 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 | 2b NOSTOKORTTI | #3782 (+ kartan kohdenosto seuraavaksi) | `natiivi-ui/nostokortti-pohja` 486ea116: Pohja.cs, alareuna/sivukortti, vetokahva, hero 2:1, Esc | hero-korjaus odottaa käännöstä |
 | 3 Pohjavahti | #3783 `tools/pohjavahti.mjs` + testi | `natiivi-ui/pohjavahti` d045f8d1: tyokalut/pohjavahti.py tarkista.sh:ssa | lähtötasot kirjattu |
 | 2c maakuntakortti + kontrasti | – | `natiivi-ui/pohjat-2` 428eae09: Pohja.NostokortinPaikka + Vetokahva, keksintöpaneelin 2,2:1 | käännös ~12.50 |
+| Perusta (natiivi) | – | `natiivi-ui/pohjat-perusta` 1b89dccd = 1–3 + Pohja.NostokortinPaikka/Vetokahva, sivukortti yläpalkin alle | merge-pyyntö Natiivisepälle 1.10. ~13.40 |
+| Pinnat omina haaroinaan | Pelikoodari: kohdenosto web-pohjaan | `pohja-kohdekortti` 60e66e6c, `pohja-maakunta` 7275473b, `pohja-avauskortti` 6402bf4d, `kontrasti-keksinnot` b29768df | todennettu 0c34c00e (iPhone + iPad), merge-pyynnössä |
 
 ## Pinnat pohjiin (natiivi)
 
 | Pohja | Siirretty | Seuraavaksi | Myöhemmin |
 |---|---|---|---|
-| NOSTOKORTTI | nostokortti (kaikki lajit), maakuntakortti | ihmisen matkan nostokortti (2 kuvaa, juna 95 ensin masteriin), avauskortti | nähtävyysarkki, kartuscha, kaupunkiliuska |
+| NOSTOKORTTI | nostokortti (kaikki lajit), kohdekortti (toimintorivi, kokeilu f344f1034), maakuntakortti, avauskortti | ihmisen matkan nostokortti (2 kuvaa + toimintorivi, juna 95 ensin masteriin), maakuntakortin toimintorivi | nähtävyysarkki, kartuscha, kaupunkiliuska |
 | KORTTI | Kortti-pohjaiset dialogit (vahvistus, mitä uutta, palaute, tietoja, wiki, apuraha, periaatteet) | kysymys/visa (oma kortti), paljastus, huipennus | minipopup, sähketehtävä |
 | PANEELI | – | pillerivalikko (jo 38 pt), äänentasot, laukku | linssin hampurilainen, selitteet |
 | KUVANÄKYMÄ | – | kuvasuurennos, astronautin kuvanäkymä | julistegalleria, kohdekartan kokoruutu |
