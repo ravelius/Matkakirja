@@ -1,0 +1,179 @@
+{
+ "_ohje": "Pohjavahdin lähtötaso (tyokalut/pohjavahti.py). Määrät saavat vain pienentyä; kasvu = uusi pinta pohjien ohi → kysy Päätoimittajalta (omistaja). Päivitys --kirjaa vain omistajan päätöksellä tai siirron jälkeen.",
+ "tiedostot": {
+  "Assets/Matkakirja/UI/Aloitusnakyma.cs": {
+   "vari": 4
+  },
+  "Assets/Matkakirja/UI/KarheaKehys.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/KohdekarttaNakyma.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Kortti.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Kuvat.cs": {
+   "vari": 2
+  },
+  "Assets/Matkakirja/UI/Kuviot.cs": {
+   "vari": 7
+  },
+  "Assets/Matkakirja/UI/KysymysNakyma.cs": {
+   "vari": 3
+  },
+  "Assets/Matkakirja/UI/Lehti/LehtiKainalo.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Lehti/Lehtinakyma.cs": {
+   "vari": 5
+  },
+  "Assets/Matkakirja/UI/Lehti/MaaNumeroina.cs": {
+   "vari": 8
+  },
+  "Assets/Matkakirja/UI/Linssit/AikajanaNakyma.cs": {
+   "vari": 6
+  },
+  "Assets/Matkakirja/UI/Linssit/AvaruuskavelyNakyma.cs": {
+   "vari": 4
+  },
+  "Assets/Matkakirja/UI/Linssit/Avaruussumu.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Linssit/DioraamaTaulu.cs": {
+   "vari": 10
+  },
+  "Assets/Matkakirja/UI/Linssit/IhmisenTutkimusNakyma.cs": {
+   "vari": 3
+  },
+  "Assets/Matkakirja/UI/Linssit/IssKytkimet.cs": {
+   "vari": 17
+  },
+  "Assets/Matkakirja/UI/Linssit/IssKytkinpoyta.cs": {
+   "vari": 3
+  },
+  "Assets/Matkakirja/UI/Linssit/IssKyytiNakyma.cs": {
+   "vari": 10
+  },
+  "Assets/Matkakirja/UI/Linssit/Keksijakaruselli.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Linssit/KuunnelmaKaistale.cs": {
+   "vari": 7
+  },
+  "Assets/Matkakirja/UI/Linssit/Kuvanakyma.cs": {
+   "vari": 4
+  },
+  "Assets/Matkakirja/UI/Linssit/Maakayrakuva.cs": {
+   "vari": 4
+  },
+  "Assets/Matkakirja/UI/Linssit/MaidenNakyma.cs": {
+   "vari": 2
+  },
+  "Assets/Matkakirja/UI/Linssit/MikseriPaneeli.cs": {
+   "vari": 10
+  },
+  "Assets/Matkakirja/UI/Linssit/Pistenaytto.cs": {
+   "vari": 8
+  },
+  "Assets/Matkakirja/UI/Linssit/RadioNakyma.cs": {
+   "vari": 50
+  },
+  "Assets/Matkakirja/UI/Linssit/Sijaintipallo.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Linssit/Tiedeliitenakyma.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Livia/LiviaKuva.cs": {
+   "vari": 2
+  },
+  "Assets/Matkakirja/UI/Livia/LiviaPiirros.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/Maakunnat.cs": {
+   "vari": 1
+  },
+  "Assets/Matkakirja/UI/MaakuntaMinikartta.cs": {
+   "vari": 8
+  },
+  "Assets/Matkakirja/UI/Noppa.cs": {
+   "vari": 11
+  },
+  "Assets/Matkakirja/UI/NostotKartalla.cs": {
+   "vari": 3
+  },
+  "Assets/Matkakirja/UI/PieniLiike.cs": {
+   "vari": 4
+  },
+  "Assets/Matkakirja/UI/PulmaLuonnos.cs": {
+   "vari": 2
+  },
+  "Assets/Matkakirja/UI/Pulu/Matkakirjakortti.cs": {
+   "vari": 5
+  },
+  "Assets/Matkakirja/UI/Pulu/PuluChat.cs": {
+   "vari": 2
+  },
+  "Assets/Matkakirja/UI/RepaleinenPergamentti.cs": {
+   "vari": 7
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Kartta.uss": {
+   "fontti": 72,
+   "siirtyma": 4,
+   "vari": 201
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Kohdekartta.uss": {
+   "fontti": 24,
+   "siirtyma": 1,
+   "vari": 68
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Kysymys.uss": {
+   "fontti": 41,
+   "siirtyma": 8,
+   "vari": 73
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Lehti.uss": {
+   "fontti": 131,
+   "siirtyma": 2,
+   "vari": 338
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Linssit.uss": {
+   "fontti": 136,
+   "siirtyma": 18,
+   "vari": 381
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Matkakirja.uss": {
+   "fontti": 157,
+   "siirtyma": 16,
+   "vari": 387
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pulu.uss": {
+   "fontti": 44,
+   "siirtyma": 8,
+   "vari": 119
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Sahke.uss": {
+   "fontti": 13,
+   "siirtyma": 1,
+   "vari": 28
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Sahketehtava.uss": {
+   "fontti": 22,
+   "siirtyma": 1,
+   "vari": 76
+  },
+  "Assets/Matkakirja/UI/Saagraafi.cs": {
+   "vari": 9
+  },
+  "Assets/Matkakirja/UI/Saavutettavuus.cs": {
+   "vari": 2
+  },
+  "Assets/Matkakirja/UI/UiKomennot.cs": {
+   "vari": 2
+  },
+  "Assets/Matkakirja/UI/Ylapalkki.cs": {
+   "vari": 1
+  }
+ }
+}

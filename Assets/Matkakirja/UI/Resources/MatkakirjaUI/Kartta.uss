@@ -600,6 +600,7 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
+
 .mk-selite-rivi__nimi {
     flex-grow: 1;
     font-size: 13.76px;
@@ -1103,13 +1104,26 @@
     width: 100%;
     max-width: 544px; /* vara ennen ensimmäistä asettelua; leveys koodista (Nostokortti.Mitoita, löydökset 130/135) */
     max-height: 88%;
-    /* Web .fokuskohde-popup: täyte 13,6 / 15,2 / 15,2 px molemmissa vaiheissa (mitattu 24.9. b11). */
-    padding: 13.6px 15.2px 15.2px 15.2px;
+    /* NOSTOKORTTI-pohja (omistaja 1.10.2026): paikka ja korkeus koodista (Nostokortti.Pystypaikka), värit ja mitat
+     * tyylikirjasta; yläreunassa vetokahvan tila (KAPEA). */
+    padding: 22px var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-l);
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.32);
-    border-radius: 12px;
-    background-color: #f5f0e2;
-    color: #211d18;
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
+}
+
+/* Vetokahva (KAPEA): ylös laajentaa, alas sulkee; vyöhyke 28 pt kortin yläreunasta (Nostokortti.KahvaVyohyke). */
+.mk-nosto__kahva {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 36px;
+    height: 5px;
+    margin-left: -18px;
+    border-radius: 3px;
+    background-color: var(--tk-paperi-reunus);
 }
 
 /* Löydös 135: kohde ja skandaali samaan kokoon kuin muut (leveys koodista, Nostokortti.Mitoita); skandaalilla vain tyyli. */
@@ -1187,14 +1201,14 @@
 }
 
 .mk-nosto__otsikko {
-    font-size: 20px;
+    font-size: var(--tk-koko-otsikko);
     white-space: normal;
     margin: 0 0 6px 0; /* löydös 133: ei ✕:n varausta */
     color: #16130f;
 }
 
 .mk-nosto__otsikko--kohde {
-    font-size: 16.32px;
+    font-size: var(--tk-koko-otsikko);
     margin: 0 0 7.2px 0; /* löydös 133: ei ✕:n varausta */
     color: #211d18;
 }
@@ -1223,7 +1237,7 @@
 }
 
 .mk-nosto__teksti {
-    font-size: 15.5px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
     margin-bottom: 9px;
 }
@@ -1252,14 +1266,19 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
+/* HERO 2:1 (NOSTOKORTTI-pohja): kuva täyttää kehyksen ja rajautuu. */
+.mk-nosto__kuva--hero {
+    -unity-background-scale-mode: scale-and-crop;
+}
+
 /* Web .nostokuva-selite (mitattu 24.9. b11): Iowan 13,44 px, rgba(33, 29, 24, 0.82), keskitetty, yllä 5,6 px.
    Väri läpinäkymättömänä (0,82 kortin #f5f0e2:n päällä sRGB:ssä = rgb(71, 67, 60)): projekti on lineaarisessa
    väriavaruudessa, ja alfa sekoittuu siellä vaaleammaksi (b11a mitattu 117 vs web 58, täysi #211d18 osui 33,29,24). */
 .mk-nosto__kuvateksti {
     margin-top: 5.6px;
-    font-size: 13.44px;
+    font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: rgb(71, 67, 60);
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 /* Kuvan alla keskitetty (web figcaption.nostokuva-selite text-align center). */
@@ -2229,4 +2248,52 @@
 
 .mk-maakunnat__ohje {
     color: rgba(70, 51, 31, 0.7);
+}
+
+/* Vetokahvan osuma-alue (Pohja.cs Vetokahva): 120 × 26 pt kortin yläreunassa, sisällä .mk-nosto__kahva. */
+.mk-vetokahva {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120px;
+    height: 26px;
+    margin-left: -60px;
+}
+
+/* NOSTOKORTTI-pohjan toimintorivi (kohdekortti, omistaja 1.10.2026 kokeiluun): kiinteä alarivi Kysy · Visa · Kierros · Lehti,
+   napit 38 pt (TOIMINTO-tyyppi; Lehti ensisijainen kulta), sisältö vierii sen alla. */
+.mk-nosto--toiminnot {
+    padding-bottom: 62px;
+}
+
+.mk-nosto__toiminnot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: row;
+    padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-m);
+    border-top-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+    background-color: var(--tk-paperi-pinta);
+    border-bottom-left-radius: var(--tk-kulma-kortti);
+    border-bottom-right-radius: var(--tk-kulma-kortti);
+}
+
+.mk-nosto__toiminto {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-paperi-reunus);
+    background-color: initial; /* läpinäkyvä (oletus), ei mk-nappin paneeliväriä */
+    color: var(--tk-paperi-muste);
+    font-size: var(--tk-koko-apuri);
+}
+
+.mk-nosto__toiminto.mk-nappi--kulta {
+    background-color: var(--tk-paperi-toiminto);
+    border-color: var(--accent-dark);
 }
