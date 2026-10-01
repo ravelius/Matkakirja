@@ -11,7 +11,8 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
    (web satelliitti.js nollaaZoom, pariteetti); b) AUTO natiivin nostoselaimen AUTO-ohjaimella (ei uutta UI-elementtiä):
    kertoja lukee leipätekstin → 3 s → seuraava AstronauttiKierroksen järjestyksessä, kosketus pysäyttää; c) AUTOn aikana
    yläinforuutu minimoituna, otsikko pelkkä kaupungin nimi; d) AstronauttiAineisto.Luettava = vain leipäteksti
-   (h.Teksti ?? Selite, ei "Nimi, Seutu." -alkua). Kuvapari web vs. natiivi merge-pyyntöön. Aiemmin, jos Julkaisija avaa junan.
+   (h.Teksti ?? Selite, ei "Nimi, Seutu." -alkua); e) kuvanäkymän minipallo ~30 % isommaksi (iPhone ~53 → ~70 pt, sama
+   mitta kuin webissä). Kuvapari web vs. natiivi merge-pyyntöön. Aiemmin, jos Julkaisija avaa junan.
 3. **Sokrates-pilotin reaaliaikainen heijastusvarjostin**: kreikkalainen sitaatti kipsibystin kasvoille kuin
    videoprojektorista. Alkaa vasta, kun omistaja hyväksyy Linnanrakentajan mallikuvan. Tekstit:
    docs/raportit/sisaltokirjuri-sokrates-pilotti-20261001.md.
