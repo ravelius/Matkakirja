@@ -27,10 +27,10 @@ vaihe() {  # vaihe <nimi>: tosi, jos vaihe ajetaan (--alkaen); odottaa kevyen ti
   while ! "$REPO/tools/gpu-vapaa.sh" >/dev/null; do echo "   kevyt tila, odotetaan 5 min"; sleep 300; done
   echo "== $1 $(date +%H.%M)"
 }
-bl() { nice -n 15 $B -b --factory-startup -P "$@" 2>&1 | grep -E '^(KUORI|SIIVOUS|LOD|REIAT|DELIGHT|HAMARA|IKKUNAT|MASKI|AO|Error|Traceback)' || true; }
+bl() { nice -n 15 $B -b --factory-startup -P "$@" 2>&1 | grep -E '^(KUORI|SIIVOUS|VENYNEET|TASOPAIKKA|TÄYTE: [0-9]|LOD|REIAT|DELIGHT|HAMARA|IKKUNAT|MASKI|AO|Error|Traceback)' || true; }
 
 if vaihe kuori; then
-  bl $H/ulkokuori.py -- $OBJ $ULOS/raaka --siivoa
+  bl $H/ulkokuori.py -- $OBJ $ULOS/raaka --siivoa --venyneet
   cp $ULOS/raaka/ulkokuori_huippu.glb $U/
   sips -s format jpeg -s formatOptions 90 $ULOS/raaka/tekstuuri_siivottu.png --out $U/ulkokuori-4k.jpg >/dev/null
   sips -Z 2048 -s format jpeg -s formatOptions 90 $ULOS/raaka/tekstuuri_siivottu.png --out $U/ulkokuori-2k.jpg >/dev/null
