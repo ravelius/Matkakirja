@@ -66,3 +66,20 @@ Huom: skannauksen tarkkuus näkyy lähikuvassa (poski) pehmeänä pintana; se on
   vierivä nauha, perspektiivijako valon suunnasta) on suora malli Linssisepän reaaliaikaiselle varjostimelle.
 
 ![v3: kaukaa, otsa, poski, rinta, loppu](kuvat/sokrates-20261001/sokrates-v3-ruudut.jpg)
+
+## Mallikuva v4 (omistaja 1.10. 22.1x): yksi ajatus yhdessä paikassa
+- Koko lause kulkee yhtenä nauhana samalla alueella. Otsalla kulkee Puolustuspuhe 38a ("Tutkimaton elämä ei ole
+  elämisen arvoinen ihmiselle."). Sen jälkeen kamera liukuu poskelle, jossa kulkee 21d ("Mitä en tiedä, en
+  luulekaan tietäväni."). Kamera kiertää hitaasti (orbit ±14°) tekstin kulkiessa.
+- Pinnalla näkyvät vain kirjaimet: ei kehystä, haloa, keilaa eikä pölyä. Spotin pehmeä reuna häivyttää nauhan
+  sisään ja ulos.
+- Projektorin epätäydellisyys on vain kirjaimissa:
+  - kromaattinen aberraatio: kanavien uv skaalataan 1 ± 0,014, joten ero kasvaa reunoja kohti
+  - tarkennuksen pehmeys: sekoitus terävän ja sumean goboparin välillä etäisyyden |säde − 0,6 m| / 0,022 mukaan
+    (Light Path → Ray Length)
+- Lähderivi (kreikka + viite) näkyy pienenä alareunassa vasta lauseen kuljettua, ei koskaan yhtä aikaa
+  heijastuksen kanssa (`sokrates_lahde.py`).
+- `sokrates_bysti.py --v4`; gobot: `sokrates_gobo.py nauha-<paikka>.png --fontti iowan --nauha --ei-haloa "lause"`
+  (tekee myös `-sumea.png`-parin).
+
+![v4: kaukaa, otsa 38a, lähderivi, poski 21d](kuvat/sokrates-20261001/sokrates-v4-ruudut.jpg)

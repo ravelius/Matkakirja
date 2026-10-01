@@ -379,10 +379,11 @@ V3B_LOPPU = 485              # vetäytyminen 395→440, loppuun pysähdys; tekst
 
 def vieriva_projektori(nimi, p, suunta, etaisyys, kehys_lev, kehys_kuva, nauha_kuva, nauha_kork, ruudut, voima):
     """Spotti: staattinen musta taso (kehys) + vierivä tekstinauha; siirto animoituna (Value-solmu)."""
-    kk = bpy.data.images.load(kehys_kuva); nk = bpy.data.images.load(nauha_kuva)
-    for k in (kk, nk): k.colorspace_settings.name = 'Non-Color'
-    kehys_kork = kehys_lev * kk.size[1] / kk.size[0]; nauha_lev = nauha_kork * nk.size[0] / nk.size[1]
-    d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.0; d.shadow_soft_size = 0.0
+    nk = bpy.data.images.load(nauha_kuva); nk.colorspace_settings.name = 'Non-Color'
+    kk = bpy.data.images.load(kehys_kuva) if kehys_kuva else None
+    if kk: kk.colorspace_settings.name = 'Non-Color'
+    kehys_kork = kehys_lev * (kk.size[1] / kk.size[0] if kk else 9 / 16); nauha_lev = nauha_kork * nk.size[0] / nk.size[1]
+    d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.0 if kk else 0.45; d.shadow_soft_size = 0.0
     d.spot_size = 2.4 * math.atan(kehys_lev / 2 / etaisyys); d.color = (1.0, 0.93, 0.80); d.use_nodes = True
     nt = d.node_tree; nt.nodes.clear()
     tc = nt.nodes.new('ShaderNodeTexCoord'); sx = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(tc.outputs['Normal'], sx.inputs['Vector'])
@@ -398,17 +399,21 @@ def vieriva_projektori(nimi, p, suunta, etaisyys, kehys_lev, kehys_kuva, nauha_k
         yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
         t = nt.nodes.new('ShaderNodeTexImage'); t.image = img; t.extension = 'CLIP'; nt.links.new(yh.outputs['Vector'], t.inputs['Vector'])
         return t.outputs['Color']
-    kehys = kuva(kk, kerro_lisaa(jx, etaisyys / kehys_lev, 0.5), kerro_lisaa(jy, etaisyys / kehys_kork, 0.5))
+    kehys = kuva(kk, kerro_lisaa(jx, etaisyys / kehys_lev, 0.5), kerro_lisaa(jy, etaisyys / kehys_kork, 0.5)) if kk else None
     siirto = nt.nodes.new('ShaderNodeValue'); siirto.name = 'siirto'
     ux = nt.nodes.new('ShaderNodeMath'); ux.operation = 'ADD'
     nt.links.new(kerro_lisaa(jx, etaisyys / nauha_lev, 0.5), ux.inputs[0]); nt.links.new(siirto.outputs['Value'], ux.inputs[1])
     nauha = kuva(nk, ux.outputs['Value'], kerro_lisaa(jy, etaisyys / nauha_kork, 0.5))
-    # nauha näkyy vain kehyksen sisällä (videotykin kuva-ala)
-    sis = nt.nodes.new('ShaderNodeMath'); sis.operation = 'GREATER_THAN'; sis.inputs[1].default_value = 0.0
-    nt.links.new(kehys, sis.inputs[0])
-    nm = nt.nodes.new('ShaderNodeMath'); nm.operation = 'MULTIPLY'; nt.links.new(nauha, nm.inputs[0]); nt.links.new(sis.outputs['Value'], nm.inputs[1])
-    summa = nt.nodes.new('ShaderNodeMath'); summa.operation = 'ADD'; nt.links.new(nm.outputs['Value'], summa.inputs[0]); nt.links.new(kehys, summa.inputs[1])
-    em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(summa.outputs['Value'], em.inputs['Strength'])
+    em = nt.nodes.new('ShaderNodeEmission')
+    if kehys:
+        # nauha näkyy vain kehyksen sisällä (videotykin kuva-ala)
+        sis = nt.nodes.new('ShaderNodeMath'); sis.operation = 'GREATER_THAN'; sis.inputs[1].default_value = 0.0
+        nt.links.new(kehys, sis.inputs[0])
+        nm = nt.nodes.new('ShaderNodeMath'); nm.operation = 'MULTIPLY'; nt.links.new(nauha, nm.inputs[0]); nt.links.new(sis.outputs['Value'], nm.inputs[1])
+        summa = nt.nodes.new('ShaderNodeMath'); summa.operation = 'ADD'; nt.links.new(nm.outputs['Value'], summa.inputs[0]); nt.links.new(kehys, summa.inputs[1])
+        nt.links.new(summa.outputs['Value'], em.inputs['Strength'])
+    else:   # v4: vain kirjaimet; spotin pehmeä reuna häivyttää nauhan sisään ja ulos
+        nt.links.new(nauha, em.inputs['Strength'])
     out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
     o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
     o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
@@ -479,3 +484,110 @@ if '--v3b' in A:
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
     print('SOKRATES: v3b valmis', ULOS)
+
+
+# ---------- mallikuva v4 (omistaja 1.10. 22.1x): yksi ajatus yhdessä paikassa ----------
+# Koko lause kulkee yhtenä nauhana saman pinta-alueen yli (otsa: Puolustuspuhe 38a), sitten kamera liukuu poskelle,
+# jossa kulkee toinen ajatus (21d). Vain kirjaimet (ei kehystä, haloa, keilaa eikä pölyä). Kamera kiertää hyvin
+# hitaasti (orbit pinnan normaalin ympäri) tekstin kulkiessa. Lähderivi lisätään jälkikäsittelyssä lauseen jälkeen.
+#   Blender -b -P sokrates_bysti.py -- --v4 <gobot> <ulos> --koko L K [--naytteita 16] [--ruudut ...]
+V4_PAIKAT = (  # nimi, säde (x, z), nauhan korkeus (m), projektorin vinous, kuva-alan leveys (m), kameran kulma, ruudut (alku, loppu)
+    ('otsa', (-0.005, 0.418), 0.016, (-0.40, -0.15, -0.30), 0.075, 55, (95, 350)),
+    ('poski', (-0.055, 0.352), 0.013, (-0.55, -0.15, -0.30), 0.065, 38, (445, 655)),
+)
+V4_LOPPU = 705          # lähderivit jälkikäsittelyssä: 38a ruudut 352–395, 21d 657–705
+V4_KIERTO = 14          # orbit ± astetta pinnan normaalin ympäri paikan aikana
+
+
+def v4_projektori(nimi, p, suunta, etaisyys, ala, nauha_kuva, nauha_kork, ruudut, voima, ca=0.014, syvyys=0.022):
+    """v4: vain kirjaimet + projektorin epätäydellisyys (omistaja 22.1x): kromaattinen aberraatio (punainen ja sininen
+    erkanevat säteittäin, ero kasvaa reunoja kohti: uv skaalataan kanavittain 1 ± ca) ja tarkennuksen pehmeys
+    (sekoitus terävän ja sumean goboparin välillä etäisyyden |säde − tarkennus| / syvyys mukaan)."""
+    nk = bpy.data.images.load(nauha_kuva); sk = bpy.data.images.load(nauha_kuva[:-4] + '-sumea.png')
+    for k in (nk, sk): k.colorspace_settings.name = 'Non-Color'
+    nauha_lev = nauha_kork * nk.size[0] / nk.size[1]
+    d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.45; d.shadow_soft_size = 0.0
+    d.spot_size = 2.4 * math.atan(ala / 2 / etaisyys); d.color = (1.0, 0.93, 0.80); d.use_nodes = True
+    nt = d.node_tree; nt.nodes.clear()
+    def m(op, a, b=None, c=None):
+        n_ = nt.nodes.new('ShaderNodeMath'); n_.operation = op
+        for i_, v in enumerate((a, b, c)):
+            if v is None: continue
+            if isinstance(v, (int, float)): n_.inputs[i_].default_value = v
+            else: nt.links.new(v, n_.inputs[i_])
+        return n_.outputs['Value']
+    tc = nt.nodes.new('ShaderNodeTexCoord'); sx = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(tc.outputs['Normal'], sx.inputs['Vector'])
+    z = m('MULTIPLY', sx.outputs['Z'], -1.0); jx = m('DIVIDE', sx.outputs['X'], z); jy = m('DIVIDE', sx.outputs['Y'], z)
+    siirto = nt.nodes.new('ShaderNodeValue'); siirto.name = 'siirto'
+    lp = nt.nodes.new('ShaderNodeLightPath')
+    sumeus = m('MINIMUM', m('DIVIDE', m('ABSOLUTE', m('SUBTRACT', lp.outputs['Ray Length'], etaisyys)), syvyys), 1.0)
+    def kanava(skaala):
+        u = m('ADD', m('MULTIPLY_ADD', jx, etaisyys * skaala / nauha_lev, 0.5), siirto.outputs['Value'])
+        v = m('MULTIPLY_ADD', jy, etaisyys * skaala / nauha_kork, 0.5)
+        yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
+        arvot = []
+        for img in (nk, sk):
+            t = nt.nodes.new('ShaderNodeTexImage'); t.image = img; t.extension = 'CLIP'
+            nt.links.new(yh.outputs['Vector'], t.inputs['Vector']); arvot.append(t.outputs['Color'])
+        sek = nt.nodes.new('ShaderNodeMix'); sek.data_type = 'FLOAT'
+        nt.links.new(sumeus, sek.inputs['Factor']); nt.links.new(arvot[0], sek.inputs['A']); nt.links.new(arvot[1], sek.inputs['B'])
+        return sek.outputs['Result']
+    yhd = nt.nodes.new('ShaderNodeCombineColor')
+    for kanava_nimi, sk_ in (('Red', 1 + ca), ('Green', 1.0), ('Blue', 1 - ca)):
+        nt.links.new(kanava(sk_), yhd.inputs[kanava_nimi])
+    em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(yhd.outputs['Color'], em.inputs['Color']); em.inputs['Strength'].default_value = 1.0
+    out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
+    o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
+    o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
+    alku, loppu = ruudut; s0 = 0.5 + ala / 2 / nauha_lev; sv = siirto.outputs['Value']
+    for r, v in ((alku, -s0), (loppu, s0)):
+        sv.default_value = v; sv.keyframe_insert('default_value', frame=r)
+    for r, v in ((1, 0), (alku, 0), (alku + 6, voima), (loppu - 6, voima), (loppu, 0)):
+        d.energy = v; d.keyframe_insert('energy', frame=r)
+    for fc in (d.node_tree.animation_data.action.fcurves if d.node_tree.animation_data and hasattr(d.node_tree.animation_data.action, 'fcurves') else []):
+        for kp in fc.keyframe_points: kp.interpolation = 'LINEAR'
+    return o
+
+
+if '--v4' in A:
+    i = A.index('--v4'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 16
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else None
+    o = rakenna(N); sc = bpy.context.scene; _kipsin_rakenne(o)
+    osumat = {nimi: osuma(x, z) for nimi, (x, z), *_ in V4_PAIKAT}
+    eteen = Vector((-0.12, -1.0, 0.07)).normalized()
+    kohde_koko = Vector((0.0, -0.03, 0.22))
+    avaimet = [(1, kohde_koko + eteen * 0.80, kohde_koko), (50, kohde_koko + eteen * 0.72, kohde_koko)]
+    edellinen = None
+    from mathutils import Matrix
+    for nimi, (x, z), nauha_kork, vino, ala, kulma, (alku, loppu) in V4_PAIKAT:
+        p, n = osumat[nimi]
+        v4_projektori(f'tykki-{nimi}', p, (n + Vector(vino)).normalized(), 0.6, ala,
+                      os.path.join(GOBOT, f'nauha-{nimi}.png'), nauha_kork, (alku + 5, loppu - 5), 70.0)
+        c, t, u = lentoasento(p, n, kulma=kulma, matka=0.11)
+        if edellinen is not None:      # siirtymä nostettuna pinnasta irti
+            ep, en = edellinen; kp = (ep + p) / 2; kn = (en + n).normalized()
+            avaimet.append(((avaimet[-1][0] + alku) // 2, kp + kn * 0.16, kp))
+        # hidas orbit: kameran paikka kiertää p:n ympäri normaalin akselilla −KIERTO → +KIERTO (6 avainta)
+        for k in range(6):
+            r = alku + (loppu + 45 - alku) * k // 5
+            kierto = Matrix.Rotation(math.radians(-V4_KIERTO + 2 * V4_KIERTO * k / 5), 3, n)
+            avaimet.append((r, p + kierto @ (c - p), p))
+        edellinen = (p, n)
+        print('SOKRATES v4: paikka', nimi, tuple(round(v, 3) for v in p))
+    avaimet.sort(key=lambda a: a[0])
+    cd = bpy.data.cameras.new('k'); cd.lens = V3B_LINSSI; cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    tahtain = bpy.data.objects.new('tahtain', None); sc.collection.objects.link(tahtain)
+    tc = cam.constraints.new('TRACK_TO'); tc.target = tahtain; tc.track_axis = 'TRACK_NEGATIVE_Z'; tc.up_axis = 'UP_Y'
+    cd.dof.use_dof = True; cd.dof.focus_object = tahtain; cd.dof.aperture_fstop = 11
+    for ruutu, c, q in avaimet:
+        cam.location, tahtain.location = c, q
+        cam.keyframe_insert('location', frame=ruutu); tahtain.keyframe_insert('location', frame=ruutu)
+    sc.frame_start, sc.frame_end = 1, V4_LOPPU; sc.render.fps = 30
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in (RUUDUT or range(sc.frame_start, sc.frame_end + 1)):
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: v4 valmis', ULOS)
