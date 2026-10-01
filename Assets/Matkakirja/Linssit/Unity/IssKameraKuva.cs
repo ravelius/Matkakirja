@@ -37,7 +37,23 @@ namespace Matkakirja.Natiivi
         /// ei ilmeisesti laske rasterilatauksia). Testikomento `astro kyyti kuvaa odotus <s>`.</summary>
         public static float LisaOdotus = 8f;
         /// <summary>Maan ja meren kylläinen sininen kaukana (KuvanTyosto.MaanSini; 0 = pois). Testikomento `astro kyyti kuvaa sini <x>`.</summary>
-        public static float MaanSini = 0f;
+        public static float MaanSini = 1f;
+
+        /// <summary>
+        /// Kuvan kaari ja utu (omistaja/Päätoimittaja 1.10. 21.3x, lopullinen3 0b69f6d2, Cupola-mallikuva): kaari 6, Rayleigh-kerros 1,5,
+        /// sinisyys 1,3, utu 1,2, ydin 1, syvänsininen hehku 1,5. Asetetaan kuvan ajaksi, jos säätimet ovat oletuksissaan
+        /// (testikomennoilla `astro kyyti kaarivoima|kaarihr|kaarisini|utu|kaariydin|kaarisyva` asetetut arvot pysyvät).
+        /// </summary>
+        const float KaariVoima = 6f, KaariHr = 1.5f, KaariSini = 1.3f, KaariUtu = 1.2f, KaariYdin = 1f, KaariSyva = 1.5f;
+
+        static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
+            && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
+
+        static void AsetaKaari(float voima, float hr, float sini, float utu, float ydin, float syva)
+        {
+            Avaruus.KuvanKaariVoima = voima; Avaruus.KuvanHrKerroin = hr; Avaruus.KuvanSiniKerroin = sini;
+            Avaruus.KuvanUtuKerroin = utu; Avaruus.KuvanKaariYdin = ydin; Avaruus.KuvanKaariSyva = syva;
+        }
         /// <summary>Testi: lisäkuvia 10 s:n välein kaappauksen jälkeen (id-1.jpg …), `astro kyyti kuvaa sarja <n>`.</summary>
         public static int Sarja;
         const int Rinnakkain = 8;
@@ -76,6 +92,8 @@ namespace Matkakirja.Natiivi
             double kerroin0 = IssNyt.Simu.Kerroin;
             IssNyt.Simu.AsetaKerroin(0);   // kello seis: asema ei liiku työstön aikana
             Avaruus.KuvaputkiAsetettu = true;   // kuvaputki (Linssiseppä 9ecd7c79): päivällä ei tähtiä, KuvanKaariVoima
+            bool kaariAsetettu = KaariOletuksissa();
+            if (kaariAsetettu) AsetaKaari(KaariVoima, KaariHr, KaariSini, KaariUtu, KaariYdin, KaariSyva);
             var utc = IssNyt.Kello();
             RenderTexture rt = null;
             try
@@ -342,6 +360,7 @@ namespace Matkakirja.Natiivi
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 AstronauttiKerros.KuvanPinta = null;
                 Avaruus.KuvaputkiAsetettu = false;
+                if (kaariAsetettu) AsetaKaari(1f, 1f, 1f, 1f, 1f, 0f);
                 IssNyt.Simu.AsetaKerroin(kerroin0 > 0 ? kerroin0 : 1);
                 if (!SailytaLaatat) try { if (Directory.Exists(laatat)) Directory.Delete(laatat, true); } catch { }
                 Tila = "valmis"; kaynnissa = false;
