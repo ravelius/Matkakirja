@@ -393,6 +393,20 @@ namespace Matkakirja.Natiivi
                 float koko = Mathf.Clamp(PuluMaxPt * (PuluEtaisyysvertailuM / Mathf.Max(0.5f, ruutu.z)), PuluMinPt, PuluMaxPt);
                 float puluLeveys = koko * (58f / 70f);
                 pulu.MiniKorkeus(koko);
+                // Turva-alueen sisään (linnakatselmus 1.10., iPhone vaaka: laskeutumispiste osui vasempaan reunaan Dynamic
+                // Islandin alle). Taulu seuraa rajattua pistettä.
+                {
+                    float jw = juuri.layout.width, jh = juuri.layout.height;
+                    if (!float.IsNaN(jw) && jw > 0 && Screen.width > 0)
+                    {
+                        float sk = jw / Screen.width;
+                        var sa = Screen.safeArea;
+                        float vasen = sa.xMin * sk + 4f, oikea = jw - (Screen.width - sa.xMax) * sk - 4f;
+                        float yla = (Screen.height - sa.yMax) * sk + 4f, ala = jh - sa.yMin * sk - 4f;
+                        paneeliste.x = Mathf.Clamp(paneeliste.x, vasen + puluLeveys * 0.5f, Mathf.Max(vasen + puluLeveys * 0.5f, oikea - puluLeveys * 0.5f));
+                        paneeliste.y = Mathf.Clamp(paneeliste.y, yla + koko, Mathf.Max(yla + koko, ala));
+                    }
+                }
                 pulu.style.left = paneeliste.x - puluLeveys * 0.5f;
                 pulu.style.top = paneeliste.y - koko;
 
