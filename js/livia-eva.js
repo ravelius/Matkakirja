@@ -14,6 +14,15 @@
  * sammuttaa kaikki valoryhmät ja `evaTether: false` jättää turvaköyden pois (kerrosvienti). Viiden
  * sekunnin, 5 px:n ja ±3°:n leijunta sekä puheen aikainen pysähdys jäävät css/satelliitti.css:ään.
  *
+ * Robotin jalkatuki on valinnainen `evaRobottikasi: true` -tila. Se korvaa vapaan köyden
+ * varren koukkuun kiinnitetyllä lenkillä, piirtää kiinteän varren hahmon taakse ja
+ * jalkapidikkeet kenkiin. Webin 152 × 304 -ikkunassa sommitelmaa nostetaan 75 yksikköä,
+ * jotta varsi todella näkyy alareunasta; natiivin kerrokset pysyvät 152 × 304 -ankkurissa.
+ * Vain paperinukke saa keinua ±2° kuudessa sekunnissa, varsi ei liiku. Varren sininen
+ * reunavalo käyttää --livia-eva-varsi-reunavalo-muuttujaa, joka seuraa Maan valoa.
+ * Natiivin lisäkerrokset ovat robotin-varsi/reunavalo (304 × 1600) ja
+ * robotin-turvakoysi/pidikkeet (304 × 608), kaikki samasta vasemmasta ylänurkasta.
+ *
  * Natiivin läpinäkyvät 2× PNG:t (assets/livia/livia-eva-{turvakoysi,perus,kasvovalo,kyparalamput,maavalo}-2x.png)
  * ovat kaikki 304 × 608 ja vastaavat samaa 152 × 304 SVG-näkymää; kerrokset samaan suorakulmioon ilman
  * siirtoa tai skaalaeroa tässä järjestyksessä: turvaköysi hahmon taakse, perus, kasvovalo, kypärälamput,
@@ -33,6 +42,7 @@ export const LIVIAN_EVA_SIIRTO = 'translate(-10 0)';
 export const livianEvaVarjoDef = prefix => `<defs><filter id="${prefix}-eva-varjo" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope=".64"/><feFuncG type="linear" slope=".68"/><feFuncB type="linear" slope=".76"/></feComponentTransfer></filter></defs>`;
 
 export const LIVIAN_EVA_KERROKSET = Object.freeze(['perus', 'kasvovalo', 'kypärälamput', 'maavalo', 'turvaköysi']);
+export const LIVIAN_EVA_ROBOTTI_KERROKSET = Object.freeze(['varsi', 'reunavalo', 'turvaköysi', 'pidikkeet']);
 
 export function livianEvaPuku() {
   return `<g data-part="eva-puku" stroke-linejoin="round" stroke-linecap="round">
@@ -77,6 +87,65 @@ export function livianEvaTether() {
     <path d="M0 277C34 262 52 267 73 281S116 288 143 294" stroke="#243b4a" stroke-opacity=".78" stroke-width="3.2"/>
     <path d="M0 276C34 261 52 266 73 280S116 287 143 293" stroke="#d2dfe1" stroke-width="2"/>
     <path d="M121 290Q128 288 134 291" stroke="#8da6af" stroke-width="3.4"/>
+  </g>`;
+}
+
+/* Robotin ylin nivel ja jalkatuki ovat Pulun 152 × 304 -ruudussa. Alempi
+ * varsiosa jatkuu samassa koordinaatistossa y=800:aan, joten natiivi voi
+ * ankkuroida pitkän kuvan ikkunan reunaan ilman hahmon venyttämistä. */
+export function livianEvaRobotinVarsi(prefix='livia') {
+  return `<defs>
+    <linearGradient id="${prefix}-robotin-kuori" x1="0" y1="0" x2="1" y2=".22"><stop stop-color="#5c737d"/><stop offset=".24" stop-color="#dce5e5"/><stop offset=".59" stop-color="#f2f1e9"/><stop offset="1" stop-color="#91a5ad"/></linearGradient>
+    <linearGradient id="${prefix}-robotin-kansi" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eef0e9"/><stop offset=".55" stop-color="#b7c7cb"/><stop offset="1" stop-color="#536d7a"/></linearGradient>
+  </defs><g data-part="eva-robotin-varsi" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M148 800C141 746 104 663 72 587S42 533 48 527M49 526C70 493 117 435 125 409M126 409L118 317" fill="none" stroke="#344b57" stroke-width="4.4"/>
+    <path d="M145 800C135 741 96 653 66 583S42 529 47 525M48 524C69 492 117 436 123 408M125 407L116 317" fill="none" stroke="#99aeb6" stroke-width="1.8"/>
+    <path d="M132 800L52 555L38 529L56 516L72 539L151 784Z" fill="url(#${prefix}-robotin-kuori)" stroke="#354c58" stroke-width="3"/>
+    <path d="M49 531L59 544L141 790" fill="none" stroke="#f7f6ed" stroke-width="2.6"/>
+    <path d="M56 548L130 770M61 556L136 780" fill="none" stroke="#6f8994" stroke-width="1.1"/>
+    <path d="M38 522L114 403L133 414L56 532Z" fill="url(#${prefix}-robotin-kuori)" stroke="#354c58" stroke-width="3"/>
+    <path d="M49 522L121 410M56 527L127 417" fill="none" stroke="#f5f4ea" stroke-width="2.4"/>
+    <path d="M118 411L109 331L125 325L134 407Z" fill="url(#${prefix}-robotin-kuori)" stroke="#354c58" stroke-width="2.7"/>
+    <path d="M114 336L123 401" fill="none" stroke="#f7f6ec" stroke-width="2.1"/>
+    <g fill="#607885" stroke="#314b58" stroke-width="2.5"><circle cx="47" cy="526" r="14"/><circle cx="125" cy="409" r="12"/><circle cx="118" cy="326" r="11"/></g>
+    <g fill="#dbe4e4" stroke="#7d949b" stroke-width="1.7"><circle cx="47" cy="526" r="9"/><circle cx="125" cy="409" r="7.5"/><circle cx="118" cy="326" r="6.5"/></g>
+    <g fill="#536c79"><circle cx="47" cy="526" r="3"/><circle cx="125" cy="409" r="2.5"/><circle cx="118" cy="326" r="2.3"/></g>
+    <path d="M101 312L108 326L115 328M134 311L127 326L121 328" fill="none" stroke="#405964" stroke-width="6"/>
+    <path d="M101 312L108 326L115 328M134 311L127 326L121 328" fill="none" stroke="#d9e4e2" stroke-width="3"/>
+    <path d="M91 299Q117 297 143 299L147 307Q123 314 94 310Z" fill="url(#${prefix}-robotin-kansi)" stroke="#354d59" stroke-width="2.6"/>
+    <path d="M95 300Q118 298 142 300M98 306Q120 309 142 305" fill="none" stroke="#f7f7ee" stroke-width="1.8"/>
+    <path d="M142 307L142 284Q142 281 145 281Q148 281 148 284L148 314" fill="none" stroke="#425a66" stroke-width="5"/>
+    <path d="M143 307L143 284Q143 282 145 282Q147 282 147 284L147 314" fill="none" stroke="#d9e4e4" stroke-width="2.3"/>
+    <path d="M139 309L150 309" stroke="#7c919b" stroke-width="3"/>
+    <path d="M109 345L125 343M112 353L128 351M115 360L130 358M77 468L91 477M73 475L86 484M68 482L81 491M72 590L92 584M77 604L98 598" stroke="#586f7c" stroke-width="2"/>
+    <g fill="#8da4ac" stroke="#3d5662" stroke-width="1.2"><rect x="112" y="365" width="17" height="7" rx="2" transform="rotate(-7 120 368)"/><rect x="67" y="488" width="18" height="7" rx="2" transform="rotate(36 76 491)"/><rect x="67" y="606" width="18" height="7" rx="2" transform="rotate(72 76 609)"/></g>
+  </g>`;
+}
+
+export function livianEvaRobotinPidikkeet() {
+  return `<g data-part="eva-robotin-pidikkeet" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 294V301Q108 305 113 302V294M118 294V301Q122 305 127 302V294" stroke="#344d59" stroke-width="3.6"/>
+    <path d="M104 294V300Q108 303 113 301V294M118 294V300Q122 303 127 301V294" stroke="#e7e8de" stroke-width="1.8"/>
+    <path d="M98 304L136 304" stroke="#738b96" stroke-width="1.2"/>
+  </g>`;
+}
+
+export function livianEvaRobotinTurvakoysi() {
+  return `<g data-part="eva-robotin-turvaköysi" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M129 291C106 279 83 283 82 299C80 319 111 326 135 314" stroke="#304a58" stroke-width="3.4"/>
+    <path d="M129 291C106 279 83 283 82 299C80 319 111 326 135 314" stroke="#dce7e5" stroke-width="1.8"/>
+    <circle cx="129" cy="291" r="3.4" fill="#657f89" stroke="#e4e9e5" stroke-width="1.4"/>
+    <circle cx="134" cy="314" r="4.3" fill="#566f7b" stroke="#dbe5e4" stroke-width="1.5"/>
+    <path d="M134 311Q139 308 141 311L139 317Q136 320 133 317" stroke="#dce5e2" stroke-width="2"/>
+  </g>`;
+}
+
+export function livianEvaRobotinReunavalo(prefix='livia') {
+  return `<defs><linearGradient id="${prefix}-robotin-reunavalo" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#a8d8f7" stop-opacity=".54"/><stop offset=".8" stop-color="#7dbce6" stop-opacity=".24"/><stop offset="1" stop-color="#7dbce6" stop-opacity=".08"/></linearGradient><filter id="${prefix}-robotin-hehku" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2"/></filter></defs>
+  <g data-part="eva-robotin-reunavalo" fill="none" stroke="url(#${prefix}-robotin-reunavalo)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M94 308Q116 313 143 307M112 330L120 407L39 522L132 799" stroke-width="7" filter="url(#${prefix}-robotin-hehku)"/>
+    <path d="M94 308Q116 313 143 307M112 330L120 407L39 522L132 799" stroke-width="2.2"/>
+    <path d="M31 526Q40 542 54 533M115 409Q123 420 132 414" stroke-width="2"/>
   </g>`;
 }
 

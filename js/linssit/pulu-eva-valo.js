@@ -4,7 +4,8 @@
  * Asun kolme valokerrosta (kasvovalo visiirin sisällä, kypärälamput, maavalo alta) seuraavat ISS:n valoa
  * Astronautin kamerassa ja ISS:n kyydissä: yöllä (asema maan varjossa) kasvovalo ja lamput vahvoina ja maan
  * valo hämärä, päivällä maan heijastama valo vahvana ja omat valot hillittyinä. Voimakkuudet menevät
- * CSS-muuttujiin --livia-eva-kasvovalo, --livia-eva-kyparalamput ja --livia-eva-maavalo (css/satelliitti.css),
+ * CSS-muuttujiin --livia-eva-kasvovalo, --livia-eva-kyparalamput, --livia-eva-maavalo
+ * ja robottivarren --livia-eva-varsi-reunavalo (css/satelliitti.css),
  * jotka periytyvät bodysta Pulun lentonäyttämölle. Kaava on sama kuin natiivin EvaValo ja CupolanValo
  * (Linssit/Ydin/Iss): aurinkoisuus = ISS auringossa 0…1, maavalo = maa alla valaistu 0,15…1.
  */
@@ -53,6 +54,7 @@ export function kaynnistaPulunEvaValo({ doc = document, kello = () => SIMUKELLO.
     tyyli.setProperty('--livia-eva-kasvovalo', v.kasvovalo.toFixed(3));
     tyyli.setProperty('--livia-eva-kyparalamput', v.kyparalamput.toFixed(3));
     tyyli.setProperty('--livia-eva-maavalo', v.maavalo.toFixed(3));
+    tyyli.setProperty('--livia-eva-varsi-reunavalo', v.maavalo.toFixed(3));
   };
   paivita();
   const ajastin = ikkuna.setInterval?.(paivita, valiMs);
@@ -60,7 +62,7 @@ export function kaynnistaPulunEvaValo({ doc = document, kello = () => SIMUKELLO.
     tila: () => viime,
     pura() {
       if (ajastin != null) ikkuna.clearInterval?.(ajastin);
-      for (const k of ['--livia-eva-kasvovalo', '--livia-eva-kyparalamput', '--livia-eva-maavalo']) tyyli.removeProperty?.(k);
+      for (const k of ['--livia-eva-kasvovalo', '--livia-eva-kyparalamput', '--livia-eva-maavalo', '--livia-eva-varsi-reunavalo']) tyyli.removeProperty?.(k);
     },
   };
 }

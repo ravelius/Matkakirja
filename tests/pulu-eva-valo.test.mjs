@@ -18,6 +18,7 @@ test('EVA-valot CSS-muuttujiin ja pois purussa', () => {
   const v = kaynnistaPulunEvaValo({ doc, ikkuna, testi: 'yo' });
   assert.equal(arvot.get('--livia-eva-kasvovalo'), '1.000');
   assert.equal(arvot.get('--livia-eva-maavalo'), '0.100');
+  assert.equal(arvot.get('--livia-eva-varsi-reunavalo'), '0.100');
   v.pura();
   assert.equal(arvot.size, 0);
 });
