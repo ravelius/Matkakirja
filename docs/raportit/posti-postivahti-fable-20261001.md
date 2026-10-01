@@ -22,3 +22,9 @@ LEVY 36 Gi (< 38; kova raja 30; Karttasepän yöpoltto pysähtyy < 40 → todenn
 
 ## 04.35 lisäys — KÄVIJÄLASKURI 3→4
 Uusi kävijä 1.10. (ensimmäinen 00:46 UTC): US, ios, apurahakortin avauksia tänään 1 (yhteensä 3: 30.9. 2 + 1.10. 1), esittelylinssit 0. Yhteensä n=4 (FI 1, US 3). Levy 51 Gi (46→51), wt/ 47 (raja 20), muisti 74 % vapaa. Päätoimittajan konteksti 53 %. Viikkoraja 92 % (ilmoitusraja 94 %). Hook OK, #3734 auki. SendMessage estynyt (14).
+
+## 05.36 lisäys — KÄVIJÄLASKURI 4→6, VIIKKORAJA 94 %, KONTEKSTI 60 %
+- KÄVIJÄT: 1.10. nyt 3 kävijää (US 3, ios 3; ensimmäinen 00:46 UTC; +2 klo 04.35 jälkeen), apurahakortin avauksia 1.10. 1 (ennallaan; yht. 3), esittelylinssit 0. Yhteensä n=6 (30.9.: FI 1 + US 2; 1.10.: US 3).
+- VIIKKORAJA 94 % (ilmoitusraja saavutettu; reset 5.10. 23.00 UTC). 97 %:n raja lähestyy.
+- PÄÄTOIMITTAJAN KONTEKSTI 60 % (ilmoitusraja saavutettu).
+- Levy 48 Gi (51→48), wt/ 46 (raja 20), kuorma 306, muisti 76 % vapaa. Hook OK, #3734 auki. SendMessage estynyt (14).

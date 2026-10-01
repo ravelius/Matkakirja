@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 1.10. 05:36:** KÄVIJÄLASKURI n=6 (4→6; 1.10. US 3, apurahakortti 1.10. 1, yht. 3) + VIIKKORAJA 94 % (ilmoitusraja saavutettu) + PÄÄTOIMITTAJA 60 % (raja saavutettu) → ilmoitus posti-tiedostossa 05.36. Levy 48 Gi (51→48), wt/ 46 (raja 20), muisti 76 % vapaa, kuorma 306/162/127, sim 1 (iPhone 18 Pro; yö ok), työtilat ok. 5 h 15 %. Seuraava kävijätarkistus ~06.36. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 1.10. 05:17:** Levy 51 Gi (56→51), wt/ 46 (raja 20), muisti 76 % vapaa, kuorma 41/103/126, sim 1 (iPhone 18 Pro; yö ok), työtilat ok. Viikko 93 % (5 h 13 %; ilmoitusrajat 94/97). Konteksti: Päätoimittaja 58 % (lähellä 60). Kävijälaskuri: 04.35 n=4, seuraava ~05.35. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 1.10. 04:56:** Levy 56 Gi (51→56), wt/ 46 (raja 20), muisti 75 % vapaa, kuorma 123/81/108, sim 1 (linssiseppa2-iPad13; yö ok), työtilat ok. Viikko 93 % (5 h 10 %; ilmoitusrajat 94/97 — LÄHELLÄ). Konteksti: Päätoimittaja 54 %. Kävijälaskuri: 04.35 n=4, seuraava ~05.35. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
