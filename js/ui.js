@@ -18040,6 +18040,8 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
+    // KORTTI-pohja (peruttava ?kortti=vanha); lomakekentät pitävät omat tyylinsä.
+    if (korttiPohjalla()) puePohjaKortiksi(kortti, { otsikko, sulje });
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });

@@ -307,6 +307,10 @@
 .tk-kortti .tk-kapiteeli { margin-top: var(--tk-vali-m); }
 .tk-nappi--levea { display: block; width: 100%; margin-top: var(--tk-vali-m); }
 .tk-kortti > .periaate-linkit { margin: var(--tk-vali-s) 0; text-align: left; }
+/* Ohjelmallinen fokus otsikkoon (ruudunlukijan aloituskohta) ilman rengasta, kuten vanhoissa korteissa. */
+.tk-kortti .tk-otsikko[tabindex="-1"]:focus { outline: none; }
+/* Otsikon alaviiva riittää: lomakkeen ensimmäinen katkoviiva olisi toinen viiva sen alla. */
+.tk-kortti .tk-otsikko + .periaate-lomake > :first-child { margin-top: var(--tk-vali-s); padding-top: 0; border-top: none; }
 
 /* ── Esikatselu (tyylikirjasivu): pohja paikallaan virrassa, ei kiinnitettynä ───────────────── */
 
