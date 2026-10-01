@@ -6,10 +6,16 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
 ## HUOMISEN JONO (Päätoimittaja 1.10. 21.1x)
 1. **Lentopelin latausodotus** (hyväksytty): "Lähde" vasta kun lähialue ≥ 98 % ja Cesium tasaantunut (Valmius.Tasaantunut),
    Laattapalvelin.AsetaSaapumistila lennon ajaksi, ennakkokamera koneen eteen — kuten lento v3; uusi video Päätoimittajalle.
-2. **Sokrates-pilotin reaaliaikainen heijastusvarjostin**: kreikkalainen sitaatti kipsibystin kasvoille kuin
+2. **Astronautin kamera: zoom + AUTO** (omistaja 2.10. 00.1x, Hongkong-kaappaus; Päätoimittaja): natiivi webin mallin mukaan
+   (Pelikoodari tekee webin ensin). a) kuvan zoom nipistyksellä ja kaksoisnapautuksella, nollautuu otosta vaihdettaessa
+   (web satelliitti.js nollaaZoom, pariteetti); b) AUTO natiivin nostoselaimen AUTO-ohjaimella (ei uutta UI-elementtiä):
+   kertoja lukee leipätekstin → 3 s → seuraava AstronauttiKierroksen järjestyksessä, kosketus pysäyttää; c) AUTOn aikana
+   yläinforuutu minimoituna, otsikko pelkkä kaupungin nimi; d) AstronauttiAineisto.Luettava = vain leipäteksti
+   (h.Teksti ?? Selite, ei "Nimi, Seutu." -alkua). Kuvapari web vs. natiivi merge-pyyntöön. Aiemmin, jos Julkaisija avaa junan.
+3. **Sokrates-pilotin reaaliaikainen heijastusvarjostin**: kreikkalainen sitaatti kipsibystin kasvoille kuin
    videoprojektorista. Alkaa vasta, kun omistaja hyväksyy Linnanrakentajan mallikuvan. Tekstit:
    docs/raportit/sisaltokirjuri-sokrates-pilotti-20261001.md.
-3. **Yövalot lähikuvaan** (yovalot-pisteet a91cea86 jatkuu).
+4. **Yövalot lähikuvaan** (yovalot-pisteet a91cea86 jatkuu; rebase Linssiseppä 2:n iss-kamera-kuva-2:n päälle, Yokuori).
 
 ## LENTOPELI vaihe 1 (kärkityö, Päätoimittaja: omistaja "tee lentopeli" 1.10. 17.4x)
 
