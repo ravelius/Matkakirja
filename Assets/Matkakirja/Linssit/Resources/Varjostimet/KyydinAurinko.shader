@@ -69,10 +69,11 @@ Shader "Matkakirja/Linssit/KyydinAurinko"
                 if (_Sateet > 1.0)
                 {
                     float k = _Sateet - 1.0;
-                    lisa = k * (pow(abs(cos(kulma * 3.0)), 40.0) * exp(-r * 2.5) * 0.10 + pow(abs(sin(kulma * 6.0 + 0.3)), 200.0) * exp(-r * 4.0) * 0.05
-                        + exp(-r * 3.5) * 0.05);
+                    // ei laajaa hehkua tässä (laite 4968e1fd: kuvion reuna näkyi terävänä puolikaarena); laaja hehku tulee kuvan
+                    // jälkikäsittelystä (IssKameraKuva.Heijastukset), säteet häivytetään jo 0,5:stä alkaen
+                    lisa = k * (pow(abs(cos(kulma * 3.0)), 40.0) * exp(-r * 3.0) * 0.10 + pow(abs(sin(kulma * 6.0 + 0.3)), 200.0) * exp(-r * 4.5) * 0.05);
                 }
-                float v = (kiekko + hehku + sade + lisa) * (1.0 - smoothstep(0.85, 1.0, r));
+                float v = (kiekko + hehku + sade + lisa) * (1.0 - smoothstep(_Sateet > 1.0 ? 0.45 : 0.85, 1.0, r));
                 half3 vari = lerp(half3(1.0, 0.96, 0.9), half3(1.0, 0.78, 0.55), (half)saturate((_Sateet - 1.0) * 0.5 * saturate(r * 4.0)));
                 return half4(vari * (half)(v * _Kirkkaus), 0);
             }

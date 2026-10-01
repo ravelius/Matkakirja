@@ -244,11 +244,11 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 }
                 // Kiertoratanousu (Päätoimittaja 1.10. 21.5x, omistaja: "aurinko värjäsi paljon enemmän ympäristöä ja ilmakehää"):
                 // auringon ympärillä leveä oranssi–kulta–punainen vyö kaaren alaosassa (sivuamiskorkeus 0–25 km, myös maata hipovat
-                // säteet), haalenee kaarta pitkin sivuille (kulma auringosta σ 17°, häntä σ 43°); sen yllä sininen jää. 0 = pois.
+                // säteet), haalenee kaarta pitkin sivuille (kulma auringosta σ 10°, häntä σ 23°); sen yllä sininen jää. 0 = pois.
                 if (_NousuVoima > 0.0)
                 {
                     float kulmaA = acos(clamp(dot(d, s), -1.0, 1.0));
-                    float wA = exp(-kulmaA * kulmaA / (2.0 * 0.30 * 0.30)) + 0.35 * exp(-kulmaA * kulmaA / (2.0 * 0.75 * 0.75));
+                    float wA = exp(-kulmaA * kulmaA / (2.0 * 0.17 * 0.17)) + 0.2 * exp(-kulmaA * kulmaA / (2.0 * 0.40 * 0.40));   // σ 10° / 23° (laite 4968e1fd: σ 17°/43° tasainen koko leveydeltä)
                     float hsN = maa ? 0.0 : hmin;
                     float pohja = maa ? 1.0 - smoothstep(0.0, 0.08, saturate(-dot(d, normalize(o + d * g0)))) : 1.0 - smoothstep(12000.0, 32000.0, hmin);
                     float3 savyN = lerp(float3(1.0, 0.26, 0.05), float3(1.0, 0.70, 0.28), smoothstep(1500.0, 12000.0, hsN));

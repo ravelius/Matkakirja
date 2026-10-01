@@ -240,7 +240,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 {
                     float sk = dot(normalize(p), aur);
                     half kaista = (half)(smoothstep(-0.087, -0.026, sk) * (1.0 - smoothstep(-0.010, 0.017, sk)));
-                    c += half3(1.0h, 0.42h, 0.13h) * kaista * (half)(_AamuVoima * 0.35) * (0.4h + 0.6h * (1.0h - 0.85h * pilvi) + 1.2h * pilvi);
+                    c += half3(1.0h, 0.42h, 0.13h) * kaista * (half)(_AamuVoima * 0.8) * (0.4h + 0.6h * (1.0h - 0.85h * pilvi) + 1.2h * pilvi);
                     a *= 1.0h - 0.35h * kaista * (half)saturate(_AamuVoima);
                 }
                 return half4(c, a);
