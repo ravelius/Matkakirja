@@ -958,27 +958,34 @@
 }
 
 .mk-maakuntaKortti__kuvat {
-    flex-direction: row;
-    margin-bottom: 10px;
+    margin: 4px 0 10px 0;
 }
 
-.mk-maakuntaKortti__kuva {
-    flex-grow: 1;
-    flex-basis: 0;
-    margin-right: 6px;
+/* Omistajan kortti 30.9.2026 klo 22.5x: kuva nostokortin mitoilla (mk-nosto__kuvakehys, korkeus koodista), lähderivi alla. */
+.mk-maakuntaKortti__kuvapaikka {
+    flex-direction: column;
 }
 
-.mk-maakuntaKortti__kuva--karuselli {
-    flex-grow: 0;
-    flex-basis: auto;
-    width: 220px;
+/* Minikartta tekstin oikealla (Lehtipalstat-kylkikuva, leveys ja paikka koodista), napautus suurentaa. */
+.mk-maakuntaKortti__kartta {
+    -unity-background-scale-mode: scale-to-fit;
+    border-radius: 4px;
 }
 
-.mk-maakuntaKortti__kuvapinta {
-    height: 150px;
-    border-radius: 6px;
-    background-color: rgba(70, 51, 31, 0.1);
-    -unity-background-scale-mode: scale-and-crop;
+.mk-maakuntaKortti__karttatausta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(18, 12, 4, 0);
+}
+
+.mk-maakuntaKortti__karttaiso {
+    position: absolute;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(246, 240, 224, 0.96);
+    border-radius: 8px;
 }
 
 .mk-maakuntaKortti__lahde {
@@ -1008,11 +1015,6 @@
     color: rgba(70, 51, 31, 0.95);
 }
 
-.mk-maakuntaKortti__kysymys.mk-auki {
-    background-color: rgba(255, 252, 242, 1);
-    border-color: rgba(122, 85, 20, 0.5);
-}
-
 .mk-maakuntaKortti__kysymys > .mk-ikoni {
     width: 20px;
     height: 20px;
@@ -1024,13 +1026,6 @@
     flex-shrink: 1;
     font-size: 14px;
     white-space: normal;
-}
-
-.mk-maakuntaKortti__vastaus {
-    margin: 6px 4px 4px 32px;
-    font-size: 14px;
-    white-space: normal;
-    color: #211d18;
 }
 
 /* --- Offline-latauksen tila (OfflineTilaUi): pieni pilleri yläpalkin alla vasemmalla --- */

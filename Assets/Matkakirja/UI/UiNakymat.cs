@@ -796,8 +796,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void ChatinKerros()
         {
-            // Linssitila (Pelikoodari 1.10.2026): chat nousee linssin yläkerroksen (37) päälle minipulun kohdalle.
-            bool p = Chat.Auki && (Nostokortti.Auki || Chat.Linssissa);
+            // Linssitila (Pelikoodari 1.10.2026) ja maakuntakortin Pulun kysymys (omistajan kortti 30.9.2026 klo 22.5x):
+            // chat nousee kortin / linssin yläkerroksen päälle.
+            bool p = Chat.Auki && (Nostokortti.Auki || MaakuntaKortti.JokinAuki || Chat.Linssissa);
             if (p == chatNostonPaalla) return;
             chatNostonPaalla = p;
             PulunKerros();
