@@ -781,6 +781,8 @@ V7_LAHESTY = (462, 555)       # nimi 282–372, kysymys 373–461
 V7_PROJ = (555, 900)          # 38a; a-luenta alkaa 600; lähderivi 902–950
 V7_KAARI_LOPPU = 965
 V7_PITO = 1450                # b-luenta alkaa 960 (15,5 s)
+V7_NAUHA = 0.0205             # omistaja 23.5x: kirjaimet ~28 % isommiksi (v4–v6: 0,016); sama ajoaika → nauha
+                              # kulkee pinnalla ~22 % nopeammin, lukutahti merkkeinä sekunnissa ≈ ennallaan
 V7_TYKKI = 220.0              # kirjaimet erottuvat kovassa auringossa (v4–v6: 70 himmennetyssä valossa)
 V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
 
@@ -816,7 +818,7 @@ if '--v7' in A:
         ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
     p, n = osuma(-0.005, 0.418)
     v4_projektori('tykki-otsa', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.075,
-                  os.path.join(GOBOT, 'nauha-otsa.png'), 0.016, (V7_PROJ[0] + 5, V7_PROJ[1] - 5), V7_TYKKI)
+                  os.path.join(GOBOT, 'nauha-otsa.png'), V7_NAUHA, (V7_PROJ[0] + 5, V7_PROJ[1] - 5), V7_TYKKI)
     c, t, u = lentoasento(p, n, kulma=55, matka=0.11)
     cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
     cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
