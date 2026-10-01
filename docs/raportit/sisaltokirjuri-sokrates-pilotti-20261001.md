@@ -178,23 +178,23 @@ Tekstit on kirjoitettu kuunneltaviksi: lyhyet virkkeet, ei sulkeita, lyhenteitä
 
 Muoto vastaa olemassa olevia tekstejä ("n. 570–522 eaa.", "Solon (630–560 eaa.)"), joissa käytetään ajatusviivaa (–), "n." epävarmoille vuosille ja "eaa." lopussa. Sokrateen syntymävuosi on 470 tai 469 eaa., joten "n." on perusteltu; kuolinvuosi 399 on varma. Nimirivin erottimena "·" on Päätoimittajan pyynnön mukainen; jos pelin tyyli käyttää sulkeita ("Sokrates (n. 470–399 eaa.)"), vaihda.
 
-### 7.2 Kolme kierrosta
+### 7.2 Kolme kierrosta (päivitetty järjestys: vastaus kysymykseen "Miten pitäisi elää?" tulee ensin)
 
-Mietelause lukijan luettavaksi (Platonin mukaan, ks. osio 2); elämänkokemus heti perään.
+Mietelause lukijan luettavaksi (Platonin mukaan, ks. osio 2); elämänkokemus heti perään. Puhuttavissa ei lyhenteitä (eaa. → "ennen ajanlaskun alkua").
 
-**Kierros 1**
+**Kierros 1 — sotilas**
+Mietelause (Puolustuspuhe 38a): *Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.* (52 merkkiä)
+Elämänkokemus: *Sokrates oli myös sotilas. Platonin kertomuksen mukaan hän käveli talvella jäällä paljain jaloin ja seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena. Hän pelasti haavoittuneen Alkibiadeen taistelussa.* (226 merkkiä)
+Lähteet: Platon, *Puolustuspuhe* 28e (palvelus Potidaiassa, Amfipoliksessa ja Delionissa; Perseus); Platon, *Symposion* 220b–e (paljain jaloin jäällä, seisoi aamuun, Alkibiadeen pelastus; Alkibiadeen puheenvuoro dialogissa — siksi "Platonin kertomuksen mukaan"; tarkistus ja varaus osiossa 6).
+
+**Kierros 2 — oraakkeli**
 Mietelause (Puolustuspuhe 21d): *Mitä en tiedä, en luulekaan tietäväni.* (38 merkkiä)
 Elämänkokemus: *Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ihmetteli vastausta ja lähti kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.* (208 merkkiä)
 Lähteet: Platon, *Puolustuspuhe* 21a (Khairefon, oraakkeli, "ei ketään viisaampaa"; Perseus), jatko 21b–22a (Sokrates ihmettelee ja lähtee tutkimaan; tuttu tapahtumakulku, kohtaa en avannut erikseen — ks. varaus 2 osiossa 6).
 
-**Kierros 2**
-Mietelause (Puolustuspuhe 38a): *Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.* (52 merkkiä)
-Elämänkokemus: *Sokrates taisteli sotilaana monessa taistelussa. Platonin kertomuksen mukaan hän käveli talvella jäällä paljain jaloin ja seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena. Taistelussa hän pelasti haavoittuneen Alkibiadeen.* (248 merkkiä)
-Lähteet: Platon, *Puolustuspuhe* 28e (palvelus Potidaiassa, Amfipoliksessa ja Delionissa; Perseus); Platon, *Symposion* 220b–e (paljain jaloin jäällä, seisoi aamuun, Alkibiadeen pelastus; Alkibiadeen puheenvuoro dialogissa — siksi "Platonin kertomuksen mukaan"; tarkistus ja varaus osiossa 6).
-
-**Kierros 3**
+**Kierros 3 — oikeudenkäynti**
 Mietelause (Kriton 49b): *Vääryyttä ei siis saa tehdä koskaan.* (36 merkkiä)
-Elämänkokemus: *Vuonna 399 eaa. Sokrates tuomittiin kuolemaan jumalattomuudesta ja nuorison turmelemisesta. Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi. Hän perusteli, ettei vääryyttä saa vastata vääryydellä.* (221 merkkiä)
+Elämänkokemus: *Vuonna 399 ennen ajanlaskun alkua Sokrates tuomittiin kuolemaan jumalattomuudesta ja nuorison turmelemisesta. Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi. Hän perusteli, ettei vääryyttä saa vastata vääryydellä.* (239 merkkiä)
 Lähteet: Socrates, Wikipedia (tuomio 399 eaa., syytteet, tarjottu pakoa, kieltäytyi); Platon, *Kriton* 49b (Perseus: "οὐδαμῶς ἄρα δεῖ ἀδικεῖν", "οὐδὲ ἀδικούμενον ἄρα ἀνταδικεῖν" — vääryyttä ei vastata vääryydellä).
 Huom.: kuolemaa ei kuvata; viimeisiä sanoja ja myrkkykatkoa ei käytetä tässä kohtauksessa.
 
@@ -212,17 +212,17 @@ Pulun kysymyspohjan mukaisia (nostokorttien käsinkirjoitetut kysymykset ovat 30
 
 ### 7.4 Lukijan tekstien merkkimäärä (ääntä EI generoida)
 
+Nimi, elinvuodet ja kysymys "Miten pitäisi elää?" ovat vain tekstiä; lukija ei lue niitä. Lukija lukee vain kierrokset:
+
 | Osa | Merkkiä (välilyönteineen) |
 |---|---|
-| Nimi ja elinvuodet | 26 |
-| Kysymys "Miten pitäisi elää?" | 19 |
-| Kolme mietelausetta | 38 + 52 + 36 = 126 |
-| Kolme elämänkokemusta | 208 + 248 + 221 = 677 |
-| **Yhteensä (nimi + kysymys + kierrokset)** | **848** |
+| Mietelauseet (3) | 52 + 38 + 36 = 126 |
+| Elämänkokemukset (3) | 226 + 208 + 239 = 673 |
+| **Lukijan tekstit yhteensä** | **799** (noin 800) |
 
-Pelkät kierrokset (mietelauseet + elämänkokemukset): 803 merkkiä. Pulun kysymykset (215 merkkiä) ovat Pulun chat-tekstiä eivätkä kuulu tähän. Ääntä ei ole generoitu; ääniluvan pyytäminen (palvelu, tekstit sanatarkasti, merkkimäärä/hinta) tulee omistajalle Raamatun UUSIA ÄÄNIÄ -säännön mukaan.
+Pulun kysymykset (215 merkkiä) ovat tekstiä eivätkä kuulu tähän. Ääntä ei ole generoitu; ääniluvan pyytäminen (palvelu, tekstit sanatarkasti, merkkimäärä/hinta) tulee omistajalle Raamatun UUSIA ÄÄNIÄ -säännön mukaan.
 
-### 7.5 Musiikki: Straussin *Also sprach Zarathustra* (Einleitung / Sonnenaufgang), VAPAAT levytykset
+### 7.5 (VANHENTUNUT: Strauss ei sovi Espanjan suojan vuoksi, ks. 7.6) Musiikki: Straussin *Also sprach Zarathustra* (Einleitung / Sonnenaufgang), VAPAAT levytykset
 
 Haettu Wikimedia Commonsin hakurajapinnasta (lisenssikentät lueteltu sanatarkasti), ende.app:sta ja classicals.de:stä. EI NC- eikä ND-lisenssejä; EI vuoden 1968 elokuvan 2001 levytystä (MacLeodin kuvaus mainitsee elokuvan vain säveltäjän teoksen käytön yhteydessä; levytys on MacLeodin oma).
 **Sävellyksen oikeudet:** Richard Strauss kuoli 1949, joten teos on ollut vapaa EU:ssa ja useimmissa maissa 1.1.2020 alkaen (Sascha Enden kuvaus; hän huomauttaa, että Straussin teokset ovat yhä suojattuja joissain maissa, erityisesti Ranskassa, Espanjassa ja Kolumbiassa). Peli on Euroopassa; ennen julkaisua kannattaa varmistaa Ranska/Espanja, jos peliä jaetaan sinne.
@@ -246,3 +246,31 @@ Haettu Wikimedia Commonsin hakurajapinnasta (lisenssikentät lueteltu sanatarkas
 - Commons, hakurajapinta: <https://commons.wikimedia.org/wiki/File:Also_Sprach_Zarathustra_-_Einleitung.ogg>, <https://commons.wikimedia.org/wiki/File:Richard_Strauss_-_Also_Sprach_Zarathustra.ogg> (lisenssikentät luettu rajapinnasta)
 - ende.app: <https://ende.app/en/song/5730-also-sprach-zarathustra-feat-richard-strauss>
 - classicals.de: <https://www.classicals.de/strauss-zarathustra>
+
+### 7.6 Musiikki, korjaus: Strauss pois (Espanja), TÄYSIN vapaat vaihtoehdot
+
+Päätoimittajan tieto: Strauss on suojattu Espanjassa vuoden 2029 loppuun (80 vuoden siirtymäsääntö ennen vuotta 1988 kuolleille) eikä peli voi rajata Espanjaa pois, joten kohdat A–D (osio 7.5) putoavat. En ole itse varmentanut Espanjan suoja-aikaa, mutta Sascha Enden oma lisenssihuomautus mainitsee samat maat (Ranska, Espanja, Kolumbia). Kriteerit nyt: säveltäjä kuollut viimeistään 1945 (Haydn 1809, Bruckner 1896, Mahler 1911, kaikki vapaita kaikkialla Euroopassa); levytys CC BY / CC0 / PD; ei NC, ND eikä SA (SA vaatisi, että peli julkaisee äänen jatkojalosteet samalla lisenssillä, joten jätin sen pois "CC BY / CC0 / PD" -listan mukaisesti).
+Haku: Wikimedia Commonsin hakurajapinta (lisenssikentät luettu rajapinnasta), IMSLP, classicals.de, Musopen (sivu palautti 403). Tiedostoja EI ladattu eikä kuunneltu; kestot ja bittinopeudet ovat Commonsin metatietoja. **Aikakoodeja en voinut mitata ilman latausta**; ks. ehdotus alla.
+
+**Suositus: Haydn, *Die Schöpfung* (Luominen), "Und es ward Licht" (englanniksi "And there was light")**
+Levytys: St Matthew's Choir, kapellimestari Phiroz Dalal, johtaja Dawn Slaughter, tekninen Ron Keefe, 20.3.2010; lähde archive.org (Commons-kuvauksessa "video also available"); englanninkielinen versio; Commons-sarja "Haydn - The Creation (Dalal)".
+- **Kappale 2, "In the beginning"** (Alussa Jumala loi taivaan ja maan; kappaleen päätös on "Und es ward Licht" -koraali: kirkas C-duuri-sointu, ennen sitä heikko ja salaperäinen alku): <https://commons.wikimedia.org/wiki/File:Haydn_-_The_Creation_(Dalal)_-_2_In_the_beginning.oga>; lisenssi Commonsin kentissä **"Public domain"** (UsageTerms "Public domain"; ei lisenssi-URL:ia, attribuutio ei vaadittu); kesto **157 s (2:37)**; OGG, 1,55 Mt (≈ 79 kbit/s).
+- **Kappale 1, "The Representation of Chaos"** (orkesterin kaaos-alku, hiljainen ja jännittynyt, johtaa kappaleeseen 2): <https://commons.wikimedia.org/wiki/File:Haydn_-_The_Creation_(Dalal)_-_1_The_Representation_of_Chaos.oga>; lisenssi **"Public Domain"**, UsageTerms **"Creative Commons Public Domain Dedication"** (lisenssi-URL: web.archive.org-kopio sivusta creativecommons.org/licenses/publicdomain/; attribuutio ei vaadittu); kesto **308 s (5:08)**; OGG, 3,04 Mt (≈ 79 kbit/s).
+- **Aikakoodi 5–10 s introon:** "Und es ward Licht" on kappaleen 2 päätös, eli viimeisen noin 20–30 sekunnin sisällä (Dalalin versiossa arviolta noin 2:05–2:20 ja loppu ~2:37; arvio, ei mitattu); sopiva 5–10 s pätkä alkaa hieman ennen soinnun iskua (esim. ~2:00, pätkä sisältää hiljaisen "ja Jumala sanoi: tulkoon valkeus" -viimeisen tahdin ja kuoron "ja valkeus tuli" -sointu). **Tarkka aikakoodi vaatii tiedoston lataamisen ja amplitudianalyysin (ffmpeg); tiedosto on 1,55 Mt Commonsista. Pyydän lupaa lataukseen, jos haluat mittauksen.**
+- **Laatuarvio:** ~79 kbit/s OGG on tavallista matalampi; kuoro on seurakunnan amatöörikuoro ja nauhoitus tavallinen live-/studiotallenne, ei huippulaatua. Jälkikoodaus 79 kbit/s lähteestä ei paranna laatua. Soveltuu introksi, mutta ei esim. pääteemaksi.
+- **Lisenssivaroitus:** kappaleen 1 lisenssi on selkeä CC PD -omistautuminen; kappaleen 2 Commons-merkintä on pelkkä "Public domain" ilman URL:ia. Perusta (esittäjän vapaaehtoinen luovutus vai muu) kannattaa tarkistaa archive.org-lähdesivulta ennen julkaisua. Oikeus tilanne säveltäjän osalta on selvä (Haydn kuoli 1809).
+
+**Muut pyydetyt kohteet: ei täysin vapaata levytystä löytynyt**
+- **Bruckner 4 (alku):** Commonsista ei löytynyt yhtään vapaata Bruckner 4 -levytystä. Musopenin Bruckner 4 -sivu (European Archive -esitys) palautti minulle 403, joten lisenssiä en voinut lukea; Commonsin European Archive -tiedostot on merkitty "Public domain" perusteella, että *sävellys* on julkaistu ennen 1926 (esim. Mahler 4 -tiedoston kuvaus), mikä ei kerro *levytyksen* oikeuksista, joten en luota niihin. Internet Archiven Klemperer- ja Steinberg-LP:t ovat kaupallisia levytyksiä, eivät vapaita.
+  - *Samanhenkinen vaihtoehto, hylätty:* Bruckner 7, 1. osa, Münchenin musiikki- ja teatterikorkeakoulun orkesteri (Marcus Bosch, 2020; 17:55; 128 kbit/s mp3; alkaa tremolo-jousilla ja sellojen teemalla) — **Commons sanoo "Public domain", mutta IMSLP sanoo "Creative Commons Attribution-ShareAlike 4.0"**; ristiriita ja SA → ei.
+  - *Bruckner 5, "opening.wav"* (Commons, "Public domain", WAV 10,7 Mt ≈ 61 s): uploaderin kuvaus on vain "Bruckner Symphony No. 5, opening", eikä käy ilmi onko kyseessä oikea levytys vai syntetisoitu esitys; ei ehdotus (sointi ei myöskään vastaa "aamunkoittoa").
+- **Mahler 1 (alku, "Wie ein Naturlaut"):** ainoat Commons-levytykset ovat Reinhold Behringerin näytteillä tehtyjä renditioita (Virtual Philharmonic Orchestra), lisenssi **CC BY-SA 3.0** (osa 1; muut osat CC BY-SA 4.0) → SA → ei.
+- **Mahler 3 (torviavaus):** Commonsista ei löytynyt vapaata levytystä; Hakutulos mainitsi, että classicals.de listaa Mahler 3:n lisenssillä "CC PDM 1.0" (Public Domain Mark), mutta sivu palautti 404 enkä voinut varmentaa; classicals.de:n lisenssit vaihtelevat (CC BY 4.0, CC BY-NC 4.0, PDM), joten ei varmennettu → ei.
+
+**Päätettävää Päätoimittajalle:** (a) hyväksytäänkö Haydnin Dalal-levytys (kappale 2 introksi, kappale 1 mahdollisena jatkona)? (b) lupa ladata kappale 2 (1,55 Mt Commonsista) ja mitata tarkka aikakoodi; (c) jos laatu ei riitä, seuraava yritys: Mahler 3 classicals.de-levytys (lisenssi varmennettava) tai omistajan oma ehdotus.
+
+**Lähteet (7.6):**
+- Commons, Haydn - The Creation (Dalal): <https://commons.wikimedia.org/wiki/File:Haydn_-_The_Creation_(Dalal)_-_2_In_the_beginning.oga>, <https://commons.wikimedia.org/wiki/File:Haydn_-_The_Creation_(Dalal)_-_1_The_Representation_of_Chaos.oga>
+- IMSLP, Bruckner Symphony No. 7 (HSO München -levytyksen lisenssi): <https://imslp.org/wiki/Symphony_No.7_in_E_major,_WAB_107_(Bruckner,_Anton)>
+- Commons, Reinhold Behringer, Mahler Symphony 1: <https://commons.wikimedia.org/wiki/File:Mahler_Symphony1_Movement1_VPO.ogg>
+- Commons, Mahler Symphony No.4 European Archive (esimerkki "Public domain" -perustelusta): <https://commons.wikimedia.org/wiki/File:Mahler_Symphony_No.4_in_G_major_1._Badachtig_Nicht_ellen_(Mahler)_European_Archive.ogg>
