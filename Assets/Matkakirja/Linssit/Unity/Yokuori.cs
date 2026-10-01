@@ -305,7 +305,9 @@ namespace Matkakirja.Natiivi
             var kd = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(ke.x, ke.y, ke.z))).normalized;
             materiaali.SetVector("_Kuu", new Vector4(kd.x, kd.y, kd.z, (float)Matkakirja.Linssit.Iss.Kuu.Vaihe(jd).valaistu));
             materiaali.SetFloat("_KuuVoima", KuunvaloPois ? 0f : KuunvalonVoima);
-            materiaali.SetFloat("_TaivasHeijastus", TaivasHeijastusPois ? 0f : 0.3f);
+            bool kuva = Matkakirja.Natiivi.Avaruus.KuvaputkiAsetettu;   // pelaajan ISS-kamera: kapeampi heijastus, terävä vesiraja
+            materiaali.SetFloat("_TaivasHeijastus", TaivasHeijastusPois ? 0f : kuva ? 0.15f : 0.3f);
+            materiaali.SetFloat("_VesiTerava", kuva ? 1f : 0f);
             materiaali.SetFloat("_AamuVoima", Matkakirja.Natiivi.Avaruus.Kuvaputki ? Matkakirja.Natiivi.Avaruus.KuvanNousu : 0f);
         }
 

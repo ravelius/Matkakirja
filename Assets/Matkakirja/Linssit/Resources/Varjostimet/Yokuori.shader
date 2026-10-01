@@ -27,6 +27,7 @@ Shader "Matkakirja/Linssit/Yokuori"
     Properties
     {
         _Peitto("Yön peitto", Range(0, 1)) = 0.82
+        _VesiTerava("Vesimaskin terävöinti kiillolle ja taivaan heijastukselle (kuvaputki, 0 = ennallaan)", Float) = 0
         _AamuVoima("Hämärän lämmin valo terminaattorissa (kuvaputken kiertoratanousu, 0 = pois)", Float) = 0
         _Vari("Yön väri", Color) = (0.012, 0.02, 0.05, 1)
         _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
@@ -92,7 +93,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float _PilvetOn, _PilviPeitto, _Karsinta;
                 float _PilviVarjo, _PilviKorkeus, _KuuVoima, _TaivasHeijastus, _TarkatOn;
                 float4 _Kuu;
-                float _AamuVoima;
+                float _AamuVoima, _VesiTerava;
             CBUFFER_END
 
             // Pallotilan piste → (pituus, leveys) radiaaneina (ellipsoidille ja geodeettiseksi kuten valojen haussa).
@@ -184,6 +185,9 @@ Shader "Matkakirja/Linssit/Yokuori"
                 }
                 half l = lerp(sMaa.r * (half)_MaaVoima, sEu.r, euPaino);
                 half vesi = lerp(sMaa.g, sEu.g, euPaino);
+                // Kuvaputki (Ateena 4968e1fd, Päätoimittaja 22.1x: "rannikoiden ympärillä vaalea, sumea reunus"): 500 m:n vesimaskin
+                // pehmeä raja levitti taivaan heijastuksen ja kiillon maalle; terävöinti kapeaksi rajaksi.
+                if (_VesiTerava > 0.0) vesi = lerp(vesi, (half)smoothstep(0.4, 0.6, vesi), (half)_VesiTerava);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
                 // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
                 half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
