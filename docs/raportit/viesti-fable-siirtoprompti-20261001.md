@@ -23,8 +23,9 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
    todenna osoitin puhtaalla asennuksella, vapauta jäädytys ja vie #3763 seuraavaan osoitinkierrokseen.
 2. **TF:n sisäinen ryhmä:** 85:n ajossa ASC ei palauttanut yhtään isInternalGroup-ryhmää (82:lla "Beta testaajat", automaattijako).
    testflight-sisainen.yml estyi Julkaisijan luokittimeen. Omistaja tarkistaa ASC:stä tai sallii ajon Julkaisijan sessiossa.
-3. **TF:** 84 sisäinen, 85, 86–90 Arvioijat-ryhmässä ja beta-arviossa (julkinen linkki). 89 = äänimikseri (omistajan 5 rivin ohje
-   chatissa; tarkista, ettei mikserinappi näy ilman kehittäjätilaa). Juna 91: Pulun turva-alue (Natiivi-UI a8503697).
+3. **TF:** 84 sisäinen, 85, 86–91 Arvioijat-ryhmässä ja beta-arviossa (julkinen linkki). 89 = äänimikseri (omistajan 5 rivin ohje
+   chatissa); mikserinapin piilotus ilman kehittäjätilaa todennettu savukkeessa 91 (`ui pelaaja 1`). **1.1 (91)** 23041f6f
+   (Pulun turva-alue, Natiivi-UI a8503697) ladattu 06.35, Arvioijat-ryhmään ja beta-arvioon 06.39 (Julkaisija).
 4. **Linna:** #3746 v18 ja #3755 v3c mergetty; #3759 v19 (ponttonisilta pois, puulaituri, harmaantunut puu, taivaskentät) ja
    #3760 puukortit v3 (vienti 90c024a12714e713) junassa. Linnanrakentaja ehdottaa seuraavan laatuaskeleen itse.
 5. **ISS / S2:** Euroopan S2-mosaiikki astronautin kameraan hyväksytty (suunnitelma docs/raportit/s2-mosaiikki-astronautin-kameraan-
