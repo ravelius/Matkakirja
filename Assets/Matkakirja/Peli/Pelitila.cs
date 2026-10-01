@@ -28,7 +28,8 @@
 // Versio 8 (29.9.2026, matkamuistot): pelaajan matkamuistot [tunnus, …] (Peli/Matkamuistot.cs, vain natiivi),
 // kirjoitetaan vain kun jokin on löytynyt. Vanha tallennus: ei matkamuistoja.
 // Versio 9 (1.10.2026, pelit): pelaajan pelatut lautapelit [{id, pelattu, voitot}, …] (Peli/Pelit/Peliluettelo.cs;
-// Aarteet-näkymän "Pelit"), kirjoitetaan vain kun jokin on pelattu. Vanha tallennus: ei pelattuja pelejä.
+// Aarteet-näkymän "Pelit") ansaittuine lautoineen (laudat [tunnus, …]), kirjoitetaan vain kun jokin on pelattu.
+// Vanha tallennus: ei pelattuja pelejä.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -87,6 +88,8 @@ namespace Matkakirja.Peli
     {
         public string Id;
         public int Pelattu, Voitot;
+        /// <summary>Ansaitut laudat (Peliluettelo: PeliLauta.Id) ansaitsemisjärjestyksessä.</summary>
+        public List<string> Laudat = new List<string>();
     }
 
     /// <summary>Kuljetun reitin piste: kaupunki ja kulkutapa, jolla sinne saavuttiin (null = aloitus tai siirto ilman tapaa).</summary>
@@ -262,7 +265,8 @@ namespace Matkakirja.Peli
                 if (p.Pelit.Count > 0)
                     Kentta(sb, "pelit", "[" + string.Join(",", p.Pelit.Select(g => "{\"id\":" + Teksti(g.Id)
                         + ",\"pelattu\":" + g.Pelattu.ToString(CultureInfo.InvariantCulture)
-                        + ",\"voitot\":" + g.Voitot.ToString(CultureInfo.InvariantCulture) + "}")) + "]");
+                        + ",\"voitot\":" + g.Voitot.ToString(CultureInfo.InvariantCulture)
+                        + (g.Laudat.Count > 0 ? ",\"laudat\":[" + string.Join(",", g.Laudat.Select(Teksti)) + "]" : "") + "}")) + "]");
                 sb.Append('}');
             }
             sb.Append(']');
@@ -372,7 +376,7 @@ namespace Matkakirja.Peli
                 foreach (var go in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(pd, "pelit")))
                     if (go is Dictionary<string, object> g && MiniJson.Teksti(g, "id") is string gid)
                         p.Pelit.Add(new PelattuPeli { Id = gid, Pelattu = Math.Max(0, (int)(MiniJson.Luku(g, "pelattu") ?? 0)),
-                            Voitot = Math.Max(0, (int)(MiniJson.Luku(g, "voitot") ?? 0)) });
+                            Voitot = Math.Max(0, (int)(MiniJson.Luku(g, "voitot") ?? 0)), Laudat = Tekstit(g, "laudat") });
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");

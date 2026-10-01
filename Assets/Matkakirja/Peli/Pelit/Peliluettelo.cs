@@ -1,9 +1,9 @@
 // PELILUETTELO JA KOHTAAMINEN (Siirtoseppä 1.10.2026; Päätoimittajan linjaus: pelit pelataan matkan varrella ja kerätään
-// matkakirjaan). Ensimmäinen kerta: pelin maan eurooppalaisessa kaupungissa kaupunkikortin NYKYINEN tehtävänappi tarjoaa
+// matkakirjaan; omistaja 1.10. klo 21.0x "YKSI PELI, YKSI KOTI": kukin peli tarjotaan kohtaamisena vain kotikaupungissaan,
+// Mylly Berliinissä). Ensimmäinen kerta: kotikaupungissa kaupunkikortin NYKYINEN tehtävänappi tarjoaa
 // pelin kohtaamisena (KORTTI "Saksa · kohtaaminen — Pelataanko myllyä?"), kun kaupungin muut tehtävät (tarinakaari, pulma,
 // aarrelaatta, tutkiminen) on tehty: pelistä kieltäytyminen ei siis estä aarteita. Uusinta: Aarteet-näkymän otsikko "Pelit".
-// Ei uusia nappeja. Maat pelikatalogista (docs/pelikatalogi.md, kortti "4. Mylly": DEU-2 Mühle, SRB Mlin, MDA Moara;
-// Päätoimittajan lisäys 1.10.: GBR-2 Nine Men's Morris). Vain Eurooppa (Kaupunki.Manner == "europe").
+// Ei uusia nappeja. Koti pelikatalogista (docs/pelikatalogi.md, kortti "4. Mylly": DEU-2 Mühle); vain Eurooppa.
 using System;
 using System.Collections.Generic;
 
@@ -15,11 +15,24 @@ namespace Matkakirja.Peli.Pelit
         public string Maa, MaanNimi, PaikallinenNimi;
     }
 
+    /// <summary>Pelin lauta (omistaja 1.10. klo 21.1x): aidon historiallisen esikuvan mukaan, ansaitaan voitoilla bottia
+    /// vastaan. Avautuu null = käytössä heti (tallentuu Aarteisiin esineeksi ensimmäisestä voitosta); muuten ensimmäinen
+    /// voitto vähintään tämän tasoista bottia vastaan. Kaveripeli ei avaa lautoja. Historia (valintakortin apuri) ja
+    /// Alkupera (Aarteet: missä aito esikuva on nyt ja miltä ajalta) Sisältökirjurilta.</summary>
+    public sealed class PeliLauta
+    {
+        public string Id, Nimi, Esine, Historia, Alkupera;
+        public Vastustaja? Avautuu;
+        public string Ehto => Avautuu == null ? "Käytössä heti." : $"Avautuu, kun voitat {(Avautuu == Vastustaja.BottiVaikea ? "vaikean" : "normaalin")} botin.";
+    }
+
     public sealed class PeliKuvaus
     {
-        /// <summary>Tallennuksen tunnus (Pelaaja.Pelit) ja nimi pelaajalle; Nappi = tehtävänapin teksti kohtaamisessa.</summary>
-        public string Id, Nimi, Nappi, KatalogiId;
+        /// <summary>Tallennuksen tunnus (Pelaaja.Pelit) ja nimi pelaajalle; Nappi = tehtävänapin teksti kohtaamisessa;
+        /// Koti = kotikaupungin tunnus (yksi peli, yksi koti).</summary>
+        public string Id, Nimi, Nappi, KatalogiId, Koti;
         public PeliMaa[] Maat;
+        public PeliLauta[] Laudat = new PeliLauta[0];
 
         public PeliMaa Maassa(string iso3)
         {
@@ -33,13 +46,16 @@ namespace Matkakirja.Peli.Pelit
     {
         public static readonly PeliKuvaus Mylly = new PeliKuvaus
         {
-            Id = "mylly", Nimi = "Mylly", Nappi = "Pelaa myllyä", KatalogiId = "DEU-2",
-            Maat = new[]
+            Id = "mylly", Nimi = "Mylly", Nappi = "Pelaa myllyä", KatalogiId = "DEU-2", Koti = "berliini",
+            Maat = new[] { new PeliMaa { Maa = "DEU", MaanNimi = "Saksa", PaikallinenNimi = "Mühle" } },
+            Laudat = new[]
             {
-                new PeliMaa { Maa = "DEU", MaanNimi = "Saksa", PaikallinenNimi = "Mühle" },
-                new PeliMaa { Maa = "GBR", MaanNimi = "Iso-Britannia", PaikallinenNimi = "Nine Men's Morris" },
-                new PeliMaa { Maa = "SRB", MaanNimi = "Serbia", PaikallinenNimi = "Mlin" },
-                new PeliMaa { Maa = "MDA", MaanNimi = "Moldova", PaikallinenNimi = "Moara" },
+                new PeliLauta { Id = "majatalo", Nimi = "Majatalo 1873", Esine = "Majatalon myllylauta (voitit isännältä)",
+                    Historia = "[Majatalon laudan historia: Sisältökirjuri.]", Alkupera = "[Majatalon laudan esikuva: Sisältökirjuri.]" },
+                new PeliLauta { Id = "katedraali", Nimi = "Katedraali 1300-l.", Esine = "Katedraalin myllylauta", Avautuu = Vastustaja.BottiNormaali,
+                    Historia = "[Katedraalin laudan historia: Sisältökirjuri.]", Alkupera = "[Katedraalin laudan esikuva: Sisältökirjuri.]" },
+                new PeliLauta { Id = "viikinkilaiva", Nimi = "Viikinkilaiva n. 900", Esine = "Viikinkilaivan myllylauta", Avautuu = Vastustaja.BottiVaikea,
+                    Historia = "[Viikinkilaivan laudan historia: Sisältökirjuri.]", Alkupera = "[Viikinkilaivan laudan esikuva: Sisältökirjuri.]" },
             },
         };
 
@@ -51,11 +67,11 @@ namespace Matkakirja.Peli.Pelit
             return null;
         }
 
-        /// <summary>Kaupungin peli ja maa (vain Eurooppa), tai null.</summary>
+        /// <summary>Kaupungin peli (kotikaupunki, vain Eurooppa) ja maa, tai null.</summary>
         public static (PeliKuvaus Peli, PeliMaa Maa)? Kaupungille(Kaupunki k)
         {
             if (k == null || k.Manner != "europe") return null;
-            foreach (var p in Kaikki) if (p.Maassa(k.Maa) is PeliMaa m) return (p, m);
+            foreach (var p in Kaikki) if (p.Koti == k.Id && p.Maassa(k.Maa) is PeliMaa m) return (p, m);
             return null;
         }
 
@@ -82,14 +98,25 @@ namespace Matkakirja.Peli.Pelit
             };
         }
 
-        /// <summary>Pelikerran kirjaus pelaajalle (Aarteet "Pelit", tallennusversio 9): pelattu-laskuri ja botin voitot.</summary>
-        public static PelattuPeli Kirjaa(Pelaaja p, string id, bool bottivoitto)
+        /// <summary>Pelikerran kirjaus pelaajalle (Aarteet "Pelit", tallennusversio 9): pelattu-laskuri, botin voitot ja
+        /// ansaitut laudat. Palauttaa tällä kerralla ansaitut laudat (tuloskorttiin).</summary>
+        public static List<PeliLauta> Kirjaa(Pelaaja p, string id, Vastustaja vastustaja, bool voitti)
         {
             var r = p.Pelit.Find(x => x.Id == id);
             if (r == null) { r = new PelattuPeli { Id = id }; p.Pelit.Add(r); }
             r.Pelattu++;
-            if (bottivoitto) r.Voitot++;
-            return r;
+            var uudet = new List<PeliLauta>();
+            if (!voitti || vastustaja == Vastustaja.Kaveri) return uudet;
+            r.Voitot++;
+            if (Hae(id) is PeliKuvaus peli)
+                foreach (var l in peli.Laudat)
+                    if (!r.Laudat.Contains(l.Id) && (l.Avautuu == null || (int)vastustaja >= (int)l.Avautuu.Value))
+                    { r.Laudat.Add(l.Id); uudet.Add(l); }
+            return uudet;
         }
+
+        /// <summary>Saako laudan valita: heti käytössä oleva tai ansaittu.</summary>
+        public static bool Kaytossa(Pelaaja p, PeliKuvaus peli, PeliLauta l) =>
+            l.Avautuu == null || (p != null && p.Pelit.Find(x => x.Id == peli.Id) is PelattuPeli r && r.Laudat.Contains(l.Id));
     }
 }

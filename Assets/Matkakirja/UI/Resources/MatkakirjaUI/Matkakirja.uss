@@ -4840,3 +4840,17 @@
 .mk-peli__kirjattu {
     margin-top: var(--tk-vali-s);
 }
+
+.mk-peli__historia {
+    margin-top: var(--tk-vali-xs);
+}
+
+/* Lukittu lauta (ansaitaan voitoilla): himmeä KYTKIN, napautus näyttää ehdon apurivillä. */
+.mk-peli__kytkin--lukittu {
+    opacity: 0.45;
+}
+
+.mk-peli__ansaitut {
+    margin-top: var(--tk-vali-s);
+    color: var(--tk-paperi-korostus);
+}

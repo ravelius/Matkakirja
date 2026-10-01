@@ -223,8 +223,14 @@ namespace Matkakirja.Natiivi
                     d.Matkamuistot.Add(new LaukkuMatkamuisto { Id = mm.Id, Nimi = mm.Nimi, Selite = mm.Selite, KuvaUrl = mm.KuvaUrl });
             foreach (var g in p.Pelit)
                 if (Matkakirja.Peli.Pelit.Peliluettelo.Hae(g.Id) is Matkakirja.Peli.Pelit.PeliKuvaus pk)
+                {
                     d.Pelit.Add(new LaukkuPeli { Id = g.Id, Nimi = pk.Nimi,
                         Selite = $"Pelattu {g.Pelattu} {(g.Pelattu == 1 ? "kerran" : "kertaa")}" + (g.Voitot > 0 ? $" · voittoja bottia vastaan {g.Voitot}" : "") });
+                    // Ansaitut laudat esineinä (omistaja 1.10.): alkuperäteksti = missä aito esikuva on nyt ja miltä ajalta.
+                    foreach (var lid in g.Laudat)
+                        foreach (var l in pk.Laudat)
+                            if (l.Id == lid) d.Pelit.Add(new LaukkuPeli { Id = g.Id + ":" + l.Id, Nimi = l.Esine, Selite = l.Alkupera });
+                }
             return d;
         }
 
