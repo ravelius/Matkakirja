@@ -73,7 +73,17 @@ namespace Matkakirja.Natiivi
             kaytossa = MatkakirjaMacSyote_Asenna(pakotettu ? 1 : 0) != 0;
 #endif
             if (kaytossa) Debug.Log("MATKAKIRJA mac-syöte: tunnistimet käytössä" + (pakotettu ? " (pakotettu)" : ""));
-            if (kaytossa && UiKerros.Olemassa) UiKerros.Hae().PakotaTurva(); // yläpalkin Mac-mitat (logo) seuraavassa ruudussa
+            if (kaytossa && UiKerros.Olemassa)
+            {
+                UiKerros.Hae().PakotaTurva(); // yläpalkin Mac-mitat (logo) seuraavassa ruudussa
+                // MAC-TUNTUMA (omistaja 30.9. klo 22.4x: "kaikki muutkin mitä vain keksit jotta käyttö olisi pehmeämpää kuten
+                // natiivissa mac apissa"): (e) liike näytön taajuudella (ProMotion 120 Hz) — S10:n 60 Hz:n katto on iPadin
+                // lämmön takia, Mac on verkkovirrassa ja tuulettimella; (b) hover-korostus vain Macilla (.mk-mac, Matkakirja.uss),
+                // ettei iPadin kosketukseen jää "tahmeaa" hoveria.
+                if (!pakotettu) Ruudunpaivitys.LiikeKatto = 0;
+                foreach (var (_, j) in UiKerros.Hae().Juuret) j?.AddToClassList("mk-mac");
+                Debug.Log($"MATKAKIRJA mac-syöte: liikkeen katto {(Ruudunpaivitys.LiikeKatto > 0 ? Ruudunpaivitys.LiikeKatto + " Hz" : "näytön taajuus")}, hover päällä");
+            }
         }
 
         void Update()
@@ -92,6 +102,21 @@ namespace Matkakirja.Natiivi
                 Kasittele(new Vector2(a[0], a[1]), new Vector2(a[2], a[3]), a[4], new Vector2(a[5], a[6]), Time.unscaledDeltaTime);
 #endif
             LiuTeksti(Time.unscaledDeltaTime);
+            PehmeaRulla(Time.unscaledDeltaTime);
+        }
+
+        double rullaJaljella;
+        Vector2 rullaPiste;
+        const float RullaPehmennysS = 0.08f;
+
+        void PehmeaRulla(float dt)
+        {
+            if (math.abs(rullaJaljella) < 1e-4) { rullaJaljella = 0; return; }
+            double askel = rullaJaljella * (1.0 - math.exp(-dt / RullaPehmennysS));
+            if (math.abs(rullaJaljella - askel) < 1e-4) askel = rullaJaljella;
+            rullaJaljella -= askel;
+            var kierto = FindAnyObjectByType<PalloKierto>();
+            if (kierto == null || !kierto.MacZoomaa(math.exp(askel), rullaPiste)) rullaJaljella = 0;
         }
 
         void LiuTeksti(float dt)
@@ -143,8 +168,11 @@ namespace Matkakirja.Natiivi
                 else
                 {
                     // Rulla eteenpäin (sisältö alas) tuo kartan lähemmäs.
-                    double k = math.exp(rulla.y * RullanZoomi);
-                    viimeKohde = kierto != null && kierto.MacZoomaa(k, ruutu) ? $"rulla: zoomi {k:0.###}" : "rulla: kartta estetty";
+                    // (a) Rullan porras pehmeäksi: zoomi kertyy tavoitteeseen ja ajetaan ~80 ms:n eksponenttipehmennyksellä
+                    // (PehmeaRulla), ei yhtenä hyppynä.
+                    rullaJaljella += rulla.y * RullanZoomi;
+                    rullaPiste = ruutu;
+                    viimeKohde = kierto != null ? $"rulla: zoomi {math.exp(rulla.y * RullanZoomi):0.###} (pehmeä)" : "rulla: kartta estetty";
                 }
             }
             if (nipistys > 0f && nipistys != 1f)

@@ -308,6 +308,8 @@ namespace Matkakirja.Natiivi
         void PaivitaKytkimet()
         {
             foreach (var (b, paalla) in kytkimet) b.EnableInClassList("mk-valittu", paalla != null && paalla());
+            // Kytkin voi tuoda tai viedä rivejä (Maailma → Näytä huntu, Laitetestaaja 1.1 (82)): näkyvyys heti, ei vasta avauksessa.
+            foreach (var (rivi, nakyy) in lisarivit) rivi.style.display = nakyy == null || nakyy() ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
         /// <summary>Muut-nappi: avaa Muut-paneelin nykyisen päälle.</summary>
