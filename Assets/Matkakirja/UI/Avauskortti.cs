@@ -34,9 +34,11 @@ namespace Matkakirja.Natiivi
     public sealed class Avauskortti : IKaupunkiKortti
     {
         /// <summary>Web AVAUSKORTIN_KASVU_MS (omistaja: 250–300 ms, pehmeä, ei pop-up).</summary>
-        public const float KasvuMs = 280f;
+        public const float KasvuMs = Tyylikirja.Kesto.Liuku; // UI-pohjat: UI-siirtymä ≤ 250 ms (web 280 → 240)
         float maksimi;
-        const float Leveyskatto = 560f, Sivuvara = 12f, Ylavara = 8f, Alavara = 8f;
+        const float Ylavara = 8f;
+        readonly Vetokahva kahva;
+        bool laajennettu;
         const float HeroOsuus = 0.16f, HeroOsuusTabletti = 0.14f, HeroVahintaan = 120f, KarttaOsuus = 0.35f;
         const float HaivytysMs = 200f;
         /// <summary>Web LEHDEN_VAKIOESITTELY.</summary>
@@ -121,6 +123,9 @@ namespace Matkakirja.Natiivi
 
             var sulku = Rakenne.Nappi("×", "mk-avauskortti__sulku", () => Sulje(), kortti);
             sulku.tooltip = "Sulje";
+            sulku.style.display = DisplayStyle.None; // NOSTOKORTTI-pohja: ei ✕:ää (ohinapautus, veto alas, Esc)
+            kahva = new Vetokahva(kortti, l => { laajennettu = l; Mitoita(); }, () => Sulje(), () => laajennettu);
+            Nappaimisto.Rekisteroi("avauskortti", 60, () => Auki, null, null, () => Sulje());
             Kirjasimet.Aseta(sulku, Kirjasin.Luku);
 
             alue.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
@@ -143,19 +148,31 @@ namespace Matkakirja.Natiivi
             float W = alue.layout.width, H = alue.layout.height;
             if (float.IsNaN(W) || W <= 0 || H <= 0) return;
             var t = kerros.Reunat(UiKerros.Matkavalinta);
-            float leveys = Mathf.Round(Mathf.Min(Leveyskatto, W - t.x - t.z - 2 * Sivuvara));
+            // NOSTOKORTTI-pohja (omistaja 1.10.2026): KAPEA alareunaan (45 %, laajennettuna 85 %), muuten sivukortti oikealle.
+            float rl = W - t.x - t.z, m = Tyylikirja.Vali.M;
+            bool kapea = Pohja.Leveys(rl) == Pohja.Luokka.Kapea;
+            float leveys = Nostokortti.LaskeLeveys(rl, H - t.y - t.w);
             float yla = Mathf.Round(t.y + Ylapalkki.Varaus + Ylavara);
             kortti.style.width = leveys;
-            kortti.style.left = Mathf.Round((W - leveys) / 2f);
-            kortti.style.top = yla;
-            // Web max-height calc(100 % − 16 px) kartta-alasta: alaraja on turva-alue, ei toimintorivin varaus.
-            // Saman kerroksen turva-alue kuin yläreunalla (Traileri-kerroksen alareuna oli iPhonella ~124 pt, 34:n sijaan,
-            // jolloin turisti-infon alapehmuste jäi vierityksen taakse).
-            maksimi = Mathf.Max(200f, H - yla - t.w - Alavara);
+            maksimi = Mathf.Max(200f, H - yla - t.w - m);
+            if (kapea)
+            {
+                kortti.style.left = Mathf.Round((W - leveys) / 2f);
+                kortti.style.top = StyleKeyword.Auto;
+                kortti.style.bottom = Mathf.Round(t.w + m);
+                maksimi = Mathf.Min(maksimi, Mathf.Round(H * (laajennettu ? Tyylikirja.Peitto.Laajennettu : Tyylikirja.Peitto.Max) / 100f));
+            }
+            else
+            {
+                kortti.style.left = Mathf.Round(W - t.z - m - leveys);
+                kortti.style.top = yla;
+                kortti.style.bottom = StyleKeyword.Auto;
+            }
             kortti.style.maxHeight = maksimi;
-            // Web svh-yksiköt: osuus koko ruudun korkeudesta.
-            hero.style.height = Mathf.Round(Mathf.Max(HeroVahintaan, H * (UiKerros.Tabletti ? HeroOsuusTabletti : HeroOsuus)));
-            karttaKaista.style.height = Mathf.Round(H * KarttaOsuus);
+            kahva.Juuri.style.display = kapea ? DisplayStyle.Flex : DisplayStyle.None;
+            // Hero 2:1 (tyylikirja mitat.kuva.hero-kortti); kartan kaista enintään 3:4 leveydestä.
+            hero.style.height = Mathf.Round(leveys * 0.5f);
+            karttaKaista.style.height = Mathf.Round(Mathf.Min(H * KarttaOsuus, leveys * 0.75f));
         }
 
         // --- avaus ja sulku ------------------------------------------------------------------------
@@ -197,7 +214,9 @@ namespace Matkakirja.Natiivi
             this.lahde = liike ? lahde : null;
             liikeAlku = liike ? -1f : float.NaN;
             kortti.style.opacity = liike ? 0f : 1f;
+            if (!sama) laajennettu = false;
             Auki = true;
+            Mitoita();
             alue.style.display = DisplayStyle.Flex;
             Ruudunpaivitys.Herata(0.4f);
             if (sama) return;

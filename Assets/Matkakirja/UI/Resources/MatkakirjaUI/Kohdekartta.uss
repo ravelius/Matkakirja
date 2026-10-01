@@ -401,14 +401,16 @@
 
 /* Web .kaupunkipopup + -avaus: #f5f0e2, reuna rgba(122,85,20,.32), kulma 16, varjo; ei sisäreunusta. */
 .mk-avauskortti {
+    /* NOSTOKORTTI-pohja (omistaja 1.10.2026): paikka koodista (Avauskortti.Mitoita), värit ja kulma tyylikirjasta. */
     position: absolute;
     flex-direction: column;
     overflow: hidden;
+    padding-top: 22px; /* vetokahvan tila (KAPEA) */
     border-width: 1px;
-    border-color: rgba(122, 85, 20, 0.32);
-    border-radius: 16px;
-    background-color: #f5f0e2;
-    color: #211d18;
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
 }
 
 .mk-avauskortti__vieritys {
