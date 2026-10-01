@@ -20,6 +20,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Koko (pt): puhelimella 72, tabletilla 96 (omistaja: "pienen maapallon"; 100 pt vei iPhonella neljänneksen leveydestä).</summary>
         static float KokoPt => UiKerros.Tabletti ? 96f : 72f;
         const float KestoS = 0.7f, Sade = 1000f;
+        const float Vasen = 12f, Alas = 62f, Rako = 6f, MinKokoPt = 48f;
         const string PintaJuuri = "https://media.matkakirja.app/julisteet/pallo/bmng/";
 
         readonly VisualElement el;
@@ -39,7 +40,7 @@ namespace Matkakirja.Natiivi
         {
             el = new VisualElement { name = "mk-astrokuva__sijaintipallo", pickingMode = PickingMode.Ignore };
             var s = el.style;
-            s.position = Position.Absolute; s.left = 12; s.bottom = 62; s.width = KokoPt; s.height = KokoPt;
+            s.position = Position.Absolute; s.left = Vasen; s.bottom = Alas; s.width = KokoPt; s.height = KokoPt;
             s.display = DisplayStyle.None;
             isa.Add(el);
         }
@@ -61,6 +62,23 @@ namespace Matkakirja.Natiivi
             kamera.enabled = true;
             ajo ??= el.schedule.Execute(Paivita).Every(0);
             ajo.Resume();
+        }
+
+        public VisualElement Isa => el.parent;
+
+        /// <summary>
+        /// Koko kuvan mukaan (<paramref name="kuva"/> isän koordinaateissa): jos kuva on pallon korkeudella ja ulottuu sen
+        /// kohdalle (vaaka), pallo pienenee reunukseen (vähintään 48 pt); pystyssä kuva on yläpuolella → täysi koko.
+        /// </summary>
+        public void Mitoita(Rect kuva, float isanKorkeus)
+        {
+            if (float.IsNaN(isanKorkeus) || isanKorkeus <= 0f || kuva.width <= 0f) return;
+            float koko = KokoPt;
+            float yla = isanKorkeus - Alas - koko;
+            bool samallaKorkeudella = kuva.yMax > yla && kuva.yMin < isanKorkeus - Alas;
+            if (samallaKorkeudella && kuva.xMin < Vasen + koko + Rako)
+                koko = Mathf.Clamp(kuva.xMin - Vasen - Rako, MinKokoPt, KokoPt);
+            el.style.width = koko; el.style.height = koko;
         }
 
         public void Piilota()

@@ -52,6 +52,11 @@ Shader "Matkakirja/Linssit/Sijaintipallo"
                 float u = lon / 6.2831853 + 0.5;
                 // LOD 0: ei mip-saumaa pituuden ±180°:ssa (pieni kuva, pieni tekstuuri).
                 half3 c = SAMPLE_TEXTURE2D_LOD(_MainTex, sampler_MainTex, float2(u, v), 0).rgb;
+                // BMNG:n meri on lähes musta (≈ 0,02 0,04 0,12): kierron aikana valtameri näytti tyhjältä, tummalta pallolta
+                // (Laitetestaaja 1.10., build 86) → avomeri syvän siniseksi; maa (sininen ei hallitse) ja vaalea rannikko ennallaan.
+                half l = dot(c, half3(0.3h, 0.59h, 0.11h));
+                half meri = saturate((c.b - max(c.r, c.g)) * 12.0h) * (1.0h - smoothstep(0.06h, 0.16h, l));
+                c = lerp(c, half3(0.07h, 0.16h, 0.34h), meri);
                 if (abs(lat) > 1.4844) c = half3(0.84, 0.87, 0.9);   // navat Mercatorin ulkopuolella: jää
                 float3 N = normalize(i.maailma);
                 float3 L = normalize(float3(-0.45, 0.55, -0.7));
