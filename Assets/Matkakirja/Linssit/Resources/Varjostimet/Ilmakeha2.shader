@@ -34,6 +34,8 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _HrKerroin("Rayleighin skaalakorkeuden kerroin näkymän säteelle (kuvaputki, 1 = ennallaan)", Float) = 1
         _SiniKerroin("Rayleigh-sironnan sinisyys (kuvaputki, 1 = ennallaan)", Float) = 1
         _UtuKerroin("Maan ilmaperspektiivi horisonttia kohti (kuvaputki, 1 = ennallaan)", Float) = 1
+        _KaariYdin("Kaaren valkoisen ytimen kerroin 0–12 km (kuvaputki, 1 = ennallaan)", Float) = 1
+        _KaariSyva("Syvänsininen hehku ytimen yllä 12–45 km (kuvaputki, 0 = pois)", Float) = 0
         _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
         _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
@@ -42,7 +44,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         CBUFFER_START(UnityPerMaterial)
-            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima, _HrKerroin, _SiniKerroin, _UtuKerroin;
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima, _HrKerroin, _SiniKerroin, _UtuKerroin, _KaariYdin, _KaariSyva;
             float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
         CBUFFER_END
         TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
@@ -198,10 +200,14 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 L *= _Voima;
                 // Ilmaperspektiivi (kuvaputki): maahan osuvan säteen sironta voimistuu loivassa kulmassa, jolloin maa sinertyy
                 // horisonttia kohti; kohtisuoraan alas ennallaan.
+                // Päätoimittaja 1.10. 20.3x (omistajan Cupola-mallikuva): maa ja meri syvän kylläisen sinisiä, ei maitomaisia, ja
+                // valkoiset pysyvät valkoisina → lisäsironta on lähes puhdasta sinistä (punainen 0,15, vihreä 0,5): tummat pinnat
+                // ja varjot sinertyvät, mutta kirkkaat pilvet ovat jo lähellä valkoista eivätkä harmaannu.
                 if (maa && _UtuKerroin != 1.0)
                 {
                     float kulma = saturate(-dot(d, normalize(o + d * g0)));
-                    L *= lerp(_UtuKerroin, 1.0, smoothstep(0.0, 0.6, kulma));
+                    float lisa = (_UtuKerroin - 1.0) * (1.0 - smoothstep(0.0, 0.6, kulma));
+                    L += L * lisa * float3(0.15, 0.5, 1.0);
                 }
 
                 // Ilmahehku yöllä (95 km, σ 4,5 km) säteen lähimmällä korkeudella, kuten Ilmakaaressa.
@@ -214,6 +220,17 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 // Kuvaputken kaari (Linssiseppä 1.10., Päätoimittaja: julisteen wau-tekijä): vain maan ohi kulkevat säteet, liuku
                 // 0–20 km:n sivuamiskorkeudella, jottei horisonttiin tule saumaa. 1 = ennallaan (livenäkymä).
                 L *= lerp(1.0, _KaariVoima, smoothstep(0.0, 20000.0, hmin) * (maa ? 0.0 : 1.0));
+                // Kaaren muoto (Päätoimittaja 1.10. 20.3x, omistajan mallikuva: "ohut, erittäin kirkas sinivalkoinen viiva ja sen yllä
+                // kapea syvänsininen hehku, joka häipyy mustaan"): ytimen (sivuamiskorkeus 0–12 km, myös maan reunaa hipovat säteet)
+                // valkoista vähemmän ja sen yllä 12–45 km sininen voimistuu, punainen vaimenee. 1 / 0 = ennallaan.
+                if (_KaariYdin != 1.0 || _KaariSyva > 0.0)
+                {
+                    float hs = maa ? 0.0 : hmin;
+                    float ydin = (1.0 - smoothstep(6000.0, 14000.0, hs)) * (maa ? 1.0 - smoothstep(0.0, 0.03, saturate(-dot(d, normalize(o + d * g0)))) : 1.0);
+                    L *= lerp(1.0, _KaariYdin, ydin);
+                    float vyo = smoothstep(8000.0, 16000.0, hs) * (1.0 - smoothstep(30000.0, 55000.0, hs));
+                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.35, 0.8, 1.0) * (1.0 + _KaariSyva), vyo * saturate(_KaariSyva * 4.0));
+                }
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);
                 float aalto = 0.75 + 0.25 * sin(nl.x * 23.0 + nl.y * 17.0) * sin(nl.z * 29.0 - nl.x * 11.0);

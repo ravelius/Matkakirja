@@ -1722,6 +1722,13 @@ namespace Matkakirja.Natiivi
                             Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
                         else if (a == "kaarivoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanKaariVoima = (float)Luku(osat[3]); Kirjaa($"astro kaarivoima {Matkakirja.Natiivi.Avaruus.KuvanKaariVoima:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})"); }
+                        else if ((a == "kaariydin" || a == "kaarisyva") && osat.Length > 3)
+                        {
+                            // Kaaren ydin (1 = ennallaan) ja syvänsininen hehku (0 = pois), Ilmakeha2 _KaariYdin / _KaariSyva.
+                            if (a == "kaariydin") Matkakirja.Natiivi.Avaruus.KuvanKaariYdin = (float)Luku(osat[3]);
+                            else Matkakirja.Natiivi.Avaruus.KuvanKaariSyva = (float)Luku(osat[3]);
+                            Kirjaa($"astro kaari ydin {Matkakirja.Natiivi.Avaruus.KuvanKaariYdin:0.00} syva {Matkakirja.Natiivi.Avaruus.KuvanKaariSyva:0.00}");
+                        }
                         else if ((a == "kaarihr" || a == "kaarisini" || a == "utu") && osat.Length > 3)
                         {
                             // Kuvaputken kaaren säätimet (Ilmakeha2 _HrKerroin / _SiniKerroin / _UtuKerroin; 1 = ennallaan).
