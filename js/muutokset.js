@@ -13,6 +13,9 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2494, teksti: 'Tietoturva: kuratointiavain otsakkeeseen (#3777)' },
+  { v: 2493, teksti: 'Maakuntien toinen kuva: BLR, CZE, CHE (#3754)' },
+  { v: 2492, teksti: 'Apurahakortti: korostettu alkukappale (#3769)' },
   { v: 2491, teksti: 'Olavinlinna: märkä vesiraja ja rantavaahto, maa… (#3766)' },
   { v: 2490, teksti: 'Olavinlinna: kaikki puheet äänineen + 5 tekstik… (#3742)' },
   { v: 2489, teksti: 'Viestirajan muistutushook: SendMessagen epäonni… (#3734)' },
