@@ -130,13 +130,25 @@ namespace Matkakirja.Natiivi
                 if (oma != kerta) yield break;
                 if (koottu == null) { kirjaa?.Invoke($"poikki: kuori {taso} virhe: {virhe}"); continue; }
 
+                // Ensilataus v2 (1.10.): raskaat pääsäikeen vaiheet omiin ruutuihinsa (DioraamaRuutu); kevyt taso (linnan
+                // ensikuva) ilman välitaukoja, jottei se myöhästy.
+                bool tauot = taso != Laatu.Kevyt;
+                float r0 = DioraamaRuutu.Alku();
                 var mesh = new Mesh { name = "Ulkokuori:" + taso, indexFormat = IndexFormat.UInt32 };
                 mesh.SetVertices(koottu.Paikat);
                 mesh.SetUVs(0, koottu.Uv);
+                DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} kärjet", r0);
+                if (tauot) { yield return null; if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; } }
+                r0 = DioraamaRuutu.Alku();
                 mesh.SetNormals(koottu.Normaalit);
                 mesh.SetTriangles(koottu.Kolmiot, 0);
                 mesh.RecalculateBounds();
+                DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} kolmiot", r0);
+                if (tauot) { yield return null; if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; } }
+                r0 = DioraamaRuutu.Alku();
                 mesh.UploadMeshData(true); // kärjet vain GPU:lle, CPU-kopio vapautuu
+                DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} mesh-lataus", r0);
+                if (tauot) yield return null;
 
                 // ASTC-mipketju (tekstuurit.<taso>) ensin: 4×4 on laadultaan lähes JPEG (PSNR ≈ 40 dB) ja jää GPU:lle
                 // pakattuna; puuttuva tai tukematon → glb:n JPEG ja Compress kuten ennen.
@@ -147,7 +159,12 @@ namespace Matkakirja.Natiivi
                     byte[] astcTavut = null;
                     yield return DioraamaLevyvalimuisti.Hae(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
-                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
+                    // Puhelimessa huipputason 8k-atlas 4k:na (ylin mip ohitetaan; iPad ja Mac 8k), kuten maaston orto.
+                    bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+                    r0 = DioraamaRuutu.Alku();
+                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy, TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0);
+                    DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} ASTC", r0);
+                    if (kuva != null && tauot) yield return null;
                     if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
                 }
                 if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
@@ -162,9 +179,16 @@ namespace Matkakirja.Natiivi
                 {
                     kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
                     { name = "Ulkokuori:" + taso, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 4 };
-                    if (kuva.LoadImage(koottu.Kuva, false)) kuva.Compress(true);
+                    r0 = DioraamaRuutu.Alku();
+                    if (kuva.LoadImage(koottu.Kuva, false))
+                    {
+                        DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} LoadImage", r0);
+                        if (tauot) yield return null;
+                        r0 = DioraamaRuutu.Alku(); kuva.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} Compress", r0);
+                        if (tauot) yield return null;
+                    }
                     else { UnityEngine.Object.Destroy(kuva); kuva = null; kirjaa?.Invoke($"poikki: kuori {taso} tekstuuri ei jäsentynyt"); }
-                    if (kuva != null) kuva.Apply(false, true); // tekstuuri vain GPU:lle
+                    if (kuva != null) { kuva.Apply(false, true); if (tauot) yield return null; } // tekstuuri vain GPU:lle
                 }
                 if (oma != kerta) { UnityEngine.Object.Destroy(mesh); if (kuva != null) UnityEngine.Object.Destroy(kuva); yield break; }
 

@@ -169,7 +169,11 @@ namespace Matkakirja.Natiivi
             yield return DioraamaLevyvalimuisti.Hae(url(y.SyvyysKuva), 60, t => tavut = t);
             if (oma != kerta || tavut == null) { if (tavut == null) kirjaa?.Invoke("poikki: ympäristö: syvyyskartta ei latautunut (vakiosyvyys)"); yield break; }
             var raaka = new Texture2D(2, 2, TextureFormat.RGBA32, false, true);
+            float r0 = DioraamaRuutu.Alku();
             if (!raaka.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(raaka); kirjaa?.Invoke("poikki: ympäristö: syvyyskartta ei jäsentynyt"); yield break; }
+            DioraamaRuutu.Kirjaa(kirjaa, "syvyys LoadImage", r0);
+            yield return null;
+            if (oma != kerta) { UnityEngine.Object.Destroy(raaka); yield break; }
             // Harmaa PNG voi latautua Alpha8:na: arvo luetaan kanavasta, jossa se on, ja talletetaan R8:ksi (neljännes muistia).
             var p = raaka.GetPixels32();
             bool alfa = raaka.format == TextureFormat.Alpha8;
@@ -181,6 +185,7 @@ namespace Matkakirja.Natiivi
             syv.Apply(false, true);
             UnityEngine.Object.Destroy(raaka);
             luodut.Add(syv);
+            yield return null;
             vesiMat?.SetTexture(IdSyvyys, syv);
             double koko = syv.width * y.SyvyysPikseliM;
             // Kuvan vasen yläkulma on (origoX, origoY) Blenderissä = Unityn (x, z); tekstuurin v = 0 on kuvan alareuna.
@@ -346,9 +351,16 @@ namespace Matkakirja.Natiivi
             yield return DioraamaLevyvalimuisti.Hae(url(polku), 60, b => tavut = b);
             if (oma != kerta || taivasMat == null) yield break;
             var k = new Texture2D(2, 2, TextureFormat.RGBA32, false, false) { name = "Ymparisto:taivas", wrapMode = TextureWrapMode.Repeat, filterMode = FilterMode.Bilinear };
+            float r0 = DioraamaRuutu.Alku();
             if (tavut == null || !k.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(k); kirjaa?.Invoke("poikki: ympäristö: taivas ei latautunut, liukuväri"); yield break; }
-            k.Compress(true); k.Apply(false, true);
+            DioraamaRuutu.Kirjaa(kirjaa, "taivas LoadImage", r0);
             luodut.Add(k);
+            yield return null;
+            r0 = DioraamaRuutu.Alku(); k.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "taivas Compress", r0);
+            yield return null;
+            k.Apply(false, true);
+            yield return null; // GPU-lataus omassa ruudussaan ennen kuin kuva vaihtuu liukuvärin tilalle
+            if (oma != kerta || taivasMat == null) yield break;
             taivasMat.SetTexture(IdTaivasKuva, k);
             taivasSuunta = suunta;
             kirjaa?.Invoke($"poikki: ympäristö: taivas {k.width}×{k.height}");
@@ -387,8 +399,10 @@ namespace Matkakirja.Natiivi
             // glb:n upotettu JPEG.
             if (kuvaTavut != null && kuvaPolku != null && kuvaPolku.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase))
             {
+                float a0 = DioraamaRuutu.Alku();
                 kuva = DioraamaAstc.Lue(kuvaTavut, "Ymparisto:" + nimi + ":astc", out string syy);
-                if (kuva != null) { luodut.Add(kuva); kohteet?.Add(kuva); }
+                DioraamaRuutu.Kirjaa(kirjaa, nimi + " ASTC", a0);
+                if (kuva != null) { luodut.Add(kuva); kohteet?.Add(kuva); yield return null; }
                 else
                 {
                     kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), glb:n kuva");
@@ -400,8 +414,19 @@ namespace Matkakirja.Natiivi
             {
                 kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
                 { name = "Ymparisto:" + nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 4 };
-                if (kuva.LoadImage(kuvaTavut, false)) { kuva.Compress(true); kuva.Apply(true, true); luodut.Add(kuva); kohteet?.Add(kuva); }
+                float r0 = DioraamaRuutu.Alku();
+                if (kuva.LoadImage(kuvaTavut, false))
+                {
+                    luodut.Add(kuva); kohteet?.Add(kuva);
+                    DioraamaRuutu.Kirjaa(kirjaa, nimi + " LoadImage", r0);
+                    yield return null;
+                    r0 = DioraamaRuutu.Alku(); kuva.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
+                    yield return null;
+                    kuva.Apply(true, true);
+                    yield return null;
+                }
                 else { UnityEngine.Object.Destroy(kuva); kuva = null; }
+                if (oma != kerta) yield break;
             }
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
             if (varjostin == null) { kirjaa?.Invoke("poikki: ympäristö: DioraamaMaasto-varjostin puuttuu"); yield break; }
@@ -410,6 +435,7 @@ namespace Matkakirja.Natiivi
             luodut.Add(mat);
             kohteet?.Add(mat);
             int kolmiot = 0;
+            var piirrot = new List<Renderer>(); // päälle vasta kun kaikki lohkot, kuva ja maanpinta ovat GPU:lla
             foreach (var (o, siirto) in osat)
             {
                 int n = o.Paikat.Length / 3;
@@ -427,6 +453,8 @@ namespace Matkakirja.Natiivi
                 luodut.Add(mesh);
                 kohteet?.Add(mesh);
                 kolmiot += o.Kolmiot.Length / 3;
+                yield return null; // yksi lohko (≈ 100 k kolmiota) per ruutu
+                if (oma != kerta) yield break;
                 var t = new GameObject("Ymparisto:" + nimi) { layer = DioraamaNayttamo.Kerros };
                 kohteet?.Add(t);
                 t.transform.SetParent(go.transform, false);
@@ -435,10 +463,14 @@ namespace Matkakirja.Natiivi
                 r.sharedMaterial = mat;
                 r.shadowCastingMode = ShadowCastingMode.Off;
                 r.receiveShadows = false;
+                r.enabled = false;
+                piirrot.Add(r);
             }
             kirjaa?.Invoke($"poikki: ympäristö: {nimi} {osat.Count} lohkoa, {kolmiot} kolmiota, " +
                            $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s");
             if (splat != null && taso != DioraamaUlkokuori.Laatu.Kevyt) yield return LataaSplat(mat, splat, taso, url, kirjaa, oma);
+            if (oma != kerta) yield break;
+            foreach (var r in piirrot) if (r != null) r.enabled = true;
         }
 
         // --- MAANPINNAN KERROKSET (splat) -----------------------------------------------------------------------------
@@ -464,7 +496,9 @@ namespace Matkakirja.Natiivi
                 byte[] t = null;
                 yield return DioraamaLevyvalimuisti.Hae(url(maskit[i]), 60, b => t = b);
                 if (oma != kerta) yield break;
-                var mk = Kuva(t, true, "Ymparisto:splat-maski" + i, false, out _);
+                Texture2D mk = null;
+                yield return Kuva(t, true, "Ymparisto:splat-maski" + i, false, kirjaa, (kt, _) => mk = kt);
+                if (oma != kerta) yield break;
                 if (mk == null) { kirjaa?.Invoke($"poikki: ympäristö: splat-maski {i} ei latautunut, pelkkä ilmakuva"); yield break; }
                 mk.wrapMode = TextureWrapMode.Clamp;
                 mat.SetTexture(i == 0 ? "_SplatMaski0" : "_SplatMaski1", mk);
@@ -477,10 +511,18 @@ namespace Matkakirja.Natiivi
                 yield return DioraamaLevyvalimuisti.Hae(url(diff), 60, b => d = b);
                 if (huippu && !string.IsNullOrEmpty(nor)) yield return DioraamaLevyvalimuisti.Hae(url(nor), 60, b => n = b);
                 if (oma != kerta) yield break;
-                var dk = Kuva(d, false, "Ymparisto:splat-" + id, true, out float kirkkaus);
+                Texture2D dk = null; float kirkkaus = 0.5f;
+                yield return Kuva(d, false, "Ymparisto:splat-" + id, true, kirjaa, (kt, b) => { dk = kt; kirkkaus = b; });
+                if (oma != kerta) yield break;
                 if (dk == null) { kirjaa?.Invoke($"poikki: ympäristö: kerros {id} ei latautunut, pelkkä ilmakuva"); yield break; }
                 mat.SetTexture("_SplatDiff" + k, dk);
-                if (n != null) { var nk = Kuva(n, true, "Ymparisto:splat-nor-" + id, false, out _); if (nk != null) mat.SetTexture("_SplatNor" + k, nk); }
+                if (n != null)
+                {
+                    Texture2D nk = null;
+                    yield return Kuva(n, true, "Ymparisto:splat-nor-" + id, false, kirjaa, (kk, _) => nk = kk);
+                    if (oma != kerta) yield break;
+                    if (nk != null) mat.SetTexture("_SplatNor" + k, nk);
+                }
                 toisto[k] = 1f / Mathf.Max(0.1f, (float)toistoM);
                 keski[k] = 1f / Mathf.Max(0.05f, kirkkaus);
                 yield return null;
@@ -496,27 +538,37 @@ namespace Matkakirja.Natiivi
 
         /// <summary>JPEG/PNG → pakattu mip-tekstuuri (linear = normaalit/maskit). kirkkaus = keskimääräinen luminanssi
         /// (lineaarinen, 16² mipistä) ennen pakkausta; maskia ei pakata (painojen tarkkuus).</summary>
-        Texture2D Kuva(byte[] tavut, bool lineaarinen, string nimi, bool pakkaa, out float kirkkaus)
+        /// Ensilataus v2: LoadImage, Compress ja Apply kukin omassa ruudussaan; tulos(tekstuuri | null, kirkkaus).
+        IEnumerator Kuva(byte[] tavut, bool lineaarinen, string nimi, bool pakkaa, Action<string> kirjaa, Action<Texture2D, float> tulos)
         {
-            kirkkaus = 0.5f;
-            if (tavut == null) return null;
+            float kirkkaus = 0.5f;
+            if (tavut == null) { tulos(null, kirkkaus); yield break; }
             var t = new Texture2D(2, 2, TextureFormat.RGBA32, true, lineaarinen)
             { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Repeat, anisoLevel = 4 };
-            if (!t.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(t); return null; }
+            float r0 = DioraamaRuutu.Alku();
+            if (!t.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(t); tulos(null, kirkkaus); yield break; }
+            luodut.Add(t);
             int mip = Mathf.Max(0, t.mipmapCount - 5);
             var px = t.GetPixels(mip);
             double summa = 0;
             foreach (var c in px) summa += 0.2126 * c.linear.r + 0.7152 * c.linear.g + 0.0722 * c.linear.b;
             if (px.Length > 0) kirkkaus = (float)(summa / px.Length);
-            if (pakkaa || lineaarinen && !nimi.Contains("maski")) t.Compress(true);
+            DioraamaRuutu.Kirjaa(kirjaa, nimi + " LoadImage", r0);
+            yield return null;
+            if (pakkaa || lineaarinen && !nimi.Contains("maski"))
+            {
+                r0 = DioraamaRuutu.Alku(); t.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
+                yield return null;
+            }
             t.Apply(true, true);
-            luodut.Add(t);
-            return t;
+            yield return null;
+            tulos(t, kirkkaus);
         }
 
         // --- PUUT -----------------------------------------------------------------------------------------------------
 
         static readonly int IdPuuNormaali = Shader.PropertyToID("_Normaali"), IdPuuNormaaliPaalla = Shader.PropertyToID("_NormaaliPaalla");
+        internal static readonly int IdHivutusAlku = Shader.PropertyToID("_HivutusAlku");
         sealed class Kortti { public float U0, U1, V0, V1, KorttiPerPuu = 1.04f, LeveysPerKorkeus = 0.5f; }
 
         IEnumerator LataaPuut(Ymparisto y, DioraamaUlkokuori.Laatu taso, Func<string, string> url, Action<string> kirjaa, int oma)
@@ -633,10 +685,16 @@ namespace Matkakirja.Natiivi
 
             var atlas = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
             { name = "Ymparisto:puukortit", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+            float r0 = DioraamaRuutu.Alku();
             if (!atlas.LoadImage(atlasTavut, false)) { UnityEngine.Object.Destroy(atlas); kirjaa?.Invoke("poikki: ympäristö: puukorttien atlas ei jäsentynyt"); yield break; }
-            atlas.Compress(true);
-            atlas.Apply(true, true);
             luodut.Add(atlas);
+            DioraamaRuutu.Kirjaa(kirjaa, "puukortit LoadImage", r0);
+            yield return null;
+            r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "puukortit Compress", r0);
+            yield return null;
+            atlas.Apply(true, true);
+            yield return null;
+            if (oma != kerta) yield break;
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaPuu");
             if (varjostin == null) { kirjaa?.Invoke("poikki: ympäristö: DioraamaPuu-varjostin puuttuu"); yield break; }
             var mat = new Material(varjostin) { name = "Ymparisto:puut" };
@@ -651,11 +709,17 @@ namespace Matkakirja.Natiivi
                 if (oma != kerta) yield break;
                 var norm = new Texture2D(2, 2, TextureFormat.RGBA32, true, true)
                 { name = "Ymparisto:puukortit-normaali", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+                r0 = DioraamaRuutu.Alku();
                 if (normTavut != null && norm.LoadImage(normTavut, false) && norm.width == atlas.width && norm.height == atlas.height)
                 {
-                    norm.Compress(true);
-                    norm.Apply(true, true);
                     luodut.Add(norm);
+                    DioraamaRuutu.Kirjaa(kirjaa, "puukortit-normaali LoadImage", r0);
+                    yield return null;
+                    r0 = DioraamaRuutu.Alku(); norm.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "puukortit-normaali Compress", r0);
+                    yield return null;
+                    norm.Apply(true, true);
+                    yield return null;
+                    if (oma != kerta) yield break;
                     mat.SetTexture(IdPuuNormaali, norm);
                     mat.SetFloat(IdPuuNormaaliPaalla, 1);
                     normaaliTila = $"{norm.width}×{norm.height}";
@@ -667,6 +731,9 @@ namespace Matkakirja.Natiivi
             mesh.RecalculateBounds();
             mesh.UploadMeshData(true);
             luodut.Add(mesh);
+            yield return null;
+            if (oma != kerta) yield break;
+            mat.SetFloat(IdHivutusAlku, Time.timeSinceLevelLoad); // DioraamaPuu: alfaraja laskee 0,5 s:ssa → puut kasvavat näkyviin
             var t = new GameObject("Ymparisto:puut") { layer = DioraamaNayttamo.Kerros };
             t.transform.SetParent(go.transform, false);
             t.AddComponent<MeshFilter>().sharedMesh = mesh;
@@ -687,6 +754,20 @@ namespace Matkakirja.Natiivi
             luodut.Clear();
             if (go != null) UnityEngine.Object.Destroy(go);
             go = null; vesiGo = null; vesiRenderer = null; vesiMat = null; heijastusKamera = null; taivasGo = null; taivasMat = null;
+        }
+    }
+
+    /// <summary>ENSILATAUS v2 (Päätoimittaja 1.10.2026: "kun linna on näkyvissä, yksikään ruutu ei kestä yli ~100 ms"):
+    /// pääsäikeen raskaat vaiheet (LoadImage, Compress, Apply = GPU-lataus, mesh-lataus) tehdään kukin omassa ruudussaan
+    /// (kutsuja tekee yield return null väliin), ja yli 40 ms:n vaihe kirjataan lokiin ("poikki: raskas …"), jotta laite-
+    /// mittaus näyttää jäljelle jääneet piikit.</summary>
+    internal static class DioraamaRuutu
+    {
+        public static float Alku() => Time.realtimeSinceStartup;
+        public static void Kirjaa(Action<string> kirjaa, string vaihe, float alku)
+        {
+            float ms = (Time.realtimeSinceStartup - alku) * 1000f;
+            if (ms > 40f) kirjaa?.Invoke($"poikki: raskas {vaihe} {ms:F0} ms");
         }
     }
 }

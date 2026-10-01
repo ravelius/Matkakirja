@@ -164,13 +164,18 @@ namespace Matkakirja.Natiivi
 
             var atlas = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
             { name = "Ymparisto:aluskasvit", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+            float r0 = DioraamaRuutu.Alku();
             if (!atlas.LoadImage(atlasTavut, false)) { UnityEngine.Object.Destroy(atlas); kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei jäsentynyt"); yield break; }
+            luodut.Add(atlas);
+            DioraamaRuutu.Kirjaa(kirjaa, "aluskasvit LoadImage", r0);
+            yield return null; // ensilataus v2: raskaat vaiheet omiin ruutuihinsa (DioraamaRuutu)
             // ETC/ASTC-pakkaus vaatii mip-tasoilta 4:n monikerrat: 1280 × 512 -atlas (5 × 2 solua) ei kelpaa (laite 1.10.: "mip level 7
             // with dimensions 10×4"), joten pakataan vain kahden potenssin atlas. Pakkaamaton 1280 × 512 on ~3,5 Mt mipeineen.
             bool pot = Mathf.IsPowerOfTwo(atlas.width) && Mathf.IsPowerOfTwo(atlas.height);
-            if (pot) atlas.Compress(true);
+            if (pot) { r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "aluskasvit Compress", r0); yield return null; }
             atlas.Apply(true, true);
-            luodut.Add(atlas);
+            yield return null;
+            if (!voimassa()) yield break;
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaPuu");
             if (varjostin == null) { kirjaa?.Invoke("poikki: ympäristö: DioraamaPuu-varjostin puuttuu (aluskasvit)"); yield break; }
             var mat = new Material(varjostin) { name = "Ymparisto:aluskasvit" };
@@ -193,6 +198,8 @@ namespace Matkakirja.Natiivi
                 mesh.RecalculateBounds();
                 mesh.UploadMeshData(true);
                 luodut.Add(mesh);
+                yield return null;
+                if (!voimassa()) yield break;
                 var go = new GameObject("Ymparisto:aluskasvit") { layer = DioraamaNayttamo.Kerros };
                 go.transform.SetParent(isa, false);
                 go.AddComponent<MeshFilter>().sharedMesh = mesh;
@@ -200,9 +207,11 @@ namespace Matkakirja.Natiivi
                 rr.sharedMaterial = mat;
                 rr.shadowCastingMode = ShadowCastingMode.Off;
                 rr.receiveShadows = false;
-                rr.enabled = !Pois;
+                rr.enabled = false; // päälle kun kaikki osat ovat GPU:lla, häivytyksellä (DioraamaPuu _HivutusAlku)
                 piirrot.Add(rr);
             }
+            mat.SetFloat(DioraamaYmparisto.IdHivutusAlku, Time.timeSinceLevelLoad);
+            foreach (var r in piirrot) r.enabled = !Pois;
             kirjaa?.Invoke($"poikki: ympäristö: aluskasvit {kasveja} ({kolmiot.Length / 3} kolmiota, {piirrot.Count} osaa, {atlas.width}×{atlas.height} {atlas.format}), {Time.realtimeSinceStartup - alku:F1} s");
         }
     }
