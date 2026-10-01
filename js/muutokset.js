@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2498, teksti: 'Peruskartta 2026-09-30: raeton, ohuet joet, Perekop pois' },
   { v: 2497, teksti: 'rakenna.mjs: linnan puheet aanet-pankkiin (#3785)' },
   { v: 2496, teksti: 'Tietoturva: Sähkeen jäsenavain otsakkeeseen (#3779)' },
   { v: 2495, teksti: 'Olavinlinna: ympäristön kuville ASTC-mipketjut (#3774)' },
