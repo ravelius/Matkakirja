@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2496, teksti: 'Tietoturva: Sähkeen jäsenavain otsakkeeseen (#3779)' },
   { v: 2495, teksti: 'Olavinlinna: ympäristön kuville ASTC-mipketjut (#3774)' },
   { v: 2494, teksti: 'Tietoturva: kuratointiavain otsakkeeseen (#3777)' },
   { v: 2493, teksti: 'Maakuntien toinen kuva: BLR, CZE, CHE (#3754)' },

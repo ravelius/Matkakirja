@@ -79,7 +79,7 @@ import { startQuizTimer, stopQuizTimer } from './visa.js';
  *                          → {koodi, jasenId, avain}
  *   POST /retkikunta/liity {koodi, nimimerkki}
  *                          → {jasenId, avain, jasenet}
- *   GET  /retkikunta/tila?koodi&jasenId&avain
+ *   GET  /retkikunta/tila?koodi&jasenId (avain otsakkeessa x-sahke-avain)
  *                          → {jasenet,
  *                             sahkeet:      [{id, lahettaja, pohjaId, paikkaId, aika}],
  *                             apupyynnot:   [{apuId, kysyja, kysymys, vaihtoehdot, aika}],
@@ -332,7 +332,7 @@ function sahkeMerkitseNahdyksi(...tunnukset) {
  * verkkovirhettä pelin läpi. Aikakatkaisu on oma, koska selaimen oma
  * odotus voi olla minuutteja — ja sähke on nopea tai sitä ei ole.
  */
-async function sahkeKutsu(polku, { method = 'GET', body = null } = {}) {
+async function sahkeKutsu(polku, { method = 'GET', body = null, otsakkeet = {} } = {}) {
   if (!SAHKE_OSOITE) throw new Error('Sähkelinjaa ei ole kytketty');
   const ohjain = new AbortController();
   const katko = setTimeout(() => ohjain.abort(), SAHKE_AIKAKATKO_MS);
@@ -340,7 +340,8 @@ async function sahkeKutsu(polku, { method = 'GET', body = null } = {}) {
     const vastaus = await fetch(`${SAHKE_OSOITE}${polku}`, {
       method,
       signal: ohjain.signal,
-      ...(body ? { headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) } : {}),
+      headers: { ...otsakkeet, ...(body ? { 'content-type': 'application/json' } : {}) },
+      ...(body ? { body: JSON.stringify(body) } : {}),
     });
     let data = null;
     try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
@@ -363,10 +364,9 @@ function sahkeLiityRetkikuntaan(koodi, nimimerkki) {
 
 /** Retkikunnan tila: jäsenet, sähkeet, apupyynnöt ja apuvastaukset. */
 function sahkeHaeTila(tunnus) {
-  const kysely = new URLSearchParams({
-    koodi: tunnus.koodi, jasenId: tunnus.jasenId, avain: tunnus.avain,
-  });
-  return sahkeKutsu(`/retkikunta/tila?${kysely}`);
+  // Jäsenavain otsakkeessa, ei osoitteessa (1.10.2026: ?avain= jäi palvelinlokeihin; worker AVAIN_OTSAKE).
+  const kysely = new URLSearchParams({ koodi: tunnus.koodi, jasenId: tunnus.jasenId });
+  return sahkeKutsu(`/retkikunta/tila?${kysely}`, { otsakkeet: { 'x-sahke-avain': tunnus.avain } });
 }
 
 /** Sähke retkikunnalle. */
