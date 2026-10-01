@@ -600,6 +600,8 @@ namespace Matkakirja.Natiivi
             if (kaari.HasValue && ky.KaariTarina(kaupunki) != null)
                 return (kaari.Value.Yritykset > 0 ? "Viimeinen mahdollisuus tavata" : tapaa, false);
             if (pulmat?.Odottaa() != null || m.LaattaKaupungissa() != null) return ("Etsi kätkö", false);
+            // Lautapelin kohtaaminen (Peliluettelo): vasta kun kaari on käyty eikä tutkittavaa ole.
+            if (!ky.VoiTutkia(kaupunki) && ky.PeliOdottaa?.Invoke(m.Tila.Pelaaja) is string peli) return (peli, false);
             if (kaari.HasValue)
                 return kaari.Value.Onnistui ? (tapaa, true) : ((kaari.Value.Kohde.Nimi ?? "Henkilö") + " ei tavattavissa", true);
             return ky.TehtavaTarjolla(m.Tila.Pelaaja) ? (tapaa, false) : ((string, bool)?)null;

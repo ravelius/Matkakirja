@@ -311,6 +311,10 @@ namespace Matkakirja.Peli
         public Action<string> AarreLukittuu;
         public Func<Pelaaja, bool> PulmaOdottaa;
         public Func<TekoTulos> AvaaPulma;
+        /// <summary>Lautapelin kohtaaminen (Peli/Pelit/Peliluettelo.Kytke): tehtävänapin teksti tai null, ja avaus.
+        /// Pienin etusija: vasta kun kaari, pulma, laatta ja tutkiminen on tehty (kieltäytyminen ei estä aarteita).</summary>
+        public Func<Pelaaja, string> PeliOdottaa;
+        public Func<TekoTulos> AvaaPeli;
         /// <summary>Lippukysymyksen maat (web countryShapes-järjestyksessä). null = ei lippumuotoa.</summary>
         public IReadOnlyList<Lippumaa> Liput;
 
@@ -353,7 +357,8 @@ namespace Matkakirja.Peli
             return Laatta(kaupunki)
                 || (PulmaOdottaa != null && PulmaOdottaa(p))
                 || KaariTarina(kaupunki) != null
-                || VoiTutkia(kaupunki);
+                || VoiTutkia(kaupunki)
+                || (PeliOdottaa != null && PeliOdottaa(p) != null);
         }
 
         /// <summary>Web canExplore: laataton, kaareton, tutkimaton kaupunki, jolle on kysyttävää.</summary>
@@ -558,6 +563,7 @@ namespace Matkakirja.Peli
             if (laatta == null && kaari == null)
             {
                 if (!vaikea && nykyinen != null && VoiTutkia(nykyinen)) return AvaaTutkimus(nykyinen);
+                if (!vaikea && muoto == null && AvaaPeli != null && PeliOdottaa?.Invoke(p) != null) return AvaaPeli();
                 return TekoTulos.Epaonnistui("Täällä ei ole laattaa");
             }
             if (vaikea && !VaikeitaTarjolla(laatta)) return TekoTulos.Epaonnistui("Täällä ei ole vaikeita kysymyksiä");

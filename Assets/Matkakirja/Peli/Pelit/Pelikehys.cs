@@ -167,6 +167,7 @@ namespace Matkakirja.Peli.Pelit
         {
             var streak = t.Paiva != null ? matka.KirjaaPelipaiva(t.Paiva) : null;
             matka.KirjaaTapahtuma("peli", Matkakirjarivi(t));
+            if (t.PeliId != null) Peliluettelo.Kirjaa(matka.Tila.Pelaaja, t.PeliId, Palkitaan(t));
             int palkkio = Rahapalkkio(t, talous);
             if (palkkio > 0) matka.Tila.Pelaaja.Raha += palkkio;
             return (streak, palkkio);

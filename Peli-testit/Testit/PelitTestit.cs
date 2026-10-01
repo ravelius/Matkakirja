@@ -1,0 +1,108 @@
+// Lautapelien kohtaaminen ja kirjaus (Peli/Pelit/Peliluettelo.cs, Pelitila versio 9): pelin maat vain Euroopasta,
+// kohtaaminen kyselyn tehtävänä vasta muiden tehtävien jälkeen (Kysely.PeliOdottaa/AvaaPeli, Natiivi.KysymysApu.TehtavaNappi),
+// pelattu peli ei toistu kohtaamisena, Laukun Pelit-lista ja tallennus 8 → 9. ./kaanna.sh Pelit
+using System.Collections.Generic;
+using System.Linq;
+using Matkakirja.Peli.Pelit;
+
+namespace Matkakirja.Peli.Testit
+{
+    public static class PelitTestit
+    {
+        static Reittiverkko Verkko() => new Reittiverkko(
+            new List<Kaupunki>
+            {
+                new Kaupunki { Id = "berliini", Nimi = "Berliini", Maa = "DEU", Manner = "europe" },
+                new Kaupunki { Id = "lontoo", Nimi = "Lontoo", Maa = "GBR", Manner = "europe" },
+                new Kaupunki { Id = "bermuda", Nimi = "Bermuda", Maa = "GBR", Manner = "northamerica" },
+                new Kaupunki { Id = "pariisi", Nimi = "Pariisi", Maa = "FRA", Manner = "europe" },
+            },
+            new List<Reitti>
+            {
+                new Reitti { Id = "berliini|lontoo", A = "berliini", B = "lontoo", Laji = ReitinLaji.Maa, Askeleet = 1 },
+                new Reitti { Id = "lontoo|pariisi", A = "lontoo", B = "pariisi", Laji = ReitinLaji.Maa, Askeleet = 1 },
+                new Reitti { Id = "lontoo|bermuda", A = "lontoo", B = "bermuda", Laji = ReitinLaji.Meri, Askeleet = 2 },
+            });
+
+        static (Matka, Kysely) Uusi(string alku)
+        {
+            var m = Matka.Luo(Verkko(), new Satunnainen(3), "Fogg", alku);
+            var ky = new Kysely(m, new Kysymysdata());
+            m.AloitaVuoro();
+            return (m, ky);
+        }
+
+        [Testi] static void PelinMaatVainEuroopasta()
+        {
+            var v = Verkko();
+            Oleta.Sama("Saksa / Mühle", Kuvaus(v, "berliini"));
+            Oleta.Sama("Iso-Britannia / Nine Men's Morris", Kuvaus(v, "lontoo"));
+            Oleta.Sama("-", Kuvaus(v, "bermuda"), "GBR:n merentakainen alue ei ole Eurooppaa");
+            Oleta.Sama("-", Kuvaus(v, "pariisi"));
+        }
+
+        static string Kuvaus(Reittiverkko v, string id) =>
+            Peliluettelo.Kaupungille(v.Kaupungit[id]) is (PeliKuvaus p, PeliMaa m) ? m.MaanNimi + " / " + m.PaikallinenNimi : "-";
+
+        [Testi] static void KohtaaminenOnKyselynTehtavaJaAvaaPelin()
+        {
+            var (m, ky) = Uusi("berliini");
+            (PeliKuvaus Peli, PeliMaa Maa, Kaupunki K)? avattu = null;
+            Peliluettelo.Kytke(ky, (p, maa, k) => avattu = (p, maa, k));
+            Oleta.Tosi(ky.TehtavaTarjolla(m.Tila.Pelaaja), "pelin kaupungissa tehtävä tarjolla");
+            Oleta.Sama("Pelaa myllyä", Natiivi.KysymysApu.TehtavaNappi(ky, "berliini")?.Teksti, "nykyinen tehtävänappi, uusi teksti");
+            m.Tila.Vaihe = Vaihe.Toiminta; // kuten KyselyTestit: vuoron toimintavaihe
+            var t = ky.Tutki();
+            Oleta.Tosi(t.Ok, t.Virhe);
+            Oleta.Tosi(avattu.HasValue && avattu.Value.Maa.MaanNimi == "Saksa" && avattu.Value.K.Nimi == "Berliini", "avaa pelin maassa");
+            Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe, "peli ei avaa kysymystä");
+        }
+
+        [Testi] static void PelattuPeliEiToistuKohtaamisena()
+        {
+            var (m, ky) = Uusi("berliini");
+            Peliluettelo.Kytke(ky, (p, maa, k) => { });
+            Pelikehys.Kirjaa(m, new PeliTulos { PeliId = "mylly", Nimi = "Mylly", Vastustaja = Vastustaja.Kaveri, Voittaja = 1, Siirtoja = 30, Paiva = "2026-10-01" }, PelinTalous.Minipeli);
+            Oleta.Tosi(!ky.TehtavaTarjolla(m.Tila.Pelaaja), "pelattu: ei enää kohtaamista");
+            Oleta.Sama((string)null, Natiivi.KysymysApu.TehtavaNappi(ky, "berliini")?.Teksti);
+            Oleta.Sama(1, m.Tila.Pelaaja.Pelit.Single().Pelattu);
+            Oleta.Sama(0, m.Tila.Pelaaja.Pelit.Single().Voitot, "kaveripeli ei ole bottivoitto");
+            Pelikehys.Kirjaa(m, new PeliTulos { PeliId = "mylly", Nimi = "Mylly", Vastustaja = Vastustaja.BottiHelppo, Voittaja = 0, Siirtoja = 40 }, PelinTalous.Minipeli);
+            Oleta.Sama("2/1", $"{m.Tila.Pelaaja.Pelit.Single().Pelattu}/{m.Tila.Pelaaja.Pelit.Single().Voitot}");
+        }
+
+        [Testi] static void EiPelinMaassaEiKohtaamista()
+        {
+            var (m, ky) = Uusi("pariisi");
+            Peliluettelo.Kytke(ky, (p, maa, k) => { });
+            Oleta.Tosi(!ky.TehtavaTarjolla(m.Tila.Pelaaja), "Ranska ei ole myllyn maa");
+        }
+
+        [Testi] static void TallennusVersio9JaVanhaIlmanPelejä()
+        {
+            Oleta.Sama(9, Pelitila.TallennusVersio);
+            var (m, _) = Uusi("berliini");
+            Oleta.Tosi(!m.Tallenna().Contains("\"pelit\""), "tyhjää ei kirjoiteta");
+            Peliluettelo.Kirjaa(m.Tila.Pelaaja, "mylly", true);
+            var json = m.Tallenna();
+            Oleta.Tosi(json.Contains("\"pelit\":[{\"id\":\"mylly\",\"pelattu\":1,\"voitot\":1}]"), "kirjoitettu");
+            var l = Matka.Lataa(Verkko(), json);
+            Oleta.Sama("mylly 1/1", string.Join(",", l.Tila.Pelaaja.Pelit.Select(g => $"{g.Id} {g.Pelattu}/{g.Voitot}")), "luettu takaisin");
+            // Migraatio 8 → 9: versio 8 ilman pelit-kenttää latautuu, Pelit tyhjä.
+            var vanha = Matka.Lataa(Verkko(), json.Replace(",\"pelit\":[{\"id\":\"mylly\",\"pelattu\":1,\"voitot\":1}]", "")
+                .Replace("\"versio\":" + Pelitila.TallennusVersio, "\"versio\":8"));
+            Oleta.Sama(0, vanha.Tila.Pelaaja.Pelit.Count, "8 → 9: pelit tyhjä");
+            Oleta.Tosi(vanha.Tallenna().Contains("\"versio\":9"), "tallentuu versiona 9");
+        }
+
+        [Testi] static void LaukkuListaaPelatut()
+        {
+            var (m, _) = Uusi("berliini");
+            Oleta.Sama(0, Natiivi.Laukku.Rakenna(m, null, null).Pelit.Count);
+            Peliluettelo.Kirjaa(m.Tila.Pelaaja, "mylly", false);
+            Peliluettelo.Kirjaa(m.Tila.Pelaaja, "mylly", true);
+            var g = Natiivi.Laukku.Rakenna(m, null, null).Pelit.Single();
+            Oleta.Sama("Mylly: Pelattu 2 kertaa · voittoja bottia vastaan 1", g.Nimi + ": " + g.Selite);
+        }
+    }
+}

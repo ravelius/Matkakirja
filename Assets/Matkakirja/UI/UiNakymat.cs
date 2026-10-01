@@ -112,6 +112,7 @@ namespace Matkakirja.Natiivi
             // selite faktarivinä ja "+N tp" rahan paikalla.
             // Kuva dioraaman paketista: osoitin (uusin.json) ratkaistaan ensin (MatkamuistoKuvat).
             UiKerros.Hae().StartCoroutine(MatkamuistoKuvat.Ratkaise());
+            PeliOhjain.AvaaLautapeli = (peli, maa, k) => UiKerros.PaaSaikeessa(() => MyllyNakyma.Kohtaaminen(peli, maa, k?.Nimi));
             PeliOhjain.NaytaMatkamuisto = m => UiKerros.PaaSaikeessa(() => UiKerros.Hae().StartCoroutine(MatkamuistoKuvat.Ratkaise(() =>
                 Hae().Paljastus.Nayta(new KysymysNaytto
                 {

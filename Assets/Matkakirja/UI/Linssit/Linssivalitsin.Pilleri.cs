@@ -319,6 +319,16 @@ namespace Matkakirja.Natiivi
                 Osio("Matkamuistot", d.Matkamuistot.Count, -1);
                 foreach (var m in d.Matkamuistot) AarreRivi("muisto:" + m.Id, m.Nimi, m.KuvaUrl, m.Selite, () => Suurenna(m.KuvaUrl, m.Nimi));
             }
+            // PELIT (Siirtoseppä 1.10.2026, Päätoimittajan linjaus): pelatut lautapelit; napautus avaa pelin uudelleen.
+            if (d.Pelit?.Count > 0)
+            {
+                Osio("Pelit", d.Pelit.Count, -1);
+                foreach (var g in d.Pelit)
+                {
+                    var id = g.Id;
+                    AarreRivi("peli:" + id, g.Nimi, null, g.Selite, () => { Sulje(); MyllyNakyma.AvaaPeli(id); });
+                }
+            }
             Osio("Julisteet", d.Julisteet.Count, d.JulisteitaKaikkiaan);
             var avaimet = d.Julisteet.Select(j => j.Avain).ToList();
             foreach (var j in d.Julisteet)

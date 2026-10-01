@@ -20,11 +20,29 @@ namespace Matkakirja.Natiivi
     {
         static MyllyNakyma instanssi;
         public static MyllyNakyma Hae() => instanssi ??= new MyllyNakyma(UiKerros.Hae());
+        /// <summary>Kohtaaminen kaupungissa (Peliluettelo.Kytke → PeliOhjain.AvaaLautapeli): maan nimi kapiteeliin, paikallinen
+        /// nimi apuriville, kaupunki matkakirjaan.</summary>
+        public static void Kohtaaminen(PeliKuvaus peli, PeliMaa maa, string kaupunki)
+        {
+            var n = Hae();
+            n.Maa = maa?.MaanNimi; n.PaikallinenNimi = maa?.PaikallinenNimi; n.Paikka = kaupunki;
+            n.Avaa();
+        }
+
+        /// <summary>Uusintapeli Aarteiden Pelit-riviltä (ei paikkaa eikä maata).</summary>
+        public static void AvaaPeli(string id)
+        {
+            if (id != Peliluettelo.Mylly.Id) return;
+            var n = Hae();
+            n.Maa = null; n.PaikallinenNimi = null; n.Paikka = null;
+            n.Avaa();
+        }
+
         /// <summary>UiNakymat.SuljeKaikki: ei luo näkymää, jos sitä ei ole avattu.</summary>
         public static void SuljeJosAuki() => instanssi?.Sulje();
 
         /// <summary>Paikan tiedot kohteelta (pelikatalogi: Mühle Saksassa, Mlin Serbiassa, Moara Moldovassa).</summary>
-        public string Paikka = null, PaikallinenNimi = "Mühle", Maa = "Saksa";
+        public string Paikka = null, PaikallinenNimi = null, Maa = null;
 
         readonly VisualElement juuri, peliTaso, paneeli, korttiTaso;
         readonly MyllyLauta lauta;
@@ -163,8 +181,11 @@ namespace Matkakirja.Natiivi
             }
             if (k == valintaKortti)
             {
-                valintaKortti.Q<Label>(className: "mk-peli__valinta-kapiteeli").text = (Maa ?? "") + (Paikka != null ? " · " + Paikka : " · kohtaaminen");
-                valintaKortti.Q<Label>(className: "mk-peli__valinta-ala").text = "Sama peli on Saksassa Mühle, Serbiassa Mlin ja Moldovassa Moara.";
+                // Kapiteeliin maa (Päätoimittaja: "Saksa · kohtaaminen"), apuriville paikallinen nimi; uusinnassa pelin nimet.
+                valintaKortti.Q<Label>(className: "mk-peli__valinta-kapiteeli").text = Maa != null ? Maa + " · kohtaaminen" : "Mylly · uusintapeli";
+                valintaKortti.Q<Label>(className: "mk-peli__valinta-ala").text = PaikallinenNimi != null
+                    ? $"Täällä peliä kutsutaan nimellä {PaikallinenNimi}."
+                    : "Sama peli tunnetaan nimillä Mühle, Nine Men's Morris, Mlin ja Moara.";
                 ValitseVastustaja(vastustaja);
             }
             korttiTaso.style.display = DisplayStyle.Flex;
@@ -280,7 +301,7 @@ namespace Matkakirja.Natiivi
             paattynyt = true; bottiMiettii = false; kerta++;
             var tulos = new PeliTulos
             {
-                PeliId = "DEU-2", Nimi = "Mylly", PaikallinenNimi = PaikallinenNimi, Paikka = Paikka, Vastustaja = vastustaja,
+                PeliId = Peliluettelo.Mylly.Id, Nimi = "Mylly", PaikallinenNimi = PaikallinenNimi, Paikka = Paikka, Vastustaja = vastustaja,
                 Voittaja = voittaja, Siirtoja = peli.Siirtoja, Paiva = DateTime.Now.ToString("yyyy-MM-dd"),
             };
             int palkkio = 0;
@@ -321,7 +342,7 @@ namespace Matkakirja.Natiivi
         {
             if (peli == null) return;
             bool kaveri = vastustaja == Vastustaja.Kaveri;
-            kapiteeli.text = "Mylly · " + PaikallinenNimi + " · " + Maa;
+            kapiteeli.text = "Mylly" + (PaikallinenNimi != null ? " · " + PaikallinenNimi : "") + (Maa != null ? " · " + Maa : "");
             nimi0.text = kaveri ? "Vaalea" : "Sinä";
             nimi1.text = kaveri ? "Tumma" : Pelikehys.VastustajanNimi(vastustaja).Replace("botti (", "Botti · ").TrimEnd(')');
             lukema0.text = Lukema(0); lukema1.text = Lukema(1);
