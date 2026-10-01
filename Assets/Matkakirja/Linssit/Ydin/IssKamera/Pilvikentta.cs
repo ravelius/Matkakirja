@@ -21,6 +21,11 @@ namespace Matkakirja.Linssit.IssKamera
         public double TuuliAst = 72;
         public int Siemen = 1873;
         public double VarjonVoima = 0.35;
+        /// <summary>
+        /// Peiton kerroin (Päätoimittaja 1.10.: "muutama kesäpilvi varjoineen"; julisteessa valkoiset läiskät Suomen ja Viron
+        /// päällä): 0,6 → keskimäärin ~8–12 % pilveä maalla (aiemmin ~15–20 %).
+        /// </summary>
+        public double PeittoKerroin = 0.6;
 
         const double Iso = 100000, Meso = 21000, Jono = 3700, Solu = 1300, Hieno = 500, Venytys = 3.5;
         readonly double[] kynnys = new double[201];
@@ -90,7 +95,7 @@ namespace Matkakirja.Linssit.IssKamera
         double Tiheys(double x, double y, double lat, double lon, bool hieno = true)
         {
             double ranta = MaaOsuus == null ? 1 : Askel(0.80, 0.97, MaaOsuus(lat, lon));
-            double peitto = Math.Max(0, Math.Min(0.42, 0.20 + 0.11 * Kohina(x / Iso, y / Iso, 11) + 0.07 * Kohina(x / Meso, y / Meso, 12))) * ranta;
+            double peitto = Math.Max(0, Math.Min(0.42, 0.20 + 0.11 * Kohina(x / Iso, y / Iso, 11) + 0.07 * Kohina(x / Meso, y / Meso, 12))) * ranta * PeittoKerroin;
             if (peitto <= 0.001) return -10;
             double k = peitto * 200; int i = (int)k; double t = k - i;
             double T = i >= 200 ? kynnys[200] : kynnys[i] * (1 - t) + kynnys[i + 1] * t;
