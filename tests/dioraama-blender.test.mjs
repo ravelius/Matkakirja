@@ -65,8 +65,19 @@ test('jokainen js/dioraama/rakennukset/<id>/blender.json tuottaa hyväksytyn pak
     const rivit = lisaaBlender(json, blender);
     assert.doesNotThrow(() => tarkistaBlenderPaketti(json, blender), id);
     assert.equal(rivit.length, blender.tiedostot.length, id);
-    assert.ok(json.tilat.length > 0 && json.tilat.every((t) => t.glb.tiedosto.startsWith('blender/tilat/')), id);
+    assert.ok(json.tilat.length > 0 && json.tilat.every((t) => t.glb?.tiedosto.startsWith('blender/tilat/') || (t.kohdistettava === false && !t.glb)), id);
   }
+});
+
+test('äänitila: massa jää Blender-pakettiin ilman glb:tä vain äänikentin (yleisnäkymän taustaäänet, Siirtoseppä 30.9.)', () => {
+  const json = kopio(RAKENNUS);
+  lisaaBlender(json, B);
+  const massa = json.tilat.find((t) => t.id === 'massa');
+  assert.ok(massa, 'massa puuttuu');
+  assert.deepEqual(Object.keys(massa).sort(), ['aanet', 'id', 'kohdistettava', 'nimi', 'rajat', 'tehosteet']);
+  assert.ok(massa.aanet.length > 0);
+  assert.doesNotThrow(() => tarkistaBlenderPaketti(json, B));
+  for (const t of json.tilat.filter((x) => x.kohdistettava !== false)) assert.ok(t.glb.tiedosto.startsWith('blender/'), t.id);
 });
 
 test('kuoren huippu-taso: 8k-atlas vain jos se on blender.json:ssa, muuten 4k (laatusuunnitelma 30.9.)', () => {
@@ -97,4 +108,75 @@ test('kuoren detalji (hybridi-PBR, menetelmä B): vain jos maski ja 4 kirjastoma
   assert.equal(d.maski, 'blender/ulkokuori/hybridi/kuori-materiaali-2k.png');
   assert.deepEqual(d.kanavat.map((k) => k.id), idt);
   for (const k of d.kanavat) assert.ok(k.diff.startsWith('blender/kirjasto/') && k.nor.endsWith('_nor_gl.jpg') && k.toisto_m > 0, k.id);
+});
+
+test('ympäristö (vaihe 5, n1500): vain jos kaikki tiedostot ovat blender.json:ssa; Siirtosepän kenttänimet', () => {
+  const perus = B.tiedostot.filter((t) => !t.polku.startsWith('ymparisto/'));
+  const ilman = kopio(RAKENNUS);
+  lisaaBlender(ilman, { ...B, tiedostot: perus });
+  assert.equal(ilman.ymparisto, undefined);
+  const tiedostot = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`])]
+    .map((p) => ({ polku: `ymparisto/${p}`, sha256: 'c'.repeat(64), tavuja: 1 }));
+  const vajaa = kopio(RAKENNUS);
+  lisaaBlender(vajaa, { ...B, tiedostot: [...perus, ...tiedostot.slice(1)] });
+  assert.equal(vajaa.ymparisto, undefined, 'osittainen ympäristö ei kelpaa');
+  const kanssa = kopio(RAKENNUS);
+  lisaaBlender(kanssa, { ...B, tiedostot: [...perus, ...tiedostot] });
+  const y = kanssa.ymparisto;
+  assert.deepEqual(Object.keys(y).sort(), ['hamara', 'horisontti', 'horisontti_kuva', 'huippu', 'kevyt', 'normaali', 'orto', 'puukortit',
+    'puukortit_tiedot', 'puut', 'syvyys'].sort());
+  assert.match(y.orto.huippu, /ymparisto-8k-4x4\.astcm$/); assert.match(y.orto.kevyt, /ymparisto-2k-4x4\.astcm$/);
+  assert.match(y.hamara.puukortit, /puukortit-hamara\.png$/);
+  assert.ok(y.syvyys.kuva.startsWith('blender/ymparisto/') && y.syvyys.pikseli_m > 1 && y.syvyys.kerroin_m > 0 && y.syvyys.origo.length === 2);
+  for (const t of ['huippu', 'normaali', 'kevyt']) assert.ok(y[t].startsWith('blender/ymparisto/'), t);
+});
+
+test('ympäristön lähimaasto ja aluskasvit: mukana vain jos tiedostot ovat blender.json:ssa', () => {
+  const MAA = JSON.parse(readFileSync(new URL('../js/dioraama/rakennukset/olavinlinna/ymparisto-maasto.json', import.meta.url), 'utf8'));
+  const Y = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`])];
+  const M = ['splat-0.png', 'splat-1.png', 'splat-normaali-0.png', ...MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k.jpg`, `maasto/${k.lahde}_nor_gl_1k.jpg`]),
+    'aluskasvit.png', 'aluskasvit-hamara.png', 'aluskasvit.json', 'aluskasvit-lista.json'];
+  const t = (l) => l.map((p) => ({ polku: `ymparisto/${p}`, sha256: 'd'.repeat(64), tavuja: 1 }));
+  const perus = B.tiedostot.filter((x) => !x.polku.startsWith('ymparisto/'));
+  const ilman = kopio(RAKENNUS); lisaaBlender(ilman, { ...B, tiedostot: [...perus, ...t(Y)] });
+  assert.ok(ilman.ymparisto && !ilman.ymparisto.maasto && !ilman.ymparisto.aluskasvit);
+  const kanssa = kopio(RAKENNUS); lisaaBlender(kanssa, { ...B, tiedostot: [...perus, ...t(Y), ...t(M)] });
+  const m = kanssa.ymparisto.maasto;
+  assert.equal(m.maski.length, 2); assert.equal(m.kerrokset.length, 6); assert.equal(m.alue.length, 4); assert.ok(m.lahi_m > 0);
+  assert.match(m.maski_normaali, /splat-normaali-0\.png$/);
+  assert.match(kanssa.ymparisto.aluskasvit.lista, /aluskasvit-lista\.json$/);
+  assert.ok(!kanssa.ymparisto.taivas, 'taivas vain jos kuvat viety');
+  const taivas = kopio(RAKENNUS); lisaaBlender(taivas, { ...B, tiedostot: [...perus, ...t(Y), ...t(['taivas-2k.jpg', 'taivas-hamara-2k.jpg'])] });
+  assert.match(taivas.ymparisto.taivas, /taivas-2k\.jpg$/); assert.match(taivas.ymparisto.taivas_hamara, /taivas-hamara-2k\.jpg$/);
+  assert.equal(taivas.ymparisto.taivas_suunta, 270);
+  assert.ok(!taivas.ymparisto.puukortit_normaali);
+  const nor = kopio(RAKENNUS); lisaaBlender(nor, { ...B, tiedostot: [...perus, ...t(Y), ...t(['puukortit-normaali.png'])] });
+  assert.match(nor.ymparisto.puukortit_normaali, /puukortit-normaali\.png$/);
+});
+
+test('ympäristön ASTC-mipketjut (ensilataus v2): *_astc vain jos .astcm viety, png/jpg-kentät jäävät', () => {
+  const MAA = JSON.parse(readFileSync(new URL('../js/dioraama/rakennukset/olavinlinna/ymparisto-maasto.json', import.meta.url), 'utf8'));
+  const Y = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`]),
+    'splat-0.png', 'splat-1.png', 'splat-normaali-0.png', ...MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k.jpg`, `maasto/${k.lahde}_nor_gl_1k.jpg`]),
+    'aluskasvit.png', 'aluskasvit-hamara.png', 'aluskasvit.json', 'aluskasvit-lista.json', 'puukortit-normaali.png',
+    'taivas-2k.jpg', 'taivas-hamara-2k.jpg'];
+  const A = ['puukortit', 'puukortit-hamara', 'puukortit-normaali', 'horisontti-1k', 'horisontti-hamara-1k', 'taivas-2k',
+    'taivas-hamara-2k', 'aluskasvit', 'aluskasvit-hamara'].map((n) => `${n}-4x4.astcm`);
+  const t = (l) => l.map((p) => ({ polku: `ymparisto/${p}`, sha256: 'd'.repeat(64), tavuja: 1 }));
+  const perus = B.tiedostot.filter((x) => !x.polku.startsWith('ymparisto/'));
+  const ilman = kopio(RAKENNUS); lisaaBlender(ilman, { ...B, tiedostot: [...perus, ...t(Y)] });
+  assert.ok(!ilman.ymparisto.puukortit_astc && !ilman.ymparisto.taivas_astc && !ilman.ymparisto.aluskasvit.atlas_astc);
+  const y = (() => { const r = kopio(RAKENNUS); lisaaBlender(r, { ...B, tiedostot: [...perus, ...t(Y), ...t(A)] }); return r.ymparisto; })();
+  assert.match(y.puukortit, /puukortit\.png$/); assert.match(y.puukortit_astc, /puukortit-4x4\.astcm$/);
+  assert.match(y.hamara.puukortit_astc, /puukortit-hamara-4x4\.astcm$/);
+  assert.match(y.puukortit_normaali_astc, /puukortit-normaali-4x4\.astcm$/);
+  assert.match(y.horisontti_kuva_astc, /horisontti-1k-4x4\.astcm$/); assert.match(y.hamara.horisontti_kuva_astc, /horisontti-hamara-1k-4x4\.astcm$/);
+  assert.match(y.taivas_astc, /taivas-2k-4x4\.astcm$/); assert.match(y.taivas_hamara_astc, /taivas-hamara-2k-4x4\.astcm$/);
+  assert.match(y.aluskasvit.atlas_astc, /aluskasvit-4x4\.astcm$/); assert.match(y.aluskasvit.atlas_hamara_astc, /aluskasvit-hamara-4x4\.astcm$/);
 });

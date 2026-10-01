@@ -10,6 +10,8 @@
  *   TOIMINTO=kuiva    Syötteen tarkistus ja merkkimäärä, ei maksullisia kutsuja.
  *   TOIMINTO=generoi  MAKSULLINEN: yksi näytelause per rivi, eleven_v4, mp3 44,1 kHz 192 kbit/s (ei uudelleenkoodausta).
  *                     SYOTE = { "lupa": "…", "naytteet": [{ "hahmo", "ab": "A"|"B", "voice_id", "voice_nimi", "teksti" }] }
+ *                     Valinnaiset rivikentät: "malli" (eleven_v4 oletus | eleven_v3: kertoja/isoisä, omistaja 30.9.2026 klo 23.5x)
+ *                     ja "stability" (0–1, esim. 0.5 kuten matkakirjaluennoissa).
  *                     Tuottaa: naytteet/NN-hahmo-A.mp3 (alkuperäiset), kooste.mp3 (1 s tauot, luettelon järjestyksessä),
  *                     lista.md ja lista.json (hahmo, A/B, voice_id, voice_nimi, kesto, whisper-litterointi ja osuma %).
  *
@@ -27,6 +29,8 @@ const exec = promisify(execFile);
 const API = 'https://api.elevenlabs.io';
 const ULOS = 'hahmonaytteet-output';
 export const MALLI = 'eleven_v4';
+/** Sallitut mallit: v4 hahmoille ja Pululle, v3 vain kertojalle (isoisän ääni toimii sillä paremmin). */
+export const MALLIT = Object.freeze(['eleven_v4', 'eleven_v3']);
 export const MUOTO = 'mp3_44100_192';
 export const RAJAT = Object.freeze({ naytteita: 30, merkkeja: 4000, lause: 400 });
 
@@ -47,11 +51,14 @@ export function tarkistaGeneroi(syote) {
     assert.ok(['A', 'B', 'C'].includes(n.ab), `rivi ${i + 1}: ab on A, B tai C`);
     assert.match(String(n.voice_id), /^[A-Za-z0-9]{20}$/, `rivi ${i + 1}: voice_id`);
     assert.ok(typeof n.teksti === 'string' && n.teksti.trim().length > 0 && n.teksti.length <= RAJAT.lause, `rivi ${i + 1}: teksti`);
+    assert.ok(n.malli == null || MALLIT.includes(n.malli), `rivi ${i + 1}: malli ${MALLIT.join(' | ')}`);
+    assert.ok(n.stability == null || (typeof n.stability === 'number' && n.stability >= 0 && n.stability <= 1), `rivi ${i + 1}: stability 0–1`);
     const avain = `${tunnus(n.hahmo)}-${n.ab}`;
     assert.ok(!nahdyt.has(avain), `rivi ${i + 1}: ${avain} kahdesti`);
     nahdyt.add(avain);
     merkkeja += n.teksti.length;
     return { hahmo: n.hahmo.trim(), ab: n.ab, voice_id: n.voice_id, voice_nimi: String(n.voice_nimi ?? ''), teksti: n.teksti.trim(),
+      malli: n.malli ?? MALLI, ...(n.stability != null ? { stability: n.stability } : {}),
       tiedosto: `naytteet/${String(i + 1).padStart(2, '0')}-${avain}.mp3` };
   });
   assert.ok(merkkeja <= RAJAT.merkkeja, `enintään ${RAJAT.merkkeja} merkkiä (nyt ${merkkeja})`);
@@ -139,7 +146,8 @@ export async function generoi(syote, { ymp = process.env } = {}) {
     const v = await fetch(`${API}/v1/text-to-speech/${n.voice_id}?output_format=${MUOTO}`, {
       method: 'POST', redirect: 'error', signal: AbortSignal.timeout(180000),
       headers: { 'xi-api-key': ymp.ELEVEN_API_KEY, 'content-type': 'application/json', accept: 'audio/mpeg' },
-      body: JSON.stringify({ text: n.teksti, model_id: MALLI }),
+      body: JSON.stringify({ text: n.teksti, model_id: n.malli ?? MALLI,
+        ...(n.stability != null ? { voice_settings: { stability: n.stability } } : {}) }),
     });
     if (!v.ok) { rivit.push({ ...n, virhe: `HTTP ${v.status}` }); console.log(`${n.hahmo} ${n.ab}: HTTP ${v.status}`); continue; }
     const tavut = Buffer.from(await v.arrayBuffer());

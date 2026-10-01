@@ -17662,8 +17662,8 @@ export class UI {
    * Apurahan arvioijan esittelykortti (omistaja 30.9.2026): sama
    * pergamenttilappu kuin periaatteilla, matkakirjakortin otsikko ja
    * kursiivinen alaotsikko, kappaleet ja viiden kuvan rivi. Kuva avautuu
-   * kokoruutuun openLightboxilla (isäntä on tämä dialogi). Video tulee
-   * kortin alkuun, kun esittely.json saa video-kentän.
+   * kokoruutuun openLightboxilla (isäntä on tämä dialogi). Ei videota
+   * (omistaja 30.9.2026 klo 15.06); kuvarivin sarakkeet = kuvien määrä.
    */
   naytaApuraha(esittely) {
     sfx.play('paper');
@@ -17672,23 +17672,13 @@ export class UI {
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
 
-    if (esittely.video) {
-      const video = html('video', 'apuraha-video');
-      video.src = esittely.video.url;
-      if (esittely.video.kuva) video.poster = esittely.video.kuva;
-      video.controls = true;
-      video.playsInline = true;
-      video.preload = 'metadata';
-      kortti.appendChild(video);
-    }
-
     const otsikko = html('h2', 'apuraha-otsikko', esittely.otsikko);
     kortti.appendChild(otsikko);
     if (esittely.alaotsikko) kortti.appendChild(html('p', 'apuraha-alaotsikko', esittely.alaotsikko));
 
     for (const k of esittely.kappaleet) {
       if (k.otsikko) kortti.appendChild(html('h3', 'periaate-valiotsikko', k.otsikko));
-      if (k.teksti) kortti.appendChild(html('p', 'periaate-teksti apuraha-teksti', k.teksti));
+      if (k.teksti) kortti.appendChild(html('p', `periaate-teksti apuraha-teksti${k.korostus ? ' apuraha-teksti--korostus' : ''}`, k.teksti));
       if (k.lista?.length) {
         const ol = html('ol', 'apuraha-lista');
         for (const r of k.lista) ol.appendChild(html('li', null, r));
@@ -17725,6 +17715,7 @@ export class UI {
 
     if (esittely.kuvat.length) {
       const rivi = html('div', 'apuraha-kuvat');
+      rivi.style.setProperty('--apuraha-kuvia', String(esittely.kuvat.length));
       const lista = esittely.kuvat.map((k) => ({ src: k.tiedosto, caption: k.teksti || '' }));
       esittely.kuvat.forEach((k, i) => {
         const b = html('button', 'apuraha-kuva');
@@ -17734,6 +17725,8 @@ export class UI {
         img.src = k.tiedosto;
         img.alt = k.teksti || '';
         img.loading = 'lazy';
+        // Pikkukuvan painopiste (esittely.json "rajaus", esim. radion paneeli alhaalla: "50% 90%").
+        if (typeof k.rajaus === 'string' && /^\d{1,3}% \d{1,3}%$/.test(k.rajaus)) img.style.objectPosition = k.rajaus;
         b.appendChild(img);
         b.addEventListener('click', () => this.openLightbox(null, k.teksti || '', k.tiedosto, lista));
         rivi.appendChild(b);
@@ -19367,7 +19360,9 @@ export class UI {
     const esittely = typeof linssi?.esittely === 'string' ? linssi.esittely : null;
     return {
       id: hiomassa ? `hiomassa:${tunnus}` : tunnus,
-      nimi: kesken ? `${nimi} (keskeneräinen)` : nimi,
+      // Keskeneräisyys näkyy vain Keskeneräiset-väliotsikossa, ei nimessä (omistaja 29.9.2026 klo 23.0x,
+      // 1.0.56: "Maininta vain otsikossa, ei linssin nimessä"; natiivi Linssivalitsin.cs).
+      nimi,
       kuva,
       kuvaPieni: kuva,
       selite: hiomassa
