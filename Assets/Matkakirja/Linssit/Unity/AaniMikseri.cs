@@ -237,15 +237,18 @@ namespace Matkakirja.Natiivi
             List<MikseriSaadin> Rakenna()
             {
                 float A(string id, float oletus) => Arvo(muokattu, Avain(id), oletus);
-                var l = new List<MikseriSaadin> { S("huone", "Taustat yhteensä", 0, 200, A("huone", 100f)) };
-                foreach (var t in taustat) l.Add(S("tausta:" + t, RaidanNimi(t), 0, 200, A("tausta:" + t, 100f)));
-                l.Add(S("vaisto", "Väistö puheessa", 0, 100, A("vaisto", 100f)));
+                // Kaiku ensin (Natiivi-UI:n katselmus 1.10.: omistaja säätää juuri kaikua, näkyviin ilman vieritystä 45 %:n katolla),
+                // sitten väistö ja taustat.
+                var l = new List<MikseriSaadin>();
                 if (KaikuHuoneet.Contains(huone))
                 {
                     l.Add(S("kaiku-ab", "Kaiku", 0, 1, A("kaiku-ab", 1f), "", 0));
                     l.Add(S("kaiku", "Kaiun määrä", 0, 140, A("kaiku", 100f)));
                     l.Add(S("pitka", "Pitkä kaiku (holvi)", 0, 1, A("pitka", 0f), "", 0));
                 }
+                l.Add(S("vaisto", "Väistö puheessa", 0, 100, A("vaisto", 100f)));
+                l.Add(S("huone", "Taustat yhteensä", 0, 200, A("huone", 100f)));
+                foreach (var t in taustat) l.Add(S("tausta:" + t, RaidanNimi(t), 0, 200, A("tausta:" + t, 100f)));
                 return l;
             }
 
