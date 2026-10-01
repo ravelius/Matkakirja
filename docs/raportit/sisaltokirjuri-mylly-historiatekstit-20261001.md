@@ -73,3 +73,34 @@ Vuonna 1993 sveitsiläinen Ralph Gasser ETH Zürichistä ratkaisi pelin tietokon
 9. **Roomalaiset laudat:** Bergerin mukaan myllyä luultavasti tunnettiin Roomassa, mutta laudat ovat ajoittamattomia; jätin pois, koska muuten tarvittaisiin sama Kurnan varaus.
 
 Teksti on kirjoitettu olemassa oleviin pohjiin sopivaksi (lautavalinta, kohtaamiskortin apurivi, lehtijuttu); uusia esitystapoja ei tarvita.
+
+## 4. Alkuperätekstit Aarteet-näkymään (lisäys 1.10. klo ~21.2x)
+
+Jokaiselle laudalle 2–3 lausetta: mikä aito esikuva on, missä se nyt on, miltä ajalta ja mitä siitä tiedetään.
+
+**Majatalo 1873 — alkuperä**
+Lauta perustuu yleiseen 1800-luvun saksalaiseen Mühle-lautaan: kolme sisäkkäistä neliötä, joita yhdistävät viivat. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kotien ja majatalojen pelilautaa.
+
+**Katedraali 1300-luku — alkuperä**
+Esikuvana ovat englantilaisten katedraalien ristikäytävien kivipenkkeihin raaputetut keskiaikaiset pelilaudat, joita on Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä ja Westminster Abbeyssa. Ne ovat yhä paikoillaan ristikäytävissä; Gloucesterin laudat on tehnyt lähteen mukaan munkit, noviisit ja lauluopit vapaa-aikanaan. Laudat on tehty kuopista viivojen sijaan, eikä vinorivi tuonut voittoa.
+
+**Viikinkilaiva noin 900 — alkuperä**
+Esikuvana on Gokstadin laivahaudasta Norjasta löytynyt puinen pelilauta ja yksi sarvesta tehty pelinappula. Laudan toisella puolella on 13×13 ruutua (hnefatafl) ja toisella mylly; haudan laiva on rakennettu noin vuonna 890 kaadetuista puista, ja kaivaukset tehtiin vuonna 1880. Lauta on Oslon yliopiston Kulttuurihistoriallisen museon kokoelmissa; laudasta on säilynyt vain osa, eikä siinä ole merkintöjä, jotka tunnistaisivat sen peliksi epäilyksettä, joten tulkinta perustuu sen kokoon ja muotoon.
+
+## 5. Lukittujen lautojen apurivi
+
+- "Avautuu, kun voitat normaalin botin"
+- "Avautuu, kun voitat vaikean botin"
+
+### Lisälähteet (osiot 4–5)
+- Gloucester Cathedral cloisters, The Association of English Cathedrals: <https://englishcathedrals.co.uk/latest-news/fan-vaulting-cloisters-gloucester-cathedral/> (laudat ristikäytävän penkissä, munkit/noviisit/lauluopit; ristikäytävän viuhkaholvi 1350–1390-luvuilta)
+- Nine men's morris, Wikipedia (laudat Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä, Westminster Abbeyssa; kuopat viivojen sijaan; Chester): <https://en.wikipedia.org/wiki/Nine_men%27s_morris>
+- Tafl games, Wikipedia (Gokstadin lauta: 13×13 / mylly toisella puolella, sarvinappula): <https://en.wikipedia.org/wiki/Tafl_games>; Hnefatafl, Wikipedia: <https://en.wikipedia.org/wiki/Hnefatafl>
+- Gokstad ship, Wikipedia (puut kaadettu noin 890, kaivaus 1880): <https://en.wikipedia.org/wiki/Gokstad_ship>
+- Tafl.cyningstan.com, "Archaeological Finds": <http://tafl.cyningstan.com/page/92/archaeological-finds> (Gokstadin laudan osittaisuus, epäselvä tunnistus; Kulttuurihistoriallinen museo — tieto saatu hakutuloksen tiivistelmästä, sivua ei saatu auki)
+
+### Varaukset (osiot 4–5)
+10. **Majatalo:** yksittäistä esinettä ei löytynyt, joten teksti on yleinen ("tyypillinen 1800-luvun Mühle-lauta"). Jos haluat esinelähtöisen alkuperän, tarvitaan museoesine (esim. saksalaisen museon pelilauta).
+11. **Katedraalit:** "keskiaikainen" on kaikki, mitä lähteistä saa; yksittäisten laudojen tarkka ikä ei löytynyt. Gloucesterin ristikäytävä on 1350–1390-luvulta, mutta se ei ajoita laudat (laudat voivat olla myöhempiäkin). Westminster Abbeyn ja Canterburyn laudoista ei löytynyt tarkempaa sijaintia ristikäytävässä, eikä ristikäytävien nykyisestä tilasta kuin Gloucesterista (osa laudoista peittyy graffiteihin tai korjauksiin).
+12. **Gokstad:** museo on Oslon yliopiston Kulttuurihistoriallinen museo (hakutuloksen mukaan; Viikinkilaivamuseo kuuluu siihen). Onko lauta juuri nyt esillä, en tiedä, joten kirjoitin "kokoelmissa". Laudasta säilynyt vain osa ja tunnistus perustuu kokoon ja muotoon; "toisella puolella hnefatafl, toisella mylly" on Wikipedian alaviite ja yleinen kuvaus, mutta siinä on epävarmuutta. Jos haluat varman muotoilun, kannattaa tarkistaa museon omasta tietokannasta (unimus.no).
+13. **Aiemman osion 1 Gokstad-teksti** on sama kuin yllä; sanamuodon "löytyi pelilauta, jonka toisella puolella on hnefatafl ja toisella mylly" voi pehmentää muotoon "lauta, jonka tulkitaan olleen kaksipuolinen".
