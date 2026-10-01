@@ -53,6 +53,10 @@ namespace Matkakirja.Natiivi
         /// auringon 57°:ssä); Pythonin rinnakkaislaskenta 30.9.: nadirissa usva (0,02, 0,04, 0,10), reunalla 10 km:ssä
         /// (0,25, 0,27, 0,45) ja ekstinktio 89 %. Säädetään NASA-vertailusta (A/B `astro kyyti ilmavoima <x>`).
         /// </summary>
+        /// <summary>Ilmakeha2:n auringon voima (valaistus ja sironta) S2-pinnan päällä (Linssiseppä 1.10. NASA ISS067-E-286475
+        /// -vertailu, variantti v3): S2 on BMNG:tä vaaleampi, joten 3,5 ylivalotti ja sinersi (R−B −17 → −7, NASA −16).
+        /// BMNG-alueilla <see cref="IlmanVoima"/> ennallaan. A/B `astro kyyti s2ilma v`.</summary>
+        public static float S2IlmanVoima = 2.5f;
         public static float IlmanVoima = 3.5f;   // NASA-vertailu 30.9. (foto5): 4,5 sinersi maan liikaa (NASA ruskeanvihreä)
         /// <summary>Monisironnan osuus (Ilmakeha2 _Moni): 0,45 paksuntaa horisontin sinistä reunavyötä (0,25 oli ohut ja himmeä).</summary>
         public static float IlmanMoni = 0.3f;   // NASA-vertailu vaakana 30.9. (foto6): 0,45 sinersi päivän maan ja vaalensi meren
@@ -244,7 +248,7 @@ namespace Matkakirja.Natiivi
             var m = uusi ? kaari2 : kaari;
             if (kaariPiirto.sharedMaterial != m) kaariPiirto.sharedMaterial = m;
             if (uusi && lapinakyvyys != null && !lapinakyvyys.IsCreated()) { lapinakyvyys.Create(); Graphics.Blit(null, lapinakyvyys, kaari2, 0); }
-            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); }
+            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", Matkakirja.Linssit.Kyytipino.S2 ? S2IlmanVoima : IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); }
             kaari.SetFloat("_Peitto", kyyti);
             // Ilmahehku himmeämmäksi ja ohuemmaksi (laite cl4 28.9.: 0,32 piirsi kirkkaan vihreän viivan; ISS:n yökuvissa se on
             // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).

@@ -42,7 +42,7 @@ namespace Matkakirja.Linssit
         /// vähemmän sinistä). A/B `astro kyyti s2savy <kontrasti> <kylläisyys> <lämpö>`; arvot NASA-vertailusta.
         /// </summary>
         public static bool S2;
-        public static float S2Kontrasti, S2Kyllaisyys, S2Lampo;
+        public static float S2Kontrasti = 30f, S2Kyllaisyys = -10f, S2Lampo = 1f;   // NASA-vertailu 1.10. v3 (ero 79 → 28)
         static Color Suodin(float lampo) => new Color(1f + 0.06f * lampo, 1f, 1f - 0.10f * lampo);
         public static bool BloomPois;
         /// <summary>Filmirae ja vinjetti (ISS-kameran valokuvatuntu), oletuksena pois.</summary>

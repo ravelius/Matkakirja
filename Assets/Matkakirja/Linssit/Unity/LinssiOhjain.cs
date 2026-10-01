@@ -1698,6 +1698,7 @@ namespace Matkakirja.Natiivi
                         else if (a == "ilmamoni" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanMoni = (float)Luku(osat[3]);
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "autovalotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.AutoValotus = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "s2ilma" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.S2IlmanVoima = (float)Luku(osat[3]); Kirjaa($"astro s2ilma {Matkakirja.Natiivi.Avaruus.S2IlmanVoima:0.0}"); }
                         else if (a == "s2savy" && osat.Length > 5)
                         {
                             Matkakirja.Linssit.Kyytipino.S2Kontrasti = (float)Luku(osat[3]);
