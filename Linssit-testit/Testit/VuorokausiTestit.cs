@@ -33,10 +33,10 @@ namespace Matkakirja.Linssit.Testit
                     Oleta.Tosi(Math.Abs(Math.Abs(Tuntikulma(Vuorokausi.AurinkoAika(t0, lat, lon), lon)) - 180) < 0.5, "yö = keskiyö");
                     Vuorokausi.Valittu = Vuorokausi.Aamu;
                     var aamu = Vuorokausi.AurinkoAika(t0, lat, lon);
-                    Oleta.Tosi(Tuntikulma(aamu, lon) < 0 && Math.Abs(Korkeus(aamu, lat, lon) - Vuorokausi.AamuKorkeus) < 0.6, "aamu: idässä 10°");
+                    Oleta.Tosi(Tuntikulma(aamu, lon) < 0 && Math.Abs(Korkeus(aamu, lat, lon) - Vuorokausi.AamuKorkeus) < 0.6, "aamu: idässä 11°");
                     Vuorokausi.Valittu = Vuorokausi.Ilta;
                     var ilta = Vuorokausi.AurinkoAika(t0, lat, lon);
-                    Oleta.Tosi(Tuntikulma(ilta, lon) > 0 && Math.Abs(Korkeus(ilta, lat, lon) - Vuorokausi.IltaKorkeus) < 0.6, "ilta: lännessä 5°");
+                    Oleta.Tosi(Tuntikulma(ilta, lon) > 0 && Math.Abs(Korkeus(ilta, lat, lon) - Vuorokausi.IltaKorkeus) < 0.6, "ilta: lännessä 7°");
                     Oleta.Tosi(Math.Abs((ilta - t0).TotalHours) <= 12.01, "siirto enintään 12 h");
                 }
             }

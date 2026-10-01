@@ -95,6 +95,7 @@ namespace Matkakirja.Natiivi
             k.georeferenssi = g;
             k.kierto = kierto;
             k.kamera = kierto.GetComponent<Camera>();
+            // Vuorokaudenaika (omistaja 1.10.): auringon kellon viite = katsekohta ja kyydin aurinko kartan valolle (OnEnable/OnDisable).
             var merkit = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.merkit : null;
             k.fontti = merkit != null ? merkit.fontti : null;
             var varjostin = Resources.Load<Shader>("Varjostimet/Havaintopiste");
@@ -629,9 +630,51 @@ namespace Matkakirja.Natiivi
             rataMesh.RecalculateBounds();
         }
 
+        // ---- Vuorokaudenaika: katsekohta ja kyydin aurinko (Linssiseppä 1.10.2026) ----
+        bool katseOn;
+        double katseLat, katseLon;
+
+        /// <summary>Kameran keskisäteen osuma maahan (pallo R 6371 km) tai horisontissa lähin piste; vain kyydissä.</summary>
+        void PaivitaKatse()
+        {
+            katseOn = false;
+            if (kyyti == KyydinTila.Kauko || georeferenssi == null || kamera == null) return;
+            var gt = georeferenssi.transform;
+            double3 o = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(kamera.transform.position));
+            double3 d = math.normalize(georeferenssi.TransformUnityDirectionToEarthCenteredEarthFixed((float3)gt.InverseTransformDirection(kamera.transform.forward)));
+            const double R = 6_371_000;
+            double b = math.dot(o, d), c = math.dot(o, o) - R * R, h = b * b - c;
+            double3 p = h >= 0 && -b - math.sqrt(h) > 0 ? o + d * (-b - math.sqrt(h)) : o + d * math.max(0, -b);   // osuma tai lähin piste
+            p = math.normalize(p);
+            katseLat = math.degrees(math.asin(math.clamp(p.z, -1, 1)));
+            katseLon = math.degrees(math.atan2(p.y, p.x));
+            katseOn = true;
+        }
+
+        (double lat, double lon)? KatseViite() => katseOn ? (katseLat, katseLon) : null;
+
+        /// <summary>
+        /// Kyydin aurinko kartan valolle: suunta auringon kellosta (vuorokaudenaika) ja väri katsekohdan auringon korkeudesta
+        /// (alle 3°: oranssi, 3–20°: lämmin, ylempänä valkoinen). Kaukonäkymässä null → kameravalo kuten ennen.
+        /// </summary>
+        (Vector3 suunta, Color vari)? KyydinAurinkoArvo()
+        {
+            if (kyyti == KyydinTila.Kauko || georeferenssi == null || !katseOn) return null;
+            var gt = georeferenssi.transform;
+            var ecef = Aurinko.AurinkoEcef(IssNyt.AurinkoKello());
+            Vector3 au = gt.TransformDirection((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(ecef)).normalized;
+            double r = math.radians(1.0);
+            var n = new double3(math.cos(katseLat * r) * math.cos(katseLon * r), math.cos(katseLat * r) * math.sin(katseLon * r), math.sin(katseLat * r));
+            float sinK = (float)math.dot(n, math.normalize(ecef));
+            var vari = Color.Lerp(new Color(1f, 0.55f, 0.3f), new Color(1f, 0.86f, 0.7f), Mathf.InverseLerp(0.05f, 0.2f, sinK));
+            vari = Color.Lerp(vari, Color.white, Mathf.InverseLerp(0.2f, 0.45f, sinK));
+            return (au, vari);
+        }
+
         void LateUpdate()
         {
             if (kamera == null) return;
+            PaivitaKatse();
             // Automaattivalotukseen auringon korkeus kameran alapisteessä (maan keskipiste georeferenssin origossa).
             if (kyyti != KyydinTila.Kauko && georeferenssi != null && Time.unscaledTime - valotusAika > 0.5f)
             {
@@ -856,8 +899,16 @@ namespace Matkakirja.Natiivi
             return m;
         }
 
+        void OnEnable()
+        {
+            IssNyt.AurinkoViite = KatseViite;
+            Aurinko.KyydinAurinko = KyydinAurinkoArvo;
+        }
+
         void OnDisable()
         {
+            if (IssNyt.AurinkoViite == (System.Func<(double lat, double lon)?>)KatseViite) IssNyt.AurinkoViite = null;
+            if (Aurinko.KyydinAurinko == (System.Func<(Vector3 suunta, Color vari)?>)KyydinAurinkoArvo) Aurinko.KyydinAurinko = null;
             // Kartta ei peri S2-sävyä (Natiivisepän ehto 1.10.): varjostimen globaali pois, kun kerros ei ole käytössä.
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
@@ -866,6 +917,8 @@ namespace Matkakirja.Natiivi
 
         void OnDestroy()
         {
+            if (IssNyt.AurinkoViite == (System.Func<(double lat, double lon)?>)KatseViite) IssNyt.AurinkoViite = null;
+            if (Aurinko.KyydinAurinko == (System.Func<(Vector3 suunta, Color vari)?>)KyydinAurinkoArvo) Aurinko.KyydinAurinko = null;
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             AsetaS2Reuna(false);

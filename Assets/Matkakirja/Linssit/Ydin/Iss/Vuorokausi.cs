@@ -1,7 +1,7 @@
 // VUOROKAUDENAIKA ISS-KYYDISSÄ (omistaja 1.10.2026 Päätoimittajan kautta): aamu, päivä, ilta tai yö pysyy ISS:n alla, kun asema
 // kulkee. Rata, Kuu ja tähdet kulkevat oikeassa (simuloidussa) ajassa; vain aurinko (valaistus, ilmakehä, yökuori ja kaupunkien
 // valot) lasketaan omasta kellostaan (IssNyt.AurinkoKello), jonka siirto pitää auringon tuntikulman ISS:n alapisteessä
-// valinnan mukaisena: aamu = aurinko idässä 10°:ssa, päivä = keskipäivä, ilta = kultainen tunti lännessä 5°:ssa, yö =
+// valinnan mukaisena: aamu = aurinko idässä 11°:ssa, päivä = keskipäivä, ilta = kultainen tunti lännessä 7°:ssa, yö =
 // keskiyö (keskikesän napa-alueilla aurinko ei laske −18°:een). null = LIVE (oikea aika). Puhdas C#.
 using System;
 
@@ -13,7 +13,7 @@ namespace Matkakirja.Linssit.Iss
         public static readonly string[] Nimet = { "Aamu", "Päivä", "Ilta", "Yö" };
         /// <summary>Valittu vuorokaudenaika; null = LIVE (aurinko oikeassa ajassa).</summary>
         public static int? Valittu;
-        public const double AamuKorkeus = 10, IltaKorkeus = 5;
+        public const double AamuKorkeus = 11, IltaKorkeus = 7;   // Päätoimittaja 1.10.: aamu ~10–12° idässä, ilta kultainen tunti ~6–8°
 
         /// <summary>Tavoitetuntikulma asteina (+ = aurinko lännessä eli iltapäivä) leveydellä lat ja deklinaatiolla dekl.</summary>
         public static double Tuntikulma(int valinta, double lat, double dekl)

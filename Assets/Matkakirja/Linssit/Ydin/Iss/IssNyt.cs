@@ -42,10 +42,15 @@ namespace Matkakirja.Linssit.Iss
             var t = Kello();
             if (!Vuorokausi.Valittu.HasValue) return t;
             if (t == aurinkoT && Vuorokausi.Valittu == aurinkoV) return aurinkoTulos;
-            var p = Paikka(t);
-            aurinkoT = t; aurinkoV = Vuorokausi.Valittu; aurinkoTulos = Vuorokausi.AurinkoAika(t, p.Lat, p.Lon);
+            // Viite: katsekohta (kamera, Unity-puoli) tai ISS:n alapiste; Cupola katsoo horisonttiin, jossa aika on eri kuin alla.
+            var v = AurinkoViite?.Invoke();
+            double lat, lon;
+            if (v.HasValue) { lat = v.Value.lat; lon = v.Value.lon; } else { var p = Paikka(t); lat = p.Lat; lon = p.Lon; }
+            aurinkoT = t; aurinkoV = Vuorokausi.Valittu; aurinkoTulos = Vuorokausi.AurinkoAika(t, lat, lon);
             return aurinkoTulos;
         }
+        /// <summary>Vuorokaudenajan viitepiste (leveys, pituus): kameran katsekohta kyydissä (AstronauttiKerros); null = ISS:n alapiste.</summary>
+        public static Func<(double lat, double lon)?> AurinkoViite;
         static DateTime aurinkoT, aurinkoTulos;
         static int? aurinkoV;
 
