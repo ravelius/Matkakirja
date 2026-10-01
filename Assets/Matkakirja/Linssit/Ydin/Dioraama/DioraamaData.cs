@@ -477,6 +477,9 @@ namespace Matkakirja.Linssit.Dioraama
         public MaastoKerrokset Maasto;
         /// <summary>Aluskasvillisuus korttipareina: atlas (json kuten puukortit) ja lista [x, y, z, laji, koko]; null = ei aluskasveja.</summary>
         public string AluskasvitAtlas, AluskasvitLista;
+        /// <summary>Paketin muoto 1.10. (rakenna.mjs): puukortit = atlas-png ja puukortit_tiedot = json; aluskasvit.atlas = png ja
+        /// aluskasvit.kortit = json. Vanha muoto (json suoraan puukortit/atlas-kentässä, png sen "atlas"-avaimesta) toimii yhä.</summary>
+        public string PuukortitTiedot, AluskasvitKortit;
         /// <summary>Taivas equirect-kuvana (Linnanrakentajan Poly Haven -HDRI sävykartoitettuna): päivä, hämärä ja
         /// atsimuutti (°), johon kuvan u = 0 osoittaa; null = liukuväri.</summary>
         public string Taivas, TaivasHamara;
@@ -615,7 +618,7 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     Huippu = MiniJson.Teksti(ymp, "huippu"), Normaali = MiniJson.Teksti(ymp, "normaali"), Kevyt = MiniJson.Teksti(ymp, "kevyt"),
                     OrtoHuippu = MiniJson.Teksti(orto, "huippu"), OrtoNormaali = MiniJson.Teksti(orto, "normaali"), OrtoKevyt = MiniJson.Teksti(orto, "kevyt"),
-                    Puut = MiniJson.Teksti(ymp, "puut"), Puukortit = MiniJson.Teksti(ymp, "puukortit"),
+                    Puut = MiniJson.Teksti(ymp, "puut"), Puukortit = MiniJson.Teksti(ymp, "puukortit"), PuukortitTiedot = MiniJson.Teksti(ymp, "puukortit_tiedot"),
                     Horisontti = MiniJson.Teksti(ymp, "horisontti"), HorisonttiKuva = MiniJson.Teksti(ymp, "horisontti_kuva"),
                     SyvyysKuva = MiniJson.Teksti(syv, "kuva"),
                 };
@@ -641,6 +644,7 @@ namespace Matkakirja.Linssit.Dioraama
                 var alus = MiniJson.ObjektiTaiNull(MiniJson.Kentta(ymp, "aluskasvit"));
                 y.AluskasvitAtlas = MiniJson.Teksti(alus, "atlas");
                 y.AluskasvitLista = MiniJson.Teksti(alus, "lista");
+                y.AluskasvitKortit = MiniJson.Teksti(alus, "kortit");
                 y.Taivas = MiniJson.Teksti(ymp, "taivas");
                 y.TaivasHamara = MiniJson.Teksti(ymp, "taivas_hamara");
                 y.TaivasSuunta = MiniJson.Luku(ymp, "taivas_suunta") ?? 0;

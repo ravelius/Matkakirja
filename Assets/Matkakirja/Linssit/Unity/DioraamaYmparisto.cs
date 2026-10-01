@@ -89,7 +89,7 @@ namespace Matkakirja.Natiivi
             if (oma != kerta) yield break;
             if (!string.IsNullOrEmpty(y.Horisontti)) yield return LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma);
             if (oma != kerta) yield break;
-            if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.Puukortit)) yield return LataaPuut(y, taso, url, kirjaa, oma);
+            if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.PuukortitTiedot ?? y.Puukortit)) yield return LataaPuut(y, taso, url, kirjaa, oma);
             if (oma != kerta) yield break;
             yield return DioraamaAluskasvit.Lataa(y, taso, url, kirjaa, go.transform, luodut, () => oma == kerta);   // Linssiseppä 2, 1.10.
             if (oma != kerta) yield break;
@@ -357,7 +357,20 @@ namespace Matkakirja.Natiivi
             if (osat.Count == 0) foreach (var o in malli.Osat) osat.Add((o, Vector3.zero));
             if (kuvaTavut == null) foreach (var (o, _) in osat) if (o.Kuva >= 0 && o.Kuva < malli.Kuvat.Count) { kuvaTavut = malli.Kuvat[o.Kuva]; break; }
             Texture2D kuva = null;
-            if (kuvaTavut != null)
+            // Paketin orto voi olla ASTC (.astcm, kuten kuoressa): laite käyttää sitä suoraan; tukematon (simulaattori) →
+            // glb:n upotettu JPEG.
+            if (kuvaTavut != null && kuvaPolku != null && kuvaPolku.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase))
+            {
+                kuva = DioraamaAstc.Lue(kuvaTavut, "Ymparisto:" + nimi + ":astc", out string syy);
+                if (kuva != null) luodut.Add(kuva);
+                else
+                {
+                    kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), glb:n kuva");
+                    kuvaTavut = null;
+                    foreach (var (o, _) in osat) if (o.Kuva >= 0 && o.Kuva < malli.Kuvat.Count) { kuvaTavut = malli.Kuvat[o.Kuva]; break; }
+                }
+            }
+            if (kuva == null && kuvaTavut != null)
             {
                 kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
                 { name = "Ymparisto:" + nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 4 };
@@ -479,14 +492,16 @@ namespace Matkakirja.Natiivi
         IEnumerator LataaPuut(Ymparisto y, DioraamaUlkokuori.Laatu taso, Func<string, string> url, Action<string> kirjaa, int oma)
         {
             byte[] kortitJson = null, puutJson = null, atlasTavut = null;
-            yield return DioraamaLevyvalimuisti.Hae(url(y.Puukortit), 60, t => kortitJson = t);
+            string tiedot = y.PuukortitTiedot ?? y.Puukortit; // uusi muoto: puukortit = png, puukortit_tiedot = json
+            yield return DioraamaLevyvalimuisti.Hae(url(tiedot), 60, t => kortitJson = t);
             yield return DioraamaLevyvalimuisti.Hae(url(y.Puut), 120, t => puutJson = t);
             if (oma != kerta) yield break;
             if (kortitJson == null || puutJson == null) { kirjaa?.Invoke("poikki: ympäristö: puut eivät latautuneet"); yield break; }
             string atlasNimi = null;
             try { atlasNimi = MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(kortitJson))), "atlas"); } catch { }
-            string kansio = y.Puukortit.Contains("/") ? y.Puukortit.Substring(0, y.Puukortit.LastIndexOf('/') + 1) : "";
-            yield return DioraamaLevyvalimuisti.Hae(url(kansio + (atlasNimi ?? "puukortit.png")), 60, t => atlasTavut = t);
+            string kansio = tiedot.Contains("/") ? tiedot.Substring(0, tiedot.LastIndexOf('/') + 1) : "";
+            string atlasPolku = y.PuukortitTiedot != null && !string.IsNullOrEmpty(y.Puukortit) ? y.Puukortit : kansio + (atlasNimi ?? "puukortit.png");
+            yield return DioraamaLevyvalimuisti.Hae(url(atlasPolku), 60, t => atlasTavut = t);
             if (oma != kerta) yield break;
             if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: puukorttien atlas ei latautunut"); yield break; }
 
