@@ -486,6 +486,28 @@ export const NAKYMAT = [
     odotaJalkeen: '.aikajana-palkki',
   },
   {
+    // Pelikoodari 1.10.2026 (Päätoimittajan pariteettirivi): natiivissa esityksen tekstitys piirtyy nostokortin
+    // tekstin päälle. Sama tila: Käynnistä, avausjakson tekstitys "… Ei kukaan heistäkään tiennyt." näkyvissä,
+    // sitten Jebel Irhoudin nostokortti auki (ui.nostokortti.avaa; esitys menee tauolle kuten napautuksesta).
+    nimi: 'linssi-ihmisen-nosto-tekstitys',
+    kuvaus: 'Ihmisen matka: avausjakson tekstitys näkyvissä ja Jebel Irhoudin nostokortti auki (esitys tauolla)',
+    avaa: valitseLinssi, parametri: { linssi: 'ihmisen-matka' }, odota: '.aikajana-avaus-nappi',
+    jalkeen: async () => {
+      const { ui } = window.matkakirja;
+      document.querySelector('.aikajana-avaus-nappi')?.click();
+      const alku = Date.now();
+      const teksti = () => document.querySelector('.aikajana-kertomusteksti')?.textContent ?? '';
+      while (!teksti().includes('heistäkään') && Date.now() - alku < 30000) {
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((ok) => setTimeout(ok, 200));
+      }
+      if (!teksti().includes('heistäkään')) return { virhe: `tekstitystä ei näkynyt 30 s:ssa ("${teksti().slice(0, 60)}")` };
+      if (!ui.nostokortti?.avaa?.('jebel-irhoud')) return { virhe: 'ui.nostokortti.avaa(jebel-irhoud) ei avannut' };
+      return { tekstitys: teksti().slice(0, 80), ms: Date.now() - alku };
+    },
+    odotaJalkeen: '.ihmisen-nostokortti',
+  },
+  {
     nimi: 'linssi-karuselli', kuvaus: 'Keksinnöt-linssi käynnissä: yläpalkki ja korttikaruselli (Käynnistä = .aikajana-avaus-nappi)',
     avaa: valitseLinssi, parametri: { linssi: 'keksinnot' }, odota: '.aikajana-avaus-nappi',
     jalkeen: () => { document.querySelector('.aikajana-avaus-nappi')?.click(); return null; },
@@ -761,6 +783,15 @@ const TODENNUS = {
     },
   },
   'linssi-selite': { nakyy: ['.linssi-selite'], ehto: linssiKaynnissa },
+  'linssi-ihmisen-nosto-tekstitys': {
+    nakyy: ['.ihmisen-nostokortti', '.aikajana-kertomusteksti'],
+    ehto: () => {
+      const k = window.matkakirja.ui.nostokortti;
+      if (k?.auki?.() !== 'jebel-irhoud') return 'Jebel Irhoudin kortti ei auki';
+      const t = document.querySelector('.aikajana-kertomusteksti')?.textContent ?? '';
+      return t.includes('heistäkään') ? null : `tekstitys vaihtui ("${t.slice(0, 50)}")`;
+    },
+  },
   'linssi-ihmisen-matka-kaynnissa': {
     nakyy: ['.aikajana-palkki'],
     ehto: () => {
