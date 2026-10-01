@@ -23,8 +23,13 @@ namespace Matkakirja.Natiivi
         readonly ScrollView vieritys;
         readonly Kuvasuurennos suurennos;
         readonly Action<Loytopaikka> lueLisaa;
-        bool pysaytin, kysymysKesken;
-        Label kupla;
+        bool pysaytin;
+        // NOSTOKORTTI-pohja TUMMA (web #3789, Päätoimittaja 1.10.): paikka pohjasta (KAPEA alareuna 45 %/85 %, muuten
+        // sivukortti oikealle palkin alle), vetokahva, Esc; ei ✕:ää; toimintorivi Kysy · Lue lisää.
+        readonly Vetokahva kahva;
+        bool laajennettu;
+        float yla;
+        VisualElement toimintorivi;
 
         /// <summary>Auki olevan noston tunnus (web tila.auki), tai null.</summary>
         public string Auki { get; private set; }
@@ -46,10 +51,36 @@ namespace Matkakirja.Natiivi
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(vieritys);
+            kahva = new Vetokahva(kortti, l => { laajennettu = l; Paikka(); }, Sulje, () => laajennettu);
+            isa.RegisterCallback<GeometryChangedEvent>(_ => Paikka());
+            Nappaimisto.Rekisteroi("ihmisnosto", 60, () => Auki != null, null, null, Sulje);
         }
 
         /// <summary>Kortin yläreuna palkin alle (turva-alueen koordinaateissa).</summary>
-        public float Yla { set => kortti.style.top = value; }
+        public float Yla { set { yla = value; Paikka(); } }
+
+        void Paikka()
+        {
+            var isa = kortti.parent;
+            if (isa == null) return;
+            float W = isa.layout.width, H = isa.layout.height, m = Tyylikirja.Vali.M;
+            if (float.IsNaN(W) || W <= 0 || H <= 0) return;
+            bool kapea = Pohja.Leveys(W) == Pohja.Luokka.Kapea;
+            if (kapea)
+            {
+                kortti.style.left = m; kortti.style.right = m; kortti.style.width = StyleKeyword.Auto;
+                kortti.style.top = StyleKeyword.Auto; kortti.style.bottom = m;
+                kortti.style.maxHeight = Mathf.Round(Mathf.Min(H - yla - m, H * (laajennettu ? Tyylikirja.Peitto.Laajennettu : Tyylikirja.Peitto.Max) / 100f));
+            }
+            else
+            {
+                kortti.style.left = StyleKeyword.Auto; kortti.style.right = m; kortti.style.width = Pohja.Sivukortti(W);
+                kortti.style.top = yla; kortti.style.bottom = StyleKeyword.Auto;
+                kortti.style.maxHeight = Mathf.Round(H - yla - m);
+            }
+            kortti.style.maxWidth = StyleKeyword.None;
+            kahva.Juuri.style.display = kapea ? DisplayStyle.Flex : DisplayStyle.None;
+        }
 
         /// <summary>Web avaa(tunnus): sama nosto uudestaan sulkee.</summary>
         public bool Avaa(Loytopaikka p)
@@ -58,33 +89,32 @@ namespace Matkakirja.Natiivi
             if (Auki == p.Tunnus) { Sulje(); return false; }
             Auki = p.Tunnus;
             paikka = p;
-            kupla = null;
-            foreach (var b in kortti.Children().OfType<Button>().ToList()) b.RemoveFromHierarchy();
+            toimintorivi?.RemoveFromHierarchy();
+            toimintorivi = null;
+            laajennettu = false;
             var s = vieritys.contentContainer;
             s.Clear();
             vieritys.scrollOffset = Vector2.zero;
 
-            var sulje = Rakenne.Nappi("✕", "mk-ihmisnosto__sulje", Sulje, kortti);
-            sulje.tooltip = "Sulje nosto";
-            sulje.BringToFront();
-
             var ajoitus = Rakenne.El("mk-ihmisnosto__ajoitus", s, PickingMode.Ignore);
             Rakenne.El("mk-ihmisnosto__pilkku", ajoitus, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti((p.Ajoitus ?? "").ToUpperInvariant(), "mk-ihmisnosto__ajoitusteksti", ajoitus), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Teksti(p.Otsikko ?? "", "mk-ihmisnosto__otsikko", s), Kirjasin.KoneLihava);
-            if (!string.IsNullOrEmpty(p.Paikka))
-                Kirjasimet.Aseta(Rakenne.Teksti(string.IsNullOrEmpty(p.Maa) ? p.Paikka : p.Paikka + " — " + p.Maa, "mk-ihmisnosto__paikka", s), Kirjasin.Luku);
+            // Kapiteeli "ajoitus · paikka — maa" virran värisellä pisteellä (web #3789 KorttiData.ylaVari).
+            string paikkaRivi = string.IsNullOrEmpty(p.Paikka) ? "" : " · " + (string.IsNullOrEmpty(p.Maa) ? p.Paikka : p.Paikka + " — " + p.Maa);
+            Kirjasimet.Aseta(Rakenne.Teksti(((p.Ajoitus ?? "") + paikkaRivi).ToUpperInvariant(), "mk-ihmisnosto__ajoitusteksti", ajoitus), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(p.Otsikko ?? "", "mk-ihmisnosto__otsikko", s), Tyylikirja.Kirjain.Otsikko);
 
             // Kuva-alue (web: kuvitus, esine 38 %, aito kuva sovitettuna).
             var kuvat = Rakenne.El("mk-ihmisnosto__kuvat", s, PickingMode.Ignore);
-            if (!string.IsNullOrEmpty(p.Kuva)) Kuva(kuvat, p.Kuva, p.KuvaSelite, "mk-ihmisnosto__kuvakehys--kuvitus", 2f / 3f, null);
-            if (!string.IsNullOrEmpty(p.Esine)) Kuva(kuvat, p.Esine, p.EsineSelite, "mk-ihmisnosto__kuvakehys--esine", 1f, null);
+            // Kuvasäännöt (UI-pohjat): ensimmäinen kuva hero 2:1 koko leveydelle, toinen upotus 4:3 tekstin oikealle.
+            const float Hero = 0.5f, Upotus = 0.75f;
+            if (!string.IsNullOrEmpty(p.Kuva)) Kuva(kuvat, p.Kuva, p.KuvaSelite, "mk-ihmisnosto__kuvakehys--kuvitus", Hero, null);
+            if (!string.IsNullOrEmpty(p.Esine)) Kuva(kuvat, p.Esine, p.EsineSelite, "mk-ihmisnosto__kuvakehys--esine", kuvat.childCount > 0 ? Upotus : Hero, null);
             if (!string.IsNullOrEmpty(p.Aito))
             {
                 // Aito kuva on suurennettava, ja sen lähderivi näkyy suurennoksessa (web KUVALAHDE_VAIN_SUURENNOKSESSA).
                 string aito = p.Aito, selite = p.AitoSelite ?? "Aito kuva";
                 string lahde = p.AidonTiedot != null && p.AidonTiedot.TryGetValue("lahde", out var l) ? l as string : null;
-                Kuva(kuvat, aito, selite, "mk-ihmisnosto__kuvakehys--aito", 2f / 3f,
+                Kuva(kuvat, aito, selite, "mk-ihmisnosto__kuvakehys--aito", kuvat.childCount > 0 ? Upotus : Hero,
                     () => suurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = aito, Selite = selite, LahdeRivi = lahde } }));
             }
             if (kuvat.childCount == 0) kuvat.style.display = DisplayStyle.None;
@@ -99,35 +129,46 @@ namespace Matkakirja.Natiivi
             }
             else if (teksti.Length > 0) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-ihmisnosto__teksti", s), Kirjasin.Luku);
             if (!string.IsNullOrEmpty(p.Lahde)) Kirjasimet.Aseta(Rakenne.Teksti(p.Lahde, "mk-ihmisnosto__lahde", s), Kirjasin.Luku);
-            if (p.Juttu && lueLisaa != null && (LinssiUi.IhmisenMatka?.TiedeliitteenSivu(p.Tunnus) ?? -1) >= 0)
-            {
-                var paikka = p;
-                var lue = Rakenne.Nappi("Lue lisää", "mk-ihmisnosto__lue", () => lueLisaa(paikka), s);
-                lue.tooltip = "Tiedeliite: koko juttu";
-                Kirjasimet.Aseta(lue, Kirjasin.KoneLihava);
-            }
-
-            // Kysymykset: löytöpaikalla valmiit (web haeIhmisenMatkanKysymykset), muuten noston omat; enintään 3.
+            // Toimintorivi (web #3789): Kysy (kun kysymyksiä: Pulun chat noston valmiine kysymyksineen) · Lue lisää (ensisijainen,
+            // kun tiedeliite on). Inline-kysymykset ja kortin oma vastauskupla poistuivat.
             var valmiit = !p.Lisanosto ? LinssiKysymykset.Tunnukselle(p.Tunnus) : null;
             var kysymykset = (valmiit != null && valmiit.Kysymykset.Count > 0 ? valmiit.Kysymykset : p.Kysymykset.ToList())
                 .Where(k => !string.IsNullOrEmpty(k)).Take(3).ToList();
-            if (kysymykset.Count > 0)
+            bool lue = p.Juttu && lueLisaa != null && (LinssiUi.IhmisenMatka?.TiedeliitteenSivu(p.Tunnus) ?? -1) >= 0;
+            if (kysymykset.Count > 0 || lue)
             {
-                var ryhma = Rakenne.El("mk-ihmisnosto__kysymykset", s, PickingMode.Ignore);
-                var q = Rakenne.Teksti("Kysy <s>viisaalta pöllöltä</s> pululta:", "mk-ihmisnosto__kysyotsikko", ryhma);
-                q.enableRichText = true;
-                Kirjasimet.Aseta(q, Kirjasin.Luku);
-                foreach (var k in kysymykset)
+                toimintorivi = Rakenne.El("mk-nosto__toiminnot mk-ihmisnosto__toiminnot", kortti, PickingMode.Ignore);
+                kortti.AddToClassList("mk-nosto--toiminnot");
+                if (kysymykset.Count > 0)
                 {
-                    string kysymys = k;
-                    Button nappi = null;
-                    nappi = Rakenne.Nappi(kysymys, "mk-ihmisnosto__kysymys", () => KysyPululta(valmiit, kysymys, nappi, ryhma), ryhma);
-                    Kirjasimet.Aseta(nappi, Kirjasin.Luku);
+                    var aihe = new PuluChat.Aihe
+                    {
+                        Otsake = "Ihmisen matkan löytö, josta pelaaja kysyy",
+                        Nimi = string.Join(", ", new[] { p.Otsikko, p.Paikka, p.Maa }.Where(x => !string.IsNullOrWhiteSpace(x))),
+                        Tyyppi = p.Ajoitus,
+                        Teksti = p.Loyto,
+                    };
+                    var parit = kysymykset.Select(k => (k, valmiit != null && valmiit.Vastaukset.TryGetValue(k.Trim(), out var v) ? v.Vastaus : null)).ToList();
+                    Kirjasimet.Aseta(Rakenne.Nappi("Kysy", "mk-nosto__toiminto", () =>
+                    {
+                        var c = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+                        if (c == null) return;
+                        if (parit.Any(x => x.Item2 != null)) c.AvaaValmiilla(aihe, parit); else c.AvaaKortista(aihe, kysymykset);
+                    }, toimintorivi), Kirjasin.KoneLihava);
+                }
+                if (lue)
+                {
+                    var paikka = p;
+                    var b = Rakenne.Nappi("Lue lisää", "mk-nosto__toiminto mk-nappi--kulta", () => lueLisaa(paikka), toimintorivi);
+                    b.tooltip = "Tiedeliite: koko juttu";
+                    Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
                 }
             }
+            else kortti.RemoveFromClassList("mk-nosto--toiminnot");
 
             kortti.style.display = DisplayStyle.Flex;
-            Rakenne.Nayta(kortti, true, 220);
+            Paikka();
+            Rakenne.Nayta(kortti, true, Tyylikirja.Kesto.Avaus);
             // Esitys tauolle kortin ajaksi; jatko sulusta (web tila.pysaytin).
             var e = LinssiUi.IhmisenMatka?.Esitys;
             if (e != null && e.Kaynnissa) { e.Tauko(); pysaytin = true; }
@@ -139,9 +180,9 @@ namespace Matkakirja.Natiivi
         {
             if (Auki == null) return;
             Auki = null;
-            Rakenne.Nayta(kortti, false, 180);
+            Rakenne.Nayta(kortti, false, Tyylikirja.Kesto.Sulku);
             suurennos.Sulje();
-            foreach (var b in kortti.Children().OfType<Button>().ToList()) b.RemoveFromHierarchy();
+            laajennettu = false;
             if (pysaytin) { pysaytin = false; LinssiUi.IhmisenMatka?.Esitys?.Jatka(); }
             Muuttui?.Invoke();
         }
@@ -221,73 +262,15 @@ namespace Matkakirja.Natiivi
 
         Loytopaikka paikka;
 
-        /// <summary>Testi (linssi matka nosto): kortin n:s kysymys kuten napautus.</summary>
+        /// <summary>Testi (linssi matka nosto &lt;n&gt; kysy &lt;k&gt;): toimintorivin Kysy (k &lt; 0) tai Lue lisää (k = 99).</summary>
         public string TestiKysy(int n)
         {
-            var napit = kortti.Query<Button>(className: "mk-ihmisnosto__kysymys").ToList();
-            if (n < 0 || n >= napit.Count) return $"kysymyksiä {napit.Count}";
-            using (var e = NavigationSubmitEvent.GetPooled()) { e.target = napit[n]; napit[n].SendEvent(e); }
-            return $"kysymys {n + 1}/{napit.Count}: {napit[n].text}";
-        }
-
-        void KysyPululta(LinssiKysymys valmiit, string kysymys, Button nappi, VisualElement ryhma)
-        {
-            if (kysymysKesken || !nappi.enabledSelf) return;
-            // Ilman valmista vastausta kysymys menee Pulun yhteiseen chattiin samoine nappeineen (kaiutin/striimiluenta,
-            // ≡, puhekupla, kynä; omistaja 30.9.2026 klo 23.5x: "tee pululle aina samat napit kaikkialle peliin"; web
-            // ihmisen-matka-kortti polloKysy). Kortin aihe kulkee kontekstissa (PuluChat.Aihe).
-            if (valmiit == null || !valmiit.Vastaukset.ContainsKey(kysymys.Trim()))
-            {
-                var c = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
-                if (c == null || c.Kysyy) return;
-                nappi.AddToClassList("mk-ihmisnosto__kysymys--lahetetty");
-                c.Kysy(kysymys, aihe: paikka == null ? null : new PuluChat.Aihe
-                {
-                    Otsake = "Ihmisen matkan löytö, josta pelaaja kysyy",
-                    Nimi = string.Join(", ", new[] { paikka.Otsikko, paikka.Paikka, paikka.Maa }.Where(x => !string.IsNullOrWhiteSpace(x))),
-                    Tyyppi = paikka.Ajoitus,
-                    Teksti = paikka.Loyto,
-                });
-                return;
-            }
-            nappi.AddToClassList("mk-ihmisnosto__kysymys--lahetetty");
-            nappi.SetEnabled(false);
-            if (kupla == null)
-            {
-                kupla = Rakenne.Teksti("", "mk-ihmisnosto__vastaus", ryhma.parent);
-                kupla.enableRichText = false;
-                Kirjasimet.Aseta(kupla, Kirjasin.Luku);
-                kupla.PlaceInFront(ryhma);
-            }
-            var lahdeRivi = ryhma.parent.Q(className: "mk-ihmisnosto__vastauslahde");
-            lahdeRivi?.RemoveFromHierarchy();
-            if (valmiit != null && valmiit.Vastaukset.TryGetValue(kysymys.Trim(), out var v))
-            {
-                kupla.text = v.Vastaus;
-                if (v.Lahteet.Count > 0)
-                {
-                    var rivi = Rakenne.El("mk-ihmisnosto__vastauslahde", ryhma.parent, PickingMode.Ignore);
-                    rivi.PlaceInFront(kupla);
-                    Kirjasimet.Aseta(Rakenne.Teksti("Lähde:", "mk-ihmisnosto__lahdeteksti", rivi), Kirjasin.Luku);
-                    foreach (var (url, otsikko) in v.Lahteet)
-                    {
-                        string u = url;
-                        Kirjasimet.Aseta(Rakenne.Nappi(otsikko, "mk-ihmisnosto__lahdelinkki", () => Application.OpenURL(u), rivi), Kirjasin.Luku);
-                    }
-                }
-                return;
-            }
-            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
-            var k = kupla;
-            k.text = "…";
-            if (chat == null || !chat.KysyUlkoisesti(kysymys, vastaus => { kysymysKesken = false; if (k.panel != null) k.text = vastaus; }))
-            {
-                k.text = "Pulu vastaa vielä edelliseen. Hetki vain.";
-                nappi.RemoveFromClassList("mk-ihmisnosto__kysymys--lahetetty");
-                nappi.SetEnabled(true);
-                return;
-            }
-            kysymysKesken = true;
+            if (toimintorivi == null) return "ei toimintoriviä";
+            var napit = toimintorivi.Query<Button>(className: "mk-nosto__toiminto").ToList();
+            var b = n == 99 ? napit.LastOrDefault() : napit.FirstOrDefault();
+            if (b == null) return "ei nappia";
+            using (var e = NavigationSubmitEvent.GetPooled()) { e.target = b; b.SendEvent(e); }
+            return "painettu " + b.text;
         }
     }
 }
