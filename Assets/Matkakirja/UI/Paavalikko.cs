@@ -133,15 +133,16 @@ namespace Matkakirja.Natiivi
         /// <summary>"uusi peli": varmistus (webin #nollaa-dialog), sitten tyhjennys ja UusiPeli.</summary>
         public void KysyUusiPeli()
         {
-            vahvistus.Kysy("Uusi peli",
-                "Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat ja ääniasetukset. Tätä ei voi perua.",
+            // KORTTI-pohja (web #3793): kapiteeli "Uusi peli", otsikkona kysymys, viimeinen virke korostuskappaleena.
+            vahvistus.Kysy("Aloitetaanko uusi matka?",
+                "Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat ja ääniasetukset.",
                 "Peruuta", "Aloita alusta", () =>
                 {
                     Asetukset.Nollaa();
                     // Web tyhjennaMuistit pyyhkii myös pro-tunnuksen (matkakirja-pro-tunnus).
                     Palautekanava.AsetaProTunnus(null, null);
                     UusiPeli?.Invoke();
-                });
+                }, kapiteeliTeksti: "Uusi peli", korostusTeksti: "Tätä ei voi perua.");
         }
 
         public void Ehdota() => EhdotaPainettu?.Invoke();

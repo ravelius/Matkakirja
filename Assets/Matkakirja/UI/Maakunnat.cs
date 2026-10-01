@@ -775,6 +775,8 @@ namespace Matkakirja.Natiivi
             sisalto.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisalto);
             sulje.BringToFront();
+            // NOSTOKORTTI-pohja (web #3791): kapiteeli "MAAKUNTA" otsikon yläpuolella.
+            Kirjasimet.Aseta(Rakenne.Teksti("MAAKUNTA", "mk-maakuntaKortti__kapiteeli", sisalto), Kirjasin.Kone);
             otsikko = Rakenne.Teksti("", "mk-maakuntaKortti__otsikko", sisalto);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             kuvat = Rakenne.El("mk-maakuntaKortti__kuvat", sisalto, PickingMode.Ignore);
@@ -1064,28 +1066,38 @@ namespace Matkakirja.Natiivi
 
         // --- Pulun kysymykset ----------------------------------------------------------------------------------------
 
-        void TaytaPulu(IReadOnlyList<(string Q, string A)> kysymykset)
+        IReadOnlyList<(string Q, string A)> kysymykset = new List<(string, string)>();
+        VisualElement toimintorivi;
+
+        /// <summary>
+        /// NOSTOKORTTI-pohjan toimintorivi (web #3791, Päätoimittaja 1.10.): vain Kysy (maakunnalla ei visaa eikä lehtijuttua);
+        /// Kysy avaa Pulun chatin, jossa kortin kysymykset ovat siruina valmiine vastauksineen (ei mallikutsua).
+        /// </summary>
+        void TaytaPulu(IReadOnlyList<(string Q, string A)> lista)
         {
+            kysymykset = lista ?? new List<(string, string)>();
             puluLohko.Clear();
-            puluLohko.style.display = kysymykset.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            foreach (var (q, a) in kysymykset)
-            {
-                string kysymys = q, vastaus = a;
-                var nappi = Rakenne.Nappi(null, "mk-maakuntaKortti__kysymys",
-                    () => UiNakymat.Hae()?.Chat.VastaaValmiilla(kysymys, vastaus, aihe), puluLohko, Ikonit.Puhekupla);
-                var t = Rakenne.Teksti(q, "mk-maakuntaKortti__kysymysteksti", nappi);
-                Kirjasimet.Aseta(t, Kirjasin.Luku);
-            }
+            puluLohko.style.display = DisplayStyle.None;
+            toimintorivi?.RemoveFromHierarchy();
+            toimintorivi = null;
+            kortti.EnableInClassList("mk-nosto--toiminnot", kysymykset.Count > 0);
+            if (kysymykset.Count == 0) return;
+            toimintorivi = Rakenne.El("mk-nosto__toiminnot", kortti, PickingMode.Ignore);
+            var b = Rakenne.Nappi("Kysy", "mk-nosto__toiminto", Kysy, toimintorivi);
+            Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
         }
+
+        void Kysy() => UiNakymat.Hae()?.Chat.AvaaValmiilla(aihe, kysymykset);
 
         /// <summary>Testi: n:s kysymys kuten napautus (Pulun chat avautuu valmiilla vastauksella).</summary>
         public string TestiKysymys(int n)
         {
             if (!Auki) return "kortti ei auki";
-            var napit = puluLohko.Query<Button>(className: "mk-maakuntaKortti__kysymys").ToList();
-            if (n < 0 || n >= napit.Count) return $"kysymyksiä {napit.Count}";
-            using (var e = NavigationSubmitEvent.GetPooled()) { e.target = napit[n]; napit[n].SendEvent(e); }
-            return $"kysymys {n + 1}/{napit.Count} → Pulun chat";
+            if (n < 0) { Kysy(); return $"Kysy → chat, {kysymykset.Count} kysymystä"; }
+            if (n >= kysymykset.Count) return $"kysymyksiä {kysymykset.Count}";
+            Kysy();
+            UiNakymat.Hae()?.Chat.VastaaValmiilla(kysymykset[n].Q, kysymykset[n].A, aihe);
+            return $"kysymys {n + 1}/{kysymykset.Count} → Pulun chat";
         }
     }
 }
