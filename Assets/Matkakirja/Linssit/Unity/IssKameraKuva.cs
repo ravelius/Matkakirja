@@ -245,7 +245,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Auringon atsimuutti (pohjoisesta myötäpäivään) ja korkeus (astetta) pisteessä hetkellä utc.</summary>
         static (double az, double korkeus) AurinkoPisteessa(DateTime utc, double lat, double lon)
         {
-            Aurinko.Alihajapiste(Aika.Jd(utc), out double sla, out double slo);
+            Matkakirja.Linssit.Iss.Aurinko.Alihajapiste(Aika.Jd(utc), out double sla, out double slo);
             double f1 = lat * Math.PI / 180, f2 = sla * Math.PI / 180, dl = (slo - lon) * Math.PI / 180;
             double kulma = Math.Acos(Math.Max(-1, Math.Min(1, Math.Sin(f1) * Math.Sin(f2) + Math.Cos(f1) * Math.Cos(f2) * Math.Cos(dl))));
             double az = Math.Atan2(Math.Sin(dl) * Math.Cos(f2), Math.Cos(f1) * Math.Sin(f2) - Math.Sin(f1) * Math.Cos(f2) * Math.Cos(dl));
