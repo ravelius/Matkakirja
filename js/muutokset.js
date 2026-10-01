@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2508, teksti: 'Sähke: nimimerkkien sanalistat workerin mukaisi… (#3786)' },
   { v: 2507, teksti: 'Maakuntien toinen kuva: FIN, FRA, GBR, HRV (#3792)' },
   { v: 2506, teksti: 'Ihmisen matka: vuosiluvun liike-epäterävyys myö… (#3790)' },
   { v: 2505, teksti: 'ISS-kytkinpöytä v4: VUOROKAUSI-nuppi, NOPEUS-as… (#3794)' },
