@@ -46,30 +46,49 @@ namespace Matkakirja.Natiivi
     }
 
     /// <summary>
-    /// NOSTOKORTTI-pohjan vetokahva (KAPEA): ylös laajentaa, alas sulkee, napautus vaihtaa korkeutta. Kahva kaappaa
-    /// osoittimen itse; kortit, joiden isä pysäyttää liikkeen (Kosketusvieritys), mittaavat vedon omissa käsittelijöissään.
+    /// NOSTOKORTTI-pohjan vetokahva (KAPEA): ylös laajentaa, alas sulkee, napautus vaihtaa korkeutta. Kuten kartan
+    /// nostokortissa (Nostokortti.EleAlkoi/KahvaIrti, todennettu laitteella): painallus ja irrotus mitataan KORTILLA
+    /// TrickleDown-vaiheessa ennen lapsia, vyöhyke on kortin koko yläreuna (28 pt), ja kortti kaappaa osoittimen, jotta
+    /// kortin ulkopuolelle päättyvä veto ylös tulee perille. (Ennen kahvan oma 120 × 26 pt elementti, joka ei saanut
+    /// käsivetoa Ihmisen matkan kortissa: savuke 106, todennus f4f47679.)
     /// </summary>
     public sealed class Vetokahva
     {
         public readonly UnityEngine.UIElements.VisualElement Juuri;
         UnityEngine.Vector2 alku;
         int id = -1;
-        const float Ylos = 20f, Alas = 40f, Napautus = 6f;
+        const float Ylos = 20f, Alas = 40f, Napautus = 6f, Vyohyke = 28f;
+
+        /// <summary>Kahvan veto käynnissä (kortin oma vieritys ja napautus väistävät).</summary>
+        public bool Vetaa => id >= 0;
 
         public Vetokahva(UnityEngine.UIElements.VisualElement kortti, System.Action<bool> laajenna, System.Action sulje, System.Func<bool> laajennettu)
         {
-            Juuri = Rakenne.El("mk-vetokahva", kortti);
+            Juuri = Rakenne.El("mk-vetokahva", kortti, UnityEngine.UIElements.PickingMode.Ignore);
             Rakenne.El("mk-nosto__kahva", Juuri, UnityEngine.UIElements.PickingMode.Ignore);
-            Juuri.RegisterCallback<UnityEngine.UIElements.PointerDownEvent>(e => { id = e.pointerId; alku = e.position; Juuri.CapturePointer(id); e.StopPropagation(); });
-            Juuri.RegisterCallback<UnityEngine.UIElements.PointerUpEvent>(e =>
+            kortti.RegisterCallback<UnityEngine.UIElements.PointerDownEvent>(e =>
+            {
+                var r = kortti.worldBound;
+                if (id >= 0 || Juuri.resolvedStyle.display == UnityEngine.UIElements.DisplayStyle.None
+                    || !r.Contains(e.position) || e.position.y - r.y >= Vyohyke) return;
+                id = e.pointerId;
+                alku = e.position;
+                // Ei StopPropagationia (kuten Nostokortti): yläreunan nappi saa painalluksen ja vie kaappauksen (CaptureOut → ei vetoa).
+                kortti.CapturePointer(id);
+            }, UnityEngine.UIElements.TrickleDown.TrickleDown);
+            kortti.RegisterCallback<UnityEngine.UIElements.PointerUpEvent>(e =>
             {
                 if (e.pointerId != id) return;
-                Juuri.ReleasePointer(id); id = -1; e.StopPropagation();
+                if (kortti.HasPointerCapture(id)) kortti.ReleasePointer(id);
+                id = -1;
+                e.StopPropagation();
                 float dy = e.position.y - alku.y;
+                UnityEngine.Debug.Log($"MATKAKIRJA ui vetokahva: dy {dy:0}");
                 if (dy > Alas) { sulje(); return; }
                 if (dy < -Ylos) laajenna(true);
                 else if (UnityEngine.Mathf.Abs(dy) < Napautus) laajenna(!laajennettu());
-            });
+            }, UnityEngine.UIElements.TrickleDown.TrickleDown);
+            kortti.RegisterCallback<UnityEngine.UIElements.PointerCaptureOutEvent>(_ => id = -1);
         }
     }
 }
