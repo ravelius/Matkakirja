@@ -713,6 +713,9 @@ namespace Matkakirja.Natiivi
         readonly VisualElement puluLohko;
         /// <summary>Kuvan kokoruutusuurennos (omistaja 28.9.2026): sama komponentti ja asetukset kuin Nostokortti.</summary>
         readonly Kuvasuurennos suurennos;
+        // NOSTOKORTTI-pohja (omistaja 1.10.2026): paikka ja vetokahva kuten nostokortilla (Pohja.NostokortinPaikka).
+        readonly Vetokahva kahva;
+        bool laajennettu;
         public bool Auki { get; private set; }
         /// <summary>Jokin maakuntakortti auki (UiNakymat.ChatinKerros: chat nousee kortin päälle kuten nostokortissa).</summary>
         public static bool JokinAuki { get; private set; }
@@ -751,7 +754,7 @@ namespace Matkakirja.Natiivi
             {
                 if (!lukitaan || kortti.layout.height <= 0 || float.IsNaN(kortti.layout.height)) return;
                 lukitaan = false;
-                kortti.style.height = kortti.layout.height;
+                // Korkeus tulee pohjasta (Paikka: kiinteä 45 % / laajennettuna 85 %), joten koko ei muutu sisällön mukana.
                 // Origo avanneesta kohdasta, kun kortin paikka on tiedossa; kasvu alkaa vasta tämän jälkeen (ei hyppyä
                 // origon vaihtuessa kesken). Ilman kohtaa (testikomento) keskeltä.
                 // Skaalaamaton laatikko (worldBound sisältäisi kesken olevan 0,92-mittakaavan).
@@ -763,6 +766,9 @@ namespace Matkakirja.Natiivi
             });
             var sulje = Rakenne.Nappi("×", "mk-selite__sulje mk-maakuntaKortti__sulje", Sulje, kortti);
             sulje.tooltip = "Sulje";
+            sulje.style.display = DisplayStyle.None; // NOSTOKORTTI-pohja: ei ✕:ää (ohinapautus, veto alas, Esc)
+            kahva = new Vetokahva(kortti, l => { laajennettu = l; Paikka(); }, Sulje, () => laajennettu);
+            Nappaimisto.Rekisteroi("maakuntakortti", 60, () => Auki, null, null, Sulje);
             sisalto = new ScrollView(ScrollViewMode.Vertical);
             sisalto.AddToClassList("mk-maakuntaKortti__sisalto");
             sisalto.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -800,13 +806,21 @@ namespace Matkakirja.Natiivi
             kuvaKatto = Mathf.Round(Mathf.Max(rk - 150f, rk * 0.28f));
             float leveys = Nostokortti.LaskeLeveys(rl, rk);
             if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; Lukitse(); }
+            Paikka();
+        }
+
+        void Paikka()
+        {
+            if (!Auki) return;
+            bool kapea = Pohja.NostokortinPaikka(himmennys, kortti, laajennettu, kiintea: true);
+            kahva.Juuri.style.display = kapea ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
         /// <summary>Korkeus vapaaksi ja uudelleen lukkoon seuraavassa asettelussa (uusi alue tai leveyden muutos).</summary>
         void Lukitse()
         {
-            kortti.style.height = StyleKeyword.Null;
             lukitaan = true;
+            Paikka();
         }
 
         /// <param name="avainTunnus">"ISO:tunnus" (minikartta)</param>
@@ -835,6 +849,8 @@ namespace Matkakirja.Natiivi
             Lukitse();
             if (Auki) return;
             Auki = JokinAuki = true;
+            laajennettu = false;
+            Paikka();
             Mitoita();
             // Avaus: näkyviin ilman mk-auki-luokkaa; luokka (kasvu ja häivytys) vasta kun korkeus ja origo on lukittu (yllä).
             // Uusi versio kumoaa kesken olevan sulun viivästetyn piilotuksen (Rakenne.Nayta).
@@ -854,6 +870,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) return;
             Auki = JokinAuki = false;
+            laajennettu = false;
             suurennos.Sulje();
             SuljeKartta(true);
             avautuu = false;
