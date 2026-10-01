@@ -593,6 +593,14 @@ namespace Matkakirja.Natiivi
             var st = kuva.style;
             st.left = sovitus.x; st.top = sovitus.y; st.width = w; st.height = h;
             Rajoita();
+            // Sijaintipallo väistää kuvaa (vaaka: kuva täyttää korkeuden, reunus kapea; Laitetestaaja 1.10. build 86).
+            var turva = sijaintipallo.Isa;
+            if (turva?.panel != null)
+            {
+                Vector2 vy = turva.WorldToLocal(lava.LocalToWorld(sovitus.position));
+                Vector2 aa = turva.WorldToLocal(lava.LocalToWorld(sovitus.position + sovitus.size));
+                sijaintipallo.Mitoita(Rect.MinMaxRect(vy.x, vy.y, aa.x, aa.y), turva.layout.height);
+            }
         }
 
         float Suurin => tekstuuri == null || sovitus.width <= 0 ? 1f
