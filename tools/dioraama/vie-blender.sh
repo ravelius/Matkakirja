@@ -66,6 +66,13 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
            ymparisto-hamara-8k-4x4.astcm ymparisto-hamara-4k-4x4.astcm ymparisto-hamara-2k-4x4.astcm; do
     lisaa "ymparisto/$f" "ymparisto/$f"
   done
+  # Lähimaasto (kerrosmaskit + CC0-kerrokset) ja aluskasvit, jos lähteessä (1.10.2026).
+  if [ -f "$LAHDE/ymparisto/splat-0.png" ]; then
+    for f in splat-0.png splat-1.png splat-normaali-0.png aluskasvit.png aluskasvit-hamara.png aluskasvit.json aluskasvit-lista.json; do
+      lisaa "ymparisto/$f" "ymparisto/$f"
+    done
+    for f in "$LAHDE"/ymparisto/maasto/*_1k.jpg; do lisaa "ymparisto/maasto/${f:t}" "ymparisto/maasto/${f:t}"; done
+  fi
 fi
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"

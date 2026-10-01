@@ -537,7 +537,8 @@ export function kokoaKonteksti({
    */
   if (kohde?.nimi) {
     const tyyppi = kohde.tyyppi ? ` (${polloSiisti(kohde.tyyppi)})` : '';
-    rivit.push(`Kartalla auki oleva kohdetietoruutu: ${polloSiisti(kohde.nimi)}${tyyppi}`);
+    const otsake = kohde.otsake ?? 'Kartalla auki oleva kohdetietoruutu';
+    rivit.push(`${otsake}: ${polloSiisti(kohde.nimi)}${tyyppi}`);
     if (kohde.teksti) {
       rivit.push(`Tietoruudun teksti: ${polloLeikkaa(polloSiisti(kohde.teksti), KOHTEEN_KATTO)}`);
     }
@@ -634,7 +635,7 @@ function avoinAvaruuskuva(doc) {
   return { nimi, seutu: seutu || null, teksti: teksti || null };
 }
 
-export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [] } = {}) {
+export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [], aihe = null } = {}) {
   const tila = pelinTila(game);
   /*
    * AVARUUDESSA EI OLE SIJAINTIA: kaupunki, maa ja matkapäivä jäävät
@@ -677,14 +678,25 @@ export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [
    * Kartan kohdetietoruutu luetaan vain kartalla: lehti on sen PÄÄLLÄ,
    * ja auki jäänyt kortti sen alla ei ole se, mitä pelaaja katsoo.
    */
-  const kohde = lehtiAuki ? null : avoinKohdetietoruutu(ui);
+  const avoin = lehtiAuki ? null : avoinKohdetietoruutu(ui);
+  /*
+   * KORTIN AIHE KYSYMYKSEN MUKANA (omistajan löydös 30.9.2026, TF 1.1 (78):
+   * Segovian akvedukti → "Miten akveduktin ikä selvitettiin?" → pulu ei
+   * tiennyt, mistä akveduktista on kyse). Täkynoston kortti sulkeutuu
+   * ennen kysymystä (js/fokusnosto.js piirraNostonKysymykset), joten
+   * avoinKohdetietoruutu ei enää näe sitä. Kortti antaa aiheensa
+   * polloKysy-kutsussa; avoin kohdetietoruutu voittaa sen.
+   */
+  const kohde = avoin ?? (aihe?.nimi ? aihe : null);
   let nakyma = 'kartta';
   if (lehtiAuki && maalehtiIso) {
     nakyma = lehdenMaa ? `maan lehti auki (${lehdenMaa})` : 'maan lehti auki';
   } else if (lehtiAuki) {
     nakyma = 'kaupungin lehti auki';
-  } else if (kohde) {
+  } else if (avoin) {
     nakyma = 'kartta, kohteen tietoruutu auki';
+  } else if (kohde) {
+    nakyma = 'kartta';
   }
   return kokoaKonteksti({
     ...tila,
@@ -6145,6 +6157,7 @@ export class Pollo {
         ui,
         doc: this.doc,
         aineisto: kysymys ? this.haeAineisto(kysymys) : [],
+        aihe: kysymys ? this.kysymyksenAihe ?? null : null,
       });
     } catch {
       // Kontekstin puuttuminen ei saa estää kysymistä.
@@ -6594,9 +6607,12 @@ export class Pollo {
    *   (naytaJatkot). Kaikki muut polut ovat uusi aihe — ks.
    *   kehysLaji ja sen yllä oleva selitys.
    */
-  async kysy(raakaKysymys, { jatko = false, puhe = false } = {}) {
+  async kysy(raakaKysymys, { jatko = false, puhe = false, aihe = null } = {}) {
     const kysymys = String(raakaKysymys ?? '').trim();
     if (!kysymys || this.kesken || !this.palvelin) return;
+    // Kortin aihe koskee vain tätä kysymystä (ks. lueNakyma aihe); jatkot
+    // nojaavat historiaan, johon ensimmäinen vastaus jo nimeää aiheen.
+    this.kysymyksenAihe = aihe?.nimi ? aihe : null;
     // Kesken oleva ehdotushaku mitätöidään: pelaajan kysymys voittaa,
     // eivätkä myöhässä valmistuvat ehdotukset putkahda vastauksen alle.
     this.ehdotusPoletti = (this.ehdotusPoletti ?? 0) + 1;
@@ -7533,7 +7549,7 @@ export function kysyPollolta(valinta) {
  *   käytettävissä (peliä ei ole, pöllöä ei ole löydetty, tai edellinen
  *   vastaus on kesken) — kutsuja saa jättää sen huomiotta.
  */
-export function polloKysy(kysymys) {
+export function polloKysy(kysymys, { aihe = null } = {}) {
   const pollo = nykyinenPollo;
   if (!pollo) return false;
   // Pöllö on aarre: ennen löytöä sitä ei ole olemassa pelaajalle, eikä
@@ -7548,7 +7564,7 @@ export function polloKysy(kysymys) {
   // kysy on asynkroninen (verkkopyyntö); lupausta ei odoteta, koska
   // kutsuva ele on jo mennyt. Hylkäys niellään samalla opilla kuin
   // muissakin kuorikutsuissa (js/natiivi.js nielaise).
-  Promise.resolve(pollo.kysy(teksti)).catch(() => {});
+  Promise.resolve(pollo.kysy(teksti, { aihe })).catch(() => {});
   return true;
 }
 

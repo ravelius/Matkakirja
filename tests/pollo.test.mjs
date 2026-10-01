@@ -62,6 +62,7 @@ test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
 // kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
 // asuu samassa tiedostossa (kuplapino, 3.9.2026).
+import { nostonAihe } from '../js/fokusnosto.js';
 import { jaaPuheenvuoroksi, linssiEstaa, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
 // Puheenvuoron jaon testi lukee tekstinsä paketista eikä kopioi sitä
 // tänne. Uuden kulun kaupungeissa repliikit on 7.9.2026 alkaen
@@ -426,6 +427,25 @@ test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
   assert.ok(kartalla.includes('Näkymä: kartta'));
   assert.ok(!kartalla.includes(JUTUN_TEKSTI));
   assert.equal(lueNakyma({ game: null, doc: teeDoc() }), 'Näkymä: kartta');
+});
+
+/*
+ * OMISTAJAN LÖYDÖS 30.9.2026 (TF 1.1 (78)): Segovian akvedukti → "Miten
+ * akveduktin ikä selvitettiin?" → pulu ei tiennyt, mistä akveduktista on
+ * kyse. Kortti antaa aiheensa kysymyksen mukana (polloKysy aihe), koska
+ * täkynoston kortti sulkeutuu ennen kysymystä.
+ */
+test('lueNakyma: kortin aihe kulkee kysymyksen mukana, avoin tietoruutu voittaa', () => {
+  const aihe = nostonAihe({ otsikko: 'Segovian akvedukti', ingressi: 'Roomalainen vesijohto.', teksti: 'Rakennettiin 100-luvulla.' });
+  const k = lueNakyma({ game: teeGame(), doc: teeDoc(), aihe });
+  assert.ok(k.includes('Kortti, josta pelaaja kysyy: Segovian akvedukti'), k);
+  assert.ok(k.includes('Tietoruudun teksti: Roomalainen vesijohto. Rakennettiin 100-luvulla.'), k);
+  assert.ok(k.includes('Näkymä: kartta'));
+  const ui = { fokuskohdeAuki: { kohde: { nimi: 'Alhambra', tyyppi: 'palatsi', teksti: 'Nasridien palatsi.' } } };
+  const auki = lueNakyma({ game: teeGame(), ui, doc: teeDoc(), aihe });
+  assert.ok(auki.includes('Kartalla auki oleva kohdetietoruutu: Alhambra (palatsi)'), auki);
+  assert.ok(!auki.includes('Segovian'));
+  assert.equal(nostonAihe({}), null);
 });
 
 /* ---------------------------------------------------------------- */
