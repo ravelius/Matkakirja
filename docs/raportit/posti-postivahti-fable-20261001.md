@@ -36,3 +36,6 @@ Tila: levy 52 Gi, wt/ 31 (raja 20), muisti 80 %, kuorma 36. Kävijälaskuri 06.3
 ## 07.33 — KÄVIJÄLASKURI 6→9 + esittelylinssi + apurahakortti 4
 - 1.10.: 6 kävijää (US 6, ios 6; ensimmäinen 00:46 UTC; +3 klo 06.33 jälkeen), apurahakortin avauksia 1.10. 4 (+3; yht. 6 = 2 + 4), ESITTELYLINSSIT 1 (ensimmäinen kerta!). Yhteensä n=9 (30.9.: FI 1 + US 2; 1.10.: US 6).
 - Viikkoraja 96 % (97 %:n ilmoitus lähellä). Levy 49 Gi, wt/ 31 (raja 20), muisti 79 %, kuorma 44. Päätoimittajan konteksti 12 %. Hook OK, #3734 auki. SendMessage estynyt (15).
+
+## 08.0x — POSTIVAHTI LOPETTI (tilinvaihto)
+Käsky vastaanotettu; luovutus docs/raportit/viesti-postivahti-luovutus-20261001.md haarassa postivahti. Kuittaus yhdellä rivillä (SendMessage estetty): haara postivahti, SHA katso git log -1.
