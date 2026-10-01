@@ -44,7 +44,7 @@ namespace Matkakirja.Linssit
         /// 32°N:n sauman. A/B `astro kyyti s2savy <kontrasti> <kylläisyys> <lämpö>`; arvot NASA-vertailusta.
         /// </summary>
         public static bool S2;
-        public static float S2Kontrasti = 60f, S2Kyllaisyys = -10f, S2Lampo = 1f;   // albedossa (varjostin) 1.10. D-ajo: 60/−10/1 ero 54 → 44
+        public static float S2Kontrasti = 100f, S2Kyllaisyys = -10f, S2Lampo = 1f;   // albedossa (varjostin) 1.10. E-ajo: ero NASAan 54 → 39
         static readonly int S2SavyId = Shader.PropertyToID("_s2Savy");
 
         /// <summary>
