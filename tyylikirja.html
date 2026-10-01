@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tyylikirja — Matkakirja (kehittäjä)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<!--
+  TYYLIKIRJAN KEHITTÄJÄSIVU (omistaja 1.10.2026, UI-pohjat kohta 7; linssikatalogin alla projekti.html#linssit).
+  Lähde tyylikirja/tyylikirja.json (generaattori tools/tyylikirja.mjs → css/styles.css TYYLIKIRJA-lohko).
+  Sivu näyttää tokenit ja pohjat esimerkkidatalla; värivalitsimet muuttavat tokeneita vain tällä sivulla, ja
+  "Tallenna ehdotus" lähettää muutokset JSONina samaa reittiä kuin äänimikseri (sivu "Tyylikirja").
+-->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/pohjat.css">
+<style>
+  body { margin: 0; background: var(--bg); color: var(--ink-light); font-family: var(--font-luku); }
+  .tks { max-width: 1100px; margin: 0 auto; padding: 16px 16px 64px; }
+  .tks > h1 { font-family: var(--font-type); font-size: var(--tk-koko-arkki); margin: 8px 0 4px; }
+  .tks > h2 { font-family: var(--font-type); font-size: var(--tk-koko-valiotsikko); margin: 32px 0 8px; color: var(--accent); }
+  .tks a { color: var(--accent); }
+  .tks-ohje { color: var(--muted); font-size: var(--tk-koko-apuri); margin: 0 0 8px; }
+  .tks-teemat { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .tks-teema { padding: 12px; border-radius: var(--tk-kulma-kortti); background: var(--tk-pinta); color: var(--tk-muste); border: 1px solid var(--tk-reunus); }
+  .tks-teema h3 { margin: 0 0 8px; font-family: var(--font-type); font-size: var(--tk-koko-apuri); text-transform: uppercase; letter-spacing: .1em; }
+  .tks-vari { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: var(--tk-koko-kapiteeli); font-family: var(--font-type); }
+  .tks-vari input[type=color] { width: 32px; height: 24px; padding: 0; border: 1px solid var(--tk-reunus); background: none; }
+  .tks-vari input[type=text] { width: 150px; font: inherit; }
+  .tks-portaat { display: grid; gap: 6px; background: var(--tk-paperi-pinta); color: var(--tk-paperi-muste); padding: 12px; border-radius: var(--tk-kulma-kortti); }
+  .tks-porras { display: flex; align-items: baseline; gap: 12px; }
+  .tks-porras code { width: 140px; flex: none; font-size: 12px; color: var(--tk-paperi-muste-pehmea); }
+  .tks-pohjat { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; align-items: start; }
+  .tks-pohja h3 { margin: 0 0 6px; font-family: var(--font-type); font-size: var(--tk-koko-kapiteeli); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  .tks-pohja .tk-esikatselu { padding: 12px; border-radius: var(--tk-kulma-kortti); background: var(--paper); }
+  .tks-tallenna textarea { width: 100%; min-height: 140px; font: 12px/1.4 var(--font-type); box-sizing: border-box; }
+  .tks-tallenna .tk-napit { margin-top: 8px; max-width: 420px; }
+</style>
+</head>
+<body>
+<main class="tks" id="tyylikirja">
+  <p class="tks-ohje"><a href="projekti.html#linssit">← Linssit</a> · kehittäjäsivu, ei pelissä</p>
+  <h1>Tyylikirja</h1>
+  <p class="tks-ohje">Tokenit ja UI-pohjat (omistaja 1.10.2026). Lähde <code>tyylikirja/tyylikirja.json</code>. Muutokset
+    näkyvät vain tällä sivulla, kunnes ne viedään tyylikirjaan.</p>
+  <noscript><p>Sivu tarvitsee JavaScriptin.</p></noscript>
+</main>
+<script type="module" src="js/pohjat/tyylikirja-sivu.js"></script>
+</body>
+</html>

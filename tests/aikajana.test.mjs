@@ -969,7 +969,7 @@ test('rullauksen kesto on Raamatun animaatiosäännön rajoissa', () => {
 test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa sekunnissa', () => {
   assert.ok(AIKAJANA_NAKSU_VALI_MS >= 125, `${AIKAJANA_NAKSU_VALI_MS} ms sallisi yli 8 naksua sekunnissa`);
   // Kytkentä: avaus ja alustus ovat `heti`, pysäytetty kello hiljainen.
-  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,2600}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
+  assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false, \{ kay = null \} = \{\}\) \{[\s\S]{0,2600}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle, ei vuodenvaihteelle (omistaja 3.9.2026).
   // (Väli kasvoi hiljaisen pysäkin haaralla: kohahdus on sen jälkeen.)
   assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,2200}this\.keksinnonAani\(t\);/);
@@ -2295,9 +2295,13 @@ test('sumennaRullat kirjoittaa muuttujat ja luokan vain liikkuville rullille; no
     assert.ok(!r.kehys.tyyli.has('--sumu'));
   }
   // Moottori kytkee: naytaVuosi sumentaa, pysayta nollaa, css ei käytä filter: blur -suodatinta.
-  assert.match(MOOTTORI, /this\.sumennaKello\(arvo, heti\);/);
+  assert.match(MOOTTORI, /this\.sumennaKello\(arvo, heti, kay\);/);
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,500}sumennaRullat\(this\.rullat, 0, \{ nollaa: true \}\);/);
-  assert.match(MOOTTORI, /if \(!this\.kaynnissa \|\| heti \|\| this\.reducedMotion \|\| !edellinen\) \{/);
+  assert.match(MOOTTORI, /if \(!kayko \|\| heti \|\| this\.reducedMotion \|\| !edellinen\) \{/);
+  // Ihmisen matkan esitys kertoo kellon käyvän (omistaja 1.10.2026: webin malli on sumullinen rullaus).
+  assert.match(MOOTTORI, /const kayko = kay \?\? this\.kaynnissa;/);
+  assert.match(readFileSync(new URL('../js/linssit/ihmisen-matka-esitys.js', import.meta.url), 'utf8'),
+    /ajo\.naytaVuosi\(paikka, reduced, \{ kay: true \}\);/);
   const lohko = AIKAJANA_CSS.match(/\.vuosi-numero\.vauhdissa \.vuosi-merkki \{[\s\S]*?\n\}/)[0];
   assert.match(lohko, /text-shadow:/);
   assert.ok(!/filter/.test(lohko), 'sumu ilman suodatinta');
