@@ -7647,3 +7647,1999 @@ Kortti 23.5x: lento v3 -speksi (docs/raportit/lento-v3-speksi.md, linssiseppa-ty
 ## V2287 (OUZEL GALLEY) JA V2288 (178 EI-PAIKAT MUSEOON) MAINISSA; JULKAISIJAN JONO TYHJA (27.9.2026 klo 00.01)
 
 Julkaisija 23.52: #3354 v2287, #3355 v2288 (kaksi korjauskierrosta: orvot miniatyyrit, SHELL-rivit), #3347 mainissa; jono tyhja → Fablen docs-haara mainiin, Z10-osoitinvaihto luettelon jalkeen, Raamattu-PR tulossa.
+
+## AVAUSKORTIN VEDOKSET (35/45 %) JA KAARI+VUORI-RELIEFIT OMISTAJALLE; S11 EI MERGETA (27.9.2026 klo 00.14)
+
+Pelikoodari: avauskortin vedokset oikealla datalla proto-3d/lokit/kaupunkikortti-mock/ (iPhone 390x844, iPad 834x1194; kartta 35 % / 45 %), suositus iPhone 35, iPad 45; lehden osiohakemisto vertailu-lehti-osiot-*.png (Pariisi 6 osiota, Ateena 4; osa osiokuvista lainattuja). Natiiviseppa: kaari + vuori reliefeina (natiiviseppa/kategoriat-reliefi 63ccbad3; kolmiot 224/100, 147/77; kooste-kaari-vuori.png) — avoimet: vuoren taysi siluetti, jalusta pois + maavarjo, rampin kiintea valo; liioiteltu perspektiivi puuttuu (ylhaalta-175 odottaa omistajan vastausta Natiivisepan sessiossa; Fable ei anna lupaa vertaisviestilla). S11 GraphicsStateCollection.WarmUp PAHENSI kylmaa verhoa 4,9 → 7,2 s → ei mergeta (proto-3d/lokit/s11/TULOS.md). Juna 8a90b51f: rajapinta, 174, 169/170b/173.
+
+## OMISTAJA HYLKASI KATEGORIASYMBOLIEN RELIEFIT: OIKEITA 3D-ESINEITA, OPPIA LIPPUTANGOSTA; KARTTA 35 % (27.9.2026 klo 00.15)
+
+Kortti 00.1x: (1) avauskortin nahtavyyskartan korkeus 35 % seka iPhonessa etta iPadissa. (2) Kaari + vuori -reliefit (pursotettu 2D-kuvamerkki) HYLATTY: todella huonot; pitaa saada visuaalisesti yhta hyvat kuin 2D mutta oikeina 3D-elementteina; muoto vaantyy vaarin; ota oppia lipputangosta. Fablen tulkinta: jokainen kategoriasymboli on oikea 3D-esine (kaari = raunioitunut kivikaari pilareineen ja saumoineen, vuori = aito huippu harjanteineen), aito geometria + valo + varjostus + kameran perspektiivi kuten lipputanko, kaiverrusilme varjostimesta ei litistamisesta, luettava ylhaalta ja kallistettuna, ei jalustaa, ei animaatiota. Mallit tekee Linssiseppa (Opus, max) = Mallinseppa erikoismallien laadulla, kaari + vuori ensin → kuvasarja isona → omistaja; Natiiviseppa rajapinta, varjostin, perspektiivi. Reliefihaara 63ccbad3 ei junaan.
+
+## TILA 00.1x: DOCS MAINISSA (#3356), PULU-ESIGENEROINTISUUNNITELMA, ERA C + ASTRO 2 + LEHTILUOKITTELU PR:ISSA (27.9.2026 klo 00.16)
+
+Julkaisija: Fablen docs (loki, raportit, kaappaukset) mainissa #3356; Raamattu, tools/mac, CLAUDE.md-rivi ja settings.json:n 9 sallintaa jaivat pois (sallinnat vain omistajan omalla muutoksella — oikein); Z10-osoitinvaihto vasta luettelon ja PELIN_SYVIN_TASO-muutoksen jalkeen erillisella luvalla. Pelikoodari: Pulun esigenerointisuunnitelma docs/raportit/pulu-vastausten-esigenerointi-20260926.md — 4 809 nostokysymysta (Eurooppa 2 999), 1 220 piilossa olevaa kaupunkien valmiskysymysta, 508 valmista vastausta (astronautti, II, maakunnat) eivat noudata kolmiosaista kaavaa; reitti nyt worker matkakirja-pollo + claude-sonnet-5 SSE; putki sisaltopaketti (puluvastaukset) → KV → live; 2 muunnelmaa; kustannus generointi ~55 $, mp3:t 420–1 270 $ (Eurooppa 250–740 $), teksti ~2 Mt gz; 7 avointa kysymysta omistajalle (kortti huomenna). Sisaltokirjuri: #3358 era C (BLR 7 + ROU 42), #3359 astronautin era 2 (22 kohdetta), #3360 kaupunkilehti-luokittelu (349 juttua: 302 kaupunki / 33 maa / 14 epaselva, ei siirtoja) → seuraavaksi astronautin erat 3–4. Pelikoodari 76 %, Postivahti 77 % → nollaukset pian.
+
+## OMISTAJA (SITOVA): ESIMERKKIKUVIIN KULMA JA VERSIO MERKITTYNA SUORAAN KUVAAN (27.9.2026 klo 00.20)
+
+Omistaja 27.9.2026 klo 00.2x: esimerkki- ja vertailukuviin merkitaan jatkossa suoraan kuvaan, mista kulmasta on kuvattu ja mika versio/vaihtoehto on kyseessa (ennen/jalkeen, A/B, 35/45 %), niin ettei tarvitse tulkita erillisesta tekstista. Kirjattu Raamattuun (JOHTOAJATUS, OMISTAJALLE TOIMITETTAVAT ESIMERKKIKUVAT) Raamattu-PR:ssa; kaikille rooleille.
+
+## XAI GROK TTS KOKEILTU SUOMEKSI: TOIMII, ENSIMMAINEN TAVU 0,16–0,39 s (27.9.2026 klo 00.22)
+
+Fable ajoi 27.9. klo 00.2x Livian repliikin xAI:n REST-rajapinnalla (POST /v1/tts; aanet eve, ara, aurora; language auto ja fi — fi hyvaksyttiin vaikka ei tuettujen listalla): kaikki 200, ensimmainen tavu 0,16–0,39 s, koko 6 s lause 1,3–1,9 s, mp3 24 kHz 128 kbps; hinta 4,20 $/M merkkia. Naytteet lahetetty omistajalle kuunneltavaksi (luontevuus omistajan korvalle); Pelikoodari vie ne ampariin ja raporttiin. Aiempi 400-virhe oli kuoren lainausvirhe, ei avaimen.
+
+## COLOSSEUM KAUPUNKIPISTEEN MAAMERKIKSI (ERIKOISMALLIT KAUPUNGIN SISALLA) (27.9.2026 klo 00.23)
+
+Mallinseppa: Colosseum ei nay paakartalla (paakartalla false, kohdekartta rooma) → Fable: vaihtoehto A — Rooman kaupunkipiste nayttaa Colosseum-mallin maamerkkina lahizoomissa; sama kaava kaikille kaupungin sisaisille erikoismalleille. MSM ja Stonehenge nakyvat laitteella; kaannos klo 01, kuvat kulma+versio merkittyna.
+
+## OMISTAJA (SITOVA): XAI GROK TTS, AANI ARA, KAIKKEEN STRIIMILUENTAAN (27.9.2026 klo 00.25)
+
+Omistaja 27.9.2026 klo 00.3x kuunneltuaan naytteet: kytketaan xAI:n Grok TTS aanella ara kaikkeen striimiluentaan pelissa (Pulun chat-vastaukset, nostojen ja muun tekstin live-luenta) webissa ja natiivissa; korvaa gpt-4o-mini-tts:n striimissa. Esigeneroidut aanet (eleven_v3) sailyvat toistaiseksi. Toteutus: Pelikoodari (web + worker matkakirja-pollo: wss://api.x.ai/v1/tts tai REST, voice_id ara, language fi (hyvaksytty rajapinnassa) ja varalla auto, optimize_streaming_latency 1, varapolku vanhaan OpenAI-aaneen virhetilanteessa, XAI_API_KEY workerin ja CI:n salaisuuksiin — ei repoon), Natiiviseppa/Natiivi-UI natiiviin samalla rajapinnalla. Kytkin xai 1|0 A/B:ta varten. Avain vaihdetaan myohemmin omistajan ilmoituksesta.
+
+## LIPUN PERSPEKTIIVI KORJATTU (fa874cd0) → JUNAAN; JUNA 6245e385; YLHAALTA-175 OMISTAJALLE (27.9.2026 klo 00.37)
+
+Natiiviseppa 00.4x: lippu natiiviseppa/lippu-176 fa874cd0 omistajan tarkennuksen mukaan (keskella lahes nakymaton, tanko radiaalisesti ulos; kuvat merkittyina lokit/lippu-perspektiivi-3/viisikko-merkitty.jpg) → Fable: junaan, kuva omistajalle. Juna/b13 6245e385: hoyrylaiva, 177, 170, 178, 179, Nostokortti.Avattu, KokoKerroin. Reliefit poistettu; natiiviseppa/kategoriamallit 24c40888 RekisteroiKategoria-rajapinta + Erikoismalli.Kaupunki (Colosseum). ylhaalta-175: luokitin esti myos Natiivisepan oman ajon (Modify Shared Resources) vaikka omistaja antoi luvan → komento omistajalle SSH:lla: cd /Users/Shared/Claude/wt/proto-natiiviseppa-ylhaalta && git merge --no-edit linssiseppa/perspektiivi && git apply /Users/Shared/Claude/proto-3d/lokit/ylhaalta-175/perspektiivi-f5900358.patch. Fable nollaa kontekstinsa 00.4x.
+
+## LIPPU JUNASSA ba90668f (27.9.2026 klo 00.37)
+
+Natiiviseppa: lippu fa874cd0 mergetty juna/b13 ba90668f, unity-tarkistus 0; ylhaalta-175 odottaa omistajan SSH-ajoa, sitten kategoriamallit-haaraan.
+
+## FABLE JATKAA NOLLAUKSEN JALKEEN; JONOT TAYTETTY; PULUN KYSYMYKSET 5-7 FABLEN PAATOS (27.9.2026 klo 00.52)
+
+Fable 00.5x (sama sessio local_5df52e10): luettu CLAUDE.md, Raamattu kohta 2, luovutus -20260927. Julkaisija mergesi #3358 (v2289), #3359 (v2290), #3360 (lehtiraportti); #3357 mergessa, #3361 (Raamattu) ja #3362 (astro era 3, v2291) jonoon. Z10 osa 2 shardissa 258/507 (~57/h, valmis ~05). Jonot: Siirtoseppa delta v2289+v2290 (+v2291); Natiivi-UI 174 laitemittaus, 173/169/170 laitetodennus, sitten avauskortti natiiviin; Laitetestaaja 1.0.27-reseptit etukateen; Natiiviseppa: Linssisepan klo 01 kaannoksen jalkeen juna/b13 ba90668f kaannos + savuke FBBD41D7 → Laitetestaaja → TF 1.0.27 (erikoismallit ja kategoriat3d eivat mukaan ennen omistajan kuvatarkastusta); ylhaalta-175 SSH-komento omistajalle kortilla, ei odoteta. Pulun esigeneroinnin (#3357) kysymykset 5-7 Fable paatti Raamatun sisalla: 5) pakettiin vain paras variantti (koko), hylatty QA-arkistoon; 6) valiton vastaus naytetaan heti kokonaan ilman naputusanimaatiota (nopeus on esigeneroinnin tarkoitus, aani alkaa heti); 7) malli lukitaan aliaksena claude-sonnet-5, kehoteTiiviste+malli tallennetaan alkioon. Kysymykset 1-4 (aani, kustannus, 508 esikirjoitettua, 1220 valmiskysymysta) omistajalle kortilla yhdessa 33 maajutun listan kanssa.
+
+## OMISTAJA 00.5x: 33 MAAJUTTUA MAALEHTEEN (14 EPASELVAA JAA); YLHAALTA-175 AJAA ITSE MACILLA; PULUA EI ESIGENEROIDA VIELA (27.9.2026 klo 00.59)
+
+Omistajan kortti 00.5x: 1) raportin #3360 33 maa-luokan juttua siirretaan kaupunkilehdista maalehtiin, 14 epaselvaa jaa kaupunkilehteen (Sisaltokirjuri, yksi PR); 2) ylhaalta-175: omistaja ajaa SSH-komennon itse kun on Macilla, TF 1.0.27 lahtee ilman ylhaalta-perspektiivia; 3) Pulun vastauksia EI esigeneroida viela — suunnitelma #3357 oli vain vaihtoehtojen kartoitus; aani- ja kustannuskysymykset (ja Fablen 5-7-paatokset) jaavat odottamaan, kunnes omistaja paattaa esigeneroinnista erikseen.
+
+## NATIIVIPAKETTI V193 (MAAKUNTA C + ASTRO 2); ASTRO ERA 4 PR 3363; MAINISSA #3357-#3360 (27.9.2026 klo 01.00)
+
+Siirtoseppa 00.5x: natiivipaketti v193 tuotannossa (1.50, 6c890b377, ampari 772/772): BLR 7 + ROU 42 pikkukuvaa (527 aluetta 31 maassa), astronautin kohteet 87 → 109. Sisaltokirjuri: astronautin kamera era 3 PR #3362 (16) ja era 4 PR #3363 (16, 3 paallekkaista poistettu) → linssi 141 kohdetta kun mergetty; molemmat Julkaisijan jonoon, jalkimmainen rebase. Julkaisija 00.52: #3357, #3358 (v2289), #3359 (v2290), #3360 mainissa, testit 4411/0. Postivahti 87 % → nollaus kaynnissa (luovutus -20260927-yo c6e0ae19e); Pelikoodari 84 % → nollaus avauskortti-PR:n ja xAI-kytkennan jalkeen.
+
+## OMISTAJA AJOI YLHAALTA-175-KOMENNON (69a198a7 + PATCH TYOPUUSSA); LAITETESTAAJAN 1.0.27-RESEPTI dc069a234 (27.9.2026 klo 01.03)
+
+Omistaja ajoi 01.1x SSH-komennon: proto-natiiviseppa-ylhaalta = natiiviseppa/ylhaalta-175 @ 69a198a7 (merge linssiseppa/perspektiivi, LiioiteltuPerspektiivi.cs + testit) ja patch perspektiivi-f5900358 tyopuussa commitoimatta → Natiiviseppa commitoi ja yhdistaa kategoriamallien haaraan seuraavaan buildiin (ei 1.0.27). Laitetestaaja: 1.0.27-resepti dc069a234 (178, 179, 170, lipun perspektiivi, hoyrylaiva, 177+nostokortti); epaily ettei uusi peli sulje avointa nostokorttia → Natiivi-UI tarkistaa ennen kaannosta. Postivahti nollattu 01.0x (id ennallaan). Fablen RC paalle omistajan pyynnosta 01.0x.
+
+## OMISTAJA: YLHAALTA-175 NYT 1.0.27:AAN (27.9.2026 klo 01.03)
+
+Omistaja 01.1x ("Nyt"): ylhaalta-175 (69a198a7 + patch) yhdistetaan juna/b13:een heti ja tulee TF 1.0.27:aan — korvaa Fablen 00.5x-linjauksen (seuraavaan buildiin). Natiiviseppa commitoi patchin, mergeaa junaan, kaantaa Linssisepan klo 01 kaannoksen jalkeen.
+
+## OMISTAJA: XAI ARA KYTKETAAN HETI (PELIKOODARI, AVAUSKORTTI TAUOLLE); 177-KORTTIKORJAUS cc33ba3b (27.9.2026 klo 01.04)
+
+Omistaja 01.2x "Kytke heti": xAI Grok TTS (ara) -kytkenta striimiluentaan tehdaan NYT — Pelikoodari keskeyttaa avauskortin (haara pushataan keskeneraisena), worker-reitti + kytkin + varapolku (gpt-4o-mini-tts), avain workerin/CI:n salaisuuksiin, mittaus, PR junaan. Natiivi-UI 01.1x: 177-epaily piti osittain — valikon Uusi peli sulki nostokortin, testikomento uusi-peli ei; korjaus MatkaAlkoi-tapahtumalla natiivi-ui/uusi-peli-kortti-177 cc33ba3b merge-pyynnossa Natiivisepalla ennen 1.0.27; laitetodennukset 174/173/169/170 kaynnissa ba90668f:lla.
+
+## OMISTAJA: KEHITTAJAVALIKKOON XAI-AANEN VALINTA STRIIMILLE; PELIKOODARI 93 % → NOLLAUS ENNEN XAI-TYOTA (27.9.2026 klo 01.05)
+
+Omistaja 01.2x: kehittajavalikkoon (web + natiivi) aanen valinta xAI:n aanivaihtoehdoista striimiluentaa varten (oletus ara); kuuluu xAI-kytkentaeraan. Postivahti: Pelikoodari 93 % → Fable kaski luovutuksen (avauskortti-haara pushataan keskeneraisena, xAI-suunnitelma luovutukseen) ja clear_session self; xAI-kytkenta tehdaan tuoreella kontekstilla heti nollauksen jalkeen. Linssiseppa 81 % (nollaus erikoismallikuvien jalkeen), Sisaltokirjuri 81 % (nollaus maajuttu-PR:n jalkeen).
+
+## OMISTAJA: FABLE KYTKEE XAI:N ITSE; PULUN LUKIJANAPPIIN KYTKIMEN TILAN VISUAALI; PELIKOODARI NOLLATTU (27.9.2026 klo 01.15)
+
+Omistaja 01.2x "Kytke sinä se": Fable tekee xAI ara -kytkennan itse worktreessa fable-xai-ara (worker: XAI_API_KEY + PUHE_MOOTTORI=xai, varapolku OpenAI 8 s aikarajalla, xAI-aanet 28 kpl /v1/tts/voices; web: kehittajavalikon striimiaani-valitsin; workflow: XAI_API_KEY-salaisuus workerille; GitHub-salaisuus XAI_API_KEY asetettu gh:lla). Mittaus 01.1x: /v1/tts ara suomeksi 200, ttfb 0,18 s, mp3 24 kHz 128 kbps, speed-kentta toimii. Omistaja 01.3x (kuvakaappaus Pulun paneelista): kaiutin/lukija-nappi tarvitsee visuaalisen vahvistuksen kytkimen tilasta → Pelikoodari web, Natiivi-UI natiivi webin mallin mukaan. Pelikoodari nollattu 01.3x (luovutus -20260927 971b18ba5, avauskortti PR #3364), aloitusviesti lahetetty.
+
+## OMISTAJA: JATKOSSA TAAS APUSESSIOT (FABLEN OMA KOODAUS VAIN XAI-ERA) (27.9.2026 klo 01.16)
+
+Omistaja 01.4x: "Jatkossa käytä taas apu sessioita" — Fablen oma koodaus rajoittuu tahan xAI-eraan (v2292); kaikki muu koodi roolisessioille kuten Raamattu sanoo (Fable = tarina + koordinaatio).
+
+## OMISTAJA HYVAKSYI AVAUSKORTIN WEBIIN (PR 3364) JA TRAILERI+POSTIKORTIT JAAVAT; #3361 JA #3362 MAINISSA (27.9.2026 klo 01.19)
+
+Omistaja 01.4x kortilla: avauskortti webiin (Pelikoodari PR #3364, v2291; kuvasarjat proto-3d/lokit/kaupunkikortti-web/) hyvaksytty → Julkaisijan junaan; Natiivi-UI tekee natiivin saman mallin mukaan. Saapumisen traileri ja 1873-postikortit jaavat — "ei mitaan automaattisesti" koskee vain lehden ja kortin avautumista. Julkaisija: #3361 (Raamattu) mainissa 01.02, #3362 (astro era 3, v2291) 01.14; #3363 rebase Sisaltokirjurilla. Fablen xAI-era: v2292 nostettu, kaksoisavaimet ok, standalone-build ok, tayssarja ajossa.
+
+## NATIIVI-UI LAITE-ERA VALMIS: 174 MITATTU, 173/169, 170, 179, 178 PASS (JUNA ba90668f) (27.9.2026 klo 01.20)
+
+Natiivi-UI 01.2x: juna/b13 ba90668f (kaannos da5c85d4) iPhone 17 + iPad Pro 11, kuvat proto-3d/lokit/natiivi-ui-laite-20260927/ (versio+kulma kuvassa). 174 iPad Ranskan maataso: veto/nipistys mediaani 16,6 ms, p95 33,4 ms, max 34,9 ms, levossa 30 fps. 173/169 PASS (Kaikki|Pois samalla rivilla, Kaikki varjaa koko maan). 170 PASS (v176 → v194 kesken istunnon, Attikan kuva heti). 179 PASS (Tapaa-nappi pois). 178 PASS (Ateenan 4 tarinakohdetta nostoissa). Avoinna 177-korjaus cc33ba3b seuraavasta junakaannoksesta. Seuraava era: Pulun lukijanapin tila (webin mallin jalkeen) ja kehittajavalikon striimiaani natiiviin.
+
+## XAI STRIIMILUENTA PR 3365 (v2292) JULKAISIJAN JUNAAN; TESTIT 4413/0 (27.9.2026 klo 01.22)
+
+Fable 01.2x: xAI-era valmis haarassa fable-xai-ara 2a0b68162 → PR #3365 (v2292): worker xAI-reitti + PUHE_MOOTTORI + varapolku OpenAI (8 s), kehittajavalikon striimiaani (28 xAI-aanta, oletus ara), workflow vie XAI_API_KEY:n workerille (GitHub-salaisuus asetettu 01.1x), OHJE.md, testit. npm test 4413/0, kaksoisavaimet ok, standalone ok. Julkaisija mergeaa #3364:n jalkeen; merge laukaisee Pollon julkaisu -workflown → xAI ara tuotannossa webissa ja natiivissa samalla. Natiivin kehittajavalikon striimiaani-valitsin Natiivi-UI:n jonossa. Postivahti 01.2x: Pelikoodari 11 % (nollaus onnistui), Sisaltokirjuri 87 % → nollauskasky eran jalkeen.
+
+## 1.0.27-JUNA KAANNETTY ILMAN YLHAALTA-175:TA → UUSI KAANNOS; 177 PASS; STRIIMIAANI NATIIVIIN 0677592b (27.9.2026 klo 01.23)
+
+Natiiviseppa 01.2x: juna/b13 5cbd7870 (kaannos 16be7e44, mukana 177-korjaus cc33ba3b) savuke 0 poikkeusta, verho 5,8 s kuormassa; Laitetestaaja kierroksessa. Fable totesi: ylhaalta-175 d65986ae EI ole junassa vaikka omistaja paatti 01.1x "Nyt" → Natiiviseppa mergeaa ja kaantaa uudestaan (yhteinen kaannos klo 02 Natiivi-UI:n kanssa), Laitetestaaja uusi kierros, sitten master + TF 1.0.27. Natiivi-UI: 177 PASS 16be7e44:lla (kuvapari kuvapari-177-kortti.png); natiivin kehittajavalikon striimiaani-valitsin natiivi-ui/striimiaani 0677592b, todennus klo 02 kaannoksella.
+
+## MAAJUTTUJEN SIIRTO: 5 POIKKEUSTA JAAVAT KAUPUNKIIN (FABLEN PAATOS), ~28 SIIRTYY (27.9.2026 klo 01.23)
+
+Sisaltokirjuri 01.2x: 33 maajutusta 5 ei siirry suoraan — Dublin sakkipilli (duplikaatti IRL-musiikissa + Dublinin saapumisvisa), Marseille hymni, Lissabon azulejot, Barcelona ihmistorni (saapumisvisat nojaavat juttuun), Praha Dvorak (CZE:lla ei musiikkikategoriaa). Fable paatti: kaikki 5 jaavat kaupunkilehteen tassa erassa, uusia visoja ei kirjoiteta nyt; duplikaatit poistetaan vain kaupungista. Loput ~28 siirtyvat (9 puhtaat, 8 orpokorjauksin, 3 historian hetkea lehti-kentalla, 6–7 duplikaattia).
+
+## LAITETESTAAJA: 1.0.27-KIERROS 16be7e44 6/7 PASS (170 NATIIVI-UI:N LAITETODENNUS); UUSI SHA KLO 02 (27.9.2026 klo 01.28)
+
+Laitetestaaja 01.2x: TF 1.0.27 -kierros kaannokselle 16be7e44: 178, 179, lipun perspektiivi, hoyrylaiva, 177+kortti PASS, 0 poikkeusta; 170 ei konsolikomennolla testattavissa → Natiivi-UI:n laitetodennus (v176 → v194) lasketaan PASSiksi. Raportti docs/raportit/savukierros-tf1027-20260927.md 8e5783164. Koska ylhaalta-175 tulee omistajan paatoksella junaan, klo 02 kaannoksesta lyhyt uusintakierros (perspektiivi, lippu, savuke, 177) ennen master-mergea ja TF:aa.
+
+## OMISTAJA HYVAKSYI ERIKOISMALLIT V2 (MSM, STONEHENGE, COLOSSEUM), KAARI+VUORI-SUUNNAN JA MEREN ISOMMAN KOKEILUN (27.9.2026 klo 01.39)
+
+Omistaja 01.4x kortilla (Linssisepan era v2, kaannos 91a4b727, kuvat proto-3d/lokit/mallinseppa-toimitus-20260927/): 1) erikoismallit Mont-Saint-Michel (kevatvuoksi), Stonehenge (auringonnousu, nurmi pois) ja Colosseum Rooman maamerkkina (velarium, yovalot) HYVAKSYTTY → 1.0.28-junaan; Linssiseppa jatkaa listan seuraaviin 3 maahan samalla tyylilla; 2) kategoriasymbolit oikeina 3D-esineina: kaari + vuori suunta oikea → loput 12 symbolia samoin (vuori jaa Olympoksella maaston sisaan → Natiivisepan sijoituskorjaus); 3) meren koristeet: isompi koko (valas ja laiva 1,5–2 ×, suihku nakyvaksi pelikoossa) → uusi kokeilu. Julkaisija: #3363 ja #3365 molemmat v2292 → #3365 nostetaan ennen mergea. Sisaltokirjuri 93 % → WIP-push + luovutus + nollaus kaskettu.
+
+## SISALTOKIRJURI NOLLATTU 01.4x (LUOVUTUS daafa34f4); MAALEHTI-SIIRTO JATKUU HAARASTA (27.9.2026 klo 01.40)
+
+Sisaltokirjuri nollattu 01.4x (93 % → tyhja), luovutus docs/raportit/viesti-sisaltokirjuri-luovutus-20260927.md (haara sisalto-luovutus-20260927 daafa34f4), WIP-haara origin/sisalto-maalehti-siirto-20260927. Aloitusviesti lahetetty: maalehti-siirto loppuun (28 siirtyy, 5 jaa), #3363 Julkaisijalla, sitten astronautin erat 5–6.
+
+## YLHAALTA-175 JA STRIIMIAANI JUNASSA 52ea3d10, KAANNOS d7705537 → LAITETESTAAJAN KIERROS (27.9.2026 klo 01.40)
+
+Natiiviseppa 01.4x: juna/b13 52ea3d10 = ylhaalta-175 d65986ae (junamerge 01b56f53) + natiivi-ui/striimiaani 0677592b; unity-tarkistus 0, Kartta-testit 309/309; kaannos d7705537 Laitetestaajan simulaattoreissa ja FB234D08; savuke FBBD41D7 0 poikkeusta, verho 2,6 s. Laitetestaajan lyhyt kierros (perspektiivi, lippu, savuke, 177) → PASS → master → TF 1.0.27.
+
+## XAI ARA TUOTANNOSSA (#3365 v2292, POLLON JULKAISU OK); 1.0.27 PASS 4/4 → MASTER + TF; KAIUTINVIPU PR 3366; #3364 BUILD-KORJAUS (27.9.2026 klo 01.43)
+
+Julkaisija 01.37: #3365 mainissa v2292, testit 4413/0, Pollon julkaisu -ajo 36276852325 ok, XAI_API_KEY workerin salaisuutena; puhepyynto (persoona pollo) 200 audio/mpeg, ensimmainen tavu 0,59 s workerin kautta, 24 kHz mono — moottori ei nay vastauksessa (jatkokehitys: x-puhe-moottori-otsake). #3363 mergessa; #3364 odottaa Pelikoodarin build-korjausta (lehtiosiot.js puuttuu MODULES-listalta). Laitetestaaja 01.4x: d7705537 painopistekierros 4/4 PASS (ylhaalta-perspektiivi, lippu, savuke, 177; raportti savukierros-tf1027b-20260927.md b61b29bdf) → Natiiviseppa mergeaa masteriin ja lahettaa TF 1.0.27. Pelikoodari: Pulun kaiutinvipu PR #3366 (paalla kulta + aaniaallot, pois himmea + vinoviiva; kuvaparit pulu-kaiutin-web/) → omistajan kortti.
+
+## OMISTAJA HYVAKSYI PULUN KAIUTINVIVUN (PR 3366) → JUNAAN; NATIIVI-UI TEKEE NATIIVIN (27.9.2026 klo 01.43)
+
+Omistaja 01.4x kortilla: Pulun paneelin kaiutinnappi (pois himmea + yliviivattu, paalla kulta + aaniaallot) hyvaksytty → #3366 Julkaisijan junaan; Natiivi-UI tekee natiivin saman mallin mukaan 1.0.28-junaan.
+
+## MAASTOKORKEUS c581b2ba 1.0.28:AAN (SYMBOLIT ELLIPSOIDIN KORKEUDELLA 0 → x2 MAASTO PEITTAA); 1.0.27 LAHTEE 52ea3d10 (27.9.2026 klo 01.44)
+
+Natiiviseppa 01.4x: Mallinsepan loydoksen juurisyy — kaikki symbolimallit (arkkityypit, Kreikan erikoismallit) istuvat ellipsoidin korkeudella 0, jolloin x2 liioiteltu maasto peittaa ne vuorilla (Olympos); korjaus natiiviseppa/maastokorkeus c581b2ba (pinnan korkeus Cesiumista erissa, tasot 1–3), kaannos 0 virhetta, laitteella todentamatta. Fable paatti: 1.0.28:aan (Laitetestaajan kierros d7705537 4/4 PASS ilman hautautuneita), TF 1.0.27 lahtee junasta 52ea3d10 nyt. Kategoriamallit ddd9b867 = juna + perspektiivi + maasto, Mallinseppa rebasettaa.
+
+## TF 1.0.27 VIE (BUILD 27 = MASTER 65f725ce); P1 NOSTOSISALTO-KAATUMINEN 1.0.28:N KARKEEN; STRIIMIAANI TODENNETTU NATIIVISSA (27.9.2026 klo 01.44)
+
+Fable 01.4x: Julkaisijalle VIE — TF 1.0.27 = build 27 = proto-master 65f725ce (Laitetestaaja PASS b61b29bdf). Natiivi-UI: natiivin kehittajavalikon striimiaani todennettu (28 xAI-aanta, valinta kaikille persoonille, eve testattu), asettelukorjaus 38fa2a87 merge-pyynnossa; UUSI P1: NostoSisalto NullReferenceException kun sisalto vaihtuu kesken istunnon (170-kasittelijan kilpailutilanne), korjaus natiivi-ui/nosto-hylkaa-170 fa30e4a3 → Fable: 1.0.28-junan karkeen heti (P1 + 38fa2a87 + maastokorkeus + erikoismallit/kategoriamallit ddd9b867 + kaiutinvipu), TF 1.0.28 ilman viivetta. Linssiseppa: luovutus -j 8e67b4b17, jono (merge-pyynto 1.0.28, Segovia/Brandenburg/Kinderdijk, 12 symbolia, meri 1,5–2 x, lento v3), A/B-kaannos klo 02, nollaus ~02.25 (raja 93 %). Postivahti: Sisaltokirjuri 10 %.
+
+## OMISTAJA: LUENNASSA PITKA TAUKO OTSIKON JA KAPPALEIDEN VALISSA → PALAT NIPUKSI + ESIHAKU (PELIKOODARI) (27.9.2026 klo 01.49)
+
+Omistaja 01.5x (xAI ara tuotannossa): otsikon ja kappaleiden valiin tulee todella pitka tauko; kysyy voiko tekstit vieda yhtena nippuna. Syy: lukija hakee jokaisen palan omana pyyntona vasta edellisen paatyttya. Fable → Pelikoodari etusijalle: otsikko + kappale samaan palaan, palakatto ylos (~2 500 merkkia, worker PUHE_TEKSTIN_KATTO), seuraavien 1–2 palan esihaku edellisen soidessa, mittaus ennen/jalkeen; natiivin lukijalle sama speksi Natiivi-UI:lle.
+
+## TF 1.0.27 TESTFLIGHTISSA (BUILD 27, PROTO 65f725ce, AJO 36277251380); #3363 v2293 MAINISSA (27.9.2026 klo 01.56)
+
+Julkaisija 01.55: TF 1.0.27 lahetetty ja ASC:ssa kasitelty, ajo 36277251380, CFBundleVersion 202609262244, proto 65f725ce, laskuri 27. Sisalto: 178, 179, 170, 174, 173/169, lipun perspektiivi, ylhaalta-175 liioiteltu perspektiivi, hoyrylaiva, 177 + nostokortin sulku, nostokortti-avattu, natiivin striimiaani-valitsin. Mainissa myos #3363 (astro era 4, v2293) ja #3365 (xAI, v2292). Seuraava: 1.0.28 (P1 nosto-hylkaa-170, maastokorkeus, erikoismallit, kategoriamallit, kaiutinvipu).
+
+## KAIUTINVIPU MAINISSA V2294 (#3366) (27.9.2026 klo 01.58)
+
+Julkaisija 01.58: #3366 Pulun kaiutinvipu mainissa v2294, testit 4413/0. #3364 (avauskortti) odottaa Pelikoodarin build-korjausta (lehtiosiot.js MODULES-listalle).
+
+## MAALEHTI-SIIRTO VALMIS PR 3367 (28/28); SISALTOKIRJURI ASTRONAUTIN ERIIN 5–6 (27.9.2026 klo 02.05)
+
+Sisaltokirjuri 02.0x: maalehti-siirto valmis 28/28 (5 poikkeusta jaivat kaupunkiin), PR #3367 Julkaisijan junaan, testit 4431/4431. Seuraavaksi astronautin kameran erat 5–6.
+
+## NATIIVI-UI: KAIUTINVIPU NATIIVIIN 9747aec8, P1 fa30e4a3 TODENNETTU, STRIIMIAANI-VALITSIMEN USS-KORJAUS 3a91d9c6; Z10 302/507 (27.9.2026 klo 02.14)
+
+Natiivi-UI 02.1x: Pulun kaiutinvipu natiivissa natiivi-ui/pulu-kaiutin 9747aec8 PASS iPhonella (kuvapari natiivi-ui-laite-20260927/kuvapari-kaiutin-natiivi.png), merge-pyynto 1.0.28; P1 fa30e4a3 todennettu (v195 → v198 kesken istunnon ilman poikkeuksia); striimiaanen valitsin puristui iPhonella tyhjaksi → USS-korjaus 3a91d9c6 merge-pyynnossa, todennus seuraavasta junakaannoksesta. Karttaseppa 02.13: Z10 osa 2 302/507, 0 kaatumista, 8 ydinta, ~790 laattaa/min, valmis ~05.50.
+
+## MAALEHTI-SIIRTO MAINISSA V2295 (#3367); LINSSISEPAN A/B-ERA c931ac98, NOLLAUS (27.9.2026 klo 02.17)
+
+Julkaisija 02.17: #3367 (28 maajuttua maalehtiin) mainissa v2295, testit 4413/0. Linssiseppa 02.15: A/B-era laitteella (kaannos c931ac98): kaari Thermopylaissa/Sounionissa, vuori Olympoksella/Parnassoksella/Taygetoksella — vuori NAKYY maastokorjauksella; tason 2 symbolit ~20 pt, A/B-ero ei erotu → uusi sessio tekee tiukat rajaukset ennen valintaa; meri v3 pelikoossa laiva 39 pt, valas 50 pt, pyrsto nakyy. Luovutus -j bbee24237, clear_session self → aloitusviesti Fablelta.
+
+## LINSSISEPPA NOLLATTU JA KAYNNISTETTY 02.2x (LUOVUTUS -J bbee24237) (27.9.2026 klo 02.18)
+
+Linssiseppa (Opus, max) = Mallinseppa nollattu 02.2x (89 % → tyhja), id ennallaan; aloitusviesti lahetetty: A/B tiukat rajaukset, meri v3 rajaukset, merge-pyynnot 1.0.28:aan, Segovia/Brandenburg/Kinderdijk, 12 symbolia, lento v3.
+
+## OMISTAJA: KATEGORIASYMBOLIEN 3D-VARITYS = B SEEPIARAMPPI; VUORI A/B/C KLO 03 (27.9.2026 klo 07.16)
+
+Omistaja 02.3x kortilla (kuva kaari-ab-thermopylai.png, rajaus x6, 0/27/55 astetta): kategoriasymbolien 3D-varitys B seepiaramppi (lammin ruskea kuten 2D-kuvamerkki) malliksi kaikille 12 symbolille; A karkivari hylatty. Vuori: B:ssa lumihuippu haviaa ruskeaan → Linssisepan klo 03 kaannos A/B/C (C = B + valkoinen lumihuippu) samalla pohjalla, kuvat ~03.30. Meri v3 -rajaukset valissa.
+
+## AAMU 07.2x: YON TULOKSET JA AAMUJONOT (27.9.2026 klo 07.20)
+
+Fable 07.2x (kortti odotti omistajaa 02.3x → 07.16): yolla mainissa v2296 avauskortti (#3364), v2297 lukijaaani pitka pala (#3368, worker julkaistu, katto ylos), #3325 syva laattasarja; auki #3369 siivous, #3370 astro erat 5–6 (35). Z10-ketju valmis 04.05: z10 298 335 laattaa 13,0 Gt, z9 78 211 laattaa 3,2 Gt ampariin (2026-09-26s-pohja), luettelo koekansiossa julisteet/pyramidi/koe/2026-09-26s/pyramidi.json, NAS-siirto valmis 06.47, levya 149 Gt; osoitinvaihto odottaa omistajaa. 1.0.28-juna 180e22dc: lukija-putki web+natiivi, P1 fa30e4a3, kaiutinvipu 9747aec8, striimiaani-USS, maastokorkeus, taso1-kynnys (pienissa maissa 3D ei nakynyt), erikoismallit mallinseppa/pohja, kategoriamallit-14 (kaari + vuori + 12 symbolia, vari B, vuori C). Natiivisepan viestit tauolla → Fable valittaa SHA:t. Aamujonot: Natiiviseppa kaannos+TF 1.0.28, Laitetestaaja resepti, Siirtoseppa delta v2293–v2297, Julkaisija #3369/#3370, Natiivi-UI avauskortti natiiviin, Pelikoodari lukijatauon mittaus + x-puhe-moottori-otsake, Sisaltokirjuri astro era 7 (tilaus 100 tayteen) + raportti, Karttaseppa osoitin-PR valmiiksi + z10-nayte omistajalle.
+
+## OMISTAJA: Z10 TUOTANTOON NYT (OSOITINVAIHTO, PELIN_SYVIN_TASO 8 → 10) (27.9.2026 klo 07.32)
+
+Omistaja 07.2x kortilla (kuva grc-z8-vs-z10-20260926-merkitty.png): Z10-sarja 2026-09-26s-pohja tuotantoon nyt — Karttaseppa tekee PELIN_SYVIN_TASO → 10 -PR:n ja luettelon viennin, Julkaisija ajaa vaihda-pyramidi-osoitin.yml:n, tarkistaa tuotannon laatan ja web-savukkeen; Siirtoseppa vie osoittimen natiivin pakettiin. z10-nayte omistajalle tuotannosta vaihdon jalkeen.
+
+## OMISTAJA 07.4x: MERI V3 TUOTANTOON, 14 SYMBOLIA HYVAKSYTTY, ERIKOISMALLIT ERA 2 HYVAKSYTTY; YON RIVIT KOOSTE (27.9.2026 klo 07.38)
+
+Omistaja 07.4x kortilla: meren koristeet v3 (laiva 39 pt, valas 50 pt, suihku + pyrsto) tuotantoon 10 lajilla → 1.0.28/1.0.29; kaikki 14 kategoriasymbolia 3D B-varilla + vuori C hyvaksytty (kallistukset 20–35 astetta, mustemerkit, kapea kellotorni, elaimet = pollo) → 1.0.28; erikoismallit era 2 Kinderdijk/Brandenburg/Segovia ja elamanideat hyvaksytty. Yon rivit (toimitettu 07.4x): Pelikoodari — web-lukijassa ei taukoa (valit 450/950 ms suunniteltuja), tauko on natiivissa (KortinLukija/Lehtinakyma/Nahtavyysarkki hakevat palan vasta edellisen loputtua ~5 s) → korjaus pelikoodari/lukija-putki + natiivi-ui/lukija-putki 1.0.28-junassa; #3372 lukijamittari (x-puhe-moottori-otsake) ja #3323 (v2298) junassa; 177-avaimet 04308427 junassa; Fable paatti Pulun striimivirkkeiden vali 450 → 220 ms. Siirtoseppa: natiivipaketti v201 (astro 3–4, maalehti-siirto, avauskortti, lukijaaani). Sisaltokirjuri: #3370 era 5–6 = 176 kohdetta / 352 kysymysta. Karttaseppa: osoitin-PR #3371 (PELIN_SYVIN_TASO 10, z9–z10 pohjaksi z8) Julkaisijan junaan, ohje sarja 2026-09-26s; z10-nayte 8 maata kuvat/z10-nayte-8-maata-20260927.png; koodi 1 = Broken pipe edistymisraportissa. Omistaja kysyi amparin koosta → R2 ilman kokorajaa, 0,015 $/Gt-kk; Julkaisija laskee nykykoon.
+
+## OMISTAJA: HALUAA NAHDA MEREN, SYMBOLIT JA ERIKOISMALLIT PELISSA → TF 1.0.28 TANAAN, MERI V3 MUKAAN (27.9.2026 klo 07.38)
+
+Omistaja 07.4x "Haluan nahda nuo pelissa": TF 1.0.28 tanaan mahdollisimman pian; Linssisepan meri v3 merge-pyynto heti Natiivisepalle, Natiiviseppa odottaa enintaan 30 min ja kaantaa; Laitetestaaja → master → Julkaisija vie.
+
+## Z10 TUOTANNOSSA 07.32 (OSOITIN 2026-09-26s-pohja, TASOT 0–10); LAITETESTAAJAN 1.0.28-RESEPTI 9ccb50e5a; #3206 REBASETTU (27.9.2026 klo 07.39)
+
+Karttaseppa 07.4x: Z10 tuotannossa, osoitin vaihdettu 07.32, CDN:n pyramidi.json versio 2026-09-26s-pohja tasot 0–10, varmuuskopio pyramidi-20260927-0732.json; nayte tuotannosta z10-tuotanto-8-maata-20260927.png omistajalle; #3371 (PELIN_SYVIN_TASO 10) Julkaisijan jonossa. Laitetestaaja: 1.0.28-resepti 8 kohdetta (9ccb50e5a); Kinderdijkin mylly vain mallinseppa/erikoismallit2 01810d0c:ssa → 1.0.28 ilman sita (yleinen kynnyskorjaus testataan), era 2 tulee 1.0.29:aan. Sisaltokirjuri: #3206 turistiopas era 19 rebasettu (4437/4437), astro era 7 tyossa.
+
+## PULUN VIRKEVALI 220 ms (#3374 v2299); PELIKOODARILLE WEBIN ZOOMIKATTO Z10-SELVITYS (27.9.2026 klo 07.42)
+
+Pelikoodari 07.4x: Pulun striimivirkkeiden vali 450 → 220 ms, #3374 (v2299) junassa, mitattu tuotannon workerilla. Fable antoi seuraavan eran: webin zoomikaton nosto kaupunkien lahizoomissa z10:een (#3371:n jalkeen) — mittaus laatta- ja siirtomaarista, kuvapari Pariisi z9 vs z10, suositus Fablelle ennen tuotantoa; savukkeeseen x-puhe-moottori = xai -tarkistus.
+
+## MERI V3 1.0.29:AAN (8 UUTTA LAJIA ~09.3x); ERIKOISMALLIT2 01810d0c 1.0.28-JUNAAN; SEURAAVAT MAAT BEL/CHE/AUT (27.9.2026 klo 07.44)
+
+Linssiseppa 07.5x: meri tuotantoon vaatii 8 uutta lajia + valintalogiikan (maan meret → 1–2 lajia, ≤ 2 ruudulla; merikohdat.json 29 maata/129 kohtaa) → laitekuvat ~09.3x, merge 1.0.29. Era 2 merge-pyynto mallinseppa/erikoismallit2 01810d0c lahetetty → Fable: 1.0.28-junaan jos unity-tarkistus 0, kaannos heti. Seuraavat maat: Belgia (Bruggen kellotorni), Sveitsi (Matterhorn), Itavalta (Hohensalzburg), elamanideat ensin Fablelle.
+
+## OMISTAJA 07.5x: PROGRESSIIVINEN PUHEEN SOITTO (WEB ENSIN); ERIKOISMALLIT BEL/CHE/AUT IDEAT HYVAKSYTTY (27.9.2026 klo 07.52)
+
+Omistaja kysyi 07.4x kestaako Pulun aloitus pidempaan jos ensimmainen era on pidempi: kylla nykyisella soittimella (lataa koko palan; xAI generoi ~3–4 x reaaliaikaa: 300 mrk 1–2 s, 1 000 mrk 4–5 s, 2 400 mrk 35 s), siksi virkkeittain-striimi. Omistaja paatti 07.5x kortilla: progressiivinen soitto (MediaSource, 1. aani 0,3–0,5 s palan pituudesta riippumatta) — web ensin Pelikoodarille (etusijalle), natiivi perassa Natiivi-UI:lle samalla mallilla; kuulonayte omistajalle. Erikoismallit era 3 elamanideat hyvaksytty: Bruggen kellotorni (kanavavene, kellopeli + nuottikipinat), Matterhorn (lipupilvi, alppihehku, hammasratasjuna, Zermattin valot), Hohensalzburg (koysirata, Salzburgin harka urut + kyyhkyparvi).
+
+## MEREN MERGE-PYYNTO 0126ce8b (HOYRYLAIVA + VALAS, HATAKYTKIN); ERA 2 JUNASSA 1eff4f76 (27.9.2026 klo 07.53)
+
+Linssiseppa 07.5x: linssiseppa/meri-tuotanto 0126ce8b (tuotantorunko + v3 hoyrylaiva ja valas, loput 8 lajia lisaavana committina; hatakytkin elava elementit meri 0), merge-pyynto Natiivisepalle; era 2 erikoismallit jo junassa 1eff4f76. Fable: mukaan 1.0.28:aan jos kaannos ei ole alkanut, muuten 1.0.29.
+
+## ASTRONAUTIN KAMERA: TILAUS TAYNNA (ERA 7 PR 3375, 102 UUTTA, 189 KOHDETTA); LINSSIRAPORTTI (27.9.2026 klo 07.56)
+
+Sisaltokirjuri 07.5x: era 7 PR #3375 (13 kohdetta: Niagara, Gronlannin vuonot, Manaus, Cosiguina, Jamesinlahti, Krimin lagunit, Valakia yolla, Montreal, Englannin kanaali yolla, Tanska, Geneven jarvi, Pico, Prinssi Edwardin saari) → omistajan 26.9. tilaus ~100 uutta taynna (erat 2–7 = 102). Koko linssi kun PR:t mainissa: 189 kohdetta / 229 kuvaa / 378 kysymysta; mantereittain P-Amerikka 43, Afrikka 33, Aasia 39, Eurooppa 33, E-Amerikka 22, Oseania 16; kaikki NASA images-api public domain (210 ISS, 18 STS), kuvat katsottu kasin. Etelamanner 0 ja korkea arktinen puuttuvat ISS:n ratakaltevuuden (51,6°) takia — ei aukko vaan fysiikka. Seuraava era: turistiopassarja jatkuu #3206:n jalkeen.
+
+## OMISTAJA: NOSTOJEN 3D-MALLIEN POLYGONIMAARA KASVAA LAHIZOOMISSA (LOD0 LAHI) (27.9.2026 klo 07.58)
+
+Omistaja 08.0x: "Voiko nostojen polygonimaara kasvaa kun zoomataan lahelle? Pelkaan etta nykyinen taso ei riita." Fable: kylla — LODGroupiin kolmas taso LOD0 lahi (3–5 x kolmiota, tarkemmat yksityiskohdat), nakyy vain kun kamera on lahella (zoomikerroin ≥ 4 tai etaisyysraja, ≤ ~3 lahimallia ruudulla). Natiiviseppa lisaa rajapintaan (oma haara, 1.0.29); Linssiseppa mallintaa ensin Colosseum, Mont-Saint-Michel ja kaari kuvapariksi omistajalle, sitten loput.
+
+## TUOTANTOVIKA: OSOITINVAIHTO PUDOTTI WEBIN PALLON LAATTAKERROKSEN → OSOITIN PALAUTETAAN, PALLOSARJA S-POHJALLE (27.9.2026 klo 08.00)
+
+Pelikoodari 08.0x (Z10-selvityksen sivuloydos): webin pallon laattakerros pois tuotannossa 07.32 lahtien — pyramidi.json versio 2026-09-26s-pohja, pallosarja (js/pallo.js PALLO_LAATTAVERSIO, laatat.json) 2026-09-26-pohja → js/pallolaatat.js lepokerroksenKerrokset purkaa kerroksen; s-pohjan pallosarjaa ei ole amparissa (404). Fable paatti: Julkaisija palauttaa osoittimen heti (palauta, varmuuskopio pyramidi-20260927-0732.json), Karttaseppa tekee pallosarjan s-pohjalle + PALLO_LAATTAVERSIO-PR:n (tai perustelee versiovahdin hollennyksen), sitten uusi vaihto. Oppi: osoitinvaihdon tarkistuslistaan pallosarjan versio.
+
+## TURISTIOPASPAKETTI VALMIS (71/71 MIINUS 11 TURVALLISUUSPOIKKEUSTA); SISALTOKIRJURILLE ERIKOISMALLIEN SISALTOTARKISTUS (27.9.2026 klo 08.00)
+
+Sisaltokirjuri 08.0x: turistioppaat 266 avaimesta 14 ilman matkailijalle-kenttaa; 3 (#3206) mergea vaille, 11 (darfur, suakin, bahrelghazal, rashafun, tshadjarvi, kamerun, sanambrosio, kongo, sahara, tanganjika, ahaggar) tarkoituksella ulkona Fablen 24.9. turvallisuuspaatoksella (sisalto-inventaario-20260924 kohta 9) → Fable: jaavat rauhaan, paketti valmis. Seuraava era: erikoismallien (Tivoli, MSM, Stonehenge, Colosseum, Kinderdijk, Brandenburg, Segovia, Brugge, Matterhorn, Hohensalzburg) nostot, Pulun kysymykset ja elamanidean tapahtumat teksteissa — puuttuvat yhdella PR:lla.
+
+## MERI TODENNETTU LAITTEELLA (54201ed2); KINDERDIJK NAKYY; LINSSISEPPA NOLLAA (LUOVUTUS -L 9aac294c5) (27.9.2026 klo 08.04)
+
+Linssiseppa 08.0x: meren tuotantorunko todennettu laitteella (kaannos 54201ed2): merikohdat 29/129 latautuvat, maan lajit valitaan, valas Norjassa, hoyrylaiva Suomenlahdella, 0 poikkeusta; merge-pyynto 0126ce8b pysyy. Kinderdijk nakyy kynnyskorjauksella (kinderdijk-v2.png + video). Taustalla 8 Opus-agenttia: 8 merilajia, Brugge/Matterhorn/Hohensalzburg, lahitason kuvaparit. Luovutus -l 9aac294c5, nollaus itse → aloitusviesti Fablelta.
+
+## Z10-KATKOKSEN KORJAUS PR 3376 (VERSIOVAHDIN HOLLENNYS, pohja.kopio); JARJESTYS #3376+#3371 → PAGES → OSOITIN (27.9.2026 klo 08.05)
+
+Karttaseppa 08.0x: pallon lepokerroksen katkoksen korjaus PR #3376 — vahti hyvaksyy luettelon, jonka pohja.kopio = { versio: pallon versio, tasot z0–z8 } (s-pohjan z0–z8 on tavulleen pohja 26; uusi pallosarja olisi identtinen mutta pakottaisi kaikki lataamaan pallolaatat uudelleen). Fable hyvaksyi jarjestyksen: #3376 + #3371 junaan → Pages → osoitin sarja = 2026-09-26s → savuke. Natiivisepalta kysytty, onko natiivissa sama vahti.
+
+## LINSSISEPPA NOLLATTU JA KAYNNISTETTY 08.1x (LUOVUTUS -L) (27.9.2026 klo 08.06)
+
+Linssiseppa nollattu 08.1x (79 % → tyhja), aloitusviesti: luovutus -l, meri 8 lajia, BEL/CHE/AUT, lahitaso LOD0 kuvaparit ensin. Julkaisija sai luvan: #3376 + #3371 junaan → Pages → osoitin 2026-09-26s, ehtona Natiivisepan vastaus natiivin versiovahdista.
+
+## OMISTAJA 08.2x: MAANOSITTAIN ETENEVA AVAUTUMINEN POIS (1.0.29 + WEB); NOSTOJEN PIILOTUS JAA (27.9.2026 klo 08.15)
+
+Omistaja kysyi 08.1x poistuvatko maanosaeteneminen ja nostojen piilotus seuraavassa buildissa; lokista ei loytynyt paatosta → kortti. Omistaja paatti: VAIN maanosittain eteneva avautuminen pois (koko maailma avoinna alusta asti), muiden maiden nostojen piilotus kohdemaan ulkopuolelta (14.9.) JAA. Toteutus: Pelikoodari web, Natiivi-UI/Natiiviseppa natiivi, 1.0.29. Ei 1.0.28:ssa.
+
+## OMISTAJA 08.2x: KOHDEMAAN KAIKKI NOSTOT NAKYVIIN HETI (EI VAIHEITTAISTA PALJASTUMISTA) (27.9.2026 klo 08.15)
+
+Omistaja 08.2x lisays: kohdemaan kaikki nostot pitaa nakya heti saapuessa — ei vaiheittaista paljastumista; muiden maiden nostot pysyvat piilossa (14.9.). Sama era kuin maanosaetenemisen poisto: Pelikoodari web + speksi, Natiivi-UI natiivi, 1.0.29. Elavan kartan salaisuudet (palkinnot) jaavat, ellei omistaja toisin sano.
+
+## MAANOSAETENEMINEN = MANNERLENTOJEN PAAAARRE-EHTO (Kaupat.cs MannerLennot) → POIS; LAHTOKAUPUNGIT ENNALLAAN (27.9.2026 klo 08.16)
+
+Natiivi-UI 08.2x kartoitti: maanosittainen avautuminen natiivissa = Peli/Kaupat.cs:403–431 MannerLennot (toiselle mantereelle vasta kun oman mantereen paaaarre loytynyt, mannerlento 300 £), Liikkuminen.cs:39–46, Matka.cs:213 LentoKohteet; lahtokaupungit PeliOhjain.cs:219 vain Aloitus-kaupungit; muiden maiden nostojen piilotus PeliOhjain.Matkareitit.cs:127 PaivitaPeliSuodatin (JAA). Fable paatti: paaaarre-ehto pois webissa ja natiivissa (hinta sailyy), lahtokaupungit ennallaan ellei omistaja toisin sano; Pelikoodari tekee (natiivin Peli/ on sen), Natiivi-UI jatkaa avauskorttia.
+
+## NOSTOT HETI: NOSTOKERROKSEN PORTIT (a) vahinOsuus JA (b) saapumisPortti POIS, (c)–(d) JAAVAT; LOYTAMATTOMAT TAYDELLA ULKOASULLA; SALAISUUS JAA (27.9.2026 klo 08.17)
+
+Natiivi-UI 08.2x kartoitti: vaiheittainen paljastuminen = Kartta/NostoKerros.cs (a) vahinOsuus 0,5, (b) saapumisPortti 1,4 s + Syttyminen 0,7 s + saapumisPiilo, (c) taso 3 lahizoomiportti, (d) katto 120; Peli/KarttaMuste.cs:75 loytamattomat himmeina ilman nimea, salaisuus vasta kun maakunnan nostot loydetty. Fable paatti: (a) → 0, (b) → 0 (haivytys ≤ 0,3 s), (c) ja (d) jaavat luettavuuden/kehysajan takia (web-pariteetti); loytamattomat taydella ulkoasulla ja nimella heti; salaisuus-nosto jaa palkintona; muiden maiden piilotus jaa. Natiiviseppa NostoKerros, Pelikoodari KarttaMuste + web, 1.0.29.
+
+## Z10-WEB-SELVITYS #3378: EI KATON NOSTOA NYT; LOYDOS TUKILAATTASILMUKKA PUHELIMELLA Z9-LUETTELOLLA → #3371 PIDOSSA, KORJAUS ENSIN (27.9.2026 klo 08.23)
+
+Pelikoodari 08.2x (raportti #3378, kuvat proto-3d/lokit/z10-web/): pallon laattakerros valitsee tason px/aste-tarpeesta — tyopoyta haluaisi z10 (1 546 px/°) mutta laattakatto 48 pudottaa z9:aan, puhelin tarvitsee vain z9 (924 px/°) eli este on lahizoomin katto. Siirto per nakyma Pariisi: tyopoyta z8 1,9 Mt → z9 5,7 Mt → z10 (katto 2x) 5,9 Mt; puhelin z8 3,2 Mt → z10 4,3 Mt. UUSI LOYDOS: puhelin + #3371 (z9) → tukilaattojen hakusilmukka (68 z7-laattaa ~17 000 kertaa/min, 3/3). Fable: #3371 pidossa kunnes silmukka korjattu (Pelikoodari etusijalle), #3376 saa menna; katon nosto (tyopoyta 48→64, puhelin 2x z10-alueilla) paatetaan kuvaparista myohemmin; z10 teravoittaa vain reliefia. x-puhe-moottori-tarkistus lisatty #3372:een.
+
+## NATIIVI-UI NOLLATTU JA KAYNNISTETTY 08.2x (LUOVUTUS W 5eeb041ab; AVAUSKORTTI natiivi-ui/avauskortti 3de0ca7f) (27.9.2026 klo 08.24)
+
+Natiivi-UI nollattu 08.2x (74 % → tyhja), aloitusviesti: avauskortti natiiviin jatkuu haarasta 3de0ca7f, 1.0.28-todennukset, maanosa/nostot Pelikoodarilla ja Natiivisepalla.
+
+## OMISTAJA 08.3x KORJAA: EI MAANOSA- VAAN MAAKUNTAETENEMINEN POIS; MANNERLENNOT JAAVAT (27.9.2026 klo 08.25)
+
+Omistaja 08.3x: "Tarkoitin maanosa etenemisella eri asiaa. Termi oli vaara. Poista maakunta eteneminen." → mannerlentojen paaaarre-ehto JAA (edellinen 08.16 paatos peruttu); poistetaan maakuntien vaiheittainen heraaminen/avautuminen — kaikki kohdemaan maakunnat auki heti saapuessa, web + natiivi, 1.0.29. Nostot heti taydella ulkoasulla ja NostoKerroksen porttien (a)–(b) poisto pysyvat. Salaisuus-nosto: omistaja paattaa erikseen kun Pelikoodari on kartoittanut.
+
+## OMISTAJA 08.3x: MAAKUNTIEN SALAISUUS-NOSTOT POIS (NAKYVAT HETI, EI PALJASTUSEHTOA) (27.9.2026 klo 08.27)
+
+Omistaja 08.3x "Ota ne salaisuudet pois myos": elavan kartan maakuntasalaisuudet (avautuivat kun maakunnan kaikki nostot loydetty, esim. Athos-jattilainen) poistetaan lukituksena — salaisuusnostot nakyvat heti kuten muut; pelkat palkintoefektit ilman sisaltoa poistetaan kokonaan (Pelikoodari listaa). Web + natiivi (KarttaMuste.cs), sama era kuin maakuntaeteneminen ja nostot heti, 1.0.29.
+
+## OMISTAJA 08.3x: MAAKUNNAN ALKUANIMAATIOSTA VAIN POHJAVARIN ESITTELY JAA (27.9.2026 klo 08.29)
+
+Omistaja 08.3x: maakunnan alkuanimaatiosta poistetaan kaikki muu paitsi pohjavarin esittely (maakunnan varin tayttyminen kartalle) — nimen esittely, rajan hehku, nostojen vaiheittainen syttyminen, kortit/tekstit pois. Web + natiivi, sama 1.0.29-era (maakuntaeteneminen, salaisuudet, nostot heti). Pelikoodari kartoittaa vaiheet ensin.
+
+## MAINISSA #3375 v2300, #3372 v2301, #3376 v2302; #3371 PIDOSSA (27.9.2026 klo 08.29)
+
+Julkaisija 08.28: #3375 (astro era 7) v2300, #3372 (lukijamittari + x-puhe-moottori) v2301, #3376 (versiovahdin hollennys) v2302 mainissa; jonossa #3374 (virkevali) ja #3206 (turistiopas 19); #3371 pidossa, osoitin 2026-09-26-pohja kunnes silmukkakorjaus ja #3371.
+
+## TUKILAATTASILMUKKA KORJATTU #3380 (v2303): KIINTIO 96 Mt TAYTTYI, TUKITASO VAIN JOS MAHTUU; #3371 → PAGES → OSOITIN (27.9.2026 klo 08.35)
+
+Pelikoodari 08.3x: silmukan syy — kosketuslaitteen 96 Mt kiintio tayttyi nakyvista z9-laatoista, LRU purki tukilaatat joka kierros ja haki uudelleen; korjaus: tukitaso vain jos mahtuu kiintioon (muuten karkeampi/ei tukea). Mitattu Z10-koeluettelolla: puhelin 17 391 → 71 pyyntoa (314 → 2,8 Mt), tyopoyta 179/5,65 Mt ennallaan, tuotannon z8 puhelimella ennallaan. Fable → Julkaisija: #3380 → #3371 → Pages → osoitin 2026-09-26s → tarkistus.
+
+## ERIKOISMALLIEN SISALTOTARKISTUS PR 3381: 3 LISATTY (KINDERDIJK, HOHENSALZBURG, MATTERHORN); COLOSSEUM JA BRANDENBURG JAAVAT FOKUSKOHTEISIIN (27.9.2026 klo 08.39)
+
+Sisaltokirjuri 08.4x: 7/10 erikoismallista sisalto kunnossa (Tivoli taydellinen; MSM/Stonehenge/Segovia/Brugge elamanidea-fakta tekstissa), 3 puuttui ja lisattiin (#3381, 4440/4440): Kinderdijk (myllypaiva), Hohensalzburg (Salzburgin harka), Matterhorn (alppihehku, ei minitehtavaa). Colosseum ja Brandenburgin portti: taysi sisalto (velarium, kvadriga) on fokuskohteet-ita/deu.js -karttapisteissa (siirretty lehdesta) → Fable: jaa sinne, siirto oli tarkoituksellinen (178). #3206 ajautuu epasynkkaan → Julkaisija ottaa sen ensin. Sisaltokirjurille valissa maalehtien 28 siirretyn jutun johdantojen tarkistus (CZE, IRL, NOR, LTU, SVK).
+
+## MAALEHTI-QA PR 3382 (5 MAALEHTEA LUETTU, 2 PIENTA KORJAUSTA); #3206 JULKAISIJA REBASOI ITSE (27.9.2026 klo 08.51)
+
+Sisaltokirjuri 08.4x: maalehti-QA #3382 (4441/4441): CZE/IRL/NOR/LTU/SVK luettu, ei orpoja viittauksia; Vilnan oppi-johdanto laajennettu, SVK Kapustnica-sisennys. #3206 ajautui 5. kerran epasynkkaan → Julkaisija yhdistaa mainin itse junassa ja mergeaa; Sisaltokirjuri ei rebasoi enaa. Seuraava sisaltotyo odottaa omistajan suuntaa (kysytty 08.4x).
+
+## 1.0.28-KAANNOS d3fa3c78 (JUNA 1eff4f76) → LAITETESTAAJAN KIERROS; NOSTOT-HETI 934103a9 MITATTU; MAAKUNTAETENEMISEN KARTOITUS (27.9.2026 klo 08.52)
+
+Natiiviseppa (viestit tauolla, Fable luki transkriptin 08.5x): 1.0.28-kaannos d3fa3c78 = juna/b13 1eff4f76 (meri ei mukana → 1.0.29); Fable valitti Laitetestaajalle. Nostot heti (NostoKerros a→0, b→0) haarassa natiiviseppa/nostot-heti 934103a9: iPad Pro 13 Ranska 94 nostoa, mediaani 16,7 ms molemmissa, p95 16,8 vs 33,2 ms — ei hitaampi → 1.0.29. Maakuntaeteneminen natiivissa: Peli/KarttaMuste.cs + PeliOhjain.Muste.cs (Pelikoodari), Kartta/MaaKartta.cs Heraannyt/Herata (Natiiviseppa), UI/Kartuscha(.Muste).cs, MaakuntanimetKartalla.cs, Pulu.cs (Natiivi-UI), Linssit ElavaKartta/ElavaHerays/Herays (Linssiseppa) — Pelikoodari koordinoi osat.
+
+## PELIKOODARIN SELVITYS: WEBISSA EI MAAKUNTAPORTTEJA (VAIN LOYTOSUMU, POIS PAALTA); KORJAUS TOISTETTU — MANNERLENNOT JAAVAT (27.9.2026 klo 08.58)
+
+Pelikoodari 08.5x (vanhan ohjeen mukaan): webissa ainoa maanosaportti on js/game.js mannerLennot() (aarre-ehto); nostot webissa jo kaikki nakyvissa taydella ulkoasulla, ainoa vaiheistus loytosumu (js/pallolauta/sumu.js, pois paalta, lippu ?loytosumu=1); muiden maiden piilotus NAYTA_VAIN_KOHDEMAAN_NOSTOT jaa; maakuntasalaisuudet js/packs/maakuntasalaisuudet*.js. Fable toisti korjauksen: mannerlennot JAAVAT; era = maakuntaeteneminen pois (natiivi KarttaMuste/PeliOhjain.Muste + MaaKartta + Kartuscha + ElavaKartta), salaisuudet pois (web packs + natiivi), alkuanimaatiosta vain pohjavari, natiivin loytamattomien himmennys pois, webin loytosumu pois kokonaan. Postivahti 81 % → nollaus kaynnissa.
+
+## OMISTAJA 09.0x: LAHITASO LOD0 HYVAKSYTTY KAIKILLE MALLEILLE; MERI 10 LAJIA, BRUGGE, KINDERDIJK V3; POSTIVAHTI NOLLATTU (27.9.2026 klo 09.09)
+
+Omistaja 09.0x kortilla: lahitaso LOD0 (Colosseum 1 060 → 2 946, MSM 1 044 → 2 839, kaari 410 → 1 864 kolmiota; nakyy vain lahella) hyvaksytty → kaikille erikoismalleille ja 14 symbolille, 1.0.29 Natiivisepan rajapinnalla. Linssiseppa 08.57: kaikki 10 merilajia meri-tuotanto 0a9fdba5, Brugge valmis (erikoismallit3 6687a86a), Kinderdijk v3 (myllyt isoja; v2 nakyi 35 pt tikapuuna), pienten maiden kokoloydos korjattu (Natiiviseppa be33f310), Matterhorn ja Hohensalzburg agenteilla; seuraava laitekaannos juna + meri + erikoismallit3 + koko. Postivahti nollattu 09.0x (81 % → tyhja), aloitusviesti lahetetty.
+
+## LAITETESTAAJA 1.0.28 d3fa3c78 PASS (0 POIKKEUSTA, LUKIJAN TAUKO 5 718 → 33 ms) → MASTER + TF (27.9.2026 klo 09.10)
+
+Laitetestaaja 09.1x: 1.0.28 d3fa3c78 PASS: kaiutinvipu, striimiaani-valitsin, lukijan tauko 5 718 → 33 ms (valimuisti), 14 symbolia + vuori Olympoksella, Kinderdijk 3 myllya 3D, 177 mittausliput, Colosseum (velarium), Brandenburg rekisteroity; MSM/Stonehenge ei loytynyt annetuista koordinaateista (Linssiseppa todensi laitteella 91a4b727 → hyvaksytty); P1 ei kaatumista, racea ei saatu pakotettua. Raportti savukierros-tf1028-20260927.md 4393a1739. Fable → Natiiviseppa master-merge → Julkaisija TF 1.0.28.
+
+## TF 1.0.28 VIE (BUILD 28 = MASTER 7788b629); #3374 v2303, #3206 v2304 MAINISSA (27.9.2026 klo 09.10)
+
+Fable 09.1x Julkaisijalle VIE — TF 1.0.28 = build 28 = proto-master 7788b629 (juna 1eff4f76). Sisalto: P1 nosto-hylkaa-170, kaiutinvipu natiivi, striimiaani-USS, lukija-putki web+natiivi, maastokorkeus, taso1-kynnys, erikoismallit MSM/Stonehenge/Colosseum + Kinderdijk/Brandenburg/Segovia, 14 kategoriasymbolia 3D (B, vuori C), 177-avaimet. Mainissa #3374 (virkevali 220 ms) v2303 ja #3206 (turistiopas 19) v2304; #3381/#3382 junassa.
+
+## OMISTAJA 09.2x P1: STRIIMILUENTA TAUKOILEE JA HYPPII ETEENPAIN → PELIKOODARI HETI (27.9.2026 klo 09.17)
+
+Omistaja 09.2x: striimiluenta taukoilee vahan valia ja hyppii eteenpain (virkkeita jaa soittamatta). Todennakoisesti v2297–v2303 lukijamuutokset (esihaku +1/+2, virkevali 220 ms, pitka pala). Pelikoodari toistaa tuotannossa, mittaa soitetut/ohitetut virkkeet, korjaa ettei yhtaan palaa pudoteta, PR junaan heti; progressiivinen soitto sen jalkeen.
+
+## OMISTAJA 09.2x (SITOVA): STRIIMIPUHE EI OLE SIDOTTU AANIKYTKIMIIN — AINA PAALLA, LAHTEE VAIN PYYNNOSTA (27.9.2026 klo 09.20)
+
+Omistaja 09.2x sitova: striimipuhe (Pulun vastauksen luenta) ei saa olla sidottu mihinkaan aanitogleen (Kertoja, Musiikki, Aanimaisema, mykistys) — aina paalla, koska lahtee vain pelaajan pyynnosta; vain Pulun oma kaiutinvipu ohjaa. Web: js/lukija.js lueVirtana aanetPaalla()-portti pois (Pelikoodari, samaan P1-korjaukseen); natiivi: Natiivi-UI poistaa portit Pulu-luentapolulta 1.0.29. Raamattuun seuraavassa Raamattu-PR:ssa (LUKIJAAANI/PULU-osio).
+
+## TF 1.0.28 TESTFLIGHTISSA (BUILD 28, PROTO 7788b629, AJO 36299333927) (27.9.2026 klo 09.20)
+
+Julkaisija 09.19: TF 1.0.28 lahetetty ja ASC:ssa kasitelty, CFBundleVersion 202609270611, proto 7788b629, laskuri 28. Push omistajalle 09.2x. Seuraava 1.0.29: meri 10 lajia, nostot-heti 934103a9, maakuntaeteneminen/salaisuudet/alkuanimaatio pois, striimipuhe ilman aanikytkimia, lahitaso LOD0, avauskortti natiiviin, Brugge/Matterhorn/Hohensalzburg.
+
+## PROGRESSIIVINEN SOITTO #3384 (v2307); P1 TODENNAKOINEN SYY: PUHEEN PAIVARAJA 60 000 mrk/IP TAYTTYI MITTAUKSISTA → 429 OMISTAJAN VERKOSSA (27.9.2026 klo 09.22)
+
+Pelikoodari 09.2x: progressiivinen soitto #3384 (v2307): mp3 kehysrajoilta segmentteina, esirulla 3 + jalkirulla 1, 24 kHz; 1. aani 2 400 mrk 25 s → 1,75/2,2 s, lehtisivu 6,6 → 1,64 s, Pulu 2,26 → 1,72 s; kuulonayte proto-3d/lokit/puhevirta/. HUOM mittaukset tayttivat workerin paivarajan 60 000 mrk/IP → saman verkon laitteet saavat 429 → Fable: omistajan 09.2x P1 (taukoilee, hyppii) todennakoisesti tama. Toimet: PUHE_PAIVARAJA/KUUKAUSIRAJA nosto (~400 000/IP/vrk) PR heti, asiakas ei ohita virketta aanetta 429:ssa vaan pysahtyy ja nayttaa viestin, POLLO_KEHITTAJAKOODI Macin avaintiedostoon mittauksia varten (Julkaisija).
+
+## OMISTAJA 09.3x: STRIIMI KORJAUTUI TF 1.0.28:SSA — VIKA OLI NATIIVIN 1.0.27, P1 PURETTU (27.9.2026 klo 09.22)
+
+Omistaja 09.3x: striimiluenta korjautui uudessa buildissa (TF 1.0.28, lukija-putki) — 09.2x:n taukoilu/hyppiminen oli natiivin 1.0.27. P1 purettu; puheen paivarajan nosto ja 429-kasittely (ei ohiteta virketta aanetta) tehdaan normaalina PR:na. Pelikoodarin jarjestys: raja-PR → maakuntaera (mannerlennot jaavat) → natiivin progressiivisen soiton speksi → luovutus + nollaus.
+
+## OMISTAJA 09.3x (SITOVA): NOSTOJEN STRIIMILUENTA — NOPEUSSAATO, JATKO SAMASTA KOHDASTA, VILKKUVA KAIUTIN TAUOLLA, RATAS VASEMMALLA, VU-KAIUTTIMET OIKEALLA (27.9.2026 klo 09.27)
+
+Omistaja 09.3x: 1) striimipuheen nopeus saadettavissa (xAI speed); 2) nostojen luenta jatkuu samasta kohdasta jos sen keskeyttaa (tauko/jatka, ei alusta); 3) keskeytettyna kaiutinsymboli vilkkuu kevyesti; 4) kaiuttimen vasemmalle puolelle pieni saatoratas, josta nopeus saadetaan; 5) oikealle puolelle kolme kaiutinsymbolia sykkimaan VU-mittarina kuten isoisan luennassa. Web Pelikoodari (nollauksen jalkeen ensimmaisena), natiivi Natiivi-UI webin mallin mukaan 1.0.29/1.0.30.
+
+## PELIKOODARI TEKI VANHAN OHJEEN MUKAAN #3385 (MANNERLENNOT POIS) → PIDOSSA, KORJATAAN; MAAKUNNAN HERAAMINEN JA SALAISUUDET POIS VAHVISTETTU (27.9.2026 klo 09.29)
+
+Pelikoodari 09.3x (jonoviestit eivat ehtineet): #3385 (v2307) mannerLennot ilman aarre-ehtoja + loytosumu pois + Livian mannervihje; natiivi pelikoodari/maailma-auki 21e79d71 (Kaupat.MannerLennot, NostonMuste.Taysi = nakyva nosto taytena nimineen heti, kultaiset jaljet; piirron luettava Taysi: Symbolimallit 537, Tasot23 259, NostotKartalla 432, ElavaHerays 54). Fable: #3385 ja 21e79d71 PIDOSSA — mannerlennot palautetaan (omistaja 08.3x), sumun poisto ja nostot heti jaavat; lisaksi omistajan 08.3x mukaan maakunnan heraaminen (tasainen paperi kunnes 1. nosto, KarttaMuste MaakuntaHeraa) ja maakuntasalaisuudet POIS, alkuanimaatiosta vain pohjavari. docs/pulu-reaktiot.md mannerlentorivit jaavat voimaan. Progressiivinen soitto natiiviin: Pelikoodari (Puhe.cs) — vuoro nollauksen jalkeen.
+
+## OMISTAJA 09.3x: LUKIJAN AANEN VALINTA SAATORATTAASEEN (POIS KEHITTAJAVALIKOSTA); iPHONELLA NOSTOT HIEMAN ALEMMAS (YLIN RIVI NAKYVIIN, KAIUTIN SAMALLA RIVILLA) (27.9.2026 klo 09.30)
+
+Omistaja 09.3x lisays: nostojen luennan saatorattaaseen siirretaan myos lukijan (xAI) aanen valinta ja se poistetaan kehittajavalikosta (web + natiivi). iPhonella nostokortin sisallon pitaa alkaa hieman alempaa niin, etta noston ylin tekstirivi nakyy heti — kaiutin (ratas + kaiutin + VU-kaiuttimet) on samalla rivilla eika saa peittaa sita. Web Pelikoodari, natiivi Natiivi-UI webin mallin mukaan.
+
+## PELIKOODARI NOLLATTU JA KAYNNISTETTY 09.4x (LUOVUTUS -B f07e4927a) (27.9.2026 klo 09.34)
+
+Pelikoodari nollattu 09.4x (81 % → tyhja), aloitusviesti: #3385/21e79d71 korjaus (mannerlennot palautetaan, sumun poisto ja Taysi jaavat, maakuntien heraaminen + salaisuudet + alkuanimaatio pois), striimipuhe ilman aanikytkimia, nostojen luennan saatimet (nopeus, jatko, vilkkuva kaiutin, ratas + aanen valinta, VU-kaiuttimet), raja-PR, natiivin progressiivinen soitto.
+
+## MAAKUNTAERA KORJATTU: #3385 v2309 (MANNERLENNOT = MAIN, SUMU POIS), PROTO maailma-auki 7041fd0e; SPEKSIT NATIIVISEPALLE, NATIIVI-UI:LLE, LINSSISEPALLE (27.9.2026 klo 09.43)
+
+Pelikoodari 09.4x: #3385 → v2309 (mannerlennot ennallaan, loytosumu pois, salaisuudet heti viennissa; web ei sisalla maakuntaetenemista); proto pelikoodari/maailma-auki 7041fd0e (Kaupat/Laatat/kultaiset = master, NostonMuste.Taysi, Heranneet = maakunnassa nostoja, salaisuus nakyy heti ja kuuluu laskuriin, MaakuntaHeraa/MaakuntaValmis eivat laukea; 324/324). Speksit: Natiiviseppa MaaKartta Heraannyt/Herata pois; Natiivi-UI kartussin herays + MAAKUNNAT-palkki + salaisuusrivi pois, nimet heti; Linssiseppa ElavaHerays pois, saapumisesta vain pohjavarin taytto. Palkintoefektit pois: 'Maakunnan salaisuus loytyi' -rivi, herayksen leima + nimen kirjoitus, ElavaHerays-animaatio; maa valmis → lippu liehuu jaa. Fable: #3385 pito purettu.
+
+## Z10: #3380 v2307 JA #3371 v2308 MAINISSA, OSOITIN PAGESIN JALKEEN; #3385 JUNASSA; #3384 UUDELLEEN (valmistele.sh KORJATTU) (27.9.2026 klo 09.43)
+
+Julkaisija 09.4x: #3380 (tukilaattasilmukka) v2307 ja #3371 (PELIN_SYVIN_TASO 10) v2308 mainissa; osoitinvaihto heti Pages-julkaisun jalkeen + tarkistus. #3385 pito purettu (Fable kylla) → junassa. #3384 (progressiivinen soitto) uudelleen junassa: valmistele.sh pudotti PR:n sw.js-SHELL-lisaykset ristiriidassa → tyokalu korjattu yhdistamaan rivit.
+
+## OMISTAJA 09.4x (SITOVA): VIIKKOKIINTIO 97 % → KAIKKI SESSIOT PYSAYTETAAN JA FABLE KIRJOITTAA SIIRTOPROMPTIN TILINVAIHTOA VARTEN (27.9.2026 klo 09.46)
+
+Omistaja 09.4x: kun viikkokiintio (kaikki mallit) on 97 %, Fable pysayttaa kaikki sessiot (jokainen kirjoittaa luovutuksen ja pushaa, sitten stop) ja kirjoittaa siirtopromptin tilinvaihtoa varten (docs/raportit/viesti-fable-tilinvaihto-<pvm>.md: kaikkien roolien tila, jonot, haarat, session id:t vanhalla tililla, aloitusviestit uudelle tilille, avoimet kortit). Postivahti ilmoittaa 93 % (ennakko) ja 97 %. Nyt 84 % (nollautuu to 2.10.).
+
+## PULUN PUHE ILMAN AANIKYTKIMIA: WEB PR 3386, PROTO bae36144; NATIIVI-UI:N MAAKUNTAERA 0ca9c11e (27.9.2026 klo 09.48)
+
+Pelikoodari 09.5x: web #3386 (lueVirtana + lueAaneen(pollo) ohittavat mykistyksen, mykistys/kertojakytkin eivat katkaise Pulua; 4426/0; versio nostetaan junassa), natiivi pelikoodari/pulu-ilman-kytkimia bae36144 (Puhe.cs PulunPuhe; Natiivi-UI:lle ei speksia). Natiivi-UI teki maakuntaeran osansa 0ca9c11e; Linssisepan ElavaHerays odottaa. Pelikoodari seuraavaksi nostojen luennan saatimet webiin. Omistajan kasinkirjoitetut ideat 09.02 (kuva): ruokaraha (nukkuminen + syominen, kultainen omena huvipuistosta), Pulu sekoilee (+10/−10 p), karttaan piilotettu aarre +100 p, minipelit maissa kaveria vastaan → matkakirjaan, huvipuistojen paasylippu 30 p / voitto 100 p — Fable luki ja tarkistaa omistajalta ennen kirjausta ideoina.
+
+## OMISTAJAN IDEAT 27.9. (KASINKIRJOITETTU 09.02 + TARKENNUS 09.5x): RUOKARAHA, PULU SEKOILEE, AARRERUKSI, MINIPELIT BOTTIA/KAVERIA VASTAAN, HUVIPUISTOT — VAHEMMAN TIETOVISAA (27.9.2026 klo 09.57)
+
+Omistaja 27.9. (kuva 09.02, tarkennus 09.5x): 1) rahaa pitaa olla nukkumiseen ja syomiseen, muuten peli loppuu; huvipuistosta voi loytaa kultaisen omenan (korvaa ruoan pidemmaksi aikaa); 2) Pulu sekoilee: lentaa Pariisiin ja vaittaa Berliiniksi — oikeasta siirrosta +10 p, vaarasta −10 p; 3) karttaan piilotettu pieni aarreruksi (vaikea loytaa), klikkaamalla +100 p; 4) minipelit (Uno, Tetris tms. -tyyppiset) maissa, pelattavissa bottia tai kaveria vastaan, pelit kertyvat matkakirjaan; 5) Disneyland/Tivoli paasylippu 30 p, mutta voi voittaa 100 p huvipuistopeleilla (narunveto, pallonheitto). LINJA: vahennetaan pelkkia tietovisakysymyksia, korvataan/lisataan pelejä joissa myos oppii. Ensimmainen era: lista, mita pelejä Euroopan eri kaupungeista/maista voisi loytya, ja saako niita kayttaa suoraan vai sovelletaanko oma versio (oikeudet) — Sisaltokirjuri tutkii, omistajalla lisaa peli-ideoita.
+
+## OMISTAJA 09.5x (SITOVA): PELEILLE OMA SUUNNITTELUSIVU (docs/pelikatalogi.md + pelikatalogi.html), PELIT YHTA MERKITTAVA OSA KUIN LINSSIT; SISALTOKIRJURIN CHECKOUT PALAUTETTU (27.9.2026 klo 09.59)
+
+Omistaja 09.5x: pelit ovat yhta merkittava osa kuin linssit → oma suunnittelusivu docs/pelikatalogi.md (malli linssikatalogi.md) + Pages-kopio pelikatalogi.html (Pelikoodari); Sisaltokirjuri tekee ensimmaisen version (Euroopan pelit maittain, oikeudet, 10 ensimmaista, omistajan ideat -osio). Raamattuun seuraavassa Raamattu-PR:ssa. VIRHE: Fable mergesi #3377/#3383 --delete-branch:lla ja Sisaltokirjurin checkout (haaralla sisalto-luovutus-20260927) katosi → palautettu git worktree add Matkakirja-sisaltokirjuri -b sisalto-tyo-20260927-0958 origin/main; muistisaanto: ei koskaan --delete-branch, tarkista git worktree list.
+
+## Z10 OSOITIN VAIHDETTU 09.47 (TASOT 0–10, pohja.kopio 0–8); #3384 v2309, #3385 v2310 MAINISSA (27.9.2026 klo 09.59)
+
+Julkaisija 09.59: Z10-osoitin vaihdettu 09.47, CDN 2026-09-26s-pohja tasot 0–10 (pallosarja pohja.kopio 0–8); #3384 progressiivinen soitto v2309 ja #3385 loytosumu pois v2310 mainissa; savukkeet ja Pelikoodarin puhelinmittaus kaynnissa.
+
+## OMISTAJA 10.0x: MAA VALMIS → LIPPU LIEHUU PIDETAAN, VAIKKA MAAKUNTAETENEMINEN EI NAY VISUAALISESTI (27.9.2026 klo 10.01)
+
+Omistaja 10.0x: 'Tama on ideana hyva. Pidetaan se vaikka muuten maakunta ei nay visuaalisesti pelin aikana etenemisena' — maan valmistuttua (kaikki nostot loydetty) lippu liehuu -palkinto SAILYY; maakuntien vaiheittainen heraaminen, salaisuudet ja alkuanimaation muut vaiheet poistuvat kuten paatetty.
+
+## SISALTOKIRJURI NOLLATTU 10.0x (LUOVUTUS -D #3387 MAINISSA) → PELIKATALOGI (27.9.2026 klo 10.05)
+
+Sisaltokirjuri nollattu 10.0x; #3387 (docs) mergetty ILMAN --delete-branch (haara oli checkoutin haara); aloitusviesti: uusi tyohaara origin/mainista, pelikatalogi docs/pelikatalogi.md linssikatalogin mallilla.
+
+## OMISTAJA 10.0x (SITOVA): PELIN TALOUS — RAHAA KULUU MATKUSTUKSEEN, SYOMISEEN, ASUMISEEN JA HUVITUKSIIN (LINSSIT JA PELIT KAUPASTA, MYOS LOYDETTAVISSA ILMAISEKSI); RAHAT LOPPU → PELI LOPPUU 2 VRK:SSA (27.9.2026 klo 10.05)
+
+Omistaja 10.0x: jatkossa rahaa kuluu pelissa kuin oikeassa elamassa — matkustamisen lisaksi syomiseen ja asumiseen seka huvituksiin: linssit ja pelit ovat ostettavissa Kaupasta (ja edelleen loydettavissa myos ilmaiseksi). Jos rahat loppuvat, peli loppuu kahdessa vuorokaudessa. Toteutus vaiheittain: Pelikoodari laatii ensin talous-suunnitelman (paivakustannus ruoka + majoitus, hinnat linsseille/peleille, tulolahteet: aarteet, minipelit, huvipuistovoitot, aarreruksi, Pulu-pisteet; tasapaino ettei tavallinen matka kaadu; 2 vrk:n varoitus ja loppu; web + natiivi) → omistajan kortti → toteutus. Raamattuun (Perustuslaki/talous) seuraavassa Raamattu-PR:ssa.
+
+## OMISTAJA 10.0x: HUVIPUISTOIHIN SISAANPAASYMAKSU, JOISSA VOI MYOS ANSAITA RAHAA (HUVIPUISTOPELIT) (27.9.2026 klo 10.09)
+
+Omistaja 10.0x tarkennus talouteen: huvipuistoihin (Disneyland, Tivoli tms.) on sisaanpaasymaksu (kasinkirjoitettu idea: 30 p), ja huvipuistossa voi myos ansaita rahaa huvipuistopeleilla (narunveto, pallonheitto, jopa 100 p) — mukaan talous-suunnitelmaan ja pelikatalogiin.
+
+## IDEOIDEN ALKUPERA 27.9.: OMISTAJAN 12-VUOTIAS TYTAR (27.9.2026 klo 10.10)
+
+Omistaja 10.1x: 27.9. kasinkirjoitetut peli-ideat (ruokaraha ja 2 vrk:n loppu, kultainen omena, Pulu sekoilee ±10 p, aarreruksi +100 p, minipelit bottia/kaveria vastaan matkakirjaan, huvipuistojen paasymaksu ja pelivoitot) tulivat omistajan 12-vuotiaalta tyttarelta — pelaajanakokulma kohderyhman lahelta; kirjataan ideoiden alkuperana pelikatalogiin ja talous-suunnitelmaan (ilman nimea).
+
+## LUENNAN SAATIMET PR 3388 (v2311): OMISTAJA — VU INTEGROIDAAN KAIUTTIMEEN KUTEN ISOISAN LUENNASSA (27.9.2026 klo 10.15)
+
+Pelikoodari 10.1x: nostokortin luennan saatimet #3388 (pohjana #3384): kaiutin tauko/jatka vilkkuen, luenta jatkuu samasta palasta, ratas vasemmalla (nopeus 0,6–1,6 + xAI-aani, pois kehittajavalikosta), VU oikealla kolmena kaarena; worker: listan xAI-aani ilman kehittajakoodia (julkaistava); loydos: kaksivaiheisen nostokortin kaiutin jai piiloon → korjattu. Omistaja 10.1x kortilla: VU pitaa integroida kaiuttimeen samalla tavalla kuin isoisan luennassa (kaiuttimen aaniaallot sykkivat), ei erillinen kaari-ikoni → Pelikoodari paivittaa, uusi kuvapari → kortti.
+
+## OMISTAJA 10.1x: SAATORATAS LAHEMMAS KAIUTINTA (#3388), MUUTEN HYVA (27.9.2026 klo 10.16)
+
+Omistaja 10.1x: luennan saatimissa ratas hieman lahemmas kaiutinta; muuten hyva → Pelikoodari samaan paivitykseen VU-integraation kanssa.
+
+## OMISTAJA 10.2x: LUKIJAN AANILLE OMAT PELINIMET (EI XAI-VIITTEITA) — TAULUKKO (27.9.2026 klo 10.17)
+
+Omistaja 10.2x: aanille omat nimet, jotta ne eivat yhdisty xAI:n moottoriin. Fable nimesi 1870-luvun suomalaisilla etunimilla (alkukirjain sailyy, sukupuoli sailyy): ara→Aino (oletus), aurora→Aamu, carina→Kerttu, celeste→Siiri, eve→Helmi, iris→Ilta, liora→Lyyli, luna→Vieno, ursa→Saima; altair→Aarne, atlas→Antero, castor→Kalle, cosmo→Kosti, helios→Heikki, helix→Herman, kepler→Kaarlo, leo→Lauri, lumen→Lassi, lux→Luukas, naksh→Niilo, orion→Onni, perseus→Pekka, rex→Reino, rigel→Risto, sal→Sulo, sirius→Simo, zagan→Sakari, zenith→Vaino. Asiakas nayttaa vain pelinimen; xAI-tunnus sisainen (worker). Pelikoodari #3388, Natiivi-UI speksi.
+
+## PUHERAJA-PR 3389: 400 000 mrk/IP/vrk, 6 M/kk, 429 PYSAYTTAA LUENNAN (VAHVISTETTU); #3388 PIDOSSA KORJAUKSIIN ASTI (27.9.2026 klo 10.17)
+
+Pelikoodari 10.1x: #3389 (v2311) PUHE_PAIVARAJA 60 000 → 400 000 mrk/IP/vrk, PUHE_KUUKAUSIRAJA 900 000 → 6 000 000; 429/5xx pysayttaa luennan (ei laitteen aanta, ei aanetonta ohitusta), workerin viesti kerran/istunto, myos Pulun striimi; vaatii Pollon julkaisun. Fable vahvisti luvut. Julkaisijan jarjestys: #3386 → #3389 → #3388 (pidossa kunnes VU/ratas/nimet korjattu ja omistaja kuitannut). Pelikoodarin jono: #3388-korjaukset → talous-suunnitelma → natiivin progressiivinen soitto.
+
+## AMPARIN KOKO 27.9.: 106,9 Gt, 7,68 M OBJEKTIA, ~1,60 $/kk; VANHAT PYRAMIDISARJAT ~14 Gt SIIVOTTAVISSA (27.9.2026 klo 10.19)
+
+Julkaisija 10.2x (ajo 36298275631): R2 yhteensa 106,9 Gt / 7,68 milj. objektia (Cloudflare 108 GB), ~1,60 $/kk. Suurimmat: pyramidi/2026-09-26s-pohja 18,9 Gt, julisteet/maasto 13,8 Gt, julisteet/pallo 12,5 Gt, pyramidi/2026-09-23a-pohja 5,2 Gt, kuvat 4,3 Gt. Vanhat pyramidisarjat 09-21/22/22c/25/26 a 2,7–2,9 Gt = ~14 Gt siivottavissa (omistajalta kysytty). R2:ssa ei kokorajaa.
+
+## NATIIVIN PROGRESSIIVINEN PUHE KOODATTU (pelikoodari/puhevirta b6fc76d7); MITTAUS VASTA #3389:N JULKAISUN JALKEEN (27.9.2026 klo 10.19)
+
+Pelikoodari 10.2x: natiivi Puhe.SoitaVirtana — DownloadHandlerAudioClip(streamAudio) soi ~12 kt (≈1 s) esirullan jalkeen, valmis pala valimuistiin, varapolku, komento 'puhe virta', 1. aani -mittari; unity 0 virhetta; lukijat eivat muutu. Mittaus jumissa (kehittajakoodi puuttuu, paivaraja tayttyi) → Fable: b) mittaus #3389:n julkaisun jalkeen. Seuraavaksi #3388-korjaukset ja talous-suunnitelma (jonossa).
+
+## OMISTAJA 10.2x: VANHAT PYRAMIDISARJAT POISTETAAN AMPARISTA (VAIN NE, JOIHIN EI OSOITA MIKAAN) (27.9.2026 klo 10.22)
+
+Omistaja 10.2x 'Poista vanhat': Julkaisija poistaa vanhat pyramidisarjat (09-21, 09-22, 09-22c, 09-25 ym., ~14 Gt) — ensin Karttasepalta ja Siirtosepalta vahvistus mihin sarjoihin tuotanto (2026-09-26s-pohja), pallosarjan pohja.kopio (2026-09-26-pohja) ja natiivipaketti osoittavat; niita ei poisteta. Varmuuskopio-luettelot sailytetaan. Poistetut ja vapautunut Gt rivilla.
+
+## PYRAMIDISARJOJEN POISTO: JULKAISIJA KOKOAA LISTAN JA KOMENNON, OMISTAJA AJAA (PYSYVA POISTO ROOLEILTA KIELLETTY) (27.9.2026 klo 10.22)
+
+Julkaisija 10.2x: kysyy Karttasepalta ja Siirtosepalta viitatut sarjat, kokoaa vapaiden sarjojen listan ja valmiin poistokomennon; itse poiston tekee omistaja (pysyva datan poisto kielletty rooleilta). Vanhat varmuuskopioluettelot lakkaavat toimimasta poistettujen sarjojen osalta; 0732-varmuuskopio (2026-09-26-pohja) sailyy.
+
+## POISTOLISTA OMISTAJALLE: 09-21/22/22c/23a (13,5 Gt) VAPAAT, 09-25 HARKINTA (2,61 Gt); 26s JA 26 SAILYVAT (27.9.2026 klo 10.24)
+
+Julkaisija 10.2x (Karttaseppa + Siirtoseppa vahvistivat): vapaat 2026-09-21-pohja 2,66, -22-pohja 2,72, -22c-pohja 2,92, -23a-pohja 5,19 Gt (yht. 13,5 Gt); harkinta -25-pohja 2,61 Gt (koe/2026-09-25 + varmuuskopio 0926-0856); pidetaan -26s-pohja (tuotanto) ja -26-pohja (palautukset 0927-0732/0947, delta-lahde). Poisto omistajan tehtava (R2-konsoli tai wrangler), lista ja komento annettu 10.2x.
+
+## LINSSISEPAN LAITEKUVAT 10.27: MAAKUNTA-TAYTTO 643a5ff9, MERI LAITTEELLA, KINDERDIJK/BRUGGE/HOHENSALZBURG OK, LAHITASO KYTKEYTYY, MATTERHORN V2 (27.9.2026 klo 10.27)
+
+Linssiseppa 10.27 (iPhone, 0 poikkeusta): maakunnan saapuminen ennen 4,8 s (huntu, kyna, taytto, nostot) → jalkeen vain taytto 0 s:sta, luovutus 1,6 s (linssiseppa/maakunta-taytto 643a5ff9); Fable: odotuksen ajaksi nostot ja rajat nakyviin. Kinderdijk v3, Brugge, Hohensalzburg toimivat; lahitaso kytkeytyy laitteella (kerroin ≥ 4), kytketty 7 erikoismalliin + 9 symboliin (mallinseppa/lahitaso), loput agenteilla; meri: lautta, purjelaiva, delfiinit, merihirvio, lokit, jaavuori nakyvat (majakkalaiva, kalastusvene vain esikatselussa). Matterhorn: 55 asteessa kiilamainen ja nimio mallin paalla → Fable: v2 hoikemmalla koukkuhuipulla + nimion vaisto ennen merge-pyyntoa. Merge-pyynnot Natiivisepalle: meri-tuotanto 0a9fdba5, maakunta-taytto 643a5ff9; lahitaso perassa.
+
+## OMISTAJA 10.3x (SITOVA): TALOUS — PAIVAKULU 12/20/32 £, ALOITUSRAHA 400 £, ROSVON HAVIO 50 %, LOPPU → JATKO TALLENNUKSESTA; #3388 HYVAKSYTTY; Z10-SAVUKKEET OK (27.9.2026 klo 10.48)
+
+Omistaja 10.3x kortilla (talous-suunnitelma #3390 mainissa): paivakulu ruoka + majoitus 20 £ x hintataso (12/20/32 £) vuorokauden vaihtuessa SOPII; aloitusraha 400 £; rosvon kaksintaistelun havio vie 50 %; rahat loppu → 2 vrk varoitus → loppukortti → jatko viimeisesta tallennuksesta ennen rahojen loppua; pankin 100 £ apu pois; varoitusaikana jalan naapurikaupunkiin ilmaiseksi. Fable paatti muut: Kaupan hinnat kuten ehdotettu (pieni linssi 60, iso 150, peli 40–80 £), huvipuisto paasy 30 / panos 10 / voitto 30–100 / max 3 pelia; aarreruksi, Pulu ±10 ja kultainen omena maaritellaan pelikatalogissa. Luennan saatimet #3388 B2 hyvaksytty → junaan, natiivi perassa. Julkaisija: Z10-vaihdon savukkeet ok (pariisi-lahizoom 38/38, lepopiirto 12/12); astro-pallo 144/148 FAILit vastakokeita (ei pyramidi), syvazoomi-ajurin polkuvirhe (/opt/node22) → Pelikoodarille.
+
+## OMISTAJA 11.0x (SITOVA): PELISTREAK (3+ PAIVAA → RAHAPALKINTO, KASVAA); LENTOPELI (TIGER MOTH: VAPAA LENTO + TEHTAVAT, POLTTOAINE MAKSAA, PALUU LAHTOPAIKKAAN TAI SAKKO); RAAMATTU-PR AVATAAN (27.9.2026 klo 11.04)
+
+Omistaja 11.0x kortilla: 1) Raamattu-PR (v2313, sisaltaa pelikatalogin) avataan Julkaisijan junaan, #3391 suljetaan; 2) 'striikki' = pelistreak: kun pelaaja pelaa vahintaan kolmena perakkaisena paivana, saa rahapalkinnon; mita pidempi streak, sita isompi paivittainen tai viikoittainen palkinto → talous vaihe 1 (Pelikoodari); 3) lentopeli: kaksitasokoneen (Tiger Moth, lento v3) lentamisesta oma peli — vapaa lento ja tehtavia, polttoaine kuluu ja maksaa, lahtopaikkaan paastava takaisin tai sakko, tehtavista (esim. renkaan lapi lento) lisaa polttoainetta → pelikatalogiin (Sisaltokirjuri kortti) ja Linssisepalle/Pelikoodarille suunnitelma lento v3:n paalle. Pelikoodarin #3388 konfliktoi mainin kanssa → yhdistaa; #3389 tuotannossa (worker julkaistu 10.47).
+
+## OMISTAJA 11.1x–11.2x: PALLO-Z10 VIENTI OMISTAJA HYVAKSYY KARTTASEPAN SESSIOSSA; AVAUSKORTTI NATIIVI: MINIATYYRI LAHEMMAS KAUPUNKIA, OSIOLINKIT KEVYEMMIKSI; MUUT 3 NATIIVI-UI:N ERAA JUNAAN (27.9.2026 klo 11.14)
+
+Omistaja 11.1x: natiivin pallon Z10-laattojen (13 856, 266 kaupunkia, poltto klo 22–24 samaan sarjaan 2026-09-26-pohja-20260926) vienti tuotantosarjaan — luokitin esti Karttasepalta → omistaja hyvaksyy itse Karttasepan sessiossa illalla (ei kiertoteita); Siirtoseppa tekee offline.jsonin (maxzoom 10, kaupunkitaso [9,10]) valmiiksi. Natiivi-UI 11.1x: avauskortti natiivi-ui/avauskortti f8b1a9c1 (kaannos 711c20d3, kuvaparit natiivi-ui-avauskortti/); nosto-ylarivi a5aae711, nostot-taysi 18543b3c, luennan-saatimet 56ab226b PASS. Omistaja 11.2x kortilla: kutsuminiatyyri lahemmas kaupunkia, lehden osiolinkit liian raskaan nakoiset → kevyemmiksi (natiivi ensin, web perassa Pelikoodari); muut kolme eraa merge-pyyntoon heti. Pelikoodarille: pelistreak talouden vaihe 1:een; lentopeli pelikatalogin kautta.
+
+## TALOUS VAIHE 1 WEB PR 3394: PAIVAKULU 12/20/32, 400 £, ROSVO 50 %, 2 VRK → LOPPUKORTTI → JATKO, ODOTA-KULKUTAPA (27.9.2026 klo 11.15)
+
+Pelikoodari 11.2x: #3394 (v2313): paivakulu js/packs/hintatasot.js (karkea 3-portainen maataulu, Sisaltokirjuri tarkentaa), aloitusraha 400 £, rosvo 50 %, pankin apu pois, 2 vrk varoitus (kassa punaisena) → loppukortti → jatko turvatallennuksesta (moninpelissa pudotus); loydos: rahaton saarella ei voinut tehda mitaan → Odota-kulkutapa lisatty, liftaus ilmainen; 4440/0. Natiivin portti (Matka/Kaupat + UI-speksi) seuraavaksi. Julkaisija: #3392 → #3394.
+
+## OMISTAJA 11.2x: NAHTAVYYSKUVAT YHDENMUKAISIKSI — CODEXIN 503/504-ERAT OVAT MAINISSA, MUTTA TYYLITARKASTUS TEHDAAN (SISALTOKIRJURI) (27.9.2026 klo 11.17)
+
+Omistaja 11.2x: nahtavyydet pitaa korjata yhdenmukaisen nakoisiksi (osa kuvakaappauksissa liian varikkaita); kysyi onko Codexin tyo siirretty peliin. Tila: Codexin miniatyyrien varikorjauserat 503/504 ovat mainissa (erat 1–12, #3279–#3300, viimeisin v2257; #3265 suljettiin sisaltojunan hyvaksi). Fable → Sisaltokirjuri: kontaktiarkki kaikista nahtavyyskuvista kaupungeittain, mittarit (kyllaisyys, taytto, tausta, tyylisukupolvi), poikkeavien lista raporttiin docs/raportit/nahtavyyskuvien-tyyli-20260927.md, ehdotus Codex-tilaukseksi 503/504-paletilla; omistaja katsoo listan ennen uusia kuvia. Siirtoseppa 70 % → luovutus + nollaus offline.jsonin jalkeen.
+
+## OMISTAJA 11.2x (SITOVA): UUSI LINSSI TAI PELI TEETETAAN OPUKSELLA MAX-TILASSA, VAATIMUS VIIMEISEN PAALLE HIENO LOPPUTULOS (27.9.2026 klo 11.17)
+
+Omistaja 11.2x: kun lentokone tai mika tahansa muu uusi linssi tai peli teetetaan Opuksella, sessiolle aina max-tila paalle ja vaatimus tehda viimeisen paalle hieno lopputulos kaikin puolin. Fablen kanta (hyvaksytty periaate): kylla; hyvaksymislista ennen merge-pyyntoa (toimii laitteella ilman poikkeuksia, 30 fps, kuvapari + video omistajalle, aani/musiikki mukana, oppimiskytkos kirjattu, ei placeholder-grafiikkaa), omistaja hyvaksyy kuvista; max koskee suunnittelua ja toteutusta, ei todennuksia/deltoja/siivouksia. Raamattuun seuraavassa Raamattu-PR:ssa (TYOTAPA: effort-saanto).
+
+## OMISTAJA 11.3x (SITOVA): FPS-VAATIMUS PELIN JA LINSSIN MUKAAN — TOIMINTAJUTUISSA VASTA 60 fps ON RIITTAVAN SULAVA, ARVIOIDAAN TAPAUSKOHTAISESTI (27.9.2026 klo 11.19)
+
+Omistaja 11.3x tarkennus hyvaksymislistaan: fps-vaatimus ei ole kiintea 30 — se maaritellaan pelin ja linssin mukaan; lahtokohtaisesti toimintajutuissa (esim. lentopeli, minipelit) vasta 60 fps on riittavan sulava; rauhallisissa linsseissa/kartan levossa voi riittaa vahemman. Jokaiselle uudelle linssille/pelille kirjataan oma fps-tavoite suunnitelmaan ja se mitataan laitteella ennen merge-pyyntoa.
+
+## LINSSISEPPA 11.2x: MATTERHORN V2, LAHITASO KAIKISSA 9 ERIKOISMALLISSA + 14 SYMBOLISSA, MERGE-PYYNTO mallinseppa/lahitaso be353929 (27.9.2026 klo 11.21)
+
+Linssiseppa 11.2x: Matterhorn v2 (hoikempi koukkuhuippu, peitto ~½, korkeus 1,35 → 1,0; laite 2d04e085; nimion vaisto Natiivisepalla kesken); lahitaso kaikissa 9 erikoismallissa ja 14 symbolissa, laitteella kytkeytyy (pienissa maissa vasta kynnyskorjauksen jalkeen). Merge-pyynto Natiivisepalle mallinseppa/lahitaso be353929 (sisaltaa erikoismallit3: Kinderdijk v3, Brugge, Hohensalzburg, Matterhorn v2 + lahitasot). Saapuminen pysyvin kerroksin abfb54e5 kaannetty (2d04e085), kuva odottaa simulaattoria.
+
+## OMISTAJA 11.3x: SEURAAVA SIIRTOPROMPTI POIKKEUKSELLISESTI NIIN, ETTA PAATOIMITTAJA KAYTTAA OPUS-MALLIA (27.9.2026 klo 11.22)
+
+Omistaja 11.3x: seuraava siirtoprompti (tilinvaihto viikkokiintion 97 %:ssa, tai Fablen seuraava nollaus) tehdaan poikkeuksellisesti niin, etta paatoimittaja (Fablen rooli) ajetaan Opus-mallilla (effort max), ei Fable-mallilla. Kirjataan siirtopromptiin ja aloitusviestiin: sessio 'FABLE' luodaan Opus max -tilassa; Raamatun saannot ja lokikaytanto samat. Poikkeus on kertaluonteinen, ellei omistaja jatka sita.
+
+## VIIKKO 93 % → SIIRTOPROMPTI KIRJOITETTU (viesti-fable-tilinvaihto-20260927.md), ROOLIT KIRJOITTAVAT LUOVUTUKSET (27.9.2026 klo 11.25)
+
+Postivahti 11.23: viikkokiintio 93 % (~1 pp/12 min). Fable: siirtoprompti docs/raportit/viesti-fable-tilinvaihto-20260927.md (paatoimittaja Opus max poikkeus, tila, roolien aloitusviestit, jono) ja kaikille 10 roolille kasky kirjoittaa luovutus nyt ja jatkaa tyota; 97 %:ssa sessiot pysaytetaan (stop_session), viimeisena Fable.
+
+## LUOVUTUKSET TILINVAIHTOON: NATIIVI-UI, JULKAISIJA, KARTTASEPPA; PALLO-Z10 YOPOLTTO IRROTETTU SESSIOSTA (PID 72301) (27.9.2026 klo 11.26)
+
+Luovutukset pushattu: Natiivi-UI (f8f7a9c67; avauskortin korjaukset koodissa 11a3c43a, kaannos klo 12; nostot-taysi 18543b3c), Julkaisija (c01adfd54; tyokalut julkaisija-tyokalut/; #3392 v2313 mainissa, #3391 suljettu, #3394 ja #3388 junassa), Karttaseppa (1bcc21e08; pallo-Z10 yopoltto nohup PPID 1 PID 72301 alkaa klo 22 → pallo-z10-20260927/ulos/10/; vientikomento luovutuksessa, ajetaan vasta omistajan hyvaksynnalla uuden tilin Karttaseppa-sessiossa; worktree wt/karttaseppa-pallo-z10 sailytetaan).
+
+## LUOVUTUKSET: LINSSISEPPA -M (01289a762), LAITETESTAAJA (6b46d3f13); LAHITASON KOLMIOSUHDE 2–5 x, KATTO 3 000 (FABLE) (27.9.2026 klo 11.27)
+
+Linssiseppa luovutus -m 01289a762 (seuraavat maat Cesky Krumlov, Malbork, Pannonhalma; lento v3 + lentopeli); kysymys: Raamatussa lahitaso 2–3 x mutta osa symboleista 4–4,7 x (kaikki < 3 000) → Fable: ei karsita, sitova raja 3 000 kolmiota, Raamattuun '2–5 x, katto 3 000' seuraavassa Raamattu-PR:ssa. Laitetestaaja luovutus 6b46d3f13 (+ aloitusviesti 6b79b88dd), 1.0.29-resepti 9 aihetta.
+
+## SISALTOKIRJURIN LUOVUTUS -E; PELISUUNNITELMAKORTIT COMMITOIDAAN WIP:INA; TYYLITARKASTUS AGENTILLA; SAAPUMINEN V2 TODENNETTU (27.9.2026 klo 11.28)
+
+Sisaltokirjuri luovutus -e (haara sisalto-pelikatalogi-20260927): pelisuunnitelmakortit 10 + lentopeli + streak kirjoitettu (Fable: commit + push WIP heti), nahtavyyskuvien tyylitarkastus agentilla kaynnissa (sama checkout — ei checkout/reset ennen valmistumista), hintatasot.js-velka. Linssiseppa 11.3x: saapuminen v2 laitteella (maakunta-saapuminen-v2.png, 2d04e085): nostot ja rajat nakyvat tayton aikana, taytto 0,02 s → valmis 1,6 s, mediaani 16,7 ms, p95 22 ms.
+
+## PELIKOODARIN LUOVUTUS -C (748004216); PELISTREAK-EHDOTUS #3396; AGENTIT: TALOUSPORTTI, VASTAKOE, PELIKATALOGI.HTML (27.9.2026 klo 11.28)
+
+Pelikoodari 11.3x (68 %): luovutus -c 748004216; #3388 niputus korjattu → junassa; pelistreak-ehdotus #3396 (docs): 3–6 pv 20 £/pv, 7. pv 50 + 100 £, 8+ pv 30 £/pv + joka 7. pv 100 £ → omistajan kysymys 11 (Fable mergesi #3396 ilman haaran poistoa); agenteilla natiivin talousportti (pelikoodari/talous-vaihe1), astro-pallo-VASTAKOE + syvazoomi-polku, pelikatalogi.html; sitten avauskortin web-kevennys.
+
+## OMISTAJA 11.3x: PELISTREAK-LUVUT HYVAKSYTTY (3–6 pv 20 £, 7. pv 50 + 100 £, 8+ pv 30 £ + JOKA 7. PV 100 £); PELIKOODARIN TILINVAIHTOLUOVUTUS db81fcab4 (27.9.2026 klo 11.32)
+
+Omistaja 11.3x kortilla: pelistreak-luvut hyvaksytty sellaisenaan → talous vaihe 1 web + natiivi. Pelikoodari: tilinvaihtoluovutus db81fcab4 (#3388/#3394 junassa, proto-haarat, talousportti agentilla, streak, avauskortin kevennys, natiivimittaus, zoomikatto).
+
+## NATIIVIN TALOUSPORTTI VALMIS (pelikoodari/talous-vaihe1 fbda3812) → 1.0.30 YHDESSA NATIIVI-UI:N OSAN KANSSA, EI 1.0.29 (27.9.2026 klo 11.32)
+
+Pelikoodari 11.3x: natiivin talousportti fbda3812 (Peli/Talous.cs: 400 £, paivakulu x hintataso, pankin apu pois, 2 vrk → loppu, Odota, tallennus v6; 330/330, unity 0); merge-pyynto Natiivisepalle, UI-speksi Natiivi-UI:lle (kassarivi punaisena, toast, loppukortti + jatko turvatallennuksesta, Odota-nappi), Siirtosepalle START_MONEY 400; tunnetut erot: ei webin lokiriveja, loppukortti ei palaa uudelleenkaynnistyksen jalkeen. Fable: talous → 1.0.30 yhdessa UI-osan kanssa; 1.0.29 pysyy sovitussa kokoonpanossa.
+
+## SIIRTOSEPAN LUOVUTUS e147220ce, NOLLAUS; #3394 v2314 MAINISSA (TALOUS VAIHE 1 WEB) (27.9.2026 klo 11.33)
+
+Siirtoseppa 11.3x: luovutus e147220ce (pallo-Z10 #3395 luonnos: poltto 22–24, omistajan vientilupa, pistokoe, koot, Natiivisepan kuittaus; deltajono #3394 saannot + hintatasot, #3370), nollaa itsensa — uusi tili aloittaa tuoreella sessiolla, aloitusviestia ei laheteta vanhalle. Julkaisija 11.28: #3392 v2313, #3394 v2314 mainissa (4440/0), #3388 mergessa.
+
+## OMISTAJA 11.4x: SESSIOT PYSAYTETTY, SIIRTOPROMPTI ANNETTU (TILINVAIHTO, PAATOIMITTAJA OPUS MAX) (27.9.2026 klo 11.35)
+
+Omistaja 11.4x: 'lopeta sessiot ja anna prompti' (viikko 94 %) → Fable pysaytti kaikki 10 roolisessiota (stop_session) ja antoi siirtopromptin docs/raportit/viesti-fable-tilinvaihto-20260927.md kohta 1 omistajalle. Natiivisepan ja Postivahdin tilinvaihtoluovutukset jaivat kirjoittamatta — tila on siirtopromptissa (kohdat 2, 4, 7) ja lokissa; Natiivisepan juna/b13-tila proto-repossa levylla. Pallo-Z10:n yopoltto (PID 72301) jatkuu sessioista riippumatta. Vanhan tilin Fable-sessio jaa omistajan luettavaksi.
+
+## UUSI TILI: ROOLISESSIOT LUOTU 11.4x–12.0x (FABLE OPUS xhigh local_cf5b4eca); OMISTAJAN LOYDOKSET: VANHAT PAIVITYSTIEDOT ALOITUSNAYTOLLA (NATIIVI-UI), LIPUN SUUNTA KAANTYY YLILENNOSSA (NATIIVISEPPA) (27.9.2026 klo 12.04)
+
+Fable (Opus, xhigh — omistajan poikkeus, session effort xhigh eikä max) local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc loi roolisessiot Raamatun osascript-kaavalla: Postivahti local_63227b57-d045-4b93-ab52-cddc04e3b90f (Sonnet, medium), Julkaisija local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629, Natiiviseppa local_04e2850b-d63c-481d-be73-c7d784a7cbcb, Pelikoodari local_242febe9-d6cf-45ae-8280-faf394dc6e3e, Natiivi-UI local_e9fdc695-8421-4c14-a187-8881e73c835a, Linssiseppa (max) local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4, Siirtoseppa local_c264506b-dd61-4617-839f-23daf6d0bd5a, Karttaseppa local_4bd7c316-55bc-423a-9da1-821fdd123cab (Opus high), Sisaltokirjuri local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3, Laitetestaaja local_3509b4ba-6000-4dea-869b-ecb22f4e3270 (Sonnet high). Aloitusviestit siirtopromptin kohdan 4 mukaan. Sudenkuoppa: pitka keystroke kansiovalitsimeen jatti '/'-nappaimen pohjaan (siirry-arkki avautui aina uudelleen) → korjaus CGEvent key-up (scratchpad nosto); Avaa harmaa → varakeino: sessio kutsuu itse mcp__ccd_directory__change_directory. Omistaja 12.0x: (1) aloitusnaytolla paivityksen jalkeen vanhat paivitystiedot, ei uusinta buildia → Natiivi-UI (lahde + build-numerovertailu, Julkaisijan TF-putki jos muutosloki generoidaan viennissa); (2) maan lipun 3D-suunta kaantyy vaarin kun kamera kulkee lipun yli → suunta maailmaan sidottu → Natiiviseppa, 1.0.29 jos ehtii ennen kaannosta, muuten 1.0.30. Siirtoseppa: #3394-delta v218, nyt v219.
+
+## OMISTAJA: AVAUSKORTTI HYVAKSYTTY (35262df2 → 1.0.30); LENTOPEL: KAUPASTA 60 £, PEUKALOVETO + KAASU, HINNAT SELLAISENAAN, TANKKI 6 min, VAIN NATIIVI; FABLE EFFORT xhigh PIDETAAN; 1.0.29 KAANNOS c567fa57 (27.9.2026 klo 12.16)
+
+Kortit 12.xx: natiivin avauskortin korjaukset (kuvaparit 35262df2: miniatyyri kaupungin vieressa, osiolinkit kevyina) hyvaksytty → Natiivi-UI merge-pyynto 1.0.30-junaan. Lentopeli (Linssisepan suunnitelma 41cf81337 §9): avautuu Kaupasta 60 £; ohjaus peukaloveto + kaasuvipu; tankki 24 £ × hintataso, sakot 40/80 £, tehtavat +20–35 %, 1 lento = 1 vuoro; taysi tankki 6 min (800 km); vain natiivi (EI WEBISSA → lupa annettu). Fablen session effort xhigh pidetaan (omistaja). Fable paatti lento v3:n avoimet: 15 s kaikille lennoille, kaytava Etusija + taustajono tauolle, aani A → v3 (7b1bf9b9 + cdd285f9) 1.0.30-junaan. 1.0.29: juna/b13 918a18f2, kaannos c567fa57, savuke 0 poikkeusta → Laitetestaaja. Lipun suunta 88362285 (maailma/ruutu-vaihtoehdot) → 1.0.30 omistajan kuvaparivalinnan jalkeen. Julkaisija: #3388 v2315, #3391 suljettu, #3378 mergetty.
+
+## OMISTAJA: LIPUN SUUNTA MAAILMAAN SIDOTTU (AINA ITAAN, 88362285 → 1.0.30) (27.9.2026 klo 12.18)
+
+Kortti kuvapareista kuvapari-ylhaalta.jpg ja -kallistus40.jpg (A kameraan / B itaan): B valittu. Lippu ei kaanny kun kamera kulkee ylitse; suuntimalla 180 kangas liehuu ruudulla vasemmalle (hyvaksytty). Natiiviseppa mergeaa 1.0.30-junaan.
+
+## OMISTAJA: NAHTAVYYSKUVAT YHTENAISTETAAN KONEELLISESTI VARI2-TASOLLE + 7 MAALATTUA TAUSTAA CODEXILLE (27.9.2026 klo 12.22)
+
+Sisaltokirjurin tyylitarkastus #3398 (raportti nahtavyyskuvien-tyyli-20260927.md): 449 paikallista kuvaa kahta sukupolvea — vanhat 363 liian haaleita (S 0,243), Codex-kohtaukset 86 liian varikkaita (0,417), vari2-referenssi 565 (0,332); 27 kaupunkia sekoittaa korjattua ja korjaamatonta samalla kartalla; 42 poikkeavaa; 36 orpoa tiedostoa. Omistajan kortti (kontaktiarkit Helsinki, Pariisi): koneellinen tasaus kaikille 449 vari2-tasolle, ennen/jalkeen-kontaktiarkit omistajalle ennen korvausta; Codex korjaa vain 7 maalattua taustaa; orvot pois. #3397 (pelisuunnitelmakortit) mergetty (Fable, docs); #3398 + #3402 (hintatasot 49 maata) Julkaisijan junaan; natiivin hintatasot-portti Pelikoodarille.
+
+## 1.0.29 VIE: LAITETESTAAJAN iPHONE-KIERROS c567fa57 0 POIKKEUSTA (YDINAIHEET PASS); PULU/PUHEVIRTA-UUSINTA JA iPAD RINNAKKAIN; LENTO V3 9d318451 1.0.30-JUNAAN (27.9.2026 klo 12.26)
+
+Laitetestaaja (raportti savukierros-tf1029-20260927.md): meri, lahitaso, nostot heti, maakuntatayto PASS; pulu + puhevirta koodivahvistettu mutta aanta ei kuultu testityokalun tap-koordinaattibugin takia (laitepisteet vs kuvapikselit); iPad ja 3 UI-kohdetta ajamatta. Fablen paatos (tyonjohtajan harkinta: omistaja haluaa nahda meren tanaan, vika testityokalussa): juna/b13 918a18f2 → master + BUILD → Julkaisija TF 1.0.29 heti; uusinnat samalla SHA:lla, loydokset 1.0.30:aan. Natiiviseppa: lento v3 natiiviseppa/lento-v3 9d318451 (kaannos dfa610ef; Lontoo → Ateena 15,0 s, kaytava 235/235, 0 poikkeusta) 1.0.30-junaan.
+
+## OMISTAJA: LENTOPELI ODOTTAA ENSI VIIKKOA (EI TOTEUTUSTA NYT) (27.9.2026 klo 12.26)
+
+Omistaja 27.9.2026: lentopelia ei tehda viela, jatetaan odottamaan ensi viikkoa. Suunnitelma ja hyvaksymislista (Linssisepan 948a66567, omistajan vastaukset: Kauppa 60 £, peukaloveto + kaasu, hinnat, 6 min, vain natiivi) jaavat valmiiksi; prototyyppi pois Linssisepan jonosta. Lento v3 (9d318451) ei ole lentopeli ja menee 1.0.30:aan.
+
+## OMISTAJA: PELIT JA LINSSIT SAMALLE SIVUSTOLLE, ETUSIVUNA TILANNEKATSAUS OSA-ALUEITTAIN (APURAHAN ARVIOIJAT, KUMPPANIT) (27.9.2026 klo 12.37)
+
+Omistaja 27.9.2026 klo 12.3x: yhteinen kehityssivusto, paaluokat Tilanne (aloitussivu), Linssit, Pelit, Kartta ja maailma, Sisalto ja oppiminen, Natiivi iOS. Kortti: vain suomeksi; julkinen linkilla mutta noindex; osa-alueet kartta/maailma, sisalto/oppiminen, natiivi iOS (talous ja julkaisu ei). Pelikoodari rakentaa sivuston (korvaa #3399:n; vanhat linssikatalogi.html/pelikatalogi.html ohjaavat valilehdelle; automaattiset luvut datasta), Fable kirjoitti tekstit docs/tilannekatsaus.md (PR #3407, Raamatun karttaan). Julkaisu vasta omistajan kortin (puhelin + tyopoyta -kuvat) jalkeen. Ei sisaisia tietoja (id:t, avaimet, roolit, mallit).
+
+## OMISTAJA: WEB-AVAUSKORTTI (#3406) HYVAKSYTTY; PELISTREAKIIN YKSI ARMOPAIVA 7 PAIVAN IKKUNASSA (27.9.2026 klo 12.40)
+
+Kortti 12.4x (kuvaparit kuvapari-kutsu/lehti-web-natiivi.png): webin avauskortti natiivin mitoilla julkaistaan (#3406 junaan). Pelistreak: yksi valiin jaanyt paiva liukuvassa 7 paivan ikkunassa ei katkaise putkea, armopaivalta ei palkintoa eika pituuden kasvua; toinen valiin jaanyt paiva ikkunassa nollaa → Pelikoodari #3401 + natiivi 4d93da8d. #3404 (naytaStriimiaani, main.js kaynnistys) v2316 mainissa. Puhevirran mittaus odottaa omistajan kehittajakoodia avaintiedostoon.
+
+## OMISTAJA: MAAKUNTIEN NIMET POIS NAKYVISTA NATIIVIN KARTALTA (27.9.2026 klo 12.40)
+
+Omistaja 27.9.2026 klo 12.4x (kuvakaappaus iPhone, Kreikka): isot kursiiviset maakuntanimiot (Keski-Makedonia, Thessalia, Attika, Peloponnesos ...) hairitsevat → pois kaikilla zoomeilla. Kaupunkien, kohteiden, vuorten, merien ja maan nimet jaavat; maakuntien pohjavari ja rajat jaavat. Natiiviseppa 1.0.30-junaan (sopii Natiivi-UI:n/Linssisepan kanssa jos niiden koodia), kuvapari Fablelle. Pelikoodari: #3399 pelikatalogi.html valivaiheena tuotantoon Pelistreak-kortin korjauksen jalkeen (hyvaksytyt luvut + armopaiva), yhteinen projektisivusto sen paalle.
+
+## OMISTAJA: TASATUT NAHTAVYYSKUVAT PELIIN, SITTEN CODEX ARVIOI JA KORJAA RAIKEIMMAT; BUILD 29b (PUHEVIRTA POIS) (27.9.2026 klo 12.48)
+
+Kortti 12.5x (kontaktiarkit Pariisi, Helsinki, Lontoo; #3408): 413 kuvaa tasattu (poikkeamat 42 → 23, Codex-kohtaukset 0 poikkeamaa) → tuotantoon versionostolla; sen jalkeen Codex arvioi tuotannon kuvat ja korjaa raikeimmat (23 + 7 maalattua taustaa samaan tilaukseen). Natiivi: laitteella puhevirta kaatuu Download Handler -virheeseen → synteesipuhe aaneton; Fable valitsi A: TF 1.0.29 -ajo 36309389916 keskeytetaan, BUILD 29b = master 6809d5ae + puhevirta-pois 49ea64ee; Pelikoodari korjaa virran 1.0.30:aan. iPhonen nostokortin ylarivi (ratas, kaiutin, VU) puuttuu → Natiivi-UI 1.0.30. Pelistreak armopaiva valmis (#3401 aff13a5e6, natiivi 70bebdde).
+
+## OMISTAJA (SITOVA): NAHTAVYYKSISSA EI EI-PAIKKA-KUVIA — TAPAHTUMAT, HENKILOT, ESINEET JNE. SIIRRETAAN NOSTOIHIN TAI LEHTIIN (27.9.2026 klo 12.50)
+
+Omistaja 27.9.2026 klo 12.5x (kontaktiarkit): nahtavyyksissa nakyy yha ei-paikkoja (esim. Pariisi bastilji-1789, curie-1898, lumiere-1895, paras-patonki). Tarkentaa 26.9. paatosta 178: kaikki ei-paikat (tapahtumat, henkilot, esineet, ruoka, ilmiot) siirretaan nostoiksi tai kaupunkilehden juttuihin kuvineen, ei poisteta; aukiot ja luonto ovat paikkoja. Sisaltokirjuri: koko nahtavyysaineiston luokittelu web + natiivi, suodatuksen vuototarkistus (koodivika → Pelikoodari), siirto, vartija ≥ 1 paikka/kaupunki, PR Julkaisijalle.
+
+## OMISTAJA (SITOVA): CODEXIN TIEDOSTOT POISTAA VAIN CODEX — CLAUDEN ROOLIT PYYTAVAT POSTILAATIKON KAUTTA (27.9.2026 klo 12.51)
+
+Omistaja 27.9.2026 klo 12.5x: Codexin (kayttaja samireivinen) luomia tiedostoja, kansioita ja worktreeta ei poisteta itse; poisto pyydetaan Codexilta (claude/postilaatikko, posti/). Fable pyysi poistamaan wt/proto-natiivi-ui-pulu-karttavaisto-codex (98f4e19a1); Postivahti ohjaa samireivinen-omisteiset kohteet Fablelle eika roolien poistolistoille.
+
+## OMISTAJA: MEREN LAJIT KORKEAMPAAN LAATUUN (ERIKOISMALLIEN TASO) (27.9.2026 klo 12.55)
+
+Omistaja 27.9.2026 klo 13.0x (kuva meri-10-lajia-1029.png): meren 10 lajia voisi tehda korkeammalla laadulla. Fable → Linssiseppa (Opus max): siluetit ja yksityiskohdat (mastot, koysisto, kaarevat purjeet, valaan suihku), B-seepiaramppi ja kaiverrusvarjostin kuten symboleissa, vesikontakti (vanavesi, kuohu, varjo), elavyys EI MONOTONIAA, LOD0 ≤ 3 000 kolmiota, ≤ 0,3 ms/malli; ensin 3 lajia kuvaparina omistajalle, sitten loput 7; maaspeksit taman jalkeen. Vuori-symbolin LOD0-juurikorjaus 6e721977 1.0.30:aan (Fable OK).
+
+## TF 1.0.29 TESTFLIGHTISSA (202609270957 = BUILD 29b 20ce6a28); VIKAINEN 202609270926 VANHENNETTU (27.9.2026 klo 13.20)
+
+Julkaisija: 1.0.29 (202609270957, ajo 36310995227) sisaisessa ryhmassa, What to test Fablen muotoilulla; 202609270926 (6809d5ae, synteesipuhe aaneton) vanhennettu, teksti ALA KAYTA (ajo 36312159853). Laitetestaaja 29b PASS 92201b561 (puhe rms 0,134). Mita uutta: muutosloki sisaltopaketissa (#3405 + Siirtosepan delta), natiivin vartija 296ffd04 1.0.30:aan. Talous-UI laitteella toimii, kuvaparit klo 14 kaannoksen jalkeen. Ei-paikat: #3411 (42 kohdetta 17 kaupungista), loput ~1 366 luokitellaan kuvan perusteella.
+
+## OMISTAJA (SITOVA): GENEROIDUISTA KUVISTA AINA SANA HAVAINNEKUVA (27.9.2026 klo 13.39)
+
+Omistaja 27.9.2026 klo 13.4x: kaikissa generoiduissa kuvissa kaytetaan sanamuotoa havainnekuva (peli, lehdet, kuvatekstit, tekija- ja lahdetiedot, projektisivusto, raportit) — ei kuvitus, AI-kuva, generoitu kuva tai tekoalykuva. Raamattuun uusi linjausrivi (PR #3407, e30d738e0:n jalkeen), tilannekatsaus korjattu. Pelikoodari tarkistaa pelin ja projektisivun tekstit, Sisaltokirjuri sisaltopaketit.
+
+## OMISTAJA (SITOVA, RAAMATTUUN): VAIN EUROOPPA, KUNNES OMISTAJA TOTEAA SEN VALMIIKSI (27.9.2026 klo 13.53)
+
+Omistaja 27.9.2026 klo 13.5x: tehdaan nyt pelkkaa Eurooppaa, ei mitaan muuta; vasta kun Eurooppa on omistajan mielesta valmis, siirrytaan muihin maanosiin. Raamattuun uusi Ydinajatus-rivi VAIN EUROOPPA + CLAUDE.md-viite (PR #3416, Julkaisijan junaan). Sisaltokirjurin Lahi-ita-, Novosibirsk- ja 0/0-kaupunkierat pysaytetty; tilalle Euroopan ohuimmat kaupungit ja maat. Kaikille rooleille ilmoitettu.
+
+## OMISTAJA: MEREN LAATUTASO ERA 1 HYVAKSYTTY (9a2a60c1), PURJEET RAMPISSA, HAALISTUMISKYNNYS ENNALLAAN; LOPUT 7 LAJIA HETI (27.9.2026 klo 15.09)
+
+Kortti 14.2x (kuvaparit meri-laatu-{merilaiva,purjelaiva,valas}-ennen-jalkeen.png): uusi MeriMalli-varjostin (B-seepiaramppi, kaiverrusreuna, aariviiva, vesikerros), LOD0 2 911/2 520/2 655, 0,005–0,03 ms/laji → 1.0.30-junaan; purjeet seepia + kaiverrus; elavat elementit haalistuvat 450–600 km:ssa kuten nyt; loput 7 lajia samalla tyylilla. Muut: muutosloki-natiivi v225 (29 rivia, uusin 1.0.29); Sisaltokirjuri #3419 (Valletta 2 juttua + MLT/LUX 2 skandaalia), Lappi/Sisilia/Kreeta uusi lehtiaihe, historian hetket havainnekuvatilauksella.
+
+## OMISTAJA: TALOUDEN ELAMAPALKKI — PUNAISET 6 h LOHKOT KARTAN YLAREUNAAN KUN RAHAT LOPUSSA (WEB + NATIIVI) (27.9.2026 klo 15.12)
+
+Omistaja 27.9.2026 klo 15.1x natiivin talous-UI:n kuvapareista (kassarivi, loppukortti, varoituskupla): lisapalkki kartan ylareunaan, tuntilaskurina punaiset palkit 6 h jaksoissa — paljonko elamaa jaljella ilman rahaa (2 vrk = 8 lohkoa pelin aikaa). Fablen tulkinta: nakyy vain rahat lopussa, katoaa kun rahaa tulee, kevyt. Pelikoodari web ensin, Natiivi-UI natiivi mitoilla; talous-UI:n muut osat (lyhyt kassarivi iPhonella, Jaa-nappi, varoituskupla) jaavat; kaikki yhdessa 1.0.30:aan. Sisaltokirjuri: #3419 lisaksi Lappi (saamelaiskulttuuri), Sisilia (mosaiikit), Kreeta (historia); 5 historian hetken havainnekuvatilaus postilaatikossa.
+
+## 1.0.30 LEIKATAAN NYT ILMAN ELAMAPALKKIA (FABLE C); ELAMAPALKKI PELKAT PUNAISET NELIOT, iPAD = iPHONE → 1.0.31 (27.9.2026 klo 15.16)
+
+Natiivisepan juna 9dffccd0 (valikaannos 7215835c, savuke 0): lento v3, lippu, maakuntanimet pois, puhevirta palavirtana, talousportti + pelistreak, avauskortti, meri-laatu, vuori, mitauutta, havainnekuva + Natiivi-UI:n talous-UI 2addc08c. Fablen paatos C (tyonjohtajan harkinta: omistaja nakee uudet asiat tanaan, TF ennen klo 22 polttoa): leikkaus heti, elamapalkki 1.0.31:een. Omistajan tarkennus 15.2x: elamapalkki = pelkat punaiset neliot ilman tekstia, iPadilla sama kuin iPhonella (myos lyhyt kassarivi). Linssiseppa ja Sisaltokirjuri kontekstirajalla → nollaukset kaynnissa.
+
+## OMISTAJA (SITOVA): LUENTA KUULUU AINA PYYNNOSTA — AANIMAISEMA MYKISTAA VAIN MUSIIKIN JA TEHOSTEET; 1.0.30 TF:AAN (BUILD 30 = 7b8a12c0) (27.9.2026 klo 15.47)
+
+Omistaja 27.9.2026 klo 15.5x kortilla: kun pelaaja painaa noston tai lehden kaiutinta, nostojen ja isoisan luenta soi myos Aanimaisema/mykistys pois -tilassa kuten Pulun puhe; Aanimaisema mykistaa vain musiikin ja tehosteet (web + natiivi, Pelikoodari → 1.0.31). Tausta: Laitetestaajan havainto 1.0.30:ssa, Natiiviseppa: mykistys vaiensi luennan molemmissa versioissa. BUILD 30 = master 7b8a12c0 (juna 78565bff), Laitetestaaja 8/12 PASS 0 poikkeusta; Fable vei TF:aan, loput aiheet samalla kaannoksella 1.0.31:een. Natiiviseppa valmisti levysiivouksen 16,5 Gt (omistaja ajaa).
+
+## TF 1.0.30 TESTFLIGHTISSA (202609271221 = BUILD 30 7b8a12c0); #3418 v2326, #3419 v2327 MAINISSA; LEVYSIIVOUS 16,5 Gt (27.9.2026 klo 15.52)
+
+Julkaisija: TF 1.0.30 sisaisessa ryhmassa (ajo 36319884765), muutoslokivartija paasti rivin lapi. Web: havainnekuva-sana #3418 v2326, Euroopan ohuimmat erat 1–2 #3419 v2327 (Valletta, MLT/LUX-skandaalit, Lappi, Sisilia, Kreeta, Islanti, Alpit, Tromssa, Marseille, Riika). Omistaja ajoi Natiivisepan levysiivouksen: 16,52 Gt, vapaana 108 Gi. Laitetestaaja jatko: pelistreak + armopaiva ja vuori PASS; talous-loppukortti odottaa rahan nollauskomentoa, pienten maiden kynnys aloituksella pienessa maassa.
+
+## OMISTAJA: ELAMAPALKKI YLEMMAS, VAISTAA ALEMMAS MATKAKIRJAN TIELTA; NAPAUTUS AVAA MINI-POPUPIN SELITYKSELLA (27.9.2026 klo 16.11)
+
+Kortti 16.1x (kuvaparit kuvapari-elamapalkki-iphone/ipad.png, web #3421 44deb9e2 | natiivi 4137bcc9): palkit oletuksena ylempana kartan ylareunassa ja vaistavat alemmas jos matkakirja vie enemman tilaa; neliöiden napautus avaa mini-popupin, joka kertoo mita palkit tarkoittavat. Pelikoodari web ensin, Natiivi-UI natiivi → 1.0.31. Sisaltokirjuri: Euroopan era 3 #3423 (Barcelona, Kiova, Edinburgh, Varsova, Dubrovnik). TF 1.0.30 tuotannossa.
+
+## OMISTAJA: 1.0.31:N JALKEEN ENSIN APP STORE -VALMISTELU; AJETTAVAT KOMENNOT SUORAAN FABLEN KESKUSTELUUN (27.9.2026 klo 16.18)
+
+Kortti 16.3x: seuraava isompi askel App Store -valmistelu (iPadin suorituskyky, julkaisuaineisto, kuvien tekijamerkinnat pelissa) ennen pelien toteutusta. Omistaja: kun hanen toimiaan tarvitaan, selkea ilmoitus (kortti TOIMI TARVITAAN + push) ja suoraan ajettava komento Fablen keskusteluun (Run-nappi). Kehittajakoodi (POLLO_KEHITTAJAKOODI, GitHub-salaisuus 13.8.) avaintiedostoon omistajan ajamalla read -s -komennolla; ampärin pyramidisarjojen poistokomento Julkaisijalta.
+
+## OMISTAJA: PROJEKTISIVUSTO JULKAISTAAN KORJATTUNA; OMISTAJAN LOYDOKSET 16.3x: LENTOKOHTEEN VALINNASTA PISTEET POIS JA PULU TAKAISIN (27.9.2026 klo 16.41)
+
+Kortti 16.4x (kuvat projekti-*-v2.png): projektisivusto #3410 (Tilanne, Linssit, Pelit, Kartta ja maailma, Sisalto ja oppiminen, Natiivi iOS; suomi, noindex) julkaistaan kun iOS-luku 1.0.30 korjattu ja #3424 (tilannekatsaus: Eurooppa-linjaus, 116 pelia, seuraavat askeleet) mainissa. Omistaja 16.3x (TF 1.0.30, pallo): ensimmaisen lentokohteen valinnasta pois kohdekaupunkien mustat pisteet, vain lennettavat kohteet jaavat; Pulun repliikit ja animaatiot takaisin tahan valintaan webin mukaan → Natiivi-UI 1.0.31. Pallo-Z10-poltto kaynnissa vahti v5:lla (omistaja hyvaksyi kill 72301). Ampärin pyramidisarjojen poistokomento annettu omistajalle (KYLLÄ-vahvistus).
+
+## OMISTAJA: PALLO-Z10 VIENTI HYVAKSYTTY; ELAMAPALKKI HYVAKSYTTY; ALOITUSVALINNASSA AINA VAIN LENNETTAVAT (MYOS MAAILMA-TILASSA) (27.9.2026 klo 16.44)
+
+Kortti 16.5x: pallo-Z10 (13 856/13 856, 181 Mt, 0 virhetta) vienti tuotannon pallosarjaan 2026-09-26-pohja-20260926/10 hyvaksytty Karttasepan sessiossa → Siirtoseppa #3395 + paketti → Natiivisepan kuittaus. Elamapalkki #3421 (oletus ylareunassa, napautus → mini-popup, vaisto) hyvaksytty → web junaan, natiivi 1.0.31. Aloitusvalinnan mustat pisteet johtuivat kehittajan Maailma-tilasta → aina vain lennettavat myos Maailma-tilassa (Aloitusnakyma.cs, 1.0.31). Projektisivun pallokuva Eurooppa-keskeiseksi (Fable). Codexin #3425 (22 miniatyyria) Julkaisijalle. Linssiseppa nollattu, meri-laatu era 2 abb862d2.
+
+## OMISTAJA (SITOVA): NAHTAVYYSKUVIEN ERI TYYLISET KUVAT UUSITAAN KOKONAAN CODEXILLA, CODEX KAY KAIKKI KAUPUNGIT LAPI; MALLITYYLI = AKROPOLIS (27.9.2026 klo 16.52)
+
+Omistaja 27.9.2026 klo 17.0x (kuvakaappaus web, Ateenan kohdekartta): kuvissa selvasti eri tyyleja; Akropolis on oikealla tyylilla (pieni isometrinen pienoismalli, lapinakyva tausta, hillitty seepia). Erilaiset (esim. Iliou Melathron, Niken temppeli, Akropolis-museo, Antiikin agora) tehdaan Codexilla kokonaan uudestaan, ja Codex kay lapi kaikki kaupungit (Eurooppa ensin). Korvaa aiemman koneellisen tasauksen + 22 poikkeaman arvion riittavyyden: tasaus jai voimaan, mutta tyylilta poikkeavat uusitaan. Sisaltokirjuri tekee tilauksen (tyylispeksi, referenssit, hylkaysperusteet, kaupunkierat PR:ina kontaktiarkein) + oman lahtolistan liitteeksi. Pallo-Z10 viety tuotantoon 16.50 (13 856 laattaa).
+
+## OMISTAJA: APP STORE -JULKAISUA EI TEHDA VIELA — VALMISTELLAAN VAIN LAATUA (27.9.2026 klo 16.59)
+
+Kortti 17.2x (hinta/maat/aikataulu): omistaja vastasi ettei julkaisua tehda viela. Fablen tulkinta: 1.0.31:n jalkeinen App Store -valmistelu rajataan laatuun (iPadin suorituskyky, vieritys, tekijamerkinnat pelissa), ei metatietoja, hintaa, maita eika lahetysta. Pelikoodari: tekijamerkinnat (tekijakortti + lisenssi-inventaario, havainnekuva-merkinta, vartija). Omistaja lisasi POLLO_KEHITTAJAKOODI avaintiedostoon (tasmaa paakoodiin) → Pelikoodarin puhevirran mittaus. Elamapalkki #3421 v2331 junaan.
+
+## NATIIVIN VIERITYS: KOSKETUSVIERITYS KAIKKIIN PYSTYSIVUIHIN, KARTTA POIS ARKIN ALTA, 120 Hz VAIN VIERITYKSEN AJAN (FABLE) (27.9.2026 klo 16.59)
+
+Natiivi-UI:n analyysi omistajan loydoksesta (turistiopas vierii tahmeasti): 1) ~30 sivua kayttaa UITK:n omaa ScrollViewia (heitto 234 pt vs Safari 653 pt, veto ei 1:1), iOS-hidastuvuuden Kosketusvieritys vain lehdessa ja nostokortissa; 2) pallo + Cesium + elavat piirtyvat peittavan arkin takana taydella taajuudella; 3) kosketuksen katto 60 Hz myos ProMotionilla (S10). Fablen paatos (lampo-saannon 24.9. sisalla): Kosketusvieritys kaikkiin pystysivuihin, kartta pois peittavan arkin alta, 120 Hz vain ProMotion-laitteilla kosketuksen ja inertian ajan kun kartta ei piirry, thermalState ≥ serious → 60 Hz, lepo heti lepotaajuudelle; lampo-/virtamittaus 5 min ennen/jalkeen → 1.0.31.
+
+## OMISTAJA: AVAUSESITTELY KERRAN + OHITA; ALOITUSVALINTA KORJATTU; LOYDOKSET: KAUPUNKILEHDEN LUENTANAPPI, RATTAAN SAVY (27.9.2026 klo 17.11)
+
+Natiivi-UI (kaannos 077548e0): aloitusvalinnasta mustat pisteet pois (syy Maailma-tila → NaytaVain(null), 7f699522 → 1.0.31); Pulun repliikit toimivat, puuttuivat omistajalta koska esittely naytetaan kerran laitteella (livianAvausNahty). Omistaja 17.2x kortilla: KERRAN + OHITA — ensimmaisella kerralla koko esittely, seuraavissa uusissa matkoissa lyhyt repliikki ohita-napilla (Pelikoodari web → Natiivi-UI). Omistajan loydokset 17.1x: kaupunkisivun luentanappi ei toimi (epaily mykistys, korjaus luenta-aina) ja nostosivun saatonappi liian tumma kaiuttimeen verrattuna → Natiivi-UI 1.0.31.
+
+## OMISTAJAN LOYDOS: NATIIVIN KARTTA TARKENTUU LIIKKEEN JALKEEN, NIMIOT LIIKAHTAVAT; KONTRASTI MAITOMAISEMMAKSI ILMAN POLTTOA (27.9.2026 klo 17.13)
+
+Omistaja 27.9.2026 klo 17.2x (TF 1.0.30): kartta tarkentuu vierityksen jalkeen (hairitsevaa) → halutaan vierittaa suoraan tarkempaa karttaa; nimiot liikahtavat tarkennuksen aikana; epaterava kuva kontrastiltaan miellyttavampi, maitomaisempi — voiko kontrastia muuttaa ilman uudelleenpolttoa. Fable: syy S10:n dynaaminen SSE (32 liikkeessa, 16 levossa); Natiiviseppa kokeilee A vakio-SSE, B esilataus, C ristihaivytys (lampo-saanto pysyy), nimiot vakiokorkeuteen, kontrasti + mustan nosto varjostimeen ja kehittajavalikon liukusaatimella omistajan valittavaksi (ei polttoa). Natiivin elamapalkki (1281414c) 1.0.31-junaan.
+
+## FABLEN OMA NOLLAUS 65 %:SSA (LUOVUTUS -20260927-b); NATIIVI-UI NOLLAUKSESSA; 1.0.31 KAANNOKSESSA (27.9.2026 klo 17.19)
+
+Fable (tili D, Opus xhigh, local_cf5b4eca) kirjoitti luovutuksen docs/raportit/viesti-fable-luovutus-20260927-b.md ja aloitusviestin; Postivahti tekee Raamatun kaavan (RC pois, 90 s, aloitusviesti Fablen id:lle, RC paalle). Natiivi-UI 73 % → luovutus -y + clear kasketty 17.3x; uusi Fable viimeistelee (aloitusviesti). 1.0.31 (pohjan Z10 c48512b5, luenta aina, koetila, aloitusvalinta, elamapalkki) Natiivisepalla kaannoksessa, Laitetestaajan resepti valmisteilla.
+
+## UUSI FABLE JATKAA (NOLLAUS 65 %); KARTTASEPALLE EUROOPAN KARTAN LAATUKIERROS (27.9.2026 klo 17.23)
+
+Fable nollattu 17.2x, jatkaa luovutuksesta -20260927-b. Natiivi-UI sai nollauskaskyn (73 %), tekee iPad-mittauksen loppuun ennen luovutusta -y; idle-tilaus paalla. 1.0.31-juna juna/b13 8096bae5 kaannoksessa (Natiiviseppa) → Laitetestaaja → TF. #3421 ja #3410 Julkaisijan jonossa (#3424 mainissa). Karttasepan jono oli tyhja → uusi era (VAIN EUROOPPA, App Store -laatu): Euroopan pelikaupungit webin Z8–Z10 ja natiivin pallo-Z10:lla — saumat, reiat, pergamenttilaikut, vesimaski, rantaviiva, savyhypyt, liput; raportti karttaseppa-eurooppa-laatu-20260927.md, korjaukset delta-polttona; ei teravointia (omistaja pitaa maitomaisemmasta, kontrasti natiivin varjostimessa). Omistajan pyramidisarjojen poisto (09-21/22/22c/23a) kaynnissa paatteessa.
+
+## XAI-PUHE: 100 300 MRK / 294 PYYNTOA 27.9. VAIKKA OMISTAJA AINOA PELAAJA → ROOLIEN PUHETESTEILLE KATTO 5 000 MRK/VRK (27.9.2026 klo 17.46)
+
+Omistaja 17.4x (xAI-konsoli: Voice 1,50 $, 100,3K input characters, 294 requests 27.9., saldo 8,51 $; itse striimannut enintaan 2 min, kukaan muu ei pelaa). Fablen selvitys: R2-puheampariin (matkakirja-puhe) tallentui 27.9. 54 palaa (kertoja 53 + savuke 1, 14,8 Mt ≈ 13 000 mrk) → noin 87 000 mrk on tallentamatonta puhetta: Pulun virtaluenta (sailio null, js/lukija.js puheVirtana; natiivi Lukijaaani.OletusLohko pulu = ei lohkoa) ja kehittajakoodilla saadetyt pyynnot (saadetty → ei saiioa, kehittajakoodi ohittaa myos paivarajan). Todennakoisin lahde roolien testit (Pelikoodarin natiivin puhevirran mittaus, Laitetestaajan Pulu/luentakierrokset, Natiivi-UI:n luentatestit); kysytty Pelikoodarilta ja Laitetestaajalta. SAANTO (Fable, heti): puhetestit vain sailottavilla teksteilla ja oletusaanella, toistoihin sama lyhyt sailotty teksti; Pulun virtaluentaa ja kehittajakoodilla saadettya puhetta enintaan 5 000 mrk/vrk per rooli ilman Fablen lupaa. Siirtosepan eheystarkistus ei pyyda puhetta workerilta (vain R2-listaus).
+
+## SISALTOKIRJURI: EUROOPAN ERA 4 PR 3429; RISTIINTARKISTUS MAALEHTI + KOHDEKARTTA ENNEN AIHEEN LUKITSEMISTA PYSYVAKSI TYOTAVAKSI; LIVIAN TOISTOREPLIIKIT #3431 (27.9.2026 klo 17.49)
+
+Sisaltokirjuri: era 4 #3429 (Vilna, Sarajevo, Odessa, Amsterdam, Tallinna; 4462/0); kolme aihetta vaihdettiin paallekkaisyyden vuoksi (Sarajevo salamurha → Vrelo Bosne, Odessa Potjomkin-portaat → Pushkin, Tallinna laulava vallankumous → Kadriorgin palatsi). Fable: uuden noston aihe tarkistetaan aina ensin maalehdesta ja kohdekartasta (pysyva tyotapa). Jono: era 5, era 6; Codexin tyyliuudistuksen tarkistus edelle kun toimitus tulee. Pelikoodari #3431 avausesittely kerran + ohita (web): Fable hyvaksyi Livian toistorepliikit: 1) Taas matkaan? Hyva. Aarnin luettelossa on viela riveja ilman rastia. 2) Uusi matka, uudet sahkeet. Valitse lahto — mina hoidan postin. 3) Sina taas — hyva. Kartta on sama, mutta talla kertaa mennaan eri jarjestyksessa. TF 1.0.31 (BUILD 31 = proto a7a6d9ec, CFBundleVersion 202609271444) Julkaisijalla vientiin.
+
+## OFFLINE-MEDIA NATIIVIIN: OMA AVAIN mediaKuvat, PIENENNETYT NOSTOKUVAT 150–250 kt, MAAN MEDIA ENINTAAN 100 Mt; OFFLINE-PUHE VAIN R2:SSA JO OLEVISTA PALOISTA (27.9.2026 klo 17.53)
+
+Natiivisepan kysymys (Siirtosepan #3432 Euroopan eheystarkistus): offline-latauksesta puuttuvat nostokuvat (+2,77 Gt Euroopalle taysikokoisina, mediaani 694 kt), ja natiivi ei nyt lue offline-kansion kuvia eika puhetta (Kuvat/Puhe vain omasta valimuistista) → nykyinen media-lataus natiivissa hukkaa. Fable: oma avain mediaKuvat (vanhat buildit ohittavat), pienennetyt kuvat 150–250 kt (iso kuva verkosta), offline-luku Kuville 1.0.32; maan offline-media (kuvat + puhe) enintaan 100 Mt ja koko naytetaan Offline-kartat-nakymassa ennen latausta. Offline-puhe vain R2:ssa jo olevista paloista — offline-lataus ei koskaan pyyda workerilta generointia (xAI-kustannus); Euroopan puheiden massagenerointi vain omistajan paatoksella (arvio merkeista ja dollareista ensin).
+
+## VAIN EUROOPPA ON MAANTIETEELLINEN: MANNER + LAHISAARET; MERENTAKAISET ALUEET (BERMUDA, FALKLAND, CAYENNE, NOUMEA) EIVAT KUULU; EUROOPAN LAATU- JA EHEYSKIERROKSET VALMIIT (27.9.2026 klo 17.57)
+
+Siirtosepan kysymys (#3434 Euroopan eheys v238): maakoodilla GBR/FRA Eurooppaan osuvat Bermuda, Falkland, Cayenne, Noumea. Fable: VAIN EUROOPPA = Euroopan manner + lahisaaret (Islanti, Farsaaret, Brittein saaret, Kypros, Malta, Azorit, Madeira, Kanariansaaret); merentakaiset alueet rajataan pois Eurooppa-toista ja Euroopan kokonaisluvuista, ja offline-listoilla ne ovat omina kohteinaan eivatka emamaan paketissa (100 Mt maakatto). Siirtosepan tulokset: laatat 6 062/6 062, media 3 805/3 808 (3 x 404 Noumea), kuvat 956/964, lehdet 51/51, 0 orpoa viittausta; ensilataus ~22,4 Mt verkosta + maailmapohja 11 Mt; Euroopan offline ~2,23 Gt ilman maastoa; 7 136 tiedostoa (4,7 Gt) puuttui offline-listoilta → #3432 skeema 1.52 mediaKuvat. Karttasepan laatukierros #3433: 49 kaupunkia, 77 loydosta, 0 puuttuvaa laattaa/saumaa/savyhyppya; VAKAVA Tukholman saaristo maana (polton maa/meri-luokittelu), NAKYVA meriväylat maalla 11 kaupungissa, pallo-Z10 vesi pehmea pohjoisessa, jarvia/jokia puuttuu, Amsterdam tuplaranta → erat 1 vesi, 2 meriväylat, 3 pallo Z10. Laitetestaajan App Store -laatukierros 422a01fcd: 0 poikkeusta, 1 nakyva (iPhone vaaka Nayta ylapalkki), kylmakaynnistys 8,0 s.
+
+## TF 1.0.31 TESTFLIGHTISSA (202609271444 = BUILD 31 a7a6d9ec) (27.9.2026 klo 18.02)
+
+Julkaisija: TF 1.0.31 sisaisessa ryhmassa, CFBundleVersion 202609271444, proto a7a6d9ec (juna 8096bae5), ajo 36327465467, laskuri 31, What to test Fablen tekstilla (Z10-pohja kaupunkien ymparilla, luenta aina pyynnosta myos mykistettyna, aloitusvalinnassa vain lennettavat, elamapalkki). Laitetestaaja PASS 6/6 a322fdc15.
+
+## OMISTAJA: SAARISTOT EROTTUMAAN — MATALIN VESIVYOHYKE (0…−10 m) HIEMAN VIILEAMMAKSI, MAAN SAVY ENNALLAAN, DELTA VAIN RANNIKKOLAATTOIHIN (27.9.2026 klo 18.04)
+
+Karttasepan laatukierroksen VAKAVA V1: Tukholman saaristo sulautuu (koepoltto: maa/meri-luokittelu oikein; resepti 26 tekee matalasta vedesta lahes maan savyisen, DEM-reliefi saarilla viimeistelee). Kortti 18.0x (kuva eu-laatu-5-tukholma-koepoltto.jpg, #3433): omistaja valitsi (a) matalin vesivyohyke 0…−10 m hieman viileammaksi, maan savy ja maitomainen yleisilme ennallaan, delta-poltto vain Euroopan rannikkolaattoihin; ei (b) reliefi vain maalle. Karttaseppa: koepoltto Tukholma + 2 saaristoa kuvapariksi Fablelle ennen laajaa polttoa; erat 1 (jarvet GSHHG taso 2) ja 2 (meriväylat vain veteen) rinnalla.
+
+## EUROOPAN VESI: JARVET GSHHG TASO 2 (#3436) JA MATALAN VEDEN SAVY YHTEEN DELTA-POLTTOON; SISAMAAN LAIVAREITTIEN MAAOSUUS MAAREITIN TYYLILLA (27.9.2026 klo 18.12)
+
+Karttaseppa era 1a #3436: jarvet GSHHG full taso 2 (6 604, NE:ssa 1 355), Bolsena/Vico/Bracciano/Albano/Nemi nakyvat, Amsterdamin tuplaranta poistuu; Etang de Berre puuttuu molemmista lahteista. Fable: Euroopan uusi pohjaversio YHTENA delta-polttona (vain vesilaatat z0–z10, loput kopioina), jossa sekä jarvet etta omistajan (a) matalan veden savy; ensin Tukholma + 2 saariston koepolton kuvapari Fablelle, polttovahti v5 (paivalla 4 ydinta, klo 22 jalkeen taysi), vienti ja osoittimen vaihto kortilla. Meriväylat N1: 11 laivareittia alkaa sisamaan kaupungista → (a) maaosuus maareitin tyylilla satamaan asti; ei via-pisteita nyt.
+
+## NATIIVIN KARTAN TARKENTUMINEN KORJATTU: VAKIO-SSE 20 (A1) 1.0.32-JUNAAN; NIMIOT EIVAT LIIKU ENAA; KV-KIINTIO 544/1 000 KIRJOITUSTA → WORKERIN LASKURIT VIKASIETOISIKSI (27.9.2026 klo 18.18)
+
+Natiiviseppa (iPad Pro 13 Release, lokit/tarkennus-ab-ipad13): A0 nykyinen 16/32 → 30 tason vaihtoa (pomppu); A1 vakio 20 → 0 vaihtoa, liike p50 16,7 / p95 16,8 ms, thermal 0, lepo 30 fps; A2 vakio 24 karkein; A3 vakio 16 nykii (p95 25 ms); B esilataus ei poista vaihtoja. Valinta A1 → natiiviseppa/vakio-sse d876198e 1.0.32-junassa (fc4578ea, lippu matkakirja-vakio-sse 0 = vanha). Nimiot eivat itse liikkuneet: maasto vaihtui niiden alla, vakio-SSE poistaa senkin; C (ristihaivytys) tarpeeton. Myos junassa pohjan savy (varjostin) ja offline-media mediaKuvat 1.52; build-junan tauko purettu. Cloudflare-varoitus 18.16: KV-ilmaistason paivakiintiosta 50 % (Fablen mittaus: 544/1 000 kirjoitusta, lahes kaikki puhelaskureita, 2 per generoitu pala; nollautuu 03.00). Pelikoodarille kiireellinen korjaus: laskurivirhe ei kaada pyyntoa → muistivara, testi. Workers Paid (5 $/kk) tarpeen viimeistaan kun pelaajia on enemman (omistajan paatos myohemmin).
+
+## OMISTAJA: MATALAN VEDEN VIILEYS 0,5 → EUROOPAN VESILAATTOJEN DELTA-POLTTO (JARVET + VIILEYS) (27.9.2026 klo 18.21)
+
+Kortti 18.2x (kuva eu-laatu-8-matala-viileys.jpg, #3436 haara karttaseppa-jarvet: Tukholma, Turku, Split z8 tuotanto / 0,5 / 0,8): omistaja valitsi 0,5 (Karttasepan suositus; 0,8:lla Splitin rantavyohykkeen reuna nakyy rajana). Laaja poltto hyvaksytty: uusi pohjaversio --delta meri lahteesta 2026-09-26s-pohja, vain vetta sisaltavat laatat z0–z10 uudelleen, loput kopioina; polttovahti v5 (4 ydinta klo 22 asti, sitten taysi); levy tarkistetaan ennen alkua (89 Gi, raja 80); vienti ja osoittimen vaihto kortilla.
+
+## OMISTAJA: ERIKOISMALLIT KRUMLOV, MALBORK, PANNONHALMA — KAIKKIIN ELAMAIDEA A; MEREN ERA 2 1.0.32:EEN (FABLEN RATKAISUT: UTGRUND POIS, ROISKEEN AARIVIIVA OHUEKSI) (27.9.2026 klo 18.32)
+
+Linssiseppa (speksit docs/raportit/erikoismallit/{cesky-krumlov,malbork,pannonhalma}.md aebdc22a1), kortti 18.3x: omistaja valitsi A kaikkiin — Cesky Krumlov kanootit Vltavan padon kourussa + harvinaisena tukkilautta (lauttaus UNESCO 2022); Malbork ritariturnaus rantaniitylla + harvinaisena vuoden 1410 kivikuulalegenda; Pannonhalma Martinuksen hanhiaura + harvinaisena kellot ja tornin kierto. Runko ~1 000, lahitaso 2 300–2 600 kolmiota. Meren laatutaso era 2 (abb862d2, 7 lajia, 2 673–2 871 kolmiota, CPU ≤ 0,036 ms) 1.0.32-junaan; Fablen ratkaisut (omistaja voi kumota): majakkalaivan kupu musta + vyo punainen ennallaan, keksitty rungon nimi UTGRUND pois (fiktio faktana), merihirvion roiskepallojen paksu aariviiva ohueksi tai pois. Noston ratas: 1.0.31 tayttaa jo omistajan ohjeen (sama savy kuin kaiutin), luenta-ratas-haara pudotetaan.
+
+## OMISTAJA: AARREKUVAAN EI HAVAINNEKUVA-MERKKIA; VESIPOLTTO KOKO MAAILMAAN (POIKKEUS VAIN EUROOPPA) MUTTA VASTA POLTTOJONON KERTYTTYA (27.9.2026 klo 18.34)
+
+Omistaja 18.3x: 1) ota havainnekuva-teksti pois aarrekuvasta (#3438 C) — poikkeus 27.9. klo 13.39 saantoon 'generoiduista kuvista aina sana havainnekuva': aarrekuvan paalla ei merkkia, lahderivi ja Tekijat ja lahteet -sivu kertovat yha havainnekuvasta (Pelikoodari web, Natiivi-UI natiivi). 2) Karttasepan kysymys vesipolton rajauksesta: omistaja valitsi (B) koko maailman vesilaatat z0–z8 + z9–z10 kaupunkien ymparilta (poikkeus VAIN EUROOPPA vain tahan vesimuutokseen), mutta 'jatetaan odottamaan jos tulee viela jotain muitakin muutoksia, niin poltetaan vasta sitten' → Karttaseppa pitaa polttojonoa (docs/raportit/karttaseppa-polttojono.md: jarvet + viileys 0,5, erat 2–3 ym., koepoltot ja arviot), Fable vie yhteenvedon omistajalle kerralla. Pollo-KV #3439 (laskurivirhe ei kaada, 1 KV-kirjoitus per pala, kehittajakoodi ei kirjoita paivalaskuria) junan karjessa. Codexin #3428 Ateena-tyylikorjaus Sisaltokirjurin suosituksella junaan.
+
+## OFFLINE-MAASTO: KOKO MAA z10 + z11–12 VAIN 50 km KAUPUNGEISTA, GZIP LEVYLLE (EUROOPPA 939 → 94 Mt); EHEYSVARTIJA PYSYVAKSI; WORKTREE-SIIVOUS (27.9.2026 klo 18.41)
+
+Siirtoseppa #3442 (siirtoseppa-maasto-offline-ehdotus-20260927.md): z12 = 79 % maastosta; Fable hyvaksyi B1+C: offline-maasto koko maasta z10, z11–12 vain 50 km:n saeelta kaupungeista, laatat levylle gzipattuina → Eurooppa siirtona 939 → 94 Mt, levylla 2,18 Gt → ~94 Mt; skeema 1.53 + Natiivisepan gzip-luku (vanhat buildit ohittavat); verkossa maasto ennallaan. Eheysvartija #3441: 06.30 ja jokaisen sisaltoviennin jalkeen, vain HEAD media.matkakirja.app (ei puhetta/workeria), VIKA.txt + tulos.md, Postivahti tilatauluun. Levyhalytys 18.37 (75 Gi, raja 80): wt/ 78 worktreeta 50 Gt → roolit karsivat omansa kattoon 3 (Fable 2 poistettu, Natiivi-UI 1, Julkaisija 6 orpoa — jono.sh korjattu poistamaan hakemisto ja prune heti mergen jalkeen); 81 Gi klo 18.4x. Omistajan lokisiivouskomento (~8,4 Gt) odottaa.
+
+## OFFLINE-MEDIA 100 Mt/MAA KOSKEE KAIKKEA MEDIAA: NATIIVI LATAA VAIN PIENENNETYT KUVAT + R2-PUHEET (SKEEMA 1.54); MONOLIITTIEN PILKKOMINEN APP STORE -JULKAISUN JALKEEN (27.9.2026 klo 18.53)
+
+Siirtosepan mittaus 18.5x: ensilataus sisaltopaketti 26,0 Mt siirtona (3,5 Mt buildissa) → ~22 Mt verkosta + maailmapohja 19 Mt tarvittaessa; paivitys (v238–v243) koodi 0,2–0,3 Mt, sisalto 4–6 Mt (mediaani 0,3, max 5,6; kaupunkilehdet.json 2,1 Mt + media.json 1,4 Mt monoliitteja); Euroopan offline 1.52+1.53 ~3,2 Gt (media alkuperaiskoossa 2,0 Gt katon ulkopuolella, mediaKuvat 1,0 Gt, maasto 0,1, laatat 0,06; 10 maassa yli 100 Mt, ITA 217, ESP 211, FRA 142). Fable: katto 100 Mt/maa koskee kaikkea offline-mediaa (kuvat + puhe) — skeema 1.54: natiivi 1.0.32+ lataa offline vain mediaKuvat (pienennetyt) ja R2:ssa jo olevat puheet, alkuperaiskoko verkosta isoa kuvaa avattaessa; media-lista erillisena avaimena webille/vanhoille buildeille jos niita kaytetaan; tavoite Eurooppa ≤ ~1,2 Gt. Monoliittien pilkkominen (tyypillinen paivitys < 1 Mt) siirretaan App Store -julkaisun jalkeiseksi parannukseksi.
+
+## OMISTAJA: POLTTOJONOON JOET, OSLON PIKKUSAARET JA PINTAMALLIN KOHINAN TASOITUS; KOKO JONO POLTETAAN MA–TI-YONA (27.9.2026 klo 19.14)
+
+Karttasepan polttojono (docs/raportit/karttaseppa-polttojono.md, #3433): 1) jarvet GSHHG + viileys 0,5 koko maailman vesilaatat z0–z10, 2) meriväylien maaosuus maareitin tyylilla (18 Euroopan reittia), 3) pallo Z10 pyramidin z10:sta (#3446) — yhteensa ~8–10 h 8 ytimella, levya < 10 Gt (kopiot ampärissa). Omistaja kysyi 18.5x 'voiko olla tulossa viela muutoksia' → Fable listasi laaturaportin avoimet (joet, N5 kohina, Oslon saaret); kortilla omistaja: lisataan jokiviivojen korjaus (puuttuvat Vltava, Kemijoki, Ounasjoki, Moskva; sivussa Tonava Wien ja Rein Alpit; jokien leikkaus jarvimaskiin) ja Oslon pikkusaaret; tasoitetaan pintamallin kohina vain tasaisilla alueilla (rakennukset/metsanreunat, ei oikeaa maastoa, ei teravointia, koepoltto Bukarest + Kiova + vuoristokontrolli). Karttaseppa valmistelee 28.9. paivalla koodi + koepoltot + kuvaparit → koko jono poltetaan kerralla ma–ti-yona 28.–29.9. klo 22 alkaen.
+
+## PROJEKTISIVUSTO JULKAISTU: https://matkakirja.app/projekti.html (noindex); POLLO-KV #3439 TUOTANNOSSA (27.9.2026 klo 19.15)
+
+Julkaisija 19.1x: #3410 julkaistu, projekti.html, linssikatalogi.html ja pelikatalogi.html 200, kaikissa noindex, nofollow (Fable tarkisti projekti.html:n). #3439 pollo-KV mergetty, pollon julkaisu OK, tuotannon puhemoottori xai. #3438 tekijamerkinnat kaatui vartijaan 'jokaisella kuvalla tekija/lisenssi/lahde tai havainnekuva-merkinta' aarrekuvan merkinnan poiston jalkeen → Pelikoodarille: vartijan pitaa hyvaksya havainnekuva-tieto lahderivilla ilman kuvan paalla olevaa merkkia (omistajan 18.3x poikkeus).
+
+## SKEEMA 1.54: EUROOPAN OFFLINE 3,2 → 1,3 Gt; KUVAT 1024 px / JPEG 75 PIDETAAN (EI 960/70) (27.9.2026 klo 19.44)
+
+Siirtoseppa #3445 (1.53+1.54, 128/0, Natiivisepan kuittaus, natiivi 1.0.32-junassa bbbfadde): Euroopan offline ~1,3 Gt (media 1,14 Gt = kuvat 1024 px/JPEG 75 + ampärin puheet, musiikki ja aanimaisemat verkosta; maasto ~0,1; laatat 0,06); 100 Mt maakatto ei tayty missaan (ESP 106 kokonaisuutena, media < 100; Tanska 35, Kroatia 37 Mt); kaikki maat 3,46 Gt. Fable: 960 px/JPEG 70 (~1,1 Gt) hylatty — iPadin kuvanlaatu tarkeampi. App Store -luvut docs/raportit/siirtoseppa-appstore-luvut-20260927.md (#3463). Sisaltojuna #3448 v2335 (#3428, #3435, #3437, #3444, #3447) mainissa.
+
+## OMISTAJA: EI SALAISUUKSIA MAAKUNTIIN; EUROOPAN MAAKUNTIIN KAIKKI MUU — PULUN KYSYMYKSET, PITKA LUONNEHDINTA JA KUVA (27.9.2026 klo 19.58)
+
+Fablen kattavuuslasku 19.5x (main): maakuntarajat ja nimet 142 maata / 2 546 aluetta; luonnehdinta (lyhyt) 2 541/2 546 (puuttuu vain Ranskan 5 merentakaista); Pulun maakuntakysymykset vain 8 maata (DEU, ITA, ESP, GBR, POL, AUT, GRC, FRA mannerosa), Euroopasta puuttuu 33 maata ~690 maakuntaa; salaisuudet vain GRC 14 (pilotti). Omistajan kortti: 'Ei salaisuuksia maakuntiin. Mutta kaikki muu mahdollinen.' → Sisaltokirjuri (agentit, maaerat, PR per 2–4 maata): 1) Pulun maakuntakysymykset 33 Euroopan maalle (2–3 per alue, ≤ 400 mrk, Livian aani; RUS/TUR vain Euroopan puoli), 2) luonnehdinnan pitka versio + kuva (Commons PD/CC, tekija/lisenssi/lahde) kaikille Euroopan 796 maakunnalle, 3) tarkistus nayttavatko web ja natiivi pitka/kuva-kentat; faktatarkistus rinnalla. Pelikoodari: maakuntasalaisuus-mekanismi pois (web; natiivi Natiivi-UI/Natiiviseppa, vienti Siirtoseppa), Kreikan 14 salaisuuden sisalto sailyy tavallisina nostoina.
+
+## OMISTAJA: KOKO POLTTOJONO TANA YONA (EI MA–TI) + PALLO Z10 KOKO MAAILMAAN (27.9.2026 klo 20.03)
+
+Omistaja 20.0x: 'Keksitko viela mitaa lisaa polttoon? Jos ei niin voi aloittaa heti' → Fable ehdotti pallon Z10:ta koko Eurooppaan ja kertoi kohtien 4–6 (joet, Oslon saaret, kohinan tasoitus) olevan valmistelematta; kortti: 'Tana yona kaikki' ja pallo Z10 → omistaja: 'Eiko se kannata olla koko maailmassa?' → Fable: kylla, jos pyramidin z10 kattaa maailman maa-alueet (tuotannossa ~376 000 z10-laattaa), arvio ~300 000 laattaa, ~4 Gt ampärissa, +5–6 h. Karttaseppa valmistelee 4–6 illalla, koepoltot Fablen tarkistukseen (omistajaa ei heratetä), 27 pienesta varmat mukaan (loput seuraavaan polttoon), pallo Z10 koko maailma (kysyy jos lisays > 8 h); aloitus ~klo 23 taysilla ytimilla, levy ≥ 90 Gi, vienti ja osoitin kortilla. Korvaa 19.14 paatoksen ma–ti-yon ajankohdan.
+
+## BUILD 32 = 21f09914 PASS 7/7 → TF 1.0.32 VIENTIIN (202609271721); YON POLTTO ILMAN JOKIA, VIENTI UUSIIN POLKUIHIN POLTON AIKANA (27.9.2026 klo 20.31)
+
+Natiiviseppa: BUILD 32 = master 21f09914 (juna 4be1a696, tag build32-juna), Laitetestaaja PASS fd882b2eb 7/7, offline 1.51 toimii (MLT 23,0 Mt, maailma 15,6 Mt, 0 virhetta); 120 Hz ja meren era 2 pistokokein. Fable: VIE 32 (Julkaisija, CFBundleVersion 202609271721) What to test -tekstilla. Karttasepan koepoltot: Oslon saaret maata (eu-laatu-11), pintatasoitus Bukarest pois / Innsbruck ennallaan (eu-laatu-12); JOET hylatty tahan yohon (GEOGLOWS-uomat tuplaviivoina, eu-laatu-13) → seuraava poltto. Tana yona: uusi pohja z0–z10 (jarvet, viileys 0,5, Oslo, pintatasoitus), ranta + viivat (merireittien maaosuus), pallo Z0–Z9 ja pallo Z10 koko maailma (215 121); ~9 h; Fable hyvaksyi viennin polton aikana UUSIIN polkuihin (--siivoa, paikallisesti < 10 Gt, levy 76–79 Gi); tuotanto ei muutu ennen osoittimen ja pallosarjan vaihtoa omistajan kortilla aamulla; aloitus heti kun valmis (omistaja 20.2x 'Laita poltto heti kun pystyt').
+
+## OMISTAJAN LOYDOS: ALOITUSLENTO LAHTEE SUORAAN NAPAUTETUSTA PALLONAKYMASTA; LENNOLLA NAKYY LIIAN VAHAN KARTTAA (27.9.2026 klo 20.59)
+
+Omistaja 20.5x: aloituslennon animaation pitaa lahtea suoraan siita nakymasta, jossa pelaaja on klikannut maapalloa; nykyisessa nakyy karttaa aivan liian vahan. → Natiiviseppa (1.0.33-jonon karki): kamera jatkaa napautushetken sijainnista, korkeudesta ja suunnasta ilman leikkausta; lennon kamera korkeammalle / laajempi nakyma, A/B (1,5x ja 2x ala) video-pareina iPhonella, webin vertailu; videot Fablelle → omistaja. Muut 20.3x–20.5x: NAS-kopio ajo-20260921 todennettu (318 034 = 318 034), omistajan poistokomento annettu; yopoltto ajo-20260927y kaynnissa (vahti v5b, z0–z8 ~23, z9–z10 ~04–05); raha '400 £' web #3480; Kreikan 14 salaisuutta nostoiksi #3475 + skeema 1.55 #3479 (Alonnisos → Pohjoisten Sporadien merikansallispuisto); saavutettavuus C web luonnos #3485 (selitteen rivit ~32 px, Fable).
+
+## OMISTAJA: ROOLIEN PITAA MIETTIA RATKAISU ITSE — FABLE ANTAA TAVOITELLUN KOKEMUKSEN, ROOLI TUO YHDEN VALMIIKSI MIETITYN SUOSITUKSEN (27.9.2026 klo 21.01)
+
+Omistaja 21.0x aloituslennon tarkennuksen jalkeen ('Kone pitaisi nakya siis lahelta vain hetken ja sitten kamera voi nousta ylos ja avata nakymaa' / 'Luulisi etta opus osaisi miettia itse paremmin kun on max kaytossa'). Fablen oppi: toimeksianto kuvaa tavoitellun kokemuksen (mita pelaaja tuntee ja nakee), ei parametreja; rooli suunnittelee kokonaisuuden itse ja tuo YHDEN suositellun version (video/kuvapari + 3–4 rivia perusteluja), vaihtoehto vain jos aidosti eri idea; ei parametri-A/B-kysymyksia omistajalle. Natiiviseppa: aloituslento suunnitellaan kokonaisuutena (napautusnakyma → lyhyt lahikuva → pehmea nousu, joka avaa lahtomaan, reitin ja kohteen → laskeutuminen kohteeseen), web mallina.
+
+## TF 1.0.32 TESTFLIGHTISSA (202609271721 = BUILD 32 21f09914); SKEEMAT 1.52–1.55 MAINISSA (27.9.2026 klo 21.08)
+
+Julkaisija 21.1x: TF 1.0.32 sisaisessa ryhmassa (CFBundleVersion 202609271721, ajo 36337231338) Fablen What to test -tekstilla. #3445 (skeemat 1.53–1.54) mainissa; #3479 (1.55, salaisuudet pois) + #3475 (Kreikan 14 → nostot) sisaltojunana #3488 v2340; Alonnisos-jatko #3490 junassa. Siirtosepan paasta paahan -offline-testi (Tanska, Kroatia) voi alkaa 1.0.32:lla.
+
+## OMISTAJA: ERIKOISMALLIT ERA 5 — KRONBORG, VISBY, NIDAROS; ERA 4 JUNASSA; SYMBOLIT PIILOON ERIKOISMALLIN JALANJALJELTA (27.9.2026 klo 21.42)
+
+Linssiseppa era 4 (mallinseppa/era4 fac195c0 → juna fd8941b8, 1.0.33): Cesky Krumlov, Malbork, Pannonhalma laitteella 0 poikkeusta, kaikki animoivat. Loydos: tason 1 kategoriasymboli (Vltava-aallot) piirtyi Krumlovin mallin paalle → Fable: yleinen korjaus, tason 1 kategoriasymbolit piiloon erikoismallin jalanjaljelta (speksi symbolit-erikoismallin-alla-speksi-20260927.md Natiivisepalle; korjaa myos Goudan maljan Kinderdijkin paalta). Era 5 (docs/raportit/erikoismallit/era5-ehdotus-20260927.md), omistajan kortti 21.1x: kaikki kolme — Kronborg (lautta; harvinaisena tulliton purjealus + tykinlaukaus keulan eteen, tullivene; yolla Hamletin haamu vallilla), Visbyn muuri (lautta satamaan; harvinaisena Valdemar Atterdagin kolme oluttynnyria kullalla, legenda 1361 — legenda ja fakta erikseen), Nidaros (pyhiinvaeltajat kiertavat kirkon kolmesti; harvinaisena Olsok-valvojaiset, ruusuikkuna syttyy).
+
+## YOTAUKO POLTON AJAKSI: KAIKKI RASKAAT AJOT TAUOLLE KLO 22.30 → POLTON LOPPU; JOKIEN TUPLAVIIVAN JUURISYY LOYTYI (27.9.2026 klo 21.45)
+
+Karttaseppa 21.5x: yopoltto ajo-20260927y vain 4 ytimella muiden kuorman takia (load 409, node ~33 prosessia 556 % CPU, chrome-headless-shell 15 kpl); talla vauhdilla z0–z8 ~02, syva z9–z10 (376 000 laattaa, ~330/min) ~18 h. Fable (omistajan 'heti kun pystyt' -linjan mukaan): klo 22.30 alkaen polton loppuun ei savukkeita, headless-ajoja, koko testisarjoja, Unity-kaannoksia, simulaattoreita eika Mac-CI:ta; build-juna tauolle (Natiiviseppa, lippu), Julkaisijan juna aamulla (1.53–1.55-vienti saa mennä loppuun), Linssiseppa mallintaa noin klo 23.30 asti; vahti v5b nostaa ytimia normaalisti; Postivahti nimeaa kuormittajat. Jokien tuplaviivan juurisyy: GEOGLOWS-patkat digitoitu ylavirtaan, tee-joet liitti ne kaantamatta → korjaus karttaseppa-joet-suunta 7337cc728 (push polton jalkeen).
+
+## 1.0.32: POHJAKARTTA PUUTTUI PAIVITYKSEN ENSIKAYNNISTYKSESSA; KUVAKORTTI JA NOSTOT VALKKYVAT — KUVAKORTTI EI SAA LIIKKUA; KONTRASTIMUUTOKSET HYLATTY (27.9.2026 klo 21.51)
+
+Omistaja 21.4x–22.0x: TF 1.0.32 iPhonella pohjakartta ei nakynyt (pelkka pergamentti) → uudelleenkaynnistyksen jalkeen nakyi; Karttaseppa vahvisti, etta ampari ja osoitin (2026-09-26s-pohja) kunnossa ja yopoltto ei vie (VIE=0) → Natiiviseppa: paivityksen 1.0.31 → 1.0.32 ensikaynnistys, korjaus 1.0.33. Omistajan loydos: Ateenan kuvakortti ja osa nostoista valkkyy, kuvakortti vaihtaa paikkaa; SAANTO: kuvakortti pysyy aina samassa paikassa (ankkuroitu kaupunkiin), saa piiloutua mutta ei liikkua; nimiot eivat valky → Natiivi-UI (kiintea ankkuri, piilotus siirron sijaan, hystereesi). Omistaja hylkasi saavutettavuuden kontrasti- ja 44 pt rivimuutokset ('meni vain huonompaan suuntaan') → #3485 suljettu, natiivi-ui/kontrasti-44 pudotettu; VoiceOver-silta ja nakymattomat kosketusalat jaavat. Julkaisijan 1.53–1.55-viennin peruutus (gh run cancel 36341050797) estyi luokittimella → omistajalle.
+
+## OMISTAJA: POLTTO KAYNNISSA, HIDASTETAAN VAIN JULKAISUN AJAKSI (JULKAISULIPPU /tmp/matkakirja-julkaisu) (27.9.2026 klo 21.55)
+
+Omistaja 22.0x ('onko niin, jos poltto aloitetaan, niin sitten ei voi tehda paivityksia samaan aikaan' → 'Pidetaan poltto kaynnissa, mutta hidastetaan sita aina vain siksi aikaa, kun tulee uusi julkaisu'). Toteutus: polttovahti v5c lukee lipun /tmp/matkakirja-julkaisu → polton ytimet 2 (pysaytys jos muistipaine ≥ 2), lippu yli 90 min → vahti poistaa; Julkaisija (TF, junan merge + Mac-CI, sisaltoviennit), Natiiviseppa (julkaisukaannos + savuke) ja Laitetestaaja luovat lipun julkaisun ajaksi ja poistavat heti perään. Muut raskaat kehitysajot (testisarjat, headless, simulaattorit ilman julkaisua) pysyvat yolla tauolla. Kevyt tyo (koodaus, kirjoitus, suunnittelu) jatkuu aina.
+
+## OMISTAJA: LUENNAN KORJAUS KORKEIMMALLE PRIORITEETILLE — EI OHITUKSIA; OTSIKKO + LEIPATEKSTIN ALKU SAMAAN ENSIMMAISEEN ERAAN (27.9.2026 klo 21.57)
+
+Omistaja 22.0x (TF 1.0.32): 'Lukijan aani striimauksessa pomppasi taas joidenkin kohtien yli. Otsikko on aina todella lyhyt, niin olisi tarkeaa, etta mikali otsikko luetaan, niin samaan eraan olevaan myos jo leipatekstia mukaan, jotta siina ei tule taukoa valiin. Tuo luennon korjaus on nyt kaikkein korkeimmalle prioriteetille.' → Pelikoodari (ohittaa kaiken ja yotauon, simulaattori julkaisulipulla): juurisyy ohituksille (esihaun kilpailu / hylatty pala / virhevastaus / varapolku), korjaus: yhtaan palaa ei pudoteta (virhe → uusinta), otsikko + leipatekstin alku (~140–200 mrk) ensimmaiseen eraan, sama webiin; mittaus (0 ohitusta, tauko otsikon jalkeen < 0,3 s) → Natiiviseppa leikkaa 1.0.33:n heti korjauksen kanssa.
+
+## LUENTAKORJAUS VALMIS (pelikoodari/esihaku-jarjestys fb67281f) → 1.0.33:N KARKI (27.9.2026 klo 22.33)
+
+Pelikoodari 22.3x: tauon juurisyy — VirtaPalat teki 1. palaksi pelkan otsikon ('Akropolis.') kun 1. virke oli pitka → 3 166 ms katko; nyt 1. pala ≥ 140 mrk (otsikko + leipatekstin alku 140–200). Ohitukset: kolme pudotuspolkua suljettu — (a) palan loppu tulkittiin isPlaying-tilasta samassa ruudussa kuin Play() → myohaan alkava/kesken pysahtynyt pala korvautui; nyt alku odotetaan ja kesken pysahtynyt jatkuu, (b) virhe lopetti → uusinta 1/2/4 s (429 pysayttaa), (c) esihaut kilpailivat → jono. Mittaus A2FD9C9F: katkot otsikon jalkeen 16–117 ms, 15/15 palaa loppuun, 0 myohassa/kesken/uusittu, ~560 mrk; laitteella 'puhe palat' -loki nayttaa polun. Web: kappale yksi striimattu pala → ei muutosta. Peli-testit 339/339.
+
+## OMISTAJA HYLKASI ALOITUSLENTO V7 — UUSI KAMERAKASIKIRJOITUS; XAI-PUHETAGIT VAIN STRIIMIAANEEN, ENSIN KUUNNELTAVA KOOSTE (27.9.2026 klo 23.00)
+
+Aloituslento v7 (natiiviseppa/aloitusrata 00a2e941, video aloituslento-33/aloituslento-natiivi-v7.mp4) hylatty 22.5x: kone ei ollut ruskea (Tiger Moth seepia, lento v3 -paatos), kamera kiirehti koneen luo, kone hukkui alussa. Omistajan kasikirjoitus: lahto kaukaa (kone pienena), kamera rullaa lahemmas matalasta kulmasta Afrikan paalta pohjoiseen → kiihtyy, tavoittaa koneen, kone lipuu vasemmalta oikealle lahelta ohi → kamera lentaa Ateenan yli, nayttaa saapumisen etuviistosta ja kiertaa laskeutumiskohtaa noustessaan, kunnes koko Ateena nakyy ylhaalta pelin jatkokohdasta; konetta ei koskaan takaa (edesta, sivulta tai niiden valista), kone aina nakyvissa, koneen viiva ja lahtopiste nakyvat, kamera muuttaa jatkuvasti suuntaa tai korkeutta kuminauhamaisella kiihdytyksella ja jarrutuksella ja esittelee karttaa monesta suunnasta. Natiiviseppa nostettu max-effortille (omistajan 27.9. 11.17 linja: peli/linssi Opus max); kameran aikajana ennen koodia, nakyvyysmittaus joka ruudussa; ei mergea ennen omistajan OK:ta (1.0.33 ilman aloituslentoa). xAI-puhetagit (omistaja 22.5x): vain striimiaaneen (Pulun chat, nostot ja muut tekstit); Pelikoodari tekee kuunneltavan koosteen (otsikko + [pause], kappalejaot, yllatysfakta, legenda <whisper>, Pulun persoonaosat alussa ja lopussa tageilla ja asiaosa neutraalisti, suomen toimivuus), sitten kayttoonottoehdotus.
+
+## OMISTAJA: XAI-PUHETAGIT KAYTTOON STRIIMIAANESSA (KAPPALEJAKO [pause], VALIOTSIKKO [long-pause], PULUN PERSOONAOSA ≤ 1 TAGI) (27.9.2026 klo 23.11)
+
+Omistaja 23.1x kuunneltuaan koosteen (proto-3d/lokit/puhetagit/puhetagit-kooste.mp3): 'aanitagit toimi hienosti. lisaa peliin mukaan. tama on nyt todella hyva juttu, etta saatiin laadukkaampi ja halvempi aani kayttoon.' Toteutus (Pelikoodari, web + natiivi): striimiaaneen kappalejako → [pause], valiotsikon edelle [long-pause], ei tagia otsikon perään (otsikko + leipatekstin alku samassa palassa); tagit lisataan pyyntöön generointihetkella, ei tekstidataan, naytolla teksti puhtaana; valimuistiavaimeen tagiversio (lohko kertoja-t1); Pulun jarjestelmakehote: ≤ 1 tagi persoonaosaan alussa tai lopussa ([sigh], [laugh], <fast>), asiaosa ilman; worker sallii vain listan tagit ja naytolle tagiton teksti; <whisper> vain jos hyva. Mitattu: suomeksi tageja ei lueta sanoina, [pause] +1–2 s, [long-pause] ~2 s. Web + pollo Julkaisijan junaan, natiivi 1.0.34.
+
+## OMISTAJA: ERIKOISMALLIT ERA 6 (OLAVINLINNA, GEYSIR, NEWGRANGE); BUILD 33 = edf03bfd; PUHETAGIT TOTEUTETTU; RAE JA PATINA SAATIMIKSI; LIPPU JA 3D-SYMBOLIT ISOMMIKSI (27.9.2026 klo 23.30)
+
+Omistaja 23.2x–23.4x: 1) era 6 kaikki kolme (era6-ehdotus-20260927.md 662329036): Olavinlinna (kaantyva ponttonisilta + hoyrylaiva, harvinaisena mustan passin legenda 1656), Geysir (Strokkur + katsojat, harvinaisena Suuri Geysir heraa), Newgrange (laulujoutsenet Boynella, harvinaisena talvipaivanseisauksen sade kattoaukosta, yolla Aenguksen ja Caerin joutsenpari). 2) Maan lippu pitaa kokonsa maailmassa (lahelle zoomatessa valtava); 3D-kategoriasymbolit isommiksi, nopeampi perspektiivin vaihto, nakyviin yhta zoom-tasoa kauempaa → Linssiseppa. 3) Kehittajavalikkoon RAE (voimakkuus, koko; staattinen pintakuvio) ja PATINA (tahrat, kellastuminen/haalistuminen, reunatummennus) saatimiksi kuten kontrasti; hyvat arvot poltetaan myohemmin → Natiiviseppa 1.0.34. BUILD 33 = proto-master edf03bfd (juna 508761e8, PASS 4a2c2f8c3) → Julkaisija TF. Puhetagit: web + worker #3513 (sallitut [pause] [long-pause] [sigh] [laugh] <fast>, nayttoteksti tagiton, natiivi vain puhetagit:1-kentalla), natiivi pelikoodari/puhetagit 9fac9748 → 1.0.34. Aloituslento v2 (natiiviseppa/aloitusrata cf6b3d6f) koodattu kasikirjoituksen mukaan, kone seepia (v7:ssa kangas oli paperia #efe4cc), video yolla julkaisulipulla.
+
+## FABLEN OMA NOLLAUS 70 %:SSA (LUOVUTUS -20260927-c) (27.9.2026 klo 23.39)
+
+Fable 23.4x: konteksti 70 % (Postivahti 23.36) → luovutus docs/raportit/viesti-fable-luovutus-20260927-c.md ja aloitusviesti; Natiiviseppa (84 %) ja Sisaltokirjuri (79 %) kasketty nollaukseen tehtaviensa jalkeen. TF 1.0.33 viennissa, yopoltto kaynnissa, viikko kaikki mallit 90 %.
+
+## OMISTAJA: HISTORIAN HETKET KAIKKIIN EUROOPAN MAIHIN, 1–2 PER PUUTTUVA MAA (CODEX, SISALTOKIRJURI TARKISTAA) (27.9.2026 klo 23.48)
+
+Omistaja 23.4x (kortti): historian hetkia lisataan niihin Euroopan maihin, joista ne puuttuvat (nyt 40 hetkea 14 maassa + 5 junassa #3426), 1–2 per maa. Codex kirjoittaa postilaatikon kautta samaan tapaan kuin #3426; Sisaltokirjuri valitsee aiheet ja tarkistaa ennen sisaltojunaa (ristiintarkistus maalehti + kohdekartta). Tilaus Sisaltokirjurin uuden kontekstin aloitusviestissa yhdessa ihmeiden (14 maata) kanssa.
+
+## OMISTAJA: ALOITUSLENTO V2 — KONE PALJON PIENEMPI KAUKAA KUVATTUNA, LASKEUTUMINEN KAUEMPAA NIIN ETTEI TOKSAHDYS NAY (27.9.2026 klo 23.55)
+
+Omistaja 23.5x (kortti, sanatarkasti): "kone pitää näkyä paljon pienempänä kun se kuvataan kaukaa. laskeutuessa kamera pitää olla sen verran kauempana että töksö laskeutuminen ei näy kun kone näkyy ihan pienenä." Lisaksi Fablen havaitsemat heikot kohdat korjataan: ohituksen usva (kamera korkeammalle) ja saapumisen verkkolataus (ennakkolataus). Natiivisepan seuraava konteksti tekee v3:n; yksi kaannos + yksi ajo julkaisulipulla polton aikana sallittu (aloituslento on omistajan tarkein asia), video Fablelle → omistajalle. Merge 1.0.34-junaan vasta omistajan OK:n jalkeen.
+
+## OMISTAJA: VAIN STRIIMILUENTA (PUHETAGIT) LOPPUUN JA JULKAISUUN, MUUT TYOT TAUOLLE (PAITSI POLTTO), SITTEN TILINVAIHTO (27.9.2026 klo 23.58)
+
+Omistaja 23.58 sanatarkasti: "tee pelkkä striimiluenta loppuun ja julkaise se. laita muut työt tauolle (paitsi poltto). tehdään tilin vaihto sen jälkeen kun olet saanut julkaistua." TF 1.0.33 vienti valmis (ajo 36348081044 success). Fable: web #3513 (Pulun aanitagit v2349) + worker Julkaisijalle heti; natiivi puhetagit 9fac9748 yksin proto-masteriin → BUILD 34 → Laitetestaajan puhe-PASS → TF 1.0.34 julkaisulipulla. Muut roolit: siisti pysahdys, push, luovutus tilinvaihtoa varten. Karttasepan yopoltto jatkuu. Aloituslento v3, #3426 ja muut erat odottavat tilinvaihdon jalkeen.
+
+## OMISTAJA: ASTRONAUTIN KAMERA — ISS-KYYTI, KUVIEN SELAUS, NAAPURIKOHTEET JA HIMMEA MAAPALLO TAUSTALLA (ERA TILINVAIHDON JALKEEN) (27.9.2026 klo 23.58)
+
+Omistaja 23.5x sanatarkasti: "pääseekö astronautin kamerassa jo iss:n kyytiin? saisiko kuvia selattua pyyhkäisemällä tai klikkaamalla kuvan reunasta seuraava/edellinen. lisäksi voisi olla alhaalla keskellä napit edellinen/seuraava, mistä voisi selata viereisiä kohteita kartalla. kuvan taustalla voisi näkyä himmeällä maapallo siltä kohtaa mistä kuva on." Linssiseppa: kyytiin ei viela paase; natiivissa ISS SGP4-radalla kaukonakymana, webissa havainnollinen rata. Puuttuu 26.9. hyvaksytyn ISS-linssin seurantakamera ~1 200 km, Cupola-ikkunakamera 420 km ja Cupola-kehys (kuvat ampärissa); terminaattori ja yovalot Natiivisepalle. Erä Linssisepalle (natiivi) + Pelikoodarille (web on malli) tilinvaihdon jalkeen; yksi mietitty suositus + kuvapari.
+
+## WEBIN LAATTAVIKA: JUURISYY LOYTYI, KORJAUS PR #3516 (v2347) ODOTTAA TILINVAIHDON JALKEEN (27.9.2026 klo 23.59)
+
+Pelikoodari: epaonnistunut laatta menetti href:n mutta jai tila.laatat-karttaan eika sita haettu uudelleen → pysyva aukko (Safari katkaisee haut taustalle mennessa/naytön lukittuessa). Korjaus 44f1429bd: 2 uusintaa + paikkaus seuraavassa paivityksessa ja visibilitychange/pageshow/online-tapahtumissa; testit 3 uutta, pyramidi 104/104. WebKit-savuke ennen/jalkeen aamulla. Natiivissa sama perhe: Laattapalvelimen pergamenttivaralaattaa Cesium ei hae uudelleen → Natiivisepalle (varalaatta uudelleen verkon palatessa / 8 s). Omistajan 23.58 linjauksen mukaan #3516 ei mene junaan ennen striimiluennan julkaisua ja tilinvaihtoa.
+
+## TF 1.0.33 TESTFLIGHTISSA (202609272009 = BUILD 33 edf03bfd); #3426 MAINISSA (#3515 v2346); #3516 JA #3517 ODOTTAVAT TILINVAIHTOA (27.9.2026 klo 23.59)
+
+Julkaisija: TF 1.0.33 = CFBundleVersion 202609272009 (ajo 36348081044). #3426 (5 historian hetkeä) mergetty sisältöjunana #3515 v2346 ennen taukoa, testit 4495/0. #3513 (puhetagit web, v2349) CI:ssä → merge + Pöllö + xAI-tarkistus. Pelikoodari: laattavian oikea juurisyy js/pallolaatat.js (pudonnut kerros merkittiin valmiiksi, virhelaattaa ei haettu uudelleen), korjaus #3516 c92c61193, pallolaatat 378/378; ihme-nappi pois #3517 v2348. Molemmat odottavat tilinvaihdon jälkeen.
+
+## STRIIMILUENTA WEBISSA TUOTANNOSSA (#3513 v2347, POLLO xai 200); TF 1.0.34 ODOTTAA BUILD 34:A (28.9.2026 klo 00.13)
+
+Julkaisija 00.02: #3513 mergetty, APP_VERSION 2026-09-21.2347 tuotannossa, js/puhetagit.js 200, Pollon julkaisu 36350208524 ok, puhemoottori xai. Tagien kuuluvuutta ei ole todennettu kuuntelemalla. 1.0.34 muutoslokirivi #3518 mainissa. Linssisepan astro-selain c5b073cd: galleria jatkuu naapurikohteeseen, nimipilleri kirkastuu 1,2 s kohteen vaihtuessa (Fablen hyvaksynta, koodataan tauon jalkeen).
+
+## STRIIMILUENTA JULKAISTU: TF 1.0.34 (202609272058 = BUILD 34 17c2928b) + WEB v2347; KAIKKI ROOLIT TAUOLLA, LUOVUTUKSET PUSHATTU → TILINVAIHTO (28.9.2026 klo 00.35)
+
+Julkaisija 00.3x: TF 1.0.34 sisäisessä ryhmässä (ajo 36351716395), What to test asetettu. Kaikkien roolien luovutukset pushattu (taulukko docs/raportit/viesti-fable-luovutus-20260928.md). Yöpoltto jatkuu vahdilla v5e, Postivahti seuraa. Fablen luovutus -20260928 + aloitusviesti.
+
+## YOPOLTTO: VAIHE 1 (z0–z8) VALMIS 00.39, EHEYS 119 495/119 495; 'KOODI 1' OLI LUETTELON VIENTIVARTIO, EI POLTTOVIKA; VAIHE 2 (SYVA T7) KAYNNISSA (28.9.2026 klo 00.47)
+
+Karttaseppa: --ilman-nostoja-ajo ei kanna ampärin varitasot/nostotasot/erat/nimiotaso-kenttia luetteloon → vartio 1. Aamun viennissa luettelo yhdistetaan ampärin luettelosta (kortissa omistajalle). Tyokaluvika polta-paikallisesti.sh ~r.2948 korjataan PR:na polton jalkeen. Vaihe 2 uudella vahdilla PID 82063 noin 00.52 alkaen.
+
+## OMISTAJA: TILINVAIHDON JALKEEN PAATOIMITTAJANA (FABLE-ROOLI) SAA JATKAA MYOS OPUS (28.9.2026 klo 00.56)
+
+Omistaja 00.56: "Seuraava sessio voi jatkaa myös opus päätoimittajana". Fable-rooli ei vaadi Fable-mallia; Opus (effort xhigh) kelpaa. Aloitusviesti päivitetty.
+
+## TILINVAIHTO 28.9.: FABLE (OPUS XHIGH) UUSI SESSIO, 10 ROOLISESSIOTA LUOTU, TAUKO PURETTU (28.9.2026 klo 07.02)
+
+Fable local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31 (Opus xhigh) loi 06.5x–07.0x roolisessiot osascript-kaavalla: Karttaseppa local_16f80454-5b30-4180-ae9b-8c6d1edb6779 (Opus high), Julkaisija local_24e63224-112c-449a-b6a3-e10e4ed43f4b (Opus high), Natiiviseppa local_fcc10552-5810-49bf-b0cf-188456f1231c (Opus max, aloituslento v3), Pelikoodari local_11aca9cd-eda6-4db9-9019-8a153c8b8795 (Opus high), Linssiseppa local_7a457b99-7ecd-4634-93a0-0c02b53e8d24 (Opus max), Natiivi-UI local_c6d63773-0270-4873-96f8-63c66cf52794 (Opus high), Siirtoseppa local_6cef0cb2-ae2e-4677-b85c-2eeb192f10c4 (Opus xhigh; effortin lasku estetty luokittimella), Postivahti local_0a4f4c68-d24d-4b1f-83d7-d3c098cec96b (Sonnet medium), Sisaltokirjuri local_b9ca71c7-3458-4e1d-aa21-f6c97e27c708 (Sonnet xhigh; lasku estetty), Laitetestaaja local_36a45147-8407-4cfb-bbdb-c20d5f684735 (Sonnet high). Remote Control paalla kaikissa. Omistajan 23.58 tauko purettu: roolikohtaiset karjet docs/raportit/viesti-roolit-tilinvaihto-20260928.md. Yopoltto vaihe 2 syva 92–94 %, arvio valmis ~07.20; sen jalkeen paivasaanto (4 ydinta, kaannokset yksi kerrallaan, simulaattoreita enintaan 2). Viikkokiintio nollautui (0 %).
+
+## IHMEET 14 MAAHAN JA HISTORIAN HETKET: SISALTOKIRJURIN EHDOTUS HYVAKSYTTY KORJAUKSIN; HETKI VAIN MAAN OMALLA ALUEELLA (28.9.2026 klo 07.15)
+
+Sisaltokirjurin ehdotus 6fbc832d4 (docs/raportit/sisaltokirjuri-ihmeet-historianhetket-ehdotus-20260928.md). Fable: ihmeet hyvaksytty paitsi BIH Vijecnica (rakennus ennallaan, ennen/nyt-pari ei toimi → raunio/kadonnut, esim. Bobovac), MNE Zabljak Crnojevica luokkaan rappeutunut, CYP Varosha neutraalisti. Historian hetket koskevat KAIKKIA puuttuvia Euroopan maita (omistajan paatos 27.9. 23.48): era 1 = samat 14 maata, era 2 = loput. UUSI SAANTO: historian hetken on tapahduttava maan omalla nykyalueella (se sijoittuu kartalle) ja oltava silmien korkeudelta nahtava sekunti. Vaihdot: NLD Aceh → Afsluitdijk 1932, CHE Rutli → Gotthardin lapimurto 1880, SRB Kosovo 1389 → Belgradin piiritys 1456, MNE Berliinin kongressi → Obodin kirjapaino 1494, CYP Kyproksen sopimus → lipun nosto Nikosiassa 1878, BLR Tsernobyl/Lublin → Berezinan ylitys 1812. Sisaltokirjuri tarkistaa en-Wikipediasta ja tilaa Codexilta postilaatikon kautta ilman uutta kierrosta.
+
+## YOPOLTTO VALMIS 07.17: 507/507, EHEYS Z10 298 335 + Z9 78 211; PAIVASAANTO VOIMAAN (28.9.2026 klo 07.18)
+
+Karttaseppa: syva z9–z10 valmis 07.17, eheys taysi; koodi 1 vain luettelon varitasovartiosta kuten vaihe 1 (luettelo yhdistetaan amparin luettelosta viennissa). Juna-tauon lippu Julkaisijalla. Seuraavaksi pallo levylle 4 ytimella ja vientikortti omistajalle kuvapareineen. Kaannos- ja simulaattorivuorot Julkaisija jakaa Fablen jarjestyksessa (Natiiviseppa aloituslento v3 ensin).
+
+## OMISTAJA HYVAKSYI UUDEN PERUSKARTAN 2026-09-27-POHJA VIENNIN VAIHEET 1–3 (UUSIIN POLKUIHIN); OSOITIN JA JOET ERIKSEEN (28.9.2026 klo 07.42)
+
+Karttasepan vientikortti ajo-20260927y/vientikortti-20260928.md + 6 kuvaparia omistajalle. Omistaja kortilla 07.4x: 'Tehty' (hyvaksynta kirjoitettu Karttasepan sessioon). Vienti: laatat julisteet/pyramidi/2026-09-27-pohja + ranta + viivat, pallo 2026-09-27-pohja-20260927 (polton jalkeen ~13–14), koeluettelo koe/2026-09-27. Tuotanto ei muutu; osoittimen vaihto (vaihe 4) erillinen paatos koeosoitteen ?pyramidi=2026-09-27 jalkeen. Natiivin jokien tuplaviiva (FIN 4 009, ITA 1 694, GRC 415 hyppya) → Karttaseppa tekee Euroopan 40 maata uusiksi korjatulla tyokalulla (joet-2026-09-28, ~09); sen vienti vaatii oman kortin. PR:t #3521 (luettelovartio + GSHHG lahteisiin) ja #3522 (jokikorjaus) Julkaisijan junaan.
+
+## OMISTAJA: ALOITUSLENNOSSA ATEENAN 3D-SYMBOLI POIS (28.9.2026 klo 07.45)
+
+Omistaja 28.9. aamulla v3-kuvapareista sanatarkasti: "Ota Ateenassa tuo 3d pois lennosta. Näyttää oudolta". Natiiviseppa lisaa v3b:hen: lennon aikana kohteen 3D-mallia ei nayteta (punainen piste + rengas riittaa); mallin paluu lennon jalkeen Natiivisepan suosituksena videon viestissa. v3 muuten: kone kaukaa 2,5 % leveydesta (v2 11,7 %), kosketus 490 km:sta; v3b korjaa ohituksen usvan (ohitus maan paalle), saapumisen sumean maan ja koneen erottuvuuden kosketuksessa.
+
+## OMISTAJA: ALOITUSLENNON LASKEUTUMINEN SELVASTI KAUEMPAA JA KONE PIENEMPANA (28.9.2026 klo 07.45)
+
+Omistaja 28.9. aamulla v3-kuvapareista sanatarkasti: "Ja kamera pitää olla selvästi kauempana ja kone pienemmäksi kun laskeutuminen. Näyttää muuten oudolta". v3:n kosketus 490 km / kone 2,9 % ei riita. Natiiviseppa valitsee v3b:hen selvasti kauemman kameran ja pienemman koneen (lasku pienena liikkeena ison kartan paalla), arvot mitattuina kuvapariin.
+
+## OFFLINE: LADATTU ALUE NAYTTAA SAMALTA KUIN VERKOSSA — MODUULIT 1.56, RELIEFI+YOVALOT, KERMA KOKO ALUEELLE, TODELLINEN LEVYKOKO (28.9.2026 klo 07.46)
+
+Siirtosepan E2E-offline Tanska + Kroatia (BUILD 34, v257): lataus ok; maasto puuttui 127/138 maalta (vanha sarja 23b) → #3523 junassa; natiivi ei lue offline-JPG/WebP-kuvia → Natiivisepalle. Fable: 1) maat.*.moduulit skeemaan 1.56, 2) reliefi ja yovalot aina mukaan, 3) kermavaritaso kaikille ladatun alueen maille (ei vain kotimaa); jos lisays yli ~10 % paketista, Siirtoseppa tuo suosituksen, 4) pelaajalle naytetaan todellinen levykoko (rajauslaatikko + 4 kt lohkot). Raportti origin/siirtoseppa-luovutus:docs/raportit/siirtoseppa-e2e-offline-20260928.md.
+
+## OMISTAJA: PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN — YLEINEN TAPA KAIKKIIN LINSSEIHIN (28.9.2026 klo 08.01)
+
+Omistaja 28.9. aamulla astrolinssin kuvaselaimen kuvaparista sanatarkasti: "Astro Linssissä pitää pienentää tuo selittelen palkki kun se on Pienennetty. Tee siitä yleinen tapa. Se on jo matkakirjassa. Eli animoitu pienennys mahdollisimman tiiviiksi. Saatko kiinni?" Tulkinta: pienennetty selite (esim. 'Istanbul — Turkki') venyy nyt ✕:ään asti; jatkossa se ja kaikki pienennettavat selitteet/inforuudut/palkit kutistuvat pehmealla animaatiolla sisaltonsa kokoisiksi, mallina Matkakirjan pienennys; web ja natiivi. Raamattu: Arkkikirjasto uusi kohta + astrolinssin vanha 'saman levyinen kuin avattu' kumottu. Pelikoodari (web, kaikki linssit, inventaario) → Linssiseppa + Natiivi-UI (natiivi web mallina).
+
+## OMISTAJA: ALOITUSLENNON LOPPULASKEUTUMINEN KUVATAAN YLHAALTA (NYT KUIN POMMI ISKISI) (28.9.2026 klo 08.11)
+
+Omistaja 28.9. aamulla sanatarkasti: "Tuo loppu laskeutuminen kannattaa kuvata ylhäältä, nyt näyttää kun joku pommi iskisi". Yhdessa klo 07.45 palautteiden kanssa (3D pois lennosta, kamera selvasti kauempana, kone pienempi) → Natiivisepan v3d: loppulasku ylhaalta, pehmea liuku perille, ei sivuviistoa syoksya. v3c (98e3f4a3: terava saapuminen, ohitus maan paalla) ei mennyt omistajalle, koska palautteet puuttuivat.
+
+## OMISTAJA HYVAKSYI NATIIVIN JOKIEN VIENNIN JOET-2026-09-28 (EUROOPAN 39 MAATA KORJATTU) (28.9.2026 klo 08.28)
+
+Karttasepan jokikortti pyramidi-poltto/joet-2026-09-28/jokikortti-20260928.md + kuvaparit (ITA, ROU, FIN) omistajalle. Omistaja hyvaksyi Karttasepan sessioon 08.25; joet-2026-09-28 ampärissa (128 tiedostoa). Hypyt 164 588 → 17 618 (FIN 4 009 → 603, ITA 1 694 → 158); muut 88 maata 26b:sta ennallaan (VAIN EUROOPPA). Natiiviseppa vaihtaa versionimen 1.0.35-junassa; Linssiseppa kayttaa jokia.
+
+## OMISTAJA: TEHTAVAKOHTAINEN EFFORT, EI ERILLISIA MAX-SESSIOITA; FABLELLE SALLINTA EFFORTIN VAIHTOON (28.9.2026 klo 08.37)
+
+Omistaja 28.9. aamulla kysyi, ajetaanko toimia turhaan max-tilassa ja pitaisiko tehda lisaa Opus-sessioita tai laskea effortteja. Fablen suositus kortilla, omistaja hyvaksyi: 1) Fable vaihtaa roolin effortin tehtavaa antaessaan (vaihto tulee voimaan seuraavasta vuorosta): max vain pelin keskeisiin hetkiin (aloituslento, uudet elamykset kuten ISS-kyyti) ja juurisyihin, joihin yksi yritys ei riittanyt; high koodaavien roolien oletus; medium Julkaisijalle (nosto highiin CI-vian ajaksi), Postivahdille ja Karttasepalle pelkan polttovalvonnan ajaksi. Ei erillisia max-sessioita (konteksti pitaisi opetella alusta, Macin kaannos- ja simulaattorivuorot ovat pullonkaula). 2) Sallinta mcp__ccd_session_mgmt__set_session_effort Fablen .claude/settings.local.json:iin (aamulla luokitin esti 2/10 laskua). Heti: Linssiseppa max → high, Julkaisija high → medium, Siirtoseppa ja Sisaltokirjuri xhigh → high, Natiiviseppa max kunnes aloituslento v3d valmis, sitten high. EFFORT NIMESSA -saanto ennallaan.
+
+## OMISTAJA: STRIIMILUKIJAAN KAKSI NAPPIA — KAIUTIN JA MINI-HAMPURILAINEN (KAPPALELISTA, KELAUS, AANIASETUKSET) (28.9.2026 klo 08.56)
+
+Omistaja 28.9. sanatarkasti: "Voisiko kaikkiin striimi lukija nappeihin tehdä pillerin jossa olisi nykyiset kaksi kuvaketta ja keskelle lisäksi hampurilainen jossa olisi kaikki tekstin kappaleet klikattavissa sitä varten että jos kuulija haluaa hypätä johonkin kohtaan sekä alimpana -10sek ja +10sek sekä kappale eteen ja taakse napit kelaukseen. Taaksepäin napit vierekkäin omalla puolella ja eteenpäin napi toisella. Siirretään itseasiassa hammaspyörä nappi tähän samaan mini hampurilaiseen sisälle niin sitten ylös jää nätisti vain kaksi nappia eikä pilleriä tarvita." Linjaus: kaikissa luentakohdissa kaksi nappia (kaiutin toisto/tauko + VU, mini-hampurilainen); valikossa kappalelista (napautus hyppaa kappaleeseen), alimpana kelausrivi (vasemmalla kappale taakse + −10 s, oikealla +10 s + kappale eteen) ja hammaspyoran aaniasetukset; hammaspyora-nappi poistuu. Web ensin (Pelikoodari), natiivi web mallina (Natiivi-UI).
+
+## OMISTAJA: ALOITUSLENTO V3E — KUMINAUHAMAINEN YHTENAINEN LAHESTYMINEN JA ERKANEMINEN, S-KURVI, LOPPU SUORAAN ATEENAN YLLA YLHAALTA, TEKSTIT POIS (28.9.2026 klo 09.17)
+
+Omistaja v3d-videosta kortilla 28.9. sanatarkasti: "Muutetaan vielä vähän. Ensimmäinen lähestymislento kameralla kohti lentokonetta pitää tehdä niin, että se on yksi jouheva kiihdytys aloitusnäkymästä lentokoneeseen niin, että kameran liike kiihtyy enemmän kuminauhamaisesti eikä niin hyppäämällä, kuin nyt tapahtuu. Ja sen jälkeen, kun lähdetään taas erkanemaan kameralla lentokoneesta, niin liike saisi olla yhtenäinen ja samalla lailla kiihdytyskuminauhamainen. Lentoreitti voisi olla takaisin suoraan Ateenan yläpuolelle ja kamera suoraan ylhäältä alas, mutta tee kiihdytys ja lentoreitti hieman S-kurvin mukaisesti kumpikin ja otetaan kuvatekstit pois." v3d (1636c93a) ei mennyt junaan. Natiivisepan seuraava konteksti tekee v3e:n (aloitusviesti Fablen haarassa).
+
+## OMISTAJA: ALOITUSLENNON ERKANEMINEN — ENSIN PAKITUS, KORKEUDELLE OMA S-KAYRA, LAHIKOHTA ASTEEN LAHEMPANA (28.9.2026 klo 09.20)
+
+Omistaja 28.9. sanatarkasti: "Pieni tarkennus. Siinä vaiheessa, kun kamera lähtee erkanemaan lentokoneesta, se voisi ensin pakittaa vain taaksepäin, mutta ei muuttaisi korkeutta, ja sen jälkeen korkeuskin alkaisi muuttumaan. Ja tämä niin, että kun kamera pakittaa taaksepäin, korkeus kyllä muuttuu, mutta todella todella vähän, ja sitten se korkeudenmuutos alkaa kiihtymään, ja loppupisteessä se taas alkaa myös hidastumaan, mutta ei lopu myöskään missään kohdassa. Eli tällä tavalla S-kurvi myös korkeuteen. Ja kamera voisi mennä vielä asteen lähemmäs lentokonetta siinä kohdassa, kun se käy lähellä." Natiivisepalle v3e:hen.
+
+## OMISTAJA: ALOITUSLENTOON SIIPI- JA MOOTTORIVANA SEKA LINNUT (LOPPUKOHTAUS) (28.9.2026 klo 09.20)
+
+Omistaja 28.9. sanatarkasti: "Ja voisiko lentokoneen siivistä lähteä ilma- tai pölyvana ja moottorista myös? Ja onko mahdollista animoida muutamia lintuja näkyviin eri kohtiin, kun kamera lentää sekä lähellä että kaukana? Tai ehkä riittäisi, että siinä loppukohtauksessa, kun kamera on jo aika ylhäällä Atenan päällä, niin silloin muutama lintu lentäisi diakonaalisesti näytön poikki." Natiivisepalle v3e:hen: hento haipyva vana siivenkarjista ja moottorista, suosituksena muutama lintu vinottain ruudun poikki loppukohtauksessa (Linssisepan elavien elementtien lintumalli, jos valmis).
+
+## OMISTAJA: ALOITUSLENTOON PAIVAN JA YON RAJA SEKA EUROOPAN KAUPUNKIEN VALOMERI (28.9.2026 klo 09.23)
+
+Omistaja 28.9. sanatarkasti: "Ja voisiko kartalla näkyä myös Auringon tekemä päivän ja yön raja, niin että Lento. Lähtisi yön puolelta ja tulisi sitten auringon puolelle Atenaan saavuttaessa. Kartalla saisi näkyä kaupunkien valomeri. Koko Euroopan alueella." Natiivisepalle: lento alkaa yosta (valomeri), paattyy aamun valoon Ateenassa; yovalot amparissa (z5–6, Black Marble), terminaattorin paikka lennon kulun mukaan. v3e tai erillinen v3f Natiivisepan arvion mukaan.
+
+## OMISTAJA: ALOITUSLENTOON KELLO JA 'PAIVA 1/80', ALOITUSNAKYMA YOVALAISTUKSESSA ILMAN HYPPYA, PEHMEA KOHDISTUS, MAHTIPONTINEN MUSIIKKI (28.9.2026 klo 09.29)
+
+Omistaja 28.9. sanatarkasti: "Kartalle voisi oikean yläkulmaan animoida myös kellon, joka etenee, ja sen alle tekstin päivä 1/80. Samalla voisi myös animoida sen, kun päivä etenee, jolloin myös valonraja muuttuu. Näin saadaan Alkuun enemmän kaupunginvaloja loistamaan, ja tämä tarkoittaa myös sitä, että aloitusnäkymä pelissä Pitäisi olla valaistuna samalla lailla, eli suuri osa Euroopasta olisi vielä yön puolella ja siinäkin kaupungin valot valaisisivat karttaa. Tämä siksi, että en halua lennon alkaessa tapahtuvan mitään hyppäystä kartalla, vaan voidaan lähteä suoraan oikeasta näkymästä liikkeelle. Ja mikäli karttapallo on pyörinyt eri kohtaan, kuin on suunniteltu, niin se voisi alussa pehmeästi pyörähtää oikeaan paikkaan ja zoomitasoon ja sitten varsinainen lentoanimaatio alkaisi. Onko muuten tähän jo tehty omaa musiikkia taustalle, joka saisi olla innostuneen mahtipontinen, vähän kuin Indiana Jonesin vastaavassa tunnusmusiikissa, kun elokuvassa nähdään lentokoneen liikkuvan kartalla?" Fable: jako v3e (kameraliike, vanat, linnut) ja v3f (paiva/yo, valomeri, kello + Paiva 1/80, aloitusnakyman yovalaistus, pehmea kohdistus). Musiikki: Lyria-raita musa-aloituslento (26 s, vaihe 1) on olemassa; Pelikoodari tekee uuden innostuneen mahtipontisen version omalla melodialla (johtoaihe), ei jaljitella Indiana Jonesin savelmaa (tekijanoikeus), kesto lennon mukaan.
+
+## OMISTAJA: ISS-KYYTI CUPOLA-KEHYKSELLA — TUMMEMPI SISAPINTA JA VALONLAHDE, HORISONTTIIN MUSTA AVARUUS, AIDOMPI LASI, ASEMAN OSA IKKUNAN TAKANA (28.9.2026 klo 09.35)
+
+Omistaja kortilla 28.9. sanatarkasti: "Kupola on hyvä, mutta saisiko sen tummemman sävyiseksi ja siinä saisi näkyä myös joku valonlähde kuvassa, niin että valonlähdeet toisivat luonnolliset valoisuuden muutokset kupolan sisäpintaan. Ei tarvitse olla täysin realistinen, jos näin ei oikeasti ole. Toinen huomio: pitäisikö avaruuden musta näkyä paremmin maapallon horisontissa, kun siinä nyt näkyy niin paljon sinistä? Onko se realistinen näkymä? Ja pystyykö lasipinnat tekemään enemmän oikean lasin näköiseksi, pienine reunojen virheineen? Ja pitäisikö myös Kupulan ulkopuolella näkyen joku osa avaruusasemasta? Siis joku käsivarsi tai joku vastaava, jotta näkymään tulisi enemmän kerroksellisuutta." Fable: ISS:lta horisontissa ohut sininen ilmakehan kaari ja musta avaruus (nykyinen laaja sininen ei realistinen). Linssiseppa (max) toteuttaa; aloituslennon jako v3e/v3f Natiivisepalla sovittu, lennon kesto 15,0 s.
+
+## OMISTAJA: KELLO JA PAIVA 1/80 JO ALOITUSKAUPUNGIN VALINNASSA, LENTOAJAT KOHDEKAUPUNKIEN ALLE 6 H IKKUNOIN, SAMA LENTOKAAVA KAIKKIIN KOHTEISIIN (28.9.2026 klo 09.38)
+
+Omistaja 28.9. sanatarkasti: "Se kello ja päivämäärä saisi muuten näkyä jo siinä vaiheessa, kun henkilö valitsee aloituskaupungin. Silloin kello tietenkin etenee normaalivauhtia ja vauhti luonnollisesti kiihtyy. Sitten lentoanimaation alkaessa täytyykin miettiä, kuinka kauan lento kestäisi eri osiin maapallolla ja sen ajan voisi laittaa näkyviin jokaisen kohdekaupungin alle. Pyöristetään ajat pelin kuuden tunnin aikakäsitysikkunaan, eli kohdekaupunkien alapuolella lukisi joko plus kuusi tuntia tai plus kaksitoista tuntia ja niin edelleen, riippuen siitä, kuinka kaukana ne ovat Lontoosta. Täytyy vielä miettiä sitten animaatiot erikseen muihinkin kohdekaupunkeihin, mutta ne voisivat käytännössä noudattaa samaa kaavaa. Eli ensin kaukaa, sitten lähelle konetta ja sitten taas kauemmas." Natiivisepalle v3f (kello valinnassa normaalivauhtia, kiihtyy lennossa; lentoaika +6/+12 h kohteen alle, pelin matka-aikamallin mukaan jos on) ja v3g (muut kohdekaupungit samalla kaavalla Ateenan hyvaksynnan jalkeen).
+
+## OMISTAJA: NATIIVIN LIPPU — EI KOKOKATTOA, TANKO MATALAMMAKSI ETTEI KATOA KAMERAN TAAKSE, LIPPU VAARA (28.9.2026 klo 09.42)
+
+Omistaja kortilla 28.9. sanatarkasti: "Zoomatessa lähemmäs se vain katoaa kameran taakse koska lipputanko on niin korkea. Ei tehdä koko kattoa. Tuo ei muuten ole ruotsin lippu". Linssisepalle (symbolit-lippu 720513da). Geysir/ISL-kohteet: europe-koordinaattia ei voi antaa (lauta paattyy -11E), natiivin kaytettava maailmakoordinaattia → Siirtoseppa (vienti).
+
+## OFFLINE-MAASTO TAYTENA: EUROOPPA ~1,75 GT SIIRTONA / 2,2 GT LEVYLLA (#3530 JALKEEN) (28.9.2026 klo 09.45)
+
+Siirtoseppa: oikeilla laattakoilla Euroopan offline-maasto ~786 Mt (1.53:n arvio ~94 Mt laskettiin vanhan sarjan Ranska-datasta); Eurooppa yhteensa ~1,9 Gt / 2,4 Gt levylla, #3530:n (pienet 1024/75) jalkeen ~1,75 / 2,2 Gt. Fable: maasto taytena (ladattu alue kuin verkossa, natiivi nayttaa todellisen koon), ei z10-rajausta. #3531 (skeema 1.56: kerma, relief, yovalot + todellinen levykoko, E2E 2 PASS) junaan Natiivisepan kuittauksen jalkeen.
+
+## OMISTAJA: NATIIVIN 'PELI PAIVITTYI' -LAPPUUN VARSINAISET MUUTOKSET, JARJESTELMATYYLISET TEKSTILAPUT ALUSTA POIS (28.9.2026 klo 09.48)
+
+Omistaja 28.9. kuvakaappauksella (TF 1.0.34, sisalto 261) sanatarkasti: "Päivitystiedot tulevat jo aiemmassa näkymässä, ja tässä näkymässä tulee tällainen lappu, jossa ei oikein ole sisältöä. Jos päivitystiedot saisi tähän lappuun, niin se olisi visuaalisesti kivempi, jolloin voisi ottaa ne aiemmat käyttöjärjestelmän näköiset tekstilaput alusta pois." Natiivi-UI (karki): lappuun muutosloki-natiivi.json-rivit + sisaltopaivityksen muutokset, selvitys miksi 1.0.34-rivi ei nay; aiemmat tekstilaput pois.
+
+## OMISTAJA VALITSI ALOITUSLENNON MUSIIKIKSI MARSSI A (VASKIMARSSI) (28.9.2026 klo 09.51)
+
+Pelikoodarin kaksi Lyria-ehdotusta pelin omalla johtoaiheella (D–G–F–E–D–C–D), ei elokuvan savelmaa: A vaskimarssi 123 BPM 20,3 s (isku 7,3 s ohitus, loppusointu 15,1 s), B jouset + torvet 129 BPM 21,9 s. Omistaja kortilla: A. Raita media.matkakirja.app/audio/musa-aloituslento-marssi-a-lyria.mp3, −11,4 LUFS; Natiiviseppa kytkee v3f:aan.
+
+## OMISTAJA: NATIIVIN NOSTOTEKSTIT EIVAT SAA VALKKYA; KUVAKORTTI JA TEKSTIT HAIPYVAT PEHMEASTI REUNALLA, EI HYPPYJA (28.9.2026 klo 09.54)
+
+Omistaja 28.9. TF 1.0.34 -kuvakaappauksella (Ateena) sanatarkasti: "Nykyisessä versiossa kohdetekstit vielä välkkyvät. Atenan kuvakortti näyttäisi pysyvän paikallaan, mutta sitten kun panoroidaan tarpeeksi reunaan, niin se häviää näkyvistä yhtäkkiä. Se saisi hävitä pehmeästi feidaten pois ja tulla takaisin samalla lailla feidaten. Sama pehmeä fade-out tai mikäli muuten ei onnistu, niin myös liike pitäisi nostojen kohdalla tapahtua pehmeästi, ei yhtäkkiä hyppäämällä. Näin kaikki liike olisi pehmeä eikä tule yhtäkkiä ja yhtäkkisiä hyppäyksiä. Mutta suurimmassa osassa tapauksia paras vaihtoehto on, että nostojen tekstit vain yksinkertaisesti pysyvät paikallaan eivätkä välky." Natiivi-UI: todenna nimet-laskuri 5d79edd9 (1.0.35-junassa), tekstit paikallaan, pehmea haivytys reunalla.
+
+## OMISTAJA: NATIIVIN NOSTOSSA KAIUTIN EI NAY AVATESSA (VIERITYS TARVITAAN) (28.9.2026 klo 09.55)
+
+Omistaja 28.9. TF 1.0.34 (Korintin kanava) sanatarkasti: "Nosto myös aukeaa tähän näkymään, missä ei näy vielä kaiutin kuvaa, vaan käyttäjän pitää vierittää lappua hieman alaspäin, jotta se kaiutin tulee näkyviin. Onko tämä korjaus jo tulossa?" Ei ollut jonossa. Natiivi-UI: luennan napit otsikkoriville (web on malli) striimilukijan kahden napin natiiviversion yhteydessa, tai heti erillisena jos webmalli viivastyy.
+
+## OMISTAJA: STRIIMILUKIJAN KAIUTTIMEEN LATAUSANIMAATIO AANEN GENEROINNIN AJAKSI (28.9.2026 klo 09.56)
+
+Omistaja 28.9. sanatarkasti: "Striimin lukijan kaiuttimeen voisi tehdä animaation siksi ajaksi, kun odotellaan, että ääni saadaan generoitua. Kaiuttimen päällä voisi silloin pyöriä pieni ympyräanimaatio tai vastaava sopiva." Pelikoodari (web) striimilukijan valikkoeraan: hento pyoriva rengas kaiuttimen paalla kunnes aani alkaa (nakyy vasta ~250 ms viiveen jalkeen), vaihtuu VU-mittariin; natiivi Natiivi-UI:lta web mallina.
+
+## BUGI (OMISTAJA): AANIVALINNAN ULKOPUOLELLE NAPAUTUS SULKEE KOKO NOSTOKORTIN — SAANTO: ULKOPUOLINEN NAPAUTUS SULKEE VAIN PAALLIMMAISEN KERROKSEN (28.9.2026 klo 09.58)
+
+Omistaja 28.9. (TF 1.0.34) sanatarkasti: "Nyt jos vaihdan striimilukijan ääntä ja klikkaan nostokorttia pois taakseni valintanäkyvän yläreunasta, niin kortti katuaakin ja palaa suoraan karttanäkymään virheellisesti. Nostokortti saisi siis jäädä näkyviin ja pelkästään se lukijan äänivalinta häipyä pois näkyvistä." Natiivi-UI korjaa 1.0.35:een; Pelikoodari varmistaa webin + savukevaite; sama saanto uuteen kaksinappiseen valikkoon.
+
+## PAIVITYSLAPPU NAYTTAA MUUTOKSET; TESTFLIGHTIN TESTATTAVAA YHDEN RIVIN MITTAISEKSI (28.9.2026 klo 10.02)
+
+Natiivi-UI paivityslappu e19b5d97 (kaannos 522ba7cf): lappu hakee muutoslokirivin tarvittaessa verkon uusimmasta paketista (1.0.34-rivi tuli pakettiin vasta v257:ssa), yleinen teksti pois, versio v1.0.34; merge-pyynto 1.0.35. Omistaja vahvisti kortilla: 'aiemmat tekstilaput' = TestFlightin Testattavaa → Julkaisija jattaa sen yhteen riviin; muutosloki-natiivi.json-rivi kirjoitetaan pelaajan kielella ilman 'Build N:' -etuliitetta.
+
+## OMISTAJA: FABLE-ROOLIN NIMI ON PAATOIMITTAJA; CODEXILLE 'VIESTI CLAUDELLE' (28.9.2026 klo 10.25)
+
+Omistaja 28.9. hyvaksyi: session nimi 'Päätoimittaja (Opus, xhigh)' (id local_8d8ebf72 ennallaan); 'Fable' on roolin vanha nimi ja patee kaikissa ohjeissa (ei uudelleenkirjoitusta); Codexille omistaja sanoo jatkossa 'viesti Claudelle'. Raamattu + CLAUDE.md alias PR #3527:ssa, aloitusviesti paivitetty. Haaran nimenvaihto claude/bold-ride-vow4ki → paatoimittaja seuraavassa tilinvaihdossa (omistajan nelja tilia eivat ole paalla yhtaikaa; tieto siirtyy luovutuksessa).
+
+## OMISTAJA: STRIIMILUKIJAN KAPPALELISTA YHDEN RIVIN KOHDIN (OTSIKKO, 1, 2 … + ALKUSANAT) (28.9.2026 klo 10.26)
+
+Omistaja 28.9. #3537-kuvaparista sanatarkasti: "Hampurilainen on hyvä, mutta käytä paljon lyhyempiä tekstejä siinä. Tai lajittelu voisi olla paremmin, että otsikko, leipäteksti 1, 2 ja niin edelleen. Tai vielä lyhyempi muoto ja sitten pari sanaa miten se leipäteksti alkaa. Mieluiten niin että jokainen kohta mahtuisi yhdelle riville." Pelikoodari korjaa (+ kelausrivi alimmaksi, 'Lehden osiot' -rivi pois). Levy: simulaattorien iOS-jarjestelmadata (PosterExtension ~5 Gt/laite) → roolit saavat ajaa simctl erase OMALLE simulaattorilleen ajon jalkeen.
+
+## OMISTAJA: MAC OMISTAJAN KAYTOSSA KLO 17 ASTI — CLAUDE ENINTAAN PUOLET KONEESTA (28.9.2026 klo 10.58)
+
+Omistaja 28.9. klo 10.5x: "Tarvitsen nyt konetta kello 17 asti, joten käytän maksimissaan vain puolet koneen resursseista." Tulkinta: Clauden kokonaiskuorma ≤ puolet (≤ 8 ydinta, kuorma1 ≤ 8). Julkaisija jakaa: kaannokset yksi kerrallaan matalalla prioriteetilla (taskpolicy -b / nice, xcodebuild -jobs 4), simulaattoreita 1, PR-CI yksi tyo kerrallaan, suorituskykysavukkeet tauolle; Karttasepan pallopoltto ≤ 2 ydinta matalalla prioriteetilla; ei agenttiparvia; Postivahti valvoo (kuorma1 > 10 yli 5 min → halytys). Klo 17 jalkeen paivasaanto.
+
+## OMISTAJA: XAI-REAALIAIKAINEN PUHEKESKUSTELU PULUN KANSSA KEHITTAJATILAN KOENAPPINA; GEYSIR-NIMITESTI (28.9.2026 klo 11.03)
+
+Omistaja 28.9. kysyi xAI:n reaaliaikaisesta aanikeskustelusta Pulun kanssa kehittajatilan koenappina (nykyinen Sonnet-chat pysyy oletuksena) ja samoista pohjatiedoista. Fable: xAI Grok Voice Agent API (WebSocket, OpenAI Realtime -yhteensopiva, instructions = jarjestelmakehote, function calling) → sama Pulun pohja; lyhytikainen token Pollo-workerilta, avain ei asiakkaaseen; paivakatto minuutteina; Pelikoodari web ensin (selite-era → haivytys → tama), mittaa viive ja hinta, sitten natiivi. Linssisepan loyto: maan nimisten kaupunkien (Islanti) nostot tulkitaan kaupungin sisaisiksi (luoSisaisyysTesti) → eivat nay paakartalla webissa eika natiivissa; Fable hyvaksyi korjauksen (maan nimiset kaupungit pois nimitestista), Pelikoodari web → natiivi.
+
+## OMISTAJA: CUPOLA CODEXIN KUVANA (TUMMA, VALOT JA VARJOT), ISS-ULKO-OSAT MUSTINA SILUETTEINA, ISS-PILLERIIN 'LIVE' (28.9.2026 klo 11.07)
+
+Omistaja 28.9. sanatarkasti: "Pyydä Codexilta vain uusi kuva tuosta kupolasta. Se tulee paremman näköiseksi, kun Codex itse tuottaa oikeanlaisen kuvan valoineen ja varjoineen, ja se saisi olla tummempi kuin mikä tuo nykyinen on. Ja pyydä siltä myös nuo kupolan ulkopuolella olevat ISS-elementit, ja ne saisivat melkein olla vain mustia varjokuvia. Näin maa hehkuisi paremmin ja kupolan sisätilakin olisi enemmän tumma kuin vaalea. Ja lisää noihin vihreällä näkyviin nopeustietoihin sana \"live\" tai joku vastaava, että käyttäjä tajuaa, että ISS on oikeastikin juuri tuolla kohtaa menossa tällä hetkellä." Linssiseppa tilaa Codexilta (ikkuna-aukot alfana nykyisen kehyksen geometriassa, ulko-osat erillisena siluettikerroksena), 3D-kehys varalle; pilleriin '● LIVE' myos webiin.
+
+## OMISTAJA: NICE-OLETUS — CLAUDEN RASKAS TYO KAYTTAA KOKO KONETTA JA VAISTAA HETI (KORVAA PAIVAN 4 YTIMEN SAANNON) (28.9.2026 klo 11.31)
+
+Omistaja 28.9. klo 11.0x kysyi, voisiko Clauden tyo kayttaa taytta tehoa kun kone on vapaa ja vaistaa heti kun han tarvitsee sita; vastasi kortilla 11.2x 'Kyllä, nice-oletus'. Linjaus: KAIKKI raskaat tyot (poltot, kaannokset, testisarjat, savukkeet, agenttiajot, CI-tyonkulut Macilla) ajetaan oletuksena nice -n 15 (tai taskpolicy -c utility): ne kayttavat kaikkia ytimia, mutta omistajan ohjelmat menevat aina edelle. Paivan '4 ydinta' -saanto poistuu. Ennallaan: GPU- ja muistikilpailu rajattu (Mac-savukkeita enintaan 2 rinnakkain, simulaattoreita 1 paivalla), yotauko ja julkaisulippu kuten ennen. Kun omistaja ilmoittaa tarvitsevansa konetta (kuten tanaan klo 17 asti): raskaat prosessit taskpolicy -b (myos I/O kuristuu), savukkeet kevyessa tilassa, GPU-raskaat tauolle. Omistajan huomio 11.2x: han tyoskentelee kayttajalla Sami Reivinen ja Claude kayttajalla koodaus — nice ja taskpolicy ovat ytimen prioriteetteja, jotka toimivat kayttajien yli, joten vaistaminen ei vaadi omistajan hiiren tai nappaimiston havaitsemista. Toteutus: Julkaisija lisaa niceen Mac-ajurin tyonkulkuihin ja paikallisiin ajoskripteihin (aja-sarja.mjs, savukkeet, kaannokset), Karttaseppa polttoihin, Postivahti valvoo (nice-arvo raskailla prosesseilla). Tanaan klo 17 asti voimassa omistajan 10.58 rajaus; 17.00 jalkeen nice-oletus.
+
+## OMISTAJA: UUSI PULUNAPPI (XAI-REAALIAIKAINEN PUHE) PELIIN NYT (28.9.2026 klo 11.41)
+
+Omistaja 28.9. klo 11.41 sanatarkasti: "laita uusi pulunappi peliin". Paatoimittaja: Pelikoodarin koe (haara pelikoodari-pulu-realtime 274bc87cf, xAI grok-voice, viive ~2 s, 0,08 $/min, paivakatto 30 min/vrk) tuotantoon HETI ilman klo 17 odotusta: Pelikoodari todentaa selainpolun (mikrofoni/worklet) yhdella selaimella taskpolicy -b:lla ja avaa PR:n, Julkaisija ajaa sen seuraavaan junaan ja julkaisee workerin (pollo-julkaisu) mergen jalkeen. Nappi pysyy kehittajakoodin takana (katto 30 min/vrk ei kesta kaikkia pelaajia); kaikille pelaajille vasta omistajan paatoksella. Web ensin, natiivi sen jalkeen.
+
+## OMISTAJA: PULUN SANELU PUHEKESKUSTELUKSI KAIKILLE — APPLEN TUNNISTUS, AUTOMAATTINEN LAHETYS, VASTAUS PUHEENA, TILA NAKYVISSA (28.9.2026 klo 11.51)
+
+Omistaja 28.9. klo 11.4x sanatarkasti: "Muuta pelin nykyinen sanelunappi, joka näkyy kaikille, sellaiseksi, että se käyttää Applen omaa puheentunnistusta, ja jos mahdollista, niin että se tunnistaisi, kun pelaaja on lopettanut lauseen, ja toimittaa sitten sisällön Sonnetille, ja vastaus generoidaan puheen muodossa pelaajalle takaisin. Olisi tärkeää, että pelaaja näkisi koko ajan, missä kohtaa prosessia ollaan aina menossa, eli kuunteleeko, miettiikö vai puhuuko pulu takaisin. Mitä olet mieltä?" Paatoimittaja: suurin osa on jo olemassa — web kayttaa SpeechRecognitionia (Safarissa Applen tunnistus), natiivi SFSpeechRecognizer fi-FI laitteella, kuuntelu paattyy itsestaan hiljaisuuteen (natiivi 1,5 s) ja kysymys lahtee Sonnetille automaattisesti. Puuttuu: 1) puhuttuun kysymykseen vastaus AINA puheena (nyt vain kaiutinvivulla, oletus pois), 2) yksi selva tila koko ajan: Kuuntelen → Mietin → Puhun (napautus puheen aikana pysayttaa), 3) viiveen mittaus puheen lopusta ensimmaiseen aaneen. Kirjoitettuun kysymykseen kaiutinvipu ratkaisee kuten nyt. Pelikoodari web ensin (xAI-koe-PR:n jalkeen), Natiivi-UI natiivi web-mallin mukaan kuvaparilla. Tama on myos halvempi vaihtoehto xAI-reaaliaikapuheelle (maksetaan vain vastausten teksti ja puhe).
+
+## PAATOIMITTAJA: ISS-KYYTI WEBISSA TODELLISELLA NOPEUDELLA MYOS KAUKONAKYMASSA (28.9.2026 klo 12.08)
+
+Pelikoodari kysyi 28.9. klo 12.0x, pidetaanko kaukonakyman ISS nopeutettuna (ennen 75 s kierros), kun todellisella nopeudella maa liikkuu avauksen seurannassa vain ~4 astetta/min. Paatoimittaja: todellinen nopeus kaikkialla — omistajan 26.9. linjaus 'ISS:n vauhti ja rata todelliset (missa ISS juuri nyt)' ja LIVE-pilleri (omistaja 28.9. klo 11.07) lupaavat pelaajalle oikean paikan; nopeutus olisi ristiriidassa. Haara pelikoodari-iss-kyyti 83ff36a52.
+
+## OMISTAJA: ISS-KYYTIIN NOPEUTUSKAHVA (LIVE SAMMUU) JA KOHDEVALIKKO + KOE OIKEASTA KUVASTA MAAPALLON TILALLA (28.9.2026 klo 12.12)
+
+Omistaja 28.9. klo 12.1x sanatarkasti: "iss:lle voisi tehdä speed warp kahvan, jolla lentoa voi nopeuttaa haluamansa määrän (tällöin live sammuu). ja sitten voi olla vielä alasveto nappi, jolla voi lentää eri kohteiden päälle. voisi kokeilla miltä oikea kuva näyttäisi silloin maapallon tilalla. mitä mieltä?" Paatoimittaja: 1) Nopeutuskahva 1x (LIVE) → 10x → 100x → 1000x (logaritminen); nopeutettuna LIVE-pilleri vaihtuu kertoimeksi ja 'Palaa LIVE' palauttaa todelliseen paikkaan. 2) Kohdevalikko (vain Euroopan kohteet, VAIN EUROOPPA) kelaa nopeutuksella ISS:n SEURAAVAAN TODELLISEEN ylilentoon (SGP4) ja nayttaa kellonajan — rehellinen ja opettava, ei teleporttia; jos rata kulkee sivusta, kamera kaantyy kohti kohdetta kuten astronautin vinokuva. 3) Oikea kuva: kohteen ylla Astronautin kameran NASA-kuva (PD) haivytetaan piirretyn maapallon tilalle — ensin KOE 3 kohteella, omistaja arvioi kuvaparista. Pelikoodari web (ISS-kyyti-haaran jatkona, puhekeskustelu-eran jalkeen, ennen selite-eraa), Linssiseppa natiivi web-mallin mukaan.
+
+## PAATOIMITTAJA: GPU-VAISTO AUTOMAATTISEKSI — OMISTAJAN KUVA-/VIDEO-OHJELMA AUKI → CLAUDEN GPU-TYOT ODOTTAVAT (28.9.2026 klo 12.14)
+
+Omistaja 28.9. klo 12.2x: Capture One -vienti (yli 40 kuvaa) jumittui ja toimi heti kun Clauden GPU-ajot (Mac-savuke Metal-Chromiumilla, simulaattorit) oli pysaytetty; kysyi voiko ajaa pienemmalla teholla. Syy: nice ja taskpolicy saatelevat vain CPU:ta ja I/O:ta, macOS:ssa ei ole GPU-prioriteettia taustaprosesseille. LINJAUS: kun omistajan GPU-ohjelma on auki (Capture One; lisaksi Lightroom, Photoshop, Final Cut Pro, DaVinci Resolve — omistaja voi lisata), Clauden GPU-tyot eivat kaynnisty: Chromium-savukkeet ajetaan ohjelmistorenderoinnilla (SwiftShader, SAVUKE_CHROMIUM_LIPUT) nice 15:lla, WebKit- ja suorituskykysavukkeet, simulaattorit, Unity-renderoinnit ja GPU-poltot siirtyvat odottamaan ohjelman sulkemista. Tarkistus jokaisen GPU-tyon alussa yhteisella tyokalulla tools/gpu-vapaa.sh (Julkaisija), ja Postivahti ilmoittaa kierroksellaan GPU-roolien sessioille kun ohjelma aukeaa (kaynnissa olevat GPU-tyot tauolle turvallisessa kohdassa) ja sulkeutuu. Omistajan ei tarvitse ilmoittaa mitaan.
+
+## OMISTAJA: ISS-NAKYMA MAHDOLLISIMMAN REALISTISEKSI — KAUPUNKIEN VALOT YOPUOLELLE ENSIN (28.9.2026 klo 12.16)
+
+Omistaja 28.9. klo 12.3x: "näkyykö ISS:ssä nyt jo auringon suunta oikein, eli onko päivä ja yö oikein näkymässä? ja saako kaupunkien valot sytytettyä? mitä muuta voisi tehdä että olisi mahdollisimman realistinen?" Tila: auringon suunta lasketaan todellisesta ajasta (Meeus, ~0,01 astetta), yopuoli tummuu yokuorella hamarakaistalla -6...+2 astetta — paiva ja yo ovat oikeissa paikoissa; maan pinta ei kuitenkaan varjostu auringosta eika yopuolella ole valoja. Paatoimittaja: kaupunkien valot yopuolelle heti (Black Marble, assets/linssit/yokartta.jpg jo repossa; valot syttyvat hamarakaistassa), Linssiseppa natiivi ensin (lupa poiketa webista taman eran ajan), Pelikoodari web ISS-nopeutuseran yhteydessa samoilla arvoilla. Muut realismiehdotukset omistajalle valittaviksi.
+
+## OMISTAJA: ISS-REALISMI — KAIKKI NELJA: AURINGON HEIJASTUS, PAIVAN OIKEAT PILVET, ILMAKEHA + REVONTULET, VUODENAIKA + KUU + TAHDET (28.9.2026 klo 12.17)
+
+Omistaja valitsi kortilla 28.9. klo 12.3x kaikki nelja kaupunkien valojen jalkeen: 1) auringon heijastus merista ja jarvista + pinnan valaistus auringon suunnasta (vesimaski olemassa); 2) taman paivan oikeat pilvet NASA GIBS -paivakuvasta (haku kerran paivassa ajastetulla tyonkululla kuten iss-tle.yml); 3) ilmakehan horisonttikaari (hamarassa oranssinpunainen, yolla ilmahehku) + revontulet NOAA SWPC OVATION -reaaliaikaennusteesta; 4) maan pinta kuukauden mukaan (NASA Blue Marble NG -kuukausikuvat, lumipeite), Kuu oikeassa paikassa ja vaiheessa, tahdet oikeilla paikoillaan. Kaikki lahteet PD (NASA/NOAA). Jarjestys 1→2→3→4, Linssiseppa natiivi (lupa ennen webia tassa ISS-paketissa), Siirtoseppa siirtaa webiin Linssisepan arvoilla (keventaa Pelikoodaria), Julkaisija tekee ajastetut datatyonkulut. Kuvapari omistajalle per kohta.
+
+## OMISTAJA: GPU-VAISTO OMISTAJAN ILMOITUKSESTA, EI OHJELMAN TUNNISTUKSESTA (KORVAA 12.2x) (28.9.2026 klo 12.18)
+
+Omistaja 28.9. klo 12.3x sanatarkasti: "pidän ohjelmia aina auki. parempi tapa että sanon tänään milloin tarvitsen konetta ja milloin en." Korvaa klo 12.2x:n ohjelmatunnistuksen (pgrep Capture One tms.). LINJAUS: omistaja kertoo Paatoimittajalle, milloin han tarvitsee konetta (esim. 'tarvitsen konetta klo 17 asti') ja milloin ei. Tarve-ikkunassa kevyen tilan lippu /tmp/matkakirja-kevyt on paalla (Julkaisija asettaa/poistaa Paatoimittajan kaskysta): raskaat CPU-tyot taskpolicy -b, Chromium-savukkeet ohjelmistorenderoinnilla (SwiftShader), EI GPU-toita (WebKit- ja suorituskykysavukkeet, simulaattorit, Unity-renderoinnit, GPU-poltot odottavat). Ikkunan ulkopuolella nice-oletus taysilla ytimilla ja GPU vapaana. tools/gpu-vapaa.sh tarkistaa lipun (ei ohjelmia). Tanaan tarve klo 17 asti.
+
+## PAATOIMITTAJA: PULUN PUHEKESKUSTELU PR #3546 + KEHOTTEEN VALIMUISTI (28.9.2026 klo 12.23)
+
+Pelikoodari 28.9. klo 12.4x: puhekeskustelu PR #3546 junassa (saneltuun kysymykseen vastaus aina puheena, tilarivi Kuuntelen → Mietin → Puhun, mikin napautus hiljentaa). Viive sanelun lopusta aaneen 2,4–3,2 s + laitteen lopputunnistus ~1–1,5 s (xAI-realtime 1,5–2,1 s). Hinta ~0,025–0,03 $/vastaus. Paatoimittaja hyvaksyi Sonnetin kehotteen valimuistin erillisena pienena PR:na (~0,008 $/vastaus) ennen ISS-eraa.
+
+## TILA: GPU-VAISTO MAINISSA (#3545) + TASKPOLICY -B EI KAANNOKSILLE EIKA AANELLE (28.9.2026 klo 12.32)
+
+Julkaisija 28.9. klo 12.5x: tools/gpu-vapaa.sh (exit 1 kun /tmp/matkakirja-kevyt; GPU_VAPAA_PAKOTA=1/0), aja-sarja.mjs ajaa kevyessa tilassa Chromiumin SwiftShaderilla ja ohittaa WebKit- ja suorituskykyrivit 'GPU varattu (kevyt tila)'. Opit: taskpolicy -b kaatoi kaksi kaannosta jumivahtiin (Julkaisija) ja rikkoi selaimen mikrofoniaanen (Pelikoodari) → kaannokset ja aanta kayttavat ajot vain nice 15, taskpolicy -b vain muille raskaille CPU-toille.
+
+## OMISTAJA: KONE VAPAA NYT (KEVYT TILA POIS ENNEN KLO 17) (28.9.2026 klo 12.43)
+
+Omistaja 28.9. sanatarkasti: "nyt en tarvitse konetta. sanon taas sitten kun tarvitsen". Kevyen tilan lippu pois heti (Julkaisija), nice-oletus taysilla ytimilla ja GPU vapaa: Karttasepan pallopoltto + laattavienti SIGCONT nyt (nice 15), ohitetut 13 GPU-savukeriviä ajetaan, simulaattorit sallittu (paivalla 1). Seuraava tarve-ikkuna omistajan ilmoituksesta.
+
+## OMISTAJA: PULUN PUHEKESKUSTELUN VIIMEINEN TILA 'NAPAUTA MIKKIA, KUN HALUAT PUHUA' (28.9.2026 klo 12.44)
+
+Omistaja 28.9. klo 12.4x sanatarkasti: "pitäisikö olla pulussa viimeinen vaihtoehto: napauta mikkiä kun haluat puhua". Paatoimittaja: kylla — tilarivi ei tyhjene Pulun puheen jalkeen vaan nayttaa 'Napauta mikkiä, kun haluat puhua', jolloin pelaaja nakee tilan koko ajan (Kuuntelen → Mietin → Puhun → Napauta mikkiä…). Nakyy puhekeskustelun jalkeen ja ennen ensimmaista sanelua, ei kirjoitetun kysymyksen jalkeen. Pelikoodari #3546:een ennen mergea tai heti perään, Natiivi-UI samoin natiiviin.
+
+## OMISTAJA: KORJAUS — PUHUN-TILAAN 'NAPAUTA MIKKIA, JOS HALUAT KESKEYTTAA' (EI LEPOTILARIVIA) (28.9.2026 klo 12.44)
+
+Omistaja 28.9. klo 12.4x korjasi sanatarkasti: "eikun anteeksi: puhun, napauta mikkiä jos haluat keskeyttä". Korvaa edellisen kirjauksen lepotilarivin: Puhun-tilan rivi on 'Puhun… napauta mikkiä, jos haluat keskeyttää'; neljatta tilaa ei tule, puheen jalkeen rivi kuten #3546:ssa. Pelikoodari web, Natiivi-UI natiivi.
+
+## OMISTAJA: IDEA MYOHEMMIN — 'MAAPALLON VUOSI' -LINSSI (PYORITETTAVA PALLO KUUKAUSI KERRALLAAN + DATAKERROKSET) (28.9.2026 klo 12.52)
+
+Omistaja 28.9. klo 12.5x: ISS-kyydissa maapallo nakyy sellaisena kuin se kuluvana kuukautena oikeasti on (BMNG, Karttaseppa). Lisaksi myohemmin oma linssi, jossa maapalloa voi pyorittaa eri vuodenaikoina ja paalle voi lisata muutakin dataa. Paatoimittaja: hyva, sopii pelin oppimistehtavaan. Luonnos: kuukausiliukusaadin tammi–joulu (BMNG pohjana) + kerrokset NASA Earth Observations -kuukausiaineistoista (PD): kasvillisuus (NDVI), lumi- ja jaapeite, meren pintalampotila, sademaarat, pilvisyys, palot, yovalot; aiheena esim. monsuuni, lumiraja, vihertyminen, jaan vuosikierto; kytkos Foggin 80 paivan matkan vuodenaikoihin. Ajoitus: VAIN EUROOPPA -linjauksen jalkeen (ei aloiteta ennen omistajan lupaa), vastuu Linssiseppa, data Karttaseppa. Kirjattu jonoon.
+
+## OMISTAJA: CUPOLA 2 PEHMEAMMAKSI + RAE; NATIIVIN LIPPU ISOMPI SAAPUESSA (28.9.2026 klo 13.10)
+
+Omistaja 28.9. klo 13.1x kortilla sanatarkasti (Cupola 2): "muuten hyvä mutta tajusin että tuo cupola ei voi näkyä noin terävänä, koska katse on maapallossa. pystytkö pehmentämään kupolaa enemmän ja ulkona näkyviä iss:n osia vähän vähemmän vai pitäisikö tilata ennemmin codexilta valmiiksi epäskarppi versio? tuohon kuvaan voisi lisätä myös aavistuksen raetta ja polttaa sen omaksi versioksi kuvasta, jotta ei olisi niin muovisen näköinen kun blurrataan ja muutenkin." Lippu (saapumisnakyma isoissa maissa ~1/3 vanhasta): "isompi saapuessa. se on vain hienomman näköinen kun menee rajan yli". Paatoimittaja: Linssiseppa polttaa itse uuden version (syvyysterävyys: kupolan kehys voimakkaasti pehmea, ulko-osat vahemman, myos ikkuna-aukon alfareuna pehmea, aavistus raetta, poltettu kuvatiedostoiksi, ei ajonaikaista sumennusta); jos tulos nayttaa keinotekoiselta, tilataan Codexilta valmiiksi epaterava versio. Lippu: saapumisnakymassa isompi, saa ylittaa rajan (80 km:n raja ei rajoita saapuessa).
+
+## OMISTAJA: MAAPALLON VUOSI -LINSSI — KOKEILLAAN KAIKKI DATAVAIHTOEHDOT ALOITETTAESSA (28.9.2026 klo 13.13)
+
+Omistaja 28.9. klo 13.2x: "eli nasalta ei saa pelkkiä erillisiä kerroksia vaan mukana tulee myös pohjakartta? saako jostain pelkkää dataa mistä voisi itse generoida tasoja karttojen päälle? kokeillaan kaikkia vaihtoehtoja sitten kun aloitetaan." Paatoimittaja: NEO-kerrokset tulevat erillisina (ei pohjakarttaa) mutta NASAn varityksella; raakaarvot saa NEO:sta GeoTIFF/CSV-muodossa (oma varitys ja lapinakyvyys), tarkemmat NASA Earthdata (MODIS/VIIRS) ja NOAA -aineistot, Copernicus lahdemerkinnalla. Aloitettaessa kokeillaan kaikki: NEO valmiit kuvat, oma varitys raakadatasta, yhdistelmat → kuvaparit omistajalle.
+
+## OMISTAJA: MAAPALLON VUOSI -LINSSI TYON ALLE NYT (28.9.2026 klo 13.17)
+
+Omistaja 28.9. klo 13.3x: "Tuon pallon kehittelyn voisi kyllä laittaa jo työn alle, jos ei ole pahasti ruuhkaa muuten." Ohittaa aiemman 'VAIN EUROOPPA -linjauksen jalkeen' -ajoituksen tassa linssissa (omistajan lupa). Paatoimittaja: kaksi rinnakkaista rataa, jotka eivat tormaa ISS-toihin: 1) Karttaseppa datakoe — NEO-kuukausiaineistot raakaarvoina (GeoTIFF/CSV) 5–6 kerrosta x 12 kk + NASAn valmiit variversiot, omat variasteikot, vertailukuvat BMNG-pohjan paalla; 2) Siirtoseppa web-linssin runko (pyoritettava pallo, kuukausiliukusaadin, BMNG <kk>-4096 -pohjat, kerroksen valinta) #3530/#3531:n jalkeen. Natiivi Linssisepalle ISS-realismin jalkeen web-mallin mukaan; tekstit Sisaltokirjurille kun kerrokset valittu. Tyonimi 'Maapallon vuosi'.
+
+## OMISTAJA: TOINEN LINSSISEPPA (LINSSISEPPA 2) LUOTU (28.9.2026 klo 13.32)
+
+Omistaja 28.9. klo 13.3x: "Voit luoda toisen Linssi-sepän nykyisen rinnalle." Paatoimittaja loi 13.3x session local_e675f86d-210c-416b-8d83-926194307a44 'Linssiseppä 2 (Opus, high)', checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2 (git worktree, haara linssiseppa2-tyo-20260928), aloitusviesti docs/raportit/viesti-linssiseppa2-aloitus.md. Tyonjako: Linssiseppa 2 = Maapallon vuosi -linssi natiiviin + ISS-realismi kohta 4 (BMNG-vuodenaika, Kuu, tahdet); Linssiseppa 1 = Cupola, lippu, kaupunkien valot, ISS-realismi 1–3. Siirtoseppa tekee Maapallon vuosi -web-rungon PR:n pohjakuvilla (tila hiomassa); kerrosten vienti odottaa omistajan lupaa Karttasepan sessiossa.
+
+## OMISTAJA: ALOITUSLENTO V3E2 HYVAKSYTTY (1.0.35) (28.9.2026 klo 13.34)
+
+Omistaja 28.9. klo 13.4x kortilla: 'OK, mergeen' — aloituslento v3e2 (Natiiviseppa 02bf1c9f: loiva kaarto Ateenan ylle ilman 270 km:n koukkua, kamera kaantyy alas nousun mukana, kosketus ylhaalta ~2 astetta, nousun laattaraja pois) 1.0.35-junaan; Pulu-TF:aa ei viivasteta, v3e2 seuraavaan buildiin jos Pulu-kaannos jo kaynnissa. Seuraavaksi v3f (koodattu c904d2c2).
+
+## OMISTAJA: CUPOLA PEHMEA + RAE JA LIPPU HYVAKSYTTY; KAUPUNKIEN VALOT 80 % (28.9.2026 klo 14.14)
+
+Omistaja 28.9. klo 14.1x kortilla: Cupola pehmea + rae (Linssiseppa cl5, poltettu itse, ei Codex-tilausta) hyvaksytty; natiivin lippu (saapuessa 1.0.33-koko, ylittaa rajan, zoomissa kasvaa neliojuurella) hyvaksytty. Kaupunkien valot sanatarkasti: "valot palavat puhki. miltä näyttää, jos pidetään esim 80% peitolla?" → Linssiseppa kuvapari 80 % (ja 60 %).
+
+## OMISTAJA: TARVITSEE KONEEN (KEVYT TILA PAALLE) (28.9.2026 klo 14.32)
+
+Omistaja 28.9. sanatarkasti: "tarvitsen nyt konetta itse". Kevyt lippu paalle (Julkaisija), GPU-roolit tiedotettu Postivahdin kautta: simulaattorit kiinni, ei GPU-toita, raskaat CPU-tyot taskpolicy -b, kaannokset nice 15; Karttasepan pallopoltto + vienti SIGSTOP. TF 1.0.36 -vienti saa ajaa. Kaynnissa oleva taysi savukesarja 36405304787 (GPU) omistajalle perumiskomentona.
+
+## PAATOIMITTAJA: MAAPALLON VUOSI -LINSSI EI PELAAJAN REKISTERIIN ENNEN VALMISTUMISTA (28.9.2026 klo 14.54)
+
+Linssiseppa 2 28.9. klo 15.0x: webin hiomassa-rivi (manner null) tekee linssista kynnys- ja varalinssin (omistus.js) → pelaaja voisi saada keskeneraisen linssin palkkiona ja kultainen linssijalki muuttuu. Paatoimittaja: ei rivia webin rekisteriin eika C#-Oletusrekisteriin ennen kuin linssi on valmis ja omistaja hyvaksynyt; natiivi kehittajatilan linssirekisterissa (Kesken), web kehityssivulta (maapallon-vuosi.html).
+
+## OMISTAJA: KONE VAPAA (KEVYT TILA POIS) (28.9.2026 klo 15.09)
+
+Omistaja 28.9. sanatarkasti: "en tarvitse enää konetta". Kevyt lippu pois (Julkaisija), nice-oletus + GPU vapaa, Karttasepan pallopoltto + vienti SIGCONT, taysi savukesarja mainilla uudelleen, simulaattorivuorot Natiiviseppa (v3f2-kuvaus) → Linssiseppa → Linssiseppa 2 → Natiivi-UI.
+
+## OMISTAJA: ALOITUSLENTO V3F2 — PAIVA AIEMMIN; PAATOIMITTAJA: KAUPUNKILEHDEN PIKKUKUVAT (28.9.2026 klo 15.23)
+
+Omistaja 28.9. klo 15.3x kortilla v3f2:sta sanatarkasti: "päivä voisi tulla aiemmin" → Natiiviseppa uusi versio (paivanvalo lennolla aiemmin), junaan vasta omistajan OK:n jalkeen. Paatoimittaja (Pelikoodarin kysymys, kuvalahteet-savuke Pariisi): kaupunkilehden osiohakemiston pikkukuvat pysyvat navigointina osioon, mutta jokainen pikkukuvan kuva nakyy osiossa lahderiveineen (puuttuvat lahteet korjataan); muuten lahde pikkukuvan kuvaukseen. #3565 (nostokortin oma regressio #3388 + kohdevalinnan savuke #3364:n mukaan) Julkaisijalla.
+
+## OMISTAJA: ISS-KYYDIN KAUPUNKIEN VALOT 60 % (28.9.2026 klo 15.28)
+
+Omistaja 28.9. klo 15.4x kortilla (Linssiseppa cl6: 100 | 80 | 60 %): 60 % — suurkaupunkien ytimet eivat pala puhki, valoverkko nakyy kuten astronauttien yokuvissa. Natiivi 1.0.37 ja web samalla arvolla.
+
+## OMISTAJA: CUPOLAAN JOTAIN LEIJUMAAN REALISMIKSI (28.9.2026 klo 15.45)
+
+Omistaja 28.9. klo 15.5x sanatarkasti: "keksisikö tuohon mitään leijumaan mitään sisälle joka ei häiritsisi liikaa, mutta lisäisi realismia?" Paatoimittaja: koe Linssiseppa 1:lle nykyisten jalkeen — 1) kamera hihnan paassa nurkassa (pitka objektiivi, hidas painoton kaantyily, epatarkka; myohemmin napautus Astronautin kameraan), 2) polyhiukkaset auringonsateessa vain paivapuolella, 3) valinnainen ajelehtiva kyna/tarkistuslista muutaman minuutin valein. Esineet Codexilta Cupolan tyylilla (tumma, pehmea, rae), liike Linssisepalta. Kuvapari/video omistajalle ennen junaa.
+
+## OMISTAJA: IDEA MYOHEMMIN — PULU AVARUUSKAVELYLLA ISS:N IKKUNAN TAKANA, CHAT RADIOLLA (28.9.2026 klo 16.25)
+
+Omistaja 28.9. klo 16.2x sanatarkasti: "pulu voisi leijua siellä ISS:n sisällä, tosin se pitäisi näkyä vähän isompana, jotta mittasuhteet olisivat järkevät. suuren koon voisi ratkaista niin, että pulu ei näkyisi kokonaan. olisi kiva jos pulun kanssa voisi chattailla siellä asemalla myös. mitä mieltä? tämän voi tehdä sitten myöhemmin, jotta ei hidastuta nykyisiä juttuja. tai pitäisikö pulun olla ennemmin avaruuskävelyllä ja sille voisi chatata radiopuhelimella lasin läpi. se voisi lentää lasiin kiinni jos sitä klikkaa chattia varten. silloin koosta ei tulisi ongelmaa ja pulu voisi olla oman itsensä kokoinen." Paatoimittaja: avaruuskavely — Pulu pienessa avaruuspuvussa ja turvakoydessa ikkunan takana, napautuksesta lentaa lasiin kiinni, chat radioyhteytena (henno radiosuodatin + NASAn Quindar-merkkiaanet lahetyksen alussa ja lopussa), puhekeskustelun tilat ennallaan; lopuksi irrottautuu. Ei hidasta nykyisia: jonoon ISS-realismin ja leijuvien esineiden jalkeen, omistajalta aloituslupa. Codex piirtaa Pulun avaruuspuvussa nykyisella tyylilla, Linssiseppa lento ikkunaan, Pelikoodari radiosuodatin + chat.
+
+## OMISTAJA: PULU AVARUUSKAVELYLLE KAMERA KADESSA; CUPOLAN KUVAKULMA AJELEHTII PAINOTTOMASTI (28.9.2026 klo 16.29)
+
+Omistaja 28.9. klo 16.3x sanatarkasti: "joo tehdään noin, kiva tuo merkkiääni ja radiosuodatin. voisiko pululla olla se kamera kädessä? ja pitäisikö kameran liikkua hieman sisällä (eteen, taakse ja sivuille) niin että lasin muoto ja näkymä eläisivät hieman kuin kamera olisi painottomassa tilassa kuvun sisällä? varmaan aika pieni liike riittäisi ajamaan efektin. mitä mieltä?" Paatoimittaja: 1) Pulun avaruuskavely (jonossa, myohemmin) + kamera Pulun kadessa; chatissa Pulu voi 'ottaa kuvan' alla olevasta kohteesta → oikea NASA-kuva. Leijuva kamera pois Cupolan sisalta. 2) Linssiseppa 1:n Cupola-kokeeseen nyt: kuvakulman painoton ajelehtiminen (jakso ~20–40 s, pieni amplitudi, kallistus ≤ 0,5 astetta, parallaksi kehys vs. maa), Vahenna liiketta -asetus kytkee pois. Omistaja ohitti Maapallon vuosi -natiivikortin → ei junaan, odottaa omistajan ohjetta.
+
+## OMISTAJA: MAAPALLON VUOSI -LINSSI HYVAKSYTTY KEHITTAJATILAAN (28.9.2026 klo 16.29)
+
+Omistaja 28.9. klo 16.4x sanatarkasti: "tee vain maapallolinssi, näyttää hyvältä". Natiivi (Linssiseppa 2 0a5ca59e + Natiivi-UI 867b57a0) 1.0.38:aan kehittajatilassa, web #3558 (Siirtoseppa) junaan; pelaajan rekisteririvi vasta kun linssi on valmis.
+
+## OMISTAJA: MAAKUNNAT — VAIN YKSI VARJATTYNA + 'VALITSE KARTALTA' (28.9.2026 klo 16.50)
+
+Omistaja 28.9. klo 16.5x (kaappaus docs/raportit/kaappaukset/omistaja-20260928/maakunnat-kaikki-varjatty.png) sanatarkasti: "Vain yksi maakunta pitäisi olla värjättynä kerrallaan, ellei ole valittu ”kaikki”" → bugi Natiivi-UI (natiivi) + Pelikoodari (web). Klo 17.0x: "Tuossa voisi olla myös toiminto ”valitse kartalta”,jolloin maakuntalista pienenisi, mutta pieni inforuutu jäisi yläreunaan ja käyttäjä voisi klikkailla kartalta eri kohtia, jolloin klikattu maakunta aktivoituisi." Paatoimittaja: oma tila — lista pienenee yläreunan inforuuduksi (nimi, lyhyt kuvaus, Lue lisää, sulkunappi), kartan napautus valitsee maakunnan eika avaa kaupunkeja/nostoja; Pelikoodari web varjaysbugin jalkeen, natiivi Natiivi-UI:lle; kuvasarja omistajalle ennen junaa.
+
+## OMISTAJA: NOSTOT-NAPPI POIS, VALIKKONAPISTA MAAKUNTAKARTAN KYTKIN, MAAKUNTALISTA POIS, KUVAUSRUUTU ISOMMAKSI (NATIIVI) (28.9.2026 klo 16.53)
+
+Omistaja 28.9. klo 17.1x (sanelu kaantyi englanniksi, omistaja vahvisti sisallon oikeaksi): "Actually, now that I think about it, those withdrawals are already fairly redundant. So we'll remove the entire withdrawals button from the game for now and turn the current menu button into a simple toggle that switches the map view on from the county map. So we'll also remove County Listing from view entirely. Can you catch that? At the same time, the county description size can be slightly increased, so that a somewhat larger image and text can fit." (withdrawals = nostot, county = maakunta). Tulkinta (natiivi, Natiivi-UI): Nostot-nappi ja -lista pois toistaiseksi (kartan kohteet ja nostot jaavat); valikkonapista maakuntakartan paalle/pois-kytkin; maakuntalista pois, maakunta valitaan napauttamalla karttaa (vain se varjatty) ja kuvausruutu naytetaan hieman isompana. Korvaa 17.0x 'Valitse kartalta' -tilan. Web ennallaan (maakuntakerros pelaajalla pois) ellei omistaja toisin sano.
+
+## OMISTAJA: ALOITUSLENTO V3F3 — YO→PAIVA ALUSSA, EI HIDASTUSTA, KAARTO NYKAISYN TILALLE, KAMERA BUMERANGINA (28.9.2026 klo 17.00)
+
+Omistaja 28.9. klo 17.1x kortilla sanatarkasti: "Se hetki, kun kartta muuttuu yöstä päivään, näyttää oudolta. Lento pitäisi siis alkaa vielä paljon aiemmin, että kartta on ehtinyt hyvissä ajoin vaihtua yöstä päivään. Ja lisäksi en tykkää siitä, että koneen vauhti hidastuu, kun lennetään sen lähelle. Voisiko se pysyä ainakin vähän enemmän nopeana? Jaa. Koneen yskähdys ylöspäin lähikuvassa voisi ennemmin vaihtaa johonkin makeampaan kaartoon jompaan kumpaan suuntaan. Ja ehkä voisi itse asiassa tehdä niin, että kamera ei jääkään paikalleen seuraamaan konetta, vaan kamera tuleekin kohti ja lähtee saman tein kuin bumerangi takaviistoon takaisinpäin. Liike voi olla vähän hidastettu, siis se kameran liike, mutta kamera ei jäisikään seuraamaan samaa matkaa konetta, vaan se ikään kuin tapaa lentokoneen sen oman elliptisen kiertoradan kärjessä. Saatko kiinni?" Tulkinta: yo→paiva heti lennon alussa, ei hidastusta lahella, kallistettu kaarto nykaisyn tilalle, kamera kohtaa koneen oman ellipsinsa karjessa ja kaartaa heti takaviistoon. Natiiviseppa v3f4.
+
+## OMISTAJA: ISS 4A+4C JA NATIIVIN MAAKUNTAKARTTA HYVAKSYTTY (1.0.38) (28.9.2026 klo 17.11)
+
+Omistaja 28.9. klo 17.1x kortilla: ISS-kyydin kuukauden pinta + reliefin varjostus 0,75 ja oikeat tahdet (Linssiseppa 2, 48282222) hyvaksytty; natiivin maakuntakartta (Natiivi-UI 0daf557e: Nostot pois, kytkin, napautus varjaa vain valitun, isompi kuvausruutu 96x72 + 15 px, nimet piilossa tilan aikana, ohuet rajat) hyvaksytty sellaisenaan. Molemmat 1.0.38:aan.
+
+## OMISTAJA: KOKO MAA NAKYVIIN KERRALLA; 3D-SYMBOLIT POIS, ERIKOISMALLIT JAAVAT (28.9.2026 klo 17.13)
+
+Omistaja 28.9. klo 17.2x sanatarkasti: "Jos maailmatila ei ole päällä, niin vaakamuotoisia valtioita ei näe kerralla kokonaan, tai peli ei anna zoomata tarpeeksi kauas. Se pitää korjata niin, että maan pystyy näkemään kerralla. Ja toinen, otetaan ne kolmiulotteiset symbolit pois. Ne ehkä eivät vain toimi, mutta pidetään ne Erikoiskohteet vielä kolmiulotteisena." → Natiivi-UI: maatilan loitonnusraja niin etta koko maa mahtuu ruutuun (leveys ja korkeus, marginaali), web tarkistetaan mallina. Linssiseppa 1: 3D-kategoriasymbolit pois (2D kuten web, kytkimella), erikoismallit (18 kpl) pysyvat 3D:na. Molemmat 1.0.38:aan.
+
+## OMISTAJA: ERIKOISMALLIT NAKYVIIN MYOS YLHAALTA (28.9.2026 klo 17.22)
+
+Linssiseppa 28.9. klo 17.3x: erikoismallit (18 kpl) piirtyvat vain kun kartta on kallistettu yli 25 astetta ja kerroin vahintaan 1,25 — ylhaalta ne eivat nay, siksi omistaja ei ole nahnyt niita. Omistaja kortilla: 'Kyllä, myös ylhäältä' → mallit nakyvat lahizoomissa aina, ylhaalta hieman liioitellulla perspektiivilla (yhden rivin muutos, Linssiseppa, 1.0.38). 3D-kategoriasymbolit pois: linssiseppa/symbolit-2d 5ac726fd (kytkin symbolit kategoriat3d 0|1).
+
+## OMISTAJA: 3D-SYMBOLIT TAKAISIN ISOMPINA; 3D-MALLIT KASVAVAT LAHESTYTTAESSA (KORVAA 17.2x SYMBOLIT POIS) (28.9.2026 klo 17.24)
+
+Omistaja 28.9. klo 17.4x sanatarkasti: "palauta 3d symbolit vielä mutta tee niistä isompia. nyt kaikki 3d mallit pienenevät kun niitä menee lähemmäksi silloin kun kartta on kallistettuna. pitäisi mennä päinvastoin" → Linssiseppa: 3D-kategoriasymbolit pysyvat (symbolit-2d ei junaan), selvasti isommiksi, kallistetun kartan skaalausbugi korjataan niin etta kaikki 3D-mallit kasvavat lahestyttaessa; erikoismallit myos ylhaalta pysyy. 1.0.38.
+
+## OMISTAJA: ERIKOISMALLI KOHDEKAUPUNGISSA SIIRRETAAN VIEREEN (28.9.2026 klo 17.27)
+
+Omistaja 28.9. klo 17.4x sanatarkasti: "jos erikoissymboli on kohdekaupungissa, se pitää siirtää hieman sen viereen" → Linssiseppa: erikoismalli kaupunkimerkin viereen niin ettei peita kaupunkia, nuppineulaa eika nimiota. 1.0.38.
+
+## OMISTAJA: BUGI — STRIIMILUENTA ALKAA KESKELTA, PALAA ALKUUN JA HYPPII (28.9.2026 klo 17.29)
+
+Omistaja 28.9. klo 17.5x sanatarkasti: "Nykyisessä buildissa striimiluenta alkaa kesken lauseen, ja sitten se jossain välissä aloittaa ensimmäisen lauseen alusta ja sitten se saattaa taas hypätä johonkin kohtaan. Onko tätä korjattu jo seuraavaan versioon?" → Natiivi-UI karkeen: toisto seka lehden striimilukijasta etta Pulun virkevirrasta 1.0.36/1.0.37-koodilla, korjaus 1.0.38:aan.
+
+## OMISTAJA: ELEVENLABS V4 — PIENI VERTAILU XAI:HIN (28.9.2026 klo 17.47)
+
+Omistaja 28.9. klo 17.5x: "elevenlabsilta tuli juuri uusi v4 versio". ElevenLabs julkaisi 28.9. v4 ja v4 Turbo (TechCrunch): striimaus LLM-tokeneista, matalampi viive agenteille, 90+ kielta, sav yn hallinta pitkassa tekstissa. Paatoimittaja: Pelikoodari pieni saastava vertailu (3 tekstia: nosto + 2 Pulun vastausta; xAI vs v4 vs v4 Turbo; ensimmainen tavu, kokonaisaika, hinta/1000 mrk; 9 naytetta omistajalle). Ei vaihtoa ennen omistajan kuuntelua.
+
+## OMISTAJA: ELEVENLABS V4 -VERTAILU PERUTTU (28.9.2026 klo 17.48)
+
+Omistaja 28.9. klo 17.5x sanatarkasti: "älä vertaa". Vertailu peruttu Pelikoodarilta ennen yhtaan API-kutsua; xAI-puhe jatkaa.
+
+## OMISTAJA: PULUN TESTIAANET ELEVENLABS V4:LLA TUNNETAGEIN + STRIIMIHINTA (28.9.2026 klo 17.49)
+
+Omistaja 28.9. klo 17.5x sanatarkasti: "tee muutama testiääni pululle v4:llä käyttäen tunnetageja ja vertaa sitä jo nyt olevaan äänitteeseen pelissä. mutta striimiäänen hinta kiinnostaa, jos se olisi yhtään laskenut" (tarkentaa 'älä vertaa' -viestin: ei laajaa striimivertailua). Pelikoodari: 3 Pulun repliikkia, jolla on esigeneroitu aanite (eleven_v3) → samat v4:lla samalla aanella tunnetagein, 3 paria omistajalle; v4/v4 Turbo striimihinta dokumentaatiosta vs. xAI ja Flash v2.5.
+
+## OMISTAJA: PULUN V4-AANI PALJON PAREMPI; ISOISAN NAYTE (28.9.2026 klo 17.56)
+
+Omistaja 28.9. klo 18.0x sanatarkasti: "Pulun ääneen tuo on ainakin paljon parempi. Anna vielä esimerkki isoisästä. Yksi riittää siitä." → Pelikoodari: yksi isoisan repliikki v4:lla tunnetagein (sama aani), pari omistajalle. Paatos Pulun v4-striimista (Turbo kampanjahinnalla 0,011 $/1000 mrk 12.10. asti, sitten 0,04 $) odottaa omistajaa.
+
+## OMISTAJA: PULUN STRIIMIAANI ELEVENLABS V4:AAN (28.9.2026 klo 17.58)
+
+Omistaja 28.9. klo 18.1x sanatarkasti: "Pulun voi ainakin jo vaihtaa striimi ääneksi." → Pelikoodari: Pulun striimipuhe (chat + puhekeskustelu) xAI → ElevenLabs v4 Pulun omalla aanella (Flicker) tunnetagein; malli workerin asetuksena, oletus v4 Turbo jos yksi vertailunayte kuulostaa samalta (kampanja 0,011 $ / 1000 mrk 12.10. asti, sitten 0,04 $; v4 0,022 $ → 0,08 $), muuten v4. Avain vain workerissa, paivakatto, valimuisti ennallaan. Nostojen ja isoisan luenta ennallaan (isoisan v4-nayte omistajalla).
+
+## OMISTAJA: PULU V4 TURBO; CUPOLAN AJELEHDUS JA ISS-NOPEUTUS NATIIVISSA HYVAKSYTTY; ISOISA KOLMELLA AANELLA (28.9.2026 klo 18.00)
+
+Omistaja 28.9. klo 18.2x kortilla: Pulun striimiaani ElevenLabs v4 Turbo (1. tavu 386 ms); Cupolan painoton ajelehdus (Linssiseppa f4eb4d34) ja ISS-nopeutus + kohdevalikko natiivissa (49f4a21b) hyvaksytty 1.0.38:aan. Sanatarkasti: "Generoi isoisää jollain toisella äänellä. Koita keksiä, mikä sopisi isoisäälle. Tee sama pätkä vaikka kolmella eri äänellä." → Pelikoodari: isoisa-pariisi v4:lla kolmella uudella aanella (vanhempi lampima tarinankertoja), voimakkuus pelin tasolle, 3 kutsua.
+
+## OMISTAJA: CUPOLA — NAKYMA LAHEMMAS LASIA, VAHEMMAN PEHMENNYSTA (28.9.2026 klo 18.06)
+
+Omistaja 28.9. klo 18.4x sanatarkasti: "Avaruuslinssin seuraavaan versioon voisi itse asiassa zoomata näkymää vähän lähemmäksi lasia. Nyt näkymä ulos jää vähän liian pieneksi ja samalla pehmennyksen määrää voi hieman vähentää." → Linssiseppa: kamera/rajaus lahemmas lasia (maa isompi, kehys vahemman), pehmennys hieman pienemmaksi, rae ja ajelehdus ennallaan; kuvapari omistajalle.
+
+## OMISTAJA: ISOISAN AANI — VAKAA JA ETAINEN, EI TUNNETAGEJA (28.9.2026 klo 18.10)
+
+Omistaja 28.9. klo 18.5x sanatarkasti: "Tee vielä lisää muita äänivertailuita. Mikään noista ei ollut nykyistä parempi. Nykyisessä äänessä on erityisen hyvä se, että se on todella vakaa, mikä sopii isoisän hieman mysteeriseen ja ei niin persoonalliseen rooliin. Tavallaan, että nykyinen luenta jättää henkilön mukavalla tavalla vähän etäiseksi. Eli tunnetakeja ei välttämättä tarvita ollenkaan." → Pelikoodari: Horatio v4 ilman tageja + 3 muuta vakaata, hieman etaista kertojaa, stability korkea, style 0, voimakkuus pelin tasolle; nykyinen isoisa pysyy kunnes omistaja valitsee paremman.
+
+## OMISTAJA: ISOISAN AANI — F3 (HOLLANTI, JEROEN HAMERLAND) PARAS TAHAN MENNESSA; NELJA UUTTA SAMAAN SUUNTAAN (28.9.2026 klo 18.20)
+
+Omistaja 28.9. klo 18.6x sanatarkasti: "F3 on ollut paras tähän mennessä. Siinä on mielenkiintoinen R-vika lukialla, mutta muuten on todella tasainen ja se R-vika jopa toimii isoisän tapauksessa. Etsi kuitenkin neljä uutta ja etsi kaikki tuon F3 suunnasta ja kaikki ulkomaalaisia." → Pelikoodari G-kierros: 4 ulkomaalaista, vanhempaa, hiljaisen arvovaltaista ja erittain tasaista aanta (v4, vakaus 1,0, style 0, ei tageja).
+
+## OMISTAJA: ISOISAN AANI — G4 MYOS HYVA; 8 SUOSITUINTA MATALAA JA VAKAATA KERTOJAA (28.9.2026 klo 18.26)
+
+Omistaja 28.9. klo 18.7x sanatarkasti: "G4 oli myös aika hyvä. Mitkä ovat kaikkein suosituimmat kertoja äänet, joilla on matala ja vakaa ääni? Voisi vielä sellaisia hakea suoraan vaikka kahdeksan kappaletta." → Pelikoodari H-kierros: 8 suosituinta kirjaston kertoja-aanta (matala, vakaa, vanhempi mies, ulkomaalainen), v4 vakaus 1,0, ei tageja; vertailukohdat F3 (Jeroen Hamerland) ja G4 (Mardi).
+
+## OMISTAJA: ISOISAN AANI — H1 (JAMES) HYVA; SEURAAVAT 8 (28.9.2026 klo 18.35)
+
+Omistaja 28.9. klo 19.0x sanatarkasti: "H1 oli hyvä. Generoi seuraavat kahdeksan." → Pelikoodari I-kierros: suosituimmat matalat vakaat kertojat sijat 9–16, samat asetukset; ehdokkaat nyt F3 (Jeroen Hamerland), G4 (Mardi), H1 (James).
+
+## OMISTAJA: PULULLE ÄÄNIEFEKTIT (V4 SFX-TAGIT) MAHDOLLISIMMAN ILMEIKKAASTI — KOE (28.9.2026 klo 18.42)
+
+Omistaja 28.9. klo 19.1x sanatarkasti: "Tuon on loistava uutinen pululle. Noita voisi tehdä paljonkin. Nythän pululle on tehty jo animaatioita, joissa se pingahtaa ensin pois ruudulta ja palaa sitten pikaisesti takaisin, kun siltä kysytään chatissa jotain, niin siihen sopisi myös kaikenlaiset ääniefektit sekä Avaus repliikkiin, kun valitaan ensimmäistä lentoa, niin siinähän pulu kiiruhtaa paikalle. Pulu oikeastaan elää kaikesta ekspressiivisyydestä, niin sitä voisi kokeilla nyt alkuun jopa niin paljon kuin mahdollista. sisällyttäen. Voisitkin tehdä muutamia esimerkkejä näille efekteille ja sitten siihen ISS-kohtaukseen, jos siinä saa niitä radioääniä tai muuta vastaavaa, niin voisi kokeilla." → Pelikoodari koe (~6–8 kutsua): chatin pingahdus, avausrepliikki kiiruhtaen, 2 ilmeikasta vastausta, ISS-radio (kohina, Quindar, kyparahengitys). Isoisa ilman efekteja (vakaa, etainen).
+
+## OMISTAJA: ISOISAN AANEN SUOSIKIT F3, G4, H1, IV4; J-KIERROS (28.9.2026 klo 18.50)
+
+Omistaja 28.9. klo 19.2x sanatarkasti: "LV4 oli viimeisimmistä isoisän äänistä paras. Geneeroi seuraavat kahdeksan. Ja pidä muistessa nämä, mitä olen sinulle merkannut parhaimmiksi. Haluan sitten lopuksi kuunnella vain ne. Mutta jatketaan vielä perkaamista, eli tee seurauksi vain ne kahdeksan seuraavaa." SUOSIKIT (lopuksi kuunneltavaksi vain nama): F3 Jeroen Hamerland (hollanti), G4 Mardi (saksa), H1 James (USA), Iv4 William 'Soothing and Calm' (saksa). Kopiot: /Users/Shared/Claude/proto-3d/lokit/pulu-v4-koe/suosikit/ (Pelikoodari). J-kierros: seuraavat 8 vanhempaa matalaa vakaata kertojaa.
+
+## OMISTAJA: PULUN ISS-REPLIIKIT (TERVETULO, SUOSITUKSET, RAPPAISY, KYYTI) + ATEENAN, SOFIAN JA PARIISIN PULU-LUENNAT V4:LLA (28.9.2026 klo 18.57)
+
+Omistaja 28.9. klo 19.3x sanatarkasti: "Pulu toimii nyt aivan loistavasti. ISS:ään voisi generoida jo valmiiksi erilaisia ääniä eri kohtiin pululle. Se voisi toivottaa tervetulleeksi ja vähän kertoa, mikä juttu tämä oikein on, vähän eri vaiheissa. Se voisi vaikka suositella muutamaa paikkaa ja sitten pyöräyttää pallon valmiiksi sinne ja kysyä, että haluatko katsoa tuonne. Ja ennen kuin pelaaja ehtii edes vastata, niin pulu räppäisi jo jonkun näkymän päälle. Sitten pahoittelisi ja menisi takaisin aloitusnäytölle ja antaisi lopulta pelajan itse katsella palloa. Mutta voisi tulla sitten taas takaisin, jos pelaaja päättää mennä ISS:n kyytiin. Saat keksiä eri juttuja sille. Voisit myöskin eroida peliin Ateenan ja Sofian ja Pariisin pulun luennat tuolla uudella äänellä." Paatoimittaja kirjoitti kasikirjoituksen docs/raportit/pulu-iss-kasikirjoitus-20260928.md (A tervetulo, B suositukset Venetsia/Alpit/Santorini, C rappaisy + anteeksipyynto, D paluu ISS-kyytiin; faktat tarkistettu). Pelikoodari generoi (v4, Livian aani, SFX/tunnetagit) ja kytkee web → natiivi; Ateenan, Sofian ja Pariisin Pulu-luennat v4:lla peliin (teksti ennallaan, tagit maltillisesti).
+
+## OMISTAJA: 3D-SYMBOLIERA HYVAKSYTTY (1.0.38) (28.9.2026 klo 19.14)
+
+Omistaja 28.9. klo 19.4x kortilla: Linssisepan 3D-symbolit takaisin x1,35, kallistettuna koko sidottu katsepisteeseen (lahestyessa kasvaa), erikoismallit ylhaalta ja kaupungin vieressa (0ff66cfc) hyvaksytty 1.0.38:aan. Jatkoon: Visby/Vimmerby-nimiopaallekkaisyys (Natiivi-UI + Linssiseppa).
+
+## OMISTAJA: CUPOLA VIELA LIIAN SUMEA; TF 1.0.38 VIENTIIN; PULUN V4 TURBO + NOPEA ALOITUS TUOTANNOSSA (28.9.2026 klo 19.25)
+
+Omistaja 28.9. klo 19.5x kortilla (Cupola cl12, zoom 1,3x, pehmennys 0,75x) sanatarkasti: "Vielä liikaa blurrina" → Linssiseppa: pehmennys ~0,4x ja 0,25x vertailuun, zoom pysyy. BUILD 38 (proto 77ff5f6e: Maapallon vuosi dev, maakuntakartta, kyydin-taivas, ISS-nopeutus + ajelehdus; Laitetestaaja PASS) → VIE 1.0.38. 1.0.39: hyppykorjaus + Pulun pysaytys chatista (karjessa), loitonnusraja, 3D-symbolit (maalle + paletti), Cupola-lasi. Web: #3572 (v4 Turbo) 18.54 ja #3567 (nopea aloitus) 19.16 tuotannossa. Natiiviseppa korjasi proto-kaanna.sh:n VIKA-rivin omistajan luvalla (19.0x).
+
+## TILA: TF 1.0.38 SISÄISESSÄ RYHMÄSSÄ (28.9.2026 klo 19.37)
+
+Julkaisija 28.9. klo 19.35: TF 1.0.38 (202609281624) sisäisessä ryhmässä, BUILD 38 = proto 77ff5f6e, vienti 36450902885 success testit-runnerilla (10 min), Testattavaa asetettu. Seuraava: 1.0.39-juna (hyppykorjaus + Pulun puheen pysäytys + loitonnusraja) Laitetestaajan savukkeen jälkeen.
+
+## TILA: PALLOPOLTTO VALMIS, VIENTI YÖLLÄ (28.9.2026 klo 19.40)
+
+Karttaseppä 28.9. klo 19.39: pallo valmis 564 647 laattaa (Z0–Z9 349 525 + Z10 215 122). Osa 1/64 pyöri 9 h ikuisessa silmukassa (tee-pallolaatat.mjs --lahdelaatat-suodatin, viimeinen sarake) — korjaus PR #3574 testin kanssa, Julkaisijan junaan. Pohjan laattavienti z10-shardissa 309/338 (~30 min), sitten koeluettelo koe/2026-09-27; pallon vienti (omistajan hyväksymä vaihe 2) alkoi 19.39, arvio 5–8 h. Sen jälkeen ?pyramidi=2026-09-27 katsottavissa; osoittimen vaihto on omistajan erillinen päätös (kortti aamulla).
+
+## TILA: SKEEMA 1.56 TUOTANNOSSA, KERMA-404 E2E PASS (28.9.2026 klo 19.50)
+
+Siirtoseppä 28.9. klo 19.4x: skeema 1.56 tuotannossa (v279→v281), eheysvartija kunnossa; #3530 pienet kuvat 3 503 uusittu, otos 40/40. Natiiviseppä kerma-404 306134ee E2E PASS (z3–z5-kermahaut verkkoon 0, ennen 87; 0 poikkeusta) → 1.0.40-junaan. ISS-realismi web odottaa Pelikoodarin kyytihaaraa.
+
+## PÄÄTÖS: CL13 HYVÄKSYTTY — SYMBOLIT MAALLE, CUPOLA 0,25×; NELJÄ KAUPUNKIA EI KOHTEITA (28.9.2026 klo 19.57)
+
+Päätoimittaja 28.9. klo 20.0x (omistajan kaappaus 'Colosseum meressä, eri väri' ja 'Vielä liikaa blurrina'): Linssisepän cl13 hyväksytty — symbolit-3d-luonnollinen f6740687 (Colosseum 338° maalla 100 % ja kartan värinen, Visby Gotlannilla ei peitä Vimmerbyä) ja Cupola-kehys 0,25× (pehmea4) + pölyt → merge-pyynnöt Natiivisepälle 1.0.40-junaan. Jäljelle jäävä blurri tulee maan pilvikuvasta (4096 px, 30–50 px/tekseli) → pilvet-tarkat cc513896 (bikuubinen + kohinakynnys) cl14:llä, kuvapari ~20.3x. Natiivi-UI:n kysymys: Trondheim, Salzburg, Český Krumlov ja Brugge eivät ole kohdekaupunkeja (webin 266 MAAILMANKARTTA.cities), kaupungit.json ennallaan; natiivi seuraa webiä.
+
+## PÄÄTÖS: CUPOLAN TERÄVÄT PILVET JA PULUN V4-TASOITUS (28.9.2026 klo 20.05)
+
+Päätoimittaja 28.9. klo 20.1x: Linssisepän cl14 hyväksytty — pilvet-tarkat cc513896 (bikuubinen näyte + kohinakynnyksen reuna, vain kyyti; kaukonäkymä ennallaan) 1.0.40-junaan symbolien ja cupola-polyjen kanssa; webin kaavat iss-realismi-suunnitelman kohta 2b Siirtosepälle. Pelikoodari: v4-äänet soivat 0–6 dB hiljaisempina kuin v3, koska putki ei normalisoi → kaikki pelin v4-Pulu-tiedostot tasoitetaan -17,2 LUFS:iin (192 kbps, limitteri 0,97), raaka talteen. Tekninen päätös, ei omistajan kortti. Pulun ISS-repliikit A1–D4 + Ateena-3 v4 -kooste omistajalle kuunneltavaksi; haara pelikoodari-pulu-iss-aanet 5ca063230, PR vasta omistajan OK:lla.
+
+## PÄÄTÖS: PULUN ISS-REPLIIKIT PELIIN (28.9.2026 klo 20.06)
+
+Omistaja 28.9. klo 20.06 kortilla (kooste pulu-iss-kooste.mp3, A1–D4 + Ateena-3 v4): "OK, peliin". Pelikoodari avaa PR:n pelikoodari-pulu-iss-aanet (10 ISS-repliikkiä, Quindar D-jaksossa, Ateena/Sofia/Pariisi v4 tasoitettuina) Julkaisijan junaan; sen jälkeen SHA Siirtosepälle ISS-realismin kyytiin.
+
+## TILA: 1.0.39-SAVUKE EI PASS (28.9.2026 klo 20.23)
+
+Natiiviseppä 28.9. klo 20.23: 1.0.39-savuke a479a462 EI PASS — Pulun pysäytys OK, mutta hyppykorjausta ei voitu testata: nostokortin lukijarivin nappi sulki kortin 3/3 (raportti 630a2f415). Kaksinappinen lukija 5313075a on ollut mukana BUILD 37:stä (TF 1.0.37/1.0.38), joten vika on joko jo TF:ssä tai napautuskohdassa (UITK-napit eivät näy ui-puussa). Natiivi-UI todentaa a479a462:lla. 1.0.40 (kerma-404, 3D-symbolit, Cupola, pilvet, maakunta-linssi) odottaa sivuhaarassa natiiviseppa/juna-1040 9c974fd8.
+
+## PÄÄTÖS: ISOISÄN ÄÄNI — EI VIELÄ GENEROINTIA (28.9.2026 klo 20.29)
+
+Omistaja 28.9. klo 20.29 (kuunteli suosikit F3/G4/H1/Iv4 + nykyinen v3, kortti valinnasta): "Älä hoppuile, ei vielä mitään generointia." Ääntä ei valittu; isoisän luentoja tai uusia näytteitä ei generoida ennen omistajan erillistä lupaa. Pelikoodarille välitetty.
+
+## OMISTAJA: CODEX TARKISTAA PULUN TEKSTIT, SITTEN PULUN LUENNAT V4:LLÄ (28.9.2026 klo 20.36)
+
+Omistaja 28.9. klo 20.36 sanatarkasti: "Pyydä kodeksia tarkistamaan, onko kaikki uudet tekstit pulun osalta jo lähetetty peliin, ja generoi sen jälkeen pulun luennat uudella äänellä." → Codexille posti/fable-codex-pulu-tekstit-tarkistus-20260928.md (f98968ba3), vastaus codex-fable-pulu-tekstit-tarkistus-20260928.md (Postivahti ilmoittaa). Pelikoodari valmistelee inventaarion (vanhalla äänellä olevat ennalta äänitetyt Pulun luennat, fokusvirta 47 kaupunkia + muut), merkit/$ ja tasoitusputken -17,2 LUFS; generointi eleven_v4 (Flicker) vasta Codexin vastauksen jälkeen. Isoisää ei generoida.
+
+## OMISTAJA: MAAKUNTATILASSA RAJAT NÄKYVIIN, TOINEN NAPAUTUS POISTAA VALINNAN (NATIIVI) (28.9.2026 klo 20.38)
+
+Omistaja 28.9. klo 20.38 kaappauksella (TF, Peloponnesos valittuna, rajat tuskin näkyvät; docs/raportit/kaappaukset/omistaja-20260928/maakuntatila-rajat-ja-poisvalinta-2037.png) sanatarkasti: "Kun valitsee maakunta tila on päällä, niin silloin maakuntien rajat pitäisi näkyä. Ja mikäli pelaaja painaa uudestaan samaa maakuntaa, niin silloin valinta pitäisi tyhjentyä. Ja pelin palata takaisin oletusnäkymään." → Natiivi-UI (0daf557e:n jatko): maakuntatilassa kaikkien maakuntien rajat selvästi näkyviin (ei ohuina), saman maakunnan uusi napautus tyhjentää valinnan (väri ja kuvausruutu pois) ja palauttaa tilan valinnattomaan perusnäkymään; kytkin ennallaan. Kuvapari omistajalle, sitten 1.0.40/1.0.41.
+
+## OMISTAJA: TESTFLIGHTIN AVAUSSIVUT POIS (MITÄ TESTATA + LÄHETÄ PALAUTETTA) (28.9.2026 klo 20.38)
+
+Omistaja 28.9. klo 20.38 TF 1.0.38:n Kehittäjältä-sivun kaappauksella sanatarkasti: "Saakotete ja tästä seuraavaa lähetä palautetta sivua pois pelin käynnistyksestä?" Sivut ovat TestFlightin omia (näkyvät vain uuden buildin ensimmäisellä avauksella). → Julkaisija 1.0.39:stä: Testattavaa tyhjäksi (kumoaa 28.9. yhden rivin säännön; muutoslokirivi ja pelin Peli päivittyi -lappu ennallaan) ja sisäisen ryhmän TF-palaute pois (ASC betaGroups feedbackEnabled=false). Omistaja todentaa 1.0.39:n avauksessa; palaute kulkee jatkossa kaappauksina chattiin.
+
+## OMISTAJA: MAAKUNTATILA — TOINEN NAPAUTUS POISTUU TILASTA (28.9.2026 klo 20.39)
+
+Omistaja 28.9. klo 20.39 sanatarkasti: "Silloin poistutaan koko maakuntatilasta. Nyt ei nimittäin ole mitään nappia poistua siitä tilasta." → tarkentaa 20.38-kirjausta: saman maakunnan uusi napautus tyhjentää valinnan ja poistuu koko maakuntatilasta tavalliseen karttanäkymään. Natiivi-UI tarkistaa myös valikkonapin kytkimen tilan aikana (omistajan mukaan poistumisnappia ei ole).
+
+## OMISTAJA: PULUN LUENTA HYPPÄÄ JA JATKUU CHATIN SULUN JÄLKEEN (1.0.38, UUSI ÄÄNI) (28.9.2026 klo 20.41)
+
+Omistaja 28.9. klo 20.41 sanatarkasti: "Pulun luenta hyppää vieläkin, eikä se lopeta luentaa, vaikka chat-ikkunan sulkee. Pitäisikö korjaus tulla jo seuraavassa versiossa? Käytössä oli se uusi ääni." Molemmat korjaukset (hyppy 9057ea82, pysäytys 29b1a83a) ovat 1.0.39-junassa a479a462, eivät 1.0.38:ssa. 1.0.39-savuke oli EI PASS nostokortin napin takia. → Natiivi-UI todentaa a479a462:n laitteella uudella äänellä (ElevenLabs v4 Turbo -striimi) + nostokortin napin; 1.0.39 ulos heti kun PASS.
+
+## TILA: 1.0.39-PUHEKORJAUKSET PASS, NOSTOKORTIN NAPPI FAIL; PULU 429 VERKOLLE (28.9.2026 klo 20.44)
+
+Natiivi-UI 28.9. klo 20.44 a479a462:n puhekoodilla (ElevenLabs): hyppy PASS nostossa, Pulun pysäytys chatin sulkuun PASS (sulun jälkeen 0 palaa, häivytys 0,2 s). Nostokortin lukijanappi FAIL: LISÄÄ sulki kortin (korjattu 942f37bf), mutta lukijan kaiutin sulkee kortin yhä → korjaus 1.0.39:ään. Pulu-palvelin antaa HTTP 429 (päiväraja) Macin verkolle, myös omistajan laitteille → Pelikoodari selvittää, nollaa tämän päivän IP-laskurin jos mahdollista ja ohjaa roolien mittaukset kehittäjäkoodille.
+
+## PÄÄTÖS: BUILD 39 HETI, KORTTIKORJAUS 1.0.40:EEN (28.9.2026 klo 20.44)
+
+Päätoimittaja 28.9. klo 20.44 (Natiivisepän kysymys): BUILD 39 = 5b7261cc heti TF-vientiin — omistajan kaksi tärkeintä korjausta (Pulun hyppy + pysäytys chatin sulkuun) laitteella PASS. Nostokortin lukijan kaiutinvika on vanha (TF 1.0.37/1.0.38) → Natiivi-UI:n korjaus 1.0.40-junaan, sen jälkeen maakuntatila. Testattavaa tyhjä 1.0.39:stä.
+
+## OMISTAJA: ALOITUSLENTO V3F4 TOISTAISEKSI; POLLO-RAJA JA KEHITTÄJÄKOODI (28.9.2026 klo 20.57)
+
+Omistaja 28.9. klo 20.57 kortilla (v3f4-video + kuvaparit 2,0/7,3/9,5 s) sanatarkasti: "Ei ole viel hyvä mutta pidetään tämä toistaiseksi" → v3f4 (aloitus-paivayo, käännös 7d8a0812) 1.0.40-junaan välivaiheena; uusi kierros vasta omistajan suunnalla. Pöllö-raja: chatin laskuri 30/IP/vrk täyttyi (31), Pelikoodari nollasi yhden KV-avaimen; omistaja ei ollut estossa, koska natiivin kehittäjätila pääkoodilla lähettää x-pollo-kehittajan (chat, puhe, realtime). Julkaisija #3579: 15 savuketta saa otsakkeen yhteisestä apufunktiosta (savukkeet-mac-secret, vartiotesti). Kaikki roolit ohjeistettu käyttämään kehittäjäkoodia tuotantokokeissa.
+
+## TILA: TF 1.0.39 SISÄISESSÄ RYHMÄSSÄ, TF-PALAUTE POIS (28.9.2026 klo 21.01)
+
+Julkaisija 28.9. klo 21.00: TF 1.0.39 (202609281745, proto e4c624a9) sisäisessä ryhmässä ilman Testattavaa-tekstiä; sisäisen ryhmän feedbackEnabled True → False (ASC API, #3577). Mukana Pulun hyppykorjaus + puheen pysäytys chatin sulkuun. Omistaja todentaa avauksessa, katoavatko TF:n avaussivut.
+
+## PÄÄTÖS: MUUTOSLOKIRIVI TUOTANTOON ENNEN TF-RYHMÄÄ (28.9.2026 klo 21.12)
+
+Omistaja 28.9. klo 21.12 1.0.39:n avauksesta (Peli päivittyi -lappu varatekstillä 'muutokset päivittyvät tähän pian'): "Päivitykset katosivat myös tästä". Syy: muutoslokirivi #3578 mainiin 21.00, sisältöpaketin vienti d75821ca6 vasta käynnissä kun build tuli ryhmään; ei liity tyhjään Testattavaa-kohtaan. → Julkaisija: muutoslokirivi mainiin + sisältöpaketin vienti valmiiksi ENNEN buildin lisäämistä sisäiseen ryhmään.
+
+## OMISTAJA: ISS-KYYTIIN OMA SIJAINTI, PILVIPEITON JA VUODENAJAN SÄÄTIMET (28.9.2026 klo 21.15)
+
+Omistaja 28.9. klo 21.15 TF 1.0.39:n Cupola-kaappauksella (Dardanellit, pilvet peittävät; docs/raportit/kaappaukset/omistaja-20260928/iss-cupola-sijainti-pilvet-vuodenaika.png) sanatarkasti: "Lisää myös mahdollisuus mennä käyttäjän sijainnin kohdalle. Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle sekä vuodenajalle?" → Linssiseppä 2 (natiivi ISS-kyyti): 1) Lennä kohteen ylle -valikkoon 'Oma sijainti' (karkea sijainti, mieluiten ilman lupakyselyä workerin maa-/kaupunkitiedosta; laitteen sijainti vain jos tarpeen ja vain käytön aikana), 2) pilvipeiton säädin (0 = selkeä … nykyinen), 3) vuodenajan säädin (BMNG-kuukausipinta + Maapallon vuosi -aineisto). Kevyt UI, ei koristeita. Kuvapari omistajalle; webiin Siirtosepän ISS-realismin mukana. Huom: 1.0.39:ssä on vielä vanha sumea pilvikuva, terävät pilvet 1.0.40:ssä.
+
+## OMISTAJA: ISS-SIIRTYMÄ PAIKKOJEN VÄLILLÄ ENINTÄÄN 5 S (28.9.2026 klo 21.16)
+
+Omistaja 28.9. klo 21.16 sanatarkasti: "Ja siirtymä paikkojen välillä ei saa kestää yli 5sek pidempään" → Linssiseppä 2: jokainen Lennä kohteen ylle -siirtymä (myös Oma sijainti ja paluu LIVEen) ≤ 5 s etäisyydestä riippumatta; pisin mitataan laitteella. Sama raja webin ISS-kyytiin (Siirtoseppä).
+
+## OMISTAJA: ISS-SÄÄTÖPANEELI MODULAARISISTA ELEMENTEISTÄ — CODEXILTA (28.9.2026 klo 21.18)
+
+Omistaja 28.9. klo 21.18 sanatarkasti: "Säätimet voisi olla ISS säätöpaneelissa. Tilaa codexilta. Voisi olla muutama modulaarinen elementti mitä voidaan yhdistellä ja monistaa tarpeen mukaan" → Codexille posti/fable-codex-iss-saatopaneeli-20260928.md (292279232): 9-slice-paneeli, liukusäädin, segmenttinappi, valikkorivi, lukemakilpi, sulkunappi (tilat perus/aktiivinen/pois), ISS-paneelien henki nykyisellä vihreällä korostuksella, kevyt (≤ 45 % ruudusta, piilotettava), SVG+PNG @2x/@3x + HTML-esikatselu; vastaus codex-fable-iss-saatopaneeli-20260928.md. Linssiseppä 2 tekee toiminnot nyt vaihdettavan nahan varaan; web Siirtoseppä.
+
+## OMISTAJA: PULUN VALINTATAULU ASTRONAUTIN KAMERAN ALKUUN (28.9.2026 klo 21.21)
+
+Omistaja 28.9. klo 21.21 sanatarkasti: "Pulu voisi esitellä taulun linssin alussa jossa eri vaihtoehdot esim. Meno ISS:n sisälle sekä muut ja sen taulun saisi aina esille napauttamalla pulua" → Pelikoodari (web ensin): linssin alussa Pulu esittelee valintataulun (ISS:n sisälle / kyyti-Cupola, astronauttien kuvat, Lennä kohteen ylle, Oma sijainti, muut linssin toiminnot); Pulun napautus avaa taulun aina; sovitus ISS-tervetulorepliikkeihin (#3575); kevyt, myöhemmin Codexin ISS-paneelielementteihin puettava; kuvat Päätoimittajalle ennen PR:ää, sitten natiiviohje Linssisepälle.
+
+## OMISTAJA: PULUN TAULUSSA VAIN MOODIEN VÄLINEN LIIKKUMINEN (28.9.2026 klo 21.24)
+
+Omistaja 28.9. klo 21.24 sanatarkasti: "Älä lisää tauluun iss:n sisällä tapahtuvia vaihtoehtoja. Ainoastaan eri moodien välillä liikkumiset" → tarkentaa 21.21-kirjausta: Pulun valintataulussa vain linssin moodit (ISS:n sisälle, astronauttien kuvat, pallonäkymä ym.); Lennä kohteen ylle, Oma sijainti, nopeus ja säätimet kuuluvat ISS-säätöpaneeliin. Pelikoodarille välitetty.
+
+## OMISTAJA: ISS-OHJAAMO PIMEÄKSI, AURINKO POKISSA, ISO SIVUIKKUNA — CODEXILTA CUPOLA 3 (28.9.2026 klo 21.58)
+
+Omistaja 28.9. klo 21.58 (3 ruutua mainosvideon avaruusasemaikkunasta sävyreferenssiksi) sanatarkasti: "onko mitään mahdollisuutta tehdä ISS:stä näin hienoa? tuossa elää auringon valo ikkunanpokissa. ainakin tuo että on todella pimeää ohjaamossa tuo tunnelmaa. codexilta voisi pyytää vastaavan ohjaamon sekä vaaka että pystyversiota varten. voisi toimittaa nämä kuvat referenssiksi sävyjen osalta. mutta onko tämä joku eri alus kuin ISS? myös nuo pienet vaihtelevat yksityiskohdat ovat hyviä sekä tuo pieni lappu ikkunan päällä. voisi käyttää pelissä sellaista kuvakulmaa missä yksi iso ikkuna olisi pääosassa ja sivuikkunat näkyisivät vähän. mitä mieltä?" → Codexille posti/fable-codex-iss-ohjaamo-20260928.md (53ab2a0c5): Cupola 3 sisältä yhden ison sivuikkunan kulmasta, pimeä ohjaamo, auringonvalo pokissa erillisenä kerroksena, yksityiskohdat + lappu, pysty 1290×2796 ja vaaka 2732×2048, kerrokset (ohjaamo/valo/heijastus/maski); referenssit vain sävyihin. Linssiseppä: kamerakulma horisonttiin, pimennys+valotus, valo radan auringon mukaan; Päätoimittajan suositus horisonttinäkymä oletukseksi ja kohteen ylle lennettäessä katse kattoikkunaan.
+
+## OMISTAJA: SONNET 5.5 ROOLEILLE JA PULULLE (28.9.2026 klo 21.59)
+
+Omistaja 28.9. klo 21.59 sanatarkasti: "sivuhuomiona, sonnet on päivittynyt versioon 5.5. ja sen päivitetyn mallin voisi ottaa sonneteille käyttöön ja samalla miettiä että riittäisikö tämä uusi sonnet malli myös jonkun opuksen korvaajaksi sekä miettiä että millä effort tasolla kannattaa ajaa." ja "ja pulu pitää päivittää tähän myös. mikä effort pululla on nyt?" Tila: sovelluksen mallivalikossa ei vielä Sonnet 5.5:tä (vain claude-sonnet-5) → vaihto kun valikossa. Päätoimittajan ehdotus: Postivahti medium, Sisältökirjuri ja Laitetestaaja high 5.5:llä heti; Julkaisija kokeeksi Sonnet 5.5 high yhden päivän; koodiroolit Opuksella. Pulu nyt claude-sonnet-5 ajattelu pois (ei effortia; realtime xAI pohdinta none) → Pelikoodari: Sonnet 5.5 API-id, ajattelu pois tai effort low, viivevertailu, POLLO_MALLI-PR.
+
+## TILA: SONNET 5.5 VALIKOSSA, MUTTA SESSIOT YHÄ SONNET 5 (28.9.2026 klo 22.00)
+
+Päätoimittaja 28.9. klo 22.00: omistajan mallivalikossa näkyy Sonnet 5.5, mutta sessioiden hallintatyökalu tarjoaa vain claude-sonnet-5 (claude-sonnet-5-5 = tuntematon), ja Postivahti ilmoittaa itsestään 'Sonnet 5, claude-sonnet-5'. Vaihto tehtävä omistajan valikosta Sonnet-sessioihin (Postivahti, Sisältökirjuri, Laitetestaaja) tai kun työkalun lista päivittyy.
+
+## OMISTAJA: SONNET 5.5 KOLMEEN SONNET-SESSIOON + JULKAISIJA KOKEEKSI (28.9.2026 klo 22.02)
+
+Omistaja 28.9. klo 22.02 kortilla: 'Vaihdan 3 + Julkaisija' — omistaja vaihtaa mallivalikosta Sonnet 5.5:n Postivahdille (effort medium), Sisältökirjurille ja Laitetestaajalle (high) sekä Julkaisijalle kokeeksi (effort high, Päätoimittaja asetti). Päätoimittaja arvioi Julkaisijaa 29.9. illalla (junan läpimeno, virheet, TF-viennit); koodiroolit Opuksella.
+
+## PÄÄTÖS: PULUN LUENNAT V4:LLÄ GENEROIDAAN (CODEXIN TARKISTUS VALMIS) (28.9.2026 klo 22.06)
+
+Codex 28.9. (posti/codex-fable-pulu-tekstit-tarkistus-20260928.md, 7ba726d04): KAIKKI PELISSÄ EI — 50/50 kaupungin Pulu-tekstit mainissa, 45 äänitettyä kommenttia täsmää tiivisteisiin 45/45; 5 uutta kaupunkia (Bryssel, Košice, Ljubljana, Luxemburg, Valletta) 10 kuplaa ilman ääntä; maakuntien Pulu-Q/A PR:issä #3560/#3549/#3536 (konfliktissa, Julkaisija) eivätkä ole puhuttuja; ISS 10 repliikkiä #3575. Päätoimittaja 28.9. klo 22.06: generointi käynnistetään omistajan käskyn mukaisesti (Pelikoodari, pelikoodari-pulu-v4-kaikki, 75 kpl, ~0,33 $, tasoitus -17,2 LUFS; jo v4:llä olevat ohitetaan). Toimitukselliset korjaukset ennen generointia: Košice 2 (Hlavná levenee linssinmuotoiseksi toriksi), Valletta 1 (Unescon maailmanperintökohde), Valletta 2 (1873 laivaston rungot mustia, ei harmaita), Ljubljana 2 'Tänään' → 'Nykyään'. Kooste omistajalle ennen PR:ää. LIVIAN_UUSI_MATKA-tervehdykset tarkoituksella ilman ääntä.
+
+## TILA: PULU SONNET 5.5:LLÄ (#3580), VASTAUS 2,3× NOPEAMPI (28.9.2026 klo 22.07)
+
+Pelikoodari 28.9. klo 22.07: Pulun malli claude-sonnet-5-5 (/v1/models, luotu 28.9.). Ajattelu 'disabled' = 400 → 'between_tools' (API:n pienin tila, Pululla ei työkaluja); effort low hylätty (5,4 s, 1/5 tyhjä). Paikallinen worker, 5 kysymystä: 1. pala mediaani 2,8 s (0,9–4,8) → 1,2 s (0,95–1,33), koko vastaus 13,9 → 7,3 s, laatu samaa tasoa. PR #3580 (v2377) Julkaisijan junan kärkeen + pollo-workerin julkaisu.
+
+## TILA: JULKAISIJA SONNET 5.5 HIGH (KOE) (28.9.2026 klo 22.11)
+
+Omistaja 28.9. klo 22.11: Julkaisija vaihdettu valikosta Sonnet 5.5:een (effort high), nollattu 22.04 (luovutus julkaisija-luovutus-20260928 939761106). Päätoimittaja arvioi 29.9. illalla: junan läpimeno, virheet, TF-viennit; jos heikompi, takaisin Opukselle.
+
+## TILA: LEVYSIIVOUS 67 → 85 GT; NOLLAUKSET; SONNET 5.5 = 200 K KONTEKSTI (28.9.2026 klo 22.19)
+
+Päätoimittaja 28.9. klo 22.19: Postivahti 22.16 levy 66 Gi (raja 80) → poistettu proto-3d/lokit 111 kansiota, joissa ei yhtään yli 48 h tuoreempaa tiedostoa (11,4 Gt), ja 22 yli 24 h vanhaa .app-kopiota (7,6 Gt); levy 85 Gi vapaana. HUOM: BSD find ei ymmärrä -newermt '-48 hours' (koeajo merkitsi tuoreetkin) → käytä -mmin. Nollaukset: Natiivi-UI 90 %, Natiiviseppä 71 %, Linssiseppä 2 70 %, Sisältökirjuri ja Laitetestaaja (yli 100 % 200 k:sta). Havainto: valikon Sonnet 5.5:llä on 200 k:n konteksti (Julkaisija 69 % heti nollauksen jälkeen, pohjakuorma ~85 k: työkalut, MCP, kehote, muisti) → kysytään omistajalta 1M-versiota.
+
+## OMISTAJA: JULKAISIJA TAKAISIN OPUKSELLE; CUPOLA-HORISONTTILUONNOS (28.9.2026 klo 22.21)
+
+Omistaja 28.9. klo 22.21 kortilla: Sonnet 5.5 1M -versiota ei löydy valikosta → 'Julkaisija takaisin Opukselle' (claude-opus-5-5, effort high, nimi 'Julkaisija (Opus)'); Postivahti, Sisältökirjuri ja Laitetestaaja pysyvät 200 k:n Sonnet 5.5:llä ja nollataan useammin (raja 70 % 200 k:sta). Linssiseppä: Cupola-horisontti e711cf84 (kamera radan suuntaan 23° alas, ohjaamo ×0,22, neljä reunavalokerrosta auringon suunnan mukaan + sininen maavalo) luonnoksena omistajalle; Lennä kohteen ylle teleobjektiivilla ilman kehystä, kattoikkuna A/B; korjaus: yläosan tyhjä musta kaista täytetään; laitepari aamulla.
+
+## OMISTAJA: CUPOLAN PÄÄIKKUNA PYÖREÄ, TIIVIS RAJAUS PYSTY/VAAKA (28.9.2026 klo 22.23)
+
+Omistaja 28.9. klo 22.23 horisonttiluonnoksen nähtyään sanatarkasti: "voisiko ennemmin käyttää sitä pyöreää ikkunaa ja rajata se lähelle? toimisi aika hyvin vähän eri rajauksella pysty ja vaaka muodossa" → korvaa 21.58-kirjauksen ison sivuikkunan: pääkulma on pyöreä kattoikkuna tiiviisti rajattuna (omat rajaukset pysty/vaaka), pimeä ohjaamo, aurinko pyöreässä pokassa, yksityiskohdat ja lappu säilyvät; horisontti e711cf84 A/B:ksi; Lennä kohteen ylle -teleobjektiivi ennallaan. Linssiseppä: luonnos pysty+vaaka, laiteajo aamulla. Codexin tilaus päivitetty (posti/fable-codex-iss-ohjaamo-20260928.md, 0eb761cb8).
+
+## OMISTAJA: AVARUUSKÄVELYN KONSEPTIKUVAT CODEXILTA (28.9.2026 klo 22.25)
+
+Omistaja 28.9. klo 22.25 sanatarkasti: "miltä näyttäisi jos pelaaja pääsisi ISS:n ulkopuolelle mukaan avaruuskävelylle? toisiko se jotain uutta?" Päätoimittajan suositus: lyhyt käsikirjoitettu hetki (1–2 min, Pulun taulun oma tila): ilmalukko → turvaköysi → auringonnousu aseman yli → Pulu radiossa → yksi valokuva, verrataan astronautin NASA-kuvaan; ei vapaata tilaa; Cupola 3:n jälkeen. Omistaja kortilla: 'Tilaa konseptikuvat' → Codexille posti/fable-codex-avaruuskavely-konsepti-20260928.md (pysty 1290×2796 + vaaka 2732×2048, sama hetki, sävy kuten ohjaamotilauksessa). Koodaus vasta omistajan erillisellä luvalla.
+
+## PÄÄTÖS: PULU V4 75/75 VALMIS; KAKSI KUPLAA LYHENNETÄÄN; VALLETTAN RUNGOT MUSTIKSI (28.9.2026 klo 22.32)
+
+Pelikoodari 28.9. klo 22.32: Pulu v4 75/75 generoitu ja tasoitettu -17,2 LUFS (±0,3), 0 virhettä, haara pelikoodari-pulu-v4-kaikki-2 ce591de17 (ei PR:ää ennen omistajan OK:ta). Kuplaraja 125 mrk (tests/fokusvirta.test.mjs) → Päätoimittaja lyhensi: kosice-4 'Košice on nykyään Slovakian toiseksi suurin kaupunki. Sen pääkatu Hlavná levenee yhä linssinmuotoiseksi toriksi.' (112) ja valletta-4 'Isoisäsi näki satamassa Britannian mustia panssarilaivoja. Nykyään sama satama täyttyy risteilijöistä ja turisteista.' (117); 2 riviä uusiksi. Kaanon: fokusvirta-valletta isoisän matkakirja 'harmaat/harmaita rungot' → 'mustat/mustia rungot' (1873 Kuninkaallisen laivaston rungot mustia); isoisän ääntä ei generoida uudelleen. Cupolan pyöreä ikkuna 8852e368 (pysty 94 % leveydestä, vaaka kerrokset 90°, ohjaamo ×0,22) luonnoksena omistajalle, laitepari aamulla cl17.
+
+## PÄÄTÖS: YÖTAUKO EI VOIMASSA 28.–29.9. YÖNÄ (28.9.2026 klo 22.33)
+
+Päätoimittaja 28.9. klo 22.33 (omistaja kysyi 'mikä yötauko?'): 27.9. yötauko (ei käännöksiä/simulaattoreita klo 22.30 → polton loppu) koski Karttasepän yöpolttoa. Pallopoltto valmistui 19.39, ja käynnissä on vain laattavienti (aws s3 sync, kevyt) → yötauko ei ole voimassa tänä yönä. Käännökset ja simulaattorit normaalisti (nice 15, yksi käännös kerrallaan, GPU-väistö). Tavoite: 1.0.40 (1ad1c538 + Natiivi-UI:n kaiutinkorjaus) TF:ään yöllä savukkeen PASS:lla. Jatkossa yötauko vain, kun Karttaseppä ilmoittaa raskaan yöpolton.
+
+## TILA: VANHENTUNUT KUORMARAJALIPPU POISTETTU (28.9.2026 klo 22.35)
+
+Päätoimittaja 28.9. klo 22.35: /tmp/matkakirja-kuormaraja ('Omistajan kuormaraja klo 17 asti … Poista klo 17', luotu 11.30) oli jäänyt päälle ja esti 22.18:n junakäännöksen asennuksen Laitetestaajan laitteisiin 1572C658/3B4CDACB (Natiiviseppä). Poistettu; nice-oletus (11.31) korvasi sen jo aamulla. Julkaisija: aikarajalliset liput poistetaan määräaikana.
+
+## TILA: PULU SONNET 5.5 TUOTANNOSSA (28.9.2026 klo 22.36)
+
+Julkaisija 28.9. klo 22.36: #3580 mergetty (v2377, a6dec6558), pollo-worker julkaistu (36473166370, versio ebabf949) — Pulun chat käyttää nyt claude-sonnet-5-5:tä ajattelu between_tools.
+
+## OMISTAJA: PULUN V4-ÄÄNET PELIIN HETI (28.9.2026 klo 22.36)
+
+Omistaja 28.9. klo 22.36 sanatarkasti: "sano heti kun uudet pulun äänet ovat pelissä" → koosteen kuuntelua ei odoteta: Pelikoodari avaa PR:n pelikoodari-pulu-v4-kaikki-2 (75 v4-luentaa, 2 lyhennettyä kuplaa, Vallettan isoisän rungot mustiksi) Julkaisijan junan kärkeen; Julkaisija ilmoittaa tuotannosta; Päätoimittaja kertoo omistajalle heti.
+
+## OMISTAJA: ISOISÄN LUENNAN ALKU JA KAUPUNGIN NIMI PUUTTUVAT (NATIIVI 1.0.38–1.0.39) (28.9.2026 klo 22.39)
+
+Omistaja 28.9. klo 22.39 sanatarkasti: "v39 isoisän luennan alusta puuttuu pala sekä myös kaupungin nimet ja sloganin kohdasta puuttuu yleensä kaupungin nimi. tämä oli jo ainakin v38:ssa sama ongelma" → Natiivi-UI kaiutinkorjauksen jälkeen ennen maakuntatilaa: juurisyy (klipin lataus/häivytys/hiljaisuuden leikkaus/aloituskohta; nimi-klippi ennen slogania kuten webissä, paketissa?), mittaus currentTime/timeSamples, laitteella ennen/jälkeen; 1.0.40 jos ehtii, muuten 1.0.41.
+
+## OMISTAJA: STRIIMILUENTA HYPPII YHÄ 1.0.39:SSÄ (28.9.2026 klo 22.40)
+
+Omistaja 28.9. klo 22.40 sanatarkasti: "hyppii vielä v39, ei ala alusta ainakaan. testaan vähän lisää" (kysymykseen: striimiäänen pomppiminen). Hyppykorjaus 9057ea82 oli PASS nostossa, Pulun täysi vastaus mittaamatta (429). → Natiivi-UI: yhteinen selvitys isoisän luennan puuttuvan alun kanssa (ensimmäinen pala / myöhäinen aloitus), laitteella ElevenLabs v4 Turbo, nosto + Pulun pitkä vastaus; juurisyy ennen korjausta.
+
+## OMISTAJA: STRIIMI SOITTAA ENSIN EDELLISEN NOSTON PUSKURIA (28.9.2026 klo 22.42)
+
+Omistaja 28.9. klo 22.42 sanatarkasti: "ongelma taitaakin olla siinä että striimi lukee vanhaa tekstiä puskurista jonkun matkaa ennenkuin aloittaa alusta oikeasta kohdasta. saattaa siis tulla vanhan noston puhetta alkuun vaikka pitäisi olla luenta ihan toisesta nostosta" → Natiivi-UI kärkeen kaiutinkorjauksen jälkeen: äänipuskurin ja jonon tyhjennys luennan vaihtuessa/pysähtyessä, vanhan pyynnön myöhästyneiden palojen hylkäys (pyyntö-id/sukupolvi); toisto nosto A 5 s → nosto B. Mahdollisesti sama juurisyy kuin isoisän luennan puuttuva alku.
+
+## OMISTAJA: STRIIMI ALKAA VÄÄRÄSTÄ KOHDASTA JA HYPPÄÄ ~15 S JÄLKEEN ALKUUN (28.9.2026 klo 22.44)
+
+Omistaja 28.9. klo 22.44 sanatarkasti (korjaa 22.42-kirjauksen puskurihypoteesin): "eikun kyllä se vain aloittaa väärästä kohdasta ja noin 15sek päästä hyppää alkuun ja aloittaa sieltä uudestaan. kokeilin kokonaan uudella nostolla ja se tosiaan luki siitä uudesta nostosta ensin alkupäästä tekstiä mutta ei alusta ja vasta sitten hyppäsi oikeasti alkuun ja aloitti sieltä luennan uudestaan" → Natiivi-UI: epäillyt kaksi rinnakkaista lähdettä (nopea aloitus/välimuistin pala/esihaku), palojen järjestys, jatkamiskohta tai uusinta ~15 s aikakatkaisun jälkeen; lokita palan indeksi, lähde ja soittohetki; kärki kaiutinkorjauksen jälkeen.
+
+## OMISTAJA: PULUN [SOFTLY]-TAGI TOIMII HUONOSTI (28.9.2026 klo 22.48)
+
+Omistaja 28.9. klo 22.48 (Helsinki-3 'Se katsoi minua kuin olisin ollut harjoittelija' [softly]) sanatarkasti: "tuo softly toimii vähän huonosti, sitä on ilmeiseti useammassakin eri kohdassa?" → [softly] 27 kohdassa (tools/generoi-pulu.mjs). Pulun v4-PR menee silti junaan; Pelikoodari: korvaajakoe Helsinki-3:lla ([dryly]/[deadpan]/[warmly]/ilman), suositus kuivalle loppukevennykselle ja herkälle loppulauseelle, kooste nykyinen | suositus omistajalle; OK:n jälkeen 27 kohtaa uudelleen jatko-PR:nä. Samalla korjataan helsinki-3:n osumaton [brightly]-ankkuri.
+
+## OMISTAJA: [SOFTLY] POIS PULULTA — LIIAN SURULLINEN (28.9.2026 klo 22.50)
+
+Omistaja 28.9. klo 22.50 sanatarkasti: "pulu kuulostaa siinä liian surulliselta. tuo softly ei vain toimi, kokeillaan tosiaan muita tageja korvaavaksi" → [softly] poistuu Pulun tagivalikoimasta; Pelikoodari kokeilee korvaajia (tavoite kevyt/kuiva/lämmin, ei surullinen: [dryly], [deadpan], [warmly], [amused], ilman) Helsinki-3:lla ja Ljubljana-3:lla, yksi suositus per lause; omistajan OK:n jälkeen 27 kohtaa uusiksi jatko-PR:nä. Yksi tagi per virke.
+
+## OMISTAJA: STRIIMIVIAN TOISTO HAMPURILAISVALIKOSSA (28.9.2026 klo 22.53)
+
+Omistaja 28.9. klo 22.53 sanatarkasti: "pulun virheellisen striimiluennan voi helposti toistaa hampurilaisessa. ensimmäisellä painalluksella tietystä kohtaa pulu lukee väärästä kohtaa mutta kun samaa kohtaa painaa uudestaan pulu alkaa lukea oikeasta kohdasta. esim. jos klikkaa vaikka ihan ensimmäistä otsikkoa tekstissä, niin vasta toinen klikkaus aloittaa luennan alusta." → Natiivi-UI (kärki kaiutinkorjauksen jälkeen): ensimmäisen napautuksen aloituskohta lasketaan todennäköisesti ennen kuin teksti/asettelu/palakartta on valmis tai edellisestä tilasta.
+
+## TILA: KAIUTINKORJAUS PASS; STRIIMIN HYPPYN JUURISYY LÖYTYI (28.9.2026 klo 22.55)
+
+Natiivi-UI 28.9. klo 22.55: 1) nostokortin kaiutin PASS natiivi-ui/kortti-napautus 42dacd5c (juurisyy UI Toolkitin vanhentunut kosketuskohde) → 1.0.40. 2) 'Hyppää alkuun ja lukee uudestaan' -juurisyy: pakatun mp3-klipin isPlaying on yhden ruudun epätosi kesken soiton, Puhe tulkitsee sen katkokseksi ja 'jatkaa' asettamalla time ennen Play():ta → Play() alkaa palan alusta (FB234D08: jokainen pala 'pysähtyi kesken … jatketaan' → 0,000). Korjaus natiivi-ui/luenta-jatko e667523e (odota ≤ 0,25 s, kohta Play():n jälkeen), todennus jonossa → 1.0.40. 3) Isoisän luenta ja saapumispuhe alkavat simulaattorissa oikein; jos korjaus 2 ei selitä, epäilty laitteen reitti (Bluetooth herää hiljaisuudesta). Hampurilaisvalikon toisto seuraavaksi.
+
+## OMISTAJA: IPADILLA NOSTO SULKEUTUU NAPAUTUKSISTA (~1/3) (28.9.2026 klo 22.56)
+
+Omistaja 28.9. klo 22.56 sanatarkasti: "ipadilla myös noston avauduttua pelkkänä kuvana näytölle se häviää ehkä joka kolmas kerta kun painan sitä lisätäkseni myös tekstit näkyville, eli silloin peli palaakin kartalle ja nosto sulkeutuu. sama kun painan kaiutin tai mini hampurilaista, niin nostoikkuna saattaakin sulkeutua eikä ota kaiutin klikkausta. en usko että osun noin huonosti oikeaan kohtaa, siinä on selvästi jokin bugi kosketusalueessa, mutta tosiaan enemmän toimii oikein kuin ei toimisi" → Natiivi-UI: todennäköisesti sama juurisyy kuin kaiutinkorjauksessa 42dacd5c (vanhentunut UITK-kosketuskohde); iPad-todennus kuva-napautus + kaiutin + mini-hampurilainen 20× kukin, 0/60 sulkeutumista ennen 1.0.40:ää.
+
+## OMISTAJA: MAAKUNTANOSTO JA MININOSTO ISOMMIKSI, KUVA KOKORUUDULLE (WEB) (28.9.2026 klo 23.01)
+
+Omistaja 28.9. klo 23.01 webin maakuntatilan kaappauksella (iPad, Keski-Makedonia; docs/raportit/kaappaukset/omistaja-20260928/maakuntanosto-isommaksi-web.png) sanatarkasti: "Nosto ja mininosto saisivat olla isompia. Nosto pitää olla saman kokoinen kuin muut nostot ja kuva pitää pystyä klikkaamaan kokoruudulle" → Siirtoseppä (web): maakunnan nostoikkuna muiden nostojen kokoon/komponenttiin, kuva kokoruudulle samalla kuvaselaimella, mininosto isommaksi; kuvapari ennen PR:ää; natiiviin myöhemmin Natiivi-UI:n maakuntatilan yhteydessä.
+
+## PÄÄTÖS: ASTRO-TAULU AINA PULUSTA; MININOSTO NOSTONVÄRISEKSI (28.9.2026 klo 23.03)
+
+28.9. klo 23.03. Omistaja sanatarkasti: "mininosto saisi olla saman värinen kuin nosto ja myös ilman kehystä" → Siirtoseppä samaan maakuntanosto-erään. Pelikoodarin astro-taulu 1ea1b4510 (Minne katsotaan? Maapallo / ISS:n rinnalla / ISS:n sisälle / Astronauttien kuvat; iPhone+iPad) omistajalle. Päätoimittajan päätökset: valokuvanäkymänkin minipulu avaa taulun (omistaja: 'aina esille napauttamalla pulua'), chat pieneksi 'Kysy Pululta' -linkiksi taulun alareunaan; Oma sijainti ISS-paneelissa, ei taulussa; jos Livia ei vielä pelissä, linssin kulmaan pieni 'Näkymät'-nappi. [softly]-koe (Helsinki [deadpan], Ljubljana [wistfully] koko virkkeelle; [softly] 37/75 repliikissä) omistajan valittavana.
+
+## KORJAUS: MAAKUNTANOSTON KAAPPAUS ON NATIIVISTA (28.9.2026 klo 23.09)
+
+Päätoimittaja 28.9. klo 23.09: 23.01-kirjauksen kaappaus (maakuntanosto-isommaksi-web.png) on natiivista (iPad), ei webistä — Siirtoseppä huomasi, että pikkukuvallinen mininosto on vain natiivissa. Nostoikkuna muiden nostojen kokoon, kuva kokoruudulle, mininosto isommaksi + nostonvärinen ilman kehystä → Natiivi-UI:n maakuntatila-erään. Siirtoseppä tekee webiin kohdat 1–2 vain, jos webin maakuntanosto on samalla tavalla pienempi tai kuvaa ei voi suurentaa.
+
+## OMISTAJA: CUPOLA 3 JUNAAN (1.0.41) (28.9.2026 klo 23.11)
+
+Linssiseppä 28.9. klo 23.1x: Codexin Cupola 3 (pyöreä kattoikkuna, pimeä ohjaamo, lappu, kerrokset) kytketty natiiviin, laite cl18 iPhone 17 Pro + iPad Pro 11, 0 poikkeusta; proto linssiseppa/cupola3 c2645317, A/B astro kyyti ohjaamo 3|3b|2, ämpäriin 20 kerrosta; Linssit 395/395. Omistaja klo 23.11 kortilla: 'OK, junaan' → kulma A, iPadin ikkuna keskelle (lappu ei leikkaudu), merge-pyyntö Natiivisepälle 1.0.41:een; web samoilla kuvilla Siirtosepälle (iss-realismi-suunnitelma §5).
+
+## TILA: LEVY 80 GI — WORKTREEPÄT 33/20, KÄÄNNÖSVÄLIMUISTI 40 GT (28.9.2026 klo 23.14)
+
+Päätoimittaja 28.9. klo 23.14: Postivahti 23.11 levy 80 Gi (raja). Suurimmat: proto-3d 46 Gt (käännöspalvelun Xcode CompilationCache ~40 Gt → Julkaisija tyhjentää 1.0.40:n viennin jälkeen), wt/ 33 worktreetä 22 Gt (raja 20) → Postivahti lähettää roolikohtaiset poistolistat (varmat: karttaseppa-pallo-z10 #3393, pelikoodari-iss-kyyti #3576, pelikoodari-pulu-sonnet55 #3580 mergetty; Codexin worktreehen ei kosketa), pyramidi-poltto 15 Gt (ajo-20260927y 9,2 Gt jää kunnes pallon vienti valmis). Omistaja Cupola 3:sta: "tosin tummenna ja pehmennä aavistuksen ohjaamoa" → Linssiseppä ennen merge-pyyntöä.
+
+## OMISTAJA: PULUN [SOFTLY] JA [WHISPERS] POIS KAIKKIALTA (28.9.2026 klo 23.14)
+
+Omistaja 28.9. klo 23.14: "kaikki iloiset, nauravaiset, pirteät, ylpeät toimivat selvästi hyvin, mutta kuiskaavat ja pehmeät eivät" ja Päätoimittajan ehdotukseen "joo vaihdetaan, mutta anna yksi uusi esimerkki lopputuloksesta kun on vaihdettu niin kuuntelen". Sääntö (sitova Pulun äänille): ei [softly]- eikä [whispers]-tageja; [softly] → [warmly] (herkät) / [amused] (kevennykset), [whispers] → [mischievously]; yksi tagi per virke. Helsinki-3 loppu [amused], Ljubljana-3 [proud] koko virkkeelle. Harkitsevat tagit mitataan sävelkorkeudella ja laskevat vaihdetaan [warmly]:ksi. Pelikoodari: muuttuvat repliikit uusiksi, esimerkkikooste omistajalle, jatko-PR junaan.
+
+## IDEA (OMISTAJA): POIKKILEIKKAUSLINSSI — RAKENNUS AUKILEIKATTUNA (28.9.2026 klo 23.19)
+
+Omistaja 28.9. klo 23.19 näytti kuvan tietokirjan linnan poikkileikkausaukeamasta (kaikki kerrokset auki, ihmiset työssä, nimetyt kohdat lyhyine selityksineen, alareunassa henkilöhahmot) ja kirjoitti: "tämän tyylinen juttu olisi hyvä linssi tehdä jossain vaiheessa". Kirjattu ideajonoon, EI aloiteta ennen omistajan aloituslupaa. Päätoimittajan luonnos: linssi, jossa eurooppalainen kohde (esim. keskiaikainen linna, katedraali, satama tai kaivos) avautuu aukileikattuna kuvituksena; napautettavat kohdat avaavat 1–3 lauseen faktan ja Pulu kommentoi; kuvitus tehdään itse (Codex), referenssi vain tyylistä — ei kopioida kirjan kuvaa; VAIN EUROOPPA. Referenssikuva on omistajan chatissa (ei repoon, tekijänoikeus).
+
+## OMISTAJA: POIKKILEIKKAUSLINSSI — KONSEPTIKUVA JA LINSSIKATALOGIIN (28.9.2026 klo 23.26)
+
+Omistaja 28.9. klo 23.26 sanatarkasti: "tilaa konseptikuva ja siirrä idea kuvineen linssi idea sivulle" → Codexille posti/fable-codex-poikkileikkauslinssi-konsepti-20260928.md (fb8822f92): Olavinlinna aukileikattuna, vaaka 2732×2048 (+ pystyrajaus), numeroidut napautuskohdat, tyylireferenssi vain tyyliin (ei kopioida), avaruuskävelyn jälkeen. Sisältökirjuri: linssikatalogiin E11 'Poikkileikkaus: linna aukileikattuna' (esitysmoottori, tila idea) md + linssikatalogi-data.js; Codexin konseptikuva kuvaksi kun valmis. Omistajan referenssikuvaa (kirjan aukeama) ei julkiseen sivuun tekijänoikeuden vuoksi.
+
+## OMISTAJA: SONNET RAJATTUIHIN TEHTÄVIIN ALI-AGENTTINA (28.9.2026 klo 23.30)
+
+Omistaja 28.9. klo 23.30 sanatarkasti: "sonnetteja voisi käyttää nyt enemmän, koska ovat periaatteessa yhtä hyviä kuin opus, ainoa ero on konteksti ikkuna ja pitkäkestoisuus. mutta rajattuihin juttuihin kannattaa melkein aina ottaa nyt sonnet vaikka ongelma olisi haastava." Kortilla: 'Kyllä, kaikille rooleille'. Linjaus: roolisessiot Opuksella pitkinä linjoina, rajatut tehtävät (myös haastavat bugiselvitykset) Sonnet 5.5 -ali-agentille (effort high/max), rooli todentaa ja julkaisee; ali-agentti ei käytä simulaattoreita, käännöspalvelua eikä tuotannon workeria. Raamattuun (#3527 haara raamattu-pienennys-20260928). Ensimmäinen koe: Natiivi-UI:n striimibugin juurisyy Sonnet-ali-agentilla.
+
+## PÄÄTÖS: 1.0.40 = 60F69FE4 VIENTIIN; KOSKETUKSEN YLEISKORJAUS 1.0.41 (28.9.2026 klo 23.30)
+
+Natiivi-UI 28.9. klo 23.30: 1.0.40-käännös 60f69fe4 iPhonella — nosto ei enää sulkeudu (0), luennan jatko toimii (ei hyppyä alkuun); jäljellä: vanhentunut kosketuskohde kortin ulkopuolella syö ensimmäisen napautuksen (UI Toolkit käyttää välimuistin 'osoittimen alla' -elementtiä, kun piste ei muutu) → paneelitason yleiskorjaus 1.0.41:een Sonnet-ali-agentin selvityksellä. Hampurilaisvalikon ensimmäisen napautuksen väärä aloituskohta = sama juurisyy, korjattu junassa 7247e31a. Päätoimittaja: 1.0.40 = 60f69fe4 savukkeen PASS:lla vientiin.
+
+## PÄÄTÖS: VIE 1.0.40 (IPHONE RIITTÄÄ) (28.9.2026 klo 23.33)
+
+Päätoimittaja 28.9. klo 23.33: 1.0.40 (60f69fe4 = master e4c624a9 + juna 8de5b3df) Laitetestaajan lyhyt savuke PASS (kohta 4 epäselvä, ei kaatumisia) + Natiivi-UI:n iPhone-todennus (0 sulkeutumista). Muutosrivi 202609281959 mainissa (#3582). VIE annettu BUILD 40:lle Natiivisepän SHA:lla; ehto: sisältövienti valmis ennen ryhmää, Testattavaa tyhjä. iPad-tarkistus (kuva/kaiutin/mini-hampurilainen 20× kukin) Laitetestaajalla rinnalla; löydökset 1.0.41:een.
+
+## TILA: KOSKETUSVIAN JUURISYY LÖYTYI SONNET-ALI-AGENTILLA (~10 MIN) (28.9.2026 klo 23.42)
+
+Natiivi-UI 28.9. klo 23.42: Sonnet-ali-agentti löysi noin 10 minuutissa (todennettu UnityCsReference 6000.3 Panel.cs): UI Toolkitin Panel.Pick(point, pointerId) palauttaa kosketukselle välimuistin elementin, kun piste osuu samaan pikseliin kuin edellinen kosketus, eikä asettelun muutos mitätöi kosketuspointerien välimuistia (vain hiiren) → selittää kortin sulkeutumisen, kadonneen ensimmäisen napautuksen ja hampurilaisen väärän aloituskohdan. Yleiskorjaus 1.0.41:een (haara natiivi-ui/kosketus-valimuisti): välimuisti tyhjennetään kosketuksen päättyessä kaikissa paneeleissa (ClearCachedElementUnderPointer, heijastusvarapolku), simulaattoritodennus. Maakuntakortti kolmannella ali-agentilla. Ensimmäinen Sonnet-ali-agenttikoe onnistui.
+
+## TILA: OLAVINLINNAN POIKKILEIKKAUSKONSEPTI VALMIS (CODEX) (28.9.2026 klo 23.45)
+
+Codex 28.9. klo 23.4x (posti/codex-fable-poikkileikkauslinssi-konsepti-20260928.md, c02d4aebe): Olavinlinna aukileikattuna 2732×2048 (numeroitu + puhdas + hotspot-kerros, manifest SHA-256), 8 kohtaa: muurinharja, vartiotupa, kellari ja varastot, keittiö, yhteinen sali, kappeli, tornin kierreportaat, laituri ja vene; pystyrajaus vain yksityiskohta (mobiili tarvitsee oman sommittelun tai panoroinnin). Huoneiden sijainnit tulkintaa → tarkistetaan ennen faktatekstejä (Kansallismuseo: perustettu 1475). Omistajalle lähetetty; Sisältökirjuri lisää kuvan linssikatalogin E11:lle (#3584).
+
+## OMISTAJA: RADIOLINSSIN UUDISTUS + LINSSIT KOKO MAAILMAAN (28.9.2026 klo 23.47)
+
+Omistaja 28.9. klo 23.47 (iPad-kaappaukset radiolinssi-ipad.png, radiolinssi-ipad-napa.png; Päätoimittajan parannusehdotukset) sanatarkasti: "hyviä huomioita. tuo horisontin sumu ei näytä hyvältä, raja ei saisi olla noin selvä. nyt antennit vilkkuvat, saisivat hohtaa himmeästi ja valittu masto kirkkaammin. lisäksi haluaisin uuden radion codexilta joka ei olisi noin laatikko. vu mittari pitäisi olla enemmän kolmiulotteien näköinen (lasi jonka alla valo ja mittari). ehdotuksesi olivat hyviä. viritysääni jo on, mutta muut voisi tuottaa. haluan että on kaikki maailman maat mukana. eurooppa linjaus on vain kartan ja sisällön suhteen mutta ei koske linssejä." → (1) Raamattu VAIN EUROOPPA: linssit eivät kuulu rajaukseen (#3527-haara d5cac7f3e). (2) Codex: uusi pyöristetty radio + 3D VU-mittari kerroksittain (posti/fable-codex-radio-uusi-20260928.md, ccb70fab9). (3) Linssiseppä 2 (natiivi, ISS-säätimien jälkeen): pehmeä horisonttiutu, mastot himmeästi hohtaviksi ja valittu kirkkaaksi (ei vilkkua), vähemmän mastoja / ei neuloja horisontin yli, aaltorenkaat VU:n tahdissa, viritys kohinalla, kaikki maailman maat (asteikko näkymän asemat länsi→itä), maan nimi piiloon ja Pulu radion yläpuolelle, ristimerkit pois, punainen nappi virtakytkimeksi, pohjoisnavan tumma läiskä korjataan. (4) Pelikoodari (Sonnet-ali-agentti): kohina/rahina, lukittuminen, virtakytkimen naksahdus, lämpenemishurina.
+
+## PÄÄTÖS: 1.0.40:N VIENTI PIDOSSA — IPAD-KAIUTIN SULKEE KORTIN (28.9.2026 klo 23.50)
+
+Laitetestaaja 28.9. klo 23.5x: iPad-stressitesti (3B4CDACB, 1.0.40 60f69fe4) — kuva 0/20, mini-hampurilainen 0/5, KAIUTIN sulki nostokortin ~6/7 ensimmäisestä napautuksesta (iPhonella sama build OK); raportti docs/raportit/ipad-nostokortti-stressitesti-20260929.md. Automaatio napauttaa samaan pikseliin = Panel.Pick-välimuistivika. Päätoimittaja 23.50: 1.0.40:n VIE pidossa (TF-vientiä ei ollut aloitettu); Natiivi-UI:n yleinen kosketuskorjaus (natiivi-ui/kosketus-valimuisti) 1.0.40:ään tänä yönä, iPad-stressi 0/60 ehtona; jos ei valmis klo 02.00, erillinen päätös.
+
+## OMISTAJA: POIKKILEIKKAUSLINSSI 3D:NÄ — ELÄVÄ LINNA, PULU OPETTAA (KONSEPTI) (28.9.2026 klo 23.53)
+
+Omistaja 28.9. klo 23.53 sanatarkasti: "pystyykö tuollaista linnaa animoimaan jos antaa opukselle joka ajaa sonnet agentteja max tilassa. pulu voisi sitten liitää eri paikkoihin ja selittää huoneita samalla kun kamera lehestyy sitä kohtaa linnassa. eli tehtäisiin 3d malli ja ihmiset sinne liikkumaan. liike voisi lisääntyä sitten siinä huoneessa mihin zoomataan lähemmäs. mitä olet mieltä? ja mitä muuta voisi olla? pulu voisi käyttää opetustauluja joissa olisi ydinasiat ensin linnasta ja sitten eri osista. pulu saisi jutella innostuneesti ja hauskasti eri osista. myös esiintyville henkillöille voisi generoida joitain sanoja tai lyhyitä lauseita niin että pulu voisi reagoida sitten myös niihin. ja kaikkia ääniefektejä käyttöön myös. ja mitä pelaaja voisi itse tehdä? haluan tästä ihan jumalattoman hienon näköisen ja monistettavan konseptin." Päätoimittajan vastaus: dioraama (3D-palikat, maalatut pinnat Codexin konseptin tyyliin, ei realistinen 3D), maalatut hahmot silmukka-animaatioin (henkilöpankki), kamera huoneesta toiseen + syväterävyys, tarkennettu huone herää; Pulu lentää ja laskeutuu, opetustaulu (linna 3 ydinasiaa → huone 3 kohtaa), henkilöiden 1–2 repliikkiä omilla äänillä + Pulun reaktiot, äänitehosteet; pelaaja: etsintä, aikaliukusäädin 1475 → rauniot → nykyinen museo ja oopperajuhlat (AIKA), apu linnan väelle, henkilökortit Matkakirjaan, Kysy Pululta. Monistus: yksi moottori + palikka-, henkilö- ja äänipankki + rakennuskohtainen datatiedosto; seuraavat katedraali, Hansa-satama, Falun, Vasa. Suositus: pystyleike keittiöstä ensin, uusi oma rooli (Opus + Sonnet-ali-agentit, Codex pinnat ja hahmot, Pelikoodari äänet ja repliikit). ODOTTAA omistajan aloituslupaa ja roolin luontia.
+
+## OMISTAJA: AVARUUSKÄVELY TOTEUTUKSEEN, ISS-SÄÄTÖPANEELI KYTKETÄÄN, ELÄVÄ LINNA ALKAA UUDELLA ROOLILLA (29.9.2026 klo 00.02)
+
+Codexin toimitukset (posti/claude/postilaatikko): ISS-säätöpaneelin modulaarinen sarja e8a76b9ea (28.9. klo 21.42; 7 osaa × 3 tilaa, 21 SVG + 42 PNG @2x/@3x, sprites.json 9-slice, peitto puhelimessa 28,6–36,1 %; /Users/samireivinen/Documents/Codex/2026-09-28/iss-saatopaneeli/) ja avaruuskävelyn konseptikuvat cf2b92cdc (22.41; iPhone 1290×2796 + iPad 2732×2048, Pulu omassa köydessään, auringonnousu; .../avaruuskavely-konsepti/final/) — edellinen Päätoimittaja-sessio ei ollut huomannut niitä; kuvat omistajalle 28.9. klo 23.5x. Omistaja kortilla 29.9. klo 00.0x: (1) Avaruuskävely 'Kyllä, radion jälkeen' → Linssiseppä 2 toteuttaa natiiviin lyhyen käsikirjoitetun hetken (ilmalukko → köysi → auringonnousu → Pulu radiossa → yksi valokuva, verrataan NASA-kuvaan) radiolinssin uudistuksen jälkeen, web Siirtoseppä perässä. (2) ISS-säätöpaneeli 'Kyllä, kytke' → Linssiseppä 2 natiiviin ISS-kyydin säätimien nahaksi (54cb193a:n jälkeen), Siirtoseppä webiin nyt; kuvapari omistajalle ennen mergeä. (3) Elävä linna 'Aloita, uusi rooli' → uusi roolisessio LINNANRAKENTAJA (Opus, max; Sonnet-ali-agentit max rajattuihin osiin), checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja. Päätoimittajan linjaus: natiivi (Unity, proto-git) ensin laadun vuoksi kuten Cupola 3; rakennus datana (rakennus-JSON + palikka-, henkilö- ja äänipankki, mallit glTF) niin, että Siirtoseppä tekee web-version samasta datasta ennen kuin linssi avataan pelaajille. Erä 1 = Olavinlinnan KEITTIÖN pystyleike: dioraama maalatuin pinnoin (Codexin konseptin tyyli, ei realistinen 3D), 2–3 silmukka-animoitua hahmoa, kamera lähestyy ja huone herää, Pulu laskeutuu ja opetustaulu (3 kohtaa); linssi tilaan hiomassa. Codexin pinta- ja hahmotilaus Linnanrakentajan tarvelistasta Päätoimittajan kautta. Huoneiden sijainnit ovat Codexin tulkintaa → Sisältökirjuri tarkistaa historian ennen faktatekstejä.
+
+## OMISTAJA: PULUN UUDET LUENNAT PELIIN (#3585 OK) (29.9.2026 klo 00.02)
+
+Omistaja 29.9. klo 00.0x sanatarkasti: "lisää pulun uudet luennat peliin" = OK pitkälle koosteelle (48 repliikkiä ilman [softly]/[whispers], yksi tunnetagi per virke). #3585 (pelikoodari-pulu-tagit-2, v2380) luonnos + konflikti mainin kanssa (#3581 v4-äänet mergetty 28.9. klo 23.25) → Pelikoodari rebaseaa ja merkitsee valmiiksi, Julkaisija junan kärkeen, web-tuotanto + natiivin sisältövienti; Julkaisija ilmoittaa Päätoimittajalle, kun uudet luennat ovat pelissä, ja Päätoimittaja kertoo omistajalle.
+
+## PÄÄTÖS: LINSSIKATALOGIN KUVAT ÄMPÄRIIN TYÖNKULUN KAUTTA; MACIN R2-AVAIMET PUUTTUVAT (29.9.2026 klo 00.11)
+
+Sisältökirjuri ja Julkaisija 29.9. klo 00.1x: E11-kuvia (Codexin Olavinlinna-konsepti, 1600 + 480 px) ei voitu viedä ämpäriin, koska koodaus-käyttäjän ~/.zshrc:ssä ei ole R2-avaimia (vain XAI ja POLLO avaintiedostossa) — Raamatun MAC STUDIO -osion avainlista (R2 ~/.zshrc:ssä) on vanhentunut koodaus-käyttäjän osalta. Päätoimittaja 29.9. klo 00.1x: Julkaisija lisää vie-karttanostot-ampariin.yml:ään kohteen 'linssikatalogi' (vain linssikatalogi/-polku, max-age=2592000, ei ylikirjoitusta, kuiva-ajo oletuksena, salaisuudet ennallaan); Macilta ämpäriin viedään jatkossa GitHub Actions -salaisuuksilla työnkulun kautta. Avaimia ei kysytä omistajalta tätä varten.
+
+## PÄÄTÖS: VIE 1.0.40 JA 1.0.41; PULUN UUDET LUENNAT PELISSÄ; RADION LUKITTUMINEN KAARENA (29.9.2026 klo 04.58)
+
+(1) 1.0.40 = proto 23983305 (5aba3dbc + Natiivi-UI:n kosketusvälimuistikorjaus 36e6447f, käännös 485376ca): iPad-stressi 0/60 molemmilla iPadeilla (Laitetestaajan ensimmäinen FAIL oli väärä napautuskohde, paneelin kaiutin himmennyksen alla; raportti ipad-nostokortti-korjattu-20260929.md), iPhone-savuke PASS. 1.0.41 = proto master 11b5a815 (käännös e434161d; Cupola 3 alfakorjattuna — kehys-PNG:iden alfa 252–254 vuoti ~1 % lineaarisessa tilassa, korjattu 255:ksi, kuulto 11,4 → 0,1; maakuntatila v2 + maakuntakortti; mallien nimiöt v2b), savuke 4/4 PASS, muutosrivi #3591 mainissa 02.58. Päätoimittaja 29.9. klo 04.5x: VIE molemmat peräkkäin (viive klo 02.00 → 04.57 Päätoimittajan, ei teknistä syytä). (2) Pulun uudet luennat (#3585, v2382) pelissä: web 01.17, natiivin sisältövienti 41416f0e7 01.48; v4-äänet (#3581) web v2379 + vienti 876feacaa 00.07. (3) Omistaja kortilla: radiolinssin lukittuminen uusitaan kaarena (kohina kirkastuu asemaksi ~0,5 s), muut neljä ääntä hyväksytty. (4) Nimiöt v2b -JUMI purkautui: Natiivi-UI ajoi laitetarkistuksen itse (Krumlovin juurisyy: noston erikoismalli peitti merkin). Avoin: Birkan nimiö jää Tukholman alle (kaupunki voittaa) → Linssiseppä arvioi.
+
+## OMISTAJA: KARTTA 2026-09-27 TUOTANTOON, ISS-PANEELI KELPAA, DIORAAMAN VIENTITYÖNKULKU, TF-LUPA (29.9.2026 klo 05.07)
+
+Omistaja kortilla 29.9. klo 05.0x: (1) TF-vienti — luokitin esti Julkaisijan TF-käynnistyksen ('Production Deploy', vaikka 28.9. klo 23.46 meni läpi) → omistaja kirjoitti luvan Julkaisijan sessioon; TF 1.0.40 ajossa 36510883690, 1.0.41 perään. (2) Karttasepän vienti 2026-09-27-pohja (pyramidi 496 041 laattaa z0–z10 + ranta + viivat, pallo 564 647) 'Katsoin, vaihda' → Karttaseppä JS-PR (PALLO_LAATTAVERSIO, TUNNISTE 20260927, sw.js), Julkaisija merge + vaihda-pyramidi-osoitin.yml; natiivi 26-pohjassa kunnes Siirtoseppä/Natiiviseppä vaihtavat. (3) ISS-säätöpaneeli web (Siirtoseppä 19037db35: välilehdet Nopeus|Kohde|Olosuhteet, kutistus riviksi, peitto iPhone 6,6/27,3 %) 'Kelpaa' → PR #3586:n jälkeen; natiivinahka siirretty Linssiseppä 2:lta Natiivi-UI:lle (jono tyhjä), Linssiseppä 2: säätimet → radio → avaruuskävely. (4) Elävän linnan dioraamapaketti ämpäriin uudella työnkululla (CI rakentaa deterministisesti, vain dioraama/<rakennus>/<sisältöhash>/ + uusin.json viimeisenä) — omistajan lupa Julkaisijan sessioon. Linnanrakentaja erä 1 valmis 18 Sonnet-agentilla (harmaa keittiön pystyleike natiivissa, 7f0b5641a); Codex-tilaus osa 1 postissa 2bbb58503 (9 saumatonta pintaa, koehahmo kokki 196 px/m + henkilökortti, liekit). Radion lukittumiskaari rakennettu ffmpegillä (ElevenLabs-otot hylätty mittauksella).
+
+## OMISTAJA: RADION VANHA LUKITTUMISÄÄNI JÄÄ; POIKKILEIKKAUSLINSSIN NIMI JA PARITEETTIPOIKKEUS; CODEXIN UUSI RADIO (29.9.2026 klo 05.09)
+
+(1) Omistaja 29.9. klo 05.1x sanatarkasti (kuunneltuaan vanha | uusi): "Se vanha oli hyvä ei tarvitse uutta hakuääntä" → radiolinssin lukittumiseen jää Pelikoodarin ensimmäinen otto (napsahdus + nopea hiljeneminen); kaari ei käytössä; kumoaa 04.58-kirjauksen kohdan 3. (2) Linnanrakentajan erä 0 (suunnitelma c67c9819e, 6 Sonnet max -agenttia): linssin nimi 'Poikkileikkaus' (id poikkileikkaus, linssikatalogin E11), moottori 'dioraama' ('Elävä' on jo Elävän kartan); yksi Node-rakennuskone tekee jokaisesta tilasta .glb:n, jonka natiivi ja web lukevat samana (pariteetti rakenteesta). Pulu = nykyinen Pulu (tunnistettavuus). Päätoimittaja: POIKKEUS 25.9. sääntöön 'uusia linssejä ei aloiteta ennen pariteettia' — omistajan erillinen aloituslupa 29.9. klo 00.0x ('Aloita, uusi rooli') ja pariteetti taataan rakenteesta (sama .glb ja data webissä ja natiivissa); linssi pysyy tilassa 'hiomassa' kunnes web-versio on valmis. (3) Codex toimitti uuden radion 6bb710954 (/Users/samireivinen/Documents/Codex/2026-09-29/radio-uusi/: iPad 1400×520 + iPhone 1100×600, 32 kerrosta, manifest akselit ja tekstialueet) → Linssiseppä 2 radiolinssin uudistukseen.
+
+## TILA: TF 1.0.40 JA 1.0.41 SISÄISESSÄ RYHMÄSSÄ (29.9.2026 klo 05.23)
+
+Julkaisija 29.9.: 1.0.40 (build 202609281959, proto 23983305) sisäisessä ryhmässä klo 05.13; 1.0.41 (build 202609282344, proto 11b5a815, TF-ajo 36511597994) klo 05.23. Testattavaa tyhjä molemmissa. Omistajalle ilmoitettu (push + chat). Laitetestaajan 1.0.41-kierros (Cupola 3, maakuntatila iPadilla, nimiöt) jonossa.
+
+## OMISTAJA: GEMINI 3.8 FLASH TTS -KOE JA HINNAT (29.9.2026 klo 05.25)
+
+Omistaja 29.9. klo 05.3x kysyi "Onko tätä kokeiltu Gemini 3.8 Flash TTS" (vastaus: ei; aiempi Gemini-puhe hylättiin 26.9. striimivertailussa, koska ei striimannut, ensiääni 5–16 s) ja sanatarkasti: "Tee Testi ja anna hinnat". → Pelikoodari (Sonnet-ali-agentti): ≤ 5 lyhyttä Pulun repliikkiä, striimaus, ensiäänen viive (5 ajoa, mediaani), suomen ääntäminen, viralliset hinnat (Gemini 3.8 Flash TTS vs ElevenLabs v4 ja Flash v2.5, per 1 000 merkkiä ja per ~300 merkin Pulun vastaus) + kooste mp3 omistajalle. Poikkeus 28.9. 'älä vertaa' -linjaukseen omistajan omalla pyynnöllä.
+
+## KORJAUS: RADIOLINSSIN UUDISTUS VAIN NATIIVISSA, WEB ENNALLAAN (29.9.2026 klo 06.32)
+
+Siirtoseppä 29.9. klo 06.4x huomasi: Päätoimittajan ohje Linssiseppä 2:lle viedä radiolinssin uudistus webiin oli ristiriidassa Raamatun sitovan linjauksen RADIOLINSSIN UUDISTUS NATIIVISSA (omistaja 24.9.2026 klo 19.2x: 'vain natiivissa, web ennallaan') kanssa; lisäksi WebKit ei päästä CORS-suojattua striimiä AnalyserNodeen, joten aitoa VU:ta ei webissä ole. Päätoimittaja: web jää ennalleen, ohje peruttu Siirtosepälle ja Linssiseppä 2:lle. Omistajan 28.9. klo 23.47 radiotoiveet (usva, mastot, uusi radio, kaikki maat) koskevat natiivia.
+
+## OMISTAJA: KONE KOKONAAN ROOLEILLA 29.9. (29.9.2026 klo 06.53)
+
+Omistaja 29.9. klo 06.5x sanatarkasti: "En tarvitse tänään konetta". → Koko 29.9. päivä: ei tarve-ikkunaa, /tmp/matkakirja-kevyt ei ole päällä (tarkistettu 06.53); päivän rajoitukset puretaan tältä päivältä: GPU-työt (renderöinnit, Karttasepän poltot, simulaattorikuvaukset) sallittu päivällä, enintään 3 simulaattoria samaan aikaan (muistipaine seurannassa: Postivahti hälyttää, jos vapaa muisti < 25 %), käännökset edelleen nice -n 15 (ei taskpolicy -b), yksi Unity-käännös kerrallaan käännöspalvelussa. Sammuta oma simulaattori ajon jälkeen. Palautuu normaaliksi 30.9. klo 00.
+
+## PÄÄTÖS: AVARUUSKÄVELY AVATAAN PULUN TAULUSTA; PULUN KOLME REPLIIKKIÄ (29.9.2026 klo 06.58)
+
+Linssiseppä 2:n suunnitelma docs/raportit/avaruuskavely-suunnitelma-20260929.md (haara linssiseppa2-tyo-20260928): 7 vaihetta ~70–100 s, uusi tila 'Ulkona' (katse ~15° horisontin alle), ISS-kyydin kamera/maa/kelaus. Päätoimittaja 29.9. klo 07.1x: avaus Pulun taulun rivistä 'Avaruuskävely' (omistajan hyväksymä muoto 28.9. klo 22.25), ei säätöpaneelista; Codex-tilaus Linssiseppä 2:n luonnoksesta Päätoimittajan nimissä (5 kerrosryhmää, iPhone pysty + iPad vaaka). Pulun repliikit (radiossa, v4 + kevyt radiosuodin, Pelikoodari): 1) '[excited] Luukku on auki! [warmly] Kiinnitä köysi kaiteeseen ennen kuin päästät irti – täällä ei ole alas, on vain ympäri.' 2) '[excited] Katso horisonttia! [warmly] Kierrämme maapallon puolessatoista tunnissa, joten aurinko nousee meille noin kuusitoista kertaa vuorokaudessa.' 3) '[amused] Hymyile, kamera on valmis! [warmly] Ota kuva – verrataan sitä astronautin oikeaan kuvaan samalta paikalta.'
+
+## OMISTAJA: RADIO KUUNVALOSSA, OMAT VALOT HEHKUVAT — UUSI KUVA CODEXILTA (29.9.2026 klo 06.59)
+
+Omistaja 29.9. klo 07.1x sanatarkasti: "Radio saisi olla kuun valossa kuvattu ja sen omat valot ja näyttö hehkuisivat. Pyydä codexia tekemään uusi kuva" → Codexille posti/fable-codex-radio-kuunvalo-20260929.md (73c0309c7): kylmä kuunvalo ylhäältä vasemmalta, VU-taustavalo, kaksirivinen näyttö, viritysasteikko ja virtamerkkivalo hehkuvat lämpimänä ja valaisevat lähipintoja; hehkut erillisinä additiivisina kerroksina (VU-tahti, pois-tilassa sammuksissa); kerrosjako, nimet, mitat (iPad 1400×520, iPhone 1100×600) ja manifestin akselit ennallaan 6bb710954:stä; esikatselut tummalla yökartalla. Linssiseppä 2 vaihtaa kerrokset natiiviin toimituksen tultua (radiolinssi vain natiivissa).
+
+## PÄÄTÖS: VIE 1.0.42 (RADIO, ISS-PANEELI, SÄÄTIMET, ASTROSELITE) (29.9.2026 klo 07.27)
+
+Natiiviseppä 29.9. klo 07.3x: BUILD 42 = proto master c7c5b8e7 (käännös 44faaf32): Linssisepän astroselite, Linssiseppä 2:n radiolinssin uudistus (d7895639/9ee9136e, vain natiivi) ja ISS-kyydin säätimet ca610a6d (harmaa pinta oman sijainnin katseesta korjattu), Natiivi-UI:n ISS-säätöpaneelin Codex-nahka 03368417. Laitetestaajan savuke 4/4 PASS; radio tila rms 0,125 (aiempi rms 0 oli mittausharha: asemat soivat liitännäisen AVAudioEnginellä Unityn ohi). Muutosrivi #3600. Päätoimittaja: VIE 1.0.42 (ehdot: muutosrivi mainissa + sisältövienti ennen TF:ää, Testattavaa tyhjä). Kuunvaloradio (Codex 77036b7f6) ja pohja 2026-09-27 + kerma p060 tulevat 1.0.43:een.
+
+## OMISTAJA: MAAKUNTALAPPU YLEMMÄS AVAUSNAPIN PÄÄLLE + PIENI X (29.9.2026 klo 07.34)
+
+Omistaja 29.9. klo 07.4x (iPhone-kaappaus docs/raportit/kaappaukset/omistaja-20260929/maakuntalappu-paikka.jpg: Länsi-Makedonia, Kastorian luonnehdinta + Lue lisää) sanatarkasti: "Tuo maakunta lappu saisi olla ylempänä ja peittää sen avanneen painikkeet. Lisää pieni x sen oik yläkulmaan sulkemista varten". → Natiivi-UI (natiivi, kärkeen ennen luennan alkukatkoa): maakuntatilan lappu nostetaan ylemmäs niin, että se peittää sen avanneen painikkeen (oikean yläkulman listanappi), ja lapun oikeaan yläkulmaan pieni sulkeva x (osuma-ala ≥ 44 pt, ei koristeita); Siirtoseppä sama webiin pariteetiksi.
+
+## OMISTAJA: MAAKUNTAKORTIN KOKO EI SAA MUUTTUA KYSYMYSTÄ AVATESSA (29.9.2026 klo 07.36)
+
+Omistaja 29.9. klo 07.4x (iPhone-kaappaukset docs/raportit/kaappaukset/omistaja-20260929/maakuntakortti-kiinni.jpg ja -kysymys-auki.jpg: Keski-Kreikka, kortti kasvaa ylöspäin ja pitenee, kun 'Miksi Khalkiksen salmessa virta vaihtaa suuntaa?' avataan) sanatarkasti: "Ikkunan koko ei saa muuttua kun noita klikkaa auki". → Natiivi-UI (natiivi) + Siirtoseppä (web): maakuntakortin koko ja paikka pysyvät kiinteinä, kun kysymysrivejä avataan; vastaus avautuu kortin sisällä, joka vierittyy (avattu vastaus vieritetään näkyviin). Samaan erään maakuntalapun paikka + x (loki 07.34).
+
+## OMISTAJA: AVAUS JA SULKU AINA ANIMOIDEN (RAAMATTUUN); ELÄVÄ LINNA VAPAASTI PYÖRITETTÄVÄNÄ 3D:NÄ (29.9.2026 klo 07.58)
+
+(1) Omistaja 29.9. klo 07.4x sanatarkasti: "Voiko lapun aukeamisen ja sulkeutumisen animoida? Ja jatkossa myös kaikki vastaavat. Kirjaa raamattuun" → Raamattu, kohta KAIKKI LIIKE ANIMOIDAAN PEHMEASTI, lisäys AVAUS JA SULKU AINA ANIMOIDEN (PR #3602, haara fable-raamattu-avausanimaatio): lappu/kortti/paneeli/selite/pop-up avautuu kasvaen ja häivyttyen avanneen napin suunnasta ja sulkeutuu samaa reittiä (✕, ohinapautus, uuden avautuessa), 200–250 ms, web ja natiivi samat kestot; avattuna koko ja paikka kiinteät (omistaja: "Ikkunan koko ei saa muuttua kun noita klikkaa auki"). Natiivi-UI + Siirtoseppä: maakuntalappu ensimmäisenä. (2) Omistaja 29.9. klo 07.5x (referenssinä X-julkaisun selaimessa pyörivä, koodilla nollasta tehty 3D-keittiö; kuvat paikallisesti proto-3d/lokit/omistaja-20260929/, ei repoon) sanatarkasti: "Mietin että tarvitseeko keittiö mitään piirrettyjä pohjia. Tämä on selainessa pyörivä 3d malli. Tehty opuksella nollasta. Vertaillaan sitten kun linnan eka versio valmistuu. Olisi kiva että linna tuntuisi vapaasti pyöritettävältä 3d:ltä vaikka sitä ei tarvitsisi näyttää kuin tietyistä suunnista mutta vapaat lennot tärkeitä siirtymisiin" → Linnanrakentaja: kamera tuntuu vapaalta 3D:ltä, siirtymät vapaina kaarevina lentoina; keittiö v1 vertailtavana A) proseduraalinen 3D (materiaalit, valot, rekvisiitta koodilla) vs B) Codexin maalatut pinnat; hahmot 3D:nä (yhdestä suunnasta maalattu kortti ei kestä vapaata pyöritystä), suositus Linnanrakentajalta. Codexin pinnat jatkuvat, kokin kuvasarja (atlas) pysäytetty vertailuun asti.
+
+## TILA JA PÄÄTÖKSET: 1.0.42 RYHMÄSSÄ; LUPIEN UUSINTA; AVAUSANIMAATION ARVOT (29.9.2026 klo 08.12)
+
+(1) Julkaisija: 1.0.42 (build 202609290319, proto c7c5b8e7: astroselite, radiolinssi, ISS-kyydin säätimet, ISS-paneelin nahka) sisäisessä ryhmässä 08.01. (2) Klo 05.0x kortilla 'Tehty' kuitatut luvat (kartan osoitin, dioraaman työnkulku) eivät olleet Julkaisijan sessiossa → omistaja kirjoitti ne uudelleen klo 08.0x: kartta 2026-09-27 tuotantoon, PR #3596 vie-dioraama.yml merge + ajo, uusi kohde dioraama-aanet (vain .mp3 siirtokansiosta → dioraama/<rakennus>/aanet/v<N>/, immutable, ei ylikirjoitusta, kuiva-ajo ensin). Opetus: kortin 'Tehty' ei todenna, että teksti päätyi oikeaan sessioon → Julkaisija kuittaa luvan näkymisen. (3) Avausanimaatio (Raamattu-PR #3602 päivitetty 0d72c7bc7): yhteinen apuri 220 ms auki / 200 ms kiinni, animaatio alkaa samalla ruudunpäivityksellä kuin napautus (nosto aukeaa yhä välittömästi, löydös 134), poikkeukset kuvan suurennos 320 ms ja kaupungin avauskortti 280 ms (omistajan 250–300 ms). Siirtoseppä: web-erä A (nostokortti sisarineen, popupit, paneelit, valikot) ja B (17 dialogia); Natiivi-UI: 11 pintaa (docs/raportit/natiivi-ui-hyppyavaukset-20260929.md).
+
+## PÄÄTÖS: VIE 1.0.43 (KARTTA 2026-09-27, PULUN TAULU); OIKEUKSIEN LAAJENNUS OMISTAJALLE (29.9.2026 klo 08.19)
+
+(1) Natiiviseppä 29.9. klo 08.3x: BUILD 43 = proto master 476e251f (käännös 420a04de): peruskartta 2026-09-27 (järvet, saaret, rannikko), kerma 27-p060 (ei peitä järviä), Linssisepän Pulun taulu + LISÄYS 6; savuke 5/5 PASS. Päätoimittaja: VIE 1.0.43 (ehdot: Siirtosepän offline-PR #3599 mainiin + sisältövienti ennen TF:ää, muutosrivi, Testattavaa tyhjä); kuunvaloradio ja avaruuskävely 1.0.44:ään. (2) Omistaja 29.9. klo 08.2x kysyi, voiko luvat antaa pysyvästi niin, ettei hänen tarvitse hyväksyä jokaista; valitsi 'Tee 1' (täsmäsallinnat Julkaisijan .claude/settings.local.json:iin: gh workflow run, .github/workflows-muokkaus, git worktree remove). Luokitin esti Päätoimittajaa ('Self-Modification') — ei kierretty; omistajalle annettu liitettävä teksti Julkaisijan sessioon (omistaja antaa ohjeen itse). Omistajan toimien muoto 29.9.: otsikko '## ⚠️ TOIMI TARVITAAN', lihavoitu ohje, kopioitava koodilohko, kortti vain kuittaukseen.
+
+## OMISTAJA: KUUNVALORADIO HYLÄTTY — ALKUPERÄINEN PUURADIO YHTENÄ KUVANA, KYTKIN SULKEE LINSSIN (29.9.2026 klo 08.42)
+
+Omistaja 29.9. klo 08.4x sanatarkasti (nähtyään kuunvaloradion laitekuvan): "Tuo radio on ihan kamala. Nyt se on sininen, kun pitäisi olla niin, että se on sama puun väri, mutta siitä jäisi iso osa vain varjoon ja radion omat valot valaisisivat radion pintoja, mutta että siinä tietenkin toistuisi se puun väri eikä tuo sininen radio. Anna Codexille tehtäväksi tehdä kuva alkuperäisen näköisestä radiosta, mutta niin, että radion omat valot valaisevat pintaa takaa tulevan hieman sinärtävän valon lisäksi. Radio on aina päällä, joten ei tarvitse kikkailla tasojen kanssa, vaan Codex voi suoraan tehdä yhden kuvan. Ainut, mikä jätetään tyhjäksi, on VU-mittarin. Neula, joka animoidaan sekä näytön teksti. Kun kytkin käännetään off-asentoon, niin koko radio häviää ja linssi sulkeutuu, joten kaikki radion omat valonlähteet voidaan suoraan ottaa siitä yhdestä pohjakuvasta." → Kuunvaloradio (linssiseppa2/radio-kuunvalo 6a5230f1) EI mergetä. Codexille posti/fable-codex-radio-yksikuva-20260929.md (3b5882887): alkuperäinen puuradio yhtenä kuvana (iPad 1400×520, iPhone 1100×600), iso osa varjossa, omat lamput valaisevat pintoja, takaa ohut sinertävä reunavalo, tyhjänä vain VU-neula (erillinen PNG) ja näytön teksti; asteikon asemanimet piirtää peli. Linssiseppä 2: virtakytkin pois = radio häviää ja linssi sulkeutuu; ei kerroksia eikä pois-tilaa. Opetus Päätoimittajalle: 'kuun valossa kuvattu' tulkittiin koko rungon väriksi — tilauksessa olisi pitänyt lukita materiaalin väri ja rajata kuunvalo reunavaloksi.
+
+## OMISTAJA: MAAILMATILAAN PELAAJANÄKYMÄ-APUNAPPI (29.9.2026 klo 08.57)
+
+Omistaja 29.9. klo 08.5x sanatarkasti: "Maailmatilaan voisi tehdä apunapin, joka näyttäisi kartan samalla lailla, kuin että maailmatila ei olisi päällä. Ainoastaan kohdekaupungit näkyisivät himmeänä ja pystyisin edelleen klikkaamalla siirtymään myös niihin, mutta muuten näkisin pelinäkymän samalla lailla, kuin normaali pelaaja." → Kehittäjän maailmatilaan kevyt kytkin 'Pelaajan näkymä': kartta, zoomirajat, nostot, laput ja paljastukset kuten tavallisella pelaajalla; lisäksi kaikki kohdekaupungit himmeinä ja napautettavina (siirtyminen toimii kuten maailmatilassa). Kytkin vain kehittäjätilassa, ei pelaajille. Natiivi-UI (natiivi) ja Siirtoseppä (web) samalla mallilla; web on malli.
+
+## OMISTAJA: YLÄPALKKI MATKALAUKUKSI, PILLERI AVAA VALIKON, LINSSIT JA AARTEET OMINA NÄKYMINÄÄN (29.9.2026 klo 09.07)
+
+Omistaja 29.9. klo 09.1x (kaappaus docs/raportit/kaappaukset/omistaja-20260929/ylapalkki-nykyinen.jpg) sanatarkasti: "Muutetaan tuo pelin ruskea yläpalkki niin, että otetaan vasempaan yläreunaan takaisin matkakirjan logo ja poistetaan tuo hampurilaiskuvaake kokonaan niin, että siirretään pilleri oikealle puolelle ja Codex voisi itse asiassa tehdä tuon koko yläpalkin kuvaksi niin, että se muistuttaisi ruskean väristä matkalaukun pintaa ja matkakirjan logo olisi vähän kuin kohopainettu siihen, samoin kuin pillerin muoto. Ja pillerin alapuolelle, tai ei sittenkään, niin vaan koko alareuna saisi näyttää matkalaukun reunalta. Ja jatkossa kun pilleriä klikkaa, niin siihen avautuisi nykyiset napit, mitkä ovat jo nyt hampurilaisessa. Mutta linssit eivät näkyisi suoraan, vaan niille olisi alareunassa oma nappi, joka muuttaisi painettaessa näkymän pelkäksi linssilistaksi. Ja linssinapin alapuolella olisi sitten niitä tietoja, mitä tällä näkyy, jos painaa pilleriä. Ja itse asiassa linssinapin alapuolella ennen niitä tietoja voisi olla oma aarteet-nappi, mikä taas avaisi toisen näkymän, missä olisi kaikki kerätyt aarteet ja julisteet ja muut esineet näkyville. Saatko kiinni ideasta? Kun olet pyytänyt Codexilta kuvan, niin anna minulle se heti nähtäväksi. Inhuväksyn." → (1) Codexille posti/fable-codex-ylapalkki-matkalaukku-20260929.md (9f9596676): yläpalkki tumman ruskean matkalaukkunahan pinnaksi, logo (assets/logo.png) ja pillerin muoto kohopainettuina, alareuna matkalaukun reunana; väri, logo ja ei-sinistä lukittu; koosteet iPhone/iPad ensin, omistajalle heti. (2) Rakenne (web malli, natiivi perässä): logo vasemmalle (linkki tekijätietoihin kuten ennen), hampurilainen pois, pilleri oikealle; pillerin napautus avaa valikon: nykyiset hampurilaisen napit → Linssit-nappi (vaihtaa näkymän pelkäksi linssilistaksi) → Aarteet-nappi (uusi näkymä: kerätyt aarteet, julisteet ja muut esineet) → pillerin nykyiset tiedot alimmaisena. Pelikoodari (web) + Natiivi-UI (natiivi); ulkoasu Codexin kuvan hyväksynnän jälkeen, rakenne voidaan aloittaa heti.
+
+## OMISTAJA: LOGO AVAA TEKIJÄ- JA LISENSSITIEDOT, NIISTÄ NAPPI TILANNESIVULLE (29.9.2026 klo 09.08)
+
+Omistaja 29.9. klo 09.1x sanatarkasti: "Ja matkakirjan logoa painavalla avautuisi ne tekijä- ja lisenssitiedot, ja niiden tietojen yläreunassa olisi nappi, mistä pääsisi pelin tilannesivulle, missä on ne linssit ja kehityksen yhteenveto ja niin poispäin." → Yläpalkkierään (loki 09.07): logon napautus avaa tekijä- ja lisenssitiedot (avausanimaatiolla), niiden yläreunaan nappi pelin tilannesivulle projekti.html (linssit, kehityksen yhteenveto); natiivissa sivu avautuu selaimeen. Pelikoodari (web) + Natiivi-UI (natiivi).
+
+## OMISTAJA: PUURADIO KORJAUSKIERROKSELLE; 1.0.44 KOOTAAN KLO 11.30 ASTI (29.9.2026 klo 09.10)
+
+(1) Codexin puuradio yhtenä kuvana (codex-fable-radio-yksikuva-20260929.md, 9b1270bd1: puun väri ja muoto oikein, mutta runko tasaisesti valaistu ja näyttö tumma) näytetty omistajalle heti; omistaja kortilla 29.9. klo 09.1x 'Korjaus: varjo ja hehku' → Codexille posti/fable-codex-radio-yksikuva-korjaus-20260929.md (8515cff42): enemmän varjoa, meripihkainen hehkuva näyttö, lamppujen valo puun ja messingin pinnoilla, ohut sinertävä takareunavalo; muoto/mitat/tiedostot ennallaan, v2. (2) BUILD 44 = proto master 634be415 (maakuntalappu + minipulu, savuke 4/4) pidossa: 1.0.44 kootaan BUILD 44 + Natiivi-UI:n avausanimaatiot 222ce07e + Linssisepän Pulun ISS-tervetulo; takaraja klo 11.30, jolloin vienti sillä mitä junassa on. TF 1.0.43 viennissä (36528067177).
+
+## OMISTAJA: YLÄPALKKI ENSIN IPHONELLE, IPAD SEN JÄLKEEN (29.9.2026 klo 09.10)
+
+Omistaja 29.9. klo 09.1x sanatarkasti: "Tehdään iPad-versio sitten sen jälkeen, kun on saatu ensin iPhone-versio yläpalkista valmiiksi." → Codexille muutos (fable-codex-ylapalkki-vain-iphone-20260929.md): nyt vain iPhone-kooste 1290×300 + palat; iPad-koosteet erillisellä tilauksella iPhone-version hyväksynnän jälkeen. Pelikoodari ja Natiivi-UI: yläpalkin uusi ulkoasu ensin puhelimen asettelussa; iPadilla nykyinen palkki kunnes iPad-versio tehdään (valikkorakenne pillerin takana voi tulla molemmille).
+
+## OMISTAJA: LINSSILISTA TIHEÄNÄ, NAPAUTUS NÄYTTÄÄ HAVAINNEKUVAN JA AKTIVOI-NAPIN (29.9.2026 klo 09.12)
+
+Omistaja 29.9. klo 09.2x sanatarkasti: "Linssit voisivat olla listana ilman selitetekstiä, niin mahtuvat tiheämmin näkyvään. Ja kun linssiä klikkaa, niin vasemmalle puolelle tulee havainnekuva linssistä sekä selite, mikä tai minkälainen linssi on. Ja samalla klikattu linssirivi muuttuukin. Aktivoi napiksi, jolloin uudestaan samasta paikasta klikkaamalla linssi avautuu." → Yläpalkkierän Linssit-näkymä (Pelikoodari web, Natiivi-UI natiivi): tiheä nimilista; 1. napautus avaa vasemmalle havainnekuvan + lyhyen selitteen ja muuttaa rivin samassa kohdassa Aktivoi-napiksi; 2. napautus avaa linssin; havainnekuvat olemassa olevista (linssikatalogi), puuttuvat tilataan Päätoimittajan kautta.
+
+## OMISTAJA: AARTEET-NÄKYMÄ OTSIKOITTAIN, NAPAUTUS NÄYTTÄÄ KUVAN JA NÄYTÄ-NAPIN (29.9.2026 klo 09.14)
+
+Omistaja 29.9. klo 09.2x sanatarkasti: "Samalla tavalla aarteet ovat otsikoittain listana, eli myös julisteet toisena otsikkona ja niin päin, ja niitä klikkaamalla avautuu samalla lailla isompi kuva vasemmalle sivulle, ja kohde muuttuu Aktivoi-tekstiksi, anteeksi Näytä-tekstiksi, ja vielä uudestaan klikkaamalla Juliste tai aarre aukeaa koko sivulle näkyviin." → Aarteet-näkymä (Pelikoodari web, Natiivi-UI natiivi): lista otsikoittain (Aarteet, Julisteet, muut esineryhmät), 1. napautus avaa isomman kuvan vasemmalle ja muuttaa rivin Näytä-napiksi, 2. napautus avaa esineen koko ruudulle; sama komponentti kuin Linssit-näkymässä (Aktivoi).
+
+## TILA: LUENNAN ALKUKATKON JUURISYY LÖYTYI (NATIIVI) (29.9.2026 klo 09.43)
+
+Natiivi-UI 29.9. klo 09.5x: omistajan havaitsema isoisän luennan alun/kaupungin nimen katoaminen laitteella johtui siitä, että vanha alku häivytti uutta klippiä ruutujen tahdissa → pelin jumi heti soiton alussa soitti alun hiljaa (250 ms jumi = 0,34 s, 500 ms = 0,60 s), ja klippien alussa on vain 0,11–0,20 s hiljaisuutta, joten ensimmäinen tavu katosi. Korjaus natiivi-ui/luenta-reitti d33f6df6: hiljaa soitettu aika 0,000 s; äänisessio asetetaan vain väärästä tilasta (korjaa Bluetooth-reitin uusintaneuvottelun). Päätoimittaja: 1.0.44:ään (BUILD 44 + avaukset 222ce07e + luenta-reitti + tervetulo jos ehtii, takaraja 11.30); omistajalle laiteohje TF:n jälkeen.
+
+## PÄÄTÖS: VIE 1.0.44 (LUENNAN ALKU, AVAUKSET, MAAKUNTALAPPU) (29.9.2026 klo 10.11)
+
+Natiiviseppä 29.9. klo 10.11: 1.0.44 = BUILD 44 -yhdistelmä proto master 4d7bc2ed (käännös cd78a365): Natiivi-UI:n maakuntalappu (kiinteä kortti, ✕, vieritys), minipulu kuvaselaimessa, avausanimaatiot (8 pintaa) ja luennan alkukatkon korjaus (luenta-reitti d33f6df6); Laitetestaajan savuke PASS (luennan alku kuuluu kokonaan). Päätoimittaja: VIE 1.0.44, muutosrivi #3607 päivitetään; Pulun ISS-tervetulo 1.0.45:een. Havainto 1.0.45:een: maakuntakortin korkeus vaihtelee maakunnittain (Englanti 727 pt, Attika 616 pt) → Natiivi-UI.
+
+## TILA JA PÄÄTÖKSET 29.9. PÄIVÄ: 1.0.44 RYHMÄSSÄ, VIE 1.0.47, AVARUUSKÄVELY HYVÄKSYTTY, BURST-KORJAUS (29.9.2026 klo 12.14)
+
+(1) 1.0.44 (proto 4d7bc2ed) sisäisessä ryhmässä 11.05. (2) Natiiviseppä: BUILD 45 (6dc1b7cc, Pulun ISS-tervetulo + linssiesittelyt), 46 (1b2609ce, Pulun puhe Kertoja-kytkimen mukaan kuten webissä), 47 (329ffaf0, kartuschan liukuva avaus/sulku, Pulun kuplat kuvan takana), savukkeet 4/4 → Päätoimittaja: VIE vain 1.0.47 (sisältää 45–46), muutosrivit yhdistetään. (3) Omistaja kortilla: avaruuskävely 'Hyväksyn' (Linssiseppä 2, proto linssiseppa2/avaruuskavely bdea89bf, Codexin kerrokset, iPhone+iPad 0 poikkeusta) → merge-pyyntö 1.0.48:aan. (4) Burst AotLinkerException -korjaus käännöspalveluun (omistajan lupa Natiivisepän sessiossa klo 10.3x; odotus edellisen ajon prosesseille + oma TMPDIR, LuoPallo ilman Burstin editorikäännöstä, ajastin ohittaa jo käännetyn junan; raportti burst-linkkeri-selvitys-20260929.md); ensimmäiset junat ilman kaatumisia, ajastimen ohitus todennettu 12.01. (5) Jokikoe korjattu (#3614: Wienissä yksi Tonava, Tiberin silmukka pois, Moskva ja Kemijoki uusina); kuvaparit omistajalle, täysi poltto 2026-09-30-pohja (+viivat) + pallo odottaa omistajan OK:ta. (6) Pariteettikatsaus (Siirtoseppä, #3619): webin 3 vikaa → Pelikoodari, natiivin 3 eroa → Natiivi-UI, pillerin sisältö yhtenäistetään. (7) Natiivi-UI:n pelaajan näkymä merge-pyynnössä 9652f810; pillerivalikko natiivissa laitteella, odottaa webin PR:ää.
+
+## OMISTAJA: VIIKKORAJA 97 % → SESSIOT SEIS JA SIIRTOPROMPTI (EI AIEMMIN) (29.9.2026 klo 12.15)
+
+Omistaja 29.9. klo 12.1x sanatarkasti: "kun viikkolimit 97%, lopeta sessiot ja kirjoita siirtoprompti. mutta tee vasta siinä vaiheessa, älä aiemmin." Tilanne 12.15: Weekly · all models 86 %, vauhti ~3,3 %/h → 97 % arviolta ~15.30. Postivahti ilmoittaa 94 %:ssa (valmistelu: roolit päivittävät luovutukset, ei pysäytystä) ja 97 %:ssa (toimeenpano: roolit pushaavat luovutuksen + aloitusviestin ja lopettavat; Päätoimittaja kirjoittaa siirtopromptin docs/raportit/viesti-fable-siirtoprompti-<pvm>.md, antaa sen omistajalle kopioitavana ja pysäyttää sessiot). Muistio viikkoraja-97-siirtoprompti.md.
+
+## OMISTAJA: KEITTIÖ B + TUMMEMPI VALO; PARITEETTIPÄÄTÖKSET (29.9.2026 klo 12.20)
+
+(1) Linnanrakentajan keittiö v1 A|B (simulaattori a57ce34e: aurinko ja varjot, tulen valo, 3D-pienoisfiguurit, 3D-liekki, 70 esinettä, kaarilennot, äänet). Omistaja kortilla 29.9. klo 12.3x: 'B + tummempi valo' → jatketaan Codexin maalatuilla pinnoilla, valaistus referenssikeittiön tapaan (tummempi yleisvalo, tuli/kynttilät/ikkunan aurinko tekevät tunnelman, syvät varjot), liekin hehkua pienennetään. (2) Pariteetti: pilleri molemmilla 'rahat · Päivä N, vuorokaudenaika', N/80 pois natiivista (omistaja poisti webistä 16.8.); saapumisen valokuvakortti webissä natiivin mukaan ilman polaroid-kehystä ja kuvatekstiä (omistajan löydös 138, build 16); ratas ei ero (kehittäjätila).
+
+## OMISTAJA: JOKIEN TÄYSI POLTTO 2026-09-30-POHJA (29.9.2026 klo 12.25)
+
+Karttasepän jokikoe (GEOGLOWS-joet --joet-lisa, #3614: Wienissä yksi Tonava, Tiberin silmukka korjattu, Moskva ja Kemijoki uusina; kuvaparit pyramidi-poltto/joet-koe-20260929/kuvaparit/) näytetty omistajalle. Omistaja kortilla 29.9. klo 12.2x: 'Aloita poltto' → täysi poltto 2026-09-30-pohja (+viivat, joet molempiin kerroksiin, ei --piirit) + pallo, nice 15, yön yli; vienti ja osoitin erillisellä luvalla aamulla. Poltto saa jatkua myös viikkokiintiön 97 %:n pysäytyksen yli (tilinvaihto).
+
+## PÄÄTÖS: VIE 1.0.48 (AVARUUSKÄVELY) (29.9.2026 klo 13.01)
+
+Natiiviseppä 29.9. klo 13.0x: BUILD 48 = proto master 1c4a7eff (käännös 39fc303b): Linssiseppä 2:n avaruuskävely bdea89bf (omistaja hyväksyi) + radio-virta b68dcdd3 (ei-asemaa-teksti, kytkin sulkee linssin) + Natiivi-UI:n pelaajan näkymä 9652f810; Laitetestaaja 5/5 PASS (iPad pysty; vaaka todennettu 8affab73:ssa). Päätoimittaja: VIE 1.0.48; jos 1.0.47:n vienti ei ole alkanut, se ohitetaan (1.0.48 sisältää kaiken); muutosrivit yhdistetään.
+
+## OMISTAJA: YLÄPALKIN LOGO JA PILLERI LEVEIMMÄN DYNAMIC ISLANDIN MUKAAN, NAHKA TUMMEMPI KESKELTÄ (29.9.2026 klo 13.12)
+
+Omistaja 29.9. klo 13.1x (natiivin pillerivalikon kuvat) sanatarkasti: "matkakirja logo näyttää olevan liian lähellä dynamic islandin reunaa. ja tuo onkin nyt vähän haastava juttu, koska eri puhelinmalleissa on eri levyiset saaret. pitää varmaan miettiä pillerin ja logon sijainti leveimmän saaren mukaan ja sitten vain keskelle jää tyhjää. matkalaukun voisi valaista niin että se olisi tummempi keskeltä, jolloin dynamic island ei mustana hyppää niin pahasti." → Natiivi-UI: logo vasemmalle ja pilleri oikealle leveimmän saaren (Pro Max) + marginaalin ulkopuolelle, keskellä tyhjä vyöhyke kaikilla malleilla (myös lovelliset); Codexille lisäys (fable-codex-ylapalkki-lisays-saari-20260929.md): nahka tummuu pehmeästi keskeltä, keskivyöhyke ~40 % leveydestä tyhjä, keskitummennus erillisenä kerroksena keski-varjo.png.
+
+## OMISTAJA: YLÄPALKKI HYVÄKSYTTY MATALAMPANA; 1.0.48 RYHMÄSSÄ, VIE 1.0.49 (29.9.2026 klo 15.13)
+
+(1) Codexin matkalaukkuyläpalkki (codex-fable-ylapalkki-matkalaukku-20260929.md, b64ebd75c; nahka-tile, logo- ja pillerikohopainatus, keski-varjo) näytetty omistajalle; kortilla 'Hyväksyn, madalletaan' → Natiivi-UI ja Pelikoodari kytkevät iPhonelle nykyisellä palkin korkeudella (ei 300 px koosteen korkeutta), tikkausreuna ja keskitummennus mukaan; iPad ennallaan. (2) Natiivi-UI: logo ja pilleri leveimmän saaren (130 pt + 2×12 pt) ulkopuolella, pilleri kaksirivinen (rahat / Päivä N, aika) kuten webin mitat.md (#3624). (3) 1.0.48 (proto 1c4a7eff: avaruuskävely, ISS-tervetulo, Kertoja-kytkin, kartuscha, pelaajan näkymä) sisäisessä ryhmässä 14.45; VIE 1.0.49 (5ce37440: yläpalkki + pillerivalikko). (4) Webin tuontivika #3623 (paivitaPelaajanakymaNappi) tuotannossa 14.30. (5) Liiku-nappi pysyy läpinäkyvänä (PAATOKSET 28 k3); iPadilla nappia siirretään nimiön kohdalta pohjaa lisäämättä. (6) Linssien havainnekuvina toistaiseksi varusteen kuvat (assets/varusteet), erillisiä ei tilata nyt. (7) Keittiö B + tumma valo valmis (juurisyy: pallon suuntavalo valaisi dioraamaa), kuva omistajalle.
+
+## OMISTAJA: PUURADIO V3 — NÄYTTÖ LOISTAA VALOA, MUU RADIO TUMMEMPI (29.9.2026 klo 16.30)
+
+Omistaja 29.9. klo 16.2x (nähtyään v2:n, 2580997f7) sanatarkasti: "radiossa näyttö ei loista valoa, vaikka pitäisi. radion voisi jättää muuten valaisematta vielä enemmän." → Codexille posti/fable-codex-radio-yksikuva-v3-20260929.md: näyttö valonlähteenä (meripihkainen hehku valaisee kehystä ja lähintä puuta, valo heikkenee etäisyyden mukaan), muu runko syvempään varjoon (vain lamppujen valaisemat kohdat + ohut sinertävä takareunavalo), VU ja asteikko hehkuvat mutta valaisevat vähemmän; muoto, mitat ja tiedostot ennallaan. Linssiseppä 2 kytkee omistajan OK:n jälkeen (mahdollisesti uudella tilillä).
+
+## TILINVAIHTO 29.9. KLO 16.4X: ROOLIT PYSÄYTETTY, SIIRTOPROMPTI (29.9.2026 klo 16.38)
+
+Omistaja 29.9. klo 16.3x: "sen jälkeen voisit lopettaa muut sessiot ja tehdä siirtopromptin" (viikko 94–95 %). Kaikki 12 roolia pushasivat luovutuksen ja aloitusviestin (SHA:t siirtopromptissa). Käynnissä jää: jokipoltto ajo-20260930 (vahti, nice 15) ja TF 1.0.50 -ajo 36576368826 GitHubissa. Siirtoprompti docs/raportit/viesti-fable-siirtoprompti-20260929.md; Päätoimittajan aloitusviesti osoittaa siihen. Codexin puuradio v3 odottaa; iPad-yläpalkki tilataan vasta omistajan nähtyä iPhonen nahkapalkin pelissä.
+
+## TILA 29.9.2026 klo 17.0x: tilinvaihto tehty (29.9.2026 klo 17.02)
+
+Uuden tilin Päätoimittaja local_593b89a1-2514-4d74-b956-2a73db862382 (Opus xhigh). Tilillä oli valmiina 10 tyhjää roolisessiota oikeissa kansioissa (luotu 25.9.), joten ne käytettiin uudelleen aloitusviesteillä; Linssiseppä 2 (local_fc4fcc54-9fa1-4ba2-9de2-97a8ee884e10) ja Linnanrakentaja (local_08e82dfc-ac27-4a27-a62b-b0ff862022ae) luotiin appia ohjaamalla. Remote Control päällä kaikissa. TF 1.0.50 (iPhonen nahkayläpalkki) sisäisessä ryhmässä, #3627 mergetty. Uudet erät: Linssiseppä = suurin puuttuva web-linssi natiiviin, Siirtoseppä = pariteettikatsaus 2 BUILD 50:stä. Natiivisepän 1.0.51-juna (keittiö) odottaa omistajan lupaa luokitinesteen vuoksi.
+
+## OMISTAJA: MATKALAUKKU JA ASETUKSET UUSIKSI, YLÄPALKIN KULMAT (29.9.2026 klo 17.11)
+
+Omistaja 29.9.2026 (1.0.50 iPhonella): 1) MATKAKIRJA-logo ja pilleri jäivät pyöristettyjen kulmien taakse → keskemmälle (turva-alue + kulmasäde). 2) Matkalaukun etusivulta pois äänenvoimakkuussäätimet, Pieni liike, Kuljettu reitti ja Ehdota; ne ja Offline Asetuksiin. 3) Retkikunta Uusi peli -napin viereen. 4) Linssit ja Aarteet vierekkäin. 5) Asetuksiin Kehittäjä-nappi (avaa nykyisen salasanalukon, ei avointa kytkintä). 6) Näytä huntu -nappi Asetukset-napin taakse. 7) Asetukset leveämmäksi äänitasojen säätöä varten, Äänet-napit pois (liukusäätimet jäävät). Reititys: Natiivi-UI (natiivi) ja Pelikoodari (web) rinnakkain, sama asettelu.
+
+## OMISTAJA: MAX-EFFORT VAIN TARPEESEEN, SESSIONIMISSÄ MALLI JA EFFORT, IPADIN MAAILMA-NAPPI POIS (29.9.2026 klo 17.13)
+
+Omistaja 29.9.2026 klo 17.1x–17.2x: 1) sessioiden nimien perään suluissa malli ja effort (esim. Natiiviseppä (Opus, high)); 2) Opuksilla max-effort vain kun oikeasti tarpeen — kaikki Opus-roolit high oletuksena, max vain yksittäiseen vaikeaan juurisyyhyn ja heti takaisin (Natiiviseppä, Linssiseppä ja Linnanrakentaja laskettu max → high); 3) iPadilta pois Maailma-nappi kartan päältä (Natiivi-UI natiiviin, Pelikoodari webin iPad-asetteluun, jos sama nappi).
+
+## OMISTAJA: KOHDEKAUPUNGIT VÄHEMMÄN MUSTIKSI (29.9.2026 klo 17.15)
+
+Omistaja 29.9.2026: kohdekaupunkien pisteet ja nimiteksti vähemmän mustiksi. Linja: sama ruskea sepiamuste kuin rantaviivoissa ja rajoissa, hieman läpikuultava; pelaajan kaupunki ja pelikaupungit ennallaan, luettavuus säilyy. Karttaseppä web, Natiivi-UI natiivi, sama arvo molemmissa.
+
+## OMISTAJA: NOSTOT NÄKYVÄT MAAKUNTATILASSA, NAHKAPALKKI IPADILLE (29.9.2026 klo 17.17)
+
+Omistaja 29.9.2026 klo 17.1x: 1) kun maakuntavalitsin on päällä, kaikki nostot näkyvät edelleen kartalla (Natiivi-UI natiivi, Pelikoodari tarkistaa webin). 2) "Lisää uusi nahkainen yläpalkki myös iPadille." — iPhone-palkki nähty pelissä, iPad-tilaus Codexille 38d00ac51 (posti/fable-codex-ylapalkki-ipad-20260929.md): pysty 2048×260 ja vaaka 2732×260, ei saaren keskitummennusta, logo ja pilleri kulmasäteen + marginaalin päähän reunasta.
+
+## OMISTAJA: IPHONEN NAHKAPALKKI KORKEAMMAKSI (29.9.2026 klo 17.18)
+
+Omistaja 29.9.2026 klo 17.1x: iPhonen nahkapalkki hieman korkeammaksi niin, että Dynamic Islandin ylä- ja alapuolelle jää yhtä paljon nahkaa, ja sen alla on vielä tikkaus. Mitoitus laitteen saaren mukaan (Natiivi-UI natiivi, Pelikoodari web env(safe-area-inset-top)); Codexilta erillinen tikkauskaista vain, jos palat eivät veny siististi. Puuradio v3 saapui ja näytettiin omistajalle; kytkentä OK:n jälkeen (Linssiseppä 2, 3753cd9f pohjana).
+
+## OMISTAJA: RADIO V4 AIDOMMAKSI, LINSSILISTA OIKEAAN REUNAAN, PARITEETTI 2 (29.9.2026 klo 17.21)
+
+Omistaja 29.9.2026 klo 17.2x: 1) puuradio v3 parempi mutta "näyttää liikaa piirretylle" → Codexille v4 (283821fb7): valokuvamaiset materiaalit, sama valaistus, samat ankkurit, näytön kontrasti tummalle musteelle (#3a1e06, Linssiseppä 2 2cd27b8c) ≥ 4,5. 2) Pillerivalikon Linssit: lista heti oikeassa reunassa (ei hyppyä), valittu rivi muuttuu oranssiksi Aktivoi-napiksi linssin nimen kohdalla, vasemman puolen erillinen Aktivoi-nappi pois (Natiivi-UI + Pelikoodari; Aarteet ennallaan). Pariteetti 2 (#3628): rivi 10 natiivin karttaselitteen Nostot-välilehden poisto = omistajan 28.9. päätös Natiivi-UI:n maakuntatila v2:ssa, sallittu poikkeus; rivit 7–9 Siirtoseppä, 11 Natiiviseppä, 12 Linssiseppä 2 (web on oletus).
+
+## PARITEETTI 2: RIVIT 11 JA 12 RATKAISTU, ISOISÄN LINSSI WEBIIN (29.9.2026 klo 17.22)
+
+Päätoimittaja 29.9.2026: rivi 11 (natiivin aloituskaupungin valinta yöpallona, kello 02.30 ja PÄIVÄ 1/80) = omistajan hyväksymä aloituslento v3f/v3f2 (28.9.), sallittu poikkeus; yövalot aloituksessa kuuluvat lentoon, käytyjen kaupunkien sääntö koskee elävää karttaa pelin aikana. Rivi 12: Isoisän linssi 1873 jää natiiviin (kaanon, loki 21.9.); web-puute on Karttasepän kesken jäänyt erä 1 (a65b2eef2), jonka Karttaseppä viimeistelee natiivin ilmeen mukaiseksi. Kohdekaupunkien sepia #5a4330 peitto 0,75 molemmissa (Natiiviseppä 0b613166 → 1.0.52). 1.0.51-juna (keittiö f10f978b) avattu 17.20.
+
+## OMISTAJA: ISS-CUPOLA PELKISTETYKSI, KYTKIMET ALAREUNAAN, PULU ULKONA (29.9.2026 klo 17.26)
+
+Omistaja 29.9.2026: kun ollaan ISS:n sisällä (Cupola), Pulu on ulkona avaruuskävelyllä ikkunan takana. Cupolan näkymässä ei mitään peliin liittyviä elementtejä (ei 3D-nostoja, merkkejä eikä nimiöitä), vain kartta efekteineen. Cupola heijaa hieman (kellunnan tunne; Vähennä liikettä poistaa). Vasemman yläreunan säätönapit alareunaan oikean avaruusaluksen kytkimiksi Cupolan estetiikalla: Codexille kytkinmoduulitilaus e449d52a1 (posti/fable-codex-iss-kytkimet-20260929.md), valokuvamainen, ohjauspöytä ≤ 15 % ruudusta. Toteutus Linssiseppä 2 (natiivi ensin, sitten web). Astronautin kameran Pulun tervetulo lyhenee kolmasosaan ilman puhekuplia, taulu auki heti, viuhahdukset pois; tekstivedos omistajalla (Linssiseppä).
+
+## OMISTAJA: ÄÄNET VASTA KUN OMISTAJA ON NÄHNYT LINSSIN; VIE 1.0.51 (29.9.2026 klo 17.48)
+
+Omistaja 29.9.2026: "ei generoida vielä ääniä. Haluan nähdä itse linssin ensin. Siinä on varmasti vielä paljon korjattavaa ennen kuin kannattaa ääniä tehdä." Sääntö: uuden linssin tai dioraaman äänet (tehosteet ja Pulun puhe) generoidaan vasta, kun omistaja on nähnyt linssin laitteella ja hyväksynyt sen. Olavinlinna erä 3:n äänitilaus pidossa, Linnanrakentaja toimittaa laitekuvat ensin. VIE 1.0.51 (BUILD 51 = proto f3d7b408, keittiö kehittäjätilassa, savuke 4/4), rivi "Pieniä parannuksia kulissien takana."
+
+## KONE JUMISSA 18.1x: KEVYT TILA, AGENTTIRAJA JA PKILL-KIELTO (29.9.2026 klo 18.49)
+
+29.9.2026 klo 18.1x omistaja ei päässyt etäyhteyteen: kuorma 271 (15 min ka 148). Syyt: Linnanrakentajan 7 rinnakkaista Playwright-agenttia, jokipolton 4 Chromium-työläistä, 17 rinnakkaista node-testiä useasta worktreestä, CI-savukkeet samalla Macilla sekä omistajan Evoto-camera-link (27 h ~90 %) ja Codex CLI. Päätoimittaja asetti kevyen tilan (/tmp/matkakirja-kevyt, ajastettu poisto) ja käski roolit keskeyttämään raskaat ajonsa; luokitin estää roolia pysäyttämästä toisten ajoja (Interfere With Workloads), joten jokainen rooli pysäyttää vain omansa ja loput omistaja. Kuorma 31 klo 18.48, omistaja jatkoi. SÄÄNNÖT: 1) enintään 2 selain- tai rakennusagenttia per rooli kerrallaan, nice -n 15; 2) prosessien lopetus vain pid:llä, ei pkill -f -kuvioilla (Karttasepän pkill kaatoi 18.19 muiden testit); 3) omistajan ilmoitus koneen tarpeesta → Päätoimittaja asettaa kevyen tilan ja kaikki roolit keskeyttävät raskaat ajonsa itse.
+
+## OMISTAJA: PUURADIO V3 KÄYTTÖÖN, V4 HYLÄTTY (29.9.2026 klo 18.51)
+
+Omistaja 29.9.2026: "Se vanhempi versio kolme, radio on parempi kuin tämä uusi. Käytetään sitä, vaikka onkin vielä huono." Codexin v3 (näyttö valonlähteenä, runko tummempi) tuodaan peliin tummalla kirjainvärillä #3a1e06 (Linssiseppä 2 2cd27b8c); v4 (valokuvamaiset materiaalit, heikompi valon leviäminen puuhun) hylätty. Radion parantaminen jatkuu myöhemmin.
+
+## OMISTAJA: AARTEET SAMOIN KUIN LINSSIT (29.9.2026 klo 18.57)
+
+Omistaja 29.9.2026: pillerivalikon Aarteet-näkymään sama muutos kuin Linsseihin — lista heti oikeassa reunassa, valittu rivi muuttuu oranssiksi Näytä-napiksi aarteen nimen kohdalla, vasemman puolen erillinen nappi pois (Natiivi-UI + Pelikoodari).
+
+## OMISTAJA: LUENTA EI KUULU, MAAN RAJA MEREEN ILMAN SAARIA, IPAD-PALKKI MATALAMMAKSI (29.9.2026 klo 19.01)
+
+Omistaja 29.9.2026: 1) "isoisän matkakirjaluenta ei kuulu" — juurisyy Natiivi-UI (+ Laitetestaaja toistaa laitteella, Pelikoodari tarkistaa webin). 2) "maan rajan voi piirtää myös mereen. mutta jos maalla on saaria, niin älä piirrä niitä" — korostetun maan raja saa kulkea yksinkertaistettuna meren puolella, saaria ei ympäröidä omilla renkailla (Karttaseppä selvittää näkymän, natiivi Natiiviseppä/Natiivi-UI). 3) iPadin nahkapalkki: Codexin 130 pt:n kooste liian korkea → 89 pt tai matalampi, tikkaus alareunassa.
+
+## OMISTAJA: JOET RAUHALLISEMMIKSI, OHUEMMIKSI, EI JÄRVIEN PÄÄLLE (29.9.2026 klo 19.06)
+
+Omistaja 29.9.2026 jokipolton vientikuvista: "liian hektisesti piirretyiltä sekä liian paksuilta. Ja yhdessä kuvassa joki menee järven päältä... Voisiko nuo tarkemmat jokikuvat piirtää vain omalle tasolleen. Voi olla vaara, että ne hyppäävät liikaa." Linja: jokien yleistys ja pehmennys zoomin mukaan, ohuempi viiva (pääjoki hieman vahvempi), jokiviivat leikataan järvipolygoneilla, tarkemmat sivujoet vain syville tasoille, sama pääjoki samassa kohdassa kaikilla tasoilla (ei hyppimistä). Koepoltto ja kuvaparit (myös tasosiirtymä) omistajalle ennen täyttä polttoa ja vientiä. Isoisän luenta toimi — omistajan äänenvoimakkuus oli nollissa.
+
+## OMISTAJA: PULUN ÄÄNI POIS ISS-KOHTAUKSESTA (29.9.2026 klo 19.07)
+
+Omistaja 29.9.2026: "Ota pulun ääni toistaiseksi kokonaan pois ISS-kohtauksesta." Astronautin kameran tervetulo ja ISS-kyyti ilman Pulun puhetta (web + natiivi); Pulu näkyy ulkona avaruuskävelyllä mutta ei puhu. Tervetulon lyhennetty tekstivedos (A1/A2) jää hyllyyn, ääntä ei generoida.
+
+## OMISTAJA: NATIIVI ENSIN, WEB RAJATUMPI; NOPEUTUS (29.9.2026 klo 19.23)
+
+Omistaja 29.9.2026 klo 19.2x: "Ei tehdä jatkossa mitään linssejä webbiin, jos ne saa tehtyä toisella tavalla paremmin natiiviin. Ja se on periaatteessa hyväkin, että web-peli on rajatumpi ja kannustaa lataamaan oikean appin... Tehdään nyt siis kaikki mahdollinen, jotta saadaan kehitystä nopeutettua." Lisäksi: "jos on joku testi, mikä ei ole ihan pakollinen, vaan että vaikka minä voin sitten testata sen, niin ohitetaan sellaiset testit" ja "tee suoraan nyt Olavinlinna sillä uudella tavalla". Raamattuun uusi linjaus NATIIVI ENSIN, WEB RAJATUMPI (kumoaa web on malli -säännöt); web-pelin käyttöliittymä tauolle, muutokset docs/web-jono.md:hen. Pullonkaulamittaus 29.9. 08–19: Savukkeet 17 ajoa, 493 min, 14 epäonnistui; Testit 31 ajoa, 391 min; sisältövienti 7 × 22 min ennen jokaista TF:ää; BUILD 51 → TF-viennin alku 1 h 18 min (muutosloki-PR:n täysi CI + sisältövienti); Laitetestaajan savuke 9–18 min ennen jokaista BUILDia; vain 18/275 selaintyökalua käyttää GPU:ta. Olavinlinna tehdään natiivina: ulkokuori Senaatti-kiinteistöjen fotogrammetriamallista (CC BY 4.0), sisätilat Blenderissä esilasketulla valolla, Unityn valaistus ja efektit.
+
+## OMISTAJA: PULUN CHATIN YLÄREUNAAN ÄÄNIKONTROLLIT, NAPIT IKONEIKSI (29.9.2026 klo 19.24)
+
+Omistaja 29.9.2026: "pulun chattiin pitää saada samat äänikontrollit ja asetusten säädöt kuin nostoissa. ne voisivat tulla chat ikkunan yläreunaan. muuta samalla näytä puhekuplat sekä ehdota sisältöä napit ikoneiksi". Natiiviin Pelikoodarin ensimmäisenä natiivityönä (nostokortin komponentit uudelleen Natiivi-UI:lta); webiin web-jonon kautta.
+
+## PÄÄTOIMITTAJA: POLY HAVEN CC0 LINNAN 3D-MATERIAALEIHIN (OMISTAJAN VAHVISTUS AUKI) (29.9.2026 klo 19.26)
+
+29.9.2026: Linnanrakentaja käyttää Olavinlinnan sisätiloissa Poly Havenin CC0-PBR-tekstuureja ja -malleja (ei Commonsista). Päätoimittaja hyväksyi väliaikaisesti: CC0 vastaa PD:tä, lisenssi tarkistetaan jokaisesta assetista ja kirjataan lähde + lisenssi manifestiin ja tekijätietoihin. Samoin ulkokuoren Senaatti-kiinteistöjen fotogrammetriamalli (Sketchfab, CC BY 4.0) tekijämaininnalla. CLAUDE.md:n sääntö "PD/CC, tarkistettuina Commonsista" — omistajan vahvistus pyydetty 29.9.
+
+## OMISTAJA: JOKIKOE D HYVÄKSYTTY, TÄYSI POLTTO UUDESTAAN (29.9.2026 klo 19.31)
+
+Omistaja 29.9.2026 kuittasi jokikokeen d kuvaparit ("ok"): viivataso px, leveys valumasta 0,55–1,7 px, yleistys 1,3 px + pehmennys, joki katkaistaan järvillä, hierarkkiset tasokynnykset (≥ 150 000 km² kaikilla tasoilla, 50 000 z6, 15 000 z7, 5 000 z8). Täysi poltto 2026-09-30-pohja uudestaan + pallo (Karttaseppä, haara karttaseppa-joet-rauha a5710caa6); vienti ja osoittimen vaihto erillisellä luvalla. Olavinlinnan fotogrammetriamalli ladattu (omistajan Sketchfab-tili) ja siirretty proto-3d/_lahteet/olavinlinna-senaatti/ (CC BY 4.0).
+
+## KORJAUS: JOKIKOE D EI VIELÄ HYVÄKSYTTY; CC0 JA CC BY HYVÄKSYTTY (29.9.2026 klo 19.32)
+
+Omistaja 29.9.2026: "ei kun ok oli aiempaan kysymykseesi johon pyysit ok." Edellinen kirjaus (JOKIKOE D HYVÄKSYTTY) oli Päätoimittajan virhetulkinta: jokikoe d odottaa yhä omistajan arviota, täyttä polttoa ei käynnistetä. Omistajan OK koski lisenssejä: Poly Havenin CC0-tekstuurit ja -mallit sekä Senaatti-kiinteistöjen fotogrammetriamalli (Sketchfab, CC BY 4.0) hyväksytty Olavinlinnaan, lähde ja lisenssi kirjataan jokaisesta tiedostosta.
+
+## OMISTAJA: JOKIEN POLTOT ODOTTAMAAN (29.9.2026 klo 19.32)
+
+Omistaja 29.9.2026: "jätä jokien poltot odottamaan." Kaikki jokipoltot pidossa (täysi 2026-09-30-pohja ja koepoltot); jokikoe d:n koodi talteen haarassa karttaseppa-joet-rauha. Tuotannossa pysyy 27-pohja. Karttaseppä siirtyy maan raja mereen ilman saaria -tehtävään.
+
+## OMISTAJA: PYSYVÄ TF-VIENTILUPA JA CI-PIKATIE (29.9.2026 klo 19.36)
+
+Omistaja 29.9.2026 Julkaisijan sessioon: jokainen BUILD viedään TestFlightin sisäiseen ryhmään heti käännöksen jälkeen ilman erillistä VIE-kysymystä (alkaen 1.0.52), sekä CI-pikatie (savukkeet pois PR-portista, testit ohitetaan docs-/muutosloki-PR:iltä; PR #3633) ja muutosloki-PR:t pikatietä (#3634 mergetty). Julkaisijan arvio: BUILD → TF-ajon alku 2–5 min (ennen 78 min), TF-ryhmässä noin 40 min BUILDista (ennen noin 2 h). TF 1.0.51 sisäisessä ryhmässä 19.31, TF 1.0.52 (d45086d3, kohdekaupunkien sepia) viennissä.
+
+## OMISTAJA: NOSTOJEN LUENTA ALKAA YHÄ VÄÄRÄSTÄ KOHDASTA (29.9.2026 klo 19.38)
+
+Omistaja 29.9.2026: "nostojen luenta alkaa vieläkin väärästä kohtaa. chatissa näytti toimivan. tosin juuri tuli uusi versio niin en ole sitä kokeillut". Palvelut: nostojen ja kertojan striimiluenta xAI TTS (api.x.ai/v1/tts) matkakirja-pollo-workerin kautta; Pulun chat ja puhekeskustelu ElevenLabs v4 Turbo Pulun omalla äänellä saman workerin kautta; käsikirjoitetut Pulun repliikit ja isoisän luennat esigeneroituja ElevenLabs-tiedostoja ämpäristä. Aloituskohdan vika → Natiivi-UI etusijalla (toisto BUILD 52:lla, ensimmäisen napautuksen kohta ja palakartta lokiin).
+
+## OMISTAJA: MANTEREEN RANTAVIIVA RAJAKSI, EI YLEISTYSTÄ (29.9.2026 klo 19.41)
+
+Omistaja 29.9.2026 (kumoaa Päätoimittajan tulkinnan ja kokeet A/B, "aivan surkea", "aivan liian pyöristettyjä"): "Pitää olla siis aivan samanlainen raja kuin tähänkin asti, mutta lisätään sen piirto myös siihen mantereella olevaan merirajaan." Linja: nykyinen natiivin maa–maa-raja ennallaan, ja siihen lisätään mantereen (maan suurimman renkaan) rantaviiva samalla viivalla, samasta aineistosta ja samalla tarkkuudella; saarten rantoja ei piirretä. Karttaseppä aineisto, Natiiviseppä piirto; web web-jonoon.
+
+## OMISTAJA: LUENTAVIAN TOISTO-OHJE (29.9.2026 klo 19.53)
+
+Omistaja 29.9.2026: "Virhe toistuu silloin, jos lopetan edellisen luennon kesken klikkaamalla karttaa ja siirryn uuteen kohteeseen ja sitten aloitan uuden kohteen luennan, niin silloin luenta ei ala alusta, vaan ensimmäisen lauseen noin puolesta välistä suurin piirtein." → Natiivi-UI: keskeytetyn luennan soittokohta/palatila siirtyy seuraavan noston ensimmäiseen palaan; nollaus kartan napautuksessa ja lähteen vaihtuessa.
+
+## OMISTAJA: MAARAJAT KEVYIKSI, HENTO RANTA KAIKKIALLA (29.9.2026 klo 19.56)
+
+Omistaja 29.9.2026 kuvasarjasta raja-ja-rannat: "Tämä on hyvä. Pidetään tämä viimeisin versio." Natiivin maarajat: maa–maa-raja #5a4330 50 % peitolla 2,2 px; kaikki rannat saarineen samasta aineistosta ilman yleistystä #5a4330 22 %, 1,2 px maarajan alla. Ei uutta aineistoa eikä vientiä (maamaa.geojson + maapolygonit.geojson); mannerrajat-koe ja A/B hylätty. Natiiviseppä + Karttaseppä, seuraava juna; web web-jonoon.
+
+## OMISTAJA: LUENTAVIKA — TOINEN NAPAUTUS ALKAA OIKEIN (29.9.2026 klo 20.00)
+
+Omistaja 29.9.2026: "toisto alkaa oikeasta kohdasta jos klikkaan mini hampurilaisesta kaksi kertaa ensimmäistä otsikkoa". Päätoimittajan hypoteesi Natiivi-UI:lle: laitteella striimattu ensimmäinen pala alkaa soida ennen kuin dataa on puskurissa, soittoaika juoksee odotuksen ajan ja alusta puuttuu ~1–2 s; välimuistista (2. napautus) oikein. Korjaus: ensimmäinen pala vasta ladattuna tai ei-striimattuna, timeSamples = 0 datan saavuttua. Simulaattori ei toista (nopea verkko).
+
+## OMISTAJA: VAIN ISS JA LINNA, RADIO UUSIKSI YKSINKERTAISEKSI, KOKO MAAPALLO RADIOSSA (29.9.2026 klo 20.14)
+
+Omistaja 29.9.2026 klo 20.1x: "laitetaan muut linssit tauolle, tehdään vain ISS ja linna. Ja tuo radio on kyllä niin kamala, että tehdään vielä uusi versio. Palataan takaisin siihen mahdollisimman yksinkertaiseen desainiin. Ja voisitko katsoa sitä karttaa radiossa, miten sen saisi järkevämmäksi?" + "radiossa pitäisi aina olla koko maapallo käytössä, riippumatta onko kehittäjä vai ei." Linja: muut linssit tauolla (Tähtitaivas ja Yökartta junaan sellaisinaan kehittäjätilassa). Linssiseppä ottaa ISS:n, Linssiseppä 2 radion: koko maapallo aina radiossa; kartta ylhäältä/loivasti keskitettynä viritettyyn asemaan, asemat selkeinä merkkeinä nimineen, yksi hillitty rengas, 3D-mastometsä ja suuret renkaat pois, asteikko maantieteelliseen järjestykseen; laite takaisin alkuperäiseen suorakaidepaneeliin (vahvistus omistajalta auki).
+
+## OMISTAJA: RADIO TAKAISIN ALKUPERÄISEEN PANEELIIN PARANNUKSIN (29.9.2026 klo 20.16)
+
+Omistaja 29.9.2026: "Palataan siihen, mutta katso sekin läpi ja paranna hieman, koska nyt ainakin VU-mittari ei ole paras mahdollinen ja voisit muutenkin tehdä siihen pienet parannukset asettelun osalta." Radiolaite = alkuperäinen suorakaidepaneeli (28.9.) parannuksin: VU-mittari leveällä kaarella (akseli piilossa), kermataulu taustavalolla, selkeä asteikko ja punainen alue; näytön tasaiset marginaalit ja kaksi riviä; virtanappi pienempi ja keskitetty nimiöllä; asteikko vain viritetty ±3 asemaa isommalla tekstillä, korostus meripihkana, maantieteellinen järjestys; yhtenäiset raot ja kehykset, peitto ≤ 22 %. Puuradio v1–v4 hylätty.
+
+## OMISTAJA: VALIKOT YHTENÄISIKSI — MATKA-NAPPI, TOIMINNOT YHDELLE RIVILLE (29.9.2026 klo 20.32)
+
+Omistaja 29.9.2026 klo 20.2x: Asetukset samalle riville Uusi peli- ja Retkikunta-nappien kanssa; Linssit/Aarteet-riville Matka-nappi, joka avaa matkaosion; "saat vielä vapaat kädet vähän järkeistään noita valikoita... eri väripohjia... Ne ovat nyt seilanneet paikasta toiseen ja kärsivät siitä." Päätoimittajan malli Natiivi-UI:lle: yksi pergamenttipohja kaikissa valikkonäkymissä (Asetusten tumma pohja pois); kolme nappityyppiä samalla muodolla (navigointi kuvake + nimi + ›, kytkin meripihkana vain päällä, toiminto ohuella reunuksella); päävalikko: Linssit | Aarteet | Matka → Ääni-kytkimet → Uusi peli | Retkikunta | Asetukset → versio; Matka omaksi näkymäksi; Asetukset: Takaisin, äänentasot, kartan kytkimet (Pieni liike, Kuljettu reitti, Näytä huntu), Offline ja Ehdota, Kehittäjä; otsikot yhtenäisesti.
+
+## OMISTAJA: ELÄVÄ LINNA -KÄSIKIRJOITUS JA VANHOJEN KARTTAPOHJIEN POISTO (29.9.2026 klo 21.43)
+
+Omistaja 29.9.2026 kortilla: 1) "Kyllä, käsikirjoitus ja luonnoskuvat" → Päätoimittajan käsikirjoitus docs/raportit/linna-elava-kasikirjoitus-20260929.md (saapuminen hämärässä, elävät kohteet nimilappujen tilalla, leikkausikkunalento, huoneet pienoismaailmoina, voudin sinetti -etsintä matkamuistona, ilta oletuksena); luonnoskuvat A–D omistajalle ennen rakentamista. 2) "Kyllä, anna komento" vanhojen karttapohjien poistoon R2:sta (säilytetään 27-pohja ja edellinen); Karttaseppä listaa, omistaja ajaa poistokomennon. Cloudflaren syyskuun käyttö ,92, pääsyy 22 karttaversion täydet lataukset (Class A); jatkossa vain muuttuneet laatat.
+
+## R2-KULUT: SYYSKUU 4,9 M PUT, DELTA-VIENTI HYVÄKSYTTY (29.9.2026 klo 21.59)
+
+Karttaseppä 29.9.2026: syyskuussa noin 4,9 M R2-PUT-pyyntöä (≈ 17,6 $ Class A) ja noin 86 GB säilössä (≈ 1,1 $/kk); jokainen täysi karttavienti noin miljoona PUTia. Polttojen laatat ovat tavulleen toistettavia (27- ja 30-pohjan z8:sta 95,8 % identtisiä). Päätöksiä: delta-vienti (perussarja + tiivisteet, muuttuneiden bittikartta luettelossa) hyväksytty seuraavaan polttoon, arvio −95 % PUT. Vanhojen pohjien poisto: 18 pallo- ja 73 pyramidietuliitettä (~2,6 M objektia, ~35 GB), säilyy pallo 27/26/25/23a-rajaton ja pyramidin tuotanto- ja palautuskerrokset; omistaja ajaa skriptin pyramidi-poltto/r2-siivous/poista-vanhat.sh (vartija osoittimille, kuivaharjoitus ensin). Radio: omistaja "Laske radio alaspäin ja poista maakunta nappi näkyvistä" → Linssiseppä 2.
+
+## OMISTAJA: ELÄVÄ LINNA A + C, RADIO LÄHIKUVA, JOKIPOLTTO DELTANA (29.9.2026 klo 22.28)
+
+Omistaja 29.9.2026 klo 22.28 kortilla (luonnokset A–D, docs: Linnanrakentaja A/B/C Blender, Siirtoseppä D natiivi 1.0.55): 1) elävä linna rakennetaan A:n tunnelmalla (hämärä, lämpimät ikkunat, heijastus) ja C:n sisätilat eläviksi; B:n muurinharja vasta kun vasemman reunan fotogrammetriarepeämä on siivottu. Linnanrakentaja + Siirtoseppä aloittavat käsikirjoituksen vaiheet (saapumiskaari, soihdut, elävät kohteet, lento leikkausikkunan läpi). 2) Radio avautuu pelaajan kaupungin lähikuvana, koko pallon voi loitontaa (1.0.55 ennallaan). 3) Jokipoltto päästetään pidosta: yöllä nice 15:llä, vienti deltana kun #3641 on mainissa.
+
+## OMISTAJA: JÄRVIEN RANTAVIIVA KEVYEMMÄKSI KAUKAA (29.9.2026 klo 22.30)
+
+Omistaja 29.9.2026 klo 22.30: "Kartassa järvet esim. Suomessa ovat turhan paksulla viivalla kaukaa katsoessa." Syy: tools/fokuskartta/maailmapiirto.js osio 5 JÄRVET, kynä 1,0·P ja kostea reuna 2,2·P ovat paperivakioita, joten kaukotasoilla pieni järvi on pelkkää reunaa (natiivin maan kehä ei piirrä järviä, maapolygonit ilman reikiä). Päätoimittaja → Karttaseppä: tasoramppi järvien vedoille (≤ z5 ohuempi ja vaaleampi kynä ilman kosteaa reunaa, ≥ z8 ennallaan) tämän yön jokipolttoon, kuvapari ennen polttoa, vienti deltana.
+
+## OMISTAJA: EI SAAVUTETTAVUUSOHJEITA ULKOASUUN + PILLERIVALIKON JA LUENNAN PALAUTE (29.9.2026 klo 23.04)
+
+Omistaja 29.9.2026 klo 23.04 (1.0.56): "älä tuo mukaan saavutettavuus ohjeita, ne pilaavat asettelun. kirjoita tämä ohje raamattuun." → Raamattu, Ydinajatus: EI SAAVUTETTAVUUSOHJEITA ULKOASUUN. Palaute: iPadin yläpalkki liian matala; pillerivalikon napit kiinni toisissaan ja matalammiksi, ääninapit ylimmäksi, Linssit ja Matka vaihtavat paikkaa, valikko kapeammaksi, Linsseihin ja Aarteisiin vasemmalle erillinen kuva- ja seliteikkuna, keskeneräisissä maininta vain otsikossa, paperi hieman vaaleammaksi ja teksti hieman tummemmaksi, Matka-sivun pöllötason kuva isommaksi ja tekstille isompi marginaali (Natiivi-UI). Isoisän luennan alku jää kuulematta, hypoteesi: luenta käynnistyy jo kaupunkiesittelyn aikana; matkakirjan pohja paperin väriseksi kuten webissä (Linssiseppä 2).
+
+## OMISTAJA: LIPPU MAAN OIKEAAN YLÄKULMAAN, HUNTU EI RAJAA LIIKETTÄ (29.9.2026 klo 23.12)
+
+Omistaja 29.9.2026 klo 23.12 (iPad, Italia): "Lippu pitää olla aina maan oik. yläkulmassa. Muuten se näkyy huonosti kun koko maa on näytöllä." → lipputanko aina maan rajauslaatikon koilliskulman tuntumaan maan puolelle, kaikissa maissa (Linssiseppä, 6e5ccf55:n jatko). Omistaja 29.9.2026 klo 23.1x: "Kun huntu on päällä maailma tilassa, pelaajan pitää pystyä liikkumaan koko pallolla." → huntu peittää mutta ei rajaa kameraa eikä liikettä (Linssiseppä, merge Natiivisepälle). Molemmat web-jonoon.
+
+## TARKENNUS: HUNTU-LIIKE KUMOAA PELAAJAN NÄKYMÄN KAMERARAJAN (29.9.2026 klo 23.12)
+
+Linssiseppä 29.9.2026 klo 23.12: juurisyy PeliOhjain antoi PalloKierrolle MaailmaTila = MaailmaNakyma, jolloin Näytä huntu palautti saapumismaan zoomikaton ja panorajan. Korjaus ee5f2876 (1.0.58, Natiivisepän merge): MaailmaTila = Maailma, liike ja zoomi vapaat koko pallolla; huntu, himmeät ja kaupunkirajaus kytkimen mukaan. Omistajan 23.1x-linjaus kumoaa 8530c3d4:n linjauksen "rajat, zoomi kuten pelaajalla" hunnun osalta.
+
+## OMISTAJA: 3D-NOSTOT JA -SYMBOLIT POIS, 2D TAKAISIN (29.9.2026 klo 23.24)
+
+Omistaja 29.9.2026 klo 23.24 (iPad, Italia): "Pakko ottaa 3D nostot ja symbolit pois, eivät vain toimi ja palauttaa 2d takaisin." Kumoaa 27.–28.9. 3D-symbolien ja erikoismallien (Kronborg, Malbork, Olavinlinna jne.) oletuksen kartalla: natiivissa 2D-nostot ja -symbolit kuten ennen 3D:tä (webin malli); 3D-koodi jää kehittäjäkomennon taakse (Linssiseppä, merge Natiivisepälle). Elävän linnan dioraama (Poikkileikkaus-linssi) ei kuulu tähän. Samalla kysymys hunnutetun alueen laattakuvioista → Karttaseppä selvittää.
+
+## OMISTAJA: PAPERIRAE RUUDUN PÄÄLLE, EI LAATTOIHIN (29.9.2026 klo 23.39)
+
+Omistaja 29.9.2026 klo 23.39 kortilla. Juurisyy laattakuvioihin (Karttaseppä): pohjalaattoihin poltettu pikselirae eroaa tasoittain (z7 1,45–1,64 vs ylösnäytetty z6 0,83–0,92), ja natiivin LOD näyttää eri tasot vierekkäin suorakaiteina merellä ja aavikolla; kerman tasokohtainen alfa on pienempi lisätekijä (kerma z8:sta alasnäytteellä, p060b). Päätös A: pikselirae pois laatoista (patina rae ja raeKarkea = 0, paperikuitu ennallaan) jo tämän yön jokipoltossa (uudelleenkäynnistys); natiivin pallovarjostimeen proseduraalinen maahan ankkuroitu paperirae säädettävällä voimakkuudella (Natiiviseppä), sama käännös kuin uusi laattakansio. Täysi vienti (delta ei auta), omistajan lupa kuvien kanssa. Web menettää rakeen, kunnes web-varjostin saa saman kohinan (web-jono).
+
+## TARKENNUS: VAIN EUROOPPA — TURKKI JA VENÄJÄ VAIN EUROOPAN OSALTA (30.9.2026 klo 01.04)
+
+Päätoimittaja 30.9.2026 klo 01.04 (Sisältökirjurin maakuntajono valmis): TUR ja RUS otetaan maakuntasisältöön vain Euroopan osalta. TUR: Itä-Traakia (Edirne, Kırklareli, Tekirdağ, İstanbul) + Çanakkale (Gallipoli). RUS: Uralin länsipuoliset subjektit erinä à 15 (Kaliningrad, Pietari ja Leningradin alue, Moskova ja alue ensin). Sävy neutraali maantieteellis-historiallinen, ei nykypolitiikkaa; Aasian puoleiset alueet pois.
+
+## TARKENNUS: VENÄJÄN EUROOPAN RAJA JA KRIM (30.9.2026 klo 01.49)
+
+Päätoimittaja 30.9.2026 klo 01.49: RUS-maakuntasisältöön Uralin länsipuoli (myös Krasnodar, Rostov, Volgograd, Samara, Saratov, Penza, Tatarstan, Udmurtia, Baškortostan, Orenburg) ja Kalmukia (Kuma–Manytš-linjan pohjoispuoli); Pohjois-Kaukasian tasavallat pois. Krim ja Sevastopol eivät koskaan Venäjän sisältöön: pelissä ne ovat Ukrainaa (kansainvälinen tunnustus, Suomen kanta) — sisältö UKR-avaimilla; Karttaseppä tarkistaa, että maa- ja maakuntadata (rajat, huntu, korostus, nostojen maa-avaimet) näyttää Krimin UKR:nä.
+
+## TARKENNUS: KOKORUUTU MYÖS VISAN KUVILLE (30.9.2026 klo 03.28)
+
+Päätoimittaja 30.9.2026 klo 03.28 (Laitetestaajan BUILD 61 -savuke, Pelikoodarin kysymys): visan kätkökuva, kysymyskuva ja lippu avautuvat samaan kokoruutuun kuin nostokortin kuva (web openLightbox). Täsmentää 26.9. linjausta A: kokoruutu kaikille kuville, joilla ei ole omaa selitettä; paperikehys tyhjällä selitealueella näyttää keskeneräiseltä.
+
+## TARKENNUS: ÄMPÄRISISÄLLÖN TODENNUS PUHTAALLA ASENNUKSELLA (30.9.2026 klo 03.44)
+
+Päätoimittaja 30.9.2026 klo 03.44 (omistajan löydös TF 1.0.61: Poikkileikkaus-linssissä vanha palikkadioraama): juurisyy Siirtoseppä — tuotannon olavinlinna-paketti oli rakenna.mjs:n palikkapaketti; Blender-toimitus (kuori, atlakset, hämärä, glb:t) oli vain paikallisessa peilissä, jota kaikki simulaattorikuvat käyttivät. Linja: ämpäristä tuleva sisältö todennetaan aina puhtaalla asennuksella ilman paikallisia peilejä; isot binäärit (Blender-kuori, glb, atlakset) eivät mene gittiin vaan vientiskriptillä uuteen muuttumattomaan hash-kansioon, osoitin viimeisenä askeleena, omistaja ajaa; fotogrammetrian CC BY 4.0 -tekijätieto (Senaatti-kiinteistöt) pelin tekijätietoihin ennen vientiä.
+
+## OMISTAJA: PORTTI PYSYY SOVELLUKSESSA (30.9.2026 klo 06.51)
+
+Omistaja 30.9.2026 klo 06.51 kortilla (Pelikoodarin kuvapari natiivi vs web): tallennetulle matkalle palatessa sovellus näyttää portin (juliste, Jatka matkaa, Uusi matka); web jatkaa suoraan saapumiskuvaan. Natiivin portti pysyy ennallaan (natiivi ensin; webin muutos ei tarpeen). Samalla Päätoimittaja hyväksyi Sisältökirjurin 30 nostoehdotusta Euroopan ohuisiin maihin ja nolla-alueisiin ehdoin: ei kaksoiskappaleita naapurimaiden kanssa, pelin kaupunkien sisäiset kohteet pois (kuuluvat kaupunkeihin).
+
+## OMISTAJA: APURAHAN ARVIOIJIEN ULKOINEN TESTFLIGHT-RYHMÄ SAA AINA UUSIMMAN VERSION; ESITTELYKORTTI 'APURAHAHAKEMUS – KATSO TÄMÄ ENSIN' NATIIVIIN JA WEBIIN; WEBIIN HUOMAUTUS APP STORE -VERSIOSTA (30.9.2026 klo 11.09)
+
+Omistaja 30.9.2026 klo 11.0x ja 11.1x chatissa. 1) KORVAA 23.9. säännön 'julkisen linkin ulkoiseen ryhmään vain omistajan kortilla': arvioijien julkisen linkin ulkoinen TestFlight-ryhmä (App Store Connect) saa aina uusimman PASS-buildin sisäisen ryhmän rinnalla (Applen beta-arvio). Julkaisija tekee CI-työnkulun (ryhmän tila, liitos, arvioon lähetys, käyttötilasto: asennukset, istunnot, palautteet) omistajan suoralla luvalla omaan sessioonsa. 2) Pelin aloitusnäkymään (natiivin portti + webin aloitus) nappi 'Apurahahakemus – katso tämä ensin', joka avaa esittelykortin (teksti + kuvarivi; teksti docs/raportit/apuraha-esittely-20260930.md, Päätoimittaja); lähiviikkoina kortin alkuun lyhyt esittelyvideo huippukohdista ja kehityksen tilasta. 3) Webin aloitukseen kevyt pysyvä rivi: selainpeli ei sisällä kaikkia ominaisuuksia, suosittelemme iOS-sovellusta (linkki apurahahakemuksessa; linkkiä ei julkaista sivulla). Kohdat 2–3 ovat omistajan pyytämä poikkeus web-käyttöliittymän taukoon (NATIIVI ENSIN, WEB RAJATUMPI).
+
+## TARKENNUS: OMAN HAVAINNEKUVAN COMMONS-LÄHDE MAINITAAN AINA (30.9.2026 klo 11.11)
+
+Päätoimittaja 30.9.2026 (Sisältökirjurin kuvalisenssiauditointi, kohta G): jos pelin omalla havainnekuvalla on datassa Commons-lähde-URL, viitekuvan tekijä, lisenssi ja URL näytetään viitteet-kentässä kuten tekoälyjohdannaisilla (auditoinnin ryhmä F), vaikka pohjakuvan käyttöä ei voisi enää varmistaa. Ensimmäisinä FIN maastokohteet [0], [1], [3] ja [6] erässä 3.
+
+## OMISTAJA: APURAHAN ESITTELYKORTTIIN 'AVAA ESITTELYLINSSIT' — KAIKKI KEHITTÄJÄLINSSIT (30.9.2026 klo 11.27)
+
+Omistaja 30.9.2026 kortilla (Laitetestaajan löydös: uudella pelaajalla linssilista tyhjä, linssit aukeavat pisteillä 400/800/1400/2200): apurahan esittelykortin nappi 'Avaa esittelylinssit' avaa heti KAIKKI kehittäjätilan linssit, myös kokeilut (Olavinlinnan Poikkileikkaus, Tähtitaivas, Yökartta), ei vain neljää valmista pistelinssiä. Päätoimittajan suositus (vain valmiit neljä) hylättiin.
+
+## OMISTAJA: NIMETÖN KÄVIJÄLASKURI (WEB + NATIIVI), OMISTAJAN LAITTEET POIS, EI RAAKOJA IP-OSOITTEITA (30.9.2026 klo 11.30)
+
+Omistaja 30.9.2026 chatissa: halutaan nähdä, milloin joku muu kuin omistaja käyttää peliä (apurahan arvioijat). Päätoimittajan malli (Pelikoodari apurahakortin jälkeen): istunnon avauspingi Pollo-workerille (alusta, versio, maa, apurahakortin ja esittelylinssien avaus), päivän eri kävijät SHA-256(IP + päivittäin vaihtuva suola) -tiivisteinä, raakaa IP:tä ei tallenneta; omistajan laitteet merkitään kerran ja jätetään pois; suojattu lukuendpoint; Postivahti ilmoittaa Päätoimittajalle ensimmäisestä ulkopuolisesta kävijästä; tekijätietoihin rivi nimettömästä laskennasta.
+
+## OMISTAJA: LUENNAN ALKU KORJATTU (TF 1.0.68); MAAKUNTA AKTIVOITUU NAPAUTUKSESTA; iPHONEN YLÄPALKKI SAAREN MUSTAKSI JA PILLERI 1/80; iPADILLA YLÄPALKKI MYÖS VAAKASSA (30.9.2026 klo 12.28)
+
+Omistaja 30.9.2026 klo 12.2x: 'Luenta toimii nyt kaikkialla oikein!' (TF 1.0.68: istuntokorjaus 78e6513b + puhe PCM:nä 4426b7a6, Linssiseppä 2; vika näkyi vain uudemmilla laitteilla iPhone 17 Pro ja M5-iPad, ei M1-iPadilla eikä simulaattorissa). Uudet linjaukset natiiviin: 1) Maakuntanappi automaattiseksi: kun pelaaja napauttaa karttaa tyhjästä kohdasta, sen kohdan maakunta aktivoituu ja maakuntaponnahdus ilmestyy yläkulmaan. 2) iPhone: yläpalkin keskusta täysin musta, jotta Dynamic Island katoaa; heti saaren ulkopuolella liukuma mustasta nahkapintaan; pilleri ja logo hieman alemmas saaren akselin alapuolelle; yläpalkki hieman korkeammaksi; pillerin päiväys muotoon '1/80, keskipäivä' (päivä/80 ja vuorokaudenaika); rahasaldo pillerin oikeaan reunaan. 3) iPadilla yläpalkki näkyy myös vaaka-asennossa; vain iPhonella palkki piilotetaan vaaka-asennossa.
+
+## OMISTAJA: 3D-MERIELEMENTIT POIS TOISTAISEKSI; NÄHTÄVYYSKORTIN NUOLET KORTIN REUNOILLE; LUENNAN AIKANA MATKAKIRJA NÄKYVISSÄ, KUVA PUOLIKOKOISENA OIKEALLA, EI KARTAN PEHMENNYSTÄ (30.9.2026 klo 12.35)
+
+Omistaja 30.9.2026 TF 1.0.68 -kaappauksilla (Bulgaria, Ateenan luenta, Sofian katedraali): 1) 3D-merielementit (laivat, lautat, majakkalaiva, merihirviö, delfiinit, lokit, jäävuori) pois oletuksena: ne kulkevat maan päällä. Koodi jää, yritetään myöhemmin uudelleen. 2) Nähtävyyskortin vasen/oikea-nuolet selvästi kortin reunoille, kuvan ulkopuolelle, jotta pelaaja ymmärtää niiden vaihtavan kohdetta eikä kohteen kuvaa. 3) Isoisän luennan ajan matkakirjakaistale näkyy automaattisesti; saapumisen valokuva puolet pienempänä tekstin alapuolella ja ruudun oikeassa reunassa, jotta pelaaja voi tutkia karttaa samalla; kartan pehmennys (sumennus) luennan aikana pois.
+
+## NOSTOKIERROS 3 HYVÄKSYTTY (30 KPL EUROOPAN OHUIMPIIN); SEURAAVAKSI MAA-ARTIKKELIT JA MAALEHDET KUUDELLE SEKÄ LUENNAT VIIDELLE KAUPUNGILLE (30.9.2026 klo 12.39)
+
+Päätoimittaja 30.9.2026 (Sisältökirjurin inventaario docs/raportit/sisaltokirjuri-euroopan-inventaario-20260930.md, ehdotus sisaltokirjuri-nostot-kierros3-ehdotus-20260930.md, haara sisalto-pelikatalogi-20260927): hyväksytty 30 nostoa (MDA 4, SRB 5, MNE 4, ALB 3, BLR 3, MKD 3, UKR 3, PRT 2, NOR/SWE/BGR 1) erinä à 10. Tarkennukset: Kokino tulkintana (kiistanalainen observatorio); BLR/UKR-kohteissa neutraali sävy ilman nykypolitiikkaa ja sotaa; Azorien ja Madeiran nostot todennetaan kartalla. Sen jälkeen maa-artikkelit ja 3-sivuiset maalehdet BLR, ALB, MDA, MKD, MNE, SRB sekä luennat Luxemburgille, Vallettalle, Košicelle, Ljubljanalle ja Brysselille (säästäen). Kävijälaskurin omistajatunniste vain eksplisiittinen (?omistaja, Pöllön koodi, ui omistaja), ei kehittäjätila (TF:ssä oletuksena päällä).
+
+## OMISTAJA: ISS-KYTKINPÖYDÄN RUNKO HYVÄKSYTTY JUNAAN PAIKKAMERKEILLÄ (30.9.2026 klo 13.31)
+
+Omistaja 30.9.2026 kortilla (Linssisepän kuvapari kuvapari-kytkinpoyta-iphone.png, haara linssiseppa/iss-kytkinpoyta b34bb1e0): Cupolan säätimet alareunan kytkinpöytään (LIVE-merkkivalo ja lukemanäyttö; NOPEUS-kiertokytkin, PILVET- ja KUUKAUSI-nupit, KOHDE-painike, OMA PAIKKA -vipu suojakannella, POISTU; peitto iPhone 14,6 %, iPad 10,6 %) junaan paikkamerkeillä; Codexin kytkinkuvat vaihdetaan sisään yhdellä muutoksella, kun ne tulevat.
+
+## OMISTAJA: CUPOLAN KYTKINPÖYTÄ AIDOKSI AVARUUSALUKSEN PANEELIKSI — UMPINAINEN, KOKO ALAREUNA, PANEELIN MUOTOINEN, OMAT VALONLÄHTEET (30.9.2026 klo 13.44)
+
+Omistaja 30.9.2026 (hyväksytyn rungon jälkeen): kytkinmoduuli oikean avaruusaluksen kytkinpaneelin näköiseksi, läpinäkyvyys pois; voi ulottua koko alareunan levyiseksi, mutta ei laatikko vaan oikean paneelin muotoinen; paneelissa omat valonlähteet (taustavalaistut painikkeet, merkkivalot, paneelivalot), jotka tekevät napeista aidomman oloisia ja visuaalisesti kiinnostavampia. Päätoimittajan toteutuslinja (NATIIVI ENSIN): paneeli oikeana 3D-mallina Blenderissä (Linnanrakentaja; mallina ISS:n Cupolan robottityöaseman paneelit, NASA-kuvat PD) ja Unityssä omalla valaistuksella, emissiivisillä legendoilla ja pienillä valoilla (Linssiseppä: kytkennät, tilat, animaatiot); rungon toiminnot ja sijoittelu säilyvät. Codexin 2D-kytkintilaus muuttuu vapaaehtoiseksi referenssiksi.
+
+## TARKENNUS: ISS-PANEELI BLENDER-RENDERINÄ JA VALOKERROKSINA, EI ELÄVÄNÄ 3D:NÄ (30.9.2026 klo 13.49)
+
+Päätoimittaja 30.9.2026 (omistajan kysymys valmiista ratkaisuista 3D-ohjaimiin, koska radio oli vaikea): Cupolan kytkinpaneeli renderöidään Blenderissä (Cycles, Linnanrakentaja) pikselintarkoiksi kerroksiksi samasta kohtauksesta: pohja iPhone ja iPad, valokerros per valonlähde (summataan painoineen CupolaValot-tekniikalla) ja liikkuvat osat kuvasarjoina (NOPEUS 4, KUUKAUSI 12, PILVET 16, vipu, suojakansi, painikkeet); Linssiseppä kokoaa UI-kerroksiksi näkymättömillä osuma-alueilla. Perustelu: kohdistus ja valaistus täsmäävät (radion vaikeus oli erikseen tehtyjen kuvien ja UI-osien yhteensovitus), sopii Cupolan valokuvamaiseen tyyliin, pieni ajonaikainen hinta. Valmiita osia: NASA:n ISS-kuvat ja -mallit mallina (PD), Poly Havenin materiaalit (CC0); Unityn XR Interaction Toolkitin nuppi/vipu-komponentit on tehty VR:lle, ei käytetä. Korvaa klo 13.44 linjauksen 'elävä 3D Unityn valaistuksella' toteutustavan.
+
+## TARKENNUS: ISS-PANEELIN KIINTEÄT OTSIKOT PAINATETAAN RENDERIIN (30.9.2026) (30.9.2026 klo 14.07)
+
+Päätoimittaja 30.9.2026 (Linnanrakentajan kysymys, testi 2): Cupolan kytkinpaneelin kiinteät otsikot (NOPEUS, PILVET, KUUKAUSI, KOHDE, OMA PAIKKA, POISTU, LIVE/PALAA) painatetaan Blender-renderiin ISS:n tapaan valkoisena painatuksena mustalle ja taustavalaistujen painikkeiden legendat valokerrokseen, koska aitous on omistajan pääpyyntö ja teksti istuu samaan valoon; peli piirtää vain vaihtuvat tekstit (lukemanäyttö, kohteen nimi) ja VoiceOver-nimet. Avoimen lisenssin fontti (esim. Barlow Condensed / Roboto Condensed), lisenssi kirjataan. Poikkeus aiempaan Codex-tilauksen sääntöön 'tekstit piirtää peli' koskee vain renderöityjä paneeleita.
+
+## OMISTAJA: TESTFLIGHT-VERSIO KIINTEÄ 1.1, JUOKSEVA NUMERO BUILD-NUMEROON — '1.1 (73)' (30.9.2026 klo 14.59)
+
+Omistaja 30.9.2026 kortilla (Julkaisijan selvitys: Apple arvioi täysimääräisesti kunkin version ensimmäisen buildin, joten versionnosto joka buildissa pitää ulkoisen arvioijaryhmän noin vuorokauden jäljessä): KORVAA 24.9. linjauksen 'TF:ssä 1.0.<ordinaali>'. MARKETING_VERSION kiinteä 1.1 ja CFBundleVersion juokseva ordinaali (73, 74, …): TestFlight näyttää '1.1 (73)', omistaja viittaa buildiin numerolla. Muutoslokirivit ja pelin Mitä uutta muodossa '1.1 (BUILD)'; vanhat 1.0.67–1.0.72 jäävät arviojonoon ja irrotetaan ryhmästä, kun 1.1 on hyväksytty.
+
+## OMISTAJA: APURAHAN ESITTELYSTÄ VIDEO POIS — NELJÄ KUVAKAAPPAUSTA (KARTTA + KOLME LINSSIÄ) JA TEKSTI (30.9.2026 klo 15.06)
+
+Omistaja 30.9.2026: 'Ota video pois. Tehdään vain kuvakaappauksia ja sitten tekstimuodossa kerrotaan. Sopiva määrä voisi olla 4 kuvakaappausta niin, että yksi karttanäkymästä ja loput eri linsseistä.' Esittelykortin videopaikka ja esittelyvideon työ lopetetaan (Linssiseppä 2:n työkalut jäävät proto-3d/tyokalut/esittelyvideo/). Kortin kuvarivi: 4 kuvaa = yksi karttanäkymä ja kolme eri linssiä (valitaan esittelylinssien kierroksen kuvista; Päätoimittaja valitsee, omistaja näkee kuvaparin ennen julkaisua).
+
+## OMISTAJA: UUSIA ÄÄNIÄ EI GENEROIDA ILMAN LUPAA — LUPAPYYNNÖSSÄ TEKSTIT SANATARKASTI (KUSTANNUS); KEITTIÖN ELEVENLABS-ÄÄNET JÄÄVÄT KUUNNELTAVIKSI; CC0/PD-LINNAÄÄNET KYTKETÄÄN (30.9.2026 klo 15.10)
+
+Omistaja 30.9.2026 klo 15.0x–15.2x: 'En ollut antanut lupaa generoida ääniä. Kirjoita raamattuun, että jos generoidaan uusia ääniä, niin minulta pitää aina pyytää lupaa.' Tarkennus: 'generointikielto on lähinnä sen takia, että generointi maksaa, ja haluan ensin nähdä tekstit.' Raamattu (Ydinajatus) PR #3699: generointi (puhesynteesi, tekoälyn ääniefektit ja musiikki) vain omistajan etukäteisluvalla, lupapyynnössä kaikki tekstit sanatarkasti sekä palvelu ja määrä; vapaat CC0/PD-äänitteet eivät ole generointia; pelin hyväksytyt ajonaikaiset puhetoiminnot ennallaan. Samaan PR:ään mainista puuttuneet NATIIVI ENSIN ja EI SAAVUTETTAVUUSOHJEITA (29.9.) ja docs/web-jono.md. Keittiön 31 ElevenLabs-ääntä (29.9., ilman lupaa) jäävät peliin, omistaja kuuntelee ensin (kortti 'Jätä, kuuntelen ensin'). Päätoimittajan hyväksyntä viiden kaupungin luennoille peruttu; Pulun repliikit P1–P17 odottavat omistajan tekstilupaa. Omistaja: 'Kytke myös ne lupavapaat äänet mukaan, jos ne ovat toimivia lisäyksiä' → Linnanrakentajan 26 CC0/PD-ääntä kytketään (puhetta sisältävät taustat vaimeiksi, ei erottuvia nykykielen sanoja).
+
+## OMISTAJA: iPAD-VERSIO MACILLE (DESIGNED FOR iPAD, APPLE SILICON), EI ERILLISTÄ macOS-KÄÄNNÖSTÄ NYT; SAARINOSTOT LISÄIKKUNOILLA ILMAN POLTTOA (30.9.2026 klo 15.19)
+
+Omistaja 30.9.2026: 'Miten iso työ olisi tehdä OS X -natiivi appi … olisi hauska pelata myös läppärillä ja työpöytäkoneella' → Päätoimittajan suositus: ensin iPad-sovellus Apple silicon -Macilla (App Store Connectin saatavuusasetus + TestFlight for Mac; Natiiviseppä poistaa esteet: UIRequiredDeviceCapabilities, iOS-pluginit isiOSAppOnMac-haaroin; Natiivi-UI syötesovitus: rulla- ja nipistyszoomi, Esc takaisin), täysi macOS-käännös (1–2 vk + pysyvä kaksoistestaus) vasta tarvittaessa. Omistaja: 'tee tuo ipad versio macille'. Samalla hyväksytty Karttasepän saarinostojen ratkaisu: PRT:n ja ESP:n fokusikkunoihin lisäikkunat (Azorit, Madeira, Kanariansaaret) ja pallon panorointi-/zoomirajat niiden mukaan, ei laattojen uusintapolttoa.
+
+## OMISTAJA: OLAVINLINNA KERTOJAN OPASTAMANA — ESITTELY JA KAMERAKIERROS, SITTEN VAPAA TUTKIMINEN, HUONEISSA INFOTAULU JA PULU-NAPPI (30.9.2026 klo 15.28)
+
+Omistaja 30.9.2026: 'Voisiko se Olavinlinna toimia ennemmin niin, että kertojan ääni kertoisi linnasta samaan tapaan kuin ihmislinssi ja kamera siirtyisi automaattisesti paikasta toiseen? Sen jälkeen pelaaja voisi vapaasti tutkia linnaa. Ja jokaisessa huoneessa olisi joku pieni infotaulu, missä olisi myös reunassa pulun kuva, mitä painamalla pulu voisi kertoa tarkemmin siitä huoneesta.' Päätoimittajan ehdotus hyväksytty ('Hyväksyn Olavinlinna ehdotuksesi'): lyhyt saapuminen → kertoja noin 45 s (4 jaksoa, ihmisen matkan tekstilaatikko) ja automaattinen kamerakierros (linna järveltä, tornit, piha ja keskushalli, laituri), ohitettava ja uudelleen kuunneltava → vapaa tutkiminen → huoneen infotaulu (nimi + 1–2 riviä) ja Pulun kuva, jota painamalla Pulu kertoo huoneesta 20–30 s. Pois: pitkä saapumislento ja Pulun automaattirepliikit P1–P17; hahmojen repliikit jäävät; sinetin etsintä vapaaehtoisena infotaulun vihjein. Tekstit (kertoja noin 600 merkkiä, Pulu 7 × noin 300) omistajan hyväksyttäviksi ennen generointia; Sisältökirjuri tarkistaa faktat.
+
+## TARKENNUS: LUENNAN NÄKYMÄ NATIIVISSA — KUMOAA 15.9. 'TEKSTIT PIILOSSA KUNNES NAPAUTETAAN' JA 'KARTTATAUSTA LUENNAN AIKANA TUMMEMPI JA PEHMEÄ' (30.9.2026 klo 15.44)
+
+Päätoimittaja 30.9.2026 (Siirtosepän PASS BUILD 72, 88fe1265, omistajan palaute 30.9.): natiivissa isoisän luennan aikana matkakirjakaistale aukeaa itse ja pysyy auki, luentakuva puolikokoisena kaistaleen alla oikeassa reunassa (toinen kuva pinoutuu), Ohita kuvan alla oikealla, kartta terävä ja tutkittava; luennan aikana tyhjä napautus ei avaa maakuntaa. Kumoaa natiivissa KARTTAUUDISTUKSEN PAATOKSET 38 (15.9.: tekstit piilossa kunnes napautetaan) ja 'karttatausta luennan aikana tummempi ja pehmeä'. Web seuraa vanhaa linjaa, kunnes web-jonon erä tehdään.
+
+## OMISTAJA: OLAVINLINNAN KUUNNELMAT — LUPA VAIN ÄÄNINÄYTTEISIIN (30.9.2026 klo 15.56)
+
+Omistaja 30.9.2026 luettuaan hahmokirjan ja seitsemän huoneen kuunnelmat v1 (docs/raportit/olavinlinna-kuunnelmat-20260930.md): 'tee vain ääninäytteet'. Lupa koskee vain näytteitä: 11 uutta hahmoa × 2 ehdokasääntä, yksi näytelause kullekin, eleven_v4, noin 1 650 merkkiä (Pelikoodari). Kokki ja vesipoika 29.9. äänillä, Pulu Flicker, kertoja ihmisen matkan ääni. Koko kuunnelmaerä vasta omistajan äänivalinnan ja erillisen luvan jälkeen; Sisältökirjuri tarkistaa kuunnelmien faktat.
+
+## OMISTAJA: TAUSTAMUSIIKKI JA MAISEMAÄÄNI SOIVAT KERRAN LÄPI JA JÄÄVÄT TAUOLLE; MAISEMA ALKAA AINA ALUSTA (EI ARVOTTUA ALOITUSKOHTAA) (30.9.2026 klo 16.12)
+
+Omistaja 30.9.2026: 'äänet ja taustamusiikki voisivat jäädä automaattisesti tauolle sen jälkeen kun ovat soineet kerran läpi. taustaääni voisi alkaa aina alusta. nyt sen aloituskohta taidetaan arpoa?' (Natiivin AaniTila/Maisemakori arpoi maiseman aloituskohdan ja silmukoi ristihäivytyksellä; musiikki silmukoi saumattomasti.) Linja natiiviin: maisema ja taustamusiikki alkavat aina alusta ja soivat kerran läpi uuden laukaisun (saapuminen, näkymän tai kaupungin vaihto) jälkeen, sitten hiljaisuus seuraavaan laukaisuun asti; ei silmukointia eikä arvottua alkukohtaa. Linssien ja dioraaman omat huoneäänimaisemat (Olavinlinna) eivät kuulu tähän. Web seuraa web-jonon kautta.
+
+## OMISTAJA: NOSTOJEN LUENTAAN MOOTTORIVALINTA xAI / ELEVENLABS-STRIIMI VERTAILUA VARTEN (30.9.2026 klo 16.13)
+
+Omistaja 30.9.2026: 'voisiko nostojen lukijaääniksi lisätä vaihtoehtoisesti myös elevenlabsin striimivaihtoehdot? pelissä voisi olla valinta samassa kohtaa missä puheääni valitaan että kumpaa moottoria käytetään ja sitten peli näyttäisi vain sen moottorin äänet valikossa. haluaisin vertailla pelissä kumpi on parempi.' Toteutus (Linssiseppä 2, natiivi ensin): puheäänen valintaan moottorivalinta (xAI nykyinen; ElevenLabs Flash v2.5 ja Multilingual v2 striimattuina Pöllö-workerin kautta, avain workerin salaisuutena), äänilista moottorin mukaan. Kustannusrajaus Päätoimittajan: ElevenLabs-moottori näkyy aluksi vain omistajan merkityillä laitteilla ja kehittäjätilassa, workerissa päiväkatto; arvioijat ja pelaajat pysyvät xAI:ssa, kunnes omistaja päättää vertailun jälkeen. Omistajan pyytämä ajonaikainen toiminto, ei erillistä generointilupaa per luenta.
+
+## TARKENNUS: LUENNAN ELEVENLABS-MOOTTORI VAIN v4 TURBO -STRIIMI (30.9.2026 klo 16.15)
+
+Omistaja 30.9.2026: 'käytä elevenlabsilta vain sitä v4 turbo striimiä, eikös se ole se uusin ja paras ja nyt vielä halvin kun on tarjous?' Moottorivalinta on xAI / ElevenLabs v4 Turbo (ei Flash v2.5:tä eikä Multilingual v2:ta). Linssiseppä 2 tarkistaa tarkan malli-id:n ja striimaus- ja suomituen ElevenLabsin models-rajapinnasta ennen käyttöönottoa.
+
+## TARKENNUS: ELEVENLABS-MALLIT — STRIIMI eleven_v4_turbo, SÄILÖTTÄVÄT eleven_v4 (30.9.2026 klo 16.17)
+
+Omistaja 30.9.2026: Pulun ja nostojen luennan striimi ElevenLabsilla on eleven_v4_turbo (Pulu käyttää sitä jo 28.9. alkaen Pöllö-workerissa: 'pulun pitäisi käyttää sitä jo striimiäänenä'), ja 'myös generoidut äänet tulevat v4:stä': kaikki säilöttävät generoidut äänet (hahmojen kuunnelmat, kertoja, Pulun huonetekstit, ääninäytteet) mallilla eleven_v4, 192 kbit/s. Generointi edelleen vain omistajan erikseen hyväksymille erille.
+
+## OMISTAJA: OLAVINLINNA KUVALLISESTI MAHDOLLISIMMAN LAADUKKAAKSI — TAVOITEKUVA ENSIN, SITTEN HYBRIDIMALLI, LEIVOTTU VALO JA HEIJASTAVA VESI (30.9.2026 klo 16.23)
+
+Omistaja 30.9.2026: 'miksi osa linnasta on niin huono laatuinen … miksi vesi näyttää niin huonolta?' ja 'tee linnasta mahdollisimman laadukas kuvallisesti. miten se onnistuisi?' Päätoimittajan linja: 1) Linnanrakentaja renderöi Blenderissä (Cycles) tavoitekuvat pelin kamerakulmista, omistaja hyväksyy ilmeen; 2) hybridimalli: terävät fotogrammetriaosat suurimmalla lähdetarkkuudella, heikot osat (katot, piha, puurakenteet, rantakalliot) mallinnettuina CC0 PBR -materiaaleilla, fotogrammetriasta leivottu valo pois; 3) hämärän valo leivottuna, soihdut ja ikkunat hehkuineen, reflection probet ja jälkikäsittely; 4) heijastava mobiilivesi ja ympäristö (Siirtoseppä); 5) laatutasot laitteittain, tarkempi taso lähizoomissa. Diagnoosi (miksi osa heikko) ja vaiheittainen työmäärä ennen reaaliaikatyötä.
+
+## OMISTAJA: KONE VAPAASSA KÄYTÖSSÄ (30.9. ILTAPÄIVÄSTÄ) (30.9.2026 klo 16.27)
+
+Omistaja 30.9.2026: 'en tarvitse konetta niin saat käyttää resursseja vapaasti.' Toistaiseksi (kunnes omistaja toisin sanoo tai /tmp/matkakirja-kevyt-lippu tulee): Karttasepän polton 4 ytimen katto pois (vahti enintään 16, nice 15), kaksi simulaattorivuoroa rinnakkain Julkaisijan jonossa, linnan pakettirakennus ja Cycles-renderit ilman kuormarajaa; muistipainetta seurataan (swap korkealla iltapäivän huipuista).
+
+## KORJAUS: SIMULAATTOREITA TAAS YKSI KERRALLAAN (SPRINGBOARD-KAATUMISET SWAPIN TÄYTTYESSÄ) (30.9.2026 klo 16.31)
+
+Päätoimittaja 30.9.2026: kahden rinnakkaisen simulaattorin lupa (loki klo 16.27) peruttu. Omistajan ruudulle tuli kuusi 'SpringBoard lopetti yllättäen' -ikkunaa klo 16.29.05–16.29.10, kun kaksi simulaattoria oli käynnissä (D0D2CD1E, FBBD41D7) ja swap oli täynnä (14,06/14,34 Gt). Enintään yksi simulaattori kerrallaan Julkaisijan vuorolla, ja se sammutetaan (vain oma UDID) heti ajon jälkeen. Muu vapaa käyttö (poltto väistäen, Blender, käännökset nice 15) jatkuu.
+
+## OMISTAJA: LINNAN TEKSTUURIT — CODEX CC-KUVIEN POHJALTA TAI PAREMPI MENETELMÄ, VALINTA DELEGOITU (30.9.2026 klo 16.36)
+
+Omistaja 30.9.2026: 'codex osaisi varmasti tehdä pyydettäessä niitä tekstuureja kunhan speksaa sille että käyttää niitä cc kuvia pohjana. mutta jos keksit paremman metodin niin toteuta vain sillä.' Linnanrakentaja vertaa yhdellä tornilla: A nykyinen 4k-atlas, B CC0-materiaalien triplanaarinen lähidetalji, C paikallinen tekoälyskaalaus ×4, D Commons-kuvan kamerasovitettu projisointi (CC BY/BY-SA/PD, lisenssit kirjataan), E Codexin oikaistu valoton julkisivutekstuuri samoista CC-kuvista (tilaus postilaatikkoon). Paras menetelmä valitaan vertailun perusteella ja toteutetaan koko linnaan; omistaja näkee vertailukuvan ja valinnan. Senaatti-kysymys on omistajan erillinen päätös.
+
+## OMISTAJA: MODULAARINEN LINNAKIRJASTO — OLAVINLINNAN LAATUTYÖ UUDELLEENKÄYTETTÄVÄKSI (30.9.2026 klo 16.47)
+
+Omistaja 30.9.2026: 'Tässä onkin hyvä miettiä modulaarista rakennetta myös jatkoa varten, sillä varmasti voidaan käyttää vähän samantyyppisiä tekstuureita muissakin linnoissa … Niin hyvä tehdä nyt mahdollisimman laadukkaat kirjastot itse.' Linnanrakentaja rakentaa Olavinlinnan laatutyön linnakirjastoksi: PBR-materiaalit (graniitti, tiili, rappaus, katot, puu, kivilaatat, rauta, tarrat) CC0-lähteistä omin säädöin, osasarja (ovet, ikkunat, portaat, soihdut, huonekalut, esineet, veneet, liput), hahmot vaatevaihtoehdoin, valo- ja tunnelmaesiasetukset, vesi ja taivas; jokaisella assetilla lähde ja lisenssi manifestissa, yhteinen nimeäminen, LOD, pakkaus ja hash-vienti. Speksi docs/raportit/linnakirjasto-20260930.md. Muut linnat vasta myöhemmin (VAIN EUROOPPA).
+
+## OMISTAJA: CUPOLAN NÄKYMÄ HORISONTTIIN JA PILVET OLETUKSENA VÄHÄISIKSI (30.9.2026 klo 16.51)
+
+Omistaja 30.9.2026: 'Voisiko tuota ISS:n kuvaa myös kääntää niin, että siinä näkyisi maapallon horisontti ja se olisi vain niin makean näköinen? … varmasti tuota pilvipeittoa kannattaa pitää aika pienenä vakiosäädöillä.' Linssiseppä: kamera kallistetaan niin, että ikkunasta näkyy Maan kaareutuva horisontti, ilmakehän sininen reuna ja musta avaruus (Maa noin 2/3 ikkunasta; uskottava Cupolan sivuikkunoista), A/B-kytkimenä; PILVET-nupin oletus pieneksi (noin 25–35 % tai 'vähän'), pelaaja voi nostaa. Kuvapari yhdessä kytkinpaneelin v2:n kanssa omistajan hyväksyttäväksi.
+
+## OMISTAJA: ISS:N MAAPALLONÄKYMÄ FOTOREALISTISEMMAKSI (30.9.2026 klo 18.03)
+
+Omistaja 30.9.2026: 'Miten ISS:n maapallonäkymästä saisi vielä fotorealistisemman?' Päätoimittajan linja (Linssiseppä horisonttierän jälkeen): 1) fysikaalinen ilmakehän sironta (Rayleigh + Mie, esilasketut LUT:t: horisontin usva, aerial perspective, terminaattorin sävy); 2) meren sunglint ja Fresnel, maaston kevyt korkeusvarjostus DEM:stä; 3) pilvien varjot, parallaksi ja valaistus; 4) yöpuolelle Black Marble -valot, airglow ja kuunvalo; 5) filminen sävytys ja valotus. Laaduntarkistus NASA:n astronauttikuvien (PD) vertailupareilla. Karttaseppä selvittää tarkemman maanpintakuvan (Sentinel-2 cloudless 2016 CC BY 4.0, VIIRS/MODIS, Landsat) laattamäärän ja kustannuksen. Täysi laatu kaikilla laitteilla, kevennys vain iPhone 15 Pro:lla tai heikommalla.
+
+## OMISTAJA: ISS-FOTOREALISMI MAKSUTTOMILLA KEINOILLA; SENTINEL-2-PINTA PIDOSSA (30.9.2026 klo 18.10)
+
+Omistaja 30.9.2026 Karttasepän selvityksen jälkeen (Sentinel-2 cloudless 2016 CC BY 4.0: noin 2,6 M laattaa, 75 Gt, R2 noin 12 $ + 1,1 $/kk, massalataus vaatii EOX:n vahvistuksen tai oston): 'Tee ne ilmaiset.' Linssiseppä toteuttaa ilmakehän sironnan, sunglintin ja Fresnelin, DEM-korkeusvarjostuksen, pilvien varjot ja valaistuksen, yöpuolen (Black Marble, airglow) ja filmisen sävytyksen nykyisellä BMNG-pinnalla; suunnitelma Päätoimittajalle tiedoksi, NASA-vertailupari ilmakehän jälkeen. Sentinel-2 pidossa, kunnes omistaja päättää EOX-yhteydenotosta.
+
+## OMISTAJA: PÄÄTOIMITTAJALLE KAIKKI OIKEUDET ÄMPÄRIN KÄYTTÖÖN (VIENNIT), KUTEN AIEMMIN (30.9.2026 klo 18.54)
+
+Omistaja 30.9.2026 illalla Päätoimittajan sessiossa: 'annetaan sinulle kaikki oikeudet ämpärin käyttöön. niin se on aiemminkin ollut. jostain syystä muuttunut jotenkin, niin palautetaan kaikki oikeudet sinulle.' Päätoimittaja saa ajaa ämpäriviennit (vie-blender.sh, vie-aanet.sh, vastaavat hash-kansioviennit) itse; osoitin vaihtuu pelaajille silti vasta Siirtosepän puhtaan asennuksen kuittauksen jälkeen. Ehdotettu pysyvä ratkaisu roolien vienneille (CI-työnkulku tällä Macilla, avaimet salaisuuksina) odottaa omistajan päätöstä.
+
+## KARTTASEPPÄ: COPERNICUS SENTINEL-2 L2A -KOE ONNISTUI (MATTERHORN, VENETSIA, HELSINKI; 10 m/px, PILVETÖN, AVOIN DATA MYÖS KAUPALLISEEN KÄYTTÖÖN) → EOX-VIESTIÄ EI TARVITA; SUOSITUS: KÄSITELTY KUVAUSPAIKKALISTA R2:SSA, LAITE HAKEE KUVAN VASTA KUVATESSA; ISS-KAMERA OMISTAJAN PÄÄTETTÄVÄNÄ (30.9.2026 klo 19.02)
+
+Karttaseppä 30.9. klo 18.5x (kansio /Users/Shared/Claude/pyramidi-poltto/iss-maanpinta/s2koe/: tulos.md, hae.mjs ja *-merkitty.jpg). Lähde: Earth Search STAC (sentinel-2-l2a), COG-tiedostot AWS:n avoimesta sentinel-cogs-ämpäristä, luettu range-pyynnöillä geotiff.js:llä ilman GDALia. Näkymät: Matterhorn S2A_32TLR_20250709 (ikkunan pilvi 0,00 %, mukautuva valotus 1,31; heinäkuussa paljon lunta, elokuu olisi kesäisempi), Venetsia S2A_32TQR_20250812 (0,03 %) ja Helsinki S2A_35VLG_20240627 (0,03 %). Ikkuna 20 × 20 km, 10 m/px, 2000 px: webp75 0,24–0,38 Mt ja jpg85 0,53–0,79 Mt. Nouto 5–8 s kohdetta kohden (30–40 Mt range-dataa); poltto ei hidastunut. Lisenssi on Sentinel Data Legal Notice: vapaa käyttö, jakelu, muokkaus ja kaupallinen käyttö. Merkintä: 'Contains modified Copernicus Sentinel data <vuosi>'. Karttasepän suositus: valmiiksi käsitelty ja käsin tarkistettu kuvauspaikkalista (400 kohdetta ≈ 0,15–0,2 Gt webp, mahtuu R2:n ilmaisrajaan, nouto noin 1 h, toimii natiivissa ilman verkkoa). Ajonaikainen haku Pöllö-workerin kautta (≈ 40 Mt COG, 5–10 s, väri ilman tarkistusta) vasta vapaan kuvauksen laajennuksena. Päätoimittaja: kuvat ovat valokuvamaisia; Venetsian laguuni ja Helsingin saaristo ovat erinomaisia. EOX-viestiä EI tarvita, koska Copernicuksen oma L2A-data on avointa (korvaa handoverin kohdan 3 EOX-osan). Omistajan idea 'lataa lennossa vain kuvattaviin kohteisiin ja tee viimeistely koneella' toteutuu näin: käsitelty kuva on R2:ssa, laite hakee sen vasta kun pelaaja kuvaa paikan (0,3–0,8 Mt) ja tekee ilmakehän, valon ja pilvet päälle. Natiivi purkaa webp:n jo ImageIO:lla (Kuvat.cs, löydös 63). Rajaus ja kuukausi valitaan kohteen mukaan (Helsingissä nyt noin 40 % avomerta). ISS-kamera (pelaaja ottaa omia kuvia teleobjektiivilla) odottaa omistajan päätöstä. Päätoimittajan suositus: pilotti 25 kohteella, kamera Linssisepän ilmakehäerän jälkeen, loput vasta laitekokeilun jälkeen.
+
+## OMISTAJA: ISS-KAMERA — ENSIN YKSI HELSINGIN ESIMERKKIKUVA LOPULLISELLA LAADULLA (SENTINEL-2 PALLON PINNALLA, VIISTO KUVA HORISONTILLA, SININEN UTU, ISS:N RAKENNE SILUETTINA); JULISTE JA MAKSULLISUUS IDEOINA; PULULLE AVARUUSKÄVELYASU VARJOSSA KYPÄRÄN VALOILLA (CODEX); HORISONTTI VAAKANÄYTÖLLÄ JA 3D-KYTKIMET LINSSISEPÄN ERÄSSÄ (30.9.2026 klo 19.17)
+
+Omistaja 30.9.2026 klo 19.1x (kortti ja chat, Cupolan kuvakaappaus 1.1): 1) ISS-kamera: 'tee ensin yksi esimerkkikuva helsingistä, haluan nähdä lopullisen laadun. ja miten saadaan visuaalisesti hienoin kuva aikaiseksi? näistä voisi tehdä pelaajalle sitten oman julisteen.' Pilotti (25 paikkaa) odottaa esimerkkikuvan hyväksyntää. Päätoimittajan linja hienoimpaan kuvaan: Sentinel-2 L2A liimataan 3D-pallon pintaan (tarkka keskusta 10 m, karkeampi reunus, kauempana nykyinen pinta), fysikaalinen ilmakehä (sininen reuna ja utu horisonttia kohti), matala aurinko (pitkät varjot, meren kimallus Suomenlahdella), muutama kesäpilvi varjoineen, kameran tuntu (polttoväli, valotus, filminen sävytys, hento rae, ei HDR:ää), sommittelu astronautin kuvan tapaan. Tekijät: Karttaseppä (Helsingin data: keskusta rajattuna, reunus, GLO-30-korkeus, vesimaski SCL:stä) ja Linssiseppä 2 (kuva; ilmakehä yhteinen Linssisepän fotorealismihaaran kanssa, ei päällekkäistä toteutusta). Kuvan pitää olla laitteella reaaliajassa saavutettava, ei offline-temppu. 2) Omistaja: 'näyttääkö aidommalta jos etualalla on jotenkin vähän ISS:n rakenteita mustana siluettina?' Päätoimittaja: kyllä, Cupolasta otetuissa NASA-kuvissa näkyy usein aurinkopaneelin, radiaattorin tai Canadarm2:n reuna; se antaa mittakaavan ja aitouden. Esimerkkikuvaan tulee hillitty siluetti reunaan (NASA:n ISS-3D-malli), kohde jää vapaaksi. 3) Omistaja: 'tämä voisi olla hyvä maksullinen ominaisuus peliin. voisi olla yksi ilmainen kuva ja sitten voisi ostaa kredittejä lisäkuvia varten.' Sopii Raamatun ansaintalinjaan (peli ilmainen, raha lisätoiminnoista IAP:lla, 24.9.). Päätoimittajan suositus: yksi ilmainen kuva ja sen jälkeen euromääräiset kuvapaketit tai kertaosto erillisen krediittivaluutan sijaan (EU:n CPC-verkoston periaatteet 21.3.2025: hinta näytettävä oikeana rahana, alaikäisten suoja). Painettu juliste olisi fyysinen tuote, joka maksetaan IAP:n ulkopuolella. Päätös esimerkkikuvan jälkeen. 4) Omistaja: 'pululla pitäisi olla avaruuskävely varusteet' ja 'pulu saisi olla aika varjossa, mutta sillä voisi olla kypärän sisällä valo kasvoille sekä pieni valo myös kypärän ulkopuolella.' Päätoimittaja: hyvä; oikeissa EVA-kypärissä on lamput sivuilla, ja kasvovalo on elokuvien keino pitää ilme luettavana. Lisäksi Maan sininen heijastusvalo reunavaloksi. Tilaus Codexille (posti/fable-codex-pulu-avaruuskavely-20260930.md): koko avaruuskävelyasu (puku, selkäreppu, turvaköysi, nykyinen kypärä), valot erillisinä kerroksina; web (livia-astronautti.js) ja natiivi (StreamingAssets/mukana/livia-astronauttikypara-2x.png:n rinnalle). 5) Omistaja: horisontti vaakanäytöllä pääikkunaan ja 3D-päivitys kytkimiin: molemmat ovat Linssisepän erässä (horisontti A/B 30.9. klo 18.0x, paneeli v2 Blender-kerroksina PR #3695); kuvapari omistajalle heti Julkaisijan vuorolla junan 76 käännöksen jälkeen.
+
+## TILA: TF 1.0.67–1.0.72 VANHENNETTU OMISTAJAN LUVALLA; 1.1 (75) ARVIOIJAT-RYHMÄSSÄ JA APPLEN BETA-ARVIOSSA (WAITING_FOR_REVIEW); LÄHETYSRAJA PURETTU (30.9.2026 klo 19.24)
+
+Julkaisija 30.9.2026 illalla: omistajan suoralla luvalla Julkaisijan sessiossa 6 buildia (1.0.67–1.0.72) vanhennettu ASC API:lla (ajo 36743845346); samassa ajossa 1.1 (75) liitetty Arvioijat-ryhmään ja lähetetty beta-arvioon (WAITING_FOR_REVIEW), joten 422 SUBMISSION_LIMIT_REACHED on purettu. Kun 1.1 (75) hyväksytään, saman version myöhempien buildien (76+) pitäisi mennä nopeasti. Vanhennustyökalu (--vanhenna) on PR:ssä #3718 Julkaisijan junassa.
+
+## VIE BUILD 76 = 1a878e67 (MAC-SYÖTE, ELEVENLABS-LUKIJA, LUENTAKUVAT JA OHITA, KUOREN LÄHIDETALJI); LINNAN YLEISNÄKYMÄN RAJAUS JUNAAN 77; ISS:N SUORAN LÄHETYKSEN ÄÄNTÄ EI YOUTUBESTA → CUPOLAN ÄÄNIMAISEMA NASA:N TALLENTEISTA, NÄYTTEET OMISTAJALLE (30.9.2026 klo 19.30)
+
+Natiiviseppä 30.9. klo 19.2x: BUILD 76 = proto master 1a878e67 (juna d3b3a4dd, käännös 83763fc7); savuke iPhone 0 poikkeusta, regressio, kuori ja luenta PASS; FAIL linnan yleisnäkymä ei keskitetty (oikea bastioni leikkautuu, sama kuin 75:ssä) → Siirtoseppä junaan 77 (juna/b13 6b0a22cf auki). Mac-syöte 01c42c3d ja ElevenLabs-lukija 09d681d3 ovat 76:ssa. Päätoimittaja: VIE (FAIL ei regressio); muutosloki 1.1 (76) ensin; worker #3710 mainiin viimeistään 76:n TF-hetkellä, jotta omistajan ohje 2 (ElevenLabs v4 Turbo) toimii; seuraava käännös- ja simulaattorivuoro Linssisepälle (horisontin ja 3D-paneelin kuvapari). Omistaja kysyi: 'saako ISS Live now suoraa kuvaa käyttää pelissä?' ja 'voisiko siitä käyttää vain pelkkää ääntä?' Päätoimittaja: lähde on NASA:n oma YouTube-lähetys (NASA-media ei yleensä tekijänoikeuden alaista; ehdot: NASA lähteeksi, ei vihjattua suositusta, tunnistettavat henkilöt ei kaupallisesti); video vain YouTuben soittimella omana ruutunaan (ehdotus: pieni 'Asema nyt' -näyttö Cupolaan, odottaa omistajaa); pelkkä ääni EI, koska YouTube API Services Developer Policies kieltää äänen ja videon erottamisen ja taustasoiton. Tilalle Cupolan äänimaisema NASA:n tallenteista (sisätilojen humina ja etäinen space-to-ground-radioliikenne, ei nimeltä tunnistettavia astronautteja pääosassa): Pelikoodari tekee 2–3 näytettä, peliin vasta omistajan OK:lla.
+
+## OMISTAJA: ISS-LIVEKUVAA EI OTETA (EI NÄYTTÖÄ, EI NAPPIA); CUPOLAAN VAIN AITOA ÄÄNITALLENNETTA NASA:N MATERIAALISTA (30.9.2026 klo 19.37)
+
+Pelikoodarin selvitys 30.9. klo 19.4x: NASA jakaa ISS:n live-Maanäkymää vain YouTubessa (youtube.com/@NASA/live); NASA+:ssa ei 24/7-ISS-kanavaa, Ustream off-air, HDEV päättyi 2019, NASA TV:n lineaarinen lähetys 8/2024, vanhat HLS-osoitteet 403/404, YouTuben HLS allekirjoitettu ja kielletty. YouTube-upotus: ≥ 200 × 200, ei päällekkäisiä elementtejä, ei tekstuuriksi eikä erillistä ääntä, mainokset mahdollisia, EU-evästesuostumus (myös youtube-nocookie), iOS:ssä WKWebView Unityn päällä. Omistaja 30.9.2026 kortilla sanatarkasti: 'ladataan peliin ainoastaan aitoa äänitallennetta, ei oteta näyttöä ollenkaan.' → Cupolaan EI livekuvaa, EI tallennenäyttöä eikä 'Katso ISS:n suora kuva' -nappia. Cupolan äänimaisema NASA:n aidoista tallenteista (PD; sisätilojen humina ja etäinen space-to-ground-radioliikenne ilman nimeltä tunnistettavia astronautteja pääosassa): Pelikoodari kokoaa näytteet lähdeluetteloineen, omistaja kuuntelee, sitten kytkentä Cupolaan (natiivi ja web).
+
+## OMISTAJA: CUPOLAN AITO ÄÄNITALLENNE VÄHINTÄÄN 20 MIN, ALOITUSKOHTA ARVOTAAN, PUHE MUKANA (30.9.2026 klo 19.39)
+
+Omistaja 30.9.2026 sanatarkasti: 'mielellään ainakin 20min pitkä pätkä ja arvotaan aloituskohta. saisi olla puhetta yms. mukana.' Päätoimittajan linja: yksi yhtenäinen aito NASA-tallenne ≥ 20 min, jossa kuuluu aseman oma radioliikenne (miehistö ja lennonjohto) ja huminaa. TV-selostajan kommentointia vältetään, koska kuulija on Cupolassa, ei katsomassa lähetystä. Ei yksityisiä tai terveyteen liittyviä keskusteluja, ei käyttöä markkinoinnissa, NASA tekijätietoihin. Aloituskohta arvotaan joka avauksella, pehmeä alku, saumaton kierto lopusta alkuun, ääni hiljenee Pulun ja luennan alle. Pakkaus mono noin 64 kbps (noin 10 Mt / 20 min), haetaan ämpäristä. Natiivissa soitto radion AVAudioEngine-polulla eikä pakattuna Unity-klippinä (luennan hyppyongelma), webissä audio ja range-haku. Pelikoodari etsii tallenteen, omistaja kuuntelee ennen peliin viemistä.
+
+## OMISTAJA: CUPOLAN HORISONTTI HYVÄKSYTTY JUNAAN (3D-PANEELI MUKANA); VAAKANÄKYMÄSSÄ PANEELI MATALAMMAKSI; CUPOLAN 23 MIN ÄÄNITALLENNE (EVA 38, NASA) OMISTAJALLE KUUNNELTAVAKSI (30.9.2026 klo 19.47)
+
+Omistaja 30.9.2026 kortilla Linssisepän kuvapareista (6724cc7f, iPhone pysty päivä/yö, vaaka yö): 'horisontti hyvä, vaakanäkymässä napit vievät liikaa tilaa. ota alhaalta turhat pois ja laske nappeja alemmas.' → Horisontti ja kytkinpaneeli v2 junaan oletusnäkymäksi (fotorealismi A/B pois ilmakehävian korjaukseen asti). Vaakapaneelista koristeet pois alhaalta (säleikkö, alakehys), napit alemmas, tavoite noin 20–25 % korkeudesta (tarvittaessa Linnanrakentajalta uusi vaakarenderi); vaakakuvapari omistajalle ennen junaa. Linssisepän korjaukset 8de5af03: Pulu vaakana näkyviin, ilmahehku pehmeänä vyönä, tähdet päivällä 0,04, pilvien pehmeä reuna. iPadin vaakakuva uusitaan (simulaattori ei kääntynyt). Pelikoodari: Cupolan kierto cupola-radio-eva38-23min-humina.mp3 (23 min, mono 64 kbit/s, 11 Mt, −20 LUFS, saumaton kierto; lähde NASA JSC EVA 38 6.1.2017, archive.org 01-06-17_EVA_38, jakso 5.27.00–5.50.03, PD, tekijätiedot 'Ääni: NASA'; kutsunimet Kimbrough ja Whitson kuuluvat, ei markkinointikäyttöä) omistajalle kuunneltavaksi; kytkentä hyväksynnän jälkeen. Olavinlinnan osoitin 65e2535be38cc19d (#3701: kertoja, infotaulut, kuunnelmat) vaihdettu Julkaisijan ajolla 36746237348; #3717:n detaljiosoitin odottaa 691e2620:aa TF:ssä.
+
+## OMISTAJA: CUPOLAN PILVET OLETUKSENA POIS (0 %), PÖLYHIUKKASET POIS (30.9.2026 klo 19.47)
+
+Omistaja 30.9.2026 sanatarkasti: 'pilvet saisivat olla pois oletuksena, tosin saattaa muuttua sitten kun tulee niitä visuaalisia parannuksia. nykyiset pölyhiukkaset ovat keinotekoisen näköisiä ja ne voi ottaa pois.' → PILVET-nupin oletus 0 % (korvaa 30.9. päätöksen 'pilvet 30 %'; pelaaja voi lisätä; arvioidaan uudelleen fotorealististen pilvien jälkeen); Cupolan pölyhiukkaset poistetaan kokonaan; sama webin ISS-kyytiin, jos siellä samat asetukset. Linssiseppä samaan käännökseen vaakapaneelin korjauksen kanssa.
+
+## TILA: TF 1.1 (76) = 1a878e67 SISÄISESSÄ RYHMÄSSÄ 19.49; ELEVENLABS-LUKIJA ODOTTAA #3710:N MERGEÄ; ULKOINEN ARVIO ODOTTAA 1.1 (75):N KÄSITTELYÄ (30.9.2026 klo 19.51)
+
+Julkaisija 30.9.2026 klo 19.5x: TF 1.1 (76) (1a878e67) sisäisessä ryhmässä klo 19.49. 76:n ElevenLabs-lukija toimii vasta, kun worker #3710 on mainissa (junassa); omistajan ohje 2 annetaan vasta sen jälkeen. Ulkoinen: 76 liitetty Arvioijat-ryhmään, mutta Apple ei ota uutta arvioon ennen kuin 1.1 (75) on käsitelty (ANOTHER_BUILD_IN_REVIEW); 75:n hyväksynnän jälkeen Julkaisija lähettää uusimman heti, eikä saman version myöhempiä tarvitse arvioida täysimääräisesti.
+
+## OMISTAJA: CUPOLAN ISS-ÄÄNI HYVÄKSYTTY; ALLE OMA JATKUVA HUMINA MATALINE TAAJUUKSINEEN, RADIO HILJEMMALLA PÄÄLLÄ (30.9.2026 klo 19.54)
+
+Omistaja 30.9.2026 sanatarkasti: 'iss ääni hyvä, tosin siihen voisi lisätä oman huminan taustalle, jossa olisi matalia taajuuksia mukana vielä lisäksi ja soittaa tuota vähän hiljemmalla sen päällä.' → Cupolan äänimaisema kahtena kerroksena. 1) Jatkuva oma humina: matala jyrinä noin 30–120 Hz, tuuletinkohina ja hidas vaihtelu, huomaamaton silmukka; yläsävelet, jotta jyrinä kuuluu myös laitteiden kaiuttimista. Pohjana NASA:n humina tai syntetisoitu kohina, ei generoitua puhetta. 2) EVA 38 -radiosilmukka (23 min, arvottu alku) huminan päällä noin −6 dB nykyistä hiljempaa ilman omaa taukohuminaa; väistää Pulun ja luennan ajaksi. Pelikoodari tekee 2 minuutin esikuuntelun omistajalle ja kytkennän natiiviin (radion AVAudioEngine-polku) ja webiin, ja sopii Linssisepän kanssa Cupolan koodista. Tekijätiedot 'Ääni: NASA', ei markkinointikäyttöä.
+
+## OMISTAJA: OLAVINLINNAN HAHMOJEN ÄÄNET VALITTU (9/11), TALONPOIKA JA KIRJURI UUSIKSI; TASOT TASATAAN; LAADUKAS KAIKU TILAKOHTAISENA KONVOLUUTIONA (30.9.2026 klo 20.07)
+
+Omistaja 30.9.2026 sanatarkasti: 'valitut äänet: 1a, 2b, 3a, 4a, 5a, 6 (generoi uudet), 7a, 8 (generoi uudet), 9a, 10a, 11b. äänen tasot pitää tasata ja pystyykö noihin lisäämään hieman kaikua ja miten? pitäisi olla laadukas kaiku jos lisätään.' Valinnat (CI-ajo 36747524764, lista.md): Vouti A Willem (MmQAnDAp0dcTNc35QhwG), Pappi B Josef Hammer (AFtA63zAzQAlNDuzSRKy), Tarjoilija A Olivia (MJw0jtAmgm4D71m0HUJU), Vartija A Jerry B. (TxWZERZ5Hc6h9dGxVmXa), Vartija 2 A Thirafi (RGPjVF1MbsFytGJEldTj), Muurin vartija A Jase (kTSNDDkx34wKsrujmdm1), Renki A Cavendish (Cx1u6YPIa1SPiAbYj3gJ), Aitan hoitaja A David (YyxM4BUeTuddnbjmhWcd), Soutaja B Silas (WzVKtqQpTUUQ2JNx8YxI). Talonpoika ja Kirjuri: omistajan lupa generoida uudet ehdokkaat (2–3 kummallekin, eri suuntaan kuin hylätyt; samat repliikit, eleven_v4). Tasot: kaikki repliikit samaan puheen äänekkyyteen (LUFS) ja kevyt kompressio. Kaiku: konvoluutiokaiku oikeista kivitilojen impulssivasteista (esim. OpenAIR, lisenssi tiedostokohtaisesti), tilan mukaan (keittiö lyhyt ja tiheä, kappeli pitkä, muurin harja lähes kuiva, vene kuiva), hienovarainen, poltetaan tiedostoihin tuotannossa (sama web ja natiivi, ei ajonaikaista hintaa); 'oven takaa' -repliikit vaimennettuina; Pulu kuivana, koska se on pelaajan vierellä. Ensin keittiökohtauksen ennen/jälkeen-demo omistajalle. Kokonaisten kuunnelmien generointi vasta omistajan tekstihyväksynnän jälkeen.
+
+## OMISTAJA: CUPOLAN ÄÄNI HYVÄKSYTTY (OMA HUMINA + EVA 38 -RADIO); ÄÄNET ÄMPÄRISSÄ aanet/cupola/v1/ (30.9.2026 klo 20.12)
+
+Omistaja 30.9.2026 esikuuntelun (cupola-esikuuntelu-2min.mp3) jälkeen: 'cupolan ääni hyvä.' Päätoimittaja vei tiedostot ämpäriin: aanet/cupola/v1/cupola-humina-90s.wav (3 969 078 t) ja aanet/cupola/v1/cupola-radio-eva38-23min.mp3 (11 040 710 t), immutable-välimuisti, range 206 ja CORS matkakirja.app todennettu; muutokset uuteen v2-kansioon. Pelikoodari viimeistelee natiivin (MatkakirjaSilmukat.mm, AVAudioEngine; väistö radio ×0,15, humina ×0,7; astro-humina vaiennetaan Cupolassa) ja webin kytkennän sekä tekijätietorivin 'Ääni: NASA'; junaan todennuksen jälkeen, järjestys Linssisepän iss-fotorealismi-haaran kanssa. iPad Pro 12.9 -mittaus (Linssiseppä, b8614e28): paneeli, horisontti ja fotorealismin varjostimet pysyvät 30 fps:n katossa (ka. 33,35 ms, p95 33,42 ms).
+
+## OMISTAJA: KEHITTÄJÄTILAN ÄÄNIMIKSERI LINNAAN JA CUPOLAAN — OMISTAJA SÄÄTÄÄ KAIUT JA TAUSTARAIDAT LAITTEELLA, SITTEN POLTETAAN (30.9.2026 klo 20.39)
+
+Omistaja 30.9.2026 sanatarkasti: 'Saisiko pelissä säädettyä kaiut ja tausta äänen tasot ja sitten kun ne ovat kohdillaan niin poltetaan ne. Saisin siellä paremmin tehtyä säädöt. Tarvitaan varmaan muutamia päällekkäisiä taustaääni raitoja. Mitä olet mieltä?' Päätoimittaja: hyvä, äänet säädetään parhaiten oikeassa paikassa kuvan kanssa. Toteutus: kehittäjäkoodilla näkyvä mikseri Olavinlinnaan ja Cupolaan; huonekohtaisesti puheen kaiun määrä, 2–4 taustaraitaa omilla tasoillaan (linnan 26 nykyistä ääntä + pohjasävy, puuttuvat CC0/PD, ei generoitua puhetta), väistön määrä ja A/B. Kaiku täsmälleen lopullisena: jokaisesta repliikistä kuiva ja pelkkä kaikuraita samalla CC BY -vasteella, soivat tahdissa, liukusäädin säätää kaikuraidan tasoa (ei laitteen algoritmista kaikua). Tallenna lähettää asetukset JSONina; Pelikoodari polttaa kaiun repliikkeihin ja kirjoittaa taustatasot sisältöpakettiin, silmukat jäävät erillisiksi. Pelikoodari vetää (äänet ja moottori), Natiivi-UI tekee paneelin (ennen linnan laatukatselmusta), Siirtoseppä huonekoukut. Aloitus keittiökohtauksesta nykyisillä otoilla ja Cupolasta.
+
+## OMISTAJA: OLAVINLINNAN KAIKKI 11 HAHMOÄÄNTÄ VALITTU (TALONPOIKA C, KIRJURI C) (30.9.2026 klo 20.41)
+
+Omistaja 30.9.2026 uusista ehdokkaista (CI-ajo 36749396928): 'Kummastakin äänestä c oli paras.' → Talonpoika C Scott – Low, Soft, and Calm (6Xb9dRSSm1t1OLWvzT1T), Kirjuri C Mr. Doppelgänger – The Clerk & Snarky Bureaucrat (5EuW3ornwqE66qGtnlMI). Yhdessä klo 20.07 valintojen kanssa kaikki 11 hahmoa lukittu Pelikoodarin äänikarttaan. Kokonaisten kuunnelmien generointi odottaa omistajan tekstihyväksyntää.
+
+## OMISTAJA: ÄÄNIMIKSERI NAPIN TAAKSE (30.9.2026 klo 20.43)
+
+Omistaja 30.9.2026 sanatarkasti: 'Tee mikseri napin taakse jotta voin ottaa sen näkyviin ja piiloon helposti.' → Natiivi-UI: kehittäjätilaan pieni mikserinappi reunaan (ei muiden nappien päälle), napautus avaa ja sulkee paneelin, säädöt säilyvät ja soivat myös paneelin ollessa kiinni; vain kehittäjäkoodilla Olavinlinnassa ja Cupolassa. Keittiön stemit ämpärissä aanet/mikseri/v1/ (18 tiedostoa, Päätoimittajan vienti, 206 + CORS todennettu); linnan repliikkiparit soittaa Siirtosepän DioraamaAanet PlayScheduledilla samalla dspTime-hetkellä.
+
+## TILA ILTA 30.9.: KUORI v16b ÄMPÄRISSÄ (7c470d2e110344eb); PULUN EVA-ASU CODEXILTA + 3 KORJAUSTA; HELSINGIN S2-PAKETTI VALMIS; SIMULAATTORIT KAATUVAT KÄYNNISTYKSESSÄ → PRB-POISTOT TAUOLLE; LEVY 50 GT (30.9.2026 klo 21.05)
+
+Päätoimittaja ajoi Olavinlinnan kuori v16b:n viennin (vie-blender.sh, 89 tiedostoa, 823 Mt, dioraama/olavinlinna/blender/7c470d2e110344eb/, blender.json 200); blender.json PR:ään #3724, osoitin mergen ja Siirtosepän kuittauksen jälkeen; v17 = kaakon muurin juuri (aukon täyttö, oma UV). Codex toimitti Pulun EVA-asun (codex-pulu-avaruuskavely e09b4467: web js/livia-eva.js, natiivi 5 PNG-kerrosta 304 × 608); korjauspyyntö posti/fable-codex-pulu-avaruuskavely-korjaus-20260930.md (oikean reunan leikkautuminen, pehmeä Maan valo, tummempi varjohahmo); kytkentä Linssiseppä 2 (web + Cupola, sopii Linssisepän kanssa). Karttasepän Helsinki-paketti (pyramidi-poltto/iss-maanpinta/helsinki-esimerkki/: z6–13, keskusta 10 m 53 × 44 km, reunus noin 38 m 400 × 300 km, ylilento 11.6.2023, vesimaski, GLO-30, merkinnat.json). Levy: TF 78 ohittui alle 30 Gt:n; Päätoimittaja poisti pysyvän säännön mukaan 49 yli 48 h lokikansiota ja 3 .app-kopiota (4 Gt), Natiiviseppä 6,5 Gt, Laitetestaaja PRB-välimuistit 12,9 Gt → noin 50 Gt; TF 1.1 (78) sisäisessä ryhmässä 21.02. Simulaattorit kaatuvat käynnistyksessä ('system shell crashed'; SpringBoard EXC_BREAKPOINT FBSDisplayMonitor-alustuksessa, 3 raporttia 20.51.19): PRB-poistot tauolla, Julkaisija testaa PRB-poistetun ja uuden laitteen; Linssiseppä 2 käyttää tarvittaessa fyysistä iPadia 00008103. Natiivi-UI:n linnakatselmus (1.1 (78)): Kuori-nappi ×:n alle (Natiivi-UI), keittiön vaakakamera ja yleisnäkymän rajaus Siirtosepälle; mikseripaneeli natiivi-ui/mikseri 50798bce valmis.
+
+## ISS-FOTOREALISMI: ILMAKEHÄVIKA KORJATTU (c15426c9), ENSIMMÄINEN NASA-VERTAILU; BLACK MARBLE 2016 500 m EUROOPPAAN (LUPA); EUROOPAN OMA S2 L2A -KESÄMOSAIIKKI z10 (~100 m): TYÖKALU + ALPPIKOE, KOKO AJO OMISTAJAN PÄÄTÖKSELLÄ (30.9.2026 klo 21.22)
+
+Linssiseppä 30.9. klo 21.2x: fotorealistisen ilmakehän vika oli LUT-passin puuttuva LightMode (URP piirsi läpinäkymättömänä kuoren päälle), korjattu c15426c9. Ensimmäinen NASA-pari (ISS067-E-286475 päivä, ISS037-E-18864 yö): maa usvan läpi, pilvien varjot, syvempi yö toimivat; suurimmat erot maaston terävyys (BMNG 500 m) ja sumeat kaupunkivalot (Black Marble Z6 noin 2,5 km/px). Seuraava vertailu pilvet 0 %:lla ja NASA-kuvien polttovälillä ja rajauksella; viritykset ilmakehän voima 3,5 ja monisironta 0,45 (a02c23e4). Karttasepän arviot: (1) Euroopan S2 L2A -kesämosaiikki z10 (noin 100 m 50°N), noin 35 000 laattaa pyramidin kanssa, 0,7–1 Gt, lähde noin 1 700 MGRS-tiiltä × 5 kesänäkymää 80 m:n overviewsta (noin 85 Gt suoratoistona), yksi yö (6–8 h, nice 15, 2 ydintä), pikselikohtainen SCL-mediaani, tiilireunojen 8 km:n häivytys, rannikkovesi BMNG-mereen 20 km:n vyöhykkeellä, 1–2 % aukot BMNG:llä; työkalu noin päivä, Alppikoe noin 1 h. (2) Black Marble 2016 500 m: lähde NASilla (B1+C1 88 Mt), 8192² 2 × 2 -tiilinä noin 640 m/px, R2 noin 10 Mt. Päätoimittaja: Black Marble lupa heti (vienti Päätoimittajalta); S2-mosaiikin työkalu ja Alppikoe nyt, Linssiseppä kuvaa kokeen Cupolassa rinnakkain BMNG:n ja NASA-kuvan kanssa, koko Euroopan ajo omistajan päätöksellä (Copernicus L2A vapaa myös kaupalliseen käyttöön, ei EOX:ää).
+
+## OMISTAJA: PARITEETTIMUUTOKSET VAIN OMISTAJAN LUVALLA (30.9.2026 klo 22.26)
+
+Omistaja 30.9.2026 klo 22.2x (chat, sanatarkasti): "Jos meinaat muuttaa jotain perustuen että webissä on jokin erilailla niin kysy minulta ensin." PÄÄTÖS: mitään ei muuteta natiivissa eikä webissä sillä perusteella, että toinen alusta tekee sen toisin, ennen omistajan lupaa. Pariteettikatsaukset ja -ajot saa tehdä, mutta erot tulevat Päätoimittajalle yhdellä rivillä (mitä web tekee / mitä natiivi tekee / suositus), ja Päätoimittaja kysyy omistajalta kortilla. Heti: pariteetti 3:n kohdat 1, 5, 6 + apurahakortti (Natiivi-UI) vain raportiksi; web-PR #3731 (Pulun chatin ylärivin ikonit ja linssinimet ilman "(keskeneräinen)", web-jonon rivit 29.9.) pidossa omistajan vastaukseen asti. Tilatut uudet siirrot ja natiivin omat työt jatkuvat ennallaan. Tarkentaa NATIIVI ENSIN, WEB RAJATUMPI (29.9.) -linjausta: 30.9. klo 21.4x tilattu pariteettikatsaus 3 "web malli" -oletuksella oli linjauksen vastainen.
+
+## OMISTAJA: SESSIOT EIVÄT OSAA KIERTÄÄ VIESTIRAJAA → VARAKANAVAOHJE TARKEMMAKSI (30.9.2026 klo 22.26)
+
+Omistaja 30.9.2026 klo 22.2x: "Sessiot eivät osaa enää kiertää viestirajaa". Löydökset: Postivahti jätti Pelikoodarin ja Natiivi-UI:n levysiivousviestin lähettämättä "koska rajoitus on lähellä" ja lykkäsi sen seuraavaan kierrokseen; Linssiseppä ja Karttaseppä saivat Päätoimittajalle "Failed to send … ENOENT" (Päätoimittajan nollaus vaihtoi uds-socketin, session id pysyi) eivätkä käyttäneet varakanavaa, vaan pyysivät Postivahtia välittämään. Syy: varakanava mcp__ccd_session_mgmt__send_message on nollauksen jälkeen lykätty työkalu (deferred), eikä sääntö kertonut, että se ladataan ToolSearchilla, eikä sitä, että ENOENT on sama tilanne. KORJAUS: Päätoimittaja lähetti klo 22.3x kaikille 12 roolille ohjeen varakanavaa pitkin (1) ToolSearch "select:mcp__ccd_session_mgmt__send_message,mcp__ccd_session_mgmt__list_sessions", 2) send_message(session_id=local_…), id list_sessionsista; ei lykkäystä seuraavaan kierrokseen, ei omistajan eikä Postivahdin kautta). Raamatun VIESTIRAJA-kohta tarkennetaan samoin.
+
+## OMISTAJA (KORTTI): #3731 WEBIIN, EUROOPAN S2-MOSAIIKKI TÄNÄ YÖNÄ, VIESTIRAJAN HOOK (30.9.2026 klo 22.38)
+
+Omistajan kortti 30.9.2026 klo 22.3x: 1) #3731 (Pulun chatin ylärivin napit ikoneiksi, linssinimistä "(keskeneräinen)" pois; web-jonon rivit 29.9.) viedään webiin nyt → Julkaisija purki pidon. 2) Koko Euroopan oma Sentinel-2 L2A -kesämosaiikki (z10 ~100 m, ~35 000 laattaa, 0,7–1 Gt) ajetaan tänä yönä → Karttaseppä: ensin vesipikseleiden tiilikohtainen tasosovitus (MGRS-portaat merellä), sitten koko ajo nice 15 kahdella säikeellä polton rinnalla; pysähdysraja 40 Gt. 3) Viestirajan muistutushook lisätään kaikille sessioille; omistaja lisäksi: "kirjaa se hook raamattuun jotta tulee aina automaattisesti tilin vaihdon yhteydessä heti käyttöön" → tools/hooks/viestiraja-muistutus.sh (PR #3734), projektitaso .claude/settings.json + käyttäjätaso (asennettu koodaus-käyttäjälle klo 22.35, asennin tools/hooks/asenna-viestiraja-hook.sh, --tarkista Postivahdin kierrokselle); Raamatun VIESTIRAJA-kohtaan tilinvaihdon tarkistus.
+
+## OMISTAJA: MAC-VERSION (iPAD-APPI MACILLA) SYÖTE PEHMEÄKSI — LIUKU, NIPISTYS, NAPIT, NUOLINÄPPÄIMET (30.9.2026 klo 22.38)
+
+Omistaja 30.9.2026 klo 22.3x–22.4x sanatarkasti: "saisiko mac ipad versioon kahden sormen panoroinnin niin että se jatkaisi pallon pyöritystä kuten ipadilla. nyt pysähtyy heti seinään. maailma ja näytä huntu saisivat olla vierekkäin siinä kohtaa missä on nyt huntu nappi. nipistys zoomaus toimii nyt aivan liian nopeasti ja saisiko siihen myös sen saman liuun kuin panorointiin" + "lisää nuolinäppäimet kuvien ja lehtien sivujen yms. selailuun" + "saisiko liun myös tekstien vierittämiseen macin ipad apilla. sekä kaikki muutkin mitä vain keksit jotta käyttö olisi pehmeämpää kuten natiivissa mac apissa". Natiivi-UI (syötesovitus, 30.9. linjaus) yhtenä eränä: 1) ohjauslevyn panoroinnille iPadin hitausliuku, 2) Maailma + Näytä huntu vierekkäin huntu-napin paikalle (Mac; iPadille vain omistajan luvalla, 29.9. päätös Maailma pois iPadin kartalta), 3) nipistyszoomi hitaammaksi + liuku, 4) ← → selaavat kuvia, lehtien sivuja ym. (yleinen näppäinkerros, toimii myös iPadin fyysisellä näppäimistöllä), 5) hitausliuku ja reunajousto tekstien ja listojen vieritykseen; omana eränä Mac-tuntuman ideat (hiiren rullan pehmennys, hover ja käsikursori, kaksoisklikkauszoomi, + / − ja välilyönti, ProMotion 120 fps, ikkunan koon muutos).
+
+## OMISTAJA (KORTTI): MAAKUNTAKORTIN KYSYMYKSET PULUN KYSYMYKSIKSI, KUVA NOSTOJEN MUOTOON + TOINEN KUVA + MINIKARTTA TEKSTIN OIKEALLE (30.9.2026 klo 22.47)
+
+Omistaja 30.9.2026 klo 22.4x Mac-appin kuvasta (Länsi-Makedonian "Lue lisää" -ikkuna) sanatarkasti: "tämä on vähän outo, että on kysymysboksi, jos ei ole pululle osoitettu kysymys. pitäisi joko tehdä suoraan tekstiksi tai sitten muuttaa pulun kysymyksiksi. kumpi olisi parempi? näitä varmaan nyt koko eurooppa täynnä. myös tuo kuva on oudon matala eikä ole linjassa muiden nostojen kanssa. voisi olla myös toinen kuva lisäksi ja mahdollisesti havainnekuva." Kortti klo 22.5x: 1) Pulun kysymykseksi (suositus): kortissa Pulun kuvake + kysymys ilman vastausta; napautus avaa Pulun chatin, jossa valmis vastaus (maakunnat-luonnehdinnat.js pulu[{q,a}], suunniteltu näin jo 21.9.) tulee heti ilman tekoälykutsua, jatkokysymykset normaalisti. 2) Kuvat: "tee ehdotuksesi mukaan mutta tuon kartan voisi taittaa leipätekstin oikealle puolelle pienessä koossa ja sen voisi sitten klikata suuremmaksi minipopup tyyliin jolloin se animoidusti suurenisi ruudulle. onko hyvä idea?" → Päätoimittaja: hyvä idea (atlaksen sivukartan tapa, kortti pysyy tiiviinä). Kuva nostokorttien kuvasuhteeseen, toinen Commons-kuva kenttään kuva2 (selaus pyyhkäisyllä ja nuolilla), automaattinen minikartta tekstin oikealle ~30 % leveydestä, napautus suurentaa animoidusti (< 250 ms), napautus/Esc palauttaa. Tekijät: Pelikoodari (natiivi, sopii tiedostoista Natiivi-UI:n kanssa), Sisältökirjuri (kuva2 koko Eurooppaan maittain, Kreikka ensin); web vasta web-jonon erässä.
+
+## OMISTAJA (KORTTI): PULUN KEHOTTEESEEN YKSI LAUSE — KÄSITEMERKINNÄT JA OHJEET EIVÄT NÄY VASTAUKSESSA (30.9.2026 klo 22.51)
+
+Pelikoodarin löydös 30.9.2026 klo 22.5x (natiivin Pulu-kontekstikorjauksen 59117878 todennus, Segovia "Miten akveduktin ikä selvitettiin?"): vastauksen lopussa malli puhui ohjeistaan ("Tässä tekstissä on Géza Alföldy, pronssikirjaimet, Domitianus ja Traianus avainkäsitteinä…"), eli worker-kehotteen käsitemerkintäohje vuotaa vastaukseen. Pulun malli ja kehote ovat lukittuja (VASTAUSKAAVA, muutokset vain omistajan luvalla) → kortti klo 22.5x: "Kyllä, korjaa". Pelikoodari lisää yhden lauseen, kolmiosainen vastauskaava ennallaan, 3–5 kysymyksen ennen/jälkeen-vertailu kehittäjäkoodilla ja deploy heti puhtaalla vertailulla.
+
+## OMISTAJA: ELEVENLABS-LUKIJAAN ENEMMÄN TOIMIVIA ÄÄNIÄ, OMISTAJA VALITSEE PARHAAN (30.9.2026 klo 23.06)
+
+Omistaja 30.9.2026 klo 23.0x (TF, #3710 tuotannossa) sanatarkasti: "elevenlabs turbon kaikki äänet eivät toimi ja niitä on liian vähän. saisiko lukija ääniä enemmän listaan niin valkkaan parhaimman". Linssiseppä 2: rikkinäisten äänten syy (voice_id, tili, malli/suomi), testi yhdellä lyhyellä lauseella per ääni (yhteensä < 2 000 merkkiä), lista 15–25 suomella toimivaan ääneen ensisijaisesti tilin valmiista äänistä, suomenkieliset kuvaavat nimet; kirjaston jakoäänten lisäys omistajan ElevenLabs-tilille on tilimuutos ja kysytään ensin.
+
+## OMISTAJA: ÄÄNIVALINTA — AINA ELEVENLABS v4, EI SUOMEKSI MERKATTUJA ÄÄNIÄ, MIELUITEN ENITEN KÄYTETYT (30.9.2026 klo 23.12)
+
+Omistaja 30.9.2026 klo 23.1x sanatarkasti: "v4 äänet kaikki toimivat suomella. mutta suomeksi merkatut äänet ovat yleensä huonoja, älä käytä niitä. oliko muuten linnan äänissä mukana suomalaisiksi merkattuja ääniä? niistä oli useampi huono niin siksi kysyn. tämän voisi merkata raamattuun säännöksi, että aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä". Raamattuun (UUSIA ÄÄNIÄ -kohdan jatkoksi) ÄÄNIVALINTA: aina v4-malli, ei suomeksi merkattuja ääniä, ensisijaisesti eniten käytetyt; koskee lukijaa, Pulua, hahmoääniä ja tulevia eriä. Linssiseppä 2: lukijan lista 15–25 suosituinta ei-suomeksi-merkattua ääntä (suosituimpien kirjastoäänten lisäys tilille sallittu tätä listaa varten, äänipaikkaraja tarkistetaan). Pelikoodari tarkistaa linnan 11 hahmoäänen ja keittiödemon merkinnät (vain metatieto); linnan ääniä ei vaihdeta ennen omistajan päätöstä.
+
+## OMISTAJA (KORTTI): PARITEETTI 3 — SAAPUMISKAUPUNGIN KUVAMERKKI TAKAISIN, ZOOMI ENNALLAAN; TOPOGRAFIASELITE AUKI 3 s (30.9.2026 klo 23.12)
+
+Kortti 30.9.2026 klo 23.1x (Natiivi-UI:n pariteetti 3 -havainnot 1.1 (81):llä, kuvaparit natiivi-ui-pariteetti3/parit/kartta.png ja linssi-selite.png): 1) saapumisen jälkeen natiivista katoaa saapumiskaupungin kuvamerkki luennan jälkeen → selvitetään ja palautetaan; natiivin kauempi zoomi säilyy (webissä lähempi). 5) topografialinssin värien selite auki 3 s avauksessa, sitten pilleriksi; pilleri avaa selitteen uudelleen (webissä aina auki). 6) ei eroa (komennon indeksointi). Natiivi-UI toteuttaa yhtenä eränä.
+
+## OMISTAJA (KORTTI): KEITTIÖN KOLME SUOMEKSI MERKATTUA ÄÄNTÄ VAIHTOON, NÄYTTEET ENSIN (30.9.2026 klo 23.14)
+
+Pelikoodarin tarkistus 30.9.2026 klo 23.1x (CI-haun metatiedot, ei generointia): linnan 16 äänestä suomeksi merkattuja kolme, kaikki keittiössä 29.9. kierrokselta: kokki (Ville - Serious and Condescending), vesipoika (Matias - Kind and youthful), apulainen (Esko - Energetic and bright); muut en/de. Kortti klo 23.2x: "Kyllä, näytteet ensin". Lupa: kullekin kolmelle 3 ehdokasta eniten käytetyistä ei-suomeksi-merkatuista äänistä, yksi repliikin näyte v4:llä per ehdokas (yhteensä ~1 000 merkkiä); omistaja valitsee kuunneltuaan; hahmojen repliikkien uudelleengenerointi vasta erillisellä luvalla tekstit näytettyinä.
+
+## OMISTAJA: ISOISÄN TEKSTI PIENENEE LUENNAN JÄLKEEN; OHITA-TEKSTI PUUTTUU MACILTA (30.9.2026 klo 23.15)
+
+Omistaja 30.9.2026 klo 23.1x–23.2x sanatarkasti: "macin ipadilla ei näy luennan aikaista ohita tekstiä. se voi olla hukkunut myös muista. tarkista" ja "isoisän teksti saisi pienentyä automaattisesti luennan jälkeen". Siirtoseppä (30.9. luentanäkymän tekijä) yhtenä eränä junaan 82: Ohita-tekstin tarkistus ja palautus kaikille alustoille; luennan päätyttyä (luonnollisesti tai ohitettuna) tekstipaneeli pienenee animoiden noin 1,5 s kuluttua kaupunkipilleriksi ja pilleri avaa sen uudelleen. Web-jonoon rivi.
+
+## OMISTAJA: KEITTIÖN APULAINEN ÄÄNEEN C, KOKKI JA VESIPOIKA ALKUPERÄISINÄ (POIKKEUS fi-SÄÄNTÖÖN) (30.9.2026 klo 23.29)
+
+Omistaja 30.9.2026 klo 23.3x näytteiden (keittion-aanet-yhdessa-nimetty.mp3) jälkeen sanatarkasti: "muuta vain apulainen versioon C. pidä muut alkuperäisinä". Apulainen = C (Adam - Engaging, Friendly and Bright, eleven_v4); kokki (Ville, fi) ja vesipoika (Matias, fi) säilyvät omistajan valinnalla — poikkeus ÄÄNIVALINTA-sääntöön vain näille kahdelle. Kortti: lupa generoida apulaisen kaksi repliikkiä (keittio.js apulainen-1 ja -2, ~134 merkkiä) C-äänellä; Pelikoodari tasaa −17,2 LUFS ja vie normaalisti.
+
+## OMISTAJA: LINNAN PUHEET SAA GENEROIDA, KUN TEKSTIT ON TARKISTETTU; PÄÄTOIMITTAJAN 5 KORJAUSTA; KÄVELY JA MAISEMA SELVITYKSEEN (30.9.2026 klo 23.37)
+
+Omistaja 30.9.2026 klo 23.4x Mac-appin Muurinharja-kuvasta sanatarkasti: "miksi henkilö kävelee niin oudosti ja miksi tuolla ei näy mitään maisemaa? pitäiskö minun kuitenkin vain odotella päivitykset rauhassa ja katsoa vasta sitten tätä linssiä? puheet voi generoida jos niitä ei ole vielä tehty" + "tarkista kuitenkin vielä ensin että tekstit ovat hyvät". Päätoimittaja luki kaikki linnan puhetekstit (~1 300 sanaa: kuunnelmat, Pulun kertomukset, kertoja, repliikit): hyvät, faktat v2:n mukaiset; korjattavaksi ennen generointia 5: kappeli "Voudin herra" → "Herra vouti"; keskushallin kuunnelman puhujat repliikkien mukaisiksi (noppalause vartija2, "Puhu hiljempaa" vartija) ja "kuin kana ilman päätä" → "kuin päätön kana"; hallin "Tietä, tietä!" puhujaksi tarjoilija ja "väentupaan" → "Linnantupaan"; hallin Pulun kertomus "väentupa" → "Linnantupa" (sama nimi kuin keittiössä); vartiotuvan Pulu "Portti, jonka avaa vain asiallinen vieras?" → "Portti, joka aukeaa vain asialliselle vieraalle?". Pelikoodari generoi puuttuvat puheet (eleven_v4, aanikartan äänet, apulainen C). Linnanrakentaja selvittää oudon kävelyn ja maiseman (v17:n taivas ja vesi, laatusuunnitelman vaihe 5 saaret/puut); omistajalle suositus odottaa päivityksiä ennen linnan katsomista.
+
+## LINNAN YMPÄRISTÖ (VAIHE 5) ETUSIJALLE; KÄVELYN SYY LÖYTYI (30.9.2026 klo 23.38)
+
+Linnanrakentaja 30.9.2026 klo 23.4x: 1) outo kävely = animaatio 1,4 m/s tahdissa mutta vartija liikkuu 0,8 m/s (jalat liukuvat ~45 %), kävely jatkuu päiden 2 s tauoilla ja kääntyminen napsahtaa 180° → Siirtoseppä korjaa natiivin DioraamaHahmot3D:n (tahti nopeudesta, tauolla idle, pehmeä käännös), arvio 1.10. 2) v17 tuo hämärän valon, soihdut ja ikkunat, mutta linnan ulkopuolinen maisema puuttuu (vaihe 5). Päätoimittaja hyväksyi ympäristön kaiken muun edelle: rannat MML:n korkeusmallista ja ortokuvasta (CC BY 4.0, attribuutio Maanmittauslaitos), puut CC0-instansseina, Siirtoseppä vesi ja taivas; arvio 3.10. v17 (+ v18-ikkunat) laitteella arviolta 1.10. iltapäivällä.
+
+## ETUSIJA: LINNA JA ISS KÄÄNNÖS-, SIMULAATTORI- JA WEB-JUNISSA ENSIN (30.9.2026 klo 23.41)
+
+Omistaja 30.9.2026 klo 23.4x: "miksi iss ja linna etenevät niin hitaasti?" Päätoimittajan analyysi: 1) yksi yhteinen käännöspalvelu (yksi Unity-käännös kerrallaan) ja päivällä enintään 2 simulaattoria noin 12 session kesken → ISS:n jokainen vertailukierros (käännös + simulaattoriajo + kuvapari) odottaa jonossa; 2) linnan julkaisuketju (vienti → PR → web-juna → CI-kopio → puhtaan asennuksen kuittaus → osoitin) + TF-viive: omistajan laitteella on yhä vanha kuori, vaikka v16b ja v17 on viety ämpäriin; 3) riippuvuudet (Codexin julkisivu E ei ole tullut 6 tunnissa, maan väri odottaa S2-mosaiikkia yöllä, äänet lupaportin takana); 4) samaan jonoon kilpailevat pienet UI-erät. Päätös: linna ja ISS ensin käännös-, simulaattori- ja web-junissa (#3724 → #3732 kärkeen), muut niiden jälkeen.
+
+## OMISTAJA: KERTOJA ON AINA ISOISÄN ÄÄNI (VIISAS KERTOJA) VANHEMMALLA MALLILLA, EI v4 (30.9.2026 klo 23.45)
+
+Omistaja 30.9.2026 klo 23.5x sanatarkasti: "kertoja on aina sama, eli isoisän ääni. se on suomi ääni, mutta se toimii paremmin kuin muut. se pitää vain ajaa sillä vanhemmalla mallilla ei v4". Raamatun ÄÄNIVALINTA-kohtaan poikkeus: kertoja = Viisas Kertoja, eleven_v3 (luennat, linssien ja linnan kertoja, lukijan oletusääni). Pelikoodari: linnan kertojan 4 jaksoa (579 merkkiä) tällä. Linssiseppä 2: lukijalistan (#3739, natiivi c96c6dad) ensimmäiseksi ja oletukseksi Viisas kertoja v3:lla, muut 23 v4:llä; Julkaisija odottaa päivitystä.
+
+## OMISTAJA: CODEXIA EI KÄYTETÄ LINNAN JULKISIVUUN — PÄÄTOIMITTAJA VALITSI B+C; EVA-KORJAUKSET OMIN VOIMIN (30.9.2026 klo 23.46)
+
+Omistaja 30.9.2026 klo 23.5x sanatarkasti: "codex ei näytä saavan hyvää versiota aikaiseksi, joten ei käytetä sitä. valitse sinä paras niistä mitä sinä teit". Päätoimittaja valitsi tekstuurivertailusta (proto-3d/_valmiit/linna-laatu/vertailu/vertailu-A-D-merkitty.png: A nykyinen 4k-atlas, B CC0-lähidetalji, C tekoälyskaalaus ×4, D Commons-projisointi) yhdistelmän B+C: C säilyttää linnan oman kiven, B tuo lähikuvaan terävän rakenteen; D pehmein, A sumea läheltä. B+C on jo kuoressa v16b/v17, joten lisätyötä ei tule; koko linnaan. Codexin julkisivu E peruttu (Linnanrakentaja merkitsee postin tilauksen perutuksi). Pulun EVA-asun korjaukset (reuna, pehmeä Maan valo, tummempi varjo) tekee Linssiseppä 2 moottorissa nykyiseen assettiin e09b4467 odottamatta Codexia.
+
+## OMISTAJA: PULULLE SAMAT NAPIT KAIKKIALLE JA STRIIMILUENTA LINSSEIHIN; ISS-HUMINA KAIKKIIN ISS-LINSSIN NÄKYMIIN (30.9.2026 klo 23.57)
+
+Omistaja 30.9.2026 klo 23.5x astronautin kameran näkymästä (Bahaman matalikot, Pulun chat ilman kaiutinta) sanatarkasti: "pululla saisi olla myös tässä striimiluenta. tee pululle aina samat napit kaikkialle peliin. iss:n taustakohinan saisi muuten lisätä sitten kaikkiin linssin näkymiin tausta ääneksi". Pelikoodari: yksi yhteinen Pulun chat-komponentti koko peliin (kartta, linssit, linna, ISS), samat napit samassa järjestyksessä (striimiluenta, puhekupla- ja ehdota-ikonit, sulje), teeman värit saavat vaihdella. Linssiseppä: aseman humina (aanet/cupola/v1/) silmukkana kaikkiin astronautin kameran / ISS-linssin näkymiin väistöllä Pulun ja luennan alla; radio vain Cupolassa. Web-jonoon rivi.
+
+## OMISTAJA: NASA-KUVIEN VALKOINEN PALKKI POIS KAIKISTA NYT JA JATKOSSA JO LISÄYSVAIHEESSA (30.9.2026 klo 23.58)
+
+Omistaja 30.9.2026 klo 23.5x astronautin kameran Everglades-kuvasta (ISS015E08920, valkoinen tunnuspalkki alareunassa) sanatarkasti: "kaikista kuvista piti poistaa tuo valkoinen palkki. jos tulee lisää kuvia joskus myöhemmin peliin, niin niistä pitää poistaa se jo lisäämisvaiheessa. poista nyt kaikista". Sama tilaus oli annettu 20.9. (Sisältökirjuri), mutta 27.9. laajennuksen kuvat tai natiivin kuvat jäivät rajaamatta. Sisältökirjuri kiireellisenä: kaikki astronautin kameran NASA-kuvat (web, natiivi, ämpäri) rajataan koneellisesti, uusi versiokansio ämpäriin, viittaukset päivitetään; lisäystyökaluun tarkistus ja testi. Raamatun ASTRONAUTIN KAMERA -kohtaan sääntö.
+
+## OMISTAJA: ISS-KUVANÄKYMÄÄN PIENEMMÄT SELAUSNAPIT JA PIENI SIJAINTIPALLO; TAUSTAN PALLO SUMEAKSI (1.10.2026 klo 00.06)
+
+Omistaja 30.9.–1.10.2026 klo 00.0x–00.1x astronautin kameran kuvanäkymistä sanatarkasti: "iss kuvien taustalla näkyvä maapallo saisi olla vähän sumennettu" ja "selausnapit voisi olla vähän pienemmät sekä väkäset keskitetty paremmin ympyrän sisään. lisäksi: pystyisikö näytölle tekemään ilman pilviä ja muuta ylimääräistä pienen maapallon, joka näyttäisi pisteellä aina kyseisen kuvan maapallolla? se saisi pyörähtää pehmeästi aina uuteen paikkaa jos nuolinäppäimillä selataan kohteita." Linssiseppä samaan ISS-erään huminan kanssa: taustan pallo kevyesti sumeaksi, napit ~20 % pienemmiksi ja väkäset keskelle, pieni sijaintipallo nurkkaan (ei pilviä/ilmakehää/merkkejä, piste kohteessa, pehmeä kierto lyhintä reittiä selattaessa). Lisäksi valmiit paketit ympäristöön: Boat Attack (URP) veden pohjaksi, Poly Haven CC0; arvio 2,5–3 pv; puita 90 084 laserdatasta.
+
+## TILA 1.10. YÖ: PULUN YHTEINEN CHAT ILMAN RASTIA; PULUN EVA-ASU KORJATTU; NASA-PALKIT POIS; LINNAN PUUT (1.10.2026 klo 00.16)
+
+Pelikoodari koodasi Pulun yhteisen chatin (pelikoodari/pulu-yhteinen b53bb557): astronautin kameran minipulu avaa saman PuluChatin (puhekupla, kynä | ≡, kaiutin ja striimiluenta | näppäimistö, mikki; tumma lasi ja vihreä reuna, kohteen kysymykset sirunappeina), ja Ihmisen matkan kysymys ilman valmista vastausta avaa chatin aiheella (web polloKysy); valmiit vastaukset lähteineen pysyvät kortissa; kuvat odottavat simulaattorivuoroa. TARKENNUS 30.9. klo 23.57 kirjaukseen: sana sulje tarkoittaa sulkutapaa, ei nappia. Pulun chatissa ei ole ✕:ää missään (omistajan linjaus 12.8.2026 'sulkeminen ilman rastia', kuplien sulkuruksi pois 13.9.): chat sulkeutuu ohinapautuksella jo kosketuksen alussa, Esc-näppäimellä (ensin kuvapopup, sitten chat, ei linssiä samalla painalluksella) tai Pulun omalla napilla, joka toimii vipuna. Minipulun vanha ✕ poistuu. Linssiseppä 2 korjasi Pulun EVA-asun ilman Codexia: hahmo ja köysi siirtyivät 10 yksikköä vasemmalle, varjossa oleva hahmo on tummempi ja hieman kylmempi ja Maan valo pehmeä ja himmeämpi. Natiivi linssiseppa2/pulu-eva 465df46f menee Natiivisepän junaan; web #3728 jää luonnokseksi web-jonoon; kuvapari lähetettiin omistajalle. Sisältökirjuri poisti NASA-kuvien valkoisen palkin (#3743, v2469): 229 havaintoa tarkistettu, joista 40 palkillista ja 28 uutta rajattu; ämpäri linssit/astronautin-kamera/20261001/; tuleville kuville tools/astro-palkki.mjs ja testi; Everglades-kuvapari lähetettiin omistajalle. Linnanrakentajan ympäristön vaihe 1a (90 084 puuta MML:n laserkeilauksesta, lajit ortokuvan väreistä) lähetettiin omistajalle välikuvana. Seuraavaksi rantametsän tihennys, horisonttirengas 20 × 20 km, usva ja taivas.

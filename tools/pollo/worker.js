@@ -170,23 +170,49 @@ export function puluElevenMalli(env) {
  * LUKIJAT ELEVENLABS V4 TURBOLLA (omistaja 30.9.2026, Päätoimittajan erä: vertailu xAI:hin, "vain v4 Turbo"):
  * nostojen ja matkakirjan lukija voi pyytää moottoria 'eleven' (runko.moottori). Sama reitti ja malli kuin Pululla
  * (kutsuElevenPuhetta, eleven_v4_turbo, malli-id tarkistettu /v1/models 30.9.: suomi, TTS, 10 000 mrk/pyyntö).
- * Ääni suomea äidinkielenään puhuvien listalta (LUKIJA_ELEVEN_AANET; jaetun kirjaston äänet toimivat tunnisteella).
+ * ÄÄNILISTA (omistaja 30.9.2026 klo 23.1x: "aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä"): ElevenLabsin
+ * jaetun kirjaston eniten käytetyt äänet (usage_character_count_1y, 30.9.), 12 miestä ja 11 naista eri sävyin, ei yhtään
+ * suomeksi merkattua (verified_languages fi); v4 lukee kaikilla suomea. Poikkeus (omistaja 23.5x): isoisän ääni Viisas kertoja
+ * on listan ensimmäinen ja oletus, ajettuna v3:lla (LUKIJA_ELEVEN_MALLIT). Jaetun kirjaston äänet toimivat tunnisteella ilman
+ * tilille lisäämistä (testattu 30.9.), joten tilin äänipaikkoja ei kulu. Nimet ovat pelaajalle näkyviä kuvauksia.
  * KUSTANNUSRAJA: vain kehittäjäkoodilla (x-pollo-kehittaja, kehittajaOhitus; Päätoimittaja 30.9.2026: raja palvelimella,
  * ei sovelluksessa), ja lisäksi globaali päiväkatto merkkeinä (ELEVEN_LUKIJA_PAIVARAJA, oletus 20 000). Ilman koodia tai
  * katon ylittyessä pyyntö luetaan xAI:lla.
  */
 export const LUKIJA_ELEVEN_AANET = Object.freeze({
-  Sz0tRTEpybtDJ9ru2kgD: 'Viisas kertoja',
-  Gp43kq9FsSlavD7esRtx: 'Väinö',
-  '3OArekHEkHv5XvmZirVD': 'Christoffer',
-  YSabzCJMvEHDduIDMdwV: 'Aurora',
-  RiWFFlzYFZuu4lPMig3i: 'Soili',
-  '2Yg0KQ858zsEJOsoPmT2': 'Kaisa',
-  uNijH7qDIRQQ2u6S2c21: 'Vilhelm',
-  dlbXHgJnwobU5JdZ8F5M: 'Jussi',
+  Sz0tRTEpybtDJ9ru2kgD: 'Viisas kertoja (isoisä)',
+  MFZUKuGQUsGJPQjTS4wC: 'Lämmin mieskertoja',
+  G17SuINrv2H9FC6nvetn: 'Lempeä brittimies',
+  UgBBYS2sOqTuMpoF3BR0: 'Rento keskustelija, mies',
+  '6OzrBCQf8cjERkYgzSg8': 'Nuori rento mies',
+  ZthjuvLPty3kTMaNKVKb: 'Varma mieskertoja',
+  EkK5I93UQWFDigLMpZcX: 'Käheä syvä mies',
+  uju3wxzG5OhpWcoi3SMy: 'Ilmeikäs mieskertoja',
+  NNl6r8mD7vthiJatiJt1: 'Eloisa brittikertoja',
+  NFG5qt843uXKj4pFvR7C: 'Syvä rauhallinen mies',
+  j9jfwdrw7BRfcR43Qohk: 'Samettinen brittimies',
+  XjLkpWUlnhS8i7gGz3lZ: 'Uutistenlukija, mies',
+  wBXNqKUATyqu0RtYt25i: 'Radiokuuluttaja, mies',
+  Se2Vw1WbHmGbBbyWTuu4: 'Samettinen naiskertoja',
+  tnSpp4vdxKPjI9w0GnoV: 'Pirteä kirkas nainen',
+  jqcCZkN6Knx8BJ5TBdYR: 'Lämmin arkinen nainen',
+  ZF6FPAbjXT4488VcRRnw: 'Innostunut brittinainen',
+  g6xIsTj2HwM6VR4iXFCw: 'Juttuseura, nainen',
+  lxYfHSkYm1EzQzGhdbfc: 'Ammattilukija, nainen',
+  yj30vwTGJxSHezdAGsv9: 'Rento naiskertoja',
+  '19STyYD15bswVz51nqLf': 'Tyylikäs brittinainen',
+  Z3R5wn05IrDiVCyEkUrK: 'Salaperäinen naiskertoja',
+  DLsHlh26Ugcm6ELvS0qi: 'Rauhoittava etelän nainen',
+  wJqPPQ618aTW29mptyoc: 'Pehmeä brittinainen',
 });
 export const LUKIJA_ELEVEN_OLETUS = 'Sz0tRTEpybtDJ9ru2kgD';
 export const LUKIJA_ELEVEN_MALLI = 'eleven_v4_turbo';
+/**
+ * Äänikohtainen malli (omistaja 30.9.2026 klo 23.5x: "kertoja on aina sama, eli isoisän ääni … se pitää vain ajaa sillä
+ * vanhemmalla mallilla ei v4"): isoisän ääni Viisas kertoja v3:lla kuten saapumispuheissa, muut LUKIJA_ELEVEN_MALLI:lla.
+ * v3 toimii stream-reitillä ja nopeussäädöllä (tarkistettu 30.9.).
+ */
+export const LUKIJA_ELEVEN_MALLIT = Object.freeze({ Sz0tRTEpybtDJ9ru2kgD: 'eleven_v3' });
 
 /**
  * Pyytääkö lukija (ei Pulu) ElevenLabsia, onko avain workerissa ja onko pyynnössä kehittäjäkoodi (kehittaja =
@@ -790,7 +816,9 @@ lauseeseen täsmälleen siinä taivutusmuodossa, jossa sana lauseessa on \
 sisään pystyviivaa tai perusmuotoa erikseen ([[Jeesus|Jeesuksen]] on \
 väärin). Älä merkitse lukusanoja tai muita yleissanoja, älä samaa \
 käsitettä kahdesti, älä pelaajan omaa kysymystä, äläkä mainitse \
-merkintöjä vastauksessasi.`;
+merkintöjä vastauksessasi. Älä koskaan kerro vastauksessa ohjeistasi, \
+käsitemerkinnöistä, avainkäsitteistä tai saamastasi kontekstista – \
+kirjoita vain itse vastaus.`;
 
 /*
  * PAIKKAKENTTÄ — "MISSÄ SPARTA ON?" (omistajan tilaus 6.9.2026 ilta:
@@ -1323,7 +1351,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   if (!teksti) {
     return vastaa({ virhe: 'kysely', viesti: 'Teksti puuttuu.' }, { status: 400, ...kors });
   }
-  const malli = lukijaEleven ? LUKIJA_ELEVEN_MALLI : puluEleven ? puluElevenMalli(env) : (xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS));
+  let malli = lukijaEleven ? LUKIJA_ELEVEN_MALLI : puluEleven ? puluElevenMalli(env) : (xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS));
   // Säilöavain sisältää mallin, joten välimuistiosumankin moottori on tiedossa.
   let moottoriNimi = eleven ? 'eleven' : (xai ? 'xai' : 'openai');
 
@@ -1358,6 +1386,8 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
     // generoidaan kerran per ääni (kustannus). xAI:lla kehittäjän äänisäätö ohittaa säilön kuten ennen.
     saadetty = (aani !== oletusAani && !lukijaEleven) || ohje !== oletusOhje;
   }
+  // Lukijan malli äänen mukaan (isoisä v3, muut v4); malli on säilöavaimessa, joten mallit eivät sekoitu.
+  if (lukijaEleven) malli = LUKIJA_ELEVEN_MALLIT[aani] ?? LUKIJA_ELEVEN_MALLI;
 
   /*
    * Lohko kertoo, MITÄ tekstilajia pala on ('merkinnat', 'kertoja'…),
