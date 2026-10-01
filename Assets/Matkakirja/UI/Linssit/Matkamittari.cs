@@ -289,7 +289,7 @@ namespace Matkakirja.Natiivi
 
         static Texture2D liukuvari;
 
-        /// <summary>Web .vuosi-numero: linear-gradient(180deg, 35 % musta, 0 30 %, 0 70 %, 35 % musta).</summary>
+        /// <summary>Web .vuosi-numero: linear-gradient(180deg, 35 % musta, 0 30 %, 0 70 %, 35 % musta); sävy Tyylikirja.Himmennys.</summary>
         static Texture2D Liukuvari()
         {
             if (liukuvari != null) return liukuvari;
@@ -299,7 +299,10 @@ namespace Matkakirja.Natiivi
             {
                 float p = (y + 0.5f) / h;
                 float a = p < 0.3f ? 0.35f * (1f - p / 0.3f) : p > 0.7f ? 0.35f * ((p - 0.7f) / 0.3f) : 0f;
-                liukuvari.SetPixel(0, y, new Color(0, 0, 0, a));
+                // Sävy tyylikirjasta (himmennys = webin musta varjo), alfa liukuvärin mukaan (pohjavahti: ei omia värejä).
+                Color savy = Tyylikirja.Himmennys.Tumma;
+                savy.a = a;
+                liukuvari.SetPixel(0, y, savy);
             }
             liukuvari.Apply();
             return liukuvari;
