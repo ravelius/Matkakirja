@@ -45,7 +45,7 @@ const lahde = lue('../js/linssit/satelliitti.js');
 test('lueSelite ohittaa automaattisen luennan, kun automaattiluentaSallittu() on false', () => {
   assert.match(
     lahde,
-    /function lueSelite\(h\) \{\s*if \(!luentaKytkinPaalla\(\)\) return;\s*(?:\/\*[\s\S]*?\*\/\s*)?if \(!automaattiluentaSallittu\(\)\) return;/,
+    /function lueSelite\(h\) \{\s*(?:\/\/[^\n]*\n\s*)?if \(!luentaKytkinPaalla\(\) && !autoKaytossa\(\)\) return;\s*(?:\/\*[\s\S]*?\*\/\s*)?if \(!automaattiluentaSallittu\(\)\) return;/,
   );
 });
 

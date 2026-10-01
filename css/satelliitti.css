@@ -1964,3 +1964,24 @@ body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }
 @media (min-width: 700px) {
   .iss-kyyti-paneeli { width: 360px; }
 }
+
+/*
+ * AUTO (omistaja 2.10.2026; NOSTOKORTTI-pohjan osa AUTO, js/pohjat/auto.js): kytkin vasempaan alakulmaan ‹ ›:n
+ * riville (‹ › pysyvät keskellä), siirtolappu niiden yläpuolelle koko leveydelle. AUTOn aikana otsikkona on pelkkä
+ * kohteen nimi (seutu pois).
+ */
+.satelliitti-autokulma {
+  position: absolute;
+  left: var(--tk-vali-m);
+  bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
+  z-index: 5;
+}
+.satelliitti-autokulma[hidden] { display: none; }
+.satelliitti-autolappu {
+  position: absolute;
+  left: var(--tk-vali-m);
+  right: var(--tk-vali-m);
+  bottom: calc(var(--tk-vali-m) * 2 + var(--tk-nappi-osuma) + env(safe-area-inset-bottom, 0px));
+  z-index: 7;
+}
+.satelliitti-auto-paalla .satelliitti-seutu { display: none; }

@@ -1,6 +1,7 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
+import { visaPohjalla, pueVisaKortiksi } from './visa-pohja.js';
 import {
   ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, ENNAKON_JATKOT, HYPYN_TAUKO_MS,
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
@@ -2962,6 +2963,8 @@ export class UI {
 
     this.winnerDialog = document.getElementById('winner-dialog');
     this.quizDialog = document.getElementById('quiz-dialog');
+    // Visa KORTTI-pohjalla, versio B (peruttava ?kortti=vanha; js/visa-pohja.js).
+    if (visaPohjalla()) pueVisaKortiksi(this.quizDialog);
     this.quizCity = document.getElementById('quiz-city');
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
@@ -17878,6 +17881,16 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
+    // KORTTI-pohja (peruttava ?kortti=vanha): kärki korostettuna, lähde- ja oikeusrivit apurina; palautelomake
+    // pitää kenttiensä tyylit (kenttäpohja odottaa omistajan päätöstä).
+    if (korttiPohjalla()) {
+      for (const e of kortti.querySelectorAll('.periaate-teksti')) {
+        e.className = e.classList.contains('periaate-liput') ? 'tk-apuri'
+          : `tk-leipa${e.classList.contains('kärki') ? ' tk-leipa--korostus' : ''}`;
+      }
+      oikeudet.className = 'tk-apuri';
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+    }
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
@@ -18083,6 +18096,8 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
+    // KORTTI-pohja (peruttava ?kortti=vanha); lomakekentät pitävät omat tyylinsä.
+    if (korttiPohjalla()) puePohjaKortiksi(kortti, { otsikko, sulje });
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
@@ -18385,7 +18400,7 @@ export class UI {
    * #3605:n (Siirtosepän avausanimaatio) jälkeen tämä kutsuu sen sijaan
    * animoiAvaus/haamuSulku-funktioita.
    *
-   * @param {'paa'|'linssit'|'aarteet'} nakyma
+   * @param {'paa'|'linssit'|'aarteet'|'matka'|'asetukset'} nakyma
    * @param {{animoi?: boolean}} [asetukset] animoi=false ohittaa liikkeen
    *   (paneelin oma avaus/sulku hoitaa sen jo silloin)
    */
@@ -18396,6 +18411,9 @@ export class UI {
       paa: this.pilleriPaanakyma,
       linssit: this.pilleriLinssitNakyma,
       aarteet: this.pilleriAarteetNakyma,
+      // PANEELI-pohjan alinäkymät (js/pilleri-paneeli.js luo ne; vanhassa valikossa niitä ei ole).
+      matka: document.getElementById('pilleri-matka-nakyma'),
+      asetukset: document.getElementById('pilleri-asetukset-nakyma'),
     };
     for (const [nimi, el] of Object.entries(kasvot)) {
       if (el) el.hidden = nimi !== nakyma;

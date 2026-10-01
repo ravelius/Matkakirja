@@ -304,6 +304,13 @@
 }
 .tk-lista { margin: 0 0 var(--tk-vali-s); padding-left: var(--tk-vali-l); }
 .tk-lista li + li { margin-top: var(--tk-vali-xs); }
+.tk-kortti .tk-kapiteeli { margin-top: var(--tk-vali-m); }
+.tk-nappi--levea { display: block; width: 100%; margin-top: var(--tk-vali-m); }
+.tk-kortti > .periaate-linkit { margin: var(--tk-vali-s) 0; text-align: left; }
+/* Ohjelmallinen fokus otsikkoon (ruudunlukijan aloituskohta) ilman rengasta, kuten vanhoissa korteissa. */
+.tk-kortti .tk-otsikko[tabindex="-1"]:focus { outline: none; }
+/* Otsikon alaviiva riittää: lomakkeen ensimmäinen katkoviiva olisi toinen viiva sen alla. */
+.tk-kortti .tk-otsikko + .periaate-lomake > :first-child { margin-top: var(--tk-vali-s); padding-top: 0; border-top: none; }
 /* Muutosloki: versionumero (kapiteeli) on rivin numero, joten listamerkkiä ei tarvita. */
 .tk-lista--loki { list-style: none; padding-left: 0; }
 /* Kehyksetön dialogi on itse kortti: sivuilla väli kuten muillakin korteilla. */
@@ -314,9 +321,6 @@ dialog.tk-kortti[open]:has(.tk-lista--loki) { display: flex; flex-direction: col
 dialog.tk-kortti[open]:has(.tk-lista--loki) > :not(.tk-lista--loki) { flex: none; }
 .tk-lista--loki li { display: flex; gap: var(--tk-vali-xs); align-items: baseline; }
 .tk-lista--loki .tk-kapiteeli { flex: none; margin: 0; }
-.tk-kortti .tk-kapiteeli { margin-top: var(--tk-vali-m); }
-.tk-nappi--levea { display: block; width: 100%; margin-top: var(--tk-vali-m); }
-.tk-kortti > .periaate-linkit { margin: var(--tk-vali-s) 0; text-align: left; }
 /* Vanha `.dialog button` (0,1,1) ohittaisi napin pinnan, reunuksen ja kulman: sama pohja dialogin sisällä. */
 .dialog .tk-kortti .tk-nappi,
 .dialog .tk-kortti .tk-nappi:hover:not(:disabled) {
@@ -356,4 +360,451 @@ dialog.tk-kortti[open]:has(.tk-lista--loki) > :not(.tk-lista--loki) { flex: none
 
 @media (prefers-reduced-motion: reduce) {
   .tk-nostokortti, .tk-kortti, .tk-kortti-tausta { transition: none; }
+}
+
+/* ── PANEELI: valikko avaajansa alla (Natiivi-UI 1.10.2026, malli 09; natiivin valikkojärjestelmä tokeneilla) ───── */
+
+.tk-paneeli {
+  position: fixed;
+  z-index: 50;
+  top: calc(var(--tk-paneeli-yla, var(--tk-vali-xl)) + var(--tk-vali-s));
+  right: max(var(--tk-vali-m), var(--tk-paneeli-oikea, 0px));
+  width: min(var(--tk-leveys-paneeli), 100vw - var(--tk-vali-xl));
+  max-height: var(--tk-peitto-paneeli);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+  padding: var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 0 0 4px var(--tk-pergamentti, transparent), 0 10px 30px var(--tk-himmennys-kevyt);
+  transform-origin: top right;
+  transition: opacity var(--tk-kesto-avaus) var(--liike-sisaan), transform var(--tk-kesto-avaus) var(--liike-sisaan);
+}
+/* Ponnahdus avaajan kohdalta (oikea yläkulma). */
+.tk-paneeli.tk-piilossa {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+  transition-duration: var(--tk-kesto-sulku);
+}
+.tk-paneeli.tk-teema-lasi { backdrop-filter: blur(var(--tk-vali-m)); }
+.tk-paneeli--esikatselu { position: relative; top: auto; right: auto; max-height: none; }
+.tk-paneeli .tk-kapiteeli { margin: 0; }
+
+.tk-paneeli__yla { display: flex; align-items: center; gap: var(--tk-vali-s); margin-bottom: var(--tk-vali-s); }
+.tk-paneeli__takaisin {
+  min-height: var(--tk-nappi-osuma);
+  padding: 0 var(--tk-vali-xs);
+  border: 0;
+  background: transparent;
+  color: var(--tk-korostus);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  cursor: pointer;
+}
+.tk-paneeli__ryhmaotsikko { margin: var(--tk-vali-m) 0 var(--tk-vali-xs) var(--tk-vali-xs) !important; }
+.tk-paneeli__erotin { height: 1px; margin: var(--tk-vali-m) 0; background: var(--tk-reunus); }
+.tk-paneeli__ryhma { display: flex; flex-direction: column; gap: var(--tk-vali-xs); }
+.tk-paneeli__ryhma + .tk-paneeli__ryhma { margin-top: var(--tk-vali-m); }
+/* Vierekkäinen ryhmä on segmenttirivi: yhteinen reunus ja kulma, rako 0, välissä viiva. */
+.tk-paneeli__ryhma--vierekkain {
+  flex-direction: row;
+  gap: 0;
+  border: 1px solid var(--tk-muste-pehmea);
+  border-radius: var(--tk-kulma-nappi);
+  overflow: hidden;
+}
+
+.tk-paneeli-rivi {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-vali-s);
+  width: 100%;
+  min-height: var(--tk-nappi-korkeus);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: left;
+  cursor: pointer;
+}
+.tk-paneeli-rivi--toiminto { border-color: var(--tk-muste-pehmea); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi {
+  flex: 1 1 0;
+  min-width: 0;
+  justify-content: center;
+  border: 0;
+  border-radius: 0;
+}
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi + .tk-paneeli-rivi { border-left: 1px solid var(--tk-muste-pehmea); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi__nimi { flex: 0 1 auto; }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi__nuoli { display: none; }
+.tk-paneeli-rivi__nimi { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tk-paneeli-rivi__arvo, .tk-paneeli-rivi__tila {
+  flex: none;
+  color: var(--tk-muste-pehmea);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.tk-paneeli-rivi__nuoli { flex: none; color: var(--tk-muste-pehmea); font-size: var(--tk-koko-valiotsikko); }
+.tk-paneeli-ikoni { display: inline-flex; flex: none; color: var(--tk-korostus); }
+.tk-paneeli-ikoni svg { width: var(--tk-koko-valiotsikko); height: var(--tk-koko-valiotsikko); fill: none; stroke: currentColor; }
+/* KYTKIN päällä: toimintoväri pohjaksi ja reunaksi, tila korostuksella. */
+.tk-paneeli-rivi--kytkin.tk-paalla {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.tk-paneeli-rivi--kytkin.tk-paalla .tk-paneeli-rivi__tila { color: var(--tk-korostus); font-weight: 700; }
+.tk-paneeli-rivi--saadin { flex-direction: column; align-items: stretch; gap: var(--tk-vali-xs); padding: var(--tk-vali-s) var(--tk-vali-m); cursor: default; }
+.tk-paneeli-rivi__yla { display: flex; align-items: center; gap: var(--tk-vali-s); }
+.tk-paneeli-liuku { width: 100%; margin: 0; accent-color: var(--tk-toiminto); }
+.tk-paneeli-rivi:focus-visible, .tk-paneeli__takaisin:focus-visible { outline: 2px solid var(--tk-toiminto); outline-offset: 1px; }
+
+.tk-paneeli__alarivi {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--tk-vali-s);
+  margin: var(--tk-vali-s) var(--tk-vali-xs) 0;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  letter-spacing: 0.08em;
+}
+
+/* ── PANEELI puettuna pillerivalikkoon (#paavalikko, js/pilleri-paneeli.js; peruttava ?paneeli=vanha) ─────────── */
+
+/* Paikka pohjan omalla kiinteällä asemoinnilla: yläpalkin toimintorivin alla oikeassa reunassa (js asettaa ankkurin). */
+.paavalikko.tk-paneeli--paikallaan {
+  z-index: 60;
+  display: block;
+  width: min(var(--tk-leveys-paneeli), 100vw - var(--tk-vali-xl));
+  padding: var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-s);
+  /* Vanhat alinäkymät (tiedot, Aarteet, Linssit) lukevat kehyksen muuttujia: paperin arvot pohjan tokeneista. */
+  --ink: var(--tk-muste);
+  --muted: var(--tk-muste-pehmea);
+  --line: var(--tk-reunus);
+  --panel: var(--tk-pinta);
+}
+.paavalikko.tk-paneeli--paikallaan[hidden] { display: none; }
+.tk-paneeli--paikallaan .pilleri-alanakyma, .tk-paneeli--paikallaan #pilleri-paanakyma { display: block; }
+.tk-paneeli--paikallaan .pilleri-alanakyma[hidden], .tk-paneeli--paikallaan #pilleri-paanakyma[hidden] { display: none; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhmaotsikko:first-child { margin-top: 0 !important; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__ryhma,
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__erotin + .tk-paneeli__ryhma { margin-top: var(--tk-vali-m); }
+/* Vanhan kytkimen tila (aria-checked) ajaa päällä-asun samoin kuin pohjan oma kytkin. */
+.tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.tk-paneeli-rivi--kytkin[aria-checked="true"] .tk-paneeli-rivi__tila { color: var(--tk-korostus); font-weight: 700; }
+/* Kolme kytkintä vierekkäin: väri kertoo tilan, PÄÄLLÄ/POIS-sana ei mahdu kolmanneksen levyiseen soluun. */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { gap: var(--tk-vali-xs); padding: 0 var(--tk-vali-xs); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__tila { display: none; }
+/* Natiivin tapa (Natiivi-UI): nimi pienenee yhden portaan (14 → 12), ja koska Äänimaisema ei silti mahdu
+   puhelimen kolmanneksen soluun, ikoni ja nimi menevät kahdelle riville (ikoni jää aina, nimeä ei lyhennetä). */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { flex-direction: column; gap: 0; padding-top: var(--tk-vali-xs); padding-bottom: var(--tk-vali-xs); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__nimi { flex: none; font-size: var(--tk-koko-kapiteeli); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin[aria-checked="true"] + .tk-paneeli-rivi { border-left-color: var(--tk-toiminto); }
+/* Säädin: vanha rivi (nimi, liuku, arvo) kahdelle riville kuten pohjan SÄÄDIN. */
+.aanivoima.tk-paneeli-rivi--saadin {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "nimi arvo" "liuku liuku";
+  row-gap: var(--tk-vali-xs);
+  min-height: 0;
+}
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-nimi { grid-area: nimi; color: var(--tk-muste); font: inherit; }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-liuku { grid-area: liuku; width: 100%; margin: 0; accent-color: var(--tk-toiminto); }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-arvo {
+  grid-area: arvo;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.tk-paneeli--paikallaan .tk-paneeli__alarivi { align-items: center; }
+.tk-paneeli--paikallaan .tk-paneeli__alarivi button { color: inherit; font-size: var(--tk-koko-kapiteeli); }
+/* Vanha `.paavalikko button` (0,1,1) nollaisi reunuksen, kulman ja välit: pohjan rivi samalla tarkkuudella. */
+.paavalikko.tk-paneeli .tk-paneeli-rivi {
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+}
+.paavalikko.tk-paneeli .tk-paneeli-rivi--toiminto { border-color: var(--tk-muste-pehmea); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--saadin { padding: var(--tk-vali-s) var(--tk-vali-m); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi:hover:not([aria-checked="true"]) { background: transparent; }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi { padding: 0 var(--tk-vali-xs); border: 0; border-radius: 0; }
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi + .tk-paneeli-rivi { border-left: 1px solid var(--tk-muste-pehmea); }
+/* Alinäkymän otsikko on kapiteeli (vanha h2-sääntö teki siitä kultaisen). */
+.paavalikko.tk-paneeli .tk-paneeli__yla .tk-kapiteeli {
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Matka-alinäkymä: otsikko on jo ylärivillä, joten tietojen oma Matka-nimiö ja yläviiva jäävät pois. */
+#pilleri-matka-nakyma .pilleri-tiedot { margin-top: 0; padding-top: 0; border-top: 0; }
+#pilleri-matka-nakyma .pilleri-tiedot > .passport-count:first-child { display: none; }
+
+/* ── KORTTI/visa, versio B (omistaja 1.10.2026; js/visa-pohja.js, peruttava ?kortti=vanha) ─────────────────────── */
+/* Pohjan poikkeukset (tyylikirja.json pohjat._poikkeukset): tiimalasi kulmassa ja 50:50-napin hinta (80 p). */
+
+.dialog.quiz .dialog-card.tk-visa {
+  max-width: var(--tk-leveys-kortti);
+  border-radius: var(--tk-kulma-kortti);
+  padding: var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-m);
+}
+/* Ylärivi: kapiteeli vasemmalla, tiimalasi ja sekunnit oikealla; otsikon alaviiva pohjan reunuksella. */
+.tk-visa .quiz-head { margin-bottom: var(--tk-vali-s); padding-bottom: var(--tk-vali-s); border-bottom: 1px solid var(--tk-reunus); }
+.tk-visa .quiz-badge, .tk-visa .quiz-city {
+  padding: 0;
+  border: 0;
+  transform: none;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.tk-visa .quiz-seconds { color: var(--tk-muste); font-family: var(--font-type); font-size: var(--tk-koko-apuri); }
+/* Kysymys väliotsikkoportaalla, luku-kirjasimella. */
+.tk-visa .quiz-question {
+  margin: var(--tk-vali-s) 0 var(--tk-vali-m);
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-valiotsikko);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.tk-visa .quiz-kohtaaminen, .tk-visa .quiz-isoisa-teksti, .tk-visa .quiz-selite {
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+}
+.tk-visa .quiz-hint-text { color: var(--tk-muste-pehmea); font-family: var(--font-luku); font-size: var(--tk-koko-apuri); }
+/* Vastaukset: pohjan pystyrivi (TOIMINTO-napit allekkain), kirjain kapiteelina ilman ympyrää. */
+.tk-visa .quiz-options { grid-template-columns: minmax(0, 1fr); gap: var(--tk-vali-xs); }
+.tk-visa .quiz-option {
+  min-height: var(--tk-nappi-korkeus);
+  padding: var(--tk-vali-xs) var(--tk-vali-m);
+  gap: var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus) !important;
+  border-radius: var(--tk-kulma-nappi) !important;
+  background: transparent !important;
+  box-shadow: none;
+  transform: none !important;
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+  font-weight: 400;
+  text-align: left;
+}
+.tk-visa .quiz-option .letter {
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+}
+.tk-visa .quiz-option.correct {
+  border-color: var(--tk-tila-onnistuminen) !important;
+  background: color-mix(in srgb, var(--tk-tila-onnistuminen) 16%, transparent) !important;
+  color: var(--tk-tila-onnistuminen);
+  font-weight: 700;
+}
+.tk-visa .quiz-option.correct .letter { color: var(--tk-tila-onnistuminen); }
+.tk-visa .quiz-option.wrong {
+  border-color: var(--tk-tila-virhe) !important;
+  background: color-mix(in srgb, var(--tk-tila-virhe) 12%, transparent) !important;
+  color: var(--tk-tila-virhe);
+  text-decoration-color: var(--tk-tila-virhe);
+}
+.tk-visa .quiz-option.wrong .letter { color: var(--tk-tila-virhe); }
+/* Tulos: ei laatikkoa; tuomio tilavärillä, selitys leipänä. */
+.tk-visa .quiz-result {
+  margin: var(--tk-vali-m) 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+}
+.tk-visa .quiz-result.wrong .quiz-verdict { color: var(--tk-tila-virhe); }
+.tk-visa .quiz-result.right .quiz-verdict { color: var(--tk-tila-onnistuminen); }
+.tk-visa .quiz-verdict { font-family: var(--font-luku); font-size: var(--tk-koko-leipa); font-weight: 700; letter-spacing: 0; }
+.tk-visa .quiz-result .muted, .tk-visa .quiz-lukko { color: var(--tk-muste-pehmea); }
+/* Napit: oljenkorret TOIMINTO (hinta näkyy nimessä), Jatka ja Aloita peli ensisijaisena. */
+.tk-visa menu { justify-content: flex-end; gap: var(--tk-vali-s); margin-top: var(--tk-vali-m); }
+.tk-visa menu button, .tk-visa .quiz-aloita {
+  height: var(--tk-nappi-korkeus);
+  min-height: 0;
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus) !important;
+  border-radius: var(--tk-kulma-nappi) !important;
+  background: transparent !important;
+  box-shadow: none;
+  color: var(--tk-muste) !important;
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.tk-visa menu button.primary, .tk-visa .quiz-aloita {
+  border-color: var(--tk-toiminto) !important;
+  background: var(--tk-toiminto) !important;
+  color: var(--tk-paperi-muste) !important;
+}
+.tk-visa .quiz-aloita { width: 100%; margin: var(--tk-vali-s) 0 var(--tk-vali-m); }
+.tk-visa .quiz-kohtaaminen-kuva { border-radius: var(--tk-kulma-pieni); }
+
+/* ── PANEELI puettuna karttaselitteeseen (js/karttaselite.js; Päätoimittaja 1.10.2026: vain ulkoasu, toiminta
+   ennallaan: välilehdet, ✕, peukalolevy ja valot; peruttava ?paneeli=vanha) ─────────────────────────────────────── */
+
+.karttaselite-levy.tk-paneeli-selite {
+  width: min(var(--tk-leveys-paneeli), 100vw - var(--tk-vali-xl));
+  max-width: none;
+  padding: var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 0 0 4px var(--tk-pergamentti, transparent), 0 10px 30px var(--tk-himmennys-kevyt);
+}
+.tk-paneeli-selite .karttaselite-ylarivi { gap: var(--tk-vali-s); padding: 0 0 var(--tk-vali-s); border-bottom: 1px solid var(--tk-reunus); }
+/* Välilehdet PANEELIN segmenttirivinä (yhteinen reunus, rako 0, valittu toimintovärillä). */
+.tk-paneeli-selite .karttaselite-valilehdet {
+  gap: 0;
+  border: 1px solid var(--tk-muste-pehmea);
+  border-radius: var(--tk-kulma-nappi);
+  overflow: hidden;
+}
+.tk-paneeli-selite .karttaselite-valilehti {
+  flex: 1 1 0;
+  height: var(--tk-nappi-korkeus);
+  padding: 0 var(--tk-vali-s);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.tk-paneeli-selite .karttaselite-valilehti + .karttaselite-valilehti { border-left: 1px solid var(--tk-muste-pehmea); }
+.tk-paneeli-selite .karttaselite-valilehti[aria-selected='true'] {
+  border-color: var(--tk-muste-pehmea);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+  color: var(--tk-muste);
+}
+.tk-paneeli-selite .karttaselite-sulje {
+  min-width: var(--tk-nappi-osuma);
+  min-height: var(--tk-nappi-osuma);
+  color: var(--tk-muste-pehmea);
+  font-size: var(--tk-koko-valiotsikko);
+}
+/* Rivit 38 pt PANEELIN typografialla; luku kapiteelina. */
+.tk-paneeli-selite .karttaselite-rivi {
+  min-height: var(--tk-nappi-korkeus);
+  padding: 0 var(--tk-vali-s);
+  border-radius: var(--tk-kulma-nappi);
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+}
+.tk-paneeli-selite .karttaselite-luku {
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+/* ── NOSTOKORTTI-osa AUTO (js/pohjat/auto.js; natiivi Nostoselain.cs, malli 23) ───────────────────────────────────
+   Kytkin "● AUTO" pillerinä; päällä toimintovärillä. Siirtolappu TUMMA "Seuraava: <nimi> 3 s · Pysäytä" palkilla. */
+
+.tk-auto {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-vali-xs);
+  height: var(--tk-nappi-korkeus);
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-pilleri);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tk-auto::after { content: ''; position: absolute; inset: calc((var(--tk-nappi-korkeus) - var(--tk-nappi-osuma)) / 2) 0; }
+.tk-auto__piste { width: var(--tk-vali-s); height: var(--tk-vali-s); border-radius: 50%; background: currentColor; opacity: 0.45; }
+.tk-auto[aria-pressed="true"] { border-color: var(--tk-toiminto); background: var(--tk-toiminto); color: var(--tk-paperi-muste); }
+.tk-auto[aria-pressed="true"] .tk-auto__piste { opacity: 1; }
+.tk-auto:focus-visible { outline: 2px solid var(--tk-toiminto); outline-offset: 2px; }
+
+.tk-auto-lappu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--tk-vali-m);
+  box-sizing: border-box;
+  padding: var(--tk-vali-s) var(--tk-vali-s) var(--tk-vali-s) var(--tk-vali-l);
+  overflow: hidden;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 10px 30px var(--tk-himmennys-kevyt);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-leipa);
+}
+.tk-auto-lappu[hidden] { display: none; }
+.tk-auto-lappu__teksti { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tk-auto-lappu__aika { flex: none; margin-left: calc(var(--tk-vali-m) * -1 + var(--tk-vali-xs)); color: var(--tk-korostus); font-weight: 700; }
+.tk-auto-lappu .tk-auto-lappu__pysayta {
+  flex: none;
+  border-color: var(--tk-toiminto);
+  color: var(--tk-korostus);
+}
+.tk-auto-lappu__palkki {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: var(--tk-toiminto);
 }
