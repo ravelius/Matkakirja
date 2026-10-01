@@ -132,9 +132,11 @@ export const TILA = {
   kohdistettava: true,
   // Ulkotila (erä 3): kohdistettuna aurinko ja taivas pysyvät täysinä (ei valaistus.sisalla-himmennystä).
   ulkona: true,
-  // Uusi tapa (Päätoimittaja 29.9.): kuoren länsirannan ponttonilaituriin. Pohjoispää (−19,5; 33) pontonin lounaisreunaan
-  // (−73, −18,5), laituri kohtisuoraan avoveteen (suunta 40), kansi pontonin tasolle (−5,9).
-  sijoitus: { ankkuri: [-19.5, 0, 33], paikka: [-73.0, 0.3, 18.5], suunta: 40 },
+  // v19 (1.10., aikakerros n1500): nykyinen ponttonisilta poistettiin kuoresta (kuori_siivous.py 'ponttonisilta'), joten
+  // laituri lähtee nyt suoraan lounaisbastionin vesiportilta: pohjoispää (−19,5; 33) portin syvennykseen 0,9 m oven eteen (Blender
+  // −56,9, −16,25; syvennys 5,2 m leveä, laituri 4 m), suunta 41 = kohtisuoraan muurista avoveteen (muurin normaali
+  // mitattu kuoresta säteillä), kansi portin kynnyksen tasolle (−5,9; kynnys −5,81). Ennen: pontonin lounaisreuna (−73, 18,5), suunta 40.
+  sijoitus: { ankkuri: [-19.5, 0, 33], paikka: [-56.9, 0.3, 16.25], suunta: 41 },
   rajat: { min: [-27, -7.5, 33], max: [-11, -3, 47] },
   naapurit: ['massa', 'fatabuuri'],
   kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 14.5, fov: 38, aukko: 0.8 },
