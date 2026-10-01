@@ -21,6 +21,8 @@
 # Päivä ja yö (aloituslento v3f, 28.9.2026): _aurinko = (auringon suunta maailmassa, voimakkuus); yöpuoli (porvarillinen
 # hämärä, auringon korkeus −6…+2° pikselissä) tummuu kuten radion hämärä ja yövalot palavat painolla max(hämärä, yö)
 # (Kartta/Paivanvalo.cs). w = 0 → ennallaan.
+# S2-reuna (Linssiseppä 1.10.2026): paikan 2 sekoituspaino liukuu nollaan _s2Reuna-suorakulmion (länsi, etelä, itä, pohjoinen)
+# 1,5°:n reunalla (S2-mosaiikki sulautuu BMNG:hen, peiton ulkopuolen venyneet reunatekselit eivät näy). pohjoinen = 0 → ennallaan.
 # S2-sävy (Linssiseppä 1.10.2026, S2-erä): _s2Savy sävyttää perusvärin (kontrasti, kylläisyys, lämpö) vain Euroopan
 # S2-mosaiikin suorakulmiossa 1,5°:n pehmeällä reunalla (Kyytipino.AsetaS2Savy, vain kyydissä S2:n ollessa päällä). w = 0 → ennallaan.
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
@@ -127,6 +129,17 @@ SEKOITUS_RUNKO = (
     "    float w = max(paljastusReuna.x, 1e-6);\n"
     "    peitto = smoothstep(paljastus.w - 0.5 * w, paljastus.w + 0.5 * w, c + kohina * paljastusReuna.y);\n"
     "}\n"
+    "// S2 edge (Linssiseppa 1.10.2026, AstronauttiKerros.PaivitaS2): s2Reuna = (west, south, east, north) in degrees; the slot\n"
+    "// weight fades to 0 over 1.5 deg inside the rectangle, so the Sentinel-2 mosaic blends into BMNG and clamped edge texels\n"
+    "// outside it never show. north = 0 -> off (other layers in this slot unchanged).\n"
+    "if (s2Reuna.w != 0.0)\n"
+    "{\n"
+    "    float3 rn = normalize(pos.xyz - keski.xyz);\n"
+    "    float rlat = degrees(asin(clamp(dot(rn, akseli.xyz), -1.0, 1.0)));\n"
+    "    float rlon = degrees(atan2(dot(rn, ita.xyz), dot(rn, nolla.xyz)));\n"
+    "    peitto *= smoothstep(s2Reuna.x, s2Reuna.x + 1.5, rlon) * (1.0 - smoothstep(s2Reuna.z - 1.5, s2Reuna.z, rlon))\n"
+    "            * smoothstep(s2Reuna.y, s2Reuna.y + 1.5, rlat) * (1.0 - smoothstep(s2Reuna.w - 1.5, s2Reuna.w, rlat));\n"
+    "}\n"
     "ulos = lerp(base, s, (s.a * alfa * peitto).xxxx);\n")
 # Alikaavion uudet syötteet: (nimi, viite, tyyppi, kiinteä GUID, solmun paikka-id pääkaaviossa)
 ALI_SYOTTEET = [("varaVari", "_varaVari", "v4", "b2e5c8d1-4f6a-4b7c-9d0e-1f2a3b4c5d6e", 710000),
@@ -137,9 +150,14 @@ ALI_SYOTTEET = [("varaVari", "_varaVari", "v4", "b2e5c8d1-4f6a-4b7c-9d0e-1f2a3b4
                 ("paljastus", "_paljastus", "v4", "a7d0b3c6-9ebf-4a01-8c5d-6e7f8091a2b3", 710005),
                 ("paljastusReuna", "_paljastusReuna", "v4", "b8e1c4d7-afc0-4b12-9d6e-7f8091a2b3c4", 710006),
                 ("keski", "_keski", "v4", "c9f2d5e8-b0d1-4c23-8e7f-8091a2b3c4d5", 710007),
-                ("pos", "_pos", "v4", "d0a3e6f9-c1e2-4d34-9f80-91a2b3c4d5e6", 710008)]
+                ("pos", "_pos", "v4", "d0a3e6f9-c1e2-4d34-9f80-91a2b3c4d5e6", 710008),
+                # S2-reuna (Linssiseppä 1.10.2026): maan akselit lat/lon-maskiin ja S2-suorakulmio (vain paikka 2).
+                ("akseli", "_akseli", "v4", "e1b4f7a0-d2f3-4e45-8a91-a2b3c4d5e6f7", 710009),
+                ("nolla", "_nolla", "v4", "f2c5a8b1-e3a4-4f56-9ba2-b3c4d5e6f708", 710010),
+                ("ita", "_ita", "v4", "a3d6b9c2-f4b5-4a67-8cb3-c4d5e6f70819", 710011),
+                ("s2Reuna", "_s2Reuna", "v4", "b4e7cad3-a5c6-4b78-9dc4-d5e6f708192a", 710012)]
 # Sekoitusfunktion syöttöpaikat ALI_SYOTTEET-järjestyksessä (7 = ulos, 8 = ts, 10 = ouv).
-ALI_CF_PAIKAT = [3, 4, 5, 6, 9, 11, 12, 13, 14]
+ALI_CF_PAIKAT = [3, 4, 5, 6, 9, 11, 12, 13, 14, 15, 16, 17, 18]
 
 def ali_ominaisuus(nimi, viite, tyyppi, guid):
     o = {"m_SGVersion": 1, "m_ObjectId": uusi_id(), "m_Guid": {"m_GuidSerialized": guid}, "m_Name": nimi,
@@ -193,7 +211,9 @@ sf_paikat = [sf_paikka("Vector4MaterialSlot", 0, "base", 0), sf_paikka("Vector4M
              sf_paikka("Vector4MaterialSlot", 8, "ts", 0), sf_paikka("Vector1MaterialSlot", 9, "varaTaso", 0),
              sf_paikka("Vector2MaterialSlot", 10, "ouv", 0), sf_paikka("Vector4MaterialSlot", 11, "paljastus", 0),
              sf_paikka("Vector4MaterialSlot", 12, "paljastusReuna", 0), sf_paikka("Vector4MaterialSlot", 13, "keski", 0),
-             sf_paikka("Vector4MaterialSlot", 14, "pos", 0)]
+             sf_paikka("Vector4MaterialSlot", 14, "pos", 0), sf_paikka("Vector4MaterialSlot", 15, "akseli", 0),
+             sf_paikka("Vector4MaterialSlot", 16, "nolla", 0), sf_paikka("Vector4MaterialSlot", 17, "ita", 0),
+             sf_paikka("Vector4MaterialSlot", 18, "s2Reuna", 0)]
 sf = {"m_SGVersion": 1, "m_Type": "UnityEditor.ShaderGraph.CustomFunctionNode", "m_ObjectId": uusi_id(), "m_Group": {"m_Id": ""},
       "m_Name": "MatkakirjaSekoitus (Custom Function)", "m_DrawState": {"m_Expanded": True, "m_Position": {
       "serializedVersion": "2", "x": 1100.0, "y": -415.0, "width": 208.0, "height": 200.0}},
@@ -512,6 +532,17 @@ for om in (palj_om, preuna_om):
 for o in (palj_solmu, preuna_solmu, keski4_solmu, ppos_solmu):
     G["m_Nodes"].append({"m_Id": o["m_ObjectId"]})
 lisat += [palj_om, preuna_om, palj_solmu, palj_ulos, preuna_solmu, preuna_ulos, keski4_solmu, keski4_ulos, ppos_solmu, ppos_ulos]
+# S2-reuna paikkaan 2 (Linssiseppä 1.10.2026): maan akselit ja _s2Reuna (AstronauttiKerros.PaivitaS2; 0 = pois).
+s2reuna_om = vektori_ominaisuus("s2Reuna", "_s2Reuna")
+rsolmut = []
+for i, (om_, pid) in enumerate(((akseli_om, 710009), (nolla_om, 710010), (ita_om, 710011), (s2reuna_om, 710012))):
+    rs, ru = vektori_ominaisuussolmu(om_, PX, PY + 240.0 + 60.0 * i)
+    G["m_Edges"].append(reuna(rs["m_ObjectId"], 0, p2, pid))
+    G["m_Nodes"].append({"m_Id": rs["m_ObjectId"]})
+    rsolmut += [rs, ru]
+G["m_Properties"].append({"m_Id": s2reuna_om["m_ObjectId"]})
+KAT["m_ChildObjectList"].append({"m_Id": s2reuna_om["m_ObjectId"]})
+lisat += [s2reuna_om] + rsolmut
 for om in (vara_om, varataso_om, meriv_om, kynnys_om, nolla_om, ita_om, kartta_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})

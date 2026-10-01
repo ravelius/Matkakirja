@@ -44,6 +44,7 @@ namespace Matkakirja.Linssit.Testit
             {
                 var runko = Metodi(s, m);
                 Oleta.Tosi(runko.Contains("Kyytipino.S2 = false") && runko.Contains("Kyytipino.AsetaS2Savy()"), m + " nollaa S2-sävyn");
+                Oleta.Tosi(runko.Contains("AsetaS2Reuna(false)"), m + " nollaa S2-reunan");
             }
             var p = Metodi(s, "void PaivitaS2(bool kyydissa)");
             // Kyydistä poistuttaessa halutaan = false → S2 pois; sävy seuraa s2Lisatty-tilaa sekä alussa että muutoksen jälkeen.
@@ -63,6 +64,9 @@ namespace Matkakirja.Linssit.Testit
             var g = Lue("Assets/Matkakirja/Shaders/Cesium/MatkakirjaTileset.shadergraph");
             Oleta.Tosi(g.Contains("\"m_DefaultReferenceName\": \"_s2Savy\""), "shadergraphissa _s2Savy-ominaisuus");
             Oleta.Tosi(g.Contains("// S2 TONE"), "RadioHamaran runko sisältää S2-sävyn");
+            var ali = Lue("Assets/Matkakirja/Shaders/Cesium/MatkakirjaRasteri.shadersubgraph");
+            Oleta.Tosi(ali.Contains("// S2 edge") && ali.Contains("\"m_DefaultReferenceName\": \"_s2Reuna\""), "sekoituksessa S2-reuna (_s2Reuna)");
+            Oleta.Tosi(g.Contains("\"m_DefaultReferenceName\": \"_s2Reuna\""), "pääkaaviossa _s2Reuna-ominaisuus");
             Oleta.Tosi(!g.Contains("multi_compile") || Regex.Matches(g, "S2_SAVY").Count == 0, "ei uutta keywordia");
             var slotit = Regex.Matches(g, "\"m_ShaderOutputName\": \"(s2Savy|akseli|nolla|ita)\"").Select(m => m.Groups[1].Value).ToList();
             Oleta.Tosi(slotit.Contains("s2Savy") && slotit.Contains("nolla") && slotit.Contains("ita"), "syötteet 27–30 kaaviossa");

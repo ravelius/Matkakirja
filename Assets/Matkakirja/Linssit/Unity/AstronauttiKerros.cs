@@ -444,7 +444,17 @@ namespace Matkakirja.Natiivi
             if (Matkakirja.Linssit.Kyytipino.S2 == s2Lisatty) return;
             Matkakirja.Linssit.Kyytipino.S2 = s2Lisatty;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+            AsetaS2Reuna(s2Lisatty);
         }
+
+        static readonly int S2ReunaId = Shader.PropertyToID("_s2Reuna");
+
+        /// <summary>
+        /// S2-kerroksen pehmeä reuna (Päätoimittaja 1.10.: 45°E- ja 32°N-saumat): tileset-varjostin liu'uttaa paikan 2 painon nollaan
+        /// suorakulmion (länsi, etelä, itä, pohjoinen) 1,5°:n reunalla; nolla = pois, jolloin muut paikan 2 kerrokset ennallaan.
+        /// </summary>
+        static void AsetaS2Reuna(bool paalla) => Shader.SetGlobalVector(S2ReunaId,
+            paalla ? new Vector4((float)S2W, (float)S2S, (float)S2E, (float)S2N) : Vector4.zero);
 
         /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
         void PaivitaKuukaudenPinta(bool kyydissa)
@@ -821,12 +831,14 @@ namespace Matkakirja.Natiivi
             // Kartta ei peri S2-sävyä (Natiivisepän ehto 1.10.): varjostimen globaali pois, kun kerros ei ole käytössä.
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+            AsetaS2Reuna(false);
         }
 
         void OnDestroy()
         {
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+            AsetaS2Reuna(false);
             if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
             if (s2Lisatty) KarttaKerrokset.Instanssi?.PoistaRasteri(S2Kerros);
             if (kierto != null) kierto.Napautettu -= Napautus;
