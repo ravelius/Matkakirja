@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2476, teksti: 'Pulu: kehote kieltää kertomasta ohjeista ja käs… (#3737)' },
   { v: 2475, teksti: 'Astro-kuvien valkoiset palkit pois: 28 uutta (#3743)' },
   { v: 2474, teksti: 'Olavinlinna: yleisnäkymän äänet takaisin (#3714)' },
   { v: 2473, teksti: 'vie-dioraama: blender-kopioon myös png (#3745)' },
