@@ -62,7 +62,7 @@ namespace Matkakirja.Natiivi
 
         public DioraamaYmparisto(Transform juuri) { this.juuri = juuri; }
 
-        public IEnumerator Lataa(Ymparisto y, float vesiTaso, Func<string, string> url, Action<string> kirjaa)
+        public IEnumerator Lataa(Ymparisto y, float vesiTaso, Func<string, string> url, Action<string> kirjaa, Func<bool> kuoriValmis = null)
         {
             Tyhjenna();
             if (y == null) yield break;
@@ -75,6 +75,15 @@ namespace Matkakirja.Natiivi
             LuoVesi();
             LuoTaivas();
             var taso = DioraamaUlkokuori.Valittu;
+            // Linna ensin (1.10. mittaus: ympäristön lataukset kilpailivat kuoren kanssa, kuoren kevyt taso 11 → 23 s):
+            // järvi ja taivaskupoli ovat heti, mutta ympäristön tiedostot haetaan vasta kun kuoren kevyt taso on valmis
+            // (enintään 25 s odotus).
+            if (kuoriValmis != null)
+            {
+                float odotus = Time.realtimeSinceStartup;
+                while (!kuoriValmis() && Time.realtimeSinceStartup - odotus < 25f) { if (oma != kerta) yield break; yield return null; }
+                kirjaa?.Invoke($"poikki: ympäristö: kuori valmis, lataus alkaa {Time.realtimeSinceStartup - alku:F1} s");
+            }
             string taivasKuva = DioraamaValot.TunnelmaTaivas < 0.99f && !string.IsNullOrEmpty(y.TaivasHamara) ? y.TaivasHamara : y.Taivas;
             if (!string.IsNullOrEmpty(taivasKuva)) yield return LataaTaivas(taivasKuva, (float)y.TaivasSuunta, url, kirjaa, oma);
             if (oma != kerta) yield break;
@@ -83,16 +92,33 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(y.SyvyysKuva)) yield return LataaSyvyys(y, url, kirjaa, oma);
             if (oma != kerta) yield break;
 
+            // NOPEA ENSILATAUS (Päätoimittaja 1.10.: TF 91 huippu 93 s ennen kuin maastoa näkyi): ensin kevyt maasto glb:n omalla
+            // 2k-kuvalla (≈ 2 Mt, ei erillistä ortoa), sitten horisontti, puut ja aluskasvit, ja lopuksi laitteen oma taso
+            // taustalla; se korvaa kevyen vasta valmiina. Puhelimessa huipputason orto on 4k (ruudulla ei eroa 8k:hon,
+            // lataus ~22 Mt vs ~90 Mt); iPad ja Mac ennallaan 8k.
             string maasto = taso == DioraamaUlkokuori.Laatu.Huippu ? y.Huippu : taso == DioraamaUlkokuori.Laatu.Normaali ? y.Normaali : y.Kevyt;
-            string orto = taso == DioraamaUlkokuori.Laatu.Huippu ? y.OrtoHuippu : taso == DioraamaUlkokuori.Laatu.Normaali ? y.OrtoNormaali : y.OrtoKevyt;
-            if (!string.IsNullOrEmpty(maasto)) yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
+            bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+            string orto = taso == DioraamaUlkokuori.Laatu.Huippu ? (puhelin && !string.IsNullOrEmpty(y.OrtoNormaali) ? y.OrtoNormaali : y.OrtoHuippu)
+                : taso == DioraamaUlkokuori.Laatu.Normaali ? y.OrtoNormaali : y.OrtoKevyt;
+            var esikatselu = new List<UnityEngine.Object>();
+            bool porrastus = taso != DioraamaUlkokuori.Laatu.Kevyt && !string.IsNullOrEmpty(y.Kevyt) && y.Kevyt != maasto;
+            if (porrastus) yield return LataaMalli("maasto-esikatselu", y.Kevyt, null, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu);
+            else if (!string.IsNullOrEmpty(maasto)) yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
             if (oma != kerta) yield break;
+            kirjaa?.Invoke($"poikki: ympäristö: ensimmäinen maasto näkyvissä {Time.realtimeSinceStartup - alku:F1} s");
             if (!string.IsNullOrEmpty(y.Horisontti)) yield return LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma);
             if (oma != kerta) yield break;
             if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.PuukortitTiedot ?? y.Puukortit)) yield return LataaPuut(y, taso, url, kirjaa, oma);
             if (oma != kerta) yield break;
             yield return DioraamaAluskasvit.Lataa(y, taso, url, kirjaa, go.transform, luodut, () => oma == kerta);   // Linssiseppä 2, 1.10.
             if (oma != kerta) yield break;
+            if (porrastus && !string.IsNullOrEmpty(maasto))
+            {
+                yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
+                if (oma != kerta) yield break;
+                foreach (var o in esikatselu) { luodut.Remove(o); if (o != null) UnityEngine.Object.Destroy(o); }
+                kirjaa?.Invoke($"poikki: ympäristö: maasto {taso} korvasi esikatselun {Time.realtimeSinceStartup - alku:F1} s");
+            }
             Tila = $"valmis ({taso}, heijastus {HeijastusSkaala(taso):F2})";
             kirjaa?.Invoke($"poikki: ympäristö valmis ({taso}, {Time.realtimeSinceStartup - alku:F1} s)");
         }
@@ -331,7 +357,7 @@ namespace Matkakirja.Natiivi
         // --- MAASTO JA HORISONTTI -------------------------------------------------------------------------------------
 
         IEnumerator LataaMalli(string nimi, string polku, string kuvaPolku, Func<string, string> url, Action<string> kirjaa, int oma,
-            MaastoKerrokset splat = null, DioraamaUlkokuori.Laatu taso = DioraamaUlkokuori.Laatu.Kevyt)
+            MaastoKerrokset splat = null, DioraamaUlkokuori.Laatu taso = DioraamaUlkokuori.Laatu.Kevyt, List<UnityEngine.Object> kohteet = null)
         {
             byte[] tavut = null;
             float alku = Time.realtimeSinceStartup;
@@ -362,7 +388,7 @@ namespace Matkakirja.Natiivi
             if (kuvaTavut != null && kuvaPolku != null && kuvaPolku.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase))
             {
                 kuva = DioraamaAstc.Lue(kuvaTavut, "Ymparisto:" + nimi + ":astc", out string syy);
-                if (kuva != null) luodut.Add(kuva);
+                if (kuva != null) { luodut.Add(kuva); kohteet?.Add(kuva); }
                 else
                 {
                     kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), glb:n kuva");
@@ -374,7 +400,7 @@ namespace Matkakirja.Natiivi
             {
                 kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
                 { name = "Ymparisto:" + nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 4 };
-                if (kuva.LoadImage(kuvaTavut, false)) { kuva.Compress(true); kuva.Apply(true, true); luodut.Add(kuva); }
+                if (kuva.LoadImage(kuvaTavut, false)) { kuva.Compress(true); kuva.Apply(true, true); luodut.Add(kuva); kohteet?.Add(kuva); }
                 else { UnityEngine.Object.Destroy(kuva); kuva = null; }
             }
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
@@ -382,6 +408,7 @@ namespace Matkakirja.Natiivi
             var mat = new Material(varjostin) { name = "Ymparisto:" + nimi };
             if (kuva != null) mat.SetTexture(IdKuva, kuva);
             luodut.Add(mat);
+            kohteet?.Add(mat);
             int kolmiot = 0;
             foreach (var (o, siirto) in osat)
             {
@@ -398,8 +425,10 @@ namespace Matkakirja.Natiivi
                 mesh.RecalculateBounds();
                 mesh.UploadMeshData(true);
                 luodut.Add(mesh);
+                kohteet?.Add(mesh);
                 kolmiot += o.Kolmiot.Length / 3;
                 var t = new GameObject("Ymparisto:" + nimi) { layer = DioraamaNayttamo.Kerros };
+                kohteet?.Add(t);
                 t.transform.SetParent(go.transform, false);
                 t.AddComponent<MeshFilter>().sharedMesh = mesh;
                 var r = t.AddComponent<MeshRenderer>();

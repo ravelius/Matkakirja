@@ -387,7 +387,9 @@ namespace Matkakirja.Natiivi
             if (nayttamo.Ymparisto != null)
             {
                 nayttamo.Ulkokuori.LisaaVesi(null, 0, 1);
-                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto ?? new Ymparisto(), (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa));
+                var kuori = nayttamo.Ulkokuori;
+                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto ?? new Ymparisto(), (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa,
+                    () => kuori == null || kuori.Lahitaso != null));
                 return;
             }
             // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).
