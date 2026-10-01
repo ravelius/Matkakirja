@@ -17,6 +17,9 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 | Pinnat 2. erä | #3789 ihmiskortti, #3791 maakunta, #3793 vahvistus (Pelikoodari) | `pohja-maakunta-2` 6ec07acb, `pohja-ihmiskortti` 75b6a05f (vaatii maakunta-2), `pohja-vahvistus` 8d7f605f (Kortti pohja: true) | todennettu ed7fa5a5, merge-pyynnössä 1.10. ~15.10 |
 | NOSTOSELAIN + AUTO (vain natiivi) | – (web ei muutu) | `natiivi-ui/nostoselain` bb2a0626: ‹ [Nostot ▾] ›, PANEELI (luetut/kaikki), AUTO 3 s siirto (mallit 20/22/23, loki b3e273d72) | todennettu 8e7d9953 (iPhone + iPad vaaka), merge-pyynnössä 1.10. ~19.05 (4e60d5e0 + periaatteet-2 254a0232) |
 | Pinnat 3. erä | #3800 periaatteet, #3807 visa B (Pelikoodari) | `pohja-ihmiskortti-2` c946b41c + `kortti-korjaukset` a80cb845 (todennettu 13a56956, merge-pyynnössä); `pohja-periaatteet-2` 254a0232; `tyylikirja-3` 0e4249fd (tila- ja kenttätokenit, korvaa tyylikirja-2:n) + `pohja-visa` cd55dccc (visa B) | visa käännösjonossa |
+| PANEELI 1. erä (web) | #3801, #3804 pillerivalikko, #3809 karttaselite (Pelikoodari) | ei muutosta (natiivissa ei selitenappia); pillerivalikko seuraa | web valmis |
+| PANEELI 2. erä | määrittely Pelikoodarille 1.10. ~19.2x: linssivalitsin (PAPERI, rivi 38, valittu pergamentti + toiminto-reunus, KESKENERÄISET kapiteelina) ja linssin hampurilainen (LASI, Poistu · Aloita alusta TOIMINTO, viiva, Kertoja · Taustamusiikki KYTKIN) | natiivi webin perässä | web työn alla |
+| KENTTÄ-pohjaosa | #3808 lomakekenttä + palautelomake (Pelikoodari) | `pohja-kentta` b1058f04 (KORTTI-lomakkeissa; työhuone ennallaan) | käännösjonossa visan kanssa |
 
 ## Pinnat pohjiin (natiivi)
 
