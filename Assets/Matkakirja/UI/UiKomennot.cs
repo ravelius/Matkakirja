@@ -134,6 +134,7 @@
 //   ui mac tila|pakota|veto dx dy [x y]|rulla dy [x y]|nipistys s [x y]  Mac-syöte (MacSyote.cs): ohjauslevyn veto, rulla ja
 //                                             nipistys ilman Macia (pikselit, UIKitin suunta, osoitin yläkulmasta)
 //   ui nappain vasen|oikea|ylos|alas|esc     näppäimistökerros (Nappaimisto): selaa, vierittää, sulkee kuin fyysinen näppäin
+//   ui mikseri [tila]|auki|kiinni|demo|demo pois  kehittäjän mikseripaneeli (linnan ja Cupolan kaiut; demo = lähde ilman ääntä)
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui matkamuisto <id>                       matkamuiston löytö kuten dioraamasta (voudin-sinetti); tila lokiin
@@ -769,6 +770,19 @@ namespace Matkakirja.Natiivi
                     // Näppäimistökerros (Nappaimisto): ui nappain vasen|oikea|ylos|alas|esc (kuin fyysinen näppäin).
                     Kirjaa("nappain: " + Nappaimisto.Paina(loput.Trim()));
                     return null;
+                case "mikseri":
+                {
+                    // Kehittäjän mikseripaneeli (MikseriPaneeli): ui mikseri [tila] | auki | kiinni | demo | demo pois.
+                    var mp = MikseriPaneeli.Viimeisin;
+                    if (mp == null) return "mikseripaneelia ei ole";
+                    string mk = loput.Trim();
+                    if (mk == "demo") MikseriPaneeli.Lahde = new MikseriPaneeli.Demo();
+                    else if (mk == "demo pois") MikseriPaneeli.Lahde = null;
+                    else if (mk == "auki") mp.Avaa(true);
+                    else if (mk == "kiinni") mp.Avaa(false);
+                    Kirjaa("mikseri: " + mp.Kuvaus);
+                    return null;
+                }
                 case "kierto":
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
@@ -820,6 +834,9 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "aanimikseri":
+                    // Kehittäjän äänimikserin äänipuoli (AaniMikseri.cs): tila | cupola | linna | aseta <id> <arvo> | b 0|1 | tallenna.
+                    return AaniMikseri.Komento(loput);
                 case "cupolaaani":
                     // Cupolan äänikerrokset ilman kyytiä: paalle | pois | tila (CupolaAani.cs).
                     if (loput == "paalle") CupolaAani.Tila(true);
