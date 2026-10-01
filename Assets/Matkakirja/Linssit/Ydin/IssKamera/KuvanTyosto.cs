@@ -81,7 +81,16 @@ namespace Matkakirja.Linssit.IssKamera
         public double TasoKerroin = 1;
         public bool Ensisijainen;
 
-        bool Kattaa(S2Ruutu ru, double w, double s, double e, double n) => w > ru.W && e < ru.E && s > ru.S && n < ru.N;
+        /// <summary>
+        /// Kattaako ruutu lehden kokonaan. Indeksin bbox on UTM-neliön lat/lon-kehys, joka on todellista aluetta laajempi
+        /// (neliö on kiertynyt vyöhykkeen reunalla), joten reunasta jätetään 1,5 % marginaali (aukkotesti 1.10.: vino aukkoviiva
+        /// vyöhykkeiden 34/35 rajalla).
+        /// </summary>
+        bool Kattaa(S2Ruutu ru, double w, double s, double e, double n)
+        {
+            double mx = (ru.E - ru.W) * 0.015, my = (ru.N - ru.S) * 0.015;
+            return w > ru.W + mx && e < ru.E - mx && s > ru.S + my && n < ru.N - my;
+        }
 
         public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o)
         {
