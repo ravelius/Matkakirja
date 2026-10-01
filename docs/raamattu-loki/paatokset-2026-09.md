@@ -9711,3 +9711,7 @@ Omistaja kysyi vuosiluvun matkamittarista, miksi sen pitäisi mahtua 250 ms:iin,
 ## OMISTAJA: PALLOPOLTON 2026-09-30 VIENTI ÄMPÄRIIN (1.10.2026) (1.10.2026 klo 12.01)
 
 Omistaja antoi luvan viedä valmiin pallopolton 2026-09-30 (raeton, GEOGLOWS-joet koe-d-säännöin, Perekop pois, pohja z0–z10 + syvä z9–z10, pallo 577 838 laattaa) ämpäriin deltana 27-sarjaa vasten heti, ennen kuvapareja. Vienti ei näy pelaajille. Osoittimen vaihtoon (PALLO_LAATTAVERSIO-PR + vaihda-pyramidi-osoitin) tarvitaan erillinen lupa sen jälkeen, kun omistaja on nähnyt kuvaparit 27 vs 30 (Wien, Rooma, Moskova, Rovaniemi, Tukholma, Berliini, Bukarest; z8 + z10; kerma p060) noin klo 13.
+
+## PÄÄTOIMITTAJA: TF-LATAUKSIA ENINTÄÄN 8 VUOROKAUDESSA (1.10.2026) (1.10.2026 klo 12.14)
+
+Applen TestFlight-latausraja tuli vastaan 1.10. klo 12.2x: tänään ladattiin 12 buildia (84–95), ja TF 96 (Lukijoilta-tietoturva) kaatui ilmoitukseen "Upload limit reached… Please wait 1 day" (ajo 36840203356). Linjaus: TF-latauksia enintään 8 vuorokaudessa. Junat kootaan isommiksi, eikä jokaisesta merge-erästä tehdä omaa TF:ää. Etusijalla ovat tietoturva, kaatumiskorjaukset ja omistajan pyytämät. Testikäännökset simulaattoreihin jatkuvat ennallaan. TF 96 lähtee heti, kun raja aukeaa (arviolta 2.10. noin klo 09–12), ja sen perään 97/98 yhtenä junana, jos mahdollista. EHDOTUS_AVAIN-vaihto siirtyy TF 96:n jälkeen.
