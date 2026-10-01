@@ -1711,6 +1711,12 @@ namespace Matkakirja.Natiivi
                             else Matkakirja.Linssit.IssSiluetti.Paalla = osat[3] != "0";
                             Kirjaa("astro kyyti " + Matkakirja.Linssit.IssSiluetti.Tila());
                         }
+                        else if (a == "s2" && osat.Length > 3)   // Euroopan S2-mosaiikki kyydissä (AstronauttiKerros.PaivitaS2)
+                        {
+                            if (osat[3] == "url" && osat.Length > 4) AstronauttiKerros.S2Osoite = osat[4] == "pois" ? null : osat[4];
+                            else AstronauttiKerros.S2Kaytossa = osat[3] != "0";
+                            Kirjaa($"astro kyyti s2 {(AstronauttiKerros.S2Kaytossa ? "päällä" : "pois")}, osoite {AstronauttiKerros.S2Osoite ?? AstronauttiKerros.S2Juuri}");
+                        }
                         else if (a == "pinta" && osat.Length > 3)   // ISS-kamera: pinta 1|2 <url {z}/{x}/{y}> <min> <max>, pinta pois (kuukausi 0 ensin: kaksi paikkaa)
                         {
                             var pintaKerrokset = KarttaKerrokset.Instanssi;

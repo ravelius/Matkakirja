@@ -377,8 +377,68 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
 
+        /// <summary>
+        /// EUROOPAN S2-MOSAIIKKI KYYDISSÄ (Linssiseppä 2, 1.10.2026; suunnitelma docs/raportit/s2-mosaiikki-astronautin-kameraan-
+        /// suunnitelma-20261001.md, Päätoimittaja hyväksyi, Natiiviseppä kuittasi lisäysversiona): Karttasepän Sentinel-2-mosaiikki
+        /// (z6–z10, ~76 m/px) BMNG:n päällä Euroopan alueella. Paikat: linssin reliefi pois kyydin ajaksi, BMNG paikkaan 1 (alfa 1),
+        /// S2 paikkaan 2 rajatulla jaolla (KarttaKerrokset.RasterinJako: Yokuorin alue z6-sarakkeet 27–39 × rivit 13–25, juuri 13 × 13),
+        /// muuten Cesium pyytäisi laattoja koko maailmasta eikä tarkentuisi. Ämpäriosoite kulkee Laattapalvelimen kautta (UusiKerros →
+        /// Paikallinen), välimuistin S2-alikatto 200 Mt. Kevyt laite (Kyytipino.KevytLaite): enintään z9. Kyydin päättyessä reliefi
+        /// palaa. A/B `astro kyyti s2 0|1`, testiosoite `astro kyyti s2 url <{docs}/… | pois>`.
+        /// </summary>
+        public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/v1/";
+        public const string S2Kerros = "astronautti-s2";
+        public static bool S2Kaytossa;
+        public static string S2Osoite;
+        const double S2W = -28.125, S2E = 45.0, S2N = 72.395704, S2S = 31.952162;
+        const int S2Rx = 13, S2Ry = 13, S2MaxTaso = 4;
+        bool s2Lisatty, reliefPoissa;
+
+        void PaivitaS2(bool kyydissa)
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk == null) return;
+            bool halutaan = kyydissa && S2Kaytossa && kuukausiLisatty > 0;
+            if (halutaan == s2Lisatty) return;
+            if (halutaan)
+            {
+                kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros);
+                reliefPoissa = true;
+                // BMNG paikkaan 1 (alle): poisto ja uudelleenlisäys, alfa 1 (reliefiä ei ole alla).
+                kk.PoistaRasteri(KuukausiKerros);
+                kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausiLisatty.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
+                    CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
+                kuukausiAlfaAsetettu = 1f;
+                string url = (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg").Replace("{docs}", "file://" + Application.persistentDataPath);
+                int maxTaso = Matkakirja.Linssit.Kyytipino.KevytLaite ? S2MaxTaso - 1 : S2MaxTaso;
+                s2Lisatty = kk.LisaaRasteri(S2Kerros, url, CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, maxTaso, 1f) != null
+                    && kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry);
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: S2 {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}");
+                if (!s2Lisatty) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
+            }
+            else
+            {
+                kk.PoistaRasteri(S2Kerros);
+                s2Lisatty = false;
+                if (reliefPoissa)
+                {
+                    kk.LisaaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros, Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
+                        CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, 1f);
+                    reliefPoissa = false;
+                }
+                kuukausiAlfaAsetettu = -1f;
+                Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois, reliefi palautettu");
+            }
+        }
+
         /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
         void PaivitaKuukaudenPinta(bool kyydissa)
+        {
+            PaivitaKuukaudenPintaBmng(kyydissa);
+            PaivitaS2(kyydissa);
+        }
+
+        void PaivitaKuukaudenPintaBmng(bool kyydissa)
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
@@ -391,8 +451,9 @@ namespace Matkakirja.Natiivi
             if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
             if (kuukausi == kuukausiLisatty)
             {
-                if (kuukausi > 0 && kuukausiAlfaAsetettu != KuukaudenAlfa && kk.RasterinAlfa(KuukausiKerros, KuukaudenAlfa) >= 0)
-                    kuukausiAlfaAsetettu = KuukaudenAlfa;
+                float alfa = s2Lisatty ? 1f : KuukaudenAlfa;
+                if (kuukausi > 0 && kuukausiAlfaAsetettu != alfa && kk.RasterinAlfa(KuukausiKerros, alfa) >= 0)
+                    kuukausiAlfaAsetettu = alfa;
                 return;
             }
             kuukausiAlfaAsetettu = -1f;
@@ -743,6 +804,7 @@ namespace Matkakirja.Natiivi
         void OnDestroy()
         {
             if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
+            if (s2Lisatty) KarttaKerrokset.Instanssi?.PoistaRasteri(S2Kerros);
             if (kierto != null) kierto.Napautettu -= Napautus;
             if (taivas != null) Destroy(taivas.gameObject);
             if (pilvet != null) Destroy(pilvet.gameObject);
