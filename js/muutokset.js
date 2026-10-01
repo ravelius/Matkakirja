@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2510, teksti: 'Maakuntien toinen kuva: HUN, IRL, ISL, ITA (#3797)' },
   { v: 2509, teksti: 'Ihmisen matka: kahden kuvan nostokortti ja Pulu… (#3775)' },
   { v: 2508, teksti: 'Sähke: nimimerkkien sanalistat workerin mukaisi… (#3786)' },
   { v: 2507, teksti: 'Maakuntien toinen kuva: FIN, FRA, GBR, HRV (#3792)' },
