@@ -9839,3 +9839,7 @@ Linssiseppä 2 toimitti 1.10. klo 21.3x E v2:n viimeisen kierroksen (0b69f6d2: v
 ## OMISTAJA: JULISTEEN AURINKOVERSIO — NOUSEVA AURINKO, VOIMAKAS ILMAKEHÄN VÄRJÄYS JA SUUREMPI FLARE (1.10.2026) (1.10.2026 klo 21.44)
 
 Omistaja 1.10.2026 klo 21.4x juliste E v3:n aurinkoversiosta sanatarkasti: 'Tuo yö ei ole uskottava jos siellä on aurinko jo noin näkyvissä. Lisäksi aurinko värjäsi paljon enemmän ympäristöä ja ilmakehää ja tulisi suurempi flare' → Linssiseppä 2: kiertoratanousu (kiekko vasta kaaren reunalla), leveä oranssi–kulta–punainen vyö auringon ympärillä kaarta pitkin, suurempi flare (bloom, säteet, heijastusläiskät), terminaattori ja hämärän valo horisontin lähellä auringon puolella; etuala yössä kaupunkivaloineen. Päiväversio ennallaan.
+
+## OMISTAJA: JULISTEEN SINETTI PIENEMPÄNÄ ALAMARGINAALIIN; UUSI KUVAUSPAIKKA ATEENA JA EGEANMERI (1.10.2026) (1.10.2026 klo 21.52)
+
+Omistaja 1.10.2026 klo 21.4x sanatarkasti: 'Siirrä sinetti pienempänä ala marginaaliin ja tee kuva jostain toisesta paikasta maailmalla' → ISS-sinetti 120 px alamarginaalissa oikealla (tee-kehys3.mjs --merkki-marginaali; korvaa 21.42 'paneelin päällä'). Päätoimittaja valitsi uudeksi paikaksi Ateenan ja Egeanmeren saaret (VAIN EUROOPPA; ISS-kuvien klassikko, Sokrates-pilotin kaupunki); Linssiseppä 2 tekee päiväkuvan Helsingin hyväksytyllä putkella aurinkokierroksen jälkeen.
