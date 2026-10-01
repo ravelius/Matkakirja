@@ -366,17 +366,27 @@ namespace Matkakirja.Natiivi
             // näyttää linnan pulu.teksti-kuplan, jos sellainen on.
             if (nakyma.KohdeTila == null && rakennus.Kertoja != null && rakennus.Kertoja.Count > 0)
             {
+                // Tilasta palattaessa kuunnelma loppuu (dccb82a5: keittiön kaistale jäi yleisnäkymään).
+                LopetaKuunnelma();
                 for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
                 lauta.style.display = DisplayStyle.None;
                 float ph2 = juuri.layout.height; if (float.IsNaN(ph2) || ph2 <= 0) ph2 = Screen.height;
                 const float koko2 = 64f;
                 pulu.style.display = DisplayStyle.Flex;
                 pulu.MiniKorkeus(koko2);
-                pulu.style.left = 18; pulu.style.top = ph2 - koko2 - 96;
+                // Turva-alueen sisään (linnakatselmus 1.10.: iPhone vaaka, kiinteä 18 pt jäi Dynamic Islandin alle).
+                float pw2 = juuri.layout.width, vasen2 = 0f, ala2 = 0f;
+                if (!float.IsNaN(pw2) && pw2 > 0 && Screen.width > 0)
+                {
+                    float sk2 = pw2 / Screen.width;
+                    vasen2 = Screen.safeArea.xMin * sk2;
+                    ala2 = Screen.safeArea.yMin * sk2;
+                }
+                pulu.style.left = vasen2 + 18; pulu.style.top = ph2 - ala2 - koko2 - 96;
                 puluKupla = rakennus.PuluTeksti; puluAani = rakennus.PuluAani;
                 bool kupla = !string.IsNullOrEmpty(puluKupla);
                 puluAlue.style.display = kupla ? DisplayStyle.Flex : DisplayStyle.None;
-                if (kupla) { puluAlue.style.left = 12; puluAlue.style.top = ph2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
+                if (kupla) { puluAlue.style.left = vasen2 + 12; puluAlue.style.top = ph2 - ala2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
                 return;
             }
             LopetaKuunnelma();
@@ -393,6 +403,20 @@ namespace Matkakirja.Natiivi
                 float koko = Mathf.Clamp(PuluMaxPt * (PuluEtaisyysvertailuM / Mathf.Max(0.5f, ruutu.z)), PuluMinPt, PuluMaxPt);
                 float puluLeveys = koko * (58f / 70f);
                 pulu.MiniKorkeus(koko);
+                // Turva-alueen sisään (linnakatselmus 1.10., iPhone vaaka: laskeutumispiste osui vasempaan reunaan Dynamic
+                // Islandin alle). Taulu seuraa rajattua pistettä.
+                {
+                    float jw = juuri.layout.width, jh = juuri.layout.height;
+                    if (!float.IsNaN(jw) && jw > 0 && Screen.width > 0)
+                    {
+                        float sk = jw / Screen.width;
+                        var sa = Screen.safeArea;
+                        float vasen = sa.xMin * sk + 4f, oikea = jw - (Screen.width - sa.xMax) * sk - 4f;
+                        float yla = (Screen.height - sa.yMax) * sk + 4f, ala = jh - sa.yMin * sk - 4f;
+                        paneeliste.x = Mathf.Clamp(paneeliste.x, vasen + puluLeveys * 0.5f, Mathf.Max(vasen + puluLeveys * 0.5f, oikea - puluLeveys * 0.5f));
+                        paneeliste.y = Mathf.Clamp(paneeliste.y, yla + koko, Mathf.Max(yla + koko, ala));
+                    }
+                }
                 pulu.style.left = paneeliste.x - puluLeveys * 0.5f;
                 pulu.style.top = paneeliste.y - koko;
 
