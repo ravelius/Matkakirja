@@ -92,6 +92,7 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Texture2D> ladatutValoAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
         string peiliKuvaus = "pois (ämpäri)";
         Func<string, string> peili = s => s;
+        bool peiliHttps;
         /// <summary>Paketin juuri: AmpariJuuri + uusin.json:n polku, tai AmpariJuuri (kehityspeili).</summary>
         string paketinJuuri = AmpariJuuri;
 
@@ -279,6 +280,9 @@ namespace Matkakirja.Natiivi
             // "https://…" sellaisenaan; muuten rakennuksen juuresta kuten ennen.
             : tiedostoRelPolku.StartsWith("https://", StringComparison.Ordinal) ? tiedostoRelPolku
             : tiedostoRelPolku.StartsWith("/", StringComparison.Ordinal) ? MediaJuuri + tiedostoRelPolku
+            // https-peili (ämpärin hash-kansio, puhdas kuittaus ennen osoitinta): äänet eivät ole hash-kansiossa vaan
+            // rakennuksen juuressa kuten tuotannossa (1.10.: kuittausajojen 145 äänen 404:ää) → peiliä ei käytetä.
+            : peiliHttps ? AmpariJuuri + tiedostoRelPolku
             : peili(AmpariJuuri + tiedostoRelPolku);
         const string MediaJuuri = "https://media.matkakirja.app";
 
@@ -647,9 +651,11 @@ namespace Matkakirja.Natiivi
             string arvo = osat.Length > 2 ? osat[2] : null;
             if (mita == "peili")
             {
+                peiliHttps = false;
                 if (arvo == null || arvo == "pois") { peili = s => s; peiliKuvaus = "pois (ämpäri)"; }
                 else
                 {
+                    peiliHttps = arvo.StartsWith("https://", StringComparison.Ordinal);
                     string uusiJuuri = arvo;
                     peili = s => s.StartsWith(AmpariJuuri, StringComparison.Ordinal) ? uusiJuuri.TrimEnd('/') + "/" + s.Substring(AmpariJuuri.Length) : s;
                     peiliKuvaus = uusiJuuri;
