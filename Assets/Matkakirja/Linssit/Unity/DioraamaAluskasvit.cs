@@ -173,7 +173,7 @@ namespace Matkakirja.Natiivi
             // with dimensions 10×4"), joten pakataan vain kahden potenssin atlas. Pakkaamaton 1280 × 512 on ~3,5 Mt mipeineen.
             bool pot = Mathf.IsPowerOfTwo(atlas.width) && Mathf.IsPowerOfTwo(atlas.height);
             if (pot) { r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "aluskasvit Compress", r0); yield return null; }
-            atlas.Apply(true, true);
+            atlas.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, atlas);
             yield return null;
             if (!voimassa()) yield break;
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaPuu");

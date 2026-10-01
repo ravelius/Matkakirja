@@ -164,6 +164,7 @@ namespace Matkakirja.Natiivi
                     r0 = DioraamaRuutu.Alku();
                     kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy, TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0);
                     DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} ASTC", r0);
+                    DioraamaRuutu.Gpu(kirjaa, kuva);
                     if (kuva != null && tauot) yield return null;
                     if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
                 }
@@ -188,7 +189,7 @@ namespace Matkakirja.Natiivi
                         if (tauot) yield return null;
                     }
                     else { UnityEngine.Object.Destroy(kuva); kuva = null; kirjaa?.Invoke($"poikki: kuori {taso} tekstuuri ei jäsentynyt"); }
-                    if (kuva != null) { kuva.Apply(false, true); if (tauot) yield return null; } // tekstuuri vain GPU:lle
+                    if (kuva != null) { kuva.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, kuva); if (tauot) yield return null; } // tekstuuri vain GPU:lle
                 }
                 if (oma != kerta) { UnityEngine.Object.Destroy(mesh); if (kuva != null) UnityEngine.Object.Destroy(kuva); yield break; }
 

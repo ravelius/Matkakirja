@@ -182,7 +182,7 @@ namespace Matkakirja.Natiivi
             var syv = new Texture2D(raaka.width, raaka.height, TextureFormat.R8, false, true)
             { name = "Ymparisto:syvyys", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
             syv.SetPixelData(r8, 0);
-            syv.Apply(false, true);
+            syv.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, syv);
             UnityEngine.Object.Destroy(raaka);
             luodut.Add(syv);
             yield return null;
@@ -358,7 +358,7 @@ namespace Matkakirja.Natiivi
             yield return null;
             r0 = DioraamaRuutu.Alku(); k.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "taivas Compress", r0);
             yield return null;
-            k.Apply(false, true);
+            k.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, k);
             yield return null; // GPU-lataus omassa ruudussaan ennen kuin kuva vaihtuu liukuvärin tilalle
             if (oma != kerta || taivasMat == null) yield break;
             taivasMat.SetTexture(IdTaivasKuva, k);
@@ -402,7 +402,7 @@ namespace Matkakirja.Natiivi
                 float a0 = DioraamaRuutu.Alku();
                 kuva = DioraamaAstc.Lue(kuvaTavut, "Ymparisto:" + nimi + ":astc", out string syy);
                 DioraamaRuutu.Kirjaa(kirjaa, nimi + " ASTC", a0);
-                if (kuva != null) { luodut.Add(kuva); kohteet?.Add(kuva); yield return null; }
+                if (kuva != null) { luodut.Add(kuva); kohteet?.Add(kuva); DioraamaRuutu.Gpu(kirjaa, kuva); yield return null; }
                 else
                 {
                     kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), glb:n kuva");
@@ -422,7 +422,7 @@ namespace Matkakirja.Natiivi
                     yield return null;
                     r0 = DioraamaRuutu.Alku(); kuva.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
                     yield return null;
-                    kuva.Apply(true, true);
+                    kuva.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, kuva);
                     yield return null;
                 }
                 else { UnityEngine.Object.Destroy(kuva); kuva = null; }
@@ -560,7 +560,7 @@ namespace Matkakirja.Natiivi
                 r0 = DioraamaRuutu.Alku(); t.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
                 yield return null;
             }
-            t.Apply(true, true);
+            t.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, t);
             yield return null;
             tulos(t, kirkkaus);
         }
@@ -692,7 +692,7 @@ namespace Matkakirja.Natiivi
             yield return null;
             r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "puukortit Compress", r0);
             yield return null;
-            atlas.Apply(true, true);
+            atlas.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, atlas);
             yield return null;
             if (oma != kerta) yield break;
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaPuu");
@@ -717,7 +717,7 @@ namespace Matkakirja.Natiivi
                     yield return null;
                     r0 = DioraamaRuutu.Alku(); norm.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "puukortit-normaali Compress", r0);
                     yield return null;
-                    norm.Apply(true, true);
+                    norm.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, norm);
                     yield return null;
                     if (oma != kerta) yield break;
                     mat.SetTexture(IdPuuNormaali, norm);
@@ -767,7 +767,12 @@ namespace Matkakirja.Natiivi
         public static void Kirjaa(Action<string> kirjaa, string vaihe, float alku)
         {
             float ms = (Time.realtimeSinceStartup - alku) * 1000f;
-            if (ms > 40f) kirjaa?.Invoke($"poikki: raskas {vaihe} {ms:F0} ms");
+            if (ms > 40f) kirjaa?.Invoke($"poikki: raskas {vaihe} {ms:F0} ms (ruutu {Time.frameCount})");
+        }
+        /// <summary>GPU-lataus (Apply) lokiin ruutunumerolla: laitemittauksen piikit kohdistuvat tekstuuriin.</summary>
+        public static void Gpu(Action<string> kirjaa, Texture t)
+        {
+            if (t != null) kirjaa?.Invoke($"poikki: gpu {t.name} {t.width}×{t.height} {t.graphicsFormat} (ruutu {Time.frameCount})");
         }
     }
 }
