@@ -90,6 +90,7 @@ import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
 import { kytkePulunPaikannus } from './pulu-paikka.js';
 import { animoiAvaus, asennaDialogianimaatiot, haamuSulku } from './avausanimaatio.js';
 import { lahetaKaynti, merkitseOmistajaOsoitteesta } from './kaynti.js';
+import { luoPohjaKortti } from './pohjat/pohjat.js';
 
 // Dialogien avaus ja sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js erä B).
 asennaDialogianimaatiot();
@@ -173,7 +174,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2517';
+const APP_VERSION = '2026-09-21.2527';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1588,7 +1589,55 @@ async function tyhjennaMuistit() {
   location.replace(osoite.toString());
 }
 
-document.getElementById('newgame-btn').addEventListener('click', () => nollaaDialog.showModal());
+/*
+ * UUDEN PELIN VAHVISTUS KORTTI-POHJALLA (UI-pohjat, omistaja 1.10.2026: ensin NOSTOKORTTI ja KORTTI, myös webiin).
+ * Modaali: sulkeutuu vain napeista. Teksti on sama kuin nollaa-dialogissa. Peruttavissa: KORTTI_VAHVISTUS_POHJA =
+ * false tai ?kortti=vanha (localStorage matkakirja-kortti = 'vanha'), jolloin vanha <dialog> aukeaa kuten ennen.
+ */
+const KORTTI_VAHVISTUS_POHJA = true;
+function vahvistusPohjalla() {
+  try {
+    const valinta = new URLSearchParams(location.search).get('kortti') ?? localStorage.getItem('matkakirja-kortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return KORTTI_VAHVISTUS_POHJA;
+}
+function avaaNollausKortti() {
+  const kortti = luoPohjaKortti({
+    yla: 'Uusi peli',
+    otsikko: 'Aloitetaanko uusi matka?',
+    kappaleet: [
+      { teksti: 'Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat, ääniasetukset ja välimuisti.' },
+      { teksti: 'Tätä ei voi perua.', korostus: true },
+    ],
+    napit: [
+      { teksti: 'Peruuta', tyyppi: 'toiminto', toiminto: 'peruuta' },
+      { teksti: 'Aloita alusta', tyyppi: 'ensisijainen', toiminto: 'aloita' },
+    ],
+  }, {
+    modaali: true,
+    toiminnot: {
+      peruuta: () => {},
+      aloita: (_nappi, pohja) => {
+        const ok = pohja.kortti.querySelector('.tk-nappi--ensisijainen');
+        if (ok) { ok.disabled = true; ok.textContent = 'Tyhjennetään…'; }
+        merkitsePaivitys();
+        tyhjennaMuistit();
+        return false; // kortti jää auki, kunnes sivu latautuu uudelleen
+      },
+    },
+    sulje: (pohja) => setTimeout(() => pohja.el.remove(), 240),
+  });
+  if (!kortti) { nollaaDialog.showModal(); return; }
+  document.body.appendChild(kortti.el);
+  kortti.avaa();
+}
+
+document.getElementById('newgame-btn').addEventListener('click', () => {
+  if (vahvistusPohjalla()) avaaNollausKortti();
+  else nollaaDialog.showModal();
+});
 document.getElementById('nollaa-peru').addEventListener('click', () => nollaaDialog.close());
 document.getElementById('nollaa-ok').addEventListener('click', () => {
   const nappi = document.getElementById('nollaa-ok');

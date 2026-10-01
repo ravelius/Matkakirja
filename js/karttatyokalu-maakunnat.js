@@ -37,7 +37,11 @@
  *   5. KYTKENTÄ — kytkeMaakunnatKarttaselitteeseen
  */
 import { html, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus } from './ui-apurit.js';
-import { kohteidenNykyinenIso, suljeKohdeSuurennos } from './fokuskohteet.js';
+import { avaaKohdeSuurennos, kohteidenNykyinenIso, suljeKohdeSuurennos } from './fokuskohteet.js';
+import { luoPohjaNostokortti } from './pohjat/pohjat.js';
+import { polloEhdota } from './pollo.js';
+import { assetOsoite } from './media.js';
+import { valokuvaUrl } from './packs/africa-valokuvat.js';
 import { nostoLataaTyyli, piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from './packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
@@ -585,8 +589,100 @@ function suljeMaakuntaKortti() {
   setTimeout(() => kerros.remove(), KORTIN_SULKU_MS + 40);
 }
 
+/*
+ * ── MAAKUNTAKORTTI NOSTOKORTTI-POHJALLA (omistajan kokeilu 1.10.2026, Päätoimittaja) ──────────────────────────────
+ * Kortti avautuu NOSTOKORTTI-pohjalla (PAPERI): iPhonella alareunaan ≤ 45 %, iPadilla sivukortti; kuvat kuvasäännöin
+ * (hero, upotus, galleria), napautus avaa saman suurennoksen kuin ennen; Pulun kysymykset Kysy-napista chattiin, jossa
+ * valmis vastaus annetaan ilman mallikutsua (sama ui.pulunLinssikysymykset-kytkentä kuin Ihmisen matkassa); ✕ pois.
+ * Peruttavissa: MAAKUNTAKORTTI_POHJA = false tai ?maakuntakortti=vanha (localStorage matkakirja-maakuntakortti).
+ */
+const MAAKUNTAKORTTI_POHJA = true;
+
+/** Lippu + ?maakuntakortti=vanha|pohja tai localStorage matkakirja-maakuntakortti. */
+export function maakuntakorttiPohjalla() {
+  try {
+    const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('maakuntakortti')
+      ?? globalThis.localStorage?.getItem('matkakirja-maakuntakortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return MAAKUNTAKORTTI_POHJA;
+}
+
+/** Pulun valmiit kysymykset chatille (ui.pulunLinssikysymykset-muoto, js/linssit/ihmisen-matka-pulukysymykset.js). */
+export function maakunnanPulukysymykset(avain, kysymykset) {
+  const lista = (kysymykset ?? []).filter((k) => k?.q);
+  if (!lista.length) return null;
+  return {
+    avain: `maakunta:${avain}`,
+    tunnus: avain,
+    lisanosto: false,
+    kysymykset: lista.map((k) => k.q),
+    vastaus: (kysymys) => {
+      const osuma = lista.find((k) => k.q === kysymys);
+      return osuma?.a ? { vastaus: osuma.a, lahteet: [] } : null;
+    },
+  };
+}
+
+function avaaMaakuntaPohjalla(ui, avain, nimi, data) {
+  const kuvat = maakunnanKuvat(data).map(maakunnanNostokuva).filter((k) => k.osoite || k.tiedosto).map((k) => ({
+    url: k.osoite ? assetOsoite('nostot', k.osoite) : valokuvaUrl(k.tiedosto, 800),
+    kuvateksti: k.selite ?? k.lyhyt ?? '',
+    lahde: k.lahde ?? '',
+    alkuperainen: k,
+  }));
+  const pulu = maakunnanPulukysymykset(avain, haePulu(avain));
+  const edellinen = ui?.pulunLinssikysymykset ?? null;
+  const kysely = pulu ? () => pulu : null;
+  const pohja = luoPohjaNostokortti({
+    yla: 'Maakunta',
+    otsikko: nimi,
+    kuvat,
+    kappaleet: [{ teksti: data?.pitka ?? data?.lyhyt ?? '' }],
+    napit: pulu ? [{ teksti: 'Kysy', tyyppi: 'toiminto', toiminto: 'kysy' }] : [],
+  }, {
+    toiminnot: {
+      kysy: () => {
+        // Chat näyttää tämän maakunnan valmiit kysymykset ja vastaa niihin ilman mallikutsua.
+        if (ui && kysely) ui.pulunLinssikysymykset = kysely;
+        polloEhdota([]);
+        try { globalThis.matkakirjaPollo?.tarkistaKonteksti?.(); } catch { /* pulu ei ole pelissä */ }
+      },
+    },
+    kuvaAuki: (kuva, i, img) => avaaKohdeSuurennos(ui, kuvat[i]?.alkuperainen ?? kuva, () => img, MAAKUNTA_ZOOM),
+    sulje: (p) => { if (avoinKortti?.pohja === p) suljeMaakuntaKortti(); },
+  });
+  if (!pohja) return;
+  document.body.appendChild(pohja.el);
+  avoinKortti = {
+    ui,
+    kerros: null,
+    pohja,
+    purku: () => {
+      if (pohja.auki) pohja.sulje();
+      setTimeout(() => pohja.el.remove(), 260);
+      if (ui && kysely && ui.pulunLinssikysymykset === kysely) ui.pulunLinssikysymykset = edellinen;
+    },
+  };
+  pohja.avaa();
+}
+
+/** Kortti suoraan avaimella "ISO:tunnus" (testit, pariteettikuvat ja savukkeet; sama kortti kuin plus-napista). */
+export function avaaMaakuntaKorttiAvaimella(ui, avain) {
+  const osat = jaaAvain(avain);
+  const data = osat ? haeLuonnehdinta(avain) : null;
+  if (!data) return false;
+  avaaMaakuntaKortti(ui, avain, maakunnanNimi(osat.iso, osat.tunnus), data);
+  return true;
+}
+
 function avaaMaakuntaKortti(ui, avain, nimi, data, avaaja = null) {
   suljeMaakuntaKortti();
+  if (maakuntakorttiPohjalla()) {
+    avaaMaakuntaPohjalla(ui, avain, nimi, data);
+    return;
+  }
   nostoLataaTyyli();
 
   const kerros = html('div', 'maakunta-kortti-kerros');
