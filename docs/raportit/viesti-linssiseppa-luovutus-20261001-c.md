@@ -12,7 +12,10 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
    kertoja lukee leipätekstin → 3 s → seuraava AstronauttiKierroksen järjestyksessä, kosketus pysäyttää; c) AUTOn aikana
    yläinforuutu minimoituna, otsikko pelkkä kaupungin nimi; d) AstronauttiAineisto.Luettava = vain leipäteksti
    (h.Teksti ?? Selite, ei "Nimi, Seutu." -alkua); e) kuvanäkymän minipallo ~30 % isommaksi (iPhone ~53 → ~70 pt, sama
-   mitta kuin webissä). Kuvapari web vs. natiivi merge-pyyntöön. Aiemmin, jos Julkaisija avaa junan.
+   mitta kuin webissä — HUOM: minipallo on vain natiivissa, webissä ei palloa). Kuvapari web vs. natiivi merge-pyyntöön.
+   **WEBIN MALLI VALMIS: PR #3817**, kuvapari proto-3d/lokit/pelikoodari-astro-auto-20261002/pari-astro-auto.png:
+   AUTO-pilleri vasemmalla alhaalla, lappu "Seuraava: … 3 s Pysäytä", AUTOn aikana otsikko pelkkä nimi, luenta ilman
+   otsikkoa, zoom 1–4×. Aiemmin, jos Julkaisija avaa junan.
 3. **Sokrates-pilotin reaaliaikainen heijastusvarjostin**: kreikkalainen sitaatti kipsibystin kasvoille kuin
    videoprojektorista. Alkaa vasta, kun omistaja hyväksyy Linnanrakentajan mallikuvan. Tekstit:
    docs/raportit/sisaltokirjuri-sokrates-pilotti-20261001.md.
