@@ -4664,3 +4664,10 @@
     margin-left: 0;
     margin-top: var(--tk-vali-s);
 }
+
+/* KORTTI-pohja: palautelomakkeen ensimmäinen osio suoraan otsikon alaviivan alle (ei toista viivaa). */
+.mk-palaute__osio--ensin {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-width: 0;
+}

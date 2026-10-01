@@ -218,6 +218,8 @@ namespace Matkakirja.Natiivi
                 Aanet.PulunTehoste("paper");
                 vieritys.Clear();
                 osat = PalauteLomake.Kentat(vieritys, PalauteLomake.Tilanne(), UiKerros.Valikot);
+                // KORTTI-pohja: otsikon alaviiva riittää, ensimmäiselle osiolle ei toista viivaa eikä väliä (savuke 1102: ~40 pt tyhjää).
+                osat.Ehdotus?.AddToClassList("mk-palaute__osio--ensin");
                 vieritys.scrollOffset = Vector2.zero;
                 // Web avaa lomakkeen showModalilla top-layeriin, auki olevan lehden päälle: valikkokerros
                 // nousee lehden (ja lehden ajaksi nostetun pulun) yläpuolelle lomakkeen ajaksi.
