@@ -712,6 +712,18 @@
     color: #eafff3;
 }
 
+/* Alarivin napit ja kenttä lasille (1.10. simulaattorikuva: napit jäivät paperinvärisiksi). */
+.mk-chat--linssi .mk-chat__nappula,
+.mk-chat--linssi .mk-chat__kentta,
+.mk-chat--linssi .mk-chat__laheta {
+    background-color: rgba(93, 255, 168, 0.08);
+    border-color: rgba(93, 255, 168, 0.35);
+}
+
+.mk-chat--linssi .mk-chat__syote {
+    border-color: rgba(93, 255, 168, 0.2);
+}
+
 /* Tuore keskustelu: korkeus sisällön mukaan (webin .pollo-alku). */
 .mk-chat.mk-chat--alku {
     height: auto;

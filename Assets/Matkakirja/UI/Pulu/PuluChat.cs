@@ -111,6 +111,7 @@ namespace Matkakirja.Natiivi
         public bool Linssissa { get; private set; }
         Func<Rect> linssiAnkkuri;
         string linssiTunnus;
+        bool avataanLinssiin, linssiAuki;
 
         public void AvaaLinssissa(Func<Rect> ankkuri, string tunnus, IReadOnlyList<string> valmiit)
         {
@@ -129,7 +130,10 @@ namespace Matkakirja.Natiivi
             }
             bool uusi = tunnus != linssiTunnus;
             linssiTunnus = tunnus;
+            linssiAuki = UiNakymat.Olemassa && UiNakymat.Hae().Linssit?.Auki != null;
+            avataanLinssiin = true;
             if (!Auki) Avaa(false);
+            avataanLinssiin = false;
             if (uusi) NaytaKohteenValmiit(valmiit);
             Asettele();
         }
@@ -250,6 +254,11 @@ namespace Matkakirja.Natiivi
                 d => virta.scrollOffset = new Vector2(0f, Mathf.Max(0f, virta.scrollOffset.y + d * 80f)),
                 () => { if (KuvakorttiAuki) kuvakortti.Sulje(); else Sulje(); });
             kerros.TurvaMuuttui += Asettele;
+            // Linssi sulkeutui chatin ollessa linssitilassa: chat sulkeutuu linssin mukana (ei jää vihreänä kartalle).
+            paneeli.schedule.Execute(() =>
+            {
+                if (Linssissa && Auki && linssiAuki && UiNakymat.Olemassa && UiNakymat.Hae().Linssit?.Auki == null) Sulje();
+            }).Every(400);
             Asettele();
         }
 
@@ -344,6 +353,8 @@ namespace Matkakirja.Natiivi
         void Avaa(bool ehdotukset)
         {
             if (Auki) return;
+            // Muu avausreitti kuin linssin pulu (kartta, kortit): kartan teema (1.10. simulaattorikuva: vihreä teema jäi kartalle).
+            if (Linssissa && !avataanLinssiin) PoistuLinssista();
             Auki = true;
             sulkija.style.display = DisplayStyle.Flex;
             // Web pollo.js animoiAvaus(paneeli, nappi): kasvaa avaajan (Pulun tai napin) kohdalta, 220/200 ms.
