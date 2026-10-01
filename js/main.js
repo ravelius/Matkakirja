@@ -4,6 +4,7 @@ import { MUUTOKSET } from './muutokset.js';
 import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.js';
 import { Game } from './game.js';
 import { UI } from './ui.js';
+import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
@@ -172,7 +173,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2515';
+const APP_VERSION = '2026-09-21.2516';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -537,6 +538,8 @@ function attach(game) {
     onNewGame: startGame, onChange: saveGame, onJatkaTurvasta: jatkaTurvasta, turvaOlemassa: () => Boolean(lataaTurva()),
   });
   ui.mount();
+  // PILLERIVALIKKO PANEELI-pohjalla (peruttava ?paneeli=vanha): puetaan kerran, nappien kohde on aina nykyinen UI.
+  if (paneeliPohjalla()) puePilleriPaneeliksi(() => ui);
   // Kehityksen apuri konsolia varten. Vanha nimi jää rinnalle, koska
   // työkalut ja kuvakaappausskriptit käyttävät sitä.
   window.matkakirja = { game, ui, sfx };
@@ -1279,7 +1282,9 @@ menuBtn.addEventListener('click', vaihdaValikko);
 paavalikko.addEventListener('click', (event) => {
   const nappi = event.target.closest('button');
   if (!nappi) return;
-  if (nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma')) return;
+  // PANEELI-pohja: kytkinryhmä ja Asetukset-nappi vaihtavat tilaa tai näkymää; Ehdota sisältöä vie pois (sulkee).
+  if (!nappi.matches('[data-paneeli-sulje]')
+    && nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma, [data-paneeli-pysy]')) return;
   suljeValikko();
 }, true);
 
