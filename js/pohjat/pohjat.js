@@ -127,13 +127,14 @@ function pohjaNapit(d, toiminnot, oletus = 'toiminto') {
 
 function pohjaPinoon(pohja) {
   pohjaPino.push(pohja);
-  if (pohjaPino.length === 1 && typeof document !== 'undefined') document.addEventListener('keydown', pohjaEsc);
+  // Kaappausvaihe: pohja ehtii ennen sivun muita Esc-kuuntelijoita.
+  if (pohjaPino.length === 1 && typeof document !== 'undefined') document.addEventListener('keydown', pohjaEsc, true);
 }
 
 function pohjaPinosta(pohja) {
   const i = pohjaPino.indexOf(pohja);
   if (i >= 0) pohjaPino.splice(i, 1);
-  if (!pohjaPino.length && typeof document !== 'undefined') document.removeEventListener('keydown', pohjaEsc);
+  if (!pohjaPino.length && typeof document !== 'undefined') document.removeEventListener('keydown', pohjaEsc, true);
 }
 
 function pohjaEsc(e) {
@@ -141,6 +142,10 @@ function pohjaEsc(e) {
   const ylin = pohjaPino[pohjaPino.length - 1];
   if (ylin.modaali) return;
   e.preventDefault();
+  // Esc sulkee VAIN ylimmän pohjan: linssin ja kartan omat Esc-kuuntelijat eivät saa nähdä samaa painallusta
+  // (muuten sama Esc sulkisi kortin ja sen alla olevan linssin).
+  e.stopPropagation();
+  e.stopImmediatePropagation?.();
   ylin.sulje();
 }
 
