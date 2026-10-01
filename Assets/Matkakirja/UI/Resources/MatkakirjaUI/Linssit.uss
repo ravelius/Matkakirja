@@ -930,6 +930,47 @@
     color: var(--accent);
 }
 
+/* Matkamittari (omistaja 1.10.2026, web .vuosi-numero / .vuosi-merkki / .vuosi-erotin): numero omassa ikkunassaan,
+   kaksi päällekkäistä riviä, liukuväri ja mitat Matkamittari.cs:stä (0,72 em × 1,1 em, erotin 0,3 em). */
+.mk-matkamittari {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-matkamittari__rulla {
+    overflow: hidden;
+    border-radius: 3px;
+    margin-right: 2px;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-matkamittari__erotin {
+    margin-right: 2px;
+}
+
+.mk-matkamittari__merkki {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -unity-text-align: middle-center;
+}
+
+.mk-matkamittari__kopio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -unity-text-align: middle-center;
+    display: none;
+}
+
 .mk-aikajana-ohjaimet {
     flex-direction: row;
     flex-shrink: 0;
