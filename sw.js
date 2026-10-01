@@ -13,6 +13,8 @@ const SHELL = [
   './css/saapumistraileri.css',
   './css/fokuskohteet.css',
   './css/fokusnosto.css',
+  // UI-pohjat NOSTOKORTTI ja KORTTI (js/pohjat/pohjat.js lataa tyylinsä itse; omistaja 1.10.2026).
+  './css/pohjat.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
   './css/kuvasarja.css',
