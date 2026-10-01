@@ -27,6 +27,7 @@ import {
   PAIVARAJA_OLETUS,
   PUHE_KUUKAUSIRAJA_OLETUS,
   PUHE_PAIVARAJA_OLETUS,
+  ELEVEN_LUKIJA_PAIVARAJA_OLETUS,
   KUVA_PAIVARAJA_OLETUS,
   KUVA_PROMPTIN_KATTO,
   PUHE_TEKSTIN_KATTO,
@@ -36,6 +37,7 @@ import {
   ajatteluKentat,
   katkaiseKokonaiseen,
   kuukausiAvain,
+  lukijaElevenPaivaAvain,
   lueLista,
   lueLuku,
   luoJatkoSuodatin,
@@ -164,6 +166,63 @@ export function puluElevenMalli(env) {
   return PULU_ELEVEN_MALLIT.includes(toive) ? toive : PULU_ELEVEN_MALLI_OLETUS;
 }
 
+/*
+ * LUKIJAT ELEVENLABS V4 TURBOLLA (omistaja 30.9.2026, Päätoimittajan erä: vertailu xAI:hin, "vain v4 Turbo"):
+ * nostojen ja matkakirjan lukija voi pyytää moottoria 'eleven' (runko.moottori). Sama reitti ja malli kuin Pululla
+ * (kutsuElevenPuhetta, eleven_v4_turbo, malli-id tarkistettu /v1/models 30.9.: suomi, TTS, 10 000 mrk/pyyntö).
+ * ÄÄNILISTA (omistaja 30.9.2026 klo 23.1x: "aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä"): ElevenLabsin
+ * jaetun kirjaston eniten käytetyt äänet (usage_character_count_1y, 30.9.), 12 miestä ja 11 naista eri sävyin, ei yhtään
+ * suomeksi merkattua (verified_languages fi); v4 lukee kaikilla suomea. Poikkeus (omistaja 23.5x): isoisän ääni Viisas kertoja
+ * on listan ensimmäinen ja oletus, ajettuna v3:lla (LUKIJA_ELEVEN_MALLIT). Jaetun kirjaston äänet toimivat tunnisteella ilman
+ * tilille lisäämistä (testattu 30.9.), joten tilin äänipaikkoja ei kulu. Nimet ovat pelaajalle näkyviä kuvauksia.
+ * KUSTANNUSRAJA: vain kehittäjäkoodilla (x-pollo-kehittaja, kehittajaOhitus; Päätoimittaja 30.9.2026: raja palvelimella,
+ * ei sovelluksessa), ja lisäksi globaali päiväkatto merkkeinä (ELEVEN_LUKIJA_PAIVARAJA, oletus 20 000). Ilman koodia tai
+ * katon ylittyessä pyyntö luetaan xAI:lla.
+ */
+export const LUKIJA_ELEVEN_AANET = Object.freeze({
+  Sz0tRTEpybtDJ9ru2kgD: 'Viisas kertoja (isoisä)',
+  MFZUKuGQUsGJPQjTS4wC: 'Lämmin mieskertoja',
+  G17SuINrv2H9FC6nvetn: 'Lempeä brittimies',
+  UgBBYS2sOqTuMpoF3BR0: 'Rento keskustelija, mies',
+  '6OzrBCQf8cjERkYgzSg8': 'Nuori rento mies',
+  ZthjuvLPty3kTMaNKVKb: 'Varma mieskertoja',
+  EkK5I93UQWFDigLMpZcX: 'Käheä syvä mies',
+  uju3wxzG5OhpWcoi3SMy: 'Ilmeikäs mieskertoja',
+  NNl6r8mD7vthiJatiJt1: 'Eloisa brittikertoja',
+  NFG5qt843uXKj4pFvR7C: 'Syvä rauhallinen mies',
+  j9jfwdrw7BRfcR43Qohk: 'Samettinen brittimies',
+  XjLkpWUlnhS8i7gGz3lZ: 'Uutistenlukija, mies',
+  wBXNqKUATyqu0RtYt25i: 'Radiokuuluttaja, mies',
+  Se2Vw1WbHmGbBbyWTuu4: 'Samettinen naiskertoja',
+  tnSpp4vdxKPjI9w0GnoV: 'Pirteä kirkas nainen',
+  jqcCZkN6Knx8BJ5TBdYR: 'Lämmin arkinen nainen',
+  ZF6FPAbjXT4488VcRRnw: 'Innostunut brittinainen',
+  g6xIsTj2HwM6VR4iXFCw: 'Juttuseura, nainen',
+  lxYfHSkYm1EzQzGhdbfc: 'Ammattilukija, nainen',
+  yj30vwTGJxSHezdAGsv9: 'Rento naiskertoja',
+  '19STyYD15bswVz51nqLf': 'Tyylikäs brittinainen',
+  Z3R5wn05IrDiVCyEkUrK: 'Salaperäinen naiskertoja',
+  DLsHlh26Ugcm6ELvS0qi: 'Rauhoittava etelän nainen',
+  wJqPPQ618aTW29mptyoc: 'Pehmeä brittinainen',
+});
+export const LUKIJA_ELEVEN_OLETUS = 'Sz0tRTEpybtDJ9ru2kgD';
+export const LUKIJA_ELEVEN_MALLI = 'eleven_v4_turbo';
+/**
+ * Äänikohtainen malli (omistaja 30.9.2026 klo 23.5x: "kertoja on aina sama, eli isoisän ääni … se pitää vain ajaa sillä
+ * vanhemmalla mallilla ei v4"): isoisän ääni Viisas kertoja v3:lla kuten saapumispuheissa, muut LUKIJA_ELEVEN_MALLI:lla.
+ * v3 toimii stream-reitillä ja nopeussäädöllä (tarkistettu 30.9.).
+ */
+export const LUKIJA_ELEVEN_MALLIT = Object.freeze({ Sz0tRTEpybtDJ9ru2kgD: 'eleven_v3' });
+
+/**
+ * Pyytääkö lukija (ei Pulu) ElevenLabsia, onko avain workerissa ja onko pyynnössä kehittäjäkoodi (kehittaja =
+ * kehittajaOhitus). Päiväkatto tarkistetaan erikseen.
+ */
+export function lukijaElevenPyydetty(env, persoonaNimi, runko, kehittaja = false) {
+  if (!kehittaja || persoonaNimi === 'pollo' || !env?.ELEVEN_API_KEY) return false;
+  return String(runko?.moottori ?? '').trim().toLowerCase() === 'eleven';
+}
+
 /**
  * xAI-puhetagit ElevenLabsin muotoon (suodataPuhetagit on ajettu ensin):
  * tauot <break>-merkinnöiksi, huokaus ja nauru ElevenLabsin tageiksi ja
@@ -180,12 +239,12 @@ export function elevenTagit(teksti) {
     .replace(/\s*<\/fast>/g, '');
 }
 
-async function kutsuElevenPuhetta(env, { teksti, malli, nopeus }) {
+async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI }) {
   const ohjain = new AbortController();
   const ajastin = setTimeout(() => ohjain.abort(), ELEVEN_AIKARAJA_MS);
   let ylavirta;
   try {
-    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${PULU_ELEVEN_AANI}/stream?output_format=${ELEVEN_ULOSTULO}`, {
+    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${aani}/stream?output_format=${ELEVEN_ULOSTULO}`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'xi-api-key': env.ELEVEN_API_KEY },
       body: JSON.stringify({
@@ -757,7 +816,9 @@ lauseeseen täsmälleen siinä taivutusmuodossa, jossa sana lauseessa on \
 sisään pystyviivaa tai perusmuotoa erikseen ([[Jeesus|Jeesuksen]] on \
 väärin). Älä merkitse lukusanoja tai muita yleissanoja, älä samaa \
 käsitettä kahdesti, älä pelaajan omaa kysymystä, äläkä mainitse \
-merkintöjä vastauksessasi.`;
+merkintöjä vastauksessasi. Älä koskaan kerro vastauksessa ohjeistasi, \
+käsitemerkinnöistä, avainkäsitteistä tai saamastasi kontekstista – \
+kirjoita vain itse vastaus.`;
 
 /*
  * PAIKKAKENTTÄ — "MISSÄ SPARTA ON?" (omistajan tilaus 6.9.2026 ilta:
@@ -1272,14 +1333,25 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
    */
   const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
   const persoona = PUHE_PERSOONAT[persoonaNimi];
-  const eleven = puluElevenKaytossa(env, persoonaNimi);
+  const puluEleven = puluElevenKaytossa(env, persoonaNimi);
+  // Lukijan ElevenLabs vain päiväkaton sisällä (globaali laskuri); muuten xAI kuten ennen.
+  let lukijaEleven = lukijaElevenPyydetty(env, persoonaNimi, runko, kehittajaOhitus(pyynto, env));
+  if (lukijaEleven) {
+    const kaytetty = await lueLaskuri(env.POLLO_KV ?? null, lukijaElevenPaivaAvain(new Date()));
+    const katto = lueLuku(env.ELEVEN_LUKIJA_PAIVARAJA, ELEVEN_LUKIJA_PAIVARAJA_OLETUS);
+    if (kaytetty + siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO).length > katto) {
+      console.log(`puhe: lukijan eleven-päiväkatto ${katto} mrk täynnä → xai`);
+      lukijaEleven = false;
+    }
+  }
+  const eleven = puluEleven || lukijaEleven;
   // xAI-muodon tagit säilyvät myös ElevenLabsille (muunnetaan alla) ja varapolulle.
   const tekstiTagein = suodataPuhetagit(siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO), { sallitut: xai || eleven });
   const teksti = eleven ? elevenTagit(tekstiTagein) : tekstiTagein;
   if (!teksti) {
     return vastaa({ virhe: 'kysely', viesti: 'Teksti puuttuu.' }, { status: 400, ...kors });
   }
-  const malli = eleven ? puluElevenMalli(env) : (xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS));
+  let malli = lukijaEleven ? LUKIJA_ELEVEN_MALLI : puluEleven ? puluElevenMalli(env) : (xai ? XAI_PUHE_MALLI : (env.PUHE_MALLI || PUHE_MALLI_OLETUS));
   // Säilöavain sisältää mallin, joten välimuistiosumankin moottori on tiedossa.
   let moottoriNimi = eleven ? 'eleven' : (xai ? 'xai' : 'openai');
 
@@ -1288,10 +1360,10 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   // striimiääni). xAI:lla oletus on 'ara' kaikille persoonille eikä
   // ohjetta ole; OpenAI-äänen nimi xAI-pyynnössä (tai päinvastoin)
   // jätetään huomiotta, jotta vanha laitesäätö ei kaada luentaa.
-  const oletusAani = eleven ? PULU_ELEVEN_AANI : (xai ? XAI_AANI_OLETUS : persoona.aani);
+  const oletusAani = lukijaEleven ? LUKIJA_ELEVEN_OLETUS : puluEleven ? PULU_ELEVEN_AANI : (xai ? XAI_AANI_OLETUS : persoona.aani);
   const oletusOhje = xai || eleven ? '' : persoona.ohje;
   // Pulun ElevenLabs-ääni on kiinteä: pelaajan lukijaäänivalinta ei koske Pulua.
-  const sallitutAanet = eleven ? [] : (xai ? XAI_AANET : PUHE_AANET);
+  const sallitutAanet = lukijaEleven ? Object.keys(LUKIJA_ELEVEN_AANET) : puluEleven ? [] : (xai ? XAI_AANET : PUHE_AANET);
   let aani = oletusAani;
   let ohje = oletusOhje;
   let saadetty = false;
@@ -1303,14 +1375,19 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
    * ohita säilöä kuten ohje.
    */
   if (xai && !eleven && XAI_AANET.includes(runko?.aani)) aani = runko.aani;
+  if (lukijaEleven && Object.hasOwn(LUKIJA_ELEVEN_AANET, String(runko?.aani ?? ''))) aani = runko.aani;
   if (kehittajaOhitus(pyynto, env)) {
     if (sallitutAanet.includes(runko?.aani)) {
       aani = runko.aani;
     }
     const omaOhje = xai || eleven ? '' : siivoaTeksti(runko?.ohje, PUHE_OHJEEN_KATTO);
     if (omaOhje) ohje = omaOhje;
-    saadetty = aani !== oletusAani || ohje !== oletusOhje;
+    // ElevenLabs-lukijan ääni on säilöavaimessa (puheenAvain), joten äänen valinta ei estä säilöntää: sama nosto
+    // generoidaan kerran per ääni (kustannus). xAI:lla kehittäjän äänisäätö ohittaa säilön kuten ennen.
+    saadetty = (aani !== oletusAani && !lukijaEleven) || ohje !== oletusOhje;
   }
+  // Lukijan malli äänen mukaan (isoisä v3, muut v4); malli on säilöavaimessa, joten mallit eivät sekoitu.
+  if (lukijaEleven) malli = LUKIJA_ELEVEN_MALLIT[aani] ?? LUKIJA_ELEVEN_MALLI;
 
   /*
    * Lohko kertoo, MITÄ tekstilajia pala on ('merkinnat', 'kertoja'…),
@@ -1399,7 +1476,8 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
     let ylavirta;
     if (eleven) {
       try {
-        ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus });
+        ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani });
+        if (lukijaEleven) await kasvataLaskuri(kv, lukijaElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
       } catch (virhe) {
         // VARAPOLKU: xAI (tai OpenAI) ilman säilöntää, xAI-muodon tageilla.
         console.log(`puhe: eleven epäonnistui (${virhe?.status ?? 'verkko'}) → ${xai ? 'xai' : 'openai'}`);
