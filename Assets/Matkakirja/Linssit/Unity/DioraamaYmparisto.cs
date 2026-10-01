@@ -516,6 +516,7 @@ namespace Matkakirja.Natiivi
 
         // --- PUUT -----------------------------------------------------------------------------------------------------
 
+        static readonly int IdPuuNormaali = Shader.PropertyToID("_Normaali"), IdPuuNormaaliPaalla = Shader.PropertyToID("_NormaaliPaalla");
         sealed class Kortti { public float U0, U1, V0, V1, KorttiPerPuu = 1.04f, LeveysPerKorkeus = 0.5f; }
 
         IEnumerator LataaPuut(Ymparisto y, DioraamaUlkokuori.Laatu taso, Func<string, string> url, Action<string> kirjaa, int oma)
@@ -535,7 +536,7 @@ namespace Matkakirja.Natiivi
             if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: puukorttien atlas ei latautunut"); yield break; }
 
             float alku = Time.realtimeSinceStartup;
-            Vector3[] p = null; Vector2[] uv0 = null, uv1 = null; Color32[] v = null; int[] kolmiot = null; string virhe = null; int puita = 0;
+            Vector3[] p = null; Vector2[] uv0 = null, uv1 = null; Vector4[] tan = null; Color32[] v = null; int[] kolmiot = null; string virhe = null; int puita = 0;
             var tehtava = Task.Run(() =>
             {
                 try
@@ -556,6 +557,18 @@ namespace Matkakirja.Natiivi
                         };
                     }
                     var lajiKortit = new Dictionary<int, List<Kortti>>();
+                    // Puukortit v3 (#3763): muunnokset[laji] = ["<laji>-0", …]; puut.json:n 7. sarake valitsee muunnoksen paikan mukaan.
+                    var lajiMuunnokset = new Dictionary<int, List<Kortti>>();
+                    var muunnokset = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kj, "muunnokset"));
+                    if (muunnokset != null)
+                        foreach (var kv in muunnokset)
+                            if (int.TryParse(kv.Key, out int li))
+                            {
+                                var lista = new List<Kortti>();
+                                foreach (var nimi in MiniJson.TaulukkoTaiTyhja(kv.Value))
+                                    if (nimi is string ns && LueKortti(ns) is Kortti km) lista.Add(km);
+                                if (lista.Count > 0) lajiMuunnokset[li] = lista;
+                            }
                     if (lajit != null)
                         foreach (var kv in lajit)
                             if (int.TryParse(kv.Key, out int li) && kv.Value is string ln)
@@ -572,7 +585,7 @@ namespace Matkakirja.Natiivi
                     string tasoNimi = taso == DioraamaUlkokuori.Laatu.Huippu ? "huippu" : taso == DioraamaUlkokuori.Laatu.Normaali ? "normaali" : "kevyt";
                     int oletus = taso == DioraamaUlkokuori.Laatu.Huippu ? 25000 : taso == DioraamaUlkokuori.Laatu.Normaali ? 10000 : 3500;
                     int n = Math.Min(rivit.Count, (int)(MiniJson.Luku(tasot, tasoNimi) ?? oletus));
-                    p = new Vector3[n * 8]; uv0 = new Vector2[n * 8]; uv1 = new Vector2[n * 8]; v = new Color32[n * 8]; kolmiot = new int[n * 12];
+                    p = new Vector3[n * 8]; uv0 = new Vector2[n * 8]; uv1 = new Vector2[n * 8]; tan = new Vector4[n * 8]; v = new Color32[n * 8]; kolmiot = new int[n * 12];
                     int k0 = 0;
                     for (int i = 0; i < n; i++)
                     {
@@ -581,7 +594,9 @@ namespace Matkakirja.Natiivi
                         int laji = (int)(double)r[5];
                         if (!lajiKortit.TryGetValue(laji, out var vaihtoehdot) && !lajiKortit.TryGetValue(0, out vaihtoehdot)) continue;
                         uint hsh = (uint)(i * 2654435761u) ^ (uint)(bx * 73856093f) ^ (uint)(by * 19349663f);
-                        var kortti = vaihtoehdot[(int)(hsh % (uint)vaihtoehdot.Count)];
+                        var kortti = r.Count >= 7 && r[6] is double md && lajiMuunnokset.TryGetValue(laji, out var mlista)
+                            ? mlista[Math.Max(0, (int)md) % mlista.Count]
+                            : vaihtoehdot[(int)(hsh % (uint)vaihtoehdot.Count)];
                         float korkeus = kork * kortti.KorttiPerPuu, puoli = korkeus * kortti.LeveysPerKorkeus * 0.5f;
                         float kulma = (hsh >> 8) % 360 * Mathf.Deg2Rad;
                         var juuriP = new Vector3(bx, bz, by); // Blender (x itä, y pohjoinen, z ylös) → Unity (x, y ylös, z)
@@ -596,7 +611,7 @@ namespace Matkakirja.Natiivi
                             uv0[b] = new Vector2(kortti.U0, kortti.V0); uv0[b + 1] = new Vector2(kortti.U1, kortti.V0);
                             uv0[b + 2] = new Vector2(kortti.U1, kortti.V1); uv0[b + 3] = new Vector2(kortti.U0, kortti.V1);
                             uv1[b] = uv1[b + 1] = new Vector2(0, 0); uv1[b + 2] = uv1[b + 3] = new Vector2(1, 0);
-                            for (int c = 0; c < 4; c++) v[b + c] = new Color32(kirkkaus, vaihe, 0, 255);
+                            for (int c = 0; c < 4; c++) { v[b + c] = new Color32(kirkkaus, vaihe, 0, 255); tan[b + c] = new Vector4(Mathf.Cos(a), 0, Mathf.Sin(a), 1); }
                             int ti = k0 * 6;
                             kolmiot[ti] = b; kolmiot[ti + 1] = b + 2; kolmiot[ti + 2] = b + 1;
                             kolmiot[ti + 3] = b; kolmiot[ti + 4] = b + 3; kolmiot[ti + 5] = b + 2;
@@ -607,7 +622,7 @@ namespace Matkakirja.Natiivi
                     if (k0 * 4 < p.Length)
                     {
                         Array.Resize(ref p, k0 * 4); Array.Resize(ref uv0, k0 * 4); Array.Resize(ref uv1, k0 * 4);
-                        Array.Resize(ref v, k0 * 4); Array.Resize(ref kolmiot, k0 * 6);
+                        Array.Resize(ref v, k0 * 4); Array.Resize(ref tan, k0 * 4); Array.Resize(ref kolmiot, k0 * 6);
                     }
                 }
                 catch (Exception e) { virhe = e.Message; }
@@ -627,8 +642,28 @@ namespace Matkakirja.Natiivi
             var mat = new Material(varjostin) { name = "Ymparisto:puut" };
             mat.SetTexture(IdKuva, atlas);
             luodut.Add(mat);
+            // Normaalikartta (v3) vain normaali/huippu-tasolla: kevyellä tasolla tasainen kortti riittää (lataus ja muisti).
+            string normaaliTila = "ei";
+            if (!string.IsNullOrEmpty(y.PuukortitNormaali) && taso != DioraamaUlkokuori.Laatu.Kevyt)
+            {
+                byte[] normTavut = null;
+                yield return DioraamaLevyvalimuisti.Hae(url(y.PuukortitNormaali), 60, t => normTavut = t);
+                if (oma != kerta) yield break;
+                var norm = new Texture2D(2, 2, TextureFormat.RGBA32, true, true)
+                { name = "Ymparisto:puukortit-normaali", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+                if (normTavut != null && norm.LoadImage(normTavut, false) && norm.width == atlas.width && norm.height == atlas.height)
+                {
+                    norm.Compress(true);
+                    norm.Apply(true, true);
+                    luodut.Add(norm);
+                    mat.SetTexture(IdPuuNormaali, norm);
+                    mat.SetFloat(IdPuuNormaaliPaalla, 1);
+                    normaaliTila = $"{norm.width}×{norm.height}";
+                }
+                else { UnityEngine.Object.Destroy(norm); normaaliTila = normTavut == null ? "ei latautunut" : "koko ei vastaa atlasta"; }
+            }
             var mesh = new Mesh { name = "Ymparisto:puut", indexFormat = IndexFormat.UInt32 };
-            mesh.SetVertices(p); mesh.SetUVs(0, uv0); mesh.SetUVs(1, uv1); mesh.SetColors(v); mesh.SetTriangles(kolmiot, 0);
+            mesh.SetVertices(p); mesh.SetUVs(0, uv0); mesh.SetUVs(1, uv1); mesh.SetTangents(tan); mesh.SetColors(v); mesh.SetTriangles(kolmiot, 0);
             mesh.RecalculateBounds();
             mesh.UploadMeshData(true);
             luodut.Add(mesh);
@@ -639,7 +674,7 @@ namespace Matkakirja.Natiivi
             rr.sharedMaterial = mat;
             rr.shadowCastingMode = ShadowCastingMode.Off;
             rr.receiveShadows = false;
-            kirjaa?.Invoke($"poikki: ympäristö: puut {puita} ({kolmiot.Length / 3} kolmiota, {atlas.width}×{atlas.height} {atlas.format}), {Time.realtimeSinceStartup - alku:F1} s");
+            kirjaa?.Invoke($"poikki: ympäristö: puut {puita} ({kolmiot.Length / 3} kolmiota, {atlas.width}×{atlas.height} {atlas.format}, normaali {normaaliTila}), {Time.realtimeSinceStartup - alku:F1} s");
         }
 
         public void Tyhjenna()
