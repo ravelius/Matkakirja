@@ -9715,3 +9715,7 @@ Omistaja antoi luvan viedä valmiin pallopolton 2026-09-30 (raeton, GEOGLOWS-joe
 ## PÄÄTOIMITTAJA: TF-LATAUKSIA ENINTÄÄN 8 VUOROKAUDESSA (1.10.2026) (1.10.2026 klo 12.14)
 
 Applen TestFlight-latausraja tuli vastaan 1.10. klo 12.2x: tänään ladattiin 12 buildia (84–95), ja TF 96 (Lukijoilta-tietoturva) kaatui ilmoitukseen "Upload limit reached… Please wait 1 day" (ajo 36840203356). Linjaus: TF-latauksia enintään 8 vuorokaudessa. Junat kootaan isommiksi, eikä jokaisesta merge-erästä tehdä omaa TF:ää. Etusijalla ovat tietoturva, kaatumiskorjaukset ja omistajan pyytämät. Testikäännökset simulaattoreihin jatkuvat ennallaan. TF 96 lähtee heti, kun raja aukeaa (arviolta 2.10. noin klo 09–12), ja sen perään 97/98 yhtenä junana, jos mahdollista. EHDOTUS_AVAIN-vaihto siirtyy TF 96:n jälkeen.
+
+## OMISTAJA: LINNAN OSOITIN OK TÄYDELLE PUHEPAKETILLE (1.10.2026) (1.10.2026 klo 12.34)
+
+Omistaja vastasi "linna ok" linnan osoittimen vaihtoon. Tulkinta: osoitin vaihdetaan siihen pakettiin, jossa #3785:n rakenna.mjs-korjaus on mukana (kaikki 133 puheääntä, #3742 + #3766 + #3774 v22/ASTC). Vaihto tehdään heti, kun Siirtoseppä on kuitannut paketin puhtaaksi (TF 91 -varapolku ja 96, 0 virhettä, puheet soivat). Vajaata 353b5142:ta (43 ääntä puuttui) ei oteta käyttöön. Osoittimen vaihtaa Julkaisija. Omistaja saa tiedon, kun linnan esittely on kokonaan kokeiltavissa.
