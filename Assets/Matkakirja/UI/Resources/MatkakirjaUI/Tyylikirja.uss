@@ -1,0 +1,130 @@
+/* TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi);
+ * ÄLÄ MUOKKAA KÄSIN. lähde 3c58dedaa6f3. Tuodaan ensimmäisenä (Matkakirja.tss). */
+
+:root {
+    --bg: #1d1610;
+    --panel: #2a1f16;
+    --panel-2: #35271a;
+    --line: #4b3826;
+    --ink-light: #f3e6d0;
+    --muted: #b39c7d;
+    --accent: #d9a13b;
+    --accent-dark: #8a6114;
+    --kulta: #eab84e;
+    --danger: #ff9b8a;
+    --rivi-tausta: rgba(53, 39, 26, 0.55);
+    --overlay-card: rgba(46, 33, 20, 0.88);
+    --overlay-line: rgba(217, 161, 59, 0.45);
+    --paper: #efdcb4;
+    --paper-dark: #dcc08f;
+    --map-ink: #46331f;
+    --map-ink-soft: #8a6c46;
+    --sea-ink: #6e6350;
+    --mark: #b03a2b;
+    --raja-muste: #6b5539;
+    --kerma: #faf4d6;
+    --tk-kesto-avaus: 220ms;
+    --tk-kesto-sulku: 200ms;
+    --tk-kesto-liuku: 240ms;
+    --tk-kesto-maksimi: 250ms;
+    --tk-paperi-pinta: #f5f0e2;
+    --tk-paperi-pergamentti: #ecd8ae;
+    --tk-paperi-muste: #211d18;
+    --tk-paperi-muste-pehmea: #5c4a32;
+    --tk-paperi-korostus: #7a5514;
+    --tk-paperi-reunus: rgba(70, 51, 31, 0.3);
+    --tk-paperi-toiminto: #d9a13b;
+    --tk-tumma-pinta: #201a14;
+    --tk-tumma-muste: #f1e6d0;
+    --tk-tumma-muste-pehmea: #c9b48f;
+    --tk-tumma-korostus: #d9a13b;
+    --tk-tumma-reunus: rgba(217, 161, 59, 0.38);
+    --tk-tumma-toiminto: #d9a13b;
+    --tk-lasi-pinta: rgba(46, 33, 20, 0.88);
+    --tk-lasi-pinta-peitto: #2e2114;
+    --tk-lasi-muste: #f3e6d0;
+    --tk-lasi-muste-pehmea: #c9b48f;
+    --tk-lasi-korostus: #d9a13b;
+    --tk-lasi-reunus: rgba(217, 161, 59, 0.45);
+    --tk-lasi-toiminto: #d9a13b;
+    --tk-lasi-avaruus-pinta: rgba(4, 12, 9, 0.9);
+    --tk-lasi-avaruus-pinta-peitto: #040c09;
+    --tk-lasi-avaruus-muste: #dff6e8;
+    --tk-lasi-avaruus-muste-pehmea: #9fc9b0;
+    --tk-lasi-avaruus-korostus: #5dffa8;
+    --tk-lasi-avaruus-reunus: rgba(93, 255, 168, 0.28);
+    --tk-lasi-avaruus-toiminto: #5dffa8;
+    --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
+    --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
+    --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
+    --tk-koko-kapiteeli: 12px;
+    --tk-koko-apuri: 14px;
+    --tk-koko-leipa: 16px;
+    --tk-koko-valiotsikko: 18px;
+    --tk-koko-otsikko: 21px;
+    --tk-koko-arkki: 26px;
+    --tk-koko-nimio: 34px;
+    --tk-koko-leveaLisa: 2px;
+    --tk-vali-xs: 4px;
+    --tk-vali-s: 8px;
+    --tk-vali-m: 12px;
+    --tk-vali-l: 16px;
+    --tk-vali-xl: 24px;
+    --tk-kulma-pieni: 6px;
+    --tk-kulma-nappi: 10px;
+    --tk-kulma-kortti: 12px;
+    --tk-kulma-pilleri: 999px;
+    --tk-nappi-korkeus: 38px;
+    --tk-nappi-osuma: 44px;
+    --tk-nappi-laukaisin: 64px;
+    --tk-leveys-kapea: 600px;
+    --tk-leveys-levea: 940px;
+    --tk-leveys-kortti: 420px;
+    --tk-leveys-minipopup: 320px;
+    --tk-leveys-paneeli: 350px;
+    --tk-leveys-sivukortti: 400px;
+    --tk-leveys-lukupalsta: 640px;
+    --tk-leveys-lehti: 960px;
+    --tk-peitto-max: 45%;
+    --tk-peitto-ohjain: 25%;
+    --tk-peitto-kamera: 20%;
+    --tk-peitto-laajennettu: 85%;
+    --tk-kuva-upotus-leveys: 40%;
+    --tk-kuva-galleria-korkeus: 64px;
+}
+
+.tk-teema-paperi {
+    --tk-pinta: var(--tk-paperi-pinta);
+    --tk-pergamentti: var(--tk-paperi-pergamentti);
+    --tk-muste: var(--tk-paperi-muste);
+    --tk-muste-pehmea: var(--tk-paperi-muste-pehmea);
+    --tk-korostus: var(--tk-paperi-korostus);
+    --tk-reunus: var(--tk-paperi-reunus);
+    --tk-toiminto: var(--tk-paperi-toiminto);
+}
+.tk-teema-tumma {
+    --tk-pinta: var(--tk-tumma-pinta);
+    --tk-muste: var(--tk-tumma-muste);
+    --tk-muste-pehmea: var(--tk-tumma-muste-pehmea);
+    --tk-korostus: var(--tk-tumma-korostus);
+    --tk-reunus: var(--tk-tumma-reunus);
+    --tk-toiminto: var(--tk-tumma-toiminto);
+}
+.tk-teema-lasi {
+    --tk-pinta: var(--tk-lasi-pinta);
+    --tk-pinta-peitto: var(--tk-lasi-pinta-peitto);
+    --tk-muste: var(--tk-lasi-muste);
+    --tk-muste-pehmea: var(--tk-lasi-muste-pehmea);
+    --tk-korostus: var(--tk-lasi-korostus);
+    --tk-reunus: var(--tk-lasi-reunus);
+    --tk-toiminto: var(--tk-lasi-toiminto);
+}
+.tk-teema-lasi-avaruus {
+    --tk-pinta: var(--tk-lasi-avaruus-pinta);
+    --tk-pinta-peitto: var(--tk-lasi-avaruus-pinta-peitto);
+    --tk-muste: var(--tk-lasi-avaruus-muste);
+    --tk-muste-pehmea: var(--tk-lasi-avaruus-muste-pehmea);
+    --tk-korostus: var(--tk-lasi-avaruus-korostus);
+    --tk-reunus: var(--tk-lasi-avaruus-reunus);
+    --tk-toiminto: var(--tk-lasi-avaruus-toiminto);
+}

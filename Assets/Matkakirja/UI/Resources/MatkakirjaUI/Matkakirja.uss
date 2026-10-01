@@ -9,20 +9,7 @@
  * Siirtymät: USS ei tue cubic-bezieriä, joten lähin nimetty käyrä.
  */
 
-:root {
-    --bg: #1d1610;
-    --panel: #2a1f16;
-    --panel-2: #35271a;
-    --line: #4b3826;
-    --ink-light: #f3e6d0;
-    --muted: #b39c7d;
-    --accent: #d9a13b;
-    --accent-dark: #8a6114;
-    --kulta: #eab84e;
-    --map-ink: #46331f;
-    --map-ink-soft: #8a6c46;
-    --rivi-tausta: rgba(53, 39, 26, 0.55);
-}
+/* :root-tokenit (--bg … --rivi-tausta) tulevat Tyylikirja.uss:stä (generoitu tyylikirja.json:sta, tuodaan ensin). */
 
 .mk-juuri {
     -unity-font-definition: url("../../../Fontit/EBGaramond.ttf");
