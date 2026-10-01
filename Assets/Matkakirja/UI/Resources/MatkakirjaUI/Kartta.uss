@@ -2249,3 +2249,13 @@
 .mk-maakunnat__ohje {
     color: rgba(70, 51, 31, 0.7);
 }
+
+/* Vetokahvan osuma-alue (Pohja.cs Vetokahva): 120 × 26 pt kortin yläreunassa, sisällä .mk-nosto__kahva. */
+.mk-vetokahva {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120px;
+    height: 26px;
+    margin-left: -60px;
+}
