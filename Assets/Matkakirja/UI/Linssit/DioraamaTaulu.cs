@@ -29,6 +29,8 @@ namespace Matkakirja.Natiivi
         readonly List<(Label Lappu, Rect Rect)> sijoitukset = new List<(Label, Rect)>();
 
         bool puluPiilotettu;
+        string puluTurvaLoki;
+        float puluTurvaAika = -10f;
         readonly Button kuoriNappi, paluuNappi;
         readonly VisualElement etsintaKortti;
         readonly Label etsintaOtsikko, etsintaTeksti;
@@ -403,8 +405,11 @@ namespace Matkakirja.Natiivi
                         var sa = Screen.safeArea;
                         float vasen = sa.xMin * sk + 4f, oikea = jw - (Screen.width - sa.xMax) * sk - 4f;
                         float yla = (Screen.height - sa.yMax) * sk + 4f, ala = jh - sa.yMin * sk - 4f;
+                        var ennen = paneeliste;
                         paneeliste.x = Mathf.Clamp(paneeliste.x, vasen + puluLeveys * 0.5f, Mathf.Max(vasen + puluLeveys * 0.5f, oikea - puluLeveys * 0.5f));
                         paneeliste.y = Mathf.Clamp(paneeliste.y, yla + koko, Mathf.Max(yla + koko, ala));
+                        string loki = $"safeArea {sa}, ruutu {Screen.width}x{Screen.height}, paneeli {jw:0}x{jh:0}, rajat x {vasen:0}–{oikea:0} y {yla:0}–{ala:0}, piste {ennen.x:0},{ennen.y:0} → {paneeliste.x:0},{paneeliste.y:0}";
+                        if (loki != puluTurvaLoki && Mathf.Abs(Time.unscaledTime - puluTurvaAika) > 2f) { puluTurvaLoki = loki; puluTurvaAika = Time.unscaledTime; Debug.Log("MATKAKIRJA dioraama pulu turva: " + loki); }
                     }
                 }
                 pulu.style.left = paneeliste.x - puluLeveys * 0.5f;
