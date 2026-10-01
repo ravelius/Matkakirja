@@ -15,6 +15,9 @@
 - **Ydin** `Linssit/Ydin/IssKamera/` (Unitysta riippumaton): Cog, Utm, Kuvasuunnitelma, Uudelleenprojisointi, Pilvikentta,
   S2Indeksi, KuvanTyosto, Valotus. **Testit** `Linssit-testit/Testit/IssKamera*` 20/20; verkkotestit lipuilla (COG_URL,
   INDEKSI_JSON + AUKKO_PPM/TASOT_PPM, PILVIMASKI=1).
+- **Kaari ja utu** (haara `linssiseppa2/kaari-saatimet-2`, sis. Linssiseppä 1:n 44085dd0; LS1 kuittasi 1.10., että vien sen tämän
+  mukana): Ilmakeha2 `_HrKerroin`, `_SiniKerroin`, `_UtuKerroin` (kylläinen sininen lisäsironta), `_KaariYdin`, `_KaariSyva`;
+  vain kuvaputkessa, oletuksilla ennallaan; komennot `astro kyyti kaarihr|kaarisini|utu|kaariydin|kaarisyva x`.
 - **Muut:** `IssSiluetti.Sumeus` (bokeh), `Avaruus.KuvaputkiAsetettu` kuvan ajaksi, testikomennot
   `astro kyyti kuvaa [4:5|9:16|4:3] [leveys] | tila | laatat 0|1 | odotus <s> | sarja <n>`.
 
@@ -33,4 +36,5 @@ Omistajan raja ~100 Mt/kuva (1.10.). Muisti: laatat pakattuina, purku rajattuun 
 ## Avoinna ennen junaa
 - Fyysisen iPadin (00008103) muisti ja aika (Natiivisepän ehto) — ei vielä mitattu.
 - Rajausruutu, muotovalinta ja edistymisilmaisin: Natiivi-UI:n kameran päällyspohja (omistaja hyväksyy).
-- Pilvet viistossa (harvennus 7865c470 kokeilussa).
+- Pilvet: peitto kasvaa etäisyyden mukaan (59c9bbe2), kaukana isot kirkkaat kentät (ca6fdee6); lopulliset arvot Päätoimittajan
+  hyväksynnällä (omistajan Cupola-mallikuva) → oletuksiksi kameraan ennen merge-pyyntöä.
