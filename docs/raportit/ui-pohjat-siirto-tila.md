@@ -13,7 +13,7 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 | 3 Pohjavahti | #3783 `tools/pohjavahti.mjs` + testi | `natiivi-ui/pohjavahti` d045f8d1: tyokalut/pohjavahti.py tarkista.sh:ssa | lähtötasot kirjattu |
 | 2c maakuntakortti + kontrasti | – | `natiivi-ui/pohjat-2` 428eae09: Pohja.NostokortinPaikka + Vetokahva, keksintöpaneelin 2,2:1 | käännös ~12.50 |
 | Perusta (natiivi) | – | `natiivi-ui/pohjat-perusta` 1b89dccd = 1–3 + Pohja.NostokortinPaikka/Vetokahva, sivukortti yläpalkin alle | merge-pyyntö Natiivisepälle 1.10. ~13.40 |
-| Pinnat omina haaroinaan | Pelikoodari: kohdenosto web-pohjaan | `pohja-kohdekortti` 60e66e6c, `pohja-maakunta` 7275473b, `pohja-avauskortti` 6402bf4d, `kontrasti-keksinnot` b29768df | todennettu 0c34c00e (iPhone + iPad), merge-pyynnössä |
+| Pinnat omina haaroinaan | Pelikoodari: kohdenosto web-pohjaan | `pohja-kohdekortti` 60e66e6c, `pohja-maakunta` 7275473b, `pohja-avauskortti` 6402bf4d | juna 99 (juna/b13 735aaf55); `kontrasti-keksinnot` PUDOTETTU: web on sama #6b4d1c (pariteetti = ei muutosta, Päätoimittaja 1.10.) |
 
 ## Pinnat pohjiin (natiivi)
 
@@ -28,6 +28,8 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 | PULU | – | chat-teema tokeneista, valinta- ja opetustaulu samaan rakenteeseen | – |
 
 ## Avoimet
+
+- Ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus): tyylikirjan kontrastiehto poistettu (web a5b06c422 #3783, natiivi `natiivi-ui/tyylikirja-2` 850be8c8 seuraavaan junaan).
 
 - Webin `--kulta` on määrittelemätön (var(--kulta, #eab84e) / #d9a13b / ilman varaa): Pelikoodari yhtenäistää KORTTI-siirrossa.
 - Kuollut koodi (taikalasit-nappi, Muut-paneeli, .mk-minipuluKortti*, USS-tuplat) poistetaan kunkin pinnan siirrossa.
