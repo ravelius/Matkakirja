@@ -280,8 +280,12 @@ namespace Matkakirja.Natiivi
                 // Tasot tarkimmasta juureen (KuvanTyosto.PiirraKaikki): lehti datasta, isä lapsistaan.
                 var tyot = Task.Run(() => ty.PiirraKaikki((l, rgba) =>
                 {
-                    for (int i = 3; i < rgba.Length; i += 4) rgba[i] = 255;   // täyttö merkitty alfalla 254 → kuvaan läpinäkymättömänä
-                    var png = ImageConversion.EncodeArrayToPNG(rgba, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
+                    // EncodeArrayToPNG olettaa rivin 0 alimmaksi (Unityn tekstuurijärjestys); laatassa rivi 0 = pohjoinen → käännetään.
+                    // Laitekoe 6 (kaistadiagnoosi 1.10.): kääntämättä jokainen laatta oli pystysuunnassa peilattu → vaakakaistat.
+                    var kaanto = new byte[rgba.Length];
+                    for (int y = 0; y < 256; y++) Buffer.BlockCopy(rgba, y * 1024, kaanto, (255 - y) * 1024, 1024);
+                    for (int i = 3; i < kaanto.Length; i += 4) kaanto[i] = 255;   // täyttö merkitty alfalla 254 → kuvaan läpinäkymättömänä
+                    var png = ImageConversion.EncodeArrayToPNG(kaanto, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
                     var polku = Path.Combine(laatat, ty.Polku(l.z, l.x, l.y) + ".png");
                     Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, png);
                 }, ytimia, meri, n => kirjoitettu = n));
