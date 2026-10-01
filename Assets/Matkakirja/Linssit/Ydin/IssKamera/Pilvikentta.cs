@@ -6,6 +6,8 @@
 //
 //   peitto    0,20 + 0,11·iso(100 km) + 0,07·meso(21 km), enintään 0,42, × rantakerroin (maa-osuus ~8 km säteellä)
 //   kenttä    0,60·jonot(3,7 km, 3,5× tuulen suuntaan) + 0,70·solut(1,3 km) + 0,32·hieno(0,5 km), kynnys peiton kvantiilista
+//   kauko     peittoK 1 → 1,85 (kaukana): kenttä painottuu 14 km:n rakenteeseen (isot yhtenäiset kentät), peitto ja kirkkaus
+//             nousevat (Päätoimittaja 1.10. 20.3x omistajan Cupola-mallikuvasta: "pilvikentät kirkkaan valkoisia horisonttiin asti")
 //   valo      auringon puoli kirkas, varjopuoli harmaampi; varjo pilven korkeudelta 1,2–1,8 km auringon atsimuutin mukaan
 using System;
 
@@ -27,7 +29,7 @@ namespace Matkakirja.Linssit.IssKamera
         /// </summary>
         public double PeittoKerroin = 0.6;
 
-        const double Iso = 100000, Meso = 21000, Jono = 3700, Solu = 1300, Hieno = 500, Venytys = 3.5;
+        const double Iso = 100000, Meso = 21000, Kentta = 14000, Jono = 3700, Solu = 1300, Hieno = 500, Venytys = 3.5;
         readonly double[] kynnys = new double[201];
         double hajonta = 1;
 
@@ -55,12 +57,12 @@ namespace Matkakirja.Linssit.IssKamera
         public (double alfa, double kirkkaus, double varjo) Nayte(double lat, double lon, double peittoK = 1)
         {
             var (x, y) = Metrit(lat, lon);
-            double d = Tiheys(x, y, lat, lon, true, peittoK);
-            double alfa = Askel(0, 0.55, d) * 0.97;
+            double d = Tiheys(x, y, lat, lon, true, peittoK), w = Kauko(peittoK);
+            double alfa = Askel(0, 0.55 - 0.25 * w, d) * (0.97 + 0.03 * w);
             // aurinkoa kohti 2,5 × 153 m: jos tiheys kasvaa aurinkoa kohti, olemme varjopuolella
             double az = AurinkoAz * Math.PI / 180, sx = Math.Sin(az), sy = Math.Cos(az);
             double dk = Tiheys(x + sx * 380, y + sy * 380, lat, lon, true, peittoK);
-            double kirkkaus = Math.Max(0.70, Math.Min(1.0, 0.95 - 0.55 * (dk - d)));
+            double kirkkaus = Math.Max(0.70 + 0.22 * w, Math.Min(1.0, 0.95 + 0.05 * w - 0.55 * (dk - d)));
             double varjo = 0;
             double tanEl = Math.Tan(Math.Max(3, AurinkoKorkeus) * Math.PI / 180);
             // Pilven paksuus 1,2–1,8 km seitsemällä korkeudella (kolme erillistä tuotti kolminkertaiset varjot).
@@ -92,14 +94,21 @@ namespace Matkakirja.Linssit.IssKamera
             return (alfa, kirkkaus);
         }
 
+        /// <summary>Kaukoalueen paino 0 (peittoK ≤ 1) … 1 (peittoK ≥ 1,85).</summary>
+        static double Kauko(double peittoK) => Askel(1.0, 1.85, peittoK);
+
         double Tiheys(double x, double y, double lat, double lon, bool hieno = true, double peittoK = 1)
         {
             double ranta = MaaOsuus == null ? 1 : Askel(0.80, 0.97, MaaOsuus(lat, lon));
-            double peitto = Math.Max(0, Math.Min(0.42 * Math.Max(1, peittoK), (0.20 + 0.11 * Kohina(x / Iso, y / Iso, 11) + 0.07 * Kohina(x / Meso, y / Meso, 12)) * peittoK)) * ranta * PeittoKerroin;
+            double w = Kauko(peittoK), pk = PeittoKerroin + (1 - PeittoKerroin) * w;
+            double peitto = Math.Max(0, Math.Min(0.42 * Math.Max(1, peittoK), (0.20 + 0.11 * Kohina(x / Iso, y / Iso, 11) + 0.07 * Kohina(x / Meso, y / Meso, 12)) * peittoK)) * ranta * pk;
             if (peitto <= 0.001) return -10;
             double k = peitto * 200; int i = (int)k; double t = k - i;
             double T = i >= 200 ? kynnys[200] : kynnys[i] * (1 - t) + kynnys[i + 1] * t;
-            return Raaka(x, y, hieno) / hajonta - T;
+            double r = Raaka(x, y, hieno) / hajonta;
+            // Kaukana isot kentät: hajonta pysyy ~1 (0,5² + 0,9² ≈ 1), joten peiton kvantiilit pätevät likimain.
+            if (w > 0) r = r * (1 - 0.5 * w) + 0.9 * w * Kohina(x / Kentta, y / Kentta, 13);
+            return r - T;
         }
 
         double Raaka(double x, double y, bool hieno = true)
