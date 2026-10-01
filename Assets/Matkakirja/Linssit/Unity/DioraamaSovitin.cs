@@ -213,7 +213,7 @@ namespace Matkakirja.Natiivi
             ViimeisinNakyma = nakyma;
             ViimeisinT = t;
 
-            var kameraAsento = syote.Sovita(nakyma.Kamera);
+            var kameraAsento = pakotettuKamera ?? syote.Sovita(nakyma.Kamera);
             // t mukaan (era 2): DioraamaNayttamo.Paivita antaa sen liekkinäkymälle (DioraamaLiekit.Paivita, ruutu
             // ajasta) -- nayttamo-kentän kommentti kutsui juuri tätä ("Sovitin voi jatkossa antaa Ydin-ajan tähän").
             nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t);
@@ -381,6 +381,15 @@ namespace Matkakirja.Natiivi
             nayttamo?.AsetaTunnelma(DioraamaTunnelma.Hamara(rakennus));
             if (rakennus?.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
             o.StartCoroutine(nayttamo.Ulkokuori.Lataa(rakennus.Ulkokuori, s => peili(paketinJuuri + s), o.Kirjaa, DioraamaTunnelma.Hamara(rakennus)));
+            // Boat Attack -järvi aina kuoren kanssa (Päätoimittaja 1.10.: vesi toimii myös ilman ympäristöpakettia, tuotannossa v17);
+            // maasto, puut, horisontti ja syvyyskartta vain, kun paketissa on ympäristö (#3749 jälkeen). Maalattu järvi vain,
+            // jos näyttämöllä ei ole ympäristöä (varjostin puuttuu tms.).
+            if (nayttamo.Ymparisto != null)
+            {
+                nayttamo.Ulkokuori.LisaaVesi(null, 0, 1);
+                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto ?? new Ymparisto(), (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa));
+                return;
+            }
             // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).
             double toisto = rakennus.Pinnat != null && rakennus.Pinnat.TryGetValue("vesi", out var vp) && vp.ToistoU > 0 ? vp.ToistoU : 8;
             nayttamo.Ulkokuori.LisaaVesi(rakennus3D?.PinnanMateriaali(rakennus, "vesi"), (float)rakennus.Ulkokuori.VesiY, (float)toisto);
@@ -688,6 +697,28 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"poikki: mikseri {(DioraamaAanet.MikseriTila ? "päällä" : "pois")}, kaiku {(DioraamaAanet.KaikuPois ? "pois" : DioraamaAanet.KaikunPituus)}, huone {DioraamaAanet.NykyinenHuone ?? "(yleis)"}");
                 return;
             }
+            // "poikki kamera <atsimuutti> <korkeus> <etäisyys> [fov] [x y z] | pois": kiinteä kamera kuvauksiin (vesi, ympäristö).
+            if (mita == "kamera")
+            {
+                if (arvo == null || arvo == "pois") pakotettuKamera = null;
+                else if (osat.Length > 4)
+                {
+                    Matkakirja.Linssit.Dioraama.V3 kohde = osat.Length > 8 ? new Matkakirja.Linssit.Dioraama.V3(Luku(osat[6]), Luku(osat[7]), Luku(osat[8])) : rakennus != null ? rakennus.YleisVaaka.Kohde : new Matkakirja.Linssit.Dioraama.V3(0, 0, 0);
+                    pakotettuKamera = new Matkakirja.Linssit.Dioraama.Asento(kohde, Luku(osat[2]), Luku(osat[3]), Luku(osat[4]), osat.Length > 5 ? Luku(osat[5]) : 40, 0.3);
+                }
+                o.Kirjaa("poikki: kamera " + (pakotettuKamera.HasValue ? $"{pakotettuKamera.Value.Atsimuutti:F0}° {pakotettuKamera.Value.Korkeus:F0}° {pakotettuKamera.Value.Etaisyys:F0} m" : "pois"));
+                return;
+            }
+            // "poikki vesi [heijastus 0|1|auto]": järven planaariheijastus (Boat Attack -vesi, 1.10.2026) ja ympäristön tila.
+            if (mita == "vesi")
+            {
+                if (arvo == "heijastus" && osat.Length > 3)
+                    DioraamaYmparisto.HeijastusPakotettu = osat[3] == "0" ? false : osat[3] == "1" ? true : (bool?)null;
+                // "poikki vesi siirto <m>": vedenpinta alas/ylös vianetsintään (näkyykö maa veden alla), 0 = datan taso.
+                if (arvo == "siirto" && osat.Length > 3) nayttamo?.Ymparisto?.SiirraVesi((float)Luku(osat[3]));
+                o.Kirjaa($"poikki: vesi: ympäristö {nayttamo?.Ymparisto?.Tila ?? "-"}, heijastus {(DioraamaYmparisto.HeijastusPakotettu.HasValue ? (DioraamaYmparisto.HeijastusPakotettu.Value ? "päällä" : "pois") : "auto")}");
+                return;
+            }
             // "poikki detalji [0|1|auto]": kuoren lähidetalji päälle/pois vertailua varten (menetelmä B, 30.9.2026).
             if (mita == "detalji")
             {
@@ -715,7 +746,7 @@ namespace Matkakirja.Natiivi
                 rakennus = null; latausKaynnissa = false;
                 NollaaNakymanLataukset();
                 rakennus3D?.Tyhjenna(); hahmot3D?.Tyhjenna(); nayttamo?.Hahmot3D?.Tyhjenna(); nayttamo?.Liekit?.Tyhjenna();
-                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
+                nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Ymparisto?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
@@ -822,6 +853,9 @@ namespace Matkakirja.Natiivi
             else if (mita != "tila") { o.Kirjaa("poikki: tuntematon " + mita); return; }
             o.Kirjaa(Tilaraportti());
         }
+
+        /// <summary>Kehittäjän kiinteä kamera ("poikki kamera"), null = linssin oma.</summary>
+        Matkakirja.Linssit.Dioraama.Asento? pakotettuKamera;
 
         static double Luku(string s) => double.Parse(s.Replace(',', '.'), CultureInfo.InvariantCulture);
 
