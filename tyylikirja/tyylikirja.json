@@ -73,6 +73,21 @@
     "kevyt": "rgba(14, 9, 4, 0.35)",
     "kuva": "rgba(14, 9, 4, 0.92)"
   },
+  "tila": {
+    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana.",
+    "onnistuminen": "#2f6b3f",
+    "virhe": "#b03a2b"
+  },
+  "kentta": {
+    "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026): tekstikenttä, alue ja valinta lomakkeissa (palaute, sähke). ALUSTAVAT arvot: Pelikoodari vahvistaa webin kenttätyylistä ennen käyttöä; korkeus = napin korkeus.",
+    "korkeus": 38,
+    "kulma": 8,
+    "pinta": "#fffaf0",
+    "reunus": "rgba(70, 51, 31, 0.3)",
+    "fokus": "#d9a13b",
+    "muste": "#211d18",
+    "vihje": "rgba(33, 29, 24, 0.55)"
+  },
   "typografia": {
     "_selite": "Seitsemän porrasta (pt). LEVEÄ- ja KESKI-luokassa portaat leipa…arkki +2 (leveaLisa). Kirjasin = natiivin Kirjasin-enum ja webin fonttipino.",
     "kapiteeli": { "koko": 12, "kirjasin": "Kone", "harvennus": 0.12 },
@@ -130,6 +145,8 @@
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
     "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi-avaruus"], "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)" },
-    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus"] }
+    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus"] },
+    "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
+    "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }
 }
