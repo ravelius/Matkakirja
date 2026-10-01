@@ -11,9 +11,9 @@ vain se, mikä löytyi.
 Mylly oli 1800-luvun Euroopassa tuttu peli majataloissa ja kodeissa, ja saksaksi sitä kutsutaan nimellä Mühle.
 Pelilauta on yksinkertainen: kolme sisäkkäistä neliötä, joita yhdistävät viivat.
 
-**Katedraali 1300-luku**
-Keskiajalla myllylautoja raaputettiin englantilaisten katedraalien ristikäytävien kivipenkkeihin, esimerkiksi Canterburyssä, Gloucesterissa, Salisburyssä ja Westminster Abbeyssa.
-Kivessä ei ole viivoja vaan pieniä kuoppia, joihin nappulat asetettiin.
+**Luostari 1300-luku** (ehdotus; vanha otsikko "Katedraali" — ks. osio 6, odottaa Päätoimittajan päätöstä)
+Keskiajan rakentajat jättivät myllylautoja rakennusmateriaaleihin: Belgian Koksijden Duinenabdij-luostarin tiileen lauta on piirretty märkään saveen ennen polttoa, ja Newcastlen linnassa se on kaiverrettu kivilohkoon.
+Molemmissa on myllyn tuttu kuvio, kolme sisäkkäistä neliötä ja 24 pistettä.
 
 **Viikinkilaiva noin 900**
 Norjan Gokstadin laivahaudasta löytyi pelilauta, jonka toisella puolella on hnefatafl-peli ja toisella mylly.
@@ -35,7 +35,7 @@ Usein kerrotaan, että myllyn vanhin lauta on Egyptin Kurnan temppelin kattolaat
 
 **Keskiajan lautoja ja kirja vuodelta 1283**
 
-Varmempaa maata on keskiaika. Englannin katedraaleista on löytynyt kivipenkkeihin tehtyjä lautoja, ja Gokstadin viikinkilaivasta noin vuoden 900 paikkeilta lauta, jonka toisella puolella pelattiin hnefataflia. Kastilian kuningas Alfonso X:n *Libro de los juegos* (Pelien kirja, valmistunut Toledossa 1283) kuvaa pelin nimellä *alquerque de nueve* ("yhdeksän alquerque") ja esittelee sen myös nopalla pelattavan version. Saksalaisen Wikipedian mukaan se on pelin varhaisin kuvaus jollakin eurooppalaisella kielellä.
+Varmempaa maata on keskiaika. Belgiassa Koksijden Duinenabdij-luostarin 1200–1300-luvuilta olevaan tiileen on piirretty myllylauta ennen kuin tiili poltettiin, ja Newcastlen linnan kaivauksista on löytynyt kivilohko, johon on kaiverrettu myllylauta. Englannin katedraalien ristikäytävien kivipenkkeihin on raaputettu pelilautoja Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä ja Westminster Abbeyssa, mutta ne ovat lähisukuista "nine holes" -peliä: laudat on tehty reikinä, eikä vinorivi tuonut voittoa. Gokstadin viikinkilaivasta noin vuoden 900 paikkeilta on löytynyt lauta, jonka toisella puolella on hnefatafl ja toisella mylly. Kastilian kuningas Alfonso X:n *Libro de los juegos* (Pelien kirja, valmistunut Toledossa 1283) kuvaa pelin nimellä *alquerque de nueve* ("yhdeksän alquerque") ja esittelee sen myös nopalla pelattavan version. Saksalaisen Wikipedian mukaan se on pelin varhaisin kuvaus jollakin eurooppalaisella kielellä.
 
 **Shakespearen mutaa**
 
@@ -81,8 +81,8 @@ Jokaiselle laudalle 2–3 lausetta: mikä aito esikuva on, missä se nyt on, mil
 **Majatalo 1873 — alkuperä**
 Lauta perustuu yleiseen 1800-luvun saksalaiseen Mühle-lautaan: kolme sisäkkäistä neliötä, joita yhdistävät viivat. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kotien ja majatalojen pelilautaa.
 
-**Katedraali 1300-luku — alkuperä**
-Esikuvana ovat englantilaisten katedraalien ristikäytävien kivipenkkeihin raaputetut keskiaikaiset pelilaudat, joita on Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä ja Westminster Abbeyssa. Ne ovat yhä paikoillaan ristikäytävissä; Gloucesterin laudat ovat lähteen mukaan munkkien, noviisien ja laulupoikien vapaa-ajan jälkiä. Laudat on tehty kuopista viivojen sijaan, eikä vinorivi tuonut voittoa.
+**Luostari 1300-luku — alkuperä** (ehdotus, ks. osio 6)
+Esikuvana on tiili Koksijden Duinenabdij-luostarista Belgiasta, ajoitettu 1200–1300-luvuille. Myllylauta, jossa on 24 pistettä, on piirretty tiileen sen ollessa vielä märkää savea, ennen polttoa. Tiili on luostarin museon (Abbey Museum of the Dunes) kokoelmissa, inventaarionumero 33880.
 
 **Viikinkilaiva noin 900 — alkuperä**
 Esikuvana on Gokstadin laivahaudasta Norjasta löytynyt puinen pelilauta ja yksi sarvesta tehty pelinappula. Laudan toisella puolella on 13×13 ruutua (hnefatafl) ja toisella mylly; haudan laiva on rakennettu noin vuonna 890 kaadetuista puista, ja kaivaukset tehtiin vuonna 1880. Lauta on Oslon yliopiston Kulttuurihistoriallisen museon kokoelmissa; laudasta on säilynyt vain osa, eikä siinä ole merkintöjä, jotka tunnistaisivat sen peliksi epäilyksettä, joten tulkinta perustuu sen kokoon ja muotoon.
@@ -104,3 +104,17 @@ Esikuvana on Gokstadin laivahaudasta Norjasta löytynyt puinen pelilauta ja yksi
 11. **Katedraalit:** "keskiaikainen" on kaikki, mitä lähteistä saa; yksittäisten laudojen tarkka ikä ei löytynyt. Gloucesterin ristikäytävä on 1350–1390-luvulta, mutta se ei ajoita laudat (laudat voivat olla myöhempiäkin). Westminster Abbeyn ja Canterburyn laudoista ei löytynyt tarkempaa sijaintia ristikäytävässä, eikä ristikäytävien nykyisestä tilasta kuin Gloucesterista (osa laudoista peittyy graffiteihin tai korjauksiin).
 12. **Gokstad:** museo on Oslon yliopiston Kulttuurihistoriallinen museo (hakutuloksen mukaan; Viikinkilaivamuseo kuuluu siihen). Onko lauta juuri nyt esillä, en tiedä, joten kirjoitin "kokoelmissa". Laudasta säilynyt vain osa ja tunnistus perustuu kokoon ja muotoon; "toisella puolella hnefatafl, toisella mylly" on Wikipedian alaviite ja yleinen kuvaus, mutta siinä on epävarmuutta. Jos haluat varman muotoilun, kannattaa tarkistaa museon omasta tietokannasta (unimus.no).
 13. **Aiemman osion 1 Gokstad-teksti** on sama kuin yllä; sanamuodon "löytyi pelilauta, jonka toisella puolella on hnefatafl ja toisella mylly" voi pehmentää muotoon "lauta, jonka tulkitaan olleen kaksipuolinen".
+
+## 6. KORJAUS 1.10. (Päätoimittajan huomautus: katedraalilaudat eivät ole 24-pisteisiä myllylautoja)
+
+Päätoimittajan lukema on osin oikea: Wikipedia kirjoittaa katedraalien ristikäytävien lautojen käyttäneen **reikiä "yhdeksälle ruudulle"** ja että vinorivi ei voittanut (nine holes, 3 × 3), eli ne eivät ole 24-pisteisiä myllylautoja. Lähteet ovat kuitenkin ristiriitaisia: Gloucesterin katedraalien yhdistyksen sivu sanoo ristikäytävän penkkien lautojen olevan "fox and geese ja nine men's morris" -pelejä. En voi ratkaista lähteiden perusteella, mitkä yksittäiset laudat ovat 24-pisteisiä, joten otin katedraalilaudat pois lautatekstistä ja alkuperätekstistä ja mainitsen ne lehtijutussa "lähisukuisena nine holes -pelinä".
+
+**Löydetyt varmennetut keskiaikaiset MYLLYlaudat (ehdokkaat, paras ensin):**
+
+1. **Duinenabdij-tiili, Koksijde, Belgia** (SUOSITUS). Terrakottatiili, 1200–1300-luku, lauta piirretty märkään saveen ennen polttoa ("lines form a spelbord with 24 sections"), Abbey Museum of the Dunes, inv. 33880. Lähde: Wikimedia Commons, <https://commons.wikimedia.org/wiki/File:Brick_with_Nine_Men's_Morris_(the_mill_game),_inv.nr._33880.jpg> (kuvateksti ja kuvaus; kuvan lisenssi CC BY-SA 4.0). Tämä vastaa sisältönä Wisbechin tiiltä (tiilentekijät piirtävät lautaa ennen polttoa), ja on myllylauta, ja ajoitus sopii "1300-luvun" otsikkoon.
+2. **Newcastle Castle -kivilohko, Newcastle upon Tyne.** Rakennuskivi, jossa kolme sisäkkäistä neliötä ja risti = 24 pistettä; keskiaikainen (tarkkaa ajoitusta lähde ei anna); esillä Great North Museum: Hancockissa. Lähde: Newcastle Castle, <https://www.newcastlecastle.co.uk/castle-blog/morris>. Heikkous: ajoitus epätarkka; "muurarit pelasivat" on lähteen oletus, jota en käyttänyt.
+3. **Nevernin linna, Pembrokeshire, Wales.** 12. vuosisata, kaivauksissa 2008–2018 (Durhamin yliopisto, Chris Caple) löytyi kaksi täydellistä ja kymmenen osittaista myllylautaa; yksi lauta löytyi rikkinäisenä ja tulen vaurioittamana itähallin lattialta, ja linna paloi 1195. Lähde: People's Collection Wales, <https://www.peoplescollection.wales/items/2079566>. Heikkous: nykyinen sijainti ja materiaali eivät käy lähteestä ilmi.
+4. Muut (en käyttänyt): Opolen kirkon 1200-luvun kaiverrettu lauta Sleesiassa (vain hakutuloksessa, lähdettä ei avattu); Montfortin ristiretkeläislinna Galileassa (Israel — pois, koska uusi sisältö vain Eurooppaan).
+5. **Wisbechin tiili:** Wikipedia mainitsee "tiilen keskiaikaiselta paikalta Wisbechin lähellä" (lähde R. C. Bell 1979), mutta sivu ei kerro, mikä peli siinä on, enkä löytänyt toista lähdettä. En voi vahvistaa sitä myllyksi, joten ehdotan Duinenabdijin tiiltä sen tilalle.
+
+**Päätettävää Päätoimittajalle:** (a) Hyväksytäänkö Duinenabdij-tiili? (b) Lautavalinnan otsikko "Katedraali 1300-luku" → ehdotan "Luostari 1300-luku" (Duinenabdij on luostari, ei katedraali); jos otsikko halutaan pitää, vaihtoehto on Nevernin tai Newcastlen linna ("Linna 1100–1200-luku"/"Linna keskiaika").
