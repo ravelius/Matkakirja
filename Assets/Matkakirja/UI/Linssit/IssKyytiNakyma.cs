@@ -363,7 +363,7 @@ namespace Matkakirja.Natiivi
             poyta = new IssKytkinpoyta(turva,
                 k => Linssi()?.AsetaNopeus(k),
                 v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
-                AsetaKausi,
+                AsetaKausi, AsetaVuorokausi,
                 VaihdaLista, Kuvaa, Poistu,
                 PalaaLive);
             PaivitaPoydat(KyydinTila.Kauko);
@@ -518,6 +518,23 @@ namespace Matkakirja.Natiivi
             PaivitaSaatimet();
         }
 
+        /// <summary>LIVE-hetken vuorokaudenaika ISS:n alapisteessä auringon korkeudesta: yö &lt; −6°, ilta/aamu −6…20° (iltapäivä/aamupäivä), muuten päivä.</summary>
+        static int VuorokausiNyt()
+        {
+            var t = IssNyt.Kello(); var p = IssNyt.Paikka(t);
+            Matkakirja.Linssit.Iss.Aurinko.Alihajapiste(Matkakirja.Linssit.Iss.Aika.Jd(t), out double dekl, out double slon);
+            double r = Math.PI / 180, h = ((p.Lon - slon) % 360 + 540) % 360 - 180;
+            double e = Math.Asin(Math.Sin(p.Lat * r) * Math.Sin(dekl * r) + Math.Cos(p.Lat * r) * Math.Cos(dekl * r) * Math.Cos(h * r)) / r;
+            return e < -6 ? Vuorokausi.Yo : e > 20 ? Vuorokausi.Paiva : h < 0 ? Vuorokausi.Aamu : Vuorokausi.Ilta;
+        }
+
+        /// <summary>Vuorokaudenaika nupista (0–3: aamu, päivä, ilta, yö; Iss.Vuorokausi). LIVE-valo nollaa.</summary>
+        void AsetaVuorokausi(float v)
+        {
+            Vuorokausi.Valittu = Mathf.Clamp(Mathf.RoundToInt(v), 0, 3);
+            PaivitaSaatimet();
+        }
+
         /// <summary>Säätimien arvot ja tekstit tilasta (AstronauttiKerros: pilvien määrä, pakotettu kuukausi → vuodenaika).</summary>
         void PaivitaSaatimet()
         {
@@ -533,6 +550,10 @@ namespace Matkakirja.Natiivi
                 // Renderipaneelin kilvessä koko nimi (tarrakirjoitin), kehyksessä lyhenne.
                 poyta.Vuodenaika.Aseta(kausi, poyta.Asettelu != null ? nimi.ToUpperInvariant()
                     : (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kausi == nyt ? " •" : ""));
+                // Vuorokaudenaika: LIVE:nä nupin asento seuraa ISS:n alapisteen aurinkoa (lähin kausi), kilvessä "NYT".
+                int vk = Vuorokausi.Valittu ?? VuorokausiNyt();
+                string vn = Vuorokausi.Valittu.HasValue ? Vuorokausi.Nimet[vk].ToUpperInvariant() : "NYT";
+                poyta.Vuorokausi.Aseta(vk, poyta.Asettelu != null ? vn : (vn.Length > 3 ? vn.Substring(0, 3) : vn));
             }
         }
 

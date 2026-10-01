@@ -3,7 +3,7 @@
 //
 //   rivi 1  merkkivalo LIVE (vihreä LIVE, meripihka nopeutettu; napautus nopeutettuna = Palaa LIVE) · lukemanäyttö
 //           (rivi 1 = kyydin tietorivi ISS · 429 km · 27 550 km/h, rivi 2 = ylilento tai lennon kohde)
-//   rivi 2  NOPEUS kiertokytkin LIVE/10×/100×/1000× · PILVET nuppi · VUODENAIKA nuppi (kuukausi) · KOHDE painike
+//   rivi 2  NOPEUS kiertokytkin LIVE/10×/100×/1000× · PILVET nuppi · VUODENAIKA nuppi (kuukausi) · VUOROKAUSI nuppi · KOHDE painike
 //           (lista pöydän yläpuolelle) · KUVAA painike (ISS-kamera, 1.10.; aiemmin OMA-vipu) · SULKU painike
 //
 // Pöydän leveys ruutu − 24, enintään 560 pt, keskellä; korkeus ~116 pt (iPhone 874 pt: 13 %). Tekstit piirtää peli.
@@ -28,16 +28,16 @@ namespace Matkakirja.Natiivi
         public readonly IssKytkimet.Merkkivalo Live;
         public readonly IssKytkimet.Lukema Lukema;
         public readonly IssKytkimet.Kiertokytkin Nopeus;
-        public readonly IssKytkimet.Nuppi Pilvet, Vuodenaika;
+        public readonly IssKytkimet.Nuppi Pilvet, Vuodenaika, Vuorokausi;
         public readonly IssKytkimet.Painike Kohde, Kuvaa, Sulku;
 
         public const float PoytaEnintaan = 560f;
 
         readonly VisualElement ylarivi, saatimet;
         readonly IssKytkimet.Kytkin[] moduulit;
-        readonly string[] osaNimet = { "live", "lukema", "nopeus", "pilvet", "kuukausi", "kohde", "kuvaa", "poistu" };
+        readonly string[] osaNimet = { "live", "lukema", "nopeus", "pilvet", "kuukausi", "vuorokausi", "kohde", "kuvaa", "poistu" };
 
-        public IssKytkinpoyta(VisualElement isa, Action<int> nopeus, Action<float> pilvet, Action<float> kuukausi,
+        public IssKytkinpoyta(VisualElement isa, Action<int> nopeus, Action<float> pilvet, Action<float> kuukausi, Action<float> vuorokausi,
             Action kohde, Action kuvaa, Action sulku, Action palaaLive)
         {
             Juuri = new IssKytkimet.Pohja { name = "IssKytkinpoyta" };
@@ -66,12 +66,14 @@ namespace Matkakirja.Natiivi
             Pilvet = new IssKytkimet.Nuppi("PILVET", 0f, 1f, v => pilvet?.Invoke(v));
             // Vuodenaika (omistaja 1.10.): 0 talvi, 1 kevät, 2 kesä, 3 syksy (Matkakirja.Linssit.Iss.Vuodenaika); sama nuppi.
             Vuodenaika = new IssKytkimet.Nuppi("VUODENAIKA", 0f, 3f, v => kuukausi?.Invoke(v), kokonaisluku: true);
+            // Vuorokaudenaika (omistaja 1.10.): 0 aamu, 1 päivä, 2 ilta, 3 yö (Matkakirja.Linssit.Iss.Vuorokausi); sama nuppi, v4-paneeli.
+            Vuorokausi = new IssKytkimet.Nuppi("VUOROKAUSI", 0f, 3f, v => vuorokausi?.Invoke(v), kokonaisluku: true);
             Kohde = new IssKytkimet.Painike("KOHDE", "LENNÄ", () => kohde?.Invoke());
             // ISS-kamera (omistaja 1.10.2026, A): KUVAA korvaa OMA PAIKKA -vivun (oma paikka on KOHDE-listan rivinä); paneeli v3.
             Kuvaa = new IssKytkimet.Painike("KUVAA", "●", () => kuvaa?.Invoke());
             Sulku = new IssKytkimet.Painike("POISTU", "×", () => sulku?.Invoke(), leveys: 52f);   // ✕ puuttuu fontista (□)
-            foreach (var m in new VisualElement[] { Nopeus, Pilvet, Vuodenaika, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
-            moduulit = new IssKytkimet.Kytkin[] { Live, Lukema, Nopeus, Pilvet, Vuodenaika, Kohde, Kuvaa, Sulku };
+            foreach (var m in new VisualElement[] { Nopeus, Pilvet, Vuodenaika, Vuorokausi, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
+            moduulit = new IssKytkimet.Kytkin[] { Live, Lukema, Nopeus, Pilvet, Vuodenaika, Vuorokausi, Kohde, Kuvaa, Sulku };
             foreach (var m in moduulit) m.Muuttui += () => { if (asettelu != null) PaivitaKerrokset(); };
         }
 
@@ -171,9 +173,9 @@ namespace Matkakirja.Natiivi
         {
             if (m == Nopeus) return ("nopeus-0", Vector2.zero);
             if (m == Pilvet) return ("nuppi-00", Vector2.zero);
-            if (m == Vuodenaika)
+            if (m == Vuodenaika || m == Vuorokausi)
             {
-                var p = IssPaneeliKuvat.Osa(asettelu, "pilvet"); var k = IssPaneeliKuvat.Osa(asettelu, "kuukausi");
+                var p = IssPaneeliKuvat.Osa(asettelu, "pilvet"); var k = IssPaneeliKuvat.Osa(asettelu, m == Vuodenaika ? "kuukausi" : "vuorokausi");
                 return ("nuppi-00", p.HasValue && k.HasValue ? k.Value.center - p.Value.center : Vector2.zero);
             }
             if (m == Kohde) return ("kohde-ylos", Vector2.zero);
@@ -339,7 +341,7 @@ namespace Matkakirja.Natiivi
             Juuri.style.paddingLeft = 10; Juuri.style.paddingRight = 10; Juuri.style.paddingTop = 8; Juuri.style.paddingBottom = 6;
             ylarivi.style.display = DisplayStyle.Flex; saatimet.style.display = DisplayStyle.Flex;
             ylarivi.Add(Live); ylarivi.Add(Lukema);
-            foreach (var m in new IssKytkimet.Kytkin[] { Nopeus, Pilvet, Vuodenaika, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
+            foreach (var m in new IssKytkimet.Kytkin[] { Nopeus, Pilvet, Vuodenaika, Vuorokausi, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
             foreach (var m in moduulit)
             {
                 m.Kerros = false;
@@ -349,7 +351,7 @@ namespace Matkakirja.Natiivi
                 if (m is IssKytkimet.Saadin sd) { sd.Otsikko.style.display = DisplayStyle.Flex; sd.Kilpi.style.display = DisplayStyle.None; }
             }
             Live.Nimi.style.display = DisplayStyle.Flex;
-            Nopeus.style.width = 62; Pilvet.style.width = 62; Vuodenaika.style.width = 62; Kohde.style.width = 62; Kuvaa.style.width = 62;
+            Nopeus.style.width = 62; Pilvet.style.width = 62; Vuodenaika.style.width = 62; Vuorokausi.style.width = 62; Kohde.style.width = 62; Kuvaa.style.width = 62;
             Sulku.style.width = 52; Live.style.width = 44; Live.style.height = 36; Lukema.style.width = StyleKeyword.Null; Lukema.style.marginLeft = 6;
             if (valoRt != null) { valoRt.Release(); UnityEngine.Object.Destroy(valoRt); valoRt = null; }
             asettelu = null;
@@ -361,7 +363,7 @@ namespace Matkakirja.Natiivi
             string a = asettelu;
             if (osat.TryGetValue(Nopeus, out var on))
                 AsetaKuva(on, IssPaneeliKuvat.Kuva(a, "osa-nopeus-" + Mathf.Clamp(Nopeus.Asento, 0, 3)));
-            foreach (var n in new[] { Pilvet, Vuodenaika })
+            foreach (var n in new[] { Pilvet, Vuodenaika, Vuorokausi })
                 if (osat.TryGetValue(n, out var e)) AsetaKuva(e, IssPaneeliKuvat.Kuva(a, "osa-nuppi-" + IssPaneeliKuvat.NupinKehys(n.Kulma).ToString("00")));
             if (osat.TryGetValue(Kohde, out var ok)) AsetaKuva(ok, IssPaneeliKuvat.Kuva(a, Kohde.Painettu ? "osa-kohde-alas" : "osa-kohde-ylos"));
             if (osat.TryGetValue(Sulku, out var os)) AsetaKuva(os, IssPaneeliKuvat.Kuva(a, Sulku.Painettu ? "osa-poistu-alas" : "osa-poistu-ylos"));
