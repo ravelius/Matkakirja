@@ -213,10 +213,16 @@ namespace Matkakirja.Natiivi
         /// Cupola 3 on sommiteltu ruudulle valmiiksi (ikkuna 98 % iPhonen leveydestä), joten sitä suurennetaan vain 1,04 × ja
         /// ajelehdus puolitetaan (4 pt, 0,25°): liike ei paljasta kuvan reunoja, ja ikkuna pysyy pyöreänä.
         /// </summary>
-        const float Cupola3Yli = 1.04f, Cupola3Ajelehdus = 0.5f;
-        /// <summary>KOKEILU (omistaja 1.10. Päätoimittajan kautta, ei mergeä ennen valintaa): isompi Cupolan ikkuna-aukko, kehyksen
-        /// suurennos z (0 = oletus 1,04). Taustan maa on koko ruudun kokoinen, joten suurempi z näyttää enemmän maata. `astro kyyti ikkuna z`.</summary>
+        const float Cupola3Ajelehdus = 0.5f;   // suurennos: IkkunanOletus (aiemmin 1,04)
+        /// <summary>
+        /// Isompi Cupolan ikkuna-aukko (omistajan valinta 1.10. Päätoimittajan kautta): kehyksen suurennos laitteen ja asennon mukaan —
+        /// iPhone vaaka 2,0 (aukko lähes reunasta reunaan), pysty 1,25; iPad vaaka 1,45 (sama periaate 4:3-ruudulla), pysty 1,25.
+        /// Taustan maa on koko ruudun kokoinen, joten suurempi z näyttää enemmän maata. Testikomento `astro kyyti ikkuna z` (0 = oletus).
+        /// </summary>
         public static float IkkunanSuurennos;
+        public const float IkkunaPuhelinVaaka = 2f, IkkunaPuhelinPysty = 1.25f, IkkunaTablettiVaaka = 1.45f, IkkunaTablettiPysty = 1.25f;
+        static float IkkunanOletus(float w, float h, bool ipad) =>
+            w > h ? (ipad ? IkkunaTablettiVaaka : IkkunaPuhelinVaaka) : (ipad ? IkkunaTablettiPysty : IkkunaPuhelinPysty);
         /// <summary>Kuvan reunan vara (pt) keskitetyssä rajauksessa: ajelehdus 3,5–4 pt + kallistus ja skaala.</summary>
         const float Cupola3Vara = 8f;
         readonly float[] cupola3Painot = new float[3];
@@ -974,8 +980,8 @@ namespace Matkakirja.Natiivi
             // siirtyy laatikon sisällä cover-ylijäämän verran (taustakuva leikataan laatikkoon, cl19) ja loput laatikon siirtona.
             if (cupola3)
             {
-                z = IkkunanSuurennos > 0f ? IkkunanSuurennos : Cupola3Yli; kuvanYlareuna = 0f;
                 bool ipad = IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad;
+                z = IkkunanSuurennos > 0f ? IkkunanSuurennos : IkkunanOletus(W, H, ipad); kuvanYlareuna = 0f;
                 var d = IssKuvakulma.Cupola3Rajaus(W, H, ipad, Ohjaamo3Kulma, z, Cupola3Vara);
                 var (kl, kk) = IssKuvakulma.Cupola3Koko(ipad);
                 float s3 = Mathf.Max(W / (float)kl, H / (float)kk);
