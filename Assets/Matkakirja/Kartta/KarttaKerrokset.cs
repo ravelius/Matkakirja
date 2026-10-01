@@ -564,7 +564,12 @@ namespace Matkakirja
                 k.enabled = false;
             }
             k.materialKey = avain;
-            k.specifyTilingScheme = false;   // kierrätetty kerros voi tulla rajatusta jaosta (RasterinJako)
+            // Kierrätetty kerros voi tulla rajatusta jaosta (RasterinJako): oletukset takaisin. Pelkkä lippu ei riitä, koska
+            // juurilaattojen määrä vaikuttaa jakoon ilman sitäkin (S2-esitodennus 1.10.: s2 1 → 0 jälkeen reliefi 13 × 13 -jaolla,
+            // Egyptin laatat väärissä paikoissa).
+            k.specifyTilingScheme = false;
+            k.rootTilesX = 1; k.rootTilesY = 1;
+            k.rectangleWest = -180.0; k.rectangleSouth = -90.0; k.rectangleEast = 180.0; k.rectangleNorth = 90.0;
             k.templateUrl = Laattapalvelin.Paikallinen(url);
             k.projection = projektio;
             k.minimumLevel = min;
