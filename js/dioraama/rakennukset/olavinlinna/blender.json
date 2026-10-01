@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "455641f26aeddf8d",
-  "kansio": "dioraama/olavinlinna/blender/455641f26aeddf8d/",
+  "hash": "5f908cd39028daf7",
+  "kansio": "dioraama/olavinlinna/blender/5f908cd39028daf7/",
   "tiedostot": [
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff.jpg",
@@ -585,32 +585,32 @@
     },
     {
       "polku": "ymparisto/ymparisto-2k-4x4.astcm",
-      "sha256": "113d4d9e770e8eef8f12f66cd636eafd7087b69c508d6700794e4287878da22b",
+      "sha256": "7c89891a643142199bb883be9a60c7e28e0a4a044152481dba596f10c09a0e34",
       "tavuja": 5592448
     },
     {
       "polku": "ymparisto/ymparisto-4k-4x4.astcm",
-      "sha256": "37cd170f42eb4c2b92e52795c71ce3fa46997c9caf291c191975766595596602",
+      "sha256": "821fc790a6af5ef17d87ab91bf507c13446802d1cf62ab9e597d293b8ac6ec3c",
       "tavuja": 22369664
     },
     {
       "polku": "ymparisto/ymparisto-8k-4x4.astcm",
-      "sha256": "c7098be2890e8bdc751db037d611db60ca51ae6103f99e433bae8dbf5a26d158",
+      "sha256": "9428a5d9342229fd5372b8aaa6efcbe958f346c84ab2a4af76e3502f1ca0e663",
       "tavuja": 89478528
     },
     {
       "polku": "ymparisto/ymparisto-hamara-2k-4x4.astcm",
-      "sha256": "a6ce1975eeb1f82ffc6d38f9b30bdffc60a44278ac837cd2a007fca0ee39ada0",
+      "sha256": "c8df8a3c71c42023bdc70f0cf7752029cae709e06fe612b7a24a66c5bd922c04",
       "tavuja": 5592448
     },
     {
       "polku": "ymparisto/ymparisto-hamara-4k-4x4.astcm",
-      "sha256": "412783d8bfc7faeceb4461dceb748b9eb42058014405c990085fa8c1557aba9a",
+      "sha256": "5c021388ce61b0f28a1d6c5fc869ad0c79fb1a0a9b4c2e6ad1331b71bd4df786",
       "tavuja": 22369664
     },
     {
       "polku": "ymparisto/ymparisto-hamara-8k-4x4.astcm",
-      "sha256": "aa2fcb7585378ce148ad3ec27b5dc3acbce9c7669c736f545ad54be1ee2428ce",
+      "sha256": "0759b18e0d4db00c49b3166fb3e3b51c2ad224b7b284c5918ecbd7d51fe89350",
       "tavuja": 89478528
     },
     {
