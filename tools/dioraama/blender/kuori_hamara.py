@@ -2,7 +2,7 @@
 # (tumma sininen taivas, matala oranssi aurinko, tunnelma-tilan soihdut ja lyhdyt pistevaloina) leivotaan kuoren omaan
 # UV:hen (sama UV kaikilla laatutasoilla). Tulos näytetään Unityssä valaisemattomana kuten tilojen valoatlas.
 #   nice -n 15 Blender -b -P kuori_hamara.py -- <kuori.glb> <rakennus.json> <ulos-kansio> [näytteet 128] [koko 4096]
-#     [--tavoite] [--albedo <8k-albedo.png>]
+#     [--tavoite] [--albedo <8k-albedo.png>] [--valokartta <valokartta.exr>]
 # --tavoite (laatusuunnitelman vaihe 4, 30.9.): tavoitekuvan valaistus eli Blenderin taivas (aurinko 1,5° horisontin alla
 #   lounaassa) ja ulkosoihdut rakennus.json:n liekkipisteistä (tunnelma, laituri, muurinharja; SOIHTU_W 450 W), AgX-sävytys
 #   kuten tavoitekuva.py (VALOTUS 0.6). --albedo: leivotaan pelkkä valo (DIFFUSE, suora + epäsuora, ilman väriä) koon
@@ -17,6 +17,7 @@ def lippu(n, oletus=None):
         i = a.index(n); v = a[i + 1]; del a[i:i + 2]; return v
     return oletus
 ALBEDO = lippu('--albedo')
+VALOKARTTA = lippu('--valokartta')  # valmis ulkokuori-valokartta-<koko>.exr: ei leivontaa (delighting vaihtaa vain albedon)
 TASOITA = lippu('--tasoita')  # siivousmaski.png (ulkokuori.py --siivoa): siivottujen maatekselien valo ympäristöstä
 TAVOITE = '--tavoite' in a
 if TAVOITE: a.remove('--tavoite')
@@ -87,9 +88,13 @@ import time; t0 = time.time()
 if ALBEDO:
     # Pelkkä valo (irradianssi) ja kertominen albedolla sen omassa koossa.
     b = sc.render.bake; b.use_pass_direct = True; b.use_pass_indirect = True; b.use_pass_color = False
-    bpy.ops.object.bake(type='DIFFUSE')
+    if VALOKARTTA:
+        vk = bpy.data.images.load(VALOKARTTA); assert tuple(vk.size) == (KOKO, KOKO), vk.size
+        pv_ = np.empty(KOKO * KOKO * 4, np.float32); vk.pixels.foreach_get(pv_); kuva.pixels.foreach_set(pv_); del pv_
+    else:
+        bpy.ops.object.bake(type='DIFFUSE')
     print('HAMARA: valoleivonta', round(time.time() - t0, 1), 's')
-    if TASOITA:
+    if TASOITA and not VALOKARTTA:  # valokartassa tasoitus on jo mukana
         # Litistetty romu on päällekkäisinä kerroksina 5 cm:n välein, ja kerrokset varjostavat toisiaan reunoiltaan:
         # leivottu valo piirsi siivottuun maahan romun ääriviivat (v16). Siivottujen ylöspäin osoittavien tekselien valo
         # otetaan puhtaasta maasta maailmankoordinaateissa (0,25 m:n ruudukko, korkeuskerroksittain, push-pull-täyttö).
