@@ -4840,3 +4840,91 @@
 .mk-peli__kirjattu {
     margin-top: var(--tk-vali-s);
 }
+
+/* KENTTÄ-pohjaosa KORTTI-pohjan lomakkeissa (omistaja 1.10.2026 "lomake ok", web #3808 .tk-kentta; Lomake.KortissaPohjalla):
+ * kenttä 44 / alue 88, kulma 10, täyte 8/12, luku 16, vihje kursiivina, fokus 2 px toiminto. Ensisijainen nappi kulta koko
+ * leveydeltä, muut TOIMINTO; kappaleet leipää, avattavat otsikot kapiteeleja. Muualla (lehden työhuone) ennallaan. */
+.mk-kortti--pohja .mk-palaute__kentta,
+.mk-kortti--pohja .mk-palaute__valinta {
+    margin: 0 0 var(--tk-vali-s) 0;
+}
+
+.mk-kortti--pohja .mk-palaute__kentta > .unity-base-text-field__input,
+.mk-kortti--pohja .mk-palaute__valinta > .unity-base-popup-field__input {
+    min-height: var(--tk-kentta-korkeus);
+    padding: var(--tk-kentta-vali-pysty) var(--tk-kentta-vali-vaaka);
+    border-width: 1px;
+    border-radius: var(--tk-kentta-kulma);
+    border-color: var(--tk-kentta-reunus);
+    background-color: var(--tk-kentta-pinta);
+    font-size: var(--tk-kentta-koko);
+    color: var(--tk-kentta-muste);
+}
+
+.mk-kortti--pohja .mk-palaute__kentta--iso > .unity-base-text-field__input {
+    min-height: var(--tk-kentta-alue);
+}
+
+.mk-kortti--pohja .mk-palaute__kentta > .unity-base-text-field__input--placeholder {
+    color: var(--tk-kentta-vihje);
+}
+
+.mk-kortti--pohja .mk-palaute__kentta:focus > .unity-base-text-field__input {
+    border-width: 2px;
+    border-color: var(--tk-kentta-fokus);
+    background-color: var(--tk-kentta-pinta);
+}
+
+.mk-kortti--pohja .mk-palaute__valinta .unity-base-popup-field__text {
+    font-size: var(--tk-kentta-koko);
+    color: var(--tk-kentta-muste);
+}
+
+.mk-kortti--pohja .mk-palaute__teksti,
+.mk-kortti--pohja .mk-palaute__nimio,
+.mk-kortti--pohja .mk-palaute__huomio {
+    margin: 0 0 var(--tk-vali-s) 0;
+    font-size: var(--tk-koko-leipa);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-kortti--pohja .mk-palaute__valiotsikko,
+.mk-kortti--pohja .mk-palaute__vakaotsikko {
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-kortti--pohja .mk-palaute__vakanappi {
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-kortti--pohja .mk-nappi.mk-palaute__laheta {
+    min-height: var(--tk-nappi-korkeus);
+    margin: var(--tk-vali-s) 0;
+    padding: 0 var(--tk-vali-m);
+    border-width: 1px;
+    border-color: var(--tk-paperi-toiminto);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: var(--tk-paperi-toiminto);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-kortti--pohja .mk-nappi.mk-palaute__toissijainen,
+.mk-kortti--pohja .mk-nappi.mk-palaute__kuvanappi {
+    align-self: flex-start;
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0 var(--tk-vali-xs) var(--tk-vali-xs) 0;
+    padding: 0 var(--tk-vali-m);
+    border-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: initial;
+    color: var(--tk-paperi-muste);
+}
+
+.mk-kortti--pohja .mk-palaute__laheta .mk-nappi__teksti,
+.mk-kortti--pohja .mk-palaute__toissijainen .mk-nappi__teksti,
+.mk-kortti--pohja .mk-palaute__kuvanappi .mk-nappi__teksti {
+    font-size: var(--tk-koko-apuri);
+}

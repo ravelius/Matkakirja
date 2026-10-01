@@ -256,6 +256,23 @@ namespace Matkakirja.Natiivi
     /// <summary>Lomakkeen palat: web .periaate-teksti, -valiotsikko, -nimio, -huomio, -kentta, -laheta, details.</summary>
     public static class Lomake
     {
+        /// <summary>
+        /// KENTTÄ-pohjaosa (omistaja 1.10.2026 "lomake ok", web #3808): KORTTI-pohjan sisällä (mk-kortti--pohja) kentät ja napit
+        /// tyylikirjan arvoilla — tyylit Matkakirja.uss "KENTTÄ"-osiossa, kirjasimet tässä, kun osa liitetään paneeliin
+        /// (muualla, esim. lehden työhuone, ennallaan).
+        /// </summary>
+        static void KortissaPohjalla(VisualElement e, Action<bool> kun)
+        {
+            EventCallback<AttachToPanelEvent> k = null;
+            k = _ =>
+            {
+                bool pohja = false;
+                for (var p = e.parent; p != null && !pohja; p = p.parent) pohja = p.ClassListContains("mk-kortti--pohja");
+                kun(pohja);
+            };
+            e.RegisterCallback(k);
+        }
+
         public static Label Teksti(VisualElement isa, string teksti)
         {
             var l = Rakenne.Teksti(teksti, "mk-palaute__teksti", isa);
@@ -274,6 +291,7 @@ namespace Matkakirja.Natiivi
         {
             var l = Rakenne.Teksti(teksti, "mk-palaute__nimio", isa);
             Kirjasimet.Aseta(l, Kirjasin.Kone);
+            KortissaPohjalla(l, pohja => { if (pohja) Kirjasimet.Aseta(l, Kirjasin.Luku); });
             return l;
         }
 
@@ -295,6 +313,14 @@ namespace Matkakirja.Natiivi
             k.keyboardType = laji == Kenttalaji.Sahkoposti ? TouchScreenKeyboardType.EmailAddress
                 : laji == Kenttalaji.Osoite ? TouchScreenKeyboardType.URL : TouchScreenKeyboardType.Default;
             Kirjasimet.Aseta(k, Kirjasin.Kone);
+            // KENTTÄ: luku-kirjasin, tyhjänä vihje kursiivina (web ::placeholder italic).
+            KortissaPohjalla(k, pohja =>
+            {
+                if (!pohja) return;
+                void Kirjasin_() => Kirjasimet.Aseta(k, string.IsNullOrEmpty(k.value) ? Kirjasin.LukuKursiivi : Kirjasin.Luku);
+                Kirjasin_();
+                k.RegisterValueChangedCallback(_ => Kirjasin_());
+            });
             isa.Add(k);
             return k;
         }
@@ -305,6 +331,8 @@ namespace Matkakirja.Natiivi
             var b = Rakenne.Nappi(teksti, "mk-nappi--kulta mk-palaute__laheta", painettu, isa);
             Rakenne.Tausta(b, Kuviot.Kulta);
             Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
+            // KENTTÄ-lomakkeen ensisijainen nappi: tasainen toimintoväri (USS), ei kultakuviota.
+            KortissaPohjalla(b, pohja => { if (pohja) b.style.backgroundImage = StyleKeyword.Null; });
             return b;
         }
 
@@ -313,6 +341,7 @@ namespace Matkakirja.Natiivi
         {
             var b = Rakenne.Nappi(teksti, "mk-palaute__toissijainen", painettu, isa);
             Kirjasimet.Aseta(b, Kirjasin.Kone);
+            KortissaPohjalla(b, pohja => { if (pohja) Kirjasimet.Aseta(b, Kirjasin.KoneLihava); });
             return b;
         }
 
@@ -328,6 +357,7 @@ namespace Matkakirja.Natiivi
             var d = new DropdownField(nimet, oletus);
             d.AddToClassList("mk-palaute__valinta");
             Kirjasimet.Aseta(d, Kirjasin.Kone);
+            KortissaPohjalla(d, pohja => { if (pohja) Kirjasimet.Aseta(d, Kirjasin.Luku); });
             isa.Add(d);
             return d;
         }
