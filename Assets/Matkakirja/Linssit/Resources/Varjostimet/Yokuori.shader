@@ -76,6 +76,7 @@ Shader "Matkakirja/Linssit/Yokuori"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 3.5   // uint-hajautus (lähikuvan pisteet)
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
             TEXTURE2D(_ValotEu); SAMPLER(sampler_ValotEu);
@@ -189,6 +190,27 @@ Shader "Matkakirja/Linssit/Yokuori"
                 // pehmeä raja levitti taivaan heijastuksen ja kiillon maalle; terävöinti kapeaksi rajaksi.
                 if (_VesiTerava > 0.0) vesi = lerp(vesi, (half)smoothstep(0.4, 0.6, vesi), (half)_VesiTerava);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
+                // LÄHIKUVAN PISTEET (Päätoimittaja 1.10.: 50 mm:n yökuvassa valot olivat sumeita möykkyjä): kun valokuvan tekseli kattaa
+                // yli 3 kuvapikseliä (Eurooppa 2048 ≈ 2–4 km, tarkat ≈ 0,5 km, maailma ≈ 19 km), valo jaetaan noin texel/6:n soluihin
+                // (250 m … 3 km) pisteiksi, joiden tiheys seuraa kirkkautta ja keskiarvo säilyy; kaukana kuva ennallaan (liuku 3…8 px).
+                float clat = max(cos(lat), 0.2);
+                float texM = (_TarkatOn > 0.5 && euPaino > 0.5h ? 0.0045 : euPaino > 0.5h ? 0.0357 : 0.176) * 111320.0 * clat;
+                half piste = (half)smoothstep(3.0, 8.0, texM / max(length(fwidth(p)), 1.0));
+                if (piste > 0.0h && l > 0.002h)
+                {
+                    float solu = clamp(texM / 6.0, 250.0, 3000.0);
+                    float2 g = float2(lon * clat, lat) * (6371000.0 / solu);
+                    float2 f0 = frac(g);
+                    uint2 u = (uint2)(int2)floor(g);
+                    uint hh = u.x * 1664525u + u.y * 1013904223u + 374761393u;
+                    hh ^= hh >> 16; hh *= 2246822519u; hh ^= hh >> 13; hh *= 3266489917u; hh ^= hh >> 16;
+                    float h1 = (hh & 1023u) / 1023.0, h2 = ((hh >> 10) & 1023u) / 1023.0, h3 = ((hh >> 20) & 1023u) / 1023.0;
+                    float pr = saturate((float)l * 1.8);
+                    float2 d = f0 - (0.2 + 0.6 * float2(h2, h3));
+                    float r = 0.16 + 0.12 * h1;
+                    float pis = h1 < pr ? exp(-dot(d, d) / (r * r)) : 0.0;
+                    l = lerp(l, (half)min(pis * (float)l / max(pr * 3.14159 * r * r, 0.02), 6.0), piste);
+                }
                 // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
                 half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
                 // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
