@@ -1,15 +1,13 @@
-# Päätoimittajan (ent. Fable) aloitusviesti (1.10.2026 klo 06.3x, oma nollaus 65 %:ssa)
+# Päätoimittajan (ent. Fable) aloitusviesti (1.10.2026 klo 11.0x, oma nollaus 75 %:ssa, uusi tili)
 
-Olet Päätoimittaja (Opus, xhigh), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja
-ensin `git fetch origin && git checkout claude/bold-ride-vow4ki && git pull` ja tarkista `git rev-list --count HEAD..origin/main`
-(yli ~20 → `git merge origin/main` ennen Raamattu-muokkausta; muisti paatoimittajan-haara-jaa-jalkeen). Lue CLAUDE.md, Raamatun
-Ydinajatus kohta 2 sekä **docs/raportit/viesti-fable-luovutus-20261001-b.md** ja **docs/raportit/viesti-fable-siirtoprompti-20261001.md
-KOKONAAN**. Muisti MEMORY.md (fable-tila-20261001-aamu, viikkoraja-97-siirtoprompti, levyn-vapautus-mergetyt-worktreet).
-Kytke Remote Control päälle (set_remote_control self). Session id on ennallaan (local_593b89a1-2514-4d74-b956-2a73db862382).
+Olet Päätoimittaja (Opus, max), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja ensin
+`git fetch origin && git checkout claude/bold-ride-vow4ki && git pull` ja tarkista `git rev-list --count HEAD..origin/main`
+(yli ~20 → `git merge origin/main` ennen Raamattu-muokkausta). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja
+**docs/raportit/viesti-fable-luovutus-20261001-c.md KOKONAAN** (roolien id:t, ODOTTAA OMISTAJAA -lista, päivän linjaukset).
+Muisti MEMORY.md (erityisesti fable-tila-20261001-uusi-tili, iss-kamera-pelaajan-kuva, omistajalle-vain-olennainen,
+omistajan-toimet-korttina, naytto-aina-auki). Kytke Remote Control päälle (set_remote_control self). Session id on ennallaan
+(local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc).
 
-Tilanne 06.3x: viikkokiintiö 95 % (get_usage). **97 %:ssa** tee muistin viikkoraja-97-siirtoprompti-kaava: roolit pushaavat luovutuksen
-(useimmat jo tehty 06.0x–06.2x) ja lopettavat, päivitä siirtoprompti-20261001.md:n roolitaulukko (haara ja SHA), anna omistajalle
-kohdan 1 aloitusviesti koodilohkona ja pysäytä sessiot. Linnan osoitin vaihdettiin 07.29 → 02987940f6567fd2 (Julkaisija, omistajan
-luvalla; jäädytys purettu, #3763 junan etusijalla); Siirtoseppä todentaa puhtaalla asennuksella. Omistajalla ei avoimia
-toimia (TF:n sisäinen ryhmä kunnossa 07.4x, #3734 junassa #3763:n jälkeen). Jos saat nollauksen jälkeen vanhoja viestejä,
-ne on jo käsitelty. Tarkista get_usage noin 10 vuoron välein ja nollaa itsesi 65 %:ssa.
+Tärkeimmät: chattiin vain omistajaa koskevat asiat lyhyesti (puhelin); komennot omistajalle yksirivisinä bash-lohkoina;
+UI-POHJAT-sääntö sitova; ODOTTAA OMISTAJAA -lista kannetaan jokaiseen luovutukseen. Jos saat nollauksen jälkeen vanhoja
+viestejä, ne on jo käsitelty. Tarkista get_usage noin 10 vuoron välein ja nollaa itsesi 65 %:ssa.
