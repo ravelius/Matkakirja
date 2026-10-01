@@ -1116,6 +1116,8 @@ const MODULES = [
   'js/pelaajanakyma.js',
   'js/kokoelmanakyma.js',
   'js/pilleri-animaatio.js',
+  // Visa KORTTI-pohjalla (versio B): js/ui.js puee #quiz-dialogin.
+  'js/visa-pohja.js',
   'js/ui.js',
 
   'js/muutokset.js',
@@ -1132,6 +1134,8 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
+  // Pillerivalikko PANEELI-pohjalla: js/main.js puee #paavalikon käynnistyksessä.
+  'js/pilleri-paneeli.js',
   'js/main.js',
 ];
 
