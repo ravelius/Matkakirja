@@ -631,23 +631,24 @@ namespace Matkakirja.Natiivi
                                 if (lista.Count > 0) lajiKortit[li] = lista;
                             }
 
-                    var pj = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(puutJson)));
-                    var rivit = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(pj, "puut"));
-                    var tasot = MiniJson.ObjektiTaiNull(MiniJson.Kentta(pj, "tasot"));
+                    const int L = 7; // x, y, z_maa, korkeus, latvus_r, laji, muunnos
+                    var puut = DioraamaLuvut.Rivit(puutJson, "puut", L, out var sar, out int riveja) ?? new float[0];
+                    var tasot = DioraamaLuvut.Objekti(puutJson, "tasot");
                     string tasoNimi = taso == DioraamaUlkokuori.Laatu.Huippu ? "huippu" : taso == DioraamaUlkokuori.Laatu.Normaali ? "normaali" : "kevyt";
                     int oletus = taso == DioraamaUlkokuori.Laatu.Huippu ? 25000 : taso == DioraamaUlkokuori.Laatu.Normaali ? 10000 : 3500;
-                    int n = Math.Min(rivit.Count, (int)(MiniJson.Luku(tasot, tasoNimi) ?? oletus));
+                    int n = Math.Min(riveja, (int)(MiniJson.Luku(tasot, tasoNimi) ?? oletus));
                     p = new Vector3[n * 8]; uv0 = new Vector2[n * 8]; uv1 = new Vector2[n * 8]; tan = new Vector4[n * 8]; v = new Color32[n * 8]; kolmiot = new int[n * 12];
                     int k0 = 0;
                     for (int i = 0; i < n; i++)
                     {
-                        if (!(rivit[i] is List<object> r) || r.Count < 6) continue;
-                        float bx = (float)(double)r[0], by = (float)(double)r[1], bz = (float)(double)r[2], kork = (float)(double)r[3];
-                        int laji = (int)(double)r[5];
+                        if (sar[i] < 6) continue;
+                        int o0 = i * L;
+                        float bx = puut[o0], by = puut[o0 + 1], bz = puut[o0 + 2], kork = puut[o0 + 3];
+                        int laji = (int)puut[o0 + 5];
                         if (!lajiKortit.TryGetValue(laji, out var vaihtoehdot) && !lajiKortit.TryGetValue(0, out vaihtoehdot)) continue;
                         uint hsh = (uint)(i * 2654435761u) ^ (uint)(bx * 73856093f) ^ (uint)(by * 19349663f);
-                        var kortti = r.Count >= 7 && r[6] is double md && lajiMuunnokset.TryGetValue(laji, out var mlista)
-                            ? mlista[Math.Max(0, (int)md) % mlista.Count]
+                        var kortti = sar[i] >= 7 && !float.IsNaN(puut[o0 + 6]) && lajiMuunnokset.TryGetValue(laji, out var mlista)
+                            ? mlista[Math.Max(0, (int)puut[o0 + 6]) % mlista.Count]
                             : vaihtoehdot[(int)(hsh % (uint)vaihtoehdot.Count)];
                         float korkeus = kork * kortti.KorttiPerPuu, puoli = korkeus * kortti.LeveysPerKorkeus * 0.5f;
                         float kulma = (hsh >> 8) % 360 * Mathf.Deg2Rad;
@@ -773,6 +774,101 @@ namespace Matkakirja.Natiivi
         public static void Gpu(Action<string> kirjaa, Texture t)
         {
             if (t != null) kirjaa?.Invoke($"poikki: gpu {t.name} {t.width}×{t.height} {t.graphicsFormat} (ruutu {Time.frameCount})");
+        }
+    }
+
+    /// <summary>ENSILATAUS v2 (iPad-mittaus 1.10.: puiden vaiheessa 100–220 ms:n ruutuja): puut.json (4,5 Mt, ~65 000 riviä) ja
+    /// aluskasvien lista jäsennettiin MiniJsonilla, joka loi riviä kohden listan ja laatikoidut luvut (~1 M oliota) →
+    /// roskienkeruu pysäytti myös pääsäikeen. Tämä lukee numerotaulukon suoraan tavuista tasaiseen float-taulukkoon.</summary>
+    internal static class DioraamaLuvut
+    {
+        /// <summary>Taulukko avaimen <paramref name="avain"/> alla: [[a, b, …], …] → rivit × leveys (puuttuva = NaN) ja rivin
+        /// sarakemäärä. null, jos avainta ei löydy.</summary>
+        public static float[] Rivit(byte[] j, string avain, int leveys, out int[] sarakkeet, out int rivit)
+        {
+            sarakkeet = null; rivit = 0;
+            int p = Etsi(j, "\"" + avain + "\"", 0);
+            if (p < 0) return null;
+            while (p < j.Length && j[p] != (byte)'[') p++;
+            p++;
+            var arvot = new List<float>(1 << 16); var maarat = new List<int>(1 << 14);
+            while (p < j.Length)
+            {
+                byte c = j[p];
+                if (c == (byte)']') break;
+                if (c != (byte)'[') { p++; continue; }
+                p++;
+                int n = 0;
+                while (p < j.Length && j[p] != (byte)']')
+                {
+                    c = j[p];
+                    if (c == (byte)'-' || c == (byte)'+' || c == (byte)'.' || (c >= (byte)'0' && c <= (byte)'9'))
+                    {
+                        float v = Luku(j, ref p);
+                        if (n < leveys) arvot.Add(v);
+                        n++;
+                    }
+                    else if (c == (byte)'n') { if (n < leveys) arvot.Add(float.NaN); n++; p += 4; } // null
+                    else p++;
+                }
+                for (int k = n; k < leveys; k++) arvot.Add(float.NaN);
+                maarat.Add(Math.Min(n, leveys));
+                p++;
+            }
+            rivit = maarat.Count; sarakkeet = maarat.ToArray();
+            return arvot.ToArray();
+        }
+
+        /// <summary>Pieni objekti avaimen alla (esim. "tasot") MiniJsonilla ilman koko tiedoston jäsennystä.</summary>
+        public static Dictionary<string, object> Objekti(byte[] j, string avain)
+        {
+            int p = Etsi(j, "\"" + avain + "\"", 0);
+            if (p < 0) return null;
+            while (p < j.Length && j[p] != (byte)'{') { if (j[p] == (byte)'[' || j[p] == (byte)',') return null; p++; }
+            int alku = p, syvyys = 0;
+            for (; p < j.Length; p++)
+            {
+                if (j[p] == (byte)'{') syvyys++;
+                else if (j[p] == (byte)'}' && --syvyys == 0) break;
+            }
+            if (p >= j.Length) return null;
+            try { return MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(j, alku, p - alku + 1))); } catch { return null; }
+        }
+
+        static int Etsi(byte[] j, string s, int alku)
+        {
+            var b = System.Text.Encoding.UTF8.GetBytes(s);
+            for (int i = alku; i <= j.Length - b.Length; i++)
+            {
+                int k = 0;
+                while (k < b.Length && j[i + k] == b[k]) k++;
+                if (k == b.Length) return i + b.Length;
+            }
+            return -1;
+        }
+
+        static float Luku(byte[] j, ref int p)
+        {
+            bool neg = false;
+            if (j[p] == (byte)'-') { neg = true; p++; } else if (j[p] == (byte)'+') p++;
+            double v = 0, jako = 1;
+            while (p < j.Length && j[p] >= (byte)'0' && j[p] <= (byte)'9') v = v * 10 + (j[p++] - (byte)'0');
+            if (p < j.Length && j[p] == (byte)'.')
+            {
+                p++;
+                while (p < j.Length && j[p] >= (byte)'0' && j[p] <= (byte)'9') { v = v * 10 + (j[p++] - (byte)'0'); jako *= 10; }
+            }
+            v /= jako;
+            if (p < j.Length && (j[p] == (byte)'e' || j[p] == (byte)'E'))
+            {
+                p++;
+                bool eneg = false;
+                if (p < j.Length && (j[p] == (byte)'-' || j[p] == (byte)'+')) eneg = j[p++] == (byte)'-';
+                int e = 0;
+                while (p < j.Length && j[p] >= (byte)'0' && j[p] <= (byte)'9') e = e * 10 + (j[p++] - (byte)'0');
+                v *= Math.Pow(10, eneg ? -e : e);
+            }
+            return (float)(neg ? -v : v);
         }
     }
 }

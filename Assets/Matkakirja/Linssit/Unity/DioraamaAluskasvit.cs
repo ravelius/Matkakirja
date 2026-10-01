@@ -107,20 +107,24 @@ namespace Matkakirja.Natiivi
                                 if (lista.Count > 0) lajiKortit[li] = lista;
                             }
 
-                    var lj = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(listaJson)));
-                    var rivit = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(lj, "kasvit") ?? MiniJson.Kentta(lj, "aluskasvit"));   // v2: "kasvit", v1: "aluskasvit"
-                    var tasot = MiniJson.ObjektiTaiNull(MiniJson.Kentta(lj, "tasot"));
+                    // Ensilataus v2: numerotaulukko suoraan tavuista (DioraamaLuvut), ei MiniJsonin olio per luku.
+                    const int L = 5; // x, y, z, laji, koko
+                    var kasvit = DioraamaLuvut.Rivit(listaJson, "kasvit", L, out var sar, out int riveja)          // v2: "kasvit"
+                        ?? DioraamaLuvut.Rivit(listaJson, "aluskasvit", L, out sar, out riveja) ?? new float[0];  // v1: "aluskasvit"
+                    if (sar == null) sar = new int[0];
+                    var tasot = DioraamaLuvut.Objekti(listaJson, "tasot");
                     string tasoNimi = taso == DioraamaUlkokuori.Laatu.Huippu ? "huippu" : "normaali";
                     int oletus = taso == DioraamaUlkokuori.Laatu.Huippu ? 20000 : 8000;
-                    int n = Math.Min(rivit.Count, (int)(MiniJson.Luku(tasot, tasoNimi) ?? oletus));
+                    int n = Math.Min(riveja, (int)(MiniJson.Luku(tasot, tasoNimi) ?? oletus));
                     p = new Vector3[n * 8]; uv0 = new Vector2[n * 8]; uv1 = new Vector2[n * 8]; v = new Color32[n * 8]; kolmiot = new int[n * 12];
                     int k0 = 0;
                     for (int i = 0; i < n; i++)
                     {
-                        if (!(rivit[i] is List<object> r) || r.Count < 5) continue;
-                        float bx = (float)(double)r[0], by = (float)(double)r[1], bz = (float)(double)r[2];
-                        int laji = (int)(double)r[3];
-                        float koko = (float)(double)r[4];
+                        if (sar[i] < 5) continue;
+                        int o0 = i * L;
+                        float bx = kasvit[o0], by = kasvit[o0 + 1], bz = kasvit[o0 + 2];
+                        int laji = (int)kasvit[o0 + 3];
+                        float koko = kasvit[o0 + 4];
                         if (VainLajit != null && !VainLajit.Contains(laji)) continue;
                         if (!lajiKortit.TryGetValue(laji, out var vaihtoehdot)) continue;
                         uint hsh = (uint)(i * 2654435761u) ^ (uint)(bx * 73856093f) ^ (uint)(by * 19349663f);
