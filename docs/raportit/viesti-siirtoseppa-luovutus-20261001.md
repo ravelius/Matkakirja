@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 1.10.2026 klo 06.0x (Opus)
+# Siirtosepän luovutus 1.10.2026 klo 08.0x (Opus)
 
 ## Tila yhdellä silmäyksellä
 
@@ -16,6 +16,10 @@
   `HASH=<hash> APP=/Users/Shared/Claude/proto-3d/lokit/juna-1.1.90-27c449e4/Matkakirja3D.app L=…/siirtoseppa-v19-kuittaus
   zsh /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/ajo-ymparisto-kuittaus.sh` → tarkista M4 (puulaituri vesiportilla, ponttonisilta poissa), M0 (taivas-
   kuva, ei liukuväri), M1/M2 (aitat maalla), virheitä 0. Puukortit #3763 pidossa.
+
+- **Osoitin 02987940f6567fd2** vaihdettu 07.29, todennettu TF 91:llä ämpäristä (lokit/siirtoseppa-osoitin-02987940).
+- **Juna 1.1 (92) = juna/b13 b24c0702**: nopea ensilataus (linna-vesi 894d16a4): ympäristö odottaa kuoren kevyen,
+  kevyt maasto ensin, puhelimessa 4k-orto. Mittaus maasto 23,1 → 10,8 s (lokit/siirtoseppa-ensilataus2-*).
 
 ## Proto-worktreet ja haarat
 
