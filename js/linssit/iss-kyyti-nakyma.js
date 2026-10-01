@@ -46,6 +46,8 @@ import {
 } from './iss-rata.js';
 import { SATELLIITTI_KOHTEET } from './satelliitti-data.js';
 import { KUUKAUSINIMET } from './maapallon-vuosi.js';
+// Cupolan humina ja avaruus–maa-radio (30.9.2026): soivat vain ikkunassa.
+import { asetaCupola, puraCupola } from './cupola-aani.js';
 
 /* ═══════════ CUPOLA ═══════════════════════════════════════════════ */
 
@@ -1103,6 +1105,7 @@ export function luoIssKyytiNakyma({
     u.juuri.dataset.tila = tila;
     kehysNakyy = tila === TILA.ikkuna;
     u.juuri.classList.toggle('iss-kyyti-ikkuna', kehysNakyy);
+    asetaCupola(kehysNakyy && kyyti.kyydissa);
     u.juuri.classList.toggle('iss-kyyti-liikkumaton', Boolean(reduced));
     doc.body.classList.toggle(KYYTI_LUOKKA, kyyti.kyydissa);
     if (auki) u.haeKuvat();
@@ -1463,6 +1466,7 @@ export function luoIssKyytiNakyma({
       koe = null;
       nollaaOlosuhteet();
       realismiKutsu('pura');
+      puraCupola();
       ui?.juuri?.remove?.();
       doc.body.classList.remove(KYYTI_LUOKKA);
     },

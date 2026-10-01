@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2499, teksti: 'Cupolan ääni: aseman humina ja NASA:n avaruus–m… (#3723)' },
   { v: 2498, teksti: 'Raamattu: UI-pohjat ja tyylimäärittelyt sitovik… (#3770)' },
   { v: 2497, teksti: 'rakenna.mjs: linnan puheet aanet-pankkiin (#3785)' },
   { v: 2496, teksti: 'Tietoturva: Sähkeen jäsenavain otsakkeeseen (#3779)' },
