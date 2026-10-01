@@ -14,13 +14,14 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 | 2c maakuntakortti + kontrasti | – | `natiivi-ui/pohjat-2` 428eae09: Pohja.NostokortinPaikka + Vetokahva, keksintöpaneelin 2,2:1 | käännös ~12.50 |
 | Perusta (natiivi) | – | `natiivi-ui/pohjat-perusta` 1b89dccd = 1–3 + Pohja.NostokortinPaikka/Vetokahva, sivukortti yläpalkin alle | merge-pyyntö Natiivisepälle 1.10. ~13.40 |
 | Pinnat omina haaroinaan | Pelikoodari: kohdenosto web-pohjaan | `pohja-kohdekortti` 60e66e6c, `pohja-maakunta` 7275473b, `pohja-avauskortti` 6402bf4d | juna 99 (juna/b13 735aaf55); `kontrasti-keksinnot` PUDOTETTU: web on sama #6b4d1c (pariteetti = ei muutosta, Päätoimittaja 1.10.) |
+| Pinnat 2. erä | #3789 ihmiskortti, #3791 maakunta, #3793 vahvistus (Pelikoodari) | `pohja-maakunta-2` 6ec07acb, `pohja-ihmiskortti` 75b6a05f (vaatii maakunta-2), `pohja-vahvistus` 8d7f605f (Kortti pohja: true) | todennettu ed7fa5a5, merge-pyynnössä 1.10. ~15.10 |
 
 ## Pinnat pohjiin (natiivi)
 
 | Pohja | Siirretty | Seuraavaksi | Myöhemmin |
 |---|---|---|---|
-| NOSTOKORTTI | nostokortti (kaikki lajit), kohdekortti (toimintorivi, kokeilu f344f1034), maakuntakortti, avauskortti | ihmisen matkan nostokortti (2 kuvaa + toimintorivi, juna 95 ensin masteriin), maakuntakortin toimintorivi | nähtävyysarkki, kartuscha, kaupunkiliuska |
-| KORTTI | Kortti-pohjaiset dialogit (vahvistus, mitä uutta, palaute, tietoja, wiki, apuraha, periaatteet) | kysymys/visa (oma kortti), paljastus, huipennus | minipopup, sähketehtävä |
+| NOSTOKORTTI | nostokortti, kohdekortti (Kysy · Visa · Kierros · Lehti), maakuntakortti (Kysy), avauskortti, ihmisen matkan kortti (TUMMA, Kysy · Lue lisää) | nähtävyysarkki | nähtävyysarkki, kartuscha, kaupunkiliuska |
+| KORTTI | tokenit kaikkiin Kortti-dialogeihin; uusi ulkoasu (Kortti pohja: true, web #3793): vahvistus | kysymys/visa (web ensin), paljastus, sitten muut Kortti-dialogit yksi kerrallaan | minipopup, sähketehtävä |
 | PANEELI | – | pillerivalikko (jo 38 pt), äänentasot, laukku | linssin hampurilainen, selitteet |
 | KUVANÄKYMÄ | – | kuvasuurennos, astronautin kuvanäkymä | julistegalleria, kohdekartan kokoruutu |
 | LUKUARKKI | – | lehti (sulku-Esc on jo), wiki, tiedeliite | opas, vertailuarkki |
