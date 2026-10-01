@@ -61,7 +61,15 @@ function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
 
 /** Sisältö (kapiteeli, otsikko, kuvat kuvasääntöjen mukaan, kappaleet, lähde) annettuun säiliöön. */
 export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
-  if (d.yla) isa.appendChild(pohjaSolmu('div', 'tk-kapiteeli', d.yla));
+  if (d.yla) {
+    const yla = pohjaSolmu('div', 'tk-kapiteeli', d.yla);
+    if (d.ylaVari) {
+      const piste = pohjaSolmu('span', 'tk-kapiteeli__piste');
+      piste.style.setProperty('--tk-piste', d.ylaVari);
+      yla.prepend(piste);
+    }
+    isa.appendChild(yla);
+  }
   if (d.otsikko) isa.appendChild(pohjaSolmu('h2', 'tk-otsikko', d.otsikko));
   if (d.alaotsikko) isa.appendChild(pohjaSolmu('p', 'tk-apuri', d.alaotsikko));
   const hero = d.kuvat.find((k) => k.rooli === 'hero');
@@ -103,7 +111,8 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
 
 function pohjaNapit(d, toiminnot, oletus = 'toiminto') {
   if (!d.napit.length) return null;
-  const rivi = pohjaSolmu('div', 'tk-napit');
+  // Neljä tai useampi nappi samalla rivillä: tiivis rivi (pienempi porras, kapeampi reunus), ei lyhennystä.
+  const rivi = pohjaSolmu('div', `tk-napit${d.napit.length >= 4 ? ' tk-napit--tiivis' : ''}`);
   for (const n of d.napit) {
     const tyyppi = n.tyyppi || oletus;
     const b = pohjaSolmu('button', `tk-nappi tk-nappi--${tyyppi}`, n.teksti);

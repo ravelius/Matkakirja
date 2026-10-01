@@ -18,6 +18,17 @@
   text-transform: uppercase;
   color: var(--tk-muste-pehmea);
 }
+/* Kapiteelin piste: tietoa kantava väri (Ihmisen matkan virta), annetaan datasta (KorttiData.ylaVari). */
+.tk-kapiteeli__piste {
+  display: inline-block;
+  flex: none;
+  width: var(--tk-vali-s);
+  height: var(--tk-vali-s);
+  margin-right: var(--tk-vali-xs);
+  border-radius: var(--tk-kulma-pilleri);
+  background: var(--tk-piste, var(--tk-toiminto));
+  vertical-align: 0.05em;
+}
 .tk-otsikko {
   margin: 0 0 var(--tk-vali-xs);
   font-family: var(--font-luku);
@@ -146,6 +157,13 @@
   content: '';
   position: absolute;
   inset: calc((var(--tk-nappi-korkeus) - var(--tk-nappi-osuma)) / 2) 0;
+}
+/* Tiivis rivi (≥ 4 nappia): kapiteeliporras ja xs-reunus, jotta jokainen nimi mahtuu KAPEAAN ilman lyhennystä. */
+.tk-napit--tiivis { gap: var(--tk-vali-xs); }
+.tk-napit--tiivis .tk-nappi {
+  padding: 0 var(--tk-vali-xs);
+  font-size: var(--tk-koko-kapiteeli);
+  text-overflow: clip;
 }
 .tk-nappi--ensisijainen {
   border-color: var(--tk-toiminto);

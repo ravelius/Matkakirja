@@ -1,7 +1,7 @@
 /**
  * UI-POHJIEN YHTEINEN TIETOMALLI (omistaja 1.10.2026, UI-pohjat; Natiivi-UI:n kartoitus "Yhteinen tietomalli").
  *
- *   KorttiData { yla, otsikko, alaotsikko, kappaleet[{otsikko, teksti, korostus, lista[]}],
+ *   KorttiData { yla, ylaVari, otsikko, alaotsikko, kappaleet[{otsikko, teksti, korostus, lista[]}],
  *                kuvat[{url, rooli: hero|upotus|galleria, kuvateksti, lahde, rajaus}],
  *                napit[{teksti, tyyppi: toiminto|ensisijainen|haamu, toiminto}], lahde, pulu{kysymykset[]}, teema }
  *
@@ -58,6 +58,8 @@ export function tarkistaKorttiData(d, { teema = 'paperi' } = {}) {
   if (!otsikko && !kappaleet.length && !kuvat.length) return null;
   return {
     yla: pohjaTeksti(d.yla),
+    // Kapiteelin piste (Ihmisen matkan virran väri on tietoa, Päätoimittaja 1.10.): #rrggbb tai tyhjä.
+    ylaVari: typeof d.ylaVari === 'string' && /^#[0-9a-f]{6}$/i.test(d.ylaVari) ? d.ylaVari : '',
     otsikko,
     alaotsikko: pohjaTeksti(d.alaotsikko),
     kappaleet,
