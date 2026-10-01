@@ -18,6 +18,10 @@ on:
         description: 'Ulkoisen ryhmän nimi (tyhjä = ainoa tai julkisen linkin ryhmä)'
         type: string
         default: ''
+      vanhenna:
+        description: 'Pilkuin erotetut CFBundleVersionit, jotka vanhennetaan ensin (vain omistajan luvalla)'
+        type: string
+        default: ''
       bundle_id:
         description: 'Bundle id'
         type: string
@@ -66,10 +70,11 @@ jobs:
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           BUILD: ${{ inputs.build_numero }}
           RYHMA: ${{ inputs.ryhma }}
+          VANHENNA: ${{ inputs.vanhenna }}
         run: |
           set -euo pipefail
           python3 -m pip install --quiet --break-system-packages "pyjwt[crypto]==2.9.0"
-          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA"
+          python3 tools/testflight/ulkoinen-ryhma.py --bundle-id "${{ inputs.bundle_id }}" --build "$BUILD" --ryhma "$RYHMA" --vanhenna "$VANHENNA"
 
       - name: Siivoa avain
         if: always()

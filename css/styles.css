@@ -6002,6 +6002,19 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
    tilaa alleen. */
 .karttanimi-kohde { fill: rgba(var(--karttamuste), 0.92); }
 /*
+   KOHDEKAUPUNGIN NIMI RANNAN MUSTEELLA, VÄHEMMÄN MUSTA (omistaja 29.9.2026
+   klo 17.3x, sanatarkasti: "Tee kohdekaupunkien pisteistä ja
+   nimitekstistä vähemmän musta."). Muste on rantaviivan ruskea
+   (js/pallovektorit.js RANTA_MUSTE #5a4330) peitolla 0,75 — sama arvo
+   kuin kaupunkipisteellä (js/pallolauta/lauta.js KAUPUNKIPISTEEN_VARI)
+   ja natiivissa (Natiiviseppä, haara kaupunki-sepia). Pelaajan oma
+   kaupunki pitää entisen musteen (.karttanimi-oma), ja siirtokohteen
+   nimi (.target-nimi) on oma asunsa. GL-nimiöt lukevat tämän
+   koettimella (js/pallolauta/nimiorasterit.js lueNimenAsu). */
+:root { --kohdekaupunkimuste: 90, 67, 48; }
+.karttanimi-kaupunki { fill: rgba(var(--kohdekaupunkimuste), 0.75); }
+.karttanimi-kaupunki.karttanimi-oma { fill: rgba(var(--karttamuste), 0.92); }
+/*
    NOSTON VIIVA — merkiltä nimelle. Kartan kevyttä apuviivastoa: ohut,
    haalistunut muste, lyhyet katkot, ei nuolenpäitä. Paksuus ja katkot
    tulevat elementiltä CSS-pikseleinä (js/karttanimet.js NOSTON_VIIVA,
@@ -8376,18 +8389,10 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 
 .apuraha-toiminto:disabled { opacity: 0.7; cursor: default; }
 
-.apuraha-video {
-  display: block;
-  width: 100%;
-  margin: 0 0 0.9rem;
-  border-radius: 6px;
-  background: #1c140d;
-}
-
-/* Viiden kuvan rivi: pikkukuvat samankokoisina, napautus suurentaa. */
+/* Kuvarivi (4–5 kuvaa, --apuraha-kuvia): pikkukuvat samankokoisina, napautus suurentaa. */
 .apuraha-kuvat {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--apuraha-kuvia, 4), minmax(0, 1fr));
   gap: 0.4rem;
   margin: 1.1rem 0 0;
 }
@@ -8920,7 +8925,11 @@ body.flight-active .fact-card {
  * pidetään pienenä: nimi on merkintä kartalla, ei otsikko.
  */
 .target-nimi {
-  fill: var(--map-ink);
+  /* Rannan muste peitolla 0,95 (omistaja 29.9.2026 "vähemmän musta"):
+     sama muste kuin kaupungin nimellä, hieman vahvempana, jotta valinta
+     erottuu yhä taustan nimistä (Päätoimittaja: hierarkia säilyy).
+     Natiivissa sama arvo. */
+  fill: rgba(var(--kohdekaupunkimuste), 0.95);
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   font-weight: 600;
   letter-spacing: 0.03em;

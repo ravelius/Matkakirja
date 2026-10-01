@@ -28,22 +28,21 @@ const SAUMA = 1.5;
 // Kaiku ja etäisyys (ffmpeg-suotimet). KIVI = pitkä kivitilan kaiku, ETAALLA = alipäästö + kaiku.
 const KIVI = 'aecho=0.8:0.6:47|89|137|211|293:0.42|0.33|0.26|0.2|0.14';
 const HOLVI = 'aecho=0.8:0.7:61|113|181|263|347|449:0.45|0.38|0.31|0.25|0.2|0.15';
-const SUMEA = 'lowpass=f=1800,highpass=f=120';   // puhe sorinaksi: sanat eivät erotu
+const SUMEA = 'lowpass=f=900,highpass=f=100';   // puhe sorinaksi: alle 1 kHz vain vokaalien sointi, konsonantit (ja sanat) katoavat
 
 // id: laji, lähteet [{ tiedosto, alku, gain (dB), suodin }], kesto, jälkisuodin. alku 'auto' = voimakkain ikkuna.
 export const AANET = {
   // --- silmukat ---
   'keskushalli-ambienssi': { laji: 'silmukka', kesto: 26, lahteet: [
-    { t: FS(451600), alku: 60, suodin: `${SUMEA},${KIVI}` },
-    { t: FS(393689), alku: 20, gain: -6, suodin: `${SUMEA},${KIVI}` }] },
-  'takka-ratina': { laji: 'silmukka', kesto: 24, lahteet: [{ t: FS(766540), alku: 10 }] },
+    { t: FS(451600), alku: 60, suodin: `${SUMEA},${HOLVI}` }] },   // 393689 pois: tekijän mukaan puhe osin erottuvaa
+  // 766540 pois 30.9.: koostettu kahdesta muusta näytteestä, joiden lisenssejä ei tarkistettu
+  'takka-ratina': { laji: 'silmukka', kesto: 21, lahteet: [{ t: FS(414298), alku: 25 }] },
   'soihtu-ratina': { laji: 'silmukka', kesto: 22, lahteet: [{ t: FS(414298), alku: 8,
     suodin: 'highpass=f=250,acompressor=threshold=-32dB:ratio=6:attack=1:release=60,acompressor=threshold=-24dB:ratio=8:attack=0.5:release=40' }] },
   'kynttila-ratina': { laji: 'silmukka', kesto: 24, lahteet: [{ t: FS(813328), alku: 4, suodin: 'highpass=f=400' }] },
   'kappeli-ambienssi': { laji: 'silmukka', kesto: 28, lahteet: [{ t: FS(157375), alku: 30, suodin: 'highpass=f=60' }] },
   'vartiotupa-ambienssi': { laji: 'silmukka', kesto: 26, lahteet: [
-    { t: FS(770108), alku: 2, suodin: KIVI },
-    { t: FS(675177), alku: 0, gain: -14, suodin: `${SUMEA},${KIVI}`, silmukoi: true }] },
+    { t: FS(770108), alku: 2, suodin: KIVI }] },   // 675177 pois: puhetta ja digitoitu elokuva-arkisto
   'fatabuuri-ambienssi': { laji: 'silmukka', kesto: 28, lahteet: [
     { t: FS(427862), alku: 20, suodin: 'highpass=f=60' },
     { t: FS(628404), alku: 30, gain: -10, suodin: HOLVI }] },
@@ -65,7 +64,7 @@ export const AANET = {
   'tippa': { laji: 'kerta', kesto: 2.5, lahteet: [{ t: FS(478547), alku: 'auto' }] },
   'noppa-1': { laji: 'kerta', kesto: 2.2, lahteet: [{ t: FS(235489), alku: 'auto' }] },
   'noppa-2': { laji: 'kerta', kesto: 2.2, lahteet: [{ t: FS(764367), alku: 'auto' }] },
-  'airot': { laji: 'kerta', kesto: 5, lahteet: [{ t: FS(438846), alku: 'auto' }] },
+  'airot': { laji: 'kerta', kesto: 5, lahteet: [{ t: FS(525030), alku: 'auto' }] },   // 438846 pois: digitoitu elokuva-arkisto
   'koysi-narina': { laji: 'kerta', kesto: 3.5, lahteet: [{ t: FS(145721), alku: 'auto' }] },
   'pikari-1': { laji: 'kerta', kesto: 1.6, lahteet: [{ t: FS(528898), alku: 'auto', suodin: KIVI }] },
   'pikari-2': { laji: 'kerta', kesto: 1.6, lahteet: [{ t: FS(528898), alku: 'auto1', suodin: KIVI }] },
@@ -159,14 +158,9 @@ writeFileSync(join(ULOS, 'aanet.json'), JSON.stringify({
   aanet: tulos }, null, 2) + '\n');
 writeFileSync(join(ULOS, 'kestot.json'), JSON.stringify(Object.fromEntries(Object.entries(tulos).map(([k, v]) => [k, v.kesto_s])), null, 2) + '\n');
 
-// --- Keittiön 29.9. toimitus (31 kpl, mp3 192 kbit/s) → mono 64 kbit/s samaan kansioon (pankissa versio 2). ---
-const KEITTIO = '/Users/Shared/Claude/proto-3d/lokit/linna-keittio-aanet/dioraama/olavinlinna/aanet';
-if (process.argv.includes('--keittio')) {
-  for (const f of execFileSync('ls', [KEITTIO]).toString().trim().split('\n')) {
-    aja(['-i', join(KEITTIO, f), '-ac', '1', '-c:a', 'libmp3lame', '-b:a', '64k', join(ULOS, 'dioraama/olavinlinna/aanet', f)]);
-  }
-  console.log('keittiö uudelleenkoodattu');
-}
+// Puhetta (hahmot, Pulu, kertoja) EI koodata uudelleen (Päätoimittaja 30.9., omistaja kuuli säröä): alkuperäinen
+// eleven_v4 192 kbit/s tai vähintään 128 kbit/s mono. Vain silmukat ja tehosteet pakataan 64–96 kbit/s:iin.
+// (Keittiön äänien 64k-uudelleenkoodaus poistettu; kopiot eivät koskaan päätyneet ämpäriin.)
 
 // --- Kuuntelukoosteet omistajalle: 30 s per tila suunnitelman kohdan 2 kertoimilla (silmukat + kerta-äänet). ---
 const KOOSTEET = {

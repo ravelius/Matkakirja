@@ -39,3 +39,15 @@ test('Playwright-työkalut käyttävät avaaChromiumia (ei suoraa chromium.launc
     && /\bchromium\.launch\(/.test(readFileSync(t, 'utf8')));
   assert.deepEqual(suorat, [], `suora chromium.launch: ${suorat.join(', ')}`);
 });
+
+test('ääni mykistetty oletuksena, kuultava vain pyydettäessä (omistaja 30.9.2026)', async () => {
+  const { aaniLiput } = await import('../tools/selain.mjs');
+  const ennen = process.env.SELAIN_AANI;
+  delete process.env.SELAIN_AANI;
+  assert.deepEqual(aaniLiput([]), ['--mute-audio']);
+  assert.deepEqual(aaniLiput(['--mute-audio']), [], 'ei kahdesti');
+  assert.deepEqual(aaniLiput([], { aani: true }), []);
+  process.env.SELAIN_AANI = '1';
+  assert.deepEqual(aaniLiput([]), []);
+  if (ennen === undefined) delete process.env.SELAIN_AANI; else process.env.SELAIN_AANI = ennen;
+});
