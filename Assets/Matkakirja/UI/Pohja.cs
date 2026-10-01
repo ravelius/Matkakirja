@@ -31,11 +31,13 @@ namespace Matkakirja.Natiivi
             bool kapea = Leveys(kw - t.x - t.z) == Luokka.Kapea;
             kerros.style.justifyContent = kapea ? UnityEngine.UIElements.Justify.FlexEnd : UnityEngine.UIElements.Justify.FlexStart;
             kerros.style.alignItems = kapea ? UnityEngine.UIElements.Align.Center : UnityEngine.UIElements.Align.FlexEnd;
-            kerros.style.paddingTop = UnityEngine.Mathf.Round(t.y + m);
+            // Sivukortti alkaa yläpalkin alta (turva-alue ei sisällä palkkia; 0c34c00e: kortti yläpalkin päällä iPadilla).
+            float yla = kapea ? t.y : t.y + Ylapalkki.Varaus;
+            kerros.style.paddingTop = UnityEngine.Mathf.Round(yla + m);
             kerros.style.paddingBottom = UnityEngine.Mathf.Round(t.w + m);
             kerros.style.paddingRight = UnityEngine.Mathf.Round(t.z + m);
             kerros.style.paddingLeft = UnityEngine.Mathf.Round(t.x + m);
-            float tila = kh - t.y - t.w - 2f * m;
+            float tila = kh - yla - t.w - 2f * m;
             float h = kapea ? UnityEngine.Mathf.Min(tila, UnityEngine.Mathf.Round(kh * (laajennettu ? Tyylikirja.Peitto.Laajennettu : Tyylikirja.Peitto.Max) / 100f)) : tila;
             if (kortti.resolvedStyle.maxHeight.value != h) kortti.style.maxHeight = h;
             if (kiintea && kortti.style.height.value.value != h) kortti.style.height = h;
