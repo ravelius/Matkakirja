@@ -978,6 +978,23 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(2, re.Reitti.Pisteet.Count);
         }
 
+        // Linnan puheet (Päätoimittaja 1.10., #3742): kertojan jakso kestää vähintään puheen kesto + 0,5 s, vaikka kesto_s olisi lyhyempi.
+        [Testi] static void KertojanJaksoVenyyPuheenMittaiseksi()
+        {
+            string Rak(string aani) => KeittioFixture
+                .Replace("\"yleiskamera\": {", "\"kertoja\": {\"jaksot\": [{\"id\": \"j1\", \"teksti\": \"Testi.\", \"kesto_s\": 3, \"aani\": " + aani +
+                    ", \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 90, \"korkeus\": 20, \"etaisyys\": 10}}]},\n  \"yleiskamera\": {")
+                .Replace("\"testiaani\": {", "\"pitka\": {\"tiedosto\": \"p.mp3\", \"kesto_s\": 10},\n \"testiaani\": {");
+            var puheella = new PoikkileikkausLinssi();
+            puheella.Avaa(DioraamaData.Lue(Rak("\"pitka\"")), 0, false);
+            var ilman = new PoikkileikkausLinssi();
+            ilman.Avaa(DioraamaData.Lue(Rak("null")), 0, false);
+            // Lento ≤ 2,5 s + kesto 3 s → ilman puhetta jakso on ohi 6 s:ssa; 10 s:n puheella jakso jatkuu ainakin 12 s:iin.
+            Oleta.Sama(0, puheella.NakymaHetkella(8, pysty: false).KertojaJakso);
+            Oleta.Tosi(ilman.NakymaHetkella(8, pysty: false).KertojaJakso != 0, "ilman puhetta jakso on ohi");
+            Oleta.Sama(0, puheella.NakymaHetkella(11.5, pysty: false).KertojaJakso);
+        }
+
         [Testi] static void PoikkileikkausAvausJaKohdistaminen()
         {
             var rak = DioraamaData.Lue(KeittioFixture);

@@ -341,6 +341,17 @@ namespace Matkakirja.Linssit.Dioraama
             kertojaOhitukset.Clear();
         }
 
+        /// <summary>Jakson pysähdys: datan kesto, mutta vähintään puheen kesto + 0,5 s (Päätoimittaja 1.10., #3742: isoisän
+        /// puhe ei katkea jakson vaihtuessa, vaikka kesto_s jäisi datassa lyhyeksi). Puhe alkaa tekstin noustessa lennon
+        /// lopussa, joten teksti näkyy vähintään tämän ajan.</summary>
+        double JaksonKesto(KertojaJakso j)
+        {
+            double k = j.Kesto;
+            if (!string.IsNullOrEmpty(j.Aani) && Rakennus?.Aanet != null && Rakennus.Aanet.TryGetValue(j.Aani, out var a) && a.KestoS > 0)
+                k = Math.Max(k, a.KestoS + 0.5);
+            return k;
+        }
+
         Asento JaksonAsento(KertojaJakso j, bool pysty)
         {
             // Tilaan sidottu jakso käyttää tilan omaa kameraa (1.1 (75): laiturijakson kopioidut arvot olivat vanhasta
@@ -371,7 +382,7 @@ namespace Matkakirja.Linssit.Dioraama
             for (int j = 0; j < jaksot.Count; j++)
             {
                 var kohde = JaksonAsento(jaksot[j], pysty);
-                double lento = KertojaLento(edellinen, kohde), loppu = kursori + lento + jaksot[j].Kesto;
+                double lento = KertojaLento(edellinen, kohde), loppu = kursori + lento + JaksonKesto(jaksot[j]);
                 if (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < loppu) loppu = Math.Max(kursori, kertojaOhitukset[ohitus++]);
                 if (t < loppu)
                 {
