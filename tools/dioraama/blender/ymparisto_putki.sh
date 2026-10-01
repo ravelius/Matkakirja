@@ -2,7 +2,7 @@
 # OLAVINLINNAN YMPÄRISTÖN KOKO KETJU (Linnanrakentaja 1.10.2026; laatusuunnitelman vaihe 5, aikakerros n1500).
 # MML:n aineistot (CC BY 4.0, _lahteet/mml-kyronsalmi/LAHDE.md) → kaupunkimaski → puut → maasto ja ortokuva →
 # pienmuodot → puulista ja syvyys → horisontti → puukortit (päivä, hämärä) → lähimaasto (kerrosmaskit, CC0-kerrokset,
-# aluskasvit, makro kerroksista) → maaston hämärä → ASTC.
+# aluskasvit, makro kerroksista, rantaviiva) → maaston hämärä → ASTC.
 #   nice -n 15 tools/dioraama/blender/ymparisto_putki.sh <ulos-kansio> [--avoin 350]
 # Tulos kansioon, jonka vie-blender.sh vie polkuun blender/ymparisto/ (lähde olavinlinna-blender/ymparisto).
 set -euo pipefail
@@ -28,6 +28,7 @@ for l in $(python3 -c "import json; print(' '.join(k['lahde'] for k in json.load
   cp $L/polyhaven/maasto/${l}_diff_1k.jpg $L/polyhaven/maasto/${l}_nor_gl_1k.jpg $ULOS/maasto/; done
 bl -P $H/aluskasvit.py -- $ULOS 256; bl -P $H/aluskasvit.py -- $ULOS 256 --hamara
 nice -n 15 $PY $H/makro_kerroksista.py $ULOS $L/polyhaven/maasto | cut -c1-60
+nice -n 15 $PY $H/makro_ranta.py $ULOS  # märkä rantakaista ja vaahto vesirajaan (1.10.)
 echo "== hämärä $(date +%H.%M)"; mkdir -p $ULOS/hamara; sips -s format png $ULOS/ymparisto-8k.jpg --out $ULOS/hamara/albedo-8k.png >/dev/null
 bl -P $H/kuori_hamara.py -- $ULOS/ymparisto_kevyt.glb $R $ULOS/hamara 64 4096 --tavoite --albedo $ULOS/hamara/albedo-8k.png
 for k in 8 4 2; do mv $ULOS/hamara/ulkokuori-hamara-${k}k.jpg $ULOS/ymparisto-hamara-${k}k.jpg; done; rm -rf $ULOS/hamara

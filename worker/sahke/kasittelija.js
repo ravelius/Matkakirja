@@ -183,7 +183,7 @@ export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
 function korsOtsakkeet(origin, sallitut) {
   const otsakkeet = {
     'access-control-allow-methods': 'GET, POST, OPTIONS',
-    'access-control-allow-headers': 'content-type',
+    'access-control-allow-headers': `content-type, ${AVAIN_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -454,12 +454,20 @@ function virstanpylvaat(sahkeetUusinEnsin, jasenId) {
   return ulos;
 }
 
+/*
+ * JÄSENAVAIN OTSAKKEESSA (Päätoimittaja 1.10.2026, tietoturvakorjaus): ?avain=
+ * jäi palvelinlokeihin osoitteen mukana. Asiakkaat (web js/sahke.js, natiivi
+ * Sahke.cs) lähettävät avaimen otsakkeessa; kysely kelpaa siirtymän ajan
+ * (vanhat TF-buildit), poistetaan kun uusi natiivi on testiryhmällä.
+ */
+export const AVAIN_OTSAKE = 'x-sahke-avain';
+
 /** GET /retkikunta/tila — koko oman retkikunnan tilannekuva yhdellä pyynnöllä. */
-async function tila(url, varasto, kors, nyt) {
+async function tila(pyynto, url, varasto, kors, nyt) {
   const loyto = await tunnista(varasto, {
     koodi: url.searchParams.get('koodi'),
     jasenId: url.searchParams.get('jasenId'),
-    avain: url.searchParams.get('avain'),
+    avain: pyynto?.headers?.get?.(AVAIN_OTSAKE) || url.searchParams.get('avain'),
   });
   if (!loyto) {
     return vastaa({ virhe: 'Tunnukset eivät täsmää.' }, { status: 401, ...kors });
@@ -745,7 +753,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
     case '/retkikunta/liity':
       return pyynto.method === 'POST' ? liity(pyynto, varasto, kors, nyt) : vain('POST');
     case '/retkikunta/tila':
-      return pyynto.method === 'GET' ? tila(url, varasto, kors, nyt) : vain('GET');
+      return pyynto.method === 'GET' ? tila(pyynto, url, varasto, kors, nyt) : vain('GET');
     case '/sahke':
       return pyynto.method === 'POST' ? sahke(pyynto, varasto, kors, nyt) : vain('POST');
     case '/apu/kysy':
