@@ -70,9 +70,8 @@ namespace Matkakirja.Natiivi
 
             paneeli = Rakenne.El("mk-linssivalitsin", turva);
             paneeli.style.display = DisplayStyle.None;
-            // Valikoiden vaaleampi paperi (omistaja 29.9.2026 klo 23.0x, 1.0.56).
-            Rakenne.Tausta(paneeli, Kuviot.PergamenttiVaalea);
-            paneeli.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
+            // PANEELI-pohja (omistaja 1.10.2026, web #3804): paperipinta ja pergamenttirengas tokeneista (Linssit.uss "PANEELI").
+            paneeli.AddToClassList("mk-paneeli--pohja");
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
 
             var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
@@ -100,8 +99,8 @@ namespace Matkakirja.Natiivi
             // Muut-paneeli: sama pergamentti ja kehys, ‹ takaisin ja ✕, rivit (Valikkona).
             muut = Rakenne.El("mk-linssivalitsin mk-linssivalitsin--valikko mk-linssivalitsin--muut", turva);
             muut.style.display = DisplayStyle.None;
-            Rakenne.Tausta(muut, Kuviot.PergamenttiVaalea);
-            muut.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
+            // PANEELI-pohja (omistaja 1.10.2026, web #3804): paperipinta ja pergamenttirengas tokeneista (Linssit.uss "PANEELI").
+            muut.AddToClassList("mk-paneeli--pohja");
             Kirjasimet.Aseta(muut, Kirjasin.Kone);
             var muutYla = Rakenne.El("mk-selite__ylarivi", muut, PickingMode.Ignore);
             var takaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin", SuljeMuut, muutYla);
@@ -167,7 +166,7 @@ namespace Matkakirja.Natiivi
             {
                 bool p = rid == (id ?? EiLinssia);
                 rivi.EnableInClassList("mk-valittu", p);
-                tila.text = p ? "päällä" : "";
+                tila.text = p ? "PÄÄLLÄ" : ""; // PANEELI: tila kapiteelina (web #3811)
             }
             // Pillerivalikossa linssi otetaan pois "Ei linssiä" -riviltä kuten webissä.
             poisNappi.style.display = id != null && !PilleriValikko ? DisplayStyle.Flex : DisplayStyle.None;

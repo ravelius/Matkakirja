@@ -4168,3 +4168,105 @@
 .mk-linssivalikko--pohja .mk-linssivalikko__kytkin.mk-valittu .mk-linssivalikko__tila {
     color: var(--tk-lasi-korostus);
 }
+
+/* PANEELI (PAPERI): pillerivalikko ja sen alinäkymät, Muut ja linssin esikatselu (omistaja 1.10.2026, web #3804;
+ * Linssivalitsin mk-paneeli--pohja). Paperipinta ja pergamenttirengas, kapiteeliotsikko, ‹ Takaisin korostusvärillä,
+ * segmentit ja rivit 38 pt (reunus, kulma nappi), päällä oleva kytkin pergamenttina korostusreunuksella. */
+.mk-paneeli--pohja {
+    border-width: 3px;
+    border-color: var(--tk-paperi-pergamentti);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-selite__otsikko {
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-paneeli--pohja .mk-linssivalitsin__takaisin .mk-nappi__teksti {
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-paneeli--pohja .mk-linssivalitsin__erotin {
+    background-color: var(--tk-paperi-reunus);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi {
+    min-height: var(--tk-nappi-korkeus);
+    border-color: var(--tk-paperi-reunus);
+    background-color: var(--tk-paperi-pinta);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi__nimi,
+.mk-paneeli--pohja .mk-valikkonappi__ikoni {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi__nimi {
+    font-size: var(--tk-koko-apuri);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin .mk-valikkonappi__nimi,
+.mk-paneeli--pohja .mk-valikkonappi--kytkin .mk-valikkonappi__ikoni {
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin.mk-valittu {
+    border-color: var(--tk-paperi-korostus);
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin.mk-valittu .mk-valikkonappi__nimi,
+.mk-paneeli--pohja .mk-valikkonappi--kytkin.mk-valittu .mk-valikkonappi__ikoni {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--rivi > .mk-valikkonappi__nimi {
+    font-size: var(--tk-koko-leipa);
+}
+
+/* LINSSIVALITSIN PANEELI-pohjalla (web #3811): tila kapiteelina korostusvärillä; kapeassa sarakkeessa (esikatselu auki)
+ * tila nimen alle omalle rivilleen, nimi ei lyhene. Esikatseltu rivi (Aktivoi) pergamenttina toimintoreunuksella;
+ * esikatselukortin oma Aktivoi pysyy kultana. */
+.mk-paneeli--pohja .mk-linssirivi__nimi {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-linssirivi__tila {
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    -unity-font-style: bold;
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi__nimirivi {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi__tila {
+    margin-top: var(--tk-vali-xs);
+}
+
+.mk-paneeli--pohja .mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tekstit,
+.mk-paneeli--pohja .mk-linssirivi--aktivoi.mk-esikatseltu > .mk-linssirivi__nimirivi {
+    border-width: 1px;
+    border-color: var(--tk-paperi-toiminto);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-paneeli--pohja .mk-linssirivi.mk-esikatseltu .mk-linssirivi__tila,
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi.mk-esikatseltu .mk-linssirivi__tila {
+    margin-top: 0;
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 0;
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi.mk-esikatseltu .mk-linssirivi__nimirivi {
+    align-items: center;
+}

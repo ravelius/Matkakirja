@@ -271,7 +271,8 @@ namespace Matkakirja.Natiivi
         public string TestiVeto(string suunta)
         {
             if (Auki == null) return "ihmisen matkan nostokortti ei ole auki";
-            if (suunta == "alas") { Sulje(); return "kahva alas: suljettu"; }
+            if (suunta == "alas" && !laajennettu) { Sulje(); return "kahva alas: suljettu"; }
+            if (suunta == "alas") suunta = "pienenna"; // NOSTOKORTTI kohta 2: laajennetusta ensin 45 %:iin
             if (suunta != "laajenna" && suunta != "pienenna") return "ui linssi matka veto laajenna|pienenna|alas";
             laajennettu = suunta == "laajenna";
             Paikka();
