@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 1.10. 07:49:** Levy 48 Gi (vakaa), wt/ 31 (raja 20), muisti 79 % vapaa, kuorma 23/27/22, sim 1 (siirtoseppa-iPhone; päivä ≤1 ok), työtilat ok. Viikko 96 % (97 % ilmoitus lähellä). 5 h 23 %. Päätoimittaja 15 %. Kävijälaskuri: 07.33 n=9, seuraava ~08.33. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 1.10. 07:33:** KÄVIJÄLASKURI n=9 (6→9; 1.10. US 6, apurahakortti 1.10. 4 (+3), ESITTELYLINSSIT 1 (uusi)) → ilmoitus posti-tiedostossa 07.33; seuraava ~08.33. VIIKKO 96 % (97 % lähellä). Levy 49 Gi, wt/ 31 (raja 20), muisti 79 % vapaa, kuorma 44/17/11, sim 1 (siirtoseppa-iPhone; päivä ≤1 ok), työtilat ok. 5 h 22 %. Päätoimittaja 12 % (käynnissä). Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 1.10. 07:02:** Levy 48 Gi (47→48 vakaa), wt/ 31 (raja 20), muisti 81 % vapaa, kuorma 8/10/14 (rauhallinen), sim 0, työtilat ok. Viikko 95 % (97 % ilmoitus tulossa). 5 h 20 %. Päätoimittaja 10 % (idle, ei uusia viestejä). Kävijälaskuri: 06.33 n=6, seuraava ~07.33. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta. Huom: simulaattorisääntö päivällä ≤1 (klo 07–24) voimassa nyt.
