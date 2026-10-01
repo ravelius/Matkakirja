@@ -556,6 +556,7 @@ namespace Matkakirja.Natiivi
                 && musta.style.display.value != DisplayStyle.Flex;
             aikaselain.Nayta(nakyy, kerros.Reunat(LinssiUi.Kerros).w);
             kertomus.style.bottom = nakyy && !kertomus.ClassListContains("mk-keskella") ? aikaselain.Korkeus + 11 : StyleKeyword.Null;
+            nostokortti.Ala = nakyy ? aikaselain.Korkeus + 11 : 0f; // NOSTOKORTTI-pohja: kortti aikaselaimen yläpuolelle
         }
 
         // --- tila ------------------------------------------------------------------------
