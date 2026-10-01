@@ -27,6 +27,10 @@ namespace Matkakirja.Natiivi
         static readonly List<MeshRenderer> piirrot = new List<MeshRenderer>();
         /// <summary>Mesh osiin alle 65 536 kärjen (oletus); false = yksi UInt32-mesh (A/B viivavian rajaukseen).</summary>
         public static bool Osiin = true;
+        /// <summary>Viivavian rajaus (`poikki aluskasvit lajit 7,8|kaikki`, seuraava lataus): vain nämä lajit, null = kaikki.</summary>
+        public static HashSet<int> VainLajit;
+        /// <summary>UV-reunus solun sisään (atlaksen tekseleinä), ettei kortti näytteistä solun rajaa eikä naapurisolua.</summary>
+        const float ReunusTekselia = 2f;
         /// <summary>A/B kuvapariin (`poikki aluskasvit 0|1`): aluskasvit piiloon tai näkyviin lataamatta uudelleen.</summary>
         public static bool Pois;
 
@@ -61,6 +65,14 @@ namespace Matkakirja.Natiivi
             if (!voimassa()) yield break;
             if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei latautunut"); yield break; }
 
+            // Atlaksen koko PNG-otsakkeesta (IHDR: leveys tavuissa 16–19, korkeus 20–23) UV-reunusta varten.
+            int atlasL = 1280, atlasK = 512;
+            if (atlasTavut.Length > 24 && atlasTavut[1] == 'P' && atlasTavut[2] == 'N' && atlasTavut[3] == 'G')
+            {
+                atlasL = atlasTavut[16] << 24 | atlasTavut[17] << 16 | atlasTavut[18] << 8 | atlasTavut[19];
+                atlasK = atlasTavut[20] << 24 | atlasTavut[21] << 16 | atlasTavut[22] << 8 | atlasTavut[23];
+            }
+            float du = ReunusTekselia / Math.Max(1, atlasL), dv = ReunusTekselia / Math.Max(1, atlasK);
             float alku = Time.realtimeSinceStartup;
             Vector3[] p = null; Vector2[] uv0 = null, uv1 = null; Color32[] v = null; int[] kolmiot = null; string virhe = null; int kasveja = 0;
             var tehtava = Task.Run(() =>
@@ -108,6 +120,7 @@ namespace Matkakirja.Natiivi
                         float bx = (float)(double)r[0], by = (float)(double)r[1], bz = (float)(double)r[2];
                         int laji = (int)(double)r[3];
                         float koko = (float)(double)r[4];
+                        if (VainLajit != null && !VainLajit.Contains(laji)) continue;
                         if (!lajiKortit.TryGetValue(laji, out var vaihtoehdot)) continue;
                         uint hsh = (uint)(i * 2654435761u) ^ (uint)(bx * 73856093f) ^ (uint)(by * 19349663f);
                         var kortti = vaihtoehdot[(int)(hsh % (uint)vaihtoehdot.Count)];
@@ -124,8 +137,9 @@ namespace Matkakirja.Natiivi
                             int b = k0 * 4;
                             p[b] = juuriP - sivu; p[b + 1] = juuriP + sivu;
                             p[b + 2] = juuriP + sivu + Vector3.up * korkeus; p[b + 3] = juuriP - sivu + Vector3.up * korkeus;
-                            uv0[b] = new Vector2(kortti.U0, kortti.V0); uv0[b + 1] = new Vector2(kortti.U1, kortti.V0);
-                            uv0[b + 2] = new Vector2(kortti.U1, kortti.V1); uv0[b + 3] = new Vector2(kortti.U0, kortti.V1);
+                            float u0 = kortti.U0 + du, u1 = kortti.U1 - du, v0 = kortti.V0 + dv, v1 = kortti.V1 - dv;
+                            uv0[b] = new Vector2(u0, v0); uv0[b + 1] = new Vector2(u1, v0);
+                            uv0[b + 2] = new Vector2(u1, v1); uv0[b + 3] = new Vector2(u0, v1);
                             uv1[b] = uv1[b + 1] = new Vector2(tyvi, 0); uv1[b + 2] = uv1[b + 3] = new Vector2(latva, 0);
                             for (int c = 0; c < 4; c++) v[b + c] = new Color32(kirkkaus, vaihe, 0, 255);
                             int ti = k0 * 6;
