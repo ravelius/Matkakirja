@@ -55,6 +55,9 @@ if [ -f "$LAHDE/ulkokuori/hybridi/kuori-materiaali-2k.png" ]; then
       [ -f "$KIRJASTO/materiaali/$id/${id}_$k" ] || { echo "PUUTTUU: $KIRJASTO/materiaali/$id/${id}_$k" >&2; exit 1; }
       LISTA+=("kirjasto/materiaali/$id/${id}_$k|@$KIRJASTO/materiaali/$id/${id}_$k")
     done
+    for k in diff-4x4.astcm nor_gl-4x4.astcm; do  # ASTC (1.10.), jos kirjastossa
+      if [ -f "$KIRJASTO/materiaali/$id/${id}_$k" ]; then LISTA+=("kirjasto/materiaali/$id/${id}_$k|@$KIRJASTO/materiaali/$id/${id}_$k"); fi
+    done
   done
 fi
 # Ympäristö (vaihe 5, aikakerros n1500, 1.10.2026): tools/dioraama/blender/ymparisto_putki.sh → $LAHDE/ymparisto/.
@@ -71,7 +74,7 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
     for f in splat-0.png splat-1.png splat-normaali-0.png aluskasvit.png aluskasvit-hamara.png aluskasvit.json aluskasvit-lista.json; do
       lisaa "ymparisto/$f" "ymparisto/$f"
     done
-    for f in "$LAHDE"/ymparisto/maasto/*_1k.jpg; do lisaa "ymparisto/maasto/${f:t}" "ymparisto/maasto/${f:t}"; done
+    for f in "$LAHDE"/ymparisto/maasto/*_1k.jpg "$LAHDE"/ymparisto/maasto/*_1k-4x4.astcm(N); do lisaa "ymparisto/maasto/${f:t}" "ymparisto/maasto/${f:t}"; done
   fi
   # Puukorttien normaalikartta (v3), jos lähteessä.
   [ -f "$LAHDE/ymparisto/puukortit-normaali.png" ] && lisaa ymparisto/puukortit-normaali.png ymparisto/puukortit-normaali.png
@@ -82,7 +85,7 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
   # ASTC-mipketjut kuville (Siirtoseppä 1.10., ensilataus v2), jos lähteessä; png/jpg jäävät rinnalle.
   for f in puukortit puukortit-hamara puukortit-normaali horisontti-1k horisontti-hamara-1k taivas-2k taivas-hamara-2k \
            aluskasvit aluskasvit-hamara; do
-    [ -f "$LAHDE/ymparisto/$f-4x4.astcm" ] && lisaa "ymparisto/$f-4x4.astcm" "ymparisto/$f-4x4.astcm"
+    if [ -f "$LAHDE/ymparisto/$f-4x4.astcm" ]; then lisaa "ymparisto/$f-4x4.astcm" "ymparisto/$f-4x4.astcm"; fi
   done
 fi
 for g in "$LAHDE"/tilat/*.glb; do
