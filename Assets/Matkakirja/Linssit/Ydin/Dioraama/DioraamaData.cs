@@ -501,6 +501,8 @@ namespace Matkakirja.Linssit.Dioraama
         public List<string> Maski = new List<string>();
         public string MaskiNormaali;
         public List<(string Id, string Diff, string Nor, double ToistoM)> Kerrokset = new List<(string, string, string, double)>();
+        /// <summary>Ensilataus v2: ASTC-kuvat ja keskikirkkaus (lineaarinen, 0,2126/0,7152/0,0722) Kerrokset-järjestyksessä.</summary>
+        public List<(string DiffAstc, string NorAstc, double? Keski)> KerroksetAstc = new List<(string, string, double?)>();
     }
 
     public sealed class Ulkokuori
@@ -525,6 +527,9 @@ namespace Matkakirja.Linssit.Dioraama
         public string Maski;
         public double Voimakkuus = 0.8, Normaali = 0.7;
         public List<(string Diff, string Nor, double ToistoM)> Kanavat = new List<(string, string, double)>();
+        /// <summary>Ensilataus v2 (1.10.2026): valmiiksi pakatut ASTC-kuvat ja keskikirkkaus (lineaarinen, 0,299/0,587/0,114)
+        /// samassa järjestyksessä kuin Kanavat; null = jpg + runtime-pakkaus kuten ennen.</summary>
+        public List<(string DiffAstc, string NorAstc, double? Keski)> KanavatAstc = new List<(string, string, double?)>();
     }
 
     public sealed class Rakennus
@@ -646,7 +651,9 @@ namespace Matkakirja.Linssit.Dioraama
                     foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(maasto, "kerrokset")))
                     {
                         var k = MiniJson.ObjektiTaiNull(ko);
-                        if (k != null) mk.Kerrokset.Add((MiniJson.Teksti(k, "id"), MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                        if (k == null) continue;
+                        mk.Kerrokset.Add((MiniJson.Teksti(k, "id"), MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                        mk.KerroksetAstc.Add((MiniJson.Teksti(k, "diff_astc"), MiniJson.Teksti(k, "nor_astc"), MiniJson.Luku(k, "keski")));
                     }
                     if (mk.MaxX > mk.MinX && mk.MaxZ > mk.MinZ && mk.Kerrokset.Count > 0) y.Maasto = mk;
                 }
@@ -681,7 +688,9 @@ namespace Matkakirja.Linssit.Dioraama
                 foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(detalji, "kanavat")))
                 {
                     var k = MiniJson.ObjektiTaiNull(ko);
-                    if (k != null) kd.Kanavat.Add((MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                    if (k == null) continue;
+                    kd.Kanavat.Add((MiniJson.Teksti(k, "diff"), MiniJson.Teksti(k, "nor"), MiniJson.Luku(k, "toisto_m") ?? 2));
+                    kd.KanavatAstc.Add((MiniJson.Teksti(k, "diff_astc"), MiniJson.Teksti(k, "nor_astc"), MiniJson.Luku(k, "keski")));
                 }
                 if (kd.Maski != null && kd.Kanavat.Count > 0) r.Ulkokuori.Detalji = kd;
             }

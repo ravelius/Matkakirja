@@ -104,7 +104,9 @@ namespace Matkakirja.Natiivi
                 : taso == DioraamaUlkokuori.Laatu.Normaali ? y.OrtoNormaali : y.OrtoKevyt;
             var esikatselu = new List<UnityEngine.Object>();
             bool porrastus = taso != DioraamaUlkokuori.Laatu.Kevyt && !string.IsNullOrEmpty(y.Kevyt) && y.Kevyt != maasto;
-            if (porrastus) yield return LataaMalli("maasto-esikatselu", y.Kevyt, null, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu);
+            // Ensilataus v2: esikatselun kuva kevyen tason ASTC-ortosta (ei runtime-pakkausta); tukematon → glb:n kuva.
+            string esiOrto = y.OrtoKevyt != null && y.OrtoKevyt.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase) ? y.OrtoKevyt : null;
+            if (porrastus) yield return LataaMalli("maasto-esikatselu", y.Kevyt, esiOrto, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu);
             else if (!string.IsNullOrEmpty(maasto)) yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
             if (oma != kerta) yield break;
             kirjaa?.Invoke($"poikki: ympäristö: ensimmäinen maasto näkyvissä {Time.realtimeSinceStartup - alku:F1} s");
@@ -549,20 +551,38 @@ namespace Matkakirja.Natiivi
             for (int k = 0; k < kerroksia; k++)
             {
                 var (id, diff, nor, toistoM) = s.Kerrokset[k];
-                byte[] d = null, n = null;
-                yield return DioraamaLevyvalimuisti.Hae(url(diff), 60, b => d = b);
-                if (huippu && !string.IsNullOrEmpty(nor)) yield return DioraamaLevyvalimuisti.Hae(url(nor), 60, b => n = b);
-                if (oma != kerta) yield break;
+                // Ensilataus v2 (iPad Dev 1.10.: runtime-Compress odotti grafiikkasäiettä 100–170 ms): ASTC + datan keski ensin.
+                var (diffAstc, norAstc, keskiData) = k < s.KerroksetAstc.Count ? s.KerroksetAstc[k] : (null, null, (double?)null);
                 Texture2D dk = null; float kirkkaus = 0.5f;
-                yield return Kuva(d, false, "Ymparisto:splat-" + id, true, kirjaa, (kt, b) => { dk = kt; kirkkaus = b; });
-                if (oma != kerta) yield break;
+                if (keskiData.HasValue)
+                {
+                    yield return LataaAstc(diffAstc, "Ymparisto:splat-" + id, false, TextureWrapMode.Repeat, url, kirjaa, luodut, t => dk = t);
+                    if (oma != kerta) yield break;
+                    if (dk != null) kirkkaus = (float)keskiData.Value;
+                }
+                if (dk == null)
+                {
+                    byte[] d = null;
+                    yield return DioraamaLevyvalimuisti.Hae(url(diff), 60, b => d = b);
+                    if (oma != kerta) yield break;
+                    yield return Kuva(d, false, "Ymparisto:splat-" + id, true, kirjaa, (kt, b) => { dk = kt; kirkkaus = b; });
+                    if (oma != kerta) yield break;
+                }
                 if (dk == null) { kirjaa?.Invoke($"poikki: ympäristö: kerros {id} ei latautunut, pelkkä ilmakuva"); yield break; }
                 mat.SetTexture("_SplatDiff" + k, dk);
-                if (n != null)
+                if (huippu)
                 {
                     Texture2D nk = null;
-                    yield return Kuva(n, true, "Ymparisto:splat-nor-" + id, false, kirjaa, (kk, _) => nk = kk);
+                    yield return LataaAstc(norAstc, "Ymparisto:splat-nor-" + id, true, TextureWrapMode.Repeat, url, kirjaa, luodut, t => nk = t);
                     if (oma != kerta) yield break;
+                    if (nk == null && !string.IsNullOrEmpty(nor))
+                    {
+                        byte[] n = null;
+                        yield return DioraamaLevyvalimuisti.Hae(url(nor), 60, b => n = b);
+                        if (oma != kerta) yield break;
+                        yield return Kuva(n, true, "Ymparisto:splat-nor-" + id, false, kirjaa, (kk, _) => nk = kk);
+                        if (oma != kerta) yield break;
+                    }
                     if (nk != null) mat.SetTexture("_SplatNor" + k, nk);
                 }
                 toisto[k] = 1f / Mathf.Max(0.1f, (float)toistoM);

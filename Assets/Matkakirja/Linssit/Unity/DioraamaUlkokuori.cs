@@ -235,13 +235,28 @@ namespace Matkakirja.Natiivi
             for (int c = 0; c < 4; c++)
             {
                 var (diff, nor, toistoM) = c < d.Kanavat.Count ? d.Kanavat[c] : (null, null, 2.0);
+                var (diffAstc, norAstc, keskiData) = c < d.KanavatAstc.Count ? d.KanavatAstc[c] : (null, null, (double?)null);
                 toisto[c] = (float)Math.Max(0.2, toistoM);
+                // Ensilataus v2 (iPad Dev 1.10.: runtime-Compress odotti grafiikkasäiettä 100–170 ms): ASTC + datan keski ensin.
+                Texture2D dkAstc = null, nkAstc = null;
+                if (keskiData.HasValue)
+                {
+                    yield return DioraamaYmparisto.LataaAstc(diffAstc, "Detalji:diff" + c, false, TextureWrapMode.Repeat, url, kirjaa, null, t => dkAstc = t);
+                    if (oma != kerta) yield break;
+                    if (dkAstc != null) { keski[c] = Mathf.Max(0.05f, (float)keskiData.Value); detaljiKuvat.Add(dkAstc); }
+                }
+                if (DioraamaLaatu.Taysi)
+                {
+                    yield return DioraamaYmparisto.LataaAstc(norAstc, "Detalji:nor" + c, true, TextureWrapMode.Repeat, url, kirjaa, null, t => nkAstc = t);
+                    if (oma != kerta) yield break;
+                    if (nkAstc != null) detaljiKuvat.Add(nkAstc);
+                }
                 byte[] dt = null, nt = null;
-                if (diff != null) yield return DioraamaLevyvalimuisti.Hae(url(diff), 120, t => dt = t);
-                if (nor != null && DioraamaLaatu.Taysi) yield return DioraamaLevyvalimuisti.Hae(url(nor), 120, t => nt = t);
+                if (dkAstc == null && diff != null) yield return DioraamaLevyvalimuisti.Hae(url(diff), 120, t => dt = t);
+                if (nkAstc == null && nor != null && DioraamaLaatu.Taysi) yield return DioraamaLevyvalimuisti.Hae(url(nor), 120, t => nt = t);
                 if (oma != kerta) yield break;
-                var dk = Kuva(dt, false, "Detalji:diff" + c, false);
-                if (dk != null)
+                var dk = dkAstc ?? Kuva(dt, false, "Detalji:diff" + c, false);
+                if (dk != null && dkAstc == null)
                 {
                     // Keskikirkkaus pienimmästä mip-tasosta ennen pakkausta (kirkkaussuhteen nimittäjä).
                     var p = dk.GetPixels(dk.mipmapCount - 1);
@@ -252,8 +267,8 @@ namespace Matkakirja.Natiivi
                     dk.Compress(true); dk.Apply(false, true);
                     detaljiKuvat.Add(dk);
                 }
-                var nk = Kuva(nt, true, "Detalji:nor" + c, true);
-                if (nk != null) { nk.Apply(false, true); detaljiKuvat.Add(nk); }
+                var nk = nkAstc ?? Kuva(nt, true, "Detalji:nor" + c, true);
+                if (nk != null && nkAstc == null) { nk.Apply(false, true); detaljiKuvat.Add(nk); }
                 Shader.SetGlobalTexture(IdDetaljiDiff[c], dk != null ? (Texture)dk : Texture2D.grayTexture);
                 Shader.SetGlobalTexture(IdDetaljiNor[c], nk != null ? (Texture)nk : Texture2D.normalTexture);
                 yield return null;
