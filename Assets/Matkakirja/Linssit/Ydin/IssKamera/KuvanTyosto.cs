@@ -90,6 +90,7 @@ namespace Matkakirja.Linssit.IssKamera
             {
                 var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
                 if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
+                if (Mosaiikki != null && MosaiikinLaatta(z, x, y) && Mosaiikki(z, x, y) != null) continue;   // kaukoalue mosaiikista (haettu)
                 if (Ensisijainen)
                 {
                     // Ensimmäinen ruutu (Data.Ruudut-järjestys), joka kattaa lehden kokonaan, ottaa sen; muut ohittavat.
@@ -193,9 +194,36 @@ namespace Matkakirja.Linssit.IssKamera
         }
 
         /// <summary>Piirtää laatan RGBA:ksi: S2 ja pilvet. Palauttaa peittävät pikselit (0 = ei kirjoiteta).</summary>
+        /// <summary>
+        /// S2-MOSAIIKKI KAUKOALUEELLE (Päätoimittaja 1.10.: 50 mm ~40 Mt; COG:lla ≥ 100 Mt): Karttasepän s2-eurooppa/v1 on samaa
+        /// Web Mercator -jakoa (z6–z10, ~76 m 60° N:ssa, sama sävytys kuin tci_lut), joten lehti z ≤ 10 on suoraan mosaiikin
+        /// laatta. Rajattu jako: taso = z − 6, x' = x − 27·2^t, y' = y − 13·2^t (AstronauttiKerros.S2Juuri). Mosaiikki palauttaa
+        /// puretun RGBA:n tai null (ei haettu / alueen ulkopuolella → COG).
+        /// </summary>
+        public Func<int, int, int, byte[]> Mosaiikki;
+        public const int MosaiikkiMaxZ = 10, MosaiikkiX0 = 27, MosaiikkiY0 = 13, MosaiikkiKoko = 13;
+
+        /// <summary>Kuuluuko lehti mosaiikille (z ≤ 10 ja mosaiikin 13 × 13 z6-lohkon sisällä).</summary>
+        public static bool MosaiikinLaatta(int z, int x, int y)
+        {
+            if (z > MosaiikkiMaxZ || z < JuuriZ) return false;
+            int k = 1 << (z - JuuriZ), bx = x / k, by = y / k;
+            return bx >= MosaiikkiX0 && bx < MosaiikkiX0 + MosaiikkiKoko && by >= MosaiikkiY0 && by < MosaiikkiY0 + MosaiikkiKoko;
+        }
+
+        /// <summary>Mosaiikin suhteellinen polku "{t}/{x'}/{y'}.jpg".</summary>
+        public static string MosaiikinPolku(int z, int x, int y)
+        {
+            int t = z - JuuriZ, k = 1 << t;
+            return $"{t}/{x - MosaiikkiX0 * k}/{y - MosaiikkiY0 * k}.jpg";
+        }
+
         public int Piirra(int z, int x, int y, byte[] rgba)
         {
-            int peitto = Uudelleenprojisointi.Laatta(Data, z, x, y, rgba);
+            var m = Mosaiikki != null && MosaiikinLaatta(z, x, y) ? Mosaiikki(z, x, y) : null;
+            int peitto;
+            if (m != null) { Buffer.BlockCopy(m, 0, rgba, 0, 256 * 256 * 4); peitto = 256 * 256; }
+            else peitto = Uudelleenprojisointi.Laatta(Data, z, x, y, rgba);
             if (Pilvet == null) return peitto;
             const int G = 32; var a = new float[(G + 1) * (G + 1)]; var kk = new float[a.Length]; var v = new float[a.Length];
             for (int j = 0; j <= G; j++)

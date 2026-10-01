@@ -134,6 +134,39 @@ namespace Matkakirja.Natiivi
                 foreach (var ru in ruudut) if (tci.TryGetValue(ru.Tunnus, out var o)) ty.Data.Ruudut.Add((ru, o));
                 ty.Suunnittele(naytteet);   // laattajoukko ensin: haku lehtilaattojen alueesta
 
+                // 3b) kaukoalue S2-mosaiikista (lehdet z ≤ 10; 50 mm: ~100 Mt COG:ia → ~10–20 Mt): ladataan ja puretaan ensin,
+                // jotta COG-haku ohittaa vain onnistuneet (404 tai mosaiikin ulkopuolella → COG).
+                var mosaiikki = new Dictionary<(int, int, int), byte[]>();
+                var mlista = ty.Lehdet().Where(l => KuvanTyosto.MosaiikinLaatta(l.z, l.x, l.y)).ToList();
+                long mtavut = 0;
+                for (int i0 = 0; i0 < mlista.Count; i0 += 16)
+                {
+                    var era = mlista.Skip(i0).Take(16).Select(l => (l, q: UnityWebRequest.Get(AstronauttiKerros.S2Juuri + KuvanTyosto.MosaiikinPolku(l.z, l.x, l.y)))).ToList();
+                    foreach (var (_, q) in era) q.SendWebRequest();
+                    while (era.Any(x => !x.q.isDone)) yield return null;
+                    var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+                    foreach (var (l, q) in era)
+                    {
+                        if (q.result == UnityWebRequest.Result.Success && tex.LoadImage(q.downloadHandler.data) && tex.width == 256 && tex.height == 256)
+                        {
+                            mtavut += q.downloadHandler.data.Length;
+                            var px = tex.GetPixels32(); var rgba = new byte[256 * 256 * 4];
+                            for (int yy = 0; yy < 256; yy++)   // GetPixels32: rivi 0 = alin → laatta: rivi 0 = pohjoinen
+                                for (int xx = 0; xx < 256; xx++)
+                                {
+                                    var c = px[(255 - yy) * 256 + xx]; int o = (yy * 256 + xx) * 4;
+                                    rgba[o] = c.r; rgba[o + 1] = c.g; rgba[o + 2] = c.b; rgba[o + 3] = 255;
+                                }
+                            mosaiikki[l] = rgba;
+                        }
+                        q.Dispose();
+                    }
+                    Destroy(tex);
+                    Edistyminen = 0.1f * (i0 + era.Count) / Math.Max(1, mlista.Count);
+                }
+                if (mosaiikki.Count > 0) ty.Mosaiikki = (z, x, y) => mosaiikki.TryGetValue((z, x, y), out var m) ? m : null;
+                Loki($"mosaiikki {mosaiikki.Count}/{mlista.Count} lehteä, {mtavut / 1e6:0.0} Mt");
+
                 // 4) laatat: TCI näkymän tasoilta, SCL karkeimmalta tasolta
                 var haku = new List<(string url, CogTaso taso, long alku, long pit, Action<byte[]> valmis)>();
                 foreach (var (ru, o) in ty.Data.Ruudut)

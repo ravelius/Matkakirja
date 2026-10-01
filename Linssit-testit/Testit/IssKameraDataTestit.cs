@@ -29,14 +29,16 @@ namespace Matkakirja.Linssit.Testit
                     var m = new MemoryStream(); pr.StandardOutput.BaseStream.CopyTo(m); pr.WaitForExit();
                     try { otsakkeet[ru.Tunnus] = CogOtsake.Jasenna(m.ToArray()); } catch { }
                 }
-                foreach (var (kerroin, ens) in new[] { (1.0, false), (2.0, false), (2.0, true), (3.0, true) })
+                foreach (var (kerroin, ens, mos) in new[] { (1.0, false, false), (1.0, true, false), (1.0, true, true) })
                 {
                     var ty = new KuvanTyosto { TasoKerroin = kerroin, Ensisijainen = ens };
+                    var tyhja = new byte[256 * 256 * 4]; if (mos) ty.Mosaiikki = (z, xx, yy) => tyhja;
                     foreach (var ru in ruudut) if (otsakkeet.TryGetValue(ru.Tunnus, out var o)) ty.Data.Ruudut.Add((ru, o));
                     ty.Suunnittele(n);
                     long tavut = 0; int lkm = 0; var tasot = new int[5];
                     foreach (var (ru, o) in ty.Data.Ruudut) foreach (var l in ty.HaettavatLaatat(ru, o)) { tavut += o.Tasot[l.taso].Alue(l.tx, l.ty).pituus; lkm++; tasot[l.taso]++; }
-                    Console.WriteLine($"  {nimi}: kerroin {kerroin}, ensisijainen {ens}: {lkm} laattaa ({string.Join("/", tasot)}), {tavut / 1e6:0.0} Mt + otsakkeet {ruudut.Count * 2 * 16384 / 1e6:0.0} Mt");
+                    int ml = mos ? ty.Lehdet().Count(l => KuvanTyosto.MosaiikinLaatta(l.z, l.x, l.y)) : 0;
+                    Console.WriteLine($"  {nimi}: kerroin {kerroin}, ensisijainen {ens}, mosaiikki {ml} lehteä (~{ml * 0.025:0.0} Mt): {lkm} laattaa ({string.Join("/", tasot)}), {tavut / 1e6:0.0} Mt + otsakkeet {ruudut.Count * 2 * 16384 / 1e6:0.0} Mt");
                 }
             }
         }
