@@ -2297,3 +2297,11 @@
     background-color: var(--tk-paperi-toiminto);
     border-color: var(--accent-dark);
 }
+
+/* Maakuntakortin kapiteeli (NOSTOKORTTI-pohja, web #3791). */
+.mk-maakuntaKortti__kapiteeli {
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    color: var(--tk-paperi-korostus);
+    margin-bottom: 2px;
+}
