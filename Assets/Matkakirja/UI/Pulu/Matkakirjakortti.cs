@@ -332,7 +332,9 @@ namespace Matkakirja.Natiivi
         void Luentavahti()
         {
             KytkeKartta();
-            bool kertoja = Aanet.KertojaPuhuu;
+            // Kortin lukijan luenta (nostokortti AUTOlla tai kaiuttimella, lehti …) ei avaa matkakirjaa: kortti avautuu vain,
+            // kun kertoja lukee matkakirjan omaa tekstiä (Päätoimittaja 1.10.2026, loki).
+            bool kertoja = Aanet.KertojaPuhuu && !KortinLukija.KorttiaLuetaan;
             float nyt = Time.realtimeSinceStartup;
             if (kertoja) kertojaLoppui = nyt;
             bool piiloon = kertoja || (kertojaLoppui >= 0f && (nyt - kertojaLoppui) * 1000f < ValirauhaMs);
