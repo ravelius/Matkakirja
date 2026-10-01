@@ -32,6 +32,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kortti avautui tai sulkeutui (pulun linssikysymykset seuraavat avointa nostoa).</summary>
         public event Action Muuttui;
 
+        /// <summary>Kortin juurielementti (z-järjestys: kortti kertojan tekstityksen päällä, web z-index 9).</summary>
+        public VisualElement El => kortti;
+
         public IhmisenNostokortti(VisualElement isa, VisualElement suurennoksenKoti, Action<Loytopaikka> lueLisaa)
         {
             this.lueLisaa = lueLisaa;
@@ -87,7 +90,14 @@ namespace Matkakirja.Natiivi
             if (kuvat.childCount == 0) kuvat.style.display = DisplayStyle.None;
 
             string teksti = p.KortinTeksti;
-            if (teksti.Length > 0) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-ihmisnosto__teksti", s), Kirjasin.Luku);
+            // Kaksi kuvaa (omistaja 1.10.2026 klo 09.2x, web .ihmisen-nostokortti-runko + .kellu): maisemakuva yksin koko
+            // leveydelle, toinen kuva tekstin oikealle puolelle ja teksti kiertää sen.
+            if (kuvat.childCount == 2 && teksti.Length > 0)
+            {
+                Kierra(s, kuvat[1], teksti);
+                kuvat[0].style.marginRight = 0; // maisemakuva koko leveydelle (web 326,6 px iPhonella)
+            }
+            else if (teksti.Length > 0) Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-ihmisnosto__teksti", s), Kirjasin.Luku);
             if (!string.IsNullOrEmpty(p.Lahde)) Kirjasimet.Aseta(Rakenne.Teksti(p.Lahde, "mk-ihmisnosto__lahde", s), Kirjasin.Luku);
             if (p.Juttu && lueLisaa != null && (LinssiUi.IhmisenMatka?.TiedeliitteenSivu(p.Tunnus) ?? -1) >= 0)
             {
@@ -156,6 +166,57 @@ namespace Matkakirja.Natiivi
             });
             // Puuttuva kuva pois (web ilmanVaraa / error → kehys pois).
             Kuvat.Hae(url, t => { if (t == null) kehys.RemoveFromHierarchy(); else k.style.backgroundImage = new StyleBackground(t); });
+        }
+
+        /// <summary>
+        /// Web float: right (.ihmisen-nostokortti-kuvakehys.kellu, leveys 38 %, vasen väli 0,75 rem) ilman UI Toolkitin
+        /// floatia: teksti jaetaan kahteen osaan. Kuvan vieressä on niin monta riviä kuin kuvan korkeuteen (kuvateksti ja
+        /// marginaalit mukana) alkaa, eli sama sääntö kuin selaimen kelluvalla laatikolla; loput sanat koko leveydellä
+        /// kuvan alla. Jako lasketaan uudelleen, kun leveys tai kuvan korkeus muuttuu (kuva latautuu, kierto).
+        /// </summary>
+        static void Kierra(VisualElement isa, VisualElement sivukuva, string teksti)
+        {
+            var runko = Rakenne.El("mk-ihmisnosto__runko", isa, PickingMode.Ignore);
+            var rivi = Rakenne.El("mk-ihmisnosto__runkorivi", runko, PickingMode.Ignore);
+            var yla = Rakenne.Teksti(teksti, "mk-ihmisnosto__teksti mk-ihmisnosto__teksti--kuvanvieressa", rivi);
+            Kirjasimet.Aseta(yla, Kirjasin.Luku);
+            sivukuva.RemoveFromHierarchy();
+            sivukuva.AddToClassList("mk-ihmisnosto__kuvakehys--kellu");
+            rivi.Add(sivukuva);
+            var ala = Rakenne.Teksti("", "mk-ihmisnosto__teksti mk-ihmisnosto__teksti--kuvanalla", runko);
+            Kirjasimet.Aseta(ala, Kirjasin.Luku);
+            ala.style.display = DisplayStyle.None;
+            var sanat = teksti.Split(' ');
+            var edellinen = (-1f, -1f);
+            void Jaa()
+            {
+                // Kuva poistui (latausvirhe): koko teksti yhteen osaan.
+                if (sivukuva.parent != rivi) { yla.text = teksti; ala.style.display = DisplayStyle.None; return; }
+                float w = rivi.contentRect.width, kuvaW = sivukuva.layout.width;
+                var ks = sivukuva.resolvedStyle;
+                float kuvaH = sivukuva.layout.height + ks.marginTop + ks.marginBottom;
+                if (float.IsNaN(w) || float.IsNaN(kuvaH) || w <= 0 || kuvaW <= 0 || kuvaH <= 0) return;
+                if (Mathf.Abs(edellinen.Item1 - w) < 0.5f && Mathf.Abs(edellinen.Item2 - kuvaH) < 0.5f) return;
+                edellinen = (w, kuvaH);
+                float tila = w - kuvaW - ks.marginLeft - ks.marginRight;
+                if (tila <= 0) return;
+                float Korkeus(int n) => yla.MeasureTextSize(string.Join(" ", sanat, 0, n), tila, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y;
+                float riviK = Korkeus(1);
+                if (float.IsNaN(riviK) || riviK <= 0) return;
+                // Selain: rivi asettuu kuvan viereen, jos sen yläreuna on kuvan alareunan yläpuolella.
+                float raja = Mathf.CeilToInt(kuvaH / riviK - 0.01f) * riviK + 0.5f;
+                int lo = 1, hi = sanat.Length;
+                while (lo < hi)
+                {
+                    int keski = (lo + hi + 1) / 2;
+                    if (Korkeus(keski) <= raja) lo = keski; else hi = keski - 1;
+                }
+                yla.text = string.Join(" ", sanat, 0, lo);
+                ala.text = lo < sanat.Length ? string.Join(" ", sanat, lo, sanat.Length - lo) : "";
+                ala.style.display = lo < sanat.Length ? DisplayStyle.Flex : DisplayStyle.None;
+            }
+            rivi.RegisterCallback<GeometryChangedEvent>(_ => Jaa());
+            sivukuva.RegisterCallback<GeometryChangedEvent>(_ => Jaa());
         }
 
         Loytopaikka paikka;
