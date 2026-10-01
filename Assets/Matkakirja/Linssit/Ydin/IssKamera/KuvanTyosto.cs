@@ -95,7 +95,9 @@ namespace Matkakirja.Linssit.IssKamera
                 {
                     // Ensimmäinen ruutu (Data.Ruudut-järjestys), joka kattaa lehden kokonaan, ottaa sen; muut ohittavat.
                     S2Ruutu oma = null;
-                    foreach (var (r2, _) in Data.Ruudut) if (Kattaa(r2, w0, s0, e0, n0)) { oma = r2; break; }
+                    // Vain aukoton valinta (nodata ≤ 0,5 %) voi ottaa lehden yksin (laitekoe 3: rataleveyden reunan aukot jäivät
+                    // täytöksi, kun ensisijaisella ruudulla oli nodataa).
+                    foreach (var (r2, _) in Data.Ruudut) if (r2.Nodata <= 0.5 && Kattaa(r2, w0, s0, e0, n0)) { oma = r2; break; }
                     if (oma != null && oma != ru) continue;
                 }
                 int taso = o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2) * TasoKerroin);

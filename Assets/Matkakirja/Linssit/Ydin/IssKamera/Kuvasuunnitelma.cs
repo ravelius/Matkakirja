@@ -23,6 +23,8 @@ namespace Matkakirja.Linssit.IssKamera
     {
         public string Tunnus, Url;
         public double W, S, E, N;
+        /// <summary>Valinnan nodata-osuus (%, indeksistä): > 0,5 → ruutu ei voi yksin kattaa lehteä (rataleveyden reuna).</summary>
+        public double Nodata;
         public int Vyohyke => Utm.Vyohyke(Tunnus);
     }
 
