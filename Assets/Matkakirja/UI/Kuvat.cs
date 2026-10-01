@@ -502,7 +502,6 @@ namespace Matkakirja.Natiivi
             return t;
         }
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         /// <summary>Testikomento ui kuvat raja: LRU-raja megatavuina (karsii heti).</summary>
         public static void AsetaRaja(long mt)
         {
@@ -519,6 +518,8 @@ namespace Matkakirja.Natiivi
         public static string Tila() =>
             $"kuvat: {MuistissaTavuja / 1048576} / {MuistiRaja / 1048576} Mt, LRU {jarjestys.Count} kpl, kiinteät {muisti.Count - tavut.Count} kpl";
 
+        // Attribuutti irtosi 26.9. (bbbbb501: AsetaRaja lisättiin väliin) → iPadin 300 Mt ei asettunut ja käännös kirjasi virheen.
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void AsetaMuistiRaja()
         {
             // iPad: laitemalli tai lyhyt sivu yli 4,5 tuumaa (simulaattorin deviceModel ei kerro laitetta).

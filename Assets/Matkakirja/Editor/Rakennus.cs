@@ -753,6 +753,29 @@ namespace Matkakirja.Editori
             string kansio = Path.Combine(polku, "Data", "Raw");
             Directory.CreateDirectory(kansio);
             File.WriteAllText(Path.Combine(kansio, "rakennus.txt"), PlayerSettings.iOS.buildNumber ?? "");
+            // Käännöksen commit (Data/Raw/kaannos.txt): .app-kopion tarkistus vertaa sitä käännöspalvelun KÄÄNNETTY-SHA:han
+            // (1.10.2026: juna 93:n kopioksi päätyi simulaattoriin takaisin asennettu 92 ja savuke ajettiin väärällä binäärillä).
+            File.WriteAllText(Path.Combine(kansio, "kaannos.txt"), KaannoksenCommit());
+        }
+
+        /// <summary>Projektin git HEAD lyhyenä (8 merkkiä); tyhjä, jos gitiä ei ole.</summary>
+        static string KaannoksenCommit()
+        {
+            try
+            {
+                var git = new System.Diagnostics.ProcessStartInfo("git", "rev-parse --short=8 HEAD")
+                {
+                    WorkingDirectory = Path.GetDirectoryName(Application.dataPath),
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                };
+                using var p = System.Diagnostics.Process.Start(git);
+                string sha = p.StandardOutput.ReadToEnd().Trim();
+                p.WaitForExit(10000);
+                return p.ExitCode == 0 ? sha : "";
+            }
+            catch (Exception) { return ""; }
         }
 
         /// <summary>
