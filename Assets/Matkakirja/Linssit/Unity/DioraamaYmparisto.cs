@@ -91,6 +91,8 @@ namespace Matkakirja.Natiivi
             if (oma != kerta) yield break;
             if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.Puukortit)) yield return LataaPuut(y, taso, url, kirjaa, oma);
             if (oma != kerta) yield break;
+            yield return DioraamaAluskasvit.Lataa(y, taso, url, kirjaa, go.transform, luodut, () => oma == kerta);   // Linssiseppä 2, 1.10.
+            if (oma != kerta) yield break;
             Tila = $"valmis ({taso}, heijastus {HeijastusSkaala(taso):F2})";
             kirjaa?.Invoke($"poikki: ympäristö valmis ({taso}, {Time.realtimeSinceStartup - alku:F1} s)");
         }
