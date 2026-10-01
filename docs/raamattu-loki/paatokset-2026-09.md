@@ -9719,3 +9719,7 @@ Applen TestFlight-latausraja tuli vastaan 1.10. klo 12.2x: tänään ladattiin 1
 ## OMISTAJA: LINNAN OSOITIN OK TÄYDELLE PUHEPAKETILLE (1.10.2026) (1.10.2026 klo 12.34)
 
 Omistaja vastasi "linna ok" linnan osoittimen vaihtoon. Tulkinta: osoitin vaihdetaan siihen pakettiin, jossa #3785:n rakenna.mjs-korjaus on mukana (kaikki 133 puheääntä, #3742 + #3766 + #3774 v22/ASTC). Vaihto tehdään heti, kun Siirtoseppä on kuitannut paketin puhtaaksi (TF 91 -varapolku ja 96, 0 virhettä, puheet soivat). Vajaata 353b5142:ta (43 ääntä puuttui) ei oteta käyttöön. Osoittimen vaihtaa Julkaisija. Omistaja saa tiedon, kun linnan esittely on kokonaan kokeiltavissa.
+
+## OMISTAJA: KOHDEKORTTI NOSTOKORTTI-POHJAAN KOKEILUUN (1.10.2026) (1.10.2026 klo 12.40)
+
+Omistaja otti käyttöön Pelikoodarin mallin mukaisen kohdekortin, mutta haluaa kokeilla sitä pelissä ennen lopullista päätöstä. Muutos voidaan perua. Kortti avautuu suoraan alareunaan (≤ 45 %, veto ylös 85 %, iPadilla sivukortti), ja tämä korvaa kokeilun ajaksi 11.9. päätetyn kuva edellä -avauksen. Kysymykset avautuvat Kysy-napista Pulun chattiin siruina, ✕ poistuu (sulku vetämällä alas, ohinapautuksella tai Escillä) ja napit ovat Kysy · Visa · Kierros · Lehti (Kierros vain kohteissa, joilla on kierros). Reaktiot ovat pienenä rivinä, ihmenauha heron kulmassa, ja Ihmisen matkan virran värinen piste säilyy kapiteelissa. Sama ratkaisu koskee Ihmisen matkan korttia ja maakuntakorttia. Jokainen pinta tehdään omana PR:nään, jotta sen voi perua erikseen. Web tulee ensin kokeiltavaksi, natiivi seuraavassa TF-junassa.
