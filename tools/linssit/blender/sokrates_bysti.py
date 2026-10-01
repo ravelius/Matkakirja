@@ -781,6 +781,7 @@ V7_LAHESTY = (462, 555)       # nimi 282–372, kysymys 373–461
 V7_PROJ = (555, 900)          # 38a; a-luenta alkaa 600; lähderivi 902–950
 V7_KAARI_LOPPU = 965
 V7_PITO = 1450                # b-luenta alkaa 960 (15,5 s)
+V7_TYKKI = 220.0              # kirjaimet erottuvat kovassa auringossa (v4–v6: 70 himmennetyssä valossa)
 V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
 
 
@@ -805,19 +806,17 @@ if '--v7' in A:
     o = rakenna(N); sc = bpy.context.scene; _kipsin_pinta(o)
     for nimi in ('sivu', 'reuna', 'tayte'):
         bpy.data.objects[nimi].hide_render = True
-    taytto = bpy.data.lights.new('taytto', 'AREA'); taytto.energy = 0.25; taytto.size = 1.5
-    to = bpy.data.objects.new('taytto', taytto); sc.collection.objects.link(to); to.location = (-1.2, -1.0, 0.4); kohdista(to, PAA)
+    # omistaja 23.3x: ei pehmeää täytevaloa; sama kova aurinko koko videon ajan (v5–v6 himmensivät sen 95 → 38
+    # lähestymisen aikana, jolloin pinta latistui vahamaiseksi juuri ennen tekstiä)
     aur = bpy.data.lights.new('aurinko', 'SPOT'); aur.spot_size = math.radians(60); aur.spot_blend = 0.3
     aur.shadow_soft_size = 0.012; aur.color = (1.0, 0.95, 0.88); aur.energy = 95
     ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
     for r, s_ in V7_VALO:
         ao.location = PAA + Vector(s_).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
-    for r, v in ((V7_LAHESTY[0], 95), (V7_PROJ[0], 38)):
-        aur.energy = v; aur.keyframe_insert('energy', frame=r)
     p, n = osuma(-0.005, 0.418)
     v4_projektori('tykki-otsa', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.075,
-                  os.path.join(GOBOT, 'nauha-otsa.png'), 0.016, (V7_PROJ[0] + 5, V7_PROJ[1] - 5), 70.0)
+                  os.path.join(GOBOT, 'nauha-otsa.png'), 0.016, (V7_PROJ[0] + 5, V7_PROJ[1] - 5), V7_TYKKI)
     c, t, u = lentoasento(p, n, kulma=55, matka=0.11)
     cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
     cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
