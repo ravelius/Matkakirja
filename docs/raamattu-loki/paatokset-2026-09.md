@@ -9683,3 +9683,7 @@ Omistaja 1.10.2026 kortilla klo 09.2x: Ihmisen matkan tekstitys natiivissa kuten
 ## OMISTAJA: IHMISEN MATKAN NOSTOKORTIT — VASEN KUVA KOKO LEVEYDELLE, OIKEA KUVA TEKSTIN VIEREEN OIKEALLE (1.10.2026 klo 09.11)
 
 Omistaja 1.10.2026 klo 09.2x tekstitysparin kuvasta: 'tuo oikeanpuolimmainen kuva kulkemaan tekstin viereen sen oikealle puolelle, jotta vasemmanpuolimmainen kuva näkyisi koko leveydeltä. Tämän voisi muuttaa kaikkiin vastaaviin kohtiin linssissä.' → Pelikoodari: kaikki Ihmisen matkan kahden kuvan nostokortit, web ja natiivi samoin (pariteetti säilyy); kuvapari ennen PR:ää ja merge-pyyntöä.
+
+## OMISTAJA: UI-POHJAT — KAIKKI IKKUNAT, KORTIT JA NOSTOT VAKIOIDAAN MUUTAMAAN POHJAAN (SELVITYS ENSIN) (1.10.2026 klo 09.14)
+
+Omistaja 1.10.2026 klo 09.3x: 'voisiko tälläisiä periaatteita vakioida ... pelissä on todella monta erilaista nostoa ja ikkunaa ... yritetään vakioida kaiken tyyppiset ikkunat muutamaan tietynlaiseen formaattiin, jotta jatkossakin kun uusia linssejä ja ominaisuuksia tulee, niin ne käyttäisivät mieluummin aina tiettyjä vakio pohjia. Tämä on isompi työ ja vaatii sen vuoksi perusteellisen selvityksen'. Päätoimittaja: Natiivi-UI johtaa; vaihe 1 kartoitus (kaikki ikkunat iPhone + iPad, mitat, värit, typografia, kuvat, napit, sulkutapa, animaatio; web viitteeksi) → docs/raportit/ui-pohjat-kartoitus-20261001.md; vaihe 2 ehdotus 4–6 pohjaa sääntöineen, yhteinen korttien tietomalli ja pohjagalleria kuvaregressioon, mallikuvat omistajan hyväksyttäviksi; ei toteutusta ennen omistajan OK:ta. Avoin omistajalle: koskevatko pohjat myös webiä.
