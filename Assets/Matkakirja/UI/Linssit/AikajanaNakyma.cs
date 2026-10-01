@@ -1881,6 +1881,15 @@ namespace Matkakirja.Natiivi
                         break;
                     case "loppu": IhmisenLoppu(); break;
                     case "aloitus": NaytaIhmisenAloitus(); break;
+                    // "linssi matka nosto <n> [kysy k]" (Pelikoodari 1.10.2026, Pulun yhteisen chatin kuvat): n:nnen löydön
+                    // nostokortti auki; i ≥ 1000 = kortin kysymys (i − 1000) kuten napautus.
+                    case "nosto":
+                        var q = ihminen.Paikat.Count > 0 ? ihminen.Paikat[Mathf.Clamp(i % 1000, 0, ihminen.Paikat.Count - 1)] : null;
+                        if (q == null) break;
+                        Valot(0); NaytaLoytopaikka(q.Tunnus); AsetaIhmisenKello(q.VuosiaSitten);
+                        if (nostokortti.Auki != q.Tunnus) nostokortti.Avaa(q);
+                        if (i >= 1000) Debug.Log("MATKAKIRJA linssi matka nosto: " + nostokortti.TestiKysy(i / 1000 - 1));
+                        break;
                     default:
                         int n = Mathf.Clamp(i, 0, Math.Max(0, ihminen.Kertomus.Count - 1));
                         var j = ihminen.Kertomus.Count > 0 ? ihminen.Kertomus[n]
