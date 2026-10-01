@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2519, teksti: 'Maakuntien toinen kuva: MKD, MLT, MNE, NLD (#3813)' },
   { v: 2518, teksti: 'Visa KORTTI-pohjalla, versio B (#3807)' },
   { v: 2517, teksti: 'Apurahakortti KORTTI-pohjalla (#3795)' },
   { v: 2516, teksti: 'Pillerivalikko PANEELI-pohjalla (#3804)' },
