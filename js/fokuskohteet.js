@@ -206,7 +206,8 @@ import {
   NOSTOLADONTA_S, nostoladontaKattoPorras, nostoladontaSkaala, nostoladontaTiiviste,
   onKaupunkipiste,
 } from './nostoladonta.js';
-import { polloKysy } from './pollo.js';
+import { polloEhdota, polloKysy } from './pollo.js';
+import { luoPohjaKortti, luoPohjaNostokortti } from './pohjat/pohjat.js';
 import { sfx } from './sound.js';
 import { asetaAkustiikka } from './tehosteketju.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
@@ -6497,6 +6498,101 @@ function mitoitaNauhaKuvaan(nappi) {
   if (Vahti) new Vahti(kirjaa).observe(img);
 }
 
+/*
+ * ── KOHDEKORTTI NOSTOKORTTI-POHJALLA (omistaja 1.10.2026: "kokeiluun", loki f344f1034) ─────────────────────────
+ *
+ * Omistajan hyväksymä mallikuva (proto-3d/lokit/pelikoodari-kohdekortti-malli-20261001): ei kuva edellä -vaihetta,
+ * kortti avautuu suoraan; kysymykset Kysy-napista Pulun chattiin ehdotuksina; visa omana KORTTINA Visa-napista;
+ * kierros ja kohteen lehti-juttu napeiksi; reaktiot lähderivin paikalle; ✕ pois (ohinapautus, veto alas, Esc);
+ * iPhonella alareunaan ≤ 45 %, iPadilla sivukortti. Vanha kortti jää koodiin ennalleen: lippu kääntää takaisin.
+ */
+const KOHDEKORTTI_POHJA = true;
+
+/** Avataanko kohdekortti pohjalla (lippu + ?kohdekortti=vanha|pohja tai localStorage). */
+export function kohdekorttiPohjalla() {
+  try {
+    const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('kohdekortti')
+      ?? globalThis.localStorage?.getItem('matkakirja-kohdekortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return KOHDEKORTTI_POHJA;
+}
+
+/** Kohteen kuvat KorttiDataksi: ihme- tai pääkuva heroksi, nykykuva upotukseksi (kuvasäännöt), lähderivi mukaan. */
+export function kohteenPohjakuvat(kohde) {
+  const nykykuva = kohteenNykykuva(kohde);
+  const kuvat = [...kohteenKuvalista(kohde), ...(nykykuva ? [nykykuva] : [])];
+  return kuvat.map((kuva) => ({
+    url: kuva.osoite ? assetOsoite('ihmeet', kuva.osoite) : valokuvaUrl(kuva.tiedosto, KOHDE_KUVAN_PX),
+    kuvateksti: kuva.lyhyt ?? kuva.selite ?? '',
+    lahde: kuva.osoite ? '' : (kuva.lahde ?? ''),
+    alkuperainen: kuva,
+  }));
+}
+
+function avaaKohdePohjalla(ui, kohde, { ankkuri = null } = {}) {
+  sfx.play('popup');
+  suljeFokuskohde(ui);
+  const merkki = ui.fokuskohdeMerkit?.get(kohde.id)?.[0];
+  const kuvat = kohteenPohjakuvat(kohde);
+  // Visa piirtyy pohjan KORTTIIN; sen olemassaolo selviää piirtämällä irralliseen säiliöön.
+  const visaSailio = document.createElement('div');
+  kohdeVisaPiirtaja?.(ui, visaSailio, kohde);
+  const onVisa = visaSailio.childElementCount > 0;
+  const kysymykset = (Array.isArray(kohde.kysymykset) ? kohde.kysymykset : [])
+    .map((k) => String(k ?? '').trim()).filter(Boolean);
+  const kierros = kohteenKierrokset(kohde)[0] ?? null;
+  const nosto = kohdeNostoHaku?.(ui, kohde.id);
+  const napit = [
+    kysymykset.length ? { teksti: 'Kysy', tyyppi: 'toiminto', toiminto: 'kysy' } : null,
+    onVisa ? { teksti: 'Visa', tyyppi: 'toiminto', toiminto: 'visa' } : null,
+    kierros ? { teksti: 'Kierros', tyyppi: 'toiminto', toiminto: 'kierros' } : null,
+    nosto?.otsikko && typeof nosto.avaa === 'function' ? { teksti: 'Lehti', tyyppi: 'ensisijainen', toiminto: 'lehti' } : null,
+  ].filter(Boolean);
+  const toiminnot = {
+    kysy: () => { if (polloEhdota(kysymykset.slice(0, 2))) siirraKohdeMyohemmin(ui); },
+    visa: () => {
+      const visa = luoPohjaKortti({ yla: 'Visa', otsikko: kohde.nimi });
+      if (!visa) return;
+      kohdeVisaPiirtaja?.(ui, visa.kortti, kohde);
+      document.body.appendChild(visa.el);
+      visa.avaa();
+    },
+    kierros: () => {
+      if (kierros.avaustapa === 'upotus') avaaKierros(ui, kohde, kierros);
+      else globalThis.open?.(kierros.url, '_blank', 'noopener');
+    },
+    lehti: () => nosto.avaa(),
+  };
+  const pohja = luoPohjaNostokortti({
+    yla: kohteenYlarivinNimike(kohde) ?? KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu,
+    otsikko: kohde.nimi,
+    kuvat,
+    kappaleet: [{ teksti: kohde.teksti ?? '' }],
+    napit,
+  }, {
+    toiminnot,
+    kuvaAuki: (kuva, i, img) => avaaKohdeSuurennos(ui, kuvat[i]?.alkuperainen ?? kuva, () => img, 'fokuskohdeZoom'),
+    sulje: (p) => { if (ui.fokuskohdeAuki?.pohja === p) suljeFokuskohde(ui); },
+  });
+  if (!pohja) return null;
+  // Reaktiot (peukku ja virheilmoitus) lähderivin paikalle kortin loppuun.
+  const vieritys = pohja.el.querySelector('.tk-nostokortti__vieritys');
+  if (vieritys) piirraReaktiot(vieritys, kohdeReaktioTunniste(kohde), { otsikko: kohde.nimi });
+  (document.querySelector('.map-pane') ?? document.body).appendChild(pohja.el);
+  merkki?.classList.add('auki');
+  ui.fokuskohdeAuki = {
+    id: kohde.id, kohde, popup: pohja.el, merkki, ankkuri, pohja,
+    // suljeFokuskohde nollaa tilan ennen purkua, joten pohjan oma sulku ei palaa tänne.
+    purku: () => { if (pohja.auki) pohja.sulje(); },
+  };
+  document.body.classList.add('nosto-popup-auki');
+  asetaAkustiikka(kohde.akustiikka ?? null);
+  pohja.avaa();
+  return pohja.el;
+}
+
 export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   if (typeof document === 'undefined' || !kohde) return null;
   /*
@@ -6546,6 +6642,9 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
    * Äänen mykistys ja TAUSTAÄÄNET-kytkin hoituvat SoundKit.play():n
    * sisällä (enabled), joten tässä ei tarvitse tietää niistä mitään.
    */
+  // UI-pohjat: kohdekortti NOSTOKORTTI-pohjalla (omistajan kokeilu 1.10.2026, loki f344f1034). Peruttavissa:
+  // KOHDEKORTTI_POHJA = false tai ?kohdekortti=vanha (myös localStorage matkakirja-kohdekortti = 'vanha').
+  if (kohdekorttiPohjalla()) return avaaKohdePohjalla(ui, kohde, { ankkuri });
   sfx.play('popup');
   lataaKohdeTyyli();
   suljeFokuskohde(ui);
