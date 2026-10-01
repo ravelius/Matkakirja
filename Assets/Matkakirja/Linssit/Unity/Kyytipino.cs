@@ -35,6 +35,15 @@ namespace Matkakirja.Linssit
             float paiva = 1.1f * Mathf.Clamp01((0.5f - s) / 0.5f);
             return s >= 0f ? paiva : Mathf.Lerp(0.3f, 1.1f, Mathf.Clamp01((s + 0.1f) / 0.1f));
         }
+        /// <summary>
+        /// S2-PINNAN SÄVYTYS (Linssiseppä 1.10.2026, S2-suunnitelma): Euroopan Sentinel-2 on BMNG:tä vaaleampi, sinisempi ja
+        /// litteämpi kuin NASA ISS067-E-286475 (RGB 74/91/102, hajonta 27 vs NASA 66/77/82, 45). Kun S2 on kyydin pinnalla
+        /// (<see cref="S2"/>, AstronauttiKerros.PaivitaS2), värisäätöön kontrasti, kylläisyys ja lämpö (värisuodin: + = punaisempi,
+        /// vähemmän sinistä). A/B `astro kyyti s2savy <kontrasti> <kylläisyys> <lämpö>`; arvot NASA-vertailusta.
+        /// </summary>
+        public static bool S2;
+        public static float S2Kontrasti, S2Kyllaisyys, S2Lampo;
+        static Color Suodin(float lampo) => new Color(1f + 0.06f * lampo, 1f, 1f - 0.10f * lampo);
         public static bool BloomPois;
         /// <summary>Filmirae ja vinjetti (ISS-kameran valokuvatuntu), oletuksena pois.</summary>
         public static bool Filmi;
@@ -78,6 +87,14 @@ namespace Matkakirja.Linssit
             autoLisa = Mathf.MoveTowards(autoLisa, AutoValotus ? AutoLisa(AurinkoSin) : 0f, Time.unscaledDeltaTime);
             float ev = Valotus + autoLisa;
             if (vari != null && Mathf.Abs(vari.postExposure.value - ev) > 0.005f) vari.postExposure.Override(ev);
+            if (vari != null)
+            {
+                float kon = S2 ? S2Kontrasti : 0f, kyl = S2 ? S2Kyllaisyys : 0f;
+                var suodin = S2 ? Suodin(S2Lampo) : Color.white;
+                if (Mathf.Abs(vari.contrast.value - kon) > 0.05f) vari.contrast.Override(kon);
+                if (Mathf.Abs(vari.saturation.value - kyl) > 0.05f) vari.saturation.Override(kyl);
+                if (vari.colorFilter.value != suodin) vari.colorFilter.Override(suodin);
+            }
             bool bloom = !BloomPois && !KevytLaite;
             if (hehku != null && hehku.active != bloom) hehku.active = bloom;
             if (rae != null && rae.active != Filmi) rae.active = Filmi;
@@ -107,7 +124,7 @@ namespace Matkakirja.Linssit
         }
 
         public static string Tila() =>
-            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV + auto {autoLisa:+0.00;-0.00} (sin {AurinkoSin:0.00}), bloom {(hehku != null && hehku.active ? "päällä" : "pois")}, filmi {(Filmi ? "päällä" : "pois")}"
+            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV + auto {autoLisa:+0.00;-0.00} (sin {AurinkoSin:0.00}), bloom {(hehku != null && hehku.active ? "päällä" : "pois")}, filmi {(Filmi ? "päällä" : "pois")}, s2 {(S2 ? "päällä" : "pois")} sävy {S2Kontrasti:0}/{S2Kyllaisyys:0}/{S2Lampo:0.0}"
             + (KevytLaite ? " (kevyt laite)" : "");
     }
 }

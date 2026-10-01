@@ -399,6 +399,7 @@ namespace Matkakirja.Natiivi
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
             bool halutaan = kyydissa && S2Kaytossa && kuukausiLisatty > 0;
+            Matkakirja.Linssit.Kyytipino.S2 = s2Lisatty;   // S2-pinnan sävytys vain, kun S2 on pinnalla
             if (halutaan == s2Lisatty) return;
             if (halutaan)
             {
