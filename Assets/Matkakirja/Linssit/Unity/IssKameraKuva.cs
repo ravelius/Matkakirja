@@ -68,6 +68,7 @@ namespace Matkakirja.Natiivi
             Directory.CreateDirectory(juuri);
             double kerroin0 = IssNyt.Simu.Kerroin;
             IssNyt.Simu.AsetaKerroin(0);   // kello seis: asema ei liiku työstön aikana
+            Avaruus.KuvaputkiAsetettu = true;   // kuvaputki (Linssiseppä 9ecd7c79): päivällä ei tähtiä, KuvanKaariVoima
             var utc = IssNyt.Kello();
             RenderTexture rt = null;
             try
@@ -238,6 +239,7 @@ namespace Matkakirja.Natiivi
             {
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 AstronauttiKerros.KuvanPinta = null;
+                Avaruus.KuvaputkiAsetettu = false;
                 IssNyt.Simu.AsetaKerroin(kerroin0 > 0 ? kerroin0 : 1);
                 if (!SailytaLaatat) try { if (Directory.Exists(laatat)) Directory.Delete(laatat, true); } catch { }
                 Tila = "valmis"; kaynnissa = false;
