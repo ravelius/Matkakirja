@@ -352,13 +352,8 @@ namespace Matkakirja.Natiivi
             // Olosuhteet: pilvipeitto ja vuodenaika (arvo otsikkorivillä).
             pilviSaadin = IssOhjaus.Liukusaadin(sivut[2], "Pilvipeitto", 0f, 1f, v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
                 vasen: "Selkeä", oikea: "Nykyinen");
-            // Kuluva kuukausi = ei pakotusta (pinta seuraa taas ISS-kelloa, myös nopeutettuna).
-            kuukausiSaadin = IssOhjaus.Liukusaadin(sivut[2], "Vuodenaika", 1f, 12f, v =>
-            {
-                int kk = Mathf.RoundToInt(v);
-                AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
-                PaivitaSaatimet();
-            }, kokonaisluku: true, vasen: "Tammikuu", oikea: "Joulukuu");
+            // Vuodenaika (omistaja 1.10.: neljä kautta, Iss.Vuodenaika): nykyinen kausi = ei pakotusta (pinta seuraa ISS-kelloa).
+            kuukausiSaadin = IssOhjaus.Liukusaadin(sivut[2], "Vuodenaika", 0f, 3f, AsetaKausi, kokonaisluku: true, vasen: "Talvi", oikea: "Syksy");
             PaivitaPaneeli();
             OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
 
@@ -368,12 +363,7 @@ namespace Matkakirja.Natiivi
             poyta = new IssKytkinpoyta(turva,
                 k => Linssi()?.AsetaNopeus(k),
                 v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
-                v =>
-                {
-                    int kk = Mathf.RoundToInt(v);
-                    AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
-                    PaivitaSaatimet();
-                },
+                AsetaKausi,
                 VaihdaLista, Kuvaa, Poistu,
                 () => { if (nopeutettu) Linssi()?.AsetaNopeus(1); });
             PaivitaPoydat(KyydinTila.Kauko);
@@ -508,20 +498,29 @@ namespace Matkakirja.Natiivi
             OmaSijaintiHaku.Aloita();
         }
 
-        /// <summary>Säätimien arvot ja tekstit tilasta (AstronauttiKerros: pilvien määrä, pakotettu kuukausi).</summary>
+        /// <summary>Vuodenaika nupista tai liukusäätimestä (0–3): nykyinen kausi = ei pakotusta, muuten kauden edustava kuukausi.</summary>
+        void AsetaKausi(float v)
+        {
+            int kausi = Mathf.Clamp(Mathf.RoundToInt(v), 0, 3);
+            AstronauttiKerros.KuukausiPakotettu = kausi == Vuodenaika.Kausi(IssNyt.Kello().Month) ? 0 : Vuodenaika.Kuukausi(kausi);
+            PaivitaSaatimet();
+        }
+
+        /// <summary>Säätimien arvot ja tekstit tilasta (AstronauttiKerros: pilvien määrä, pakotettu kuukausi → vuodenaika).</summary>
         void PaivitaSaatimet()
         {
             float m = AstronauttiKerros.PilvienMaara;
             pilviSaadin.Aseta(m, m <= 0.01f ? "selkeä" : m >= 0.99f ? "nyt" : $"{Mathf.RoundToInt(m * 100)} %");
-            int nyt = IssNyt.Kello().Month, kk = AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12 ? AstronauttiKerros.KuukausiPakotettu : nyt;
-            kuukausiSaadin.Aseta(kk, Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1] + (kk == nyt ? " (nyt)" : ""));
+            int nyt = Vuodenaika.Kausi(IssNyt.Kello().Month);
+            int kausi = AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12 ? Vuodenaika.Kausi(AstronauttiKerros.KuukausiPakotettu) : nyt;
+            string nimi = Vuodenaika.Nimet[kausi];
+            kuukausiSaadin.Aseta(kausi, nimi + (kausi == nyt ? " (nyt)" : ""));
             if (poyta != null)
             {
                 poyta.Pilvet.Aseta(m, m <= 0.01f ? "0 %" : m >= 0.99f ? "NYT" : $"{Mathf.RoundToInt(m * 100)} %");
-                string nimi = Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1];
                 // Renderipaneelin kilvessä koko nimi (tarrakirjoitin), kehyksessä lyhenne.
-                poyta.Vuodenaika.Aseta(kk, poyta.Asettelu != null ? nimi.ToUpperInvariant()
-                    : (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kk == nyt ? " •" : ""));
+                poyta.Vuodenaika.Aseta(kausi, poyta.Asettelu != null ? nimi.ToUpperInvariant()
+                    : (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kausi == nyt ? " •" : ""));
             }
         }
 

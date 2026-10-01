@@ -417,7 +417,9 @@ namespace Matkakirja.Natiivi
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
             var kuvan = KuvanPinta;
-            bool halutaan = kyydissa && (S2Kaytossa || kuvan.HasValue) && kuukausiLisatty > 0;
+            // S2 on kesäaineisto: vain lumettomina kausina (Iss.Vuodenaika.S2Nakyy), talvella BMNG (omistaja 1.10.); kuvan pinta aina.
+            bool halutaan = kyydissa && ((S2Kaytossa && Vuodenaika.S2Nakyy(Vuodenaika.Kausi(kuukausiLisatty))) || kuvan.HasValue)
+                && kuukausiLisatty > 0;
             string haluttu = kuvan?.Url ?? (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg");
             // Kuvan pinta tulee tai poistuu kesken S2:n: vaihdetaan vain S2-kerros (reliefi ja BMNG pysyvät paikoillaan).
             if (halutaan && s2Lisatty && haluttu != s2Url) { kk.PoistaRasteri(S2Kerros); s2Lisatty = false; }
@@ -502,7 +504,9 @@ namespace Matkakirja.Natiivi
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
-            int kuukausi = kyydissa && !KuukaudenPintaPois ? (KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : IssNyt.Kello().Month) : -1;
+            // Vuodenaika (omistaja 1.10.): pakottamatta nykyisen kauden edustava kuukausi (Iss.Vuodenaika), ei kuluva kuukausi.
+            int kuukausi = kyydissa && !KuukaudenPintaPois
+                ? (KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : Vuodenaika.Kuukausi(Vuodenaika.Kausi(IssNyt.Kello().Month))) : -1;
             if (kuukausi > 0 && !kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
             {
                 if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));

@@ -64,7 +64,8 @@ namespace Matkakirja.Natiivi
                 kertoimet[i] = Matkakirja.Linssit.Iss.Simukello.Nopeudet[i] == 1 ? "LIVE" : Matkakirja.Linssit.Iss.Simukello.Nopeudet[i] + "×";
             Nopeus = new IssKytkimet.Kiertokytkin("NOPEUS", kertoimet, i => nopeus?.Invoke(Matkakirja.Linssit.Iss.Simukello.Nopeudet[i]));
             Pilvet = new IssKytkimet.Nuppi("PILVET", 0f, 1f, v => pilvet?.Invoke(v));
-            Vuodenaika = new IssKytkimet.Nuppi("KUUKAUSI", 1f, 12f, v => kuukausi?.Invoke(v), kokonaisluku: true);
+            // Vuodenaika (omistaja 1.10.): 0 talvi, 1 kevät, 2 kesä, 3 syksy (Matkakirja.Linssit.Iss.Vuodenaika); sama nuppi.
+            Vuodenaika = new IssKytkimet.Nuppi("VUODENAIKA", 0f, 3f, v => kuukausi?.Invoke(v), kokonaisluku: true);
             Kohde = new IssKytkimet.Painike("KOHDE", "LENNÄ", () => kohde?.Invoke());
             // ISS-kamera (omistaja 1.10.2026, A): KUVAA korvaa OMA PAIKKA -vivun (oma paikka on KOHDE-listan rivinä); paneeli v3.
             Kuvaa = new IssKytkimet.Painike("KUVAA", "●", () => kuvaa?.Invoke());
