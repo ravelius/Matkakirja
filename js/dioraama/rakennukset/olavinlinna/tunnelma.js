@@ -21,11 +21,14 @@ const SOIHDUT = [
   [76.58, 0.0, -2, 270], [91.28, 15.0, -2, 270], // ulkomuurit kameraan päin (etelä, itä), 5 m vedestä
 ];
 // Lyhdyt tolpissa: [x, y, maa z].
-const LYHDYT = [[-23, -9, -3.01], [12, -4, -1.71], [28, 0, -2.1], [-40, -8, 2.82], [-70, -19.5, -5.87], [-63, -21, -5.91]];
+// v19: ponttonisillan kannen kaksi lyhtyä (−70, −19,5) ja (−63, −21) pois sillan mukana; vesiportin laiturilla on
+// omat soihtupaalut (laituri.js).
+const LYHDYT = [[-23, -9, -3.01], [12, -4, -1.71], [28, 0, -2.1], [-40, -8, 2.82]];
 // Liput tornien huippuihin: [x, y, huippu z].
 const LIPUT = [[-44.4, 4.6, 34.55], [-15.4, 14.6, 32.3], [47, 39, 25.3]];
-// Veneet ponttonilaiturin kupeessa (vesi −7): [x, y, suunta].
-const VENEET = [[-74, -9.5, 130], [-60, -29, 130], [-67.5, -14, 132]];
+// Veneet ankkurissa vesiportin laiturin edustalla (vesi −7; v19: ennen ponttonisillan kupeessa): [x, y, suunta].
+// Laituri kulkee (−57,4, −16,8) → (−65,3, −25,9); veneet sen länsipuolella ja kärjen takana, irti laiturin omista veneistä.
+const VENEET = [[-71.5, -19.5, 131], [-70.5, -30.0, 128], [-76.0, -25.5, 135]];
 // Piippujen savu katoilta: [x, y, katon z].
 const SAVUT = [[-3.6, 9.1, 10.88], [1.2, 17.8, 12.28], [8.1, 12.1, 9.97], [-2.1, -4.4, 6.84]];
 
