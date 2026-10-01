@@ -641,6 +641,17 @@ export async function rakennaData(rakennus, {
   for (const kohta of rakennus.taulu?.kohdat ?? []) {
     if (kohta.aani != null) kaytetytAanet.add(kohta.aani);
   }
+  // Uuden linnan puheet (#3742, Siirtoseppä 1.10.2026: kuiva paketti 353b5142 ilman näitä → 43/133 ääntä puuttui
+  // pankista, eikä natiivi soittanut niitä): kertojan jaksot, Pulun kertomukset (rakennus ja tilat), tilan kuunnelma
+  // ja etsinnän repliikit.
+  const lisaaAani = (id) => { if (typeof id === 'string') kaytetytAanet.add(id); };
+  for (const jakso of rakennus.kertoja?.jaksot ?? []) lisaaAani(jakso?.aani);
+  lisaaAani(rakennus.pulu?.aani);
+  for (const tila of rakennus.tilat) {
+    lisaaAani(tila.pulu?.aani);
+    for (const rivi of tila.kuunnelma ?? []) lisaaAani(rivi?.aani);
+    for (const vaihe of tila.etsinta ?? []) { lisaaAani(vaihe?.aani); lisaaAani(vaihe?.repliikki?.aani); }
+  }
 
   // Käytetyt liekit (erä 2, era2-speksin kohta 2 "LIEKIT"): kerätty tilojen omista
   // `liekit`-listoista (oma pieni silmukka — ei kosketa yllä olevaa geometria/AO-silmukkaa).
